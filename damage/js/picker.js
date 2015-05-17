@@ -61,22 +61,12 @@ var populateList = function(filter,target) {
 
 var createThumbnail = function(n) {
     var result = document.createElement('div');
-    //var coordinates = getCoordinates(n);
-    //result.style.backgroundImage = 'url(images/' + coordinates[0] + '.jpg)';
-    //result.style.backgroundPosition = coordinates[1] + 'px ' + coordinates[2] + 'px';
     result.className = 'pickerThumbnail';
     result.style.backgroundImage = 'url(' + getThumbnailUrl(n) + ')';
     result.setAttribute('unitID',n);
     $(result).click(onUnitClick);
     return result;
 };
-
-//var getCoordinates = function(n) {
-    //var source = ('000' + Math.ceil((n+1) / 100)).slice(-3);
-    //var x = Math.floor((n % 100) / 10) * 80;
-    //var y = ((n % 100) % 10) * 80;
-    //return [source,-y,-x];
-//};
 
 var getThumbnailUrl = function(n) {
     var id = ('0000' + (n+1)).slice(-4).replace(/(057[54])/,'0$1'); // missing aokiji image

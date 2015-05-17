@@ -18,13 +18,6 @@ var parseUnit = function(element,n) {
     };
 };
 
-//var getCoordinates = function(n) {
-    //var source = ('000' + Math.ceil((n+1) / 100)).slice(-3);
-    //var x = Math.floor((n % 100) / 10) * 112;
-    //var y = ((n % 100) % 10) * 112;
-    //return [source,-y-1,-x-1];
-//};
-
 var getThumbnailUrl = function(n) {
     var id = ('0000' + (n+1)).slice(-4).replace(/(057[54])/,'0$1'); // missing aokiji image
     return 'http://onepiece-treasurecruise.com/wp-content/uploads/f' + id + '.png';
@@ -34,9 +27,6 @@ var updateSlot = function(slotNumber,unitNumber) {
     var slot = $('.unit')[slotNumber];
     var unit = units[unitNumber];
     // change background
-    //var coordinates = getCoordinates(unitNumber);
-    //slot.style.backgroundImage = 'url(images/' + coordinates[0] + '.jpg)';
-    //slot.style.backgroundPosition = coordinates[1] + 'px ' + coordinates[2] + 'px';
     slot.classList.remove('empty');
     slot.style.backgroundImage = 'url(' + getThumbnailUrl(unitNumber) + ')';
     // update slider
