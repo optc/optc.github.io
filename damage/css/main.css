@@ -41,6 +41,7 @@ body, #main, #hp {
     justify-content: center;
     position: relative;
     background-position: -1px -1px;
+    overflow: hidden !important;
 }
 
 .empty {
@@ -180,4 +181,30 @@ button:not(.selected) {
 
 button:hover {
     opacity: 1 !important;
+}
+
+/* Ribbons */
+
+.corner-ribbon {
+  width: 80px;
+  height: 20px;
+  position: absolute;
+  top: 7px;
+  left: auto;
+  right: -20px;
+  background: #e43;
+  color: #f0f0f0;
+  font-size: 12px;
+  text-align: center;
+  line-height: 20px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.corner-ribbon.red {
+    background: #e43;
+}
+
+.corner-ribbon.orange {
+    background: #e82;
 }
