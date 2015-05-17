@@ -122,23 +122,23 @@ body, #main, #hp, #other {
     margin-bottom: 0 !important;
 }
 
-.str {
+.damage.str {
     background: salmon;
 }
 
-.qck {
+.damage.qck {
     background: lightskyblue;
 }
 
-.dex {
+.damage.dex {
     background: lightgreen;
 }
 
-.psy {
+.damage.psy {
     background: gold;
 }
 
-.int {
+.damage.int {
     background: orchid;
 }
 

@@ -60,6 +60,50 @@ var changeMaxHP = function(newValue,skipTrigger) {
     changeCurrentHP(currentHP,skipTrigger,false);
 }
 
+var toggleOrb = function(slotNumber) {
+    $(document).trigger('changeOrb',slotNumber);
+};
+
+/* * * * * Event callbacks * * * * */
+
+var onUnitMouseUp = function(e) {
+    if (e.which == 1 && !this.classList.contains('slide'))
+        $(document).trigger('unitClick',$(this).index());
+    else if (e.which == 2 && !this.classList.contains('empty'))
+        toggleOrb($(this).index());
+};
+
+var onUnitLevelMouseUp = function(e) {
+    if (e.which == 1 && !this.parentNode.classList.contains('empty'))
+        $(this)[0].parentNode.classList.add('slide');
+    e.preventDefault();
+    e.stopPropagation();
+};
+
+var onUnitLevelSlideEnd = function(n) {
+    return function(ui,value) {
+        setTimeout(function() {
+            $(ui).parent()[0].classList.remove('slide');
+            $(document).trigger('unitLevelChanged',[n,value]);
+        },100);
+    };
+};
+
+var onChangeHP = function(event,value) {
+    changeCurrentHP(value,false,true);
+};
+
+var onSlideHP = function(event,value) {
+    changeCurrentHP(value,true,true);
+};
+
+var onMerryButtonClick = function() {
+    if (this.classList.contains('selected')) return;
+    var bonus = parseFloat(this.textContent,10);
+    if (isNaN(bonus)) bonus = 1;
+    $(document).trigger('merryBonusUpdated',bonus);
+};
+
 var onResetButtonClick = function() {
     BootstrapDialog.show({
         title: 'Reset',
@@ -78,42 +122,6 @@ var onResetButtonClick = function() {
             }
         ]
     });
-};
-
-/* * * * * Event callbacks * * * * */
-
-var onUnitMouseUp = function(e) {
-    if (e.which == 1 && !this.classList.contains('slide'))
-        $(document).trigger('unitClick',$(this).index());
-};
-
-var onUnitLevelMouseUp = function(e) {
-    if (e.which == 1 && !this.parentNode.classList.contains('empty'))
-        $(this)[0].parentNode.classList.add('slide');
-    e.preventDefault();
-    e.stopPropagation();
-};
-
-var onUnitLevelSlideEnd = function(n) {
-    return function(ui,value) {
-        $(ui).parent()[0].classList.remove('slide');
-        $(document).trigger('unitLevelChanged',[n,value]);
-    };
-};
-
-var onChangeHP = function(event,value) {
-    changeCurrentHP(value,false,true);
-};
-
-var onSlideHP = function(event,value) {
-    changeCurrentHP(value,true,true);
-};
-
-var onMerryButtonClick = function() {
-    if (this.classList.contains('selected')) return;
-    var bonus = parseFloat(this.textContent,10);
-    if (isNaN(bonus)) bonus = 1;
-    $(document).trigger('merryBonusUpdated',bonus);
 };
 
 /* * * * * Custom event callbacks * * * * */

@@ -27,11 +27,11 @@ var crunch = function() {
 
 var crunchForType = function(type) {
     var damage = [ ]
-    // apply type multipliers
+    // apply type & orb multipliers
     team.forEach(function(x,n) {
         if (x == null) return;
         var atk = getAttackOfUnit(x);
-        damage.push([ x, atk * getMultiplierOfUnit(x,type) * 1.90 ]);
+        damage.push([ x, atk * x.orb * getMultiplierOfUnit(x,type) * 1.90 ]);
     });
     // sort from weakest to strongest
     damage.sort(function(x,y) { return x[1] - y[1]; });
@@ -133,7 +133,7 @@ var createFunctions = function(data) {
 /* * * * * Event callbacks * * * * */
 
 var onUnitPick = function(event,slotNumber,unitNumber) {
-    team[slotNumber] = { unit: units[unitNumber], level: 1 };
+    team[slotNumber] = { unit: units[unitNumber], level: 1, orb: 1 };
     if (slotNumber < 2) {
         if (captains.hasOwnProperty(unitNumber+1))
             captainAbilities[slotNumber] = createFunctions(captains[unitNumber+1]);
@@ -160,11 +160,17 @@ var onHpChange = function(event,current,max,perc) {
     crunch();
 };
 
+var onOrbMultiplierChanged = function(event,slotNumber,multiplier) {
+    team[slotNumber].orb = multiplier;
+    crunch();
+};
+
 /* * * * * Events * * * * */
 
 $(document).on('unitPicked',onUnitPick);
 $(document).on('unitLevelChanged',onLevelChange);
 $(document).on('merryBonusUpdated',onMerryChange);
 $(document).on('hpChanged',onHpChange);
+$(document).on('orbMultiplierChanged',onOrbMultiplierChanged);
 
 })();
