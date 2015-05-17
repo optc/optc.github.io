@@ -47,6 +47,11 @@ var onNumbersCrunched = function(event,numbers) {
     save();
 };
 
+var onResetStorage = function() {
+    localStorage.clear();
+    window.location.reload();
+}
+
 $(function() {
 
 /* * * * * (Re-)initialize * * * * */
@@ -74,6 +79,8 @@ $(document).on('unitLevelChanged',onLevelChange);
 $(document).on('merryBonusUpdated',onMerryChange);
 $(document).on('hpChanged',onHpChange);
 $(document).on('numbersCrunched',onNumbersCrunched);
+
+$(document).on('resetStorage',onResetStorage);
 
 });
 

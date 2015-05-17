@@ -2,7 +2,7 @@ body, html {
     height: 100%;
 }
 
-body, #main, #hp {
+body, #main, #hp, #other {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -23,7 +23,7 @@ body, #main, #hp {
     margin-left: 50px;
 }
 
-#hp, #merry {
+#hp, #merry, #other {
     width: 350px;
     margin-top: 30px;
 }
@@ -169,18 +169,27 @@ body, #main, #hp {
     height: 10px !important;
 }
 
+#hpLabel {
+    margin-top: 10px;
+}
+
 .noUi-handle:after {
     left: 11px !important;
     top: 3px !important;
     height: 10px !important;
 }
 
-button:not(.selected) {
+#merry > button:not(.selected) {
     opacity: 0.3;
 }
 
-button:hover {
+#merry > button:hover {
     opacity: 1 !important;
+}
+
+#other > button {
+    padding: 5px;
+    width: 30%;
 }
 
 /* Ribbons */

@@ -60,6 +60,26 @@ var changeMaxHP = function(newValue,skipTrigger) {
     changeCurrentHP(currentHP,skipTrigger,false);
 }
 
+var onResetButtonClick = function() {
+    BootstrapDialog.show({
+        title: 'Reset',
+        message: 'Are you sure? It won\'t be pretty.',
+        buttons: [
+            {
+                label: 'Yep',
+                action: function(dialog) {
+                    $(document).trigger('resetStorage');
+                    dialog.close();
+                }
+            }, {
+                label: 'Nope',
+                cssClass: 'btn-primary',
+                action: function(dialog) { dialog.close(); }
+            }
+        ]
+    });
+};
+
 /* * * * * Event callbacks * * * * */
 
 var onUnitMouseUp = function(e) {
@@ -89,7 +109,7 @@ var onSlideHP = function(event,value) {
     changeCurrentHP(value,true,true);
 };
 
-var onButtonClick = function() {
+var onMerryButtonClick = function() {
     if (this.classList.contains('selected')) return;
     var bonus = parseFloat(this.textContent,10);
     if (isNaN(bonus)) bonus = 1;
@@ -123,8 +143,8 @@ var onNumbersCrunched = function(event,numbers) {
 };
 
 var onMerryBonusUpdated = function(event,merry) {
-    $('button.selected')[0].classList.remove('selected');
-    $('button')[merry == 1.0 ? 0 : merry == 1.2 ? 1 : 2].classList.add('selected');
+    $('#merry > button.selected')[0].classList.remove('selected');
+    $('#merry > button')[merry == 1.0 ? 0 : merry == 1.2 ? 1 : 2].classList.add('selected');
 };
 
 var onHpChanged = function(event,current,max,perc,skip) {
@@ -175,7 +195,8 @@ $(function() {
         slide: onSlideHP
     });
 
-    $('button').click(onButtonClick);
+    $('#merry > button').click(onMerryButtonClick);
+    $('#reset').click(onResetButtonClick);
 
 });
 
