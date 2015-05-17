@@ -68,7 +68,7 @@ var applyChainMultipliers = function(damage) {
     var multiplier = 1;
     for (var i=0;i<2;++i) {
         if (captainAbilities[i] != null && captainAbilities[i].hasOwnProperty('chain'))
-            multiplier *= captainAbilities[i].chain(unit.unit);
+            multiplier *= captainAbilities[i].chain();
     }
     return damage.map(function(x,n) {
         var unit = x[0], damage = x[1];
