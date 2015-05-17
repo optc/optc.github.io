@@ -21,6 +21,7 @@ var crunch = function() {
         var hp = getHpOfUnit(x);
         result.HP += applyCaptainEffectsToHP(x,hp);
     });
+    result.HP = Math.max(1,result.HP);
     $(document).trigger('numbersCrunched',result);
 };
 
