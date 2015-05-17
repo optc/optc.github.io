@@ -151,7 +151,8 @@ window.captains = {
         atk: 'unit.class == "Striker" ? 1.5 : 1'
     },
     217: { // Monkey D. Luffy Gear Third
-        atk: 'chainPosition > 2 ? 3.5 : 1'
+        atk: 'chainPosition > 2 ? 3.5 : 1',
+        chainMultipliers: [ 0, 0.3, 0.6, 0.9, 1.2, 1.5 ] // don't remove this
     },
     220: { // Nami Happiness Punch
         atk: 'unit.type == "PSY" ? 2.5 : 1'
@@ -166,10 +167,12 @@ window.captains = {
         atk: 'unit.type == "PSY" ? 1.5 : 1'
     },
     224: { // Mr. Prince Mutton Shot
-        atk: 'chainPosition > 1 ? 2 : 1'
+        atk: 'chainPosition > 1 ? 2 : 1',
+        chainMultipliers: [ 0, 0.3, 0.6, 0.9, 1.2, 1.5 ] // don't remove this
     },
     225: { // Mr. Prince Veau Shot
-        atk: 'chainPosition > 1 ? 2.5 : 1'
+        atk: 'chainPosition > 1 ? 2.5 : 1',
+        chainMultipliers: [ 0, 0.3, 0.6, 0.9, 1.2, 1.5 ] // don't remove this
     },
     226: { // Dracule Mihawk
         atk: 'unit.class == "Slasher" ? 2 : 1'
@@ -294,10 +297,12 @@ window.captains = {
         atk: 'unit.type == "DEX" ? 2.5 : 1'
     },
     311: { // Killer
-        atk: undefined
+        atk: 'chainPosition > 2 ? 3 : 1',
+        chainMultipliers: [ 0, 0, 0, 0, 0.3, 0.6 ]
     },
     312: { // Massacre Soldier Killer
-        atk: undefined
+        atk: 'chainPosition > 2 ? 3 : 1',
+        chainMultipliers: [ 0, 0, 0, 0, 0.3, 0.6 ]
     },
     313: { // Urouge
         atk: 'unit.class == "Striker" ? 2 : 1',
@@ -434,10 +439,12 @@ window.captains = {
         atk: 'unit.type == "QCK" ? 1.5 : 1'
     },
     397: { // Mr.4
-        atk: 'chainPosition >= 4 ? 3 : 1'
+        atk: 'chainPosition == 5 ? 3 : 1',
+        chainMultipliers: [ 0, 0.3, 0.6, 0.9, 1.2, 1.5 ] // don't remove this
     },
     398: { // Mr.4 evolved
-        atk: 'chainPosition >= 4 ? 4 : 1'
+        atk: 'chainPosition == 5 ? 4 : 1',
+        chainMultipliers: [ 0, 0.3, 0.6, 0.9, 1.2, 1.5 ] // don't remove this
     },
     399: { // Miss Doublefinger
         hp: 'unit.class == "Striker" ? 1.5 : 1'
@@ -756,7 +763,12 @@ window.captains = {
         atk: '1.2'
     },
     549: { // Sadi-chan
-        atk: 'chainPosition >= 2 ? 2 : 1'
+        atk: 'chainPosition > 2 ? 2 : 1',
+        chainMultipliers: [ 0, 0.3, 0.6, 0.9, 1.2, 1.5 ] // don't remove this
+    },
+    550: { // Sadi-chan evolved
+        atk: 'chainPosition > 2 ? 2 : 1',
+        chainMultipliers: [ 0, 0.3, 0.6, 0.9, 1.2, 1.5 ] // don't remove this
     },
     553: { // SW Zoro
         atk: 'unit.type == "DEX" && percHP <= 30.0 ? 2.75 : 1'
@@ -818,9 +830,11 @@ window.captains = {
         atk: '1.5'
     },
     577: { // Record of Voyage Luffy
-        atk: undefined
+        atk: 'chainPosition > 2 ? 4 : 1',
+        chainMultipliers: [ 0, 0, 0.1, 0.4, 0.7, 1.0 ]
     },
     578: { // Dream of Voyage Luffy
-        atk: undefined
+        atk: 'chainPosition > 2 ? 4 : 1',
+        chainMultipliers: [ 0, 0, 0.1, 0.4, 0.7, 1.0 ]
     },
 };
