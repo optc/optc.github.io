@@ -42,6 +42,11 @@ var onHpChange = function(event,current,max,perc) {
     save();
 };
 
+var onNumbersCrunched = function(event,numbers) {
+    hp.max = numbers.HP;
+    save();
+};
+
 $(function() {
 
 /* * * * * (Re-)initialize * * * * */
@@ -68,6 +73,7 @@ $(document).on('unitPicked',onUnitPick);
 $(document).on('unitLevelChanged',onLevelChange);
 $(document).on('merryBonusUpdated',onMerryChange);
 $(document).on('hpChanged',onHpChange);
+$(document).on('numbersCrunched',onNumbersCrunched);
 
 });
 

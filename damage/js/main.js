@@ -2,7 +2,7 @@
 
 var sliders = [ ];
 var hpSlider = null;
-var hpLast = 1;
+var currentMaxHP = 1;
 
 /* * * * * Functions * * * * */
 
@@ -41,19 +41,52 @@ var changeLevel = function(slotNumber,level) {
     slot.find('.unitLevel').text('Lv.' + level);
 };
 
-var updateHP = function(currentHP,skipTrigger) {
+var changeCurrentHP = function(currentHP,skipTrigger,skipSlider) {
     currentHP = Math.floor(currentHP);
-    var percHP = Math.round(currentHP / hpLast * 10000) / 100;
+    var percHP = Math.round(currentHP / currentMaxHP * 10000) / 100;
     $('#hpLabel').text(currentHP + ' HP (' + percHP + '%)');
-    if (!skipTrigger) $(document).trigger('hpChanged',[ currentHP, hpLast, percHP, true ]);
+    if (!skipSlider) hpSlider.val(currentHP);
+    if (!skipTrigger)
+        $(document).trigger('hpChanged',[ currentHP, currentMaxHP, currentHP / currentMaxHP, true ]);
 };
 
-var changeHP = function(event,value) {
-    updateHP(value,false);
+var changeMaxHP = function(newValue,skipTrigger) {
+    var currentPerc = hpSlider.val() / currentMaxHP;
+    currentMaxHP = newValue;
+    $('#hpSlider').noUiSlider({
+        range: { min: [ 1 ], max: [ newValue ] }
+    },true);
+    var currentHP = Math.floor(currentPerc * newValue);
+    changeCurrentHP(currentHP,skipTrigger,false);
+}
+
+/* * * * * Event callbacks * * * * */
+
+var onUnitMouseUp = function(e) {
+    if (e.which == 1 && !this.classList.contains('slide'))
+        $(document).trigger('unitClick',$(this).index());
 };
 
-var slideHP = function(event,value) {
-    updateHP(value,true);
+var onUnitLevelMouseUp = function(e) {
+    if (e.which == 1 && !this.parentNode.classList.contains('empty'))
+        $(this)[0].parentNode.classList.add('slide');
+    e.preventDefault();
+    e.stopPropagation();
+};
+
+var onUnitLevelSlideEnd = function(n) {
+    return function(ui,value) {
+        $(ui).parent()[0].classList.remove('slide');
+        $(document).trigger('unitLevelChanged',[n,value]);
+    };
+};
+
+var onChangeHP = function(event,value) {
+    changeCurrentHP(value,false,true);
+};
+
+var onSlideHP = function(event,value) {
+    changeCurrentHP(value,true,true);
 };
 
 var onButtonClick = function() {
@@ -61,6 +94,44 @@ var onButtonClick = function() {
     var bonus = parseFloat(this.textContent,10);
     if (isNaN(bonus)) bonus = 1;
     $(document).trigger('merryBonusUpdated',bonus);
+};
+
+/* * * * * Custom event callbacks * * * * */
+
+var onUnitPicked = function(event,slotNumber,unitNumber) {
+    updateSlot(slotNumber,unitNumber);
+};
+
+var onUnitLevelChanged = function(event,slotNumber,level) {
+    changeLevel(slotNumber,level);
+}
+
+var onNumbersCrunched = function(event,numbers) {
+    // set damage
+    Object.keys(numbers).forEach(function(type) {
+        if (type == 'HP') return;
+        var damage = ''+Math.floor(numbers[type]);
+        damage = damage.split('').reverse().join('')
+                       .replace(/(\d{3,3})/g,'$1,')
+                       .split('').reverse().join('')
+                       .replace(/^,|,$/g,'');
+        $('#' + type.toLowerCase()).text(damage);
+    });
+    // set hp
+    if (numbers.HP != currentMaxHP)
+        changeMaxHP(numbers.HP,false);
+};
+
+var onMerryBonusUpdated = function(event,merry) {
+    $('button.selected')[0].classList.remove('selected');
+    $('button')[merry == 1.0 ? 0 : merry == 1.2 ? 1 : 2].classList.add('selected');
+};
+
+var onHpChanged = function(event,current,max,perc,skip) {
+    if (skip) return;
+    if (max != currentMaxHP)
+        changeMaxHP(max,true);
+    changeCurrentHP(current,true);
 };
 
 /* * * * * Body * * * * */
@@ -71,77 +142,27 @@ $(function() {
     
     units = units.map(parseUnit);
 
-    // attach events
+    // attach ui events
 
-    $('.unit').mouseup(function(e) {
-        if (e.which == 1 && !this.classList.contains('slide'))
-            $(document).trigger('unitClick',$(this).index());
-    });
+    $('.unit').mouseup(onUnitMouseUp);
+    $('.unitLevel').mouseup(onUnitLevelMouseUp);
 
-    $('.unitLevel').mouseup(function(e) {
-        if (e.which == 1 && !this.parentNode.classList.contains('empty'))
-            $(this)[0].parentNode.classList.add('slide');
-        e.preventDefault();
-        e.stopPropagation();
-    });
+    // attach custom events
 
+    $(document).on('unitPicked',onUnitPicked);
+    $(document).on('unitLevelChanged',onUnitLevelChanged);
+    $(document).on('numbersCrunched',onNumbersCrunched);
+    $(document).on('merryBonusUpdated',onMerryBonusUpdated);
+    $(document).on('hpChanged',onHpChanged);
+
+    // set up ui elements
+    
     $('.unitSlider').each(function(n,x) {
         sliders.push($(x).CircularSlider({
             radius: 44,
-            onSlideEnd: function(ui,value) {
-                $(ui).parent()[0].classList.remove('slide');
-                $(document).trigger('unitLevelChanged',[n,value]);
-            },
-            slide: function() { }
+            onSlideEnd: onUnitLevelSlideEnd(n)
         }));
     });
-
-    $(document).on('unitPicked',function(event,slotNumber,unitNumber) {
-        updateSlot(slotNumber,unitNumber);
-    });
-
-    $(document).on('unitLevelChanged',function(event,slotNumber,level) {
-        changeLevel(slotNumber,level);
-    });
-
-    $(document).on('numbersCrunched',function(event,numbers) {
-        // set damage
-        Object.keys(numbers).forEach(function(type) {
-            if (type == 'HP') return;
-            var damage = ''+Math.floor(numbers[type]);
-            damage = damage.split('').reverse().join('')
-                           .replace(/(\d{3,3})/g,'$1,')
-                           .split('').reverse().join('')
-                           .replace(/^,|,$/g,'');
-            $('#' + type.toLowerCase()).text(damage);
-        });
-        // set hp
-        if (numbers.HP == hpLast) return;
-        var currentPosition = hpSlider.val() / hpLast;
-        hpLast = numbers.HP;
-        $('#hpSlider').noUiSlider({
-            range: { min: [ 1 ], max: [ numbers.HP ] }
-        },true);
-        var currentHP = Math.floor(currentPosition * numbers.HP);
-        hpSlider.val(currentHP);
-        updateHP(currentHP,true);
-    });
-
-    $(document).on('merryBonusUpdated',function(event,merry) {
-        $('button.selected')[0].classList.remove('selected');
-        $('button')[merry == 1.0 ? 0 : merry == 1.2 ? 1 : 2].classList.add('selected');
-    });
-
-    $(document).on('hpChanged',function(event,current,max,perc,skip) {
-        if (skip) return;
-        $('#hpSlider').noUiSlider({
-            range: { min: [ 1 ], max: [ max ] }
-        },true);
-        hpSlider.val(current);
-        updateHP(current,true);
-    });
-
-    // set up ui elements
 
     hpSlider = $('#hpSlider').noUiSlider({
         start: [ 0 ],
@@ -150,8 +171,8 @@ $(function() {
     });
 
     hpSlider.on({
-        change: changeHP,
-        slide: slideHP
+        change: onChangeHP,
+        slide: onSlideHP
     });
 
     $('button').click(onButtonClick);
