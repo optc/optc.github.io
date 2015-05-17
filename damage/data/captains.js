@@ -154,11 +154,11 @@ window.captains = {
         atk: 'chainPosition > 2 ? 3.5 : 1',
         chainMultipliers: [ 0, 0.3, 0.6, 0.9, 1.2, 1.5 ] // don't remove this
     },
-    220: { // Nami Happiness Punch
-        atk: 'unit.type == "PSY" ? 2.5 : 1'
+    220: { // Nami Fine Tempo
+        atk: 'unit.type == "INT" ? 2 : 1'
     },
-    221: { // Nami Fine Tempo
-        atk: 'unit.type == "PSY" ? 2 : 1'
+    221: { // Towel Nami
+        atk: 'unit.type == "INT" ? 2.5 : 1'
     },
     222: { // Usopp Usopp Hammer
         atk: 'unit.type == "PSY" ? 1.2 : 1'

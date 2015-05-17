@@ -219,7 +219,7 @@ window.units = [
     [ "Roronoa Zoro Streaming Wolf Swords", "DEX", "Slasher", 4, 15, 50, 598, 136, 5, 1902, 582, 19 ], 
     [ "Roronoa Zoro Lion’s Song", "DEX", "Slasher", 5, 22, 99, 1882, 538, 10, 3558, 1038, 32 ], 
     [ "Nami Fine Tempo", "INT", "Striker", 4, 15, 50, 454, 133, 50, 1062, 421, 102 ], 
-    [ "Nami Happiness Punch", "INT", "Striker", 5, 22, 99, 1044, 377, 94, 1990, 949, 168 ], 
+    [ "Nami Happiness Punch (Towel Nami)", "INT", "Striker", 5, 22, 99, 1044, 377, 94, 1990, 949, 168 ], 
     [ "Usopp Usopp Hammer", "PSY", "Striker", 3, 12, 35, 188, 101, 40, 778, 388, 191 ], 
     [ "Usopp Impact", "PSY", "Shooter", 4, 18, 70, 733, 361, 97, 1185, 669, 265 ], 
     [ "Mr. Prince Mutton Shot", "QCK", "Fighter", 3, 12, 35, 276, 108, 32, 1144, 457, 107 ], 
