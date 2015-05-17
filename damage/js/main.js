@@ -55,7 +55,7 @@ var updateHP = function(currentHP,skipTrigger) {
     currentHP = Math.floor(currentHP);
     var percHP = Math.round(currentHP / hpLast * 10000) / 100;
     $('#hpLabel').text(currentHP + ' HP (' + percHP + '%)');
-    if (!skipTrigger) $(document).trigger('hpChanged',[ currentHP, hpLast, percHP ]);
+    if (!skipTrigger) $(document).trigger('hpChanged',[ currentHP, hpLast, percHP, true ]);
 };
 
 var changeHP = function(event,value) {
@@ -140,6 +140,15 @@ $(function() {
     $(document).on('merryBonusUpdated',function(event,merry) {
         $('button.selected')[0].classList.remove('selected');
         $('button')[merry == 1.0 ? 0 : merry == 1.2 ? 1 : 2].classList.add('selected');
+    });
+
+    $(document).on('hpChanged',function(event,current,max,perc,skip) {
+        if (skip) return;
+        $('#hpSlider').noUiSlider({
+            range: { min: [ 1 ], max: [ max ] }
+        },true);
+        hpSlider.val(current);
+        updateHP(current,true);
     });
 
     // set up ui elements
