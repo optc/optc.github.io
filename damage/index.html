@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>One Piece Treasure Cruise Damage Calculator</title>
+
+        <link rel="stylesheet" type="text/css" href="css/main.css" />
+        <link rel="stylesheet" type="text/css" href="css/picker.css" />
+        <link rel="stylesheet" type="text/css" href="css/libs/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/libs/bootstrap-dialog.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/libs/circular-slider.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/libs/jquery.nouislider.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/libs/jquery.nouislider.pips.min.css" />
+
+        <script src="js/libs/jquery.min.js"></script>
+        <script src="js/libs/bootstrap.min.js"></script>
+        <script src="js/libs/bootstrap-dialog.min.js"></script>
+        <script src="js/libs/circular-slider.min.js"></script>
+        <script src="js/libs/jquery.nouislider.all.min.js"></script>
+        <script src="js/libs/notify.min.js"></script>
+
+        <script src="data/units.js"></script>
+        <script src="data/captains.js"></script>
+
+        <script src="js/main.js"></script>
+        <script src="js/picker.js"></script>
+        <script src="js/cruncher.js"></script>
+        <script src="js/loader.js"></script>
+    </head>
+
+    <body>
+
+        <div id="main">
+
+            <div id="units">
+                <div class="unit empty" id="friend">
+                    <span class="unitPlaceholder">Click to add (friend)</span>
+                    <span class="unitLevel"></span>
+                    <div class="unitSlider"></div>
+                </div>
+                <div class="unit empty" id="captain">
+                    <span class="unitPlaceholder">Click to add (captain)</span>
+                    <span class="unitLevel"></span>
+                    <div class="unitSlider"></div>
+                </div>
+                <div class="unit empty">
+                    <span class="unitPlaceholder">Click to add</span>
+                    <span class="unitLevel"></span>
+                    <div class="unitSlider"></div>
+                </div>
+                <div class="unit empty">
+                    <span class="unitPlaceholder">Click to add</span>
+                    <span class="unitLevel"></span>
+                    <div class="unitSlider"></div>
+                </div>
+                <div class="unit empty">
+                    <span class="unitPlaceholder">Click to add</span>
+                    <span class="unitLevel"></span>
+                    <div class="unitSlider"></div>
+                </div>
+                <div class="unit empty">
+                    <span class="unitPlaceholder">Click to add</span>
+                    <span class="unitLevel"></span>
+                    <div class="unitSlider"></div>
+                </div>
+            </div>
+
+            <div id="stats">
+                <div class="damage str">
+                    <span>Damage against STR</span>
+                    <span id="str">0</span>
+                </div>
+                <div class="damage qck">
+                    <span>Damage against QCK</span>
+                    <span id="qck">0</span>
+                </div>
+                <div class="damage dex">
+                    <span>Damage against DEX</span>
+                    <span id="dex">0</span>
+                </div>
+                <div class="damage psy">
+                    <span>Damage against PSY</span>
+                    <span id="psy">0</span>
+                </div>
+                <div class="damage int">
+                    <span>Damage against INT</span>
+                    <span id="int">0</span>
+                </div>
+            </div>
+
+            <div id="hp">
+                <div id="hpSlider"></div>
+                <div id="hpLabel"></div>
+            </div>
+
+            <div id="merry">
+                <button type="button" class="btn btn-xs btn-danger selected">No Merry bonus</button>
+                <button type="button" class="btn btn-xs btn-warning">1.2x Merry bonus</button>
+                <button type="button" class="btn btn-xs btn-success">1.5x Merry bonus</button>
+            </div>
+
+        </div>
+
+    </body>
+
+</html>

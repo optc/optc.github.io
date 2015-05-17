@@ -1,0 +1,21 @@
+input#picker {
+    width: 100%;
+}
+
+#pickerUnits {
+    height: 300px;
+    overflow: auto;
+}
+
+.pickerThumbnail {
+    width: 80px;
+    height: 80px;
+    background-size: 80px 80px;
+    display: inline-block;
+    margin: 5px 5px 0 0;
+    cursor: pointer;
+}
+
+.pickerThumbnail:hover {
+    outline: 1px solid red;
+}

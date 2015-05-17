@@ -1,0 +1,183 @@
+body, html {
+    height: 100%;
+}
+
+body, #main, #hp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#main {
+    width: 500px;
+}
+
+#units {
+    display: flex;
+    flex-wrap: wrap;
+    width: 240px;
+}
+
+#stats {
+    margin-left: 50px;
+}
+
+#hp, #merry {
+    width: 350px;
+    margin-top: 30px;
+}
+
+.unit {
+    width: 112px;
+    height: 112px;
+    display: flex;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid black;
+    margin: 3px !important;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-position: -1px -1px;
+}
+
+.empty {
+    border-style: dashed !important;
+    opacity: 0.5;
+}
+
+.empty:hover {
+    border-color: black !important;
+    opacity: 1 !important;
+}
+
+.unit:not(.empty) > .unitPlaceholder,
+.unit.slide > .unitPlaceholder,
+.unit.empty > .unitLevel,
+.unit:not(.slide) > .unitSlider,
+.unit.slide > .unitLevel {
+    display: none;
+}
+
+.unitLevel {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 70%;
+    font-weight: bold;
+    padding: 1px;
+    outline: 1px solid black;
+    background-color: white;
+    cursor: pointer;
+}
+
+.unitLevel:hover {
+    background: lightcoral;
+}
+
+.unitSlider {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 2;
+}
+
+.jcs-panel.noselect {
+    border-width: 0 !important;
+}
+
+.jcs-indicator {
+    width: 10px;
+    height: 10px;
+}
+
+#captain {
+    border-color: red !important;
+}
+
+#captain:not(.empty) {
+    border: 1px solid red !important;
+}
+
+#friend {
+    border-color: orange !important;
+}
+
+#friend:not(.empty) {
+    border: 1px solid orange !important;
+}
+
+.damage {
+    border-radius: 5px;
+    width: 150px;
+    margin-bottom: 15px;
+    text-align: center;
+    padding: 5px;
+}
+
+.damage:last-child {
+    margin-bottom: 0 !important;
+}
+
+.str {
+    background: salmon;
+}
+
+.qck {
+    background: lightskyblue;
+}
+
+.dex {
+    background: lightgreen;
+}
+
+.psy {
+    background: gold;
+}
+
+.int {
+    background: orchid;
+}
+
+.damage > :first-child {
+    font-size: 75%;
+}
+
+.damage > :last-child {
+    font-size: 150%;
+    font-weight: bold;
+    display: block;
+}
+
+#hpSlider {
+    width: 450px;
+    height: 12px;
+}
+
+.noUi-handle {
+    width: 24px !important;
+    height: 18px !important;
+    top: -4px !important;
+}
+
+.noUi-handle:before {
+    left: 9px !important;
+    top: 3px !important;
+    height: 10px !important;
+}
+
+.noUi-handle:after {
+    left: 11px !important;
+    top: 3px !important;
+    height: 10px !important;
+}
+
+button:not(.selected) {
+    opacity: 0.3;
+}
+
+button:hover {
+    opacity: 1 !important;
+}
