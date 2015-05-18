@@ -187,7 +187,7 @@ var onUnitsSwitched = function(event,slotA,slotB) {
 };
 
 var onDetailsRequested = function(event,type) {
-    $(document).trigger('detailsReady',crunchForType(type,true));
+    $(document).trigger('detailsReady',crunchForType(type.toUpperCase(),true));
 };
 
 /* * * * * Events * * * * */
