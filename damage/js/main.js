@@ -46,8 +46,10 @@ var changeCurrentHP = function(currentHP,skipTrigger,skipSlider) {
     var percHP = Math.round(currentHP / currentMaxHP * 10000) / 100;
     $('#hpLabel').text(currentHP + ' HP (' + percHP + '%)');
     if (!skipSlider) hpSlider.val(currentHP);
-    if (!skipTrigger)
-        $(document).trigger('hpChanged',[ currentHP, currentMaxHP, currentHP / currentMaxHP, true ]);
+    if (!skipTrigger) {
+        var percHP = Math.floor(currentHP / currentMaxHP * 10000) / 100;
+        $(document).trigger('hpChanged',[ currentHP, currentMaxHP, percHP , true ]);
+    }
 };
 
 var changeMaxHP = function(newValue,skipTrigger) {
