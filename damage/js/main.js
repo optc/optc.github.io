@@ -88,12 +88,10 @@ var onUnitLevelClick = function(e) {
     return false;
 };
 
-var onUnitLevelSlideEnd = function(n) {
-    return function(ui,value) {
-        setTimeout(function() {
-            changeUnitLevel($(ui).parent().index(),value);
-        },100);
-    };
+var onUnitLevelSlideEnd = function(ui,value) {
+    setTimeout(function() {
+        changeUnitLevel($(ui).parent().index(),value);
+    },100);
 };
 
 var onChangeHP = function(event,value) {
@@ -174,11 +172,13 @@ var onUnitsSwitched = function(event,slotA,slotB) {
     slotA = units.eq(slotA);
     slotB = units.eq(slotB);
     // switch level labels
-    var labelA = slotA.find('.unitLevel'),
-        labelB = slotB.find('.unitLevel'),
-        textA = labelA.text();
+    var labelA = slotA.find('.unitLevel'), labelB = slotB.find('.unitLevel'), textA = labelA.text();
     labelA.text(labelB.text());
     labelB.text(textA);
+    // switch level sliders
+    var sliderA = slotA.find('.unitSlider'), sliderB = slotB.find('.unitSlider');
+    slotA.append(sliderB);
+    slotB.append(sliderA);
 };
 
 /* * * * * Body * * * * */
@@ -207,7 +207,7 @@ $(function() {
     $('.unitSlider').each(function(n,x) {
         sliders.push($(x).CircularSlider({
             radius: 44,
-            onSlideEnd: onUnitLevelSlideEnd(n)
+            onSlideEnd: onUnitLevelSlideEnd
         }));
     });
 
