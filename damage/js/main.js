@@ -26,9 +26,9 @@ var getThumbnailUrl = function(n) {
 var updateSlot = function(slotNumber,unitNumber) {
     var slot = $('.unit')[slotNumber];
     var unit = units[unitNumber];
-    // change background
+    // change portrait
     slot.classList.remove('empty');
-    slot.style.backgroundImage = 'url(' + getThumbnailUrl(unitNumber) + ')';
+    $(slot).find('.unitPortrait')[0].style.backgroundImage = 'url(' + getThumbnailUrl(unitNumber) + ')';
     // update slider
     var index = $(slot).index();
     sliders[index].setRange(1,units[unitNumber].maxLevel);
@@ -64,12 +64,7 @@ var changeMaxHP = function(newValue,skipTrigger) {
 
 /* * * * * Event callbacks * * * * */
 
-var onUnitMouseUp = function(e) {
-    if (e.which == 1 && !this.classList.contains('slide'))
-        $(document).trigger('unitClick',$(this).index());
-};
-
-var onUnitLevelMouseUp = function(e) {
+var onUnitLevelClick = function(e) {
     if (e.which == 1 && !this.parentNode.classList.contains('empty'))
         $(this)[0].parentNode.classList.add('slide');
     e.preventDefault();
@@ -80,7 +75,7 @@ var onUnitLevelSlideEnd = function(n) {
     return function(ui,value) {
         setTimeout(function() {
             $(ui).parent()[0].classList.remove('slide');
-            $(document).trigger('unitLevelChanged',[n,value]);
+            $(document).trigger('unitLevelChanged',[ n, value ]);
         },100);
     };
 };
@@ -158,6 +153,18 @@ var onHpChanged = function(event,current,max,perc,skip) {
     changeCurrentHP(current,true);
 };
 
+var onUnitsSwitched = function(event,slotA,slotB) {
+    var units = $('.unit');
+    slotA = units.eq(slotA);
+    slotB = units.eq(slotB);
+    // switch level labels
+    var labelA = slotA.find('.unitLevel'),
+        labelB = slotB.find('.unitLevel'),
+        textA = labelA.text();
+    labelA.text(labelB.text());
+    labelB.text(textA);
+};
+
 /* * * * * Body * * * * */
 
 $(function() {
@@ -168,8 +175,7 @@ $(function() {
 
     // attach ui events
 
-    $('.unit').mouseup(onUnitMouseUp);
-    $('.unitLevel').mouseup(onUnitLevelMouseUp);
+    $('.unitLevel').click(onUnitLevelClick);
 
     // attach custom events
 
@@ -178,6 +184,7 @@ $(function() {
     $(document).on('numbersCrunched',onNumbersCrunched);
     $(document).on('merryBonusUpdated',onMerryBonusUpdated);
     $(document).on('hpChanged',onHpChanged);
+    $(document).on('unitsSwitched',onUnitsSwitched);
 
     // set up ui elements
     

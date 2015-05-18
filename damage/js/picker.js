@@ -64,7 +64,7 @@ var createThumbnail = function(n) {
     result.className = 'pickerThumbnail';
     result.style.backgroundImage = 'url(' + getThumbnailUrl(n) + ')';
     result.setAttribute('unitID',n);
-    $(result).click(onUnitClick);
+    $(result).click(onThumbnailClick);
     return result;
 };
 
@@ -73,18 +73,26 @@ var getThumbnailUrl = function(n) {
     return 'http://onepiece-treasurecruise.com/wp-content/uploads/f' + id + '.png';
 };
 
-var onUnitClick = function() {
+var onThumbnailClick = function() {
     $(document).trigger('unitPicked',[ lastSlotNumber, parseInt(this.getAttribute('unitID'),10) ]);
     closeDialog();
 };
 
+var onUnitClick = function(e) {
+    lastSlotNumber = $(this).index();
+    createDialog();
+};
+
 /* * * * * Events * * * * */
 
-$(document).on('unitClick',function(event,slotNumber) {
-    lastSlotNumber = slotNumber;
-    createDialog();
-});
-
 $(document).on('unitFilter',debounce);
+
+/* * * * * UI events * * * * */
+
+$(function() {
+
+    $('.unit').click(onUnitClick);
+
+});
 
 })();

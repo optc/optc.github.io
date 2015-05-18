@@ -130,16 +130,20 @@ var createFunctions = function(data) {
     return result;
 };
 
+var setCaptain = function(slotNumber) {
+    if (team[slotNumber] == null)
+        captainAbilities[slotNumber] = null;
+    else if (captains.hasOwnProperty(team[slotNumber].unit.number+1))
+        captainAbilities[slotNumber] = createFunctions(captains[team[slotNumber].unit.number+1]);
+    else
+        captainAbilities[slotNumber] = null;
+}
+
 /* * * * * Event callbacks * * * * */
 
 var onUnitPick = function(event,slotNumber,unitNumber) {
     team[slotNumber] = { unit: units[unitNumber], level: 1, orb: 1 };
-    if (slotNumber < 2) {
-        if (captains.hasOwnProperty(unitNumber+1))
-            captainAbilities[slotNumber] = createFunctions(captains[unitNumber+1]);
-        else
-            captainAbilities[slotNumber] = null;
-    }
+    if (slotNumber < 2) setCaptain(slotNumber);
     crunch();
 };
 
@@ -165,6 +169,15 @@ var onOrbMultiplierChanged = function(event,slotNumber,multiplier) {
     crunch();
 };
 
+var onUnitsSwitched = function(event,slotA,slotB) {
+    var teamA = team[slotA];
+    team[slotA] = team[slotB];
+    team[slotB] = teamA;
+    if (slotA == 0 || slotB == 0) setCaptain(0);
+    if (slotA == 1 || slotB == 1) setCaptain(1);
+    crunch();
+};
+
 /* * * * * Events * * * * */
 
 $(document).on('unitPicked',onUnitPick);
@@ -172,5 +185,6 @@ $(document).on('unitLevelChanged',onLevelChange);
 $(document).on('merryBonusUpdated',onMerryChange);
 $(document).on('hpChanged',onHpChange);
 $(document).on('orbMultiplierChanged',onOrbMultiplierChanged);
+$(document).on('unitsSwitched',onUnitsSwitched);
 
 })();

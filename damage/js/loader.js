@@ -52,35 +52,43 @@ var onResetStorage = function() {
     window.location.reload();
 }
 
-$(function() {
+var onUnitsSwitched = function(event,slotA,slotB) {
+    var teamA = team[slotA];
+    team[slotA] = team[slotB];
+    team[slotB] = teamA;
+    save();
+};
 
 /* * * * * (Re-)initialize * * * * */
 
-team  = loadValue('team',[ null, null, null, null, null, null ]);
-merry = loadValue('merry',1.0);
-hp    = loadValue('hp',{ current: 1, max: 1, perc: 100 });
+$(function() {
 
-team.forEach(function(x,n) {
-    if (x == null) return;
-    $(document).trigger('unitPicked',[ n, x.unit.number ]);
-    $(document).trigger('unitLevelChanged',[ n, x.level ]);
-});
+    team  = loadValue('team',[ null, null, null, null, null, null ]);
+    merry = loadValue('merry',1.0);
+    hp    = loadValue('hp',{ current: 1, max: 1, perc: 100 });
 
-if (merry != 1.0)
-    $(document).trigger('merryBonusUpdated',merry);
+    team.forEach(function(x,n) {
+        if (x == null) return;
+        $(document).trigger('unitPicked',[ n, x.unit.number ]);
+        $(document).trigger('unitLevelChanged',[ n, x.level ]);
+    });
 
-if (hp.current != 1 || hp.max != 1 || hp.perc != 1)
-    $(document).trigger('hpChanged',[ hp.current, hp.max, hp.perc ]);
+    if (merry != 1.0)
+        $(document).trigger('merryBonusUpdated',merry);
 
-/* * * * * Events * * * * */
+    if (hp.current != 1 || hp.max != 1 || hp.perc != 1)
+        $(document).trigger('hpChanged',[ hp.current, hp.max, hp.perc ]);
 
-$(document).on('unitPicked',onUnitPick);
-$(document).on('unitLevelChanged',onLevelChange);
-$(document).on('merryBonusUpdated',onMerryChange);
-$(document).on('hpChanged',onHpChange);
-$(document).on('numbersCrunched',onNumbersCrunched);
+    /* * * * * Events * * * * */
 
-$(document).on('resetStorage',onResetStorage);
+    $(document).on('unitPicked',onUnitPick);
+    $(document).on('unitLevelChanged',onLevelChange);
+    $(document).on('merryBonusUpdated',onMerryChange);
+    $(document).on('hpChanged',onHpChange);
+    $(document).on('numbersCrunched',onNumbersCrunched);
+    $(document).on('unitsSwitched',onUnitsSwitched);
+
+    $(document).on('resetStorage',onResetStorage);
 
 });
 
