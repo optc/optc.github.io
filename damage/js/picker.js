@@ -79,6 +79,7 @@ var onThumbnailClick = function() {
 };
 
 var onUnitClick = function(e) {
+    if (e.which != 1) return;
     lastSlotNumber = $(this).index();
     createDialog();
 };
