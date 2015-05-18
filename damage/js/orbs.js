@@ -11,6 +11,17 @@ var getGlowColor = function(type,status) {
      return 'psy';
 };
 
+var changeOrb = function(slotNumber) {
+    var status = (team[slotNumber].status + 1) % 3;
+    var target = $($('.unit')[slotNumber]);
+    var color = getGlowColor(team[slotNumber].type,status);
+    team[slotNumber].status = status;
+    if (status == 0) deactivateGlowing(target);
+    else activateGlowing(target,color);
+    var multiplier = (status == 0 ? 1 : status == 1 ? 2 : 0.5);
+    $(document).trigger('orbMultiplierChanged',[ slotNumber, multiplier ]);
+};
+
 /* * * * * UI control * * * * */
 
 var activateGlowing = function(target,type) {
@@ -29,6 +40,13 @@ var deactivateGlowing = function(target) {
     ['str','qck','dex','psy','int'].map(function(x) { target.removeClass(x); });
 };
 
+/* * * * * UI events * * * * */
+
+var onUnitMouseUp = function(e) {
+    if (e.which == 2 && !this.classList.contains('empty'))
+        changeOrb($(this).index());
+};
+
 /* * * * * Events * * * * */
 
 $(document).on('unitPicked',function(event,slotNumber,unitNumber) {
@@ -36,15 +54,11 @@ $(document).on('unitPicked',function(event,slotNumber,unitNumber) {
     deactivateGlowing($($('.unit')[slotNumber]));
 });
 
-$(document).on('changeOrb',function(event,slotNumber) {
-    var status = (team[slotNumber].status + 1) % 3;
-    var target = $($('.unit')[slotNumber]);
-    var color = getGlowColor(team[slotNumber].type,status);
-    team[slotNumber].status = status;
-    if (status == 0) deactivateGlowing(target);
-    else activateGlowing(target,color);
-    var multiplier = (status == 0 ? 1 : status == 1 ? 2 : 0.5);
-    $(document).trigger('orbMultiplierChanged',[ slotNumber, multiplier ]);
+$(function() {
+
+    $('.unit').mouseup(onUnitMouseUp);
+
 });
+
 
 })();

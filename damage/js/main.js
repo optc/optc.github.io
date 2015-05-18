@@ -62,17 +62,11 @@ var changeMaxHP = function(newValue,skipTrigger) {
     changeCurrentHP(currentHP,skipTrigger,false);
 }
 
-var toggleOrb = function(slotNumber) {
-    $(document).trigger('changeOrb',slotNumber);
-};
-
 /* * * * * Event callbacks * * * * */
 
 var onUnitMouseUp = function(e) {
     if (e.which == 1 && !this.classList.contains('slide'))
         $(document).trigger('unitClick',$(this).index());
-    else if (e.which == 2 && !this.classList.contains('empty'))
-        toggleOrb($(this).index());
 };
 
 var onUnitLevelMouseUp = function(e) {
