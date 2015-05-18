@@ -33,12 +33,7 @@ var updateSlot = function(slotNumber,unitNumber) {
     var index = $(slot).index();
     sliders[index].setRange(1,units[unitNumber].maxLevel);
     // reset level
-    changeLevel(index,1);
-};
-
-var changeLevel = function(slotNumber,level) {
-    var slot = $($('.unit')[slotNumber]);
-    slot.find('.unitLevel').text('Lv.' + level);
+    changeLevelLabel(index,1);
 };
 
 var changeCurrentHP = function(currentHP,skipTrigger,skipSlider) {
@@ -62,20 +57,41 @@ var changeMaxHP = function(newValue,skipTrigger) {
     changeCurrentHP(currentHP,skipTrigger,false);
 }
 
+var changeUnitLevel = function(slotNumber,level) {
+    $('.unit').eq(slotNumber).removeClass('slide');
+    $(document).trigger('unitLevelChanged',[ slotNumber, level ]);
+};
+
+var changeLevelLabel = function(slotNumber,level) {
+    var slot = $($('.unit')[slotNumber]);
+    slot.find('.unitLevel').text('Lv.' + level);
+};
+
+var getUnitNumberFromSlot = function(slotNumber) {
+    var image  = $('.unit').eq(slotNumber).find('.unitPortrait')[0].style.backgroundImage;
+    if (image == null) return -1;
+    return parseInt(image.match(/f(\d+)/)[1],10);
+};
+
 /* * * * * Event callbacks * * * * */
 
 var onUnitLevelClick = function(e) {
     if (e.which == 1 && !this.parentNode.classList.contains('empty'))
-        $(this)[0].parentNode.classList.add('slide');
+        $(this).parent().addClass('slide');
+    else if (e.which == 2) {
+        var slotNumber = $(this).parent().index();
+        var unitNumber = getUnitNumberFromSlot(slotNumber);
+        changeUnitLevel(slotNumber,units[unitNumber-1].maxLevel);
+    }
     e.preventDefault();
     e.stopPropagation();
+    return false;
 };
 
 var onUnitLevelSlideEnd = function(n) {
     return function(ui,value) {
         setTimeout(function() {
-            $(ui).parent()[0].classList.remove('slide');
-            $(document).trigger('unitLevelChanged',[ n, value ]);
+            changeUnitLevel($(ui).parent().index(),value);
         },100);
     };
 };
@@ -122,7 +138,7 @@ var onUnitPicked = function(event,slotNumber,unitNumber) {
 };
 
 var onUnitLevelChanged = function(event,slotNumber,level) {
-    changeLevel(slotNumber,level);
+    changeLevelLabel(slotNumber,level);
 }
 
 var onNumbersCrunched = function(event,numbers) {

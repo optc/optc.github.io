@@ -42,9 +42,12 @@ var deactivateGlowing = function(target) {
 
 /* * * * * UI events * * * * */
 
-var onUnitMouseUp = function(e) {
-    if (e.which == 2 && !this.classList.contains('empty'))
+var onUnitClick = function(e) {
+    if (e.which == 2 && !this.classList.contains('empty')) {
         changeOrb($(this).index());
+        e.preventDefault();
+        e.stopPropagation();
+    }
 };
 
 /* * * * * Events * * * * */
@@ -56,7 +59,7 @@ $(document).on('unitPicked',function(event,slotNumber,unitNumber) {
 
 $(function() {
 
-    $('.unit').mouseup(onUnitMouseUp);
+    $('.unit').click(onUnitClick);
 
 });
 
