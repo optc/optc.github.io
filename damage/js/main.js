@@ -23,6 +23,11 @@ var getThumbnailUrl = function(n) {
     return 'http://onepiece-treasurecruise.com/wp-content/uploads/f' + id + '.png';
 };
 
+var formatNumber = function(n) {
+    var rev = function(x) { return x.split('').reverse().join(''); };
+    return rev(rev(n).replace(/(\d{3,3})/g,'$1,')).replace(/^,|,$/g,'');
+};
+
 var updateSlot = function(slotNumber,unitNumber) {
     var slot = $('.unit')[slotNumber];
     var unit = units[unitNumber];
@@ -79,6 +84,7 @@ var onUnitLevelClick = function(e) {
     if (e.which == 1 && !this.parentNode.classList.contains('empty'))
         $(this).parent().addClass('slide');
     else if (e.which == 2) {
+        // doesn't work on Firefox because FF is a crappy piece of shit
         var slotNumber = $(this).parent().index();
         var unitNumber = getUnitNumberFromSlot(slotNumber);
         changeUnitLevel(slotNumber,units[unitNumber-1].maxLevel);
@@ -144,11 +150,8 @@ var onNumbersCrunched = function(event,numbers) {
     Object.keys(numbers).forEach(function(type) {
         if (type == 'HP') return;
         var damage = ''+Math.floor(numbers[type]);
-        damage = damage.split('').reverse().join('')
-                       .replace(/(\d{3,3})/g,'$1,')
-                       .split('').reverse().join('')
-                       .replace(/^,|,$/g,'');
-        $('#' + type.toLowerCase()).text(damage);
+        damage = formatNumber(damage);
+        $('.damageAmount#' + type.toLowerCase()).text(damage);
     });
     // set hp
     if (numbers.HP != currentMaxHP)

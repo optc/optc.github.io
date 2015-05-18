@@ -1,0 +1,59 @@
+#stats {
+    position: relative;
+    width: 150px;
+    height: 360px;
+}
+
+.damage {
+    cursor: pointer;
+    position: absolute;
+    transition: top 1s, height 1s;
+    height: 60px;
+    z-index: 1;
+    user-select: none;
+    -moz-user-select: none; 
+    -webkit-user-select: none; 
+}
+
+.damage.str { top: 0px; }
+.damage.qck { top: 75px; }
+.damage.dex { top: 150px; }
+.damage.psy { top: 225px; }
+.damage.int { top: 300px; }
+
+.details {
+    top: 0px !important;
+    height: 360px !important;
+}
+
+.details > .damageLabel,
+.details > .damageAmount {
+    display: none;
+}
+
+.onTurn {
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.damageDealer {
+    font-size: 11px;
+}
+
+.unitDamage {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.unitDamage:after {
+    content: " HP";
+}
+
+hr {
+    margin: 5px 0 5px 0 !important;
+    border-color: black;
+}
+
+.detailsContainer > hr:last-child {
+    display: none;
+}

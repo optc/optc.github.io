@@ -14,6 +14,7 @@
         <link rel="stylesheet" type="text/css" href="css/main.css" />
         <link rel="stylesheet" type="text/css" href="css/picker.css" />
         <link rel="stylesheet" type="text/css" href="css/orbs.css" />
+        <link rel="stylesheet" type="text/css" href="css/details.css" />
 
         <script src="js/libs/jquery.min.js"></script>
         <script src="js/libs/bootstrap.min.js"></script>
@@ -22,6 +23,7 @@
         <script src="js/libs/jquery.nouislider.all.min.js"></script>
         <script src="js/libs/notify.min.js"></script>
         <script src="js/libs/interact.min.js"></script>
+        <script src="js/libs/jquery.dotdotdot.min.js"></script>
 
         <script src="data/units.js"></script>
         <script src="data/captains.js"></script>
@@ -32,6 +34,7 @@
         <script src="js/loader.js"></script>
         <script src="js/orbs.js"></script>
         <script src="js/dragger.js"></script>
+        <script src="js/details.js"></script>
     </head>
 
     <body>
@@ -85,24 +88,24 @@
 
             <div id="stats">
                 <div class="damage str">
-                    <span>Damage against STR</span>
-                    <span id="str">0</span>
+                    <span class="damageLabel">Damage against STR</span>
+                    <span class="damageAmount" id="str">0</span>
                 </div>
                 <div class="damage qck">
-                    <span>Damage against QCK</span>
-                    <span id="qck">0</span>
+                    <span class="damageLabel">Damage against QCK</span>
+                    <span class="damageAmount" id="qck">0</span>
                 </div>
                 <div class="damage dex">
-                    <span>Damage against DEX</span>
-                    <span id="dex">0</span>
+                    <span class="damageLabel">Damage against DEX</span>
+                    <span class="damageAmount" id="dex">0</span>
                 </div>
                 <div class="damage psy">
-                    <span>Damage against PSY</span>
-                    <span id="psy">0</span>
+                    <span class="damageLabel">Damage against PSY</span>
+                    <span class="damageAmount" id="psy">0</span>
                 </div>
                 <div class="damage int">
-                    <span>Damage against INT</span>
-                    <span id="int">0</span>
+                    <span class="damageLabel">Damage against INT</span>
+                    <span class="damageAmount" id="int">0</span>
                 </div>
             </div>
 

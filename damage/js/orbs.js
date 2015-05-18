@@ -1,6 +1,7 @@
 (function() {
 
 var team = [ null, null, null, null, null, null ];
+//var onFirefox = /firefox/i.test(navigator.userAgent);
 
 var getGlowColor = function(type,status) {
     if (status == 1) return type.toLowerCase();
@@ -43,24 +44,38 @@ var deactivateGlowing = function(target) {
 /* * * * * UI events * * * * */
 
 var onUnitClick = function(e) {
+    if (e.target.className == 'unitLevel') return;
     if (e.which == 2 && !this.classList.contains('empty')) {
         changeOrb($(this).index());
-        e.preventDefault();
-        e.stopPropagation();
+        //e.preventDefault();
+        //e.stopPropagation();
     }
+};
+
+var onUnitsSwitched = function(event,slotA,slotB) {
+    var teamA = team[slotA];
+    team[slotA] = team[slotB];
+    team[slotB] = teamA;
+    // move glow
+    var moveSlotA = (team[slotA] && team[slotA].status > 0);
+    var moveSlotB = (team[slotB] && team[slotB].status > 0);
+    if (moveSlotB) deactivateGlowing($('.unit').eq(slotA));
+    if (moveSlotA) deactivateGlowing($('.unit').eq(slotB));
+    if (moveSlotB) activateGlowing($('.unit').eq(slotB),getGlowColor(team[slotB].type,team[slotB].status));
+    if (moveSlotA) activateGlowing($('.unit').eq(slotA),getGlowColor(team[slotA].type,team[slotA].status));
 };
 
 /* * * * * Events * * * * */
 
 $(document).on('unitPicked',function(event,slotNumber,unitNumber) {
     team[slotNumber] = { type: units[unitNumber].type, status: 0 };
-    deactivateGlowing($($('.unit')[slotNumber]));
+    deactivateGlowing($('.unit').eq(slotNumber));
 });
 
+$(document).on('unitsSwitched',onUnitsSwitched);
+
 $(function() {
-
-    $('.unit').click(onUnitClick);
-
+    $('.unit').mouseup(onUnitClick);
 });
 
 

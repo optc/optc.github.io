@@ -151,11 +151,11 @@ body, #main, #hp, #other {
     background: orchid;
 }
 
-.damage > :first-child {
+.damageLabel {
     font-size: 75%;
 }
 
-.damage > :last-child {
+.damageAmount {
     font-size: 150%;
     font-weight: bold;
     display: block;

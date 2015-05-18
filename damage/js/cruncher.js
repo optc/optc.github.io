@@ -13,7 +13,7 @@ var percHP = 100.0;
 var crunch = function() {
     var result = { };
     ['STR','QCK','DEX','PSY','INT'].forEach(function(type) {
-        result[type] = crunchForType(type);
+        result[type] = crunchForType(type,false);
     });
     result.HP = 0;
     team.forEach(function(x,n) {
@@ -25,13 +25,13 @@ var crunch = function() {
     $(document).trigger('numbersCrunched',result);
 };
 
-var crunchForType = function(type) {
-    var damage = [ ]
+var crunchForType = function(type,withDetails) {
+    var damage = [ ];
     // apply type & orb multipliers
     team.forEach(function(x,n) {
         if (x == null) return;
         var atk = getAttackOfUnit(x);
-        damage.push([ x, atk * x.orb * getMultiplierOfUnit(x,type) * 1.90 ]);
+        damage.push([ x, atk * x.orb * getMultiplierOfUnit(x,type) * 1.90, n ]);
     });
     // sort from weakest to strongest
     damage.sort(function(x,y) { return x[1] - y[1]; });
@@ -45,9 +45,17 @@ var crunchForType = function(type) {
     var damage0 = applyCaptainEffectsToDamage(damageWithCM0,false,!areChainsEqual);
     var damage1 = applyCaptainEffectsToDamage(damageWithCM1,!areChainsEqual,false);
     // compute overall damage, add Merry's bonus
-    damage0 = damage0.reduce(function(prev,x) { return prev + x[1]; },0);
-    damage1 = damage1.reduce(function(prev,x) { return prev + x[1]; },0);
-    return merryBonus * Math.max(damage0,damage1);
+    var overallDamage0 = damage0.reduce(function(prev,x) { return prev + x[1]; },0);
+    var overallDamage1 = damage1.reduce(function(prev,x) { return prev + x[1]; },0);
+    if (!withDetails) return merryBonus * Math.max(overallDamage0,overallDamage1);
+    // compute details
+    var isCM0Better = overallDamage0 > overallDamage1;
+    var result = {
+        chain: (isCM0Better ? CM0 : CM1),
+        order: (isCM0Better ? damage0 : damage1)
+    };
+    result.order = result.order.map(function(x) { x[1] *= merryBonus; return x; });
+    return result;
 };
 
 var getAttackOfUnit = function(data) {
@@ -93,19 +101,19 @@ var applyChainMultipliers = function(damage,multipliers) {
     }
     // apply captain's chain multipliers to the base multipliers provided via parameter
     return damage.map(function(x,n) {
-        var unit = x[0], damage = x[1];
-        return [ unit, damage * (1 + multipliers[n] * multiplier) ];
+        var unit = x[0], damage = x[1], order = x[2];
+        return [ unit, damage * (1 + multipliers[n] * multiplier), order ];
     });
 };
 
 var applyCaptainEffectsToDamage = function(damage,skipEffect0,skipEffect1) {
     return damage.map(function(x,n) {
-        var unit = x[0], damage = x[1];
+        var unit = x[0], damage = x[1], order = x[2];
         if (!skipEffect0 && captainAbilities[0] != null && captainAbilities[0].hasOwnProperty('atk'))
             damage *= captainAbilities[0].atk(unit.unit,n,currentHP,maxHP,percHP);
         if (!skipEffect1 && captainAbilities[1] != null && captainAbilities[1].hasOwnProperty('atk'))
             damage *= captainAbilities[1].atk(unit.unit,n,currentHP,maxHP,percHP);
-        return [ unit, damage ];
+        return [ unit, damage, order ];
     });
 };
 
@@ -178,13 +186,22 @@ var onUnitsSwitched = function(event,slotA,slotB) {
     crunch();
 };
 
+var onDetailsRequested = function(event,type) {
+    $(document).trigger('detailsReady',crunchForType(type,true));
+};
+
 /* * * * * Events * * * * */
 
+// core
 $(document).on('unitPicked',onUnitPick);
 $(document).on('unitLevelChanged',onLevelChange);
 $(document).on('merryBonusUpdated',onMerryChange);
 $(document).on('hpChanged',onHpChange);
+// orb control
 $(document).on('orbMultiplierChanged',onOrbMultiplierChanged);
+// drag & drop
 $(document).on('unitsSwitched',onUnitsSwitched);
+// details
+$(document).on('detailsRequested',onDetailsRequested);
 
 })();
