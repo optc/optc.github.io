@@ -1,11 +1,13 @@
 (function() {
 
-var team, merry, hp;
+var team, merry, hp, sliderToggled;
 
 /* * * * * Storage methods * * * * */
 
 var loadValue = function(key,def) {
-    return JSON.parse(localStorage.getItem(key)) || def;
+    var value = JSON.parse(localStorage.getItem(key));
+    if (value != undefined) return value;
+    return def;
 };
 
 var saveValue = function(key,value) {
@@ -16,6 +18,7 @@ var save = function() {
     saveValue('team',team);
     saveValue('merry',merry);
     saveValue('hp',hp);
+    saveValue('sliderToggled',sliderToggled);
 };
 
 /* * * * * Event callbacks * * * * */
@@ -59,13 +62,19 @@ var onUnitsSwitched = function(event,slotA,slotB) {
     save();
 };
 
+var onSliderToggled = function(event,value) {
+    sliderToggled = value;
+    save();
+};
+
 /* * * * * (Re-)initialize * * * * */
 
 $(function() {
 
     team  = loadValue('team',[ null, null, null, null, null, null ]);
     merry = loadValue('merry',1.0);
-    hp    = loadValue('hp',{ current: 1, max: 1, perc: 100 });
+    hp = loadValue('hp',{ current: 1, max: 1, perc: 100 });
+    sliderToggled = loadValue('sliderToggled',true)
 
     $(document).trigger('crunchingToggled',false);
 
@@ -81,6 +90,9 @@ $(function() {
     if (hp.current != 1 || hp.max != 1 || hp.perc != 1)
         $(document).trigger('hpChanged',[ hp.current, hp.max, hp.perc ]);
 
+    if (!sliderToggled)
+        $(document).trigger('sliderToggle',false);
+
     $(document).trigger('crunchingToggled',true);
 
     /* * * * * Events * * * * */
@@ -91,6 +103,7 @@ $(function() {
     $(document).on('hpChanged',onHpChange);
     $(document).on('numbersCrunched',onNumbersCrunched);
     $(document).on('unitsSwitched',onUnitsSwitched);
+    $(document).on('sliderToggle',onSliderToggled);
 
     $(document).on('resetStorage',onResetStorage);
 

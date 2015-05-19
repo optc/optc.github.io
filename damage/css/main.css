@@ -87,6 +87,11 @@ body, #main, #hp, #other {
     background: lightcoral;
 }
 
+.unitLevel > input {
+    width: 100%;
+    height: 100%;
+}
+
 .unitSlider {
     position: absolute;
     top: 10px;
@@ -196,9 +201,15 @@ body, #main, #hp, #other {
     opacity: 1 !important;
 }
 
-#other > button {
+#other > #reset {
     padding: 5px;
-    width: 30%;
+    width: 110px;
+}
+
+#other > #sliderToggle {
+    padding: 5px;
+    width: 150px;
+    margin-right: 5px;
 }
 
 /* Ribbons */

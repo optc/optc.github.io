@@ -4,6 +4,9 @@ var sliders = [ ];
 var hpSlider = null;
 var currentMaxHP = 1;
 
+var unitSlidersEnabled = true;
+var unitLevelEditor = $('<input type="text" id="levelEditor"></input>');
+
 /* * * * * Functions * * * * */
 
 var parseUnit = function(element,n) {
@@ -36,7 +39,8 @@ var updateSlot = function(slotNumber,unitNumber) {
     $(slot).find('.unitPortrait')[0].style.backgroundImage = 'url(' + getThumbnailUrl(unitNumber) + ')';
     // update slider
     var index = $(slot).index();
-    sliders[index].setRange(1,units[unitNumber].maxLevel);
+    sliders[index][0].setRange(1,units[unitNumber].maxLevel);
+    sliders[index][1] = units[unitNumber].maxLevel;
     // reset level
     changeLevelLabel(index,1);
 };
@@ -78,12 +82,40 @@ var getUnitNumberFromSlot = function(slotNumber) {
     return parseInt(image.match(/f(\d+)/)[1],10);
 };
 
+var editUnitLevel = function(target) {
+    target.append(unitLevelEditor);
+    unitLevelEditor.focusout(onUnitEditorClose);
+    unitLevelEditor.keyup(onUnitEditorClose);
+    unitLevelEditor.focus();
+};
+
+var onUnitEditorClose = function(e) {
+    if (e.type == 'keyup' && e.which != 13) return;
+    var level = parseInt(unitLevelEditor.val(),10);
+    var slotNumber = $(e.target).parent().parent().index();
+    unitLevelEditor.remove();
+    unitLevelEditor.val('');
+    if (isNaN(level) || level < 1 || level > sliders[slotNumber][1]) return;
+    changeUnitLevel(slotNumber,level);
+    changeLevelLabel(slotNumber,level);
+}
+
+var onSliderToggle = function(event,value) {
+    unitSlidersEnabled = value;
+    var target = $('#sliderToggle');
+    target.removeClass(value ? 'btn-default' : 'btn-primary');
+    target.addClass(!value ? 'btn-default' : 'btn-primary');
+};
+
 /* * * * * Event callbacks * * * * */
 
 var onUnitLevelClick = function(e) {
-    if (e.which == 1 && !this.parentNode.classList.contains('empty'))
-        $(this).parent().addClass('slide');
-    else if (e.which == 2) {
+    if (e.which == 1 && !this.parentNode.classList.contains('empty')) {
+        if (unitSlidersEnabled)
+            $(this).parent().addClass('slide');
+        else
+            editUnitLevel($(this));
+    } else if (e.which == 2) {
         // doesn't work on Firefox because FF is a crappy piece of shit
         var slotNumber = $(this).parent().index();
         var unitNumber = getUnitNumberFromSlot(slotNumber);
@@ -133,6 +165,11 @@ var onResetButtonClick = function() {
             }
         ]
     });
+};
+
+var onSliderToggleClick = function() {
+    var enabled = !$(this).hasClass('btn-primary');
+    $(document).trigger('sliderToggle',enabled);
 };
 
 /* * * * * Custom event callbacks * * * * */
@@ -208,14 +245,15 @@ $(function() {
     $(document).on('merryBonusUpdated',onMerryBonusUpdated);
     $(document).on('hpChanged',onHpChanged);
     $(document).on('unitsSwitched',onUnitsSwitched);
+    $(document).on('sliderToggle',onSliderToggle);
 
     // set up ui elements
     
     $('.unitSlider').each(function(n,x) {
-        sliders.push($(x).CircularSlider({
+        sliders.push([$(x).CircularSlider({
             radius: 44,
             onSlideEnd: onUnitLevelSlideEnd
-        }));
+        }),1]);
     });
 
     hpSlider = $('#hpSlider').noUiSlider({
@@ -231,6 +269,7 @@ $(function() {
 
     $('#merry > button').click(onMerryButtonClick);
     $('#reset').click(onResetButtonClick);
+    $('#sliderToggle').click(onSliderToggleClick);
 
 });
 
