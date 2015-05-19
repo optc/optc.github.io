@@ -39,8 +39,8 @@ var formatNumber = function(n) {
     return rev(rev(''+n).replace(/(\d{3,3})/g,'$1,')).replace(/^,|,$/g,'');
 };
 
-var appendElements = function(target,turn,damageDealer,type,damage) {
-    target.append($('<div class="onTurn"></div>').text('Turn ' + turn + ' (' + type + ')'));
+var appendElements = function(target,turn,damageDealer,type,damage,multiplier) {
+    target.append($('<div class="onTurn"></div>').text('Turn ' + turn + ' (' + type + ', ' + multiplier + 'x)'));
     var dealerDiv = $('<div class="damageDealer">&nbsp;</div>');
     target.append(dealerDiv);
     dealerDiv.dotdotdot();
@@ -63,8 +63,9 @@ var onDetailsReady = function(event,details) {
     var container = $('<div class="detailsContainer"></div>');
     target.append(container);
     details.order.forEach(function(data,n) {
-        var dealer = data[0].unit.name, type = getTypeOfHit(n,details.chain[n],details.chain[n+1]);
-        appendElements(container,n+1,dealer,type,data[1]);
+        var dealer = data[0].unit.name, type = details.modifiers[n], multiplier = details.multipliers[n];
+        multiplier = Math.round(multiplier * 100) / 100;
+        appendElements(container,n+1,dealer,type,data[1],multiplier);
     });
 };
 

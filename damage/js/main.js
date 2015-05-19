@@ -228,9 +228,6 @@ $(function() {
     $('#merry > button').click(onMerryButtonClick);
     $('#reset').click(onResetButtonClick);
 
-    $.notify("Check the details pane (click on a damage box) to make sure you're getting the correct results",'warn');
-    $.notify("Some results may be wacky due to a bug that will be fixed soon",'warn');
-
 });
 
 })();

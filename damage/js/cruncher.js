@@ -1,5 +1,7 @@
 (function() {
 
+var DEFAULT_HIT_MODIFIERS = [ 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect' ]; 
+
 var team = [ null, null, null, null, null, null ];
 var captainAbilities = [ null, null ];
 
@@ -8,9 +10,12 @@ var currentHP = 1;
 var maxHP = 1;
 var percHP = 100.0;
 
+var crunchingEnabled = true;
+
 /* * * * * Crunching * * * * */
 
 var crunch = function() {
+    if (!crunchingEnabled) return;
     var result = { };
     ['STR','QCK','DEX','PSY','INT'].forEach(function(type) {
         result[type] = crunchForType(type,false);
@@ -31,32 +36,62 @@ var crunchForType = function(type,withDetails) {
     team.forEach(function(x,n) {
         if (x == null) return;
         var atk = getAttackOfUnit(x);
-        damage.push([ x, atk * x.orb * getMultiplierOfUnit(x,type) * 1.90, n ]);
+        damage.push([ x, atk * x.orb * getMultiplierOfUnit(x,type) , n ]);
     });
-    // sort from weakest to strongest
+    // initialize ability array
+    var abilities = [ ];
+    if (captainAbilities[0] != null) abilities.push(captainAbilities[0]);
+    if (captainAbilities[1] != null) abilities.push(captainAbilities[1]);
+    // apply static multipliers and sort from weakest to stongest
+    for (var i=0;i<abilities.length;++i) {
+        if (!abilities[i].hasOwnProperty('atk'))  continue;
+        damage = applyCaptainEffect(damage,abilities[i].atk);
+    }
     damage.sort(function(x,y) { return x[1] - y[1]; });
-    // apply chain multipliers
-    var CM0 = getChainMultipliersOfCaptain(0); // necessary in case we have two captains with
-    var CM1 = getChainMultipliersOfCaptain(1); // two different chain multiplier requisites
-    var areChainsEqual = CM0.every(function(x,y) { return x == CM1[y]; });
-    var damageWithCM0 = applyChainMultipliers(damage,CM0); // may do the same operation twice,
-    var damageWithCM1 = applyChainMultipliers(damage,CM1); // but it's easier to handle this way
-    // apply captain effects
-    var damage0 = applyCaptainEffectsToDamage(damageWithCM0,false,!areChainsEqual);
-    var damage1 = applyCaptainEffectsToDamage(damageWithCM1,!areChainsEqual,false);
-    // compute overall damage, add Merry's bonus
-    var overallDamage0 = damage0.reduce(function(prev,x) { return prev + x[1]; },0);
-    var overallDamage1 = damage1.reduce(function(prev,x) { return prev + x[1]; },0);
-    if (!withDetails) return merryBonus * Math.max(overallDamage0,overallDamage1);
+    /** 1st scenario: no captains with hit modifiers
+     * we can just apply the 1.90 perfect multipliers and call it a day
+     ** 2nd scenario: 1 captain with hit modifiers
+     * we need to check which hit modifiers (the captain's or the default ones) return the highest damage
+     * the effect of the captain with the hit modifiers only applies if its modifiers are actually being used
+     ** 3rd scenario: both captains with hit modifiers
+     * we need to check which hit modifiers (the captains' or the default ones) return the highest damage
+     * the effect of each captain only applies if their modifiers are actually being used
+     */
+    var captainsWithHitModifiers = abilities.filter(function(x) { return x.hasOwnProperty('hitModifiers'); });
+    var captainsWithChainMultipliers = abilities.filter(function(x) { return x.hasOwnProperty('chain'); });
+    // get data struct ready
+    var data = [ damage ];
+    for (var i=0;i<captainsWithHitModifiers.length;++i) data.push(damage);
+    // compute damages
+    for (var i=0;i<data.length;++i) {
+        var modifiers = (i == 0 ? DEFAULT_HIT_MODIFIERS : captainsWithHitModifiers[i-1].hitModifiers);
+        var damageWithMultipliers = applyChainMultipliers(data[i],modifiers,captainsWithChainMultipliers);
+        // apply compatible captain effects
+        for (var j=1;j<data.length;++j) {
+            if (!arraysAreEqual(modifiers,captainsWithHitModifiers[j-1].hitModifiers)) continue;
+            damageWithMultipliers.result = applyCaptainEffect(damageWithMultipliers.result,captainsWithHitModifiers[j-1].hitAtk);
+        }
+        var overallDamage = damageWithMultipliers.result.reduce(function(prev,x) { return prev + x[1]; },0);
+        data[i] = { damage: damageWithMultipliers, overall: overallDamage, modifiers: modifiers };
+    }
+    // find index of maxiumum damage
+    var index = 0, currentMax = data[0].overall;
+    for (var i=1;i<data.length;++i) {
+        if (data[i].overall < currentMax) continue;
+        index = i;
+        currentMax = data[i].overall;
+    }
+    // return results
+    if (!withDetails) return merryBonus * currentMax;
     // compute details
-    var isCM0Better = overallDamage0 > overallDamage1;
     var result = {
-        chain: (isCM0Better ? CM0 : CM1),
-        order: (isCM0Better ? damage0 : damage1)
+        modifiers: data[index].modifiers,
+        multipliers: data[index].damage.multipliers,
+        order: data[index].damage.result
     };
     result.order = result.order.map(function(x) { x[1] *= merryBonus; return x; });
     return result;
-};
+}
 
 var getAttackOfUnit = function(data) {
     var unit = data.unit;
@@ -72,9 +107,9 @@ var getHpOfUnit = function(data) {
 
 var getChainMultipliersOfCaptain = function(captainNumber) {
     if (captainAbilities[captainNumber] == null ||
-            !captainAbilities[captainNumber].hasOwnProperty('chainMultipliers'))
+            !captainAbilities[captainNumber].hasOwnProperty('hitModifiers'))
         return [ 0, 0.3, 0.6, 0.9, 1.2, 1.5 ];
-    return captainAbilities[captainNumber].chainMultipliers;
+    return captainAbilities[captainNumber].hitModifiers;
 };
 
 var getMultiplierOfUnit = function(data,against) {
@@ -90,29 +125,35 @@ var getMultiplierOfUnit = function(data,against) {
     return 1;
 };
 
-/* * * * * Captain effects * * * * */
-
-var applyChainMultipliers = function(damage,multipliers) {
-    // calculate captain's chain multipliers (if they have one)
-    var multiplier = 1;
-    for (var i=0;i<2;++i) {
-        if (captainAbilities[i] != null && captainAbilities[i].hasOwnProperty('chain'))
-            multiplier *= captainAbilities[i].chain();
-    }
-    // apply captain's chain multipliers to the base multipliers provided via parameter
-    return damage.map(function(x,n) {
-        var unit = x[0], damage = x[1], order = x[2];
-        return [ unit, damage * (1 + multipliers[n] * multiplier), order ];
-    });
+var arraysAreEqual = function(a,b) {
+    return a.length == b.length && a.every(function(x,n) { return x == b[n]; });
 };
 
-var applyCaptainEffectsToDamage = function(damage,skipEffect0,skipEffect1) {
+/* * * * * Captain effects * * * * */
+
+var applyChainMultipliers = function(damage,modifiers,captains) {
+    var multipliersUsed = [ ];
+    var currentMultiplier = 1.0;
+    var result = damage.map(function(x,n) {
+        multipliersUsed.push(currentMultiplier);
+        var unit = x[0], damage = x[1], order = x[2];
+        var result = damage * currentMultiplier;
+        var captainMultiplier = captains.reduce(function(x,y) {
+            return x * y.chain(unit.unit,n,currentHP,maxHP,percHP,modifiers[n]);
+        },1);
+        var bonusMultiplier = (modifiers[n] == 'Perfect' ? 1.9 : 1.0);
+        if (modifiers[n] == 'Perfect') currentMultiplier += 0.3 * captainMultiplier;
+        else if (modifiers[n] == 'Great') currentMultiplier += 0.1 * captainMultiplier;
+        else if (modifiers[n] == 'Miss') currentMultiplier = 1.0;
+        return [ unit, result * bonusMultiplier, order ];
+    });
+    return { result: result, multipliers: multipliersUsed };
+};
+
+var applyCaptainEffect = function(damage,effect) {
     return damage.map(function(x,n) {
         var unit = x[0], damage = x[1], order = x[2];
-        if (!skipEffect0 && captainAbilities[0] != null && captainAbilities[0].hasOwnProperty('atk'))
-            damage *= captainAbilities[0].atk(unit.unit,n,currentHP,maxHP,percHP);
-        if (!skipEffect1 && captainAbilities[1] != null && captainAbilities[1].hasOwnProperty('atk'))
-            damage *= captainAbilities[1].atk(unit.unit,n,currentHP,maxHP,percHP);
+        damage *= effect(unit.unit,n,currentHP,maxHP,percHP);
         return [ unit, damage, order ];
     });
 };
@@ -125,13 +166,20 @@ var applyCaptainEffectsToHP = function(unit,hp) {
     return hp;
 };
 
+var getMultiplier = function(hit,currentMultiplier) {
+    if (hit == 'Perfect') return 0.3;
+    if (hit == 'Great') return 0.1;
+    if (hit == 'Perfect') return 0.0;
+    return -currentMultiplier;
+}
+
 var createFunctions = function(data) {
     var result = { };
     for (key in data) {
         if (data[key] == undefined)
             $.notify("The captain you selected has a strange ass ability that can't be parsed correctly yet");
-        else if (key != 'chainMultipliers')
-            result[key] = new Function('unit','chainPosition','currentHP','maxHP','percHP','return ' + data[key]);
+        else if (key != 'hitModifiers')
+            result[key] = new Function('unit','chainPosition','currentHP','maxHP','percHP','modifier','return ' + data[key]);
         else
             result[key] = data[key];
     }
@@ -190,6 +238,11 @@ var onDetailsRequested = function(event,type) {
     $(document).trigger('detailsReady',crunchForType(type.toUpperCase(),true));
 };
 
+var onCrunchToggled = function(event,enabled) {
+    crunchingEnabled = enabled;
+    if (enabled) crunch();
+};
+
 /* * * * * Events * * * * */
 
 // core
@@ -197,6 +250,8 @@ $(document).on('unitPicked',onUnitPick);
 $(document).on('unitLevelChanged',onLevelChange);
 $(document).on('merryBonusUpdated',onMerryChange);
 $(document).on('hpChanged',onHpChange);
+// loader
+$(document).on('crunchingToggled',onCrunchToggled);
 // orb control
 $(document).on('orbMultiplierChanged',onOrbMultiplierChanged);
 // drag & drop

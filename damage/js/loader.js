@@ -67,6 +67,8 @@ $(function() {
     merry = loadValue('merry',1.0);
     hp    = loadValue('hp',{ current: 1, max: 1, perc: 100 });
 
+    $(document).trigger('crunchingToggled',false);
+
     team.forEach(function(x,n) {
         if (x == null) return;
         $(document).trigger('unitPicked',[ n, x.unit.number ]);
@@ -78,6 +80,8 @@ $(function() {
 
     if (hp.current != 1 || hp.max != 1 || hp.perc != 1)
         $(document).trigger('hpChanged',[ hp.current, hp.max, hp.perc ]);
+
+    $(document).trigger('crunchingToggled',true);
 
     /* * * * * Events * * * * */
 

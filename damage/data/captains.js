@@ -151,8 +151,8 @@ window.captains = {
         atk: 'unit.class == "Striker" ? 1.5 : 1'
     },
     217: { // Monkey D. Luffy Gear Third
-        atk: 'chainPosition > 2 ? 3.5 : 1',
-        chainMultipliers: [ 0, 0.3, 0.6, 0.9, 1.2, 1.5 ] // don't remove this
+        hitAtk: 'chainPosition > 2 ? 3.5 : 1',
+        hitModifiers: [ 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect' ] // don't remove this
     },
     220: { // Nami Fine Tempo
         atk: 'unit.type == "INT" ? 2 : 1'
@@ -167,12 +167,12 @@ window.captains = {
         atk: 'unit.type == "PSY" ? 1.5 : 1'
     },
     224: { // Mr. Prince Mutton Shot
-        atk: 'chainPosition > 1 ? 2 : 1',
-        chainMultipliers: [ 0, 0.3, 0.6, 0.9, 1.2, 1.5 ] // don't remove this
+        hitAtk: 'chainPosition > 1 ? 2 : 1',
+        hitModifiers: [ 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect' ] // don't remove this
     },
     225: { // Mr. Prince Veau Shot
-        atk: 'chainPosition > 1 ? 2.5 : 1',
-        chainMultipliers: [ 0, 0.3, 0.6, 0.9, 1.2, 1.5 ] // don't remove this
+        hitAtk: 'chainPosition > 1 ? 2.5 : 1',
+        hitModifiers: [ 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect' ] // don't remove this
     },
     226: { // Dracule Mihawk
         atk: 'unit.class == "Slasher" ? 2 : 1'
@@ -297,12 +297,12 @@ window.captains = {
         atk: 'unit.type == "DEX" ? 2.5 : 1'
     },
     311: { // Killer
-        atk: 'chainPosition > 2 ? 3 : 1',
-        chainMultipliers: [ 0, 0, 0, 0, 0.3, 0.6 ]
+        hitAtk: 'chainPosition > 2 ? 3 : 1',
+        hitModifiers: [ 'Miss', 'Miss', 'Miss', 'Perfect', 'Perfect', 'Perfect' ]
     },
     312: { // Massacre Soldier Killer
-        atk: 'chainPosition > 2 ? 3 : 1',
-        chainMultipliers: [ 0, 0, 0, 0, 0.3, 0.6 ]
+        hitAtk: 'chainPosition > 2 ? 3 : 1',
+        hitModifiers: [ 'Miss', 'Miss', 'Miss', 'Perfect', 'Perfect', 'Perfect' ]
     },
     313: { // Urouge
         atk: 'unit.class == "Striker" ? 2 : 1',
@@ -439,12 +439,12 @@ window.captains = {
         atk: 'unit.type == "QCK" ? 1.5 : 1'
     },
     397: { // Mr.4
-        atk: 'chainPosition == 5 ? 3 : 1',
-        chainMultipliers: [ 0, 0.3, 0.6, 0.9, 1.2, 1.5 ] // don't remove this
+        hitAtk: 'chainPosition == 5 ? 3 : 1',
+        hitModifiers: [ 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect' ] // don't remove this
     },
     398: { // Mr.4 evolved
-        atk: 'chainPosition == 5 ? 4 : 1',
-        chainMultipliers: [ 0, 0.3, 0.6, 0.9, 1.2, 1.5 ] // don't remove this
+        hitAtk: 'chainPosition == 5 ? 4 : 1',
+        hitModifiers: [ 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect' ] // don't remove this
     },
     399: { // Miss Doublefinger
         hp: 'unit.class == "Striker" ? 1.5 : 1'
@@ -763,12 +763,12 @@ window.captains = {
         atk: '1.2'
     },
     549: { // Sadi-chan
-        atk: 'chainPosition > 2 ? 2 : 1',
-        chainMultipliers: [ 0, 0.3, 0.6, 0.9, 1.2, 1.5 ] // don't remove this
+        hitAtk: 'chainPosition > 2 ? 2 : 1',
+        hitModifiers: [ 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect' ] // don't remove this
     },
     550: { // Sadi-chan evolved
-        atk: 'chainPosition > 2 ? 2 : 1',
-        chainMultipliers: [ 0, 0.3, 0.6, 0.9, 1.2, 1.5 ] // don't remove this
+        hitAtk: 'chainPosition > 2 ? 2 : 1',
+        hitModifiers: [ 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect' ] // don't remove this
     },
     553: { // SW Zoro
         atk: 'unit.type == "DEX" && percHP <= 30.0 ? 2.75 : 1'
@@ -830,11 +830,11 @@ window.captains = {
         atk: '1.5'
     },
     577: { // Record of Voyage Luffy
-        atk: 'chainPosition > 2 ? 4 : 1',
-        chainMultipliers: [ 0, 0, 0.1, 0.4, 0.7, 1.0 ]
+        hitAtk: 'chainPosition > 2 ? 4 : 1',
+        hitModifiers: [ 'Good', 'Great', 'Perfect', 'Perfect', 'Perfect', 'Perfect' ]
     },
     578: { // Dream of Voyage Luffy
-        atk: 'chainPosition > 2 ? 4 : 1',
-        chainMultipliers: [ 0, 0, 0.1, 0.4, 0.7, 1.0 ]
+        hitAtk: 'chainPosition > 2 ? 4 : 1',
+        hitModifiers: [ 'Good', 'Great', 'Perfect', 'Perfect', 'Perfect', 'Perfect' ]
     },
 };
