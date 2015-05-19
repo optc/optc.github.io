@@ -170,10 +170,10 @@ var onHpChanged = function(event,current,max,perc,skip) {
     changeCurrentHP(current,true);
 };
 
-var onUnitsSwitched = function(event,slotA,slotB) {
+var onUnitsSwitched = function(event,a,b) {
     var units = $('.unit');
-    slotA = units.eq(slotA);
-    slotB = units.eq(slotB);
+    slotA = units.eq(a);
+    slotB = units.eq(b);
     // switch level labels
     var labelA = slotA.find('.unitLevel'), labelB = slotB.find('.unitLevel'), textA = labelA.text();
     labelA.text(labelB.text());
@@ -182,6 +182,10 @@ var onUnitsSwitched = function(event,slotA,slotB) {
     var sliderA = slotA.find('.unitSlider'), sliderB = slotB.find('.unitSlider');
     slotA.append(sliderB);
     slotB.append(sliderA);
+    // switch sliders
+    sliderA = sliders[a];
+    sliders[a] = sliders[b];
+    sliders[b] = sliderA;
 };
 
 /* * * * * Body * * * * */
