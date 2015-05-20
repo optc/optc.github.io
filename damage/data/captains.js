@@ -796,11 +796,13 @@ window.captains = {
     },
     561: { // SW Ace
         atk: 'unit.class == "Shooter" ? 2 : 1',
-        hp: 'unit.class == "Shooter" ? 1.5 : 1'
+        hp: 'unit.class == "Shooter" ? 1.5 : 1',
+        orb: 'unit.class == "Shooter" && orb == 2 ? 3 : orb'
     },
     562: { // SW Ace evolved
         atk: 'unit.class == "Shooter" ? 2 : 1',
-        hp: 'unit.class == "Shooter" ? 1.5 : 1'
+        hp: 'unit.class == "Shooter" ? 1.5 : 1',
+        orb: 'unit.class == "Shooter" && orb == 2 ? 3 : orb'
     },
     568: { // Foxy
         atk: '1.25',

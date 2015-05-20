@@ -36,7 +36,7 @@ var crunchForType = function(type,withDetails) {
     team.forEach(function(x,n) {
         if (x == null) return;
         var atk = getAttackOfUnit(x);
-        damage.push([ x, atk * x.orb * getMultiplierOfUnit(x,type) , n ]);
+        damage.push([ x, atk * getOrbMultiplierOfUnit(x) * getTypeMultiplierOfUnit(x,type) , n ]);
     });
     // initialize ability array
     var abilities = [ ];
@@ -69,7 +69,9 @@ var crunchForType = function(type,withDetails) {
         // apply compatible captain effects
         for (var j=1;j<data.length;++j) {
             if (!arraysAreEqual(modifiers,captainsWithHitModifiers[j-1].hitModifiers)) continue;
+            if (type == 'DEX') console.log(damageWithMultipliers.result);
             damageWithMultipliers.result = applyCaptainEffect(damageWithMultipliers.result,captainsWithHitModifiers[j-1].hitAtk);
+            if (type == 'DEX') console.log(damageWithMultipliers.result);
         }
         var overallDamage = damageWithMultipliers.result.reduce(function(prev,x) { return prev + x[1]; },0);
         data[i] = { damage: damageWithMultipliers, overall: overallDamage, modifiers: modifiers };
@@ -112,7 +114,17 @@ var getChainMultipliersOfCaptain = function(captainNumber) {
     return captainAbilities[captainNumber].hitModifiers;
 };
 
-var getMultiplierOfUnit = function(data,against) {
+var getOrbMultiplierOfUnit = function(data) {
+    // TODO What happens with two captains with two different orb multipliers?
+    for (var i=0;i<2;++i) {
+        if (captainAbilities[i] != null && captainAbilities[i].hasOwnProperty('orb'))
+            return captainAbilities[i].orb(data.unit,data.orb);
+    }
+    console.log('yo');
+    return data.orb;
+};
+
+var getTypeMultiplierOfUnit = function(data,against) {
     var type = data.unit.type;
     if (type == 'STR' && against == 'DEX') return 2;
     if (type == 'STR' && against == 'QCK') return 0.5;
@@ -124,6 +136,15 @@ var getMultiplierOfUnit = function(data,against) {
     if (type == 'PSY' && against == 'INT') return 2;
     return 1;
 };
+
+var setCaptain = function(slotNumber) {
+    if (team[slotNumber] == null)
+        captainAbilities[slotNumber] = null;
+    else if (captains.hasOwnProperty(team[slotNumber].unit.number+1))
+        captainAbilities[slotNumber] = createFunctions(captains[team[slotNumber].unit.number+1]);
+    else
+        captainAbilities[slotNumber] = null;
+}
 
 var arraysAreEqual = function(a,b) {
     return a.length == b.length && a.every(function(x,n) { return x == b[n]; });
@@ -178,22 +199,15 @@ var createFunctions = function(data) {
     for (key in data) {
         if (data[key] == undefined)
             $.notify("The captain you selected has a strange ass ability that can't be parsed correctly yet");
-        else if (key != 'hitModifiers')
+        else if (key != 'hitModifiers' && key != 'orb')
             result[key] = new Function('unit','chainPosition','currentHP','maxHP','percHP','modifier','return ' + data[key]);
+        else if (key == 'orb')
+            result[key] = new Function('unit','orb','return ' + data[key]);
         else
             result[key] = data[key];
     }
     return result;
 };
-
-var setCaptain = function(slotNumber) {
-    if (team[slotNumber] == null)
-        captainAbilities[slotNumber] = null;
-    else if (captains.hasOwnProperty(team[slotNumber].unit.number+1))
-        captainAbilities[slotNumber] = createFunctions(captains[team[slotNumber].unit.number+1]);
-    else
-        captainAbilities[slotNumber] = null;
-}
 
 /* * * * * Event callbacks * * * * */
 
