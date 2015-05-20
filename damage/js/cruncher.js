@@ -69,9 +69,7 @@ var crunchForType = function(type,withDetails) {
         // apply compatible captain effects
         for (var j=1;j<data.length;++j) {
             if (!arraysAreEqual(modifiers,captainsWithHitModifiers[j-1].hitModifiers)) continue;
-            if (type == 'DEX') console.log(damageWithMultipliers.result);
             damageWithMultipliers.result = applyCaptainEffect(damageWithMultipliers.result,captainsWithHitModifiers[j-1].hitAtk);
-            if (type == 'DEX') console.log(damageWithMultipliers.result);
         }
         var overallDamage = damageWithMultipliers.result.reduce(function(prev,x) { return prev + x[1]; },0);
         data[i] = { damage: damageWithMultipliers, overall: overallDamage, modifiers: modifiers };
@@ -120,7 +118,6 @@ var getOrbMultiplierOfUnit = function(data) {
         if (captainAbilities[i] != null && captainAbilities[i].hasOwnProperty('orb'))
             return captainAbilities[i].orb(data.unit,data.orb);
     }
-    console.log('yo');
     return data.orb;
 };
 
