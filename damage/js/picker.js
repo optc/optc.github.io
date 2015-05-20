@@ -156,7 +156,7 @@ var onUnitClick = function(e) {
 var updateRecent = function(unitNumber) {
     var n = recentUnits.indexOf(unitNumber);
     if (n < 0) recentUnits.unshift(unitNumber);
-    else recentUnits = recentUnits.splice(n).concat(recentUnits);
+    else recentUnits = recentUnits.splice(n,1).concat(recentUnits);
     recentUnits = recentUnits.slice(0,14);
     localStorage.setItem('recentUnits',JSON.stringify(recentUnits));
 };

@@ -24,6 +24,8 @@
 .details {
     top: 0px !important;
     height: 360px !important;
+    display: flex;
+    align-items: center;
 }
 
 .details > .damageLabel,
@@ -56,4 +58,8 @@ hr {
 
 .detailsContainer > hr:last-child {
     display: none;
+}
+
+.detailsContainer {
+    width: 100%;
 }
