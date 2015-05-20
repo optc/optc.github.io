@@ -497,6 +497,7 @@ window.captains = {
         atk: 'unit.class == "Slasher" ? 2 : 1'
     },
     418: { // Doflamingo evolved
+        hp: 'unit.class == "Slasher" ? 2 : 1',
         atk: 'unit.class == "Slasher" ? 2 : 1'
     },
     419: { // Sanji Kimono
