@@ -141,7 +141,7 @@ var applyChainMultipliers = function(damage,modifiers,captains) {
         var captainMultiplier = captains.reduce(function(x,y) {
             return x * y.chain(unit.unit,n,currentHP,maxHP,percHP,modifiers[n]);
         },1);
-        var bonusMultiplier = (modifiers[n] == 'Perfect' ? 1.9 : 1.0);
+        var bonusMultiplier = getBonusMultiplier(modifiers[n]);
         if (modifiers[n] == 'Perfect') currentMultiplier += 0.3 * captainMultiplier;
         else if (modifiers[n] == 'Great') currentMultiplier += 0.1 * captainMultiplier;
         else if (modifiers[n] == 'Miss') currentMultiplier = 1.0;
@@ -166,12 +166,12 @@ var applyCaptainEffectsToHP = function(unit,hp) {
     return hp;
 };
 
-var getMultiplier = function(hit,currentMultiplier) {
-    if (hit == 'Perfect') return 0.3;
-    if (hit == 'Great') return 0.1;
-    if (hit == 'Perfect') return 0.0;
-    return -currentMultiplier;
-}
+var getBonusMultiplier = function(hit) {
+    if (hit == 'Perfect') return 1.9;
+    if (hit == 'Great') return 1.4;
+    if (hit == 'Good') return 0.9;
+    return 1;
+};
 
 var createFunctions = function(data) {
     var result = { };
