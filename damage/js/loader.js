@@ -48,7 +48,9 @@ var onNumbersCrunched = function(event,numbers) {
 };
 
 var onResetStorage = function() {
-    localStorage.clear();
+    Object.keys(data).forEach(function(x) {
+        if (x != 'sliders') localStorage.removeItem(x);
+    });
     window.location.reload();
 }
 
