@@ -1,6 +1,6 @@
 (function() {
 
-var team, merry, hp, sliderToggled;
+var data = { };
 
 /* * * * * Storage methods * * * * */
 
@@ -14,40 +14,37 @@ var saveValue = function(key,value) {
     localStorage.setItem(key,JSON.stringify(value));
 };
 
-var save = function() {
-    saveValue('team',team);
-    saveValue('merry',merry);
-    saveValue('hp',hp);
-    saveValue('sliderToggled',sliderToggled);
+var save = function(what) {
+    saveValue(what,data[what]);
 };
 
 /* * * * * Event callbacks * * * * */
 
 var onUnitPick = function(event,slotNumber,unitNumber) {
-    team[slotNumber] = { unit: units[unitNumber], level: 1 };
-    save();
+    data.team[slotNumber] = { unit: units[unitNumber], level: 1 };
+    save('team');
 };
 
 var onLevelChange = function(event,slotNumber,level) {
-    team[slotNumber].level = level;
-    save();
+    data.team[slotNumber].level = level;
+    save('team');
 };
 
 var onMerryChange = function(event,bonus) {
-    merry = bonus;
-    save();
+    data.merry = bonus;
+    save('merry');
 };
 
 var onHpChange = function(event,current,max,perc) {
-    hp.current = current;
-    hp.max = max;
-    hp.perc = perc;
-    save();
+    data.hp.current = current;
+    data.hp.max = max;
+    data.hp.perc = perc;
+    save('hp');
 };
 
 var onNumbersCrunched = function(event,numbers) {
-    hp.max = numbers.HP;
-    save();
+    data.hp.max = numbers.HP;
+    save('hp');
 };
 
 var onResetStorage = function() {
@@ -56,41 +53,41 @@ var onResetStorage = function() {
 }
 
 var onUnitsSwitched = function(event,slotA,slotB) {
-    var teamA = team[slotA];
-    team[slotA] = team[slotB];
-    team[slotB] = teamA;
-    save();
+    var teamA = data.team[slotA];
+    data.team[slotA] = data.team[slotB];
+    data.team[slotB] = teamA;
+    save('team');
 };
 
 var onSliderToggled = function(event,value) {
-    sliderToggled = value;
-    save();
+    data.sliders = value;
+    save('sliders');
 };
 
 /* * * * * (Re-)initialize * * * * */
 
 $(function() {
 
-    team  = loadValue('team',[ null, null, null, null, null, null ]);
-    merry = loadValue('merry',1.0);
-    hp = loadValue('hp',{ current: 1, max: 1, perc: 100 });
-    sliderToggled = loadValue('sliderToggled',true)
+    data.team  = loadValue('team',[ null, null, null, null, null, null ]);
+    data.merry = loadValue('merry',1.0);
+    data.hp = loadValue('hp',{ current: 1, max: 1, perc: 100 });
+    data.sliders = loadValue('sliders',true)
 
     $(document).trigger('crunchingToggled',false);
 
-    team.forEach(function(x,n) {
+    data.team.forEach(function(x,n) {
         if (x == null) return;
         $(document).trigger('unitPicked',[ n, x.unit.number ]);
         $(document).trigger('unitLevelChanged',[ n, x.level ]);
     });
 
-    if (merry != 1.0)
-        $(document).trigger('merryBonusUpdated',merry);
+    if (data.merry != 1.0)
+        $(document).trigger('merryBonusUpdated',data.merry);
 
-    if (hp.current != 1 || hp.max != 1 || hp.perc != 1)
-        $(document).trigger('hpChanged',[ hp.current, hp.max, hp.perc ]);
+    if (data.hp.current != 1 || data.hp.max != 1 || data.hp.perc != 1)
+        $(document).trigger('hpChanged',[ data.hp.current, data.hp.max, data.hp.perc ]);
 
-    if (!sliderToggled)
+    if (!data.sliders)
         $(document).trigger('sliderToggle',false);
 
     $(document).trigger('crunchingToggled',true);

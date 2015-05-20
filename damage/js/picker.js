@@ -8,6 +8,7 @@ var debouncer = null;
 var createDialog = function() {
     BootstrapDialog.show({
         title: 'Pick a Unit',
+        animate: false,
         message: function(dialog) {
             var content = $('<div><input type="text" id="picker" placeholder="type to filter">' +
                     '<div id="pickerUnits"></div></div>');
@@ -15,13 +16,15 @@ var createDialog = function() {
             content.find('input').keyup(function() {
                 $(document).trigger('unitFilter',[this.value,target]);
             });
-            setTimeout(function() { content.find('input').focus(); },500);
             return content;
         },
         buttons: [{
             label: 'Cancel',
             action: function(dialog) { dialog.close(); }
-        }]
+        }],
+        onshown: function(dialog) {
+            $('#picker').focus();
+        }
     });
 };
 

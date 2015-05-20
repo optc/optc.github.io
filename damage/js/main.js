@@ -72,7 +72,7 @@ var changeUnitLevel = function(slotNumber,level) {
 };
 
 var changeLevelLabel = function(slotNumber,level) {
-    var slot = $($('.unit')[slotNumber]);
+    var slot = $('.unit').eq(slotNumber);
     slot.find('.unitLevel').text('Lv.' + level);
 };
 

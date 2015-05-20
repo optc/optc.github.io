@@ -297,11 +297,11 @@ window.captains = {
         atk: 'unit.type == "DEX" ? 2.5 : 1'
     },
     311: { // Killer
-        hitAtk: 'chainPosition > 2 ? 3 : 1',
+        hitAtk: 'chainPosition > 2 ? 3.5 : 1',
         hitModifiers: [ 'Miss', 'Miss', 'Miss', 'Perfect', 'Perfect', 'Perfect' ]
     },
     312: { // Massacre Soldier Killer
-        hitAtk: 'chainPosition > 2 ? 3 : 1',
+        hitAtk: 'chainPosition > 2 ? 3.5 : 1',
         hitModifiers: [ 'Miss', 'Miss', 'Miss', 'Perfect', 'Perfect', 'Perfect' ]
     },
     313: { // Urouge
