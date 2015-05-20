@@ -2,11 +2,17 @@ input#picker {
     width: 100%;
 }
 
+.modal-dialog {
+    width: 650px;
+}
+
 #pickerUnits {
-    height: 300px;
+    height: 338px;
     overflow: auto;
     display: flex;
     flex-wrap: wrap;
+    align-content: flex-start;
+    margin-top: 5px;
 }
 
 .pickerThumbnail {
@@ -17,6 +23,23 @@ input#picker {
     cursor: pointer;
 }
 
+.pickerThumbnail.small {
+    width: 40px;
+    height: 40px;
+    background-size: 40px 40px;
+}
+
 .pickerThumbnail:hover {
     outline: 1px solid red;
+}
+
+#recent > span {
+    display: block;
+    border-bottom: 1px solid black;
+}
+
+#recentUnits {
+    height: 42px;
+    display: flex;
+    margin-top: 5px;
 }

@@ -3,6 +3,8 @@
 var lastSlotNumber = null;
 var debouncer = null;
 
+var recentUnits = JSON.parse(localStorage.getItem('recentUnits')) || [ ];
+
 /* * * * * Dialog generation * * * * */
 
 var createDialog = function() {
@@ -10,12 +12,20 @@ var createDialog = function() {
         title: 'Pick a Unit',
         animate: false,
         message: function(dialog) {
-            var content = $('<div><input type="text" id="picker" placeholder="type to filter">' +
-                    '<div id="pickerUnits"></div></div>');
+            var content = $(
+                    '<div>' +
+                        '<input type="text" id="picker" placeholder="type to filter">' +
+                        '<div id="pickerUnits"></div>' +
+                        '<div id="recent">' +
+                            '<span>Recently picked</span>' +
+                            '<divd id="recentUnits"></div>' +
+                        '</div>' +
+                    '</div>');
             var target = content.find('#pickerUnits');
             content.find('input').keyup(function() {
-                $(document).trigger('unitFilter',[this.value,target]);
+                $(document).trigger('unitFilter',[ this.value, target ]);
             });
+            populateRecent(content.find('#recentUnits'));
             return content;
         },
         buttons: [{
@@ -67,6 +77,7 @@ var createThumbnail = function(n) {
     result.className = 'pickerThumbnail';
     result.style.backgroundImage = 'url(' + getThumbnailUrl(n) + ')';
     result.setAttribute('unitID',n);
+    result.setAttribute('title',units[n].name);
     $(result).click(onThumbnailClick);
     return result;
 };
@@ -77,7 +88,9 @@ var getThumbnailUrl = function(n) {
 };
 
 var onThumbnailClick = function() {
-    $(document).trigger('unitPicked',[ lastSlotNumber, parseInt(this.getAttribute('unitID'),10) ]);
+    var unitNumber = parseInt(this.getAttribute('unitID'),10);
+    updateRecent(unitNumber);
+    $(document).trigger('unitPicked',[ lastSlotNumber, unitNumber ]);
     closeDialog();
 };
 
@@ -85,6 +98,24 @@ var onUnitClick = function(e) {
     if (e.which != 1) return;
     lastSlotNumber = $(this).index();
     createDialog();
+};
+
+/* * * * * Recent generation * * * * */
+
+var updateRecent = function(unitNumber) {
+    var n = recentUnits.indexOf(unitNumber);
+    if (n < 1) recentUnits.unshift(unitNumber);
+    else recentUnits = recentUnits.splice(n).concat(recentUnits);
+    recentUnits = recentUnits.slice(0,14);
+    localStorage.setItem('recentUnits',JSON.stringify(recentUnits));
+};
+
+var populateRecent = function(target) {
+    recentUnits.forEach(function(x) {
+        var thumbnail = createThumbnail(x);
+        thumbnail.classList.add('small');
+        target.append(thumbnail);
+    });
 };
 
 /* * * * * Events * * * * */
