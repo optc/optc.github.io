@@ -394,10 +394,10 @@ window.captains = {
         atk: 'unit.type == "QCK" ? 2 : 1'
     },
     366: { // Rayleigh
-        chain: '4'
+        chainModifier: '4'
     },
     367: { // Rayleigh evolved
-        chain: '4'
+        chainModifier: '4'
     },
     373: { // Fodder
         atk: 'unit.class == "Slasher" ? 1.5 : 1'
@@ -735,10 +735,10 @@ window.captains = {
         atk: 'unit.type == "QCK" ? 2 : 1'
     },
     537: { // Domino
-        chain: '2'
+        chainModifier: '2'
     },
     538: { // Domino evolved
-        chain: '2'
+        chainModifier: '2'
     },
     541: { // Ohm
         atk: 'unit.type == "STR" && percHP <= 50.0 ? 2.5 : 1'

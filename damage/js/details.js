@@ -40,7 +40,7 @@ var formatNumber = function(n) {
 };
 
 var appendElements = function(target,turn,damageDealer,type,damage,multiplier) {
-    target.append($('<div class="onTurn"></div>').text('Turn ' + turn + ' (' + type + ', ' + multiplier + 'x)'));
+    target.append($('<div class="onTurn"></div>').text('#' + turn + ' (' + type + ' / ' + multiplier + 'x chain)'));
     var dealerDiv = $('<div class="damageDealer">&nbsp;</div>');
     target.append(dealerDiv);
     dealerDiv.dotdotdot();

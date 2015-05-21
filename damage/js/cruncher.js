@@ -1,5 +1,34 @@
 (function() {
 
+/* Terminology: 
+ * - Hit modifiers:    Array of elements detailing the type of hits (Miss, Good, Great or Perfect) required to
+ *                     activate the captain ability of a specific unit. Provided via the `hitModifiers` property.
+ *                     Must have 6 elements, each element the hit modifier to be used in the corresponding turn.
+ *                     If provided, the unit must also specify how to apply its own captain
+ *                     effect (via the `hitAtk` property)
+ * - Bonus multiplier: Multiplier associated to each hit modifier (1.9x for Perfect, 1.4x for Great, etc.)
+ *                     Cannot be modified by captain effects (so far).
+ * - Chain multiplier: Multiplier associated to the combo chain. Applied to each unit.
+ *                     Increased by 0.3 when hitting Perfect's, by 0.1 when hitting Great's, left untouched
+ *                     when hitting Good's and reset back to its initial value of 1.0 when hitting Misses.
+ *                     Can be modified by captain effects (via chain modifier).
+ * - Chain modifier:   Modifier applied to the chain multiplier when computing its new value.
+ *                     Affects the amount the multiplier is increased by.
+ *                     Typically a static value (eg 4.0 for Rayleigh, 2.0 for Domino).
+ *                     Provided via the `chainModifier` property
+ * - Orb multiplier:   Multiplier applied to the damage contribution of each unit, depending on the type of
+ *                     the orb assigned to the unit itself.
+ *                     Units with matching orbs get a 2.0 orb multiplier, units with opposite orbs get 0.5
+ *                     and units with unrelated orbs get 1.0.
+ *                     Can be modified by captain effects (eg SW Ace).
+ *                     Provided via the `orbMultiplier` property.
+ * - Type multiplier:  Multiplier applied to the damage contribution of each unit, depending on the type 
+ *                     compatibility between the unit itself and the hypothetical enemy.
+ *                     eg. STR units get a 2.0 type multiplier when calculating the damage on DEX enemies,
+ *                     a 0.5 multiplier for QCK enemies and a 1.0 multiplier for all other enemies.
+ *                     Cannot be modified by captain effects (so far).
+ */
+
 var DEFAULT_HIT_MODIFIERS = [ 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect' ]; 
 
 var team = [ null, null, null, null, null, null ];
@@ -45,34 +74,36 @@ var crunchForType = function(type,withDetails) {
     // apply static multipliers and sort from weakest to stongest
     for (var i=0;i<abilities.length;++i) {
         if (!abilities[i].hasOwnProperty('atk'))  continue;
-        damage = applyCaptainEffect(damage,abilities[i].atk);
+        damage = applyCaptainEffectToDamage(damage,abilities[i].atk);
     }
     damage.sort(function(x,y) { return x[1] - y[1]; });
-    /** 1st scenario: no captains with hit modifiers
-     * we can just apply the 1.90 perfect multipliers and call it a day
-     ** 2nd scenario: 1 captain with hit modifiers
-     * we need to check which hit modifiers (the captain's or the default ones) return the highest damage
-     * the effect of the captain with the hit modifiers only applies if its modifiers are actually being used
-     ** 3rd scenario: both captains with hit modifiers
-     * we need to check which hit modifiers (the captains' or the default ones) return the highest damage
-     * the effect of each captain only applies if their modifiers are actually being used
+    /*
+     * 1st scenario: no captains with hit modifiers
+     * -> We can just apply the chain and bonus multipliers and call it a day
+     * 2nd scenario: 1 captain with hit modifiers
+     * -> We need to check which hit modifiers (the captain's or the default ones) return the highest damage (2 checks)
+     * -> The effect of the captain only applies if its modifiers are the same as the ones being used during the check
+     * 3rd scenario: both captains with hit modifiers
+     * -> We need to check which hit modifiers (the captains' or the default ones) return the highest damage (3 checks)
+     * -> The effect of each captain only applies if their modifiers are the same as the ones being used during the check
      */
     var captainsWithHitModifiers = abilities.filter(function(x) { return x.hasOwnProperty('hitModifiers'); });
-    var captainsWithChainMultipliers = abilities.filter(function(x) { return x.hasOwnProperty('chain'); });
+    var captainsWithChainModifiers = abilities.filter(function(x) { return x.hasOwnProperty('chainModifier'); });
     // get data struct ready
     var data = [ damage ];
     for (var i=0;i<captainsWithHitModifiers.length;++i) data.push(damage);
     // compute damages
     for (var i=0;i<data.length;++i) {
         var modifiers = (i == 0 ? DEFAULT_HIT_MODIFIERS : captainsWithHitModifiers[i-1].hitModifiers);
-        var damageWithMultipliers = applyChainMultipliers(data[i],modifiers,captainsWithChainMultipliers);
+        var damageWithChainMultipliers = applyChainAndBonusMultipliers(data[i],modifiers,captainsWithChainModifiers);
         // apply compatible captain effects
         for (var j=1;j<data.length;++j) {
             if (!arraysAreEqual(modifiers,captainsWithHitModifiers[j-1].hitModifiers)) continue;
-            damageWithMultipliers.result = applyCaptainEffect(damageWithMultipliers.result,captainsWithHitModifiers[j-1].hitAtk);
+            damageWithChainMultipliers.result =
+                applyCaptainEffectToDamage(damageWithChainMultipliers.result,captainsWithHitModifiers[j-1].hitAtk);
         }
-        var overallDamage = damageWithMultipliers.result.reduce(function(prev,x) { return prev + x[1]; },0);
-        data[i] = { damage: damageWithMultipliers, overall: overallDamage, modifiers: modifiers };
+        var overallDamage = damageWithChainMultipliers.result.reduce(function(prev,x) { return prev + x[1]; },0);
+        data[i] = { damage: damageWithChainMultipliers, overall: overallDamage, hitModifiers: modifiers };
     }
     // find index of maxiumum damage
     var index = 0, currentMax = data[0].overall;
@@ -83,15 +114,17 @@ var crunchForType = function(type,withDetails) {
     }
     // return results
     if (!withDetails) return merryBonus * currentMax;
-    // compute details
+    // provide details
     var result = {
-        modifiers: data[index].modifiers,
-        multipliers: data[index].damage.multipliers,
+        modifiers: data[index].hitModifiers,
+        multipliers: data[index].damage.chainMultipliers,
         order: data[index].damage.result
     };
     result.order = result.order.map(function(x) { x[1] *= merryBonus; return x; });
     return result;
 }
+
+/* * * * * * Utility functions * * * * */
 
 var getAttackOfUnit = function(data) {
     var unit = data.unit;
@@ -105,35 +138,6 @@ var getHpOfUnit = function(data) {
     return Math.floor(unit.minHP + (unit.maxHP - unit.minHP) / (unit.maxLevel == 1 ? 1 : (unit.maxLevel-1)) * (level-1));
 };
 
-var getChainMultipliersOfCaptain = function(captainNumber) {
-    if (captainAbilities[captainNumber] == null ||
-            !captainAbilities[captainNumber].hasOwnProperty('hitModifiers'))
-        return [ 0, 0.3, 0.6, 0.9, 1.2, 1.5 ];
-    return captainAbilities[captainNumber].hitModifiers;
-};
-
-var getOrbMultiplierOfUnit = function(data) {
-    // TODO What happens with two captains with two different orb multipliers?
-    for (var i=0;i<2;++i) {
-        if (captainAbilities[i] != null && captainAbilities[i].hasOwnProperty('orb'))
-            return captainAbilities[i].orb(data.unit,data.orb);
-    }
-    return data.orb;
-};
-
-var getTypeMultiplierOfUnit = function(data,against) {
-    var type = data.unit.type;
-    if (type == 'STR' && against == 'DEX') return 2;
-    if (type == 'STR' && against == 'QCK') return 0.5;
-    if (type == 'QCK' && against == 'STR') return 2;
-    if (type == 'QCK' && against == 'DEX') return 0.5;
-    if (type == 'DEX' && against == 'QCK') return 2;
-    if (type == 'DEX' && against == 'STR') return 0.5;
-    if (type == 'INT' && against == 'PSY') return 2;
-    if (type == 'PSY' && against == 'INT') return 2;
-    return 1;
-};
-
 var setCaptain = function(slotNumber) {
     if (team[slotNumber] == null)
         captainAbilities[slotNumber] = null;
@@ -142,54 +146,6 @@ var setCaptain = function(slotNumber) {
     else
         captainAbilities[slotNumber] = null;
 }
-
-var arraysAreEqual = function(a,b) {
-    return a.length == b.length && a.every(function(x,n) { return x == b[n]; });
-};
-
-/* * * * * Captain effects * * * * */
-
-var applyChainMultipliers = function(damage,modifiers,captains) {
-    var multipliersUsed = [ ];
-    var currentMultiplier = 1.0;
-    var result = damage.map(function(x,n) {
-        multipliersUsed.push(currentMultiplier);
-        var unit = x[0], damage = x[1], order = x[2];
-        var result = damage * currentMultiplier;
-        var captainMultiplier = captains.reduce(function(x,y) {
-            return x * y.chain(unit.unit,n,currentHP,maxHP,percHP,modifiers[n]);
-        },1);
-        var bonusMultiplier = getBonusMultiplier(modifiers[n]);
-        if (modifiers[n] == 'Perfect') currentMultiplier += 0.3 * captainMultiplier;
-        else if (modifiers[n] == 'Great') currentMultiplier += 0.1 * captainMultiplier;
-        else if (modifiers[n] == 'Miss') currentMultiplier = 1.0;
-        return [ unit, result * bonusMultiplier, order ];
-    });
-    return { result: result, multipliers: multipliersUsed };
-};
-
-var applyCaptainEffect = function(damage,effect) {
-    return damage.map(function(x,n) {
-        var unit = x[0], damage = x[1], order = x[2];
-        damage *= effect(unit.unit,n,currentHP,maxHP,percHP);
-        return [ unit, damage, order ];
-    });
-};
-
-var applyCaptainEffectsToHP = function(unit,hp) {
-    for (var i=0;i<2;++i) {
-        if (captainAbilities[i] != null && captainAbilities[i].hasOwnProperty('hp'))
-            hp *= captainAbilities[i].hp(unit.unit);
-    }
-    return hp;
-};
-
-var getBonusMultiplier = function(hit) {
-    if (hit == 'Perfect') return 1.9;
-    if (hit == 'Great') return 1.4;
-    if (hit == 'Good') return 0.9;
-    return 1;
-};
 
 var createFunctions = function(data) {
     var result = { };
@@ -204,6 +160,84 @@ var createFunctions = function(data) {
             result[key] = data[key];
     }
     return result;
+};
+
+var arraysAreEqual = function(a,b) {
+    return a.length == b.length && a.every(function(x,n) { return x == b[n]; });
+};
+
+/* * * * * * Static multipliers/modifiers * * * * */
+
+var getTypeMultiplierOfUnit = function(data,against) {
+    var type = data.unit.type;
+    if (type == 'STR' && against == 'DEX') return 2;
+    if (type == 'STR' && against == 'QCK') return 0.5;
+    if (type == 'QCK' && against == 'STR') return 2;
+    if (type == 'QCK' && against == 'DEX') return 0.5;
+    if (type == 'DEX' && against == 'QCK') return 2;
+    if (type == 'DEX' && against == 'STR') return 0.5;
+    if (type == 'INT' && against == 'PSY') return 2;
+    if (type == 'PSY' && against == 'INT') return 2;
+    return 1;
+};
+
+var getBonusMultiplier = function(hit) {
+    if (hit == 'Perfect') return 1.9;
+    if (hit == 'Great') return 1.4;
+    if (hit == 'Good') return 0.9;
+    return 1;
+};
+
+var getChainMultiplier = function(currentChainMultiplier,hit,chainModifier) {
+    if (hit == 'Perfect') return currentChainMultiplier + 0.3 * chainModifier;
+    else if (hit == 'Great') return currentChainMultiplier +  0.1 * chainModifier;
+    else if (hit == 'Good') return currentChainMultiplier;
+    return 1.0;
+};
+
+/* * * * * Captain effects * * * * */
+
+var applyChainAndBonusMultipliers = function(damage,modifiers,captains) {
+    // NOTE: all the captains provided must have a chain modifier (array can be empty - don't include them if they don't)
+    var multipliersUsed = [ ];
+    var currentChainMultiplier = 1.0;
+    var result = damage.map(function(x,n) {
+        multipliersUsed.push(currentChainMultiplier);
+        var unit = x[0], damage = x[1], order = x[2];
+        var result = damage * currentChainMultiplier;
+        var chainModifier = captains.reduce(function(x,y) {
+            return x * y.chainModifier(unit.unit,n,currentHP,maxHP,percHP,modifiers[n]);
+        },1);
+        var bonusMultiplier = getBonusMultiplier(modifiers[n]);
+        currentChainMultiplier = getChainMultiplier(currentChainMultiplier,modifiers[n],chainModifier);
+        return [ unit, result * bonusMultiplier, order ];
+    });
+    return { result: result, chainMultipliers: multipliersUsed };
+};
+
+var applyCaptainEffectToDamage = function(damage,func) {
+    return damage.map(function(x,n) {
+        var unit = x[0], damage = x[1], order = x[2];
+        damage *= func(unit.unit,n,currentHP,maxHP,percHP);
+        return [ unit, damage, order ];
+    });
+};
+
+var applyCaptainEffectsToHP = function(unit,hp) {
+    for (var i=0;i<2;++i) {
+        if (captainAbilities[i] != null && captainAbilities[i].hasOwnProperty('hp'))
+            hp *= captainAbilities[i].hp(unit.unit);
+    }
+    return hp;
+};
+
+var getOrbMultiplierOfUnit = function(data) {
+    // TODO What happens with two captains with two different orb multipliers?
+    for (var i=0;i<2;++i) {
+        if (captainAbilities[i] != null && captainAbilities[i].hasOwnProperty('orb'))
+            return captainAbilities[i].orb(data.unit,data.orb);
+    }
+    return data.orb;
 };
 
 /* * * * * Event callbacks * * * * */
