@@ -65,6 +65,11 @@ var onUnitsSwitched = function(event,slotA,slotB) {
     if (moveSlotA) activateGlowing($('.unit').eq(slotA),getGlowColor(team[slotA].type,team[slotA].status));
 };
 
+var onUnitRemoved = function(event,slotNumber) {
+    team[slotNumber] = null;
+    deactivateGlowing($('.unit').eq(slotNumber));
+}
+
 /* * * * * Events * * * * */
 
 $(document).on('unitPicked',function(event,slotNumber,unitNumber) {
@@ -73,9 +78,12 @@ $(document).on('unitPicked',function(event,slotNumber,unitNumber) {
 });
 
 $(document).on('unitsSwitched',onUnitsSwitched);
+$(document).on('unitRemoved',onUnitRemoved);
 
 $(function() {
+
     $('.unit').mouseup(onUnitClick);
+
 });
 
 

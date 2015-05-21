@@ -32,15 +32,22 @@ var formatNumber = function(n) {
 };
 
 var updateSlot = function(slotNumber,unitNumber) {
-    var slot = $('.unit')[slotNumber];
-    var unit = units[unitNumber];
-    // change portrait
-    slot.classList.remove('empty');
-    $(slot).find('.unitPortrait')[0].style.backgroundImage = 'url(' + getThumbnailUrl(unitNumber) + ')';
-    // update slider
-    var index = $(slot).index();
-    sliders[index][0].setRange(1,units[unitNumber].maxLevel);
-    sliders[index][1] = units[unitNumber].maxLevel;
+    var slot = $('.unit').eq(slotNumber);
+    var index = slot.index();
+    if (unitNumber != null) { // add/change unit
+        var unit = units[unitNumber];
+        // change portrait
+        slot.removeClass('empty');
+        slot.find('.unitPortrait')[0].style.backgroundImage = 'url(' + getThumbnailUrl(unitNumber) + ')';
+        // update slider
+        sliders[index][0].setRange(1,units[unitNumber].maxLevel);
+        sliders[index][1] = units[unitNumber].maxLevel;
+    } else { // remove unit
+        slot.addClass('empty');
+        slot.find('.unitPortrait')[0].style.backgroundImage = null;
+        sliders[index][0].setRange(1,1);
+        sliders[index][1] = 1;
+    }
     // reset level
     changeLevelLabel(index,1);
 };
@@ -225,6 +232,10 @@ var onUnitsSwitched = function(event,a,b) {
     sliders[b] = sliderA;
 };
 
+var onUnitRemoved = function(event,slotNumber) {
+    updateSlot(slotNumber,null);
+};
+
 /* * * * * Body * * * * */
 
 $(function() {
@@ -244,8 +255,9 @@ $(function() {
     $(document).on('numbersCrunched',onNumbersCrunched);
     $(document).on('merryBonusUpdated',onMerryBonusUpdated);
     $(document).on('hpChanged',onHpChanged);
-    $(document).on('unitsSwitched',onUnitsSwitched);
     $(document).on('sliderToggle',onSliderToggle);
+    $(document).on('unitsSwitched',onUnitsSwitched);
+    $(document).on('unitRemoved',onUnitRemoved);
 
     // set up ui elements
     

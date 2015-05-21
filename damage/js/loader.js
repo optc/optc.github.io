@@ -61,6 +61,11 @@ var onUnitsSwitched = function(event,slotA,slotB) {
     save('team');
 };
 
+var onUnitRemoved = function(event,slotNumber) {
+    data.team[slotNumber] = null;
+    save('team');
+};
+
 var onSliderToggled = function(event,value) {
     data.sliders = value;
     save('sliders');
@@ -96,15 +101,18 @@ $(function() {
 
     /* * * * * Events * * * * */
 
+    // core
     $(document).on('unitPicked',onUnitPick);
     $(document).on('unitLevelChanged',onLevelChange);
     $(document).on('merryBonusUpdated',onMerryChange);
     $(document).on('hpChanged',onHpChange);
-    $(document).on('numbersCrunched',onNumbersCrunched);
-    $(document).on('unitsSwitched',onUnitsSwitched);
     $(document).on('sliderToggle',onSliderToggled);
-
     $(document).on('resetStorage',onResetStorage);
+    // cruncher
+    $(document).on('numbersCrunched',onNumbersCrunched);
+    // drag & drop
+    $(document).on('unitsSwitched',onUnitsSwitched);
+    $(document).on('unitRemoved',onUnitRemoved);
 
 });
 

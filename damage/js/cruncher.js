@@ -279,6 +279,12 @@ var onUnitsSwitched = function(event,slotA,slotB) {
     crunch();
 };
 
+var onUnitRemoved = function(event,slotNumber) {
+    team[slotNumber] = null;
+    if (slotNumber < 2) captainAbilities[slotNumber] = null;
+    crunch();
+};
+
 var onDetailsRequested = function(event,type) {
     $(document).trigger('detailsReady',crunchForType(type.toUpperCase(),true));
 };
@@ -301,6 +307,7 @@ $(document).on('crunchingToggled',onCrunchToggled);
 $(document).on('orbMultiplierChanged',onOrbMultiplierChanged);
 // drag & drop
 $(document).on('unitsSwitched',onUnitsSwitched);
+$(document).on('unitRemoved',onUnitRemoved);
 // details
 $(document).on('detailsRequested',onDetailsRequested);
 
