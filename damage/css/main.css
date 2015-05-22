@@ -212,6 +212,14 @@ body, #main, #hp, #other {
     margin-right: 5px;
 }
 
+#defenseContainer {
+    margin-top: 15px;
+}
+
+#defense {
+    width: 70px;
+}
+
 /* Ribbons */
 
 .ribbon-container {

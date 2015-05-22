@@ -71,6 +71,11 @@ var onSliderToggled = function(event,value) {
     save('sliders');
 };
 
+var onDefenseChanged = function(event,value) {
+    data.defense = value;
+    save('defense');
+};
+
 /* * * * * (Re-)initialize * * * * */
 
 $(function() {
@@ -79,6 +84,7 @@ $(function() {
     data.merry = loadValue('merry',1.0);
     data.hp = loadValue('hp',{ current: 1, max: 1, perc: 100 });
     data.sliders = loadValue('sliders',true)
+    data.defense = loadValue('defense',0);
 
     $(document).trigger('crunchingToggled',false);
 
@@ -97,6 +103,9 @@ $(function() {
     if (!data.sliders)
         $(document).trigger('sliderToggle',false);
 
+    if (data.defense != 0)
+        $(document).trigger('defenseChanged',data.defense);
+
     $(document).trigger('crunchingToggled',true);
 
     /* * * * * Events * * * * */
@@ -108,6 +117,7 @@ $(function() {
     $(document).on('hpChanged',onHpChange);
     $(document).on('sliderToggle',onSliderToggled);
     $(document).on('resetStorage',onResetStorage);
+    $(document).on('defenseChanged',onDefenseChanged);
     // cruncher
     $(document).on('numbersCrunched',onNumbersCrunched);
     // drag & drop

@@ -3,9 +3,12 @@
 var sliders = [ ];
 var hpSlider = null;
 var currentMaxHP = 1;
+var lastDefenseValue = 0;
 
 var unitSlidersEnabled = true;
 var unitLevelEditor = $('<input type="text" id="levelEditor"></input>');
+
+var defenseDebouncer = null;
 
 /* * * * * Functions * * * * */
 
@@ -17,7 +20,7 @@ var parseUnit = function(element,n) {
         'minHP'   : element[6]  , 'minATK'   : element[7]  ,
         'minRCV'  : element[8]  , 'maxHP'    : element[9]  ,
         'maxATK'  : element[10] , 'maxRCV'   : element[11] ,
-        'number' : n
+        'combo'   : element[12] , 'number'   : n
     };
 };
 
@@ -179,6 +182,15 @@ var onSliderToggleClick = function() {
     $(document).trigger('sliderToggle',enabled);
 };
 
+var onDefenseKeyUp = function(e) {
+    if (defenseDebouncer != null) clearTimeout(defenseDebouncer);
+    var value = parseInt(this.value,10);
+    if (isNaN(value) || value == lastDefenseValue) return false;
+    defenseDebouncer = setTimeout(function() {
+        $(document).trigger('defenseChanged',[ value, true ]);
+    },350);
+};
+
 /* * * * * Custom event callbacks * * * * */
 
 var onUnitPicked = function(event,slotNumber,unitNumber) {
@@ -205,6 +217,11 @@ var onNumbersCrunched = function(event,numbers) {
 var onMerryBonusUpdated = function(event,merry) {
     $('#merry > button.selected')[0].classList.remove('selected');
     $('#merry > button')[merry == 1.0 ? 0 : merry == 1.2 ? 1 : 2].classList.add('selected');
+};
+
+var onDefenseChanged = function(event,value,skipUiUpdate) {
+    if (!skipUiUpdate) $('#defense').val(value);
+    lastDefenseValue = value;
 };
 
 var onHpChanged = function(event,current,max,perc,skip) {
@@ -247,6 +264,7 @@ $(function() {
     // attach ui events
 
     $('.unitLevel').click(onUnitLevelClick);
+    $('#defense').keyup(onDefenseKeyUp);
 
     // attach custom events
 
@@ -254,6 +272,7 @@ $(function() {
     $(document).on('unitLevelChanged',onUnitLevelChanged);
     $(document).on('numbersCrunched',onNumbersCrunched);
     $(document).on('merryBonusUpdated',onMerryBonusUpdated);
+    $(document).on('defenseChanged',onDefenseChanged);
     $(document).on('hpChanged',onHpChanged);
     $(document).on('sliderToggle',onSliderToggle);
     $(document).on('unitsSwitched',onUnitsSwitched);

@@ -6,8 +6,8 @@
  *                     Must have 6 elements, each element the hit modifier to be used in the corresponding turn.
  *                     If provided, the unit must also specify how to apply its own captain
  *                     effect (via the `hitAtk` property)
- * - Bonus multiplier: Multiplier associated to each hit modifier (1.9x for Perfect, 1.4x for Great, etc.)
- *                     Cannot be modified by captain effects (so far).
+ * - Bonus multiplier: Multiplier associated to each hit modifier (close to 1.9x for Perfect, close to 1.4x for Great, etc.)
+ *                     Affected by the unit's effective attack and by the enemy's defense.
  * - Chain multiplier: Multiplier associated to the combo chain. Applied to each unit.
  *                     Increased by 0.3 when hitting Perfect's, by 0.1 when hitting Great's, left untouched
  *                     when hitting Good's and reset back to its initial value of 1.0 when hitting Misses.
@@ -41,6 +41,8 @@ var percHP = 100.0;
 
 var crunchingEnabled = true;
 
+var defenseThreshold = 0;
+
 /* * * * * Crunching * * * * */
 
 var crunch = function() {
@@ -65,7 +67,7 @@ var crunchForType = function(type,withDetails) {
     team.forEach(function(x,n) {
         if (x == null) return;
         var atk = getAttackOfUnit(x);
-        damage.push([ x, atk * getOrbMultiplierOfUnit(x) * getTypeMultiplierOfUnit(x,type) , n ]);
+        damage.push([ x, atk * getOrbMultiplierOfUnit(x) * getTypeMultiplierOfUnit(x,type) * merryBonus , n ]);
     });
     // initialize ability array
     var abilities = [ ];
@@ -95,13 +97,12 @@ var crunchForType = function(type,withDetails) {
     // compute damages
     for (var i=0;i<data.length;++i) {
         var modifiers = (i == 0 ? DEFAULT_HIT_MODIFIERS : captainsWithHitModifiers[i-1].hitModifiers);
-        var damageWithChainMultipliers = applyChainAndBonusMultipliers(data[i],modifiers,captainsWithChainModifiers);
         // apply compatible captain effects
         for (var j=1;j<data.length;++j) {
             if (!arraysAreEqual(modifiers,captainsWithHitModifiers[j-1].hitModifiers)) continue;
-            damageWithChainMultipliers.result =
-                applyCaptainEffectToDamage(damageWithChainMultipliers.result,captainsWithHitModifiers[j-1].hitAtk);
+            data[i] = applyCaptainEffectToDamage(data[i],captainsWithHitModifiers[j-1].hitAtk);
         }
+        var damageWithChainMultipliers = applyChainAndBonusMultipliers(data[i],modifiers,captainsWithChainModifiers);
         var overallDamage = damageWithChainMultipliers.result.reduce(function(prev,x) { return prev + x[1]; },0);
         data[i] = { damage: damageWithChainMultipliers, overall: overallDamage, hitModifiers: modifiers };
     }
@@ -113,14 +114,13 @@ var crunchForType = function(type,withDetails) {
         currentMax = data[i].overall;
     }
     // return results
-    if (!withDetails) return merryBonus * currentMax;
+    if (!withDetails) return currentMax;
     // provide details
     var result = {
         modifiers: data[index].hitModifiers,
         multipliers: data[index].damage.chainMultipliers,
         order: data[index].damage.result
     };
-    result.order = result.order.map(function(x) { x[1] *= merryBonus; return x; });
     return result;
 }
 
@@ -202,15 +202,17 @@ var applyChainAndBonusMultipliers = function(damage,modifiers,captains) {
     var multipliersUsed = [ ];
     var currentChainMultiplier = 1.0;
     var result = damage.map(function(x,n) {
-        multipliersUsed.push(currentChainMultiplier);
         var unit = x[0], damage = x[1], order = x[2];
         var result = damage * currentChainMultiplier;
         var chainModifier = captains.reduce(function(x,y) {
             return x * y.chainModifier(unit.unit,n,currentHP,maxHP,percHP,modifiers[n]);
         },1);
-        var bonusMultiplier = getBonusMultiplier(modifiers[n]);
+        result = computeDamageOfUnit(unit.unit,result,modifiers[n]);
+        // update chain multiplier for the next hit
+        multipliersUsed.push(currentChainMultiplier);
         currentChainMultiplier = getChainMultiplier(currentChainMultiplier,modifiers[n],chainModifier);
-        return [ unit, result * bonusMultiplier, order ];
+        // return value
+        return [ unit, result, order ];
     });
     return { result: result, chainMultipliers: multipliersUsed };
 };
@@ -240,6 +242,35 @@ var getOrbMultiplierOfUnit = function(data) {
     return data.orb;
 };
 
+/* The effective damage of a unit is affected by the hit modifier being used and by the defense threshold of an enemy.
+ * The estimates being used right now are:
+ * MISS hits: baseDamage * CMB
+ * GOOD hits: baseDamage * (CMB - 2) + floor(startingDamage / CMB / merryBonus * 0.3) * CMB
+ * GREAT hits: baseDamage * (CMB - 1) + floor(startingDamage / CMB / merryBonus * 0.6) * CMB 
+ * PERFECT hits: baseDamage * CMB + floor(startingDamage / CMB / merryBonus * 1.35) * CMB
+ * where:
+ * - startingDamage is the damage computer for the unit, including the Merry's bonus
+ * - baseDamage = floor(max(1,startingDamage / CMB - defenseThreshold))
+ * The additional bonus for GOOD, GREAT and PERFECT (that is, the last hit in the chain) is apparently not
+ * affected by the Merry's bonus, but seems to bypass the enemy's defense when it's higher than that (the
+ * defense threshold is not applied if the damage is over the threshold itself)
+ */
+var computeDamageOfUnit = function(unit,unitAtk,hitModifier) {
+    var baseDamage = Math.floor(Math.max(1,unitAtk / unit.combo - defenseThreshold));
+    if (hitModifier == 'Miss')
+        return baseDamage * unit.combo;
+    if (hitModifier == 'Good') {
+        var bonus = Math.floor(unitAtk / unit.combo / merryBonus * 0.3) * unit.combo;
+        return baseDamage * (unit.combo - 2) + (bonus > defenseThreshold ? bonus : 1);
+    } if (hitModifier == 'Great') {
+        var bonus = Math.floor(unitAtk / unit.combo / merryBonus * 0.6) * unit.combo;
+        return baseDamage * (unit.combo - 1) + (bonus > defenseThreshold ? bonus : 1);
+    } if (hitModifier == 'Perfect') { 
+        var bonus = Math.floor(unitAtk / unit.combo / merryBonus * 1.35) * unit.combo;
+        return baseDamage * unit.combo + (bonus > defenseThreshold ? bonus : 1);
+    }
+};
+
 /* * * * * Event callbacks * * * * */
 
 var onUnitPick = function(event,slotNumber,unitNumber) {
@@ -257,6 +288,11 @@ var onMerryChange = function(event,bonus) {
     merryBonus = bonus;
     crunch();
 };
+
+var onDefenseChanged = function(event,value) {
+    defenseThreshold = value;
+    crunch();
+}
 
 var onHpChange = function(event,current,max,perc) {
     currentHP = current;
@@ -301,6 +337,7 @@ $(document).on('unitPicked',onUnitPick);
 $(document).on('unitLevelChanged',onLevelChange);
 $(document).on('merryBonusUpdated',onMerryChange);
 $(document).on('hpChanged',onHpChange);
+$(document).on('defenseChanged',onDefenseChanged);
 // loader
 $(document).on('crunchingToggled',onCrunchToggled);
 // orb control
