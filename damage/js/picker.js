@@ -65,6 +65,7 @@ var showInstructions = function() {
         autoHide: false
     });
     localStorage.setItem('instructionsShown','true');
+    instructionsShown = true;
 };
 
 /* * * * * List generation * * * * */
