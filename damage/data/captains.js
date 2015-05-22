@@ -11,13 +11,13 @@ window.captains = {
     5: { // Roronoa Zoro
         atk: 'unit.type == "DEX" ? 1.5 : 1'
     },
-    7: { // 3k Worlds Zoro
+    6: { // 3k Worlds Zoro
         atk: 'unit.type == "DEX" ? 1.5 : 1'
     },
-    8: { // Zoro Pound Phoenix
+    7: { // Zoro Pound Phoenix
         atk: 'unit.type == "DEX" ? 1.5 : 1'
     },
-    9: { // Zoro Ashura
+    8: { // Zoro Ashura
         atk: 'unit.type == "DEX" ? 2 : 1',
         hp: 'unit.type == "DEX" ? 2 : 1'
     },
