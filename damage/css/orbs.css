@@ -1,39 +1,34 @@
-.glower {
+.unit {
     -webkit-transition: border 1.0s linear, box-shadow 1.0s linear;
        -moz-transition: border 1.0s linear, box-shadow 1.0s linear;
             transition: border 1.0s linear, box-shadow 1.0s linear;
 }
 
-.glower.str {
-    border-color: red;
+.glowing[glow="str"] {
     -webkit-box-shadow: 0 0 20px red;
        -moz-box-shadow: 0 0 20px red;
             box-shadow: 0 0 20px red;
 }
 
-.glower.qck {
-    border-color: blue;
+.glowing[glow="qck"] {
     -webkit-box-shadow: 0 0 20px blue;
        -moz-box-shadow: 0 0 20px blue;
             box-shadow: 0 0 20px blue;
 }
 
-.glower.dex {
-    border-color: green;
+.glowing[glow="dex"] {
     -webkit-box-shadow: 0 0 20px green;
        -moz-box-shadow: 0 0 20px green;
             box-shadow: 0 0 20px green;
 }
 
-.glower.psy {
-    border-color: orange;
-    -webkit-box-shadow: 0 0 20px orange;
-       -moz-box-shadow: 0 0 20px orange;
-            box-shadow: 0 0 20px orange;
+.glowing[glow="psy"] {
+    -webkit-box-shadow: 0 0 20px darkorange;
+       -moz-box-shadow: 0 0 20px darkorange;
+            box-shadow: 0 0 20px darkorange;
 }
 
-.glower.int {
-    border-color: purple;
+.glowing[glow="int"] {
     -webkit-box-shadow: 0 0 20px purple;
        -moz-box-shadow: 0 0 20px purple;
             box-shadow: 0 0 20px purple;
