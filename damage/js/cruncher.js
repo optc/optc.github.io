@@ -296,6 +296,7 @@ var arraysAreEqual = function(a,b) {
 var onUnitPick = function(event,slotNumber,unitNumber) {
     team[slotNumber] = { unit: units[unitNumber], level: 1, orb: 1 };
     if (slotNumber < 2) setCaptain(slotNumber);
+    enabledSpecials[slotNumber] = null;
     crunch();
 };
 
