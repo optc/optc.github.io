@@ -201,9 +201,9 @@ var getOrbMultiplierOfUnit = function(data) {
 /* The effective damage of a unit is affected by the hit modifier being used and by the defense threshold of an enemy.
  * The estimates being used right now are:
  * MISS hits: baseDamage * CMB
- * GOOD hits: baseDamage * (CMB - 2) + floor(startingDamage / CMB / merryBonus * 0.3) * CMB
- * GREAT hits: baseDamage * (CMB - 1) + floor(startingDamage / CMB / merryBonus * 0.6) * CMB 
- * PERFECT hits: baseDamage * CMB + floor(startingDamage / CMB / merryBonus * 1.35) * CMB
+ * GOOD hits: baseDamage * (CMB - 2) + floor(startingDamage / CMB * 0.2) * CMB
+ * GREAT hits: baseDamage * (CMB - 1) + floor(startingDamage / CMB * 0.4) * CMB 
+ * PERFECT hits: baseDamage * CMB + floor(startingDamage / CMB * 9) * CMB
  * where:
  * - startingDamage is the damage computed for the unit, including the Merry's bonus
  * - baseDamage = floor(max(1,startingDamage / CMB - currentDefenseThreshold))
@@ -213,13 +213,13 @@ var computeDamageOfUnit = function(unit,unitAtk,hitModifier) {
     if (hitModifier == 'Miss')
         return baseDamage * unit.combo;
     if (hitModifier == 'Good') {
-        var bonus = Math.floor(unitAtk / unit.combo / merryBonus * 0.3) * unit.combo;
+        var bonus = Math.floor(unitAtk / unit.combo * 0.2) * unit.combo;
         return baseDamage * (unit.combo - 2) + Math.max(bonus - currentDefenseThreshold,1);
     } if (hitModifier == 'Great') {
-        var bonus = Math.floor(unitAtk / unit.combo / merryBonus * 0.6) * unit.combo;
+        var bonus = Math.floor(unitAtk / unit.combo * 0.4) * unit.combo;
         return baseDamage * (unit.combo - 1) + Math.max(bonus - currentDefenseThreshold,1);
     } if (hitModifier == 'Perfect') { 
-        var bonus = Math.floor(unitAtk / unit.combo / merryBonus * 1.35) * unit.combo;
+        var bonus = Math.floor(unitAtk / unit.combo * 0.9) * unit.combo;
         return baseDamage * unit.combo + Math.max(bonus - currentDefenseThreshold,1);
     }
 };
