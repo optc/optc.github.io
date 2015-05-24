@@ -38,11 +38,23 @@ var onUnitRemoved = function(event,slotNumber) {
     removeButton(slotNumber);
 };
 
+var onUnitsSwitched = function(event,slotA,slotB) {
+    var teamA = team[slotA];
+    team[slotA] = team[slotB];
+    team[slotB] = teamA;
+    var teamUiA = teamUI[slotA];
+    teamUI[slotA] = teamUI[slotB];
+    teamUI[slotB] = teamUiA;
+    if (teamUI[slotA] != null) teamUI[slotA].attr('slot',slotA);
+    if (teamUI[slotB] != null) teamUI[slotB].attr('slot',slotB);
+};
+
 /* * * * * UI event callbacks * * * * */
 
 var onSpecialClick = function(e) {
     var target = $(this);
-    var slot = parseInt(target.attr('slot'),10), type = team[slot].type.toLowerCase();
+    var slot = parseInt(target.attr('slot'),10);
+    var type = team[slot].type.toLowerCase();
     teamUI[slot].toggleClass(type);
     var specialEnabled = teamUI[slot].hasClass(type);
     $(document).trigger('specialToggled',[ slot, specialEnabled ]);
@@ -52,5 +64,6 @@ var onSpecialClick = function(e) {
 
 $(document).on('unitPicked',onUnitPicked);
 $(document).on('unitRemoved',onUnitRemoved);
+$(document).on('unitsSwitched',onUnitsSwitched);
 
 })();

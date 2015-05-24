@@ -55,16 +55,18 @@ var onUnitClick = function(e) {
 };
 
 var onUnitsSwitched = function(event,slotA,slotB) {
+    // deactivate glowing
+    deactivateGlowing($('.unit').eq(slotB),slotB);
+    deactivateGlowing($('.unit').eq(slotA),slotA);
+    // switch data
     var teamA = team[slotA];
     team[slotA] = team[slotB];
     team[slotB] = teamA;
-    // move glow
-    var moveSlotA = (team[slotA] && team[slotA].status > 0);
-    var moveSlotB = (team[slotB] && team[slotB].status > 0);
-    if (moveSlotB) deactivateGlowing($('.unit').eq(slotA),slotA);
-    if (moveSlotA) deactivateGlowing($('.unit').eq(slotB),slotB);
-    if (moveSlotB) activateGlowing($('.unit').eq(slotB),getGlowColor(team[slotB].type,team[slotB].status));
-    if (moveSlotA) activateGlowing($('.unit').eq(slotA),getGlowColor(team[slotA].type,team[slotA].status));
+    // reactivate glowing if necessary
+    if (team[slotA] && team[slotA].status > 0)
+        activateGlowing($('.unit').eq(slotA),slotA,getGlowColor(team[slotA].type,team[slotA].status));
+    if (team[slotB] && team[slotB].status > 0)
+        activateGlowing($('.unit').eq(slotB),slotB,getGlowColor(team[slotB].type,team[slotB].status));
 };
 
 var onUnitRemoved = function(event,slotNumber) {
