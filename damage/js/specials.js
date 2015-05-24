@@ -1,62 +1,74 @@
 (function() {
 
 var team = [ null, null, null, null, null, null ];
-var teamUI = [ null, null, null, null, null, null ];
+
+var initialized = false;
 
 /* * * * * Functions * * * * */
 
+var initialize = function() {
+    var targets = $('[id^="special"]');
+    targets.dotdotdot();
+    targets.click(onSpecialClick);
+    initialized = true;
+};
+
 var addButton = function(slotNumber,unitNumber) {
+    var target = $('#special' + slotNumber);
     var unit = units[unitNumber];
-    var button = $('<li></li>');
-    var specialDiv = $('<div class="special">&nbsp;</div>');
-    button.append(specialDiv);
-    $('ul').append(button);
-    specialDiv.dotdotdot();
-    specialDiv.text(unit.name);
-    button.attr('slot',slotNumber);
-    button.click(onSpecialClick);
-    teamUI[slotNumber] = button;
+    target.parent().removeClass('disabled');
+    target.text(unit.name);
 };
 
 var removeButton = function(slotNumber) {
-    if (teamUI[slotNumber] == null) return;
-    teamUI[slotNumber].remove();
-    teamUI[slotNumber] = null;
+    var target = $('#special' + slotNumber);
+    target.parent().addClass('disabled');
+    if (team[slotNumber] != null)
+        target.removeClass(team[slotNumber].type.toLowerCase());
 };
 
 /* * * * * Custom event callbacks * * * * */
 
 var onUnitPicked = function(event,slotNumber,unitNumber) {
-    removeButton(slotNumber);
+    if (!initialized) initialize();
+    if (team[slotNumber] != null) removeButton(slotNumber);
     if (!specials.hasOwnProperty(unitNumber+1)) return;
-    addButton(slotNumber,unitNumber);
     team[slotNumber] = units[unitNumber];
+    addButton(slotNumber,unitNumber);
 };
 
 var onUnitRemoved = function(event,slotNumber) {
-    team[slotNumber] = null;
     removeButton(slotNumber);
+    team[slotNumber] = null;
 };
 
 var onUnitsSwitched = function(event,slotA,slotB) {
+    // switch data
     var teamA = team[slotA];
     team[slotA] = team[slotB];
     team[slotB] = teamA;
-    var teamUiA = teamUI[slotA];
-    teamUI[slotA] = teamUI[slotB];
-    teamUI[slotB] = teamUiA;
-    if (teamUI[slotA] != null) teamUI[slotA].attr('slot',slotA);
-    if (teamUI[slotB] != null) teamUI[slotB].attr('slot',slotB);
+    // switch class and text
+    var targetA = $('#special' + slotA), targetB = $('#special' + slotB);
+    var classA = targetA.attr('class'), textA = targetA.text();
+    targetA[0].className = targetB.attr('class');
+    targetA.text(targetB.text());
+    targetB[0].className = classA;
+    targetB.text(textA);
+    // switch parent's class
+    var classA = targetA.parent().attr('class');
+    targetA.parent().attr('class',targetB.parent().attr('class'));
+    targetB.parent().attr('class',classA);
 };
 
 /* * * * * UI event callbacks * * * * */
 
 var onSpecialClick = function(e) {
     var target = $(this);
-    var slot = parseInt(target.attr('slot'),10);
+    var slot = parseInt(this.id.slice(-1),10);
     var type = team[slot].type.toLowerCase();
-    teamUI[slot].toggleClass(type);
-    var specialEnabled = teamUI[slot].hasClass(type);
+    var target = $('#special' + slot);
+    target.toggleClass(type);
+    var specialEnabled = target.hasClass(type);
     $(document).trigger('specialToggled',[ slot, specialEnabled ]);
 };
 
