@@ -36,7 +36,7 @@ window.specials = {
         atk: 'unit.type == "PSY" ? 2 : 1'
     },
     263: { // Sergeant Major Coby
-        orb: 'orb == 2.0 ? 3 : (orb == 0.5 ? 1/3 : 1)'
+        orb: 'orb == 2.0 ? 1.5 : (orb == 0.5 ? 2/3 : 1)'
     },
     267: { // Rainbow Dragon
         def: '0.5'
@@ -63,10 +63,10 @@ window.specials = {
         atk: 'unit.class == "Striker" ? 1.5 : 1',
     },
     323: { // Kaku
-        orb: 'orb == 2.0 ? 3 : (orb == 0.5 ? 1/3 : 1)'
+        orb: 'orb == 2.0 ? 1.5 : (orb == 0.5 ? 2/3 : 1)'
     },
     324: { // Kaku evolved
-        orb: 'orb == 2.0 ? 3 : (orb == 0.5 ? 1/3 : 1)'
+        orb: 'orb == 2.0 ? 1.5 : (orb == 0.5 ? 2/3 : 1)'
     },
     352: { // Zephyr
         atk: 'unit.class == "Shooter" ? 1.75 : 1'
@@ -90,7 +90,7 @@ window.specials = {
         def: '0'
     },
     395: { // Miss Merry Christmas
-        orb: 'orb == 2.0 ? 2.5 : (orb == 0.5 ? 0.4 : 1)'
+        orb: 'orb == 2.0 ? 1.25 : (orb == 0.5 ? 4/5 : 1)'
     },
     399: { // Miss Doublefinger
         atk: 'unit.type == "DEX" ? 1.5 : 1'
@@ -108,10 +108,10 @@ window.specials = {
         atk: '1.2'
     },
     417: { // Doflamingo
-        orb: 'orb == 2.0 ? 4.0 : (orb == 0.5 ? 0.25 : 1)'
+        orb: 'orb == 2.0 ? 2.0 : (orb == 0.5 ? 0.5 : 1)'
     },
     418: { // Doflamingo evolved
-        orb: 'orb == 2.0 ? 4.0 : (orb == 0.5 ? 0.25 : 1)'
+        orb: 'orb == 2.0 ? 2.0 : (orb == 0.5 ? 0.5 : 1)'
     },
     419: { // Kimono Sanji
         def: '0.5'
@@ -129,13 +129,13 @@ window.specials = {
         def: '0.5',
     },
     430: { // Bellamy
-        orb: 'orb == 2.0 ? 3 : (orb == 0.5 ? 1/3 : 1)'
+        orb: 'orb == 2.0 ? 1.5 : (orb == 0.5 ? 2/3 : 1)'
     },
     431: { // Bellamy evolved
-        orb: 'orb == 2.0 ? 3 : (orb == 0.5 ? 1/3 : 1)'
+        orb: 'orb == 2.0 ? 1.5 : (orb == 0.5 ? 2/3 : 1)'
     },
     434: { // Caroline
-        orb: 'orb == 2.0 ? 2.5 : (orb == 0.5 ? 0.4 : 1)'
+        orb: 'orb == 2.0 ? 1.25 : (orb == 0.5 ? 4/5 : 1)'
     },
     450: { // Namur
         atk: 'unit.class == "Fighter" ? 1.5 : 1'
@@ -165,7 +165,7 @@ window.specials = {
         atk: 'unit.class == "Fighter" ? 1.25 : 1'
     },
     465: { // Gedatsu
-        orb: 'orb == 2.0 ? 2.5 : (orb == 0.5 ? 0.4 : 1)'
+        orb: 'orb == 2.0 ? 1.25 : (orb == 0.5 ? 4/5 : 1)'
     },
     487: { // Fodder
         atk: 'unit.type == "STR" ? 1.2 : 1'
@@ -223,10 +223,10 @@ window.specials = {
         def: '0'
     },
     533: { // Sakura Brook
-        orb: 'orb == 2.0 ? 3 : (orb == 0.5 ? 1/3 : 1)'
+        orb: 'orb == 2.0 ? 1.5 : (orb == 0.5 ? 2/3 : 1)'
     },
     534: { // Sakura Brook evolved
-        orb: 'orb == 2.0 ? 3 : (orb == 0.5 ? 1/3 : 1)'
+        orb: 'orb == 2.0 ? 1.5 : (orb == 0.5 ? 2/3 : 1)'
     },
     545: { // Enel
         atk: 'unit.type == "PSY" ? 1.5 : 1'
@@ -241,10 +241,10 @@ window.specials = {
         atk: 'defenseDown ? 1.3 : 1'
     },
     559: { // SW Franky
-        orb: 'orb == 2.0 ? 3 : (orb == 0.5 ? 1/3 : 1)'
+        orb: 'orb == 2.0 ? 1.5 : (orb == 0.5 ? 2/3 : 1)'
     },
     560: { // SW Franky evolved
-        orb: 'orb == 2.0 ? 3 : (orb == 0.5 ? 1/3 : 1)'
+        orb: 'orb == 2.0 ? 1.5 : (orb == 0.5 ? 2/3 : 1)'
     },
     568: { // Foxy
         def: '0.5'

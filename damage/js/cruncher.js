@@ -32,17 +32,16 @@
 var DEFAULT_HIT_MODIFIERS = [ 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect' ]; 
 
 var team = [ null, null, null, null, null, null ];
+var enabledSpecials = [ null, null, null, null, null, null ];
 var captainAbilities = [ null, null ];
-var specials = [ ];
 
 var merryBonus = 1;
-var currentHP = 1;
-var maxHP = 1;
-var percHP = 100.0;
-
-var crunchingEnabled = true;
+var currentHP = 1, maxHP = 1, percHP = 100.0;
 
 var defenseThreshold = 0;
+var currentDefenseThreshold = 0;
+
+var crunchingEnabled = true;
 
 /* * * * * Crunching * * * * */
 
@@ -65,10 +64,14 @@ var crunch = function() {
 var crunchForType = function(type,withDetails) {
     var damage = [ ];
     // apply type & orb multipliers
+    var isDefenseDown = enabledSpecials.some(function(x) { return x != null && x.hasOwnProperty('def'); });
     team.forEach(function(x,n) {
         if (x == null) return;
-        var atk = getAttackOfUnit(x);
-        damage.push([ x, atk * getOrbMultiplierOfUnit(x) * getTypeMultiplierOfUnit(x,type) * merryBonus , n ]);
+        var atk = getAttackOfUnit(x); // basic attack (scales with level);
+        atk *= getOrbMultiplierOfUnit(x); // orb multiplier (affected by captain abilities but not specials)
+        atk *= getTypeMultiplierOfUnit(x,type); // type multiplier (fixed)
+        atk *= getSpecialMultiplierForUnit(x,isDefenseDown); // multiplier from specials
+        damage.push([ x, atk * merryBonus, n ]);
     });
     // initialize ability array
     var abilities = [ ];
@@ -96,6 +99,7 @@ var crunchForType = function(type,withDetails) {
     var data = [ damage ];
     for (var i=0;i<captainsWithHitModifiers.length;++i) data.push(damage);
     // compute damages
+    updateDefenseThreshold();
     for (var i=0;i<data.length;++i) {
         var modifiers = (i == 0 ? DEFAULT_HIT_MODIFIERS : captainsWithHitModifiers[i-1].hitModifiers);
         // apply compatible captain effects
@@ -125,50 +129,6 @@ var crunchForType = function(type,withDetails) {
     return result;
 }
 
-/* * * * * * Utility functions * * * * */
-
-var getAttackOfUnit = function(data) {
-    var unit = data.unit;
-    var level = data.level;
-    return Math.floor(unit.minATK + (unit.maxATK - unit.minATK) / (unit.maxLevel == 1 ? 1 : (unit.maxLevel-1)) * (level-1));
-};
-
-var getHpOfUnit = function(data) {
-    var unit = data.unit;
-    var level = data.level;
-    return Math.floor(unit.minHP + (unit.maxHP - unit.minHP) / (unit.maxLevel == 1 ? 1 : (unit.maxLevel-1)) * (level-1));
-};
-
-var setCaptain = function(slotNumber) {
-    if (team[slotNumber] == null)
-        captainAbilities[slotNumber] = null;
-    else if (captains.hasOwnProperty(team[slotNumber].unit.number+1))
-        captainAbilities[slotNumber] = createFunctions(captains[team[slotNumber].unit.number+1]);
-    else
-        captainAbilities[slotNumber] = null;
-}
-
-var createFunctions = function(data) {
-    var result = { };
-    for (key in data) {
-        if (data[key] == undefined)
-            $.notify("The unit you selected has a strange ass ability that can't be parsed correctly yet");
-        else if (key == 'atk' || key == 'hitAtk' || key == 'hp')
-            result[key] = new Function('unit','chainPosition','currentHP','maxHP','percHP','modifier','defenseDown','return ' + data[key]);
-        else if (key == 'orb')
-            result[key] = new Function('unit','orb','return ' + data[key]);
-        else if (key == 'def')
-            result[key] = new Function('return ' + data[key]);
-        else
-            result[key] = data[key];
-    }
-    return result;
-};
-
-var arraysAreEqual = function(a,b) {
-    return a.length == b.length && a.every(function(x,n) { return x == b[n]; });
-};
-
 /* * * * * * Static multipliers/modifiers * * * * */
 
 var getTypeMultiplierOfUnit = function(data,against) {
@@ -191,7 +151,7 @@ var getChainMultiplier = function(currentChainMultiplier,hit,chainModifier) {
     return 1.0;
 };
 
-/* * * * * Captain effects * * * * */
+/* * * * * Captain effects/specials * * * * */
 
 var applyChainAndBonusMultipliers = function(damage,modifiers,captains) {
     // NOTE: all the captains provided must have a chain modifier (array can be empty - don't include them if they don't)
@@ -246,26 +206,89 @@ var getOrbMultiplierOfUnit = function(data) {
  * PERFECT hits: baseDamage * CMB + floor(startingDamage / CMB / merryBonus * 1.35) * CMB
  * where:
  * - startingDamage is the damage computed for the unit, including the Merry's bonus
- * - baseDamage = floor(max(1,startingDamage / CMB - defenseThreshold))
+ * - baseDamage = floor(max(1,startingDamage / CMB - currentDefenseThreshold))
  * The additional bonus for GOOD, GREAT and PERFECT (that is, the last hit in the chain) is apparently not
  * affected by the Merry's bonus, but seems to bypass the enemy's defense when it's higher than that (the
  * defense threshold is not applied if the damage is over the threshold itself)
  */
 var computeDamageOfUnit = function(unit,unitAtk,hitModifier) {
-    var baseDamage = Math.floor(Math.max(1,unitAtk / unit.combo - defenseThreshold));
+    var baseDamage = Math.floor(Math.max(1,unitAtk / unit.combo - currentDefenseThreshold));
     if (hitModifier == 'Miss')
         return baseDamage * unit.combo;
     if (hitModifier == 'Good') {
         var bonus = Math.floor(unitAtk / unit.combo / merryBonus * 0.3) * unit.combo;
-        return baseDamage * (unit.combo - 2) + (bonus > defenseThreshold ? bonus : 1);
+        return baseDamage * (unit.combo - 2) + (bonus > currentDefenseThreshold ? bonus : 1);
     } if (hitModifier == 'Great') {
         var bonus = Math.floor(unitAtk / unit.combo / merryBonus * 0.6) * unit.combo;
-        return baseDamage * (unit.combo - 1) + (bonus > defenseThreshold ? bonus : 1);
+        return baseDamage * (unit.combo - 1) + (bonus > currentDefenseThreshold ? bonus : 1);
     } if (hitModifier == 'Perfect') { 
         var bonus = Math.floor(unitAtk / unit.combo / merryBonus * 1.35) * unit.combo;
-        return baseDamage * unit.combo + (bonus > defenseThreshold ? bonus : 1);
+        return baseDamage * unit.combo + (bonus > currentDefenseThreshold ? bonus : 1);
     }
 };
+
+var getSpecialMultiplierForUnit = function(unit,isDefenseDown) {
+    return enabledSpecials.reduce(function(prev,data) {
+        if (data == null) return prev;
+        if (data.hasOwnProperty('atk'))
+            prev *= data.atk(unit.unit,null,currentHP,maxHP,percHP,null,isDefenseDown);
+        if (data.hasOwnProperty('orb'))
+            prev *= data.orb(unit,unit.orb);
+        return prev;
+    },1);
+};
+
+var updateDefenseThreshold = function() {
+    currentDefenseThreshold = enabledSpecials.reduce(function(prev,data) {
+        if (data == null || !data.hasOwnProperty('def')) return prev;
+        return prev * data.def();
+    },defenseThreshold);
+};
+
+/* * * * * * Utility functions * * * * */
+
+var getAttackOfUnit = function(data) {
+    var unit = data.unit;
+    var level = data.level;
+    return Math.floor(unit.minATK + (unit.maxATK - unit.minATK) / (unit.maxLevel == 1 ? 1 : (unit.maxLevel-1)) * (level-1));
+};
+
+var getHpOfUnit = function(data) {
+    var unit = data.unit;
+    var level = data.level;
+    return Math.floor(unit.minHP + (unit.maxHP - unit.minHP) / (unit.maxLevel == 1 ? 1 : (unit.maxLevel-1)) * (level-1));
+};
+
+var setCaptain = function(slotNumber) {
+    if (team[slotNumber] == null)
+        captainAbilities[slotNumber] = null;
+    else if (captains.hasOwnProperty(team[slotNumber].unit.number+1))
+        captainAbilities[slotNumber] = createFunctions(captains[team[slotNumber].unit.number+1]);
+    else
+        captainAbilities[slotNumber] = null;
+}
+
+var createFunctions = function(data) {
+    var result = { };
+    for (key in data) {
+        if (data[key] == undefined)
+            $.notify("The unit you selected has a strange ass ability that can't be parsed correctly yet");
+        else if (key == 'atk' || key == 'hitAtk' || key == 'hp')
+            result[key] = new Function('unit','chainPosition','currentHP','maxHP','percHP','modifier','defenseDown','return ' + data[key]);
+        else if (key == 'orb')
+            result[key] = new Function('unit','orb','return ' + data[key]);
+        else if (key == 'def')
+            result[key] = new Function('return ' + data[key]);
+        else
+            result[key] = data[key];
+    }
+    return result;
+};
+
+var arraysAreEqual = function(a,b) {
+    return a.length == b.length && a.every(function(x,n) { return x == b[n]; });
+};
+
 
 /* * * * * Event callbacks * * * * */
 
@@ -326,6 +349,12 @@ var onCrunchToggled = function(event,enabled) {
     if (enabled) crunch();
 };
 
+var onSpecialToggled = function(event,slotNumber,enabled) {
+    if (!enabled) enabledSpecials[slotNumber] = null;
+    else enabledSpecials[slotNumber] = createFunctions(specials[team[slotNumber].unit.number+1]);
+    crunch();
+};
+
 /* * * * * Events * * * * */
 
 // core
@@ -343,5 +372,7 @@ $(document).on('unitsSwitched',onUnitsSwitched);
 $(document).on('unitRemoved',onUnitRemoved);
 // details
 $(document).on('detailsRequested',onDetailsRequested);
+// specials
+$(document).on('specialToggled',onSpecialToggled);
 
 })();

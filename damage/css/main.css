@@ -136,11 +136,11 @@ body, #main, #hp, #other {
     margin-bottom: 0 !important;
 }
 
-.damage.str { background: salmon; }
-.damage.qck { background: lightskyblue; }
-.damage.dex { background: lightgreen; }
-.damage.psy { background: gold; }
-.damage.int { background: orchid; }
+.damage.str, li.str { background: salmon; }
+.damage.qck, li.qck { background: lightskyblue; }
+.damage.dex, li.dex { background: lightgreen; }
+.damage.psy, li.psy { background: gold; }
+.damage.int, li.int { background: orchid; }
 
 .damageLabel {
     font-size: 75%;
@@ -300,5 +300,17 @@ li {
 
 input {
     color: black;
+}
+
+#specialDivider {
+    padding: 5px !important;
+    text-align: center;
+    background: #cdd8e4;
+    color: black !important;
+    cursor: default;
+}
+
+li.str > div, li.qck > div, li.dex > div, li.psy > div, li.int > div {
+    color: black !important;
 }
 
