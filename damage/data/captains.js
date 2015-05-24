@@ -584,6 +584,9 @@ window.captains = {
     456: { // Curiel
         atk: 'unit.class == "Fighter" ? 2 : 1'
     },
+    457: { // Curiel evolved
+        atk: 'unit.class == "Fighter" ? 2 : 1'
+    },
     458: { // Sengoku
         atk: 'unit.cost <= 20 ? 3 : 1'
     },
@@ -840,4 +843,14 @@ window.captains = {
         hitAtk: 'chainPosition > 2 ? 4 : 1',
         hitModifiers: [ 'Good', 'Great', 'Perfect', 'Perfect', 'Perfect', 'Perfect' ]
     },
+    581: { // Genbou
+        atk: 'unit.type == "STR" ? 1.5 : 1'
+    },
+    582: { // Kamakiri
+        atk: 'unit.class == "Striker" ? 1.5 : 1',
+        hp: 'unit.class == "Striker" ? 1.5 : 1'
+    },
+    583: { // Laki
+        atk: 'unit.class == "Shooter" ? 1.5 : 1'
+    }
 };

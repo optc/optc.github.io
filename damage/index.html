@@ -25,9 +25,11 @@
         <script src="js/libs/notify.min.js"></script>
         <script src="js/libs/interact.min.js"></script>
         <script src="js/libs/jquery.dotdotdot.min.js"></script>
+        <script src="js/libs/bigSlide.min.js"></script>
 
         <script src="data/units.js"></script>
         <script src="data/captains.js"></script>
+        <script src="data/specials.js"></script>
 
         <script src="js/main.js"></script>
         <script src="js/picker.js"></script>
@@ -36,6 +38,7 @@
         <script src="js/orbs.js"></script>
         <script src="js/dragger.js"></script>
         <script src="js/details.js"></script>
+        <script src="js/specials.js"></script>
     </head>
 
     <body>
@@ -115,21 +118,18 @@
                 <div id="hpLabel"></div>
             </div>
 
-            <div id="defenseContainer">
-                <span>Enemy's defense threshold:</span>
-                <input type="text" id="defense" value="0"></input>
-            </div>
-
-            <div id="merry">
-                <button type="button" class="btn btn-xs btn-danger selected">No Merry bonus</button>
-                <button type="button" class="btn btn-xs btn-warning">1.2x Merry bonus</button>
-                <button type="button" class="btn btn-xs btn-success">1.5x Merry bonus</button>
-            </div>
-
             <div id="other">
-                <button type="button" class="btn btn-xs btn-primary" id="sliderToggle">Enable level sliders</button>
                 <button type="button" class="btn btn-xs btn-info" id="reset">Reset</button>
+                <button type="button" class="btn btn-xs btn-primary menu-link" href="#menu">Settings</a>
             </div>
+
+            <nav id="menu" class="panel" role="navigation">
+                <ul>
+                    <li><div id="sliderToggle" status="0"></div></li>
+                    <li><div id="merry" status="0"></div>
+                    <li><div id="defenseContainer">Defense threshold: <input type="text" id="defense" value="0"></input></div></li>
+                </ul>
+            </nav>
 
             <div class="unit empty" id="removeSlot"></div>
 

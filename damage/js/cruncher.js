@@ -33,6 +33,7 @@ var DEFAULT_HIT_MODIFIERS = [ 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfe
 
 var team = [ null, null, null, null, null, null ];
 var captainAbilities = [ null, null ];
+var specials = [ ];
 
 var merryBonus = 1;
 var currentHP = 1;
@@ -151,11 +152,13 @@ var createFunctions = function(data) {
     var result = { };
     for (key in data) {
         if (data[key] == undefined)
-            $.notify("The captain you selected has a strange ass ability that can't be parsed correctly yet");
-        else if (key != 'hitModifiers' && key != 'orb')
-            result[key] = new Function('unit','chainPosition','currentHP','maxHP','percHP','modifier','return ' + data[key]);
+            $.notify("The unit you selected has a strange ass ability that can't be parsed correctly yet");
+        else if (key == 'atk' || key == 'hitAtk' || key == 'hp')
+            result[key] = new Function('unit','chainPosition','currentHP','maxHP','percHP','modifier','defenseDown','return ' + data[key]);
         else if (key == 'orb')
             result[key] = new Function('unit','orb','return ' + data[key]);
+        else if (key == 'def')
+            result[key] = new Function('return ' + data[key]);
         else
             result[key] = data[key];
     }
@@ -171,20 +174,13 @@ var arraysAreEqual = function(a,b) {
 var getTypeMultiplierOfUnit = function(data,against) {
     var type = data.unit.type;
     if (type == 'STR' && against == 'DEX') return 2;
-    if (type == 'STR' && against == 'QCK') return 0.5;
     if (type == 'QCK' && against == 'STR') return 2;
-    if (type == 'QCK' && against == 'DEX') return 0.5;
     if (type == 'DEX' && against == 'QCK') return 2;
-    if (type == 'DEX' && against == 'STR') return 0.5;
     if (type == 'INT' && against == 'PSY') return 2;
     if (type == 'PSY' && against == 'INT') return 2;
-    return 1;
-};
-
-var getBonusMultiplier = function(hit) {
-    if (hit == 'Perfect') return 1.9;
-    if (hit == 'Great') return 1.4;
-    if (hit == 'Good') return 0.9;
+    if (type == 'STR' && against == 'QCK') return 0.5;
+    if (type == 'QCK' && against == 'DEX') return 0.5;
+    if (type == 'DEX' && against == 'STR') return 0.5;
     return 1;
 };
 
@@ -249,7 +245,7 @@ var getOrbMultiplierOfUnit = function(data) {
  * GREAT hits: baseDamage * (CMB - 1) + floor(startingDamage / CMB / merryBonus * 0.6) * CMB 
  * PERFECT hits: baseDamage * CMB + floor(startingDamage / CMB / merryBonus * 1.35) * CMB
  * where:
- * - startingDamage is the damage computer for the unit, including the Merry's bonus
+ * - startingDamage is the damage computed for the unit, including the Merry's bonus
  * - baseDamage = floor(max(1,startingDamage / CMB - defenseThreshold))
  * The additional bonus for GOOD, GREAT and PERFECT (that is, the last hit in the chain) is apparently not
  * affected by the Merry's bonus, but seems to bypass the enemy's defense when it's higher than that (the

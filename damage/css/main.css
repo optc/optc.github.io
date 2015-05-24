@@ -23,7 +23,7 @@ body, #main, #hp, #other {
     margin-left: 50px;
 }
 
-#hp, #merry, #other {
+#hp, #other {
     width: 350px;
     margin-top: 30px;
 }
@@ -136,25 +136,11 @@ body, #main, #hp, #other {
     margin-bottom: 0 !important;
 }
 
-.damage.str {
-    background: salmon;
-}
-
-.damage.qck {
-    background: lightskyblue;
-}
-
-.damage.dex {
-    background: lightgreen;
-}
-
-.damage.psy {
-    background: gold;
-}
-
-.damage.int {
-    background: orchid;
-}
+.damage.str { background: salmon; }
+.damage.qck { background: lightskyblue; }
+.damage.dex { background: lightgreen; }
+.damage.psy { background: gold; }
+.damage.int { background: orchid; }
 
 .damageLabel {
     font-size: 75%;
@@ -193,32 +179,28 @@ body, #main, #hp, #other {
     height: 10px !important;
 }
 
-#merry > button:not(.selected) {
-    opacity: 0.3;
-}
-
-#merry > button:hover {
-    opacity: 1 !important;
-}
-
-#other > #reset {
+#other > button {
     padding: 5px;
     width: 110px;
 }
 
-#other > #sliderToggle {
-    padding: 5px;
-    width: 150px;
+#other > button:not(:last-child) {
     margin-right: 5px;
 }
 
-#defenseContainer {
-    margin-top: 15px;
+#defense {
+    width: 50px;
+    margin-left: 10px;
+    position: relative;
+    bottom: 1px;
 }
 
-#defense {
-    width: 70px;
-}
+#sliderToggle[status="0"]:after { content: "Level sliders: enabled"; }
+#sliderToggle[status="1"]:after { content: "Level sliders: disabled"; }
+
+#merry[status="0"]:after { content: "No Merry Bonus"; }
+#merry[status="1"]:after { content: "1.2x Merry Bonus"; color: black; }
+#merry[status="2"]:after { content: "1.5x Merry Bonus"; }
 
 /* Ribbons */
 
@@ -274,3 +256,49 @@ body, #main, #hp, #other {
 .corner-ribbon.orange {
     background: #e82;
 }
+
+/* Panel */
+
+.panel {
+    position: fixed;
+    right: -15.625em;
+    width: 15.625em;
+    background: #2C3E50;
+}
+
+.wrap {
+    position: relative;
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+li > div {
+    display: block;
+    padding: 1em;
+    text-align: right;
+    color: #fff;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 11pt;
+    -webkit-transition: background 0.1s linear;
+       -moz-transition: background 0.1s linear;
+            transition: background 0.1s linear;
+}
+
+li > div:hover {
+    background: #688aac;
+    color: white !important;
+    cursor: pointer;
+}
+
+ul { padding-left: 0; }
+
+li {
+    list-style: none;
+    border-bottom: 2px solid #34495D;
+}
+
+input {
+    color: black;
+}
+

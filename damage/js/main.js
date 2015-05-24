@@ -99,6 +99,48 @@ var editUnitLevel = function(target) {
     unitLevelEditor.focus();
 };
 
+var onUnitLevelSlideEnd = function(ui,value) {
+    setTimeout(function() {
+        changeUnitLevel($(ui).parent().index(),value);
+    },100);
+};
+
+var onChangeHP = function(event,value) {
+    changeCurrentHP(value,false,true);
+};
+
+var onSlideHP = function(event,value) {
+    changeCurrentHP(value,true,true);
+};
+
+var onSliderToggle = function(event,value) {
+    unitSlidersEnabled = value;
+    $('#sliderToggle').attr('status',value ? 0 : 1);
+};
+
+/* * * * * UI event callbacks * * * * */
+
+var onMerryButtonClick = function(e) {
+    if (e.which != 1) return;
+    var newBonus = (parseInt($(this).attr('status'),10)+1) % 3;
+    $(document).trigger('merryBonusUpdated',[ 1.0, 1.2, 1.5 ][newBonus]);
+};
+
+var onSliderToggleClick = function(e) {
+    if (e.which != 1);
+    var newValue = (parseInt($(this).attr('status'),10)+1) % 2;
+    $(document).trigger('sliderToggle',newValue == 0);
+};
+
+var onDefenseKeyUp = function(e) {
+    if (defenseDebouncer != null) clearTimeout(defenseDebouncer);
+    var value = parseInt(this.value,10);
+    if (isNaN(value) || value == lastDefenseValue) return false;
+    defenseDebouncer = setTimeout(function() {
+        $(document).trigger('defenseChanged',[ value, true ]);
+    },350);
+};
+
 var onUnitEditorClose = function(e) {
     if (e.type == 'keyup' && e.which != 13) return;
     var level = parseInt(unitLevelEditor.val(),10);
@@ -109,15 +151,6 @@ var onUnitEditorClose = function(e) {
     changeUnitLevel(slotNumber,level);
     changeLevelLabel(slotNumber,level);
 }
-
-var onSliderToggle = function(event,value) {
-    unitSlidersEnabled = value;
-    var target = $('#sliderToggle');
-    target.removeClass(value ? 'btn-default' : 'btn-primary');
-    target.addClass(!value ? 'btn-default' : 'btn-primary');
-};
-
-/* * * * * Event callbacks * * * * */
 
 var onUnitLevelClick = function(e) {
     if (e.which == 1 && !this.parentNode.classList.contains('empty')) {
@@ -134,27 +167,6 @@ var onUnitLevelClick = function(e) {
     e.preventDefault();
     e.stopPropagation();
     return false;
-};
-
-var onUnitLevelSlideEnd = function(ui,value) {
-    setTimeout(function() {
-        changeUnitLevel($(ui).parent().index(),value);
-    },100);
-};
-
-var onChangeHP = function(event,value) {
-    changeCurrentHP(value,false,true);
-};
-
-var onSlideHP = function(event,value) {
-    changeCurrentHP(value,true,true);
-};
-
-var onMerryButtonClick = function() {
-    if (this.classList.contains('selected')) return;
-    var bonus = parseFloat(this.textContent,10);
-    if (isNaN(bonus)) bonus = 1;
-    $(document).trigger('merryBonusUpdated',bonus);
 };
 
 var onResetButtonClick = function() {
@@ -175,20 +187,6 @@ var onResetButtonClick = function() {
             }
         ]
     });
-};
-
-var onSliderToggleClick = function() {
-    var enabled = !$(this).hasClass('btn-primary');
-    $(document).trigger('sliderToggle',enabled);
-};
-
-var onDefenseKeyUp = function(e) {
-    if (defenseDebouncer != null) clearTimeout(defenseDebouncer);
-    var value = parseInt(this.value,10);
-    if (isNaN(value) || value == lastDefenseValue) return false;
-    defenseDebouncer = setTimeout(function() {
-        $(document).trigger('defenseChanged',[ value, true ]);
-    },350);
 };
 
 /* * * * * Custom event callbacks * * * * */
@@ -215,8 +213,9 @@ var onNumbersCrunched = function(event,numbers) {
 };
 
 var onMerryBonusUpdated = function(event,merry) {
-    $('#merry > button.selected')[0].classList.remove('selected');
-    $('#merry > button')[merry == 1.0 ? 0 : merry == 1.2 ? 1 : 2].classList.add('selected');
+    var target = $('#merry'), n = (merry == 1.0 ? 0 : (merry == 1.2 ? 1 : 2));
+    target.attr('status',n);
+    target.attr('class',[ 'btn-error', 'btn-warning', 'btn-success' ][n]);
 };
 
 var onDefenseChanged = function(event,value,skipUiUpdate) {
@@ -280,6 +279,8 @@ $(function() {
 
     // set up ui elements
     
+    $('#defenseContainer').click(function() { $('#defense').focus(); });
+    
     $('.unitSlider').each(function(n,x) {
         sliders.push([$(x).CircularSlider({
             radius: 44,
@@ -298,9 +299,11 @@ $(function() {
         slide: onSlideHP
     });
 
-    $('#merry > button').click(onMerryButtonClick);
+    $('#merry').click(onMerryButtonClick);
     $('#reset').click(onResetButtonClick);
     $('#sliderToggle').click(onSliderToggleClick);
+
+    $('.menu-link').bigSlide({ side: 'right' });
 
 });
 
