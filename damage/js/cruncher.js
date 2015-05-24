@@ -331,12 +331,16 @@ var onUnitsSwitched = function(event,slotA,slotB) {
     team[slotB] = teamA;
     if (slotA == 0 || slotB == 0) setCaptain(0);
     if (slotA == 1 || slotB == 1) setCaptain(1);
+    var specialA = enabledSpecials[slotA];
+    enabledSpecials[slotA] = enabledSpecials[slotB];
+    enabledSpecials[slotB] = specialA;
     crunch();
 };
 
 var onUnitRemoved = function(event,slotNumber) {
     team[slotNumber] = null;
     if (slotNumber < 2) captainAbilities[slotNumber] = null;
+    enabledSpecials[slotNumber] = null;
     crunch();
 };
 
