@@ -207,9 +207,6 @@ var getOrbMultiplierOfUnit = function(data) {
  * where:
  * - startingDamage is the damage computed for the unit, including the Merry's bonus
  * - baseDamage = floor(max(1,startingDamage / CMB - currentDefenseThreshold))
- * The additional bonus for GOOD, GREAT and PERFECT (that is, the last hit in the chain) is apparently not
- * affected by the Merry's bonus, but seems to bypass the enemy's defense when it's higher than that (the
- * defense threshold is not applied if the damage is over the threshold itself)
  */
 var computeDamageOfUnit = function(unit,unitAtk,hitModifier) {
     var baseDamage = Math.floor(Math.max(1,unitAtk / unit.combo - currentDefenseThreshold));
@@ -217,13 +214,13 @@ var computeDamageOfUnit = function(unit,unitAtk,hitModifier) {
         return baseDamage * unit.combo;
     if (hitModifier == 'Good') {
         var bonus = Math.floor(unitAtk / unit.combo / merryBonus * 0.3) * unit.combo;
-        return baseDamage * (unit.combo - 2) + (bonus > currentDefenseThreshold ? bonus : 1);
+        return baseDamage * (unit.combo - 2) + Math.max(bonus - currentDefenseThreshold,1);
     } if (hitModifier == 'Great') {
         var bonus = Math.floor(unitAtk / unit.combo / merryBonus * 0.6) * unit.combo;
-        return baseDamage * (unit.combo - 1) + (bonus > currentDefenseThreshold ? bonus : 1);
+        return baseDamage * (unit.combo - 1) + Math.max(bonus - currentDefenseThreshold,1);
     } if (hitModifier == 'Perfect') { 
         var bonus = Math.floor(unitAtk / unit.combo / merryBonus * 1.35) * unit.combo;
-        return baseDamage * unit.combo + (bonus > currentDefenseThreshold ? bonus : 1);
+        return baseDamage * unit.combo + Math.max(bonus - currentDefenseThreshold,1);
     }
 };
 
