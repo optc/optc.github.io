@@ -48,9 +48,10 @@ var deactivateGlowing = function(target,slotNumber) {
 
 /* * * * * UI events * * * * */
 
-var onUnitClick = function(e) {
+var onUnitMouseUp = function(e) {
     if (e.target.className == 'unitLevel') return;
-    if (e.which == 2 && !this.classList.contains('empty'))
+    var distance = Math.sqrt(Math.pow(e.offsetX-20,2)+Math.pow(e.offsetY-21,2));
+    if ((e.which == 2 || (e.which == 1 && distance < 13)) && !this.classList.contains('empty'))
         changeOrb($(this).index());
 };
 
@@ -88,7 +89,7 @@ $(function() {
 
     orbs = $('#units > .unit');
 
-    $('.unit').mouseup(onUnitClick);
+    $('.unit').mouseup(onUnitMouseUp);
 
     setInterval(updateOrbs,1000);
 
