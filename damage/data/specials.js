@@ -122,10 +122,10 @@ window.specials = {
         atk: '1.2'
     },
     417: { // Doflamingo
-        orb: 'orb == 2.0 ? 2.0 : (orb == 0.5 ? 0.5 : 1)'
+        orb: 'orb == 2.0 ? 2.0 : (orb == 0.5 ? 0.25 : 1)'
     },
     418: { // Doflamingo evolved
-        orb: 'orb == 2.0 ? 2.0 : (orb == 0.5 ? 0.5 : 1)'
+        orb: 'orb == 2.0 ? 2.0 : (orb == 0.5 ? 0.25 : 1)'
     },
     419: { // Kimono Sanji
         def: '0.5'
