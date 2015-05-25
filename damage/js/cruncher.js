@@ -200,27 +200,35 @@ var getOrbMultiplierOfUnit = function(data) {
 
 /* The effective damage of a unit is affected by the hit modifier being used and by the defense threshold of an enemy.
  * The estimates being used right now are:
- * MISS hits: baseDamage * CMB
- * GOOD hits: baseDamage * (CMB - 2) + floor(startingDamage / CMB * 0.2) * CMB
- * GREAT hits: baseDamage * (CMB - 1) + floor(startingDamage / CMB * 0.4) * CMB 
- * PERFECT hits: baseDamage * CMB + floor(startingDamage / CMB * 9) * CMB
+ * MISS hits    : BASE_DAMAGE *  CMB
+ * GOOD hits    : BASE_DAMAGE * (CMB - 2) + BONUS_DAMAGE_GOOD
+ * GREAT hits   : BASE_DAMAGE * (CMB - 1) + BONUS_DAMAGE_GREAT
+ * PERFECT hits : BASE_DAMAGE *  CMB      + BONUS_DAMAGE_PERFECT
  * where:
- * - startingDamage is the damage computed for the unit, including the Merry's bonus
- * - baseDamage = floor(max(1,startingDamage / CMB - currentDefenseThreshold))
+ * - BASE_DAMAGE          = floor(max(1,STARTING_DAMGE / CMB - DEFENSE_THRESHOLD))
+ * - BONUS_DAMAGE_GOOD    = floor(STARTING_DAMAGE * (0.2 + DEFENSE_BONUS_MODIFIER))
+ * - BONUS_DAMAGE_GREAT   = floor(STARTING_DAMAGE * (0.4 + DEFENSE_BONUS_MODIFIER))
+ * - BONUS_DAMAGE_PERFECT = floor(STARTING_DAMAGE * (0.9 + DEFENSE_BONUS_MODIFIER))
+ * - STARTING_DAMAGE is the damage computed for the unit, including the Merry's bonus
+ * - DEFENSE_BONUS_MODIFIER is 0.25 if DEFENSE_THRESHOLD > 10000, 0 otherwise
+ * The bonus damages seem to bypass the enemy's defense when under a certain threshold (currently 10000); when
+ * the threshold is above said value, the defense is factored in but the bonus seems to get an additional 0.25
+ * (additive, not multiplicative).
  */
 var computeDamageOfUnit = function(unit,unitAtk,hitModifier) {
     var baseDamage = Math.floor(Math.max(1,unitAtk / unit.combo - currentDefenseThreshold));
+    var overThreshold = (currentDefenseThreshold > 10000), bonusModifier = (overThreshold ? 0.25 : 0);
     if (hitModifier == 'Miss')
         return baseDamage * unit.combo;
     if (hitModifier == 'Good') {
-        var bonus = Math.floor(unitAtk / unit.combo * 0.2) * unit.combo;
-        return baseDamage * (unit.combo - 2) + Math.max(bonus - currentDefenseThreshold,1);
+        var bonus = Math.floor(unitAtk * (0.2 + bonusModifier));
+        return baseDamage * (unit.combo - 2) + (!overThreshold ? bonus : Math.max(1,bonus - currentDefenseThreshold));
     } if (hitModifier == 'Great') {
-        var bonus = Math.floor(unitAtk / unit.combo * 0.4) * unit.combo;
-        return baseDamage * (unit.combo - 1) + Math.max(bonus - currentDefenseThreshold,1);
+        var bonus = Math.floor(unitAtk * (0.4 + bonusModifier));
+        return baseDamage * (unit.combo - 1) + (!overThreshold ? bonus : Math.max(1,bonus - currentDefenseThreshold));
     } if (hitModifier == 'Perfect') { 
-        var bonus = Math.floor(unitAtk / unit.combo * 0.9) * unit.combo;
-        return baseDamage * unit.combo + Math.max(bonus - currentDefenseThreshold,1);
+        var bonus = Math.floor(unitAtk * (0.9 + bonusModifier));
+        return baseDamage * unit.combo + (!overThreshold ? bonus : Math.max(1,bonus - currentDefenseThreshold));
     }
 };
 
@@ -271,7 +279,7 @@ var createFunctions = function(data) {
     for (key in data) {
         if (data[key] == undefined)
             $.notify("The unit you selected has a strange ass ability that can't be parsed correctly yet");
-        else if (key == 'atk' || key == 'hitAtk' || key == 'hp')
+        else if (key == 'atk' || key == 'hitAtk' || key == 'hp' || key == 'chainModifier')
             result[key] = new Function('unit','chainPosition','currentHP','maxHP','percHP','modifier','defenseDown','return ' + data[key]);
         else if (key == 'orb')
             result[key] = new Function('unit','orb','return ' + data[key]);
