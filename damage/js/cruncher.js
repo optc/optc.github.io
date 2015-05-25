@@ -30,6 +30,7 @@
  */
 
 var DEFAULT_HIT_MODIFIERS = [ 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect' ]; 
+var DEFENSE_THRESHOLD = 10000;
 
 var team = [ null, null, null, null, null, null ];
 var enabledSpecials = [ null, null, null, null, null, null ];
@@ -38,8 +39,8 @@ var captainAbilities = [ null, null ];
 var merryBonus = 1;
 var currentHP = 1, maxHP = 1, percHP = 100.0;
 
-var defenseThreshold = 0;
-var currentDefenseThreshold = 0;
+var defense = 0;
+var currentDefense = 0;
 
 var crunchingEnabled = true;
 
@@ -205,19 +206,19 @@ var getOrbMultiplierOfUnit = function(data) {
  * GREAT hits   : BASE_DAMAGE * (CMB - 1) + BONUS_DAMAGE_GREAT
  * PERFECT hits : BASE_DAMAGE *  CMB      + BONUS_DAMAGE_PERFECT
  * where:
- * - BASE_DAMAGE          = floor(max(1,STARTING_DAMGE / CMB - DEFENSE_THRESHOLD))
+ * - BASE_DAMAGE          = floor(max(1,STARTING_DAMAGE / CMB - DEFENSE))
  * - BONUS_DAMAGE_GOOD    = floor(STARTING_DAMAGE * (0.2 + DEFENSE_BONUS_MODIFIER))
  * - BONUS_DAMAGE_GREAT   = floor(STARTING_DAMAGE * (0.4 + DEFENSE_BONUS_MODIFIER))
  * - BONUS_DAMAGE_PERFECT = floor(STARTING_DAMAGE * (0.9 + DEFENSE_BONUS_MODIFIER))
  * - STARTING_DAMAGE is the damage computed for the unit, including the Merry's bonus
- * - DEFENSE_BONUS_MODIFIER is 0.25 if DEFENSE_THRESHOLD > 10000, 0 otherwise
- * The bonus damages seem to bypass the enemy's defense when under a certain threshold (currently 10000); when
+ * - DEFENSE_BONUS_MODIFIER is 0.25 if DEFENSE >= DEFENSE_THRESHOLD, 0 otherwise
+ * The bonus damages seem to bypass the enemy's defense when under a certain threshold (DEFENSE_THRESHOLD); when
  * the threshold is above said value, the defense is factored in but the bonus seems to get an additional 0.25
  * (additive, not multiplicative).
  */
 var computeDamageOfUnit = function(unit,unitAtk,hitModifier) {
-    var baseDamage = Math.floor(Math.max(1,unitAtk / unit.combo - currentDefenseThreshold));
-    var overThreshold = (currentDefenseThreshold > 10000), bonusModifier = (overThreshold ? 0.25 : 0);
+    var baseDamage = Math.floor(Math.max(1,unitAtk / unit.combo - currentDefense));
+    var overThreshold = (currentDefense >= DEFENSE_THRESHOLD), bonusModifier = (overThreshold ? 0.25 : 0);
     var bonus, overallBaseDamage;
     if (hitModifier == 'Miss')
         return baseDamage * unit.combo;
@@ -231,8 +232,8 @@ var computeDamageOfUnit = function(unit,unitAtk,hitModifier) {
         bonus = Math.floor(unitAtk * (0.9 + bonusModifier));
         overallBaseDamage = baseDamage * unit.combo;
     }
-    if (!overThreshold) return overallBaseDamage + (bonus > currentDefenseThreshold ? bonus : 1);
-    else return overallBaseDamage + Math.max(1,bonus - currentDefenseThreshold);
+    if (!overThreshold) return overallBaseDamage + (bonus > currentDefense ? bonus : 1);
+    else return overallBaseDamage + Math.max(1,bonus - currentDefense);
 };
 
 var getSpecialMultiplierForUnit = function(unit,isDefenseDown) {
@@ -248,10 +249,10 @@ var getSpecialMultiplierForUnit = function(unit,isDefenseDown) {
 };
 
 var updateDefenseThreshold = function() {
-    currentDefenseThreshold = enabledSpecials.reduce(function(prev,data) {
+    currentDefense = enabledSpecials.reduce(function(prev,data) {
         if (data == null || !data.hasOwnProperty('def')) return prev;
         return prev * data.def();
-    },defenseThreshold);
+    },defense);
 };
 
 /* * * * * * Utility functions * * * * */
@@ -319,7 +320,7 @@ var onMerryChange = function(event,bonus) {
 };
 
 var onDefenseChanged = function(event,value) {
-    defenseThreshold = value;
+    defense = value;
     crunch();
 }
 
