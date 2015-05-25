@@ -238,7 +238,7 @@ var computeDamageOfUnit = function(unit,unitAtk,hitModifier) {
 };
 
 var getSpecialMultiplierForUnit = function(unit,isDefenseDown) {
-    var orbMultiplier = 1, atkMultiplier = { type: 1, class: 1 };
+    var orbMultiplier = 0, atkMultiplier = { type: 0, class: 0 };
     enabledSpecials.forEach(function(data) {
         if (data == null) return;
         if (data.hasOwnProperty('atk'))
@@ -246,7 +246,7 @@ var getSpecialMultiplierForUnit = function(unit,isDefenseDown) {
         if (data.hasOwnProperty('orb'))
             orbMultiplier = Math.max(orbMultiplier,data.orb(unit,unit.orb));
     });
-    return orbMultiplier * atkMultiplier.class * atkMultiplier.type;
+    return (orbMultiplier || 1.0) * (atkMultiplier.class || 1.0) * (atkMultiplier.type || 1.0);
 };
 
 var updateDefenseThreshold = function() {
