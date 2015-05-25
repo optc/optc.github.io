@@ -218,18 +218,21 @@ var getOrbMultiplierOfUnit = function(data) {
 var computeDamageOfUnit = function(unit,unitAtk,hitModifier) {
     var baseDamage = Math.floor(Math.max(1,unitAtk / unit.combo - currentDefenseThreshold));
     var overThreshold = (currentDefenseThreshold > 10000), bonusModifier = (overThreshold ? 0.25 : 0);
+    var bonus, overallBaseDamage;
     if (hitModifier == 'Miss')
         return baseDamage * unit.combo;
     if (hitModifier == 'Good') {
-        var bonus = Math.floor(unitAtk * (0.2 + bonusModifier));
-        return baseDamage * (unit.combo - 2) + (!overThreshold ? bonus : Math.max(1,bonus - currentDefenseThreshold));
+        bonus = Math.floor(unitAtk * (0.2 + bonusModifier));
+        overallBaseDamage = baseDamage * (unit.combo - 2);
     } if (hitModifier == 'Great') {
-        var bonus = Math.floor(unitAtk * (0.4 + bonusModifier));
-        return baseDamage * (unit.combo - 1) + (!overThreshold ? bonus : Math.max(1,bonus - currentDefenseThreshold));
+        bonus = Math.floor(unitAtk * (0.4 + bonusModifier));
+        overallBaseDamage = baseDamage * (unit.combo - 1);
     } if (hitModifier == 'Perfect') { 
-        var bonus = Math.floor(unitAtk * (0.9 + bonusModifier));
-        return baseDamage * unit.combo + (!overThreshold ? bonus : Math.max(1,bonus - currentDefenseThreshold));
+        bonus = Math.floor(unitAtk * (0.9 + bonusModifier));
+        overallBaseDamage = baseDamage * unit.combo;
     }
+    if (!overThreshold) return overallBaseDamage + (bonus > currentDefenseThreshold ? bonus : 1);
+    else return overallBaseDamage + Math.max(1,bonus - currentDefenseThreshold);
 };
 
 var getSpecialMultiplierForUnit = function(unit,isDefenseDown) {
