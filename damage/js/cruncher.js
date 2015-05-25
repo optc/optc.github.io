@@ -59,6 +59,7 @@ var crunch = function() {
         result.HP += applyCaptainEffectsToHP(x,hp);
     });
     result.HP = Math.max(1,result.HP);
+    result.team = getTeamDetails();
     $(document).trigger('numbersCrunched',result);
 };
 
@@ -226,10 +227,10 @@ var computeDamageOfUnit = function(unit,unitAtk,hitModifier) {
     if (hitModifier == 'Good') {
         bonus = Math.floor(unitAtk * (0.2 + bonusModifier));
         overallBaseDamage = baseDamage * (unit.combo - 2);
-    } if (hitModifier == 'Great') {
+    } else if (hitModifier == 'Great') {
         bonus = Math.floor(unitAtk * (0.4 + bonusModifier));
         overallBaseDamage = baseDamage * (unit.combo - 1);
-    } if (hitModifier == 'Perfect') { 
+    } else if (hitModifier == 'Perfect') { 
         bonus = Math.floor(unitAtk * (0.9 + bonusModifier));
         overallBaseDamage = baseDamage * unit.combo;
     }
@@ -300,6 +301,12 @@ var arraysAreEqual = function(a,b) {
     return a.length == b.length && a.every(function(x,n) { return x == b[n]; });
 };
 
+var getTeamDetails = function() {
+    return team.map(function(data) {
+        if (data == null) return null;
+        return { name: data.unit.name, hp: getHpOfUnit(data), atk: getAttackOfUnit(data) };
+    });
+}
 
 /* * * * * Event callbacks * * * * */
 

@@ -99,23 +99,12 @@ var editUnitLevel = function(target) {
     unitLevelEditor.focus();
 };
 
-var onUnitLevelSlideEnd = function(ui,value) {
-    setTimeout(function() {
-        changeUnitLevel($(ui).parent().index(),value);
-    },100);
-};
-
-var onChangeHP = function(event,value) {
-    changeCurrentHP(value,false,true);
-};
-
-var onSlideHP = function(event,value) {
-    changeCurrentHP(value,true,true);
-};
-
-var onSliderToggle = function(event,value) {
-    unitSlidersEnabled = value;
-    $('#sliderToggle').attr('status',value ? 0 : 1);
+var updateTitles = function(team) {
+    var targets = $('.unit');
+    team.forEach(function(x,n) {
+        if (x == null) targets.eq(n).attr('title',null);
+        else targets.eq(n).attr('title',x.name + '\n' + x.atk + ' ATK\n' + x.hp + ' HP');
+    });
 };
 
 /* * * * * UI event callbacks * * * * */
@@ -147,10 +136,17 @@ var onUnitEditorClose = function(e) {
     var slotNumber = $(e.target).parent().parent().index();
     unitLevelEditor.remove();
     unitLevelEditor.val('');
-    if (isNaN(level) || level < 1 || level > sliders[slotNumber][1]) return;
+    if (isNaN(level)) return;
+    level = Math.min(Math.max(1,level),sliders[slotNumber][1]);
     changeUnitLevel(slotNumber,level);
     changeLevelLabel(slotNumber,level);
 }
+
+var onUnitLevelSlideEnd = function(ui,value) {
+    setTimeout(function() {
+        changeUnitLevel($(ui).parent().index(),value);
+    },100);
+};
 
 var onUnitLevelClick = function(e) {
     if (e.which == 1 && !this.parentNode.classList.contains('empty')) {
@@ -167,6 +163,14 @@ var onUnitLevelClick = function(e) {
     e.preventDefault();
     e.stopPropagation();
     return false;
+};
+
+var onChangeHP = function(event,value) {
+    changeCurrentHP(value,false,true);
+};
+
+var onSlideHP = function(event,value) {
+    changeCurrentHP(value,true,true);
 };
 
 var onResetButtonClick = function() {
@@ -209,7 +213,9 @@ var onNumbersCrunched = function(event,numbers) {
     });
     // set hp
     if (numbers.HP != currentMaxHP)
-        changeMaxHP(numbers.HP,false);
+        changeMaxHP(numbers.HP,true);
+    // update titles
+    updateTitles(numbers.team);
 };
 
 var onMerryBonusUpdated = function(event,merry) {
@@ -246,6 +252,11 @@ var onUnitsSwitched = function(event,a,b) {
     sliderA = sliders[a];
     sliders[a] = sliders[b];
     sliders[b] = sliderA;
+};
+
+var onSliderToggle = function(event,value) {
+    unitSlidersEnabled = value;
+    $('#sliderToggle').attr('status',value ? 0 : 1);
 };
 
 var onUnitRemoved = function(event,slotNumber) {
