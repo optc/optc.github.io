@@ -201,10 +201,11 @@ var getOrbMultiplierOfUnit = function(data) {
 
 /* The effective damage of a unit is affected by the hit modifier being used and by the defense threshold of an enemy.
  * The estimates being used right now are:
- * MISS hits    : BASE_DAMAGE *  CMB
- * GOOD hits    : BASE_DAMAGE * (CMB - 2) + BONUS_DAMAGE_GOOD
- * GREAT hits   : BASE_DAMAGE * (CMB - 1) + BONUS_DAMAGE_GREAT
- * PERFECT hits : BASE_DAMAGE *  CMB      + BONUS_DAMAGE_PERFECT
+ * FULL MISS hits : BASE_DAMAGE *  CMB
+ * MISS hits      : BASE_DAMAGE * (CMB - 2)
+ * GOOD hits      : BASE_DAMAGE * (CMB - 2) + BONUS_DAMAGE_GOOD
+ * GREAT hits     : BASE_DAMAGE * (CMB - 1) + BONUS_DAMAGE_GREAT
+ * PERFECT hits   : BASE_DAMAGE *  CMB      + BONUS_DAMAGE_PERFECT
  * where:
  * - BASE_DAMAGE          = floor(max(1,STARTING_DAMAGE / CMB - DEFENSE))
  * - BONUS_DAMAGE_GOOD    = floor(STARTING_DAMAGE * (0.2 + DEFENSE_BONUS_MODIFIER))
@@ -220,8 +221,8 @@ var computeDamageOfUnit = function(unit,unitAtk,hitModifier) {
     var baseDamage = Math.floor(Math.max(1,unitAtk / unit.combo - currentDefense));
     var overThreshold = (currentDefense >= DEFENSE_THRESHOLD), bonusModifier = (overThreshold ? 0.25 : 0);
     var bonus, overallBaseDamage;
-    if (hitModifier == 'Miss')
-        return baseDamage * unit.combo;
+    if (hitModifier == 'Full Miss') return baseDamage * unit.combo;
+    if (hitModifier == 'Miss') return baseDamage * (unit.combo -2);
     if (hitModifier == 'Good') {
         bonus = Math.floor(unitAtk * (0.2 + bonusModifier));
         overallBaseDamage = baseDamage * (unit.combo - 2);
