@@ -168,10 +168,6 @@ window.specials = {
         atk: 'unit.type == "STR" ? 1.5 : 1',
         type: 'type'
     },
-    456: { // Curiel
-        atk: 'unit.class == "Fighter" ? 2 : 1',
-        type: 'class'
-    },
     458: { // Sengoku
         atk: '1.5'
     },

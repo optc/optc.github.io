@@ -582,10 +582,10 @@ window.captains = {
         atk: 'unit.type == "STR" ? 2 : 1'
     },
     456: { // Curiel
-        atk: 'unit.class == "Fighter" ? 2 : 1'
+        atk: 'unit.class == "Shooter" ? 2 : 1'
     },
     457: { // Curiel evolved
-        atk: 'unit.class == "Fighter" ? 2 : 1'
+        atk: 'unit.class == "Shooter" ? 2 : 1'
     },
     458: { // Sengoku
         atk: 'unit.cost <= 20 ? 3 : 1'
