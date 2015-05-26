@@ -301,7 +301,7 @@ window.specials = {
     582: { // Kamakiri
         atk: 'unit.type == "QCK" ? 1.5 : 1',
         type: 'type'
-    }
+    },
     589: { // Kohza
         atk: 'unit.class == "Slasher" ? 1.5 : 1'
     },
