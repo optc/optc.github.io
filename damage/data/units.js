@@ -576,7 +576,7 @@ window.units = [
     [ "Aokiji the Freezing Man", "INT", "Striker", 5, 50, 99, 1093, 644, 122, 2465, 1435, 251, 4 ],
     [ "Tea Time Nami", "INT", "Striker", 4, 18, 99, 454, 133, 50, 1473, 703, 373, 4 ],
     [ "Monkey D. Luffy, Record of the Voyage - Strawhat Crew", "STR", "Fighter", 5, 30, 70, 390, 290, 150, 1559, 840, 290, 4 ],
-    [ "Monkey D. Luffy, Dream of the Voyage - Pirate King", "STR", "Fighter", 6, 55, 99, 1490, 776, 250, 3440, 1430, 351, 4 ]
+    [ "Monkey D. Luffy, Dream of the Voyage - Pirate King", "STR", "Fighter", 6, 55, 99, 1490, 776, 250, 3440, 1430, 351, 4 ],
     [ "Roronoa Zoro, Record of the Voyage - Strawhat Crew", "QCK", "Slasher", 4, 12, 50, 230, 110, 35, 1388, 651, 132, 4 ], 
     [ "Roronoa Zoro, Dream of the Voyage - Strongest Swordsman", "QCK", "Slasher", 5, 20, 99, 1329, 777, 90, 2250, 1118, 201, 4 ], 
     [ "Genbou", "STR", "Shooter", 3, 15, 70, 271, 91, 15, 1855, 711, 54, 4 ], 
