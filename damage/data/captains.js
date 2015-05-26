@@ -843,6 +843,12 @@ window.captains = {
         hitAtk: 'chainPosition > 2 ? 4 : 1',
         hitModifiers: [ 'Good', 'Great', 'Perfect', 'Perfect', 'Perfect', 'Perfect' ]
     },
+    579: { // Record of Voyage Zoro
+        atk: '(unit.type == "QCK" || unit.type == "DEX") ? 1.5 : 1'
+    },
+    580: { // Dream of Voyage Zoro
+        atk: '(unit.type == "QCK" || unit.type == "DEX") ? 2 : 1'
+    },
     581: { // Genbou
         atk: 'unit.type == "STR" ? 1.5 : 1'
     },
@@ -852,5 +858,16 @@ window.captains = {
     },
     583: { // Laki
         atk: 'unit.class == "Shooter" ? 1.5 : 1'
-    }
+    },
+    586: { // Nojiko evolved
+        hp: 'unit.type == "PSY" ? 1.5 : 1'
+    },
+    589: { // Kohza
+        atk: '1.5',
+        hp: '0.6' // TODO needs checking
+    },
+    590: { // Kohza evolved
+        atk: '1.5',
+        hp: '0.6' // TODO needs checking
+    },
 };
