@@ -70,7 +70,7 @@ var crunchForType = function(type,withDetails) {
     team.forEach(function(x,n) {
         if (x == null) return;
         var atk = getAttackOfUnit(x); // basic attack (scales with level);
-        atk *= getOrbMultiplierOfUnit(x); // orb multiplier (affected by captain abilities but not specials)
+        atk *= x.orb; // orb multiplier
         atk *= getTypeMultiplierOfUnit(x,type); // type multiplier (fixed)
         atk *= getSpecialMultiplierForUnit(x,isDefenseDown); // multiplier from specials
         damage.push([ x, atk * merryBonus, n ]);
@@ -81,7 +81,7 @@ var crunchForType = function(type,withDetails) {
     if (captainAbilities[1] != null) abilities.push(captainAbilities[1]);
     // apply static multipliers and sort from weakest to stongest
     for (var i=0;i<abilities.length;++i) {
-        if (!abilities[i].hasOwnProperty('atk'))  continue;
+        if (!abilities[i].hasOwnProperty('atk')) continue;
         damage = applyCaptainEffectToDamage(damage,abilities[i].atk);
     }
     damage.sort(function(x,y) { return x[1] - y[1]; });
@@ -178,7 +178,7 @@ var applyChainAndBonusMultipliers = function(damage,modifiers,captains) {
 var applyCaptainEffectToDamage = function(damage,func) {
     return damage.map(function(x,n) {
         var unit = x[0], damage = x[1], order = x[2];
-        damage *= func(unit.unit,n,currentHP,maxHP,percHP);
+        if (func != null) damage *= func(unit.unit,n,currentHP,maxHP,percHP,null,null,unit.orb);
         return [ unit, damage, order ];
     });
 };
@@ -189,15 +189,6 @@ var applyCaptainEffectsToHP = function(unit,hp) {
             hp *= captainAbilities[i].hp(unit.unit);
     }
     return hp;
-};
-
-var getOrbMultiplierOfUnit = function(data) {
-    // TODO What happens with two captains with two different orb multipliers?
-    for (var i=0;i<2;++i) {
-        if (captainAbilities[i] != null && captainAbilities[i].hasOwnProperty('orb'))
-            return captainAbilities[i].orb(data.unit,data.orb);
-    }
-    return data.orb;
 };
 
 /* The effective damage of a unit is affected by the hit modifier being used and by the defense threshold of an enemy.
@@ -286,7 +277,7 @@ var createFunctions = function(data) {
         if (data[key] == undefined)
             $.notify("The unit you selected has a strange ass ability that can't be parsed correctly yet");
         else if (key == 'atk' || key == 'hitAtk' || key == 'hp' || key == 'chainModifier')
-            result[key] = new Function('unit','chainPosition','currentHP','maxHP','percHP','modifier','defenseDown','return ' + data[key]);
+            result[key] = new Function('unit','chainPosition','currentHP','maxHP','percHP','modifier','defenseDown','orb','return ' + data[key]);
         else if (key == 'orb')
             result[key] = new Function('unit','orb','return ' + data[key]);
         else if (key == 'def')

@@ -799,14 +799,12 @@ window.captains = {
         atk: 'unit.type == "STR" ? 2.25 : 1'
     },
     561: { // SW Ace
-        atk: 'unit.class == "Shooter" ? 2 : 1',
+        atk: 'unit.class != "Shooter" ? 1 : (orb == 2.0 ? 3 : 2)',
         hp: 'unit.class == "Shooter" ? 1.5 : 1',
-        orb: 'unit.class == "Shooter" && orb == 2 ? 3 : orb'
     },
     562: { // SW Ace evolved
-        atk: 'unit.class == "Shooter" ? 2 : 1',
+        atk: 'unit.class != "Shooter" ? 1 : (orb == 2.0 ? 3 : 2)',
         hp: 'unit.class == "Shooter" ? 1.5 : 1',
-        orb: 'unit.class == "Shooter" && orb == 2 ? 3 : orb'
     },
     568: { // Foxy
         atk: '1.25',
