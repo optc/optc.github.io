@@ -146,9 +146,7 @@ var onThumbnailClick = function() {
 };
 
 var onUnitClick = function(e) {
-    var x = e.layerX || e.originalEvent.layerX, y = e.layerY || e.originalEvent.layerY;
-    var distance = Math.sqrt(Math.pow(x-20,2)+Math.pow(y-21,2));
-    if (e.which != 1 || distance < 13) return
+    if (e.which != 13 || e.ctrlKey) return;
     lastSlotNumber = $(this).index();
     createDialog();
     if (!instructionsShown) showInstructions();

@@ -33,3 +33,9 @@
        -moz-box-shadow: 0 0 20px purple;
             box-shadow: 0 0 20px purple;
 }
+
+[glow="str"] { outline: 1px red solid !important; }
+[glow="qck"] { outline: 1px blue solid !important; }
+[glow="dex"] { outline: 1px green solid !important; }
+[glow="psy"] { outline: 1px orange solid !important; }
+[glow="int"] { outline: 1px purple solid !important; }

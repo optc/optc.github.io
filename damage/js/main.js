@@ -149,13 +149,10 @@ var onUnitLevelSlideEnd = function(ui,value) {
 };
 
 var onUnitLevelClick = function(e) {
-    if (e.which == 1 && !this.parentNode.classList.contains('empty')) {
-        if (unitSlidersEnabled)
-            $(this).parent().addClass('slide');
-        else
-            editUnitLevel($(this));
-    } else if (e.which == 2) {
-        // doesn't work on Firefox because FF is a crappy piece of shit
+    if (e.which == 1 && !this.parentNode.classList.contains('empty') && !e.ctrlKey) {
+        if (unitSlidersEnabled) $(this).parent().addClass('slide');
+        else editUnitLevel($(this));
+    } else if (e.which == 2 || (e.which == 1 && e.ctrlKey)) {
         var slotNumber = $(this).parent().index();
         var unitNumber = getUnitNumberFromSlot(slotNumber);
         changeUnitLevel(slotNumber,units[unitNumber-1].maxLevel);
@@ -315,6 +312,11 @@ $(function() {
     $('#sliderToggle').click(onSliderToggleClick);
 
     $('.menu-link').bigSlide({ side: 'right' });
+
+    if (localStorage.hasOwnProperty('team') && !localStorage.hasOwnProperty('newClickAlert')) {
+        $.notify('You can now use CTRL+click to toggle orb control','info');
+        localStorage.setItem('newClickAlert',true);
+    }
 
 });
 
