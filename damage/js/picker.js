@@ -146,7 +146,7 @@ var onThumbnailClick = function() {
 };
 
 var onUnitClick = function(e) {
-    if (e.which != 13 || e.ctrlKey) return;
+    if (e.which != 1 || e.ctrlKey) return;
     lastSlotNumber = $(this).index();
     createDialog();
     if (!instructionsShown) showInstructions();
