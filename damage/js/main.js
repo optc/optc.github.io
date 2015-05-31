@@ -313,8 +313,6 @@ $(function() {
         localStorage.setItem('newClickAlert',true);
     }
 
-    $('.menu-link').click();
-
 });
 
 })();
