@@ -11,10 +11,11 @@ var currentLoadDialog = null, currentSaveDialog = null;
 /* * * * * Functions * * * * */
 
 var populateSlots = function(target,query) {
-    var target = $('#slots');
+    var target = $('#slots'), query = new RegExp(query,'i');
     target.empty();
     Object.keys(slots).forEach(function(key) {
         var slot = slots[key], name = slot.name, team = slot.team;
+        if (!query.test(slot.name)) return;
         var thumbnails = team
             .filter(function(x) { return x != null; })
             .map(function(x) { return Utils.createThumbnail(x.unit,true); });
@@ -141,7 +142,7 @@ var onLoadClick = function(e) {
                         '<div id="slots"></div>' +
                     '</div>');
             content.find('input').keyup(Utils.debounce('slots',function() {
-                populateSlots($('#slots'));
+                populateSlots($('#slots'),this.value.trim());
             }));
             return content;
         },
