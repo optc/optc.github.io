@@ -306,7 +306,7 @@ $(function() {
     $('#reset').click(onResetButtonClick);
     $('#sliderToggle').click(onSliderToggleClick);
 
-    $('.menu-link').bigSlide({ side: 'left' });
+    $('.menu-link').bigSlide({ side: 'left', menuWidth: '16.625em' });
 
     if (localStorage.hasOwnProperty('team') && !localStorage.hasOwnProperty('newClickAlert')) {
         $.notify('You can now use CTRL+click to toggle orb control','info');
