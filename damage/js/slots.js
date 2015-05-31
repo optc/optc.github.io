@@ -13,7 +13,9 @@ var currentLoadDialog = null, currentSaveDialog = null;
 var populateSlots = function(target,query) {
     var target = $('#slots'), query = new RegExp(query,'i');
     target.empty();
-    Object.keys(slots).forEach(function(key) {
+    var keys = Object.keys(slots);
+    keys.sort();
+    keys.forEach(function(key) {
         var slot = slots[key], name = slot.name, team = slot.team;
         if (!query.test(slot.name)) return;
         var thumbnails = team
