@@ -67,7 +67,7 @@ var changeMaxHP = function(newValue,skipTrigger) {
     $('#hpSlider').noUiSlider({
         range: { min: [ 1 ], max: [ newValue ] }
     },true);
-    var currentHP = Math.floor(currentPerc * newValue);
+    var currentHP = Math.round(currentPerc * newValue);
     changeCurrentHP(currentHP,skipTrigger,false);
 }
 

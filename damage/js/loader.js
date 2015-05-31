@@ -43,6 +43,7 @@ var onHpChange = function(event,current,max,perc) {
 };
 
 var onNumbersCrunched = function(event,numbers) {
+    data.hp.current = Math.round(data.hp.perc * numbers.HP / 100);
     data.hp.max = numbers.HP;
     save('hp');
 };
