@@ -1,7 +1,6 @@
 (function() {
 
 var lastSlotNumber = null;
-var debouncer = null;
 
 var recentUnits = JSON.parse(localStorage.getItem('recentUnits')) || [ ];
 var instructionsShown = JSON.parse(localStorage.getItem('instructionsShown'));
@@ -22,7 +21,9 @@ var createDialog = function() {
                             '<divd id="recentUnits"></div>' +
                         '</div>' +
                     '</div>');
-            content.find('input').keyup(debounceFilter);
+            content.find('input').keyup(Utils.debounce('picker',function() {
+                populateList(generateSearchParameters(this.value),$('#pickerUnits'));
+            }));
             populateRecent(content.find('#recentUnits'));
             return content;
         },
@@ -70,15 +71,6 @@ var showInstructions = function() {
 
 /* * * * * List generation * * * * */
 
-var debounceFilter = function() {
-    if (debouncer != null) clearTimeout(debouncer);
-    var value = this.value;
-    debouncer = setTimeout(function() {
-        debouncer = null;
-        populateList(generateSearchParameters(value),$('#pickerUnits'));
-    },500);
-};
-
 var generateSearchParameters = function(query) {
     var result = { name: [ ] };
     tokens = query.trim().replace(/\s+/g,' ').split(' ').filter(function(x) { return x.length > 0 });
@@ -109,31 +101,8 @@ var populateList = function(parameters,target) {
         });
     });
     result.forEach(function(unit) {
-        $(target).append(createThumbnail(unit.number));
+        $(target).append(Utils.createThumbnail(unit.number,false,onThumbnailClick));
     });
-};
-
-var createThumbnail = function(n) {
-    var result = document.createElement('div');
-    result.className = 'pickerThumbnail';
-    result.style.backgroundImage = 'url(' + getThumbnailUrl(n) + ')';
-    result.setAttribute('unitID',n);
-    result.setAttribute('title',getTitle(units[n]));
-    $(result).click(onThumbnailClick);
-    return result;
-};
-
-var getThumbnailUrl = function(n) {
-    var id = ('0000' + (n+1)).slice(-4).replace(/(057[54])/,'0$1'); // missing aokiji image
-    return 'http://onepiece-treasurecruise.com/wp-content/uploads/f' + id + '.png';
-};
-
-var getTitle = function(unit) {
-    return [ unit.name,
-        'ATK: ' + unit.maxATK,
-        'HP: ' + unit.maxHP,
-        'Cost: ' + unit.cost
-    ].join('\n');
 };
 
 /* * * * * Events * * * * */
@@ -164,8 +133,7 @@ var updateRecent = function(unitNumber) {
 
 var populateRecent = function(target) {
     recentUnits.forEach(function(x) {
-        var thumbnail = createThumbnail(x);
-        thumbnail.classList.add('small');
+        var thumbnail = Utils.createThumbnail(x,true,onThumbnailClick);
         target.append(thumbnail);
     });
 };

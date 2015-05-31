@@ -6,20 +6,9 @@ var lastSlotName = JSON.parse(localStorage.getItem('lastSlotName'));
 var slots = JSON.parse(localStorage.getItem('slots')) || { };
 if (slots == null) slots = { };
 
-var debouncer = null;
-
 var currentLoadDialog = null, currentSaveDialog = null;
 
 /* * * * * Functions * * * * */
-
-var debounceFilter = function() {
-    if (debouncer != null) clearTimeout(debouncer);
-    var value = this.value;
-    debouncer = setTimeout(function() {
-        debouncer = null;
-        populateSlots($('#slots'));
-    },500);
-};
 
 var populateSlots = function(target,query) {
     var target = $('#slots');
@@ -28,7 +17,7 @@ var populateSlots = function(target,query) {
         var slot = slots[key], name = slot.name, team = slot.team;
         var thumbnails = team
             .filter(function(x) { return x != null; })
-            .map(function(x) { return createThumbnail(x.unit); });
+            .map(function(x) { return Utils.createThumbnail(x.unit,true); });
         target.append(createThumbnailRow(name,thumbnails));
     });
 };
@@ -39,28 +28,6 @@ var createThumbnailRow = function(name,thumbnails) {
     result.attr('ref',name);
     result.click(onRowClick);
     return result;
-};
-
-var createThumbnail = function(n) {
-    var result = document.createElement('div');
-    result.className = 'slotThumbnail small';
-    result.style.backgroundImage = 'url(' + getThumbnailUrl(n) + ')';
-    result.setAttribute('unitID',n);
-    result.setAttribute('title',getTitle(units[n]));
-    return result;
-};
-
-var getThumbnailUrl = function(n) {
-    var id = ('0000' + (n+1)).slice(-4).replace(/(057[54])/,'0$1'); // missing aokiji image
-    return 'http://onepiece-treasurecruise.com/wp-content/uploads/f' + id + '.png';
-};
-
-var getTitle = function(unit) {
-    return [ unit.name,
-        'ATK: ' + unit.maxATK,
-        'HP: ' + unit.maxHP,
-        'Cost: ' + unit.cost
-    ].join('\n');
 };
 
 var setOverwriteWarning = function(slotName) {
@@ -173,7 +140,9 @@ var onLoadClick = function(e) {
                         '<input type="text" id="slotFilter" placeholder="type to filter (middle/ctrl click to remove slot)">' +
                         '<div id="slots"></div>' +
                     '</div>');
-            content.find('input').keyup(debounceFilter);
+            content.find('input').keyup(Utils.debounce('slots',function() {
+                populateSlots($('#slots'));
+            }));
             return content;
         },
         buttons: [{

@@ -2,10 +2,6 @@ input#picker {
     width: 100%;
 }
 
-.modal-dialog {
-    width: 650px;
-}
-
 #pickerUnits {
     height: 338px;
     overflow: auto;
@@ -15,21 +11,7 @@ input#picker {
     margin-top: 5px;
 }
 
-.pickerThumbnail {
-    width: 80px;
-    height: 80px;
-    background-size: 80px 80px;
-    margin: 2px 2px 2px 2px;
-    cursor: pointer;
-}
-
-.pickerThumbnail.small {
-    width: 40px;
-    height: 40px;
-    background-size: 40px 40px;
-}
-
-.pickerThumbnail:hover {
+#pickerUnits .unitThumbnail:hover {
     outline: 1px solid red;
 }
 
