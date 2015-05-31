@@ -16,6 +16,7 @@
         <link rel="stylesheet" type="text/css" href="css/orbs.css" />
         <link rel="stylesheet" type="text/css" href="css/dragger.css" />
         <link rel="stylesheet" type="text/css" href="css/details.css" />
+        <link rel="stylesheet" type="text/css" href="css/slots.css" />
 
         <script src="js/libs/jquery.min.js"></script>
         <script src="js/libs/bootstrap.min.js"></script>
@@ -39,6 +40,8 @@
         <script src="js/dragger.js"></script>
         <script src="js/details.js"></script>
         <script src="js/specials.js"></script>
+        <script src="js/slots.js"></script>
+
     </head>
 
     <body>
@@ -125,16 +128,54 @@
 
             <nav id="menu" class="panel" role="navigation">
                 <ul>
-                    <li><div id="sliderToggle" status="0"></div></li>
-                    <li><div id="merry" status="0"></div>
-                    <li><div id="defenseContainer">Defense threshold: <input type="text" id="defense" value="0"></input></div></li>
-                    <li><div id="specialDivider">Specials:</div></li>
-                    <li class="disabled"><div id="special0">&nbsp;</div></li>
-                    <li class="disabled"><div id="special1">&nbsp;</div></li>
-                    <li class="disabled"><div id="special2">&nbsp;</div></li>
-                    <li class="disabled"><div id="special3">&nbsp;</div></li>
-                    <li class="disabled"><div id="special4">&nbsp;</div></li>
-                    <li class="disabled"><div id="special5">&nbsp;</div></li>
+                    <li>
+                        <div id="sliderToggle" status="0">
+                            <div class="menuIcon" id="sliderIcon"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div id="merry" status="0">
+                            <div class="menuIcon" id="shipIcon"></div>
+                        </div>
+                    <li>
+                        <div id="defenseContainer">
+                            Enemy defense: <input type="text" id="defense" value="0"></input>
+                            <div class="menuIcon" id="defenseIcon"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div id="save">
+                            Save slot...
+                            <div class="menuIcon" id="saveIcon"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div id="load">
+                            Load slot...
+                            <div class="menuIcon" id="loadIcon"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div id="specialDivider">Specials:</div>
+                    </li>
+                    <li class="disabled">
+                        <div id="special0">&nbsp;</div>
+                    </li>
+                    <li class="disabled">
+                        <div id="special1">&nbsp;</div>
+                    </li>
+                    <li class="disabled">
+                        <div id="special2">&nbsp;</div>
+                    </li>
+                    <li class="disabled">
+                        <div id="special3">&nbsp;</div>
+                    </li>
+                    <li class="disabled">
+                        <div id="special4">&nbsp;</div>
+                    </li>
+                    <li class="disabled">
+                        <div id="special5">&nbsp;</div>
+                    </li>
                 </ul>
             </nav>
 

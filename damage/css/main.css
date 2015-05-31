@@ -1,5 +1,6 @@
 body, html {
     height: 100%;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 body, #main, #hp, #other {
@@ -195,8 +196,8 @@ body, #main, #hp, #other {
     bottom: 1px;
 }
 
-#sliderToggle[status="0"]:after { content: "Level sliders: enabled"; }
-#sliderToggle[status="1"]:after { content: "Level sliders: disabled"; }
+#sliderToggle[status="0"]:before { content: "Level sliders: enabled"; }
+#sliderToggle[status="1"]:before { content: "Level sliders: disabled"; }
 
 #merry[status="0"]:after { content: "No Merry Bonus"; }
 #merry[status="1"]:after { content: "1.2x Merry Bonus"; color: black; }
@@ -261,7 +262,7 @@ body, #main, #hp, #other {
 
 .panel {
     position: fixed;
-    right: -15.625em;
+    left: -15.625em;
     width: 15.625em;
     background: #2C3E50;
 }
@@ -275,17 +276,16 @@ body, #main, #hp, #other {
 
 li > div {
     display: block;
-    padding: 1em;
-    text-align: right;
+    padding: 1em 1em 1em 2.5em;
+    text-align: left;
     color: #fff;
-    font-family: 'Source Sans Pro', sans-serif;
     font-size: 11pt;
     -webkit-transition: background 0.1s linear;
        -moz-transition: background 0.1s linear;
             transition: background 0.1s linear;
 }
 
-li > div:hover {
+li > div:not(.menuIcon):hover {
     background: #688aac;
     color: white !important;
     cursor: pointer;
@@ -296,6 +296,7 @@ ul { padding-left: 0; }
 li {
     list-style: none;
     border-bottom: 2px solid #34495D;
+    position: relative;
 }
 
 input {
@@ -321,4 +322,36 @@ li.disabled {
     padding: 0;
     margin: 0;
     border-width: 0;
+}
+
+/* Menu icons */
+
+.menuIcon {
+    position: absolute;
+    left: 7px;
+    top: 15px;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+}
+
+#sliderIcon {
+    background-image: url("data:image/svg+xml,<svg viewBox='0 0 30 30' preserveAspectRatio='true' xmlns='http://www.w3.org/2000/svg'><path fill='rgb(255,255,255)' d='M24.083,15.5c-0.009,4.739-3.844,8.574-8.583,8.583c-4.741-0.009-8.577-3.844-8.585-8.583c0.008-4.741,3.844-8.577,8.585-8.585c1.913,0,3.665,0.629,5.09,1.686l-1.782,1.783l8.429,2.256l-2.26-8.427l-1.89,1.89c-2.072-1.677-4.717-2.688-7.587-2.688C8.826,3.418,3.418,8.826,3.416,15.5C3.418,22.175,8.826,27.583,15.5,27.583S27.583,22.175,27.583,15.5H24.083z'/></svg>") !important;
+}
+
+#shipIcon {
+    background-image: url("data:image/svg+xml,<svg viewBox='0 0 512 512' preserveAspectRatio='true' xmlns='http://www.w3.org/2000/svg'><path fill='rgb(255,255,255)' d='M236.016,16.781C247,3.031,256,6.188,256,23.781v256c0,17.594-14.406,32-32,32H32c-17.594,0-23-11.25-12.016-25L236.016,16.781z M288,279.781c0,17.594,14.406,32,32,32h64c17.594,0,26.656-13.375,20.125-29.719L299.875,21.5C293.344,5.156,288,6.188,288,23.781V279.781z M25.594,407.781h460.813l13.719-34.281c6.531-16.344-2.531-29.719-20.125-29.719H32c-17.594,0-26.656,13.375-20.109,29.719L25.594,407.781z M38.406,439.781l13.703,34.281c6.547,16.344,26.297,29.719,43.891,29.719h320c17.594,0,37.344-13.375,43.875-29.719l13.719-34.281H38.406z'/></svg>") !important;
+}
+
+#defenseIcon {
+    background-image: url("data:image/svg+xml,<svg viewBox='0 0 512 512' preserveAspectRatio='true' xmlns='http://www.w3.org/2000/svg'><path fill='rgb(255,255,255)' d='M 480.00,0.00L 256.00,64.00L 32.00,0.00c0.00,0.00-2.25,25.849,0.00,64.00l 224.00,70.045L 480.00,64.00C 482.249,25.849, 480.00,0.00, 480.00,0.00zM 36.095,97.553C 48.088,222.901, 92.84,433.67, 256.00,512.00c 163.16-78.33, 207.912-289.099, 219.905-414.447L 256.00,180.232 L 36.095,97.553z'/></svg>") !important;
+    top: 17px;
+}
+
+#saveIcon {
+    background-image: url("data:image/svg+xml,<svg viewBox='0 0 512 512' preserveAspectRatio='true' xmlns='http://www.w3.org/2000/svg'><path fill='rgb(255,255,255)' d='M256,10.24C120.271,10.24,10.24,120.271,10.24,256c0,135.729,110.031,245.76,245.76,245.76 c135.729,0,245.76-110.031,245.76-245.76C501.76,120.271,391.729,10.24,256,10.24z M381.44,246.389L256.002,373.003L130.56,246.389 V138.997l125.442,126.604L381.44,138.997V246.389z'/></svg>") !important;
+}
+
+#loadIcon {
+    background-image: url("data:image/svg+xml,<svg viewBox='0 0 512 512' preserveAspectRatio='true' xmlns='http://www.w3.org/2000/svg'><path fill='rgb(255,255,255)' d='M256,10.24C120.271,10.24,10.24,120.271,10.24,256S120.271,501.76,256,501.76S501.76,391.729,501.76,256 S391.729,10.24,256,10.24z M381.44,373.003L256.002,246.399L130.56,373.003V265.611l125.442-126.614L381.44,265.611V373.003z'/></svg>") !important;
 }

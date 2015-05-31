@@ -311,12 +311,14 @@ $(function() {
     $('#reset').click(onResetButtonClick);
     $('#sliderToggle').click(onSliderToggleClick);
 
-    $('.menu-link').bigSlide({ side: 'right' });
+    $('.menu-link').bigSlide({ side: 'left' });
 
     if (localStorage.hasOwnProperty('team') && !localStorage.hasOwnProperty('newClickAlert')) {
         $.notify('You can now use CTRL+click to toggle orb control','info');
         localStorage.setItem('newClickAlert',true);
     }
+
+    $('.menu-link').click();
 
 });
 
