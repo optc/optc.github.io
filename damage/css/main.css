@@ -263,7 +263,7 @@ body, #main, #hp, #other {
 .panel {
     position: fixed;
     left: -16.625em;
-    width: 16.625em;
+    width: 16.625em !important;
     background: #2C3E50;
 }
 
