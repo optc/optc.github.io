@@ -1,3 +1,5 @@
+/* jshint evil: true */
+
 (function() {
 
 var lastSlotNumber = null;
@@ -73,20 +75,20 @@ var showInstructions = function() {
 
 var generateSearchParameters = function(query) {
     var result = { name: [ ] };
-    tokens = query.trim().replace(/\s+/g,' ').split(' ').filter(function(x) { return x.length > 0 });
+    tokens = query.trim().replace(/\s+/g,' ').split(' ').filter(function(x) { return x.length > 0; });
     tokens.forEach(function(x) {
-        var temp = x.match(/^((type|class):(\w+)|(hp|atk|stars|cost)(>|<|>=|<=|=)(\d+))$/);
+        var temp = x.match(/^((type|class):(\w+)|(hp|atk|stars|cost)(>|<|>=|<=|=)(\d+))$/), func;
         if (!temp) {
             result.name.push(x);
-        } else if (temp[4] != null) {
-            var func = new Function('x','return x ' + temp[5].replace(/^=$/,'==') + ' ' + temp[6] + ';');
+        } else if (temp[4] !== null) {
+            func = new Function('x','return x ' + temp[5].replace(/^=$/,'==') + ' ' + temp[6] + ';');
             result[temp[4]] = func;
         } else {
-            var func = new Function('x','return /' + temp[3] + '/i.test(x);');
+            func = new Function('x','return /' + temp[3] + '/i.test(x);');
             result[temp[2]] = func; 
         }
     });
-    if (result.name.length == 0) delete result.name;
+    if (result.name.length === 0) delete result.name;
     else result.name = new Function('x','return /' + result.name.join(' ') + '/i.test(x);');
     return result;
 };
@@ -95,7 +97,7 @@ var populateList = function(parameters,target) {
     var result = units;
     $(target).empty();
     Object.keys(parameters).forEach(function(key) {
-        var unitKey = key.replace(/^(hp|atk)$/,function(x) { return 'max' + x.toUpperCase() });
+        var unitKey = key.replace(/^(hp|atk)$/,function(x) { return 'max' + x.toUpperCase(); });
         result = result.filter(function(x) {
             return parameters[key](x[unitKey]);
         });

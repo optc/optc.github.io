@@ -4,22 +4,21 @@ var team = [ null, null, null, null, null, null ];
 
 var lastSlotName = JSON.parse(localStorage.getItem('lastSlotName'));
 var slots = JSON.parse(localStorage.getItem('slots')) || { };
-if (slots == null) slots = { };
 
 var currentLoadDialog = null, currentSaveDialog = null;
 
 /* * * * * Functions * * * * */
 
-var populateSlots = function(target,query) {
-    var target = $('#slots'), query = new RegExp(query,'i');
+var populateSlots = function(query) {
+    var target = $('#slots'), regex = new RegExp((query || ''),'i');
     target.empty();
     var keys = Object.keys(slots);
     keys.sort();
     keys.forEach(function(key) {
         var slot = slots[key], name = slot.name, team = slot.team;
-        if (!query.test(slot.name)) return;
+        if (!regex.test(slot.name)) return;
         var thumbnails = team
-            .filter(function(x) { return x != null; })
+            .filter(function(x) { return x !== null; })
             .map(function(x) { return Utils.createThumbnail(x.unit,true); });
         target.append(createThumbnailRow(name,thumbnails));
     });
@@ -62,7 +61,7 @@ var onUnitRemoved = function(event,slotNumber) {
 
 var onSaveSlot = function() {
     var name = $('#saveContainer > input').val().trim();
-    if (name.length == 0) return;
+    if (name.length === 0) return;
     slots[name.toLowerCase()] = { name: name, team: JSON.parse(JSON.stringify(team)) };
     localStorage.setItem('slots',JSON.stringify(slots));
     lastSlotName = name;
@@ -82,8 +81,8 @@ var onRowClick = function(e) {
         $(document).trigger('crunchingToggled',false);
         // load data
         slots[name].team.forEach(function(x,n) {
-            if (x == null && team[n] != null) $(document).trigger('unitRemoved',n);
-            else if (x != null) {
+            if (x === null && team[n] !== null) $(document).trigger('unitRemoved',n);
+            else if (x !== null) {
                 $(document).trigger('unitPicked',[ n, x.unit ]);
                 $(document).trigger('unitLevelChanged',[ n, x.level ]);
             }
@@ -144,7 +143,7 @@ var onLoadClick = function(e) {
                         '<div id="slots"></div>' +
                     '</div>');
             content.find('input').keyup(Utils.debounce('slots',function() {
-                populateSlots($('#slots'),this.value.trim());
+                populateSlots(this.value.trim());
             }));
             return content;
         },
@@ -154,7 +153,7 @@ var onLoadClick = function(e) {
         }],
         onshown: function(dialog) {
             $('#slotFilter').focus();
-            populateSlots($('#slots'));
+            populateSlots('');
             currentLoadDialog = dialog;
         }
     });

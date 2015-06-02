@@ -32,7 +32,7 @@ var formatNumber = function(n) {
 var updateSlot = function(slotNumber,unitNumber) {
     var slot = $('.unit').eq(slotNumber);
     var index = slot.index();
-    if (unitNumber != null) { // add/change unit
+    if (unitNumber !== null) { // add/change unit
         var unit = units[unitNumber];
         // change portrait
         slot.removeClass('empty');
@@ -56,7 +56,7 @@ var changeCurrentHP = function(currentHP,skipTrigger,skipSlider) {
     $('#hpLabel').text(currentHP + ' HP (' + percHP + '%)');
     if (!skipSlider) hpSlider.val(currentHP);
     if (!skipTrigger) {
-        var percHP = Math.floor(currentHP / currentMaxHP * 10000) / 100;
+        percHP = Math.floor(currentHP / currentMaxHP * 10000) / 100;
         $(document).trigger('hpChanged',[ currentHP, currentMaxHP, percHP , true ]);
     }
 };
@@ -69,7 +69,7 @@ var changeMaxHP = function(newValue,skipTrigger) {
     },true);
     var currentHP = Math.round(currentPerc * newValue);
     changeCurrentHP(currentHP,skipTrigger,false);
-}
+};
 
 var changeUnitLevel = function(slotNumber,level) {
     $('.unit').eq(slotNumber).removeClass('slide');
@@ -82,8 +82,8 @@ var changeLevelLabel = function(slotNumber,level) {
 };
 
 var getUnitNumberFromSlot = function(slotNumber) {
-    var image  = $('.unit').eq(slotNumber).find('.unitPortrait')[0].style.backgroundImage;
-    if (image == null) return -1;
+    var image = $('.unit').eq(slotNumber).find('.unitPortrait').css('backgroundImage');
+    if (image === null || image == 'none') return -1;
     return parseInt(image.match(/f(\d+)/)[1],10);
 };
 
@@ -97,7 +97,7 @@ var editUnitLevel = function(target) {
 var updateTitles = function(team) {
     var targets = $('.unit');
     team.forEach(function(x,n) {
-        if (x == null) targets.eq(n).attr('title',null);
+        if (x === null) targets.eq(n).attr('title',null);
         else targets.eq(n).attr('title',x.name + '\n' + x.atk + ' ATK\n' + x.hp + ' HP');
     });
 };
@@ -113,11 +113,11 @@ var onMerryButtonClick = function(e) {
 var onSliderToggleClick = function(e) {
     if (e.which != 1);
     var newValue = (parseInt($(this).attr('status'),10)+1) % 2;
-    $(document).trigger('sliderToggle',newValue == 0);
+    $(document).trigger('sliderToggle',newValue === 0);
 };
 
 var onDefenseKeyUp = function(e) {
-    if (defenseDebouncer != null) clearTimeout(defenseDebouncer);
+    if (defenseDebouncer !== null) clearTimeout(defenseDebouncer);
     var value = parseInt(this.value,10);
     if (isNaN(value) || value == lastDefenseValue) return false;
     defenseDebouncer = setTimeout(function() {
@@ -135,7 +135,7 @@ var onUnitEditorClose = function(e) {
     level = Math.min(Math.max(1,level),sliders[slotNumber][1]);
     changeUnitLevel(slotNumber,level);
     changeLevelLabel(slotNumber,level);
-}
+};
 
 var onUnitLevelSlideEnd = function(ui,value) {
     setTimeout(function() {
@@ -193,7 +193,7 @@ var onUnitPicked = function(event,slotNumber,unitNumber) {
 
 var onUnitLevelChanged = function(event,slotNumber,level) {
     changeLevelLabel(slotNumber,level);
-}
+};
 
 var onNumbersCrunched = function(event,numbers) {
     // set damage

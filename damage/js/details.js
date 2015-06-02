@@ -17,7 +17,7 @@ var onDamageClick = function(e) {
             $(document).trigger('detailsRequested',detailsVisible);
         },1000);
     } else {
-        if (timeout != null) clearTimeout(timeout),
+        if (timeout !== null) clearTimeout(timeout);
         detailsVisible = null;
         target.find('.detailsContainer').remove();
         var temp = target[0];
@@ -32,7 +32,7 @@ var getTypeOfHit = function(position,currentMultiplier,nextMultiplier) {
     if (difference == 0.1) return 'Great';
     if (currentMultiplier > nextMultiplier) return 'Miss';
     return 'Miss or Good';
-}
+};
 
 var formatNumber = function(n) {
     var rev = function(x) { return x.split('').reverse().join(''); };
@@ -54,7 +54,7 @@ var appendElements = function(target,turn,damageDealer,type,damage,multiplier) {
 /* * * * * Event callbacks * * * * */
 
 var onNumbersCrunched = function() {
-    if (detailsVisible != null)
+    if (detailsVisible !== null)
         $(document).trigger('detailsRequested',detailsVisible);
 };
 
@@ -76,7 +76,7 @@ $(document).on('numbersCrunched',onNumbersCrunched);
 $(document).on('detailsReady',onDetailsReady);
 
 $(function() {
-    $('.damage').click(onDamageClick)
+    $('.damage').click(onDamageClick);
 });
 
 })();

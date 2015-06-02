@@ -23,7 +23,7 @@ var addButton = function(slotNumber,unitNumber) {
 var removeButton = function(slotNumber) {
     var target = $('#special' + slotNumber);
     target.parent().addClass('disabled');
-    if (team[slotNumber] != null)
+    if (team[slotNumber] !== null)
         target.removeClass(team[slotNumber].type.toLowerCase());
 };
 
@@ -31,7 +31,7 @@ var removeButton = function(slotNumber) {
 
 var onUnitPicked = function(event,slotNumber,unitNumber) {
     if (!initialized) initialize();
-    if (team[slotNumber] != null) removeButton(slotNumber);
+    if (team[slotNumber] !== null) removeButton(slotNumber);
     if (!specials.hasOwnProperty(unitNumber+1)) return;
     team[slotNumber] = units[unitNumber];
     addButton(slotNumber,unitNumber);
@@ -55,7 +55,7 @@ var onUnitsSwitched = function(event,slotA,slotB) {
     targetB[0].className = classA;
     targetB.text(textA);
     // switch parent's class
-    var classA = targetA.parent().attr('class');
+    classA = targetA.parent().attr('class');
     targetA.parent().attr('class',targetB.parent().attr('class'));
     targetB.parent().attr('class',classA);
 };
@@ -63,7 +63,6 @@ var onUnitsSwitched = function(event,slotA,slotB) {
 /* * * * * UI event callbacks * * * * */
 
 var onSpecialClick = function(e) {
-    var target = $(this);
     var slot = parseInt(this.id.slice(-1),10);
     var type = team[slot].type.toLowerCase();
     var target = $('#special' + slot);

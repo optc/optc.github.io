@@ -7,10 +7,10 @@ var edge = true;
 
 var updateOrbs = function() {
     for (var i=0;i<team.length;++i) {
-        if (team[i] == null || team[i].status == 0) continue;
+        if (team[i] === null || team[i].status === 0) continue;
         if (edge) orbs.eq(i).addClass('glowing');
         else orbs.eq(i).removeClass('glowing');
-    };
+    }
     edge = !edge;
 };
 
@@ -28,9 +28,9 @@ var changeOrb = function(slotNumber) {
     var target = $($('.unit')[slotNumber]);
     var color = getGlowColor(team[slotNumber].type,status);
     team[slotNumber].status = status;
-    if (status == 0) deactivateGlowing(target,slotNumber);
+    if (status === 0) deactivateGlowing(target,slotNumber);
     else activateGlowing(target,slotNumber,color);
-    var multiplier = (status == 0 ? 1 : status == 1 ? 2 : 0.5);
+    var multiplier = (status === 0 ? 1 : status == 1 ? 2 : 0.5);
     $(document).trigger('orbMultiplierChanged',[ slotNumber, multiplier ]);
 };
 
@@ -74,7 +74,7 @@ var onUnitsSwitched = function(event,slotA,slotB) {
 var onUnitRemoved = function(event,slotNumber) {
     team[slotNumber] = null;
     deactivateGlowing($('.unit').eq(slotNumber),slotNumber);
-}
+};
 
 /* * * * * Events * * * * */
 

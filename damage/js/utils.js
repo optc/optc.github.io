@@ -21,11 +21,10 @@ var getTitle = function(unit) {
 
 var debounce = function(name,func) {
     return function() {
-        if (debouncers[name] != null) clearTimeout(debouncers[name]);
+        if (debouncers[name] !== null) clearTimeout(debouncers[name]);
         debouncers[name] = setTimeout(func.bind(this),500);
     };
 };
-
 
 var createThumbnail = function(n,isSmall,onClick) {
     var result = document.createElement('div');
@@ -33,7 +32,7 @@ var createThumbnail = function(n,isSmall,onClick) {
     result.style.backgroundImage = 'url(' + getThumbnailUrl(n) + ')';
     result.setAttribute('unitID',n);
     result.setAttribute('title',getTitle(units[n]));
-    if (onClick != null) $(result).click(onClick);
+    if (onClick !== undefined && onClick !== null) $(result).click(onClick);
     return result;
 };
 

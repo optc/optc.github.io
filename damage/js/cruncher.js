@@ -1,3 +1,5 @@
+/* jshint evil: true */
+
 (function() {
 
 /* Terminology: 
@@ -54,7 +56,7 @@ var crunch = function() {
     });
     result.HP = 0;
     team.forEach(function(x,n) {
-        if (x == null) return;
+        if (x === null) return;
         var hp = getHpOfUnit(x);
         result.HP += applyCaptainEffectsToHP(x,hp);
     });
@@ -66,9 +68,9 @@ var crunch = function() {
 var crunchForType = function(type,withDetails) {
     var damage = [ ];
     // apply type & orb multipliers
-    var isDefenseDown = enabledSpecials.some(function(x) { return x != null && x.hasOwnProperty('def'); });
+    var isDefenseDown = enabledSpecials.some(function(x) { return x !== null && x.hasOwnProperty('def'); });
     team.forEach(function(x,n) {
-        if (x == null) return;
+        if (x === null) return;
         var atk = getAttackOfUnit(x); // basic attack (scales with level);
         atk *= x.orb; // orb multiplier
         atk *= getTypeMultiplierOfUnit(x,type); // type multiplier (fixed)
@@ -77,8 +79,8 @@ var crunchForType = function(type,withDetails) {
     });
     // initialize ability array
     var abilities = [ ];
-    if (captainAbilities[0] != null) abilities.push(captainAbilities[0]);
-    if (captainAbilities[1] != null) abilities.push(captainAbilities[1]);
+    if (captainAbilities[0] !== null) abilities.push(captainAbilities[0]);
+    if (captainAbilities[1] !== null) abilities.push(captainAbilities[1]);
     // apply static multipliers and sort from weakest to stongest
     for (var i=0;i<abilities.length;++i) {
         if (!abilities[i].hasOwnProperty('atk')) continue;
@@ -99,11 +101,11 @@ var crunchForType = function(type,withDetails) {
     var captainsWithChainModifiers = abilities.filter(function(x) { return x.hasOwnProperty('chainModifier'); });
     // get data struct ready
     var data = [ damage ];
-    for (var i=0;i<captainsWithHitModifiers.length;++i) data.push(damage);
+    for (i=0;i<captainsWithHitModifiers.length;++i) data.push(damage);
     // compute damages
     updateDefenseThreshold();
-    for (var i=0;i<data.length;++i) {
-        var modifiers = (i == 0 ? DEFAULT_HIT_MODIFIERS : captainsWithHitModifiers[i-1].hitModifiers);
+    for (i=0;i<data.length;++i) {
+        var modifiers = (i === 0 ? DEFAULT_HIT_MODIFIERS : captainsWithHitModifiers[i-1].hitModifiers);
         // apply compatible captain effects
         for (var j=1;j<data.length;++j) {
             if (!arraysAreEqual(modifiers,captainsWithHitModifiers[j-1].hitModifiers)) continue;
@@ -115,7 +117,7 @@ var crunchForType = function(type,withDetails) {
     }
     // find index of maxiumum damage
     var index = 0, currentMax = data[0].overall;
-    for (var i=1;i<data.length;++i) {
+    for (i=1;i<data.length;++i) {
         if (data[i].overall < currentMax) continue;
         index = i;
         currentMax = data[i].overall;
@@ -129,7 +131,7 @@ var crunchForType = function(type,withDetails) {
         order: data[index].damage.result
     };
     return result;
-}
+};
 
 /* * * * * * Static multipliers/modifiers * * * * */
 
@@ -178,14 +180,14 @@ var applyChainAndBonusMultipliers = function(damage,modifiers,captains) {
 var applyCaptainEffectToDamage = function(damage,func) {
     return damage.map(function(x,n) {
         var unit = x[0], damage = x[1], order = x[2];
-        if (func != null) damage *= func(unit.unit,n,currentHP,maxHP,percHP,null,null,unit.orb);
+        damage *= func(unit.unit,n,currentHP,maxHP,percHP,null,null,unit.orb);
         return [ unit, damage, order ];
     });
 };
 
 var applyCaptainEffectsToHP = function(unit,hp) {
     for (var i=0;i<2;++i) {
-        if (captainAbilities[i] != null && captainAbilities[i].hasOwnProperty('hp'))
+        if (captainAbilities[i] !== null && captainAbilities[i].hasOwnProperty('hp'))
             hp *= captainAbilities[i].hp(unit.unit);
     }
     return hp;
@@ -232,7 +234,7 @@ var computeDamageOfUnit = function(unit,unitAtk,hitModifier) {
 var getSpecialMultiplierForUnit = function(unit,isDefenseDown) {
     var orbMultiplier = 0, atkMultiplier = { type: 0, class: 0 };
     enabledSpecials.forEach(function(data) {
-        if (data == null) return;
+        if (data === null) return;
         if (data.hasOwnProperty('atk'))
             atkMultiplier[data.type] = Math.max(atkMultiplier[data.type],data.atk(unit.unit,null,currentHP,maxHP,percHP,null,isDefenseDown));
         if (data.hasOwnProperty('orb'))
@@ -243,7 +245,7 @@ var getSpecialMultiplierForUnit = function(unit,isDefenseDown) {
 
 var updateDefenseThreshold = function() {
     currentDefense = enabledSpecials.reduce(function(prev,data) {
-        if (data == null || !data.hasOwnProperty('def')) return prev;
+        if (data === null || !data.hasOwnProperty('def')) return prev;
         return prev * data.def();
     },defense);
 };
@@ -263,18 +265,18 @@ var getHpOfUnit = function(data) {
 };
 
 var setCaptain = function(slotNumber) {
-    if (team[slotNumber] == null)
+    if (team[slotNumber] === null)
         captainAbilities[slotNumber] = null;
     else if (captains.hasOwnProperty(team[slotNumber].unit.number+1))
         captainAbilities[slotNumber] = createFunctions(captains[team[slotNumber].unit.number+1]);
     else
         captainAbilities[slotNumber] = null;
-}
+};
 
 var createFunctions = function(data) {
     var result = { };
-    for (key in data) {
-        if (data[key] == undefined)
+    for (var key in data) {
+        if (data[key] === undefined)
             $.notify("The unit you selected has a strange ass ability that can't be parsed correctly yet");
         else if (key == 'atk' || key == 'hitAtk' || key == 'hp' || key == 'chainModifier')
             result[key] = new Function('unit','chainPosition','currentHP','maxHP','percHP','modifier','defenseDown','orb','return ' + data[key]);
@@ -294,10 +296,10 @@ var arraysAreEqual = function(a,b) {
 
 var getTeamDetails = function() {
     return team.map(function(data) {
-        if (data == null) return null;
+        if (data === null) return null;
         return { name: data.unit.name, hp: getHpOfUnit(data), atk: getAttackOfUnit(data) };
     });
-}
+};
 
 /* * * * * Event callbacks * * * * */
 
@@ -321,7 +323,7 @@ var onMerryChange = function(event,bonus) {
 var onDefenseChanged = function(event,value) {
     defense = value;
     crunch();
-}
+};
 
 var onHpChange = function(event,current,max,perc) {
     currentHP = current;
@@ -339,7 +341,7 @@ var onUnitsSwitched = function(event,slotA,slotB) {
     var teamA = team[slotA];
     team[slotA] = team[slotB];
     team[slotB] = teamA;
-    if (slotA == 0 || slotB == 0) setCaptain(0);
+    if (slotA === 0 || slotB === 0) setCaptain(0);
     if (slotA == 1 || slotB == 1) setCaptain(1);
     var specialA = enabledSpecials[slotA];
     enabledSpecials[slotA] = enabledSpecials[slotB];

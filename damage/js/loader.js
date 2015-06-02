@@ -6,7 +6,7 @@ var data = { };
 
 var loadValue = function(key,def) {
     var value = JSON.parse(localStorage.getItem(key));
-    if (value != undefined) return value;
+    if (value !== null) return value;
     return def;
 };
 
@@ -53,7 +53,7 @@ var onResetStorage = function() {
         if (x != 'sliders') localStorage.removeItem(x);
     });
     window.location.reload();
-}
+};
 
 var onUnitsSwitched = function(event,slotA,slotB) {
     var teamA = data.team[slotA];
@@ -84,13 +84,13 @@ $(function() {
     data.team  = loadValue('team',[ null, null, null, null, null, null ]);
     data.merry = loadValue('merry',1.0);
     data.hp = loadValue('hp',{ current: 1, max: 1, perc: 100 });
-    data.sliders = loadValue('sliders',true)
+    data.sliders = loadValue('sliders',true);
     data.defense = loadValue('defense',0);
 
     $(document).trigger('crunchingToggled',false);
 
     data.team.forEach(function(x,n) {
-        if (x == null) return;
+        if (x === null) return;
         $(document).trigger('unitPicked',[ n, x.unit.number ]);
         $(document).trigger('unitLevelChanged',[ n, x.level ]);
     });
@@ -104,7 +104,7 @@ $(function() {
     if (!data.sliders)
         $(document).trigger('sliderToggle',false);
 
-    if (data.defense != 0)
+    if (data.defense !== 0)
         $(document).trigger('defenseChanged',data.defense);
 
     $(document).trigger('crunchingToggled',true);
