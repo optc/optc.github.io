@@ -3,32 +3,45 @@
 (function() {
 
 /* Terminology: 
- * - Hit modifiers:    Array of elements detailing the type of hits (Miss, Good, Great or Perfect) required to
- *                     activate the captain ability of a specific unit. Provided via the `hitModifiers` property.
- *                     Must have 6 elements, each element the hit modifier to be used in the corresponding turn.
- *                     If provided, the unit must also specify how to apply its own captain
- *                     effect (via the `hitAtk` property)
- * - Bonus multiplier: Multiplier associated to each hit modifier (close to 1.9x for Perfect, close to 1.4x for Great, etc.)
- *                     Affected by the unit's effective attack and by the enemy's defense.
- * - Chain multiplier: Multiplier associated to the combo chain. Applied to each unit.
- *                     Increased by 0.3 when hitting Perfect's, by 0.1 when hitting Great's, left untouched
- *                     when hitting Good's and reset back to its initial value of 1.0 when hitting Misses.
- *                     Can be modified by captain effects (via chain modifier).
- * - Chain modifier:   Modifier applied to the chain multiplier when computing its new value.
- *                     Affects the amount the multiplier is increased by.
- *                     Typically a static value (eg 4.0 for Rayleigh, 2.0 for Domino).
- *                     Provided via the `chainModifier` property
- * - Orb multiplier:   Multiplier applied to the damage contribution of each unit, depending on the type of
- *                     the orb assigned to the unit itself.
- *                     Units with matching orbs get a 2.0 orb multiplier, units with opposite orbs get 0.5
- *                     and units with unrelated orbs get 1.0.
- *                     Can be modified by captain effects (eg SW Ace).
- *                     Provided via the `orbMultiplier` property.
- * - Type multiplier:  Multiplier applied to the damage contribution of each unit, depending on the type 
- *                     compatibility between the unit itself and the hypothetical enemy.
- *                     eg. STR units get a 2.0 type multiplier when calculating the damage on DEX enemies,
- *                     a 0.5 multiplier for QCK enemies and a 1.0 multiplier for all other enemies.
- *                     Cannot be modified by captain effects (so far).
+ * - Hit modifiers:       Array of elements detailing the type of hits (Miss, Good, Great or Perfect) used in the
+ *                        attack chain. Also used to specify the activation conditions for the captain effects of
+ *                        certain types of units (G3, Killer, etc.) when provided via the `hitModifiers` property
+ *                        in the `captains` file. Must have 6 elements, each element the hit modifier to be used
+ *                        in the corresponding turn.  When provided through the `hitModifiers` property, the unit
+ *                        is also expected to specify how to apply its own captain effect (via the `hitAtk` property).
+ * - Bonus multiplier:    Multiplier associated to each hit modifier (close to 1.9x for Perfect hits, close to 1.4x
+ *                        for Great's, ...). Affected by the unit's effective attack, CMB stat and by the enemy's defense.
+ *                        Cannot be modified by captains or specials (so far).
+ * - Chain multiplier:    Multiplier associated to the combo chain. Applied to the damage contribution of each unit.
+ *                        Increased by 0.3 when hitting Perfect's, by 0.1 when hitting Great's, left untouched
+ *                        when hitting Good's and reset back to its initial value of 1.0 when hitting Misses.
+ *                        Can be modified by captain effects (via the chain modifier, see below) but not specials (so far).
+ * - Chain modifier:      Modifier applied to the chain multiplier when computing its new value for the following
+ *                        turn. Affects the amount the multiplier is increased by.  Typically a static value (eg 4.0 for
+ *                        Rayleigh, 2.0 for Domino). Provided in the `captains` file via the `chainModifier` property.
+ * - Orb multiplier:      Multiplier applied to the damage contribution of each unit, depending on the type of
+ *                        the orb assigned to the unit itself (controlled by the `orbs` module).  Units with matching
+ *                        orbs get a 2.0 orb multiplier, units with opposite orbs get 0.5  and units with unrelated orbs
+ *                        get 1.0. Cannot be modified by captain effects or specials (so far), though some captains (eg
+ *                        SW Ace) use the multiplier as the activation condition for their captain effects.
+ * - Special multipliers: Multiplier granted by specials, applied to the damage contribution of every unit affected
+ *                        by the special itself. The multipliers can be class-based (eg Zephyr),
+ *                        type-based (eg Impact Usopp) or orb-based (eg Coby). The multipliers stack with each
+ *                        other as long as they're not based on the same thing (eg class-based  multipliers stack with
+ *                        type- and orb-based multipliers, but not with other class-based multipliers).
+ *                        Class-based and type-based multipliers are provided in the `specials` file via the `atk`
+ *                        property and must have a `type` property describing whether they are class-based or type-based.
+ *                        Orb-based multipliers are provided in the `specials` file via the `orb` property.
+ *                        There's actually a fourth type of multiplier (indicated by a `type` property with value
+ *                        `unknown`) for specials whose effect and stacking model are not completely clear; it's tipically
+ *                        used for specials that boost the whole party (eg Sengoku, Sadi-chan, etc.). Right now
+ *                        "unknown-based" multipliers are stacked with the other multipliers as if they were a separate
+ *                        type AND WITH EACH OTHER; this might need to be modified.
+ * - Type multiplier:     Multiplier applied to the damage contribution of each unit, depending on the type 
+ *                        compatibility between the unit itself and the hypothetical enemy. For example, STR units get
+ *                        a 2.0 type multiplier when calculating the damage on DEX enemies, a 0.5 multiplier for QCK
+ *                        enemies and a 1.0 multiplier for all other enemies. Cannot be modified by captain effects or
+ *                        specials (so far).
  */
 
 var DEFAULT_HIT_MODIFIERS = [ 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect' ]; 
@@ -72,9 +85,9 @@ var crunchForType = function(type,withDetails) {
     team.forEach(function(x,n) {
         if (x === null) return;
         var atk = getAttackOfUnit(x); // basic attack (scales with level);
-        atk *= x.orb; // orb multiplier
+        atk *= x.orb; // orb multiplier (fixed)
         atk *= getTypeMultiplierOfUnit(x,type); // type multiplier (fixed)
-        atk *= getSpecialMultiplierForUnit(x,isDefenseDown); // multiplier from specials
+        atk *= getSpecialMultiplierForUnit(x,isDefenseDown); // special multipliers
         damage.push([ x, atk * merryBonus, n ]);
     });
     // initialize ability array
@@ -232,15 +245,19 @@ var computeDamageOfUnit = function(unit,unitAtk,hitModifier) {
 };
 
 var getSpecialMultiplierForUnit = function(unit,isDefenseDown) {
-    var orbMultiplier = 0, atkMultiplier = { type: 0, class: 0 };
+    var orbMultiplier = 0, atkMultiplier = { type: 0, class: 0, unknown: 1.0 };
     enabledSpecials.forEach(function(data) {
         if (data === null) return;
-        if (data.hasOwnProperty('atk'))
-            atkMultiplier[data.type] = Math.max(atkMultiplier[data.type],data.atk(unit.unit,null,currentHP,maxHP,percHP,null,isDefenseDown));
-        if (data.hasOwnProperty('orb'))
+        if (data.hasOwnProperty('atk')) {
+            var multiplier = data.atk(unit.unit,null,currentHP,maxHP,percHP,null,isDefenseDown);
+            if (data.type != 'unknown')
+                atkMultiplier[data.type] = Math.max(atkMultiplier[data.type],multiplier);
+            else
+                atkMultiplier.unknown *= multiplier;
+        } if (data.hasOwnProperty('orb'))
             orbMultiplier = Math.max(orbMultiplier,data.orb(unit,unit.orb));
     });
-    return (orbMultiplier || 1.0) * (atkMultiplier.class || 1.0) * (atkMultiplier.type || 1.0);
+    return (orbMultiplier || 1.0) * (atkMultiplier.class || 1.0) * (atkMultiplier.type || 1.0) * atkMultiplier.unknown;
 };
 
 var updateDefenseThreshold = function() {

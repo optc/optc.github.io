@@ -74,6 +74,7 @@ var showInstructions = function() {
 /* * * * * List generation * * * * */
 
 var generateSearchParameters = function(query) {
+    if (!query || query.trim().length < 3) return null;
     var result = { name: [ ] };
     tokens = query.trim().replace(/\s+/g,' ').split(' ').filter(function(x) { return x.length > 0; });
     tokens.forEach(function(x) {
@@ -96,6 +97,7 @@ var generateSearchParameters = function(query) {
 var populateList = function(parameters,target) {
     var result = units;
     $(target).empty();
+    if (parameters === null) return;
     Object.keys(parameters).forEach(function(key) {
         var unitKey = key.replace(/^(hp|atk)$/,function(x) { return 'max' + x.toUpperCase(); });
         result = result.filter(function(x) {

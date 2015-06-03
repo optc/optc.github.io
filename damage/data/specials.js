@@ -119,7 +119,8 @@ window.specials = {
         type: 'class'
     },
     406: { // Shougun Zombie
-        atk: '1.2'
+        atk: '1.2',
+        type: 'unknown'
     },
     417: { // Doflamingo
         orb: 'orb == 2.0 ? 2.0 : (orb == 0.5 ? 0.25 : 1)'
@@ -169,10 +170,12 @@ window.specials = {
         type: 'type'
     },
     458: { // Sengoku
-        atk: '1.5'
+        atk: '1.5',
+        type: 'unknown'
     },
     459: { // Sengoku evolved
-        atk: '1.5'
+        atk: '1.5',
+        type: 'unknown'
     },
     461: { // Fugitive Bentham Mr.2
         atk: 'unit.class == "Fighter" ? 1.25 : 1',
@@ -235,10 +238,12 @@ window.specials = {
         type: 'type'
     },
     517: { // Usoppun
-        atk: '1.05'
+        atk: '1.05',
+        type: 'unknown'
     },
     518: { // Usoppun evolved
-        atk: '1.05'
+        atk: '1.05',
+        type: 'unknown'
     },
     519: { // SW Luffy
         atk: 'unit.type == "STR" ? 2 : 1',
@@ -269,10 +274,12 @@ window.specials = {
         type: 'type'
     },
     549: { // Sadi-chan
-        atk: 'defenseDown ? 1.3 : 1'
+        atk: 'defenseDown ? 2.3 : 1',
+        type: 'unknown'
     },
     550: { // Sadi-chan evolved
-        atk: 'defenseDown ? 1.3 : 1'
+        atk: 'defenseDown ? 1.3 : 1',
+        type: 'unknown'
     },
     559: { // SW Franky
         orb: 'orb == 2.0 ? 1.5 : (orb == 0.5 ? 2/3 : 1)'
@@ -303,15 +310,19 @@ window.specials = {
         type: 'type'
     },
     589: { // Kohza
-        atk: 'unit.class == "Slasher" ? 1.5 : 1'
+        atk: 'unit.class == "Slasher" ? 1.5 : 1',
+        type: 'class'
     },
     590: { // Kohza evolved
-        atk: 'unit.class == "Slasher" ? 1.5 : 1'
+        atk: 'unit.class == "Slasher" ? 1.5 : 1',
+        type: 'class'
     },
     600: { // Apprentice Shanks
-        atk: 'unit.type == "PSY" ? 1.3 : 1'
+        atk: 'unit.type == "PSY" ? 1.3 : 1',
+        type: 'type'
     },
     601: { // Apprentice Shanks evolved
-        atk: 'unit.type == "PSY" ? 1.3 : 1'
+        atk: 'unit.type == "PSY" ? 1.3 : 1',
+        type: 'type'
     }
 };
