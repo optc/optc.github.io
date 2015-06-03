@@ -80,7 +80,7 @@ var generateSearchParameters = function(query) {
         var temp = x.match(/^((type|class):(\w+)|(hp|atk|stars|cost)(>|<|>=|<=|=)(\d+))$/), func;
         if (!temp) {
             result.name.push(x);
-        } else if (temp[4] !== null) {
+        } else if (temp[4] !== undefined) {
             func = new Function('x','return x ' + temp[5].replace(/^=$/,'==') + ' ' + temp[6] + ';');
             result[temp[4]] = func;
         } else {

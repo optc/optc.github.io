@@ -594,4 +594,10 @@ window.units = [
     [ ], 
     [ ], 
     [ "Black Turtle Princess", "INT", "PowerUp", 6, 20, 1, 2000, 100, 50, 2000, 100, 50, 6 ], 
-]
+	[ ], 
+	[ ], 
+	[ "Buggy the Pirate Apprentice", "INT", "Slasher", 3, 12, 50, 155, 74, 42, 872, 411, 162, 6 ], 
+	[ "Buggy of the Roger Pirates", "INT", "Slasher", 4, 19, 99, 813, 358, 123, 1602, 709, 290, 5 ], 
+	[ "Shanks the Pirate Apprentice", "PSY", "Slasher", 3, 12, 50, 155, 74, 42, 903, 488, 230, 4 ], 
+	[ "Shanks of the Roger Pirates", "PSY", "Slasher", 4, 18, 99, 825, 440, 193, 1964, 920, 354, 6 ]
+];

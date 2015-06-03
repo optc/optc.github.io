@@ -72,11 +72,11 @@ window.captains = {
     37: { // Cabaji
         atk: 'unit.type == "DEX" ? 1.5 : 1'
     },
-    37: { // Buggy
-        atk: 'unit.type == "PSY" ? 1.5 : 1'
+    38: { // Buggy
+        atk: 'unit.type == "INT" ? 1.5 : 1'
     },
-    38: { // Buggy the Clown
-        atk: 'unit.type == "PSY" ? 2 : 1'
+    39: { // Buggy the Clown
+        atk: 'unit.type == "INT" ? 2 : 1'
     },
     42: { // Siam
         atk: 'unit.type == "STR" ? 1.2 : 1'
@@ -646,7 +646,7 @@ window.captains = {
     497: { // Kid Ace
         atk: 'unit.type == "QCK" ? 1.5 : 1'
     },
-    497: { // Kid Ace evolved
+    498: { // Kid Ace evolved
         atk: 'unit.type == "QCK" ? 1.5 : 1',
         hp: 'unit.type == "QCK" ? 1.5 : 1'
     },
@@ -868,4 +868,16 @@ window.captains = {
         atk: '1.5',
         hp: '0.6' // TODO needs checking
     },
+    598: { // Apprentice Buggy
+        atk: 'unit.stars < 3 ? 2.5 : 1'
+    },
+    599: { // Apprentice Buggy evolved
+        atk: 'unit.stars < 3 ? 3 : 1'
+    },
+    600: { // Apprentice Shanks
+        atk: 'unit.type == "PSY" ? 1.5 : 1'
+    },
+    601: { // Apprentice Shanks evolved
+        atk: 'unit.type == "PSY" ? 2 : 1'
+    }
 };

@@ -307,5 +307,11 @@ window.specials = {
     },
     590: { // Kohza evolved
         atk: 'unit.class == "Slasher" ? 1.5 : 1'
+    },
+    600: { // Apprentice Shanks
+        atk: 'unit.type == "PSY" ? 1.3 : 1'
+    },
+    601: { // Apprentice Shanks evolved
+        atk: 'unit.type == "PSY" ? 1.3 : 1'
     }
 };
