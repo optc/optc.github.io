@@ -23,7 +23,7 @@ var moveElement = function(target,byX,byY) {
 
 var onUnitStartMove = function(e) {
     if (Utils.isClickOnOrb(e,e.target)) {
-        e.previousSibling();
+        e.preventDefault();
         e.stopPropagation();
     } else {
         startingSlot = $(e.target).parent();
@@ -43,7 +43,7 @@ var onUnitEndMove = function(e) {
     $('#removeSlot').css('display','none');
     stopPropagation = true;
     coordinates = [ 0, 0 ];
-    startingSlot = false;
+    startingSlot = null;
 };
 
 var onUnitClick = function(e) {

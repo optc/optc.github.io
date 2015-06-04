@@ -1,34 +1,38 @@
-.unit {
+.unitPortrait {
     -webkit-transition: border 1.0s linear, box-shadow 1.0s linear;
        -moz-transition: border 1.0s linear, box-shadow 1.0s linear;
             transition: border 1.0s linear, box-shadow 1.0s linear;
 }
 
-.glowing[glow="str"] {
+.unit:not([glow]) .unitOrb {
+    display: none;
+}
+
+.glowing[glow="str"] > .unitPortrait {
     -webkit-box-shadow: 0 0 20px red;
        -moz-box-shadow: 0 0 20px red;
             box-shadow: 0 0 20px red;
 }
 
-.glowing[glow="qck"] {
+.glowing[glow="qck"] > .unitPortrait {
     -webkit-box-shadow: 0 0 20px blue;
        -moz-box-shadow: 0 0 20px blue;
             box-shadow: 0 0 20px blue;
 }
 
-.glowing[glow="dex"] {
+.glowing[glow="dex"] > .unitPortrait {
     -webkit-box-shadow: 0 0 20px green;
        -moz-box-shadow: 0 0 20px green;
             box-shadow: 0 0 20px green;
 }
 
-.glowing[glow="psy"] {
+.glowing[glow="psy"] > .unitPortrait {
     -webkit-box-shadow: 0 0 20px darkorange;
        -moz-box-shadow: 0 0 20px darkorange;
             box-shadow: 0 0 20px darkorange;
 }
 
-.glowing[glow="int"] {
+.glowing[glow="int"] > .unitPortrait {
     -webkit-box-shadow: 0 0 20px purple;
        -moz-box-shadow: 0 0 20px purple;
             box-shadow: 0 0 20px purple;
@@ -39,3 +43,62 @@
 [glow="dex"] > .unitPortrait { outline: 1px green solid !important; }
 [glow="psy"] > .unitPortrait { outline: 1px orange solid !important; }
 [glow="int"] > .unitPortrait { outline: 1px purple solid !important; }
+
+.unitOrb {
+    position: absolute;
+    width: 29px;
+    height: 30px;
+    top: 7px;
+    left: 6px;
+    z-index: 5;
+    border-radius: 28px;
+    border: 1px solid gray;
+    pointer-events: none;
+}
+
+.unit[glow="str"] .unitOrb {
+    background-image: -webkit-radial-gradient(9px 3px, circle cover, oldlace, orangered, rgb(50,50,50));
+    background-image: -moz-radial-gradient(9px 3px, circle cover, oldlace, orangered, rgb(50,50,50));
+    background-image: radial-gradient(9px 3px, circle cover, oldlace, orangered, rgb(50,50,50));
+}
+
+.unit[glow="dex"] .unitOrb {
+    background-image: -webkit-radial-gradient(9px 3px, circle cover, oldlace, limegreen, rgb(50,50,50));
+    background-image: -moz-radial-gradient(9px 3px, circle cover, oldlace, limegreen, rgb(50,50,50));
+    background-image: radial-gradient(9px 3px, circle cover, oldlace, limegreen, rgb(50,50,50));
+}
+
+.unit[glow="qck"] .unitOrb {
+    background-image: -webkit-radial-gradient(9px 3px, circle cover, oldlace, dodgerblue, rgb(50,50,50));
+    background-image: -moz-radial-gradient(9px 3px, circle cover, oldlace, dodgerblue, rgb(50,50,50));
+    background-image: radial-gradient(9px 3px, circle cover, oldlace, dodgerblue, rgb(50,50,50));
+}
+
+.unit[glow="psy"] .unitOrb {
+    background-image: -webkit-radial-gradient(9px 3px, circle cover, oldlace, orange, rgb(50,50,50));
+    background-image: -moz-radial-gradient(9px 3px, circle cover, oldlace, orange, rgb(50,50,50));
+    background-image: radial-gradient(9px 3px, circle cover, oldlace, orange, rgb(50,50,50));
+}
+
+.unit[glow="int"] .unitOrb {
+    background-image: -webkit-radial-gradient(9px 3px, circle cover, oldlace, mediumorchid, rgb(50,50,50));
+    background-image: -moz-radial-gradient(9px 3px, circle cover, oldlace, mediumorchid, rgb(50,50,50));
+    background-image: radial-gradient(9px 3px, circle cover, oldlace, mediumorchid, rgb(50,50,50));
+}
+
+.upArrow, .downArrow {
+    position: absolute;
+    left: -2px;
+    width: 28px;
+    height: 28px;
+}
+
+.upArrow {
+    background-image: url("data:image/svg+xml,<svg viewBox='0 0 30 30' preserveAspectRatio='true' xmlns='http://www.w3.org/2000/svg'><path fill='rgb(255,255,255)' d='M23.963,20.834L17.5,9.64c-0.825-1.429-2.175-1.429-3,0L8.037,20.834c-0.825,1.429-0.15,2.598,1.5,2.598h12.926C24.113,23.432,24.788,22.263,23.963,20.834z'/></svg>") !important;
+    top: -3px;
+}
+
+.downArrow {
+    background-image: url("data:image/svg+xml,<svg viewBox='0 0 30 30' preserveAspectRatio='true' xmlns='http://www.w3.org/2000/svg'><path fill='rgb(255,255,255)' d='M8.037,11.166L14.5,22.359c0.825,1.43,2.175,1.43,3,0l6.463-11.194c0.826-1.429,0.15-2.598-1.5-2.598H9.537C7.886,8.568,7.211,9.737,8.037,11.166z'/></svg>") !important;
+    top: -1px;
+}

@@ -39,11 +39,16 @@ var changeOrb = function(slotNumber) {
 var activateGlowing = function(target,slotNumber,type) {
     target.addClass('glowing');
     target.attr('glow',type);
+    var orb = target.find('.unitOrb');
+    var status = orb.children().length;
+    if (status === 0) orb.append($('<div class="upArrow"></div>'));
+    else orb.children()[0].className = 'downArrow';
 };
 
 var deactivateGlowing = function(target,slotNumber) {
     target.removeClass('glowing');
     target.attr('glow',null);
+    target.find('.unitOrb').children().eq(0).remove();
 };
 
 /* * * * * UI events * * * * */
