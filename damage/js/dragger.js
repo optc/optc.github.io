@@ -27,7 +27,7 @@ var onUnitStartMove = function(e) {
         e.stopPropagation();
     } else {
         startingSlot = $(e.target).parent();
-        $('#removeSlot').show();
+        $('#removeSlot')[0].style.display = null;
         e.target.style.zIndex = 5;
     }
 };
@@ -40,7 +40,7 @@ var onUnitMove = function(e) {
 var onUnitEndMove = function(e) {
     e.target.style.zIndex = 1;
     e.target.style.webkitTransform = e.target.style.transform = '';
-    $('#removeSlot').hide();
+    $('#removeSlot').css('display','none');
     stopPropagation = true;
     coordinates = [ 0, 0 ];
     startingSlot = false;
@@ -68,7 +68,7 @@ var onUnitDragEnter = function(e)  {
         var replacedPortrait = endingSlot.find('.unitPortrait');
         ghostPortrait[0].style.backgroundImage = replacedPortrait[0].style.backgroundImage;
         startingSlot.append(ghostPortrait);
-        replacedPortrait.hide();
+        replacedPortrait.css('display','none');
     }
 };
 
@@ -78,7 +78,7 @@ var onUnitDragLeave = function(e) {
         onRemoveZoneLeave(e.relatedTarget);
     else {
         ghostPortrait.remove();
-        $(e.target).find('.unitPortrait').show();
+        $(e.target).find('.unitPortrait')[0].style.display = null;
         if (onEmptySlot) $(e.target).addClass('empty');
     }
 };
@@ -94,7 +94,7 @@ var onUnitDrop = function(e) {
         // switch portraits
         startingSlot.append(replacedPortrait);
         endingSlot.append(e.relatedTarget);
-        replacedPortrait.show();
+        replacedPortrait[0].style.display = null;
         ghostPortrait.remove();
         if (onEmptySlot) startingSlot.addClass('empty');
         $(document).trigger('unitsSwitched',[ startingSlot.index(), endingSlot.index() ]);
@@ -122,7 +122,7 @@ var onRemoveZoneDrop = function(target) {
 
 $(function() {
 
-    $('#removeSlot').hide();
+    $('#removeSlot').css('display','none');
 
     $('.unitPortrait').click(onUnitClick);
 

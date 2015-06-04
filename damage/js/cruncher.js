@@ -207,7 +207,7 @@ var applyCaptainEffectsToHP = function(unit,hp) {
 };
 
 var applySpecialMultipliers = function(damage,isDefenseDown) {
-    var result = damage, current = damage.reduce(function(prev,next) { return prev + next[1]; });
+    var result = damage, current = damage.reduce(function(prev,next) { return prev + next[1]; },0);
     specialsCombinations.forEach(function(specials) {
         var temp = damage.map(function(x,n) {
             var unit = x[0], damage = x[1], order = x[2];
