@@ -26,17 +26,16 @@
  *                        SW Ace) use the multiplier as the activation condition for their captain effects.
  * - Special multipliers: Multiplier granted by specials, applied to the damage contribution of every unit affected
  *                        by the special itself. The multipliers can be class-based (eg Zephyr),
- *                        type-based (eg Impact Usopp) or orb-based (eg Coby). The multipliers stack with each
- *                        other as long as they're not based on the same thing (eg class-based  multipliers stack with
- *                        type- and orb-based multipliers, but not with other class-based multipliers).
+ *                        type-based (eg Impact Usopp) or orb-based (eg Coby). Type-based and class-based multipliers
+ *                        can't stack with each other or with themselves, but they do stack with orb-based multipliers.
  *                        Class-based and type-based multipliers are provided in the `specials` file via the `atk`
  *                        property and must have a `type` property describing whether they are class-based or type-based.
  *                        Orb-based multipliers are provided in the `specials` file via the `orb` property.
  *                        There's actually a fourth type of multiplier (indicated by a `type` property with value
- *                        `unknown`) for specials whose effect and stacking model are not completely clear; it's tipically
- *                        used for specials that boost the whole party (eg Sengoku, Sadi-chan, etc.). Right now
- *                        "unknown-based" multipliers are stacked with the other multipliers as if they were a separate
- *                        type AND WITH EACH OTHER; this might need to be modified.
+ *                        `all`) for specials whose effect and stacking model are not completely clear; it's tipically
+ *                        used for specials that boost the whole party (eg Sadi-chan, Usoppun etc.). Right now
+ *                        "all-based" multipliers stack with all the other multipliers and with themselves; this
+ *                        might need to be modified.
  * - Type multiplier:     Multiplier applied to the damage contribution of each unit, depending on the type 
  *                        compatibility between the unit itself and the hypothetical enemy. For example, STR units get
  *                        a 2.0 type multiplier when calculating the damage on DEX enemies, a 0.5 multiplier for QCK
@@ -58,6 +57,8 @@ var defense = 0;
 var currentDefense = 0;
 
 var crunchingEnabled = true;
+
+var specialsCombinations = [ ];
 
 /* * * * * Crunching * * * * */
 
@@ -87,9 +88,9 @@ var crunchForType = function(type,withDetails) {
         var atk = getAttackOfUnit(x); // basic attack (scales with level);
         atk *= x.orb; // orb multiplier (fixed)
         atk *= getTypeMultiplierOfUnit(x,type); // type multiplier (fixed)
-        atk *= getSpecialMultiplierForUnit(x,isDefenseDown); // special multipliers
         damage.push([ x, atk * merryBonus, n ]);
     });
+    damage = applySpecialMultipliers(damage,isDefenseDown); // special multipliers (modify the whole array)
     // initialize ability array
     var abilities = [ ];
     if (captainAbilities[0] !== null) abilities.push(captainAbilities[0]);
@@ -116,7 +117,6 @@ var crunchForType = function(type,withDetails) {
     var data = [ damage ];
     for (i=0;i<captainsWithHitModifiers.length;++i) data.push(damage);
     // compute damages
-    updateDefenseThreshold();
     for (i=0;i<data.length;++i) {
         var modifiers = (i === 0 ? DEFAULT_HIT_MODIFIERS : captainsWithHitModifiers[i-1].hitModifiers);
         // apply compatible captain effects
@@ -206,6 +206,24 @@ var applyCaptainEffectsToHP = function(unit,hp) {
     return hp;
 };
 
+var applySpecialMultipliers = function(damage,isDefenseDown) {
+    var result = damage, current = damage.reduce(function(prev,next) { return prev + next[1]; });
+    specialsCombinations.forEach(function(specials) {
+        var temp = damage.map(function(x,n) {
+            var unit = x[0], damage = x[1], order = x[2];
+            specials.forEach(function(func) {
+                damage *= func(unit.unit,order,currentHP,maxHP,percHP,null,isDefenseDown,unit.orb);
+            });
+            return [ unit, damage, order ];
+        });
+        var total = temp.reduce(function(prev,next) { return prev + next[1]; },0);
+        if (total < current) return;
+        result = temp;
+        current = total;
+    });
+    return result;
+};
+
 /* The effective damage of a unit is affected by the hit modifier being used and by the defense threshold of an enemy.
  * The estimates being used right now are:
  * FULL MISS hits : BASE_DAMAGE *  CMB
@@ -244,27 +262,40 @@ var computeDamageOfUnit = function(unit,unitAtk,hitModifier) {
     else return overallBaseDamage + Math.max(1,bonus - currentDefense);
 };
 
-var getSpecialMultiplierForUnit = function(unit,isDefenseDown) {
-    var orbMultiplier = 0, atkMultiplier = { type: 0, class: 0, unknown: 1.0 };
+/* Computes all the possible combinations of specials given the following conditions:
+ * - Type-based and class-based are incompatible with each other and with themselves, but they stack with
+ *   orb-based multipliers and with "all-based" multipliers;
+ * - Orb-based multipliers are incompatible with themselves, but they stack with type-based OR class-based
+ *   multipliers and with "all-based" multipliers;
+ * - All-based multipliers stack with all the other multipliers and with themselves
+ * The function should return true if there's a conflict between specials
+ */
+var computeSpecialsCombinations = function() {
+    var result = { type: [ ], class: [ ], orb: [ ], all: [ ] };
     enabledSpecials.forEach(function(data) {
         if (data === null) return;
-        if (data.hasOwnProperty('atk')) {
-            var multiplier = data.atk(unit.unit,null,currentHP,maxHP,percHP,null,isDefenseDown);
-            if (data.type != 'unknown')
-                atkMultiplier[data.type] = Math.max(atkMultiplier[data.type],multiplier);
-            else
-                atkMultiplier.unknown *= multiplier;
-        } if (data.hasOwnProperty('orb'))
-            orbMultiplier = Math.max(orbMultiplier,data.orb(unit,unit.orb));
+        if (data.hasOwnProperty('atk'))
+            result[data.type].push(data.atk);
+        if (data.hasOwnProperty('orb'))
+            result.orb.push(data.orb);
     });
-    return (orbMultiplier || 1.0) * (atkMultiplier.class || 1.0) * (atkMultiplier.type || 1.0) * atkMultiplier.unknown;
+    specialsCombinations = Utils.arrayProduct([ result.type.concat(result.class), result.orb ]);
+    if (result.all.length > 0 && specialsCombinations.length > 0)
+        specialsCombinations = specialsCombinations.map(function(x) { return x.concat(result.all); });
+    else if (result.all.length > 0)
+        specialsCombinations = [ result.all ];
+    return (result.class.length + result.type.length > 1) || result.orb.length > 1 || result.all.length > 1;
 };
 
-var updateDefenseThreshold = function() {
-    currentDefense = enabledSpecials.reduce(function(prev,data) {
-        if (data === null || !data.hasOwnProperty('def')) return prev;
-        return prev * data.def();
-    },defense);
+/* Computes the actual defense threshold of the enemy after the specials are factored in.
+ * Defense-reducing specials do not stack with each other, so we just use the one that grants the lowest defense.
+ */
+var computeActualDefense = function() {
+    currentDefense = defense;
+    enabledSpecials.forEach(function(x) {
+        if (x === null || !x.hasOwnProperty('def')) return;
+        currentDefense = Math.min(currentDefense,defense * x.def());
+    });
 };
 
 /* * * * * * Utility functions * * * * */
@@ -295,10 +326,8 @@ var createFunctions = function(data) {
     for (var key in data) {
         if (data[key] === undefined)
             $.notify("The unit you selected has a strange ass ability that can't be parsed correctly yet");
-        else if (key == 'atk' || key == 'hitAtk' || key == 'hp' || key == 'chainModifier')
+        else if (key == 'atk' || key == 'hitAtk' || key == 'hp' || key == 'chainModifier' || key == 'orb')
             result[key] = new Function('unit','chainPosition','currentHP','maxHP','percHP','modifier','defenseDown','orb','return ' + data[key]);
-        else if (key == 'orb')
-            result[key] = new Function('unit','orb','return ' + data[key]);
         else if (key == 'def')
             result[key] = new Function('return ' + data[key]);
         else
@@ -339,6 +368,7 @@ var onMerryChange = function(event,bonus) {
 
 var onDefenseChanged = function(event,value) {
     defense = value;
+    computeActualDefense();
     crunch();
 };
 
@@ -385,6 +415,9 @@ var onCrunchToggled = function(event,enabled) {
 var onSpecialToggled = function(event,slotNumber,enabled) {
     if (!enabled) enabledSpecials[slotNumber] = null;
     else enabledSpecials[slotNumber] = createFunctions(specials[team[slotNumber].unit.number+1]);
+    computeActualDefense();
+    if (computeSpecialsCombinations())
+        window.uff = $.notify('Two or more specials you selected are incompatible with each other.','warn');
     crunch();
 };
 

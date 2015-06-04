@@ -17,6 +17,18 @@ var getTitle = function(unit) {
     ].join('\n');
 };
 
+var arrayProduct = function(data) {
+    var result = data.reduce(function(prev,next) {
+        if (next.length === 0) return prev;
+        return next.map(function(n) {
+            return prev.map(function(p) {
+                return p.concat([ n ]);
+            });
+        }).reduce(function(prev,next) { return prev.concat(next); },[ ]);
+    },[ [ ] ]);
+    return result.filter(function(r) { return r.length > 0; });
+};
+
 /* * * * * Public functions * * * * */
 
 var debounce = function(name,func) {
@@ -41,7 +53,8 @@ var createThumbnail = function(n,isSmall,onClick) {
 window.Utils = {
     debounce: debounce,
     createThumbnail: createThumbnail,
-    getThumbnailUrl: getThumbnailUrl
+    getThumbnailUrl: getThumbnailUrl,
+    arrayProduct: arrayProduct
 };
 
 })();

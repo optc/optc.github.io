@@ -120,7 +120,7 @@ window.specials = {
     },
     406: { // Shougun Zombie
         atk: '1.2',
-        type: 'unknown'
+        type: 'all'
     },
     417: { // Doflamingo
         orb: 'orb == 2.0 ? 2.0 : (orb == 0.5 ? 0.25 : 1)'
@@ -171,11 +171,11 @@ window.specials = {
     },
     458: { // Sengoku
         atk: '1.5',
-        type: 'unknown'
+        type: 'type'
     },
     459: { // Sengoku evolved
         atk: '1.5',
-        type: 'unknown'
+        type: 'type'
     },
     461: { // Fugitive Bentham Mr.2
         atk: 'unit.class == "Fighter" ? 1.25 : 1',
@@ -239,11 +239,11 @@ window.specials = {
     },
     517: { // Usoppun
         atk: '1.05',
-        type: 'unknown'
+        type: 'all'
     },
     518: { // Usoppun evolved
         atk: '1.05',
-        type: 'unknown'
+        type: 'all'
     },
     519: { // SW Luffy
         atk: 'unit.type == "STR" ? 2 : 1',
@@ -274,12 +274,12 @@ window.specials = {
         type: 'type'
     },
     549: { // Sadi-chan
-        atk: 'defenseDown ? 2.3 : 1',
-        type: 'unknown'
+        atk: 'defenseDown ? 1.3 : 1',
+        type: 'all'
     },
     550: { // Sadi-chan evolved
         atk: 'defenseDown ? 1.3 : 1',
-        type: 'unknown'
+        type: 'all'
     },
     559: { // SW Franky
         orb: 'orb == 2.0 ? 1.5 : (orb == 0.5 ? 2/3 : 1)'
