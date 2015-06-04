@@ -49,10 +49,8 @@ var deactivateGlowing = function(target,slotNumber) {
 /* * * * * UI events * * * * */
 
 var onUnitMouseUp = function(e) {
-    if (e.target.className == 'unitLevel') return;
-    var x = e.layerX || e.originalEvent.layerX, y = e.layerY || e.originalEvent.layerY;
-    var distance = Math.sqrt(Math.pow(x-20,2)+Math.pow(y-21,2));
-    if ((e.which == 2 || (e.which == 1 && (e.ctrlKey || distance < 13))) && !this.classList.contains('empty'))
+    if (e.target.className == 'unitLevel' || this.classList.contains('empty')) return;
+    if (e.which == 2 || (e.which == 1 && (e.ctrlKey || Utils.isClickOnOrb(e,e.target))))
         changeOrb($(this).index());
 };
 

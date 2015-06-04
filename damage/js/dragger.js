@@ -22,13 +22,19 @@ var moveElement = function(target,byX,byY) {
 /* * * * * Event callbacks (draggables) * * * * */
 
 var onUnitStartMove = function(e) {
-    startingSlot = $(e.target).parent();
-    $('#removeSlot').show();
-    e.target.style.zIndex = 5;
+    if (Utils.isClickOnOrb(e,e.target)) {
+        e.previousSibling();
+        e.stopPropagation();
+    } else {
+        startingSlot = $(e.target).parent();
+        $('#removeSlot').show();
+        e.target.style.zIndex = 5;
+    }
 };
 
 var onUnitMove = function(e) {
-    moveElement(e.target,e.dx,e.dy);
+    if (startingSlot !== null)
+        moveElement(e.target,e.dx,e.dy);
 };
 
 var onUnitEndMove = function(e) {
@@ -37,6 +43,7 @@ var onUnitEndMove = function(e) {
     $('#removeSlot').hide();
     stopPropagation = true;
     coordinates = [ 0, 0 ];
+    startingSlot = false;
 };
 
 var onUnitClick = function(e) {
@@ -50,6 +57,7 @@ var onUnitClick = function(e) {
 /* * * * * Event callbacks (dropzones) * * * * */
 
 var onUnitDragEnter = function(e)  {
+    if (startingSlot === null) return;
     if (e.target.id == 'removeSlot')
         onRemoveZoneEnter(e.relatedTarget);
     else {
@@ -65,6 +73,7 @@ var onUnitDragEnter = function(e)  {
 };
 
 var onUnitDragLeave = function(e) {
+    if (startingSlot === null) return;
     if (e.target.id == 'removeSlot')
         onRemoveZoneLeave(e.relatedTarget);
     else {
@@ -75,6 +84,7 @@ var onUnitDragLeave = function(e) {
 };
 
 var onUnitDrop = function(e) {
+    if (startingSlot === null) return;
     if (e.target.id == 'removeSlot')
         onRemoveZoneDrop(e.relatedTarget);
     else {

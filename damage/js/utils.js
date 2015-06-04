@@ -29,6 +29,12 @@ var createThumbnail = function(n,isSmall,onClick) {
     return result;
 };
 
+var isClickOnOrb = function(e,target) {
+    var x = e.pageX - target.offsetParent.offsetLeft, y = e.pageY - target.offsetParent.offsetTop;
+    var distance = Math.sqrt(Math.pow(x-20,2)+Math.pow(y-21,2));
+    return distance < 13;
+};
+
 /* * * * * Misc functions * * * * */
 
 var arrayProduct = function(data) {
@@ -68,6 +74,7 @@ window.Utils = {
     // thumbnails
     createThumbnail: createThumbnail,
     getThumbnailUrl: getThumbnailUrl,
+    isClickOnOrb: isClickOnOrb,
     // misc
     debounce: debounce,
     arrayProduct: arrayProduct,
