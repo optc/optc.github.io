@@ -49,9 +49,7 @@ var onNumbersCrunched = function(event,numbers) {
 };
 
 var onResetStorage = function() {
-    Object.keys(data).forEach(function(x) {
-        if (x != 'sliders') localStorage.removeItem(x);
-    });
+    localStorage.removeItem('team');
     window.location.reload();
 };
 
