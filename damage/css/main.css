@@ -274,7 +274,7 @@ body, #main, #hp, #other {
     padding: 20px;
 }
 
-li > div {
+#menu li > div {
     display: block;
     padding: 1em 1em 1em 2.5em;
     text-align: left;
@@ -285,7 +285,7 @@ li > div {
             transition: background 0.1s linear;
 }
 
-li > div:not(.menuIcon):hover {
+#menu li > div:not(.menuIcon):hover {
     background: #688aac;
     color: white !important;
     cursor: pointer;
@@ -293,7 +293,7 @@ li > div:not(.menuIcon):hover {
 
 ul { padding-left: 0; }
 
-li {
+#menu li {
     list-style: none;
     border-bottom: 2px solid #34495D;
     position: relative;

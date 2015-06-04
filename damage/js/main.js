@@ -309,7 +309,7 @@ $(function() {
     $('.menu-link').bigSlide({ side: 'left', menuWidth: '16.625em' });
 
     if (localStorage.hasOwnProperty('team') && !localStorage.hasOwnProperty('newClickAlert')) {
-        $.notify('You can now use CTRL+click to toggle orb control','info');
+        Utils.alrt('You can now use CTRL+click to toggle orb control');
         localStorage.setItem('newClickAlert',true);
     }
 

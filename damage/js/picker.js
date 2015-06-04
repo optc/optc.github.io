@@ -50,23 +50,20 @@ var pick = function(event,slotNumber) {
 };
 
 var showInstructions = function() {
-    $.notify([
-        'You can now use operators to refine searches.',
+    Utils.info([
+        'You can use operators to refine searches.',
         'Supported string operators:',
-        '- type:X - shows only units of type X (STR, DEX, ...)',
-        '- class:X - shows only units of class X (fighter, slasher, ...)',
+        '- "type:X": shows only units of type X (STR, DEX, QCK, INT or PSY)',
+        '- "class:X": shows only units of class X (fighter, slasher, striker, shooter, ...)',
         'Supported mathematical operators:',
-        '- hp>X - shows only units with max HP > X',
-        '- atk>X - shows only units with max ATK > X',
-        '- cost>X - shows only units with a cost higher than X',
-        '- stars>X - shows only units with more than X stars',
-        'Mathematical operators also work with <, >=, <= and =',
+        '- "hp>X": shows only units with max HP > X',
+        '- "atk>X": shows only units with max ATK > X',
+        '- "cost>X": shows only units with a cost higher than X',
+        '- "stars>X": shows only units with more than X stars',
+        'Mathematical operators also work with "<", ">=", "<=" and "=".',
         'Example query:',
         'type:str class:fighter hp>1200 atk>1300 cost>20'
-    ].join('\n'),{
-        className: 'info',
-        autoHide: false
-    });
+    ].join('<br>'));
     localStorage.setItem('instructionsShown','true');
     instructionsShown = true;
 };

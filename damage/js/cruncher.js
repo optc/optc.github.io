@@ -325,7 +325,7 @@ var createFunctions = function(data) {
     var result = { };
     for (var key in data) {
         if (data[key] === undefined)
-            $.notify("The unit you selected has a strange ass ability that can't be parsed correctly yet");
+            Utils.warn("The unit you selected has a strange ass ability that can't be parsed correctly yet",'captains');
         else if (key == 'atk' || key == 'hitAtk' || key == 'hp' || key == 'chainModifier' || key == 'orb')
             result[key] = new Function('unit','chainPosition','currentHP','maxHP','percHP','modifier','defenseDown','orb','return ' + data[key]);
         else if (key == 'def')
@@ -417,7 +417,7 @@ var onSpecialToggled = function(event,slotNumber,enabled) {
     else enabledSpecials[slotNumber] = createFunctions(specials[team[slotNumber].unit.number+1]);
     computeActualDefense();
     if (computeSpecialsCombinations())
-        window.uff = $.notify('Two or more specials you selected are incompatible with each other.','warn');
+        Utils.warn('Two or more specials you selected are incompatible with each other.','specials');
     crunch();
 };
 
