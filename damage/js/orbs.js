@@ -5,15 +5,6 @@ var team = [ null, null, null, null, null, null ];
 var orbs = null; 
 var edge = true;
 
-var updateOrbs = function() {
-    for (var i=0;i<team.length;++i) {
-        if (team[i] === null || team[i].status === 0) continue;
-        if (edge) orbs.eq(i).addClass('glowing');
-        else orbs.eq(i).removeClass('glowing');
-    }
-    edge = !edge;
-};
-
 var getGlowColor = function(type,status) {
     if (status == 1) return type.toLowerCase();
     if (type == 'STR') return 'qck';
@@ -28,27 +19,28 @@ var changeOrb = function(slotNumber) {
     var target = $($('.unit')[slotNumber]);
     var color = getGlowColor(team[slotNumber].type,status);
     team[slotNumber].status = status;
-    if (status === 0) deactivateGlowing(target,slotNumber);
-    else activateGlowing(target,slotNumber,color);
+    if (status === 0) deactivateOrb(target,slotNumber);
+    else activateOrb(target,slotNumber,color);
     var multiplier = (status === 0 ? 1 : status == 1 ? 2 : 0.5);
     $(document).trigger('orbMultiplierChanged',[ slotNumber, multiplier ]);
 };
 
 /* * * * * UI control * * * * */
 
-var activateGlowing = function(target,slotNumber,type) {
-    target.addClass('glowing');
+var activateOrb = function(target,slotNumber,type) {
     target.attr('glow',type);
     var orb = target.find('.unitOrb');
-    var status = orb.children().length;
-    if (status === 0) orb.append($('<div class="upArrow"></div>'));
-    else orb.children()[0].className = 'downArrow';
+    var className = team[slotNumber].status == 1 ? 'upArrow' : 'downArrow';
+    if (orb.children().length === 0) orb.append($('<div class="' + className + '"></div>'));
+    else orb.children()[0].className = className;
+    if (team[slotNumber].status == 1) orb.parent().parent().removeClass('opposite');
+    else orb.parent().parent().addClass('opposite');
 };
 
-var deactivateGlowing = function(target,slotNumber) {
-    target.removeClass('glowing');
+var deactivateOrb = function(target,slotNumber) {
     target.attr('glow',null);
     target.find('.unitOrb').children().eq(0).remove();
+    target.removeClass('opposite');
 };
 
 /* * * * * UI events * * * * */
@@ -60,30 +52,30 @@ var onUnitMouseUp = function(e) {
 };
 
 var onUnitsSwitched = function(event,slotA,slotB) {
-    // deactivate glowing
-    deactivateGlowing($('.unit').eq(slotB),slotB);
-    deactivateGlowing($('.unit').eq(slotA),slotA);
+    // deactivate orb
+    deactivateOrb($('.unit').eq(slotB),slotB);
+    deactivateOrb($('.unit').eq(slotA),slotA);
     // switch data
     var teamA = team[slotA];
     team[slotA] = team[slotB];
     team[slotB] = teamA;
-    // reactivate glowing if necessary
+    // reactivate orb if necessary
     if (team[slotA] && team[slotA].status > 0)
-        activateGlowing($('.unit').eq(slotA),slotA,getGlowColor(team[slotA].type,team[slotA].status));
+        activateOrb($('.unit').eq(slotA),slotA,getGlowColor(team[slotA].type,team[slotA].status));
     if (team[slotB] && team[slotB].status > 0)
-        activateGlowing($('.unit').eq(slotB),slotB,getGlowColor(team[slotB].type,team[slotB].status));
+        activateOrb($('.unit').eq(slotB),slotB,getGlowColor(team[slotB].type,team[slotB].status));
 };
 
 var onUnitRemoved = function(event,slotNumber) {
     team[slotNumber] = null;
-    deactivateGlowing($('.unit').eq(slotNumber),slotNumber);
+    deactivateOrb($('.unit').eq(slotNumber),slotNumber);
 };
 
 /* * * * * Events * * * * */
 
 $(document).on('unitPicked',function(event,slotNumber,unitNumber) {
     team[slotNumber] = { type: units[unitNumber].type, status: 0 };
-    deactivateGlowing($('.unit').eq(slotNumber),slotNumber);
+    deactivateOrb($('.unit').eq(slotNumber),slotNumber);
 });
 
 $(document).on('unitsSwitched',onUnitsSwitched);
@@ -94,8 +86,6 @@ $(function() {
     orbs = $('#units > .unit');
 
     $('.unit').mouseup(onUnitMouseUp);
-
-    setInterval(updateOrbs,1000);
 
 });
 

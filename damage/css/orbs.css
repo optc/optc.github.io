@@ -1,48 +1,6 @@
-.unitPortrait {
-    -webkit-transition: border 1.0s linear, box-shadow 1.0s linear;
-       -moz-transition: border 1.0s linear, box-shadow 1.0s linear;
-            transition: border 1.0s linear, box-shadow 1.0s linear;
-}
-
 .unit:not([glow]) .unitOrb {
     display: none;
 }
-
-.glowing[glow="str"] > .unitPortrait {
-    -webkit-box-shadow: 0 0 20px red;
-       -moz-box-shadow: 0 0 20px red;
-            box-shadow: 0 0 20px red;
-}
-
-.glowing[glow="qck"] > .unitPortrait {
-    -webkit-box-shadow: 0 0 20px blue;
-       -moz-box-shadow: 0 0 20px blue;
-            box-shadow: 0 0 20px blue;
-}
-
-.glowing[glow="dex"] > .unitPortrait {
-    -webkit-box-shadow: 0 0 20px green;
-       -moz-box-shadow: 0 0 20px green;
-            box-shadow: 0 0 20px green;
-}
-
-.glowing[glow="psy"] > .unitPortrait {
-    -webkit-box-shadow: 0 0 20px darkorange;
-       -moz-box-shadow: 0 0 20px darkorange;
-            box-shadow: 0 0 20px darkorange;
-}
-
-.glowing[glow="int"] > .unitPortrait {
-    -webkit-box-shadow: 0 0 20px purple;
-       -moz-box-shadow: 0 0 20px purple;
-            box-shadow: 0 0 20px purple;
-}
-
-[glow="str"] > .unitPortrait { outline: 1px red solid !important; }
-[glow="qck"] > .unitPortrait { outline: 1px blue solid !important; }
-[glow="dex"] > .unitPortrait { outline: 1px green solid !important; }
-[glow="psy"] > .unitPortrait { outline: 1px orange solid !important; }
-[glow="int"] > .unitPortrait { outline: 1px purple solid !important; }
 
 .unitOrb {
     position: absolute;
@@ -102,3 +60,46 @@
     background-image: url("data:image/svg+xml,<svg viewBox='0 0 30 30' preserveAspectRatio='true' xmlns='http://www.w3.org/2000/svg'><path fill='rgb(255,255,255)' d='M8.037,11.166L14.5,22.359c0.825,1.43,2.175,1.43,3,0l6.463-11.194c0.826-1.429,0.15-2.598-1.5-2.598H9.537C7.886,8.568,7.211,9.737,8.037,11.166z'/></svg>") !important;
     top: -1px;
 }
+
+/***********************
+ *     ORB GLOWING     *
+ ***********************/
+
+.unit[glow="str"]:not(.opposite) .unitOrb { animation: glowRed .5s linear infinite alternate; }
+.unit[glow="dex"]:not(.opposite) .unitOrb { animation: glowGreen .5s linear infinite alternate; }
+.unit[glow="qck"]:not(.opposite) .unitOrb { animation: glowBlue .5s linear infinite alternate; }
+.unit[glow="psy"]:not(.opposite) .unitOrb { animation: glowOrange .5s linear infinite alternate; }
+.unit[glow="int"]:not(.opposite) .unitOrb { animation: glowPurple .5s linear infinite alternate; }
+
+.unit[glow].opposite .unitOrb { animation: glowBlack .5s linear infinite alternate; }
+
+@keyframes glowRed {
+    from { box-shadow 0 0 10px white, 0 0 20px white, 0 0 30px white, 0 0 40px red, 0 0 70px red, 0 0 80px red, 0 0 100px red, 0 0 150px red; }
+    to { box-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px white, 0 0 20px red, 0 0 35px red, 0 0 40px red, 0 0 50px red, 0 0 75px red; }
+}
+
+@keyframes glowBlue {
+    from { box-shadow 0 0 10px white, 0 0 20px white, 0 0 30px white, 0 0 40px blue, 0 0 70px blue, 0 0 80px blue, 0 0 100px blue, 0 0 150px blue; }
+    to { box-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px white, 0 0 20px blue, 0 0 35px blue, 0 0 40px blue, 0 0 50px blue, 0 0 75px blue; }
+}
+
+@keyframes glowGreen {
+    from { box-shadow 0 0 10px white, 0 0 20px white, 0 0 30px white, 0 0 40px green, 0 0 70px green, 0 0 80px green, 0 0 100px green, 0 0 150px green; }
+    to { box-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px white, 0 0 20px green, 0 0 35px green, 0 0 40px green, 0 0 50px green, 0 0 75px green; }
+}
+
+@keyframes glowOrange {
+    from { box-shadow 0 0 10px white, 0 0 20px white, 0 0 30px white, 0 0 40px orange, 0 0 70px orange, 0 0 80px orange, 0 0 100px orange, 0 0 150px orange; }
+    to { box-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px white, 0 0 20px orange, 0 0 35px orange, 0 0 40px orange, 0 0 50px orange, 0 0 75px orange; }
+}
+
+@keyframes glowPurple {
+    from { box-shadow 0 0 10px white, 0 0 20px white, 0 0 30px white, 0 0 40px purple, 0 0 70px purple, 0 0 80px purple, 0 0 100px purple, 0 0 150px purple; }
+    to { box-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px white, 0 0 20px purple, 0 0 35px purple, 0 0 40px purple, 0 0 50px purple, 0 0 75px purple; }
+}
+
+@keyframes glowBlack {
+    from { box-shadow 0 0 10px black, 0 0 20px black, 0 0 30px black, 0 0 40px black, 0 0 70px black, 0 0 80px black, 0 0 100px black, 0 0 150px black; }
+    to { box-shadow: 0 0 5px black, 0 0 10px black, 0 0 15px black, 0 0 20px black, 0 0 35px black, 0 0 40px black, 0 0 50px black, 0 0 75px black; }
+}
+
