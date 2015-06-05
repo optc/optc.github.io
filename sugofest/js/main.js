@@ -1,6 +1,3 @@
-//TODO (maybe) (thanks peter ward) : 20% opacity sunshine thing behind gabe.
-//TODO each click loads more images
-
 $(function() {
 
     var units = [ 1, 2, 5, 9, 17, 18, 17, 18, 17, 18, 17, 18, 27, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31,
@@ -8,15 +5,20 @@ $(function() {
         61, 61, 225, 225, 225, 225, 225, 225, 225, 225, 233, 315, 327, 329, 332, 26, 26, 25, 25, 24, 24,
         41, 42, 54, 54, 54, 54, 56, 56, 56, 56, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 64, 64, 64, 64 ];
 
-    // We poll these variables while the wallet is being prepared
-    var gabeReady = false;
-    var audioReady = false;
+    var boss = 367;
+    var bossChance = 1/300;
+    var bossDuration = 18750;
 
-    // The carefully, lovingly determined percentages which his holiness removes from the prices of his products.
-    var MAIN_RANGE = 8;
-    var TROLL_RANGE = 0;
+    var audioStopped = false;
+    var started = false, stopped = false;
 
-    // lolsorandom
+    var rainBox = $('.rain-box');
+    var pageWidth = $('body').width(), maxDrops = (pageWidth/70)*4;
+
+    var bossInterval = null;
+
+    /* * * * * */
+
     var randomChoice = function(list) {
         return list[Math.floor(Math.random()*list.length)];
     };
@@ -25,35 +27,29 @@ $(function() {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     };
 
+    /* * * * * */
+
     var startRain = function () {
 
-        // When the image of his holiness loads, show it and animate it.
-        var $saleBox = $('.sale-box');
-        // How long in ms to wait until adding another sale box.
         var interval = 200;
-        var numSales = 0;
+        var dropCount = 0;
 
-        // Adds a sale box at a random x position.
-        var addSale = function() {
-            // Get the width every time we add a sale to account for dynamic widths.
-            // Thanks ocbaker on github for finding this bug.
-            var pageWidth = $('body').width();
-            var maxSales = (pageWidth/70)*3;
-            var xPos = getRandomInt(0, pageWidth - 112);
-            var percentOff = Math.floor(Math.random() * MAIN_RANGE);
-            // Just copy the hidden box we had at page load time to make a new box.
-            var newSale = $saleBox.clone().show();
+        var addDrop = function() {
 
-            newSale.css("background-image","url('http://onepiece-treasurecruise.com/wp-content/uploads/f" + ('0000' + randomChoice(units)).slice(-4) + ".png')");
+            if (stopped) return;
 
-            newSale.css("left", xPos);
-            $('body').append(newSale);
+            var x = getRandomInt(0, pageWidth - 112), drop = rainBox.clone().show();
 
-            //Only have maxSales sale boxes onscreen at once.
-            if (numSales < maxSales) {
-                // Add a new sale box later.
-                window.setTimeout(addSale, interval * (1 + Math.random()));
-                numSales++;
+            drop.css("background-image","url('http://onepiece-treasurecruise.com/wp-content/uploads/f" +
+                    ('0000' + randomChoice(units)).slice(-4) + ".png')");
+
+            drop.css("left", x);
+
+            $('body').append(drop);
+
+            if (dropCount < maxDrops) {
+                window.setTimeout(addDrop, interval * (1 + Math.random()));
+                dropCount++;
             }
 
         };
@@ -63,57 +59,108 @@ $(function() {
             interval = Math.max(10, interval - 10);
         }, 500);
 
-        window.setTimeout(addSale, 2*1000);
+        window.setTimeout(addDrop, !started ? 1500 : 2*1000);
 
     };
 
-    var startGabe = function() {
+    var startBossCheck = function() {
+        bossInterval = setInterval(function() {
+            var n = getRandomInt(0,1/bossChance);
+            if (n != 1) return;
+            bossAppears();
+        },1000);
+    };
+
+    var startForeground = function() {
         $('div.gag').show();
         $('div.gag').addClass('gag-animation');
     };
 
-    var praiseBeToGaben = function () {
-        $('div.prepare-gag').hide();
-        startGabe();
-        startRain();
-        $audio.trigger('play');
-        window.setTimeout(function() {
+    var startAudio = function() {
+        audioStopped = false;
+        $('audio')[0].play();
+    };
+
+    var startBossAudio = function() {
+        $('#bossAudio')[0].currentTime = 0;
+        $('#bossAudio')[0].play();
+    };
+
+    /* * * * * */
+
+    var stopRain = function() {
+        $('.rain-box[style*="background"]').remove();
+    };
+
+    var stopBossCheck = function() {
+        clearInterval(bossInterval);
+    };
+
+    var stopAudio = function() {
+        audioStopped = true;
+        $('audio')[0].pause();
+    };
+
+    var stopBossAudio = function() {
+        $('#bossAudio')[0].pause();
+    };
+
+    /* * * * * */
+
+    var bossAppears = function() {
+        stop();
+        // add boss
+        var drop = rainBox.clone().show();
+        drop.addClass('boss');
+        var div = $('<div></div>');
+        div.css("background-image","url('http://onepiece-treasurecruise.com/wp-content/uploads/f" +
+                    ('0000' + boss).slice(-4) + ".png')");
+        drop.append(div);
+        drop.css("left",(Math.floor((pageWidth-112)/2) - 56) + 'px');
+        drop.append($('.sunburst').clone());
+        $('body').append(drop);
+        // add boss audio
+        startBossAudio();
+        // add sunburst
+        $('.sunburst.boss').show();
+        // set timeout for removal
+        setTimeout(function() {
+            drop.remove();
+            start();
+            $('.sunburst.boss').hide();
+        },bossDuration);
+    };
+
+    /* * * * * */
+
+    window.start = function () {
+        if (!started) startForeground();
+        if (!started) startRain();
+        if (stopped) stopBossAudio();
+        startBossCheck();
+        startAudio();
+        if (!started) window.setTimeout(function() {
             $('div.sunburst').fadeIn(4000);
-        } , 8000);
+        }, 8000);
+        started = true;
+        stopped = false;
     };
 
-    $gabe = $('div.gag > img');
-    //Even if we loaded from cache, praise be. Nothing can cache his holiness forever.
-    if ($gabe[0].complete) {
-        gabeReady = true;
-    }
-    else {
-        $gabe.load(function () {
-            gabeReady = true;
-        });
-    }
+    window.stop = function () {
+        stopBossCheck();
+        stopAudio();
+        stopBossAudio();
+        stopped = true;
+        started = false;
+    };
 
-    $audio = $('audio');
-    $audio.on('loadedmetadata', function() {
-        audioReady = true;
-    });
-    $audio.on('ended', function() {
+    /* * * * * */
+
+    $('audio').on('ended', function() {
         this.currentTime = 0;
-        this.play();
+        if (!audioStopped) this.play();
     });
 
-    var prepareWallet = function() {
-        if (gabeReady && audioReady) {
-            $('.prepare-loader').css('max-height', $('.prepare-loader > img').height() / 3 + 'px');
-            window.setTimeout(praiseBeToGaben, 1000);
-        } else {
-            window.setTimeout(prepareWallet, 100);
-        }
-    };
-
-    prepareWallet();
+    start();
 
 });
-
-
-
