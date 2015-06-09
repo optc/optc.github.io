@@ -6,14 +6,14 @@ $(function() {
         41, 42, 54, 54, 54, 54, 56, 56, 56, 56, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 64, 64, 64, 64 ];
 
     var boss = 367;
-    var bossChance = 1/300;
+    var bossChance = 1/500;
     var bossDuration = 18750;
 
     var audioStopped = false;
     var started = false, stopped = false;
 
     var rainBox = $('.rain-box');
-    var pageWidth = $('body').width(), maxDrops = (pageWidth/70)*4;
+    var pageWidth = $('body').width(), maxDrops = (pageWidth/70)*5;
 
     var bossInterval = null;
 
@@ -36,14 +36,11 @@ $(function() {
 
         var addDrop = function() {
 
-            if (stopped) return;
-
-            var x = getRandomInt(0, pageWidth - 112), drop = rainBox.clone().show();
+            var drop = rainBox.clone().show();
 
             drop.css("background-image","url('http://onepiece-treasurecruise.com/wp-content/uploads/f" +
-                    ('0000' + randomChoice(units)).slice(-4) + ".png')");
-
-            drop.css("left", x);
+                ('0000' + randomChoice(units)).slice(-4) + ".png')");
+            drop.css('left',getRandomInt(0,pageWidth-112));
 
             $('body').append(drop);
 
@@ -51,6 +48,12 @@ $(function() {
                 window.setTimeout(addDrop, interval * (1 + Math.random()));
                 dropCount++;
             }
+
+            window.setInterval(function() {
+                drop.css("background-image","url('http://onepiece-treasurecruise.com/wp-content/uploads/f" +
+                    ('0000' + randomChoice(units)).slice(-4) + ".png')");
+                drop.css('left',getRandomInt(0,pageWidth-112));
+            },3000);
 
         };
 
@@ -87,10 +90,6 @@ $(function() {
     };
 
     /* * * * * */
-
-    var stopRain = function() {
-        $('.rain-box[style*="background"]').remove();
-    };
 
     var stopBossCheck = function() {
         clearInterval(bossInterval);
@@ -151,7 +150,6 @@ $(function() {
         stopAudio();
         stopBossAudio();
         stopped = true;
-        started = false;
     };
 
     /* * * * * */

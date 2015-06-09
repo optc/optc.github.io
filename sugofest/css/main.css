@@ -211,13 +211,15 @@ div.rain-box.disabled {
 @-webkit-keyframes boss {
     0% { top: -112px; }
     30% { top: 45%; }
-    100% { top: 45%; }
+    95% { top: 45%; }
+    100% { top: 200%; }
 } 
 
 @keyframes boss {
     0% { top: -112px; }
     30% { top: 45%; }
-    100% { top: 45%; }
+    95% { top: 45%; }
+    100% { top: 200%; }
 }
 
 /******************************
