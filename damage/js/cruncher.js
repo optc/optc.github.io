@@ -353,6 +353,7 @@ var onUnitPick = function(event,slotNumber,unitNumber) {
     team[slotNumber] = { unit: units[unitNumber], level: 1, orb: 1 };
     if (slotNumber < 2) setCaptain(slotNumber);
     enabledSpecials[slotNumber] = null;
+    computeSpecialsCombinations();
     crunch();
 };
 
@@ -400,6 +401,7 @@ var onUnitRemoved = function(event,slotNumber) {
     team[slotNumber] = null;
     if (slotNumber < 2) captainAbilities[slotNumber] = null;
     enabledSpecials[slotNumber] = null;
+    computeSpecialsCombinations();
     crunch();
 };
 

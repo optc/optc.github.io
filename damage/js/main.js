@@ -208,6 +208,9 @@ var onNumbersCrunched = function(event,numbers) {
         changeMaxHP(numbers.HP,true);
     // update titles
     updateTitles(numbers.team);
+    // surprise
+    if (numbers.PSY >= 750000) $('#surprise').addClass('active');
+    else $('#surprise').removeClass('active');
 };
 
 var onMerryBonusUpdated = function(event,merry) {

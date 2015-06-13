@@ -355,3 +355,17 @@ li.disabled {
 #loadIcon {
     background-image: url("data:image/svg+xml,<svg viewBox='0 0 512 512' preserveAspectRatio='true' xmlns='http://www.w3.org/2000/svg'><path fill='rgb(255,255,255)' d='M256,10.24C120.271,10.24,10.24,120.271,10.24,256S120.271,501.76,256,501.76S501.76,391.729,501.76,256 S391.729,10.24,256,10.24z M381.44,373.003L256.002,246.399L130.56,373.003V265.611l125.442-126.614L381.44,265.611V373.003z'/></svg>") !important;
 }
+
+/* Surprise */
+
+#surprise {
+    position: fixed;
+    right: -202px;
+    bottom: -200px;
+    transition: all .5s linear;
+}
+
+#surprise.active {
+    right: -50px;
+    bottom: -50px;
+}
