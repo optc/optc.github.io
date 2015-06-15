@@ -60,6 +60,8 @@ var crunchingEnabled = true;
 
 var specialsCombinations = [ ];
 
+var customModifiers = null;
+
 /* * * * * Crunching * * * * */
 
 var crunch = function() {
@@ -110,19 +112,20 @@ var crunchForType = function(type,withDetails) {
      * 3rd scenario: both captains with hit modifiers
      * -> We need to check which hit modifiers (the captains' or the default ones) return the highest damage (3 checks)
      * -> The effect of each captain only applies if their modifiers are the same as the ones being used during the check
+     * 4th scenario: the user specified custom modifiers, we'll just use those and ignore the rest
      */
     var captainsWithHitModifiers = abilities.filter(function(x) { return x.hasOwnProperty('hitModifiers'); });
     var captainsWithChainModifiers = abilities.filter(function(x) { return x.hasOwnProperty('chainModifier'); });
     // get data struct ready
     var data = [ damage ];
-    for (i=0;i<captainsWithHitModifiers.length;++i) data.push(damage);
+    for (i=0;i<captainsWithHitModifiers.length && !customModifiers;++i) data.push(damage);
     // compute damages
-    for (i=0;i<data.length;++i) {
-        var modifiers = (i === 0 ? DEFAULT_HIT_MODIFIERS : captainsWithHitModifiers[i-1].hitModifiers);
+    for (i=0;i === 0 || (i<data.length && !customModifiers);++i) {
+        var modifiers = customModifiers || (i === 0 ? DEFAULT_HIT_MODIFIERS : captainsWithHitModifiers[i-1].hitModifiers);
         // apply compatible captain effects
-        for (var j=1;j<data.length;++j) {
-            if (!arraysAreEqual(modifiers,captainsWithHitModifiers[j-1].hitModifiers)) continue;
-            data[i] = applyCaptainEffectToDamage(data[i],captainsWithHitModifiers[j-1].hitAtk);
+        for (var j=0;j<captainsWithHitModifiers.length;++j) {
+            if (!customModifiers && !arraysAreEqual(modifiers,captainsWithHitModifiers[j].hitModifiers)) continue;
+            data[i] = applyCaptainEffectToDamage(data[i],captainsWithHitModifiers[j].hitAtk,modifiers);
         }
         var damageWithChainMultipliers = applyChainAndBonusMultipliers(data[i],modifiers,captainsWithChainModifiers);
         var overallDamage = damageWithChainMultipliers.result.reduce(function(prev,x) { return prev + x[1]; },0);
@@ -190,10 +193,10 @@ var applyChainAndBonusMultipliers = function(damage,modifiers,captains) {
     return { result: result, chainMultipliers: multipliersUsed };
 };
 
-var applyCaptainEffectToDamage = function(damage,func) {
+var applyCaptainEffectToDamage = function(damage,func,modifiers) {
     return damage.map(function(x,n) {
         var unit = x[0], damage = x[1], order = x[2];
-        damage *= func(unit.unit,n,currentHP,maxHP,percHP,null,null,unit.orb);
+        damage *= func(unit.unit,n,currentHP,maxHP,percHP,null,null,unit.orb,modifiers);
         return [ unit, damage, order ];
     });
 };
@@ -327,7 +330,8 @@ var createFunctions = function(data) {
         if (data[key] === undefined)
             Utils.warn("The unit you selected has a strange ass ability that can't be parsed correctly yet",'captains');
         else if (key == 'atk' || key == 'hitAtk' || key == 'hp' || key == 'chainModifier' || key == 'orb')
-            result[key] = new Function('unit','chainPosition','currentHP','maxHP','percHP','modifier','defenseDown','orb','return ' + data[key]);
+            result[key] = new Function('unit','chainPosition','currentHP','maxHP','percHP','modifier',
+                    'defenseDown','orb','modifiers','return ' + data[key]);
         else if (key == 'def')
             result[key] = new Function('return ' + data[key]);
         else
@@ -354,11 +358,13 @@ var onUnitPick = function(event,slotNumber,unitNumber) {
     if (slotNumber < 2) setCaptain(slotNumber);
     enabledSpecials[slotNumber] = null;
     computeSpecialsCombinations();
+    customModifiers = null;
     crunch();
 };
 
 var onLevelChange = function(event,slotNumber,level) {
     team[slotNumber].level = level;
+    customModifiers = null;
     crunch();
 };
 
@@ -377,11 +383,13 @@ var onHpChange = function(event,current,max,perc) {
     currentHP = current;
     maxHP = max;
     percHP = perc;
+    customModifiers = null;
     crunch();
 };
 
 var onOrbMultiplierChanged = function(event,slotNumber,multiplier) {
     team[slotNumber].orb = multiplier;
+    customModifiers = null;
     crunch();
 };
 
@@ -394,6 +402,7 @@ var onUnitsSwitched = function(event,slotA,slotB) {
     var specialA = enabledSpecials[slotA];
     enabledSpecials[slotA] = enabledSpecials[slotB];
     enabledSpecials[slotB] = specialA;
+    customModifiers = null;
     crunch();
 };
 
@@ -402,11 +411,17 @@ var onUnitRemoved = function(event,slotNumber) {
     if (slotNumber < 2) captainAbilities[slotNumber] = null;
     enabledSpecials[slotNumber] = null;
     computeSpecialsCombinations();
+    customModifiers = null;
     crunch();
 };
 
 var onDetailsRequested = function(event,type) {
     $(document).trigger('detailsReady',crunchForType(type.toUpperCase(),true));
+};
+
+var onCustomModifiers = function(event,data) {
+    customModifiers = data;
+    crunch();
 };
 
 var onCrunchToggled = function(event,enabled) {
@@ -420,6 +435,7 @@ var onSpecialToggled = function(event,slotNumber,enabled) {
     computeActualDefense();
     if (computeSpecialsCombinations())
         Utils.warn('Two or more specials you selected are incompatible with each other.','specials');
+    customModifiers = null;
     crunch();
 };
 
@@ -440,7 +456,13 @@ $(document).on('unitsSwitched',onUnitsSwitched);
 $(document).on('unitRemoved',onUnitRemoved);
 // details
 $(document).on('detailsRequested',onDetailsRequested);
+$(document).on('customModifiers',onCustomModifiers);
 // specials
 $(document).on('specialToggled',onSpecialToggled);
+
+// required by certain captain effects
+Array.prototype.subcheck = function(slice,subarray) {
+    return this.slice(0,slice).join('!').indexOf(subarray.join('!')) != -1;
+};
 
 })();

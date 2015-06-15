@@ -151,8 +151,8 @@ window.captains = {
         atk: 'unit.class == "Striker" ? 1.5 : 1'
     },
     217: { // Monkey D. Luffy Gear Third
-        hitAtk: 'chainPosition > 2 ? 3.5 : 1',
-        hitModifiers: [ 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect' ] // don't remove this
+        hitAtk: 'modifiers.subcheck(chainPosition,[ "Perfect", "Perfect", "Perfect" ]) ? 3.5 : 1',
+        hitModifiers: [ 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect' ], // don't remove this
     },
     220: { // Nami Fine Tempo
         atk: 'unit.type == "INT" ? 2 : 1'
@@ -167,11 +167,11 @@ window.captains = {
         atk: 'unit.type == "PSY" ? 1.5 : 1'
     },
     224: { // Mr. Prince Mutton Shot
-        hitAtk: 'chainPosition > 1 ? 2 : 1',
+        hitAtk: 'modifiers.subcheck(chainPosition,[ "Perfect", "Perfect" ]) ? 2 : 1',
         hitModifiers: [ 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect' ] // don't remove this
     },
     225: { // Mr. Prince Veau Shot
-        hitAtk: 'chainPosition > 1 ? 2.5 : 1',
+        hitAtk: 'modifiers.subcheck(chainPosition,[ "Perfect", "Perfect" ]) ? 2.5 : 1',
         hitModifiers: [ 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect' ] // don't remove this
     },
     226: { // Dracule Mihawk
@@ -297,11 +297,11 @@ window.captains = {
         atk: 'unit.type == "DEX" ? 2.5 : 1'
     },
     311: { // Killer
-        hitAtk: 'chainPosition > 2 ? 3.5 : 1',
+        hitAtk: 'modifiers.subcheck(chainPosition,[ "Miss", "Miss", "Miss" ]) ? 3.5 : 1',
         hitModifiers: [ 'Miss', 'Miss', 'Miss', 'Perfect', 'Perfect', 'Perfect' ]
     },
     312: { // Massacre Soldier Killer
-        hitAtk: 'chainPosition > 2 ? 3.5 : 1',
+        hitAtk: 'modifiers.subcheck(chainPosition,[ "Miss", "Miss", "Miss" ]) ? 3.5 : 1',
         hitModifiers: [ 'Miss', 'Miss', 'Miss', 'Perfect', 'Perfect', 'Perfect' ]
     },
     313: { // Urouge
@@ -439,11 +439,11 @@ window.captains = {
         atk: 'unit.type == "QCK" ? 1.5 : 1'
     },
     397: { // Mr.4
-        hitAtk: 'chainPosition == 5 ? 3 : 1',
+        hitAtk: 'modifiers.subcheck(chainPosition,[ "Perfect", "Perfect", "Perfect", "Perfect", "Perfect" ]) ? 3 : 1',
         hitModifiers: [ 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect' ] // don't remove this
     },
     398: { // Mr.4 evolved
-        hitAtk: 'chainPosition == 5 ? 4 : 1',
+        hitAtk: 'modifiers.subcheck(chainPosition,[ "Perfect", "Perfect", "Perfect", "Perfect", "Perfect" ]) ? 4 : 1',
         hitModifiers: [ 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect' ] // don't remove this
     },
     399: { // Miss Doublefinger
@@ -767,11 +767,11 @@ window.captains = {
         atk: '1.2'
     },
     549: { // Sadi-chan
-        hitAtk: 'chainPosition > 2 ? 2 : 1',
+        hitAtk: 'modifiers.subcheck(chainPosition,[ "Perfect", "Perfect", "Perfect" ]) ? 2 : 1',
         hitModifiers: [ 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect' ] // don't remove this
     },
     550: { // Sadi-chan evolved
-        hitAtk: 'chainPosition > 2 ? 2 : 1',
+        hitAtk: 'modifiers.subcheck(chainPosition,[ "Perfect", "Perfect", "Perfect" ]) ? 2.5 : 1',
         hitModifiers: [ 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect' ] // don't remove this
     },
     553: { // SW Zoro
@@ -834,11 +834,11 @@ window.captains = {
         atk: '1.5'
     },
     577: { // Record of Voyage Luffy
-        hitAtk: 'chainPosition > 2 ? 4 : 1',
+        hitAtk: 'modifiers.subcheck(chainPosition,[ "Good", "Great", "Perfect" ]) ? 4 : 1',
         hitModifiers: [ 'Good', 'Great', 'Perfect', 'Perfect', 'Perfect', 'Perfect' ]
     },
     578: { // Dream of Voyage Luffy
-        hitAtk: 'chainPosition > 2 ? 4 : 1',
+        hitAtk: 'modifiers.subcheck(chainPosition,[ "Good", "Great", "Perfect" ]) ? 4 : 1',
         hitModifiers: [ 'Good', 'Great', 'Perfect', 'Perfect', 'Perfect', 'Perfect' ]
     },
     579: { // Record of Voyage Zoro

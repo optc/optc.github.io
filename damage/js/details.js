@@ -6,24 +6,34 @@ var zIndex = 1;
 
 var timeout = null;
 
+var currentModifiers = [ null, null, null, null, null, null ];
+var modifiers = [ 'Miss', 'Good', 'Great', 'Perfect' ];
+
 /* * * * * UI callbacks * * * * */
 
 var onDamageClick = function(e) {
     target = $(this);
     if (!target.hasClass('details')) {
-        target[0].style.zIndex = 2;
+        target[0].style.zIndex = ++zIndex;
         detailsVisible = target.find('[id]').attr('id');
         timeout = setTimeout(function() {
             $(document).trigger('detailsRequested',detailsVisible);
-        },1000);
-    } else {
-        if (timeout !== null) clearTimeout(timeout);
-        detailsVisible = null;
-        target.find('.detailsContainer').remove();
-        var temp = target[0];
-        setTimeout(function() { temp.style.zIndex = 1; },1000);
-    }
+        },500);
         target.toggleClass('details');
+    } else {
+        var parent = e.target.parentNode;
+        if (e.which != 2 || parent.className != 'turnContainer') {
+            if (timeout !== null) clearTimeout(timeout);
+            detailsVisible = null;
+            target.find('.detailsContainer').remove();
+            var temp = target[0];
+            target.toggleClass('details');
+        } else if (e.which == 2 && parent.className == 'turnContainer') {
+            var index = $(parent).index() / 2;
+            currentModifiers[index] = modifiers[(modifiers.indexOf(currentModifiers[index])+1)%4];
+            $(document).trigger('customModifiers',[ currentModifiers ]);
+        }
+    }
 };
 
 var getTypeOfHit = function(position,currentMultiplier,nextMultiplier) {
@@ -40,13 +50,15 @@ var formatNumber = function(n) {
 };
 
 var appendElements = function(target,turn,damageDealer,type,damage,multiplier) {
-    target.append($('<div class="onTurn"></div>').text('#' + turn + ' (' + type + ' / ' + multiplier + 'x chain)'));
+    var container = $('<div class="turnContainer"></div>');
+    target.append(container);
+    container.append($('<div class="onTurn"></div>').text('#' + turn + ' (' + type + ' / ' + multiplier + 'x chain)'));
     var dealerDiv = $('<div class="damageDealer">&nbsp;</div>');
-    target.append(dealerDiv);
+    container.append(dealerDiv);
     dealerDiv.dotdotdot();
     dealerDiv.text(damageDealer);
     dealerDiv.attr('title',damageDealer);
-    target.append($('<div class="unitDamage"></div>').text(formatNumber(Math.round(damage))));
+    container.append($('<div class="unitDamage"></div>').text(formatNumber(Math.round(damage))));
     target.append($('<hr></hr>'));
 
 };
@@ -62,6 +74,7 @@ var onDetailsReady = function(event,details) {
     target.find('.detailsContainer').remove();
     var container = $('<div class="detailsContainer"></div>');
     target.append(container);
+    currentModifiers = JSON.parse(JSON.stringify(details.modifiers));
     details.order.forEach(function(data,n) {
         var dealer = data[0].unit.name, type = details.modifiers[n], multiplier = details.multipliers[n];
         multiplier = Math.round(multiplier * 100) / 100;

@@ -7,7 +7,7 @@
 .damage {
     cursor: pointer;
     position: absolute;
-    transition: top 1s, height 1s;
+    transition: top .5s, height .5s;
     height: 60px;
     z-index: 1;
     user-select: none;
@@ -62,4 +62,8 @@ hr {
 
 .detailsContainer {
     width: 100%;
+}
+
+.turnContainer:hover {
+    background-color: rgba(0,0,0,0.1);
 }
