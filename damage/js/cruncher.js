@@ -44,7 +44,6 @@
  */
 
 var DEFAULT_HIT_MODIFIERS = [ 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect' ]; 
-var DEFENSE_THRESHOLD = 10000;
 
 var team = [ null, null, null, null, null, null ];
 var enabledSpecials = [ null, null, null, null, null, null ];
@@ -227,42 +226,48 @@ var applySpecialMultipliers = function(damage,isDefenseDown) {
     return result;
 };
 
-/* The effective damage of a unit is affected by the hit modifier being used and by the defense threshold of an enemy.
- * The estimates being used right now are:
+/* The effective damage of a unit is affected by the hit modifier being used, by the defense threshold of the enemy
+ * and by the CMB stat of the unit:
  * FULL MISS hits : BASE_DAMAGE *  CMB
  * MISS hits      : BASE_DAMAGE * (CMB - 2)
  * GOOD hits      : BASE_DAMAGE * (CMB - 2) + BONUS_DAMAGE_GOOD
  * GREAT hits     : BASE_DAMAGE * (CMB - 1) + BONUS_DAMAGE_GREAT
  * PERFECT hits   : BASE_DAMAGE *  CMB      + BONUS_DAMAGE_PERFECT
  * where:
- * - BASE_DAMAGE          = floor(max(1,STARTING_DAMAGE / CMB - DEFENSE))
- * - BONUS_DAMAGE_GOOD    = floor(STARTING_DAMAGE * (0.2 + DEFENSE_BONUS_MODIFIER))
- * - BONUS_DAMAGE_GREAT   = floor(STARTING_DAMAGE * (0.4 + DEFENSE_BONUS_MODIFIER))
- * - BONUS_DAMAGE_PERFECT = floor(STARTING_DAMAGE * (0.9 + DEFENSE_BONUS_MODIFIER))
- * - STARTING_DAMAGE is the damage computed for the unit, including the Merry's bonus
- * - DEFENSE_BONUS_MODIFIER is 0.25 if DEFENSE >= DEFENSE_THRESHOLD, 0 otherwise
- * The bonus damages seem to bypass the enemy's defense when under a certain threshold (DEFENSE_THRESHOLD); when
- * the threshold is above said value, the defense is factored in but the bonus seems to get an additional 0.25
- * (additive, not multiplicative).
+ * - BASE_DAMAGE = floor(max(1,STARTING_DAMAGE / CMB - DEFENSE))
+ * - STARTING_DAMAGE is the damage computed for the unit, including the Merry's bonus and the chain bonus
+ * The way the bonus damages are calculate depends on the value of BASE_DAMAGE.
+ * If BASE_DAMAGE is greater than 1, meaning the unit is able to overcome the enemy's defense, then:
+ * - BONUS_DAMAGE_PERFECT = floor(STARTING_DAMAGE * 0.9)
+ * - BONUS_DAMAGE_GREAT   = floor(STARTING_DAMAGE * 0.9 * 0.66)
+ * - BONUS_DAMAGE_GOOD    = floor(STARTING_DAMAGE * 0.9 * 0.33)
+ * This bonus bypasses defense entirely.
+ * If, on the other hand, BASE_DAMAGE is 1, the starting damage gets an additional bonus of 1/CMB but the
+ * defense is factored into the calculation, meaning the bonus damage become:
+ * - BONUS_DAMAGE_PERFECT = max(1,floor(STARTING_DAMAGE * (0.9 + 1/CMB)) - DEFENSE)
+ * - BONUS_DAMAGE_GREAT   = max(1,floor(STARTING_DAMAGE * (0.9 * 0.66 + 1/CMB)) - DEFENSE)
+ * - BONUS_DAMAGE_GOOD    = max(1,floor(STARTING_DAMAGE * (0.9 * 0.33 + 1/CMB)) - DEFENSE)
  */
 var computeDamageOfUnit = function(unit,unitAtk,hitModifier) {
     var baseDamage = Math.floor(Math.max(1,unitAtk / unit.combo - currentDefense));
-    var overThreshold = (currentDefense >= DEFENSE_THRESHOLD), bonusModifier = (overThreshold ? 0.25 : 0);
-    var bonus, overallBaseDamage;
+    var result = 0, bonusDamageBase;
     if (hitModifier == 'Full Miss') return baseDamage * unit.combo;
     if (hitModifier == 'Miss') return baseDamage * (unit.combo -2);
     if (hitModifier == 'Good') {
-        bonus = Math.floor(unitAtk * (0.2 + bonusModifier));
-        overallBaseDamage = baseDamage * (unit.combo - 2);
+        result = baseDamage * (unit.combo - 2);
+        bonusDamageBase = 0.33;
     } else if (hitModifier == 'Great') {
-        bonus = Math.floor(unitAtk * (0.4 + bonusModifier));
-        overallBaseDamage = baseDamage * (unit.combo - 1);
+        result = baseDamage * (unit.combo - 1);
+        bonusDamageBase = 0.66;
     } else if (hitModifier == 'Perfect') { 
-        bonus = Math.floor(unitAtk * (0.9 + bonusModifier));
-        overallBaseDamage = baseDamage * unit.combo;
+        result = baseDamage * unit.combo;
+        bonusDamageBase = 1;
     }
-    if (!overThreshold) return overallBaseDamage + (bonus > currentDefense ? bonus : 1);
-    else return overallBaseDamage + Math.max(1,bonus - currentDefense);
+    if (baseDamage > 1)
+        return result + Math.floor(unitAtk * 0.9 * bonusDamageBase);
+    else
+        return result + Math.max(1,Math.floor(unitAtk * (0.9 * bonusDamageBase + 1 / unit.combo)) - currentDefense);
+
 };
 
 /* Computes all the possible combinations of specials given the following conditions:
