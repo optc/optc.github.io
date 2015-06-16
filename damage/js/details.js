@@ -11,7 +11,7 @@ var modifiers = [ 'Miss', 'Good', 'Great', 'Perfect' ];
 
 /* * * * * UI callbacks * * * * */
 
-var onDamageClick = function(e) {
+var onDamageMouseUp = function(e) {
     target = $(this);
     if (!target.hasClass('details')) {
         target[0].style.zIndex = ++zIndex;
@@ -89,7 +89,7 @@ $(document).on('numbersCrunched',onNumbersCrunched);
 $(document).on('detailsReady',onDetailsReady);
 
 $(function() {
-    $('.damage').click(onDamageClick);
+    $('.damage').mouseup(onDamageMouseUp);
 });
 
 })();
