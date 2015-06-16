@@ -317,12 +317,26 @@ window.specials = {
         atk: 'unit.class == "Slasher" ? 1.5 : 1',
         type: 'class'
     },
+    596: { // Log Chopper
+        def: '0.5'
+    },
+    597: { // Log Chopper evolved
+        def: '0.5'
+    },
     600: { // Apprentice Shanks
         atk: 'unit.type == "PSY" ? 1.3 : 1',
         type: 'type'
     },
     601: { // Apprentice Shanks evolved
         atk: 'unit.type == "PSY" ? 1.3 : 1',
+        type: 'type'
+    },
+    602: { // v2 Enel
+        atk: 'unit.type == "QCK" ? 2 : 1',
+        type: 'type'
+    },
+    603: { // v2 Enel evolved
+        atk: 'unit.type == "QCK" ? 2 : 1',
         type: 'type'
     }
 };

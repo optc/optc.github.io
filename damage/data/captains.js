@@ -868,6 +868,12 @@ window.captains = {
         atk: '1.5',
         hp: '0.6' // TODO needs checking
     },
+    596: { // Log Chopper
+        atk: 'unit.type == "STR" ? 1.5 : 1'
+    },
+    597: { // Log Chopper evolved
+        atk: 'unit.type == "STR" ? 1.75 : 1'
+    },
     598: { // Apprentice Buggy
         atk: 'unit.stars < 3 ? 2.5 : 1'
     },
@@ -879,5 +885,17 @@ window.captains = {
     },
     601: { // Apprentice Shanks evolved
         atk: 'unit.type == "PSY" ? 2 : 1'
+    },
+    602: { // v2 Enel
+        atk: 'unit.type == "QCK" ? 2 : 1'
+    },
+    603: { // v2 Enel evolved
+        atk: 'unit.type == "QCK" ? 2.25 : 1'
+    },
+    606: { // v2 Zeff
+        atk: 'percHP >= 50.0 && unit.class == "Fighter" ? 2 : 1'
+    },
+    607: { // v2 Zeff evolved
+        atk: 'percHP >= 50.0 && unit.class == "Fighter" ? 2.5 : 1'
     }
 };
