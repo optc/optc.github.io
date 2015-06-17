@@ -311,14 +311,14 @@ var computeActualDefense = function() {
 var getAttackOfUnit = function(data) {
     var unit = data.unit;
     var level = data.level -1 , maxLevel = (unit.maxLevel == 1 ? 1 : unit.maxLevel -1);
-    var growth = data.growth || 1;
+    var growth = unit.growth || 1;
     return Math.floor(unit.minATK + (unit.maxATK - unit.minATK) * Math.pow(level / maxLevel, growth));
 };
 
 var getHpOfUnit = function(data) {
     var unit = data.unit;
     var level = data.level -1 , maxLevel = (unit.maxLevel == 1 ? 1 : unit.maxLevel -1);
-    var growth = data.growth || 1;
+    var growth = unit.growth || 1;
     return Math.floor(unit.minHP + (unit.maxHP - unit.minHP) * Math.pow(level / maxLevel, growth));
 };
 
