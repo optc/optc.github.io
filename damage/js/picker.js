@@ -75,7 +75,7 @@ var generateSearchParameters = function(query) {
     var result = { name: [ ] };
     tokens = query.trim().replace(/\s+/g,' ').split(' ').filter(function(x) { return x.length > 0; });
     tokens.forEach(function(x) {
-        var temp = x.match(/^((type|class):(\w+)|(hp|atk|stars|cost)(>|<|>=|<=|=)(\d+))$/), func;
+        var temp = x.match(/^((type|class):(\w+)|(hp|atk|stars|cost|growth)(>|<|>=|<=|=)(\d+))$/), func;
         if (!temp) {
             result.name.push(x);
         } else if (temp[4] !== undefined) {

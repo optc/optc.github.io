@@ -20,7 +20,8 @@ var parseUnit = function(element,n) {
         'minHP'   : element[6]  , 'minATK'   : element[7]  ,
         'minRCV'  : element[8]  , 'maxHP'    : element[9]  ,
         'maxATK'  : element[10] , 'maxRCV'   : element[11] ,
-        'combo'   : element[12] , 'number'   : n
+        'combo'   : element[12] , 'growth'   : element[13] ,
+        'number'  : n
     };
 };
 
@@ -98,7 +99,7 @@ var updateTitles = function(team) {
     var targets = $('.unit');
     team.forEach(function(x,n) {
         if (x === null) targets.eq(n).attr('title',null);
-        else targets.eq(n).attr('title',x.name + '\n' + x.atk + ' ATK\n' + x.hp + ' HP');
+        else targets.eq(n).attr('title',[ x.name, x.hp + ' HP', + x.atk + ' ATK', x.cmb + ' CMB' ].join('\n'));
     });
 };
 

@@ -310,14 +310,16 @@ var computeActualDefense = function() {
 
 var getAttackOfUnit = function(data) {
     var unit = data.unit;
-    var level = data.level;
-    return Math.floor(unit.minATK + (unit.maxATK - unit.minATK) / (unit.maxLevel == 1 ? 1 : (unit.maxLevel-1)) * (level-1));
+    var level = data.level -1 , maxLevel = (unit.maxLevel == 1 ? 1 : unit.maxLevel -1);
+    var growth = data.growth || 1;
+    return Math.floor(unit.minATK + (unit.maxATK - unit.minATK) * Math.pow(level / maxLevel, unit.growth));
 };
 
 var getHpOfUnit = function(data) {
     var unit = data.unit;
-    var level = data.level;
-    return Math.floor(unit.minHP + (unit.maxHP - unit.minHP) / (unit.maxLevel == 1 ? 1 : (unit.maxLevel-1)) * (level-1));
+    var level = data.level -1 , maxLevel = (unit.maxLevel == 1 ? 1 : unit.maxLevel -1);
+    var growth = data.growth || 1;
+    return Math.floor(unit.minHP + (unit.maxHP - unit.minHP) * Math.pow(level / maxLevel, unit.growth));
 };
 
 var setCaptain = function(slotNumber) {
@@ -352,7 +354,7 @@ var arraysAreEqual = function(a,b) {
 var getTeamDetails = function() {
     return team.map(function(data) {
         if (data === null) return null;
-        return { name: data.unit.name, hp: getHpOfUnit(data), atk: getAttackOfUnit(data) };
+        return { name: data.unit.name, hp: getHpOfUnit(data), atk: getAttackOfUnit(data), cmb: data.unit.combo };
     });
 };
 
