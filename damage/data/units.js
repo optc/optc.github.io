@@ -290,7 +290,7 @@ window.units = [
     [ "Cannoneer Specialist", "INT", "Shooter", 3, 15, 70, 1280, 500, 20, 1550, 850, 40, 5, 0.7 ],
     [ "Mr. 13 & Miss Friday - Friday the Thirteenth (The Unluckies)", "INT", "Shooter", 3, 13, 50, 44, 44, 44, 596, 893, 130, 7, 0.7 ],
     [ "Dory", "PSY", "Slasher", 4, 25, 70, 450, 370, 102, 1662, 783, 153, 4, 1.5 ],
-    [ "Brogy", "INT", "Slasher", 5, 25, 70, 440, 411, 88, 1634, 875, 117, 4, 1.5 ],
+    [ "Broggy", "INT", "Slasher", 5, 25, 70, 440, 411, 88, 1634, 875, 117, 4, 1.5 ],
     [ "Triceratops", "QCK", "Fighter", 2, 25, 50, 500, 200, 50, 965, 700, 50, 4, 1.5 ],
     [ "Rex", "STR", "Fighter", 2, 25, 50, 300, 300, 50, 520, 900, 50, 4, 1.5 ],
     [ "Brontosaurus", "DEX", "Fighter", 2, 25, 50, 400, 250, 50, 755, 755, 50, 4, 1.5 ],

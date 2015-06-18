@@ -236,17 +236,17 @@ var applySpecialMultipliers = function(damage,isDefenseDown) {
  * where:
  * - BASE_DAMAGE = floor(max(1,STARTING_DAMAGE / CMB - DEFENSE))
  * - STARTING_DAMAGE is the damage computed for the unit, including the Merry's bonus and the chain bonus
- * The way the bonus damages are calculate depends on the value of BASE_DAMAGE.
+ * The way the bonus damages are calculated depends on the value of BASE_DAMAGE.
  * If BASE_DAMAGE is greater than 1, meaning the unit is able to overcome the enemy's defense, then:
  * - BONUS_DAMAGE_PERFECT = floor(STARTING_DAMAGE * 0.9)
  * - BONUS_DAMAGE_GREAT   = floor(STARTING_DAMAGE * 0.9 * 0.66)
  * - BONUS_DAMAGE_GOOD    = floor(STARTING_DAMAGE * 0.9 * 0.33)
  * This bonus bypasses defense entirely.
  * If, on the other hand, BASE_DAMAGE is 1, the starting damage gets an additional bonus of 1/CMB but the
- * defense is factored into the calculation, meaning the bonus damage become:
- * - BONUS_DAMAGE_PERFECT = max(1,floor(STARTING_DAMAGE * (0.9 + 1/CMB)) - DEFENSE)
- * - BONUS_DAMAGE_GREAT   = max(1,floor(STARTING_DAMAGE * (0.9 * 0.66 + 1/CMB)) - DEFENSE)
- * - BONUS_DAMAGE_GOOD    = max(1,floor(STARTING_DAMAGE * (0.9 * 0.33 + 1/CMB)) - DEFENSE)
+ * defense is factored into the calculation, meaning the bonus damages become:
+ * - BONUS_DAMAGE_PERFECT = max(0,floor(STARTING_DAMAGE * (0.9 + 1/CMB)) - DEFENSE)
+ * - BONUS_DAMAGE_GREAT   = max(0,floor(STARTING_DAMAGE * (0.9 * 0.66 + 1/CMB)) - DEFENSE)
+ * - BONUS_DAMAGE_GOOD    = max(0,floor(STARTING_DAMAGE * (0.9 * 0.33 + 1/CMB)) - DEFENSE)
  */
 var computeDamageOfUnit = function(unit,unitAtk,hitModifier) {
     var baseDamage = Math.floor(Math.max(1,unitAtk / unit.combo - currentDefense));
@@ -266,7 +266,7 @@ var computeDamageOfUnit = function(unit,unitAtk,hitModifier) {
     if (baseDamage > 1)
         return result + Math.floor(unitAtk * 0.9 * bonusDamageBase);
     else
-        return result + Math.max(1,Math.floor(unitAtk * (0.9 * bonusDamageBase + 1 / unit.combo)) - currentDefense);
+        return result + Math.max(0,Math.floor(unitAtk * (0.9 * bonusDamageBase + 1 / unit.combo)) - currentDefense);
 
 };
 
