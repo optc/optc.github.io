@@ -22,16 +22,16 @@ var onDamageMouseUp = function(e) {
         target.toggleClass('details');
     } else {
         var parent = e.target.parentNode;
-        if (e.which != 2 || parent.className != 'turnContainer') {
+        if ((e.which == 2 || (e.which == 1 && e.ctrlKey)) && parent.className == 'turnContainer') {
+            var index = $(parent).index() / 2;
+            currentModifiers[index] = modifiers[(modifiers.indexOf(currentModifiers[index])+1)%4];
+            $(document).trigger('customModifiers',[ currentModifiers ]);
+        } else {
             if (timeout !== null) clearTimeout(timeout);
             detailsVisible = null;
             target.find('.detailsContainer').remove();
             var temp = target[0];
             target.toggleClass('details');
-        } else if (e.which == 2 && parent.className == 'turnContainer') {
-            var index = $(parent).index() / 2;
-            currentModifiers[index] = modifiers[(modifiers.indexOf(currentModifiers[index])+1)%4];
-            $(document).trigger('customModifiers',[ currentModifiers ]);
         }
     }
 };
