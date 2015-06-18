@@ -25,11 +25,6 @@ var parseUnit = function(element,n) {
     };
 };
 
-var formatNumber = function(n) {
-    var rev = function(x) { return x.split('').reverse().join(''); };
-    return rev(rev(n).replace(/(\d{3,3})/g,'$1,')).replace(/^,|,$/g,'');
-};
-
 var updateSlot = function(slotNumber,unitNumber) {
     var slot = $('.unit').eq(slotNumber);
     var index = slot.index();
@@ -53,11 +48,11 @@ var updateSlot = function(slotNumber,unitNumber) {
 
 var changeCurrentHP = function(currentHP,skipTrigger,skipSlider) {
     currentHP = Math.floor(currentHP);
-    var percHP = Math.round(currentHP / currentMaxHP * 10000) / 100;
-    $('#hpLabel').text(currentHP + ' HP (' + percHP + '%)');
+    var percHP = currentHP / currentMaxHP * 100;
+    $('#hpLabel').text($.number(currentHP,0) + ' HP (' + $.number(percHP,2) + '%)');
     if (!skipSlider) hpSlider.val(currentHP);
     if (!skipTrigger) {
-        percHP = Math.floor(currentHP / currentMaxHP * 10000) / 100;
+        percHP = Math.floor(percHP * 100) / 100;
         $(document).trigger('hpChanged',[ currentHP, currentMaxHP, percHP , true ]);
     }
 };
@@ -201,7 +196,7 @@ var onNumbersCrunched = function(event,numbers) {
     Object.keys(numbers).forEach(function(type) {
         if (type == 'HP') return;
         var damage = ''+Math.floor(numbers[type]);
-        damage = formatNumber(damage);
+        damage = $.number(damage);
         $('.damageAmount#' + type.toLowerCase()).text(damage);
     });
     // set hp

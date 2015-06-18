@@ -89,7 +89,7 @@ var crunchForType = function(type,withDetails) {
         var atk = getAttackOfUnit(x); // basic attack (scales with level);
         atk *= x.orb; // orb multiplier (fixed)
         atk *= getTypeMultiplierOfUnit(x,type); // type multiplier (fixed)
-        damage.push([ x, atk * merryBonus, n ]);
+        damage.push([ x, Math.floor(atk) * merryBonus, n ]);
     });
     damage = applySpecialMultipliers(damage,isDefenseDown); // special multipliers (modify the whole array)
     // initialize ability array

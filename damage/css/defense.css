@@ -32,3 +32,8 @@ input#filter {
 #defenseValues th {
     padding: 10px 10px 10px 5px;
 }
+
+#defenseValues th + th:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}

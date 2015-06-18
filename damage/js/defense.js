@@ -40,7 +40,20 @@ var populateList = function(query,target) {
     var regex = new RegExp(query || '','i');
     var result = defenses.filter(function(x) { return regex.test(x[0]); });
     $(target).empty();
-    var table = $('<table><tr><th></th><th>Enemy</th><th>Difficulty</th><th>Defense</th></tr></table>');
+    var table = $(
+        '<table>' +
+            '<thead>' +
+                '<tr>' +
+                    '<th></th>' +
+                    '<th data-sort="string-ins">Enemy</th>' +
+                    '<th data-sort="string-ins">Difficulty</th>' +
+                    '<th data-sort="number">Defense</th>' +
+                '</tr>' +
+            '</thead>' +
+            '<tbody>' +
+            '</tbody>' +
+        '</table>');
+    var tbody = table.find('tbody');
     if (result.length === 0) return;
     result.forEach(function(data) {
         var tr = $('<tr><td></td><td></td><td></td><td></td></tr>');
@@ -49,17 +62,20 @@ var populateList = function(query,target) {
         tr.children().eq(0).append(thumbnail);
         tr.children().eq(1).append(data[0]);
         tr.children().eq(2).append(data[1]);
-        tr.children().eq(3).append(data[3]);
+        tr.children().eq(3).append($.number(data[3]));
         tr.click(onRowClick);
-        table.append(tr);
+        tbody.append(tr);
     });
     $(target).append(table);
+    $(table).stupidtable({
+        number: function(a,b) { return parseInt(b.replace(/[^\d]/g,''),10) - parseInt(a.replace(/[^\d]/g,''),10); }
+    });
 };
 
 /* * * * * Events * * * * */
 
 var onRowClick = function() {
-    var defense = parseInt(this.cells[3].textContent,10);
+    var defense = parseInt(this.cells[3].textContent.replace(/[^\d]/g,''),10);
     $('#defense').val(defense);
     $(document).trigger('defenseChanged',defense);
     closeDialog();

@@ -44,11 +44,6 @@ var getTypeOfHit = function(position,currentMultiplier,nextMultiplier) {
     return 'Miss or Good';
 };
 
-var formatNumber = function(n) {
-    var rev = function(x) { return x.split('').reverse().join(''); };
-    return rev(rev(''+n).replace(/(\d{3,3})/g,'$1,')).replace(/^,|,$/g,'');
-};
-
 var appendElements = function(target,turn,damageDealer,type,damage,multiplier) {
     var container = $('<div class="turnContainer"></div>');
     target.append(container);
@@ -58,7 +53,7 @@ var appendElements = function(target,turn,damageDealer,type,damage,multiplier) {
     dealerDiv.dotdotdot();
     dealerDiv.text(damageDealer);
     dealerDiv.attr('title',damageDealer);
-    container.append($('<div class="unitDamage"></div>').text(formatNumber(Math.round(damage))));
+    container.append($('<div class="unitDamage"></div>').text($.number(damage,0)));
     target.append($('<hr></hr>'));
 
 };
