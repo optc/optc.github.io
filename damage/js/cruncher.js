@@ -195,7 +195,9 @@ var applyChainAndBonusMultipliers = function(damage,modifiers,captains) {
 var applyCaptainEffectToDamage = function(damage,func,modifiers) {
     return damage.map(function(x,n) {
         var unit = x[0], damage = x[1], order = x[2];
-        damage *= func(unit.unit,n,currentHP,maxHP,percHP,null,null,unit.orb,modifiers);
+        var params = { unit: unit.unit, chainPosition: n, currentHP: currentHP, maxHP: maxHP, percHP: percHP,
+            orb: unit.orb, damage: damage, modifiers: modifiers };
+        damage *= func(params);
         return [ unit, damage, order ];
     });
 };
@@ -203,18 +205,20 @@ var applyCaptainEffectToDamage = function(damage,func,modifiers) {
 var applyCaptainEffectsToHP = function(unit,hp) {
     for (var i=0;i<2;++i) {
         if (captainAbilities[i] !== null && captainAbilities[i].hasOwnProperty('hp'))
-            hp *= captainAbilities[i].hp(unit.unit);
+            hp *= captainAbilities[i].hp({ unit: unit.unit });
     }
     return hp;
 };
 
-var applySpecialMultipliers = function(damage,isDefenseDown) {
+var applySpecialMultipliers = function(damage,isDefenseDown,modifiers) {
     var result = damage, current = damage.reduce(function(prev,next) { return prev + next[1]; },0);
     specialsCombinations.forEach(function(specials) {
         var temp = damage.map(function(x,n) {
             var unit = x[0], damage = x[1], order = x[2];
             specials.forEach(function(func) {
-                damage *= func(unit.unit,order,currentHP,maxHP,percHP,null,isDefenseDown,unit.orb);
+                var params = { unit: unit.unit, chainPosition: order, currentHP: currentHP, maxHP: maxHP,
+                    percHP: percHP, defenseDown: isDefenseDown, orb: unit.orb, modifiers: modifiers };
+                damage *= func(params);
             });
             return [ unit, damage, order ];
         });
@@ -330,13 +334,10 @@ var createFunctions = function(data) {
     for (var key in data) {
         if (data[key] === undefined)
             Utils.warn("The unit you selected has a strange ass ability that can't be parsed correctly yet",'captains');
-        else if (key == 'atk' || key == 'hitAtk' || key == 'hp' || key == 'chainModifier' || key == 'orb')
-            result[key] = new Function('unit','chainPosition','currentHP','maxHP','percHP','modifier',
-                    'defenseDown','orb','modifiers','return ' + data[key]);
-        else if (key == 'def')
-            result[key] = new Function('return ' + data[key]);
-        else
+        else if (key == 'type' || data[key].constructor == Array)
             result[key] = data[key];
+        else
+            result[key] = new Function('p','return ' + data[key]);
     }
     return result;
 };
@@ -468,8 +469,21 @@ $(document).on('customModifiers',onCustomModifiers);
 $(document).on('specialToggled',onSpecialToggled);
 
 // required by certain captain effects
-Array.prototype.subcheck = function(slice,subarray) {
-    return this.slice(0,slice).join('!').indexOf(subarray.join('!')) != -1;
+Array.prototype.subcontains = function(data) {
+    for (var i=0;i<this.length;++i) {
+        for (var j=0;j<data.length && i+j < this.length;++j) {
+            if (data[j].constructor != this[i+j].constructor) break;
+            if (data[j].constructor != Object && data[j] != this[i+j]) break;
+            if (data[j].constructor == Object) {
+                var different = Object.keys(data[j]).some(function(key) {
+                    return data[j][key] != this[i+j][key];
+                }.bind(this));
+                if (different) break;
+            }
+        }
+        if (j == data.length) return true;
+    }
+    return false;
 };
 
 })();
