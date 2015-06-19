@@ -72,7 +72,7 @@ var crunch = function() {
     result.HP = 0;
     team.forEach(function(x,n) {
         if (x === null) return;
-        var hp = getHpOfUnit(x);
+        var hp = getStatOfUnit(x,'hp');
         result.HP += applyCaptainEffectsToHP(x,hp);
     });
     result.HP = Math.max(1,result.HP);
@@ -86,7 +86,7 @@ var crunchForType = function(type,withDetails) {
     var isDefenseDown = enabledSpecials.some(function(x) { return x !== null && x.hasOwnProperty('def'); });
     team.forEach(function(x,n) {
         if (x === null) return;
-        var atk = getAttackOfUnit(x); // basic attack (scales with level);
+        var atk = getStatOfUnit(x,'atk'); // basic attack (scales with level);
         atk *= x.orb; // orb multiplier (fixed)
         atk *= getTypeMultiplierOfUnit(x,type); // type multiplier (fixed)
         damage.push([ x, Math.floor(atk) * merryBonus, n ]);
@@ -308,18 +308,12 @@ var computeActualDefense = function() {
 
 /* * * * * * Utility functions * * * * */
 
-var getAttackOfUnit = function(data) {
+var getStatOfUnit = function(data,stat) {
     var unit = data.unit;
     var level = data.level -1 , maxLevel = (unit.maxLevel == 1 ? 1 : unit.maxLevel -1);
     var growth = unit.growth || 1;
-    return Math.floor(unit.minATK + (unit.maxATK - unit.minATK) * Math.pow(level / maxLevel, growth));
-};
-
-var getHpOfUnit = function(data) {
-    var unit = data.unit;
-    var level = data.level -1 , maxLevel = (unit.maxLevel == 1 ? 1 : unit.maxLevel -1);
-    var growth = unit.growth || 1;
-    return Math.floor(unit.minHP + (unit.maxHP - unit.minHP) * Math.pow(level / maxLevel, growth));
+    var minStat = 'min' + stat.toUpperCase(), maxStat = 'max' + stat.toUpperCase();
+    return Math.floor(unit[minStat] + (unit[maxStat] - unit[minStat]) * Math.pow(level / maxLevel, growth));
 };
 
 var setCaptain = function(slotNumber) {
@@ -354,7 +348,13 @@ var arraysAreEqual = function(a,b) {
 var getTeamDetails = function() {
     return team.map(function(data) {
         if (data === null) return null;
-        return { name: data.unit.name, hp: getHpOfUnit(data), atk: getAttackOfUnit(data), cmb: data.unit.combo };
+        return {
+            name: data.unit.name,
+            hp: getStatOfUnit(data,'hp'),
+            atk: getStatOfUnit(data,'atk'),
+            rcv: getStatOfUnit(data,'rcv'),
+            cmb: data.unit.combo
+        };
     });
 };
 

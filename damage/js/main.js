@@ -105,7 +105,8 @@ var updateTitles = function(team) {
     var targets = $('.unit');
     team.forEach(function(x,n) {
         if (x === null) targets.eq(n).attr('title',null);
-        else targets.eq(n).attr('title',[ x.name, x.hp + ' HP', + x.atk + ' ATK', x.cmb + ' CMB' ].join('\n'));
+        else targets.eq(n).attr('title',
+            [ x.name, x.hp + ' HP', + x.atk + ' ATK', x.rcv + ' RCV',x.cmb + ' CMB' ].join('\n'));
     });
 };
 

@@ -15,6 +15,7 @@ var getTitle = function(unit) {
     return [ unit.name,
         'ATK: ' + unit.maxATK,
         'HP: ' + unit.maxHP,
+        'RCV: ' + unit.maxRCV,
         'Cost: ' + unit.cost
     ].join('\n');
 };
