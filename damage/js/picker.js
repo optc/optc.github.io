@@ -75,7 +75,7 @@ var generateSearchParameters = function(query) {
     var result = { name: [ ] };
     tokens = query.trim().replace(/\s+/g,' ').split(' ').filter(function(x) { return x.length > 0; });
     tokens.forEach(function(x) {
-        var temp = x.match(/^((type|class):(\w+)|(hp|atk|stars|cost|growth)(>|<|>=|<=|=)(\d+))$/), func;
+        var temp = x.match(/^((type|class):(\w+)|(hp|atk|stars|cost|growth|rcv)(>|<|>=|<=|=)(\d+))$/), func;
         if (!temp) {
             result.name.push(x);
         } else if (temp[4] !== undefined) {
@@ -96,7 +96,7 @@ var populateList = function(parameters,target) {
     $(target).empty();
     if (parameters === null) return;
     Object.keys(parameters).forEach(function(key) {
-        var unitKey = key.replace(/^(hp|atk)$/,function(x) { return 'max' + x.toUpperCase(); });
+        var unitKey = key.replace(/^(hp|atk|rcv)$/,function(x) { return 'max' + x.toUpperCase(); });
         result = result.filter(function(x) {
             return parameters[key](x[unitKey]);
         });
@@ -117,8 +117,7 @@ var onThumbnailClick = function() {
 
 var onUnitClick = function(e) {
     if (e.which != 1 || e.ctrlKey) return;
-    var target = $(e.target);
-    if (!target.hasClass('unitPortrait') && !target.hasClass('empty')) return;
+    if (!/unitPortrait|empty|unitPlaceholder/.test(e.target.className)) return;
     if (Utils.isClickOnOrb(e,e.target)) return;
     lastSlotNumber = $(this).index();
     createDialog();
