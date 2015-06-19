@@ -43,6 +43,7 @@
  *                        specials (so far).
  */
 
+var MODIFIERS = [ 'Miss', 'Good', 'Great', 'Perfect' ];
 var DEFAULT_HIT_MODIFIERS = [ 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect' ]; 
 
 var team = [ null, null, null, null, null, null ];
@@ -93,7 +94,7 @@ var crunchForType = function(type,withDetails) {
     });
     damage = applySpecialMultipliers(damage,isDefenseDown); // special multipliers (modify the whole array)
     // initialize ability array
-    var abilities = [ ];
+    var abilities = [ ], l;
     if (captainAbilities[0] !== null) abilities.push(captainAbilities[0]);
     if (captainAbilities[1] !== null) abilities.push(captainAbilities[1]);
     // apply static multipliers and sort from weakest to stongest
@@ -102,6 +103,13 @@ var crunchForType = function(type,withDetails) {
         damage = applyCaptainEffectToDamage(damage,abilities[i].atk);
     }
     damage.sort(function(x,y) { return x.damage - y.damage; });
+    // apply additional damage sorters if any
+    var damages = [ damage ];
+    for (var k=0;k<abilities.length;++k) {
+        if (!abilities[k].hasOwnProperty('damageSorter')) continue;
+        var newDamage = abilities[k].damageSorter(damage);
+        if (newDamage !== null) damages.push(newDamage);
+    }
     /*
      * 1st scenario: no captains with hit modifiers
      * -> We can just apply the chain and bonus multipliers and call it a day
@@ -116,19 +124,34 @@ var crunchForType = function(type,withDetails) {
     var captainsWithHitModifiers = abilities.filter(function(x) { return x.hasOwnProperty('hitModifiers'); });
     var captainsWithChainModifiers = abilities.filter(function(x) { return x.hasOwnProperty('chainModifier'); });
     // get data struct ready
-    var data = [ damage ];
-    for (i=0;i<captainsWithHitModifiers.length && !customModifiers;++i) data.push(damage);
+    var data = [ damages ];
+    for (i=0;i<captainsWithHitModifiers.length && !customModifiers;++i) {
+        if (!arraysAreEqual(DEFAULT_HIT_MODIFIERS,captainsWithHitModifiers[i].hitModifiers))
+            data.push(damages);
+    }
     // compute damages
     for (i=0;i === 0 || (i<data.length && !customModifiers);++i) {
         var modifiers = customModifiers || (i === 0 ? DEFAULT_HIT_MODIFIERS : captainsWithHitModifiers[i-1].hitModifiers);
         // apply compatible captain effects
         for (var j=0;j<captainsWithHitModifiers.length;++j) {
             if (!customModifiers && !arraysAreEqual(modifiers,captainsWithHitModifiers[j].hitModifiers)) continue;
-            data[i] = applyCaptainEffectToDamage(data[i],captainsWithHitModifiers[j].hitAtk,modifiers);
+            for (l=0;l<data[i].length;++l)
+                data[i][l] = applyCaptainEffectToDamage(data[i][l],captainsWithHitModifiers[j].hitAtk,modifiers);
         }
-        var damageWithChainMultipliers = applyChainAndBonusMultipliers(data[i],modifiers,captainsWithChainModifiers);
-        var overallDamage = damageWithChainMultipliers.result.reduce(function(prev,x) { return prev + x.damage; },0);
-        data[i] = { damage: damageWithChainMultipliers, overall: overallDamage, hitModifiers: modifiers };
+        for (l=0;l<data[i].length;++l) {
+            var damageWithChainMultipliers = applyChainAndBonusMultipliers(data[i][l],modifiers,captainsWithChainModifiers);
+            var overallDamage = damageWithChainMultipliers.result.reduce(function(prev,x) { return prev + x.damage; },0);
+            data[i][l] = { damage: damageWithChainMultipliers, overall: overallDamage, hitModifiers: modifiers };
+        }
+    }
+    // collapse the multiple damages created by the damage sorters
+    for (i=0;i<data.length;++i) {
+        var index = 0;
+        for (l=1;l<data[i].length;++l) {
+            if (data[i][l].overall > data[i][index].overall)
+                index = l;
+        }
+        data[i] = data[i][index];
     }
     // find index of maxiumum damage
     var index = 0, currentMax = data[0].overall;
@@ -194,9 +217,9 @@ var applyChainAndBonusMultipliers = function(damage,modifiers,captains) {
 var applyCaptainEffectToDamage = function(damage,func,modifiers) {
     return damage.map(function(x,n) {
         var params = { unit: x.unit.unit, chainPosition: n, currentHP: currentHP, maxHP: maxHP, percHP: percHP,
-            orb: x.unit.orb, damage: x.damage, modifiers: modifiers };
-        var damage = x.damage * func(params);
-        return { unit: x.unit, damage: damage, position: x.position };
+            orb: x.unit.orb, damage: damage, modifiers: modifiers };
+        var newDamage = x.damage * func(params);
+        return { unit: x.unit, damage: newDamage, position: x.position };
     });
 };
 
@@ -334,7 +357,7 @@ var createFunctions = function(data) {
     for (var key in data) {
         if (data[key] === undefined)
             Utils.warn("The unit you selected has a strange ass ability that can't be parsed correctly yet",'captains');
-        else if (key == 'type' || data[key].constructor == Array)
+        else if (key == 'type' || data[key].constructor == Array || data[key].constructor == Function)
             result[key] = data[key];
         else
             result[key] = new Function('p','return ' + data[key]);
@@ -468,22 +491,37 @@ $(document).on('customModifiers',onCustomModifiers);
 // specials
 $(document).on('specialToggled',onSpecialToggled);
 
-// required by certain captain effects
+// function required by certain captain effects
+// TODO Stop modifying prototypes because you're lazy
+
 Array.prototype.subcontains = function(data) {
+    return this.join('!').indexOf(data.join('!')) != -1;
+};
+
+Array.prototype.okamaCheck = function(modifiers,data) {
     for (var i=0;i<this.length;++i) {
-        for (var j=0;j<data.length && i+j < this.length;++j) {
-            if (data[j].constructor != this[i+j].constructor) break;
-            if (data[j].constructor != Object && data[j] != this[i+j]) break;
-            if (data[j].constructor == Object) {
-                var different = Object.keys(data[j]).some(function(key) {
-                    return data[j][key] != this[i+j][key];
-                }.bind(this));
-                if (different) break;
-            }
+        for (var j=0;j<data.length && i+j<this.length;++j) {
+            var different = (data[j].type && this[i+j].unit.unit.type != data[j].type) ||
+                (data[j].minModifier && MODIFIERS.indexOf(modifiers[i+j]) < MODIFIERS.indexOf(data[j].minModifier));
+            if (different) break;
         }
         if (j == data.length) return true;
     }
     return false;
+};
+
+Array.prototype.okamaSort = function(data) {
+    var that = JSON.parse(JSON.stringify(this)), temp = [ ];
+    for (var i=0;i<data.length;++i) {
+        for (var j=0;j<that.length;++j) {
+            if (that[j].unit.unit.type != data[i]) continue;
+            temp.push(that.splice(j,1)[0]);
+            break;
+        }
+        if (i == data.length) break;
+    }
+    if (temp.length != data.length) return null;
+    else return temp.concat(that);
 };
 
 })();

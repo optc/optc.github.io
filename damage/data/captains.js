@@ -427,10 +427,30 @@ window.captains = {
         atk: 'p.unit.type == "INT" ? 2 : 1'
     },
     389: { // Emporio Ivankov
-        hitAtk: 'p.damage.slice(0,p.chainPosition).subcontains({  [ "Perfect", "Perfect", "Perfect" ]) ? 3.5 : 1',
+        damageSorter: function(d) {
+            return d.okamaSort([ 'STR', 'DEX', 'QCK' ]);
+        },
+        hitAtk: function(p) {
+            return p.damage.slice(0,p.chainPosition).okamaCheck(p.modifiers,[
+                { type: 'STR', minModifier: 'Good' },
+                { type: 'DEX', minModifier: 'Good' },
+                { type: 'QCK', minModifier: 'Good' }
+            ]) ? 2 : 1;
+        },
+        hitModifiers: [ 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect' ] // don't remove this
     },
     390: { // Emporio Ivankov evolved
-        atk: undefined
+        damageSorter: function(d) {
+            return d.okamaSort([ 'STR', 'DEX', 'QCK' ]);
+        },
+        hitAtk: function(p) {
+            return p.damage.slice(0,p.chainPosition).okamaCheck(p.modifiers,[
+                { type: 'STR', minModifier: 'Good' },
+                { type: 'DEX', minModifier: 'Good' },
+                { type: 'QCK', minModifier: 'Good' }
+            ]) ? 2.75 : 1;
+        },
+        hitModifiers: [ 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect' ] // don't remove this
     },
     395: { // Miss Merry Christmas
         atk: 'p.unit.type == "QCK" ? 1.2 : 1'
@@ -539,13 +559,43 @@ window.captains = {
         hp: 'p.unit.type == "DEX" ? 1.5 : 1'
     },
     433: { // Elizabeth
-        atk: undefined
+        damageSorter: function(d) {
+            return d.okamaSort([ 'QCK', 'STR', 'DEX' ]);
+        },
+        hitAtk: function(p) {
+            return p.damage.slice(0,p.chainPosition).okamaCheck(p.modifiers,[
+                { type: 'QCK', minModifier: 'Good' },
+                { type: 'STR', minModifier: 'Good' },
+                { type: 'DEX', minModifier: 'Good' }
+            ]) ? 2 : 1;
+        },
+        hitModifiers: [ 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect' ] // don't remove this
     },
     434: { // Caroline
-        atk: undefined
+        damageSorter: function(d) {
+            return d.okamaSort([ 'PSY', 'INT', 'INT' ]);
+        },
+        hitAtk: function(p) {
+            return p.damage.slice(0,p.chainPosition).okamaCheck(p.modifiers,[
+                { type: 'PSY', minModifier: 'Good' },
+                { type: 'INT', minModifier: 'Good' },
+                { type: 'INT', minModifier: 'Good' }
+            ]) ? 2 : 1;
+        },
+        hitModifiers: [ 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect' ] // don't remove this
     },
     435: { // Okama Sanji
-        atk: undefined
+        damageSorter: function(d) {
+            return d.okamaSort([ 'INT', 'PSY', 'QCK' ]);
+        },
+        hitAtk: function(p) {
+            return p.damage.slice(0,p.chainPosition).okamaCheck(p.modifiers,[
+                { type: 'INT', minModifier: 'Good' },
+                { type: 'PSY', minModifier: 'Good' },
+                { type: 'QCK', minModifier: 'Good' }
+            ]) ? 2 : 1;
+        },
+        hitModifiers: [ 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect' ] // don't remove this
     },
     446: { // Marshall D. Teach
         atk: 'p.unit.type == "STR" ? 2 : 1',
@@ -607,7 +657,8 @@ window.captains = {
         hp: 'p.unit.class == "Striker" ? 1.5 : 1'
     },
     465: { // Gedatsu
-        atk: undefined
+        hitAtk: 'p.modifiers.slice(0,p.chainPosition).subcontains([ "Miss", "Miss", "Miss", "Miss" ]) ? 3 : 1',
+        hitModifiers: [ 'Miss', 'Miss', 'Miss', 'Miss', 'Perfect', 'Perfect' ]
     },
     466: { // Braham
         atk: 'p.unit.class == "Shooter" ? 1.5 : 1',
@@ -799,11 +850,11 @@ window.captains = {
         atk: 'p.unit.type == "STR" ? 2.25 : 1'
     },
     561: { // SW Ace
-        atk: 'p.unit.class != "Shooter" ? 1 : (orb == 2.0 ? 3 : 2)',
+        atk: 'p.unit.class != "Shooter" ? 1 : (p.orb == 2.0 ? 3 : 2)',
         hp: 'p.unit.class == "Shooter" ? 1.5 : 1',
     },
     562: { // SW Ace evolved
-        atk: 'p.unit.class != "Shooter" ? 1 : (orb == 2.0 ? 3 : 2)',
+        atk: 'p.unit.class != "Shooter" ? 1 : (p.orb == 2.0 ? 3 : 2)',
         hp: 'p.unit.class == "Shooter" ? 1.5 : 1',
     },
     568: { // Foxy
