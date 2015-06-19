@@ -66,7 +66,8 @@ var customModifiers = null;
 var crunch = function() {
     if (!crunchingEnabled) return;
     var result = { };
-    ['STR','QCK','DEX','PSY','INT'].forEach(function(type) {
+    //['STR','QCK','DEX','PSY','INT'].forEach(function(type) {
+    ['QCK'].forEach(function(type) {
         result[type] = crunchForType(type,false);
     });
     result.HP = 0;
@@ -211,8 +212,10 @@ var applyCaptainEffectsToHP = function(unit,hp) {
 };
 
 var applySpecialMultipliers = function(damage,isDefenseDown,modifiers) {
-    var result = damage, current = damage.reduce(function(prev,next) { return prev + next[1]; },0);
+    var result = damage, current = -1; // damage.reduce(function(prev,next) { return prev + next[1]; },0);
+    // for each special combination
     specialsCombinations.forEach(function(specials) {
+        // apply all the specials of the combination to every unit
         var temp = damage.map(function(x,n) {
             var unit = x[0], damage = x[1], order = x[2];
             specials.forEach(function(func) {
@@ -222,12 +225,13 @@ var applySpecialMultipliers = function(damage,isDefenseDown,modifiers) {
             });
             return [ unit, damage, order ];
         });
+        // calculate the new overall damage
         var total = temp.reduce(function(prev,next) { return prev + next[1]; },0);
         if (total < current) return;
         result = temp;
         current = total;
     });
-    return result;
+    return current > -1 ? result : JSON.parse(JSON.stringify(result));
 };
 
 /* The effective damage of a unit is affected by the hit modifier being used, by the defense threshold of the enemy
