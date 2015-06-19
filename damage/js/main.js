@@ -9,6 +9,7 @@ var unitSlidersEnabled = true;
 var unitLevelEditor = $('<input type="text" id="levelEditor"></input>');
 
 var defenseDebouncer = null;
+var bootstrapped = false, inhibitKnob = false;
 
 /* * * * * Functions * * * * */
 
@@ -53,7 +54,7 @@ var updateSlot = function(slotNumber,unitNumber) {
         sliders[index][1] = 1;
     }
     // reset level
-    changeLevelLabel(index,1);
+    changeLevelLabel(index,1,false);
 };
 
 var changeCurrentHP = function(currentHP,skipTrigger,skipSlider) {
@@ -79,13 +80,18 @@ var changeMaxHP = function(newValue,skipTrigger) {
 
 var changeUnitLevel = function(slotNumber,level,userTriggered) {
     $('.unit').eq(slotNumber).removeClass('slide');
-    $(document).trigger('unitLevelChanged',[ slotNumber, level, userTriggered ]);
+    if (!bootstrapped) return;
+    if (!inhibitKnob) $(document).trigger('unitLevelChanged',[ slotNumber, level, userTriggered ]);
+    else inhibitKnob = false;
 };
 
 var changeLevelLabel = function(slotNumber,level,userTriggered) {
     var slot = $('.unit').eq(slotNumber);
     slot.find('.unitLevel').text('Lv.' + level);
-    if (!userTriggered) slot.find('.unitSlider').val(level).trigger('change');
+    if (!userTriggered) {
+        inhibitKnob = true;
+        slot.find('.unitSlider').val(level).trigger('change');
+    }
 };
 
 var getUnitNumberFromSlot = function(slotNumber) {
@@ -145,10 +151,9 @@ var onUnitEditorClose = function(e) {
     changeLevelLabel(slotNumber,level);
 };
 
-var onSlideRelease = function(n) {
-    return function(value) {
-        changeUnitLevel(n,value,true);
-    };
+var onSlideRelease = function(value) {
+    var slotNumber = $(this.$div).parent().index();
+    changeUnitLevel(slotNumber,value,true);
 };
 
 var onUnitLevelClick = function(e) {
@@ -272,6 +277,10 @@ var onUnitRemoved = function(event,slotNumber) {
     updateSlot(slotNumber,null);
 };
 
+var onCrunchingToggled = function(event,enabled) {
+    bootstrapped = bootstrapped || enabled;
+};
+
 /* * * * * Body * * * * */
 
 $(function() {
@@ -297,6 +306,7 @@ $(function() {
     $(document).on('sliderToggle',onSliderToggle);
     $(document).on('unitsSwitched',onUnitsSwitched);
     $(document).on('unitRemoved',onUnitRemoved);
+    $(document).on('crunchingToggled',onCrunchingToggled);
 
     // set up ui elements
     
@@ -310,7 +320,7 @@ $(function() {
             height: 88,
             angleOffset: -160,
             angleArc: 320,
-            release: onSlideRelease(n)
+            release: onSlideRelease
         });
     });
 
