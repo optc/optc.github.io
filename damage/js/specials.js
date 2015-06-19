@@ -63,6 +63,7 @@ var onUnitsSwitched = function(event,slotA,slotB) {
 /* * * * * UI event callbacks * * * * */
 
 var onSpecialClick = function(e) {
+    if (this.id == 'specialDivider') return;
     var slot = parseInt(this.id.slice(-1),10);
     var type = team[slot].type.toLowerCase();
     var target = $('#special' + slot);

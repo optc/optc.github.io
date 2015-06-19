@@ -66,8 +66,7 @@ var customModifiers = null;
 var crunch = function() {
     if (!crunchingEnabled) return;
     var result = { };
-    //['STR','QCK','DEX','PSY','INT'].forEach(function(type) {
-    ['QCK'].forEach(function(type) {
+    ['STR','QCK','DEX','PSY','INT'].forEach(function(type) {
         result[type] = crunchForType(type,false);
     });
     result.HP = 0;
@@ -90,7 +89,7 @@ var crunchForType = function(type,withDetails) {
         var atk = getStatOfUnit(x,'atk'); // basic attack (scales with level);
         atk *= x.orb; // orb multiplier (fixed)
         atk *= getTypeMultiplierOfUnit(x,type); // type multiplier (fixed)
-        damage.push([ x, Math.floor(atk) * merryBonus, n ]);
+        damage.push({ unit: x, damage: Math.floor(atk) * merryBonus, position: n });
     });
     damage = applySpecialMultipliers(damage,isDefenseDown); // special multipliers (modify the whole array)
     // initialize ability array
@@ -102,7 +101,7 @@ var crunchForType = function(type,withDetails) {
         if (!abilities[i].hasOwnProperty('atk')) continue;
         damage = applyCaptainEffectToDamage(damage,abilities[i].atk);
     }
-    damage.sort(function(x,y) { return x[1] - y[1]; });
+    damage.sort(function(x,y) { return x.damage - y.damage; });
     /*
      * 1st scenario: no captains with hit modifiers
      * -> We can just apply the chain and bonus multipliers and call it a day
@@ -128,7 +127,7 @@ var crunchForType = function(type,withDetails) {
             data[i] = applyCaptainEffectToDamage(data[i],captainsWithHitModifiers[j].hitAtk,modifiers);
         }
         var damageWithChainMultipliers = applyChainAndBonusMultipliers(data[i],modifiers,captainsWithChainModifiers);
-        var overallDamage = damageWithChainMultipliers.result.reduce(function(prev,x) { return prev + x[1]; },0);
+        var overallDamage = damageWithChainMultipliers.result.reduce(function(prev,x) { return prev + x.damage; },0);
         data[i] = { damage: damageWithChainMultipliers, overall: overallDamage, hitModifiers: modifiers };
     }
     // find index of maxiumum damage
@@ -178,28 +177,26 @@ var applyChainAndBonusMultipliers = function(damage,modifiers,captains) {
     var multipliersUsed = [ ];
     var currentChainMultiplier = 1.0;
     var result = damage.map(function(x,n) {
-        var unit = x[0], damage = x[1], order = x[2];
-        var result = damage * currentChainMultiplier;
+        var result = x.damage * currentChainMultiplier;
         var chainModifier = captains.reduce(function(x,y) {
-            return x * y.chainModifier(unit.unit,n,currentHP,maxHP,percHP,modifiers[n]);
+            return x * y.chainModifier(x.unit.unit,n,currentHP,maxHP,percHP,modifiers[n]);
         },1);
-        result = computeDamageOfUnit(unit.unit,result,modifiers[n]);
+        result = computeDamageOfUnit(x.unit.unit,result,modifiers[n]);
         // update chain multiplier for the next hit
         multipliersUsed.push(currentChainMultiplier);
         currentChainMultiplier = getChainMultiplier(currentChainMultiplier,modifiers[n],chainModifier);
         // return value
-        return [ unit, result, order ];
+        return { unit: x.unit, damage: result, position: x.position };
     });
     return { result: result, chainMultipliers: multipliersUsed };
 };
 
 var applyCaptainEffectToDamage = function(damage,func,modifiers) {
     return damage.map(function(x,n) {
-        var unit = x[0], damage = x[1], order = x[2];
-        var params = { unit: unit.unit, chainPosition: n, currentHP: currentHP, maxHP: maxHP, percHP: percHP,
-            orb: unit.orb, damage: damage, modifiers: modifiers };
-        damage *= func(params);
-        return [ unit, damage, order ];
+        var params = { unit: x.unit.unit, chainPosition: n, currentHP: currentHP, maxHP: maxHP, percHP: percHP,
+            orb: x.unit.orb, damage: x.damage, modifiers: modifiers };
+        var damage = x.damage * func(params);
+        return { unit: x.unit, damage: damage, position: x.position };
     });
 };
 
@@ -217,16 +214,15 @@ var applySpecialMultipliers = function(damage,isDefenseDown,modifiers) {
     specialsCombinations.forEach(function(specials) {
         // apply all the specials of the combination to every unit
         var temp = damage.map(function(x,n) {
-            var unit = x[0], damage = x[1], order = x[2];
-            specials.forEach(function(func) {
-                var params = { unit: unit.unit, chainPosition: order, currentHP: currentHP, maxHP: maxHP,
-                    percHP: percHP, defenseDown: isDefenseDown, orb: unit.orb, modifiers: modifiers };
-                damage *= func(params);
-            });
-            return [ unit, damage, order ];
+            var multiplier = specials.reduce(function(prev,next) {
+                var params = { unit: x.unit.unit, chainPosition: x.position, currentHP: currentHP, maxHP: maxHP,
+                    percHP: percHP, defenseDown: isDefenseDown, orb: x.unit.orb, modifiers: modifiers };
+                return prev * next(params);
+            },1);
+            return { unit: x.unit, damage: x.damage * multiplier, position: x.position };
         });
         // calculate the new overall damage
-        var total = temp.reduce(function(prev,next) { return prev + next[1]; },0);
+        var total = temp.reduce(function(prev,next) { return prev + next.damage; },0);
         if (total < current) return;
         result = temp;
         current = total;

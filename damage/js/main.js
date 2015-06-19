@@ -255,8 +255,8 @@ var onUnitsSwitched = function(event,a,b) {
     labelB.text(textA);
     // switch level sliders
     var sliderA = slotA.find('.unitSlider'), sliderB = slotB.find('.unitSlider');
-    slotA.append(sliderB);
-    slotB.append(sliderA);
+    slotA.append(sliderB.parent());
+    slotB.append(sliderA.parent());
     // switch sliders
     sliderA = sliders[a];
     sliders[a] = sliders[b];

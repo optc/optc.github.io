@@ -427,7 +427,7 @@ window.captains = {
         atk: 'p.unit.type == "INT" ? 2 : 1'
     },
     389: { // Emporio Ivankov
-        hitAtk: 'type.typeCheck(p.chainPosition,[ [ "Perfect", "Perfect", "Perfect" ]) ? 3.5 : 1',
+        hitAtk: 'p.damage.slice(0,p.chainPosition).subcontains({  [ "Perfect", "Perfect", "Perfect" ]) ? 3.5 : 1',
     },
     390: { // Emporio Ivankov evolved
         atk: undefined

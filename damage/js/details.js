@@ -72,9 +72,9 @@ var onDetailsReady = function(event,details) {
     target.append(container);
     currentModifiers = JSON.parse(JSON.stringify(details.modifiers));
     details.order.forEach(function(data,n) {
-        var dealer = data[0].unit.name, type = details.modifiers[n], multiplier = details.multipliers[n];
+        var dealer = data.unit.unit.name, type = details.modifiers[n], multiplier = details.multipliers[n];
         multiplier = Math.round(multiplier * 100) / 100;
-        appendElements(container,n+1,dealer,type,data[1],multiplier);
+        appendElements(container,n+1,dealer,type,data.damage,multiplier);
     });
 };
 
