@@ -441,7 +441,7 @@ var onSpecialToggled = function(event,slotNumber,enabled) {
     else enabledSpecials[slotNumber] = createFunctions(specials[team[slotNumber].unit.number+1]);
     computeActualDefense();
     if (computeSpecialsCombinations())
-        Utils.warn('Two or more specials you selected are incompatible with each other.','specials');
+        Utils.warn('Two or more specials you selected are incompatible with each other, only the strongest combination will be used.','specials');
     customModifiers = null;
     crunch();
 };

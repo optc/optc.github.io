@@ -330,9 +330,9 @@ $(function() {
 
     $('.menu-link').bigSlide({ side: 'left', menuWidth: '16.625em' });
 
-    if (localStorage.hasOwnProperty('team') && !localStorage.hasOwnProperty('newClickAlert')) {
-        Utils.alrt('You can now use CTRL+click to toggle orb control');
-        localStorage.setItem('newClickAlert',true);
+    if (localStorage.hasOwnProperty('team') && !localStorage.hasOwnProperty('newClickAlert2')) {
+        Utils.alrt('If the page looks broken, please clear your cache.');
+        localStorage.setItem('newClickAlert2',true);
     }
 
 });
