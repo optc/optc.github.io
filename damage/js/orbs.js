@@ -30,7 +30,7 @@ var changeOrb = function(slotNumber) {
 var activateOrb = function(target,slotNumber,type) {
     target.attr('glow',type);
     var orb = target.find('.unitOrb');
-    var className = team[slotNumber].status == 1 ? 'upArrow' : 'downArrow';
+    var className = team[slotNumber].status == 1 ? 'upArrow fa fa-caret-up' : 'downArrow fa fa-caret-down';
     if (orb.children().length === 0) orb.append($('<div class="' + className + '"></div>'));
     else orb.children()[0].className = className;
     if (team[slotNumber].status == 1) orb.parent().parent().removeClass('opposite');

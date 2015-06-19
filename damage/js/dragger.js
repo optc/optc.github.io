@@ -22,7 +22,7 @@ var moveElement = function(target,byX,byY) {
 /* * * * * Event callbacks (draggables) * * * * */
 
 var onUnitStartMove = function(e) {
-    if (Utils.isClickOnOrb(e,e.target)) {
+    if ($(e.target).parent().hasClass('slide') || Utils.isClickOnOrb(e,e.target)) {
         e.preventDefault();
         e.stopPropagation();
     } else {

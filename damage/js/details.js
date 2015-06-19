@@ -14,6 +14,7 @@ var modifiers = [ 'Miss', 'Good', 'Great', 'Perfect' ];
 var onDamageMouseUp = function(e) {
     target = $(this);
     if (!target.hasClass('details')) {
+        if (e.which != 1) return;
         target[0].style.zIndex = ++zIndex;
         detailsVisible = target.find('[id]').attr('id');
         timeout = setTimeout(function() {

@@ -25,6 +25,14 @@ var parseUnit = function(element,n) {
     };
 };
 
+var getSlideColor = function(type) {
+    if (type == 'STR') return 'orangered';
+    if (type == 'QCK') return 'dodgerblue';
+    if (type == 'DEX') return 'limegreen';
+    if (type == 'PSY') return 'gold';
+    if (type == 'INT') return 'mediumorchid';
+};
+
 var updateSlot = function(slotNumber,unitNumber) {
     var slot = $('.unit').eq(slotNumber);
     var index = slot.index();
@@ -34,12 +42,14 @@ var updateSlot = function(slotNumber,unitNumber) {
         slot.removeClass('empty');
         slot.find('.unitPortrait')[0].style.backgroundImage = 'url(' + Utils.getThumbnailUrl(unitNumber) + ')';
         // update slider
-        sliders[index][0].setRange(1,units[unitNumber].maxLevel);
+        var color = getSlideColor(units[unitNumber-1].type);
+        var config = { min: 1, max: units[unitNumber].maxLevel, fgColor: color, inputColor: color };
+        sliders[index][0].trigger('configure',config);
         sliders[index][1] = units[unitNumber].maxLevel;
     } else { // remove unit
         slot.addClass('empty');
         slot.find('.unitPortrait')[0].style.backgroundImage = null;
-        sliders[index][0].setRange(1,1);
+        sliders[index][0].trigger('configure',{ min: 1, max: 1 });
         sliders[index][1] = 1;
     }
     // reset level
@@ -67,14 +77,15 @@ var changeMaxHP = function(newValue,skipTrigger) {
     changeCurrentHP(currentHP,skipTrigger,false);
 };
 
-var changeUnitLevel = function(slotNumber,level) {
+var changeUnitLevel = function(slotNumber,level,userTriggered) {
     $('.unit').eq(slotNumber).removeClass('slide');
-    $(document).trigger('unitLevelChanged',[ slotNumber, level ]);
+    $(document).trigger('unitLevelChanged',[ slotNumber, level, userTriggered ]);
 };
 
-var changeLevelLabel = function(slotNumber,level) {
+var changeLevelLabel = function(slotNumber,level,userTriggered) {
     var slot = $('.unit').eq(slotNumber);
     slot.find('.unitLevel').text('Lv.' + level);
+    if (!userTriggered) slot.find('.unitSlider').val(level).trigger('change');
 };
 
 var getUnitNumberFromSlot = function(slotNumber) {
@@ -133,10 +144,10 @@ var onUnitEditorClose = function(e) {
     changeLevelLabel(slotNumber,level);
 };
 
-var onUnitLevelSlideEnd = function(ui,value) {
-    setTimeout(function() {
-        changeUnitLevel($(ui).parent().index(),value);
-    },100);
+var onSlideRelease = function(n) {
+    return function(value) {
+        setTimeout(function() { changeUnitLevel(n,value,true); },10);
+    };
 };
 
 var onUnitLevelClick = function(e) {
@@ -151,6 +162,12 @@ var onUnitLevelClick = function(e) {
     e.preventDefault();
     e.stopPropagation();
     return false;
+};
+
+var onUnitMouseUp = function(e) {
+    var target = $(this);
+    if (target.hasClass('slide'))
+        setTimeout(function() { target.removeClass('slide'); },10);
 };
 
 var onChangeHP = function(event,value) {
@@ -187,8 +204,8 @@ var onUnitPicked = function(event,slotNumber,unitNumber) {
     updateSlot(slotNumber,unitNumber);
 };
 
-var onUnitLevelChanged = function(event,slotNumber,level) {
-    changeLevelLabel(slotNumber,level);
+var onUnitLevelChanged = function(event,slotNumber,level,userTriggered) {
+    changeLevelLabel(slotNumber,level,userTriggered);
 };
 
 var onNumbersCrunched = function(event,numbers) {
@@ -265,6 +282,7 @@ $(function() {
     // attach ui events
 
     $('.unitLevel').click(onUnitLevelClick);
+    $('.unit').mouseup(onUnitMouseUp);
     $('#defense').keyup(onDefenseKeyUp);
 
     // attach custom events
@@ -284,10 +302,15 @@ $(function() {
     $('#defenseContainer').click(function() { $('#defense').focus(); });
     
     $('.unitSlider').each(function(n,x) {
-        sliders.push([$(x).CircularSlider({
-            radius: 44,
-            onSlideEnd: onUnitLevelSlideEnd
-        }),1]);
+        var target = $(x);
+        sliders.push([ target, 1 ]);
+        target.knob({
+            width: 88,
+            height: 88,
+            angleOffset: -160,
+            angleArc: 320,
+            release: onSlideRelease(n)
+        });
     });
 
     hpSlider = $('#hpSlider').noUiSlider({

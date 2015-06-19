@@ -118,6 +118,7 @@ var onThumbnailClick = function() {
 var onUnitClick = function(e) {
     if (e.which != 1 || e.ctrlKey) return;
     if (Utils.isClickOnOrb(e,e.target)) return;
+    if ($(this).hasClass('slide')) return;
     lastSlotNumber = $(this).index();
     createDialog();
     if (!instructionsShown) showInstructions();

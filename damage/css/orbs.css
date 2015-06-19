@@ -45,21 +45,13 @@
 }
 
 .upArrow, .downArrow {
-    position: absolute;
-    left: -2px;
-    width: 28px;
-    height: 28px;
+    position: relative;
+    font-size: 2em;
+    color: white;
 }
 
-.upArrow {
-    background-image: url("data:image/svg+xml,<svg viewBox='0 0 30 30' preserveAspectRatio='true' xmlns='http://www.w3.org/2000/svg'><path fill='rgb(255,255,255)' d='M23.963,20.834L17.5,9.64c-0.825-1.429-2.175-1.429-3,0L8.037,20.834c-0.825,1.429-0.15,2.598,1.5,2.598h12.926C24.113,23.432,24.788,22.263,23.963,20.834z'/></svg>") !important;
-    top: -3px;
-}
-
-.downArrow {
-    background-image: url("data:image/svg+xml,<svg viewBox='0 0 30 30' preserveAspectRatio='true' xmlns='http://www.w3.org/2000/svg'><path fill='rgb(255,255,255)' d='M8.037,11.166L14.5,22.359c0.825,1.43,2.175,1.43,3,0l6.463-11.194c0.826-1.429,0.15-2.598-1.5-2.598H9.537C7.886,8.568,7.211,9.737,8.037,11.166z'/></svg>") !important;
-    top: -1px;
-}
+.upArrow { top: -3px; }
+.downArrow { top: -1px; }
 
 /***********************
  *     ORB GLOWING     *
