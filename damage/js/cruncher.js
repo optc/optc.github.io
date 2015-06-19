@@ -19,6 +19,8 @@
  * - Chain modifier:      Modifier applied to the chain multiplier when computing its new value for the following
  *                        turn. Affects the amount the multiplier is increased by.  Typically a static value (eg 4.0 for
  *                        Rayleigh, 2.0 for Domino). Provided in the `captains` file via the `chainModifier` property.
+ * - Damage sorters:      Functions that modify the normal chain attack order to make sure that certain captain effects
+ *                        are activated whenever possible. Tipically required by Okama characters (Ivankov, Caroline, ...).
  * - Orb multiplier:      Multiplier applied to the damage contribution of each unit, depending on the type of
  *                        the orb assigned to the unit itself (controlled by the `orbs` module).  Units with matching
  *                        orbs get a 2.0 orb multiplier, units with opposite orbs get 0.5  and units with unrelated orbs
@@ -126,47 +128,51 @@ var crunchForType = function(type,withDetails) {
     // get data struct ready
     var data = [ damages ];
     for (i=0;i<captainsWithHitModifiers.length && !customModifiers;++i) {
-        if (!arraysAreEqual(DEFAULT_HIT_MODIFIERS,captainsWithHitModifiers[i].hitModifiers))
-            data.push(damages);
+        //if (!arraysAreEqual(DEFAULT_HIT_MODIFIERS,captainsWithHitModifiers[i].hitModifiers))
+            data.push(JSON.parse(JSON.stringify(damages)));
     }
     // compute damages
+    var result = [ ];
     for (i=0;i === 0 || (i<data.length && !customModifiers);++i) {
+        result[i] = [ ];
         var modifiers = customModifiers || (i === 0 ? DEFAULT_HIT_MODIFIERS : captainsWithHitModifiers[i-1].hitModifiers);
         // apply compatible captain effects
         for (var j=0;j<captainsWithHitModifiers.length;++j) {
             if (!customModifiers && !arraysAreEqual(modifiers,captainsWithHitModifiers[j].hitModifiers)) continue;
-            for (l=0;l<data[i].length;++l)
+            for (l=0;l<data[i].length;++l) {
                 data[i][l] = applyCaptainEffectToDamage(data[i][l],captainsWithHitModifiers[j].hitAtk,modifiers);
+            }
         }
+        // applie chain and bonus multipliers and calculate overall damage
         for (l=0;l<data[i].length;++l) {
             var damageWithChainMultipliers = applyChainAndBonusMultipliers(data[i][l],modifiers,captainsWithChainModifiers);
             var overallDamage = damageWithChainMultipliers.result.reduce(function(prev,x) { return prev + x.damage; },0);
-            data[i][l] = { damage: damageWithChainMultipliers, overall: overallDamage, hitModifiers: modifiers };
+            result[i][l] = { damage: damageWithChainMultipliers, overall: overallDamage, hitModifiers: modifiers };
         }
     }
     // collapse the multiple damages created by the damage sorters
-    for (i=0;i<data.length;++i) {
+    for (i=0;i<result.length;++i) {
         var index = 0;
-        for (l=1;l<data[i].length;++l) {
-            if (data[i][l].overall > data[i][index].overall)
+        for (l=1;l<result[i].length;++l) {
+            if (result[i][l].overall > result[i][index].overall)
                 index = l;
         }
-        data[i] = data[i][index];
+        result[i] = result[i][index];
     }
     // find index of maxiumum damage
-    var index = 0, currentMax = data[0].overall;
-    for (i=1;i<data.length;++i) {
-        if (data[i].overall < currentMax) continue;
+    var index = 0, currentMax = result[0].overall;
+    for (i=1;i<result.length;++i) {
+        if (result[i].overall < currentMax) continue;
         index = i;
-        currentMax = data[i].overall;
+        currentMax = result[i].overall;
     }
     // return results
     if (!withDetails) return currentMax;
     // provide details
     var result = {
-        modifiers: data[index].hitModifiers,
-        multipliers: data[index].damage.chainMultipliers,
-        order: data[index].damage.result
+        modifiers: result[index].hitModifiers,
+        multipliers: result[index].damage.chainMultipliers,
+        order: result[index].damage.result
     };
     return result;
 };
@@ -232,7 +238,7 @@ var applyCaptainEffectsToHP = function(unit,hp) {
 };
 
 var applySpecialMultipliers = function(damage,isDefenseDown,modifiers) {
-    var result = damage, current = -1; // damage.reduce(function(prev,next) { return prev + next[1]; },0);
+    var result = damage, current = -1;
     // for each special combination
     specialsCombinations.forEach(function(specials) {
         // apply all the specials of the combination to every unit

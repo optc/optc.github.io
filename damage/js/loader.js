@@ -105,7 +105,7 @@ $(function() {
     if (data.defense !== 0)
         $(document).trigger('defenseChanged',data.defense);
 
-    setTimeout(function() { $(document).trigger('crunchingToggled',true); },25);
+    $(document).trigger('crunchingToggled',true);
 
     /* * * * * Events * * * * */
 

@@ -147,7 +147,7 @@ var onUnitEditorClose = function(e) {
 
 var onSlideRelease = function(n) {
     return function(value) {
-        setTimeout(function() { changeUnitLevel(n,value,true); },10);
+        changeUnitLevel(n,value,true);
     };
 };
 
@@ -168,7 +168,7 @@ var onUnitLevelClick = function(e) {
 var onUnitMouseUp = function(e) {
     var target = $(this);
     if (target.hasClass('slide'))
-        setTimeout(function() { target.removeClass('slide'); },10);
+        target.removeClass('slide');
 };
 
 var onChangeHP = function(event,value) {

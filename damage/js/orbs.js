@@ -47,6 +47,7 @@ var deactivateOrb = function(target,slotNumber) {
 
 var onUnitMouseUp = function(e) {
     if (e.target.className == 'unitLevel' || this.classList.contains('empty')) return;
+    if (!$(e.target).hasClass('unitPortrait')) return;
     if (e.which == 2 || (e.which == 1 && (e.ctrlKey || Utils.isClickOnOrb(e,e.target))))
         changeOrb($(this).index());
 };
