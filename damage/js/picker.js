@@ -117,7 +117,8 @@ var onThumbnailClick = function() {
 
 var onUnitClick = function(e) {
     if (e.which != 1 || e.ctrlKey) return;
-    if (!$(e.target).hasClass('unitPortrait')) return;
+    var target = $(e.target);
+    if (!target.hasClass('unitPortrait') && !target.hasClass('empty')) return;
     if (Utils.isClickOnOrb(e,e.target)) return;
     lastSlotNumber = $(this).index();
     createDialog();
