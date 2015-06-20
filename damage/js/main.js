@@ -146,6 +146,7 @@ var onUnitEditorClose = function(e) {
     unitLevelEditor.val('');
     if (isNaN(level)) return;
     level = Math.min(Math.max(1,level),sliders[slotNumber][1]);
+    inhibitKnob = false;
     changeUnitLevel(slotNumber,level,true);
     changeLevelLabel(slotNumber,level,true);
 };
