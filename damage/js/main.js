@@ -80,8 +80,7 @@ var changeMaxHP = function(newValue,skipTrigger) {
 
 var changeUnitLevel = function(slotNumber,level,userTriggered) {
     $('.unit').eq(slotNumber).removeClass('slide');
-    if (!bootstrapped) return;
-    if (!inhibitKnob) $(document).trigger('unitLevelChanged',[ slotNumber, level, userTriggered ]);
+    if (bootstrapped && !inhibitKnob) $(document).trigger('unitLevelChanged',[ slotNumber, level, userTriggered ]);
     else inhibitKnob = false;
 };
 
@@ -147,8 +146,8 @@ var onUnitEditorClose = function(e) {
     unitLevelEditor.val('');
     if (isNaN(level)) return;
     level = Math.min(Math.max(1,level),sliders[slotNumber][1]);
-    changeUnitLevel(slotNumber,level);
-    changeLevelLabel(slotNumber,level);
+    changeUnitLevel(slotNumber,level,true);
+    changeLevelLabel(slotNumber,level,true);
 };
 
 var onSlideRelease = function(value) {
@@ -163,7 +162,7 @@ var onUnitLevelClick = function(e) {
     } else if (e.which == 2 || (e.which == 1 && e.ctrlKey)) {
         var slotNumber = $(this).parent().index();
         var unitNumber = getUnitNumberFromSlot(slotNumber);
-        changeUnitLevel(slotNumber,units[unitNumber-1].maxLevel);
+        changeUnitLevel(slotNumber,units[unitNumber-1].maxLevel,true);
     }
     e.preventDefault();
     e.stopPropagation();
