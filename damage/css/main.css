@@ -98,7 +98,7 @@ body, #main, #hp, #other {
 
 .unit > :not([class]) {
     position: absolute;
-    top: 15px;
+    top: 25px;
     left: 10px;
     z-index: 2;
 }

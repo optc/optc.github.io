@@ -318,8 +318,8 @@ $(function() {
         target.knob({
             width: 88,
             height: 88,
-            angleOffset: -160,
-            angleArc: 320,
+            angleOffset: -120,
+            angleArc: 240,
             release: onSlideRelease
         });
     });

@@ -1,5 +1,3 @@
-/* jshint evil: true */
-
 (function() {
 
 /* Terminology: 
@@ -373,22 +371,9 @@ var setCaptain = function(slotNumber) {
     if (team[slotNumber] === null)
         captainAbilities[slotNumber] = null;
     else if (captains.hasOwnProperty(team[slotNumber].unit.number+1))
-        captainAbilities[slotNumber] = createFunctions(captains[team[slotNumber].unit.number+1]);
+        captainAbilities[slotNumber] = captains[team[slotNumber].unit.number+1];
     else
         captainAbilities[slotNumber] = null;
-};
-
-var createFunctions = function(data) {
-    var result = { };
-    for (var key in data) {
-        if (data[key] === undefined)
-            Utils.warn("The unit you selected has a strange ass ability that can't be parsed correctly yet",'captains');
-        else if (key == 'type' || data[key].constructor == Array || data[key].constructor == Function)
-            result[key] = data[key];
-        else
-            result[key] = new Function('p','return ' + data[key]);
-    }
-    return result;
 };
 
 var arraysAreEqual = function(a,b) {
@@ -488,7 +473,7 @@ var onCrunchToggled = function(event,enabled) {
 
 var onSpecialToggled = function(event,slotNumber,enabled) {
     if (!enabled) enabledSpecials[slotNumber] = null;
-    else enabledSpecials[slotNumber] = createFunctions(specials[team[slotNumber].unit.number+1]);
+    else enabledSpecials[slotNumber] = specials[team[slotNumber].unit.number+1];
     computeActualDefense();
     if (computeSpecialsCombinations())
         Utils.warn('Two or more specials you selected are incompatible with each other, only the strongest combination will be used.','specials');

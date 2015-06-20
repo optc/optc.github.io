@@ -1,342 +1,342 @@
 window.specials = {
     18: { // Sanji Plastic Sugery Shot
-        def: '0.5'
+        def: function(p) { return 0.5; }
     },
     24: { // Tony Tony Chopper Arm Point
-        def: '0.5'
+        def: function(p) { return 0.5; }
     },
     34: { // Cabin Boy Helmeppo
-        def: '0'
+        def: function(p) { return 0; }
     },
     127: { // Fodder
-        def: '0.5'
+        def: function(p) { return 0.5; }
     },
     137: { // Fodder
-        def: '0.5'
+        def: function(p) { return 0.5; }
     },
     148: { // Fodder
-        def: '0.5'
+        def: function(p) { return 0.5; }
     },
     158: { // Fodder
-        def: '0.5'
+        def: function(p) { return 0.5; }
     },
     206: { // Miss Goldenweek Colors Trap: Calming Green
-        def: '0.5'
+        def: function(p) { return 0.5; }
     },
     209: { // Miss All Sunday Baroque Works VP
-        atk: 'p.unit.type == "INT" ? 1.5 : 1',
+        atk: function(p) { return p.unit.type == "INT" ? 1.5 : 1; },
         type: 'type'
     },
     210: { // Nico Robin
-        atk: 'p.unit.type == "INT" ? 2 : 1',
+        atk: function(p) { return p.unit.type == "INT" ? 2 : 1; },
         type: 'type'
     },
     222: { // Usopp Usopp Hammer
-        atk: 'p.unit.type == "PSY" ? 1.5 : 1',
+        atk: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; },
         type: 'type'
     },
     223: { // Usopp Impact
-        atk: 'p.unit.type == "PSY" ? 2 : 1',
+        atk: function(p) { return p.unit.type == "PSY" ? 2 : 1; },
         type: 'type'
     },
     263: { // Sergeant Major Coby
-        orb: 'p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1)',
+        orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); },
     },
     267: { // Rainbow Dragon
-        def: '0.5'
+        def: function(p) { return 0.5; }
     },
     275: { // Fodder
-        def: '0.5'
+        def: function(p) { return 0.5; }
     },
     285: { // Fodder
-        def: '0.5'
+        def: function(p) { return 0.5; }
     },
     295: { // Brontosaurus
-        def: '0.5'
+        def: function(p) { return 0.5; }
     },
     309: { // Basil Hawkins
-        def: '0.5'
+        def: function(p) { return 0.5; }
     },
     310: { // Basil Hawkins evolved
-        def: '0.5'
+        def: function(p) { return 0.5; }
     },
     313: { // Urouge
-        atk: 'p.unit.class == "Striker" ? 1.5 : 1',
+        atk: function(p) { return p.unit.class == "Striker" ? 1.5 : 1; },
         type: 'class'
     },
     314: { // Mad Monk Urouge
-        atk: 'p.unit.class == "Striker" ? 1.5 : 1',
+        atk: function(p) { return p.unit.class == "Striker" ? 1.5 : 1; },
         type: 'class'
     },
     323: { // Kaku
-        orb: 'p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1)'
+        orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); }
     },
     324: { // Kaku evolved
-        orb: 'p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1)'
+        orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); }
     },
     352: { // Zephyr
-        atk: 'p.unit.class == "Shooter" ? 1.75 : 1',
+        atk: function(p) { return p.unit.class == "Shooter" ? 1.75 : 1; },
         type: 'class'
     },
     353: { // Zephyr NEO
-        atk: 'p.unit.class == "Shooter" ? 1.75 : 1',
+        atk: function(p) { return p.unit.class == "Shooter" ? 1.75 : 1; },
         type: 'class'
     },
     382: { // Fodder
-        def: '0.5'
+        def: function(p) { return 0.5; }
     },
     385: { // Hogback
-        atk: 'p.unit.class == "Fighter" ? 1.25 : 1',
+        atk: function(p) { return p.unit.class == "Fighter" ? 1.25 : 1; },
         type: 'class'
     },
     386: { // Doctor Hogback
-        atk: 'p.unit.class == "Fighter" ? 1.25 : 1',
+        atk: function(p) { return p.unit.class == "Fighter" ? 1.25 : 1; },
         type: 'class'
     },
     391: { // Perona
-        def: '0'
+        def: function(p) { return 0; }
     },
     392: { // Ghost Princess Perona
-        def: '0'
+        def: function(p) { return 0; }
     },
     395: { // Miss Merry Christmas
-        orb: 'p.orb == 2.0 ? 1.25 : (p.orb == 0.5 ? 4/5 : 1)'
+        orb: function(p) { return p.orb == 2.0 ? 1.25 : (p.orb == 0.5 ? 4/5 : 1); }
     },
     399: { // Miss Doublefinger
-        atk: 'p.unit.type == "DEX" ? 1.5 : 1',
+        atk: function(p) { return p.unit.type == "DEX" ? 1.5 : 1; },
         type: 'type'
     },
     400: { // Miss Doublefinger evolved
-        atk: 'p.unit.type == "DEX" ? 1.5 : 1',
+        atk: function(p) { return p.unit.type == "DEX" ? 1.5 : 1; },
         type: 'type'
     },
     401: { // Mr.1
-        atk: 'p.unit.class == "Slasher" ? 1.25 : 1',
+        atk: function(p) { return p.unit.class == "Slasher" ? 1.25 : 1; },
         type: 'class'
     },
     402: { // Mr.1 evolved
-        atk: 'p.unit.class == "Slasher" ? 1.25 : 1',
+        atk: function(p) { return p.unit.class == "Slasher" ? 1.25 : 1; },
         type: 'class'
     },
     406: { // Shougun Zombie
-        atk: '1.2',
+        atk: function(p) { return 1.2; },
         type: 'all'
     },
     417: { // Doflamingo
-        orb: 'p.orb == 2.0 ? 2.0 : (p.orb == 0.5 ? 0.25 : 1)'
+        orb: function(p) { return p.orb == 2.0 ? 2.0 : (p.orb == 0.5 ? 0.25 : 1); }
     },
     418: { // Doflamingo evolved
-        orb: 'p.orb == 2.0 ? 2.0 : (p.orb == 0.5 ? 0.25 : 1)'
+        orb: function(p) { return p.orb == 2.0 ? 2.0 : (p.orb == 0.5 ? 0.25 : 1); }
     },
     419: { // Kimono Sanji
-        def: '0.5'
+        def: function(p) { return 0.5; }
     },
     423: { // Brook
-        def: '0.5'
+        def: function(p) { return 0.5; }
     },
     424: { // Brook evolved
-        def: '0.5'
+        def: function(p) { return 0.5; }
     },
     426: { // Masira
-        atk: 'p.unit.type == "STR" ? 1.05 : 1',
+        atk: function(p) { return p.unit.type == "STR" ? 1.05 : 1; },
         type: 'type'
     },
     429: { // South Bird
-        def: '0.5',
+        def: function(p) { return 0.5; },
     },
     430: { // Bellamy
-        orb: 'p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1)'
+        orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); }
     },
     431: { // Bellamy evolved
-        orb: 'p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1)'
+        orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); }
     },
     434: { // Caroline
-        orb: 'p.orb == 2.0 ? 1.25 : (p.orb == 0.5 ? 4/5 : 1)'
+        orb: function(p) { return p.orb == 2.0 ? 1.25 : (p.orb == 0.5 ? 4/5 : 1); }
     },
     450: { // Namur
-        atk: 'p.unit.class == "Fighter" ? 1.5 : 1',
+        atk: function(p) { return p.unit.class == "Fighter" ? 1.5 : 1; },
         type: 'class'
     },
     451: { // Namur evolved
-        atk: 'p.unit.class == "Fighter" ? 1.5 : 1',
+        atk: function(p) { return p.unit.class == "Fighter" ? 1.5 : 1; },
         type: 'class'
     },
     454: { // Fossa
-        atk: 'p.unit.type == "STR" ? 1.5 : 1',
+        atk: function(p) { return p.unit.type == "STR" ? 1.5 : 1; },
         type: 'type'
     },
     455: { // Fossa evolved
-        atk: 'p.unit.type == "STR" ? 1.5 : 1',
+        atk: function(p) { return p.unit.type == "STR" ? 1.5 : 1; },
         type: 'type'
     },
     458: { // Sengoku
-        atk: '1.5',
+        atk: function(p) { return 1.5; },
         type: 'type'
     },
     459: { // Sengoku evolved
-        atk: '1.5',
+        atk: function(p) { return 1.5; },
         type: 'type'
     },
     461: { // Fugitive Bentham Mr.2
-        atk: 'p.unit.class == "Fighter" ? 1.25 : 1',
+        atk: function(p) { return p.unit.class == "Fighter" ? 1.25 : 1; },
         type: 'class'
     },
     462: { // Fugitive Bentham Mr.2 evolved
-        atk: 'p.unit.class == "Fighter" ? 1.25 : 1',
+        atk: function(p) { return p.unit.class == "Fighter" ? 1.25 : 1; },
         type: 'class'
     },
     465: { // Gedatsu
-        orb: 'p.orb == 2.0 ? 1.25 : (p.orb == 0.5 ? 4/5 : 1)'
+        orb: function(p) { return p.orb == 2.0 ? 1.25 : (p.orb == 0.5 ? 4/5 : 1); }
     },
     487: { // Fodder
-        atk: 'p.unit.type == "STR" ? 1.2 : 1',
+        atk: function(p) { return p.unit.type == "STR" ? 1.2 : 1; },
         type: 'type'
     },
     488: { // Fodder
-        atk: 'p.unit.type == "QCK" ? 1.2 : 1',
+        atk: function(p) { return p.unit.type == "QCK" ? 1.2 : 1; },
         type: 'type'
     },
     489: { // Fodder
-        atk: 'p.unit.type == "DEX" ? 1.2 : 1',
+        atk: function(p) { return p.unit.type == "DEX" ? 1.2 : 1; },
         type: 'type'
     },
     490: { // Fodder
-        atk: 'p.unit.type == "STR" ? 1.2 : 1',
+        atk: function(p) { return p.unit.type == "STR" ? 1.2 : 1; },
         type: 'type'
     },
     491: { // Fodder
-        atk: 'p.unit.type == "QCK" ? 1.2 : 1',
+        atk: function(p) { return p.unit.type == "QCK" ? 1.2 : 1; },
         type: 'type'
     },
     492: { // Fodder
-        atk: 'p.unit.type == "DEX" ? 1.2 : 1',
+        atk: function(p) { return p.unit.type == "DEX" ? 1.2 : 1; },
         type: 'type'
     },
     505: { // Pell
-        atk: 'p.unit.type == "QCK" ? 1.25 : 1',
+        atk: function(p) { return p.unit.type == "QCK" ? 1.25 : 1; },
         type: 'type'
     },
     506: { // Pell evolved
-        atk: 'p.unit.type == "QCK" ? 1.25 : 1',
+        atk: function(p) { return p.unit.type == "QCK" ? 1.25 : 1; },
         type: 'type'
     },
     509: { // Prisoner Crocodile
-        atk: 'p.unit.class == "Striker" ? 1.5 : 1',
+        atk: function(p) { return p.unit.class == "Striker" ? 1.5 : 1; },
         type: 'class'
     },
     510: { // Prisoner Crocodile evolved
-        atk: 'p.unit.class == "Striker" ? 1.5 : 1',
+        atk: function(p) { return p.unit.class == "Striker" ? 1.5 : 1; },
         type: 'class'
     },
     511: { // Prisoner Mr.1
-        atk: 'p.unit.class == "Slasher" ? 1.25 : 1',
+        atk: function(p) { return p.unit.class == "Slasher" ? 1.25 : 1; },
         type: 'class'
     },
     514: { // Tropical Robin
-        def: '0.5',
-        atk: 'p.unit.type == "INT" ? 1.5 : 1',
+        def: function(p) { return 0.5; },
+        atk: function(p) { return p.unit.type == "INT" ? 1.5 : 1; },
         type: 'type'
     },
     517: { // Usoppun
-        atk: '1.05',
+        atk: function(p) { return 1.05; },
         type: 'all'
     },
     518: { // Usoppun evolved
-        atk: '1.05',
+        atk: function(p) { return 1.05; },
         type: 'all'
     },
     519: { // SW Luffy
-        atk: 'p.unit.type == "STR" ? 2 : 1',
+        atk: function(p) { return p.unit.type == "STR" ? 2 : 1; },
         type: 'type'
     },
     520: { // SW Luffy evolved
-        atk: 'p.unit.type == "STR" ? 2 : 1',
+        atk: function(p) { return p.unit.type == "STR" ? 2 : 1; },
         type: 'type'
     },
     529: { // SW Shanks
-        def: '0'
+        def: function(p) { return 0; }
     },
     530: { // SW Shanks evolved
-        def: '0'
+        def: function(p) { return 0; }
     },
     533: { // Sakura Brook
-        orb: 'p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1)'
+        orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); }
     },
     534: { // Sakura Brook evolved
-        orb: 'p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1)'
+        orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); }
     },
     545: { // Enel
-        atk: 'p.unit.type == "PSY" ? 1.5 : 1',
+        atk: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; },
         type: 'type'
     },
     546: { // God Enel
-        atk: 'p.unit.type == "PSY" ? 1.5 : 1',
+        atk: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; },
         type: 'type'
     },
     549: { // Sadi-chan
-        atk: 'p.defenseDown ? 1.3 : 1',
+        atk: function(p) { return p.defenseDown ? 1.3 : 1; },
         type: 'all'
     },
     550: { // Sadi-chan evolved
-        atk: 'p.defenseDown ? 1.3 : 1',
+        atk: function(p) { return p.defenseDown ? 1.3 : 1; },
         type: 'all'
     },
     559: { // SW Franky
-        orb: 'p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1)'
+        orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); }
     },
     560: { // SW Franky evolved
-        orb: 'p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1)'
+        orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); }
     },
     568: { // Foxy
-        def: '0.5'
+        def: function(p) { return 0.5; }
     },
     569: { // Foxy evolved
-        def: '0.5'
+        def: function(p) { return 0.5; }
     },
     572: { // DBF Usopp
-        atk: 'p.unit.class == "Fighter" ? 2 : 1',
+        atk: function(p) { return p.unit.class == "Fighter" ? 2 : 1; },
         type: 'class'
     },
     574: { // Aokiji
-        atk: 'p.unit.class == "Striker" ? 1.75 : 1',
+        atk: function(p) { return p.unit.class == "Striker" ? 1.75 : 1; },
         type: 'class'
     },
     575: { // Aokiji evolved
-        atk: 'p.unit.class == "Striker" ? 1.75 : 1',
+        atk: function(p) { return p.unit.class == "Striker" ? 1.75 : 1; },
         type: 'class'
     },
     582: { // Kamakiri
-        atk: 'p.unit.type == "QCK" ? 1.5 : 1',
+        atk: function(p) { return p.unit.type == "QCK" ? 1.5 : 1; },
         type: 'type'
     },
     589: { // Kohza
-        atk: 'p.unit.class == "Slasher" ? 1.5 : 1',
+        atk: function(p) { return p.unit.class == "Slasher" ? 1.5 : 1; },
         type: 'class'
     },
     590: { // Kohza evolved
-        atk: 'p.unit.class == "Slasher" ? 1.5 : 1',
+        atk: function(p) { return p.unit.class == "Slasher" ? 1.5 : 1; },
         type: 'class'
     },
     596: { // Log Chopper
-        def: '0.5'
+        def: function(p) { return 0.5; }
     },
     597: { // Log Chopper evolved
-        def: '0.5'
+        def: function(p) { return 0.5; }
     },
     600: { // Apprentice Shanks
-        atk: 'p.unit.type == "PSY" ? 1.3 : 1',
+        atk: function(p) { return p.unit.type == "PSY" ? 1.3 : 1; },
         type: 'type'
     },
     601: { // Apprentice Shanks evolved
-        atk: 'p.unit.type == "PSY" ? 1.3 : 1',
+        atk: function(p) { return p.unit.type == "PSY" ? 1.3 : 1; },
         type: 'type'
     },
     602: { // v2 Enel
-        atk: 'p.unit.type == "QCK" ? 2 : 1',
+        atk: function(p) { return p.unit.type == "QCK" ? 2 : 1; },
         type: 'type'
     },
     603: { // v2 Enel evolved
-        atk: 'p.unit.type == "QCK" ? 2 : 1',
+        atk: function(p) { return p.unit.type == "QCK" ? 2 : 1; },
         type: 'type'
     }
 };
