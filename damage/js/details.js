@@ -70,9 +70,9 @@ var onDetailsReady = function(event,details) {
     target.find('.detailsContainer').remove();
     var container = $('<div class="detailsContainer"></div>');
     target.append(container);
-    currentModifiers = JSON.parse(JSON.stringify(details.modifiers));
-    details.order.forEach(function(data,n) {
-        var dealer = data.unit.unit.name, type = details.modifiers[n], multiplier = details.multipliers[n];
+    currentModifiers = JSON.parse(JSON.stringify(details.hitModifiers));
+    details.damage.forEach(function(data,n) {
+        var dealer = data.unit.unit.name, type = details.hitModifiers[n], multiplier = details.chainMultipliers[n];
         multiplier = Math.round(multiplier * 100) / 100;
         appendElements(container,n+1,dealer,type,data.damage,multiplier);
     });

@@ -70,7 +70,7 @@ var crunch = function() {
     if (!crunchingEnabled) return;
     var result = { };
     ['STR','QCK','DEX','PSY','INT'].forEach(function(type) {
-        result[type] = crunchForType(type,false);
+        result[type] = crunchForType(type).overall;
     });
     result.HP = 0;
     team.forEach(function(x,n) {
@@ -83,97 +83,117 @@ var crunch = function() {
     $(document).trigger('numbersCrunched',result);
 };
 
-var crunchForType = function(type,withDetails) {
-    var damage = [ ];
-    // apply type & orb multipliers
+// TODO Needlessly repeated initialization
+var crunchForType = function(type) {
+    // check if defense is down (required by some captain effects)
     var isDefenseDown = enabledSpecials.some(function(x) { return x !== null && x.hasOwnProperty('def'); });
+    // initialize ability array
+    var abilities = [ ], l;
+    if (captainAbilities[0] !== null) abilities.push(captainAbilities[0]);
+    if (captainAbilities[1] !== null) abilities.push(captainAbilities[1]);
+    // initialize non-static captain effects
+    var cptsWithHitModifiers   = abilities.filter(function(x) { return x.hasOwnProperty('hitModifiers');  });
+    var cptsWithChainModifiers = abilities.filter(function(x) { return x.hasOwnProperty('chainModifier'); });
+    var cptsWithDamageSorters  = abilities.filter(function(x) { return x.hasOwnProperty('damageSorter');  });
+    // get all non-default hit modifiers
+    var hitModifiers = getPossibleHitModifiers(cptsWithHitModifiers);
+    // compute base damage
+    var damage = getBaseDamageForType(type,abilities,isDefenseDown);
+    // compute best overall damage
+    var overallDamage = optimizeDamage(damage,cptsWithHitModifiers,cptsWithChainModifiers,hitModifiers);
+    // apply damage sorters to base damage, recalculate the new damage and update overallDamage if necessary
+    for (var i=0;i<cptsWithDamageSorters.length;++i) {
+        var newDamage = cptsWithDamageSorters[i].damageSorter(damage);
+        if (newDamage === null) return;
+        var newOverallDamage = optimizeDamage(newDamage,cptsWithHitModifiers,cptsWithChainModifiers,hitModifiers);
+        if (newOverallDamage.overall > overallDamage.overall) overallDamage = newOverallDamage;
+    }
+    // return results
+    return overallDamage;
+};
+
+/* Calculates the base damage of each unit in the team.
+ * The base damage is defined as the product of:
+ * - Base ATK
+ * - Type multipliers
+ * - Orb multipliers
+ * - Static (ie, non-positional) captain effect multipliers
+ * - Special multipliers
+ * - Merry bonus
+ * Returns a sorted array of objects detailing the base damage of each
+ * unit in the team, sorted from weakest to strongest.
+ */
+var getBaseDamageForType = function(type,captainAbilities,isDefenseDown) {
+    var result = [ ];
+    // populate array with the damage of each unit in the team
     team.forEach(function(x,n) {
         if (x === null) return;
         var atk = getStatOfUnit(x,'atk'); // basic attack (scales with level);
         atk *= x.orb; // orb multiplier (fixed)
         atk *= getTypeMultiplierOfUnit(x,type); // type multiplier (fixed)
-        damage.push({ unit: x, damage: Math.floor(atk) * merryBonus, position: n });
+        result.push({ unit: x, damage: Math.floor(atk) * merryBonus, position: n });
     });
-    damage = applySpecialMultipliers(damage,isDefenseDown); // special multipliers (modify the whole array)
-    // initialize ability array
-    var abilities = [ ], l;
-    if (captainAbilities[0] !== null) abilities.push(captainAbilities[0]);
-    if (captainAbilities[1] !== null) abilities.push(captainAbilities[1]);
-    // apply static multipliers and sort from weakest to stongest
-    for (var i=0;i<abilities.length;++i) {
-        if (!abilities[i].hasOwnProperty('atk')) continue;
-        damage = applyCaptainEffectToDamage(damage,abilities[i].atk);
+    // apply special multipliers
+    result = applySpecialMultipliers(result,isDefenseDown); 
+    // apply static multipliers
+    for (var i=0;i<captainAbilities.length;++i) {
+        if (!captainAbilities[i].hasOwnProperty('atk')) continue;
+        result = applyCaptainEffectToDamage(result,captainAbilities[i].atk);
     }
-    damage.sort(function(x,y) { return x.damage - y.damage; });
-    // apply additional damage sorters if any
-    var damages = [ damage ];
-    for (var k=0;k<abilities.length;++k) {
-        if (!abilities[k].hasOwnProperty('damageSorter')) continue;
-        var newDamage = abilities[k].damageSorter(damage);
-        if (newDamage !== null) damages.push(newDamage);
+    // sort from weakest to stongest
+    result.sort(function(x,y) { return x.damage - y.damage; });
+    return result;
+};
+
+/* Calculates the overall damage of each unit in the team.
+ * The overall damage is defined as the product of:
+ * - Base damage
+ * - Positional captain effects multipliers (eg G3, Killer, Log Luffy, etc.)
+ * - Chain multipliers (which are themselves affected by captains with chain modifiers)
+ * - Bonus multipliers
+ * Returns an object detailing the updated damage including the two new multipliers mentioned
+ * above, the overall damage and the hit modifiers used to compute said damage.
+ */
+var getOverallDamage = function(damage,atkModifiers,chainModifiers,hitModifiers) {
+    var result = damage;
+    for (var i=0;i<atkModifiers.length;++i)
+        result = applyCaptainEffectToDamage(result,atkModifiers[i].hitAtk,hitModifiers);
+    result = applyChainAndBonusMultipliers(result,chainModifiers,hitModifiers);
+    var overallDamage = result.result.reduce(function(prev,x) { return prev + x.damage; },0);
+    return { damage: result.result, overall: overallDamage,
+        hitModifiers: hitModifiers, chainMultipliers: result.chainMultipliers };
+};
+
+/* Calculates the highest overall damage for an array of hit modifiers. */
+var optimizeDamage = function(damage,atkModifiers,chainModifiers,hitModifiers) {
+    // check damage from default order (or custom order) first, we'll use it as a base for comparison
+    var currentResult = getOverallDamage(damage,atkModifiers,chainModifiers,hitModifiers[0]);
+    for (var i=1;i<hitModifiers.length;++i) {
+        var newResult = getOverallDamage(damage,atkModifiers,chainModifiers,hitModifiers[i]);
+        if (newResult.overall > currentResult.overall) currentResult = newResult;
     }
-    /*
-     * 1st scenario: no captains with hit modifiers
-     * -> We can just apply the chain and bonus multipliers and call it a day
-     * 2nd scenario: 1 captain with hit modifiers
-     * -> We need to check which hit modifiers (the captain's or the default ones) return the highest damage (2 checks)
-     * -> The effect of the captain only applies if its modifiers are the same as the ones being used during the check
-     * 3rd scenario: both captains with hit modifiers
-     * -> We need to check which hit modifiers (the captains' or the default ones) return the highest damage (3 checks)
-     * -> The effect of each captain only applies if their modifiers are the same as the ones being used during the check
-     * 4th scenario: the user specified custom modifiers, we'll just use those and ignore the rest
-     */
-    var captainsWithHitModifiers = abilities.filter(function(x) { return x.hasOwnProperty('hitModifiers'); });
-    var captainsWithChainModifiers = abilities.filter(function(x) { return x.hasOwnProperty('chainModifier'); });
-    // get data struct ready
-    var data = [ damages ];
-    for (i=0;i<captainsWithHitModifiers.length && !customModifiers;++i) {
-        //if (!arraysAreEqual(DEFAULT_HIT_MODIFIERS,captainsWithHitModifiers[i].hitModifiers))
-            data.push(JSON.parse(JSON.stringify(damages)));
-    }
-    // compute damages
+    return currentResult;
+};
+
+/* Calculates all the possible hit modifiers to be used during the calculation.
+ * In most cases it will return an array with a single element, either DEFAULT_HIT_MODIFIERS or customModifiers.
+ */
+var getPossibleHitModifiers = function(captains) {
     var result = [ ];
-    for (i=0;i === 0 || (i<data.length && !customModifiers);++i) {
-        result[i] = [ ];
-        var modifiers = customModifiers || (i === 0 ? DEFAULT_HIT_MODIFIERS : captainsWithHitModifiers[i-1].hitModifiers);
-        // apply compatible captain effects
-        for (var j=0;j<captainsWithHitModifiers.length;++j) {
-            if (!customModifiers && !arraysAreEqual(modifiers,captainsWithHitModifiers[j].hitModifiers)) continue;
-            for (l=0;l<data[i].length;++l) {
-                data[i][l] = applyCaptainEffectToDamage(data[i][l],captainsWithHitModifiers[j].hitAtk,modifiers);
-            }
-        }
-        // applie chain and bonus multipliers and calculate overall damage
-        for (l=0;l<data[i].length;++l) {
-            var damageWithChainMultipliers = applyChainAndBonusMultipliers(data[i][l],modifiers,captainsWithChainModifiers);
-            var overallDamage = damageWithChainMultipliers.result.reduce(function(prev,x) { return prev + x.damage; },0);
-            result[i][l] = { damage: damageWithChainMultipliers, overall: overallDamage, hitModifiers: modifiers };
+    if (customModifiers)
+        result.push(customModifiers); // if the user specified custom modifiers, we'll only use those
+    else  {
+        result.push(DEFAULT_HIT_MODIFIERS); // default modifiers are always checked
+        for (i=0;i<captains.length && !customModifiers;++i) {
+            // check if the captain's hit modifiers are not already included
+            var alreadyIncluded = result.some(function(x) {
+                return arraysAreEqual(x,captains[i].hitModifiers);
+            });
+            // if they aren't, include them
+            if (!alreadyIncluded)
+                result.push(JSON.parse(JSON.stringify(captains[i].hitModifiers)));
         }
     }
-    // collapse the multiple damages created by the damage sorters
-    for (i=0;i<result.length;++i) {
-        var index = 0;
-        for (l=1;l<result[i].length;++l) {
-            if (result[i][l].overall > result[i][index].overall)
-                index = l;
-        }
-        result[i] = result[i][index];
-    }
-    // find index of maxiumum damage
-    var index = 0, currentMax = result[0].overall;
-    for (i=1;i<result.length;++i) {
-        if (result[i].overall < currentMax) continue;
-        index = i;
-        currentMax = result[i].overall;
-    }
-    // return results
-    if (!withDetails) return currentMax;
-    // provide details
-    var result = {
-        modifiers: result[index].hitModifiers,
-        multipliers: result[index].damage.chainMultipliers,
-        order: result[index].damage.result
-    };
     return result;
 };
 
@@ -201,7 +221,7 @@ var getChainMultiplier = function(currentChainMultiplier,hit,chainModifier) {
 
 /* * * * * Captain effects/specials * * * * */
 
-var applyChainAndBonusMultipliers = function(damage,modifiers,captains) {
+var applyChainAndBonusMultipliers = function(damage,captains,modifiers) {
     // NOTE: all the captains provided must have a chain modifier (array can be empty - don't include them if they don't)
     var multipliersUsed = [ ];
     var currentChainMultiplier = 1.0;
@@ -453,7 +473,7 @@ var onUnitRemoved = function(event,slotNumber) {
 };
 
 var onDetailsRequested = function(event,type) {
-    $(document).trigger('detailsReady',crunchForType(type.toUpperCase(),true));
+    $(document).trigger('detailsReady',crunchForType(type.toUpperCase()));
 };
 
 var onCustomModifiers = function(event,data) {
