@@ -443,7 +443,7 @@ window.units = [
     [ "Stomp & Ivan X. - Super Spot-Billed Duck Squad", "DEX", "Evolver", 3, 9, 35, 126, 98, 33, 719, 361, 152, 5, 1 ],
     [ "Kentauros & Hikoichi - Super Spot-Billed Duck Squad", "STR", "Evolver", 3, 9, 35, 102, 119, 30, 693, 383, 149, 5, 1 ],
     [ "Carue", "PSY", "Striker", 3, 6, 20, 178, 86, 40, 229, 155, 100, 4, 1 ],
-    [ "Captain Carue & The Super Spot-Billed Duck Squad", "PSY", "Striker", 4, 18, 99, 378, 383, 138, 1412, 702, 461, 7, 0 ],
+    [ "Captain Carue & The Super Spot-Billed Duck Squad", "PSY", "Striker", 4, 18, 99, 378, 383, 138, 1412, 702, 461, 7, 1.5 ],
     [ "Marshall D. Teach", "STR", "Shooter", 4, 30, 70, 235, 166, 30, 1402, 790, 23, 6, 1 ],
     [ "Blackbeard", "STR", "Shooter", 5, 50, 99, 1338, 744, 18, 3140, 1418, 83, 4, 1 ],
     [ "Thatch", "QCK", "Slasher", 4, 18, 50, 208, 103, 63, 1246, 626, 188, 5, 1 ],
@@ -606,6 +606,6 @@ window.units = [
     [ ],
     [ "Zeff the Pirate", "DEX", "Fighter", 3, 13, 50, 185, 112, 24, 1210, 663, 128, 5, 1 ],
     [ "Red Leg Zeff, Captain of the Cook Pirates", "DEX", "Fighter", 4, 20, 99, 1152, 599, 81, 2000, 1088, 258, 4, 0 ],
-    [ "Thug Patty", "STR", "Shooter", 3, 10, 50, 155, 120, 25, 1080, 648, 132, 4, 0 ],
-    [ "Thug Carne", "QCK", "Slasher", 3, 10, 50, 153, 91, 35, 1054, 571, 162, 6, 0 ]
+    [ "Thug Patty", "STR", "Shooter", 3, 10, 50, 155, 120, 25, 1080, 648, 132, 4, 0.7 ],
+    [ "Thug Carne", "QCK", "Slasher", 3, 10, 50, 153, 91, 35, 1054, 571, 162, 6, 0.7 ]
 ];
