@@ -11,11 +11,13 @@ var getThumbnailUrl = function(n) {
     return 'http://onepiece-treasurecruise.com/wp-content/uploads/f' + id + '.png';
 };
 
-var getTitle = function(unit) {
+var getTitle = function(n) {
+    var unit = units[n-1];
     return [ unit.name,
-        'ATK: ' + unit.maxATK,
         'HP: ' + unit.maxHP,
+        'ATK: ' + unit.maxATK,
         'RCV: ' + unit.maxRCV,
+        'CMB: ' + unit.combo,
         'Cost: ' + unit.cost
     ].join('\n');
 };
@@ -75,6 +77,7 @@ window.Utils = {
     // thumbnails
     createThumbnail: createThumbnail,
     getThumbnailUrl: getThumbnailUrl,
+    getThumbnailTitle: getTitle,
     isClickOnOrb: isClickOnOrb,
     // misc
     debounce: debounce,

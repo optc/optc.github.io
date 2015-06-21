@@ -53,13 +53,13 @@ body, #main, #hp, #other {
     opacity: 1 !important;
 }
 
-.unit:not(.empty) > .unitPlaceholder,
-.unit.slide > .unitPlaceholder,
-.unit.empty > .unitLevel,
-.unit.slide > .unitLevel,
-.unit.empty > .unitPortrait {
-    display: none;
-}
+/*.unit:not(.empty) > .unitPlaceholder,*/
+/*.unit.slide > .unitPlaceholder,*/
+/*.unit.empty > .unitLevel,*/
+/*.unit.slide > .unitLevel,*/
+/*.unit.empty > .unitPortrait {*/
+    /*display: none;*/
+/*}*/
 
 .unit:not(.slide) > :not([class]) {
     display: none !important;
@@ -364,3 +364,4 @@ li.disabled {
     right: -50px;
     bottom: -50px;
 }
+

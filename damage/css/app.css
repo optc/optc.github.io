@@ -1,0 +1,17 @@
+/********
+ * MAIN *
+ ********/
+
+#menu {
+    position: absolute;
+    top: 0px;
+    left: -16.625em;
+    width: 16.625em;
+    height: 100%;
+    transition: left .1s linear;
+    margin-bottom: 0;
+}
+
+#menu.open {
+    left: 0em;
+}

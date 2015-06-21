@@ -1,0 +1,24 @@
+<div class="unit" ng-class="{ empty: team[index].unit == null }">
+
+    <span class="unitPlaceholder" ng-hide="team[index].unit"
+        ng-if="index < 1">Click to add (friend)</span>
+    <span class="unitPlaceholder" ng-hide="team[index].unit"
+        ng-if="index == 1">Click to add (captain)</span>
+    <span class="unitPlaceholder" ng-hide="team[index].unit"
+        ng-if="index > 1">Click to add</span>
+
+    <span class="unitLevel" ng-if="team[index].unit">Lv. {{ team[index].level }}</span>
+
+    <div class="unitPortrait" ng-if="team[index].unit"
+        slot-background="{{ team[index].unit.number }}" slot-title="{{ team[index].unit.number }}">
+        <div class="unitOrb"></div>
+    </div>
+
+    <input disabled class="unitSlider"></input>
+
+    <div class="ribbon-container" ng-if="index < 2">
+        <div class="corner-ribbon orange" ng-if="index < 1">Friend</div>
+        <div class="corner-ribbon red" ng-if="index == 1">Captain</div>
+    </div>
+
+</div>

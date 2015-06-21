@@ -117,18 +117,6 @@ var updateTitles = function(team) {
 
 /* * * * * UI event callbacks * * * * */
 
-var onMerryButtonClick = function(e) {
-    if (e.which != 1) return;
-    var newBonus = (parseInt($(this).attr('status'),10)+1) % 3;
-    $(document).trigger('merryBonusUpdated',[ 1.0, 1.2, 1.5 ][newBonus]);
-};
-
-var onSliderToggleClick = function(e) {
-    if (e.which != 1);
-    var newValue = (parseInt($(this).attr('status'),10)+1) % 2;
-    $(document).trigger('sliderToggle',newValue === 0);
-};
-
 var onDefenseKeyUp = function(e) {
     if (defenseDebouncer !== null) clearTimeout(defenseDebouncer);
     var value = parseInt(this.value,10);
@@ -204,125 +192,41 @@ var onResetButtonClick = function() {
     });
 };
 
-/* * * * * Custom event callbacks * * * * */
+/************
+ * MainCtrl *
+ ************/
 
-var onUnitPicked = function(event,slotNumber,unitNumber) {
-    updateSlot(slotNumber,unitNumber);
-};
-
-var onUnitLevelChanged = function(event,slotNumber,level,userTriggered) {
-    changeLevelLabel(slotNumber,level,userTriggered);
-};
-
-var onNumbersCrunched = function(event,numbers) {
-    // set damage
-    Object.keys(numbers).forEach(function(type) {
-        if (type == 'HP') return;
-        var damage = ''+Math.floor(numbers[type]);
-        damage = $.number(damage);
-        $('.damageAmount#' + type.toLowerCase()).text(damage);
-    });
-    // set hp
-    if (numbers.HP != currentMaxHP)
-        changeMaxHP(numbers.HP,true);
-    // update titles
-    updateTitles(numbers.team);
-    // surprise
-    if (numbers.PSY >= 750000) $('#surprise').addClass('active');
-    else $('#surprise').removeClass('active');
-};
-
-var onMerryBonusUpdated = function(event,merry) {
-    var target = $('#merry'), n = (merry == 1.0 ? 0 : (merry == 1.2 ? 1 : 2));
-    target.attr('status',n);
-    target.attr('class',[ 'btn-error', 'btn-warning', 'btn-success' ][n]);
-};
-
-var onDefenseChanged = function(event,value,skipUiUpdate) {
-    if (!skipUiUpdate) $('#defense').val(value);
-    lastDefenseValue = value;
-};
-
-var onHpChanged = function(event,current,max,perc,skip) {
-    if (skip) return;
-    if (max != currentMaxHP)
-        changeMaxHP(max,true);
-    changeCurrentHP(current,true);
-};
-
-var onUnitsSwitched = function(event,a,b) {
-    var units = $('.unit');
-    slotA = units.eq(a);
-    slotB = units.eq(b);
-    // switch level labels
-    var labelA = slotA.find('.unitLevel'), labelB = slotB.find('.unitLevel'), textA = labelA.text();
-    labelA.text(labelB.text());
-    labelB.text(textA);
-    // switch level sliders
-    var sliderA = slotA.find('.unitSlider'), sliderB = slotB.find('.unitSlider');
-    slotA.append(sliderB.parent());
-    slotB.append(sliderA.parent());
-    // switch sliders
-    sliderA = sliders[a];
-    sliders[a] = sliders[b];
-    sliders[b] = sliderA;
-};
-
-var onSliderToggle = function(event,value) {
-    unitSlidersEnabled = value;
-    $('#sliderToggle').attr('status',value ? 0 : 1);
-};
-
-var onUnitRemoved = function(event,slotNumber) {
-    updateSlot(slotNumber,null);
-};
-
-var onCrunchingToggled = function(event,enabled) {
-    bootstrapped = bootstrapped || enabled;
-};
-
-/* * * * * Body * * * * */
-
-$(function() {
+var MainCtrl = function($scope, $controller) {
 
     // bootstrap
     
     units = units.map(parseUnit);
 
-    // attach ui events
+    $scope.options = {
+        slidersEnabled: 1,
+        sidebarVisible: false,
+        crunchingEnabled: false
+    };
 
-    $('.unitLevel').click(onUnitLevelClick);
-    $('.unit').mouseup(onUnitMouseUp);
-    $('#defense').keyup(onDefenseKeyUp);
-
-    // attach custom events
-
-    $(document).on('unitPicked',onUnitPicked);
-    $(document).on('unitLevelChanged',onUnitLevelChanged);
-    $(document).on('numbersCrunched',onNumbersCrunched);
-    $(document).on('merryBonusUpdated',onMerryBonusUpdated);
-    $(document).on('defenseChanged',onDefenseChanged);
-    $(document).on('hpChanged',onHpChanged);
-    $(document).on('sliderToggle',onSliderToggle);
-    $(document).on('unitsSwitched',onUnitsSwitched);
-    $(document).on('unitRemoved',onUnitRemoved);
-    $(document).on('crunchingToggled',onCrunchingToggled);
+    // instantiate storage controller
+    $controller('StorageCtrl', { $scope: $scope });
 
     // set up ui elements
+    // TODO
     
     $('#defenseContainer').click(function() { $('#defense').focus(); });
     
-    $('.unitSlider').each(function(n,x) {
-        var target = $(x);
-        sliders.push([ target, 1 ]);
-        target.knob({
-            width: 88,
-            height: 88,
-            angleOffset: -120,
-            angleArc: 240,
-            release: onSlideRelease
-        });
-    });
+    //$('.unitSlider').each(function(n,x) {
+        //var target = $(x);
+        //sliders.push([ target, 1 ]);
+        //target.knob({
+            //width: 88,
+            //height: 88,
+            //angleOffset: -120,
+            //angleArc: 240,
+            //release: onSlideRelease
+        //});
+    //});
 
     hpSlider = $('#hpSlider').noUiSlider({
         start: [ 0 ],
@@ -335,17 +239,11 @@ $(function() {
         slide: onSlideHP
     });
 
-    $('#merry').click(onMerryButtonClick);
     $('#reset').click(onResetButtonClick);
-    $('#sliderToggle').click(onSliderToggleClick);
 
-    $('.menu-link').bigSlide({ side: 'left', menuWidth: '16.625em' });
+};
 
-    if (localStorage.hasOwnProperty('team') && !localStorage.hasOwnProperty('newClickAlert2')) {
-        Utils.alrt('If the page looks broken, please clear your cache.');
-        localStorage.setItem('newClickAlert2',true);
-    }
-
-});
+angular.module('optc')
+    .controller('MainCtrl', MainCtrl);
 
 })();
