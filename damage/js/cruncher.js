@@ -225,8 +225,9 @@ var applyChainAndBonusMultipliers = function(damage,captains,modifiers) {
     var currentChainMultiplier = 1.0;
     var result = damage.map(function(x,n) {
         var result = x.damage * currentChainMultiplier;
-        var chainModifier = captains.reduce(function(x,y) {
-            return x * y.chainModifier(x.unit.unit,n,currentHP,maxHP,percHP,modifiers[n]);
+        var chainModifier = captains.reduce(function(prev,next) {
+            return prev * next.chainModifier({ unit: x.unit.unit, chainPosition: n, currentHP: currentHP,
+                maxHP: maxHP, percHP: percHP, modifiers: modifiers[n] });
         },1);
         result = computeDamageOfUnit(x.unit.unit,result,modifiers[n]);
         // update chain multiplier for the next hit
