@@ -21,6 +21,7 @@ var StorageCtrl = function($scope) {
 
     var team = loadValue('team',[ null, null, null, null, null, null ]);
     team.forEach(function(x,n) {
+        if (x === null) return;
         $scope.data.team[n].unit = x.unit;
         $scope.data.team[n].level = x.level;
     });
@@ -34,7 +35,7 @@ var StorageCtrl = function($scope) {
 
     /* * * * * Save on changes * * * * */
 
-    //$scope.$watch('data',function() { save($scope.data); },true);
+    $scope.$watch('data',function() { save($scope.data); },true);
 
 };
 

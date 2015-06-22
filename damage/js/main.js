@@ -215,35 +215,22 @@ var MainCtrl = function($scope, $controller) {
     // TODO
     
     $('#defenseContainer').click(function() { $('#defense').focus(); });
-    
-    //$('.unitSlider').each(function(n,x) {
-        //var target = $(x);
-        //sliders.push([ target, 1 ]);
-        //target.knob({
-            //width: 88,
-            //height: 88,
-            //angleOffset: -120,
-            //angleArc: 240,
-            //release: onSlideRelease
-        //});
-    //});
-
-    hpSlider = $('#hpSlider').noUiSlider({
-        start: [ 0 ],
-        range: { min: [ 1 ], max: [ 1 ] },
-        connect: 'lower'
-    });
-
-    hpSlider.on({
-        change: onChangeHP,
-        slide: onSlideHP
-    });
 
     $('#reset').click(onResetButtonClick);
 
 };
 
+/***************
+ * SidebarCtrl *
+ ***************/
+
+var SidebarCtrl = function($scope) {
+
+};
+
+
 angular.module('optc')
-    .controller('MainCtrl', MainCtrl);
+    .controller('MainCtrl', MainCtrl)
+    .controller('SidebarCtrl', SidebarCtrl);
 
 })();

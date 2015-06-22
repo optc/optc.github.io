@@ -1,0 +1,23 @@
+<div id="main">
+
+    <units></units>
+
+    <cruncher></cruncher>
+
+    <hp-bar></hp-bar>
+
+    <div id="other">
+        <button type="button" class="btn btn-xs btn-info" id="reset">Reset</button>
+        <button type="button" class="btn btn-xs btn-primary menu-link"
+            ng-click="options.sidebarVisible = !options.sidebarVisible">Settings</a>
+    </div>
+
+    <sidebar ng-class="{ open: options.sidebarVisible }"></sidebar>
+
+</div>
+
+<div class="unit empty fa fa-trash-o" id="removeSlot"></div>
+
+<img id="surprise" src="res/surprise.png"></img>
+
+<div ui-view="popup"></div>

@@ -12,7 +12,7 @@ var getThumbnailUrl = function(n) {
 };
 
 var getTitle = function(n) {
-    var unit = units[n-1];
+    var unit = units[n];
     return [ unit.name,
         'HP: ' + unit.maxHP,
         'ATK: ' + unit.maxATK,

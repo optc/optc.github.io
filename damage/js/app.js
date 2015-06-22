@@ -1,6 +1,6 @@
 (function() {
 
-var app = angular.module('optc', [ ]);
+var app = angular.module('optc', [ 'ui.router' ]);
 
 /******************
  * SharedRootCtrl *
@@ -41,20 +41,6 @@ var SharedRootCtrl = function($scope) {
 
     $scope.numbers = { };
 
-    $scope.getBackground = function(n) {
-        console.log(n);
-        return n;
-    };
-
-};
-
-
-/******************
- * SharedRootCtrl *
- ******************/
-
-var SidebarCtrl = function($scope) {
-
 };
 
 /****************************
@@ -63,6 +49,5 @@ var SidebarCtrl = function($scope) {
 
 app
     .controller('SharedRootCtrl', SharedRootCtrl)
-    .controller('SidebarCtrl', SidebarCtrl);
 
 })();

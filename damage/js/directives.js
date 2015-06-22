@@ -45,11 +45,20 @@ directives.units = function() {
  * UI directives *
  *****************/
 
+directives.autoFocus = function($timeout) {
+	return {
+		restrict: 'A',
+		link: function(scope, element, attrs) {
+			$timeout(function(){ element[0].focus(); });
+		}
+	};
+};
+
 directives.slot = function() {
     return {
         restrict: 'E',
         replace: true,
-        scope: { index: '=', team: '=' },
+        scope: { slot: '=', unit: '=' },
         templateUrl: function(element, attrs) {
             return 'views/fragments/slot.html';
         },
@@ -65,21 +74,44 @@ directives.slot = function() {
     };
 };
 
-directives.slotBackground = function() {
+directives.decorateSlot = function() {
     return {
         restrict: 'A',
+        scope: { uid: '=' },
         link: function(scope, element, attrs) {
-            element[0].style.backgroundImage =
-                'url(' + Utils.getThumbnailUrl(parseInt(attrs.slotBackground,10)) + ')';
+            var update = function(uid) { 
+                if (!uid) return;
+                var target = element[0];
+                target.style.backgroundImage = 'url(' + Utils.getThumbnailUrl(uid) + ')';
+                target.setAttribute('title', Utils.getThumbnailTitle(uid));
+            };
+            scope.$watch('uid',update);
+            update();
         }
     };
 };
 
-directives.slotTitle = function() {
+directives.hpBar = function() {
     return {
-        restrict: 'A',
+        rstrict: 'A',
+        replace: true,
+        template: '<div id="hp"><div id="hpSlider"></div>' + 
+            '<div id="hpLabel">{{ data.hp.current | number }} HP ({{ data.hp.perc || number }}%)</div></div>',
         link: function(scope, element, attrs) {
-            element.attr('title', Utils.getThumbnailTitle(parseInt(attrs.slotBackground,10)));
+            var slider = element.find('#hpSlider').noUiSlider({
+                start: [ scope.data.hp.current ],
+                range: { min: [ 1 ], max: [ scope.data.hp.max ] },
+                connect: 'lower'
+            });
+            var update = function(event,value) {
+                scope.data.hp.current = Math.floor(value);
+                scope.data.hp.perc = Math.round(scope.data.hp.current / scope.data.hp.max * 10000) / 100;
+                scope.$apply();
+            };
+            slider.on({ change: update, slide: update });
+            scope.$watch('data.hp.max',function() {
+                slider.noUiSlider({ range: { min: [ 1 ], max: [ scope.data.hp.max ] } },true);
+            });
         }
     };
 };

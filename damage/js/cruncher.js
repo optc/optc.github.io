@@ -61,6 +61,7 @@ var CruncherCtrl = function($scope) {
     /* * * * * Local variables * * * * */
 
     var currentDefense = 0;
+    var isDefenseDown = false;
 
     var specialsCombinations = [ ];
     var hitModifiers = [ ];
@@ -91,19 +92,20 @@ var CruncherCtrl = function($scope) {
         enabledSpecials = [ ];
         $scope.data.specials.forEach(function(x) { if (x.enabled) enabledSpecials.push(x.special); });
         // check if defense is down (required by some captain effects)
+        computeActualDefense();
         isDefenseDown = enabledSpecials.some(function(x) { return x !== null && x.hasOwnProperty('def'); });
         // initialize ability array
         enabledEffects = [ ];
         for (var i=0;i<2;++i) {
             if ($scope.data.team[i].unit === null) continue;
             var id = $scope.data.team[i].unit.number;
-            if (window.captains.hasOwnProperty(id-1)) enabledEffects.push(window.captains[id-1]);
+            if (window.captains.hasOwnProperty(id)) enabledEffects.push(window.captains[id]);
         }
-        // initialize non-static captain effects
+        // find non-static captain effects
         cptsWith = {
-            hitModifiers: enabledEffects.filter(function(x) { return x.hasOwnProperty('hitModifiers');  }),
+            hitModifiers:   enabledEffects.filter(function(x) { return x.hasOwnProperty('hitModifiers');  }),
             chainModifiers: enabledEffects.filter(function(x) { return x.hasOwnProperty('chainModifier'); }),
-            damageSorters: enabledEffects.filter(function(x) { return x.hasOwnProperty('damageSorter');  })
+            damageSorters:  enabledEffects.filter(function(x) { return x.hasOwnProperty('damageSorter');  })
         };
         // get all non-default hit modifiers
         hitModifiers = getPossibleHitModifiers(cptsWith.hitModifiers);
@@ -113,7 +115,7 @@ var CruncherCtrl = function($scope) {
 
     var crunchForType = function(type) {
         // compute base damage
-        var damage = getBaseDamageForType(type,isDefenseDown);
+        var damage = getBaseDamageForType(type);
         // compute best overall damage
         var overallDamage = optimizeDamage(damage);
         // apply damage sorters to base damage, recalculate the new damage and update overallDamage if necessary
@@ -138,7 +140,7 @@ var CruncherCtrl = function($scope) {
      * Returns a sorted array of objects detailing the base damage of each
      * unit in the team, sorted from weakest to strongest.
      */
-    var getBaseDamageForType = function(type,isDefenseDown) {
+    var getBaseDamageForType = function(type) {
         var result = [ ];
         // populate array with the damage of each unit in the team
         $scope.data.team.forEach(function(x,n) {
@@ -146,14 +148,15 @@ var CruncherCtrl = function($scope) {
             var atk = getStatOfUnit(x.unit,x.level,'atk'); // basic attack (scales with level);
             atk *= x.orb; // orb multiplier (fixed)
             atk *= getTypeMultiplierOfUnit(x.unit,type); // type multiplier (fixed)
-            result.push({ unit: x, damage: Math.floor(atk) * $scope.data.merry, position: n });
+            var merryBonus = [1,1.2,1.5][$scope.data.merry];
+            result.push({ unit: x, damage: Math.floor(atk) * merryBonus, position: n });
         });
         // apply special multipliers
-        result = applySpecialMultipliers(result,isDefenseDown); 
+        result = applySpecialMultipliers(result); 
         // apply static multipliers
         for (var i=0;i<enabledEffects.length;++i) {
             if (!enabledEffects[i].hasOwnProperty('atk')) continue;
-            result = applyCaptainEffectToDamage(result,enabledEffects[i].atk);
+            result = applyCaptainEffectsToDamage(result,enabledEffects[i].atk);
         }
         // sort from weakest to stongest
         result.sort(function(x,y) { return x.damage - y.damage; });
@@ -169,11 +172,11 @@ var CruncherCtrl = function($scope) {
      * Returns an object detailing the updated damage including the two new multipliers mentioned
      * above, the overall damage and the hit modifiers used to compute said damage.
      */
-    var getOverallDamage = function(damage,atkModifiers,chainModifiers,hitModifiers) {
+    var getOverallDamage = function(damage,hitModifiers) {
         var result = damage;
-        for (var i=0;i<atkModifiers.length;++i)
-            result = applyCaptainEffectToDamage(result,atkModifiers[i].hitAtk,hitModifiers);
-        result = applyChainAndBonusMultipliers(result,chainModifiers,hitModifiers);
+        for (var i=0;i<cptsWith.hitModifiers.length;++i)
+            result = applyCaptainEffectsToDamage(result,cptsWith.hitModifiers[i].hitAtk,hitModifiers);
+        result = applyChainAndBonusMultipliers(result,hitModifiers);
         var overallDamage = result.result.reduce(function(prev,x) { return prev + x.damage; },0);
         return { damage: result.result, overall: overallDamage,
             hitModifiers: hitModifiers, chainMultipliers: result.chainMultipliers };
@@ -182,9 +185,9 @@ var CruncherCtrl = function($scope) {
     /* Calculates the highest overall damage for an array of hit modifiers. */
     var optimizeDamage = function(damage) {
         // check damage from default order (or custom order) first, we'll use it as a base for comparison
-        var currentResult = getOverallDamage(damage,cptsWith.hitModifiers,cptsWith.chainModifiers,hitModifiers[0]);
+        var currentResult = getOverallDamage(damage,hitModifiers[0]);
         for (var i=1;i<hitModifiers.length;++i) {
-            var newResult = getOverallDamage(damage,cptsWith.hitModifiers,cptsWith.chainModifiers,hitModifiers[i]);
+            var newResult = getOverallDamage(damage,hitModifiers[i]);
             if (newResult.overall > currentResult.overall) currentResult = newResult;
         }
         return currentResult;
@@ -236,17 +239,17 @@ var CruncherCtrl = function($scope) {
 
     /* * * * * Captain effects/specials * * * * */
 
-    var applyChainAndBonusMultipliers = function(damage,captains,modifiers) {
-        // NOTE: all the captains provided must have a chain modifier (array can be empty - don't include them if they don't)
+    var applyChainAndBonusMultipliers = function(damage,modifiers) {
         var multipliersUsed = [ ];
         var currentChainMultiplier = 1.0;
         var result = damage.map(function(x,n) {
             var result = x.damage * currentChainMultiplier;
-            var chainModifier = captains.reduce(function(prev,next) {
+            var chainModifier = cptsWith.chainModifiers.reduce(function(prev,next) {
                 //return prev * next.chainModifier({ unit: x.unit.unit, chainPosition: n, currentHP: currentHP,
                     //maxHP: maxHP, percHP: percHP, modifiers: modifiers[n] });
                 return prev * next.chainModifier();
             },1);
+            console.log(chainModifier);
             result = computeDamageOfUnit(x.unit.unit,result,modifiers[n]);
             // update chain multiplier for the next hit
             multipliersUsed.push(currentChainMultiplier);
@@ -257,7 +260,7 @@ var CruncherCtrl = function($scope) {
         return { result: result, chainMultipliers: multipliersUsed };
     };
 
-    var applyCaptainEffectToDamage = function(damage,func,modifiers) {
+    var applyCaptainEffectsToDamage = function(damage,func,modifiers) {
         return damage.map(function(x,n) {
             var params = { unit: x.unit.unit, chainPosition: n, currentHP: $scope.data.hp.current,
                 maxHP: $scope.data.hp.max, percHP: $scope.data.hp.perc, orb: x.unit.orb,
@@ -275,7 +278,7 @@ var CruncherCtrl = function($scope) {
         return hp;
     };
 
-    var applySpecialMultipliers = function(damage,isDefenseDown,modifiers) {
+    var applySpecialMultipliers = function(damage) {
         var result = damage, current = -1;
         // for each special combination
         specialsCombinations.forEach(function(specials) {
@@ -283,7 +286,7 @@ var CruncherCtrl = function($scope) {
             var temp = damage.map(function(x,n) {
                 var multiplier = specials.reduce(function(prev,next) {
                     var params = { unit: x.unit.unit, chainPosition: x.position, currentHP: currentHP, maxHP: maxHP,
-                        percHP: percHP, defenseDown: isDefenseDown, orb: x.unit.orb, modifiers: modifiers };
+                        percHP: percHP, defenseDown: isDefenseDown, orb: x.unit.orb };
                     return prev * next(params);
                 },1);
                 return { unit: x.unit, damage: x.damage * multiplier, position: x.position };
@@ -370,7 +373,7 @@ var CruncherCtrl = function($scope) {
      * Defense-reducing specials do not stack with each other, so we just use the one that grants the lowest defense.
      */
     var computeActualDefense = function() {
-        currentDefense = defense;
+        currentDefense = $scope.data.defense;
         enabledSpecials.forEach(function(x) {
             if (x === null || !x.hasOwnProperty('def')) return;
             currentDefense = Math.min(currentDefense,defense * x.def());
@@ -384,15 +387,6 @@ var CruncherCtrl = function($scope) {
         var growth = unit.growth || 1;
         var minStat = 'min' + stat.toUpperCase(), maxStat = 'max' + stat.toUpperCase();
         return Math.floor(unit[minStat] + (unit[maxStat] - unit[minStat]) * Math.pow((level-1) / maxLevel, growth));
-    };
-
-    var setCaptain = function(slotNumber) {
-        if (team[slotNumber] === null)
-            $scope.captainEffects[slotNumber] = null;
-        else if (captains.hasOwnProperty(team[slotNumber].unit.number+1))
-            $scope.captainEffects[slotNumber] = captains[team[slotNumber].unit.number+1];
-        else
-            $scope.captainEffects[slotNumber] = null;
     };
 
     var arraysAreEqual = function(a,b) {
