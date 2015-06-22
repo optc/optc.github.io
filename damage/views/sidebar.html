@@ -3,8 +3,8 @@
     <ul>
 
         <li>
-            <div id="sliderToggle" status="{{options.slidersEnabled}}"
-                ng-click="options.slidersEnabled = (options.slidersEnabled+1)%2">
+            <div id="sliderToggle" status="{{options.slidersEnabled ? 0 : 1}}"
+                ng-click="options.slidersEnabled = !options.slidersEnabled">
                 <i class="fa fa-circle-o-notch"></i>
             </div>
         </li>

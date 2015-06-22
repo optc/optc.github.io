@@ -8,9 +8,8 @@ var loadValue = function(key,def) {
     return def;
 };
 
-var save = function(data) {
-    for (var key in data)
-        localStorage.setItem(key,JSON.stringify(data[key]));
+var save = function(key,object) {
+    localStorage.setItem(key,JSON.stringify(object));
 };
 
 var StorageCtrl = function($scope) {
@@ -19,23 +18,22 @@ var StorageCtrl = function($scope) {
 
     $scope.options.crunchingEnabled = false;
 
-    var team = loadValue('team',[ null, null, null, null, null, null ]);
-    team.forEach(function(x,n) {
-        if (x === null) return;
-        $scope.data.team[n].unit = x.unit;
-        $scope.data.team[n].level = x.level;
-    });
+    var data = loadValue('data',{ });
+    for (var d in data)
+        $scope.data[d] = data[d];
 
-    $scope.data.merry = loadValue('merry',1.0);
-    $scope.data.hp = loadValue('hp',{ current: 1, max: 1, perc: 100 });
-    $scope.data.sliders = loadValue('sliders',true);
-    $scope.data.defense = loadValue('defense',0);
+    var options = loadValue('options',{ });
+    for (var o in options) {
+        if (o == 'crunchingEnabled') continue;
+        $scope.options[o] = options[o];
+    }
 
     $scope.options.crunchingEnabled = true;
 
     /* * * * * Save on changes * * * * */
 
-    $scope.$watch('data',function() { save($scope.data); },true);
+    $scope.$watch('data',function() { save('data',$scope.data); },true);
+    $scope.$watch('options',function() { save('options',$scope.options); },true);
 
 };
 

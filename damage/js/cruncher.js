@@ -76,15 +76,15 @@ var CruncherCtrl = function($scope) {
         ['STR','QCK','DEX','PSY','INT'].forEach(function(type) {
             result[type] = crunchForType(type).overall;
         });
-        result.HP = 0;
+        result.team = getTeamDetails();
+        $scope.numbers = result;
+        var hpMax = 0;
         $scope.data.team.forEach(function(x,n) {
             if (x.unit === null) return;
             var hp = getStatOfUnit(x.unit,x.level,'hp');
-            result.HP += applyCaptainEffectsToHP(x.unit,hp);
+            hpMax += applyCaptainEffectsToHP(x.unit,hp);
         });
-        result.HP = Math.max(1,result.HP);
-        result.team = getTeamDetails();
-        $scope.numbers = result;
+        $scope.data.hp.max = Math.max(1,hpMax);
     };
 
     var initializeDataStructs = function() {
@@ -249,7 +249,6 @@ var CruncherCtrl = function($scope) {
                     //maxHP: maxHP, percHP: percHP, modifiers: modifiers[n] });
                 return prev * next.chainModifier();
             },1);
-            console.log(chainModifier);
             result = computeDamageOfUnit(x.unit.unit,result,modifiers[n]);
             // update chain multiplier for the next hit
             multipliersUsed.push(currentChainMultiplier);

@@ -37,7 +37,7 @@ directives.units = function() {
     return {
         restrict: 'E',
         templateUrl: 'views/units.html',
-        replace: true
+        replace: true,
     };
 };
 
@@ -58,7 +58,7 @@ directives.slot = function() {
     return {
         restrict: 'E',
         replace: true,
-        scope: { slot: '=', unit: '=' },
+        scope: { slot: '=', unit: '=', options: '=' },
         templateUrl: function(element, attrs) {
             return 'views/fragments/slot.html';
         },
@@ -112,6 +112,41 @@ directives.hpBar = function() {
             scope.$watch('data.hp.max',function() {
                 slider.noUiSlider({ range: { min: [ 1 ], max: [ scope.data.hp.max ] } },true);
             });
+        }
+    };
+};
+
+directives.levelLabel = function() {
+    return {
+        restrict: 'E',
+        replace: true,
+        template: '<div class="unitLevel">Lv. {{ unit.level }}<input ng-show="editorVisible" ng-model="level"></input></div>',
+        link: function(scope, element, attrs) {
+            scope.level = scope.unit.level;
+            var input = element.find('input');
+            element.click(function(e) {
+                scope.level = '';
+                if (e.which == 1 && !e.ctrlKey) {
+                    if (scope.options.slidersEnabled) $('.unit').eq(scope.slot).addClass('slide');
+                    else scope.editorVisible = true;
+                } else if (e.which == 2 || (e.which == 1 && e.ctrlKey))
+                    scope.unit.level = scope.unit.unit.maxLevel;
+                scope.$apply();
+                if (scope.editorVisible) input.focus();
+                e.preventDefault();
+                e.stopPropagation();
+                return false;
+            });
+            var update = function(e) {
+                if (e.type == 'keyup' && e.which != 13) return;
+                var level = parseInt(scope.level,10); 
+                scope.editorVisible = false;
+                scope.$apply();
+                if (isNaN(level)) return;
+                scope.unit.level = Math.min(Math.max(1,level),scope.unit.unit.maxLevel);
+            };
+            input.focusout(update);
+            input.keyup(update);
         }
     };
 };

@@ -1,3 +1,7 @@
+/***************
+ * MAIN LAYOUT *
+ ***************/
+
 body, html {
     height: 100%;
     font-family: 'Source Sans Pro', sans-serif;
@@ -29,11 +33,14 @@ body, #main, #hp, #other {
     margin-top: 30px;
 }
 
+/******************
+ * MAIN UNIT PANE *
+ ******************/
+
 .unit {
     width: 112px;
     height: 112px;
     display: flex;
-    /*border-radius: 5px;*/
     cursor: pointer;
     border: 1px solid black;
     margin: 3px !important;
@@ -52,14 +59,6 @@ body, #main, #hp, #other {
     border-color: black !important;
     opacity: 1 !important;
 }
-
-/*.unit:not(.empty) > .unitPlaceholder,*/
-/*.unit.slide > .unitPlaceholder,*/
-/*.unit.empty > .unitLevel,*/
-/*.unit.slide > .unitLevel,*/
-/*.unit.empty > .unitPortrait {*/
-    /*display: none;*/
-/*}*/
 
 .unit:not(.slide) > :not([class]) {
     display: none !important;
@@ -114,15 +113,6 @@ body, #main, #hp, #other {
     cursor: default;
 }
 
-.jcs-panel.noselect {
-    border-width: 0 !important;
-}
-
-.jcs-indicator {
-    width: 10px;
-    height: 10px;
-}
-
 #captain {
     border-color: red !important;
 }
@@ -138,6 +128,10 @@ body, #main, #hp, #other {
 #friend:not(.empty) {
     border: 1px solid orange !important;
 }
+
+/******************
+ * DAMAGE NUMBERS *
+ ******************/
 
 .damage {
     border-radius: 5px;
@@ -166,6 +160,10 @@ body, #main, #hp, #other {
     font-weight: bold;
     display: block;
 }
+
+/********************
+ * BUTTONS & HP BAR *
+ ********************/
 
 #hpSlider {
     width: 450px;
@@ -203,6 +201,51 @@ body, #main, #hp, #other {
     margin-right: 5px;
 }
 
+/*******************
+ * SLOT THUMBNAILS *
+ *******************/
+
+.slot {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.slot:hover {
+    outline: 1px solid red;
+}
+
+.slot.medium {
+    width: 80px;
+    height: 80px;
+    background-size: 80px 80px;
+    margin: 2px;
+}
+
+.slot.small {
+    width: 40px;
+    height: 40px;
+    background-size: 40px 40px;
+    margin: 1px;
+}
+
+/***********
+ * SIDEBAR *
+ ***********/
+
+#menu {
+    position: absolute;
+    top: 0px;
+    left: -16.625em;
+    width: 16.625em;
+    height: 100%;
+    transition: left .1s linear;
+    margin-bottom: 0;
+}
+
+#menu.open {
+    left: 0em;
+}
+
 #defense {
     width: 50px;
     margin-left: 10px;
@@ -217,75 +260,11 @@ body, #main, #hp, #other {
 #merry[status="1"]:after { content: "1.2x Merry Bonus"; color: black; }
 #merry[status="2"]:after { content: "1.5x Merry Bonus"; }
 
-/* Ribbons */
-
-.ribbon-container {
-    width: 53px;
-    height: 55px;
-    overflow: hidden;
-    position: absolute;
-    top: -3px;
-    right: -3px;
-}
-
-.corner-ribbon {
-    color: white;
-    font-size: 10px;
-    left: -2px;
-    padding: 3px 0;
-    position: relative;
-    text-align: center;
-    top: 8px;
-    width: 75px;
-    z-index: 7;
-    /* wizardry */
-    -webkit-box-shadow : 0px 0px 3px rgba(0,0,0,0.3);
-    -moz-box-shadow    : 0px 0px 3px rgba(0,0,0,0.3);
-    box-shadow         : 0px 0px 3px rgba(0,0,0,0.3);
-    -moz-transform     : rotate(45deg);
-    -ms-transform      : rotate(45deg);
-    -o-transform       : rotate(45deg);
-    -webkit-transform  : rotate(45deg);
-}
-
-.corner-ribbon:before, .corner-ribbon:after {
-    content: "";
-    border-top:   3px solid #6e8900;   
-    border-left:  3px solid transparent;
-    border-right: 3px solid transparent;
-    position:absolute;
-    bottom: -3px;
-}
-
-.corner-ribbon:before {
-    left: 0;
-}
-.corner-ribbon:after {
-    right: 0;
-}
-
-.corner-ribbon.red {
-    background: #e43;
-}
-
-.corner-ribbon.orange {
-    background: #e82;
-}
-
-/* Panel */
-
 .panel {
     position: fixed;
     left: -16.625em;
     width: 16.625em;
     background: #2C3E50;
-}
-
-.wrap {
-    position: relative;
-    max-width: 80%;
-    margin: 0 auto;
-    padding: 20px;
 }
 
 #menu li > div {
@@ -351,7 +330,114 @@ li.disabled {
     height: 20px;
 }
 
-/* Surprise */
+/***********
+ * RIBBONS *
+ ***********/
+
+.ribbon-container {
+    width: 53px;
+    height: 55px;
+    overflow: hidden;
+    position: absolute;
+    top: -3px;
+    right: -3px;
+}
+
+.corner-ribbon {
+    color: white;
+    font-size: 10px;
+    left: -2px;
+    padding: 3px 0;
+    position: relative;
+    text-align: center;
+    top: 8px;
+    width: 75px;
+    z-index: 7;
+    /* wizardry */
+    -webkit-box-shadow : 0px 0px 3px rgba(0,0,0,0.3);
+    -moz-box-shadow    : 0px 0px 3px rgba(0,0,0,0.3);
+    box-shadow         : 0px 0px 3px rgba(0,0,0,0.3);
+    -moz-transform     : rotate(45deg);
+    -ms-transform      : rotate(45deg);
+    -o-transform       : rotate(45deg);
+    -webkit-transform  : rotate(45deg);
+}
+
+.corner-ribbon:before, .corner-ribbon:after {
+    content: "";
+    border-top:   3px solid #6e8900;   
+    border-left:  3px solid transparent;
+    border-right: 3px solid transparent;
+    position:absolute;
+    bottom: -3px;
+}
+
+.corner-ribbon:before {
+    left: 0;
+}
+.corner-ribbon:after {
+    right: 0;
+}
+
+.corner-ribbon.red {
+    background: #e43;
+}
+
+.corner-ribbon.orange {
+    background: #e82;
+}
+
+/**********
+ * POPUPS *
+ **********/
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 100;
+}
+
+.custom-modal {
+    z-index: 101;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal-content {
+    border-radius: 0;
+}
+
+.modal-header {
+    background-color: #428bca;
+    color: white;
+}
+
+.modal-footer {
+    background-color: rgb(235,235,235);
+}
+
+.animated {
+    animation-duration: 0.2s;
+    -webkit-animation-duration: 0.2s;
+}
+
+.modal-filter {
+    width: 100%;
+}
+
+.modal-div {
+    height: 340px;
+}
+
+/************
+ * SURPRISE *
+ ************/
 
 #surprise {
     position: fixed;
@@ -364,4 +450,3 @@ li.disabled {
     right: -50px;
     bottom: -50px;
 }
-

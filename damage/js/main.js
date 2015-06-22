@@ -203,7 +203,7 @@ var MainCtrl = function($scope, $controller) {
     units = units.map(parseUnit);
 
     $scope.options = {
-        slidersEnabled: 1,
+        slidersEnabled: true,
         sidebarVisible: false,
         crunchingEnabled: false
     };

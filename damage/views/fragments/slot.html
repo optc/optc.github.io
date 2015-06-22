@@ -7,7 +7,7 @@
     <span class="unitPlaceholder" ng-hide="unit.unit"
         ng-if="slot > 1">Click to add</span>
 
-    <span class="unitLevel" ng-if="unit.unit">Lv. {{ unit.level }}</span>
+    <level-label ng-if="unit.unit">Lv. {{ unit.level }}</level-label>
 
     <div class="unitPortrait" ng-if="unit.unit" decorate-slot uid="unit.unit.number">
         <div class="unitOrb"></div>
