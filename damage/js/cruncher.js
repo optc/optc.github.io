@@ -102,7 +102,7 @@ var crunchForType = function(type) {
     // apply damage sorters to base damage, recalculate the new damage and update overallDamage if necessary
     for (var i=0;i<cptsWithDamageSorters.length;++i) {
         var newDamage = cptsWithDamageSorters[i].damageSorter(damage);
-        if (newDamage === null) return;
+        if (newDamage === null) continue;
         var newOverallDamage = optimizeDamage(newDamage,cptsWithHitModifiers,cptsWithChainModifiers,hitModifiers);
         if (newOverallDamage.overall > overallDamage.overall) overallDamage = newOverallDamage;
     }
