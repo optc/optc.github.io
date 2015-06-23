@@ -304,15 +304,19 @@ directives.special = function() {
         template: '<li class="special" ng-show="hasSpecial"><div>{{data.team[slot].unit.name | truncate:25}}</div></li>',
         link: function(scope, element, attrs) {
             scope.slot = element.prevAll('.special').length;
-            var type = null;
             var isSelected = scope.tdata.team[scope.slot].special;
+            var removeType = function() { ['STR','DEX','QCK','PSY','INT'].forEach(function(x) { element.removeClass(x); }); };
             scope.hasSpecial = false;
             scope.$watch('tdata.team[slot].special',function(enabled) {
-                if (!enabled && type) element.removeClass(type);
-                else if (enabled && type) element.addClass(type);
-                scope.hasSpecial = scope.data.team[scope.slot].unit && specials.hasOwnProperty(scope.data.team[scope.slot].unit.number+1);
+                removeType();
+                if (enabled) element.addClass(scope.data.team[scope.slot].unit.type);
                 type = (scope.data.team[scope.slot].unit !== null ? scope.data.team[scope.slot].unit.type : null);
                 isSelected = enabled;
+            });
+            scope.$watch('data.team[slot].unit',function(unit) {
+                removeType();
+                if (scope.tdata.team[scope.slot].special) element.addClass(unit.type);
+                scope.hasSpecial = unit && specials.hasOwnProperty(unit.number+1);
             });
             element.click(function(e) {
                 isSelected = !isSelected;
