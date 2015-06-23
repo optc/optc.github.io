@@ -23,14 +23,9 @@ var moveElement = function(target,byX,byY) {
 /* * * * * Event callbacks (draggables) * * * * */
 
 var onUnitStartMove = function(e) {
-    if ($(e.target).parent().hasClass('slide') || Utils.isClickOnOrb(e,e.target)) {
-        e.preventDefault();
-        e.stopPropagation();
-    } else {
-        startingSlot = $(e.target).parent();
-        $('#removeSlot')[0].style.display = null;
-        e.target.style.zIndex = 5;
-    }
+    startingSlot = $(e.target).parent();
+    $('#removeSlot')[0].style.display = null;
+    e.target.style.zIndex = 5;
 };
 
 var onUnitMove = function(e) {
@@ -97,9 +92,13 @@ var onUnitDrop = function(scope) {
             replacedPortrait[0].style.display = null;
             ghostPortrait.remove();
             // switch units
-            var unitA = scope.data.team[startingSlot.index()];
-            scope.data.team[startingSlot.index()] = scope.data.team[endingSlot.index()];
-            scope.data.team[endingSlot.index()] = unitA;
+            var i = startingSlot.index(), j = endingSlot.index(), temp;
+            temp = scope.data.team[i];
+            scope.data.team[i] = scope.data.team[j];
+            scope.data.team[j] = temp;
+            temp = scope.tdata.team[i];
+            scope.tdata.team[i] = scope.tdata.team[j];
+            scope.tdata.team[j] = temp;
             scope.$apply();
         }
     };
@@ -119,7 +118,7 @@ var onRemoveZoneLeave = function(target) {
 
 var onRemoveZoneDrop = function(scope,target) {
     onRemoveZoneLeave(target);
-    scope.data.team[startingSlot.index()] = { unit: null, level: -1, orb: 1, special: false };
+    scope.resetSlot(startingSlot.index());
     scope.$apply();
 };
 
@@ -132,10 +131,30 @@ directives.draggable = function() {
     return {
         restrict: 'A',
         link: function(scope, element, attrs) {
+            var isDown = true;
             interact(element[0]).draggable({
+                manualStart: true,
                 onstart: onUnitStartMove,
                 onmove: onUnitMove,
                 onend: onUnitEndMove
+            })
+            .on('down',function(e) {
+                isDown = false;
+                if (e.which != 1 || e.ctrlKey) return;
+                if ($(e.target).parent().hasClass('slide') || Utils.isClickOnOrb(e,e.target)) return;
+                isDown = true;
+            })
+            .on('move',function(e) {
+                if (!isDown || e.interaction.interacting()) return;
+                e.interaction.start({ name: 'drag' },e.interactable,e.currentTarget);
+            })
+            .on('up',function(e) {
+                isDown = false;
+                if (e.interaction.interacting()) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    return false;
+                }
             });
             element.click(onUnitClick);
         }

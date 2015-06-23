@@ -29,6 +29,24 @@ angular.module('optc').config(function($stateProvider, $urlRouterProvider) {
                     controller: 'DefenseCtrl'
                 }
             }
+        })
+
+        .state('main.loadSlot',{
+            views: {
+                popup: {
+                    templateUrl: 'views/popup/loadslot.html',
+                    controller: 'SlotsCtrl'
+                }
+            }
+        })
+
+        .state('main.saveSlot',{
+            views: {
+                popup: {
+                    templateUrl: 'views/popup/saveSlot.html',
+                    controller: 'SlotsCtrl'
+                }
+            }
         });
 
 });

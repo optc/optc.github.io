@@ -33,6 +33,22 @@ body, #main, #hp, #other {
     margin-top: 30px;
 }
 
+#specialWarning {
+    width: 100%;
+    position: fixed;
+    bottom: -40px;
+    left: 0;
+    margin: 0;
+    padding: 5px;
+    text-align: right;
+    z-index: -1;
+    transition: bottom 0.2s linear;
+}
+
+#specialWarning.visible {
+    bottom: 0;
+}
+
 /******************
  * MAIN UNIT PANE *
  ******************/
@@ -434,15 +450,14 @@ li.disabled {
     width: 100%;
 }
 
-.modal-div {
+.modal-div:not(.slim) {
     height: 340px;
     overflow: auto;
 }
 
-.modal-div tbody > tr:hover {
-    background-color: rgba(200,200,200,0.3);
-    cursor: pointer;
-}
+.modal-div.tiny {
+    height: 42px;
+};
 
 .modal-div td {
     padding-left: 5px;
@@ -452,13 +467,33 @@ li.disabled {
     width: 100%;
 }
 
-.modal-div td + td {
-    width: 30%;
-    max-width: 0;
-}
-
 .modal-div th {
     padding: 10px 10px 10px 5px;
+}
+
+.modal-div .to-the-right {
+    text-align: right;
+}
+
+.modal-div.padded {
+    padding: 10px;
+}
+
+#recent > span {
+    border-bottom: 1px solid black;
+    display: block;
+}
+
+#recentUnits {
+    height: 42px;
+    display: flex;
+    margin-top: 5px;
+}
+
+#defense-table tbody > tr:hover, #defense-table tbody > td:hover,
+#slot-table tbody > tr:hover, #slot-table tbody > td:hover {
+    background-color: rgba(200,200,200,0.3);
+    cursor: pointer;
 }
 
 /************

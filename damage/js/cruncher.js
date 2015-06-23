@@ -56,7 +56,8 @@ var CruncherCtrl = function($scope, $timeout) {
 
     $scope.numbers = { };
 
-    $scope.$watch('data',crunch,true);
+    $scope.$watch('data',doCrunch,true);
+    $scope.$watch('tdata',doCrunch,true);
 
     /* * * * * Local variables * * * * */
 
@@ -66,9 +67,16 @@ var CruncherCtrl = function($scope, $timeout) {
     var specialsCombinations = [ ];
     var hitModifiers = [ ];
 
+    var crunchDebouncer = null;
+
     /* * * * * Crunching * * * * */
 
-    function crunch() { // leave as function(...) so it's hoisted up
+    function doCrunch() { // leave as function(...) so it's hoisted up
+        if (crunchDebouncer !== null) $timeout.cancel(crunchDebouncer);
+        crunchDebouncer = $timeout(crunch,25);
+    }
+
+    var crunch = function() {
         if (!$scope.options.crunchingEnabled) return;
         initializeDataStructs();
         var result = { };
@@ -84,15 +92,15 @@ var CruncherCtrl = function($scope, $timeout) {
             hpMax += applyCaptainEffectsToHP(x.unit,hp);
         });
         $scope.data.hp.max = Math.max(1,hpMax);
-    }
+    };
 
     var initializeDataStructs = function() {
         var team = $scope.data.team;
         // get enabled specials
         enabledSpecials = [ ];
-        $scope.data.team.forEach(function(x,n) {
-            if (x.special && specials.hasOwnProperty(x.unit.number+1))
-                enabledSpecials.push(specials[x.unit.number+1]);
+        $scope.tdata.team.forEach(function(x,n) {
+            if (x.special && specials.hasOwnProperty($scope.data.team[n].unit.number+1))
+                enabledSpecials.push(specials[$scope.data.team[n].unit.number+1]);
         });
         // check if defense is down (required by some captain effects)
         computeActualDefense();
@@ -101,7 +109,7 @@ var CruncherCtrl = function($scope, $timeout) {
         enabledEffects = [ ];
         for (var i=0;i<2;++i) {
             if ($scope.data.team[i].unit === null) continue;
-            var id = $scope.data.team[i].unit.number;
+            var id = $scope.data.team[i].unit.number + 1;
             if (window.captains.hasOwnProperty(id)) enabledEffects.push(window.captains[id]);
         }
         // find non-static captain effects
@@ -114,6 +122,7 @@ var CruncherCtrl = function($scope, $timeout) {
         hitModifiers = getPossibleHitModifiers(cptsWith.hitModifiers);
         // compute special combinations
         computeSpecialsCombinations();
+        $scope.conflictingSpecials = (specialsCombinations.length > 1);
     };
 
     var crunchForType = function(type) {
@@ -124,7 +133,7 @@ var CruncherCtrl = function($scope, $timeout) {
         // apply damage sorters to base damage, recalculate the new damage and update overallDamage if necessary
         for (var i=0;i<cptsWith.damageSorters.length;++i) {
             var newDamage = cptsWith.damageSorters[i].damageSorter(damage);
-            if (newDamage === null) return;
+            if (newDamage === null) continue;
             var newOverallDamage = optimizeDamage(newDamage);
             if (newOverallDamage.overall > overallDamage.overall) overallDamage = newOverallDamage;
         }
@@ -148,11 +157,12 @@ var CruncherCtrl = function($scope, $timeout) {
         // populate array with the damage of each unit in the team
         $scope.data.team.forEach(function(x,n) {
             if (x.unit === null) return;
+            var orb = $scope.tdata.team[n].orb;
             var atk = getStatOfUnit(x.unit,x.level,'atk'); // basic attack (scales with level);
-            atk *= x.orb; // orb multiplier (fixed)
+            atk *= orb; // orb multiplier (fixed)
             atk *= getTypeMultiplierOfUnit(x.unit,type); // type multiplier (fixed)
             var merryBonus = [1,1.2,1.5][$scope.data.merry];
-            result.push({ unit: x, damage: Math.floor(atk) * merryBonus, position: n });
+            result.push({ unit: x, orb: orb, damage: Math.floor(atk) * merryBonus, position: n });
         });
         // apply special multipliers
         result = applySpecialMultipliers(result); 
@@ -201,11 +211,11 @@ var CruncherCtrl = function($scope, $timeout) {
      */
     var getPossibleHitModifiers = function(captains) {
         var result = [ ];
-        if ($scope.data.customHitModifiers)
-            result.push($scope.data.customHitModifiers); // if the user specified custom modifiers, we'll only use those
+        if ($scope.tdata.customHitModifiers)
+            result.push($scope.tdata.customHitModifiers); // if the user specified custom modifiers, we'll only use those
         else  {
             result.push(DEFAULT_HIT_MODIFIERS); // default modifiers are always checked
-            for (i=0;i<captains.length && !customModifiers;++i) {
+            for (i=0;i<captains.length;++i) {
                 // check if the captain's hit modifiers are not already included
                 var alreadyIncluded = result.some(function(x) {
                     return arraysAreEqual(x,captains[i].hitModifiers);
@@ -289,7 +299,7 @@ var CruncherCtrl = function($scope, $timeout) {
                 var multiplier = specials.reduce(function(prev,next) {
                     var params = { unit: x.unit.unit, chainPosition: x.position, currentHP: $scope.data.hp.current,
                         maxHP: $scope.data.hp.max, percHP: $scope.data.hp.perc, defenseDown: isDefenseDown,
-                        orb: x.unit.orb };
+                        orb: x.orb };
                     return prev * next(params);
                 },1);
                 return { unit: x.unit, damage: x.damage * multiplier, position: x.position };

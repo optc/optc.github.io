@@ -19,7 +19,7 @@ var parseUnit = function(element,n) {
 
 var MainCtrl = function($scope, $controller) {
 
-    // bootstrap
+    /* * * * * Bootstrapping * * * * */
     
     window.units = window.units.map(parseUnit);
 
@@ -29,7 +29,10 @@ var MainCtrl = function($scope, $controller) {
         crunchingEnabled: false
     };
 
+    $scope.conflictingSpecials = false;
+
     // instantiate storage controller separately
+    
     $controller('StorageCtrl', { $scope: $scope });
 
 };

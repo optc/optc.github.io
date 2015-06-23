@@ -11,15 +11,13 @@ var SharedRootCtrl = function($scope) {
     $scope.data = {
 
         team: [
-            { unit: null, level: -1, orb: 1, special: false },
-            { unit: null, level: -1, orb: 1, special: false },
-            { unit: null, level: -1, orb: 1, special: false },
-            { unit: null, level: -1, orb: 1, special: false },
-            { unit: null, level: -1, orb: 1, special: false },
-            { unit: null, level: -1, orb: 1, special: false }
+            { unit: null, level: -1 },
+            { unit: null, level: -1 },
+            { unit: null, level: -1 },
+            { unit: null, level: -1 },
+            { unit: null, level: -1 },
+            { unit: null, level: -1 }
         ],
-
-        customHitModifiers: null,
         
         hp: { current: 1, max: 1, perc: 100 },
 
@@ -28,7 +26,27 @@ var SharedRootCtrl = function($scope) {
 
     };
 
+    $scope.tdata = { // transitional data
+
+        team: [
+            { orb: 1, special: false },
+            { orb: 1, special: false },
+            { orb: 1, special: false },
+            { orb: 1, special: false },
+            { orb: 1, special: false },
+            { orb: 1, special: false }
+        ],
+
+        customHitModifiers: null,
+
+    };
+
     $scope.numbers = { };
+
+    $scope.resetSlot = function(n) {
+        $scope.data.team[n] = { unit: null, level: -1 };
+        $scope.tdata.team[n] = { orb: 1, special: false };
+    };
 
 };
 
@@ -37,6 +55,6 @@ var SharedRootCtrl = function($scope) {
  ****************************/
 
 app
-    .controller('SharedRootCtrl', SharedRootCtrl)
+    .controller('SharedRootCtrl', SharedRootCtrl);
 
 })();

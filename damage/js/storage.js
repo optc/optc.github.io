@@ -1,5 +1,4 @@
 (function() {
-
 /* * * * * Storage methods * * * * */
 
 var loadValue = function(key,def) {
@@ -11,6 +10,29 @@ var loadValue = function(key,def) {
 var save = function(key,object) {
     localStorage.setItem(key,JSON.stringify(object));
 };
+
+/* * * * * Version control methods * * * * */
+
+if (!localStorage.hasOwnProperty('version') || localStorage.getItem('version') != '2') {
+
+    var data = { };
+
+    var convert = function(storageName,dataName) {
+        if (!localStorage.hasOwnProperty(storageName)) return;
+        data[dataName] = loadValue(storageName);
+        localStorage.removeItem(storageName);
+    };
+
+    convert('defense','defense');
+    convert('hp','hp');
+    convert('merry','app');
+    convert('team','team');
+
+    localStorage.setItem('data',JSON.stringify(data));
+    localStorage.setItem('version','2');
+
+}
+
 
 /* * * * * Controller * * * * */
 
@@ -26,7 +48,7 @@ var StorageCtrl = function($scope) {
 
     var options = loadValue('options',{ });
     for (var o in options) {
-        if (o == 'crunchingEnabled') continue;
+        if (o == 'crunchingEnabled' || o == 'sidebarVisible') continue;
         $scope.options[o] = options[o];
     }
 

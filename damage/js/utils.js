@@ -52,10 +52,10 @@ var arrayProduct = function(data) {
     return result.filter(function(r) { return r.length > 0; });
 };
 
-var debounce = function(name,func) {
+var debounce = function(name,func,delay) {
     return function() {
         if (debouncers[name] !== null) clearTimeout(debouncers[name]);
-        debouncers[name] = setTimeout(func.bind(this),500);
+        debouncers[name] = setTimeout(func.bind(this),delay || 500);
     };
 };
 
