@@ -17,7 +17,7 @@
         </li>
 
         <li>
-            <div id="defenseContainer" title="Middle-click or CTRL-click for details">
+            <div id="defenseContainer" title="Middle-click or CTRL-click for details" defense-on-click>
                 <i class="fa fa-shield"></i>
                 Enemy defense: <input type="text" id="defense" ng-model="data.defense"></input>
             </div>
@@ -41,29 +41,12 @@
             <div id="specialDivider">Specials:</div>
         </li>
 
-        <li class="disabled">
-            <div id="special0">&nbsp;</div>
-        </li>
-
-        <li class="disabled">
-            <div id="special1">&nbsp;</div>
-        </li>
-
-        <li class="disabled">
-            <div id="special2">&nbsp;</div>
-        </li>
-
-        <li class="disabled">
-            <div id="special3">&nbsp;</div>
-        </li>
-
-        <li class="disabled">
-            <div id="special4">&nbsp;</div>
-        </li>
-
-        <li class="disabled">
-            <div id="special5">&nbsp;</div>
-        </li>
+        <special slot="0"></special>
+        <special slot="1"></special>
+        <special slot="2"></special>
+        <special slot="3"></special>
+        <special slot="4"></special>
+        <special slot="5"></special>
 
     </ul>
 

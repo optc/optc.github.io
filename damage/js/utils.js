@@ -59,6 +59,16 @@ var debounce = function(name,func) {
     };
 };
 
+var getOppositeType = function(type) {
+    if (!type) return null;
+    type = type.toUpperCase();
+    if (type == 'STR') return 'QCK';
+    if (type == 'QCK') return 'DEX';
+    if (type == 'DEX') return 'STR';
+    if (type == 'PSY') return 'INT';
+    return 'PSY';
+};
+
 /* * * * * Notifications * * * * */
 
 var notify = function(text,type,timeout,id) {
@@ -82,6 +92,7 @@ window.Utils = {
     // misc
     debounce: debounce,
     arrayProduct: arrayProduct,
+    getOppositeType: getOppositeType,
     // notifications
     warn: warn,
     info: info,

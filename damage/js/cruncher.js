@@ -50,13 +50,13 @@ var DEFAULT_HIT_MODIFIERS = [ 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfe
  * CruncherCtrl *
  ****************/
 
-var CruncherCtrl = function($scope) {
+var CruncherCtrl = function($scope, $timeout) {
 
     /* * * * * Scope variables * * * * */
 
     $scope.numbers = { };
 
-    $scope.$watch('data',function() { crunch(); },true);
+    $scope.$watch('data',crunch,true);
 
     /* * * * * Local variables * * * * */
 
@@ -65,16 +65,15 @@ var CruncherCtrl = function($scope) {
 
     var specialsCombinations = [ ];
     var hitModifiers = [ ];
-    var customModifiers = null;
 
     /* * * * * Crunching * * * * */
 
-    var crunch = function(team) {
+    function crunch() { // leave as function(...) so it's hoisted up
         if (!$scope.options.crunchingEnabled) return;
         initializeDataStructs();
         var result = { };
         ['STR','QCK','DEX','PSY','INT'].forEach(function(type) {
-            result[type] = crunchForType(type).overall;
+            result[type] = crunchForType(type);
         });
         result.team = getTeamDetails();
         $scope.numbers = result;
@@ -85,12 +84,16 @@ var CruncherCtrl = function($scope) {
             hpMax += applyCaptainEffectsToHP(x.unit,hp);
         });
         $scope.data.hp.max = Math.max(1,hpMax);
-    };
+    }
 
     var initializeDataStructs = function() {
+        var team = $scope.data.team;
         // get enabled specials
         enabledSpecials = [ ];
-        $scope.data.specials.forEach(function(x) { if (x.enabled) enabledSpecials.push(x.special); });
+        $scope.data.team.forEach(function(x,n) {
+            if (x.special && specials.hasOwnProperty(x.unit.number+1))
+                enabledSpecials.push(specials[x.unit.number+1]);
+        });
         // check if defense is down (required by some captain effects)
         computeActualDefense();
         isDefenseDown = enabledSpecials.some(function(x) { return x !== null && x.hasOwnProperty('def'); });
@@ -198,8 +201,8 @@ var CruncherCtrl = function($scope) {
      */
     var getPossibleHitModifiers = function(captains) {
         var result = [ ];
-        if (customModifiers)
-            result.push(customModifiers); // if the user specified custom modifiers, we'll only use those
+        if ($scope.data.customHitModifiers)
+            result.push($scope.data.customHitModifiers); // if the user specified custom modifiers, we'll only use those
         else  {
             result.push(DEFAULT_HIT_MODIFIERS); // default modifiers are always checked
             for (i=0;i<captains.length && !customModifiers;++i) {
@@ -284,8 +287,9 @@ var CruncherCtrl = function($scope) {
             // apply all the specials of the combination to every unit
             var temp = damage.map(function(x,n) {
                 var multiplier = specials.reduce(function(prev,next) {
-                    var params = { unit: x.unit.unit, chainPosition: x.position, currentHP: currentHP, maxHP: maxHP,
-                        percHP: percHP, defenseDown: isDefenseDown, orb: x.unit.orb };
+                    var params = { unit: x.unit.unit, chainPosition: x.position, currentHP: $scope.data.hp.current,
+                        maxHP: $scope.data.hp.max, percHP: $scope.data.hp.perc, defenseDown: isDefenseDown,
+                        orb: x.unit.orb };
                     return prev * next(params);
                 },1);
                 return { unit: x.unit, damage: x.damage * multiplier, position: x.position };

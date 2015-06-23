@@ -1,10 +1,12 @@
 (function() {
 
-var team = [ null, null, null, null, null, null ];
-var stopPropagation = false;
-var coordinates = [ 0, 0 ];
-var dropped = false;
+/**************/
 
+// used to stop the propagation of the click event at the end of the drag operation
+// if the propagation isn't halted, the default behavior (eg the picker opening up) would occur
+var stopPropagation = false;
+
+var coordinates = [ 0, 0 ];
 var startingSlot = null;
 
 var ghostPortrait = $('<div class="ghostPortrait"></div>');
@@ -17,7 +19,6 @@ var moveElement = function(target,byX,byY) {
     target.style.webkitTransform = target.style.transform = 'translate(' + x + 'px, ' + y + 'px)';
     coordinates = [ x, y ];
 };
-
 
 /* * * * * Event callbacks (draggables) * * * * */
 
@@ -83,22 +84,25 @@ var onUnitDragLeave = function(e) {
     }
 };
 
-var onUnitDrop = function(e) {
-    if (startingSlot === null) return;
-    if (e.target.id == 'removeSlot')
-        onRemoveZoneDrop(e.relatedTarget);
-    else {
-        var endingSlot = $(e.target);
-        if (startingSlot.index() == endingSlot.index()) return;
-        var replacedPortrait = endingSlot.find('.unitPortrait');
-        // switch portraits
-        startingSlot.append(replacedPortrait);
-        endingSlot.append(e.relatedTarget);
-        replacedPortrait[0].style.display = null;
-        ghostPortrait.remove();
-        if (onEmptySlot) startingSlot.addClass('empty');
-        $(document).trigger('unitsSwitched',[ startingSlot.index(), endingSlot.index() ]);
-    }
+var onUnitDrop = function(scope) {
+    return function(e) {
+        if (startingSlot === null) return;
+        if (e.target.id == 'removeSlot')
+            onRemoveZoneDrop(scope,e.relatedTarget);
+        else {
+            var endingSlot = $(e.target);
+            if (startingSlot.index() == endingSlot.index()) return;
+            // reset
+            var replacedPortrait = endingSlot.find('.unitPortrait');
+            replacedPortrait[0].style.display = null;
+            ghostPortrait.remove();
+            // switch units
+            var unitA = scope.data.team[startingSlot.index()];
+            scope.data.team[startingSlot.index()] = scope.data.team[endingSlot.index()];
+            scope.data.team[endingSlot.index()] = unitA;
+            scope.$apply();
+        }
+    };
 };
 
 /* * * * * Event pseudo-callbacks (remove slot) * * * * */
@@ -113,33 +117,46 @@ var onRemoveZoneLeave = function(target) {
     target.classList.remove('gray');
 };
 
-var onRemoveZoneDrop = function(target) {
+var onRemoveZoneDrop = function(scope,target) {
     onRemoveZoneLeave(target);
-    $(document).trigger('unitRemoved',$(target).parent().index());
+    scope.data.team[startingSlot.index()] = { unit: null, level: -1, orb: 1, special: false };
+    scope.$apply();
 };
 
-/* * * * * UI control * * * * */
+/* * * * * Directive definitions * * * * */
 
-$(function() {
+var app = angular.module('optc');
+var directives = { };
 
-    $('#removeSlot').css('display','none');
+directives.draggable = function() {
+    return {
+        restrict: 'A',
+        link: function(scope, element, attrs) {
+            interact(element[0]).draggable({
+                onstart: onUnitStartMove,
+                onmove: onUnitMove,
+                onend: onUnitEndMove
+            });
+            element.click(onUnitClick);
+        }
+    };
+};
 
-    $('.unitPortrait').click(onUnitClick);
+directives.dropzone = function() {
+    return {
+        restrict: 'A',
+        link: function(scope, element, attrs) {
+            interact(element[0]).dropzone({
+                overlap: 0.5,
+                ondragenter: onUnitDragEnter,
+                ondragleave: onUnitDragLeave,
+                ondrop: onUnitDrop(scope)
+            });
+        }
+    };
+};
 
-    interact('.unitPortrait').draggable({
-        onstart: onUnitStartMove,
-        onmove: onUnitMove,
-        onend: onUnitEndMove
-    });
-
-    interact('.unit').dropzone({
-        overlap: 0.5,
-        ondragenter: onUnitDragEnter,
-        ondragleave: onUnitDragLeave,
-        ondrop: onUnitDrop
-    });
-
-});
-
+for (var key in directives)
+    app.directive(key,directives[key]);
 
 })();

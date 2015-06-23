@@ -15,11 +15,11 @@
     -webkit-user-select: none; 
 }
 
-.damage.str { top: 0px; }
-.damage.qck { top: 75px; }
-.damage.dex { top: 150px; }
-.damage.psy { top: 225px; }
-.damage.int { top: 300px; }
+.damage.STR { top: 0px; }
+.damage.QCK { top: 75px; }
+.damage.DEX { top: 150px; }
+.damage.PSY { top: 225px; }
+.damage.INT { top: 300px; }
 
 .details {
     top: 0px !important;

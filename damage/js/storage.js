@@ -12,6 +12,8 @@ var save = function(key,object) {
     localStorage.setItem(key,JSON.stringify(object));
 };
 
+/* * * * * Controller * * * * */
+
 var StorageCtrl = function($scope) {
 
     /* * * * * Initialization * * * * */
