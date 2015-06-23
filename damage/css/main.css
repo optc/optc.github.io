@@ -275,10 +275,6 @@ body, #main, #hp, #other {
 #sliderToggle[status="0"]:after { content: "Level sliders: enabled"; }
 #sliderToggle[status="1"]:after { content: "Level sliders: disabled"; }
 
-#merry[status="0"]:after { content: "No Merry Bonus"; }
-#merry[status="1"]:after { content: "1.2x Merry Bonus"; color: black; }
-#merry[status="2"]:after { content: "1.5x Merry Bonus"; }
-
 .panel {
     position: fixed;
     left: -16.625em;
@@ -511,3 +507,31 @@ li.disabled {
     right: -50px;
     bottom: -50px;
 }
+
+/********
+ * SHIP *
+ ********/
+
+#ship {
+    position: relative;
+    margin-left: -1px;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+
+#ship-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+#ship > :not(#ship-background) {
+    position: relative;
+    z-index: 1;
+}
+

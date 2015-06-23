@@ -61,11 +61,14 @@ var CruncherCtrl = function($scope, $timeout) {
 
     /* * * * * Local variables * * * * */
 
+    var cptsWith = { };
     var currentDefense = 0;
     var isDefenseDown = false;
 
     var specialsCombinations = [ ];
     var hitModifiers = [ ];
+    var shipBonus = { };
+    var enabledSpecials = [ ];
 
     var crunchDebouncer = null;
 
@@ -89,6 +92,7 @@ var CruncherCtrl = function($scope, $timeout) {
         $scope.data.team.forEach(function(x,n) {
             if (x.unit === null) return;
             var hp = getStatOfUnit(x.unit,x.level,'hp');
+            hp = applyShipBonus('hp',hp,x.unit,n);
             hpMax += applyCaptainEffectsToHP(x.unit,hp);
         });
         $scope.data.hp.max = Math.max(1,hpMax);
@@ -123,6 +127,8 @@ var CruncherCtrl = function($scope, $timeout) {
         // compute special combinations
         computeSpecialsCombinations();
         $scope.conflictingSpecials = (specialsCombinations.length > 1);
+        // get ship bonus
+        shipBonus = $.extend({ bonus: ships[$scope.data.ship.name] },{ level: $scope.data.ship.level });
     };
 
     var crunchForType = function(type) {
@@ -148,7 +154,7 @@ var CruncherCtrl = function($scope, $timeout) {
      * - Type multipliers
      * - Orb multipliers
      * - Static (ie, non-positional) captain effect multipliers
-     * - Merry bonus
+     * - Ship bonus
      * Returns a sorted array of objects detailing the base damage of each
      * unit in the team, sorted from weakest to strongest.
      */
@@ -159,10 +165,10 @@ var CruncherCtrl = function($scope, $timeout) {
             if (x.unit === null) return;
             var orb = $scope.tdata.team[n].orb;
             var atk = getStatOfUnit(x.unit,x.level,'atk'); // basic attack (scales with level);
+            atk = applyShipBonus('atk',atk,x.unit,n);
             atk *= orb; // orb multiplier (fixed)
             atk *= getTypeMultiplierOfUnit(x.unit,type); // type multiplier (fixed)
-            var merryBonus = [1,1.2,1.5][$scope.data.merry];
-            result.push({ unit: x, orb: orb, damage: Math.floor(atk) * merryBonus, position: n });
+            result.push({ unit: x, orb: orb, damage: Math.floor(atk), position: n });
         });
         // apply static multipliers
         for (var i=0;i<enabledEffects.length;++i) {
@@ -202,28 +208,6 @@ var CruncherCtrl = function($scope, $timeout) {
             if (newResult.overall > currentResult.overall) currentResult = newResult;
         }
         return currentResult;
-    };
-
-    /* Calculates all the possible hit modifiers to be used during the calculation.
-     * In most cases it will return an array with a single element, either DEFAULT_HIT_MODIFIERS or customModifiers.
-     */
-    var getPossibleHitModifiers = function(captains) {
-        var result = [ ];
-        if ($scope.tdata.customHitModifiers)
-            result.push($scope.tdata.customHitModifiers); // if the user specified custom modifiers, we'll only use those
-        else  {
-            result.push(DEFAULT_HIT_MODIFIERS); // default modifiers are always checked
-            for (i=0;i<captains.length;++i) {
-                // check if the captain's hit modifiers are not already included
-                var alreadyIncluded = result.some(function(x) {
-                    return arraysAreEqual(x,captains[i].hitModifiers);
-                });
-                // if they aren't, include them
-                if (!alreadyIncluded)
-                    result.push(JSON.parse(JSON.stringify(captains[i].hitModifiers)));
-            }
-        }
-        return result;
     };
 
     /* * * * * * Static multipliers/modifiers * * * * */
@@ -321,6 +305,17 @@ var CruncherCtrl = function($scope, $timeout) {
         return current > -1 ? result : JSON.parse(JSON.stringify(damage));
     };
 
+    var applyShipBonus = function(type,stat,unit,slot) {
+        var result = stat;
+        for (var key in shipBonus.bonus) {
+            if (key.indexOf(type) !== 0) continue;
+            var isStatic = (key.indexOf('Static') !== -1);
+            if (isStatic) result += shipBonus.bonus[key]({ boatLevel: shipBonus.level, unit: unit, slot: slot });
+            else result *= shipBonus.bonus[key]({ boatLevel: shipBonus.level, unit: unit, slot: slot });
+        }
+        return result;
+    };
+
     /* The effective damage of a unit is affected by the hit modifier being used, by the defense threshold of the enemy
      * and by the CMB stat of the unit:
      * FULL MISS hits : BASE_DAMAGE *  CMB
@@ -362,7 +357,28 @@ var CruncherCtrl = function($scope, $timeout) {
             return result + Math.floor(unitAtk * 0.9 * bonusDamageBase);
         else
             return result + Math.max(0,Math.floor(unitAtk * (0.9 * bonusDamageBase + 1 / unit.combo)) - currentDefense);
+    };
 
+    /* Calculates all the possible hit modifiers to be used during the calculation.
+     * In most cases it will return an array with a single element, either DEFAULT_HIT_MODIFIERS or customModifiers.
+     */
+    var getPossibleHitModifiers = function(captains) {
+        var result = [ ];
+        if ($scope.tdata.customHitModifiers)
+            result.push($scope.tdata.customHitModifiers); // if the user specified custom modifiers, we'll only use those
+        else  {
+            result.push(DEFAULT_HIT_MODIFIERS); // default modifiers are always checked
+            for (i=0;i<captains.length;++i) {
+                // check if the captain's hit modifiers are not already included
+                var alreadyIncluded = result.some(function(x) {
+                    return arraysAreEqual(x,captains[i].hitModifiers);
+                });
+                // if they aren't, include them
+                if (!alreadyIncluded)
+                    result.push(JSON.parse(JSON.stringify(captains[i].hitModifiers)));
+            }
+        }
+        return result;
     };
 
     /* Computes all the possible combinations of specials given the following conditions:

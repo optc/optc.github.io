@@ -49,17 +49,20 @@ angular.module('optc').config(function($stateProvider, $urlRouterProvider) {
             }
         })
 
+        .state('main.ship',{
+            views: {
+                popup: {
+                    templateUrl: 'views/popup/ships.html',
+                    controller: 'ShipCtrl'
+                }
+            }
+        })
+
         .state('main.reset',{
             views: {
                 popup: {
                     templateUrl: 'views/popup/reset.html',
-                    controller: function($scope, $state) {
-                        $scope.resetStorage = function() {
-                            localStorage.removeItem('team');
-                            for (var i=0;i<6;++i) $scope.resetSlot(i);
-                            $state.go('^');
-                        }
-                    }
+                    controller: 'ResetCtrl'
                 }
             }
         });

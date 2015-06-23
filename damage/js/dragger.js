@@ -131,7 +131,7 @@ directives.draggable = function() {
     return {
         restrict: 'A',
         link: function(scope, element, attrs) {
-            var isDown = true;
+            var isDown = false;
             interact(element[0]).draggable({
                 manualStart: true,
                 onstart: onUnitStartMove,

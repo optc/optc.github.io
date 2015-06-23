@@ -96,6 +96,70 @@ directives.attachPicker = function() {
     };
 };
 
+directives.defenseOnClick = function() {
+    return {
+        restrict: 'A',
+        controller: function($scope, $state) { $scope.go = $state.go; },
+        link: function(scope, element, attrs) {
+            element.click(function(e) {
+                if (e.which == 2 || (e.which == 1 && e.ctrlKey))
+                    scope.go('.defense');
+                else if (e.which == 1)
+                    element.find('input').focus();
+            });
+        }
+    };
+};
+
+directives.shipManager = function() {
+    return {
+        restrict: 'A',
+        scope: true,
+        controller: function($scope, $state) { $scope.go = $state.go; },
+        link: function(scope, element, attrs) {
+            var background = element.find('#ship-background')[0];
+            background.style.width = Math.round(scope.data.ship.level * 10)  + '%';
+            scope.level = scope.data.ship.level;
+            element.click(function(e) {
+                if (e.which == 2 || (e.which == 1 && e.ctrlKey))
+                    scope.go('.ship');
+            });
+            var updateBackground = function(perc) {
+                perc = Math.min(1,perc);
+                background.style.width = Math.min(Math.round(perc * 100),100)  + '%';
+                background.style.background =
+                    'rgb(' + [ Math.floor(240-148*perc), Math.floor(173+11*perc), Math.floor(78+14*perc) ].join(',') + ')';
+            };
+            var mouseup = function(e) {
+                $(document).off('mouseup');
+                $(document).off('mousemove');
+                scope.data.ship.level = scope.level;
+                scope.$apply();
+                updateBackground(scope.level / 10);
+            };
+            var mousemove = function(e) {
+                var level = Math.max(1,Math.min(Math.round(e.clientX / 230 * 10),10));
+                if (level == scope.data.ship.level) return;
+                e.preventDefault();
+                e.stopPropagation();
+                scope.level = level;
+                scope.$apply();
+                updateBackground(e.clientX / 230);
+            };
+            element.mousedown(function(e) {
+                if (e.which != 1 || e.ctrlKey) return;
+                var level = Math.round(e.clientX / 230 * 10);
+                $(document).mouseup(mouseup);
+                $(document).mousemove(mousemove);
+                scope.level = level;
+                scope.$apply();
+                updateBackground(e.clientX / 230);
+            });
+            updateBackground(scope.level / 10);
+        }
+    };
+};
+
 /************************
  * Component directives *
  ************************/

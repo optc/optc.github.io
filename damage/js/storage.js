@@ -1,4 +1,5 @@
 (function() {
+
 /* * * * * Storage methods * * * * */
 
 var loadValue = function(key,def) {
