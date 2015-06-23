@@ -1,0 +1,53 @@
+﻿<nav id="menu" class="panel" role="navigation">
+
+    <ul>
+
+        <li>
+            <div id="sliderToggle" status="{{options.slidersEnabled ? 0 : 1}}"
+                ng-click="options.slidersEnabled = !options.slidersEnabled">
+                <i class="fa fa-circle-o-notch"></i>
+            </div>
+        </li>
+
+        <li>
+            <div id="merry" status="{{data.merry}}" ng-click="data.merry = (data.merry+1)%3"
+                ng-class="{ 'btn-warning': data.merry == 1, 'btn-success': data.merry == 2 }">
+                <i class="fa fa-ship"></i>
+            </div>
+        </li>
+
+        <li>
+            <div id="defenseContainer" title="Middle-click or CTRL-click for details" defense-on-click>
+                <i class="fa fa-shield"></i>
+                Enemy defense: <input type="text" id="defense" ng-model="data.defense"></input>
+            </div>
+        </li>
+
+        <li>
+            <div id="save" ui-sref=".saveSlot">
+                <i class="fa fa-download"></i>
+                Save slot...
+            </div>
+        </li>
+
+        <li>
+            <div id="load" ui-sref=".loadSlot">
+                <i class="fa fa-upload"></i>
+                Load slot...
+            </div>
+        </li>
+
+        <li>
+            <div id="specialDivider">Specials:</div>
+        </li>
+
+        <special slot="0"></special>
+        <special slot="1"></special>
+        <special slot="2"></special>
+        <special slot="3"></special>
+        <special slot="4"></special>
+        <special slot="5"></special>
+
+    </ul>
+
+</nav>

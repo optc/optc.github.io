@@ -1,0 +1,24 @@
+<div class="unit" ng-class="{ empty: !data.team[slot].unit }" dropzone attach-picker>
+
+    <span class="unitPlaceholder" ng-hide="data.team[slot].unit"
+        ng-if="slot == 0">Click to add (friend)</span>
+    <span class="unitPlaceholder" ng-hide="data.team[slot].unit"
+        ng-if="slot == 1">Click to add (captain)</span>
+    <span class="unitPlaceholder" ng-hide="data.team[slot].unit"
+        ng-if="slot > 1">Click to add</span>
+
+    <level-label ng-if="data.team[slot].unit">Lv. {{ data.team[slot].level }}</level-label>
+
+    <div class="unitPortrait" ng-show="data.team[slot].unit"
+        draggable decorate-slot uid="data.team[slot].unit.number">
+        <unit-orb></unit-orb>
+    </div>
+
+    <level-slider></level-slider>
+
+    <div class="ribbon-container" ng-if="slot < 2">
+        <div class="corner-ribbon orange" ng-if="slot < 1">Friend</div>
+        <div class="corner-ribbon red" ng-if="slot == 1">Captain</div>
+    </div>
+
+</div>

@@ -1,3 +1,7 @@
+/***************
+ * MAIN LAYOUT *
+ ***************/
+
 body, html {
     height: 100%;
     font-family: 'Source Sans Pro', sans-serif;
@@ -29,11 +33,30 @@ body, #main, #hp, #other {
     margin-top: 30px;
 }
 
+#specialWarning {
+    width: 100%;
+    position: fixed;
+    bottom: -40px;
+    left: 0;
+    margin: 0;
+    padding: 5px;
+    text-align: right;
+    z-index: -1;
+    transition: bottom 0.2s linear;
+}
+
+#specialWarning.visible {
+    bottom: 0;
+}
+
+/******************
+ * MAIN UNIT PANE *
+ ******************/
+
 .unit {
     width: 112px;
     height: 112px;
     display: flex;
-    /*border-radius: 5px;*/
     cursor: pointer;
     border: 1px solid black;
     margin: 3px !important;
@@ -51,14 +74,6 @@ body, #main, #hp, #other {
 .empty:hover {
     border-color: black !important;
     opacity: 1 !important;
-}
-
-.unit:not(.empty) > .unitPlaceholder,
-.unit.slide > .unitPlaceholder,
-.unit.empty > .unitLevel,
-.unit.slide > .unitLevel,
-.unit.empty > .unitPortrait {
-    display: none;
 }
 
 .unit:not(.slide) > :not([class]) {
@@ -98,12 +113,15 @@ body, #main, #hp, #other {
 
 .unit > :not([class]) {
     position: absolute;
-    top: 25px;
-    left: 10px;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    padding-top: 25px;
     z-index: 2;
 }
 
-.slide > .unitPortrait {
+.slide > .unitPortrait, .gray {
     filter: grayscale(100%);
     -webkit-filter: grayscale(100%);
     opacity: 0.5;
@@ -112,15 +130,6 @@ body, #main, #hp, #other {
 .unitSlider {
     text-shadow: 0 0 black, 0 1px black, 1px 0 black, 1px 1px black, 0 -1px black, -1px 0 black, -1px -1px black;
     cursor: default;
-}
-
-.jcs-panel.noselect {
-    border-width: 0 !important;
-}
-
-.jcs-indicator {
-    width: 10px;
-    height: 10px;
 }
 
 #captain {
@@ -139,6 +148,10 @@ body, #main, #hp, #other {
     border: 1px solid orange !important;
 }
 
+/******************
+ * DAMAGE NUMBERS *
+ ******************/
+
 .damage {
     border-radius: 5px;
     width: 150px;
@@ -151,11 +164,11 @@ body, #main, #hp, #other {
     margin-bottom: 0 !important;
 }
 
-.damage.str, li > .str { background: salmon; }
-.damage.qck, li > .qck { background: lightskyblue; }
-.damage.dex, li > .dex { background: lightgreen; }
-.damage.psy, li > .psy { background: gold; }
-.damage.int, li > .int { background: orchid; }
+.damage.STR, li.STR { background: salmon; }
+.damage.QCK, li.QCK { background: lightskyblue; }
+.damage.DEX, li.DEX { background: lightgreen; }
+.damage.PSY, li.PSY { background: gold; }
+.damage.INT, li.INT { background: orchid; }
 
 .damageLabel {
     font-size: 75%;
@@ -166,6 +179,10 @@ body, #main, #hp, #other {
     font-weight: bold;
     display: block;
 }
+
+/********************
+ * BUTTONS & HP BAR *
+ ********************/
 
 #hpSlider {
     width: 450px;
@@ -203,6 +220,51 @@ body, #main, #hp, #other {
     margin-right: 5px;
 }
 
+/*******************
+ * SLOT THUMBNAILS *
+ *******************/
+
+.slot {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.slot:hover {
+    outline: 1px solid red;
+}
+
+.slot.medium {
+    width: 80px;
+    height: 80px;
+    background-size: 80px 80px;
+    margin: 2px;
+}
+
+.slot.small {
+    width: 40px;
+    height: 40px;
+    background-size: 40px 40px;
+    margin: 1px;
+}
+
+/***********
+ * SIDEBAR *
+ ***********/
+
+#menu {
+    position: absolute;
+    top: 0px;
+    left: -16.625em;
+    width: 16.625em;
+    height: 100%;
+    transition: left .1s linear;
+    margin-bottom: 0;
+}
+
+#menu.open {
+    left: 0em;
+}
+
 #defense {
     width: 50px;
     margin-left: 10px;
@@ -217,7 +279,79 @@ body, #main, #hp, #other {
 #merry[status="1"]:after { content: "1.2x Merry Bonus"; color: black; }
 #merry[status="2"]:after { content: "1.5x Merry Bonus"; }
 
-/* Ribbons */
+.panel {
+    position: fixed;
+    left: -16.625em;
+    width: 16.625em;
+    background: #2C3E50;
+}
+
+#menu li > div {
+    display: block;
+    padding: 1em 1em 1em 1em;
+    color: white;
+    text-align: left;
+    font-size: 11pt;
+    -webkit-transition: background 0.1s linear;
+       -moz-transition: background 0.1s linear;
+            transition: background 0.1s linear;
+}
+
+#menu li > div:not(.menuIcon):hover {
+    background: #688aac;
+    color: white !important;
+    cursor: pointer;
+}
+
+ul { padding-left: 0; }
+
+#menu li {
+    list-style: none;
+    border-bottom: 2px solid #34495D;
+    position: relative;
+}
+
+#menu li i {
+    margin-right: 5px;
+}
+
+input {
+    color: black;
+}
+
+#specialDivider {
+    padding: 5px !important;
+    text-align: center;
+    background: #cdd8e4;
+    color: black !important;
+    cursor: default;
+}
+
+li.STR > div, li.QCK > div, li.DEX > div, li.PSY > div, li.INT > div {
+    color: black !important;
+}
+
+li.disabled {
+    visibility: hidden;
+    height: 0px;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    border-width: 0 !important;
+}
+
+.menuIcon {
+    position: absolute;
+    left: 7px;
+    top: 15px;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+}
+
+/***********
+ * RIBBONS *
+ ***********/
 
 .ribbon-container {
     width: 53px;
@@ -272,86 +406,99 @@ body, #main, #hp, #other {
     background: #e82;
 }
 
-/* Panel */
+/**********
+ * POPUPS *
+ **********/
 
-.panel {
+.backdrop {
     position: fixed;
-    left: -16.625em;
-    width: 16.625em;
-    background: #2C3E50;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 100;
 }
 
-.wrap {
-    position: relative;
-    max-width: 80%;
-    margin: 0 auto;
-    padding: 20px;
+.custom-modal {
+    z-index: 101;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-#menu li > div {
+.modal-content {
+    border-radius: 0;
+}
+
+.modal-header {
+    background-color: #428bca;
+    color: white;
+}
+
+.modal-footer {
+    background-color: rgb(235,235,235);
+}
+
+.animated {
+    animation-duration: 0.2s;
+    -webkit-animation-duration: 0.2s;
+}
+
+.modal-filter {
+    width: 100%;
+}
+
+.modal-div:not(.slim) {
+    height: 340px;
+    overflow: auto;
+}
+
+.modal-div.tiny {
+    height: 42px;
+};
+
+.modal-div td {
+    padding-left: 5px;
+}
+
+.modal-div table {
+    width: 100%;
+}
+
+.modal-div th {
+    padding: 10px 10px 10px 5px;
+}
+
+.modal-div .to-the-right {
+    text-align: right;
+}
+
+.modal-div.padded {
+    padding: 10px;
+}
+
+#recent > span {
+    border-bottom: 1px solid black;
     display: block;
-    padding: 1em 1em 1em 1em;
-    text-align: left;
-    color: #fff;
-    font-size: 11pt;
-    -webkit-transition: background 0.1s linear;
-       -moz-transition: background 0.1s linear;
-            transition: background 0.1s linear;
 }
 
-#menu li > div:not(.menuIcon):hover {
-    background: #688aac;
-    color: white !important;
+#recentUnits {
+    height: 42px;
+    display: flex;
+    margin-top: 5px;
+}
+
+#defense-table tbody > tr:hover, #defense-table tbody > td:hover,
+#slot-table tbody > tr:hover, #slot-table tbody > td:hover {
+    background-color: rgba(200,200,200,0.3);
     cursor: pointer;
 }
 
-ul { padding-left: 0; }
-
-#menu li {
-    list-style: none;
-    border-bottom: 2px solid #34495D;
-    position: relative;
-}
-
-#menu li i {
-    margin-right: 5px;
-}
-
-input {
-    color: black;
-}
-
-#specialDivider {
-    padding: 5px !important;
-    text-align: center;
-    background: #cdd8e4;
-    color: black !important;
-    cursor: default;
-}
-
-li > div.str, li > div.qck, li > div.dex, li > div.psy, li > div.int {
-    color: black !important;
-}
-
-li.disabled {
-    visibility: hidden;
-    height: 0px;
-    overflow: hidden;
-    padding: 0;
-    margin: 0;
-    border-width: 0 !important;
-}
-
-.menuIcon {
-    position: absolute;
-    left: 7px;
-    top: 15px;
-    padding: 0;
-    width: 20px;
-    height: 20px;
-}
-
-/* Surprise */
+/************
+ * SURPRISE *
+ ************/
 
 #surprise {
     position: fixed;

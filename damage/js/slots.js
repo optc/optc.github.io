@@ -1,178 +1,62 @@
 (function() {
 
-var team = [ null, null, null, null, null, null ];
+var SlotsCtrl = function($scope, $state, $stateParams) {
 
-var lastSlotName = JSON.parse(localStorage.getItem('lastSlotName'));
-var slots = JSON.parse(localStorage.getItem('slots')) || { };
+    /* * * * * Functions * * * * */
 
-var currentLoadDialog = null, currentSaveDialog = null;
+    var populateSlots = function(query) {
+        var regex = new RegExp(($scope.query || ''),'i'), result = { };
+        for (var key in slots) {
+            if (regex.test(slots[key].name))
+                result[key] = slots[key];
+        }
+        $scope.slots = result;
+    };
 
-/* * * * * Functions * * * * */
+    /* * * * * Local variables * * * * */
 
-var populateSlots = function(query) {
-    var target = $('#slots'), regex = new RegExp((query || ''),'i');
-    target.empty();
-    var keys = Object.keys(slots);
-    keys.sort();
-    keys.forEach(function(key) {
-        var slot = slots[key], name = slot.name, team = slot.team;
-        if (!regex.test(slot.name)) return;
-        var thumbnails = team
-            .filter(function(x) { return x !== null; })
-            .map(function(x) { return Utils.createThumbnail(x.unit,true); });
-        target.append(createThumbnailRow(name,thumbnails));
+    var lastSlotName = JSON.parse(localStorage.getItem('lastSlotName')) || '';
+    var slots = JSON.parse(localStorage.getItem('slots')) || { };
+
+    /* * * * * Scope variables * * * * */
+
+    $scope.query = '';
+    $scope.slots = slots;
+    $scope.lastSlot = lastSlotName;
+    $scope.overwriting = false;
+
+    $scope.$watch('query',populateSlots);
+
+    $scope.$watch('lastSlot',function(value) {
+        if (value)
+            $scope.overwriting = slots.hasOwnProperty(value.toLowerCase());
     });
-};
 
-var createThumbnailRow = function(name,thumbnails) {
-    var result = $('<div class="slotRow"><div>' + name + '</div></div>');
-    thumbnails.forEach(function(x) { result.append(x); });
-    result.attr('ref',name);
-    result.click(onRowClick);
-    return result;
-};
+    /* * * * * Scope functions * * * * */
 
-var setOverwriteWarning = function(slotName) {
-    var visible = slots.hasOwnProperty(slotName.toLowerCase());
-    $('#overwriteWarning').css('display',visible ? 'block' : 'none');
-};
-
-/* * * * * Custom event callbacks * * * * */
-
-var onUnitPick = function(event,slotNumber,unitNumber) {
-    team[slotNumber] = { unit: unitNumber, level: 1 };
-};
-
-var onLevelChange = function(event,slotNumber,level) {
-    team[slotNumber].level = level;
-};
-
-var onUnitsSwitched = function(event,slotA,slotB) {
-    var unitA = team[slotA];
-    team[slotA] = team[slotB];
-    team[slotB] = unitA;
-};
-
-var onUnitRemoved = function(event,slotNumber) {
-    team[slotNumber] = null;
-};
-
-/* * * * * UI eventcallbacks * * * * */
-
-var onSaveSlot = function() {
-    var name = $('#saveContainer > input').val().trim();
-    if (name.length === 0) return;
-    slots[name.toLowerCase()] = { name: name, team: JSON.parse(JSON.stringify(team)) };
-    localStorage.setItem('slots',JSON.stringify(slots));
-    lastSlotName = name;
-    localStorage.setItem('lastSlotName',JSON.stringify(name));
-    currentSaveDialog.close();
-};
-
-var onInputKeyUp = function(e) {
-    setOverwriteWarning(this.value);
-    if (e.which == 13) onSaveSlot();
-};
-
-var onRowClick = function(e) {
-    var name = this.getAttribute('ref').toLowerCase();
-    if (e.which == 1 && !e.ctrlKey) {
-        // inhibit cruncher
-        $(document).trigger('crunchingToggled',false);
-        // load data
-        slots[name].team.forEach(function(x,n) {
-            if (x === null && team[n] !== null) $(document).trigger('unitRemoved',n);
-            else if (x !== null) {
-                $(document).trigger('unitPicked',[ n, x.unit ]);
-                $(document).trigger('unitLevelChanged',[ n, x.level ]);
-            }
+    $scope.selectTeam = function(slot) {
+        slot.team.map(function(x,n) {
+            $scope.resetSlot(n);
+            if (x !== null) $scope.data.team[n] = { unit: units[slot.team[n].unit], level: slot.team[n].level };
         });
-        // reactivate cruncher
-        $(document).trigger('crunchingToggled',true);
-        // close dialog & update last slot name
-        currentLoadDialog.close();
-        lastSlotName = slots[name].name;
-        localStorage.setItem('lastSlotName',JSON.stringify(lastSlotName));
-    } else if (e.which == 2 || (e.which == 1 && e.ctrlKey)) {
-        delete slots[name];
+        localStorage.setItem('lastSlotName',JSON.stringify(slot.name));
+        $state.go('^');
+    };
+
+    $scope.saveTeam = function() {
+        $scope.$broadcast('$validate');
+        var team = $scope.data.team.map(function(x) {
+            return !x.unit ? null : { unit : x.unit.number, level: x.level };
+        });
+        slots[$scope.lastSlot.toLowerCase()] = { name: $scope.lastSlot, team: team };
         localStorage.setItem('slots',JSON.stringify(slots));
-        this.parentNode.removeChild(this);
-    }
+        localStorage.setItem('lastSlotName',JSON.stringify($scope.lastSlot));
+        $state.go('^');
+    };
+
 };
 
-var onSaveClick = function(e) {
-    BootstrapDialog.show({
-        title: 'Reset',
-        animate: false,
-        message: function(dialog) {
-            var content = $(
-                '<div id="saveContainer"><span>Slot name:</span><input type="text"></input></div>' +
-                '<div id="overwriteWarning">Saving will overwrite an existing slot.</div>'
-            );
-            return content;
-        },
-        buttons: [
-            {
-                label: 'Cancel',
-                action: function(dialog) { dialog.close(); }
-            }, {
-                label: 'Save',
-                cssClass: 'btn-primary',
-                action: onSaveSlot
-            } 
-        ],
-        onshown: function(dialog) {
-            var target = $('#saveContainer > input');
-            if (lastSlotName) target.val(lastSlotName);
-            setOverwriteWarning(lastSlotName || '');
-            target.keyup(onInputKeyUp);
-            target.focus();
-            currentSaveDialog = dialog;
-        }
-    });
-};
-
-var onLoadClick = function(e) {
-    BootstrapDialog.show({
-        title: 'Choose a Slot',
-        animate: false,
-        message: function(dialog) {
-            var content = $(
-                    '<div>' +
-                        '<input type="text" id="slotFilter" placeholder="type to filter (middle/ctrl click to remove slot)">' +
-                        '<div id="slots"></div>' +
-                    '</div>');
-            content.find('input').keyup(Utils.debounce('slots',function() {
-                populateSlots(this.value.trim());
-            }));
-            return content;
-        },
-        buttons: [{
-            label: 'Cancel',
-            action: function(dialog) { dialog.close(); }
-        }],
-        onshown: function(dialog) {
-            $('#slotFilter').focus();
-            populateSlots('');
-            currentLoadDialog = dialog;
-        }
-    });
-};
-
-/* * * * * Events * * * * */
-
-$(document).on('unitPicked',onUnitPick);
-$(document).on('unitLevelChanged',onLevelChange);
-$(document).on('unitsSwitched',onUnitsSwitched);
-$(document).on('unitRemoved',onUnitRemoved);
-
-/* * * * * Body * * * * */
-
-$(function() {
-
-    $('#save').click(onSaveClick);
-    $('#load').click(onLoadClick);
-
-});
+angular.module('optc')
+    .controller('SlotsCtrl', SlotsCtrl);
 
 })();

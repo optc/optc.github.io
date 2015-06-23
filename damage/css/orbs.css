@@ -1,4 +1,4 @@
-.unit:not([glow]) .unitOrb {
+.unitOrb.none {
     display: none;
 }
 
@@ -14,56 +14,55 @@
     pointer-events: none;
 }
 
-.unit[glow="str"] .unitOrb {
+.unitOrb.STR {
     background-image: -webkit-radial-gradient(9px 3px, circle cover, oldlace, orangered, rgb(50,50,50));
     background-image: -moz-radial-gradient(9px 3px, circle cover, oldlace, orangered, rgb(50,50,50));
     background-image: radial-gradient(9px 3px, circle cover, oldlace, orangered, rgb(50,50,50));
 }
 
-.unit[glow="dex"] .unitOrb {
+.unitOrb.DEX {
     background-image: -webkit-radial-gradient(9px 3px, circle cover, oldlace, limegreen, rgb(50,50,50));
     background-image: -moz-radial-gradient(9px 3px, circle cover, oldlace, limegreen, rgb(50,50,50));
     background-image: radial-gradient(9px 3px, circle cover, oldlace, limegreen, rgb(50,50,50));
 }
 
-.unit[glow="qck"] .unitOrb {
+.unitOrb.QCK {
     background-image: -webkit-radial-gradient(9px 3px, circle cover, oldlace, dodgerblue, rgb(50,50,50));
     background-image: -moz-radial-gradient(9px 3px, circle cover, oldlace, dodgerblue, rgb(50,50,50));
     background-image: radial-gradient(9px 3px, circle cover, oldlace, dodgerblue, rgb(50,50,50));
 }
 
-.unit[glow="psy"] .unitOrb {
+.unitOrb.PSY {
     background-image: -webkit-radial-gradient(9px 3px, circle cover, oldlace, orange, rgb(50,50,50));
     background-image: -moz-radial-gradient(9px 3px, circle cover, oldlace, orange, rgb(50,50,50));
     background-image: radial-gradient(9px 3px, circle cover, oldlace, orange, rgb(50,50,50));
 }
 
-.unit[glow="int"] .unitOrb {
+.unitOrb.INT {
     background-image: -webkit-radial-gradient(9px 3px, circle cover, oldlace, mediumorchid, rgb(50,50,50));
     background-image: -moz-radial-gradient(9px 3px, circle cover, oldlace, mediumorchid, rgb(50,50,50));
     background-image: radial-gradient(9px 3px, circle cover, oldlace, mediumorchid, rgb(50,50,50));
 }
 
-.upArrow, .downArrow {
+.unitOrb .fa {
     position: relative;
     font-size: 2em;
     color: white;
 }
 
-.upArrow { top: -3px; }
-.downArrow { top: -1px; }
+.unitOrb .fa-caret-up { top: -3px; }
+.unitOrb .fa-caret-down { top: -1px; }
 
 /***********************
  *     ORB GLOWING     *
  ***********************/
 
-.unit[glow="str"]:not(.opposite) .unitOrb { animation: glowRed .5s linear infinite alternate; }
-.unit[glow="dex"]:not(.opposite) .unitOrb { animation: glowGreen .5s linear infinite alternate; }
-.unit[glow="qck"]:not(.opposite) .unitOrb { animation: glowBlue .5s linear infinite alternate; }
-.unit[glow="psy"]:not(.opposite) .unitOrb { animation: glowOrange .5s linear infinite alternate; }
-.unit[glow="int"]:not(.opposite) .unitOrb { animation: glowPurple .5s linear infinite alternate; }
-
-.unit[glow].opposite .unitOrb { animation: glowBlack .5s linear infinite alternate; }
+.unitOrb.STR { animation: glowRed .5s linear infinite alternate; }
+.unitOrb.DEX { animation: glowGreen .5s linear infinite alternate; }
+.unitOrb.QCK { animation: glowBlue .5s linear infinite alternate; }
+.unitOrb.PSY { animation: glowOrange .5s linear infinite alternate; }
+.unitOrb.INT { animation: glowPurple .5s linear infinite alternate; }
+.unitOrb.opposite { animation: glowBlack .5s linear infinite alternate; }
 
 @keyframes glowRed {
     from { box-shadow 0 0 10px white, 0 0 20px white, 0 0 30px white, 0 0 40px red, 0 0 70px red, 0 0 80px red, 0 0 100px red, 0 0 150px red; }

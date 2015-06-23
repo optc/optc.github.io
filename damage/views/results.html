@@ -1,0 +1,12 @@
+<div id="stats">
+
+    <div class="damage {{type}}" ng-repeat="type in ['STR','QCK','DEX','PSY','INT']" expandable-damage>
+
+        <span class="damageLabel">Damage against {{type}}</span>
+        <span class="damageAmount" id="{{type}}">{{ numbers[type].overall | number }}</span>
+
+        <div class="detailsContainer" ng-if="detailsVisible" detail-pane></div>
+
+    </div>
+
+</div>

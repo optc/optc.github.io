@@ -11,11 +11,13 @@ var getThumbnailUrl = function(n) {
     return 'http://onepiece-treasurecruise.com/wp-content/uploads/f' + id + '.png';
 };
 
-var getTitle = function(unit) {
+var getTitle = function(n) {
+    var unit = units[n];
     return [ unit.name,
-        'ATK: ' + unit.maxATK,
         'HP: ' + unit.maxHP,
+        'ATK: ' + unit.maxATK,
         'RCV: ' + unit.maxRCV,
+        'CMB: ' + unit.combo,
         'Cost: ' + unit.cost
     ].join('\n');
 };
@@ -50,11 +52,21 @@ var arrayProduct = function(data) {
     return result.filter(function(r) { return r.length > 0; });
 };
 
-var debounce = function(name,func) {
+var debounce = function(name,func,delay) {
     return function() {
         if (debouncers[name] !== null) clearTimeout(debouncers[name]);
-        debouncers[name] = setTimeout(func.bind(this),500);
+        debouncers[name] = setTimeout(func.bind(this),delay || 500);
     };
+};
+
+var getOppositeType = function(type) {
+    if (!type) return null;
+    type = type.toUpperCase();
+    if (type == 'STR') return 'QCK';
+    if (type == 'QCK') return 'DEX';
+    if (type == 'DEX') return 'STR';
+    if (type == 'PSY') return 'INT';
+    return 'PSY';
 };
 
 /* * * * * Notifications * * * * */
@@ -75,10 +87,12 @@ window.Utils = {
     // thumbnails
     createThumbnail: createThumbnail,
     getThumbnailUrl: getThumbnailUrl,
+    getThumbnailTitle: getTitle,
     isClickOnOrb: isClickOnOrb,
     // misc
     debounce: debounce,
     arrayProduct: arrayProduct,
+    getOppositeType: getOppositeType,
     // notifications
     warn: warn,
     info: info,

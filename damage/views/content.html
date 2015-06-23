@@ -1,0 +1,27 @@
+<div id="main">
+
+    <units></units>
+
+    <cruncher></cruncher>
+
+    <hp-bar></hp-bar>
+
+    <div id="other">
+        <button type="button" class="btn btn-xs btn-info" id="reset" ui-sref=".reset">Reset</button>
+        <button type="button" class="btn btn-xs btn-primary menu-link"
+            ng-click="options.sidebarVisible = !options.sidebarVisible">Settings</a>
+    </div>
+
+    <sidebar ng-class="{ open: options.sidebarVisible }"></sidebar>
+
+</div>
+
+<div class="unit empty fa fa-trash-o" id="removeSlot" dropzone style="display: none"></div>
+
+<img id="surprise" src="res/surprise.png"></img>
+
+<div ui-view="popup"></div>
+
+<div id="specialWarning" class="alert alert-danger" ng-class="{ visible: conflictingSpecials }">
+    Two or more specials you selected are incompatible with each other, only the strongest combination will be used.
+</div>
