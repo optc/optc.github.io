@@ -311,9 +311,10 @@ directives.special = function() {
                 if (type !== null) element.removeClass(type);
                 scope.hasSpecial = unit && specials.hasOwnProperty(unit.number+1);
                 type = (unit !== null ? scope.data.team[scope.slot].unit.type : null);
+                isSelected = false;
             });
             scope.$watch('tdata.team[slot].special',function(enabled) {
-                if (isSelected && type) element.addClass(type);
+                if (enabled && type) element.addClass(type);
                 else if (type) element.removeClass(type);
             });
             element.click(function(e) {

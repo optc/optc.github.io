@@ -20,7 +20,7 @@ if (!localStorage.hasOwnProperty('version') || localStorage.getItem('version') !
     var convert = function(storageName,dataName) {
         if (!localStorage.hasOwnProperty(storageName)) return;
         data[dataName] = loadValue(storageName);
-        localStorage.removeItem(storageName);
+        //localStorage.removeItem(storageName); // let's be conservative
     };
 
     convert('defense','defense');
