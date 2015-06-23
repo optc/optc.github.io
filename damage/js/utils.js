@@ -11,15 +11,25 @@ var getThumbnailUrl = function(n) {
     return 'http://onepiece-treasurecruise.com/wp-content/uploads/f' + id + '.png';
 };
 
-var getTitle = function(n) {
-    var unit = units[n];
-    return [ unit.name,
-        'HP: ' + unit.maxHP,
-        'ATK: ' + unit.maxATK,
-        'RCV: ' + unit.maxRCV,
-        'CMB: ' + unit.combo,
-        'Cost: ' + unit.cost
-    ].join('\n');
+var getTitle = function(arg) {
+    if (!arg) return null;
+    if (arg.constructor == Object) {
+        return [ arg.name,
+            'HP: ' + arg.hp,
+            'ATK: ' + arg.atk,
+            'RCV: ' + arg.rcv,
+            'CMB: ' + arg.cmb
+        ].join('\n');
+    } else {
+        var unit = (arg.constructor == Object ? arg : units[arg]);
+        return [ unit.name,
+            'HP: ' + unit.maxHP,
+            'ATK: ' + unit.maxATK,
+            'RCV: ' + unit.maxRCV,
+            'CMB: ' + unit.combo,
+            'Cost: ' + unit.cost
+        ].join('\n');
+    }
 };
 
 var createThumbnail = function(n,isSmall,onClick) {

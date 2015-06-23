@@ -20,21 +20,21 @@ directives.autoFocus = function($timeout) {
 directives.decorateSlot = function() {
     return {
         restrict: 'A',
-        scope: { uid: '=' },
+        scope: { uid: '=', udata: '=' },
         link: function(scope, element, attrs) {
-            var update = function(uid) { 
+            var update = function() { 
                 var target = element[0];
-                if (!uid) {
+                if (!scope.uid && !scope.udata) {
                     target.style.backgroundImage = null;
                     target.removeAttribute('title');
                 } else {
-                    target.style.backgroundImage = 'url(' + Utils.getThumbnailUrl(uid) + ')';
+                    target.style.backgroundImage = 'url(' + Utils.getThumbnailUrl(scope.uid) + ')';
                     if (attrs.decorateSlot.indexOf('notitle') == -1)
-                        target.setAttribute('title', Utils.getThumbnailTitle(uid));
+                        target.setAttribute('title', Utils.getThumbnailTitle(scope.udata || scope.uid));
                 }
             };
             scope.$watch('uid',update);
-            update(scope.uid);
+            scope.$watch('udata',update);
         }
     };
 };
