@@ -48,14 +48,6 @@ var SharedRootCtrl = function($scope) {
         $scope.tdata.team[n] = { orb: 1, special: false };
     };
 
-    for (var i=0;i<6;++i) {
-        (function(k) {
-            $scope.$watch('data.team[' + i + '].unit',function() {
-                $scope.resetSlot(k,true);
-            });
-        })(i);
-    }
-
 };
 
 /****************************

@@ -16,6 +16,7 @@ var PickerCtrl = function($scope, $state, $stateParams) {
 
     $scope.pickUnit = function(unitNumber) {
         $scope.data.team[$stateParams.slot] = { unit: units[unitNumber], level: 1, orb: 1 };
+        $scope.resetSlot($stateParams.slot,true);
         updateRecent(unitNumber);
         $state.go('^');
     };

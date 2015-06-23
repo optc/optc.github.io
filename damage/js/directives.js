@@ -307,15 +307,12 @@ directives.special = function() {
             var type = null;
             var isSelected = scope.tdata.team[scope.slot].special;
             scope.hasSpecial = false;
-            scope.$watch('data.team[slot].unit',function(unit) {
-                if (type !== null) element.removeClass(type);
-                scope.hasSpecial = unit && specials.hasOwnProperty(unit.number+1);
-                type = (unit !== null ? scope.data.team[scope.slot].unit.type : null);
-                isSelected = false;
-            });
             scope.$watch('tdata.team[slot].special',function(enabled) {
-                if (enabled && type) element.addClass(type);
-                else if (type) element.removeClass(type);
+                if (!enabled && type) element.removeClass(type);
+                else if (enabled && type) element.addClass(type);
+                scope.hasSpecial = scope.data.team[scope.slot].unit && specials.hasOwnProperty(scope.data.team[scope.slot].unit.number+1);
+                type = (scope.data.team[scope.slot].unit !== null ? scope.data.team[scope.slot].unit.type : null);
+                isSelected = enabled;
             });
             element.click(function(e) {
                 isSelected = !isSelected;
