@@ -149,14 +149,10 @@ var CruncherCtrl = function($scope, $timeout) {
      * - Orb multipliers
      * - Static (ie, non-positional) captain effect multipliers
      * - Merry bonus
-     * - Special multiplier (if not damage sorted)
-     * Multipliers from specials are NOT included here when using damage sorters even though they're all static as
-     * they need to be computed after the damage sorter itself has been applied; this way the calculator can
-     * calculate the optimum damage regardless of whatever damage sorter is enabled.
      * Returns a sorted array of objects detailing the base damage of each
      * unit in the team, sorted from weakest to strongest.
      */
-    var getBaseDamageForType = function(type,damageSorted) {
+    var getBaseDamageForType = function(type) {
         var result = [ ];
         // populate array with the damage of each unit in the team
         $scope.data.team.forEach(function(x,n) {
@@ -168,8 +164,6 @@ var CruncherCtrl = function($scope, $timeout) {
             var merryBonus = [1,1.2,1.5][$scope.data.merry];
             result.push({ unit: x, orb: orb, damage: Math.floor(atk) * merryBonus, position: n });
         });
-        // apply special multipliers
-        if (!damageSorted) result = applySpecialMultipliers(result); 
         // apply static multipliers
         for (var i=0;i<enabledEffects.length;++i) {
             if (!enabledEffects[i].hasOwnProperty('atk')) continue;
@@ -186,17 +180,12 @@ var CruncherCtrl = function($scope, $timeout) {
      * - Positional captain effects multipliers (eg G3, Killer, Log Luffy, etc.)
      * - Chain multipliers (which are themselves affected by captains with chain modifiers)
      * - Bonus multipliers
-     * - Special multipliers (if damage sorted)
+     * - Special multipliers
      * Returns an object detailing the updated damage including the two new multipliers mentioned
      * above, the overall damage and the hit modifiers used to compute said damage.
      */
-    var getOverallDamage = function(damage,hitModifiers,damageSorted) {
-        var result = damage;
-        // apply non-static captain effects
-        for (var i=0;i<cptsWith.hitModifiers.length;++i)
-            result = applyCaptainEffectsToDamage(result,cptsWith.hitModifiers[i].hitAtk,hitModifiers);
-        // apply special multipliers
-        if (damageSorted) result = applySpecialMultipliers(result); 
+    var getOverallDamage = function(damage,hitModifiers) {
+        var result = applySpecialMultipliersAndCaptainEffects(damage,hitModifiers);
         // apply chain and bonus multipliers
         result = applyChainAndBonusMultipliers(result,hitModifiers);
         var overallDamage = result.result.reduce(function(prev,x) { return prev + x.damage; },0);
@@ -205,11 +194,11 @@ var CruncherCtrl = function($scope, $timeout) {
     };
 
     /* Calculates the highest overall damage for an array of hit modifiers. */
-    var optimizeDamage = function(damage,damageSorted) {
+    var optimizeDamage = function(damage) {
         // check damage from default order (or custom order) first, we'll use it as a base for comparison
-        var currentResult = getOverallDamage(damage,hitModifiers[0],damageSorted);
+        var currentResult = getOverallDamage(damage,hitModifiers[0]);
         for (var i=1;i<hitModifiers.length;++i) {
-            var newResult = getOverallDamage(damage,hitModifiers[i],damageSorted);
+            var newResult = getOverallDamage(damage,hitModifiers[i]);
             if (newResult.overall > currentResult.overall) currentResult = newResult;
         }
         return currentResult;
@@ -299,20 +288,30 @@ var CruncherCtrl = function($scope, $timeout) {
         return hp;
     };
 
-    var applySpecialMultipliers = function(damage) {
+    var applySpecialMultipliersAndCaptainEffects = function(damage,hitModifiers) {
         var result = damage, current = -1;
+        // if there are no specials available, just apply the non-static captain effects and return the result
+        if (specialsCombinations.length === 0) {
+            for (var i=0;i<cptsWith.hitModifiers.length;++i)
+                result = applyCaptainEffectsToDamage(result,cptsWith.hitModifiers[i].hitAtk,hitModifiers);
+            return result;
+        }
         // for each special combination
         specialsCombinations.forEach(function(specials,n) {
             // apply all the specials of the combination to every unit
             var temp = damage.map(function(x,n) {
                 var multiplier = specials.reduce(function(prev,next) {
                     var params = { unit: x.unit.unit, chainPosition: x.position, currentHP: $scope.data.hp.current,
-                        maxHP: $scope.data.hp.max, percHP: $scope.data.hp.perc, defenseDown: isDefenseDown,
-                        orb: x.orb };
+                        maxHP: $scope.data.hp.max, percHP: $scope.data.hp.perc, defenseDown: isDefenseDown, orb: x.orb };
                     return prev * next(params);
                 },1);
-                return { unit: x.unit, damage: x.damage * multiplier, position: x.position };
+                return { unit: x.unit, orb: x.orb, damage: x.damage * multiplier, position: x.position };
             });
+            // sort by damage again
+            temp = temp.sort(function(x,y) { return x.damage - y.damage; });
+            // apply non-static captain effects
+            for (var i=0;i<cptsWith.hitModifiers.length;++i)
+                temp = applyCaptainEffectsToDamage(temp,cptsWith.hitModifiers[i].hitAtk,hitModifiers);
             // calculate the new overall damage
             var total = temp.reduce(function(prev,next) { return prev + next.damage; },0);
             if (total < current) return;
