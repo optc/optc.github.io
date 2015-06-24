@@ -92,7 +92,8 @@ var CruncherCtrl = function($scope, $timeout) {
         $scope.data.team.forEach(function(x,n) {
             if (x.unit === null) return;
             var hp = getStatOfUnit(x.unit,x.level,'hp');
-            hp = applyShipBonus('hp',hp,x.unit,n);
+            hp += getShipBonus('hp',true,x.unit,n);
+            hp *= getShipBonus('hp',false,x.unit,n);
             hpMax += applyCaptainEffectsToHP(x.unit,hp);
         });
         $scope.data.hp.max = Math.max(1,hpMax);
@@ -165,10 +166,11 @@ var CruncherCtrl = function($scope, $timeout) {
             if (x.unit === null) return;
             var orb = $scope.tdata.team[n].orb;
             var atk = getStatOfUnit(x.unit,x.level,'atk'); // basic attack (scales with level);
-            atk = applyShipBonus('atk',atk,x.unit,n);
+            var ship = getShipBonus('atk',false,x.unit,n);
+            atk += getShipBonus('atk',true,x.unit,n);
             atk *= orb; // orb multiplier (fixed)
             atk *= getTypeMultiplierOfUnit(x.unit,type); // type multiplier (fixed)
-            result.push({ unit: x, orb: orb, damage: Math.floor(atk), position: n });
+            result.push({ unit: x, orb: orb, damage: Math.floor(atk) * ship, position: n });
         });
         // apply static multipliers
         for (var i=0;i<enabledEffects.length;++i) {
@@ -305,12 +307,13 @@ var CruncherCtrl = function($scope, $timeout) {
         return current > -1 ? result : JSON.parse(JSON.stringify(damage));
     };
 
-    var applyShipBonus = function(type,stat,unit,slot) {
-        var result = stat;
+    var getShipBonus = function(type,static,unit,slot) {
+        var result = (static ? 0 : 1);
         for (var key in shipBonus.bonus) {
             if (key.indexOf(type) !== 0) continue;
             var isStatic = (key.indexOf('Static') !== -1);
-            if (isStatic) result += shipBonus.bonus[key]({ boatLevel: shipBonus.level, unit: unit, slot: slot });
+            if (isStatic != static) continue;
+            if (static) result += shipBonus.bonus[key]({ boatLevel: shipBonus.level, unit: unit, slot: slot });
             else result *= shipBonus.bonus[key]({ boatLevel: shipBonus.level, unit: unit, slot: slot });
         }
         return result;

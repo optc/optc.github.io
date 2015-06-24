@@ -43,6 +43,13 @@ window.defenses = [
     [ 'Coby', 'Expert', 262, 450 ],
     [ 'Smoker (1st round)', 'Expert', 68, 200 ],
     [ 'Smoker (last round)', 'Expert', 267, 330 ],
+    [ 'Tsuru', 'Expert', 296, 225 ],
+    [ 'Khalifa', 'Expert', 317, 280 ],
+    [ 'Lucci', 'Expert', 321, 988 ],
+    [ 'Franky (9th round)', 'Expert', 336, 2500 ],
+    [ 'Franky (10th round)', 'Expert', 336, 19500 ],
+    [ 'Kraken', 'Expert', 340, 50 ],
+    [ 'Hogback', 'Expert', 385, 550 ],
     // Others
     [ 'Jozu (Whitebeard\'s island)', '', 252, 120000 ],
     // Turtles
