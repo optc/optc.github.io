@@ -13,6 +13,7 @@ angular.module('optc').config(function($stateProvider, $urlRouterProvider) {
         })
 
         .state('main.pick',{
+            url: 'pick',
             views: {
                 popup: {
                     templateUrl: 'views/popup/picker.html',
@@ -23,6 +24,7 @@ angular.module('optc').config(function($stateProvider, $urlRouterProvider) {
         })
 
         .state('main.defense',{
+            url: 'defense',
             views: {
                 popup: {
                     templateUrl: 'views/popup/defense.html',
@@ -32,6 +34,7 @@ angular.module('optc').config(function($stateProvider, $urlRouterProvider) {
         })
 
         .state('main.loadSlot',{
+            url: 'load',
             views: {
                 popup: {
                     templateUrl: 'views/popup/loadslot.html',
@@ -41,6 +44,7 @@ angular.module('optc').config(function($stateProvider, $urlRouterProvider) {
         })
 
         .state('main.saveSlot',{
+            url: 'save',
             views: {
                 popup: {
                     templateUrl: 'views/popup/saveSlot.html',
@@ -50,6 +54,7 @@ angular.module('optc').config(function($stateProvider, $urlRouterProvider) {
         })
 
         .state('main.ship',{
+            url: 'ship',
             views: {
                 popup: {
                     templateUrl: 'views/popup/ships.html',
