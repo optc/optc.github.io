@@ -268,9 +268,9 @@ directives.levelLabel = function() {
                 if (e.type == 'keyup' && e.which != 13) return;
                 var level = parseInt(scope.level,10); 
                 scope.editorVisible = false;
-                scope.$apply();
                 if (isNaN(level)) return;
                 scope.data.team[scope.slot].level = Math.min(Math.max(1,level),scope.data.team[scope.slot].unit.maxLevel);
+                scope.$apply();
             };
             input.focusout(update);
             input.keyup(update);
@@ -312,7 +312,7 @@ directives.levelSlider = function() {
             });
             scope.$watch('data.team[slot].unit.maxLevel',updateMax);
             scope.$watch('data.team[slot].level',update);
-            element.parent().click(function(e) {
+            element.parent().on('click touchend',function(e) {
                 $('.unit').eq(scope.slot).removeClass('slide'); 
                 e.preventDefault();
                 e.stopPropagation();

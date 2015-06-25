@@ -140,7 +140,7 @@ directives.draggable = function() {
             })
             .on('down',function(e) {
                 isDown = false;
-                if (e.which != 1 || e.ctrlKey) return;
+                if (e.which > 1 || e.ctrlKey) return;
                 if ($(e.target).parent().hasClass('slide') || Utils.isClickOnOrb(e,e.target)) return;
                 isDown = true;
             })
