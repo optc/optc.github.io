@@ -72,8 +72,9 @@ controllers.PickerCtrl = function($scope, $state, $stateParams) {
     };
 
     var populateList = function() {
-        var result = units, parameters = generateSearchParameters();
+        var result, parameters = generateSearchParameters();
         if (parameters === null) return;
+        result = units.filter(function(x) { return x !== null && x !== undefined; });
         Object.keys(parameters).forEach(function(key) {
             var unitKey = key.replace(/^(hp|atk|rcv)$/,function(x) { return 'max' + x.toUpperCase(); });
             result = result.filter(function(x) { return parameters[key](x[unitKey]); });

@@ -338,5 +338,17 @@ window.specials = {
     603: { // v2 Enel evolved
         atk: function(p) { return p.unit.type == "QCK" ? 2 : 1; },
         type: 'type'
+    },
+    614: { // Zanbai
+        def: function(p) { return 0.5; }
+    },
+    617: { // Fodder
+        atk: function(p) { return p.unit.class == "Shooter" ? 1.2 : 1; }
+    },
+    632: { // WS Lucci
+        def: function(p) { return 0.5; }
+    },
+    633: { // WS Lucci evolved
+        def: function(p) { return 0.5; }
     }
 };

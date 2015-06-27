@@ -654,10 +654,10 @@ window.captains = {
         atk: function(p) { return p.unit.class == "Shooter" ? 2 : 1; }
     },
     458: { // Sengoku
-        atk: function(p) { return unit.cost <= 20 ? 3 : 1; }
+        atk: function(p) { return p.unit.cost <= 20 ? 3 : 1; }
     },
     459: { // Sengoku evolved
-        atk: function(p) { return unit.cost <= 20 ? 3 : 1; }
+        atk: function(p) { return p.unit.cost <= 20 ? 3 : 1; }
     },
     461: { // Fugitive Bentham Mr.2
         atk: function(p) { return p.unit.class == "Fighter" ? 2 : 1; }
@@ -972,10 +972,10 @@ window.captains = {
         atk: function(p) { return p.unit.type == "STR" ? 1.75 : 1; }
     },
     598: { // Apprentice Buggy
-        atk: function(p) { return unit.stars < 3 ? 2.5 : 1; }
+        atk: function(p) { return p.unit.stars < 3 ? 2.5 : 1; }
     },
     599: { // Apprentice Buggy evolved
-        atk: function(p) { return unit.stars < 3 ? 3 : 1; }
+        atk: function(p) { return p.unit.stars < 3 ? 3 : 1; }
     },
     600: { // Apprentice Shanks
         atk: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; }
@@ -989,10 +989,34 @@ window.captains = {
     603: { // v2 Enel evolved
         atk: function(p) { return p.unit.type == "QCK" ? 2.25 : 1; }
     },
+    604: { // Log Sanji
+        atk: function(p) { return p.unit.class == "Fighter" ? 2 : 1; }
+    },
+    605: { // Log Sanji evolved
+        atk: function(p) { return p.unit.class == "Fighter" ? 2 : 1; }
+    },
     606: { // v2 Zeff
         atk: function(p) { return p.percHP >= 50.0 && p.unit.class == "Fighter" ? 2 : 1; }
     },
     607: { // v2 Zeff evolved
         atk: function(p) { return p.percHP >= 50.0 && p.unit.class == "Fighter" ? 2.5 : 1; }
+    },
+    614: { // Zanbai
+        atk: function(p) { return p.unit.cost <= 20 && p.percHP <= 50.0 ? 2.25 : 1; } // TODO Double check the HP
+    },
+    629: { // WS Franky
+        atk: function(p) { return p.unit.rarity <= 3 ? 2 : 1 }
+    },
+    630: { // WS Kaku
+        atk: function(p) { return p.unit.class == "Slasher" ? 1.5 : 1 }
+    },
+    631: { // WS Kaku evolved
+        atk: function(p) { return p.unit.class == "Slasher" ? 2 : 1 }
+    },
+    632: { // WS Lucci
+        atk: function(p) { return p.unit.class == "Fighter" ? 1.5 : 1 }
+    },
+    633: { // WS Lucci evolved
+        atk: function(p) { return p.unit.class == "Fighter" ? 2 : 1 }
     }
 };
