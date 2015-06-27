@@ -180,6 +180,13 @@ body, #main, #hp, #other {
     display: block;
 }
 
+.damageDealer {
+    width: 140px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 /********************
  * BUTTONS & HP BAR *
  ********************/
@@ -343,6 +350,13 @@ li.disabled {
     padding: 0;
     width: 20px;
     height: 20px;
+}
+
+.special > div {
+    width: 230px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 /***********
