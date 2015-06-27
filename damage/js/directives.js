@@ -43,7 +43,7 @@ directives.dotify = function() {
     return {
         restrict: 'A',
         link: function(scope, element, attributes) {
-            scope.$evalAsync(function() {
+            scope.$watch(function() {
                 var html = element.html();
                 element.html('&nbsp;');
                 element.dotdotdot({ wrap: 'letter' }); 
