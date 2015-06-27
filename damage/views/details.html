@@ -4,8 +4,8 @@
 
         <div class="onTurn">#{{$index+1}} ({{numbers[type].hitModifiers[$index]}} / {{ numbers[type].chainMultipliers[$index] | number:1 }}x chain)</div>
 
-        <div class="damageDealer" title="{{turn.unit.unit.name}}" style="word-wrap: break-word;">
-            {{ turn.unit.unit.name | truncate:22 }}
+        <div class="damageDealer" title="{{turn.unit.unit.name}}" style="word-wrap: break-word;" dotify>
+            {{turn.unit.unit.name}}
         </div>
 
         <div class="unitDamage">{{ turn.damage | number }}</div>

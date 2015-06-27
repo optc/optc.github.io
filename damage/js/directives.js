@@ -39,6 +39,20 @@ directives.decorateSlot = function() {
     };
 };
 
+directives.dotify = function() {
+    return {
+        restrict: 'A',
+        link: function(scope, element, attributes) {
+            scope.$evalAsync(function() {
+                var html = element.html();
+                element.html('&nbsp;');
+                element.dotdotdot({ wrap: 'letter' }); 
+                element.html(html);
+            });
+        }
+    };
+};
+
 directives.expandableDamage = function() {
     return {
         restrict: 'A',
@@ -365,7 +379,7 @@ directives.special = function() {
         restrict: 'E',
         replace: true,
         scope: true,
-        template: '<li class="special" ng-show="hasSpecial"><div>{{data.team[slot].unit.name | truncate:25}}</div></li>',
+        template: '<li class="special" ng-show="hasSpecial"><div dotify>{{data.team[slot].unit.name}}</div></li>',
         link: function(scope, element, attrs) {
             scope.slot = element.prevAll('.special').length;
             var isSelected = scope.tdata.team[scope.slot].special;
@@ -397,26 +411,5 @@ directives.special = function() {
 
 for (var key in directives)
     app.directive(key, directives[key]);
-
-/***********
- * Filters *
- ***********/
-
-var filters = { };
-
-filters.truncate = function() {
-    return function(input,length) {
-        if (!input) return input;
-        if (input.length <= length) return input;
-        return input.slice(0,length) + '...';
-    };
-};
-
-/*************************
- * Filter initialization *
- *************************/
-
-for (var filter in filters)
-    app.filter(filter, filters[filter]);
 
 })();
