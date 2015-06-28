@@ -416,7 +416,7 @@ var CruncherCtrl = function($scope, $timeout) {
         currentDefense = $scope.data.defense;
         enabledSpecials.forEach(function(x) {
             if (x === null || !x.hasOwnProperty('def')) return;
-            currentDefense = Math.min(currentDefense,defense * x.def());
+            currentDefense = Math.min(currentDefense,$scope.data.defense * x.def());
         });
     };
 
