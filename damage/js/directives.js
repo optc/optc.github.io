@@ -148,7 +148,7 @@ directives.shipManager = function() {
             };
             element.mousedown(function(e) {
                 if (e.which != 1 || e.ctrlKey) return;
-                var level = Math.round(e.clientX / 230 * 10);
+                var level = Math.max(1,Math.round(e.clientX / 230 * 10));
                 $(document).mouseup(mouseup);
                 $(document).mousemove(mousemove);
                 scope.level = level;
