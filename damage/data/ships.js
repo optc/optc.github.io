@@ -78,6 +78,17 @@ window.ships = {
         hp: function(p) {
             return [ 1, 1.1, 1.1, 1.1, 1.2, 1.2, 1.2, 1.25, 1.3, 1.4 ][p.boatLevel - 1];
         }
+    },
+
+    'Big Top': {
+        thumb: null,
+        atk: function(p) {
+            var matching = (boatLevel < 6 && p.unit.cost <= 15) || (boatLevel > 6 && p.unit.cost <= 20);
+            return !matching ? [ 1.1, 1.1, 1.2, 1.2, 1.2, 1.2, 1.3, 1.3, 1.4, 1.5 ][p.boatLevel - 1] : 1;
+        },
+        hp: function(p) {
+            return p.unit.rarity <= 4 ? [ 1.1, 1.2, 1.3, 1.3 ,1.3, 1.3, 1.3, 1.4, 1.4, 1.4 ][p.boatLevel - 1] : 1;
+        }
     }
 
 };
