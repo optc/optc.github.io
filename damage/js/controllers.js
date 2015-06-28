@@ -133,13 +133,19 @@ controllers.SlotsCtrl = function($scope, $state, $stateParams) {
 
     /* * * * * Scope functions * * * * */
 
-    $scope.selectTeam = function(slot) {
-        slot.team.map(function(x,n) {
-            $scope.resetSlot(n);
-            if (x !== null) $scope.data.team[n] = { unit: units[slot.team[n].unit], level: slot.team[n].level };
-        });
-        localStorage.setItem('lastSlotName',JSON.stringify(slot.name));
-        $state.go('^');
+    $scope.teamClick = function(e,slot) {
+        if (e.which == 1 && !e.ctrlKey) {
+            slot.team.map(function(x,n) {
+                $scope.resetSlot(n);
+                if (x !== null) $scope.data.team[n] = { unit: units[slot.team[n].unit], level: slot.team[n].level };
+            });
+            localStorage.setItem('lastSlotName',JSON.stringify(slot.name));
+            $state.go('^');
+        } else if (e.which == 2 || (e.which == 1 && e.ctrlKey)) {
+            delete slots[slot.name];
+            delete $scope.slots[slot.name];
+            localStorage.setItem('slots',JSON.stringify(slots));
+        }
     };
 
     $scope.saveTeam = function() {

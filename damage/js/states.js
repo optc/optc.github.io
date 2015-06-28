@@ -47,7 +47,7 @@ angular.module('optc').config(function($stateProvider, $urlRouterProvider) {
             url: 'save',
             views: {
                 popup: {
-                    templateUrl: 'views/popup/saveSlot.html',
+                    templateUrl: 'views/popup/saveslot.html',
                     controller: 'SlotsCtrl'
                 }
             }
