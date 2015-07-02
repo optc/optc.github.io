@@ -268,7 +268,7 @@ var CruncherCtrl = function($scope, $timeout) {
     var applyCaptainEffectsToDamage = function(damage,func,modifiers) {
         return damage.map(function(x,n) {
             var params = { unit: x.unit.unit, chainPosition: n, currentHP: $scope.data.hp.current,
-                maxHP: $scope.data.hp.max, percHP: $scope.data.hp.perc, orb: x.unit.orb,
+                maxHP: $scope.data.hp.max, percHP: $scope.data.hp.perc, orb: x.orb,
                 damage: damage, modifiers: modifiers };
             var newDamage = x.damage * func(params);
             return { unit: x.unit, orb: x.orb, damage: newDamage, position: x.position };
