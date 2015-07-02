@@ -33,12 +33,12 @@ var SharedRootCtrl = function($scope) {
     $scope.tdata = { // transitional data
 
         team: [
-            { orb: 1, special: false },
-            { orb: 1, special: false },
-            { orb: 1, special: false },
-            { orb: 1, special: false },
-            { orb: 1, special: false },
-            { orb: 1, special: false }
+            { orb: 1, special: false, lock: 0, silence: 0 },
+            { orb: 1, special: false, lock: 0, silence: 0 },
+            { orb: 1, special: false, lock: 0, silence: 0 },
+            { orb: 1, special: false, lock: 0, silence: 0 },
+            { orb: 1, special: false, lock: 0, silence: 0 },
+            { orb: 1, special: false, lock: 0, silence: 0 }
         ],
 
         customHitModifiers: null,

@@ -88,8 +88,9 @@ directives.attachPicker = function() {
         controller: function($scope, $state) { $scope.$state = $state; },
         link: function(scope, element, attrs) {
             element.click(function(e) {
-                if (e.which != 1 || e.ctrlKey) return;
-                if ($(e.target).parent().hasClass('slide') || Utils.isClickOnOrb(e,e.target)) return;
+                if (e.which != 1 || e.ctrlKey || e.altKey || e.shiftKey) return;
+                if ($(this).hasClass('slide')) return;
+                if (!$(this).hasClass('empty') && Utils.isClickOnOrb(e,$(this).find('.unitContainer')[0])) return;
                 scope.$state.go('.pick',{ slot: scope.slot });
             });
         }
@@ -339,8 +340,8 @@ directives.unitOrb = function() {
             var onMouseUp = function(e) {
                 var unit = scope.data.team[scope.slot], tunit = scope.tdata.team[scope.slot];
                 if (!$(e.target).hasClass('unitPortrait')) return;
-                if (unit.unit === null || e.target.className == 'unitLevel') return;
-                if (e.which == 2 || (e.which == 1 && (e.ctrlKey || Utils.isClickOnOrb(e,e.target)))) {
+                if (unit.unit === null || e.target.className == 'unitLevel' || e.altKey || e.shiftKey) return;
+                if (e.which == 2 || (e.which == 1 && (e.ctrlKey || Utils.isClickOnOrb(e,e.target.parentNode)))) {
                     tunit.orb = (tunit.orb == 1 ? 2 : tunit.orb == 2 ? 0.5 : 1);
                     scope.glow();
                     scope.$apply();
@@ -349,7 +350,7 @@ directives.unitOrb = function() {
                     return false;
                 }
             };
-            element.parent().parent().mouseup(onMouseUp);
+            element.parent().mouseup(onMouseUp);
         },
         controller: function($scope, $timeout) {
             $timeout(function() { 
@@ -360,17 +361,73 @@ directives.unitOrb = function() {
     };
 };
 
+directives.unitChain = function() {
+    return {
+        restrict: 'E',
+        replace: true,
+        scope: true,
+        template: '<div class="unitChain" ng-class="{ active: tdata.team[slot].lock > 0 }"></div>',
+        link: function(scope, element, attrs) {
+            var parent = element.parent();
+            scope.$watch('tdata.team[slot].lock',function(lock) {
+                if (lock > 0) parent.addClass('gray');
+                else parent.removeClass('gray');
+            });
+            var onMouseUp = function(e) {
+                var unit = scope.data.team[scope.slot], tunit = scope.tdata.team[scope.slot];
+                if (!$(e.target).hasClass('unitPortrait')) return;
+                if (unit.unit === null || e.target.className == 'unitLevel') return;
+                if (e.which == 1 && e.altKey && !Utils.isClickOnOrb(e,e.target.parentNode)) {
+                    tunit.lock = (tunit.lock > 0 ? 0 : 2);
+                    scope.$apply();
+                    e.preventDefault();
+                    e.stopPropagation();
+                    return false;
+                }
+            };
+            element.parent().mouseup(onMouseUp);
+        }
+    };
+};
+
+directives.unitSilence = function() {
+    return {
+        restrict: 'E',
+        replace: true,
+        scope: true,
+        template: '<div class="unitSilence" ng-class="{ active: tdata.team[slot].silence > 0 }"></div>',
+        link: function(scope, element, attrs) {
+            var parent = element.parent();
+            var onMouseUp = function(e) {
+                var unit = scope.data.team[scope.slot], tunit = scope.tdata.team[scope.slot];
+                if (!$(e.target).hasClass('unitPortrait')) return;
+                if (unit.unit === null || e.target.className == 'unitLevel') return;
+                if (e.which == 1 && e.shiftKey && !Utils.isClickOnOrb(e,e.target.parentNode)) {
+                    tunit.silence = (tunit.silence > 0 ? 0 : 2);
+                    scope.$apply();
+                    e.preventDefault();
+                    e.stopPropagation();
+                    return false;
+                }
+            };
+            element.parent().mouseup(onMouseUp);
+        }
+    };
+};
+
 directives.special = function() {
     return {
         restrict: 'E',
         replace: true,
         scope: true,
-        template: '<li class="special" ng-show="hasSpecial"><div>{{data.team[slot].unit.name}}</div></li>',
+        template: '<li class="special" ng-show="hasSpecial" ng-class="{ locked: isDisabled }">' +
+            '<div>{{data.team[slot].unit.name}}</div></li>',
         link: function(scope, element, attrs) {
             scope.slot = element.prevAll('.special').length;
             var isSelected = scope.tdata.team[scope.slot].special;
             var removeType = function() { ['STR','DEX','QCK','PSY','INT'].forEach(function(x) { element.removeClass(x); }); };
             scope.hasSpecial = false;
+            scope.isDisabled = false;
             scope.$watch('tdata.team[slot].special',function(enabled) {
                 removeType();
                 if (enabled) element.addClass(scope.data.team[scope.slot].unit.type);
@@ -382,7 +439,11 @@ directives.special = function() {
                 if (scope.tdata.team[scope.slot].special) element.addClass(unit.type);
                 scope.hasSpecial = unit && specials.hasOwnProperty(unit.number+1);
             });
+            scope.$watch('tdata.team[slot]',function(data) {
+                scope.isDisabled = (data.lock > 0 || data.silence > 0);
+            },true);
             element.click(function(e) {
+                if (scope.isDisabled) return;
                 isSelected = !isSelected;
                 scope.tdata.team[scope.slot].special = isSelected;
                 scope.$apply();

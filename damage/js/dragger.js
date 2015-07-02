@@ -9,7 +9,7 @@ var stopPropagation = false;
 var coordinates = [ 0, 0 ];
 var startingSlot = null;
 
-var ghostPortrait = $('<div class="ghostPortrait"></div>');
+var ghostContainer = $('<div class="ghostContainer"></div>');
 var onEmptySlot = false;
 
 /* * * * * Functions * * * * */
@@ -61,10 +61,11 @@ var onUnitDragEnter = function(e)  {
         onEmptySlot = endingSlot.hasClass('empty');
         if (onEmptySlot) endingSlot.removeClass('empty');
         if (startingSlot.index() == endingSlot.index()) return;
-        var replacedPortrait = endingSlot.find('.unitPortrait');
-        ghostPortrait[0].style.backgroundImage = replacedPortrait[0].style.backgroundImage;
-        startingSlot.append(ghostPortrait);
-        replacedPortrait.css('display','none');
+        var replacedContainer = endingSlot.find('.unitContainer');
+        ghostContainer.html(replacedContainer.html());
+        if (replacedContainer.hasClass('gray')) ghostContainer.addClass('gray');
+        startingSlot.append(ghostContainer);
+        replacedContainer.css('display','none');
     }
 };
 
@@ -73,8 +74,9 @@ var onUnitDragLeave = function(e) {
     if (e.target.id == 'removeSlot')
         onRemoveZoneLeave(e.relatedTarget);
     else {
-        ghostPortrait.remove();
-        $(e.target).find('.unitPortrait')[0].style.display = null;
+        ghostContainer.remove();
+        ghostContainer.removeClass('gray');
+        $(e.target).find('.unitContainer')[0].style.display = null;
         if (onEmptySlot) $(e.target).addClass('empty');
     }
 };
@@ -88,9 +90,9 @@ var onUnitDrop = function(scope) {
             var endingSlot = $(e.target);
             if (startingSlot.index() == endingSlot.index()) return;
             // reset
-            var replacedPortrait = endingSlot.find('.unitPortrait');
+            var replacedPortrait = endingSlot.find('.unitContainer');
             replacedPortrait[0].style.display = null;
-            ghostPortrait.remove();
+            ghostContainer.remove();
             // switch units
             var i = startingSlot.index(), j = endingSlot.index(), temp;
             temp = scope.data.team[i];
@@ -140,8 +142,8 @@ directives.draggable = function() {
             })
             .on('down',function(e) {
                 isDown = false;
-                if (e.which > 1 || e.ctrlKey) return;
-                if ($(e.target).parent().hasClass('slide') || Utils.isClickOnOrb(e,e.target)) return;
+                if (e.which > 1 || e.ctrlKey || e.altKey || e.shiftKey) return;
+                if ($(e.target).parent().hasClass('slide') || Utils.isClickOnOrb(e,e.target.parentNode)) return;
                 isDown = true;
             })
             .on('move',function(e) {

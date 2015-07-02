@@ -110,12 +110,21 @@ var CruncherCtrl = function($scope, $timeout) {
         // check if defense is down (required by some captain effects)
         computeActualDefense();
         isDefenseDown = enabledSpecials.some(function(x) { return x !== null && x.hasOwnProperty('def'); });
-        // initialize ability array
+        // captain effect array
         enabledEffects = [ ];
         for (var i=0;i<2;++i) {
             if ($scope.data.team[i].unit === null) continue;
             var id = $scope.data.team[i].unit.number + 1;
-            if (window.captains.hasOwnProperty(id)) enabledEffects.push(window.captains[id]);
+            if (!window.captains.hasOwnProperty(id)) continue;
+            var effect = $.extend({ },window.captains[id]),
+                locked = ($scope.tdata.team[i].lock > 0), silenced = ($scope.tdata.team[i].silence > 0);
+            if (locked || silenced) {
+                for (var func in effect) {
+                    if (!silenced && func == 'hp') continue;
+                    delete effect[func];
+                }
+            }
+            enabledEffects.push(effect);
         }
         // find non-static captain effects
         cptsWith = {
@@ -163,7 +172,7 @@ var CruncherCtrl = function($scope, $timeout) {
         var result = [ ];
         // populate array with the damage of each unit in the team
         $scope.data.team.forEach(function(x,n) {
-            if (x.unit === null) return;
+            if (x.unit === null || $scope.tdata.team[n].lock > 0) return;
             var orb = $scope.tdata.team[n].orb;
             var atk = getStatOfUnit(x.unit,x.level,'atk'); // basic attack (scales with level);
             var ship = getShipBonus('atk',false,x.unit,n);
