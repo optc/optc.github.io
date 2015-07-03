@@ -408,6 +408,10 @@ li.locked > div {
     opacity: 0.5;
 }
 
+#gather {
+    background-color: crimson;
+}
+
 /***********
  * RIBBONS *
  ***********/

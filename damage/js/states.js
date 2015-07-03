@@ -70,6 +70,18 @@ angular.module('optc').config(function($stateProvider, $urlRouterProvider) {
                     controller: 'ResetCtrl'
                 }
             }
+        })
+        
+        .state('main.gather',{
+            views: {
+                popup: {
+                    templateUrl: 'views/popup/gather.html',
+                    controller: function($scope) {
+                        $scope.units = window.units;
+                        $scope.unknownGrowth = function(v,i,a) { return v.growth === 0; };
+                    }
+                }
+            }
         });
 
 });

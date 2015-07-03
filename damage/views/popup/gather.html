@@ -1,0 +1,38 @@
+<div class="backdrop" ui-sref="^"></div>
+
+<div class="custom-modal">
+    <div id="picker" class="modal-dialog">
+        <div class="modal-content animated fadeInDown">
+            <div class="modal-header">Data Gathering</div>
+
+            <div class="modal-body">
+
+                <b>tl;dr I need data on certain characters</b>
+                <br><br>
+
+                If you happen to have any of the characters shown below, and:
+                <ol>
+                    <li>They're <b>NOT</b> at level 1</li>
+                    <li>They're <b>NOT</b> at max level</li>
+                </ol>
+
+                please head over <a href="https://docs.google.com/forms/d/1cRYPbL6IY9Lz5wyAyBnisZtDvWrLYgEBKS6qwRX_Fqw/viewform">here</a> and complete the form (it takes like 20 seconds), any help is appreciated.
+                <br><br>
+
+                <div id="pickerUnits" class="modal-div">
+                    <a ng-repeat="unit in units | filter: unknownGrowth" class="slot medium" target="_blank"
+                        decorate-slot uid="unit.number" href="http://onepiece-treasurecruise.com/c-{{unit.number+1}}/">
+                    </a>
+                </div>
+
+
+            </div>
+
+
+            <div class="modal-footer">
+                <button class="btn btn-default" ui-sref="^">Close</button> 
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -31,6 +31,8 @@ var MainCtrl = function($scope, $controller) {
 
     $scope.conflictingSpecials = false;
 
+    $scope.showGatherButton = window.units.some(function(x) { return x.growth === 0; });
+
     // instantiate storage controller separately
     
     $controller('StorageCtrl', { $scope: $scope });
