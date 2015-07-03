@@ -49,7 +49,7 @@ var SharedRootCtrl = function($scope) {
 
     $scope.resetSlot = function(n,onlyTransitional) {
         if (!onlyTransitional) $scope.data.team[n] = { unit: null, level: -1 };
-        $scope.tdata.team[n] = { orb: 1, special: false };
+        $scope.tdata.team[n] = { orb: 1, special: false, lock: 0, silence: 0 };
     };
 
 };

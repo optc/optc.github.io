@@ -420,14 +420,12 @@ directives.special = function() {
         restrict: 'E',
         replace: true,
         scope: true,
-        template: '<li class="special" ng-show="hasSpecial" ng-class="{ locked: isDisabled }">' +
-            '<div>{{data.team[slot].unit.name}}</div></li>',
+        template: '<li class="special" ng-show="hasSpecial"><div>{{data.team[slot].unit.name}}</div></li>',
         link: function(scope, element, attrs) {
             scope.slot = element.prevAll('.special').length;
             var isSelected = scope.tdata.team[scope.slot].special;
             var removeType = function() { ['STR','DEX','QCK','PSY','INT'].forEach(function(x) { element.removeClass(x); }); };
             scope.hasSpecial = false;
-            scope.isDisabled = false;
             scope.$watch('tdata.team[slot].special',function(enabled) {
                 removeType();
                 if (enabled) element.addClass(scope.data.team[scope.slot].unit.type);
@@ -439,11 +437,7 @@ directives.special = function() {
                 if (scope.tdata.team[scope.slot].special) element.addClass(unit.type);
                 scope.hasSpecial = unit && specials.hasOwnProperty(unit.number+1);
             });
-            scope.$watch('tdata.team[slot]',function(data) {
-                scope.isDisabled = (data.lock > 0 || data.silence > 0);
-            },true);
             element.click(function(e) {
-                if (scope.isDisabled) return;
                 isSelected = !isSelected;
                 scope.tdata.team[scope.slot].special = isSelected;
                 scope.$apply();

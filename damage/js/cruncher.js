@@ -82,6 +82,7 @@ var CruncherCtrl = function($scope, $timeout) {
     var crunch = function() {
         if (!$scope.options.crunchingEnabled) return;
         initializeDataStructs();
+        invokeSpecialEvents();
         var result = { };
         ['STR','QCK','DEX','PSY','INT'].forEach(function(type) {
             result[type] = crunchForType(type);
@@ -97,48 +98,6 @@ var CruncherCtrl = function($scope, $timeout) {
             hpMax += applyCaptainEffectsToHP(x.unit,hp);
         });
         $scope.data.hp.max = Math.max(1,hpMax);
-    };
-
-    var initializeDataStructs = function() {
-        var team = $scope.data.team;
-        // get enabled specials
-        enabledSpecials = [ ];
-        $scope.tdata.team.forEach(function(x,n) {
-            if (x.special && specials.hasOwnProperty($scope.data.team[n].unit.number+1))
-                enabledSpecials.push(specials[$scope.data.team[n].unit.number+1]);
-        });
-        // check if defense is down (required by some captain effects)
-        computeActualDefense();
-        isDefenseDown = enabledSpecials.some(function(x) { return x !== null && x.hasOwnProperty('def'); });
-        // captain effect array
-        enabledEffects = [ ];
-        for (var i=0;i<2;++i) {
-            if ($scope.data.team[i].unit === null) continue;
-            var id = $scope.data.team[i].unit.number + 1;
-            if (!window.captains.hasOwnProperty(id)) continue;
-            var effect = $.extend({ },window.captains[id]),
-                locked = ($scope.tdata.team[i].lock > 0), silenced = ($scope.tdata.team[i].silence > 0);
-            if (locked || silenced) {
-                for (var func in effect) {
-                    if (!silenced && func == 'hp') continue;
-                    delete effect[func];
-                }
-            }
-            enabledEffects.push(effect);
-        }
-        // find non-static captain effects
-        cptsWith = {
-            hitModifiers:   enabledEffects.filter(function(x) { return x.hasOwnProperty('hitModifiers');  }),
-            chainModifiers: enabledEffects.filter(function(x) { return x.hasOwnProperty('chainModifier'); }),
-            damageSorters:  enabledEffects.filter(function(x) { return x.hasOwnProperty('damageSorter');  })
-        };
-        // get all non-default hit modifiers
-        hitModifiers = getPossibleHitModifiers(cptsWith.hitModifiers);
-        // compute special combinations
-        computeSpecialsCombinations();
-        $scope.conflictingSpecials = (specialsCombinations.length > 1);
-        // get ship bonus
-        shipBonus = $.extend({ bonus: ships[$scope.data.ship.name] },{ level: $scope.data.ship.level });
     };
 
     var crunchForType = function(type) {
@@ -221,111 +180,13 @@ var CruncherCtrl = function($scope, $timeout) {
         return currentResult;
     };
 
-    /* * * * * * Static multipliers/modifiers * * * * */
+    /* * * * * * Basic operations * * * * */
 
-    var getTypeMultiplierOfUnit = function(unit,against) {
-        var type = unit.type;
-        if (type == 'STR' && against == 'DEX') return 2;
-        if (type == 'QCK' && against == 'STR') return 2;
-        if (type == 'DEX' && against == 'QCK') return 2;
-        if (type == 'INT' && against == 'PSY') return 2;
-        if (type == 'PSY' && against == 'INT') return 2;
-        if (type == 'STR' && against == 'QCK') return 0.5;
-        if (type == 'QCK' && against == 'DEX') return 0.5;
-        if (type == 'DEX' && against == 'STR') return 0.5;
-        return 1;
-    };
-
-    var getChainMultiplier = function(currentChainMultiplier,hit,chainModifier) {
-        if (hit == 'Perfect') return currentChainMultiplier + 0.3 * chainModifier;
-        else if (hit == 'Great') return currentChainMultiplier +  0.1 * chainModifier;
-        else if (hit == 'Good') return currentChainMultiplier;
-        return 1.0;
-    };
-
-    /* * * * * Captain effects/specials * * * * */
-
-    var applyChainAndBonusMultipliers = function(damage,modifiers) {
-        var multipliersUsed = [ ];
-        var currentChainMultiplier = 1.0;
-        var result = damage.map(function(x,n) {
-            var result = x.damage * currentChainMultiplier;
-            var chainModifier = cptsWith.chainModifiers.reduce(function(prev,next) {
-                //return prev * next.chainModifier({ unit: x.unit.unit, chainPosition: n, currentHP: currentHP,
-                    //maxHP: maxHP, percHP: percHP, modifiers: modifiers[n] });
-                return prev * next.chainModifier();
-            },1);
-            result = computeDamageOfUnit(x.unit.unit,result,modifiers[n]);
-            // update chain multiplier for the next hit
-            multipliersUsed.push(currentChainMultiplier);
-            currentChainMultiplier = getChainMultiplier(currentChainMultiplier,modifiers[n],chainModifier);
-            // return value
-            return { unit: x.unit, orb: x.orb, damage: result, position: x.position };
-        });
-        return { result: result, chainMultipliers: multipliersUsed };
-    };
-
-    var applyCaptainEffectsToDamage = function(damage,func,modifiers) {
-        return damage.map(function(x,n) {
-            var params = { unit: x.unit.unit, chainPosition: n, currentHP: $scope.data.hp.current,
-                maxHP: $scope.data.hp.max, percHP: $scope.data.hp.perc, orb: x.orb,
-                damage: damage, modifiers: modifiers };
-            var newDamage = x.damage * func(params);
-            return { unit: x.unit, orb: x.orb, damage: newDamage, position: x.position };
-        });
-    };
-
-    var applyCaptainEffectsToHP = function(unit,hp) {
-        for (var i=0;i<enabledEffects.length;++i) {
-            if (enabledEffects[i].hasOwnProperty('hp'))
-                hp *= enabledEffects[i].hp({ unit: unit });
-        }
-        return hp;
-    };
-
-    var applySpecialMultipliersAndCaptainEffects = function(damage,hitModifiers) {
-        var result = damage, current = -1;
-        // if there are no specials available, just apply the non-static captain effects and return the result
-        if (specialsCombinations.length === 0) {
-            for (var i=0;i<cptsWith.hitModifiers.length;++i)
-                result = applyCaptainEffectsToDamage(result,cptsWith.hitModifiers[i].hitAtk,hitModifiers);
-            return result;
-        }
-        // for each special combination
-        specialsCombinations.forEach(function(specials,n) {
-            // apply all the specials of the combination to every unit
-            var temp = damage.map(function(x,n) {
-                var multiplier = specials.reduce(function(prev,next) {
-                    var params = { unit: x.unit.unit, chainPosition: x.position, currentHP: $scope.data.hp.current,
-                        maxHP: $scope.data.hp.max, percHP: $scope.data.hp.perc, defenseDown: isDefenseDown, orb: x.orb };
-                    return prev * next(params);
-                },1);
-                return { unit: x.unit, orb: x.orb, damage: x.damage * multiplier, position: x.position };
-            });
-            // sort by damage again
-            temp = temp.sort(function(x,y) { return x.damage - y.damage; });
-            // apply non-static captain effects
-            for (var i=0;i<cptsWith.hitModifiers.length;++i)
-                temp = applyCaptainEffectsToDamage(temp,cptsWith.hitModifiers[i].hitAtk,hitModifiers);
-            // calculate the new overall damage
-            var total = temp.reduce(function(prev,next) { return prev + next.damage; },0);
-            if (total < current) return;
-            result = temp;
-            current = total;
-        });
-        return current > -1 ? result : JSON.parse(JSON.stringify(damage));
-    };
-
-    var getShipBonus = function(type,static,unit,slot) {
-        var result = (static ? 0 : 1);
-        for (var key in shipBonus.bonus) {
-            if (key.indexOf(type) !== 0) continue;
-            var isStatic = (key.indexOf('Static') !== -1);
-            if (isStatic != static) continue;
-            if (static) result += shipBonus.bonus[key]({ boatLevel: shipBonus.level, unit: unit, slot: slot });
-            else result *= shipBonus.bonus[key]({ boatLevel: shipBonus.level, unit: unit, slot: slot });
-        }
-        return result;
+    var getStatOfUnit = function(unit,level,stat) {
+        var maxLevel = (unit.maxLevel == 1 ? 1 : unit.maxLevel -1);
+        var growth = unit.growth || 1;
+        var minStat = 'min' + stat.toUpperCase(), maxStat = 'max' + stat.toUpperCase();
+        return Math.floor(unit[minStat] + (unit[maxStat] - unit[minStat]) * Math.pow((level-1) / maxLevel, growth));
     };
 
     /* The effective damage of a unit is affected by the hit modifier being used, by the defense threshold of the enemy
@@ -369,6 +230,117 @@ var CruncherCtrl = function($scope, $timeout) {
             return result + Math.floor(unitAtk * 0.9 * bonusDamageBase);
         else
             return result + Math.max(0,Math.floor(unitAtk * (0.9 * bonusDamageBase + 1 / unit.combo)) - currentDefense);
+    };
+
+    /* Computes the actual defense threshold of the enemy after the specials are factored in.
+     * Defense-reducing specials do not stack with each other, so we just use the one that grants the lowest defense.
+     */
+    var computeActualDefense = function() {
+        currentDefense = $scope.data.defense;
+        enabledSpecials.forEach(function(x) {
+            if (x === null || !x.hasOwnProperty('def')) return;
+            currentDefense = Math.min(currentDefense,$scope.data.defense * x.def());
+        });
+    };
+
+    var getShipBonus = function(type,static,unit,slot) {
+        var result = (static ? 0 : 1);
+        for (var key in shipBonus.bonus) {
+            if (key.indexOf(type) !== 0) continue;
+            var isStatic = (key.indexOf('Static') !== -1);
+            if (isStatic != static) continue;
+            if (static) result += shipBonus.bonus[key]({ boatLevel: shipBonus.level, unit: unit, slot: slot });
+            else result *= shipBonus.bonus[key]({ boatLevel: shipBonus.level, unit: unit, slot: slot });
+        }
+        return result;
+    };
+
+    var getTypeMultiplierOfUnit = function(unit,against) {
+        var type = unit.type;
+        if (type == 'STR' && against == 'DEX') return 2;
+        if (type == 'QCK' && against == 'STR') return 2;
+        if (type == 'DEX' && against == 'QCK') return 2;
+        if (type == 'INT' && against == 'PSY') return 2;
+        if (type == 'PSY' && against == 'INT') return 2;
+        if (type == 'STR' && against == 'QCK') return 0.5;
+        if (type == 'QCK' && against == 'DEX') return 0.5;
+        if (type == 'DEX' && against == 'STR') return 0.5;
+        return 1;
+    };
+
+    var getChainMultiplier = function(currentChainMultiplier,hit,chainModifier) {
+        if (hit == 'Perfect') return currentChainMultiplier + 0.3 * chainModifier;
+        else if (hit == 'Great') return currentChainMultiplier +  0.1 * chainModifier;
+        else if (hit == 'Good') return currentChainMultiplier;
+        return 1.0;
+    };
+
+
+    /* * * * * Captain effects/specials * * * * */
+
+    var applyCaptainEffectsToDamage = function(damage,func,modifiers) {
+        return damage.map(function(x,n) {
+            var params = $.extend({ chainPosition: n, damage: damage, modifiers: modifiers },getParameters(x.position));
+            var newDamage = x.damage * func(params);
+            return { unit: x.unit, orb: x.orb, damage: newDamage, position: x.position };
+        });
+    };
+
+    var applyCaptainEffectsToHP = function(unit,hp) {
+        for (var i=0;i<enabledEffects.length;++i) {
+            if (enabledEffects[i].hasOwnProperty('hp'))
+                hp *= enabledEffects[i].hp({ unit: unit });
+        }
+        return hp;
+    };
+
+    var applyChainAndBonusMultipliers = function(damage,modifiers) {
+        var multipliersUsed = [ ];
+        var currentChainMultiplier = 1.0;
+        var result = damage.map(function(x,n) {
+            var result = x.damage * currentChainMultiplier;
+            var chainModifier = cptsWith.chainModifiers.reduce(function(prev,next) {
+                return prev * next.chainModifier(getParameters(x.position));
+            },1);
+            result = computeDamageOfUnit(x.unit.unit,result,modifiers[n]);
+            // update chain multiplier for the next hit
+            multipliersUsed.push(currentChainMultiplier);
+            currentChainMultiplier = getChainMultiplier(currentChainMultiplier,modifiers[n],chainModifier);
+            // return value
+            return { unit: x.unit, orb: x.orb, damage: result, position: x.position };
+        });
+        return { result: result, chainMultipliers: multipliersUsed };
+    };
+
+    var applySpecialMultipliersAndCaptainEffects = function(damage,hitModifiers) {
+        var result = damage, current = -1;
+        // if there are no specials available, just apply the non-static captain effects and return the result
+        if (specialsCombinations.length === 0) {
+            for (var i=0;i<cptsWith.hitModifiers.length;++i)
+                result = applyCaptainEffectsToDamage(result,cptsWith.hitModifiers[i].hitAtk,hitModifiers);
+            return result;
+        }
+        // for each special combination
+        specialsCombinations.forEach(function(specials,n) {
+            // apply all the specials of the combination to every unit
+            var temp = damage.map(function(x,n) {
+                var multiplier = specials.reduce(function(prev,next) {
+                    return prev * next(getParameters(x.position));
+                },1);
+                return { unit: x.unit, orb: x.orb, damage: x.damage * multiplier, position: x.position };
+            });
+            // sort by damage again
+            temp = temp.sort(function(x,y) { return x.damage - y.damage; });
+            // apply non-static captain effects
+            for (var i=0;i<cptsWith.hitModifiers.length;++i)
+                temp = applyCaptainEffectsToDamage(temp,cptsWith.hitModifiers[i].hitAtk,hitModifiers);
+            // calculate the new overall damage
+            var total = temp.reduce(function(prev,next) { return prev + next.damage; },0);
+            if (total < current) return;
+            result = temp;
+            current = total;
+        });
+        return current > -1 ? result : JSON.parse(JSON.stringify(damage));
     };
 
     /* Calculates all the possible hit modifiers to be used during the calculation.
@@ -418,24 +390,76 @@ var CruncherCtrl = function($scope, $timeout) {
         return (result.class.length + result.type.length > 1) || result.orb.length > 1 || result.all.length > 1;
     };
 
-    /* Computes the actual defense threshold of the enemy after the specials are factored in.
-     * Defense-reducing specials do not stack with each other, so we just use the one that grants the lowest defense.
-     */
-    var computeActualDefense = function() {
-        currentDefense = $scope.data.defense;
-        enabledSpecials.forEach(function(x) {
-            if (x === null || !x.hasOwnProperty('def')) return;
-            currentDefense = Math.min(currentDefense,$scope.data.defense * x.def());
+    var invokeSpecialEvents = function() {
+        $scope.tdata.team.forEach(function(x,n) {
+            if (!$scope.data.team[n].unit) return;
+            var id = $scope.data.team[n].unit.number + 1;
+            if (!specials.hasOwnProperty(id)) return;
+            if (x.special && specials[id].hasOwnProperty('onActivation'))
+                specials[id].onActivation(getParameters(n));
+            else if (!x.special && specials[id].hasOwnProperty('onDeactivation'))
+                specials[id].onDeactivation(getParameters(n));
         });
     };
 
     /* * * * * * Utility functions * * * * */
 
-    var getStatOfUnit = function(unit,level,stat) {
-        var maxLevel = (unit.maxLevel == 1 ? 1 : unit.maxLevel -1);
-        var growth = unit.growth || 1;
-        var minStat = 'min' + stat.toUpperCase(), maxStat = 'max' + stat.toUpperCase();
-        return Math.floor(unit[minStat] + (unit[maxStat] - unit[minStat]) * Math.pow((level-1) / maxLevel, growth));
+    var initializeDataStructs = function() {
+        var team = $scope.data.team;
+        // get enabled specials
+        enabledSpecials = [ ];
+        $scope.tdata.team.forEach(function(x,n) {
+            if (!$scope.data.team[n].unit) return;
+            var id = $scope.data.team[n].unit.number + 1;
+            if (x.special && specials.hasOwnProperty(id))
+                enabledSpecials.push(specials[id]);
+        });
+        // check if defense is down (required by some captain effects)
+        computeActualDefense();
+        isDefenseDown = enabledSpecials.some(function(x) { return x !== null && x.hasOwnProperty('def'); });
+        // captain effect array
+        enabledEffects = [ ];
+        for (var i=0;i<2;++i) {
+            if ($scope.data.team[i].unit === null) continue;
+            var id = $scope.data.team[i].unit.number + 1;
+            if (!window.captains.hasOwnProperty(id)) continue;
+            var effect = $.extend({ },window.captains[id]),
+                locked = ($scope.tdata.team[i].lock > 0), silenced = ($scope.tdata.team[i].silence > 0);
+            if (locked || silenced) {
+                for (var func in effect) {
+                    if (!silenced && func == 'hp') continue;
+                    delete effect[func];
+                }
+            }
+            enabledEffects.push(effect);
+        }
+        // find non-static captain effects
+        cptsWith = {
+            hitModifiers:   enabledEffects.filter(function(x) { return x.hasOwnProperty('hitModifiers');  }),
+            chainModifiers: enabledEffects.filter(function(x) { return x.hasOwnProperty('chainModifier'); }),
+            damageSorters:  enabledEffects.filter(function(x) { return x.hasOwnProperty('damageSorter');  })
+        };
+        // get all non-default hit modifiers
+        hitModifiers = getPossibleHitModifiers(cptsWith.hitModifiers);
+        // compute special combinations
+        computeSpecialsCombinations();
+        $scope.conflictingSpecials = (specialsCombinations.length > 1);
+        // get ship bonus
+        shipBonus = $.extend({ bonus: ships[$scope.data.ship.name] },{ level: $scope.data.ship.level });
+    };
+
+
+    var getParameters = function(slotNumber) {
+        return {
+            unit: $scope.data.team[slotNumber].unit,
+            orb: $scope.tdata.team[slotNumber].orb,
+            currentHP: $scope.data.hp.current,
+            maxHP: $scope.data.hp.max,
+            percHP: $scope.data.hp.perc,
+            defenseDown: isDefenseDown,
+            data: $scope.data.team[slotNumber],
+            tdata: $scope.tdata.team[slotNumber]
+        };
     };
 
     var arraysAreEqual = function(a,b) {

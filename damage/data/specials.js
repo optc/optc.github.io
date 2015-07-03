@@ -295,7 +295,9 @@ window.specials = {
     },
     572: { // DBF Usopp
         atk: function(p) { return p.unit.class == "Fighter" ? 2 : 1; },
-        type: 'class'
+        type: 'class',
+        onActivation: function(p) { p.tdata.lock = Math.max(1,p.tdata.lock); },
+        onDeactivation: function(p) { if (p.tdata.lock == 1) p.tdata.lock = 0; }
     },
     574: { // Aokiji
         atk: function(p) { return p.unit.class == "Striker" ? 1.75 : 1; },
