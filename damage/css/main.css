@@ -170,8 +170,8 @@ body, #main, #hp, #other {
     height: 100%;
     background-image: url('../res/chain.png');
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 1px;
+    left: 1px;
     pointer-events: none;
     display: none;
 }
