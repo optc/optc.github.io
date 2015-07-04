@@ -352,5 +352,16 @@ window.specials = {
     },
     633: { // WS Lucci evolved
         def: function(p) { return 0.5; }
+    },
+    634: { // Keimi
+        atk: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" ? 1.2 : 1; },
+        type: 'type'
+    },
+    635: { // Keimi evolved
+        atk: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" ? 1.2 : 1; },
+        type: 'type'
+    },
+    636: { // v2 Hatchan
+        // TODO boost atk by 1.3 if the enemy has a defense buff
     }
 };

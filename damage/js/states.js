@@ -64,6 +64,7 @@ angular.module('optc').config(function($stateProvider, $urlRouterProvider) {
         })
 
         .state('main.reset',{
+            url: 'reset',
             views: {
                 popup: {
                     templateUrl: 'views/popup/reset.html',
@@ -73,6 +74,7 @@ angular.module('optc').config(function($stateProvider, $urlRouterProvider) {
         })
         
         .state('main.gather',{
+            url: 'gather',
             views: {
                 popup: {
                     templateUrl: 'views/popup/gather.html',

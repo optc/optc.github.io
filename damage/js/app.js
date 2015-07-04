@@ -59,6 +59,11 @@ var SharedRootCtrl = function($scope) {
  ****************************/
 
 app
-    .controller('SharedRootCtrl', SharedRootCtrl);
+    .controller('SharedRootCtrl', SharedRootCtrl)
+    .run(function($rootScope, $location, $window) {
+        $rootScope.$on('$stateChangeSuccess',function(e) {
+            if (ga) ga('send', 'pageview', { page: $location.path() });
+        });
+    });
 
 })();

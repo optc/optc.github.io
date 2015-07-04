@@ -1005,18 +1005,30 @@ window.captains = {
         atk: function(p) { return p.unit.cost <= 20 && p.percHP <= 50.0 ? 2.25 : 1; } // TODO Double check the HP
     },
     629: { // WS Franky
-        atk: function(p) { return p.unit.rarity <= 3 ? 2 : 1 }
+        atk: function(p) { return p.unit.rarity <= 3 ? 2 : 1; }
     },
     630: { // WS Kaku
-        atk: function(p) { return p.unit.class == "Slasher" ? 1.5 : 1 }
+        atk: function(p) { return p.unit.class == "Slasher" ? 1.5 : 1; }
     },
     631: { // WS Kaku evolved
-        atk: function(p) { return p.unit.class == "Slasher" ? 2 : 1 }
+        atk: function(p) { return p.unit.class == "Slasher" ? 2 : 1; }
     },
     632: { // WS Lucci
-        atk: function(p) { return p.unit.class == "Fighter" ? 1.5 : 1 }
+        atk: function(p) { return p.unit.class == "Fighter" ? 1.5 : 1; }
     },
     633: { // WS Lucci evolved
-        atk: function(p) { return p.unit.class == "Fighter" ? 2 : 1 }
+        atk: function(p) { return p.unit.class == "Fighter" ? 2 : 1; }
+    },
+    634: { // Keimi
+        atk: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" ? 1.25 : 1; }
+    },
+    635: { // Keimi evolved
+        atk: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" ? 1.5 : 1; }
+    },
+    636: { // Pappug
+        atk: function(p) { return p.unit.cost <= 2 ? 3 : 1; }
+    },
+    637: { // v2 Hatchan
+        atk: function(p) { return p.unit.class == "Slasher" ? 1.5 : 1; }
     }
 };
