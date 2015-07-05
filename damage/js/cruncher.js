@@ -184,7 +184,7 @@ var CruncherCtrl = function($scope, $timeout) {
 
     var getStatOfUnit = function(unit,level,stat) {
         var maxLevel = (unit.maxLevel == 1 ? 1 : unit.maxLevel -1);
-        var growth = unit.growth || 1;
+        var growth = unit.growth[stat] || 1;
         var minStat = 'min' + stat.toUpperCase(), maxStat = 'max' + stat.toUpperCase();
         return Math.floor(unit[minStat] + (unit[maxStat] - unit[minStat]) * Math.pow((level-1) / maxLevel, growth));
     };

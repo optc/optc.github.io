@@ -432,9 +432,9 @@ window.units = [
     [ "Bellamy the Hyena", "DEX", "Fighter", 4, 15, 70, 726, 600, 67, 1072, 986, 170, 6, 1 ],
     [ "Sarkies", "QCK", "Slasher", 3, 10, 50, 220, 92, 22, 1440, 424, 68, 5, 1 ],
     [ "Elizabeth", "DEX", "Fighter", 4, 12, 70, 881, 422, 155, 1485, 700, 198, 4, 1.5 ],
-    [ "Caroline", "INT", "Fighter", 4, 18, 99, 772, 389, 177, 1890, 915, 300, 6, 1.5 ], // NOTE: RCV is on 0.7 growth
-    [ "Sanji - Traditional Kamabakka Kingdom Duel Style", "QCK", "Fighter", 3, 10, 50, 221, 58, 29, 1229, 622, 130, 4, 0.7 ], // NOTE: RCV is on 1.5 growth
-    [ "Sanji Candy-chan", "QCK", "Fighter", 4, 18, 99, 1155, 545, 76, 1802, 951, 357, 4, 0.7 ], // NOTE: RCV is on 1.5 growth
+    [ "Caroline", "INT", "Fighter", 4, 18, 99, 772, 389, 177, 1890, 915, 300, 6, [ 1.5, 1.5, 0.7 ] ],
+    [ "Sanji - Traditional Kamabakka Kingdom Duel Style", "QCK", "Fighter", 3, 10, 50, 221, 58, 29, 1229, 622, 130, 4, [ 0.7, 0.7, 1.5 ] ],
+    [ "Sanji Candy-chan", "QCK", "Fighter", 4, 18, 99, 1155, 545, 76, 1802, 951, 357, 4, [ 0.7, 0.7, 1.5 ] ],
     [ "Perona Sweet", "DEX", "Shooter", 4, 11, 50, 168, 98, 58, 928, 412, 231, 4, 1.5 ],
     [ "Perona Sweet Ghost Princees", "DEX", "Shooter", 5, 20, 99, 856, 359, 186, 1568, 741, 466, 4, 1.5 ],
     [ "Nefertari Vivi Love", "PSY", "Slasher", 4, 11, 50, 138, 102, 183, 889, 358, 256, 5, 1.5 ],
@@ -632,7 +632,7 @@ window.units = [
     [ "Kaku Rokushiki, Cipher Pol No.9", "QCK", "Slasher", 4, 20, 99, 1144, 577, 93, 2523, 1000, 196, 4, 0 ],
     [ "Rob Lucci, Cipher Pol No.9", "STR", "Fighter", 3, 12, 50, 121, 153, 20, 1121, 792, 64, 4, 1 ],
     [ "Rob Lucci Rokushiki, Cipher Pol No.9", "STR", "Fighter", 4, 20, 99, 1064, 743, 51, 2284, 1289, 134, 6, 0 ],
-	[ "Keimi", "QCK", "Fighter", 3, 12, 50, 90, 23, 62, 960, 352, 273, 4, 0.7 ], // TODO atk has 1 growth
+	[ "Keimi", "QCK", "Fighter", 3, 12, 50, 90, 23, 62, 960, 352, 273, 4, [ 0.7, 1, 0.7 ] ],
 	[ "Keimi, Takoyaki Stand Assistant", "QCK", "Fighter", 4, 18, 99, 900, 295, 231, 1731, 698, 455, 5, 0 ], 
 	[ "Pappug", "INT", "Fighter", 3, 12, 50, 77, 30, 77, 895, 505, 214, 5, 0.7 ], 
 	[ "Hatchan, Takoyaki Stand Owner", "PSY", "Slasher", 3, 16, 99, 134, 88, 41, 1788, 888, 187, 6, 0.7 ]
