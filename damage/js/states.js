@@ -79,8 +79,7 @@ angular.module('optc').config(function($stateProvider, $urlRouterProvider) {
                 popup: {
                     templateUrl: 'views/popup/gather.html',
                     controller: function($scope) {
-                        $scope.units = window.units;
-                        $scope.unknownGrowth = function(v,i,a) { return v.growth === 0; };
+                        $scope.units = window.units.filter(function(x) { return x.growth && x.growth.atk === 0; });
                     }
                 }
             }

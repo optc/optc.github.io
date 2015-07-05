@@ -363,5 +363,17 @@ window.specials = {
     },
     636: { // v2 Hatchan
         // TODO boost atk by 1.3 if the enemy has a defense buff
+    },
+    642: { // Squard
+        orb: function(p) { return p.orb == 2.0 ? 1.75 : (p.orb == 0.5 ? 4/7 : 1); },
+    },
+    643: { // Squard evolved
+        orb: function(p) { return p.orb == 2.0 ? 1.75 : (p.orb == 0.5 ? 4/7 : 1); },
+    },
+    644: { // Whitey Bay
+        // TODO boost atk by 1.2 if the enemy is delayed
+    },
+    645: { // Whitey Bay evolved
+        // TODO boost atk by 1.2 if the enemy is delayed
     }
 };

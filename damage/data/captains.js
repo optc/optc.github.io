@@ -1030,5 +1030,41 @@ window.captains = {
     },
     637: { // v2 Hatchan
         atk: function(p) { return p.unit.class == "Slasher" ? 1.5 : 1; }
+    },
+    638: { // Doma
+        atk: function(p) { return p.unit.class == "Slasher" ? 2 : 1; }
+    },
+    639: { // Doma evolved
+        atk: function(p) { return p.unit.class == "Slasher" ? 2 : 1; }
+    },
+    640: { // Decalvan Brothers
+        atk: function(p) { return p.unit.class == "Fighter" ? 2 : 1; }
+    },
+    641: { // Decalvan Brothers evolved
+        atk: function(p) { return p.unit.class == "Fighter" ? 2.25 : 1; }
+    },
+    642: { // Squard
+        atk: function(p) { return p.unit.type == "PSY" && p.percHP <= 30.0 ? 2.5 : 1; } // TODO Double check the HP
+    },
+    643: { // Squard evolved
+        atk: function(p) { return p.unit.type == "PSY" && p.percHP <= 30.0 ? 3 : 1; } // TODO Double check the HP
+    },
+    644: { // Whitey Bay
+        atk: function(p) { return p.unit.type == "INT" ? 2 : 1; }
+    },
+    645: { // Whitey Bay evolved
+        atk: function(p) { return p.unit.type == "INT" ? 2.5 : 1; }
+    },
+    646: { // Little Oars Jr.
+        atk: function(p) { return p.unit.class == "Shooter" && p.percHP <= 30.0 ? 2.5 : 1; } // TODO Double check the HP
+    },
+    647: { // Little Oars Jr. evolved
+        atk: function(p) { return p.unit.class == "Shooter" && p.percHP <= 30.0 ? 2.75 : 1; } // TODO Double check the HP
+    },
+    648: { // v2 Marco
+        atk: function(p) { return (p.unit.type == "QCK" || p.unit.type == "PSY") && p.percHP >= 70.0 ? 2.75 : 1; } // TODO Double check the HP
+    },
+    649: { // v2 Marco evolved
+        atk: function(p) { return (p.unit.type == "QCK" || p.unit.type == "PSY") && p.percHP >= 70.0 ? 2.75 : 1; } // TODO Double check the HP
     }
 };
