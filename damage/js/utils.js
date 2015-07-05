@@ -12,7 +12,7 @@ var getThumbnailUrl = function(n) {
 };
 
 var getTitle = function(arg) {
-    if (!arg) return null;
+    if (arg === null || arg === undefined) return null;
     if (arg.constructor == Object) {
         return [ arg.name,
             'HP: ' + arg.hp,

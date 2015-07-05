@@ -24,7 +24,7 @@ directives.decorateSlot = function() {
         link: function(scope, element, attrs) {
             var update = function() { 
                 var target = element[0];
-                if (!scope.uid && !scope.udata) {
+                if (scope.uid === undefined && scope.udata === undefined) {
                     target.style.backgroundImage = null;
                     target.removeAttribute('title');
                 } else {
