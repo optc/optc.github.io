@@ -17,6 +17,7 @@
                                 <th>Ship</th>
                                 <th>HP bonus</th>
                                 <th>ATK bonus</th>
+                                <th>RCV bonus</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -25,6 +26,7 @@
                                 <td>{{name}}</td>
                                 <td>{{ship.hp || ship.hpStatic ? 'Yes' : 'No'}}</td>
                                 <td>{{ship.atk || ship.atkStatic ? 'Yes' : 'No'}}</td>
+                                <td>{{ship.rcv || ship.rcvStatic ? 'Yes' : 'No'}}</td>
                             </tr>
                         </tbody>
                     </table> 

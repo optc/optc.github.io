@@ -118,6 +118,12 @@ window.specials = {
         atk: function(p) { return p.unit.class == "Slasher" ? 1.25 : 1; },
         type: 'class'
     },
+    404: { // Absalom
+        rcv: function(p) { return 2; }
+    },
+    405: { // Absalom evolved
+        rcv: function(p) { return 2; }
+    },
     406: { // Shougun Zombie
         atk: function(p) { return 1.2; },
         type: 'all'
@@ -187,6 +193,12 @@ window.specials = {
     },
     465: { // Gedatsu
         orb: function(p) { return p.orb == 2.0 ? 1.25 : (p.orb == 0.5 ? 4/5 : 1); }
+    },
+    468: { // Fodder
+        rcv: function(p) { return 1.5; }
+    },
+    470: { // Fodder
+        rcv: function(p) { return 1.5; }
     },
     487: { // Fodder
         atk: function(p) { return p.unit.type == "STR" ? 1.2 : 1; },
@@ -265,6 +277,9 @@ window.specials = {
     534: { // Sakura Brook evolved
         orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); }
     },
+    542: { // Hugeass snake
+        rcv: function(p) { return 2; }
+    },
     545: { // Enel
         atk: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; },
         type: 'type'
@@ -307,6 +322,9 @@ window.specials = {
         atk: function(p) { return p.unit.class == "Striker" ? 1.75 : 1; },
         type: 'class'
     },
+    576: { // Tea Time Nami
+        rcv: function(p) { return 1.5; }
+    },
     582: { // Kamakiri
         atk: function(p) { return p.unit.type == "QCK" ? 1.5 : 1; },
         type: 'type'
@@ -346,6 +364,9 @@ window.specials = {
     },
     617: { // Fodder
         atk: function(p) { return p.unit.class == "Shooter" ? 1.2 : 1; }
+    },
+    622: { // Fodder
+        rcvStatic: function(p) { return 100; }
     },
     632: { // WS Lucci
         def: function(p) { return 0.5; }

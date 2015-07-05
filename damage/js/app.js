@@ -21,6 +21,8 @@ var SharedRootCtrl = function($scope) {
         
         hp: { current: 1, max: 1, perc: 100 },
 
+        rcv: 0,
+
         ship: {
             name: 'Merry Go',
             level: 5

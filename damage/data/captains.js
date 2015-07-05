@@ -57,6 +57,24 @@ window.captains = {
         atk: function(p) { return p.unit.type == "QCK" ? 1.5 : 1; },
         hp: function(p) { return p.unit.type == "QCK" ? 1.5 : 1; }
     },
+    21: { // Chopper
+        rcv: function(p) { return p.unit.type == "PSY" ? 1.2 : 1; }
+    },
+    22: { // Chopper Heavy Point
+        rcv: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; }
+    },
+    23: { // Chopper Brain Point
+        rcv: function(p) { return p.unit.type == "INT" ? 1.5 : 1; }
+    },
+    24: { // Chopper Arm Point
+        rcv: function(p) { return p.unit.type == "STR" ? 1.5 : 1; }
+    },
+    25: { // Chopper Horn Point
+        rcv: function(p) { return p.unit.type == "QCK" ? 1.5 : 1; }
+    },
+    26: { // Chopper Guard Point
+        rcv: function(p) { return p.unit.type == "DEX" ? 1.5 : 1; }
+    },
     27: { // Higuma
         hp: function(p) { return p.unit.type == "QCK" ? 1.2 : 1; }
     },
@@ -77,6 +95,9 @@ window.captains = {
     },
     39: { // Buggy the Clown
         atk: function(p) { return p.unit.type == "INT" ? 2 : 1; }
+    },
+    41: { // Siam
+        rcv: function(p) { return p.unit.type == "INT" ? 1.2 : 1; }  
     },
     42: { // Siam
         atk: function(p) { return p.unit.type == "STR" ? 1.2 : 1; }
@@ -111,6 +132,12 @@ window.captains = {
     66: { // Enraged Arlong Shark On Tooth
         atk: function(p) { return p.unit.class == "Slasher" ? 2 : 1; }
     },
+    67: { // Tashigi
+        rcv: function(p) { return p.unit.class == "Slasher" ? 1.5 : 1; }  
+    },
+    68: { // Tashigi evolved
+        rcv: function(p) { return p.unit.class == "Slasher" ? 2 : 1; }  
+    },
     74: { // Portgas D. Ace
         atk: function(p) { return p.unit.type == "QCK" ? 2 : 1; }
     },
@@ -122,6 +149,18 @@ window.captains = {
     },
     77: { // Red-Haired Shanks
         atk: function(p) { return p.unit.type == "PSY" ? 2.5 : 1; }
+    },
+    194: { // Fodder
+        atk: function(p) { return p.unit.type == "STR" ? 1.5 : 1; }
+    },
+    195: { // Fodder
+        rcv: function(p) { return p.unit.type == "DEX" ? 1.5 : 1; }
+    },
+    196: { // Fodder
+        atk: function(p) { return p.unit.type == "QCK" ? 1.5 : 1; }
+    },
+    198: { // Fodder
+        atk: function(p) { return p.unit.class == "Shooter" ? 1.5 : 1; }
     },
     199: { // Mr. 5 Nez-Palm Cannon
         atk: function(p) { return p.unit.type == "STR" ? 1.5 : 1; }
@@ -136,10 +175,18 @@ window.captains = {
         hp: function(p) { return p.unit.class == "Fighter" ? 2 : 1; }
     },
     205: { // Miss Goldenweek
-        hp: function(p) { return p.unit.type == "DEX" ? 1.2 : 1; }
+        hp: function(p) { return p.unit.type == "DEX" ? 1.2 : 1; },
+        rcv: function(p) { return p.unit.type == "DEX" ? 1.2 : 1; }
     },
     206: { // Miss Goldenweek Colors Trap: Calming Green
-        hp: function(p) { return p.unit.type == "DEX" ? 1.2 : 1; }
+        hp: function(p) { return p.unit.type == "DEX" ? 1.2 : 1; },
+        rcv: function(p) { return p.unit.type == "DEX" ? 1.2 : 1; }
+    },
+    209: { // Nico Robin
+        rcv: function(p) { return p.unit.type == "INT" ? 1.5 : 1; }  
+    },
+    210: { // Nico Robin evolved
+        rcv: function(p) { return p.unit.type == "INT" ? 2 : 1; }  
     },
     211: { // Mr. 9
         atk: function(p) { return p.unit.class == "Striker" ? 1.2 : 1; }
@@ -241,16 +288,20 @@ window.captains = {
         atk: function(p) { return p.unit.type == "INT" ? 2 : 1; }
     },
     256: { // Izo
-        atk: function(p) { return p.unit.type == "DEX" ? 2 : 1; }
+        atk: function(p) { return p.unit.type == "DEX" ? 2 : 1; },
+        rcv: function(p) { return p.unit.type == "DEX" ? 2 : 1; }
     },
     257: { // Flintlock Pistols Izo
-        atk: function(p) { return p.unit.type == "DEX" ? 2 : 1; }
+        atk: function(p) { return p.unit.type == "DEX" ? 2 : 1; },
+        rcv: function(p) { return p.unit.type == "DEX" ? 2 : 1; }
     },
     258: { // Blamenco
-        atk: function(p) { return p.unit.type == "STR" ? 2 : 1; }
+        atk: function(p) { return p.unit.type == "STR" ? 2 : 1; },
+        hp: function(p) { return p.unit.type == "STR" ? 2 : 1; }
     },
     259: { // Blamenco the Mallet
-        atk: function(p) { return p.unit.type == "STR" ? 2 : 1; }
+        atk: function(p) { return p.unit.type == "STR" ? 2 : 1; },
+        hp: function(p) { return p.unit.type == "STR" ? 2 : 1; }
     },
     260: { // Edward Newgate
         atk: function(p) { return p.percHP <= 30.0 ? 3 : 1; }
@@ -263,6 +314,11 @@ window.captains = {
     },
     265: { // Sergeant Helmeppo
         atk: function(p) { return p.unit.type == "INT" ? 1.5 : 1; }
+    },
+    267: { // Rainbow dragon
+        atk: function(p) { return 1.5; },
+        hp: function(p) { return 1.5; },
+        rcv: function(p) { return 1.5; }
     },
     290: { // Mr. 13 & Miss Friday - Friday the Thirteenth (The Unluckies)
         atk: function(p) { return p.unit.class == "Shooter" ? 1.5 : 1; }
@@ -324,11 +380,13 @@ window.captains = {
     },
     315: { // Bepo
         atk: function(p) { return p.unit.class == "Fighter" ? 1.5 : 1; },
-        hp: function(p) { return p.unit.class == "Fighter" ? 1.5 : 1; }
+        hp: function(p) { return p.unit.class == "Fighter" ? 1.5 : 1; },
+        rcv: function(p) { return p.unit.class == "Fighter" ? 1.5 : 1; }
     },
     316: { // Martial Artist Bepo
         atk: function(p) { return p.unit.class == "Fighter" ? 1.5 : 1; },
-        hp: function(p) { return p.unit.class == "Fighter" ? 1.5 : 1; }
+        hp: function(p) { return p.unit.class == "Fighter" ? 1.5 : 1; },
+        rcv: function(p) { return p.unit.class == "Fighter" ? 1.5 : 1; }
     },
     319: { // Paulie
         atk: function(p) { return p.unit.class == "Striker" ? 1.5 : 1; }
@@ -343,23 +401,33 @@ window.captains = {
         atk: function(p) { return p.unit.type == "QCK" ? 2 : 1; }
     },
     323: { // Kaku
-        atk: function(p) { return p.unit.type == "QCK" ? 1.5 : 1; }
+        atk: function(p) { return p.unit.type == "QCK" ? 1.5 : 1; },
+        rcv: function(p) { return p.unit.type == "QCK" ? 1.5 : 1; }
     },
     324: { // Kaku evolved
-        atk: function(p) { return p.unit.type == "QCK" ? 1.5 : 1; }
+        atk: function(p) { return p.unit.type == "QCK" ? 1.5 : 1; },
+        rcv: function(p) { return p.unit.type == "QCK" ? 1.5 : 1; }
+    },
+    328: { // Dalton
+        rcv: function(p) { return p.percHP <= 30.0 ? 5 : 1; }  
+    },
+    329: { // Dalton evolved
+        rcv: function(p) { return p.percHP <= 30.0 ? 5 : 1; }  
     },
     332: { // Chessmarino
         atk: function(p) { return p.unit.class == "Striker" ? 1.2 : 1; },
-        hp: function(p) { return p.unit.class == "Striker" ? 1.2 : 1; }
+        hp: function(p) { return p.unit.class == "Striker" ? 1.2 : 1; },
+        rcv: function(p) { return p.unit.class == "Striker" ? 1.2 : 1; }
     },
     333: { // Dr.Kureha
-        atk: function(p) { return p.unit.type == "INT" || p.unit.type == "PSY" ? 1.5 : 1; }
+        atk: function(p) { return p.unit.type == "INT" || p.unit.type == "PSY" ? 1.5 : 1; },
+        rcv: function(p) { return p.unit.type == "INT" || p.unit.type == "PSY" ? 1.5 : 1; }
     },
     336: { // Franky
-        atk: function(p) { return p.unit.type == "PSY" && p.percHP >= 50.0 ? 2.5 : 1; }
+        atk: function(p) { return p.percHP < 50.0 ? 1 : (p.unit.type == "PSY" ? 2 : 0.8); }
     },
     337: { // Wrecking Yard Franky
-        atk: function(p) { return p.unit.type == "PSY" && p.percHP >= 50.0 ? 2.5 : 1; }
+        atk: function(p) { return p.percHP < 50.0 ? 1 : (p.unit.type == "PSY" ? 2.5 : 0.8); }
     },
     340: { // Kraken Surume
         atk: function(p) { return p.unit.class == "Striker" ? 2 : 1; }
@@ -392,16 +460,20 @@ window.captains = {
         atk: function(p) { return p.unit.type == "INT" && p.percHP <= 30.0 ? 3 : 1; }
     },
     362: { // Bonnie
-        atk: function(p) { return p.unit.type == "PSY" ? 2 : 1; }
+        atk: function(p) { return p.unit.type == "PSY" ? 2 : 1; },
+        rcv: function(p) { return p.unit.type == "PSY" ? 2 : 1; }
     },
     363: { // Bonnie evolved
-        atk: function(p) { return p.unit.type == "PSY" ? 2 : 1; }
+        atk: function(p) { return p.unit.type == "PSY" ? 2 : 1; },
+        rcv: function(p) { return p.unit.type == "PSY" ? 2 : 1; }
     },
     364: { // Capone Bege
-        atk: function(p) { return p.unit.type == "QCK" ? 2 : 1; }
+        atk: function(p) { return p.unit.type == "QCK" ? 2 : 1; },
+        rcv: function(p) { return p.unit.type == "QCK" ? 2 : 1; }
     },
     365: { // Capone Gang Bege
-        atk: function(p) { return p.unit.type == "QCK" ? 2 : 1; }
+        atk: function(p) { return p.unit.type == "QCK" ? 2 : 1; },
+        rcv: function(p) { return p.unit.type == "QCK" ? 2 : 1; }
     },
     366: { // Rayleigh
         chainModifier: function(p) { return 4; }
@@ -424,8 +496,12 @@ window.captains = {
     377: { // Fodder
         atk: function(p) { return p.unit.class == "Striker" ? 1.5 : 1; }
     },
-    381: { // Kung-fu Dugong Fellow Pupils
-        atk: function(p) { return p.unit.type == "STR" ? 1.5 : 1; }
+    378: { // Umineko
+        rcv: function(p) { return 1.5; }
+    },
+    380: { // Kung-fu Dugong Fellow Pupils
+        atk: function(p) { return p.unit.type == "STR" ? 1.5 : 1; },
+        rcv: function(p) { return p.unit.type == "STR" ? 1.5 : 1; }
     },
     383: { // Mr.0 - Baroque Works Leader
         atk: function(p) { return p.unit.type == "INT" ? 2 : 1; }
@@ -433,8 +509,17 @@ window.captains = {
     384: { // Sir Crocodile
         atk: function(p) { return p.unit.type == "INT" ? 2 : 1; }
     },
-    386: { // Doctor Hogback
+    385: { // Hogback
         atk: function(p) { return p.unit.type == "INT" ? 2 : 1; }
+    },
+    386: { // Hogback evolved
+        atk: function(p) { return p.unit.type == "INT" ? 2 : 1; }
+    },
+    387: { // Cindry
+        rcv: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; }
+    },
+    388: { // Cindry evolved
+        rcv: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; }
     },
     389: { // Emporio Ivankov
         damageSorter: function(d) {
@@ -462,11 +547,19 @@ window.captains = {
         },
         hitModifiers: [ 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect' ] // don't remove this
     },
+    391: { // Perona
+        rcv: function(p) { return p.unit.type == "DEX" ? 1.5 : 1; }
+    },
+    392: { // Perona evolved
+        rcv: function(p) { return p.unit.type == "DEX" ? 2 : 1; }
+    },
     395: { // Miss Merry Christmas
-        atk: function(p) { return p.unit.type == "QCK" ? 1.2 : 1; }
+        atk: function(p) { return p.unit.type == "QCK" ? 1.2 : 1; },
+        rcv: function(p) { return p.unit.type == "QCK" ? 1.2 : 1; }
     },
     396: { // Miss Merry Christmas evolved
-        atk: function(p) { return p.unit.type == "QCK" ? 1.5 : 1; }
+        atk: function(p) { return p.unit.type == "QCK" ? 1.5 : 1; },
+        rcv: function(p) { return p.unit.type == "QCK" ? 1.5 : 1; }
     },
     397: { // Mr.4
         hitAtk: function(p) {
@@ -493,6 +586,9 @@ window.captains = {
     },
     402: { // Mr.1 evolved
         atk: function(p) { return p.unit.class == "Slasher" ? 2 : 0.9; }
+    },
+    403: { // Rebecca
+        rcv: function(p) { return p.percHP <= 30.0 ? 3 : 1; } // TODO Double check the HP
     },
     404: { // Absalom
         atk: function(p) { return p.unit.class == "Shooter" ? 1.5 : 1; }
@@ -524,10 +620,12 @@ window.captains = {
         atk: function(p) { return p.unit.type == "INT" && p.percHP == 100.0 ? 3 : 1; }
     },
     415: { // Boa Hancock
-        atk: function(p) { return (p.unit.type == "QCK" || p.unit.type == "PSY") && p.percHP >= 70.0 ? 2.75 : 1; }
+        atk: function(p) { return (p.unit.type == "QCK" || p.unit.type == "PSY") && p.percHP >= 70.0 ? 2.75 : 1; },
+        rcv: function(p) { return (p.unit.type == "QCK" || p.unit.type == "PSY") && p.percHP >= 70.0 ? 1.5 : 1; }
     },
     416: { // Boa Hancock evolved
-        atk: function(p) { return (p.unit.type == "QCK" || p.unit.type == "PSY") && p.percHP >= 70.0 ? 2.75 : 1; }
+        atk: function(p) { return (p.unit.type == "QCK" || p.unit.type == "PSY") && p.percHP >= 70.0 ? 2.75 : 1; },
+        rcv: function(p) { return (p.unit.type == "QCK" || p.unit.type == "PSY") && p.percHP >= 70.0 ? 1.5 : 1; }
     },
     417: { // Doflamingo
         atk: function(p) { return p.unit.class == "Slasher" ? 2 : 1; }
@@ -541,15 +639,18 @@ window.captains = {
     },
     420: { // Luffy Kimono
         atk: function(p) { return p.unit.type == "STR" ? 1.5 : 1; },
-        hp: function(p) { return p.unit.type == "STR" ? 1.5 : 1; }
+        hp: function(p) { return p.unit.type == "STR" ? 1.5 : 1; },
+        rcv: function(p) { return p.unit.type == "STR" ? 1.5 : 1; }
     },
     421: { // Zoro Kimono
         atk: function(p) { return p.unit.type == "DEX" ? 1.5 : 1; },
-        hp: function(p) { return p.unit.type == "DEX" ? 1.5 : 1; }
+        hp: function(p) { return p.unit.type == "DEX" ? 1.5 : 1; },
+        rcv: function(p) { return p.unit.type == "DEX" ? 1.5 : 1; }
     },
     422: { // Nami Kimono
         atk: function(p) { return p.unit.type == "INT" ? 1.5 : 1; },
-        hp: function(p) { return p.unit.type == "INT" ? 1.5 : 1; }
+        hp: function(p) { return p.unit.type == "INT" ? 1.5 : 1; },
+        rcv: function(p) { return p.unit.type == "INT" ? 1.5 : 1; }
     },
     424: { // Brook evolved
         atk: function(p) { return p.unit.type == "QCK" ? 1.5 : 1; }
@@ -613,6 +714,18 @@ window.captains = {
         },
         hitModifiers: [ 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect' ] // don't remove this
     },
+    437: { // v2 Perona
+        rcv: function(p) { return p.percHP <= 30.0 ? 3 : 1; } // TODO Double check the HP
+    },
+    438: { // v2 Perona evolved
+        rcv: function(p) { return p.percHP <= 30.0 ? 5 : 1; } // TODO Double check the HP
+    },
+    444: { // Carue
+        atk: function(p) { return p.percHP <= 30.0 && p.unit.class == "PowerUp" ? 2 : 1; } // TODO Double check the HP
+    },
+    445: { // Duck squad
+        atk: function(p) { return p.percHP <= 30.0 && p.unit.class == "PowerUp" ? 2.5 : 1; } // TODO Double check the HP
+    },
     446: { // Marshall D. Teach
         atk: function(p) { return p.unit.type == "STR" ? 2 : 1; },
         hp: function(p) { return p.unit.type == "STR" ? 1.5 : 1; }
@@ -648,10 +761,12 @@ window.captains = {
         atk: function(p) { return p.unit.type == "STR" ? 2 : 1; }
     },
     456: { // Curiel
-        atk: function(p) { return p.unit.class == "Shooter" ? 2 : 1; }
+        atk: function(p) { return p.unit.class == "Shooter" ? 2 : 1; },
+        rcv: function(p) { return p.unit.class == "Shooter" ? 1.5 : 1; }
     },
     457: { // Curiel evolved
-        atk: function(p) { return p.unit.class == "Shooter" ? 2 : 1; }
+        atk: function(p) { return p.unit.class == "Shooter" ? 2 : 1; },
+        rcv: function(p) { return p.unit.class == "Shooter" ? 1.5 : 1; }
     },
     458: { // Sengoku
         atk: function(p) { return p.unit.cost <= 20 ? 3 : 1; }
@@ -686,6 +801,9 @@ window.captains = {
         atk: function(p) { return p.unit.type == "STR" ? 1.5 : 1; },
         hp: function(p) { return p.unit.type == "STR" ? 1.5 : 1; }
     },
+    470: { // Fodder
+        rcv: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; }
+    },
     471: { // Fodder
         atk: function(p) { return p.unit.type == "INT" ? 1.2: 1; },
         hp: function(p) { return p.unit.type == "INT" ? 1.2 : 1; }
@@ -694,10 +812,12 @@ window.captains = {
         hp: function(p) { return p.unit.class == "Striker" ? 1.2 : 1; }
     },
     483: { // Fodder
-        atk: function(p) { return p.unit.type == "QCK" ? 1.2 : 1; }
+        atk: function(p) { return p.unit.type == "QCK" ? 1.2 : 1; },
+        rcv: function(p) { return p.unit.type == "QCK" ? 1.2 : 1; }
     },
     485: { // Fodder
-        hp: function(p) { return p.unit.type == "PSY" ? 1.2 : 1; }
+        hp: function(p) { return p.unit.type == "PSY" ? 1.2 : 1; },
+        rcv: function(p) { return p.unit.type == "PSY" ? 1.2 : 1; }
     },
     486: { // Fodder
         atk: function(p) { return p.unit.class == "Striker" ? 1.2 : 1; }
@@ -705,6 +825,9 @@ window.captains = {
     490: { // Fodder
         atk: function(p) { return p.unit.class == "Striker" ? 1.2 : 1; },
         hp: function(p) { return p.unit.class == "Striker" ? 1.2 : 1; }
+    },
+    491: { // Fodder
+        rcv: function(p) { return p.unit.class == "Striker" ? 1.5 : 1; },
     },
     492: { // Fodder
         atk: function(p) { return p.unit.type == "DEX" ? 1.5 : 1; }
@@ -719,13 +842,21 @@ window.captains = {
         atk: function(p) { return p.unit.type == "QCK" ? 1.5 : 1; },
         hp: function(p) { return p.unit.type == "QCK" ? 1.5 : 1; }
     },
+    499: { // Bellmere
+        rcv: function(p) { return p.unit.class == "Shooter" ? 1.5 : 1; }
+    },
+    500: { // Bellmere evolved
+        rcv: function(p) { return p.unit.class == "Shooter" ? 2 : 1; }
+    },
     501: { // Kaya
         atk: function(p) { return p.unit.type == "PSY" ? 1.2 : 1; },
-        hp: function(p) { return p.unit.type == "PSY" ? 1.2 : 1; }
+        hp: function(p) { return p.unit.type == "PSY" ? 1.2 : 1; },
+        rcv: function(p) { return p.unit.type == "PSY" ? 1.2 : 1; }
     },
     502: { // Kaya evolved
         atk: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; },
-        hp: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; }
+        hp: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; },
+        rcv: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; }
     },
     503: { // Hotori Kotori
         hp: function(p) { return p.unit.type == "INT" ? 1.5 : 1; }
@@ -758,11 +889,13 @@ window.captains = {
     },
     515: { // Heracles
         atk: function(p) { return p.unit.class == "Shooter" ? 1.5 : 1; },
-        hp: function(p) { return p.unit.class == "Shooter" ? 1.5 : 1; }
+        hp: function(p) { return p.unit.class == "Shooter" ? 1.5 : 1; },
+        rcv: function(p) { return p.unit.class == "Shooter" ? 1.5 : 1; }
     },
     516: { // Heracles evolved
         atk: function(p) { return p.unit.class == "Shooter" ? 1.5 : 1; },
-        hp: function(p) { return p.unit.class == "Shooter" ? 1.5 : 1; }
+        hp: function(p) { return p.unit.class == "Shooter" ? 1.5 : 1; },
+        rcv: function(p) { return p.unit.class == "Shooter" ? 1.5 : 1; }
     },
     517: { // Usoppun
         hp: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; },
@@ -778,21 +911,25 @@ window.captains = {
     },
     523: { // Butt Nami
         atk: function(p) { return p.unit.class == "Striker" ? 1.5 : 1; },
+        rcv: function(p) { return p.unit.class == "Striker" ? 1.5 : 1; }
     },
     524: { // Butt Nami evolved
         atk: function(p) { return p.unit.class == "Striker" ? 2 : 1; },
+        rcv: function(p) { return p.unit.class == "Striker" ? 1.5 : 1; }
     },
     525: { // SW Brook
-        atk: function(p) { return p.unit.type == "PSY" ? 2 : 1; },
+        atk: function(p) { return p.unit.type == "PSY" ? 2 : 1; }
     },
     526: { // SW Brook evolved
-        atk: function(p) { return p.unit.type == "PSY" ? 2 : 1; },
+        atk: function(p) { return p.unit.type == "PSY" ? 2 : 1; }
     },
     527: { // SW Chopper
         atk: function(p) { return p.unit.type == "DEX" ? 1.5 : 1; },
+        rcv: function(p) { return p.unit.type == "DEX" ? 1.5 : 1; }
     },
     528: { // SW Chopper evolved
         atk: function(p) { return p.unit.type == "DEX" ? 2 : 1; },
+        rcv: function(p) { return p.unit.type == "DEX" ? 2 : 1; }
     },
     529: { // SW Shanks
         atk: function(p) {
@@ -818,6 +955,12 @@ window.captains = {
     534: { // Sakura Brook evolved
         atk: function(p) { return p.unit.type == "QCK" ? 2 : 1; }
     },
+    535: { // Sakura Nami
+        atk: function(p) { return p.unit.type == "DEX" ? 1.5 : 1; }
+    },
+    536: { // Sakura Nami evolved
+        atk: function(p) { return p.unit.type == "DEX" ? 2 : 1; }
+    },
     537: { // Domino
         chainModifier: function(p) { return 2; }
     },
@@ -832,11 +975,13 @@ window.captains = {
     },
     543: { // Wiper
         atk: function(p) { return p.unit.class == "Shooter" ? 1.5 : 1; },
-        hp: function(p) { return p.unit.class == "Shooter" ? 1.5 : 1; }
+        hp: function(p) { return p.unit.class == "Shooter" ? 1.5 : 1; },
+        rcv: function(p) { return 0; }
     },
     544: { // Wiper evolved
         atk: function(p) { return p.unit.class == "Shooter" ? 2.25 : 1; },
-        hp: function(p) { return p.unit.class == "Shooter" ? 1.5 : 1; }
+        hp: function(p) { return p.unit.class == "Shooter" ? 1.5 : 1; },
+        rcv: function(p) { return 0; }
     },
     545: { // Enel
         atk: function(p) { return p.unit.type == "PSY" ? 2 : 1; }
@@ -869,13 +1014,16 @@ window.captains = {
         atk: function(p) { return p.unit.class == "Shooter" ? 2 : 1; }
     },
     556: { // SW Usopp evolved
-        atk: function(p) { return p.unit.class == "Shooter" ? 2 : 1; }
+        atk: function(p) { return p.unit.class == "Shooter" ? 2 : 1; },
+        rcv: function(p) { return p.unit.class == "Shooter" ? 1.5 : 1; }
     },
     557: { // SW Robin
-        atk: function(p) { return p.unit.type == "INT" ? 1.5 : 1; }
+        atk: function(p) { return p.unit.type == "INT" ? 1.5 : 1; },
+        rcv: function(p) { return p.unit.type == "INT" ? 1.5 : 1; }
     },
     558: { // SW Robin evolved
-        atk: function(p) { return p.unit.type == "INT" ? 2 : 1; }
+        atk: function(p) { return p.unit.type == "INT" ? 2 : 1; },
+        rcv: function(p) { return p.unit.type == "INT" ? 2 : 1; }
     },
     559: { // SW Franky
         atk: function(p) { return p.unit.type == "STR" ? 2 : 1; }
@@ -893,11 +1041,13 @@ window.captains = {
     },
     568: { // Foxy
         atk: function(p) { return 1.25; },
-        hp: function(p) { return 1.25; }
+        hp: function(p) { return 1.25; },
+        rcv: function(p) { return 1.25; }
     },
     569: { // Foxy evolved
         atk: function(p) { return 1.5; },
-        hp: function(p) { return 1.5; }
+        hp: function(p) { return 1.5; },
+        rcv: function(p) { return 1.5; }
     },
     570: { // Afro Luffy
         atk: function(p) {
@@ -916,6 +1066,9 @@ window.captains = {
     572: { // DBF Usopp
         atk: function(p) { return p.unit.class == "Fighter" && p.percHP == 100.0 ? 2.5 : 1; }
     },
+    573: { // DBF Chopper
+        rcv: function(p) { return 1.2; }
+    },
     574: { // Aokiji
         atk: function(p) { return p.unit.class == "Striker" ? 2 : 1; }
     },
@@ -924,7 +1077,8 @@ window.captains = {
         hp: function(p) { return p.unit.class == "Striker" ? 2 : 1; }
     },
     576: { // Tea Time Nami
-        atk: function(p) { return 1.5; }
+        atk: function(p) { return 1.5; },
+        rcv: function(p) { return 1.2; }
     },
     577: { // Record of Voyage Luffy
         hitAtk: function(p) {
@@ -952,18 +1106,28 @@ window.captains = {
         hp: function(p) { return p.unit.class == "Striker" ? 1.5 : 1; }
     },
     583: { // Laki
-        atk: function(p) { return p.unit.class == "Shooter" ? 1.5 : 1; }
+        atk: function(p) { return p.unit.class == "Shooter" ? 1.5 : 1; },
+        rcv: function(p) { return p.unit.class == "Shooter" ? 1.5 : 1; }
+    },
+    584: { // Aisa
+        // TODO Find parameters
+    },
+    585: { // Nojiko
+        rcv: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; }
     },
     586: { // Nojiko evolved
-        hp: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; }
+        hp: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; },
+        rcv: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; }
     },
     589: { // Kohza
         atk: function(p) { return 1.5; },
-        hp: function(p) { return 0.75; } // TODO needs checking
+        hp: function(p) { return 0.75; }, // TODO needs checking
+        rcv: function(p) { return 0.75; } // TODO needs checking
     },
     590: { // Kohza evolved
         atk: function(p) { return 1.5; },
-        hp: function(p) { return 0.75; } // TODO needs checking
+        hp: function(p) { return 0.75; }, // TODO needs checking
+        rcv: function(p) { return 0.75; } // TODO needs checking
     },
     596: { // Log Chopper
         atk: function(p) { return p.unit.type == "STR" ? 1.5 : 1; }
@@ -1020,10 +1184,12 @@ window.captains = {
         atk: function(p) { return p.unit.class == "Fighter" ? 2 : 1; }
     },
     634: { // Keimi
-        atk: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" ? 1.25 : 1; }
+        atk: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" ? 1.25 : 1; },
+        rcv: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" ? 1.25 : 1; }
     },
     635: { // Keimi evolved
-        atk: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" ? 1.5 : 1; }
+        atk: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" ? 1.5 : 1; },
+        rcv: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" ? 1.5 : 1; }
     },
     636: { // Pappug
         atk: function(p) { return p.unit.cost <= 2 ? 3 : 1; }

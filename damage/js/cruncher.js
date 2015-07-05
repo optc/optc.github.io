@@ -88,15 +88,22 @@ var CruncherCtrl = function($scope, $timeout) {
             result[type] = crunchForType(type);
         });
         result.team = getTeamDetails();
-        $scope.numbers = result;
-        var hpMax = 0;
+        var hpMax = 0, rcvTotal = 0;
         $scope.data.team.forEach(function(x,n) {
             if (x.unit === null) return;
+            // hp
             var hp = getStatOfUnit(x.unit,x.level,'hp');
             hp += getShipBonus('hp',true,x.unit,n);
             hp *= getShipBonus('hp',false,x.unit,n);
-            hpMax += applyCaptainEffectsToHP(x.unit,hp);
+            hpMax += applyCaptainEffectsToHP(n,hp);
+            // rcv
+            var rcv = getStatOfUnit(x.unit,x.level,'rcv');
+            rcv += getShipBonus('rcv',true,x.unit,n);
+            rcv *= getShipBonus('rcv',false,x.unit,n);
+            rcvTotal += applyCaptainEffectsAndSpecialsToRCV(n,rcv);
         });
+        result.rcv = Math.max(0,rcvTotal);
+        $scope.numbers = result;
         $scope.data.hp.max = Math.max(1,hpMax);
     };
 
@@ -286,12 +293,33 @@ var CruncherCtrl = function($scope, $timeout) {
         });
     };
 
-    var applyCaptainEffectsToHP = function(unit,hp) {
+    var applyCaptainEffectsToHP = function(slotNumber,hp) {
+        var params = getParameters(slotNumber);
         for (var i=0;i<enabledEffects.length;++i) {
             if (enabledEffects[i].hasOwnProperty('hp'))
-                hp *= enabledEffects[i].hp({ unit: unit });
+                hp *= enabledEffects[i].hp(params);
         }
         return hp;
+    };
+
+    var applyCaptainEffectsAndSpecialsToRCV = function(slotNumber,rcv) {
+        var params = getParameters(slotNumber);
+        for (var i=0;i<enabledEffects.length;++i) {
+            if (enabledEffects[i].hasOwnProperty('rcv'))
+                rcv *= enabledEffects[i].rcv(params);
+        }
+        // static rcv first
+        for (var j=0;j<enabledSpecials.length;++j) {
+            if (enabledSpecials[j].hasOwnProperty('rcvStatic'))
+                rcv += enabledSpecials[j].rcvStatic(params);
+        }
+        // maximum non-static rcv
+        var maximum = rcv;
+        for (var k=0;k<enabledSpecials.length;++k) {
+            if (enabledSpecials[k].hasOwnProperty('rcv'))
+                maximum = Math.max(maximum,rcv * enabledSpecials[k].rcv(params));
+        }
+        return maximum;
     };
 
     var applyChainAndBonusMultipliers = function(damage,modifiers) {

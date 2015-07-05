@@ -36,6 +36,10 @@ body, #main, #hp, #other {
     margin-top: 30px;
 }
 
+#hp {
+    flex-direction: column;
+}
+
 #specialWarning {
     width: 100%;
     position: fixed;
@@ -236,7 +240,7 @@ body, #main, #hp, #other {
  ********************/
 
 #hpSlider {
-    width: 450px;
+    width: 350px;
     height: 12px;
 }
 
