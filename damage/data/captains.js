@@ -1169,7 +1169,7 @@ window.captains = {
         atk: function(p) { return p.unit.cost <= 20 && p.percHP <= 50.0 ? 2.25 : 1; } // TODO Double check the HP
     },
     629: { // WS Franky
-        atk: function(p) { return p.unit.rarity <= 3 ? 2 : 1; }
+        atk: function(p) { return p.unit.stars <= 3 ? 2 : 1; }
     },
     630: { // WS Kaku
         atk: function(p) { return p.unit.class == "Slasher" ? 1.5 : 1; }
