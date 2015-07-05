@@ -563,6 +563,25 @@ li.locked > div {
     cursor: pointer;
 }
 
+.help {
+    cursor: help;
+}
+
+.popover-content {
+    color: black;
+    font-size: 90%;
+}
+
+.popover {
+    width: 400px;
+    max-width: 400px;
+}
+
+.popover ul {
+    padding-left: 15px;
+    margin-bottom: 0;
+}
+
 /********
  * SHIP *
  ********/

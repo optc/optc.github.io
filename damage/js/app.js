@@ -1,6 +1,6 @@
 (function() {
 
-var app = angular.module('optc', [ 'ui.router' ]);
+var app = angular.module('optc', [ 'ui.router', 'ui.bootstrap' ]);
 
 /******************
  * SharedRootCtrl *
