@@ -214,8 +214,10 @@ directives.hpBar = function() {
         rstrict: 'A',
         replace: true,
         template: '<div id="hp"><div id="hpSlider"></div>' + 
-            '<div id="hpLabel">{{ hp.current | number }} HP ({{ hp.perc || number }}%)</div>' +
-            '<div id="rcvLabel">{{ numbers.rcv | number }} RCV</div></div>',
+            '<div id="hp-rcv"><table><tbody>' +
+                '<tr><td>{{ hp.current | number }}</td><td>HP ({{ hp.perc || number }}%)</td></tr>' +
+                '<tr><td>{{ numbers.rcv | number }}</td><td>RCV</td></tr>' +
+            '</tbody></table></div>',
         link: function(scope, element, attrs) {
             scope.hp = { current: scope.data.hp.current, perc: scope.data.hp.perc };
             var slider = element.find('#hpSlider').noUiSlider({

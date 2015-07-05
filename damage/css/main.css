@@ -256,8 +256,25 @@ body, #main, #hp, #other {
     height: 10px !important;
 }
 
-#hpLabel {
+#hp-rcv {
+    width: 100%;
     margin-top: 10px;
+}
+
+#hp-rcv > table {
+    width: 100%;
+}
+
+#hp-rcv td:first-child {
+    text-align: right;
+    padding-right: 2px;
+    width: 50%;
+}
+
+#hp-rcv td:last-child {
+    text-align: left;
+    padding-left: 2px;
+    width: 50%;
 }
 
 .noUi-handle:after {
