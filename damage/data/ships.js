@@ -90,7 +90,7 @@ window.ships = {
     'Big Top': {
         thumb: null,
         atk: function(p) {
-            var matching = (p.boatLevel < 6 && p.unit.cost <= 15) || (p.boatLevel > 6 && p.unit.cost <= 20);
+            var matching = (p.boatLevel < 6 && p.unit.cost <= 15) || (p.boatLevel >= 6 && p.unit.cost <= 20);
             return !matching ? [ 1.1, 1.1, 1.2, 1.2, 1.2, 1.2, 1.3, 1.3, 1.4, 1.5 ][p.boatLevel - 1] : 1;
         },
         hp: function(p) {
