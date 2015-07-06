@@ -43,7 +43,9 @@ if (localStorage.getItem('version') != '3') {
             slots[slot].team[i].candies = slots[slot].team[i].candies || { hp: 0, atk: 0, rcv: 0 };
         }
     }
+
     localStorage.setItem('slots',JSON.stringify(slots));
+    localStorage.setItem('version',3);
 
 }
 
