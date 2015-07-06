@@ -36,6 +36,13 @@ if (!localStorage.hasOwnProperty('version') || localStorage.getItem('version') !
 
 if (localStorage.getItem('version') != '3') {
 
+    var data = JSON.parse(localStorage.getItem('data')) || { };
+    for (var i=0;i<6;++i) {
+        if (!data.team[i]) continue;
+        data.team[i].candies = data.team[i].candies || { hp: 0, atk: 0, rcv: 0 };
+    }
+    localStorage.setItem('data',JSON.stringify(data));
+
     var slots = JSON.parse(localStorage.getItem('slots')) || { };
     for (var slot in slots) {
         for (var i=0;i<6;++i) {
@@ -43,8 +50,8 @@ if (localStorage.getItem('version') != '3') {
             slots[slot].team[i].candies = slots[slot].team[i].candies || { hp: 0, atk: 0, rcv: 0 };
         }
     }
-
     localStorage.setItem('slots',JSON.stringify(slots));
+
     localStorage.setItem('version',3);
 
 }
