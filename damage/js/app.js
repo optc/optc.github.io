@@ -11,12 +11,12 @@ var SharedRootCtrl = function($scope) {
     $scope.data = {
 
         team: [
-            { unit: null, level: -1 },
-            { unit: null, level: -1 },
-            { unit: null, level: -1 },
-            { unit: null, level: -1 },
-            { unit: null, level: -1 },
-            { unit: null, level: -1 }
+            { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 } },
+            { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 } },
+            { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 } },
+            { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 } },
+            { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 } },
+            { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 } }
         ],
         
         hp: { current: 1, max: 1, perc: 100 },
@@ -31,7 +31,7 @@ var SharedRootCtrl = function($scope) {
         defense: 0,
 
     };
-
+    
     $scope.tdata = { // transitional data
 
         team: [
@@ -50,7 +50,8 @@ var SharedRootCtrl = function($scope) {
     $scope.numbers = { };
 
     $scope.resetSlot = function(n,onlyTransitional) {
-        if (!onlyTransitional) $scope.data.team[n] = { unit: null, level: -1 };
+        if (!onlyTransitional)
+            $scope.data.team[n] = { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 } };
         $scope.tdata.team[n] = { orb: 1, special: false, lock: 0, silence: 0 };
     };
 

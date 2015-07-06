@@ -83,6 +83,25 @@ angular.module('optc').config(function($stateProvider, $urlRouterProvider) {
                     }
                 }
             }
+        })
+
+        .state('main.candy',{
+            url: 'candies',
+            views: {
+                popup: {
+                    template: '<div class="backdrop middle-backdrop" ui-sref="main"></div>'
+                }
+            }
+        })
+
+        .state('main.candy.pick',{
+            views: {
+                'popup@main': {
+                    templateUrl: 'views/popup/candies.html',
+                    controller: 'CandyCtrl'
+                }
+            },
+            params: { slot: 0 }
         });
 
 });

@@ -92,12 +92,12 @@ var CruncherCtrl = function($scope, $timeout) {
         $scope.data.team.forEach(function(x,n) {
             if (x.unit === null) return;
             // hp
-            var hp = getStatOfUnit(x.unit,x.level,'hp');
+            var hp = getStatOfUnit(x,'hp');
             hp += getShipBonus('hp',true,x.unit,n);
             hp *= getShipBonus('hp',false,x.unit,n);
             hpMax += applyCaptainEffectsToHP(n,hp);
             // rcv
-            var rcv = getStatOfUnit(x.unit,x.level,'rcv');
+            var rcv = getStatOfUnit(x,'rcv');
             rcv += getShipBonus('rcv',true,x.unit,n);
             rcv *= getShipBonus('rcv',false,x.unit,n);
             rcvTotal += applyCaptainEffectsAndSpecialsToRCV(n,rcv);
@@ -140,7 +140,7 @@ var CruncherCtrl = function($scope, $timeout) {
         $scope.data.team.forEach(function(x,n) {
             if (x.unit === null || $scope.tdata.team[n].lock > 0) return;
             var orb = $scope.tdata.team[n].orb;
-            var atk = getStatOfUnit(x.unit,x.level,'atk'); // basic attack (scales with level);
+            var atk = getStatOfUnit(x,'atk'); // basic attack (scales with level);
             var ship = getShipBonus('atk',false,x.unit,n);
             atk += getShipBonus('atk',true,x.unit,n);
             atk *= orb; // orb multiplier (fixed)
@@ -189,11 +189,12 @@ var CruncherCtrl = function($scope, $timeout) {
 
     /* * * * * * Basic operations * * * * */
 
-    var getStatOfUnit = function(unit,level,stat) {
-        var maxLevel = (unit.maxLevel == 1 ? 1 : unit.maxLevel -1);
-        var growth = unit.growth[stat] || 1;
+    var getStatOfUnit = function(data,stat) {
+        var maxLevel = (data.unit.maxLevel == 1 ? 1 : data.unit.maxLevel -1);
+        var growth = data.unit.growth[stat] || 1;
         var minStat = 'min' + stat.toUpperCase(), maxStat = 'max' + stat.toUpperCase();
-        return Math.floor(unit[minStat] + (unit[maxStat] - unit[minStat]) * Math.pow((level-1) / maxLevel, growth));
+        var result = data.unit[minStat] + (data.unit[maxStat] - data.unit[minStat]) * Math.pow((data.level-1) / maxLevel, growth);
+        return Math.floor(result) + (data.candies && data.candies[stat] ? data.candies[stat] : 0);
     };
 
     /* The effective damage of a unit is affected by the hit modifier being used, by the defense threshold of the enemy
@@ -499,9 +500,9 @@ var CruncherCtrl = function($scope, $timeout) {
             if (x.unit === null) return null;
             return {
                 name: x.unit.name,
-                hp: getStatOfUnit(x.unit,x.level,'hp'),
-                atk: getStatOfUnit(x.unit,x.level,'atk'),
-                rcv: getStatOfUnit(x.unit,x.level,'rcv'),
+                hp: getStatOfUnit(x,'hp'),
+                atk: getStatOfUnit(x,'atk'),
+                rcv: getStatOfUnit(x,'rcv'),
                 cmb: x.unit.combo
             };
         });

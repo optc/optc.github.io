@@ -449,6 +449,42 @@ directives.special = function() {
     };
 };
 
+directives.candySlider = function() {
+    return {
+        restrict: 'E',
+        replace: true,
+        template: '<input disabled class="candySlider"></input>',
+        scope: { data: '=', type: '@' },
+        link: function(scope, element, attrs) {
+            var currentValue = scope.data[scope.type];
+            var update = function(value) {
+                if (value == currentValue) return;
+                currentValue = value;
+                scope.data[scope.type] = value;
+                scope.$apply();
+            };
+            var updateMax = function(data) {
+                var used = Object.keys(data).reduce(function(prev,next) { return prev + (next == scope.type ? 0 : data[next]) },0);
+                element.trigger('configure',{ max: Math.min(100,200 - used) });
+                element.val(currentValue).trigger('change');
+            };
+            var slider = element.knob({
+                width: 112,
+                height: 112,
+                min: 0,
+                max: 100,
+                //angleOffset: 200,
+                //angleArc: 320,
+                release: update,
+                fgColor: { hp: '#87ceeb', atk: '#ed7474', rcv: '#66ee66' }[scope.type]
+            });
+            element.val(currentValue).trigger('change');
+            element.parent().append($('<span class="candyLabel">' + scope.type.toUpperCase() + '</span>'));
+            scope.$watch('data',updateMax,true);
+        }
+    };
+};
+
 /****************************
  * Directive initialization *
  ****************************/

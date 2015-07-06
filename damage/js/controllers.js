@@ -42,7 +42,9 @@ controllers.PickerCtrl = function($scope, $state, $stateParams) {
     /* * * * * Scope functions * * * * */
 
     $scope.pickUnit = function(unitNumber) {
-        $scope.data.team[$stateParams.slot] = { unit: units[unitNumber], level: 1, orb: 1 };
+        $scope.resetSlot($stateParams.slot);
+        $scope.data.team[$stateParams.slot].unit = units[unitNumber];
+        $scope.data.team[$stateParams.slot].level = 1;
         $scope.resetSlot($stateParams.slot,true);
         updateRecent(unitNumber);
         $state.go('^');
@@ -137,7 +139,7 @@ controllers.SlotsCtrl = function($scope, $state, $stateParams) {
         if (e.which == 1 && !e.ctrlKey) {
             slot.team.map(function(x,n) {
                 $scope.resetSlot(n);
-                if (x !== null) $scope.data.team[n] = { unit: units[slot.team[n].unit], level: slot.team[n].level };
+                if (x !== null) $scope.data.team[n] = { unit: units[slot.team[n].unit], level: slot.team[n].level, candies: x.candies };
             });
             localStorage.setItem('lastSlotName',JSON.stringify(slot.name));
             $state.go('^');
@@ -151,7 +153,7 @@ controllers.SlotsCtrl = function($scope, $state, $stateParams) {
     $scope.saveTeam = function() {
         $scope.$broadcast('$validate');
         var team = $scope.data.team.map(function(x) {
-            return !x.unit ? null : { unit : x.unit.number, level: x.level };
+            return !x.unit ? null : { unit : x.unit.number, level: x.level, candies: x.candies };
         });
         slots[$scope.lastSlot.toLowerCase()] = { name: $scope.lastSlot, team: team };
         localStorage.setItem('slots',JSON.stringify(slots));
@@ -201,6 +203,14 @@ controllers.ResetCtrl = function($scope, $state) {
         for (var i=0;i<6;++i) $scope.resetSlot(i);
         $state.go('^');
     };
+};
+
+/*************
+ * CandyCtrl *
+ *************/
+
+controllers.CandyCtrl = function($scope, $state, $stateParams) {
+    $scope.slot = $stateParams.slot;
 };
 
 /*****************************

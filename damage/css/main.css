@@ -136,7 +136,7 @@ body, #main, #hp, #other {
     z-index: 2;
 }
 
-.unitSlider {
+.unitSlider, candySlider {
     text-shadow: 0 0 black, 0 1px black, 1px 0 black, 1px 1px black, 0 -1px black, -1px 0 black, -1px -1px black;
     cursor: default;
 }
@@ -301,8 +301,15 @@ body, #main, #hp, #other {
     cursor: pointer;
 }
 
-.slot:hover {
+.slot:not(.nohover):hover {
     outline: 1px solid red;
+}
+
+.slot.big {
+    width: 112px;
+    height: 112px;
+    background-size: 112px 112px;
+    margin: 4px;
 }
 
 .slot.medium {
@@ -429,8 +436,18 @@ li.locked > div {
     opacity: 0.5;
 }
 
+li > div > a {
+    color: white !important;
+    text-decoration: none !important;
+}
+
 #gather {
     background-color: crimson;
+}
+
+li input {
+    color: black;
+    background: white;
 }
 
 /***********
@@ -500,7 +517,7 @@ li.locked > div {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.65);
     z-index: 100;
 }
 
@@ -623,3 +640,40 @@ li.locked > div {
     z-index: 1;
 }
 
+/**************
+ * CANDY MODE *
+ **************/
+
+.modal-body > .slot ~ :not([class]) {
+    position: relative;
+}
+
+.unit:not(.empty) {
+    z-index: 3;
+}
+
+.middle-backdrop {
+    z-index: 1;
+}
+
+.candySlider {
+    margin-top: 28px !important;
+}
+
+#candySliders {
+    display: flex;
+    justify-content: center;
+}
+
+#candySliders > div {
+    margin: 0 10px 0 10px;
+}
+
+.candyLabel {
+    position: absolute;
+    top: 58px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    pointer-events: none;
+}
