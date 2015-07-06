@@ -14,7 +14,7 @@ var save = function(key,object) {
 
 /* * * * * Version control methods * * * * */
 
-if (!localStorage.hasOwnProperty('version') || localStorage.getItem('version') != '2') {
+if (!localStorage.hasOwnProperty('version') || JSON.parse(localStorage.getItem('version')) < 2) {
 
     var data = { };
 
@@ -34,7 +34,7 @@ if (!localStorage.hasOwnProperty('version') || localStorage.getItem('version') !
 
 }
 
-if (localStorage.getItem('version') != '3') {
+if (JSON.parse(localStorage.getItem('version')) < 3) {
 
     var data = JSON.parse(localStorage.getItem('data')) || { };
     for (var i=0;i<6;++i) {
