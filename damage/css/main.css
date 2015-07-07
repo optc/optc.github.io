@@ -114,7 +114,7 @@ body, #main, #hp, #other {
     outline: 1px solid black;
     background-color: white;
     cursor: pointer;
-    z-index: 2;
+    z-index: 4;
 }
 
 .unitLevel:hover {
@@ -648,7 +648,7 @@ li input {
     position: relative;
 }
 
-.unit:not(.empty) {
+.unitContainer:not(.empty) {
     z-index: 3;
 }
 
@@ -676,4 +676,16 @@ li input {
     width: 100%;
     text-align: center;
     pointer-events: none;
+}
+
+.unitCandies {
+    position: absolute;
+    bottom: 2px;
+    left: 7px;
+    z-index: 4;
+    font-weight: bold;
+    color: gold;
+    pointer-events: none;
+    text-shadow: 0 0 black, 0 2px black, 2px 0 black, 2px 2px black, 0 -2px black, -2px 0 black, -2px -2px black,
+                 0 0 black, 0 1px black, 1px 0 black, 1px 1px black, 0 -1px black, -1px 0 black, -1px -1px black;
 }

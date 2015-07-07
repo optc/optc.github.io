@@ -418,6 +418,22 @@ directives.unitSilence = function() {
     };
 };
 
+directives.unitCandies = function() {
+    return {
+        restrict: 'E',
+        replace: true,
+        scope: true,
+        template: '<div class="unitCandies">{{text}}</div>',
+        link: function(scope, element, attrs) {
+            var update = function(data) {
+                var total = !data ? 0 : data.hp + data.atk + data.rcv;
+                scope.text = (total > 0 ? '+' + total : '');
+            };
+            scope.$watch('data.team[slot].candies',update,true);
+        }
+    };
+};
+
 directives.special = function() {
     return {
         restrict: 'E',

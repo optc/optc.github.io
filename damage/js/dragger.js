@@ -25,7 +25,7 @@ var moveElement = function(target,byX,byY) {
 var onUnitStartMove = function(e) {
     startingSlot = $(e.target).parent();
     $('#removeSlot')[0].style.display = null;
-    e.target.style.zIndex = 5;
+    e.target.style.zIndex = 4;
 };
 
 var onUnitMove = function(e) {
@@ -34,7 +34,7 @@ var onUnitMove = function(e) {
 };
 
 var onUnitEndMove = function(e) {
-    e.target.style.zIndex = 1;
+    e.target.style.zIndex = 3;
     e.target.style.webkitTransform = e.target.style.transform = '';
     $('#removeSlot').css('display','none');
     stopPropagation = true;
