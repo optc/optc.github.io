@@ -1165,6 +1165,16 @@ window.captains = {
     607: { // v2 Zeff evolved
         atk: function(p) { return p.percHP >= 50.0 && p.unit.class == "Fighter" ? 2.5 : 1; }
     },
+    612: { // Log Brook
+        hp: function(p) { return p.unit.class == "Slasher" ? 1.5 : 1; },
+        atk: function(p) { return p.unit.class == "Slasher" ? 1.5 : 1; },
+        rcv: function(p) { return p.unit.class == "Slasher" ? 1.5 : 1; }
+    },
+    613: { // Log Brook evolved
+        hp: function(p) { return p.unit.class == "Slasher" ? 1.5 : 1; },
+        atk: function(p) { return p.unit.class == "Slasher" ? 1.5 : 1; },
+        rcv: function(p) { return p.unit.class == "Slasher" ? 1.5 : 1; }
+    },
     614: { // Zanbai
         atk: function(p) { return p.unit.cost <= 20 && p.percHP <= 50.0 ? 2.25 : 1; } // TODO Double check the HP
     },

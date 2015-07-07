@@ -211,6 +211,9 @@ controllers.ResetCtrl = function($scope, $state) {
 
 controllers.CandyCtrl = function($scope, $state, $stateParams) {
     $scope.slot = $stateParams.slot;
+    $scope.resetCandies = function() {
+        $scope.data.team[$scope.slot].candies = { hp: 0, atk: 0, rcv: 0 };
+    };
 };
 
 /*****************************

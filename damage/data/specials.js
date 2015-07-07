@@ -359,6 +359,14 @@ window.specials = {
         atk: function(p) { return p.unit.type == "QCK" ? 2 : 1; },
         type: 'type'
     },
+    612: { // Log Brook
+        atkStatic: function(p) { return 45; }, // TODO Implement me
+        rcvStatic: function(p) { return 45; }
+    },
+    613: { // Log Brook evolved
+        atkStatic: function(p) { return 45; }, // TODO Implement me
+        rcvStatic: function(p) { return 45; }
+    },
     614: { // Zanbai
         def: function(p) { return 0.5; }
     },

@@ -466,6 +466,7 @@ directives.candySlider = function() {
             var updateMax = function(data) {
                 var used = Object.keys(data).reduce(function(prev,next) { return prev + (next == scope.type ? 0 : data[next]) },0);
                 element.trigger('configure',{ max: Math.min(100,200 - used) });
+                currentValue = data[scope.type];
                 element.val(currentValue).trigger('change');
             };
             var slider = element.knob({
@@ -473,8 +474,8 @@ directives.candySlider = function() {
                 height: 112,
                 min: 0,
                 max: 100,
-                //angleOffset: 200,
-                //angleArc: 320,
+                angleOffset: 20,
+                angleArc: 320,
                 release: update,
                 fgColor: { hp: '#87ceeb', atk: '#ed7474', rcv: '#66ee66' }[scope.type]
             });
