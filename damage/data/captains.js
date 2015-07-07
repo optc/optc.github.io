@@ -297,11 +297,11 @@ window.captains = {
     },
     258: { // Blamenco
         atk: function(p) { return p.unit.type == "STR" ? 2 : 1; },
-        hp: function(p) { return p.unit.type == "STR" ? 2 : 1; }
+        rcv: function(p) { return p.unit.type == "STR" ? 2 : 1; }
     },
     259: { // Blamenco the Mallet
         atk: function(p) { return p.unit.type == "STR" ? 2 : 1; },
-        hp: function(p) { return p.unit.type == "STR" ? 2 : 1; }
+        rcv: function(p) { return p.unit.type == "STR" ? 2 : 1; }
     },
     260: { // Edward Newgate
         atk: function(p) { return p.percHP <= 30.0 ? 3 : 1; }
