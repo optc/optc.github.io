@@ -133,7 +133,7 @@ body, #main, #hp, #other {
     width: 100% !important;
     height: 100% !important;
     padding-top: 25px;
-    z-index: 2;
+    z-index: 5;
 }
 
 .unitSlider, candySlider {
