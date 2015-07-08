@@ -1,0 +1,60 @@
+<div class="backdrop" ui-sref="^"></div>
+
+<div class="custom-modal">
+    <div id="picker" class="modal-dialog">
+        <div class="modal-content animated fadeInDown">
+            <div class="modal-header">Pick a Unit
+                <span class="pull-right help"
+                     popover-trigger="mouseenter" popover-placement="bottom" popover-template="'operators.html'">Operators</span>
+            </div>
+            <div class="modal-body">
+
+                <input type="text" id="picker" placeholder="type to filter" ng-model="query" auto-focus class="modal-filter">
+
+                <div id="pickerUnits" class="modal-div">
+                    <div class="slot medium" ng-repeat="unit in units" ng-click="pickUnit(unit.number)"
+                        decorate-slot="static" uid="unit.number">
+                    </div> 
+                </div>
+
+                <div id="recent">
+                    <span>Recently picked</span>
+                    <div id="recentUnits">
+                        <div class="slot small" ng-repeat="unit in recents" ng-click="pickUnit(unit)"
+                            decorate-slot uid="unit">
+                        </div> 
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-default" ui-sref="^">Cancel</button> 
+            </div>
+        </div>
+    </div>
+
+    <script id="operators.html" type="text/ng-template">
+        <div>
+            Supported string operators:
+            <br>
+            <ul>
+                <li><tt>type:X</tt>: shows only units of type X (STR, DEX, QCK, ...)</li>
+                <li><tt>class:X</tt>: shows only units of class X (fighter, slasher, ...)</li>
+            </ul>
+            <br>
+            Supported mathematical operators:
+            <ul>
+                <li><tt>hp&gt;X</tt>: shows only units with max HP &gt; X</li>
+                <li><tt>atk&gt;X</tt>: shows only units with max ATK &gt; X</li>
+                <li><tt>cost&gt;X</tt>: shows only units with a cost higher than X</li>
+                <li><tt>stars&gt;X</tt>: shows only units with more than X stars</li>
+            </ul>
+            Mathematical operators also work with "<tt>&lt;</tt>", "<tt>&gt;=</tt>", "<tt>&lt;=</tt>" and "<tt>=</tt>".
+            <br><br>
+            Example query:
+            <br>
+            <tt>type:str class:fighter atk>1300 cost>20</tt>
+        </div>
+    </script>
+
+</div>

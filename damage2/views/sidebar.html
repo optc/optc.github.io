@@ -1,0 +1,68 @@
+﻿<nav id="menu" class="panel" role="navigation">
+
+    <ul>
+
+        <li>
+            <div id="sliderToggle" status="{{options.slidersEnabled ? 0 : 1}}"
+                ng-click="options.slidersEnabled = !options.slidersEnabled">
+                <i class="fa fa-circle-o-notch"></i>
+            </div>
+        </li>
+
+        <li>
+            <div id="ship" status="{{data.ship.level}}" ship-manager>
+                <i class="fa fa-ship"></i>
+                <span>{{data.ship.name}} (lv. {{level}})</span>
+                <div id="ship-background"></div>
+            </div>
+        </li>
+
+        <li>
+            <div id="defenseContainer" title="Middle-click or CTRL-click for details" defense-on-click>
+                <i class="fa fa-shield"></i>
+                Enemy defense: <input type="text" id="defense" ng-model="data.defense"></input>
+            </div>
+        </li>
+
+        <li ui-sref=".candy">
+            <div id="candyContainer">
+                <i class="fa fa-sliders"></i>
+                <a>Cotton candies</a>
+            </div>
+        </li>
+
+        <li>
+            <div id="save" ui-sref=".saveSlot">
+                <i class="fa fa-download"></i>
+                Save slot...
+            </div>
+        </li>
+
+        <li>
+            <div id="load" ui-sref=".loadSlot">
+                <i class="fa fa-upload"></i>
+                Load slot...
+            </div>
+        </li>
+
+        <li ng-show="showGatherButton">
+            <div id="gather" ui-sref=".gather">
+                <i class="fa fa-heartbeat"></i>
+                Data gathering
+            </div>
+        </li>
+
+        <li>
+            <div id="specialDivider">Specials:</div>
+        </li>
+
+        <special slot="0"></special>
+        <special slot="1"></special>
+        <special slot="2"></special>
+        <special slot="3"></special>
+        <special slot="4"></special>
+        <special slot="5"></special>
+
+    </ul>
+
+</nav>

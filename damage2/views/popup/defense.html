@@ -1,0 +1,40 @@
+<div class="backdrop" ui-sref="^"></div>
+
+<div class="custom-modal">
+    <div id="picker" class="modal-dialog">
+        <div class="modal-content animated fadeInDown">
+            <div class="modal-header">Known Defense Values</div>
+            <div class="modal-body">
+
+                <input type="text" id="picker" placeholder="type to filter" ng-model="query" auto-focus class="modal-filter">
+
+                <div class="modal-div">
+
+                    <table id="defense-table">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Enemy</th>
+                                <th>Difficulty</th>
+                                <th>Defense</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="defense in list" ng-click="pickDefense(defense)">
+                                <td class="slot small" decorate-slot="notitle" uid="defense[2]"></td>
+                                <td>{{defense[0]}}</td>
+                                <td>{{defense[1]}}</td>
+                                <td>{{defense[3]}}</td>
+                            </tr>
+                        </tbody>
+                    </table> 
+
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-default" ui-sref="^">Cancel</button> 
+            </div>
+        </div>
+    </div>
+</div>
