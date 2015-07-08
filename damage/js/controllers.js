@@ -54,32 +54,54 @@ controllers.PickerCtrl = function($scope, $state, $stateParams) {
 
     var generateSearchParameters = function() {
         if (!$scope.query || $scope.query.trim().length < 3) return null;
-        var result = { name: [ ] };
-        tokens = $scope.query.trim().replace(/\s+/g,' ').split(' ').filter(function(x) { return x.length > 0; });
+        var result = { matchers: { }, ranges: { }, query: [ ] };
+        var ranges = { }, params = [ 'hp', 'atk', 'stars', 'cost', 'growth', 'rcv' ];
+        var regex = new RegExp('^((type|class):(\\w+)|(' + params.join('|') + ')(>|<|>=|<=|=)([\\d.]+))$');
+        var tokens = $scope.query.trim().replace(/\s+/g,' ').split(' ').filter(function(x) { return x.length > 0; });
         tokens.forEach(function(x) {
-            var temp = x.match(/^((type|class):(\w+)|(hp|atk|stars|cost|growth|rcv)(>|<|>=|<=|=)([\d.]+))$/), func;
-            if (!temp) {
-                result.name.push(x);
-            } else if (temp[4] !== undefined) {
-                func = new Function('x','return x ' + temp[5].replace(/^=$/,'==') + ' ' + temp[6] + ';');
-                result[temp[4]] = func;
-            } else {
-                func = new Function('x','return /' + temp[3] + '/i.test(x);');
-                result[temp[2]] = func; 
-            }
+            var temp = x.match(regex);
+            if (!temp) // if it couldn't be parsed, treat it as string
+                result.query.push(x);
+            else if (temp[4] !== undefined) { // numeric operator
+                var left = temp[4], op = temp[5], right = parseFloat(temp[6],10);
+                if (!result.ranges.hasOwnProperty(left)) result.ranges[left] = [ 0, Infinity ];
+                if (op == '=') {
+                    result.ranges[left][0] = right;
+                    result.ranges[left][1] = right;
+                }
+                else if (op == '<')  result.ranges[left][1] = Math.min(result.ranges[left][1],right-1);
+                else if (op == '<=') result.ranges[left][1] = Math.min(result.ranges[left][1],right);
+                else if (op == '>')  result.ranges[left][0] = Math.max(result.ranges[left][0],right+1);
+                else if (op == '>=') result.ranges[left][0] = Math.max(result.ranges[left][0],right);
+            } else // matcher
+                result.matchers[temp[2]] = new RegExp(temp[3],'i');
         });
-        if (result.name.length === 0) delete result.name;
-        else result.name = new Function('x','return /' + result.name.join(' ') + '/i.test(x);');
+        result.query = new RegExp(result.query.join(' '),'i');
         return result;
     };
 
     var populateList = function() {
+        $scope.units = [ ];
         var result, parameters = generateSearchParameters();
         if (parameters === null) return;
-        result = units.filter(function(x) { return x !== null && x !== undefined; });
-        Object.keys(parameters).forEach(function(key) {
-            var unitKey = key.replace(/^(hp|atk|rcv)$/,function(x) { return 'max' + x.toUpperCase(); });
-            result = result.filter(function(x) { return parameters[key](x[unitKey]); });
+        result = window.units.filter(function(x) { return x !== null && x !== undefined && x.hasOwnProperty('number'); });
+        // filter by matchers
+        for (var matcher in result.matchers) {
+            result = result.filter(function(unit) {
+                return result.matchers[matcher].test(unit[matcher])
+            });
+        }
+        // filter by ranges
+        for (var range in parameters.ranges) {
+            result = result.filter(function(unit) {
+                var stat = unit['max' + range.toUpperCase()];
+                if (stat < parameters.ranges[range][0] || stat > parameters.ranges[range][1]) return false;
+                return true;
+            });
+        };
+        // filter by query
+        result = result.filter(function(unit) {
+            return parameters.query.test(unit.name);
         });
         $scope.units = result;
     };

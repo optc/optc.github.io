@@ -542,7 +542,7 @@ window.units = [
     [ "Ohm", "STR", "Slasher", 4, 16, 70, 770, 480, -600, 2200, 1050, -600, 4, 1 ],
     [ "Nola the Giant Snake", "PSY", "Fighter", 3, 20, 50, 1000, 180, 71, 2100, 456, 101, 4, 0.7 ],
     [ "Wiper", "DEX", "Shooter", 3, 9, 35, 212, 105, 20, 981, 567, 99, 4, 1 ],
-    [ "Wiper, Descendant of the Great Calgara", "DEX", "Shooter", 4, 15, 70, 914, 490, 70, 1598, 804, 155, 4, 0 ],
+    [ "Wiper, Descendant of the Great Calgara", "DEX", "Shooter", 4, 15, 70, 914, 490, 70, 1598, 804, 155, 4, 1 ],
     [ "Enel", "PSY", "Shooter", 3, 12, 50, 177, 141, 58, 951, 615, 185, 4, 1 ],
     [ "God Enel", "PSY", "Shooter", 4, 20, 99, 880, 542, 143, 1530, 1290, 318, 4, 1 ],
     [ "Monkey D. Luffy of the 3 Terrible Brothers of Colubo Mountain", "STR", "Fighter", 4, 10, 35, 100, 28, 77, 551, 267, 261, 4, 1 ],
