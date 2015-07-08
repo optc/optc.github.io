@@ -24,7 +24,7 @@ directives.decorateSlot = function() {
         link: function(scope, element, attrs) {
             var update = function() { 
                 var target = element[0];
-                if (scope.uid === undefined && scope.udata === undefined) {
+                if (scope.uid == null && scope.udata == null) {
                     target.style.backgroundImage = null;
                     target.removeAttribute('title');
                 } else {
@@ -87,9 +87,9 @@ directives.attachPicker = function() {
         scope: true,
         controller: function($scope, $state) { $scope.$state = $state; },
         link: function(scope, element, attrs) {
-            element.click(function(e) {
+            element.longpress(function() { },function(e) {
                 if (e.which != 1 || e.ctrlKey || e.altKey || e.shiftKey) return;
-                if ($(this).hasClass('slide')) return;
+                if ($(this).hasClass('slide') || $(this).hasClass('dragging')) return;
                 if (!$(this).hasClass('empty') && Utils.isClickOnOrb(e,$(this).find('.unitContainer')[0])) return;
                 scope.$state.go('.pick',{ slot: scope.slot });
             });
@@ -340,7 +340,7 @@ directives.unitOrb = function() {
                 if (unit.orb == 2) return scope.data.team[scope.slot].unit.type;
                 return Utils.getOppositeType(scope.data.team[scope.slot].unit.type) + ' opposite';
             };
-            var onMouseUp = function(e) {
+            var onShortPress = function(e) {
                 var unit = scope.data.team[scope.slot], tunit = scope.tdata.team[scope.slot];
                 if (!$(e.target).hasClass('unitPortrait')) return;
                 if (unit.unit === null || e.target.className == 'unitLevel' || e.altKey || e.shiftKey) return;
@@ -353,7 +353,16 @@ directives.unitOrb = function() {
                     return false;
                 }
             };
-            element.parent().mouseup(onMouseUp);
+            var onLongPress = function(e) {
+                var unit = scope.data.team[scope.slot], tunit = scope.tdata.team[scope.slot];
+                tunit.orb = (tunit.orb == 1 ? 2 : tunit.orb == 2 ? 0.5 : 1);
+                scope.glow();
+                scope.$apply();
+                e.preventDefault();
+                e.stopPropagation();
+                return false;
+            };
+            element.parent().longpress(onLongPress,onShortPress);
         },
         controller: function($scope, $timeout) {
             $timeout(function() { 
