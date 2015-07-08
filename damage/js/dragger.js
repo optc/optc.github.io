@@ -26,6 +26,7 @@ var onUnitStartMove = function(e) {
     startingSlot = $(e.target).parent();
     $('#removeSlot')[0].style.display = null;
     e.target.style.zIndex = 4;
+    $(e.target.parentNode).addClass('dragging');
 };
 
 var onUnitMove = function(e) {
@@ -40,6 +41,7 @@ var onUnitEndMove = function(e) {
     stopPropagation = true;
     coordinates = [ 0, 0 ];
     startingSlot = null;
+    $(e.target.parentNode).removeClass('dragging');
 };
 
 var onUnitClick = function(e) {
@@ -103,6 +105,7 @@ var onUnitDrop = function(scope) {
             scope.tdata.team[j] = temp;
             scope.$apply();
         }
+        $(e.target.parentNode).removeClass('dragging');
     };
 };
 

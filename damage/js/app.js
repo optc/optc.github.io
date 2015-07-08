@@ -49,6 +49,12 @@ var SharedRootCtrl = function($scope) {
 
     $scope.numbers = { };
 
+    $scope.options = {
+        slidersEnabled: true,
+        sidebarVisible: false,
+        crunchingEnabled: false
+    };
+
     $scope.resetSlot = function(n,onlyTransitional) {
         if (!onlyTransitional)
             $scope.data.team[n] = { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 } };

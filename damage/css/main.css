@@ -42,6 +42,7 @@ body, #main, #hp, #other {
 
 #specialWarning {
     width: 100%;
+    height: 40px;
     position: fixed;
     bottom: -40px;
     left: 0;
@@ -338,6 +339,7 @@ body, #main, #hp, #other {
     height: 100%;
     transition: left .1s linear;
     margin-bottom: 0;
+    z-index: 200;
 }
 
 #menu.open {
@@ -688,4 +690,42 @@ li input {
     pointer-events: none;
     text-shadow: 0 0 black, 0 2px black, 2px 0 black, 2px 2px black, 0 -2px black, -2px 0 black, -2px -2px black,
                  0 0 black, 0 1px black, 1px 0 black, 1px 1px black, 0 -1px black, -1px 0 black, -1px -1px black;
+}
+
+/******************
+ * MOBILE SUPPORT *
+ ******************/
+
+@media only screen and (max-width: 980px) {
+
+    html, body {
+        width: 600px;
+        height: 650px !important;
+        margin-top: 12.5%;
+        transition: left .1s linear;
+    }
+
+    .custom-modal {
+        top: 0;
+        left: 0;
+        transform: initial;
+        width: 100%;
+        height 100%;
+        z-index: 300;
+    }
+
+    .modal-dialog {
+        width: 100%;
+        height: 100%;
+        margin: 0 !important;
+    }
+
+    .shifted {
+        margin-left: 16.625em;
+    }
+
+    .unitLevel {
+        font-size: 100%;
+    }
+
 }

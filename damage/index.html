@@ -4,6 +4,8 @@
     <head>
 
         <meta charset="utf-8">
+        <meta name="viewport" content="width=600, height=650, initial-scale=0.6, user-scalable=no, user-scalable=0">
+
         <title>One Piece Treasure Cruise Damage Calculator</title>
 
         <link href='//fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
@@ -29,6 +31,7 @@
         <script src="js/libs/jquery.knob.min.js"></script>
         <script src="js/libs/jquery.noty.packaged.min.js"></script>
         <script src="js/libs/jquery.nouislider.all.min.js"></script>
+        <script src="js/libs/jquery.longpress.js"></script>
         <script src="js/libs/ui-bootstrap-tpls.min.js"></script>
 
         <script src="data/units.js"></script>
@@ -54,12 +57,11 @@
           m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
           })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
           ga('create', 'UA-64769042-1', 'auto');
-          ga('send', 'pageview');
         </script>
 
     </head>
 
-    <body ng-controller="SharedRootCtrl">
+    <body ng-controller="SharedRootCtrl" ng-class="{ shifted: options.sidebarVisible }">
 
         <div ui-view></div>
 

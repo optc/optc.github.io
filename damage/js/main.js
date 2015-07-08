@@ -29,12 +29,6 @@ var MainCtrl = function($scope, $controller) {
     
     window.units = window.units.map(parseUnit);
 
-    $scope.options = {
-        slidersEnabled: true,
-        sidebarVisible: false,
-        crunchingEnabled: false
-    };
-
     $scope.conflictingSpecials = false;
 
     $scope.showGatherButton = window.units.some(function(x) { return x.growth.atk === 0; });
