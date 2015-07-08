@@ -252,7 +252,7 @@ directives.levelLabel = function() {
         restrict: 'E',
         replace: true,
         scope: true,
-        template: '<div class="unitLevel">Lv. {{ data.team[slot].level }}<input ng-show="editorVisible" ng-model="level"></input></div>',
+        template: '<div class="unitLevel">Lv. {{ data.team[slot].level }}<input type="number" ng-show="editorVisible" ng-model="level"></input></div>',
         link: function(scope, element, attrs) {
             scope.level = scope.data.team[scope.slot].level;
             var input = element.find('input');
