@@ -44,17 +44,18 @@ directives.expandableDamage = function() {
         restrict: 'A',
         link: function(scope, element, attrs) {
             scope.detailsVisible = false;
+            var timeout = null;
             element.click(function(e) {
                 if (e.which != 1 || e.ctrlKey) return;
                 element.toggleClass('details');
-                if (!scope.detailsVisible) {
+                if (timeout) clearTimeout(timeout);
+                if (element.hasClass('details')) {
                     element[0].style.zIndex = 5;
-                    setTimeout(function() { scope.detailsVisible = true; scope.$apply();
-                    },500);
+                    timeout = setTimeout(function() { scope.detailsVisible = true; scope.$apply(); },500);
                 } else {
                     scope.detailsVisible = false;
                     scope.$apply();
-                    setTimeout(function() { element[0].style.zIndex = 4; },500);
+                    timeout = setTimeout(function() { element[0].style.zIndex = 4; },500);
                 }
             });
         },
@@ -255,9 +256,9 @@ directives.levelLabel = function() {
         link: function(scope, element, attrs) {
             scope.level = scope.data.team[scope.slot].level;
             var input = element.find('input');
-            element.click(function(e) {
+            element.longpress(function() { },function(e) {
                 scope.level = '';
-                if (e.which == 1 && !e.ctrlKey) {
+                if (e.which <= 1 && !e.ctrlKey) {
                     if (scope.options.slidersEnabled) $('.unit').eq(scope.slot).addClass('slide');
                     else scope.editorVisible = true;
                 } else if (e.which == 2 || (e.which == 1 && e.ctrlKey))
@@ -282,13 +283,13 @@ directives.levelLabel = function() {
     };
 };
 
-directives.levelSlider = function() {
+directives.levelSlider = function($timeout) {
     return {
         restrict: 'E',
         replace: true,
         template: '<input disabled class="unitSlider"></input>',
         link: function(scope, element, attrs) {
-            var currentValue = 0;
+            var currentValue = 0, immediateValue = 0;
             var onRelease = function(value) {
                 if (!value || value <= 0 || currentValue == value) return;
                 currentValue = value;
@@ -311,6 +312,7 @@ directives.levelSlider = function() {
                 angleOffset: -120,
                 angleArc: 240,
                 release: onRelease,
+                change: function(value) { immediateValue = value; },
                 min: 1,
                 max: 99
             });
@@ -318,6 +320,7 @@ directives.levelSlider = function() {
             scope.$watch('data.team[slot].level',update);
             element.parent().on('click touchend',function(e) {
                 $('.unit').eq(scope.slot).removeClass('slide'); 
+                if (e.type == 'touchend') onRelease(Math.round(immediateValue));
                 e.preventDefault();
                 e.stopPropagation();
                 return false;
