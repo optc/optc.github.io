@@ -650,7 +650,7 @@ window.units = [
 	[ "Phoenix Marco, Whitebeard Pirates' 1st Division Commander", "QCK", "Fighter", 6, 55, 99, 1555, 734, 258, 3013, 1402, 455, 4, 0.7 ],
 	[ ], 
 	[ ], 
-	[ "Iron Mask Duval", "DEX", "Shooter", 3, 10, 35, 132, 133, 25, 725, 505, 77, 4, 0 ], 
-	[ "Duval, Head of the Flying Fish Riders", "DEX", "Shooter", 4, 30, 60, 664, 424, 44, 1448, 723, 103, 5, 0 ], 
-	[ "Duval, Head of the Rosy Life Riders", "DEX", "Shooter", 5, 50, 99, 1420, 658, 103, 2608, 1113, 308, 8, 0 ]
+	[ "Iron Mask Duval", "DEX", "Shooter", 3, 10, 35, 132, 133, 25, 725, 505, 77, 4, 1 ], 
+	[ "Duval, Head of the Flying Fish Riders", "DEX", "Shooter", 4, 30, 60, 664, 424, 44, 1448, 723, 103, 5, 1 ], 
+	[ "Duval, Head of the Rosy Life Riders", "DEX", "Shooter", 5, 50, 99, 1420, 658, 103, 2608, 1113, 308, 8, 1 ]
 ];
