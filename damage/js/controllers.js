@@ -166,8 +166,9 @@ controllers.SlotsCtrl = function($scope, $state, $stateParams) {
             localStorage.setItem('lastSlotName',JSON.stringify(slot.name));
             $state.go('^');
         } else if (e.which == 2 || (e.which == 1 && e.ctrlKey)) {
-            delete slots[slot.name];
-            delete $scope.slots[slot.name];
+            var name = slot.name.toLowerCase();
+            delete slots[name];
+            delete $scope.slots[name];
             localStorage.setItem('slots',JSON.stringify(slots));
         }
     };
