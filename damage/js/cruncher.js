@@ -194,7 +194,8 @@ var CruncherCtrl = function($scope, $timeout) {
         var growth = data.unit.growth[stat] || 1;
         var minStat = 'min' + stat.toUpperCase(), maxStat = 'max' + stat.toUpperCase();
         var result = data.unit[minStat] + (data.unit[maxStat] - data.unit[minStat]) * Math.pow((data.level-1) / maxLevel, growth);
-        return Math.floor(result) + (data.candies && data.candies[stat] ? data.candies[stat] : 0);
+        var candyBonus = (data.candies && data.candies[stat] ? data.candies[stat] * { hp: 5, atk: 2, rcv: 1 }[stat] : 0);
+        return Math.floor(result) + candyBonus;
     };
 
     /* The effective damage of a unit is affected by the hit modifier being used, by the defense threshold of the enemy
@@ -496,14 +497,14 @@ var CruncherCtrl = function($scope, $timeout) {
     };
 
     var getTeamDetails = function() {
-        return $scope.data.team.map(function(x) {
+        return $scope.data.team.map(function(x,n) {
             if (x.unit === null) return null;
             return {
-                name: x.unit.name,
-                hp: getStatOfUnit(x,'hp'),
-                atk: getStatOfUnit(x,'atk'),
-                rcv: getStatOfUnit(x,'rcv'),
-                cmb: x.unit.combo
+                name : x.unit.name,
+                hp   : getStatOfUnit(x,'hp') + (x.candies.hp > 0 ? ' (+' + (x.candies.hp * 5) + ')' : ''),
+                atk  : getStatOfUnit(x,'atk') + (x.candies.atk > 0 ? ' (+' + (x.candies.atk * 2) + ')' : ''),
+                rcv  : getStatOfUnit(x,'rcv') + (x.candies.rcv > 0 ? ' (+' + x.candies.rcv + ')' : ''),
+                cmb  :  x.unit.combo
             };
         });
     };

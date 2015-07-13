@@ -88,7 +88,7 @@ controllers.PickerCtrl = function($scope, $state, $stateParams) {
         // filter by matchers
         for (var matcher in result.matchers) {
             result = result.filter(function(unit) {
-                return result.matchers[matcher].test(unit[matcher])
+                return result.matchers[matcher].test(unit[matcher]);
             });
         }
         // filter by ranges
@@ -98,7 +98,7 @@ controllers.PickerCtrl = function($scope, $state, $stateParams) {
                 if (stat < parameters.ranges[range][0] || stat > parameters.ranges[range][1]) return false;
                 return true;
             });
-        };
+        }
         // filter by query
         result = result.filter(function(unit) {
             return parameters.query.test(unit.name);

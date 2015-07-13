@@ -477,25 +477,28 @@ directives.special = function() {
     };
 };
 
-directives.candySlider = function() {
+directives.candySlider = function($compile) {
     return {
         restrict: 'E',
         replace: true,
         template: '<input disabled class="candySlider"></input>',
         scope: { data: '=', type: '@' },
         link: function(scope, element, attrs) {
+            scope.actualBonus = 0;
             var currentValue = scope.data[scope.type];
             var update = function(value) {
                 if (value == currentValue) return;
                 currentValue = value;
                 scope.data[scope.type] = value;
+                scope.actualBonus = value * { hp: 5, atk: 2, rcv: 1 }[scope.type];
                 scope.$apply();
             };
             var updateMax = function(data) {
-                var used = Object.keys(data).reduce(function(prev,next) { return prev + (next == scope.type ? 0 : data[next]) },0);
+                var used = Object.keys(data).reduce(function(prev,next) { return prev + (next == scope.type ? 0 : data[next]); },0);
                 element.trigger('configure',{ max: Math.min(100,200 - used) });
                 currentValue = data[scope.type];
                 element.val(currentValue).trigger('change');
+                scope.actualBonus = currentValue * { hp: 5, atk: 2, rcv: 1 }[scope.type];
             };
             var slider = element.knob({
                 width: 112,
@@ -505,10 +508,10 @@ directives.candySlider = function() {
                 angleOffset: 20,
                 angleArc: 320,
                 release: update,
-                fgColor: { hp: '#87ceeb', atk: '#ed7474', rcv: '#66ee66' }[scope.type]
+                fgColor: { hp: '#fcac68', atk: '#fb6f64', rcv: '#7feb9f' }[scope.type]
             });
             element.val(currentValue).trigger('change');
-            element.parent().append($('<span class="candyLabel">' + scope.type.toUpperCase() + '</span>'));
+            element.parent().append($compile('<span class="candyLabel">+{{actualBonus}} ' + scope.type.toUpperCase() + '</span>')(scope));
             scope.$watch('data',updateMax,true);
         }
     };
