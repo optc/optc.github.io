@@ -1242,5 +1242,14 @@ window.captains = {
     },
     649: { // v2 Marco evolved
         atk: function(p) { return (p.unit.type == "QCK" || p.unit.type == "PSY") && p.percHP >= 70.0 ? 2.75 : 1; } // TODO Double check the HP
-    }
+    },
+    652: { // base Duval
+        atk: function(p) { return p.unit.type != "DEX" ? 1 : (p.orb == 2.0 ? 2 : 1); },
+    },
+    653: { // lv2 Duval
+        atk: function(p) { return p.unit.type != "DEX" ? 1 : (p.orb == 2.0 ? 2.25 : 1); },
+    },
+    654: { // lv3 Duval
+        atk: function(p) { return p.unit.type != "DEX" ? 1 : (p.orb == 2.0 ? 2.75 : 1); },
+    },
 };
