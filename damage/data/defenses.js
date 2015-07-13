@@ -27,6 +27,9 @@ window.defenses = [
     [ 'Enel (def up)', 'Master', 601,  400 ],
     [ 'Enel', 'Ultimate', 602, 278 ],
     [ 'Enel (def up)', 'Ultimate', 602, 556  ],
+    [ 'Duval (stage 1)', 'Master', 651, 2500  ],
+    [ 'Duval (stage 2)', 'Master', 651, 5000  ],
+    [ 'Duval (stage 2, def up)', 'Master', 652, 15000  ],
     // Fortnight Islands
     [ 'Buggy', 'Expert', 38, 50 ],
         //[ 'Alvida', 'Veteran', 29, 10000 ],
