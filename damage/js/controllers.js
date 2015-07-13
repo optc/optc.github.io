@@ -86,9 +86,9 @@ controllers.PickerCtrl = function($scope, $state, $stateParams) {
         if (parameters === null) return;
         result = window.units.filter(function(x) { return x !== null && x !== undefined && x.hasOwnProperty('number'); });
         // filter by matchers
-        for (var matcher in result.matchers) {
+        for (var matcher in parameters.matchers) {
             result = result.filter(function(unit) {
-                return result.matchers[matcher].test(unit[matcher]);
+                return parameters.matchers[matcher].test(unit[matcher]);
             });
         }
         // filter by ranges
