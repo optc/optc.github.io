@@ -390,8 +390,9 @@ window.specials = {
         atk: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" ? 1.2 : 1; },
         type: 'type'
     },
-    636: { // v2 Hatchan
+    637: { // v2 Hatchan
         // TODO boost atk by 1.3 if the enemy has a defense buff
+        warning: 'Selected special (Hatchan, Takoyaki Stand) is not yet supported'
     },
     642: { // Squard
         orb: function(p) { return p.orb == 2.0 ? 1.75 : (p.orb == 0.5 ? 4/7 : 1); },
@@ -401,8 +402,16 @@ window.specials = {
     },
     644: { // Whitey Bay
         // TODO boost atk by 1.2 if the enemy is delayed
+        warning: 'Selected special (Whitey Bay) is not yet supported'
     },
     645: { // Whitey Bay evolved
         // TODO boost atk by 1.2 if the enemy is delayed
-    }
+        warning: 'Selected special (Ice Witch Whitey Bay) is not yet supported'
+    },
+    655: { // Young Arlong
+        orb: function(p) { return p.orb == 2.0 ? 1.25 : (p.orb == 0.5 ? 4/5 : 1); }
+    },
+    656: { // Young Arlong evolved
+        orb: function(p) { return p.orb == 2.0 ? 1.25 : (p.orb == 0.5 ? 4/5 : 1); }
+    },
 };

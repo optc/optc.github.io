@@ -40,21 +40,26 @@ body, #main, #hp, #other {
     flex-direction: column;
 }
 
-#specialWarning {
+#warningContainer {
     width: 100%;
-    height: 40px;
     position: fixed;
-    bottom: -40px;
+    bottom: 0px;
     left: 0;
     margin: 0;
-    padding: 5px;
-    text-align: right;
-    z-index: -1;
-    transition: bottom 0.2s linear;
+    display: flex;
+    flex-direction: column;
 }
 
-#specialWarning.visible {
-    bottom: 0;
+#warningContainer > div {
+    width: 100%;
+    padding: 5px;
+    margin: 0;
+    text-align: right;
+    display: none;
+}
+
+#warningContainer > .visible {
+    display: block;
 }
 
 /******************

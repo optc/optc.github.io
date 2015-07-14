@@ -162,6 +162,25 @@ directives.shipManager = function() {
     };
 };
 
+directives.missingSpecialWarning = function() {
+    return {
+        restrict: 'A',
+        link: function(scope, element, attrs) {
+            var update = function() {
+                var text;
+                if (!scope.unit.unit) text = '';
+                else if (!scope.tdata.team[scope.$index].special) text = '';
+                else text = specials[scope.unit.unit.number+1].warning;
+                element.text(text || '');
+                if (text) element.addClass('visible');
+                else element.removeClass('visible');
+            };
+            scope.$watch('unit',update);
+            scope.$watch('tdata.team[$index].special',update);
+        }
+    };
+};
+
 /************************
  * Component directives *
  ************************/

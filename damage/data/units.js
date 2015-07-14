@@ -652,5 +652,9 @@ window.units = [
 	[ ], 
 	[ "Iron Mask Duval", "DEX", "Shooter", 3, 10, 35, 132, 133, 25, 725, 505, 77, 4, 1 ], 
 	[ "Duval, Head of the Flying Fish Riders", "DEX", "Shooter", 4, 30, 60, 664, 424, 44, 1448, 723, 103, 5, 1 ], 
-	[ "Duval, Head of the Rosy Life Riders", "DEX", "Shooter", 5, 50, 99, 1420, 658, 103, 2608, 1113, 308, 8, 1 ]
+	[ "Duval, Head of the Rosy Life Riders", "DEX", "Shooter", 5, 50, 99, 1420, 658, 103, 2608, 1113, 308, 8, 1 ],
+	[ "Pirate Arlong", "STR", "Slasher", 3, 12, 50, 159, 144, 14, 1332, 700, 89, 6, 0 ], 
+	[ "Arlong of the Sun Pirates", "STR", "Slasher", 4, 20, 99, 1261, 633, 45, 2020, 1389, 171, 4, 0 ], 
+	[ "Kuroobi of the Sun Pirates", "STR", "Fighter", 3, 10, 50, 160, 103, 9, 1233, 744, 70, 6, 0 ], 
+	[ "Choo of the Sun Pirates", "INT", "Shooter", 3, 10, 50, 75, 72, 22, 1002, 552, 178, 5, 0 ]
 ];

@@ -1252,4 +1252,16 @@ window.captains = {
     654: { // lv3 Duval
         atk: function(p) { return p.unit.type != "DEX" ? 1 : (p.orb == 2.0 ? 2.75 : 1); },
     },
+    655: { // Young Arlong
+        atk: function(p) { return p.unit.type == "STR" ? 1.5 : 1; }
+    },
+    656: { // Young Arlong evolved
+        atk: function(p) { return p.unit.type == "STR" ? 2 : 1; }
+    },
+    657: { // Young Kuroobi
+        atk: function(p) { return p.unit.class == "Fighter" ? 1.5 : 1; }
+    },
+    658: { // Young Choo
+        atk: function(p) { return p.unit.class == "Shooter" ? 1.5 : 1; }
+    }
 };
