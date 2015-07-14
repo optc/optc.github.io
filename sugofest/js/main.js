@@ -3,7 +3,8 @@ $(function() {
     var units = [ 1, 2, 5, 9, 17, 18, 17, 18, 17, 18, 17, 18, 27, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31,
         31, 31, 31, 36, 37, 44, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61,
         61, 61, 225, 225, 225, 225, 225, 225, 225, 225, 233, 315, 327, 329, 332, 26, 26, 25, 25, 24, 24,
-        41, 42, 54, 54, 54, 54, 56, 56, 56, 56, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 64, 64, 64, 64 ];
+        41, 42, 54, 54, 54, 54, 56, 56, 56, 56, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 64, 64, 64, 64,
+        5, 5, 5, 5, 5, 5, 5, 5, 44, 44, 44, 44, 44, 44, 44, 44, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64 ];
 
     var boss = 367;
     var bossChance = 1/500;
@@ -38,7 +39,7 @@ $(function() {
 
             var drop = rainBox.clone().show();
 
-            drop.css("background-image","url('http://onepiece-treasurecruise.com/wp-content/uploads/f" +
+            drop.css("background-image","url('tiles/f" +
                 ('0000' + randomChoice(units)).slice(-4) + ".png')");
             drop.css('left',getRandomInt(0,pageWidth-112));
 
@@ -50,7 +51,7 @@ $(function() {
             }
 
             window.setInterval(function() {
-                drop.css("background-image","url('http://onepiece-treasurecruise.com/wp-content/uploads/f" +
+                drop.css("background-image","url('tiles/f" +
                     ('0000' + randomChoice(units)).slice(-4) + ".png')");
                 drop.css('left',getRandomInt(0,pageWidth-112));
             },3000);
@@ -112,7 +113,7 @@ $(function() {
         var drop = rainBox.clone().show();
         drop.addClass('boss');
         var div = $('<div></div>');
-        div.css("background-image","url('http://onepiece-treasurecruise.com/wp-content/uploads/f" +
+        div.css("background-image","url('tiles/f" +
                     ('0000' + boss).slice(-4) + ".png')");
         drop.append(div);
         drop.css("left",(Math.floor((pageWidth-112)/2) - 56) + 'px');
@@ -131,6 +132,21 @@ $(function() {
     };
 
     /* * * * * */
+
+    window.load = function() {
+        var temp = { }, left = 0;
+        units.forEach(function(x) { temp[x] = 0; });
+        temp = Object.keys(temp);
+        left = temp.length;
+        for (var i=0;i<temp.length;++i) {
+            var image = new Image();
+            image.onload = function() {
+                if (--left) return;
+                start();
+            };
+            image.src = "tiles/f" + ('0000' + boss).slice(-4) + ".png";
+        }
+    };
 
     window.start = function () {
         if (!started) startForeground();
@@ -159,6 +175,6 @@ $(function() {
         if (!audioStopped) this.play();
     });
 
-    start();
+    load();
 
 });
