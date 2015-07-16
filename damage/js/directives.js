@@ -162,25 +162,6 @@ directives.shipManager = function() {
     };
 };
 
-directives.missingSpecialWarning = function() {
-    return {
-        restrict: 'A',
-        link: function(scope, element, attrs) {
-            var update = function() {
-                var text;
-                if (!scope.unit.unit) text = '';
-                else if (!scope.tdata.team[scope.$index].special) text = '';
-                else text = specials[scope.unit.unit.number+1].warning;
-                element.text(text || '');
-                if (text) element.addClass('visible');
-                else element.removeClass('visible');
-            };
-            scope.$watch('unit',update);
-            scope.$watch('tdata.team[$index].special',update);
-        }
-    };
-};
-
 /************************
  * Component directives *
  ************************/
@@ -478,9 +459,12 @@ directives.special = function() {
             scope.hasSpecial = false;
             scope.$watch('tdata.team[slot].special',function(enabled) {
                 removeType();
-                if (enabled) element.addClass(scope.data.team[scope.slot].unit.type);
-                type = (scope.data.team[scope.slot].unit !== null ? scope.data.team[scope.slot].unit.type : null);
+                var unit = scope.data.team[scope.slot].unit;
+                if (enabled) element.addClass(unit.type);
+                type = (!unit ? unit.type : null);
                 isSelected = enabled;
+                if (enabled && window.specials[unit.number+1].warning)
+                    scope.notify({ text: window.specials[unit.number+1].warning, type: 'warning' });
             });
             scope.$watch('data.team[slot].unit',function(unit) {
                 removeType();

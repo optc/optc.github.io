@@ -103,6 +103,7 @@ var CruncherCtrl = function($scope, $timeout) {
             rcvTotal += applyCaptainEffectsAndSpecialsToRCV(n,rcv);
         });
         result.rcv = Math.max(0,rcvTotal);
+        result.zombie = checkZombieTeam(result);
         $scope.numbers = result;
         $scope.data.hp.max = Math.max(1,hpMax);
     };
@@ -507,6 +508,21 @@ var CruncherCtrl = function($scope, $timeout) {
                 cmb  :  x.unit.combo
             };
         });
+    };
+
+    // TODO Redo this and add the other zombie units
+    var checkZombieTeam = function(data) {
+        var team = $scope.data.team;
+        if (!team[0].unit || !team[1].unit) return null;
+        var vivi   = team[0].unit.number == 72 ? 0 : 1;
+        var tanker = team[0].unit.number == 72 ? 1 : 0;
+        if (team[vivi].unit.number != 72 || [ 212, 213, 217, 218 ].indexOf(team[tanker].unit.number) == -1) return null; // not a zombie team
+        var isTrueZombie = (team[tanker].unit.number == 212 || team[tanker].unit.number == 213);
+        var viviHeal = data.team[vivi].rcv * 5;
+        if (isTrueZombie) // laboon and friends
+            return 1 + viviHeal >= Math.floor($scope.data.hp.max / 2);
+        else
+            return viviHeal * 5;
     };
 
     // TODO Stop modifying prototypes because you're lazy

@@ -40,28 +40,6 @@ body, #main, #hp, #other {
     flex-direction: column;
 }
 
-#warningContainer {
-    width: 100%;
-    position: fixed;
-    bottom: 0px;
-    left: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-}
-
-#warningContainer > div {
-    width: 100%;
-    padding: 5px;
-    margin: 0;
-    text-align: right;
-    display: none;
-}
-
-#warningContainer > .visible {
-    display: block;
-}
-
 /******************
  * MAIN UNIT PANE *
  ******************/
