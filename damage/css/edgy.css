@@ -70,3 +70,7 @@ li.STR > div, li.QCK > div, li.DEX > div, li.PSY > div, li.INT > div {
 .modal-footer {
     background-color: #dfe1e8;
 }
+
+.unitLevel {
+    color: black;
+}
