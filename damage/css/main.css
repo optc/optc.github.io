@@ -4,7 +4,7 @@
 
 body, html {
     height: 100%;
-    font-family: 'Droid Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -63,7 +63,7 @@ body, #main, #hp, #other {
 }
 
 .empty:hover {
-    border-color: black !important;
+    border-color: black;
     opacity: 1 !important;
 }
 

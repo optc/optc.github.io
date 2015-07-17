@@ -461,7 +461,7 @@ directives.special = function() {
                 removeType();
                 var unit = scope.data.team[scope.slot].unit;
                 if (enabled) element.addClass(unit.type);
-                type = (!unit ? unit.type : null);
+                type = (unit ? unit.type : null);
                 isSelected = enabled;
                 if (enabled && window.specials[unit.number+1].warning)
                     scope.notify({ text: window.specials[unit.number+1].warning, type: 'warning' });

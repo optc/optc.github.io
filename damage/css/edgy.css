@@ -1,0 +1,72 @@
+html, body {
+    background-color: #2b303b;
+}
+
+#hp-rcv {
+    color: white;
+}
+
+.damage.STR, li.STR, #gather {
+    background-color: #bf616a;
+}
+
+.damage.QCK, li.QCK {
+    background-color: #96b5b4;
+}
+
+.damage.DEX, li.DEX {
+    background-color: #a3be8c;
+}
+
+.damage.PSY, li.PSY {
+    background-color: #ebcb8b;
+}
+
+.damage.INT, li.INT {
+    background-color: #b48ead;
+}
+
+li.STR > div, li.QCK > div, li.DEX > div, li.PSY > div, li.INT > div {
+    color: white !important;
+}
+
+.noUi-target {
+    border: none;
+}
+
+.btn-primary {
+    background-color: #c0c5ce !important;
+    color: black !important;
+    border: none !important;
+}
+
+.btn-info {
+    background-color: #eff1f5 !important;
+    color: black !important;
+    border: none !important;
+}
+
+.panel {
+    background-color: #4f5b66;
+}
+
+#menu li {
+    border-bottom: 2px solid #343d46;
+}
+
+.unit, .unit:hover {
+    border-color: white;
+    color: white;
+}
+
+.modal-header {
+    background-color: #65737e;
+}
+
+.modal-body {
+    background-color: #eff1f5;
+}
+
+.modal-footer {
+    background-color: #dfe1e8;
+}
