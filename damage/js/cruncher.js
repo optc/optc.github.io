@@ -510,19 +510,21 @@ var CruncherCtrl = function($scope, $timeout) {
         });
     };
 
-    // TODO Redo this and add the other zombie units
     var checkZombieTeam = function(data) {
         var team = $scope.data.team;
         if (!team[0].unit || !team[1].unit) return null;
-        var vivi   = team[0].unit.number == 72 ? 0 : 1;
-        var tanker = team[0].unit.number == 72 ? 1 : 0;
-        if (team[vivi].unit.number != 72 || [ 212, 213, 217, 218 ].indexOf(team[tanker].unit.number) == -1) return null; // not a zombie team
-        var isTrueZombie = (team[tanker].unit.number == 212 || team[tanker].unit.number == 213);
-        var viviHeal = data.team[vivi].rcv * 5;
-        if (isTrueZombie) // laboon and friends
-            return 1 + viviHeal >= Math.floor($scope.data.hp.max / 2);
-        else
-            return viviHeal * 5;
+        var ids = [ team[0].unit.number + 1, team[1].unit.number + 1 ];
+        if (!zombies.hasOwnProperty(ids[0]) || !zombies.hasOwnProperty(ids[1])) return;
+        var healer = -1, other = -1;
+        for (var i=0;i<2;++i) {
+           if (zombies[ids[i]].type == 'healer') healer = i;
+           else other = i;
+        }
+        var healAmount = zombies[ids[healer]].amount || Math.floor(data.team[healer].rcv * zombies[ids[healer]].multiplier);
+        if (zombies[ids[other]].type == 'zombie') // zombie
+            return 1 + healAmount >= Math.floor($scope.data.hp.max * zombies[ids[other]].threshold);
+        else // reducer
+            return Math.floor(healAmount / zombies[ids[other]].multiplier);
     };
 
     // TODO Stop modifying prototypes because you're lazy
