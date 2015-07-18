@@ -95,12 +95,12 @@ var CruncherCtrl = function($scope, $timeout) {
             var hp = getStatOfUnit(x,'hp');
             hp += getShipBonus('hp',true,x.unit,n);
             hp *= getShipBonus('hp',false,x.unit,n);
-            hpMax += applyCaptainEffectsToHP(n,hp);
+            hpMax += Math.floor(applyCaptainEffectsToHP(n,hp));
             // rcv
             var rcv = getStatOfUnit(x,'rcv');
             rcv += getShipBonus('rcv',true,x.unit,n);
             rcv *= getShipBonus('rcv',false,x.unit,n);
-            rcvTotal += applyCaptainEffectsAndSpecialsToRCV(n,rcv);
+            rcvTotal += Math.floor(applyCaptainEffectsAndSpecialsToRCV(n,rcv));
         });
         result.rcv = Math.max(0,rcvTotal);
         result.zombie = checkZombieTeam(result);
