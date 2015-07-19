@@ -1,0 +1,83 @@
+body, html {
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    padding: 20px 0 40px 0;
+}
+
+th {
+    cursor: pointer;
+}
+
+th:hover {
+    text-decoration: underline;
+}
+
+#tableContainer, #queryContainer {
+    width: 80%;
+    margin: auto;
+}
+
+#queryContainer {
+    padding: 10px;
+}
+
+input {
+    width: 100%;
+}
+
+/**********
+ * TABLES *
+ **********/
+
+.table-striped-column > tbody > tr td:nth-of-type(odd) {
+    background-color: #f9f9f9;
+}
+
+td:nth-child(2) {
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+td + td ~ td {
+    min-width: 75px;
+}
+
+.dataTables_filter {
+    display: none;
+}
+
+.dataTables_length {
+    float: right !important;
+}
+
+/*******************
+ * SLOT THUMBNAILS *
+ *******************/
+
+.slot {
+    display: inline-block;
+}
+
+.slot.big {
+    width: 112px;
+    height: 112px;
+    background-size: 112px 112px;
+    margin: 4px;
+}
+
+.slot.medium {
+    width: 80px;
+    height: 80px;
+    background-size: 80px 80px;
+    margin: 2px;
+}
+
+.slot.small {
+    width: 40px;
+    height: 40px;
+    background-size: 40px 40px;
+    margin: 1px;
+}
