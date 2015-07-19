@@ -65,7 +65,7 @@ var MainCtrl = function($scope, $controller, $filter) {
             $scope.notify({ text: 'Maximum tankable damage: ' + $filter('number')(zombie) + ' HP', type: 'information' });
     });
 
-    $scope.showGatherButton = window.units.some(function(x) { return x.growth.atk === 0; });
+    $scope.showGatherButton = window.units.some(function(x) { return x.growth && x.growth.atk === 0; });
 
     // instantiate storage controller separately
     
