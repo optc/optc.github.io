@@ -3,6 +3,7 @@
 var app = angular.module('optc', [ 'ui.router', 'ui.bootstrap', 'ngSanitize' ]);
 
 var lastQuery = null;
+var filters = { custom: [ ] };
 
 /********************
  * Common functions *
@@ -158,7 +159,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
 
 app.controller('MainCtrl',function($scope, $state, $stateParams, $timeout) {
 
-    if (!$scope.filters) $scope.filters = { custom: [ ] };
+    if (!$scope.filters) $scope.filters = filters;
 
     if ($stateParams.query != lastQuery) {
         lastQuery = $stateParams.query;
