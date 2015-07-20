@@ -187,6 +187,7 @@ app.controller('MainCtrl',function($scope, $state, $stateParams, $timeout) {
         if ((JSON.parse(localStorage.getItem('warning')) || 0) < 1) {
             noty({ text: 'Captain abilities filters and specials filters are only supported up to Rayleigh right now',
                 layout: 'topRight', type: 'warning', timeout: 10000 });
+            localStorage.warning = 0;
         }
     });
 
