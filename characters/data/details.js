@@ -1625,14 +1625,14 @@ var details = {
     },
     362: {
         special: "For 2 turns, boosts the amount healed by RCV orbs by 1.5x, then 2x, then 2.5x from the third crew member onward.",
-        captain: "Doubles ATK and RCV of PSY characters by 2x",
+        captain: "Boosts ATK and RCV of PSY characters by 2x",
         evolvers: [ 118, 81, 83, 303, 103 ],
         evolution: 363,
         cooldown: [ 13, 8 ]
     },
     363: {
         special: "For 2 turns, boosts the amount healed by RCV orbs by 1.5x, then 2x, then 2.5x from the third crew member onward.",
-        captain: "Doubles ATK and RCV of PSY characters by 2x",
+        captain: "Boosts ATK and RCV of PSY characters by 2x",
         cooldown: [ 13, 8 ]
     },
     364: {
