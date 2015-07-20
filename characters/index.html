@@ -22,12 +22,16 @@
         <script src="../damage/js/libs/angular.min.js"></script>
         <script src="../damage/js/libs/angular-ui-router.min.js"></script>
         <script src="../damage/js/libs/bootstrap.min.js"></script>
+        <script src="../damage/js/libs/jquery.noty.packaged.min.js"></script>
         <script src="../damage/js/libs/ui-bootstrap-tpls.min.js"></script>
 
+        <script src="js/libs/angular-sanitize.min.js"></script>
         <script src="js/libs/jquery.lazyload.min.js"></script>
         <script src="js/libs/jquery.dataTables.min.js"></script>
 
         <script src="../damage/data/units.js"></script>
+        <script src="data/details.js"></script>
+        <script src="data/matchers.js"></script>
         <script src="data/articles.js"></script>
 
         <script src="js/app.js"></script>
@@ -36,16 +40,11 @@
 
     </head>
 
-    <body ng-controller="MainCtrl">
+    <body>
 
-        <div id="queryContainer">
-            <input type="text" id="picker" placeholder="type to filter (usual operators work)"
-                ng-model="query" ng-model-options="{ debounce: 500 }" auto-focus>
-        </div>
+        <div class="popup" ui-view="popup"></div>
 
-        <div id="tableContainer">
-
-            <character-table></character-table>
+        <div id="mainContainer" ui-view>
 
         </div>
 

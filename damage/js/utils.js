@@ -11,6 +11,11 @@ var getThumbnailUrl = function(n) {
     return 'http://onepiece-treasurecruise.com/wp-content/uploads/f' + id + '.png';
 };
 
+var getBigThumbnailUrl = function(n) {
+    var id = ('0000' + (n+1)).slice(-4).replace(/(057[54])/,'0$1'); // missing aokiji image
+    return 'http://onepiece-treasurecruise.com/wp-content/uploads/c' + id + '.png';
+};
+
 var getTitle = function(arg) {
     if (arg === null || arg === undefined) return null;
     if (arg.constructor == Object) {
@@ -97,6 +102,7 @@ window.Utils = {
     // thumbnails
     createThumbnail: createThumbnail,
     getThumbnailUrl: getThumbnailUrl,
+    getBigThumbnailUrl: getBigThumbnailUrl,
     getThumbnailTitle: getTitle,
     isClickOnOrb: isClickOnOrb,
     // misc

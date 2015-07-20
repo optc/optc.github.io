@@ -1,0 +1,14 @@
+<div id="leftContainer" filters></div>
+
+<div id="rightContainer">
+
+    <div id="queryContainer">
+        <input type="text" id="picker" placeholder="type to filter (usual operators work)"
+            ng-model="query" ng-model-options="{ debounce: 500 }" auto-focus>
+    </div>
+
+    <div id="tableContainer">
+        <character-table></character-table>
+    </div>
+
+</div>

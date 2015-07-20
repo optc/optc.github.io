@@ -1,4 +1,6 @@
 body, html {
+    height: 100%;
+    padding-left: 250px;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -6,20 +8,24 @@ body {
     padding: 20px 0 40px 0;
 }
 
-th {
-    cursor: pointer;
-}
-
-th:hover {
-    text-decoration: underline;
-}
-
-#tableContainer, #queryContainer {
+#mainContainer {
     width: 80%;
+    height: 100%;
     margin: auto;
+    display: flex;
 }
 
 #queryContainer {
+    padding: 10px;
+}
+
+#leftContainer {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 250px;
+    height: 100%;
+    overflow-y: auto;
     padding: 10px;
 }
 
@@ -27,21 +33,76 @@ input {
     width: 100%;
 }
 
+.filter-header {
+    display: block;
+    font-weight: bold;
+    margin: 10px 5px 5px 5px;
+}
+
+.type-filter, .class-filter, .custom-filter {
+    display: inline-block;
+    margin: 5px 5px 0 0;
+    padding: 3px 0;
+    border-radius: 10px;
+    width: 50px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.type-filter:not(.active) {
+    opacity: 0.4;
+}
+
+.type-filter.active {
+    font-weight: bold;
+}
+
+.STR { background: salmon; }
+.QCK { background: lightskyblue; }
+.DEX { background: lightgreen; }
+.PSY { background: gold; }
+.INT { background: orchid; }
+
+.class-filter {
+    width: 75px;
+    border: 1px solid gray;
+}
+
+.class-filter.active, .custom-filter.active {
+    background: red;
+    color: white;
+    font-weight: bold;
+}
+
+.custom-filter {
+    width: 95%; 
+    border: 1px solid gray;
+    display: block;
+};
+
 /**********
  * TABLES *
  **********/
 
-.table-striped-column > tbody > tr td:nth-of-type(odd) {
+#mainTable th {
+    cursor: pointer;
+}
+
+#mainTable th:hover {
+    text-decoration: underline;
+}
+
+.table-striped-column > * > tr > :nth-of-type(even) {
     background-color: #f9f9f9;
 }
 
-td:nth-child(2) {
+#mainTable td:nth-child(2) {
     width: 100%;
     white-space: nowrap;
     text-overflow: ellipsis;
 }
 
-td + td ~ td {
+#mainTable td + td ~ td {
     min-width: 75px;
 }
 
@@ -53,12 +114,143 @@ td + td ~ td {
     float: right !important;
 }
 
+/*********
+ * POPUP *
+ *********/
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.65);
+    z-index: 100;
+}
+
+.custom-modal {
+    z-index: 101;
+    position: fixed;
+    width: 80%;
+    height: 80%;
+    max-width: 800px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal-content, .modal-dialog {
+    width: 100%;
+    height: 100%;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-dialog {
+    margin: 0;
+}
+
+.modal-content {
+    border-radius: 0;
+}
+
+.modal-header {
+    background-color: #428bca;
+    color: white;
+    min-height: 51px;
+    max-height: 51px;
+}
+
+.modal-body {
+    overflow-y: auto;
+    text-align: center;
+    position: relative;
+}
+
+.modal-body td {
+    text-align: left;
+}
+
+.animated {
+    animation-duration: 0.2s;
+    -webkit-animation-duration: 0.2s;
+}
+
+.modal-filter {
+    width: 100%;
+}
+
+.modal-div:not(.slim) {
+    height: 340px;
+    overflow: auto;
+}
+
+.modal-div.tiny {
+    height: 42px;
+};
+
+.modal-div table {
+    width: 100%;
+}
+
+.modal-div th {
+    padding: 10px 10px 10px 5px;
+}
+
+.modal-div .to-the-right {
+    text-align: right;
+}
+
+.modal-div.padded {
+    padding: 10px;
+}
+
+.page-header {
+    margin: 0 0 15px 0;
+    text-align: left;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.arrow {
+    font-size: 2em;
+    position: relative;
+    bottom: 32px;
+    margin: 0 10px 0 10px;
+}
+
+.back-button {
+    position: relative;
+    margin-right: 10px;
+    bottom: 3px;
+}
+
+.mini-type {
+    color: white;
+    border-radius: 10px;
+    display: inline-block;
+    width: 35px;
+    text-align: center;
+}
+
 /*******************
  * SLOT THUMBNAILS *
  *******************/
 
 .slot {
     display: inline-block;
+}
+
+.slot.huge {
+    width: 320px;
+    height: 256px;
+    background-size: 320px 256px;
+    margin: 10px;
 }
 
 .slot.big {

@@ -1,0 +1,131 @@
+<div class="backdrop" ui-sref="^"></div>
+
+<div class="custom-modal">
+    <div class="modal-dialog">
+        <div class="modal-content animated fadeInDown">
+
+            <div class="modal-header">
+                <div class="fa fa-arrow-left btn btn-default back-button" ng-if="withButton" ng-click="onBackClick()"></div>    
+                {{unit.name}}
+            </div>
+
+            <div class="modal-body">
+
+                <div class="slot huge" decorate-slot big="true" uid="unit.number"></div>
+
+                <h3 class="page-header">Details</h3>
+
+                <div class="panel panel-default">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Class</th>
+                                <th>Type</th>
+                                <th>Stars</th>
+                                <th>Cost</th>
+                                <th>Combo</th>
+                                <th>Max Level</th>
+                                <!--<th>EXP to Max</th>-->
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>{{unit.class}}</td>
+                                <td>{{unit.type}}</td>
+                                <td>{{unit.stars}}</td>
+                                <td>{{unit.cost}}</td>
+                                <td>{{unit.combo}}</td>
+                                <td>{{unit.maxLevel}}</td>
+                                <!--<td>{{unit.maxEXP}}</td>-->
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3 class="page-header">Stats</h3>
+
+                <div class="panel panel-default">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Level</th>
+                                <th>HP</th>
+                                <th>ATK</th>
+                                <th>RCV</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>{{unit.minHP}}</td>
+                                <td>{{unit.minATK}}</td>
+                                <td>{{unit.minRCV}}</td>
+                            </tr>
+                            <tr>
+                                <td>{{unit.maxLevel}}</td>
+                                <td>{{unit.maxHP}}</td>
+                                <td>{{unit.maxATK}}</td>
+                                <td>{{unit.maxRCV}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3 class="page-header">Abilities</h3>
+
+                <div class="panel panel-default">
+                    <table class="table table-striped-column">
+                        <tbody>
+                            <tr>
+                                <td>Captain Ability</td>
+                                <td ng-bind-html="details.captain | decorate"></td>
+                            </tr>
+                            <tr>
+                                <td>Special</td>
+                                <td ng-bind-html="details.special | decorate"></td>
+                            </tr>
+                            <tr ng-if="details.cooldown">
+                                <td>Cooldown</td>
+                                <td>
+                                    {{details.cooldown.length ? details.cooldown[0] : details.cooldown}} turns
+                                    {{details.cooldown.length ? ' (maxed: ' + details.cooldown[1] + ' turns)' : ''}}
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3 class="page-header" ng-if="details.evolution">Evolutions</h3>
+
+                <div ng-if="details.evolution && !details.evolution.length">
+
+                    <div class="slot medium clickable" ng-repeat="evolver in details.evolvers"
+                        decorate-slot uid="evolver-1" ui-sref="main.view({ id: evolver, previous: getPrevious() })"></div>
+
+                    <i class="fa fa-arrow-right arrow"></i>
+
+                    <div class="slot medium clickable" decorate-slot uid="details.evolution-1"
+                        ui-sref="main.view({ id: details.evolution, previous: getPrevious() })"></div>
+
+                </div>
+
+                <div ng-if="details.evolution && details.evolution.length">
+                    <div class="panel panel-default" ng-repeat="evolverSet in details.evolvers">
+
+                        <div class="slot medium clickable" ng-repeat="evolver in evolverSet"
+                            decorate-slot uid="evolver-1" ui-sref="main.view({ id: evolver, previous: getPrevious() })"></div>
+
+                        <i class="fa fa-arrow-right arrow"></i>
+
+                        <div class="slot medium clickable" decorate-slot uid="details.evolution[$index] - 1"
+                            ui-sref="main.view({ id: details.evolution[$index] - 1, previous: getPrevious() })"></div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
