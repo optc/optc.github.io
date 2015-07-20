@@ -98,9 +98,13 @@ $.fn.dataTable.ext.search.push(function(settings, data, index) {
 
 app.controller('MainCtrl',function($scope, $timeout) {
 
+    var temp = window.location.href.match(/#(.+)$/);
+    $scope.query = (temp ? decodeURIComponent(temp[1]) : null);
+
     $scope.$watch('query',function(query) {
         currentParameters = generateSearchParameters(query);
         table.fnDraw();
+        if (query) window.location.href = '#' + query;
     },true);
 
 });
