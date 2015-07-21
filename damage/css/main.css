@@ -322,7 +322,6 @@ body, #main, #hp, #other {
     height: 100%;
     transition: left .1s linear;
     margin-bottom: 0;
-    z-index: 200;
 }
 
 #menu.open {
@@ -680,7 +679,7 @@ li input {
  * MOBILE SUPPORT *
  ******************/
 
-@media only screen and (max-width: 980px) {
+@media only screen and (max-width: 768px) {
 
     html, body {
         width: 600px;

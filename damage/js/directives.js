@@ -103,12 +103,15 @@ directives.defenseOnClick = function() {
         restrict: 'A',
         controller: function($scope, $state) { $scope.go = $state.go; },
         link: function(scope, element, attrs) {
-            element.click(function(e) {
-                if (e.which == 2 || (e.which == 1 && e.ctrlKey))
-                    scope.go('.defense');
-                else if (e.which == 1)
-                    element.find('input').focus();
-            });
+            element.longpress(
+                function(e) { scope.go('.defense'); },
+                function(e) {
+                    if (e.which == 2 || (e.which == 1 && e.ctrlKey))
+                        scope.go('.defense');
+                    else if (e.which == 1)
+                        element.find('input').focus();
+                }
+            );
         }
     };
 };
@@ -122,10 +125,13 @@ directives.shipManager = function() {
             var background = element.find('#ship-background')[0];
             background.style.width = Math.round(scope.data.ship.level * 10)  + '%';
             scope.level = scope.data.ship.level;
-            element.click(function(e) {
-                if (e.which == 2 || (e.which == 1 && e.ctrlKey))
-                    scope.go('.ship');
-            });
+            element.longpress(
+                function(e) { scope.go('.ship'); },
+                function(e) {
+                    if (e.which == 2 || (e.which == 1 && e.ctrlKey))
+                        scope.go('.ship');
+                }
+            );
             var updateBackground = function(perc) {
                 perc = Math.min(1,perc);
                 background.style.width = Math.min(Math.round(perc * 100),100)  + '%';

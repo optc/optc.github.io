@@ -330,4 +330,16 @@ app.filter('decorate',function() {
     };
 });
 
+
+/********************
+ * GA Configuration *
+ ********************/
+
+app
+    .run(function($rootScope, $location, $window) {
+        $rootScope.$on('$stateChangeSuccess',function(e) {
+            if (ga) ga('send', 'pageview', '/characters');
+        });
+    });
+
 })();
