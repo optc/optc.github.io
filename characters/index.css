@@ -19,6 +19,7 @@ body {
 
 #leftContainer {
     min-width: 250px;
+    max-width: 250px;
     height: 100%;
     padding: 10px;
 }
@@ -70,6 +71,8 @@ input {
 .DEX { background: lightgreen; }
 .PSY { background: gold; }
 .INT { background: orchid; }
+.RCV { background: peru; }
+.TND { background: coral; }
 
 .class-filter {
     width: 75px;

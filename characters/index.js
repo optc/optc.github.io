@@ -185,10 +185,10 @@ app.controller('MainCtrl',function($scope, $state, $stateParams, $timeout) {
 
     $timeout(function() {
         $(window).trigger('scroll');
-        if ((JSON.parse(localStorage.getItem('warning')) || 0) < 1) {
-            noty({ text: 'Captain abilities filters and specials filters are only supported up to Rayleigh right now',
+        if ((JSON.parse(localStorage.getItem('warning')) || 0) < 2) {
+            noty({ text: 'Captain abilities filters and specials filters are only supported up to Miss Doublefinger (#400) right now',
                 layout: 'topRight', type: 'warning', timeout: 10000 });
-            localStorage.warning = 1;
+            localStorage.warning = 2;
         }
     });
 
@@ -325,7 +325,7 @@ app.directive('filters',function($compile) {
 app.filter('decorate',function() {
     return function(input) {
         if (!input) return 'None';
-        return input.replace(/\[?(STR|DEX|QCK|PSY|INT)\]?/g,'<span class="mini-type $1">$1</span>');
+        return input.replace(/\[?(STR|DEX|QCK|PSY|INT|RCV|TND)\]?/g,'<span class="mini-type $1">$1</span>');
 
     };
 });

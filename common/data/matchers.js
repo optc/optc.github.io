@@ -41,7 +41,7 @@ var matchers = [
     {
         name: 'Positional captains',
         target: 'captain',
-        matcher: /after scoring/i
+        matcher: /(after scoring|following a chain)/i
     },
 
     {
@@ -115,7 +115,7 @@ var matchers = [
     {
         name: 'Orb controllers',
         target: 'special',
-        matcher: /Changes.+orbs/i
+        matcher: /(Changes.+orbs|Fills.*slots)/i
     },
 
     {
