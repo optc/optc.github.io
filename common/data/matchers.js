@@ -137,6 +137,12 @@ var matchers = [
     },
 
     {
+        name: 'Defense reducers',
+        target: 'special',
+        matcher: /Reduces defense/i
+    },
+
+    {
         name: 'Meat producers',
         target: 'special',
         matcher: /into.+\[RCV\]/i
