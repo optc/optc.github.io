@@ -2,8 +2,35 @@
 
     <head>
         <title>OPTC Stuff</title>
-        <link rel="stylesheet" type="text/css" href="animate.css" />
-        <link rel="stylesheet" type="text/css" href="style.css" />
+        <style>
+            body, html {
+                font-family: 'Open Sans', sans-serif;
+                overflow: hidden;
+                display: flex;
+                flex-direction: column;
+                justify-contents: center;
+            }
+
+            #container {
+                width: 250px;
+                margin: auto;
+            }
+
+            #container > a {
+                width: 220px;
+                padding: 15px;
+                margin: 5px;
+                color: gray;
+                text-align: center;
+                display: block;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+            #container > :first-child { background-color: rgba(191,97,106,0.4); }
+            #container > :nth-child(2) { background-color: rgba(150,181,180,0.4); }
+        </style>
+        <link rel="stylesheet" type="text/css" href="common/libs/css/animate.css" />
         <link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
         <meta name="viewport" content="initial-scale=1, user-scalable=no, user-scalable=0">
     </head>
