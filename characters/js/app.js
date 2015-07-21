@@ -218,7 +218,7 @@ app.directive('characterTable',function($rootScope, $compile) {
     return {
         restrict: 'E',
         replace: true,
-        template: '<table id="mainTable" class="table table-striped-column"></table>',
+        template: '<table id="mainTable" class="table table-striped-column panel panel-default"></table>',
         link: function(scope, element, attrs) {
             table = element.dataTable({
                 iDisplayLength: JSON.parse(localStorage.getItem('unitsPerPage')) || 10,
