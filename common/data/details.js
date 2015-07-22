@@ -146,7 +146,7 @@ var details = {
         cooldown: [ 15, 8 ]
     },
     24: {
-        special: "Reduces all enemies' defense by 50% for 2 turns",
+        special: "Reduces the defense of all enemies by 50% for 2 turns",
         captain: "Boosts RCV of STR characters by 1.5x",
         cooldown: [ 15, 10 ]
     },
@@ -197,7 +197,7 @@ var details = {
         evolution: 34
     },
     34: {
-        special: "Reduces all enemies' defense by 100% for 1 turn",
+        special: "Reduces the defense of all enemies by 100% for 1 turn",
         captain: "Damage received from INT enemies reduced by 30%",
         cooldown: [ 25, 20 ]
     },
@@ -514,7 +514,7 @@ var details = {
         evolution: 147
     },
     127: {
-        special: "Reduces all enemies' defense by 50% for 1 turn",
+        special: "Reduces the defense of all enemies by 50% for 1 turn",
         evolvers: [ 90 ],
         evolution: 148
     },
@@ -570,7 +570,7 @@ var details = {
         evolution: 157
     },
     137: {
-        special: "Reduces all enemies' defense by 50% for 1 turn",
+        special: "Reduces the defense of all enemies by 50% for 1 turn",
         evolvers: [ 90 ],
         evolution: 158,
         cooldown: [ 15, 7 ]
@@ -620,7 +620,7 @@ var details = {
         special: "Deals 10x character's ATK in STR damage to one enemy"
     },
     148: {
-        special: "Reduces all enemies' defense by 50% for 1 turn",
+        special: "Reduces the defense of all enemies by 50% for 1 turn",
     },
     149: {
         special: "Changes [QCK] orbs into [DEX] orbs",
@@ -656,7 +656,7 @@ var details = {
         special: "Deals 5x character's ATK in STR damage to all enemies"
     },
     158: {
-        special: "Reduces all enemies' defense by 50% for 1 turn",
+        special: "Reduces the defense of all enemies by 50% for 1 turn",
         cooldown: [ 15, 7 ]
     },
     159: {
@@ -857,7 +857,7 @@ var details = {
         evolution: 206
     },
     206: {
-        special: "Reduces all enemies' defense by 50% for 2 turns",
+        special: "Reduces the defense of all enemies by 50% for 2 turns",
         captain: "Boosts HP and RCV of DEX characters by 1.2x",
         cooldown: [ 15, 10 ]
     },
@@ -1190,7 +1190,7 @@ var details = {
     },
     266: { },
     267: {
-        special: "Reduces all enemies' defense by 50% for 1 turn",
+        special: "Reduces the defense of all enemies by 50% for 1 turn",
         captain: "Boosts ATK by 1.5x",
         cooldown: 15
     },
@@ -1220,7 +1220,7 @@ var details = {
         special: "Deals 10x character's ATK in STR damage to one enemy"
     },
     275: {
-        special: "Reduces all enemies' defense by 50% for 1 turn",
+        special: "Reduces the defense of all enemies by 50% for 1 turn",
     },
     276: {
         special: "Changes [QCK] orbs into [DEX] orbs",
@@ -1256,7 +1256,7 @@ var details = {
         special: "Deals 5x character's ATK in STR damage to all enemies"
     },
     285: {
-        special: "Reduces all enemies' defense by 50% for 1 turn",
+        special: "Reduces the defense of all enemies by 50% for 1 turn",
         cooldown: [ 15, 7 ]
     },
     286: {
@@ -1301,7 +1301,7 @@ var details = {
         cooldown: [ 40, 15 ]
     },
     295: {
-        special: "Reduces all enemies' defense by 50% for 1 turn",
+        special: "Reduces the defense of all enemies by 50% for 1 turn",
         captain: "Boosts HP of DEX characters by 2x",
         cooldown: [ 15, 10 ]
     },
@@ -1357,14 +1357,14 @@ var details = {
         cooldown: [ 18, 10 ]
     },
     309: {
-        special: "Cut all enemies' current HP by 10% and reduces all enemies' defense by 50% for 3 turns",
+        special: "Cut all enemies' current HP by 10% and reduces the defense of all enemies by 50% for 3 turns",
         captain: "Greatly reduces RCV and reduces damage received by 40%",
         evolvers: [ 118, 82, 83, 304, 104 ],
         evolution: 310,
         cooldown: [ 23, 15 ]
     },
     310: {
-        special: "Cut all enemies' current HP by 10% and reduces all enemies' defense by 50% for 3 turns",
+        special: "Cut all enemies' current HP by 10% and reduces the defense of all enemies by 50% for 3 turns",
         captain: "Greatly reduces RCV and reduces damage received by 40%",
         cooldown: [ 23, 15 ]
     },
@@ -1723,7 +1723,7 @@ var details = {
         cooldown: [ 25, 8 ]
     },
     382: {
-        special: "Reduces all enemies' defense by 50% for 1 turn",
+        special: "Reduces the defense of all enemies by 50% for 1 turn",
         cooldown: [ 15, 10 ]
     },
     383: {
@@ -1767,12 +1767,12 @@ var details = {
         cooldown: [ 17, 8 ],
     },
     391: {
-        special: "Damage received reduced by 90% for 1 turn, reduces all enemies' defense by 80% for 1 turn and deals 1,000 damage to all enemies",
+        special: "Damage received reduced by 90% for 1 turn, reduces the defense of all enemies by 80% for 1 turn and deals 1,000 damage to all enemies",
         captain: "Boosts RCV of DEX characters by 1.5x",
         cooldown: [ 23, 14 ]
     },
     392: {
-        special: "Damage received reduced by 90% for 1 turn, reduces all enemies' defense by 80% for 1 turn and deals 1,000 damage to all enemies",
+        special: "Damage received reduced by 90% for 1 turn, reduces the defense of all enemies by 80% for 1 turn and deals 1,000 damage to all enemies",
         captain: "Boosts RCV of DEX characters by 2x",
         cooldown: [ 23, 14 ]
     },
@@ -1813,5 +1813,243 @@ var details = {
         special: "Boosts ATK of DEX characters by 1.5x for 1 turn",
         captain: "Boosts HP of Striker characters by 2x",
         cooldown: [ 15, 8 ]
+    },
+    401: {
+        special: "Damage received reduced by 50% for 1 turn, boosts ATK of Slasher characters by 1.25x for 1 turn",
+        captain: "Damage received reduced by 10%, boosts ATK of Slasher characters by 1.5x, slightly reduces ATK of every other character", // TODO check debuff amount
+        cooldown: [ 18, 12 ]
+    },
+    402: {
+        special: "Damage received reduced by 50% for 1 turn, boosts ATK of Slasher characters by 1.25x for 1 turn",
+        captain: "Damage received reduced by 10%, boosts ATK of Slasher characters by 2x, reduces reduces ATK of every other character", // TODO check debuff amount
+        cooldown: [ 18, 12 ]
+    },
+    403: {
+        special: "Deals several times the character's ATK in QCK damage to all enemies",
+        specialNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the lower the HP is. The multiplier is calculated as: 150 * ( 1 - (remaining HP) / (total HP) )",
+        captain: "Damage received reduced by 50% when HP is low, boosts RCV by 3x when HP is low", // TODO check ho low
+        cooldown: [ 20, 20 ]
+    },
+    404: {
+        special: "Boosts ATK of Shooter characters by 1.5x",
+        captain: "Damage received reduced by 50% for 2 turns, boosts RCV by 2x for 2 turns",
+        cooldown: [ 23, 14 ]
+    },
+    405: {
+        special: "Boosts ATK of Shooter characters by 2x",
+        captain: "Damage received reduced by 50% for 2 turns, boosts RCV by 2x for 2 turns",
+        cooldown: [ 23, 14 ]
+    },
+    406: {
+        special: "Reduces HP to 1, deals 1,000 damage to all enemies and boosts ATK by 1.2x for 1 turn",
+        cooldown: [ 30, 15 ]
+    },
+    407: {
+        special: "Randomizes all orbs, deals 7x character's ATK in DEX damage to all enemies",
+        cooldown: [ 20, 10 ]
+    },
+    408: {
+        special: "Changes own orb into [INT], randomizes every other orb, deals 15x character's ATK in INT damage to all enemies",
+        captain: "Damage received reduced by 20%, boosts ATK of Slasher characters by 2x",
+        cooldown: [ 23, 18 ]
+    },
+    409: {
+        special: "Changes own orb into [QCK] deals 13x character's ATK in QCK damage to one enemy",
+        captain: "Boosts ATK of Fighter characters by 2x",
+        cooldown: [ 11, 6 ]
+    },
+    410: {
+        special: "Changes own orb into [QCK] deals 13x character's ATK in QCK damage to one enemy",
+        captain: "Boosts ATK of Fighter characters by 2.5x",
+        cooldown: [ 11, 6 ]
+    },
+    411: {
+        special: "Changes neighboring slots' orbs into [STR] orbs, deals 1,000 damage to one enemy",
+        captain: "Boosts ATK and HP of STR characters by 2x",
+        cooldown: [ 20, 14 ]
+    },
+    412: {
+        special: "Changes neighboring slots' orbs into [STR] orbs, deals 1,000 damage to one enemy",
+        captain: "Boosts ATK and HP of STR characters by 2x",
+        cooldown: [ 20, 14 ]
+    },
+    413: {
+        special: "Changes [STR] and [DEX] orbs into [INT] orbs",
+        captain: "Boosts ATK of INT characters by 2.5x if HP is above 99% at the start of the turn",
+        cooldown: [ 20, 10 ]
+    },
+    414: {
+        special: "Changes [STR] and [DEX] orbs into [INT] orbs",
+        captain: "Boosts ATK of INT characters by 3x if HP is above 99% at the start of the turn",
+        cooldown: [ 20, 10 ]
+    },
+    415: {
+        special: "Recovers 15x character's RCV in HP, delays all enemies for 1 turn",
+        captain: "Boosts ATK of QCK and PSY characters by 2.75x and their RCV by 1.5x if HP is above 70% at the start of the turn",
+        cooldown: [ 17, 13 ]
+    },
+    416: {
+        special: "Recovers 15x character's RCV in HP, delays all enemies for 1 turn",
+        captain: "Boosts ATK of QCK and PSY characters by 2.75x and their RCV by 1.5x if HP is above 70% at the start of the turn",
+        cooldown: [ 17, 13 ]
+    },
+    417: {
+        special: "Freely switch 2 orbs between slots twice, boosts orbs effectiveness by 2x for 1 turn",
+        captain: "Boosts ATK and HP of Slasher characters by 2x",
+        cooldown: [ 28, 14 ]
+    },
+    418: {
+        special: "Freely switch 2 orbs between slots twice, boosts orbs effectiveness by 2x for 1 turn",
+        captain: "Boosts ATK and HP of Slasher characters by 2x",
+        cooldown: [ 28, 14 ]
+    },
+    419: {
+        special: "Reduces the defense of all enemies by 50% for 2 turns, randomizes all orbs",
+        captain: "Boosts ATK of QCK characters by 2x",
+        cooldown: [ 15, 15 ]
+    },
+    420: {
+        special: "Reduces Silence duration by 3 turns, deals 15x character's ATK in STR damage to one enemy",
+        captain: "Boosts ATK, HP and RCV of STR characters by 1.5x",
+        cooldown: [ 23, 13 ]
+    },
+    421: {
+        special: "Reduces Bind duration by 2 turns, deals 10x character's ATK in DEX damage to all enemies",
+        captain: "Boosts ATK, HP and RCV of DEX characters by 1.5x",
+        cooldown: [ 20, 10 ]
+    },
+    422: {
+        special: "Damage received from INT enemies reduced by 100% for 1 turn, heals a random amount of HP",
+        captain: "Boosts ATK, HP and RCV of INT characters by 1.5x",
+        cooldown: [ 20, 10 ]
+    },
+    423: {
+        special: "Heals 4,343 HP, reduces the defense of all enemies by 50% for 2 turns",
+        captain: "Prevents death as long as HP is above 70%",
+        cooldown: [ 24, 15 ]
+    },
+    424: {
+        special: "Heals 4,343 HP, reduces the defense of all enemies by 50% for 2 turns",
+        captain: "Prevents death as long as HP is above 70%",
+        cooldown: [ 24, 15 ]
+    },
+    425: {
+        special: "Deals random PSY damage to all enemies",
+        captain: "Boosts ATK and HP of Slasher characters by 1.5x",
+        cooldown: [ 35, 18 ],
+    },
+    426: {
+        special: "Boosts ATK of STR characters by 1.05x for 5 turns",
+        captain: "Boosts HP of STR characters by 2x",
+        cooldown: [ 17, 12 ]
+    },
+    427: {
+        special: "Reduces Bind and Silence duration by 2 turns",
+        captain: "Boosts HP of DEX characters by 2x",
+        cooldown: [ 21, 16 ]
+    },
+    428: {
+        special: "Damage received reduced by 50% for 2 turns",
+        captain: "Boosts AATK of PSY characters by 2x",
+        cooldown: [ 20, 15 ]
+    },
+    429: {
+        special: "Deals 7x character's ATK in DEX damage to all enemies, reduces the defense of all enemies by 50% for 1 turn",
+        cooldown: [ 20, 15 ]
+    },
+    430: {
+        special: "Boosts orbs effectiveness by 1.5x for 1 turn",
+        captain: "Boosts ATK of DEX characters by 1.5x",
+        cooldown: [ 14, 9 ]
+    },
+    431: {
+        special: "Boosts orbs effectiveness by 1.5x for 1 turn",
+        captain: "Boosts ATK and HP of DEX characters by 1.5x",
+        cooldown: [ 14, 9 ]
+    },
+    432: {
+        special: "Deals 20x character's ATK in QCK damage to one enemy",
+        cooldown: [ 25, 18 ]
+    },
+    433: {
+        special: "Reduces Bind and Silence duration by 1 turn",
+        captain: "Boosts ATK by 2x following a chain of QCK > STR > DEX attacks no lower than Good",
+        cooldown: [ 16, 6 ]
+    },
+    434: {
+        special: "Boosts orbs effectiveness by 1.25x for 3 turns",
+        captain: "Boosts ATK by 2x following a chain of PSY > INT > INT attacks no lower than Good",
+        cooldown: [ 21, 11 ]
+    },
+    435: {
+        special: "Changes [RCV], [STR] and [DEX] orbs into either [STR] or [QCK] orbs",
+        captain: "Boosts ATK by 2x following a chain of INT > PSY > QCK attacks no lower than Good",
+        cooldown: [ 12, 8 ]
+    },
+    436: {
+        special: "Changes [RCV], [STR] and [DEX] orbs into either [STR] or [QCK] orbs",
+        captain: "Boosts ATK by 2.25x following a chain of INT > PSY > QCK attacks no lower than Good",
+        cooldown: [ 12, 8 ]
+    },
+    437: {
+        special: "Recovers 3x character's RCV in HP, damage received reduced by 80% for 1 turn, poisons all enemies",
+        captain: "Boosts RCV by 3x if HP is below 30% at the start of the turn", // TODO check threshold
+        cooldown: [ 18, 18 ]
+    },
+    438: {
+        special: "Recovers 3x character's RCV in HP, damage received reduced by 80% for 1 turn, poisons all enemies",
+        captain: "Boosts RCV by 5x if HP is below 30% at the start of the turn", // TODO check threshold
+        cooldown: [ 18, 18 ]
+    },
+    439: {
+        special: "Changes neighboring slots' orbs into [RCV], randomizes every other orb",
+        captain: "Recovers 5x character's RCV in HP at the end of the turn",
+        cooldown: [ 16, 16 ]
+    },
+    440: {
+        special: "Changes neighboring slots' orbs into [RCV], randomizes every other orb",
+        captain: "Recovers 7x character's RCV in HP at the end of the turn",
+        cooldown: [ 16, 16 ]
+    },
+    441: { },
+    442: { },
+    443: { },
+    444: {
+        captain: "Boosts ATK of Evolver characters by 2x if HP is above 70% at the start of the turn" // TODO check threshold
+    },
+    445: {
+        special: "Changes all orbs into either [STR], [DEX], [QCK], [PSY] or [INT] orbs, freely switch orbs between orbs 3 times",
+        captain: "Boosts ATK of Evolver characters by 2.5x if HP is above 70% at the start of the turn", // TODO check threshold
+        cooldown: [ 26, 17 ]
+    },
+    446: {
+        special: "Deals 10 times the damage received in the previous turn in type-less damage to all enemies",
+        captain: "Doubles damage received, boosts ATK of STR characters by 2 and their HP by 1.5x",
+        cooldown: [ 30, 15 ]
+    },
+    447: {
+        special: "Deals 10 times the damage received in the previous turn in type-less damage to all enemies",
+        captain: "Doubles damage received, boosts ATK of STR characters by 2.5 and their HP by 2.25x",
+        cooldown: [ 30, 15 ]
+    },
+    448: {
+        special: "Boosts chances of getting [QCK] orbs for 3 turns",
+        captain: "Boosts ATK of QCK characters by 3x if HP is above 99% at the start of the turn",
+        cooldown: [ 16, 10 ]
+    },
+    449: {
+        special: "Boosts chances of getting [QCK] orbs for 3 turns",
+        captain: "Boosts ATK of QCK characters by 3x if HP is above 99% at the start of the turn",
+        cooldown: [ 16, 10 ]
+    },
+    450: {
+        special: "Boosts ATK of Fighter characters by 1.5x for 1 turn, deals DEX damage to one enemy",
+        captain: "Boosts ATK of Fighter characters by 2x and their HP by 1.5x",
+        cooldown: [ 25, 18 ]
+    },
+    451: {
+        special: "Boosts ATK of Fighter characters by 1.5x for 1 turn, deals DEX damage to one enemy",
+        captain: "Boosts ATK of Fighter characters by 2x and their HP by 1.5x",
+        cooldown: [ 25, 18 ]
     }
 };

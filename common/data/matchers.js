@@ -121,7 +121,13 @@ var matchers = [
     {
         name: 'Orb randomizers',
         target: 'special',
-        matcher: /randomizes.+orbs/i
+        matcher: /randomizes.+orb/i
+    },
+
+    {
+        name: 'Orb switchers',
+        target: 'special',
+        matcher: /freely switch/i
     },
 
     {
@@ -157,7 +163,7 @@ var matchers = [
     {
         name: 'Damage reducers',
         target: 'special',
-        matcher: /Damage.+reduced/i
+        matcher: /Damage received.+reduced/i
     },
 
     {

@@ -249,6 +249,16 @@ input {
     text-align: center;
 }
 
+.notes {
+    font-size: 80%;
+}
+
+.notes:before {
+    content: "NOTES: ";
+    font-weight: bold;
+    color: gray;
+}
+
 /*******************
  * SLOT THUMBNAILS *
  *******************/

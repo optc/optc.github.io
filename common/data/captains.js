@@ -582,10 +582,10 @@ window.captains = {
         hp: function(p) { return p.unit.class == "Striker" ? 2 : 1; }
     },
     401: { // Mr.1
-        atk: function(p) { return p.unit.class == "Slasher" ? 1.5 : 0.9; }
+        atk: function(p) { return p.unit.class == "Slasher" ? 1.5 : 0.9; } // TODO Check debuff amount
     },
     402: { // Mr.1 evolved
-        atk: function(p) { return p.unit.class == "Slasher" ? 2 : 0.9; }
+        atk: function(p) { return p.unit.class == "Slasher" ? 2 : 0.9; } // TODO Check debuff amount
     },
     403: { // Rebecca
         rcv: function(p) { return p.percHP <= 30.0 ? 3 : 1; } // TODO Double check the HP

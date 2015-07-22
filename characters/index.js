@@ -115,7 +115,7 @@ $.fn.dataTable.ext.search.push(function(settings, data, index) {
     // filter by class
     if (filters.class && unit.class !== filters.class) return false;
     // filter by active matchers
-    if (!window.details.hasOwnProperty(id)) return false;
+    if (filters.custom.length > 0 && !window.details.hasOwnProperty(id)) return false;
     for (var i=0;i<filters.custom.length;++i) {
         var target = window.details[id][filters.custom[i].target];
         if (!target || !filters.custom[i].matcher.test(target)) return false;
@@ -185,10 +185,10 @@ app.controller('MainCtrl',function($scope, $state, $stateParams, $timeout) {
 
     $timeout(function() {
         $(window).trigger('scroll');
-        if ((JSON.parse(localStorage.getItem('warning')) || 0) < 2) {
-            noty({ text: 'Captain abilities filters and specials filters are only supported up to Miss Doublefinger (#400) right now',
+        if ((JSON.parse(localStorage.getItem('warning')) || 0) < 3) {
+            noty({ text: 'Captain abilities filters and specials filters are only supported up to Namur (#451) right now',
                 layout: 'topRight', type: 'warning', timeout: 10000 });
-            localStorage.warning = 2;
+            localStorage.warning = 3;
         }
     });
 

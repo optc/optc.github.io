@@ -82,7 +82,10 @@
                             </tr>
                             <tr>
                                 <td>Special</td>
-                                <td ng-bind-html="details.special | decorate"></td>
+                                <td>
+                                    <div ng-bind-html="details.special | decorate"></div>
+                                    <span class="notes" ng-if="details.specialNotes" ng-bind-html="details.specialNotes | decorate"></span>
+                                </td>
                             </tr>
                             <tr ng-if="details.cooldown">
                                 <td>Cooldown</td>
