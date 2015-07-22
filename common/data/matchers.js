@@ -212,6 +212,12 @@ var matchers = [
         name: 'Poisoners',
         target: 'special',
         matcher: /poisons/i
+    },
+
+    {
+        name: 'Zombies',
+        target: 'special',
+        matcher: /Prevents death/i
     }
 
 ];

@@ -78,7 +78,10 @@
                         <tbody>
                             <tr>
                                 <td>Captain Ability</td>
-                                <td ng-bind-html="details.captain | decorate"></td>
+                                <td>
+                                    <div ng-bind-html="details.captain | decorate"></div>
+                                    <span class="notes" ng-if="details.captainNotes" ng-bind-html="details.captainNotes | decorate"></span>
+                                </td>
                             </tr>
                             <tr>
                                 <td>Special</td>
