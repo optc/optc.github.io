@@ -185,10 +185,10 @@ app.controller('MainCtrl',function($scope, $state, $stateParams, $timeout) {
 
     $timeout(function() {
         $(window).trigger('scroll');
-        if ((JSON.parse(localStorage.getItem('warning')) || 0) < 3) {
-            noty({ text: 'Captain abilities filters and specials filters are only supported up to Namur (#451) right now',
+        if ((JSON.parse(localStorage.getItem('warning')) || 0) < 4) {
+            noty({ text: 'Captain abilities filters and specials filters are only supported up to Bellmere (#500) right now',
                 layout: 'topRight', type: 'warning', timeout: 10000 });
-            localStorage.warning = 3;
+            localStorage.warning = 4;
         }
     });
 

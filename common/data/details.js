@@ -2051,5 +2051,232 @@ var details = {
         special: "Boosts ATK of Fighter characters by 1.5x for 1 turn, deals DEX damage to one enemy",
         captain: "Boosts ATK of Fighter characters by 2x and their HP by 1.5x",
         cooldown: [ 25, 18 ]
+    },
+    452: {
+        special: "Changes own orb and the captain's orb into [PSY]",
+        captain: "Reduces cooldown of all specials by 3 turns at the start of the fight, boosts ATK of Striker characters by 2x",
+        cooldown: [ 16, 10 ]
+    },
+    453: {
+        special: "Changes own orb and the captain's orb into [PSY]",
+        captain: "Reduces cooldown of all specials by 3 turns at the start of the fight, boosts ATK of Striker characters by 2x",
+        cooldown: [ 16, 10 ]
+    },
+    454: {
+        special: "Boosts ATK of STR characters by 1.5x for 1 turn, deals 15x character's ATK in STR damage to all enemies",
+        captain: "Boosts ATK of STR characters by 2x, boosts damage of STR specials by 2x",
+        cooldown: [ 25, 18 ]
+    },
+    455: {
+        special: "Boosts ATK of STR characters by 1.5x for 1 turn, deals 15x character's ATK in STR damage to all enemies",
+        captain: "Boosts ATK of STR characters by 2x, boosts damage of STR specials by 2x",
+        cooldown: [ 25, 18 ]
+    },
+    456: {
+        special: "Changes the orbs in the middle row into either [STR] or [DEX] orbs, the orbs in the lower row into either [PSY] or [INT] orbs, freely switch orbs between slots once",
+        captain: "Boosts ATK of Shooter characters by 2x and their RCV by 1.5x",
+        cooldown: [ 18, 10 ]
+    },
+    457: {
+        special: "Changes the orbs in the middle row into either [STR] or [DEX] orbs, the orbs in the lower row into either [PSY] or [INT] orbs, freely switch orbs between slots once",
+        captain: "Boosts ATK of Shooter characters by 2x and their RCV by 1.5x",
+        cooldown: [ 18, 10 ]
+    },
+    458: {
+        special: "Deals random PSY damage to all enemies, boosts ATK by 1.5x",
+        captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of characters with cost 20 and below by 3x",
+        cooldown: 28
+    },
+    459: {
+        special: "Deals random PSY damage to all enemies, boosts ATK by 1.5x",
+        captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of characters with cost 20 and below by 3x",
+        cooldown: 28
+    },
+    460: {
+        special: "Heals back a little amount of HP after the end of each turn, delays all enemies for 1 turn",
+        captain: "Damage received reduced by 10%",
+        cooldown: [ 14, 10 ]
+    },
+    461: {
+        special: "Changes own orb into [DEX], randomizes every other orb, boosts ATK of Fighter characters by 1.25x for 2 turns",
+        captain: "Boosts ATK of Fighter characters by 2x",
+        cooldown: [ 25, 15]
+    },
+    462: {
+        special: "Changes own orb into [DEX], randomizes every other orb, boosts ATK of Fighter characters by 1.25x for 2 turns",
+        captain: "Boosts ATK of Fighter characters by 2x",
+        cooldown: [ 25, 15]
+    },
+    463: {
+        special: "Empties all slots, deals 25x character's ATK in PSY damage to one enemy",
+        captain: "Boosts HP of PSY characters by 2x",
+        cooldown: [ 25, 20 ]
+    },
+    464: {
+        special: "Deals 20x character's ATK in INT damage to all enemies",
+        captain: "Boosts ATK and HP of Striker characters by 1.5x",
+        cooldown: [ 20, 15 ]
+    },
+    465: {
+        special: "Deals 20x character's ATK in QCK damage to one enemy, boosts orb effectiveness by 1.25x for 2 turns",
+        captain: "Boosts ATK by 3x after scoring 4 hits no lower than Good in a row",
+        cooldown: [ 25, 18 ]
+    },
+    466: {
+        special: "Delays all enemies for 1 turn",
+        captain: "Boosts ATK and HP of Shooter characters by 1.5x",
+        cooldown: [ 15, 10 ]
+    },
+    467: {
+        special: "Changes [RCV] orbs into [STR] orbs",
+        captain: "Boosts ATK and RCV of STR characters by 1.5x",
+        cooldown: [ 15, 10 ]
+    },
+    468: {
+        special: "Boosts RCV by 1.5x for 1 turn",
+        cooldown: 25
+    },
+    469: {
+        special: "Freely switch orbs between slots once",
+        cooldown: 18
+    },
+    470: {
+        special: "Boosts RCV by 1.5x for 1 turn",
+        captain: "Boosts RCV of PSY characters by 1.5x",
+        cooldown: 25
+    },
+    471: {
+        special: "Freely switch orbs between slots once",
+        cooldown: 18
+    },
+    472: {
+        special: "Deals 20x character's ATK in STR damage to one enemy",
+        cooldown: [ 20, 15 ]
+    },
+    473: {
+        special: "Deals 10x character's ATK in QCK damage to one enemy",
+        cooldown: 20
+    },
+    474: {
+        special: "Deals 5x character's ATK in DEX damage to all enemies, reduces Bind duration by 1 turn",
+        cooldown: [ 25, 15 ]
+    },
+    475: {
+        special: "Deals 5x character's ATK in STR damage to all enemies, heals 500 HP",
+        cooldown: [ 25, 15 ]
+    },
+    476: {
+        special: "Deals 1,000 damage to one enemy",
+        cooldown: 20
+    },
+    477: {
+        special: "Changes [DEX] orbs into [STR] orbs",
+        cooldown: [ 15, 7 ]
+    },
+    478: {
+        special: "Changes [PSY] orbs into [QCK] orbs",
+        cooldown: [ 15, 7 ]
+    },
+    479: {
+        special: "Changes [INT] orbs into [DEX] orbs",
+        cooldown: [ 15, 7 ]
+    },
+    480: {
+        special: "Changes [QCK] orbs into [PSY] orbs",
+        cooldown: [ 15, 7 ]
+    },
+    481: {
+        special: "Changes [DEX] orbs into [INT] orbs",
+        cooldown: [ 15, 7 ]
+    },
+    482: {
+        special: "Changes [DEX] orbs into [STR] orbs",
+        captain: "Boosts HP of Striker characters by 1.5x",
+        cooldown: [ 15, 7 ]
+    },
+    483: {
+        special: "Changes [PSY] orbs into [QCK] orbs",
+        captain: "Boosts ATK and RCV of QCK characters by 1.2x",
+        cooldown: [ 15, 7 ]
+    },
+    484: {
+        special: "Changes [INT] orbs into [DEX] orbs",
+        captain: "Damage received reduced by 10%",
+        cooldown: [ 15, 7 ]
+    },
+    485: {
+        special: "Changes [QCK] orbs into [PSY] orbs",
+        captain: "Boosts HP and RCV of PSY characters by 1.2x",
+        cooldown: [ 15, 7 ]
+    },
+    486: {
+        special: "Changes [DEX] orbs into [INT] orbs",
+        captain: "Boosts ATK of Striker characters by 1.5x",
+        cooldown: [ 15, 7 ]
+    },
+    487: {
+        special: "Boosts ATK of STR characters by 1.2x for 1 turn",
+        cooldown: [ 25, 15 ]
+    },
+    488: {
+        special: "Boosts ATK of QCK characters by 1.2x for 1 turn",
+        cooldown: [ 25, 15 ]
+    },
+    489: {
+        special: "Boosts ATK of DEX characters by 1.2x for 1 turn",
+        cooldown: [ 25, 15 ]
+    },
+    490: {
+        special: "Boosts ATK of STR characters by 1.2x for 1 turn",
+        captain: "Boosts ATK and HP of Striker characters by 1.2x",
+        cooldown: [ 25, 15 ]
+    },
+    491: {
+        special: "Boosts ATK of QCK characters by 1.2x for 1 turn",
+        captain: "Boosts RCV of Striker characters by 1.5x",
+        cooldown: [ 25, 15 ]
+    },
+    492: {
+        special: "Boosts ATK of DEX characters by 1.2x for 1 turn",
+        captain: "Boosts ATK of DEX characters by 1.2x",
+        cooldown: [ 25, 15 ]
+    },
+    493: {
+        special: "Recovers 7x character's RCV in HP",
+        cooldown: [ 20, 15 ]
+    },
+    494: {
+        special: "Deals 3x character's ATK in INT damage to all enemies, poisons all enemies",
+        cooldown: [ 20, 15 ]
+    },
+    495: {
+        special: "Recovers 7x character's RCV in HP",
+        captain: "Recovers 500 HP at the end of the turn",
+        cooldown: [ 20, 15 ]
+    },
+    496: {
+        special: "Deals 3x character's ATK in INT damage to all enemies, poisons all enemies",
+        captain: "Boosts ATK of Shooter characters by 1.5x",
+        cooldown: [ 20, 15 ]
+    },
+    497: {
+        special: "Reduces Bind duration by 4 turns, deals 3x character's ATK in QCK damage to one enemy",
+        captain: "Boosts ATK of QCK characters by 1.5x",
+        cooldown: [ 11, 1 ]
+    },
+    498: {
+        special: "Reduces Bind duration by 4 turns, deals 3x character's ATK in QCK damage to one enemy",
+        captain: "Boosts ATK of QCK characters by 1.5x",
+        cooldown: [ 11, 1 ]
+    },
+    499: {
+        special: "Delays all enemies by 1 turn",
+        captain: "Boosts RCV of Shooter characters by 1.5x",
+        cooldown: [ 13, 9 ]
+    },
+    500: {
+        special: "Delays all enemies by 1 turn",
+        captain: "Boosts RCV of Shooter characters by 2x",
+        cooldown: [ 13, 9 ]
     }
 };

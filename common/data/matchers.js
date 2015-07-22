@@ -15,6 +15,24 @@ var matchers = [
     },
 
     {
+        name: 'ATK boosting captains',
+        target: 'captain',
+        matcher: /Boosts ATK/i
+    },
+
+    {
+        name: 'HP boosting captains',
+        target: 'captain',
+        matcher: /Boosts (HP|ATK and HP|ATK, HP)/i
+    },
+
+    {
+        name: 'RCV boosting captains',
+        target: 'captain',
+        matcher: /Boosts (RCV|ATK and RCV|HP and RCV|ATK, HP and RCV)/i
+    },
+
+    {
         name: '2x ATK and HP captains',
         target: 'captain',
         matcher: /Boosts (ATK and HP|ATK, HP).+by 2x/i
@@ -182,6 +200,18 @@ var matchers = [
         name: 'Silence reducers',
         target: 'special',
         matcher: /reduces.+silence.+duration/i,
+    },
+
+    {
+        name: 'Cooldown reducers',
+        target: 'special',
+        matcher: /reduces.+cooldown/i
+    },
+
+    {
+        name: 'Poisoners',
+        target: 'special',
+        matcher: /poisons/i
     }
 
 ];
