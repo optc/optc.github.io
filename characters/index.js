@@ -123,8 +123,6 @@ $.fn.dataTable.ext.search.push(function(settings, data, index) {
     return true;
 });
 
-$('#rightContainer').on('scroll',function() { $(window).trigger('scroll'); });
-
 /***********************
  * State configuration *
  ***********************/
@@ -167,10 +165,7 @@ app.controller('MainCtrl',function($scope, $state, $stateParams, $timeout) {
         lastQuery = $stateParams.query;
         $scope.query = lastQuery;
         currentParameters = generateSearchParameters($stateParams.query, $scope.filters);
-        if (table) {
-            table.fnDraw();
-            $timeout(function() { $(window).trigger('scroll'); });
-        }
+        if (table) table.fnDraw();
     }
 
     $scope.$watch('query',function(query) {
@@ -182,11 +177,9 @@ app.controller('MainCtrl',function($scope, $state, $stateParams, $timeout) {
         if (!filters || Object.keys(filters).length === 0) return;
         currentParameters = generateSearchParameters($stateParams.query, $scope.filters);
         table.fnDraw();
-        $timeout(function() { $(window).trigger('scroll'); });
     },true);
 
     $timeout(function() {
-        $(window).trigger('scroll');
         if ((JSON.parse(localStorage.getItem('warning')) || 0) < 4) {
             noty({ text: 'Captain abilities filters and specials filters are only supported up to Bellmere (#500) right now',
                 layout: 'topRight', type: 'warning', timeout: 10000 });
@@ -215,7 +208,8 @@ app.controller('DetailsCtrl',function($scope, $state, $stateParams) {
 
 app.directive('characterTable',function($rootScope, $compile) {
     var addImage = function(data, type, row, meta) {
-        return '<img class="slot small" data-original="' + Utils.getThumbnailUrl(row[0]-1) + '"> ' + data;
+        return '<img class="slot small" data-original="' + Utils.getThumbnailUrl(row[0]-1) + '"> ' +
+            '<a ui-sref="main.view({ id: ' + parseInt(row[0],10) + '})">' + data + '</a>';
     };
     return {
         restrict: 'E',
@@ -238,19 +232,15 @@ app.directive('characterTable',function($rootScope, $compile) {
                     { title: 'Stars' }
                 ],
                 rowCallback: function(row, data, index) {
-                    var target = $(row);
-                    if (target.attr('loaded')) return;
-                    target.find('img').lazyload();
-                    target.attr('loaded',true);
-                    if (details.hasOwnProperty(parseInt(data[0],10))) {
-                        var cell = $(row.cells[1]), text = cell.text().trim();
-                        cell[0].removeChild(cell[0].lastChild);
-                        cell.append(document.createTextNode(' '));
-                        cell.append($compile('<a ui-sref="main.view({ id: ' + parseInt(data[0],10) + '})">' + text + '</a>')($rootScope));
-                    }
+                    if (row.hasAttribute('loaded')) return;
+                    $(row).find('[data-original]').each(function(n,x) {
+                        x.setAttribute('src',x.getAttribute('data-original'));
+                        x.removeAttribute('data-original');
+                    });
+                    $compile($(row).contents())($rootScope);
+                    row.setAttribute('loaded','true');
                 }
             });
-            element.on('draw.dt',function() { $(window).trigger('scroll'); });
         }
     };
 });
