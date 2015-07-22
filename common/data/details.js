@@ -65,7 +65,7 @@ var details = {
         cooldown: 23
     },
     11: {
-        special: "Neutralize INT attacks for 1 turn",
+        special: "Damages received from INT enemies reduced by 100% for 1 turn",
         captain: "Boosts ATK of INT characters by 1.5x",
         evolvers: [ 117, 82, 104 ],
         evolution: 12,
