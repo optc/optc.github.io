@@ -1831,13 +1831,13 @@ var details = {
         cooldown: [ 20, 20 ]
     },
     404: {
-        special: "Boosts ATK of Shooter characters by 1.5x",
-        captain: "Damage received reduced by 50% for 2 turns, boosts RCV by 2x for 2 turns",
+        special: "Damage received reduced by 50% for 2 turns, boosts RCV by 2x for 2 turns",
+        captain: "Boosts ATK of Shooter characters by 1.5x",
         cooldown: [ 23, 14 ]
     },
     405: {
-        special: "Boosts ATK of Shooter characters by 2x",
-        captain: "Damage received reduced by 50% for 2 turns, boosts RCV by 2x for 2 turns",
+        special: "Damage received reduced by 50% for 2 turns, boosts RCV by 2x for 2 turns",
+        captain: "Boosts ATK of Shooter characters by 2x",
         cooldown: [ 23, 14 ]
     },
     406: {
