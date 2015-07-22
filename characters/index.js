@@ -325,7 +325,7 @@ app.directive('filters',function($compile) {
 app.filter('decorate',function() {
     return function(input) {
         if (!input) return 'None';
-        return input.replace(/\[?(STR|DEX|QCK|PSY|INT|RCV|TND)\]?/g,'<span class="mini-type $1">$1</span>');
+        return input.replace(/\[(STR|DEX|QCK|PSY|INT|RCV|TND)\]/g,'<span class="mini-type $1">$1</span>');
 
     };
 });
