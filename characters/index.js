@@ -123,6 +123,8 @@ $.fn.dataTable.ext.search.push(function(settings, data, index) {
     return true;
 });
 
+$('#rightContainer').on('scroll',function() { $(window).trigger('scroll'); });
+
 /***********************
  * State configuration *
  ***********************/
