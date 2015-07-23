@@ -32,6 +32,10 @@ body {
     padding: 10px;
 }
 
+#leftContainer, #rightContainer {
+    overflow-y: auto;
+}
+
 input {
     width: 100%;
 }
@@ -294,10 +298,6 @@ input {
  **********/
 
 @media only screen and (max-width: 768px) {
-
-    #leftContainer, #rightContainer {
-        overflow-y: auto;
-    }
 
     .slot.medium {
         width: 40px;
