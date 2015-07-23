@@ -924,14 +924,14 @@ var details = {
     },
     218: {
         special: "Damage received by STR enemies reduced by 100% for 1 turn",
-        captain: "Damage received reduced by 80% when HP is above 99%",
+        captain: "Damage received reduced by 80% if HP is above 99% at the start of the turn",
         evolvers: [ 118, 86, 102, 94, 91 ],
         evolution: 219,
         cooldown: 15
     },
     219: {
         special: "Deals 25x character's ATK in DEX damage to one enemy",
-        captain: "Damage received reduced by 80% when HP is above 99%",
+        captain: "Damage received reduced by 80% if HP is above 99% at the start of the turn",
         cooldown: [ 25, 18 ]
     },
     220: {
@@ -1510,14 +1510,14 @@ var details = {
     },
     336: {
         special: "Freely switch 2 orbs between slots twice",
-        captain: "Damage received reduced by 50% when HP is above 50%. At the start of the turn, if HP is above 50%, boosts ATK of PSY characters by 2x and reduces ATK of every other character by 20%",
+        captain: "Damage received reduced by 50% if HP is above 50% at the start of the turn, boosts ATK of PSY characters by 2x and reduces ATK of every other character by 20% if HP is above 50% at the start of the turn",
         evolvers: [ 117, 81, 87, 98, 103 ],
         evolution: 337,
         cooldown: [ 14, 6 ]
     },
     337: {
         special: "Freely switch 2 orbs between slots twice",
-        captain: "Damage received reduced by 50% when HP is above 50%. At the start of the turn, if HP is above 50%, boosts ATK of PSY characters by 2.5x and reduces ATK of every other character by 20%",
+        captain: "Damage received reduced by 50% if HP is above 50% at the start of the turn, boosts ATK of PSY characters by 2.5x and reduces ATK of every other character by 20% if HP is above 50% at the start of the turn",
         cooldown: [ 14, 6 ]
     },
     338: {
@@ -1857,7 +1857,7 @@ var details = {
     403: {
         special: "Deals several times the character's ATK in QCK damage to all enemies",
         specialNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the lower the HP is. The multiplier is calculated as: 150 * ( 1 - (remaining HP) / (total HP) )",
-        captain: "Damage received reduced by 50% when HP is low, boosts RCV by 3x when HP is low", // TODO check ho low
+        captain: "Damage received reduced by 50% if HP is low, boosts RCV by 3x if HP is low", // TODO check how low
         cooldown: [ 20, 20 ]
     },
     404: {
@@ -2500,7 +2500,7 @@ var details = {
     521: {
         special: "Deals several times the character's ATK in INT damage to all enemies",
         specialNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the lower the HP is. The multiplier is calculated as: 100 * ( 1 - (remaining HP) / (total HP) )",
-        captain: "Damage received reduced by 80% when HP is above 99%",
+        captain: "Damage received reduced by 80% if HP is above 99% at the start of the turn",
         cooldown: [ 25, 17 ],
 		evolvers: [ 118, 83, 88, 94, 104 ],
         evolution: 522
@@ -2508,7 +2508,7 @@ var details = {
     522: {
         special: "Deals several times the character's ATK in INT damage to all enemies",
         specialNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the lower the HP is. The multiplier is calculated as: 100 * ( 1 - (remaining HP) / (total HP) )",
-        captain: "Damage received reduced by 80% when HP is above 99%",
+        captain: "Damage received reduced by 80% if HP is above 99% at the start of the turn",
         cooldown: [ 25, 17 ]
     },
     523: {
@@ -3201,21 +3201,21 @@ var details = {
     },
     652: {
         special: "Cuts all enemies' current HP by 20%, damage received reduced by 50% for 1 turn",
-        captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of DEX characters by 2x when they have matching orbs",
+        captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of DEX characters by 2x if they have matching orbs",
         cooldown: [ 28, 14 ],
         evolvers: [ 116, 117, 80, 91, 97 ],
         evolution: 653
     },
     653: {
         special: "Cuts all enemies' current HP by 20%, damage received reduced by 50% for 1 turn",
-        captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of DEX characters by 2.25x when they have matching orbs",
+        captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of DEX characters by 2.25x if they have matching orbs",
         cooldown: [ 28, 14 ],
         evolvers: [ [ 118, 86, 266, 97, 102 ], [ 18 ] ],
         evolution: [ 654, 654 ]
     },
     654: {
         special: "Cuts all enemies' current HP by 20%, damage received reduced by 50% for 1 turn",
-        captain: "Reduces cooldown of all specials by 3 turns at the start of the fight, boosts ATK of DEX characters by 2.75x when they have matching orbs",
+        captain: "Reduces cooldown of all specials by 3 turns at the start of the fight, boosts ATK of DEX characters by 2.75x if they have matching orbs",
         cooldown: [ 28, 14 ]
     },
     655: {
