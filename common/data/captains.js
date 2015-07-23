@@ -266,10 +266,10 @@ window.captains = {
         hp: function(p) { return p.unit.type == "STR" ? 0.4 : 1; }
     },
     250: { // Marco
-        atk: function(p) { return p.unit.type == "PSY" && p.percHP == 100.0 ? 3 : 1; }
+        atk: function(p) { return p.unit.type == "PSY" && p.percHP > 99.0 ? 3 : 1; }
     },
     251: { // Marco the Phoenix
-        atk: function(p) { return p.unit.type == "PSY" && p.percHP == 100.0 ? 3 : 1; }
+        atk: function(p) { return p.unit.type == "PSY" && p.percHP > 99.0 ? 3 : 1; }
     },
     252: { // Jozu
         atk: function(p) { return p.unit.type == "QCK" ? 2 : 1; },
@@ -448,10 +448,10 @@ window.captains = {
         atk: function(p) { return p.unit.class == "Striker" ? 2.5 : 1; }
     },
     358: { // Apoo
-        atk: function(p) { return p.unit.type == "DEX" && p.percHP == 100.0 ? 2.5 : 1; }
+        atk: function(p) { return p.unit.type == "DEX" && p.percHP > 99.0 ? 2.5 : 1; }
     },
     359: { // Apoo evolved
-        atk: function(p) { return p.unit.type == "DEX" && p.percHP == 100.0 ? 3 : 1; }
+        atk: function(p) { return p.unit.type == "DEX" && p.percHP > 99.0 ? 3 : 1; }
     },
     360: { // Drake
         atk: function(p) { return p.unit.type == "INT" && p.percHP <= 30.0 ? 3 : 1; }
@@ -614,10 +614,10 @@ window.captains = {
         hp: function(p) { return p.unit.type == "STR" ? 2 : 1; }
     },
     413: { // Gekko Moriah
-        atk: function(p) { return p.unit.type == "INT" && p.percHP == 100.0 ? 2.5 : 1; }
+        atk: function(p) { return p.unit.type == "INT" && p.percHP > 99.0 ? 2.5 : 1; }
     },
     414: { // Gekko Moriah evolved
-        atk: function(p) { return p.unit.type == "INT" && p.percHP == 100.0 ? 3 : 1; }
+        atk: function(p) { return p.unit.type == "INT" && p.percHP > 99.0 ? 3 : 1; }
     },
     415: { // Boa Hancock
         atk: function(p) { return (p.unit.type == "QCK" || p.unit.type == "PSY") && p.percHP >= 70.0 ? 2.75 : 1; },
@@ -735,10 +735,10 @@ window.captains = {
         hp: function(p) { return p.unit.type == "STR" ? 2.25 : 1; }
     },
     448: { // Thatch
-        atk: function(p) { return p.unit.type == "QCK" && p.percHP == 100.0 ? 3 : 1; }
+        atk: function(p) { return p.unit.type == "QCK" && p.percHP > 99.0 ? 3 : 1; }
     },
     449: { // Thatch evolved
-        atk: function(p) { return p.unit.type == "QCK" && p.percHP == 100.0 ? 3 : 1; }
+        atk: function(p) { return p.unit.type == "QCK" && p.percHP > 99.0 ? 3 : 1; }
     },
     450: { // Namur
         atk: function(p) { return p.unit.class == "Fighter" ? 2 : 1; },
@@ -933,20 +933,12 @@ window.captains = {
     },
     529: { // SW Shanks
         atk: function(p) {
-            return p.percHP == 100.0 ? 2.75 :
-                   p.percHP >= 80.0  ? 2.6  :
-                   p.percHP >= 50.0  ? 2.37 :
-                   p.percHP >= 20.0  ? 2.15 :
-                                       2;
+            return p.unit.type == "PSY" ? 2 + 0.75 * p.percHP / 100 : 1;
         }
     },
     530: { // SW Shanks evolved
         atk: function(p) {
-            return p.percHP == 100.0 ? 2.75 :
-                   p.percHP >= 80.0  ? 2.6  :
-                   p.percHP >= 50.0  ? 2.37 :
-                   p.percHP >= 20.0  ? 2.15 :
-                                       2;
+            return p.unit.type == "PSY" ? 2 + 0.75 * p.percHP / 100 : 1;
         }
     },
     533: { // Sakura Brook
@@ -1064,7 +1056,7 @@ window.captains = {
         }
     },
     572: { // DBF Usopp
-        atk: function(p) { return p.unit.class == "Fighter" && p.percHP == 100.0 ? 2.5 : 1; }
+        atk: function(p) { return p.unit.class == "Fighter" && p.percHP > 99.0 ? 2.5 : 1; }
     },
     573: { // DBF Chopper
         rcv: function(p) { return 1.2; }
