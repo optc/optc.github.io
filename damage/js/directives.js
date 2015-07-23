@@ -168,6 +168,19 @@ directives.shipManager = function() {
     };
 };
 
+directives.animate = function() {
+    return {
+        restrict: 'A',
+        scope: { animation: '@' },
+        link: function(scope, element, attrs) {
+            setTimeout(function() {
+                element.addClass('animated');
+                element.addClass(scope.animation);
+            },1000)
+        }
+    };
+}
+
 /************************
  * Component directives *
  ************************/

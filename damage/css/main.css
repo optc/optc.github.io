@@ -40,6 +40,11 @@ body, #main, #hp, #other {
     flex-direction: column;
 }
 
+.animated {
+    animation-duration: 0.5s !important;
+    -webkit-animation-duration: 0.5s !important;
+}
+
 /******************
  * MAIN UNIT PANE *
  ******************/
