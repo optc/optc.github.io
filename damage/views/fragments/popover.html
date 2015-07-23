@@ -1,0 +1,62 @@
+<div class="popover-data" ng-controller="PopoverCtrl">
+
+    <table class="table table-striped">
+        <tbody>
+            <tr></tr>
+            <tr class="header">
+                <td>Class</td>
+                <td>Type</td>
+                <td>Rarity</td>
+                <td>Cost</td>
+            </tr>
+            <tr>
+                <td>{{data.team[slot].unit.class}}</td>
+                <td>{{data.team[slot].unit.type}}</td>
+                <td>
+                    <i class="fa fa-star" ng-repeat="i in [ ] | range:data.team[slot].unit.stars"></i>
+                </td>
+                <td>{{data.team[slot].unit.cost}}</td>
+            </tr>
+            <tr class="header">
+                <td>HP</td>
+                <td>ATK</td>
+                <td>RCV</td>
+                <td>CMB</td>
+            </tr>
+            <tr>
+                <td>
+                    {{numbers.team[slot].hp | number}}
+                    {{data.team[slot].candies.hp > 0 ? ' (+' + (data.team[slot].candies.hp * 5) + ')' : ''}}
+                </td>
+                <td>
+                    {{numbers.team[slot].atk | number}}
+                    {{data.team[slot].candies.atk > 0 ? ' (+' + (data.team[slot].candies.atk* 2) + ')' : ''}}
+                </td>
+                <td>
+                    {{numbers.team[slot].rcv | number}}
+                    {{data.team[slot].candies.rcv > 0 ? ' (+' + data.team[slot].candies.rcv + ')' : ''}}
+                </td>
+                <td>{{data.team[slot].unit.combo}}</td>
+            </tr>
+            <tr class="header" ng-if="slot < 2">
+                <td colspan="4">Captain Ability</td>
+            </tr>
+            <tr ng-if="slot < 2">
+                <td colspan="4">
+                    <div ng-bind-html="details.captain | decorate"></div>
+                    <span class="notes" ng-if="details.captainNotes" ng-bind-html="details.captainNotes | decorate"></span>
+                </td>
+            </tr>
+            <tr class="header">
+                <td colspan="4">Special</td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <div ng-bind-html="details.special | decorate"></div>
+                    <span class="notes" ng-if="details.specialNotes" ng-bind-html="details.specialNotes | decorate"></span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>

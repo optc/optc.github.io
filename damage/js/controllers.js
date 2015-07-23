@@ -239,6 +239,15 @@ controllers.CandyCtrl = function($scope, $state, $stateParams) {
     };
 };
 
+/***************
+ * PopoverCtrl *
+ ***************/
+
+controllers.PopoverCtrl = function($scope) {
+    if (!$scope.data.team[$scope.slot].unit) return;
+    $scope.details = window.details[$scope.data.team[$scope.slot].unit.number + 1];
+};
+
 /*****************************
  * Controller initialization *
  *****************************/

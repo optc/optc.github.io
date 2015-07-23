@@ -2,7 +2,7 @@
 
 var app = angular.module('optc');
 
-var directives = { };
+var directives = { }, filters = { };
 
 /*****************
  * UI directives *
@@ -539,11 +539,36 @@ directives.candySlider = function($compile) {
     };
 };
 
-/****************************
- * Directive initialization *
- ****************************/
+/***********
+ * Filters *
+ ***********/
+
+filters.range = function() {
+    return function(input, total) {
+        total = parseInt(total,10);
+        for (var i=0;i<total;++i) input.push(i);
+        return input;
+    };
+};
+
+filters.decorate = function() {
+    return function(input) {
+        if (!input) return 'None';
+        return input
+            .replace(/\[?(STR|DEX|QCK|PSY|INT|TND)\]?/g,'<span class="mini-type $1">$1</span>')
+            .replace(/\[RCV\]/g,'<span class="mini-type RCV">RCV</span>');
+
+    };
+};
+
+/******************
+ * Initialization *
+ ******************/
 
 for (var key in directives)
     app.directive(key, directives[key]);
+
+for (var key in filters)
+    app.filter(key, filters[key]);
 
 })();

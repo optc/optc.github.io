@@ -502,9 +502,9 @@ var CruncherCtrl = function($scope, $timeout) {
             if (x.unit === null) return null;
             return {
                 name : x.unit.name,
-                hp   : getStatOfUnit(x,'hp') + (x.candies.hp > 0 ? ' (+' + (x.candies.hp * 5) + ')' : ''),
-                atk  : getStatOfUnit(x,'atk') + (x.candies.atk > 0 ? ' (+' + (x.candies.atk * 2) + ')' : ''),
-                rcv  : getStatOfUnit(x,'rcv') + (x.candies.rcv > 0 ? ' (+' + x.candies.rcv + ')' : ''),
+                hp   : getStatOfUnit(x,'hp'),
+                atk  : getStatOfUnit(x,'atk'),
+                rcv  : getStatOfUnit(x,'rcv'),
                 cmb  :  x.unit.combo
             };
         });

@@ -343,7 +343,7 @@ body, #main, #hp, #other {
 #sliderToggle[status="0"]:after { content: "Level sliders: enabled"; }
 #sliderToggle[status="1"]:after { content: "Level sliders: disabled"; }
 
-.panel {
+nav.panel {
     position: fixed;
     left: -16.625em;
     width: 16.625em;
@@ -682,6 +682,66 @@ li input {
     pointer-events: none;
     text-shadow: 0 0 black, 0 2px black, 2px 0 black, 2px 2px black, 0 -2px black, -2px 0 black, -2px -2px black,
                  0 0 black, 0 1px black, 1px 0 black, 1px 1px black, 0 -1px black, -1px 0 black, -1px -1px black;
+}
+
+/***********
+ * POPOVER *
+ ***********/
+
+.popover {
+    width: 350px;
+}
+
+.unit.empty + .popover {
+    display: none !important;
+}
+
+
+.popover-data {
+    font-size: 90%;
+}
+
+.popover-data table {
+    margin: 0;
+}
+
+.popover-data td {
+    width: 25%;
+    padding: 4px !important;
+}
+
+.popover-data .header > td {
+    font-weight: bold;
+}
+
+.unit + .popover .popover-content {
+    padding: 0;
+}
+
+.popover-data .STR { background: salmon; }
+.popover-data .QCK { background: lightskyblue; }
+.popover-data .DEX { background: lightgreen; }
+.popover-data .PSY { background: gold; }
+.popover-data .INT { background: orchid; }
+.popover-data .RCV { background: peru; }
+.popover-data .TND { background: coral; }
+
+.mini-type {
+    color: white;
+    border-radius: 10px;
+    display: inline-block;
+    width: 35px;
+    text-align: center;
+}
+
+.notes {
+    font-size: 80%;
+}
+
+.notes:before {
+    content: "NOTES: ";
+    font-weight: bold;
+    color: gray;
 }
 
 /******************
