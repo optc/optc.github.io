@@ -648,7 +648,7 @@ window.units = [
 	[ "Rampaging Little Oars Jr.", "STR", "Shooter", 5, 30, 99, 1533, 801, 2, 4000, 1300, 9, 4, 0.7 ], 
 	[ "Marco, Whitebeard Pirates' 1st Division Commander", "QCK", "Fighter", 5, 30, 50, 455, 268, 177, 1612, 777, 303, 4, 0.7 ], 
 	[ "Phoenix Marco, Whitebeard Pirates' 1st Division Commander", "QCK", "Fighter", 6, 55, 99, 1555, 734, 258, 3013, 1402, 455, 4, 0.7 ],
-	[ "Nami, Record of the Voyage - Strawhat Crew (Log Nami)", "INT", "Striker", 4, 12, 50, 143, 65, 50, 998, 498, 254, 4, 0 ], 
+	[ "Nami, Record of the Voyage - Strawhat Crew (Log Nami)", "INT", "Striker", 4, 12, 50, 143, 65, 50, 998, 498, 254, 4, 0.7 ], 
 	[ "Nami, Dream of the Voyage - World Map (Log Nami)", "INT", "Striker", 5, 20, 99, 922, 434, 198, 1890, 900, 380, 4, 0 ], 
 	[ "Iron Mask Duval", "DEX", "Shooter", 3, 10, 35, 132, 133, 25, 725, 505, 77, 4, 1 ], 
 	[ "Duval, Head of the Flying Fish Riders", "DEX", "Shooter", 4, 30, 60, 664, 424, 44, 1448, 723, 103, 5, 1 ], 
@@ -657,5 +657,5 @@ window.units = [
 	[ "Arlong of the Sun Pirates", "STR", "Slasher", 4, 20, 99, 1261, 633, 45, 2020, 1389, 171, 4, 1 ], 
 	[ "Kuroobi of the Sun Pirates", "STR", "Fighter", 3, 10, 50, 160, 103, 9, 1233, 744, 70, 6, 1 ], 
 	[ "Choo of the Sun Pirates", "INT", "Shooter", 3, 10, 50, 75, 72, 22, 1002, 552, 178, 5, 1 ],
-	[ "Monkey D. Luffy Swim Ring", "QCK", "Fighter", 4, 15, 99, 144, 69, 31, 2232, 933, 242, 6, 0 ]
+	[ "Monkey D. Luffy Swim Ring", "QCK", "Fighter", 4, 15, 99, 144, 69, 31, 2232, 933, 242, 6, 1 ]
 ];
