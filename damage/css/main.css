@@ -744,6 +744,10 @@ body > .popover .popover-content {
     color: gray;
 }
 
+.cooldown:before {
+    content: "Cooldown: ";
+}
+
 /******************
  * MOBILE SUPPORT *
  ******************/

@@ -53,6 +53,10 @@
             <tr>
                 <td colspan="4">
                     <div ng-bind-html="details.special | decorate"></div>
+                    <div class="cooldown">
+                        {{details.cooldown.length ? details.cooldown[0] : details.cooldown}} turns
+                        {{details.cooldown.length ? ' (maxed: ' + details.cooldown[1] + ' turns)' : ''}}
+                    </div>
                     <span class="notes" ng-if="details.specialNotes" ng-bind-html="details.specialNotes | decorate"></span>
                 </td>
             </tr>
