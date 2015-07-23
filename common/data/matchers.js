@@ -51,6 +51,12 @@ var matchers = [
     },
 
     {
+        name: '2.75x ATK captains',
+        target: 'captain',
+        matcher: /Boosts ATK.+by 2.75x/i
+    },
+
+    {
         name: '3x ATK captains',
         target: 'captain',
         matcher: /Boosts ATK.+by 3x/i
@@ -161,6 +167,12 @@ var matchers = [
     },
 
     {
+        name: 'Percentage damage dealers',
+        target: 'special',
+        matcher: /Cuts.+enem.+current HP/i
+    },
+
+    {
         name: 'Defense reducers',
         target: 'special',
         matcher: /Reduces.+defense/i
@@ -200,6 +212,12 @@ var matchers = [
         name: 'Silence reducers',
         target: 'special',
         matcher: /reduces.+silence.+duration/i,
+    },
+
+    {
+        name: 'Hindrance removers',
+        target: 'special',
+        matcher: /(empties.+with hindrance|changes.+hindrance.+into)/i,
     },
 
     {

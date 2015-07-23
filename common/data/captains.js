@@ -1243,6 +1243,14 @@ window.captains = {
     649: { // v2 Marco evolved
         atk: function(p) { return (p.unit.type == "QCK" || p.unit.type == "PSY") && p.percHP >= 70.0 ? 2.75 : 1; } // TODO Double check the HP
     },
+    650: { // Log Nami
+        atk: function(p) { return p.unit.type == "INT" ? 2 : 1; },
+        rcv: function(p) { return p.unit.type == "INT" ? 1.5 : 1; }
+    },
+    651: { // Log Nami evolved
+        atk: function(p) { return p.unit.type == "INT" ? 2 : 1; },
+        rcv: function(p) { return p.unit.type == "INT" ? 1.5 : 1; }
+    },
     652: { // base Duval
         atk: function(p) { return p.unit.type != "DEX" ? 1 : (p.orb == 2.0 ? 2 : 1); },
     },
@@ -1263,5 +1271,11 @@ window.captains = {
     },
     658: { // Young Choo
         atk: function(p) { return p.unit.class == "Shooter" ? 1.5 : 1; }
+    },
+    659: { // Swim Ring Luffy
+        hitAtk: function(p) {
+            return p.modifiers.slice(0,p.chainPosition).subcontains([ "Perfect", "Perfect", "Perfect" ]) ? 2.5 : 1;
+        },
+        hitModifiers: [ 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect' ], // don't remove this
     }
 };
