@@ -522,6 +522,10 @@ li input {
     color: white;
 }
 
+.modal-header a {
+    color: white;
+}
+
 .modal-footer {
     background-color: rgb(235,235,235);
 }
