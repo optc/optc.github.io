@@ -2613,11 +2613,6 @@ var details = {
         special: "Changes own orb into [STR], deals 25x character's ATK in STR damage to one enemy",
         cooldown: [ 50, 20 ]
     },
-    539: {
-        special: "Reduces Bind and Silence duration by 1 turn, locks all orbs for 1 turn",
-        captain: "Boosts chain multiplier by 2x, recovers 2x character's RCV in HP at the end of the turn",
-        cooldown: [ 25, 16 ]
-    },
     540: {
         special: "Boosts chances of getting [DEX] orbs for 2 turns",
         cooldown: [ 16, 12 ]
