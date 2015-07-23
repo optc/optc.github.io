@@ -179,14 +179,6 @@ app.controller('MainCtrl',function($scope, $state, $stateParams, $timeout) {
         table.fnDraw();
     },true);
 
-    $timeout(function() {
-        if ((JSON.parse(localStorage.getItem('warning')) || 0) < 5) {
-            noty({ text: 'Captain abilities filters and specials filters are only supported up to Sady-chan (#550) right now',
-                layout: 'topRight', type: 'warning', timeout: 10000 });
-            localStorage.warning = 5;
-        }
-    });
-
 });
 
 app.controller('DetailsCtrl',function($scope, $state, $stateParams) {
