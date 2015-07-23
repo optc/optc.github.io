@@ -600,7 +600,7 @@ li input {
 }
 
 .popover {
-    width: 400px;
+    width: 400px !important;
     max-width: 400px;
 }
 
@@ -714,7 +714,7 @@ li input {
     font-weight: bold;
 }
 
-.unit + .popover .popover-content {
+body > .popover .popover-content {
     padding: 0;
 }
 
