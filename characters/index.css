@@ -28,12 +28,6 @@ body {
     padding: 10px;
 }
 
-@media only screen and (min-width: 768px) {
-    #leftContainer, #rightContainer {
-        overflow-y: auto;
-    }
-}
-
 #queryContainer {
     padding: 10px;
 }
@@ -293,4 +287,28 @@ input {
     height: 40px;
     background-size: 40px 40px;
     margin: 1px;
+}
+
+/**********
+ * MOBILE *
+ **********/
+
+@media only screen and (max-width: 768px) {
+
+    #leftContainer, #rightContainer {
+        overflow-y: auto;
+    }
+
+    .slot.medium {
+        width: 40px;
+        height: 40px;
+        background-size: 40px 40px;
+        margin: 1px;
+    }
+
+    .arrow {
+        font-size: 1.5em;
+        bottom: 10px;
+    }
+
 }

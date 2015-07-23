@@ -1509,14 +1509,14 @@ var details = {
         cooldown:  [ 12, 8 ]
     },
     336: {
-        special: "Freely switch 2 orbs between slots twice",
+        special: "Freely switch orbs between slots twice",
         captain: "Damage received reduced by 50% if HP is above 50% at the start of the turn, boosts ATK of PSY characters by 2x and reduces ATK of every other character by 20% if HP is above 50% at the start of the turn",
         evolvers: [ 117, 81, 87, 98, 103 ],
         evolution: 337,
         cooldown: [ 14, 6 ]
     },
     337: {
-        special: "Freely switch 2 orbs between slots twice",
+        special: "Freely switch orbs between slots twice",
         captain: "Damage received reduced by 50% if HP is above 50% at the start of the turn, boosts ATK of PSY characters by 2.5x and reduces ATK of every other character by 20% if HP is above 50% at the start of the turn",
         cooldown: [ 14, 6 ]
     },
@@ -1934,14 +1934,14 @@ var details = {
         cooldown: [ 17, 13 ]
     },
     417: {
-        special: "Freely switch 2 orbs between slots twice, boosts orbs effectiveness by 2x for 1 turn",
+        special: "Freely switch orbs between slots twice, boosts orbs effectiveness by 2x for 1 turn",
         captain: "Boosts ATK and HP of Slasher characters by 2x",
         cooldown: [ 28, 14 ],
 		evolvers: [ 118, 83, 86, 302, 102 ],
         evolution: 418
     },
     418: {
-        special: "Freely switch 2 orbs between slots twice, boosts orbs effectiveness by 2x for 1 turn",
+        special: "Freely switch orbs between slots twice, boosts orbs effectiveness by 2x for 1 turn",
         captain: "Boosts ATK and HP of Slasher characters by 2x",
         cooldown: [ 28, 14 ]
     },
@@ -2072,7 +2072,7 @@ var details = {
         evolution: 445
     },
     445: {
-        special: "Changes all orbs into either [STR], [DEX], [QCK], [PSY] or [INT] orbs, freely switch orbs between orbs 3 times",
+        special: "Changes all orbs into either [STR], [DEX], [QCK], [PSY] or [INT] orbs, freely switch orbs between slots 3 times",
         captain: "Boosts ATK of Evolver characters by 2.5x if HP is above 70% at the start of the turn", // TODO check threshold
         cooldown: [ 26, 17 ]
     },

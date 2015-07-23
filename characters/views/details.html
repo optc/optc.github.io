@@ -101,31 +101,45 @@
                     </table>
                 </div>
 
+                <!-- Evolutions -->
+
                 <h3 class="page-header" ng-if="details.evolution">Evolutions</h3>
 
                 <div ng-if="details.evolution && !details.evolution.length">
-
-                    <div class="slot medium clickable" ng-repeat="evolver in details.evolvers"
-                        decorate-slot uid="evolver-1" ui-sref="main.view({ id: evolver, previous: getPrevious() })"></div>
-
-                    <i class="fa fa-arrow-right arrow"></i>
-
-                    <div class="slot medium clickable" decorate-slot uid="details.evolution-1"
-                        ui-sref="main.view({ id: details.evolution, previous: getPrevious() })"></div>
-
+                    <evolution unit="unit" evolvers="details.evolvers" evolution="details.evolution" size="medium"></evolution>
                 </div>
 
                 <div ng-if="details.evolution && details.evolution.length">
                     <div class="panel panel-default" ng-repeat="evolverSet in details.evolvers">
+                       <evolution unit="unit" evolvers="evolverSet" evolution="details.evolution[$index]" size="medium"></evolution> 
+                    </div>
+                </div>
 
-                        <div class="slot medium clickable" ng-repeat="evolver in evolverSet"
-                            decorate-slot uid="evolver-1" ui-sref="main.view({ id: evolver, previous: getPrevious() })"></div>
+                <!-- Evolves from -->
 
-                        <i class="fa fa-arrow-right arrow"></i>
+                <h3 class="page-header" ng-if="evolvesFrom.length > 0">Evolves From</h3>
 
-                        <div class="slot medium clickable" decorate-slot uid="details.evolution[$index] - 1"
-                            ui-sref="main.view({ id: details.evolution[$index] - 1, previous: getPrevious() })"></div>
+                <div ng-if="evolvesFrom.length >0">
 
+                    <div class="panel panel-default" ng-repeat="tree in evolvesFrom">
+                        <div ng-repeat="id in tree">
+                            <evolution unit="unit" base="id" evolvers="getEvos(id,tree[$index+1] || unit.number+1)"
+                                evolution="tree[$index+1] || unit.number + 1" size="medium"></evolution>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Used by -->
+
+                <h3 class="page-header" ng-if="isUsedBy">Evolutions Requiring This Unit</h3>
+
+                <div ng-if="isUsedBy">
+                    <div class="panel panel-default" ng-repeat="(base,evolutions) in usedBy">
+                        <div ng-repeat="id in evolutions">
+                            <evolution unit="unit" base="base" evolvers="getEvos(base,id,unit.number + 1)"
+                                evolution="id" size="medium"></evolution>
+                        </div>
                     </div>
                 </div>
 

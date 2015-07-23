@@ -656,6 +656,6 @@ window.units = [
 	[ "Pirate Arlong", "STR", "Slasher", 3, 12, 50, 159, 144, 14, 1332, 700, 89, 6, 1 ], 
 	[ "Arlong of the Sun Pirates", "STR", "Slasher", 4, 20, 99, 1261, 633, 45, 2020, 1389, 171, 4, 1 ], 
 	[ "Kuroobi of the Sun Pirates", "STR", "Fighter", 3, 10, 50, 160, 103, 9, 1233, 744, 70, 6, 1 ], 
-	[ "Choo of the Sun Pirates", "INT", "Shooter", 3, 10, 50, 75, 72, 22, 1002, 552, 178, 5, 1 ]
+	[ "Choo of the Sun Pirates", "INT", "Shooter", 3, 10, 50, 75, 72, 22, 1002, 552, 178, 5, 1 ],
 	[ "Monkey D. Luffy Swim Ring", "QCK", "Fighter", 4, 15, 99, 144, 69, 31, 2232, 933, 242, 6, 0 ]
 ];

@@ -66,6 +66,51 @@ var generateSearchParameters = function(query, filters) {
     return result;
 };
 
+var searchBaseEvolutions = function(id) {
+    var temp = [ ], current = parseInt(id,10);
+    for (var key in details) {
+        if (!details[key].evolution) continue;
+        if (details[key].evolution == current ||
+                (details[key].evolution.indexOf && details[key].evolution.indexOf(current) != -1))
+            temp.push(parseInt(key,10));
+    }
+    var result = [ ];
+    for (var i=0;i<temp.length;++i) {
+        var base = searchBaseEvolutions(temp[i]);
+        if (base.length == 0)
+            result.push([ temp[i] ]);
+        else for (var j=0;j<base.length;++j)
+            result.push(base[j].concat(temp[i].constructor == Array ? temp[i] : [ temp[i] ]));
+    }
+    return result;
+};
+
+var searchEvolverEvolutions = function(id) {
+    var result = { }, current = parseInt(id,10);
+    for (var key in details) {
+        if (!details[key].evolution) continue;
+        if (details[key].evolvers.indexOf(current) != -1)
+            result[key] = (result[key] || [ ]).concat([ details[key].evolution ]);
+        for (var i=0;i<details[key].evolution.length;++i) {
+            if (details[key].evolvers[i].indexOf(current) != -1)
+                result[key] = (result[key] || [ ]).concat([ details[key].evolution[i] ]);
+        }
+    }
+    return result;
+};
+
+var getEvolversOfEvolution = function(from,to,withID) {
+    if (!to) return [ ];
+    if (details[from].evolution == to) return details[from].evolvers;
+    if (!withID) return details[from].evolvers[details[from].evolution.indexOf(to)];
+    for (var i=0;i<details[from].evolution.length;++i) {
+        if (details[from].evolution[i] != to) continue;
+        if (details[from].evolvers[i].indexOf(withID) == -1) continue;
+        return details[from].evolvers[i];
+    }
+    return [ ];
+};
+
 window.units = window.units.map(parseUnit);
 
 /***********************
@@ -182,16 +227,19 @@ app.controller('MainCtrl',function($scope, $state, $stateParams, $timeout) {
 });
 
 app.controller('DetailsCtrl',function($scope, $state, $stateParams) {
+    // data
     $scope.unit = window.units[$stateParams.id - 1];
     $scope.details = window.details[$stateParams.id];
+    $scope.evolvesFrom = searchBaseEvolutions($stateParams.id);
+    $scope.usedBy = searchEvolverEvolutions($stateParams.id);
+    $scope.isUsedBy = Object.keys($scope.usedBy).length > 0;
+    // events/functions
     $scope.withButton = $stateParams.previous.length > 0;
     $scope.onBackClick = function() {
         var previous = $stateParams.previous.splice(-1)[0];
         $state.go('main.view',{ id: previous, previous: $stateParams.previous });
     };
-    $scope.getPrevious = function() {
-        return $stateParams.previous.concat([ $stateParams.id ]);
-    };
+    $scope.getEvos = getEvolversOfEvolution;
 });
 
 /**************
@@ -298,6 +346,22 @@ app.directive('filters',function($compile) {
             // events 
             scope.onTypeClick = function(type) { scope.filters.type = (scope.filters.type == type ? null : type); };
             scope.onClassClick = function(clazz) { scope.filters.class = (scope.filters.class == clazz ? null : clazz); };
+        }
+    };
+});
+
+app.directive('evolution',function($state, $stateParams) {
+    return {
+        restrict: 'E',
+        replace: true,
+        scope: { unit: '=', base: '=', evolvers: '=', evolution: '=', size: '@' },
+        templateUrl: 'views/evolution.html',
+        link: function(scope, element, attrs) {
+            scope.goToState = function(id) {
+                if (id == parseInt($stateParams.id,10)) return;
+                var previous = $stateParams.previous.concat([ $stateParams.id ]);
+                $state.go('main.view',{ id: id, previous: previous });
+            };
         }
     };
 });
