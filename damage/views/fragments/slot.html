@@ -1,7 +1,8 @@
 <div class="unit" ng-class="{ empty: !data.team[slot].unit }" dropzone attach-picker
     popover-placement="{{slot%2 == 0 ? 'left' : 'right'}}"
     popover-trigger="mouseenter" popover-title="{{data.team[slot].unit.name}}"
-    popover-template="'views/fragments/popover.html'">
+    popover-template="'views/fragments/popover.html'"
+    popover-append-to-body="'true'">
 
     <span class="unitPlaceholder" ng-hide="data.team[slot].unit"
         ng-if="slot == 0">Click to add (friend)</span>

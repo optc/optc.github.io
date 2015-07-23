@@ -90,7 +90,7 @@ var CruncherCtrl = function($scope, $timeout) {
         result.team = getTeamDetails();
         var hpMax = 0, rcvTotal = 0;
         $scope.data.team.forEach(function(x,n) {
-            if (x.unit === null) return;
+            if (n > 5 || x.unit === null) return;
             // hp
             var hp = getStatOfUnit(x,'hp');
             hp += getShipBonus('hp',true,x.unit,n);
@@ -139,7 +139,7 @@ var CruncherCtrl = function($scope, $timeout) {
         var result = [ ];
         // populate array with the damage of each unit in the team
         $scope.data.team.forEach(function(x,n) {
-            if (x.unit === null || $scope.tdata.team[n].lock > 0) return;
+            if (n > 5 || x.unit === null || $scope.tdata.team[n].lock > 0) return;
             var orb = $scope.tdata.team[n].orb;
             var atk = getStatOfUnit(x,'atk'); // basic attack (scales with level);
             var ship = getShipBonus('atk',false,x.unit,n);
