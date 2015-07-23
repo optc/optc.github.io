@@ -1,5 +1,5 @@
 <div class="unit" ng-class="{ empty: !data.team[slot].unit }" dropzone attach-picker
-    popover-placement="{{slot%2 == 0 ? 'left' : 'right'}}"
+    popover-placement="{{!data.team[slot].unit ? 'bottom' : (slot%2 == 0 ? 'left' : 'right')}}"
     popover-trigger="mouseenter" popover-title="{{data.team[slot].unit.name}}"
     popover-template="'views/fragments/popover.html'"
     popover-append-to-body="'true'">

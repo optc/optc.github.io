@@ -692,7 +692,7 @@ li input {
     width: 350px;
 }
 
-.unit.empty + .popover {
+ body > .popover.bottom {
     display: none !important;
 }
 
