@@ -408,6 +408,12 @@ window.specials = {
         // TODO boost atk by 1.2 if the enemy is delayed
         warning: 'Selected special (Ice Witch Whitey Bay) is not yet supported'
     },
+    648: { // v2 Marco
+        orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); },
+    },
+    649: { // v2 Marco evolved
+        orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); },
+    },
     650: { // Log Nami
         orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); }
     },
