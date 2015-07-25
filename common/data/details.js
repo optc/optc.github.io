@@ -3244,5 +3244,20 @@ var details = {
         special: "Reduces Bind and Silence duration by 2 turns, damage received reduced by 50% for 2 turns",
         captain: "Boosts ATK by 2.5x after scoring 3 Perfects in a row",
         cooldown: 20
-    }
+    },
+    660: {
+        special: "Delays all enemies for 2 turns, reduces all enemies' defense by 50% for 2 turns",
+        captain: "Boosts ATK of Shooter characters by 2x",
+        cooldown: 13
+    },
+    661: {
+        special: "Delays all enemies for 2 turns, reduces all enemies' defense by 50% for 2 turns",
+        captain: "Boosts ATK of Shooter characters by 2x, reduces cooldown of all specials by 1 turn at the start of the fight",
+        cooldown: 13
+    },
+    662: {
+        special: "Deals 13x character's ATK in PSY damage to one enemy, randomizes all orbs other than [PSY]",
+        captain: "Boosts ATK of PSY characters by 2x",
+        cooldown: [ 15, 15 ]
+    },
 };

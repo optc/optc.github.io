@@ -426,4 +426,10 @@ window.specials = {
     656: { // Young Arlong evolved
         orb: function(p) { return p.orb == 2.0 ? 1.25 : (p.orb == 0.5 ? 4/5 : 1); }
     },
+    660: { // Log Usopp
+        def: function(p) { return 0.5; }
+    },
+    661: { // Log Usopp
+        def: function(p) { return 0.5; }
+    },
 };

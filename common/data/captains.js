@@ -1269,5 +1269,14 @@ window.captains = {
             return p.modifiers.slice(0,p.chainPosition).subcontains([ "Perfect", "Perfect", "Perfect" ]) ? 2.5 : 1;
         },
         hitModifiers: [ 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect' ], // don't remove this
+    },
+    660: { // Log Usopp
+        atk: function(p) { return p.unit.class == "Shooter" ? 2 : 1; }    
+    },
+    661: { // Log Usopp evolved
+        atk: function(p) { return p.unit.class == "Shooter" ? 2 : 1; }    
+    },
+    662: { // Vacation Nami
+        atk: function(p) { return p.unit.type == "PSY" ? 2 : 1; }
     }
 };
