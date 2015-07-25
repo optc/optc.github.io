@@ -75,6 +75,12 @@ var matchers = [
     },
 
     {
+        name: 'Cooldown reducers',
+        target: 'captain',
+        matcher: /reduces.+cooldown/i
+    },
+
+    {
         name: 'Healers',
         target: 'captain',
         matcher: /Recovers \d+x.+RCV.+end of/i
@@ -218,12 +224,6 @@ var matchers = [
         name: 'Hindrance removers',
         target: 'special',
         matcher: /(empties.+with hindrance|changes.+hindrance.+into)/i,
-    },
-
-    {
-        name: 'Cooldown reducers',
-        target: 'special',
-        matcher: /reduces.+cooldown/i
     },
 
     {
