@@ -52,37 +52,9 @@ controllers.PickerCtrl = function($scope, $state, $stateParams) {
 
     /* * * * * List generation * * * * */
 
-    var generateSearchParameters = function() {
-        if (!$scope.query || $scope.query.trim().length < 3) return null;
-        var result = { matchers: { }, ranges: { }, query: [ ] };
-        var ranges = { }, params = [ 'hp', 'atk', 'stars', 'cost', 'growth', 'rcv' ];
-        var regex = new RegExp('^((type|class):(\\w+)|(' + params.join('|') + ')(>|<|>=|<=|=)([\\d.]+))$');
-        var tokens = $scope.query.trim().replace(/\s+/g,' ').split(' ').filter(function(x) { return x.length > 0; });
-        tokens.forEach(function(x) {
-            var temp = x.match(regex);
-            if (!temp) // if it couldn't be parsed, treat it as string
-                result.query.push(x);
-            else if (temp[4] !== undefined) { // numeric operator
-                var left = temp[4], op = temp[5], right = parseFloat(temp[6],10);
-                if (!result.ranges.hasOwnProperty(left)) result.ranges[left] = [ 0, Infinity ];
-                if (op == '=') {
-                    result.ranges[left][0] = right;
-                    result.ranges[left][1] = right;
-                }
-                else if (op == '<')  result.ranges[left][1] = Math.min(result.ranges[left][1],right-1);
-                else if (op == '<=') result.ranges[left][1] = Math.min(result.ranges[left][1],right);
-                else if (op == '>')  result.ranges[left][0] = Math.max(result.ranges[left][0],right+1);
-                else if (op == '>=') result.ranges[left][0] = Math.max(result.ranges[left][0],right);
-            } else // matcher
-                result.matchers[temp[2]] = new RegExp(temp[3],'i');
-        });
-        result.query = new RegExp(result.query.join(' '),'i');
-        return result;
-    };
-
     var populateList = function() {
         $scope.units = [ ];
-        var result, parameters = generateSearchParameters();
+        var result, parameters = Utils.generateSearchParameters($scope.query);
         if (parameters === null) return;
         result = window.units.filter(function(x) { return x !== null && x !== undefined && x.hasOwnProperty('number'); });
         // filter by matchers

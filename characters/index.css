@@ -40,6 +40,10 @@ input {
     width: 100%;
 }
 
+#type-container {
+    text-align: center;
+}
+
 .filter-header {
     display: block;
     font-weight: bold;
@@ -51,9 +55,12 @@ input {
     margin: 5px 5px 0 0;
     padding: 3px 0;
     border-radius: 10px;
-    width: 50px;
     text-align: center;
     cursor: pointer;
+}
+
+.type-filter {
+    width: 65px;
 }
 
 .type-filter:not(.active) {

@@ -29,40 +29,18 @@ var parseUnit = function(element,n) {
 };
 
 var generateSearchParameters = function(query, filters) {
-    if ((!query || query.trim().length < 3) && Object.keys(filters).length === 0) return null;
-    var result = { };
-    if (query && query.length > 2) {
-        result = { matchers: { }, ranges: { }, query: [ ] };
-        var ranges = { }, params = [ 'hp', 'atk', 'stars', 'cost', 'growth', 'rcv' ];
-        var regex = new RegExp('^((type|class):(\\w+)|(' + params.join('|') + ')(>|<|>=|<=|=)([\\d.]+))$');
-        var tokens = query.trim().replace(/\s+/g,' ').split(' ').filter(function(x) { return x.length > 0; });
-        tokens.forEach(function(x) {
-            var temp = x.match(regex);
-            if (!temp) // if it couldn't be parsed, treat it as string
-                result.query.push(x);
-            else if (temp[4] !== undefined) { // numeric operator
-                var left = temp[4], op = temp[5], right = parseFloat(temp[6],10);
-                if (!result.ranges.hasOwnProperty(left)) result.ranges[left] = [ 0, Infinity ];
-                if (op == '=') {
-                    result.ranges[left][0] = right;
-                    result.ranges[left][1] = right;
-                }
-                else if (op == '<')  result.ranges[left][1] = Math.min(result.ranges[left][1],right-1);
-                else if (op == '<=') result.ranges[left][1] = Math.min(result.ranges[left][1],right);
-                else if (op == '>')  result.ranges[left][0] = Math.max(result.ranges[left][0],right+1);
-                else if (op == '>=') result.ranges[left][0] = Math.max(result.ranges[left][0],right);
-            } else // matcher
-                result.matchers[temp[2]] = new RegExp(temp[3],'i');
-        });
-        result.query = new RegExp(result.query.join(' '),'i');
-    }
+    var result = Utils.generateSearchParameters(query);
+    if (result == null && Object.keys(filters).length === 0) return null;
     var temp = $.extend({ },filters);
     temp.custom = [ ];
     for (var i=0;i<filters.custom.length;++i) {
         if (filters.custom[i])
             temp.custom.push(window.matchers[i]);
     }
-    result.filters = temp;
+    if (Object.keys(temp).length > 0 || temp.custom.length > 0) {
+        if (!result) result = { };
+        result.filters = temp;
+    }
     return result;
 };
 
@@ -154,6 +132,7 @@ $.fn.dataTable.ext.search.push(function(settings, data, index) {
     // filter by query
     if (currentParameters.query && !currentParameters.query.test(unit.name)) return false;
     /* * * * * Sidebar filters * * * * */
+    if (!currentParameters.filters) return true;
     var filters = currentParameters.filters;
     // filter by type
     if (filters.type && unit.type !== filters.type) return false;
@@ -313,11 +292,13 @@ app.directive('filters',function($compile) {
         link: function(scope,element,attrs) {
             // type filters
             element.append($('<span class="filter-header">Type filters:</span>'));
+            var div = $('<div id="type-container"></div>');
             [ 'STR', 'QCK', 'DEX', 'PSY', 'INT' ].forEach(function(x) {
                 var template = '<span class="type-filter ' + x + '" ng-model="filters.type" ' +
                     'ng-class="{ active: filters.type == \'' + x + '\' }" ng-click="onTypeClick(\'' + x + '\')">' + x + '</span>';
-                element.append($compile(template)(scope));
+                div.append($compile(template)(scope));
             });
+            element.append(div);
             // class filters
             element.append($('<span class="filter-header">Class filters:</span>'));
             [ 'Fighter', 'Shooter', 'Slasher', 'Striker' ].forEach(function(x) {
