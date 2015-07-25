@@ -66,12 +66,13 @@ var searchBaseEvolutions = function(id) {
 var searchEvolverEvolutions = function(id) {
     var result = { }, current = parseInt(id,10);
     for (var key in details) {
+        var id = ('000' + key).slice(-4);
         if (!details[key].evolution) continue;
         if (details[key].evolvers.indexOf(current) != -1)
-            result[key] = (result[key] || [ ]).concat([ details[key].evolution ]);
+            result[id] = (result[id] || [ ]).concat([ details[key].evolution ]);
         for (var i=0;i<details[key].evolution.length;++i) {
             if (details[key].evolvers[i].indexOf(current) != -1)
-                result[key] = (result[key] || [ ]).concat([ details[key].evolution[i] ]);
+                result[id] = (result[id] || [ ]).concat([ details[key].evolution[i] ]);
         }
     }
     return result;
@@ -79,6 +80,8 @@ var searchEvolverEvolutions = function(id) {
 
 var getEvolversOfEvolution = function(from,to,withID) {
     if (!to) return [ ];
+    from = parseInt(from,10);
+    to = parseInt(to,10);
     if (details[from].evolution == to) return details[from].evolvers;
     if (!withID) return details[from].evolvers[details[from].evolution.indexOf(to)];
     for (var i=0;i<details[from].evolution.length;++i) {
