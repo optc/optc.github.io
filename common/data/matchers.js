@@ -163,7 +163,7 @@ var matchers = [
     {
         name: 'Delayers',
         target: 'special',
-        matcher: /delay\b/i
+        matcher: /delays/i
     },
 
     {
