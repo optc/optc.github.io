@@ -721,10 +721,10 @@ window.captains = {
         rcv: function(p) { return p.percHP <= 30.0 ? 5 : 1; } // TODO Double check the HP
     },
     444: { // Carue
-        atk: function(p) { return p.percHP <= 30.0 && p.unit.class == "PowerUp" ? 2 : 1; } // TODO Double check the HP
+        atk: function(p) { return p.percHP >= 70.0 && p.unit.class == "PowerUp" ? 2 : 1; } // TODO Double check the HP
     },
     445: { // Duck squad
-        atk: function(p) { return p.percHP <= 30.0 && p.unit.class == "PowerUp" ? 2.5 : 1; } // TODO Double check the HP
+        atk: function(p) { return p.percHP >= 70.0 && p.unit.class == "PowerUp" ? 2.5 : 1; } // TODO Double check the HP
     },
     446: { // Marshall D. Teach
         atk: function(p) { return p.unit.type == "STR" ? 2 : 1; },
@@ -1113,13 +1113,13 @@ window.captains = {
     },
     589: { // Kohza
         atk: function(p) { return 1.5; },
-        hp: function(p) { return 0.75; }, // TODO needs checking
-        rcv: function(p) { return 0.75; } // TODO needs checking
+        hp: function(p) { return 0.2; },
+        rcv: function(p) { return 0.2; }
     },
     590: { // Kohza evolved
         atk: function(p) { return 1.5; },
-        hp: function(p) { return 0.75; }, // TODO needs checking
-        rcv: function(p) { return 0.75; } // TODO needs checking
+        hp: function(p) { return 0.2; },
+        rcv: function(p) { return 0.2; }
     },
     596: { // Log Chopper
         atk: function(p) { return p.unit.type == "STR" ? 1.5 : 1; }
@@ -1168,7 +1168,7 @@ window.captains = {
         rcv: function(p) { return p.unit.class == "Slasher" ? 1.5 : 1; }
     },
     614: { // Zanbai
-        atk: function(p) { return p.unit.cost <= 20 && p.percHP <= 50.0 ? 2.25 : 1; } // TODO Double check the HP
+        atk: function(p) { return p.unit.cost <= 20 && p.percHP <= 30.0 ? 2.25 : 1; } // TODO Double check the HP
     },
     629: { // WS Franky
         atk: function(p) { return p.unit.stars <= 3 ? 2 : 1; }
@@ -1212,10 +1212,10 @@ window.captains = {
         atk: function(p) { return p.unit.class == "Fighter" ? 2.25 : 1; }
     },
     642: { // Squard
-        atk: function(p) { return p.unit.type == "PSY" && p.percHP <= 30.0 ? 2.5 : 1; } // TODO Double check the HP
+        atk: function(p) { return p.unit.type == "PSY" && p.percHP <= 30.0 ? 2.5 : 1; }
     },
     643: { // Squard evolved
-        atk: function(p) { return p.unit.type == "PSY" && p.percHP <= 30.0 ? 3 : 1; } // TODO Double check the HP
+        atk: function(p) { return p.unit.type == "PSY" && p.percHP <= 30.0 ? 3 : 1; }
     },
     644: { // Whitey Bay
         atk: function(p) { return p.unit.type == "INT" ? 2 : 1; }
@@ -1230,10 +1230,10 @@ window.captains = {
         atk: function(p) { return p.unit.class == "Shooter" && p.percHP <= 30.0 ? 2.75 : 1; } // TODO Double check the HP
     },
     648: { // v2 Marco
-        atk: function(p) { return (p.unit.type == "QCK" || p.unit.type == "PSY") && p.percHP >= 70.0 ? 2.75 : 1; } // TODO Double check the HP
+        atk: function(p) { return (p.unit.type == "QCK" || p.unit.type == "PSY") && p.percHP >= 70.0 ? 2.75 : 1; }
     },
     649: { // v2 Marco evolved
-        atk: function(p) { return (p.unit.type == "QCK" || p.unit.type == "PSY") && p.percHP >= 70.0 ? 2.75 : 1; } // TODO Double check the HP
+        atk: function(p) { return (p.unit.type == "QCK" || p.unit.type == "PSY") && p.percHP >= 70.0 ? 2.75 : 1; }
     },
     650: { // Log Nami
         atk: function(p) { return p.unit.type == "INT" ? 2 : 1; },

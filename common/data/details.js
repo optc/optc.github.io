@@ -1358,14 +1358,14 @@ var details = {
     },
     309: {
         special: "Cuts all enemies' current HP by 10% and reduces the defense of all enemies by 50% for 3 turns",
-        captain: "Greatly reduces RCV and reduces damage received by 40%",
+        captain: "Reduces RCV by 90% and damage received by 40%",
         evolvers: [ 118, 82, 83, 304, 104 ],
         evolution: 310,
         cooldown: [ 23, 15 ]
     },
     310: {
         special: "Cuts all enemies' current HP by 10% and reduces the defense of all enemies by 50% for 3 turns",
-        captain: "Greatly reduces RCV and reduces damage received by 40%",
+        captain: "Reduces RCV by 90% and damage received by 40%",
         cooldown: [ 23, 15 ]
     },
     311: {
@@ -2857,7 +2857,7 @@ var details = {
     },
     584: {
         special: "Damage received from PSY enemies reduced by 100% for 1 turn",
-        captain: "Reduces cooldown of all specials by 3 turns at the start of the fight, greatly reduces ATK, HP and RCV",
+        captain: "Reduces cooldown of all specials by 3 turns at the start of the fight, greatly reduces ATK, HP and RCV", // TODO find reduction
         cooldown: [ 22, 8 ]
     },
     585: {
