@@ -58,7 +58,7 @@ window.defenses = [
     [ 'Nami (Kimono)'                  , 'Fortnight' , 'Expert'   , 421 , 1200   ] ,
     [ 'Luffy (Kimono)'                 , 'Fortnight' , 'Expert'   , 419 , 150    ] ,
     [ 'Ryuuma'                         , 'Fortnight' , 'Expert'   , 424 , 20     ] ,
-    [ 'Brook (mid-boss)'               , 'Fortnight' , 'Expert'   , 422 , 550    ] ,
+    [ 'Brook (mid-boss)'               , 'Fortnight' , 'Expert'   , 422 , 500    ] ,
     [ 'Brook (last round)'             , 'Fortnight' , 'Expert'   , 423 , 2000   ] ,
     [ 'Elizabeth'                      , 'Fortnight' , 'Expert'   , 432 , 120    ] ,
     [ 'Candy-chan'                     , 'Fortnight' , 'Expert'   , 435 , 120    ] ,
