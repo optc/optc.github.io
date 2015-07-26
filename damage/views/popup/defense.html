@@ -15,16 +15,18 @@
                             <tr>
                                 <th></th>
                                 <th>Enemy</th>
+                                <th>Location</th>
                                 <th>Difficulty</th>
                                 <th>Defense</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr ng-repeat="defense in list" ng-click="pickDefense(defense)">
-                                <td class="slot small" decorate-slot="notitle" uid="defense[2]"></td>
+                                <td class="slot small" decorate-slot="notitle" uid="defense[3]"></td>
                                 <td>{{defense[0]}}</td>
                                 <td>{{defense[1]}}</td>
-                                <td>{{defense[3] | number}}</td>
+                                <td>{{defense[2]}}</td>
+                                <td>{{defense[4] | number}}</td>
                             </tr>
                         </tbody>
                     </table> 

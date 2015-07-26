@@ -1588,14 +1588,16 @@ var details = {
         cooldown: [ 22, 15 ]
     },
     356: {
-        special: "Changes own orb into [STR] and deals 7x character's ATK in STR damage to all enemies",
+        special: "Changes own orb into [STR] and deals 9x character's ATK in STR damage to all enemies",
+        specialNotes: "The in-game description is wrong, the special does not deal 7x damage",
         captain: "Boosts ATK of Striker characters by 2x",
         evolvers: [ 118, 78, 83, 300, 100 ],
         evolution: 357,
         cooldown: [ 11, 6 ]
     },
     357: {
-        special: "Changes own orb into [STR] and deals 7x character's ATK in STR damage to all enemies",
+        special: "Changes own orb into [STR] and deals 9x character's ATK in STR damage to all enemies",
+        specialNotes: "The in-game description is wrong, the special does not deal 7x damage",
         captain: "Boosts ATK of Striker characters by 2.5x",
         cooldown: [ 11, 6 ]
     },
@@ -2161,7 +2163,7 @@ var details = {
         cooldown: 28
     },
     460: {
-        special: "Heals back a little amount of HP after the end of each turn, delays all enemies for 1 turn",
+        special: "Heals 33 HP after the end of each turn for 999 turns, delays all enemies for 1 turn",
         captain: "Damage received reduced by 10%",
         cooldown: [ 14, 10 ]
     },

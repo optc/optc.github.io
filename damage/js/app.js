@@ -21,12 +21,12 @@ var SharedRootCtrl = function($scope) {
         
         hp: { current: 1, max: 1, perc: 100 },
 
-        rcv: 0,
-
         ship: {
             name: 'Merry Go',
             level: 5
         },
+
+        rcv: 0,
 
         defense: 0,
 
@@ -60,6 +60,13 @@ var SharedRootCtrl = function($scope) {
             $scope.data.team[n] = { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 } };
         $scope.tdata.team[n] = { orb: 1, special: false, lock: 0, silence: 0 };
     };
+
+    /* * * * * Custom hit modifiers resetting * * * * */
+
+    var resetHits = function() { $scope.tdata.customHitModifiers = null; };
+
+    $scope.$watch('data.team', resetHits, true);
+    $scope.$watch('tdata.team', resetHits, true);
 
 };
 
