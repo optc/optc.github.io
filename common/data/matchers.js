@@ -169,7 +169,7 @@ var matchers = [
     {
         name: 'Fixed damage dealers',
         target: 'special',
-        matcher: /Deals [\d,]+\s/i
+        matcher: /Deals [\d,]+\s|(fixed (STR|DEX|QCK|PSY|INT))/i
     },
 
     {

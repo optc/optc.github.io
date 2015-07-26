@@ -2488,14 +2488,16 @@ var details = {
         cooldown: [ 10, 5 ]
     },
     519: {
-        special: "Reduce current HP by 99%, deals 25x character's ATK in STR damage to all enemies, boosts ATK of STR characters by 2x",
+        special: "Reduce current HP by 99%, deals 25x character's ATK in fixed STR damage to all enemies, boosts ATK of STR characters by 2x",
+        specialNotes: "Fixed damage means the special entirely bypasses enemy defense",
         captain: "Boosts ATK of STR characters by 2x",
         cooldown: [ 25, 18 ],
 		evolvers: [ 118, 84, 95, 94, 100 ],
         evolution: 520
     },
     520: {
-        special: "Reduce current HP by 99%, deals 25x character's ATK in STR damage to all enemies, boosts ATK of STR characters by 2x",
+        special: "Reduce current HP by 99%, deals 25x character's ATK in fixed STR damage to all enemies, boosts ATK of STR characters by 2x",
+        specialNotes: "Fixed damage means the special entirely bypasses enemy defense",
         captain: "Boosts ATK of STR characters by 2.5x",
         cooldown: [ 25, 18 ]
     },
