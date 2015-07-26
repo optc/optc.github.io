@@ -16,7 +16,7 @@ controllers.DefenseCtrl = function($scope, $state, $stateParams) {
     });
 
     $scope.pickDefense = function(defense) {
-        $scope.data.defense = defense[3];
+        $scope.data.defense = defense[4];
         $state.go('^');
     };
 
