@@ -237,6 +237,7 @@ directives.hpBar = function() {
             '<div id="hp-rcv"><table><tbody>' +
                 '<tr><td>{{ hp.current | number }}</td><td>HP ({{ hp.perc || number }}%)</td></tr>' +
                 '<tr><td>{{ numbers.rcv | number }}</td><td>RCV</td></tr>' +
+                '<tr title="Minimum pirate level: {{ numbers.cost.level }}"><td>{{ numbers.cost.cost | number }}</td><td>cost</td></tr>' +
             '</tbody></table></div>',
         link: function(scope, element, attrs) {
             scope.hp = { current: scope.data.hp.current, perc: scope.data.hp.perc };
