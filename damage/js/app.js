@@ -30,6 +30,8 @@ var SharedRootCtrl = function($scope) {
 
         defense: 0,
 
+        profile: null
+
     };
     
     $scope.tdata = { // transitional data

@@ -1895,7 +1895,8 @@ var details = {
         ]
     },
     311: {
-        special: "Deals 100x character's ATK in QCK damage to one enemy and reduces HP to 1",
+        special: "Deals 100x character's ATK in fixed QCK damage to one enemy and reduces HP to 1",
+        specialNotes: "Fixed damage means the special entirely bypasses enemy defense",
         captain: "Boosts ATK by 3.5x after scoring 3 less than Good attacks in a row",
         cooldown: [
             35,
@@ -1906,6 +1907,7 @@ var details = {
     },
     312: {
         special: "Deals 100x character's ATK in QCK damage to one enemy and reduces HP to 1",
+        specialNotes: "Fixed damage means the special entirely bypasses enemy defense",
         captain: "Boosts ATK by 3.5x after scoring 3 less than Good attacks in a row",
         cooldown: [
             35,

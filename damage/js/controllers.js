@@ -212,6 +212,18 @@ controllers.CandyCtrl = function($scope, $state, $stateParams) {
 };
 
 /***************
+ * ProfileCtrl *
+ ***************/
+
+controllers.ProfileCtrl = function($scope, $state) {
+    $scope.list = profiles;
+    $scope.pickProfile = function(profile) {
+        $scope.data.profile = profile;
+        $state.go('^');
+    };
+};
+
+/***************
  * PopoverCtrl *
  ***************/
 

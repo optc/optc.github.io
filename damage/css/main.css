@@ -352,7 +352,7 @@ nav.panel {
 
 #menu li > div {
     display: block;
-    padding: 1em 1em 1em 1em;
+    padding: 0.8em;
     color: white;
     text-align: left;
     font-size: 11pt;
@@ -413,7 +413,7 @@ li.disabled {
     height: 20px;
 }
 
-.special > div {
+.special > div, #profileContainer {
     width: 230px;
     white-space: nowrap;
     overflow: hidden;
@@ -432,6 +432,10 @@ li > div > a {
 
 #gather {
     background-color: crimson;
+}
+
+.profiled {
+    background-color: orchid;
 }
 
 li input {
@@ -584,8 +588,12 @@ li input {
     margin-top: 5px;
 }
 
-#defense-table tbody > tr:hover, #defense-table tbody > td:hover,
-#slot-table tbody > tr:hover, #slot-table tbody > td:hover {
+#defense-table tbody > tr:hover,
+#defense-table tbody > td:hover,
+#profile-table tbody > tr:hover,
+#profile-table tbody > td:hover,
+#slot-table tbody > tr:hover,
+#slot-table tbody > td:hover {
     background-color: rgba(200,200,200,0.3);
     cursor: pointer;
 }
@@ -607,6 +615,15 @@ li input {
 .popover ul {
     padding-left: 15px;
     margin-bottom: 0;
+}
+
+#profile-table td:nth-child(2) {
+    white-space: nowrap;
+}
+
+#profile-table td ~ td,
+#profile-table th ~ th {
+    padding-left: 10px;
 }
 
 /********

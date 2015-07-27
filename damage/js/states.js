@@ -72,6 +72,16 @@ angular.module('optc').config(function($stateProvider, $urlRouterProvider) {
                 }
             }
         })
+
+        .state('main.profile',{
+            url: 'profiles',
+            views: {
+                popup: {
+                    templateUrl: 'views/popup/profiles.html',
+                    controller: 'ProfileCtrl'
+                }
+            }
+        })
         
         .state('main.gather',{
             url: 'gather',

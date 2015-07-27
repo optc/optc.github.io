@@ -1,0 +1,41 @@
+<div class="backdrop" ui-sref="^"></div>
+
+<div class="custom-modal">
+    <div id="picker" class="modal-dialog">
+        <div class="modal-content animated fadeInDown">
+            <div class="modal-header">Available profiles</div>
+            <div class="modal-body">
+
+                <div class="modal-div">
+
+                    <table id="profile-table">
+                        <thead>
+                            <tr>
+                                <th>&nbsp;</th>
+                                <th>Name</th>
+                                <th>Effect</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-click="pickProfile(null)">
+                                <td class="slot small" decorate-slot="notitle" uid="0"></td>
+                                <td>Default profile</td>
+                                <td>No restrictions</td>
+                            </tr>
+                            <tr ng-repeat="(profile,data) in list track by $index" ng-click="pickProfile(profile)">
+                                <td class="slot small" decorate-slot="notitle" uid="data.icon"></td>
+                                <td>{{profile}}</td>
+                                <td>{{data.description}}</td>
+                            </tr>
+                        </tbody>
+                    </table> 
+
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-default" ui-sref="^">Cancel</button> 
+            </div>
+        </div>
+    </div>
+</div>

@@ -43,6 +43,8 @@
  *                        specials (so far).
  */
 
+// TODO Check if the profile bonuses are applied before or after the static bonuses from the ships and other stuff
+
 var MODIFIERS = [ 'Miss', 'Good', 'Great', 'Perfect' ];
 var DEFAULT_HIT_MODIFIERS = [ 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect' ]; 
 
@@ -95,11 +97,13 @@ var CruncherCtrl = function($scope, $timeout) {
             var hp = getStatOfUnit(x,'hp');
             hp += getShipBonus('hp',true,x.unit,n);
             hp *= getShipBonus('hp',false,x.unit,n);
+            hp *= getProfileBonus('hp',x.unit);
             hpMax += Math.floor(applyCaptainEffectsToHP(n,hp));
             // rcv
             var rcv = getStatOfUnit(x,'rcv');
             rcv += getShipBonus('rcv',true,x.unit,n);
             rcv *= getShipBonus('rcv',false,x.unit,n);
+            rcv *= getProfileBonus('rcv',x.unit);
             rcvTotal += Math.floor(applyCaptainEffectsAndSpecialsToRCV(n,rcv));
         });
         result.rcv = Math.max(0,rcvTotal);
@@ -146,6 +150,7 @@ var CruncherCtrl = function($scope, $timeout) {
             atk += getShipBonus('atk',true,x.unit,n);
             atk *= orb; // orb multiplier (fixed)
             atk *= getTypeMultiplierOfUnit(x.unit,type); // type multiplier (fixed)
+            atk *= getProfileBonus('atk',x.unit); // profile bonus (fixed)
             result.push({ unit: x, orb: orb, damage: Math.floor(atk) * ship, position: n });
         });
         // apply static multipliers
@@ -263,6 +268,11 @@ var CruncherCtrl = function($scope, $timeout) {
             else result *= shipBonus.bonus[key]({ boatLevel: shipBonus.level, unit: unit, slot: slot });
         }
         return result;
+    };
+
+    var getProfileBonus = function(type,unit) {
+        if (!$scope.data.profile) return 1;
+        return profiles[$scope.data.profile][type](unit);
     };
 
     var getTypeMultiplierOfUnit = function(unit,against) {
@@ -502,9 +512,9 @@ var CruncherCtrl = function($scope, $timeout) {
             if (x.unit === null) return null;
             return {
                 name : x.unit.name,
-                hp   : getStatOfUnit(x,'hp'),
-                atk  : getStatOfUnit(x,'atk'),
-                rcv  : getStatOfUnit(x,'rcv'),
+                hp   : Math.floor(getStatOfUnit(x,'hp') * getProfileBonus('hp', x)),
+                atk  : Math.floor(getStatOfUnit(x,'atk') * getProfileBonus('atk', x)),
+                rcv  : Math.floor(getStatOfUnit(x,'rcv') * getProfileBonus('rcv', x)),
                 cmb  :  x.unit.combo
             };
         });
