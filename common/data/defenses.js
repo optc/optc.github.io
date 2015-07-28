@@ -85,7 +85,7 @@ window.defenses = [
     [ 'DBF Chopper'                    , 'Fortnight' , 'Expert'   , 571 , 70     ] ,
     [ 'DBF Usopp (last round)'         , 'Fortnight' , 'Expert'   , 571 , 78     ] ,
     [ 'Afro Luffy'                     , 'Fortnight' , 'Expert'   , 570 , 85     ] ,
-        // [ 'Genbou'                         , 'Expert'   , 580 , 100    ] ,
+    [ 'Genbou'                         , 'Fortnight' , 'Expert'   , 580 , 100    ] ,
     [ 'Young Buggy (mid-boss)'         , 'Fortnight' , 'Expert'   , 598 , 80     ] ,
         // [ 'Young Shanks'                   , 'Expert'   , 600 , ?  ]
     [ 'Young Buggy (last round)'       , 'Fortnight' , 'Expert'   , 599 , 100    ] ,
@@ -99,6 +99,10 @@ window.defenses = [
     [ 'Young Kuroobi'                  , 'Fortnight' , 'Expert'   , 656 , 500    ] ,
         // [ 'Young Choo'                     , 'Expert'   , 657 , ?      ] ,
     [ 'Young Arlong'                   , 'Fortnight' , 'Expert'   , 655 , 400    ] ,
+    [ 'Young Kohza (mid-boss)'         , 'Fortnight' , 'Expert'   , 664 , 50     ] ,
+    [ 'Young Vivi (last round)'        , 'Fortnight' , 'Expert'   , 663 , 1100   ] ,
+    [ 'Young Kohza (last round)'       , 'Fortnight' , 'Expert'   , 664 , 50     ] ,
+        // [ 'Cobra'                          , 'Fortnight' , 'Expert'   , 666 , ?      ] ,
     /* * * * * Others * * * * */
     [ 'Jozu (Whitebeard\'s island)'    , 'Special'   , ''         , 252 , 120000 ] ,
     // Turtles
