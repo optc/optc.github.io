@@ -2406,14 +2406,14 @@ var details = {
     497: {
         special: "Reduces Bind duration by 4 turns, deals 3x character's ATK in QCK damage to one enemy",
         captain: "Boosts ATK of QCK characters by 1.5x",
-        cooldown: [ 11, 1 ],
+        cooldown: [ 11, 11 ],
         evolution: 498,
         evolvers: [ 90, 94, 96, 301, 101 ]
     },
     498: {
         special: "Reduces Bind duration by 4 turns, deals 3x character's ATK in QCK damage to one enemy",
         captain: "Boosts ATK of QCK characters by 1.5x",
-        cooldown: [ 11, 1 ]
+        cooldown: [ 11, 11 ]
     },
     499: {
         special: "Delays all enemies by 1 turn",
