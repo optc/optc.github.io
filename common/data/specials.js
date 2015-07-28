@@ -432,4 +432,12 @@ window.specials = {
     661: { // Log Usopp
         def: function(p) { return 0.5; }
     },
+    665: { // v2 Kohza
+        atk: function(p) { return p.defenseDown ? 1.3 : 1; },
+        type: 'all'
+    },
+    666: { // v2 Kohza evolved
+        atk: function(p) { return p.defenseDown ? 1.3 : 1; },
+        type: 'all'
+    }
 };

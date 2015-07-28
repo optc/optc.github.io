@@ -1278,5 +1278,18 @@ window.captains = {
     },
     662: { // Vacation Nami
         atk: function(p) { return p.unit.type == "PSY" ? 2 : 1; }
+    },
+    665: { // v2 Kohza
+        atk: function(p) { return 1.2; },
+        hp: function(p) { return 0.2; },
+        rcv: function(p) { return 0.2; }
+    },
+    666: { // v2 Kohza evolved
+        atk: function(p) { return 1.75; },
+        hp: function(p) { return 0.2; },
+        rcv: function(p) { return 0.2; }
+    },
+    667: { // Cobra
+        atk: function(p) { return 1.75; },
     }
 };

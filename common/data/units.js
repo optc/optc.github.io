@@ -657,5 +657,13 @@ window.units = [
 	[ "Arlong of the Sun Pirates", "STR", "Slasher", 4, 20, 99, 1261, 633, 45, 2020, 1389, 171, 4, 1 ], 
 	[ "Kuroobi of the Sun Pirates", "STR", "Fighter", 3, 10, 50, 160, 103, 9, 1233, 744, 70, 6, 1 ], 
 	[ "Choo of the Sun Pirates", "INT", "Shooter", 3, 10, 50, 75, 72, 22, 1002, 552, 178, 5, 1 ],
-	[ "Monkey D. Luffy Swim Ring", "QCK", "Fighter", 4, 15, 99, 144, 69, 31, 2232, 933, 242, 6, 1 ]
+	[ "Monkey D. Luffy Swim Ring", "QCK", "Fighter", 4, 15, 99, 144, 69, 31, 2232, 933, 242, 6, 1 ],
+	[ ],
+	[ ],
+	[ "Nami Holiday" , "PSY" , "Striker" , 4, 15, 99, 70, 30, 100, 1334, 673, 396, 5, 0 ],
+	[ "Nefertari Vivi, Princess of the Alabasta Kingdom" , "PSY" , "Striker" , 3, 9, 35, 11, 11, 11, 285, 104, 225, 6, 0 ],
+	[ "Nefertari Vivi, Vice-Leader of the Suna Suna Clan" , "PSY" , "Fighter" , 4, 15, 70, 243, 51, 187, 593, 269, 488, 6, 0 ],
+	[ "Kohza, Alabasta Citizen" , "QCK" , "Striker" , 3, 9, 35, 53, 53, 3, 503, 274, 151, 5, 0 ],
+	[ "Kohza, Leader of the Suna Suna Clan" , "QCK" , "Striker" , 4, 15, 70, 445, 230, 123, 1000, 503, 341, 4, 0 ],
+	[ "Nefertari Cobra, King of the Alabasta Kingdom" , "PSY" , "Fighter" , 3, 15, 70, 523, 294, 31, 1402, 571, 211, 5, 0 ]
 ];
