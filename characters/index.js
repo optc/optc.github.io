@@ -11,7 +11,7 @@ var filters = { custom: [ ] };
 
 var parseUnit = function(element,n) {
     if (element.length === 0) return [ ];
-    if (element[13].constructor != Array) element[13] = [ element[13], element[13], element[13] ];
+    if (element[14].constructor != Array) element[14] = [ element[14], element[14], element[14] ];
     return {
         name    : element[0]  , type     : element[1]  ,
         class   : element[2]  , stars    : element[3]  ,
@@ -20,10 +20,10 @@ var parseUnit = function(element,n) {
         minRCV  : element[8]  , maxHP    : element[9]  ,
         maxATK  : element[10] , maxRCV   : element[11] ,
         combo   : element[12] , number   : n           ,
-        growth  : {
-            hp  : element[13][0],
-            atk : element[13][1],
-            rcv : element[13][2]
+        maxEXP  : element[13] , growth   : {
+            hp  : element[14][0],
+            atk : element[14][1],
+            rcv : element[14][2]
         }
     };
 };
