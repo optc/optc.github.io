@@ -16,7 +16,7 @@
                                 <td>{{slot.name}}</td>
                                 <td class="to-the-right">
                                     <div  class="slot small" ng-repeat="unit in slot.team track by $index"
-                                        ng-if="unit" decorate-slot="notitle" uid="unit.unit"></div>
+                                        ng-if="unit && $index < 6" decorate-slot="notitle" uid="unit.unit"></div>
                                 </td>
                             </tr>
                         </tbody>
