@@ -1126,7 +1126,7 @@ var details = {
         cooldown: [ 15, 7 ]
     },
     247: { // Chopperman
-        special: "Heals 1, 224 HP",
+        special: "Heals 1,224 HP",
         captain: "Damage received reduced by 10%",
         cooldown: [ 10, 10 ]
     },
@@ -2016,14 +2016,14 @@ var details = {
         cooldown: [ 20, 10 ]
     },
     423: { // Brook
-        special: "Heals 4, 343 HP, reduces the defense of all enemies by 50% for 2 turns",
+        special: "Heals 4,343 HP, reduces the defense of all enemies by 50% for 2 turns",
         captain: "Prevents death as long as HP is above 70%",
         cooldown: [ 24, 15 ],
         evolution: 424,
         evolvers: [ 117, 79, 85, 96, 101 ]
     },
     424: { // Humming Brook
-        special: "Heals 4, 343 HP, reduces the defense of all enemies by 50% for 2 turns",
+        special: "Heals 4,343 HP, reduces the defense of all enemies by 50% for 2 turns",
         captain: "Prevents death as long as HP is above 70%",
         cooldown: [ 24, 15 ]
     },
