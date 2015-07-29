@@ -2128,14 +2128,14 @@ var details = {
     },
     446: { // Marshall D. Teach
         special: "Deals 10 times the damage received in the previous turn in type-less damage to all enemies",
-        captain: "Doubles damage received, boosts ATK of STR characters by 2 and their HP by 1.5x",
+        captain: "Doubles damage received, boosts ATK of STR characters by 2x and their HP by 1.5x",
         cooldown: [ 30, 15 ],
         evolution: 447,
         evolvers: [ 118, 266, 89, 300, 100 ]
     },
     447: { // Blackbeard
         special: "Deals 10 times the damage received in the previous turn in type-less damage to all enemies",
-        captain: "Doubles damage received, boosts ATK of STR characters by 2.5 and their HP by 2.25x",
+        captain: "Doubles damage received, boosts ATK of STR characters by 2.5x and their HP by 2.25x",
         cooldown: [ 30, 15 ]
     },
     448: { // Thatch
@@ -2201,7 +2201,7 @@ var details = {
     458: { // Sengoku
         special: "Deals random PSY damage to all enemies, boosts ATK by 1.5x",
         captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of characters with cost 20 or less by 3x",
-        cooldown: 28,
+        cooldown: [ 28, 19 ],
         evolution: 459,
         evolvers: [ 118, 266, 94, 98, 267 ]
     },
@@ -2466,29 +2466,29 @@ var details = {
     507: { // Chaka
         special: "Deals 25x character's ATK in STR damage to one enemy",
         captain: "Boosts ATK and HP of STR characters by 1.2x",
-        cooldown: 25,
+        cooldown: [ 25, 18 ],
         evolution: 508,
         evolvers: [ 116, 89, 95, 300 ]
     },
     508: { // Chaka, Alabasta's Guardian Jackal
         special: "Deals 25x character's ATK in STR damage to one enemy",
         captain: "Boosts ATK and HP of STR characters by 1.5x",
-        cooldown: 25
+        cooldown: [ 25, 18 ]
     },
     509: { // The Strongest Prisoner Sir. Crocodile Mr.0, Former Leader of Baroque Works
-        special: "Poisons all enemies, boosts ATK of Striker characters by 1.5 for 1 turn",
+        special: "Poisons all enemies, boosts ATK of Striker characters by 1.5x for 1 turn",
         captain: "Boosts ATK of Striker characters by 1.5x",
         cooldown: [ 24, 14 ],
         evolution: 510,
         evolvers: [ 117, 85, 96, 96, 301 ]
     },
     510: { // The Strongest Prisoner Sir. Crocodile the Shichibukai
-        special: "Poisons all enemies, boosts ATK of Striker characters by 1.5 for 1 turn",
+        special: "Poisons all enemies, boosts ATK of Striker characters by 1.5x for 1 turn",
         captain: "Damage received reduced by 10%, boosts ATK of Striker characters by 2x",
         cooldown: [ 24, 14 ]
     },
     511: { // Prisoner Daz Bonez Mr.1
-        special: "Damage received reduced by 30% for 2 turns, boosts ATK of Slasher character by 1.25 for 2 turns",
+        special: "Damage received reduced by 30% for 2 turns, boosts ATK of Slasher character by 1.25x for 2 turns",
         captain: "Boosts ATK of Slasher characters by 2x",
         cooldown: [ 22, 17 ]
     },
@@ -2547,13 +2547,13 @@ var details = {
         special: "Reduce current HP by 99%, deals 25x character's ATK in fixed STR damage to all enemies, boosts ATK of STR characters by 2x",
         specialNotes: "Fixed damage means the special entirely bypasses enemy defense",
         captain: "Boosts ATK of STR characters by 2.5x",
-        cooldown: [ 25, 18 ]
+        cooldown: [ 23, 18 ]
     },
     521: { // Sanji, Merveille's Adventurer (Strong World/SW)
         special: "Deals several times the character's ATK in INT damage to all enemies",
         specialNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the lower the HP is. The multiplier is calculated as: 100 * ( 1 - (remaining HP) / (total HP) )",
         captain: "Damage received reduced by 80% if HP is above 99% at the start of the turn",
-        cooldown: [ 25, 17 ],
+        cooldown: [ 23, 17 ],
         evolution: 522,
         evolvers: [ 118, 83, 88, 94, 104 ]
     },
@@ -2692,14 +2692,14 @@ var details = {
         cooldown: [ 25, 20 ]
     },
     545: { // Enel
-        special: "Deals 6,000 damage to all enemies, boosts ATK of PSY characters by 1.5 for 1 turn",
+        special: "Deals 6,000 damage to all enemies, boosts ATK of PSY characters by 1.5x for 1 turn",
         captain: "Boosts ATK of PSY characters by 2x",
         cooldown: [ 32, 17 ],
         evolution: 546,
         evolvers: [ 118, 266, 92, 303, 103 ]
     },
     546: { // God Enel
-        special: "Deals 6,000 damage to all enemies, boosts ATK of PSY characters by 1.5 for 1 turn",
+        special: "Deals 6,000 damage to all enemies, boosts ATK of PSY characters by 1.5x for 1 turn",
         captain: "Boosts ATK of PSY characters by 2x, damage received reduced by 20%",
         cooldown: [ 32, 17 ]
     },
@@ -3315,12 +3315,12 @@ var details = {
     663: { // Nefertari Vivi, Princess of the Alabasta Kingdom
         special: "Deals 80,000 damage to one enemy if HP is 1, recovers 5x character's RCV in HP at the end of the turn for 5 turns",
         captain: "Recovers 2x character's RCV in HP at the end of the turn",
-        cooldown: 25
+        cooldown: [ 25, 16 ]
     },
     664: { // Nefertari Vivi, Vice-Leader of the Suna Suna Clan
         special: "Deals 80,000 damage to one enemy if HP is 1, recovers 5x character's RCV in HP at the end of the turn for 5 turns",
         captain: "Recovers 3x character's RCV in HP at the end of the turn",
-        cooldown: 25
+        cooldown: [ 25, 16 ]
     },
     665: { // Kohza, Alabasta Citizen
         special: "Changes own orb into [QCK], boosts ATK against enemies with reduced defense by 1.3x for 2 turns",
@@ -3335,6 +3335,6 @@ var details = {
     667: { // Nefertari Cobra, King of the Alabasta Kingdom
         special: "Prevents death as long as HP is above 50% for 1 turn",
         captain: "Damage received reduced by 10%, boosts ATK by 1.5x",
-        cooldown: 28
+        cooldown: [ 28, 15 ]
     }
 };
