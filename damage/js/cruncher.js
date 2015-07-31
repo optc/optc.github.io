@@ -121,7 +121,7 @@ var CruncherCtrl = function($scope, $timeout) {
         var overallDamage = optimizeDamage(damage,false);
         // apply damage sorters to base damage, recalculate the new damage and update overallDamage if necessary
         for (var i=0;i<cptsWith.damageSorters.length;++i) {
-            var baseDamage = getBaseDamageForType(type,true);
+            var baseDamage = $.extend([ ], damage);
             var newDamage = cptsWith.damageSorters[i].damageSorter(baseDamage);
             if (newDamage === null) continue;
             var newOverallDamage = optimizeDamage(newDamage,true);
@@ -175,8 +175,8 @@ var CruncherCtrl = function($scope, $timeout) {
      * Returns an object detailing the updated damage including the two new multipliers mentioned
      * above, the overall damage and the hit modifiers used to compute said damage.
      */
-    var getOverallDamage = function(damage,hitModifiers) {
-        var result = applySpecialMultipliersAndCaptainEffects(damage,hitModifiers);
+    var getOverallDamage = function(damage,hitModifiers,noSorting) {
+        var result = applySpecialMultipliersAndCaptainEffects(damage,hitModifiers,noSorting);
         // apply chain and bonus multipliers
         result = applyChainAndBonusMultipliers(result,hitModifiers);
         var overallDamage = result.result.reduce(function(prev,x) { return prev + x.damage; },0);
@@ -185,11 +185,11 @@ var CruncherCtrl = function($scope, $timeout) {
     };
 
     /* Calculates the highest overall damage for an array of hit modifiers. */
-    var optimizeDamage = function(damage) {
+    var optimizeDamage = function(damage,noSorting) {
         // check damage from default order (or custom order) first, we'll use it as a base for comparison
-        var currentResult = getOverallDamage(damage,hitModifiers[0]);
+        var currentResult = getOverallDamage(damage,hitModifiers[0],noSorting);
         for (var i=1;i<hitModifiers.length;++i) {
-            var newResult = getOverallDamage(damage,hitModifiers[i]);
+            var newResult = getOverallDamage(damage,hitModifiers[i],noSorting);
             if (newResult.overall > currentResult.overall) currentResult = newResult;
         }
         return currentResult;
@@ -355,7 +355,7 @@ var CruncherCtrl = function($scope, $timeout) {
         return { result: result, chainMultipliers: multipliersUsed };
     };
 
-    var applySpecialMultipliersAndCaptainEffects = function(damage,hitModifiers) {
+    var applySpecialMultipliersAndCaptainEffects = function(damage,hitModifiers,noSorting) {
         var result = damage, current = -1;
         // if there are no specials available, just apply the non-static captain effects and return the result
         if (specialsCombinations.length === 0) {
@@ -373,7 +373,7 @@ var CruncherCtrl = function($scope, $timeout) {
                 return { unit: x.unit, orb: x.orb, damage: x.damage * multiplier, position: x.position };
             });
             // sort by damage again
-            temp = temp.sort(function(x,y) { return x.damage - y.damage; });
+            if (!noSorting) temp = temp.sort(function(x,y) { return x.damage - y.damage; });
             // apply non-static captain effects
             for (var i=0;i<cptsWith.hitModifiers.length;++i)
                 temp = applyCaptainEffectsToDamage(temp,cptsWith.hitModifiers[i].hitAtk,hitModifiers);
@@ -558,7 +558,7 @@ var CruncherCtrl = function($scope, $timeout) {
     };
 
     Array.prototype.okamaSort = function(data) {
-        var that = JSON.parse(JSON.stringify(this)), temp = [ ];
+        var that = $.extend([], this), temp = [ ];
         for (var i=0;i<data.length;++i) {
             for (var j=0;j<that.length;++j) {
                 if (that[j].unit.unit.type != data[i]) continue;
