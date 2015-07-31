@@ -1558,14 +1558,14 @@ var details = {
     },
     336: { // Franky
         special: "Freely switch orbs between slots twice",
-        captain: "Damage received reduced by 50% if HP is above 50% at the start of the turn, boosts ATK of PSY characters by 2x, reduces ATK of every other character by 20% if HP is above 50% at the start of the turn",
+        captain: "Damage received reduced by 50% if HP is above 50% at the start of the turn, boosts ATK of PSY characters by 2x and reduces ATK of every other character by 20% if HP is above 50% at the start of the turn",
         cooldown: [ 14, 6 ],
         evolution: 337,
         evolvers: [ 117, 81, 87, 98, 103 ]
     },
     337: { // Wrecking Yard Franky
         special: "Freely switch orbs between slots twice",
-        captain: "Damage received reduced by 50% if HP is above 50% at the start of the turn, boosts ATK of PSY characters by 2.5x, reduces ATK of every other character by 20% if HP is above 50% at the start of the turn",
+        captain: "Damage received reduced by 50% if HP is above 50% at the start of the turn, boosts ATK of PSY characters by 2.5x and reduces ATK of every other character by 20% if HP is above 50% at the start of the turn",
         cooldown: [ 14, 6 ]
     },
     338: { // Kiwi
