@@ -1833,7 +1833,7 @@ var details = {
     },
     390: { // Emporio Ivankov, Queen of Kamabakka Kingdom
         special: "Changes own orb into [QCK] and every other orb into either [RCV], [STR], [DEX] or [QCK] orbs",
-        captain: "Boosts ATK by 2.75x following a chain of STR > DEX > QCK attacks no lower than Good",
+        captain: "Boosts ATK by 2.75x following a chain of DEX > INT > QCK attacks no lower than Good",
         cooldown: [ 17, 8 ]
     },
     391: { // Perona

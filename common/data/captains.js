@@ -523,12 +523,12 @@ window.captains = {
     },
     389: { // Emporio Ivankov
         damageSorter: function(d) {
-            return d.okamaSort([ 'STR', 'DEX', 'QCK' ]);
+            return d.okamaSort([ 'DEX', 'INT', 'QCK' ]);
         },
         hitAtk: function(p) {
             return p.damage.slice(0,p.chainPosition).okamaCheck(p.modifiers,[
-                { type: 'STR', minModifier: 'Good' },
                 { type: 'DEX', minModifier: 'Good' },
+                { type: 'INT', minModifier: 'Good' },
                 { type: 'QCK', minModifier: 'Good' }
             ]) ? 2 : 1;
         },
@@ -536,12 +536,12 @@ window.captains = {
     },
     390: { // Emporio Ivankov, Queen of Kamabakka Kingdom
         damageSorter: function(d) {
-            return d.okamaSort([ 'STR', 'DEX', 'QCK' ]);
+            return d.okamaSort([ 'DEX', 'INT', 'QCK' ]);
         },
         hitAtk: function(p) {
             return p.damage.slice(0,p.chainPosition).okamaCheck(p.modifiers,[
-                { type: 'STR', minModifier: 'Good' },
                 { type: 'DEX', minModifier: 'Good' },
+                { type: 'INT', minModifier: 'Good' },
                 { type: 'QCK', minModifier: 'Good' }
             ]) ? 2.75 : 1;
         },
