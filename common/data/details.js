@@ -971,7 +971,7 @@ var details = {
     218: { // Roronoa Zoro Streaming Wolf Swords
         special: "Damage received by STR enemies reduced by 100% for 1 turn",
         captain: "Damage received reduced by 80% if HP is above 99% at the start of the turn",
-        cooldown: [ 15, 10 ],
+        cooldown: [ 15, 8 ],
         evolution: 219,
         evolvers: [ 118, 86, 102, 94, 91 ]
     },
