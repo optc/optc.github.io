@@ -1,7 +1,7 @@
 var details = {
     1: { // Monkey D. Luffy
         special: "Deals 5x character's ATK in STR damage to one enemy",
-        cooldown: 3,
+        cooldown: [ 3, 3],
         evolution: 2,
         evolvers: [ 78 ]
     },
@@ -260,7 +260,7 @@ var details = {
     45: { // Captain Kuro
         special: "Deals 5x character's ATK in QCK damage to all enemies",
         captain: "Boosts ATK of QCK characters by 1.2x",
-        cooldown: 15,
+        cooldown: [ 15, 8 ],
         evolution: 46,
         evolvers: [ 117, 79, 90, 101 ]
     },
@@ -372,7 +372,7 @@ var details = {
     67: { // Tashigi
         special: "Deals 25x character's ATK in QCK damage to one enemy",
         captain: "Boosts RCV of Slasher characters by 1.5x",
-        cooldown: 25,
+        cooldown: [ 25, 18 ],
         evolution: 68,
         evolvers: [ 117, 83, 79, 85, 96 ]
     },
@@ -417,19 +417,19 @@ var details = {
     74: { // Portgas D. Ace
         special: "Deals 25x character's ATK in QCK damage to one enemy",
         captain: "Boosts ATK of QCK characters by 2x",
-        cooldown: 25,
+        cooldown: [ 25, 18 ],
         evolution: 75,
         evolvers: [ 118, 83, 85, 85, 101 ]
     },
     75: { // Portgas D. Ace
         special: "Deals 15x character's ATK in QCK to all enemies",
         captain: "Boosts ATK of QCK characters by 2.5x",
-        cooldown: 25
+        cooldown: [ 25, 20 ]
     },
     76: { // Shanks
         special: "Deals 15x character's ATK in PSY damage to all enemies",
         captain: "Boosts ATK of PSY characters by 2x",
-        cooldown: 25,
+        cooldown: [ 25, 20 ],
         evolution: 77,
         evolvers: [ 118, 83, 87, 98, 103 ]
     },
@@ -942,7 +942,7 @@ var details = {
     213: { // Laboon
         special: "Deals 20x character's ATK in STR damage to all enemies",
         captain: "Prevents death as long as HP is above 50%",
-        cooldown: 20,
+        cooldown: [ 20, 15 ],
         evolution: 214,
         evolvers: [ 117, 78, 95, 100 ]
     },
@@ -971,7 +971,7 @@ var details = {
     218: { // Roronoa Zoro Streaming Wolf Swords
         special: "Damage received by STR enemies reduced by 100% for 1 turn",
         captain: "Damage received reduced by 80% if HP is above 99% at the start of the turn",
-        cooldown: 15,
+        cooldown: [ 15, 10 ],
         evolution: 219,
         evolvers: [ 118, 86, 102, 94, 91 ]
     },
@@ -983,7 +983,7 @@ var details = {
     220: { // Nami Fine Tempo
         special: "Changes [PSY] orbs into [INT] orbs",
         captain: "Boosts ATK of INT characters by 2x",
-        cooldown: 13,
+        cooldown: [ 13, 7 ],
         evolution: 221,
         evolvers: [ 118, 88, 104, 94, 93 ]
     },
@@ -1324,7 +1324,7 @@ var details = {
     290: { // Mr. 13 & Ms. Friday The Unluckies
         special: "Deals 25x character's ATK in INT damage to one enemy",
         captain: "Boosts ATK of Shooter characters by 1.5x",
-        cooldown: 25
+        cooldown: [ 25, 18 ]
     },
     291: { // Dorry
         special: "Changes neighboring slots' orbs into [RCV] orbs",
@@ -1354,7 +1354,7 @@ var details = {
     296: { // Tsuru
         special: "Heals 2,000 HP and randomizes all orbs",
         captain: "Boosts ATK of Shooter characters by 2x",
-        cooldown: 20,
+        cooldown: [ 20, 12 ],
         evolution: 297,
         evolvers: [ 117, 82, 88, 93, 104 ]
     },
@@ -1859,14 +1859,14 @@ var details = {
     395: { // Miss Merry Christmas
         special: "Empties neighboring slots, boosts orb effectiveness by 1.25x for 1 turn",
         captain: "Boosts ATK and RCV of QCK characters by 1.2x",
-        cooldown: 15,
+        cooldown: [ 15, 8 ],
         evolution: 396,
         evolvers: [ 79, 85, 90, 301 ]
     },
     396: { // Miss Merry Christmas the Mole Human
         special: "Empties neighboring slots, boosts orb effectiveness by 1.25x for 1 turn",
         captain: "Boosts ATK and RCV of QCK characters by 1.2x",
-        cooldown: 15
+        cooldown: [ 15, 8 ],
     },
     397: { // Mr. 4
         special: "Fills empty slots with [STR] orbs with a 50% probability, deals 15x character's ATK in damage to all enemies",
@@ -2208,7 +2208,7 @@ var details = {
     459: { // Sengoku the Buddha
         special: "Deals random PSY damage to all enemies, boosts ATK by 1.5x",
         captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of characters with cost 20 or less by 3x",
-        cooldown: 28
+        cooldown: [ 28, 19 ]
     },
     460: { // Criminal Galdino Mr.3
         special: "Heals 33 HP after the end of each turn for 999 turns, delays all enemies for 1 turn",
