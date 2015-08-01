@@ -81,6 +81,12 @@ var matchers = [
     },
 
     {
+        name: 'Damage reducers',
+        target: 'captain',
+        matcher: /Reduces damage received/i
+    },
+
+    {
         name: 'Healers',
         target: 'captain',
         matcher: /Recovers \d+x.+RCV.+end of/i
