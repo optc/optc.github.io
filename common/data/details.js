@@ -2785,14 +2785,14 @@ var details = {
     },
     561: { // Portgas D. Ace, Black Clothes Hiken
         special: "Reduces current HP by 40%, deals 15x the amount of HP subtracted in type-less damage to all enemies, locks all orbs for 1 turn",
-        captain: "Boosts ATK of Shooter characters by 3x if they have a matching orb, by 2x otherwise",
+        captain: "Boosts HP of Shooter characters by 1.5x and their ATK by 3x if they have a matching orb, by 2x otherwise",
         cooldown: 22,
         evolution: 562,
         evolvers: [ 118, 86, 266, 302, 267 ]
     },
     562: { // Portgas D. Ace, Black Clothes - Commander of the 2nd Division of the Whitebeard Pirates
         special: "Reduces current HP by 40%, deals 15x the amount of HP subtracted in type-less damage to all enemies, locks all orbs for 1 turn",
-        captain: "Boosts ATK of Shooter characters by 3x if they have a matching orb, by 2x otherwise",
+        captain: "Boosts HP of Shooter characters by 1.5x and their ATK by 3x if they have a matching orb, by 2x otherwise",
         cooldown: 22
     },
     563: { // Porche
