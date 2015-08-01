@@ -4,7 +4,7 @@
 
     <div id="queryContainer">
         <input type="text" id="picker" placeholder="type to filter (usual operators work)"
-            ng-model="query" ng-model-options="{ debounce: 500 }" auto-focus>
+            ng-model="query" ng-model-options="{ updateOn: 'change blur' }" auto-focus>
     </div>
 
     <div id="tableContainer">
