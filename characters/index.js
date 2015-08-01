@@ -296,39 +296,36 @@ app.directive('filters',function($compile) {
     return {
         restrict: 'A',
         link: function(scope,element,attrs) {
+            var createContainer = function(name, parent) {
+                var result = $('<div class="filter-container"><span class="filter-header">' + name + '</span></div>');
+                parent.append(result);
+                return result;
+            };
+            var createFilter = function(content,clazz,model,condition,onClick) {
+                var template = '<span class="' + clazz + '" ng-model="' + model + '" ' +
+                    'ng-class="{ active: ' + condition + ' }" ng-click="' + onClick + '">' + content + '</span>';
+                return $compile(template)(scope);
+            };
             // type filters
-            element.append($('<span class="filter-header">Type filters:</span>'));
-            var div = $('<div id="type-container"></div>');
+            var types = createContainer('Type filters', element);
             [ 'STR', 'QCK', 'DEX', 'PSY', 'INT' ].forEach(function(x) {
-                var template = '<span class="type-filter ' + x + '" ng-model="filters.type" ' +
-                    'ng-class="{ active: filters.type == \'' + x + '\' }" ng-click="onTypeClick(\'' + x + '\')">' + x + '</span>';
-                div.append($compile(template)(scope));
+                types.append(createFilter(x,'type-filter ' + x,'filters.type',
+                    'filters.type == \'' + x + '\'','onTypeClick(\'' + x + '\')'));
             });
-            element.append(div);
             // class filters
-            element.append($('<span class="filter-header">Class filters:</span>'));
+            var classes = createContainer('Class filters', element);
             [ 'Fighter', 'Shooter', 'Slasher', 'Striker' ].forEach(function(x) {
-                var template = '<span class="class-filter" ng-model="filters.class" ' +
-                    'ng-class="{ active: filters.class == \'' + x + '\' }" ng-click="onClassClick(\'' + x + '\')">' + x + '</span>';
-                element.append($compile(template)(scope));
+                classes.append(createFilter(x,'class-filter','filters.class',
+                    'filters.class == \'' + x + '\'','onClassClick(\'' + x + '\')'));
             });
             // captain ability filters
-            element.append($('<span class="filter-header">Captain abilities filters:</span>'));
+            var captains = createContainer('Captain abilities filters', element);
+            var specials = createContainer('Specials', element);
             matchers.forEach(function(x,n) {
-                if (x.target == 'special') return;
                 var model = 'filters.custom[' + n + ']';
-                var template = '<span class="custom-filter" ng-model="' + model + '" ' +
-                    'ng-class="{ active: ' + model + ' }" ng-click="' + model + ' = !' + model + '">' + x.name + '</span>';
-                element.append($compile(template)(scope));
-            });
-            // special filters
-            element.append($('<span class="filter-header">Specials filters:</span>'));
-            matchers.forEach(function(x,n) {
-                if (x.target == 'captain') return;
-                var model = 'filters.custom[' + n + ']';
-                var template = '<span class="custom-filter" ng-model="' + model + '" ' +
-                    'ng-class="{ active: ' + model + ' }" ng-click="' + model + ' = !' + model + '">' + x.name + '</span>';
-                element.append($compile(template)(scope));
+                var result = createFilter(x.name,'custom-filter',model,model,model + ' = !' + model);
+                if (x.target == 'captain') captains.append(result);
+                else specials.append(result);
             });
             // events 
             scope.onTypeClick = function(type) { scope.filters.type = (scope.filters.type == type ? null : type); };
