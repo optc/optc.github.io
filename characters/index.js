@@ -263,6 +263,9 @@ app.directive('characterTable',function($rootScope, $compile) {
                     row.setAttribute('loaded','true');
                 }
             });
+            var link = $('<span class="help-link">If you notice any error or missing information, please report it <a>here</a>.</span>');
+            link.find('a').attr('href', 'https://docs.google.com/forms/d/1jSlwN0Ruyc5bFfxdXlwihqfLdCiELX7HQTabXoCV7hU/viewform?usp=send_form');
+            link.insertBefore($('.dataTables_length'));
         }
     };
 });

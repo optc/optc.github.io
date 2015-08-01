@@ -94,7 +94,11 @@ input {
     width: 95%; 
     border: 1px solid gray;
     display: block;
-};
+}
+
+.help-link {
+    float: left;
+}
 
 /**********
  * TABLES *
