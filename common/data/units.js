@@ -664,6 +664,6 @@ window.units = [
 	[ "Nefertari Vivi,  Princess of the Alabasta Kingdom", "PSY", "Striker", 3, 9, 35, 11, 11, 11, 285, 104, 225, 6, 136167, 1 ],
 	[ "Nefertari Vivi,  Vice-Leader of the Suna Suna Clan", "PSY", "Fighter", 4, 15, 70, 243, 51, 187, 593, 269, 488, 6, 1066998, 1 ],
 	[ "Kohza,  Alabasta Citizen", "QCK", "Striker", 3, 9, 35, 53, 53, 3, 503, 274, 151, 5, 136167, 1 ],
-	[ "Kohza,  Leader of the Suna Suna Clan", "QCK", "Striker", 4, 15, 70, 445, 230, 123, 1000, 503, 341, 4, 1066998, 0 ],
+	[ "Kohza,  Leader of the Suna Suna Clan", "QCK", "Striker", 4, 15, 70, 445, 230, 123, 1000, 503, 341, 4, 1066998, 1 ],
 	[ "Nefertari Cobra,  King of the Alabasta Kingdom", "PSY", "Fighter", 3, 15, 70, 523, 294, 31, 1402, 571, 211, 5, 1066998, 1 ]
 ];

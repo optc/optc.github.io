@@ -52,7 +52,7 @@ var details = {
     },
     9: { // Nami
         special: "Heals 1,000 HP",
-        captain: "Damage received from INT enemies reduced by 20%",
+        captain: "Reduces damage received from INT enemies by 20%",
         cooldown: 12,
         evolution: [ 10, 11 ],
         evolvers: [ [ 115, 82 ], [ 116, 82, 99 ] ]
@@ -65,7 +65,7 @@ var details = {
         evolvers: [ 117, 88, 99, 104 ]
     },
     11: { // Nami Mirage Tempo
-        special: "Damages received from INT enemies reduced by 100% for 1 turn",
+        special: "Reduces damage received from INT enemies by 100% for 1 turn",
         captain: "Boosts ATK of INT characters by 1.5x",
         cooldown: [ 15, 8 ],
         evolution: 12,
@@ -156,7 +156,7 @@ var details = {
         cooldown: [ 25, 15 ]
     },
     26: { // Tony Tony Chopper Guard Point
-        special: "Damage received reduced by 50% for 3 turns",
+        special: "Reduces damage received by 50% for 3 turns",
         captain: "Boosts RCV of DEX characters by 1.5x",
         cooldown: [ 22, 15 ]
     },
@@ -171,14 +171,14 @@ var details = {
     },
     29: { // Iron-Mace Alvida
         special: "Deals 7x character's ATK in STR damage to one enemy",
-        captain: "Damage received from STR enemies reduced by 30%",
+        captain: "Reduces damage received from STR enemies by 30%",
         cooldown: 15,
         evolution: 30,
         evolvers: [ 117, 78, 89, 100 ]
     },
     30: { // Iron-Mace Alvida Smooth-Smooth Fruit
-        special: "Damage received reduced by 80% for 1 turn",
-        captain: "Damage received from STR enemies reduced by 50%",
+        special: "Reduces damage received by 80% for 1 turn",
+        captain: "Reduces damage received from STR enemies by 50%",
         cooldown: [ 15, 9 ]
     },
     31: { // Coby
@@ -192,13 +192,13 @@ var details = {
         cooldown: [ 13, 7 ]
     },
     33: { // Helmeppo
-        captain: "Damage received from INT enemies reduced by 30%",
+        captain: "Reduces damage received from INT enemies by 30%",
         evolution: 34,
         evolvers: [ 115, 82 ]
     },
     34: { // Cabin Boy Helmeppo
         special: "Reduces the defense of all enemies by 100% for 1 turn",
-        captain: "Damage received from INT enemies reduced by 30%",
+        captain: "Reduces damage received from INT enemies by 30%",
         cooldown: [ 25, 20 ]
     },
     35: { // Axe-Hand Morgan
@@ -232,7 +232,7 @@ var details = {
     },
     40: { // Gaimon
         special: "Changes neighboring orbs into [RCV] orbs",
-        captain: "Damage received from Shooter enemies reduced by 30%",
+        captain: "Reduces damage received from Shooter enemies by 30%",
         cooldown: [ 15, 8 ]
     },
     41: { // Siam
@@ -247,14 +247,14 @@ var details = {
     },
     43: { // One-Two Django
         special: "Changes [RCV] orbs into [DEX] orbs",
-        captain: "Damage received reduced by 10%",
+        captain: "Reduces damage received by 10%",
         cooldown: 13,
         evolution: [ 44, 229 ],
         evolvers: [ [ 116, 80, 91 ], [ 116, 81, 92 ] ]
     },
     44: { // Dancing Django
         special: "Changes [RCV] orbs into [DEX] orbs",
-        captain: "Damage received reduced by 10%",
+        captain: "Reduces damage received by 10%",
         cooldown: [ 13, 7 ]
     },
     45: { // Captain Kuro
@@ -296,35 +296,35 @@ var details = {
         cooldown: [ 13, 7 ]
     },
     53: { // Gin
-        captain: "Damage received from QCK enemies reduced by 30%",
+        captain: "Reduces damage received from QCK enemies by 30%",
         evolution: 54,
         evolvers: [ 116, 79, 90 ]
     },
     54: { // Gin the Man-Demon
         special: "Deals 7x character's ATK in QCK damage to one enemy",
-        captain: "Damage received from QCK enemies reduced by 50%",
+        captain: "Reduces damage received from QCK enemies by 50%",
         cooldown: [ 15, 9 ]
     },
     55: { // Pearl
-        captain: "Damage received from STR enemies reduced by 30%",
+        captain: "Reduces damage received from STR enemies by 30%",
         evolution: 56,
         evolvers: [ 116, 78, 89 ]
     },
     56: { // Fire Pearl
         special: "Changes [RCV] orbs into [STR] orbs",
-        captain: "Damage received from STR enemies reduced by 50%",
+        captain: "Reduces damage received from STR enemies by 50%",
         cooldown: [ 13, 7 ]
     },
     57: { // Don Krieg
         special: "Deals 7x character's ATK in INT damage to one enemy",
-        captain: "Damage received reduced by 10%",
+        captain: "Reduces damage received by 10%",
         cooldown: 15,
         evolution: 58,
         evolvers: [ 117, 82, 93, 104 ]
     },
     58: { // Don Krieg Poison Gas Bomb MH5
         special: "Poisons all enemies",
-        captain: "Damage received reduced by 20%",
+        captain: "Reduces damage received by 20%",
         cooldown: [ 15, 12 ]
     },
     59: { // Nezumi
@@ -348,13 +348,13 @@ var details = {
         cooldown: [ 15, 9 ]
     },
     63: { // Hatchan
-        captain: "Damage received from DEX enemies reduced by 30%",
+        captain: "Reduces damage received from DEX enemies by 30%",
         evolution: 64,
         evolvers: [ 116, 80, 91 ]
     },
     64: { // Six-Sword Hachi
         special: "Deals 10x character's ATK in DEX damage to all enemies",
-        captain: "Damage received from DEX enemies reduced by 50%",
+        captain: "Reduces damage received from DEX enemies by 50%",
         cooldown: [ 15, 10 ]
     },
     65: { // Arlong
@@ -382,21 +382,21 @@ var details = {
         cooldown: [ 25, 18 ]
     },
     69: { // Smoker
-        special: "Damage received reduced by 50% for 3 turns",
-        captain: "Damage received reduced by 20%",
+        special: "Reduces damage received by 50% for 3 turns",
+        captain: "Reduces damage received by 20%",
         cooldown: [ 22, 15 ],
         evolution: 70,
         evolvers: [ 117, 83, 80, 86, 97 ]
     },
     70: { // Smoker the White Hunter
-        special: "Damage received reduced by 50% for 3 turns",
-        captain: "Damage received reduced by 20%",
+        special: "Reduces damage received by 50% for 3 turns",
+        captain: "Reduces damage received by 20%",
         cooldown: [ 22, 15 ],
         evolution: 268,
         evolvers: [ 117, 80, 86, 91, 102 ]
     },
     71: { // Miss Wednesday
-        special: "Damage received reduced by 50% for 1 turn",
+        special: "Reduces damage received by 50% for 1 turn",
         captain: "Recovers 2x character's RCV in HP at the end of the turn",
         cooldown: [ 17, 10 ],
         evolution: [ 72, 72 ],
@@ -491,7 +491,7 @@ var details = {
         evolvers: [ 89 ]
     },
     122: { // Fighter Group Cabin Boy Blue Pirates
-        special: "Damage received reduced by 20% for 1 turn",
+        special: "Reduces damage received by 20% for 1 turn",
         evolution: 143,
         evolvers: [ 90 ]
     },
@@ -502,7 +502,7 @@ var details = {
         evolvers: [ 91 ]
     },
     124: { // Fighter Group Cabin Boy Yellow Pirates
-        special: "Damage received reduced by 20% for 1 turn",
+        special: "Reduces damage received by 20% for 1 turn",
         evolution: 145,
         evolvers: [ 92 ]
     },
@@ -598,7 +598,7 @@ var details = {
         evolvers: [ 93 ]
     },
     141: { // Cannoneer Cabin Boy
-        special: "Damage received reduced by 20% for 1 turn",
+        special: "Reduces damage received by 20% for 1 turn",
         cooldown: [ 25, 10 ],
         evolution: 162,
         evolvers: [ 115, 93 ]
@@ -609,7 +609,7 @@ var details = {
         evolvers: [ 115, 116, 89 ]
     },
     143: { // Fighter Group Crew Blue Pirates
-        special: "Damage received reduced by 20% for 1 turn",
+        special: "Reduces damage received by 20% for 1 turn",
         evolution: 270,
         evolvers: [ 115, 116, 90 ]
     },
@@ -620,7 +620,7 @@ var details = {
         evolvers: [ 115, 116, 91 ]
     },
     145: { // Fighter Group Crew Yellow Pirates
-        special: "Damage received reduced by 20% for 1 turn",
+        special: "Reduces damage received by 20% for 1 turn",
         evolution: 272,
         evolvers: [ 115, 116, 92 ]
     },
@@ -716,7 +716,7 @@ var details = {
         evolvers: [ 115, 116, 93 ]
     },
     162: { // Cannoneer Skilled
-        special: "Damage received reduced by 20% for 1 turn",
+        special: "Reduces damage received by 20% for 1 turn",
         cooldown: [ 25, 10 ],
         evolution: 289,
         evolvers: [ 104 ]
@@ -743,23 +743,23 @@ var details = {
         special: "Recovers 5x character's RCV in HP"
     },
     170: { // Fighter Group Leader
-        special: "Damage received reduced by 20% for 1 turn",
+        special: "Reduces damage received by 20% for 1 turn",
         cooldown: [ 25, 10 ]
     },
     171: { // Slasher Group Leader
-        special: "Damage received reduced by 20% for 1 turn",
+        special: "Reduces damage received by 20% for 1 turn",
         cooldown: 25
     },
     172: { // Striker Group Leader
-        special: "Damage received reduced by 20% for 1 turn",
+        special: "Reduces damage received by 20% for 1 turn",
         cooldown: 25
     },
     173: { // Shooter Group Leader
-        special: "Damage received reduced by 20% for 1 turn",
+        special: "Reduces damage received by 20% for 1 turn",
         cooldown: 25
     },
     174: { // Assassin Master
-        special: "Damage received reduced by 20% for 1 turn",
+        special: "Reduces damage received by 20% for 1 turn",
         cooldown: 25
     },
     175: { // Karate Fishman Arlong crewmember
@@ -857,7 +857,7 @@ var details = {
     },
     197: { // Pistol Ensign Navy HQ
         special: "Recovers 5x character's RCV in HP",
-        captain: "Damage received from PSY enemies reduced by 20%",
+        captain: "Reduces damage received from PSY enemies by 20%",
         cooldown: [ 12, 8 ]
     },
     198: { // Bazooka Ensign Navy HQ
@@ -888,13 +888,13 @@ var details = {
         cooldown: [ 15, 6 ]
     },
     203: { // Mr. 3
-        captain: "Damage received by INT enemies reduced by 10%",
+        captain: "Reduces damage received from INT enemies by 10%",
         evolution: 204,
         evolvers: [ 94, 82 ]
     },
     204: { // Mr. 3 Extra Special Candelabra
         special: "Delays all enemies for 1 turn",
-        captain: "Damage received by INT enemies reduced by 10%",
+        captain: "Reduces damage received from INT enemies by 10%",
         cooldown: [ 13, 9 ]
     },
     205: { // Miss Goldenweek
@@ -908,13 +908,13 @@ var details = {
         cooldown: [ 15, 10 ]
     },
     207: { // Mr. 2 Bon Clay
-        captain: "Damage received by PSY enemies reduced by 10%",
+        captain: "Reduces damage received from PSY enemies by 10%",
         evolution: [ 208, 462 ],
         evolvers: [ [ 94, 81 ], [ 117, 231 ] ]
     },
     208: { // Mr. 2 Bon Clay Bombardier Arabesque
         special: "Changes [RCV] orbs into [PSY] orbs",
-        captain: "Damage received by PSY enemies reduced by 20%",
+        captain: "Reduces damage received from PSY enemies by 20%",
         cooldown: [ 13, 7 ]
     },
     209: { // Miss All Sunday Baroque Works VP
@@ -957,8 +957,8 @@ var details = {
         cooldown: [ 15, 12 ]
     },
     216: { // Monkey D. Luffy Gum-Gum Balloon
-        special: "Damage received reduced by 50% for 3 turns",
-        captain: "Damage received reduced by 20%",
+        special: "Reduces damage received by 50% for 3 turns",
+        captain: "Reduces damage received by 20%",
         cooldown: [ 22, 15 ],
         evolution: 217,
         evolvers: [ 118, 84, 100, 94, 89 ]
@@ -969,15 +969,15 @@ var details = {
         cooldown: [ 25, 20 ]
     },
     218: { // Roronoa Zoro Streaming Wolf Swords
-        special: "Damage received by STR enemies reduced by 100% for 1 turn",
-        captain: "Damage received reduced by 80% if HP is above 99% at the start of the turn",
+        special: "Reduces damage received from STR enemies by 100% for 1 turn",
+        captain: "Reduces damage received by 80% if HP is above 99% at the start of the turn",
         cooldown: [ 15, 8 ],
         evolution: 219,
         evolvers: [ 118, 86, 102, 94, 91 ]
     },
     219: { // Roronoa Zoro Lion’s Song
         special: "Deals 25x character's ATK in DEX damage to one enemy",
-        captain: "Damage received reduced by 80% if HP is above 99% at the start of the turn",
+        captain: "Reduces damage received by 80% if HP is above 99% at the start of the turn",
         cooldown: [ 25, 18 ]
     },
     220: { // Nami Fine Tempo
@@ -1035,7 +1035,7 @@ var details = {
     },
     229: { // Double Crosser Django
         special: "Change [INT] orbs into [PSY] orbs",
-        captain: "Damage received reduced by 10%",
+        captain: "Reduces damage received by 10%",
         cooldown: [ 13, 7 ]
     },
     230: { // Double Ironfist Fullbody
@@ -1127,7 +1127,7 @@ var details = {
     },
     247: { // Chopperman
         special: "Heals 1,224 HP",
-        captain: "Damage received reduced by 10%",
+        captain: "Reduces damage received by 10%",
         cooldown: [ 10, 10 ]
     },
     248: { // Tony Tony Chopper Pre-Rampage (Monster Chopper)
@@ -1155,14 +1155,14 @@ var details = {
         cooldown: [ 30, 20 ]
     },
     252: { // Jozu
-        special: "Damage received by DEX enemies reduced by 100% for 1 turn",
+        special: "Reduces damage received from DEX enemies by 100% for 1 turn",
         captain: "Boosts ATK and HP of QCK characters by 2x",
         cooldown: [ 15, 8 ],
         evolution: 253,
         evolvers: [ 118, 85, 94, 96, 101 ]
     },
     253: { // Diamond Jozu
-        special: "Damage received by DEX enemies reduced by 100% for 1 turn",
+        special: "Reduces damage received from DEX enemies by 100% for 1 turn",
         captain: "Boosts ATK and HP of QCK characters by 2x",
         cooldown: [ 15, 8 ]
     },
@@ -1225,7 +1225,7 @@ var details = {
         cooldown: [ 17, 10 ]
     },
     264: { // Training Helmeppo
-        captain: "Damage received from INT enemies reduced by 30%",
+        captain: "Reduces damage received from INT enemies by 30%",
         evolution: 265,
         evolvers: [ 117, 82, 88, 93, 104 ]
     },
@@ -1241,22 +1241,22 @@ var details = {
         cooldown: 15
     },
     268: { // White Chase Smoker
-        special: "Damage received reduced by 50% for 3 turns",
-        captain: "Damage received reduced by 25%",
+        special: "Reduces damage received by 50% for 3 turns",
+        captain: "Reduces damage received by 25%",
         cooldown: [ 22, 15 ]
     },
     269: { // Armed Fighter Unit Red Pirates
         special: "Deals 10x character's ATK in STR damage to one enemy"
     },
     270: { // Armed Fighter Unit Blue Pirates
-        special: "Damage received reduced by 20% for 1 turn"
+        special: "Reduces damage received by 20% for 1 turn"
     },
     271: { // Armed Fighter Unit Green Pirates
         special: "Changes [STR] orbs into [DEX] orbs",
         cooldown: [ 15, 7 ]
     },
     272: { // Armed Fighter Unit Yellow Pirates
-        special: "Damage received reduced by 20% for 1 turn"
+        special: "Reduces damage received by 20% for 1 turn"
     },
     273: { // Armed Fighter Unit Black Pirates
         special: "Deals 10x character's ATK in INT damage to one enemy",
@@ -1318,7 +1318,7 @@ var details = {
         cooldown: 15
     },
     289: { // Skilled Gunner
-        special: "Damage received reduced by 20% for 1 turn",
+        special: "Reduces damage received by 20% for 1 turn",
         cooldown: [ 25, 10 ]
     },
     290: { // Mr. 13 & Ms. Friday The Unluckies
@@ -1328,16 +1328,16 @@ var details = {
     },
     291: { // Dorry
         special: "Changes neighboring slots' orbs into [RCV] orbs",
-        captain: "Damage received by INT enemies reduced by 50%",
+        captain: "Reduces damage received from INT enemies by 50%",
         cooldown: [ 18, 8 ]
     },
     292: { // Broggy
         special: "Changes neighboring slots' orbs into [RCV] orbs",
-        captain: "Damage received by PSY enemies reduced by 50%",
+        captain: "Reduces damage received from PSY enemies by 50%",
         cooldown: [ 18, 8 ]
     },
     293: { // Triceratops
-        special: "Damage received reduced by 20% for 1 turn",
+        special: "Reduces damage received by 20% for 1 turn",
         captain: "Boosts HP of QCK characters by 2x",
         cooldown: [ 15, 10 ]
     },
@@ -1404,14 +1404,14 @@ var details = {
     },
     309: { // Basil Hawkins
         special: "Cuts all enemies' current HP by 10%, reduces the defense of all enemies by 50% for 3 turns",
-        captain: "Reduces RCV by 90% and damage received by 40%",
+        captain: "Reduces RCV by 90%, reduces damage received by 40%",
         cooldown: [ 23, 15 ],
         evolution: 310,
         evolvers: [ 118, 82, 83, 304, 104 ]
     },
     310: { // Basil Hawkins the Magician
         special: "Cuts all enemies' current HP by 10%, reduces the defense of all enemies by 50% for 3 turns",
-        captain: "Reduces RCV by 90% and damage received by 40%",
+        captain: "Reduces RCV by 90%, reduces damage received by 40%",
         cooldown: [ 23, 15 ]
     },
     311: { // Killer
@@ -1558,14 +1558,14 @@ var details = {
     },
     336: { // Franky
         special: "Freely switch orbs between slots twice",
-        captain: "Damage received reduced by 10% if HP is above 50% at the start of the turn, boosts ATK of PSY characters by 2x and reduces ATK of every other character by 20% if HP is above 50% at the start of the turn",
+        captain: "Reduces damage received by 10% if HP is above 50% at the start of the turn, boosts ATK of PSY characters by 2x and reduces ATK of every other character by 20% if HP is above 50% at the start of the turn",
         cooldown: [ 14, 6 ],
         evolution: 337,
         evolvers: [ 117, 81, 87, 98, 103 ]
     },
     337: { // Wrecking Yard Franky
         special: "Freely switch orbs between slots twice",
-        captain: "Damage received reduced by 10% if HP is above 50% at the start of the turn, boosts ATK of PSY characters by 2.5x and reduces ATK of every other character by 20% if HP is above 50% at the start of the turn",
+        captain: "Reduces damage received by 10% if HP is above 50% at the start of the turn, boosts ATK of PSY characters by 2.5x and reduces ATK of every other character by 20% if HP is above 50% at the start of the turn",
         cooldown: [ 14, 6 ]
     },
     338: { // Kiwi
@@ -1710,57 +1710,57 @@ var details = {
         cooldown: [ 23, 18 ]
     },
     368: { // Giant Slasher Red Pirates
-        special: "Damage received by DEX enemies reduced by 50% for 1 turn",
+        special: "Reduces damage received from DEX enemies by 50% for 1 turn",
         cooldown: [ 25, 12 ],
         evolution: 373,
         evolvers: [ 116, 89, 95 ]
     },
     369: { // Giant Shooter Blue Pirates
-        special: "Damage received by STR enemies reduced by 50% for 1 turn",
+        special: "Reduces damage received from STR enemies by 50% for 1 turn",
         cooldown: [ 25, 12 ],
         evolution: 374,
         evolvers: [ 116, 90, 96 ]
     },
     370: { // Giant Warrior Green Pirates
-        special: "Damage received by QCK enemies reduced by 50% for 1 turn",
+        special: "Reduces damage received from QCK enemies by 50% for 1 turn",
         cooldown: [ 25, 12 ],
         evolution: 375,
         evolvers: [ 116, 91, 97 ]
     },
     371: { // Giant Fighter Yellow Pirates
-        special: "Damage received by INT enemies reduced by 50% for 1 turn",
+        special: "Reduces damage received from INT enemies by 50% for 1 turn",
         cooldown: [ 25, 12 ],
         evolution: 376,
         evolvers: [ 116, 92, 98 ]
     },
     372: { // Giant Striker Black Pirates
-        special: "Damage received by PSY enemies reduced by 50% for 1 turn",
+        special: "Reduces damage received from PSY enemies by 50% for 1 turn",
         cooldown: [ 25, 12 ],
         evolution: 377,
         evolvers: [ 116, 93, 99 ]
     },
     373: { // Giant Imperial Slasher Red Pirates
-        special: "Damage received by DEX enemies reduced by 50% for 1 turn",
+        special: "Reduces damage received from DEX enemies by 50% for 1 turn",
         captain: "Boosts ATK of Slasher characters by 1.5x",
         cooldown: [ 25, 12 ]
     },
     374: { // Giant Imperial Shooter Blue Pirates
-        special: "Damage received by STR enemies reduced by 50% for 1 turn",
+        special: "Reduces damage received from STR enemies by 50% for 1 turn",
         captain: "Boosts ATK of Shooter characters by 1.5x",
         cooldown: [ 25, 12 ]
     },
     375: { // Female Giant Imperial Warrior Green Pirates
-        special: "Damage received by QCK enemies reduced by 50% for 1 turn",
+        special: "Reduces damage received from QCK enemies by 50% for 1 turn",
         captain: "Boosts HP of Striker characters by 1.5x",
         cooldown: [ 25, 12 ]
     },
     376: { // Giant Imperial Fighter Yellow Pirates
-        special: "Damage received by INT enemies reduced by 50% for 1 turn",
+        special: "Reduces damage received from INT enemies by 50% for 1 turn",
         captain: "Boosts ATK of Fighter characters by 1.5x",
         cooldown: [ 25, 12 ]
     },
     377: { // Giant Imperial Striker Black Pirates
-        special: "Damage received by PSY enemies reduced by 50% for 1 turn",
+        special: "Reduces damage received from PSY enemies by 50% for 1 turn",
         captain: "Boosts ATK of Striker characters by 1.5x",
         cooldown: [ 25, 12 ]
     },
@@ -1781,7 +1781,7 @@ var details = {
         cooldown: [ 15, 10 ]
     },
     381: { // Banana Gator
-        special: "Damage received reduced by 20% for 1 turn",
+        special: "Reduces damage received by 20% for 1 turn",
         cooldown: [ 25, 8 ]
     },
     382: { // Sandora Dragon
@@ -1790,25 +1790,25 @@ var details = {
     },
     383: { // Mr. 0 Baroque Works CEO (Crocodile)
         special: "Poisons one enemy",
-        captain: "Damage received reduced by 10%, boosts ATK of INT units by 2x",
+        captain: "Reduces damage received by 10%, boosts ATK of INT units by 2x",
         cooldown: [ 17, 12 ],
         evolution: [ 384, 408 ],
         evolvers: [ [ 117, 88, 93, 94, 104 ], [ 118, 88, 266, 304, 267 ] ]
     },
     384: { // Sir Crocodile
         special: "Poisons one enemy",
-        captain: "Damage received reduced by 20%, boosts ATK of INT units by 2x",
+        captain: "Reduces damage received by 20%, boosts ATK of INT units by 2x",
         cooldown: [ 17, 12 ]
     },
     385: { // Hogback
-        special: "Damage received reduced by 50% for 1 turn, boosts ATK of Fighter characters by 1.25x for 1 turn",
+        special: "Reduces damage received by 50% for 1 turn, boosts ATK of Fighter characters by 1.25x for 1 turn",
         captain: "Boosts ATK of INT characters by 2x",
         cooldown: [ 20, 10 ],
         evolution: 386,
         evolvers: [ 117, 82, 88, 93, 99 ]
     },
     386: { // Doctor Hogback
-        special: "Damage received reduced by 50% for 1 turn, boosts ATK of Fighter characters by 1.25x for 1 turn",
+        special: "Reduces damage received by 50% for 1 turn, boosts ATK of Fighter characters by 1.25x for 1 turn",
         captain: "Boosts ATK of INT characters by 2x",
         cooldown: [ 20, 10 ]
     },
@@ -1837,14 +1837,14 @@ var details = {
         cooldown: [ 17, 8 ]
     },
     391: { // Perona
-        special: "Damage received reduced by 90% for 1 turn, reduces the defense of all enemies by 80% for 1 turn, deals 1,000 damage to all enemies",
+        special: "Reduces damage received by 90% for 1 turn, reduces the defense of all enemies by 80% for 1 turn, deals 1,000 damage to all enemies",
         captain: "Boosts RCV of DEX characters by 1.5x",
         cooldown: [ 23, 14 ],
         evolution: 392,
         evolvers: [ 117, 86, 91, 97, 102 ]
     },
     392: { // Ghost Princess Perona
-        special: "Damage received reduced by 90% for 1 turn, reduces the defense of all enemies by 80% for 1 turn, deals 1,000 damage to all enemies",
+        special: "Reduces damage received by 90% for 1 turn, reduces the defense of all enemies by 80% for 1 turn, deals 1,000 damage to all enemies",
         captain: "Boosts RCV of DEX characters by 2x",
         cooldown: [ 23, 14 ]
     },
@@ -1893,32 +1893,32 @@ var details = {
         cooldown: [ 15, 8 ]
     },
     401: { // Mr. 1
-        special: "Damage received reduced by 50% for 1 turn, boosts ATK of Slasher characters by 1.25x for 1 turn",
-        captain: "Damage received reduced by 10%, boosts ATK of Slasher characters by 1.5x, slightly reduces ATK of every other character",
+        special: "Reduces damage received by 50% for 1 turn, boosts ATK of Slasher characters by 1.25x for 1 turn",
+        captain: "Reduces damage received by 10%, boosts ATK of Slasher characters by 1.5x, slightly reduces ATK of every other character",
         cooldown: [ 18, 12 ],
         evolution: 402,
         evolvers: [ 78, 84, 89, 300 ]
     },
     402: { // Mr.1 the Fullbody Bladed Human
-        special: "Damage received reduced by 50% for 1 turn, boosts ATK of Slasher characters by 1.25x for 1 turn",
-        captain: "Damage received reduced by 10%, boosts ATK of Slasher characters by 2x, reduces reduces ATK of every other character",
+        special: "Reduces damage received by 50% for 1 turn, boosts ATK of Slasher characters by 1.25x for 1 turn",
+        captain: "Reduces damage received by 10%, boosts ATK of Slasher characters by 2x, reduces reduces ATK of every other character",
         cooldown: [ 18, 12 ]
     },
     403: { // Rebecca
         special: "Deals several times the character's ATK in QCK damage to all enemies",
         specialNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the lower the HP is. The multiplier is calculated as: 150 * ( 1 - (remaining HP) / (total HP) )",
-        captain: "Damage received reduced by 50% if HP is low, boosts RCV by 3x if HP is low",
+        captain: "Reduces damage received by 50% if HP is low, boosts RCV by 3x if HP is low",
         cooldown: [ 20, 20 ]
     },
     404: { // Absalom
-        special: "Damage received reduced by 50% for 2 turns, boosts RCV by 2x for 2 turns",
+        special: "Reduces damage received by 50% for 2 turns, boosts RCV by 2x for 2 turns",
         captain: "Boosts ATK of Shooter characters by 1.5x",
         cooldown: [ 23, 14 ],
         evolution: 405,
         evolvers: [ 117, 84, 89, 95, 100 ]
     },
     405: { // Graveyeard Absalom
-        special: "Damage received reduced by 50% for 2 turns, boosts RCV by 2x for 2 turns",
+        special: "Reduces damage received by 50% for 2 turns, boosts RCV by 2x for 2 turns",
         captain: "Boosts ATK of Shooter characters by 2x",
         cooldown: [ 23, 14 ]
     },
@@ -1932,7 +1932,7 @@ var details = {
     },
     408: { // Sir Crocodile the Shichibukai
         special: "Changes own orb into [INT], randomizes every other orb, deals 15x character's ATK in INT damage to all enemies",
-        captain: "Damage received reduced by 20%, boosts ATK of Slasher characters by 2x",
+        captain: "Reduces damage received by 20%, boosts ATK of Slasher characters by 2x",
         cooldown: [ 23, 18 ]
     },
     409: { // Jinbei
@@ -2011,7 +2011,7 @@ var details = {
         cooldown: [ 20, 10 ]
     },
     422: { // Nami Mirage Tempo - Arashi (Kimono)
-        special: "Damage received from INT enemies reduced by 100% for 1 turn, heals a random amount of HP",
+        special: "Reduces damage received from INT enemies by 100% for 1 turn, heals a random amount of HP",
         captain: "Boosts ATK, HP and RCV of INT characters by 1.5x",
         cooldown: [ 20, 10 ]
     },
@@ -2043,7 +2043,7 @@ var details = {
         cooldown: [ 21, 16 ]
     },
     428: { // Montblanc Cricket
-        special: "Damage received reduced by 50% for 2 turns",
+        special: "Reduces damage received by 50% for 2 turns",
         captain: "Boosts AATK of PSY characters by 2x",
         cooldown: [ 20, 15 ]
     },
@@ -2090,14 +2090,14 @@ var details = {
         cooldown: [ 12, 8 ]
     },
     437: { // Perona Sweet
-        special: "Recovers 3x character's RCV in HP, damage received reduced by 80% for 1 turn, poisons all enemies",
+        special: "Recovers 3x character's RCV in HP, reduces damage received by 80% for 1 turn, poisons all enemies",
         captain: "Boosts RCV by 3x if HP is below 30% at the start of the turn",
         cooldown: [ 18, 18 ],
         evolution: 438,
         evolvers: [ 118, 80, 86, 94, 97 ]
     },
     438: { // Perona Sweet Ghost Princees
-        special: "Recovers 3x character's RCV in HP, damage received reduced by 80% for 1 turn, poisons all enemies",
+        special: "Recovers 3x character's RCV in HP, reduces damage received by 80% for 1 turn, poisons all enemies",
         captain: "Boosts RCV by 5x if HP is below 30% at the start of the turn",
         cooldown: [ 18, 18 ]
     },
@@ -2127,14 +2127,14 @@ var details = {
         cooldown: [ 26, 17 ]
     },
     446: { // Marshall D. Teach
-        special: "Deals 10 times the damage received in the previous turn in type-less damage to all enemies",
+        special: "Deals 10 times the damage received in the previous turn in typeless damage to all enemies",
         captain: "Doubles damage received, boosts ATK of STR characters by 2x and their HP by 1.5x",
         cooldown: [ 30, 15 ],
         evolution: 447,
         evolvers: [ 118, 266, 89, 300, 100 ]
     },
     447: { // Blackbeard
-        special: "Deals 10 times the damage received in the previous turn in type-less damage to all enemies",
+        special: "Deals 10 times the damage received in the previous turn in typeless damage to all enemies",
         captain: "Doubles damage received, boosts ATK of STR characters by 2.5x and their HP by 2.25x",
         cooldown: [ 30, 15 ]
     },
@@ -2212,7 +2212,7 @@ var details = {
     },
     460: { // Criminal Galdino Mr.3
         special: "Heals 33 HP after the end of each turn for 999 turns, delays all enemies for 1 turn",
-        captain: "Damage received reduced by 10%",
+        captain: "Reduces damage received by 10%",
         cooldown: [ 14, 10 ]
     },
     461: { // Fugitive Bentham Mr.2 Bon Clay
@@ -2335,7 +2335,7 @@ var details = {
     },
     484: { // Green Elite Assult Squad Skypiea God's Army
         special: "Changes [INT] orbs into [DEX] orbs",
-        captain: "Damage received reduced by 10%",
+        captain: "Reduces damage received by 10%",
         cooldown: [ 15, 7 ]
     },
     485: { // Yellow Elite Assult Squad Skypiea God's Army
@@ -2484,11 +2484,11 @@ var details = {
     },
     510: { // The Strongest Prisoner Sir. Crocodile the Shichibukai
         special: "Poisons all enemies, boosts ATK of Striker characters by 1.5x for 1 turn",
-        captain: "Damage received reduced by 10%, boosts ATK of Striker characters by 2x",
+        captain: "Reduces damage received by 10%, boosts ATK of Striker characters by 2x",
         cooldown: [ 24, 14 ]
     },
     511: { // Prisoner Daz Bonez Mr.1
-        special: "Damage received reduced by 30% for 2 turns, boosts ATK of Slasher character by 1.25x for 2 turns",
+        special: "Reduces damage received by 30% for 2 turns, boosts ATK of Slasher character by 1.25x for 2 turns",
         captain: "Boosts ATK of Slasher characters by 2x",
         cooldown: [ 22, 17 ]
     },
@@ -2552,7 +2552,7 @@ var details = {
     521: { // Sanji, Merveille's Adventurer (Strong World/SW)
         special: "Deals several times the character's ATK in INT damage to all enemies",
         specialNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the lower the HP is. The multiplier is calculated as: 100 * ( 1 - (remaining HP) / (total HP) )",
-        captain: "Damage received reduced by 80% if HP is above 99% at the start of the turn",
+        captain: "Reduces damage received by 80% if HP is above 99% at the start of the turn",
         cooldown: [ 23, 17 ],
         evolution: 522,
         evolvers: [ 118, 83, 88, 94, 104 ]
@@ -2560,7 +2560,7 @@ var details = {
     522: { // Sanji, Strawhat Crew's Attack (Strong World/SW)
         special: "Deals several times the character's ATK in INT damage to all enemies",
         specialNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the lower the HP is. The multiplier is calculated as: 100 * ( 1 - (remaining HP) / (total HP) )",
-        captain: "Damage received reduced by 80% if HP is above 99% at the start of the turn",
+        captain: "Reduces damage received by 80% if HP is above 99% at the start of the turn",
         cooldown: [ 25, 17 ]
     },
     523: { // Nami, Merveille's Adventurer (Strong World/SW)
@@ -2584,7 +2584,7 @@ var details = {
     },
     526: { // Brook, Strawhat Crew's Attack (Strong World/SW)
         special: "Deals random PSY damage to all enemies, randomizes all orbs",
-        captain: "Boosts ATK of PSY characters by 2x, damage received from INT enemies reduced by 30%",
+        captain: "Boosts ATK of PSY characters by 2x, reduces damage received from INT enemies by 30%",
         cooldown: [ 23, 16 ]
     },
     527: { // Chopper, Merveille's Adventurer (Strong World/SW)
@@ -2614,15 +2614,15 @@ var details = {
         cooldown: 25
     },
     531: { // Nico Robin Sakura Snow Storm
-        special: "Damage received reduced by 30% for 4 turns",
-        captain: "Damage received by STR, DEX and QCK enemies reduced by 30%",
+        special: "Reduces damage received by 30% for 4 turns",
+        captain: "Reduces damage received from STR, DEX and QCK enemies by 30%",
         cooldown: [ 16, 16 ],
         evolution: 532,
         evolvers: [ 117, 80, 86, 91, 97 ]
     },
     532: { // Nico Robin Sakura Full Bloom
-        special: "Damage received reduced by 30% for 4 turns",
-        captain: "Damage received by STR, DEX and QCK enemies reduced by 30%",
+        special: "Reduces damage received by 30% for 4 turns",
+        captain: "Reduces damage received from STR, DEX and QCK enemies by 30%",
         cooldown: [ 16, 16 ]
     },
     533: { // Brook Cherry Head
@@ -2638,14 +2638,14 @@ var details = {
         cooldown: [ 18, 18 ]
     },
     535: { // Nami Sakura Cloud
-        special: "Damage received reduced by 50% for 2 turns, boosts RCV by 2x for 2 turns",
+        special: "Reduces damage received by 50% for 2 turns, boosts RCV by 2x for 2 turns",
         captain: "Boosts RCV of QCK characters by 1.5x",
         cooldown: [ 16, 16 ],
         evolution: 536,
         evolvers: [ 118, 80, 86, 91, 97 ]
     },
     536: { // Nami Sakura Weather
-        special: "Damage received reduced by 50% for 2 turns, boosts RCV by 2x for 2 turns",
+        special: "Reduces damage received by 50% for 2 turns, boosts RCV by 2x for 2 turns",
         captain: "Boosts RCV of QCK characters by 2x",
         cooldown: [ 16, 16 ]
     },
@@ -2700,7 +2700,7 @@ var details = {
     },
     546: { // God Enel
         special: "Deals 6,000 damage to all enemies, boosts ATK of PSY characters by 1.5x for 1 turn",
-        captain: "Boosts ATK of PSY characters by 2x, damage received reduced by 20%",
+        captain: "Boosts ATK of PSY characters by 2x, reduces damage received by 20%",
         cooldown: [ 32, 17 ]
     },
     547: { // Monkey D. Luffy of the 3 Terrible Brothers of Colubo Mountain
@@ -2728,7 +2728,7 @@ var details = {
         cooldown: [ 20, 10 ]
     },
     551: { // Minokoala
-        special: "Damage received reduced by 50% for 1 turn, deals 15x character's ATK in STR damage to one enemy",
+        special: "Reduces damage received by 50% for 1 turn, deals 15x character's ATK in STR damage to one enemy",
         cooldown: [ 45, 15 ]
     },
     552: { // Manticore
@@ -2784,14 +2784,14 @@ var details = {
         cooldown: [ 17, 11 ]
     },
     561: { // Portgas D. Ace, Black Clothes Hiken
-        special: "Reduces current HP by 40%, deals 15x the amount of HP subtracted in type-less damage to all enemies, locks all orbs for 1 turn",
+        special: "Reduces current HP by 40%, deals 15x the amount of HP subtracted in typeless damage to all enemies, locks all orbs for 1 turn",
         captain: "Boosts HP of Shooter characters by 1.5x and their ATK by 3x if they have a matching orb, by 2x otherwise",
         cooldown: 22,
         evolution: 562,
         evolvers: [ 118, 86, 266, 302, 267 ]
     },
     562: { // Portgas D. Ace, Black Clothes - Commander of the 2nd Division of the Whitebeard Pirates
-        special: "Reduces current HP by 40%, deals 15x the amount of HP subtracted in type-less damage to all enemies, locks all orbs for 1 turn",
+        special: "Reduces current HP by 40%, deals 15x the amount of HP subtracted in typeless damage to all enemies, locks all orbs for 1 turn",
         captain: "Boosts HP of Shooter characters by 1.5x and their ATK by 3x if they have a matching orb, by 2x otherwise",
         cooldown: 22
     },
@@ -2869,14 +2869,14 @@ var details = {
         cooldown: [ 12, 12 ]
     },
     577: { // Monkey D. Luffy, Record of the Voyage - Strawhat Crew (Log Luffy)
-        special: "Deals random type-less damage to all enemies, changes own orb into [STR]",
+        special: "Deals random typeless damage to all enemies, changes own orb into [STR]",
         captain: "Boosts ATK by 4x following a chain of Good > Great > Perfect hits",
         cooldown: 23,
         evolution: 578,
         evolvers: [ 118, 266, 95, 300, 267 ]
     },
     578: { // Monkey D. Luffy, Dream of the Voyage - Pirate King (Log Luffy)
-        special: "Deals random type-less damage to all enemies, changes own orb into [STR]",
+        special: "Deals random typeless damage to all enemies, changes own orb into [STR]",
         captain: "Boosts ATK by 4x following a chain of Good > Great > Perfect hits",
         cooldown: 23
     },
@@ -2908,7 +2908,7 @@ var details = {
         cooldown: [ 21, 10 ]
     },
     584: { // Aisa
-        special: "Damage received from PSY enemies reduced by 100% for 1 turn",
+        special: "Reduces damage received from PSY enemies by 100% for 1 turn",
         captain: "Reduces cooldown of all specials by 3 turns at the start of the fight, greatly reduces ATK, HP and RCV",
         cooldown: [ 22, 8 ]
     },
@@ -3010,7 +3010,7 @@ var details = {
     },
     605: { // Sanji, Dream of the Voyage - All Blue (Log Sanji)
         special: "Cuts all enemies' current HP by 10%, changes [QCK] orbs into [DEX] orbs",
-        captain: "Boosts ATK of Fighter characters by 2x, damage received reduced by 20%",
+        captain: "Boosts ATK of Fighter characters by 2x, reduces damage received by 20%",
         cooldown: 18
     },
     606: { // Zeff the Pirate
@@ -3042,14 +3042,14 @@ var details = {
         cooldown: 18
     },
     612: { // Brook, Record of the Voyage - Strawhat Crew (Log Brook)
-        special: "Boosts ATK and RCV by 45 units for 1 turn, damage received reduced by 45% for 1 turn",
+        special: "Boosts ATK and RCV by 45 units for 1 turn, reduces damage received by 45% for 1 turn",
         captain: "Boosts ATK of Slasher characters by 1.5x",
         cooldown: 13,
         evolution: 613,
         evolvers: [ 91, 94, 97, 97, 302 ]
     },
     613: { // Brook, Dream of the Voyage - Promised Meeting (Log Brook)
-        special: "Boosts ATK and RCV by 45 units for 1 turn, damage received reduced by 45% for 1 turn",
+        special: "Boosts ATK and RCV by 45 units for 1 turn, reduces damage received by 45% for 1 turn",
         captain: "Boosts ATK, HP and RCV of Slasher characters by 1.5x",
         cooldown: 13
     },
@@ -3156,7 +3156,7 @@ var details = {
         cooldown: [ 25, 16 ]
     },
     636: { // Pappug
-        special: "Binds himself for 3 turns, damage received reduced by 50% for 3 turns, heals a small amount of HP at the end of the turn for 3 turns",
+        special: "Binds himself for 3 turns, reduces damage received by 50% for 3 turns, heals a small amount of HP at the end of the turn for 3 turns",
         captain: "Boosts ATK of characters with cost 2 or less by 3x",
         cooldown: [ 23, 15 ]
     },
@@ -3229,14 +3229,14 @@ var details = {
     },
     648: { // Marco, Whitebeard Pirates' 1st Division Commander
         special: "Recovers 100x character's RCV in HP, boosts orb effectiveness by 1.5x for 2 turns",
-        captain: "Damage received reduced by 30% if HP is above 70% at the start of the turn, boosts ATK of QCK and PSY characters by 2.75x if HP is above 70% at the start the turn",
+        captain: "Reduces damage received by 30% if HP is above 70% at the start of the turn, boosts ATK of QCK and PSY characters by 2.75x if HP is above 70% at the start the turn",
         cooldown: 25,
         evolution: 649,
         evolvers: [ 118, 85, 266, 301, 267 ]
     },
     649: { // Phoenix Marco, Whitebeard Pirates' 1st Division Commander
         special: "Recovers 100x character's RCV in HP, boosts orb effectiveness by 1.5x for 2 turns",
-        captain: "Damage received reduced by 30% if HP is above 70% at the start of the turn, boosts ATK of QCK and PSY characters by 2.75x if HP is above 70% at the start the turn",
+        captain: "Reduces damage received by 30% if HP is above 70% at the start of the turn, boosts ATK of QCK and PSY characters by 2.75x if HP is above 70% at the start the turn",
         cooldown: 25
     },
     650: { // Nami, Record of the Voyage - Strawhat Crew (Log Nami)
@@ -3252,21 +3252,21 @@ var details = {
         cooldown: 15
     },
     652: { // Iron Mask Duval
-        special: "Cuts all enemies' current HP by 20%, damage received reduced by 50% for 1 turn",
+        special: "Cuts all enemies' current HP by 20%, reduces damage received by 50% for 1 turn",
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of DEX characters by 2x if they have matching orbs",
         cooldown: [ 28, 14 ],
         evolution: 653,
         evolvers: [ 116, 117, 80, 91, 97 ]
     },
     653: { // Duval, Head of the Flying Fish Riders
-        special: "Cuts all enemies' current HP by 20%, damage received reduced by 50% for 1 turn",
+        special: "Cuts all enemies' current HP by 20%, reduces damage received by 50% for 1 turn",
         captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of DEX characters by 2.25x if they have matching orbs",
         cooldown: [ 28, 14 ],
         evolution: [ 654, 654 ],
         evolvers: [ [ 118, 86, 266, 97, 102 ], [ 18 ] ]
     },
     654: { // Duval, Head of the Rosy Life Riders
-        special: "Cuts all enemies' current HP by 20%, damage received reduced by 50% for 1 turn",
+        special: "Cuts all enemies' current HP by 20%, reduces damage received by 50% for 1 turn",
         captain: "Reduces cooldown of all specials by 3 turns at the start of the fight, boosts ATK of DEX characters by 2.75x if they have matching orbs",
         cooldown: [ 28, 14 ]
     },
@@ -3293,7 +3293,7 @@ var details = {
         cooldown: [ 30, 17 ]
     },
     659: { // Monkey D. Luffy Swim Ring
-        special: "Reduces Bind and Silence duration by 2 turns, damage received reduced by 50% for 2 turns",
+        special: "Reduces Bind and Silence duration by 2 turns, reduces damage received by 50% for 2 turns",
         captain: "Boosts ATK by 2.5x after scoring 3 Perfects in a row",
         cooldown: 20
     },
@@ -3334,7 +3334,61 @@ var details = {
     },
     667: { // Nefertari Cobra, King of the Alabasta Kingdom
         special: "Prevents death as long as HP is above 50% for 1 turn",
-        captain: "Damage received reduced by 10%, boosts ATK by 1.5x",
+        captain: "Reduces damage received by 10%, boosts ATK by 1.5x",
         cooldown: [ 28, 15 ]
+    },
+    668: {
+        special: "Boosts ATK of Freedom characters by 1.5x for 1 turn. If during that turn every unit scores a Perfect hit, boosts ATK of Freedom characters by 2x in the following turn.",
+        captain: "Boosts HP and RCV by 1.2x, greatly boosts ATK of Freedom characters",
+        captainNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the higher the HP is. The multiplier is calculated as 2 + 0.75 * (remaining HP) / (total HP). At full health the boost is equal to 2.75x",
+        cooldown: 21
+    },
+    669: {
+        special: "Boosts ATK of Freedom characters by 1.5x for 1 turn. If during that turn every unit scores a Perfect hit, boosts ATK of Freedom characters by 2x in the following turn.",
+        captain: "Boosts HP and RCV by 1.2x, greatly boosts ATK of Freedom characters",
+        captainNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the higher the HP is. The multiplier is calculated as 2 + 0.75 * (remaining HP) / (total HP). At full health the boost is equal to 2.75x",
+        cooldown: 21
+    },
+    670: {
+        special: "Boosts ATK of Fighter characters by 1.75x for 1 turn",
+        captain: "Boosts ATK of Fighter characters by 2x",
+        cooldown: 15
+    },
+    671: {
+        special: "Boosts ATK of Fighter characters by 1.75x for 1 turn",
+        captain: "Boosts ATK of Fighter characters by 2.25x and their RCV by 1.5x",
+        cooldown: 15
+    },
+    672: {
+        special: "Cuts all enemies' current HP by 20%, changes own orb into [STR]",
+        captain: "Boosts ATK of Fighter characters by 2x",
+        cooldown: 20
+    },
+    673: {
+        special: "Cuts all enemies' current HP by 20%, changes own orb into [STR]",
+        captain: "Reduces cooldown of all specials by 3 turns at the start of the fight, boosts ATK of Fighter characters by 2x",
+        cooldown: 20
+    },
+    674: {
+        special: "Removes poison, reduces damage received by 50% for 2 turns, recovers 13x character's RCV in HP at the end of the turn for 2 turns",
+        captain: "Boosts ATK of Freedom characters by 2x",
+        cooldown: 21
+    },
+    675: {
+        special: "Removes poison, reduces damage received by 50% for 2 turns, recovers 13x character's RCV in HP at the end of the turn for 2 turns",
+        captain: "Boosts ATK of Freedom characters by 2.5x",
+        cooldown: 21
+    },
+    676: {
+        special: "Reduces damage received above 5,000 HP by 97% for 3 turns",
+        specialNotes: "The exact formula for the damage received is: 5000 + (total_damage - 5000) * 0.03",
+        captain: "Boosts ATK of Slasher characters by 1.5x, deals 5x character's ATK in QCK damage to all enemies at the end of the turn",
+        cooldown: 18
+    },
+    677: {
+        special: "Reduces damage received above 5,000 HP by 97% for 3 turns",
+        specialNotes: "The exact formula for the damage received is: 5000 + (total_damage - 5000) * 0.03",
+        captain: "Boosts ATK of Slasher characters by 1.5x, deals 5x character's ATK in QCK damage to all enemies at the end of the turn",
+        cooldown: 18
     }
 };
