@@ -1369,7 +1369,7 @@ var details = {
         cooldown: [ 25, 18 ]
     },
     299: { // Onigumo
-        special: "Reduces all enemies' HP by 10%",
+        special: "Cuts all enemies' current HP by 10%",
         captain: "Boosts ATK of DEX characters by 2x",
         cooldown: [ 21, 16 ]
     },
