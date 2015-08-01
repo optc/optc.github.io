@@ -1029,7 +1029,7 @@ var details = {
         cooldown: [ 32, 17 ]
     },
     228: { // Escapee Morgan
-        special: "Reduce the duration of Bind by 2 turns",
+        special: "Reduces Bind duration by 2 turns",
         captain: "Boosts HP of Slasher characters by 1.5x",
         cooldown: [ 15, 9 ]
     },
