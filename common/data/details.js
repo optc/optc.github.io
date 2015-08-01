@@ -1139,7 +1139,7 @@ var details = {
     },
     249: { // Tony Tony Chopper Post-Rampage (Monster Chopper)
         special: "Deals random STR damage to one enemy",
-        captain: "Reduces HP of STR characters by 60% and boosts their ATK by 2.5x",
+        captain: "Reduces HP of STR characters by 60% and boosts their ATK by 3x",
         cooldown: [ 30, 15 ]
     },
     250: { // Marco
