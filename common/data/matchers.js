@@ -47,19 +47,19 @@ var matchers = [
     {
         name: '2.5x ATK captains',
         target: 'captain',
-        matcher: /Boosts ATK.+by 2.5x/i
+        matcher: /Boosts (their )?ATK.+by 2.5x/i
     },
 
     {
         name: '2.75x ATK captains',
         target: 'captain',
-        matcher: /Boosts ATK.+by 2.75x/i
+        matcher: /Boosts (their )?ATK.+by 2.75x/i
     },
 
     {
         name: '3x ATK captains',
         target: 'captain',
-        matcher: /Boosts ATK.+by 3x/i
+        matcher: /Boosts (their )?ATK.+by 3x/i
     },
 
     {
