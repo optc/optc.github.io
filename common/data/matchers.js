@@ -89,7 +89,7 @@ var matchers = [
     {
         name: 'Tankers',
         target: 'captain',
-        matcher: /Damage.+reduced.+when HP.+99/i
+        matcher: /Damage.+reduced.+if HP.+99/i
     },
 
     {
