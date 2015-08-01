@@ -34,26 +34,9 @@ if (!localStorage.hasOwnProperty('version') || JSON.parse(localStorage.getItem('
 
 }
 
-if (JSON.parse(localStorage.getItem('version')) < 3) {
-
-    var data = JSON.parse(localStorage.getItem('data')) || { };
-    for (var i=0;i<6;++i) {
-        if (!data.team[i]) continue;
-        data.team[i].candies = data.team[i].candies || { hp: 0, atk: 0, rcv: 0 };
-    }
-    localStorage.setItem('data',JSON.stringify(data));
-
-    var slots = JSON.parse(localStorage.getItem('slots')) || { };
-    for (var slot in slots) {
-        for (var i=0;i<6;++i) {
-            if (!slots[slot].team[i]) continue;
-            slots[slot].team[i].candies = slots[slot].team[i].candies || { hp: 0, atk: 0, rcv: 0 };
-        }
-    }
-    localStorage.setItem('slots',JSON.stringify(slots));
-
-    localStorage.setItem('version',3);
-
+if (JSON.parse(localStorage.getItem('version')) < 4) {
+    localStorage.removeItem('data');
+    localStorage.setItem('version',4);
 }
 
 /* * * * * Controller * * * * */

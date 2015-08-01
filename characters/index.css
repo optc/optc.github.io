@@ -60,11 +60,12 @@ input {
     cursor: pointer;
 }
 
-.type-filter {
+.type-filter, .class-filter {
     width: 33.3333%;
 }
 
-.type-filter:nth-child(4) ~ .type-filter {
+.type-filter:nth-child(4) ~ .type-filter ,
+.class-filter:nth-child(4) ~ .class-filter {
     width: 50%;
 }
 
@@ -86,16 +87,11 @@ input {
 .TND { background: coral; }
 
 .class-filter {
-    width: 50%;
     border: 1px solid gray;
     border-right: none;
 }
 
-.class-filter:nth-child(1) {
-    border-left: none;
-}
-
-.class-filter:nth-child(3) ~ .class-filter {
+.class-filter:nth-child(4) ~ .class-filter {
     border-top: none;
 }
 

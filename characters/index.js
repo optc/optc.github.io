@@ -5,28 +5,11 @@ var app = angular.module('optc', [ 'ui.router', 'ui.bootstrap', 'ngSanitize' ]);
 var lastQuery = null;
 var filters = { custom: [ ] };
 
+Utils.parseUnits(false);
+
 /********************
  * Common functions *
  ********************/
-
-var parseUnit = function(element,n) {
-    if (element.length === 0) return [ ];
-    if (element[14].constructor != Array) element[14] = [ element[14], element[14], element[14] ];
-    return {
-        name    : element[0]  , type     : element[1]  ,
-        class   : element[2]  , stars    : element[3]  ,
-        cost    : element[4]  , maxLevel : element[5]  ,
-        minHP   : element[6]  , minATK   : element[7]  ,
-        minRCV  : element[8]  , maxHP    : element[9]  ,
-        maxATK  : element[10] , maxRCV   : element[11] ,
-        combo   : element[12] , number   : n           ,
-        maxEXP  : element[13] , growth   : {
-            hp  : element[14][0],
-            atk : element[14][1],
-            rcv : element[14][2]
-        }
-    };
-};
 
 var generateSearchParameters = function(query, filters) {
     var result = Utils.generateSearchParameters(query);
@@ -92,8 +75,6 @@ var getEvolversOfEvolution = function(from,to,withID) {
     return [ ];
 };
 
-window.units = window.units.map(parseUnit);
-
 /***********************
  * Table configuration *
  ***********************/
@@ -101,21 +82,30 @@ window.units = window.units.map(parseUnit);
 var padding = Math.floor(Math.log(window.units.length+2) / Math.log(10)) + 1;
 var table = null;
 
-var tableData = window.units.filter(function(x) { return x.name; }).map(function(x) {
+var currentParameters = null;
+var compatibilityMode = JSON.parse(localStorage.getItem('tableCompatibilityMode'));
+
+var tableData = window.units.filter(function(x) { return x.name; }).map(function(x,n) {
     return [
         ('000' + (x.number+1)).slice(-padding),
         x.name,
         x.type,
-        x.class,
+        null,
         x.maxHP,
         x.maxATK,
         x.maxRCV,
         x.combo,
-        x.stars
+        x.stars,
+        x.number
     ];
 });
 
-var currentParameters = null;
+var switchClassData = function(compatibilityMode) {
+    for (var i=0;i<tableData.length;++i) {
+        var clazz = window.units[tableData[i][9]].class[compatibilityMode ? 0 : 1];
+        tableData[i][3] = (clazz.constructor == Array ? clazz.join(', ') : clazz);
+    }
+};
 
 $.fn.dataTable.ext.search.push(function(settings, data, index) {
     if (!currentParameters) return true;
@@ -140,7 +130,7 @@ $.fn.dataTable.ext.search.push(function(settings, data, index) {
     // filter by type
     if (filters.type && unit.type !== filters.type) return false;
     // filter by class
-    if (filters.class && unit.class !== filters.class) return false;
+    if (filters.class && unit.class[compatibilityMode ? 0 : 1].indexOf(filters.class) == -1) return false;
     // filter by active matchers
     if (filters.custom.length > 0 && !window.details.hasOwnProperty(id)) return false;
     for (var i=0;i<filters.custom.length;++i) {
@@ -179,7 +169,6 @@ app.config(function($stateProvider, $urlRouterProvider) {
 
 });
 
-
 /***************
  * Controllers *
  ***************/
@@ -206,11 +195,23 @@ app.controller('MainCtrl',function($scope, $state, $stateParams, $timeout) {
         table.fnDraw();
     },true);
 
+    // compatibility mode
+
+    $scope.compatibilityMode = compatibilityMode;
+
+    $scope.$watch('compatibilityMode',function(mode) {
+        compatibilityMode = mode;
+        localStorage.setItem('tableCompatibilityMode', JSON.parse(!!mode));
+        // TODO Update table
+    });
+
 });
 
 app.controller('DetailsCtrl',function($scope, $state, $stateParams) {
     // data
-    $scope.unit = window.units[$stateParams.id - 1];
+    $scope.unit = $.extend({},window.units[$stateParams.id - 1]);
+    $scope.unit.class = $scope.unit.class[$scope.compatibilityMode ? 0 : 1];
+    $scope.hybrid = $scope.unit.class.constructor == Array;
     $scope.details = window.details[$stateParams.id];
     $scope.evolvesFrom = searchBaseEvolutions($stateParams.id);
     $scope.usedBy = searchEvolverEvolutions($stateParams.id);
@@ -230,7 +231,8 @@ app.controller('DetailsCtrl',function($scope, $state, $stateParams) {
 
 app.directive('characterTable',function($rootScope, $compile) {
     var addImage = function(data, type, row, meta) {
-        return '<img class="slot small" data-original="' + Utils.getThumbnailUrl(row[0]-1) + '"> ' +
+        var thumb = window.units[row[9]].incomplete ? '../common/res/missing.png' : Utils.getThumbnailUrl(row[0]-1);
+        return '<img class="slot small" data-original="' + thumb + '"> ' +
             '<a ui-sref="main.view({ id: ' + parseInt(row[0],10) + '})">' + data + '</a>';
     };
     return {
@@ -238,6 +240,7 @@ app.directive('characterTable',function($rootScope, $compile) {
         replace: true,
         template: '<table id="mainTable" class="table table-striped-column panel panel-default"></table>',
         link: function(scope, element, attrs) {
+            switchClassData(JSON.parse(localStorage.getItem('tableCompatibilityMode')));
             table = element.dataTable({
                 iDisplayLength: JSON.parse(localStorage.getItem('unitsPerPage')) || 10,
                 stateSave: true,
@@ -314,7 +317,7 @@ app.directive('filters',function($compile) {
             });
             // class filters
             var classes = createContainer('Class filters', element);
-            [ 'Fighter', 'Shooter', 'Slasher', 'Striker' ].forEach(function(x) {
+            [ 'Fighter', 'Shooter', 'Slasher', 'Striker', 'Freedom' ].forEach(function(x) {
                 classes.append(createFilter(x,'class-filter','filters.class',
                     'filters.class == \'' + x + '\'','onClassClick(\'' + x + '\')'));
             });

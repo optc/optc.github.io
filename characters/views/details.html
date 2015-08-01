@@ -11,7 +11,7 @@
 
             <div class="modal-body">
 
-                <div class="slot huge" decorate-slot big="true" uid="unit.number"></div>
+                <div ng-if="!unit.incomplete" class="slot huge" decorate-slot big="true" uid="unit.number"></div>
 
                 <h3 class="page-header">Details</h3>
 
@@ -19,7 +19,9 @@
                     <table class="table table-striped">
                         <thead>
                             <tr>
-                                <th>Class</th>
+                                <th ng-if="!hybrid">Class</th>
+                                <th ng-if="hybrid">Class 1</th>
+                                <th ng-if="hybrid">Class 2</th>
                                 <th>Type</th>
                                 <th>Stars</th>
                                 <th>Cost</th>
@@ -30,7 +32,9 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>{{unit.class}}</td>
+                                <td ng-if="!hybrid">{{unit.class}}</td>
+                                <td ng-if="hybrid">{{unit.class[0]}}</td>
+                                <td ng-if="hybrid">{{unit.class[1]}}</td>
                                 <td>{{unit.type}}</td>
                                 <td>{{unit.stars}}</td>
                                 <td>{{unit.cost}}</td>

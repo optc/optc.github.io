@@ -64,6 +64,7 @@ var CruncherCtrl = function($scope, $timeout) {
     /* * * * * Local variables * * * * */
 
     var cptsWith = { };
+    var chosenTeam = [ ];
     var currentDefense = 0;
     var isDefenseDown = false;
 
@@ -85,13 +86,14 @@ var CruncherCtrl = function($scope, $timeout) {
         if (!$scope.options.crunchingEnabled) return;
         initializeDataStructs();
         invokeSpecialEvents();
+        computeUnitClasses();
         var result = { };
         ['STR','QCK','DEX','PSY','INT'].forEach(function(type) {
             result[type] = crunchForType(type);
         });
         result.team = getTeamDetails();
         var hpMax = 0, rcvTotal = 0;
-        $scope.data.team.forEach(function(x,n) {
+        chosenTeam.forEach(function(x,n) {
             if (n > 5 || x.unit === null) return;
             // hp
             var hp = getStatOfUnit(x,'hp');
@@ -107,7 +109,7 @@ var CruncherCtrl = function($scope, $timeout) {
             rcvTotal += Math.floor(applyCaptainEffectsAndSpecialsToRCV(n,rcv));
         });
         result.rcv = Math.max(0,rcvTotal);
-        var cost = $scope.data.team.slice(1,6).reduce(function(prev,next) { return prev + (!next.unit ? 0 : next.unit.cost); },0);
+        var cost = chosenTeam.slice(1,6).reduce(function(prev,next) { return prev + (!next.unit ? 0 : next.unit.cost); },0);
         result.cost = { cost: cost, level: Math.max(1,Math.floor(cost / 2) * 2 - 18) };
         result.zombie = checkZombieTeam(result);
         $scope.numbers = result;
@@ -144,7 +146,7 @@ var CruncherCtrl = function($scope, $timeout) {
     var getBaseDamageForType = function(type) {
         var result = [ ];
         // populate array with the damage of each unit in the team
-        $scope.data.team.forEach(function(x,n) {
+        chosenTeam.forEach(function(x,n) {
             if (n > 5 || x.unit === null || $scope.tdata.team[n].lock > 0) return;
             var orb = $scope.tdata.team[n].orb;
             var atk = getStatOfUnit(x,'atk'); // basic attack (scales with level);
@@ -435,8 +437,8 @@ var CruncherCtrl = function($scope, $timeout) {
 
     var invokeSpecialEvents = function() {
         $scope.tdata.team.forEach(function(x,n) {
-            if (!$scope.data.team[n].unit) return;
-            var id = $scope.data.team[n].unit.number + 1;
+            if (!chosenTeam[n].unit) return;
+            var id = chosenTeam[n].unit.number + 1;
             if (!specials.hasOwnProperty(id)) return;
             if (x.special && specials[id].hasOwnProperty('onActivation'))
                 specials[id].onActivation(getParameters(n));
@@ -445,15 +447,22 @@ var CruncherCtrl = function($scope, $timeout) {
         });
     };
 
+    var computeUnitClasses = function() {
+        for (var i=0;i<6;++i) {
+            if (!chosenTeam[i].unit) continue;
+            chosenTeam[i].unit.class = chosenTeam[i].unit.class[$scope.compatibilityMode ? 0 : 1]; 
+        }
+    };
+
     /* * * * * * Utility functions * * * * */
 
     var initializeDataStructs = function() {
-        var team = $scope.data.team;
+        chosenTeam = JSON.parse(JSON.stringify($scope.data.team));
         // get enabled specials
         enabledSpecials = [ ];
         $scope.tdata.team.forEach(function(x,n) {
-            if (!$scope.data.team[n].unit) return;
-            var id = $scope.data.team[n].unit.number + 1;
+            if (!chosenTeam[n].unit) return;
+            var id = chosenTeam[n].unit.number + 1;
             if (x.special && specials.hasOwnProperty(id))
                 enabledSpecials.push(specials[id]);
         });
@@ -463,8 +472,8 @@ var CruncherCtrl = function($scope, $timeout) {
         // captain effect array
         enabledEffects = [ ];
         for (var i=0;i<2;++i) {
-            if ($scope.data.team[i].unit === null) continue;
-            var id = $scope.data.team[i].unit.number + 1;
+            if (chosenTeam[i].unit === null) continue;
+            var id = chosenTeam[i].unit.number + 1;
             if (!window.captains.hasOwnProperty(id)) continue;
             var effect = $.extend({ },window.captains[id]),
                 locked = ($scope.tdata.team[i].lock > 0), silenced = ($scope.tdata.team[i].silence > 0);
@@ -494,13 +503,13 @@ var CruncherCtrl = function($scope, $timeout) {
 
     var getParameters = function(slotNumber) {
         return {
-            unit: $scope.data.team[slotNumber].unit,
+            unit: chosenTeam[slotNumber].unit,
             orb: $scope.tdata.team[slotNumber].orb,
             currentHP: $scope.data.hp.current,
             maxHP: $scope.data.hp.max,
             percHP: $scope.data.hp.perc,
             defenseDown: isDefenseDown,
-            data: $scope.data.team[slotNumber],
+            data: chosenTeam[slotNumber],
             tdata: $scope.tdata.team[slotNumber]
         };
     };
@@ -510,7 +519,7 @@ var CruncherCtrl = function($scope, $timeout) {
     };
 
     var getTeamDetails = function() {
-        return $scope.data.team.map(function(x,n) {
+        return chosenTeam.map(function(x,n) {
             if (x.unit === null) return null;
             return {
                 name : x.unit.name,
@@ -523,7 +532,7 @@ var CruncherCtrl = function($scope, $timeout) {
     };
 
     var checkZombieTeam = function(data) {
-        var team = $scope.data.team;
+        var team = chosenTeam;
         if (!team[0].unit || !team[1].unit) return null;
         var ids = [ team[0].unit.number + 1, team[1].unit.number + 1 ];
         if (!zombies.hasOwnProperty(ids[0]) || !zombies.hasOwnProperty(ids[1])) return;
@@ -569,6 +578,14 @@ var CruncherCtrl = function($scope, $timeout) {
         }
         if (temp.length != data.length) return null;
         else return temp.concat(that);
+    };
+
+    Array.prototype.has = function(what) {
+        return this.indexOf(what) != -1;
+    };
+
+    String.prototype.has = function(what) {
+        return this == what;
     };
 
 };

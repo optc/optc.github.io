@@ -1,24 +1,5 @@
 (function() {
 
-var parseUnit = function(element,n) {
-    if (element.length === 0) return [ ];
-    if (element[14].constructor != Array) element[14] = [ element[14], element[14], element[14] ];
-    return {
-        name    : element[0]  , type     : element[1]  ,
-        class   : element[2]  , stars    : element[3]  ,
-        cost    : element[4]  , maxLevel : element[5]  ,
-        minHP   : element[6]  , minATK   : element[7]  ,
-        minRCV  : element[8]  , maxHP    : element[9]  ,
-        maxATK  : element[10] , maxRCV   : element[11] ,
-        combo   : element[12] , number   : n           ,
-        maxEXP  : element[13] , growth   : {
-            hp  : element[14][0],
-            atk : element[14][1],
-            rcv : element[14][2]
-        }
-    };
-};
-
 /************
  * MainCtrl *
  ************/
@@ -27,7 +8,7 @@ var MainCtrl = function($scope, $controller, $filter) {
 
     /* * * * * Bootstrapping * * * * */
     
-    window.units = window.units.map(parseUnit);
+    Utils.parseUnits(true);
 
     /* * * * * Theme * * * * */
 

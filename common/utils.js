@@ -2,6 +2,43 @@
 
 var utils = { };
 
+/* * * * * Unit control * * * * */
+
+var parseUnit = function(element,n) {
+    if (element.length === 0) return [ ];
+    if (element[14] && element[14].constructor != Array) element[14] = [ element[14], element[14], element[14] ];
+    var result = {
+        name    : element[0]  , type     : element[1]  ,
+        class   : element[2]  , stars    : element[3]  ,
+        cost    : element[4]  , maxLevel : element[5]  ,
+        minHP   : element[6]  , minATK   : element[7]  ,
+        minRCV  : element[8]  , maxHP    : element[9]  ,
+        maxATK  : element[10] , maxRCV   : element[11] ,
+        combo   : element[12] , number   : n           ,
+        maxEXP  : element[13] , growth   : {
+            hp  : element[14] ? element[14][0] : 0,
+            atk : element[14] ? element[14][1] : 0,
+            rcv : element[14] ? element[14][2] : 0
+        }
+    };
+    if (element.indexOf(null) != -1) result.incomplete = true;
+    return result;
+};
+
+utils.parseUnits = function(skipIncomplete) {
+    if (skipIncomplete) window.units = window.units.map(function(x) { return x.indexOf(null) != -1 ? [ ] : x; });
+    window.units = window.units.map(parseUnit);
+    // add additional class information for compatibility mode
+    for (var i=0;i<667;++i) { // unit #667 was the first unit post 4.0 patch
+        if (!window.units[i].name || window.units[i].class.constructor == Array) continue; // compatibility info already added
+        window.units[i].class = [ window.units[i].class, window.units[i].class ];
+    }
+    for (var i=667;i<window.units.length;++i) {
+        if (!window.units[i].name) continue;
+        window.units[i].class = [ window.units[i].class, window.units[i].class ];
+    }
+};
+
 /* * * * * Thumbnail control * * * * */
 
 utils.getThumbnailUrl = function(n) {

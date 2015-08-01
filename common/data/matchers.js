@@ -83,7 +83,7 @@ var matchers = [
     {
         name: 'Damage reducers',
         target: 'captain',
-        matcher: /Reduces damage received/i
+        matcher: /Reduces (any )?damage received/i
     },
 
     {
@@ -95,7 +95,7 @@ var matchers = [
     {
         name: 'Tankers',
         target: 'captain',
-        matcher: /Reduces damage.+if HP.+99/i
+        matcher: /Reduces (any )?damage.+if HP.+99/i
     },
 
     {
@@ -205,13 +205,13 @@ var matchers = [
     {
         name: 'Damage reducers',
         target: 'special',
-        matcher: /Reduces damage received/i
+        matcher: /Reduces (any )?damage received/i
     },
 
     {
         name: 'Damage nullifiers',
         target: 'special',
-        matcher: /Reduces damage received.+100%/i
+        matcher: /Reduces (any )?damage received.+100%/i
     },
 
     {

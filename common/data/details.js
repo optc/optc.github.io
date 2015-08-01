@@ -3380,13 +3380,13 @@ var details = {
         cooldown: 21
     },
     676: {
-        special: "Reduces damage received above 5,000 HP by 97% for 3 turns",
+        special: "Reduces any damage received above 5,000 HP by 97% for 3 turns",
         specialNotes: "The exact formula for the damage received is: 5000 + (total_damage - 5000) * 0.03",
         captain: "Boosts ATK of Slasher characters by 1.5x, deals 5x character's ATK in QCK damage to all enemies at the end of the turn",
         cooldown: 18
     },
     677: {
-        special: "Reduces damage received above 5,000 HP by 97% for 3 turns",
+        special: "Reduces any damage received above 5,000 HP by 97% for 3 turns",
         specialNotes: "The exact formula for the damage received is: 5000 + (total_damage - 5000) * 0.03",
         captain: "Boosts ATK of Slasher characters by 1.5x, deals 5x character's ATK in QCK damage to all enemies at the end of the turn",
         cooldown: 18
