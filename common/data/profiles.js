@@ -3,33 +3,33 @@ var profiles = {
     'Jailbreaking Baroque Works': {
         description: 'Stats of non-Fighter units reduced by 90%',
         icon: 461,
-        atk: function(p) { return p.class != 'Fighter' ? 0.1 : 1; },
-        hp: function(p) { return p.class != 'Fighter' ? 0.1 : 1; },
-        rcv: function(p) { return p.class != 'Fighter' ? 0.1 : 1; }
+        atk: function(p) { return !p.class.has('Fighter') ? 0.1 : 1; },
+        hp: function(p) { return !p.class.has('Fighter') ? 0.1 : 1; },
+        rcv: function(p) { return !p.class.has('Fighter') ? 0.1 : 1; }
     },
 
     'Strongest Prisoner Crocodile': {
         description: 'Stats of non-Striker units reduced by 90%',
         icon: 509,
-        atk: function(p) { return p.class != 'Striker' ? 0.1 : 1; },
-        hp: function(p) { return p.class != 'Striker' ? 0.1 : 1; },
-        rcv: function(p) { return p.class != 'Striker' ? 0.1 : 1; }
+        atk: function(p) { return !p.class.has('Striker') ? 0.1 : 1; },
+        hp: function(p) { return !p.class.has('Striker') ? 0.1 : 1; },
+        rcv: function(p) { return !p.class.has('Striker') ? 0.1 : 1; }
     },
 
     'Jailer Domino': {
         description: 'Stats of non-Shooter units reduced by 90%',
         icon: 537,
-        atk: function(p) { return p.class != 'Shooter' ? 0.1 : 1; },
-        hp: function(p) { return p.class != 'Shooter' ? 0.1 : 1; },
-        rcv: function(p) { return p.class != 'Shooter' ? 0.1 : 1; }
+        atk: function(p) { return !p.class.has('Shooter') ? 0.1 : 1; },
+        hp: function(p) { return !p.class.has('Shooter') ? 0.1 : 1; },
+        rcv: function(p) { return !p.class.has('Shooter') ? 0.1 : 1; }
     },
 
     'Chief Guard Sadi-chan': {
         description: 'Stats of non-Slasher units reduced by 90%',
         icon: 549,
-        atk: function(p) { return p.class != 'Slasher' ? 0.1 : 1; },
-        hp: function(p) { return p.class != 'Slasher' ? 0.1 : 1; },
-        rcv: function(p) { return p.class != 'Slasher' ? 0.1 : 1; }
+        atk: function(p) { return !p.class.has('Slasher') ? 0.1 : 1; },
+        hp: function(p) { return !p.class.has('Slasher') ? 0.1 : 1; },
+        rcv: function(p) { return !p.class.has('Slasher') ? 0.1 : 1; }
     },
 
     'Skypiea Warriors': {
