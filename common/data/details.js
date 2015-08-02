@@ -3313,12 +3313,14 @@ var details = {
         cooldown: [ 15, 15 ]
     },
     663: { // Nefertari Vivi, Princess of the Alabasta Kingdom
-        special: "Deals 80,000 damage to one enemy if HP is 1, recovers 5x character's RCV in HP at the end of the turn for 5 turns",
+        special: "Deals PSY damage to one enemy, recovers 5x character's RCV in HP at the end of the turn for 5 turns",
+        specialNotes: "The exact damage is proportional to the crew's remaining HP and is higher the lower the HP is. The formula used is 80000 * (1 - (current HP) / (total HP))",
         captain: "Recovers 2x character's RCV in HP at the end of the turn",
         cooldown: [ 25, 16 ]
     },
     664: { // Nefertari Vivi, Vice-Leader of the Suna Suna Clan
-        special: "Deals 80,000 damage to one enemy if HP is 1, recovers 5x character's RCV in HP at the end of the turn for 5 turns",
+        special: "Deals PSY damage to one enemy, recovers 5x character's RCV in HP at the end of the turn for 5 turns",
+        specialNotes: "The exact damage is proportional to the crew's remaining HP and is higher the lower the HP is. The formula used is 80000 * (1 - (current HP) / (total HP))",
         captain: "Recovers 3x character's RCV in HP at the end of the turn",
         cooldown: [ 25, 16 ]
     },
@@ -3381,13 +3383,13 @@ var details = {
     },
     676: {
         special: "Reduces any damage received above 5,000 HP by 97% for 3 turns",
-        specialNotes: "The exact formula for the damage received is: 5000 + (total_damage - 5000) * 0.03",
+        specialNotes: "The exact formula for the damage received is: 5000 + ((total damage) - 5000) * 0.03",
         captain: "Boosts ATK of Slasher characters by 1.5x, deals 5x character's ATK in QCK damage to all enemies at the end of the turn",
         cooldown: 18
     },
     677: {
         special: "Reduces any damage received above 5,000 HP by 97% for 3 turns",
-        specialNotes: "The exact formula for the damage received is: 5000 + (total_damage - 5000) * 0.03",
+        specialNotes: "The exact formula for the damage received is: 5000 + ((total damage) - 5000) * 0.03",
         captain: "Boosts ATK of Slasher characters by 1.5x, deals 5x character's ATK in QCK damage to all enemies at the end of the turn",
         cooldown: 18
     }
