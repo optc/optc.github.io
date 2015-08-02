@@ -590,6 +590,8 @@ li input {
 
 #defense-table tbody > tr:hover,
 #defense-table tbody > td:hover,
+#ship-table tbody > tr:hover,
+#ship-table tbody > td:hover,
 #profile-table tbody > tr:hover,
 #profile-table tbody > td:hover,
 #slot-table tbody > tr:hover,
@@ -624,6 +626,24 @@ li input {
 #profile-table td ~ td,
 #profile-table th ~ th {
     padding-left: 10px;
+}
+
+#ship-table tr:not(:first-child) {
+    border-top: 1px solid lightgray;
+}
+
+.ship-name {
+    white-space: nowrap;
+    padding: 0 10px 0 10px;
+}
+
+.ship-icon {
+    margin: 0;
+    padding: 0;
+}
+
+.ship-icon > div {
+    vertical-align: middle;
 }
 
 /********

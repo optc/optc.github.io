@@ -10,23 +10,19 @@
 
                 <div class="modal-div">
 
-                    <table id="defense-table">
+                    <table id="ship-table">
                         <thead>
                             <tr>
                                 <th></th>
                                 <th>Ship</th>
-                                <th>HP bonus</th>
-                                <th>ATK bonus</th>
-                                <th>RCV bonus</th>
+                                <th>Effect at MAX level</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr ng-repeat="(name,ship) in list" ng-click="pickShip(name)">
-                                <td class="slot small" style="{{getThumbnail(ship)}}"></td>
-                                <td>{{name}}</td>
-                                <td>{{ship.hp || ship.hpStatic ? 'Yes' : 'No'}}</td>
-                                <td>{{ship.atk || ship.atkStatic ? 'Yes' : 'No'}}</td>
-                                <td>{{ship.rcv || ship.rcvStatic ? 'Yes' : 'No'}}</td>
+                                <td class="ship-icon"><div class="slot small" style="{{getThumbnail(ship)}}"></div></td>
+                                <td class="ship-name">{{name}}</td>
+                                <td>{{ship.description}}</td>
                             </tr>
                         </tbody>
                     </table> 
