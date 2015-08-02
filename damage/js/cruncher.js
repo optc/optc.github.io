@@ -541,6 +541,7 @@ var CruncherCtrl = function($scope, $timeout) {
            if (zombies[ids[i]].type == 'healer') healer = i;
            else other = i;
         }
+        if (healer == -1 || other == -1) return null;
         var healAmount = zombies[ids[healer]].amount || Math.floor(data.team[healer].rcv * zombies[ids[healer]].multiplier);
         if (zombies[ids[other]].type == 'zombie') // zombie
             return 1 + healAmount >= Math.floor($scope.data.hp.max * zombies[ids[other]].threshold);
