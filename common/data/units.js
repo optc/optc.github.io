@@ -667,13 +667,13 @@ window.units = [
 	[ "Kohza,  Leader of the Suna Suna Clan", "QCK", "Striker", 4, 15, 70, 445, 230, 123, 1000, 503, 341, 4, 1066998, 1 ],
 	[ "Nefertari Cobra,  King of the Alabasta Kingdom", "PSY", "Fighter", 3, 15, 70, 523, 294, 31, 1402, 571, 211, 5, 1066998, 1 ],
         [ "Sabo", "PSY", "Freedom", 5, 30, 70, null, null, null, null, null, null, 5, null, 0 ],
-        [ "Sabo, Member of the Revolutionary Army", "PSY", "Freedom", 6, 55, 99, 721, 432, 157, 2985, 1422, 451, 4, null, 1 ],
-        [ "Koala", "DEX", [ "Fighter", "Freedom" ], 4, 18, 70, 94, 122, 48, 862, 563, 176, 4, null, 0 ],
-        [ "Koala, Member of the Revolutionary Army", "DEX", [ "Fighter", "Freedom" ], 5, 29, 99, null, null, null, null, null, null, 4, null, null ],
-        [ "Hack", "STR", "Fighter", 4, 18, 70, null, null, null, null, null, null, 4, null, 0 ],
-        [ "Hack, Member of the Revolutionary Arm", "STR", "Fighter", 5, 29, 99, null, null, null, null, null, null, 5, null, 0 ],
+    [ "Sabo, Member of the Revolutionary Army", "PSY", "Freedom", 6, 55, 99, 721, 432, 157, 2985, 1422, 451, 4, null, 1 ],
+    [ "Koala", "DEX", [ "Fighter", "Freedom" ], 4, 18, 70, 94, 122, 48, 995, 645, 225, 4, null, 1.5 ],
+    [ "Koala, Member of the Revolutionary Army", "DEX", [ "Fighter", "Freedom" ], 5, 29, 99, 1016, 652, 202, 1934, 1212, 392, 4, null, null ],
+    [ "Hack", "STR", "Fighter", 4, 18, 70, 188, 136, 20, 1255, 719, 166, 4, null, 1.5 ],
+    [ "Hack, Member of the Revolutionary Arm", "STR", "Fighter", 5, 29, 99, 1185, 668, 115, 2387, 1324, 259, 5, null, 1.5 ],
         [ "Emporio Ivankov, Newkama Kenpo Teacher", "INT", [ "Freedom", "Fighter" ], 4, 18, 70, null, null, null, null, null, null, 4, null, 0 ],
-        [ "Emporio Ivankov, Member of the Revolutionary Army", "INT", [ "Freedom", "Fighter" ], 5, 29, 99, null, null, null, null, null, null, 7, null, 0 ],
-        [ "Inazuma", "QCK", "Slasher", 4, 18, 70, null, null, null, null, null, null, 4, null, 0 ],
-        [ "Inazuma, Member of the Revolutionary Army", "QCK", "Slasher", 5, 29, 99, null, null, null, 2559, 833, 380, 6, null, 0 ]
+    [ "Emporio Ivankov, Member of the Revolutionary Army", "INT", [ "Freedom", "Fighter" ], 5, 29, 99, 1285, 593, 142, 2774, 1212, 241, 7, null, 1.5 ],
+    [ "Inazuma", "QCK", "Slasher", 4, 18, 70, 179, 58, 47, 1300, 449, 232, 4, null, 1.5 ],
+    [ "Inazuma, Member of the Revolutionary Army", "QCK", "Slasher", 5, 29, 99, 1244, 400, 199, 2559, 833, 380, 6, null, 0 ]
 ];
