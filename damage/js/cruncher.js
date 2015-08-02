@@ -276,7 +276,7 @@ var CruncherCtrl = function($scope, $timeout) {
 
     var getProfileBonus = function(type,unit) {
         if (!$scope.data.profile) return 1;
-        return profiles[$scope.data.profile][type](unit);
+        return profiles[$scope.data.profile][type](unit.unit || unit);
     };
 
     var getTypeMultiplierOfUnit = function(unit,against) {
