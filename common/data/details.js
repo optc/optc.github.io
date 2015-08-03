@@ -1770,13 +1770,13 @@ var details = {
         cooldown: [ 10, 5 ]
     },
     379: { // Kung Fu Dugong
-        special: "Poisons all enemies",
+        special: "Removes poison",
         cooldown: [ 15, 10 ],
         evolution: 380,
         evolvers: [ 115, 78, 300 ]
     },
     380: { // Kung Fu Dugong Faithful Apprentice
-        special: "Poisons all enemies",
+        special: "Removes poison",
         captain: "Boosts ATK and RCV of STR characters by 1.5x",
         cooldown: [ 15, 10 ]
     },
