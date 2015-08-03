@@ -1291,5 +1291,40 @@ window.captains = {
     },
     667: { // Nefertari Cobra, King of the Alabasta Kingdom
         atk: function(p) { return 1.75; },
+    },
+    668: { 
+        atk: function(p) { return p.unit.class.has("PSY") ? 2 + 0.75 * p.percHP / 100 : 1; },
+        hp: function(p) { return 1.2; },
+        rcv: function(p) { return 1.2; }
+    },
+    669: { 
+        atk: function(p) { return p.unit.class.has("PSY") ? 2 + 0.75 * p.percHP / 100 : 1; },
+        hp: function(p) { return 1.2; },
+        rcv: function(p) { return 1.2; }
+    },
+    670: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? 2 : 1; }
+    },
+    671: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? 2.25 : 1; },
+        rcv: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; }
+    },
+    672: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? 2: 1; }
+    },
+    673: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? 2: 1; }
+    },
+    674: {
+        atk: function(p) { return p.unit.class.has("Freedom") ? 2 : 1; }
+    },
+    675: {
+        atk: function(p) { return p.unit.class.has("Freedom") ? 2.5 : 1; }
+    },
+    676: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; }
+    },
+    677: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; }
     }
 };

@@ -48,13 +48,21 @@ var MainCtrl = function($scope, $controller, $filter) {
 
     $scope.showGatherButton = window.units.some(function(x) { return x.growth && x.growth.atk === 0; });
 
+    /* * * * * Notifications * * * * */
+
+    var notifications = { };
+
+    $scope.notify = function(data) {
+        data = $.extend({ type: 'information' },data);
+        if (data.name && notifications[data[name]]) notifications[data[name]].close(); 
+        var notification = noty($.extend(data,{ timeout: 2500, layout: 'topRight', theme: 'relax' }));
+        if (data.name) notifications[data[name]] = notification;
+
+    };
+
     // instantiate storage controller separately
     
     $controller('StorageCtrl', { $scope: $scope });
-
-    $scope.notify = function(data) {
-        noty($.extend(data,{ timeout: 2500, layout: 'topRight', theme: 'relax' }));
-    };
 
 };
 

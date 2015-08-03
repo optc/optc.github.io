@@ -18,15 +18,11 @@ var SharedRootCtrl = function($scope) {
             { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 } },
             { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 } }
         ],
-        
-        hp: { current: 1, max: 1, perc: 100 },
 
         ship: {
             name: 'Merry Go',
             level: 5
         },
-
-        rcv: 0,
 
         defense: 0,
 
@@ -51,12 +47,15 @@ var SharedRootCtrl = function($scope) {
 
     };
 
-    $scope.numbers = { };
+    $scope.numbers = {
+        hp: { current: 1, max: 1, perc: 100 },
+        rcv: 0
+    };
 
     $scope.options = {
         slidersEnabled: true,
         sidebarVisible: false,
-        crunchingEnabled: false
+        crunchInhibitor: Infinity
     };
 
     $scope.resetSlot = function(n,onlyTransitional) {

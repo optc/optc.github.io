@@ -45,7 +45,7 @@ var StorageCtrl = function($scope) {
 
     /* * * * * Initialization * * * * */
 
-    $scope.options.crunchingEnabled = false;
+    $scope.options.crunchInhibitor = Infinity;
 
     var data = loadValue('data',{ });
     for (var d in data)
@@ -53,11 +53,11 @@ var StorageCtrl = function($scope) {
 
     var options = loadValue('options',{ });
     for (var o in options) {
-        if (o == 'crunchingEnabled' || o == 'sidebarVisible') continue;
+        if (o == 'crunchInhibitor' || o == 'sidebarVisible') continue;
         $scope.options[o] = options[o];
     }
 
-    $scope.options.crunchingEnabled = true;
+    $scope.options.crunchInhibitor = 0;
 
     /* * * * * Save on changes * * * * */
 

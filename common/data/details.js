@@ -2780,7 +2780,7 @@ var details = {
     },
     560: { // Franky, Strawhat Crew's Attack (Strong World/SW)
         special: "Changes own orb into [STR], boosts orb effectiveness by 1.5x for 2 turns",
-        captain: "Boosts ATK of STR characters by 2x, deals 2x character's ATK in STR damage to all enemies at the end of the turn",
+        captain: "Boosts ATK of STR characters by 2.25x, deals 2x character's ATK in STR damage to all enemies at the end of the turn",
         cooldown: [ 17, 11 ]
     },
     561: { // Portgas D. Ace, Black Clothes Hiken

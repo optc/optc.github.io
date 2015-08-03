@@ -56,10 +56,10 @@ var CruncherCtrl = function($scope, $timeout) {
 
     /* * * * * Scope variables * * * * */
 
-    $scope.numbers = { };
-
     $scope.$watch('data',doCrunch,true);
     $scope.$watch('tdata',doCrunch,true);
+
+    $scope.$on('specialToggled', onSpecialToggled);
 
     /* * * * * Local variables * * * * */
 
@@ -83,9 +83,8 @@ var CruncherCtrl = function($scope, $timeout) {
     }
 
     var crunch = function() {
-        if (!$scope.options.crunchingEnabled) return;
+        if ($scope.options.crunchInhibitor > 0) return (--$scope.options.crunchInhibitor);
         initializeDataStructs();
-        invokeSpecialEvents();
         computeUnitClasses();
         var result = { };
         ['STR','QCK','DEX','PSY','INT'].forEach(function(type) {
@@ -112,8 +111,8 @@ var CruncherCtrl = function($scope, $timeout) {
         var cost = chosenTeam.slice(1,6).reduce(function(prev,next) { return prev + (!next.unit ? 0 : next.unit.cost); },0);
         result.cost = { cost: cost, level: Math.max(1,Math.floor(cost / 2) * 2 - 18) };
         result.zombie = checkZombieTeam(result);
-        $scope.numbers = result;
-        $scope.data.hp.max = Math.max(1,hpMax);
+        $scope.numbers = $.extend($scope.numbers, result);
+        $scope.numbers.hp.max = Math.max(1,hpMax);
     };
 
     var crunchForType = function(type) {
@@ -435,16 +434,13 @@ var CruncherCtrl = function($scope, $timeout) {
         return (result.class.length + result.type.length > 1) || result.orb.length > 1 || result.all.length > 1;
     };
 
-    var invokeSpecialEvents = function() {
-        $scope.tdata.team.forEach(function(x,n) {
-            if (!chosenTeam[n].unit) return;
-            var id = chosenTeam[n].unit.number + 1;
-            if (!specials.hasOwnProperty(id)) return;
-            if (x.special && specials[id].hasOwnProperty('onActivation'))
-                specials[id].onActivation(getParameters(n));
-            else if (!x.special && specials[id].hasOwnProperty('onDeactivation'))
-                specials[id].onDeactivation(getParameters(n));
-        });
+    function onSpecialToggled(e, slot, enabled) { // leave as function(...) so it's hoisted up
+        var id = $scope.data.team[slot].unit.number + 1;
+        if (!specials.hasOwnProperty(id)) return;
+        if (enabled && specials[id].hasOwnProperty('onActivation'))
+            specials[id].onActivation(getParameters(slot));
+        else if (!enabled && specials[id].hasOwnProperty('onDeactivation'))
+            specials[id].onDeactivation(getParameters(slot));
     };
 
     var computeUnitClasses = function() {
@@ -505,12 +501,13 @@ var CruncherCtrl = function($scope, $timeout) {
         return {
             unit: chosenTeam[slotNumber].unit,
             orb: $scope.tdata.team[slotNumber].orb,
-            currentHP: $scope.data.hp.current,
-            maxHP: $scope.data.hp.max,
-            percHP: $scope.data.hp.perc,
+            currentHP: $scope.numbers.hp.current,
+            maxHP: $scope.numbers.hp.max,
+            percHP: $scope.numbers.hp.perc,
             defenseDown: isDefenseDown,
             data: chosenTeam[slotNumber],
-            tdata: $scope.tdata.team[slotNumber]
+            tdata: $scope.tdata.team[slotNumber],
+            scope: $scope
         };
     };
 
@@ -544,7 +541,7 @@ var CruncherCtrl = function($scope, $timeout) {
         if (healer == -1 || other == -1) return null;
         var healAmount = zombies[ids[healer]].amount || Math.floor(data.team[healer].rcv * zombies[ids[healer]].multiplier);
         if (zombies[ids[other]].type == 'zombie') // zombie
-            return 1 + healAmount >= Math.floor($scope.data.hp.max * zombies[ids[other]].threshold);
+            return 1 + healAmount >= Math.floor($scope.numbers.hp.max * zombies[ids[other]].threshold);
         else // reducer
             return Math.floor(healAmount / zombies[ids[other]].multiplier);
     };

@@ -439,5 +439,37 @@ window.specials = {
     666: { // Kohza, Leader of the Suna Suna Clan
         atk: function(p) { return p.defenseDown ? 1.3 : 1; },
         type: 'all'
+    },
+    668: {
+        atk: function(p) { return !p.unit.class.has('Slasher') ? 1 : window.specials[668].multiplier; },
+        type: 'class',
+        onActivation: function(p) {
+            var n = (window.specials[668] == 1.5 ? 1 : 0);
+            window.specials[668].multiplier = [1.5,2][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.5,2][n] + 'x multiplier. To switch to the ' +
+                    [2,1.5][n] + 'x multiplier, disable and re-enable this special',
+                name: '667warning'
+            })
+        }
+    },
+    669: {
+        atk: function(p) { return !p.unit.class.has('Freedom') ? 1 : window.specials[669].multiplier; },
+        type: 'class',
+        onActivation: function(p) {
+            var n = (window.specials[669] == 1.5 ? 1 : 0);
+            window.specials[669].multiplier = [1.5,2][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.5,2][n] + 'x multiplier. To switch to the ' +
+                    [2,1.5][n] + 'x multiplier, disable and re-enable this special',
+                name: '667warning'
+            })
+        }
+    },
+    670: {
+        atk: function(p) { return p.class.has("Fighter") ? 1.75 : 1; }
+    },
+    671: {
+        atk: function(p) { return p.class.has("Fighter") ? 1.75 : 1; }
     }
 };
