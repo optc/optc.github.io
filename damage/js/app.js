@@ -19,6 +19,8 @@ var SharedRootCtrl = function($scope) {
             { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 } }
         ],
 
+        percHP: 100.0,
+
         ship: {
             name: 'Merry Go',
             level: 5
@@ -48,7 +50,7 @@ var SharedRootCtrl = function($scope) {
     };
 
     $scope.numbers = {
-        hp: { current: 1, max: 1, perc: 100 },
+        hp: 1,
         rcv: 0
     };
 

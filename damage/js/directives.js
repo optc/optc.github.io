@@ -240,27 +240,26 @@ directives.hpBar = function() {
                 '<tr title="Minimum pirate level: {{ numbers.cost.level }}"><td>{{ numbers.cost.cost | number }}</td><td>cost</td></tr>' +
             '</tbody></table></div>',
         link: function(scope, element, attrs) {
-            scope.hp = { current: scope.numbers.hp.current, perc: scope.numbers.hp.perc };
+            scope.hp = { current: Math.max(1,Math.floor(scope.numbers.hp * scope.data.percHP / 100)), perc: scope.data.percHP };
             var slider = element.find('#hpSlider').noUiSlider({
-                start: [ scope.numbers.hp.current ],
-                range: { min: [ 1 ], max: [ scope.numbers.hp.max || 1 ] },
+                start: [ scope.hp.current ],
+                range: { min: [ 1 ], max: [ scope.numbers.hp || 1 ] },
                 connect: 'lower'
             });
             var update = function(event,value) {
                 scope.hp.current = Math.floor(value);
-                scope.hp.perc = Math.round(scope.hp.current / scope.numbers.hp.max * 10000) / 100;
-                currentHP =scope.numbers.hp.current;
+                scope.hp.perc = Math.round(scope.hp.current / scope.numbers.hp * 10000) / 100;
+                currentHP = scope.hp.current;
                 if (event === null) slider.val(value);
                 else if (event.type == 'change') {
-                    scope.numbers.hp.current = scope.hp.current;
-                    scope.numbers.hp.perc = scope.hp.perc;
+                    scope.data.percHP = scope.hp.perc;
+                    if (!scope.$$phase) scope.$apply();
                 }
-                if (!scope.$$phase) scope.$apply();
             };
             slider.on({ change: update, slide: update });
             scope.$watch('numbers.hp',function(hp) {
-                slider.noUiSlider({ range: { min: [ 1 ], max: [ scope.numbers.hp.max || 1 ] } },true);
-                var newHP = Math.floor(hp.perc * hp.max / 100);
+                slider.noUiSlider({ range: { min: [ 1 ], max: [ hp || 1 ] } },true);
+                var newHP = Math.floor(scope.data.percHP * hp / 100);
                 update(null,newHP);
             },true);
         }
@@ -458,7 +457,7 @@ directives.unitCandies = function() {
         template: '<div class="unitCandies">{{text}}</div>',
         link: function(scope, element, attrs) {
             var update = function(data) {
-                var total = !data ? 0 : scope.numbers.hp + data.atk + data.rcv;
+                var total = !data ? 0 : data.hp + data.atk + data.rcv;
                 scope.text = (total > 0 ? '+' + total : '');
             };
             scope.$watch('data.team[slot].candies',update,true);
