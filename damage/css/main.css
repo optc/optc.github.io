@@ -15,6 +15,11 @@ body, #main, #hp, #other {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    /* Safari */
+    display: -webkit-flex;
+    -webkit-align-items: center;
+    -webkit-justify-content: center;
+    -webkit-flex-wrap: wrap;
 }
 
 #main {
@@ -22,9 +27,12 @@ body, #main, #hp, #other {
 }
 
 #units {
+    width: 240px;
     display: flex;
     flex-wrap: wrap;
-    width: 240px;
+    /* Safari */
+    display: -webkit-flex;
+    -webkit-flex-wrap: wrap;
 }
 
 #stats {
@@ -38,6 +46,8 @@ body, #main, #hp, #other {
 
 #hp {
     flex-direction: column;
+    /* Safari */
+    -webkit-flex-direction: column;
 }
 
 .animated {
@@ -52,14 +62,18 @@ body, #main, #hp, #other {
 .unit {
     width: 112px;
     height: 112px;
-    display: flex;
     cursor: pointer;
     border: 1px solid black;
     margin: 3px !important;
     text-align: center;
+    position: relative;
+    display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
+    /* Safari */
+    display: -webkit-flex;
+    -webkit-align-items: center;
+    -webkit-justify-content: center;
 }
 
 .empty {
@@ -520,6 +534,8 @@ li input {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
 }
 
 .modal-content {
@@ -584,8 +600,10 @@ li input {
 
 #recentUnits {
     height: 42px;
-    display: flex;
     margin-top: 5px;
+    display: flex;
+    /* Safari */
+    display: -webkit-flex;
 }
 
 #defense-table tbody > tr:hover,
@@ -693,6 +711,9 @@ li input {
 #candySliders {
     display: flex;
     justify-content: center;
+    /* Safari */
+    display: -webkit-flex;
+    -webkit-justify-content: center;
 }
 
 #candySliders > div {
