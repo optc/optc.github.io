@@ -12,6 +12,7 @@ body {
     height: 100%;
     margin: auto;
     display: flex;
+    display: -webkit-flex; /* Safari */
     position: absolute;
     top: 0;
     left: 0;
@@ -182,6 +183,8 @@ input {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
 }
 
 .modal-content, .modal-dialog {
@@ -192,6 +195,9 @@ input {
 .modal-content {
     display: flex;
     flex-direction: column;
+    /* Safari */
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
 }
 
 .modal-dialog {
