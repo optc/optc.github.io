@@ -14,6 +14,7 @@ Utils.parseUnits(false);
 var generateSearchParameters = function(query, filters) {
     var result = Utils.generateSearchParameters(query);
     if (result === null && Object.keys(filters).length === 0) return null;
+    if (filters.class && filters.class.constructor != RegExp) filters.class = new RegExp(filters.class,'i');
     var temp = $.extend({ },filters);
     temp.custom = [ ];
     for (var i=0;i<filters.custom.length;++i) {
@@ -104,14 +105,13 @@ var padding = Math.floor(Math.log(window.units.length+2) / Math.log(10)) + 1;
 var table = null;
 
 var currentParameters = null;
-var compatibilityMode = JSON.parse(localStorage.getItem('tableCompatibilityMode'));
 
 var tableData = window.units.filter(function(x) { return x.name; }).map(function(x,n) {
     return [
         ('000' + (x.number+1)).slice(-padding),
         x.name,
         x.type,
-        null,
+        x.class.constructor == Array ? x.class.join(', ') : x.class,
         x.maxHP,
         x.maxATK,
         x.maxRCV,
@@ -120,13 +120,6 @@ var tableData = window.units.filter(function(x) { return x.name; }).map(function
         x.number
     ];
 });
-
-var switchClassData = function(compatibilityMode) {
-    for (var i=0;i<tableData.length;++i) {
-        var clazz = window.units[tableData[i][9]].class[compatibilityMode ? 0 : 1];
-        tableData[i][3] = (clazz.constructor == Array ? clazz.join(', ') : clazz);
-    }
-};
 
 $.fn.dataTable.ext.search.push(function(settings, data, index) {
     if (!currentParameters) return true;
@@ -151,7 +144,7 @@ $.fn.dataTable.ext.search.push(function(settings, data, index) {
     // filter by type
     if (filters.type && unit.type !== filters.type) return false;
     // filter by class
-    if (filters.class && unit.class[compatibilityMode ? 0 : 1].indexOf(filters.class) == -1) return false;
+    if (filters.class && !filters.class.test(unit.class)) return false;
     // filter by active matchers
     if (filters.custom.length > 0 && !window.details.hasOwnProperty(id)) return false;
     for (var i=0;i<filters.custom.length;++i) {
@@ -201,7 +194,7 @@ app.controller('MainCtrl',function($scope, $state, $stateParams, $timeout) {
     if ($stateParams.query != lastQuery) {
         lastQuery = $stateParams.query;
         $scope.query = lastQuery;
-        currentParameters = generateSearchParameters($stateParams.query, $scope.filters);
+        currentParameters = generateSearchParameters($stateParams.query, $.extend({ }, $scope.filters));
         if (table) table.fnDraw();
     }
 
@@ -212,26 +205,15 @@ app.controller('MainCtrl',function($scope, $state, $stateParams, $timeout) {
 
     $scope.$watch('filters',function(filters) {
         if (!filters || Object.keys(filters).length === 0) return;
-        currentParameters = generateSearchParameters($stateParams.query, $scope.filters);
+        currentParameters = generateSearchParameters($stateParams.query, $.extend({ }, $scope.filters));
         table.fnDraw();
     },true);
-
-    // compatibility mode
-
-    $scope.compatibilityMode = compatibilityMode;
-
-    $scope.$watch('compatibilityMode',function(mode) {
-        compatibilityMode = mode;
-        localStorage.setItem('tableCompatibilityMode', JSON.parse(!!mode));
-        // TODO Update table
-    });
 
 });
 
 app.controller('DetailsCtrl',function($scope, $state, $stateParams) {
     // data
     $scope.unit = $.extend({},window.units[$stateParams.id - 1]);
-    $scope.unit.class = $scope.unit.class[$scope.compatibilityMode ? 0 : 1];
     $scope.hybrid = $scope.unit.class.constructor == Array;
     $scope.details = window.details[$stateParams.id];
     // derived data
@@ -265,7 +247,6 @@ app.directive('characterTable',function($rootScope, $compile) {
         replace: true,
         template: '<table id="mainTable" class="table table-striped-column panel panel-default"></table>',
         link: function(scope, element, attrs) {
-            switchClassData(JSON.parse(localStorage.getItem('tableCompatibilityMode')));
             table = element.dataTable({
                 iDisplayLength: JSON.parse(localStorage.getItem('unitsPerPage')) || 10,
                 stateSave: true,

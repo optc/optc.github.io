@@ -26,17 +26,9 @@ var parseUnit = function(element,n) {
 };
 
 utils.parseUnits = function(skipIncomplete) {
-    if (skipIncomplete) window.units = window.units.map(function(x) { return x.indexOf(null) != -1 ? [ ] : x; });
+    if (skipIncomplete)
+        window.units = window.units.map(function(x) { return x.indexOf(null) != -1 ? [ ] : x; });
     window.units = window.units.map(parseUnit);
-    // add additional class information for compatibility mode
-    for (var i=0;i<667;++i) { // unit #667 was the first unit post 4.0 patch
-        if (!window.units[i].name || window.units[i].class.constructor == Array) continue; // compatibility info already added
-        window.units[i].class = [ window.units[i].class, window.units[i].class ];
-    }
-    for (var j=667;j<window.units.length;++j) {
-        if (!window.units[j].name) continue;
-        window.units[j].class = [ window.units[j].class, window.units[j].class ];
-    }
 };
 
 /* * * * * Thumbnail control * * * * */

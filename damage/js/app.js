@@ -28,9 +28,7 @@ var SharedRootCtrl = function($scope) {
 
         defense: 0,
 
-        profile: null,
-
-        compatibilityMode: false
+        profile: null
 
     };
     

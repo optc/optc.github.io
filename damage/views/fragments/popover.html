@@ -4,13 +4,17 @@
         <tbody>
             <tr></tr>
             <tr class="header">
-                <td>Class</td>
+                <td ng-if="data.team[slot].unit.class.length > 2">Class</td>
+                <td ng-if="data.team[slot].unit.class.length < 3">Class 1</td>
+                <td ng-if="data.team[slot].unit.class.length < 3">Class 2</td>
                 <td>Type</td>
                 <td>Rarity</td>
                 <td>Cost</td>
             </tr>
             <tr>
-                <td>{{data.team[slot].unit.class[0]}}</td>
+                <td ng-if="data.team[slot].unit.class.length > 2">{{data.team[slot].unit.class}}</td>
+                <td ng-if="data.team[slot].unit.class.length < 3">{{data.team[slot].unit.class[0]}}</td>
+                <td ng-if="data.team[slot].unit.class.length < 3">{{data.team[slot].unit.class[1]}}</td>
                 <td>{{data.team[slot].unit.type}}</td>
                 <td>
                     <i class="fa fa-star" ng-repeat="i in [ ] | range:data.team[slot].unit.stars"></i>
@@ -22,6 +26,7 @@
                 <td>ATK</td>
                 <td>RCV</td>
                 <td>CMB</td>
+                <td ng-if="data.team[slot].unit.class.length < 3"></td>
             </tr>
             <tr>
                 <td>
@@ -37,21 +42,22 @@
                     {{data.team[slot].candies.rcv > 0 ? ' (+' + data.team[slot].candies.rcv + ')' : ''}}
                 </td>
                 <td>{{data.team[slot].unit.combo}}</td>
+                <td ng-if="data.team[slot].unit.class.length < 3"></td>
             </tr>
             <tr class="header" ng-if="slot < 2">
                 <td colspan="4">Captain Ability</td>
             </tr>
             <tr ng-if="slot < 2">
-                <td colspan="4">
+                <td colspan="{{data.team[slot].unit.class.length < 3 ? 5 : 4}}">
                     <div ng-bind-html="details.captain | decorate"></div>
                     <span class="notes" ng-if="details.captainNotes" ng-bind-html="details.captainNotes | decorate"></span>
                 </td>
             </tr>
             <tr class="header">
-                <td colspan="4">Special</td>
+                <td colspan="{{data.team[slot].unit.class.length < 3 ? 5 : 4}}">Special</td>
             </tr>
             <tr>
-                <td colspan="4">
+                <td colspan="{{data.team[slot].unit.class.length < 3 ? 5 : 4}}">
                     <div ng-bind-html="details.special | decorate"></div>
                     <div class="cooldown">
                         {{details.cooldown.length ? details.cooldown[0] : details.cooldown}} turns
