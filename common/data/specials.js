@@ -450,7 +450,7 @@ window.specials = {
                 text: 'Using the ' + [1.5,2][n] + 'x multiplier. To switch to the ' +
                     [2,1.5][n] + 'x multiplier, disable and re-enable this special',
                 name: '667warning'
-            })
+            });
         }
     },
     669: {
@@ -463,7 +463,7 @@ window.specials = {
                 text: 'Using the ' + [1.5,2][n] + 'x multiplier. To switch to the ' +
                     [2,1.5][n] + 'x multiplier, disable and re-enable this special',
                 name: '667warning'
-            })
+            });
         }
     },
     670: {

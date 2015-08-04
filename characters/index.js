@@ -13,7 +13,7 @@ Utils.parseUnits(false);
 
 var generateSearchParameters = function(query, filters) {
     var result = Utils.generateSearchParameters(query);
-    if (result == null && Object.keys(filters).length === 0) return null;
+    if (result === null && Object.keys(filters).length === 0) return null;
     var temp = $.extend({ },filters);
     temp.custom = [ ];
     for (var i=0;i<filters.custom.length;++i) {
@@ -38,7 +38,7 @@ var searchBaseEvolutions = function(id) {
     var result = [ ];
     for (var i=0;i<temp.length;++i) {
         var base = searchBaseEvolutions(temp[i]);
-        if (base.length == 0)
+        if (base.length === 0)
             result.push([ temp[i] ]);
         else for (var j=0;j<base.length;++j)
             result.push(base[j].concat(temp[i].constructor == Array ? temp[i] : [ temp[i] ]));
@@ -49,13 +49,13 @@ var searchBaseEvolutions = function(id) {
 var searchEvolverEvolutions = function(id) {
     var result = { }, current = parseInt(id,10);
     for (var key in details) {
-        var id = ('000' + key).slice(-4);
+        var paddedId = ('000' + key).slice(-4);
         if (!details[key].evolution) continue;
         if (details[key].evolvers.indexOf(current) != -1)
-            result[id] = (result[id] || [ ]).concat([ details[key].evolution ]);
+            result[paddedId] = (result[paddedId] || [ ]).concat([ details[key].evolution ]);
         for (var i=0;i<details[key].evolution.length;++i) {
             if (details[key].evolvers[i].indexOf(current) != -1)
-                result[id] = (result[id] || [ ]).concat([ details[key].evolution[i] ]);
+                result[paddedId] = (result[paddedId] || [ ]).concat([ details[key].evolution[i] ]);
         }
     }
     return result;

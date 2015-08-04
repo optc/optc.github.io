@@ -1,4 +1,4 @@
-/* jshint evil: true */
+/* jshint loopfunc: true */
 
 (function() {
 

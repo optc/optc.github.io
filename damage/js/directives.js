@@ -1,3 +1,5 @@
+/* jshint eqnull: true */
+
 (function() {
 
 var app = angular.module('optc');
@@ -176,10 +178,10 @@ directives.animate = function() {
             setTimeout(function() {
                 element.addClass('animated');
                 element.addClass(scope.animation);
-            },1000)
+            },1000);
         }
     };
-}
+};
 
 /************************
  * Component directives *
@@ -566,10 +568,10 @@ filters.decorate = function() {
  * Initialization *
  ******************/
 
-for (var key in directives)
-    app.directive(key, directives[key]);
+for (var directive in directives)
+    app.directive(directive, directives[directive]);
 
-for (var key in filters)
-    app.filter(key, filters[key]);
+for (var filter in filters)
+    app.filter(filter, filters[filter]);
 
 })();

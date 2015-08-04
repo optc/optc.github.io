@@ -33,9 +33,9 @@ utils.parseUnits = function(skipIncomplete) {
         if (!window.units[i].name || window.units[i].class.constructor == Array) continue; // compatibility info already added
         window.units[i].class = [ window.units[i].class, window.units[i].class ];
     }
-    for (var i=667;i<window.units.length;++i) {
-        if (!window.units[i].name) continue;
-        window.units[i].class = [ window.units[i].class, window.units[i].class ];
+    for (var j=667;j<window.units.length;++j) {
+        if (!window.units[j].name) continue;
+        window.units[j].class = [ window.units[j].class, window.units[j].class ];
     }
 };
 
