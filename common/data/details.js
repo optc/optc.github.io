@@ -3392,5 +3392,24 @@ var details = {
         specialNotes: "The exact formula for the damage received is: 5000 + ((total damage) - 5000) * 0.03",
         captain: "Boosts ATK of Slasher characters by 1.5x, deals 5x character's ATK in QCK damage to all enemies at the end of the turn",
         cooldown: 18
-    }
+    },
+    678: {
+        special: "Reduces damage received by 50% for 1 turn, locks all orbs for 1 turn",
+        captain: "Boosts ATK and RCV of PSY characters by 1.2x, boosts chances of getting [PSY] orbs",
+        cooldown: 19
+    },
+    679: {
+        special: "Reduces damage received by 50% for 1 turn, locks all orbs for 1 turn",
+        captain: "Boosts ATK and RCV of PSY characters by 1.5x, boosts chances of getting [PSY] orbs",
+        cooldown: 19
+    },
+    682: {
+        special: "Recovers a fixed amount of HP, reduces damage received by 50% for 2 turns", // TODO Find out how much
+        cooldown: 22
+    },
+    683: {
+        special: "Recovers a fixed amount of HP, reduces damage received by 50% for 2 turns", // TODO Find out how much
+        captain: "Boosts ATK and RCV of Fighter characters by 1.5x",
+        cooldown: 22
+    },
 };

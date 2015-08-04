@@ -675,5 +675,12 @@ window.units = [
     [ "Emporio Ivankov, Newkama Kenpo Teacher", "INT", [ "Freedom", "Fighter" ], 4, 18, 70, null, null, null, null, null, null, 4, null, 0 ],
     [ "Emporio Ivankov, Member of the Revolutionary Army", "INT", [ "Freedom", "Fighter" ], 5, 29, 99, 1285, 593, 142, 2774, 1212, 241, 7, null, 1.5 ],
     [ "Inazuma", "QCK", "Slasher", 4, 18, 70, 179, 58, 47, 1300, 449, 232, 4, null, 1.5 ],
-    [ "Inazuma, Member of the Revolutionary Army", "QCK", "Slasher", 5, 29, 99, 1244, 400, 199, 2559, 833, 380, 6, null, 0 ]
+    [ "Inazuma, Member of the Revolutionary Army", "QCK", "Slasher", 5, 29, 99, 1244, 400, 199, 2559, 833, 380, 6, null, 0 ],
+    [ "Robin, Record of the Voyage - Strawhat Crew (Log Robin)", "INT", "Fighter", 4, 12, 50, null, null, null, null, null, null, 6, null, 0 ],
+    [ "Robin, Dream of the Voyage - Uncover the Blank Page of History (Log Robin)", "INT", "Fighter", 5, 20, 99, 1008, 440, 226, 1924, 857, 390, 6, null, 0 ],
+    [ ],
+    [ ],
+    [ "Ice Cream Loving Robin", "PSY", "Fighter", 4, 12, 50, null, null, null, null, null, null, 6, null, 0 ],
+    [ "Chocolate Ice Cream Loving Robin", "PSY", "Fighter", 5, 20, 99, 934, 433, 172, 1903, 842, 361, 4, null, 0 ],
+
 ];

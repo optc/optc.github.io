@@ -1326,5 +1326,17 @@ window.captains = {
     },
     677: {
         atk: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; }
+    },
+    678: {
+        atk: function(p) { return p.unit.type == "PSY" ? 1.2 : 1; },
+        rcv: function(p) { return p.unit.type == "PSY" ? 1.2 : 1; }
+    },
+    679: {
+        atk: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; },
+        rcv: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; }
+    },
+    683: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; },
+        rcv: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; }
     }
 };
