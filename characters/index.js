@@ -75,6 +75,27 @@ var getEvolversOfEvolution = function(from,to,withID) {
     return [ ];
 };
 
+var searchDropLocations = function(id) {
+    var result = [ ];
+    for (var type in drops) {
+        for (var island=0;island<drops[type].length;++island) {
+            var temp = [ ];
+            for (var stage in drops[type][island]) {
+                if (stage == 'thumb' || stage == 'name') continue;
+                if (drops[type][island][stage].indexOf(id) != -1)
+                    temp.push(type == 'Story Island' ? 'Stage ' + stage : stage);
+            }
+            if (temp.length > 0) {
+                var name = drops[type][island].name;
+                if (type == 'Fortnight') name += ' Fortnight';
+                else if (type == 'Raid') name += ' Raid';
+                result.push({ name: name, thumb: drops[type][island].thumb, data: temp });
+            }
+        }
+    }
+    return result;
+};
+
 /***********************
  * Table configuration *
  ***********************/
@@ -213,16 +234,20 @@ app.controller('DetailsCtrl',function($scope, $state, $stateParams) {
     $scope.unit.class = $scope.unit.class[$scope.compatibilityMode ? 0 : 1];
     $scope.hybrid = $scope.unit.class.constructor == Array;
     $scope.details = window.details[$stateParams.id];
+    // derived data
     $scope.evolvesFrom = searchBaseEvolutions($stateParams.id);
     $scope.usedBy = searchEvolverEvolutions($stateParams.id);
-    $scope.isUsedBy = Object.keys($scope.usedBy).length > 0;
+    $scope.drops = searchDropLocations(parseInt($stateParams.id,10));
+    $scope.manuals = searchDropLocations(-parseInt($stateParams.id,10));
+    $scope.collapsed = { to: true, from: true, used: true, drops: true, manuals: true };
     // events/functions
+    $scope.getEvos = getEvolversOfEvolution;
+    $scope.length = function(target) { return Object.keys(target); };
     $scope.withButton = $stateParams.previous.length > 0;
     $scope.onBackClick = function() {
         var previous = $stateParams.previous.splice(-1)[0];
         $state.go('main.view',{ id: previous, previous: $stateParams.previous });
     };
-    $scope.getEvos = getEvolversOfEvolution;
 });
 
 /**************

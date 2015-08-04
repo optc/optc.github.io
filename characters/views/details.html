@@ -124,7 +124,6 @@
                 <h3 class="page-header" ng-if="evolvesFrom.length > 0">Evolves From</h3>
 
                 <div ng-if="evolvesFrom.length >0">
-
                     <div class="panel panel-default" ng-repeat="tree in evolvesFrom">
                         <div ng-repeat="id in tree">
                             <evolution unit="unit" base="id" evolvers="getEvos(id,tree[$index+1] || unit.number+1)"
@@ -136,15 +135,62 @@
 
                 <!-- Used by -->
 
-                <h3 class="page-header" ng-if="isUsedBy">Evolutions Requiring This Unit</h3>
+                <h3 class="page-header" ng-if="length(usedBy) > 0">Evolutions Requiring This Unit</h3>
 
-                <div ng-if="isUsedBy">
+                <div ng-if="length(usedBy) > 0" ng-class="{ collapsed: collapsed.used && length(usedBy) > 3" }">
+                    <div class="btn btn-info collapse-button" ng-click="collapsed.used = false">Click to show</div>
                     <div class="panel panel-default" ng-repeat="(base,evolutions) in usedBy">
                         <div ng-repeat="id in evolutions">
                             <evolution unit="unit" base="base" evolvers="getEvos(base,id,unit.number + 1)"
                                 evolution="id" size="medium"></evolution>
                         </div>
                     </div>
+                </div>
+
+                <!-- Drops -->
+
+                <h3 class="page-header" ng-if="drops.length > 0">Drop Locations</h3>
+
+                <div ng-if="drops.length > 0" ng-class="{ collapsed: collapsed.drops && drops.length > 3 }">
+                    <div class="btn btn-info collapse-button" ng-click="collapsed.drops = false">Click to show</div>
+                    <table class="table table-striped" id="drop-table">
+                        <thead>
+                            <th>Location</th>
+                            <th>Stage/Difficulty</th>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="drop in drops">
+                                <td>
+                                    <div class="slot small" decorate-slot uid="drop.thumb"></div>
+                                    {{drop.name}}
+                                </td>
+                                <td>{{drop.data.join(', ')}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Manuals -->
+
+                <h3 class="page-header" ng-if="manuals.length > 0">Manual Locations</h3>
+
+                <div ng-if="manuals.length > 0" ng-class="{ collapsed: collapsed.manuals && manuals.length > 3 }">
+                    <div class="btn btn-info collapse-button" ng-click="collapsed.manuals = false">Click to show</div>
+                    <table class="table table-striped" id="drop-table">
+                        <thead>
+                            <th>Location</th>
+                            <th>Stage/Difficulty</th>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="drop in manuals">
+                                <td>
+                                    <div class="slot small" decorate-slot uid="drop.thumb"></div>
+                                    {{drop.name}}
+                                </td>
+                                <td>{{drop.data.join(', ')}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
 
             </div>

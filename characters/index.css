@@ -254,7 +254,7 @@ input {
 }
 
 .page-header {
-    margin: 0 0 15px 0;
+    margin: 15px 0 15px 0;
     text-align: left;
 }
 
@@ -291,6 +291,30 @@ input {
     content: "NOTES: ";
     font-weight: bold;
     color: gray;
+}
+
+.collapsed > :first-child ~ div ,
+.collapsed > :first-child ~ table {
+    display: none;
+}
+
+.collapse-button {
+    margin-bottom: 10px;
+}
+
+:not(.collapsed) > .collapse-button {
+    display: none;
+}
+
+#drop-table td:first-child {
+    padding-top: 0;
+    padding-bottom: 0;
+    width: 0%;
+}
+
+#drop-table td, #drop-table div {
+    vertical-align: middle;
+    white-space: nowrap;
 }
 
 /*******************

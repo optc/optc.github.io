@@ -87,8 +87,8 @@ var details = {
         special: "Delays all enemies for 2 turns",
         captain: "Boosts ATK of PSY characters by 1.5x",
         cooldown: [ 15, 10 ],
-        evolution: 16,
-        evolvers: [ 117, 87, 98, 103 ]
+        evolution: [ 15, 16 ],
+        evolvers: [ [ 117 ], [ 117, 87, 98, 103 ] ]
     },
     15: { // Usopp Golden Pound (GPU)
         special: "Delays all enemies for 3 turns",
