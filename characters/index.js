@@ -242,7 +242,7 @@ app.controller('DetailsCtrl',function($scope, $state, $stateParams) {
     $scope.collapsed = { to: true, from: true, used: true, drops: true, manuals: true };
     // events/functions
     $scope.getEvos = getEvolversOfEvolution;
-    $scope.length = function(target) { return Object.keys(target); };
+    $scope.sizeOf = function(target) { return Object.keys(target).length; };
     $scope.withButton = $stateParams.previous.length > 0;
     $scope.onBackClick = function() {
         var previous = $stateParams.previous.splice(-1)[0];

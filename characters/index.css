@@ -312,13 +312,18 @@ input {
     display: none;
 }
 
-#drop-table td:first-child {
+.drop-table {
+    position: relative;
+    top: -10px;
+}
+
+.drop-table td:first-child {
     padding-top: 0;
     padding-bottom: 0;
     width: 0%;
 }
 
-#drop-table td, #drop-table div {
+.drop-table td, .drop-table div {
     vertical-align: middle;
     white-space: nowrap;
 }

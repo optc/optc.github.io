@@ -135,9 +135,9 @@
 
                 <!-- Used by -->
 
-                <h3 class="page-header" ng-if="length(usedBy) > 0">Evolutions Requiring This Unit</h3>
+                <h3 class="page-header" ng-if="sizeOf(usedBy) > 0">Evolutions Requiring This Unit</h3>
 
-                <div ng-if="length(usedBy) > 0" ng-class="{ collapsed: collapsed.used && length(usedBy) > 3" }">
+                <div ng-if="sizeOf(usedBy) > 0" ng-class="{ collapsed: collapsed.used && sizeOf(usedBy) > 3 }">
                     <div class="btn btn-info collapse-button" ng-click="collapsed.used = false">Click to show</div>
                     <div class="panel panel-default" ng-repeat="(base,evolutions) in usedBy">
                         <div ng-repeat="id in evolutions">
@@ -153,7 +153,7 @@
 
                 <div ng-if="drops.length > 0" ng-class="{ collapsed: collapsed.drops && drops.length > 3 }">
                     <div class="btn btn-info collapse-button" ng-click="collapsed.drops = false">Click to show</div>
-                    <table class="table table-striped" id="drop-table">
+                    <table class="table table-striped drop-table">
                         <thead>
                             <th>Location</th>
                             <th>Stage/Difficulty</th>
@@ -176,7 +176,7 @@
 
                 <div ng-if="manuals.length > 0" ng-class="{ collapsed: collapsed.manuals && manuals.length > 3 }">
                     <div class="btn btn-info collapse-button" ng-click="collapsed.manuals = false">Click to show</div>
-                    <table class="table table-striped" id="drop-table">
+                    <table class="table table-striped drop-table">
                         <thead>
                             <th>Location</th>
                             <th>Stage/Difficulty</th>
