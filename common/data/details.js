@@ -3300,7 +3300,9 @@ var details = {
     660: {
         special: "Delays all enemies for 2 turns, reduces all enemies' defense by 50% for 2 turns",
         captain: "Boosts ATK of Shooter characters by 2x",
-        cooldown: 13
+        cooldown: 13,
+        evolution: 661,
+        evolvers: [ 117, 85, 94, 96, 101 ]
     },
     661: {
         special: "Delays all enemies for 2 turns, reduces all enemies' defense by 50% for 2 turns",
