@@ -79,6 +79,7 @@ var getEvolversOfEvolution = function(from,to,withID) {
 var searchDropLocations = function(id) {
     var result = [ ];
     for (var type in drops) {
+        if (type[0] == '_') continue;
         for (var island=0;island<drops[type].length;++island) {
             var temp = [ ];
             for (var stage in drops[type][island]) {
@@ -90,10 +91,28 @@ var searchDropLocations = function(id) {
                 var name = drops[type][island].name;
                 if (type == 'Fortnight') name += ' Fortnight';
                 else if (type == 'Raid') name += ' Raid';
-                result.push({ name: name, thumb: drops[type][island].thumb, data: temp });
+                var data = { name: name, thumb: drops[type][island].thumb, data: temp };
+                if (type == 'Story Island') data.bonuses = getIslandBonuses(island);
+                result.push(data);
             }
         }
     }
+    return result;
+};
+
+var getDayOfWeek = function() {
+    var now = new Date();
+    var utc = new Date(now.getTime() + now.getTimezoneOffset() * 60000 - 8 * 3600000);
+    var result = utc.getDay();
+    return (result !== 0 ? result - 1 : 6);
+};
+
+var getIslandBonuses = function(y) {
+    var x = getDayOfWeek(), result = { };
+    drops._bonuses.forEach(function(data) {
+        if (data.y > y || x > data.x) return;
+        if (x + y == data.x + data.y) result[data.type] = true;
+    });
     return result;
 };
 

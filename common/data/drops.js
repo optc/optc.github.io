@@ -699,6 +699,19 @@ window.drops = {
             'Master': [ -367, -316, -314, -312, -308, -259, -257, -255, -253, -251, -221, -218, -217, -210, -75, -30, -16, -15, -8 ]
         }
 
+    ],
+
+    '_bonuses': [
+        { type: 'stamina' , x: 3 , y: 0  },
+        { type: 'drop'    , x: 6 , y: 1  },
+        { type: 'beli'    , x: 1 , y: 4  },
+        { type: 'beli'    , x: 5 , y: 4  },
+        { type: 'stamina' , x: 6 , y: 5  },
+        { type: 'drop'    , x: 6 , y: 8  },
+        { type: 'beli'    , x: 6 , y: 10 },
+        { type: 'stamina' , x: 6 , y: 12 },
+        { type: 'drop'    , x: 6 , y: 15 },
+        { type: 'beli'    , x: 6 , y: 17 },
     ]
 
 };

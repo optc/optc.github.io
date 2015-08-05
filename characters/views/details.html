@@ -163,6 +163,7 @@
                                 <td>
                                     <div class="slot small" decorate-slot uid="drop.thumb"></div>
                                     {{drop.name}}
+                                    <span ng-repeat="(key,value) in drop.bonuses" class="bonus {{key}}"></span>
                                 </td>
                                 <td>{{drop.data.join(', ')}}</td>
                             </tr>

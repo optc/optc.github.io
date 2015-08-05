@@ -126,6 +126,32 @@ input {
     margin-bottom: 25px;
 }
 
+/***********
+ * BONUSES *
+ ***********/
+
+ .bonus:before {
+    padding: 1px 4px;
+    border-radius: 10px;
+    font-size: 10px;
+    margin-left: 5px;
+}
+
+.bonus.drop:before {
+    background: lightgreen;
+    content: "2x drop";
+}
+
+.bonus.stamina:before {
+    background: skyblue;
+    content: "0.5x stamina";
+}
+
+.bonus.beli:before {
+    background: gold;
+    content: "2x beli";
+}
+
 /**********
  * TABLES *
  **********/
