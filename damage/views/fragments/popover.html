@@ -45,7 +45,7 @@
                 <td ng-if="data.team[slot].unit.class.length < 3"></td>
             </tr>
             <tr class="header" ng-if="slot < 2">
-                <td colspan="4">Captain Ability</td>
+                <td colspan="{{data.team[slot].unit.class.length < 3 ? 5 : 4}}">Captain Ability</td>
             </tr>
             <tr ng-if="slot < 2">
                 <td colspan="{{data.team[slot].unit.class.length < 3 ? 5 : 4}}">
