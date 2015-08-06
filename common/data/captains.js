@@ -721,10 +721,10 @@ window.captains = {
         rcv: function(p) { return p.percHP <= 30.0 ? 5 : 1; } // TODO Double check the HP
     },
     444: { // Carue
-        atk: function(p) { return p.percHP >= 70.0 && p.unit.class.has("PowerUp") ? 2 : 1; } // TODO Double check the HP
+        atk: function(p) { return p.percHP >= 70.0 && p.unit.class.has("Booster") ? 2 : 1; } // TODO Double check the HP
     },
     445: { // Captain Carue & The Super Spot-Billed Duck Squad
-        atk: function(p) { return p.percHP >= 70.0 && p.unit.class.has("PowerUp") ? 2.5 : 1; } // TODO Double check the HP
+        atk: function(p) { return p.percHP >= 70.0 && p.unit.class.has("Booster") ? 2.5 : 1; } // TODO Double check the HP
     },
     446: { // Marshall D. Teach
         atk: function(p) { return p.unit.type == "STR" ? 2 : 1; },

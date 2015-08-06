@@ -152,6 +152,11 @@ input {
     content: "2x beli";
 }
 
+.bonus.today:before {
+    background: orchid;
+    content: "today";
+}
+
 /**********
  * TABLES *
  **********/

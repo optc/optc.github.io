@@ -79,11 +79,10 @@ var getEvolversOfEvolution = function(from,to,withID) {
 var searchDropLocations = function(id) {
     var result = [ ];
     for (var type in drops) {
-        if (type[0] == '_') continue;
         for (var island=0;island<drops[type].length;++island) {
             var temp = [ ];
             for (var stage in drops[type][island]) {
-                if (stage == 'thumb' || stage == 'name') continue;
+                if (stage == 'thumb' || stage == 'name' || stage == 'day') continue;
                 if (drops[type][island][stage].indexOf(id) != -1)
                     temp.push(type == 'Story Island' ? 'Stage ' + stage : stage);
             }
@@ -92,7 +91,8 @@ var searchDropLocations = function(id) {
                 if (type == 'Fortnight') name += ' Fortnight';
                 else if (type == 'Raid') name += ' Raid';
                 var data = { name: name, thumb: drops[type][island].thumb, data: temp };
-                if (type == 'Story Island') data.bonuses = getIslandBonuses(island);
+                if (type == 'Story Island') data.bonus = getIslandBonus(island);
+                else if (drops[type][island].day == getDayOfWeek()) data.bonus = 'today';
                 result.push(data);
             }
         }
@@ -101,19 +101,15 @@ var searchDropLocations = function(id) {
 };
 
 var getDayOfWeek = function() {
-    var now = new Date();
-    var utc = new Date(now.getTime() + now.getTimezoneOffset() * 60000 - 8 * 3600000);
-    var result = utc.getDay();
-    return (result !== 0 ? result - 1 : 6);
+    var now = new Date(), utc = new Date(now.getTime() + now.getTimezoneOffset() * 60000 - 8 * 3600000);
+    return (utc.getDay() === 0 ? 6 : utc.getDay() - 1);
 };
 
-var getIslandBonuses = function(y) {
-    var x = getDayOfWeek(), result = { };
-    drops._bonuses.forEach(function(data) {
-        if (data.y > y || x > data.x) return;
-        if (x + y == data.x + data.y) result[data.type] = true;
-    });
-    return result;
+var getIslandBonus = function(y) {
+    var x = getDayOfWeek(), bonus = bonuses.filter(function(data) {
+        return y >= data.y && x <= data.x && x + y == data.x + data.y;
+    })[0];
+    return (bonus ? bonus.type : null);
 };
 
 /***********************

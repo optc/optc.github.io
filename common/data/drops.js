@@ -337,37 +337,43 @@ window.drops = {
     Special: [
 
         {
-            name: 'Rush of Turtles (Mondays)',
+            name: 'Rush of Turtles',
+            day: 0,
             thumb: 192,
             ' ': [ 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 189, 190, 191, 192, 193, 595 ]
         },
 
         {
-            name: 'Sea Pony Paradise (Tuesdays)',
+            name: 'Sea Pony Paradise',
+            day: 1,
             thumb: 117,
             ' ': [ 115, 116, 117, 118 ]
         },
 
         {
-            name: 'Penguin Beach (Wednesdays)',
+            name: 'Penguin Beach',
+            day: 2,
             thumb: 265,
             ' ': [ 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88 ]
         },
 
         {
-            name: 'Dragon Sanctuary (Thursdays)',
+            name: 'Dragon Sanctuary',
+            day: 3,
             thumb: 266,
             ' ': [ 100, 101, 102, 103, 104, 267 ]
         },
 
         {
-            name: 'Scissor Cavern (Fridays)',
-            thumb: 266,
+            name: 'Scissor Cavern',
+            day: 4,
+            thumb: 94,
             ' ': [ 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99 ]
         },
 
         {
             name: 'Scissor Cavern, Intern',
+            day: 5,
             thumb: 303,
             ' ': [ 89, 90, 91, 92, 93, 95, 96, 97, 98, 99, 300, 301, 302, 303, 304 ]
         },
@@ -699,19 +705,19 @@ window.drops = {
             'Master': [ -367, -316, -314, -312, -308, -259, -257, -255, -253, -251, -221, -218, -217, -210, -75, -30, -16, -15, -8 ]
         }
 
-    ],
-
-    '_bonuses': [
-        { type: 'stamina' , x: 3 , y: 0  },
-        { type: 'drop'    , x: 6 , y: 1  },
-        { type: 'beli'    , x: 1 , y: 4  },
-        { type: 'beli'    , x: 5 , y: 4  },
-        { type: 'stamina' , x: 6 , y: 5  },
-        { type: 'drop'    , x: 6 , y: 8  },
-        { type: 'beli'    , x: 6 , y: 10 },
-        { type: 'stamina' , x: 6 , y: 12 },
-        { type: 'drop'    , x: 6 , y: 15 },
-        { type: 'beli'    , x: 6 , y: 17 },
     ]
 
 };
+
+var bonuses = [
+    { type: 'stamina' , x: 3 , y: 0  },
+    { type: 'stamina' , x: 6 , y: 5  },
+    { type: 'stamina' , x: 6 , y: 12 },
+    { type: 'drop'    , x: 6 , y: 1  },
+    { type: 'drop'    , x: 6 , y: 8  },
+    { type: 'drop'    , x: 6 , y: 15 },
+    { type: 'beli'    , x: 1 , y: 4  },
+    { type: 'beli'    , x: 5 , y: 4  },
+    { type: 'beli'    , x: 6 , y: 10 },
+    { type: 'beli'    , x: 6 , y: 17 },
+]

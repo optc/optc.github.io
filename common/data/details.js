@@ -2117,13 +2117,13 @@ var details = {
     442: {}, // Stomp & Ivan X. - Super Spot-Billed Duck Squad
     443: {}, // Kentauros & Hikoichi - Super Spot-Billed Duck Squad
     444: { // Carue
-        captain: "Boosts ATK of Evolver characters by 2x if HP is above 70% at the start of the turn",
+        captain: "Boosts ATK of Booster characters by 2x if HP is above 70% at the start of the turn",
         evolution: 445,
         evolvers: [ 441, 442, 443 ]
     },
     445: { // Captain Carue & The Super Spot-Billed Duck Squad
         special: "Changes all orbs into either [STR], [DEX], [QCK], [PSY] or [INT] orbs, freely switch orbs between slots 3 times",
-        captain: "Boosts ATK of Evolver characters by 2.5x if HP is above 70% at the start of the turn",
+        captain: "Boosts ATK of Booster characters by 2.5x if HP is above 70% at the start of the turn",
         cooldown: [ 26, 17 ]
     },
     446: { // Marshall D. Teach
