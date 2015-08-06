@@ -2,48 +2,28 @@
 
     <head>
         <title>OPTC Stuff</title>
-        <style>
-            body, html {
-                font-family: 'Open Sans', sans-serif;
-                overflow: hidden;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                /* Safari */
-                display: -webkit-flex;
-                -webkit-flex-direction: column;
-                -webkit-justify-content: center;
-            }
-
-            #container {
-                width: 250px;
-                margin: auto;
-            }
-
-            #container > a {
-                width: 220px;
-                padding: 15px;
-                margin: 5px;
-                color: gray;
-                text-align: center;
-                display: block;
-                text-decoration: none;
-                cursor: pointer;
-            }
-
-            #container > :first-child { background-color: rgba(191,97,106,0.4); }
-            #container > :nth-child(2) { background-color: rgba(150,181,180,0.4); }
-        </style>
         <link rel="stylesheet" type="text/css" href="common/libs/css/animate.css" />
+        <link rel="stylesheet" type="text/css" href="common/libs/css/font-awesome.min.css" />
+        <link rel="stylesheet" type="text/css" href="index.css" />
         <link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
         <meta name="viewport" content="initial-scale=1, user-scalable=no, user-scalable=0">
     </head>
 
     <body>
         <div id="container">
-            <a href="damage" class="animated fadeInRight">Damage Calculator</a>
-            <a href="characters" class="animated fadeInLeft">Character Table</a>
-        </div>
+            <div class="button">
+                <a href="damage" class="round blue">
+                    <i class="fa fa-calculator"></i>
+                    <span class="round">Damage<br/>Calculator</span>
+                </a>
+            </div>
+            <div class="button">
+                <a href="characters" class="round green">
+                    <i class="fa fa-list-ul"></i>
+                    <span class="round">Character<br/>Table</span>
+                </a>
+            </div>
+        </div> 
     </body>
 
 </html>
