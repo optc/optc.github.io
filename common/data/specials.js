@@ -441,13 +441,13 @@ window.specials = {
         type: 'all'
     },
     668: {
-        atk: function(p) { return !p.unit.class.has('Slasher') ? 1 : window.specials[668].multiplier; },
+        atk: function(p) { return !p.unit.class.has('Freedom') ? 1 : window.specials[668].multiplier; },
         type: 'class',
         onActivation: function(p) {
-            var n = (window.specials[668] == 1.5 ? 1 : 0);
+            var n = (window.specials[668].multiplier == 1.5 ? 1 : 0);
             window.specials[668].multiplier = [1.5,2][n];
             p.scope.notify({
-                text: 'Using the ' + [1.5,2][n] + 'x multiplier. To switch to the ' +
+                text: 'Using the ' + [1.5,2][n] + 'x ATK multiplier. To switch to the ' +
                     [2,1.5][n] + 'x multiplier, disable and re-enable this special',
                 name: '667warning'
             });
@@ -457,10 +457,10 @@ window.specials = {
         atk: function(p) { return !p.unit.class.has('Freedom') ? 1 : window.specials[669].multiplier; },
         type: 'class',
         onActivation: function(p) {
-            var n = (window.specials[669] == 1.5 ? 1 : 0);
+            var n = (window.specials[669].multiplier == 1.5 ? 1 : 0);
             window.specials[669].multiplier = [1.5,2][n];
             p.scope.notify({
-                text: 'Using the ' + [1.5,2][n] + 'x multiplier. To switch to the ' +
+                text: 'Using the ' + [1.5,2][n] + 'x ATK multiplier. To switch to the ' +
                     [2,1.5][n] + 'x multiplier, disable and re-enable this special',
                 name: '667warning'
             });

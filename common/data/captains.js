@@ -1293,12 +1293,12 @@ window.captains = {
         atk: function(p) { return 1.75; },
     },
     668: { 
-        atk: function(p) { return p.unit.class.has("PSY") ? 2 + 0.75 * p.percHP / 100 : 1; },
+        atk: function(p) { return p.unit.class.has("Freedom") ? 2 + 0.75 * p.percHP / 100 : 1; },
         hp: function(p) { return 1.2; },
         rcv: function(p) { return 1.2; }
     },
     669: { 
-        atk: function(p) { return p.unit.class.has("PSY") ? 2 + 0.75 * p.percHP / 100 : 1; },
+        atk: function(p) { return p.unit.class.has("Freedom") ? 2 + 0.75 * p.percHP / 100 : 1; },
         hp: function(p) { return 1.2; },
         rcv: function(p) { return 1.2; }
     },
