@@ -3345,7 +3345,9 @@ var details = {
         special: "Boosts ATK of Freedom characters by 1.5x for 1 turn. If during that turn every unit scores a Perfect hit, boosts ATK of Freedom characters by 2x in the following turn.",
         captain: "Boosts HP and RCV by 1.2x, greatly boosts ATK of Freedom characters",
         captainNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the higher the HP is. The multiplier is calculated as 2 + 0.75 * (remaining HP) / (total HP). At full health the boost is equal to 2.75x",
-        cooldown: 21
+        cooldown: 21,
+        evolution: 669,
+        evolvers: [ 118, 87, 266, 303, 267 ]
     },
     669: {
         special: "Boosts ATK of Freedom characters by 1.5x for 1 turn. If during that turn every unit scores a Perfect hit, boosts ATK of Freedom characters by 2x in the following turn.",
@@ -3356,7 +3358,9 @@ var details = {
     670: {
         special: "Boosts ATK of Fighter characters by 1.75x for 1 turn",
         captain: "Boosts ATK of Fighter characters by 2x",
-        cooldown: 15
+        cooldown: 15,
+        evolution: 671,
+        evolvers: [ 118, 83, 86, 302, 102 ]
     },
     671: {
         special: "Boosts ATK of Fighter characters by 1.75x for 1 turn",
@@ -3366,7 +3370,9 @@ var details = {
     672: {
         special: "Cuts all enemies' current HP by 20%, changes own orb into [STR]",
         captain: "Boosts ATK of Fighter characters by 2x",
-        cooldown: 20
+        cooldown: 20,
+        evolution: 673,
+        evolvers: [ 118, 84, 94, 300, 100 ]
     },
     673: {
         special: "Cuts all enemies' current HP by 20%, changes own orb into [STR]",
@@ -3376,7 +3382,9 @@ var details = {
     674: {
         special: "Removes poison, reduces damage received by 50% for 2 turns, recovers 13x character's RCV in HP at the end of the turn for 2 turns",
         captain: "Boosts ATK of Freedom characters by 2x",
-        cooldown: 21
+        cooldown: 21,
+        evolution: 674,
+        evolvers: [ 118, 83, 88, 304, 104 ]
     },
     675: {
         special: "Removes poison, reduces damage received by 50% for 2 turns, recovers 13x character's RCV in HP at the end of the turn for 2 turns",
@@ -3387,7 +3395,9 @@ var details = {
         special: "Reduces any damage received above 5,000 HP by 97% for 3 turns",
         specialNotes: "The exact formula for the damage received is: 5000 + ((total damage) - 5000) * 0.03",
         captain: "Boosts ATK of Slasher characters by 1.5x, deals 5x character's ATK in QCK damage to all enemies at the end of the turn",
-        cooldown: 18
+        cooldown: 18,
+        evolution: 676,
+        evolvers: [ 94, 96, 96, 301, 301 ]
     },
     677: {
         special: "Reduces any damage received above 5,000 HP by 97% for 3 turns",
@@ -3407,11 +3417,13 @@ var details = {
     },
     682: {
         special: "Recovers a fixed amount of HP, reduces damage received by 50% for 2 turns", // TODO Find out how much
-        cooldown: 22
+        cooldown: 22,
+        evolution: 683,
+        evolvers: [ 117, 81, 87, 98, 103 ]
     },
     683: {
         special: "Recovers a fixed amount of HP, reduces damage received by 50% for 2 turns", // TODO Find out how much
         captain: "Boosts ATK and RCV of Fighter characters by 1.5x",
         cooldown: 22
-    },
+    }
 };
