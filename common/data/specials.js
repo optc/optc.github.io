@@ -61,11 +61,11 @@ window.specials = {
         def: function(p) { return 0.5; }
     },
     313: { // Urouge
-        atk: function(p) { return p.unit.class == "Striker" ? 1.5 : 1; },
+        atk: function(p) { return p.unit.class.has("Striker") ? 1.5 : 1; },
         type: 'class'
     },
     314: { // Mad Monk Urouge
-        atk: function(p) { return p.unit.class == "Striker" ? 1.5 : 1; },
+        atk: function(p) { return p.unit.class.has("Striker") ? 1.5 : 1; },
         type: 'class'
     },
     323: { // Kaku
@@ -75,22 +75,22 @@ window.specials = {
         orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); }
     },
     352: { // Zephyr
-        atk: function(p) { return p.unit.class == "Shooter" ? 1.75 : 1; },
+        atk: function(p) { return p.unit.class.has("Shooter") ? 1.75 : 1; },
         type: 'class'
     },
     353: { // Zephyr NEO Navy Commander
-        atk: function(p) { return p.unit.class == "Shooter" ? 1.75 : 1; },
+        atk: function(p) { return p.unit.class.has("Shooter") ? 1.75 : 1; },
         type: 'class'
     },
     382: { // Sandora Dragon
         def: function(p) { return 0.5; }
     },
     385: { // Hogback
-        atk: function(p) { return p.unit.class == "Fighter" ? 1.25 : 1; },
+        atk: function(p) { return p.unit.class.has("Fighter") ? 1.25 : 1; },
         type: 'class'
     },
     386: { // Doctor Hogback
-        atk: function(p) { return p.unit.class == "Fighter" ? 1.25 : 1; },
+        atk: function(p) { return p.unit.class.has("Fighter") ? 1.25 : 1; },
         type: 'class'
     },
     391: { // Perona
@@ -111,11 +111,11 @@ window.specials = {
         type: 'type'
     },
     401: { // Mr. 1
-        atk: function(p) { return p.unit.class == "Slasher" ? 1.25 : 1; },
+        atk: function(p) { return p.unit.class.has("Slasher") ? 1.25 : 1; },
         type: 'class'
     },
     402: { // Mr.1 the Fullbody Bladed Human
-        atk: function(p) { return p.unit.class == "Slasher" ? 1.25 : 1; },
+        atk: function(p) { return p.unit.class.has("Slasher") ? 1.25 : 1; },
         type: 'class'
     },
     404: { // Absalom
@@ -160,11 +160,11 @@ window.specials = {
         orb: function(p) { return p.orb == 2.0 ? 1.25 : (p.orb == 0.5 ? 4/5 : 1); }
     },
     450: { // Namur
-        atk: function(p) { return p.unit.class == "Fighter" ? 1.5 : 1; },
+        atk: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; },
         type: 'class'
     },
     451: { // One-Shot Namur
-        atk: function(p) { return p.unit.class == "Fighter" ? 1.5 : 1; },
+        atk: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; },
         type: 'class'
     },
     454: { // Fossa
@@ -184,11 +184,11 @@ window.specials = {
         type: 'type'
     },
     461: { // Fugitive Bentham Mr.2 Bon Clay
-        atk: function(p) { return p.unit.class == "Fighter" ? 1.25 : 1; },
+        atk: function(p) { return p.unit.class.has("Fighter") ? 1.25 : 1; },
         type: 'class'
     },
     462: { // Prison Break Expert Mr.2 Bon Clay
-        atk: function(p) { return p.unit.class == "Fighter" ? 1.25 : 1; },
+        atk: function(p) { return p.unit.class.has("Fighter") ? 1.25 : 1; },
         type: 'class'
     },
     465: { // Gedatsu
@@ -233,15 +233,15 @@ window.specials = {
         type: 'type'
     },
     509: { // The Strongest Prisoner Sir. Crocodile Mr.0, Former Leader of Baroque Works
-        atk: function(p) { return p.unit.class == "Striker" ? 1.5 : 1; },
+        atk: function(p) { return p.unit.class.has("Striker") ? 1.5 : 1; },
         type: 'class'
     },
     510: { // The Strongest Prisoner Sir. Crocodile the Shichibukai
-        atk: function(p) { return p.unit.class == "Striker" ? 1.5 : 1; },
+        atk: function(p) { return p.unit.class.has("Striker") ? 1.5 : 1; },
         type: 'class'
     },
     511: { // Prisoner Daz Bonez Mr.1
-        atk: function(p) { return p.unit.class == "Slasher" ? 1.25 : 1; },
+        atk: function(p) { return p.unit.class.has("Slasher") ? 1.25 : 1; },
         type: 'class'
     },
     514: { // Nico Robin Tropical
@@ -309,17 +309,17 @@ window.specials = {
         def: function(p) { return 0.5; }
     },
     572: { // Usopp Davy Back Fight - Second
-        atk: function(p) { return p.unit.class == "Fighter" ? 2 : 1; },
+        atk: function(p) { return p.unit.class.has("Fighter") ? 2 : 1; },
         type: 'class',
         onActivation: function(p) { p.tdata.lock = Math.max(1,p.tdata.lock); },
         onDeactivation: function(p) { if (p.tdata.lock == 1) p.tdata.lock = 0; }
     },
     574: { // Aokiji
-        atk: function(p) { return p.unit.class == "Striker" ? 1.75 : 1; },
+        atk: function(p) { return p.unit.class.has("Striker") ? 1.75 : 1; },
         type: 'class'
     },
     575: { // Aokiji the Freezing Man
-        atk: function(p) { return p.unit.class == "Striker" ? 1.75 : 1; },
+        atk: function(p) { return p.unit.class.has("Striker") ? 1.75 : 1; },
         type: 'class'
     },
     576: { // Tea Time Nami
@@ -330,11 +330,11 @@ window.specials = {
         type: 'type'
     },
     589: { // Kohza
-        atk: function(p) { return p.unit.class == "Slasher" ? 1.5 : 1; },
+        atk: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; },
         type: 'class'
     },
     590: { // Kohza, Leader of the Rebel Army
-        atk: function(p) { return p.unit.class == "Slasher" ? 1.5 : 1; },
+        atk: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; },
         type: 'class'
     },
     596: { // Tony Tony Chopper, Record of the Voyage - Strawhat Crew (Log Chopper)
@@ -371,7 +371,7 @@ window.specials = {
         def: function(p) { return 0.5; }
     },
     617: { // Superhuman Destroyers, Cannon User
-        atk: function(p) { return p.unit.class == "Shooter" ? 1.2 : 1; }
+        atk: function(p) { return p.unit.class.has("Shooter") ? 1.2 : 1; }
     },
     622: { // Pistol Hoodlum, Green Bounty Hunter
         rcvStatic: function(p) { return 100; }

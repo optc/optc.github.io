@@ -433,7 +433,7 @@ window.units = [
     [ "Sarkies", "QCK", "Slasher", 3, 10, 50, 220, 92, 22, 1440, 424, 68, 5, 392109, 1 ],
     [ "Elizabeth", "DEX", [ "Fighter", "Freedom" ], 4, 12, 70, 881, 422, 155, 1485, 700, 198, 4, 1422664, 1.5 ],
     [ "Caroline", "INT", [ "Fighter", "Freedom" ], 4, 18, 99, 772, 389, 177, 1890, 915, 300, 6, 3000000, [ 1.5, 1.5, 0.7 ] ],
-    [ "Sanji - Traditional Kamabakka Kingdom Duel Style", "QCK", [ "Fighter", "Freedom" ], 3, 10, 50, 221, 58, 29, 1229, 622, 130, 4, 392109, [ 0.7, 0.7, 1.5 ] ],
+    [ "Sanji - Traditional Kamabakka Kingdom Duel Style", "QCK", "Fighter", 3, 10, 50, 221, 58, 29, 1229, 622, 130, 4, 392109, [ 0.7, 0.7, 1.5 ] ],
     [ "Sanji Candy-chan", "QCK", [ "Fighter", "Freedom" ], 4, 18, 99, 1155, 545, 76, 1802, 951, 357, 4, 3000000, [ 0.7, 0.7, 1.5 ] ],
     [ "Perona Sweet", "DEX", "Shooter", 4, 11, 50, 168, 98, 58, 928, 412, 231, 4, 392109, 1.5 ],
     [ "Perona Sweet Ghost Princees", "DEX", "Shooter", 5, 20, 99, 856, 359, 186, 1568, 741, 466, 4, 3000000, 1.5 ],
