@@ -3,12 +3,39 @@
 <div id="rightContainer">
 
     <div id="queryContainer">
-        <input type="text" id="picker" placeholder="type to filter (usual operators work)"
+        <input type="text" id="picker" placeholder="type to filter"
             ng-model="query" ng-model-options="{ updateOn: 'change blur' }" auto-focus>
+        <span popover-trigger="mouseenter" popover-placement="bottom"
+            popover-template="'operators.html'" popover-append-to-body="'true'"><i>Operators</i></span>
     </div>
 
     <div id="tableContainer">
         <character-table></character-table>
     </div>
+
+    <script id="operators.html" type="text/ng-template">
+        <div>
+            Supported string operators:
+            <br>
+            <ul>
+                <li><tt>type:X</tt>: shows only units of type X (STR, DEX, QCK, ...)</li>
+                <li><tt>class:X</tt>: shows only units of class X (fighter, slasher, ...)</li>
+            </ul>
+            <br>
+            Supported mathematical operators:
+            <ul>
+                <li><tt>hp&gt;X</tt>: shows only units with max HP &gt; X</li>
+                <li><tt>atk&gt;X</tt>: shows only units with max ATK &gt; X</li>
+                <li><tt>cost&gt;X</tt>: shows only units with a cost higher than X</li>
+                <li><tt>stars&gt;X</tt>: shows only units with more than X stars</li>
+                <li><tt>id&gt;X</tt>: shows only units with ID greater than X</li>
+            </ul>
+            Mathematical operators also work with "<tt>&lt;</tt>", "<tt>&gt;=</tt>", "<tt>&lt;=</tt>" and "<tt>=</tt>".
+            <br><br>
+            Example query:
+            <br>
+            <tt>type:str class:fighter atk>1300 cost>20</tt>
+        </div>
+    </script>
 
 </div>

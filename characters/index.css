@@ -30,6 +30,21 @@ body {
 
 #queryContainer {
     padding: 10px;
+    display: table;
+    width: 100%;
+}
+
+#queryContainer > input {
+    display: table-cell;
+    width: 100%;
+}
+
+#queryContainer > span {
+    display: table-cell;
+    width: 1px;
+    cursor: help;
+    padding-left: 10px;
+    font-weight: bold;
 }
 
 #leftContainer, #rightContainer {
@@ -124,6 +139,17 @@ input {
 
 .filter-container:last-child {
     margin-bottom: 25px;
+}
+
+.popover {
+    width: 450px !important;
+    max-width: 450px;
+    left: initial !important;
+    right: 25px;
+}
+
+.popover > .arrow {
+    display: none;
 }
 
 /***********
