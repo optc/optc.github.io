@@ -1024,11 +1024,11 @@ window.captains = {
         atk: function(p) { return p.unit.type == "STR" ? 2.25 : 1; }
     },
     561: { // Portgas D. Ace, Black Clothes Hiken
-        atk: function(p) { return p.unit.class != "Shooter" ? 1 : (p.orb == 2.0 ? 3 : 2); },
+        atk: function(p) { return !p.unit.class.has("Shooter") ? 1 : (p.orb == 2.0 ? 3 : 2); },
         hp: function(p) { return p.unit.class.has("Shooter") ? 1.5 : 1; },
     },
     562: { // Portgas D. Ace, Black Clothes - Commander of the 2nd Division of the Whitebeard Pirates
-        atk: function(p) { return p.unit.class != "Shooter" ? 1 : (p.orb == 2.0 ? 3 : 2); },
+        atk: function(p) { return !p.unit.class.has("Shooter") ? 1 : (p.orb == 2.0 ? 3 : 2); },
         hp: function(p) { return p.unit.class.has("Shooter") ? 1.5 : 1; },
     },
     568: { // Foxy

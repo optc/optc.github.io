@@ -147,7 +147,9 @@ $.fn.dataTable.ext.search.push(function(settings, data, index) {
     }
     // filter by ranges
     for (var range in currentParameters.ranges) {
-        var stat = unit[range.toLowerCase()] || unit['max' + range.toUpperCase()];
+        var stat;
+        if (range == 'id') stat = unit.number + 1;
+        else stat = unit[range.toLowerCase()] || unit['max' + range.toUpperCase()];
         if (stat < currentParameters.ranges[range][0] || stat > currentParameters.ranges[range][1])
             return false;
     }
