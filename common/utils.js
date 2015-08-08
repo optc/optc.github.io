@@ -60,6 +60,9 @@ utils.isClickOnOrb = function(e,target) {
 
 /* * * * * Misc functions * * * * */
 
+/* given an array of arrays, generates the cartesian product of
+ * all the arrays contained within the root array
+ * eg f([[1],[2,3],[4,5,6]]) -> [[1,2,4],[1,2,5],[1,2,6],[1,3,4],[1,3,5],[1,3,6]] */
 utils.arrayProduct = function(data) {
     var result = data.reduce(function(prev,next) {
         if (next.length === 0) return prev;

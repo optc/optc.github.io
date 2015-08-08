@@ -126,7 +126,7 @@ window.specials = {
     },
     406: { // Zombie Shougun
         atk: function(p) { return 1.2; },
-        type: 'all'
+        type: 'type'
     },
     417: { // Donquixote Doflamingo
         orb: function(p) { return p.orb == 2.0 ? 2.0 : (p.orb == 0.5 ? 0.25 : 1); }
@@ -251,11 +251,11 @@ window.specials = {
     },
     517: { // Usoppun
         atk: function(p) { return 1.05; },
-        type: 'all'
+        type: 'type'
     },
     518: { // Usoppun, Heracles' Pupil
         atk: function(p) { return 1.05; },
-        type: 'all'
+        type: 'type'
     },
     519: { // Monkey D. Luffy, Merveille's Adventurer (Strong World/SW)
         atk: function(p) { return p.unit.type == "STR" ? 2 : 1; },
@@ -290,11 +290,11 @@ window.specials = {
     },
     549: { // Sadi-chan
         atk: function(p) { return p.defenseDown ? 1.3 : 1; },
-        type: 'all'
+        type: 'condition'
     },
     550: { // Sadi-chan, Impel Down's Chief Guard
         atk: function(p) { return p.defenseDown ? 1.3 : 1; },
-        type: 'all'
+        type: 'condition'
     },
     559: { // Franky, Merveille's Adventurer (Strong World/SW)
         orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); }
@@ -392,7 +392,7 @@ window.specials = {
     },
     637: { // Hatchan, Takoyaki Stand Owner
         atk: function(p) { return 1.3; },
-        type: 'all',
+        type: 'condition',
         warning: 'Selected special (Hatchan, Takoyaki Stand) assumes the enemy has a defense buff active.'
     },
     642: { // Squard
@@ -403,13 +403,13 @@ window.specials = {
     },
     644: { // Whitey Bay
         atk: function(p) { return 1.2; },
-        type: 'all',
+        type: 'condition',
         // TODO boost atk by 1.2 if the enemy is delayed
         warning: 'Selected special (Whitey Bay) assumes the enemy has been delayed.'
     },
     645: { // Ice Witch Whitey Bay
         atk: function(p) { return 1.2; },
-        type: 'all',
+        type: 'condition',
         warning: 'Selected special (Ice Witch Whitey Bay) assumes the enemy has been delayed.'
     },
     648: { // Marco, Whitebeard Pirates' 1st Division Commander
@@ -438,11 +438,11 @@ window.specials = {
     },
     665: { // Kohza, Alabasta Citizen
         atk: function(p) { return p.defenseDown ? 1.3 : 1; },
-        type: 'all'
+        type: 'condition'
     },
     666: { // Kohza, Leader of the Suna Suna Clan
         atk: function(p) { return p.defenseDown ? 1.3 : 1; },
-        type: 'all'
+        type: 'condition'
     },
     668: {
         atk: function(p) { return !p.unit.class.has('Freedom') ? 1 : window.specials[668].multiplier; },

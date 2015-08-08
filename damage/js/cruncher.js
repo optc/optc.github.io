@@ -28,16 +28,13 @@
  *                        SW Ace) use the multiplier as the activation condition for their captain effects.
  * - Special multipliers: Multiplier granted by specials, applied to the damage contribution of every unit affected
  *                        by the special itself. The multipliers can be class-based (eg Zephyr),
- *                        type-based (eg Impact Usopp) or orb-based (eg Coby). Type-based and class-based multipliers
- *                        can't stack with each other or with themselves, but they do stack with orb-based multipliers.
- *                        Class-based and type-based multipliers are provided in the `specials` file via the `atk`
- *                        property and must have a `type` property describing whether they are class-based or type-based.
+ *                        type-based (eg Impact Usopp), orb-based (eg Coby) or condition-based (eg Sadi-chan).
+ *                        Type-based and class-based multipliers can't stack with each other or with themselves, but they
+ *                        do stack with orb-based multipliers and condition-based multipliers. Likewise, condition-based
+ *                        multipliers can't stack with themselves but can stack with the other types.
+ *                        Non-orb multipliers are provided in the `specials` file via the `atk` property and must have a
+ *                        `type` property describing their exact type (type, class or condition).
  *                        Orb-based multipliers are provided in the `specials` file via the `orb` property.
- *                        There's actually a fourth type of multiplier (indicated by a `type` property with value
- *                        `all`) for specials whose effect and stacking model are not completely clear; it's tipically
- *                        used for specials that boost the whole party (eg Sadi-chan, Usoppun etc.). Right now
- *                        "all-based" multipliers stack with all the other multipliers and with themselves; this
- *                        might need to be modified.
  * - Type multiplier:     Multiplier applied to the damage contribution of each unit, depending on the type 
  *                        compatibility between the unit itself and the hypothetical enemy. For example, STR units get
  *                        a 2.0 type multiplier when calculating the damage on DEX enemies, a 0.5 multiplier for QCK
@@ -420,14 +417,15 @@ var CruncherCtrl = function($scope, $timeout) {
 
     /* Computes all the possible combinations of specials given the following conditions:
      * - Type-based and class-based are incompatible with each other and with themselves, but they stack with
-     *   orb-based multipliers and with "all-based" multipliers;
+     *   orb-based multipliers and with condition-based multipliers;
+     * - Condition-based multipliers are incompatible with themselves, but they stack with type-based, class-based
+     *   and orb-based multipliers;
      * - Orb-based multipliers are incompatible with themselves, but they stack with type-based OR class-based
-     *   multipliers and with "all-based" multipliers;
-     * - All-based multipliers stack with all the other multipliers and with themselves
+     *   multipliers and with condition-based multipliers;
      * The function should return true if there's a conflict between specials
      */
     var computeSpecialsCombinations = function() {
-        var result = { type: [ ], class: [ ], orb: [ ], all: [ ] };
+        var result = { type: [ ], class: [ ], orb: [ ], condition: [ ] };
         enabledSpecials.forEach(function(data) {
             if (data === null) return;
             if (data.hasOwnProperty('atk'))
@@ -435,12 +433,8 @@ var CruncherCtrl = function($scope, $timeout) {
             if (data.hasOwnProperty('orb'))
                 result.orb.push(data.orb);
         });
-        specialsCombinations = Utils.arrayProduct([ result.type.concat(result.class), result.orb ]);
-        if (result.all.length > 0 && specialsCombinations.length > 0)
-            specialsCombinations = specialsCombinations.map(function(x) { return x.concat(result.all); });
-        else if (result.all.length > 0)
-            specialsCombinations = [ result.all ];
-        return (result.class.length + result.type.length > 1) || result.orb.length > 1 || result.all.length > 1;
+        specialsCombinations = Utils.arrayProduct([ result.type.concat(result.class), result.condition, result.orb ]);
+        return (result.class.length + result.type.length > 1) || result.orb.length > 1 || result.condition.length > 1;
     };
 
     /* * * * * * Utility functions * * * * */
