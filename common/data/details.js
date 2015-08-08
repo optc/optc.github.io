@@ -1220,7 +1220,8 @@ var details = {
         evolvers: [ 117, 81, 87, 92, 103 ]
     },
     263: { // Petty Officer Coby
-        special: "Boosts orb effectiveness by 1.5x for 2 turns",
+        special: "Amplifies orb effects by 1.5x for 2 turns",
+        specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.5x more damage and opposite orbs will deal 1.5x less damage",
         captain: "Boosts ATK of Fighter characters by 2x",
         cooldown: [ 17, 10 ]
     },
@@ -1489,14 +1490,16 @@ var details = {
         cooldown: [ 25, 18 ]
     },
     323: { // Kaku
-        special: "Boosts orb effectiveness by 1.5x for 2 turns",
+        special: "Amplifies orb effects by 1.5x for 2 turns",
+        specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.5x more damage and opposite orbs will deal 1.5x less damage",
         captain: "Boosts HP and RCV of QCK characters by 1.5x",
         cooldown: [ 17, 10 ],
         evolution: 324,
         evolvers: [ 117, 90, 85, 96, 101 ]
     },
     324: { // Kaku Dock One Carpentry Specialist
-        special: "Boosts orb effectiveness by 1.5x for 2 turns",
+        special: "Amplifies orb effects by 1.5x for 2 turns",
+        specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.5x more damage and opposite orbs will deal 1.5x less damage",
         captain: "Boosts HP and RCV of QCK characters by 1.5x",
         cooldown: [ 17, 10 ]
     },
@@ -1857,14 +1860,16 @@ var details = {
         cooldown: [ 17, 8 ]
     },
     395: { // Miss Merry Christmas
-        special: "Empties neighboring slots, boosts orb effectiveness by 1.25x for 1 turn",
+        special: "Empties neighboring slots, amplifies orb effects by 1.25x for 1 turn",
+        specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.25x more damage and opposite orbs will deal 1.25x less damage",
         captain: "Boosts ATK and RCV of QCK characters by 1.2x",
         cooldown: [ 15, 8 ],
         evolution: 396,
         evolvers: [ 79, 85, 90, 301 ]
     },
     396: { // Miss Merry Christmas the Mole Human
-        special: "Empties neighboring slots, boosts orb effectiveness by 1.25x for 1 turn",
+        special: "Empties neighboring slots, amplifies orb effects by 1.25x for 1 turn",
+        specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.25x more damage and opposite orbs will deal 1.25x less damage",
         captain: "Boosts ATK and RCV of QCK characters by 1.2x",
         cooldown: [ 15, 8 ],
     },
@@ -1984,14 +1989,16 @@ var details = {
         cooldown: [ 17, 13 ]
     },
     417: { // Donquixote Doflamingo
-        special: "Freely switch orbs between slots twice, boosts orbs effectiveness by 2x for 1 turn",
+        special: "Freely switch orbs between slots twice, amplifies orb effects by 2x for 1 turn",
+        specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 2x more damage and opposite orbs will deal 2x less damage",
         captain: "Boosts ATK of Slasher characters by 2x",
         cooldown: [ 28, 14 ],
         evolution: 418,
         evolvers: [ 118, 83, 86, 302, 102 ]
     },
     418: { // Donquixote Doflamingo the Shichibukai
-        special: "Freely switch orbs between slots twice, boosts orbs effectiveness by 2x for 1 turn",
+        special: "Freely switch orbs between slots twice, amplifies orb effects by 2x for 1 turn",
+        specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 2x more damage and opposite orbs will deal 2x less damage",
         captain: "Boosts ATK and HP of Slasher characters by 2x",
         cooldown: [ 28, 14 ]
     },
@@ -2052,14 +2059,16 @@ var details = {
         cooldown: [ 20, 15 ]
     },
     430: { // Bellamy
-        special: "Boosts orbs effectiveness by 1.5x for 1 turn",
+        special: "Amplifies orb effects by 1.5x for 1 turn",
+        specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.5x more damage and opposite orbs will deal 1.5x less damage",
         captain: "Boosts ATK of DEX characters by 1.5x",
         cooldown: [ 14, 9 ],
         evolution: 431,
         evolvers: [ 116, 86, 91, 97 ]
     },
     431: { // Bellamy the Hyena
-        special: "Boosts orbs effectiveness by 1.5x for 1 turn",
+        special: "Amplifies orb effects by 1.5x for 1 turn",
+        specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.5x more damage and opposite orbs will deal 1.5x less damage",
         captain: "Boosts ATK and HP of DEX characters by 1.5x",
         cooldown: [ 14, 9 ]
     },
@@ -2073,7 +2082,8 @@ var details = {
         cooldown: [ 16, 6 ]
     },
     434: { // Caroline
-        special: "Boosts orbs effectiveness by 1.25x for 3 turns",
+        special: "Amplifies orb effects by 1.25x for 3 turns",
+        specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.25x more damage and opposite orbs will deal 1.25x less damage",
         captain: "Boosts ATK by 2x following a chain of PSY > INT > INT attacks no lower than Good",
         cooldown: [ 21, 11 ]
     },
@@ -2238,7 +2248,8 @@ var details = {
         cooldown: [ 20, 15 ]
     },
     465: { // Gedatsu
-        special: "Deals 20x character's ATK in QCK damage to one enemy, boosts orb effectiveness by 1.25x for 2 turns",
+        special: "Deals 20x character's ATK in QCK damage to one enemy, amplifies orb effects by 1.25x for 2 turns",
+        specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.25x more damage and opposite orbs will deal 1.25x less damage",
         captain: "Boosts ATK by 3x after scoring 4 hits no lower than Good in a row",
         cooldown: [ 25, 18 ]
     },
@@ -2626,14 +2637,16 @@ var details = {
         cooldown: [ 16, 16 ]
     },
     533: { // Brook Cherry Head
-        special: "Boosts orbs effectiveness by 1.5x for 1 turn, deals 20x character's ATK in QCK damage to one enemy",
+        special: "Amplifies orb effects by 1.5x for 1 turn, deals 20x character's ATK in QCK damage to one enemy",
+        specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.5x more damage and opposite orbs will deal 1.5x less damage",
         captain: "Boosts ATK of QCK characters by 2x",
         cooldown: [ 18, 18 ],
         evolution: 534,
         evolvers: [ 118, 79, 85, 96, 101 ]
     },
     534: { // Brook Sakura Color
-        special: "Boosts orbs effectiveness by 1.5x for 1 turn, deals 20x character's ATK in QCK damage to one enemy",
+        special: "Amplifies orb effects by 1.5x for 1 turn, deals 20x character's ATK in QCK damage to one enemy",
+        specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.5x more damage and opposite orbs will deal 1.5x less damage",
         captain: "Boosts ATK of QCK characters by 2x",
         cooldown: [ 18, 18 ]
     },
@@ -2772,14 +2785,16 @@ var details = {
         cooldown: [ 16, 10 ]
     },
     559: { // Franky, Merveille's Adventurer (Strong World/SW)
-        special: "Changes own orb into [STR], boosts orb effectiveness by 1.5x for 2 turns",
+        special: "Changes own orb into [STR], amplifies orb effects by 1.5x for 2 turns",
+        specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.5x more damage and opposite orbs will deal 1.5x less damage",
         captain: "Boosts ATK of STR characters by 2x, deals 2x character's ATK in STR damage to all enemies at the end of the turn",
         cooldown: [ 17, 11 ],
         evolution: 560,
         evolvers: [ 118, 83, 84, 300, 100 ]
     },
     560: { // Franky, Strawhat Crew's Attack (Strong World/SW)
-        special: "Changes own orb into [STR], boosts orb effectiveness by 1.5x for 2 turns",
+        special: "Changes own orb into [STR], amplifies orb effects by 1.5x for 2 turns",
+        specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.5x more damage and opposite orbs will deal 1.5x less damage",
         captain: "Boosts ATK of STR characters by 2.25x, deals 2x character's ATK in STR damage to all enemies at the end of the turn",
         cooldown: [ 17, 11 ]
     },
@@ -3192,14 +3207,16 @@ var details = {
         cooldown: 23
     },
     642: { // Squard
-        special: "Reduces current HP by 30%, deals 10x character's ATK in PSY damage to one enemy, boosts orb effectiveness by 1.75x for 1 turn",
+        special: "Reduces current HP by 30%, deals 10x character's ATK in PSY damage to one enemy, amplifies orb effects by 1.75x for 1 turn",
+        specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.75x more damage and opposite orbs will deal 1.75x less damage",
         captain: "Boosts ATK of PSY characters by 2.5x if HP is below 30% at the start of the turn",
         cooldown: 21,
         evolution: 643,
         evolvers: [ 118, 92, 94, 303, 103 ]
     },
     643: { // Maelstrom Spider Squard
-        special: "Reduces current HP by 30%, deals 10x character's ATK in PSY damage to one enemy, boosts orb effectiveness by 1.75x for 1 turn",
+        special: "Reduces current HP by 30%, deals 10x character's ATK in PSY damage to one enemy, amplifies orb effects by 1.75x for 1 turn",
+        specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.75x more damage and opposite orbs will deal 1.75x less damage",
         captain: "Boosts ATK of PSY characters by 3x if HP is below 30% at the start of the turn",
         cooldown: 21
     },
@@ -3228,26 +3245,28 @@ var details = {
         cooldown: 25
     },
     648: { // Marco, Whitebeard Pirates' 1st Division Commander
-        special: "Recovers 100x character's RCV in HP, boosts orb effectiveness by 1.5x for 2 turns",
+        special: "Recovers 100x character's RCV in HP, amplifies orb effects by 1.5x for 2 turns",
+        specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.5x more damage and opposite orbs will deal 1.5x less damage",
         captain: "Reduces damage received by 30% if HP is above 70% at the start of the turn, boosts ATK of QCK and PSY characters by 2.75x if HP is above 70% at the start the turn",
         cooldown: 25,
         evolution: 649,
         evolvers: [ 118, 85, 266, 301, 267 ]
     },
     649: { // Phoenix Marco, Whitebeard Pirates' 1st Division Commander
-        special: "Recovers 100x character's RCV in HP, boosts orb effectiveness by 1.5x for 2 turns",
+        special: "Recovers 100x character's RCV in HP, amplifies orb effects by 1.5x for 2 turns",
+        specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.5x more damage and opposite orbs will deal 1.5x less damage",
         captain: "Reduces damage received by 30% if HP is above 70% at the start of the turn, boosts ATK of QCK and PSY characters by 2.75x if HP is above 70% at the start the turn",
         cooldown: 25
     },
     650: { // Nami, Record of the Voyage - Strawhat Crew (Log Nami)
-        special: "Deals 5,000 damage to one enemy, boost orb effectiveness by 1.5x for 1 turn",
+        special: "Deals 5,000 damage to one enemy, amplifies orb effects by 1.5x for 1 turn",
         captain: "Boosts ATK of INT characters by 2x and their RCV by 1.5x",
         cooldown: 15,
         evolution: 651,
         evolvers: [ 117, 83, 88, 93, 104 ]
     },
     651: { // Nami, Dream of the Voyage - World Map (Log Nami)
-        special: "Deals 5,000 damage to one enemy, boost orb effectiveness by 1.5x for 1 turn",
+        special: "Deals 5,000 damage to one enemy, amplifies orb effects by 1.5x for 1 turn",
         captain: "Boosts ATK of INT characters by 2x and their RCV by 1.5x",
         cooldown: 15
     },
@@ -3271,14 +3290,16 @@ var details = {
         cooldown: [ 28, 14 ]
     },
     655: { // Pirate Arlong
-        special: "Changes empty slots and [TND] orbs into [STR] orbs, deals 10x character's ATK in STR damage to one enemy, boosts orb effectiveness by 1.25x for 2 turns",
+        special: "Changes empty slots and [TND] orbs into [STR] orbs, deals 10x character's ATK in STR damage to one enemy, amplifies orb effects by 1.25x for 2 turns",
+        specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.25x more damage and opposite orbs will deal 1.25x less damage",
         captain: "Boosts ATK of STR characters by 1.5x",
         cooldown: [ 24, 15 ],
         evolution: 656,
         evolvers: [ 117, 78, 84, 95, 100 ]
     },
     656: { // Arlong of the Sun Pirates
-        special: "Changes empty slots and [TND] orbs into [STR] orbs, deals 10x character's ATK in STR damage to one enemy, boosts orb effectiveness by 1.25x for 2 turns",
+        special: "Changes empty slots and [TND] orbs into [STR] orbs, deals 10x character's ATK in STR damage to one enemy, amplifies orb effects by 1.25x for 2 turns",
+        specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.25x more damage and opposite orbs will deal 1.25x less damage",
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of STR characters by 2x",
         cooldown: [ 24, 15 ]
     },

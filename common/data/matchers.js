@@ -145,7 +145,7 @@ var matchers = [
     {
         name: 'Orb boosters',
         target: 'special',
-        matcher: /orb.+effectiveness/i
+        matcher: /amplifies.+orb/i
     },
 
     {
