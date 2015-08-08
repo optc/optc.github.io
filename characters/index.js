@@ -131,6 +131,7 @@ var tableData = window.units.filter(function(x) { return x.name; }).map(function
         x.maxATK,
         x.maxRCV,
         x.combo,
+        x.cost,
         x.stars,
         x.number
     ];
@@ -277,6 +278,7 @@ app.directive('characterTable',function($rootScope, $compile) {
                     { title: 'ATK' },
                     { title: 'RCV' },
                     { title: 'CMB' },
+                    { title: 'Cost' },
                     { title: 'Stars' }
                 ],
                 rowCallback: function(row, data, index) {
