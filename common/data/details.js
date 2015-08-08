@@ -2857,7 +2857,7 @@ var details = {
         cooldown: [ 25, 14 ]
     },
     572: { // Usopp Davy Back Fight - Second
-        special: "Boosts ATK of Fighter characters by 2x for 1 turn, binds himself for 15 turn",
+        special: "Boosts ATK of Fighter characters by 2x for 1 turn, binds himself for 15 turns",
         captain: "Boosts ATK of Fighter characters by 2.5x if HP is above 99% at the start of the turn",
         cooldown: [ 30, 15 ]
     },
@@ -3260,6 +3260,7 @@ var details = {
     },
     650: { // Nami, Record of the Voyage - Strawhat Crew (Log Nami)
         special: "Deals 5,000 damage to one enemy, amplifies orb effects by 1.5x for 1 turn",
+        specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.5x more damage and opposite orbs will deal 1.5x less damage",
         captain: "Boosts ATK of INT characters by 2x and their RCV by 1.5x",
         cooldown: 15,
         evolution: 651,
@@ -3267,6 +3268,7 @@ var details = {
     },
     651: { // Nami, Dream of the Voyage - World Map (Log Nami)
         special: "Deals 5,000 damage to one enemy, amplifies orb effects by 1.5x for 1 turn",
+        specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.5x more damage and opposite orbs will deal 1.5x less damage",
         captain: "Boosts ATK of INT characters by 2x and their RCV by 1.5x",
         cooldown: 15
     },

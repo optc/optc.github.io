@@ -391,8 +391,9 @@ window.specials = {
         type: 'type'
     },
     637: { // Hatchan, Takoyaki Stand Owner
-        // TODO boost atk by 1.3 if the enemy has a defense buff
-        warning: 'Selected special (Hatchan, Takoyaki Stand) is not yet supported'
+        atk: function(p) { return 1.3; },
+        type: 'all',
+        warning: 'Selected special (Hatchan, Takoyaki Stand) assumes the enemy has a defense buff active.'
     },
     642: { // Squard
         orb: function(p) { return p.orb == 2.0 ? 1.75 : (p.orb == 0.5 ? 4/7 : 1); },
@@ -401,12 +402,15 @@ window.specials = {
         orb: function(p) { return p.orb == 2.0 ? 1.75 : (p.orb == 0.5 ? 4/7 : 1); },
     },
     644: { // Whitey Bay
+        atk: function(p) { return 1.2; },
+        type: 'all',
         // TODO boost atk by 1.2 if the enemy is delayed
-        warning: 'Selected special (Whitey Bay) is not yet supported'
+        warning: 'Selected special (Whitey Bay) assumes the enemy has been delayed.'
     },
     645: { // Ice Witch Whitey Bay
-        // TODO boost atk by 1.2 if the enemy is delayed
-        warning: 'Selected special (Ice Witch Whitey Bay) is not yet supported'
+        atk: function(p) { return 1.2; },
+        type: 'all',
+        warning: 'Selected special (Ice Witch Whitey Bay) assumes the enemy has been delayed.'
     },
     648: { // Marco, Whitebeard Pirates' 1st Division Commander
         orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); },

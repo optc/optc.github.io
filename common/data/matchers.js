@@ -115,7 +115,7 @@ var matchers = [
     {
         name: 'Class-boosting specials',
         target: 'special',
-        matcher: /Boosts.+ of (Slasher|Striker|Figher|Shooter)/i
+        matcher: /Boosts.+ of (Slasher|Striker|Fighter|Shooter)/i
     },
 
     {
