@@ -373,7 +373,6 @@ window.drops = {
 
         {
             name: 'Scissor Cavern, Intern',
-            day: 5,
             thumb: 303,
             ' ': [ 89, 90, 91, 92, 93, 95, 96, 97, 98, 99, 300, 301, 302, 303, 304 ]
         },
