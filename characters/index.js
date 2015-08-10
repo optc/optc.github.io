@@ -256,7 +256,7 @@ app.controller('DetailsCtrl',function($scope, $state, $stateParams) {
 
 app.directive('characterTable',function($rootScope, $compile) {
     var addImage = function(data, type, row, meta) {
-        var thumb = window.units[row[9]].incomplete ? '../common/res/missing.png' : Utils.getThumbnailUrl(row[0]-1);
+        var thumb = window.units[row[10]].incomplete ? '../common/res/missing.png' : Utils.getThumbnailUrl(row[0]-1);
         return '<img class="slot small" data-original="' + thumb + '"> ' +
             '<a ui-sref="main.view({ id: ' + parseInt(row[0],10) + '})">' + data + '</a>';
     };
@@ -283,6 +283,7 @@ app.directive('characterTable',function($rootScope, $compile) {
                 ],
                 rowCallback: function(row, data, index) {
                     if (row.hasAttribute('loaded')) return;
+                    if (window.units[data[10]].incomplete) $(row).addClass('incomplete');
                     $(row).find('[data-original]').each(function(n,x) {
                         x.setAttribute('src',x.getAttribute('data-original'));
                         x.removeAttribute('data-original');

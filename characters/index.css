@@ -217,6 +217,16 @@ input {
     float: right !important;
 }
 
+tr.incomplete td:nth-child(2):after {
+    content: "INCOMPLETE";
+    padding: 5px;
+    border-radius: 10px;
+    margin-left: 10px;
+    background: salmon;
+    font-size: 9px;
+    color: white;
+}
+
 /*********
  * POPUP *
  *********/

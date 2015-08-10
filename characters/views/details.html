@@ -13,6 +13,8 @@
 
                 <div ng-if="!unit.incomplete" class="slot huge" decorate-slot big="true" uid="unit.number"></div>
 
+                <div ng-if="unit.incomplete" class="alert alert-danger">This unit's complete information is still partially missing and will soon be added.</div>
+
                 <h3 class="page-header">Details</h3>
 
                 <div class="panel panel-default">
