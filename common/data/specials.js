@@ -404,7 +404,6 @@ window.specials = {
     644: { // Whitey Bay
         atk: function(p) { return 1.2; },
         type: 'condition',
-        // TODO boost atk by 1.2 if the enemy is delayed
         warning: 'Selected special (Whitey Bay) assumes the enemy has been delayed.'
     },
     645: { // Ice Witch Whitey Bay

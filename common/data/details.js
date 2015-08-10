@@ -1899,14 +1899,14 @@ var details = {
     },
     401: { // Mr. 1
         special: "Reduces damage received by 50% for 1 turn, boosts ATK of Slasher characters by 1.25x for 1 turn",
-        captain: "Reduces damage received by 10%, boosts ATK of Slasher characters by 1.5x, slightly reduces ATK of every other character",
+        captain: "Reduces damage received by 10%, boosts ATK of Slasher characters by 1.5x",
         cooldown: [ 18, 12 ],
         evolution: 402,
         evolvers: [ 78, 84, 89, 300 ]
     },
     402: { // Mr.1 the Fullbody Bladed Human
         special: "Reduces damage received by 50% for 1 turn, boosts ATK of Slasher characters by 1.25x for 1 turn",
-        captain: "Reduces damage received by 10%, boosts ATK of Slasher characters by 2x, reduces reduces ATK of every other character",
+        captain: "Reduces damage received by 10%, boosts ATK of Slasher characters by 2x",
         cooldown: [ 18, 12 ]
     },
     403: { // Rebecca
