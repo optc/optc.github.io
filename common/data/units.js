@@ -706,5 +706,6 @@ window.units = [
     [ "Three-Headed Baskerville", "DEX", "Slasher", 3, 13, 4, null, 70, null, null, null, null, null, null, null, 0 ],
     [ "Blueno, Cipher Pol No.9", "STR", "Fighter", 3, 12, 5, null, 50, null, null, null, null, null, null, null, 0 ],
     [ "Blueno Rokushiki, Cipher Pol No.9", "STR", "Fighter", 4, 20, 4, null, 99, null, 1281, 452, 100, null, null, null, 0 ],
-    [ "Nico Robin, the Devil Child", "PSY", "Fighter", 3, 10, 6, null, 50, null, 110, 63, 32, null, null, null, 0 ]
+    [ "Nico Robin, the Devil Child", "PSY", "Fighter", 3, 10, 6, null, 50, null, 110, 63, 32, null, null, null, 0 ],
+    [ "Nico Robin, Member of the Strawhat Pirates", "PSY", "Fighter", 4, 16, 5, null, 99, null, 938, 430, 155, null, null, null, 0 ]
 ];
