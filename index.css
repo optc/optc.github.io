@@ -27,6 +27,7 @@ body {
     display: inline-block;
     width: 100px;
     height: 100px;
+    margin-right: 15px;
 }
 
 @-moz-keyframes rotate {
@@ -103,6 +104,16 @@ a.blue:hover {
     font-weight: bold;
 }
 
+a.red {
+    background-color: lightsalmon;
+    color: white;
+}
+
+a.red:hover {
+    color: red;
+    font-weight: bold;
+}
+
 .round span.round {
     display: block;
     opacity: 0;
@@ -127,4 +138,8 @@ a.blue:hover {
 
 .green span {
     background: rgba(100,200,100,.7);
+}
+
+.red span {
+    background: rgba(200,100,100,.7);
 }
