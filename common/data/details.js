@@ -3444,6 +3444,7 @@ var details = {
     },
     681: {
         special: "Recovers 5x character's RCV in HP, boosts ATK and RCV of DEX characters by 1.25x for 2 turns",
+        captain: "Boosts ATK and RCV of Striker characters by 1.5x",
         cooldown: 20
     },
     682: {
