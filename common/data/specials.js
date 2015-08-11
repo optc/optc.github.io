@@ -474,5 +474,31 @@ window.specials = {
     },
     671: {
         atk: function(p) { return p.class.has("Fighter") ? 1.75 : 1; }
-    }
+    },
+    680: {
+        atk: function(p) { return p.unit.type == "DEX" ? 1.25 : 1; },
+        rcv: function(p) { return p.unit.type == "DEX" ? 1.25 : 1; }
+    },
+    681: {
+        atk: function(p) { return p.unit.type == "DEX" ? 1.25 : 1; },
+        rcv: function(p) { return p.unit.type == "DEX" ? 1.25 : 1; }
+    },
+    687: {
+        atk: function(p) { return p.unit.class.has("Freedom") ? 1.3 : 1; },
+        type: 'class'
+    },
+    688: {
+        atk: function(p) { return p.unit.class.has("Freedom") ? 1.3 : 1; },
+        type: 'class'
+    },
+    689: {
+        orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); },
+    },
+    690: {
+        orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); },
+    },
+    702: {
+        onActivation: function(p) { p.tdata.lock = Math.max(1,p.tdata.lock); },
+        onDeactivation: function(p) { if (p.tdata.lock == 1) p.tdata.lock = 0; }
+    },
 };

@@ -34,9 +34,9 @@ if (!localStorage.hasOwnProperty('version') || JSON.parse(localStorage.getItem('
 
 }
 
-if (JSON.parse(localStorage.getItem('version')) < 4) {
+if (JSON.parse(localStorage.getItem('version')) < 5) {
     localStorage.removeItem('data');
-    localStorage.setItem('version',4);
+    localStorage.setItem('version',5);
 }
 
 /* * * * * Controller * * * * */

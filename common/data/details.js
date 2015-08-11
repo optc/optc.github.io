@@ -3438,6 +3438,14 @@ var details = {
         captain: "Boosts ATK and RCV of PSY characters by 1.5x, boosts chances of getting [PSY] orbs",
         cooldown: 19
     },
+    680: {
+        special: "Recovers 5x character's RCV in HP, boosts ATK and RCV of DEX characters by 1.25x for 2 turns",
+        cooldown: 20
+    },
+    681: {
+        special: "Recovers 5x character's RCV in HP, boosts ATK and RCV of DEX characters by 1.25x for 2 turns",
+        cooldown: 20
+    },
     682: {
         special: "Recovers a fixed amount of HP, reduces damage received by 50% for 2 turns", // TODO Find out how much
         cooldown: 22,
@@ -3448,5 +3456,68 @@ var details = {
         special: "Recovers a fixed amount of HP, reduces damage received by 50% for 2 turns", // TODO Find out how much
         captain: "Boosts ATK and RCV of Fighter characters by 1.5x",
         cooldown: 22
+    },
+    687: {
+        special: "Deals 13x character's ATK in STR damage to all enemies, boosts ATK of Freedom characters by 1.3x for 1 turn",
+        captain: "Boosts ATK of Freedom characters by 1.5x",
+        cooldown: 19,
+        evolution: 688,
+        evolvers: [ 117, 78, 84, 95, 100 ]
+    },
+    688: {
+        special: "Deals 13x character's ATK in STR damage to all enemies, boosts ATK of Freedom characters by 1.3x for 1 turn",
+        captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of Freedom characters by 2x",
+        cooldown: 19
+    },
+    689: {
+        special: "Amplifies orb effects by 1.5x for 2 turns",
+        specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.5x more damage and opposite orbs will deal 1.5x less damage",
+        captain: "Boosts ATK and RCV of Slasher characters by 1.2x",
+        cooldown: 18,
+        evolution: 690,
+        evolvers: [ 117, 82, 88, 99, 104 ]
+    },
+    690: {
+        special: "Amplifies orb effects by 1.5x for 2 turns",
+        specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.5x more damage and opposite orbs will deal 1.5x less damage",
+        captain: "Boosts ATK and RCV of Slasher characters by 1.5x",
+        cooldown: 18
+    },
+    701: {
+        special: "Deals 15x character's ATK in PSY damage to all enemies, changes own orb into [PSY]",
+        captain: "Boosts HP of PSY characters by 2.25x",
+        cooldown: 25
+    },
+    702: {
+        special: "Seals himself for 5 turns, reduces damage received by 50% for 5 turns",
+        captain: "Boosts HP of INT characters by 2.25x",
+        cooldown: 25
+    },
+    705: {
+        special: "Changes [PSY], [INT], [TND] and [RCV] orbs into [STR], [DEX] or [QCK] orbs",
+        captain: "Boosts ATK and HP of STR characters, DEX characters and QCK characters by 1.25x",
+        cooldown: 20
+    },
+    706: {
+        special: "Changes own orb and the captain's orb into [STR]",
+        captain: "Boosts ATK of STR characters by 1.5x",
+        cooldown: 18,
+        //evolution: 707,
+        //evolvers: [ 117, 84, 89, 95, 100 ]
+    },
+    707: {
+        special: "Changes own orb and the captain's orb into [STR]",
+        captain: "Boosts ATK and HP of STR characters by 1.5x",
+        cooldown: 18
+    },
+    708: {
+        special: "Reduces Bind and Silence duration by 3 turns",
+        captain: "Boosts ATK and RCV of PSY characters by 1.2x",
+        cooldown: 21
+    },
+    709: {
+        special: "Reduces Bind and Silence duration by 3 turns",
+        captain: "Boosts ATK and RCV of PSY characters by 1.5x",
+        cooldown: 21
     }
 };

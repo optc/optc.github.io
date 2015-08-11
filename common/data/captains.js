@@ -1335,8 +1335,51 @@ window.captains = {
         atk: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; },
         rcv: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; }
     },
+    681: {
+        atk: function(p) { return p.unit.class.has("Striker") ? 1.5 : 1; },
+        rcv: function(p) { return p.unit.class.has("Striker") ? 1.5 : 1; }
+    },
     683: {
         atk: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; },
         rcv: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; }
+    },
+    687: {
+        atk: function(p) { return p.unit.class.has("Freedom") ? 1.5 : 1; }
+    },
+    688: {
+        atk: function(p) { return p.unit.class.has("Freedom") ? 2 : 1; }
+    },
+    689: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? 1.2 : 1; },
+        rcv: function(p) { return p.unit.class.has("Slasher") ? 1.2 : 1; }
+    },
+    690: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; },
+        rcv: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; }
+    },
+    701: {
+        hp: function(p) { return p.unit.type == "PSY" ? 2.25 : 1; }
+    },
+    702: {
+        hp: function(p) { return p.unit.type == "INT" ? 2.25 : 1; }
+    },
+    705: {
+        atk: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 1.25 : 1; },
+        hp: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 1.25 : 1; }
+    },
+    706: {
+        atk: function(p) { return p.unit.type == "STR" ? 1.5 : 1; }
+    },
+    707: {
+        atk: function(p) { return p.unit.type == "STR" ? 1.5 : 1; },
+        rcv: function(p) { return p.unit.type == "STR" ? 1.5 : 1; }
+    },
+    708: {
+        atk: function(p) { return p.unit.type == "PSY" ? 1.2 : 1; },
+        rcv: function(p) { return p.unit.type == "PSY" ? 1.2 : 1; }
+    },
+    709: {
+        atk: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; },
+        rcv: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; }
     }
 };

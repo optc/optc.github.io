@@ -25,7 +25,6 @@ window.ships = {
             return p.boatLevel < 6  ? 1.0 :
                    p.boatLevel < 10 ? 1.2 :
                                       1.5 ;
-                   
         }
     },
 
