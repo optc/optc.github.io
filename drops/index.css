@@ -1,0 +1,70 @@
+body {
+    padding: 50px 0 0 0;
+}
+
+#main {
+    width: 1000px;
+    margin: auto;
+}
+
+h2, h3 {
+    margin: 5px 0 5px 0;
+    padding-bottom: 2px;
+}
+
+h3 > div, td {
+    vertical-align: middle !important;
+}
+
+.island {
+    max-height: 50px;
+    transition: max-height 0.25s;
+    overflow: hidden;
+    margin-left: 25px;
+}
+
+.type {
+    transition: max-height 0.25s;
+    overflow: hidden;
+}
+
+.island:not(.expanded) > h3 {
+    border-bottom: 1px solid lightgray;
+}
+
+td:first-child {
+    width: 80px;
+    max-width: 80px;
+    white-space: nowrap;
+}
+
+[expandable].expanded > h3 > .fa-chevron-down,
+[expandable]:not(.expanded) > h3 > .fa-chevron-up,
+[collapsable].collapsed > h2 > .fa-chevron-up,
+[collapsable]:not(.collapsed) > h2 > .fa-chevron-down {
+    display: none;
+}
+
+[collapsable] > h2:hover > span, [expandable] > h3:hover > span {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/*******************
+ * SLOT THUMBNAILS *
+ *******************/
+
+.slot {
+    display: inline-block;
+}
+
+.slot:hover {
+    outline: 1px solid red;
+}
+
+.slot.small {
+    width: 40px;
+    height: 40px;
+    background-size: 40px 40px;
+    margin: 1px;
+}
