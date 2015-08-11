@@ -32,7 +32,7 @@ window.ships = {
         thumb: 'ship_0003_c.png',
         description: 'Boosts HP by 1.5x, boosts ATK of Shooter characters by 100 units',
         atkStatic: function(p) {
-            return p.unit.class != 'Shooter' ? 0 :
+            return !p.unit.class.has('Shooter') ? 0 :
                 [ 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 ][p.boatLevel -1];
         },
         hp: function(p) {
@@ -55,11 +55,11 @@ window.ships = {
         thumb: 'ship_0005_c.png',
         description: 'Boosts ATK and HP of Slasher characters by 1.5x, reduces captain\'s RCV by 700 units',
         atk: function(p) {
-            return p.unit.class != 'Slasher' ? 1 :
+            return !p.unit.class.has('Slasher') ? 1 :
                 [ 1.1, 1.1, 1.2, 1.2, 1.3, 1.3, 1.3, 1.4, 1.4, 1.5 ][p.boatLevel - 1];
         },
         hp: function(p) {
-            return p.unit.class != 'Slasher' ? 1 :
+            return !p.unit.class.has('Slasher') ? 1 :
                 [ 1.1, 1.1, 1.2, 1.2, 1.3, 1.3, 1.3, 1.4, 1.4, 1.5 ][p.boatLevel - 1];
         },
         rcvStatic: function(p) {
