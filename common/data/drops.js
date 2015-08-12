@@ -728,7 +728,7 @@ window.drops = {
 
     ],
 
-    Others: [
+    Other: [
 
         {
             name: 'Girls of Summer Paradise',

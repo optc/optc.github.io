@@ -690,7 +690,7 @@ window.units = [
     [ "Montblanc Noland", "INT", "Slasher", 3, 12, 5, 1, 50, 392109, 102, 74, 49, 1028, 502, 212, 1 ],
     [ "Montblanc Noland, Explorer and Admiral of the Lvneel Kingdom", "INT", "Slasher", 4, 20, 4, 2, 99, 3000000, 949, 442, 170, 1982, 890, 326, 1 ],
     [ "Halberd Corporal Navy Headquarters", "DEX", "Striker", 2, 7, 5, 0, 35, 90778, 70, 32, 21, 601, 301, 98, 0 ],
-    [ "Pistol Corporal Navy Headquarters", "QCK", "Shooter", 2, 7, 6, 0, 35, 90778, 58, 28, 28, 498, 286, 121, 0 ],
+    [ "Pistol Corporal Navy Headquarters", "QCK", "Shooter", 2, 7, 6, 0, 35, 90778, 58, 28, 28, 498, 286, 121, 1 ],
     [ "Saber Corporal Navy Headquarters", "PSY", "Slasher", 2, 7, 5, 0, 35, 90778, 51, 34, 22, 466, 330, 111, 0 ],
     [ "Bazooka Corporal Navy Headquarters", "STR", "Shooter", 2, 7, 4, 0, 35, 90778, 62, 50, 14, 598, 404, 64, 0 ],
     [ "Knuckle Corporal Navy Headquarters", "INT", "Fighter", 2, 7, 6, 0, 35, 90778, 55, 48, 22, 522, 392, 82, 0 ],
