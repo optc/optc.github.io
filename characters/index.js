@@ -84,9 +84,10 @@ var searchDropLocations = function(id) {
             for (var stage in drops[type][island]) {
                 if (stage == 'thumb' || stage == 'name' || stage == 'day') continue;
                 if (drops[type][island][stage].indexOf(id) != -1)
-                    temp.push(type == 'Story Island' ? 'Stage ' + stage : stage);
+                    temp.push(stage);
             }
             if (temp.length > 0) {
+                temp.sort();
                 var name = drops[type][island].name;
                 if (type == 'Fortnight') name += ' Fortnight';
                 else if (type == 'Raid') name += ' Raid';
