@@ -46,14 +46,18 @@ app.directive('collapsable',function() {
     return {
         restrict: 'A',
         link: function(scope, element, attrs) {
-            element.find('> h3, > h2').click(function(e) {
-                if (e.which != 1) return;
+            var update = function() {
                 element.toggleClass('collapsed');
                 if (element.hasClass('collapsed'))
                     element[0].style.maxHeight = (10 + element.find('> h2').outerHeight()) + 'px';
                 else
                     element[0].style.maxHeight = null;
+            };
+            element.find('> h3, > h2').click(function(e) {
+                if (e.which != 1) return;
+                update();
             });
+            update();
         }
     };
 });
