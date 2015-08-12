@@ -398,8 +398,7 @@ window.drops = {
             name: 'Scissor Cavern, Intern',
             thumb: 303,
             ' ': [ 89, 90, 91, 92, 93, 95, 96, 97, 98, 99, 300, 301, 302, 303, 304 ]
-        },
-
+        }
     ],
 
     Fortnight: [
@@ -711,7 +710,7 @@ window.drops = {
 
         {
             name: 'Chopperman Special',
-            thumb: 241,
+            thumb: 246,
             '': [ 247 ]
         },
 
@@ -725,15 +724,18 @@ window.drops = {
             name: 'Oars Special',
             thumb: 413,
             'Master': [ -367, -316, -314, -312, -308, -259, -257, -255, -253, -251, -221, -218, -217, -210, -75, -30, -16, -15, -8 ]
-        },
+        }
+
+    ],
+
+    Others: [
 
         {
             name: 'Girls of Summer Paradise',
             thumb: 682,
             Expert: [ 659, 680, 682 ]
         }
-
-    ]
+   ]
 
 };
 
