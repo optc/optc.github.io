@@ -110,7 +110,7 @@ var details = {
         evolvers: [ [ 115, 79 ], [ 116, 79, 96 ] ]
     },
     18: { // Sanji Plastic Surgery Shot
-        special: "Reduces all enemies 'defense by 50% for 2 turns",
+        special: "Reduces the defense of all enemies by 50% for 2 turns",
         captain: "Boosts HP of QCK characters by 1.5x",
         cooldown: 15,
         evolution: 20,
@@ -1941,14 +1941,14 @@ var details = {
         cooldown: [ 23, 18 ]
     },
     409: { // Jinbei
-        special: "Changes own orb into [QCK] deals 13x character's ATK in QCK damage to one enemy",
+        special: "Changes own orb into [QCK], deals 13x character's ATK in QCK damage to one enemy",
         captain: "Boosts ATK of Fighter characters by 2x",
         cooldown: [ 11, 6 ],
         evolution: 410,
         evolvers: [ 118, 85, 94, 301, 101 ]
     },
     410: { // Jinbei the Shichibukai
-        special: "Changes own orb into [QCK] deals 13x character's ATK in QCK damage to one enemy",
+        special: "Changes own orb into [QCK], deals 13x character's ATK in QCK damage to one enemy",
         captain: "Boosts ATK of Fighter characters by 2.5x",
         cooldown: [ 11, 6 ]
     },
@@ -2745,7 +2745,7 @@ var details = {
         cooldown: [ 45, 15 ]
     },
     552: { // Manticore
-        special: "Reduces all enemies' defense by 100% for 1 turn",
+        special: "Reduces the defense of all enemies by 100% for 1 turn",
         cooldown: [ 33, 18 ]
     },
     553: { // Roronoa Zoro, Merveille's Adventurer (Strong World/SW)
@@ -3321,14 +3321,14 @@ var details = {
         cooldown: 20
     },
     660: {
-        special: "Delays all enemies for 2 turns, reduces all enemies' defense by 50% for 2 turns",
+        special: "Delays all enemies for 2 turns, reduces the defense of all enemies by 50% for 2 turns",
         captain: "Boosts ATK of Shooter characters by 2x",
         cooldown: 13,
         evolution: 661,
         evolvers: [ 117, 85, 94, 96, 101 ]
     },
     661: {
-        special: "Delays all enemies for 2 turns, reduces all enemies' defense by 50% for 2 turns",
+        special: "Delays all enemies for 2 turns, reduces the defense of all enemies by 50% for 2 turns",
         captain: "Boosts ATK of Shooter characters by 2x, reduces cooldown of all specials by 1 turn at the start of the fight",
         cooldown: 13
     },
@@ -3484,18 +3484,81 @@ var details = {
         captain: "Boosts ATK and RCV of Slasher characters by 1.5x",
         cooldown: 18
     },
+    691: {
+        special: "Changes [PSY] orbs into [DEX] orbs",
+        // TODO add cooldown
+        evolution: 696,
+        evolvers: [ 116, 97, 302 ]
+    },
+    692: {
+        special: "Changes [PSY] orbs into [QCK] orbs",
+        // TODO add cooldown
+        evolution: 697,
+        evolvers: [ 116, 96, 301 ]
+    },
+    693: {
+        special: "Changes [DEX] orbs into [PSY] orbs",
+        // TODO add cooldown
+        evolution: 698,
+        evolvers: [ 116, 98, 303 ]
+    },
+    694: {
+        special: "Deals 13x character's ATK in STR damage to all enemies",
+        // TODO add cooldown
+        evolution: 699,
+        evolvers: [ 116, 95, 300 ]
+    },
+    695: {
+        special: "Cuts all enemies' current HP by 5%",
+        // TODO add cooldown
+        evolution: 700,
+        evolvers: [ 116, 99, 304 ]
+    },
+    696: {
+        special: "Changes [PSY] orbs into [DEX] orbs",
+        captain: "Boosts ATK of Striker characters by 1.75x",
+        // TODO add cooldown
+    },
+    697: {
+        special: "Changes [PSY] orbs into [QCK] orbs",
+        captain: "Boosts ATK of Shooter characters by 1.75x",
+        // TODO add cooldown
+    },
+    698: {
+        special: "Changes [DEX] orbs into [PSY] orbs",
+        captain: "Boosts ATK of Slasher characters by 1.75x",
+        // TODO add cooldown
+    },
+    699: {
+        special: "Deals 13x character's ATK in STR damage to all enemies",
+        captain: "Boosts ATK of Shooter characters by 500 units, reduces damage received by 10%",
+        // TODO add cooldown
+    },
+    700: {
+        special: "Cuts all enemies' current HP by 5%",
+        captain: "Boosts ATK of Fighter characters by 1.75x",
+        // TODO add cooldown
+    },
     701: {
         special: "Deals 15x character's ATK in PSY damage to all enemies, changes own orb into [PSY]",
         captain: "Boosts HP of PSY characters by 2.25x",
         cooldown: 25
     },
     702: {
-        special: "Seals himself for 5 turns, reduces damage received by 50% for 5 turns",
+        special: "Seals himself for 5 turns, reduces damage received by 30% for 5 turns",
         captain: "Boosts HP of INT characters by 2.25x",
         cooldown: 25
     },
+    703: {
+        special: "Deals 5x character's ATK in QCK damage to all enemies",
+        // TODO add cooldown
+    },
+    704: {
+        special: "Deals 9x character's ATK in STR damage to all enemies, reduces the defense of all enemies by 50% for 1 turn",
+        // TODO add cooldown
+    },
     705: {
-        special: "Changes [PSY], [INT], [TND] and [RCV] orbs into [STR], [DEX] or [QCK] orbs",
+        special: "Changes [PSY], [INT], [TND], [RCV] and empty orbs into [STR], [DEX] or [QCK] orbs",
         captain: "Boosts ATK and HP of STR characters, DEX characters and QCK characters by 1.25x",
         cooldown: 20
     },
@@ -3503,8 +3566,8 @@ var details = {
         special: "Changes own orb and the captain's orb into [STR]",
         captain: "Boosts ATK of STR characters by 1.5x",
         cooldown: 18,
-        //evolution: 707,
-        //evolvers: [ 117, 84, 89, 95, 100 ]
+        evolution: 707,
+        evolvers: [ 117, 84, 89, 95, 100 ]
     },
     707: {
         special: "Changes own orb and the captain's orb into [STR]",
@@ -3514,7 +3577,9 @@ var details = {
     708: {
         special: "Reduces Bind and Silence duration by 3 turns",
         captain: "Boosts ATK and RCV of PSY characters by 1.2x",
-        cooldown: 21
+        cooldown: 21,
+        evolution: 709,
+        evolvers: [ 117, 81, 87, 303, 103 ]
     },
     709: {
         special: "Reduces Bind and Silence duration by 3 turns",

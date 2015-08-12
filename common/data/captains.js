@@ -1357,6 +1357,22 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; },
         rcv: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; }
     },
+    696: {
+        atk: function(p) { return p.unit.class.has("Striker") ? 1.75 : 1; }
+    },
+    697: {
+        atk: function(p) { return p.unit.class.has("Shooter") ? 1.75 : 1; }
+    },
+    698: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? 1.75 : 1; }
+    },
+    699: {
+        atkStatic: function(p) { return p.unit.class.has("Shooter") ? 500 : 0; }, // TODO Implement me
+        warning: "Selected captain effect (Bazooka Major Navy Headquarters) has not yet been implemented."
+    },
+    700: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? 1.75 : 1; }
+    },
     701: {
         hp: function(p) { return p.unit.type == "PSY" ? 2.25 : 1; }
     },

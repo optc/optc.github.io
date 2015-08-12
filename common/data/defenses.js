@@ -103,6 +103,9 @@ window.defenses = [
     [ 'Young Vivi (last round)'        , 'Fortnight' , 'Expert'   , 663 , 1100   ] ,
     [ 'Young Kohza (last round)'       , 'Fortnight' , 'Expert'   , 664 , 50     ] ,
         // [ 'Cobra'                          , 'Fortnight' , 'Expert'   , 666 , ?      ] ,
+    [ 'Noland (mid-boss)'              , 'Fortnight' , 'Expert'   , 688 , 300    ] ,
+    [ 'Calgara (mid-boss)'             , 'Fortnight' , 'Expert'   , 687 , 300    ] ,
+    [ 'Noland (last round)'            , 'Fortnight' , 'Expert'   , 689 , 350    ] ,
     /* * * * * Others * * * * */
     [ 'Jozu (Whitebeard\'s island)'    , 'Special'   , ''         , 252 , 120000 ] ,
     // Turtles
