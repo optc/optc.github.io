@@ -143,7 +143,7 @@ var CruncherCtrl = function($scope, $timeout) {
      * - Base ATK
      * - Type multipliers
      * - Orb multipliers
-     * - Static (ie, non-positional) captain effect multipliers
+     * - Static (ie, non-positional) captain effect multipliers and bonuses
      * - Ship bonus
      * Returns a sorted array of objects detailing the base damage of each
      * unit in the team, sorted from weakest to strongest.
@@ -162,10 +162,12 @@ var CruncherCtrl = function($scope, $timeout) {
             atk *= getProfileBonus('atk',x.unit); // profile bonus (fixed)
             result.push({ unit: x, orb: orb, damage: Math.floor(atk) * ship, position: n });
         });
-        // apply static multipliers
+        // apply static multipliers and static bonuses
         for (var i=0;i<enabledEffects.length;++i) {
-            if (!enabledEffects[i].hasOwnProperty('atk')) continue;
-            result = applyCaptainEffectsToDamage(result,enabledEffects[i].atk);
+            if (enabledEffects[i].hasOwnProperty('atkStatic'))
+                result = applyCaptainEffectsToDamage(result,enabledEffects[i].atkStatic,null,true);
+            if (enabledEffects[i].hasOwnProperty('atk'))
+                result = applyCaptainEffectsToDamage(result,enabledEffects[i].atk);
         }
         // sort from weakest to stongest
         result.sort(function(x,y) { return x.damage - y.damage; });
@@ -307,10 +309,10 @@ var CruncherCtrl = function($scope, $timeout) {
 
     /* * * * * Captain effects/specials * * * * */
 
-    var applyCaptainEffectsToDamage = function(damage,func,modifiers) {
+    var applyCaptainEffectsToDamage = function(damage,func,modifiers,isStatic) {
         return damage.map(function(x,n) {
             var params = $.extend({ chainPosition: n, damage: damage, modifiers: modifiers },getParameters(x.position));
-            var newDamage = x.damage * func(params);
+            var newDamage = (isStatic ? x.damage + func(params) : x.damage * func(params));
             return { unit: x.unit, orb: x.orb, damage: newDamage, position: x.position };
         });
     };
