@@ -421,7 +421,7 @@ var details = {
         evolution: 75,
         evolvers: [ 118, 83, 85, 85, 101 ]
     },
-    75: { // Portgas D. Ace
+    75: { // Portgas D. Ace Flame Mirror
         special: "Deals 15x character's ATK in QCK to all enemies",
         captain: "Boosts ATK of QCK characters by 2.5x",
         cooldown: [ 25, 20 ]
@@ -433,7 +433,7 @@ var details = {
         evolution: 77,
         evolvers: [ 118, 83, 87, 98, 103 ]
     },
-    77: { // Shanks
+    77: { // Red-Haired Shanks
         special: "Deals 15x character's ATK in PSY damage to all enemies",
         captain: "Boosts ATK of PSY characters by 2.5x",
         cooldown: [ 25, 20 ]
@@ -452,7 +452,7 @@ var details = {
     89: {}, // Red Hermit Crab
     90: {}, // Blue Hermit Crab
     91: {}, // Green Hermit Crab
-    92: {}, // Green Hermit Crab
+    92: {}, // Yellow Hermit Crab
     93: {}, // Black Hermit Crab
     94: {}, // Rainbow Hermit Crab
     95: {}, // Red Armored Crab
@@ -468,7 +468,7 @@ var details = {
     105: {}, // Red Treasure Turtle
     106: {}, // Blue Treasure Turtle
     107: {}, // Green Treasure Turtle
-    108: {}, // Green Treasure Turtle
+    108: {}, // Yellow Treasure Turtle
     109: {}, // Black Treasure Turtle
     110: {}, // Red Daimyo Turtle
     111: {}, // Blue Daimyo Turtle
@@ -495,7 +495,7 @@ var details = {
         evolution: 143,
         evolvers: [ 90 ]
     },
-    123: { // Fighter Group Cabin Boy Blue Pirates
+    123: { // Fighter Group Cabin Boy Green Pirates
         special: "Changes [STR] orbs into [DEX] orbs",
         cooldown: [ 15, 7 ],
         evolution: 144,
@@ -721,7 +721,7 @@ var details = {
         evolution: 289,
         evolvers: [ 104 ]
     },
-    163: { // Bodyguard, ‘Sunglasses’
+    163: { // Bodyguard, ‘Sunglasses'
         special: "Changes [DEX] orbs into [TND] orbs"
     },
     164: { // Bearded Bodyguard
@@ -946,7 +946,7 @@ var details = {
         evolution: 214,
         evolvers: [ 117, 78, 95, 100 ]
     },
-    214: { // Laboon (Luffy’s drawing)
+    214: { // Laboon (Luffy's drawing)
         special: "Deals 20x character's ATK in STR damage to all enemies",
         captain: "Prevents death as long as HP is above 50%",
         cooldown: [ 20, 15 ]
@@ -975,7 +975,7 @@ var details = {
         evolution: 219,
         evolvers: [ 118, 86, 102, 94, 91 ]
     },
-    219: { // Roronoa Zoro Lion’s Song
+    219: { // Roronoa Zoro Lion's Song
         special: "Deals 25x character's ATK in DEX damage to one enemy",
         captain: "Reduces damage received by 80% if HP is above 99% at the start of the turn",
         cooldown: [ 25, 18 ]
@@ -1566,7 +1566,7 @@ var details = {
         evolution: 337,
         evolvers: [ 117, 81, 87, 98, 103 ]
     },
-    337: { // Wrecking Yard Franky
+    337: { // Dismantler Franky
         special: "Freely switch orbs between slots twice",
         captain: "Reduces damage received by 10% if HP is above 50% at the start of the turn, boosts ATK of PSY characters by 2.5x and reduces ATK of every other character by 20% if HP is above 50% at the start of the turn",
         cooldown: [ 14, 6 ]
@@ -1880,7 +1880,7 @@ var details = {
         evolution: 398,
         evolvers: [ 78, 84, 89, 300 ]
     },
-    398: { // Mr.4 & Lassoo the Dog Gun
+    398: { // Mr. 4 & Lassoo the Dog Gun
         special: "Fills empty slots with [STR] orbs with a 50% probability, deals 15x character's ATK in damage to all enemies",
         captain: "Boosts ATK by 4x after scoring 5 Perfects in a row",
         cooldown: [ 25, 20 ]
@@ -1904,7 +1904,7 @@ var details = {
         evolution: 402,
         evolvers: [ 78, 84, 89, 300 ]
     },
-    402: { // Mr.1 the Fullbody Bladed Human
+    402: { // Mr. 1 the Fullbody Bladed Human
         special: "Reduces damage received by 50% for 1 turn, boosts ATK of Slasher characters by 1.25x for 1 turn",
         captain: "Reduces damage received by 10%, boosts ATK of Slasher characters by 2x",
         cooldown: [ 18, 12 ]
@@ -2220,19 +2220,19 @@ var details = {
         captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of characters with cost 20 or less by 3x",
         cooldown: [ 28, 19 ]
     },
-    460: { // Criminal Galdino Mr.3
+    460: { // Criminal Galdino Mr. 3
         special: "Heals 33 HP after the end of each turn for 999 turns, delays all enemies for 1 turn",
         captain: "Reduces damage received by 10%",
         cooldown: [ 14, 10 ]
     },
-    461: { // Fugitive Bentham Mr.2 Bon Clay
+    461: { // Fugitive Bentham Mr. 2 Bon Clay
         special: "Changes own orb into [DEX], randomizes every other orb, boosts ATK of Fighter characters by 1.25x for 2 turns",
         captain: "Boosts ATK of Fighter characters by 2x",
         cooldown: [ 25, 15 ],
         evolution: 462,
         evolvers: [ 117, 80, 86, 97, 102 ]
     },
-    462: { // Prison Break Expert Mr.2 Bon Clay
+    462: { // Prison Break Expert Mr. 2 Bon Clay
         special: "Changes own orb into [DEX], randomizes every other orb, boosts ATK of Fighter characters by 1.25x for 2 turns",
         captain: "Boosts ATK of Fighter characters by 2x",
         cooldown: [ 25, 15 ]
@@ -2414,14 +2414,14 @@ var details = {
         captain: "Boosts ATK of Shooter characters by 1.5x",
         cooldown: [ 20, 15 ]
     },
-    497: { // Portgas D. Ace of the 3 Terrible Brothers of Colubo Mountain
+    497: { // Portgas D. Ace Mt. Corvo's Brothers 3
         special: "Reduces Bind duration by 4 turns, deals 3x character's ATK in QCK damage to one enemy",
         captain: "Boosts ATK of QCK characters by 1.5x",
         cooldown: [ 11, 11 ],
         evolution: 498,
         evolvers: [ 90, 94, 96, 301, 101 ]
     },
-    498: { // Portgas D. Ace of the 3 Terrible Brothers of Colubo Mountain - Brother Oath
+    498: { // Portgas D. Ace Mt. Corvo's Brothers 3, Cup of Sworn Brotherhood
         special: "Reduces Bind duration by 4 turns, deals 3x character's ATK in QCK damage to one enemy",
         captain: "Boosts ATK of QCK characters by 1.5x",
         cooldown: [ 11, 11 ]
@@ -2486,31 +2486,31 @@ var details = {
         captain: "Boosts ATK and HP of STR characters by 1.5x",
         cooldown: [ 25, 18 ]
     },
-    509: { // The Strongest Prisoner Sir. Crocodile Mr.0, Former Leader of Baroque Works
+    509: { // The Strongest Prisoner, Sir Crocodile Mr. 0, Former CEO of Baroque Works
         special: "Poisons all enemies, boosts ATK of Striker characters by 1.5x for 1 turn",
         captain: "Boosts ATK of Striker characters by 1.5x",
         cooldown: [ 24, 14 ],
         evolution: 510,
         evolvers: [ 117, 85, 96, 96, 301 ]
     },
-    510: { // The Strongest Prisoner Sir. Crocodile the Shichibukai
+    510: { // The Strongest Prisoner, Sir Crocodile the Shichibukai
         special: "Poisons all enemies, boosts ATK of Striker characters by 1.5x for 1 turn",
         captain: "Reduces damage received by 10%, boosts ATK of Striker characters by 2x",
         cooldown: [ 24, 14 ]
     },
-    511: { // Prisoner Daz Bonez Mr.1
+    511: { // Prisoner Daz Bonez Mr. 1
         special: "Reduces damage received by 30% for 2 turns, boosts ATK of Slasher character by 1.25x for 2 turns",
         captain: "Boosts ATK of Slasher characters by 2x",
         cooldown: [ 22, 17 ]
     },
-    512: { // Sabo of the 3 Terrible Brothers of Colubo Mountain
+    512: { // Sabo Mt. Corvo's Brothers 3
         special: "Boosts chances of getting [PSY] orbs and reduces chances of getting [INT] orbs for 3 turns",
         captain: "Prevents death as long as HP is above 50%",
         cooldown: [ 15, 15 ],
         evolution: 513,
         evolvers: [ 115, 116, 117, 118, 81 ]
     },
-    513: { // Sabo of the 3 Terrible Brothers of Colubo Mountain - Brother Oath
+    513: { // Sabo Mt. Corvo's Brothers 3, Cup of Sworn Brotherhood
         special: "Boosts chances of getting [PSY] orbs and reduces chances of getting [INT] orbs for 3 turns",
         captain: "Prevents death as long as HP is above 50%, boosts ATK of PSY characters by 1.5x if HP is above 50% at the start of the turn",
         cooldown: [ 15, 15 ]
@@ -2716,14 +2716,14 @@ var details = {
         captain: "Boosts ATK of PSY characters by 2x, reduces damage received by 20%",
         cooldown: [ 32, 17 ]
     },
-    547: { // Monkey D. Luffy of the 3 Terrible Brothers of Colubo Mountain
+    547: { // Monkey D. Luffy Mt. Corvo's Brothers 3
         special: "Reduces current HP by 10%, deals 1x character's ATK in STR damage to one enemy, prevents death as long as HP is above 50% for 1 turn",
         captain: "Boosts chances of getting [RCV] orbs",
         cooldown: [ 18, 18 ],
         evolution: 548,
         evolvers: [ 118, 78, 78, 84, 84 ]
     },
-    548: { // Monkey D. Luffy of the 3 Terrible Brothers of Colubo Mountain - Brother Oath
+    548: { // Monkey D. Luffy Mt. Corvo's Brothers 3, Cup of Sworn Brotherhood
         special: "Reduces current HP by 10%, deals 1x character's ATK in STR damage to one enemy, prevents death as long as HP is above 50% for 1 turn",
         captain: "Boosts chances of getting [RCV] orbs, boosts ATK by 1.2x",
         cooldown: [ 18, 18 ]
@@ -2966,7 +2966,7 @@ var details = {
     591: {},
     592: {},
     593: {},
-    594: {},
+    594: {}, // Yellow Turtle Princess
     595: {}, // Black Turtle Princess
     596: { // Tony Tony Chopper, Record of the Voyage - Strawhat Crew (Log Chopper)
         special: "Deals 20x character's ATK in STR damage to one enemy, reduces the defense of one enemy by 50% for 3 turns",
@@ -3320,14 +3320,14 @@ var details = {
         captain: "Boosts ATK by 2.5x after scoring 3 Perfects in a row",
         cooldown: 20
     },
-    660: {
+    660: { // Usopp, Record of the Voyage - Strawhat Crew (Log Usopp)
         special: "Delays all enemies for 2 turns, reduces the defense of all enemies by 50% for 2 turns",
         captain: "Boosts ATK of Shooter characters by 2x",
         cooldown: 13,
         evolution: 661,
         evolvers: [ 117, 85, 94, 96, 101 ]
     },
-    661: {
+    661: { // Usopp, Dream of the Voyage - Brave Warrior of the Sea (Log Usopp)
         special: "Delays all enemies for 2 turns, reduces the defense of all enemies by 50% for 2 turns",
         captain: "Boosts ATK of Shooter characters by 2x, reduces cooldown of all specials by 1 turn at the start of the fight",
         cooldown: 13
@@ -3364,7 +3364,7 @@ var details = {
         captain: "Reduces damage received by 10%, boosts ATK by 1.5x",
         cooldown: [ 28, 15 ]
     },
-    668: {
+    668: { // Sabo
         special: "Boosts ATK of Freedom characters by 1.5x for 1 turn. If during that turn every unit scores a Perfect hit, boosts ATK of Freedom characters by 2x in the following turn.",
         captain: "Boosts HP and RCV by 1.2x, greatly boosts ATK of Freedom characters",
         captainNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the higher the HP is. The multiplier is calculated as 2 + 0.75 * (remaining HP) / (total HP). At full health the boost is equal to 2.75x",
@@ -3372,49 +3372,49 @@ var details = {
         evolution: 669,
         evolvers: [ 118, 87, 266, 303, 267 ]
     },
-    669: {
+    669: { // Sabo, Member of the Revolutionary Army
         special: "Boosts ATK of Freedom characters by 1.5x for 1 turn. If during that turn every unit scores a Perfect hit, boosts ATK of Freedom characters by 2x in the following turn.",
         captain: "Boosts HP and RCV by 1.2x, greatly boosts ATK of Freedom characters",
         captainNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the higher the HP is. The multiplier is calculated as 2 + 0.75 * (remaining HP) / (total HP). At full health the boost is equal to 2.75x",
         cooldown: 21
     },
-    670: {
+    670: { // Koala
         special: "Boosts ATK of Fighter characters by 1.75x for 1 turn",
         captain: "Boosts ATK of Fighter characters by 2x",
         cooldown: 15,
         evolution: 671,
         evolvers: [ 118, 83, 86, 302, 102 ]
     },
-    671: {
+    671: { // Koala, Member of the Revolutionary Army
         special: "Boosts ATK of Fighter characters by 1.75x for 1 turn",
         captain: "Boosts ATK of Fighter characters by 2.25x and their RCV by 1.5x",
         cooldown: 15
     },
-    672: {
+    672: { // Hack
         special: "Cuts all enemies' current HP by 20%, changes own orb into [STR]",
         captain: "Boosts ATK of Fighter characters by 2x",
         cooldown: 20,
         evolution: 673,
         evolvers: [ 118, 84, 94, 300, 100 ]
     },
-    673: {
+    673: { // Hack, Member of the Revolutionary Army
         special: "Cuts all enemies' current HP by 20%, changes own orb into [STR]",
         captain: "Reduces cooldown of all specials by 3 turns at the start of the fight, boosts ATK of Fighter characters by 2x",
         cooldown: 20
     },
-    674: {
+    674: { // Emporio Ivankov, Newkama Kenpo Instructor
         special: "Removes poison, reduces damage received by 50% for 2 turns, recovers 13x character's RCV in HP at the end of the turn for 2 turns",
         captain: "Boosts ATK of Freedom characters by 2x",
         cooldown: 21,
         evolution: 674,
         evolvers: [ 118, 83, 88, 304, 104 ]
     },
-    675: {
+    675: { // Emporio Ivankov, Member of the Revolutionary Army
         special: "Removes poison, reduces damage received by 50% for 2 turns, recovers 13x character's RCV in HP at the end of the turn for 2 turns",
         captain: "Boosts ATK of Freedom characters by 2.5x",
         cooldown: 21
     },
-    676: {
+    676: { // Inazuma
         special: "Reduces any damage received above 5,000 HP by 97% for 3 turns",
         specialNotes: "The exact formula for the damage received is: 5000 + ((total damage) - 5000) * 0.03",
         captain: "Boosts ATK of Slasher characters by 1.5x, deals 5x character's ATK in QCK damage to all enemies at the end of the turn",
@@ -3422,166 +3422,166 @@ var details = {
         evolution: 676,
         evolvers: [ 94, 96, 96, 301, 301 ]
     },
-    677: {
+    677: { // Inazuma, Member of the Revolutionary Army
         special: "Reduces any damage received above 5,000 HP by 97% for 3 turns",
         specialNotes: "The exact formula for the damage received is: 5000 + ((total damage) - 5000) * 0.03",
         captain: "Boosts ATK of Slasher characters by 1.5x, deals 5x character's ATK in QCK damage to all enemies at the end of the turn",
         cooldown: 18
     },
-    678: {
+    678: { // Robin, Record of the Voyage - Strawhat Crew (Log Robin)
         special: "Reduces damage received by 50% for 1 turn, locks all orbs for 1 turn",
         captain: "Boosts ATK and RCV of PSY characters by 1.2x, boosts chances of getting [PSY] orbs",
         cooldown: 19
     },
-    679: {
+    679: { // Robin, Dream of the Voyage - Uncover the Blank Page of History (Log Robin)
         special: "Reduces damage received by 50% for 1 turn, locks all orbs for 1 turn",
         captain: "Boosts ATK and RCV of PSY characters by 1.5x, boosts chances of getting [PSY] orbs",
         cooldown: 19
     },
-    680: {
+    680: { // Ice Cream Loving Nami
         special: "Recovers 5x character's RCV in HP, boosts ATK and RCV of DEX characters by 1.25x for 2 turns",
         cooldown: 20
     },
-    681: {
+    681: { // Lemon Ice Cream Loving Nami
         special: "Recovers 5x character's RCV in HP, boosts ATK and RCV of DEX characters by 1.25x for 2 turns",
         captain: "Boosts ATK and RCV of Striker characters by 1.5x",
         cooldown: 20
     },
-    682: {
+    682: { // Ice Cream Loving Robin
         special: "Recovers a fixed amount of HP, reduces damage received by 50% for 2 turns", // TODO Find out how much
-        cooldown: 22,
+        cooldown: [ 22, 15 ],
         evolution: 683,
         evolvers: [ 117, 81, 87, 98, 103 ]
     },
-    683: {
+    683: { // Chocolate Ice Cream Loving Robin
         special: "Recovers a fixed amount of HP, reduces damage received by 50% for 2 turns", // TODO Find out how much
         captain: "Boosts ATK and RCV of Fighter characters by 1.5x",
-        cooldown: 22
+        cooldown: [ 22, 15 ]
     },
-    687: {
+    687: { // Calgara
         special: "Deals 13x character's ATK in STR damage to all enemies, boosts ATK of Freedom characters by 1.3x for 1 turn",
         captain: "Boosts ATK of Freedom characters by 1.5x",
-        cooldown: 19,
+        cooldown: [ 19, 14 ],
         evolution: 688,
         evolvers: [ 117, 78, 84, 95, 100 ]
     },
-    688: {
+    688: { // Calgara, the Great Warrior of Shandia
         special: "Deals 13x character's ATK in STR damage to all enemies, boosts ATK of Freedom characters by 1.3x for 1 turn",
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of Freedom characters by 2x",
-        cooldown: 19
+        cooldown: [ 19, 14 ]
     },
-    689: {
+    689: { // Montblanc Noland
         special: "Amplifies orb effects by 1.5x for 2 turns",
         specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.5x more damage and opposite orbs will deal 1.5x less damage",
         captain: "Boosts ATK and RCV of Slasher characters by 1.2x",
-        cooldown: 18,
+        cooldown: [ 18, 10 ],
         evolution: 690,
         evolvers: [ 117, 82, 88, 99, 104 ]
     },
-    690: {
+    690: { // Montblanc Noland, Explorer and Admiral of the Lvneel Kingdom
         special: "Amplifies orb effects by 1.5x for 2 turns",
         specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.5x more damage and opposite orbs will deal 1.5x less damage",
         captain: "Boosts ATK and RCV of Slasher characters by 1.5x",
-        cooldown: 18
+        cooldown: [ 18, 10 ]
     },
-    691: {
+    691: { // Halberd Corporal Navy Headquarters
         special: "Changes [PSY] orbs into [DEX] orbs",
         // TODO add cooldown
         evolution: 696,
         evolvers: [ 116, 97, 302 ]
     },
-    692: {
+    692: { // Pistol Corporal Navy Headquarters
         special: "Changes [PSY] orbs into [QCK] orbs",
-        // TODO add cooldown
+        cooldown: 15,
         evolution: 697,
         evolvers: [ 116, 96, 301 ]
     },
-    693: {
+    693: { // Saber Corporal Navy Headquarters
         special: "Changes [DEX] orbs into [PSY] orbs",
         // TODO add cooldown
         evolution: 698,
         evolvers: [ 116, 98, 303 ]
     },
-    694: {
+    694: { // Bazooka Corporal Navy Headquarters
         special: "Deals 13x character's ATK in STR damage to all enemies",
         // TODO add cooldown
         evolution: 699,
         evolvers: [ 116, 95, 300 ]
     },
-    695: {
+    695: { // Knuckle Corporal Navy Headquarters
         special: "Cuts all enemies' current HP by 5%",
         // TODO add cooldown
         evolution: 700,
         evolvers: [ 116, 99, 304 ]
     },
-    696: {
+    696: { // Halberd Major Navy Headquarters
         special: "Changes [PSY] orbs into [DEX] orbs",
         captain: "Boosts ATK of Striker characters by 1.75x",
         // TODO add cooldown
     },
-    697: {
+    697: { // Pistol Major Navy Headquarters
         special: "Changes [PSY] orbs into [QCK] orbs",
         captain: "Boosts ATK of Shooter characters by 1.75x",
-        // TODO add cooldown
+        cooldown: 15
     },
-    698: {
+    698: { // Saber Major Navy Headquarters
         special: "Changes [DEX] orbs into [PSY] orbs",
         captain: "Boosts ATK of Slasher characters by 1.75x",
         // TODO add cooldown
     },
-    699: {
+    699: { // Bazooka Major Navy Headquarters
         special: "Deals 13x character's ATK in STR damage to all enemies",
         captain: "Boosts ATK of Shooter characters by 500 units, reduces damage received by 10%",
         // TODO add cooldown
     },
-    700: {
+    700: { // Knuckle Major Navy Headquarters
         special: "Cuts all enemies' current HP by 5%",
         captain: "Boosts ATK of Fighter characters by 1.75x",
         // TODO add cooldown
     },
-    701: {
+    701: { // Oimo
         special: "Deals 15x character's ATK in PSY damage to all enemies, changes own orb into [PSY]",
         captain: "Boosts HP of PSY characters by 2.25x",
         cooldown: 25
     },
-    702: {
+    702: { // Kashi
         special: "Seals himself for 5 turns, reduces damage received by 30% for 5 turns",
         captain: "Boosts HP of INT characters by 2.25x",
         cooldown: 25
     },
-    703: {
+    703: { // Watchdog Unit of the Law
         special: "Deals 5x character's ATK in QCK damage to all enemies",
-        // TODO add cooldown
+        cooldown: 12
     },
-    704: {
+    704: { // Guilt Juryman
         special: "Deals 9x character's ATK in STR damage to all enemies, reduces the defense of all enemies by 50% for 1 turn",
-        // TODO add cooldown
+        cooldown: 25
     },
-    705: {
+    705: { // Three-Headed Baskerville
         special: "Changes [PSY], [INT], [TND], [RCV] and empty orbs into [STR], [DEX] or [QCK] orbs",
         captain: "Boosts ATK and HP of STR characters, DEX characters and QCK characters by 1.25x",
         cooldown: 20
     },
-    706: {
+    706: { // Blueno, Cipher Pol No.9
         special: "Changes own orb and the captain's orb into [STR]",
         captain: "Boosts ATK of STR characters by 1.5x",
         cooldown: 18,
         evolution: 707,
         evolvers: [ 117, 84, 89, 95, 100 ]
     },
-    707: {
+    707: { // Blueno Rokushiki, Cipher Pol No.9
         special: "Changes own orb and the captain's orb into [STR]",
         captain: "Boosts ATK and HP of STR characters by 1.5x",
         cooldown: 18
     },
-    708: {
+    708: { // Nico Robin, the Devil Child
         special: "Reduces Bind and Silence duration by 3 turns",
         captain: "Boosts ATK and RCV of PSY characters by 1.2x",
         cooldown: 21,
         evolution: 709,
         evolvers: [ 117, 81, 87, 303, 103 ]
     },
-    709: {
+    709: { // Nico Robin, Member of the Strawhat Pirates
         special: "Reduces Bind and Silence duration by 3 turns",
         captain: "Boosts ATK and RCV of PSY characters by 1.5x",
         cooldown: 21

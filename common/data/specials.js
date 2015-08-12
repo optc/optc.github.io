@@ -114,7 +114,7 @@ window.specials = {
         atk: function(p) { return p.unit.class.has("Slasher") ? 1.25 : 1; },
         type: 'class'
     },
-    402: { // Mr.1 the Fullbody Bladed Human
+    402: { // Mr. 1 the Fullbody Bladed Human
         atk: function(p) { return p.unit.class.has("Slasher") ? 1.25 : 1; },
         type: 'class'
     },
@@ -183,11 +183,11 @@ window.specials = {
         atk: function(p) { return 1.5; },
         type: 'type'
     },
-    461: { // Fugitive Bentham Mr.2 Bon Clay
+    461: { // Fugitive Bentham Mr. 2 Bon Clay
         atk: function(p) { return p.unit.class.has("Fighter") ? 1.25 : 1; },
         type: 'class'
     },
-    462: { // Prison Break Expert Mr.2 Bon Clay
+    462: { // Prison Break Expert Mr. 2 Bon Clay
         atk: function(p) { return p.unit.class.has("Fighter") ? 1.25 : 1; },
         type: 'class'
     },
@@ -232,15 +232,15 @@ window.specials = {
         atk: function(p) { return p.unit.type == "QCK" ? 1.25 : 1; },
         type: 'type'
     },
-    509: { // The Strongest Prisoner Sir. Crocodile Mr.0, Former Leader of Baroque Works
+    509: { // The Strongest Prisoner, Sir Crocodile Mr. 0, Former CEO of Baroque Works
         atk: function(p) { return p.unit.class.has("Striker") ? 1.5 : 1; },
         type: 'class'
     },
-    510: { // The Strongest Prisoner Sir. Crocodile the Shichibukai
+    510: { // The Strongest Prisoner, Sir Crocodile the Shichibukai
         atk: function(p) { return p.unit.class.has("Striker") ? 1.5 : 1; },
         type: 'class'
     },
-    511: { // Prisoner Daz Bonez Mr.1
+    511: { // Prisoner Daz Bonez Mr. 1
         atk: function(p) { return p.unit.class.has("Slasher") ? 1.25 : 1; },
         type: 'class'
     },
@@ -429,10 +429,10 @@ window.specials = {
     656: { // Arlong of the Sun Pirates
         orb: function(p) { return p.orb == 2.0 ? 1.25 : (p.orb == 0.5 ? 4/5 : 1); }
     },
-    660: {
+    660: { // Usopp, Record of the Voyage - Strawhat Crew (Log Usopp)
         def: function(p) { return 0.5; }
     },
-    661: {
+    661: { // Usopp, Dream of the Voyage - Brave Warrior of the Sea (Log Usopp)
         def: function(p) { return 0.5; }
     },
     665: { // Kohza, Alabasta Citizen
@@ -443,7 +443,7 @@ window.specials = {
         atk: function(p) { return p.defenseDown ? 1.3 : 1; },
         type: 'condition'
     },
-    668: {
+    668: { // Sabo
         atk: function(p) { return !p.unit.class.has('Freedom') ? 1 : window.specials[668].multiplier; },
         type: 'class',
         onActivation: function(p) {
@@ -456,7 +456,7 @@ window.specials = {
             });
         }
     },
-    669: {
+    669: { // Sabo, Member of the Revolutionary Army
         atk: function(p) { return !p.unit.class.has('Freedom') ? 1 : window.specials[669].multiplier; },
         type: 'class',
         onActivation: function(p) {
@@ -469,35 +469,35 @@ window.specials = {
             });
         }
     },
-    670: {
+    670: { // Koala
         atk: function(p) { return p.class.has("Fighter") ? 1.75 : 1; }
     },
-    671: {
+    671: { // Koala, Member of the Revolutionary Army
         atk: function(p) { return p.class.has("Fighter") ? 1.75 : 1; }
     },
-    680: {
+    680: { // Ice Cream Loving Nami
         atk: function(p) { return p.unit.type == "DEX" ? 1.25 : 1; },
         rcv: function(p) { return p.unit.type == "DEX" ? 1.25 : 1; }
     },
-    681: {
+    681: { // Lemon Ice Cream Loving Nami
         atk: function(p) { return p.unit.type == "DEX" ? 1.25 : 1; },
         rcv: function(p) { return p.unit.type == "DEX" ? 1.25 : 1; }
     },
-    687: {
+    687: { // Calgara
         atk: function(p) { return p.unit.class.has("Freedom") ? 1.3 : 1; },
         type: 'class'
     },
-    688: {
+    688: { // Calgara, the Great Warrior of Shandia
         atk: function(p) { return p.unit.class.has("Freedom") ? 1.3 : 1; },
         type: 'class'
     },
-    689: {
+    689: { // Montblanc Noland
         orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); },
     },
-    690: {
+    690: { // Montblanc Noland, Explorer and Admiral of the Lvneel Kingdom
         orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); },
     },
-    702: {
+    702: { // Kashi
         onActivation: function(p) { p.tdata.lock = Math.max(1,p.tdata.lock); },
         onDeactivation: function(p) { if (p.tdata.lock == 1) p.tdata.lock = 0; }
     },

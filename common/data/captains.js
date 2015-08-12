@@ -141,13 +141,13 @@ window.captains = {
     74: { // Portgas D. Ace
         atk: function(p) { return p.unit.type == "QCK" ? 2 : 1; }
     },
-    75: { // Portgas D. Ace
+    75: { // Portgas D. Ace Flame Mirror
         atk: function(p) { return p.unit.type == "QCK" ? 2.5 : 1; }
     },
     76: { // Shanks
         atk: function(p) { return p.unit.type == "PSY" ? 2 : 1; }
     },
-    77: { // Shanks
+    77: { // Red-Haired Shanks
         atk: function(p) { return p.unit.type == "PSY" ? 2.5 : 1; }
     },
     194: { // Knuckle Ensign Navy HQ
@@ -426,7 +426,7 @@ window.captains = {
     336: { // Franky
         atk: function(p) { return p.percHP < 50.0 ? 1 : (p.unit.type == "PSY" ? 2 : 0.8); }
     },
-    337: { // Wrecking Yard Franky
+    337: { // Dismantler Franky
         atk: function(p) { return p.percHP < 50.0 ? 1 : (p.unit.type == "PSY" ? 2.5 : 0.8); }
     },
     340: { // Kraken Surume
@@ -568,7 +568,7 @@ window.captains = {
         },
         hitModifiers: [ 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect' ] // don't remove this
     },
-    398: { // Mr.4 & Lassoo the Dog Gun
+    398: { // Mr. 4 & Lassoo the Dog Gun
         hitAtk: function(p) {
             return p.modifiers.slice(0,p.chainPosition)
                 .subcontains([ "Perfect", "Perfect", "Perfect", "Perfect", "Perfect" ]) ? 4 : 1;
@@ -584,7 +584,7 @@ window.captains = {
     401: { // Mr. 1
         atk: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; }
     },
-    402: { // Mr.1 the Fullbody Bladed Human
+    402: { // Mr. 1 the Fullbody Bladed Human
         atk: function(p) { return p.unit.class.has("Slasher") ? 2 : 1; }
     },
     403: { // Rebecca
@@ -774,10 +774,10 @@ window.captains = {
     459: { // Sengoku the Buddha
         atk: function(p) { return p.unit.cost <= 20 ? 3 : 1; }
     },
-    461: { // Fugitive Bentham Mr.2 Bon Clay
+    461: { // Fugitive Bentham Mr. 2 Bon Clay
         atk: function(p) { return p.unit.class.has("Fighter") ? 2 : 1; }
     },
-    462: { // Prison Break Expert Mr.2 Bon Clay
+    462: { // Prison Break Expert Mr. 2 Bon Clay
         atk: function(p) { return p.unit.class.has("Fighter") ? 2 : 1; }
     },
     463: { // Satori
@@ -835,10 +835,10 @@ window.captains = {
     496: { // Black Hunting Group Expert Shandia Warrior
         atk: function(p) { return p.unit.class.has("Shooter") ? 1.5 : 1; }
     },
-    497: { // Portgas D. Ace of the 3 Terrible Brothers of Colubo Mountain
+    497: { // Portgas D. Ace Mt. Corvo's Brothers 3
         atk: function(p) { return p.unit.type == "QCK" ? 1.5 : 1; }
     },
-    498: { // Portgas D. Ace of the 3 Terrible Brothers of Colubo Mountain - Brother Oath
+    498: { // Portgas D. Ace Mt. Corvo's Brothers 3, Cup of Sworn Brotherhood
         atk: function(p) { return p.unit.type == "QCK" ? 1.5 : 1; },
         hp: function(p) { return p.unit.type == "QCK" ? 1.5 : 1; }
     },
@@ -872,16 +872,16 @@ window.captains = {
         atk: function(p) { return p.unit.type == "STR" ? 1.5 : 1; },
         hp: function(p) { return p.unit.type == "STR" ? 1.5 : 1; }
     },
-    509: { // The Strongest Prisoner Sir. Crocodile Mr.0, Former Leader of Baroque Works
+    509: { // The Strongest Prisoner, Sir Crocodile Mr. 0, Former CEO of Baroque Works
         atk: function(p) { return p.unit.class.has("Striker") ? 2 : 1; }
     },
-    510: { // The Strongest Prisoner Sir. Crocodile the Shichibukai
+    510: { // The Strongest Prisoner, Sir Crocodile the Shichibukai
         atk: function(p) { return p.unit.class.has("Striker") ? 2 : 1; }
     },
-    511: { // Prisoner Daz Bonez Mr.1
+    511: { // Prisoner Daz Bonez Mr. 1
         atk: function(p) { return p.unit.class.has("Slasher") ? 2 : 1; }
     },
-    513: { // Sabo of the 3 Terrible Brothers of Colubo Mountain - Brother Oath
+    513: { // Sabo Mt. Corvo's Brothers 3, Cup of Sworn Brotherhood
         atk: function(p) { return p.unit.type == "PSY" && p.percHP >= 50.0 ? 1.5 : 1; }
     },
     514: { // Nico Robin Tropical
@@ -981,7 +981,7 @@ window.captains = {
     546: { // God Enel
         atk: function(p) { return p.unit.type == "PSY" ? 2 : 1; }
     },
-    548: { // Monkey D. Luffy of the 3 Terrible Brothers of Colubo Mountain - Brother Oath
+    548: { // Monkey D. Luffy Mt. Corvo's Brothers 3, Cup of Sworn Brotherhood
         atk: function(p) { return 1.2; }
     },
     549: { // Sadi-chan
@@ -1270,10 +1270,10 @@ window.captains = {
         },
         hitModifiers: [ 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect' ], // don't remove this
     },
-    660: {
+    660: { // Usopp, Record of the Voyage - Strawhat Crew (Log Usopp)
         atk: function(p) { return p.unit.class.has("Shooter") ? 2 : 1; }    
     },
-    661: {
+    661: { // Usopp, Dream of the Voyage - Brave Warrior of the Sea (Log Usopp)
         atk: function(p) { return p.unit.class.has("Shooter") ? 2 : 1; }    
     },
     662: { // Nami Holiday
@@ -1292,109 +1292,109 @@ window.captains = {
     667: { // Nefertari Cobra, King of the Alabasta Kingdom
         atk: function(p) { return 1.75; },
     },
-    668: { 
+    668: {  // Sabo
         atk: function(p) { return p.unit.class.has("Freedom") ? 2 + 0.75 * p.percHP / 100 : 1; },
         hp: function(p) { return 1.2; },
         rcv: function(p) { return 1.2; }
     },
-    669: { 
+    669: {  // Sabo, Member of the Revolutionary Army
         atk: function(p) { return p.unit.class.has("Freedom") ? 2 + 0.75 * p.percHP / 100 : 1; },
         hp: function(p) { return 1.2; },
         rcv: function(p) { return 1.2; }
     },
-    670: {
+    670: { // Koala
         atk: function(p) { return p.unit.class.has("Fighter") ? 2 : 1; }
     },
-    671: {
+    671: { // Koala, Member of the Revolutionary Army
         atk: function(p) { return p.unit.class.has("Fighter") ? 2.25 : 1; },
         rcv: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; }
     },
-    672: {
+    672: { // Hack
         atk: function(p) { return p.unit.class.has("Fighter") ? 2: 1; }
     },
-    673: {
+    673: { // Hack, Member of the Revolutionary Army
         atk: function(p) { return p.unit.class.has("Fighter") ? 2: 1; }
     },
-    674: {
+    674: { // Emporio Ivankov, Newkama Kenpo Instructor
         atk: function(p) { return p.unit.class.has("Freedom") ? 2 : 1; }
     },
-    675: {
+    675: { // Emporio Ivankov, Member of the Revolutionary Army
         atk: function(p) { return p.unit.class.has("Freedom") ? 2.5 : 1; }
     },
-    676: {
+    676: { // Inazuma
         atk: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; }
     },
-    677: {
+    677: { // Inazuma, Member of the Revolutionary Army
         atk: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; }
     },
-    678: {
+    678: { // Robin, Record of the Voyage - Strawhat Crew (Log Robin)
         atk: function(p) { return p.unit.type == "PSY" ? 1.2 : 1; },
         rcv: function(p) { return p.unit.type == "PSY" ? 1.2 : 1; }
     },
-    679: {
+    679: { // Robin, Dream of the Voyage - Uncover the Blank Page of History (Log Robin)
         atk: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; },
         rcv: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; }
     },
-    681: {
+    681: { // Lemon Ice Cream Loving Nami
         atk: function(p) { return p.unit.class.has("Striker") ? 1.5 : 1; },
         rcv: function(p) { return p.unit.class.has("Striker") ? 1.5 : 1; }
     },
-    683: {
+    683: { // Chocolate Ice Cream Loving Robin
         atk: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; },
         rcv: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; }
     },
-    687: {
+    687: { // Calgara
         atk: function(p) { return p.unit.class.has("Freedom") ? 1.5 : 1; }
     },
-    688: {
+    688: { // Calgara, the Great Warrior of Shandia
         atk: function(p) { return p.unit.class.has("Freedom") ? 2 : 1; }
     },
-    689: {
+    689: { // Montblanc Noland
         atk: function(p) { return p.unit.class.has("Slasher") ? 1.2 : 1; },
         rcv: function(p) { return p.unit.class.has("Slasher") ? 1.2 : 1; }
     },
-    690: {
+    690: { // Montblanc Noland, Explorer and Admiral of the Lvneel Kingdom
         atk: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; },
         rcv: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; }
     },
-    696: {
+    696: { // Halberd Major Navy Headquarters
         atk: function(p) { return p.unit.class.has("Striker") ? 1.75 : 1; }
     },
-    697: {
+    697: { // Pistol Major Navy Headquarters
         atk: function(p) { return p.unit.class.has("Shooter") ? 1.75 : 1; }
     },
-    698: {
+    698: { // Saber Major Navy Headquarters
         atk: function(p) { return p.unit.class.has("Slasher") ? 1.75 : 1; }
     },
-    699: {
+    699: { // Bazooka Major Navy Headquarters
         atkStatic: function(p) { return p.unit.class.has("Shooter") ? 500 : 0; }, // TODO Implement me
         warning: "Selected captain effect (Bazooka Major Navy Headquarters) has not yet been implemented."
     },
-    700: {
+    700: { // Knuckle Major Navy Headquarters
         atk: function(p) { return p.unit.class.has("Fighter") ? 1.75 : 1; }
     },
-    701: {
+    701: { // Oimo
         hp: function(p) { return p.unit.type == "PSY" ? 2.25 : 1; }
     },
-    702: {
+    702: { // Kashi
         hp: function(p) { return p.unit.type == "INT" ? 2.25 : 1; }
     },
-    705: {
+    705: { // Three-Headed Baskerville
         atk: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 1.25 : 1; },
         hp: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 1.25 : 1; }
     },
-    706: {
+    706: { // Blueno, Cipher Pol No.9
         atk: function(p) { return p.unit.type == "STR" ? 1.5 : 1; }
     },
-    707: {
+    707: { // Blueno Rokushiki, Cipher Pol No.9
         atk: function(p) { return p.unit.type == "STR" ? 1.5 : 1; },
         rcv: function(p) { return p.unit.type == "STR" ? 1.5 : 1; }
     },
-    708: {
+    708: { // Nico Robin, the Devil Child
         atk: function(p) { return p.unit.type == "PSY" ? 1.2 : 1; },
         rcv: function(p) { return p.unit.type == "PSY" ? 1.2 : 1; }
     },
-    709: {
+    709: { // Nico Robin, Member of the Strawhat Pirates
         atk: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; },
         rcv: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; }
     }
