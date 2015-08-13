@@ -1,5 +1,12 @@
 (function() {
 
+var addImages = function(target) {
+    target.find('> table [data], h3 [data]').each(function(n,x) {
+        x.style.backgroundImage = 'url(' + x.getAttribute('data') + ')';
+        x.removeAttribute('data');
+    });
+};
+
 var app = angular.module('optc', [ ]);
 
 app.controller('MainCtrl',function($scope, $timeout) {
@@ -32,10 +39,7 @@ app.directive('expandable',function() {
                 else {
                     var height = element.find('> table').outerHeight();
                     element[0].style.maxHeight = (60 + height) + 'px';
-                    element.find('> table [data]').each(function(n,x) {
-                        x.style.backgroundImage = 'url(' + x.getAttribute('data') + ')';
-                        x.removeAttribute('data');
-                    });
+                    addImages(element);
                 }
             });
         }
@@ -50,8 +54,10 @@ app.directive('collapsable',function() {
                 element.toggleClass('collapsed');
                 if (element.hasClass('collapsed'))
                     element[0].style.maxHeight = (10 + element.find('> h2').outerHeight()) + 'px';
-                else
+                else {
                     element[0].style.maxHeight = null;
+                    addImages(element);
+                }
             };
             element.find('> h3, > h2').click(function(e) {
                 if (e.which != 1) return;

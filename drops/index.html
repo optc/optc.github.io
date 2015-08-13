@@ -48,7 +48,7 @@
                 </h2> 
                 <div ng-repeat="island in data[type]" ng-if="island.name != 'Oars Special'" class="island" expandable>
                     <h3>
-                        <div decorate-slot uid="island.thumb" class="slot small"></div>
+                        <div decorate-slot uid="island.thumb" class="slot small" delay="true"></div>
                         <i class="fa fa-chevron-down"></i>
                         <i class="fa fa-chevron-up"></i>
                         <span>{{island.name}}</span>

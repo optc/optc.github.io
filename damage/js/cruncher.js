@@ -574,6 +574,19 @@ var CruncherCtrl = function($scope, $timeout) {
         return this == what;
     };
 
+    Array.prototype.isWeakened = function(varargs) {
+        var classes = Array.prototype.slice.call(arguments,0);
+        for (var i=0;i<this.length;++i) {
+            if (classes.indexOf(this[i]) == -1)
+                return false;
+        }
+        return true;
+    };
+
+    String.prototype.isWeakened = function(varargs) {
+        return Array.prototype.slice.call(arguments,0).indexOf(this.toString()) != -1;
+    };
+
 };
 
 angular.module('optc')
