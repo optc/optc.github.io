@@ -193,8 +193,8 @@ $.fn.dataTable.ext.search.push(function(settings, data, index) {
     if (filters.drop) {
         if (!reverseDropMap) generateReverseDropMap();
         var isFarmable = reverseDropMap.hasOwnProperty(unit.number + 1);
-        if (filters.drop == 'Farmable' && unit.stars >= 3 && !isFarmable) return false; 
-        else if (filters.drop != 'Farmable' && (unit.stars < 3 || reverseDropMap.hasOwnProperty(unit.number + 1))) return false; 
+        if (filters.drop == 'Farmable' && (id == 1 || unit.stars >= 3 && !isFarmable)) return false; 
+        else if (filters.drop != 'Farmable' && id != 1 && (unit.stars < 3 || isFarmable)) return false; 
     }
     // filter by active matchers
     if (filters.custom.length > 0 && !window.details.hasOwnProperty(id)) return false;
