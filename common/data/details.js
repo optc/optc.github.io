@@ -2161,14 +2161,14 @@ var details = {
         cooldown: [ 16, 10 ]
     },
     450: { // Namur
-        special: "Boosts ATK of Fighter characters by 1.5x for 1 turn, deals DEX damage to one enemy",
+        special: "Boosts ATK of Fighter characters by 1.5x for 1 turn, deals 25x characters's ATK in DEX damage to one enemy",
         captain: "Boosts ATK of Fighter characters by 2x and their HP by 1.5x",
         cooldown: [ 25, 18 ],
         evolution: 451,
         evolvers: [ 118, 83, 86, 302, 102 ]
     },
     451: { // One-Shot Namur
-        special: "Boosts ATK of Fighter characters by 1.5x for 1 turn, deals DEX damage to one enemy",
+        special: "Boosts ATK of Fighter characters by 1.5x for 1 turn, deals 25x character's ATK in DEX damage to one enemy",
         captain: "Boosts ATK of Fighter characters by 2x and their HP by 1.5x",
         cooldown: [ 25, 18 ]
     },
@@ -2531,7 +2531,7 @@ var details = {
     516: { // Heracles the Hero of the Forest
         special: "Changes the orbs in the left column into [INT], [PSY] and [RCV], the orbs in the right column into [STR], [DEX] and [QCK], freely switch orbs between slots 3 times",
         specialNotes: "The special is not based on chance, the orbs are always changed with the same pattern. Starting from the top left orb and proceeding clockwise, after the special is used the orbs will be: [INT], [STR], [DEX], [QCK], [RCV] and [PSY]",
-        captain: "Boosts ATK, HP and RCV of Shooter characters by 1.5x, heals a bit of HP at the end of the turn",
+        captain: "Boosts ATK, HP and RCV of Shooter characters by 1.5x, heals a bit of HP at the end of the turn", // TODO find amount
         cooldown: [ 24, 11 ]
     },
     517: { // Usoppun
@@ -2827,7 +2827,7 @@ var details = {
         cooldown: 14
     },
     567: { // Big Pan
-        special: "Reduces Bind and Silence duration by 1 turn, deals STR damage to all enemies",
+        special: "Reduces Bind and Silence duration by 1 turn, deals STR damage to all enemies", // TODO Find amount
         cooldown: 23
     },
     568: { // Foxy
@@ -2924,7 +2924,7 @@ var details = {
     },
     584: { // Aisa
         special: "Reduces damage received from PSY enemies by 100% for 1 turn",
-        captain: "Reduces cooldown of all specials by 3 turns at the start of the fight, greatly reduces ATK, HP and RCV",
+        captain: "Reduces cooldown of all specials by 3 turns at the start of the fight, greatly reduces ATK, HP and RCV", // TODO Find amount
         cooldown: [ 22, 8 ]
     },
     585: { // Nojiko
@@ -3171,7 +3171,7 @@ var details = {
         cooldown: [ 25, 16 ]
     },
     636: { // Pappug
-        special: "Binds himself for 3 turns, reduces damage received by 50% for 3 turns, heals a small amount of HP at the end of the turn for 3 turns",
+        special: "Binds himself for 3 turns, reduces damage received by 50% for 3 turns, heals a small amount of HP at the end of the turn for 3 turns", // TODO find amount
         captain: "Boosts ATK of characters with cost 2 or less by 3x",
         cooldown: [ 23, 15 ]
     },
@@ -3440,7 +3440,9 @@ var details = {
     },
     680: { // Ice Cream Loving Nami
         special: "Recovers 5x character's RCV in HP, boosts ATK and RCV of DEX characters by 1.25x for 2 turns",
-        cooldown: 20
+        cooldown: 20,
+        evolution: 681,
+        evolvers: [ 117, 80, 86, 97, 302 ]
     },
     681: { // Lemon Ice Cream Loving Nami
         special: "Recovers 5x character's RCV in HP, boosts ATK and RCV of DEX characters by 1.25x for 2 turns",
@@ -3448,13 +3450,13 @@ var details = {
         cooldown: 20
     },
     682: { // Ice Cream Loving Robin
-        special: "Recovers a fixed amount of HP, reduces damage received by 50% for 2 turns", // TODO Find out how much
+        special: "Heals 2,561 HP, reduces damage received by 50% for 2 turns",
         cooldown: [ 22, 15 ],
         evolution: 683,
         evolvers: [ 117, 81, 87, 98, 103 ]
     },
     683: { // Chocolate Ice Cream Loving Robin
-        special: "Recovers a fixed amount of HP, reduces damage received by 50% for 2 turns", // TODO Find out how much
+        special: "Heals 2,561 HP, reduces damage received by 50% for 2 turns",
         captain: "Boosts ATK and RCV of Fighter characters by 1.5x",
         cooldown: [ 22, 15 ]
     },

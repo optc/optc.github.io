@@ -5,11 +5,13 @@ var app = angular.module('optc', [ 'ui.router', 'ui.bootstrap', 'ngSanitize' ]);
 var lastQuery = null;
 var filters = { custom: [ ] };
 
+var reverseDropMap = null;
+
 Utils.parseUnits(false);
 
-/********************
- * Common functions *
- ********************/
+/*********************
+ * Utility functions *
+ *********************/
 
 var generateSearchParameters = function(query, filters) {
     var result = Utils.generateSearchParameters(query);
@@ -101,6 +103,29 @@ var searchDropLocations = function(id) {
     return result;
 };
 
+var flagUnit = function(id) {
+    reverseDropMap[id] = true;
+    if (!details[id].evolution) return;
+    if (details[id].evolution.constructor != Array) flagUnit(details[id].evolution);
+    else for (var i=0;i<details[id].evolution.length;++i) flagUnit(details[id].evolution[i]);
+};
+
+var generateReverseDropMap = function() {
+    reverseDropMap = { };
+    for (var type in drops) {
+        for (var island in drops[type]) {
+            for (var stage in drops[type][island]) {
+                var data = drops[type][island][stage];
+                if (data.constructor != Array) continue;
+                for (var i=0;i<data.length;++i) {
+                    if (data[i] < 0 || reverseDropMap[data[i]]) continue;
+                    flagUnit(data[i]);
+                }
+            }
+        }
+    }
+};
+
 var getDayOfWeek = function() {
     var now = new Date(), utc = new Date(now.getTime() + now.getTimezoneOffset() * 60000 - 8 * 3600000);
     return (utc.getDay() === 0 ? 6 : utc.getDay() - 1);
@@ -164,6 +189,13 @@ $.fn.dataTable.ext.search.push(function(settings, data, index) {
     if (filters.type && unit.type !== filters.type) return false;
     // filter by class
     if (filters.class && !filters.class.test(unit.class)) return false;
+    // filter by drop
+    if (filters.drop) {
+        if (!reverseDropMap) generateReverseDropMap();
+        var isFarmable = reverseDropMap.hasOwnProperty(unit.number + 1);
+        if (filters.drop == 'Farmable' && unit.stars >= 3 && !isFarmable) return false; 
+        else if (filters.drop != 'Farmable' && (unit.stars < 3 || reverseDropMap.hasOwnProperty(unit.number + 1))) return false; 
+    }
     // filter by active matchers
     if (filters.custom.length > 0 && !window.details.hasOwnProperty(id)) return false;
     for (var i=0;i<filters.custom.length;++i) {
@@ -348,6 +380,12 @@ app.directive('filters',function($compile) {
                 classes.append(createFilter(x,'class-filter','filters.class',
                     'filters.class == \'' + x + '\'','onClassClick(\'' + x + '\')'));
             });
+            // farmable filters
+            var farmable = createContainer('Drop filters', element);
+            [ 'Farmable', 'Non-farmable' ].forEach(function(x) {
+                farmable.append(createFilter(x,'drop-filter','filters.drop',
+                    'filters.drop == \'' + x + '\'','onDropClick(\'' + x + '\')'));
+            });
             // captain ability filters
             var captains = createContainer('Captain abilities filters', element);
             var specials = createContainer('Specials', element);
@@ -360,6 +398,7 @@ app.directive('filters',function($compile) {
             // events 
             scope.onTypeClick = function(type) { scope.filters.type = (scope.filters.type == type ? null : type); };
             scope.onClassClick = function(clazz) { scope.filters.class = (scope.filters.class == clazz ? null : clazz); };
+            scope.onDropClick = function(drop) { scope.filters.drop = (scope.filters.drop == drop ? null : drop); };
         }
     };
 });
