@@ -1,4 +1,4 @@
-var profiles = {
+window.profiles = {
 
     'Baroque Works (Original)': {
         description: 'Stats of non-Fighter units reduced by 90%',

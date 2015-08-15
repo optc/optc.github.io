@@ -196,6 +196,11 @@ $.fn.dataTable.ext.search.push(function(settings, data, index) {
         if (filters.drop == 'Farmable' && (id == 1 || unit.stars >= 3 && !isFarmable)) return false; 
         else if (filters.drop != 'Farmable' && id != 1 && (unit.stars < 3 || isFarmable)) return false; 
     }
+    // filter by server
+    if (filters.server) {
+        if (filters.server == 'Global only' && !details[unit.number + 1].global) return false;
+        if (filters.server !== 'Global only' && details[unit.number + 1].global) return false;
+    }
     // filter by active matchers
     if (filters.custom.length > 0 && !window.details.hasOwnProperty(id)) return false;
     for (var i=0;i<filters.custom.length;++i) {
@@ -372,19 +377,23 @@ app.directive('filters',function($compile) {
             var types = createContainer('Type filters', element);
             [ 'STR', 'QCK', 'DEX', 'PSY', 'INT' ].forEach(function(x) {
                 types.append(createFilter(x,'type-filter ' + x,'filters.type',
-                    'filters.type == \'' + x + '\'','onTypeClick(\'' + x + '\')'));
+                    'filters.type == \'' + x + '\'','onClick($event,\'' + x + '\')'));
             });
             // class filters
             var classes = createContainer('Class filters', element);
             [ 'Fighter', 'Shooter', 'Slasher', 'Striker', 'Freedom' ].forEach(function(x) {
                 classes.append(createFilter(x,'class-filter','filters.class',
-                    'filters.class == \'' + x + '\'','onClassClick(\'' + x + '\')'));
+                    'filters.class == \'' + x + '\'','onClick($event,\'' + x + '\')'));
             });
             // farmable filters
             var farmable = createContainer('Drop filters', element);
             [ 'Farmable', 'Non-farmable' ].forEach(function(x) {
                 farmable.append(createFilter(x,'drop-filter','filters.drop',
-                    'filters.drop == \'' + x + '\'','onDropClick(\'' + x + '\')'));
+                    'filters.drop == \'' + x + '\'','onClick($event,\'' + x + '\')'));
+            });
+            [ 'Global only', 'JP only' ].forEach(function(x) {
+                farmable.append(createFilter(x,'drop-filter','filters.server',
+                    'filters.server == \'' + x + '\'','onClick($event,\'' + x + '\')'));
             });
             // captain ability filters
             var captains = createContainer('Captain abilities filters', element);
@@ -396,9 +405,10 @@ app.directive('filters',function($compile) {
                 else specials.append(result);
             });
             // events 
-            scope.onTypeClick = function(type) { scope.filters.type = (scope.filters.type == type ? null : type); };
-            scope.onClassClick = function(clazz) { scope.filters.class = (scope.filters.class == clazz ? null : clazz); };
-            scope.onDropClick = function(drop) { scope.filters.drop = (scope.filters.drop == drop ? null : drop); };
+            scope.onClick = function(e, value) {
+                var type = e.target.getAttribute('ng-model').split(/\./)[1];
+                scope.filters[type] = (scope.filters[type] == value ? null : value);
+            };
         }
     };
 });

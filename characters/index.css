@@ -133,8 +133,12 @@ input {
     border-bottom: 1px solid gray;
 }
 
-.drop-filter:last-child {
+.drop-filter:nth-child(3) , .drop-filter:nth-child(5) {
     border-left: 1px solid gray;
+}
+
+.drop-filter:nth-child(2), .drop-filter:nth-child(3) {
+    border-bottom: 1px solid gray;
 }
 
 .custom-filter:hover, .class-filter:hover, .drop-filter:hover {

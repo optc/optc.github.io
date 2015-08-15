@@ -1,4 +1,4 @@
-var matchers = [
+window.matchers = [
 
     /* * * * * Captain abilities * * * * */
 
