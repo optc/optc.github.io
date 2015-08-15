@@ -1,4 +1,3 @@
-Could not load database "data/temporary.json".
 window.units = [
     [ "Monkey D. Luffy", "STR", "Fighter", 2, 1, 5, 0, 5, 163, 42, 15, 8, 134, 68, 15, 1 ],
     [ "Monkey D. Luffy Gum-Gum Pistol", "STR", "Fighter", 3, 4, 6, 0, 20, 26184, 130, 76, 14, 510, 249, 49, 0.7 ],
