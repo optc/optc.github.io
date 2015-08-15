@@ -2900,7 +2900,7 @@ window.details = {
     },
     505: { // Pell
         special: "Boosts ATK of QCK characters by 1.25x for 3 turns",
-        captain: "Prevents death as long as HP is above 30%",
+        captain: "Prevents death as long as HP is above 50%",
         cooldown: [ 21, 15 ],
         evolution: 506,
         evolvers: [ 116, 79, 85, 266 ]

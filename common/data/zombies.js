@@ -71,7 +71,7 @@ window.zombies = {
     },
     505: { // Pell
         type: 'zombie',
-        threshold: 0.3
+        threshold: 0.5
     },
     506: { // Pell evolved
         type: 'zombie',
