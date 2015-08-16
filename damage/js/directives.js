@@ -32,7 +32,7 @@ directives.decorateSlot = function() {
                 } else {
                     target.style.backgroundImage = 'url(' + Utils.getThumbnailUrl(scope.uid) + ')';
                     if (attrs.decorateSlot.indexOf('notitle') == -1)
-                        target.setAttribute('title', Utils.getThumbnailTitle(scope.udata || scope.uid));
+                        target.setAttribute('title', Utils.getThumbnailTitle(scope.udata || (scope.uid - 1)));
                 }
             };
             scope.$watch('uid',update);

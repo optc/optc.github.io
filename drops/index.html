@@ -62,11 +62,11 @@
                                 </td>
                                 <td>
                                     <a ng-repeat="uid in data | orderBy:identity" ng-if="uid > 0"
-                                        decorate-slot uid="uid - 1" class="slot small" delay="true"
+                                        decorate-slot uid="uid" class="slot small" delay="true"
                                         href="../characters/#/view/{{uid}}" target="_blank"></a>
                                     <h4 ng-if="type == 'Fortnight'">Manuals:</h4>
                                     <a ng-repeat="uid in data | orderBy:reverse" ng-if="uid < 0"
-                                        decorate-slot uid="-uid - 1" class="slot small" delay="true"
+                                        decorate-slot uid="-uid" class="slot small" delay="true"
                                         href="../characters/#/view/{{-uid}}" target="_blank"></a>
                                 </td>
                             </tr>

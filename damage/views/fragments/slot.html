@@ -14,7 +14,7 @@
     <level-label ng-if="data.team[slot].unit">Lv. {{ data.team[slot].level }}</level-label>
 
     <div class="unitContainer" ng-show="data.team[slot].unit" draggable>
-        <div class="unitPortrait" decorate-slot="notitle" uid="data.team[slot].unit.number" udata="numbers.team[slot]"></div>
+        <div class="unitPortrait" decorate-slot="notitle" uid="data.team[slot].unit.number + 1" udata="numbers.team[slot]"></div>
         <unit-orb></unit-orb>
         <unit-chain></unit-chain>
         <unit-silence></unit-silence>

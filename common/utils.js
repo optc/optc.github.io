@@ -35,12 +35,12 @@ utils.parseUnits = function(skipIncomplete) {
 /* * * * * Thumbnail control * * * * */
 
 utils.getThumbnailUrl = function(n) {
-    var id = ('0000' + (n+1)).slice(-4).replace(/(057[54])/,'0$1'); // missing aokiji image
+    var id = ('0000' + n).slice(-4).replace(/(057[54])/,'0$1'); // missing aokiji image
     return 'http://onepiece-treasurecruise.com/wp-content/uploads/f' + id + '.png';
 };
 
 utils.getBigThumbnailUrl = function(n) {
-    var id = ('0000' + (n+1)).slice(-4).replace(/(057[54])/,'0$1'); // missing aokiji image
+    var id = ('0000' + n).slice(-4).replace(/(057[54])/,'0$1'); // missing aokiji image
     return 'http://onepiece-treasurecruise.com/wp-content/uploads/c' + id + '.png';
 };
 

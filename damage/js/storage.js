@@ -12,33 +12,6 @@ var save = function(key,object) {
     localStorage.setItem(key,JSON.stringify(object));
 };
 
-/* * * * * Version control methods * * * * */
-
-if (!localStorage.hasOwnProperty('version') || JSON.parse(localStorage.getItem('version')) < 2) {
-
-    var data = { };
-
-    var convert = function(storageName,dataName) {
-        if (!localStorage.hasOwnProperty(storageName)) return;
-        data[dataName] = loadValue(storageName);
-        //localStorage.removeItem(storageName); // let's be conservative
-    };
-
-    convert('defense','defense');
-    convert('hp','hp');
-    convert('merry','app');
-    convert('team','team');
-
-    localStorage.setItem('data',JSON.stringify(data));
-    localStorage.setItem('version','3');
-
-}
-
-if (JSON.parse(localStorage.getItem('version')) < 5) {
-    localStorage.removeItem('data');
-    localStorage.setItem('version',5);
-}
-
 /* * * * * Controller * * * * */
 
 var StorageCtrl = function($scope) {
