@@ -282,7 +282,7 @@ var CruncherCtrl = function($scope, $timeout) {
     };
 
     var getProfileBonus = function(type,unit) {
-        if (!$scope.data.profile) return 1;
+        if (!$scope.data.profile || !profiles[$scope.data.profile].hasOwnProperty(type)) return 1;
         return profiles[$scope.data.profile][type](unit.unit || unit);
     };
 
@@ -443,13 +443,22 @@ var CruncherCtrl = function($scope, $timeout) {
 
     var initializeDataStructs = function() {
         // get enabled specials
+        var conflictWarning = false;
         enabledSpecials = [ ];
+        if ($scope.data.profile && profiles[$scope.data.profile].orb)
+            enabledSpecials.push({ orb: profiles[$scope.data.profile].orb, permanent: true });
         $scope.tdata.team.forEach(function(x,n) {
             if (!$scope.data.team[n].unit) return;
             var id = $scope.data.team[n].unit.number + 1;
-            if (x.special && specials.hasOwnProperty(id))
-                enabledSpecials.push(specials[id]);
+            if (x.special && specials.hasOwnProperty(id)) {
+                if (specials[id].hasOwnProperty('orb') && enabledSpecials[0] && enabledSpecials[0].permanent)
+                    conflictWarning = true;
+                else
+                    enabledSpecials.push(specials[id]);
+            }
         });
+        if (conflictWarning) 
+            $scope.notify({ type: 'error', text: 'One or more specials you selected cannot be activated due to a profile restriction.' });
         // check if defense is down (required by some captain effects)
         computeActualDefense();
         isDefenseDown = enabledSpecials.some(function(x) { return x !== null && x.hasOwnProperty('def'); });

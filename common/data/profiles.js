@@ -41,6 +41,7 @@ window.profiles = {
     },
 
     'Skypiea Warriors': {
+        // Note: The debuff is applied to normal attacks but not to specials
         description: 'Stats of characters whose homeland is not a sky island reduced by 20%',
         thumb: 583,
         atk: function(p) {
@@ -61,6 +62,25 @@ window.profiles = {
                     [ 313, 314, 503, 504, 581, 582, 583, 584 ].indexOf(id) != -1);
             return !matching ? 0.8 : 1;
         }
+    },
+
+    'Skypiea Warriors, Last Round': {
+        // Note: The debuff is applied to normal attacks but not to specials
+        // Note 2: The 50% reduction is applied to enemy's defense as well, for whatever reason
+        description: 'Stats of characters whose homeland is not a sky island reduced by 20%, ATK of PSY characters reduced by 50%',
+        thumb: 583,
+        atk: function(p) {
+            var result = window.profiles['Skypiea Warriors'].atk(p);
+            return (p.type == 'PSY' ? 0.5 : 1) * result;
+        },
+        hp: function(p) { return window.profiles['Skypiea Warriors'].hp(p); },
+        rcv: function(p) { return window.profiles['Skypiea Warriors'].rcv(p); },
+    },
+
+    'Hancock\'s Bonus (Aokiji\'s Island)': {
+        description: 'Orb effects amplified by 1.10x',
+        thumb: 415,
+        orb: function(p) { return p.orb == 2.0 ? 1.1 : (p.orb == 0.5 ? 10/11 : 1); }
     }
 
 };
