@@ -63,7 +63,7 @@ li.STR > div, li.QCK > div, li.DEX > div, li.PSY > div, li.INT > div {
     background-color: #65737e;
 }
 
-.modal-body {
+.modal-body , .floatThead-table tr > th {
     background-color: #eff1f5;
 }
 

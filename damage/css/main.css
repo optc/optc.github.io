@@ -664,6 +664,14 @@ li input {
     vertical-align: middle;
 }
 
+.padded-picker {
+    margin-bottom: 2px;
+}
+
+.floatThead-table tr > th {
+    background: white;
+}
+
 /********
  * SHIP *
  ********/
@@ -840,6 +848,14 @@ body > .popover .popover-content {
 
     .unitLevel {
         font-size: 100%;
+    }
+
+}
+
+@media (min-width: 768px) {
+
+    #picker.modal-dialog {
+        width: 700px;
     }
 
 }
