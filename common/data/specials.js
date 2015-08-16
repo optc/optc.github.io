@@ -94,10 +94,10 @@ window.specials = {
         type: 'class'
     },
     391: { // Perona
-        def: function(p) { return 0; }
+        def: function(p) { return 0.2; }
     },
     392: { // Ghost Princess Perona
-        def: function(p) { return 0; }
+        def: function(p) { return 0.2; }
     },
     395: { // Miss Merry Christmas
         orb: function(p) { return p.orb == 2.0 ? 1.25 : (p.orb == 0.5 ? 4/5 : 1); }
