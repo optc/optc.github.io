@@ -449,9 +449,13 @@ app.filter('decorate',function() {
  ********************/
 
 app
-    .run(function($rootScope, $location, $window) {
+    .run(function($rootScope, $location, $window, $state, $stateParams) {
         $rootScope.$on('$stateChangeSuccess',function(e) {
             if (ga) ga('send', 'pageview', '/characters');
+            var title = 'One Piece Treasure Cruise Character Table';
+            if ($state.current.name == 'main.view')
+                title = window.units[parseInt($stateParams.id,10) - 1].name + ' | ' + title;
+            window.document.title = title;
         });
     });
 
