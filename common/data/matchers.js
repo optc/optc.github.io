@@ -23,13 +23,13 @@ window.matchers = [
     {
         name: 'HP boosting captains',
         target: 'captain',
-        matcher: /Boosts (HP|ATK and HP|ATK, HP)/i
+        matcher: /Boosts (HP|ATK and HP|ATK, HP)|Boosts.+and their HP/i
     },
 
     {
         name: 'RCV boosting captains',
         target: 'captain',
-        matcher: /Boosts (RCV|ATK and RCV|HP and RCV|ATK, HP and RCV)/i
+        matcher: /Boosts (RCV|ATK and RCV|HP and RCV|ATK, HP and RCV)|Boosts.+and their RCV/i
     },
 
     {
