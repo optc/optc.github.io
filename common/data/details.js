@@ -3846,7 +3846,7 @@ window.details = {
         special: "Removes poison, reduces damage received by 50% for 2 turns, recovers 13x character's RCV in HP at the end of the turn for 2 turns",
         captain: "Boosts ATK of Freedom characters by 2x",
         cooldown: 21,
-        evolution: 674,
+        evolution: 675,
         evolvers: [ 118, 83, 88, 304, 104 ]
     },
     675: { // Emporio Ivankov, Member of the Revolutionary Army

@@ -30,7 +30,7 @@ var generateSearchParameters = function(query, filters) {
     return result;
 };
 
-var searchBaseEvolutions = function(id) {
+var searchBaseForms = function(id) {
     var temp = [ ], current = parseInt(id,10);
     for (var key in details) {
         if (!details[key].evolution) continue;
@@ -40,7 +40,7 @@ var searchBaseEvolutions = function(id) {
     }
     var result = [ ];
     for (var i=0;i<temp.length;++i) {
-        var base = searchBaseEvolutions(temp[i]);
+        var base = searchBaseForms(temp[i]);
         if (base.length === 0)
             result.push([ temp[i] ]);
         else for (var j=0;j<base.length;++j)
@@ -273,7 +273,7 @@ app.controller('DetailsCtrl',function($scope, $state, $stateParams) {
     $scope.hybrid = $scope.unit.class.constructor == Array;
     $scope.details = window.details[$stateParams.id];
     // derived data
-    $scope.evolvesFrom = searchBaseEvolutions($stateParams.id);
+    $scope.evolvesFrom = searchBaseForms($stateParams.id);
     $scope.usedBy = searchEvolverEvolutions($stateParams.id);
     $scope.drops = searchDropLocations(parseInt($stateParams.id,10));
     $scope.manuals = searchDropLocations(-parseInt($stateParams.id,10));

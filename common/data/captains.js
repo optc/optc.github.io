@@ -588,7 +588,7 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Slasher") ? 2 : 1; }
     },
     403: { // Rebecca
-        rcv: function(p) { return p.percHP <= 30.0 ? 3 : 1; } // TODO Double check the HP
+        rcv: function(p) { return p.percHP <= 30.0 ? 3 : 1; }
     },
     404: { // Absalom
         atk: function(p) { return p.unit.class.has("Shooter") ? 1.5 : 1; }
@@ -715,16 +715,16 @@ window.captains = {
         hitModifiers: [ 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect' ] // don't remove this
     },
     437: { // Perona Sweet
-        rcv: function(p) { return p.percHP <= 30.0 ? 3 : 1; } // TODO Double check the HP
+        rcv: function(p) { return p.percHP <= 30.0 ? 3 : 1; }
     },
     438: { // Perona Sweet Ghost Princees
-        rcv: function(p) { return p.percHP <= 30.0 ? 5 : 1; } // TODO Double check the HP
+        rcv: function(p) { return p.percHP <= 30.0 ? 5 : 1; }
     },
     444: { // Carue
-        atk: function(p) { return p.percHP >= 70.0 && p.unit.class.has("Booster") ? 2 : 1; } // TODO Double check the HP
+        atk: function(p) { return p.percHP >= 70.0 && p.unit.class.has("Booster") ? 2 : 1; }
     },
     445: { // Captain Carue & The Super Spot-Billed Duck Squad
-        atk: function(p) { return p.percHP >= 70.0 && p.unit.class.has("Booster") ? 2.5 : 1; } // TODO Double check the HP
+        atk: function(p) { return p.percHP >= 70.0 && p.unit.class.has("Booster") ? 2.5 : 1; }
     },
     446: { // Marshall D. Teach
         atk: function(p) { return p.unit.type == "STR" ? 2 : 1; },
@@ -887,7 +887,7 @@ window.captains = {
     514: { // Nico Robin Tropical
         atk: function(p) { return p.unit.type == "INT" ? 2 : 1; }
     },
-    515: { // Heracles
+    515: { // Heracles 
         atk: function(p) { return p.unit.class.has("Shooter") ? 1.5 : 1; },
         hp: function(p) { return p.unit.class.has("Shooter") ? 1.5 : 1; },
         rcv: function(p) { return p.unit.class.has("Shooter") ? 1.5 : 1; }
@@ -1168,7 +1168,7 @@ window.captains = {
         rcv: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; }
     },
     614: { // Zanbai
-        atk: function(p) { return p.unit.cost <= 20 && p.percHP <= 30.0 ? 2.25 : 1; } // TODO Double check the HP
+        atk: function(p) { return p.unit.cost <= 20 && p.percHP <= 30.0 ? 2.25 : 1; }
     },
     629: { // Franky, Boss of the Franky Family
         atk: function(p) { return p.unit.stars <= 3 ? 2 : 1; }
@@ -1224,10 +1224,10 @@ window.captains = {
         atk: function(p) { return p.unit.type == "INT" ? 2.5 : 1; }
     },
     646: { // Little Oars Jr.
-        atk: function(p) { return p.unit.class.has("Shooter") && p.percHP <= 30.0 ? 2.5 : 1; } // TODO Double check the HP
+        atk: function(p) { return p.unit.class.has("Shooter") && p.percHP <= 30.0 ? 2.5 : 1; }
     },
     647: { // Rampaging Little Oars Jr.
-        atk: function(p) { return p.unit.class.has("Shooter") && p.percHP <= 30.0 ? 2.75 : 1; } // TODO Double check the HP
+        atk: function(p) { return p.unit.class.has("Shooter") && p.percHP <= 30.0 ? 2.75 : 1; }
     },
     648: { // Marco, Whitebeard Pirates' 1st Division Commander
         atk: function(p) { return (p.unit.type == "QCK" || p.unit.type == "PSY") && p.percHP >= 70.0 ? 2.75 : 1; }

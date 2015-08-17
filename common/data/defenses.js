@@ -89,7 +89,7 @@ window.defenses = [
     [ 'Kamakiri'                            , 'Skypiea Warriors Fortnight'           , 'Expert', 582, 90 ],
     [ 'Laki'                                , 'Skypiea Warriors Fortnight'           , 'Expert', 583, 65 ],
     [ 'Young Buggy'                         , 'Young Pirates Fortnight'              , 'Expert', 599, 80 ],
-        // [ 'Young Shanks'                 , 'Expert', 600, ? ]
+    [ 'Young Shanks'                        , 'Young Pirates Fortnight'              , 'Expert', 601, 100 ],
     [ 'Young Buggy'                         , 'Young Pirates Fortnight, last round'  , 'Expert', 600, 100 ],
     [ 'Young Zeff'                          , 'Young Zeff Fortnight, 1st round'      , 'Expert', 606, 250 ],
     [ 'Young Patty'                         , 'Young Zeff Fortnight'                 , 'Expert', 608, 50 ],
