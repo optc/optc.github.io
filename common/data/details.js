@@ -3900,6 +3900,15 @@ window.details = {
         captain: "Boosts ATK and RCV of Fighter characters by 1.5x",
         cooldown: [ 22, 15 ]
     },
+    684: {
+        special: "Recovers 3x character's RCV in HP, reduces damage received by 80% for 1 turn",
+        cooldown: 23
+    },
+    685: {
+        special: "Recovers 3x character's RCV in HP, reduces damage received by 80% for 1 turn",
+        captain: "Boosts ATK and RCV of Shooter characters by 1.5x",
+        cooldown: 23
+    },
     687: { // Calgara
         special: "Deals 13x character's ATK in STR damage to all enemies, boosts ATK of Freedom characters by 1.3x for 1 turn",
         captain: "Boosts ATK of Freedom characters by 1.5x",

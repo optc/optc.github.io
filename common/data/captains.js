@@ -1343,6 +1343,10 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; },
         rcv: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; }
     },
+    684: {
+        atk: function(p) { return p.unit.class.has("Shooter") ? 1.5 : 1; },
+        rcv: function(p) { return p.unit.class.has("Shooter") ? 1.5 : 1; },
+    },
     687: { // Calgara
         atk: function(p) { return p.unit.class.has("Freedom") ? 1.5 : 1; }
     },
