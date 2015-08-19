@@ -68,7 +68,7 @@ controllers.PickerCtrl = function($scope, $state, $stateParams) {
             result = result.filter(function(unit) {
                 var stat;
                 if (range == 'id') stat = unit.number + 1;
-                else stat = unit[range.toLowerCase()] || unit['max' + range.toUpperCase()];
+                else stat = unit.hasOwnProperty(range.toLowerCase()) ? unit[range.toLowerCase()] : unit['max' + range.toUpperCase()];
                 if (stat < parameters.ranges[range][0] || stat > parameters.ranges[range][1]) return false;
                 return true;
             });

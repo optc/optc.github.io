@@ -1,6 +1,6 @@
 window.profiles = {
 
-    'Baroque Works (Original)': {
+    'Baroque Works (pre-v4.0)': {
         description: 'Stats of non-Fighter units reduced by 90%',
         thumb: 462,
         atk: function(p) { return !p.class.has('Fighter') ? 0.1 : 1; },
@@ -8,7 +8,7 @@ window.profiles = {
         rcv: function(p) { return !p.class.has('Fighter') ? 0.1 : 1; }
     },
 
-    'Baroque Works (New)': {
+    'Baroque Works': {
         description: 'ATK of Slasher and Strikers units reduced by 85%, HP and RCV by 80%',
         thumb: 462,
         atk: function(p) { return p.class.isWeakened('Slasher','Striker') ? 0.15 : 1; },
@@ -16,7 +16,7 @@ window.profiles = {
         rcv: function(p) { return p.class.isWeakened('Slasher','Striker') ? 0.20 : 1; }
     },
 
-    'Prisoner Crocodile': {
+    'Prisoner Crocodile (pre-v4.0)': {
         description: 'Stats of non-Striker units reduced by 90%',
         thumb: 510,
         atk: function(p) { return !p.class.has('Striker') ? 0.1 : 1; },
@@ -24,7 +24,7 @@ window.profiles = {
         rcv: function(p) { return !p.class.has('Striker') ? 0.1 : 1; }
     },
 
-    'Jailer Domino': {
+    'Jailer Domino (pre-v4.0)': {
         description: 'Stats of non-Shooter units reduced by 90%',
         thumb: 538,
         atk: function(p) { return !p.class.has('Shooter') ? 0.1 : 1; },
@@ -32,7 +32,15 @@ window.profiles = {
         rcv: function(p) { return !p.class.has('Shooter') ? 0.1 : 1; }
     },
 
-    'Chief Guard Sadi-chan': {
+    'Jailer Domino': {
+        description: 'Stats of non-Shooter, non-Booster, non-Powerup units reduced by 90%',
+        thumb: 538,
+        atk: function(p) { return p.class.has('Shooter') || p.class.has('Booster') || p.class.has('PowerUp') ? 0.1 : 1; },
+        hp: function(p)  { return p.class.has('Shooter') || p.class.has('Booster') || p.class.has('PowerUp') ? 0.1 : 1; },
+        rcv: function(p) { return p.class.has('Shooter') || p.class.has('Booster') || p.class.has('PowerUp') ? 0.1 : 1; }
+    },
+
+    'Chief Guard Sadi-chan (pre-v4.0)': {
         description: 'Stats of non-Slasher units reduced by 90%',
         thumb: 550,
         atk: function(p) { return !p.class.has('Slasher') ? 0.1 : 1; },

@@ -26,6 +26,7 @@ body {
 
 #rightContainer {
     padding: 10px;
+    flex-grow: 2;
 }
 
 #queryContainer {
@@ -223,6 +224,8 @@ input {
     width: 100%;
     white-space: nowrap;
     text-overflow: ellipsis;
+    max-width: 0;
+    overflow: hidden;
 }
 
 #mainTable td + td ~ td {

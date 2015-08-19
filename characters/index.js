@@ -158,6 +158,7 @@ var tableData = window.units.filter(function(x) { return x.name; }).map(function
         x.maxRCV,
         x.combo,
         x.cost,
+        x.slots,
         x.stars,
         x.number
     ];
@@ -176,7 +177,7 @@ $.fn.dataTable.ext.search.push(function(settings, data, index) {
     for (var range in currentParameters.ranges) {
         var stat;
         if (range == 'id') stat = unit.number + 1;
-        else stat = unit[range.toLowerCase()] || unit['max' + range.toUpperCase()];
+        else stat = unit.hasOwnProperty(range.toLowerCase()) ? unit[range.toLowerCase()] : unit['max' + range.toUpperCase()];
         if (stat < currentParameters.ranges[range][0] || stat > currentParameters.ranges[range][1])
             return false;
     }
@@ -317,6 +318,7 @@ app.directive('characterTable',function($rootScope, $compile) {
                     { title: 'RCV' },
                     { title: 'CMB' },
                     { title: 'Cost' },
+                    { title: 'Slots' },
                     { title: 'Stars' }
                 ],
                 rowCallback: function(row, data, index) {
