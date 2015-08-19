@@ -1974,12 +1974,14 @@ window.details = {
         captain: "Boosts ATK of Striker characters by 2x",
         cooldown: [ 25, 18 ],
         evolution: 341,
-        evolvers: [ 117, 78, 84, 95, 100 ]
+        evolvers: [ 117, 78, 84, 95, 100 ],
+        global: true
     },
-    341: { // Kraken Arctic Monster
+    341: { // Kraken Monster of the North
         special: "Changes all orbs into either [STR] or [QCK] orbs, deals random STR damage to all enemies",
         captain: "Boosts ATK of Striker characters by 2x",
-        cooldown: [ 25, 18 ]
+        cooldown: [ 25, 18 ],
+        global: true
     },
     342: { // Red Jeweled Porc
         evolution: [ 347, 347, 347 ],
@@ -2299,49 +2301,57 @@ window.details = {
         captain: "Boosts ATK and RCV of QCK characters by 1.2x",
         cooldown: [ 15, 8 ],
         evolution: 396,
-        evolvers: [ 79, 85, 90, 301 ]
+        evolvers: [ 79, 85, 90, 301 ],
+        global: true
     },
-    396: { // Miss Merry Christmas the Mole Human
+    396: { // Miss Merry Christmas Human Mole
         special: "Empties neighboring slots, amplifies orb effects by 1.25x for 1 turn",
         specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.25x more damage and opposite orbs will deal 1.25x less damage",
         captain: "Boosts ATK and RCV of QCK characters by 1.2x",
-        cooldown: [ 15, 8 ]
+        cooldown: [ 15, 8 ],
+        global: true
     },
     397: { // Mr. 4
         special: "Fills empty slots with [STR] orbs with a 50% probability, deals 15x character's ATK in damage to all enemies",
         captain: "Boosts ATK by 3x after scoring 5 Perfects in a row",
         cooldown: [ 25, 20 ],
         evolution: 398,
-        evolvers: [ 78, 84, 89, 300 ]
+        evolvers: [ 78, 84, 89, 300 ],
+        global: true
     },
-    398: { // Mr. 4 & Lassoo the Dog Gun
+    398: { // Mr. 4 and Lassoo the Dog-Gun
         special: "Fills empty slots with [STR] orbs with a 50% probability, deals 15x character's ATK in damage to all enemies",
         captain: "Boosts ATK by 4x after scoring 5 Perfects in a row",
-        cooldown: [ 25, 20 ]
+        cooldown: [ 25, 20 ],
+        global: true
     },
     399: { // Miss Doublefinger
         special: "Boosts ATK of DEX characters by 1.5x for 1 turn",
         captain: "Boosts HP of Striker characters by 1.5x",
         cooldown: [ 15, 8 ],
         evolution: 400,
-        evolvers: [ 80, 86, 91, 302 ]
+        evolvers: [ 80, 86, 91, 302 ],
+        global: true
     },
-    400: { // Miss Doublefinger the Spike Human
+    400: { // Miss Doublefinger Human Spike
         special: "Boosts ATK of DEX characters by 1.5x for 1 turn",
         captain: "Boosts HP of Striker characters by 2x",
-        cooldown: [ 15, 8 ]
+        cooldown: [ 15, 8 ],
+        global: true
     },
     401: { // Mr. 1
         special: "Reduces damage received by 50% for 1 turn, boosts ATK of Slasher characters by 1.25x for 1 turn",
         captain: "Reduces damage received by 10%, boosts ATK of Slasher characters by 1.5x",
         cooldown: [ 18, 12 ],
         evolution: 402,
-        evolvers: [ 78, 84, 89, 300 ]
+        evolvers: [ 78, 84, 89, 300 ],
+        global: true
     },
-    402: { // Mr. 1 the Fullbody Bladed Human
+    402: { // Mr. 1 Human Sword
         special: "Reduces damage received by 50% for 1 turn, boosts ATK of Slasher characters by 1.25x for 1 turn",
         captain: "Reduces damage received by 10%, boosts ATK of Slasher characters by 2x",
-        cooldown: [ 18, 12 ]
+        cooldown: [ 18, 12 ],
+        global: true
     },
     403: { // Rebecca
         special: "Deals several times the character's ATK in QCK damage to all enemies",
@@ -2369,10 +2379,11 @@ window.details = {
         special: "Randomizes all orbs, deals 7x character's ATK in DEX damage to all enemies",
         cooldown: [ 20, 10 ]
     },
-    408: { // Sir Crocodile the Shichibukai
+    408: { // Sir Crocodile Warlord of the Sea
         special: "Changes own orb into [INT], randomizes every other orb, deals 15x character's ATK in INT damage to all enemies",
         captain: "Reduces damage received by 20%, boosts ATK of Slasher characters by 2x",
-        cooldown: [ 23, 18 ]
+        cooldown: [ 23, 18 ],
+        global: true
     },
     409: { // Jinbei
         special: "Changes own orb into [QCK], deals 13x character's ATK in QCK damage to one enemy",
@@ -2540,7 +2551,7 @@ window.details = {
         evolution: 438,
         evolvers: [ 118, 80, 86, 94, 97 ]
     },
-    438: { // Perona Sweet Ghost Princees
+    438: { // Perona Sweet Ghost Princess
         special: "Recovers 3x character's RCV in HP, reduces damage received by 80% for 1 turn, poisons all enemies",
         captain: "Boosts RCV by 5x if HP is below 30% at the start of the turn",
         cooldown: [ 18, 18 ]
@@ -3557,7 +3568,7 @@ window.details = {
         special: "Boosts chances of getting [INT] orbs for 3 turns",
         cooldown: [ 25, 15 ]
     },
-    626: { // Gatling Hoodlum, Purple Bounty Hunter
+    626: { // Gatling Hoodlum, Black Bounty Hunter
         special: "Deals 13x character's ATK in INT damage to all enemies",
         cooldown: [ 35, 18 ]
     },
@@ -3871,7 +3882,9 @@ window.details = {
     678: { // Robin, Record of the Voyage - Strawhat Crew (Log Robin)
         special: "Reduces damage received by 50% for 1 turn, locks all orbs for 1 turn",
         captain: "Boosts ATK and RCV of PSY characters by 1.2x, boosts chances of getting [PSY] orbs",
-        cooldown: 19
+        cooldown: 19,
+        evolution: 679,
+        evolvers: [ 117, 87, 94, 303, 103 ]
     },
     679: { // Robin, Dream of the Voyage - Uncover the Blank Page of History (Log Robin)
         special: "Reduces damage received by 50% for 1 turn, locks all orbs for 1 turn",
@@ -3900,11 +3913,13 @@ window.details = {
         captain: "Boosts ATK and RCV of Fighter characters by 1.5x",
         cooldown: [ 22, 15 ]
     },
-    684: {
+    684: { // Ice Cream Loving Perona
         special: "Recovers 3x character's RCV in HP, reduces damage received by 80% for 1 turn",
-        cooldown: 23
+        cooldown: 23,
+        evolution: 685,
+        evolvers: [ 117, 88, 93, 99, 304 ]
     },
-    685: {
+    685: { // Strawberry Ice Cream Loving Perona
         special: "Recovers 3x character's RCV in HP, reduces damage received by 80% for 1 turn",
         captain: "Boosts ATK and RCV of Shooter characters by 1.5x",
         cooldown: 23
