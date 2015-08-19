@@ -5,6 +5,7 @@
     <div id="queryContainer">
         <input type="text" id="picker" placeholder="type to filter"
             ng-model="query" ng-model-options="{ updateOn: 'change blur' }" auto-focus>
+        <span class="clickable" ng-click="query = ''">Clear</span>
         <span popover-trigger="mouseenter" popover-placement="bottom"
             popover-template="'operators.html'" popover-append-to-body="'true'"><i>Operators</i></span>
     </div>

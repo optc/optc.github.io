@@ -47,6 +47,14 @@ body {
     font-weight: bold;
 }
 
+#queryContainer > .clickable {
+    cursor: pointer;
+}
+
+#queryContainer > .clickable:hover {
+    text-decoration: underline;
+}
+
 #leftContainer, #rightContainer {
     overflow-y: auto;
 }
