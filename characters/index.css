@@ -154,6 +154,10 @@ input {
     background-color: rgb(230,230,230);
 }
 
+.custom-filter.active:hover, .class-filter.active:hover, .drop-filter.active:hover {
+    background-color: darkred;
+}
+
 .help-link {
     float: left;
 }
@@ -171,6 +175,16 @@ input {
 
 .popover > .arrow {
     display: none;
+}
+
+#clear-button {
+    cursor: pointer;
+    background: salmon;
+    color: white;
+}
+
+#clear-button:hover {
+    background: orangered;
 }
 
 /***********

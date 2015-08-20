@@ -266,6 +266,11 @@ app.controller('MainCtrl',function($scope, $state, $stateParams, $timeout) {
         table.fnDraw();
     },true);
 
+    $scope.clearFilters = function() {
+        filters = { custom: [ ] };
+        $scope.filters = filters;
+    };
+
 });
 
 app.controller('DetailsCtrl',function($scope, $state, $stateParams) {
