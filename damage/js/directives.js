@@ -19,7 +19,7 @@ directives.autoFocus = function($timeout) {
 	};
 };
 
-directives.decorateSlot = function() {
+directives.decorateSlot = function($rootScope) {
     return {
         restrict: 'A',
         scope: { uid: '=', udata: '=' },
@@ -30,7 +30,10 @@ directives.decorateSlot = function() {
                     target.style.backgroundImage = null;
                     target.removeAttribute('title');
                 } else {
-                    target.style.backgroundImage = 'url(' + Utils.getThumbnailUrl(scope.uid) + ')';
+                    if (scope.uid != 1 || (scope.udata && scope.udata.name == 'Monkey D. Luffy'))
+                        target.style.backgroundImage = 'url(' + Utils.getThumbnailUrl(scope.uid) + ')';
+                    else
+                        target.style.backgroundImage = null;
                     if (attrs.decorateSlot.indexOf('notitle') == -1)
                         target.setAttribute('title', Utils.getThumbnailTitle(scope.udata || (scope.uid - 1)));
                 }
@@ -64,22 +67,33 @@ directives.expandableDamage = function() {
     };
 };
 
-directives.detailPane = function() {
+directives.detailPane = function($timeout) {
     return {
         restrict: 'A',
         templateUrl: 'views/details.html',
         scope: true,
         link: function(scope, element, attrs) {
             var modifiers = [ 'Miss', 'Good', 'Great', 'Perfect' ];
-            scope.modifyDamage = function(e,n) {
-                if (e.which != 2 && (e.which != 1 || !e.ctrlKey)) return;
-                var custom = $.extend([ ],scope.numbers[scope.type].hitModifiers);
+            var modifyDamage = function(e) {
+                var container = $(e.target).parent();
+                if (!container.hasClass('turnContainer')) return;
+                var custom = $.extend([ ],scope.numbers[scope.type].hitModifiers), n = container.parent().index();
                 custom[n] = modifiers[(modifiers.indexOf(custom[n])+1)%4];
                 scope.tdata.customHitModifiers = custom;
-                e.preventDefault();
-                e.stopPropagation();
-                return false;
+                if (!scope.$$phase) scope.$apply();
             };
+            element.longpress(
+                function(e) {
+                    modifyDamage(e);
+                    e.preventDefault();
+                    e.stopPropagation();
+                    return false;
+                },
+                function(e) {
+                    if (e.which != 2 && (e.which != 1 || !e.ctrlKey)) return;
+                    modifyDamage(e);
+                }
+            );
         }
     };
 };
@@ -268,10 +282,8 @@ directives.hpBar = function() {
                 scope.hp.perc = Math.round(scope.hp.current / scope.numbers.hp * 10000) / 100;
                 currentHP = scope.hp.current;
                 if (event === null) slider.val(value);
-                else if (event.type == 'change') {
-                    scope.data.percHP = scope.hp.perc;
-                    if (!scope.$$phase) scope.$apply();
-                }
+                else if (event.type == 'change') scope.data.percHP = scope.hp.perc;
+                if (event && !scope.$$phase) scope.$apply();
             };
             slider.on({ change: update, slide: update });
             scope.$watch('numbers.hp',function(hp) {
@@ -283,7 +295,7 @@ directives.hpBar = function() {
     };
 };
 
-directives.levelLabel = function() {
+directives.levelLabel = function($timeout) {
     return {
         restrict: 'E',
         replace: true,
@@ -300,7 +312,8 @@ directives.levelLabel = function() {
                 } else if (e.which == 2 || (e.which == 1 && e.ctrlKey))
                     scope.data.team[scope.slot].level = scope.data.team[scope.slot].unit.maxLevel;
                 scope.$apply();
-                if (scope.editorVisible) input.focus();
+                if (scope.editorVisible)
+                    $timeout(function() { input.focus(); });
                 e.preventDefault();
                 e.stopPropagation();
                 return false;

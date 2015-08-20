@@ -1,20 +1,21 @@
 <div id="main">
 
-    <units></units>
-
-    <cruncher></cruncher>
+    <div class="row">
+        <units></units>
+        <cruncher></cruncher>
+    </div>
 
     <hp-bar></hp-bar>
 
     <div id="other">
-        <button type="button" class="btn btn-xs btn-info" id="reset" ui-sref=".reset">Reset</button>
         <button type="button" class="btn btn-xs btn-primary menu-link"
             ng-click="options.sidebarVisible = !options.sidebarVisible">Settings</a>
+        <button type="button" class="btn btn-xs btn-info" id="reset" ui-sref=".reset">Reset</button>
     </div>
 
-    <sidebar ng-class="{ open: options.sidebarVisible }"></sidebar>
-
 </div>
+
+<sidebar ng-class="{ open: options.sidebarVisible }"></sidebar>
 
 <div class="unit empty fa fa-trash-o" id="removeSlot" dropzone style="display: none"></div>
 

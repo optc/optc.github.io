@@ -1,6 +1,6 @@
 <div ng-repeat="turn in numbers[type].damage">
 
-    <div class="turnContainer" ng-click="modifyDamage($event,$index)">
+    <div class="turnContainer">
 
         <div class="onTurn">#{{$index+1}} ({{numbers[type].hitModifiers[$index]}} / {{ numbers[type].chainMultipliers[$index] | number:1 }}x chain)</div>
 

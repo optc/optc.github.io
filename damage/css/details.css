@@ -1,7 +1,7 @@
 #stats {
     position: relative;
     width: 150px;
-    height: 360px;
+    height: 350px;
 }
 
 .damage {
@@ -16,16 +16,14 @@
 }
 
 .damage.STR { top: 0px; }
-.damage.QCK { top: 75px; }
-.damage.DEX { top: 150px; }
-.damage.PSY { top: 225px; }
-.damage.INT { top: 300px; }
+.damage.QCK { top: 73px; }
+.damage.DEX { top: 146px; }
+.damage.PSY { top: 219px; }
+.damage.INT { top: 292px; }
 
 .details {
     top: 0px !important;
-    height: 360px !important;
-    display: flex;
-    align-items: center;
+    height: 352px !important;
 }
 
 .details > .damageLabel,

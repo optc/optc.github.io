@@ -683,7 +683,7 @@ window.units = [
     [ "Ice Cream Loving Robin", "PSY", "Fighter", 4, 12, 6, 1, 50, 392109, 147, 61, 46, 988, 491, 218, 0.7 ],
     [ "Chocolate Ice Cream Loving Robin", "PSY", "Fighter", 5, 20, 4, 2, 99, 3000000, 943, 443, 172, 1903, 842, 361, 1 ],
     [ "Ice Cream Loving Perona", "INT", "Shooter", 4, 12, 5, 1, 50, 392109, 99, 67, 52, 901, 527, 233, 1 ],
-    [ "Strawberry Ice Cream Loving Perona", "INT", "Shooter", 5, 20, 4, 2, 99, 3000000, 848, 462, 182, 1689, 877, 385, 0 ],
+    [ "Strawberry Ice Cream Loving Perona", "INT", "Shooter", 5, 20, 4, 2, 99, 3000000, 848, 462, 182, 1689, 877, 385, 1 ],
     [ ],
     [ "Calgara", "STR", [ "Freedom", "Striker" ], 3, 12, 6, 1, 50, 392109, 94, 115, 0, 1203, 692, 0, 1 ],
     [ "Calgara, the Great Warrior of Shandia", "STR", [ "Freedom", "Striker" ], 4, 20, 4, 2, 99, 3000000, 1145, 633, 0, 2401, 1300, 90, 1 ],

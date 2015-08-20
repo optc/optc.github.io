@@ -87,7 +87,7 @@ controllers.PickerCtrl = function($scope, $state, $stateParams) {
         var n = recentUnits.indexOf(unitNumber);
         if (n < 0) recentUnits.unshift(unitNumber);
         else recentUnits = recentUnits.splice(n,1).concat(recentUnits);
-        recentUnits = recentUnits.slice(0,14);
+        recentUnits = recentUnits.slice(0,16);
         localStorage.setItem('recentUnits',JSON.stringify(recentUnits));
     };
 

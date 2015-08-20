@@ -54,7 +54,7 @@ utils.getThumbnailTitle = function(arg) {
 };
 
 utils.isClickOnOrb = function(e,target) {
-    var x = e.pageX - target.offsetParent.offsetLeft, y = e.pageY - target.offsetParent.offsetTop;
+    var x = e.offsetX, y = e.offsetY;
     var distance = Math.sqrt(Math.pow(x-20,2)+Math.pow(y-21,2));
     return distance < 13;
 };

@@ -8,46 +8,35 @@ body, html {
     user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
-}
-
-body, #main, #hp, #other {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    /* Safari */
-    display: -webkit-flex;
-    -webkit-align-items: center;
-    -webkit-justify-content: center;
-    -webkit-flex-wrap: wrap;
+    position: relative;
+    overflow: hidden;
 }
 
 #main {
     width: 500px;
+    height: 540px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -270px 0 0 -250px;
+    text-align: center;
 }
 
 #units {
     width: 240px;
-    display: flex;
-    flex-wrap: wrap;
-    /* Safari */
-    display: -webkit-flex;
-    -webkit-flex-wrap: wrap;
+    display: inline-block;
 }
 
 #stats {
     margin-left: 50px;
+    display: inline-block;
 }
 
 #hp, #other {
-    width: 350px;
-    margin-top: 30px;
-}
-
-#hp {
-    flex-direction: column;
-    /* Safari */
-    -webkit-flex-direction: column;
+    width: 440px;
+    margin: 30px auto 0 auto;
+    display: inline-block;
+    text-align: center;
 }
 
 .animated {
@@ -64,16 +53,11 @@ body, #main, #hp, #other {
     height: 112px;
     cursor: pointer;
     border: 1px solid black;
-    margin: 3px !important;
+    margin: 4px 4px 0 0 !important;
     text-align: center;
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* Safari */
-    display: -webkit-flex;
-    -webkit-align-items: center;
-    -webkit-justify-content: center;
+    display: inline-block;
+    float: left;
 }
 
 .empty {
@@ -88,6 +72,13 @@ body, #main, #hp, #other {
 
 .unit:not(.slide) > :not([class]) {
     display: none !important;
+}
+
+.unitPlaceholder {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .unitContainer, .ghostContainer {
@@ -199,6 +190,10 @@ body, #main, #hp, #other {
     display: block;
 }
 
+#removeSlot {
+    line-height: 150%;
+}
+
 /******************
  * DAMAGE NUMBERS *
  ******************/
@@ -206,7 +201,6 @@ body, #main, #hp, #other {
 .damage {
     border-radius: 5px;
     width: 150px;
-    margin-bottom: 15px;
     text-align: center;
     padding: 5px;
 }
@@ -245,6 +239,7 @@ body, #main, #hp, #other {
 #hpSlider {
     width: 350px;
     height: 12px;
+    display: inline-block;
 }
 
 .noUi-handle {
@@ -255,6 +250,12 @@ body, #main, #hp, #other {
 
 .noUi-handle:before {
     left: 9px !important;
+    top: 3px !important;
+    height: 10px !important;
+}
+
+.noUi-handle:after {
+    left: 11px !important;
     top: 3px !important;
     height: 10px !important;
 }
@@ -278,12 +279,6 @@ body, #main, #hp, #other {
     text-align: left;
     padding-left: 2px;
     width: 50%;
-}
-
-.noUi-handle:after {
-    left: 11px !important;
-    top: 3px !important;
-    height: 10px !important;
 }
 
 #other > button {
@@ -334,7 +329,7 @@ body, #main, #hp, #other {
  ***********/
 
 #menu {
-    position: absolute;
+    position: fixed;
     top: 0px;
     left: -16.625em;
     width: 16.625em;
@@ -601,9 +596,6 @@ li input {
 #recentUnits {
     height: 42px;
     margin-top: 5px;
-    display: flex;
-    /* Safari */
-    display: -webkit-flex;
 }
 
 #defense-table tbody > tr:hover,
@@ -717,11 +709,7 @@ li input {
 }
 
 #candySliders {
-    display: flex;
-    justify-content: center;
-    /* Safari */
-    display: -webkit-flex;
-    -webkit-justify-content: center;
+    text-align: center;
 }
 
 #candySliders > div {
@@ -730,7 +718,7 @@ li input {
 
 .candyLabel {
     position: absolute;
-    top: 60px;
+    bottom: 40px;
     left: 0;
     width: 100%;
     text-align: center;
@@ -821,9 +809,9 @@ body > .popover .popover-content {
 @media only screen and (max-width: 768px) {
 
     html, body {
-        width: 600px;
-        height: 650px !important;
-        margin-top: 12.5%;
+        /*width: 600px;*/
+        /*height: 650px !important;*/
+        /*margin-top: 12.5%;*/
         transition: left .1s linear;
     }
 
@@ -842,12 +830,35 @@ body > .popover .popover-content {
         margin: 0 !important;
     }
 
-    .shifted {
-        margin-left: 16.625em;
+    .shifted #main {
+        margin-left: 0;
+        left: 17.5em;
     }
 
     .unitLevel {
         font-size: 100%;
+    }
+
+    .popover {
+        display: none !important;
+    }
+
+    .noUi-handle {
+        width: 36px !important;
+        height: 27px !important;
+        top: -8px !important;
+    }
+
+    .noUi-handle:before {
+        left: 15px !important;
+        top: 6px !important;
+        height: 10px !important;
+    }
+
+    .noUi-handle:after {
+        left: 17px !important;
+        top: 6px !important;
+        height: 10px !important;
     }
 
 }
@@ -855,7 +866,7 @@ body > .popover .popover-content {
 @media (min-width: 768px) {
 
     #picker.modal-dialog {
-        width: 700px;
+        width: 704px;
     }
 
 }
