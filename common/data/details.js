@@ -3792,7 +3792,9 @@ window.details = {
         special: "Deals PSY damage to one enemy, recovers 5x character's RCV in HP at the end of the turn for 5 turns",
         specialNotes: "The exact damage is proportional to the crew's remaining HP and is higher the lower the HP is. The formula used is 80000 * (1 - (current HP) / (total HP))",
         captain: "Recovers 2x character's RCV in HP at the end of the turn",
-        cooldown: [ 25, 16 ]
+        cooldown: [ 25, 16 ],
+        evolution: 664,
+        evolvers: [ 117, 81, 87, 98, 103 ]
     },
     664: { // Nefertari Vivi, Vice-Leader of the Suna Suna Clan
         special: "Deals PSY damage to one enemy, recovers 5x character's RCV in HP at the end of the turn for 5 turns",
@@ -3803,7 +3805,9 @@ window.details = {
     665: { // Kohza, Alabasta Citizen
         special: "Changes own orb into [QCK], boosts ATK against enemies with reduced defense by 1.3x for 2 turns",
         captain: "Boosts ATK by 1.2x, reduces HP and RCV by 80%",
-        cooldown: [ 19, 10 ]
+        cooldown: [ 19, 10 ],
+        evolution: 666,
+        evolvers: [ 117, 79, 85, 96, 101 ]
     },
     666: { // Kohza, Leader of the Suna Suna Clan
         special: "Changes own orb into [QCK], boosts ATK against enemies with reduced defense by 1.3x for 2 turns",

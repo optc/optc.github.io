@@ -746,7 +746,7 @@ window.drops = {
         {
             name: 'Girls of Summer Paradise',
             thumb: 683,
-            Expert: [ 659, 680, 682 ]
+            Expert: [ 659, 680, 682, 684 ]
         }
    ]
 
