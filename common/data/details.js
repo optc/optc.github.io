@@ -381,6 +381,7 @@ window.details = {
     },
     58: { // Don Krieg Poison Gas Bomb MH5
         special: "Poisons all enemies",
+        specialNotes: "Poison deals 0.5x character's ATK in fixed damage at the end of each turn",
         captain: "Reduces damage received by 20%",
         cooldown: [ 15, 12 ],
         global: true
@@ -1213,6 +1214,7 @@ window.details = {
     },
     215: { // Neptunian Squid
         special: "Poisons all enemies",
+        specialNotes: "Poison deals 0.5x character's ATK in fixed damage at the end of each turn",
         captain: "Boosts HP of Striker characters by 1.5x",
         cooldown: [ 15, 12 ],
         global: true
@@ -2227,6 +2229,7 @@ window.details = {
     },
     383: { // Mr. 0 Baroque Works CEO (Crocodile)
         special: "Poisons one enemy",
+        specialNotes: "Poison deals 0.5x character's ATK in fixed damage at the end of each turn",
         captain: "Reduces damage received by 10%, boosts ATK of INT units by 2x",
         cooldown: [ 17, 12 ],
         evolution: [ 384, 408 ],
@@ -2234,7 +2237,8 @@ window.details = {
         global: true
     },
     384: { // Sir Crocodile
-        special: "Poisons one enemy",
+        special: "Strongly poisons one enemy",
+        specialNotes: "Strong poison deals 5x character's ATK in fixed damage at the end of each turn",
         captain: "Reduces damage received by 20%, boosts ATK of INT units by 2x",
         cooldown: [ 17, 12 ],
         global: true
@@ -2276,14 +2280,14 @@ window.details = {
         cooldown: [ 17, 8 ]
     },
     391: { // Perona
-        special: "Reduces damage received by 90% for 1 turn, reduces the defense of all enemies by 80% for 1 turn, deals 1,000 damage to all enemies",
+        special: "Reduces damage received by 90% for 1 turn, reduces the defense of all enemies by 80% for 1 turn, deals 1,000 damage to all enemies at the end of the following turn",
         captain: "Boosts RCV of DEX characters by 1.5x",
         cooldown: [ 23, 14 ],
         evolution: 392,
         evolvers: [ 117, 86, 91, 97, 102 ]
     },
     392: { // Ghost Princess Perona
-        special: "Reduces damage received by 90% for 1 turn, reduces the defense of all enemies by 80% for 1 turn, deals 1,000 damage to all enemies",
+        special: "Reduces damage received by 90% for 1 turn, reduces the defense of all enemies by 80% for 1 turn, deals 1,000 damage to all enemies at the end of the following turn",
         captain: "Boosts RCV of DEX characters by 2x",
         cooldown: [ 23, 14 ]
     },
@@ -2545,14 +2549,14 @@ window.details = {
         cooldown: [ 12, 8 ]
     },
     437: { // Perona Sweet
-        special: "Recovers 3x character's RCV in HP, reduces damage received by 80% for 1 turn, poisons all enemies",
+        special: "Recovers 3x character's RCV in HP, reduces damage received by 80% for 1 turn, deals 1,000 damage to all enemies at the end of the following turn",
         captain: "Boosts RCV by 3x if HP is below 30% at the start of the turn",
         cooldown: [ 18, 18 ],
         evolution: 438,
         evolvers: [ 118, 80, 86, 94, 97 ]
     },
     438: { // Perona Sweet Ghost Princess
-        special: "Recovers 3x character's RCV in HP, reduces damage received by 80% for 1 turn, poisons all enemies",
+        special: "Recovers 3x character's RCV in HP, reduces damage received by 80% for 1 turn, deals 1,000 damage to all enemies at the end of the following turn",
         captain: "Boosts RCV by 5x if HP is below 30% at the start of the turn",
         cooldown: [ 18, 18 ]
     },
@@ -2844,7 +2848,8 @@ window.details = {
         evolvers: [ 117, 81, 87 ]
     },
     494: { // Black Hunting Group Shandia Warrior
-        special: "Deals 3x character's ATK in INT damage toc all enemies, poisons all enemies",
+        special: "Deals 3x character's ATK in INT damage to all enemies, poisons all enemies",
+        specialNotes: "Poison deals 0.5x character's ATK in fixed damage at the end of each turn",
         cooldown: [ 20, 15 ],
         evolution: 496,
         evolvers: [ 117, 82, 88 ]
@@ -2856,6 +2861,7 @@ window.details = {
     },
     496: { // Black Hunting Group Expert Shandia Warrior
         special: "Deals 3x character's ATK in INT damage to all enemies, poisons all enemies",
+        specialNotes: "Poison deals 0.5x character's ATK in fixed damage at the end of each turn",
         captain: "Boosts ATK of Shooter characters by 1.5x",
         cooldown: [ 20, 15 ]
     },
@@ -2935,6 +2941,7 @@ window.details = {
     },
     509: { // The Strongest Prisoner, Sir Crocodile Mr. 0, Former CEO of Baroque Works
         special: "Poisons all enemies, boosts ATK of Striker characters by 1.5x for 1 turn",
+        specialNotes: "Poison deals 0.5x character's ATK in fixed damage at the end of each turn",
         captain: "Boosts ATK of Striker characters by 1.5x",
         cooldown: [ 24, 14 ],
         evolution: 510,
@@ -2942,6 +2949,7 @@ window.details = {
     },
     510: { // The Strongest Prisoner, Sir Crocodile the Shichibukai
         special: "Poisons all enemies, boosts ATK of Striker characters by 1.5x for 1 turn",
+        specialNotes: "Poison deals 0.5x character's ATK in fixed damage at the end of each turn",
         captain: "Reduces damage received by 10%, boosts ATK of Striker characters by 2x",
         cooldown: [ 24, 14 ]
     },
@@ -3156,14 +3164,14 @@ window.details = {
     545: { // Enel
         special: "Deals 6,000 damage to all enemies, boosts ATK of PSY characters by 1.5x for 1 turn",
         captain: "Boosts ATK of PSY characters by 2x",
-        cooldown: [ 32, 17 ],
+        cooldown: 20,
         evolution: 546,
         evolvers: [ 118, 266, 92, 303, 103 ]
     },
     546: { // God Enel
         special: "Deals 6,000 damage to all enemies, boosts ATK of PSY characters by 1.5x for 1 turn",
         captain: "Boosts ATK of PSY characters by 2x, reduces damage received by 20%",
-        cooldown: [ 32, 17 ]
+        cooldown: 20
     },
     547: { // Monkey D. Luffy Mt. Corvo's Brothers 3
         special: "Reduces current HP by 10%, deals 1x character's ATK in STR damage to one enemy, prevents death as long as HP is above 50% for 1 turn",

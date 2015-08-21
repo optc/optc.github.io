@@ -1,5 +1,5 @@
 window.defenses = [
-    // Raid bosses
+    /* * * * * Raid bosses * * * * */
     [ 'Mihawk'                              , 'Mihawk Raid'                          , 'Expert', 226, 150 ],
     [ 'Mihawk'                              , 'Mihawk Raid'                          , 'Master', 227, 175 ],
     [ 'Monster Chopper'                     , 'Monster Chopper Raid'                 , 'Expert', 248, 340 ],
@@ -27,9 +27,11 @@ window.defenses = [
     [ 'Enel (def up)'                       , 'Enel Raid'                            , 'Master', 602, 400 ],
     [ 'Enel'                                , 'Enel Raid'                            , 'Ultimate', 603, 278 ],
     [ 'Enel (def up)'                       , 'Enel Raid'                            , 'Ultimate', 603, 556 ],
-    [ 'Duval (stage 1)'                     , 'Duval Raid'                           , 'Master', 652, 2500 ],
-    [ 'Duval (stage 2)'                     , 'Duval Raid'                           , 'Master', 652, 5000 ],
-    [ 'Duval (stage 2, def up)'             , 'Duval Raid'                           , 'Master', 653, 15000 ],
+    [ 'Duval'                               , 'Duval Raid, stage 4'                  , 'Master', 652, 2500 ],
+    [ 'Duval'                               , 'Duval Raid, stage 5'                  , 'Master', 653, 5000 ],
+    [ 'Duval (def up)'                      , 'Duval Raid, stage 5'                  , 'Master', 653, 15000 ],
+    /* * * * * Story Islands * * * * */
+    [ 'Crocodile (def up)'                  , 'Nanohana, chapter 15'                 , '' , 383, 1500 ],
     /* * * * * Fortnight Islands * * * * */
     [ 'Buggy'                               , 'Buggy Fortnight'                      , 'Expert', 39, 50 ],
     [ 'Alvida'                              , 'Alvida Fortnight'                     , 'Expert', 30, 40000 ],
