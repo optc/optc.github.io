@@ -19,7 +19,7 @@
 
                 <div class="panel panel-default">
                     <table class="table table-striped">
-                        <thead>
+                        <tbody>
                             <tr>
                                 <th ng-if="!hybrid">Class</th>
                                 <th ng-if="hybrid">Class 1</th>
@@ -27,13 +27,7 @@
                                 <th>Type</th>
                                 <th>Stars</th>
                                 <th>Cost</th>
-                                <th>Combo</th>
-                                <th>Slots</th>
-                                <th>Max Level</th>
-                                <th>EXP to Max</th>
                             </tr>
-                        </thead>
-                        <tbody>
                             <tr>
                                 <td ng-if="!hybrid">{{unit.class}}</td>
                                 <td ng-if="hybrid">{{unit.class[0]}}</td>
@@ -41,10 +35,18 @@
                                 <td>{{unit.type}}</td>
                                 <td>{{unit.stars}}</td>
                                 <td>{{unit.cost}}</td>
+                            </tr>
+                            <tr>
+                                <th>Combo</th>
+                                <th>Slots</th>
+                                <th>Max Level</th>
+                                <th colspan="{{hybrid ? 2 : 1}}">EXP to Max</th>
+                            </tr>
+                            <tr>
                                 <td>{{unit.combo}}</td>
                                 <td>{{unit.slots}}</td>
                                 <td>{{unit.maxLevel}}</td>
-                                <td>{{unit.maxEXP | number}}</td>
+                                <td colspan="{{hybrid ? 2 : 1}}">{{unit.maxEXP | number}}</td>
                             </tr>
                         </tbody>
                     </table>

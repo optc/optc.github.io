@@ -8,25 +8,32 @@ body {
 }
 
 #mainContainer {
-    width: 100%;
-    height: 100%;
-    margin: auto;
-    display: flex;
-    display: -webkit-flex; /* Safari */
+    padding: 0;
     position: absolute;
     top: 0;
+    bottom: 0;
     left: 0;
+    right: 0;
 }
 
 #leftContainer {
     min-width: 250px;
     max-width: 250px;
     height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#rightContainer {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 250px;
 }
 
 #rightContainer {
     padding: 10px;
-    /*flex-grow: 2;*/
 }
 
 #queryContainer {
@@ -296,12 +303,18 @@ tr.incomplete td:nth-child(2):after {
     height: 100%;
 }
 
-.modal-content {
-    display: flex;
-    flex-direction: column;
-    /* Safari */
-    display: -webkit-flex;
-    -webkit-flex-direction: column;
+.modal-body {
+    position: absolute !important;
+    top: 51px;
+    bottom: 0;
+    width: 100%;
+    overflow-y: scroll;
+    text-align: center;
+    position: relative;
+}
+
+.modal-body td {
+    text-align: left;
 }
 
 .modal-dialog {
@@ -317,16 +330,6 @@ tr.incomplete td:nth-child(2):after {
     color: white;
     min-height: 51px;
     max-height: 51px;
-}
-
-.modal-body {
-    overflow-y: auto;
-    text-align: center;
-    position: relative;
-}
-
-.modal-body td {
-    text-align: left;
 }
 
 .animated {
@@ -373,9 +376,9 @@ tr.incomplete td:nth-child(2):after {
 }
 
 .arrow {
-    font-size: 2em;
+    font-size: 1.5em;
+    bottom: 10px;
     position: relative;
-    bottom: 32px;
     margin: 0 10px 0 10px;
 }
 
@@ -425,6 +428,7 @@ tr.incomplete td:nth-child(2):after {
     padding-top: 0;
     padding-bottom: 0;
     width: 0%;
+    vertical-align: middle;
 }
 
 .drop-table td, .drop-table div {
@@ -455,10 +459,10 @@ tr.incomplete td:nth-child(2):after {
 }
 
 .slot.medium {
-    width: 80px;
-    height: 80px;
-    background-size: 80px 80px;
-    margin: 2px;
+    width: 40px;
+    height: 40px;
+    background-size: 40px 40px;
+    margin: 1px;
 }
 
 .slot.small {
@@ -472,18 +476,18 @@ tr.incomplete td:nth-child(2):after {
  * MOBILE *
  **********/
 
-@media only screen and (max-width: 768px) {
+@media (min-width: 1024px) {
 
     .slot.medium {
-        width: 40px;
-        height: 40px;
-        background-size: 40px 40px;
-        margin: 1px;
+        width: 80px;
+        height: 80px;
+        background-size: 80px 80px;
+        margin: 2px;
     }
 
     .arrow {
-        font-size: 1.5em;
-        bottom: 10px;
+        font-size: 2em;
+        bottom: 32px;
     }
 
 }
