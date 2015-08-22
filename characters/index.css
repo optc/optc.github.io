@@ -1,39 +1,7 @@
 body, html {
     height: 100%;
     font-family: 'Open Sans', sans-serif;
-}
-
-body {
-    padding: 20px 20px 20px 0;
-}
-
-#mainContainer {
-    padding: 0;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-}
-
-#leftContainer {
-    min-width: 250px;
-    max-width: 250px;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-#rightContainer {
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 250px;
-}
-
-#rightContainer {
-    padding: 10px;
+    overflow-y: hidden;
 }
 
 #queryContainer {
@@ -61,10 +29,6 @@ body {
 
 #queryContainer > .clickable:hover {
     text-decoration: underline;
-}
-
-#leftContainer, #rightContainer {
-    overflow-y: auto;
 }
 
 input {
@@ -194,6 +158,10 @@ input {
     background: orangered;
 }
 
+.dataTables_info, .dataTables_paginate {
+    text-align: left !important;
+}
+
 /***********
  * BONUSES *
  ***********/
@@ -242,11 +210,8 @@ input {
 }
 
 #mainTable td:nth-child(2) {
-    width: 100%;
     white-space: nowrap;
-    text-overflow: ellipsis;
-    /*max-width: 0;*/
-    /*overflow: hidden;*/
+    width: 100%;
 }
 
 #mainTable td + td ~ td {
@@ -488,6 +453,77 @@ tr.incomplete td:nth-child(2):after {
     .arrow {
         font-size: 2em;
         bottom: 32px;
+    }
+
+    #mainContainer {
+        min-width: 1000px;
+        width: 100%;
+        height: 100%;
+        position: static;
+    }
+
+    #leftContainer {
+        min-width: 250px;
+        max-width: 250px;
+        width: 250px;
+        position: relative;
+        float: left;
+        overflow-y: scroll;
+        height: 100%;
+    }
+
+    #rightContainer {
+        height: 100%;
+        overflow: auto;
+        position: relative;
+        border-collapse: collapse;
+        padding: 10px;
+        left: 0;
+    }
+
+    #mainTable td:nth-child(2) {
+        white-space: normal !important;
+    }
+
+    #mainTable td:nth-child(2) > img {
+        float: left;
+        margin-right: 5px;
+    }
+
+    #mainTable td:nth-child(2) > a {
+        height: 40px;
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+}
+
+@media (max-width: 1024px) {
+
+    #mainContainer {
+        height: 100%;
+        position: relative;
+        overflow-y: auto;
+    }
+
+    #leftContainer {
+        min-width: 250px;
+        max-width: 250px;
+        width: 250px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        overflow-y: scroll;
+        float: left;
+        height: 100%;
+    }
+
+    #rightContainer {
+        padding: 10px;
+        position: absolute;
+        top: 0;
+        left: 250px;
+        background: white;
     }
 
 }

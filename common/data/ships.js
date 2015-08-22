@@ -128,6 +128,19 @@ window.ships = {
             return !p.unit.class.has('Striker') ? 1 :
                 [ 1.2, 1.2, 1.2, 1.2, 1.3, 1.3, 1.3, 1.4, 1.4, 1.5 ][p.boatLevel - 1];
         }
+    },
+
+    'Ace\'s Striker': {
+        thumb: null,
+        description: 'Boosts ATK of Shooter characters by 1.5x and their HP by 1.3x, reduces cooldown of all specials by 1 turn at the start of the fight',
+        atk: function(p) {
+            return !p.unit.class.has('Shooter') ? 1 :
+                [ 1.2, 1.2, 1.2, 1.25, 1.25, 1.3, 1.3, 1.4, 1.4, 1.5 ][p.boatLevel - 1];
+        },
+        hp: function(p) {
+            return !p.unit.class.has('Shooter') ? 1 :
+                [ 1, 1.1, 1.1, 1.1, 1.2, 1.2, 1.25, 1.25, 1.3, 1.3 ][p.boatLevel - 1];
+        }
     }
 
 };
