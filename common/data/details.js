@@ -1426,7 +1426,7 @@ window.details = {
     },
     248: { // Tony Tony Chopper Pre-Rampage (Monster Chopper)
         special: "Deals random STR damage to one enemy",
-        captain: "Reduces HP of STR characters by 60% and boosts their ATK by 2.5x",
+        captain: "Boosts ATK of STR characters by 2.5x and reduces their HP by 60%",
         cooldown: [ 30, 15 ],
         evolution: 249,
         evolvers: [ 118, 84, 84, 95, 100 ],
@@ -1434,7 +1434,7 @@ window.details = {
     },
     249: { // Tony Tony Chopper Post-Rampage (Monster Chopper)
         special: "Deals random STR damage to one enemy",
-        captain: "Reduces HP of STR characters by 60% and boosts their ATK by 3x",
+        captain: "Boosts ATK of STR characters by 3x and reduces their HP by 60%",
         cooldown: [ 30, 15 ],
         global: true
     },
