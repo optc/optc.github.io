@@ -9,6 +9,9 @@ var reverseDropMap = null;
 
 Utils.parseUnits(false);
 
+var fuse = new Fuse(window.units, { keys: [ 'name' ], id: 'number' });
+var fuzzy = JSON.parse(localStorage.getItem('fuzzy')) || false;
+
 /*********************
  * Utility functions *
  *********************/
@@ -182,7 +185,10 @@ $.fn.dataTable.ext.search.push(function(settings, data, index) {
             return false;
     }
     // filter by query
-    if (currentParameters.query && !currentParameters.query.test(unit.name)) return false;
+    if (currentParameters.query) {
+        if (!fuzzy && !currentParameters.query.test(unit.name)) return false;
+        if (fuzzy && !(new Fuse([ unit ], { keys: [ 'name' ], threshold: 0.3 })).search(currentParameters.query.source).length) return false;
+    }
     /* * * * * Sidebar filters * * * * */
     if (!currentParameters.filters) return true;
     var filters = currentParameters.filters;
@@ -347,9 +353,20 @@ app.directive('characterTable',function($rootScope, $compile) {
                     row.setAttribute('loaded','true');
                 }
             });
-            var link = $('<span class="help-link">If you notice any error or missing information, please report it <a>here</a>.</span>');
+            // report link
+            var link = $('<span class="help-link">Want to report or request something? Use <a>this form</a>.</span>');
             link.find('a').attr('href', 'https://docs.google.com/forms/d/1jSlwN0Ruyc5bFfxdXlwihqfLdCiELX7HQTabXoCV7hU/viewform?usp=send_form');
-            link.insertBefore($('.dataTables_length'));
+            link.insertAfter($('.dataTables_length'));
+            // fuzzy toggle
+            var fuzzyToggle = $('<label class="fuzzy-toggle"><input type="checkbox">Enable fuzzy search</input></label>');
+            fuzzyToggle.attr('title','When enabled, searches will also display units whose name is not an exact match to the search keywords.\nUseful if you don\'t know the correct spelling of a certain unit.');
+            fuzzyToggle.find('input').prop('checked', fuzzy);
+            fuzzyToggle.find('input').change(function() {
+                fuzzy = $(this).is(':checked');
+                localStorage.setItem('fuzzy', JSON.stringify(fuzzy));
+                table.fnDraw();
+            });
+            fuzzyToggle.insertBefore($('.dataTables_length'));
         }
     };
 });
@@ -458,15 +475,7 @@ app.directive('compare',function() {
             var target = element.typeahead(
                 { minLength: 3, highlight: true },
                 {
-                    source: function(query, callback) {
-                        try {
-                            query = new RegExp(query, 'i');
-                            var result = window.units
-                                .filter(function(x) { return query.test(x.name); })
-                                .map(function(x) { return x.number; });
-                            callback(result);
-                        } catch (e) { }
-                    },
+                    source: function(query, callback) { callback(fuse.search(query)); },
                     templates: {
                         suggestion: function(id) {
                             var name = units[id].name, url = Utils.getThumbnailUrl(id+1);

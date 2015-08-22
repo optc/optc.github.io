@@ -31,7 +31,7 @@ body, html {
     text-decoration: underline;
 }
 
-input {
+input[type="text"] {
     width: 100%;
 }
 
@@ -130,7 +130,23 @@ input {
 }
 
 .help-link {
+    float: right;
+    margin-right: 15px;
+    position: relative;
+    top: 3px;
+    color: red;
+}
+
+.fuzzy-toggle {
     float: left;
+    position: relative;
+    top: 1px;
+}
+
+.fuzzy-toggle > input {
+    margin-right: 5px;
+    position: relative;
+    top: 2px;
 }
 
 .filter-container:last-child {
