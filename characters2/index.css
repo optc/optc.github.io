@@ -1,0 +1,529 @@
+body, html {
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+    overflow-y: hidden;
+}
+
+#queryContainer {
+    padding: 10px;
+    display: table;
+    width: 100%;
+}
+
+#queryContainer > input {
+    display: table-cell;
+    width: 100%;
+}
+
+#queryContainer > span {
+    display: table-cell;
+    width: 1px;
+    cursor: help;
+    padding-left: 10px;
+    font-weight: bold;
+}
+
+#queryContainer > .clickable {
+    cursor: pointer;
+}
+
+#queryContainer > .clickable:hover {
+    text-decoration: underline;
+}
+
+input {
+    width: 100%;
+}
+
+#type-container {
+    text-align: center;
+}
+
+.filter-header {
+    display: block;
+    padding: 5px;
+    text-align: center;
+    background: rgb(50,50,50);
+    color: white;
+    font-weight: bold;
+    cursor: default;
+}
+
+.type-filter, .class-filter, .custom-filter, .drop-filter {
+    display: inline-block;
+    padding: 3px 0;
+    text-align: center;
+    cursor: pointer;
+}
+
+.type-filter, .class-filter {
+    width: 33.3333%;
+}
+
+.drop-filter {
+    width: 50%;
+}
+
+.type-filter:nth-child(4) ~ .type-filter ,
+.class-filter:nth-child(4) ~ .class-filter {
+    width: 50%;
+}
+
+.type-filter:not(.active):not(:hover) {
+    opacity: 0.3;
+}
+
+.type-filter.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.STR { background: salmon; }
+.QCK { background: lightskyblue; }
+.DEX { background: lightgreen; }
+.PSY { background: gold; }
+.INT { background: orchid; }
+.RCV { background: peru; }
+.TND { background: coral; }
+
+.class-filter {
+    border: 1px solid gray;
+    border-right: none;
+}
+
+.class-filter:nth-child(4) ~ .class-filter {
+    border-top: none;
+}
+
+.class-filter.active, .custom-filter.active, .drop-filter.active {
+    background: red;
+    color: white;
+    font-weight: bold;
+}
+
+.custom-filter {
+    width: 100%; 
+    border-color: gray;
+    border-width: 1px 0 0 0;
+    border-style: solid;
+    display: block;
+}
+
+.custom-filter:last-child {
+    border-bottom: 1px solid gray;
+}
+
+.drop-filter:nth-child(3) , .drop-filter:nth-child(5) {
+    border-left: 1px solid gray;
+}
+
+.drop-filter:nth-child(2), .drop-filter:nth-child(3) {
+    border-bottom: 1px solid gray;
+}
+
+.custom-filter:hover, .class-filter:hover, .drop-filter:hover {
+    background-color: rgb(230,230,230);
+}
+
+.custom-filter.active:hover, .class-filter.active:hover, .drop-filter.active:hover {
+    background-color: darkred;
+}
+
+.help-link {
+    float: left;
+}
+
+.filter-container:last-child {
+    margin-bottom: 25px;
+}
+
+.popover {
+    width: 450px !important;
+    max-width: 450px;
+    left: initial !important;
+    right: 25px;
+}
+
+.popover > .arrow {
+    display: none;
+}
+
+#clear-button {
+    cursor: pointer;
+    background: salmon;
+    color: white;
+}
+
+#clear-button:hover {
+    background: orangered;
+}
+
+.dataTables_info, .dataTables_paginate {
+    text-align: left !important;
+}
+
+/***********
+ * BONUSES *
+ ***********/
+
+ .bonus:before {
+    padding: 1px 4px;
+    border-radius: 10px;
+    font-size: 10px;
+    margin-left: 5px;
+}
+
+.bonus.drop:before {
+    background: lightgreen;
+    content: "2x drop";
+}
+
+.bonus.stamina:before {
+    background: skyblue;
+    content: "0.5x stamina";
+}
+
+.bonus.beli:before {
+    background: gold;
+    content: "2x beli";
+}
+
+.bonus.today:before {
+    background: orchid;
+    content: "today";
+}
+
+/**********
+ * TABLES *
+ **********/
+
+#mainTable th {
+    cursor: pointer;
+}
+
+#mainTable th:hover {
+    text-decoration: underline;
+}
+
+.table-striped-column > * > tr > :nth-of-type(even) {
+    background-color: #f9f9f9;
+}
+
+#mainTable td:nth-child(2) {
+    white-space: nowrap;
+    width: 100%;
+}
+
+#mainTable td + td ~ td {
+    min-width: 75px;
+}
+
+.dataTables_filter {
+    display: none;
+}
+
+.dataTables_length {
+    float: right !important;
+}
+
+tr.incomplete td:nth-child(2):after {
+    content: "INCOMPLETE";
+    padding: 5px;
+    border-radius: 10px;
+    margin-left: 10px;
+    background: salmon;
+    font-size: 9px;
+    color: white;
+}
+
+/*********
+ * POPUP *
+ *********/
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.65);
+    z-index: 100;
+}
+
+.custom-modal {
+    z-index: 101;
+    position: fixed;
+    width: 80%;
+    height: 80%;
+    max-width: 800px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.modal-content, .modal-dialog {
+    width: 100%;
+    height: 100%;
+}
+
+.modal-body {
+    position: absolute !important;
+    top: 51px;
+    bottom: 0;
+    width: 100%;
+    overflow-y: scroll;
+    text-align: center;
+    position: relative;
+}
+
+.modal-body td {
+    text-align: left;
+}
+
+.modal-dialog {
+    margin: 0;
+}
+
+.modal-content {
+    border-radius: 0;
+}
+
+.modal-header {
+    background-color: #428bca;
+    color: white;
+    min-height: 51px;
+    max-height: 51px;
+}
+
+.animated {
+    animation-duration: 0.2s;
+    -webkit-animation-duration: 0.2s;
+}
+
+.modal-filter {
+    width: 100%;
+}
+
+.modal-div:not(.slim) {
+    height: 340px;
+    overflow: auto;
+}
+
+.modal-div.tiny {
+    height: 42px;
+};
+
+.modal-div table {
+    width: 100%;
+}
+
+.modal-div th {
+    padding: 10px 10px 10px 5px;
+}
+
+.modal-div .to-the-right {
+    text-align: right;
+}
+
+.modal-div.padded {
+    padding: 10px;
+}
+
+.page-header {
+    margin: 15px 0 15px 0;
+    text-align: left;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.arrow {
+    font-size: 1.5em;
+    bottom: 10px;
+    position: relative;
+    margin: 0 10px 0 10px;
+}
+
+.back-button {
+    position: relative;
+    margin-right: 10px;
+    bottom: 3px;
+}
+
+.mini-type {
+    color: white;
+    border-radius: 10px;
+    display: inline-block;
+    width: 35px;
+    text-align: center;
+}
+
+.notes {
+    font-size: 80%;
+}
+
+.notes:before {
+    content: "NOTES: ";
+    font-weight: bold;
+    color: gray;
+}
+
+.collapsed > :first-child ~ div ,
+.collapsed > :first-child ~ table {
+    display: none;
+}
+
+.collapse-button {
+    margin-bottom: 10px;
+}
+
+:not(.collapsed) > .collapse-button {
+    display: none;
+}
+
+.drop-table {
+    position: relative;
+    top: -10px;
+}
+
+.drop-table td:first-child {
+    padding-top: 0;
+    padding-bottom: 0;
+    width: 0%;
+    vertical-align: middle;
+}
+
+.drop-table td, .drop-table div {
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+/*******************
+ * SLOT THUMBNAILS *
+ *******************/
+
+.slot {
+    display: inline-block;
+}
+
+.slot.huge {
+    width: 320px;
+    height: 256px;
+    background-size: 320px 256px;
+    margin: 10px;
+}
+
+.slot.big {
+    width: 112px;
+    height: 112px;
+    background-size: 112px 112px;
+    margin: 4px;
+}
+
+.slot.medium {
+    width: 40px;
+    height: 40px;
+    background-size: 40px 40px;
+    margin: 1px;
+}
+
+.slot.small {
+    width: 40px;
+    height: 40px;
+    background-size: 40px 40px;
+    margin: 1px;
+}
+
+/**********
+ * MOBILE *
+ **********/
+
+@media (min-width: 1024px) {
+
+    .slot.medium {
+        width: 80px;
+        height: 80px;
+        background-size: 80px 80px;
+        margin: 2px;
+    }
+
+    .arrow {
+        font-size: 2em;
+        bottom: 32px;
+    }
+
+    #mainContainer {
+        min-width: 1000px;
+        width: 100%;
+        height: 100%;
+        position: static;
+    }
+
+    #leftContainer {
+        min-width: 250px;
+        max-width: 250px;
+        width: 250px;
+        position: relative;
+        float: left;
+        overflow-y: scroll;
+        height: 100%;
+    }
+
+    #rightContainer {
+        height: 100%;
+        overflow: auto;
+        position: relative;
+        border-collapse: collapse;
+        padding: 10px;
+        left: 0;
+    }
+
+    #mainTable td:nth-child(2) {
+        white-space: normal !important;
+    }
+
+    #mainTable td:nth-child(2) > img {
+        float: left;
+        margin-right: 5px;
+    }
+
+    #mainTable td:nth-child(2) > a {
+        height: 40px;
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+}
+
+@media (max-width: 1024px) {
+
+    #mainContainer {
+        height: 100%;
+        position: relative;
+        overflow-y: auto;
+    }
+
+    #leftContainer {
+        min-width: 250px;
+        max-width: 250px;
+        width: 250px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        overflow-y: scroll;
+        float: left;
+        height: 100%;
+    }
+
+    #rightContainer {
+        padding: 10px;
+        position: absolute;
+        top: 0;
+        left: 250px;
+        background: white;
+    }
+
+}
