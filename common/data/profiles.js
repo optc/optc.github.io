@@ -24,6 +24,14 @@ window.profiles = {
         rcv: function(p) { return !p.class.has('Striker') ? 0.1 : 1; }
     },
 
+    'Prisoner Crocodile)': {
+        description: 'Stats of non-Striker, non-Booster, non-Evolver units reduced by 90%',
+        thumb: 510,
+        atk: function(p) { return p.class.has('Striker') || p.class.has('Booster') || p.class.has('Evolver') ? 1 : 0.1; },
+        hp: function(p)  { return p.class.has('Striker') || p.class.has('Booster') || p.class.has('Evolver') ? 1 : 0.1; },
+        rcv: function(p) { return p.class.has('Striker') || p.class.has('Booster') || p.class.has('Evolver') ? 1 : 0.1; }
+    },
+
     'Jailer Domino (pre-v4.0)': {
         description: 'Stats of non-Shooter units reduced by 90%',
         thumb: 538,
@@ -33,11 +41,11 @@ window.profiles = {
     },
 
     'Jailer Domino': {
-        description: 'Stats of non-Shooter, non-Booster, non-Powerup units reduced by 90%',
+        description: 'Stats of non-Shooter, non-Booster, non-Evolver units reduced by 90%',
         thumb: 538,
-        atk: function(p) { return p.class.has('Shooter') || p.class.has('Booster') || p.class.has('PowerUp') ? 0.1 : 1; },
-        hp: function(p)  { return p.class.has('Shooter') || p.class.has('Booster') || p.class.has('PowerUp') ? 0.1 : 1; },
-        rcv: function(p) { return p.class.has('Shooter') || p.class.has('Booster') || p.class.has('PowerUp') ? 0.1 : 1; }
+        atk: function(p) { return p.class.has('Shooter') || p.class.has('Booster') || p.class.has('Evolver') ? 1 : 0.1; },
+        hp: function(p)  { return p.class.has('Shooter') || p.class.has('Booster') || p.class.has('Evolver') ? 1 : 0.1; },
+        rcv: function(p) { return p.class.has('Shooter') || p.class.has('Booster') || p.class.has('Evolver') ? 1 : 0.1; }
     },
 
     'Chief Guard Sadi-chan (pre-v4.0)': {
