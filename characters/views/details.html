@@ -15,7 +15,11 @@
 
                 <div ng-if="unit.incomplete" class="alert alert-danger">This unit's complete information is still partially missing and will soon be added.</div>
 
-                <h3 class="page-header">Details</h3>
+                <h3 class="page-header">
+                    Details
+                    <i ng-if="compare" ng-click="clearComparison()" class="fa fa-times pull-right" id="compare-clear" title="clear"></i>
+                    <input compare type="text" id="compare" class="pull-right" placeholder="Compare with..."></input>
+                </h3>
 
                 <div class="panel panel-default">
                     <table class="table table-striped">
@@ -33,8 +37,10 @@
                                 <td ng-if="hybrid">{{unit.class[0]}}</td>
                                 <td ng-if="hybrid">{{unit.class[1]}}</td>
                                 <td>{{unit.type}}</td>
-                                <td>{{unit.stars}}</td>
-                                <td>{{unit.cost}}</td>
+                                <td ng-if="!compare">{{unit.stars}}</td>
+                                <td ng-if="compare" comparison="positive">{{unit.stars - compare.stars}}</td>
+                                <td ng-if="!compare">{{unit.cost}}</td>
+                                <td ng-if="compare" comparison="negative">{{unit.cost - compare.cost}}</td>
                             </tr>
                             <tr>
                                 <th>Combo</th>
@@ -43,10 +49,13 @@
                                 <th colspan="{{hybrid ? 2 : 1}}">EXP to Max</th>
                             </tr>
                             <tr>
-                                <td>{{unit.combo}}</td>
-                                <td>{{unit.slots}}</td>
+                                <td ng-if="!compare">{{unit.combo}}</td>
+                                <td ng-if="compare" comparison="negative">{{unit.combo - compare.combo}}</td>
+                                <td ng-if="!compare">{{unit.slots}}</td>
+                                <td ng-if="compare" comparison="positive">{{unit.slots - compare.slots}}</td>
                                 <td>{{unit.maxLevel}}</td>
-                                <td colspan="{{hybrid ? 2 : 1}}">{{unit.maxEXP | number}}</td>
+                                <td ng-if="!compare" colspan="{{hybrid ? 2 : 1}}">{{unit.maxEXP | number}}</td>
+                                <td ng-if="compare" colspan="{{hybrid ? 2 : 1}}" comparison="negative">{{unit.maxEXP - compare.maxEXP | number}}</td>
                             </tr>
                         </tbody>
                     </table>
@@ -67,24 +76,32 @@
                         <tbody>
                             <tr>
                                 <td>1</td>
-                                <td>{{unit.minHP | number}}</td>
-                                <td>{{unit.minATK | number}}</td>
-                                <td>{{unit.minRCV | number}}</td>
+                                <td ng-if="!compare">{{unit.minHP | number}}</td>
+                                <td ng-if="compare" comparison="positive">{{unit.minHP - compare.minHP | number}}</td>
+                                <td ng-if="!compare">{{unit.minATK | number}}</td>
+                                <td ng-if="compare" comparison="positive">{{unit.minATK - compare.minATK | number}}</td>
+                                <td ng-if="!compare">{{unit.minRCV | number}}</td>
+                                <td ng-if="compare" comparison="positive">{{unit.minRCV - compare.minRCV | number}}</td>
                             </tr>
                             <tr>
                                 <td>{{unit.maxLevel}}</td>
-                                <td>{{unit.maxHP | number}}</td>
-                                <td>{{unit.maxATK | number}}</td>
-                                <td>{{unit.maxRCV | number}}</td>
+                                <td ng-if="!compare">{{unit.maxHP | number}}</td>
+                                <td ng-if="compare" comparison="positive">{{unit.maxHP - compare.maxHP | number}}</td>
+                                <td ng-if="!compare">{{unit.maxATK | number}}</td>
+                                <td ng-if="compare" comparison="positive">{{unit.maxATK - compare.maxATK | number}}</td>
+                                <td ng-if="!compare">{{unit.maxRCV | number}}</td>
+                                <td ng-if="compare" comparison="positive">{{unit.maxRCV - compare.maxRCV | number}}</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
 
+                <!-- Abilities (non-comparison) -->
+
                 <h3 class="page-header">Abilities</h3>
 
                 <div class="panel panel-default">
-                    <table class="table table-striped-column">
+                    <table class="table table-striped-column abilities">
                         <tbody>
                             <tr>
                                 <td>Captain Ability</td>
@@ -105,6 +122,38 @@
                                 <td>
                                     {{details.cooldown.length ? details.cooldown[0] : details.cooldown}} turns
                                     {{details.cooldown.length ? ' (maxed: ' + details.cooldown[1] + ' turns)' : ''}}
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Abilities (compared unit) -->
+
+                <h3 class="page-header" ng-if="compare">Abilities (compared unit)</h3>
+
+                <div class="panel panel-default" ng-if="compare">
+                    <table class="table table-striped-column abilities">
+                        <tbody>
+                            <tr>
+                                <td>Captain Ability</td>
+                                <td>
+                                    <div ng-bind-html="compareDetails.captain | decorate"></div>
+                                    <span class="notes" ng-if="compareDetails.captainNotes" ng-bind-html="compareDetails.captainNotes | decorate"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Special</td>
+                                <td>
+                                    <div ng-bind-html="compareDetails.special | decorate"></div>
+                                    <span class="notes" ng-if="compareDetails.specialNotes" ng-bind-html="compareDetails.specialNotes | decorate"></span>
+                                </td>
+                            </tr>
+                            <tr ng-if="compareDetails.cooldown">
+                                <td>Cooldown</td>
+                                <td>
+                                    {{compareDetails.cooldown.length ? compareDetails.cooldown[0] : compareDetails.cooldown}} turns
+                                    {{compareDetails.cooldown.length ? ' (maxed: ' + compareDetails.cooldown[1] + ' turns)' : ''}}
                                 </td>
                             </tr>
                         </tbody>

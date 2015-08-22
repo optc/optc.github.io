@@ -162,6 +162,96 @@ input {
     text-align: left !important;
 }
 
+/*************
+ * TYPEAHEAD *
+ *************/
+
+h3 > span {
+    float: right;
+    font-size: 14px;
+}
+
+h3 > span > input {
+    bottom: 2px;
+}
+
+#compare {
+    width: 200px;
+}
+
+#compare + pre {
+    display: none;
+}
+
+.tt-menu {
+    background: white;
+    font-size: 80%;
+    border: 1px solid gray;
+    border-top: none;
+    top: 22px !important;
+    width: 200px;
+}
+
+.tt-suggestion {
+    padding: 2px;
+    height: 47px;
+    cursor: pointer;
+}
+
+.tt-suggestion .suggestion-container {
+    display: table-row !important;
+    width: 100%;
+    text-align: left;
+}
+
+.tt-suggestion:not(:last-child) {
+    border-bottom: 1px solid gray;
+}
+
+.tt-cursor {
+    background-color: rgb(230,230,230);
+}
+
+.tt-suggestion:hover {
+    background-color: lightgray;
+}
+
+.tt-suggestion .slot {
+    float: left;
+    margin: 2px;
+    margin-right: 4px !important;
+}
+
+.tt-suggestion span {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.positive, .positive.withPlus:before {
+    color: green;
+    font-weight: bold;
+}
+
+.negative, .negative.withPlus:before {
+    color: red;
+    font-weight: bold;
+}
+
+.withPlus:before {
+    content: '+';
+}
+
+#compare-clear {
+    cursor: pointer;
+    position: relative;
+    bottom: 4px;
+    right: 4px;
+}
+
+#compare-clear:hover {
+    color: red;
+}
+
 /***********
  * BONUSES *
  ***********/
@@ -238,6 +328,14 @@ tr.incomplete td:nth-child(2):after {
     background: salmon;
     font-size: 9px;
     color: white;
+}
+
+.abilities td:first-child {
+    white-space: nowrap;
+}
+
+.abilities td:nth-child(2) {
+    width: 100%;
 }
 
 /*********

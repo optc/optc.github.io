@@ -296,6 +296,11 @@ app.controller('DetailsCtrl',function($scope, $state, $stateParams) {
         var previous = $stateParams.previous.splice(-1)[0];
         $state.go('main.view',{ id: previous, previous: $stateParams.previous });
     };
+    $scope.clearComparison = function() {
+        $scope.compare = null;
+        $('#compare').val('');
+        $('#compare').prop('disabled', false);
+    };
 });
 
 /**************
@@ -445,6 +450,70 @@ app.directive('evolution',function($state, $stateParams) {
     };
 });
 
+app.directive('compare',function() {
+    return {
+        restrict: 'A',
+        link: function(scope, element, attrs) {
+
+            var target = element.typeahead(
+                { minLength: 3, highlight: true },
+                {
+                    source: function(query, callback) {
+                        try {
+                            query = new RegExp(query, 'i');
+                            var result = window.units
+                                .filter(function(x) { return query.test(x.name); })
+                                .map(function(x) { return x.number; });
+                            callback(result);
+                        } catch (e) { }
+                    },
+                    templates: {
+                        suggestion: function(id) {
+                            var name = units[id].name, url = Utils.getThumbnailUrl(id+1);
+                            if (name.length > 63) name = name.slice(0,60) + '...';
+                            var thumb = '<div class="slot small" style="background-image: url(' + url + ')"></div>';
+                            return '<div><div class="suggestion-container">' + thumb + '<span>' + name + '</span></div></div>';
+                        }
+                    },
+                    display: function(id) {
+                        return units[id].name;
+                    }
+                }
+            );
+
+            target.bind('typeahead:select',function(e,suggestion) {
+                $(e.currentTarget).prop('disabled', true);
+                scope.compare = window.units[suggestion];
+                scope.compareDetails = window.details[suggestion + 1];
+                if (!scope.$$phase) scope.$apply();
+            });
+
+            element[0].style.backgroundColor = null;
+
+        }
+    };
+});
+
+app.directive('comparison',function() {
+    return {
+        restrict: 'A',
+        link: function(scope, element, attrs) {
+            var positive = (attrs.comparison == 'positive');
+            var watch = scope.$watch(
+                function() { return element.html(); },
+                function() {
+                    var isNegative = parseFloat(element.text(),10) < 0;
+                    element.removeClass('positive negative withPlus');
+                    if ((positive && !isNegative) || (!positive && isNegative)) element.addClass('positive');
+                    else element.addClass('negative');
+                    if (!isNegative) element.addClass('withPlus');
+                }
+            );
+            scope.$on('$destroy',watch);
+        }
+    };
+});
+
 /***********
  * Filters *
  ***********/
@@ -474,5 +543,6 @@ app
             window.document.title = title;
         });
     });
+
 
 })();
