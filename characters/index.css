@@ -113,11 +113,11 @@ input {
     border-bottom: 1px solid gray;
 }
 
-.drop-filter:nth-child(3) , .drop-filter:nth-child(5) {
+.drop-filter:nth-child(3) , .drop-filter:nth-child(5), .drop-filter:nth-child(7) {
     border-left: 1px solid gray;
 }
 
-.drop-filter:nth-child(2), .drop-filter:nth-child(3) {
+.drop-filter:nth-child(2), .drop-filter:nth-child(3), .drop-filter:nth-child(4), .drop-filter:nth-child(5) {
     border-bottom: 1px solid gray;
 }
 
@@ -199,6 +199,10 @@ input {
 
 #mainTable th {
     cursor: pointer;
+}
+
+#mainTable td {
+    vertical-align: middle;
 }
 
 #mainTable th:hover {
