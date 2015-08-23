@@ -477,11 +477,13 @@ window.specials = {
     },
     680: { // Ice Cream Loving Nami
         atk: function(p) { return p.unit.type == "DEX" ? 1.25 : 1; },
-        rcv: function(p) { return p.unit.type == "DEX" ? 1.25 : 1; }
+        rcv: function(p) { return p.unit.type == "DEX" ? 1.25 : 1; },
+        type: 'type'
     },
     681: { // Lemon Ice Cream Loving Nami
         atk: function(p) { return p.unit.type == "DEX" ? 1.25 : 1; },
-        rcv: function(p) { return p.unit.type == "DEX" ? 1.25 : 1; }
+        rcv: function(p) { return p.unit.type == "DEX" ? 1.25 : 1; },
+        type: 'type'
     },
     687: { // Calgara
         atk: function(p) { return p.unit.class.has("Freedom") ? 1.3 : 1; },
