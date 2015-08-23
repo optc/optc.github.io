@@ -3882,7 +3882,7 @@ window.details = {
         specialNotes: "The exact formula for the damage received is: 5000 + ((total damage) - 5000) * 0.03",
         captain: "Boosts ATK of Slasher characters by 1.5x, deals 5x character's ATK in QCK damage to all enemies at the end of the turn",
         cooldown: 18,
-        evolution: 676,
+        evolution: 677,
         evolvers: [ 94, 96, 96, 301, 301 ]
     },
     677: { // Inazuma, Member of the Revolutionary Army
