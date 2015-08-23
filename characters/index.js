@@ -167,6 +167,8 @@ var tableData = window.units.filter(function(x) { return x.name; }).map(function
     ];
 });
 
+var FODDER_REGEX = /(Group Leader)|(Ensign Navy HQ)|(Armed \w+ Unit)|(Billions Baroque)|(Assault Squad)|(White Beret)|(Major Navy)|(Group Expert)|(Hoodlum.+Bounty Hunter)/i;
+
 $.fn.dataTable.ext.search.push(function(settings, data, index) {
     if (!currentParameters) return true;
     var id = parseInt(data[0],10), unit = window.units[id - 1];
@@ -203,10 +205,12 @@ $.fn.dataTable.ext.search.push(function(settings, data, index) {
         if (filters.drop == 'Farmable' && (id == 1 || unit.stars >= 3 && !isFarmable)) return false; 
         else if (filters.drop != 'Farmable' && id != 1 && (unit.stars < 3 || isFarmable)) return false; 
     }
-    // filter by base form
+    // filter out base forms
     if (filters.noBase && details[id].evolution) return false;
-    // filter by mats
+    // filter out mats
     if (filters.noEvos && /Evolver|Booster/i.test(unit.class)) return false;
+    // filter out fodder
+    if (filters.noFodder && (unit.stars < 3 || FODDER_REGEX.test(unit.name))) return false;
     // filter by server
     if (filters.server) {
         if (filters.server == 'Global only' && !details[unit.number + 1].global) return false;
@@ -420,7 +424,7 @@ app.directive('filters',function($compile) {
                     'filters.class == \'' + x + '\'','onClick($event,\'' + x + '\')'));
             });
             // farmable filters
-            var others = createContainer('Other filters', element);
+            var others = createContainer('Drop filters', element);
             [ 'Farmable', 'Non-farmable' ].forEach(function(x) {
                 others.append(createFilter(x,'drop-filter','filters.drop',
                     'filters.drop == \'' + x + '\'','onClick($event,\'' + x + '\')'));
@@ -429,9 +433,13 @@ app.directive('filters',function($compile) {
                 others.append(createFilter(x,'drop-filter','filters.server',
                     'filters.server == \'' + x + '\'','onClick($event,\'' + x + '\')'));
             });
-            others.append(createFilter('Hide base forms','drop-filter','filters.noBase',
+            var others = createContainer('Exclusion filters', element);
+            // exclusion filters
+            others.append(createFilter('Hide base forms','exc-filter','filters.noBase',
                 'filters.noBase','filters.noBase = !filters.noBase'));
-            others.append(createFilter('Hide materials','drop-filter','filters.noEvos',
+            others.append(createFilter('Hide fodder','exc-filter','filters.noFodder',
+                'filters.noFodder','filters.noFodder = !filters.noFodder'));
+            others.append(createFilter('Hide Boosters and Evolvers','exc-filter','filters.noEvos',
                 'filters.noEvos','filters.noEvos = !filters.noEvos'));
             // captain ability filters
             var captains = createContainer('Captain ability filters', element);

@@ -113,7 +113,7 @@ utils.generateSearchParameters = function(query) {
         } else // matcher
             result.matchers[temp[2]] = new RegExp(temp[3],'i');
     });
-    result.query = new RegExp(result.query.join(' '),'i');
+    result.query = result.query.length === 0 ? null : new RegExp(result.query.join(' '),'i');
     return result;
 };
 

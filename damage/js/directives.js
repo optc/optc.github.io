@@ -22,7 +22,7 @@ directives.autoFocus = function($timeout) {
 directives.decorateSlot = function($rootScope) {
     return {
         restrict: 'A',
-        scope: { uid: '=', udata: '=' },
+        scope: { uid: '=', udata: '=', flag: '@' },
         link: function(scope, element, attrs) {
             var update = function() { 
                 var target = element[0];
@@ -30,7 +30,7 @@ directives.decorateSlot = function($rootScope) {
                     target.style.backgroundImage = null;
                     target.removeAttribute('title');
                 } else {
-                    if (scope.uid != 1 || (scope.udata && scope.udata.name == 'Monkey D. Luffy'))
+                    if (scope.uid != 1 || scope.flag || (scope.udata && scope.udata.name == 'Monkey D. Luffy'))
                         target.style.backgroundImage = 'url(' + Utils.getThumbnailUrl(scope.uid) + ')';
                     else
                         target.style.backgroundImage = null;

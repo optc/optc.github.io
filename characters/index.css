@@ -49,7 +49,7 @@ input[type="text"] {
     cursor: default;
 }
 
-.type-filter, .class-filter, .custom-filter, .drop-filter {
+.type-filter, .class-filter, .custom-filter, .drop-filter, .exc-filter {
     display: inline-block;
     padding: 3px 0;
     text-align: center;
@@ -60,8 +60,12 @@ input[type="text"] {
     width: 33.3333%;
 }
 
-.drop-filter {
+.drop-filter, .exc-filter:nth-child(2), .exc-filter:nth-child(3) {
     width: 50%;
+}
+
+.exc-filter:nth-child(4) {
+    width: 100%;
 }
 
 .type-filter:nth-child(4) ~ .type-filter ,
@@ -95,7 +99,7 @@ input[type="text"] {
     border-top: none;
 }
 
-.class-filter.active, .custom-filter.active, .drop-filter.active {
+.class-filter.active, .custom-filter.active, .drop-filter.active, .exc-filter.active {
     background: red;
     color: white;
     font-weight: bold;
@@ -113,19 +117,20 @@ input[type="text"] {
     border-bottom: 1px solid gray;
 }
 
-.drop-filter:nth-child(3) , .drop-filter:nth-child(5), .drop-filter:nth-child(7) {
+.drop-filter:nth-child(3) , .drop-filter:nth-child(5), .drop-filter:nth-child(7), .exc-filter:nth-child(3) {
     border-left: 1px solid gray;
 }
 
-.drop-filter:nth-child(2), .drop-filter:nth-child(3), .drop-filter:nth-child(4), .drop-filter:nth-child(5) {
+.drop-filter:nth-child(2), .drop-filter:nth-child(3), .drop-filter:nth-child(4), .drop-filter:nth-child(5), 
+.exc-filter:nth-child(2), .exc-filter:nth-child(3) {
     border-bottom: 1px solid gray;
 }
 
-.custom-filter:hover, .class-filter:hover, .drop-filter:hover {
+.custom-filter:hover, .class-filter:hover, .drop-filter:hover, .exc-filter:hover {
     background-color: rgb(230,230,230);
 }
 
-.custom-filter.active:hover, .class-filter.active:hover, .drop-filter.active:hover {
+.custom-filter.active:hover, .class-filter.active:hover, .drop-filter.active:hover, .exc-filter.active:hover {
     background-color: darkred;
 }
 

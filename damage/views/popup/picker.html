@@ -18,7 +18,7 @@
 
                 <div id="pickerUnits" class="modal-div">
                     <div class="slot medium" ng-repeat="unit in units" ng-click="pickUnit(unit.number)"
-                        decorate-slot="static" uid="unit.number + 1">
+                        decorate-slot="static" uid="unit.number + 1" flag="true">
                     </div> 
                 </div>
 
@@ -26,7 +26,7 @@
                     <span>Recently picked</span>
                     <div id="recentUnits">
                         <div class="slot small" ng-repeat="unit in recents" ng-click="pickUnit(unit)"
-                            decorate-slot uid="unit + 1">
+                            decorate-slot uid="unit + 1" flag="true">
                         </div> 
                     </div>
                 </div>
