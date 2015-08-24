@@ -1310,7 +1310,7 @@ window.details = {
         global: true
     },
     229: { // Double Crosser Django
-        special: "Change [INT] orbs into [PSY] orbs",
+        special: "Changes [INT] orbs into [PSY] orbs",
         captain: "Reduces damage received by 10%",
         cooldown: [ 13, 7 ],
         global: true
