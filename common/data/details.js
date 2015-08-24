@@ -1837,7 +1837,7 @@ window.details = {
         global: true
     },
     319: { // Paulie
-        special: "Locks all of orbs for 1 turn",
+        special: "Locks all orbs for 1 turn",
         captain: "Boosts ATK of Striker characters by 1.5x",
         cooldown: [ 20, 15 ],
         evolution: 320,
@@ -1845,7 +1845,7 @@ window.details = {
         global: true
     },
     320: { // Paulie Dock One Foreman/Mast Specialist
-        special: "Locks all of orbs for 1 turn",
+        special: "Locks all orbs for 1 turn",
         captain: "Boosts ATK of Striker characters by 2x",
         cooldown: [ 20, 15 ],
         global: true

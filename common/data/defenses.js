@@ -43,7 +43,7 @@ window.defenses = [
     [ 'Buggy'                               , 'Buggy Fortnight'                      , 'Expert', 39, 50 ],
     [ 'Alvida'                              , 'Alvida Fortnight'                     , 'Expert', 30, 40000 ],
     [ 'Butchie'                             , 'Kuro Fortnight'                       , 'Expert', 42, 500 ],
-    [ 'Kuro'                                , 'Kuro Fortnight'                       , 'Expert', 42, 222 ],
+    [ 'Kuro'                                , 'Kuro Fortnight'                       , 'Expert', 46, 222 ],
     [ 'Arlong'                              , 'Arlong Fortnight'                     , 'Expert', 66, 222 ],
     [ 'Krieg'                               , 'Krieg Fortnight'                      , 'Expert', 58, 4350 ],
     [ 'Morgan'                              , 'Morgan Fortnight'                     , 'Expert', 228, 15 ],
