@@ -59,7 +59,7 @@ window.details = {
         global: true
     },
     9: { // Nami
-        special: "Heals 1,000 HP",
+        special: "Recovers 1,000 HP",
         captain: "Reduces damage received from INT enemies by 20%",
         cooldown: 12,
         evolution: [ 10, 11 ],
@@ -1420,7 +1420,7 @@ window.details = {
         global: true
     },
     247: { // Chopperman
-        special: "Heals 1,224 HP",
+        special: "Recovers 1,224 HP",
         captain: "Reduces damage received by 10%",
         cooldown: [ 10, 10 ]
     },
@@ -1696,7 +1696,7 @@ window.details = {
         global: true
     },
     296: { // Tsuru
-        special: "Heals 2,000 HP and randomizes all orbs",
+        special: "Recovers 2,000 HP, randomizes all orbs",
         captain: "Boosts ATK of Shooter characters by 2x",
         cooldown: [ 20, 12 ],
         evolution: 297,
@@ -1704,7 +1704,7 @@ window.details = {
         global: true
     },
     297: { // Great Advisor Tsuru
-        special: "Heals 2,000 HP and randomizes all orbs",
+        special: "Recovers 2,000 HP and randomizes all orbs",
         captain: "Boosts ATK of Shooter characters by 2x",
         cooldown: [ 20, 12 ],
         global: true
@@ -1779,7 +1779,7 @@ window.details = {
         global: true
     },
     311: { // Killer
-        special: "Deals 100x character's ATK in fixed QCK damage to one enemy and reduces HP to 1",
+        special: "Deals 100x character's ATK in fixed QCK damage to one enemy, reduces HP to 1",
         specialNotes: "Fixed damage means the special entirely bypasses enemy defense",
         captain: "Boosts ATK by 3.5x after scoring 3 less than Good attacks in a row",
         cooldown: [ 35, 25 ],
@@ -1788,7 +1788,7 @@ window.details = {
         global: true
     },
     312: { // Massacre Soldier Killer
-        special: "Deals 100x character's ATK in fixed QCK damage to one enemy and reduces HP to 1",
+        special: "Deals 100x character's ATK in fixed QCK damage to one enemy, reduces HP to 1",
         specialNotes: "Fixed damage means the special entirely bypasses enemy defense",
         captain: "Boosts ATK by 3.5x after scoring 3 less than Good attacks in a row",
         cooldown: [ 35, 25 ],
@@ -1809,7 +1809,7 @@ window.details = {
         global: true
     },
     315: { // Bepo
-        special: "Changes [PSY] and [INT] orbs into [STR] orbs and empties slots with [DEX] and [QCK] orbs",
+        special: "Changes [PSY] and [INT] orbs into [STR] orbs, empties slots with [DEX] and [QCK] orbs",
         captain: "Boosts ATK, HP and RCV of Fighter characters by 1.5x",
         cooldown: [ 20, 10 ],
         evolution: 316,
@@ -1817,14 +1817,14 @@ window.details = {
         global: true
     },
     316: { // Bepo the Martial Artist
-        special: "Changes [PSY] and [INT] orbs into [STR] orbs and empties slots with [DEX] and [QCK] orbs",
+        special: "Changes [PSY] and [INT] orbs into [STR] orbs, empties slots with [DEX] and [QCK] orbs",
         captain: "Boosts ATK, HP and RCV of Fighter characters by 1.5x",
         cooldown: [ 20, 10 ],
         global: true
     },
     317: { // Kalifa
         special: "Changes all orbs into either [DEX] or [STR] orbs, deals random DEX damage to all enemies",
-        captain: "Heals 500 HP at end of turn, reduces damage received by 10%",
+        captain: "Recovers 500 HP at end of turn, reduces damage received by 10%",
         cooldown: [ 25, 18 ],
         evolution: 318,
         evolvers: [ 117, 80, 86, 97, 102 ],
@@ -1832,7 +1832,7 @@ window.details = {
     },
     318: { // Beautiful Secretary Kalifa
         special: "Changes all orbs into either [DEX] or [STR] orbs, deals random DEX damage to all enemies",
-        captain: "Heals 500 HP at end of turn, reduces damage received by 15%",
+        captain: "Recovers 500 HP at end of turn, reduces damage received by 15%",
         cooldown: [ 25, 18 ],
         global: true
     },
@@ -1930,7 +1930,7 @@ window.details = {
         global: true
     },
     333: { // Dr. Kureha
-        special: "Heals a random amount of HP",
+        special: "Recovers a random amount of HP",
         captain: "Boosts ATK and RCV of PSY and INT characters by 1.5x",
         cooldown: [ 20, 15 ],
         global: true
@@ -2467,19 +2467,19 @@ window.details = {
         cooldown: [ 20, 10 ]
     },
     422: { // Nami Mirage Tempo - Arashi (Kimono)
-        special: "Reduces damage received from INT enemies by 100% for 1 turn, heals a random amount of HP",
+        special: "Reduces damage received from INT enemies by 100% for 1 turn, recovers a random amount of HP",
         captain: "Boosts ATK, HP and RCV of INT characters by 1.5x",
         cooldown: [ 20, 10 ]
     },
     423: { // Brook
-        special: "Heals 4,343 HP, reduces the defense of all enemies by 50% for 2 turns",
+        special: "Recovers 4,343 HP, reduces the defense of all enemies by 50% for 2 turns",
         captain: "Prevents death as long as HP is above 70%",
         cooldown: [ 24, 15 ],
         evolution: 424,
         evolvers: [ 117, 79, 85, 96, 101 ]
     },
     424: { // Humming Brook
-        special: "Heals 4,343 HP, reduces the defense of all enemies by 50% for 2 turns",
+        special: "Recovers 4,343 HP, reduces the defense of all enemies by 50% for 2 turns",
         captain: "Prevents death as long as HP is above 70%",
         cooldown: [ 24, 15 ]
     },
@@ -2670,7 +2670,7 @@ window.details = {
         cooldown: [ 28, 19 ]
     },
     460: { // Criminal Galdino Mr. 3
-        special: "Heals 33 HP after the end of each turn for 999 turns, delays all enemies for 1 turn",
+        special: "Recovers 33 HP after the end of each turn for 999 turns, delays all enemies for 1 turn",
         captain: "Reduces damage received by 10%",
         cooldown: [ 14, 10 ]
     },
@@ -2746,7 +2746,7 @@ window.details = {
         cooldown: [ 25, 15 ]
     },
     475: { // Yellow God's Guard Group Skypiea God's Army
-        special: "Deals 5x character's ATK in STR damage to all enemies, heals 500 HP",
+        special: "Deals 5x character's ATK in STR damage to all enemies, recovers 500 HP",
         cooldown: [ 25, 15 ]
     },
     476: { // Black God's Guard Group Skypiea God's Army
@@ -2992,7 +2992,7 @@ window.details = {
     516: { // Heracles the Hero of the Forest
         special: "Changes the orbs in the left column into [INT], [PSY] and [RCV], the orbs in the right column into [STR], [DEX] and [QCK], freely switch orbs between slots 3 times",
         specialNotes: "The special is not based on chance, the orbs are always changed with the same pattern. Starting from the top left orb and proceeding clockwise, after the special is used the orbs will be: [INT], [STR], [DEX], [QCK], [RCV] and [PSY]",
-        captain: "Boosts ATK, HP and RCV of Shooter characters by 1.5x, heals a bit of HP at the end of the turn",
+        captain: "Boosts ATK, HP and RCV of Shooter characters by 1.5x, recovers a bit of HP at the end of the turn",
         cooldown: [ 24, 11 ]
     },
     517: { // Usoppun
@@ -3636,7 +3636,7 @@ window.details = {
         cooldown: [ 25, 16 ]
     },
     636: { // Pappug
-        special: "Binds himself for 3 turns, reduces damage received by 50% for 3 turns, heals a small amount of HP at the end of the turn for 3 turns",
+        special: "Binds himself for 3 turns, reduces damage received by 50% for 3 turns, recovers a small amount of HP at the end of the turn for 3 turns",
         captain: "Boosts ATK of characters with cost 2 or less by 3x",
         cooldown: [ 23, 15 ]
     },
@@ -3921,13 +3921,13 @@ window.details = {
         cooldown: 20
     },
     682: { // Ice Cream Loving Robin
-        special: "Heals 2,561 HP, reduces damage received by 50% for 2 turns",
+        special: "Recovers 2,561 HP, reduces damage received by 50% for 2 turns",
         cooldown: [ 22, 15 ],
         evolution: 683,
         evolvers: [ 117, 81, 87, 98, 103 ]
     },
     683: { // Chocolate Ice Cream Loving Robin
-        special: "Heals 2,561 HP, reduces damage received by 50% for 2 turns",
+        special: "Recovers 2,561 HP, reduces damage received by 50% for 2 turns",
         captain: "Boosts ATK and RCV of Fighter characters by 1.5x",
         cooldown: [ 22, 15 ]
     },

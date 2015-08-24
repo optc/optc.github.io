@@ -89,7 +89,7 @@ window.matchers = [
     {
         name: 'Healers',
         target: 'captain',
-        matcher: /Recovers \d+x.+RCV.+end of/i
+        matcher: /Recovers/i
     },
 
     {
@@ -230,6 +230,12 @@ window.matchers = [
         name: 'Hindrance removers',
         target: 'special',
         matcher: /(empties.+with hindrance|changes.+hindrance.+into)/i,
+    },
+
+    {
+        name: 'Healers',
+        target: 'special',
+        matcher: /Recovers/i
     },
 
     {
