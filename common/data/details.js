@@ -2920,24 +2920,28 @@ window.details = {
         captain: "Prevents death as long as HP is above 50%",
         cooldown: [ 21, 15 ],
         evolution: 506,
-        evolvers: [ 116, 79, 85, 266 ]
+        evolvers: [ 116, 79, 85, 266 ],
+        global: true
     },
     506: { // Pell, Alabasta's Guardian Falcon
         special: "Boosts ATK of QCK characters by 1.25x for 3 turns",
         captain: "Prevents death as long as HP is above 30%",
-        cooldown: [ 21, 15 ]
+        cooldown: [ 21, 15 ],
+        global: true
     },
     507: { // Chaka
         special: "Deals 25x character's ATK in STR damage to one enemy",
         captain: "Boosts ATK and HP of STR characters by 1.2x",
         cooldown: [ 25, 18 ],
         evolution: 508,
-        evolvers: [ 116, 89, 95, 300 ]
+        evolvers: [ 116, 89, 95, 300 ],
+        global: true
     },
     508: { // Chaka, Alabasta's Guardian Jackal
         special: "Deals 25x character's ATK in STR damage to one enemy",
         captain: "Boosts ATK and HP of STR characters by 1.5x",
-        cooldown: [ 25, 18 ]
+        cooldown: [ 25, 18 ],
+        global: true
     },
     509: { // The Strongest Prisoner, Sir Crocodile Mr. 0, Former CEO of Baroque Works
         special: "Poisons all enemies, boosts ATK of Striker characters by 1.5x for 1 turn",
@@ -3415,12 +3419,14 @@ window.details = {
         captain: "Boosts ATK by 1.5x, reduces HP and RCV by 80%",
         cooldown: 20,
         evolution: 590,
-        evolvers: [ 116, 117, 79, 85 ]
+        evolvers: [ 116, 117, 79, 85 ],
+        global: true
     },
     590: { // Kohza, Leader of the Rebel Army
         special: "Boosts ATK of Slasher characters by 1.5x for 1 turn",
         captain: "Boosts ATK by 2x, reduces HP and RCV by 80%",
-        cooldown: 20
+        cooldown: 20,
+        global: true
     },
     591: { }, // N/A
     592: { }, // N/A
