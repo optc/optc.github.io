@@ -9,11 +9,11 @@ window.profiles = {
     },
 
     'Baroque Works': {
-        description: 'ATK of Slasher and Strikers units reduced by 85%, HP and RCV by 80%',
+        description: 'ATK of non-Fighter, non-Booster, non-Evolver units reduced by 90%',
         thumb: 462,
-        atk: function(p) { return p.class.isWeakened('Slasher','Striker') ? 0.15 : 1; },
-        hp: function(p)  { return p.class.isWeakened('Slasher','Striker') ? 0.20 : 1; },
-        rcv: function(p) { return p.class.isWeakened('Slasher','Striker') ? 0.20 : 1; }
+        atk: function(p) { return p.class.has('Fighter') || p.class.has('Booster') || p.class.has('Evolver') ? 1 : 0.1; },
+        hp: function(p)  { return p.class.has('Fighter') || p.class.has('Booster') || p.class.has('Evolver') ? 1 : 0.1; },
+        rcv: function(p) { return p.class.has('Fighter') || p.class.has('Booster') || p.class.has('Evolver') ? 1 : 0.1; }
     },
 
     'Prisoner Crocodile (pre-v4.0)': {
