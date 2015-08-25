@@ -4080,7 +4080,9 @@ window.details = {
     712: {
         special: "Deals 15x character's ATK in QCK damage to one enemy, boosts ATK of the characters in the upper row by 1.5x for 2 turns",
         captain: "Boosts ATK of Striker characters by 2x if HP is above a certain threshold at the start of the turn",
-        cooldown: 22
+        cooldown: 22,
+        evolution: 713,
+        evolvers: [ 117, 90, 96, 301, 101 ]
     },
     713: {
         special: "Deals 15x character's ATK in QCK damage to one enemy, boosts ATK of the characters in the upper row by 1.5x for 2 turns",
@@ -4094,7 +4096,9 @@ window.details = {
     715: {
         special: "Boosts ATK and RCV of Freedom characters by 1.5x for 2 turns, seals herself for 3 turns",
         captain: "Boosts RCV by 2x if HP is low",
-        cooldown: 27
+        cooldown: 27,
+        evolution: 716,
+        evolvers: [ 116, 117, 81, 87 ]
     },
     716: {
         special: "Boosts ATK and RCV of Freedom characters by 1.5x for 2 turns, seals herself for 3 turns",

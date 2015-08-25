@@ -707,12 +707,12 @@ window.units = [
     [ "Blueno, Cipher Pol No.9", "STR", "Fighter", 3, 12, 5, 2, 50, 392109, 166, 102, 32, 1338, 502, 124, 1 ],
     [ "Blueno Rokushiki, Cipher Pol No.9", "STR", "Fighter", 4, 20, 4, 3, 99, 3000000, 1281, 452, 100, 2466, 921, 221, 1 ],
     [ "Nico Robin, the Devil Child", "PSY", "Fighter", 3, 10, 6, 2, 50, 392109, 110, 63, 32, 1002, 494, 209, 1 ],
-    [ "Nico Robin, Member of the Strawhat Pirates", "PSY", "Fighter", 4, 16, 5, 3, 99, 3000000, 938, 430, 155, 1892, 881, 351, 0 ],
+    [ "Nico Robin, Member of the Strawhat Pirates", "PSY", "Fighter", 4, 16, 5, 3, 99, 3000000, 938, 430, 155, 1892, 881, 351, 1 ],
     [ "Franky, Record of the Voyage - Strawhat Crew (Log Franky)", "PSY", [ "Shooter", "Freedom" ], 4, 12, 4, 2, 50, null, 663, 292, 79, null, null, null, 0 ],
     [ "Franky, Dream of the Voyage - A Ship to Sail Around the World (Log Franky)", "PSY", [ "Shooter", "Freedom" ], 5, 20, 6, 3, 99, null, 1474, 656, 135, null, null, null, 0 ],
-    [ "Gan Fall", "QCK", "Striker", 3, "12", 6, 1, 50, null, 146, 72, 58, null, null, null, 0 ],
-    [ "Gan Fall the Knight of the Sky", "QCK", "Striker", 4, "20", null, null, 99, null, 884, 401, 151, null, null, null, 0 ],
-    [ "Pierre", "DEX", "Fighter", 3, 12, 4, 1, 50, null, 312, 160, 79, null, null, null, 0 ],
-    [ "Konis", "PSY", "Freedom", 3, 12, 5, 2, 35, null, 241, 84, 114, 503, 190, 232, 0 ],
-    [ "Konis, Skypiea Maiden", "PSY", "Freedom", 4, 20, 4, 3, 70, null, 458, 146, 196, null, null, null, 0 ]
+    [ "Gan Fall", "QCK", "Striker", 3, 12, 6, 1, 50, 392109, 80, 40, 48, 930, 452, 185, 1.5 ],
+    [ "Gan Fall the Knight of the Sky", "QCK", "Striker", 4, 20, 4, 2, 99, 3000000, 884, 401, 151, 1704, 1202, 300, 0 ],
+    [ "Pierre", "DEX", "Fighter", 3, 12, 4, 1, 50, 392109, 69, 32, 38, 920, 480, 182, 1 ],
+    [ "Konis", "PSY", "Freedom", 3, 9, 5, 2, 35, 136167, 58, 10, 32, 503, 190, 232, 1 ],
+    [ "Konis, Skypiean Maiden", "PSY", "Freedom", 4, 15, 4, 3, 70, 1066998, 458, 145, 196, 912, 388, 387, 0 ]
 ];

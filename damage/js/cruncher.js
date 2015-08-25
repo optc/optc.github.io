@@ -498,13 +498,13 @@ var CruncherCtrl = function($scope, $timeout) {
         return {
             unit: $scope.data.team[slotNumber].unit,
             orb: $scope.tdata.team[slotNumber].orb,
-            currentHP: $scope.numbers.hp.current,
             maxHP: $scope.numbers.hp,
             percHP: $scope.data.percHP,
             defenseDown: isDefenseDown,
             data: $scope.data.team[slotNumber],
             tdata: $scope.tdata.team[slotNumber],
-            scope: $scope
+            scope: $scope,
+            slot: slotNumber
         };
     };
 

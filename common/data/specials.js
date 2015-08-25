@@ -511,10 +511,12 @@ window.specials = {
         type: 'class'
     },
     712: {
-        // TODO Implement me
+        atk: function(p) { return p.slot < 2 ? 1.5 : 1 },
+        type: 'class'
     },
     713: {
-        // TODO Implement me
+        atk: function(p) { return p.slot < 2 ? 1.5 : 1 },
+        type: 'class'
     },
     715: {
         atk: function(p) { return p.unit.class.has("Freedom") ? 1.5 : 1; },
