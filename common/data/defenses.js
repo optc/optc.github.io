@@ -117,6 +117,9 @@ window.defenses = [
     [ 'Noland'                              , 'Noland Fortnight, mid round'          , 'Expert', 689, 300 ],
     [ 'Calgara'                             , 'Noland Fortnight, mid round'          , 'Expert', 688, 300 ],
     [ 'Noland (last round)'                 , 'Nolad Fortnight, last round'          , 'Expert', 690, 350 ],
+    [ 'Pierre'                              , 'Gan Fall Fortnight'                   , 'Expert', 714, 150 ],
+    [ 'Gan Fall'                            , 'Gan Fall Fortnight'                   , 'Expert', 713, 200 ],
+    [ 'Gan Fall (def up)'                   , 'Gan Fall Fortnight'                   , 'Expert', 713, 10000 ],
     /* * * * * Others * * * * */
     [ 'Thatch'                              , 'Whitebeard\'s island, 11th round'     , '', 448, 50 ],
     [ 'Namur'                               , 'Whitebeard\'s island, 12th round'     , '', 450, 500 ],

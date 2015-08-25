@@ -97,6 +97,14 @@ window.profiles = {
         description: 'Orb effects amplified by 1.10x',
         thumb: 415,
         orb: function(p) { return p.orb == 2.0 ? 1.1 : (p.orb == 0.5 ? 10/11 : 1); }
+    },
+
+    'Gan Fall': {
+        description: 'Stats of non-Freedom, non-Booster, non-Evolver units reduced by 90%',
+        thumb: 713,
+        atk: function(p) { return p.class.has('Freedom') || p.class.has('Booster') || p.class.has('Evolver') ? 1 : 0.1; },
+        hp: function(p)  { return p.class.has('Freedom') || p.class.has('Booster') || p.class.has('Evolver') ? 1 : 0.1; },
+        rcv: function(p) { return p.class.has('Freedom') || p.class.has('Booster') || p.class.has('Evolver') ? 1 : 0.1; }
     }
 
 };
