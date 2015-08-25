@@ -341,7 +341,7 @@ h3 > span > input {
     float: right !important;
 }
 
-tr.incomplete td:nth-child(2):after {
+tr.incomplete td:nth-child(2) > a:after {
     content: "INCOMPLETE";
     padding: 5px;
     border-radius: 10px;
@@ -349,6 +349,8 @@ tr.incomplete td:nth-child(2):after {
     background: salmon;
     font-size: 9px;
     color: white;
+    text-decoration: none !important;
+    display: inline-block;
 }
 
 .abilities td:first-child {

@@ -684,7 +684,7 @@ window.units = [
     [ "Chocolate Ice Cream Loving Robin", "PSY", "Fighter", 5, 20, 4, 2, 99, 3000000, 943, 443, 172, 1903, 842, 361, 1 ],
     [ "Ice Cream Loving Perona", "INT", "Shooter", 4, 12, 5, 1, 50, 392109, 99, 67, 52, 901, 527, 233, 1 ],
     [ "Strawberry Ice Cream Loving Perona", "INT", "Shooter", 5, 20, 4, 2, 99, 3000000, 848, 462, 182, 1689, 877, 385, 1 ],
-    [ ],
+    [ "Vivi Taking a Rest", "QCK", [ "Slasher", "Freedom" ], 4, 12, 4, 2, 70, null, 102, 37, 91, null, null, null, 0 ],
     [ "Calgara", "STR", [ "Freedom", "Striker" ], 3, 12, 6, 1, 50, 392109, 94, 115, 0, 1203, 692, 0, 1 ],
     [ "Calgara, the Great Warrior of Shandia", "STR", [ "Freedom", "Striker" ], 4, 20, 4, 2, 99, 3000000, 1145, 633, 0, 2401, 1300, 90, 1 ],
     [ "Montblanc Noland", "INT", "Slasher", 3, 12, 5, 1, 50, 392109, 102, 74, 49, 1028, 502, 212, 1 ],
@@ -707,5 +707,12 @@ window.units = [
     [ "Blueno, Cipher Pol No.9", "STR", "Fighter", 3, 12, 5, 2, 50, 392109, 166, 102, 32, 1338, 502, 124, 1 ],
     [ "Blueno Rokushiki, Cipher Pol No.9", "STR", "Fighter", 4, 20, 4, 3, 99, 3000000, 1281, 452, 100, 2466, 921, 221, 1 ],
     [ "Nico Robin, the Devil Child", "PSY", "Fighter", 3, 10, 6, 2, 50, 392109, 110, 63, 32, 1002, 494, 209, 1 ],
-    [ "Nico Robin, Member of the Strawhat Pirates", "PSY", "Fighter", 4, 16, 5, 3, 99, 3000000, 938, 430, 155, 1892, 881, 351, 0 ]
+    [ "Nico Robin, Member of the Strawhat Pirates", "PSY", "Fighter", 4, 16, 5, 3, 99, 3000000, 938, 430, 155, 1892, 881, 351, 0 ],
+    [ "Franky, Record of the Voyage - Strawhat Crew (Log Franky)", "PSY", [ "Shooter", "Freedom" ], 4, 12, 4, 2, 50, null, 663, 292, 79, null, null, null, 0 ],
+    [ "Franky, Dream of the Voyage - A Ship to Sail Around the World (Log Franky)", "PSY", [ "Shooter", "Freedom" ], 5, 20, 6, 3, 99, null, 1474, 656, 135, null, null, null, 0 ],
+    [ "Gan Fall", "QCK", "Striker", 3, "12", 6, 1, 50, null, 146, 72, 58, null, null, null, 0 ],
+    [ "Gan Fall the Knight of the Sky", "QCK", "Striker", 4, "20", null, null, 99, null, 884, 401, 151, null, null, null, 0 ],
+    [ "Pierre", "DEX", "Fighter", 3, 12, 4, 1, 50, null, 312, 160, 79, null, null, null, 0 ],
+    [ "Konis", "PSY", "Freedom", 3, 12, 5, 2, 35, null, 241, 84, 114, 503, 190, 232, 0 ],
+    [ "Konis, Skypiea Maiden", "PSY", "Freedom", 4, 20, 4, 3, 70, null, 458, 146, 196, null, null, null, 0 ]
 ];

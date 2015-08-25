@@ -502,8 +502,26 @@ window.specials = {
     690: { // Montblanc Noland, Explorer and Admiral of the Lvneel Kingdom
         orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); },
     },
-    702: { // Kashi
-        onActivation: function(p) { p.tdata.lock = Math.max(1,p.tdata.lock); },
-        onDeactivation: function(p) { if (p.tdata.lock == 1) p.tdata.lock = 0; }
+    710: {
+        atk: function(p) { return p.unit.class.has("Shooter") ? 1.25 : 1; },
+        type: 'class'
     },
+    711: {
+        atk: function(p) { return p.unit.class.has("Shooter") ? 1.25 : 1; },
+        type: 'class'
+    },
+    712: {
+        // TODO Implement me
+    },
+    713: {
+        // TODO Implement me
+    },
+    715: {
+        atk: function(p) { return p.unit.class.has("Freedom") ? 1.5 : 1; },
+        type: 'class'
+    },
+    716: {
+        atk: function(p) { return p.unit.class.has("Freedom") ? 1.5 : 1; },
+        type: 'class'
+    }
 };

@@ -319,7 +319,7 @@ app.controller('DetailsCtrl',function($scope, $state, $stateParams) {
 
 app.directive('characterTable',function($rootScope, $compile) {
     var addImage = function(data, type, row, meta) {
-        var thumb = window.units[row[10]].incomplete ? '../common/res/missing.png' : Utils.getThumbnailUrl(row[0]);
+        var thumb = window.units[row[11]].incomplete ? '../common/res/missing.png' : Utils.getThumbnailUrl(row[0]);
         return '<img class="slot small" data-original="' + thumb + '"> ' +
             '<a ui-sref="main.view({ id: ' + parseInt(row[0],10) + '})">' + data + '</a>';
     };
@@ -353,7 +353,7 @@ app.directive('characterTable',function($rootScope, $compile) {
                         x.removeAttribute('data-original');
                     });
                     $compile($(row).contents())($rootScope);
-                    if (window.units[data[10]].incomplete) $(row).addClass('incomplete');
+                    if (window.units[data[11]].incomplete) $(row).addClass('incomplete');
                     row.setAttribute('loaded','true');
                 }
             });

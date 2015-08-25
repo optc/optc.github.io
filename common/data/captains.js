@@ -1347,6 +1347,10 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Shooter") ? 1.5 : 1; },
         rcv: function(p) { return p.unit.class.has("Shooter") ? 1.5 : 1; },
     },
+    686: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; },
+        rcv: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; }
+    },
     687: { // Calgara
         atk: function(p) { return p.unit.class.has("Freedom") ? 1.5 : 1; }
     },
@@ -1401,5 +1405,23 @@ window.captains = {
     709: { // Nico Robin, Member of the Strawhat Pirates
         atk: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; },
         rcv: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; }
+    },
+    710: {
+        atk: function(p) { return p.unit.class.has("Shooter") ? 1.5 : 1; }
+    },
+    711: {
+        atk: function(p) { return p.unit.class.has("Shooter") ? 2 : 1; }
+    },
+    712: {
+        atk: function(p) { return p.unit.class.has("Striker") && p.percHP > 70 ? 2 : 1; }
+    },
+    713: {
+        atk: function(p) { return p.unit.class.has("Striker") && p.percHP > 70 ? 2.5 : 1; }
+    },
+    715: {
+        rcv: function(p) { return p.percHP < 30 ? 3 : 1; }
+    },
+    716: {
+        rcv: function(p) { return p.percHP < 30 ? 5 : 1; }
     }
 };

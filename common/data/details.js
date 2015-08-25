@@ -3942,6 +3942,11 @@ window.details = {
         captain: "Boosts ATK and RCV of Shooter characters by 1.5x",
         cooldown: 23
     },
+    686: {
+        special: "Delays all enemies for 1 turn, recovers 3x character's RCV in HP at the end of the turn for 3 turns",
+        captain: "Boosts ATK and RCV of Slasher characters by 1.5x",
+        cooldown: [ 13, 13 ]
+    },
     687: { // Calgara
         special: "Deals 13x character's ATK in STR damage to all enemies, boosts ATK of Freedom characters by 1.3x for 1 turn",
         captain: "Boosts ATK of Freedom characters by 1.5x",
@@ -4061,5 +4066,39 @@ window.details = {
         special: "Reduces Bind and Silence duration by 3 turns",
         captain: "Boosts ATK and RCV of PSY characters by 1.5x",
         cooldown: 21
+    },
+    710: {
+        special: "Empties all slots with hindrance orbs, boosts ATK of Shooter characters by 1.25x for 3 turns, deals 15x character's ATK in PSY damage to all enemies",
+        captain: "Boosts ATK of Shooter characters by 1.5x",
+        cooldown: 23
+    },
+    711: {
+        special: "Empties all slots with hindrance orbs, boosts ATK of Shooter characters by 1.25x for 3 turns, deals 15x character's ATK in PSY damage to all enemies",
+        captain: "Boosts ATK of Shooter characters by 2x",
+        cooldown: 23
+    },
+    712: {
+        special: "Deals 15x character's ATK in QCK damage to one enemy, boosts ATK of the characters in the upper row by 1.5x for 2 turns",
+        captain: "Boosts ATK of Striker characters by 2x if HP is above a certain threshold at the start of the turn",
+        cooldown: 22
+    },
+    713: {
+        special: "Deals 15x character's ATK in QCK damage to one enemy, boosts ATK of the characters in the upper row by 1.5x for 2 turns",
+        captain: "Boosts ATK of Striker characters by 2.5x if HP is above a certain threshold at the start of the turn",
+        cooldown: 22
+    },
+    714: {
+        special: "Randomizes slots with [STR], [QCK], [INT] or [PSY] orbs",
+        cooldown: 22
+    },
+    715: {
+        special: "Boosts ATK and RCV of Freedom characters by 1.5x for 2 turns, seals herself for 3 turns",
+        captain: "Boosts RCV by 2x if HP is low",
+        cooldown: 27
+    },
+    716: {
+        special: "Boosts ATK and RCV of Freedom characters by 1.5x for 2 turns, seals herself for 3 turns",
+        captain: "Boosts RCV by 5x if HP is low",
+        cooldown: 27
     }
 };
