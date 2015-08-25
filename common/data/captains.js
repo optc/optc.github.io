@@ -1413,10 +1413,10 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Shooter") ? 2 : 1; }
     },
     712: {
-        atk: function(p) { return p.unit.class.has("Striker") && p.percHP > 70 ? 2 : 1; }
+        atk: function(p) { return p.unit.class.has("Striker") && p.percHP > 50 ? 2 : 1; }
     },
     713: {
-        atk: function(p) { return p.unit.class.has("Striker") && p.percHP > 70 ? 2.5 : 1; }
+        atk: function(p) { return p.unit.class.has("Striker") && p.percHP > 50 ? 2.5 : 1; }
     },
     715: {
         rcv: function(p) { return p.percHP < 30 ? 3 : 1; }

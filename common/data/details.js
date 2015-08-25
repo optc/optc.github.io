@@ -2394,48 +2394,56 @@ window.details = {
         captain: "Boosts ATK of Fighter characters by 2x",
         cooldown: [ 11, 6 ],
         evolution: 410,
-        evolvers: [ 118, 85, 94, 301, 101 ]
+        evolvers: [ 118, 85, 94, 301, 101 ],
+        global: true
     },
     410: { // Jinbei the Shichibukai
         special: "Changes own orb into [QCK], deals 13x character's ATK in QCK damage to one enemy",
         captain: "Boosts ATK of Fighter characters by 2.5x",
-        cooldown: [ 11, 6 ]
+        cooldown: [ 11, 6 ],
+        global: true
     },
     411: { // Bartholomew Kuma
         special: "Changes neighboring slots' orbs into [STR] orbs, deals 1,000 damage to one enemy",
         captain: "Boosts ATK and HP of STR characters by 2x",
         cooldown: [ 20, 14 ],
         evolution: 412,
-        evolvers: [ 118, 84, 94, 300, 100 ]
+        evolvers: [ 118, 84, 94, 300, 100 ],
+        global: true
     },
     412: { // Bartholomew Kuma the Shichibukai
         special: "Changes neighboring slots' orbs into [STR] orbs, deals 1,000 damage to one enemy",
         captain: "Boosts ATK and HP of STR characters by 2x",
-        cooldown: [ 20, 14 ]
+        cooldown: [ 20, 14 ],
+        global: true
     },
     413: { // Gekko Moriah
         special: "Changes [STR] and [DEX] orbs into [INT] orbs",
         captain: "Boosts ATK of INT characters by 2.5x if HP is above 99% at the start of the turn",
         cooldown: [ 20, 10 ],
         evolution: 414,
-        evolvers: [ 118, 88, 94, 304, 104 ]
+        evolvers: [ 118, 88, 94, 304, 104 ],
+        global: true
     },
     414: { // Gekko Moriah the Shichibukai
         special: "Changes [STR] and [DEX] orbs into [INT] orbs",
         captain: "Boosts ATK of INT characters by 3x if HP is above 99% at the start of the turn",
-        cooldown: [ 20, 10 ]
+        cooldown: [ 20, 10 ],
+        global: true
     },
     415: { // Boa Hancock
         special: "Recovers 15x character's RCV in HP, delays all enemies for 1 turn",
         captain: "Boosts ATK of QCK and PSY characters by 2.75x and their RCV by 1.5x if HP is above 70% at the start of the turn",
         cooldown: [ 17, 13 ],
         evolution: 416,
-        evolvers: [ 118, 266, 94, 96, 267 ]
+        evolvers: [ 118, 266, 94, 96, 267 ],
+        global: true
     },
     416: { // Boa Hancock the Shichibukai
         special: "Recovers 15x character's RCV in HP, delays all enemies for 1 turn",
         captain: "Boosts ATK of QCK and PSY characters by 2.75x and their RCV by 1.5x if HP is above 70% at the start of the turn",
-        cooldown: [ 17, 13 ]
+        cooldown: [ 17, 13 ],
+        global: true
     },
     417: { // Donquixote Doflamingo
         special: "Freely switch orbs between slots twice, amplifies orb effects by 2x for 1 turn",
@@ -4078,14 +4086,16 @@ window.details = {
         cooldown: 23
     },
     712: {
-        special: "Deals 15x character's ATK in QCK damage to one enemy, boosts ATK of the characters in the upper row by 1.5x for 2 turns",
+        special: "Deals 15x character's ATK in QCK damage to one enemy, boosts ATK of the characters in the top row by 1.5x for 2 turns",
+        specialNotes: "The special boosts the attack of only the crew's captain and the currently selected friend captain",
         captain: "Boosts ATK of Striker characters by 2x if HP is above a certain threshold at the start of the turn",
         cooldown: 22,
         evolution: 713,
         evolvers: [ 117, 90, 96, 301, 101 ]
     },
     713: {
-        special: "Deals 15x character's ATK in QCK damage to one enemy, boosts ATK of the characters in the upper row by 1.5x for 2 turns",
+        special: "Deals 15x character's ATK in QCK damage to one enemy, boosts ATK of the characters in the top row by 1.5x for 2 turns",
+        specialNotes: "The special boosts the attack of only the crew's captain and the currently selected friend captain",
         captain: "Boosts ATK of Striker characters by 2.5x if HP is above a certain threshold at the start of the turn",
         cooldown: 22
     },

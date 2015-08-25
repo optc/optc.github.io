@@ -511,11 +511,11 @@ window.specials = {
         type: 'class'
     },
     712: {
-        atk: function(p) { return p.slot < 2 ? 1.5 : 1 },
+        atk: function(p) { return p.slot < 2 ? 1.5 : 1; },
         type: 'class'
     },
     713: {
-        atk: function(p) { return p.slot < 2 ? 1.5 : 1 },
+        atk: function(p) { return p.slot < 2 ? 1.5 : 1; },
         type: 'class'
     },
     715: {
