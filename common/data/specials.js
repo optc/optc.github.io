@@ -371,7 +371,8 @@ window.specials = {
         def: function(p) { return 0.5; }
     },
     617: { // Superhuman Destroyers, Cannon User
-        atk: function(p) { return p.unit.class.has("Shooter") ? 1.2 : 1; }
+        atk: function(p) { return p.unit.class.has("Shooter") ? 1.2 : 1; },
+        type: 'class'
     },
     622: { // Pistol Hoodlum, Green Bounty Hunter
         rcvStatic: function(p) { return 100; }
@@ -470,10 +471,12 @@ window.specials = {
         }
     },
     670: { // Koala
-        atk: function(p) { return p.class.has("Fighter") ? 1.75 : 1; }
+        atk: function(p) { return p.unit.class.has("Fighter") ? 1.75 : 1; },
+        type: 'class'
     },
     671: { // Koala, Member of the Revolutionary Army
-        atk: function(p) { return p.class.has("Fighter") ? 1.75 : 1; }
+        atk: function(p) { return p.unit.class.has("Fighter") ? 1.75 : 1; },
+        type: 'class'
     },
     680: { // Ice Cream Loving Nami
         atk: function(p) { return p.unit.type == "DEX" ? 1.25 : 1; },
