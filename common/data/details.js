@@ -4712,7 +4712,7 @@ window.details = {
         special: "Deals 15x character's ATK in QCK damage to one enemy, boosts ATK of the characters in the top row by 1.5x for 2 turns",
         specialNotes: "The special boosts the attack of only the crew's captain and the currently selected friend captain",
         specialName: "Sky Knight's Javelin",
-        captain: "Boosts ATK of Striker characters by 2x if HP is above a certain threshold at the start of the turn",
+        captain: "Boosts ATK of Striker characters by 2x if HP is above 50% at the start of the turn",
         cooldown: 22,
         evolution: 713,
         evolvers: [ 117, 90, 96, 301, 101 ]
@@ -4721,7 +4721,7 @@ window.details = {
         special: "Deals 15x character's ATK in QCK damage to one enemy, boosts ATK of the characters in the top row by 1.5x for 2 turns",
         specialNotes: "The special boosts the attack of only the crew's captain and the currently selected friend captain",
         specialName: "Sky Knight's Javelin",
-        captain: "Boosts ATK of Striker characters by 2.5x if HP is above a certain threshold at the start of the turn",
+        captain: "Boosts ATK of Striker characters by 2.5x if HP is above 50% at the start of the turn",
         cooldown: 22
     },
     714: { // Pierre
