@@ -361,6 +361,10 @@ tr.incomplete td:nth-child(2) > a:after {
     width: 100%;
 }
 
+.specialName {
+    display: block;
+}
+
 /*********
  * POPUP *
  *********/

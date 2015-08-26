@@ -113,6 +113,7 @@
                             <tr>
                                 <td>Special</td>
                                 <td>
+                                    <strong class="specialName" ng-if="details.specialName">{{details.specialName}}</strong>
                                     <div ng-bind-html="details.special | decorate"></div>
                                     <span class="notes" ng-if="details.specialNotes" ng-bind-html="details.specialNotes | decorate"></span>
                                 </td>
