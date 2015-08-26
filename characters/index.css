@@ -530,6 +530,14 @@ tr.incomplete td:nth-child(2) > a:after {
     white-space: nowrap;
 }
 
+unit > a {
+    cursor: pointer;
+}
+
+unit > a:hover {
+    outline: 1px solid red;
+}
+
 /*******************
  * SLOT THUMBNAILS *
  *******************/

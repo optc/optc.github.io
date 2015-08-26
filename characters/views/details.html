@@ -203,6 +203,14 @@
                     </div>
                 </div>
 
+               <!-- Same specials -->
+
+                <h3 class="page-header" ng-if="sizeOf(sameSpecials) > 0">Units With the Same Special</h3>
+
+                <div ng-if="sizeOf(sameSpecials) > 0" class="panel panel-default">
+                    <unit uid="id" ng-repeat="id in sameSpecials"></a>
+                </div>
+
                 <!-- Drops -->
 
                 <h3 class="page-header" ng-if="drops.length > 0">Drop Locations</h3>

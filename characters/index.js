@@ -129,6 +129,16 @@ var generateReverseDropMap = function() {
     }
 };
 
+var searchSameSpecials = function(id) {
+    var result = [ ];
+    for (var key in details) {
+        if (key == id || !details[key].special) continue; 
+        if (details[key].specialName == details[id].specialName && details[key].special == details[id].special)
+            result.push(parseInt(key, 10));
+    }
+    return result;
+};
+
 var getDayOfWeek = function() {
     var now = new Date(), utc = new Date(now.getTime() + now.getTimezoneOffset() * 60000 - 8 * 3600000);
     return (utc.getDay() === 0 ? 6 : utc.getDay() - 1);
@@ -297,7 +307,8 @@ app.controller('DetailsCtrl',function($scope, $state, $stateParams) {
     $scope.usedBy = searchEvolverEvolutions($stateParams.id);
     $scope.drops = searchDropLocations(parseInt($stateParams.id,10));
     $scope.manuals = searchDropLocations(-parseInt($stateParams.id,10));
-    $scope.collapsed = { to: true, from: true, used: true, drops: true, manuals: true };
+    $scope.sameSpecials = searchSameSpecials(parseInt($stateParams.id,10));
+    $scope.collapsed = { to: true, from: true, used: true, drops: true, manuals: true }; 
     // events/functions
     $scope.getEvos = getEvolversOfEvolution;
     $scope.sizeOf = function(target) { return Object.keys(target).length; };
@@ -473,6 +484,22 @@ app.directive('evolution',function($state, $stateParams) {
             };
         }
     };
+});
+
+app.directive('unit',function($state, $stateParams) {
+    return {
+        restrict: 'E',
+        scope: { uid: '=' },
+        template: '<a class="slot medium" decorate-slot uid="uid" ng-click="goToState(uid)"></a>',
+        link: function(scope, element, attrs) {
+            scope.goToState = function(id) {
+                if (id == parseInt($stateParams.id,10)) return;
+                var previous = $stateParams.previous.concat([ $stateParams.id ]);
+                $state.go('main.view',{ id: id, previous: previous });
+            };
+        }
+    };
+
 });
 
 app.directive('compare',function() {

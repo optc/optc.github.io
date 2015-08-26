@@ -213,13 +213,13 @@ window.details = {
         global: true
     },
     27: { // Higuma
-        special: "Deals 10x character's ATK in QCK damage to one enemy",
+        special: "Deals 10x character's ATK in character's type damage to one enemy",
         specialName: "Hyper Slash",
         captain: "Boosts HP of QCK characters by 1.2x",
         global: true
     },
     28: { // Master of the Near Sea
-        special: "Deals 10x character's ATK in STR damage to one enemy",
+        special: "Deals 10x character's ATK in character's type damage to one enemy",
         specialName: "Hyper Straight",
         captain: "Boosts ATK of Fighter characters by 1.2x",
         cooldown: [ 40, 15 ],
@@ -307,7 +307,7 @@ window.details = {
         global: true
     },
     40: { // Gaimon
-        special: "Changes neighboring orbs into [RCV] orbs",
+        special: "Changes neighboring slots' orbs into [RCV] orbs",
         specialName: "[RCV] Slot Storm",
         captain: "Reduces damage received from Shooter enemies by 30%",
         cooldown: [ 15, 8 ],
@@ -371,7 +371,7 @@ window.details = {
         global: true
     },
     49: { // Iron Fist Fullbody
-        special: "Deals 10x character's ATK in STR damage to one enemy",
+        special: "Deals 10x character's ATK in character's type damage to one enemy",
         specialName: "Hyper Straight",
         captain: "Boosts ATK of STR characters by 1.5x",
         cooldown: [ 15, 10 ],
@@ -711,17 +711,17 @@ window.details = {
         global: true
     },
     119: { // Sword Bandit
-        special: "Deals 10x character's ATK in DEX damage to one enemy",
+        special: "Deals 10x character's ATK in character's type damage to one enemy",
         specialName: "Hyper Slash",
         global: true
     },
     120: { // Pistol Bandit
-        special: "Deals 5x character's ATK in STR damage to all enemies",
+        special: "Deals 5x character's ATK in character's type damage to all enemies",
         specialName: "Hyper Shot",
         global: true
     },
     121: { // Fighter Group Cabin Boy Red Pirates
-        special: "Deals 10x character's ATK in STR damage to one enemy",
+        special: "Deals 10x character's ATK in character's type damage to one enemy",
         specialName: "Hyper Straight",
         evolution: 142,
         evolvers: [ 89 ],
@@ -750,7 +750,7 @@ window.details = {
         global: true
     },
     125: { // Fighter Group Cabin Boy Black Pirates
-        special: "Deals 10x character's ATK in INT damage to one enemy",
+        special: "Deals 10x character's ATK in character's type damage to one enemy",
         specialName: "Hyper Straight",
         cooldown: [ 40, 15 ],
         evolution: 146,
@@ -758,7 +758,7 @@ window.details = {
         global: true
     },
     126: { // Slasher Group Cabin Boy Red Pirates
-        special: "Deals 10x character's ATK in STR damage to one enemy",
+        special: "Deals 10x character's ATK in character's type damage to one enemy",
         specialName: "Hyper Slash",
         evolution: 147,
         evolvers: [ 89 ],
@@ -788,7 +788,7 @@ window.details = {
         global: true
     },
     130: { // Slasher Group Cabin Boy Black Pirates
-        special: "Deals 10x character's ATK in INT damage to one enemy",
+        special: "Deals 10x character's ATK in character's type damage to one enemy",
         specialName: "Hyper Slash",
         evolution: 151,
         evolvers: [ 93 ],
@@ -827,14 +827,14 @@ window.details = {
         global: true
     },
     135: { // Striker Group Cabin Boy Black Pirates
-        special: "Deals 10x character's ATK in INT damage to one enemy",
+        special: "Deals 10x character's ATK in character's type damage to one enemy",
         specialName: "Hyper Spiral",
         evolution: 156,
         evolvers: [ 93 ],
         global: true
     },
     136: { // Shooter Group Cabin Boy Red Pirates
-        special: "Deals 5x character's ATK in STR damage to all enemies",
+        special: "Deals 5x character's ATK in character's type damage to all enemies",
         specialName: "Hyper Shot",
         evolution: 157,
         evolvers: [ 89 ],
@@ -865,7 +865,7 @@ window.details = {
         global: true
     },
     140: { // Shooter Group Cabin Boy Black Pirates
-        special: "Deals 5x character's ATK in INT damage to all enemies",
+        special: "Deals 5x character's ATK in character's type damage to all enemies",
         specialName: "Hyper Shot",
         cooldown: 15,
         evolution: 161,
@@ -881,7 +881,7 @@ window.details = {
         global: true
     },
     142: { // Fighter Group Crew Red Pirates
-        special: "Deals 10x character's ATK in STR damage to one enemy",
+        special: "Deals 10x character's ATK in character's type damage to one enemy",
         specialName: "Hyper Straight",
         evolution: 269,
         evolvers: [ 115, 116, 89 ],
@@ -910,7 +910,7 @@ window.details = {
         global: true
     },
     146: { // Fighter Group Crew Black Pirates
-        special: "Deals 10x character's ATK in INT damage to one enemy",
+        special: "Deals 10x character's ATK in character's type damage to one enemy",
         specialName: "Hyper Straight",
         cooldown: [ 40, 15 ],
         evolution: 273,
@@ -918,7 +918,7 @@ window.details = {
         global: true
     },
     147: { // Slasher Group Crew Red Pirates
-        special: "Deals 10x character's ATK in STR damage to one enemy",
+        special: "Deals 10x character's ATK in character's type damage to one enemy",
         specialName: "Hyper Slash",
         evolution: 274,
         evolvers: [ 116, 95 ],
@@ -948,7 +948,7 @@ window.details = {
         global: true
     },
     151: { // Slasher Group Crew Black Pirates
-        special: "Deals 10x character's ATK in INT damage to one enemy",
+        special: "Deals 10x character's ATK in character's type damage to one enemy",
         specialName: "Hyper Slash",
         evolution: 278,
         evolvers: [ 116, 99 ],
@@ -987,14 +987,14 @@ window.details = {
         global: true
     },
     156: { // Striker Group Crew Black Pirates
-        special: "Deals 10x character's ATK in INT damage to one enemy",
+        special: "Deals 10x character's ATK in character's type damage to one enemy",
         specialName: "Hyper Spiral",
         evolution: 283,
         evolvers: [ 82, 88 ],
         global: true
     },
     157: { // Shooter Group Crew Red Pirates
-        special: "Deals 5x character's ATK in STR damage to all enemies",
+        special: "Deals 5x character's ATK in character's type damage to all enemies",
         specialName: "Hyper Shot",
         evolution: 284,
         evolvers: [ 115, 116, 89 ],
@@ -1025,7 +1025,7 @@ window.details = {
         global: true
     },
     161: { // Shooter Group Crew Black Pirates
-        special: "Deals 5x character's ATK in INT damage to all enemies",
+        special: "Deals 5x character's ATK in character's type damage to all enemies",
         specialName: "Hyper Shot",
         cooldown: 15,
         evolution: 288,
@@ -1106,23 +1106,23 @@ window.details = {
         global: true
     },
     175: { // Karate Fishman Arlong crewmember
-        special: "Deals 10x character's ATK in STR damage to one enemy",
+        special: "Deals 10x character's ATK in character's type damage to one enemy",
         specialName: "Hyper Straight",
         cooldown: [ 40, 15 ],
         global: true
     },
     176: { // Sword Fishman Arlong crewmember
-        special: "Deals 10x character's ATK in DEX damage to one enemy",
+        special: "Deals 10x character's ATK in character's type damage to one enemy",
         specialName: "Hyper Slash",
         global: true
     },
     177: { // Spear Fishman Arlong crewmember
-        special: "Deals 10x character's ATK in QCK damage to one enemy",
+        special: "Deals 10x character's ATK in character's type damage to one enemy",
         specialName: "Hyper Spiral",
         global: true
     },
     178: { // Pistol Fishman Arlong crewmember
-        special: "Deals 5x character's ATK in PSY damage to all enemies",
+        special: "Deals 5x character's ATK in character's type damage to all enemies",
         specialName: "Hyper Shot",
         global: true
     },
@@ -1769,7 +1769,7 @@ window.details = {
         global: true
     },
     269: { // Armed Fighter Unit Red Pirates
-        special: "Deals 10x character's ATK in STR damage to one enemy",
+        special: "Deals 10x character's ATK in character's type damage to one enemy",
         specialName: "Hyper Straight",
         global: true
     },
@@ -1790,13 +1790,13 @@ window.details = {
         global: true
     },
     273: { // Armed Fighter Unit Black Pirates
-        special: "Deals 10x character's ATK in INT damage to one enemy",
+        special: "Deals 10x character's ATK in character's type damage to one enemy",
         specialName: "Hyper Straight",
         cooldown: [ 40, 15 ],
         global: true
     },
     274: { // Armed Slasher Unit Red Pirates
-        special: "Deals 10x character's ATK in STR damage to one enemy",
+        special: "Deals 10x character's ATK in character's type damage to one enemy",
         specialName: "Hyper Slash",
         global: true
     },
@@ -1818,7 +1818,7 @@ window.details = {
         global: true
     },
     278: { // Armed Slasher Unit Black Pirates
-        special: "Deals 10x character's ATK in INT damage to one enemy",
+        special: "Deals 10x character's ATK in character's type damage to one enemy",
         specialName: "Hyper Slash",
         global: true
     },
@@ -1847,12 +1847,12 @@ window.details = {
         global: true
     },
     283: { // Armed Striker Unit Black Pirates
-        special: "Deals 10x character's ATK in INT damage to one enemy",
+        special: "Deals 10x character's ATK in character's type damage to one enemy",
         specialName: "Hyper Spiral",
         global: true
     },
     284: { // Armed Shooter Unit Red Pirates
-        special: "Deals 5x character's ATK in STR damage to all enemies",
+        special: "Deals 5x character's ATK in character's type damage to all enemies",
         specialName: "Hyper Shot",
         global: true
     },
@@ -1875,7 +1875,7 @@ window.details = {
         global: true
     },
     288: { // Armed Shooter Unit Black Pirates
-        special: "Deals 5x character's ATK in INT damage to all enemies",
+        special: "Deals 5x character's ATK in character's type damage to all enemies",
         specialName: "Hyper Shot",
         cooldown: 15,
         global: true
@@ -1915,7 +1915,7 @@ window.details = {
         global: true
     },
     294: { // Rex
-        special: "Deals 10x character's ATK in STR damage to one enemy",
+        special: "Deals 10x character's ATK in character's type damage to one enemy",
         specialName: "Hyper Straight",
         captain: "Boosts HP of STR characters by 2x",
         cooldown: [ 40, 15 ],
@@ -1938,7 +1938,7 @@ window.details = {
         global: true
     },
     297: { // Great Advisor Tsuru
-        special: "Recovers 2,000 HP and randomizes all orbs",
+        special: "Recovers 2,000 HP, randomizes all orbs",
         specialName: "Cleansing Wash",
         captain: "Boosts ATK of Shooter characters by 2x",
         cooldown: [ 20, 12 ],
@@ -2531,8 +2531,8 @@ window.details = {
         global: true
     },
     383: { // Mr. 0 Baroque Works CEO (Crocodile)
-        special: "Poisons one enemy",
-        specialNotes: "Poison deals 0.5x character's ATK in fixed damage at the end of each turn",
+        special: "Strongly poisons one enemy",
+        specialNotes: "Strong poison deals 5x character's ATK in fixed damage at the end of each turn",
         specialName: "Poison Needle",
         captain: "Reduces damage received by 10%, boosts ATK of INT units by 2x",
         cooldown: [ 17, 12 ],
@@ -2862,7 +2862,7 @@ window.details = {
     },
     429: { // South Bird and the Forest Fauna
         special: "Deals 7x character's ATK in DEX damage to all enemies, reduces the defense of all enemies by 50% for 1 turn",
-        specialName: "South Bird's Fearless Smile",
+        specialName: "Fearless Smile of the South Bird",
         cooldown: [ 20, 15 ]
     },
     430: { // Bellamy
@@ -2888,7 +2888,7 @@ window.details = {
     },
     433: { // Elizabeth
         special: "Reduces Bind and Silence duration by 1 turn",
-        specialName: "Newkama's Temptation",
+        specialName: "Newkama Temptation",
         captain: "Boosts ATK by 2x following a chain of QCK > STR > DEX attacks no lower than Good",
         cooldown: [ 16, 6 ]
     },
@@ -2984,7 +2984,7 @@ window.details = {
         cooldown: [ 16, 10 ]
     },
     450: { // Namur
-        special: "Boosts ATK of Fighter characters by 1.5x for 1 turn, deals 25x characters's ATK in DEX damage to one enemy",
+        special: "Boosts ATK of Fighter characters by 1.5x for 1 turn, deals 25x character's ATK in DEX damage to one enemy",
         specialName: "Number Eight's Blow",
         captain: "Boosts ATK of Fighter characters by 2x and their HP by 1.5x",
         cooldown: [ 25, 18 ],
@@ -3081,7 +3081,7 @@ window.details = {
     },
     464: { // Shura
         special: "Deals 20x character's ATK in INT damage to all enemies",
-        specialName: "Fuza's Flame",
+        specialName: "Fuza's Flame Breath",
         captain: "Boosts ATK and HP of Striker characters by 1.5x",
         cooldown: [ 20, 15 ]
     },
@@ -3332,7 +3332,7 @@ window.details = {
     },
     503: { // Hotori Kotori
         special: "Deals 5x character's ATK in INT damage to all enemies, boosts ATK by 5% for 1 turn, reduces the defense of all enemies by 50% for 1 turn, randomizes all orbs",
-        specialName: "Surprise Dial Illusion",
+        specialName: "Surprise Dial - Illusion",
         captain: "Boosts HP of INT characters by 1.5x",
         cooldown: [ 20, 15 ],
         evolution: 504,
@@ -3340,7 +3340,7 @@ window.details = {
     },
     504: { // Hotori Kotori - Lieutenants of God's Army
         special: "Deals 5x character's ATK in INT damage to all enemies, boosts ATK by 5% for 1 turn, reduces the defense of all enemies by 50% for 1 turn, randomizes all orbs",
-        specialName: "Surprise Dial Illusion",
+        specialName: "Surprise Dial - Illusion",
         captain: "Boosts HP of INT characters by 2x",
         cooldown: [ 20, 15 ]
     },
@@ -3379,7 +3379,7 @@ window.details = {
     509: { // The Strongest Prisoner, Sir Crocodile Mr. 0, Former CEO of Baroque Works
         special: "Poisons all enemies, boosts ATK of Striker characters by 1.5x for 1 turn",
         specialNotes: "Poison deals 0.5x character's ATK in fixed damage at the end of each turn",
-        specialName: "Cruel Trick - Poison Needle",
+        specialName: "Cruel Trick - Poison Hook",
         captain: "Boosts ATK of Striker characters by 1.5x",
         cooldown: [ 24, 14 ],
         evolution: 510,
@@ -3388,7 +3388,7 @@ window.details = {
     510: { // The Strongest Prisoner, Sir Crocodile the Shichibukai
         special: "Poisons all enemies, boosts ATK of Striker characters by 1.5x for 1 turn",
         specialNotes: "Poison deals 0.5x character's ATK in fixed damage at the end of each turn",
-        specialName: "Cruel Trick - Poison Needle",
+        specialName: "Cruel Trick - Poison Hook",
         captain: "Reduces damage received by 10%, boosts ATK of Striker characters by 2x",
         cooldown: [ 24, 14 ]
     },
@@ -3622,7 +3622,7 @@ window.details = {
     },
     543: { // Wiper
         special: "Reduces current HP by 50%, deals 50x character's ATK in DEX damage to one enemy",
-        specialName: "Reject",
+        specialName: "Reject Dial",
         captain: "Boosts ATK and HP of Shooter characters by 1.5x, reduces RCV by 100%",
         cooldown: [ 25, 20 ],
         evolution: 544,
@@ -3630,7 +3630,7 @@ window.details = {
     },
     544: { // Wiper, Descendant of the Great Calgara
         special: "Reduces current HP by 50%, deals 50x character's ATK in DEX damage to one enemy",
-        specialName: "Reject",
+        specialName: "Reject Dial",
         captain: "Boosts ATK of Shooter characters by 2.25x, their HP by 1.5x and reduces RCV by 100%",
         cooldown: [ 25, 20 ]
     },
@@ -3690,7 +3690,7 @@ window.details = {
     },
     553: { // Roronoa Zoro, Merveille's Adventurer (Strong World/SW)
         special: "Changes neighboring slots' orbs into [DEX], deals 1,000 damage to all enemies",
-        specialName: "Demon Spirit Nine Sword Style: Ashura Drilling Force",
+        specialName: "Ashura Ugui",
         captain: "Boosts ATK of DEX characters by 2.75x if HP is below 30% at the start of the turn",
         cooldown: 20,
         evolution: 554,
@@ -3698,7 +3698,7 @@ window.details = {
     },
     554: { // Roronoa Zoro, Strawhat Crew's Attack (Strong World/SW)
         special: "Changes neighboring slots' orbs into [DEX], deals 1,000 damage to all enemies",
-        specialName: "Demon Spirit Nine Sword Style: Ashura Drilling Force",
+        specialName: "Ashura Ugui",
         captain: "Boosts ATK of DEX characters by 3x if HP is below 30% at the start of the turn",
         cooldown: 20
     },
@@ -3718,7 +3718,7 @@ window.details = {
     },
     557: { // Nico Robin, Merveille's Adventurer (Strong World/SW)
         special: "Boosts chances of getting [INT] orbs for 3 turns",
-        specialName: "Ochenta Fleur Cuatro Manus Shock",
+        specialName: "Ochenta Fleur - Cuatro Manus Shock",
         captain: "Boosts ATK and RCV of INT characters by 1.5x",
         cooldown: [ 16, 10 ],
         evolution: 558,
@@ -3726,7 +3726,7 @@ window.details = {
     },
     558: { // Nico Robin, Strawhat Crew's Attack (Strong World/SW)
         special: "Boosts chances of getting [INT] orbs for 3 turns",
-        specialName: "Ochenta Fleur Cuatro Manus Shock",
+        specialName: "Ochenta Fleur - Cuatro Manus Shock",
         captain: "Boosts ATK and RCV of INT characters by 2x",
         cooldown: [ 16, 10 ]
     },
@@ -3801,7 +3801,7 @@ window.details = {
     },
     570: { // Monkey D. Luffy Davy Back Fight - Afro
         special: "Changes hindrance orbs into [STR], deals 20x character's ATK in STR damage to one enemy",
-        specialName: "Gum-Gum no Flail",
+        specialName: "Gum-Gum Flail",
         captain: "Boosts ATK of STR and Fighter characters by 1.5x",
         captainNotes: "The bonus is cumulative. STR Fighter characters get a 2.25x bonus.",
         cooldown: [ 25, 14 ],
@@ -3810,7 +3810,7 @@ window.details = {
     },
     571: { // Monkey D. Luffy Davy Back Fight - Combat
         special: "Changes hindrance orbs into [STR], deals 20x character's ATK in STR damage to one enemy",
-        specialName: "Gum-Gum no Flail",
+        specialName: "Gum-Gum Flail",
         captain: "Boosts ATK of STR and Fighter characters by 1.5x, reduces cooldown of all specials by 1 turn at the start of the fight",
         captainNotes: "The bonus is cumulative. STR Fighter characters get a 2.25x bonus.",
         cooldown: [ 25, 14 ]
@@ -3901,7 +3901,7 @@ window.details = {
     },
     585: { // Nojiko
         special: "Changes the captain's orb into [PSY], recovers 9x character's RCV in HP",
-        specialName: "A Bond Received by Bellmere",
+        specialName: "A Bond Inherited from Bellmere",
         captain: "Boosts RCV of PSY characters by 1.5x",
         cooldown: 20,
         evolution: 586,
@@ -3909,7 +3909,7 @@ window.details = {
     },
     586: { // Nojiko, Nami's Sister
         special: "Changes the captain's orb into [PSY], recovers 9x character's RCV in HP",
-        specialName: "A Bond Received by Bellmere",
+        specialName: "A Bond Inherited from Bellmere",
         captain: "Boosts HP and RCV of PSY characters by 1.5x",
         cooldown: 20
     },
@@ -4048,13 +4048,13 @@ window.details = {
         cooldown: 15
     },
     611: { // Pudding Pudding
-        special: "Changes neighboring slots' orbs into [RCV]",
+        special: "Changes neighboring slots' orbs into [RCV] orbs",
         specialName: "[RCV] Slot Storm",
         cooldown: 18
     },
     612: { // Brook, Record of the Voyage - Strawhat Crew (Log Brook)
         special: "Boosts ATK and RCV by 45 units for 1 turn, reduces damage received by 45% for 1 turn",
-        specialName: "45 Degree Delight",
+        specialName: "\"45 Degree\" Delight",
         captain: "Boosts ATK of Slasher characters by 1.5x",
         cooldown: 13,
         evolution: 613,
@@ -4062,7 +4062,7 @@ window.details = {
     },
     613: { // Brook, Dream of the Voyage - Promised Meeting (Log Brook)
         special: "Boosts ATK and RCV by 45 units for 1 turn, reduces damage received by 45% for 1 turn",
-        specialName: "45 Degree Delight",
+        specialName: "\"45 Degree\" Delight",
         captain: "Boosts ATK, HP and RCV of Slasher characters by 1.5x",
         cooldown: 13
     },
@@ -4128,7 +4128,7 @@ window.details = {
         cooldown: [ 25, 15 ]
     },
     626: { // Gatling Hoodlum, Black Bounty Hunter
-        special: "Deals 13x character's ATK in INT damage to all enemies",
+        special: "Deals 13x character's ATK in character's type damage to all enemies",
         specialName: "Hyper Burst",
         cooldown: [ 35, 18 ]
     },
@@ -4204,7 +4204,7 @@ window.details = {
     },
     638: { // Doma
         special: "Changes [PSY] and [INT] orbs into [QCK] orbs, reduces Bind duration by 1 turn",
-        specialName: "Raiding Frenzy Sword",
+        specialName: "Raiding Sword of Frenzy",
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of Slasher characters by 2x",
         cooldown: 20,
         evolution: 639,
@@ -4212,7 +4212,7 @@ window.details = {
     },
     639: { // Bohemian Knight Doma
         special: "Changes [PSY] and [INT] orbs into [QCK] orbs, reduces Bind duration by 1 turn",
-        specialName: "Raiding Frenzy Sword",
+        specialName: "Raiding Sword of Frenzy",
         captain: "Reduces cooldown of all specials by 3 turns at the start of the fight, boosts ATK of Slasher characters by 2x",
         cooldown: 20
     },
@@ -4235,7 +4235,7 @@ window.details = {
     642: { // Squard
         special: "Reduces current HP by 30%, deals 10x character's ATK in PSY damage to one enemy, amplifies orb effects by 1.75x for 1 turn",
         specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.75x more damage and opposite orbs will deal 1.75x less damage",
-        specialName: "Veteran's Large Sword",
+        specialName: "Great Sword of the Battle Veteran",
         captain: "Boosts ATK of PSY characters by 2.5x if HP is below 30% at the start of the turn",
         cooldown: 21,
         evolution: 643,
@@ -4244,13 +4244,13 @@ window.details = {
     643: { // Maelstrom Spider Squard
         special: "Reduces current HP by 30%, deals 10x character's ATK in PSY damage to one enemy, amplifies orb effects by 1.75x for 1 turn",
         specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.75x more damage and opposite orbs will deal 1.75x less damage",
-        specialName: "Veteran's Large Sword",
+        specialName: "Great Sword of the Battle Veteran",
         captain: "Boosts ATK of PSY characters by 3x if HP is below 30% at the start of the turn",
         cooldown: 21
     },
     644: { // Whitey Bay
         special: "Reduces Bind and Silence duration by 2 turns, boosts ATK against delayed enemies by 1.2x for 3 turns",
-        specialName: "Witch's Ice Breaker",
+        specialName: "The Witch's Ice Breaker",
         captain: "Boosts ATK of INT characters by 2x",
         cooldown: 18,
         evolution: 645,
@@ -4258,13 +4258,13 @@ window.details = {
     },
     645: { // Ice Witch Whitey Bay
         special: "Reduces Bind and Silence duration by 2 turns, boosts ATK against delayed enemies by 1.2x for 3 turns",
-        specialName: "Witch's Ice Breaker",
+        specialName: "The Witch's Ice Breaker",
         captain: "Boosts ATK of INT characters by 2.5x",
         cooldown: 18
     },
     646: { // Little Oars Jr.
         special: "Deals 20x character's ATK in STR damage to all enemies, boosts chances of getting [STR] orbs for 3 turns",
-        specialName: "Battleship Drop Attack",
+        specialName: "Battleship Drop",
         captain: "Boosts ATK of Shooter characters by 2.5x if HP is below 30% at the start of the turn",
         cooldown: 25,
         evolution: 647,
@@ -4272,7 +4272,7 @@ window.details = {
     },
     647: { // Rampaging Little Oars Jr.
         special: "Deals 20x character's ATK in STR damage to all enemies, boosts chances of getting [STR] orbs for 3 turns",
-        specialName: "Battleship Drop Attack",
+        specialName: "Battleship Drop",
         captain: "Boosts ATK of Shooter characters by 2.75x if HP is below 30% at the start of the turn",
         cooldown: 25
     },
@@ -4310,7 +4310,7 @@ window.details = {
     },
     652: { // Iron Mask Duval
         special: "Cuts all enemies' current HP by 20%, reduces damage received by 50% for 1 turn",
-        specialName: "Heart-smashing Horn",
+        specialName: "Heart-Smashing Horn",
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of DEX characters by 2x if they have matching orbs",
         cooldown: [ 28, 14 ],
         evolution: 653,
@@ -4318,7 +4318,7 @@ window.details = {
     },
     653: { // Duval, Head of the Flying Fish Riders
         special: "Cuts all enemies' current HP by 20%, reduces damage received by 50% for 1 turn",
-        specialName: "Heart-smashing Horn",
+        specialName: "Heart-Smashing Horn",
         captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of DEX characters by 2.25x if they have matching orbs",
         cooldown: [ 28, 14 ],
         evolution: [ 654, 654 ],
@@ -4326,7 +4326,7 @@ window.details = {
     },
     654: { // Duval, Head of the Rosy Life Riders
         special: "Cuts all enemies' current HP by 20%, reduces damage received by 50% for 1 turn",
-        specialName: "Heart-smashing Horn",
+        specialName: "Heart-Smashing Horn",
         captain: "Reduces cooldown of all specials by 3 turns at the start of the fight, boosts ATK of DEX characters by 2.75x if they have matching orbs",
         cooldown: [ 28, 14 ]
     },
@@ -4380,14 +4380,14 @@ window.details = {
     },
     662: { // Nami Holiday
         special: "Deals 13x character's ATK in PSY damage to one enemy, randomizes all orbs other than [PSY]",
-        specialName: "Tornado Tempo Beach Side",
+        specialName: "Tornado Tempo - Beach Side",
         captain: "Boosts ATK of PSY characters by 2x",
         cooldown: [ 15, 15 ]
     },
     663: { // Nefertari Vivi, Princess of the Alabasta Kingdom
         special: "Deals PSY damage to one enemy, recovers 5x character's RCV in HP at the end of the turn for 5 turns",
         specialNotes: "The exact damage is proportional to the crew's remaining HP and is higher the lower the HP is. The formula used is 80000 * (1 - (current HP) / (total HP))",
-        specialName: "Vivi's Important Bodyguard",
+        specialName: "Vivi's Important Security Guard",
         captain: "Recovers 2x character's RCV in HP at the end of the turn",
         cooldown: [ 25, 16 ],
         evolution: 664,
@@ -4396,7 +4396,7 @@ window.details = {
     664: { // Nefertari Vivi, Vice-Leader of the Suna Suna Clan
         special: "Deals PSY damage to one enemy, recovers 5x character's RCV in HP at the end of the turn for 5 turns",
         specialNotes: "The exact damage is proportional to the crew's remaining HP and is higher the lower the HP is. The formula used is 80000 * (1 - (current HP) / (total HP))",
-        specialName: "Vivi's Important Bodyguard",
+        specialName: "Vivi's Important Security Guard",
         captain: "Recovers 3x character's RCV in HP at the end of the turn",
         cooldown: [ 25, 16 ]
     },
@@ -4416,7 +4416,7 @@ window.details = {
     },
     667: { // Nefertari Cobra, King of the Alabasta Kingdom
         special: "Prevents death as long as HP is above 50% for 1 turn",
-        specialName: "King Chopper",
+        specialName: "King's Chopper",
         captain: "Reduces damage received by 10%, boosts ATK by 1.5x",
         cooldown: [ 28, 15 ]
     },
@@ -4438,7 +4438,7 @@ window.details = {
     },
     670: { // Koala
         special: "Boosts ATK of Fighter characters by 1.75x for 1 turn",
-        specialName: "Fishman Karate! Revolutionary True Fist Thrust",
+        specialName: "Fishman Karate! True Fist Thrust of the Revolutionaries",
         captain: "Boosts ATK of Fighter characters by 2x",
         cooldown: 15,
         evolution: 671,
@@ -4446,7 +4446,7 @@ window.details = {
     },
     671: { // Koala, Member of the Revolutionary Army
         special: "Boosts ATK of Fighter characters by 1.75x for 1 turn",
-        specialName: "Fishman Karate! Revolutionary True Fist Thrust",
+        specialName: "Fishman Karate! True Fist Thrust of the Revolutionaries",
         captain: "Boosts ATK of Fighter characters by 2.25x and their RCV by 1.5x",
         cooldown: 15
     },
@@ -4496,7 +4496,7 @@ window.details = {
     },
     678: { // Robin, Record of the Voyage - Strawhat Crew (Log Robin)
         special: "Reduces damage received by 50% for 1 turn, locks all orbs for 1 turn",
-        specialName: "Cien Fleur Spider Net",
+        specialName: "Cien Fleur - Spider Net",
         captain: "Boosts ATK and RCV of PSY characters by 1.2x, boosts chances of getting [PSY] orbs",
         cooldown: 19,
         evolution: 679,
@@ -4504,7 +4504,7 @@ window.details = {
     },
     679: { // Robin, Dream of the Voyage - Uncover the Blank Page of History (Log Robin)
         special: "Reduces damage received by 50% for 1 turn, locks all orbs for 1 turn",
-        specialName: "Cien Fleur Spider Net",
+        specialName: "Cien Fleur - Spider Net",
         captain: "Boosts ATK and RCV of PSY characters by 1.5x, boosts chances of getting [PSY] orbs",
         cooldown: 19
     },
@@ -4523,14 +4523,14 @@ window.details = {
     },
     682: { // Ice Cream Loving Robin
         special: "Recovers 2,561 HP, reduces damage received by 50% for 2 turns",
-        specialName: "Transcendental Healing",
+        specialName: "Transcendental Serenity Healing",
         cooldown: [ 22, 15 ],
         evolution: 683,
         evolvers: [ 117, 81, 87, 98, 103 ]
     },
     683: { // Chocolate Ice Cream Loving Robin
         special: "Recovers 2,561 HP, reduces damage received by 50% for 2 turns",
-        specialName: "Transcendental Healing",
+        specialName: "Transcendental Serenity Healing",
         captain: "Boosts ATK and RCV of Fighter characters by 1.5x",
         cooldown: [ 22, 15 ]
     },
@@ -4555,7 +4555,7 @@ window.details = {
     },
     687: { // Calgara
         special: "Deals 13x character's ATK in STR damage to all enemies, boosts ATK of Freedom characters by 1.3x for 1 turn",
-        specialName: "Great Warrior's Best Spear",
+        specialName: "First Spear of the Battle",
         captain: "Boosts ATK of Freedom characters by 1.5x",
         cooldown: [ 19, 14 ],
         evolution: 688,
@@ -4563,7 +4563,7 @@ window.details = {
     },
     688: { // Calgara, the Great Warrior of Shandia
         special: "Deals 13x character's ATK in STR damage to all enemies, boosts ATK of Freedom characters by 1.3x for 1 turn",
-        specialName: "Great Warrior's Best Spear",
+        specialName: "First Spear of the Battle",
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of Freedom characters by 2x",
         cooldown: [ 19, 14 ]
     },
@@ -4603,7 +4603,7 @@ window.details = {
         evolvers: [ 116, 98, 303 ]
     },
     694: { // Bazooka Corporal Navy Headquarters
-        special: "Deals 13x character's ATK in STR damage to all enemies",
+        special: "Deals 13x character's ATK in character's type damage to all enemies",
         specialName: "Hyper Burst",
         evolution: 699,
         evolvers: [ 116, 95, 300 ]
@@ -4631,7 +4631,7 @@ window.details = {
         captain: "Boosts ATK of Slasher characters by 1.75x"
     },
     699: { // Bazooka Major Navy Headquarters
-        special: "Deals 13x character's ATK in STR damage to all enemies",
+        special: "Deals 13x character's ATK in character's type damage to all enemies",
         specialName: "Hyper Burst",
         captain: "Boosts ATK of Shooter characters by 500 units, reduces damage received by 10%"
     },
@@ -4659,12 +4659,12 @@ window.details = {
     },
     704: { // Just Juryman
         special: "Deals 9x character's ATK in STR damage to all enemies, reduces the defense of all enemies by 50% for 1 turn",
-        specialName: "Fellow's Guilt",
+        specialName: "Companion's Guilt",
         cooldown: 25
     },
     705: { // Three-Headed Baskerville
         special: "Changes [PSY], [INT], [TND], [RCV] and empty orbs into [STR], [DEX] or [QCK] orbs",
-        specialName: "Guilty Verdict - \"A Slow Death Penalty\"",
+        specialName: "Guilty Verdict - \"Slow Death Penalty\"",
         captain: "Boosts ATK and HP of STR characters, DEX characters and QCK characters by 1.25x",
         cooldown: 20
     },
@@ -4684,7 +4684,7 @@ window.details = {
     },
     708: { // Nico Robin, the Devil Child
         special: "Reduces Bind and Silence duration by 3 turns",
-        specialName: "Cien Fleur Wing",
+        specialName: "Cien Fleur - Wing",
         captain: "Boosts ATK and RCV of PSY characters by 1.2x",
         cooldown: 21,
         evolution: 709,
@@ -4692,7 +4692,7 @@ window.details = {
     },
     709: { // Nico Robin, Member of the Strawhat Pirates
         special: "Reduces Bind and Silence duration by 3 turns",
-        specialName: "Cien Fleur Wing",
+        specialName: "Cien Fleur - Wing",
         captain: "Boosts ATK and RCV of PSY characters by 1.5x",
         cooldown: 21
     },
