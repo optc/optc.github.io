@@ -45,6 +45,8 @@ var SharedRootCtrl = function($scope) {
 
         customHitModifiers: null,
 
+        url: null
+
     };
 
     $scope.numbers = {
@@ -64,6 +66,25 @@ var SharedRootCtrl = function($scope) {
         $scope.tdata.team[n] = { orb: 1, special: false, lock: 0, silence: 0 };
     };
 
+    $scope.generateURL = function() {
+        
+        var tokens = [ ];
+        for (var i=0;i<6;++i) {
+            var data = $scope.data.team[i], candies = data.candies;
+            if (data.unit === null) tokens.push('!');
+            else {
+                var temp = (data.unit.number + 1) + ':' + data.level;
+                if (candies.atk + candies.hp + candies.rcv > 0)
+                    temp += ':' + [ candies.atk, candies.hp, candies.rcv ].join(':');
+                tokens.push(temp);
+            }
+        }
+
+        var result = '#/transfer/D' + tokens.join(',') + 'C';
+        $scope.tdata.url = window.location.href.match(/^(.+?)#/)[1] + result;
+
+    };
+
     /* * * * * Custom hit modifiers resetting * * * * */
 
     var resetHits = function() { $scope.tdata.customHitModifiers = null; };
@@ -81,7 +102,8 @@ app
     .controller('SharedRootCtrl', SharedRootCtrl)
     .run(function($rootScope, $location, $window) {
         $rootScope.$on('$stateChangeSuccess',function(e) {
-            if (ga) ga('send', 'pageview', { page: $location.path() });
+            var location = $location.path().replace(/\/transfer\/.+$/,'/transfer');
+            if (ga) ga('send', 'pageview', { page: location });
         });
     });
 

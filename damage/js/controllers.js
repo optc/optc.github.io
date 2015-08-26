@@ -236,6 +236,58 @@ controllers.PopoverCtrl = function($scope) {
     $scope.details = window.details[$scope.data.team[$scope.slot].unit.number + 1];
 };
 
+/****************
+ * TransferCtrl *
+ ****************/
+
+controllers.TransferCtrl = function($scope, $state, $stateParams) {
+
+    if (!/^D.+C$/.test($stateParams.data)) {
+        $scope.notify({ text: 'Invalid data, aborting transfer.', type: 'error' });
+        $state.go('^');
+    }
+
+    var team = [ ];
+    var regex = /(?:(\d+):(\d+)(?::(\d+):(\d+):(\d+))?|!)/;
+    var tokens = $stateParams.data.slice(1,-1).split(/,/);
+
+    for (var i=0;i<tokens.length;++i) {
+        var matches = tokens[i].match(regex);
+        if (!matches) break;
+        if (matches[0] == '!') team.push(null);
+        else {
+            var id = parseInt(matches[1],10), level = parseInt(matches[2],10),
+                atk = parseInt(matches[3],10) || 0, hp = parseInt(matches[4],10) || 0,
+                rcv = parseInt(matches[5],10) || 0;
+            if (id < 1 || id > units.length || units[id - 1].length === 0) break;
+            if (level < 1 || level > units[id - 1].maxLevel) break;
+            if (atk > 100 || hp > 100 || rcv > 100 || (atk + hp + rcv) > 200) break;
+            team.push({ id: id, level: level, candies: { atk: atk, hp: hp, rcv: rcv }});
+        }
+    }
+
+    if (team.length != 6) {
+        $scope.notify({ text: 'Invalid data, aborting transfer.', type: 'error' });
+        $state.go('^');
+    }
+
+    $scope.options.crunchInhibitor = Infinity;
+
+    for (i=0;i<6;++i) {
+        $scope.resetSlot(i,false);
+        if (team[i] === null) continue;
+        $scope.data.team[i].unit = units[team[i].id - 1];
+        $scope.data.team[i].level = team[i].level;
+        $scope.data.team[i].candies = $.extend($scope.data.team[i].candies, team[i].candies);
+    }
+
+    $scope.options.crunchInhibitor = 0;
+
+    $scope.notify({ text: 'Data transfer completed successfully.', type: 'success' });
+    $state.go('^');
+
+};
+
 /*****************************
  * Controller initialization *
  *****************************/

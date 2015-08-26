@@ -570,6 +570,21 @@ directives.candySlider = function($compile) {
     };
 };
 
+directives.urlContainer = function() {
+    return {
+        restrict: 'E',
+        replace: true,
+        template: '<div id="urlContainer" ng-class="{ visible: tdata.url }"><input type="text" ng-value="tdata.url"></input></div>',
+        link: function(scope, element, attrs) {
+            var input = element.find('input');
+            scope.$watch('tdata.url',function(url) {
+                if (!url) return;
+                input.select();
+            });
+        }
+    };
+};
+
 /***********
  * Filters *
  ***********/

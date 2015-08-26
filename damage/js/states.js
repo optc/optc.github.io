@@ -112,6 +112,16 @@ angular.module('optc').config(function($stateProvider, $urlRouterProvider) {
                 }
             },
             params: { slot: 0 }
+        })
+        
+        .state('main.transfer',{
+            url: 'transfer/:data',
+            views: {
+                'popup@main': {
+                    template: '<div></div>',
+                    controller: 'TransferCtrl'
+                }
+            },
         });
 
 });

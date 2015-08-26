@@ -283,11 +283,30 @@ body, html {
 
 #other > button {
     padding: 5px;
-    width: 110px;
+}
+
+#other > button:last-child {
+    width: 35px;
 }
 
 #other > button:not(:last-child) {
+    width: 110px;
     margin-right: 5px;
+}
+
+#urlContainer {
+    margin-top: 10px;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.25s linear;
+}
+
+#urlContainer.visible {
+    height: 70px;
+}
+
+#urlContainer > input {
+    width: 350px;
 }
 
 /*******************

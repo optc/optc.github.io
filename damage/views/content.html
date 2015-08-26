@@ -9,9 +9,14 @@
 
     <div id="other">
         <button type="button" class="btn btn-xs btn-primary menu-link"
-            ng-click="options.sidebarVisible = !options.sidebarVisible">Settings</a>
-        <button type="button" class="btn btn-xs btn-info" id="reset" ui-sref=".reset">Reset</button>
+            ng-click="options.sidebarVisible = !options.sidebarVisible">Settings</a><!--
+        --><button type="button" class="btn btn-xs btn-info" id="reset" ui-sref=".reset">Reset</button><!--
+        --><button type="button" class="btn btn-xs btn-success" ng-click="generateURL()" title="Transfer team">
+            <i class="fa fa-exchange"></i>
+        </button>
     </div>
+
+    <url-container></url-container>
 
 </div>
 
