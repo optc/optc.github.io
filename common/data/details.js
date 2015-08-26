@@ -2508,7 +2508,7 @@ window.details = {
     },
     428: { // Montblanc Cricket
         special: "Reduces damage received by 50% for 2 turns",
-        captain: "Boosts AATK of PSY characters by 2x",
+        captain: "Boosts ATK of PSY characters by 2x",
         cooldown: [ 20, 15 ]
     },
     429: { // South Bird and the Forest Fauna
