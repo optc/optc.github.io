@@ -68,8 +68,7 @@ input[type="text"] {
     width: 100%;
 }
 
-.type-filter:nth-child(4) ~ .type-filter ,
-.class-filter:nth-child(4) ~ .class-filter {
+.type-filter:nth-child(4) ~ .type-filter {
     width: 50%;
 }
 
@@ -600,8 +599,8 @@ unit > a:hover {
     }
 
     #leftContainer {
-        min-width: 250px;
-        max-width: 250px;
+        min-width: 275px;
+        max-width: 275px;
         width: 250px;
         position: relative;
         float: left;
@@ -644,8 +643,8 @@ unit > a:hover {
     }
 
     #leftContainer {
-        min-width: 250px;
-        max-width: 250px;
+        min-width: 275px;
+        max-width: 275px;
         width: 250px;
         position: fixed;
         top: 0;
