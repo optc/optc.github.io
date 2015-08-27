@@ -684,7 +684,7 @@ window.units = [
     [ "Chocolate Ice Cream Loving Robin", "PSY", [ "Fighter", "Knowledge" ], 5, 20, 4, 2, 99, 3000000, 943, 443, 172, 1903, 842, 361, 1 ],
     [ "Ice Cream Loving Perona", "INT", "Shooter", 4, 12, 5, 1, 50, 392109, 99, 67, 52, 901, 527, 233, 1 ],
     [ "Strawberry Ice Cream Loving Perona", "INT", "Shooter", 5, 20, 4, 2, 99, 3000000, 848, 462, 182, 1689, 877, 385, 1 ],
-    [ "Vivi's Breather", "QCK", [ "Slasher", "Freedom" ], 4, 12, 4, 2, 70, 1066998, 102, 37, 91, 1028, 497, 343, 0 ],
+    [ "Vivi's Breather", "QCK", [ "Slasher", "Freedom" ], 4, 12, 4, 2, 70, 1066998, 102, 37, 91, 1028, 497, 343, 1 ],
     [ "Calgara", "STR", [ "Freedom", "Striker" ], 3, 12, 6, 1, 50, 392109, 94, 115, 0, 1203, 692, 0, 1 ],
     [ "Calgara, the Great Warrior of Shandia", "STR", [ "Freedom", "Striker" ], 4, 20, 4, 2, 99, 3000000, 1145, 633, 0, 2401, 1300, 90, 1 ],
     [ "Montblanc Noland", "INT", [ "Slasher", "Knowledge" ], 3, 12, 5, 1, 50, 392109, 102, 74, 49, 1028, 502, 212, 1 ],
@@ -711,8 +711,8 @@ window.units = [
     [ "Franky, Record of the Voyage - Strawhat Crew (Log Franky)", "PSY", [ "Shooter", "Freedom" ], 4, 12, 4, 2, 50, null, 663, 292, 79, null, null, null, 0 ],
     [ "Franky, Dream of the Voyage - A Ship to Sail Around the World (Log Franky)", "PSY", [ "Shooter", "Freedom" ], 5, 20, 6, 3, 99, null, 1474, 656, 135, null, null, null, 0 ],
     [ "Gan Fall", "QCK", "Striker", 3, 12, 6, 1, 50, 392109, 80, 40, 48, 930, 452, 185, 1.5 ],
-    [ "Gan Fall the Knight of the Sky", "QCK", "Striker", 4, 20, 4, 2, 99, 3000000, 884, 401, 151, 1704, 1202, 300, 0 ],
+    [ "Gan Fall the Knight of the Sky", "QCK", "Striker", 4, 20, 4, 2, 99, 3000000, 884, 401, 151, 1704, 1202, 300, 1.5 ],
     [ "Pierre", "DEX", "Fighter", 3, 12, 4, 1, 50, 392109, 69, 32, 38, 920, 480, 182, 1 ],
     [ "Konis", "PSY", "Freedom", 3, 9, 5, 2, 35, 136167, 58, 10, 32, 503, 190, 232, 1 ],
-    [ "Konis, Skypiean Maiden", "PSY", "Freedom", 4, 15, 4, 3, 70, 1066998, 458, 145, 196, 912, 388, 387, 0 ]
+    [ "Konis, Skypiean Maiden", "PSY", "Freedom", 4, 15, 4, 3, 70, 1066998, 458, 145, 196, 912, 388, 387, 1 ]
 ];
