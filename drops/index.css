@@ -17,18 +17,10 @@ h3 > div, td {
 }
 
 .island {
-    max-height: 50px;
-    transition: max-height 0.25s;
-    overflow: hidden;
     margin-left: 25px;
 }
 
-.type {
-    transition: max-height 0.25s;
-    overflow: hidden;
-}
-
-.island:not(.expanded) > h3 {
+.island.collapsed > h3 {
     border-bottom: 1px solid lightgray;
 }
 
@@ -38,14 +30,14 @@ td:first-child {
     white-space: nowrap;
 }
 
-[expandable].expanded > h3 > .fa-chevron-down,
-[expandable]:not(.expanded) > h3 > .fa-chevron-up,
-[collapsable].collapsed > h2 > .fa-chevron-up,
-[collapsable]:not(.collapsed) > h2 > .fa-chevron-down {
+.island:not(.collapsed) > h3 > .fa-chevron-down,
+.island.collapsed > h3 > .fa-chevron-up,
+.type.collapsed > h2 > .fa-chevron-up,
+.type:not(.collapsed) > h2 > .fa-chevron-down {
     display: none;
 }
 
-[collapsable] > h2:hover > span, [expandable] > h3:hover > span {
+h2:hover > span, h3:hover > span {
     text-decoration: underline;
     cursor: pointer;
 }

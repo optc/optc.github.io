@@ -1,7 +1,7 @@
 /* Adapted from http://codepen.io/suez/pen/vAais */
 
 #links-button {
-    position: absolute;
+    position: fixed;
     right: 25px;
     bottom: 5px;
     transform: translateX(-50%) translateY(-50%);
@@ -13,7 +13,7 @@
 }
 
 #links-button .btn {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;

@@ -27,43 +27,45 @@ app.directive('decorateSlot',function() {
     };
 });
 
-app.directive('expandable',function() {
+app.directive('type',function($compile) {
     return {
-        restrict: 'A',
-        link: function(scope, element, attrs) {
-            element.find('> h3').click(function(e) {
-                if (e.which != 1) return;
-                element.toggleClass('expanded');
-                if (!element.hasClass('expanded'))
-                    element[0].style.maxHeight = null;
-                else {
-                    var height = element.find('> table').outerHeight();
-                    element[0].style.maxHeight = (60 + height) + 'px';
-                    addImages(element);
-                }
-            });
-        }
+        restrict: 'E',
+        scope: { type: '=', data: '=' },
+        replace: true,
+        templateUrl: 'type.html',
     };
 });
 
-app.directive('collapsable',function() {
+app.directive('island',function($compile) {
+    return {
+        restrict: 'E',
+        scope: { island: '=', data: '=', type: '=' },
+        replace: true,
+        templateUrl: 'island.html',
+    };
+});
+
+app.directive('collapsable',function($compile) {
     return {
         restrict: 'A',
+        scope: { target: '@', data: '=', type: '=', island: '=' },
         link: function(scope, element, attrs) {
             var update = function() {
-                element.toggleClass('collapsed');
-                if (element.hasClass('collapsed'))
-                    element[0].style.maxHeight = (10 + element.find('> h2').outerHeight()) + 'px';
-                else {
-                    element[0].style.maxHeight = null;
-                    addImages(element);
+                if (element.children().length > 1) {
+                    while (element.children().length > 1)
+                        element.children().last().remove();
+                } else {
+                    if (scope.target == 'type.html')
+                        element.append($compile('<type type="type" data="data"></type>')(scope));
+                    else
+                        element.append($compile('<island type="type" island="island" data="data"></island>')(scope));
                 }
+                element.toggleClass('collapsed');
             };
             element.find('> h3, > h2').click(function(e) {
                 if (e.which != 1) return;
                 update();
             });
-            update();
         }
     };
 });
