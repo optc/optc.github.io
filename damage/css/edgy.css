@@ -74,3 +74,15 @@ li.STR > div, li.QCK > div, li.DEX > div, li.PSY > div, li.INT > div {
 .unitLevel {
     color: black;
 }
+
+.btn.trigger > i {
+    color: white !important;
+}
+
+.btn.trigger > i:hover {
+    color: lightgray !important;
+}
+
+.rotater:hover .fa {
+    color: white !important;
+}
