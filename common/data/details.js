@@ -4547,7 +4547,7 @@ window.details = {
         captain: "Boosts ATK and RCV of Shooter characters by 1.5x",
         cooldown: 23
     },
-    686: { // Vivi Taking a Rest
+    686: { // Vivi's Breather
         special: "Delays all enemies for 1 turn, recovers 3x character's RCV in HP at the end of the turn for 3 turns",
         specialName: "Captivating Perfume Dance - Relaxation",
         captain: "Boosts ATK and RCV of Slasher characters by 1.5x",
