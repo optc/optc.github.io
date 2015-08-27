@@ -134,14 +134,14 @@ controllers.SlotsCtrl = function($scope, $state, $stateParams) {
     /* * * * * Scope functions * * * * */
 
     $scope.teamClick = function(e,slot) {
-        if (e.which == 1 && !e.ctrlKey) {
+        if (e.which == 1 && !e.ctrlKey && !e.metaKey) {
             slot.team.map(function(x,n) {
                 $scope.resetSlot(n);
                 if (x !== null) $scope.data.team[n] = { unit: units[slot.team[n].unit], level: slot.team[n].level, candies: x.candies };
             });
             localStorage.setItem('lastSlotName',JSON.stringify(slot.name));
             $state.go('^');
-        } else if (e.which == 2 || (e.which == 1 && e.ctrlKey)) {
+        } else if (e.which == 2 || (e.which == 1 && (e.ctrlKey || e.metaKey))) {
             var name = slot.name.toLowerCase();
             delete slots[name];
             delete $scope.slots[name];
