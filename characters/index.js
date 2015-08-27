@@ -558,18 +558,18 @@ app.directive('comparison',function() {
     };
 });
 
-app.directive('linkButton',function() {
-    return {
-        restrict: 'E',
-        replace: true,
-        templateUrl: '../common/links.html',
-        link: function(scope, element, attrs) {
-            element.find(".trigger").click(function() {
-                $(".menu").toggleClass("active"); 
-            });
-        }
-    };
-});
+//app.directive('linkButton',function() {
+    //return {
+        //restrict: 'E',
+        //replace: true,
+        //templateUrl: '../common/links.html',
+        //link: function(scope, element, attrs) {
+            //element.find(".trigger").click(function() {
+                //$(".menu").toggleClass("active"); 
+            //});
+        //}
+    //};
+//});
 
 /***********
  * Filters *
