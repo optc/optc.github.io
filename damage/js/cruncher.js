@@ -116,9 +116,9 @@ var CruncherCtrl = function($scope, $timeout) {
         result.rcv = Math.max(0,rcvTotal);
         var cost = $scope.data.team.slice(1,6).reduce(function(prev,next) { return prev + (!next.unit ? 0 : next.unit.cost); },0);
         result.cost = { cost: cost, level: Math.max(1,Math.floor(cost / 2) * 2 - 18) };
-        result.zombie = checkZombieTeam(result);
         $scope.numbers = $.extend($scope.numbers, result);
         $scope.numbers.hp = Math.max(1,hpMax);
+        $scope.numbers.zombie = checkZombieTeam(result);
     };
 
     var crunchForType = function(type) {
