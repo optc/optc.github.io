@@ -1,0 +1,171 @@
+/* Adapted from http://codepen.io/suez/pen/vAais */
+
+#links-button {
+    position: absolute;
+    right: 25px;
+    bottom: 5px;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+#links-button {
+    width: 2em;
+    height: 2em;
+}
+
+#links-button .btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    z-index: -10;
+    cursor: pointer;
+    -webkit-transition: opacity 1s, z-index 0.3s, -webkit-transform 1s;
+    transition: opacity 1s, z-index 0.3s, transform 1s;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+}
+
+#links-button .btn .fa {
+    position: relative;
+    top: -3px;
+    left: -6px;
+    font-size: 1.1em;
+    -webkit-transition: color 0.3s;
+    transition: color 0.3s;
+}
+
+#links-button .btn:hover .fa {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+#links-button .btn.trigger {
+    opacity: 1;
+    z-index: 100;
+    cursor: pointer;
+}
+
+#links-button .btn.trigger:hover {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+#links-button .btn.trigger:hover .line {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#links-button .btn.trigger:hover .line:before, #links-button .btn.trigger:hover .line:after {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#links-button .btn.trigger .line {
+    width: 60%;
+    height: 6px;
+    background: #000;
+    border-radius: 6px;
+    -webkit-transition: background-color 0.3s, height 0.3s, top 0.3s;
+    transition: background-color 0.3s, height 0.3s, top 0.3s;
+}
+
+#links-button .btn.trigger .line:before, #links-button .btn.trigger .line:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: #000;
+    border-radius: 6px;
+    -webkit-transition: background-color 0.3s, -webkit-transform 0.3s;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#links-button .btn.trigger .line:before {
+    top: -12px;
+    -webkit-transform-origin: 15% 100%;
+    -ms-transform-origin: 15% 100%;
+    transform-origin: 15% 100%;
+}
+
+#links-button .btn.trigger .line:after {
+    top: 12px;
+    -webkit-transform-origin: 25% 30%;
+    -ms-transform-origin: 25% 30%;
+    transform-origin: 25% 30%;
+}
+
+#links-button .rotater {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+}
+
+#links-button.active .btn-icon {
+    opacity: 1;
+    z-index: 50;
+}
+
+#links-button.active .trigger .line {
+    height: 0px;
+    top: 45%;
+}
+
+#links-button.active .trigger .line:before {
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    width: 110%;
+}
+
+#links-button.active .trigger .line:after {
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    width: 110%;
+}
+
+.rotater:nth-child(1) {
+    -webkit-transform: rotate(-22.5deg);
+    -ms-transform: rotate(-22.5deg);
+    transform: rotate(-22.5deg);
+}
+
+#links-button.active .rotater:nth-child(1) .btn-icon {
+    -webkit-transform: translateY(-3em) rotate(22.5deg);
+    -ms-transform: translateY(-3em) rotate(22.5deg);
+    transform: translateY(-3em) rotate(22.5deg);
+}
+
+.rotater:nth-child(2) {
+    -webkit-transform: rotate(22.5deg);
+    -ms-transform: rotate(22.5deg);
+    transform: rotate(22.5deg);
+}
+
+#links-button.active .rotater:nth-child(2) .btn-icon {
+    -webkit-transform: translateY(-3em) rotate(-22.5deg);
+    -ms-transform: translateY(-3em) rotate(-22.5deg);
+    transform: translateY(-3em) rotate(-22.5deg);
+}
+
+.rotater:nth-child(3) {
+    -webkit-transform: rotate(292.5deg);
+    -ms-transform: rotate(292.5deg);
+    transform: rotate(292.5deg);
+}
+
+#links-button.active .rotater:nth-child(3) .btn-icon {
+    -webkit-transform: translateY(-3em) rotate(-292.5deg);
+    -ms-transform: translateY(-3em) rotate(-292.5deg);
+    transform: translateY(-3em) rotate(-292.5deg);
+}

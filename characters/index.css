@@ -615,6 +615,7 @@ unit > a:hover {
         border-collapse: collapse;
         padding: 10px;
         left: 0;
+        padding-bottom: 90px;
     }
 
     #mainTable td:nth-child(2) {
@@ -635,6 +636,10 @@ unit > a:hover {
 }
 
 @media (max-width: 1024px) {
+
+    #links-button {
+        display: none !important;
+    }
 
     #mainContainer {
         height: 100%;
