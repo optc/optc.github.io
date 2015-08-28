@@ -34,9 +34,37 @@ body, html {
 
 #hp, #other {
     width: 440px;
-    margin: 30px auto 0 auto;
     display: inline-block;
     text-align: center;
+}
+
+#hp {
+    margin: 30px auto 0 auto;
+}
+
+#other {
+    margin: 20px auto 0 auto;
+}
+
+#transient {
+    width: 440px;
+    padding: 5px;
+    margin: 5px auto 0 auto;
+    cursor: pointer;
+}
+
+#transient:hover {
+    background-color: #FF9E9E;
+    border-color: #EC92A0;
+}
+
+#transient > span {
+    text-decoration: underline;
+    cursor: help;
+}
+
+#transient-explanation {
+    padding: 10px;
 }
 
 .animated {
@@ -302,7 +330,7 @@ body, html {
 }
 
 #urlContainer.visible {
-    height: 70px;
+    height: 40px;
 }
 
 #urlContainer > input {
@@ -828,9 +856,6 @@ body > .popover .popover-content {
 @media only screen and (max-width: 768px) {
 
     html, body {
-        /*width: 600px;*/
-        /*height: 650px !important;*/
-        /*margin-top: 12.5%;*/
         transition: left .1s linear;
     }
 

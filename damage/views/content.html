@@ -18,6 +18,16 @@
 
     <url-container></url-container>
 
+    <div id="transient" class="alert alert-danger" ng-if="options.transientMode" ng-click="options.transientMode = false">
+        <i class="fa fa-lock"></i>
+        Transient mode enabled. Click to disable.
+        <span popover-placement="top" popover-trigger="mouseenter"
+            popover-title="Transient Mode" popover-template="'transient.html'"
+            popover-append-to-body="'true'">
+            (?)
+        </span>
+    </div>
+
 </div>
 
 <sidebar ng-class="{ open: options.sidebarVisible }"></sidebar>
@@ -26,6 +36,10 @@
 
 <div ui-view="popup"></div>
 
-<div id="warningContainer">
-
-</div>
+<script type="text/ng-template" id="transient.html">
+    <div id="transient-explanation">
+        Transient mode is automatically activated whenever a data transfer is completed successfully.
+        <br/>
+        When transient mode is active, the calculator will not save its current state to disk, meaning you can discard any changes made by the last data transfer by simply refreshing the page.
+    </div>
+</script>

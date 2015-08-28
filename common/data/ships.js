@@ -1,6 +1,7 @@
-window.ships = {
+window.ships = [
     
-    'Dingy': {
+    {
+        name: 'Dingy',
         thumb: 'ship_0001_c.png',
         description: 'Boosts HP by 1.3x, boosts captain\'s RCV by 120 units',
         hp: function(p) {
@@ -14,7 +15,8 @@ window.ships = {
         }
     },
 
-    'Merry Go': {
+    {
+        name: 'Merry Go',
         thumb: 'ship_0002_c.png',
         description: 'Boosts ATK by 1.5x, boosts captain\'s HP by 300 units',
         hpStatic: function(p) {
@@ -28,7 +30,8 @@ window.ships = {
         }
     },
 
-    'Navy Ship': {
+    {
+        name: 'Navy Ship',
         thumb: 'ship_0003_c.png',
         description: 'Boosts HP by 1.5x, boosts ATK of Shooter characters by 100 units',
         atkStatic: function(p) {
@@ -42,7 +45,8 @@ window.ships = {
         }
     },
 
-    'Baratie': {
+    {
+        name: 'Baratie',
         thumb: 'ship_0004_c.png',
         description: 'Boosts captain\'s HP by 2000 units',
         hpStatic: function(p) {
@@ -51,7 +55,8 @@ window.ships = {
         }
     },
 
-    'Coffin Boat': {
+    {
+        name: 'Coffin Boat',
         thumb: 'ship_0005_c.png',
         description: 'Boosts ATK and HP of Slasher characters by 1.5x, reduces captain\'s RCV by 700 units',
         atk: function(p) {
@@ -67,7 +72,8 @@ window.ships = {
         }
     },
 
-    'Miss Love Duck': {
+    {
+        name: 'Miss Love Duck',
         thumb: 'ship_0006_c.png',
         description: 'Reduces damage received by 10%, boosts ATK of each character by 100 units',
         atkStatic: function(p) {
@@ -75,7 +81,8 @@ window.ships = {
         }
     },
 
-    'Merry Go Flying': {
+    {
+        name: 'Merry Go Flying',
         thumb: 'ship_0007_c.png',
         description: 'Boosts ATK by 1.2x, recovers 350 HP at the end of the turn',
         atk: function(p) {
@@ -83,7 +90,8 @@ window.ships = {
         }
     },
 
-    'Moby Dick': {
+    {
+        name: 'Moby Dick',
         thumb: 'ship_0008_c1.png',
         description: 'Boosts ATK by 1.5x, boosts HP by 1.4x, reduces HP by 50% at the start of the fight',
         atk: function(p) {
@@ -94,7 +102,8 @@ window.ships = {
         }
     },
 
-    'Big Top': {
+    {
+        name: 'Big Top',
         thumb: 'ship_0009_c1.png',
         description: 'Boosts ATK of characters with 20 cost or less by 1.5x, boosts HP of characters with 4 stars and below by 1.4x',
         atk: function(p) {
@@ -106,7 +115,8 @@ window.ships = {
         }
     },
 
-    'Bezan Black': {
+    {
+        name: 'Bezan Black',
         thumb: 'ship_0010_c1.png',
         description: 'Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of QCK characters by 1.4x and their HP by 1.3x',
         atk: function(p) {
@@ -117,7 +127,8 @@ window.ships = {
         }
     },
 
-    'Aokiji\'s Bike': {
+    {
+        name: 'Aokiji\'s Bike',
         thumb: null,
         description: 'Boosts ATK and HP of Striker characters by 1.5x, greatly reduces the appearance of RCV orbs',
         atk: function(p) {
@@ -130,7 +141,8 @@ window.ships = {
         }
     },
 
-    'Ace\'s Striker': {
+    {
+        name: 'Ace\'s Striker',
         thumb: null,
         description: 'Boosts ATK of Shooter characters by 1.5x and their HP by 1.3x, reduces cooldown of all specials by 1 turn at the start of the fight',
         atk: function(p) {
@@ -143,4 +155,4 @@ window.ships = {
         }
     }
 
-};
+];

@@ -55,7 +55,7 @@ var MainCtrl = function($scope, $controller, $filter) {
     $scope.notify = function(data) {
         data = $.extend({ type: 'information' },data);
         if (data.name && notifications[data[name]]) notifications[data[name]].close(); 
-        var notification = noty($.extend(data,{ timeout: 2500, layout: 'topRight', theme: 'relax' }));
+        var notification = noty($.extend({ timeout: 2500, layout: 'topRight', theme: 'relax' }, data));
         if (data.name) notifications[data[name]] = notification;
 
     };

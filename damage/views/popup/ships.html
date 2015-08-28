@@ -19,9 +19,9 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr ng-repeat="(name,ship) in list" ng-click="pickShip(name)">
+                            <tr ng-repeat="ship in list track by $index" ng-click="pickShip(ship.name)">
                                 <td class="ship-icon"><div class="slot small" style="{{getThumbnail(ship)}}"></div></td>
-                                <td class="ship-name">{{name}}</td>
+                                <td class="ship-name">{{ship.name}}</td>
                                 <td>{{ship.description}}</td>
                             </tr>
                         </tbody>

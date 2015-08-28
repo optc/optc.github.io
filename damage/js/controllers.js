@@ -172,10 +172,10 @@ controllers.ShipCtrl = function($scope, $state) {
     $scope.list = ships;
 
     $scope.$watch('query',function() {
-        var regex = new RegExp(($scope.query || ''),'i'), result = { };
-        for (var key in ships) {
-            if (regex.test(key))
-                result[key] = ships[key];
+        var regex = new RegExp(($scope.query || ''),'i'), result = [ ];
+        for (var i=0;i<ships.length;++i) {
+            if (regex.test(ships[i].name))
+                result.push(ships[i]);
         }
         $scope.list = result;
     });
@@ -186,7 +186,11 @@ controllers.ShipCtrl = function($scope, $state) {
     };
 
     $scope.pickShip = function(name) {
-        $scope.data.ship.name = name;
+        for (var i=0;i<ships.length;++i) {
+            if (ships[i].name != name) continue;
+            $scope.data.ship[0] = i;
+            break;
+        }
         $state.go('^');
     };
 
@@ -240,27 +244,41 @@ controllers.PopoverCtrl = function($scope) {
  * TransferCtrl *
  ****************/
 
+// TODO Split
+
 controllers.TransferCtrl = function($scope, $state, $stateParams) {
 
-    if (!/^D.+C$/.test($stateParams.data)) {
+    var checkInt = function(n, min, max) {
+        var temp = parseInt(n, 10);
+        return !isNaN(n) && n >= min && n < max;
+    };
+
+    var tokens = $stateParams.data.split(/([A-Z])/);
+
+    // data validation
+
+    if (tokens.length < 4 || tokens.length%2 === 0 || tokens[0] !== '' ||
+            tokens[tokens.length-1] !== '' || tokens[1] != 'D' || tokens[3] != 'C') {
         $scope.notify({ text: 'Invalid data, aborting transfer.', type: 'error' });
         $state.go('^');
+        return;
     }
 
     var team = [ ];
     var regex = /(?:(\d+):(\d+)(?::(\d+):(\d+):(\d+))?|!)/;
-    var tokens = $stateParams.data.slice(1,-1).split(/,/);
+    var units = tokens[2].split(/,/);
+    var temp, data, type;
 
-    for (var i=0;i<tokens.length;++i) {
-        var matches = tokens[i].match(regex);
+    for (var i=0;i<units.length;++i) {
+        var matches = units[i].match(regex);
         if (!matches) break;
         if (matches[0] == '!') team.push(null);
         else {
             var id = parseInt(matches[1],10), level = parseInt(matches[2],10),
                 atk = parseInt(matches[3],10) || 0, hp = parseInt(matches[4],10) || 0,
                 rcv = parseInt(matches[5],10) || 0;
-            if (id < 1 || id > units.length || units[id - 1].length === 0) break;
-            if (level < 1 || level > units[id - 1].maxLevel) break;
+            if (id < 1 || id > window.units.length || window.units[id - 1].length === 0) break;
+            if (level < 1 || level > window.units[id - 1].maxLevel) break;
             if (atk > 100 || hp > 100 || rcv > 100 || (atk + hp + rcv) > 200) break;
             team.push({ id: id, level: level, candies: { atk: atk, hp: hp, rcv: rcv }});
         }
@@ -269,16 +287,66 @@ controllers.TransferCtrl = function($scope, $state, $stateParams) {
     if (team.length != 6) {
         $scope.notify({ text: 'Invalid data, aborting transfer.', type: 'error' });
         $state.go('^');
+        return;
     }
 
+    tokens = tokens.slice(4);
+    
+    for (i=0;i<tokens.length-1;i+=2) {
+        data = tokens[i]; type = tokens[i+1];
+        if (type == 'B') {
+            temp = data.split(/,/);
+            if (!checkInt(temp[0], 0, window.ships.length) || !checkInt(temp[1], 1, 11)) break;
+        } else if (type == 'D' && isNaN(parseInt(data,10))) break;
+        else if ((type == 'O' || type == 'L' || type == 'G') && !checkInt(data, 0, 729)) break;
+        else if (type == 'S' && !checkInt(data, 0, 64)) break;
+        else if (type == 'H') {
+            temp = parseFloat(data, 10);
+            if (isNaN(temp) || temp < 0 || temp > 100) break;
+        }
+    }
+
+    if (i < tokens.length - 1) {
+        $scope.notify({ text: 'Invalid data, aborting transfer.', type: 'error' });
+        $state.go('^');
+        return;
+    }
+
+    // data transfer
+
+    $scope.options.transientMode = true;
     $scope.options.crunchInhibitor = Infinity;
 
     for (i=0;i<6;++i) {
         $scope.resetSlot(i,false);
         if (team[i] === null) continue;
-        $scope.data.team[i].unit = units[team[i].id - 1];
+        $scope.data.team[i].unit = window.units[team[i].id - 1];
         $scope.data.team[i].level = team[i].level;
         $scope.data.team[i].candies = $.extend($scope.data.team[i].candies, team[i].candies);
+    }
+
+    for (i=0;i<tokens.length-1;i+=2) {
+        data = tokens[i]; type = tokens[i+1];
+        if (type == 'B') {
+            temp = data.split(/,/);
+            $scope.data.ship = [ parseInt(temp[0], 10), parseInt(temp[1], 10) ];
+        } else if (type == 'D') $scope.data.defense = parseInt(data, 10);
+        if (type == 'O' || type == 'L' || type == 'G') {
+            temp = ('000000' + parseInt(data, 10).toString(3))
+                .slice(-6).split('').map(function(x) { return parseInt(x, 10); });
+            temp.forEach(function(x,n) {
+                var unit = $scope.tdata.team[n];
+                if (type == 'O') unit.orb = (x == 1 ? 2 : (x == 2 ? 0.5 : 1));
+                else if (type == 'L') unit.lock = x;
+                else unit.silence = x;
+            });
+        } else if (type == 'S') {
+            temp = ('000000' + parseInt(data, 10).toString(2))
+                .slice(-6).split('').map(function(x) { return parseInt(x, 10); });
+            temp.forEach(function(x,n) { $scope.tdata.team[n].special = (x == 1); });
+        } else if (type == 'H') {
+            $scope.data.percHP = parseFloat(data, 10);
+        }
     }
 
     $scope.options.crunchInhibitor = 0;

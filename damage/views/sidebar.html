@@ -10,9 +10,9 @@
         </li>
 
         <li>
-            <div id="ship" status="{{data.ship.level}}" ship-manager>
+            <div id="ship" status="{{data.ship[1]}}" ship-manager>
                 <i class="fa fa-ship"></i>
-                <span>{{data.ship.name}} (lv. {{level}})</span>
+                <span>{{ships[data.ship[0]].name}} (lv. {{data.ship[1]}})</span>
                 <div id="ship-background"></div>
             </div>
         </li>

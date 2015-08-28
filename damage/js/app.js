@@ -57,6 +57,7 @@ var SharedRootCtrl = function($scope) {
     $scope.options = {
         slidersEnabled: true,
         sidebarVisible: false,
+        transientMode: false,
         crunchInhibitor: Infinity
     };
 
@@ -66,21 +67,38 @@ var SharedRootCtrl = function($scope) {
         $scope.tdata.team[n] = { orb: 1, special: false, lock: 0, silence: 0 };
     };
 
+    // TODO Split
+
     $scope.generateURL = function() {
+
+        var result, data = $scope.data, team = $scope.tdata.team;
+
+        // team
         
         var tokens = [ ];
         for (var i=0;i<6;++i) {
-            var data = $scope.data.team[i], candies = data.candies;
-            if (data.unit === null) tokens.push('!');
+            var unit = data.team[i], candies = unit.candies;
+            if (unit.unit === null) tokens.push('!');
             else {
-                var temp = (data.unit.number + 1) + ':' + data.level;
+                var temp = (unit.unit.number + 1) + ':' + unit.level;
                 if (candies.atk + candies.hp + candies.rcv > 0)
                     temp += ':' + [ candies.atk, candies.hp, candies.rcv ].join(':');
                 tokens.push(temp);
             }
         }
 
-        var result = '#/transfer/D' + tokens.join(',') + 'C';
+        result = '#/transfer/D' + tokens.join(',') + 'C';
+
+        // others
+        
+        result += data.ship[0] + ',' + data.ship[1] + 'B';
+        result += data.defense + 'D';
+        result += parseInt(team.map(function(x) { return (x.orb == 2 ? 1 : (x.orb == 0.5 ? 2 : 0)); }).join(''),3) + 'O';
+        result += parseInt(team.map(function(x) { return x.lock; }).join(''),3) + 'L';
+        result += parseInt(team.map(function(x) { return x.silence; }).join(''),3) + 'G';
+        result += parseInt(team.map(function(x) { return x.special ? 1 : 0; }).join(''),2) + 'S';
+        result += (Math.floor(data.percHP * 100) / 100) + 'H';
+
         $scope.tdata.url = window.location.href.match(/^(.+?)#/)[1] + result;
 
     };

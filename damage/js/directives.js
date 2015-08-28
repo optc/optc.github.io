@@ -139,8 +139,8 @@ directives.shipManager = function() {
         controller: function($scope, $state) { $scope.go = $state.go; },
         link: function(scope, element, attrs) {
             var background = element.find('#ship-background')[0];
-            background.style.width = Math.round(scope.data.ship.level * 10)  + '%';
-            scope.level = scope.data.ship.level;
+            background.style.width = Math.round(scope.data.ship[1] * 10)  + '%';
+            scope.level = scope.data.ship[1];
             element.longpress(
                 function(e) { scope.go('.ship'); },
                 function(e) {
@@ -149,6 +149,8 @@ directives.shipManager = function() {
                 }
             );
             var updateBackground = function(perc) {
+                if (perc === undefined || perc === null) return;
+                if (perc.constructor == Array) perc = perc[1] / 10;
                 perc = Math.min(1,perc);
                 background.style.width = Math.min(Math.round(perc * 100),100)  + '%';
                 background.style.background =
@@ -157,13 +159,13 @@ directives.shipManager = function() {
             var mouseup = function(e) {
                 $(document).off('mouseup');
                 $(document).off('mousemove');
-                scope.data.ship.level = scope.level;
+                scope.data.ship[1] = scope.level;
                 scope.$apply();
                 updateBackground(scope.level / 10);
             };
             var mousemove = function(e) {
                 var level = Math.max(1,Math.min(Math.round(e.clientX / 230 * 10),10));
-                if (level == scope.data.ship.level) return;
+                if (level == scope.data.ship[1]) return;
                 e.preventDefault();
                 e.stopPropagation();
                 scope.level = level;
@@ -180,6 +182,7 @@ directives.shipManager = function() {
                 updateBackground(e.clientX / 230);
             });
             updateBackground(scope.level / 10);
+            scope.$watch('data.ship', updateBackground, false);
         }
     };
 };
@@ -227,7 +230,11 @@ directives.sidebar = function() {
     return {
         restrict: 'E',
         templateUrl: 'views/sidebar.html',
-        replace: true
+        replace: true,
+        link: function(scope, element, attrs) {
+            scope.profiles = window.profiles;
+            scope.ships = window.ships;
+        }
     };
 };
 

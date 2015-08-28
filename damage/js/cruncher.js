@@ -490,7 +490,7 @@ var CruncherCtrl = function($scope, $timeout) {
         computeSpecialsCombinations();
         $scope.conflictingSpecials = (specialsCombinations.length > 1);
         // get ship bonus
-        shipBonus = $.extend({ bonus: ships[$scope.data.ship.name] },{ level: $scope.data.ship.level });
+        shipBonus = $.extend({ bonus: ships[$scope.data.ship[0]] },{ level: $scope.data.ship[1] });
     };
 
 

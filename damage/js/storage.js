@@ -1,5 +1,7 @@
 (function() {
 
+var doAlert = false;
+
 /* * * * * Storage methods * * * * */
 
 var loadValue = function(key,def) {
@@ -11,6 +13,18 @@ var loadValue = function(key,def) {
 var save = function(key,object) {
     localStorage.setItem(key,JSON.stringify(object));
 };
+
+/* * * * * Version control * * * * */
+
+var version = JSON.parse(localStorage.getItem('version')) || 6;
+
+if (version < 6) {
+    var data = JSON.parse(localStorage.getItem('data')) || { };
+    data.ship = [ 1, 5];
+    localStorage.setItem('data', JSON.stringify(data));
+    localStorage.setItem('version', JSON.stringify(6));
+    doAlert = true;
+}
 
 /* * * * * Controller * * * * */
 
@@ -26,7 +40,7 @@ var StorageCtrl = function($scope) {
 
     var options = loadValue('options',{ });
     for (var o in options) {
-        if (o == 'crunchInhibitor' || o == 'sidebarVisible') continue;
+        if (o == 'crunchInhibitor' || o == 'sidebarVisible' || o == 'transientMode') continue;
         $scope.options[o] = options[o];
     }
 
@@ -35,10 +49,30 @@ var StorageCtrl = function($scope) {
 
     $scope.options.crunchInhibitor = 0;
 
+    if (doAlert) {
+        $scope.notify({
+            text: 'Some stuff changed. Refreshing the page and/or clearing your browser\'s cache may be a smart idea.',
+            timeout: 10000,
+            type: 'error'
+        });
+    }
+
     /* * * * * Save on changes * * * * */
 
-    $scope.$watch('data',function() { save('data',$scope.data); },true);
-    $scope.$watch('options',function() { save('options',$scope.options); },true);
+    $scope.$watch('data',function() {
+        if (!$scope.options.transientMode)
+            save('data',$scope.data);
+    },true);
+
+    $scope.$watch('options',function() {
+        if (!$scope.options.transientMode)
+            save('options',$scope.options);
+    },true);
+
+    $scope.$watch('options.transientMode',function(mode) {
+        if (mode === undefined || mode === null) return;
+        if (!mode) save('data',$scope.data);
+    });
 
 };
 
