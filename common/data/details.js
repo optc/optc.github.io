@@ -2139,7 +2139,7 @@ window.details = {
         global: true
     },
     325: { // Lulu
-        special: "Changes [TND] orbs into [RCV] orbs and [RCV] orbs into [QCK] orbs",
+        special: "Changes [TND] orbs into [RCV] orbs, changes [RCV] orbs into [QCK] orbs",
         specialName: "Red-Hot Shipwright Soul",
         cooldown: [ 14, 10 ],
         global: true
@@ -2187,7 +2187,7 @@ window.details = {
         global: true
     },
     332: { // Chessmarimo
-        special: "Changes [STR] orbs into [RCV] orbs and [RCV] orbs into [DEX] orbs",
+        special: "Changes [STR] orbs into [RCV] orbs, changes [RCV] orbs into [DEX] orbs",
         specialName: "Snow-Slicing Blade",
         captain: "Boosts ATK, HP and RCV of Striker characters by 1.2x",
         cooldown: [ 16, 10 ],
@@ -3177,7 +3177,7 @@ window.details = {
         evolvers: [ 116, 86, 91, 97 ]
     },
     480: { // Yellow Assault Squad Skypiea God's Army
-        special: "Changes [QCK] orbs into [PSY] orbs",
+        special: "Changes [TND] orbs into [PSY] orbs",
         specialName: "[TND] Slot Change [PSY]",
         cooldown: [ 15, 7 ],
         evolution: 485,
@@ -3209,7 +3209,7 @@ window.details = {
         cooldown: [ 15, 7 ]
     },
     485: { // Yellow Elite Assault Squad Skypiea God's Army
-        special: "Changes [QCK] orbs into [PSY] orbs",
+        special: "Changes [TND] orbs into [PSY] orbs",
         specialName: "[TND] Slot Change [PSY]",
         captain: "Boosts HP and RCV of PSY characters by 1.2x",
         cooldown: [ 15, 7 ]

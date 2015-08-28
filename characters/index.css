@@ -72,11 +72,11 @@ input[type="text"] {
     width: 50%;
 }
 
-.type-filter:not(.active):not(:hover) {
+.type-filter:not(.active):not(:hover), #controllers > span:not(.separator):not(.active):not(:hover) {
     opacity: 0.3;
 }
 
-.type-filter.active {
+.type-filter.active, #controllers > .active {
     font-weight: bold;
     text-decoration: underline;
 }
@@ -125,7 +125,7 @@ input[type="text"] {
     border-bottom: 1px solid gray;
 }
 
-.custom-filter:hover, .class-filter:hover, .drop-filter:hover, .exc-filter:hover {
+.custom-filter:not(#controllers):hover, .class-filter:hover, .drop-filter:hover, .exc-filter:hover {
     background-color: rgb(230,230,230);
 }
 
@@ -180,6 +180,24 @@ input[type="text"] {
 
 .dataTables_info, .dataTables_paginate {
     text-align: left !important;
+}
+
+#controllers {
+    padding: 0;
+    cursor: default;
+}
+
+#controllers > span:not(.separator) {
+    width: 14.28%;
+    display: inline-block;
+    padding: 2px 0;
+    cursor: pointer;
+}
+
+#controllers > span.separator {
+    display: block;
+    padding: 0 0 5px 0;
+    background: rgb(240,240,240);
 }
 
 /*************

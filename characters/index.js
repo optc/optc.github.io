@@ -4,6 +4,7 @@ var app = angular.module('optc', [ 'ui.router', 'ui.bootstrap', 'ngSanitize' ]);
 
 var lastQuery = null;
 var filters = { custom: [ ] };
+var regexes = { };
 
 var reverseDropMap = null;
 
@@ -232,6 +233,10 @@ $.fn.dataTable.ext.search.push(function(settings, data, index) {
         var target = window.details[id][filters.custom[i].target];
         if (!target || !filters.custom[i].matcher.test(target)) return false;
     }
+    // filter by orb controllers
+    if (regexes.ctrlFrom && !regexes.ctrlFrom.test(window.details[id].special)) return false;
+    if (regexes.ctrlTo && !regexes.ctrlTo.test(window.details[id].special)) return false;
+    // end
     return true;
 });
 
@@ -287,6 +292,13 @@ app.controller('MainCtrl',function($scope, $state, $stateParams, $timeout) {
     $scope.$watch('filters',function(filters) {
         if (!filters || Object.keys(filters).length === 0) return;
         currentParameters = generateSearchParameters($stateParams.query, $.extend({ }, $scope.filters));
+        // build regexes if necessary
+        regexes = { };
+        if (filters.custom[24] && currentParameters.filters.ctrlFrom)
+            regexes.ctrlFrom = new RegExp('Changes[^,]+\\[' + currentParameters.filters.ctrlFrom + '\\][^,]+into');
+        if (filters.custom[24] && currentParameters.filters.ctrlTo)
+            regexes.ctrlTo = new RegExp('Changes.+into[^,]+\\[' + currentParameters.filters.ctrlTo + '\\]');
+        // redraw table
         table.fnDraw();
     },true);
 
@@ -461,6 +473,18 @@ app.directive('filters',function($compile) {
                 if (x.target == 'captain') captains.append(result);
                 else specials.append(result);
             });
+            // orb controller filter
+            var target = $('.custom-filter:contains("Orb controllers")');
+            var filter = $('<span class="custom-filter" id="controllers" ng-show="filters.custom[24]"><span class="separator">&darr;</span></span>');
+            var separator = filter.find('.separator');
+            [ 'STR', 'DEX', 'QCK', 'PSY', 'INT', 'RCV', 'TND' ].forEach(function(type) {
+                var template = '<span class="%s" ng-class="{ active: filters.%f == \'%s\' }" ' +
+                    'ng-model="filters.%f" ng-click="onClick($event,\'%s\')">%S</span>';
+                separator.before($(template.replace(/%s/g,type).replace(/%S/g,type[0]).replace(/%f/g,'ctrlFrom')));
+                filter.append($(template.replace(/%s/g,type).replace(/%S/g,type[0]).replace(/%f/g,'ctrlTo')));
+            });
+            target.after(filter);
+            $compile(filter)(scope);
             // events 
             scope.onClick = function(e, value) {
                 var type = e.target.getAttribute('ng-model').split(/\./)[1];

@@ -151,7 +151,7 @@ window.matchers = [
     {
         name: 'Orb controllers',
         target: 'special',
-        matcher: /(Changes.+orbs|Fills.*slots)/i
+        matcher: /(Changes.+orbs)/i
     },
 
     {
@@ -164,6 +164,12 @@ window.matchers = [
         name: 'Orb switchers',
         target: 'special',
         matcher: /freely switch/i
+    },
+
+    {
+        name: 'Slot fillers',
+        target: 'special',
+        matcher: /(Fills.*slots|empty orbs into|Changes empty slots)/i
     },
 
     {
