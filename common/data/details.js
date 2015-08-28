@@ -216,7 +216,7 @@ window.details = {
         special: "Deals 10x character's ATK in character's type damage to one enemy",
         specialName: "Hyper Slash",
         captain: "Boosts HP of QCK characters by 1.2x",
-        cooldown: 40
+        cooldown: 40,
         global: true
     },
     28: { // Master of the Near Sea
@@ -4441,7 +4441,7 @@ window.details = {
         special: "Boosts ATK of Fighter characters by 1.75x for 1 turn",
         specialName: "Fishman Karate! True Fist Thrust of the Revolutionaries",
         captain: "Boosts ATK of Fighter characters by 2x",
-        cooldown: [ 15, 11 ]
+        cooldown: [ 15, 11 ],
         evolution: 671,
         evolvers: [ 118, 83, 86, 302, 102 ]
     },
