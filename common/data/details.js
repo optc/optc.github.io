@@ -216,6 +216,7 @@ window.details = {
         special: "Deals 10x character's ATK in character's type damage to one enemy",
         specialName: "Hyper Slash",
         captain: "Boosts HP of QCK characters by 1.2x",
+        cooldown: 40
         global: true
     },
     28: { // Master of the Near Sea
@@ -3612,13 +3613,13 @@ window.details = {
         special: "Greatly reduces chances of getting [PSY], [INT], [TND] and [RCV] slots for 5 turns",
         specialName: "White-Barbed Death Match",
         captain: "Boosts ATK of STR characters by 2.5x if HP is below 50% at the start of the turn",
-        cooldown: 15
+        cooldown: [ 15, 10 ]
     },
     542: { // Nola the Giant Snake
         special: "Boosts RCV by 2x for 1 turn",
         specialName: "Roar of the Master of the Sky",
         captain: "Boosts HP by 1.5x",
-        cooldown: 18
+        cooldown: [ 18, 12 ]
     },
     543: { // Wiper
         special: "Reduces current HP by 50%, deals 50x character's ATK in DEX damage to one enemy",
@@ -3638,7 +3639,7 @@ window.details = {
         special: "Deals 6,000 damage to all enemies, boosts ATK of PSY characters by 1.5x for 1 turn",
         specialName: "60 Million Volt Thunder Dragon",
         captain: "Boosts ATK of PSY characters by 2x",
-        cooldown: 20,
+        cooldown: [ 20, 15 ],
         evolution: 546,
         evolvers: [ 118, 266, 92, 303, 103 ]
     },
@@ -3646,7 +3647,7 @@ window.details = {
         special: "Deals 6,000 damage to all enemies, boosts ATK of PSY characters by 1.5x for 1 turn",
         specialName: "60 Million Volt Thunder Dragon",
         captain: "Boosts ATK of PSY characters by 2x, reduces damage received by 20%",
-        cooldown: 20
+        cooldown: [ 20, 15 ],
     },
     547: { // Monkey D. Luffy Mt. Corvo's Brothers 3
         special: "Reduces current HP by 10%, deals 1x character's ATK in STR damage to one enemy, prevents death as long as HP is above 50% for 1 turn",
@@ -4056,7 +4057,7 @@ window.details = {
         special: "Boosts ATK and RCV by 45 units for 1 turn, reduces damage received by 45% for 1 turn",
         specialName: "\"45 Degree\" Delight",
         captain: "Boosts ATK of Slasher characters by 1.5x",
-        cooldown: 13,
+        cooldown: [ 13, 10 ],
         evolution: 613,
         evolvers: [ 91, 94, 97, 97, 302 ]
     },
@@ -4064,7 +4065,7 @@ window.details = {
         special: "Boosts ATK and RCV by 45 units for 1 turn, reduces damage received by 45% for 1 turn",
         specialName: "\"45 Degree\" Delight",
         captain: "Boosts ATK, HP and RCV of Slasher characters by 1.5x",
-        cooldown: 13
+        cooldown: [ 13, 10 ]
     },
     614: { // Zanbai
         special: "Reduces the defense of all enemies by 50% for 1 turn, deals 10x character's ATK in PSY damage to all enemies",
@@ -4221,7 +4222,7 @@ window.details = {
         specialNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the lower the HP is. The multiplier is calculated as: 50 * ( 1 - (remaining HP) / (total HP) )",
         specialName: "Pirate Brothers - Twin Combo Attack",
         captain: "Boosts ATK of Fighter characters by 2x, deals 2x character's ATK in DEX damage to all enemies at the end of the turn",
-        cooldown: 23,
+        cooldown: [ 23, 17 ],
         evolution: 641,
         evolvers: [ 118, 83, 86, 302, 102 ]
     },
@@ -4252,7 +4253,7 @@ window.details = {
         special: "Reduces Bind and Silence duration by 2 turns, boosts ATK against delayed enemies by 1.2x for 3 turns",
         specialName: "The Witch's Ice Breaker",
         captain: "Boosts ATK of INT characters by 2x",
-        cooldown: 18,
+        cooldown: [ 18, 12 ],
         evolution: 645,
         evolvers: [ 118, 94, 99, 304, 104 ]
     },
@@ -4260,7 +4261,7 @@ window.details = {
         special: "Reduces Bind and Silence duration by 2 turns, boosts ATK against delayed enemies by 1.2x for 3 turns",
         specialName: "The Witch's Ice Breaker",
         captain: "Boosts ATK of INT characters by 2.5x",
-        cooldown: 18
+        cooldown: [ 18, 12 ]
     },
     646: { // Little Oars Jr.
         special: "Deals 20x character's ATK in STR damage to all enemies, boosts chances of getting [STR] orbs for 3 turns",
@@ -4440,7 +4441,7 @@ window.details = {
         special: "Boosts ATK of Fighter characters by 1.75x for 1 turn",
         specialName: "Fishman Karate! True Fist Thrust of the Revolutionaries",
         captain: "Boosts ATK of Fighter characters by 2x",
-        cooldown: 15,
+        cooldown: [ 15, 11 ]
         evolution: 671,
         evolvers: [ 118, 83, 86, 302, 102 ]
     },
@@ -4448,7 +4449,7 @@ window.details = {
         special: "Boosts ATK of Fighter characters by 1.75x for 1 turn",
         specialName: "Fishman Karate! True Fist Thrust of the Revolutionaries",
         captain: "Boosts ATK of Fighter characters by 2.25x and their RCV by 1.5x",
-        cooldown: 15
+        cooldown: [ 15, 11 ]
     },
     672: { // Hack
         special: "Cuts all enemies' current HP by 20%, changes own orb into [STR]",
@@ -4713,7 +4714,7 @@ window.details = {
         specialNotes: "The special boosts the attack of only the crew's captain and the currently selected friend captain",
         specialName: "Sky Knight's Javelin",
         captain: "Boosts ATK of Striker characters by 2x if HP is above 50% at the start of the turn",
-        cooldown: 22,
+        cooldown: [ 22, 14 ],
         evolution: 713,
         evolvers: [ 117, 90, 96, 301, 101 ]
     },
@@ -4722,18 +4723,18 @@ window.details = {
         specialNotes: "The special boosts the attack of only the crew's captain and the currently selected friend captain",
         specialName: "Sky Knight's Javelin",
         captain: "Boosts ATK of Striker characters by 2.5x if HP is above 50% at the start of the turn",
-        cooldown: 22
+        cooldown: [ 22, 14 ]
     },
     714: { // Pierre
         special: "Randomizes slots with [STR], [QCK], [INT] or [PSY] orbs",
         specialName: "Pegasus' Neigh",
-        cooldown: 22
+        cooldown: [ 22, 14 ]
     },
     715: { // Konis
         special: "Boosts ATK and RCV of Freedom characters by 1.5x for 2 turns, seals herself for 3 turns",
         specialName: "Angel's Harp - Healing",
         captain: "Boosts RCV by 2x if HP is low",
-        cooldown: 27,
+        cooldown: [ 27, 14 ],
         evolution: 716,
         evolvers: [ 116, 117, 81, 87 ]
     },
@@ -4741,6 +4742,6 @@ window.details = {
         special: "Boosts ATK and RCV of Freedom characters by 1.5x for 2 turns, seals herself for 3 turns",
         specialName: "Angel's Harp - Healing",
         captain: "Boosts RCV by 5x if HP is low",
-        cooldown: 27
+        cooldown: [ 27, 14 ]
     }
 };
