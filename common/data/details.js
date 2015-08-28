@@ -2736,7 +2736,7 @@ window.details = {
         global: true
     },
     411: { // Bartholomew Kuma
-        special: "Changes neighboring slots' orbs into [STR] orbs, deals 1,000 damage to one enemy",
+        special: "Changes neighboring slots' orbs into [STR] orbs, deals 1,000 damage to all enemies",
         specialName: "Ursa Shock",
         captain: "Boosts ATK and HP of STR characters by 2x",
         cooldown: [ 20, 14 ],
@@ -2745,7 +2745,7 @@ window.details = {
         global: true
     },
     412: { // Bartholomew Kuma Warlord of the Sea
-        special: "Changes neighboring slots' orbs into [STR] orbs, deals 1,000 damage to one enemy",
+        special: "Changes neighboring slots' orbs into [STR] orbs, deals 1,000 damage to all enemies",
         specialName: "Ursa Shock",
         captain: "Boosts ATK and HP of STR characters by 2x",
         cooldown: [ 20, 14 ],

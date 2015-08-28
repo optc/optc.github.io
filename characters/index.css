@@ -681,8 +681,9 @@ unit > a:hover {
         padding: 10px;
         position: absolute;
         top: 0;
-        left: 250px;
+        left: 275px;
         background: white;
+        height: 100%;
     }
 
 }
