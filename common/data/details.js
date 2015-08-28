@@ -317,7 +317,7 @@ window.details = {
         special: "Changes [RCV] orbs into [INT] orbs",
         specialName: "Cat Snatch",
         captain: "Boosts RCV of INT characters by 1.2x",
-        cooldown: [ 13, 10 ],
+        cooldown: [ 13, 7 ],
         global: true
     },
     42: { // Butchie
