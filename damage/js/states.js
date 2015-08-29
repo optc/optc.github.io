@@ -119,7 +119,7 @@ angular.module('optc').config(function($stateProvider, $urlRouterProvider) {
             views: {
                 'popup@main': {
                     template: '<div></div>',
-                    controller: 'TransferCtrl'
+                    controller: 'ImportCtrl'
                 }
             },
         });

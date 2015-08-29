@@ -1,0 +1,167 @@
+(function() {
+
+/**************
+ * ImportCtrl *
+ **************/
+
+var ImportCtrl = function($scope, $state, $stateParams) {
+
+    var checkInt = function(n, min, max) {
+        var temp = parseInt(n, 10);
+        return !isNaN(n) && n >= min && n < max;
+    };
+
+    var tokens = $stateParams.data.split(/([A-Z])/);
+
+    // Data validation (team)
+
+    if (tokens.length < 4 || tokens.length%2 === 0 || tokens[0] !== '' ||
+            tokens[tokens.length-1] !== '' || tokens[1] != 'D' || tokens[3] != 'C') {
+        $scope.notify({ text: 'Invalid data, aborting transfer.', type: 'error' });
+        $state.go('^');
+        return;
+    }
+
+    var team = [ ];
+    var regex = /(?:(\d+):(\d+)(?::(\d+):(\d+):(\d+))?|!)/;
+    var units = tokens[2].split(/,/);
+    var temp, data, type;
+
+    for (var i=0;i<units.length;++i) {
+        var matches = units[i].match(regex);
+        if (!matches) break;
+        if (matches[0] == '!') team.push(null);
+        else {
+            var id = parseInt(matches[1],10), level = parseInt(matches[2],10),
+                atk = parseInt(matches[3],10) || 0, hp = parseInt(matches[4],10) || 0,
+                rcv = parseInt(matches[5],10) || 0;
+            if (id < 1 || id > window.units.length || window.units[id - 1].length === 0) break;
+            if (level < 1 || level > window.units[id - 1].maxLevel) break;
+            if (atk > 100 || hp > 100 || rcv > 100 || (atk + hp + rcv) > 200) break;
+            team.push({ id: id, level: level, candies: { atk: atk, hp: hp, rcv: rcv }});
+        }
+    }
+
+    if (team.length != 6) {
+        $scope.notify({ text: 'Invalid data, aborting transfer.', type: 'error' });
+        $state.go('^');
+        return;
+    }
+
+    // Data validation (other data)
+
+    tokens = tokens.slice(4);
+    
+    for (i=0;i<tokens.length-1;i+=2) {
+        data = tokens[i]; type = tokens[i+1];
+        if (type == 'B') {
+            temp = data.split(/,/);
+            if (!checkInt(temp[0], 0, window.ships.length) || !checkInt(temp[1], 1, 11)) break;
+        } else if (type == 'D' && isNaN(parseInt(data,10))) break;
+        else if ((type == 'O' || type == 'L' || type == 'G') && !checkInt(data, 0, 729)) break;
+        else if (type == 'S' && !checkInt(data, 0, 64)) break;
+        else if (type == 'H') {
+            temp = parseFloat(data, 10);
+            if (isNaN(temp) || temp < 0 || temp > 100) break;
+        }
+    }
+
+    if (i < tokens.length - 1) {
+        $scope.notify({ text: 'Invalid data, aborting transfer.', type: 'error' });
+        $state.go('^');
+        return;
+    }
+
+    // Data transfer (team)
+
+    $scope.options.transientMode = true;
+    $scope.options.crunchInhibitor = Infinity;
+
+    for (i=0;i<6;++i) {
+        $scope.resetSlot(i,false);
+        if (team[i] === null) continue;
+        $scope.data.team[i].unit = window.units[team[i].id - 1];
+        $scope.data.team[i].level = team[i].level;
+        $scope.data.team[i].candies = $.extend($scope.data.team[i].candies, team[i].candies);
+    }
+
+    // Data transfer (other data)
+
+    for (i=0;i<tokens.length-1;i+=2) {
+        data = tokens[i]; type = tokens[i+1];
+        if (type == 'B') {
+            temp = data.split(/,/);
+            $scope.data.ship = [ parseInt(temp[0], 10), parseInt(temp[1], 10) ];
+        } else if (type == 'D') $scope.data.defense = parseInt(data, 10);
+        if (type == 'O' || type == 'L' || type == 'G') {
+            temp = ('000000' + parseInt(data, 10).toString(3))
+                .slice(-6).split('').map(function(x) { return parseInt(x, 10); });
+            temp.forEach(function(x,n) {
+                var unit = $scope.tdata.team[n];
+                if (type == 'O') unit.orb = (x == 1 ? 2 : (x == 2 ? 0.5 : 1));
+                else if (type == 'L') unit.lock = x;
+                else unit.silence = x;
+            });
+        } else if (type == 'S') {
+            temp = ('000000' + parseInt(data, 10).toString(2))
+                .slice(-6).split('').map(function(x) { return parseInt(x, 10); });
+            temp.forEach(function(x,n) { $scope.tdata.team[n].special = (x == 1); });
+        } else if (type == 'H') {
+            $scope.data.percHP = parseFloat(data, 10);
+        }
+    }
+
+    $scope.options.crunchInhibitor = 0;
+
+    $scope.notify({ text: 'Data transfer completed successfully.', type: 'success' });
+    $state.go('^');
+
+};
+
+/**************
+ * ExportCtrl *
+ **************/
+
+var ExportCtrl = function($scope) {
+
+    $scope.generateURL = function() {
+
+        var result, data = $scope.data, team = $scope.tdata.team;
+
+        // team
+        
+        var tokens = [ ];
+        for (var i=0;i<6;++i) {
+            var unit = data.team[i], candies = unit.candies;
+            if (unit.unit === null) tokens.push('!');
+            else {
+                var temp = (unit.unit.number + 1) + ':' + unit.level;
+                if (candies.atk + candies.hp + candies.rcv > 0)
+                    temp += ':' + [ candies.atk, candies.hp, candies.rcv ].join(':');
+                tokens.push(temp);
+            }
+        }
+
+        result = '#/transfer/D' + tokens.join(',') + 'C';
+
+        // others
+        
+        result += data.ship[0] + ',' + data.ship[1] + 'B';
+        result += data.defense + 'D';
+        result += parseInt(team.map(function(x) { return (x.orb == 2 ? 1 : (x.orb == 0.5 ? 2 : 0)); }).join(''),3) + 'O';
+        result += parseInt(team.map(function(x) { return x.lock; }).join(''),3) + 'L';
+        result += parseInt(team.map(function(x) { return x.silence; }).join(''),3) + 'G';
+        result += parseInt(team.map(function(x) { return x.special ? 1 : 0; }).join(''),2) + 'S';
+        result += (Math.floor(data.percHP * 100) / 100) + 'H';
+
+        $scope.tdata.url = window.location.href.match(/^(.+?)#/)[1] + result;
+
+    };
+
+};
+
+angular.module('optc')
+    .controller('ExportCtrl', ExportCtrl)
+    .controller('ImportCtrl', ImportCtrl);
+
+})();
