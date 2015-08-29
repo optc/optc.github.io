@@ -155,6 +155,12 @@ window.matchers = [
     },
 
     {
+        name: 'Full-board orb controllers',
+        target: 'special',
+        matcher: /(Changes.+all orbs|Changes the orbs in|Changes[^,]*every other orb)/i
+    },
+
+    {
         name: 'Orb randomizers',
         target: 'special',
         matcher: /randomizes.+orb/i
