@@ -2,7 +2,7 @@
 
 #links-button {
     position: fixed;
-    right: 25px;
+    right: 20px;
     bottom: 5px;
     transform: translateX(-50%) translateY(-50%);
 }
@@ -19,7 +19,7 @@
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    background: rgba(0, 0, 0, 0.15);
+    background: rgba(230, 230, 230, 1);
     opacity: 0;
     z-index: -10;
     cursor: pointer;
@@ -39,8 +39,12 @@
     transition: color 0.3s;
 }
 
-#links-button .btn:hover .fa {
+#links-button .btn:hover .fa, .rotater i {
     color: rgba(0, 0, 0, 0.7);
+}
+
+.rotater:hover i, .rotater:hover i {
+    color: white !important;
 }
 
 #links-button .btn.trigger {
@@ -120,52 +124,42 @@
     top: 45%;
 }
 
-#links-button.active .trigger .line:before {
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-    width: 110%;
-}
-
-#links-button.active .trigger .line:after {
-    -webkit-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-    width: 110%;
-}
-
-.rotater:nth-child(1) {
-    -webkit-transform: rotate(-22.5deg);
-    -ms-transform: rotate(-22.5deg);
-    transform: rotate(-22.5deg);
-}
-
 #links-button.active .rotater:nth-child(1) .btn-icon {
-    -webkit-transform: translateY(-3em) rotate(22.5deg);
-    -ms-transform: translateY(-3em) rotate(22.5deg);
-    transform: translateY(-3em) rotate(22.5deg);
-}
-
-.rotater:nth-child(2) {
-    -webkit-transform: rotate(22.5deg);
-    -ms-transform: rotate(22.5deg);
-    transform: rotate(22.5deg);
+    -webkit-transform: translateX(-3em);
+    -ms-transform: translateX(-3em);
+    transform: translateX(-3em);
 }
 
 #links-button.active .rotater:nth-child(2) .btn-icon {
-    -webkit-transform: translateY(-3em) rotate(-22.5deg);
-    -ms-transform: translateY(-3em) rotate(-22.5deg);
-    transform: translateY(-3em) rotate(-22.5deg);
-}
-
-.rotater:nth-child(3) {
-    -webkit-transform: rotate(292.5deg);
-    -ms-transform: rotate(292.5deg);
-    transform: rotate(292.5deg);
+    -webkit-transform: translateX(-6em);
+    -ms-transform: translateX(-6em);
+    transform: translateX(-6em);
 }
 
 #links-button.active .rotater:nth-child(3) .btn-icon {
-    -webkit-transform: translateY(-3em) rotate(-292.5deg);
-    -ms-transform: translateY(-3em) rotate(-292.5deg);
-    transform: translateY(-3em) rotate(-292.5deg);
+    -webkit-transform: translateX(-9em);
+    -ms-transform: translateX(-9em);
+    transform: translateX(-9em);
+}
+
+#links-button.active .rotater:nth-child(4) .btn-icon {
+    -webkit-transform: translateX(-12em);
+    -ms-transform: translateX(-12em);
+    transform: translateX(-12em);
+}
+
+#link-damage > .btn {
+    background: skyblue;
+}
+
+#link-characters > .btn {
+    background: lightgreen;
+}
+
+#link-drops > .btn {
+    background:lightsalmon
+}
+
+#link-report > .btn {
+    background: orchid;
 }

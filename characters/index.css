@@ -631,9 +631,8 @@ unit > a:hover {
         overflow: auto;
         position: relative;
         border-collapse: collapse;
-        padding: 10px;
+        padding: 10px 10px 0 10px;
         left: 0;
-        padding-bottom: 90px;
     }
 
     #mainTable td:nth-child(2) {
@@ -649,6 +648,10 @@ unit > a:hover {
         height: 40px;
         display: table-cell;
         vertical-align: middle;
+    }
+
+    #footer {
+        height: 55px;
     }
 
 }
