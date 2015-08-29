@@ -445,8 +445,10 @@ var CruncherCtrl = function($scope, $timeout) {
         // get enabled specials
         var conflictWarning = false;
         enabledSpecials = [ ];
+        // orb map effect (fix for Hancock)
         if ($scope.data.profile && profiles[$scope.data.profile].orb)
             enabledSpecials.push({ orb: profiles[$scope.data.profile].orb, permanent: true });
+        // team specials
         $scope.tdata.team.forEach(function(x,n) {
             if (!$scope.data.team[n].unit) return;
             var id = $scope.data.team[n].unit.number + 1;

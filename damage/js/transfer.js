@@ -1,3 +1,5 @@
+/* jshint loopfunc: true */
+
 (function() {
 
 /**************
@@ -105,10 +107,14 @@ var ImportCtrl = function($scope, $state, $stateParams) {
         } else if (type == 'S') {
             temp = ('000000' + parseInt(data, 10).toString(2))
                 .slice(-6).split('').map(function(x) { return parseInt(x, 10); });
-            temp.forEach(function(x,n) { $scope.tdata.team[n].special = (x == 1); });
+            temp.forEach(function(x,n) {
+                $scope.tdata.team[n].special = (x == 1);
+                $scope.$emit('specialToggled', n, (x==1));
+            });
         } else if (type == 'H') {
             $scope.data.percHP = parseFloat(data, 10);
         }
+
     }
 
     $scope.options.crunchInhibitor = 0;
