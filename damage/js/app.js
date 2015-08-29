@@ -21,10 +21,7 @@ var SharedRootCtrl = function($scope) {
 
         percHP: 100.0,
 
-        ship: {
-            name: 'Merry Go',
-            level: 5
-        },
+        ship: [ 1, 5 ],
 
         defense: 0,
 
