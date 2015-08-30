@@ -5,9 +5,6 @@
     right: 20px;
     bottom: 5px;
     transform: translateX(-50%) translateY(-50%);
-}
-
-#links-button {
     width: 2em;
     height: 2em;
 }
@@ -124,42 +121,54 @@
     top: 45%;
 }
 
-#links-button.active .rotater:nth-child(1) .btn-icon {
+#links-button.active .rotater:nth-child(1) > a {
     -webkit-transform: translateX(-3em);
     -ms-transform: translateX(-3em);
     transform: translateX(-3em);
 }
 
-#links-button.active .rotater:nth-child(2) .btn-icon {
+#links-button.active .rotater:nth-child(2) > a {
     -webkit-transform: translateX(-6em);
     -ms-transform: translateX(-6em);
     transform: translateX(-6em);
 }
 
-#links-button.active .rotater:nth-child(3) .btn-icon {
+#links-button.active .rotater:nth-child(3) > a {
     -webkit-transform: translateX(-9em);
     -ms-transform: translateX(-9em);
     transform: translateX(-9em);
 }
 
-#links-button.active .rotater:nth-child(4) .btn-icon {
+#links-button.active .rotater:nth-child(4) > a {
     -webkit-transform: translateX(-12em);
     -ms-transform: translateX(-12em);
     transform: translateX(-12em);
 }
 
-#link-damage > .btn {
-    background: skyblue;
+#link-damage > .btn { background: skyblue; }
+#link-damage > .tip { color: skyblue; }
+
+
+#link-characters > .btn { background: lightgreen; }
+#link-characters > .tip { color: lightgreen; }
+
+#link-drops > .btn { background: lightsalmon; }
+#link-drops > .tip { color: lightsalmon; }
+
+#link-report > .btn { background: orchid; }
+#link-report > .tip { color: orchid; }
+
+#links-button:not(.active) .tip,
+.rotater:not(:hover) .tip {
+    display: none;
 }
 
-#link-characters > .btn {
-    background: lightgreen;
-}
-
-#link-drops > .btn {
-    background:lightsalmon
-}
-
-#link-report > .btn {
-    background: orchid;
+.tip {
+    position: absolute;
+    top: -2em;
+    left: 0;
+    width: 130px;
+    margin-left: -50px;
+    text-align: center;
+    text-decoration: none !important;
 }

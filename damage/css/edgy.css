@@ -76,13 +76,17 @@ li.STR > div, li.QCK > div, li.DEX > div, li.PSY > div, li.INT > div {
 }
 
 .btn.trigger > i {
-    color: white !important;
+    color: white;
 }
 
 .btn.trigger > i:hover {
-    color: lightgray !important;
+    color: black;
 }
 
 .rotater:hover .fa {
     color: white !important;
+}
+
+.fa-star {
+    color: black !important;
 }
