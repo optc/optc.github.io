@@ -363,6 +363,7 @@ window.details = {
     47: { // Yosaku
         special: "Changes [TND] orbs into [RCV] orbs",
         specialName: "[TND] Slot Change [RCV]",
+        cooldown: 15,
         global: true
     },
     48: { // Johnny
@@ -383,7 +384,8 @@ window.details = {
     50: { // Patty
         special: "Deals 5x character's ATK in STR damage to one enemy",
         specialName: "The Meatball Of Doom",
-        captain: "Recovers 3x character's RCV in HP at the end of the turn",
+        captain: "Recovers 4x character's RCV in HP at the end of the turn",
+        cooldown: 15,
         global: true
     },
     51: { // Carne
@@ -714,16 +716,19 @@ window.details = {
     119: { // Sword Bandit
         special: "Deals 10x character's ATK in character's type damage to one enemy",
         specialName: "Hyper Slash",
+        cooldown: 40,
         global: true
     },
     120: { // Pistol Bandit
         special: "Deals 5x character's ATK in character's type damage to all enemies",
         specialName: "Hyper Shot",
+        cooldown: 35,
         global: true
     },
     121: { // Fighter Group Cabin Boy Red Pirates
         special: "Deals 10x character's ATK in character's type damage to one enemy",
         specialName: "Hyper Straight",
+        cooldown: 40,
         evolution: 142,
         evolvers: [ 89 ],
         global: true
@@ -731,6 +736,7 @@ window.details = {
     122: { // Fighter Group Cabin Boy Blue Pirates
         special: "Reduces damage received by 20% for 1 turn",
         specialName: "Iron Shield",
+        cooldown: 25,
         evolution: 143,
         evolvers: [ 90 ],
         global: true
@@ -746,6 +752,7 @@ window.details = {
     124: { // Fighter Group Cabin Boy Yellow Pirates
         special: "Reduces damage received by 20% for 1 turn",
         specialName: "Iron Shield",
+        cooldown: 25,
         evolution: 145,
         evolvers: [ 92 ],
         global: true
@@ -762,12 +769,14 @@ window.details = {
         special: "Deals 10x character's ATK in character's type damage to one enemy",
         specialName: "Hyper Slash",
         evolution: 147,
+        cooldown: 40,
         evolvers: [ 89 ],
         global: true
     },
     127: { // Slasher Group Cabin Boy Blue Pirates
         special: "Reduces the defense of all enemies by 50% for 1 turn",
         specialName: "Shield Crusher",
+        cooldown: 15,
         evolution: 148,
         evolvers: [ 90 ],
         global: true
@@ -791,6 +800,7 @@ window.details = {
     130: { // Slasher Group Cabin Boy Black Pirates
         special: "Deals 10x character's ATK in character's type damage to one enemy",
         specialName: "Hyper Slash",
+        cooldown: 40,
         evolution: 151,
         evolvers: [ 93 ],
         global: true
@@ -830,6 +840,7 @@ window.details = {
     135: { // Striker Group Cabin Boy Black Pirates
         special: "Deals 10x character's ATK in character's type damage to one enemy",
         specialName: "Hyper Spiral",
+        cooldown: 40,
         evolution: 156,
         evolvers: [ 93 ],
         global: true
@@ -837,6 +848,7 @@ window.details = {
     136: { // Shooter Group Cabin Boy Red Pirates
         special: "Deals 5x character's ATK in character's type damage to all enemies",
         specialName: "Hyper Shot",
+        cooldown: 35,
         evolution: 157,
         evolvers: [ 89 ],
         global: true
@@ -885,12 +897,14 @@ window.details = {
         special: "Deals 10x character's ATK in character's type damage to one enemy",
         specialName: "Hyper Straight",
         evolution: 269,
+        cooldown: 40,
         evolvers: [ 115, 116, 89 ],
         global: true
     },
     143: { // Fighter Group Crew Blue Pirates
         special: "Reduces damage received by 20% for 1 turn",
         specialName: "Iron Shield",
+        cooldown: 25,
         evolution: 270,
         evolvers: [ 115, 116, 90 ],
         global: true
@@ -906,6 +920,7 @@ window.details = {
     145: { // Fighter Group Crew Yellow Pirates
         special: "Reduces damage received by 20% for 1 turn",
         specialName: "Iron Shield",
+        cooldown: 25,
         evolution: 272,
         evolvers: [ 115, 116, 92 ],
         global: true
@@ -921,6 +936,7 @@ window.details = {
     147: { // Slasher Group Crew Red Pirates
         special: "Deals 10x character's ATK in character's type damage to one enemy",
         specialName: "Hyper Slash",
+        cooldown: 40,
         evolution: 274,
         evolvers: [ 116, 95 ],
         global: true
@@ -928,6 +944,7 @@ window.details = {
     148: { // Slasher Group Crew Blue Pirates
         special: "Reduces the defense of all enemies by 50% for 1 turn",
         specialName: "Shield Crusher",
+        cooldown: 15,
         evolution: 275,
         evolvers: [ 116, 96 ],
         global: true
@@ -951,6 +968,7 @@ window.details = {
     151: { // Slasher Group Crew Black Pirates
         special: "Deals 10x character's ATK in character's type damage to one enemy",
         specialName: "Hyper Slash",
+        cooldown: 40,
         evolution: 278,
         evolvers: [ 116, 99 ],
         global: true
@@ -990,6 +1008,7 @@ window.details = {
     156: { // Striker Group Crew Black Pirates
         special: "Deals 10x character's ATK in character's type damage to one enemy",
         specialName: "Hyper Spiral",
+        cooldown: 40,
         evolution: 283,
         evolvers: [ 82, 88 ],
         global: true
@@ -997,6 +1016,7 @@ window.details = {
     157: { // Shooter Group Crew Red Pirates
         special: "Deals 5x character's ATK in character's type damage to all enemies",
         specialName: "Hyper Shot",
+        cooldown: 35,
         evolution: 284,
         evolvers: [ 115, 116, 89 ],
         global: true
@@ -1044,36 +1064,43 @@ window.details = {
     163: { // Bodyguard, ‘Sunglasses'
         special: "Changes [DEX] orbs into [TND] orbs",
         specialName: "[DEX] Slot Change [TND]",
+        cooldown: 15,
         global: true
     },
     164: { // Bearded Bodyguard
         special: "Changes [QCK] orbs into [TND] orbs",
         specialName: "[QCK] Slot Change [TND]",
+        cooldown: 15,
         global: true
     },
     165: { // Knuckle Punk Black Cat Pirates
         special: "Recovers 5x character's RCV in HP",
         specialName: "Light Healing",
+        cooldown: 12,
         global: true
     },
     166: { // Saber Punk Black Cat Pirates
         special: "Recovers 5x character's RCV in HP",
         specialName: "Light Healing",
+        cooldown: 12,
         global: true
     },
     167: { // Halberd Punk Black Cat Pirates
         special: "Recovers 5x character's RCV in HP",
         specialName: "Light Healing",
+        cooldown: 12,
         global: true
     },
     168: { // Pistol Punk Black Cat Pirates
         special: "Recovers 5x character's RCV in HP",
         specialName: "Light Healing",
+        cooldown: 12,
         global: true
     },
     169: { // Cannoneer Punk Black Cat Pirates
         special: "Recovers 5x character's RCV in HP",
         specialName: "Light Healing",
+        cooldown: 12,
         global: true
     },
     170: { // Fighter Group Leader
@@ -1115,16 +1142,19 @@ window.details = {
     176: { // Sword Fishman Arlong crewmember
         special: "Deals 10x character's ATK in character's type damage to one enemy",
         specialName: "Hyper Slash",
+        cooldown: 40,
         global: true
     },
     177: { // Spear Fishman Arlong crewmember
         special: "Deals 10x character's ATK in character's type damage to one enemy",
         specialName: "Hyper Spiral",
+        cooldown: 40,
         global: true
     },
     178: { // Pistol Fishman Arlong crewmember
         special: "Deals 5x character's ATK in character's type damage to all enemies",
         specialName: "Hyper Shot",
+        cooldown: 35,
         global: true
     },
     179: { // Knuckle Apprentice Navy
@@ -1772,11 +1802,13 @@ window.details = {
     269: { // Armed Fighter Unit Red Pirates
         special: "Deals 10x character's ATK in character's type damage to one enemy",
         specialName: "Hyper Straight",
+        cooldown: 40,
         global: true
     },
     270: { // Armed Fighter Unit Blue Pirates
         special: "Reduces damage received by 20% for 1 turn",
         specialName: "Iron Shield",
+        cooldown: 25,
         global: true
     },
     271: { // Armed Fighter Unit Green Pirates
@@ -1788,6 +1820,7 @@ window.details = {
     272: { // Armed Fighter Unit Yellow Pirates
         special: "Reduces damage received by 20% for 1 turn",
         specialName: "Iron Shield",
+        cooldown: 25,
         global: true
     },
     273: { // Armed Fighter Unit Black Pirates
@@ -1799,11 +1832,13 @@ window.details = {
     274: { // Armed Slasher Unit Red Pirates
         special: "Deals 10x character's ATK in character's type damage to one enemy",
         specialName: "Hyper Slash",
+        cooldown: 40,
         global: true
     },
     275: { // Armed Slasher Unit Blue Pirates
         special: "Reduces the defense of all enemies by 50% for 1 turn",
         specialName: "Shield Crusher",
+        cooldown: 15,
         global: true
     },
     276: { // Armed Slasher Unit Green Pirates
@@ -1821,6 +1856,7 @@ window.details = {
     278: { // Armed Slasher Unit Black Pirates
         special: "Deals 10x character's ATK in character's type damage to one enemy",
         specialName: "Hyper Slash",
+        cooldown: 40,
         global: true
     },
     279: { // Armed Striker Unit Red Pirates
@@ -1850,11 +1886,13 @@ window.details = {
     283: { // Armed Striker Unit Black Pirates
         special: "Deals 10x character's ATK in character's type damage to one enemy",
         specialName: "Hyper Spiral",
+        cooldown: 40,
         global: true
     },
     284: { // Armed Shooter Unit Red Pirates
         special: "Deals 5x character's ATK in character's type damage to all enemies",
         specialName: "Hyper Shot",
+        cooldown: 35,
         global: true
     },
     285: { // Armed Shooter Unit Blue Pirates
@@ -4606,12 +4644,14 @@ window.details = {
     694: { // Bazooka Corporal Navy Headquarters
         special: "Deals 13x character's ATK in character's type damage to all enemies",
         specialName: "Hyper Burst",
+        cooldown: [ 35, 18 ],
         evolution: 699,
         evolvers: [ 116, 95, 300 ]
     },
     695: { // Knuckle Corporal Navy Headquarters
         special: "Cuts all enemies' current HP by 5%",
         specialName: "Light Break",
+        cooldown: 25,
         evolution: 700,
         evolvers: [ 116, 99, 304 ]
     },
@@ -4634,11 +4674,13 @@ window.details = {
     699: { // Bazooka Major Navy Headquarters
         special: "Deals 13x character's ATK in character's type damage to all enemies",
         specialName: "Hyper Burst",
+        cooldown: [ 35, 18 ],
         captain: "Boosts ATK of Shooter characters by 500 units, reduces damage received by 10%"
     },
     700: { // Knuckle Major Navy Headquarters
         special: "Cuts all enemies' current HP by 5%",
         specialName: "Light Break",
+        cooldown: 25,
         captain: "Boosts ATK of Fighter characters by 1.75x"
     },
     701: { // Oimo

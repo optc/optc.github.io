@@ -47,6 +47,9 @@ var StorageCtrl = function($scope) {
     if ($scope.data.profile && !window.profiles.hasOwnProperty($scope.data.profile))
         $scope.data.profile = null;
 
+    if ($scope.data.ship && $scope.data.ship.constructor == Object)
+        $scope.data.ship = [ 1, 5 ];
+
     $scope.options.crunchInhibitor = 0;
 
     if (doAlert) {
