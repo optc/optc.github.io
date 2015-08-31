@@ -253,11 +253,12 @@ body, html {
     display: block;
 }
 
-.damageDealer {
+.damageDealer, .onTurn {
     width: 140px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    word-wrap: break-word;
 }
 
 /********************
