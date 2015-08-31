@@ -2649,7 +2649,7 @@ window.details = {
         cooldown: [ 38, 18 ]
     },
     394: { // Inuppe
-        special: "Deals 5,000 damage to all enemies",
+        special: "Deals 500 damage to all enemies",
         specialName: "Almighty Hurricane Called \"Love\"",
         cooldown: [ 17, 8 ]
     },
