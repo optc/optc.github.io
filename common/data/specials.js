@@ -527,7 +527,7 @@ window.specials = {
         type: 'class'
     },
     719: {
-        atk: function(p) { return p.class.has("Knowledge") ? window.specials[719].multiplier : 1; },
+        atk: function(p) { return p.unit.class.has("Knowledge") ? window.specials[719].multiplier : 1; },
         type: 'class',
         onActivation: function(p) {
             var n = (p.percHP < 30 ? 2 : 1.5);
@@ -539,7 +539,7 @@ window.specials = {
         }
     },
     720: { // Sir Crocodile Logia Former Warlord of the Sea
-        atk: function(p) { return p.class.has("Knowledge") ? window.specials[720].multiplier : 1; },
+        atk: function(p) { return p.unit.class.has("Knowledge") ? window.specials[720].multiplier : 1; },
         type: 'class',
         onActivation: function(p) {
             var n = (p.percHP < 30 ? 2 : 1.5);
