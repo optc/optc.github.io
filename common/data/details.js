@@ -3566,7 +3566,7 @@ window.details = {
     529: { // Shanks, Black Clothes and Red Hair (Strong World/SW)
         special: "Deals 35x character's ATK in PSY damage to all enemies, reduces the defense of all enemies by 100% for 2 turns",
         specialName: "Conqueror's Haki - Emperor",
-        captain: "Boosts chances of getting [PSY] orbs, greatly boosts ATK of PSY characters",
+        captain: "Boosts chances of getting [PSY] orbs, boosts ATK of PSY characters proportionally to the current HP",
         captainNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the higher the HP is. The multiplier is calculated as 2 + 0.75 * (remaining HP) / (total HP). At full health the boost is equal to 2.75x",
         cooldown: 25,
         evolution: 530,
@@ -3575,7 +3575,7 @@ window.details = {
     530: { // Shanks, The Black-Clothed Yonkou (Strong World/SW)
         special: "Deals 35x character's ATK in PSY damage to all enemies, reduces the defense of all enemies by 100% for 2 turns",
         specialName: "Conqueror's Haki - Emperor",
-        captain: "Boosts chances of getting [PSY] orbs, greatly boosts ATK of PSY characters",
+        captain: "Boosts chances of getting [PSY] orbs, boosts ATK of PSY characters proportionally to the current HP",
         captainNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the higher the HP is. The multiplier is calculated as 2 + 0.75 * (remaining HP) / (total HP). At full health the boost is equal to 2.75x",
         cooldown: 25
     },
@@ -4462,7 +4462,7 @@ window.details = {
     668: { // Sabo
         special: "Boosts ATK of Freedom characters by 1.5x for 1 turn. If during that turn every unit scores a Perfect hit, boosts ATK of Freedom characters by 2x in the following turn.",
         specialName: "Dragon's Claw",
-        captain: "Boosts HP and RCV by 1.2x, greatly boosts ATK of Freedom characters",
+        captain: "Boosts HP and RCV by 1.2x, boosts ATK of Freedom characters proportionally to the current HP",
         captainNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the higher the HP is. The multiplier is calculated as 2 + 0.75 * (remaining HP) / (total HP). At full health the boost is equal to 2.75x",
         cooldown: 21,
         evolution: 669,
@@ -4471,7 +4471,7 @@ window.details = {
     669: { // Sabo, Member of the Revolutionary Army
         special: "Boosts ATK of Freedom characters by 1.5x for 1 turn. If during that turn every unit scores a Perfect hit, boosts ATK of Freedom characters by 2x in the following turn.",
         specialName: "Dragon's Claw",
-        captain: "Boosts HP and RCV by 1.2x, greatly boosts ATK of Freedom characters",
+        captain: "Boosts HP and RCV by 1.2x, boosts ATK of Freedom characters proportionally to the current HP",
         captainNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the higher the HP is. The multiplier is calculated as 2 + 0.75 * (remaining HP) / (total HP). At full health the boost is equal to 2.75x",
         cooldown: 21
     },
@@ -4785,5 +4785,35 @@ window.details = {
         specialName: "Angel's Harp - Healing",
         captain: "Boosts RCV by 5x if HP is low",
         cooldown: [ 27, 14 ]
+    },
+    717: {
+        special: "Deals 50% of the damage dealt in the previous turn as typeless damage to all enemes",
+        specialNotes: "The special only includes the damage inflicted through normal attacks.",
+        specialName: "Black Sword - Lightning Slash",
+        captain: "Boosts ATK of Slasher characters by a variable factor between 2x and 2.75x based on the timing of the attack of the previous unit in the chain",
+        captainNotes: "While the exact details are still unclear, it is likely that a Good hit will grant a 2x multiplier to the next Slasher in the attack chain, while a Perfect hit will grant a 2.75x multiplier.",
+        cooldown: 25
+    },
+    718: {
+        special: "Deals 50% of the damage dealt in the previous turn as typeless damage to all enemes",
+        specialNotes: "The special only includes the damage inflicted through normal attacks.",
+        specialName: "Black Sword - Lightning Slash",
+        captain: "Boosts ATK of Slasher characters by a variable factor between 2x and 2.75x based on the timing of the attack of the previous unit in the chain",
+        captainNotes: "While the exact details are still unclear, it is likely that a Good hit will grant a 2x multiplier to the next Slasher in the attack chain, while a Perfect hit will grant a 2.75x multiplier.",
+        cooldown: 25
+    },
+    719: {
+        special: "Boosts ATK of Knowledge characters by a variable factor for 1 turn, deals large DEX damage to all enemies",
+        specialNotes: "The exact multiplier used is chosen based on the crew's current HP at the time the special is activated: above 30% HP, the multiplier used is 1.5x; below 30% HP, it's 2x.",
+        specialName: "Sables: Pesado",
+        captain: "Boosts ATK of Knowledge characters proportionally to the current HP",
+        captainNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the lower the HP is. The multiplier is calculated as 1.5 + 1.75 * (1 - (remaining HP) / (total HP)). With 1 HP left, the boost is equal to 3.25x",
+    },
+    720: {
+        special: "Boosts ATK of Knowledge characters by a variable factor for 1 turn, deals large DEX damage to all enemies",
+        specialNotes: "The exact multiplier used is chosen based on the crew's current HP at the time the special is activated: above 30% HP, the multiplier used is 1.5x; below 30% HP, it's 2x.",
+        specialName: "Sables: Pesado",
+        captain: "Boosts ATK of Knowledge characters proportionally to the current HP",
+        captainNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the lower the HP is. The multiplier is calculated as 1.5 + 1.75 * (1 - (remaining HP) / (total HP)). With 1 HP left, the boost is equal to 3.25x",
     }
 };

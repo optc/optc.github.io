@@ -714,5 +714,9 @@ window.units = [
     [ "Gan Fall the Knight of the Sky", "QCK", "Striker", 4, 20, 4, 2, 99, 3000000, 884, 401, 151, 1704, 1202, 300, 1.5 ],
     [ "Pierre", "DEX", "Fighter", 3, 12, 4, 1, 50, 392109, 69, 32, 38, 920, 480, 182, 1 ],
     [ "Konis", "PSY", "Freedom", 3, 9, 5, 2, 35, 136167, 58, 10, 32, 503, 190, 232, 1 ],
-    [ "Konis, Skypiean Maiden", "PSY", "Freedom", 4, 15, 4, 3, 70, 1066998, 458, 145, 196, 912, 388, 387, 1 ]
+    [ "Konis, Skypiean Maiden", "PSY", "Freedom", 4, 15, 4, 3, 70, 1066998, 458, 145, 196, 912, 388, 387, 1 ],
+    [ "Dracule Mihawk Warlord of the Sea", "INT", "Slasher", 5, 30, 4, 4, 70, null, 641, 335, 10, null, null, null, 0 ],
+    [ "Dracule Mihawk, World's Strongest Swordsman", "INT", "Slasher", 6, 55, 5, 4, 99, null, 1857, 799, 31, null, null, null, 0 ],
+    [ "Sir Crocodile Logia Warlord of the Sea", "DEX", [ "Knowledge", "Striker" ], 5, 30, 4, 4, 70, null, 517, 300, 105, null, null, null, 0 ],
+    [ "Sir Crocodile Logia Former Warlord of the Sea", "DEX", [ "Knowledge", "Striker" ], 5, 55, 4, 4, 99, null, 724, 765, 174, null, null, null, 0 ]
 ];
