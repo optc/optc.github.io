@@ -525,5 +525,29 @@ window.specials = {
     716: {
         atk: function(p) { return p.unit.class.has("Freedom") ? 1.5 : 1; },
         type: 'class'
+    },
+    719: {
+        atk: function(p) { return p.class.has("Knowledge") ? window.specials[719].multiplier : 1; },
+        type: 'class'
+        onActivation: function(p) {
+            var n = (p.percHP < 30 ? 2 : 1.5);
+            window.specials[719].multiplier = n;
+            p.scope.notify({
+                text: 'HP ' + (n == 2 ? 'below' : 'above') + ' 30%, using the ' + n + 'x multiplier.',
+                name: '667warning'
+            });
+        }
+    },
+    720: { // Sir Crocodile Logia Former Warlord of the Sea
+        atk: function(p) { return p.class.has("Knowledge") ? window.specials[720].multiplier : 1; },
+        type: 'class',
+        onActivation: function(p) {
+            var n = (p.percHP < 30 ? 2 : 1.5);
+            window.specials[720].multiplier = n;
+            p.scope.notify({
+                text: 'HP ' + (n == 2 ? 'below' : 'above') + ' 30%, using the ' + n + 'x multiplier.',
+                name: '667warning'
+            });
+        }
     }
 };

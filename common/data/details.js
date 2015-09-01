@@ -4791,7 +4791,7 @@ window.details = {
         specialNotes: "The special only includes the damage inflicted through normal attacks.",
         specialName: "Black Sword - Lightning Slash",
         captain: "Boosts ATK of Slasher characters by a variable factor between 2x and 2.75x based on the timing of the attack of the previous unit in the chain",
-        captainNotes: "While the exact details are still unclear, it is likely that a Good hit will grant a 2x multiplier to the next Slasher in the attack chain, while a Perfect hit will grant a 2.75x multiplier.",
+        captainNotes: "A hit below Good will boost ATK by 2x, a Good hit by 2.25x, a Great hit by 2.5x and a Perfect hit by 2.75x. This bonus is applied separately from the chain multiplier bonus. The first unit in the chain will not be boosted.",
         cooldown: 25
     },
     718: {
@@ -4799,7 +4799,7 @@ window.details = {
         specialNotes: "The special only includes the damage inflicted through normal attacks.",
         specialName: "Black Sword - Lightning Slash",
         captain: "Boosts ATK of Slasher characters by a variable factor between 2x and 2.75x based on the timing of the attack of the previous unit in the chain",
-        captainNotes: "While the exact details are still unclear, it is likely that a Good hit will grant a 2x multiplier to the next Slasher in the attack chain, while a Perfect hit will grant a 2.75x multiplier.",
+        captainNotes: "A hit below Good will boost ATK by 2x, a Good hit by 2.25x, a Great hit by 2.5x and a Perfect hit by 2.75x. This bonus is applied separately from the chain multiplier bonus. The first unit in the chain will not be boosted.",
         cooldown: 25
     },
     719: {

@@ -932,14 +932,10 @@ window.captains = {
         rcv: function(p) { return p.unit.type == "DEX" ? 2 : 1; }
     },
     529: { // Shanks, Black Clothes and Red Hair (Strong World/SW)
-        atk: function(p) {
-            return p.unit.type == "PSY" ? 2 + 0.75 * p.percHP / 100 : 1;
-        }
+        atk: function(p) { return p.unit.type == "PSY" ? 2 + 0.75 * p.percHP / 100 : 1; }
     },
     530: { // Shanks, The Black-Clothed Yonkou (Strong World/SW)
-        atk: function(p) {
-            return p.unit.type == "PSY" ? 2 + 0.75 * p.percHP / 100 : 1;
-        }
+        atk: function(p) { return p.unit.type == "PSY" ? 2 + 0.75 * p.percHP / 100 : 1; }
     },
     533: { // Brook Cherry Head
         atk: function(p) { return p.unit.type == "QCK" ? 2 : 1; }
@@ -1375,8 +1371,7 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Slasher") ? 1.75 : 1; }
     },
     699: { // Bazooka Major Navy Headquarters
-        atkStatic: function(p) { return p.unit.class.has("Shooter") ? 500 : 0; }, // TODO Implement me
-        warning: "Selected captain effect (Bazooka Major Navy Headquarters) has not yet been implemented."
+        atkStatic: function(p) { return p.unit.class.has("Shooter") ? 500 : 0; }
     },
     700: { // Knuckle Major Navy Headquarters
         atk: function(p) { return p.unit.class.has("Fighter") ? 1.75 : 1; }
@@ -1406,22 +1401,42 @@ window.captains = {
         atk: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; },
         rcv: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; }
     },
-    710: {
+    710: { // Franky, Record of the Voyage - Strawhat Crew (Log Franky)
         atk: function(p) { return p.unit.class.has("Shooter") ? 1.5 : 1; }
     },
-    711: {
+    711: { // Franky, Dream of the Voyage - A Ship to Sail Around the World (Log Franky)
         atk: function(p) { return p.unit.class.has("Shooter") ? 2 : 1; }
     },
-    712: {
+    712: { // Gan Fall
         atk: function(p) { return p.unit.class.has("Striker") && p.percHP > 50 ? 2 : 1; }
     },
-    713: {
+    713: { // Gan Fall the Knight of the Sky
         atk: function(p) { return p.unit.class.has("Striker") && p.percHP > 50 ? 2.5 : 1; }
     },
-    715: {
+    715: { // Konis
         rcv: function(p) { return p.percHP < 30 ? 3 : 1; }
     },
-    716: {
+    716: { // Konis, Skypiean Maiden
         rcv: function(p) { return p.percHP < 30 ? 5 : 1; }
+    },
+    717: { // Dracule Mihawk Warlord of the Sea
+        hitAtk: function(p) {
+            var prev = (p.chainPosition, p.chainPosition + 1)[0];
+            return (prev == 'Good' ? 2.25 : (prev == 'Great' ? 2.5 : (prev == 'Perfect' ? 2.75 : 2)));
+        },
+        hitModifiers: [ 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect' ], // don't remove this
+    },
+    718: { // Dracule Mihawk, World's Strongest Swordsman
+        hitAtk: function(p) {
+            var prev = (p.chainPosition, p.chainPosition + 1)[0];
+            return (prev == 'Good' ? 2.25 : (prev == 'Great' ? 2.5 : (prev == 'Perfect' ? 2.75 : 2)));
+        },
+        hitModifiers: [ 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect' ], // don't remove this
+    },
+    719: { // Sir Crocodile Logia Warlord of the Sea
+        atk: function(p) { return p.class.has("Knowledge") ? 1.5 + 1.75 * ((100 - p.percHP) / 100) : 1; }
+    },
+    720: { // Sir Crocodile Logia Former Warlord of the Sea
+        atk: function(p) { return p.class.has("Knowledge") ? 1.5 + 1.75 * ((100 - p.percHP) / 100) : 1; }
     }
 };
