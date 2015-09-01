@@ -311,7 +311,7 @@ window.details = {
         special: "Changes neighboring slots' orbs into [RCV] orbs",
         specialName: "[RCV] Slot Storm",
         captain: "Reduces damage received from Shooter enemies by 30%",
-        cooldown: [ 15, 8 ],
+        cooldown: [ 18, 8 ],
         global: true
     },
     41: { // Siam
@@ -363,20 +363,20 @@ window.details = {
     47: { // Yosaku
         special: "Changes [TND] orbs into [RCV] orbs",
         specialName: "[TND] Slot Change [RCV]",
-        cooldown: 15,
+        cooldown: [ 15, 7 ],
         global: true
     },
     48: { // Johnny
         special: "Changes neighboring slots' orbs into [RCV] orbs",
         specialName: "[RCV] Slot Storm",
-        cooldown: 18,
+        cooldown: [ 18, 8 ],
         global: true
     },
     49: { // Iron Fist Fullbody
         special: "Deals 10x character's ATK in character's type damage to one enemy",
         specialName: "Hyper Straight",
         captain: "Boosts ATK of STR characters by 1.5x",
-        cooldown: [ 15, 10 ],
+        cooldown: [ 40, 15 ],
         evolution: 230,
         evolvers: [ 116, 78, 89 ],
         global: true
@@ -728,7 +728,7 @@ window.details = {
     121: { // Fighter Group Cabin Boy Red Pirates
         special: "Deals 10x character's ATK in character's type damage to one enemy",
         specialName: "Hyper Straight",
-        cooldown: 40,
+        cooldown: [ 40, 15 ],
         evolution: 142,
         evolvers: [ 89 ],
         global: true
@@ -736,7 +736,7 @@ window.details = {
     122: { // Fighter Group Cabin Boy Blue Pirates
         special: "Reduces damage received by 20% for 1 turn",
         specialName: "Iron Shield",
-        cooldown: 25,
+        cooldown: [ 25, 10 ],
         evolution: 143,
         evolvers: [ 90 ],
         global: true
@@ -752,7 +752,7 @@ window.details = {
     124: { // Fighter Group Cabin Boy Yellow Pirates
         special: "Reduces damage received by 20% for 1 turn",
         specialName: "Iron Shield",
-        cooldown: 25,
+        cooldown: [ 25, 10 ],
         evolution: 145,
         evolvers: [ 92 ],
         global: true
@@ -776,7 +776,7 @@ window.details = {
     127: { // Slasher Group Cabin Boy Blue Pirates
         special: "Reduces the defense of all enemies by 50% for 1 turn",
         specialName: "Shield Crusher",
-        cooldown: 15,
+        cooldown: [ 15, 7 ],
         evolution: 148,
         evolvers: [ 90 ],
         global: true
@@ -864,7 +864,7 @@ window.details = {
     138: { // Shooter Group Cabin Boy Green Pirates
         special: "Changes [DEX] orbs into [RCV] orbs",
         specialName: "[DEX] Slot Change [RCV]",
-        cooldown: 13,
+        cooldown: [ 15, 7 ],
         evolution: 159,
         evolvers: [ 91 ],
         global: true
@@ -872,7 +872,7 @@ window.details = {
     139: { // Shooter Group Cabin Boy Yellow Pirates
         special: "Changes [PSY] orbs into [RCV] orbs",
         specialName: "[PSY] Slot Change [RCV]",
-        cooldown: 13,
+        cooldown: [ 15, 7 ],
         evolution: 160,
         evolvers: [ 92 ],
         global: true
@@ -880,7 +880,7 @@ window.details = {
     140: { // Shooter Group Cabin Boy Black Pirates
         special: "Deals 5x character's ATK in character's type damage to all enemies",
         specialName: "Hyper Shot",
-        cooldown: 15,
+        cooldown: 35,
         evolution: 161,
         evolvers: [ 93 ],
         global: true
@@ -897,14 +897,14 @@ window.details = {
         special: "Deals 10x character's ATK in character's type damage to one enemy",
         specialName: "Hyper Straight",
         evolution: 269,
-        cooldown: 40,
+        cooldown: [ 40, 15 ],
         evolvers: [ 115, 116, 89 ],
         global: true
     },
     143: { // Fighter Group Crew Blue Pirates
         special: "Reduces damage received by 20% for 1 turn",
         specialName: "Iron Shield",
-        cooldown: 25,
+        cooldown: [ 25, 10 ],
         evolution: 270,
         evolvers: [ 115, 116, 90 ],
         global: true
@@ -920,7 +920,7 @@ window.details = {
     145: { // Fighter Group Crew Yellow Pirates
         special: "Reduces damage received by 20% for 1 turn",
         specialName: "Iron Shield",
-        cooldown: 25,
+        cooldown: [ 25, 10 ],
         evolution: 272,
         evolvers: [ 115, 116, 92 ],
         global: true
@@ -944,7 +944,7 @@ window.details = {
     148: { // Slasher Group Crew Blue Pirates
         special: "Reduces the defense of all enemies by 50% for 1 turn",
         specialName: "Shield Crusher",
-        cooldown: 15,
+        cooldown: [ 15, 7 ],
         evolution: 275,
         evolvers: [ 116, 96 ],
         global: true
@@ -1032,7 +1032,7 @@ window.details = {
     159: { // Shooter Group Crew Green Pirates
         special: "Changes [DEX] orbs into [RCV] orbs",
         specialName: "[DEX] Slot Change [RCV]",
-        cooldown: 13,
+        cooldown: [ 15, 7 ],
         evolution: 286,
         evolvers: [ 115, 116, 91 ],
         global: true
@@ -1040,7 +1040,7 @@ window.details = {
     160: { // Shooter Group Crew Yellow Pirates
         special: "Changes [PSY] orbs into [RCV] orbs",
         specialName: "[PSY] Slot Change [RCV]",
-        cooldown: 13,
+        cooldown: [ 15, 7 ],
         evolution: 287,
         evolvers: [ 115, 116, 92 ],
         global: true
@@ -1048,7 +1048,7 @@ window.details = {
     161: { // Shooter Group Crew Black Pirates
         special: "Deals 5x character's ATK in character's type damage to all enemies",
         specialName: "Hyper Shot",
-        cooldown: 15,
+        cooldown: 35,
         evolution: 288,
         evolvers: [ 115, 116, 93 ],
         global: true
@@ -1064,43 +1064,43 @@ window.details = {
     163: { // Bodyguard, ‘Sunglasses'
         special: "Changes [DEX] orbs into [TND] orbs",
         specialName: "[DEX] Slot Change [TND]",
-        cooldown: 15,
+        cooldown: [ 15, 7 ],
         global: true
     },
     164: { // Bearded Bodyguard
         special: "Changes [QCK] orbs into [TND] orbs",
         specialName: "[QCK] Slot Change [TND]",
-        cooldown: 15,
+        cooldown: [ 15, 7 ],
         global: true
     },
     165: { // Knuckle Punk Black Cat Pirates
         special: "Recovers 5x character's RCV in HP",
         specialName: "Light Healing",
-        cooldown: 12,
+        cooldown: [ 12, 8 ],
         global: true
     },
     166: { // Saber Punk Black Cat Pirates
         special: "Recovers 5x character's RCV in HP",
         specialName: "Light Healing",
-        cooldown: 12,
+        cooldown: [ 12, 8 ],
         global: true
     },
     167: { // Halberd Punk Black Cat Pirates
         special: "Recovers 5x character's RCV in HP",
         specialName: "Light Healing",
-        cooldown: 12,
+        cooldown: [ 12, 8 ],
         global: true
     },
     168: { // Pistol Punk Black Cat Pirates
         special: "Recovers 5x character's RCV in HP",
         specialName: "Light Healing",
-        cooldown: 12,
+        cooldown: [ 12, 8 ],
         global: true
     },
     169: { // Cannoneer Punk Black Cat Pirates
         special: "Recovers 5x character's RCV in HP",
         specialName: "Light Healing",
-        cooldown: 12,
+        cooldown: [ 12, 8 ],
         global: true
     },
     170: { // Fighter Group Leader
@@ -1112,25 +1112,25 @@ window.details = {
     171: { // Slasher Group Leader
         special: "Reduces damage received by 20% for 1 turn",
         specialName: "Iron Shield",
-        cooldown: 25,
+        cooldown: [ 25, 10 ],
         global: true
     },
     172: { // Striker Group Leader
         special: "Reduces damage received by 20% for 1 turn",
         specialName: "Iron Shield",
-        cooldown: 25,
+        cooldown: [ 25, 10 ],
         global: true
     },
     173: { // Shooter Group Leader
         special: "Reduces damage received by 20% for 1 turn",
         specialName: "Iron Shield",
-        cooldown: 25,
+        cooldown: [ 25, 10 ],
         global: true
     },
     174: { // Assassin Master
         special: "Reduces damage received by 20% for 1 turn",
         specialName: "Iron Shield",
-        cooldown: 25,
+        cooldown: [ 25, 10 ],
         global: true
     },
     175: { // Karate Fishman Arlong crewmember
@@ -1160,7 +1160,7 @@ window.details = {
     179: { // Knuckle Apprentice Navy
         special: "Changes [QCK] orbs into [STR] orbs",
         specialName: "[QCK] Slot Change [STR]",
-        cooldown: [ 13, 7 ],
+        cooldown: [ 15, 7 ],
         evolution: 184,
         evolvers: [ 78 ],
         global: true
@@ -1176,7 +1176,7 @@ window.details = {
     181: { // Halberd Apprentice Navy
         special: "Changes [STR] orbs into [QCK] orbs",
         specialName: "[STR] Slot Change [QCK]",
-        cooldown: [ 13, 7 ],
+        cooldown: [ 15, 7 ],
         evolution: 186,
         evolvers: [ 79 ],
         global: true
@@ -1192,7 +1192,7 @@ window.details = {
     183: { // Cannoneer Apprentice Navy
         special: "Changes [RCV] orbs into [INT] orbs",
         specialName: "[RCV] Slot Change [INT]",
-        cooldown: [ 13, 7 ],
+        cooldown: [ 15, 7 ],
         evolution: 188,
         evolvers: [ 115, 82 ],
         global: true
@@ -1216,7 +1216,7 @@ window.details = {
     186: { // Halberd Seaman Navy
         special: "Changes [STR] orbs into [QCK] orbs",
         specialName: "[STR] Slot Change [QCK]",
-        cooldown: [ 13, 7 ],
+        cooldown: [ 15, 7 ],
         evolution: 196,
         evolvers: [ 116, 79, 85 ],
         global: true
@@ -1232,7 +1232,7 @@ window.details = {
     188: { // Cannoneer Seaman Navy
         special: "Changes [RCV] orbs into [INT] orbs",
         specialName: "[RCV] Slot Change [INT]",
-        cooldown: [ 13, 7 ],
+        cooldown: [ 15, 7 ],
         evolution: 198,
         evolvers: [ 116, 117, 82, 88 ],
         global: true
@@ -1270,7 +1270,7 @@ window.details = {
         special: "Changes [STR] orbs into [QCK] orbs",
         specialName: "[STR] Slot Change [QCK]",
         captain: "Boosts ATK of QCK characters by 1.5x",
-        cooldown: [ 13, 7 ],
+        cooldown: [ 15, 7 ],
         global: true
     },
     197: { // Pistol Ensign Navy HQ
@@ -1284,7 +1284,7 @@ window.details = {
         special: "Changes [RCV] orbs into [INT] orbs",
         specialName: "[RCV] Slot Change [INT]",
         captain: "Boosts ATK of Shooter characters by 1.5x",
-        cooldown: [ 13, 7 ],
+        cooldown: [ 15, 7 ],
         global: true
     },
     199: { // Mr. 5 Nez-Palm Cannon
@@ -1789,7 +1789,7 @@ window.details = {
         special: "Reduces the defense of all enemies by 50% for 1 turn",
         specialName: "Shield Crusher",
         captain: "Boosts ATK by 1.5x",
-        cooldown: 15,
+        cooldown: [ 15, 7 ],
         global: true
     },
     268: { // White Chase Smoker
@@ -1802,13 +1802,13 @@ window.details = {
     269: { // Armed Fighter Unit Red Pirates
         special: "Deals 10x character's ATK in character's type damage to one enemy",
         specialName: "Hyper Straight",
-        cooldown: 40,
+        cooldown: [ 40, 15 ],
         global: true
     },
     270: { // Armed Fighter Unit Blue Pirates
         special: "Reduces damage received by 20% for 1 turn",
         specialName: "Iron Shield",
-        cooldown: 25,
+        cooldown: [ 25, 10 ],
         global: true
     },
     271: { // Armed Fighter Unit Green Pirates
@@ -1820,7 +1820,7 @@ window.details = {
     272: { // Armed Fighter Unit Yellow Pirates
         special: "Reduces damage received by 20% for 1 turn",
         specialName: "Iron Shield",
-        cooldown: 25,
+        cooldown: [ 25, 10 ],
         global: true
     },
     273: { // Armed Fighter Unit Black Pirates
@@ -1838,7 +1838,7 @@ window.details = {
     275: { // Armed Slasher Unit Blue Pirates
         special: "Reduces the defense of all enemies by 50% for 1 turn",
         specialName: "Shield Crusher",
-        cooldown: 15,
+        cooldown: [ 15, 7 ],
         global: true
     },
     276: { // Armed Slasher Unit Green Pirates
@@ -1904,19 +1904,19 @@ window.details = {
     286: { // Armed Shooter Unit Green Pirates
         special: "Changes [DEX] orbs into [RCV] orbs",
         specialName: "[DEX] Slot Change [RCV]",
-        cooldown: 13,
+        cooldown: [ 15, 7 ],
         global: true
     },
     287: { // Armed Shooter Unit Yellow Pirates
         special: "Changes [PSY] orbs into [RCV] orbs",
         specialName: "[PSY] Slot Change [RCV]",
-        cooldown: 13,
+        cooldown: [ 15, 7 ],
         global: true
     },
     288: { // Armed Shooter Unit Black Pirates
         special: "Deals 5x character's ATK in character's type damage to all enemies",
         specialName: "Hyper Shot",
-        cooldown: 15,
+        cooldown: 35,
         global: true
     },
     289: { // Skilled Gunner
@@ -1950,7 +1950,7 @@ window.details = {
         special: "Reduces damage received by 20% for 1 turn",
         specialName: "Iron Shield",
         captain: "Boosts HP of QCK characters by 2x",
-        cooldown: [ 15, 10 ],
+        cooldown: [ 25, 10 ],
         global: true
     },
     294: { // Rex
@@ -1964,7 +1964,7 @@ window.details = {
         special: "Reduces the defense of all enemies by 50% for 1 turn",
         specialName: "Shield Crusher",
         captain: "Boosts HP of DEX characters by 2x",
-        cooldown: [ 15, 10 ],
+        cooldown: [ 15, 7 ],
         global: true
     },
     296: { // Tsuru
@@ -2560,13 +2560,13 @@ window.details = {
     381: { // Banana Gator
         special: "Reduces damage received by 20% for 1 turn",
         specialName: "Iron Shield",
-        cooldown: [ 25, 8 ],
+        cooldown: [ 25, 10 ],
         global: true
     },
     382: { // Sandora Dragon
         special: "Reduces the defense of all enemies by 50% for 1 turn",
         specialName: "Shield Crusher",
-        cooldown: [ 15, 10 ],
+        cooldown: [ 15, 7 ],
         global: true
     },
     383: { // Mr. 0 Baroque Works CEO (Crocodile)
@@ -3238,7 +3238,7 @@ window.details = {
         special: "Changes [PSY] orbs into [QCK] orbs",
         specialName: "[PSY] Slot Change [QCK]",
         captain: "Boosts ATK and RCV of QCK characters by 1.2x",
-        cooldown: [ 15, 7 ]
+        cooldown: [ 15, 7 ],
     },
     484: { // Green Elite Assault Squad Skypiea God's Army
         special: "Changes [INT] orbs into [DEX] orbs",
@@ -3519,7 +3519,7 @@ window.details = {
         specialNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the lower the HP is. The multiplier is calculated as: 100 * ( 1 - (remaining HP) / (total HP) )",
         specialName: "Diable Jambe - Venaison Shot",
         captain: "Reduces damage received by 80% if HP is above 99% at the start of the turn",
-        cooldown: [ 25, 17 ]
+        cooldown: [ 23, 17 ]
     },
     523: { // Nami, Merveille's Adventurer (Strong World/SW)
         special: "Randomizes all orbs, prevents death as long as HP is above 50% for 1 turn",
@@ -4084,12 +4084,12 @@ window.details = {
     610: { // Hiking Bear
         special: "Changes [TND] orbs into [RCV] orbs",
         specialName: "[TND] Slot Change [RCV]",
-        cooldown: 15
+        cooldown: [ 15, 7 ],
     },
     611: { // Pudding Pudding
         special: "Changes neighboring slots' orbs into [RCV] orbs",
         specialName: "[RCV] Slot Storm",
-        cooldown: 18
+        cooldown: [ 18, 8 ]
     },
     612: { // Brook, Record of the Voyage - Strawhat Crew (Log Brook)
         special: "Boosts ATK and RCV by 45 units for 1 turn, reduces damage received by 45% for 1 turn",
@@ -4269,7 +4269,7 @@ window.details = {
         specialNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the lower the HP is. The multiplier is calculated as: 50 * ( 1 - (remaining HP) / (total HP) )",
         specialName: "Pirate Brothers - Twin Combo Attack",
         captain: "Boosts ATK of Fighter characters by 2.25x, deals 2x character's ATK in DEX damage to all enemies at the end of the turn",
-        cooldown: 23
+        cooldown: [ 23, 17 ],
     },
     642: { // Squard
         special: "Reduces current HP by 30%, deals 10x character's ATK in PSY damage to one enemy, amplifies orb effects by 1.75x for 1 turn",
@@ -4625,19 +4625,21 @@ window.details = {
     691: { // Halberd Corporal Navy Headquarters
         special: "Changes [PSY] orbs into [DEX] orbs",
         specialName: "[PSY] Slot Change [DEX]",
+        cooldown: [ 15, 7],
         evolution: 696,
         evolvers: [ 116, 97, 302 ]
     },
     692: { // Pistol Corporal Navy Headquarters
         special: "Changes [PSY] orbs into [QCK] orbs",
         specialName: "[PSY] Slot Change [QCK]",
-        cooldown: 15,
+        cooldown: [ 15, 7 ],
         evolution: 697,
         evolvers: [ 116, 96, 301 ]
     },
     693: { // Saber Corporal Navy Headquarters
         special: "Changes [DEX] orbs into [PSY] orbs",
         specialName: "[DEX] Slot Change [PSY]",
+        cooldown: [ 15, 7],
         evolution: 698,
         evolvers: [ 116, 98, 303 ]
     },
@@ -4658,18 +4660,20 @@ window.details = {
     696: { // Halberd Major Navy Headquarters
         special: "Changes [PSY] orbs into [DEX] orbs",
         specialName: "[PSY] Slot Change [DEX]",
-        captain: "Boosts ATK of Striker characters by 1.75x"
+        captain: "Boosts ATK of Striker characters by 1.75x",
+        cooldown: [ 15, 7]
     },
     697: { // Pistol Major Navy Headquarters
         special: "Changes [PSY] orbs into [QCK] orbs",
         specialName: "[PSY] Slot Change [QCK]",
         captain: "Boosts ATK of Shooter characters by 1.75x",
-        cooldown: 15
+        cooldown: [ 15, 7 ]
     },
     698: { // Saber Major Navy Headquarters
         special: "Changes [DEX] orbs into [PSY] orbs",
         specialName: "[DEX] Slot Change [PSY]",
-        captain: "Boosts ATK of Slasher characters by 1.75x"
+        captain: "Boosts ATK of Slasher characters by 1.75x",
+        cooldown: [ 15, 7]
     },
     699: { // Bazooka Major Navy Headquarters
         special: "Deals 13x character's ATK in character's type damage to all enemies",
@@ -4808,6 +4812,7 @@ window.details = {
         specialName: "Sables: Pesado",
         captain: "Boosts ATK of Knowledge characters proportionally to the current HP",
         captainNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the lower the HP is. The multiplier is calculated as 1.5 + 1.75 * (1 - (remaining HP) / (total HP)). With 1 HP left, the boost is equal to 3.25x",
+        cooldown: 21
     },
     720: {
         special: "Boosts ATK of Knowledge characters by a variable factor for 1 turn, deals large DEX damage to all enemies",
@@ -4815,5 +4820,6 @@ window.details = {
         specialName: "Sables: Pesado",
         captain: "Boosts ATK of Knowledge characters proportionally to the current HP",
         captainNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the lower the HP is. The multiplier is calculated as 1.5 + 1.75 * (1 - (remaining HP) / (total HP)). With 1 HP left, the boost is equal to 3.25x",
+        cooldown: 21
     }
 };
