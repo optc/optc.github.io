@@ -273,7 +273,7 @@ directives.hpBar = function() {
         replace: true,
         template: '<div id="hp"><div id="hpSlider"></div>' + 
             '<div id="hp-rcv"><table><tbody>' +
-                '<tr><td>{{ hp.current | number }}</td><td>HP ({{ hp.perc || number }}%)</td></tr>' +
+                '<tr><td>{{ hp.current | number }}</td><td>HP ({{ hp.perc | number }}%)</td></tr>' +
                 '<tr><td>{{ numbers.rcv | number }}</td><td>RCV</td></tr>' +
                 '<tr title="Minimum pirate level: {{ numbers.cost.level }}"><td>{{ numbers.cost.cost | number }}</td><td>cost</td></tr>' +
             '</tbody></table></div>',
@@ -285,7 +285,7 @@ directives.hpBar = function() {
                 connect: 'lower'
             });
             var update = function(event,value) {
-                scope.hp.current = Math.floor(value);
+                scope.hp.current = Math.max(1, Math.floor(value));
                 scope.hp.perc = Math.round(scope.hp.current / scope.numbers.hp * 10000) / 100;
                 currentHP = scope.hp.current;
                 if (event === null) slider.val(value);
@@ -597,6 +597,7 @@ directives.linkButton = function() {
         restrict: 'E',
         replace: true,
         templateUrl: '../common/links.html',
+        scope: { exclude: '@' },
         link: function(scope, element, attrs) {
             element.find(".trigger").click(function() {
                 $(".menu").toggleClass("active"); 

@@ -146,17 +146,11 @@
 }
 
 #link-damage > .btn { background: skyblue; }
-#link-damage > .tip { color: skyblue; }
-
-
 #link-characters > .btn { background: lightgreen; }
-#link-characters > .tip { color: lightgreen; }
-
 #link-drops > .btn { background: lightsalmon; }
-#link-drops > .tip { color: lightsalmon; }
-
 #link-report > .btn { background: orchid; }
-#link-report > .tip { color: orchid; }
+
+.tip { color: black; }
 
 #links-button:not(.active) .tip,
 .rotater:not(:hover) .tip {

@@ -4820,6 +4820,5 @@ window.details = {
         specialName: "Sables: Pesado",
         captain: "Boosts ATK of Knowledge characters proportionally to the current HP",
         captainNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the lower the HP is. The multiplier is calculated as 1.5 + 1.75 * (1 - (remaining HP) / (total HP)). With 1 HP left, the boost is equal to 3.25x",
-        cooldown: 21
     }
 };
