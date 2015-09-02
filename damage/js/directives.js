@@ -51,7 +51,7 @@ directives.expandableDamage = function() {
             scope.detailsVisible = false;
             var timeout = null;
             element.click(function(e) {
-                if (e.which != 1 || e.ctrlKey) return;
+                if (e.which != 1 || e.ctrlKey || e.metaKey) return;
                 element.toggleClass('details');
                 if (timeout) clearTimeout(timeout);
                 if (element.hasClass('details')) {
@@ -90,7 +90,7 @@ directives.detailPane = function($timeout) {
                     return false;
                 },
                 function(e) {
-                    if (e.which != 2 && (e.which != 1 || !e.ctrlKey)) return;
+                    if (e.which != 2 && (e.which != 1 || (!e.ctrlKey && !e.metaKey))) return;
                     modifyDamage(e);
                 }
             );
@@ -105,7 +105,7 @@ directives.attachPicker = function() {
         controller: function($scope, $state) { $scope.$state = $state; },
         link: function(scope, element, attrs) {
             element.longpress(function() { },function(e) {
-                if (e.which != 1 || e.ctrlKey || e.altKey || e.shiftKey) return;
+                if (e.which != 1 || e.ctrlKey || e.metaKey || e.altKey || e.shiftKey) return;
                 if ($(this).hasClass('slide') || $(this).hasClass('dragging')) return;
                 if (!$(this).hasClass('empty') && Utils.isClickOnOrb(e,$(this).find('.unitContainer')[0])) return;
                 scope.$state.go('.pick',{ slot: scope.slot });
@@ -122,7 +122,7 @@ directives.defenseOnClick = function() {
             element.longpress(
                 function(e) { scope.go('.defense'); },
                 function(e) {
-                    if (e.which == 2 || (e.which == 1 && e.ctrlKey))
+                    if (e.which == 2 || (e.which == 1 && (e.ctrlKey || e.metaKey)))
                         scope.go('.defense');
                     else if (e.which == 1)
                         element.find('input').focus();
@@ -144,7 +144,7 @@ directives.shipManager = function() {
             element.longpress(
                 function(e) { scope.go('.ship'); },
                 function(e) {
-                    if (e.which == 2 || (e.which == 1 && e.ctrlKey))
+                    if (e.which == 2 || (e.which == 1 && (e.ctrlKey || e.metaKey)))
                         scope.go('.ship');
                 }
             );
@@ -173,7 +173,7 @@ directives.shipManager = function() {
                 updateBackground(e.clientX / 230);
             };
             element.mousedown(function(e) {
-                if (e.which != 1 || e.ctrlKey) return;
+                if (e.which != 1 || e.ctrlKey || e.metaKey) return;
                 var level = Math.max(1,Math.round(e.clientX / 230 * 10));
                 $(document).mouseup(mouseup);
                 $(document).mousemove(mousemove);
@@ -313,10 +313,10 @@ directives.levelLabel = function($timeout) {
             var input = element.find('input');
             element.longpress(function() { },function(e) {
                 scope.level = '';
-                if (e.which <= 1 && !e.ctrlKey) {
+                if (e.which <= 1 && (!e.ctrlKey && !e.metaKey)) {
                     if (scope.options.slidersEnabled) $('.unit').eq(scope.slot).addClass('slide');
                     else scope.editorVisible = true;
-                } else if (e.which == 2 || (e.which == 1 && e.ctrlKey))
+                } else if (e.which == 2 || (e.which == 1 && (e.ctrlKey || e.metaKey)))
                     scope.data.team[scope.slot].level = scope.data.team[scope.slot].unit.maxLevel;
                 scope.$apply();
                 if (scope.editorVisible)
@@ -403,7 +403,7 @@ directives.unitOrb = function() {
                 var unit = scope.data.team[scope.slot], tunit = scope.tdata.team[scope.slot];
                 if (!$(e.target).hasClass('unitPortrait')) return;
                 if (unit.unit === null || e.target.className == 'unitLevel' || e.altKey || e.shiftKey) return;
-                if (e.which == 2 || (e.which == 1 && (e.ctrlKey || Utils.isClickOnOrb(e,e.target.parentNode)))) {
+                if (e.which == 2 || (e.which == 1 && (e.ctrlKey || e.metaKey || Utils.isClickOnOrb(e,e.target.parentNode)))) {
                     tunit.orb = (tunit.orb == 1 ? 2 : tunit.orb == 2 ? 0.5 : 1);
                     scope.glow();
                     scope.$apply();
