@@ -768,8 +768,8 @@ window.details = {
     126: { // Slasher Group Cabin Boy Red Pirates
         special: "Deals 10x character's ATK in character's type damage to one enemy",
         specialName: "Hyper Slash",
-        evolution: 147,
         cooldown: 40,
+        evolution: 147,
         evolvers: [ 89 ],
         global: true
     },
@@ -896,8 +896,8 @@ window.details = {
     142: { // Fighter Group Crew Red Pirates
         special: "Deals 10x character's ATK in character's type damage to one enemy",
         specialName: "Hyper Straight",
-        evolution: 269,
         cooldown: [ 40, 15 ],
+        evolution: 269,
         evolvers: [ 115, 116, 89 ],
         global: true
     },
@@ -2589,7 +2589,7 @@ window.details = {
     },
     385: { // Hogback
         special: "Reduces damage received by 50% for 1 turn, boosts ATK of Fighter characters by 1.25x for 1 turn",
-        specialName: "Mad Mario Surgery",
+        specialName: "Zombie Marionette Operation",
         captain: "Boosts ATK of INT characters by 2x",
         cooldown: [ 20, 10 ],
         evolution: 386,
@@ -2597,13 +2597,13 @@ window.details = {
     },
     386: { // Doctor Hogback
         special: "Reduces damage received by 50% for 1 turn, boosts ATK of Fighter characters by 1.25x for 1 turn",
-        specialName: "Mad Mario Surgery",
+        specialName: "Zombie Marionette Operation",
         captain: "Boosts ATK of INT characters by 2x",
         cooldown: [ 20, 10 ]
     },
     387: { // Cindry-chan
         special: "Changes all orbs into either [PSY] or [INT] orbs, deals random PSY damage to all enemies",
-        specialName: "Square Dishes Swords",
+        specialName: "Square Plate Sword",
         captain: "Boosts RCV of PSY characters by 1.5x",
         cooldown: [ 25, 18 ],
         evolution: 388,
@@ -2611,7 +2611,7 @@ window.details = {
     },
     388: { // Victoria Cindry
         special: "Changes all orbs into either [PSY] or [INT] orbs, deals random PSY damage to all enemies",
-        specialName: "Square Dishes Swords",
+        specialName: "Square Plate Sword",
         captain: "Boosts RCV of PSY characters by 1.5x",
         cooldown: [ 25, 18 ]
     },
@@ -3238,7 +3238,7 @@ window.details = {
         special: "Changes [PSY] orbs into [QCK] orbs",
         specialName: "[PSY] Slot Change [QCK]",
         captain: "Boosts ATK and RCV of QCK characters by 1.2x",
-        cooldown: [ 15, 7 ],
+        cooldown: [ 15, 7 ]
     },
     484: { // Green Elite Assault Squad Skypiea God's Army
         special: "Changes [INT] orbs into [DEX] orbs",
@@ -3685,7 +3685,7 @@ window.details = {
         special: "Deals 6,000 damage to all enemies, boosts ATK of PSY characters by 1.5x for 1 turn",
         specialName: "60 Million Volt Thunder Dragon",
         captain: "Boosts ATK of PSY characters by 2x, reduces damage received by 20%",
-        cooldown: [ 20, 15 ],
+        cooldown: [ 20, 15 ]
     },
     547: { // Monkey D. Luffy Mt. Corvo's Brothers 3
         special: "Reduces current HP by 10%, deals 1x character's ATK in STR damage to one enemy, prevents death as long as HP is above 50% for 1 turn",
@@ -4084,7 +4084,7 @@ window.details = {
     610: { // Hiking Bear
         special: "Changes [TND] orbs into [RCV] orbs",
         specialName: "[TND] Slot Change [RCV]",
-        cooldown: [ 15, 7 ],
+        cooldown: [ 15, 7 ]
     },
     611: { // Pudding Pudding
         special: "Changes neighboring slots' orbs into [RCV] orbs",
@@ -4269,7 +4269,7 @@ window.details = {
         specialNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the lower the HP is. The multiplier is calculated as: 50 * ( 1 - (remaining HP) / (total HP) )",
         specialName: "Pirate Brothers - Twin Combo Attack",
         captain: "Boosts ATK of Fighter characters by 2.25x, deals 2x character's ATK in DEX damage to all enemies at the end of the turn",
-        cooldown: [ 23, 17 ],
+        cooldown: [ 23, 17 ]
     },
     642: { // Squard
         special: "Reduces current HP by 30%, deals 10x character's ATK in PSY damage to one enemy, amplifies orb effects by 1.75x for 1 turn",
@@ -4439,7 +4439,7 @@ window.details = {
         captain: "Recovers 3x character's RCV in HP at the end of the turn",
         cooldown: [ 25, 16 ]
     },
-    665: { // Kohza, Alabasta Citizen
+    665: { // Koza, Alabasta Citizen
         special: "Changes own orb into [QCK], boosts ATK against enemies with reduced defense by 1.3x for 2 turns",
         specialName: "Let's Go! Suna Suna Clan!!",
         captain: "Boosts ATK by 1.2x, reduces HP and RCV by 80%",
@@ -4447,7 +4447,7 @@ window.details = {
         evolution: 666,
         evolvers: [ 117, 79, 85, 96, 101 ]
     },
-    666: { // Kohza, Leader of the Suna Suna Clan
+    666: { // Koza, Leader of the Suna Suna Clan
         special: "Changes own orb into [QCK], boosts ATK against enemies with reduced defense by 1.3x for 2 turns",
         specialName: "Let's Go! Suna Suna Clan!!",
         captain: "Boosts ATK by 1.75x, reduces HP and RCV by 80%",
@@ -4625,7 +4625,7 @@ window.details = {
     691: { // Halberd Corporal Navy Headquarters
         special: "Changes [PSY] orbs into [DEX] orbs",
         specialName: "[PSY] Slot Change [DEX]",
-        cooldown: [ 15, 7],
+        cooldown: [ 15, 7 ],
         evolution: 696,
         evolvers: [ 116, 97, 302 ]
     },
@@ -4639,7 +4639,7 @@ window.details = {
     693: { // Saber Corporal Navy Headquarters
         special: "Changes [DEX] orbs into [PSY] orbs",
         specialName: "[DEX] Slot Change [PSY]",
-        cooldown: [ 15, 7],
+        cooldown: [ 15, 7 ],
         evolution: 698,
         evolvers: [ 116, 98, 303 ]
     },
@@ -4661,7 +4661,7 @@ window.details = {
         special: "Changes [PSY] orbs into [DEX] orbs",
         specialName: "[PSY] Slot Change [DEX]",
         captain: "Boosts ATK of Striker characters by 1.75x",
-        cooldown: [ 15, 7]
+        cooldown: [ 15, 7 ]
     },
     697: { // Pistol Major Navy Headquarters
         special: "Changes [PSY] orbs into [QCK] orbs",
@@ -4673,19 +4673,19 @@ window.details = {
         special: "Changes [DEX] orbs into [PSY] orbs",
         specialName: "[DEX] Slot Change [PSY]",
         captain: "Boosts ATK of Slasher characters by 1.75x",
-        cooldown: [ 15, 7]
+        cooldown: [ 15, 7 ]
     },
     699: { // Bazooka Major Navy Headquarters
         special: "Deals 13x character's ATK in character's type damage to all enemies",
         specialName: "Hyper Burst",
-        cooldown: [ 35, 18 ],
-        captain: "Boosts ATK of Shooter characters by 500 units, reduces damage received by 10%"
+        captain: "Boosts ATK of Shooter characters by 500 units, reduces damage received by 10%",
+        cooldown: [ 35, 18 ]
     },
     700: { // Knuckle Major Navy Headquarters
         special: "Cuts all enemies' current HP by 5%",
         specialName: "Light Break",
-        cooldown: 25,
-        captain: "Boosts ATK of Fighter characters by 1.75x"
+        captain: "Boosts ATK of Fighter characters by 1.75x",
+        cooldown: 25
     },
     701: { // Oimo
         special: "Deals 15x character's ATK in PSY damage to all enemies, changes own orb into [PSY]",
@@ -4790,7 +4790,7 @@ window.details = {
         captain: "Boosts RCV by 5x if HP is low",
         cooldown: [ 27, 14 ]
     },
-    717: {
+    717: { // Dracule Mihawk Warlord of the Sea
         special: "Deals 50% of the damage dealt in the previous turn as typeless damage to all enemes",
         specialNotes: "The special only includes the damage inflicted through normal attacks.",
         specialName: "Black Sword - Lightning Slash",
@@ -4798,7 +4798,7 @@ window.details = {
         captainNotes: "A hit below Good will boost the ATK of the next unit by 2x, a Good hit by 2.25x, a Great hit by 2.5x and a Perfect hit by 2.75x. This bonus is applied only to Slasher characters. The first unit in the chain will not be boosted.",
         cooldown: 25
     },
-    718: {
+    718: { // Dracule Mihawk, World's Strongest Swordsman
         special: "Deals 50% of the damage dealt in the previous turn as typeless damage to all enemes",
         specialNotes: "The special only includes the damage inflicted through normal attacks.",
         specialName: "Black Sword - Lightning Slash",
@@ -4806,7 +4806,7 @@ window.details = {
         captainNotes: "A hit below Good will boost the ATK of the next unit by 2x, a Good hit by 2.25x, a Great hit by 2.5x and a Perfect hit by 2.75x. This bonus is applied only to Slasher characters. The first unit in the chain will not be boosted.",
         cooldown: 25
     },
-    719: {
+    719: { // Sir Crocodile Logia Warlord of the Sea
         special: "Boosts ATK of Knowledge characters by a variable factor for 1 turn, deals large DEX damage to all enemies",
         specialNotes: "The exact multiplier used is chosen based on the crew's current HP at the time the special is activated: above 30% HP, the multiplier used is 1.5x; below 30% HP, it's 2x.",
         specialName: "Sables: Pesado",
@@ -4814,11 +4814,11 @@ window.details = {
         captainNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the lower the HP is. The multiplier is calculated as 1.5 + 1.75 * (1 - (remaining HP) / (total HP)). With 1 HP left, the boost is equal to 3.25x",
         cooldown: 21
     },
-    720: {
+    720: { // Sir Crocodile Logia Former Warlord of the Sea
         special: "Boosts ATK of Knowledge characters by a variable factor for 1 turn, deals large DEX damage to all enemies",
         specialNotes: "The exact multiplier used is chosen based on the crew's current HP at the time the special is activated: above 30% HP, the multiplier used is 1.5x; below 30% HP, it's 2x.",
         specialName: "Sables: Pesado",
         captain: "Boosts ATK of Knowledge characters proportionally to the current HP",
-        captainNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the lower the HP is. The multiplier is calculated as 1.5 + 1.75 * (1 - (remaining HP) / (total HP)). With 1 HP left, the boost is equal to 3.25x",
+        captainNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the lower the HP is. The multiplier is calculated as 1.5 + 1.75 * (1 - (remaining HP) / (total HP)). With 1 HP left, the boost is equal to 3.25x"
     }
 };
