@@ -124,6 +124,8 @@ body, html {
     position: absolute;
     top: 0px;
     left: 0px;
+    background-repeat: no-repeat;
+    background-size: 112px 112px;
 }
 
 .unitLevel {

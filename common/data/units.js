@@ -385,7 +385,7 @@ window.units = [
     [ "Sir Crocodile", "INT", [ "Striker", "Knowledge" ], 4, 18, 4, 3, 99, 3000000, 995, 582, 112, 2210, 1220, 208, 1.5 ],
     [ "Hogback", "INT", [ "Fighter", "Knowledge" ], 3, 12, 6, 1, 50, 392109, 210, 72, 33, 1251, 595, 118, 1 ],
     [ "Doctor Hogback", "INT", [ "Fighter", "Knowledge" ], 4, 20, 4, 2, 99, 3000000, 1180, 550, 72, 2741, 945, 189, 1 ],
-    [ "Cindry-chan", "PSY", "Shooter", 3, 12, 5, 1, 50, 392109, 76, 58, 60, 806, 458, 259, 0.7 ],
+    [ "Cindry", "PSY", "Shooter", 3, 12, 5, 1, 50, 392109, 76, 58, 60, 806, 458, 259, 0.7 ],
     [ "Victoria Cindry", "PSY", "Shooter", 4, 20, 4, 2, 99, 3000000, 622, 398, 231, 1402, 661, 478, 0.7 ],
     [ "Emporio Ivankov", "QCK", [ "Fighter", "Freedom" ], 4, 30, 4, 3, 70, 1066998, 302, 125, 53, 1682, 512, 161, 1 ],
     [ "Emporio Ivankov, Queen of Kamabakka Kingdom", "QCK", [ "Fighter", "Freedom" ], 5, 50, 4, 4, 99, 5000000, 1642, 470, 132, 3030, 1155, 290, 1 ],
@@ -715,8 +715,8 @@ window.units = [
     [ "Pierre", "DEX", "Fighter", 3, 12, 4, 1, 50, 392109, 69, 32, 38, 920, 480, 182, 1 ],
     [ "Konis", "PSY", "Freedom", 3, 9, 5, 2, 35, 136167, 58, 10, 32, 503, 190, 232, 1 ],
     [ "Konis, Skypiean Maiden", "PSY", "Freedom", 4, 15, 4, 3, 70, 1066998, 458, 145, 196, 912, 388, 387, 1 ],
-    [ "Dracule Mihawk Warlord of the Sea", "INT", "Slasher", 5, 30, 4, 4, 70, null, 641, 335, 10, null, null, null, 0 ],
-    [ "Dracule Mihawk, World's Strongest Swordsman", "INT", "Slasher", 6, 55, 5, 4, 99, null, 1857, 799, 31, 3900, 1490, 120, 0 ],
-    [ "Sir Crocodile Logia Warlord of the Sea", "DEX", [ "Knowledge", "Striker" ], 5, 30, 4, 4, 70, null, 517, 300, 105, null, null, null, 0 ],
-    [ "Sir Crocodile Logia Former Warlord of the Sea", "DEX", [ "Knowledge", "Striker" ], 6, 55, 4, 4, 99, null, 724, 765, 174, 3621, 1434, 310, 0 ]
+    [ "Dracule Mihawk Warlord of the Sea", "INT", "Slasher", 5, 30, 4, 4, 70, null, 623, 328, 10, 1920, 850, 57, 1.5 ],
+    [ "Dracule Mihawk, World's Strongest Swordsman", "INT", "Slasher", 6, 55, 5, 4, 99, null, 1857, 799, 31, 3900, 1490, 120, 1.5 ],
+    [ "Sir Crocodile Logia Warlord of the Sea", "DEX", [ "Knowledge", "Striker" ], 5, 30, 4, 4, 70, null, 500, 293, 104, 1782, 832, 226, 1.5 ],
+    [ "Sir Crocodile Logia Former Warlord of the Sea", "DEX", [ "Knowledge", "Striker" ], 6, 55, 4, 4, 99, null, 724, 765, 174, 3621, 1434, 310, 1.5 ]
 ];
