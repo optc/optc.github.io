@@ -4795,7 +4795,7 @@ window.details = {
         specialNotes: "The special only includes the damage inflicted through normal attacks.",
         specialName: "Black Sword - Lightning Slash",
         captain: "Boosts ATK of Slasher characters by a variable factor between 2x and 2.75x based on the timing of the attack of the previous unit in the chain",
-        captainNotes: "A hit below Good will boost the ATK of the next unit by 2x, a Good hit by 2.25x, a Great hit by 2.5x and a Perfect hit by 2.75x. This bonus is applied only to Slasher characters. The first unit in the chain will not be boosted.",
+        captainNotes: "A hit below Good or a Miss will boost the ATK of the next unit by 2x, a Good hit by 2.25x, a Great hit by 2.5x and a Perfect hit by 2.75x. This bonus is applied only to Slasher characters. The first unit in the chain will not be boosted.",
         cooldown: 25
     },
     718: { // Dracule Mihawk, World's Strongest Swordsman
@@ -4803,7 +4803,7 @@ window.details = {
         specialNotes: "The special only includes the damage inflicted through normal attacks.",
         specialName: "Black Sword - Lightning Slash",
         captain: "Boosts ATK of Slasher characters by a variable factor between 2x and 2.75x based on the timing of the attack of the previous unit in the chain",
-        captainNotes: "A hit below Good will boost the ATK of the next unit by 2x, a Good hit by 2.25x, a Great hit by 2.5x and a Perfect hit by 2.75x. This bonus is applied only to Slasher characters. The first unit in the chain will not be boosted.",
+        captainNotes: "A hit below Good or a Miss will boost the ATK of the next unit by 2x, a Good hit by 2.25x, a Great hit by 2.5x and a Perfect hit by 2.75x. This bonus is applied only to Slasher characters. The first unit in the chain will not be boosted.",
         cooldown: 25
     },
     719: { // Sir Crocodile Logia Warlord of the Sea

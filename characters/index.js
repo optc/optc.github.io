@@ -13,6 +13,10 @@ Utils.parseUnits(false);
 var fuse = new Fuse(window.units, { keys: [ 'name' ], id: 'number' });
 var fuzzy = JSON.parse(localStorage.getItem('fuzzy')) || false;
 
+var box = JSON.parse(localStorage.getItem('characterBox')) || [ ];
+var characterBox = { };
+for (var i=0;i<box.length;++i) characterBox[box[i]] = true;
+
 /*********************
  * Utility functions *
  *********************/
@@ -235,6 +239,9 @@ $.fn.dataTable.ext.search.push(function(settings, data, index) {
         var target = window.details[id][filters.custom[i].target];
         if (!target || !filters.custom[i].matcher.test(target)) return false;
     }
+    // filter by character box
+    if (filters.noBox && characterBox.hasOwnProperty(id)) return false;
+    if (filters.noMissing && !characterBox.hasOwnProperty(id)) return false;
     // filter by orb controllers
     if (regexes.ctrlFrom && !regexes.ctrlFrom.test(window.details[id].special)) return false;
     if (regexes.ctrlTo && !regexes.ctrlTo.test(window.details[id].special)) return false;
@@ -275,7 +282,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
  * Controllers *
  ***************/
 
-app.controller('MainCtrl',function($scope, $state, $stateParams, $timeout) {
+app.controller('MainCtrl',function($scope, $rootScope, $state, $stateParams, $timeout) {
 
     if (!$scope.filters) $scope.filters = filters;
 
@@ -309,19 +316,24 @@ app.controller('MainCtrl',function($scope, $state, $stateParams, $timeout) {
         $scope.filters = filters;
     };
 
+    $rootScope.characterBox = characterBox;
+    $rootScope.showBoxFilters = box.length > 0;
+
 });
 
-app.controller('DetailsCtrl',function($scope, $state, $stateParams) {
+app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, $timeout) {
     // data
-    $scope.unit = $.extend({},window.units[$stateParams.id - 1]);
+    var id = parseInt($stateParams.id, 10);
+    $scope.id = id;
+    $scope.unit = $.extend({},window.units[id - 1]);
     $scope.hybrid = $scope.unit.class.constructor == Array;
-    $scope.details = window.details[$stateParams.id];
+    $scope.details = window.details[id];
     // derived data
-    $scope.evolvesFrom = searchBaseForms($stateParams.id);
-    $scope.usedBy = searchEvolverEvolutions($stateParams.id);
-    $scope.drops = searchDropLocations(parseInt($stateParams.id,10));
-    $scope.manuals = searchDropLocations(-parseInt($stateParams.id,10));
-    $scope.sameSpecials = searchSameSpecials(parseInt($stateParams.id,10));
+    $scope.evolvesFrom = searchBaseForms(id);
+    $scope.usedBy = searchEvolverEvolutions(id);
+    $scope.drops = searchDropLocations(id);
+    $scope.manuals = searchDropLocations(-id);
+    $scope.sameSpecials = searchSameSpecials(id);
     $scope.collapsed = { to: true, from: true, used: true, drops: true, manuals: true }; 
     // events/functions
     $scope.getEvos = getEvolversOfEvolution;
@@ -335,6 +347,16 @@ app.controller('DetailsCtrl',function($scope, $state, $stateParams) {
         $scope.compare = null;
         $('#compare').val('');
         $('#compare').prop('disabled', false);
+    };
+    $scope.onChange = function() {
+        var temp = [ ];
+        for (var key in $scope.characterBox) {
+            if ($scope.characterBox[key])
+                temp.push(parseInt(key,10));
+        }
+        temp.sort(function(a,b) { return a-b; });
+        localStorage.setItem('characterBox',JSON.stringify(temp));
+        $rootScope.showBoxFilters = temp.length > 0;
     };
 });
 
@@ -457,13 +479,13 @@ app.directive('filters',function($compile) {
                 others.append(createFilter(x,'drop-filter','filters.server',
                     'filters.server == \'' + x + '\'','onClick($event,\'' + x + '\')'));
             });
-            var others = createContainer('Exclusion filters', element);
             // exclusion filters
-            others.append(createFilter('Hide base forms','exc-filter','filters.noBase',
+            var exclusion = createContainer('Exclusion filters', element);
+            exclusion.append(createFilter('Hide base forms','exc-filter','filters.noBase',
                 'filters.noBase','filters.noBase = !filters.noBase'));
-            others.append(createFilter('Hide fodder','exc-filter','filters.noFodder',
+            exclusion.append(createFilter('Hide fodder','exc-filter','filters.noFodder',
                 'filters.noFodder','filters.noFodder = !filters.noFodder'));
-            others.append(createFilter('Hide Boosters and Evolvers','exc-filter','filters.noEvos',
+            exclusion.append(createFilter('Hide Boosters and Evolvers','exc-filter','filters.noEvos',
                 'filters.noEvos','filters.noEvos = !filters.noEvos'));
             // captain ability filters
             var captains = createContainer('Captain ability filters', element);
@@ -474,6 +496,14 @@ app.directive('filters',function($compile) {
                 if (x.target == 'captain') captains.append(result);
                 else specials.append(result);
             });
+            // character box filters
+            var box = createContainer('Character box filters', element);
+            box.attr('ng-if','showBoxFilters');
+            box.append(createFilter('Hide units in character\'s box','custom-filter','filters.noBox',
+                'filters.noBox','filters.noBox = !filters.noBox'));
+            box.append(createFilter('Hide units not in character\'s box','custom-filter','filters.noMissing',
+                'filters.noMissing','filters.noMissing = !filters.noMissing'));
+            $compile(box)(scope);
             // orb controller filter
             var target = $('.custom-filter:contains("Orb controllers")');
             var filter = $('<span class="custom-filter" id="controllers" ng-show="filters.custom[24]"><span class="separator">&darr;</span></span>');

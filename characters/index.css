@@ -204,13 +204,18 @@ input[type="text"] {
  * TYPEAHEAD *
  *************/
 
-h3 > span {
+h3 > span, h3 > label {
     float: right;
     font-size: 14px;
 }
 
-h3 > span > input {
+h3 > span > input, h3 > label {
+    position: relative;
     bottom: 2px;
+}
+
+h3 > label {
+    margin-right: 10px;
 }
 
 #compare {
