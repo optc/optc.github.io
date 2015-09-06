@@ -3083,7 +3083,7 @@ window.details = {
         cooldown: [ 18, 10 ]
     },
     458: { // Sengoku
-        special: "Deals random PSY damage to all enemies, boosts ATK by 1.5x",
+        special: "Deals random PSY damage to all enemies, boosts ATK by 1.5x for 1 turn",
         specialName: "Buddha's Shockwave",
         captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of characters with cost 20 or less by 3x",
         cooldown: [ 28, 19 ],
@@ -3091,7 +3091,7 @@ window.details = {
         evolvers: [ 118, 266, 94, 98, 267 ]
     },
     459: { // Sengoku the Buddha
-        special: "Deals random PSY damage to all enemies, boosts ATK by 1.5x",
+        special: "Deals random PSY damage to all enemies, boosts ATK by 1.5x for 1 turn",
         specialName: "Buddha's Shockwave",
         captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of characters with cost 20 or less by 3x",
         cooldown: [ 28, 19 ]
@@ -3494,7 +3494,7 @@ window.details = {
         cooldown: [ 10, 5 ]
     },
     519: { // Monkey D. Luffy, Merveille's Adventurer (Strong World/SW)
-        special: "Reduce current HP by 99%, deals 25x character's ATK in fixed STR damage to all enemies, boosts ATK of STR characters by 2x",
+        special: "Reduce current HP by 99%, deals 25x character's ATK in fixed STR damage to all enemies, boosts ATK of STR characters by 2x for 1 turn",
         specialNotes: "Fixed damage means the special entirely bypasses enemy defense",
         specialName: "Gum-Gum Gigant Thunder Axe",
         captain: "Boosts ATK of STR characters by 2x",
@@ -3503,7 +3503,7 @@ window.details = {
         evolvers: [ 118, 84, 95, 94, 100 ]
     },
     520: { // Monkey D. Luffy, Strawhat Crew's Attack (Strong World/SW)
-        special: "Reduce current HP by 99%, deals 25x character's ATK in fixed STR damage to all enemies, boosts ATK of STR characters by 2x",
+        special: "Reduce current HP by 99%, deals 25x character's ATK in fixed STR damage to all enemies, boosts ATK of STR characters by 2x for 1 turn",
         specialNotes: "Fixed damage means the special entirely bypasses enemy defense",
         specialName: "Gum-Gum Gigant Thunder Axe",
         captain: "Boosts ATK of STR characters by 2.5x",
