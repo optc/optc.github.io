@@ -403,7 +403,7 @@ app.directive('characterTable',function($rootScope, $compile) {
                     });
                     // character log checkbox
                     var id = data[12] + 1;
-                    var checkbox = $('<input type="checkbox" ng-change="checkLog(' + id + ')" ng-model="characterLog[' + id + ']"></input>');
+                    var checkbox = $('<label><input type="checkbox" ng-change="checkLog(' + id + ')" ng-model="characterLog[' + id + ']"></input></label>');
                     $(row.cells[11]).append(checkbox);
                     // compile
                     $compile($(row).contents())($rootScope);

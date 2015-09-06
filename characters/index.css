@@ -392,6 +392,25 @@ tr.incomplete td:nth-child(2) > a:after {
     min-width: 0;
 }
 
+#mainTable td:last-child {
+    height: 100%;
+    padding: 0;
+    position: relative;
+}
+
+#mainTable td:last-child > label {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+}
+
+#mainTable td:last-child > label > input {
+    margin-top: 40%;
+}
+
 /*********
  * POPUP *
  *********/
