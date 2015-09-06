@@ -174,7 +174,6 @@ var tableData = window.units.filter(function(x) { return x.name; }).map(function
         x.maxHP,
         x.maxATK,
         x.maxRCV,
-        x.combo,
         x.cost,
         x.slots,
         x.stars,
@@ -388,7 +387,6 @@ app.directive('characterTable',function($rootScope, $compile) {
                     { title: 'HP' },
                     { title: 'ATK' },
                     { title: 'RCV' },
-                    { title: 'CMB' },
                     { title: 'Cost' },
                     { title: 'Slots' },
                     { title: 'Stars' },
@@ -402,12 +400,12 @@ app.directive('characterTable',function($rootScope, $compile) {
                         x.removeAttribute('data-original');
                     });
                     // character log checkbox
-                    var id = data[12] + 1;
+                    var id = data[11] + 1;
                     var checkbox = $('<label><input type="checkbox" ng-change="checkLog(' + id + ')" ng-model="characterLog[' + id + ']"></input></label>');
-                    $(row.cells[11]).append(checkbox);
+                    $(row.cells[10]).append(checkbox);
                     // compile
                     $compile($(row).contents())($rootScope);
-                    if (window.units[data[12]].incomplete) $(row).addClass('incomplete');
+                    if (window.units[id - 1].incomplete) $(row).addClass('incomplete');
                     row.setAttribute('loaded','true');
                 },
                 headerCallback : function(header) {
