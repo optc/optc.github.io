@@ -178,6 +178,7 @@ var tableData = window.units.filter(function(x) { return x.name; }).map(function
         x.cost,
         x.slots,
         x.stars,
+        '',
         x.number
     ];
 });
@@ -218,7 +219,7 @@ $.fn.dataTable.ext.search.push(function(settings, data, index) {
     // filter by drop
     if (filters.drop) {
         if (!reverseDropMap) generateReverseDropMap();
-        var isFarmable = reverseDropMap.hasOwnProperty(unit.number + 1);
+        var isFarmable = reverseDropMap.hasOwnProperty(id);
         if (filters.drop == 'Farmable' && (id == 1 || unit.stars >= 3 && !isFarmable)) return false; 
         else if (filters.drop != 'Farmable' && id != 1 && (unit.stars < 3 || isFarmable)) return false; 
     }
@@ -316,6 +317,17 @@ app.controller('MainCtrl',function($scope, $rootScope, $state, $stateParams, $ti
         $scope.filters = filters;
     };
 
+    $rootScope.checkLog = function() {
+        var temp = [ ];
+        for (var key in $scope.characterLog) {
+            if ($scope.characterLog[key])
+                temp.push(parseInt(key,10));
+        }
+        temp.sort(function(a,b) { return a-b; });
+        localStorage.setItem('characterLog',JSON.stringify(temp));
+        $rootScope.showLogFilters = temp.length > 0;
+    };
+
     $rootScope.characterLog = characterLog;
     $rootScope.showLogFilters = log.length > 0;
 
@@ -348,16 +360,6 @@ app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, 
         $('#compare').val('');
         $('#compare').prop('disabled', false);
     };
-    $scope.onChange = function() {
-        var temp = [ ];
-        for (var key in $scope.characterLog) {
-            if ($scope.characterLog[key])
-                temp.push(parseInt(key,10));
-        }
-        temp.sort(function(a,b) { return a-b; });
-        localStorage.setItem('characterLog',JSON.stringify(temp));
-        $rootScope.showLogFilters = temp.length > 0;
-    };
 });
 
 /**************
@@ -389,7 +391,8 @@ app.directive('characterTable',function($rootScope, $compile) {
                     { title: 'CMB' },
                     { title: 'Cost' },
                     { title: 'Slots' },
-                    { title: 'Stars' }
+                    { title: 'Stars' },
+                    { title: 'CL', orderable: false }
                 ],
                 rowCallback: function(row, data, index) {
                     if (row.hasAttribute('loaded')) return;
@@ -398,9 +401,19 @@ app.directive('characterTable',function($rootScope, $compile) {
                         x.setAttribute('src',x.getAttribute('data-original'));
                         x.removeAttribute('data-original');
                     });
+                    // character log checkbox
+                    var id = data[12] + 1;
+                    var checkbox = $('<input type="checkbox" ng-change="checkLog(' + id + ')" ng-model="characterLog[' + id + ']"></input>');
+                    $(row.cells[11]).append(checkbox);
+                    // compile
                     $compile($(row).contents())($rootScope);
-                    if (window.units[data[11]].incomplete) $(row).addClass('incomplete');
+                    if (window.units[data[12]].incomplete) $(row).addClass('incomplete');
                     row.setAttribute('loaded','true');
+                },
+                headerCallback : function(header) {
+                    if (header.hasAttribute('loaded')) return;
+                    header.cells[header.cells.length - 1].setAttribute('title', 'Character Log');
+                    header.setAttribute('loaded',true);
                 }
             });
             // report link
@@ -469,14 +482,14 @@ app.directive('filters',function($compile) {
                 classes.append(createFilter(x,'class-filter','filters.class',
                     'filters.class == \'' + x + '\'','onClick($event,\'' + x + '\')'));
             });
-            // farmable filters
-            var others = createContainer('Drop filters', element);
+            // drop filters
+            var drop = createContainer('Drop filters', element);
             [ 'Farmable', 'Non-farmable' ].forEach(function(x) {
-                others.append(createFilter(x,'drop-filter','filters.drop',
+                drop.append(createFilter(x,'drop-filter','filters.drop',
                     'filters.drop == \'' + x + '\'','onClick($event,\'' + x + '\')'));
             });
             [ 'Global only', 'JP only' ].forEach(function(x) {
-                others.append(createFilter(x,'drop-filter','filters.server',
+                drop.append(createFilter(x,'drop-filter','filters.server',
                     'filters.server == \'' + x + '\'','onClick($event,\'' + x + '\')'));
             });
             // exclusion filters

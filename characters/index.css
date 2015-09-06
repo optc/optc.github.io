@@ -387,6 +387,11 @@ tr.incomplete td:nth-child(2) > a:after {
     display: block;
 }
 
+#mainTable td:last-child, #mainTable th:last-child {
+    width: 0%;
+    min-width: 0;
+}
+
 /*********
  * POPUP *
  *********/
