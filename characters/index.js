@@ -13,9 +13,9 @@ Utils.parseUnits(false);
 var fuse = new Fuse(window.units, { keys: [ 'name' ], id: 'number' });
 var fuzzy = JSON.parse(localStorage.getItem('fuzzy')) || false;
 
-var box = JSON.parse(localStorage.getItem('characterBox')) || [ ];
-var characterBox = { };
-for (var i=0;i<box.length;++i) characterBox[box[i]] = true;
+var log = JSON.parse(localStorage.getItem('characterLog')) || [ ];
+var characterLog = { };
+for (var i=0;i<log.length;++i) characterLog[log[i]] = true;
 
 /*********************
  * Utility functions *
@@ -239,9 +239,9 @@ $.fn.dataTable.ext.search.push(function(settings, data, index) {
         var target = window.details[id][filters.custom[i].target];
         if (!target || !filters.custom[i].matcher.test(target)) return false;
     }
-    // filter by character box
-    if (filters.noBox && characterBox.hasOwnProperty(id)) return false;
-    if (filters.noMissing && !characterBox.hasOwnProperty(id)) return false;
+    // filter by character log
+    if (filters.noLog && characterLog.hasOwnProperty(id)) return false;
+    if (filters.noMissing && !characterLog.hasOwnProperty(id)) return false;
     // filter by orb controllers
     if (regexes.ctrlFrom && !regexes.ctrlFrom.test(window.details[id].special)) return false;
     if (regexes.ctrlTo && !regexes.ctrlTo.test(window.details[id].special)) return false;
@@ -316,8 +316,8 @@ app.controller('MainCtrl',function($scope, $rootScope, $state, $stateParams, $ti
         $scope.filters = filters;
     };
 
-    $rootScope.characterBox = characterBox;
-    $rootScope.showBoxFilters = box.length > 0;
+    $rootScope.characterLog = characterLog;
+    $rootScope.showLogFilters = log.length > 0;
 
 });
 
@@ -350,13 +350,13 @@ app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, 
     };
     $scope.onChange = function() {
         var temp = [ ];
-        for (var key in $scope.characterBox) {
-            if ($scope.characterBox[key])
+        for (var key in $scope.characterLog) {
+            if ($scope.characterLog[key])
                 temp.push(parseInt(key,10));
         }
         temp.sort(function(a,b) { return a-b; });
-        localStorage.setItem('characterBox',JSON.stringify(temp));
-        $rootScope.showBoxFilters = temp.length > 0;
+        localStorage.setItem('characterLog',JSON.stringify(temp));
+        $rootScope.showLogFilters = temp.length > 0;
     };
 });
 
@@ -496,14 +496,14 @@ app.directive('filters',function($compile) {
                 if (x.target == 'captain') captains.append(result);
                 else specials.append(result);
             });
-            // character box filters
-            var box = createContainer('Character box filters', element);
-            box.attr('ng-if','showBoxFilters');
-            box.append(createFilter('Hide units in character\'s box','custom-filter','filters.noBox',
-                'filters.noBox','filters.noBox = !filters.noBox'));
-            box.append(createFilter('Hide units not in character\'s box','custom-filter','filters.noMissing',
+            // character log filters
+            var log = createContainer('Character Log filters', element);
+            log.attr('ng-if','showLogFilters');
+            log.append(createFilter('Hide units in Character Log','custom-filter','filters.noLog',
+                'filters.noLog','filters.noLog = !filters.noLog'));
+            log.append(createFilter('Hide units not in Character Log','custom-filter','filters.noMissing',
                 'filters.noMissing','filters.noMissing = !filters.noMissing'));
-            $compile(box)(scope);
+            $compile(log)(scope);
             // orb controller filter
             var target = $('.custom-filter:contains("Orb controllers")');
             var filter = $('<span class="custom-filter" id="controllers" ng-show="filters.custom[24]"><span class="separator">&darr;</span></span>');
