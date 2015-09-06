@@ -2593,27 +2593,31 @@ window.details = {
         captain: "Boosts ATK of INT characters by 2x",
         cooldown: [ 20, 10 ],
         evolution: 386,
-        evolvers: [ 117, 82, 88, 93, 99 ]
+        evolvers: [ 117, 82, 88, 93, 99 ],
+        global: true
     },
     386: { // Doctor Hogback
         special: "Reduces damage received by 50% for 1 turn, boosts ATK of Fighter characters by 1.25x for 1 turn",
         specialName: "Zombie Marionette Operation",
         captain: "Boosts ATK of INT characters by 2x",
-        cooldown: [ 20, 10 ]
+        cooldown: [ 20, 10 ],
+        global: true
     },
-    387: { // Cindry-chan
+    387: { // Cindry
         special: "Changes all orbs into either [PSY] or [INT] orbs, deals random PSY damage to all enemies",
         specialName: "Square Plate Sword",
         captain: "Boosts RCV of PSY characters by 1.5x",
         cooldown: [ 25, 18 ],
         evolution: 388,
-        evolvers: [ 117, 81, 87, 385 ]
+        evolvers: [ 117, 81, 87, 385 ],
+        global: true
     },
     388: { // Victoria Cindry
         special: "Changes all orbs into either [PSY] or [INT] orbs, deals random PSY damage to all enemies",
         specialName: "Square Plate Sword",
         captain: "Boosts RCV of PSY characters by 1.5x",
-        cooldown: [ 25, 18 ]
+        cooldown: [ 25, 18 ],
+        global: true
     },
     389: { // Emporio Ivankov
         special: "Changes own orb into [QCK] and every other orb into either [RCV], [STR], [DEX] or [QCK] orbs",
