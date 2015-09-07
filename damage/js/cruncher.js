@@ -51,7 +51,7 @@ var DEFAULT_HIT_MODIFIERS = [ 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfe
  * CruncherCtrl *
  ****************/
 
-var CruncherCtrl = function($scope, $timeout) {
+var CruncherCtrl = function($scope, $rootScope, $timeout) {
 
     /* * * * * Scope variables * * * * */
 
@@ -73,7 +73,7 @@ var CruncherCtrl = function($scope, $timeout) {
 
     /* * * * * Events * * * * */
 
-    $scope.$on('specialToggled', function(e, slot, enabled) {
+    $rootScope.$on('specialToggled', function(e, slot, enabled) {
         var id = $scope.data.team[slot].unit.number + 1;
         if (!specials.hasOwnProperty(id)) return;
         if (enabled && specials[id].hasOwnProperty('onActivation'))
@@ -81,6 +81,8 @@ var CruncherCtrl = function($scope, $timeout) {
         else if (!enabled && specials[id].hasOwnProperty('onDeactivation'))
             specials[id].onDeactivation(getParameters(slot));
     });
+
+    $rootScope.cruncherReady = true;
 
     /* * * * * Crunching * * * * */
 

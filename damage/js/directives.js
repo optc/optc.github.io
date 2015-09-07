@@ -502,7 +502,7 @@ directives.unitCandies = function() {
     };
 };
 
-directives.special = function() {
+directives.special = function($rootScope) {
     return {
         restrict: 'E',
         replace: true,
@@ -531,7 +531,7 @@ directives.special = function() {
                 isSelected = !isSelected;
                 scope.tdata.team[scope.slot].special = isSelected;
                 scope.$apply();
-                scope.$emit('specialToggled', scope.slot, isSelected);
+                $rootScope.$emit('specialToggled', scope.slot, isSelected);
             });
         }
     };

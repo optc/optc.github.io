@@ -6,7 +6,7 @@
  * ImportCtrl *
  **************/
 
-var ImportCtrl = function($scope, $state, $stateParams) {
+var ImportCtrl = function($scope, $rootScope, $state, $stateParams) {
 
     var checkInt = function(n, min, max) {
         var temp = parseInt(n, 10);
@@ -14,6 +14,8 @@ var ImportCtrl = function($scope, $state, $stateParams) {
     };
 
     var tokens = $stateParams.data.split(/([A-Z])/);
+
+    var emitQueue = [ ];
 
     // Data validation (team)
 
@@ -109,12 +111,22 @@ var ImportCtrl = function($scope, $state, $stateParams) {
                 .slice(-6).split('').map(function(x) { return parseInt(x, 10); });
             temp.forEach(function(x,n) {
                 $scope.tdata.team[n].special = (x == 1);
-                $scope.$emit('specialToggled', n, (x==1));
+                if ($rootScope.cruncherReady) $rootScope.$emit('specialToggled', n, x == 1);
+                else emitQueue.push([ n, x == 1 ]);
             });
         } else if (type == 'H') {
             $scope.data.percHP = parseFloat(data, 10);
         }
 
+    }
+
+    // Wait for rcruncher if necessary
+    
+    if (!$rootScope.cruncherReady) {
+        $rootScope.$watch('cruncherReady',function(ready) {
+            if (!ready) return;
+            emitQueue.forEach(function(x) { $rootScope.$emit('specialToggled', x[0], x[1]); });
+        });
     }
 
     $scope.options.crunchInhibitor = 0;
