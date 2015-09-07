@@ -714,6 +714,19 @@ li input {
     background: white;
 }
 
+#saveslot .alert {
+    margin-bottom: 0;
+}
+
+#labelContainer {
+    padding: 20px 10px 10px 10px;
+    text-align: center;
+}
+
+#labelContainer > :first-child {
+    margin-right: 25px;
+}
+
 /********
  * SHIP *
  ********/

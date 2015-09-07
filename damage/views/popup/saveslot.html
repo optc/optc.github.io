@@ -1,15 +1,25 @@
 <div class="backdrop" ui-sref="^"></div>
 
 <div class="custom-modal">
-    <div id="picker" class="modal-dialog">
+    <div id="saveslot" class="modal-dialog">
         <div class="modal-content animated fadeInDown">
             <div class="modal-header">Save slot</div>
             <div class="modal-body">
 
                 <form ng-submit="saveTeam()" name="saveForm" id="saveForm">
                     <input type="text" id="slotName" placeholder="Slot name" ng-model="lastSlot" auto-focus required class="modal-filter">
-                    <div class="modal-div padded slim">
-                        <div class="alert alert-danger" ng-show="overwriting">Saving will overwrite an existing slot.</div>
+                    <div id="labelContainer">
+                        <label>
+                            <input type="checkbox" ng-model="saveShip">
+                            Save ship &amp; ship's level
+                        </label>
+                        <label>
+                            <input type="checkbox" ng-model="saveDefense">
+                            Save enemy's defense
+                        </label>
+                    </div>
+                    <div class="modal-div padded slim" ng-show="overwriting">
+                        <div class="alert alert-danger">Saving will overwrite an existing slot.</div>
                     </div>
                 </form>
 

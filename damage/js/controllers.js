@@ -137,8 +137,10 @@ controllers.SlotsCtrl = function($scope, $state, $stateParams) {
         if (e.which == 1 && !e.ctrlKey && !e.metaKey) {
             slot.team.map(function(x,n) {
                 $scope.resetSlot(n);
-                if (x !== null) $scope.data.team[n] = { unit: units[slot.team[n].unit], level: slot.team[n].level, candies: x.candies };
+                if (x !== null) $scope.data.team[n] = { unit: units[x.unit], level: x.level, candies: x.candies };
             });
+            if (slot.hasOwnProperty('defense')) $scope.data.defense = parseInt(slot.defense, 10) || 0;
+            if (slot.hasOwnProperty('ship')) $scope.data.ship = slot.ship;
             localStorage.setItem('lastSlotName',JSON.stringify(slot.name));
             $state.go('^');
         } else if (e.which == 2 || (e.which == 1 && (e.ctrlKey || e.metaKey))) {
@@ -154,7 +156,10 @@ controllers.SlotsCtrl = function($scope, $state, $stateParams) {
         var team = $scope.data.team.map(function(x) {
             return !x.unit ? null : { unit : x.unit.number, level: x.level, candies: x.candies };
         });
-        slots[$scope.lastSlot.toLowerCase()] = { name: $scope.lastSlot, team: team };
+        var result = { name: $scope.lastSlot, team: team };
+        if ($scope.saveShip) result.ship = $scope.data.ship;
+        if ($scope.saveDefense) result.defense = parseInt($scope.data.defense, 10) || 0;
+        slots[$scope.lastSlot.toLowerCase()] = result;
         localStorage.setItem('slots',JSON.stringify(slots));
         localStorage.setItem('lastSlotName',JSON.stringify($scope.lastSlot));
         $state.go('^');
