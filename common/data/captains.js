@@ -523,10 +523,10 @@ window.captains = {
     },
     389: { // Emporio Ivankov
         damageSorter: function(d) {
-            return d.okamaSort([ 'DEX', 'INT', 'QCK' ]);
+            return CrunchUtils.okamaSort(d, [ 'DEX', 'INT', 'QCK' ]);
         },
         hitAtk: function(p) {
-            return p.damage.slice(0,p.chainPosition).okamaCheck(p.modifiers,[
+            return CrunchUtils.okamaCheck(p.damage.slice(0,p.chainPosition), p.modifiers, [
                 { type: 'DEX', minModifier: 'Good' },
                 { type: 'INT', minModifier: 'Good' },
                 { type: 'QCK', minModifier: 'Good' }
@@ -536,10 +536,10 @@ window.captains = {
     },
     390: { // Emporio Ivankov, Queen of Kamabakka Kingdom
         damageSorter: function(d) {
-            return d.okamaSort([ 'DEX', 'INT', 'QCK' ]);
+            return CrunchUtils.okamaSort(d, [ 'DEX', 'INT', 'QCK' ]);
         },
         hitAtk: function(p) {
-            return p.damage.slice(0,p.chainPosition).okamaCheck(p.modifiers,[
+            return CrunchUtils.okamaCheck(p.damage.slice(0,p.chainPosition), p.modifiers, [
                 { type: 'DEX', minModifier: 'Good' },
                 { type: 'INT', minModifier: 'Good' },
                 { type: 'QCK', minModifier: 'Good' }
@@ -677,10 +677,10 @@ window.captains = {
     },
     433: { // Elizabeth
         damageSorter: function(d) {
-            return d.okamaSort([ 'QCK', 'STR', 'DEX' ]);
+            return CrunchUtils.okamaSort(d, [ 'QCK', 'STR', 'DEX' ]);
         },
         hitAtk: function(p) {
-            return p.damage.slice(0,p.chainPosition).okamaCheck(p.modifiers,[
+            return CrunchUtils.okamaCheck(p.damage.slice(0,p.chainPosition), p.modifiers, [
                 { type: 'QCK', minModifier: 'Good' },
                 { type: 'STR', minModifier: 'Good' },
                 { type: 'DEX', minModifier: 'Good' }
@@ -690,10 +690,10 @@ window.captains = {
     },
     434: { // Caroline
         damageSorter: function(d) {
-            return d.okamaSort([ 'PSY', 'INT', 'INT' ]);
+            return CrunchUtils.okamaSort(d, [ 'PSY', 'INT', 'INT' ]);
         },
         hitAtk: function(p) {
-            return p.damage.slice(0,p.chainPosition).okamaCheck(p.modifiers,[
+            return CrunchUtils.okamaCheck(p.damage.slice(0,p.chainPosition), p.modifiers, [
                 { type: 'PSY', minModifier: 'Good' },
                 { type: 'INT', minModifier: 'Good' },
                 { type: 'INT', minModifier: 'Good' }
@@ -703,10 +703,10 @@ window.captains = {
     },
     435: { // Sanji - Traditional Kamabakka Kingdom Duel Style
         damageSorter: function(d) {
-            return d.okamaSort([ 'INT', 'PSY', 'QCK' ]);
+            return CrunchUtils.okamaSort(d, [ 'INT', 'PSY', 'QCK' ]);
         },
         hitAtk: function(p) {
-            return p.damage.slice(0,p.chainPosition).okamaCheck(p.modifiers,[
+            return CrunchUtils.okamaCheck(p.damage.slice(0,p.chainPosition), p.modifiers, [
                 { type: 'INT', minModifier: 'Good' },
                 { type: 'PSY', minModifier: 'Good' },
                 { type: 'QCK', minModifier: 'Good' }
@@ -1420,14 +1420,18 @@ window.captains = {
         rcv: function(p) { return p.percHP < 30 ? 5 : 1; }
     },
     717: { // Dracule Mihawk Warlord of the Sea
+        damageSorter: function(d) { return CrunchUtils.mihawkSort(d); },
         hitAtk: function(p) {
+            if (p.unit.class != 'Slasher') return 1;
             var prev = p.modifiers.slice(p.chainPosition - 1, p.chainPosition)[0];
             return p.chainPosition === 0 ? 1 : (prev == 'Good' ? 2.25 : (prev == 'Great' ? 2.5 : (prev == 'Perfect' ? 2.75 : 2)));
         },
         hitModifiers: [ 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect' ], // don't remove this
     },
     718: { // Dracule Mihawk, World's Strongest Swordsman
+        damageSorter: function(d) { return CrunchUtils.mihawkSort(d); },
         hitAtk: function(p) {
+            if (p.unit.class != 'Slasher') return 1;
             var prev = p.modifiers.slice(p.chainPosition - 1, p.chainPosition)[0];
             return p.chainPosition === 0 ? 1 : (prev == 'Good' ? 2.25 : (prev == 'Great' ? 2.5 : (prev == 'Perfect' ? 2.75 : 2)));
         },

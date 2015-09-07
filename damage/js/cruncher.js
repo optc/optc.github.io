@@ -551,51 +551,12 @@ var CruncherCtrl = function($scope, $timeout) {
         return this.join('!').indexOf(data.join('!')) != -1;
     };
 
-    Array.prototype.okamaCheck = function(modifiers,data) {
-        for (var i=0;i<this.length;++i) {
-            for (var j=0;j<data.length && i+j<this.length;++j) {
-                var different = (data[j].type && this[i+j].unit.unit.type != data[j].type) ||
-                    (data[j].minModifier && MODIFIERS.indexOf(modifiers[i+j]) < MODIFIERS.indexOf(data[j].minModifier));
-                if (different) break;
-            }
-            if (j == data.length) return true;
-        }
-        return false;
-    };
-
-    Array.prototype.okamaSort = function(data) {
-        var that = $.extend([], this), temp = [ ];
-        for (var i=0;i<data.length;++i) {
-            for (var j=0;j<that.length;++j) {
-                if (that[j].unit.unit.type != data[i]) continue;
-                temp.push(that.splice(j,1)[0]);
-                break;
-            }
-            if (i == data.length) break;
-        }
-        if (temp.length != data.length) return null;
-        else return temp.concat(that);
-    };
-
     Array.prototype.has = function(what) {
         return this.indexOf(what) != -1;
     };
 
     String.prototype.has = function(what) {
         return this == what;
-    };
-
-    Array.prototype.isWeakened = function(varargs) {
-        var classes = Array.prototype.slice.call(arguments,0);
-        for (var i=0;i<this.length;++i) {
-            if (classes.indexOf(this[i]) == -1)
-                return false;
-        }
-        return true;
-    };
-
-    String.prototype.isWeakened = function(varargs) {
-        return Array.prototype.slice.call(arguments,0).indexOf(this.toString()) != -1;
     };
 
 };
