@@ -1442,5 +1442,17 @@ window.captains = {
     },
     720: { // Sir Crocodile Logia Former Warlord of the Sea
         atk: function(p) { return p.unit.class.has("Knowledge") ? 1.5 + 1.75 * ((100 - p.percHP) / 100) : 1; }
+    },
+    721: { // Jerry
+        atk: function(p) { return p.unit.class.has("Fighter") && p.percHP > 99.0 ? 1.5 : 1; }
+    },
+    722: { // Jerry, Cipher Pol No.6
+        atk: function(p) { return p.unit.class.has("Fighter") && p.percHP > 99.0 ? 2 : 1; }
+    },
+    723: { // T-Bone
+        atk: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; }
+    },
+    724: { // Ship Cutter T-Bone, Navy Headquarters Captain
+        atk: function(p) { return p.unit.class.has("Slasher") ? 1.75 : 1; }
     }
 };

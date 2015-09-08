@@ -4799,7 +4799,7 @@ window.details = {
         specialNotes: "The special only includes the damage inflicted through normal attacks.",
         specialName: "Black Sword - Lightning Slash",
         captain: "Boosts ATK of Slasher characters by a variable factor between 2x and 2.75x based on the timing of the attack of the previous unit in the chain",
-        captainNotes: "A hit below Good or a Miss will boost the ATK of the next unit by 2x, a Good hit by 2.25x, a Great hit by 2.5x and a Perfect hit by 2.75x. This bonus is applied only to Slasher characters. The first unit in the chain will not be boosted.",
+        captainNotes: "A hit below Good or a Miss will boost the ATK of the next unit by 2x, a Good hit by 2.25x, a Great hit by 2.5x and a Perfect hit by 2.75x. This bonus is applied only to Slasher characters.",
         cooldown: 25
     },
     718: { // Dracule Mihawk, World's Strongest Swordsman
@@ -4807,7 +4807,7 @@ window.details = {
         specialNotes: "The special only includes the damage inflicted through normal attacks.",
         specialName: "Black Sword - Lightning Slash",
         captain: "Boosts ATK of Slasher characters by a variable factor between 2x and 2.75x based on the timing of the attack of the previous unit in the chain",
-        captainNotes: "A hit below Good or a Miss will boost the ATK of the next unit by 2x, a Good hit by 2.25x, a Great hit by 2.5x and a Perfect hit by 2.75x. This bonus is applied only to Slasher characters. The first unit in the chain will not be boosted.",
+        captainNotes: "A hit below Good or a Miss will boost the ATK of the next unit by 2x, a Good hit by 2.25x, a Great hit by 2.5x and a Perfect hit by 2.75x. This bonus is applied only to Slasher characters.",
         cooldown: 25
     },
     719: { // Sir Crocodile Logia Warlord of the Sea
@@ -4824,5 +4824,29 @@ window.details = {
         specialName: "Sables: Pesado",
         captain: "Boosts ATK of Knowledge characters proportionally to the current HP",
         captainNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the lower the HP is. The multiplier is calculated as 1.5 + 1.75 * (1 - (remaining HP) / (total HP)). With 1 HP left, the boost is equal to 3.25x"
+    },
+    721: { // Jerry
+        special: "Randomizes all orbs, including hindrance orbs",
+        specialName: "Screw Drop Kick",
+        captain: "Boosts ATK of Fighter characters by 1.5x if HP is is above 99% at the start of the turn",
+        cooldown: 16
+    },
+    722: { // Jerry, Cipher Pol No.6
+        special: "Randomizes all orbs, including hindrance orbs",
+        specialName: "Screw Drop Kick",
+        captain: "Boosts ATK of Fighter characters by 2x if HP is is above 99% at the start of the turn",
+        cooldown: 16
+    },
+    723: { // T-Bone
+        special: "Reduces current HP by 40%, deals 5x the amount of HP subtracted in typeless damage to all enemies, reduces damage received by 90% for 1 turn",
+        specialName: "Right Angle Flying Bird: Bone Phoenix",
+        captain: "Boosts ATK of Slasher characters by 1.5x, recovers 1.2x character's RCV in HP at the end of the turn",
+        cooldown: 25
+    },
+    724: { // Ship Cutter T-Bone, Navy Headquarters Captain
+        special: "Reduces current HP by 40%, deals 5x the amount of HP subtracted in typeless damage to all enemies, reduces damage received by 90% for 1 turn",
+        specialName: "Right Angle Flying Bird: Bone Phoenix",
+        captain: "Boosts ATK of Slasher characters by 1.75x, recovers 1.5x character's RCV in HP at the end of the turn",
+        cooldown: 25
     }
 };

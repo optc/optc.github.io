@@ -709,7 +709,7 @@ window.units = [
     [ "Nico Robin, the Devil Child", "PSY", [ "Fighter", "Knowledge" ], 3, 10, 6, 2, 50, 392109, 110, 63, 32, 1002, 494, 209, 1 ],
     [ "Nico Robin, Member of the Strawhat Pirates", "PSY", [ "Fighter", "Knowledge" ], 4, 16, 5, 3, 99, 3000000, 938, 430, 155, 1892, 881, 351, 1 ],
     [ "Franky, Record of the Voyage - Strawhat Crew (Log Franky)", "PSY", [ "Shooter", "Freedom" ], 4, 12, 4, 2, 50, null, 663, 292, 79, null, null, null, 0 ],
-    [ "Franky, Dream of the Voyage - A Ship to Sail Around the World (Log Franky)", "PSY", [ "Shooter", "Freedom" ], 5, 20, 6, 3, 99, null, 1474, 656, 135, null, null, null, 0 ],
+    [ "Franky, Dream of the Voyage - A Ship to Sail Around the World (Log Franky)", "PSY", [ "Shooter", "Freedom" ], 5, 20, 6, 3, 99, null, 1474, 656, 135, 2373, 1100, 232, 0 ],
     [ "Gan Fall", "QCK", "Striker", 3, 12, 6, 1, 50, 392109, 80, 40, 48, 930, 452, 185, 1.5 ],
     [ "Gan Fall the Knight of the Sky", "QCK", "Striker", 4, 20, 4, 2, 99, 3000000, 884, 401, 151, 1704, 1202, 300, 1.5 ],
     [ "Pierre", "DEX", "Fighter", 3, 12, 4, 1, 50, 392109, 69, 32, 38, 920, 480, 182, 1 ],
@@ -718,5 +718,9 @@ window.units = [
     [ "Dracule Mihawk Warlord of the Sea", "INT", "Slasher", 5, 30, 4, 4, 70, null, 623, 328, 10, 1920, 850, 57, 1.5 ],
     [ "Dracule Mihawk, World's Strongest Swordsman", "INT", "Slasher", 6, 55, 5, 4, 99, null, 1857, 799, 31, 3900, 1490, 120, 1.5 ],
     [ "Sir Crocodile Logia Warlord of the Sea", "DEX", [ "Knowledge", "Striker" ], 5, 30, 4, 4, 70, null, 500, 293, 104, 1782, 832, 226, 1.5 ],
-    [ "Sir Crocodile Logia Former Warlord of the Sea", "DEX", [ "Knowledge", "Striker" ], 6, 55, 4, 4, 99, null, 724, 765, 174, 3621, 1434, 310, 1.5 ]
+    [ "Sir Crocodile Logia Former Warlord of the Sea", "DEX", [ "Knowledge", "Striker" ], 6, 55, 4, 4, 99, null, 724, 765, 174, 3621, 1434, 310, 1.5 ],
+    [ "Jerry", "STR", [ "Fighter", "Freedom" ], 3, 9, 5, 1, 50, null, null, null, null, null, null, null, 0 ],
+    [ "Jerry, Cipher Pol No.6", "STR", [ "Fighter", "Freedom" ], 4, 15, 8, 2, 70, null, 439, 323, 70, null, null, null, 0 ],
+    [ "T-Bone", "PSY", [ "Slasher", "Knowledge" ], 3, 12, 6, 1, 50, null, null, null, null, null, null, null, 0 ],
+    [ "Ship Cutter T-Bone, Navy Headquarters Captain", "PSY", [ "Slasher", "Knowledge" ], 4, 20, 4, 3, 99, null, 900, 493, 133, null, null, null, 0 ]
 ];
