@@ -1,0 +1,184 @@
+html, body {
+    height: 100%;
+}
+
+#main {
+    height: 100%;
+    width: 800px;
+    margin: auto;
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
+
+#main > * {
+    margin-left: 5%;
+}
+
+#main > span {
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+#pool {
+    width: 90%;
+    margin: auto;
+    min-height: 200px;
+    background-color: #f7f7f9;
+    border: 1px solid #e1e1e8;
+    padding: 5px;
+}
+
+#pool > .slot {
+    float: left;
+}
+
+#add {
+    border: 1px dashed black;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#add > i {
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#add:hover > i {
+    color: salmon;
+}
+
+.slot {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+}
+
+.slot:not(#add):hover {
+    outline: 1px solid red;
+}
+
+.slot.medium {
+    width: 80px;
+    height: 80px;
+    background-size: 80px 80px;
+    margin: 2px;
+}
+
+.slot.small {
+    width: 60px;
+    height: 60px;
+    background-size: 60px 60px;
+    margin: 1px;
+}
+
+.amount {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: yellow;
+    font-weight: bold;
+    text-shadow: 0 0 black, 0 1px black, 1px 0 black, 1px 1px black, 0 -1px black, -1px 0 black, -1px -1px black;
+}
+
+#main > .page-header:first-child {
+    margin-top: 0;
+}
+
+/**********
+ * POPUPS *
+ **********/
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.65);
+    z-index: 100;
+}
+
+.custom-modal {
+    z-index: 101;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.modal-content {
+    border-radius: 0;
+}
+
+.modal-header {
+    background-color: #428bca;
+    color: white;
+}
+
+.modal-header a {
+    color: white;
+}
+
+.modal-footer {
+    background-color: rgb(235,235,235);
+}
+
+.animated {
+    animation-duration: 0.2s;
+    -webkit-animation-duration: 0.2s;
+}
+
+.modal-filter {
+    width: 100%;
+}
+
+.modal-div:not(.slim) {
+    height: 400px;
+    overflow: auto;
+}
+
+.span-warning {
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+/******************
+ * MOBILE SUPPORT *
+ ******************/
+
+@media only screen and (max-width: 768px) {
+
+    html, body {
+        transition: left .1s linear;
+    }
+
+    .custom-modal {
+        top: 0;
+        left: 0;
+        transform: initial;
+        width: 100%;
+        height 100%;
+        z-index: 300;
+    }
+
+    .modal-dialog {
+        width: 100%;
+        height: 100%;
+        margin: 0 !important;
+    }
+
+}
+
+@media (min-width: 768px) {
+
+    #picker.modal-dialog {
+        width: 704px;
+    }
+
+}

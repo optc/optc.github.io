@@ -1,0 +1,21 @@
+<h4 class="page-header">Evolution pool</h4>
+
+CTRL/Middle-click to remove.
+
+<div id="pool" class="panel">
+
+    <a class="slot small" remove-on-click index="$index" target="_blank"
+        decorate-slot uid="unit.id" ng-repeat="unit in pool"></a>
+
+    <add-button ui-sref=".pick"></add-button>
+
+</div>
+
+<h4 class="page-header">Materials required ({{getTotal()}})</h4>
+
+<div ng-repeat="type in matTypes" ng-if="mats[type]">
+    <strong>{{type}} ({{getSubtotal(type)}})</strong>
+    <br/>
+    <a class="slot small" decorate-slot uid="id" amount="n" target="_blank"
+        ng-repeat="(id,n) in mats[type] | orderBy:'id'"></a>
+</div>

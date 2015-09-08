@@ -28,7 +28,7 @@ var parseUnit = function(element,n) {
 
 utils.parseUnits = function(skipIncomplete) {
     if (skipIncomplete) {
-        window.units = window.units.map(function(x) {
+        window.units = window.units.map(function(x,n) {
             if (x.indexOf(null) == -1) return x;
             var viable = x[9] && x[10] && x[11] && x[12] && x[13] && x[14];
             return viable ? x : [ ];
