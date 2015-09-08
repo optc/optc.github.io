@@ -24,7 +24,7 @@ window.profiles = {
         rcv: function(p) { return !p.class.has('Striker') ? 0.1 : 1; }
     },
 
-    'Prisoner Crocodile)': {
+    'Prisoner Crocodile': {
         description: 'Stats of non-Striker, non-Booster, non-Evolver units reduced by 90%',
         thumb: 510,
         atk: function(p) { return p.class.has('Striker') || p.class.has('Booster') || p.class.has('Evolver') ? 1 : 0.1; },

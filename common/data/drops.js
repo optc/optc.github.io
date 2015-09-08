@@ -569,7 +569,7 @@ window.drops = {
         },
 
         {
-            name: 'Prisoner Crocidile',
+            name: 'Prisoner Crocodile',
             thumb: 510,
             Expert: [ 509, 511, -402, -400, -374, -357, -259, -212, -209 ],
             Elite: [ 509, 511, -402, -400, -374, -357, -259, -212, -209 ]
