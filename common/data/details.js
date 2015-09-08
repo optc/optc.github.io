@@ -4751,7 +4751,9 @@ window.details = {
         special: "Empties all slots with hindrance orbs, boosts ATK of Shooter characters by 1.25x for 3 turns, deals 15x character's ATK in PSY damage to all enemies",
         specialName: "The Man Who Will Build the Ship of Dreams",
         captain: "Boosts ATK of Shooter characters by 1.5x",
-        cooldown: 23
+        cooldown: 23,
+        evolution: 711,
+        evolvers: [ 117, 87, 94, 103, 303 ]
     },
     711: { // Franky, Dream of the Voyage - A Ship to Sail Around the World (Log Franky)
         special: "Empties all slots with hindrance orbs, boosts ATK of Shooter characters by 1.25x for 3 turns, deals 15x character's ATK in PSY damage to all enemies",
@@ -4800,7 +4802,9 @@ window.details = {
         specialName: "Black Sword - Lightning Slash",
         captain: "Boosts ATK of Slasher characters by a variable factor between 2x and 2.75x based on the timing of the attack of the previous unit in the chain",
         captainNotes: "A hit below Good or a Miss will boost the ATK of the next unit by 2x, a Good hit by 2.25x, a Great hit by 2.5x and a Perfect hit by 2.75x. This bonus is applied only to Slasher characters.",
-        cooldown: 25
+        cooldown: 25,
+        evolution: 718,
+        evolvers: [ 118, 266, 99, 304, 267 ]
     },
     718: { // Dracule Mihawk, World's Strongest Swordsman
         special: "Deals 50% of the damage dealt in the previous turn as typeless damage to all enemes",
@@ -4816,7 +4820,9 @@ window.details = {
         specialName: "Sables: Pesado",
         captain: "Boosts ATK of Knowledge characters proportionally to the current HP",
         captainNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the lower the HP is. The multiplier is calculated as 1.5 + 1.75 * (1 - (remaining HP) / (total HP)). With 1 HP left, the boost is equal to 3.25x",
-        cooldown: 21
+        cooldown: 21,
+        evolution: 720,
+        evolvers: [ 118, 86, 266, 102, 267 ]
     },
     720: { // Sir Crocodile Logia Former Warlord of the Sea
         special: "Boosts ATK of Knowledge characters by a variable factor for 1 turn, deals large DEX damage to all enemies",
@@ -4829,7 +4835,9 @@ window.details = {
         special: "Randomizes all orbs, including hindrance orbs",
         specialName: "Screw Drop Kick",
         captain: "Boosts ATK of Fighter characters by 1.5x if HP is is above 99% at the start of the turn",
-        cooldown: 16
+        cooldown: 16,
+        evolution: 722,
+        evolvers: [ 117, 78, 89, 95 ]
     },
     722: { // Jerry, Cipher Pol No.6
         special: "Randomizes all orbs, including hindrance orbs",
@@ -4841,12 +4849,28 @@ window.details = {
         special: "Reduces current HP by 80%, deals 5x the amount of HP subtracted in typeless damage to all enemies, reduces damage received by 90% for 1 turn",
         specialName: "Right Angle Flying Bird: Bone Phoenix",
         captain: "Boosts ATK of Slasher characters by 1.5x, recovers 1.2x character's RCV in HP at the end of the turn",
-        cooldown: 25
+        cooldown: 25,
+        evolution: 724,
+        evolvers: [ 117, 92, 98, 98, 103 ]
     },
     724: { // Ship Cutter T-Bone, Navy Headquarters Captain
         special: "Reduces current HP by 80%, deals 5x the amount of HP subtracted in typeless damage to all enemies, reduces damage received by 90% for 1 turn",
         specialName: "Right Angle Flying Bird: Bone Phoenix",
         captain: "Boosts ATK of Slasher characters by 1.75x, recovers 1.5x character's RCV in HP at the end of the turn",
         cooldown: 25
+    },
+    725: { // Nefertari Vivi, Record of the Voyage - Strawhat Crew (Log Vivi)
+        special: "Changes [TND] orbs into [QCK] orbs, freely switch orbs between slots twice",
+        specialName: "Peacock String Slasher",
+        captain: "Recovers 1,000 HP at the end of the turn",
+        cooldown: 11,
+        evolution: 726,
+        evolvers: [ 117, 79, 85, 96, 101 ]
+    },
+    726: { // Nefertari Vivi, Dream of the Voyage - Pirate Queen (Log Vivi)
+        special: "Changes [TND] orbs into [QCK] orbs, freely switch orbs between slots twice",
+        specialName: "Peacock String Slasher",
+        captain: "Recovers 2,000 HP at the end of the turn",
+        cooldown: 11
     }
 };

@@ -719,8 +719,10 @@ window.units = [
     [ "Dracule Mihawk, World's Strongest Swordsman", "INT", "Slasher", 6, 55, 5, 4, 99, null, 1857, 799, 31, 3900, 1490, 120, 1.5 ],
     [ "Sir Crocodile Logia Warlord of the Sea", "DEX", [ "Knowledge", "Striker" ], 5, 30, 4, 4, 70, null, 500, 293, 104, 1782, 832, 226, 1.5 ],
     [ "Sir Crocodile Logia Former Warlord of the Sea", "DEX", [ "Knowledge", "Striker" ], 6, 55, 4, 4, 99, null, 724, 765, 174, 3621, 1434, 310, 1.5 ],
-    [ "Jerry", "STR", [ "Fighter", "Freedom" ], 3, 9, 5, 1, 50, null, null, null, null, null, null, null, 0 ],
+    [ "Jerry", "STR", [ "Fighter", "Freedom" ], 3, 9, 5, 1, 50, null, null, null, null, 492, 380, 104, 0 ],
     [ "Jerry, Cipher Pol No.6", "STR", [ "Fighter", "Freedom" ], 4, 15, 8, 2, 70, null, 439, 323, 70, null, null, null, 0 ],
     [ "T-Bone", "PSY", [ "Slasher", "Knowledge" ], 3, 12, 6, 1, 50, null, null, null, null, null, null, null, 0 ],
-    [ "Ship Cutter T-Bone, Navy Headquarters Captain", "PSY", [ "Slasher", "Knowledge" ], 4, 20, 4, 3, 99, null, 900, 493, 133, null, null, null, 0 ]
+    [ "Ship Cutter T-Bone, Navy Headquarters Captain", "PSY", [ "Slasher", "Knowledge" ], 4, 20, 4, 3, 99, null, 900, 493, 133, 1700, 1100, 300, 0 ],
+    [ "Nefertari Vivi, Record of the Voyage - Strawhat Crew (Log Vivi)", "QCK", [ "Slasher", "Freedom" ], 4, 12, 6, 2, 50, null, 159, 81, 80, null, null, null, 0 ],
+    [ "Nefertari Vivi, Dream of the Voyage - Pirate Queen (Log Vivi)", "QCK", [ "Slasher", "Freedom" ], 5, 20, 4, 3, 99, null, 800, 371, 258, null, null, null, 0 ]
 ];
