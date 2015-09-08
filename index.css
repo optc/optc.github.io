@@ -85,32 +85,42 @@ body {
 }
 
 a.green {
-    background-color: lightgreen;
+    background-color: #7FCA9F;
     color: white;
 }
 
 a.green:hover {
-    color: forestgreen;
+    color: #7FCA9F;
     font-weight: bold;
 }
 
 a.blue {
-    background-color: skyblue;
+    background-color: #85C1F5;
     color: white;
 }
 
 a.blue:hover {
-    color: rgba(1,151,171,1);
+    color: #85C1F5;
     font-weight: bold;
 }
 
 a.red {
-    background-color: lightsalmon;
+    background-color: #E96D63;
     color: white;
 }
 
 a.red:hover {
-    color: red;
+    color: #E96D63;
+    font-weight: bold;
+}
+
+a.yellow {
+    background-color: #F4BA70;
+    color: white;
+}
+
+a.yellow:hover {
+    color: #F4BA70;
     font-weight: bold;
 }
 
@@ -142,4 +152,8 @@ a.red:hover {
 
 .red span {
     background: rgba(200,100,100,.7);
+}
+
+.yellow span {
+    background: rgba(250,150,50,.7);
 }
