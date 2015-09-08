@@ -3806,12 +3806,12 @@ window.details = {
     563: { // Porche
         special: "Deal small PSY damage to one enemy, changes [INT] orbs into [RCV] orbs",
         specialName: "Cutie Baton",
-        cooldown: 15
+        cooldown: [ 15, 9 ]
     },
     564: { // Capote
         special: "Reduces Bind duration by 2 turns",
         specialName: "Sea Surface Splitter",
-        cooldown: 16
+        cooldown: [ 16, 10 ]
     },
     565: { // Hamburg
         special: "Deals 5,000 damage to one enemy",
@@ -3974,7 +3974,7 @@ window.details = {
         special: "Boosts ATK of Slasher characters by 1.5x for 1 turn",
         specialName: "Flag of Rebellion",
         captain: "Boosts ATK by 1.5x, reduces HP and RCV by 80%",
-        cooldown: 20,
+        cooldown: [ 20, 10 ],
         evolution: 590,
         evolvers: [ 116, 117, 79, 85 ],
         global: true
@@ -3983,7 +3983,7 @@ window.details = {
         special: "Boosts ATK of Slasher characters by 1.5x for 1 turn",
         specialName: "Flag of Rebellion",
         captain: "Boosts ATK by 2x, reduces HP and RCV by 80%",
-        cooldown: 20,
+        cooldown: [ 20, 10 ],
         global: true
     },
     591: { }, // N/A
@@ -4309,7 +4309,7 @@ window.details = {
         special: "Deals 20x character's ATK in STR damage to all enemies, boosts chances of getting [STR] orbs for 3 turns",
         specialName: "Battleship Drop",
         captain: "Boosts ATK of Shooter characters by 2.5x if HP is below 30% at the start of the turn",
-        cooldown: 25,
+        cooldown: [ 25, 18 ],
         evolution: 647,
         evolvers: [ 118, 84, 266, 95, 100 ]
     },
@@ -4317,7 +4317,7 @@ window.details = {
         special: "Deals 20x character's ATK in STR damage to all enemies, boosts chances of getting [STR] orbs for 3 turns",
         specialName: "Battleship Drop",
         captain: "Boosts ATK of Shooter characters by 2.75x if HP is below 30% at the start of the turn",
-        cooldown: 25
+        cooldown: [ 25, 18 ]
     },
     648: { // Marco, Commander of the 1st Division of the Whitebeard Pirates
         special: "Recovers 100x character's RCV in HP, amplifies orb effects by 1.5x for 2 turns",
@@ -4835,7 +4835,7 @@ window.details = {
         special: "Randomizes all orbs, including hindrance orbs",
         specialName: "Screw Drop Kick",
         captain: "Boosts ATK of Fighter characters by 1.5x if HP is is above 99% at the start of the turn",
-        cooldown: 16,
+        cooldown: [ 16, 7 ],
         evolution: 722,
         evolvers: [ 117, 78, 89, 95 ]
     },
@@ -4843,13 +4843,13 @@ window.details = {
         special: "Randomizes all orbs, including hindrance orbs",
         specialName: "Screw Drop Kick",
         captain: "Boosts ATK of Fighter characters by 2x if HP is is above 99% at the start of the turn",
-        cooldown: 16
+        cooldown: [ 16, 7 ]
     },
     723: { // T-Bone
         special: "Reduces current HP by 80%, deals 5x the amount of HP subtracted in typeless damage to all enemies, reduces damage received by 90% for 1 turn",
         specialName: "Right Angle Flying Bird: Bone Phoenix",
         captain: "Boosts ATK of Slasher characters by 1.5x, recovers 1.2x character's RCV in HP at the end of the turn",
-        cooldown: 25,
+        cooldown: [ 25, 16 ],
         evolution: 724,
         evolvers: [ 117, 92, 98, 98, 103 ]
     },
@@ -4857,7 +4857,7 @@ window.details = {
         special: "Reduces current HP by 80%, deals 5x the amount of HP subtracted in typeless damage to all enemies, reduces damage received by 90% for 1 turn",
         specialName: "Right Angle Flying Bird: Bone Phoenix",
         captain: "Boosts ATK of Slasher characters by 1.75x, recovers 1.5x character's RCV in HP at the end of the turn",
-        cooldown: 25
+        cooldown: [ 25, 16 ]
     },
     725: { // Nefertari Vivi, Record of the Voyage - Strawhat Crew (Log Vivi)
         special: "Changes [TND] orbs into [QCK] orbs, freely switch orbs between slots twice",
