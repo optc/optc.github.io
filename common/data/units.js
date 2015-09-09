@@ -724,5 +724,5 @@ window.units = [
     [ "T-Bone", "PSY", [ "Slasher", "Knowledge" ], 3, 12, 6, 1, 50, 392109, 99, 78, 42, 958, 542, 162, 1 ],
     [ "Ship Cutter T-Bone, Navy Headquarters Captain", "PSY", [ "Slasher", "Knowledge" ], 4, 20, 4, 3, 99, 3000000, 900, 493, 133, 1700, 1100, 300, 0 ],
     [ "Nefertari Vivi, Record of the Voyage - Strawhat Crew (Log Vivi)", "QCK", [ "Slasher", "Freedom" ], 4, 12, 6, 2, 50, null, 159, 81, 80, null, null, null, 0 ],
-    [ "Nefertari Vivi, Dream of the Voyage - Pirate Queen (Log Vivi)", "QCK", [ "Slasher", "Freedom" ], 5, 20, 4, 3, 99, null, 800, 371, 258, null, null, null, 0 ]
+    [ "Nefertari Vivi, Dream of the Voyage - Pirate Queen (Log Vivi)", "QCK", [ "Slasher", "Freedom" ], 5, 20, 4, 3, 99, null, 800, 371, 258, 1591, 777, 474, 0 ]
 ];
