@@ -203,14 +203,19 @@ app.directive('removeOnClick',function() {
     return {
         restrict: 'A',
         link: function(scope, element, attrs) {
-            element.mousedown(function(e) {
-                if (e.which != 2 && !e.ctrlKey && !e.metaKey) return;
-                scope.pool.splice(scope.$index,1);
-                if (!scope.$$phase) scope.$apply();
-                e.preventDefault();
-                e.stopPropagation();
-                return false;
-            });
+            element.longpress(
+                function() {
+                    scope.pool.splice(scope.$index,1);
+                    if (!scope.$$phase) scope.$apply();
+                },function(e) {
+                    if (e.which != 2 && !e.ctrlKey && !e.metaKey) return;
+                    scope.pool.splice(scope.$index,1);
+                    if (!scope.$$phase) scope.$apply();
+                    e.preventDefault();
+                    e.stopPropagation();
+                    return false;
+                }
+            );
         }
     };
 });
