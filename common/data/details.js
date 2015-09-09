@@ -2648,7 +2648,7 @@ window.details = {
         cooldown: [ 23, 14 ]
     },
     393: { // Kumashi
-        special: "Deals 35x character's ATK in STRdamage to one enemy",
+        special: "Deals 35x character's ATK in STR damage to one enemy",
         specialName: "Kumashi Knuckle",
         cooldown: [ 38, 18 ]
     },

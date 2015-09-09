@@ -1,21 +1,43 @@
-<h4 class="page-header">Evolution pool</h4>
+<h2 class="page-header">
+    Evolution pool
+    <collapse n="0" collapsed="collapsed"></collapse>
+</h2>
 
-CTRL/Middle-click to remove.
+<div>
+    Units you plan to evolve. CTRL/Middle-click to remove.
+    <div id="pool" class="panel">
+        <a class="slot small" remove-on-click="pool" index="$index" target="_blank" add-href
+            decorate-slot uid="unit.id" ng-repeat="unit in pool"></a>
 
-<div id="pool" class="panel">
-
-    <a class="slot small" remove-on-click index="$index" target="_blank"
-        decorate-slot uid="unit.id" ng-repeat="unit in pool"></a>
-
-    <add-button ui-sref=".pick"></add-button>
-
+        <add-button ui-sref=".pick"></add-button>
+    </div>
 </div>
 
-<h4 class="page-header">Materials required ({{getTotal()}})</h4>
+<h2 class="page-header">
+    Material pool
+    <collapse n="1" collapsed="collapsed"></collapse>
+</h2>
 
-<div ng-repeat="type in matTypes" ng-if="mats[type]">
-    <strong>{{type}} ({{getSubtotal(type)}})</strong>
-    <br/>
-    <a class="slot small" decorate-slot uid="id" amount="n" target="_blank"
-        ng-repeat="(id,n) in mats[type] | orderBy:'id'"></a>
+<div>
+    Materials you currently have. Click to change amount. CTRL/Middle-click to remove.
+    <div id="pool" class="panel">
+        <a class="slot small" remove-on-click="mats" index="$index" target="_blank" change-on-click
+            decorate-slot uid="unit.id" amount="unit.amount" ng-repeat="unit in mats"></a>
+        <add-button ui-sref=".pickMat"></add-button>
+    </div>
 </div>
+
+<h2 class="page-header">Materials required ({{getTotal()}})</h2>
+
+<div>
+    <div ng-repeat="type in matTypes" ng-if="required[type]">
+        <strong>{{type}} ({{getAvailable(type)}}/{{getRequired(type)+getAvailable(type)}})</strong>
+        <br/>
+        <a class="slot small" decorate-slot uid="id" amount="n" target="_blank" add-href
+            ng-repeat="(id,n) in required[type] | orderBy:'id'"></a>
+        <a class="slot small" decorate-slot uid="id" amount="n" gray="true" target="_blank" add-href
+            ng-repeat="(id,n) in available[type] | orderBy:'id'"></a>
+    </div>
+</div>
+
+<div class="footer"></div>

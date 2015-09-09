@@ -7,7 +7,6 @@ html, body {
     width: 800px;
     margin: auto;
     padding-top: 20px;
-    margin-bottom: 20px;
 }
 
 #main > * {
@@ -19,8 +18,17 @@ html, body {
     display: inline-block;
 }
 
-#pool {
+.footer {
+    height: 20px;
+    width: 100%;
+}
+
+h2, h2 + div {
     width: 90%;
+}
+
+#pool {
+    width: 100%;
     margin: auto;
     min-height: 200px;
     background-color: #f7f7f9;
@@ -86,6 +94,27 @@ html, body {
 
 #main > .page-header:first-child {
     margin-top: 0;
+}
+
+.gray {
+    transition: all 0.25s linear;
+    filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+}
+
+.gray:hover {
+    filter: initial;
+    -moz-filter: initial;
+    -webkit-filter: initial;
+}
+
+.toggleButton {
+    cursor: pointer;
+}
+
+.collapsed {
+    display: none;
 }
 
 /**********

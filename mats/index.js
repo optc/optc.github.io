@@ -32,6 +32,18 @@ app.config(function($stateProvider, $urlRouterProvider) {
 
         .state('main.pick',{
             url: 'pick',
+            params: { mats: false },
+            views: {
+                'popup@': {
+                    templateUrl: 'views/picker.html',
+                    controller: 'PickerCtrl',
+                }
+            },
+        })
+
+        .state('main.pickMat',{
+            url: 'mats',
+            params: { mats: true },
             views: {
                 'popup@': {
                     templateUrl: 'views/picker.html',
@@ -53,10 +65,18 @@ app.controller('MainCtrl',function($scope, $timeout) {
         temp = temp.map(function(x) { return { id: x.id }; });
         temp.sort(function(a,b) { return a.id - b.id; });
         localStorage.setItem('evoPool',JSON.stringify(temp));
-        updateMats();
+        updateRequired();
     };
 
-    var updateMats = function() {
+    var onMatsChange = function(mats) {
+        var temp = JSON.parse(JSON.stringify(mats));
+        temp = temp.map(function(x) { return { id: x.id, amount: x.amount }; });
+        temp.sort(function(a,b) { return a.id - b.id; });
+        localStorage.setItem('matPool',JSON.stringify(temp));
+        updateRequired();
+    };
+
+    var updateRequired = function() {
         // get evolvers
         var temp = { };
         $scope.pool.forEach(function(unit) {
@@ -67,12 +87,23 @@ app.controller('MainCtrl',function($scope, $timeout) {
                 temp[key] = (temp[key] || 0) + 1;
             });
         });
+        // material map
+        var mats = { };
+        $scope.mats.forEach(function(x) { mats[x.id] = x.amount; });
         // split by type
-        $scope.mats = { };
+        $scope.required = { };
+        $scope.available = { };
         for (var key in temp) {
-            var clazz = getEvolverClass(parseInt(key,10));
-            if (!$scope.mats.hasOwnProperty(clazz)) $scope.mats[clazz] = { };
-            $scope.mats[clazz][key] = temp[key];
+            var id = parseInt(key, 10);
+            var clazz = getEvolverClass(id);
+            if (!mats.hasOwnProperty(id) || mats[id] < temp[key]) {
+                if (!$scope.required.hasOwnProperty(clazz)) $scope.required[clazz] = { };
+                $scope.required[clazz][key] = temp[key] - (mats[id] || 0);
+            }
+            if (mats.hasOwnProperty(id) && mats[id] > 0) {
+                if (!$scope.available.hasOwnProperty(clazz)) $scope.available[clazz] = { };
+                $scope.available[clazz][key] = Math.min(mats[id], temp[key]);
+            }
         }
         if (!$scope.$$phase) $scope.$apply();
     };
@@ -93,19 +124,35 @@ app.controller('MainCtrl',function($scope, $timeout) {
         $scope.$watch('pool',onPoolChange,true);
     }
 
+    if (!$scope.mats) {
+        $scope.mats = JSON.parse(localStorage.getItem('matPool')) || [ ];
+        $scope.$watch('mats',onMatsChange,true);
+    }
+
     $scope.matTypes = [ 'Robber Penguins', 'Pirate Penguins', 'Hermit Crabs', 'Armored Crabs',
         'Dragons', 'Sea Horses', 'Plated Lobsters', 'Others' ];
 
-    $scope.getSubtotal = function(type) {
-        if (!$scope.mats[type]) return 0;
+    if (!localStorage.hasOwnProperty('matsCollapsed'))
+        localStorage.setItem('matsCollapsed',JSON.stringify([ false, false ]));
+    $scope.collapsed = JSON.parse(localStorage.getItem('matsCollapsed')) || [ false, false ];
+
+    $scope.getRequired = function(type) {
+        if (!$scope.required[type]) return 0;
         var result = 0;
-        for (var key in $scope.mats[type]) result += $scope.mats[type][key];
+        for (var key in $scope.required[type]) result += $scope.required[type][key];
+        return result;
+    };
+
+    $scope.getAvailable = function(type) {
+        if (!$scope.available[type]) return 0;
+        var result = 0;
+        for (var key in $scope.available[type]) result += $scope.available[type][key];
         return result;
     };
 
     $scope.getTotal = function() {
         var result = 0;
-        $scope.matTypes.forEach(function(x) { result += $scope.getSubtotal(x); });
+        $scope.matTypes.forEach(function(x) { result += $scope.getRequired(x); });
         return result;
     };
 
@@ -119,12 +166,21 @@ app.controller('PickerCtrl',function($scope, $state, $stateParams, $timeout) {
     $scope.query = '';
     $scope.recents = JSON.parse(localStorage.getItem('recentUnits')) || [ ];
 
+    $scope.isMats = $stateParams.mats;
+
     $scope.$watch('query',function() { populateList(); },true);
 
     /* * * * * Scope functions * * * * */
 
     $scope.pickUnit = function(unitNumber) {
-        $scope.pool.push({ id: unitNumber + 1 });
+        if (!$stateParams.mats)
+            $scope.pool.push({ id: unitNumber + 1 });
+        else {
+            var i;
+            for (i=0;i<$scope.mats.length && $scope.mats[i].id != unitNumber + 1;++i);
+            if (i == $scope.mats.length) $scope.mats.push({ id: unitNumber + 1, amount: 1 });
+            else $scope.mats[i].amount++;
+        }
         $state.go('^');
     };
 
@@ -173,14 +229,22 @@ app.directive('addButton',function() {
 app.directive('decorateSlot',function() {
     return {
         restrict: 'A',
-        scope: { uid: '=', amount: '=' },
+        scope: { uid: '=', amount: '=', gray: '@' },
         link: function(scope, element, attrs) {
-            if (scope.uid) element.attr('href','../characters/#/view/' + scope.uid);
+            if (scope.uid && attrs.hasOwnProperty('addHref'))
+                element.attr('href','../characters/#/view/' + scope.uid);
             var url = Utils.getThumbnailUrl(scope.uid);
-            element[0].style.backgroundImage = 'url(' + url + ')';
             var div = $('<div class="amount"></div>');
+            element[0].style.backgroundImage = 'url(' + url + ')';
             element.append(div);
-            scope.$watch('amount',function(n) { div.html(n ? 'x' + n : ''); });
+            // updating
+            var update = function() {
+                if (scope.gray == 'true') element.addClass('gray');
+                else element.removeClass('gray');
+                div.html(scope.amount ? 'x' + scope.amount : '');
+            };
+            scope.$watch('amount',update);
+            scope.$watch('gray',update);
         }
     };
 });
@@ -203,19 +267,54 @@ app.directive('removeOnClick',function() {
     return {
         restrict: 'A',
         link: function(scope, element, attrs) {
+            var target = (attrs.removeOnClick == 'pool' ? scope.pool : scope.mats);
             element.longpress(
                 function() {
-                    scope.pool.splice(scope.$index,1);
+                    target.splice(scope.$index,1);
                     if (!scope.$$phase) scope.$apply();
                 },function(e) {
                     if (e.which != 2 && !e.ctrlKey && !e.metaKey) return;
-                    scope.pool.splice(scope.$index,1);
+                    target.splice(scope.$index,1);
                     if (!scope.$$phase) scope.$apply();
                     e.preventDefault();
                     e.stopPropagation();
                     return false;
                 }
             );
+        }
+    };
+});
+
+app.directive('changeOnClick',function() {
+    return {
+        restrict: 'A',
+        link: function(scope, element, attrs) {
+            element.longpress(function() { },function(e) {
+                if (e.which != 1 || e.ctrlKey || e.metaKey) return;
+                var n = parseInt(prompt('Enter amount:'), 10);
+                if (isNaN(n) || n < 1) return;
+                scope.mats[scope.$index].amount = n;
+                if (!scope.$$phase) scope.$apply();
+            });
+        }
+    };
+});
+
+app.directive('collapse',function() {
+    return {
+        restrict: 'E',
+        replace: true,
+        scope: { collapsed: '=', n: '@' },
+        template: '<i class="fa {{className}} toggleButton pull-right" ng-click="collapsed[n] = !collapsed[n]"></i>',
+        link: function(scope, element, attrs) {
+            var n = parseInt(scope.n, 10);
+            scope.$watch('collapsed[' + n + ']',function(value) {
+                if (value === undefined) return;
+                scope.className = value ? 'fa-chevron-up' : 'fa-chevron-down';
+                if (value) element.parent().next().addClass('collapsed');
+                else element.parent().next().removeClass('collapsed');
+                localStorage.setItem('matsCollapsed',JSON.stringify(scope.collapsed));
+            });
         }
     };
 });

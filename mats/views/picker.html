@@ -6,7 +6,7 @@
             <div class="modal-header">Pick a Unit</div>
             <div class="modal-body">
 
-                <span class="span-warning">You have to pick the <b>EVOLVED</b> form.</span>
+                <span class="span-warning" ng-if="!isMats">You have to pick the <b>EVOLVED</b> form.</span>
 
                 <input type="text" id="picker" placeholder="type to filter"
                     ng-model="query" ng-model-options="{ debounce: 500 }" auto-focus class="modal-filter">
