@@ -3572,7 +3572,7 @@ window.details = {
         specialName: "Conqueror's Haki - Emperor",
         captain: "Boosts chances of getting [PSY] orbs, boosts ATK of PSY characters proportionally to the current HP",
         captainNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the higher the HP is. The multiplier is calculated as 2 + 0.75 * (remaining HP) / (total HP). At full health the boost is equal to 2.75x",
-        cooldown: 25,
+        cooldown: [ 25, 20 ],
         evolution: 530,
         evolvers: [ 118, 87, 266, 98, 267 ]
     },
@@ -3581,7 +3581,7 @@ window.details = {
         specialName: "Conqueror's Haki - Emperor",
         captain: "Boosts chances of getting [PSY] orbs, boosts ATK of PSY characters proportionally to the current HP",
         captainNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the higher the HP is. The multiplier is calculated as 2 + 0.75 * (remaining HP) / (total HP). At full health the boost is equal to 2.75x",
-        cooldown: 25
+        cooldown: [ 25, 20 ]
     },
     531: { // Nico Robin Sakura Snow Storm
         special: "Reduces damage received by 30% for 4 turns",
