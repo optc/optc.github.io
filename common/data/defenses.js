@@ -120,6 +120,8 @@ window.defenses = [
     [ 'Pierre'                              , 'Gan Fall Fortnight'                   , 'Expert', 714, 150 ],
     [ 'Gan Fall'                            , 'Gan Fall Fortnight'                   , 'Expert', 713, 200 ],
     [ 'Gan Fall (def up)'                   , 'Gan Fall Fortnight'                   , 'Expert', 713, 10000 ],
+    [ 'Jerry'                               , 'T-Bone Fortnight'                     , 'Expert', 722, 150 ],
+    [ 'T-Bone'                              , 'T-Bone Fortnight'                     , 'Expert', 724, 250 ],
     /* * * * * Others * * * * */
     [ 'Thatch'                              , 'Whitebeard\'s island, 11th round'     , '', 448, 50 ],
     [ 'Namur'                               , 'Whitebeard\'s island, 12th round'     , '', 450, 500 ],
