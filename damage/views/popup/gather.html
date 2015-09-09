@@ -20,13 +20,12 @@
                 <br><br>
 
                 <div id="pickerUnits" class="modal-div">
-                    <a ng-repeat="unit in units" class="slot medium" target="_blank"
+                    <a ng-repeat="unit in units" class="slot medium" target="_blank" ng-if="!unit.incomplete"
                         decorate-slot uid="unit.number + 1" href="../characters/#/view/{{unit.number+1}}">
                     </a>
                 </div>
 
             </div>
-
 
             <div class="modal-footer">
                 <button class="btn btn-default" ui-sref="^">Close</button> 

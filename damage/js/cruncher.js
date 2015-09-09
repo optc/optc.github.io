@@ -541,9 +541,11 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         }
         if (healer == -1 || other == -1) return null;
         var healAmount = zombies[ids[healer]].amount || Math.floor(data.team[healer].rcv * zombies[ids[healer]].multiplier);
-        if (zombies[ids[other]].type == 'zombie') // zombie
-            return 1 + healAmount >= Math.floor($scope.numbers.hp * zombies[ids[other]].threshold);
-        else // reducer
+        if (zombies[ids[other]].type == 'zombie') { // zombie
+            var works = 1 + healAmount >= Math.floor($scope.numbers.hp * zombies[ids[other]].threshold);
+            if (works) return true;
+            else return -(healAmount / zombies[ids[other]].threshold);
+        } else // reducer
             return Math.floor(healAmount / zombies[ids[other]].multiplier);
     };
 

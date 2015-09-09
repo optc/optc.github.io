@@ -119,8 +119,16 @@ window.zombies = {
         type: 'healer',
         multiplier: 5
     },
-    604: { // v2 Hachi
+    637: { // v2 Hachi
         type: 'healer',
         amount: 618
+    },
+    725: { // Log Vivi
+        type: 'healer',
+        amount: 1000
+    },
+    726: { // Log Vivi evolved
+        type: 'healer',
+        amount: 2000
     }
 };

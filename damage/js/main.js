@@ -36,14 +36,19 @@ var MainCtrl = function($scope, $controller, $filter) {
         }
     });
 
+    var zombieNoty = null;
     $scope.$watch('numbers.zombie',function(zombie) {
+        if (zombieNoty !== null) zombieNoty.close();
         if (zombie === undefined || zombie === null) return;
-        if (zombie === false) 
-            $scope.notify({ text: 'Selected zombie team will not work (HP too high)', type: 'warning' });
+        if (zombie < 0) 
+            zombieNoty = $scope.notify({ timeout: 0, type: 'warning',
+                text: 'Selected zombie team will not work (HP is too high, maximum HP allowed: ' + $filter('number')(-zombie) + ')' });
         else if (zombie === true)
-            $scope.notify({ text: 'Selected zombie team will work', type: 'success' });
-        else
-            $scope.notify({ text: 'Maximum tankable damage: ' + $filter('number')(zombie) + ' HP', type: 'information' });
+            zombieNoty = $scope.notify({ timeout: 0, type: 'success',
+                text: 'Selected zombie team will work' });
+        else if (zombie > 0)
+            zombieNoty = $scope.notify({ timeout: 0, type: 'information',
+                text: 'Maximum tankable damage: ' + $filter('number')(zombie) + ' HP',});
     });
 
     $scope.showGatherButton = window.units.some(function(x) { return x.growth && x.growth.atk === 0; });
@@ -57,6 +62,7 @@ var MainCtrl = function($scope, $controller, $filter) {
         if (data.name && notifications[data[name]]) notifications[data[name]].close(); 
         var notification = noty($.extend({ timeout: 2500, layout: 'topRight', theme: 'relax' }, data));
         if (data.name) notifications[data[name]] = notification;
+        return notification;
 
     };
 
