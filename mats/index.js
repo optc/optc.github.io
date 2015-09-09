@@ -1,6 +1,6 @@
 (function() {
 
-var app = angular.module('optc', [ 'ui.router' ]);
+var app = angular.module('optc', [ 'ui.router', 'ui.bootstrap' ]);
 
 var findEvolvers = function(id) {
     for (var key in details) {
@@ -84,7 +84,7 @@ app.controller('MainCtrl',function($scope, $timeout) {
             if (evolvers === null) return;
             evolvers.forEach(function(x) {
                 var key = ('000' + x).slice(-4);
-                temp[key] = (temp[key] || 0) + 1;
+                temp[key] = (temp[key] || [ ]).concat(unit.id);
             });
         });
         // material map
@@ -98,11 +98,11 @@ app.controller('MainCtrl',function($scope, $timeout) {
             var clazz = getEvolverClass(id);
             if (!mats.hasOwnProperty(id) || mats[id] < temp[key]) {
                 if (!$scope.required.hasOwnProperty(clazz)) $scope.required[clazz] = { };
-                $scope.required[clazz][key] = temp[key] - (mats[id] || 0);
+                $scope.required[clazz][key] = { units: temp[key], required: temp[key].length - (mats[id] || 0) };
             }
             if (mats.hasOwnProperty(id) && mats[id] > 0) {
                 if (!$scope.available.hasOwnProperty(clazz)) $scope.available[clazz] = { };
-                $scope.available[clazz][key] = Math.min(mats[id], temp[key]);
+                $scope.available[clazz][key] = {units: temp[key], available: Math.min(mats[id], temp[key].length) };
             }
         }
         if (!$scope.$$phase) $scope.$apply();
@@ -139,14 +139,14 @@ app.controller('MainCtrl',function($scope, $timeout) {
     $scope.getRequired = function(type) {
         if (!$scope.required[type]) return 0;
         var result = 0;
-        for (var key in $scope.required[type]) result += $scope.required[type][key];
+        for (var key in $scope.required[type]) result += $scope.required[type][key].required;
         return result;
     };
 
     $scope.getAvailable = function(type) {
         if (!$scope.available[type]) return 0;
         var result = 0;
-        for (var key in $scope.available[type]) result += $scope.available[type][key];
+        for (var key in $scope.available[type]) result += $scope.available[type][key].available;
         return result;
     };
 
@@ -229,7 +229,7 @@ app.directive('addButton',function() {
 app.directive('decorateSlot',function() {
     return {
         restrict: 'A',
-        scope: { uid: '=', amount: '=', gray: '@' },
+        scope: { uid: '=', amount: '=', gray: '@', units: '=' },
         link: function(scope, element, attrs) {
             if (scope.uid && attrs.hasOwnProperty('addHref'))
                 element.attr('href','../characters/#/view/' + scope.uid);
@@ -242,9 +242,15 @@ app.directive('decorateSlot',function() {
                 if (scope.gray == 'true') element.addClass('gray');
                 else element.removeClass('gray');
                 div.html(scope.amount ? 'x' + scope.amount : '');
+                if (scope.units) {
+                    var temp = scope.units.filter(function(x,n) { return scope.units.indexOf(x) == n; });
+                    temp = temp.map(function(x) { return units[x-1].name; });
+                    element.attr('title',temp.join('\n'));
+                }
             };
             scope.$watch('amount',update);
             scope.$watch('gray',update);
+            scope.$watch('units',update);
         }
     };
 });

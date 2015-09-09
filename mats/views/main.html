@@ -33,9 +33,9 @@
     <div ng-repeat="type in matTypes" ng-if="required[type] || available[type]">
         <strong>{{type}} ({{getAvailable(type)}}/{{getRequired(type)+getAvailable(type)}})</strong>
         <br/>
-        <a class="slot small" decorate-slot uid="id" amount="n" target="_blank" add-href
+        <a class="slot small" decorate-slot uid="id" amount="n.required" units="n.units" target="_blank" add-href
             ng-repeat="(id,n) in required[type] | orderBy:'id'"></a>
-        <a class="slot small" decorate-slot uid="id" amount="n" gray="true" target="_blank" add-href
+        <a class="slot small" decorate-slot uid="id" amount="n.available" units="n.units" gray="true" target="_blank" add-href
             ng-repeat="(id,n) in available[type] | orderBy:'id'"></a>
     </div>
 </div>
