@@ -30,7 +30,7 @@
 <h2 class="page-header">Materials required ({{getTotal()}})</h2>
 
 <div>
-    <div ng-repeat="type in matTypes" ng-if="required[type]">
+    <div ng-repeat="type in matTypes" ng-if="required[type] || available[type]">
         <strong>{{type}} ({{getAvailable(type)}}/{{getRequired(type)+getAvailable(type)}})</strong>
         <br/>
         <a class="slot small" decorate-slot uid="id" amount="n" target="_blank" add-href
