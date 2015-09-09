@@ -30,6 +30,7 @@
 <h2 class="page-header">Materials required ({{getTotal()}})</h2>
 
 <div>
+    <span class="span-warning">Materials you need but already have are greyed out.</span>
     <div ng-repeat="type in matTypes" ng-if="required[type] || available[type]">
         <strong>{{type}} ({{getAvailable(type)}}/{{getRequired(type)+getAvailable(type)}})</strong>
         <br/>
