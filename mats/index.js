@@ -96,13 +96,13 @@ app.controller('MainCtrl',function($scope, $timeout) {
         for (var key in temp) {
             var id = parseInt(key, 10);
             var clazz = getEvolverClass(id);
-            if (!mats.hasOwnProperty(id) || mats[id] < temp[key]) {
+            if (!mats.hasOwnProperty(id) || mats[id] < temp[key].length) {
                 if (!$scope.required.hasOwnProperty(clazz)) $scope.required[clazz] = { };
                 $scope.required[clazz][key] = { units: temp[key], required: temp[key].length - (mats[id] || 0) };
             }
             if (mats.hasOwnProperty(id) && mats[id] > 0) {
                 if (!$scope.available.hasOwnProperty(clazz)) $scope.available[clazz] = { };
-                $scope.available[clazz][key] = {units: temp[key], available: Math.min(mats[id], temp[key].length) };
+                $scope.available[clazz][key] = { units: temp[key], available: Math.min(mats[id], temp[key].length) };
             }
         }
         if (!$scope.$$phase) $scope.$apply();
