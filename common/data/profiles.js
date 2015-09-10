@@ -56,6 +56,14 @@ window.profiles = {
         rcv: function(p) { return !p.class.has('Slasher') ? 0.1 : 1; }
     },
 
+    'Chief Guard Sadi-chan': {
+        description: 'Stats of non-Slasher, non-Booster, non-Evolver units reduced by 90%',
+        thumb: 550,
+        atk: function(p) { return !p.class.has('Slasher') || p.class.has('Booster') || p.class.has('Evolver') ? 0.1 : 1; },
+        hp: function(p)  { return !p.class.has('Slasher') || p.class.has('Booster') || p.class.has('Evolver') ? 0.1 : 1; },
+        rcv: function(p) { return !p.class.has('Slasher') || p.class.has('Booster') || p.class.has('Evolver') ? 0.1 : 1; }
+    },
+
     'Skypiea Warriors': {
         // Note: The debuff is applied to normal attacks but not to specials
         description: 'Stats of characters whose homeland is not a sky island reduced by 20%',
