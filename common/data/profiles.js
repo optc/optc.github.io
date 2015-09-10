@@ -59,9 +59,9 @@ window.profiles = {
     'Chief Guard Sadi-chan': {
         description: 'Stats of non-Slasher, non-Booster, non-Evolver units reduced by 90%',
         thumb: 550,
-        atk: function(p) { return !p.class.has('Slasher') || p.class.has('Booster') || p.class.has('Evolver') ? 0.1 : 1; },
-        hp: function(p)  { return !p.class.has('Slasher') || p.class.has('Booster') || p.class.has('Evolver') ? 0.1 : 1; },
-        rcv: function(p) { return !p.class.has('Slasher') || p.class.has('Booster') || p.class.has('Evolver') ? 0.1 : 1; }
+        atk: function(p) { return p.class.has('Slasher') || p.class.has('Booster') || p.class.has('Evolver') ? 1 : 0.1; },
+        hp: function(p)  { return p.class.has('Slasher') || p.class.has('Booster') || p.class.has('Evolver') ? 1 : 0.1; },
+        rcv: function(p) { return p.class.has('Slasher') || p.class.has('Booster') || p.class.has('Evolver') ? 1 : 0.1; }
     },
 
     'Skypiea Warriors': {
