@@ -210,7 +210,7 @@ app.directive('decorateSlot',function() {
         scope: { uid: '=', amount: '=', gray: '@', units: '=', mats: '=', available: '=' },
         link: function(scope, element, attrs) {
             if (scope.uid && attrs.hasOwnProperty('addHref'))
-                element.attr('href','../characters/#/view/' + scope.uid);
+                element.attr('href','../characters/#/view/' + parseInt(scope.uid, 10));
             var url = Utils.getThumbnailUrl(scope.uid);
             var div = $('<div class="amount"></div>');
             element[0].style.backgroundImage = 'url(' + url + ')';
