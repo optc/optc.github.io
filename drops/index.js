@@ -1,5 +1,7 @@
 (function() {
 
+Utils.parseUnits(false);
+
 var addImages = function(target) {
     target.find('> table [data], h3 [data]').each(function(n,x) {
         x.style.backgroundImage = 'url(' + x.getAttribute('data') + ')';
@@ -13,6 +15,15 @@ app.controller('MainCtrl',function($scope, $timeout) {
     $scope.data = drops;
     $scope.identity = angular.identity;
     $scope.reverse = function(x) { return -x; };
+    $scope.hiddenUnits = [ ];
+    $scope.changeFilters = function() {
+        $scope.hiddenUnits = [ ];
+        for (var i=0;i<units.length;++i) {
+            $scope.hiddenUnits[i+1] = ($scope.noFodder && Utils.isFodder(window.units[i])) ||
+                ($scope.noEvolverBooster && Utils.isEvolverBooster(window.units[i]));
+        }
+        if (!$scope.$$phase) $scope.$apply();
+    };
 });
 
 app.directive('decorateSlot',function() {
@@ -27,28 +38,28 @@ app.directive('decorateSlot',function() {
     };
 });
 
-app.directive('type',function($compile) {
+app.directive('type',function() {
     return {
         restrict: 'E',
-        scope: { type: '=', data: '=' },
+        scope: { type: '=', data: '=', hiddenUnits: '=' },
         replace: true,
-        templateUrl: 'type.html',
+        templateUrl: 'type.html'
     };
 });
 
-app.directive('island',function($compile) {
+app.directive('island',function() {
     return {
         restrict: 'E',
-        scope: { island: '=', data: '=', type: '=' },
+        scope: { island: '=', data: '=', type: '=', hiddenUnits: '=' },
         replace: true,
-        templateUrl: 'island.html',
+        templateUrl: 'island.html'
     };
 });
 
 app.directive('collapsable',function($compile) {
     return {
         restrict: 'A',
-        scope: { target: '@', data: '=', type: '=', island: '=' },
+        scope: { target: '@', data: '=', type: '=', island: '=', hiddenUnits: '=' },
         link: function(scope, element, attrs) {
             var update = function() {
                 if (element.children().length > 1) {
@@ -56,9 +67,9 @@ app.directive('collapsable',function($compile) {
                         element.children().last().remove();
                 } else {
                     if (scope.target == 'type.html')
-                        element.append($compile('<type type="type" data="data"></type>')(scope));
+                        element.append($compile('<type type="type" data="data" hidden-units="hiddenUnits"></type>')(scope));
                     else
-                        element.append($compile('<island type="type" island="island" data="data"></island>')(scope));
+                        element.append($compile('<island type="type" island="island" data="data" hidden-units="hiddenUnits"></island>')(scope));
                 }
                 element.toggleClass('collapsed');
             };
@@ -66,6 +77,19 @@ app.directive('collapsable',function($compile) {
                 if (e.which != 1) return;
                 update();
             });
+        }
+    };
+});
+
+app.directive('hideWhenEmpty',function() {
+    return {
+        restrict: 'A',
+        link: function(scope, element, attrs) {
+            var observer = new MutationObserver(function(e) {
+               if (element.children().length === 0) element.parent().hide();
+               else element.parent().show();
+            });
+            observer.observe(element[0],{ childList: true });
         }
     };
 });

@@ -182,10 +182,6 @@ var tableData = window.units.filter(function(x) { return x.name; }).map(function
     ];
 });
 
-var FODDER_REGEX = new RegExp('(' + [ 'Group', 'Ensign Navy HQ', 'Armed \\w+ Unit', '[BM]illions Baroque', 'Assault Squad',
-    '(Seaman|Major|Corporal) Navy', 'Hoodlum.+Bounty Hunter', 'Black Cat Pirates', 'Arlong crewmember',
-    'Gunner|Cannoneer|Assassin Master', 'Giant.*Pirates' ].join(')|(') + ')','i');
-
 $.fn.dataTable.ext.search.push(function(settings, data, index) {
     if (!currentParameters) return true;
     var id = parseInt(data[0],10), unit = window.units[id - 1];
@@ -225,9 +221,9 @@ $.fn.dataTable.ext.search.push(function(settings, data, index) {
     // filter out base forms
     if (filters.noBase && details[id].evolution) return false;
     // filter out mats
-    if (filters.noEvos && /Evolver|Booster/i.test(unit.class)) return false;
+    if (filters.noEvos && Utils.isEvolverBooster(unit)) return false;
     // filter out fodder
-    if (filters.noFodder && (unit.stars < 2 || FODDER_REGEX.test(unit.name))) return false;
+    if (filters.noFodder && Utils.isFodder(unit)) return false;
     // filter by server
     if (filters.server) {
         if (filters.server == 'Global only' && !details[unit.number + 1].global) return false;

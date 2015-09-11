@@ -27,6 +27,7 @@
         <script src="../common/libs/js/angular-sanitize.min.js"></script>
         <script src="../common/libs/js/jquery.dataTables.min.js"></script>
 
+        <script src="../common/data/units.js"></script>
         <script src="../common/data/drops.js"></script>
 
         <script src="../common/utils.js"></script>
@@ -57,8 +58,8 @@
                         <td>
                             {{type == 'Story Island' ? 'Stage ' + stage : (stage.length < 2 ? 'Any' : stage)}}
                         </td>
-                        <td>
-                            <a ng-repeat="uid in data | orderBy:identity" ng-if="uid > 0"
+                        <td hide-when-empty>
+                            <a ng-repeat="uid in data | orderBy:identity" ng-if="uid > 0 && !hiddenUnits[uid]"
                                 decorate-slot uid="uid" class="slot small"
                                 href="../characters/#/view/{{uid}}" target="_blank"></a>
                             <h4 ng-if="type == 'Fortnight'">Manuals:</h4>
@@ -73,10 +74,14 @@
 
         <div id="main">
 
-            <h1 class="page-header">Drop Table</h1>
+            <h1 class="page-header">
+                Drop Table
+                <label><input type="checkbox" ng-model="noFodder" ng-change="changeFilters()">Hide fodder</label>
+                <label><input type="checkbox" ng-model="noEvolverBooster" ng-change="changeFilters()">Hide Boosters and Evolvers</label>
+            </h1>
 
             <div ng-repeat="type in [ 'Story Island', 'Special', 'Fortnight', 'Raid', 'Other' ]" class="type collapsed"
-                collapsable target="type.html" type="type" data="data">
+                collapsable hidden-units="hiddenUnits" target="type.html" type="type" data="data">
                 <h2>
                     <i class="fa fa-chevron-down"></i>
                     <i class="fa fa-chevron-up"></i>

@@ -1,5 +1,11 @@
 (function() {
 
+var FODDER_REGEX = new RegExp('(' + [
+    'Group', 'Ensign Navy HQ', 'Armed \\w+ Unit', '[BM]illions Baroque', 'Assault Squad',
+    '(Seaman|Major|Corporal) Navy', 'Hoodlum.+Bounty Hunter', 'Black Cat Pirates',
+    'Arlong crewmember', 'Gunner|Cannoneer|Assassin Master', 'Giant.*Pirates'
+].join(')|(') + ')','i');
+
 var utils = { };
 
 /* * * * * Unit control * * * * */
@@ -96,7 +102,7 @@ utils.getOppositeType = function(type) {
     return 'PSY';
 };
 
-/* * * * * Searching * * * * */
+/* * * * * Searching/filtering * * * * */
 
 utils.generateSearchParameters = function(query) {
     if (!query || query.trim().length < 3) return null;
@@ -125,6 +131,14 @@ utils.generateSearchParameters = function(query) {
     });
     result.query = result.query.length === 0 ? null : new RegExp(result.query.join(' '),'i');
     return result;
+};
+
+utils.isFodder = function(unit) {
+    return (unit.stars < 2 && !utils.isEvolverBooster(unit)) || FODDER_REGEX.test(unit.name);
+};
+
+utils.isEvolverBooster = function(unit) {
+    return /Evolver|Booster/i.test(unit.class);
 };
 
 /* * * * * Body * * * * */

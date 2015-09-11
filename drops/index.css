@@ -42,6 +42,19 @@ h2:hover > span, h3:hover > span {
     cursor: pointer;
 }
 
+h1 > label {
+    font-size: 14px;
+    position: relative;
+    bottom: 5px;
+    margin-left: 15px;
+}
+
+h1 > label > input {
+    position: relative;
+    top: 2px;
+    right: 2px;
+}
+
 /*******************
  * SLOT THUMBNAILS *
  *******************/

@@ -391,8 +391,8 @@ window.units = [
     [ "Emporio Ivankov, Queen of Kamabakka Kingdom", "QCK", [ "Fighter", "Freedom" ], 5, 50, 4, 4, 99, 5000000, 1642, 470, 132, 3030, 1155, 290, 1 ],
     [ "Perona", "DEX", "Shooter", 3, 10, 4, 1, 50, 392109, 134, 44, 55, 944, 422, 222, 1 ],
     [ "Ghost Princess Perona", "DEX", "Shooter", 4, 18, 4, 2, 99, 3000000, 887, 377, 198, 1598, 791, 430, 1 ],
-    [ "Kumashi", "STR", "Fighter", 3, 11, 6, 1, 70, 1066998, 500, 255, 0, 1660, 904, 0, 1 ],
-    [ "Inuppe", "QCK", "Fighter", 3, 11, 4, 1, 50, 392109, 986, 500, 54, 1420, 722, 0, 1 ],
+    [ "Kumacy", "STR", "Fighter", 3, 11, 6, 1, 70, 1066998, 500, 255, 0, 1660, 904, 0, 1 ],
+    [ "Dog Penguine", "QCK", "Fighter", 3, 11, 4, 1, 50, 392109, 986, 500, 54, 1420, 722, 0, 1 ],
     [ "Miss Merry Christmas", "QCK", "Fighter", 3, 11, 5, 1, 35, 136167, 220, 51, 42, 980, 422, 147, 1 ],
     [ "Miss Merry Christmas Human Mole", "QCK", "Fighter", 4, 15, 4, 2, 70, 1066998, 910, 348, 113, 1401, 690, 233, 1 ],
     [ "Mr. 4", "STR", "Shooter", 3, 11, 4, 1, 35, 136167, 250, 110, 14, 1046, 590, 80, 1 ],
@@ -722,7 +722,7 @@ window.units = [
     [ "Jerry", "STR", [ "Fighter", "Freedom" ], 3, 9, 5, 1, 35, 136167, 72, 100, 32, 492, 380, 104, 1 ],
     [ "Jerry, Cipher Pol No.6", "STR", [ "Fighter", "Freedom" ], 4, 15, 8, 2, 70, 1066998, 439, 323, 70, 1000, 712, 212, 1 ],
     [ "T-Bone", "PSY", [ "Slasher", "Knowledge" ], 3, 12, 6, 1, 50, 392109, 99, 78, 42, 958, 542, 162, 1 ],
-    [ "Ship Cutter T-Bone, Navy Headquarters Captain", "PSY", [ "Slasher", "Knowledge" ], 4, 20, 4, 3, 99, 3000000, 900, 493, 133, 1700, 1100, 300, 0 ],
+    [ "Ship Cutter T-Bone, Navy Headquarters Captain", "PSY", [ "Slasher", "Knowledge" ], 4, 20, 4, 3, 99, 3000000, 900, 493, 133, 1700, 1100, 300, 1 ],
     [ "Nefertari Vivi, Record of the Voyage - Strawhat Crew (Log Vivi)", "QCK", [ "Slasher", "Freedom" ], 4, 12, 6, 2, 50, null, 159, 81, 80, null, null, null, 0 ],
     [ "Nefertari Vivi, Dream of the Voyage - Pirate Queen (Log Vivi)", "QCK", [ "Slasher", "Freedom" ], 5, 20, 4, 3, 99, null, 800, 371, 258, 1591, 777, 474, 0 ]
 ];
