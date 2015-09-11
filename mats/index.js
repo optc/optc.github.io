@@ -88,22 +88,20 @@ app.controller('MainCtrl',function($scope, $timeout) {
             });
         });
         // material map
-        var mats = { };
-        $scope.mats.forEach(function(x) { mats[x.id] = x.amount; });
+        $scope.available = { };
+        $scope.mats.forEach(function(x) { $scope.available[x.id] = x.amount; });
         // split by type
         $scope.required = { };
-        $scope.available = { };
+        $scope.unused = JSON.parse(JSON.stringify($scope.mats));
         for (var key in temp) {
             var id = parseInt(key, 10);
             var clazz = getEvolverClass(id);
-            if (!mats.hasOwnProperty(id) || mats[id] < temp[key].length) {
-                if (!$scope.required.hasOwnProperty(clazz)) $scope.required[clazz] = { };
-                $scope.required[clazz][key] = { units: temp[key], required: temp[key].length - (mats[id] || 0) };
-            }
-            if (mats.hasOwnProperty(id) && mats[id] > 0) {
-                if (!$scope.available.hasOwnProperty(clazz)) $scope.available[clazz] = { };
-                $scope.available[clazz][key] = { units: temp[key], available: Math.min(mats[id], temp[key].length) };
-            }
+            if (!$scope.required.hasOwnProperty(clazz)) $scope.required[clazz] = { completed: { }, missing: { } };
+            if ($scope.available[id] >= temp[key].length)
+                $scope.required[clazz].completed[key] = temp[key];
+            else
+                $scope.required[clazz].missing[key] = temp[key];
+            $scope.unused = $scope.unused.filter(function(x) { return x.id != id; });
         }
         if (!$scope.$$phase) $scope.$apply();
     };
@@ -135,26 +133,6 @@ app.controller('MainCtrl',function($scope, $timeout) {
     if (!localStorage.hasOwnProperty('matsCollapsed'))
         localStorage.setItem('matsCollapsed',JSON.stringify([ false, false ]));
     $scope.collapsed = JSON.parse(localStorage.getItem('matsCollapsed')) || [ false, false ];
-
-    $scope.getRequired = function(type) {
-        if (!$scope.required[type]) return 0;
-        var result = 0;
-        for (var key in $scope.required[type]) result += $scope.required[type][key].required;
-        return result;
-    };
-
-    $scope.getAvailable = function(type) {
-        if (!$scope.available[type]) return 0;
-        var result = 0;
-        for (var key in $scope.available[type]) result += $scope.available[type][key].available;
-        return result;
-    };
-
-    $scope.getTotal = function() {
-        var result = 0;
-        $scope.matTypes.forEach(function(x) { result += $scope.getRequired(x); });
-        return result;
-    };
 
 });
 
@@ -229,7 +207,7 @@ app.directive('addButton',function() {
 app.directive('decorateSlot',function() {
     return {
         restrict: 'A',
-        scope: { uid: '=', amount: '=', gray: '@', units: '=' },
+        scope: { uid: '=', amount: '=', gray: '@', units: '=', mats: '=', available: '=' },
         link: function(scope, element, attrs) {
             if (scope.uid && attrs.hasOwnProperty('addHref'))
                 element.attr('href','../characters/#/view/' + scope.uid);
@@ -241,8 +219,10 @@ app.directive('decorateSlot',function() {
             var update = function() {
                 if (scope.gray == 'true') element.addClass('gray');
                 else element.removeClass('gray');
-                div.html(scope.amount ? 'x' + scope.amount : '');
-                if (scope.units) {
+                if (!scope.units) div.html(scope.amount ? 'x' + scope.amount : '');
+                else {
+                    var available = scope.available[parseInt(scope.uid, 10)];
+                    div.html((available || 0) + '/' + scope.amount);
                     var temp = scope.units.filter(function(x,n) { return scope.units.indexOf(x) == n; });
                     temp = temp.map(function(x) { return units[x-1].name; });
                     element.attr('title',temp.join('\n'));
@@ -321,6 +301,54 @@ app.directive('collapse',function() {
                 else element.parent().next().removeClass('collapsed');
                 localStorage.setItem('matsCollapsed',JSON.stringify(scope.collapsed));
             });
+        }
+    };
+});
+
+app.directive('importButton',function() {
+    return {
+        restrict: 'E',
+        replace: true,
+        template: '<div><button class="btn btn-success" ng-click="import()">Import</button><input type="file" accept="application/json"></div>',
+        link: function(scope, element, attrs) {
+            element.find('input').change(function(e) {
+                var reader = new FileReader();
+                reader.onerror = function(e) { alert('Couldn\'t load the file.'); };
+                reader.onload = function(e) {
+                    var data = JSON.parse(this.result);
+                    if (!data.evoPool || !data.matPool) throw '';
+                    scope.pool.splice(0, scope.pool.length);
+                    scope.mats.splice(0, scope.mats.length);
+                    scope.pool = $.extend(scope.pool, data.evoPool);
+                    scope.mats = $.extend(scope.mats, data.matPool);
+                    if (!scope.$$phase) scope.$apply();
+                };
+                reader.readAsText(this.files[0]);
+            });
+            scope.import = function() { element.find('input').click(); };
+        }
+    };
+});
+
+app.directive('exportButton',function() {
+    return {
+        restrict: 'E',
+        replace: true,
+        template: '<div><button class="btn btn-primary" ng-click="export()">Export</button></div>',
+        link: function(scope, element, attrs) {
+            scope.export = function() {
+                var result = {
+                    evoPool: JSON.parse(localStorage.getItem('evoPool')) || [ ],
+                    matPool: JSON.parse(localStorage.getItem('matPool')) || [ ]
+                };
+                var blob = new Blob([ JSON.stringify(result) ], { type: 'application/json' });
+                var a = document.createElement('a');
+                a.href = URL.createObjectURL(blob);
+                a.download = 'optc.mats.' + (new Date().valueOf()) + '.json';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+            };
         }
     };
 });

@@ -6,7 +6,7 @@
 <div>
     Units you plan to evolve. CTRL/Middle-click to remove.
     <div id="pool" class="panel">
-        <a class="slot small" remove-on-click="pool" index="$index" target="_blank" add-href
+        <a class="slot small" remove-on-click="pool" target="_blank" add-href
             decorate-slot uid="unit.id" ng-repeat="unit in pool"></a>
 
         <add-button ui-sref=".pick"></add-button>
@@ -21,24 +21,49 @@
 <div>
     Materials you currently have. Click to change amount. CTRL/Middle-click to remove.
     <div id="pool" class="panel">
-        <a class="slot small" remove-on-click="mats" index="$index" target="_blank" change-on-click
+        <a class="slot small" remove-on-click="mats" target="_blank" change-on-click
             decorate-slot uid="unit.id" amount="unit.amount" ng-repeat="unit in mats"></a>
         <add-button ui-sref=".pickMat"></add-button>
     </div>
 </div>
 
-<h2 class="page-header">Materials required ({{getTotal()}})</h2>
+<h2 class="page-header">Materials</h2>
 
 <div>
-    <span class="span-warning">Materials you need but already have are greyed out.</span>
-    <div ng-repeat="type in matTypes" ng-if="required[type] || available[type]">
-        <strong>{{type}} ({{getAvailable(type)}}/{{getRequired(type)+getAvailable(type)}})</strong>
-        <br/>
-        <a class="slot small" decorate-slot uid="id" amount="n.required" units="n.units" target="_blank" add-href
-            ng-repeat="(id,n) in required[type] | orderBy:'id'"></a>
-        <a class="slot small" decorate-slot uid="id" amount="n.available" units="n.units" gray="true" target="_blank" add-href
-            ng-repeat="(id,n) in available[type] | orderBy:'id'"></a>
+    <table id="mat-table" class="table table-striped">
+        <tr>
+            <th>Still needed</th>
+            <th>Already collected</th>
+        </tr>
+        <tr ng-repeat="type in matTypes" ng-if="required[type] || available[type]">
+            <td>
+                <a class="slot small" ng-repeat="(id,units) in required[type].missing | orderBy:'id'" target="_blank"
+                    add-href decorate-slot uid="id" amount="units.length" units="units" available="available">
+                </a>
+            </td>
+            <td>
+                <a class="slot small" ng-repeat="(id,units) in required[type].completed | orderBy:'id'" target="_blank"
+                    add-href decorate-slot uid="id" amount="units.length" units="units" available="available">
+                </a>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<h2 class="page-header" ng-if="unused.length > 0">Unused materials</h2>
+
+<div ng-if="unused.length > 0">
+    <div id="unused" class="panel">
+        <a class="slot small" target="_blank" decorate-slot uid="unit.id" amount="unit.amount"
+            ng-repeat="unit in unused"></a>
     </div>
+</div>
+
+<h2 class="page-header">Import/export</h2>
+
+<div id="button-container">
+    <export-button></export-button>
+    <import-button></import-button>
 </div>
 
 <div class="footer"></div>

@@ -4,7 +4,7 @@ html, body {
 
 #main {
     height: 100%;
-    width: 800px;
+    width: 875px;
     margin: auto;
     padding-top: 20px;
 }
@@ -84,6 +84,7 @@ h2, h2 + div {
 }
 
 .amount {
+    font-size: 12px;
     position: absolute;
     top: 5px;
     right: 5px;
@@ -96,24 +97,40 @@ h2, h2 + div {
     margin-top: 0;
 }
 
-.gray {
-    transition: all 0.25s linear;
-    filter: grayscale(100%);
-    -moz-filter: grayscale(100%);
-    -webkit-filter: grayscale(100%);
-}
-
-.gray:hover {
-    filter: initial;
-    -moz-filter: initial;
-    -webkit-filter: initial;
-}
-
 .toggleButton {
     cursor: pointer;
 }
 
 .collapsed {
+    display: none;
+}
+
+#mat-table td, #mat-table th {
+    width: 50%;
+}
+
+th:first-child, td:first-child {
+    border-right: 1px solid #ddd;
+}
+
+table {
+    border: 1px solid #ddd;
+}
+
+#button-container {
+    text-align: center;
+}
+
+#button-container > div {
+    width: 100px;
+    display: inline-block;
+}
+
+#button-container button {
+    width: 100%;
+}
+
+#button-container input {
     display: none;
 }
 
