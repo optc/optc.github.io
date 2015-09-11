@@ -20,6 +20,9 @@
 
 <div>
     Materials you currently have. Click to change amount. CTRL/Middle-click to remove.
+    <span class="pull-right clickable" ng-click="sortMatsByColor = !sortMatsByColor">
+        <i class="fa fa-retweet"></i>
+    </span>
     <div id="pool" class="panel">
         <a class="slot small" remove-on-click="mats" target="_blank" change-on-click
             decorate-slot uid="unit.id" amount="unit.amount" ng-repeat="unit in mats"></a>

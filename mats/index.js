@@ -58,7 +58,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
  * Controllers *
  ***************/
 
-app.controller('MainCtrl',function($scope, $timeout) {
+app.controller('MainCtrl',function($scope, $rootScope, $timeout) {
 
     var onPoolChange = function(pool) {
         var temp = JSON.parse(JSON.stringify(pool));
@@ -76,10 +76,24 @@ app.controller('MainCtrl',function($scope, $timeout) {
         updateRequired();
     };
 
+    var onSortChange = function(value) {
+        var getId = function(id) {
+            return [ 'STR', 'DEX', 'QCK', 'PSY', 'INT' ].indexOf(window.units[id-1].type || 'INT') * 1000 + id;
+        };
+        localStorage.setItem('sortMatsByColor',JSON.stringify(value));
+        if (value) {
+            var temp = $rootScope.mats.map(function(x) { return [ getId(x.id), x ]; });
+            temp.sort(function(a,b) { return a[0] - b[0]; });
+            temp = temp.map(function(x) { return x[1]; });
+            $rootScope.mats = temp;
+        } else
+            $rootScope.mats.sort(function(a,b) { return a.id - b.id; });
+    };
+
     var updateRequired = function() {
         // get evolvers
         var temp = { };
-        $scope.pool.forEach(function(unit) {
+        $rootScope.pool.forEach(function(unit) {
             var evolvers = findEvolvers(unit.id);
             if (evolvers === null) return;
             evolvers.forEach(function(x) {
@@ -88,24 +102,24 @@ app.controller('MainCtrl',function($scope, $timeout) {
             });
         });
         // material map
-        $scope.available = { };
-        $scope.mats.forEach(function(x) { $scope.available[x.id] = x.amount; });
+        $rootScope.available = { };
+        $rootScope.mats.forEach(function(x) { $rootScope.available[x.id] = x.amount; });
         // split by type
-        $scope.required = { };
-        $scope.unused = JSON.parse(JSON.stringify($scope.mats));
+        $rootScope.required = { };
+        $rootScope.unused = JSON.parse(JSON.stringify($rootScope.mats));
         for (var key in temp) {
             var id = parseInt(key, 10);
             var clazz = getEvolverClass(id);
-            if (!$scope.required.hasOwnProperty(clazz)) $scope.required[clazz] = { completed: { }, missing: { } };
-            if ($scope.available[id] >= temp[key].length)
-                $scope.required[clazz].completed[key] = temp[key];
+            if (!$rootScope.required.hasOwnProperty(clazz)) $rootScope.required[clazz] = { completed: { }, missing: { } };
+            if ($rootScope.available[id] >= temp[key].length)
+                $rootScope.required[clazz].completed[key] = temp[key];
             else
-                $scope.required[clazz].missing[key] = temp[key];
-            $scope.unused = $scope.unused.filter(function(x) { return x.id != id; });
+                $rootScope.required[clazz].missing[key] = temp[key];
+            $rootScope.unused = $rootScope.unused.filter(function(x) { return x.id != id; });
         }
-        if (!$scope.$$phase) $scope.$apply();
+        if (!$rootScope.$$phase) $rootScope.$apply();
     };
-
+    
     var getEvolverClass = function(id) {
         if (id.between(78,83)) return 'Robber Penguins';
         if (id.between(84,88) || id == 266) return 'Pirate Penguins';
@@ -117,26 +131,33 @@ app.controller('MainCtrl',function($scope, $timeout) {
         return 'Others';
     };
 
-    if (!$scope.pool) {
-        $scope.pool = JSON.parse(localStorage.getItem('evoPool')) || [ ];
-        $scope.$watch('pool',onPoolChange,true);
+    if (!$rootScope.pool) {
+        $rootScope.pool = JSON.parse(localStorage.getItem('evoPool')) || [ ];
+        $rootScope.$watch('pool',onPoolChange,true);
     }
 
-    if (!$scope.mats) {
-        $scope.mats = JSON.parse(localStorage.getItem('matPool')) || [ ];
-        $scope.$watch('mats',onMatsChange,true);
+    if (!$rootScope.mats) {
+        $rootScope.mats = JSON.parse(localStorage.getItem('matPool')) || [ ];
+        $rootScope.$watch('mats',onMatsChange,true);
     }
 
-    $scope.matTypes = [ 'Robber Penguins', 'Pirate Penguins', 'Hermit Crabs', 'Armored Crabs',
+    if (!$scope.sortMatsByColor) {
+        $scope.sortMatsByColor = JSON.parse(localStorage.getItem('sortMatsByColor')) || false;
+        $scope.$watch('sortMatsByColor',onSortChange);
+    }
+
+    $rootScope.matTypes = [ 'Robber Penguins', 'Pirate Penguins', 'Hermit Crabs', 'Armored Crabs',
         'Dragons', 'Sea Horses', 'Plated Lobsters', 'Others' ];
 
     if (!localStorage.hasOwnProperty('matsCollapsed'))
         localStorage.setItem('matsCollapsed',JSON.stringify([ false, false ]));
-    $scope.collapsed = JSON.parse(localStorage.getItem('matsCollapsed')) || [ false, false ];
+    $rootScope.collapsed = JSON.parse(localStorage.getItem('matsCollapsed')) || [ false, false ];
+
+
 
 });
 
-app.controller('PickerCtrl',function($scope, $state, $stateParams, $timeout) {
+app.controller('PickerCtrl',function($scope, $rootScope, $state, $stateParams, $timeout) {
 
     /* * * * * Scope variables * * * * */
 
@@ -152,12 +173,12 @@ app.controller('PickerCtrl',function($scope, $state, $stateParams, $timeout) {
 
     $scope.pickUnit = function(unitNumber) {
         if (!$stateParams.mats)
-            $scope.pool.push({ id: unitNumber + 1 });
+            $rootScope.pool.push({ id: unitNumber + 1 });
         else {
             var i;
-            for (i=0;i<$scope.mats.length && $scope.mats[i].id != unitNumber + 1;++i);
-            if (i == $scope.mats.length) $scope.mats.push({ id: unitNumber + 1, amount: 1 });
-            else $scope.mats[i].amount++;
+            for (i=0;i<$rootScope.mats.length && $rootScope.mats[i].id != unitNumber + 1;++i);
+            if (i == $rootScope.mats.length) $rootScope.mats.push({ id: unitNumber + 1, amount: 1 });
+            else $rootScope.mats[i].amount++;
         }
         $state.go('^');
     };
