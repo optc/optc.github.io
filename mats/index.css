@@ -134,6 +134,11 @@ table {
     display: none;
 }
 
+span.animated {
+    animation-duration: 2s !important;
+    -webkit-animation-duration: 2s !important;
+}
+
 /**********
  * POPUPS *
  **********/
