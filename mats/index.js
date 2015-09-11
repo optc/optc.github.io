@@ -274,13 +274,14 @@ app.directive('removeOnClick',function() {
     return {
         restrict: 'A',
         link: function(scope, element, attrs) {
-            var target = (attrs.removeOnClick == 'pool' ? scope.pool : scope.mats);
             element.longpress(
                 function() {
+                    var target = (attrs.removeOnClick == 'pool' ? scope.pool : scope.mats);
                     target.splice(scope.$index,1);
                     if (!scope.$$phase) scope.$apply();
                 },function(e) {
                     if (e.which != 2 && !e.ctrlKey && !e.metaKey) return;
+                    var target = (attrs.removeOnClick == 'pool' ? scope.pool : scope.mats);
                     target.splice(scope.$index,1);
                     if (!scope.$$phase) scope.$apply();
                     e.preventDefault();
