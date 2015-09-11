@@ -1422,7 +1422,7 @@ window.captains = {
     717: { // Dracule Mihawk Warlord of the Sea
         damageSorter: function(d) { return CrunchUtils.mihawkSort(d); },
         hitAtk: function(p) {
-            if (p.unit.class != 'Slasher') return 1;
+            if (!p.unit.class.has('Slasher')) return 1;
             var prev = p.modifiers.slice(p.chainPosition - 1, p.chainPosition)[0];
             return p.chainPosition === 0 ? 2 : (prev == 'Good' ? 2.25 : (prev == 'Great' ? 2.5 : (prev == 'Perfect' ? 2.75 : 2)));
         },
@@ -1431,7 +1431,7 @@ window.captains = {
     718: { // Dracule Mihawk, World's Strongest Swordsman
         damageSorter: function(d) { return CrunchUtils.mihawkSort(d); },
         hitAtk: function(p) {
-            if (p.unit.class != 'Slasher') return 1;
+            if (!p.unit.class.has('Slasher')) return 1;
             var prev = p.modifiers.slice(p.chainPosition - 1, p.chainPosition)[0];
             return p.chainPosition === 0 ? 2 : (prev == 'Good' ? 2.25 : (prev == 'Great' ? 2.5 : (prev == 'Perfect' ? 2.75 : 2)));
         },
