@@ -51,7 +51,7 @@ var MainCtrl = function($scope, $controller, $filter) {
                 text: 'Maximum tankable damage: ' + $filter('number')(zombie) + ' HP',});
     });
 
-    $scope.showGatherButton = window.units.some(function(x) { return x.growth && x.growth.atk === 0; });
+    $scope.showGatherButton = window.units.some(function(x) { return !x.incomplete && x.growth && x.growth.atk === 0; });
 
     /* * * * * Notifications * * * * */
 
