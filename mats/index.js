@@ -107,13 +107,17 @@ app.controller('MainCtrl',function($scope, $rootScope, $timeout) {
         // split by type
         $rootScope.required = { };
         $rootScope.unused = JSON.parse(JSON.stringify($rootScope.mats));
+        $rootScope.extra = [ ];
         for (var key in temp) {
             var id = parseInt(key, 10);
             var clazz = getEvolverClass(id);
-            if (!$rootScope.required.hasOwnProperty(clazz)) $rootScope.required[clazz] = { completed: { }, missing: { } };
-            if ($rootScope.available[id] >= temp[key].length)
+            if (!$rootScope.required.hasOwnProperty(clazz))
+                $rootScope.required[clazz] = { completed: { }, missing: { } };
+            if ($rootScope.available[id] >= temp[key].length) {
                 $rootScope.required[clazz].completed[key] = temp[key];
-            else
+                if ($rootScope.available[id] > temp[key].length)
+                    $rootScope.extra.push({ id: id, amount: $rootScope.available[id] - temp[key].length });
+            } else
                 $rootScope.required[clazz].missing[key] = temp[key];
             $rootScope.unused = $rootScope.unused.filter(function(x) { return x.id != id; });
         }

@@ -62,6 +62,16 @@
     </div>
 </div>
 
+<h2 class="page-header" ng-if="extra.length > 0">Extra materials</h2>
+
+<span ng-if="extra.length > 0">Required materials you have extra copies of. Shows the number of extra copies you have.</span>
+<div ng-if="extra.length > 0">
+    <div id="unused" class="panel">
+        <a class="slot small" target="_blank" decorate-slot uid="unit.id" amount="unit.amount"
+            ng-repeat="unit in extra"></a>
+    </div>
+</div>
+
 <h2 class="page-header">Import/export</h2>
 
 <div id="button-container">
