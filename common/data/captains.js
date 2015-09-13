@@ -1454,5 +1454,8 @@ window.captains = {
     },
     724: { // Ship Cutter T-Bone, Navy Headquarters Captain
         atk: function(p) { return p.unit.class.has("Slasher") ? 1.75 : 1; }
+    },
+    727: { // Monkey D. Luffy Gum-Gum Gatling
+        atk: function(p) { return p.unit.class.has("Freedom") || p.unit.class.has("Fighter") ? 1.75 : 1; }
     }
 };

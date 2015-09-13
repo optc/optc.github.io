@@ -549,5 +549,8 @@ window.specials = {
                 name: '667warning'
             });
         }
+    },
+    727: { // Monkey D. Luffy Gum-Gum Gatling
+        def: function(p) { return 0.5; }
     }
 };

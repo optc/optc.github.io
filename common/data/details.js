@@ -2647,14 +2647,14 @@ window.details = {
         captain: "Boosts RCV of DEX characters by 2x",
         cooldown: [ 23, 14 ]
     },
-    393: { // Kumashi
+    393: { // Kumacy
         special: "Deals 35x character's ATK in STR damage to one enemy",
-        specialName: "Kumashi Knuckle",
+        specialName: "Kumacy Knuckle",
         cooldown: [ 38, 18 ]
     },
-    394: { // Inuppe
+    394: { // Dog Penguine
         special: "Deals 500 damage to all enemies",
-        specialName: "Almighty Hurricane Called \"Love\"",
+        specialName: "The Tempest Called Love",
         cooldown: [ 17, 8 ]
     },
     395: { // Miss Merry Christmas
@@ -4873,5 +4873,11 @@ window.details = {
         specialName: "Peacock String Slasher",
         captain: "Recovers 2,000 HP at the end of the turn",
         cooldown: 11
+    },
+    727: { // Monkey D. Luffy Gum-Gum Gatling
+        special: "Deals 10x character's ATK in DEX damage to all enemies, reduces the defense of all enemies by 50% for 1 turn",
+        specialName: "Gum-Gum Gatling",
+        captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts the ATK of Freedom and Fighter characters by 1.75x",
+        cooldown: [ 15, 15 ]
     }
 };
