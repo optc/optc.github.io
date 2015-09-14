@@ -27,7 +27,7 @@ directives.decorateSlot = function($rootScope) {
             var update = function() { 
                 var target = element[0];
                 if (scope.uid == null && scope.udata == null) {
-                    target.style.backgroundImage = null;
+                    target.style.backgroundImage = 'url(' + Utils.getThumbnailUrl(null) + ')';
                     target.removeAttribute('title');
                 } else {
                     if (scope.uid != 1 || scope.flag || (scope.udata && scope.udata.name == 'Monkey D. Luffy'))
