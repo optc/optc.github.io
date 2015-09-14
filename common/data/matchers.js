@@ -63,6 +63,13 @@ window.matchers = [
     },
 
     {
+        name: 'HP-based ATK captains',
+        target: 'captain',
+        matcher: /Boosts ATK.+proportionally to/i
+    },
+
+
+    {
         name: 'Positional captains',
         target: 'captain',
         matcher: /(after scoring|following a chain)/i
