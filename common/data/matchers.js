@@ -53,7 +53,8 @@ window.matchers = [
     {
         name: '2.75x ATK captains',
         target: 'captain',
-        matcher: /Boosts (their )?ATK.+by 2.75x/i
+        matcher: /Boosts (their )?ATK.+by 2.75x/i,
+        include: [ 529, 530, 668, 669 ]
     },
 
     {

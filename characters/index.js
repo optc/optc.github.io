@@ -232,8 +232,9 @@ $.fn.dataTable.ext.search.push(function(settings, data, index) {
     // filter by active matchers
     if (filters.custom.length > 0 && !window.details.hasOwnProperty(id)) return false;
     for (var i=0;i<filters.custom.length;++i) {
-        var target = window.details[id][filters.custom[i].target];
-        if (!target || !filters.custom[i].matcher.test(target)) return false;
+        var target = window.details[id][filters.custom[i].target], m = filters.custom[i];
+        if (!target) return false;
+        if (!(m.include && m.include.indexOf(id) != -1) && !m.matcher.test(target)) return false;
     }
     // filter by character log
     if (filters.noLog && characterLog.hasOwnProperty(id)) return false;
