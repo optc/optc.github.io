@@ -60,9 +60,9 @@ window.abilities = [
     {
         name: 'Matching orb chance',
         levels: [
-            [ 5, 'Slightly boosted chances of getting matching orbs' ],
-            [ 10, 'Moderately boosted chances of getting matching orbs' ],
-            [ 20, 'Considerably boosted chances of getting matching orbs' ],
+            [ 5, 'Boosted chances (20%) of getting matching orbs' ],
+            [ 10, 'Boosted chances (22.2%) of getting matching orbs' ],
+            [ 20, 'Boosted chances (25%) of getting matching orbs' ],
         ]
     },
 
@@ -86,9 +86,9 @@ window.abilities = [
     {
         name: 'Automatic revive',
         levels: [
-            [ 5, 'Very rare chances to withstand a lethal enemy hit' ],
-            [ 10, 'Rare chances to withstand a lethal enemy hit' ],
-            [ 20, 'Low chances to withstand a lethal enemy hit' ]
+            [ 5, '5% chance to withstand a lethal enemy hit' ],
+            [ 10, '10% chance to withstand a lethal enemy hit' ],
+            [ 20, '20% chance to withstand a lethal enemy hit' ]
         ]
     }
 
