@@ -514,7 +514,7 @@ app.directive('filters',function($compile) {
             $compile(log)(scope);
             // orb controller filter
             var target = $('.custom-filter:contains("Orb controllers")');
-            var filter = $('<span class="custom-filter" id="controllers" ng-show="filters.custom[24]"><span class="separator">&darr;</span></span>');
+            var filter = $('<span class="custom-filter" id="controllers" ng-show="filters.custom[25]"><span class="separator">&darr;</span></span>');
             var separator = filter.find('.separator');
             [ 'STR', 'DEX', 'QCK', 'PSY', 'INT', 'RCV', 'TND' ].forEach(function(type) {
                 var template = '<span class="%s" ng-class="{ active: filters.%f == \'%s\' }" ' +
