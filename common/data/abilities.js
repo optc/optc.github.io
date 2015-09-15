@@ -1,0 +1,95 @@
+window.abilities = [
+
+    {
+        name: 'Damage reduction',
+        levels: [
+            [ 5, 'Received damage reduced by 3%' ],
+            [ 10, 'Received damage reduced by 5%' ],
+            [ 15, 'Received damage reduced by 10%' ]
+        ]
+    },
+
+    {
+        name: 'Cooldown reduction',
+        levels: [
+            [ 10, 'Cooldown of all specials reduced by 1 turn at the start of the fight' ],
+            [ 20, 'Cooldown of all specials reduced by 2 turns at the start of the fight' ]
+        ]
+    },
+
+    {
+        name: 'Bind reduction',
+        levels: [
+            [ 10, 'Bind duration reduced by 1 turn' ],
+            [ 15, 'Bind duration reduced by 2 turns' ],
+            [ 20, 'Bind duration reduced by 3 turns' ]
+        ]
+    },
+
+    {
+        name: 'Silence reduction',
+        levels: [
+            [ 10, 'Silence duration reduced by 1 turn' ],
+            [ 15, 'Silence duration reduced by 2 turns' ],
+            [ 20, 'Silence duration reduced by 3 turns' ]
+        ]
+    },
+
+    {
+        name: 'Automatic healing',
+        levels: [
+            [ 5, '100 HP recovered at the end of each turn' ],
+            [ 8, '200 HP recovered at the end of each turn' ],
+            [ 12, '300 HP recovered at the end of each turn' ],
+            [ 16, '500 HP recovered at the end of each turn' ],
+            [ 24, '1000 HP recovered at the end of each turn' ]
+        ]
+    },
+
+    {
+        name: 'Increased RCV',
+        levels: [
+            [ 5, 'Crew\'s RCV boosted by 100 units' ],
+            [ 8, 'Crew\'s RCV boosted by 200 units' ],
+            [ 12, 'Crew\'s RCV boosted by 300 units' ],
+            [ 16, 'Crew\'s RCV boosted by 500 units' ],
+            [ 24, 'Crew\'s RCV boosted by 1000 units' ]
+        ]
+    },
+
+    {
+        name: 'Matching orb chance',
+        levels: [
+            [ 5, 'Slightly boosted chances of getting matching orbs' ],
+            [ 10, 'Moderately boosted chances of getting matching orbs' ],
+            [ 20, 'Considerably boosted chances of getting matching orbs' ],
+        ]
+    },
+
+    {
+        name: 'Poison resistance',
+        levels: [
+            [ 10, 'Poison damage reduced by 20%' ],
+            [ 15, 'Poison damage reduced by 50%' ],
+            [ 20, 'Poison damage reduced by 100%' ],
+        ]
+    },
+
+    {
+        name: 'Map damage resistance',
+        levels: [
+            [ 10, 'Map damage reduced by 50%' ],
+            [ 15, 'Map damage reduced by 100%' ],
+        ]
+    },
+
+    {
+        name: 'Automatic revive',
+        levels: [
+            [ 5, 'Very rare chances to withstand a lethal enemy hit' ],
+            [ 10, 'Rare chances to withstand a lethal enemy hit' ],
+            [ 20, 'Low chances to withstand a lethal enemy hit' ]
+        ]
+    }
+
+];

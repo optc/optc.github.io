@@ -16,14 +16,15 @@ var save = function(key,object) {
 
 /* * * * * Version control * * * * */
 
-var version = JSON.parse(localStorage.getItem('version')) || 7;
+var version = JSON.parse(localStorage.getItem('version')) || 8;
 
-if (version < 7) {
+if (version < 8) {
     var data = JSON.parse(localStorage.getItem('data')) || { };
-    data.ship = [ 1, 5 ];
+    data.team.forEach(function(x) {
+        if (!x.hasOwnProperty('abilities')) x.abilities = [ null, null, null, null, null ];
+    });
     localStorage.setItem('data', JSON.stringify(data));
-    localStorage.setItem('version', JSON.stringify(7));
-    if (version < 6) doAlert = true;
+    localStorage.setItem('version', JSON.stringify(8));
 }
 
 /* * * * * Controller * * * * */

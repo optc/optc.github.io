@@ -137,7 +137,7 @@ controllers.SlotsCtrl = function($scope, $state, $stateParams) {
         if (e.which == 1 && !e.ctrlKey && !e.metaKey) {
             slot.team.map(function(x,n) {
                 $scope.resetSlot(n);
-                if (x !== null) $scope.data.team[n] = { unit: units[x.unit], level: x.level, candies: x.candies };
+                if (x !== null) $scope.data.team[n] = { unit: units[x.unit], level: x.level, candies: x.candies, abilities: x.abilities };
             });
             if (slot.hasOwnProperty('defense')) $scope.data.defense = parseInt(slot.defense, 10) || 0;
             if (slot.hasOwnProperty('ship')) $scope.data.ship = slot.ship;
@@ -154,7 +154,7 @@ controllers.SlotsCtrl = function($scope, $state, $stateParams) {
     $scope.saveTeam = function() {
         $scope.$broadcast('$validate');
         var team = $scope.data.team.map(function(x) {
-            return !x.unit ? null : { unit : x.unit.number, level: x.level, candies: x.candies };
+            return !x.unit ? null : { unit : x.unit.number, level: x.level, candies: x.candies, abilities: x.abilities };
         });
         var result = { name: $scope.lastSlot, team: team };
         if ($scope.saveShip) result.ship = $scope.data.ship;
@@ -222,6 +222,52 @@ controllers.CandyCtrl = function($scope, $state, $stateParams) {
     $scope.resetCandies = function() {
         $scope.data.team[$scope.slot].candies = { hp: 0, atk: 0, rcv: 0 };
     };
+};
+
+/********************
+ * AbilitySlotsCtrl *
+ ********************/
+
+controllers.AbilitySlotsCtrl = function($scope, $state, $stateParams) {
+    $scope.slot = $stateParams.slot;
+    $scope.busy = false;
+    $scope.resetAbilities = function() {
+        $scope.data.team[$scope.slot].abilities = [ null, null, null, null, null ];
+    };
+    $scope.getName = function(id) {
+        if (id === undefined) return 'None selected';
+        return window.abilities[id].name;
+    };
+};
+
+/**********************
+ * AbilityPopoverCtrl *
+ **********************/
+
+controllers.AbilityPopoverCtrl = function($scope, $state, $stateParams) {
+    var findAbility = function(id,level) {
+        var result = { current: 0, missing: -1 }, i;
+        for (i=0;i<abilities[id].levels.length && level >= abilities[id].levels[i][0];++i);
+        var abilityLevel = i - 1;
+        return {
+            id: id,
+            level: i,
+            points: level,
+            description: (i < 1 ? 'Inactive' : abilities[id].levels[i-1][1]),
+            missing: (i < abilities[id].levels.length ? abilities[id].levels[i][0] - level : -1),
+            next: (i < abilities[id].levels.length ? abilities[id].levels[i][1] : null)
+        };
+    };
+    var temp = [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ];
+    $scope.data.team.forEach(function(unit) {
+        unit.abilities.forEach(function(ability) { 
+            if (ability !== null) temp[ability.id] += ability.level;
+        });
+    });
+    $scope.summary = temp.map(function(x,n) {
+        if (x === 0) return null;
+        return findAbility(n,x);
+    });
 };
 
 /***************

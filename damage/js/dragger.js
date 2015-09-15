@@ -146,6 +146,7 @@ directives.draggable = function() {
             .on('down',function(e) {
                 isDown = false;
                 if (e.which > 1 || e.ctrlKey || e.metaKey || e.altKey || e.shiftKey) return;
+                if (e.target && $(e.target).hasClass('unitAbilities')) return;
                 if ($(e.target).parent().hasClass('slide') || Utils.isClickOnOrb(e,e.target.parentNode)) return;
                 isDown = true;
             })

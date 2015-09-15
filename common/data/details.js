@@ -3908,7 +3908,7 @@ window.details = {
         special: "Changes hindrance orbs into either [QCK] or [DEX] orbs, deals 15x character's ATK in QCK damage to all enemies",
         specialName: "Tatsu Maki",
         captain: "Boosts ATK of QCK and DEX characters by 1.5x",
-        cooldown: 20,
+        cooldown: [ 20, 17 ],
         evolution: 580,
         evolvers: [ 117, 85, 86, 96, 97 ]
     },
@@ -3916,7 +3916,7 @@ window.details = {
         special: "Changes hindrance orbs into either [QCK] or [DEX] orbs, deals 15x character's ATK in QCK damage to all enemies",
         specialName: "Tatsu Maki",
         captain: "Boosts ATK of QCK and DEX characters by 2x",
-        cooldown: 20
+        cooldown: [ 20, 17 ]
     },
     581: { // Genbou
         special: "Cuts all enemies' current HP by 7%",
@@ -4051,7 +4051,7 @@ window.details = {
         special: "Cuts all enemies' current HP by 10%, changes [QCK] orbs into [DEX] orbs",
         specialName: "Diable Jambe - Extra Hachis",
         captain: "Boosts ATK of Fighter characters by 2x",
-        cooldown: 18,
+        cooldown: [ 18, 15 ],
         evolution: 605,
         evolvers: [ 117, 86, 97, 97, 302 ]
     },
@@ -4059,7 +4059,7 @@ window.details = {
         special: "Cuts all enemies' current HP by 10%, changes [QCK] orbs into [DEX] orbs",
         specialName: "Diable Jambe - Extra Hachis",
         captain: "Boosts ATK of Fighter characters by 2x, reduces damage received by 20%",
-        cooldown: 18
+        cooldown: [ 18, 15 ]
     },
     606: { // Zeff the Pirate
         special: "Deals 20x character's ATK in DEX damage to one enemy, changes neighboring slots' orbs into [RCV] orbs",
@@ -4340,7 +4340,7 @@ window.details = {
         specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.5x more damage and opposite orbs will deal 1.5x less damage",
         specialName: "Thunder Lance Tempo",
         captain: "Boosts ATK of INT characters by 2x and their RCV by 1.5x",
-        cooldown: 15,
+        cooldown: [ 15, 12 ],
         evolution: 651,
         evolvers: [ 117, 83, 88, 93, 104 ]
     },
@@ -4349,7 +4349,7 @@ window.details = {
         specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.5x more damage and opposite orbs will deal 1.5x less damage",
         specialName: "Thunder Lance Tempo",
         captain: "Boosts ATK of INT characters by 2x and their RCV by 1.5x",
-        cooldown: 15
+        cooldown: [ 15, 12 ]
     },
     652: { // Iron Mask Duval
         special: "Cuts all enemies' current HP by 20%, reduces damage received by 50% for 1 turn",
@@ -4751,7 +4751,7 @@ window.details = {
         special: "Empties all slots with hindrance orbs, boosts ATK of Shooter characters by 1.25x for 3 turns, deals 15x character's ATK in PSY damage to all enemies",
         specialName: "The Man Who Will Build the Ship of Dreams",
         captain: "Boosts ATK of Shooter characters by 1.5x",
-        cooldown: 23,
+        cooldown: [ 23, 20 ],
         evolution: 711,
         evolvers: [ 117, 87, 94, 103, 303 ]
     },
@@ -4759,7 +4759,7 @@ window.details = {
         special: "Empties all slots with hindrance orbs, boosts ATK of Shooter characters by 1.25x for 3 turns, deals 15x character's ATK in PSY damage to all enemies",
         specialName: "The Man Who Will Build the Ship of Dreams",
         captain: "Boosts ATK of Shooter characters by 2x",
-        cooldown: 23
+        cooldown: [ 23, 20 ]
     },
     712: { // Gan Fall
         special: "Deals 15x character's ATK in QCK damage to one enemy, boosts ATK of the characters in the top row by 1.5x for 2 turns",

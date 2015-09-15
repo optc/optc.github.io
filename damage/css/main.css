@@ -316,12 +316,17 @@ body, html {
     padding: 5px;
 }
 
+#other > button:nth-child(3), 
 #other > button:last-child {
     width: 35px;
 }
 
-#other > button:not(:last-child) {
+#other > button:first-child,
+#other > button:nth-child(2) {
     width: 110px;
+}
+
+#other > :not(:last-child) {
     margin-right: 5px;
 }
 
@@ -338,6 +343,10 @@ body, html {
 
 #urlContainer > input {
     width: 350px;
+}
+
+#abilitySummary {
+    cursor: help;
 }
 
 /*******************
@@ -727,6 +736,20 @@ li input {
     margin-right: 25px;
 }
 
+#slot-dialog {
+    width: 400px;
+}
+
+.outerSlotContainer {
+    position: relative;
+}
+
+.slotContainer {
+    position: fixed;
+    width: 100%;
+    height: 33px;
+}
+
 /********
  * SHIP *
  ********/
@@ -799,6 +822,24 @@ li input {
     pointer-events: none;
     text-shadow: 0 0 black, 0 2px black, 2px 0 black, 2px 2px black, 0 -2px black, -2px 0 black, -2px -2px black,
                  0 0 black, 0 1px black, 1px 0 black, 1px 1px black, 0 -1px black, -1px 0 black, -1px -1px black;
+}
+
+.unitAbilities {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    bottom: 23px;
+    left: 7px;
+    z-index: 4;
+    font-weight: bold;
+    color: black;
+    background: mistyrose;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1pt black;
+}
+
+.unitAbilities:hover {
+    background: lightcoral;
 }
 
 /***********
@@ -899,7 +940,7 @@ body > .popover .popover-content {
         font-size: 100%;
     }
 
-    .popover {
+    .popover:not([title="Active Abilities"]) {
         display: none !important;
     }
 

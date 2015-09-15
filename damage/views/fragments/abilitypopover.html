@@ -1,0 +1,23 @@
+<div class="popover-data" ng-controller="AbilityPopoverCtrl">
+
+    <table class="table table-striped" id="ability-table">
+        <tbody>
+            <tr ng-repeat="i in [0,1,2,3,4,5,6,7,8,9]" ng-show="summary[i] !== null">
+                <td>
+                    <div class="ability"></div>
+                </td>
+                <td>
+                    <b>{{summary[i].points}} point{{summary[i].points > 1 ? 's' : ''}}, level {{summary[i].level}}:</b>
+                    <span ng-class="{ inactive: summary[i].level == 0 }">{{summary[i].description}}</span>
+                    <br ng-if="summary[i].missing > -1" />
+                    <span ng-if="summary[i].missing > -1" class="next">
+                        <b>Next level:</b>
+                        {{summary[i].next}}
+                        (<b>{{summary[i].missing}}</b> more points needed)
+                    </span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>

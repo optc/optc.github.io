@@ -11,12 +11,12 @@ var SharedRootCtrl = function($scope) {
     $scope.data = {
 
         team: [
-            { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 } },
-            { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 } },
-            { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 } },
-            { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 } },
-            { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 } },
-            { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 } }
+            { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 }, abilities: [ null, null, null, null, null ] },
+            { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 }, abilities: [ null, null, null, null, null ] },
+            { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 }, abilities: [ null, null, null, null, null ] },
+            { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 }, abilities: [ null, null, null, null, null ] },
+            { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 }, abilities: [ null, null, null, null, null ] },
+            { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 }, abilities: [ null, null, null, null, null ] }
         ],
 
         percHP: 100.0,
@@ -60,13 +60,19 @@ var SharedRootCtrl = function($scope) {
 
     $scope.resetSlot = function(n,onlyTransitional) {
         if (!onlyTransitional)
-            $scope.data.team[n] = { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 } };
+            $scope.data.team[n] = { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 },
+                abilities: [ null, null, null, null, null ] };
         $scope.tdata.team[n] = { orb: 1, special: false, lock: 0, silence: 0 };
     };
 
     /* * * * * Custom hit modifiers resetting * * * * */
 
-    var resetHits = function() { $scope.tdata.customHitModifiers = null; };
+    var resetHits = function() {
+        $scope.tdata.customHitModifiers = null;
+        $scope.showAbilitySummary = $scope.data.team.some(function(x,n) {
+            return x.abilities.some(function(y) { return y !== null; });
+        });
+    };
 
     $scope.$watch('data.team', resetHits, true);
     $scope.$watch('tdata.team', resetHits, true);
