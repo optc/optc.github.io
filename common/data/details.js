@@ -4196,8 +4196,8 @@ window.details = {
         specialName: "Rankyaku - Ran",
         captain: "Boosts ATK of Slasher characters by 1.5x",
         cooldown: 25,
-        evolution: 631,
-        evolvers: [ 117, 90, 96, 301, 101 ]
+        evolution: [ 631, 736 ],
+        evolvers: [ [ 117, 90, 96, 301, 101 ], [ 118, 78, 94, 95, 100 ] ]
     },
     631: { // Kaku Rokushiki, Cipher Pol No.9
         special: "Changes all orbs into either [QCK] or [DEX] orbs, deals random QCK damage to all enemies",
@@ -4210,8 +4210,8 @@ window.details = {
         specialName: "Shigan - Oren",
         captain: "Boosts ATK of Fighter characters by 1.5x",
         cooldown: 25,
-        evolution: 633,
-        evolvers: [ 117, 89, 95, 300, 100 ]
+        evolution: [ 633, 737 ],
+        evolvers: [ [ 117, 89, 95, 300, 100 ], [ 118, 79, 94, 96, 101 ] ]
     },
     633: { // Rob Lucci Rokushiki, Cipher Pol No.9
         special: "Changes all orbs into either [STR], [PSY] or [INT] orbs, deals random STR damage to all enemies, reduces the defense of all enemies by 50% for 2 turns",
@@ -4879,5 +4879,65 @@ window.details = {
         specialName: "Gum-Gum Gatling",
         captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts the ATK of Freedom and Fighter characters by 1.75x",
         cooldown: [ 15, 15 ]
+    },
+    728: { // Kalifa, Cipher Pol No.9
+        special: "Randomizes all orbs, recovers a small amount of HP at the end of the turn for 3 turns",
+        specialName: "Sheep Cloud Relaxing Bubbles",
+        captain: "Boosts ATK and RCV of DEX characters by 1.2x, slightly boosts chances of getting [DEX] orbs",
+        cooldown: 20
+    },
+    730: { // Jabra, Cipher Pol No.9
+        special: "Reduces current HP, deals 2x the amount of HP subtracted in INT damage to all enemies, boosts ATK of INT units by 1.5x for 1 turn",
+        specialName: "Rankyaku - Lupus Fall",
+        captain: "Boosts ATK and HP of INT units by 1.2x, deals 9 HP as fixed damage to all enemies at the end of the turn",
+        cooldown: 25,
+        evolution: 731,
+        evolvers: [ 117, 88, 93, 99, 304 ]
+    },
+    731: { // Jabra Rokushiki, Cipher Pol No.9
+        special: "Reduces current HP, deals 2x the amount of HP subtracted in INT damage to all enemies, boosts ATK of INT units by 1.5x for 1 turn",
+        specialName: "Rankyaku - Lupus Fall",
+        captain: "Boosts ATK and HP of INT units by 1.5x, deals 9 HP as fixed damage to all enemies at the end of the turn",
+        cooldown: 25
+    },
+    732: { // Kakuro, Cipher Pol No.9
+        special: "Deals 13x character's ATK in STR damage to one enemy, reduces damage received by 50% for 1 turn",
+        specialName: "Tekkai Dama",
+        captain: "Boosts ATK of STR characters by 1.5x, reduces damage received by 10%",
+        cooldown: 18,
+        evolution: 733,
+        evolvers: [ 116, 84, 95, 300 ]
+    },
+    733: { // Kakuro Rokushiki, Cipher Pol No.9
+        special: "Deals 13x character's ATK in STR damage to one enemy, reduces damage received by 50% for 1 turn",
+        specialName: "Tekkai Dama",
+        captain: "Boosts ATK of STR characters by 1.5x, reduces damage received by 20%",
+        cooldown: 18
+    },
+    734: { // Kumadori, Cipher Pol No.9
+        special: "For 1 turn, boosts the amount healed by RCV orbs by 1.5x, then 2x, then 2.5x from the third crew member onward",
+        specialName: "Life Return - Digestion, Absorption",
+        captain: "Boosts ATK and RCV of PSY units by 1.2x",
+        cooldown: 14,
+        evolution: 735,
+        evolvers: [ 116, 87, 98, 303 ]
+    },
+    736: { // Kaku Human-Beast, Ox-Ox Fruit Model: Giraffe
+        special: "Deals 20x character's ATK in STR damage to all enemies, changes [QCK] orbs into [STR] orbs",
+        specialName: "Fierce Smash",
+        captain: "Boosts ATK of Slasher characters by 2.5 if HP is above 50% at the start of the turn",
+        cooldown: 25
+    },
+    737: { // Lucci Human-Beast, Cat-Cat Fruit Model: Leopard
+        special: "Changes [RCV] orbs into [QCK] orbs, changes neighboring slots' orbs into [QCK] orbs",
+        specialName: "Shigan - Bachi",
+        captain: "Boosts ATK of Fighter characters by 2.75x if HP is below a certain theshold at the start of the turn",
+        cooldown: 18
+    },
+    738: { // Spandam
+        special: "Deals 200x character's ATK in INT damage to one enemy",
+        specialName: "Ivory Rush",
+        captain: "Boosts ATK of characters with cost 21 or more by 2x",
+        cooldown: 35
     }
 };

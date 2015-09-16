@@ -723,7 +723,18 @@ window.units = [
     [ "Jerry, Cipher Pol No.6", "STR", [ "Fighter", "Freedom" ], 4, 15, 8, 2, 70, 1066998, 439, 323, 70, 1000, 712, 212, 1 ],
     [ "T-Bone", "PSY", [ "Slasher", "Knowledge" ], 3, 12, 6, 1, 50, 392109, 99, 78, 42, 958, 542, 162, 1 ],
     [ "Ship Cutter T-Bone, Navy Headquarters Captain", "PSY", [ "Slasher", "Knowledge" ], 4, 20, 4, 3, 99, 3000000, 900, 493, 133, 1700, 1100, 300, 1 ],
-    [ "Nefertari Vivi, Record of the Voyage - Strawhat Crew (Log Vivi)", "QCK", [ "Slasher", "Freedom" ], 4, 12, 6, 2, 50, null, 159, 81, 80, null, null, null, 0 ],
+    [ "Nefertari Vivi, Record of the Voyage - Strawhat Crew (Log Vivi)", "QCK", [ "Slasher", "Freedom" ], 4, 12, 6, 2, 50, null, 159, 81, 80, null, null, null, 0.7 ],
     [ "Nefertari Vivi, Dream of the Voyage - Pirate Queen (Log Vivi)", "QCK", [ "Slasher", "Freedom" ], 5, 20, 4, 3, 99, null, 800, 371, 258, 1591, 777, 474, 0 ],
-    [ "Monkey D. Luffy Gum-Gum Gatling", "DEX", [ "Freedom", "Fighter" ], 4, 15, 8, 3, 99, null, 212, 100, 46, 1777, 795, 270, 0 ]
+    [ "Monkey D. Luffy Gum-Gum Gatling", "DEX", [ "Freedom", "Fighter" ], 4, 15, 8, 3, 99, null, 212, 100, 46, 1777, 795, 270, 0 ],
+    [ "Kalifa, Cipher Pol No.9", "DEX", "Fighter", 3, 12, 5, 2, 50, null, 229, 105, 81, null, null, null, 0 ],
+    [ ],
+    [ "Jabra, Cipher Pol No.9", "INT", "Fighter", 4, 12, 4, 2, 50, null, 376, 170, -200, null, null, null, 0 ],
+    [ "Jabra Rokushiki, Cipher Pol No.9", "INT", "Fighter", 4, 20, 4, 3, 99, null, 1272, 521, -200, null, null, null, 0 ],
+    [ "Kakuro, Cipher Pol No.9", "STR", "Fighter", 3, 9, 4, 2, 35, null, null, null, null, 351, 135, 51, 0 ],
+    [ "Kakuro Rokushiki, Cipher Pol No.9", "STR", "Fighter", 4, 15, 6, 3, 70, null, null, null, null, 1077, 362, 97, 0 ],
+    [ "Kumadori, Cipher Pol No.9", "PSY", "Striker", 3, 9, 5, 2, 50, null, null, null, null, null, null, null, 0 ],
+    [ ],
+    [ "Kaku Human-Beast, Ox-Ox Fruit Model: Giraffe", "STR", "Slasher", 4, 20, 6, 3, 99, null, 1220, 692, 43, null, null, null, 0 ],
+    [ "Lucci Human-Beast, Cat-Cat Fruit Model: Leopard", "QCK", "Fighter", 4, 20, 4, 3, 99, null, 1032, 703, 56, 2200, 1302, 140, 0 ],
+    [ "Spandam", "INT", "Slasher", 4, 7, 5, 1, 35, null, 64, 35, 28, null, null, null, 0 ]
 ];
