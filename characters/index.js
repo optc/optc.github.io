@@ -300,9 +300,9 @@ app.controller('MainCtrl',function($scope, $rootScope, $state, $stateParams, $ti
         currentParameters = generateSearchParameters($stateParams.query, $.extend({ }, $scope.filters));
         // build regexes if necessary
         regexes = { };
-        if (filters.custom[24] && currentParameters.filters.ctrlFrom)
+        if (filters.custom[25] && currentParameters.filters.ctrlFrom)
             regexes.ctrlFrom = new RegExp('Changes[^,]+\\[' + currentParameters.filters.ctrlFrom + '\\][^,]+into');
-        if (filters.custom[24] && currentParameters.filters.ctrlTo)
+        if (filters.custom[25] && currentParameters.filters.ctrlTo)
             regexes.ctrlTo = new RegExp('Changes.+into[^,]+\\[' + currentParameters.filters.ctrlTo + '\\]');
         // redraw table
         table.fnDraw();

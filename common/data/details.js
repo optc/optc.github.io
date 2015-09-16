@@ -4411,7 +4411,7 @@ window.details = {
         special: "Delays all enemies for 2 turns, reduces the defense of all enemies by 50% for 2 turns",
         specialName: "Atlas Comet",
         captain: "Boosts ATK of Shooter characters by 2x",
-        cooldown: 13,
+        cooldown: [ 13, 10 ],
         evolution: 661,
         evolvers: [ 117, 85, 94, 96, 101 ]
     },
@@ -4419,7 +4419,7 @@ window.details = {
         special: "Delays all enemies for 2 turns, reduces the defense of all enemies by 50% for 2 turns",
         specialName: "Atlas Comet",
         captain: "Boosts ATK of Shooter characters by 2x, reduces cooldown of all specials by 1 turn at the start of the fight",
-        cooldown: 13
+        cooldown: [ 13, 10 ]
     },
     662: { // Nami Holiday
         special: "Deals 13x character's ATK in PSY damage to one enemy, randomizes all orbs other than [PSY]",
