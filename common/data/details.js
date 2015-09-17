@@ -4888,6 +4888,12 @@ window.details = {
         captain: "Boosts ATK and RCV of DEX characters by 1.2x, slightly boosts chances of getting [DEX] orbs",
         cooldown: 20
     },
+    729: { // Kalifa Rokushiki, Cipher Pol No.9
+        special: "Randomizes all orbs, recovers a small amount of HP at the end of the turn for 3 turns",
+        specialName: "Sheep Cloud Relaxing Bubbles",
+        captain: "Boosts ATK and RCV of DEX characters by 1.2x, boosts chances of getting [DEX] orbs",
+        cooldown: 20
+    },
     730: { // Jabra, Cipher Pol No.9
         special: "Reduces current HP, deals 2x the amount of HP subtracted in INT damage to all enemies, boosts ATK of INT units by 1.5x for 1 turn",
         specialName: "Rankyaku - Lupus Fall",

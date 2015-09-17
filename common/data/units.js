@@ -727,7 +727,7 @@ window.units = [
     [ "Nefertari Vivi, Dream of the Voyage - Pirate Queen (Log Vivi)", "QCK", [ "Slasher", "Freedom" ], 5, 20, 4, 3, 99, null, 800, 371, 258, 1591, 777, 474, 0 ],
     [ "Monkey D. Luffy Gum-Gum Gatling", "DEX", [ "Freedom", "Fighter" ], 4, 15, 8, 3, 99, null, 212, 100, 46, 1777, 795, 270, 0 ],
     [ "Kalifa, Cipher Pol No.9", "DEX", "Fighter", 3, 12, 5, 2, 50, null, 229, 105, 81, null, null, null, 0 ],
-    [ ],
+    [ "Kalifa Rokushiki, Cipher Pol No.9", "DEX", "Fighter", 4, 20, 5, 3, 99, null, 900, 401, 174, null, null, null, 0 ],
     [ "Jabra, Cipher Pol No.9", "INT", "Fighter", 4, 12, 4, 2, 50, null, 376, 170, -200, null, null, null, 0 ],
     [ "Jabra Rokushiki, Cipher Pol No.9", "INT", "Fighter", 4, 20, 4, 3, 99, null, 1272, 521, -200, null, null, null, 0 ],
     [ "Fukuro, Cipher Pol No.9", "STR", "Fighter", 3, 9, 4, 2, 35, null, null, null, null, 351, 135, 51, 0 ],
