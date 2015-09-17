@@ -162,7 +162,7 @@ window.details = {
         global: true
     },
     20: { // Sanji Diable Jambe Flambe
-        special: "Deals 5,000 damage to all enemies",
+        special: "Deals 5,000 fixed damage to all enemies",
         specialName: "Diable Jambe",
         captain: "Boosts ATK and HP of QCK characters by 1.5x",
         cooldown: [ 15, 10 ],
@@ -1519,7 +1519,7 @@ window.details = {
         global: true
     },
     230: { // Double Ironfist Fullbody
-        special: "Deals 200 damage to one enemy",
+        special: "Deals 200 fixed damage to one enemy",
         specialName: "Double Hyper Straight",
         captain: "Boosts ATK of STR characters by 1.5x",
         cooldown: [ 10, 5 ],
@@ -1692,7 +1692,7 @@ window.details = {
         global: true
     },
     254: { // Vista
-        special: "Deals 5,000 damage to all enemies",
+        special: "Deals 5,000 fixed damage to all enemies",
         specialName: "Rose Rondo",
         captain: "Boosts ATK and HP of INT characters by 2x",
         cooldown: [ 15, 10 ],
@@ -1701,7 +1701,7 @@ window.details = {
         global: true
     },
     255: { // Flower Sword Vista
-        special: "Deals 5,000 damage to all enemies",
+        special: "Deals 5,000 fixed damage to all enemies",
         specialName: "Rose Rondo",
         captain: "Boosts ATK and HP of INT characters by 2x",
         cooldown: [ 15, 10 ],
@@ -2634,26 +2634,26 @@ window.details = {
         cooldown: [ 17, 8 ]
     },
     391: { // Perona
-        special: "Reduces damage received by 90% for 1 turn, reduces the defense of all enemies by 80% for 1 turn, deals 1,000 damage to all enemies at the end of the following turn",
-        specialName: "Negative Horo",
+        special: "Reduces damage received by 90% for 1 turn, reduces the defense of all enemies by 80% for 1 turn, deals 1,000 fixed damage to all enemies at the end of the following turn",
+        specialName: "Negative Hollow",
         captain: "Boosts RCV of DEX characters by 1.5x",
         cooldown: [ 23, 14 ],
         evolution: 392,
         evolvers: [ 117, 86, 91, 97, 102 ]
     },
     392: { // Ghost Princess Perona
-        special: "Reduces damage received by 90% for 1 turn, reduces the defense of all enemies by 80% for 1 turn, deals 1,000 damage to all enemies at the end of the following turn",
-        specialName: "Negative Horo",
+        special: "Reduces damage received by 90% for 1 turn, reduces the defense of all enemies by 80% for 1 turn, deals 1,000 fixed damage to all enemies at the end of the following turn",
+        specialName: "Negative Hollow",
         captain: "Boosts RCV of DEX characters by 2x",
         cooldown: [ 23, 14 ]
     },
-    393: { // Kumacy
+    393: { // Kumacy (Kumashi)
         special: "Deals 35x character's ATK in STR damage to one enemy",
         specialName: "Kumacy Knuckle",
         cooldown: [ 38, 18 ]
     },
-    394: { // Dog Penguine
-        special: "Deals 500 damage to all enemies",
+    394: { // Dog Penguin (Inuppe)
+        special: "Deals 500 fixed damage to all enemies",
         specialName: "The Tempest Called Love",
         cooldown: [ 17, 8 ]
     },
@@ -2745,7 +2745,7 @@ window.details = {
         cooldown: [ 23, 14 ]
     },
     406: { // Zombie Shougun
-        special: "Reduces HP to 1, deals 1,000 damage to all enemies, boosts ATK by 1.2x for 1 turn",
+        special: "Reduces HP to 1, deals 1,000 fixed damage to all enemies, boosts ATK by 1.2x for 1 turn",
         specialName: "Competition Between Antique Soldiers",
         cooldown: [ 30, 15 ]
     },
@@ -2778,7 +2778,7 @@ window.details = {
         global: true
     },
     411: { // Bartholomew Kuma
-        special: "Changes neighboring slots' orbs into [STR] orbs, deals 1,000 damage to all enemies",
+        special: "Changes neighboring slots' orbs into [STR] orbs, deals 1,000 fixed damage to all enemies",
         specialName: "Ursa Shock",
         captain: "Boosts ATK and HP of STR characters by 2x",
         cooldown: [ 20, 14 ],
@@ -2787,7 +2787,7 @@ window.details = {
         global: true
     },
     412: { // Bartholomew Kuma Warlord of the Sea
-        special: "Changes neighboring slots' orbs into [STR] orbs, deals 1,000 damage to all enemies",
+        special: "Changes neighboring slots' orbs into [STR] orbs, deals 1,000 fixed damage to all enemies",
         specialName: "Ursa Shock",
         captain: "Boosts ATK and HP of STR characters by 2x",
         cooldown: [ 20, 14 ],
@@ -2957,7 +2957,7 @@ window.details = {
         cooldown: [ 12, 8 ]
     },
     437: { // Perona Sweet
-        special: "Recovers 3x character's RCV in HP, reduces damage received by 80% for 1 turn, deals 1,000 damage to all enemies at the end of the following turn",
+        special: "Recovers 3x character's RCV in HP, reduces damage received by 80% for 1 turn, deals 1,000 fixed damage to all enemies at the end of the following turn",
         specialName: "Negative Horo \"Sweet\"",
         captain: "Boosts RCV by 3x if HP is below 30% at the start of the turn",
         cooldown: [ 18, 18 ],
@@ -2965,7 +2965,7 @@ window.details = {
         evolvers: [ 118, 80, 86, 94, 97 ]
     },
     438: { // Perona Sweet Ghost Princess
-        special: "Recovers 3x character's RCV in HP, reduces damage received by 80% for 1 turn, deals 1,000 damage to all enemies at the end of the following turn",
+        special: "Recovers 3x character's RCV in HP, reduces damage received by 80% for 1 turn, deals 1,000 fixed damage to all enemies at the end of the following turn",
         specialName: "Negative Horo \"Sweet\"",
         captain: "Boosts RCV by 5x if HP is below 30% at the start of the turn",
         cooldown: [ 18, 18 ]
@@ -3193,7 +3193,7 @@ window.details = {
         cooldown: [ 25, 15 ]
     },
     476: { // Black God's Guard Group Skypiea God's Army
-        special: "Deals 1,000 damage to one enemy",
+        special: "Deals 1,000 fixed damage to one enemy",
         specialName: "Milky Intelligence Axe",
         cooldown: 20
     },
@@ -3678,7 +3678,7 @@ window.details = {
         cooldown: [ 25, 20 ]
     },
     545: { // Enel
-        special: "Deals 6,000 damage to all enemies, boosts ATK of PSY characters by 1.5x for 1 turn",
+        special: "Deals 6,000 fixed damage to all enemies, boosts ATK of PSY characters by 1.5x for 1 turn",
         specialName: "60 Million Volt Thunder Dragon",
         captain: "Boosts ATK of PSY characters by 2x",
         cooldown: [ 20, 15 ],
@@ -3686,7 +3686,7 @@ window.details = {
         evolvers: [ 118, 266, 92, 303, 103 ]
     },
     546: { // God Enel
-        special: "Deals 6,000 damage to all enemies, boosts ATK of PSY characters by 1.5x for 1 turn",
+        special: "Deals 6,000 fixed damage to all enemies, boosts ATK of PSY characters by 1.5x for 1 turn",
         specialName: "60 Million Volt Thunder Dragon",
         captain: "Boosts ATK of PSY characters by 2x, reduces damage received by 20%",
         cooldown: [ 20, 15 ]
@@ -3732,7 +3732,7 @@ window.details = {
         cooldown: [ 33, 18 ]
     },
     553: { // Roronoa Zoro, Merveille's Adventurer (Strong World/SW)
-        special: "Changes neighboring slots' orbs into [DEX], deals 1,000 damage to all enemies",
+        special: "Changes neighboring slots' orbs into [DEX], deals 1,000 fixed damage to all enemies",
         specialName: "Ashura Ugui",
         captain: "Boosts ATK of DEX characters by 2.75x if HP is below 30% at the start of the turn",
         cooldown: 20,
@@ -3740,7 +3740,7 @@ window.details = {
         evolvers: [ 118, 83, 97, 302, 102 ]
     },
     554: { // Roronoa Zoro, Strawhat Crew's Attack (Strong World/SW)
-        special: "Changes neighboring slots' orbs into [DEX], deals 1,000 damage to all enemies",
+        special: "Changes neighboring slots' orbs into [DEX], deals 1,000 fixed damage to all enemies",
         specialName: "Ashura Ugui",
         captain: "Boosts ATK of DEX characters by 3x if HP is below 30% at the start of the turn",
         cooldown: 20
@@ -3814,7 +3814,7 @@ window.details = {
         cooldown: [ 16, 10 ]
     },
     565: { // Hamburg
-        special: "Deals 5,000 damage to one enemy",
+        special: "Deals 5,000 fixed damage to one enemy",
         specialName: "Hamburger Hammer",
         cooldown: 18
     },
@@ -4034,7 +4034,7 @@ window.details = {
         cooldown: [ 18, 10 ]
     },
     602: { // Enel - 200 Million Volt Thunder God
-        special: "Reduces current HP by 90%, deals 20,000 damage to all enemies, boosts ATK of QCK characters by 2x for 1 turn",
+        special: "Reduces current HP by 90%, deals 20,000 fixed damage to all enemies, boosts ATK of QCK characters by 2x for 1 turn",
         specialName: "200 Million Volt Lightning God",
         captain: "Boosts ATK of QCK characters by 2x",
         cooldown: [ 32, 17 ],
@@ -4042,7 +4042,7 @@ window.details = {
         evolvers: [ 118, 266, 96, 301, 101 ]
     },
     603: { // Enel the Lightning Human - 200 Million Volt Thunder God
-        special: "Reduces current HP by 90%, deals 20,000 damage to all enemies, boosts ATK of QCK characters by 2x for 1 turn",
+        special: "Reduces current HP by 90%, deals 20,000 fixed damage to all enemies, boosts ATK of QCK characters by 2x for 1 turn",
         specialName: "200 Million Volt Lightning God",
         captain: "Boosts ATK of QCK characters by 2.25x, recovers 5x character's RCV in HP at the end of the turn",
         cooldown: [ 32, 17 ]
@@ -4181,7 +4181,7 @@ window.details = {
         cooldown: [ 18, 8 ]
     },
     628: { // Tilestone
-        special: "Deals 15,000 damage to one enemy",
+        special: "Deals 15,000 fixed damage to one enemy",
         specialName: "Keel Crusher",
         cooldown: 20
     },
@@ -4338,7 +4338,7 @@ window.details = {
         cooldown: 25
     },
     650: { // Nami, Record of the Voyage - Strawhat Crew (Log Nami)
-        special: "Deals 5,000 damage to one enemy, amplifies orb effects by 1.5x for 1 turn",
+        special: "Deals 5,000 fixed damage to one enemy, amplifies orb effects by 1.5x for 1 turn",
         specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.5x more damage and opposite orbs will deal 1.5x less damage",
         specialName: "Thunder Lance Tempo",
         captain: "Boosts ATK of INT characters by 2x and their RCV by 1.5x",
@@ -4347,7 +4347,7 @@ window.details = {
         evolvers: [ 117, 83, 88, 93, 104 ]
     },
     651: { // Nami, Dream of the Voyage - World Map (Log Nami)
-        special: "Deals 5,000 damage to one enemy, amplifies orb effects by 1.5x for 1 turn",
+        special: "Deals 5,000 fixed damage to one enemy, amplifies orb effects by 1.5x for 1 turn",
         specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.5x more damage and opposite orbs will deal 1.5x less damage",
         specialName: "Thunder Lance Tempo",
         captain: "Boosts ATK of INT characters by 2x and their RCV by 1.5x",
