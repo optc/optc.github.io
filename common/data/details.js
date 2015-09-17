@@ -4900,7 +4900,7 @@ window.details = {
         captain: "Boosts ATK and HP of INT units by 1.5x, deals 9 HP as fixed damage to all enemies at the end of the turn",
         cooldown: 25
     },
-    732: { // Kakuro, Cipher Pol No.9
+    732: { // Fukuro, Cipher Pol No.9
         special: "Deals 13x character's ATK in STR damage to one enemy, reduces damage received by 50% for 1 turn",
         specialName: "Tekkai Dama",
         captain: "Boosts ATK of STR characters by 1.5x, reduces damage received by 10%",
@@ -4908,7 +4908,7 @@ window.details = {
         evolution: 733,
         evolvers: [ 116, 84, 95, 300 ]
     },
-    733: { // Kakuro Rokushiki, Cipher Pol No.9
+    733: { // Fukuro Rokushiki, Cipher Pol No.9
         special: "Deals 13x character's ATK in STR damage to one enemy, reduces damage received by 50% for 1 turn",
         specialName: "Tekkai Dama",
         captain: "Boosts ATK of STR characters by 1.5x, reduces damage received by 20%",
