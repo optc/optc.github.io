@@ -1481,6 +1481,10 @@ window.captains = {
         atk: function(p) { return p.unit.type == "PSY" ? 1.2 : 1; },
         rcv: function(p) { return p.unit.type == "PSY" ? 1.2 : 1; }
     },
+    735: { // Kumadori Rokushiki, Cipher Pol No.9
+        atk: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; },
+        rcv: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; }
+    },
     736: { // Kaku Human-Beast, Ox-Ox Fruit Model: Giraffe
         atk: function(p) { return p.unit.class.has("Slasher") && p.percHP > 50.0 ? 2.5 : 1; }
     },

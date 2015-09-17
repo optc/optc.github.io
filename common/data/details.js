@@ -4924,6 +4924,12 @@ window.details = {
         evolution: 735,
         evolvers: [ 116, 87, 98, 303 ]
     },
+    735: { // Kumadori Rokushiki, Cipher Pol No.9
+        special: "For 1 turn, boosts the amount healed by RCV orbs by 1.5x, then 2x, then 2.5x from the third crew member onward",
+        specialName: "Life Return - Digestion, Absorption",
+        captain: "Boosts ATK and RCV of PSY units by 1.5x",
+        cooldown: 14
+    },
     736: { // Kaku Human-Beast, Ox-Ox Fruit Model: Giraffe
         special: "Deals 20x character's ATK in STR damage to all enemies, changes [QCK] orbs into [STR] orbs",
         specialName: "Fierce Smash",
