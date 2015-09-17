@@ -4958,7 +4958,7 @@ window.details = {
         captain: "Boosts ATK of characters with cost 21 or more by 2x",
         cooldown: 35
     },
-    739: { // Franky, Member of the Strawhat Crew
+    739: { // Franky, Member of the Strawhat Pirates
         special: "Reduces Bind duration by 5 turns, randomizes all orbs",
         specialName: "Coup de Boo",
         captain: "Boosts ATK of Freedom characters by 2x",
