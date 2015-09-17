@@ -1457,5 +1457,37 @@ window.captains = {
     },
     727: { // Monkey D. Luffy Gum-Gum Gatling
         atk: function(p) { return p.unit.class.has("Freedom") || p.unit.class.has("Fighter") ? 1.75 : 1; }
+    },
+
+    728: { // Kalifa, Cipher Pol No.9
+        atk: function(p) { return p.unit.type == "DEX" ? 1.2 : 1; },
+        rcv: function(p) { return p.unit.type == "DEX" ? 1.2 : 1; }
+    },
+    730: { // Jabra, Cipher Pol No.9
+        atk: function(p) { return p.unit.type == "INT" ? 1.2 : 1; },
+        hp: function(p) { return p.unit.type == "INT" ? 1.2 : 1; }
+    },
+    731: { // Jabra Rokushiki, Cipher Pol No.9
+        atk: function(p) { return p.unit.type == "INT" ? 1.5 : 1; },
+        hp: function(p) { return p.unit.type == "INT" ? 1.5 : 1; }
+    },
+    732: { // Kakuro, Cipher Pol No.9
+        atk: function(p) { return p.unit.type == "STR" ? 1.5 : 1; }
+    },
+    733: { // Kakuro Rokushiki, Cipher Pol No.9
+        atk: function(p) { return p.unit.type == "STR" ? 1.5 : 1; }
+    },
+    734: { // Kumadori, Cipher Pol No.9
+        atk: function(p) { return p.unit.type == "PSY" ? 1.2 : 1; },
+        rcv: function(p) { return p.unit.type == "PSY" ? 1.2 : 1; }
+    },
+    736: { // Kaku Human-Beast, Ox-Ox Fruit Model: Giraffe
+        atk: function(p) { return p.unit.class.has("Slasher") && p.percHP > 50.0 ? 2.5 : 1; }
+    },
+    737: { // Lucci Human-Beast, Cat-Cat Fruit Model: Leopard
+        atk: function(p) { return p.unit.class.has("Fighter") && p.percHP < 30.0 ? 2.75 : 1; }
+    },
+    738: { // Spandam
+        atk: function(p) { return p.unit.cost >= 21 ? 2 : 1; }
     }
 };

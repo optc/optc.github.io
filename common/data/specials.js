@@ -552,5 +552,19 @@ window.specials = {
     },
     727: { // Monkey D. Luffy Gum-Gum Gatling
         def: function(p) { return 0.5; }
+    },
+    730: { // Jabra, Cipher Pol No.9
+        atk: function(p) { return p.unit.type == "INT" ? 1.5 : 1; },
+        type: 'type'
+    },
+    731: { // Jabra Rokushiki, Cipher Pol No.9
+        atk: function(p) { return p.unit.type == "INT" ? 1.5 : 1; },
+        type: 'type'
+    },
+    732: { // Kakuro, Cipher Pol No.9
+        def: function(p) { return 0.5; }
+    },
+    733: { // Kakuro Rokushiki, Cipher Pol No.9
+        def: function(p) { return 0.5; }
     }
 };
