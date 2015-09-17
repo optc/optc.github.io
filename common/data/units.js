@@ -733,7 +733,7 @@ window.units = [
     [ "Fukuro, Cipher Pol No.9", "STR", "Fighter", 3, 9, 4, 2, 35, null, 351, 135, 51, null, null, null, 0 ],
     [ "Fukuro Rokushiki, Cipher Pol No.9", "STR", "Fighter", 4, 15, 6, 3, 70, null, 1077, 362, 97, 1850, 690, 177, 0 ],
     [ "Kumadori, Cipher Pol No.9", "PSY", "Striker", 3, 9, 5, 2, 35, null, null, null, null, null, null, null, 0 ],
-    [ "Kumadori Rokushiki, Cipher Pol No.9", "PSY", "Striker", 4, 15, 4, 3, 70, null, 755, 1792, 165, null, null, null, 0 ],
+    [ "Kumadori Rokushiki, Cipher Pol No.9", "PSY", "Striker", 4, 15, 4, 3, 70, null, 398, 1000, 88, 755, 1792, 165, 0 ],
     [ "Kaku Human-Beast, Ox-Ox Fruit Model: Giraffe", "STR", "Slasher", 4, 20, 6, 3, 99, null, 1220, 692, 43, null, null, null, 0 ],
     [ "Lucci Human-Beast, Cat-Cat Fruit Model: Leopard", "QCK", "Fighter", 4, 20, 4, 3, 99, null, 1032, 703, 56, 2200, 1302, 140, 0 ],
     [ "Spandam", "INT", "Slasher", 4, 7, 5, 1, 35, null, 64, 35, 28, null, null, null, 0 ],
