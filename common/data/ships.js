@@ -153,6 +153,24 @@ window.ships = [
             return !p.unit.class.has('Shooter') ? 1 :
                 [ 1, 1.1, 1.1, 1.1, 1.2, 1.2, 1.25, 1.25, 1.3, 1.3 ][p.boatLevel - 1];
         }
+    },
+
+    {
+        name: 'Dreadnaught Sabre',
+        thumb: null,
+        description: 'Boosts HP by 1.5x, deals 5,000 typeless damage at the end of the turn',
+        hp: function(p) {
+            return [ 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.5][p.boatLevel - 1];
+        }
+    },
+
+    {
+        name: 'Thousand Sunny',
+        thumb: null,
+        description: 'Boosts ATK by 1.5x. Special: deals 50,000 typeless damage to all enemies (cooldown: 15 turns).',
+        atk: function(p) {
+            return [ 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.5 ][p.boatLevel - 1];
+        }
     }
 
 ];

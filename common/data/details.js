@@ -2639,23 +2639,27 @@ window.details = {
         captain: "Boosts RCV of DEX characters by 1.5x",
         cooldown: [ 23, 14 ],
         evolution: 392,
-        evolvers: [ 117, 86, 91, 97, 102 ]
+        evolvers: [ 117, 86, 91, 97, 102 ],
+        global: true
     },
     392: { // Ghost Princess Perona
         special: "Reduces damage received by 90% for 1 turn, reduces the defense of all enemies by 80% for 1 turn, deals 1,000 fixed damage to all enemies at the end of the following turn",
         specialName: "Negative Hollow",
         captain: "Boosts RCV of DEX characters by 2x",
-        cooldown: [ 23, 14 ]
+        cooldown: [ 23, 14 ],
+        global: true
     },
     393: { // Kumacy (Kumashi)
         special: "Deals 35x character's ATK in STR damage to one enemy",
         specialName: "Kumacy Knuckle",
-        cooldown: [ 38, 18 ]
+        cooldown: [ 38, 18 ],
+        global: true
     },
     394: { // Dog Penguin (Inuppe)
         special: "Deals 500 fixed damage to all enemies",
         specialName: "The Tempest Called Love",
-        cooldown: [ 17, 8 ]
+        cooldown: [ 17, 8 ],
+        global: true
     },
     395: { // Miss Merry Christmas
         special: "Empties neighboring slots, amplifies orb effects by 1.25x for 1 turn",
