@@ -4189,7 +4189,9 @@ window.details = {
         special: "Empties all slots with hindrance orbs, deals random INT damage to all enemies",
         specialName: "Master Nail",
         captain: "Boosts ATK of characters with 3 or fewer stars by 2x",
-        cooldown: 23
+        cooldown: 23,
+        evolution: 739,
+        evolvers: [ 117, 82, 83, 99, 104 ]
     },
     630: { // Kaku, Cipher Pol No.9
         special: "Changes all orbs into either [QCK] or [DEX] orbs, deals random QCK damage to all enemies",
@@ -4925,13 +4927,13 @@ window.details = {
     736: { // Kaku Human-Beast, Ox-Ox Fruit Model: Giraffe
         special: "Deals 20x character's ATK in STR damage to all enemies, changes [QCK] orbs into [STR] orbs",
         specialName: "Fierce Smash",
-        captain: "Boosts ATK of Slasher characters by 2.5 if HP is above 50% at the start of the turn",
+        captain: "Boosts ATK of Slasher characters by 2.5x if HP is above 50% at the start of the turn",
         cooldown: 25
     },
     737: { // Lucci Human-Beast, Cat-Cat Fruit Model: Leopard
         special: "Changes [RCV] orbs into [QCK] orbs, changes neighboring slots' orbs into [QCK] orbs",
         specialName: "Shigan - Bachi",
-        captain: "Boosts ATK of Fighter characters by 2.75x if HP is below a certain theshold at the start of the turn",
+        captain: "Boosts ATK of Fighter characters by 2.75x if HP is below a certain threshold at the start of the turn",
         cooldown: 18
     },
     738: { // Spandam
@@ -4939,5 +4941,11 @@ window.details = {
         specialName: "Ivory Rush",
         captain: "Boosts ATK of characters with cost 21 or more by 2x",
         cooldown: 35
+    },
+    739: { // Franky, Member of the Strawhat Crew
+        special: "Reduces Bind duration by 5 turns, randomizes all orbs",
+        specialName: "Coup de Boo",
+        captain: "Boosts ATK of Freedom characters by 2x",
+        cooldown: 20
     }
 };
