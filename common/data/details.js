@@ -4887,13 +4887,13 @@ window.details = {
         cooldown: [ 15, 15 ]
     },
     728: { // Kalifa, Cipher Pol No.9
-        special: "Randomizes all orbs, recovers a small amount of HP at the end of the turn for 3 turns",
+        special: "Randomizes all orbs, recovers 6x character's RCV in HP at the end of the turn for 3 turns",
         specialName: "Sheep Cloud Relaxing Bubbles",
         captain: "Boosts ATK and RCV of DEX characters by 1.2x, slightly boosts chances of getting [DEX] orbs",
         cooldown: 20
     },
     729: { // Kalifa Rokushiki, Cipher Pol No.9
-        special: "Randomizes all orbs, recovers a small amount of HP at the end of the turn for 3 turns",
+        special: "Randomizes all orbs, recovers 6x character's RCV in HP at the end of the turn for 3 turns",
         specialName: "Sheep Cloud Relaxing Bubbles",
         captain: "Boosts ATK and RCV of DEX characters by 1.2x, boosts chances of getting [DEX] orbs",
         cooldown: 20
@@ -4949,7 +4949,7 @@ window.details = {
     737: { // Lucci Human-Beast, Cat-Cat Fruit Model: Leopard
         special: "Changes [RCV] orbs into [QCK] orbs, changes neighboring slots' orbs into [QCK] orbs",
         specialName: "Shigan - Bachi",
-        captain: "Boosts ATK of Fighter characters by 2.75x if HP is below a certain threshold at the start of the turn",
+        captain: "Boosts ATK of Fighter characters by 2.75x if HP is below 30% at the start of the turn",
         cooldown: 18
     },
     738: { // Spandam

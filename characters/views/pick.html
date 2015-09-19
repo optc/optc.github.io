@@ -1,0 +1,10 @@
+<div class="popover-data" id="column-picker" ng-controller="ColumnsCtrl">
+
+    <label ng-repeat="(key,data) in columns" class="pick-column">
+        <input type="checkbox" ng-model="columns[key]">
+        {{key}}
+    </label>
+
+    <button class="btn btn-primary" ng-click="save()">Save</button>
+
+</div>

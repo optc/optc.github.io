@@ -160,13 +160,39 @@ var getIslandBonus = function(y) {
  * Table configuration *
  ***********************/
 
+var additionalColumns = JSON.parse(localStorage.getItem('charColumns')) || [ ];
+
 var padding = Math.floor(Math.log(window.units.length+2) / Math.log(10)) + 1;
 var table = null;
 
 var currentParameters = null;
 
+var addImage = function(data, type, row, meta) {
+    return '<img class="slot small" data-original="' + Utils.getThumbnailUrl(row[0]) + '"> ' +
+        '<a ui-sref="main.view({ id: ' + parseInt(row[0],10) + '})">' + data + '</a>';
+};
+
+var getTableColumns = function() {
+    var result = [
+        { title: 'ID' },
+        { title: 'Name', render: addImage },
+        { title: 'Type' },
+        { title: 'Class' },
+        { title: 'HP' },
+        { title: 'ATK' },
+        { title: 'RCV' },
+        { title: 'Cost' },
+        { title: 'Slots' },
+        { title: 'Stars' },
+        { title: 'CL', orderable: false }
+    ];
+    additionalColumns.forEach(function(x) { result.splice(result.length-1, 0, { title: x }); });
+    return result;
+};
+
+
 var tableData = window.units.filter(function(x) { return x.name; }).map(function(x,n) {
-    return [
+    var result = [
         ('000' + (x.number+1)).slice(-padding),
         x.name,
         x.type,
@@ -180,6 +206,17 @@ var tableData = window.units.filter(function(x) { return x.name; }).map(function
         '',
         x.number
     ];
+    additionalColumns.forEach(function(c,n) {
+        var temp = 0;
+        if (c == 'ATK/HP') temp = Math.round(x.maxATK / x.maxHP * 100) / 100;
+        if (c == 'RCV/HP') temp = Math.round(x.maxRCV / x.maxHP * 100) / 100;
+        if (c == 'RCV/ATK') temp = Math.round(x.maxRCV / x.maxATK * 100) / 100;
+        if (c == 'ATK/CMB') temp = Math.round(x.maxATK / x.combo * 100) / 100;
+        if (c == 'CMB') temp = x.combo;
+        if (isNaN(temp)) temp = 0;
+        result.splice(result.length-2, 0, temp);
+    });
+    return result;
 });
 
 $.fn.dataTable.ext.search.push(function(settings, data, index) {
@@ -261,7 +298,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
             templateUrl: 'views/main.html',
             controller: 'MainCtrl'
         })
-
+        
         .state('main.view',{
             url: '^/view/:id',
             params: { previous: [ ] },
@@ -358,15 +395,24 @@ app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, 
     };
 });
 
+app.controller('ColumnsCtrl',function($scope, $rootScope, $state, $stateParams) {
+    $scope.columns = { 'ATK/HP': false, 'RCV/HP': false, 'RCV/ATK': false, 'ATK/CMB': false, 'CMB': false };
+    additionalColumns.forEach(function(x) {
+        if ($scope.columns.hasOwnProperty(x))
+            $scope.columns[x] = true;
+    });
+    $scope.save = function() {
+        var result = Object.keys($scope.columns).filter(function(x) { return $scope.columns[x]; });
+        localStorage.setItem('charColumns',JSON.stringify(result));
+        window.location.reload();
+    };
+});
+
 /**************
  * Directives *
  **************/
 
 app.directive('characterTable',function($rootScope, $compile) {
-    var addImage = function(data, type, row, meta) {
-        return '<img class="slot small" data-original="' + Utils.getThumbnailUrl(row[0]) + '"> ' +
-            '<a ui-sref="main.view({ id: ' + parseInt(row[0],10) + '})">' + data + '</a>';
-    };
     return {
         restrict: 'E',
         replace: true,
@@ -376,19 +422,7 @@ app.directive('characterTable',function($rootScope, $compile) {
                 iDisplayLength: JSON.parse(localStorage.getItem('unitsPerPage')) || 10,
                 stateSave: true,
                 data: tableData,
-                columns: [
-                    { title: 'ID' },
-                    { title: 'Name', render: addImage },
-                    { title: 'Type' },
-                    { title: 'Class' },
-                    { title: 'HP' },
-                    { title: 'ATK' },
-                    { title: 'RCV' },
-                    { title: 'Cost' },
-                    { title: 'Slots' },
-                    { title: 'Stars' },
-                    { title: 'CL', orderable: false }
-                ],
+                columns: getTableColumns(),
                 rowCallback: function(row, data, index) {
                     if (row.hasAttribute('loaded')) return;
                     // lazy thumbnails
@@ -397,9 +431,9 @@ app.directive('characterTable',function($rootScope, $compile) {
                         x.removeAttribute('data-original');
                     });
                     // character log checkbox
-                    var id = data[11] + 1;
+                    var id = data[data.length - 1] + 1;
                     var checkbox = $('<label><input type="checkbox" ng-change="checkLog(' + id + ')" ng-model="characterLog[' + id + ']"></input></label>');
-                    $(row.cells[10]).append(checkbox);
+                    $(row.cells[10 + additionalColumns.length]).append(checkbox);
                     // compile
                     $compile($(row).contents())($rootScope);
                     if (window.units[id - 1].incomplete) $(row).addClass('incomplete');
@@ -415,6 +449,11 @@ app.directive('characterTable',function($rootScope, $compile) {
             var link = $('<span class="help-link">Want to report or request something? Use <a>this form</a>.</span>');
             link.find('a').attr('href', 'https://docs.google.com/forms/d/1jSlwN0Ruyc5bFfxdXlwihqfLdCiELX7HQTabXoCV7hU/viewform?usp=send_form');
             link.insertAfter($('.dataTables_length'));
+            // pick column link
+            var pick = $('<a id="pick-link" popover-placement="bottom" popover-trigger="click" popover-title="Additional Columns" ' +
+                'popover-template="\'views/pick.html\'" popover-append-to-body="\'true\'">Additional columns</a>');
+            $compile(pick)(scope);
+            pick.insertAfter($('.dataTables_length'));
             // fuzzy toggle
             var fuzzyToggle = $('<label class="fuzzy-toggle"><input type="checkbox">Enable fuzzy search</input></label>');
             fuzzyToggle.attr('title','When enabled, searches will also display units whose name is not an exact match to the search keywords.\nUseful if you don\'t know the correct spelling of a certain unit.');

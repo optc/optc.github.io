@@ -135,10 +135,20 @@ input[type="text"] {
 
 .help-link {
     float: right;
-    margin-right: 15px;
+    margin-right: 10px;
     position: relative;
     top: 3px;
     color: red;
+}
+
+#pick-link {
+    float: right;
+    cursor: pointer;
+    margin-right: 10px;
+    position: relative;
+    top: 3px;
+    color: darkorchid;
+    font-weight: bold;
 }
 
 .fuzzy-toggle {
@@ -157,7 +167,7 @@ input[type="text"] {
     margin-bottom: 25px;
 }
 
-.popover {
+.popover:not([title="Additional Columns"]) {
     width: 450px !important;
     max-width: 450px;
     left: initial !important;
@@ -198,6 +208,15 @@ input[type="text"] {
     display: block;
     padding: 0 0 5px 0;
     background: rgb(240,240,240);
+}
+
+.pick-column {
+    display: block;
+}
+
+#column-picker .btn {
+    width: 100%;
+    padding: 3px 6px;
 }
 
 /*************
