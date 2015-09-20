@@ -200,7 +200,7 @@
                 <div ng-if="sizeOf(usedBy) > 0" ng-class="{ collapsed: collapsed.used && sizeOf(usedBy) > 3 }">
                     <div class="btn btn-info collapse-button" ng-click="collapsed.used = false">Click to show</div>
                     <div class="panel panel-default" ng-repeat="(base,evolutions) in usedBy">
-                        <div ng-repeat="id in evolutions">
+                        <div ng-repeat="id in evolutions track by $index">
                             <evolution unit="unit" base="base" evolvers="getEvos(base,id,unit.number + 1)"
                                 evolution="id" size="medium"></evolution>
                         </div>
@@ -231,7 +231,7 @@
                                 <td>
                                     <div class="slot small" decorate-slot uid="drop.thumb"></div>
                                     {{drop.name}}
-                                    <span ng-if="drop.bonus" class="bonus {{drop.bonus}}"></span>
+                                    <span ng-repeat="bonus in drop.bonuses" class="bonus {{bonus.slice(0,2)}} {{bonus.slice(3)}}"></span>
                                 </td>
                                 <td>{{drop.data.join(', ')}}</td>
                             </tr>

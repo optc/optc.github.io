@@ -816,4 +816,5 @@ var bonuses = [
     { type: 'beli'    , x: 5 , y: 4  },
     { type: 'beli'    , x: 6 , y: 10 },
     { type: 'beli'    , x: 6 , y: 17 },
-]
+    { type: 'stamina' , x: 6 , y: 18 }
+];

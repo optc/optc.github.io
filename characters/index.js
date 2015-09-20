@@ -102,8 +102,8 @@ var searchDropLocations = function(id) {
                 if (type == 'Fortnight') name += ' Fortnight';
                 else if (type == 'Raid') name += ' Raid';
                 var data = { name: name, thumb: drops[type][island].thumb, data: temp };
-                if (type == 'Story Island') data.bonus = getIslandBonus(island);
-                else if (drops[type][island].day == getDayOfWeek()) data.bonus = 'today';
+                if (type == 'Story Island' || drops[type][island].hasOwnProperty('day'))
+                    data.bonuses = getIslandBonuses(island, drops[type][island].day);
                 result.push(data);
             }
         }
@@ -144,16 +144,29 @@ var searchSameSpecials = function(id) {
     return result;
 };
 
-var getDayOfWeek = function() {
-    var now = new Date(), utc = new Date(now.getTime() + now.getTimezoneOffset() * 60000 - 8 * 3600000);
-    return (utc.getDay() === 0 ? 6 : utc.getDay() - 1);
+var getDayOfWeek = function(japan) {
+    var now = new Date(), utc = new Date(now.getTime() + now.getTimezoneOffset() * 60000), today;
+    if (!japan) today = new Date(utc.getTime() - 8 * 3600000);
+    else today = new Date(utc.getTime() + 9 * 3600000);
+    return (today.getDay() === 0 ? 6 : today.getDay() - 1);
 };
 
-var getIslandBonus = function(y) {
-    var x = getDayOfWeek(), bonus = bonuses.filter(function(data) {
-        return y >= data.y && x <= data.x && x + y == data.x + data.y;
-    })[0];
-    return (bonus ? bonus.type : null);
+var getIslandBonuses = function(y, day) {
+    var result = [ ];
+    if (day !== undefined) {
+        if (day == getDayOfWeek(false)) result.push('GL:today'); 
+        if (day == getDayOfWeek(true)) result.push('JP:today'); 
+    } else {
+        var getBonus = function(x) {
+            return bonuses.filter(function(data) {
+                return y >= data.y && x <= data.x && x + y == data.x + data.y;
+            })[0];
+        };
+        var global = getBonus(getDayOfWeek(false)), japan = getBonus(getDayOfWeek(true));
+        if (global) result.push('GL:' + global.type);
+        if (japan) result.push('JP:' + japan.type);
+    }
+    return result;
 };
 
 /***********************
