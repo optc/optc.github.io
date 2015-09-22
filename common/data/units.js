@@ -737,5 +737,11 @@ window.units = [
     [ "Kaku Human-Beast, Ox-Ox Fruit Model: Giraffe", "STR", "Slasher", 4, 20, 6, 3, 99, null, 1220, 692, 43, null, null, null, 0 ],
     [ "Lucci Human-Beast, Cat-Cat Fruit Model: Leopard", "QCK", "Fighter", 4, 20, 4, 3, 99, null, 1032, 703, 56, 2200, 1302, 140, 0 ],
     [ "Spandam", "INT", "Slasher", 4, 7, 5, 1, 35, null, 64, 35, 28, null, null, null, 0 ],
-    [ "Franky, Member of the Strawhat Pirates", "INT", [ "Fighter", "Freedom" ], 3, 18, 4, 3, 99, null, 1623, 765, 70, null, null, null, 0 ]
+    [ "Franky, Member of the Strawhat Pirates", "INT", [ "Fighter", "Freedom" ], 3, 18, 4, 3, 99, null, 1623, 765, 70, null, null, null, 0 ],
+    [ "Nero", "QCK", "Shooter", 3, 9, 6, 1, 35, null, 137, 239, 38, null, null, null, 0 ],
+    [ "Nero, Cipher Pol No.9", "QCK", "Shooter", 4, 15, 5, 2, 70, null, 277, 489, 51, null, null, null, 0 ],
+    [ "Wanze", "DEX", "Freedom", 3, 11, 4, 1, 50, null, 239, 57, 47, null, null, null, 0 ],
+    [ "Wanze, Cipher Pol No.7", "DEX", "Freedom", 4, 18, 5, 2, 99, null, 1059, 312, 170, null, null, null, 0 ],
+    [ "Portgas D. Ace, Record of the Voyage - Whitebeard Crew (Log Ace)", "QCK", [ "Freedom", "Fighter" ], 4, 12, 5, 2, 50, null, 377, 195, 72, null, null, null, 0 ],
+    [ "Portgas D. Ace, Dream of the Voyage - Pirate Summit (Log Ace)", "QCK", [ "Freedom", "Fighter" ], 5, 20, 4, 3, 99, null, 1063, 524, 140, null, null, null, 0 ]
 ];

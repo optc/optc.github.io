@@ -1493,5 +1493,22 @@ window.captains = {
     },
     738: { // Spandam
         atk: function(p) { return p.unit.cost >= 21 ? 2 : 1; }
+    },
+    739: { // Franky, Member of the Strawhat Pirates
+        atk: function(p) { return p.unit.class.has("Freedom") ? 2 : 1; }
+    },
+    742: { // Wanze
+        atk: function(p) { return p.unit.class.has("Freedom") ? 1.2 : 1; },
+        rcv: function(p) { return p.unit.class.has("Freedom") ? 1.2 : 1; }
+    },
+    743: { // evolved Wanze
+        atk: function(p) { return p.unit.class.has("Freedom") ? 1.5 : 1; },
+        rcv: function(p) { return p.unit.class.has("Freedom") ? 1.5 : 1; }
+    },
+    744: { // Log Ace
+        atk: function(p) { return p.unit.class.has("Freedom") ? 2 : 1; },
+    },
+    745: { // evolved Log Ace
+        atk: function(p) { return p.unit.class.has("Freedom") ? 2.5 : 1; },
     }
 };

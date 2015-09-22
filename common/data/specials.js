@@ -566,5 +566,21 @@ window.specials = {
     },
     733: { // Kakuro Rokushiki, Cipher Pol No.9
         def: function(p) { return 0.5; }
+    },
+    740: { // Nero
+        atk: function(p) { return 1.3; },
+        type: 'condition',
+        warning: 'Selected special (Nero) assumes the enemy has a defense buff active.'
+    },
+    741: { // Nero, Cipher Pol No.9
+        atk: function(p) { return 1.3; },
+        type: 'condition',
+        warning: 'Selected special (Nero, Cipher Pol No.9) assumes the enemy has a defense buff active.'
+    },
+    742: { // Wanze
+        orb: function(p) { return p.orb == 2.0 ? 1.25 : (p.orb == 0.5 ? 4/5 : 1); }
+    },
+    743: { // Wanze evolved
+        orb: function(p) { return p.orb == 2.0 ? 1.25 : (p.orb == 0.5 ? 4/5 : 1); }
     }
 };
