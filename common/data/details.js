@@ -4517,7 +4517,7 @@ window.details = {
         special: "Removes poison, reduces damage received by 50% for 2 turns, recovers 13x character's RCV in HP at the end of the turn for 2 turns",
         specialName: "Emporio Healing Hormone",
         captain: "Boosts ATK of Freedom characters by 2x",
-        cooldown: 21,
+        cooldown: [ 21, 15 ],
         evolution: 675,
         evolvers: [ 118, 83, 88, 304, 104 ]
     },
@@ -4525,7 +4525,7 @@ window.details = {
         special: "Removes poison, reduces damage received by 50% for 2 turns, recovers 13x character's RCV in HP at the end of the turn for 2 turns",
         specialName: "Emporio Healing Hormone",
         captain: "Boosts ATK of Freedom characters by 2.5x",
-        cooldown: 21
+        cooldown: [ 21, 15 ]
     },
     676: { // Inazuma
         special: "Reduces any damage received above 5,000 HP by 97% for 3 turns",
