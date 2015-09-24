@@ -4890,7 +4890,9 @@ window.details = {
         special: "Randomizes all orbs, recovers 6x character's RCV in HP at the end of the turn for 3 turns",
         specialName: "Sheep Cloud Relaxing Bubbles",
         captain: "Boosts ATK and RCV of DEX characters by 1.2x, slightly boosts chances of getting [DEX] orbs",
-        cooldown: 20
+        cooldown: 20,
+        evolution: 729,
+        evolvers: [ 117, 86, 91, 97, 302 ]
     },
     729: { // Kalifa Rokushiki, Cipher Pol No.9
         special: "Randomizes all orbs, recovers 6x character's RCV in HP at the end of the turn for 3 turns",
