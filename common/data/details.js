@@ -3018,31 +3018,35 @@ window.details = {
     },
     448: { // Thatch
         special: "Boosts chances of getting [QCK] orbs for 3 turns",
-        specialName: "Sword Leading to the Pirate King",
+        specialName: "Pirate King’s Sword",
         captain: "Boosts ATK of QCK characters by 3x if HP is above 99% at the start of the turn",
         cooldown: [ 16, 10 ],
         evolution: 449,
-        evolvers: [ 118, 83, 85, 301, 101 ]
+        evolvers: [ 118, 83, 85, 301, 101 ],
+        global: true
     },
-    449: { // Thatch of the Twin Blade
+    449: { // Twin-Blade Thatch
         special: "Boosts chances of getting [QCK] orbs for 3 turns",
-        specialName: "Sword Leading to the Pirate King",
+        specialName: "Pirate King’s Sword",
         captain: "Boosts ATK of QCK characters by 3x if HP is above 99% at the start of the turn",
-        cooldown: [ 16, 10 ]
+        cooldown: [ 16, 10 ],
+        global: true
     },
-    450: { // Namur
+    450: { // Namule (Namur)
         special: "Boosts ATK of Fighter characters by 1.5x for 1 turn, deals 25x character's ATK in DEX damage to one enemy",
-        specialName: "Number Eight's Blow",
+        specialName: "Number Eight’s One Hit",
         captain: "Boosts ATK of Fighter characters by 2x and their HP by 1.5x",
         cooldown: [ 25, 18 ],
         evolution: 451,
-        evolvers: [ 118, 83, 86, 302, 102 ]
+        evolvers: [ 118, 83, 86, 302, 102 ],
+        global: true
     },
-    451: { // One-Shot Namur
+    451: { // One-Hit Namule (Namur)
         special: "Boosts ATK of Fighter characters by 1.5x for 1 turn, deals 25x character's ATK in DEX damage to one enemy",
-        specialName: "Number Eight's Blow",
+        specialName: "Number Eight’s One Hit",
         captain: "Boosts ATK of Fighter characters by 2x and their HP by 1.5x",
-        cooldown: [ 25, 18 ]
+        cooldown: [ 25, 18 ],
+        global: true
     },
     452: { // Rakuyo
         special: "Changes own orb and the captain's orb into [PSY]",
@@ -3050,55 +3054,63 @@ window.details = {
         captain: "Reduces cooldown of all specials by 3 turns at the start of the fight, boosts ATK of Striker characters by 2x",
         cooldown: [ 16, 10 ],
         evolution: 453,
-        evolvers: [ 118, 83, 87, 303, 103 ]
+        evolvers: [ 118, 83, 87, 303, 103 ],
+        global: true
     },
-    453: { // Rakuyo of the Morning Star
+    453: { // Morning Star Rakuyo
         special: "Changes own orb and the captain's orb into [PSY]",
         specialName: "Dread Morning Star",
         captain: "Reduces cooldown of all specials by 3 turns at the start of the fight, boosts ATK of Striker characters by 2x",
-        cooldown: [ 16, 10 ]
+        cooldown: [ 16, 10 ],
+        global: true
     },
     454: { // Fossa
         special: "Boosts ATK of STR characters by 1.5x for 1 turn, deals 15x character's ATK in STR damage to all enemies",
-        specialName: "Flaming Sword",
+        specialName: "Manly Flaming Sword",
         captain: "Boosts ATK of STR characters by 2x, boosts damage of STR specials by 2x",
         cooldown: [ 25, 18 ],
         evolution: 455,
-        evolvers: [ 118, 83, 84, 300, 100 ]
+        evolvers: [ 118, 83, 84, 300, 100 ],
+        global: true
     },
-    455: { // Fossa the Flaming Blade
+    455: { // Fossa the Blazing Katana
         special: "Boosts ATK of STR characters by 1.5x for 1 turn, deals 15x character's ATK in STR damage to all enemies",
-        specialName: "Flaming Sword",
+        specialName: "Manly Flaming Sword",
         captain: "Boosts ATK of STR characters by 2x, boosts damage of STR specials by 2x",
-        cooldown: [ 25, 18 ]
+        cooldown: [ 25, 18 ],
+        global: true
     },
     456: { // Curiel
         special: "Changes the orbs in the middle row into either [STR] or [DEX] orbs, the orbs in the lower row into either [PSY] or [INT] orbs, freely switch orbs between slots once",
-        specialName: "Double Canon",
+        specialName: "Double Cannon",
         captain: "Boosts ATK of Shooter characters by 2x and their RCV by 1.5x",
         cooldown: [ 18, 10 ],
         evolution: 457,
-        evolvers: [ 118, 83, 88, 304, 104 ]
+        evolvers: [ 118, 83, 88, 304, 104 ],
+        global: true
     },
-    457: { // Curiel the Heavy Weapon Specialist
+    457: { // Heavy Specialist Curiel
         special: "Changes the orbs in the middle row into either [STR] or [DEX] orbs, the orbs in the lower row into either [PSY] or [INT] orbs, freely switch orbs between slots once",
-        specialName: "Double Canon",
+        specialName: "Double Cannon",
         captain: "Boosts ATK of Shooter characters by 2x and their RCV by 1.5x",
-        cooldown: [ 18, 10 ]
+        cooldown: [ 18, 10 ],
+        global: true
     },
     458: { // Sengoku
         special: "Deals random PSY damage to all enemies, boosts ATK by 1.5x for 1 turn",
-        specialName: "Buddha's Shockwave",
+        specialName: "Zen Shockwave",
         captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of characters with cost 20 or less by 3x",
         cooldown: [ 28, 19 ],
         evolution: 459,
-        evolvers: [ 118, 266, 94, 98, 267 ]
+        evolvers: [ 118, 266, 94, 98, 267 ],
+        global: true
     },
     459: { // Sengoku the Buddha
         special: "Deals random PSY damage to all enemies, boosts ATK by 1.5x for 1 turn",
-        specialName: "Buddha's Shockwave",
+        specialName: "Zen Shockwave",
         captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of characters with cost 20 or less by 3x",
-        cooldown: [ 28, 19 ]
+        cooldown: [ 28, 19 ],
+        global: true
     },
     460: { // Criminal Galdino Mr. 3
         special: "Recovers 33 HP after the end of each turn for 999 turns, delays all enemies for 1 turn",

@@ -166,7 +166,7 @@ window.ships = [
 
     {
         name: 'Thousand Sunny',
-        thumb: null,
+        thumb: 'ship_0013_c.png',
         description: 'Boosts ATK by 1.5x. Special: deals 50,000 typeless damage to all enemies (cooldown: 15 turns).',
         atk: function(p) {
             return [ 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.5 ][p.boatLevel - 1];
