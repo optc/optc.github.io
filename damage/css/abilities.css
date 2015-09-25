@@ -53,7 +53,7 @@
     position: relative;
 }
 
-.active .trigger {
+.active:not(#links-button) .trigger {
     background: salmon !important;
     z-index: 102;
 }

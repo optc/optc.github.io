@@ -1,30 +1,44 @@
 (function() {
 
-var doAlert = false;
-
 /* * * * * Storage methods * * * * */
 
 var loadValue = function(key,def) {
     var value = JSON.parse(localStorage.getItem(key));
+    if (key == 'data' && value.team) {
+        value.team = value.team.map(function(x) {
+            if (x && x.unit !== null && x.unit !== undefined && x.unit.constructor == Number)
+                x.unit = window.units[x.unit];
+            return x;
+        });
+    }
     if (value !== null) return value;
     return def;
 };
 
 var save = function(key,object) {
+    if (key == 'data' && object.team) {
+        object = JSON.parse(JSON.stringify(object));
+        object.team = object.team.map(function(x) {
+            if (x && x.unit && x.unit.constructor == Object)
+                x.unit = x.unit.number;
+            return x;
+        });
+    }
     localStorage.setItem(key,JSON.stringify(object));
 };
 
 /* * * * * Version control * * * * */
 
-var version = JSON.parse(localStorage.getItem('version')) || 8;
+var version = JSON.parse(localStorage.getItem('version')) || 9;
 
-if (version < 8) {
+if (version < 9) {
     var data = JSON.parse(localStorage.getItem('data')) || { };
     data.team.forEach(function(x) {
-        if (!x.hasOwnProperty('abilities')) x.abilities = [ null, null, null, null, null ];
+        if (x && x.unit && x.unit.constructor == Object)
+            x.unit = x.unit.number;
     });
     localStorage.setItem('data', JSON.stringify(data));
-    localStorage.setItem('version', JSON.stringify(8));
+    localStorage.setItem('version', JSON.stringify(9));
 }
 
 /* * * * * Controller * * * * */
@@ -52,14 +66,6 @@ var StorageCtrl = function($scope) {
         $scope.data.ship = [ 1, 5 ];
 
     $scope.options.crunchInhibitor = 0;
-
-    if (doAlert) {
-        $scope.notify({
-            text: 'Some stuff changed. Refreshing the page and/or clearing your browser\'s cache may be a smart idea.',
-            timeout: 10000,
-            type: 'error'
-        });
-    }
 
     /* * * * * Save on changes * * * * */
 
