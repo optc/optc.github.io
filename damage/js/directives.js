@@ -73,12 +73,12 @@ directives.detailPane = function($timeout) {
         templateUrl: 'views/details.html',
         scope: true,
         link: function(scope, element, attrs) {
-            var modifiers = [ 'Miss', 'Good', 'Great', 'Perfect' ];
+            var modifiers = [ 'Below Good', 'Good', 'Great', 'Perfect', 'Miss' ];
             var modifyDamage = function(e) {
                 var container = $(e.target).parent();
                 if (!container.hasClass('turnContainer')) return;
                 var custom = $.extend([ ],scope.numbers[scope.type].hitModifiers), n = container.parent().index();
-                custom[n] = modifiers[(modifiers.indexOf(custom[n])+1)%4];
+                custom[n] = modifiers[(modifiers.indexOf(custom[n])+1)%5];
                 scope.tdata.customHitModifiers = custom;
                 if (!scope.$$phase) scope.$apply();
             };

@@ -2064,7 +2064,7 @@ window.details = {
         special: "Deals 100x character's ATK in fixed QCK damage to one enemy, reduces HP to 1",
         specialNotes: "Fixed damage means the special entirely bypasses enemy defense",
         specialName: "Massacre Soldier",
-        captain: "Boosts ATK by 3.5x after scoring 3 less than Good attacks in a row",
+        captain: "Boosts ATK by 3.5x after scoring 3 hits below Good in a row",
         cooldown: [ 35, 25 ],
         evolution: 312,
         evolvers: [ 118, 79, 83, 301, 101 ],
@@ -2074,7 +2074,7 @@ window.details = {
         special: "Deals 100x character's ATK in fixed QCK damage to one enemy, reduces HP to 1",
         specialNotes: "Fixed damage means the special entirely bypasses enemy defense",
         specialName: "Massacre Soldier",
-        captain: "Boosts ATK by 3.5x after scoring 3 less than Good attacks in a row",
+        captain: "Boosts ATK by 3.5x after scoring 3 hits below Good in a row",
         cooldown: [ 35, 25 ],
         global: true
     },
@@ -3148,7 +3148,7 @@ window.details = {
         special: "Deals 20x character's ATK in QCK damage to one enemy, amplifies orb effects by 1.25x for 2 turns",
         specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.25x more damage and opposite orbs will deal 1.25x less damage",
         specialName: "Jet Punch",
-        captain: "Boosts ATK by 3x after scoring 4 hits no lower than Good in a row",
+        captain: "Boosts ATK by 3x after scoring 4 hits below good in a row",
         cooldown: [ 25, 18 ]
     },
     466: { // Braham

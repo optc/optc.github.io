@@ -360,15 +360,15 @@ window.captains = {
     },
     311: { // Killer
         hitAtk: function(p) {
-            return p.modifiers.slice(0,p.chainPosition).subcontains([ "Miss", "Miss", "Miss" ]) ? 3.5 : 1;
+            return p.modifiers.slice(0,p.chainPosition).subcontains([ "Below Good", "Below Good", "Below Good" ]) ? 3.5 : 1;
         },
-        hitModifiers: [ 'Miss', 'Miss', 'Miss', 'Perfect', 'Perfect', 'Perfect' ]
+        hitModifiers: [ 'Below Good', 'Below Good', 'Below Good', 'Perfect', 'Perfect', 'Perfect' ]
     },
     312: { // Massacre Soldier Killer
         hitAtk: function(p) {
-            return p.modifiers.slice(0,p.chainPosition).subcontains([ "Miss", "Miss", "Miss" ]) ? 3.5 : 1;
+            return p.modifiers.slice(0,p.chainPosition).subcontains([ "Below Good", "Below Good", "Below Good" ]) ? 3.5 : 1;
         },
-        hitModifiers: [ 'Miss', 'Miss', 'Miss', 'Perfect', 'Perfect', 'Perfect' ]
+        hitModifiers: [ 'Below Good', 'Below Good', 'Below Good', 'Perfect', 'Perfect', 'Perfect' ]
     },
     313: { // Urouge
         atk: function(p) { return p.unit.class.has("Striker") ? 2 : 1; },
@@ -789,9 +789,9 @@ window.captains = {
     },
     465: { // Gedatsu
         hitAtk: function(p) {
-            return p.modifiers.slice(0,p.chainPosition).subcontains([ "Miss", "Miss", "Miss", "Miss" ]) ? 3 : 1;
+            return p.modifiers.slice(0,p.chainPosition).subcontains([ "Below Good", "Below Good", "Below Good", "Below Good" ]) ? 3 : 1;
         },
-        hitModifiers: [ 'Miss', 'Miss', 'Miss', 'Miss', 'Perfect', 'Perfect' ]
+        hitModifiers: [ 'Below Good', 'Below Good', 'Below Good', 'Below Good', 'Perfect', 'Perfect' ]
     },
     466: { // Braham
         atk: function(p) { return p.unit.class.has("Shooter") ? 1.5 : 1; },

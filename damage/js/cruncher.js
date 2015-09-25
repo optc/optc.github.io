@@ -44,7 +44,7 @@
 
 // TODO Check if the profile bonuses are applied before or after the static bonuses from the ships and other stuff
 
-var MODIFIERS = [ 'Miss', 'Good', 'Great', 'Perfect' ];
+var MODIFIERS = [ 'Below Good', 'Good', 'Great', 'Perfect', 'Miss' ];
 var DEFAULT_HIT_MODIFIERS = [ 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect' ]; 
 
 /****************
@@ -219,32 +219,32 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
 
     /* The effective damage of a unit is affected by the hit modifier being used, by the defense threshold of the enemy
      * and by the CMB stat of the unit:
-     * FULL MISS hits : BASE_DAMAGE *  CMB
-     * MISS hits      : BASE_DAMAGE * (CMB - 2)
-     * GOOD hits      : BASE_DAMAGE * (CMB - 2) + BONUS_DAMAGE_GOOD
-     * GREAT hits     : BASE_DAMAGE * (CMB - 1) + BONUS_DAMAGE_GREAT
-     * PERFECT hits   : BASE_DAMAGE *  CMB      + BONUS_DAMAGE_PERFECT
+     * BELOW GOOD hits : BASE_DAMAGE * (CMB - 3)
+     * GOOD hits       : BASE_DAMAGE * (CMB - 2) + BONUS_DAMAGE_GOOD
+     * GREAT hits      : BASE_DAMAGE * (CMB - 1) + BONUS_DAMAGE_GREAT
+     * PERFECT hits    : BASE_DAMAGE *  CMB      + BONUS_DAMAGE_PERFECT
+     * MISS hits       : BASE_DAMAGE *  CMB
      * where:
      * - BASE_DAMAGE = floor(max(1,STARTING_DAMAGE / CMB - DEFENSE))
      * - STARTING_DAMAGE is the damage computed for the unit, including the Merry's bonus and the chain bonus
      * The way the bonus damages are calculated depends on the value of BASE_DAMAGE.
      * If BASE_DAMAGE is greater than 1, meaning the unit is able to overcome the enemy's defense, then:
-     * - BONUS_DAMAGE_PERFECT = floor(STARTING_DAMAGE * 0.9)
-     * - BONUS_DAMAGE_GREAT   = floor(STARTING_DAMAGE * 0.9 * 0.66)
      * - BONUS_DAMAGE_GOOD    = floor(STARTING_DAMAGE * 0.9 * 0.33)
+     * - BONUS_DAMAGE_GREAT   = floor(STARTING_DAMAGE * 0.9 * 0.66)
+     * - BONUS_DAMAGE_PERFECT = floor(STARTING_DAMAGE * 0.9)
      * This bonus bypasses defense entirely.
      * If, on the other hand, BASE_DAMAGE is 1, the starting damage gets an additional bonus of 1/CMB but the
      * defense is factored into the calculation, meaning the bonus damages become:
-     * - BONUS_DAMAGE_PERFECT = max(0,floor(STARTING_DAMAGE * (0.9 + 1/CMB)) - DEFENSE)
-     * - BONUS_DAMAGE_GREAT   = max(0,floor(STARTING_DAMAGE * (0.9 * 0.66 + 1/CMB)) - DEFENSE)
      * - BONUS_DAMAGE_GOOD    = max(0,floor(STARTING_DAMAGE * (0.9 * 0.33 + 1/CMB)) - DEFENSE)
+     * - BONUS_DAMAGE_GREAT   = max(0,floor(STARTING_DAMAGE * (0.9 * 0.66 + 1/CMB)) - DEFENSE)
+     * - BONUS_DAMAGE_PERFECT = max(0,floor(STARTING_DAMAGE * (0.9 + 1/CMB)) - DEFENSE)
      */
     var computeDamageOfUnit = function(unit,unitAtk,hitModifier) {
         var baseDamage = Math.floor(Math.max(1,unitAtk / unit.combo - currentDefense));
-        var result = 0, bonusDamageBase;
-        if (hitModifier == 'Full Miss') return baseDamage * unit.combo;
-        if (hitModifier == 'Miss') return baseDamage * (unit.combo -2);
-        if (hitModifier == 'Good') {
+        var result = 0, bonusDamageBase = 0;
+        if (hitModifier == 'Below Good')
+            return baseDamage * (unit.combo - 3);
+        else if (hitModifier == 'Good') {
             result = baseDamage * (unit.combo - 2);
             bonusDamageBase = 0.33;
         } else if (hitModifier == 'Great') {
@@ -253,7 +253,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         } else if (hitModifier == 'Perfect') { 
             result = baseDamage * unit.combo;
             bonusDamageBase = 1;
-        }
+        } else if (hitModifier == 'Miss')
+            return baseDamage * unit.combo;
         if (baseDamage > 1)
             return result + Math.floor(unitAtk * 0.9 * bonusDamageBase);
         else
