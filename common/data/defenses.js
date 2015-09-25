@@ -122,8 +122,13 @@ window.defenses = [
     [ 'Gan Fall (def up)'                   , 'Gan Fall Fortnight'                   , 'Expert', 713, 10000 ],
     [ 'Jerry'                               , 'T-Bone Fortnight'                     , 'Expert', 722, 150 ],
     [ 'T-Bone'                              , 'T-Bone Fortnight'                     , 'Expert', 724, 250 ],
+    [ 'Nero'                                , 'Wanze Fortnight'                      , 'Expert', 741, 20 ],
+    [ 'Wanze'                               , 'Wanze Fortnight'                      , 'Expert', 743, 4880 ],
+    [ 'Wanze (def up)'                      , 'Wanze Fortnight'                      , 'Expert', 743, 14640 ],
     [ 'Frieza'                              , 'Frieza Fortnight'                     , 'Master', null, 150 ],
     [ 'Frieza (def up)'                     , 'Frieza Fortnight'                     , 'Master', null, 3000 ],
+    [ 'Frieza'                              , 'Frieza Fortnight'                     , 'Ultimate', null, 200 ],
+    [ 'Frieza (def up)'                     , 'Frieza Fortnight'                     , 'Ultimate', null, 4000 ],
     /* * * * * Others * * * * */
     [ 'Thatch'                              , 'Whitebeard\'s island, 11th round'     , '', 448, 50 ],
     [ 'Namur'                               , 'Whitebeard\'s island, 12th round'     , '', 450, 500 ],
