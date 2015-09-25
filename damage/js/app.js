@@ -87,8 +87,7 @@ app
     .controller('SharedRootCtrl', SharedRootCtrl)
     .run(function($rootScope, $location, $window) {
         $rootScope.$on('$stateChangeSuccess',function(e) {
-            var location = $location.path().replace(/\/transfer\/.+$/,'/transfer');
-            if (ga) ga('send', 'pageview', { page: location });
+            if (ga) ga('send', 'pageview', '/damage');
         });
     });
 
