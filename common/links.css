@@ -145,9 +145,16 @@
     transform: translateX(-12em);
 }
 
-#link-damage > .btn { background: skyblue; }
-#link-characters > .btn { background: lightgreen; }
-#link-drops > .btn { background: lightsalmon; }
+#links-button.active .rotater:nth-child(5) > a {
+    -webkit-transform: translateX(-15em);
+    -ms-transform: translateX(-15em);
+    transform: translateX(-15em);
+}
+
+#link-damage > .btn { background: #85C1F5; }
+#link-characters > .btn { background: #7FCA9F; }
+#link-drops > .btn { background: #F4BA70; }
+#link-tally > .btn { background: #E96D63; }
 #link-report > .btn { background: orchid; }
 
 .tip { color: black; }
