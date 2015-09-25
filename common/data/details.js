@@ -2748,7 +2748,7 @@ window.details = {
         captain: "Boosts ATK of Shooter characters by 2x",
         cooldown: [ 23, 14 ]
     },
-    406: { // Zombie Shougun
+    406: { // General Zombies
         special: "Reduces HP to 1, deals 1,000 fixed damage to all enemies, boosts ATK by 1.2x for 1 turn",
         specialName: "Competition Between Antique Soldiers",
         cooldown: [ 30, 15 ]
@@ -2838,32 +2838,32 @@ window.details = {
         evolution: 418,
         evolvers: [ 118, 83, 86, 302, 102 ]
     },
-    418: { // Donquixote Doflamingo the Shichibukai
+    418: { // Donquixote Doflamingo Warlord of the Sea
         special: "Freely switch orbs between slots twice, amplifies orb effects by 2x for 1 turn",
         specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 2x more damage and opposite orbs will deal 2x less damage",
         specialName: "Overheat",
         captain: "Boosts ATK and HP of Slasher characters by 2x",
         cooldown: [ 28, 14 ]
     },
-    419: { // Sanji Parage Shot - Arashi (Kimono)
+    419: { // Sanji Parage Shot - Arashi (Kimono Sanji)
         special: "Reduces the defense of all enemies by 50% for 2 turns, randomizes all orbs",
         specialName: "Plastic Shot \"Arashi\"",
         captain: "Boosts ATK of QCK characters by 2x",
         cooldown: [ 15, 15 ]
     },
-    420: { // Monkey D. Luffy Gomu Gomu no Bazooka - Arashi (Kimono)
+    420: { // Monkey D. Luffy Gomu Gomu no Bazooka - Arashi (Kimono Luffy)
         special: "Reduces Silence duration by 3 turns, deals 15x character's ATK in STR damage to one enemy",
         specialName: "Gum Gum Bazooka \"Arashi\"",
         captain: "Boosts ATK, HP and RCV of STR characters by 1.5x",
         cooldown: [ 23, 13 ]
     },
-    421: { // Roronoa Zoro Three Thousand Worlds - Arashi (Kimono)
+    421: { // Roronoa Zoro Three Thousand Worlds - Arashi (Kimono Zoro)
         special: "Reduces Bind duration by 2 turns, deals 10x character's ATK in DEX damage to all enemies",
         specialName: "108 Pound Phoenix \"Arashi\"",
         captain: "Boosts ATK, HP and RCV of DEX characters by 1.5x",
         cooldown: [ 20, 10 ]
     },
-    422: { // Nami Mirage Tempo - Arashi (Kimono)
+    422: { // Nami Mirage Tempo - Arashi (Kimono Nami)
         special: "Reduces damage received from INT enemies by 100% for 1 turn, recovers a random amount of HP",
         specialName: "Mirage Tempo \"Arashi\"",
         captain: "Boosts ATK, HP and RCV of INT characters by 1.5x",
@@ -3444,7 +3444,7 @@ window.details = {
         evolution: 510,
         evolvers: [ 117, 85, 96, 96, 301 ]
     },
-    510: { // The Strongest Prisoner, Sir Crocodile the Shichibukai
+    510: { // The Strongest Prisoner, Sir Crocodile Warlord of the Sea
         special: "Poisons all enemies, boosts ATK of Striker characters by 1.5x for 1 turn",
         specialNotes: "Poison deals 0.5x character's ATK in fixed damage at the end of each turn",
         specialName: "Cruel Trick - Poison Hook",
@@ -3509,7 +3509,7 @@ window.details = {
         captain: "Boosts HP of PSY characters by 2x, boosts chances of getting [RCV] orbs",
         cooldown: [ 10, 5 ]
     },
-    519: { // Monkey D. Luffy, Merveille's Adventurer (Strong World/SW)
+    519: { // Monkey D. Luffy, Merveille's Adventurer (Strong World Luffy)
         special: "Reduce current HP by 99%, deals 25x character's ATK in fixed STR damage to all enemies, boosts ATK of STR characters by 2x for 1 turn",
         specialNotes: "Fixed damage means the special entirely bypasses enemy defense",
         specialName: "Gum-Gum Gigant Thunder Axe",
@@ -3518,14 +3518,14 @@ window.details = {
         evolution: 520,
         evolvers: [ 118, 84, 95, 94, 100 ]
     },
-    520: { // Monkey D. Luffy, Strawhat Crew's Attack (Strong World/SW)
+    520: { // Monkey D. Luffy, Strawhat Crew's Attack (Strong World Luffy)
         special: "Reduce current HP by 99%, deals 25x character's ATK in fixed STR damage to all enemies, boosts ATK of STR characters by 2x for 1 turn",
         specialNotes: "Fixed damage means the special entirely bypasses enemy defense",
         specialName: "Gum-Gum Gigant Thunder Axe",
         captain: "Boosts ATK of STR characters by 2.5x",
         cooldown: [ 25, 18 ]
     },
-    521: { // Sanji, Merveille's Adventurer (Strong World/SW)
+    521: { // Sanji, Merveille's Adventurer (Strong World Sanji)
         special: "Deals several times the character's ATK in INT damage to all enemies",
         specialNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the lower the HP is. The multiplier is calculated as: 100 * ( 1 - (remaining HP) / (total HP) )",
         specialName: "Diable Jambe - Venaison Shot",
@@ -3534,14 +3534,14 @@ window.details = {
         evolution: 522,
         evolvers: [ 118, 83, 88, 94, 104 ]
     },
-    522: { // Sanji, Strawhat Crew's Attack (Strong World/SW)
+    522: { // Sanji, Strawhat Crew's Attack (Strong World Sanji)
         special: "Deals several times the character's ATK in INT damage to all enemies",
         specialNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the lower the HP is. The multiplier is calculated as: 100 * ( 1 - (remaining HP) / (total HP) )",
         specialName: "Diable Jambe - Venaison Shot",
         captain: "Reduces damage received by 80% if HP is above 99% at the start of the turn",
         cooldown: [ 23, 17 ]
     },
-    523: { // Nami, Merveille's Adventurer (Strong World/SW)
+    523: { // Nami, Merveille's Adventurer (Strong World Nami)
         special: "Randomizes all orbs, prevents death as long as HP is above 50% for 1 turn",
         specialName: "Billy's Electrical Discharge",
         captain: "Boosts ATK and RCV of Striker characters by 1.5x",
@@ -3549,13 +3549,13 @@ window.details = {
         evolution: 524,
         evolvers: [ 118, 85, 96, 301, 101 ]
     },
-    524: { // Nami and Billy the Thunder Bird (Strong World/SW)
+    524: { // Nami and Billy the Thunder Bird (Strong World Nami)
         special: "Randomizes all orbs, prevents death as long as HP is above 50% for 1 turn",
         specialName: "Billy's Electrical Discharge",
         captain: "Boosts ATK of Striker characters by 2x and their RCV by 1.5x",
         cooldown: [ 23, 16 ]
     },
-    525: { // Brook, Merveille's Adventurer (Strong World/SW)
+    525: { // Brook, Merveille's Adventurer (Strong World Brook)
         special: "Deals random PSY damage to all enemies, randomizes all orbs",
         specialName: "Three-Verse Humming: Arrow-Notch Slash",
         captain: "Boosts ATK of PSY characters by 2x",
@@ -3563,13 +3563,13 @@ window.details = {
         evolution: 526,
         evolvers: [ 118, 92, 94, 98, 303 ]
     },
-    526: { // Brook, Strawhat Crew's Attack (Strong World/SW)
+    526: { // Brook, Strawhat Crew's Attack (Strong World Brook)
         special: "Deals random PSY damage to all enemies, randomizes all orbs",
         specialName: "Three-Verse Humming: Arrow-Notch Slash",
         captain: "Boosts ATK of PSY characters by 2x, reduces damage received from INT enemies by 30%",
         cooldown: [ 23, 16 ]
     },
-    527: { // Chopper, Merveille's Adventurer (Strong World/SW)
+    527: { // Chopper, Merveille's Adventurer (Strong World Chopper)
         special: "Removes poison, recovers 15x character's RCV in HP",
         specialName: "Devoted Healing - \"I'm Glad You are Safe\"",
         captain: "Boosts ATK and RCV of DEX characters by 1.5x",
@@ -3577,13 +3577,13 @@ window.details = {
         evolution: 528,
         evolvers: [ 118, 86, 266, 97, 302 ]
     },
-    528: { // Chopper, Strawhat Crew's Attack (Strong World/SW)
+    528: { // Chopper, Strawhat Crew's Attack (Strong World Chopper)
         special: "Removes poison, recovers 15x character's RCV in HP",
         specialName: "Devoted Healing - \"I'm Glad You are Safe\"",
         captain: "Boosts ATK and RCV of DEX characters by 2x",
         cooldown: [ 23, 17 ]
     },
-    529: { // Shanks, Black Clothes and Red Hair (Strong World/SW)
+    529: { // Shanks, Black Clothes and Red Hair (Strong World Shanks)
         special: "Deals 35x character's ATK in PSY damage to all enemies, reduces the defense of all enemies by 100% for 2 turns",
         specialName: "Conqueror's Haki - Emperor",
         captain: "Boosts chances of getting [PSY] orbs, boosts ATK of PSY characters proportionally to the current HP",
@@ -3592,7 +3592,7 @@ window.details = {
         evolution: 530,
         evolvers: [ 118, 87, 266, 98, 267 ]
     },
-    530: { // Shanks, The Black-Clothed Yonkou (Strong World/SW)
+    530: { // Shanks, The Black-Clothed Yonkou (Strong World Shanks)
         special: "Deals 35x character's ATK in PSY damage to all enemies, reduces the defense of all enemies by 100% for 2 turns",
         specialName: "Conqueror's Haki - Emperor",
         captain: "Boosts chances of getting [PSY] orbs, boosts ATK of PSY characters proportionally to the current HP",
@@ -3747,7 +3747,7 @@ window.details = {
         specialName: "Cursed Shout",
         cooldown: [ 33, 18 ]
     },
-    553: { // Roronoa Zoro, Merveille's Adventurer (Strong World/SW)
+    553: { // Roronoa Zoro, Merveille's Adventurer (Strong World Zoro)
         special: "Changes neighboring slots' orbs into [DEX], deals 1,000 fixed damage to all enemies",
         specialName: "Ashura Ugui",
         captain: "Boosts ATK of DEX characters by 2.75x if HP is below 30% at the start of the turn",
@@ -3755,13 +3755,13 @@ window.details = {
         evolution: 554,
         evolvers: [ 118, 83, 97, 302, 102 ]
     },
-    554: { // Roronoa Zoro, Strawhat Crew's Attack (Strong World/SW)
+    554: { // Roronoa Zoro, Strawhat Crew's Attack (Strong World Zoro)
         special: "Changes neighboring slots' orbs into [DEX], deals 1,000 fixed damage to all enemies",
         specialName: "Ashura Ugui",
         captain: "Boosts ATK of DEX characters by 3x if HP is below 30% at the start of the turn",
         cooldown: 20
     },
-    555: { // Usopp, Merveille's Adventurer (Strong World/SW)
+    555: { // Usopp, Merveille's Adventurer (Strong World Usopp)
         special: "Delays all enemies for 3 turns, cuts all enemies' current HP by 10%",
         specialName: "Heavenly Dragon Star",
         captain: "Boosts ATK of Shooter characters by 2x",
@@ -3769,13 +3769,13 @@ window.details = {
         evolution: 556,
         evolvers: [ 118, 83, 96, 301, 101 ]
     },
-    556: { // Usopp, Strawhat Crew's Attack (Strong World/SW)
+    556: { // Usopp, Strawhat Crew's Attack (Strong World Usopp)
         special: "Delays all enemies for 3 turns, cuts all enemies' current HP by 10%",
         specialName: "Heavenly Dragon Star",
         captain: "Boosts ATK of Shooter characters by 2x and their RCV by 1.5x",
         cooldown: [ 21, 14 ]
     },
-    557: { // Nico Robin, Merveille's Adventurer (Strong World/SW)
+    557: { // Nico Robin, Merveille's Adventurer (Strong World Robin)
         special: "Boosts chances of getting [INT] orbs for 3 turns",
         specialName: "Ochenta Fleur - Cuatro Manus Shock",
         captain: "Boosts ATK and RCV of INT characters by 1.5x",
@@ -3783,13 +3783,13 @@ window.details = {
         evolution: 558,
         evolvers: [ 118, 88, 94, 304, 104 ]
     },
-    558: { // Nico Robin, Strawhat Crew's Attack (Strong World/SW)
+    558: { // Nico Robin, Strawhat Crew's Attack (Strong World Robin)
         special: "Boosts chances of getting [INT] orbs for 3 turns",
         specialName: "Ochenta Fleur - Cuatro Manus Shock",
         captain: "Boosts ATK and RCV of INT characters by 2x",
         cooldown: [ 16, 10 ]
     },
-    559: { // Franky, Merveille's Adventurer (Strong World/SW)
+    559: { // Franky, Merveille's Adventurer (Strong World Franky)
         special: "Changes own orb into [STR], amplifies orb effects by 1.5x for 2 turns",
         specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.5x more damage and opposite orbs will deal 1.5x less damage",
         specialName: "Roar! Zarley Davison",
@@ -3798,7 +3798,7 @@ window.details = {
         evolution: 560,
         evolvers: [ 118, 83, 84, 300, 100 ]
     },
-    560: { // Franky, Strawhat Crew's Attack (Strong World/SW)
+    560: { // Franky, Strawhat Crew's Attack (Strong World Franky)
         special: "Changes own orb into [STR], amplifies orb effects by 1.5x for 2 turns",
         specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.5x more damage and opposite orbs will deal 1.5x less damage",
         specialName: "Roar! Zarley Davison",
@@ -4490,7 +4490,7 @@ window.details = {
         evolution: 669,
         evolvers: [ 118, 87, 266, 303, 267 ]
     },
-    669: { // Sabo, Member of the Revolutionary Army
+    669: { // Sabo the Revolutionary
         special: "Boosts ATK of Freedom characters by 1.5x for 1 turn. If during that turn every unit scores a Perfect hit, boosts ATK of Freedom characters by 2x in the following turn.",
         specialName: "Dragon's Claw",
         captain: "Boosts HP and RCV by 1.2x, boosts ATK of Freedom characters proportionally to the current HP",
@@ -4505,7 +4505,7 @@ window.details = {
         evolution: 671,
         evolvers: [ 118, 83, 86, 302, 102 ]
     },
-    671: { // Koala, Member of the Revolutionary Army
+    671: { // Koala the Revolutionary
         special: "Boosts ATK of Fighter characters by 1.75x for 1 turn",
         specialName: "Fishman Karate! True Fist Thrust of the Revolutionaries",
         captain: "Boosts ATK of Fighter characters by 2.25x and their RCV by 1.5x",
@@ -4519,7 +4519,7 @@ window.details = {
         evolution: 673,
         evolvers: [ 118, 84, 94, 300, 100 ]
     },
-    673: { // Hack, Member of the Revolutionary Army
+    673: { // Hack the Revolutionary
         special: "Cuts all enemies' current HP by 20%, changes own orb into [STR]",
         specialName: "Four Thousand Tile True Punch",
         captain: "Reduces cooldown of all specials by 3 turns at the start of the fight, boosts ATK of Fighter characters by 2x",
@@ -4533,7 +4533,7 @@ window.details = {
         evolution: 675,
         evolvers: [ 118, 83, 88, 304, 104 ]
     },
-    675: { // Emporio Ivankov, Member of the Revolutionary Army
+    675: { // Emporio Ivankov the Revolutionary
         special: "Removes poison, reduces damage received by 50% for 2 turns, recovers 13x character's RCV in HP at the end of the turn for 2 turns",
         specialName: "Emporio Healing Hormone",
         captain: "Boosts ATK of Freedom characters by 2.5x",
@@ -4548,7 +4548,7 @@ window.details = {
         evolution: 677,
         evolvers: [ 94, 96, 96, 301, 301 ]
     },
-    677: { // Inazuma, Member of the Revolutionary Army
+    677: { // Inazuma the Revolutionary
         special: "Reduces any damage received above 5,000 HP by 97% for 3 turns",
         specialNotes: "The exact formula for the damage received is: 5000 + ((total damage) - 5000) * 0.03",
         specialName: "KEEP OUT",
@@ -4751,7 +4751,7 @@ window.details = {
         captain: "Boosts ATK and HP of STR characters by 1.5x",
         cooldown: 18
     },
-    708: { // Nico Robin, the Devil Child
+    708: { // Nico Robin the Devil Child
         special: "Reduces Bind and Silence duration by 3 turns",
         specialName: "Cien Fleur - Wing",
         captain: "Boosts ATK and RCV of PSY characters by 1.2x",
@@ -4759,7 +4759,7 @@ window.details = {
         evolution: 709,
         evolvers: [ 117, 81, 87, 303, 103 ]
     },
-    709: { // Nico Robin, Member of the Strawhat Pirates
+    709: { // Nico Robin, Member of the Strawhat Crew
         special: "Reduces Bind and Silence duration by 3 turns",
         specialName: "Cien Fleur - Wing",
         captain: "Boosts ATK and RCV of PSY characters by 1.5x",

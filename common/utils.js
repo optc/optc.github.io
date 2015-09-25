@@ -106,11 +106,11 @@ utils.getOppositeType = function(type) {
 
 utils.generateSearchParameters = function(query) {
     if (!query || query.trim().length < 3) return null;
-    query = query.toLowerCase();
+    query = query.toLowerCase().trim().replace(/SW(\b)/gi,'Strong World$1');
     var result = { matchers: { }, ranges: { }, query: [ ] };
     var ranges = { }, params = [ 'hp', 'atk', 'stars', 'cost', 'growth', 'rcv', 'id', 'slots' ];
     var regex = new RegExp('^((type|class):(\\w+)|(' + params.join('|') + ')(>|<|>=|<=|=)([\\d.]+))$');
-    var tokens = query.trim().replace(/\s+/g,' ').split(' ').filter(function(x) { return x.length > 0; });
+    var tokens = query.replace(/\s+/g,' ').split(' ').filter(function(x) { return x.length > 0; });
     tokens.forEach(function(x) {
         var temp = x.match(regex);
         if (!temp) // if it couldn't be parsed, treat it as string
