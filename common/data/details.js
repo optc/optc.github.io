@@ -2750,12 +2750,12 @@ window.details = {
     },
     406: { // General Zombies
         special: "Reduces HP to 1, deals 1,000 fixed damage to all enemies, boosts ATK by 1.2x for 1 turn",
-        specialName: "Competition Between Antique Soldiers",
+        specialName: "Skills of the Ancient Warriors",
         cooldown: [ 30, 15 ]
     },
     407: { // Jigoro of the Wind
         special: "Randomizes all orbs, deals 7x character's ATK in DEX damage to all enemies",
-        specialName: "Zombie Style 36 Pound Phoenix",
+        specialName: "Zombie Style 36-Pound Phoenix",
         cooldown: [ 20, 10 ]
     },
     408: { // Sir Crocodile Warlord of the Sea
@@ -5021,5 +5021,11 @@ window.details = {
         specialName: "Flame Fence",
         captain: "Boosts ATK of Freedom characters by 2.5x",
         cooldown: 18
+    },
+    746: { // Megalo and Princess Shirahoshi
+        special: "Deals 10x character's ATK in QCK damage to all enemies, prevents death as long as HP is above 50% for 1 turn",
+        specialName: "Megalo Assault!",
+        captain: "Prevents death as long as HP is above 30%",
+        cooldown: [ 20, 20 ]
     }
 };
