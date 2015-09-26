@@ -4835,7 +4835,7 @@ window.details = {
         cooldown: 25
     },
     719: { // Sir Crocodile Logia Warlord of the Sea
-        special: "Boosts ATK of Knowledge characters by a variable factor for 1 turn, deals large DEX damage to all enemies",
+        special: "Boosts ATK of Knowledge characters by a variable factor for 1 turn, deals 20x character's ATK in DEX damage to all enemies",
         specialNotes: "The exact multiplier used is chosen based on the crew's current HP at the time the special is activated: above 30% HP, the multiplier used is 1.5x; below 30% HP, it's 2x.",
         specialName: "Sables: Pesado",
         captain: "Boosts ATK of Knowledge characters proportionally to the current HP",
@@ -4845,7 +4845,7 @@ window.details = {
         evolvers: [ 118, 86, 266, 102, 267 ]
     },
     720: { // Sir Crocodile Logia Former Warlord of the Sea
-        special: "Boosts ATK of Knowledge characters by a variable factor for 1 turn, deals large DEX damage to all enemies",
+        special: "Boosts ATK of Knowledge characters by a variable factor for 1 turn, deals 20x character's ATK in DEX damage to all enemies",
         specialNotes: "The exact multiplier used is chosen based on the crew's current HP at the time the special is activated: above 30% HP, the multiplier used is 1.5x; below 30% HP, it's 2x.",
         specialName: "Sables: Pesado",
         captain: "Boosts ATK of Knowledge characters proportionally to the current HP",
