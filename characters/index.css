@@ -347,6 +347,11 @@ h3 > label {
     content: "2x beli";
 }
 
+.bonus.exp:after, .bonus.exp:before {
+    background: orange;
+    content: "2x EXP";
+}
+
 .bonus.today:after, .bonus.today:before {
     background: orchid;
     content: "today";

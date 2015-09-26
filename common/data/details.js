@@ -3150,7 +3150,7 @@ window.details = {
         special: "Deals 20x character's ATK in QCK damage to one enemy, amplifies orb effects by 1.25x for 2 turns",
         specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.25x more damage and opposite orbs will deal 1.25x less damage",
         specialName: "Jet Punch",
-        captain: "Boosts ATK by 3x after scoring 4 hits below good in a row",
+        captain: "Boosts ATK by 3x after scoring 4 hits below Good in a row",
         cooldown: [ 25, 18 ]
     },
     466: { // Braham
@@ -3905,7 +3905,7 @@ window.details = {
     576: { // Tea Time Nami
         special: "Changes [PSY] orbs into [INT] orbs, boosts RCV by 1.5x for 1 turn",
         specialName: "Fine Tempo - Tea Time Show",
-        captain: "Boosts ATK by 1.5x, RCV by 1.2x",
+        captain: "Boosts ATK by 1.5x, boosts RCV by 1.2x",
         cooldown: [ 12, 12 ]
     },
     577: { // Monkey D. Luffy, Record of the Voyage - Strawhat Crew (Log Luffy)

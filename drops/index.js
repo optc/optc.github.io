@@ -1,5 +1,7 @@
 (function() {
 
+var app = angular.module('optc', [ ]);
+
 Utils.parseUnits(false);
 
 var addImages = function(target) {
@@ -9,7 +11,6 @@ var addImages = function(target) {
     });
 };
 
-var app = angular.module('optc', [ ]);
 
 app.controller('MainCtrl',function($scope, $timeout) {
     $scope.data = drops;
@@ -90,6 +91,26 @@ app.directive('hideWhenEmpty',function() {
                else element.parent().show();
             });
             observer.observe(element[0],{ childList: true });
+        }
+    };
+});
+
+app.directive('addBonuses',function($timeout) {
+    return {
+        restrict: 'A',
+        link: function(scope, element, attrs) {
+            var bonusNames = { 'stamina': '0.5x stamina', 'drop': '2x drop', 'beli': '2x beli', 'exp': '2x EXP', };
+            $timeout(function() {
+                var rows = element[0].rows;
+                window.bonuses.forEach(function(bonus) {
+                    var min = (bonus.stop || 0);
+                    for (var i=0;i<=bonus.x-min && bonus.y+i+1 < rows.length;++i) {
+                        var cell = rows[bonus.y + i + 1].cells[bonus.x - i + 1];
+                        cell.innerHTML = bonusNames[bonus.type];
+                        cell.className = bonus.type;
+                    }
+                });
+            });
         }
     };
 });

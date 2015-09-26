@@ -144,10 +144,11 @@ var searchSameSpecials = function(id) {
     return result;
 };
 
-var getDayOfWeek = function(japan) {
+var getDayOfWeek = function(japan, ignore) {
     var now = new Date(), utc = new Date(now.getTime() + now.getTimezoneOffset() * 60000), today;
     if (!japan) today = new Date(utc.getTime() - 8 * 3600000);
     else today = new Date(utc.getTime() + 9 * 3600000);
+    if (japan && today.getHours() < 12 && !ignore) return -1;
     return (today.getDay() === 0 ? 6 : today.getDay() - 1);
 };
 
@@ -155,14 +156,16 @@ var getIslandBonuses = function(y, day) {
     var result = [ ];
     if (day !== undefined) {
         if (day == getDayOfWeek(false)) result.push('GL:today'); 
-        if (day == getDayOfWeek(true)) result.push('JP:today'); 
+        if (day == getDayOfWeek(true, true)) result.push('JP:today'); 
     } else {
         var getBonus = function(x) {
+            if (x < 0) return null;
             return bonuses.filter(function(data) {
-                return y >= data.y && x <= data.x && x + y == data.x + data.y;
+                return y >= data.y && x <= data.x && x + y == data.x + data.y &&
+                    (!data.hasOwnProperty('stop') || x >= data.stop);
             })[0];
         };
-        var global = getBonus(getDayOfWeek(false)), japan = getBonus(getDayOfWeek(true));
+        var global = getBonus(getDayOfWeek(false)), japan = getBonus(getDayOfWeek(true, false));
         if (global) result.push('GL:' + global.type);
         if (japan) result.push('JP:' + japan.type);
     }

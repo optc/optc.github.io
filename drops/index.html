@@ -54,7 +54,7 @@
             <table class="table table-striped">
                 <tbody>
                     <tr ng-repeat="(stage,data) in island"
-                        ng-if="stage != 'thumb' && stage != 'day' && stage != 'name'">
+                        ng-if="stage != 'thumb' && stage != 'day' && stage != 'name' && stage != 'shortName'">
                         <td>
                             {{type == 'Story Island' ? 'Stage ' + stage : (stage.length < 2 ? 'Any' : stage)}}
                         </td>
@@ -88,6 +88,35 @@
                     <span>{{type}}s</span>
                 </h2> 
             </div>
+
+            <h1 class="page-header">Bonus Table</h1>
+
+            <table class="table table-striped" id="bonus-table" add-bonuses>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>MON</th>
+                        <th>TUE</th>
+                        <th>WED</th>
+                        <th>THU</th>
+                        <th>FRI</th>
+                        <th>SAT</th>
+                        <th>SUN</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="(n,island) in data['Story Island']">
+                        <td>{{island.shortName ? island.shortName : island.name}}</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
 
         </div>
 

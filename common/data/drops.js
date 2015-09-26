@@ -201,6 +201,7 @@ window.drops = {
 
         {
             "name": "Nanohana - Rainbase",
+            "shortName": "Nanohana",
             "thumb": 383,
             "01": [ 378, 116 ],
             "02": [ 302, 69 ],
@@ -261,6 +262,7 @@ window.drops = {
 
         {
             "name": "Sky Island: Angel Island - Upper Yard",
+            "shortName": "Angel Island",
             "thumb": 467,
             "01": [ 488, 487, 489, 493, 494, 116, 117 ],
             "02": [ 468, 469, 92, 93, 98, 99 ],
@@ -281,6 +283,7 @@ window.drops = {
 
         {
             "name": "Sky Island: Upper Yard - Ark Maxim",
+            "shortName": "Ark Maxim",
             "thumb": 545,
             "01": [ 541, 94, 300 ],
             "02": [ 543, 302, 464 ],
@@ -334,6 +337,7 @@ window.drops = {
 
         {
             "name": "Enies Lobby: Entrance",
+            "shortName": "Enies Lobby 1",
             "thumb": 706,
             "01": [ 78, 79, 80, 185, 186, 188, 694 ],
             "02": [ 80, 81, 184, 185, 187, 692 ],
@@ -349,6 +353,7 @@ window.drops = {
 
         {
             "name": "Enies Lobby: Tower of Justice - Gates of Justice",
+            "shortName": "Enies Lobby 2",
             "thumb": 737,
             //"01": [ 110 ],
             //"02": [ 111 ],
@@ -816,12 +821,19 @@ var bonuses = [
     { type: 'stamina' , x: 3 , y: 0  },
     { type: 'stamina' , x: 6 , y: 5  },
     { type: 'stamina' , x: 6 , y: 12 },
+    { type: 'stamina' , x: 6 , y: 19 },
     { type: 'drop'    , x: 6 , y: 1  },
     { type: 'drop'    , x: 6 , y: 8  },
     { type: 'drop'    , x: 6 , y: 15 },
+    { type: 'beli'    , x: 6 , y: 3  },
     { type: 'beli'    , x: 1 , y: 4  },
-    { type: 'beli'    , x: 5 , y: 4  },
     { type: 'beli'    , x: 6 , y: 10 },
     { type: 'beli'    , x: 6 , y: 17 },
-    { type: 'stamina' , x: 6 , y: 18 }
+    { type: 'exp'     , x: 2 , y: 2  },
+    { type: 'exp'     , x: 6 , y: 2  },
+    { type: 'exp'     , x: 5 , y: 5, stop: 5 },
+    { type: 'exp'     , x: 6 , y: 6  },
+    { type: 'exp'     , x: 6 , y: 9, stop: 2 },
+    { type: 'exp'     , x: 6 , y: 13 },
+    { type: 'exp'     , x: 6 , y: 20 }
 ];
