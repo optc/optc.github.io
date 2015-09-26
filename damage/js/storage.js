@@ -4,7 +4,7 @@
 
 var loadValue = function(key,def) {
     var value = JSON.parse(localStorage.getItem(key));
-    if (key == 'data' && value.team) {
+    if (key == 'data' && value && value.team) {
         value.team = value.team.map(function(x) {
             if (x && x.unit !== null && x.unit !== undefined && x.unit.constructor == Number)
                 x.unit = window.units[x.unit];
