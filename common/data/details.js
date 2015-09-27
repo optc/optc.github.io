@@ -4984,7 +4984,7 @@ window.details = {
         special: "Deals 10x character's ATK in QCK damage to all enemies, boosts ATK against enemies with increased defense by 1.3x for 2 turns",
         specialName: "Rankyaku - Sen",
         captain: "Reduces cooldown of all specials by 2 turns at the start of the fight",
-        cooldown: 23,
+        cooldown: [ 23, 15 ],
         evolution: 741,
         evolvers: [ 117, 79, 90, 96 ]
     },
@@ -4992,14 +4992,14 @@ window.details = {
         special: "Deals 10x character's ATK in QCK damage to all enemies, boosts ATK against enemies with increased defense by 1.3x for 2 turns",
         specialName: "Rankyaku - Sen",
         captain: "Reduces cooldown of all specials by 3 turns at the start of the fight",
-        cooldown: 23
+        cooldown: [ 23, 15 ]
     },
     742: { // Wanze
         special: "Amplifies orb effects by 1.25x for 2 turns, reduces the defense of all enemies for 2 turns",
         specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.25x more damage and opposite orbs will deal 1.25x less damage",
         specialName: "Ramen Beam",
         captain: "Boosts ATK and RCV of Freedom characters by 1.2x",
-        cooldown: 20,
+        cooldown: [ 20, 12 ],
         evolution: 743,
         evolvers: [ 117, 80, 86, 91, 97 ]
     },
@@ -5008,7 +5008,7 @@ window.details = {
         specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.25x more damage and opposite orbs will deal 1.25x less damage",
         specialName: "Ramen Beam",
         captain: "Boosts ATK and RCV of Freedom characters by 1.5x",
-        cooldown: 20
+        cooldown: [ 20, 12 ],
     },
     744: { // Portgas D. Ace, Record of the Voyage - Whitebeard Crew (Log Ace)
         special: "Reduces damage received by 50% for 3 turns",

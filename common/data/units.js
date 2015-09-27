@@ -744,5 +744,5 @@ window.units = [
     [ "Wanze, Cipher Pol No.7", "DEX", "Freedom", 4, 18, 5, 2, 99, 3000000, 1059, 312, 170, 2051, 674, 363, 1 ],
     [ "Portgas D. Ace, Record of the Voyage - Whitebeard Crew (Log Ace)", "QCK", [ "Freedom", "Fighter" ], 4, 12, 5, 2, 50, null, 377, 195, 72, 1121, 585, 189, 0 ],
     [ "Portgas D. Ace, Dream of the Voyage - Pirate Summit (Log Ace)", "QCK", [ "Freedom", "Fighter" ], 5, 20, 4, 3, 99, null, 1063, 524, 140, 2180, 1100, 262, 0 ],
-    [ "Megalo and Princess Shirahoshi", "QCK", "Fighter", 4, "15", 4, 3, 70, null, null, null, null, null, null, null, 0 ]
+    [ "Megalo and Princess Shirahoshi", "QCK", "Fighter", 4, "15", 4, 3, 70, null, 1251, 271, 150, null, null, null, 0 ]
 ];
