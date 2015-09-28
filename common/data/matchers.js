@@ -69,7 +69,6 @@ window.matchers = [
         matcher: /Boosts ATK.+proportionally to/i
     },
 
-
     {
         name: 'Positional captains',
         target: 'captain',
@@ -256,6 +255,12 @@ window.matchers = [
         name: 'Healers',
         target: 'special',
         matcher: /Recovers/i
+    },
+
+    {
+        name: 'Health reducers',
+        target: 'special',
+        matcher: /Reduces crew's (current )?HP/i
     },
 
     {
