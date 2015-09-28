@@ -3811,7 +3811,7 @@ window.details = {
         special: "Reduces current HP by 40%, deals 15x the amount of HP subtracted in typeless damage to all enemies, locks all orbs for 1 turn",
         specialName: "Great Flame Commandment: Flame Emperor",
         captain: "Boosts HP of Shooter characters by 1.5x and their ATK by 3x if they have a matching orb, by 2x otherwise",
-        cooldown: 22,
+        cooldown: [ 22, 17 ],
         evolution: 562,
         evolvers: [ 118, 86, 266, 302, 267 ]
     },
@@ -3819,7 +3819,7 @@ window.details = {
         special: "Reduces current HP by 40%, deals 15x the amount of HP subtracted in typeless damage to all enemies, locks all orbs for 1 turn",
         specialName: "Great Flame Commandment: Flame Emperor",
         captain: "Boosts HP of Shooter characters by 1.5x and their ATK by 3x if they have a matching orb, by 2x otherwise",
-        cooldown: 22
+        cooldown: [ 22, 17 ]
     },
     563: { // Porche
         special: "Deal small PSY damage to one enemy, changes [INT] orbs into [RCV] orbs",
@@ -3839,12 +3839,12 @@ window.details = {
     566: { // Pickles
         special: "Empties all slots with hindrance orbs",
         specialName: "Sweeping Tackle",
-        cooldown: 14
+        cooldown: [ 14, 6 ]
     },
     567: { // Big Pan
         special: "Reduces Bind and Silence duration by 1 turn, deals STR damage to all enemies",
         specialName: "Loach Coaster",
-        cooldown: 23
+        cooldown: [ 23, 18 ]
     },
     568: { // Foxy
         special: "Delays all enemies for 2 turns, freely switch orbs between slots twice",
@@ -3964,7 +3964,7 @@ window.details = {
         special: "Changes the captain's orb into [PSY], recovers 9x character's RCV in HP",
         specialName: "A Bond Inherited from Bellmere",
         captain: "Boosts RCV of PSY characters by 1.5x",
-        cooldown: 20,
+        cooldown: [ 20, 13 ],
         evolution: 586,
         evolvers: [ 116, 87, 92, 98 ]
     },
@@ -3972,7 +3972,7 @@ window.details = {
         special: "Changes the captain's orb into [PSY], recovers 9x character's RCV in HP",
         specialName: "A Bond Inherited from Bellmere",
         captain: "Boosts HP and RCV of PSY characters by 1.5x",
-        cooldown: 20
+        cooldown: [ 20, 13 ]
     },
     587: { // Crocus
         special: "Removes poison, reduces Bind and Seal duration by 2 turns",
