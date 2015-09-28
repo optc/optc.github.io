@@ -56,7 +56,15 @@ input[type="text"] {
     cursor: pointer;
 }
 
-.type-filter, .class-filter {
+.type-filter {
+    width: 33.3333%;
+}
+
+.class-filter {
+    width: 50%;
+}
+
+.class-filter:nth-child(5) ~ .class-filter {
     width: 33.3333%;
 }
 
@@ -92,10 +100,11 @@ input[type="text"] {
 .class-filter {
     border: 1px solid gray;
     border-right: none;
+    border-top: none;
 }
 
-.class-filter:nth-child(4) ~ .class-filter {
-    border-top: none;
+.class-filter:nth-child(5) ~ .class-filter {
+    border-bottom: none;
 }
 
 .class-filter.active, .custom-filter.active, .drop-filter.active, .exc-filter.active {

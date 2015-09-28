@@ -528,7 +528,7 @@ app.directive('filters',function($compile) {
             });
             // class filters
             var classes = createContainer('Class filters', element);
-            [ 'Fighter', 'Shooter', 'Slasher', 'Striker', 'Freedom', 'Knowledge' ].forEach(function(x) {
+            [ 'Fighter', 'Shooter', 'Slasher', 'Striker', 'Freedom', 'Knowledge', 'Tough' ].forEach(function(x) {
                 classes.append(createFilter(x,'class-filter','filters.class',
                     'filters.class == \'' + x + '\'','onClick($event,\'' + x + '\')'));
             });
