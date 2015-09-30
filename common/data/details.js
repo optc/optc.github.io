@@ -2736,27 +2736,31 @@ window.details = {
     },
     404: { // Absalom
         special: "Reduces damage received by 50% for 2 turns, boosts RCV of all characters by 2x for 2 turns",
-        specialName: "Clear Clear Fruit",
+        specialName: "Clear-Clear Fruit",
         captain: "Boosts ATK of Shooter characters by 1.5x",
         cooldown: [ 23, 14 ],
         evolution: 405,
-        evolvers: [ 117, 84, 89, 95, 100 ]
+        evolvers: [ 117, 84, 89, 95, 100 ],
+        global: true
     },
-    405: { // Graveyeard Absalom
+    405: { // Absalom of the Graveyard
         special: "Reduces damage received by 50% for 2 turns, boosts RCV of all characters by 2x for 2 turns",
-        specialName: "Clear Clear Fruit",
+        specialName: "Clear-Clear Fruit",
         captain: "Boosts ATK of Shooter characters by 2x",
-        cooldown: [ 23, 14 ]
+        cooldown: [ 23, 14 ],
+        global: true
     },
-    406: { // General Zombies
+    406: { // General Zombie
         special: "Reduces HP to 1, deals 1,000 fixed damage to all enemies, boosts ATK of all characters by 1.2x for 1 turn",
         specialName: "Skills of the Ancient Warriors",
-        cooldown: [ 30, 15 ]
+        cooldown: [ 30, 15 ],
+        global: true
     },
     407: { // Jigoro of the Wind
         special: "Randomizes all orbs, deals 7x character's ATK in DEX damage to all enemies",
-        specialName: "Zombie Style 36-Pound Phoenix",
-        cooldown: [ 20, 10 ]
+        specialName: "Zombie-Style 36-Pound Phoenix",
+        cooldown: [ 20, 10 ],
+        global: true
     },
     408: { // Sir Crocodile Warlord of the Sea
         special: "Changes own orb into [INT], randomizes every other orb, deals 15x character's ATK in INT damage to all enemies",
@@ -2891,26 +2895,30 @@ window.details = {
     },
     426: { // Masira
         special: "Boosts ATK of STR characters by 1.05x for 5 turns",
-        specialName: "Hull Hunter Breath",
+        specialName: "Barco Grabber Breath",
         captain: "Boosts HP of STR characters by 2x",
-        cooldown: [ 17, 12 ]
+        cooldown: [ 17, 12 ],
+        global: true
     },
     427: { // Shoujou
         special: "Reduces Bind and Silence duration by 2 turns",
         specialName: "Havoc Sonar",
         captain: "Boosts HP of DEX characters by 2x",
-        cooldown: [ 21, 16 ]
+        cooldown: [ 21, 16 ],
+        global: true
     },
     428: { // Montblanc Cricket
         special: "Reduces damage received by 50% for 2 turns",
-        specialName: "Last Boss - Romantic Diver",
+        specialName: "Last Boss – Deep Dive of Dreams",
         captain: "Boosts ATK of PSY characters by 2x",
-        cooldown: [ 20, 15 ]
+        cooldown: [ 20, 15 ],
+        global: true
     },
-    429: { // South Bird and the Forest Fauna
+    429: { // South Bird and Forest Residents
         special: "Deals 7x character's ATK in DEX damage to all enemies, reduces the defense of all enemies by 50% for 1 turn",
-        specialName: "Fearless Smile of the South Bird",
-        cooldown: [ 20, 15 ]
+        specialName: "South Bird’s Fearless Smile",
+        cooldown: [ 20, 15 ],
+        global: true
     },
     430: { // Bellamy
         special: "Amplifies orb effects by 1.5x for 1 turn",
@@ -2919,19 +2927,22 @@ window.details = {
         captain: "Boosts ATK of DEX characters by 1.5x",
         cooldown: [ 14, 9 ],
         evolution: 431,
-        evolvers: [ 116, 86, 91, 97 ]
+        evolvers: [ 116, 86, 91, 97 ],
+        global: true
     },
     431: { // Bellamy the Hyena
         special: "Amplifies orb effects by 1.5x for 1 turn",
         specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.5x more damage and opposite orbs will deal 1.5x less damage",
         specialName: "Spring Hopper",
         captain: "Boosts ATK and HP of DEX characters by 1.5x",
-        cooldown: [ 14, 9 ]
+        cooldown: [ 14, 9 ],
+        global: true
     },
-    432: { // Sarkies
+    432: { // Sarquiss
         special: "Deals 20x character's ATK in QCK damage to one enemy",
         specialName: "Big Chop",
-        cooldown: [ 25, 18 ]
+        cooldown: [ 25, 18 ],
+        global: true
     },
     433: { // Elizabeth
         special: "Reduces Bind and Silence duration by 1 turn",
@@ -5008,7 +5019,7 @@ window.details = {
         specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.25x more damage and opposite orbs will deal 1.25x less damage",
         specialName: "Ramen Beam",
         captain: "Boosts ATK and RCV of Freedom characters by 1.5x",
-        cooldown: [ 20, 12 ],
+        cooldown: [ 20, 12 ]
     },
     744: { // Portgas D. Ace, Record of the Voyage - Whitebeard Crew (Log Ace)
         special: "Reduces damage received by 50% for 3 turns",
