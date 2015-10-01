@@ -1510,5 +1510,51 @@ window.captains = {
     },
     745: { // evolved Log Ace
         atk: function(p) { return p.unit.class.has("Freedom") ? 2.5 : 1; },
+    },
+    747: {
+        atk: function(p) { return !p.unit.class.has("Tough") ? 1 : (p.orb == 2.0 ? 3 : 2.5); },
+        rcv: function(p) { return 0; }
+    },
+    748: {
+        atk: function(p) { return !p.unit.class.has("Tough") ? 1 : (p.orb == 2.0 ? 3 : 2.5); },
+        rcv: function(p) { return 0; }
+    },
+    749: {
+        atk: function(p) { return p.unit.type == "DEX" ? 1.5 : 1; }
+    },
+    750: {
+        atk: function(p) { return p.unit.type == "DEX" ? 2 : 1; }
+    },
+    751: {
+        atk: function(p) { return p.unit.class.has("Knowledge") ? 1.5 : 1; },
+        rcv: function(p) { return p.unit.class.has("Knowledge") ? 1.5 : 1; }
+    },
+    752: {
+        atk: function(p) { return p.unit.class.has("Knowledge") ? 2.25 : 1; },
+        rcv: function(p) { return p.unit.class.has("Knowledge") ? 1.5 : 1; }
+    },
+    753: {
+        atk: function(p) { return p.unit.class.has("Tough") ? 2 : 1; },
+    },
+    754: {
+        atk: function(p) { return p.unit.class.has("Tough") ? 2.5 : 1; },
+    },
+    755: {
+        atk: function(p) { return p.unit.type == "INT" ? 1.5 : 1; }
+    },
+    756: {
+        atk: function(p) { return p.unit.type == "INT" ? 2 : 1; }
+    },
+    757: {
+        atk: function(p) { return p.unit.type == "PSY" ? 2 : 1; }
+    },
+    758: {
+        atk: function(p) { return p.unit.type == "PSY" ? 2 : 1; }
+    },
+    759: {
+        atk: function(p) { return p.unit.type == "STR" && p.percHP <= 30.0 ? 2.5 : 1; }
+    },
+    760: {
+        atk: function(p) { return p.unit.type == "STR" && p.percHP <= 30.0 ? 3 : 1; }
     }
 };

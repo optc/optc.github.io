@@ -582,5 +582,19 @@ window.specials = {
     },
     743: { // Wanze evolved
         orb: function(p) { return p.orb == 2.0 ? 1.25 : (p.orb == 0.5 ? 4/5 : 1); }
+    },
+    753: {
+        orb: function(p) { return p.orb == 2.0 ? 1.75 : (p.orb == 0.5 ? 4/7 : 1); },
+    },
+    754: {
+        orb: function(p) { return p.orb == 2.0 ? 1.75 : (p.orb == 0.5 ? 4/7 : 1); },
+    },
+    755: {
+        atk: function(p) { return p.unit.class.has("Tough") ? 1.75 : 1; },
+        type: 'class'
+    },
+    756: { 
+        atk: function(p) { return p.unit.class.has("Tough") ? 1.75 : 1; },
+        type: 'class'
     }
 };
