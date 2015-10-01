@@ -5045,7 +5045,9 @@ window.details = {
         special: "Deals 35x character's ATK in STR damage to one enemy, boosts chances of getting matching orbs for 3 turns",
         specialName: "Rokuougan",
         captain: "Boosts ATK of Tough units by 3x if they have a matching orb, by 2.5x otherwise, reduces RCV to 0",
-        cooldown: 25
+        cooldown: 25,
+        evolution: 748,
+        evolvers: [ 118, 84, 266, 300, 267 ]
     },
     748: { // Rob Lucci, CP9's Strongest Generation
         special: "Deals 35x character's ATK in STR damage to one enemy, boosts chances of getting matching orbs for 3 turns",
@@ -5058,7 +5060,9 @@ window.details = {
         specialName: "Rankyaku - Amane Dachi",
         captain: "Boosts ATK of DEX characters by 1.5x, boosts damage of DEX specials by 1.5x",
         captainNotes: "Percentage-dealing specials are considered typeless damage and will not be boosted by this captain ability",
-        cooldown: 23
+        cooldown: 23,
+        evolution: 750,
+        evolvers: [ 118, 83, 86, 302, 102 ]
     },
     750: { // Kaku, CP9's Strongest Generation
         special: "Deals random DEX damage to all enemies, randomizes all orbs",
@@ -5068,13 +5072,15 @@ window.details = {
         cooldown: 23
     },
     751: { // Kalifa, CP9's Dark Justice
-        special: "Reduces damage received by 50% if the special is activated with more than 50% health remaining, by 80% if the special is activated with less than 50% but more than 10% health remaining, by 100% if the special is activated with less than 10% health remaining",
+        special: "Reduces damage received by 50% if the special is activated with more than 50% health remaining, by 80% if activated with less than 50% but more than 10% health remaining, by 100% if activated with less than 10% health remaining",
         specialName: "Sheep Cloud Tidal Wave",
         captain: "Boosts ATK and RCV of Knowledge characters by 1.5x",
-        cooldown: 21
+        cooldown: 21,
+        evolution: 752,
+        evolvers: [ 118, 83, 85, 301, 101 ]
     },
     752: { // Kalifa, CP9's Strongest Generation
-        special: "Reduces damage received by 50% if the special is activated with more than 50% health remaining, by 80% if the special is activated with less than 50% but more than 10% health remaining, by 100% if the special is activated with less than 10% health remaining",
+        special: "Reduces damage received by 50% if the special is activated with more than 50% health remaining, by 80% if activated with less than 50% but more than 10% health remaining, by 100% if activated with less than 10% health remaining",
         specialName: "Sheep Cloud Tidal Wave",
         captain: "Boosts ATK of Knowledge units by 2.25x and their RCV by 1.5x",
         cooldown: 21
@@ -5084,20 +5090,24 @@ window.details = {
         specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.75x more damage and opposite orbs will deal 1.75x less damage",
         specialName: "Moonlight Ten Finger Pistol",
         captain: "Boosts ATK of Tough characters by 2x",
-        cooldown: 22
+        cooldown: 22,
+        evolution: 754,
+        evolvers: [ 118, 94, 96, 301, 101 ]
     },
     754: { // Jabra, CP9's Strongest Generation
         special: "Deals 15x character's ATK in QCK damage to one enemy, amplifies orb effects by 1.75x for 1 turn",
         specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.75x more damage and opposite orbs will deal 1.75x less damage",
         specialName: "Moonlight Ten Finger Pistol",
         captain: "Boosts ATK of Tough characters by 2.5x",
-        cooldown: 22
+        cooldown: 22,
     },
     755: { // Blueno, CP9's Dark Justice
         special: "Reduces damage received by 50% for 1 turn, boosts ATK of Tough characters by 1.75x for 1 turn",
         specialName: "Tekkai - Rin",
         captain: "Boosts ATK of INT characters by 1.5x, reduces damage received from PSY enemies by 50%",
-        cooldown: 20
+        cooldown: 20,
+        evolution: 756,
+        evolvers: [ 118, 83, 88, 304, 104 ]
     },
     756: { // Blueno, CP9's Strongest Generation
         special: "Reduces damage received by 50% for 1 turn, boosts ATK of Tough characters by 1.75x for 1 turn",
@@ -5109,7 +5119,9 @@ window.details = {
         special: "Changes [DEX] and [QCK] orbs into [PSY] orbs",
         specialName: "Solid Beast Supreme Technique: Owl Strike",
         captain: "Boosts ATK of PSY characters by 2x",
-        cooldown: 18
+        cooldown: 18,
+        evolution: 758,
+        evolvers: [ 118, 87, 87, 303, 103 ]
     },
     758: { // Fukuro, CP9's Strongest Generation
         special: "Changes [DEX] and [QCK] orbs into [PSY] orbs",
@@ -5121,7 +5133,9 @@ window.details = {
         special: "Freely switch orbs between slots 3 times, locks all orbs for 1 turn",
         specialName: "Life Return: Shishi Finger Pistol",
         captain: "Boosts ATK of STR units by 2.5x if HP is low",
-        cooldown: 21
+        cooldown: 21,
+        evolution: 760,
+        evolvers: [ 118, 84, 84, 300, 100 ]
     },
     760: { // Kumadori, CP9's Strongest Generation
         special: "Freely switch orbs between slots 3 times, locks all orbs for 1 turn",
