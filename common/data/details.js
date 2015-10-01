@@ -5044,7 +5044,7 @@ window.details = {
     747: { // Rob Lucci, CP9's Dark Justice
         special: "Deals 35x character's ATK in STR damage to one enemy, boosts chances of getting matching orbs for 3 turns",
         specialName: "Rokuougan",
-        captain: "Boosts ATK of Tough units by 3x if they have a matching orb, by 2.5x otherwise, reduces RCV to 0",
+        captain: "Boosts ATK of Tough characters by 3x if they have a matching orb, by 2.5x otherwise, reduces RCV to 0",
         cooldown: 25,
         evolution: 748,
         evolvers: [ 118, 84, 266, 300, 267 ]
@@ -5052,7 +5052,7 @@ window.details = {
     748: { // Rob Lucci, CP9's Strongest Generation
         special: "Deals 35x character's ATK in STR damage to one enemy, boosts chances of getting matching orbs for 3 turns",
         specialName: "Rokuougan",
-        captain: "Boosts ATK of Tough units by 3x if they have a matching orb, by 2.5x otherwise, reduces RCV to 0",
+        captain: "Boosts ATK of Tough characters by 3x if they have a matching orb, by 2.5x otherwise, reduces RCV to 0",
         cooldown: 25
     },
     749: { // Kaku, CP9's Dark Justice
@@ -5072,7 +5072,7 @@ window.details = {
         cooldown: 23
     },
     751: { // Kalifa, CP9's Dark Justice
-        special: "Reduces damage received by 50% if the special is activated with more than 50% health remaining, by 80% if activated with less than 50% but more than 10% health remaining, by 100% if activated with less than 10% health remaining",
+        special: "Reduces damage received in the next turn by 50% if the special is activated with more than 50% health remaining, by 80% if activated with less than 50% but more than 10% health remaining, by 100% if activated with less than 10% health remaining",
         specialName: "Sheep Cloud Tidal Wave",
         captain: "Boosts ATK and RCV of Knowledge characters by 1.5x",
         cooldown: 21,
@@ -5080,9 +5080,9 @@ window.details = {
         evolvers: [ 118, 83, 85, 301, 101 ]
     },
     752: { // Kalifa, CP9's Strongest Generation
-        special: "Reduces damage received by 50% if the special is activated with more than 50% health remaining, by 80% if activated with less than 50% but more than 10% health remaining, by 100% if activated with less than 10% health remaining",
+        special: "Reduces damage received in the next turn by 50% if the special is activated with more than 50% health remaining, by 80% if activated with less than 50% but more than 10% health remaining, by 100% if activated with less than 10% health remaining",
         specialName: "Sheep Cloud Tidal Wave",
-        captain: "Boosts ATK of Knowledge units by 2.25x and their RCV by 1.5x",
+        captain: "Boosts ATK of Knowledge characters by 2.25x and their RCV by 1.5x",
         cooldown: 21
     },
     753: { // Jabra, CP9's Dark Justice
@@ -5099,7 +5099,7 @@ window.details = {
         specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.75x more damage and opposite orbs will deal 1.75x less damage",
         specialName: "Moonlight Ten Finger Pistol",
         captain: "Boosts ATK of Tough characters by 2.5x",
-        cooldown: 22,
+        cooldown: 22
     },
     755: { // Blueno, CP9's Dark Justice
         special: "Reduces damage received by 50% for 1 turn, boosts ATK of Tough characters by 1.75x for 1 turn",
@@ -5132,7 +5132,7 @@ window.details = {
     759: { // Kumadori, CP9's Dark Justice
         special: "Freely switch orbs between slots 3 times, locks all orbs for 1 turn",
         specialName: "Life Return: Shishi Finger Pistol",
-        captain: "Boosts ATK of STR units by 2.5x if HP is low",
+        captain: "Boosts ATK of STR characters by 2.5x if HP is below 30% at the start of the turn",
         cooldown: 21,
         evolution: 760,
         evolvers: [ 118, 84, 84, 300, 100 ]
@@ -5140,7 +5140,7 @@ window.details = {
     760: { // Kumadori, CP9's Strongest Generation
         special: "Freely switch orbs between slots 3 times, locks all orbs for 1 turn",
         specialName: "Life Return: Shishi Finger Pistol",
-        captain: "Boosts ATK of STR units by 3x if HP is low",
+        captain: "Boosts ATK of STR characters by 3x if HP is below 30% at the start of the turn",
         cooldown: 21
     }
 };

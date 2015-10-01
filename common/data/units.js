@@ -751,12 +751,12 @@ window.units = [
     [ "Kaku, CP9's Strongest Generation", "DEX", [ "Slasher", "Tough" ], 5, 27, 8, 4, 99, null, 1379, 793, 171, null, null, null, 0 ],
     [ "Kalifa, CP9's Dark Justice", "QCK", [ "Knowledge", "Fighter" ], 4, 17, 5, 3, 70, null, 148, 88, 75, null, null, null, 0 ],
     [ "Kalifa, CP9's Strongest Generation", "QCK", [ "Knowledge", "Fighter" ], 5, 27, 5, 4, 99, null, 912, 498, 238, null, null, null, 0 ],
-    [ "Jabra, CP9's Dark Justice", "QCK", [ "Tough", "Freedom" ], 4, 17, 5, 3, 70, null, 306, 146, 24, null, null, null, 0 ],
+    [ "Jabra, CP9's Dark Justice", "QCK", [ "Tough", "Freedom" ], 4, 17, 5, 3, 70, null, 224, 112, 20, 1651, 702, 90, 0 ],
     [ "Jabra, CP9's Strongest Generation", "QCK", [ "Tough", "Freedom" ], 5, 27, 4, 4, 99, null, 1658, 683, 59, null, null, null, 0 ],
-    [ "Blueno, CP9's Dark Justice", "INT", [ "Tough", "Freedom" ], 4, 16, 5, 3, 70, null, 337, 125, 26, null, null, null, 0 ],
+    [ "Blueno, CP9's Dark Justice", "INT", [ "Tough", "Freedom" ], 4, 16, 5, 3, 70, null, 337, 125, 26, 1832, 644, 91, 0 ],
     [ "Blueno, CP9's Strongest Generation", "INT", [ "Tough", "Freedom" ], 5, 26, 4, 4, 99, null, 1779, 600, 56, null, null, null, 0 ],
-    [ "Fukuro, CP9's Dark Justice", "PSY", [ "Tough", "Fighter" ], 4, 16, 4, 3, 70, null, 208, 129, 55, null, null, null, 0 ],
-    [ "Fukuro, CP9's Strongest Generation", "INT", [ "Tough", "Fighter" ], 5, 26, 8, 4, 99, null, 1146, 621, 172, null, null, null, 0 ],
+    [ "Fukuro, CP9's Dark Justice", "PSY", [ "Tough", "Fighter" ], 4, 16, 4, 3, 70, null, 208, 129, 55, 1140, 651, 203, 0 ],
+    [ "Fukuro, CP9's Strongest Generation", "INT", [ "Tough", "Fighter" ], 5, 26, 8, 4, 99, null, 1093, 603, 165, null, null, null, 0 ],
     [ "Kumadori, CP9's Dark Justice", "STR", [ "Tough", "Striker" ], 4, 16, 4, 3, 70, null, 220, 119, 56, null, null, null, 0 ],
     [ "Kumadori, CP9's Strongest Generation", "STR", [ "Tough", "Striker" ], 5, 26, 7, 4, 99, null, 1110, 560, 170, null, null, null, 0 ]
 ];
