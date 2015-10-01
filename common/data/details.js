@@ -2751,7 +2751,7 @@ window.details = {
         global: true
     },
     406: { // General Zombie
-        special: "Reduces HP to 1, deals 1,000 fixed damage to all enemies, boosts ATK of all characters by 1.2x for 1 turn",
+        special: "Reduces crew's HP to 1, deals 1,000 fixed damage to all enemies, boosts ATK of all characters by 1.2x for 1 turn",
         specialName: "Skills of the Ancient Warriors",
         cooldown: [ 30, 15 ],
         global: true

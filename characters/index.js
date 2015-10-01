@@ -202,7 +202,12 @@ var getTableColumns = function() {
         { title: 'Stars' },
         { title: 'CL', orderable: false }
     ];
-    additionalColumns.forEach(function(x) { result.splice(result.length-1, 0, { title: x }); });
+    additionalColumns.forEach(function(x) {
+        var title = x
+            .replace(/Minimum cooldown/,'Min CD')
+            .replace(/Initial cooldown/,'Max CD');
+        result.splice(result.length-1, 0, { title: title, type: 'numeric' });
+    });
     return result;
 };
 
@@ -225,11 +230,19 @@ var tableData = window.units.filter(function(x) { return x.name; }).map(function
     additionalColumns.forEach(function(c,n) {
         var temp = 0;
         if (c == 'ATK/HP') temp = Math.round(x.maxATK / x.maxHP * 100) / 100;
-        if (c == 'RCV/HP') temp = Math.round(x.maxRCV / x.maxHP * 100) / 100;
-        if (c == 'RCV/ATK') temp = Math.round(x.maxRCV / x.maxATK * 100) / 100;
-        if (c == 'ATK/CMB') temp = Math.round(x.maxATK / x.combo * 100) / 100;
-        if (c == 'CMB') temp = x.combo;
-        if (isNaN(temp)) temp = 0;
+        else if (c == 'RCV/HP') temp = Math.round(x.maxRCV / x.maxHP * 100) / 100;
+        else if (c == 'RCV/ATK') temp = Math.round(x.maxRCV / x.maxATK * 100) / 100;
+        else if (c == 'ATK/CMB') temp = Math.round(x.maxATK / x.combo * 100) / 100;
+        else if (c == 'CMB') temp = x.combo;
+        else if (c == 'Minimum cooldown' || c == 'Initial cooldown') { 
+            var d = details[x.number + 1];
+            if (!d.hasOwnProperty('special')) temp = 'N/A';
+            else if (!d.hasOwnProperty('cooldown')) temp = 'Unknown';
+            else if (c == 'Minimum cooldown' && d.cooldown.constructor == Array) temp = d.cooldown[1];
+            else if (c == 'Initial cooldown') temp = (d.cooldown.constructor == Array ? d.cooldown[0] : d.cooldown);
+            else temp = 'Unknown';
+        }
+        if (temp.constructor != String && isNaN(temp)) temp = 0;
         result.splice(result.length-2, 0, temp);
     });
     return result;
@@ -412,7 +425,8 @@ app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, 
 });
 
 app.controller('ColumnsCtrl',function($scope, $rootScope, $state, $stateParams) {
-    $scope.columns = { 'ATK/HP': false, 'RCV/HP': false, 'RCV/ATK': false, 'ATK/CMB': false, 'CMB': false };
+    $scope.columns = { 'ATK/HP': false, 'RCV/HP': false, 'RCV/ATK': false, 'ATK/CMB': false,
+        'CMB': false, 'Minimum cooldown': false, 'Initial cooldown': false };
     additionalColumns.forEach(function(x) {
         if ($scope.columns.hasOwnProperty(x))
             $scope.columns[x] = true;
