@@ -5104,7 +5104,7 @@ window.details = {
     755: { // Blueno, CP9's Dark Justice
         special: "Reduces damage received by 50% for 1 turn, boosts ATK of Tough characters by 1.75x for 1 turn",
         specialName: "Tekkai - Rin",
-        captain: "Boosts ATK of INT characters by 1.5x, reduces damage received from PSY enemies by 50%",
+        captain: "Boosts ATK of INT characters by 1.5x, reduces damage received from PSY enemies by 20%",
         cooldown: 20,
         evolution: 756,
         evolvers: [ 118, 83, 88, 304, 104 ]
@@ -5112,7 +5112,7 @@ window.details = {
     756: { // Blueno, CP9's Strongest Generation
         special: "Reduces damage received by 50% for 1 turn, boosts ATK of Tough characters by 1.75x for 1 turn",
         specialName: "Tekkai - Rin",
-        captain: "Boosts ATK of INT characters by 2x, reduces damage received from PSY enemies by 66.66%",
+        captain: "Boosts ATK of INT characters by 2x, reduces damage received from PSY enemies by 30%",
         cooldown: 20
     },
     757: { // Fukuro, CP9's Dark Justice
