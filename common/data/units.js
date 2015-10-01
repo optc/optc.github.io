@@ -744,5 +744,19 @@ window.units = [
     [ "Wanze, Cipher Pol No.7", "DEX", "Freedom", 4, 18, 5, 2, 99, 3000000, 1059, 312, 170, 2051, 674, 363, 1 ],
     [ "Portgas D. Ace, Record of the Voyage - Whitebeard Crew (Log Ace)", "QCK", [ "Freedom", "Fighter" ], 4, 12, 5, 2, 50, null, 377, 195, 72, 1121, 585, 189, 0 ],
     [ "Portgas D. Ace, Dream of the Voyage - Pirate Summit (Log Ace)", "QCK", [ "Freedom", "Fighter" ], 5, 20, 4, 3, 99, null, 1063, 524, 140, 2180, 1100, 262, 0 ],
-    [ "Megalo and Princess Shirahoshi", "QCK", "Fighter", 4, "15", 4, 3, 70, null, 1251, 271, 150, null, null, null, 0 ]
+    [ "Megalo and Princess Shirahoshi", "QCK", "Fighter", 4, 15, 4, 3, 70, null, 1251, 271, 150, 2001, 600, 241, 0 ],
+    [ "Rob Lucci, CP9's Dark Justice", "STR", [ "Tough", "Fighter" ], 5, 30, 4, 4, 70, null, 612, 306, 91, null, null, null, 0 ],
+    [ "Rob Lucci, CP9's Strongest Generation", "STR", [ "Tough", "Fighter" ], 6, 55, 6, 4, 99, null, 1611, 762, 220, null, null, null, 0 ],
+    [ "Kaku, CP9's Dark Justice", "DEX", [ "Slasher", "Tough" ], 4, 17, 6, 3, 70, null, 435, 291, 69, null, null, null, 0 ],
+    [ "Kaku, CP9's Strongest Generation", "DEX", [ "Slasher", "Tough" ], 5, 27, 8, 4, 99, null, 1379, 793, 171, null, null, null, 0 ],
+    [ "Kalifa, CP9's Dark Justice", "QCK", [ "Knowledge", "Fighter" ], 4, 17, 5, 3, 70, null, 148, 88, 75, null, null, null, 0 ],
+    [ "Kalifa, CP9's Strongest Generation", "QCK", [ "Knowledge", "Fighter" ], 5, 27, 5, 4, 99, null, 954, 515, 247, null, null, null, 0 ],
+    [ "Jabra, CP9's Dark Justice", "QCK", [ "Tough", "Freedom" ], 4, 17, 5, 3, 70, null, 306, 146, 24, null, null, null, 0 ],
+    [ "Jabra, CP9's Strongest Generation", "QCK", [ "Tough", "Freedom" ], 5, 27, 4, 4, 99, null, 1658, 683, 59, null, null, null, 0 ],
+    [ "Blueno, CP9's Dark Justice", "INT", [ "Tough", "Freedom" ], 4, 16, 5, 3, 70, null, 337, 125, 26, null, null, null, 0 ],
+    [ "Blueno, CP9's Strongest Generation", "INT", [ "Tough", "Freedom" ], 5, 26, 4, 4, 99, null, 1849, 618, 60, null, null, null, 0 ],
+    [ "Fukuro, CP9's Dark Justice", "PSY", [ "Tough", "Fighter" ], 4, 16, 4, 3, 70, null, 208, 129, 55, null, null, null, 0 ],
+    [ "Fukuro, CP9's Strongest Generation", "INT", [ "Tough", "Fighter" ], 5, 26, 8, 4, 99, null, 1146, 621, 172, null, null, null, 0 ],
+    [ "Kumadori, CP9's Dark Justice", "STR", [ "Tough", "Striker" ], 4, 16, 4, 3, 70, null, 220, 119, 56, null, null, null, 0 ],
+    [ "Kumadori, CP9's Strongest Generation", "STR", [ "Tough", "Striker" ], 5, 26, 7, 4, 99, null, 1165, 578, 177, null, null, null, 0 ]
 ];
