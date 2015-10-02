@@ -5006,7 +5006,7 @@ window.details = {
         cooldown: [ 23, 15 ]
     },
     742: { // Wanze
-        special: "Amplifies orb effects by 1.25x for 2 turns, reduces the defense of all enemies for 2 turns",
+        special: "Amplifies orb effects by 1.25x for 2 turns, reduces the defense of all enemies by 80% for 2 turns",
         specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.25x more damage and opposite orbs will deal 1.25x less damage",
         specialName: "Ramen Beam",
         captain: "Boosts ATK and RCV of Freedom characters by 1.2x",
@@ -5015,7 +5015,7 @@ window.details = {
         evolvers: [ 117, 80, 86, 91, 97 ]
     },
     743: { // Wanze, Cipher Pol No.7
-        special: "Amplifies orb effects by 1.25x for 2 turns, reduces the defense of all enemies for 2 turns",
+        special: "Amplifies orb effects by 1.25x for 2 turns, reduces the defense of all enemies by 80% for 2 turns",
         specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.25x more damage and opposite orbs will deal 1.25x less damage",
         specialName: "Ramen Beam",
         captain: "Boosts ATK and RCV of Freedom characters by 1.5x",

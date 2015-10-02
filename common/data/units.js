@@ -745,7 +745,7 @@ window.units = [
     [ "Portgas D. Ace, Record of the Voyage - Whitebeard Crew (Log Ace)", "QCK", [ "Freedom", "Fighter" ], 4, 12, 5, 2, 50, null, 377, 195, 72, 1121, 585, 189, 0 ],
     [ "Portgas D. Ace, Dream of the Voyage - Pirate Summit (Log Ace)", "QCK", [ "Freedom", "Fighter" ], 5, 20, 4, 3, 99, null, 1063, 524, 140, 2180, 1100, 262, 0 ],
     [ "Megalo and Princess Shirahoshi", "QCK", "Fighter", 4, 15, 4, 3, 70, null, 1251, 271, 150, 2001, 600, 241, 0 ],
-    [ "Rob Lucci, CP9's Dark Justice", "STR", [ "Tough", "Fighter" ], 5, 30, 4, 4, 70, null, 496, 300, 89, 1656, 800, 246, 0 ],
+    [ "Rob Lucci, CP9's Dark Justice", "STR", [ "Tough", "Fighter" ], 5, 30, 4, 4, 70, null, 496, 300, 89, 1656, 800, 246, 1.5 ],
     [ "Rob Lucci, CP9's Strongest Generation", "STR", [ "Tough", "Fighter" ], 6, 55, 6, 4, 99, null, 1611, 762, 220, 3230, 1456, 382, 0 ],
     [ "Kaku, CP9's Dark Justice", "DEX", [ "Slasher", "Tough" ], 4, 17, 6, 3, 70, null, 151, 132, 28, 1183, 713, 178, 1 ],
     [ "Kaku, CP9's Strongest Generation", "DEX", [ "Slasher", "Tough" ], 5, 27, 8, 4, 99, null, 1124, 666, 147, 2440, 1325, 272, 0 ],
