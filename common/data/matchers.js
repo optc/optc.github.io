@@ -168,6 +168,12 @@ window.matchers = [
     },
 
     {
+        name: 'Self-orb controllers',
+        target: 'special',
+        matcher: /Changes.+own orb.+into/i
+    },
+
+    {
         name: 'Orb randomizers',
         target: 'special',
         matcher: /randomizes.+orb/i

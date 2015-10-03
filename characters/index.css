@@ -624,6 +624,16 @@ tr.incomplete td:nth-child(2) > a:after {
     white-space: nowrap;
 }
 
+.drop-table td:last-child {
+    white-space: initial;
+}
+
+.drop-warning {
+    text-align: left;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
 unit > a {
     cursor: pointer;
 }

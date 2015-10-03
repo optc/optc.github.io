@@ -219,6 +219,12 @@
 
                 <h3 class="page-header" ng-if="drops.length > 0">Drop Locations</h3>
 
+                <span ng-show="!collapsed.drops" class="drop-warning">
+                    <strong>Note:</strong>
+                    If a drop appears in almost all of the stages of a story-mode island, it is likely to be part of the
+                    island's secret round. Secret rounds have an estimated 5% chance of appearing.
+                </span>
+
                 <div ng-if="drops.length > 0" ng-class="{ collapsed: collapsed.drops && drops.length > 3 }">
                     <div class="btn btn-info collapse-button" ng-click="collapsed.drops = false">Click to show</div>
                     <table class="table table-striped drop-table">
