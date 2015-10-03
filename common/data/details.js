@@ -3079,7 +3079,7 @@ window.details = {
         special: "Boosts ATK of STR characters by 1.5x for 1 turn, deals 15x character's ATK in STR damage to all enemies",
         specialName: "Manly Flaming Sword",
         captain: "Boosts ATK of STR characters by 2x, boosts damage of STR specials by 2x",
-        captainNotes: "Percentage-dealing specials are considered typeless damage and will not be boosted by this captain ability",
+        captainNotes: "Specials that deal fixed damage or cut a percentage of the enemy's HP are not affected by this captain ability",
         cooldown: [ 25, 18 ],
         evolution: 455,
         evolvers: [ 118, 83, 84, 300, 100 ],
@@ -3089,7 +3089,7 @@ window.details = {
         special: "Boosts ATK of STR characters by 1.5x for 1 turn, deals 15x character's ATK in STR damage to all enemies",
         specialName: "Manly Flaming Sword",
         captain: "Boosts ATK of STR characters by 2x, boosts damage of STR specials by 2x",
-        captainNotes: "Percentage-dealing specials are considered typeless damage and will not be boosted by this captain ability",
+        captainNotes: "Specials that deal fixed damage or cut a percentage of the enemy's HP are not affected by this captain ability",
         cooldown: [ 25, 18 ],
         global: true
     },
@@ -5059,7 +5059,7 @@ window.details = {
         special: "Deals random DEX damage to all enemies, randomizes all orbs",
         specialName: "Rankyaku - Amane Dachi",
         captain: "Boosts ATK of DEX characters by 1.5x, boosts damage of DEX specials by 1.5x",
-        captainNotes: "Percentage-dealing specials are considered typeless damage and will not be boosted by this captain ability",
+        captainNotes: "Specials that deal fixed damage or cut a percentage of the enemy's HP are not affected by this captain ability",
         cooldown: 23,
         evolution: 750,
         evolvers: [ 118, 83, 86, 302, 102 ]
@@ -5068,7 +5068,7 @@ window.details = {
         special: "Deals random DEX damage to all enemies, randomizes all orbs",
         specialName: "Rankyaku - Amane Dachi",
         captain: "Boosts ATK of DEX characters by 2x, boosts damage of DEX specials by 2x",
-        captainNotes: "Percentage-dealing specials are considered typeless damage and will not be boosted by this captain ability",
+        captainNotes: "Specials that deal fixed damage or cut a percentage of the enemy's HP are not affected by this captain ability",
         cooldown: 23
     },
     751: { // Kalifa, CP9's Dark Justice
