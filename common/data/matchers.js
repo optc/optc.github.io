@@ -206,7 +206,7 @@ window.matchers = [
     {
         name: 'Percentage damage dealers',
         target: 'special',
-        matcher: /Cuts.+enem.+current HP/i
+        matcher: /Cuts.+current HP.+enem/i
     },
 
     {

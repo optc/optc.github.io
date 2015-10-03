@@ -1489,7 +1489,7 @@ window.details = {
         global: true
     },
     226: { // Dracule Mihawk
-        special: "Cuts all enemies' current HP by 30%",
+        special: "Cuts the current HP of each enemy by 30%",
         specialName: "Black Blade Ship Cutter",
         captain: "Boosts ATK of Slasher characters by 2x",
         cooldown: [ 32, 17 ],
@@ -1498,7 +1498,7 @@ window.details = {
         global: true
     },
     227: { // Hawk Eyes Mihawk
-        special: "Cuts all enemies' current HP by 30%",
+        special: "Cuts the current HP of each enemy by 30%",
         specialName: "Black Blade Ship Cutter",
         captain: "Boosts ATK of Slasher characters by 2.5x",
         cooldown: [ 32, 17 ],
@@ -1740,7 +1740,7 @@ window.details = {
         global: true
     },
     260: { // Edward Newgate
-        special: "Cuts all enemies' current HP by 30%",
+        special: "Cuts the current HP of each enemy by 30%",
         specialName: "Seaquake",
         captain: "Boosts ATK of all characters by 3x if HP is below 30% at the start of the turn",
         cooldown: [ 25, 17 ],
@@ -1749,7 +1749,7 @@ window.details = {
         global: true
     },
     261: { // Whitebeard
-        special: "Cuts all enemies' current HP by 30%",
+        special: "Cuts the current HP of each enemy by 30%",
         specialName: "Seaquake",
         captain: "Boosts ATK of all characters by 3x if HP is below 30% at the start of the turn",
         cooldown: [ 25, 17 ],
@@ -1762,7 +1762,7 @@ window.details = {
         global: true
     },
     263: { // Petty Officer Coby
-        special: "Amplifies orb effects by 1.5x for 2 turns",
+        special: "Amplifies the effect of orbs by 1.5x for 2 turns",
         specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.5x more damage and opposite orbs will deal 1.5x less damage",
         specialName: "Shave",
         captain: "Boosts ATK of Fighter characters by 2x",
@@ -1789,7 +1789,7 @@ window.details = {
         special: "Reduces the defense of all enemies by 50% for 1 turn",
         specialName: "Shield Crusher",
         captain: "Boosts ATK of all characters by 1.5x",
-        cooldown: [ 15, 7 ],
+        cooldown: [ 15, 10 ],
         global: true
     },
     268: { // White Chase Smoker
@@ -1991,7 +1991,7 @@ window.details = {
         global: true
     },
     299: { // Onigumo
-        special: "Cuts all enemies' current HP by 10%",
+        special: "Cuts the current HP of each enemy by 10%",
         specialName: "8-Sword Style Onigumo",
         captain: "Boosts ATK of DEX characters by 2x",
         cooldown: [ 21, 16 ],
@@ -2045,7 +2045,7 @@ window.details = {
         global: true
     },
     309: { // Basil Hawkins
-        special: "Cuts all enemies' current HP by 10%, reduces the defense of all enemies by 50% for 3 turns",
+        special: "Cuts the current HP of each enemy by 10%, reduces the defense of all enemies by 50% for 3 turns",
         specialName: "Demon Face",
         captain: "Reduces RCV of all characters by 90%, reduces damage received by 40%",
         cooldown: [ 23, 15 ],
@@ -2054,7 +2054,7 @@ window.details = {
         global: true
     },
     310: { // Basil Hawkins the Magician
-        special: "Cuts all enemies' current HP by 10%, reduces the defense of all enemies by 50% for 3 turns",
+        special: "Cuts the current HP of each enemy by 10%, reduces the defense of all enemies by 50% for 3 turns",
         specialName: "Demon Face",
         captain: "Reduces RCV of all characters by 90%, reduces damage received by 40%",
         cooldown: [ 23, 15 ],
@@ -2159,7 +2159,7 @@ window.details = {
         global: true
     },
     323: { // Kaku
-        special: "Amplifies orb effects by 1.5x for 2 turns",
+        special: "Amplifies the effect of orbs by 1.5x for 2 turns",
         specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.5x more damage and opposite orbs will deal 1.5x less damage",
         specialName: "Mountain Wind",
         captain: "Boosts HP and RCV of QCK characters by 1.5x",
@@ -2169,7 +2169,7 @@ window.details = {
         global: true
     },
     324: { // Kaku Dock One Carpentry Specialist
-        special: "Amplifies orb effects by 1.5x for 2 turns",
+        special: "Amplifies the effect of orbs by 1.5x for 2 turns",
         specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.5x more damage and opposite orbs will deal 1.5x less damage",
         specialName: "Mountain Wind",
         captain: "Boosts HP and RCV of QCK characters by 1.5x",
@@ -2662,7 +2662,7 @@ window.details = {
         global: true
     },
     395: { // Miss Merry Christmas
-        special: "Empties neighboring slots, amplifies orb effects by 1.25x for 1 turn",
+        special: "Empties neighboring slots, amplifies the effect of orbs by 1.25x for 1 turn",
         specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.25x more damage and opposite orbs will deal 1.25x less damage",
         specialName: "Mole Banana",
         captain: "Boosts ATK and RCV of QCK characters by 1.2x",
@@ -2672,7 +2672,7 @@ window.details = {
         global: true
     },
     396: { // Miss Merry Christmas Human Mole
-        special: "Empties neighboring slots, amplifies orb effects by 1.25x for 1 turn",
+        special: "Empties neighboring slots, amplifies the effect of orbs by 1.25x for 1 turn",
         specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.25x more damage and opposite orbs will deal 1.25x less damage",
         specialName: "Mole Banana",
         captain: "Boosts ATK and RCV of QCK characters by 1.2x",
@@ -2834,7 +2834,7 @@ window.details = {
         global: true
     },
     417: { // Donquixote Doflamingo
-        special: "Freely switch orbs between slots twice, amplifies orb effects by 2x for 1 turn",
+        special: "Freely switch orbs between slots twice, amplifies the effect of orbs by 2x for 1 turn",
         specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 2x more damage and opposite orbs will deal 2x less damage",
         specialName: "Overheat",
         captain: "Boosts ATK of Slasher characters by 2x",
@@ -2843,7 +2843,7 @@ window.details = {
         evolvers: [ 118, 83, 86, 302, 102 ]
     },
     418: { // Donquixote Doflamingo Warlord of the Sea
-        special: "Freely switch orbs between slots twice, amplifies orb effects by 2x for 1 turn",
+        special: "Freely switch orbs between slots twice, amplifies the effect of orbs by 2x for 1 turn",
         specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 2x more damage and opposite orbs will deal 2x less damage",
         specialName: "Overheat",
         captain: "Boosts ATK and HP of Slasher characters by 2x",
@@ -2921,7 +2921,7 @@ window.details = {
         global: true
     },
     430: { // Bellamy
-        special: "Amplifies orb effects by 1.5x for 1 turn",
+        special: "Amplifies the effect of orbs by 1.5x for 1 turn",
         specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.5x more damage and opposite orbs will deal 1.5x less damage",
         specialName: "Spring Hopper",
         captain: "Boosts ATK of DEX characters by 1.5x",
@@ -2931,7 +2931,7 @@ window.details = {
         global: true
     },
     431: { // Bellamy the Hyena
-        special: "Amplifies orb effects by 1.5x for 1 turn",
+        special: "Amplifies the effect of orbs by 1.5x for 1 turn",
         specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.5x more damage and opposite orbs will deal 1.5x less damage",
         specialName: "Spring Hopper",
         captain: "Boosts ATK and HP of DEX characters by 1.5x",
@@ -2951,7 +2951,7 @@ window.details = {
         cooldown: [ 16, 6 ]
     },
     434: { // Caroline
-        special: "Amplifies orb effects by 1.25x for 3 turns",
+        special: "Amplifies the effect of orbs by 1.25x for 3 turns",
         specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.25x more damage and opposite orbs will deal 1.25x less damage",
         specialName: "Newkama Kenpo - Maiden's Awakening",
         captain: "Boosts ATK by 2x following a chain of PSY > INT > INT attacks no lower than Good",
@@ -3158,7 +3158,7 @@ window.details = {
         cooldown: [ 20, 15 ]
     },
     465: { // Gedatsu
-        special: "Deals 20x character's ATK in QCK damage to one enemy, amplifies orb effects by 1.25x for 2 turns",
+        special: "Deals 20x character's ATK in QCK damage to one enemy, amplifies the effect of orbs by 1.25x for 2 turns",
         specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.25x more damage and opposite orbs will deal 1.25x less damage",
         specialName: "Jet Punch",
         captain: "Boosts ATK by 3x after scoring 4 hits below Good in a row",
@@ -3627,7 +3627,7 @@ window.details = {
         cooldown: [ 16, 16 ]
     },
     533: { // Brook Cherry Head
-        special: "Amplifies orb effects by 1.5x for 1 turn, deals 20x character's ATK in QCK damage to one enemy",
+        special: "Amplifies the effect of orbs by 1.5x for 1 turn, deals 20x character's ATK in QCK damage to one enemy",
         specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.5x more damage and opposite orbs will deal 1.5x less damage",
         specialName: "Swallow Bond en Avant Sakura",
         captain: "Boosts ATK of QCK characters by 2x",
@@ -3636,7 +3636,7 @@ window.details = {
         evolvers: [ 118, 79, 85, 96, 101 ]
     },
     534: { // Brook Sakura Color
-        special: "Amplifies orb effects by 1.5x for 1 turn, deals 20x character's ATK in QCK damage to one enemy",
+        special: "Amplifies the effect of orbs by 1.5x for 1 turn, deals 20x character's ATK in QCK damage to one enemy",
         specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.5x more damage and opposite orbs will deal 1.5x less damage",
         specialName: "Swallow Bond en Avant Sakura",
         captain: "Boosts ATK of QCK characters by 2x",
@@ -3775,7 +3775,7 @@ window.details = {
         cooldown: 20
     },
     555: { // Usopp, Merveille's Adventurer (Strong World Usopp)
-        special: "Delays all enemies for 3 turns, cuts all enemies' current HP by 10%",
+        special: "Delays all enemies for 3 turns, cuts the current HP of each enemy by 10%",
         specialName: "Heavenly Dragon Star",
         captain: "Boosts ATK of Shooter characters by 2x",
         cooldown: [ 21, 14 ],
@@ -3783,7 +3783,7 @@ window.details = {
         evolvers: [ 118, 83, 96, 301, 101 ]
     },
     556: { // Usopp, Strawhat Crew's Attack (Strong World Usopp)
-        special: "Delays all enemies for 3 turns, cuts all enemies' current HP by 10%",
+        special: "Delays all enemies for 3 turns, cuts the current HP of each enemy by 10%",
         specialName: "Heavenly Dragon Star",
         captain: "Boosts ATK of Shooter characters by 2x and their RCV by 1.5x",
         cooldown: [ 21, 14 ]
@@ -3803,7 +3803,7 @@ window.details = {
         cooldown: [ 16, 10 ]
     },
     559: { // Franky, Merveille's Adventurer (Strong World Franky)
-        special: "Changes own orb into [STR], amplifies orb effects by 1.5x for 2 turns",
+        special: "Changes own orb into [STR], amplifies the effect of orbs by 1.5x for 2 turns",
         specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.5x more damage and opposite orbs will deal 1.5x less damage",
         specialName: "Roar! Zarley Davison",
         captain: "Boosts ATK of STR characters by 2x, deals 2x character's ATK in STR damage to all enemies at the end of the turn",
@@ -3812,7 +3812,7 @@ window.details = {
         evolvers: [ 118, 83, 84, 300, 100 ]
     },
     560: { // Franky, Strawhat Crew's Attack (Strong World Franky)
-        special: "Changes own orb into [STR], amplifies orb effects by 1.5x for 2 turns",
+        special: "Changes own orb into [STR], amplifies the effect of orbs by 1.5x for 2 turns",
         specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.5x more damage and opposite orbs will deal 1.5x less damage",
         specialName: "Roar! Zarley Davison",
         captain: "Boosts ATK of STR characters by 2.25x, deals 2x character's ATK in STR damage to all enemies at the end of the turn",
@@ -3948,7 +3948,7 @@ window.details = {
         cooldown: [ 20, 17 ]
     },
     581: { // Genbou
-        special: "Cuts all enemies' current HP by 7%",
+        special: "Cuts the current HP of each enemy by 7%",
         specialName: "Large Calibre Bazooka",
         captain: "Boosts ATK of STR characters by 1.5x",
         cooldown: [ 20, 11 ]
@@ -4077,7 +4077,7 @@ window.details = {
         cooldown: [ 32, 17 ]
     },
     604: { // Sanji, Record of the Voyage - Strawhat Crew (Log Sanji)
-        special: "Cuts all enemies' current HP by 10%, changes [QCK] orbs into [DEX] orbs",
+        special: "Cuts the current HP of each enemy by 10%, changes [QCK] orbs into [DEX] orbs",
         specialName: "Diable Jambe - Extra Hachis",
         captain: "Boosts ATK of Fighter characters by 2x",
         cooldown: [ 18, 15 ],
@@ -4085,7 +4085,7 @@ window.details = {
         evolvers: [ 117, 86, 97, 97, 302 ]
     },
     605: { // Sanji, Dream of the Voyage - All Blue (Log Sanji)
-        special: "Cuts all enemies' current HP by 10%, changes [QCK] orbs into [DEX] orbs",
+        special: "Cuts the current HP of each enemy by 10%, changes [QCK] orbs into [DEX] orbs",
         specialName: "Diable Jambe - Extra Hachis",
         captain: "Boosts ATK of Fighter characters by 2x, reduces damage received by 20%",
         cooldown: [ 18, 15 ]
@@ -4165,7 +4165,7 @@ window.details = {
         cooldown: [ 33, 18 ]
     },
     619: { // Knuckle Hoodlum, Green Bounty Hunter
-        special: "Cuts all enemies' current HP by 5%",
+        special: "Cuts the current HP of each enemy by 5%",
         specialName: "Light Break",
         cooldown: 25
     },
@@ -4271,7 +4271,7 @@ window.details = {
         cooldown: [ 23, 15 ]
     },
     637: { // Hatchan, Takoyaki Stand Owner
-        special: "Cuts all enemies' current HP by 8%, boosts ATK against enemies with increased defense by 1.3x for 1 turn",
+        special: "Cuts the current HP of each enemy by 8%, boosts ATK against enemies with increased defense by 1.3x for 1 turn",
         specialName: "Hachi Ink Jet",
         captain: "Recovers 618 HP at the end of the turn, boosts ATK of Slasher characters by 1.5x",
         cooldown: [ 25, 12 ]
@@ -4307,7 +4307,7 @@ window.details = {
         cooldown: [ 23, 17 ]
     },
     642: { // Squard
-        special: "Reduces crew's current HP by 30%, deals 10x character's ATK in PSY damage to one enemy, amplifies orb effects by 1.75x for 1 turn",
+        special: "Reduces crew's current HP by 30%, deals 10x character's ATK in PSY damage to one enemy, amplifies the effect of orbs by 1.75x for 1 turn",
         specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.75x more damage and opposite orbs will deal 1.75x less damage",
         specialName: "Great Sword of the Battle Veteran",
         captain: "Boosts ATK of PSY characters by 2.5x if HP is below 30% at the start of the turn",
@@ -4316,7 +4316,7 @@ window.details = {
         evolvers: [ 118, 92, 94, 303, 103 ]
     },
     643: { // Maelstrom Spider Squard
-        special: "Reduces crew's current HP by 30%, deals 10x character's ATK in PSY damage to one enemy, amplifies orb effects by 1.75x for 1 turn",
+        special: "Reduces crew's current HP by 30%, deals 10x character's ATK in PSY damage to one enemy, amplifies the effect of orbs by 1.75x for 1 turn",
         specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.75x more damage and opposite orbs will deal 1.75x less damage",
         specialName: "Great Sword of the Battle Veteran",
         captain: "Boosts ATK of PSY characters by 3x if HP is below 30% at the start of the turn",
@@ -4351,7 +4351,7 @@ window.details = {
         cooldown: [ 25, 18 ]
     },
     648: { // Marco, Commander of the 1st Division of the Whitebeard Pirates
-        special: "Recovers 100x character's RCV in HP, amplifies orb effects by 1.5x for 2 turns",
+        special: "Recovers 100x character's RCV in HP, amplifies the effect of orbs by 1.5x for 2 turns",
         specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.5x more damage and opposite orbs will deal 1.5x less damage",
         specialName: "Blue Flame Kick",
         captain: "Reduces damage received by 30% if HP is above 70% at the start of the turn, boosts ATK of QCK and PSY characters by 2.75x if HP is above 70% at the start the turn",
@@ -4360,14 +4360,14 @@ window.details = {
         evolvers: [ 118, 85, 266, 301, 267 ]
     },
     649: { // Phoenix Marco, Commander of the 1st Division of the Whitebeard Pirates
-        special: "Recovers 100x character's RCV in HP, amplifies orb effects by 1.5x for 2 turns",
+        special: "Recovers 100x character's RCV in HP, amplifies the effect of orbs by 1.5x for 2 turns",
         specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.5x more damage and opposite orbs will deal 1.5x less damage",
         specialName: "Blue Flame Kick",
         captain: "Reduces damage received by 30% if HP is above 70% at the start of the turn, boosts ATK of QCK and PSY characters by 2.75x if HP is above 70% at the start the turn",
         cooldown: 25
     },
     650: { // Nami, Record of the Voyage - Strawhat Crew (Log Nami)
-        special: "Deals 5,000 fixed damage to one enemy, amplifies orb effects by 1.5x for 1 turn",
+        special: "Deals 5,000 fixed damage to one enemy, amplifies the effect of orbs by 1.5x for 1 turn",
         specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.5x more damage and opposite orbs will deal 1.5x less damage",
         specialName: "Thunder Lance Tempo",
         captain: "Boosts ATK of INT characters by 2x and their RCV by 1.5x",
@@ -4376,14 +4376,14 @@ window.details = {
         evolvers: [ 117, 83, 88, 93, 104 ]
     },
     651: { // Nami, Dream of the Voyage - World Map (Log Nami)
-        special: "Deals 5,000 fixed damage to one enemy, amplifies orb effects by 1.5x for 1 turn",
+        special: "Deals 5,000 fixed damage to one enemy, amplifies the effect of orbs by 1.5x for 1 turn",
         specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.5x more damage and opposite orbs will deal 1.5x less damage",
         specialName: "Thunder Lance Tempo",
         captain: "Boosts ATK of INT characters by 2x and their RCV by 1.5x",
         cooldown: [ 15, 12 ]
     },
     652: { // Iron Mask Duval
-        special: "Cuts all enemies' current HP by 20%, reduces damage received by 50% for 1 turn",
+        special: "Cuts the current HP of each enemy by 20%, reduces damage received by 50% for 1 turn",
         specialName: "Heart-Smashing Horn",
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of DEX characters by 2x if they have matching orbs",
         cooldown: [ 28, 14 ],
@@ -4391,7 +4391,7 @@ window.details = {
         evolvers: [ 116, 117, 80, 91, 97 ]
     },
     653: { // Duval, Head of the Flying Fish Riders
-        special: "Cuts all enemies' current HP by 20%, reduces damage received by 50% for 1 turn",
+        special: "Cuts the current HP of each enemy by 20%, reduces damage received by 50% for 1 turn",
         specialName: "Heart-Smashing Horn",
         captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of DEX characters by 2.25x if they have matching orbs",
         cooldown: [ 28, 14 ],
@@ -4399,13 +4399,13 @@ window.details = {
         evolvers: [ [ 118, 86, 266, 97, 102 ], [ 18 ] ]
     },
     654: { // Duval, Head of the Rosy Life Riders
-        special: "Cuts all enemies' current HP by 20%, reduces damage received by 50% for 1 turn",
+        special: "Cuts the current HP of each enemy by 20%, reduces damage received by 50% for 1 turn",
         specialName: "Heart-Smashing Horn",
         captain: "Reduces cooldown of all specials by 3 turns at the start of the fight, boosts ATK of DEX characters by 2.75x if they have matching orbs",
         cooldown: [ 28, 14 ]
     },
     655: { // Pirate Arlong
-        special: "Changes empty slots and [TND] orbs into [STR] orbs, deals 10x character's ATK in STR damage to one enemy, amplifies orb effects by 1.25x for 2 turns",
+        special: "Changes empty slots and [TND] orbs into [STR] orbs, deals 10x character's ATK in STR damage to one enemy, amplifies the effect of orbs by 1.25x for 2 turns",
         specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.25x more damage and opposite orbs will deal 1.25x less damage",
         specialName: "Tooth Gum",
         captain: "Boosts ATK of STR characters by 1.5x",
@@ -4414,7 +4414,7 @@ window.details = {
         evolvers: [ 117, 78, 84, 95, 100 ]
     },
     656: { // Arlong of the Sun Pirates
-        special: "Changes empty slots and [TND] orbs into [STR] orbs, deals 10x character's ATK in STR damage to one enemy, amplifies orb effects by 1.25x for 2 turns",
+        special: "Changes empty slots and [TND] orbs into [STR] orbs, deals 10x character's ATK in STR damage to one enemy, amplifies the effect of orbs by 1.25x for 2 turns",
         specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.25x more damage and opposite orbs will deal 1.25x less damage",
         specialName: "Tooth Gum",
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of STR characters by 2x",
@@ -4525,7 +4525,7 @@ window.details = {
         cooldown: [ 15, 11 ]
     },
     672: { // Hack
-        special: "Cuts all enemies' current HP by 20%, changes own orb into [STR]",
+        special: "Cuts the current HP of each enemy by 20%, changes own orb into [STR]",
         specialName: "Four Thousand Tile True Punch",
         captain: "Boosts ATK of Fighter characters by 2x",
         cooldown: 20,
@@ -4533,7 +4533,7 @@ window.details = {
         evolvers: [ 118, 84, 94, 300, 100 ]
     },
     673: { // Hack the Revolutionary
-        special: "Cuts all enemies' current HP by 20%, changes own orb into [STR]",
+        special: "Cuts the current HP of each enemy by 20%, changes own orb into [STR]",
         specialName: "Four Thousand Tile True Punch",
         captain: "Reduces cooldown of all specials by 3 turns at the start of the fight, boosts ATK of Fighter characters by 2x",
         cooldown: 20
@@ -4642,7 +4642,7 @@ window.details = {
         cooldown: [ 19, 14 ]
     },
     689: { // Montblanc Noland
-        special: "Amplifies orb effects by 1.5x for 2 turns",
+        special: "Amplifies the effect of orbs by 1.5x for 2 turns",
         specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.5x more damage and opposite orbs will deal 1.5x less damage",
         specialName: "Botanist's Great Discovery",
         captain: "Boosts ATK and RCV of Slasher characters by 1.2x",
@@ -4651,7 +4651,7 @@ window.details = {
         evolvers: [ 117, 82, 88, 99, 104 ]
     },
     690: { // Montblanc Noland, Explorer and Admiral of the Lvneel Kingdom
-        special: "Amplifies orb effects by 1.5x for 2 turns",
+        special: "Amplifies the effect of orbs by 1.5x for 2 turns",
         specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.5x more damage and opposite orbs will deal 1.5x less damage",
         specialName: "Botanist's Great Discovery",
         captain: "Boosts ATK and RCV of Slasher characters by 1.5x",
@@ -4686,7 +4686,7 @@ window.details = {
         evolvers: [ 116, 95, 300 ]
     },
     695: { // Knuckle Corporal Navy Headquarters
-        special: "Cuts all enemies' current HP by 5%",
+        special: "Cuts the current HP of each enemy by 5%",
         specialName: "Light Break",
         cooldown: 25,
         evolution: 700,
@@ -4717,7 +4717,7 @@ window.details = {
         cooldown: [ 35, 18 ]
     },
     700: { // Knuckle Major Navy Headquarters
-        special: "Cuts all enemies' current HP by 5%",
+        special: "Cuts the current HP of each enemy by 5%",
         specialName: "Light Break",
         captain: "Boosts ATK of Fighter characters by 1.75x",
         cooldown: 25
@@ -5006,7 +5006,7 @@ window.details = {
         cooldown: [ 23, 15 ]
     },
     742: { // Wanze
-        special: "Amplifies orb effects by 1.25x for 2 turns, reduces the defense of all enemies by 80% for 2 turns",
+        special: "Amplifies the effect of orbs by 1.25x for 2 turns, reduces the defense of all enemies by 80% for 2 turns",
         specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.25x more damage and opposite orbs will deal 1.25x less damage",
         specialName: "Ramen Beam",
         captain: "Boosts ATK and RCV of Freedom characters by 1.2x",
@@ -5015,7 +5015,7 @@ window.details = {
         evolvers: [ 117, 80, 86, 91, 97 ]
     },
     743: { // Wanze, Cipher Pol No.7
-        special: "Amplifies orb effects by 1.25x for 2 turns, reduces the defense of all enemies by 80% for 2 turns",
+        special: "Amplifies the effect of orbs by 1.25x for 2 turns, reduces the defense of all enemies by 80% for 2 turns",
         specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.25x more damage and opposite orbs will deal 1.25x less damage",
         specialName: "Ramen Beam",
         captain: "Boosts ATK and RCV of Freedom characters by 1.5x",
@@ -5086,7 +5086,7 @@ window.details = {
         cooldown: 21
     },
     753: { // Jabra, CP9's Dark Justice
-        special: "Deals 15x character's ATK in QCK damage to one enemy, amplifies orb effects by 1.75x for 1 turn",
+        special: "Deals 15x character's ATK in QCK damage to one enemy, amplifies the effect of orbs by 1.75x for 1 turn",
         specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.75x more damage and opposite orbs will deal 1.75x less damage",
         specialName: "Moonlight Ten Finger Pistol",
         captain: "Boosts ATK of Tough characters by 2x",
@@ -5095,7 +5095,7 @@ window.details = {
         evolvers: [ 118, 94, 96, 301, 101 ]
     },
     754: { // Jabra, CP9's Strongest Generation
-        special: "Deals 15x character's ATK in QCK damage to one enemy, amplifies orb effects by 1.75x for 1 turn",
+        special: "Deals 15x character's ATK in QCK damage to one enemy, amplifies the effect of orbs by 1.75x for 1 turn",
         specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.75x more damage and opposite orbs will deal 1.75x less damage",
         specialName: "Moonlight Ten Finger Pistol",
         captain: "Boosts ATK of Tough characters by 2.5x",
