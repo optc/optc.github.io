@@ -216,7 +216,7 @@ window.details = {
         special: "Deals 10x character's ATK in character's type damage to one enemy",
         specialName: "Hyper Slash",
         captain: "Boosts HP of QCK characters by 1.2x",
-        cooldown: 40,
+        cooldown: [ 40, 15 ],
         global: true
     },
     28: { // Master of the Near Sea
@@ -716,7 +716,7 @@ window.details = {
     119: { // Sword Bandit
         special: "Deals 10x character's ATK in character's type damage to one enemy",
         specialName: "Hyper Slash",
-        cooldown: 40,
+        cooldown: [ 40, 15 ],
         global: true
     },
     120: { // Pistol Bandit
@@ -768,7 +768,7 @@ window.details = {
     126: { // Slasher Group Cabin Boy Red Pirates
         special: "Deals 10x character's ATK in character's type damage to one enemy",
         specialName: "Hyper Slash",
-        cooldown: 40,
+        cooldown: [ 40, 15 ],
         evolution: 147,
         evolvers: [ 89 ],
         global: true
@@ -776,7 +776,7 @@ window.details = {
     127: { // Slasher Group Cabin Boy Blue Pirates
         special: "Reduces the defense of all enemies by 50% for 1 turn",
         specialName: "Shield Crusher",
-        cooldown: [ 15, 7 ],
+        cooldown: [ 15, 10 ],
         evolution: 148,
         evolvers: [ 90 ],
         global: true
@@ -800,7 +800,7 @@ window.details = {
     130: { // Slasher Group Cabin Boy Black Pirates
         special: "Deals 10x character's ATK in character's type damage to one enemy",
         specialName: "Hyper Slash",
-        cooldown: 40,
+        cooldown: [ 40, 15 ],
         evolution: 151,
         evolvers: [ 93 ],
         global: true
@@ -856,7 +856,7 @@ window.details = {
     137: { // Shooter Group Cabin Boy Blue Pirates
         special: "Reduces the defense of all enemies by 50% for 1 turn",
         specialName: "Shield Crusher",
-        cooldown: [ 15, 7 ],
+        cooldown: [ 15, 10 ],
         evolution: 158,
         evolvers: [ 90 ],
         global: true
@@ -936,7 +936,7 @@ window.details = {
     147: { // Slasher Group Crew Red Pirates
         special: "Deals 10x character's ATK in character's type damage to one enemy",
         specialName: "Hyper Slash",
-        cooldown: 40,
+        cooldown: [ 40, 15 ],
         evolution: 274,
         evolvers: [ 116, 95 ],
         global: true
@@ -944,7 +944,7 @@ window.details = {
     148: { // Slasher Group Crew Blue Pirates
         special: "Reduces the defense of all enemies by 50% for 1 turn",
         specialName: "Shield Crusher",
-        cooldown: [ 15, 7 ],
+        cooldown: [ 15, 10 ],
         evolution: 275,
         evolvers: [ 116, 96 ],
         global: true
@@ -968,7 +968,7 @@ window.details = {
     151: { // Slasher Group Crew Black Pirates
         special: "Deals 10x character's ATK in character's type damage to one enemy",
         specialName: "Hyper Slash",
-        cooldown: 40,
+        cooldown: [ 40, 15 ],
         evolution: 278,
         evolvers: [ 116, 99 ],
         global: true
@@ -1024,7 +1024,7 @@ window.details = {
     158: { // Shooter Group Crew Blue Pirates
         special: "Reduces the defense of all enemies by 50% for 1 turn",
         specialName: "Shield Crusher",
-        cooldown: [ 15, 7 ],
+        cooldown: [ 15, 10 ],
         evolution: 285,
         evolvers: [ 115, 116, 90 ],
         global: true
@@ -1142,7 +1142,7 @@ window.details = {
     176: { // Sword Fishman Arlong crewmember
         special: "Deals 10x character's ATK in character's type damage to one enemy",
         specialName: "Hyper Slash",
-        cooldown: 40,
+        cooldown: [ 40, 15 ],
         global: true
     },
     177: { // Spear Fishman Arlong crewmember
@@ -1832,13 +1832,13 @@ window.details = {
     274: { // Armed Slasher Unit Red Pirates
         special: "Deals 10x character's ATK in character's type damage to one enemy",
         specialName: "Hyper Slash",
-        cooldown: 40,
+        cooldown: [ 40, 15 ],
         global: true
     },
     275: { // Armed Slasher Unit Blue Pirates
         special: "Reduces the defense of all enemies by 50% for 1 turn",
         specialName: "Shield Crusher",
-        cooldown: [ 15, 7 ],
+        cooldown: [ 15, 10 ],
         global: true
     },
     276: { // Armed Slasher Unit Green Pirates
@@ -1856,7 +1856,7 @@ window.details = {
     278: { // Armed Slasher Unit Black Pirates
         special: "Deals 10x character's ATK in character's type damage to one enemy",
         specialName: "Hyper Slash",
-        cooldown: 40,
+        cooldown: [ 40, 15 ],
         global: true
     },
     279: { // Armed Striker Unit Red Pirates
@@ -1898,7 +1898,7 @@ window.details = {
     285: { // Armed Shooter Unit Blue Pirates
         special: "Reduces the defense of all enemies by 50% for 1 turn",
         specialName: "Shield Crusher",
-        cooldown: [ 15, 7 ],
+        cooldown: [ 15, 10 ],
         global: true
     },
     286: { // Armed Shooter Unit Green Pirates
@@ -1964,7 +1964,7 @@ window.details = {
         special: "Reduces the defense of all enemies by 50% for 1 turn",
         specialName: "Shield Crusher",
         captain: "Boosts HP of DEX characters by 2x",
-        cooldown: [ 15, 7 ],
+        cooldown: [ 15, 10 ],
         global: true
     },
     296: { // Tsuru
@@ -2566,7 +2566,7 @@ window.details = {
     382: { // Sandora Dragon
         special: "Reduces the defense of all enemies by 50% for 1 turn",
         specialName: "Shield Crusher",
-        cooldown: [ 15, 7 ],
+        cooldown: [ 15, 10 ],
         global: true
     },
     383: { // Mr. 0 Baroque Works CEO (Crocodile)
