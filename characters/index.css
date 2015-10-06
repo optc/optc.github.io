@@ -4,6 +4,10 @@ body, html {
     overflow-y: hidden;
 }
 
+#leftContainer {
+    margin-left: -1px;
+}
+
 #queryContainer {
     padding: 10px;
     display: table;
@@ -47,44 +51,31 @@ input[type="text"] {
     color: white;
     font-weight: bold;
     cursor: default;
+    border-top: 1px solid #aaa;
 }
 
-.type-filter, .class-filter, .custom-filter, .drop-filter, .exc-filter {
+.filter {
     display: inline-block;
     padding: 3px 0;
     text-align: center;
     cursor: pointer;
+    border-top: 1px solid #aaa;
+    border-left: 1px solid #aaa;
 }
 
-.type-filter {
-    width: 33.3333%;
+.filter-container:last-child > .filter:last-child {
+    border-bottom: 1px solid #aaa;
 }
 
-.class-filter {
-    width: 50%;
+.type.filter, #controllers > span:not(.separator) {
+    border: none;
 }
 
-.class-filter:nth-child(5) ~ .class-filter {
-    width: 33.3333%;
-}
-
-.drop-filter, .exc-filter:nth-child(2), .exc-filter:nth-child(3) {
-    width: 50%;
-}
-
-.exc-filter:nth-child(4) {
-    width: 100%;
-}
-
-.type-filter:nth-child(4) ~ .type-filter {
-    width: 50%;
-}
-
-.type-filter:not(.active):not(:hover), #controllers > span:not(.separator):not(.active):not(:hover) {
+.type.filter:not(.active):not(:hover), #controllers > span:not(.separator):not(.active):not(:hover) {
     opacity: 0.3;
 }
 
-.type-filter.active, #controllers > .active {
+.type.filter.active, #controllers > .active {
     font-weight: bold;
     text-decoration: underline;
 }
@@ -97,50 +88,26 @@ input[type="text"] {
 .RCV { background: peru; }
 .TND { background: coral; }
 
-.class-filter {
-    border: 1px solid gray;
-    border-right: none;
-    border-top: none;
-}
-
-.class-filter:nth-child(5) ~ .class-filter {
-    border-bottom: none;
-}
-
-.class-filter.active, .custom-filter.active, .drop-filter.active, .exc-filter.active {
+.class.filter.active, .custom.filter.active, .drop.filter.active, .exc.filter.active {
     background: red;
     color: white;
     font-weight: bold;
 }
 
-.custom-filter {
-    width: 100%; 
-    border-color: gray;
-    border-width: 1px 0 0 0;
-    border-style: solid;
-    display: block;
-}
-
-.custom-filter:last-child {
-    border-bottom: 1px solid gray;
-}
-
-.drop-filter:nth-child(3) , .drop-filter:nth-child(5), .drop-filter:nth-child(7), .exc-filter:nth-child(3) {
-    border-left: 1px solid gray;
-}
-
-.drop-filter:nth-child(2), .drop-filter:nth-child(3), .drop-filter:nth-child(4), .drop-filter:nth-child(5), 
-.exc-filter:nth-child(2), .exc-filter:nth-child(3) {
-    border-bottom: 1px solid gray;
-}
-
-.custom-filter:not(#controllers):hover, .class-filter:hover, .drop-filter:hover, .exc-filter:hover {
+.custom.filter:not(#controllers):hover, .class.filter:hover, .drop.filter:hover, .exc.filter:hover {
     background-color: rgb(230,230,230);
 }
 
-.custom-filter.active:hover, .class-filter.active:hover, .drop-filter.active:hover, .exc-filter.active:hover {
-    background-color: darkred;
+.custom.filter.active:hover, .class.filter.active:hover, .drop.filter.active:hover, .exc.filter.active:hover {
+    background-color: darkred !important;
 }
+
+.width-12 { width: 100%; }
+.width-7 { width: 58.33%; }
+.width-6 { width: 50%; }
+.width-5 { width: 41.66%; }
+.width-4 { width: 33.33%; }
+.width-3 { width: 25%; }
 
 .help-link {
     float: right;
@@ -204,6 +171,7 @@ input[type="text"] {
 #controllers {
     padding: 0;
     cursor: default;
+    display: block;
 }
 
 #controllers > span:not(.separator) {
