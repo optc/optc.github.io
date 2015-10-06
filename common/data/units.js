@@ -754,9 +754,14 @@ window.units = [
     [ "Jabra, CP9's Dark Justice", "QCK", [ "Tough", "Freedom" ], 4, 17, 5, 3, 70, null, 224, 112, 20, 1650, 702, 89, 1 ],
     [ "Jabra, CP9's Strongest Generation", "QCK", [ "Tough", "Freedom" ], 5, 27, 4, 4, 99, null, 1601, 647, 55, 3002, 1299, 166, 0 ],
     [ "Blueno, CP9's Dark Justice", "INT", [ "Tough", "Freedom" ], 4, 16, 5, 3, 70, null, 245, 94, 23, 1832, 644, 91, 0 ],
-    [ "Blueno, CP9's Strongest Generation", "INT", [ "Tough", "Freedom" ], 5, 26, 4, 4, 99, null, 1779, 600, 56, null, null, null, 0 ],
+    [ "Blueno, CP9's Strongest Generation", "INT", [ "Tough", "Freedom" ], 5, 26, 4, 4, 99, null, 1779, 600, 56, 3502, 1045, 168, 0 ],
     [ "Fukuro, CP9's Dark Justice", "PSY", [ "Tough", "Fighter" ], 4, 16, 4, 3, 70, null, 151, 97, 46, 1140, 651, 203, 0 ],
     [ "Fukuro, CP9's Strongest Generation", "INT", [ "Tough", "Fighter" ], 5, 26, 8, 4, 99, null, 1093, 603, 165, null, null, null, 0 ],
-    [ "Kumadori, CP9's Dark Justice", "STR", [ "Tough", "Striker" ], 4, 16, 4, 3, 70, null, 220, 119, 56, null, null, null, 0 ],
-    [ "Kumadori, CP9's Strongest Generation", "STR", [ "Tough", "Striker" ], 5, 26, 7, 4, 99, null, 1110, 560, 170, null, null, null, 0 ]
+    [ "Kumadori, CP9's Dark Justice", "STR", [ "Tough", "Striker" ], 4, 16, 4, 3, 70, null, 162, 89, 47, 1167, 612, 212, 0 ],
+    [ "Kumadori, CP9's Strongest Generation", "STR", [ "Tough", "Striker" ], 5, 26, 7, 4, 99, null, 1110, 560, 170, null, null, null, 0 ],
+    [ "Monkey D. Luffy Halloween Monster", "DEX", [ "Fighter", "Freedom" ], 4, 20, 6, 3, 99, null, 253, 136, 40, null, null, null, 0 ],
+    [ "Usopp Liar Wolf", "PSY", "Shooter", 4, 20, 5, 3, 99, null, 250, 115, 96, null, null, null, 0 ],
+    [ "Franky Frankenstein", "STR", [ "Shooter", "Freedom" ], 4, 20, 4, 3, 99, null, 342, 197, 43, null, null, null, 0 ],
+    [ "Nami Pumpkin Lantern", "QCK", [ "Striker", "Knowledge" ], 4, 20, 4, 3, 99, null, 165, 86, 82, null, null, null, 0 ],
+    [ "Tony Tony Chopper Little Vampire", "INT", [ "Fighter", "Knowledge" ], 4, 20, 6, 3, 99, null, 269, 137, null, null, null, null, 0 ]
 ];

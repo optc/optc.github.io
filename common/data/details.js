@@ -5142,5 +5142,35 @@ window.details = {
         specialName: "Life Return: Shishi Finger Pistol",
         captain: "Boosts ATK of STR characters by 3x if HP is below 30% at the start of the turn",
         cooldown: 21
+    },
+    761: { // Monkey D. Luffy Halloween Monster
+        special: "Deals 15x character's ATK in DEX damage to one enemy, boosts ATK of all characters by 1.2x for 1 turn",
+        specialName: "Gum-Gum Monster",
+        captain: "Boosts ATK of Freedom characters by 2x",
+        cooldown: 23
+    },
+    762: { // Usopp Liar Wolf
+        special: "Boosts ATK of PSY characters by 1.75x for 1 turn",
+        specialName: "Impact",
+        captain: "Boosts ATK and RCV of PSY characters by 1.5x",
+        cooldown: 14
+    },
+    763: { // Franky Frankenstein
+        special: "Changes own orb into [STR], freely switch orbs between slots once",
+        specialName: "Convert, Franky Centaur",
+        captain: "Boosts ATK of STR characters by 2x",
+        cooldown: 15
+    },
+    764: { // Nami Pumpkin Lantern
+        special: "Recovers 3,000 HP",
+        specialName: "Cat Burglar \"Trick\"",
+        captain: "Boosts ATK and RCV of Striker characters by 1.5x",
+        cooldown: 16
+    },
+    765: { // Tony Tony Chopper Little Vampire
+        special: "Reduces Silence duration by 3 turns",
+        specialName: "Scope \"Magic\"",
+        captain: "Recovers 3x character's RCV in HP at the end of the turn",
+        cooldown: 17
     }
 };
