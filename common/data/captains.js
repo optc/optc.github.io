@@ -1558,7 +1558,7 @@ window.captains = {
         atk: function(p) { return p.unit.type == "STR" && p.percHP <= 30.0 ? 3 : 1; }
     },
     761: {
-        atk: function(p) { return p.unit.class.has("Freedom") ? 2 : 1; }
+        atk: function(p) { return p.unit.class.has("Fighter") ? 2 : 1; }
     },
     762: {
         atk: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; },

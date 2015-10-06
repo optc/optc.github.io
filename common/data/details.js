@@ -5146,7 +5146,7 @@ window.details = {
     761: { // Monkey D. Luffy Halloween Monster
         special: "Deals 15x character's ATK in DEX damage to one enemy, boosts ATK of all characters by 1.2x for 1 turn",
         specialName: "Gum-Gum \"Monster\"",
-        captain: "Boosts ATK of Freedom characters by 2x",
+        captain: "Boosts ATK of Fighter characters by 2x",
         cooldown: 23
     },
     762: { // Usopp Liar Wolf
