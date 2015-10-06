@@ -102,6 +102,9 @@ window.specials = {
     395: { // Miss Merry Christmas
         orb: function(p) { return p.orb == 2.0 ? 1.25 : (p.orb == 0.5 ? 4/5 : 1); }
     },
+    396: { // Miss Merry Christmas Human mole
+        orb: function(p) { return p.orb == 2.0 ? 1.25 : (p.orb == 0.5 ? 4/5 : 1); }
+    },
     399: { // Miss Doublefinger
         atk: function(p) { return p.unit.type == "DEX" ? 1.5 : 1; },
         type: 'type'

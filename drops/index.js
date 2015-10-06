@@ -11,10 +11,8 @@ var addImages = function(target) {
     });
 };
 
-
-app.controller('MainCtrl',function($scope, $timeout) {
+app.controller('MainCtrl',function($scope, $rootScope, $timeout) {
     $scope.data = drops;
-    $scope.identity = angular.identity;
     $scope.reverse = function(x) { return -x; };
     $scope.hiddenUnits = [ ];
     $scope.changeFilters = function() {
@@ -25,6 +23,7 @@ app.controller('MainCtrl',function($scope, $timeout) {
         }
         if (!$scope.$$phase) $scope.$apply();
     };
+    $scope.changeSorting = function() { $rootScope.sortByType = $scope.sortByType; };
 });
 
 app.directive('decorateSlot',function() {
@@ -112,6 +111,22 @@ app.directive('addBonuses',function($timeout) {
                 });
             });
         }
+    };
+});
+
+app.filter('smartSort',function($rootScope) {
+    var getId = function(id) {
+        id = Math.abs(id);
+        return [ 'STR', 'DEX', 'QCK', 'PSY', 'INT' ].indexOf(window.units[id-1].type || 'INT') * 1000 + id;
+    };
+    return function(array) {
+        if (!$rootScope.sortByType) {
+            array.sort(function(a,b) { return Math.abs(a) - Math.abs(b); });
+            return array;
+        }
+        var temp = array.map(function(x) { return [ getId(x), x ]; });
+        temp.sort(function(a,b) { return a[0] - b[0]; });
+        return temp.map(function(x) { return x[1]; });
     };
 });
 
