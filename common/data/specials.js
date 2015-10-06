@@ -599,5 +599,13 @@ window.specials = {
     756: { 
         atk: function(p) { return p.unit.class.has("Tough") ? 1.75 : 1; },
         type: 'class'
+    },
+    761: {
+        atk: function(p) { return 1.2; },
+        type: 'type'
+    },
+    762: {
+        atk: function(p) { return p.unit.type == "PSY" ? 1.75 : 1; },
+        type: 'type'
     }
 };

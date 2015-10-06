@@ -1556,5 +1556,19 @@ window.captains = {
     },
     760: {
         atk: function(p) { return p.unit.type == "STR" && p.percHP <= 30.0 ? 3 : 1; }
+    },
+    761: {
+        atk: function(p) { return p.unit.class.has("Freedom") ? 2 : 1; }
+    },
+    762: {
+        atk: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; },
+        rcv: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; },
+    },
+    763: {
+        atk: function(p) { return p.unit.type == "STR" ? 2 : 1; }
+    },
+    764: {
+        atk: function(p) { return p.unit.class.has("Striker") ? 1.5 : 1; },
+        rcv: function(p) { return p.unit.class.has("Striker") ? 1.5 : 1; }
     }
 };
