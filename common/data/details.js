@@ -588,7 +588,7 @@ window.details = {
         specialName: "Conqueror’s Haki",
         captain: "Boosts ATK of PSY characters by 2.5x",
         cooldown: [ 25, 20 ],
-        flags: { global: 1 }
+        flags: { global: 1, rr: 1 }
     },
     78: { // Red Robber Penguin
         flags: { global: 1 }
@@ -4598,7 +4598,8 @@ window.details = {
         special: "Deals 13x character's ATK in PSY damage to one enemy, randomizes all orbs other than [PSY]",
         specialName: "Tornado Tempo - Beach Side",
         captain: "Boosts ATK of PSY characters by 2x",
-        cooldown: [ 15, 15 ]
+        cooldown: [ 15, 15 ],
+        flags: { special: 1 }
     },
     663: { // Nefertari Vivi, Princess of the Alabasta Kingdom
         special: "Deals PSY damage to one enemy, recovers 5x character's RCV in HP at the end of the turn for 5 turns",

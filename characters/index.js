@@ -284,14 +284,29 @@ $.fn.dataTable.ext.search.push(function(settings, data, index) {
         var isFarmable = reverseDropMap.hasOwnProperty(id);
         if (filters.drop == 'Farmable') {
             if (id == 1 || unit.stars >= 3 && !isFarmable) return false;    
-            if (filters.advdrop && filters.advdrop.farmable == 'Raid-only' && !flags.raid) return false;
-            if (filters.advdrop && filters.advdrop.farmable == 'Fortnight-only' && !flags.fnonly) return false;
+            if (filters.farmable) {
+                // raid
+                if (filters.farmable.raid && !flags.raid) return false;
+                if (filters.farmable.raid === false && flags.raid) return false;
+                // fortnight
+                if (filters.farmable.fortnight && !flags.fnonly) return false;
+                if (filters.farmable.fortnight === false && flags.fnonly) return false;
+            }
         } else if (filters.drop != 'Farmable') {
             if (id != 1 && (unit.stars < 3 || isFarmable)) return false; 
-            if (filters.advdrop) {
-                if (filters.advdrop.rr && !flags.rr) return false;
-                if (filters.advdrop.lrr && !flags.lrr) return false;
-                if (filters.advdrop.promo && !flags.promo) return false;
+            if (filters.nonFarmable) {
+                // RR
+                if (filters.nonFarmable.rr && !flags.rr) return false;
+                if (filters.nonFarmable.rr === false && flags.rr) return false;
+                // limited RR
+                if (filters.nonFarmable.lrr && !flags.lrr) return false;
+                if (filters.nonFarmable.lrr === false && flags.lrr) return false;
+                // promo
+                if (filters.nonFarmable.promo && !flags.promo) return false;
+                if (filters.nonFarmable.promo === false && flags.promo) return false;
+                // special
+                if (filters.nonFarmable.special && !flags.special) return false;
+                if (filters.nonFarmable.special === false && flags.special) return false;
             }
         }
     }
@@ -537,8 +552,11 @@ app.directive('filters',function($compile) {
         restrict: 'A',
         link: function(scope,element,attrs) {
 
-            var createContainer = function(name, parent) {
-                var result = $('<div class="filter-container"><span class="filter-header">' + name + '</span></div>');
+            var createContainer = function(name, parent, condition) {
+                var template = '<div class="filter-container' + (condition ? ' conditional' : '') + '"' +
+                    (condition ? ' ng-show="' + condition + '"' : '') +
+                    '><span class="filter-header">' + name + '</span></div>';
+                var result = $compile(template)(scope);
                 parent.append(result);
                 return result;
             };
@@ -578,20 +596,44 @@ app.directive('filters',function($compile) {
                     condition: 'filters.server == \'' + x + '\'', onClick: 'onClick($event,\'' + x + '\')'}));
             });
 
+            // farmable filters
+            var farmable = createContainer('Farmable filters', element, 'filters.drop == \'Farmable\'');
+            farmable.append(createFilter('Raid-only',{ class: 'drop', model: 'filters.farmable.raid',
+                width: 6, condition: 'filters.farmable.raid', onClick: 'onDropClick($event,true)' }));
+            farmable.append(createFilter('Hide raid-only',{ class: 'exc', model: 'filters.farmable.raid',
+                width: 6, condition: 'filters.farmable.raid === false', onClick: 'onDropClick($event,false)' }));
+            farmable.append(createFilter('Fortnight-only',{ class: 'drop', model: 'filters.farmable.fortnight',
+                width: 6, condition: 'filters.farmable.fortnight', onClick: 'onDropClick($event,true)' }));
+            farmable.append(createFilter('Hide fortnight-only',{ class: 'exc', model: 'filters.farmable.fortnight',
+                width: 6, condition: 'filters.farmable.fortnight === false', onClick: 'onDropClick($event,false)' }));
+
+            // non-farmable filters
+            var nonFarmable = createContainer('Non-farmable filters', element, 'filters.drop == \'Non-farmable\'');
+            nonFarmable.append(createFilter('RR-only',{ class: 'drop', model: 'filters.nonFarmable.rr',
+                width: 6, condition: 'filters.nonFarmable.rr', onClick: 'onDropClick($event,true)' }));
+            nonFarmable.append(createFilter('Hide RR-only',{ class: 'drop', model: 'filters.nonFarmable.rr',
+                width: 6, condition: 'filters.nonFarmable.rr === false', onClick: 'onDropClick($event,false)' }));
+            nonFarmable.append(createFilter('Limited RR-only',{ class: 'drop', model: 'filters.nonFarmable.lrr',
+                width: 6, condition: 'filters.nonFarmable.lrr', onClick: 'onDropClick($event,true)' }));
+            nonFarmable.append(createFilter('Hide lim. RR-only',{ class: 'drop', model: 'filters.nonFarmable.lrr',
+                width: 6, condition: 'filters.nonFarmable.lrr === false', onClick: 'onDropClick($event,false)' }));
+            nonFarmable.append(createFilter('Promo-only',{ class: 'drop', model: 'filters.nonFarmable.promo',
+                width: 6, condition: 'filters.nonFarmable.promo', onClick: 'onDropClick($event,true)' }));
+            nonFarmable.append(createFilter('Hide promo-only',{ class: 'drop', model: 'filters.nonFarmable.promo',
+                width: 6, condition: 'filters.nonFarmable.promo === false', onClick: 'onDropClick($event,false)' }));
+            nonFarmable.append(createFilter('Special-only',{ class: 'drop', model: 'filters.nonFarmable.special',
+                width: 6, condition: 'filters.nonFarmable.special', onClick: 'onDropClick($event,true)' }));
+            nonFarmable.append(createFilter('Hide special-only',{ class: 'drop', model: 'filters.nonFarmable.special',
+                width: 6, condition: 'filters.nonFarmable.special === false', onClick: 'onDropClick($event,false)' }));
+
             // exclusion filters
             var exclusion = createContainer('Exclusion filters', element);
             exclusion.append(createFilter('Hide base forms', { class: 'exc', model: 'filters.noBase', width: 6,
                 condition: 'filters.noBase', onClick: 'filters.noBase = !filters.noBase' }));
             exclusion.append(createFilter('Hide fodder', { class: 'exc', model: 'filters.noFodder', width: 6,
                 condition: 'filters.noFodder', onClick: 'filters.noFodder = !filters.noFodder' }));
-            exclusion.append(createFilter('Hide Boosters and Evolvers',{ class: 'exc', model: 'filters.noEvos', width: 12,
-                condition: 'filters.noEvos', onClick: 'filters.noEvos = !filters.noEvos' }));
-            exclusion.append(createFilter('Hide Fortnight-only',{ class: 'exc', model: 'filters.noFortnights', width: 7,
-                condition: 'filters.noFortnights', onClick: 'filters.noFortnights = !filters.noFortnights' }));
-            exclusion.append(createFilter('Hide Raid-only',{ class: 'exc', model: 'filters.noRaids', width: 5,
-                condition: 'filters.noRaids', onClick: 'filters.noRaids = !filters.noRaids' }));
-            exclusion.append(createFilter('Hide Promo-only & Limited time-only',{ class: 'exc', model: 'filters.noSpecials', width: 12,
-                condition: 'filters.noSpecials', onClick: 'filters.noSpecials = !filters.noSpecials' }));
+            exclusion.append(createFilter('Hide Boosters and Evolvers',{ class: 'exc', model: 'filters.noEvos',
+                width: 12, condition: 'filters.noEvos', onClick: 'filters.noEvos = !filters.noEvos' }));
 
             // captain ability filters
             var captains = createContainer('Captain ability filters', element);
@@ -607,15 +649,16 @@ app.directive('filters',function($compile) {
             // character log filters
             var log = createContainer('Character Log filters', element);
             log.attr('ng-if','showLogFilters');
-            log.append(createFilter('Hide units in Character Log', { class: 'custom', model: 'filters.noLog', width: 12,
-                condition: 'filters.noLog', onClick: 'filters.noLog = !filters.noLog' }));
-            log.append(createFilter('Hide units not in Character Log', { class: 'custom', model: 'filters.noMissing', width: 12,
-                condition: 'filters.noMissing', onClick: 'filters.noMissing = !filters.noMissing' }));
+            log.append(createFilter('Hide units in Character Log', { class: 'custom', model: 'filters.noLog',
+                width: 12, condition: 'filters.noLog', onClick: 'filters.noLog = !filters.noLog' }));
+            log.append(createFilter('Hide units not in Character Log', { class: 'custom', model: 'filters.noMissing',
+                width: 12, condition: 'filters.noMissing', onClick: 'filters.noMissing = !filters.noMissing' }));
             $compile(log)(scope);
 
             // orb controller filter
             var target = $('.custom:contains("Orb controllers")');
-            var filter = $('<span class="custom filter" id="controllers" ng-show="filters.custom[25]"><span class="separator">&darr;</span></span>');
+            var filter = $('<span class="custom filter" id="controllers" ng-show="filters.custom[25]">' +
+                    '<span class="separator">&darr;</span></span>');
             var separator = filter.find('.separator');
             [ 'STR', 'DEX', 'QCK', 'PSY', 'INT', 'RCV', 'TND' ].forEach(function(type) {
                 var template = '<span class="filter orb %s" ng-class="{ active: filters.%f == \'%s\' }" ' +
@@ -629,31 +672,16 @@ app.directive('filters',function($compile) {
             // advanced drop filters
             target = $('.drop.filter:contains("Non-farmable")');
 
-            target.after(createFilter('Raid-only',{ class: 'drop', model: 'filters.advdrop.farmable', width: 6,
-                if: 'filters.drop == \'Farmable\'', condition: 'filters.advdrop.farmable == \'Raid-only\'',
-                onClick: 'onDropClick(\'Raid-only\')' }));
-            target.after(createFilter('Fortnight-only',{ class: 'drop', model: 'filters.advdrop.farmable', width: 6,
-                if: 'filters.drop == \'Farmable\'', condition: 'filters.advdrop.farmable == \'Fortnight-only\'',
-                onClick: 'onDropClick(\'Fortnight-only\')' }));
-
-            target.after(createFilter('Promo',{ class: 'drop', model: 'filters.advdrop.promo', width: 3,
-                if: 'filters.drop == \'Non-farmable\'', condition: 'filters.advdrop.promo',
-                onClick: 'filters.advdrop.promo = !filters.advdrop.promo' }));
-            target.after(createFilter('Limited RR-only',{ class: 'drop', model: 'filters.advdrop.lrr', width: 6,
-                if: 'filters.drop == \'Non-farmable\'', condition: 'filters.advdrop.lrr',
-                onClick: 'filters.advdrop.lrr = !filters.advdrop.lrr' }));
-            target.after(createFilter('RR-only',{ class: 'drop', model: 'filters.advdrop.rr', width: 3,
-                if: 'filters.drop == \'Non-farmable\'', condition: 'filters.advdrop.rr',
-                onClick: 'filters.advdrop.rr = !filters.advdrop.rr' }));
-
             // events 
             scope.onClick = function(e, value) {
                 var type = e.target.getAttribute('ng-model').split(/\./)[1];
                 scope.filters[type] = (scope.filters[type] == value ? null : value);
             };
-            scope.onDropClick = function(value) {
-                if (!scope.filters.advdrop) scope.filters.advdrop = { };
-                scope.filters.advdrop.farmable = (scope.filters.advdrop.farmable == value ? null : value);
+            scope.onDropClick = function(e,value) {
+                var tokens = e.target.getAttribute('ng-model').split(/\./).slice(1);
+                var type = tokens[0], key = tokens[1];
+                if (!scope.filters.hasOwnProperty(type)) scope.filters[type] = { };
+                scope.filters[type][key] = (scope.filters[type][key] == value ? null : value);
             };
         }
     };

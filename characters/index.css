@@ -1,6 +1,6 @@
 body, html {
     height: 100%;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'PT Sans', sans-serif;
     overflow-y: hidden;
 }
 
@@ -194,6 +194,10 @@ input[type="text"] {
 #column-picker .btn {
     width: 100%;
     padding: 3px 6px;
+}
+
+.conditional .filter-header {
+    background: darkslateblue;
 }
 
 /*************
