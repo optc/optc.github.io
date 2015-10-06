@@ -5170,7 +5170,7 @@ window.details = {
     765: { // Tony Tony Chopper Little Vampire
         special: "Reduces Silence duration by 3 turns",
         specialName: "Scope \"Magic\"",
-        captain: "Recovers 3x character's RCV in HP at the end of the turn",
+        captain: "Recovers 2x character's RCV in HP at the end of the turn",
         cooldown: 17
     }
 };
