@@ -3924,7 +3924,7 @@ window.details = {
     565: { // Hamburg
         special: "Deals 5,000 fixed damage to one enemy",
         specialName: "Hamburger Hammer",
-        cooldown: 18
+        cooldown: [ 18, 10 ]
     },
     566: { // Pickles
         special: "Empties all slots with hindrance orbs",
@@ -4085,7 +4085,7 @@ window.details = {
         special: "Removes poison, reduces Bind and Seal duration by 2 turns",
         specialName: "Merciful Painkiller",
         captain: "Recovers 3x character's RCV in HP at the end of the turn",
-        cooldown: 21,
+        cooldown: [ 21, 14 ],
         evolution: 588,
         evolvers: [ 117, 304 ],
         flags: { rr: 1 }
@@ -4094,7 +4094,7 @@ window.details = {
         special: "Removes poison, reduces Bind and Seal duration by 2 turns",
         specialName: "Merciful Painkiller",
         captain: "Recovers 5x character's RCV in HP at the end of the turn",
-        cooldown: 21,
+        cooldown: [ 21, 14 ],
         flags: { rr: 1 }
     },
     589: { // Koza
@@ -5359,35 +5359,35 @@ window.details = {
         special: "Deals 15x character's ATK in DEX damage to one enemy, boosts ATK of all characters by 1.2x for 1 turn",
         specialName: "Gum-Gum \"Monster\"",
         captain: "Boosts ATK of Fighter characters by 2x",
-        cooldown: 23,
+        cooldown: [ 23, 15 ],
         flags: { fnonly: 1 }
     },
     762: { // Usopp Liar Wolf
         special: "Boosts ATK of PSY characters by 1.75x for 1 turn",
         specialName: "Impact \"Beast\"",
         captain: "Boosts ATK and RCV of PSY characters by 1.5x",
-        cooldown: 14,
+        cooldown: [ 14, 10 ],
         flags: { fnonly: 1 }
     },
     763: { // Franky Frankenstein
         special: "Changes own orb into [STR], freely switch orbs between slots once",
         specialName: "Convert: Franky Centaur",
         captain: "Boosts ATK of STR characters by 2x",
-        cooldown: 15,
+        cooldown: [ 15, 7 ],
         flags: { fnonly: 1 }
     },
     764: { // Nami Pumpkin Lantern
         special: "Recovers 3,000 HP",
         specialName: "Cat Burglar \"Trick\"",
         captain: "Boosts ATK and RCV of Striker characters by 1.5x",
-        cooldown: 16,
+        cooldown: [ 16, 8 ],
         flags: { fnonly: 1 }
     },
     765: { // Tony Tony Chopper Little Vampire
         special: "Reduces Silence duration by 3 turns",
         specialName: "Scope \"Magic\"",
         captain: "Recovers 2x character's RCV in HP at the end of the turn",
-        cooldown: 17,
+        cooldown: [ 17, 9 ],
         flags: { fnonly: 1 }
     }
 };
