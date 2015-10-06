@@ -759,9 +759,9 @@ window.units = [
     [ "Fukuro, CP9's Strongest Generation", "PSY", [ "Tough", "Fighter" ], 5, 26, 8, 4, 99, 4000000, 1093, 603, 165, 2415, 1051, 353, 1 ],
     [ "Kumadori, CP9's Dark Justice", "STR", [ "Tough", "Striker" ], 4, 16, 4, 3, 70, 1066998, 162, 89, 47, 1167, 612, 212, 1 ],
     [ "Kumadori, CP9's Strongest Generation", "STR", [ "Tough", "Striker" ], 5, 26, 7, 4, 99, 4000000, 1110, 560, 170, 2479, 1018, 355, 1 ],
-    [ "Monkey D. Luffy Halloween Monster", "DEX", [ "Fighter", "Freedom" ], 4, 20, 6, 3, 99, null, 253, 136, 40, null, null, null, 0 ],
-    [ "Usopp Liar Wolf", "PSY", "Shooter", 4, 20, 5, 3, 99, null, 250, 115, 96, null, null, null, 0 ],
-    [ "Franky Frankenstein", "STR", [ "Shooter", "Freedom" ], 4, 20, 4, 3, 99, null, 342, 197, 43, null, null, null, 0 ],
-    [ "Nami Pumpkin Lantern", "QCK", [ "Striker", "Knowledge" ], 4, 20, 4, 3, 99, null, 165, 86, 82, null, null, null, 0 ],
-    [ "Tony Tony Chopper Little Vampire", "INT", [ "Fighter", "Knowledge" ], 4, 20, 6, 3, 99, null, 269, 137, null, null, null, null, 0 ]
+    [ "Monkey D. Luffy Halloween Monster", "DEX", [ "Fighter", "Freedom" ], 4, 20, 6, 3, 99, 3000000, 85, 41, 26, 1920, 1080, 185, 1 ],
+    [ "Usopp Liar Wolf", "PSY", "Shooter", 4, 20, 5, 3, 99, 3000000, 51, 23, 46, 1444, 673, 400, 1 ],
+    [ "Franky Frankenstein", "STR", [ "Shooter", "Freedom" ], 4, 20, 4, 3, 99, 3000000, 82, 43, 22, 1903, 1121, 170, 1 ],
+    [ "Nami Pumpkin Lantern", "QCK", [ "Striker", "Knowledge" ], 4, 20, 4, 3, 99, 3000000, 47, 25, 49, 1342, 699, 416, 1 ],
+    [ "Tony Tony Chopper Little Vampire", "INT", [ "Fighter", "Knowledge" ], 4, 20, 6, 3, 99, 3000000, 56, 33, 38, 1548, 763, 358, 1 ]
 ];
