@@ -224,6 +224,14 @@ body, html {
     line-height: 150%;
 }
 
+.picking .unitContainer {
+    z-index: 102 !important;
+}
+
+.picking .ribbon-container {
+    z-index: 103 !important;
+}
+
 /******************
  * DAMAGE NUMBERS *
  ******************/
@@ -572,6 +580,18 @@ li input {
  * POPUPS *
  **********/
 
+.popup {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: table;
+    z-index: 100;
+}
+
+.popup:not(.visible) {
+    display: none;
+}
+
 .backdrop {
     position: fixed;
     top: 0;
@@ -582,14 +602,24 @@ li input {
     z-index: 100;
 }
 
-.custom-modal {
+.inner-container {
+    position: relative;
+    display: table-cell;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
     z-index: 101;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
+}
+
+.custom-modal {
+    position: relative;
+    z-index: 101;
+    width: 705px;
+    margin: auto;
+}
+
+.modal-dialog {
+    width: 705px;
 }
 
 .modal-content {
@@ -919,7 +949,6 @@ body > .popover .popover-content {
     .custom-modal {
         top: 0;
         left: 0;
-        transform: initial;
         width: 100%;
         height 100%;
         z-index: 300;
@@ -960,14 +989,6 @@ body > .popover .popover-content {
         left: 17px !important;
         top: 6px !important;
         height: 10px !important;
-    }
-
-}
-
-@media (min-width: 768px) {
-
-    #picker.modal-dialog {
-        width: 704px;
     }
 
 }

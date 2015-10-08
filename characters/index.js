@@ -687,6 +687,18 @@ app.directive('filters',function($compile) {
     };
 });
 
+app.directive('goBack',function($state) {
+	return {
+		restrict: 'A',
+        link: function(scope, element, attrs) {
+            element.click(function(e) {
+                if (!e.target || e.target.className.indexOf('inner-container') == -1) return;
+                $state.go('^');
+            });
+        }
+    };
+});
+
 app.directive('evolution',function($state, $stateParams) {
     return {
         restrict: 'E',
@@ -811,6 +823,7 @@ app.filter('decorate',function() {
 app
     .run(function($rootScope, $location, $window, $state, $stateParams) {
         $rootScope.$on('$stateChangeSuccess',function(e) {
+            $rootScope.currentState = $state.current.name;
             if (ga) ga('send', 'pageview', '/characters');
             var title = 'One Piece Treasure Cruise Character Table';
             if ($state.current.name == 'main.view')
@@ -819,5 +832,24 @@ app
         });
     });
 
+
+/*****************
+ * Notifications *
+ *****************/
+
+var version = JSON.parse(localStorage.getItem('charVersion')) || 1;
+
+if (version < 2) {
+    localStorage.setItem('charVersion', JSON.stringify(2));
+    setTimeout(function() {
+        noty({
+            text: 'Some stuff changed. Refreshing the page and/or clearing your browser\'s cache may be a smart idea.',
+            timeout: 10000,
+            type: 'error',
+            layout: 'topRight',
+            theme: 'relax'
+        });
+    },500);
+}
 
 })();

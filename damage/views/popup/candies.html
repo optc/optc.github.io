@@ -1,25 +1,29 @@
 <div class="backdrop" ui-sref="^"></div>
 
-<div class="custom-modal">
-    <div id="picker" class="modal-dialog">
-        <div class="modal-content animated fadeInDown">
-            <div class="modal-header">Cotton Candies
-            </div>
-            <div class="modal-body" id="candySliders">
+<div class="inner-container" go-back>
 
-                <div class="slot big nohover" decorate-slot uid="data.team[slot].unit.number + 1"></div>
+    <div class="custom-modal">
+        <div id="picker" class="modal-dialog">
+            <div class="modal-content animated fadeInDown">
+                <div class="modal-header">Cotton Candies
+                </div>
+                <div class="modal-body" id="candySliders">
 
-                <candy-slider data="data.team[slot].candies" type="hp"></candy-slider>
-                <candy-slider data="data.team[slot].candies" type="atk"></candy-slider>
-                <candy-slider data="data.team[slot].candies" type="rcv"></candy-slider>
+                    <div class="slot big nohover" decorate-slot uid="data.team[slot].unit.number + 1"></div>
 
-            </div>
+                    <candy-slider data="data.team[slot].candies" type="hp"></candy-slider>
+                    <candy-slider data="data.team[slot].candies" type="atk"></candy-slider>
+                    <candy-slider data="data.team[slot].candies" type="rcv"></candy-slider>
 
-            <div class="modal-footer">
-                <button class="btn btn-default" ng-click="resetCandies()">Reset</button> 
-                <button class="btn btn-default" ui-sref="^">Close</button> 
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-default" ng-click="resetCandies()">Reset</button> 
+                    <button class="btn btn-default" ui-sref="^">Close</button> 
+                </div>
             </div>
         </div>
+
     </div>
 
 </div>

@@ -435,6 +435,18 @@ tr.incomplete td:nth-child(2) > a:after {
  * POPUP *
  *********/
 
+.popup {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: table;
+    z-index: 100;
+}
+
+.popup:not(.visible) {
+    display: none;
+}
+
 .backdrop {
     position: fixed;
     top: 0;
@@ -445,17 +457,21 @@ tr.incomplete td:nth-child(2) > a:after {
     z-index: 100;
 }
 
+.inner-container {
+    position: relative;
+    display: table-cell;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    z-index: 101;
+}
+
 .custom-modal {
     z-index: 101;
-    position: fixed;
     width: 80%;
     height: 80%;
     max-width: 800px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
+    margin: auto;
 }
 
 .modal-content, .modal-dialog {

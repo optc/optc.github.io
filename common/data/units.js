@@ -731,7 +731,7 @@ window.units = [
     [ "Jabra, Cipher Pol No.9", "INT", [ "Fighter", "Tough" ], 3, 12, 4, 2, 50, 392109, 190, 92, -200, 1334, 572, -200, 1 ],
     [ "Jabra Rokushiki, Cipher Pol No.9", "INT", [ "Fighter", "Tough" ], 4, 20, 4, 3, 99, 3000000, 1272, 521, -200, 2720, 1250, -200, 1 ],
     [ "Fukuro, Cipher Pol No.9", "STR", [ "Fighter", "Tough" ], 3, 9, 4, 2, 35, 136167, 114, 52, 30, 1123, 408, 122, 1 ],
-    [ "Fukuro Rokushiki, Cipher Pol No.9", "STR", [ "Fighter", "Tough" ], 4, 15, 6, 3, 70, 1066998, 1077, 362, 97, 1850, 690, 177, 0 ],
+    [ "Fukuro Rokushiki, Cipher Pol No.9", "STR", [ "Fighter", "Tough" ], 4, 15, 6, 3, 70, 1066998, 1077, 362, 97, 1850, 690, 177, 1 ],
     [ "Kumadori, Cipher Pol No.9", "PSY", [ "Striker", "Tough" ], 3, 9, 5, 2, 35, 136167, 102, 60, 29, 1055, 442, 119, 1 ],
     [ "Kumadori Rokushiki, Cipher Pol No.9", "PSY", [ "Striker", "Tough" ], 4, 15, 4, 3, 70, 1066998, 1000, 398, 88, 1792, 755, 165, 0 ],
     [ "Kaku Human-Beast, Ox-Ox Fruit Model: Giraffe", "STR", [ "Slasher", "Tough" ], 4, 20, 6, 3, 99, 4000000, 1220, 692, 43, 2526, 1200, 114, 1 ],

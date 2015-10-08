@@ -230,6 +230,18 @@ directives.addAbility = function() {
     };
 };
 
+directives.goBack = function($state) {
+	return {
+		restrict: 'A',
+        link: function(scope, element, attrs) {
+            element.click(function(e) {
+                if (!e.target || e.target.className.indexOf('inner-container') == -1) return;
+                $state.go('^');
+            });
+        }
+    };
+};
+
 /************************
  * Component directives *
  ************************/

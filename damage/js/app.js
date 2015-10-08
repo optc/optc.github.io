@@ -85,8 +85,11 @@ var SharedRootCtrl = function($scope) {
 
 app
     .controller('SharedRootCtrl', SharedRootCtrl)
-    .run(function($rootScope, $location, $window) {
+    .run(function($rootScope, $state, $location, $window) {
         $rootScope.$on('$stateChangeSuccess',function(e) {
+            var state = $state.current.name;
+            $rootScope.isPopupVisible = (state != 'main');
+            $rootScope.picking = (state == 'main.candy' || state == 'main.abilities');
             if (ga) ga('send', 'pageview', '/damage');
         });
     });

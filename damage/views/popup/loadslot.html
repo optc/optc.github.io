@@ -1,37 +1,41 @@
 <div class="backdrop" ui-sref="^"></div>
 
-<div class="custom-modal">
-    <div id="picker" class="modal-dialog">
-        <div class="modal-content animated fadeInDown">
-            <div class="modal-header">Slots</div>
-            <div class="modal-body">
+<div class="inner-container" go-back>
 
-                <input type="text" id="picker" placeholder="type to filter (ctrl-click or middle-click to delete slot)" ng-model="query" auto-focus class="modal-filter">
+    <div class="custom-modal">
+        <div id="picker" class="modal-dialog">
+            <div class="modal-content animated fadeInDown">
+                <div class="modal-header">Slots</div>
+                <div class="modal-body">
 
-                <div class="modal-div padded">
+                    <input type="text" id="picker" placeholder="type to filter (ctrl-click or middle-click to delete slot)" ng-model="query" auto-focus class="modal-filter">
 
-                    <table id="slot-table">
-                        <tbody>
-                            <tr ng-repeat="(key,slot) in slots" ng-click="teamClick($event,slot)">
-                                <td>
-                                    {{slot.name}}
-                                    <sup ng-if="slot.defense">+ DEF</sup>
-                                    <sup ng-if="slot.ship">+ ship</sup>
-                                </td>
-                                <td class="to-the-right">
-                                    <div  class="slot small" ng-repeat="unit in slot.team track by $index"
-                                        ng-if="unit && $index < 6" decorate-slot="notitle" uid="unit.unit + 1"></div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div class="modal-div padded">
+
+                        <table id="slot-table">
+                            <tbody>
+                                <tr ng-repeat="(key,slot) in slots" ng-click="teamClick($event,slot)">
+                                    <td>
+                                        {{slot.name}}
+                                        <sup ng-if="slot.defense">+ DEF</sup>
+                                        <sup ng-if="slot.ship">+ ship</sup>
+                                    </td>
+                                    <td class="to-the-right">
+                                        <div  class="slot small" ng-repeat="unit in slot.team track by $index"
+                                            ng-if="unit && $index < 6" decorate-slot="notitle" uid="unit.unit + 1"></div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
 
                 </div>
-
-            </div>
-            <div class="modal-footer">
-                <button class="btn btn-default" ui-sref="^">Cancel</button> 
+                <div class="modal-footer">
+                    <button class="btn btn-default" ui-sref="^">Cancel</button> 
+                </div>
             </div>
         </div>
     </div>
+
 </div>

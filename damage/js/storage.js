@@ -1,5 +1,7 @@
 (function() {
 
+var doAlert = false;
+
 /* * * * * Storage methods * * * * */
 
 var loadValue = function(key,def) {
@@ -29,16 +31,11 @@ var save = function(key,object) {
 
 /* * * * * Version control * * * * */
 
-var version = JSON.parse(localStorage.getItem('version')) || 9;
+var version = JSON.parse(localStorage.getItem('version')) || 10;
 
-if (version < 9) {
-    var data = JSON.parse(localStorage.getItem('data')) || { };
-    data.team.forEach(function(x) {
-        if (x && x.unit && x.unit.constructor == Object)
-            x.unit = x.unit.number;
-    });
-    localStorage.setItem('data', JSON.stringify(data));
-    localStorage.setItem('version', JSON.stringify(9));
+if (version < 10) {
+    doAlert = true;
+    localStorage.setItem('version', JSON.stringify(10));
 }
 
 /* * * * * Controller * * * * */
@@ -83,6 +80,14 @@ var StorageCtrl = function($scope) {
         if (mode === undefined || mode === null) return;
         if (!mode) save('data',$scope.data);
     });
+
+    if (doAlert) {
+        $scope.notify({
+            text: 'Some stuff changed. Refreshing the page and/or clearing your browser\'s cache may be a smart idea.',
+            timeout: 10000,
+            type: 'error'
+        });
+    }
 
 };
 

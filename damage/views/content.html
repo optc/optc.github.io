@@ -40,7 +40,7 @@
 
 <div class="unit empty fa fa-trash-o" id="removeSlot" dropzone style="display: none"></div>
 
-<div ui-view="popup"></div>
+<div class="popup" ui-view="popup" ng-class="{ visible: isPopupVisible }"></div>
 
 <script type="text/ng-template" id="transient.html">
     <div id="transient-explanation">

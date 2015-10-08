@@ -1,72 +1,76 @@
 <div class="backdrop" ui-sref="^"></div>
 
-<div class="custom-modal">
-    <div id="slot-dialog" class="modal-dialog" ng-class="{ busy: busy }">
-        <div class="modal-content animated fadeInDown">
-            <div class="modal-header">Ability Slots</div>
-            <div class="modal-body" id="slotContainer">
+<div class="inner-container" go-back>
 
-                <div class="inner-backdrop" ng-if="busy"></div>
+    <div class="custom-modal">
+        <div id="slot-dialog" class="modal-dialog" ng-class="{ busy: busy }">
+            <div class="modal-content animated fadeInDown">
+                <div class="modal-header">Ability Slots</div>
+                <div class="modal-body" id="slotContainer">
 
-                <table>
+                    <div class="inner-backdrop" ng-if="busy"></div>
 
-                    <tr>
-                        <td rowspan="{{data.team[slot].unit.slots || 1}}">
-                            <div class="slot big nohover" decorate-slot uid="data.team[slot].unit.number + 1"></div>
-                        </td>
-                        <td ng-if="data.team[slot].unit.slots > 0"><ability-slot></ability-slot></td>
-                        <td>{{getName(data.team[slot].abilities[0].id)}}</td>
-                        <td>
-                            <input type="number" min="1" max="5" ng-show="data.team[slot].abilities[0]"
-                                ng-model="data.team[slot].abilities[0].level">
-                        </td>
-                    </tr>
+                    <table>
 
-                    <tr ng-if="data.team[slot].unit.slots > 1">
-                        <td><ability-slot></ability-slot></td>
-                        <td>{{getName(data.team[slot].abilities[1].id)}}</td>
-                        <td>
-                            <input type="number" min="1" max="5" ng-show="data.team[slot].abilities[1]"
-                                ng-model="data.team[slot].abilities[1].level">
-                        </td>
-                    </tr>
+                        <tr>
+                            <td rowspan="{{data.team[slot].unit.slots || 1}}">
+                                <div class="slot big nohover" decorate-slot uid="data.team[slot].unit.number + 1"></div>
+                            </td>
+                            <td ng-if="data.team[slot].unit.slots > 0"><ability-slot></ability-slot></td>
+                            <td>{{getName(data.team[slot].abilities[0].id)}}</td>
+                            <td>
+                                <input type="number" min="1" max="5" ng-show="data.team[slot].abilities[0]"
+                                    ng-model="data.team[slot].abilities[0].level">
+                            </td>
+                        </tr>
 
-                    <tr ng-if="data.team[slot].unit.slots > 2">
-                        <td><ability-slot></ability-slot></td>
-                        <td>{{getName(data.team[slot].abilities[2].id)}}</td>
-                        <td>
-                            <input type="number" min="1" max="5" ng-show="data.team[slot].abilities[2]"
-                                ng-model="data.team[slot].abilities[2].level">
-                        </td>
-                    </tr>
+                        <tr ng-if="data.team[slot].unit.slots > 1">
+                            <td><ability-slot></ability-slot></td>
+                            <td>{{getName(data.team[slot].abilities[1].id)}}</td>
+                            <td>
+                                <input type="number" min="1" max="5" ng-show="data.team[slot].abilities[1]"
+                                    ng-model="data.team[slot].abilities[1].level">
+                            </td>
+                        </tr>
 
-                    <tr ng-if="data.team[slot].unit.slots > 3">
-                        <td><ability-slot></ability-slot></td>
-                        <td>{{getName(data.team[slot].abilities[3].id)}}</td>
-                        <td>
-                            <input type="number" min="1" max="5" ng-show="data.team[slot].abilities[3]"
-                                ng-model="data.team[slot].abilities[3].level">
-                        </td>
-                    </tr>
+                        <tr ng-if="data.team[slot].unit.slots > 2">
+                            <td><ability-slot></ability-slot></td>
+                            <td>{{getName(data.team[slot].abilities[2].id)}}</td>
+                            <td>
+                                <input type="number" min="1" max="5" ng-show="data.team[slot].abilities[2]"
+                                    ng-model="data.team[slot].abilities[2].level">
+                            </td>
+                        </tr>
 
-                    <tr ng-if="data.team[slot].unit.slots > 4">
-                        <td><ability-slot></ability-slot></td>
-                        <td>{{getName(data.team[slot].abilities[4].id)}}</td>
-                        <td>
-                            <input type="number" min="1" max="5" ng-show="data.team[slot].abilities[4]"
-                                ng-model="data.team[slot].abilities[4].level">
-                        </td>
-                    </tr>
-                
-                </table>
+                        <tr ng-if="data.team[slot].unit.slots > 3">
+                            <td><ability-slot></ability-slot></td>
+                            <td>{{getName(data.team[slot].abilities[3].id)}}</td>
+                            <td>
+                                <input type="number" min="1" max="5" ng-show="data.team[slot].abilities[3]"
+                                    ng-model="data.team[slot].abilities[3].level">
+                            </td>
+                        </tr>
 
-            </div>
+                        <tr ng-if="data.team[slot].unit.slots > 4">
+                            <td><ability-slot></ability-slot></td>
+                            <td>{{getName(data.team[slot].abilities[4].id)}}</td>
+                            <td>
+                                <input type="number" min="1" max="5" ng-show="data.team[slot].abilities[4]"
+                                    ng-model="data.team[slot].abilities[4].level">
+                            </td>
+                        </tr>
+                    
+                    </table>
 
-            <div class="modal-footer">
-                <button class="btn btn-default" ng-click="resetAbilities()">Reset</button> 
-                <button class="btn btn-default" ui-sref="^">Close</button> 
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-default" ng-click="resetAbilities()">Reset</button> 
+                    <button class="btn btn-default" ui-sref="^">Close</button> 
+                </div>
             </div>
         </div>
+
     </div>
 
 </div>

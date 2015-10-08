@@ -1,42 +1,46 @@
 <div class="backdrop" ui-sref="^"></div>
 
-<div class="custom-modal">
-    <div id="picker" class="modal-dialog">
-        <div class="modal-content animated fadeInDown">
-            <div class="modal-header">Known Defense Values</div>
-            <div class="modal-body">
+<div class="inner-container" go-back>
 
-                <input type="text" id="picker" placeholder="type to filter" ng-model="query" auto-focus class="modal-filter padded-picker">
+    <div class="custom-modal">
+        <div id="picker" class="modal-dialog">
+            <div class="modal-content animated fadeInDown">
+                <div class="modal-header">Known Defense Values</div>
+                <div class="modal-body">
 
-                <div class="modal-div">
+                    <input type="text" id="picker" placeholder="type to filter" ng-model="query" auto-focus class="modal-filter padded-picker">
 
-                    <table id="defense-table" floating-header>
-                        <thead>
-                            <tr>
-                                <th></th>
-                                <th>Enemy</th>
-                                <th>Location</th>
-                                <th>Difficulty</th>
-                                <th>Defense</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr ng-repeat="defense in list" ng-click="pickDefense(defense)">
-                                <td class="slot small" decorate-slot="notitle" uid="defense[3]"></td>
-                                <td>{{defense[0]}}</td>
-                                <td>{{defense[1]}}</td>
-                                <td>{{defense[2]}}</td>
-                                <td>{{defense[4] | number}}</td>
-                            </tr>
-                        </tbody>
-                    </table> 
+                    <div class="modal-div">
+
+                        <table id="defense-table" floating-header>
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Enemy</th>
+                                    <th>Location</th>
+                                    <th>Difficulty</th>
+                                    <th>Defense</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="defense in list" ng-click="pickDefense(defense)">
+                                    <td class="slot small" decorate-slot="notitle" uid="defense[3]"></td>
+                                    <td>{{defense[0]}}</td>
+                                    <td>{{defense[1]}}</td>
+                                    <td>{{defense[2]}}</td>
+                                    <td>{{defense[4] | number}}</td>
+                                </tr>
+                            </tbody>
+                        </table> 
+
+                    </div>
 
                 </div>
-
-            </div>
-            <div class="modal-footer">
-                <button class="btn btn-default" ui-sref="^">Cancel</button> 
+                <div class="modal-footer">
+                    <button class="btn btn-default" ui-sref="^">Cancel</button> 
+                </div>
             </div>
         </div>
     </div>
+
 </div>

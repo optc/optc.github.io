@@ -1,33 +1,37 @@
 <div class="backdrop" ui-sref="^"></div>
 
-<div class="custom-modal">
-    <div id="saveslot" class="modal-dialog">
-        <div class="modal-content animated fadeInDown">
-            <div class="modal-header">Save slot</div>
-            <div class="modal-body">
+<div class="inner-container" go-back>
 
-                <form ng-submit="saveTeam()" name="saveForm" id="saveForm">
-                    <input type="text" id="slotName" placeholder="Slot name" ng-model="lastSlot" auto-focus required class="modal-filter">
-                    <div id="labelContainer">
-                        <label>
-                            <input type="checkbox" ng-model="saveShip">
-                            Save ship &amp; ship's level
-                        </label>
-                        <label>
-                            <input type="checkbox" ng-model="saveDefense">
-                            Save enemy's defense
-                        </label>
-                    </div>
-                    <div class="modal-div padded slim" ng-show="overwriting">
-                        <div class="alert alert-danger">Saving will overwrite an existing slot.</div>
-                    </div>
-                </form>
+    <div class="custom-modal">
+        <div id="saveslot" class="modal-dialog">
+            <div class="modal-content animated fadeInDown">
+                <div class="modal-header">Save slot</div>
+                <div class="modal-body">
 
-            </div>
-            <div class="modal-footer">
-                <button class="btn btn-default" ui-sref="^">Cancel</button> 
-                <button class="btn btn-primary" form="saveForm" ng-disabled="saveForm.$invalid">Save</button> 
+                    <form ng-submit="saveTeam()" name="saveForm" id="saveForm">
+                        <input type="text" id="slotName" placeholder="Slot name" ng-model="lastSlot" auto-focus required class="modal-filter">
+                        <div id="labelContainer">
+                            <label>
+                                <input type="checkbox" ng-model="saveShip">
+                                Save ship &amp; ship's level
+                            </label>
+                            <label>
+                                <input type="checkbox" ng-model="saveDefense">
+                                Save enemy's defense
+                            </label>
+                        </div>
+                        <div class="modal-div padded slim" ng-show="overwriting">
+                            <div class="alert alert-danger">Saving will overwrite an existing slot.</div>
+                        </div>
+                    </form>
+
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-default" ui-sref="^">Cancel</button> 
+                    <button class="btn btn-primary" form="saveForm" ng-disabled="saveForm.$invalid">Save</button> 
+                </div>
             </div>
         </div>
     </div>
+
 </div>
