@@ -768,10 +768,10 @@ window.units = [
     [ ],
     [ ],
     [ ],
-    [ "Dalmatian, Navy Headquarters Vice Admiral", "STR", [ "Fighter", "Tough" ], 4, 20, 5, 3, 99, null, 256, 194, 36, null, null, null, 0 ],
-    [ "Momonga, Navy Headquarters Vice Admiral", "PSY", [ "Knowledge", "Slasher" ], 4, 20, 6, 3, 99, null, 317, 149, 21, null, null, null, 0 ],
-    [ "Onigumo, Navy Headquarters Vice Admiral", "DEX", "Slasher", 4, 20, 8, 3, 99, null, 227, 125, 56, null, null, null, 0 ],
-    [ "Very Good", "INT", [ "Freedom", "Fighter" ], 3, 12, 4, 2, 70, null, 296, 94, 20, null, null, null, 0 ],
-    [ "Shu", "QCK", [ "Freedom", "Striker" ], 3, 12, 4, 2, 70, null, 107, 140, 130, null, null, null, 0 ],
-    [ "Strawberry, Navy Headquarters Vice Admiral", "PSY", [ "Knowledge", "Slasher" ], 3, 16, 6, 2, 99, null, 213, 99, 38, null, null, null, 0 ]
+    [ "Dalmatian, Navy Headquarters Vice Admiral", "STR", [ "Fighter", "Tough" ], 4, 20, 5, 3, 99, 4000000, 241, 186, 35, 2171, 1275, 189, 1.5 ],
+    [ "Momonga, Navy Headquarters Vice Admiral", "PSY", [ "Knowledge", "Slasher" ], 4, 20, 6, 3, 99, 4000000, 298, 142, 20, 2618, 1111, 163, 1.5 ],
+    [ "Onigumo, Navy Headquarters Vice Admiral", "DEX", "Slasher", 4, 20, 8, 3, 99, 4000000, 213, 118, 54, 2000, 1021, 318, 1.5 ],
+    [ "Very Good", "INT", [ "Fighter", "Freedom" ], 3, 12, 4, 2, 70, 1066998, 56, 89, 23, 943, 969, 150, 1 ],
+    [ "Shu", "QCK", [ "Freedom", "Striker" ], 3, 12, 4, 2, 70, 1066998, 203, 57, 15, 1808, 703, 103, 1 ],
+    [ "Strawberry, Navy Headquarters Vice Admiral", "PSY", [ "Knowledge", "Slasher" ], 3, 16, 6, 2, 99, 3000000, 142, 64, 33, 1883, 943, 178, 1 ]
 ];
