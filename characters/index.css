@@ -622,6 +622,28 @@ tr.incomplete td:nth-child(2) > a:after {
     display: inline-block;
 }
 
+.tag-container {
+    text-align: left;
+    margin-top: -7px;
+}
+
+.tag {
+    padding: 2px 5px;
+    border-radius: 10px;
+    background: #eee;
+    margin-right: 5px;
+    margin-top: 7px;
+    display: inline-block;
+}
+
+.tag.flag { background: rgba(133,193,245,0.5); }
+.tag.captain { background: rgba(127,202,159,0.5); }
+.tag.special { background: rgba(244,186,112,0.5); }
+
+.link-container {
+    text-align: left;
+}
+
 unit > a {
     cursor: pointer;
 }

@@ -787,6 +787,70 @@ app.directive('comparison',function() {
     };
 });
 
+app.directive('addTags',function($stateParams) {
+    return {
+        restrict: 'E',
+        replace: true,
+        template: '<div class="tag-container"></div>',
+        link: function(scope, element, attrs) {
+            var id = $stateParams.id, data = details[id];
+            if (!reverseDropMap) generateReverseDropMap();
+            // flags
+            var flags = data.flags || { };
+            element.append($('<span class="tag flag">' + (flags.global ? 'Global' : 'JP only') + '</div>'));
+            element.append($('<span class="tag flag">' + (reverseDropMap.hasOwnProperty(id) ? 'Farmable' : 'Non-farmable') + '</div>'));
+            if (flags.rr) element.append($('<span class="tag flag">Rare Recruit only</div>'));
+            if (flags.lrr) element.append($('<span class="tag flag">Limited Rare Recruit only</div>'));
+            if (flags.promo) element.append($('<span class="tag flag">Promo-code only</div>'));
+            if (flags.special) element.append($('<span class="tag flag">One time only characters</div>'));
+            if (flags.raid) element.append($('<span class="tag flag">Raid only</div>'));
+            if (flags.fnonly) element.append($('<span class="tag flag">Fortnight only</div>'));
+            // matchers
+            matchers.forEach(function(matcher) {
+                var name;
+                // captain effects
+                if (matcher.target == 'captain' && matcher.matcher.test(data.captain)) {
+                    name = matcher.name;
+                    if (!/captains$/.test(name)) name = name.replace(/s$/,'') + ' captains';
+                    element.append($('<span class="tag captain">' + name + '</div>'));
+                }
+                // specials
+                if (matcher.target == 'special' && matcher.matcher.test(data.special)) {
+                    name = matcher.name;
+                    if (!/specials$/.test(name)) name = name.replace(/ers$/,'ing').replace(/s$/,'') + ' specials';
+                    element.append($('<span class="tag special">' + name + '</div>'));
+                }
+            });
+        }
+    };
+});
+
+app.directive('addLinks',function($stateParams) {
+    return {
+        restrict: 'E',
+        replace: true,
+        template: '<div class="link-container"></div>',
+        link: function(scope, element, attrs) {
+            var id = parseInt($stateParams.id,10), data = details[id], incomplete = units[id - 1].incomplete;
+            var ul = $('<ul></ul>');
+            if (!incomplete && data.flags && data.flags.global) {
+                var link = 'http://onepiece-treasurecruise.com/en/' + (id == '5' ? 'roronoa-zoro' : 'c-' + id);
+                ul.append($('<li><a href="' + link + '" target="_blank">Official Guide (English)</a></li>'));
+            }
+            if (!incomplete) {
+                element.append($('<li><a href="http://onepiece-treasurecruise.com/c-' + id + '" target="_blank">' +
+                        'Official Guide (Japanese)</a></li>'));
+            }
+            if (!isNaN(gw[id-1])) {
+                element.append($('<li><a href="http://xn--pck6bvfc.gamewith.jp/article/show/' + gw[id-1] + '" target="_blank">' +
+                        'GameWith Page (Japanese)</a></li>'));
+            }
+            if (ul.children().length > 0)
+                element.append(ul);
+        }
+    };
+});
+
 app.directive('linkButton',function() {
     return {
         restrict: 'E',
