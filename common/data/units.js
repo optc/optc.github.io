@@ -763,5 +763,15 @@ window.units = [
     [ "Usopp Liar Wolf", "PSY", "Shooter", 4, 20, 5, 3, 99, 3000000, 51, 23, 46, 1444, 673, 400, 1 ],
     [ "Franky Frankenstein", "STR", [ "Shooter", "Freedom" ], 4, 20, 4, 3, 99, 3000000, 82, 43, 22, 1903, 1121, 170, 1 ],
     [ "Nami Pumpkin Lantern", "QCK", [ "Striker", "Knowledge" ], 4, 20, 4, 3, 99, 3000000, 47, 25, 49, 1342, 699, 416, 1 ],
-    [ "Tony Tony Chopper Little Vampire", "INT", [ "Fighter", "Knowledge" ], 4, 20, 6, 3, 99, 3000000, 56, 33, 38, 1548, 763, 358, 1 ]
+    [ "Tony Tony Chopper Little Vampire", "INT", [ "Fighter", "Knowledge" ], 4, 20, 6, 3, 99, 3000000, 56, 33, 38, 1548, 763, 358, 1 ],
+    [ ],
+    [ ],
+    [ ],
+    [ ],
+    [ "Dalmatian, Navy Headquarters Vice Admiral", "STR", [ "Fighter", "Tough" ], 4, 20, 5, 3, 99, null, 256, 194, 36, null, null, null, 0 ],
+    [ "Momonga, Navy Headquarters Vice Admiral", "PSY", [ "Knowledge", "Slasher" ], 4, 20, 6, 3, 99, null, 317, 149, 21, null, null, null, 0 ],
+    [ "Very Good", "DEX", "Slasher", 4, 20, 8, 3, 99, null, 227, 125, 56, null, null, null, 0 ],
+    [ "Shu", "INT", [ "Freedom", "Fighter" ], 3, 12, 4, 2, 70, null, 296, 94, 20, null, null, null, 0 ],
+    [ "Strawberry, Navy Headquarters Vice Admiral", "QCK", [ "Freedom", "Striker" ], 3, 12, 4, 2, 70, null, 107, 140, 130, null, null, null, 0 ],
+    [ null, "PSY", [ "Knowledge", "Slasher" ], 3, 16, 6, 2, 99, null, 213, 99, 38, null, null, null, 0 ]
 ];

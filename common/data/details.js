@@ -5389,5 +5389,48 @@ window.details = {
         captain: "Recovers 2x character's RCV in HP at the end of the turn",
         cooldown: [ 17, 9 ],
         flags: { fnonly: 1 }
+    },
+    770: { // Dalmatian
+        special: "Deals 15x character's ATK in STR damage to one enemy, boosts ATK against delayed enemies by 1.3x for 3 turns",
+        specialName: "Shigan: One-Point Convergence",
+        captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of STR characters by 2x",
+        cooldown: 23,
+        flags: { raid: 1 }
+    },
+    771: { // Momonga
+        special: "Deals 15x character's ATK in PSY damage to one enemy, boosts ATK of Knowledge characters by 1.75 for 1 turn",
+        specialName: "Moonwalk: Sky Walking",
+        captain: "Boosts ATK of Knowledge characters by 2.5x",
+        cooldown: 25,
+        flags: { raid: 1 }
+    },
+    772: { // Onigumo
+        special: "Cuts the current HP of each enemy by 10%, changes [PSY] and [INT] orbs into [DEX] orbs",
+        specialName: "Eight-Sword Style: Brave Warrior's Combined Attack",
+        captain: "Boosts ATK of Slasher characters by 2x, reduces damage received from QCK enemies by 20%",
+        cooldown: 25,
+        flags: { raid: 1 }
+    },
+    773: { // Very Good
+        special: "Changes [TND], [RCV], empty, bother and bomb orbs into either [STR], [DEX], [QCK], [PSY] or [INT] orbs, freely switch orbs between slots 3 times",
+        specialName: "Berry-Berry Fruit",
+        captain: "Boosts ATK of Freedom characters by 2x",
+        cooldown: 20,
+        flags: { raid: 1 }
+    },
+    774: { // Shu
+        special: "Reduces any damage received above 3,000 HP for 1 turn",
+        specialName: "Rust-Rust Fruit",
+        captain: "Reduces damage received by 20%",
+        cooldown: 20,
+        flags: { raid: 1 }
+    },
+    775: { // Strawberry
+        special: "Deals several times the character's ATK in PSY damage to one enemy",
+        specialNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the lower the HP is.",
+        specialName: "Angry Headbutt",
+        captain: "Boosts ATK and HP of Knowledge characters by 1.5x",
+        cooldown: 27,
+        flags: { raid: 1 }
     }
 };
