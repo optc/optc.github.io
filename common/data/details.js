@@ -5391,14 +5391,14 @@ window.details = {
         flags: { fnonly: 1 }
     },
     770: { // Dalmatian
-        special: "Deals 15x character's ATK in STR damage to one enemy, boosts ATK against delayed enemies by 1.3x for 3 turns",
+        special: "Deals 15x character's ATK in STR damage to one enemy, boosts ATK against delayed enemies by 1.3x for 2 turns",
         specialName: "Shigan: One-Point Convergence",
         captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of STR characters by 2x",
         cooldown: 23,
         flags: { raid: 1 }
     },
     771: { // Momonga
-        special: "Deals 15x character's ATK in PSY damage to one enemy, boosts ATK of Knowledge characters by 1.75 for 1 turn",
+        special: "Deals 15x character's ATK in PSY damage to one enemy, boosts ATK of Knowledge characters by 1.75x for 1 turn",
         specialName: "Moonwalk: Sky Walking",
         captain: "Boosts ATK of Knowledge characters by 2.5x",
         cooldown: 25,
@@ -5412,7 +5412,8 @@ window.details = {
         flags: { raid: 1 }
     },
     773: { // Shu
-        special: "Reduces any damage received above 3,000 HP for 1 turn",
+        special: "Reduces any damage received above 3,000 HP by 80% for 1 turn",
+        specialNotes: "The exact formula for the damage received is: 3000 + ((total damage) - 3000) * 0.2",
         specialName: "Rust-Rust Fruit",
         captain: "Reduces damage received by 20%",
         cooldown: 20,
@@ -5427,7 +5428,7 @@ window.details = {
     },
     775: { // Strawberry
         special: "Deals several times the character's ATK in PSY damage to one enemy",
-        specialNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the lower the HP is.",
+        specialNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the lower the HP is. The multiplier is calculated as: 125 * ( 1 - (remaining HP) / (total HP) )",
         specialName: "Angry Headbutt",
         captain: "Boosts ATK and HP of Knowledge characters by 1.5x",
         cooldown: 27,
