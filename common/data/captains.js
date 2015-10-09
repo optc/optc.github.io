@@ -1570,5 +1570,21 @@ window.captains = {
     764: {
         atk: function(p) { return p.unit.class.has("Striker") ? 1.5 : 1; },
         rcv: function(p) { return p.unit.class.has("Striker") ? 1.5 : 1; }
+    },
+    770: {
+        atk: function(p) { return p.unit.type == "STR" ? 2 : 1; }
+    },
+    771: {
+        atk: function(p) { return p.unit.class.has("Knowledge") ? 2.5 : 1; }
+    },
+    772: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? 2 : 1; }
+    },
+    774: {
+        atk: function(p) { return p.unit.class.has("Freedom") ? 2 : 1; }
+    },
+    775: {
+        atk: function(p) { return p.unit.class.has("Knowledge") ? 1.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Knowledge") ? 1.5 : 1; }
     }
 };

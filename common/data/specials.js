@@ -397,7 +397,7 @@ window.specials = {
     637: { // Hatchan, Takoyaki Stand Owner
         atk: function(p) { return 1.3; },
         type: 'condition',
-        warning: 'Selected special (Hatchan, Takoyaki Stand) assumes the enemy has a defense buff active.'
+        warning: 'Selected special (Hatchan, Takoyaki Stand) assumes that the enemy has a defense buff active.'
     },
     642: { // Squard
         orb: function(p) { return p.orb == 2.0 ? 1.75 : (p.orb == 0.5 ? 4/7 : 1); },
@@ -408,12 +408,12 @@ window.specials = {
     644: { // Whitey Bay
         atk: function(p) { return 1.2; },
         type: 'condition',
-        warning: 'Selected special (Whitey Bay) assumes the enemy has been delayed.'
+        warning: 'Selected special (Whitey Bay) assumes that the enemy has been delayed.'
     },
     645: { // Ice Witch Whitey Bay
         atk: function(p) { return 1.2; },
         type: 'condition',
-        warning: 'Selected special (Ice Witch Whitey Bay) assumes the enemy has been delayed.'
+        warning: 'Selected special (Ice Witch Whitey Bay) assumes that the enemy has been delayed.'
     },
     648: { // Marco, Whitebeard Pirates' 1st Division Commander
         orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); },
@@ -573,12 +573,12 @@ window.specials = {
     740: { // Nero
         atk: function(p) { return 1.3; },
         type: 'condition',
-        warning: 'Selected special (Nero) assumes the enemy has a defense buff active.'
+        warning: 'Selected special (Nero) assumes that the enemy has a defense buff active.'
     },
     741: { // Nero, Cipher Pol No.9
         atk: function(p) { return 1.3; },
         type: 'condition',
-        warning: 'Selected special (Nero, Cipher Pol No.9) assumes the enemy has a defense buff active.'
+        warning: 'Selected special (Nero, Cipher Pol No.9) assumes that the enemy has a defense buff active.'
     },
     742: { // Wanze
         orb: function(p) { return p.orb == 2.0 ? 1.25 : (p.orb == 0.5 ? 4/5 : 1); }
@@ -606,6 +606,15 @@ window.specials = {
     },
     762: {
         atk: function(p) { return p.unit.type == "PSY" ? 1.75 : 1; },
+        type: 'type'
+    },
+    770: {
+        atk: function(p) { return 1.3; },
+        type: 'condition',
+        warning: 'Selected special (Dalmatian, Navy Headquarters Vice Admiral) assumes that the enemy has been delayed.'
+    },
+    771: {
+        atk: function(p) { return p.unit.class.has("Knowledge") ? 1.75 : 1; },
         type: 'type'
     }
 };
