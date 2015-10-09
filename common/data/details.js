@@ -5411,17 +5411,17 @@ window.details = {
         cooldown: 25,
         flags: { raid: 1 }
     },
-    773: { // Very Good
-        special: "Changes [TND], [RCV], empty, bother and bomb orbs into either [STR], [DEX], [QCK], [PSY] or [INT] orbs, freely switch orbs between slots 3 times",
-        specialName: "Berry-Berry Fruit",
-        captain: "Boosts ATK of Freedom characters by 2x",
-        cooldown: 20,
-        flags: { raid: 1 }
-    },
-    774: { // Shu
+    773: { // Shu
         special: "Reduces any damage received above 3,000 HP for 1 turn",
         specialName: "Rust-Rust Fruit",
         captain: "Reduces damage received by 20%",
+        cooldown: 20,
+        flags: { raid: 1 }
+    },
+    774: { // Very Good
+        special: "Changes [TND], [RCV], empty, bother and bomb orbs into either [STR], [DEX], [QCK], [PSY] or [INT] orbs, freely switch orbs between slots 3 times",
+        specialName: "Berry-Berry Fruit",
+        captain: "Boosts ATK of Freedom characters by 2x",
         cooldown: 20,
         flags: { raid: 1 }
     },
