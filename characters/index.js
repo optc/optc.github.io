@@ -838,11 +838,11 @@ app.directive('addLinks',function($stateParams) {
                 ul.append($('<li><a href="' + link + '" target="_blank">Official Guide (English)</a></li>'));
             }
             if (!incomplete) {
-                element.append($('<li><a href="http://onepiece-treasurecruise.com/c-' + id + '" target="_blank">' +
+                ul.append($('<li><a href="http://onepiece-treasurecruise.com/c-' + id + '" target="_blank">' +
                         'Official Guide (Japanese)</a></li>'));
             }
             if (!isNaN(gw[id-1])) {
-                element.append($('<li><a href="http://xn--pck6bvfc.gamewith.jp/article/show/' + gw[id-1] + '" target="_blank">' +
+                ul.append($('<li><a href="http://xn--pck6bvfc.gamewith.jp/article/show/' + gw[id-1] + '" target="_blank">' +
                         'GameWith Page (Japanese)</a></li>'));
             }
             if (ul.children().length > 0)
