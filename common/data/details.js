@@ -4113,9 +4113,9 @@ window.details = {
         cooldown: [ 20, 10 ],
         flags: { global: 1, rr: 1 }
     },
-    591: { },
-    592: { },
-    593: { },
+    591: { }, // N/A
+    592: { }, // N/A
+    593: { }, // N/A
     594: { }, // Amber Dragon Palace Turtle Princess
     595: { }, // Jet Black Dragon Palace Turtle Princess
     596: { // Tony Tony Chopper, Record of the Voyage - Strawhat Crew (Log Chopper)
@@ -5390,25 +5390,25 @@ window.details = {
         cooldown: [ 17, 9 ],
         flags: { fnonly: 1 }
     },
-    770: { // Dalmatian
+    770: { // Dalmatian, Navy Headquarters Vice Admiral
         special: "Deals 15x character's ATK in STR damage to one enemy, boosts ATK against delayed enemies by 1.3x for 2 turns",
-        specialName: "Shigan: One-Point Convergence",
+        specialName: "Shigan: Convergence",
         captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of STR characters by 2x",
-        cooldown: 23,
+        cooldown: [ 23, 13 ],
         flags: { raid: 1 }
     },
-    771: { // Momonga
+    771: { // Momonga, Navy Headquarters Vice Admiral
         special: "Deals 15x character's ATK in PSY damage to one enemy, boosts ATK of Knowledge characters by 1.75x for 1 turn",
-        specialName: "Moonwalk: Sky Walking",
+        specialName: "Moonwalk: Air Walking",
         captain: "Boosts ATK of Knowledge characters by 2.5x",
-        cooldown: 25,
+        cooldown: [ 25, 15 ],
         flags: { raid: 1 }
     },
-    772: { // Onigumo
+    772: { // Onigumo, Navy Headquarters Vice Admiral
         special: "Cuts the current HP of each enemy by 10%, changes [PSY] and [INT] orbs into [DEX] orbs",
-        specialName: "Eight-Sword Style: Brave Warrior's Combined Attack",
+        specialName: "Eight-Sword Style: Brave Warrior's Continuous Attack",
         captain: "Boosts ATK of Slasher characters by 2x, reduces damage received from QCK enemies by 20%",
-        cooldown: 25,
+        cooldown: [ 25, 15 ],
         flags: { raid: 1 }
     },
     773: { // Shu
@@ -5416,22 +5416,22 @@ window.details = {
         specialNotes: "The exact formula for the damage received is: 3000 + ((total damage) - 3000) * 0.2",
         specialName: "Rust-Rust Fruit",
         captain: "Reduces damage received by 20%",
-        cooldown: 20,
+        cooldown: [ 20, 8 ],
         flags: { raid: 1 }
     },
     774: { // Very Good
         special: "Changes [TND], [RCV], empty, bother and bomb orbs into either [STR], [DEX], [QCK], [PSY] or [INT] orbs, freely switch orbs between slots 3 times",
         specialName: "Berry-Berry Fruit",
         captain: "Boosts ATK of Freedom characters by 2x",
-        cooldown: 20,
+        cooldown: [ 20, 11 ],
         flags: { raid: 1 }
     },
-    775: { // Strawberry
+    775: { // Strawberry, Navy Headquarters Vice Admiral
         special: "Deals several times the character's ATK in PSY damage to one enemy",
         specialNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the lower the HP is. The multiplier is calculated as: 125 * ( 1 - (remaining HP) / (total HP) )",
         specialName: "Angry Headbutt",
         captain: "Boosts ATK and HP of Knowledge characters by 1.5x",
-        cooldown: 27,
+        cooldown: [ 27, 17 ],
         flags: { raid: 1 }
     }
 };
