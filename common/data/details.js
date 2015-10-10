@@ -11,7 +11,7 @@ window.details = {
         special: "Deals 7x character's ATK in STR damage to one enemy",
         specialName: "Gum-Gum Pistol",
         captain: "Boosts ATK of STR characters by 1.5x",
-        cooldown: 12,
+        cooldown: [ 12, 9 ],
         evolution: 3,
         evolvers: [ 115, 78 ],
         flags: { global: 1 }
@@ -20,7 +20,7 @@ window.details = {
         special: "Deals 15x character's ATK in STR damage to one enemy",
         specialName: "Gum-Gum Bazooka",
         captain: "Boosts ATK of STR characters by 1.5x",
-        cooldown: 23,
+        cooldown: [ 23, 15 ],
         evolution: 4,
         evolvers: [ 117, 84, 95, 100 ],
         flags: { global: 1 }
@@ -36,7 +36,7 @@ window.details = {
         special: "Deals 7x character's ATK in DEX damage to one enemy",
         specialName: "Oni Giri",
         captain: "Boosts ATK of DEX characters by 1.5x",
-        cooldown: 12,
+        cooldown: [ 12, 9 ],
         evolution: [ 6, 7 ],
         evolvers: [ [ 115, 80 ], [ 116, 80, 97 ] ],
         flags: { global: 1 }
@@ -45,7 +45,7 @@ window.details = {
         special: "Deals 10x character's ATK in DEX damage to all enemies",
         specialName: "Three Thousand Worlds",
         captain: "Boosts ATK of DEX characters by 1.5x",
-        cooldown: 15,
+        cooldown: [ 15, 10 ],
         evolution: 8,
         evolvers: [ 117, 86, 97, 102 ],
         flags: { global: 1 }
@@ -54,7 +54,7 @@ window.details = {
         special: "Deals 10x character's ATK in DEX damage to all enemies",
         specialName: "108 Pound Phoenix",
         captain: "Boosts ATK of DEX characters by 1.5x",
-        cooldown: 15,
+        cooldown: [ 15, 10 ],
         evolution: 8,
         evolvers: [ 117, 80, 102 ],
         flags: { global: 1 }
@@ -79,7 +79,7 @@ window.details = {
         special: "Deals 15x character's ATK in INT damage to one enemy",
         specialName: "Tornado Tempo",
         captain: "Boosts ATK of INT characters by 1.5x",
-        cooldown: 23,
+        cooldown: [ 23, 15 ],
         evolution: 12,
         evolvers: [ 117, 88, 99, 104 ],
         flags: { global: 1 }
@@ -147,7 +147,7 @@ window.details = {
         special: "Reduces the defense of all enemies by 50% for 2 turns",
         specialName: "Plastic Surgery Shot",
         captain: "Boosts HP of QCK characters by 1.5x",
-        cooldown: 15,
+        cooldown: [ 15, 10 ],
         evolution: 20,
         evolvers: [ 117, 85, 96, 101 ],
         flags: { global: 1 }
@@ -156,7 +156,7 @@ window.details = {
         special: "Recovers 10x character's RCV in HP",
         specialName: "Hot Rock Stew",
         captain: "Boosts ATK of QCK characters by 1.5x",
-        cooldown: 23,
+        cooldown: [ 23, 15 ],
         evolution: 20,
         evolvers: [ 117, 79, 101 ],
         flags: { global: 1 }
@@ -172,7 +172,7 @@ window.details = {
         special: "Changes neighboring slots' orbs into [RCV] orbs",
         specialName: "Hearty Yell",
         captain: "Boosts RCV of PSY characters by 1.2x",
-        cooldown: 15,
+        cooldown: [ 15, 8 ],
         evolution: [ 22, 23, 24, 25, 26 ],
         evolvers: [ [ 116, 81, 98 ], [ 116, 82, 99 ], [ 116, 78, 95 ], [ 116, 79, 96 ], [ 116, 80, 97 ] ],
         flags: { global: 1 }
@@ -230,7 +230,7 @@ window.details = {
         special: "Deals 7x character's ATK in STR damage to one enemy",
         specialName: "Iron Mace Beauty",
         captain: "Reduces damage received from STR enemies by 30%",
-        cooldown: 15,
+        cooldown: [ 15, 9 ],
         evolution: 30,
         evolvers: [ 117, 78, 89, 100 ],
         flags: { global: 1 }
@@ -385,7 +385,7 @@ window.details = {
         special: "Deals 5x character's ATK in STR damage to one enemy",
         specialName: "The Meatball Of Doom",
         captain: "Recovers 4x character's RCV in HP at the end of the turn",
-        cooldown: 15,
+        cooldown: [ 15, 10 ],
         flags: { global: 1 }
     },
     51: { // Carne
@@ -429,7 +429,7 @@ window.details = {
         special: "Deals 7x character's ATK in INT damage to one enemy",
         specialName: "Chain Hammer",
         captain: "Reduces damage received by 10%",
-        cooldown: 15,
+        cooldown: [ 15, 9 ],
         evolution: 58,
         evolvers: [ 117, 82, 93, 104 ],
         flags: { global: 1 }
@@ -487,7 +487,7 @@ window.details = {
         special: "Deals 7x character's ATK in STR damage to one enemy",
         specialName: "Shark On Darts",
         captain: "Boosts ATK of Slasher characters by 2x",
-        cooldown: 15,
+        cooldown: [ 15, 9 ],
         evolution: 66,
         evolvers: [ 117, 78, 89, 100 ],
         flags: { global: 1 }
@@ -1291,7 +1291,7 @@ window.details = {
         special: "Deals 15x character's ATK in STR damage to one enemy",
         specialName: "Nez-Palm Cannon",
         captain: "Boosts ATK of STR characters by 1.5x",
-        cooldown: 15,
+        cooldown: [ 15, 11 ],
         evolution: 200,
         evolvers: [ 94, 78 ],
         flags: { global: 1 }
@@ -1476,7 +1476,7 @@ window.details = {
         special: "Deals 15x character's ATK in QCK damage to one enemy",
         specialName: "Mutton Shot",
         captain: "Boosts ATK by 2x after scoring 2 Perfects in a row",
-        cooldown: 15,
+        cooldown: [ 15, 11 ],
         evolution: 225,
         evolvers: [ 117, 79, 90, 83 ],
         flags: { global: 1, rr: 1 }
@@ -3240,7 +3240,7 @@ window.details = {
     473: { // Blue God's Guard Group Skypiea God's Army
         special: "Deals 10x character's ATK in QCK damage to one enemy",
         specialName: "Milky Quick Axe",
-        cooldown: 20
+        cooldown: [ 20, 15 ]
     },
     474: { // Green God's Guard Group Skypiea God's Army
         special: "Deals 5x character's ATK in DEX damage to all enemies, reduces Bind duration by 1 turn",
@@ -4122,7 +4122,7 @@ window.details = {
         special: "Deals 20x character's ATK in STR damage to one enemy, reduces the defense of one enemy by 50% for 3 turns",
         specialName: "Cloven Rose - Palm",
         captain: "Boosts ATK of STR characters by 1.5x, recovers 500 HP at the end of the turn",
-        cooldown: 20,
+        cooldown: [ 20, 17 ],
         evolution: 597,
         evolvers: [ 117, 78, 84, 89, 95 ],
         flags: { rr: 1, lrr: 1 }
@@ -4131,7 +4131,7 @@ window.details = {
         special: "Deals 20x character's ATK in STR damage to one enemy, reduces the defense of one enemy by 50% for 3 turns",
         specialName: "Cloven Rose - Palm",
         captain: "Boosts ATK of STR characters by 1.75x, recovers 750 HP at the end of the turn",
-        cooldown: 20,
+        cooldown: [ 20, 17 ],
         flags: { rr: 1, lrr: 1 }
     },
     598: { // Buggy the Pirate Apprentice
@@ -4281,7 +4281,7 @@ window.details = {
     619: { // Knuckle Hoodlum, Green Bounty Hunter
         special: "Cuts the current HP of each enemy by 5%",
         specialName: "Light Break",
-        cooldown: 25
+        cooldown: [ 25, 10 ]
     },
     620: { // Katana Hoodlum, Blue Bounty Hunter
         special: "Changes [INT] orbs into [QCK] orbs",
@@ -4575,7 +4575,7 @@ window.details = {
         special: "Reduces Bind and Silence duration by 2 turns, reduces damage received by 50% for 2 turns",
         specialName: "Gum-Gum Balloon Swim",
         captain: "Boosts ATK by 2.5x after scoring 3 Perfects in a row",
-        cooldown: 20,
+        cooldown: [ 20, 15 ],
         flags: { fnonly: 1 }
     },
     660: { // Usopp, Record of the Voyage - Strawhat Crew (Log Usopp)
@@ -4680,7 +4680,7 @@ window.details = {
         special: "Cuts the current HP of each enemy by 20%, changes own orb into [STR]",
         specialName: "Four Thousand Tile True Punch",
         captain: "Boosts ATK of Fighter characters by 2x",
-        cooldown: 20,
+        cooldown: [ 20, 15 ],
         evolution: 673,
         evolvers: [ 118, 84, 94, 300, 100 ],
         flags: { rr: 1 }
@@ -4689,7 +4689,7 @@ window.details = {
         special: "Cuts the current HP of each enemy by 20%, changes own orb into [STR]",
         specialName: "Four Thousand Tile True Punch",
         captain: "Reduces cooldown of all specials by 3 turns at the start of the fight, boosts ATK of Fighter characters by 2x",
-        cooldown: 20,
+        cooldown: [ 20, 15 ],
         flags: { rr: 1 }
     },
     674: { // Emporio Ivankov, Newkama Kenpo Instructor
@@ -4713,7 +4713,7 @@ window.details = {
         specialNotes: "The exact formula for the damage received is: 5000 + ((total damage) - 5000) * 0.03",
         specialName: "KEEP OUT",
         captain: "Boosts ATK of Slasher characters by 1.5x, deals 5x character's ATK in QCK damage to all enemies at the end of the turn",
-        cooldown: 18,
+        cooldown: [ 18, 14 ],
         evolution: 677,
         evolvers: [ 94, 96, 96, 301, 301 ],
         flags: { rr: 1 }
@@ -4723,14 +4723,14 @@ window.details = {
         specialNotes: "The exact formula for the damage received is: 5000 + ((total damage) - 5000) * 0.03",
         specialName: "KEEP OUT",
         captain: "Boosts ATK of Slasher characters by 1.5x, deals 5x character's ATK in QCK damage to all enemies at the end of the turn",
-        cooldown: 18,
+        cooldown: [ 18, 14 ],
         flags: { rr: 1 }
     },
     678: { // Robin, Record of the Voyage - Strawhat Crew (Log Robin)
         special: "Reduces damage received by 50% for 1 turn, locks all orbs for 1 turn",
         specialName: "Cien Fleur - Spider Net",
         captain: "Boosts ATK and RCV of PSY characters by 1.2x, boosts chances of getting [PSY] orbs",
-        cooldown: 19,
+        cooldown: [ 19, 16 ],
         evolution: 679,
         evolvers: [ 117, 87, 94, 303, 103 ],
         flags: { rr: 1, lrr: 1 }
@@ -4739,13 +4739,13 @@ window.details = {
         special: "Reduces damage received by 50% for 1 turn, locks all orbs for 1 turn",
         specialName: "Cien Fleur - Spider Net",
         captain: "Boosts ATK and RCV of PSY characters by 1.5x, boosts chances of getting [PSY] orbs",
-        cooldown: 19,
+        cooldown: [ 19, 16 ],
         flags: { rr: 1, lrr: 1 }
     },
     680: { // Ice Cream Loving Nami
         special: "Recovers 5x character's RCV in HP, boosts ATK and RCV of DEX characters by 1.25x for 2 turns",
         specialName: "Midsummer Relax Time",
-        cooldown: 20,
+        cooldown: [ 20, 13 ],
         evolution: 681,
         evolvers: [ 117, 80, 86, 97, 302 ],
         flags: { fnonly: 1 }
@@ -4754,7 +4754,7 @@ window.details = {
         special: "Recovers 5x character's RCV in HP, boosts ATK and RCV of DEX characters by 1.25x for 2 turns",
         specialName: "Midsummer Relax Time",
         captain: "Boosts ATK and RCV of Striker characters by 1.5x",
-        cooldown: 20,
+        cooldown: [ 20, 13 ],
         flags: { fnonly: 1 }
     },
     682: { // Ice Cream Loving Robin
@@ -4775,7 +4775,7 @@ window.details = {
     684: { // Ice Cream Loving Perona
         special: "Recovers 3x character's RCV in HP, reduces damage received by 80% for 1 turn",
         specialName: "Romantic Ghost",
-        cooldown: 23,
+        cooldown: [ 23, 16 ],
         evolution: 685,
         evolvers: [ 117, 88, 93, 99, 304 ],
         flags: { fnonly: 1 }
@@ -4784,7 +4784,7 @@ window.details = {
         special: "Recovers 3x character's RCV in HP, reduces damage received by 80% for 1 turn",
         specialName: "Romantic Ghost",
         captain: "Boosts ATK and RCV of Shooter characters by 1.5x",
-        cooldown: 23,
+        cooldown: [ 23, 16 ],
         flags: { fnonly: 1 }
     },
     686: { // Vivi's Breather
@@ -4859,7 +4859,7 @@ window.details = {
     695: { // Knuckle Corporal Navy Headquarters
         special: "Cuts the current HP of each enemy by 5%",
         specialName: "Light Break",
-        cooldown: 25,
+        cooldown: [ 25, 10 ],
         evolution: 700,
         evolvers: [ 116, 99, 304 ]
     },
@@ -4891,7 +4891,7 @@ window.details = {
         special: "Cuts the current HP of each enemy by 5%",
         specialName: "Light Break",
         captain: "Boosts ATK of Fighter characters by 1.75x",
-        cooldown: 25
+        cooldown: [ 25, 10 ]
     },
     701: { // Oimo
         special: "Deals 15x character's ATK in PSY damage to all enemies, changes own orb into [PSY]",

@@ -811,7 +811,7 @@ app.directive('addTags',function($stateParams) {
                 // captain effects
                 if (matcher.target == 'captain' && matcher.matcher.test(data.captain)) {
                     name = matcher.name;
-                    if (!/captains$/.test(name)) name = name.replace(/s$/,'') + ' captains';
+                    if (!/captains$/.test(name)) name = name.replace(/ers$/,'ing').replace(/s$/,'') + ' captains';
                     element.append($('<span class="tag captain">' + name + '</div>'));
                 }
                 // specials
