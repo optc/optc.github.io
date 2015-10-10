@@ -11,7 +11,7 @@ window.matchers = [
     {
         name: 'Class-boosting captains',
         target: 'captain',
-        matcher: /Boosts.+(Slasher|Striker|Fighter|Shooter)/i
+        matcher: /Boosts.+(Slasher|Striker|Fighter|Shooter|Freedom|Knowledge|Tough)/i
     },
 
     {
@@ -122,7 +122,7 @@ window.matchers = [
     {
         name: 'Class-boosting specials',
         target: 'special',
-        matcher: /Boosts.+ of (Slasher|Striker|Fighter|Shooter)/i
+        matcher: /Boosts.+ of (Slasher|Striker|Fighter|Shooter|Freedom|Knowledge|Tough)/i
     },
 
     {
