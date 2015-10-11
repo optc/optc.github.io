@@ -721,7 +721,7 @@ window.drops = {
         {
             name: 'Garp',
             thumb: 306,
-            Master: [ 113, 118, 263, 264, 305 ],
+            Master: [ 113, 118, 262, 264, 305 ],
         },
 
         {
