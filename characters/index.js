@@ -811,13 +811,15 @@ app.directive('addTags',function($stateParams) {
                 // captain effects
                 if (matcher.target == 'captain' && matcher.matcher.test(data.captain)) {
                     name = matcher.name;
-                    if (!/captains$/.test(name)) name = name.replace(/ers$/,'ing').replace(/s$/,'') + ' captains';
+                    if (!/captains$/.test(name)) name = name.replace(/ers$/,'ing').replace(/s$/,'') + ' captain';
+                    else name = name.replace(/s$/,'');
                     element.append($('<span class="tag captain">' + name + '</div>'));
                 }
                 // specials
                 if (matcher.target == 'special' && matcher.matcher.test(data.special)) {
                     name = matcher.name;
-                    if (!/specials$/.test(name)) name = name.replace(/ers$/,'ing').replace(/s$/,'') + ' specials';
+                    if (!/specials$/.test(name)) name = name.replace(/ers$/,'ing').replace(/s$/,'') + ' special';
+                    else name = name.replace(/s$/,'');
                     element.append($('<span class="tag special">' + name + '</div>'));
                 }
             });
