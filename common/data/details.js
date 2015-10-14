@@ -5357,38 +5357,38 @@ window.details = {
     },
     761: { // Monkey D. Luffy Halloween Monster
         special: "Deals 15x character's ATK in DEX damage to one enemy, boosts ATK of all characters by 1.2x for 1 turn",
-        specialName: "Gum-Gum \"Monster\"",
+        specialName: "Gum-Gum Monster Pistol",
         captain: "Boosts ATK of Fighter characters by 2x",
         cooldown: [ 23, 15 ],
-        flags: { fnonly: 1 }
+        flags: { global: 1, fnonly: 1 }
     },
-    762: { // Usopp Liar Wolf
+    762: { // Usopp Lying Wolf
         special: "Boosts ATK of PSY characters by 1.75x for 1 turn",
-        specialName: "Impact \"Beast\"",
+        specialName: "Impact Beast",
         captain: "Boosts ATK and RCV of PSY characters by 1.5x",
         cooldown: [ 14, 10 ],
-        flags: { fnonly: 1 }
+        flags: { global: 1, fnonly: 1 }
     },
     763: { // Franky Frankenstein
         special: "Changes own orb into [STR], freely switch orbs between slots once",
-        specialName: "Convert: Franky Centaur",
+        specialName: "Franken-Franky Centaur",
         captain: "Boosts ATK of STR characters by 2x",
         cooldown: [ 15, 7 ],
-        flags: { fnonly: 1 }
+        flags: { global: 1, fnonly: 1 }
     },
-    764: { // Nami Pumpkin Lantern
+    764: { // Nami Jackie 'o Lantern
         special: "Recovers 3,000 HP",
-        specialName: "Cat Burglar \"Trick\"",
+        specialName: "Cat Burglar Trick",
         captain: "Boosts ATK and RCV of Striker characters by 1.5x",
         cooldown: [ 16, 8 ],
-        flags: { fnonly: 1 }
+        flags: { global: 1, fnonly: 1 }
     },
-    765: { // Tony Tony Chopper Little Vampire
+    765: { // Tony Tony Chopper Lil' Vampire
         special: "Reduces Silence duration by 3 turns",
-        specialName: "Scope \"Magic\"",
+        specialName: "Scope Magic",
         captain: "Recovers 2x character's RCV in HP at the end of the turn",
         cooldown: [ 17, 9 ],
-        flags: { fnonly: 1 }
+        flags: { global: 1, fnonly: 1 }
     },
     770: { // Dalmatian, Navy Headquarters Vice Admiral
         special: "Deals 15x character's ATK in STR damage to one enemy, boosts ATK against delayed enemies by 1.3x for 2 turns",
