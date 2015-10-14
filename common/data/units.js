@@ -778,5 +778,6 @@ window.units = [
     [ "Lucky Roo of the Red Hair Pirates", "PSY", [ "Shooter", "Freedom" ], 4, 20, 5, 3, 701, null, 842, 412, 70, null, null, null, 0 ],
     [ "Rebecca, Prisoner Gladiator", "QCK", "Striker", 4, 18, 5, 1, 50, null, 226, 127, 57, null, null, null, 0 ],
     [ "Rebecca, Colosseum's Exclusive Gladiator", "QCK", "Striker", 5, 30, 4, 3, 99, null, 920, 441, 150, null, null, null, 0 ],
-    [ "Urouge, Captain of the Fallen Monk Pirates", "STR", [ "Fighter", "Striker" ], 4, 25, 5, 2, 70, null, 782, 381, 45, null, null, null, 0 ]
+    [ "Urouge, Captain of the Fallen Monk Pirates", "STR", [ "Fighter", "Striker" ], 4, 25, 5, 2, 70, null, 782, 381, 45, null, null, null, 0 ],
+    [ "Mad Monk Urouge, Captain of the Fallen Monk Pirates", "STR", [ "Fighter", "Striker" ], 5, 40, 5, 3, 99, null, 1512, 755, 83, null, null, null, 0 ]
 ];
