@@ -5435,17 +5435,17 @@ window.details = {
         flags: { raid: 1 }
     },
     776: { // Lucky Roo
-        special: "Boosts ATK and RCV of PSY characters by 1.25x",
         specialName: "Boisterous Lucky Shot!!",
-        captain: "Recovers 5,000 HP, deals 15x character's ATK in PSY damage to one enemy, seals himself for 3 turns",
+        special: "Recovers 5,000 HP, deals 15x character's ATK in PSY damage to one enemy, seals himself for 3 turns",
+        captain: "Boosts ATK and RCV of PSY characters by 1.25x",
         cooldown: 20,
         evolution: 777,
         evolvers: [ 116, 117, 81, 87, 103 ]
     },
     777: { // Lucky Roo of the Red Hair Pirates
-        special: "Boosts ATK and RCV of PSY characters by 1.75x",
+        special: "Recovers 5,000 HP, deals 15x character's ATK in PSY damage to one enemy, seals himself for 3 turns",
         specialName: "Boisterous Lucky Shot!!",
-        captain: "Recovers 5,000 HP, deals 15x character's ATK in PSY damage to one enemy, seals himself for 3 turns",
+        captain: "Boosts ATK and RCV of PSY characters by 1.75x",
         cooldown: 20
     },
     778: { // Rebecca, Prisoner Gladiator
@@ -5469,6 +5469,8 @@ window.details = {
         specialNotes: "The exact multiplier used is chosen based on the crew's current HP at the time the special is activated: above 50% HP, the multiplier used is 1.5x; between 20% HP and 50% HP, it's 1.75x; below 20% HP, it's 2x.",
         specialName: "Precept Deification",
         captain: "Boosts ATK of all characters by 2x if HP is below 30% at the start of the turn",
-        cooldown: 19
+        cooldown: 19/*,
+        evolution: 781,
+        evolvers: [ 118, 84, 94, 300, 100 ]*/
     }
 };
