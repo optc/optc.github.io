@@ -5433,5 +5433,42 @@ window.details = {
         captain: "Boosts ATK and HP of Knowledge characters by 1.5x",
         cooldown: [ 27, 17 ],
         flags: { raid: 1 }
+    },
+    776: { // Lucky Roo
+        special: "Boosts ATK and RCV of PSY characters by 1.25x",
+        specialName: "Boisterous Lucky Shot!!",
+        captain: "Recovers 5,000 HP, deals 15x character's ATK in PSY damage to one enemy, seals himself for 3 turns",
+        cooldown: 20,
+        evolution: 777,
+        evolvers: [ 116, 117, 81, 87, 103 ]
+    },
+    777: { // Lucky Roo of the Red Hair Pirates
+        special: "Boosts ATK and RCV of PSY characters by 1.75x",
+        specialName: "Boisterous Lucky Shot!!",
+        captain: "Recovers 5,000 HP, deals 15x character's ATK in PSY damage to one enemy, seals himself for 3 turns",
+        cooldown: 20
+    },
+    778: { // Rebecca, Prisoner Gladiator
+        special: "Deals several times the character's ATK in QCK damage to one enemy, changes own orb into [QCK]",
+        specialNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the lower the HP is.",
+        specialName: "Undefeated Sword Technique",
+        captain: "Reduces damage received by 20%",
+        cooldown: 26,
+        evolution: 779,
+        evolvers: [ 117, 85, 94, 96, 301 ]
+    },
+    779: { // Rebecca, Colosseum's Exclusive Gladiator
+        special: "Deals several times the character's ATK in QCK damage to one enemy, changes own orb into [QCK]",
+        specialNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the lower the HP is.",
+        specialName: "Undefeated Sword Technique",
+        captain: "Reduces damage received by 25%",
+        cooldown: 26
+    },
+    780: { // Urouge, Captain of the Fallen Monk Pirates
+        special: "Boosts his own ATK by a variable factor for 1 turn",
+        specialNotes: "The exact multiplier used is chosen based on the crew's current HP at the time the special is activated: above 50% HP, the multiplier used is 1.5x; between 20% HP and 50% HP, it's 1.75x; below 20% HP, it's 2x.",
+        specialName: "Precept Deification",
+        captain: "Boosts ATK of all characters by 2x if HP is below 30% at the start of the turn",
+        cooldown: 19
     }
 };
