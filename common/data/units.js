@@ -742,8 +742,8 @@ window.units = [
     [ "Nero, Cipher Pol No.9", "QCK", "Shooter", 4, 15, 5, 2, 70, 1066998, 277, 489, 51, 755, 1050, 145, 0.7 ],
     [ "Wanze", "DEX", "Freedom", 3, 11, 4, 1, 50, 392109, 202, 44, 40, 1124, 367, 212, 1 ],
     [ "Wanze, Cipher Pol No.7", "DEX", "Freedom", 4, 18, 5, 2, 99, 3000000, 1059, 312, 170, 2051, 674, 363, 1 ],
-    [ "Portgas D. Ace, Record of the Voyage - Whitebeard Crew (Log Ace)", "QCK", [ "Freedom", "Fighter" ], 4, 12, 5, 2, 50, null, 377, 195, 72, 1121, 585, 189, 0 ],
-    [ "Portgas D. Ace, Dream of the Voyage - Pirate Summit (Log Ace)", "QCK", [ "Freedom", "Fighter" ], 5, 20, 4, 3, 99, null, 1063, 524, 140, 2180, 1100, 262, 0 ],
+    [ "Portgas D. Ace, Record of the Voyage - Whitebeard Crew (Log Ace)", "QCK", [ "Freedom", "Fighter" ], 4, 12, 5, 2, 50, 392109, 141, 71, 36, 1121, 585, 189, 1.5 ],
+    [ "Portgas D. Ace, Dream of the Voyage - Pirate Summit (Log Ace)", "QCK", [ "Freedom", "Fighter" ], 5, 20, 4, 3, 99, 4000000, 1063, 524, 140, 2181, 1100, 258, 1.5 ],
     [ "Megalo and Princess Shirahoshi", "QCK", "Fighter", 4, 15, 4, 3, 70, 1066998, 1251, 271, 150, 2001, 600, 241, 1 ],
     [ "Rob Lucci, CP9's Dark Justice", "STR", [ "Tough", "Fighter" ], 5, 30, 4, 4, 70, 1066998, 496, 300, 89, 1656, 800, 245, 1.5 ],
     [ "Rob Lucci, CP9's Strongest Generation", "STR", [ "Tough", "Fighter" ], 6, 55, 6, 4, 99, 5000000, 1611, 762, 220, 3230, 1456, 382, 1.5 ],
@@ -777,6 +777,6 @@ window.units = [
     [ "Lucky Roo", "PSY", [ "Shooter", "Freedom" ], 3, 13, 6, 2, 35, null, 385, 209, 39, null, null, null, 0 ],
     [ "Lucky Roo of the Red Hair Pirates", "PSY", [ "Shooter", "Freedom" ], 4, 20, 5, 3, 701, null, 842, 412, 70, null, null, null, 0 ],
     [ "Rebecca, Prisoner Gladiator", "QCK", "Striker", 4, 18, 5, 1, 50, null, 226, 127, 57, null, null, null, 0 ],
-    [ "Rebecca, Colosseum's Exclusive Gladiator", "QCK", "Striker", 5, 30, 4, 3, null, null, 920, 441, 150, null, null, null, 0 ],
+    [ "Rebecca, Colosseum's Exclusive Gladiator", "QCK", "Striker", 5, 30, 4, 3, 99, null, 920, 441, 150, null, null, null, 0 ],
     [ "Urouge, Captain of the Fallen Monk Pirates", "STR", [ "Fighter", "Striker" ], 4, 25, 5, 2, 70, null, 782, 3811, 45, null, null, null, 0 ]
 ];
