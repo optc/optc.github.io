@@ -1,0 +1,87 @@
+<div id="clear-button" class="filter-header" ng-click="clearFilters()">Clear filters</div>
+
+<div class="filter-container">
+    <span class="filter-header">Type filters</span>
+    <span ng-model="filters.type" ng-repeat="(n,type) in [ 'STR', 'QCK', 'DEX', 'PSY', 'INT' ]"
+        class="filter {{n < 3 ? 'width-4' : 'width-6'}} type {{type}}" ng-class="{ active: filters.type == type }"
+        ng-click="onFilterClick($event,type)">{{type}}</span>
+</div>
+
+<div class="filter-container">
+    <span class="filter-header">Class filters</span>
+    <span ng-repeat="(n,class) in [ 'Fighter', 'Shooter', 'Slasher', 'Striker', 'Freedom', 'Knowledge', 'Tough' ]"
+        class="filter {{n < 4 ? 'width-6' : 'width-4' }} class" ng-model="filters.class"
+        ng-class="{ active: filters.class == class }" ng-click="onFilterClick($event,class)">{{class}}</span>
+</div>
+
+<div class="filter-container">
+    <span class="filter-header">Drop filters</span>
+    <span ng-repeat="type in [ 'Farmable', 'Non-farmable' ]" class="filter width-6 drop" ng-model="filters.drop"
+        ng-class="{ active: filters.drop == type }" ng-click="onFilterClick($event,type)">{{type}}</span>
+    <span ng-repeat="type in [ 'Global only', 'JP only' ]" class="filter width-6 drop" ng-model="filters.server"
+        ng-class="{ active: filters.server == type }" ng-click="onFilterClick($event,type)">{{type}}</span>
+</div>
+
+<div class="filter-container conditional" ng-show="filters.drop == 'Farmable'">
+    <span class="filter-header">Farmable filters</span>
+    <span class="filter width-6 drop" ng-class="{ active: filters.farmable.raid }"
+        ng-model="filters.farmable.raid" ng-click="onDropFilterClick($event,true)">Raid-only</span><!--
+ --><span class="filter width-6 exc"  ng-class="{ active: filters.farmable.raid === false }"
+        ng-model="filters.farmable.raid" ng-click="onDropFilterClick($event,false)">Hide raid-only</span>
+    <span class="filter width-6 drop" ng-class="{ active: filters.farmable.fortnight }"
+        ng-model="filters.farmable.fortnight" ng-click="onDropFilterClick($event,true)">Fortnight-only</span><!--
+ --><span class="filter width-6 exc" ng-class="{ active: filters.farmable.fortnight === false }"
+        ng-model="filters.farmable.fortnight" ng-click="onDropFilterClick($event,false)">Hide fortnight-only</span>
+</div>
+
+<div class="filter-container conditional" ng-show="filters.drop == 'Non-farmable'">
+    <span class="filter-header">Non-farmable filters</span>
+    <span class="filter width-6 drop" ng-class="{ active: filters.nonFarmable.rr }"
+        ng-model="filters.nonFarmable.rr" ng-click="onDropFilterClick($event,true)">RR-only</span><!--
+ --><span class="filter width-6 drop" ng-class="{ active: filters.nonFarmable.rr === false }"
+        ng-model="filters.nonFarmable.rr" ng-click="onDropFilterClick($event,false)">Hide RR-only</span>
+    <span class="filter width-6 drop" ng-class="{ active: filters.nonFarmable.lrr }"
+        ng-model="filters.nonFarmable.lrr" ng-click="onDropFilterClick($event,true)">Limited RR-only</span><!--
+ --><span class="filter width-6 drop" ng-class="{ active: filters.nonFarmable.lrr === false }"
+        ng-model="filters.nonFarmable.lrr" ng-click="onDropFilterClick($event,false)">Hide lim. RR-only</span>
+    <span class="filter width-6 drop" ng-class="{ active: filters.nonFarmable.promo }"
+        ng-model="filters.nonFarmable.promo" ng-click="onDropFilterClick($event,true)">Promo-only</span><!--
+ --><span class="filter width-6 drop" ng-class="{ active: filters.nonFarmable.promo === false }"
+        ng-model="filters.nonFarmable.promo" ng-click="onDropFilterClick($event,false)">Hide promo-only</span>
+    <span class="filter width-6 drop" ng-class="{ active: filters.nonFarmable.special }"
+        ng-model="filters.nonFarmable.special" ng-click="onDropFilterClick($event,true)">Special-only</span><!--
+ --><span class="filter width-6 drop" ng-class="{ active: filters.nonFarmable.special === false }"
+        ng-model="filters.nonFarmable.special" ng-click="onDropFilterClick($event,false)">Hide special-only</span>
+</div>
+
+<div class="filter-container">
+    <span class="filter-header">Exclusion filters</span>
+    <span class="filter width-6 exc" ng-model="filters.noBase" ng-class="{ active: filters.noBase }"
+        ng-click="filters.noBase = !filters.noBase">Hide base forms</span><!--
+ --><span class="filter width-6 exc" ng-model="filters.noFodder" ng-class="{ active: filters.noFodder }"
+        ng-click="filters.noFodder = !filters.noFodder">Hide fodder</span>
+    <span class="filter width-12 exc" ng-model="filters.noEvos" ng-class="{ active: filters.noEvos }"
+        ng-click="filters.noEvos = !filters.noEvos">Hide Boosters and Evolvers</span>
+</div>
+
+<div class="filter-container">
+    <span class="filter-header">Captain ability filters</span>
+    <span class="filter width-12 custom" ng-repeat="(n,filter) in filterData" ng-if="filter.target == 'captain'"
+        ng-model="filters.custom[n]" ng-class="{ active: filters.custom[n] }"
+        ng-click="filters.custom[n] = !filters.custom[n]">{{filter.name}}</span>
+</div>
+
+<div class="filter-container">
+    <span class="filter-header">Special filters</span>
+    <span class="filter width-12 custom" ng-repeat="(n,filter) in filterData" ng-if="filter.target == 'special'"
+        ng-model="filters.custom[n]" ng-class="{ active: filters.custom[n] }" add-orb-options
+        ng-click="filters.custom[n] = !filters.custom[n]">{{filter.name}}</span>
+</div>
+
+<div class="filter-container" ng-if="showLogFilters">
+    <span class="filter-header">Character Log filters</span>
+    <span class="filter width-12 custom" ng-model="filters.noLog" ng-class="{ active: filters.noLog }"
+        ng-click="filters.noLog = !filters.noLog">Hide units in Character Log</span>
+    <span class="filter width-12 custom" ng-model="filters.noMissing" ng-class="{ active: filters.noMissing }"
+        ng-click="filters.noMissing = !filters.noMissing">Hide units not in Character Log</span>
+</div>

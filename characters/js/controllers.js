@@ -1,0 +1,115 @@
+(function() {
+
+/***************
+ * Common data *
+ ***************/
+
+var lastQuery = null;
+var filters = { custom: [ ] };
+
+/***************
+ * Controllers *
+ ***************/
+
+var app = angular.module('optc');
+
+app.controller('MainCtrl',function($scope, $rootScope, $state, $stateParams, $timeout, utils) {
+
+    if (!$scope.filters) $scope.filters = filters;
+
+    if ($stateParams.query != lastQuery) {
+        lastQuery = $stateParams.query;
+        $scope.query = lastQuery;
+        $scope.table.parameters = utils.generateSearchParameters($stateParams.query, $.extend({ }, $scope.filters));
+        if ($scope.table.refresh) $scope.table.refresh();
+    }
+
+    $scope.$watch('query',function(query) {
+        if (query === null || query === undefined) return;
+        $state.go('.',{ query: $scope.query });
+    });
+
+    $scope.$watch('filters',function(filters) {
+        if (!filters || Object.keys(filters).length === 0) return;
+        $scope.table.parameters = utils.generateSearchParameters($stateParams.query, $.extend({ }, $scope.filters));
+        // build regexes if necessary
+        $scope.table.regexes = { };
+        if (filters.custom[25] && $scope.table.parameters.filters.ctrlFrom)
+            $scope.table.regexes.ctrlFrom = new RegExp('Changes[^,]+\\[' + $scope.table.parameters.filters.ctrlFrom + '\\][^,]+into','i');
+        if (filters.custom[25] && $scope.table.parameters.filters.ctrlTo)
+            $scope.table.regexes.ctrlTo = new RegExp('Changes.+into[^,]+\\[' + $scope.table.parameters.filters.ctrlTo + '\\]','i');
+        // redraw table
+        if (!$scope.$$phase) $scope.$apply();
+    },true);
+
+    $scope.clearFilters = function() {
+        filters = { custom: [ ] };
+        $scope.filters = filters;
+    };
+
+    $scope.onFilterClick = function(e, value) {
+        var type = e.target.getAttribute('ng-model').split(/\./)[1];
+        $scope.filters[type] = ($scope.filters[type] == value ? null : value);
+    };
+
+    $scope.onDropFilterClick = function(e,value) {
+        var tokens = e.target.getAttribute('ng-model').split(/\./).slice(1);
+        var type = tokens[0], key = tokens[1];
+        if (!$scope.filters.hasOwnProperty(type)) $scope.filters[type] = { };
+        $scope.filters[type][key] = ($scope.filters[type][key] == value ? null : value);
+    };
+
+    $scope.filterData = window.matchers;
+
+});
+
+app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, $timeout, utils) {
+    // data
+    var id = parseInt($stateParams.id, 10);
+    $scope.id = id;
+    $scope.unit = $.extend({},window.units[id - 1]);
+    $scope.hybrid = $scope.unit.class.constructor == Array;
+    $scope.details = window.details[id];
+    // derived data
+    $scope.evolvesFrom = utils.searchBaseForms(id);
+    $scope.usedBy = utils.searchEvolverEvolutions(id);
+    $scope.drops = utils.searchDropLocations(id);
+    $scope.manuals = utils.searchDropLocations(-id);
+    $scope.sameSpecials = utils.searchSameSpecials(id);
+    $scope.collapsed = { to: true, from: true, used: true, drops: true, manuals: true }; 
+    // events/functions
+    $scope.getEvos = utils.getEvolversOfEvolution;
+    $scope.sizeOf = function(target) { return Object.keys(target).length; };
+    $scope.withButton = $stateParams.previous.length > 0;
+    $scope.onBackClick = function() {
+        var previous = $stateParams.previous.splice(-1)[0];
+        $state.go('main.view',{ id: previous, previous: $stateParams.previous });
+    };
+    $scope.clearComparison = function() {
+        $scope.compare = null;
+        $('#compare').val('');
+        $('#compare').prop('disabled', false);
+    };
+});
+
+app.controller('ColumnsCtrl',function($scope, $rootScope, $state, $stateParams) {
+
+    $scope.columns = { 'ATK/HP': false, 'RCV/HP': false, 'RCV/ATK': false, 'ATK/CMB': false,
+        'CMB': false, 'Minimum cooldown': false, 'Initial cooldown': false };
+
+    var additionalColumns = JSON.parse(localStorage.getItem('charColumns')) || [ ];
+
+    additionalColumns.forEach(function(x) {
+        if ($scope.columns.hasOwnProperty(x))
+            $scope.columns[x] = true;
+    });
+
+    $scope.save = function() {
+        var result = Object.keys($scope.columns).filter(function(x) { return $scope.columns[x]; });
+        localStorage.setItem('charColumns',JSON.stringify(result));
+        window.location.reload();
+    };
+
+});
+
+})();

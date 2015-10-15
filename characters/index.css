@@ -200,6 +200,10 @@ input[type="text"] {
     background: darkslateblue;
 }
 
+.popup .panel.padded {
+    padding-top: 5px;
+}
+
 /*************
  * TYPEAHEAD *
  *************/
@@ -648,7 +652,7 @@ unit > a {
     cursor: pointer;
 }
 
-unit > a:hover {
+unit > a:hover, .clickable:hover {
     outline: 1px solid red;
 }
 

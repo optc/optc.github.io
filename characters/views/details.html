@@ -176,7 +176,7 @@
                     </div>
 
                     <div ng-if="details.evolution && details.evolution.length">
-                        <div class="panel panel-default" ng-repeat="evolverSet in details.evolvers">
+                        <div class="panel padded panel-default" ng-repeat="evolverSet in details.evolvers">
                            <evolution unit="unit" evolvers="evolverSet" evolution="details.evolution[$index]" size="medium"></evolution> 
                         </div>
                     </div>
@@ -186,7 +186,7 @@
                     <h3 class="page-header" ng-if="evolvesFrom.length > 0">Evolves From</h3>
 
                     <div ng-if="evolvesFrom.length >0">
-                        <div class="panel panel-default" ng-repeat="tree in evolvesFrom">
+                        <div class="panel padded panel-default" ng-repeat="tree in evolvesFrom">
                             <div ng-repeat="id in tree">
                                 <evolution unit="unit" base="id" evolvers="getEvos(id,tree[$index+1] || unit.number+1)"
                                     evolution="tree[$index+1] || unit.number + 1" size="medium"></evolution>
@@ -201,7 +201,7 @@
 
                     <div ng-if="sizeOf(usedBy) > 0" ng-class="{ collapsed: collapsed.used && sizeOf(usedBy) > 3 }">
                         <div class="btn btn-info collapse-button" ng-click="collapsed.used = false">Click to show</div>
-                        <div class="panel panel-default" ng-repeat="(base,evolutions) in usedBy">
+                        <div class="panel padded panel-default" ng-repeat="(base,evolutions) in usedBy">
                             <div ng-repeat="id in evolutions track by $index">
                                 <evolution unit="unit" base="base" evolvers="getEvos(base,id,unit.number + 1)"
                                     evolution="id" size="medium"></evolution>
@@ -212,7 +212,7 @@
                    <!-- Same specials -->
 
                     <h3 class="page-header" ng-if="sizeOf(sameSpecials) > 0">Units With the Same Special</h3>
-                    <div ng-if="sizeOf(sameSpecials) > 0" class="panel panel-default">
+                    <div ng-if="sizeOf(sameSpecials) > 0" class="panel padded panel-default">
                         <unit uid="id" ng-repeat="id in sameSpecials"></a>
                     </div>
 
