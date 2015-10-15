@@ -5450,19 +5450,19 @@ window.details = {
     },
     778: { // Rebecca, Prisoner Gladiator
         special: "Deals several times the character's ATK in QCK damage to one enemy, changes own orb into [QCK]",
-        specialNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the lower the HP is.",
+        specialNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the lower the HP is. The multiplier is calculated as: 125 * ( 1 - (remaining HP) / (total HP) )",
         specialName: "Undefeated Sword Technique",
         captain: "Reduces damage received by 20%",
-        cooldown: 26,
+        cooldown: [ 26, 16 ],
         evolution: 779,
         evolvers: [ 117, 85, 94, 96, 301 ]
     },
     779: { // Rebecca, Colosseum's Exclusive Gladiator
         special: "Deals several times the character's ATK in QCK damage to one enemy, changes own orb into [QCK]",
-        specialNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the lower the HP is.",
+        specialNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the lower the HP is. The multiplier is calculated as: 125 * ( 1 - (remaining HP) / (total HP) )",
         specialName: "Undefeated Sword Technique",
         captain: "Reduces damage received by 25%",
-        cooldown: 26
+        cooldown: [ 26, 16 ]
     },
     780: { // Urouge, Captain of the Fallen Monk Pirates
         special: "Boosts his own ATK by a variable factor for 1 turn",
