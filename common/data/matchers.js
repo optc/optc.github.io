@@ -204,9 +204,15 @@ window.matchers = [
     },
 
     {
-        name: 'Percentage damage dealers',
+        name: 'Health cutters',
         target: 'special',
         matcher: /Cuts.+current HP.+enem/i
+    },
+
+    {
+        name: 'HP-based damage dealers',
+        target: 'specialNotes',
+        matcher: /to compute the damage.*higher the lower the HP is/i
     },
 
     {

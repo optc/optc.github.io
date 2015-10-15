@@ -96,12 +96,20 @@ $.fn.dataTable.ext.search.push(function(settings, data, index) {
         if (filters.drop == 'Farmable') {
             if (id == 1 || unit.stars >= 3 && !isFarmable) return false;    
             if (filters.farmable) {
+                // both && neither
+                if (filters.farmable.raid && filters.farmable.fortnight) {
+                    if (!flags.rfonly) return false;
+                } else if (filters.farmable.raid === false && filters.farmable.fortnight === false &&
+                        (flags.rfonly || flags.raid || flags.fnonly)) {
+                    return false;
+                } else {
                 // raid
-                if (filters.farmable.raid && !flags.raid) return false;
-                if (filters.farmable.raid === false && flags.raid) return false;
-                // fortnight
-                if (filters.farmable.fortnight && !flags.fnonly) return false;
-                if (filters.farmable.fortnight === false && flags.fnonly) return false;
+                    if (filters.farmable.raid && !flags.raid) return false;
+                    if (filters.farmable.raid === false && flags.raid) return false;
+                    // fortnight
+                    if (filters.farmable.fortnight && !flags.fnonly) return false;
+                    if (filters.farmable.fortnight === false && flags.fnonly) return false;
+                }
             }
         } else if (filters.drop != 'Farmable') {
             if (id != 1 && (unit.stars < 3 || isFarmable)) return false; 
@@ -144,8 +152,14 @@ $.fn.dataTable.ext.search.push(function(settings, data, index) {
     if (filters.noLog && characterLog.hasOwnProperty(id)) return false;
     if (filters.noMissing && !characterLog.hasOwnProperty(id)) return false;
     // filter by orb controllers
-    if (tableData.regexes.ctrlFrom && !tableData.regexes.ctrlFrom.test(window.details[id].special)) return false;
-    if (tableData.regexes.ctrlTo && !tableData.regexes.ctrlTo.test(window.details[id].special)) return false;
+    if (tableData.regexes.ctrlFrom || tableData.regexes.ctrlTo) {
+        if (id == 515 || id == 516) return false; // exclude Heracles
+        var temp = window.details[id].special.replace(/\],/g,']');
+        if (tableData.regexes.ctrlFrom && tableData.regexes.ctrlFrom.some(function(x) { return !x.test(temp); }))
+            return false;
+        if (tableData.regexes.ctrlTo && tableData.regexes.ctrlTo.some(function(x) { return !x.test(temp); }))
+            return false;
+    }
     // end
     return true;
 });

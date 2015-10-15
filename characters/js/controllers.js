@@ -15,7 +15,7 @@ var app = angular.module('optc');
 
 app.controller('MainCtrl',function($scope, $rootScope, $state, $stateParams, $timeout, utils) {
 
-    if (!$scope.filters) $scope.filters = filters;
+    // query
 
     if ($stateParams.query != lastQuery) {
         lastQuery = $stateParams.query;
@@ -29,22 +29,32 @@ app.controller('MainCtrl',function($scope, $rootScope, $state, $stateParams, $ti
         $state.go('.',{ query: $scope.query });
     });
 
+});
+
+app.controller('SidebarCtrl',function($scope, $rootScope, $stateParams, utils) {
+
+    if (!$scope.filters) $scope.filters = filters;
+
     $scope.$watch('filters',function(filters) {
         if (!filters || Object.keys(filters).length === 0) return;
         $scope.table.parameters = utils.generateSearchParameters($stateParams.query, $.extend({ }, $scope.filters));
         // build regexes if necessary
         $scope.table.regexes = { };
-        if (filters.custom[25] && $scope.table.parameters.filters.ctrlFrom)
-            $scope.table.regexes.ctrlFrom = new RegExp('Changes[^,]+\\[' + $scope.table.parameters.filters.ctrlFrom + '\\][^,]+into','i');
-        if (filters.custom[25] && $scope.table.parameters.filters.ctrlTo)
-            $scope.table.regexes.ctrlTo = new RegExp('Changes.+into[^,]+\\[' + $scope.table.parameters.filters.ctrlTo + '\\]','i');
+        if (filters.custom[25] && $scope.table.parameters.filters.ctrlFrom) {
+            $scope.table.regexes.ctrlFrom = $scope.table.parameters.filters.ctrlFrom.split(',').map(function(x) {
+                return new RegExp('Changes[^,]+\\[' + x + '\\][^,]+into','i');
+            });
+        } if (filters.custom[25] && $scope.table.parameters.filters.ctrlTo) {
+            $scope.table.regexes.ctrlTo = $scope.table.parameters.filters.ctrlTo.split(',').map(function(x) {
+                return new RegExp('Changes.+into[^,]+\\[' + x + '\\]','i');
+            });
+        }
         // redraw table
         if (!$scope.$$phase) $scope.$apply();
     },true);
 
     $scope.clearFilters = function() {
-        filters = { custom: [ ] };
-        $scope.filters = filters;
+        $scope.filters = { custom: [ ] };
     };
 
     $scope.onFilterClick = function(e, value) {

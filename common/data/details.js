@@ -1759,7 +1759,7 @@ window.details = {
         captain: "Recovers 2x character's RCV in HP at the end of the turn",
         evolution: 263,
         evolvers: [ 117, 81, 87, 92, 103 ],
-        flags: { global: 1 }
+        flags: { global: 1, rfonly: 1 }
     },
     263: { // Petty Officer Coby
         special: "Amplifies the effect of orbs by 1.5x for 2 turns",
@@ -1767,20 +1767,20 @@ window.details = {
         specialName: "Shave",
         captain: "Boosts ATK of Fighter characters by 2x",
         cooldown: [ 17, 10 ],
-        flags: { global: 1 }
+        flags: { global: 1, rfonly: 1 }
     },
     264: { // Training Helmeppo
         captain: "Reduces damage received from INT enemies by 30%",
         evolution: 265,
         evolvers: [ 117, 82, 88, 93, 104 ],
-        flags: { global: 1 }
+        flags: { global: 1, rfonly: 1 }
     },
     265: { // Sergeant Helmeppo
         special: "Reduces Bind duration by 3 turns",
         specialName: "Tempered Kukris",
         captain: "Boosts ATK and HP of Slasher characters by 1.5x",
         cooldown: [ 17, 11 ],
-        flags: { global: 1 }
+        flags: { global: 1, rfonly: 1 }
     },
     266: { // Rainbow Pirate Penguin
         flags: { global: 1 }
@@ -5117,7 +5117,7 @@ window.details = {
         cooldown: 20
     },
     730: { // Jabra, Cipher Pol No.9
-        special: "Reduces current HP, deals 2x the amount of HP subtracted in INT damage to all enemies, boosts ATK of INT characters by 1.5x for 1 turn",
+        special: "Reduces crew's current HP by 99%, deals 2x the amount of HP subtracted in INT damage to all enemies, boosts ATK of INT characters by 1.5x for 1 turn",
         specialName: "Rankyaku - Lupus Fall",
         captain: "Boosts ATK and HP of INT characters by 1.2x, deals 9 HP as fixed damage to all enemies at the end of the turn",
         cooldown: 25,
@@ -5125,7 +5125,7 @@ window.details = {
         evolvers: [ 117, 88, 93, 99, 304 ]
     },
     731: { // Jabra Rokushiki, Cipher Pol No.9
-        special: "Reduces current HP, deals 2x the amount of HP subtracted in INT damage to all enemies, boosts ATK of INT characters by 1.5x for 1 turn",
+        special: "Reduces crew's current HP by 99%, deals 2x the amount of HP subtracted in INT damage to all enemies, boosts ATK of INT characters by 1.5x for 1 turn",
         specialName: "Rankyaku - Lupus Fall",
         captain: "Boosts ATK and HP of INT characters by 1.5x, deals 9 HP as fixed damage to all enemies at the end of the turn",
         cooldown: 25
