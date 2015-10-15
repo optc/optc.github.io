@@ -774,10 +774,10 @@ window.units = [
     [ "Shu", "INT", [ "Fighter", "Freedom" ], 3, 12, 4, 2, 70, 1066998, 56, 89, 23, 943, 969, 150, 1 ],
     [ "Very Good", "QCK", [ "Freedom", "Striker" ], 3, 12, 4, 2, 70, 1066998, 203, 57, 15, 1808, 703, 103, 1 ],
     [ "Strawberry, Navy Headquarters Vice Admiral", "PSY", [ "Knowledge", "Slasher" ], 3, 16, 6, 2, 99, 3000000, 142, 64, 33, 1883, 943, 178, 1 ],
-    [ "Lucky Roo", "PSY", [ "Shooter", "Freedom" ], 3, 13, 6, 2, 35, null, 385, 209, 39, null, null, null, 0 ],
+    [ "Lucky Roo", "PSY", [ "Shooter", "Freedom" ], 3, 13, 6, 2, 35, null, 303, 169, 30, 904, 460, 98, 0.7 ],
     [ "Lucky Roo of the Red Hair Pirates", "PSY", [ "Shooter", "Freedom" ], 4, 20, 5, 3, 701, null, 842, 412, 70, null, null, null, 0 ],
-    [ "Rebecca, Prisoner Gladiator", "QCK", "Striker", 4, 18, 5, 1, 50, null, 226, 127, 57, null, null, null, 0 ],
-    [ "Rebecca, Colosseum's Exclusive Gladiator", "QCK", "Striker", 5, 30, 4, 3, 99, null, 920, 441, 150, null, null, null, 0 ],
-    [ "Urouge, Captain of the Fallen Monk Pirates", "STR", [ "Fighter", "Striker" ], 4, 25, 5, 2, 70, null, 782, 381, 45, null, null, null, 0 ],
+    [ "Rebecca, Prisoner Gladiator", "QCK", "Striker", 4, 18, 5, 1, 50, null, 193, 111, 51, 1003, 505, 201, 1 ],
+    [ "Rebecca, Colosseum's Exclusive Gladiator", "QCK", "Striker", 5, 30, 4, 3, 99, null, 920, 441, 150, 1964, 854, 374, 1 ],
+    [ "Urouge, Captain of the Fallen Monk Pirates", "STR", [ "Fighter", "Striker" ], 4, 25, 5, 2, 70, null, 702, 340, 38, 1580, 790, 121, 1.5 ],
     [ "Mad Monk Urouge, Captain of the Fallen Monk Pirates", "STR", [ "Fighter", "Striker" ], 5, 40, 5, 3, 99, null, 1512, 755, 83, null, null, null, 0 ]
 ];

@@ -380,7 +380,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             // apply all the specials of the combination to every unit
             var temp = damage.map(function(x,n) {
                 var multiplier = specials.reduce(function(prev,next) {
-                    return prev * next(getParameters(x.position));
+                    return prev * next.f($.extend({ sourceSlot: next.sourceSlot },getParameters(x.position)));
                 },1);
                 return { unit: x.unit, orb: x.orb, damage: x.damage * multiplier, position: x.position };
             });
@@ -434,9 +434,9 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         enabledSpecials.forEach(function(data) {
             if (data === null) return;
             if (data.hasOwnProperty('atk'))
-                result[data.type].push(data.atk);
+                result[data.type].push({ sourceSlot: data.sourceSlot, f: data.atk });
             if (data.hasOwnProperty('orb'))
-                result.orb.push(data.orb);
+                result.orb.push({ sourceSlot: data.sourceSlot, f: data.orb });
         });
         specialsCombinations = Utils.arrayProduct([ result.type.concat(result.class), result.condition, result.orb ]);
         return (result.class.length + result.type.length > 1) || result.orb.length > 1 || result.condition.length > 1;
@@ -450,8 +450,9 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         enabledSpecials = [ ];
         // orb map effect (fix for Hancock)
         if ($scope.data.profile && profiles[$scope.data.profile].orb)
-            enabledSpecials.push({ orb: profiles[$scope.data.profile].orb, permanent: true });
+            enabledSpecials.push({ orb: profiles[$scope.data.profile].orb, permanent: true, sourceSlot: -1 });
         // team specials
+        // "sourceSlot": slot of the unit the special belongs to
         $scope.tdata.team.forEach(function(x,n) {
             if (!$scope.data.team[n].unit) return;
             var id = $scope.data.team[n].unit.number + 1;
@@ -459,7 +460,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 if (specials[id].hasOwnProperty('orb') && enabledSpecials[0] && enabledSpecials[0].permanent)
                     conflictWarning = true;
                 else
-                    enabledSpecials.push(specials[id]);
+                    enabledSpecials.push($.extend({ sourceSlot: n },specials[id]));
             }
         });
         if (conflictWarning) 

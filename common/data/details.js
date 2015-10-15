@@ -5469,7 +5469,7 @@ window.details = {
         specialNotes: "The exact multiplier used is chosen based on the crew's current HP at the time the special is activated: above 50% HP, the multiplier used is 1.5x; between 20% HP and 50% HP, it's 1.75x; below 20% HP, it's 2x.",
         specialName: "Precept Deification",
         captain: "Boosts ATK of all characters by 2x if HP is below 30% at the start of the turn",
-        cooldown: 19,
+        cooldown: [ 19, 7 ],
         evolution: 781,
         evolvers: [ 118, 84, 94, 300, 100 ]
     },
@@ -5478,6 +5478,6 @@ window.details = {
         specialNotes: "The exact multiplier used is chosen based on the crew's current HP at the time the special is activated: above 50% HP, the multiplier used is 1.5x; between 20% HP and 50% HP, it's 1.75x; below 20% HP, it's 2x.",
         specialName: "Precept Deification",
         captain: "Boosts ATK of all characters by 2.5x if HP is below 30% at the start of the turn",
-        cooldown: 19
+        cooldown: [ 19, 7 ]
     }
 };

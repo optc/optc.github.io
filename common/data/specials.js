@@ -469,7 +469,7 @@ window.specials = {
             p.scope.notify({
                 text: 'Using the ' + [1.5,2][n] + 'x ATK multiplier. To switch to the ' +
                     [2,1.5][n] + 'x multiplier, disable and re-enable this special',
-                name: '667warning'
+                name: '668warning'
             });
         }
     },
@@ -533,11 +533,11 @@ window.specials = {
         atk: function(p) { return p.unit.class.has("Knowledge") ? window.specials[719].multiplier : 1; },
         type: 'class',
         onActivation: function(p) {
-            var n = (p.percHP < 30 ? 2 : 1.5);
+            var n = (p.percHP <= 30 ? 2 : 1.5);
             window.specials[719].multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2 ? 'below' : 'above') + ' 30%, using the ' + n + 'x multiplier.',
-                name: '667warning'
+                name: '719warning'
             });
         }
     },
@@ -545,11 +545,11 @@ window.specials = {
         atk: function(p) { return p.unit.class.has("Knowledge") ? window.specials[720].multiplier : 1; },
         type: 'class',
         onActivation: function(p) {
-            var n = (p.percHP < 30 ? 2 : 1.5);
+            var n = (p.percHP <= 30 ? 2 : 1.5);
             window.specials[720].multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2 ? 'below' : 'above') + ' 30%, using the ' + n + 'x multiplier.',
-                name: '667warning'
+                name: '720warning'
             });
         }
     },
@@ -616,5 +616,33 @@ window.specials = {
     771: {
         atk: function(p) { return p.unit.class.has("Knowledge") ? 1.75 : 1; },
         type: 'type'
-    }
+    },
+    780: {
+        atk: function(p) {
+            return p.slot == p.sourceSlot ? window.specials[780].multiplier : 1;
+        },
+        type: 'type',
+        onActivation: function(p) {
+            var n = (p.percHP <= 20 ? 2 : (p.percHP <= 50 ? 1.75 : 1.5));
+            window.specials[780].multiplier = n;
+            p.scope.notify({
+                text: 'Using the ' + n + 'x multiplier.',
+                name: '780warning'
+            });
+        }
+    },
+    781: {
+        atk: function(p) {
+            return p.slot == p.sourceSlot ? window.specials[781].multiplier : 1;
+        },
+        type: 'type',
+        onActivation: function(p) {
+            var n = (p.percHP <= 20 ? 2 : (p.percHP <= 50 ? 1.75 : 1.5));
+            window.specials[781].multiplier = n;
+            p.scope.notify({
+                text: 'Using the ' + n + 'x multiplier.',
+                name: '781warning'
+            });
+        }
+    },
 };
