@@ -779,5 +779,5 @@ window.units = [
     [ "Rebecca, Prisoner Gladiator", "QCK", "Striker", 4, 18, 5, 1, 50, null, 193, 111, 51, 1003, 505, 201, 1 ],
     [ "Rebecca, Colosseum's Exclusive Gladiator", "QCK", "Striker", 5, 30, 4, 3, 99, null, 920, 441, 150, 1964, 854, 374, 1 ],
     [ "Urouge, Captain of the Fallen Monk Pirates", "STR", [ "Fighter", "Striker" ], 4, 25, 5, 2, 70, null, 702, 340, 38, 1580, 790, 121, 1.5 ],
-    [ "Mad Monk Urouge, Captain of the Fallen Monk Pirates", "STR", [ "Fighter", "Striker" ], 5, 40, 5, 3, 99, null, 1512, 755, 83, null, null, null, 0 ]
+    [ "Mad Monk Urouge, Captain of the Fallen Monk Pirates", "STR", [ "Fighter", "Striker" ], 5, 40, 5, 3, 99, null, 1512, 755, 83, 2824, 1324, 203, 0 ]
 ];
