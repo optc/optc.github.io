@@ -432,7 +432,7 @@ window.captains = {
     340: { // Kraken Surume
         atk: function(p) { return p.unit.class.has("Striker") ? 2 : 1; }
     },
-    341: { // Kraken Arctic Monster
+    341: { // Kraken Monster of the North
         atk: function(p) { return p.unit.class.has("Striker") ? 2 : 1; }
     },
     352: { // Zephyr
@@ -515,7 +515,7 @@ window.captains = {
     386: { // Doctor Hogback
         atk: function(p) { return p.unit.type == "INT" ? 2 : 1; }
     },
-    387: { // Cindry-chan
+    387: { // Cindry
         rcv: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; }
     },
     388: { // Victoria Cindry
@@ -557,7 +557,7 @@ window.captains = {
         atk: function(p) { return p.unit.type == "QCK" ? 1.2 : 1; },
         rcv: function(p) { return p.unit.type == "QCK" ? 1.2 : 1; }
     },
-    396: { // Miss Merry Christmas the Mole Human
+    396: { // Miss Merry Christmas Human Mole
         atk: function(p) { return p.unit.type == "QCK" ? 1.5 : 1; },
         rcv: function(p) { return p.unit.type == "QCK" ? 1.5 : 1; }
     },
@@ -568,7 +568,7 @@ window.captains = {
         },
         hitModifiers: [ 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect' ] // don't remove this
     },
-    398: { // Mr. 4 & Lassoo the Dog Gun
+    398: { // Mr. 4 and Lassoo the Dog-Gun
         hitAtk: function(p) {
             return p.modifiers.slice(0,p.chainPosition)
                 .subcontains([ "Perfect", "Perfect", "Perfect", "Perfect", "Perfect" ]) ? 4 : 1;
@@ -578,13 +578,13 @@ window.captains = {
     399: { // Miss Doublefinger
         hp: function(p) { return p.unit.class.has("Striker") ? 1.5 : 1; }
     },
-    400: { // Miss Doublefinger the Spike Human
+    400: { // Miss Doublefinger Human Spike
         hp: function(p) { return p.unit.class.has("Striker") ? 2 : 1; }
     },
     401: { // Mr. 1
         atk: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; }
     },
-    402: { // Mr. 1 the Fullbody Bladed Human
+    402: { // Mr. 1 Human Sword
         atk: function(p) { return p.unit.class.has("Slasher") ? 2 : 1; }
     },
     403: { // Rebecca
@@ -593,61 +593,61 @@ window.captains = {
     404: { // Absalom
         atk: function(p) { return p.unit.class.has("Shooter") ? 1.5 : 1; }
     },
-    405: { // Graveyeard Absalom
+    405: { // Absalom of the Graveyard
         atk: function(p) { return p.unit.class.has("Shooter") ? 2 : 1; }
     },
-    408: { // Sir Crocodile the Shichibukai
+    408: { // Sir Crocodile Warlord of the Sea
         atk: function(p) { return p.unit.class.has("Slasher") ? 2 : 1; }
     },
-    409: { // Jinbei
+    409: { // Jimbe
         atk: function(p) { return p.unit.class.has("Fighter") ? 2 : 1; }
     },
-    410: { // Jinbei the Shichibukai
+    410: { // Jimbe Warlord of the Sea
         atk: function(p) { return p.unit.class.has("Fighter") ? 2.5 : 1; }
     },
     411: { // Bartholomew Kuma
         atk: function(p) { return p.unit.type == "STR" ? 2 : 1; },
         hp: function(p) { return p.unit.type == "STR" ? 2 : 1; }
     },
-    412: { // Bartholomew Kuma the Shichibukai
+    412: { // Bartholomew Kuma Warlord of the Sea
         atk: function(p) { return p.unit.type == "STR" ? 2 : 1; },
         hp: function(p) { return p.unit.type == "STR" ? 2 : 1; }
     },
-    413: { // Gekko Moriah
+    413: { // Gecko Moria
         atk: function(p) { return p.unit.type == "INT" && p.percHP > 99.0 ? 2.5 : 1; }
     },
-    414: { // Gekko Moriah the Shichibukai
+    414: { // Gecko Moria Warlord of the Sea
         atk: function(p) { return p.unit.type == "INT" && p.percHP > 99.0 ? 3 : 1; }
     },
     415: { // Boa Hancock
         atk: function(p) { return (p.unit.type == "QCK" || p.unit.type == "PSY") && p.percHP >= 70.0 ? 2.75 : 1; },
         rcv: function(p) { return (p.unit.type == "QCK" || p.unit.type == "PSY") && p.percHP >= 70.0 ? 1.5 : 1; }
     },
-    416: { // Boa Hancock the Shichibukai
+    416: { // Boa Hancock Warlord of the Sea
         atk: function(p) { return (p.unit.type == "QCK" || p.unit.type == "PSY") && p.percHP >= 70.0 ? 2.75 : 1; },
         rcv: function(p) { return (p.unit.type == "QCK" || p.unit.type == "PSY") && p.percHP >= 70.0 ? 1.5 : 1; }
     },
     417: { // Donquixote Doflamingo
         atk: function(p) { return p.unit.class.has("Slasher") ? 2 : 1; }
     },
-    418: { // Donquixote Doflamingo the Shichibukai
+    418: { // Donquixote Doflamingo Warlord of the Sea
         hp: function(p) { return p.unit.class.has("Slasher") ? 2 : 1; },
         atk: function(p) { return p.unit.class.has("Slasher") ? 2 : 1; }
     },
-    419: { // Sanji Parage Shot - Arashi (Kimono)
+    419: { // Sanji Parage Shot - Arashi (Kimono Sanji)
         atk: function(p) { return p.unit.type == "QCK" ? 2 : 1; }
     },
-    420: { // Monkey D. Luffy Gomu Gomu no Bazooka - Arashi (Kimono)
+    420: { // Monkey D. Luffy Gomu Gomu no Bazooka - Arashi (Kimono Luffy)
         atk: function(p) { return p.unit.type == "STR" ? 1.5 : 1; },
         hp: function(p) { return p.unit.type == "STR" ? 1.5 : 1; },
         rcv: function(p) { return p.unit.type == "STR" ? 1.5 : 1; }
     },
-    421: { // Roronoa Zoro Three Thousand Worlds - Arashi (Kimono)
+    421: { // Roronoa Zoro Three Thousand Worlds - Arashi (Kimono Zoro)
         atk: function(p) { return p.unit.type == "DEX" ? 1.5 : 1; },
         hp: function(p) { return p.unit.type == "DEX" ? 1.5 : 1; },
         rcv: function(p) { return p.unit.type == "DEX" ? 1.5 : 1; }
     },
-    422: { // Nami Mirage Tempo - Arashi (Kimono)
+    422: { // Nami Mirage Tempo - Arashi (Kimono Nami)
         atk: function(p) { return p.unit.type == "INT" ? 1.5 : 1; },
         hp: function(p) { return p.unit.type == "INT" ? 1.5 : 1; },
         rcv: function(p) { return p.unit.type == "INT" ? 1.5 : 1; }
@@ -717,7 +717,7 @@ window.captains = {
     437: { // Perona Sweet
         rcv: function(p) { return p.percHP <= 30.0 ? 3 : 1; }
     },
-    438: { // Perona Sweet Ghost Princees
+    438: { // Perona Sweet Ghost Princess
         rcv: function(p) { return p.percHP <= 30.0 ? 5 : 1; }
     },
     444: { // Carue
@@ -737,34 +737,34 @@ window.captains = {
     448: { // Thatch
         atk: function(p) { return p.unit.type == "QCK" && p.percHP > 99.0 ? 3 : 1; }
     },
-    449: { // Thatch of the Twin Blade
+    449: { // Twin-Blade Thatch
         atk: function(p) { return p.unit.type == "QCK" && p.percHP > 99.0 ? 3 : 1; }
     },
-    450: { // Namur
+    450: { // Namule (Namur)
         atk: function(p) { return p.unit.class.has("Fighter") ? 2 : 1; },
         hp: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; }
     },
-    451: { // One-Shot Namur
+    451: { // One-Hit Namule (Namur)
         atk: function(p) { return p.unit.class.has("Fighter") ? 2 : 1; },
         hp: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; }
     },
     452: { // Rakuyo
         atk: function(p) { return p.unit.class.has("Striker") ? 2 : 1; }
     },
-    453: { // Rakuyo of the Morning Star
+    453: { // Morning Star Rakuyo
         atk: function(p) { return p.unit.class.has("Striker") ? 2 : 1; }
     },
     454: { // Fossa
         atk: function(p) { return p.unit.type == "STR" ? 2 : 1; }
     },
-    455: { // Fossa the Flaming Blade
+    455: { // Fossa the Blazing Katana
         atk: function(p) { return p.unit.type == "STR" ? 2 : 1; }
     },
     456: { // Curiel
         atk: function(p) { return p.unit.class.has("Shooter") ? 2 : 1; },
         rcv: function(p) { return p.unit.class.has("Shooter") ? 1.5 : 1; }
     },
-    457: { // Curiel the Heavy Weapon Specialist
+    457: { // Heavy Specialist Curiel
         atk: function(p) { return p.unit.class.has("Shooter") ? 2 : 1; },
         rcv: function(p) { return p.unit.class.has("Shooter") ? 1.5 : 1; }
     },
@@ -808,18 +808,18 @@ window.captains = {
         atk: function(p) { return p.unit.type == "INT" ? 1.2: 1; },
         hp: function(p) { return p.unit.type == "INT" ? 1.2 : 1; }
     },
-    482: { // Red Elite Assult Squad Skypiea God's Army
+    482: { // Red Elite Assault Squad Skypiea God's Army
         hp: function(p) { return p.unit.class.has("Striker") ? 1.2 : 1; }
     },
-    483: { // Blue Elite Assult Squad Skypiea God's Army
+    483: { // Blue Elite Assault Squad Skypiea God's Army
         atk: function(p) { return p.unit.type == "QCK" ? 1.2 : 1; },
         rcv: function(p) { return p.unit.type == "QCK" ? 1.2 : 1; }
     },
-    485: { // Yellow Elite Assult Squad Skypiea God's Army
+    485: { // Yellow Elite Assault Squad Skypiea God's Army
         hp: function(p) { return p.unit.type == "PSY" ? 1.2 : 1; },
         rcv: function(p) { return p.unit.type == "PSY" ? 1.2 : 1; }
     },
-    486: { // Black Elite Assult Squad Skypiea God's Army
+    486: { // Black Elite Assault Squad Skypiea God's Army
         atk: function(p) { return p.unit.class.has("Striker") ? 1.2 : 1; }
     },
     490: { // Red Nomad Group Expert Shandia Warrior
@@ -875,7 +875,7 @@ window.captains = {
     509: { // The Strongest Prisoner, Sir Crocodile Mr. 0, Former CEO of Baroque Works
         atk: function(p) { return p.unit.class.has("Striker") ? 2 : 1; }
     },
-    510: { // The Strongest Prisoner, Sir Crocodile the Shichibukai
+    510: { // The Strongest Prisoner, Sir Crocodile Warlord of the Sea
         atk: function(p) { return p.unit.class.has("Striker") ? 2 : 1; }
     },
     511: { // Prisoner Daz Bonez Mr. 1
@@ -887,7 +887,7 @@ window.captains = {
     514: { // Nico Robin Tropical
         atk: function(p) { return p.unit.type == "INT" ? 2 : 1; }
     },
-    515: { // Heracles 
+    515: { // Heracles
         atk: function(p) { return p.unit.class.has("Shooter") ? 1.5 : 1; },
         hp: function(p) { return p.unit.class.has("Shooter") ? 1.5 : 1; },
         rcv: function(p) { return p.unit.class.has("Shooter") ? 1.5 : 1; }
@@ -903,38 +903,38 @@ window.captains = {
     518: { // Usoppun, Heracles' Pupil
         hp: function(p) { return p.unit.type == "PSY" ? 2 : 1; },
     },
-    519: { // Monkey D. Luffy, Merveille's Adventurer (Strong World/SW)
+    519: { // Monkey D. Luffy, Merveille's Adventurer (Strong World Luffy)
         atk: function(p) { return p.unit.type == "STR" ? 2 : 1; },
     },
-    520: { // Monkey D. Luffy, Strawhat Crew's Attack (Strong World/SW)
+    520: { // Monkey D. Luffy, Strawhat Crew's Attack (Strong World Luffy)
         atk: function(p) { return p.unit.type == "STR" ? 2.5 : 1; },
     },
-    523: { // Nami, Merveille's Adventurer (Strong World/SW)
+    523: { // Nami, Merveille's Adventurer (Strong World Nami)
         atk: function(p) { return p.unit.class.has("Striker") ? 1.5 : 1; },
         rcv: function(p) { return p.unit.class.has("Striker") ? 1.5 : 1; }
     },
-    524: { // Nami and Billy the Thunder Bird (Strong World/SW)
+    524: { // Nami and Billy the Thunder Bird (Strong World Nami)
         atk: function(p) { return p.unit.class.has("Striker") ? 2 : 1; },
         rcv: function(p) { return p.unit.class.has("Striker") ? 1.5 : 1; }
     },
-    525: { // Brook, Merveille's Adventurer (Strong World/SW)
+    525: { // Brook, Merveille's Adventurer (Strong World Brook)
         atk: function(p) { return p.unit.type == "PSY" ? 2 : 1; }
     },
-    526: { // Brook, Strawhat Crew's Attack (Strong World/SW)
+    526: { // Brook, Strawhat Crew's Attack (Strong World Brook)
         atk: function(p) { return p.unit.type == "PSY" ? 2 : 1; }
     },
-    527: { // Chopper, Merveille's Adventurer (Strong World/SW)
+    527: { // Chopper, Merveille's Adventurer (Strong World Chopper)
         atk: function(p) { return p.unit.type == "DEX" ? 1.5 : 1; },
         rcv: function(p) { return p.unit.type == "DEX" ? 1.5 : 1; }
     },
-    528: { // Chopper, Strawhat Crew's Attack (Strong World/SW)
+    528: { // Chopper, Strawhat Crew's Attack (Strong World Chopper)
         atk: function(p) { return p.unit.type == "DEX" ? 2 : 1; },
         rcv: function(p) { return p.unit.type == "DEX" ? 2 : 1; }
     },
-    529: { // Shanks, Black Clothes and Red Hair (Strong World/SW)
+    529: { // Shanks, Black Clothes and Red Hair (Strong World Shanks)
         atk: function(p) { return p.unit.type == "PSY" ? 2 + 0.75 * p.percHP / 100 : 1; }
     },
-    530: { // Shanks, The Black-Clothed Yonkou (Strong World/SW)
+    530: { // Shanks, The Black-Clothed Yonkou (Strong World Shanks)
         atk: function(p) { return p.unit.type == "PSY" ? 2 + 0.75 * p.percHP / 100 : 1; }
     },
     533: { // Brook Cherry Head
@@ -992,31 +992,31 @@ window.captains = {
         },
         hitModifiers: [ 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect' ] // don't remove this
     },
-    553: { // Roronoa Zoro, Merveille's Adventurer (Strong World/SW)
+    553: { // Roronoa Zoro, Merveille's Adventurer (Strong World Zoro)
         atk: function(p) { return p.unit.type == "DEX" && p.percHP <= 30.0 ? 2.75 : 1; }
     },
-    554: { // Roronoa Zoro, Strawhat Crew's Attack (Strong World/SW)
+    554: { // Roronoa Zoro, Strawhat Crew's Attack (Strong World Zoro)
         atk: function(p) { return p.unit.type == "DEX" && p.percHP <= 30.0 ? 3 : 1; }
     },
-    555: { // Usopp, Merveille's Adventurer (Strong World/SW)
+    555: { // Usopp, Merveille's Adventurer (Strong World Usopp)
         atk: function(p) { return p.unit.class.has("Shooter") ? 2 : 1; }
     },
-    556: { // Usopp, Strawhat Crew's Attack (Strong World/SW)
+    556: { // Usopp, Strawhat Crew's Attack (Strong World Usopp)
         atk: function(p) { return p.unit.class.has("Shooter") ? 2 : 1; },
         rcv: function(p) { return p.unit.class.has("Shooter") ? 1.5 : 1; }
     },
-    557: { // Nico Robin, Merveille's Adventurer (Strong World/SW)
+    557: { // Nico Robin, Merveille's Adventurer (Strong World Robin)
         atk: function(p) { return p.unit.type == "INT" ? 1.5 : 1; },
         rcv: function(p) { return p.unit.type == "INT" ? 1.5 : 1; }
     },
-    558: { // Nico Robin, Strawhat Crew's Attack (Strong World/SW)
+    558: { // Nico Robin, Strawhat Crew's Attack (Strong World Robin)
         atk: function(p) { return p.unit.type == "INT" ? 2 : 1; },
         rcv: function(p) { return p.unit.type == "INT" ? 2 : 1; }
     },
-    559: { // Franky, Merveille's Adventurer (Strong World/SW)
+    559: { // Franky, Merveille's Adventurer (Strong World Franky)
         atk: function(p) { return p.unit.type == "STR" ? 2 : 1; }
     },
-    560: { // Franky, Strawhat Crew's Attack (Strong World/SW)
+    560: { // Franky, Strawhat Crew's Attack (Strong World Franky)
         atk: function(p) { return p.unit.type == "STR" ? 2.25 : 1; }
     },
     561: { // Portgas D. Ace, Black Clothes Hiken
@@ -1098,7 +1098,9 @@ window.captains = {
         rcv: function(p) { return p.unit.class.has("Shooter") ? 1.5 : 1; }
     },
     584: { // Aisa
-        // TODO Find parameters
+        atk: function(p) { return 0.1; },
+        hp: function(p) { return 0.1; },
+        rcv: function(p) { return 0.1; }
     },
     585: { // Nojiko
         rcv: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; }
@@ -1107,12 +1109,12 @@ window.captains = {
         hp: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; },
         rcv: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; }
     },
-    589: { // Kohza
+    589: { // Koza
         atk: function(p) { return 1.5; },
         hp: function(p) { return 0.2; },
         rcv: function(p) { return 0.2; }
     },
-    590: { // Kohza, Leader of the Rebel Army
+    590: { // Koza, Rebel Leader
         atk: function(p) { return 1.5; },
         hp: function(p) { return 0.2; },
         rcv: function(p) { return 0.2; }
@@ -1225,10 +1227,10 @@ window.captains = {
     647: { // Rampaging Little Oars Jr.
         atk: function(p) { return p.unit.class.has("Shooter") && p.percHP <= 30.0 ? 2.75 : 1; }
     },
-    648: { // Marco, Whitebeard Pirates' 1st Division Commander
+    648: { // Marco, Commander of the 1st Division of the Whitebeard Pirates
         atk: function(p) { return (p.unit.type == "QCK" || p.unit.type == "PSY") && p.percHP >= 70.0 ? 2.75 : 1; }
     },
-    649: { // Phoenix Marco, Whitebeard Pirates' 1st Division Commander
+    649: { // Phoenix Marco, Commander of the 1st Division of the Whitebeard Pirates
         atk: function(p) { return (p.unit.type == "QCK" || p.unit.type == "PSY") && p.percHP >= 70.0 ? 2.75 : 1; }
     },
     650: { // Nami, Record of the Voyage - Strawhat Crew (Log Nami)
@@ -1275,12 +1277,12 @@ window.captains = {
     662: { // Nami Holiday
         atk: function(p) { return p.unit.type == "PSY" ? 2 : 1; }
     },
-    665: { // Kohza, Alabasta Citizen
+    665: { // Koza, Alabasta Citizen
         atk: function(p) { return 1.2; },
         hp: function(p) { return 0.2; },
         rcv: function(p) { return 0.2; }
     },
-    666: { // Kohza, Leader of the Suna Suna Clan
+    666: { // Koza, Leader of the Suna Suna Clan
         atk: function(p) { return 1.75; },
         hp: function(p) { return 0.2; },
         rcv: function(p) { return 0.2; }
@@ -1288,12 +1290,12 @@ window.captains = {
     667: { // Nefertari Cobra, King of the Alabasta Kingdom
         atk: function(p) { return 1.75; },
     },
-    668: {  // Sabo
+    668: { // Sabo
         atk: function(p) { return p.unit.class.has("Freedom") ? 2 + 0.75 * p.percHP / 100 : 1; },
         hp: function(p) { return 1.2; },
         rcv: function(p) { return 1.2; }
     },
-    669: {  // Sabo, Member of the Revolutionary Army
+    669: { // Sabo the Revolutionary
         atk: function(p) { return p.unit.class.has("Freedom") ? 2 + 0.75 * p.percHP / 100 : 1; },
         hp: function(p) { return 1.2; },
         rcv: function(p) { return 1.2; }
@@ -1301,26 +1303,26 @@ window.captains = {
     670: { // Koala
         atk: function(p) { return p.unit.class.has("Fighter") ? 2 : 1; }
     },
-    671: { // Koala, Member of the Revolutionary Army
+    671: { // Koala the Revolutionary
         atk: function(p) { return p.unit.class.has("Fighter") ? 2.25 : 1; },
         rcv: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; }
     },
     672: { // Hack
         atk: function(p) { return p.unit.class.has("Fighter") ? 2: 1; }
     },
-    673: { // Hack, Member of the Revolutionary Army
+    673: { // Hack the Revolutionary
         atk: function(p) { return p.unit.class.has("Fighter") ? 2: 1; }
     },
     674: { // Emporio Ivankov, Newkama Kenpo Instructor
         atk: function(p) { return p.unit.class.has("Freedom") ? 2 : 1; }
     },
-    675: { // Emporio Ivankov, Member of the Revolutionary Army
+    675: { // Emporio Ivankov the Revolutionary
         atk: function(p) { return p.unit.class.has("Freedom") ? 2.5 : 1; }
     },
     676: { // Inazuma
         atk: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; }
     },
-    677: { // Inazuma, Member of the Revolutionary Army
+    677: { // Inazuma the Revolutionary
         atk: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; }
     },
     678: { // Robin, Record of the Voyage - Strawhat Crew (Log Robin)
@@ -1339,11 +1341,11 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; },
         rcv: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; }
     },
-    684: {
+    684: { // Ice Cream Loving Perona
         atk: function(p) { return p.unit.class.has("Shooter") ? 1.5 : 1; },
         rcv: function(p) { return p.unit.class.has("Shooter") ? 1.5 : 1; },
     },
-    686: {
+    686: { // Vivi's Breather
         atk: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; },
         rcv: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; }
     },
@@ -1393,11 +1395,11 @@ window.captains = {
         atk: function(p) { return p.unit.type == "STR" ? 1.5 : 1; },
         rcv: function(p) { return p.unit.type == "STR" ? 1.5 : 1; }
     },
-    708: { // Nico Robin, the Devil Child
+    708: { // Nico Robin the Devil Child
         atk: function(p) { return p.unit.type == "PSY" ? 1.2 : 1; },
         rcv: function(p) { return p.unit.type == "PSY" ? 1.2 : 1; }
     },
-    709: { // Nico Robin, Member of the Strawhat Pirates
+    709: { // Nico Robin, Member of the Strawhat Crew
         atk: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; },
         rcv: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; }
     },
@@ -1458,7 +1460,6 @@ window.captains = {
     727: { // Monkey D. Luffy Gum-Gum Gatling
         atk: function(p) { return p.unit.class.has("Freedom") || p.unit.class.has("Fighter") ? 1.75 : 1; }
     },
-
     728: { // Kalifa, Cipher Pol No.9
         atk: function(p) { return p.unit.type == "DEX" ? 1.2 : 1; },
         rcv: function(p) { return p.unit.type == "DEX" ? 1.2 : 1; }
@@ -1471,10 +1472,10 @@ window.captains = {
         atk: function(p) { return p.unit.type == "INT" ? 1.5 : 1; },
         hp: function(p) { return p.unit.type == "INT" ? 1.5 : 1; }
     },
-    732: { // Kakuro, Cipher Pol No.9
+    732: { // Fukuro, Cipher Pol No.9
         atk: function(p) { return p.unit.type == "STR" ? 1.5 : 1; }
     },
-    733: { // Kakuro Rokushiki, Cipher Pol No.9
+    733: { // Fukuro Rokushiki, Cipher Pol No.9
         atk: function(p) { return p.unit.type == "STR" ? 1.5 : 1; }
     },
     734: { // Kumadori, Cipher Pol No.9
@@ -1501,104 +1502,104 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Freedom") ? 1.2 : 1; },
         rcv: function(p) { return p.unit.class.has("Freedom") ? 1.2 : 1; }
     },
-    743: { // evolved Wanze
+    743: { // Wanze, Cipher Pol No.7
         atk: function(p) { return p.unit.class.has("Freedom") ? 1.5 : 1; },
         rcv: function(p) { return p.unit.class.has("Freedom") ? 1.5 : 1; }
     },
-    744: { // Log Ace
+    744: { // Portgas D. Ace, Record of the Voyage - Whitebeard Crew (Log Ace)
         atk: function(p) { return p.unit.class.has("Freedom") ? 2 : 1; },
     },
-    745: { // evolved Log Ace
+    745: { // Portgas D. Ace, Dream of the Voyage - Pirate Summit (Log Ace)
         atk: function(p) { return p.unit.class.has("Freedom") ? 2.5 : 1; },
     },
-    747: {
+    747: { // Rob Lucci, CP9's Dark Justice
         atk: function(p) { return !p.unit.class.has("Tough") ? 1 : (p.orb == 2.0 ? 3 : 2.5); },
         rcv: function(p) { return 0; }
     },
-    748: {
+    748: { // Rob Lucci, CP9's Strongest Generation
         atk: function(p) { return !p.unit.class.has("Tough") ? 1 : (p.orb == 2.0 ? 3 : 2.5); },
         rcv: function(p) { return 0; }
     },
-    749: {
+    749: { // Kaku, CP9's Dark Justice
         atk: function(p) { return p.unit.type == "DEX" ? 1.5 : 1; }
     },
-    750: {
+    750: { // Kaku, CP9's Strongest Generation
         atk: function(p) { return p.unit.type == "DEX" ? 2 : 1; }
     },
-    751: {
+    751: { // Kalifa, CP9's Dark Justice
         atk: function(p) { return p.unit.class.has("Knowledge") ? 1.5 : 1; },
         rcv: function(p) { return p.unit.class.has("Knowledge") ? 1.5 : 1; }
     },
-    752: {
+    752: { // Kalifa, CP9's Strongest Generation
         atk: function(p) { return p.unit.class.has("Knowledge") ? 2.25 : 1; },
         rcv: function(p) { return p.unit.class.has("Knowledge") ? 1.5 : 1; }
     },
-    753: {
+    753: { // Jabra, CP9's Dark Justice
         atk: function(p) { return p.unit.class.has("Tough") ? 2 : 1; },
     },
-    754: {
+    754: { // Jabra, CP9's Strongest Generation
         atk: function(p) { return p.unit.class.has("Tough") ? 2.5 : 1; },
     },
-    755: {
+    755: { // Blueno, CP9's Dark Justice
         atk: function(p) { return p.unit.type == "INT" ? 1.5 : 1; }
     },
-    756: {
+    756: { // Blueno, CP9's Strongest Generation
         atk: function(p) { return p.unit.type == "INT" ? 2 : 1; }
     },
-    757: {
+    757: { // Fukuro, CP9's Dark Justice
         atk: function(p) { return p.unit.type == "PSY" ? 2 : 1; }
     },
-    758: {
+    758: { // Fukuro, CP9's Strongest Generation
         atk: function(p) { return p.unit.type == "PSY" ? 2 : 1; }
     },
-    759: {
+    759: { // Kumadori, CP9's Dark Justice
         atk: function(p) { return p.unit.type == "STR" && p.percHP <= 30.0 ? 2.5 : 1; }
     },
-    760: {
+    760: { // Kumadori, CP9's Strongest Generation
         atk: function(p) { return p.unit.type == "STR" && p.percHP <= 30.0 ? 3 : 1; }
     },
-    761: {
+    761: { // Monkey D. Luffy Halloween Monster
         atk: function(p) { return p.unit.class.has("Fighter") ? 2 : 1; }
     },
-    762: {
+    762: { // Usopp Lying Wolf
         atk: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; },
         rcv: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; }
     },
-    763: {
+    763: { // Franky Frankenstein
         atk: function(p) { return p.unit.type == "STR" ? 2 : 1; }
     },
-    764: {
+    764: { // Nami Jackie 'o Lantern
         atk: function(p) { return p.unit.class.has("Striker") ? 1.5 : 1; },
         rcv: function(p) { return p.unit.class.has("Striker") ? 1.5 : 1; }
     },
-    770: {
+    770: { // Dalmatian, Navy Headquarters Vice Admiral
         atk: function(p) { return p.unit.type == "STR" ? 2 : 1; }
     },
-    771: {
+    771: { // Momonga, Navy Headquarters Vice Admiral
         atk: function(p) { return p.unit.class.has("Knowledge") ? 2.5 : 1; }
     },
-    772: {
+    772: { // Onigumo, Navy Headquarters Vice Admiral
         atk: function(p) { return p.unit.class.has("Slasher") ? 2 : 1; }
     },
-    774: {
+    774: { // Very Good
         atk: function(p) { return p.unit.class.has("Freedom") ? 2 : 1; }
     },
-    775: {
+    775: { // Strawberry, Navy Headquarters Vice Admiral
         atk: function(p) { return p.unit.class.has("Knowledge") ? 1.5 : 1; },
         hp: function(p) { return p.unit.class.has("Knowledge") ? 1.5 : 1; }
     },
-    776: {
+    776: { // Lucky Roo
         atk: function(p) { return p.unit.type == "PSY" ? 1.25 : 1; },
         rcv: function(p) { return p.unit.type == "PSY" ? 1.25 : 1; }
     },
-    777: {
+    777: { // Lucky Roo of the Red Hair Pirates
         atk: function(p) { return p.unit.type == "PSY" ? 1.75 : 1; },
         rcv: function(p) { return p.unit.type == "PSY" ? 1.75 : 1; }
     },
-    780: {
+    780: { // Urouge, Captain of the Fallen Monk Pirates
         atk: function(p) { return p.percHP <= 30.0 ? 2 : 1; }
     },
-    781: {
+    781: { // Mad Monk Urouge, Captain of the Fallen Monk Pirates
         atk: function(p) { return p.percHP <= 30.0 ? 2.5 : 1; }
     }
 };

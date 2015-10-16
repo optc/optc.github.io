@@ -4061,7 +4061,7 @@ window.details = {
     584: { // Aisa
         special: "Reduces damage received from PSY enemies by 100% for 1 turn",
         specialName: "Mantra",
-        captain: "Reduces cooldown of all specials by 3 turns at the start of the fight, greatly reduces ATK, HP and RCV",
+        captain: "Reduces cooldown of all specials by 3 turns at the start of the fight, reduces ATK, HP and RCV of all characters by 90%",
         cooldown: [ 22, 8 ],
         flags: { fnonly: 1 }
     },

@@ -102,14 +102,14 @@ window.specials = {
     395: { // Miss Merry Christmas
         orb: function(p) { return p.orb == 2.0 ? 1.25 : (p.orb == 0.5 ? 4/5 : 1); }
     },
-    396: { // Miss Merry Christmas Human mole
+    396: { // Miss Merry Christmas Human Mole
         orb: function(p) { return p.orb == 2.0 ? 1.25 : (p.orb == 0.5 ? 4/5 : 1); }
     },
     399: { // Miss Doublefinger
         atk: function(p) { return p.unit.type == "DEX" ? 1.5 : 1; },
         type: 'type'
     },
-    400: { // Miss Doublefinger the Spike Human
+    400: { // Miss Doublefinger Human Spike
         atk: function(p) { return p.unit.type == "DEX" ? 1.5 : 1; },
         type: 'type'
     },
@@ -117,27 +117,27 @@ window.specials = {
         atk: function(p) { return p.unit.class.has("Slasher") ? 1.25 : 1; },
         type: 'class'
     },
-    402: { // Mr. 1 the Fullbody Bladed Human
+    402: { // Mr. 1 Human Sword
         atk: function(p) { return p.unit.class.has("Slasher") ? 1.25 : 1; },
         type: 'class'
     },
     404: { // Absalom
         rcv: function(p) { return 2; }
     },
-    405: { // Graveyeard Absalom
+    405: { // Absalom of the Graveyard
         rcv: function(p) { return 2; }
     },
-    406: { // Zombie Shougun
+    406: { // General Zombie
         atk: function(p) { return 1.2; },
         type: 'type'
     },
     417: { // Donquixote Doflamingo
         orb: function(p) { return p.orb == 2.0 ? 2.0 : (p.orb == 0.5 ? 0.25 : 1); }
     },
-    418: { // Donquixote Doflamingo the Shichibukai
+    418: { // Donquixote Doflamingo Warlord of the Sea
         orb: function(p) { return p.orb == 2.0 ? 2.0 : (p.orb == 0.5 ? 0.25 : 1); }
     },
-    419: { // Sanji Parage Shot - Arashi (Kimono)
+    419: { // Sanji Parage Shot - Arashi (Kimono Sanji)
         def: function(p) { return 0.5; }
     },
     423: { // Brook
@@ -150,7 +150,7 @@ window.specials = {
         atk: function(p) { return p.unit.type == "STR" ? 1.05 : 1; },
         type: 'type'
     },
-    429: { // South Bird and the Forest Fauna
+    429: { // South Bird and Forest Residents
         def: function(p) { return 0.5; },
     },
     430: { // Bellamy
@@ -162,11 +162,11 @@ window.specials = {
     434: { // Caroline
         orb: function(p) { return p.orb == 2.0 ? 1.25 : (p.orb == 0.5 ? 4/5 : 1); }
     },
-    450: { // Namur
+    450: { // Namule (Namur)
         atk: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; },
         type: 'class'
     },
-    451: { // One-Shot Namur
+    451: { // One-Hit Namule (Namur)
         atk: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; },
         type: 'class'
     },
@@ -174,7 +174,7 @@ window.specials = {
         atk: function(p) { return p.unit.type == "STR" ? 1.5 : 1; },
         type: 'type'
     },
-    455: { // Fossa the Flaming Blade
+    455: { // Fossa the Blazing Katana
         atk: function(p) { return p.unit.type == "STR" ? 1.5 : 1; },
         type: 'type'
     },
@@ -239,7 +239,7 @@ window.specials = {
         atk: function(p) { return p.unit.class.has("Striker") ? 1.5 : 1; },
         type: 'class'
     },
-    510: { // The Strongest Prisoner, Sir Crocodile the Shichibukai
+    510: { // The Strongest Prisoner, Sir Crocodile Warlord of the Sea
         atk: function(p) { return p.unit.class.has("Striker") ? 1.5 : 1; },
         type: 'class'
     },
@@ -260,18 +260,18 @@ window.specials = {
         atk: function(p) { return 1.05; },
         type: 'type'
     },
-    519: { // Monkey D. Luffy, Merveille's Adventurer (Strong World/SW)
+    519: { // Monkey D. Luffy, Merveille's Adventurer (Strong World Luffy)
         atk: function(p) { return p.unit.type == "STR" ? 2 : 1; },
         type: 'type'
     },
-    520: { // Monkey D. Luffy, Strawhat Crew's Attack (Strong World/SW)
+    520: { // Monkey D. Luffy, Strawhat Crew's Attack (Strong World Luffy)
         atk: function(p) { return p.unit.type == "STR" ? 2 : 1; },
         type: 'type'
     },
-    529: { // Shanks, Black Clothes and Red Hair (Strong World/SW)
+    529: { // Shanks, Black Clothes and Red Hair (Strong World Shanks)
         def: function(p) { return 0; }
     },
-    530: { // Shanks, The Black-Clothed Yonkou (Strong World/SW)
+    530: { // Shanks, The Black-Clothed Yonkou (Strong World Shanks)
         def: function(p) { return 0; }
     },
     533: { // Brook Cherry Head
@@ -299,10 +299,10 @@ window.specials = {
         atk: function(p) { return p.defenseDown ? 1.3 : 1; },
         type: 'condition'
     },
-    559: { // Franky, Merveille's Adventurer (Strong World/SW)
+    559: { // Franky, Merveille's Adventurer (Strong World Franky)
         orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); }
     },
-    560: { // Franky, Strawhat Crew's Attack (Strong World/SW)
+    560: { // Franky, Strawhat Crew's Attack (Strong World Franky)
         orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); }
     },
     568: { // Foxy
@@ -332,11 +332,11 @@ window.specials = {
         atk: function(p) { return p.unit.type == "QCK" ? 1.5 : 1; },
         type: 'type'
     },
-    589: { // Kohza
+    589: { // Koza
         atk: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; },
         type: 'class'
     },
-    590: { // Kohza, Leader of the Rebel Army
+    590: { // Koza, Rebel Leader
         atk: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; },
         type: 'class'
     },
@@ -415,10 +415,10 @@ window.specials = {
         type: 'condition',
         warning: 'Selected special (Ice Witch Whitey Bay) assumes that the enemy has been delayed.'
     },
-    648: { // Marco, Whitebeard Pirates' 1st Division Commander
+    648: { // Marco, Commander of the 1st Division of the Whitebeard Pirates
         orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); },
     },
-    649: { // Phoenix Marco, Whitebeard Pirates' 1st Division Commander
+    649: { // Phoenix Marco, Commander of the 1st Division of the Whitebeard Pirates
         orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); },
     },
     650: { // Nami, Record of the Voyage - Strawhat Crew (Log Nami)
@@ -439,11 +439,11 @@ window.specials = {
     661: { // Usopp, Dream of the Voyage - Brave Warrior of the Sea (Log Usopp)
         def: function(p) { return 0.5; }
     },
-    665: { // Kohza, Alabasta Citizen
+    665: { // Koza, Alabasta Citizen
         atk: function(p) { return p.defenseDown ? 1.3 : 1; },
         type: 'condition'
     },
-    666: { // Kohza, Leader of the Suna Suna Clan
+    666: { // Koza, Leader of the Suna Suna Clan
         atk: function(p) { return p.defenseDown ? 1.3 : 1; },
         type: 'condition'
     },
@@ -460,7 +460,7 @@ window.specials = {
             });
         }
     },
-    669: { // Sabo, Member of the Revolutionary Army
+    669: { // Sabo the Revolutionary
         atk: function(p) { return !p.unit.class.has('Freedom') ? 1 : window.specials[669].multiplier; },
         type: 'class',
         onActivation: function(p) {
@@ -477,7 +477,7 @@ window.specials = {
         atk: function(p) { return p.unit.class.has("Fighter") ? 1.75 : 1; },
         type: 'class'
     },
-    671: { // Koala, Member of the Revolutionary Army
+    671: { // Koala the Revolutionary
         atk: function(p) { return p.unit.class.has("Fighter") ? 1.75 : 1; },
         type: 'class'
     },
@@ -505,31 +505,31 @@ window.specials = {
     690: { // Montblanc Noland, Explorer and Admiral of the Lvneel Kingdom
         orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); },
     },
-    710: {
+    710: { // Franky, Record of the Voyage - Strawhat Crew (Log Franky)
         atk: function(p) { return p.unit.class.has("Shooter") ? 1.25 : 1; },
         type: 'class'
     },
-    711: {
+    711: { // Franky, Dream of the Voyage - A Ship to Sail Around the World (Log Franky)
         atk: function(p) { return p.unit.class.has("Shooter") ? 1.25 : 1; },
         type: 'class'
     },
-    712: {
+    712: { // Gan Fall
         atk: function(p) { return p.slot < 2 ? 1.5 : 1; },
         type: 'class'
     },
-    713: {
+    713: { // Gan Fall the Knight of the Sky
         atk: function(p) { return p.slot < 2 ? 1.5 : 1; },
         type: 'class'
     },
-    715: {
+    715: { // Konis
         atk: function(p) { return p.unit.class.has("Freedom") ? 1.5 : 1; },
         type: 'class'
     },
-    716: {
+    716: { // Konis, Skypiean Maiden
         atk: function(p) { return p.unit.class.has("Freedom") ? 1.5 : 1; },
         type: 'class'
     },
-    719: {
+    719: { // Sir Crocodile Logia Warlord of the Sea
         atk: function(p) { return p.unit.class.has("Knowledge") ? window.specials[719].multiplier : 1; },
         type: 'class',
         onActivation: function(p) {
@@ -564,10 +564,10 @@ window.specials = {
         atk: function(p) { return p.unit.type == "INT" ? 1.5 : 1; },
         type: 'type'
     },
-    732: { // Kakuro, Cipher Pol No.9
+    732: { // Fukuro, Cipher Pol No.9
         def: function(p) { return 0.5; }
     },
-    733: { // Kakuro Rokushiki, Cipher Pol No.9
+    733: { // Fukuro Rokushiki, Cipher Pol No.9
         def: function(p) { return 0.5; }
     },
     740: { // Nero
@@ -583,41 +583,41 @@ window.specials = {
     742: { // Wanze
         orb: function(p) { return p.orb == 2.0 ? 1.25 : (p.orb == 0.5 ? 4/5 : 1); }
     },
-    743: { // Wanze evolved
+    743: { // Wanze, Cipher Pol No.7
         orb: function(p) { return p.orb == 2.0 ? 1.25 : (p.orb == 0.5 ? 4/5 : 1); }
     },
-    753: {
+    753: { // Jabra, CP9's Dark Justice
         orb: function(p) { return p.orb == 2.0 ? 1.75 : (p.orb == 0.5 ? 4/7 : 1); },
     },
-    754: {
+    754: { // Jabra, CP9's Strongest Generation
         orb: function(p) { return p.orb == 2.0 ? 1.75 : (p.orb == 0.5 ? 4/7 : 1); },
     },
-    755: {
+    755: { // Blueno, CP9's Dark Justice
         atk: function(p) { return p.unit.class.has("Tough") ? 1.75 : 1; },
         type: 'class'
     },
-    756: { 
+    756: {  // Blueno, CP9's Strongest Generation
         atk: function(p) { return p.unit.class.has("Tough") ? 1.75 : 1; },
         type: 'class'
     },
-    761: {
+    761: { // Monkey D. Luffy Halloween Monster
         atk: function(p) { return 1.2; },
         type: 'type'
     },
-    762: {
+    762: { // Usopp Lying Wolf
         atk: function(p) { return p.unit.type == "PSY" ? 1.75 : 1; },
         type: 'type'
     },
-    770: {
+    770: { // Dalmatian, Navy Headquarters Vice Admiral
         atk: function(p) { return 1.3; },
         type: 'condition',
         warning: 'Selected special (Dalmatian, Navy Headquarters Vice Admiral) assumes that the enemy has been delayed.'
     },
-    771: {
+    771: { // Momonga, Navy Headquarters Vice Admiral
         atk: function(p) { return p.unit.class.has("Knowledge") ? 1.75 : 1; },
         type: 'type'
     },
-    780: {
+    780: { // Urouge, Captain of the Fallen Monk Pirates
         atk: function(p) {
             return p.slot == p.sourceSlot ? window.specials[780].multiplier : 1;
         },
@@ -631,7 +631,7 @@ window.specials = {
             });
         }
     },
-    781: {
+    781: { // Mad Monk Urouge, Captain of the Fallen Monk Pirates
         atk: function(p) {
             return p.slot == p.sourceSlot ? window.specials[781].multiplier : 1;
         },
