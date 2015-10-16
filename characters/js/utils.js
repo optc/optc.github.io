@@ -8,9 +8,11 @@ CharUtils.generateSearchParameters = function(query, filters) {
     if (filters.class && filters.class.constructor != RegExp) filters.class = new RegExp(filters.class,'i');
     var temp = $.extend({ },filters);
     temp.custom = [ ];
-    for (var i=0;i<filters.custom.length;++i) {
-        if (filters.custom[i])
-            temp.custom.push(window.matchers[i]);
+    if (filters.custom) {
+        for (var i=0;i<filters.custom.length;++i) {
+            if (filters.custom[i])
+                temp.custom.push(window.matchers[i]);
+        }
     }
     if (Object.keys(temp).length > 0 || temp.custom.length > 0) {
         if (!result) result = { };
