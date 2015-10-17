@@ -806,6 +806,14 @@ window.drops = {
             name: 'Girls of Summer Paradise (Special Island)',
             thumb: 683,
             Expert: [ 659, 680, 682, 684, 686 ]
+        },
+
+        {
+            name: 'Colosseum',
+            thumb: 779,
+            Exhibition: [ 776, 778 ],
+            Underground: [ 776, 778 ],
+            Chaos: [ 776, 778, 780 ]
         }
 
    ]
