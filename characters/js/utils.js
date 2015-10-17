@@ -2,6 +2,44 @@
 
 var CharUtils = { };
 
+/* * * * * Reverse drop map * * * * */
+
+var reverseDropMap = null;
+var marks = { 'Story Island': 1, 'Special': 2, 'Fortnight': 4, 'Raid': 8 };
+
+var generateReverseDropMap = function() {
+    reverseDropMap = { };
+    for (var type in drops) {
+        for (var island in drops[type]) {
+            for (var stage in drops[type][island]) {
+                var data = drops[type][island][stage];
+                if (data.constructor != Array) continue;
+                for (var i=0;i<data.length;++i) {
+                    if (data[i] < 0 || CharUtils.isFarmable(data[i], type)) continue;
+                    flagUnit(data[i], type);
+                }
+            }
+        }
+    }
+};
+
+var addMark = function(value, type) {
+    if (!value) value = 0;
+    return (value | (marks[type] || 16));
+};
+
+var flagUnit = function(id, type) {
+    reverseDropMap[id] = addMark(reverseDropMap[id], type);
+    if (!details[id].evolution) return;
+    if (details[id].evolution.constructor != Array)
+        flagUnit(details[id].evolution, type);
+    else for (var i=0;i<details[id].evolution.length;++i)
+        flagUnit(details[id].evolution[i], type);
+};
+
+
+/* * * * * Public methods * * * * */
+
 CharUtils.generateSearchParameters = function(query, filters) {
     var result = Utils.generateSearchParameters(query);
     if (result === null && Object.keys(filters).length === 0) return null;
@@ -94,30 +132,18 @@ CharUtils.searchDropLocations = function(id) {
     return result;
 };
 
-CharUtils.flagUnit = function(reverseDropMap, id) {
-    reverseDropMap[id] = true;
-    if (!details[id].evolution) return;
-    if (details[id].evolution.constructor != Array)
-        CharUtils.flagUnit(reverseDropMap, details[id].evolution, id);
-    else for (var i=0;i<details[id].evolution.length;++i)
-        CharUtils.flagUnit(reverseDropMap, details[id].evolution[i]);
+CharUtils.isFarmable = function(id, type) {
+    if (reverseDropMap === null) generateReverseDropMap();
+    if (!reverseDropMap.hasOwnProperty(id)) return false;
+    return (!type ? true : (reverseDropMap[id] & (marks[type] || 16)) > 0);
 };
 
-CharUtils.generateReverseDropMap = function(scope) {
-    var reverseDropMap = { };
-    for (var type in drops) {
-        for (var island in drops[type]) {
-            for (var stage in drops[type][island]) {
-                var data = drops[type][island][stage];
-                if (data.constructor != Array) continue;
-                for (var i=0;i<data.length;++i) {
-                    if (data[i] < 0 || reverseDropMap[data[i]]) continue;
-                    CharUtils.flagUnit(reverseDropMap, data[i]);
-                }
-            }
-        }
-    }
-    scope.reverseDropMap = reverseDropMap;
+CharUtils.isOnlyFarmable = function(id, types) {
+    if (reverseDropMap === null) generateReverseDropMap();
+    if (!reverseDropMap.hasOwnProperty(id)) return false;
+    var n = 0;
+    for (var i=1;i<arguments.length;++i) n |= marks[arguments[i]];
+    return reverseDropMap[id] == n;
 };
 
 CharUtils.searchSameSpecials = function(id) {
@@ -162,8 +188,6 @@ CharUtils.getIslandBonuses = function(y, day) {
  * Initialization *
  ******************/
 
-angular.module('optc').factory('utils',function($rootScope) {
-    return CharUtils;
-});
+window.CharUtils = CharUtils;
 
 })();

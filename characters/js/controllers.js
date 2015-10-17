@@ -13,14 +13,14 @@ var filters = { custom: [ ] };
 
 var app = angular.module('optc');
 
-app.controller('MainCtrl',function($scope, $rootScope, $state, $stateParams, $timeout, utils) {
+app.controller('MainCtrl',function($scope, $rootScope, $state, $stateParams, $timeout) {
 
     // query
 
     if ($stateParams.query != lastQuery) {
         lastQuery = $stateParams.query;
         $scope.query = lastQuery;
-        $scope.table.parameters = utils.generateSearchParameters($stateParams.query, $.extend({ }, $scope.filters));
+        $scope.table.parameters = CharUtils.generateSearchParameters($stateParams.query, $.extend({ }, $scope.filters));
         if ($scope.table.refresh) $scope.table.refresh();
     }
 
@@ -31,13 +31,13 @@ app.controller('MainCtrl',function($scope, $rootScope, $state, $stateParams, $ti
 
 });
 
-app.controller('SidebarCtrl',function($scope, $rootScope, $stateParams, utils) {
+app.controller('SidebarCtrl',function($scope, $rootScope, $stateParams) {
 
     if (!$scope.filters) $scope.filters = filters;
 
     $scope.$watch('filters',function(filters) {
         if (!filters || Object.keys(filters).length === 0) return;
-        $scope.table.parameters = utils.generateSearchParameters($stateParams.query, $.extend({ }, $scope.filters));
+        $scope.table.parameters = CharUtils.generateSearchParameters($stateParams.query, $.extend({ }, $scope.filters));
         // build regexes if necessary
         $scope.table.regexes = { };
         if (filters.custom[25] && $scope.table.parameters.filters.ctrlFrom) {
@@ -73,7 +73,7 @@ app.controller('SidebarCtrl',function($scope, $rootScope, $stateParams, utils) {
 
 });
 
-app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, $timeout, utils) {
+app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, $timeout) {
     // data
     var id = parseInt($stateParams.id, 10);
     $scope.id = id;
@@ -81,14 +81,14 @@ app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, 
     $scope.hybrid = $scope.unit.class.constructor == Array;
     $scope.details = window.details[id];
     // derived data
-    $scope.evolvesFrom = utils.searchBaseForms(id);
-    $scope.usedBy = utils.searchEvolverEvolutions(id);
-    $scope.drops = utils.searchDropLocations(id);
-    $scope.manuals = utils.searchDropLocations(-id);
-    $scope.sameSpecials = utils.searchSameSpecials(id);
+    $scope.evolvesFrom = CharUtils.searchBaseForms(id);
+    $scope.usedBy = CharUtils.searchEvolverEvolutions(id);
+    $scope.drops = CharUtils.searchDropLocations(id);
+    $scope.manuals = CharUtils.searchDropLocations(-id);
+    $scope.sameSpecials = CharUtils.searchSameSpecials(id);
     $scope.collapsed = { to: true, from: true, used: true, drops: true, manuals: true }; 
     // events/functions
-    $scope.getEvos = utils.getEvolversOfEvolution;
+    $scope.getEvos = CharUtils.getEvolversOfEvolution;
     $scope.sizeOf = function(target) { return Object.keys(target).length; };
     $scope.withButton = $stateParams.previous.length > 0;
     $scope.onBackClick = function() {

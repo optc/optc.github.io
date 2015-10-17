@@ -17,8 +17,6 @@ var addImage = function(data, type, row, meta) {
 var fuse = new Fuse(window.units, { keys: [ 'name' ], id: 'number' });
 var fuzzy = JSON.parse(localStorage.getItem('fuzzy')) || false;
 
-var reverseDropMap = null;
-
 var tableData = null;
 
 var log = JSON.parse(localStorage.getItem('characterLog')) || [ ];
@@ -51,8 +49,6 @@ var getTableColumns = function() {
     });
     return result;
 };
-
-var generateReverseDropMap = null;
 
 /*******************
  * Table filtering *
@@ -91,24 +87,25 @@ $.fn.dataTable.ext.search.push(function(settings, data, index) {
     if (filters.class && !filters.class.test(unit.class)) return false;
     // filter by drop
     if (filters.drop) {
-        if (!reverseDropMap) generateReverseDropMap();
-        var isFarmable = reverseDropMap.hasOwnProperty(id);
+        var isFarmable = CharUtils.isFarmable(id);
         if (filters.drop == 'Farmable') {
             if (id == 1 || unit.stars >= 3 && !isFarmable) return false;    
             if (filters.farmable) {
-                // both && neither
+                // both & neither
                 if (filters.farmable.raid && filters.farmable.fortnight) {
-                    if (!flags.rfonly) return false;
-                } else if (filters.farmable.raid === false && filters.farmable.fortnight === false &&
-                        (flags.rfonly || flags.raid || flags.fnonly)) {
-                    return false;
+                    if (!CharUtils.isOnlyFarmable(id, 'Fortnight', 'Raid'))
+                        return false;
+                } else if (filters.farmable.raid === false && filters.farmable.fortnight === false) {
+                    if (CharUtils.isOnlyFarmable(id, 'Fortnight') || CharUtils.isOnlyFarmable(id, 'Raid') ||
+                            CharUtils.isOnlyFarmable(id, 'Raid', 'Fortnight'))
+                        return false;
                 } else {
-                // raid
-                    if (filters.farmable.raid && !flags.raid) return false;
-                    if (filters.farmable.raid === false && flags.raid) return false;
+                    // raid
+                    if (filters.farmable.raid && !CharUtils.isOnlyFarmable(id, 'Raid')) return false;
+                    if (filters.farmable.raid === false && CharUtils.isOnlyFarmable(id, 'Raid')) return false;
                     // fortnight
-                    if (filters.farmable.fortnight && !flags.fnonly) return false;
-                    if (filters.farmable.fortnight === false && flags.fnonly) return false;
+                    if (filters.farmable.fortnight && !CharUtils.isOnlyFarmable(id, 'Fortnight')) return false;
+                    if (filters.farmable.fortnight === false && CharUtils.isOnlyFarmable(id, 'Fortnight')) return false;
                 }
             }
         } else if (filters.drop != 'Farmable') {
@@ -131,8 +128,8 @@ $.fn.dataTable.ext.search.push(function(settings, data, index) {
     }
     // exclusion filters
     if (filters.noBase && details[id].evolution) return false;
-    if (filters.noEvos && Utils.isEvolverBooster(unit)) return false;
-    if (filters.noFodder && Utils.isFodder(unit)) return false;
+    if (filters.noEvos && CharUtils.isEvolverBooster(unit)) return false;
+    if (filters.noFodder && CharUtils.isFodder(unit)) return false;
     if (filters.noFortnights && flags.fnonly) return false;
     if (filters.noRaids && flags.raid) return false;
     if (filters.noSpecials && (flags.lrr || flags.promo || flags.special)) return false;
@@ -168,7 +165,7 @@ $.fn.dataTable.ext.search.push(function(settings, data, index) {
  * Table configuration *
  ***********************/
 
-angular.module('optc') .run(function($rootScope, utils) {
+angular.module('optc') .run(function($rootScope) {
 
     var data = window.units.filter(function(x) { return x.name; }).map(function(x,n) {
         var result = [
@@ -234,11 +231,6 @@ angular.module('optc') .run(function($rootScope, utils) {
         temp.sort(function(a,b) { return a-b; });
         localStorage.setItem('characterLog',JSON.stringify(temp));
         $rootScope.showLogFilters = temp.length > 0;
-    };
-
-    generateReverseDropMap = function() {
-        utils.generateReverseDropMap($rootScope);
-        reverseDropMap = $rootScope.reverseDropMap;
     };
 
 });

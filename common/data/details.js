@@ -246,14 +246,14 @@ window.details = {
         captain: "Recovers 2x character's RCV in HP at the end of the turn",
         evolution: 32,
         evolvers: [ 115, 81 ],
-        flags: { global: 1, fnonly: 1 }
+        flags: { global: 1 }
     },
     32: { // Cabin Boy Coby
         special: "Changes [RCV] orbs into [TND] orbs",
         specialName: "Shooting Spree",
         captain: "Recovers 2x character's RCV in HP at the end of the turn",
         cooldown: [ 13, 7 ],
-        flags: { global: 1, fnonly: 1 }
+        flags: { global: 1 }
     },
     33: { // Helmeppo
         captain: "Reduces damage received from INT enemies by 30%",
@@ -1495,14 +1495,14 @@ window.details = {
         cooldown: [ 32, 17 ],
         evolution: 227,
         evolvers: [ 118, 83, 86, 86, 102 ],
-        flags: { global: 1, raid: 1 }
+        flags: { global: 1 }
     },
     227: { // Hawk Eyes Mihawk
         special: "Cuts the current HP of each enemy by 30%",
         specialName: "Black Blade Ship Cutter",
         captain: "Boosts ATK of Slasher characters by 2.5x",
         cooldown: [ 32, 17 ],
-        flags: { global: 1, raid: 1 }
+        flags: { global: 1 }
     },
     228: { // Escapee Morgan
         special: "Reduces Bind duration by 2 turns",
@@ -1532,14 +1532,14 @@ window.details = {
         cooldown: [ 22, 14 ],
         evolution: 232,
         evolvers: [ 117, 79, 85, 90, 101 ],
-        flags: { global: 1, fnonly: 1 }
+        flags: { global: 1 }
     },
     232: { // Black Cage Hina
         special: "Locks all orbs for 1 turn",
         specialName: "Kimono Sleeve Cage",
         captain: "Boosts ATK of QCK characters by 2x",
         cooldown: [ 22, 14 ],
-        flags: { global: 1, fnonly: 1 }
+        flags: { global: 1 }
     },
     233: { // Mr. 8
         captain: "Boosts HP of PSY characters by 1.5x",
@@ -1650,14 +1650,14 @@ window.details = {
         cooldown: [ 30, 15 ],
         evolution: 249,
         evolvers: [ 118, 84, 84, 95, 100 ],
-        flags: { global: 1, raid: 1 }
+        flags: { global: 1 }
     },
     249: { // Tony Tony Chopper Post-Rampage (Monster Chopper)
         special: "Deals random STR damage to one enemy",
         specialName: "Rampage",
         captain: "Boosts ATK of STR characters by 3x and reduces their HP by 60%",
         cooldown: [ 30, 15 ],
-        flags: { global: 1, raid: 1 }
+        flags: { global: 1 }
     },
     250: { // Marco
         special: "Recovers all HP",
@@ -1759,7 +1759,7 @@ window.details = {
         captain: "Recovers 2x character's RCV in HP at the end of the turn",
         evolution: 263,
         evolvers: [ 117, 81, 87, 92, 103 ],
-        flags: { global: 1, rfonly: 1 }
+        flags: { global: 1 }
     },
     263: { // Petty Officer Coby
         special: "Amplifies the effect of orbs by 1.5x for 2 turns",
@@ -1767,20 +1767,20 @@ window.details = {
         specialName: "Shave",
         captain: "Boosts ATK of Fighter characters by 2x",
         cooldown: [ 17, 10 ],
-        flags: { global: 1, rfonly: 1 }
+        flags: { global: 1 }
     },
     264: { // Training Helmeppo
         captain: "Reduces damage received from INT enemies by 30%",
         evolution: 265,
         evolvers: [ 117, 82, 88, 93, 104 ],
-        flags: { global: 1, rfonly: 1 }
+        flags: { global: 1 }
     },
     265: { // Sergeant Helmeppo
         special: "Reduces Bind duration by 3 turns",
         specialName: "Tempered Kukris",
         captain: "Boosts ATK and HP of Slasher characters by 1.5x",
         cooldown: [ 17, 11 ],
-        flags: { global: 1, rfonly: 1 }
+        flags: { global: 1 }
     },
     266: { // Rainbow Pirate Penguin
         flags: { global: 1 }
@@ -1974,28 +1974,28 @@ window.details = {
         cooldown: [ 20, 12 ],
         evolution: 297,
         evolvers: [ 117, 82, 88, 93, 104 ],
-        flags: { global: 1, fnonly: 1 }
+        flags: { global: 1 }
     },
     297: { // Great Advisor Tsuru
         special: "Recovers 2,000 HP, randomizes all orbs",
         specialName: "Cleansing Wash",
         captain: "Boosts ATK of Shooter characters by 2x",
         cooldown: [ 20, 12 ],
-        flags: { global: 1, fnonly: 1 }
+        flags: { global: 1 }
     },
     298: { // Momonga
         special: "Deals 25x character's ATK in PSY damage to one enemy",
         specialName: "Moonwalk",
         captain: "Boosts HP of PSY characters by 2x",
         cooldown: [ 25, 18 ],
-        flags: { global: 1, fnonly: 1 }
+        flags: { global: 1 }
     },
     299: { // Onigumo
         special: "Cuts the current HP of each enemy by 10%",
         specialName: "8-Sword Style Onigumo",
         captain: "Boosts ATK of DEX characters by 2x",
         cooldown: [ 21, 16 ],
-        flags: { global: 1, fnonly: 1 }
+        flags: { global: 1 }
     },
     300: { // Red Plated Lobster
         flags: { global: 1 }
@@ -2019,14 +2019,14 @@ window.details = {
         cooldown: [ 28, 13 ],
         evolution: 306,
         evolvers: [ 118, 87, 87, 303, 103 ],
-        flags: { global: 1, raid: 1 }
+        flags: { global: 1 }
     },
     306: { // Garp the Fist
         special: "Changes all orbs into either [PSY] or [RCV] orbs",
         specialName: "Meteor Fist Shower",
         captain: "Boosts ATK and HP of PSY characters by 2x",
         cooldown: [ 28, 13 ],
-        flags: { global: 1, raid: 1 }
+        flags: { global: 1 }
     },
     307: { // Trafalgar Law
         special: "Changes all orbs other than [DEX] into either [DEX], [RCV] or [TND] orbs",
@@ -2272,13 +2272,13 @@ window.details = {
         special: "Changes [QCK] orbs into [PSY] orbs",
         specialName: "Wavy Square Hair",
         cooldown: [ 14, 6 ],
-        flags: { global: 1, fnonly: 1 }
+        flags: { global: 1 }
     },
     339: { // Mozu
         special: "Changes [INT] orbs into [TND] orbs",
         specialName: "Straight Square Hair",
         cooldown: [ 14, 6 ],
-        flags: { global: 1, fnonly: 1 }
+        flags: { global: 1 }
     },
     340: { // Kraken Surume
         special: "Changes all orbs into either [STR] or [QCK] orbs, deals random STR damage to all enemies",
@@ -2294,7 +2294,7 @@ window.details = {
         specialName: "Kraken Tentacle Crush",
         captain: "Boosts ATK of Striker characters by 2x",
         cooldown: [ 25, 18 ],
-        flags: { global: 1, fnonly: 1 }
+        flags: { global: 1 }
     },
     342: { // Red Jeweled Porc
         evolution: [ 347, 347, 347 ],
@@ -2342,29 +2342,25 @@ window.details = {
         captain: "Boosts ATK of Shooter characters by 2x",
         cooldown: [ 30, 16 ],
         evolution: 353,
-        evolvers: [ 118, 83, 88, 304, 104 ],
-        flags: { raid: 1 }
+        evolvers: [ 118, 83, 88, 304, 104 ]
     },
     353: { // Zephyr NEO Navy Commander
         special: "Boosts ATK of Shooter characters by 1.75x for 2 turns",
         specialName: "Smash Buster",
         captain: "Boosts ATK of Shooter characters by 2.5x",
-        cooldown: [ 30, 16 ],
-        flags: { raid: 1 }
+        cooldown: [ 30, 16 ]
     },
     354: { // Ain
         special: "Reduces Bind and Silence duration by 3 turns",
         specialName: "Two-Sword Dance",
         cooldown: [ 22, 15 ],
         evolution: 355,
-        evolvers: [ 116, 85, 90, 96 ],
-        flags: { raid: 1 }
+        evolvers: [ 116, 85, 90, 96 ]
     },
     355: { // Ain NEO Navy Vice Admiral
         special: "Reduces Bind and Silence duration by 3 turns",
         specialName: "Two-Sword Dance",
-        cooldown: [ 22, 15 ],
-        flags: { raid: 1 }
+        cooldown: [ 22, 15 ]
     },
     356: { // Eustass Kid
         special: "Changes own orb into [STR], deals 9x character's ATK in STR damage to all enemies",
@@ -2598,14 +2594,14 @@ window.details = {
         cooldown: [ 20, 10 ],
         evolution: 386,
         evolvers: [ 117, 82, 88, 93, 99 ],
-        flags: { global: 1, fnonly: 1 }
+        flags: { global: 1 }
     },
     386: { // Doctor Hogback
         special: "Reduces damage received by 50% for 1 turn, boosts ATK of Fighter characters by 1.25x for 1 turn",
         specialName: "Zombie Marionette Operation",
         captain: "Boosts ATK of INT characters by 2x",
         cooldown: [ 20, 10 ],
-        flags: { global: 1, fnonly: 1 }
+        flags: { global: 1 }
     },
     387: { // Cindry
         special: "Changes all orbs into either [PSY] or [INT] orbs, deals random PSY damage to all enemies",
@@ -2614,14 +2610,14 @@ window.details = {
         cooldown: [ 25, 18 ],
         evolution: 388,
         evolvers: [ 117, 81, 87, 385 ],
-        flags: { global: 1, fnonly: 1 }
+        flags: { global: 1 }
     },
     388: { // Victoria Cindry
         special: "Changes all orbs into either [PSY] or [INT] orbs, deals random PSY damage to all enemies",
         specialName: "Square Plate Sword",
         captain: "Boosts RCV of PSY characters by 1.5x",
         cooldown: [ 25, 18 ],
-        flags: { global: 1, fnonly: 1 }
+        flags: { global: 1 }
     },
     389: { // Emporio Ivankov
         special: "Changes own orb into [QCK] and every other orb into either [RCV], [STR], [DEX] or [QCK] orbs",
@@ -2629,15 +2625,13 @@ window.details = {
         captain: "Boosts ATK by 2.25x following a chain of DEX > INT > QCK attacks no lower than Good",
         cooldown: [ 17, 8 ],
         evolution: 390,
-        evolvers: [ 118, 85, 94, 301, 101 ],
-        flags: { raid: 1 }
+        evolvers: [ 118, 85, 94, 301, 101 ]
     },
     390: { // Emporio Ivankov, Queen of Kamabakka Kingdom
         special: "Changes own orb into [QCK] and every other orb into either [RCV], [STR], [DEX] or [QCK] orbs",
         specialName: "Hell Wink",
         captain: "Boosts ATK by 2.75x following a chain of DEX > INT > QCK attacks no lower than Good",
-        cooldown: [ 17, 8 ],
-        flags: { raid: 1 }
+        cooldown: [ 17, 8 ]
     },
     391: { // Perona
         special: "Reduces damage received by 90% for 1 turn, reduces the defense of all enemies by 80% for 1 turn, deals 1,000 fixed damage to all enemies at the end of the following turn",
@@ -2646,26 +2640,26 @@ window.details = {
         cooldown: [ 23, 14 ],
         evolution: 392,
         evolvers: [ 117, 86, 91, 97, 102 ],
-        flags: { global: 1, fnonly: 1 }
+        flags: { global: 1 }
     },
     392: { // Ghost Princess Perona
         special: "Reduces damage received by 90% for 1 turn, reduces the defense of all enemies by 80% for 1 turn, deals 1,000 fixed damage to all enemies at the end of the following turn",
         specialName: "Negative Hollow",
         captain: "Boosts RCV of DEX characters by 2x",
         cooldown: [ 23, 14 ],
-        flags: { global: 1, fnonly: 1 }
+        flags: { global: 1 }
     },
     393: { // Kumacy (Kumashi)
         special: "Deals 35x character's ATK in STR damage to one enemy",
         specialName: "Kumacy Knuckle",
         cooldown: [ 38, 18 ],
-        flags: { global: 1, fnonly: 1 }
+        flags: { global: 1 }
     },
     394: { // Dog Penguin (Inuppe)
         special: "Deals 500 fixed damage to all enemies",
         specialName: "The Tempest Called Love",
         cooldown: [ 17, 8 ],
-        flags: { global: 1, fnonly: 1 }
+        flags: { global: 1 }
     },
     395: { // Miss Merry Christmas
         special: "Empties neighboring slots, amplifies the effect of orbs by 1.25x for 1 turn",
@@ -2748,26 +2742,26 @@ window.details = {
         cooldown: [ 23, 14 ],
         evolution: 405,
         evolvers: [ 117, 84, 89, 95, 100 ],
-        flags: { global: 1, fnonly: 1 }
+        flags: { global: 1 }
     },
     405: { // Absalom of the Graveyard
         special: "Reduces damage received by 50% for 2 turns, boosts RCV of all characters by 2x for 2 turns",
         specialName: "Clear-Clear Fruit",
         captain: "Boosts ATK of Shooter characters by 2x",
         cooldown: [ 23, 14 ],
-        flags: { global: 1, fnonly: 1 }
+        flags: { global: 1 }
     },
     406: { // General Zombie
         special: "Reduces crew's HP to 1, deals 1,000 fixed damage to all enemies, boosts ATK of all characters by 1.2x for 1 turn",
         specialName: "Skills of the Ancient Warriors",
         cooldown: [ 30, 15 ],
-        flags: { global: 1, fnonly: 1 }
+        flags: { global: 1 }
     },
     407: { // Jigoro of the Wind
         special: "Randomizes all orbs, deals 7x character's ATK in DEX damage to all enemies",
         specialName: "Zombie-Style 36-Pound Phoenix",
         cooldown: [ 20, 10 ],
-        flags: { global: 1, fnonly: 1 }
+        flags: { global: 1 }
     },
     408: { // Sir Crocodile Warlord of the Sea
         special: "Changes own orb into [INT], randomizes every other orb, deals 15x character's ATK in INT damage to all enemies",
@@ -2847,16 +2841,14 @@ window.details = {
         captain: "Boosts ATK of Slasher characters by 2x",
         cooldown: [ 28, 14 ],
         evolution: 418,
-        evolvers: [ 118, 83, 86, 302, 102 ],
-        flags: { raid: 1 }
+        evolvers: [ 118, 83, 86, 302, 102 ]
     },
     418: { // Donquixote Doflamingo Warlord of the Sea
         special: "Freely switch orbs between slots twice, amplifies the effect of orbs by 2x for 1 turn",
         specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 2x more damage and opposite orbs will deal 2x less damage",
         specialName: "Overheat",
         captain: "Boosts ATK and HP of Slasher characters by 2x",
-        cooldown: [ 28, 14 ],
-        flags: { raid: 1 }
+        cooldown: [ 28, 14 ]
     },
     419: { // Sanji Parage Shot - Arashi (Kimono Sanji)
         special: "Reduces the defense of all enemies by 50% for 2 turns, randomizes all orbs",
@@ -2869,22 +2861,19 @@ window.details = {
         special: "Reduces Silence duration by 3 turns, deals 15x character's ATK in STR damage to one enemy",
         specialName: "Gum Gum Bazooka \"Arashi\"",
         captain: "Boosts ATK, HP and RCV of STR characters by 1.5x",
-        cooldown: [ 23, 13 ],
-        flags: { fnonly: 1 }
+        cooldown: [ 23, 13 ]
     },
     421: { // Roronoa Zoro Three Thousand Worlds - Arashi (Kimono Zoro)
         special: "Reduces Bind duration by 2 turns, deals 10x character's ATK in DEX damage to all enemies",
         specialName: "108 Pound Phoenix \"Arashi\"",
         captain: "Boosts ATK, HP and RCV of DEX characters by 1.5x",
-        cooldown: [ 20, 10 ],
-        flags: { fnonly: 1 }
+        cooldown: [ 20, 10 ]
     },
     422: { // Nami Mirage Tempo - Arashi (Kimono Nami)
         special: "Reduces damage received from INT enemies by 100% for 1 turn, recovers a random amount of HP",
         specialName: "Mirage Tempo \"Arashi\"",
         captain: "Boosts ATK, HP and RCV of INT characters by 1.5x",
-        cooldown: [ 20, 10 ],
-        flags: { fnonly: 1 }
+        cooldown: [ 20, 10 ]
     },
     423: { // Brook
         special: "Recovers 4,343 HP, reduces the defense of all enemies by 50% for 2 turns",
@@ -2892,22 +2881,19 @@ window.details = {
         captain: "Prevents death as long as HP is above 70%",
         cooldown: [ 24, 15 ],
         evolution: 424,
-        evolvers: [ 117, 79, 85, 96, 101 ],
-        flags: { fnonly: 1 }
+        evolvers: [ 117, 79, 85, 96, 101 ]
     },
     424: { // Humming Brook
         special: "Recovers 4,343 HP, reduces the defense of all enemies by 50% for 2 turns",
         specialName: "Lullaby Parry",
         captain: "Prevents death as long as HP is above 70%",
-        cooldown: [ 24, 15 ],
-        flags: { fnonly: 1 }
+        cooldown: [ 24, 15 ]
     },
     425: { // Ryuuma
         special: "Deals random PSY damage to all enemies",
         specialName: "Shusui Three-Verse Humming: Arrow-Notch Slash",
         captain: "Boosts ATK and HP of Slasher characters by 1.5x",
-        cooldown: [ 35, 18 ],
-        flags: { fnonly: 1 }
+        cooldown: [ 35, 18 ]
     },
     426: { // Masira
         special: "Boosts ATK of STR characters by 1.05x for 5 turns",
@@ -2964,16 +2950,14 @@ window.details = {
         special: "Reduces Bind and Silence duration by 1 turn",
         specialName: "Newkama Temptation",
         captain: "Boosts ATK by 2x following a chain of QCK > STR > DEX attacks no lower than Good",
-        cooldown: [ 16, 6 ],
-        flags: { fnonly: 1 }
+        cooldown: [ 16, 6 ]
     },
     434: { // Caroline
         special: "Amplifies the effect of orbs by 1.25x for 3 turns",
         specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.25x more damage and opposite orbs will deal 1.25x less damage",
         specialName: "Newkama Kenpo - Maiden's Awakening",
         captain: "Boosts ATK by 2x following a chain of PSY > INT > INT attacks no lower than Good",
-        cooldown: [ 21, 11 ],
-        flags: { fnonly: 1 }
+        cooldown: [ 21, 11 ]
     },
     435: { // Sanji - Traditional Kamabakka Kingdom Duel Style
         special: "Changes [RCV], [STR] and [DEX] orbs into either [STR] or [QCK] orbs",
@@ -2981,15 +2965,13 @@ window.details = {
         captain: "Boosts ATK by 2x following a chain of INT > PSY > QCK attacks no lower than Good",
         cooldown: [ 12, 8 ],
         evolution: 436,
-        evolvers: [ 117, 85, 433, 434, 96 ],
-        flags: { fnonly: 1 }
+        evolvers: [ 117, 85, 433, 434, 96 ]
     },
     436: { // Sanji Candy-chan
         special: "Changes [RCV], [STR] and [DEX] orbs into either [STR] or [QCK] orbs",
         specialName: "Blooming into a Lovely Maiden",
         captain: "Boosts ATK by 2.25x following a chain of INT > PSY > QCK attacks no lower than Good",
-        cooldown: [ 12, 8 ],
-        flags: { fnonly: 1 }
+        cooldown: [ 12, 8 ]
     },
     437: { // Perona Sweet
         special: "Recovers 3x character's RCV in HP, reduces damage received by 80% for 1 turn, deals 1,000 fixed damage to all enemies at the end of the following turn",
@@ -3029,15 +3011,13 @@ window.details = {
     444: { // Carue
         captain: "Boosts ATK of Booster characters by 2x if HP is above 70% at the start of the turn",
         evolution: 445,
-        evolvers: [ 441, 442, 443 ],
-        flags: { fnonly: 1 }
+        evolvers: [ 441, 442, 443 ]
     },
     445: { // Captain Carue & The Super Spot-Billed Duck Squad
         special: "Changes all orbs into either [STR], [DEX], [QCK], [PSY] or [INT] orbs, freely switch orbs between slots 3 times",
         specialName: "Support! Supersonic Duck Squadron!",
         captain: "Boosts ATK of Booster characters by 2.5x if HP is above 70% at the start of the turn",
-        cooldown: [ 26, 17 ],
-        flags: { fnonly: 1 }
+        cooldown: [ 26, 17 ]
     },
     446: { // Marshall D. Teach
         special: "Deals 10 times the damage received in the previous turn in typeless damage to all enemies",
@@ -3045,15 +3025,13 @@ window.details = {
         captain: "Doubles damage received, boosts ATK of STR characters by 2x and their HP by 1.5x",
         cooldown: [ 30, 15 ],
         evolution: 447,
-        evolvers: [ 118, 266, 89, 300, 100 ],
-        flags: { raid: 1 }
+        evolvers: [ 118, 266, 89, 300, 100 ]
     },
     447: { // Blackbeard
         special: "Deals 10 times the damage received in the previous turn in typeless damage to all enemies",
         specialName: "Black Hole",
         captain: "Doubles damage received, boosts ATK of STR characters by 2.5x and their HP by 2.25x",
-        cooldown: [ 30, 15 ],
-        flags: { raid: 1 }
+        cooldown: [ 30, 15 ]
     },
     448: { // Thatch
         special: "Boosts chances of getting [QCK] orbs for 3 turns",
@@ -3157,8 +3135,7 @@ window.details = {
         special: "Recovers 33 HP after the end of each turn for 999 turns, delays all enemies for 1 turn",
         specialName: "Extra Large Candle Service Set",
         captain: "Reduces damage received by 10%",
-        cooldown: [ 14, 10 ],
-        flags: { fnonly: 1 }
+        cooldown: [ 14, 10 ]
     },
     461: { // Fugitive Bentham Mr. 2 Bon Clay
         special: "Changes own orb into [DEX], randomizes every other orb, boosts ATK of Fighter characters by 1.25x for 2 turns",
@@ -3166,15 +3143,13 @@ window.details = {
         captain: "Boosts ATK of Fighter characters by 2x",
         cooldown: [ 25, 15 ],
         evolution: 462,
-        evolvers: [ 117, 80, 86, 97, 102 ],
-        flags: { fnonly: 1 }
+        evolvers: [ 117, 80, 86, 97, 102 ]
     },
     462: { // Prison Break Expert Mr. 2 Bon Clay
         special: "Changes own orb into [DEX], randomizes every other orb, boosts ATK of Fighter characters by 1.25x for 2 turns",
         specialName: "Swan Arabesque",
         captain: "Boosts ATK of Fighter characters by 2x",
-        cooldown: [ 25, 15 ],
-        flags: { fnonly: 1 }
+        cooldown: [ 25, 15 ]
     },
     463: { // Satori
         special: "Empties all slots, deals 25x character's ATK in PSY damage to one enemy",
@@ -3492,23 +3467,20 @@ window.details = {
         captain: "Boosts ATK of Striker characters by 1.5x",
         cooldown: [ 24, 14 ],
         evolution: 510,
-        evolvers: [ 117, 85, 96, 96, 301 ],
-        flags: { fnonly: 1 }
+        evolvers: [ 117, 85, 96, 96, 301 ]
     },
     510: { // The Strongest Prisoner, Sir Crocodile Warlord of the Sea
         special: "Poisons all enemies, boosts ATK of Striker characters by 1.5x for 1 turn",
         specialNotes: "Poison deals 0.5x character's ATK in fixed damage at the end of each turn",
         specialName: "Cruel Trick - Poison Hook",
         captain: "Reduces damage received by 10%, boosts ATK of Striker characters by 2x",
-        cooldown: [ 24, 14 ],
-        flags: { fnonly: 1 }
+        cooldown: [ 24, 14 ]
     },
     511: { // Prisoner Daz Bonez Mr. 1
         special: "Reduces damage received by 30% for 2 turns, boosts ATK of Slasher character by 1.25x for 2 turns",
         specialName: "Cruel Slasher - Spider",
         captain: "Boosts ATK of Slasher characters by 2x",
-        cooldown: [ 22, 17 ],
-        flags: { fnonly: 1 }
+        cooldown: [ 22, 17 ]
     },
     512: { // Sabo Mt. Corvo's Brothers 3
         special: "Boosts chances of getting [PSY] orbs and reduces chances of getting [INT] orbs for 3 turns",
@@ -3540,16 +3512,14 @@ window.details = {
         captain: "Boosts ATK, HP and RCV of Shooter characters by 1.5x",
         cooldown: [ 24, 11 ],
         evolution: 516,
-        evolvers: [ 118, 87, 266, 303, 103 ],
-        flags: { raid: 1 }
+        evolvers: [ 118, 87, 266, 303, 103 ]
     },
     516: { // Heracles the Hero of the Forest
         special: "Changes the orbs in the left column into [INT], [PSY] and [RCV], the orbs in the right column into [STR], [DEX] and [QCK], freely switch orbs between slots 3 times",
         specialNotes: "The special is not based on chance, the orbs are always changed with the same pattern. Starting from the top left orb and proceeding clockwise, after the special is used the orbs will be: [INT], [STR], [DEX], [QCK], [RCV] and [PSY]",
         specialName: "Pop Green",
         captain: "Boosts ATK, HP and RCV of Shooter characters by 1.5x, recovers a bit of HP at the end of the turn",
-        cooldown: [ 24, 11 ],
-        flags: { raid: 1 }
+        cooldown: [ 24, 11 ]
     },
     517: { // Usoppun
         special: "Empties all slots with [RCV] orbs, boosts ATK of all characters by 5% for 2 turns",
@@ -3723,27 +3693,23 @@ window.details = {
         captain: "Boosts chain multiplier by 2x",
         cooldown: [ 25, 16 ],
         evolution: 538,
-        evolvers: [ 117, 81, 92, 98, 103 ],
-        flags: { fnonly: 1 }
+        evolvers: [ 117, 81, 92, 98, 103 ]
     },
     538: { // Domino, Impel Down's Head Jailer
         special: "Reduces Bind and Silence duration by 1 turn, locks all orbs for 1 turn",
         specialName: "Sea Stone Handcuffs",
         captain: "Boosts chain multiplier by 2x, recovers 2x character's RCV in HP at the end of the turn",
-        cooldown: [ 25, 16 ],
-        flags: { fnonly: 1 }
+        cooldown: [ 25, 16 ]
     },
     539: { // Minorhinoceros
         special: "Changes own orb into [STR], deals 25x character's ATK in STR damage to one enemy",
         specialName: "Bashful Prison Beast's Metal Rod",
-        cooldown: [ 50, 20 ],
-        flags: { fnonly: 1 }
+        cooldown: [ 50, 20 ]
     },
     540: { // Basilisk
         special: "Boosts chances of getting [DEX] orbs for 2 turns",
         specialName: "Deadly Glare",
-        cooldown: [ 16, 12 ],
-        flags: { fnonly: 1 }
+        cooldown: [ 16, 12 ]
     },
     541: { // Ohm
         special: "Greatly reduces chances of getting [PSY], [INT], [TND] and [RCV] slots for 5 turns",
@@ -3807,27 +3773,23 @@ window.details = {
         captain: "Boosts ATK by 2x after scoring 3 Perfects in a row",
         cooldown: [ 20, 10 ],
         evolution: 550,
-        evolvers: [ 117, 82, 88, 99, 104 ],
-        flags: { fnonly: 1 }
+        evolvers: [ 117, 82, 88, 99, 104 ]
     },
     550: { // Sadi-chan, Impel Down's Chief Guard
         special: "Boosts ATK against enemies with reduced defense by 1.3x for 3 turns",
         specialName: "Arousal Manifesto - Red Demon Whip",
         captain: "Boosts ATK by 2.5x after scoring 3 Perfects in a row",
-        cooldown: [ 20, 10 ],
-        flags: { fnonly: 1 }
+        cooldown: [ 20, 10 ]
     },
     551: { // Minokoala
         special: "Reduces damage received by 50% for 1 turn, deals 15x character's ATK in STR damage to one enemy",
         specialName: "Uncompromising Prison Beast's Morning Star",
-        cooldown: [ 45, 15 ],
-        flags: { fnonly: 1 }
+        cooldown: [ 45, 15 ]
     },
     552: { // Manticore
         special: "Reduces the defense of all enemies by 100% for 1 turn",
         specialName: "Cursed Shout",
-        cooldown: [ 33, 18 ],
-        flags: { fnonly: 1 }
+        cooldown: [ 33, 18 ]
     },
     553: { // Roronoa Zoro, Merveille's Adventurer (Strong World Zoro)
         special: "Changes neighboring slots' orbs into [DEX], deals 1,000 fixed damage to all enemies",
@@ -3957,30 +3919,26 @@ window.details = {
         captainNotes: "The bonus is cumulative. STR Fighter characters get a 2.25x bonus.",
         cooldown: [ 25, 14 ],
         evolution: 571,
-        evolvers: [ 170, 142, 184, 237, 572 ],
-        flags: { fnonly: 1 }
+        evolvers: [ 170, 142, 184, 237, 572 ]
     },
     571: { // Monkey D. Luffy Davy Back Fight - Combat
         special: "Changes hindrance orbs into [STR], deals 20x character's ATK in STR damage to one enemy",
         specialName: "Gum-Gum Flail",
         captain: "Boosts ATK of STR and Fighter characters by 1.5x, reduces cooldown of all specials by 1 turn at the start of the fight",
         captainNotes: "The bonus is cumulative. STR Fighter characters get a 2.25x bonus.",
-        cooldown: [ 25, 14 ],
-        flags: { fnonly: 1 }
+        cooldown: [ 25, 14 ]
     },
     572: { // Usopp Davy Back Fight - Second
         special: "Boosts ATK of Fighter characters by 2x for 1 turn, binds himself for 15 turns",
         specialName: "Tenacious Yell",
         captain: "Boosts ATK of Fighter characters by 2.5x if HP is above 99% at the start of the turn",
-        cooldown: [ 30, 15 ],
-        flags: { fnonly: 1 }
+        cooldown: [ 30, 15 ]
     },
     573: { // Tony Tony Chopper Davy Back Fight - Mask
         special: "Reduces Silence duration by 2 turns, recovers 10x character's RCV in HP",
         specialName: "Noble Support",
         captain: "Boosts RCV of all characters by 1.2x",
-        cooldown: [ 20, 15 ],
-        flags: { fnonly: 1 }
+        cooldown: [ 20, 15 ]
     },
     574: { // Aokiji
         special: "Boosts ATK of Striker characters by 1.75x for 2 turns, locks all orbs for 2 turns",
@@ -3988,15 +3946,13 @@ window.details = {
         captain: "Boosts ATK of Striker characters by 2x",
         cooldown: [ 33, 18 ],
         evolution: 575,
-        evolvers: [ 118, 88, 266, 304, 104 ],
-        flags: { raid: 1 }
+        evolvers: [ 118, 88, 266, 304, 104 ]
     },
     575: { // Aokiji the Freezing Man
         special: "Boosts ATK of Striker characters by 1.75x for 2 turns, locks all orbs for 2 turns",
         specialName: "Ice Block - Pheasant Beak",
         captain: "Boosts ATK and HP of Striker characters by 2x",
-        cooldown: [ 33, 18 ],
-        flags: { raid: 1 }
+        cooldown: [ 33, 18 ]
     },
     576: { // Tea Time Nami
         special: "Changes [PSY] orbs into [INT] orbs, boosts RCV of all characters by 1.5x for 1 turn",
@@ -4041,29 +3997,25 @@ window.details = {
         special: "Cuts the current HP of each enemy by 7%",
         specialName: "Large Calibre Bazooka",
         captain: "Boosts ATK of STR characters by 1.5x",
-        cooldown: [ 20, 11 ],
-        flags: { fnonly: 1 }
+        cooldown: [ 20, 11 ]
     },
     582: { // Kamakiri
         special: "Deals 10x character's ATK in QCK damage to one enemy, boosts ATK of QCK character by 1.5x for 1 turn",
         specialName: "Burn Blade",
         captain: "Boosts ATK and HP of Striker characters by 1.5x",
-        cooldown: [ 26, 17 ],
-        flags: { fnonly: 1 }
+        cooldown: [ 26, 17 ]
     },
     583: { // Laki
         special: "Changes own orb into [INT] and the captain's orb into [DEX], boosts RCV of Shooter characters by 300 units for 3 turns",
         specialName: "Disrupting Warning Shot",
         captain: "Boosts ATK and RCV of Shooter characters by 1.5x",
-        cooldown: [ 21, 10 ],
-        flags: { fnonly: 1 }
+        cooldown: [ 21, 10 ]
     },
     584: { // Aisa
         special: "Reduces damage received from PSY enemies by 100% for 1 turn",
         specialName: "Mantra",
         captain: "Reduces cooldown of all specials by 3 turns at the start of the fight, reduces ATK, HP and RCV of all characters by 90%",
-        cooldown: [ 22, 8 ],
-        flags: { fnonly: 1 }
+        cooldown: [ 22, 8 ]
     },
     585: { // Nojiko
         special: "Changes the captain's orb into [PSY], recovers 9x character's RCV in HP",
@@ -4140,15 +4092,13 @@ window.details = {
         captain: "Boosts ATK of characters with fewer than 3 stars by 2.5x",
         cooldown: [ 16, 6 ],
         evolution: 599,
-        evolvers: [ 117, 82, 82, 88, 88 ],
-        flags: { fnonly: 1 }
+        evolvers: [ 117, 82, 82, 88, 88 ]
     },
     599: { // Buggy of the Roger Pirates
         special: "Changes own orb into [INT], freely move orbs between slots once",
         specialName: "Split Split Cannon",
         captain: "Boosts ATK of characters with fewer than 3 stars by 3x",
-        cooldown: [ 16, 6 ],
-        flags: { fnonly: 1 }
+        cooldown: [ 16, 6 ]
     },
     600: { // Shanks the Pirate Apprentice
         special: "Deals 15x character's ATK in PSY damage to one enemy, boosts ATK of PSY characters by 1.3x for 2 turns",
@@ -4156,15 +4106,13 @@ window.details = {
         captain: "Boosts ATK of PSY characters by 1.5x",
         cooldown: [ 18, 10 ],
         evolution: 601,
-        evolvers: [ 117, 81, 87, 98, 103 ],
-        flags: { fnonly: 1 }
+        evolvers: [ 117, 81, 87, 98, 103 ]
     },
     601: { // Shanks of the Roger Pirates
         special: "Deals 15x character's ATK in PSY damage to one enemy, boosts ATK of PSY characters by 1.3x for 2 turns",
         specialName: "Sword Draw - Single Flash",
         captain: "Boosts ATK of PSY characters by 2x",
-        cooldown: [ 18, 10 ],
-        flags: { fnonly: 1 }
+        cooldown: [ 18, 10 ]
     },
     602: { // Enel - 200 Million Volt Thunder God
         special: "Reduces crew's current HP by 90%, deals 20,000 fixed damage to all enemies, boosts ATK of QCK characters by 2x for 1 turn",
@@ -4172,15 +4120,13 @@ window.details = {
         captain: "Boosts ATK of QCK characters by 2x",
         cooldown: [ 32, 17 ],
         evolution: 603,
-        evolvers: [ 118, 266, 96, 301, 101 ],
-        flags: { raid: 1 }
+        evolvers: [ 118, 266, 96, 301, 101 ]
     },
     603: { // Enel the Lightning Human - 200 Million Volt Thunder God
         special: "Reduces crew's current HP by 90%, deals 20,000 fixed damage to all enemies, boosts ATK of QCK characters by 2x for 1 turn",
         specialName: "200 Million Volt Lightning God",
         captain: "Boosts ATK of QCK characters by 2.25x, recovers 5x character's RCV in HP at the end of the turn",
-        cooldown: [ 32, 17 ],
-        flags: { raid: 1 }
+        cooldown: [ 32, 17 ]
     },
     604: { // Sanji, Record of the Voyage - Strawhat Crew (Log Sanji)
         special: "Cuts the current HP of each enemy by 10%, changes [QCK] orbs into [DEX] orbs",
@@ -4204,27 +4150,23 @@ window.details = {
         captain: "Boosts ATK of Fighter characters by 2x if HP is below 50% at the start of the turn",
         cooldown: [ 23, 13 ],
         evolution: 607,
-        evolvers: [ 117, 80, 86, 97, 102 ],
-        flags: { fnonly: 1 }
+        evolvers: [ 117, 80, 86, 97, 102 ]
     },
     607: { // Red Leg Zeff, Captain of the Cook Pirates
         special: "Deals 20x character's ATK in DEX damage to one enemy, changes neighboring slots' orbs into [RCV] orbs",
         specialName: "Red Leg Kick",
         captain: "Boosts ATK of Fighter characters by 2.5x if HP is below 50% at the start of the turn",
-        cooldown: [ 23, 13 ],
-        flags: { fnonly: 1 }
+        cooldown: [ 23, 13 ]
     },
     608: { // Thug Patty
         special: "For 1 turn, boosts the amount healed by RCV orbs by 1.5x, then 2x, then 2.5x from the third crew member onward",
         specialName: "Wicked Strength",
-        cooldown: [ 14, 7 ],
-        flags: { fnonly: 1 }
+        cooldown: [ 14, 7 ]
     },
     609: { // Thug Carne
         special: "Changes the captain's orb into [RCV], randomizes every other orb",
         specialName: "Wicked Spirit",
-        cooldown: [ 15, 8 ],
-        flags: { fnonly: 1 }
+        cooldown: [ 15, 8 ]
     },
     610: { // Hiking Bear
         special: "Changes [TND] orbs into [RCV] orbs",
@@ -4370,29 +4312,25 @@ window.details = {
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK and RCV of QCK and PSY characters by 1.25x",
         cooldown: [ 25, 16 ],
         evolution: 635,
-        evolvers: [ 117, 79, 85, 96, 101 ],
-        flags: { fnonly: 1 }
+        evolvers: [ 117, 79, 85, 96, 101 ]
     },
     635: { // Keimi, Takoyaki Stand Assistant
         special: "Boosts chances of getting [QCK] and [PSY] orbs, boosts ATK of QCK and PSY characters by 1.2x",
         specialName: "Guiding Mermaid Voice",
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK and RCV of QCK and PSY characters by 1.5x",
-        cooldown: [ 25, 16 ],
-        flags: { fnonly: 1 }
+        cooldown: [ 25, 16 ]
     },
     636: { // Pappug
         special: "Binds himself for 3 turns, reduces damage received by 50% for 3 turns, recovers a small amount of HP at the end of the turn for 3 turns",
         specialName: "Wretched Ballade",
         captain: "Boosts ATK of characters with cost 2 or less by 3x",
-        cooldown: [ 23, 15 ],
-        flags: { fnonly: 1 }
+        cooldown: [ 23, 15 ]
     },
     637: { // Hatchan, Takoyaki Stand Owner
         special: "Cuts the current HP of each enemy by 8%, boosts ATK against enemies with increased defense by 1.3x for 1 turn",
         specialName: "Hachi Ink Jet",
         captain: "Recovers 618 HP at the end of the turn, boosts ATK of Slasher characters by 1.5x",
-        cooldown: [ 25, 12 ],
-        flags: { fnonly: 1 }
+        cooldown: [ 25, 12 ]
     },
     638: { // Doma
         special: "Changes [PSY] and [INT] orbs into [QCK] orbs, reduces Bind duration by 1 turn",
@@ -4520,8 +4458,7 @@ window.details = {
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of DEX characters by 2x if they have matching orbs",
         cooldown: [ 28, 14 ],
         evolution: 653,
-        evolvers: [ 116, 117, 80, 91, 97 ],
-        flags: { raid: 1 }
+        evolvers: [ 116, 117, 80, 91, 97 ]
     },
     653: { // Duval, Head of the Flying Fish Riders
         special: "Cuts the current HP of each enemy by 20%, reduces damage received by 50% for 1 turn",
@@ -4529,15 +4466,13 @@ window.details = {
         captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of DEX characters by 2.25x if they have matching orbs",
         cooldown: [ 28, 14 ],
         evolution: [ 654, 654 ],
-        evolvers: [ [ 118, 86, 266, 97, 102 ], [ 18 ] ],
-        flags: { raid: 1 }
+        evolvers: [ [ 118, 86, 266, 97, 102 ], [ 18 ] ]
     },
     654: { // Duval, Head of the Rosy Life Riders
         special: "Cuts the current HP of each enemy by 20%, reduces damage received by 50% for 1 turn",
         specialName: "Heart-Smashing Horn",
         captain: "Reduces cooldown of all specials by 3 turns at the start of the fight, boosts ATK of DEX characters by 2.75x if they have matching orbs",
-        cooldown: [ 28, 14 ],
-        flags: { raid: 1 }
+        cooldown: [ 28, 14 ]
     },
     655: { // Pirate Arlong
         special: "Changes empty slots and [TND] orbs into [STR] orbs, deals 10x character's ATK in STR damage to one enemy, amplifies the effect of orbs by 1.25x for 2 turns",
@@ -4546,37 +4481,32 @@ window.details = {
         captain: "Boosts ATK of STR characters by 1.5x",
         cooldown: [ 24, 15 ],
         evolution: 656,
-        evolvers: [ 117, 78, 84, 95, 100 ],
-        flags: { fnonly: 1 }
+        evolvers: [ 117, 78, 84, 95, 100 ]
     },
     656: { // Arlong of the Sun Pirates
         special: "Changes empty slots and [TND] orbs into [STR] orbs, deals 10x character's ATK in STR damage to one enemy, amplifies the effect of orbs by 1.25x for 2 turns",
         specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.25x more damage and opposite orbs will deal 1.25x less damage",
         specialName: "Tooth Gum",
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of STR characters by 2x",
-        cooldown: [ 24, 15 ],
-        flags: { fnonly: 1 }
+        cooldown: [ 24, 15 ]
     },
     657: { // Kuroobi of the Sun Pirates
         special: "Changes [INT] and [PSY] orbs into either [STR] orbs or empty slots",
         specialName: "Forearm Sledge",
         captain: "Boosts ATK of Fighter characters by 1.5x",
-        cooldown: [ 20, 10 ],
-        flags: { fnonly: 1 }
+        cooldown: [ 20, 10 ]
     },
     658: { // Choo of the Sun Pirates
         special: "Changes all orbs into either [INT] or [PSY] orbs",
         specialName: "Lipowertzer",
         captain: "Boosts ATK of Shooter characters by 1.5x",
-        cooldown: [ 30, 17 ],
-        flags: { fnonly: 1 }
+        cooldown: [ 30, 17 ]
     },
     659: { // Monkey D. Luffy Swim Ring
         special: "Reduces Bind and Silence duration by 2 turns, reduces damage received by 50% for 2 turns",
         specialName: "Gum-Gum Balloon Swim",
         captain: "Boosts ATK by 2.5x after scoring 3 Perfects in a row",
-        cooldown: [ 20, 15 ],
-        flags: { fnonly: 1 }
+        cooldown: [ 20, 15 ]
     },
     660: { // Usopp, Record of the Voyage - Strawhat Crew (Log Usopp)
         special: "Delays all enemies for 2 turns, reduces the defense of all enemies by 50% for 2 turns",
@@ -4608,16 +4538,14 @@ window.details = {
         captain: "Recovers 2x character's RCV in HP at the end of the turn",
         cooldown: [ 25, 16 ],
         evolution: 664,
-        evolvers: [ 117, 81, 87, 98, 103 ],
-        flags: { fnonly: 1 }
+        evolvers: [ 117, 81, 87, 98, 103 ]
     },
     664: { // Nefertari Vivi, Vice-Leader of the Suna Suna Clan
         special: "Deals PSY damage to one enemy, recovers 5x character's RCV in HP at the end of the turn for 5 turns",
         specialNotes: "The exact damage is proportional to the crew's remaining HP and is higher the lower the HP is. The formula used is 80000 * (1 - (current HP) / (total HP))",
         specialName: "Vivi's Important Security Guard",
         captain: "Recovers 3x character's RCV in HP at the end of the turn",
-        cooldown: [ 25, 16 ],
-        flags: { fnonly: 1 }
+        cooldown: [ 25, 16 ]
     },
     665: { // Koza, Alabasta Citizen
         special: "Changes own orb into [QCK], boosts ATK against enemies with reduced defense by 1.3x for 2 turns",
@@ -4625,22 +4553,19 @@ window.details = {
         captain: "Boosts ATK of all characters by 1.2x, reduces HP and RCV of all characters by 80%",
         cooldown: [ 19, 10 ],
         evolution: 666,
-        evolvers: [ 117, 79, 85, 96, 101 ],
-        flags: { fnonly: 1 }
+        evolvers: [ 117, 79, 85, 96, 101 ]
     },
     666: { // Koza, Leader of the Suna Suna Clan
         special: "Changes own orb into [QCK], boosts ATK against enemies with reduced defense by 1.3x for 2 turns",
         specialName: "Let's Go! Suna Suna Clan!!",
         captain: "Boosts ATK of all characters by 1.75x, reduces HP and RCV of all characters by 80%",
-        cooldown: [ 19, 10 ],
-        flags: { fnonly: 1 }
+        cooldown: [ 19, 10 ]
     },
     667: { // Nefertari Cobra, King of the Alabasta Kingdom
         special: "Prevents death as long as HP is above 50% for 1 turn",
         specialName: "King's Chopper",
         captain: "Reduces damage received by 10%, boosts ATK of all characters by 1.5x",
-        cooldown: [ 28, 15 ],
-        flags: { fnonly: 1 }
+        cooldown: [ 28, 15 ]
     },
     668: { // Sabo
         special: "Boosts ATK of Freedom characters by 1.5x for 1 turn. If during that turn every unit scores a Perfect hit, boosts ATK of Freedom characters by 2x in the following turn.",
@@ -4747,52 +4672,45 @@ window.details = {
         specialName: "Midsummer Relax Time",
         cooldown: [ 20, 13 ],
         evolution: 681,
-        evolvers: [ 117, 80, 86, 97, 302 ],
-        flags: { fnonly: 1 }
+        evolvers: [ 117, 80, 86, 97, 302 ]
     },
     681: { // Lemon Ice Cream Loving Nami
         special: "Recovers 5x character's RCV in HP, boosts ATK and RCV of DEX characters by 1.25x for 2 turns",
         specialName: "Midsummer Relax Time",
         captain: "Boosts ATK and RCV of Striker characters by 1.5x",
-        cooldown: [ 20, 13 ],
-        flags: { fnonly: 1 }
+        cooldown: [ 20, 13 ]
     },
     682: { // Ice Cream Loving Robin
         special: "Recovers 2,561 HP, reduces damage received by 50% for 2 turns",
         specialName: "Transcendental Serenity Healing",
         cooldown: [ 22, 15 ],
         evolution: 683,
-        evolvers: [ 117, 81, 87, 98, 103 ],
-        flags: { fnonly: 1 }
+        evolvers: [ 117, 81, 87, 98, 103 ]
     },
     683: { // Chocolate Ice Cream Loving Robin
         special: "Recovers 2,561 HP, reduces damage received by 50% for 2 turns",
         specialName: "Transcendental Serenity Healing",
         captain: "Boosts ATK and RCV of Fighter characters by 1.5x",
-        cooldown: [ 22, 15 ],
-        flags: { fnonly: 1 }
+        cooldown: [ 22, 15 ]
     },
     684: { // Ice Cream Loving Perona
         special: "Recovers 3x character's RCV in HP, reduces damage received by 80% for 1 turn",
         specialName: "Romantic Ghost",
         cooldown: [ 23, 16 ],
         evolution: 685,
-        evolvers: [ 117, 88, 93, 99, 304 ],
-        flags: { fnonly: 1 }
+        evolvers: [ 117, 88, 93, 99, 304 ]
     },
     685: { // Strawberry Ice Cream Loving Perona
         special: "Recovers 3x character's RCV in HP, reduces damage received by 80% for 1 turn",
         specialName: "Romantic Ghost",
         captain: "Boosts ATK and RCV of Shooter characters by 1.5x",
-        cooldown: [ 23, 16 ],
-        flags: { fnonly: 1 }
+        cooldown: [ 23, 16 ]
     },
     686: { // Vivi's Breather
         special: "Delays all enemies for 1 turn, recovers 3x character's RCV in HP at the end of the turn for 3 turns",
         specialName: "Captivating Perfume Dance - Relaxation",
         captain: "Boosts ATK and RCV of Slasher characters by 1.5x",
-        cooldown: [ 13, 13 ],
-        flags: { fnonly: 1 }
+        cooldown: [ 13, 13 ]
     },
     687: { // Calgara
         special: "Deals 13x character's ATK in STR damage to all enemies, boosts ATK of Freedom characters by 1.3x for 1 turn",
@@ -4800,15 +4718,13 @@ window.details = {
         captain: "Boosts ATK of Freedom characters by 1.5x",
         cooldown: [ 19, 14 ],
         evolution: 688,
-        evolvers: [ 117, 78, 84, 95, 100 ],
-        flags: { fnonly: 1 }
+        evolvers: [ 117, 78, 84, 95, 100 ]
     },
     688: { // Calgara, the Great Warrior of Shandia
         special: "Deals 13x character's ATK in STR damage to all enemies, boosts ATK of Freedom characters by 1.3x for 1 turn",
         specialName: "First Spear of the Battle",
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of Freedom characters by 2x",
-        cooldown: [ 19, 14 ],
-        flags: { fnonly: 1 }
+        cooldown: [ 19, 14 ]
     },
     689: { // Montblanc Noland
         special: "Amplifies the effect of orbs by 1.5x for 2 turns",
@@ -4817,16 +4733,14 @@ window.details = {
         captain: "Boosts ATK and RCV of Slasher characters by 1.2x",
         cooldown: [ 18, 10 ],
         evolution: 690,
-        evolvers: [ 117, 82, 88, 99, 104 ],
-        flags: { fnonly: 1 }
+        evolvers: [ 117, 82, 88, 99, 104 ]
     },
     690: { // Montblanc Noland, Explorer and Admiral of the Lvneel Kingdom
         special: "Amplifies the effect of orbs by 1.5x for 2 turns",
         specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.5x more damage and opposite orbs will deal 1.5x less damage",
         specialName: "Botanist's Great Discovery",
         captain: "Boosts ATK and RCV of Slasher characters by 1.5x",
-        cooldown: [ 18, 10 ],
-        flags: { fnonly: 1 }
+        cooldown: [ 18, 10 ]
     },
     691: { // Halberd Corporal Navy Headquarters
         special: "Changes [PSY] orbs into [DEX] orbs",
@@ -4974,22 +4888,19 @@ window.details = {
         captain: "Boosts ATK of Striker characters by 2x if HP is above 50% at the start of the turn",
         cooldown: [ 22, 14 ],
         evolution: 713,
-        evolvers: [ 117, 90, 96, 301, 101 ],
-        flags: { fnonly: 1 }
+        evolvers: [ 117, 90, 96, 301, 101 ]
     },
     713: { // Gan Fall the Knight of the Sky
         special: "Deals 15x character's ATK in QCK damage to one enemy, boosts ATK of the characters in the top row by 1.5x for 2 turns",
         specialNotes: "The special boosts the attack of only the crew's captain and the currently selected friend captain",
         specialName: "Sky Knight's Javelin",
         captain: "Boosts ATK of Striker characters by 2.5x if HP is above 50% at the start of the turn",
-        cooldown: [ 22, 14 ],
-        flags: { fnonly: 1 }
+        cooldown: [ 22, 14 ]
     },
     714: { // Pierre
         special: "Randomizes slots with [STR], [QCK], [INT] or [PSY] orbs",
         specialName: "Pegasus' Neigh",
-        cooldown: [ 22, 14 ],
-        flags: { fnonly: 1 }
+        cooldown: [ 22, 14 ]
     },
     715: { // Konis
         special: "Boosts ATK and RCV of Freedom characters by 1.5x for 2 turns, seals herself for 3 turns",
@@ -4997,15 +4908,13 @@ window.details = {
         captain: "Boosts RCV of all characters by 2x if HP is low",
         cooldown: [ 27, 14 ],
         evolution: 716,
-        evolvers: [ 116, 117, 81, 87 ],
-        flags: { fnonly: 1 }
+        evolvers: [ 116, 117, 81, 87 ]
     },
     716: { // Konis, Skypiean Maiden
         special: "Boosts ATK and RCV of Freedom characters by 1.5x for 2 turns, seals herself for 3 turns",
         specialName: "Angel's Harp - Healing",
         captain: "Boosts RCV of all characters by 5x if HP is low",
-        cooldown: [ 27, 14 ],
-        flags: { fnonly: 1 }
+        cooldown: [ 27, 14 ]
     },
     717: { // Dracule Mihawk Warlord of the Sea
         special: "Deals 50% of the damage dealt in the previous turn as typeless damage to all enemes",
@@ -5053,15 +4962,13 @@ window.details = {
         captain: "Boosts ATK of Fighter characters by 1.5x if HP is is above 99% at the start of the turn",
         cooldown: [ 16, 7 ],
         evolution: 722,
-        evolvers: [ 117, 78, 89, 95 ],
-        flags: { fnonly: 1 }
+        evolvers: [ 117, 78, 89, 95 ]
     },
     722: { // Jerry, Cipher Pol No.6
         special: "Randomizes all orbs, including hindrance orbs",
         specialName: "Screw Drop Kick",
         captain: "Boosts ATK of Fighter characters by 2x if HP is is above 99% at the start of the turn",
-        cooldown: [ 16, 7 ],
-        flags: { fnonly: 1 }
+        cooldown: [ 16, 7 ]
     },
     723: { // T-Bone
         special: "Reduces crew's current HP by 80%, deals 5x the amount of HP subtracted in typeless damage to all enemies, reduces damage received by 90% for 1 turn",
@@ -5069,15 +4976,13 @@ window.details = {
         captain: "Boosts ATK of Slasher characters by 1.5x, recovers 1.2x character's RCV in HP at the end of the turn",
         cooldown: [ 25, 16 ],
         evolution: 724,
-        evolvers: [ 117, 92, 98, 98, 103 ],
-        flags: { fnonly: 1 }
+        evolvers: [ 117, 92, 98, 98, 103 ]
     },
     724: { // Ship Cutter T-Bone, Navy Headquarters Captain
         special: "Reduces crew's current HP by 80%, deals 5x the amount of HP subtracted in typeless damage to all enemies, reduces damage received by 90% for 1 turn",
         specialName: "Right Angle Flying Bird: Bone Phoenix",
         captain: "Boosts ATK of Slasher characters by 1.75x, recovers 1.5x character's RCV in HP at the end of the turn",
-        cooldown: [ 25, 16 ],
-        flags: { fnonly: 1 }
+        cooldown: [ 25, 16 ]
     },
     725: { // Nefertari Vivi, Record of the Voyage - Strawhat Crew (Log Vivi)
         special: "Changes [TND] orbs into [QCK] orbs, freely switch orbs between slots twice",
@@ -5188,15 +5093,13 @@ window.details = {
         captain: "Reduces cooldown of all specials by 2 turns at the start of the fight",
         cooldown: [ 23, 15 ],
         evolution: 741,
-        evolvers: [ 117, 79, 90, 96 ],
-        flags: { fnonly: 1 }
+        evolvers: [ 117, 79, 90, 96 ]
     },
     741: { // Nero, Cipher Pol No.9
         special: "Deals 10x character's ATK in QCK damage to all enemies, boosts ATK against enemies with increased defense by 1.3x for 2 turns",
         specialName: "Rankyaku - Sen",
         captain: "Reduces cooldown of all specials by 3 turns at the start of the fight",
-        cooldown: [ 23, 15 ],
-        flags: { fnonly: 1 }
+        cooldown: [ 23, 15 ]
     },
     742: { // Wanze
         special: "Amplifies the effect of orbs by 1.25x for 2 turns, reduces the defense of all enemies by 80% for 2 turns",
@@ -5205,16 +5108,14 @@ window.details = {
         captain: "Boosts ATK and RCV of Freedom characters by 1.2x",
         cooldown: [ 20, 12 ],
         evolution: 743,
-        evolvers: [ 117, 80, 86, 91, 97 ],
-        flags: { fnonly: 1 }
+        evolvers: [ 117, 80, 86, 91, 97 ]
     },
     743: { // Wanze, Cipher Pol No.7
         special: "Amplifies the effect of orbs by 1.25x for 2 turns, reduces the defense of all enemies by 80% for 2 turns",
         specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.25x more damage and opposite orbs will deal 1.25x less damage",
         specialName: "Ramen Beam",
         captain: "Boosts ATK and RCV of Freedom characters by 1.5x",
-        cooldown: [ 20, 12 ],
-        flags: { fnonly: 1 }
+        cooldown: [ 20, 12 ]
     },
     744: { // Portgas D. Ace, Record of the Voyage - Whitebeard Crew (Log Ace)
         special: "Reduces damage received by 50% for 3 turns",
@@ -5360,79 +5261,73 @@ window.details = {
         specialName: "Gum-Gum Monster Pistol",
         captain: "Boosts ATK of Fighter characters by 2x",
         cooldown: [ 23, 15 ],
-        flags: { global: 1, fnonly: 1 }
+        flags: { global: 1 }
     },
     762: { // Usopp Lying Wolf
         special: "Boosts ATK of PSY characters by 1.75x for 1 turn",
         specialName: "Impact Beast",
         captain: "Boosts ATK and RCV of PSY characters by 1.5x",
         cooldown: [ 14, 10 ],
-        flags: { global: 1, fnonly: 1 }
+        flags: { global: 1 }
     },
     763: { // Franky Frankenstein
         special: "Changes own orb into [STR], freely switch orbs between slots once",
         specialName: "Franken-Franky Centaur",
         captain: "Boosts ATK of STR characters by 2x",
         cooldown: [ 15, 7 ],
-        flags: { global: 1, fnonly: 1 }
+        flags: { global: 1 }
     },
     764: { // Nami Jackie 'o Lantern
         special: "Recovers 3,000 HP",
         specialName: "Cat Burglar Trick",
         captain: "Boosts ATK and RCV of Striker characters by 1.5x",
         cooldown: [ 16, 8 ],
-        flags: { global: 1, fnonly: 1 }
+        flags: { global: 1 }
     },
     765: { // Tony Tony Chopper Lil' Vampire
         special: "Reduces Silence duration by 3 turns",
         specialName: "Scope Magic",
         captain: "Recovers 2x character's RCV in HP at the end of the turn",
         cooldown: [ 17, 9 ],
-        flags: { global: 1, fnonly: 1 }
+        flags: { global: 1 }
     },
     770: { // Dalmatian, Navy Headquarters Vice Admiral
         special: "Deals 15x character's ATK in STR damage to one enemy, boosts ATK against delayed enemies by 1.3x for 2 turns",
         specialName: "Shigan: Convergence",
         captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of STR characters by 2x",
-        cooldown: [ 23, 13 ],
-        flags: { raid: 1 }
+        cooldown: [ 23, 13 ]
     },
     771: { // Momonga, Navy Headquarters Vice Admiral
         special: "Deals 15x character's ATK in PSY damage to one enemy, boosts ATK of Knowledge characters by 1.75x for 1 turn",
         specialName: "Moonwalk: Air Walking",
         captain: "Boosts ATK of Knowledge characters by 2.5x",
-        cooldown: [ 25, 15 ],
-        flags: { raid: 1 }
+        cooldown: [ 25, 15 ]
     },
     772: { // Onigumo, Navy Headquarters Vice Admiral
         special: "Cuts the current HP of each enemy by 10%, changes [PSY] and [INT] orbs into [DEX] orbs",
         specialName: "Eight-Sword Style: Brave Warrior's Continuous Attack",
         captain: "Boosts ATK of Slasher characters by 2x, reduces damage received from QCK enemies by 20%",
-        cooldown: [ 25, 15 ],
-        flags: { raid: 1 }
+        cooldown: [ 25, 15 ]
     },
     773: { // Shu
         special: "Reduces any damage received above 3,000 HP by 80% for 1 turn",
         specialNotes: "The exact formula for the damage received is: 3000 + ((total damage) - 3000) * 0.2",
         specialName: "Rust-Rust Fruit",
         captain: "Reduces damage received by 20%",
-        cooldown: [ 20, 8 ],
-        flags: { raid: 1 }
+        cooldown: [ 20, 8 ]
     },
     774: { // Very Good
         special: "Changes [TND], [RCV], empty, bother and bomb orbs into either [STR], [DEX], [QCK], [PSY] or [INT] orbs, freely switch orbs between slots 3 times",
         specialName: "Berry-Berry Fruit",
         captain: "Boosts ATK of Freedom characters by 2x",
-        cooldown: [ 20, 11 ],
-        flags: { raid: 1 }
+        cooldown: [ 20, 11 ]
     },
     775: { // Strawberry, Navy Headquarters Vice Admiral
         special: "Deals several times the character's ATK in PSY damage to one enemy",
         specialNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the lower the HP is. The multiplier is calculated as: 125 * ( 1 - (remaining HP) / (total HP) )",
         specialName: "Angry Headbutt",
         captain: "Boosts ATK and HP of Knowledge characters by 1.5x",
-        cooldown: [ 27, 17 ],
-        flags: { raid: 1 }
+        cooldown: [ 27, 17 ]
     },
     776: { // Lucky Roo
         specialName: "Boisterous Lucky Shot!!",
