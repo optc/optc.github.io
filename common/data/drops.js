@@ -803,7 +803,7 @@ window.drops = {
         },
 
         {
-            name: 'Girls of Summer Paradise (Special Island)',
+            name: 'Girls of Summer Paradise Special Island',
             thumb: 683,
             Expert: [ 659, 680, 682, 684, 686 ]
         },
