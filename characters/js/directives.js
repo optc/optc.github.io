@@ -31,6 +31,10 @@ directives.characterTable = function($rootScope, $timeout, $compile) {
                     var id = data[data.length - 1] + 1;
                     var checkbox = $('<label><input type="checkbox" ng-change="checkLog(' + id + ')" ng-model="characterLog[' + id + ']"></input></label>');
                     $(row.cells[10 + scope.table.additional]).append(checkbox);
+                    // cosmetic fixes
+                    $(row.cells[2]).addClass('cell-' + row.cells[2].textContent);
+                    $(row.cells[row.cells.length - 2]).addClass('stars-' + row.cells[row.cells.length - 2].textContent);
+                    row.cells[row.cells.length - 2].textContent = '';
                     // compile
                     $compile($(row).contents())($rootScope);
                     if (window.units[id - 1].incomplete) $(row).addClass('incomplete');

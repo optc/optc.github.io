@@ -89,6 +89,19 @@ input[type="text"] {
 .RCV { background: peru; }
 .TND { background: coral; }
 
+.cell-STR { font-weight: bold; color: red; }
+.cell-QCK { font-weight: bold; color: blue; }
+.cell-DEX { font-weight: bold; color: green; }
+.cell-PSY { font-weight: bold; color: goldenrod; }
+.cell-INT { font-weight: bold; color: darkorchid; }
+
+.stars-1:before { font-weight: bold; color: #40a3da; content: '\2605'; }
+.stars-2:before { font-weight: bold; color: #acc523; content: '\2605\2605'; }
+.stars-3:before { font-weight: bold; color: #f7c118; content: '\2605\2605\2605'; }
+.stars-4:before { font-weight: bold; color: #f28e00; content: '\2605\2605\2605\2605'; }
+.stars-5:before { font-weight: bold; color: #ff0000; content: '\2605\2605\2605\2605\2605'; }
+.stars-6:before { font-weight: bold; color: #9932cc; content: '\2605\2605\2605\2605\2605\2605'; }
+
 .class.filter.active, .custom.filter.active, .drop.filter.active, .exc.filter.active {
     background: red;
     color: white;
