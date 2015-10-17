@@ -128,8 +128,8 @@ $.fn.dataTable.ext.search.push(function(settings, data, index) {
     }
     // exclusion filters
     if (filters.noBase && details[id].evolution) return false;
-    if (filters.noEvos && CharUtils.isEvolverBooster(unit)) return false;
-    if (filters.noFodder && CharUtils.isFodder(unit)) return false;
+    if (filters.noEvos && Utils.isEvolverBooster(unit)) return false;
+    if (filters.noFodder && Utils.isFodder(unit)) return false;
     if (filters.noFortnights && flags.fnonly) return false;
     if (filters.noRaids && flags.raid) return false;
     if (filters.noSpecials && (flags.lrr || flags.promo || flags.special)) return false;
