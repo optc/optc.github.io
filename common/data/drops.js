@@ -438,7 +438,7 @@ window.drops = {
         },
     ],
 
-    Fortnight: [
+    'Fortnight': [
 
         {
             name: 'Buggy\'s Counterattack!!',
@@ -553,7 +553,7 @@ window.drops = {
         },
 
         {
-            name: 'Absalom',
+            name: 'Perv-salom\'s Manly Adventure',
             thumb: 405,
             Expert: [ 404, 406, 407, -407, -406, -333, -312, -208, -26, -20 ],
             Elite: [ 404, 406, 407, -407, -406, -333, -312, -208, -26, -20 ]
@@ -702,7 +702,7 @@ window.drops = {
     ],
 
             
-    Raid: [
+    'Raid': [
 
         {
             name: 'Mihawk',
@@ -779,10 +779,18 @@ window.drops = {
             thumb: 654,
             Master: [ 112, 118, 302, 652 ],
             Expert: [ 86, 97, 112, 652 ]
-        }
+        },
+
+        {
+            name: 'Buster Call',
+            thumb: 771,
+            Master: [ 110, 111, 112, 113, 114, 770, 771, 772, 773, 774, 775 ],
+            Expert: [ 110, 111, 112, 113, 114, 770, 771, 772, 773, 774, 775 ]
+        },
+
     ],
 
-    Other: [
+    'Other': [
 
         {
             name: 'Chopperman Special Island',
