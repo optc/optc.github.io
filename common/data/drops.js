@@ -441,112 +441,112 @@ window.drops = {
     Fortnight: [
 
         {
-            name: 'Buggy',
+            name: 'Buggy\'s Counterattack!!',
             thumb: 39,
             Expert: [ 36, 37, 38, 99, 109, 114, -4 ],
             Elite: [ 36, 37, 38, 99, 109, 114, -3 ]
         },
 
         {
-            name: 'Alvida',
+            name: 'Alvida\'s Romance',
             thumb: 30,
             Expert: [ 28, 29, 31, 40, 84, 95, 110, 117, -30, -21, -8 ],
             Elite: [ 28, 29, 31, 40, 95, 105, 110, -21, -7 ]
         },
 
         {
-            name: 'Kuro',
+            name: 'Kuro\'s Master Plan',
             thumb: 46,
             Expert: [ 41, 42, 43, 45, -16 ],
             Elite: [ 41, 42, 43, 45, 96, 106, 111, -15 ]
         },
 
         {
-            name: 'Arlong',
+            name: 'Arlong: Empire Rising',
             thumb: 66,
             Expert: [ 61, 62, 63, 65, 89, 95, 105, 110, -12, -66 ],
             Elite: [ 61, 62, 63, 65, 95, 105, 110, -11 ]
         },
 
         {
-            name: 'Krieg',
+            name: 'Krieg\'s Assault!',
             thumb: 58,
             Expert: [ 98, 99, 108, 109, 113, 114, 53, 55, 57, -58, -20 ],
             Elite: [ 98, 99, 108, 109, 113, 114, 53, 55, 57, -58, -20, -19 ]
         },
 
         {
-            name: 'Morgan',
+            name: 'Escaped! Morgan',
             thumb: 228,
             Expert: [ 33, 35, 84, 95, 105, 107, 110, 112, -228, -34, -26, -25, -24, -23, -22 ],
             Elite: [ 33, 35, 84, 95, 105, 107, 110, 112, -228, -34, -26, -25, -24, -23, -22 ]
         },
 
         {
-            name: 'Hina',
+            name: 'Hina\'s Resort Getaway',
             thumb: 232,
             Expert: [ 43, 49, 79, 85, 96, 106, 231, -230, -229, -221, -208, -62, -54 ],
             Elite: [ 43, 49, 96, 111, 117, 231, -230, -229, -221, -208 ]
         },
 
         {
-            name: 'Cobimeppo',
+            name: 'Cobymeppo\'s Proving Ground!',
             thumb: 263,
             Expert: [ 31, 33, 262, 264, 87, 88, 98, 99, 113, -265, -263, -210, -63, -56, -32 ],
             Elite: [ 31, 33, 262, 264, 87, 88, 98, 99, 113, -265, -263, -210, -63, -56, -32 ]
         },
 
         {
-            name: 'Smoker',
+            name: 'Smoker\'s Great Pursuit',
             thumb: 268,
             Expert: [ 67, 69, 86, 97, 112, -219, -212, -205, -204, -73, -52, -50 ],
             Elite: [ 67, 69, 86, 97, 112, -219, -212, -205, -204, -73, -52, -50 ]
         },
 
         {
-            name: 'Tsuru',
+            name: 'Tsuru\'s Morning Stroll',
             thumb: 297,
             Expert: [ 99, 88, 114, 296, 298, 299, -236, -234, -223, -217, -202, -200, -199 ],
             Elite: [ 99, 88, 114, 296, 298, 299, -236, -234, -223, -202, -200 ]
         },
 
         {
-            name: 'Kalifa',
+            name: 'Kalifa\'s Secret Assignment',
             thumb: 318,
             Expert: [ 86, 97, 110, 112, 317, 319, -259, -253, -216, -215, -62, -56 ],
             Elite: [ 86, 97, 110, 112, 317, 319, -259, -253, -216, -215, -62, -56 ]
         },
 
         {
-            name: 'Lucci',
+            name: 'Lucci\'s Artisan Spirit',
             thumb: 322,
             Expert: [ 85, 96, 111, 112, 321, 323, 325, -251, -218, -75, -74, -54, -21 ],
             Elite: [ 85, 96, 111, 112, 321, 323, 325, -251, -218, -75, -74, -54, -21 ]
         },
 
         {
-            name: 'Franky',
+            name: 'Franky - Pervert\'s Aesthetic!',
             thumb: 337,
             Expert: [ 87, 98, 113, 114, 336, 338, 339, -339, -338, -255, -222, -77, -68 ],
             Elite: [ 87, 98, 113, 336, 338, 339, -339, -338, -255, -222, -77, -68 ]
         },
 
         {
-            name: 'Kraken',
+            name: 'Deep Sea Kraken',
             thumb: 341,
             Expert: [ 28, 40, 60, 213, 215, 340, -292, -291, -290, -261, -257, -214, -71, -44 ],
             Elite: [ 28, 40, 60, 213, 215, 340, -292, -291, -290, -261, -257, -214, -71, -44 ]
         },
 
         {
-            name: 'Hogback',
+            name: 'Dr. Hogback\'s Lab of the Dead',
             thumb: 386,
             Expert: [ 385, 387, -388, -335, -314, -36, -16, -11 ],
             Elite: [ 385, 387, -388, -335, -314, -36, -16, -11 ]
         },
 
         {
-            name: 'Perona',
+            name: 'Perona\'s Worden Garden',
             thumb: 392,
             Expert: [ 391, 393, 394, -394, -393, -329, -316, -47, -34, -4 ],
             Elite: [ 391, 393, 394, -394, -393, -329, -316, -47, -34, -4 ]
@@ -693,7 +693,7 @@ window.drops = {
         },
 
         {
-            name: "DEAD or TREAT!! Twilight Party",
+            name: "Twilight Party",
             thumb: 761,
             Expert: [ 761, 762, 763, 764, 765, -610, -588, -565, -556, -426, -408, -261, -217 ],
             Elite: [ 761, 762, 763, 764, 765, -610, -588, -565, -556, -426, -408, -261, -217 ]

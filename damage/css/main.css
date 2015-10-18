@@ -398,8 +398,8 @@ body, html {
 #menu {
     position: fixed;
     top: 0px;
-    left: -16.625em;
-    width: 16.625em;
+    left: -16.8em;
+    width: 16.8em;
     height: 100%;
     transition: left .1s linear;
     margin-bottom: 0;
@@ -517,6 +517,15 @@ li > div > a {
 li input {
     color: black;
     background: white;
+}
+
+nav > li > div {
+    position: relative;
+    margin-left: -1px;
+}
+
+.comodity:hover {
+    color: red;
 }
 
 /***********
@@ -783,12 +792,6 @@ li input {
 /********
  * SHIP *
  ********/
-
-#ship {
-    position: relative;
-    margin-left: -1px;
-}
-
 
 #ship-background {
     position: absolute;

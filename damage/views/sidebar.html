@@ -11,6 +11,7 @@
 
         <li>
             <div id="ship" status="{{data.ship[1]}}" ship-manager>
+                <i class="fa fa-level-up comodity" ui-sref="main.ship"></i>
                 <i class="fa fa-ship"></i>
                 <span>{{ships[data.ship[0]].name}} (lv. {{data.ship[1]}})</span>
                 <div id="ship-background"></div>
@@ -19,6 +20,7 @@
 
         <li>
             <div id="defenseContainer" title="Middle-click or CTRL-click for details" defense-on-click>
+                <i class="fa fa-level-up comodity" ui-sref="main.defense"></i>
                 <i class="fa fa-shield"></i>
                 Enemy defense: <input type="text" id="defense" ng-model="data.defense"></input>
             </div>
