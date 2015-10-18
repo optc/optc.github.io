@@ -33,8 +33,9 @@ directives.characterTable = function($rootScope, $timeout, $compile) {
                     $(row.cells[10 + scope.table.additional]).append(checkbox);
                     // cosmetic fixes
                     $(row.cells[2]).addClass('cell-' + row.cells[2].textContent);
-                    $(row.cells[row.cells.length - 2]).addClass('stars-' + row.cells[row.cells.length - 2].textContent);
-                    row.cells[row.cells.length - 2].textContent = '';
+                    var n = row.cells.length - 2 - scope.table.additional;
+                    $(row.cells[n]).addClass('stars-' + row.cells[n].textContent);
+                    row.cells[n].textContent = '';
                     // compile
                     $compile($(row).contents())($rootScope);
                     if (window.units[id - 1].incomplete) $(row).addClass('incomplete');
