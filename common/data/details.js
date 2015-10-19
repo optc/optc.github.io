@@ -243,7 +243,7 @@ window.details = {
         flags: { global: 1 }
     },
     31: { // Coby
-        captain: "Recovers 2x character's RCV in HP at the end of the turn",
+        captain: "Recovers 2x character's RCV in HP at the end of each turn",
         evolution: 32,
         evolvers: [ 115, 81 ],
         flags: { global: 1 }
@@ -251,7 +251,7 @@ window.details = {
     32: { // Cabin Boy Coby
         special: "Changes [RCV] orbs into [TND] orbs",
         specialName: "Shooting Spree",
-        captain: "Recovers 2x character's RCV in HP at the end of the turn",
+        captain: "Recovers 2x character's RCV in HP at the end of each turn",
         cooldown: [ 13, 7 ],
         flags: { global: 1 }
     },
@@ -384,12 +384,12 @@ window.details = {
     50: { // Patty
         special: "Deals 5x character's ATK in STR damage to one enemy",
         specialName: "The Meatball Of Doom",
-        captain: "Recovers 4x character's RCV in HP at the end of the turn",
+        captain: "Recovers 4x character's RCV in HP at the end of each turn",
         cooldown: [ 15, 10 ],
         flags: { global: 1 }
     },
     51: { // Carne
-        captain: "Recovers 3x character's RCV in HP at the end of the turn",
+        captain: "Recovers 3x character's RCV in HP at the end of each turn",
         flags: { global: 1 }
     },
     52: { // Chef Zeff
@@ -536,7 +536,7 @@ window.details = {
     71: { // Miss Wednesday
         special: "Reduces damage received by 50% for 1 turn",
         specialName: "Enchanting Vertigo Dance",
-        captain: "Recovers 2x character's RCV in HP at the end of the turn",
+        captain: "Recovers 2x character's RCV in HP at the end of each turn",
         cooldown: [ 17, 10 ],
         evolution: [ 72, 72 ],
         evolvers: [ [ 117, 81, 98 ], [ 444 ] ],
@@ -545,7 +545,7 @@ window.details = {
     72: { // Nefertari Vivi
         special: "Randomizes all orbs",
         specialName: "Charge! Supersonic Duck Squadron!",
-        captain: "Recovers 3x character's RCV in HP at the end of the turn",
+        captain: "Recovers 3x character's RCV in HP at the end of each turn",
         cooldown: [ 12, 6 ],
         evolution: 73,
         evolvers: [ 118, 83, 87, 98, 103 ],
@@ -554,7 +554,7 @@ window.details = {
     73: { // Princess Vivi
         special: "Randomizes all orbs",
         specialName: "Charge! Supersonic Duck Squadron!",
-        captain: "Recovers 5x character's RCV in HP at the end of the turn",
+        captain: "Recovers 5x character's RCV in HP at the end of each turn",
         cooldown: [ 12, 6 ],
         flags: { global: 1 }
     },
@@ -1756,7 +1756,7 @@ window.details = {
         flags: { global: 1, rr: 1 }
     },
     262: { // Training Coby
-        captain: "Recovers 2x character's RCV in HP at the end of the turn",
+        captain: "Recovers 2x character's RCV in HP at the end of each turn",
         evolution: 263,
         evolvers: [ 117, 81, 87, 92, 103 ],
         flags: { global: 1 }
@@ -2185,7 +2185,7 @@ window.details = {
     326: { // Wapol
         special: "Empties all slots, deals 25x character's ATK in STR damage to one enemy",
         specialName: "Munch-Munch Tongue Cannon",
-        captain: "Recovers 10x character's RCV in HP at the end of the turn",
+        captain: "Recovers 10x character's RCV in HP at the end of each turn",
         cooldown: [ 22, 16 ],
         evolution: 327,
         evolvers: [ 117, 84, 89, 95, 300 ],
@@ -2194,7 +2194,7 @@ window.details = {
     327: { // Wapol House
         special: "Empties all slots, deals 25x character's ATK in STR damage to one enemy",
         specialName: "Munch-Munch Tongue Cannon",
-        captain: "Recovers 10x character's RCV in HP at the end of the turn",
+        captain: "Recovers 10x character's RCV in HP at the end of each turn",
         cooldown: [ 22, 16 ],
         flags: { global: 1 }
     },
@@ -2992,7 +2992,7 @@ window.details = {
     439: { // Nefertari Vivi Love
         special: "Changes neighboring slots' orbs into [RCV], randomizes every other orb",
         specialName: "Charge! Supersonic Duck Squadron! \"Love\"",
-        captain: "Recovers 5x character's RCV in HP at the end of the turn",
+        captain: "Recovers 5x character's RCV in HP at the end of each turn",
         cooldown: [ 16, 16 ],
         evolution: 440,
         evolvers: [ 118, 81, 87, 94, 98 ],
@@ -3001,7 +3001,7 @@ window.details = {
     440: { // Princess Vivi Love
         special: "Changes neighboring slots' orbs into [RCV], randomizes every other orb",
         specialName: "Charge! Supersonic Duck Squadron! \"Love\"",
-        captain: "Recovers 7x character's RCV in HP at the end of the turn",
+        captain: "Recovers 7x character's RCV in HP at the end of each turn",
         cooldown: [ 16, 16 ],
         flags: { rr: 1, lrr: 1 }
     },
@@ -3354,7 +3354,7 @@ window.details = {
     495: { // Yellow Hunting Group Expert Shandia Warrior
         special: "Recovers 7x character's RCV in HP",
         specialName: "Middle Healing",
-        captain: "Recovers 500 HP at the end of the turn",
+        captain: "Recovers 500 HP at the end of each turn",
         cooldown: [ 20, 15 ]
     },
     496: { // Black Hunting Group Expert Shandia Warrior
@@ -3397,7 +3397,7 @@ window.details = {
         flags: { rr: 1 }
     },
     501: { // Kaya
-        special: "Recovers 5x character's RCV in HP at the end of the turn for 4 turns",
+        special: "Recovers 5x character's RCV in HP at the end of each turn for 4 turns",
         specialName: "Medical Student",
         captain: "Boosts ATK, HP and RCV of PSY characters by 1.2x",
         cooldown: [ 21, 16 ],
@@ -3406,7 +3406,7 @@ window.details = {
         flags: { rr: 1 }
     },
     502: { // Kaya, Lady of Syrup's Village
-        special: "Recovers 5x character's RCV in HP at the end of the turn for 4 turns",
+        special: "Recovers 5x character's RCV in HP at the end of each turn for 4 turns",
         specialName: "Medical Student",
         captain: "Boosts ATK, HP and RCV of PSY characters by 1.5x",
         cooldown: [ 21, 16 ],
@@ -3518,7 +3518,7 @@ window.details = {
         special: "Changes the orbs in the left column into [INT], [PSY] and [RCV], the orbs in the right column into [STR], [DEX] and [QCK], freely switch orbs between slots 3 times",
         specialNotes: "The special is not based on chance, the orbs are always changed with the same pattern. Starting from the top left orb and proceeding clockwise, after the special is used the orbs will be: [INT], [STR], [DEX], [QCK], [RCV] and [PSY]",
         specialName: "Pop Green",
-        captain: "Boosts ATK, HP and RCV of Shooter characters by 1.5x, recovers a bit of HP at the end of the turn",
+        captain: "Boosts ATK, HP and RCV of Shooter characters by 1.5x, recovers a bit of HP at the end of each turn",
         cooldown: [ 24, 11 ]
     },
     517: { // Usoppun
@@ -3622,7 +3622,7 @@ window.details = {
     529: { // Shanks, Black Clothes and Red Hair (Strong World Shanks)
         special: "Deals 35x character's ATK in PSY damage to all enemies, reduces the defense of all enemies by 100% for 2 turns",
         specialName: "Conqueror's Haki - Emperor",
-        captain: "Boosts chances of getting [PSY] orbs, boosts ATK of PSY characters proportionally to the current HP",
+        captain: "Boosts chances of getting [PSY] orbs, boosts ATK of PSY characters proportionally to the crew's current HP",
         captainNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the higher the HP is. The multiplier is calculated as 2 + 0.75 * (remaining HP) / (total HP). At full health the boost is equal to 2.75x",
         cooldown: [ 25, 20 ],
         evolution: 530,
@@ -3632,7 +3632,7 @@ window.details = {
     530: { // Shanks, The Black-Clothed Yonkou (Strong World Shanks)
         special: "Deals 35x character's ATK in PSY damage to all enemies, reduces the defense of all enemies by 100% for 2 turns",
         specialName: "Conqueror's Haki - Emperor",
-        captain: "Boosts chances of getting [PSY] orbs, boosts ATK of PSY characters proportionally to the current HP",
+        captain: "Boosts chances of getting [PSY] orbs, boosts ATK of PSY characters proportionally to the crew's current HP",
         captainNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the higher the HP is. The multiplier is calculated as 2 + 0.75 * (remaining HP) / (total HP). At full health the boost is equal to 2.75x",
         cooldown: [ 25, 20 ],
         flags: { rr: 1 }
@@ -3698,7 +3698,7 @@ window.details = {
     538: { // Domino, Impel Down's Head Jailer
         special: "Reduces Bind and Silence duration by 1 turn, locks all orbs for 1 turn",
         specialName: "Sea Stone Handcuffs",
-        captain: "Boosts chain multiplier by 2x, recovers 2x character's RCV in HP at the end of the turn",
+        captain: "Boosts chain multiplier by 2x, recovers 2x character's RCV in HP at the end of each turn",
         cooldown: [ 25, 16 ]
     },
     539: { // Minorhinoceros
@@ -3843,7 +3843,7 @@ window.details = {
         special: "Changes own orb into [STR], amplifies the effect of orbs by 1.5x for 2 turns",
         specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.5x more damage and opposite orbs will deal 1.5x less damage",
         specialName: "Roar! Zarley Davison",
-        captain: "Boosts ATK of STR characters by 2x, deals 2x character's ATK in STR damage to all enemies at the end of the turn",
+        captain: "Boosts ATK of STR characters by 2x, deals 2x character's ATK in STR damage to all enemies at the end of each turn",
         cooldown: [ 17, 11 ],
         evolution: 560,
         evolvers: [ 118, 83, 84, 300, 100 ],
@@ -3853,7 +3853,7 @@ window.details = {
         special: "Changes own orb into [STR], amplifies the effect of orbs by 1.5x for 2 turns",
         specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.5x more damage and opposite orbs will deal 1.5x less damage",
         specialName: "Roar! Zarley Davison",
-        captain: "Boosts ATK of STR characters by 2.25x, deals 2x character's ATK in STR damage to all enemies at the end of the turn",
+        captain: "Boosts ATK of STR characters by 2.25x, deals 2x character's ATK in STR damage to all enemies at the end of each turn",
         cooldown: [ 17, 11 ],
         flags: { rr: 1 }
     },
@@ -4036,7 +4036,7 @@ window.details = {
     587: { // Crocus
         special: "Removes poison, reduces Bind and Seal duration by 2 turns",
         specialName: "Merciful Painkiller",
-        captain: "Recovers 3x character's RCV in HP at the end of the turn",
+        captain: "Recovers 3x character's RCV in HP at the end of each turn",
         cooldown: [ 21, 14 ],
         evolution: 588,
         evolvers: [ 117, 304 ],
@@ -4045,7 +4045,7 @@ window.details = {
     588: { // Crocus, Twin Cape's Lighthouse Keeper
         special: "Removes poison, reduces Bind and Seal duration by 2 turns",
         specialName: "Merciful Painkiller",
-        captain: "Recovers 5x character's RCV in HP at the end of the turn",
+        captain: "Recovers 5x character's RCV in HP at the end of each turn",
         cooldown: [ 21, 14 ],
         flags: { rr: 1 }
     },
@@ -4073,7 +4073,7 @@ window.details = {
     596: { // Tony Tony Chopper, Record of the Voyage - Strawhat Crew (Log Chopper)
         special: "Deals 20x character's ATK in STR damage to one enemy, reduces the defense of one enemy by 50% for 3 turns",
         specialName: "Cloven Rose - Palm",
-        captain: "Boosts ATK of STR characters by 1.5x, recovers 500 HP at the end of the turn",
+        captain: "Boosts ATK of STR characters by 1.5x, recovers 500 HP at the end of each turn",
         cooldown: [ 20, 17 ],
         evolution: 597,
         evolvers: [ 117, 78, 84, 89, 95 ],
@@ -4082,7 +4082,7 @@ window.details = {
     597: { // Tony Tony Chopper, Dream of the Voyage - Greatest Doctor (Log Chopper)
         special: "Deals 20x character's ATK in STR damage to one enemy, reduces the defense of one enemy by 50% for 3 turns",
         specialName: "Cloven Rose - Palm",
-        captain: "Boosts ATK of STR characters by 1.75x, recovers 750 HP at the end of the turn",
+        captain: "Boosts ATK of STR characters by 1.75x, recovers 750 HP at the end of each turn",
         cooldown: [ 20, 17 ],
         flags: { rr: 1, lrr: 1 }
     },
@@ -4125,7 +4125,7 @@ window.details = {
     603: { // Enel the Lightning Human - 200 Million Volt Thunder God
         special: "Reduces crew's current HP by 90%, deals 20,000 fixed damage to all enemies, boosts ATK of QCK characters by 2x for 1 turn",
         specialName: "200 Million Volt Lightning God",
-        captain: "Boosts ATK of QCK characters by 2.25x, recovers 5x character's RCV in HP at the end of the turn",
+        captain: "Boosts ATK of QCK characters by 2.25x, recovers 5x character's RCV in HP at the end of each turn",
         cooldown: [ 32, 17 ]
     },
     604: { // Sanji, Record of the Voyage - Strawhat Crew (Log Sanji)
@@ -4241,7 +4241,7 @@ window.details = {
         cooldown: [ 20, 10 ]
     },
     623: { // Pistol Hoodlum, Yellow Bounty Hunter
-        special: "Recovers 3x character's RCV in HP at the end of the turn for 5 turns",
+        special: "Recovers 3x character's RCV in HP at the end of each turn for 5 turns",
         specialName: "Auto Repair",
         cooldown: [ 28, 18 ]
     },
@@ -4321,7 +4321,7 @@ window.details = {
         cooldown: [ 25, 16 ]
     },
     636: { // Pappug
-        special: "Binds himself for 3 turns, reduces damage received by 50% for 3 turns, recovers a small amount of HP at the end of the turn for 3 turns",
+        special: "Binds himself for 3 turns, reduces damage received by 50% for 3 turns, recovers a small amount of HP at the end of each turn for 3 turns",
         specialName: "Wretched Ballade",
         captain: "Boosts ATK of characters with cost 2 or less by 3x",
         cooldown: [ 23, 15 ]
@@ -4329,7 +4329,7 @@ window.details = {
     637: { // Hatchan, Takoyaki Stand Owner
         special: "Cuts the current HP of each enemy by 8%, boosts ATK against enemies with increased defense by 1.3x for 1 turn",
         specialName: "Hachi Ink Jet",
-        captain: "Recovers 618 HP at the end of the turn, boosts ATK of Slasher characters by 1.5x",
+        captain: "Recovers 618 HP at the end of each turn, boosts ATK of Slasher characters by 1.5x",
         cooldown: [ 25, 12 ]
     },
     638: { // Doma
@@ -4352,7 +4352,7 @@ window.details = {
         special: "Changes own orb into [DEX], deals several times the character's ATK in DEX damage to one enemy",
         specialNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the lower the HP is. The multiplier is calculated as: 50 * ( 1 - (remaining HP) / (total HP) )",
         specialName: "Pirate Brothers - Twin Combo Attack",
-        captain: "Boosts ATK of Fighter characters by 2x, deals 2x character's ATK in DEX damage to all enemies at the end of the turn",
+        captain: "Boosts ATK of Fighter characters by 2x, deals 2x character's ATK in DEX damage to all enemies at the end of each turn",
         cooldown: [ 23, 17 ],
         evolution: 641,
         evolvers: [ 118, 83, 86, 302, 102 ],
@@ -4362,7 +4362,7 @@ window.details = {
         special: "Changes own orb into [DEX], deals several times the character's ATK in DEX damage to one enemy",
         specialNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the lower the HP is. The multiplier is calculated as: 50 * ( 1 - (remaining HP) / (total HP) )",
         specialName: "Pirate Brothers - Twin Combo Attack",
-        captain: "Boosts ATK of Fighter characters by 2.25x, deals 2x character's ATK in DEX damage to all enemies at the end of the turn",
+        captain: "Boosts ATK of Fighter characters by 2.25x, deals 2x character's ATK in DEX damage to all enemies at the end of each turn",
         cooldown: [ 23, 17 ],
         flags: { rr: 1 }
     },
@@ -4532,19 +4532,19 @@ window.details = {
         flags: { special: 1 }
     },
     663: { // Nefertari Vivi, Princess of the Alabasta Kingdom
-        special: "Deals PSY damage to one enemy, recovers 5x character's RCV in HP at the end of the turn for 5 turns",
+        special: "Deals PSY damage to one enemy, recovers 5x character's RCV in HP at the end of each turn for 5 turns",
         specialNotes: "The exact damage is proportional to the crew's remaining HP and is higher the lower the HP is. The formula used is 80000 * (1 - (current HP) / (total HP))",
         specialName: "Vivi's Important Security Guard",
-        captain: "Recovers 2x character's RCV in HP at the end of the turn",
+        captain: "Recovers 2x character's RCV in HP at the end of each turn",
         cooldown: [ 25, 16 ],
         evolution: 664,
         evolvers: [ 117, 81, 87, 98, 103 ]
     },
     664: { // Nefertari Vivi, Vice-Leader of the Suna Suna Clan
-        special: "Deals PSY damage to one enemy, recovers 5x character's RCV in HP at the end of the turn for 5 turns",
+        special: "Deals PSY damage to one enemy, recovers 5x character's RCV in HP at the end of each turn for 5 turns",
         specialNotes: "The exact damage is proportional to the crew's remaining HP and is higher the lower the HP is. The formula used is 80000 * (1 - (current HP) / (total HP))",
         specialName: "Vivi's Important Security Guard",
-        captain: "Recovers 3x character's RCV in HP at the end of the turn",
+        captain: "Recovers 3x character's RCV in HP at the end of each turn",
         cooldown: [ 25, 16 ]
     },
     665: { // Koza, Alabasta Citizen
@@ -4570,7 +4570,7 @@ window.details = {
     668: { // Sabo
         special: "Boosts ATK of Freedom characters by 1.5x for 1 turn. If during that turn every unit scores a Perfect hit, boosts ATK of Freedom characters by 2x in the following turn.",
         specialName: "Dragon's Claw",
-        captain: "Boosts HP and RCV of all characters by 1.2x, boosts ATK of Freedom characters proportionally to the current HP",
+        captain: "Boosts HP and RCV of all characters by 1.2x, boosts ATK of Freedom characters proportionally to the crew's current HP",
         captainNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the higher the HP is. The multiplier is calculated as 2 + 0.75 * (remaining HP) / (total HP). At full health the boost is equal to 2.75x",
         cooldown: 21,
         evolution: 669,
@@ -4580,7 +4580,7 @@ window.details = {
     669: { // Sabo the Revolutionary
         special: "Boosts ATK of Freedom characters by 1.5x for 1 turn. If during that turn every unit scores a Perfect hit, boosts ATK of Freedom characters by 2x in the following turn.",
         specialName: "Dragon's Claw",
-        captain: "Boosts HP and RCV of all characters by 1.2x, boosts ATK of Freedom characters proportionally to the current HP",
+        captain: "Boosts HP and RCV of all characters by 1.2x, boosts ATK of Freedom characters proportionally to the crew's current HP",
         captainNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the higher the HP is. The multiplier is calculated as 2 + 0.75 * (remaining HP) / (total HP). At full health the boost is equal to 2.75x",
         cooldown: 21,
         flags: { rr: 1 }
@@ -4618,7 +4618,7 @@ window.details = {
         flags: { rr: 1 }
     },
     674: { // Emporio Ivankov, Newkama Kenpo Instructor
-        special: "Removes poison, reduces damage received by 50% for 2 turns, recovers 13x character's RCV in HP at the end of the turn for 2 turns",
+        special: "Removes poison, reduces damage received by 50% for 2 turns, recovers 13x character's RCV in HP at the end of each turn for 2 turns",
         specialName: "Emporio Healing Hormone",
         captain: "Boosts ATK of Freedom characters by 2x",
         cooldown: [ 21, 15 ],
@@ -4627,7 +4627,7 @@ window.details = {
         flags: { rr: 1 }
     },
     675: { // Emporio Ivankov the Revolutionary
-        special: "Removes poison, reduces damage received by 50% for 2 turns, recovers 13x character's RCV in HP at the end of the turn for 2 turns",
+        special: "Removes poison, reduces damage received by 50% for 2 turns, recovers 13x character's RCV in HP at the end of each turn for 2 turns",
         specialName: "Emporio Healing Hormone",
         captain: "Boosts ATK of Freedom characters by 2.5x",
         cooldown: [ 21, 15 ],
@@ -4637,7 +4637,7 @@ window.details = {
         special: "Reduces any damage received above 5,000 HP by 97% for 3 turns",
         specialNotes: "The exact formula for the damage received is: 5000 + ((total damage) - 5000) * 0.03",
         specialName: "KEEP OUT",
-        captain: "Boosts ATK of Slasher characters by 1.5x, deals 5x character's ATK in QCK damage to all enemies at the end of the turn",
+        captain: "Boosts ATK of Slasher characters by 1.5x, deals 5x character's ATK in QCK damage to all enemies at the end of each turn",
         cooldown: [ 18, 14 ],
         evolution: 677,
         evolvers: [ 94, 96, 96, 301, 301 ],
@@ -4647,7 +4647,7 @@ window.details = {
         special: "Reduces any damage received above 5,000 HP by 97% for 3 turns",
         specialNotes: "The exact formula for the damage received is: 5000 + ((total damage) - 5000) * 0.03",
         specialName: "KEEP OUT",
-        captain: "Boosts ATK of Slasher characters by 1.5x, deals 5x character's ATK in QCK damage to all enemies at the end of the turn",
+        captain: "Boosts ATK of Slasher characters by 1.5x, deals 5x character's ATK in QCK damage to all enemies at the end of each turn",
         cooldown: [ 18, 14 ],
         flags: { rr: 1 }
     },
@@ -4707,7 +4707,7 @@ window.details = {
         cooldown: [ 23, 16 ]
     },
     686: { // Vivi's Breather
-        special: "Delays all enemies for 1 turn, recovers 3x character's RCV in HP at the end of the turn for 3 turns",
+        special: "Delays all enemies for 1 turn, recovers 3x character's RCV in HP at the end of each turn for 3 turns",
         specialName: "Captivating Perfume Dance - Relaxation",
         captain: "Boosts ATK and RCV of Slasher characters by 1.5x",
         cooldown: [ 13, 13 ]
@@ -4940,7 +4940,7 @@ window.details = {
         special: "Boosts ATK of Knowledge characters by a variable factor for 1 turn, deals 20x character's ATK in DEX damage to all enemies",
         specialNotes: "The exact multiplier used is chosen based on the crew's current HP at the time the special is activated: above 30% HP, the multiplier used is 1.5x; below 30% HP, it's 2x.",
         specialName: "Sables: Pesado",
-        captain: "Boosts ATK of Knowledge characters proportionally to the current HP",
+        captain: "Boosts ATK of Knowledge characters proportionally to the crew's current HP",
         captainNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the lower the HP is. The multiplier is calculated as 1.5 + 1.75 * (1 - (remaining HP) / (total HP)). With 1 HP left, the boost is equal to 3.25x",
         cooldown: 21,
         evolution: 720,
@@ -4951,7 +4951,7 @@ window.details = {
         special: "Boosts ATK of Knowledge characters by a variable factor for 1 turn, deals 20x character's ATK in DEX damage to all enemies",
         specialNotes: "The exact multiplier used is chosen based on the crew's current HP at the time the special is activated: above 30% HP, the multiplier used is 1.5x; below 30% HP, it's 2x.",
         specialName: "Sables: Pesado",
-        captain: "Boosts ATK of Knowledge characters proportionally to the current HP",
+        captain: "Boosts ATK of Knowledge characters proportionally to the crew's current HP",
         captainNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the lower the HP is. The multiplier is calculated as 1.5 + 1.75 * (1 - (remaining HP) / (total HP)). With 1 HP left, the boost is equal to 3.25x",
         cooldown: 21,
         flags: { rr: 1 }
@@ -4973,7 +4973,7 @@ window.details = {
     723: { // T-Bone
         special: "Reduces crew's current HP by 80%, deals 5x the amount of HP subtracted in typeless damage to all enemies, reduces damage received by 90% for 1 turn",
         specialName: "Right Angle Flying Bird: Bone Phoenix",
-        captain: "Boosts ATK of Slasher characters by 1.5x, recovers 1.2x character's RCV in HP at the end of the turn",
+        captain: "Boosts ATK of Slasher characters by 1.5x, recovers 1.2x character's RCV in HP at the end of each turn",
         cooldown: [ 25, 16 ],
         evolution: 724,
         evolvers: [ 117, 92, 98, 98, 103 ]
@@ -4981,13 +4981,13 @@ window.details = {
     724: { // Ship Cutter T-Bone, Navy Headquarters Captain
         special: "Reduces crew's current HP by 80%, deals 5x the amount of HP subtracted in typeless damage to all enemies, reduces damage received by 90% for 1 turn",
         specialName: "Right Angle Flying Bird: Bone Phoenix",
-        captain: "Boosts ATK of Slasher characters by 1.75x, recovers 1.5x character's RCV in HP at the end of the turn",
+        captain: "Boosts ATK of Slasher characters by 1.75x, recovers 1.5x character's RCV in HP at the end of each turn",
         cooldown: [ 25, 16 ]
     },
     725: { // Nefertari Vivi, Record of the Voyage - Strawhat Crew (Log Vivi)
         special: "Changes [TND] orbs into [QCK] orbs, freely switch orbs between slots twice",
         specialName: "Peacock String Slasher",
-        captain: "Recovers 1,000 HP at the end of the turn",
+        captain: "Recovers 1,000 HP at the end of each turn",
         cooldown: 11,
         evolution: 726,
         evolvers: [ 117, 79, 85, 96, 101 ],
@@ -4996,7 +4996,7 @@ window.details = {
     726: { // Nefertari Vivi, Dream of the Voyage - Pirate Queen (Log Vivi)
         special: "Changes [TND] orbs into [QCK] orbs, freely switch orbs between slots twice",
         specialName: "Peacock String Slasher",
-        captain: "Recovers 2,000 HP at the end of the turn",
+        captain: "Recovers 2,000 HP at the end of each turn",
         cooldown: 11,
         flags: { rr: 1, lrr: 1 }
     },
@@ -5008,7 +5008,7 @@ window.details = {
         flags: { rr: 1 }
     },
     728: { // Kalifa, Cipher Pol No.9
-        special: "Randomizes all orbs, recovers 6x character's RCV in HP at the end of the turn for 3 turns",
+        special: "Randomizes all orbs, recovers 6x character's RCV in HP at the end of each turn for 3 turns",
         specialName: "Sheep Cloud Relaxing Bubbles",
         captain: "Boosts ATK and RCV of DEX characters by 1.2x, slightly boosts chances of getting [DEX] orbs",
         cooldown: 20,
@@ -5016,7 +5016,7 @@ window.details = {
         evolvers: [ 117, 86, 91, 97, 302 ]
     },
     729: { // Kalifa Rokushiki, Cipher Pol No.9
-        special: "Randomizes all orbs, recovers 6x character's RCV in HP at the end of the turn for 3 turns",
+        special: "Randomizes all orbs, recovers 6x character's RCV in HP at the end of each turn for 3 turns",
         specialName: "Sheep Cloud Relaxing Bubbles",
         captain: "Boosts ATK and RCV of DEX characters by 1.2x, boosts chances of getting [DEX] orbs",
         cooldown: 20
@@ -5024,7 +5024,7 @@ window.details = {
     730: { // Jabra, Cipher Pol No.9
         special: "Reduces crew's current HP by 99%, deals 2x the amount of HP subtracted in INT damage to all enemies, boosts ATK of INT characters by 1.5x for 1 turn",
         specialName: "Rankyaku - Lupus Fall",
-        captain: "Boosts ATK and HP of INT characters by 1.2x, deals 9 HP as fixed damage to all enemies at the end of the turn",
+        captain: "Boosts ATK and HP of INT characters by 1.2x, deals 9 HP as fixed damage to all enemies at the end of each turn",
         cooldown: 25,
         evolution: 731,
         evolvers: [ 117, 88, 93, 99, 304 ]
@@ -5032,7 +5032,7 @@ window.details = {
     731: { // Jabra Rokushiki, Cipher Pol No.9
         special: "Reduces crew's current HP by 99%, deals 2x the amount of HP subtracted in INT damage to all enemies, boosts ATK of INT characters by 1.5x for 1 turn",
         specialName: "Rankyaku - Lupus Fall",
-        captain: "Boosts ATK and HP of INT characters by 1.5x, deals 9 HP as fixed damage to all enemies at the end of the turn",
+        captain: "Boosts ATK and HP of INT characters by 1.5x, deals 9 HP as fixed damage to all enemies at the end of each turn",
         cooldown: 25
     },
     732: { // Fukuro, Cipher Pol No.9
@@ -5236,7 +5236,7 @@ window.details = {
     758: { // Fukuro, CP9's Strongest Generation
         special: "Changes [DEX] and [QCK] orbs into [PSY] orbs",
         specialName: "Solid Beast Supreme Technique: Owl Strike",
-        captain: "Boosts ATK of PSY characters by 2x, recovers 3x character's RCV in HP at the end of the turn",
+        captain: "Boosts ATK of PSY characters by 2x, recovers 3x character's RCV in HP at the end of each turn",
         cooldown: 18,
         flags: { rr: 1 }
     },
@@ -5287,7 +5287,7 @@ window.details = {
     765: { // Tony Tony Chopper Lil' Vampire
         special: "Reduces Silence duration by 3 turns",
         specialName: "Scope Magic",
-        captain: "Recovers 2x character's RCV in HP at the end of the turn",
+        captain: "Recovers 2x character's RCV in HP at the end of each turn",
         cooldown: [ 17, 9 ],
         flags: { global: 1 }
     },
