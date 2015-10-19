@@ -96,11 +96,22 @@ input[type="text"] {
 .cell-INT { font-weight: bold; color: darkorchid; }
 
 .stars-1:before { font-weight: bold; color: #40a3da; content: '\2605'; }
+.stars-1:after  { font-weight: bold; color: #cccccc; content: '\2605\2605\2605\2605\2605'; }
+
 .stars-2:before { font-weight: bold; color: #acc523; content: '\2605\2605'; }
+.stars-2:after  { font-weight: bold; color: #cccccc; content: '\2605\2605\2605\2605'; }
+
 .stars-3:before { font-weight: bold; color: #f7c118; content: '\2605\2605\2605'; }
+.stars-3:after  { font-weight: bold; color: #cccccc; content: '\2605\2605\2605'; }
+
 .stars-4:before { font-weight: bold; color: #f28e00; content: '\2605\2605\2605\2605'; }
+.stars-4:after  { font-weight: bold; color: #cccccc; content: '\2605\2605'; }
+
 .stars-5:before { font-weight: bold; color: #ff0000; content: '\2605\2605\2605\2605\2605'; }
+.stars-5:after  { font-weight: bold; color: #cccccc; content: '\2605'; }
+
 .stars-6:before { font-weight: bold; color: #9932cc; content: '\2605\2605\2605\2605\2605\2605'; }
+
 
 .class.filter.active, .custom.filter.active, .drop.filter.active, .exc.filter.active {
     background: red;
@@ -380,7 +391,7 @@ h3 > label {
     text-decoration: underline;
 }
 
-.table-striped-column > * > tr > :nth-of-type(even) {
+.table-striped-column > * > tr > :nth-of-type(odd) {
     background-color: #f9f9f9;
 }
 
