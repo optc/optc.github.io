@@ -5291,13 +5291,13 @@ window.details = {
         cooldown: [ 17, 9 ],
         flags: { global: 1 }
     },
-    766: { // Nico Robin Sexy Devil
+    766: { // Roronoa Zoro Jack the Ripper
         special: "Deals 7x character's ATK in QCK damage to all enemies, delays all enemies for 1 turn",
         specialName: "Ojos Fleur Thriller",
         captain: "Boosts ATK of QCK characters by 2x",
         cooldown: 18
     },
-    767: { // Roronoa Zoro Jack the Ripper
+    767: { // Nico Robin Sexy Devil
         special: "Changes the orbs in the top row into [DEX] orbs, removes blindness",
         specialName: "108 Pound Phoenix Shinigami",
         captain: "Boosts ATK and RCV of DEX characters by 1.5x",
