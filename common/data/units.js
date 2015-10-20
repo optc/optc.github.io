@@ -764,10 +764,10 @@ window.units = [
     [ "Franky Frankenstein", "STR", [ "Shooter", "Freedom" ], 4, 20, 4, 3, 99, 3000000, 82, 43, 22, 1903, 1121, 170, 1 ],
     [ "Nami Jackie 'o Lantern", "QCK", [ "Striker", "Knowledge" ], 4, 20, 4, 3, 99, 3000000, 47, 25, 49, 1342, 699, 416, 1 ],
     [ "Tony Tony Chopper Lil' Vampire", "INT", [ "Fighter", "Knowledge" ], 4, 20, 6, 3, 99, 3000000, 56, 33, 38, 1548, 763, 358, 1 ],
-    [ ],
-    [ ],
-    [ ],
-    [ ],
+    [ "Nico Robin Sexy Devil", "QCK", "Slasher", 4, 20, 6, 3, 99, null, 130, 59, 15, null, null, null, 0 ],
+    [ "Roronoa Zoro Jack the Ripper", "DEX", [ "Fighter", "Knowledge" ], 4, 20, 4, 3, 99, null, 82, 52, 39, null, null, null, 0 ],
+    [ "Sanji Ghost Knight", "PSY", "Fighter", 4, 20, 4, 3, 99, null, 377, 164, 55, null, null, null, 0 ],
+    [ "Brook Scaredy Skeleton", "INT", [ "Slasher", "Freedom" ], 4, 20, 4, 3, 99, null, 327, 165, 52, null, null, null, 0 ],
     [ "Dalmatian, Navy Headquarters Vice Admiral", "STR", [ "Fighter", "Tough" ], 4, 20, 5, 3, 99, 4000000, 241, 186, 35, 2171, 1275, 189, 1.5 ],
     [ "Momonga, Navy Headquarters Vice Admiral", "PSY", [ "Knowledge", "Slasher" ], 4, 20, 6, 3, 99, 4000000, 298, 142, 20, 2618, 1111, 163, 1.5 ],
     [ "Onigumo, Navy Headquarters Vice Admiral", "DEX", "Slasher", 4, 20, 8, 3, 99, 4000000, 213, 118, 54, 2000, 1021, 318, 1.5 ],
@@ -779,5 +779,7 @@ window.units = [
     [ "Rebecca, Prisoner Gladiator", "QCK", "Striker", 4, 18, 5, 1, 50, null, 193, 111, 51, 1003, 505, 201, 1 ],
     [ "Rebecca, Colosseum's Exclusive Gladiator", "QCK", "Striker", 5, 30, 4, 3, 99, null, 920, 441, 150, 1964, 854, 374, 1 ],
     [ "Urouge, Captain of the Fallen Monk Pirates", "STR", [ "Fighter", "Striker" ], 4, 25, 5, 2, 70, null, 702, 340, 38, 1580, 790, 121, 1.5 ],
-    [ "Mad Monk Urouge, Captain of the Fallen Monk Pirates", "STR", [ "Fighter", "Striker" ], 5, 40, 5, 3, 99, null, 1512, 755, 83, 2824, 1324, 203, 1.5 ]
+    [ "Mad Monk Urouge, Captain of the Fallen Monk Pirates", "STR", [ "Fighter", "Striker" ], 5, 40, 5, 3, 99, null, 1512, 755, 83, 2824, 1324, 203, 1.5 ],
+    [ "Tashigi, Justice's Flower", "INT", [ "Slasher", "Knowledge" ], 4, 13, 5, 2, 50, null, 468, 231, 109, null, null, null, 0 ],
+    [ "Navy Headquarters Ensign Tashigi, Justice's Flower", "INT", [ "Slasher", "Knowledge" ], 5, 20, 5, 3, 99, null, 932, 428, 164, null, null, null, 0 ]
 ];

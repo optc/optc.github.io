@@ -5291,6 +5291,31 @@ window.details = {
         cooldown: [ 17, 9 ],
         flags: { global: 1 }
     },
+    766: { // Nico Robin Sexy Devil
+        special: "Deals 7x character's ATK in QCK damage to all enemies, delays all enemies for 1 turn",
+        specialName: "Ojos Fleur Thriller",
+        captain: "Boosts ATK of QCK characters by 2x",
+        cooldown: 18
+    },
+    767: { // Roronoa Zoro Jack the Ripper
+        special: "Changes the orbs in the top row into [DEX] orbs, removes blindness",
+        specialName: "108 Pound Phoenix Shinigami",
+        captain: "Boosts ATK and RCV of DEX characters by 1.5x",
+        cooldown: 19
+    },
+    768: { // Sanji Ghost Knight
+        special: "Recovers 15x character's RCV in HP, changes [TND] orbs into [RCV] orbs",
+        specialName: "Hot Rock Stew Party",
+        captain: "Boosts ATK of PSY characters by 2x",
+        cooldown: 21
+    },
+    769: { // Brook Scaredy Skeleton
+        special: "Recovers 4,343 HP, poisons all enemies",
+        specialNotes: "Poison deals 0.5x character's ATK in fixed damage at the end of each turn",
+        specialName: "Lullaby Parry Hollow",
+        captain: "Boosts ATK and RCV of INT characters by 1.5x",
+        cooldown: 23
+    },
     770: { // Dalmatian, Navy Headquarters Vice Admiral
         special: "Deals 15x character's ATK in STR damage to one enemy, boosts ATK against delayed enemies by 1.3x for 2 turns",
         specialName: "Shigan: Convergence",
@@ -5374,5 +5399,19 @@ window.details = {
         specialName: "Precept Deification",
         captain: "Boosts ATK of all characters by 2.5x if HP is below 30% at the start of the turn",
         cooldown: [ 19, 7 ]
+    },
+    782: { // Tashigi, Justice's Flower
+        special: "Delays all enemies for 1 turn, recovers a small random amount of HP",
+        specialName: "Smile of a Natural Beauty",
+        captain: "Boosts RCV of Slasher characters by 1.5x",
+        cooldown: [ 11, 11 ],
+        evolution: 783,
+        evolvers: [ 117, 93, 94, 304, 104 ]
+    },
+    783: { // Navy Headquarters Ensign Tashigi, Justice's Flower
+        special: "Delays all enemies for 1 turn, recovers a small random amount of HP",
+        specialName: "Smile of a Natural Beauty",
+        captain: "Boosts ATK of Slasher characters by 2x and their RCV by 1.5x",
+        cooldown: [ 11, 11 ]
     }
 };
