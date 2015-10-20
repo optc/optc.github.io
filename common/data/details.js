@@ -4381,7 +4381,7 @@ window.details = {
         specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.75x more damage and opposite orbs will deal 1.75x less damage",
         specialName: "Great Sword of the Battle Veteran",
         captain: "Boosts ATK of PSY characters by 3x if HP is below 30% at the start of the turn",
-        cooldown: [ 21, 14 ]
+        cooldown: [ 21, 14 ],
         flags: { rr: 1 }
     },
     644: { // Whitey Bay
