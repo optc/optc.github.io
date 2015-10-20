@@ -3902,7 +3902,7 @@ window.details = {
         special: "Delays all enemies for 2 turns, freely switch orbs between slots twice",
         specialName: "Noro Noro Beam",
         captain: "Boosts ATK, HP and RCV of all characters by 1.25x",
-        cooldown: 25,
+        cooldown: [ 25, 20 ],
         evolution: 569,
         evolvers: [ 117, 83, 88, 93, 99 ]
     },
@@ -3910,7 +3910,7 @@ window.details = {
         special: "Delays all enemies for 2 turns, freely switch orbs between slots twice",
         specialName: "Noro Noro Beam",
         captain: "Boosts ATK, HP and RCV of all characters by 1.5x, reduces cooldown of all specials by 1 turn at the start of the fight",
-        cooldown: 25
+        cooldown: [ 25, 20 ]
     },
     570: { // Monkey D. Luffy Davy Back Fight - Afro
         special: "Changes hindrance orbs into [STR], deals 20x character's ATK in STR damage to one enemy",
@@ -5295,26 +5295,26 @@ window.details = {
         special: "Deals 7x character's ATK in QCK damage to all enemies, delays all enemies for 1 turn",
         specialName: "108 Pound Phoenix Shinigami",
         captain: "Boosts ATK of QCK characters by 2x",
-        cooldown: 18
+        cooldown: [ 18, 10 ]
     },
     767: { // Nico Robin Sexy Devil
         special: "Changes the orbs in the top row into [DEX] orbs, removes blindness",
         specialName: "Ojos Fleur Thriller",
         captain: "Boosts ATK and RCV of DEX characters by 1.5x",
-        cooldown: 19
+        cooldown: [ 19, 11 ]
     },
     768: { // Sanji Ghost Knight
         special: "Recovers 15x character's RCV in HP, changes [TND] orbs into [RCV] orbs",
         specialName: "Hot Rock Stew Party",
         captain: "Boosts ATK of PSY characters by 2x",
-        cooldown: 21
+        cooldown: [ 21, 13 ]
     },
     769: { // Brook Scaredy Skeleton
         special: "Recovers 4,343 HP, poisons all enemies",
         specialNotes: "Poison deals 0.5x character's ATK in fixed damage at the end of each turn",
         specialName: "Lullaby Parry Hollow",
         captain: "Boosts ATK and RCV of INT characters by 1.5x",
-        cooldown: 23
+        cooldown: [ 23, 15 ]
     },
     770: { // Dalmatian, Navy Headquarters Vice Admiral
         special: "Deals 15x character's ATK in STR damage to one enemy, boosts ATK against delayed enemies by 1.3x for 2 turns",
@@ -5358,7 +5358,7 @@ window.details = {
         specialName: "Boisterous Lucky Shot!!",
         special: "Recovers 5,000 HP, deals 15x character's ATK in PSY damage to one enemy, seals himself for 3 turns",
         captain: "Boosts ATK and RCV of PSY characters by 1.25x",
-        cooldown: 20,
+        cooldown: [ 20, 10 ],
         evolution: 777,
         evolvers: [ 116, 117, 81, 87, 103 ]
     },
@@ -5366,7 +5366,7 @@ window.details = {
         special: "Recovers 5,000 HP, deals 15x character's ATK in PSY damage to one enemy, seals himself for 3 turns",
         specialName: "Boisterous Lucky Shot!!",
         captain: "Boosts ATK and RCV of PSY characters by 1.75x",
-        cooldown: 20
+        cooldown: [ 20, 10 ]
     },
     778: { // Rebecca, Prisoner Gladiator
         special: "Deals several times the character's ATK in QCK damage to one enemy, changes own orb into [QCK]",
