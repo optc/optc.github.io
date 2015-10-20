@@ -3795,7 +3795,7 @@ window.details = {
         special: "Changes neighboring slots' orbs into [DEX], deals 1,000 fixed damage to all enemies",
         specialName: "Ashura Ugui",
         captain: "Boosts ATK of DEX characters by 2.75x if HP is below 30% at the start of the turn",
-        cooldown: 20,
+        cooldown: [ 20, 14 ],
         evolution: 554,
         evolvers: [ 118, 83, 97, 302, 102 ],
         flags: { rr: 1 }
@@ -3804,7 +3804,7 @@ window.details = {
         special: "Changes neighboring slots' orbs into [DEX], deals 1,000 fixed damage to all enemies",
         specialName: "Ashura Ugui",
         captain: "Boosts ATK of DEX characters by 3x if HP is below 30% at the start of the turn",
-        cooldown: 20,
+        cooldown: [ 20, 14 ],
         flags: { rr: 1 }
     },
     555: { // Usopp, Merveille's Adventurer (Strong World Usopp)
@@ -4274,7 +4274,7 @@ window.details = {
         special: "Empties all slots with hindrance orbs, deals random INT damage to all enemies",
         specialName: "Master Nail",
         captain: "Boosts ATK of characters with 3 or fewer stars by 2x",
-        cooldown: 23,
+        cooldown: [ 23, 17 ],
         evolution: 739,
         evolvers: [ 117, 82, 83, 99, 104 ]
     },
