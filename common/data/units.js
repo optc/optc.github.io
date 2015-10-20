@@ -767,7 +767,7 @@ window.units = [
     [ "Roronoa Zoro Jack the Ripper", "QCK", "Slasher", 4, 20, 6, 3, 99, null, 90, 39, 13, 2094, 1063, 131, 0 ],
     [ "Nico Robin Sexy Devil", "DEX", [ "Fighter", "Knowledge" ], 4, 20, 4, 3, 99, null, 53, 35, 34, 1500, 889, 320, 0 ],
     [ "Sanji Ghost Knight", "PSY", "Fighter", 4, 20, 4, 3, 99, null, 377, 164, 55, null, null, null, 0 ],
-    [ "Brook Scaredy Skeleton", "INT", [ "Slasher", "Freedom" ], 4, 20, 4, 3, 99, null, 61, 34, 26, null, null, null, 0 ],
+    [ "Brook Scaredy Skeleton", "INT", [ "Slasher", "Freedom" ], 4, 20, 4, 3, 99, null, 62, 35, 26, 1921, 948, 210, 0 ],
     [ "Dalmatian, Navy Headquarters Vice Admiral", "STR", [ "Fighter", "Tough" ], 4, 20, 5, 3, 99, 4000000, 241, 186, 35, 2171, 1275, 189, 1.5 ],
     [ "Momonga, Navy Headquarters Vice Admiral", "PSY", [ "Knowledge", "Slasher" ], 4, 20, 6, 3, 99, 4000000, 298, 142, 20, 2618, 1111, 163, 1.5 ],
     [ "Onigumo, Navy Headquarters Vice Admiral", "DEX", "Slasher", 4, 20, 8, 3, 99, 4000000, 213, 118, 54, 2000, 1021, 318, 1.5 ],
