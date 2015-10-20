@@ -596,7 +596,7 @@ window.specials = {
         atk: function(p) { return p.unit.class.has("Tough") ? 1.75 : 1; },
         type: 'class'
     },
-    756: {  // Blueno, CP9's Strongest Generation
+    756: { // Blueno, CP9's Strongest Generation
         atk: function(p) { return p.unit.class.has("Tough") ? 1.75 : 1; },
         type: 'class'
     },

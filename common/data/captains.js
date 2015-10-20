@@ -1572,6 +1572,20 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Striker") ? 1.5 : 1; },
         rcv: function(p) { return p.unit.class.has("Striker") ? 1.5 : 1; }
     },
+    766: { // Roronoa Zoro Jack the Ripper
+        atk: function(p) { return p.unit.type == "QCK" ? 2 : 1; }
+    },
+    767: { // Nico Robin Sexy Devil
+        atk: function(p) { return p.unit.type == "DEX" ? 1.5 : 1; },
+        rcv: function(p) { return p.unit.type == "DEX" ? 1.5 : 1; }
+    },
+    768: { // Sanji Ghost Knight
+        atk: function(p) { return p.unit.type == "PSY" ? 2 : 1; }
+    },
+    769: { // Brook Scaredy Skeleton
+        atk: function(p) { return p.unit.type == "INT" ? 1.5 : 1; },
+        rcv: function(p) { return p.unit.type == "INT" ? 1.5 : 1; }
+    },
     770: { // Dalmatian, Navy Headquarters Vice Admiral
         atk: function(p) { return p.unit.type == "STR" ? 2 : 1; }
     },
@@ -1601,5 +1615,12 @@ window.captains = {
     },
     781: { // Mad Monk Urouge, Captain of the Fallen Monk Pirates
         atk: function(p) { return p.percHP <= 30.0 ? 2.5 : 1; }
+    },
+    782: { // Tashigi, Justice's Flower
+        rcv: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; }
+    },
+    783: { // Navy Headquarters Ensign Tashigi, Justice's Flower
+        atk: function(p) { return p.unit.class.has("Slasher") ? 2 : 1; },
+        rcv: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; }
     }
 };
