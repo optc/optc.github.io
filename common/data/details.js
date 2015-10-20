@@ -4532,7 +4532,7 @@ window.details = {
         flags: { special: 1 }
     },
     663: { // Nefertari Vivi, Princess of the Alabasta Kingdom
-        special: "Deals PSY damage to one enemy, recovers 5x character's RCV in HP at the end of each turn for 5 turns",
+        special: "Deals several times the character's ATK in PSY damage to one enemy, recovers 5x character's RCV in HP at the end of each turn for 5 turns",
         specialNotes: "The exact damage is proportional to the crew's remaining HP and is higher the lower the HP is. The formula used is 80000 * (1 - (current HP) / (total HP))",
         specialName: "Vivi's Important Security Guard",
         captain: "Recovers 2x character's RCV in HP at the end of each turn",
@@ -4541,7 +4541,7 @@ window.details = {
         evolvers: [ 117, 81, 87, 98, 103 ]
     },
     664: { // Nefertari Vivi, Vice-Leader of the Suna Suna Clan
-        special: "Deals PSY damage to one enemy, recovers 5x character's RCV in HP at the end of each turn for 5 turns",
+        special: "Deals several times the character's ATK in PSY damage to one enemy, recovers 5x character's RCV in HP at the end of each turn for 5 turns",
         specialNotes: "The exact damage is proportional to the crew's remaining HP and is higher the lower the HP is. The formula used is 80000 * (1 - (current HP) / (total HP))",
         specialName: "Vivi's Important Security Guard",
         captain: "Recovers 3x character's RCV in HP at the end of each turn",
