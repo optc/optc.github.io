@@ -5005,7 +5005,7 @@ window.details = {
         specialName: "Gum-Gum Gatling",
         captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts the ATK of Freedom and Fighter characters by 1.75x",
         cooldown: [ 15, 15 ],
-        flags: { rr: 1 }
+        flags: { special: 1 }
     },
     728: { // Kalifa, Cipher Pol No.9
         special: "Randomizes all orbs, recovers 6x character's RCV in HP at the end of each turn for 3 turns",

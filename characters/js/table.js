@@ -235,8 +235,8 @@ angular.module('optc') .run(function($rootScope) {
 
     $rootScope.checkLog = function() {
         var temp = [ ];
-        for (var key in $scope.characterLog) {
-            if ($scope.characterLog[key])
+        for (var key in $rootScope.characterLog) {
+            if ($rootScope.characterLog[key])
                 temp.push(parseInt(key,10));
         }
         temp.sort(function(a,b) { return a-b; });
