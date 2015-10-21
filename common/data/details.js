@@ -5256,60 +5256,60 @@ window.details = {
         cooldown: 21,
         flags: { rr: 1 }
     },
-    761: { // Monkey D. Luffy Halloween Monster
+    761: { // Monkey D. Luffy Halloween Monster (Halloween Luffy)
         special: "Deals 15x character's ATK in DEX damage to one enemy, boosts ATK of all characters by 1.2x for 1 turn",
         specialName: "Gum-Gum Monster Pistol",
         captain: "Boosts ATK of Fighter characters by 2x",
         cooldown: [ 23, 15 ],
         flags: { global: 1 }
     },
-    762: { // Usopp Lying Wolf
+    762: { // Usopp Lying Wolf (Halloween Usopp)
         special: "Boosts ATK of PSY characters by 1.75x for 1 turn",
         specialName: "Impact Beast",
         captain: "Boosts ATK and RCV of PSY characters by 1.5x",
         cooldown: [ 14, 10 ],
         flags: { global: 1 }
     },
-    763: { // Franky Frankenstein
+    763: { // Franky Frankenstein (Halloween Franky)
         special: "Changes own orb into [STR], freely switch orbs between slots once",
         specialName: "Franken-Franky Centaur",
         captain: "Boosts ATK of STR characters by 2x",
         cooldown: [ 15, 7 ],
         flags: { global: 1 }
     },
-    764: { // Nami Jackie 'o Lantern
+    764: { // Nami Jackie 'o Lantern (Halloween Nami)
         special: "Recovers 3,000 HP",
         specialName: "Cat Burglar Trick",
         captain: "Boosts ATK and RCV of Striker characters by 1.5x",
         cooldown: [ 16, 8 ],
         flags: { global: 1 }
     },
-    765: { // Tony Tony Chopper Lil' Vampire
+    765: { // Tony Tony Chopper Lil' Vampire (Halloween Chopper)
         special: "Reduces Silence duration by 3 turns",
         specialName: "Scope Magic",
         captain: "Recovers 2x character's RCV in HP at the end of each turn",
         cooldown: [ 17, 9 ],
         flags: { global: 1 }
     },
-    766: { // Roronoa Zoro Jack the Ripper
+    766: { // Roronoa Zoro Jack the Ripper (Halloween Zoro)
         special: "Deals 7x character's ATK in QCK damage to all enemies, delays all enemies for 1 turn",
         specialName: "108 Pound Phoenix Shinigami",
         captain: "Boosts ATK of QCK characters by 2x",
         cooldown: [ 18, 10 ]
     },
-    767: { // Nico Robin Sexy Devil
+    767: { // Nico Robin Sexy Devil (Halloween Robin)
         special: "Changes the orbs in the top row into [DEX] orbs, removes blindness",
         specialName: "Ojos Fleur Thriller",
         captain: "Boosts ATK and RCV of DEX characters by 1.5x",
         cooldown: [ 19, 11 ]
     },
-    768: { // Sanji Ghost Knight
+    768: { // Sanji Ghost Knight (Halloween Sanji)
         special: "Recovers 15x character's RCV in HP, changes [TND] orbs into [RCV] orbs",
         specialName: "Hot Rock Stew Party",
         captain: "Boosts ATK of PSY characters by 2x",
         cooldown: [ 21, 13 ]
     },
-    769: { // Brook Scaredy Skeleton
+    769: { // Brook Scaredy Skeleton (Halloween Brook)
         special: "Recovers 4,343 HP, poisons all enemies",
         specialNotes: "Poison deals 0.5x character's ATK in fixed damage at the end of each turn",
         specialName: "Lullaby Parry Hollow",
