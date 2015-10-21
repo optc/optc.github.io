@@ -112,11 +112,17 @@ input[type="text"] {
 
 .stars-6:before { font-weight: bold; color: #9932cc; content: '\2605\2605\2605\2605\2605\2605'; }
 
+.filter[class*="stars-"]:not(.active):before { color: #cccccc !important; }
+
 
 .class.filter.active, .custom.filter.active, .drop.filter.active, .exc.filter.active {
     background: red;
     color: white;
     font-weight: bold;
+}
+
+.stars.filter.active {
+    box-shadow: inset 0 0 0 1px #7777ff;
 }
 
 .custom.filter:not(#controllers):hover, .class.filter:hover, .drop.filter:hover, .exc.filter:hover {

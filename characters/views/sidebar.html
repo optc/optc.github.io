@@ -10,8 +10,14 @@
 <div class="filter-container">
     <span class="filter-header">Class filters</span>
     <span ng-repeat="(n,class) in [ 'Fighter', 'Shooter', 'Slasher', 'Striker', 'Freedom', 'Knowledge', 'Tough' ]"
-        class="filter {{n < 4 ? 'width-6' : 'width-4' }} class" ng-model="filters.class"
-        ng-class="{ active: filters.class == class }" ng-click="onFilterClick($event,class)">{{class}}</span>
+        class="filter {{n < 4 ? 'width-6' : 'width-4' }} class" ng-click="onClassClick($event,class)"
+        ng-class="{ active: filters.classes.indexOf(class) > -1 }">{{class}}</span>
+</div>
+
+<div class="filter-container">
+    <span class="filter-header">Rarity filters</span>
+    <span ng-repeat="(n,stars) in [ 1, 2, 3, 4, 5, 6 ]" class="filter stars width-4 stars-{{stars}}"
+        ng-click="onStarsClick($event,stars)" ng-class="{ active: filters.stars.indexOf(stars) > -1 }"></span>
 </div>
 
 <div class="filter-container">

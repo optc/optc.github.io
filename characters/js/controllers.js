@@ -5,7 +5,7 @@
  ***************/
 
 var lastQuery = null;
-var filters = { custom: [ ] };
+var filters = { custom: [ ], classes: [ ], stars: [ ] };
 
 /***************
  * Controllers *
@@ -54,12 +54,25 @@ app.controller('SidebarCtrl',function($scope, $rootScope, $stateParams) {
     },true);
 
     $scope.clearFilters = function() {
-        $scope.filters = { custom: [ ] };
+        $scope.filters = { custom: [ ], classes: [ ], stars: [ ] };
     };
 
     $scope.onFilterClick = function(e, value) {
         var type = e.target.getAttribute('ng-model').split(/\./)[1];
         $scope.filters[type] = ($scope.filters[type] == value ? null : value);
+    };
+
+    $scope.onClassClick = function(e, clazz) {
+        if ($scope.filters.classes.indexOf(clazz) == -1) {
+            $scope.filters.classes = $scope.filters.classes.slice(0,1);
+            $scope.filters.classes.push(clazz);
+        }
+        else $scope.filters.classes.splice($scope.filters.classes.indexOf(clazz), 1);
+    };
+
+    $scope.onStarsClick = function(e, stars) {
+        if ($scope.filters.stars.indexOf(stars) == -1) $scope.filters.stars.push(stars);
+        else $scope.filters.stars.splice($scope.filters.stars.indexOf(stars), 1);
     };
 
     $scope.onDropFilterClick = function(e,value) {

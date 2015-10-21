@@ -84,7 +84,17 @@ $.fn.dataTable.ext.search.push(function(settings, data, index) {
     // filter by type
     if (filters.type && unit.type !== filters.type) return false;
     // filter by class
-    if (filters.class && !filters.class.test(unit.class)) return false;
+    if (filters.classes && filters.classes.length) {
+        var singleQuery = filters.classes.length == 1, singleClass = unit.class.length > 2;
+        if (!singleQuery && singleClass) return false;
+        else if (singleQuery && singleClass && filters.classes[0] != unit.class) return false;
+        else if (singleQuery && !singleClass && filters.classes.indexOf(unit.class[0]) == -1 &&
+                filters.classes.indexOf(unit.class[1]) == -1) return false;
+        else if (!singleQuery && !singleClass && (filters.classes.indexOf(unit.class[0]) == -1 ||
+                    filters.classes.indexOf(unit.class[1]) == -1)) return false;
+    }
+    // filter by stars
+    if (filters.stars && filters.stars.length && filters.stars.indexOf(unit.stars) == -1) return false;
     // filter by drop
     if (filters.drop) {
         var isFarmable = CharUtils.isFarmable(id);
