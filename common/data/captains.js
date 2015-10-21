@@ -906,7 +906,7 @@ window.captains = {
     519: { // Monkey D. Luffy, Merveille's Adventurer (Strong World Luffy)
         atk: function(p) { return p.unit.type == "STR" ? 2 : 1; },
     },
-    520: { // Monkey D. Luffy, Strawhat Crew's Attack (Strong World Luffy)
+    520: { // Monkey D. Luffy, Straw Hat Pirates' Attack (Strong World Luffy)
         atk: function(p) { return p.unit.type == "STR" ? 2.5 : 1; },
     },
     523: { // Nami, Merveille's Adventurer (Strong World Nami)
@@ -920,14 +920,14 @@ window.captains = {
     525: { // Brook, Merveille's Adventurer (Strong World Brook)
         atk: function(p) { return p.unit.type == "PSY" ? 2 : 1; }
     },
-    526: { // Brook, Strawhat Crew's Attack (Strong World Brook)
+    526: { // Brook, Straw Hat Pirates' Attack (Strong World Brook)
         atk: function(p) { return p.unit.type == "PSY" ? 2 : 1; }
     },
     527: { // Chopper, Merveille's Adventurer (Strong World Chopper)
         atk: function(p) { return p.unit.type == "DEX" ? 1.5 : 1; },
         rcv: function(p) { return p.unit.type == "DEX" ? 1.5 : 1; }
     },
-    528: { // Chopper, Strawhat Crew's Attack (Strong World Chopper)
+    528: { // Chopper, Straw Hat Pirates' Attack (Strong World Chopper)
         atk: function(p) { return p.unit.type == "DEX" ? 2 : 1; },
         rcv: function(p) { return p.unit.type == "DEX" ? 2 : 1; }
     },
@@ -995,13 +995,13 @@ window.captains = {
     553: { // Roronoa Zoro, Merveille's Adventurer (Strong World Zoro)
         atk: function(p) { return p.unit.type == "DEX" && p.percHP <= 30.0 ? 2.75 : 1; }
     },
-    554: { // Roronoa Zoro, Strawhat Crew's Attack (Strong World Zoro)
+    554: { // Roronoa Zoro, Straw Hat Pirates' Attack (Strong World Zoro)
         atk: function(p) { return p.unit.type == "DEX" && p.percHP <= 30.0 ? 3 : 1; }
     },
     555: { // Usopp, Merveille's Adventurer (Strong World Usopp)
         atk: function(p) { return p.unit.class.has("Shooter") ? 2 : 1; }
     },
-    556: { // Usopp, Strawhat Crew's Attack (Strong World Usopp)
+    556: { // Usopp, Straw Hat Pirates' Attack (Strong World Usopp)
         atk: function(p) { return p.unit.class.has("Shooter") ? 2 : 1; },
         rcv: function(p) { return p.unit.class.has("Shooter") ? 1.5 : 1; }
     },
@@ -1009,14 +1009,14 @@ window.captains = {
         atk: function(p) { return p.unit.type == "INT" ? 1.5 : 1; },
         rcv: function(p) { return p.unit.type == "INT" ? 1.5 : 1; }
     },
-    558: { // Nico Robin, Strawhat Crew's Attack (Strong World Robin)
+    558: { // Nico Robin, Straw Hat Pirates' Attack (Strong World Robin)
         atk: function(p) { return p.unit.type == "INT" ? 2 : 1; },
         rcv: function(p) { return p.unit.type == "INT" ? 2 : 1; }
     },
     559: { // Franky, Merveille's Adventurer (Strong World Franky)
         atk: function(p) { return p.unit.type == "STR" ? 2 : 1; }
     },
-    560: { // Franky, Strawhat Crew's Attack (Strong World Franky)
+    560: { // Franky, Straw Hat Pirates' Attack (Strong World Franky)
         atk: function(p) { return p.unit.type == "STR" ? 2.25 : 1; }
     },
     561: { // Portgas D. Ace, Black Clothes Hiken
@@ -1068,22 +1068,22 @@ window.captains = {
         atk: function(p) { return 1.5; },
         rcv: function(p) { return 1.2; }
     },
-    577: { // Monkey D. Luffy, Record of the Voyage - Strawhat Crew (Log Luffy)
+    577: { // Monkey D. Luffy Voyage Log: Straw Hat Pirates (Log Luffy)
         hitAtk: function(p) {
             return p.modifiers.slice(0,p.chainPosition).subcontains([ "Good", "Great", "Perfect" ]) ? 4 : 1;
         },
         hitModifiers: [ 'Good', 'Great', 'Perfect', 'Perfect', 'Perfect', 'Perfect' ]
     },
-    578: { // Monkey D. Luffy, Dream of the Voyage - Pirate King (Log Luffy)
+    578: { // Monkey D. Luffy Voyage Dream: Pirate King (Log Luffy)
         hitAtk: function(p) {
             return p.modifiers.slice(0,p.chainPosition).subcontains([ "Good", "Great", "Perfect" ]) ? 4 : 1;
         },
         hitModifiers: [ 'Good', 'Great', 'Perfect', 'Perfect', 'Perfect', 'Perfect' ]
     },
-    579: { // Roronoa Zoro, Record of the Voyage - Strawhat Crew (Log Zoro)
+    579: { // Roronoa Zoro Voyage Log: Straw Hat Pirates (Log Zoro)
         atk: function(p) { return (p.unit.type == "QCK" || p.unit.type == "DEX") ? 1.5 : 1; }
     },
-    580: { // Roronoa Zoro, Dream of the Voyage - Strongest Swordsman (Log Zoro)
+    580: { // Roronoa Zoro Voyage Dream: Strongest Swordsman (Log Zoro)
         atk: function(p) { return (p.unit.type == "QCK" || p.unit.type == "DEX") ? 2 : 1; }
     },
     581: { // Genbou
@@ -1114,15 +1114,15 @@ window.captains = {
         hp: function(p) { return 0.2; },
         rcv: function(p) { return 0.2; }
     },
-    590: { // Koza, Rebel Leader
+    590: { // Koza Rebel Leader
         atk: function(p) { return 1.5; },
         hp: function(p) { return 0.2; },
         rcv: function(p) { return 0.2; }
     },
-    596: { // Tony Tony Chopper, Record of the Voyage - Strawhat Crew (Log Chopper)
+    596: { // Tony Tony Chopper Voyage Log: Straw Hat Pirates (Log Chopper)
         atk: function(p) { return p.unit.type == "STR" ? 1.5 : 1; }
     },
-    597: { // Tony Tony Chopper, Dream of the Voyage - Greatest Doctor (Log Chopper)
+    597: { // Tony Tony Chopper Voyage Dream: Great Doctor (Log Chopper)
         atk: function(p) { return p.unit.type == "STR" ? 1.75 : 1; }
     },
     598: { // Buggy the Pirate Apprentice
@@ -1143,10 +1143,10 @@ window.captains = {
     603: { // Enel the Lightning Human - 200 Million Volt Thunder God
         atk: function(p) { return p.unit.type == "QCK" ? 2.25 : 1; }
     },
-    604: { // Sanji, Record of the Voyage - Strawhat Crew (Log Sanji)
+    604: { // Sanji Voyage Log: Straw Hat Pirates (Log Sanji)
         atk: function(p) { return p.unit.class.has("Fighter") ? 2 : 1; }
     },
-    605: { // Sanji, Dream of the Voyage - All Blue (Log Sanji)
+    605: { // Sanji Voyage Dream: All Blue (Log Sanji)
         atk: function(p) { return p.unit.class.has("Fighter") ? 2 : 1; }
     },
     606: { // Zeff the Pirate
@@ -1155,12 +1155,12 @@ window.captains = {
     607: { // Red Leg Zeff, Captain of the Cook Pirates
         atk: function(p) { return p.percHP >= 50.0 && p.unit.class.has("Fighter") ? 2.5 : 1; }
     },
-    612: { // Brook, Record of the Voyage - Strawhat Crew (Log Brook)
+    612: { // Brook Voyage Log: Straw Hat Pirates (Log Brook)
         hp: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; },
         atk: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; },
         rcv: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; }
     },
-    613: { // Brook, Dream of the Voyage - Promised Meeting (Log Brook)
+    613: { // Brook Voyage Dream: Promised Meeting (Log Brook)
         hp: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; },
         atk: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; },
         rcv: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; }
@@ -1233,11 +1233,11 @@ window.captains = {
     649: { // Phoenix Marco, Commander of the 1st Division of the Whitebeard Pirates
         atk: function(p) { return (p.unit.type == "QCK" || p.unit.type == "PSY") && p.percHP >= 70.0 ? 2.75 : 1; }
     },
-    650: { // Nami, Record of the Voyage - Strawhat Crew (Log Nami)
+    650: { // Nami Voyage Log: Straw Hat Pirates (Log Nami)
         atk: function(p) { return p.unit.type == "INT" ? 2 : 1; },
         rcv: function(p) { return p.unit.type == "INT" ? 1.5 : 1; }
     },
-    651: { // Nami, Dream of the Voyage - World Map (Log Nami)
+    651: { // Nami Voyage Dream: World Map (Log Nami)
         atk: function(p) { return p.unit.type == "INT" ? 2 : 1; },
         rcv: function(p) { return p.unit.type == "INT" ? 1.5 : 1; }
     },
@@ -1268,10 +1268,10 @@ window.captains = {
         },
         hitModifiers: [ 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect' ], // don't remove this
     },
-    660: { // Usopp, Record of the Voyage - Strawhat Crew (Log Usopp)
+    660: { // Usopp Voyage Log: Straw Hat Pirates (Log Usopp)
         atk: function(p) { return p.unit.class.has("Shooter") ? 2 : 1; }    
     },
-    661: { // Usopp, Dream of the Voyage - Brave Warrior of the Sea (Log Usopp)
+    661: { // Usopp Voyage Dream: Brave Warrior of the Sea (Log Usopp)
         atk: function(p) { return p.unit.class.has("Shooter") ? 2 : 1; }    
     },
     662: { // Nami Holiday
@@ -1325,11 +1325,11 @@ window.captains = {
     677: { // Inazuma the Revolutionary
         atk: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; }
     },
-    678: { // Robin, Record of the Voyage - Strawhat Crew (Log Robin)
+    678: { // Nico Robin Voyage Log: Straw Hat Pirates (Log Robin)
         atk: function(p) { return p.unit.type == "PSY" ? 1.2 : 1; },
         rcv: function(p) { return p.unit.type == "PSY" ? 1.2 : 1; }
     },
-    679: { // Robin, Dream of the Voyage - Uncover the Blank Page of History (Log Robin)
+    679: { // Nico Robin Voyage Dream: 100-Year Void (Log Robin)
         atk: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; },
         rcv: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; }
     },
@@ -1399,14 +1399,14 @@ window.captains = {
         atk: function(p) { return p.unit.type == "PSY" ? 1.2 : 1; },
         rcv: function(p) { return p.unit.type == "PSY" ? 1.2 : 1; }
     },
-    709: { // Nico Robin, Member of the Strawhat Crew
+    709: { // Nico Robin, Member of the Straw Hat Pirates
         atk: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; },
         rcv: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; }
     },
-    710: { // Franky, Record of the Voyage - Strawhat Crew (Log Franky)
+    710: { // Franky Voyage Log: Straw Hat Pirates (Log Franky)
         atk: function(p) { return p.unit.class.has("Shooter") ? 1.5 : 1; }
     },
-    711: { // Franky, Dream of the Voyage - A Ship to Sail Around the World (Log Franky)
+    711: { // Franky Voyage Dream: A Ship to Sail Around the World (Log Franky)
         atk: function(p) { return p.unit.class.has("Shooter") ? 2 : 1; }
     },
     712: { // Gan Fall
@@ -1495,7 +1495,7 @@ window.captains = {
     738: { // Spandam
         atk: function(p) { return p.unit.cost >= 21 ? 2 : 1; }
     },
-    739: { // Franky, Member of the Strawhat Pirates
+    739: { // Franky, Member of the Straw Hat Pirates
         atk: function(p) { return p.unit.class.has("Freedom") ? 2 : 1; }
     },
     742: { // Wanze
@@ -1506,10 +1506,10 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Freedom") ? 1.5 : 1; },
         rcv: function(p) { return p.unit.class.has("Freedom") ? 1.5 : 1; }
     },
-    744: { // Portgas D. Ace, Record of the Voyage - Whitebeard Crew (Log Ace)
+    744: { // Portgas D. Ace, Record of the Voyage - Whitebeard Pirates (Log Ace)
         atk: function(p) { return p.unit.class.has("Freedom") ? 2 : 1; },
     },
-    745: { // Portgas D. Ace, Dream of the Voyage - Pirate Summit (Log Ace)
+    745: { // Portgas D. Ace Voyage Dream: Pirate Summit (Log Ace)
         atk: function(p) { return p.unit.class.has("Freedom") ? 2.5 : 1; },
     },
     747: { // Rob Lucci, CP9's Dark Justice

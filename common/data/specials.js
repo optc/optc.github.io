@@ -231,7 +231,7 @@ window.specials = {
         atk: function(p) { return p.unit.type == "QCK" ? 1.25 : 1; },
         type: 'type'
     },
-    506: { // Pell, Alabasta's Guardian Falcon
+    506: { // Pell The guardian falcon of Alabasta.
         atk: function(p) { return p.unit.type == "QCK" ? 1.25 : 1; },
         type: 'type'
     },
@@ -264,7 +264,7 @@ window.specials = {
         atk: function(p) { return p.unit.type == "STR" ? 2 : 1; },
         type: 'type'
     },
-    520: { // Monkey D. Luffy, Strawhat Crew's Attack (Strong World Luffy)
+    520: { // Monkey D. Luffy, Straw Hat Pirates' Attack (Strong World Luffy)
         atk: function(p) { return p.unit.type == "STR" ? 2 : 1; },
         type: 'type'
     },
@@ -302,7 +302,7 @@ window.specials = {
     559: { // Franky, Merveille's Adventurer (Strong World Franky)
         orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); }
     },
-    560: { // Franky, Strawhat Crew's Attack (Strong World Franky)
+    560: { // Franky, Straw Hat Pirates' Attack (Strong World Franky)
         orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); }
     },
     568: { // Foxy
@@ -336,14 +336,14 @@ window.specials = {
         atk: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; },
         type: 'class'
     },
-    590: { // Koza, Rebel Leader
+    590: { // Koza Rebel Leader
         atk: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; },
         type: 'class'
     },
-    596: { // Tony Tony Chopper, Record of the Voyage - Strawhat Crew (Log Chopper)
+    596: { // Tony Tony Chopper Voyage Log: Straw Hat Pirates (Log Chopper)
         def: function(p) { return 0.5; }
     },
-    597: { // Tony Tony Chopper, Dream of the Voyage - Greatest Doctor (Log Chopper)
+    597: { // Tony Tony Chopper Voyage Dream: Great Doctor (Log Chopper)
         def: function(p) { return 0.5; }
     },
     600: { // Shanks the Pirate Apprentice
@@ -362,11 +362,11 @@ window.specials = {
         atk: function(p) { return p.unit.type == "QCK" ? 2 : 1; },
         type: 'type'
     },
-    612: { // Brook, Record of the Voyage - Strawhat Crew (Log Brook)
+    612: { // Brook Voyage Log: Straw Hat Pirates (Log Brook)
         atkStatic: function(p) { return 45; }, // TODO Implement me
         rcvStatic: function(p) { return 45; }
     },
-    613: { // Brook, Dream of the Voyage - Promised Meeting (Log Brook)
+    613: { // Brook Voyage Dream: Promised Meeting (Log Brook)
         atkStatic: function(p) { return 45; }, // TODO Implement me
         rcvStatic: function(p) { return 45; }
     },
@@ -421,10 +421,10 @@ window.specials = {
     649: { // Phoenix Marco, Commander of the 1st Division of the Whitebeard Pirates
         orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); },
     },
-    650: { // Nami, Record of the Voyage - Strawhat Crew (Log Nami)
+    650: { // Nami Voyage Log: Straw Hat Pirates (Log Nami)
         orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); }
     },
-    651: { // Nami, Dream of the Voyage - World Map (Log Nami)
+    651: { // Nami Voyage Dream: World Map (Log Nami)
         orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); }
     },
     655: { // Pirate Arlong
@@ -433,10 +433,10 @@ window.specials = {
     656: { // Arlong of the Sun Pirates
         orb: function(p) { return p.orb == 2.0 ? 1.25 : (p.orb == 0.5 ? 4/5 : 1); }
     },
-    660: { // Usopp, Record of the Voyage - Strawhat Crew (Log Usopp)
+    660: { // Usopp Voyage Log: Straw Hat Pirates (Log Usopp)
         def: function(p) { return 0.5; }
     },
-    661: { // Usopp, Dream of the Voyage - Brave Warrior of the Sea (Log Usopp)
+    661: { // Usopp Voyage Dream: Brave Warrior of the Sea (Log Usopp)
         def: function(p) { return 0.5; }
     },
     665: { // Koza, Alabasta Citizen
@@ -505,11 +505,11 @@ window.specials = {
     690: { // Montblanc Noland, Explorer and Admiral of the Lvneel Kingdom
         orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); },
     },
-    710: { // Franky, Record of the Voyage - Strawhat Crew (Log Franky)
+    710: { // Franky Voyage Log: Straw Hat Pirates (Log Franky)
         atk: function(p) { return p.unit.class.has("Shooter") ? 1.25 : 1; },
         type: 'class'
     },
-    711: { // Franky, Dream of the Voyage - A Ship to Sail Around the World (Log Franky)
+    711: { // Franky Voyage Dream: A Ship to Sail Around the World (Log Franky)
         atk: function(p) { return p.unit.class.has("Shooter") ? 1.25 : 1; },
         type: 'class'
     },

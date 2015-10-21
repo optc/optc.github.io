@@ -478,7 +478,7 @@ window.details = {
     },
     64: { // Six-Sword Hachi
         special: "Deals 10x character's ATK in DEX damage to all enemies",
-        specialName: "New Year’s Open Body Slam",
+        specialName: "New Year's Open Body Slam",
         captain: "Reduces damage received from DEX enemies by 50%",
         cooldown: [ 15, 10 ],
         flags: { global: 1 }
@@ -576,7 +576,7 @@ window.details = {
     },
     76: { // Shanks
         special: "Deals 15x character's ATK in PSY damage to all enemies",
-        specialName: "Conqueror’s Haki",
+        specialName: "Conqueror's Haki",
         captain: "Boosts ATK of PSY characters by 2x",
         cooldown: [ 25, 20 ],
         evolution: 77,
@@ -585,7 +585,7 @@ window.details = {
     },
     77: { // Red-Haired Shanks
         special: "Deals 15x character's ATK in PSY damage to all enemies",
-        specialName: "Conqueror’s Haki",
+        specialName: "Conqueror's Haki",
         captain: "Boosts ATK of PSY characters by 2.5x",
         cooldown: [ 25, 20 ],
         flags: { global: 1, rr: 1 }
@@ -1435,7 +1435,7 @@ window.details = {
     },
     219: { // Roronoa Zoro Lion's Song
         special: "Deals 25x character's ATK in DEX damage to one enemy",
-        specialName: "Lion’s Song",
+        specialName: "Lion's Song",
         captain: "Reduces damage received by 80% if HP is above 99% at the start of the turn",
         cooldown: [ 25, 18 ],
         flags: { global: 1, rr: 1 }
@@ -2112,7 +2112,7 @@ window.details = {
     },
     317: { // Kalifa
         special: "Changes all orbs into either [DEX] or [STR] orbs, deals random DEX damage to all enemies",
-        specialName: "Beautiful Secretary’s Job",
+        specialName: "Beautiful Secretary's Job",
         captain: "Recovers 500 HP at end of turn, reduces damage received by 10%",
         cooldown: [ 25, 18 ],
         evolution: 318,
@@ -2121,7 +2121,7 @@ window.details = {
     },
     318: { // Beautiful Secretary Kalifa
         special: "Changes all orbs into either [DEX] or [STR] orbs, deals random DEX damage to all enemies",
-        specialName: "Beautiful Secretary’s Job",
+        specialName: "Beautiful Secretary's Job",
         captain: "Recovers 500 HP at end of turn, reduces damage received by 15%",
         cooldown: [ 25, 18 ],
         flags: { global: 1 }
@@ -2446,7 +2446,7 @@ window.details = {
     },
     366: { // Silvers Rayleigh
         special: "Deals 20x character's ATK in INT damage to all enemies, reduces Bind duration by 5 turns",
-        specialName: "Dark King’s Aura",
+        specialName: "Dark King's Aura",
         captain: "Boosts chain multiplier by 4x",
         cooldown: [ 23, 18 ],
         evolution: 367,
@@ -2455,7 +2455,7 @@ window.details = {
     },
     367: { // Dark King Rayleigh
         special: "Deals 20x character's ATK in INT damage to all enemies, reduces Bind duration by 5 turns",
-        specialName: "Dark King’s Aura",
+        specialName: "Dark King's Aura",
         captain: "Boosts chain multiplier by 4x",
         cooldown: [ 23, 18 ],
         flags: { global: 1, rr: 1 }
@@ -2918,7 +2918,7 @@ window.details = {
     },
     429: { // South Bird and Forest Residents
         special: "Deals 7x character's ATK in DEX damage to all enemies, reduces the defense of all enemies by 50% for 1 turn",
-        specialName: "South Bird’s Fearless Smile",
+        specialName: "South Bird's Fearless Smile",
         cooldown: [ 20, 15 ],
         flags: { global: 1 }
     },
@@ -3035,7 +3035,7 @@ window.details = {
     },
     448: { // Thatch
         special: "Boosts chances of getting [QCK] orbs for 3 turns",
-        specialName: "Pirate King’s Sword",
+        specialName: "Pirate King's Sword",
         captain: "Boosts ATK of QCK characters by 3x if HP is above 99% at the start of the turn",
         cooldown: [ 16, 10 ],
         evolution: 449,
@@ -3044,14 +3044,14 @@ window.details = {
     },
     449: { // Twin-Blade Thatch
         special: "Boosts chances of getting [QCK] orbs for 3 turns",
-        specialName: "Pirate King’s Sword",
+        specialName: "Pirate King's Sword",
         captain: "Boosts ATK of QCK characters by 3x if HP is above 99% at the start of the turn",
         cooldown: [ 16, 10 ],
         flags: { global: 1, rr: 1 }
     },
     450: { // Namule (Namur)
         special: "Boosts ATK of Fighter characters by 1.5x for 1 turn, deals 25x character's ATK in DEX damage to one enemy",
-        specialName: "Number Eight’s One Hit",
+        specialName: "Number Eight's One Hit",
         captain: "Boosts ATK of Fighter characters by 2x and their HP by 1.5x",
         cooldown: [ 25, 18 ],
         evolution: 451,
@@ -3060,7 +3060,7 @@ window.details = {
     },
     451: { // One-Hit Namule (Namur)
         special: "Boosts ATK of Fighter characters by 1.5x for 1 turn, deals 25x character's ATK in DEX damage to one enemy",
-        specialName: "Number Eight’s One Hit",
+        specialName: "Number Eight's One Hit",
         captain: "Boosts ATK of Fighter characters by 2x and their HP by 1.5x",
         cooldown: [ 25, 18 ],
         flags: { global: 1, rr: 1 }
@@ -3430,23 +3430,23 @@ window.details = {
     },
     505: { // Pell
         special: "Boosts ATK of QCK characters by 1.25x for 3 turns",
-        specialName: "Flying Talon",
+        specialName: "Flying Claw",
         captain: "Prevents death as long as HP is above 50%",
         cooldown: [ 21, 15 ],
         evolution: 506,
         evolvers: [ 116, 79, 85, 266 ],
         flags: { global: 1, rr: 1 }
     },
-    506: { // Pell, Alabasta's Guardian Falcon
+    506: { // Pell The guardian falcon of Alabasta.
         special: "Boosts ATK of QCK characters by 1.25x for 3 turns",
-        specialName: "Flying Talon",
+        specialName: "Flying Claw",
         captain: "Prevents death as long as HP is above 30%",
         cooldown: [ 21, 15 ],
         flags: { global: 1, rr: 1 }
     },
     507: { // Chaka
         special: "Deals 25x character's ATK in STR damage to one enemy",
-        specialName: "Howling Fang",
+        specialName: "Ringing Fang",
         captain: "Boosts ATK and HP of STR characters by 1.2x",
         cooldown: [ 25, 18 ],
         evolution: 508,
@@ -3545,7 +3545,7 @@ window.details = {
         evolvers: [ 118, 84, 95, 94, 100 ],
         flags: { rr: 1 }
     },
-    520: { // Monkey D. Luffy, Strawhat Crew's Attack (Strong World Luffy)
+    520: { // Monkey D. Luffy, Straw Hat Pirates' Attack (Strong World Luffy)
         special: "Reduces crew's current HP by 99%, deals 25x character's ATK in fixed STR damage to all enemies, boosts ATK of STR characters by 2x for 1 turn",
         specialNotes: "Fixed damage means the special entirely bypasses enemy defense",
         specialName: "Gum-Gum Gigant Thunder Axe",
@@ -3563,7 +3563,7 @@ window.details = {
         evolvers: [ 118, 83, 88, 94, 104 ],
         flags: { rr: 1 }
     },
-    522: { // Sanji, Strawhat Crew's Attack (Strong World Sanji)
+    522: { // Sanji, Straw Hat Pirates' Attack (Strong World Sanji)
         special: "Deals several times the character's ATK in INT damage to all enemies",
         specialNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the lower the HP is. The multiplier is calculated as: 100 * ( 1 - (remaining HP) / (total HP) )",
         specialName: "Diable Jambe - Venaison Shot",
@@ -3596,7 +3596,7 @@ window.details = {
         evolvers: [ 118, 92, 94, 98, 303 ],
         flags: { rr: 1 }
     },
-    526: { // Brook, Strawhat Crew's Attack (Strong World Brook)
+    526: { // Brook, Straw Hat Pirates' Attack (Strong World Brook)
         special: "Deals random PSY damage to all enemies, randomizes all orbs",
         specialName: "Three-Verse Humming: Arrow-Notch Slash",
         captain: "Boosts ATK of PSY characters by 2x, reduces damage received from INT enemies by 30%",
@@ -3612,7 +3612,7 @@ window.details = {
         evolvers: [ 118, 86, 266, 97, 302 ],
         flags: { rr: 1 }
     },
-    528: { // Chopper, Strawhat Crew's Attack (Strong World Chopper)
+    528: { // Chopper, Straw Hat Pirates' Attack (Strong World Chopper)
         special: "Removes poison, recovers 15x character's RCV in HP",
         specialName: "Devoted Healing - \"I'm Glad You are Safe\"",
         captain: "Boosts ATK and RCV of DEX characters by 2x",
@@ -3800,7 +3800,7 @@ window.details = {
         evolvers: [ 118, 83, 97, 302, 102 ],
         flags: { rr: 1 }
     },
-    554: { // Roronoa Zoro, Strawhat Crew's Attack (Strong World Zoro)
+    554: { // Roronoa Zoro, Straw Hat Pirates' Attack (Strong World Zoro)
         special: "Changes neighboring slots' orbs into [DEX], deals 1,000 fixed damage to all enemies",
         specialName: "Ashura Ugui",
         captain: "Boosts ATK of DEX characters by 3x if HP is below 30% at the start of the turn",
@@ -3816,7 +3816,7 @@ window.details = {
         evolvers: [ 118, 83, 96, 301, 101 ],
         flags: { rr: 1 }
     },
-    556: { // Usopp, Strawhat Crew's Attack (Strong World Usopp)
+    556: { // Usopp, Straw Hat Pirates' Attack (Strong World Usopp)
         special: "Delays all enemies for 3 turns, cuts the current HP of each enemy by 10%",
         specialName: "Heavenly Dragon Star",
         captain: "Boosts ATK of Shooter characters by 2x and their RCV by 1.5x",
@@ -3832,7 +3832,7 @@ window.details = {
         evolvers: [ 118, 88, 94, 304, 104 ],
         flags: { rr: 1 }
     },
-    558: { // Nico Robin, Strawhat Crew's Attack (Strong World Robin)
+    558: { // Nico Robin, Straw Hat Pirates' Attack (Strong World Robin)
         special: "Boosts chances of getting [INT] orbs for 3 turns",
         specialName: "Ochenta Fleur - Cuatro Manus Shock",
         captain: "Boosts ATK and RCV of INT characters by 2x",
@@ -3849,7 +3849,7 @@ window.details = {
         evolvers: [ 118, 83, 84, 300, 100 ],
         flags: { rr: 1 }
     },
-    560: { // Franky, Strawhat Crew's Attack (Strong World Franky)
+    560: { // Franky, Straw Hat Pirates' Attack (Strong World Franky)
         special: "Changes own orb into [STR], amplifies the effect of orbs by 1.5x for 2 turns",
         specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.5x more damage and opposite orbs will deal 1.5x less damage",
         specialName: "Roar! Zarley Davison",
@@ -3961,7 +3961,7 @@ window.details = {
         cooldown: [ 12, 12 ],
         flags: { special: 1 }
     },
-    577: { // Monkey D. Luffy, Record of the Voyage - Strawhat Crew (Log Luffy)
+    577: { // Monkey D. Luffy Voyage Log: Straw Hat Pirates (Log Luffy)
         special: "Deals random typeless damage to all enemies, changes own orb into [STR]",
         specialName: "Gum-Gum JET Gatling",
         captain: "Boosts ATK by 4x following a chain of Good > Great > Perfect hits",
@@ -3970,14 +3970,14 @@ window.details = {
         evolvers: [ 118, 266, 95, 300, 267 ],
         flags: { rr: 1 }
     },
-    578: { // Monkey D. Luffy, Dream of the Voyage - Pirate King (Log Luffy)
+    578: { // Monkey D. Luffy Voyage Dream: Pirate King (Log Luffy)
         special: "Deals random typeless damage to all enemies, changes own orb into [STR]",
         specialName: "Gum-Gum JET Gatling",
         captain: "Boosts ATK by 4x following a chain of Good > Great > Perfect hits",
         cooldown: 23,
         flags: { rr: 1 }
     },
-    579: { // Roronoa Zoro, Record of the Voyage - Strawhat Crew (Log Zoro)
+    579: { // Roronoa Zoro Voyage Log: Straw Hat Pirates (Log Zoro)
         special: "Changes hindrance orbs into either [QCK] or [DEX] orbs, deals 15x character's ATK in QCK damage to all enemies",
         specialName: "Tatsu Maki",
         captain: "Boosts ATK of QCK and DEX characters by 1.5x",
@@ -3986,7 +3986,7 @@ window.details = {
         evolvers: [ 117, 85, 86, 96, 97 ],
         flags: { rr: 1, lrr: 1 }
     },
-    580: { // Roronoa Zoro, Dream of the Voyage - Strongest Swordsman (Log Zoro)
+    580: { // Roronoa Zoro Voyage Dream: Strongest Swordsman (Log Zoro)
         special: "Changes hindrance orbs into either [QCK] or [DEX] orbs, deals 15x character's ATK in QCK damage to all enemies",
         specialName: "Tatsu Maki",
         captain: "Boosts ATK of QCK and DEX characters by 2x",
@@ -4051,16 +4051,16 @@ window.details = {
     },
     589: { // Koza
         special: "Boosts ATK of Slasher characters by 1.5x for 1 turn",
-        specialName: "Flag of Rebellion",
+        specialName: "Flag of the Rebellion",
         captain: "Boosts ATK of all characters by 1.5x, reduces HP and RCV of all characters by 80%",
         cooldown: [ 20, 10 ],
         evolution: 590,
         evolvers: [ 116, 117, 79, 85 ],
         flags: { global: 1, rr: 1 }
     },
-    590: { // Koza, Rebel Leader
+    590: { // Koza Rebel Leader
         special: "Boosts ATK of Slasher characters by 1.5x for 1 turn",
-        specialName: "Flag of Rebellion",
+        specialName: "Flag of the Rebellion",
         captain: "Boosts ATK of all characters by 2x, reduces HP and RCV of all characters by 80%",
         cooldown: [ 20, 10 ],
         flags: { global: 1, rr: 1 }
@@ -4070,21 +4070,21 @@ window.details = {
     593: { }, // N/A
     594: { }, // Amber Dragon Palace Turtle Princess
     595: { }, // Jet Black Dragon Palace Turtle Princess
-    596: { // Tony Tony Chopper, Record of the Voyage - Strawhat Crew (Log Chopper)
+    596: { // Tony Tony Chopper Voyage Log: Straw Hat Pirates (Log Chopper)
         special: "Deals 20x character's ATK in STR damage to one enemy, reduces the defense of one enemy by 50% for 3 turns",
-        specialName: "Cloven Rose - Palm",
+        specialName: "Rozeo Michelli",
         captain: "Boosts ATK of STR characters by 1.5x, recovers 500 HP at the end of each turn",
         cooldown: [ 20, 17 ],
         evolution: 597,
         evolvers: [ 117, 78, 84, 89, 95 ],
-        flags: { rr: 1, lrr: 1 }
+        flags: { rr: 1, lrr: 1, global: 1 }
     },
-    597: { // Tony Tony Chopper, Dream of the Voyage - Greatest Doctor (Log Chopper)
+    597: { // Tony Tony Chopper Voyage Dream: Great Doctor (Log Chopper)
         special: "Deals 20x character's ATK in STR damage to one enemy, reduces the defense of one enemy by 50% for 3 turns",
-        specialName: "Cloven Rose - Palm",
+        specialName: "Rozeo Michelli",
         captain: "Boosts ATK of STR characters by 1.75x, recovers 750 HP at the end of each turn",
         cooldown: [ 20, 17 ],
-        flags: { rr: 1, lrr: 1 }
+        flags: { rr: 1, lrr: 1, global: 1 }
     },
     598: { // Buggy the Pirate Apprentice
         special: "Changes own orb into [INT], freely move orbs between slots once",
@@ -4128,21 +4128,21 @@ window.details = {
         captain: "Boosts ATK of QCK characters by 2.25x, recovers 5x character's RCV in HP at the end of each turn",
         cooldown: [ 32, 17 ]
     },
-    604: { // Sanji, Record of the Voyage - Strawhat Crew (Log Sanji)
+    604: { // Sanji Voyage Log: Straw Hat Pirates (Log Sanji)
         special: "Cuts the current HP of each enemy by 10%, changes [QCK] orbs into [DEX] orbs",
-        specialName: "Diable Jambe - Extra Hachis",
+        specialName: "Diable Jambe: Extra Hachis Hash",
         captain: "Boosts ATK of Fighter characters by 2x",
         cooldown: [ 18, 15 ],
         evolution: 605,
         evolvers: [ 117, 86, 97, 97, 302 ],
-        flags: { rr: 1, lrr: 1 }
+        flags: { rr: 1, lrr: 1, global: 1 }
     },
-    605: { // Sanji, Dream of the Voyage - All Blue (Log Sanji)
+    605: { // Sanji Voyage Dream: All Blue (Log Sanji)
         special: "Cuts the current HP of each enemy by 10%, changes [QCK] orbs into [DEX] orbs",
-        specialName: "Diable Jambe - Extra Hachis",
+        specialName: "Diable Jambe: Extra Hachis Hash",
         captain: "Boosts ATK of Fighter characters by 2x, reduces damage received by 20%",
         cooldown: [ 18, 15 ],
-        flags: { rr: 1, lrr: 1 }
+        flags: { rr: 1, lrr: 1, global: 1 }
     },
     606: { // Zeff the Pirate
         special: "Deals 20x character's ATK in DEX damage to one enemy, changes neighboring slots' orbs into [RCV] orbs",
@@ -4178,7 +4178,7 @@ window.details = {
         specialName: "[RCV] Slot Storm",
         cooldown: [ 18, 8 ]
     },
-    612: { // Brook, Record of the Voyage - Strawhat Crew (Log Brook)
+    612: { // Brook Voyage Log: Straw Hat Pirates (Log Brook)
         special: "Boosts ATK and RCV of all characters by 45 units for 1 turn, reduces damage received by 45% for 1 turn",
         specialName: "\"45 Degree\" Delight",
         captain: "Boosts ATK of Slasher characters by 1.5x",
@@ -4187,7 +4187,7 @@ window.details = {
         evolvers: [ 91, 94, 97, 97, 302 ],
         flags: { rr: 1, lrr: 1 }
     },
-    613: { // Brook, Dream of the Voyage - Promised Meeting (Log Brook)
+    613: { // Brook Voyage Dream: Promised Meeting (Log Brook)
         special: "Boosts ATK and RCV of all characters by 45 units for 1 turn, reduces damage received by 45% for 1 turn",
         specialName: "\"45 Degree\" Delight",
         captain: "Boosts ATK, HP and RCV of Slasher characters by 1.5x",
@@ -4434,7 +4434,7 @@ window.details = {
         cooldown: 25,
         flags: { rr: 1 }
     },
-    650: { // Nami, Record of the Voyage - Strawhat Crew (Log Nami)
+    650: { // Nami Voyage Log: Straw Hat Pirates (Log Nami)
         special: "Deals 5,000 fixed damage to one enemy, amplifies the effect of orbs by 1.5x for 1 turn",
         specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.5x more damage and opposite orbs will deal 1.5x less damage",
         specialName: "Thunder Lance Tempo",
@@ -4444,7 +4444,7 @@ window.details = {
         evolvers: [ 117, 83, 88, 93, 104 ],
         flags: { rr: 1, lrr: 1 }
     },
-    651: { // Nami, Dream of the Voyage - World Map (Log Nami)
+    651: { // Nami Voyage Dream: World Map (Log Nami)
         special: "Deals 5,000 fixed damage to one enemy, amplifies the effect of orbs by 1.5x for 1 turn",
         specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.5x more damage and opposite orbs will deal 1.5x less damage",
         specialName: "Thunder Lance Tempo",
@@ -4508,7 +4508,7 @@ window.details = {
         captain: "Boosts ATK by 2.5x after scoring 3 Perfects in a row",
         cooldown: [ 20, 15 ]
     },
-    660: { // Usopp, Record of the Voyage - Strawhat Crew (Log Usopp)
+    660: { // Usopp Voyage Log: Straw Hat Pirates (Log Usopp)
         special: "Delays all enemies for 2 turns, reduces the defense of all enemies by 50% for 2 turns",
         specialName: "Atlas Comet",
         captain: "Boosts ATK of Shooter characters by 2x",
@@ -4517,7 +4517,7 @@ window.details = {
         evolvers: [ 117, 85, 94, 96, 101 ],
         flags: { rr: 1, lrr: 1 }
     },
-    661: { // Usopp, Dream of the Voyage - Brave Warrior of the Sea (Log Usopp)
+    661: { // Usopp Voyage Dream: Brave Warrior of the Sea (Log Usopp)
         special: "Delays all enemies for 2 turns, reduces the defense of all enemies by 50% for 2 turns",
         specialName: "Atlas Comet",
         captain: "Boosts ATK of Shooter characters by 2x, reduces cooldown of all specials by 1 turn at the start of the fight",
@@ -4651,21 +4651,21 @@ window.details = {
         cooldown: [ 18, 14 ],
         flags: { rr: 1 }
     },
-    678: { // Robin, Record of the Voyage - Strawhat Crew (Log Robin)
+    678: { // Nico Robin Voyage Log: Straw Hat Pirates (Log Robin)
         special: "Reduces damage received by 50% for 1 turn, locks all orbs for 1 turn",
-        specialName: "Cien Fleur - Spider Net",
+        specialName: "Cien Fleur Spider Net",
         captain: "Boosts ATK and RCV of PSY characters by 1.2x, boosts chances of getting [PSY] orbs",
         cooldown: [ 19, 16 ],
         evolution: 679,
         evolvers: [ 117, 87, 94, 303, 103 ],
-        flags: { rr: 1, lrr: 1 }
+        flags: { rr: 1, lrr: 1, global: 1 }
     },
-    679: { // Robin, Dream of the Voyage - Uncover the Blank Page of History (Log Robin)
+    679: { // Nico Robin Voyage Dream: 100-Year Void (Log Robin)
         special: "Reduces damage received by 50% for 1 turn, locks all orbs for 1 turn",
-        specialName: "Cien Fleur - Spider Net",
+        specialName: "Cien Fleur Spider Net",
         captain: "Boosts ATK and RCV of PSY characters by 1.5x, boosts chances of getting [PSY] orbs",
         cooldown: [ 19, 16 ],
-        flags: { rr: 1, lrr: 1 }
+        flags: { rr: 1, lrr: 1, global: 1 }
     },
     680: { // Ice Cream Loving Nami
         special: "Recovers 5x character's RCV in HP, boosts ATK and RCV of DEX characters by 1.25x for 2 turns",
@@ -4858,14 +4858,14 @@ window.details = {
         evolvers: [ 117, 81, 87, 303, 103 ],
         flags: { special: 1 }
     },
-    709: { // Nico Robin, Member of the Strawhat Crew
+    709: { // Nico Robin, Member of the Straw Hat Pirates
         special: "Reduces Bind and Silence duration by 3 turns",
         specialName: "Cien Fleur - Wing",
         captain: "Boosts ATK and RCV of PSY characters by 1.5x",
         cooldown: 21,
         flags: { special: 1 }
     },
-    710: { // Franky, Record of the Voyage - Strawhat Crew (Log Franky)
+    710: { // Franky Voyage Log: Straw Hat Pirates (Log Franky)
         special: "Empties all slots with hindrance orbs, boosts ATK of Shooter characters by 1.25x for 3 turns, deals 15x character's ATK in PSY damage to all enemies",
         specialName: "The Man Who Will Build the Ship of Dreams",
         captain: "Boosts ATK of Shooter characters by 1.5x",
@@ -4874,7 +4874,7 @@ window.details = {
         evolvers: [ 117, 87, 94, 103, 303 ],
         flags: { rr: 1, lrr: 1 }
     },
-    711: { // Franky, Dream of the Voyage - A Ship to Sail Around the World (Log Franky)
+    711: { // Franky Voyage Dream: A Ship to Sail Around the World (Log Franky)
         special: "Empties all slots with hindrance orbs, boosts ATK of Shooter characters by 1.25x for 3 turns, deals 15x character's ATK in PSY damage to all enemies",
         specialName: "The Man Who Will Build the Ship of Dreams",
         captain: "Boosts ATK of Shooter characters by 2x",
@@ -4984,7 +4984,7 @@ window.details = {
         captain: "Boosts ATK of Slasher characters by 1.75x, recovers 1.5x character's RCV in HP at the end of each turn",
         cooldown: [ 25, 16 ]
     },
-    725: { // Nefertari Vivi, Record of the Voyage - Strawhat Crew (Log Vivi)
+    725: { // Nefertari Vivi Voyage Log: Straw Hat Pirates (Log Vivi)
         special: "Changes [TND] orbs into [QCK] orbs, freely switch orbs between slots twice",
         specialName: "Peacock String Slasher",
         captain: "Recovers 1,000 HP at the end of each turn",
@@ -4993,7 +4993,7 @@ window.details = {
         evolvers: [ 117, 79, 85, 96, 101 ],
         flags: { rr: 1, lrr: 1 }
     },
-    726: { // Nefertari Vivi, Dream of the Voyage - Pirate Queen (Log Vivi)
+    726: { // Nefertari Vivi Voyage Dream: Pirate Queen (Log Vivi)
         special: "Changes [TND] orbs into [QCK] orbs, freely switch orbs between slots twice",
         specialName: "Peacock String Slasher",
         captain: "Recovers 2,000 HP at the end of each turn",
@@ -5081,7 +5081,7 @@ window.details = {
         captain: "Boosts ATK of characters with cost 21 or more by 2x",
         cooldown: 35
     },
-    739: { // Franky, Member of the Strawhat Pirates
+    739: { // Franky, Member of the Straw Hat Pirates
         special: "Reduces Bind duration by 5 turns, randomizes all orbs",
         specialName: "Coup de Boo",
         captain: "Boosts ATK of Freedom characters by 2x",
@@ -5117,7 +5117,7 @@ window.details = {
         captain: "Boosts ATK and RCV of Freedom characters by 1.5x",
         cooldown: [ 20, 12 ]
     },
-    744: { // Portgas D. Ace, Record of the Voyage - Whitebeard Crew (Log Ace)
+    744: { // Portgas D. Ace, Record of the Voyage - Whitebeard Pirates (Log Ace)
         special: "Reduces damage received by 50% for 3 turns",
         specialName: "Flame Fence",
         captain: "Boosts ATK of Freedom characters by 2x",
@@ -5126,7 +5126,7 @@ window.details = {
         evolvers: [ 118, 85, 94, 301, 101 ],
         flags: { rr: 1, lrr: 1 }
     },
-    745: { // Portgas D. Ace, Dream of the Voyage - Pirate Summit (Log Ace)
+    745: { // Portgas D. Ace Voyage Dream: Pirate Summit (Log Ace)
         special: "Reduces damage received by 50% for 3 turns",
         specialName: "Flame Fence",
         captain: "Boosts ATK of Freedom characters by 2.5x",
