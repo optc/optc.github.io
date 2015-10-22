@@ -34,7 +34,7 @@ directives.characterTable = function($rootScope, $timeout, $compile) {
                     // cosmetic fixes
                     $(row.cells[2]).addClass('cell-' + row.cells[2].textContent);
                     var n = row.cells.length - 2 - scope.table.additional;
-                    $(row.cells[n]).addClass('stars-' + row.cells[n].textContent);
+                    $(row.cells[n]).addClass('stars stars-' + row.cells[n].textContent);
                     row.cells[n].textContent = '';
                     // compile
                     $compile($(row).contents())($rootScope);

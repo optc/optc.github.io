@@ -84,6 +84,10 @@ app.controller('SidebarCtrl',function($scope, $rootScope, $stateParams) {
 
     $scope.filterData = window.matchers;
 
+    $scope.repeat = function(n) {
+        return (n < 1 ? [ ] : new Array(n));
+    };
+
 });
 
 app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, $timeout) {
