@@ -40,4 +40,24 @@ if (version < 3) {
     },500);
 }
 
+/**************
+ * Versioning *
+ **************/
+
+app
+    .run(function($http) {
+        $http.get('../common/data/version?ts=' + Date.now())
+            .then(function(response) {
+                var version = parseInt(response.data,10);
+                if (version <= details.version) return;
+                noty({
+                    text: 'New data detected. Please refresh the page.',
+                    timeout: 5000,
+                    type: 'success',
+                    layout: 'topRight',
+                    theme: 'relax'
+                });
+            });
+    });
+
 })();
