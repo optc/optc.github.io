@@ -5006,7 +5006,7 @@ window.details = {
     727: { // Monkey D. Luffy Gum-Gum Gatling
         special: "Deals 10x character's ATK in DEX damage to all enemies, reduces the defense of all enemies by 50% for 1 turn",
         specialName: "Gum-Gum Gatling",
-        captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts the ATK of Freedom and Fighter characters by 1.75x",
+        captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of Freedom and Fighter characters by 1.75x",
         cooldown: [ 15, 15 ],
         flags: { special: 1 }
     },
