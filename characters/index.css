@@ -112,7 +112,7 @@ input[type="text"] {
     font-size: 11px;
 }
 
-.filter.stars:not(.active):before {
+.filter.stars:not(.active):not(:hover):before {
     color: #cccccc !important;
 }
 
@@ -616,14 +616,6 @@ tr.incomplete td:nth-child(2) > a:after {
     position: relative;
     margin-right: 10px;
     bottom: 3px;
-}
-
-.mini-type {
-    color: white;
-    border-radius: 10px;
-    display: inline-block;
-    width: 35px;
-    text-align: center;
 }
 
 .notes {
