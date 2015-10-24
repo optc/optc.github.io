@@ -781,5 +781,5 @@ window.units = [
     [ "Urouge, Captain of the Fallen Monk Pirates", "STR", [ "Fighter", "Striker" ], 4, 25, 5, 2, 70, 1066998, 702, 340, 38, 1580, 790, 121, 1.5 ],
     [ "Mad Monk Urouge, Captain of the Fallen Monk Pirates", "STR", [ "Fighter", "Striker" ], 5, 40, 5, 3, 99, 4000000, 1512, 755, 83, 2824, 1324, 203, 1.5 ],
     [ "Tashigi, Justice's Flower", "INT", [ "Slasher", "Knowledge" ], 4, 13, 5, 2, 50, null, 132, 65, 49, 999, 495, 205, 0 ],
-    [ "Navy Headquarters Ensign Tashigi, Justice's Flower", "INT", [ "Slasher", "Knowledge" ], 5, 20, 5, 3, 99, null, 932, 428, 164, null, null, null, 0 ]
+    [ "Navy Headquarters Ensign Tashigi, Justice's Flower", "INT", [ "Slasher", "Knowledge" ], 5, 20, 5, 3, 99, null, 932, 428, 164, 1804, 890, 378, 0 ]
 ];

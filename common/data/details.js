@@ -1,6 +1,6 @@
 window.details = {
 
-    version: 1,
+    version: 2,
 
     1: { // Monkey D. Luffy
         special: "Deals 5x character's ATK in STR damage to one enemy",
