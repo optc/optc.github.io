@@ -1,7 +1,4 @@
 window.details = {
-
-    version: 2,
-
     1: { // Monkey D. Luffy
         special: "Deals 5x character's ATK in STR damage to one enemy",
         specialName: "Spinning Gum Punch",
@@ -3440,7 +3437,7 @@ window.details = {
         evolvers: [ 116, 79, 85, 266 ],
         flags: { global: 1, rr: 1 }
     },
-    506: { // Pell The guardian falcon of Alabasta.
+    506: { // Pell The Guardian Falcon of Alabasta
         special: "Boosts ATK of QCK characters by 1.25x for 3 turns",
         specialName: "Flying Claw",
         captain: "Prevents death as long as HP is above 30%",
@@ -3456,9 +3453,9 @@ window.details = {
         evolvers: [ 116, 89, 95, 300 ],
         flags: { global: 1, rr: 1 }
     },
-    508: { // Chaka, Alabasta's Guardian Jackal
+    508: { // Chaka The Guardian Jackal of Alabasta
         special: "Deals 25x character's ATK in STR damage to one enemy",
-        specialName: "Howling Fang",
+        specialName: "Ringing Fang",
         captain: "Boosts ATK and HP of STR characters by 1.5x",
         cooldown: [ 25, 18 ],
         flags: { global: 1, rr: 1 }

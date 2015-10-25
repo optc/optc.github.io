@@ -25,7 +25,7 @@ app
  * Notifications *
  *****************/
 
-var version = JSON.parse(localStorage.getItem('charVersion')) || 2;
+var version = JSON.parse(localStorage.getItem('charVersion')) || 3;
 
 if (version < 3) {
     localStorage.setItem('charVersion', JSON.stringify(3));
@@ -46,10 +46,10 @@ if (version < 3) {
 
 app
     .run(function($http) {
-        $http.get('../common/data/version?ts=' + Date.now())
+        $http.get('../common/data/version.js?ts=' + Date.now())
             .then(function(response) {
-                var version = parseInt(response.data,10);
-                if (version <= details.version) return;
+                var version = parseInt(response.data.match(/=\s*(\d+)/)[1],10);
+                if (version <= window.dbVersion) return;
                 noty({
                     text: 'New data detected. Please refresh the page.',
                     timeout: 5000,
