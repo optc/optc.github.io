@@ -511,6 +511,10 @@ tr.incomplete td:nth-child(2) > a:after {
     z-index: 100;
 }
 
+.backdrop.closing {
+    background-color: transparent;
+}
+
 .inner-container {
     position: relative;
     display: table-cell;
@@ -563,8 +567,8 @@ tr.incomplete td:nth-child(2) > a:after {
 }
 
 .animated {
-    animation-duration: 0.2s;
-    -webkit-animation-duration: 0.2s;
+    animation-duration: 0.3s;
+    -webkit-animation-duration: 0.3s;
 }
 
 .modal-filter {

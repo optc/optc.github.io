@@ -128,7 +128,9 @@ directives.goBack = function($state) {
         link: function(scope, element, attrs) {
             element.click(function(e) {
                 if (!e.target || e.target.className.indexOf('inner-container') == -1) return;
-                $state.go('^');
+                element.find('.modal-content').addClass('rollOut');
+                $('.backdrop').addClass('closing');
+                setTimeout(function() { $state.go('^'); },300);
             });
         }
     };
