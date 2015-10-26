@@ -101,6 +101,7 @@ app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, 
     $scope.evolvesFrom = CharUtils.searchBaseForms(id);
     $scope.usedBy = CharUtils.searchEvolverEvolutions(id);
     $scope.drops = CharUtils.searchDropLocations(id);
+    $scope.tandems = CharUtils.searchTandems(id);
     $scope.manuals = CharUtils.searchDropLocations(-id);
     $scope.sameSpecials = CharUtils.searchSameSpecials(id);
     $scope.collapsed = { to: true, from: true, used: true, drops: true, manuals: true }; 
@@ -117,6 +118,7 @@ app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, 
         $('#compare').val('');
         $('#compare').prop('disabled', false);
     };
+    $scope.getPrevious = function() { return $stateParams.previous.concat($scope.id); };
 });
 
 app.controller('ColumnsCtrl',function($scope, $rootScope, $state, $stateParams) {

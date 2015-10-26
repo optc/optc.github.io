@@ -216,6 +216,26 @@
                         <unit uid="id" ng-repeat="id in sameSpecials"></a>
                     </div>
 
+                    <!-- Tandems -->
+
+                    <h3 class="page-header" ng-if="tandems.length > 0">Tandems</h3>
+
+                    <div ng-if="tandems.length > 0">
+                        <table class="table table-striped tandem-table">
+                            <tbody>
+                                <tr ng-repeat="tandem in tandems">
+                                    <td>
+                                        <div><strong>{{tandem.name}}</strong></div>
+                                        <a class="slot medium" decorate-slot uid="uid" clickable="true"
+                                            ui-sref="main.view({ id: uid, previous: getPrevious() })"
+                                            ng-repeat="uid in tandem.units track by $index"></a>
+                                        <div>{{tandem.desc}}</div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
                     <!-- Drops -->
 
                     <h3 class="page-header" ng-if="drops.length > 0">Drop Locations</h3>

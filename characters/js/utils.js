@@ -136,6 +136,15 @@ CharUtils.searchDropLocations = function(id) {
     return result;
 };
 
+CharUtils.searchTandems = function(id) {
+    var result = [ ];
+    for (var i=0;i<tandems.length;++i) {
+        if (tandems[i].units.indexOf(id) > -1)
+            result.push(tandems[i]);
+    }
+    return result;
+};
+
 CharUtils.isFarmable = function(id, type) {
     if (reverseDropMap === null) generateReverseDropMap();
     if (!reverseDropMap.hasOwnProperty(id)) return false;

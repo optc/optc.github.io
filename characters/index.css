@@ -666,6 +666,14 @@ tr.incomplete td:nth-child(2) > a:after {
     white-space: initial;
 }
 
+.tandem-table td {
+    text-align: center;
+}
+
+.tandem-table {
+    border-bottom: 1px solid #ddd;
+}
+
 .drop-warning {
     text-align: left;
     margin-bottom: 15px;
