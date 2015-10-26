@@ -171,70 +171,90 @@
 
                     <h3 class="page-header" ng-if="details.evolution">Evolutions</h3>
 
-                    <div ng-if="details.evolution && !details.evolution.length">
-                        <evolution unit="unit" evolvers="details.evolvers" evolution="details.evolution" size="medium"></evolution>
-                    </div>
+                    <table class="table table-striped table-centered table-bordered table-textless" ng-if="details.evolution && !details.evolution.length">
+                        <tbody>
+                            <tr>
+                                <td><evolution unit="unit" evolvers="details.evolvers"
+                                    evolution="details.evolution" size="medium"></evolution></td>
+                            </tr>
+                        </tbody>
+                    </table>
 
-                    <div ng-if="details.evolution && details.evolution.length">
-                        <div class="panel padded panel-default" ng-repeat="evolverSet in details.evolvers">
-                           <evolution unit="unit" evolvers="evolverSet" evolution="details.evolution[$index]" size="medium"></evolution> 
-                        </div>
-                    </div>
+                    <table class="table table-striped table-centered table-bordered table-textless" ng-if="details.evolution && details.evolution.length">
+                        <tbody>
+                            <tr ng-repeat="evolverSet in details.evolvers">
+                                <td>
+                                    <evolution unit="unit" evolvers="evolverSet" evolution="details.evolution[$index]"
+                                        size="medium"></evolution> 
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
 
                     <!-- Evolves from -->
 
                     <h3 class="page-header" ng-if="evolvesFrom.length > 0">Evolves From</h3>
 
-                    <div ng-if="evolvesFrom.length >0">
-                        <div class="panel padded panel-default" ng-repeat="tree in evolvesFrom">
-                            <div ng-repeat="id in tree">
-                                <evolution unit="unit" base="id" evolvers="getEvos(id,tree[$index+1] || unit.number+1)"
-                                    evolution="tree[$index+1] || unit.number + 1" size="medium"></evolution>
-                            </div>
-                        </div>
-
-                    </div>
+                    <table class="table table-striped table-centered table-bordered table-textless" ng-if="evolvesFrom.length > 0">
+                        <tbody>
+                            <tr ng-repeat="tree in evolvesFrom">
+                                <td><div ng-repeat="id in tree">
+                                        <evolution unit="unit" base="id" evolvers="getEvos(id,tree[$index+1] || unit.number+1)"
+                                            evolution="tree[$index+1] || unit.number + 1" size="medium"></evolution></div></td>
+                            </tr>
+                        </tbody>
+                    </table>
 
                     <!-- Used by -->
 
                     <h3 class="page-header" ng-if="sizeOf(usedBy) > 0">Evolutions Requiring This Unit</h3>
 
-                    <div ng-if="sizeOf(usedBy) > 0" ng-class="{ collapsed: collapsed.used && sizeOf(usedBy) > 3 }">
-                        <div class="btn btn-info collapse-button" ng-click="collapsed.used = false">Click to show</div>
-                        <div class="panel padded panel-default" ng-repeat="(base,evolutions) in usedBy">
-                            <div ng-repeat="id in evolutions track by $index">
-                                <evolution unit="unit" base="base" evolvers="getEvos(base,id,unit.number + 1)"
-                                    evolution="id" size="medium"></evolution>
-                            </div>
-                        </div>
-                    </div>
+                    <table ng-if="sizeOf(usedBy) > 0" class="table table-striped table-centered table-bordered table-textless">
+                        <tbody>
+                            <tr ng-if="collapsed.used && sizeOf(usedBy) > 3">
+                                <td><button class="btn btn-info collapse-button"
+                                        ng-click="collapsed.used = false">Click to show</button></td>
+                            </tr>
+                            <tr ng-repeat="(base,evolutions) in usedBy" ng-if="!collapsed.used || sizeOf(usedBy) < 4">
+                                <td>
+                                    <div ng-repeat="id in evolutions track by $index">
+                                        <evolution unit="unit" base="base" evolvers="getEvos(base,id,unit.number + 1)"
+                                            evolution="id" size="medium"></evolution>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
 
                    <!-- Same specials -->
 
                     <h3 class="page-header" ng-if="sizeOf(sameSpecials) > 0">Units With the Same Special</h3>
-                    <div ng-if="sizeOf(sameSpecials) > 0" class="panel padded panel-default">
-                        <unit uid="id" ng-repeat="id in sameSpecials"></a>
-                    </div>
+
+                    <table ng-if="sizeOf(sameSpecials) > 0" class="table table-striped table-centered table-bordered table-textless">
+                        <tbody>
+                            <tr>
+                                <td><unit uid="id" ng-repeat="id in sameSpecials"></unit></td>
+                            </tr>
+                        </tbody>
+                    </table>
 
                     <!-- Tandems -->
 
                     <h3 class="page-header" ng-if="tandems.length > 0">Tandems</h3>
 
-                    <div ng-if="tandems.length > 0">
-                        <table class="table table-striped tandem-table">
-                            <tbody>
-                                <tr ng-repeat="tandem in tandems">
-                                    <td>
-                                        <div><strong>{{tandem.name}}</strong></div>
-                                        <a class="slot medium" decorate-slot uid="uid" clickable="true"
-                                            ui-sref="main.view({ id: uid, previous: getPrevious() })"
-                                            ng-repeat="uid in tandem.units track by $index"></a>
-                                        <div>{{tandem.desc}}</div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                    <table class="table table-striped table-centered table-bordered" ng-if="tandems.length > 0">
+                        <tbody>
+                            <tr ng-repeat="tandem in tandems">
+                                <td>
+                                    <div><strong>{{tandem.name}}</strong></div>
+                                    <a class="slot medium clickable" decorate-slot uid="uid" clickable="true"
+                                        ui-sref="main.view({ id: uid, previous: getPrevious() })"
+                                        ng-repeat="uid in tandem.units track by $index"></a>
+                                    <div>{{tandem.desc}}</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
 
                     <!-- Drops -->
 
@@ -246,48 +266,64 @@
                         island's secret round. Secret rounds have an estimated 5% chance of appearing.
                     </span>
 
-                    <div ng-if="drops.length > 0" ng-class="{ collapsed: collapsed.drops && drops.length > 3 }">
-                        <div class="btn btn-info collapse-button" ng-click="collapsed.drops = false">Click to show</div>
-                        <table class="table table-striped drop-table">
-                            <thead>
+                    <table ng-if="collapsed.drops && drops.length > 3" class="table table-striped table-centered table-bordered table-textless">
+                        <tbody>
+                            <tr ng-if="collapsed.drops && drops.length > 3">
+                                <td><button class="btn btn-info collapse-button"
+                                        ng-click="collapsed.drops = false">Click to show</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <table ng-if="drops.length > 0" class="table table-striped drop-table">
+                        <thead ng-show="!collapsed.drops || drops.length < 4">
+                            <tr>
                                 <th>Location</th>
                                 <th>Chapter/Difficulty</th>
-                            </thead>
-                            <tbody>
-                                <tr ng-repeat="drop in drops">
-                                    <td>
-                                        <div class="slot small" decorate-slot uid="drop.thumb"></div>
-                                        {{drop.name}}
-                                        <span ng-repeat="bonus in drop.bonuses" class="bonus {{bonus.slice(0,2)}} {{bonus.slice(3)}}"></span>
-                                    </td>
-                                    <td>{{drop.data.join(', ')}}</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-if="!collapsed.drops || drops.length < 4" ng-repeat="drop in drops">
+                                <td>
+                                    <div class="slot small" decorate-slot uid="drop.thumb"></div>
+                                    {{drop.name}}
+                                    <span ng-repeat="bonus in drop.bonuses" class="bonus {{bonus.slice(0,2)}} {{bonus.slice(3)}}"></span>
+                                </td>
+                                <td>{{drop.data.join(', ')}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
 
                     <!-- Manuals -->
 
                     <h3 class="page-header" ng-if="manuals.length > 0">Manual Locations</h3>
 
-                    <div ng-if="manuals.length > 0" ng-class="{ collapsed: collapsed.manuals && manuals.length > 3 }">
-                        <div class="btn btn-info collapse-button" ng-click="collapsed.manuals = false">Click to show</div>
-                        <table class="table table-striped drop-table">
-                            <thead>
+                    <table ng-if="collapsed.manuals && manuals.length > 3" class="table table-striped table-centered table-bordered table-textless">
+                        <tbody>
+                            <tr ng-if="collapsed.manuals && manuals.length > 3">
+                                <td><button class="btn btn-info collapse-button"
+                                        ng-click="collapsed.manuals = false">Click to show</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <table ng-if="manuals.length > 0" class="table table-striped drop-table">
+                        <thead ng-show="!collapsed.manuals || manuals.length < 4">
+                            <tr>
                                 <th>Location</th>
                                 <th>Stage/Difficulty</th>
-                            </thead>
-                            <tbody>
-                                <tr ng-repeat="drop in manuals">
-                                    <td>
-                                        <div class="slot small" decorate-slot uid="drop.thumb"></div>
-                                        {{drop.name}}
-                                    </td>
-                                    <td>{{drop.data.join(', ')}}</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-if="!collapsed.manuals || manuals.length < 4" ng-repeat="drop in manuals">
+                                <td>
+                                    <div class="slot small" decorate-slot uid="drop.thumb"></div>
+                                    {{drop.name}}
+                                </td>
+                                <td>{{drop.data.join(', ')}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
 
                     <!-- Tags -->
 

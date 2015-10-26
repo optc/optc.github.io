@@ -632,19 +632,6 @@ tr.incomplete td:nth-child(2) > a:after {
     color: gray;
 }
 
-.collapsed > :first-child ~ div ,
-.collapsed > :first-child ~ table {
-    display: none;
-}
-
-.collapse-button {
-    margin-bottom: 10px;
-}
-
-:not(.collapsed) > .collapse-button {
-    display: none;
-}
-
 .drop-table {
     position: relative;
     top: -10px;
@@ -666,12 +653,18 @@ tr.incomplete td:nth-child(2) > a:after {
     white-space: initial;
 }
 
-.tandem-table td {
+.table-centered td {
     text-align: center;
 }
 
-.tandem-table {
-    border-bottom: 1px solid #ddd;
+.table-bordered {
+    border: 1px solid #ddd;
+    border-top: none;
+    border-radius: 3px;
+}
+
+.table-textless td, .table-textless i {
+    line-height: 0em !important;
 }
 
 .drop-warning {
