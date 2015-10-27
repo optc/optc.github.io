@@ -5417,7 +5417,9 @@ window.details = {
     784: { // Gen-san
         special: "Reduces Silence duration by 2 turns, removes blindness",
         specialName: "Yelling at Lascivious Young Women",
-        cooldown: 15
+        cooldown: 15,
+        evolution: 785,
+        evolvers: [ 116, 89, 95 ]
     },
     785: { // Genzo, Cocoyasi Village Resident
         special: "Reduces Silence duration by 2 turns, removes blindness",
@@ -5465,11 +5467,7 @@ window.details = {
         evoluiton: 794,
         specialName: "The Entushiasm to Keep Skilled Workers in Line",
         cooldown: 22,
-        evolvers: [
-            116,
-            117,
-            99
-        ]
+        evolvers: [ 116, 117, 99 ]
     },
     793: { // Iceburg, Mayor of W7 and President of Galley-La Company
         special: "Changes all orbs into either [STR], [QCK], [DEX], [PSY] or [INT] orbs, freely switch orbs between slots twice, locks all orbs for 1 turn",

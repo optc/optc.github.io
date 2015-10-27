@@ -868,7 +868,7 @@ window.captains = {
         atk: function(p) { return p.unit.type == "STR" ? 1.2 : 1; },
         hp: function(p) { return p.unit.type == "STR" ? 1.2 : 1; }
     },
-    508: { // Chaka, Alabasta's Guardian Jackal
+    508: { // Chaka The Guardian Jackal of Alabasta
         atk: function(p) { return p.unit.type == "STR" ? 1.5 : 1; },
         hp: function(p) { return p.unit.type == "STR" ? 1.5 : 1; }
     },
@@ -1558,31 +1558,31 @@ window.captains = {
     760: { // Kumadori, CP9's Strongest Generation
         atk: function(p) { return p.unit.type == "STR" && p.percHP <= 30.0 ? 3 : 1; }
     },
-    761: { // Monkey D. Luffy Halloween Monster
+    761: { // Monkey D. Luffy Halloween Monster (Halloween Luffy)
         atk: function(p) { return p.unit.class.has("Fighter") ? 2 : 1; }
     },
-    762: { // Usopp Lying Wolf
+    762: { // Usopp Lying Wolf (Halloween Usopp)
         atk: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; },
         rcv: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; }
     },
-    763: { // Franky Frankenstein
+    763: { // Franky Frankenstein (Halloween Franky)
         atk: function(p) { return p.unit.type == "STR" ? 2 : 1; }
     },
-    764: { // Nami Jackie 'o Lantern
+    764: { // Nami Jackie 'o Lantern (Halloween Nami)
         atk: function(p) { return p.unit.class.has("Striker") ? 1.5 : 1; },
         rcv: function(p) { return p.unit.class.has("Striker") ? 1.5 : 1; }
     },
-    766: { // Roronoa Zoro Jack the Ripper
+    766: { // Roronoa Zoro Jack the Ripper (Halloween Zoro)
         atk: function(p) { return p.unit.type == "QCK" ? 2 : 1; }
     },
-    767: { // Nico Robin Sexy Devil
+    767: { // Nico Robin Sexy Devil (Halloween Robin)
         atk: function(p) { return p.unit.type == "DEX" ? 1.5 : 1; },
         rcv: function(p) { return p.unit.type == "DEX" ? 1.5 : 1; }
     },
-    768: { // Sanji Ghost Knight
+    768: { // Sanji Ghost Knight (Halloween Sanji)
         atk: function(p) { return p.unit.type == "PSY" ? 2 : 1; }
     },
-    769: { // Brook Scaredy Skeleton
+    769: { // Brook Scaredy Skeleton (Halloween Brook)
         atk: function(p) { return p.unit.type == "INT" ? 1.5 : 1; },
         rcv: function(p) { return p.unit.type == "INT" ? 1.5 : 1; }
     },
@@ -1622,5 +1622,12 @@ window.captains = {
     783: { // Navy Headquarters Ensign Tashigi, Justice's Flower
         atk: function(p) { return p.unit.class.has("Slasher") ? 2 : 1; },
         rcv: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; }
+    },
+    789: { // Kuina, Shimotsuki Village's Girl Swordsman
+        atk: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; }
+    },
+    793: { // Iceburg, Mayor of W7 and President of Galley-La Company
+        atk: function(p) { return p.unit.class.has("Knowledge") ? 1.5 : 1; },
+        rcv: function(p) { return p.unit.class.has("Knowledge") ? 1.5 : 1; },
     }
 };

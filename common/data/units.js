@@ -782,14 +782,14 @@ window.units = [
     [ "Mad Monk Urouge, Captain of the Fallen Monk Pirates", "STR", [ "Fighter", "Striker" ], 5, 40, 5, 3, 99, 4000000, 1512, 755, 83, 2824, 1324, 203, 1.5 ],
     [ "Tashigi, Justice's Flower", "INT", [ "Slasher", "Knowledge" ], 4, 13, 5, 2, 50, null, 132, 65, 49, 999, 495, 205, 0 ],
     [ "Navy Headquarters Ensign Tashigi, Justice's Flower", "INT", [ "Slasher", "Knowledge" ], 5, 20, 5, 3, 99, null, 932, 428, 164, 1804, 890, 378, 0 ],
-    [ "Gen-san", "STR", [ "Slasher", "Knowledge" ], 3, 9, 5, 2, 35, null, 295, 73, 51, null, null, null, 0 ],
-    [ "Genzo, Cocoyasi Village Resident", "STR", [ "Slasher", "Knowledge" ], 4, 15, 4, 3, 70, null, 879, 242, 143, null, null, null, 0 ],
-    [ "Dr. Hiluluk", "PSY", [ "Shooter", "Freedom" ], 3, 9, 6, 2, 35, null, 799, 285, 49, null, null, null, 0 ],
-    [ "Dr. Hiluluk, Quack Doctor", "PSY", [ "Shooter", "Freedom" ], 4, 15, 5, 3, 70, null, 1237, 469, 146, null, null, null, 0 ],
-    [ "Kuina", "DEX", "Striker", 3, 9, 6, null, 35, null, 106, 67, 91, null, null, null, 0 ],
-    [ "Kuina, Shimotsuki Village's Girl Swordsman", "DEX", "Slasher", 4, 15, 5, 3, 70, null, 448, 220, 213, null, null, null, 0 ],
-    [ "Tamanegi, Piiman & Ninjin", "QCK", [ "Striker", "Freedom" ], 3, 9, 4, 3, 35, null, 154, 25, 87, null, null, null, 0 ],
+    [ "Gen-san", "STR", [ "Slasher", "Knowledge" ], 3, 9, 5, 2, 35, null, 211, 45, 33, 930, 288, 190, 1 ],
+    [ "Genzo, Cocoyasi Village Resident", "STR", [ "Slasher", "Knowledge" ], 4, 15, 4, 3, 70, null, 879, 242, 143, 1324, 501, 299, 0 ],
+    [ "Dr. Hiluluk", "PSY", [ "Shooter", "Freedom" ], 3, 9, 6, 2, 35, null, 231, 63, 5, 1248, 461, 84, 0 ],
+    [ "Dr. Hiluluk, Quack Doctor", "PSY", [ "Shooter", "Freedom" ], 4, 15, 5, 3, 70, null, 1233, 451, 84, 1248, 518, 312, 0 ],
+    [ "Kuina", "DEX", "Striker", 3, 9, 6, 2, 35, null, 106, 67, 91, null, null, null, 0 ],
+    [ "Kuina, Shimotsuki Village's Girl Swordsman", "DEX", "Slasher", 4, 15, 5, 3, 70, null, 448, 220, 213, 917, 582, 338, 0 ],
+    [ "Tamanegi, Piiman & Ninjin", "QCK", [ "Striker", "Freedom" ], 3, 9, 4, 3, 35, null, 80, 10, 66, 716, 142, 249, 0 ],
     [ null, "QCK", [ "Striker", "Freedom" ], 4, 15, 6, 3, 70, null, 654, 77, 180, null, null, null, 0 ],
-    [ "Iceburg", "INT", [ "Shooter", "Knowledge" ], 3, 9, 6, 2, 35, null, 229, 107, 53, null, null, null, 0 ],
-    [ "Iceburg, Mayor of W7 and President of Galley-La Company", "INT", [ "Shooter", "Knowledge" ], 4, 15, 4, 3, 70, null, 762, 363, 127, null, null, null, 0 ]
+    [ "Iceburg", "INT", [ "Shooter", "Knowledge" ], 3, 9, 6, 2, 35, null, 155, 96, 38, 790, 392, 167, 0 ],
+    [ "Iceburg, Mayor of W7 and President of Galley-La Company", "INT", [ "Shooter", "Knowledge" ], 4, 15, 4, 3, 70, null, 723, 343, 122, 1401, 702, 224, 0 ]
 ];
