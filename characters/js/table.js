@@ -199,6 +199,7 @@ angular.module('optc') .run(function($rootScope) {
             else if (c == 'RCV/ATK') temp = Math.round(x.maxRCV / x.maxATK * 100) / 100;
             else if (c == 'ATK/CMB') temp = Math.round(x.maxATK / x.combo * 100) / 100;
             else if (c == 'ATK/cost') temp = Math.round(x.maxATK / x.cost * 100) / 100;
+            else if (c == 'HP/cost') temp = Math.round(x.maxHP / x.cost * 100) / 100;
             else if (c == 'CMB') temp = x.combo;
             else if (c == 'Minimum cooldown' || c == 'Initial cooldown') { 
                 var d = details[x.number + 1];

@@ -5430,7 +5430,9 @@ window.details = {
     786: { // Dr. Hiluluk
         special: "Seals himself for 10 turns, delay all enemies for 1 turn, reduces damage received by 50% for 4 turns",
         specialName: "The Resolve to Face Death! \"Open Mind\"",
-        cooldown: 23
+        cooldown: 23,
+        evolution: 787,
+        evolvers: [ 116, 81, 87 ]
     },
     787: { // Dr. Hiluluk, Quack Doctor
         special: "Seals himself for 10 turns, delay all enemies for 1 turn, reduces damage received by 50% for 4 turns",
