@@ -5413,5 +5413,64 @@ window.details = {
         specialName: "Smile of a Natural Beauty",
         captain: "Boosts ATK of Slasher characters by 2x and their RCV by 1.5x",
         cooldown: [ 11, 11 ]
+    },
+    784: { // Gen-san
+        special: "Reduces Silence duration by 2 turns, removes blindness",
+        specialName: "Yelling at Lascivious Young Women",
+        cooldown: 15
+    },
+    785: { // N/A
+        special: "Reduces Silence duration by 2 turns, removes blindness",
+        specialName: "Yelling at Lascivious Young Women",
+        captain: "?",
+        cooldown: 15
+    },
+    786: { // Dr. Hiluluk
+        special: "Seals himself for 10 turns, delay all enemies for 1 turn, reduces damage received by 50% for 4 turns",
+        specialName: "The Resolve to Face Death! \"Open Mind\"",
+        cooldown: 23
+    },
+    787: { // Dr. Hiluluk, Quack Doctor
+        special: "Seals himself for 10 turns, delay all enemies for 1 turn, reduces damage received by 50% for 4 turns",
+        specialName: "The Resolve to Face Death! \"Open Mind\"",
+        captain: "Reduces damage received by 50%, reduces crew's current HP by 10% at the end of each turn",
+        cooldown: 23
+    },
+    788: { // Kuina
+        special: "Following the activation of the special, if every unit scores a Perfect hit, boosts ATK of Slasher characters by 1.75x in the following turn",
+        specialName: "Real Sword Fight with a Girl Swordsman",
+        cooldown: 15,
+        evolution: 789,
+        evolvers: [ 116, 80, 86 ]
+    },
+    789: { // Kuina, Shimotsuki Village's Girl Swordsman
+        special: "Following the activation of the special, if every unit scores a Perfect hit, boosts ATK of Slasher characters by 1.75x in the following turn",
+        specialName: "Real Sword Fight with a Girl Swordsman",
+        captain: "Boosts ATK of Slasher characters by 1.5x",
+        cooldown: 15
+    },
+    790: { // Tamanegi, Piiman & Ninjin
+        special: "Deals 3x character's ATK in QCK damage to one enemy, boosts ATK of STR, DEX and QCK characters by 1.2x for 3 turns",
+        specialName: "March!! Usopp Pirates",
+        cooldown: 17
+    },
+    791: { // N/A
+        special: "Deals 3x character's ATK in QCK damage to one enemy, boosts ATK of STR, DEX and QCK characters by 1.2x for 3 turns",
+        specialName: "March!! Usopp Pirates",
+        captain: "?",
+        cooldown: 17
+    },
+    792: { // Iceburg
+        special: "Changes all orbs into either [STR], [QCK], [DEX], [PSY] or [INT] orbs, freely switch orbs between slots twice, locks all orbs for 1 turn",
+        evoluiton: 794,
+        specialName: "The Entushiasm to Keep Skilled Workers in Line",
+        cooldown: 22,
+        evolvers: [ 116, 117, 99 ]
+    },
+    793: { // Iceburg, Mayor of W7 and President of Galley-La Company
+        special: "Changes all orbs into either [STR], [QCK], [DEX], [PSY] or [INT] orbs, freely switch orbs between slots twice, locks all orbs for 1 turn",
+        specialName: "The Entushiasm to Keep Skilled Workers in Line",
+        captain: "Boosts ATK and RCV of Knowledge characters by 1.5x",
+        cooldown: 22
     }
 };
