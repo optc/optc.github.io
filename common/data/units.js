@@ -388,7 +388,7 @@ window.units = [
     [ "Cindry", "PSY", "Shooter", 3, 12, 5, 1, 50, 392109, 76, 58, 60, 806, 458, 259, 0.7 ],
     [ "Victoria Cindry", "PSY", "Shooter", 4, 20, 4, 2, 99, 3000000, 622, 398, 231, 1402, 661, 478, 0.7 ],
     [ "Emporio Ivankov", "QCK", [ "Fighter", "Freedom" ], 4, 30, 4, 3, 70, 1066998, 302, 125, 53, 1682, 512, 161, 1 ],
-    [ "Emporio Ivankov, Queen of Kamabakka Kingdom", "QCK", [ "Fighter", "Freedom" ], 5, 50, 4, 4, 99, 5000000, 1642, 470, 132, 3030, 1155, 290, 1 ],
+    [ "Emporio Ivankov Queen of Kamabakka Queendom (Retired)", "QCK", [ "Fighter", "Freedom" ], 5, 50, 4, 4, 99, 5000000, 1642, 470, 132, 3030, 1155, 290, 1 ],
     [ "Perona", "DEX", "Shooter", 3, 10, 4, 1, 50, 392109, 134, 44, 55, 944, 422, 222, 1 ],
     [ "Ghost Princess Perona", "DEX", "Shooter", 4, 18, 4, 2, 99, 3000000, 887, 377, 198, 1598, 791, 430, 1 ],
     [ "Kumacy (Kumashi)", "STR", [ "Fighter", "Tough" ], 3, 11, 6, 1, 70, 1066998, 500, 255, 0, 1660, 904, 0, 1 ],

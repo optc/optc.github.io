@@ -2625,13 +2625,15 @@ window.details = {
         captain: "Boosts ATK by 2.25x following a chain of DEX > INT > QCK attacks no lower than Good",
         cooldown: [ 17, 8 ],
         evolution: 390,
-        evolvers: [ 118, 85, 94, 301, 101 ]
+        evolvers: [ 118, 85, 94, 301, 101 ],
+        flags: { global: 1 }
     },
-    390: { // Emporio Ivankov, Queen of Kamabakka Kingdom
+    390: { // Emporio Ivankov Queen of Kamabakka Queendom (Retired)
         special: "Changes own orb into [QCK] and every other orb into either [RCV], [STR], [DEX] or [QCK] orbs",
         specialName: "Hell Wink",
         captain: "Boosts ATK by 2.75x following a chain of DEX > INT > QCK attacks no lower than Good",
-        cooldown: [ 17, 8 ]
+        cooldown: [ 17, 8 ],
+        flags: { global: 1 }
     },
     391: { // Perona
         special: "Reduces damage received by 90% for 1 turn, reduces the defense of all enemies by 80% for 1 turn, deals 1,000 fixed damage to all enemies at the end of the following turn",
@@ -5469,7 +5471,11 @@ window.details = {
         evoluiton: 794,
         specialName: "The Entushiasm to Keep Skilled Workers in Line",
         cooldown: 22,
-        evolvers: [ 116, 117, 99 ]
+        evolvers: [
+            116,
+            117,
+            99
+        ]
     },
     793: { // Iceburg, Mayor of W7 and President of Galley-La Company
         special: "Changes all orbs into either [STR], [QCK], [DEX], [PSY] or [INT] orbs, freely switch orbs between slots twice, locks all orbs for 1 turn",
