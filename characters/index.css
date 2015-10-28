@@ -106,6 +106,22 @@ input[type="text"] {
 .cell-PSY { font-weight: bold; color: goldenrod; }
 .cell-INT { font-weight: bold; color: darkorchid; }
 
+.badge-japan, .badge-global {
+    float: left;
+    position: relative;
+    top: 1px;
+    width: 50px;
+    text-align: center;
+    margin-right: 5px;
+}
+
+.badge-japan + div, .badge-global + div {
+    margin-bottom: 2px;
+}
+
+.badge-japan { background: mediumvioletred; }
+.badge-global { background: rebeccapurple; }
+
 .stars:before, .stars:after {
     font-weight: bold;
     font-family: icomoon;

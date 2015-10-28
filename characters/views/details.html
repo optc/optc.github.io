@@ -120,7 +120,15 @@
                                     <td>Special</td>
                                     <td>
                                         <strong class="specialName" ng-if="details.specialName">{{details.specialName}}</strong>
-                                        <div ng-bind-html="details.special | decorate"></div>
+                                        <!-- same special -->
+                                        <div ng-if="!isSpecialArray" ng-bind-html="details.special | decorate"></div>
+                                        <!-- different specials -->
+                                        <div ng-if="isSpecialArray">
+                                            <span class="badge badge-japan">Japan</span>
+                                            <div ng-bind-html="details.special[0] | decorate"></div>
+                                            <span class="badge badge-global">Global</span>
+                                            <div ng-bind-html="details.special[1] | decorate"></div>
+                                        </div>
                                         <span class="notes" ng-if="details.specialNotes" ng-bind-html="details.specialNotes | decorate"></span>
                                     </td>
                                 </tr>

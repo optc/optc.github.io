@@ -119,6 +119,7 @@ app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, 
         $('#compare').prop('disabled', false);
     };
     $scope.getPrevious = function() { return $stateParams.previous.concat($scope.id); };
+    $scope.isSpecialArray = ($scope.details.special && $scope.details.special.constructor == Array);
 });
 
 app.controller('ColumnsCtrl',function($scope, $rootScope, $state, $stateParams) {

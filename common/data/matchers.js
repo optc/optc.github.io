@@ -264,6 +264,12 @@ window.matchers = [
     },
 
     {
+        name: 'Blindness removers',
+        target: 'special',
+        matcher: /removes blindness/i
+    },
+
+    {
         name: 'Healers',
         target: 'special',
         matcher: /Recovers/i

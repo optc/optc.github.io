@@ -25,10 +25,10 @@ app
  * Notifications *
  *****************/
 
-var version = JSON.parse(localStorage.getItem('charVersion')) || 3;
+var version = JSON.parse(localStorage.getItem('charVersion')) || 4;
 
-if (version < 3) {
-    localStorage.setItem('charVersion', JSON.stringify(3));
+if (version < 4) {
+    localStorage.setItem('charVersion', JSON.stringify(4));
     setTimeout(function() {
         noty({
             text: 'Some stuff changed. Refreshing the page and/or clearing your browser\'s cache may be a smart idea.',

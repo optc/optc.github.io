@@ -5301,7 +5301,10 @@ window.details = {
         flags: { global: 1 }
     },
     767: { // Nico Robin Devil Girl (Halloween Robin)
-        special: "Changes the orbs in the top row into [DEX] orbs, removes blindness",
+        special: [
+            "Changes the orbs in the top row into [DEX] orbs, removes blindness",
+            "Changes the orbs in the top row into [DEX] orbs, reduces Silence duration by 1 turn"
+        ],
         specialName: "Ojos Fleur: Thriller",
         captain: "Boosts ATK and RCV of DEX characters by 1.5x",
         cooldown: [ 19, 11 ],
@@ -5474,14 +5477,10 @@ window.details = {
     },
     792: { // Iceburg
         special: "Changes all orbs into either [STR], [QCK], [DEX], [PSY] or [INT] orbs, freely switch orbs between slots twice, locks all orbs for 1 turn",
-        evoluiton: 794,
         specialName: "The Entushiasm to Keep Skilled Workers in Line",
         cooldown: 22,
-        evolvers: [
-            116,
-            117,
-            99
-        ]
+        evolution: 794,
+        evolvers: [ 116, 117, 99 ]
     },
     793: { // Iceburg, Mayor of W7 and President of Galley-La Company
         special: "Changes all orbs into either [STR], [QCK], [DEX], [PSY] or [INT] orbs, freely switch orbs between slots twice, locks all orbs for 1 turn",
