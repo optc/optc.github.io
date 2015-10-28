@@ -534,7 +534,7 @@ window.captains = {
         },
         hitModifiers: [ 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect' ] // don't remove this
     },
-    390: { // Emporio Ivankov, Queen of Kamabakka Kingdom
+    390: { // Emporio Ivankov Queen of Kamabakka Queendom (Retired)
         damageSorter: function(d) {
             return CrunchUtils.okamaSort(d, [ 'DEX', 'INT', 'QCK' ]);
         },
@@ -1575,14 +1575,14 @@ window.captains = {
     766: { // Roronoa Zoro Jack the Ripper (Halloween Zoro)
         atk: function(p) { return p.unit.type == "QCK" ? 2 : 1; }
     },
-    767: { // Nico Robin Sexy Devil (Halloween Robin)
+    767: { // Nico Robin Devil Girl (Halloween Robin)
         atk: function(p) { return p.unit.type == "DEX" ? 1.5 : 1; },
         rcv: function(p) { return p.unit.type == "DEX" ? 1.5 : 1; }
     },
     768: { // Sanji Ghost Knight (Halloween Sanji)
         atk: function(p) { return p.unit.type == "PSY" ? 2 : 1; }
     },
-    769: { // Brook Scaredy Skeleton (Halloween Brook)
+    769: { // Brook Cowardly Skeleton (Halloween Brook)
         atk: function(p) { return p.unit.type == "INT" ? 1.5 : 1; },
         rcv: function(p) { return p.unit.type == "INT" ? 1.5 : 1; }
     },

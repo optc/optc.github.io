@@ -5295,28 +5295,32 @@ window.details = {
     },
     766: { // Roronoa Zoro Jack the Ripper (Halloween Zoro)
         special: "Deals 7x character's ATK in QCK damage to all enemies, delays all enemies for 1 turn",
-        specialName: "108 Pound Phoenix Shinigami",
+        specialName: "108 Pound Phoenix: Reaper",
         captain: "Boosts ATK of QCK characters by 2x",
-        cooldown: [ 18, 10 ]
+        cooldown: [ 18, 10 ],
+        flags: { global: 1 }
     },
-    767: { // Nico Robin Sexy Devil (Halloween Robin)
+    767: { // Nico Robin Devil Girl (Halloween Robin)
         special: "Changes the orbs in the top row into [DEX] orbs, removes blindness",
-        specialName: "Ojos Fleur Thriller",
+        specialName: "Ojos Fleur: Thriller",
         captain: "Boosts ATK and RCV of DEX characters by 1.5x",
-        cooldown: [ 19, 11 ]
+        cooldown: [ 19, 11 ],
+        flags: { global: 1 }
     },
     768: { // Sanji Ghost Knight (Halloween Sanji)
         special: "Recovers 15x character's RCV in HP, changes [TND] orbs into [RCV] orbs",
-        specialName: "Hot Rock Stew Party",
+        specialName: "Hot Rock Stew: Party",
         captain: "Boosts ATK of PSY characters by 2x",
-        cooldown: [ 21, 13 ]
+        cooldown: [ 21, 13 ],
+        flags: { global: 1 }
     },
-    769: { // Brook Scaredy Skeleton (Halloween Brook)
+    769: { // Brook Cowardly Skeleton (Halloween Brook)
         special: "Recovers 4,343 HP, poisons all enemies",
         specialNotes: "Poison deals 0.5x character's ATK in fixed damage at the end of each turn",
-        specialName: "Lullaby Parry Hollow",
+        specialName: "Lullaby Parry: Horror",
         captain: "Boosts ATK and RCV of INT characters by 1.5x",
-        cooldown: [ 23, 15 ]
+        cooldown: [ 23, 15 ],
+        flags: { global: 1 }
     },
     770: { // Dalmatian, Navy Headquarters Vice Admiral
         special: "Deals 15x character's ATK in STR damage to one enemy, boosts ATK against delayed enemies by 1.3x for 2 turns",
@@ -5458,7 +5462,9 @@ window.details = {
     790: { // Tamanegi, Piiman & Ninjin
         special: "Deals 3x character's ATK in QCK damage to one enemy, boosts ATK of STR, DEX and QCK characters by 1.2x for 3 turns",
         specialName: "March!! Usopp Pirates",
-        cooldown: 17
+        cooldown: 17,
+        evolution: 792,
+        evolvers: [ 89, 90, 91 ]
     },
     791: { // N/A
         special: "Deals 3x character's ATK in QCK damage to one enemy, boosts ATK of STR, DEX and QCK characters by 1.2x for 3 turns",

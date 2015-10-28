@@ -645,15 +645,15 @@ window.specials = {
             });
         }
     },
-    788: {  // Kuina
+    788: { // Kuina
         atk: function(p) { return p.unit.class.has("Slasher") ? 1.75 : 1; },
         type: 'class',
     },
-    789: {  // Kuina, Shimotsuki Village's Girl Swordsman
+    789: { // Kuina, Shimotsuki Village's Girl Swordsman
         atk: function(p) { return p.unit.class.has("Slasher") ? 1.75 : 1; },
         type: 'class',
     },
-    790: {  // Tamanegi, Piiman & Ninjin
+    790: { // Tamanegi, Piiman & Ninjin
         atk: function(p) { return /STR|DEX|QCK/.test(p.unit.type) ? 1.2 : 1; },
         type: 'type',
     },
