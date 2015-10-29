@@ -109,7 +109,7 @@ input[type="text"] {
 .badge-japan, .badge-global {
     float: left;
     position: relative;
-    top: 1px;
+    top: 2px;
     width: 50px;
     text-align: center;
     margin-right: 5px;

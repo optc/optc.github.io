@@ -786,7 +786,7 @@ window.units = [
     [ "Genzo, Cocoyasi Village Resident", "STR", [ "Slasher", "Knowledge" ], 4, 15, 4, 3, 70, null, 879, 242, 143, 1324, 501, 299, 0 ],
     [ "Dr. Hiluluk", "PSY", [ "Shooter", "Freedom" ], 3, 9, 6, 2, 35, null, 231, 63, 5, 1248, 461, 84, 0 ],
     [ "Dr. Hiluluk, Quack Doctor", "PSY", [ "Shooter", "Freedom" ], 4, 15, 5, 3, 70, null, 1233, 451, 84, 1248, 518, 312, 0 ],
-    [ "Kuina", "DEX", "Striker", 3, 9, 6, 2, 35, null, 106, 67, 91, null, null, null, 0 ],
+    [ "Kuina", "DEX", "Striker", 3, 9, 6, 2, 35, null, 54, 41, 70, 503, 264, 251, 0 ],
     [ "Kuina, Shimotsuki Village's Girl Swordsman", "DEX", "Slasher", 4, 15, 5, 3, 70, null, 448, 220, 213, 917, 582, 338, 0 ],
     [ "Tamanegi, Piiman & Ninjin", "QCK", [ "Striker", "Freedom" ], 3, 9, 4, 3, 35, null, 80, 10, 66, 716, 142, 249, 0 ],
     [ null, "QCK", [ "Striker", "Freedom" ], 4, 15, 6, 3, 70, null, 654, 77, 180, null, null, null, 0 ],
