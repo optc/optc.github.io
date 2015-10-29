@@ -3155,216 +3155,250 @@ window.details = {
     },
     463: { // Satori
         special: "Empties all slots, deals 25x character's ATK in PSY damage to one enemy",
-        specialName: "Surprise Balls - Ball Dragon",
+        specialName: "Surprise Ball Dragon",
         captain: "Boosts HP of PSY characters by 2x",
-        cooldown: [ 25, 20 ]
+        cooldown: [ 25, 20 ],
+        flags: { global: 1 }
     },
     464: { // Shura
         special: "Deals 20x character's ATK in INT damage to all enemies",
-        specialName: "Fuza's Flame Breath",
+        specialName: "Roc Rider Fuza's Flame",
         captain: "Boosts ATK and HP of Striker characters by 1.5x",
-        cooldown: [ 20, 15 ]
+        cooldown: [ 20, 15 ],
+        flags: { global: 1 }
     },
     465: { // Gedatsu
         special: "Deals 20x character's ATK in QCK damage to one enemy, amplifies the effect of orbs by 1.25x for 2 turns",
         specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.25x more damage and opposite orbs will deal 1.25x less damage",
         specialName: "Jet Punch",
         captain: "Boosts ATK by 3x after scoring 4 hits below Good in a row",
-        cooldown: [ 25, 18 ]
+        cooldown: [ 25, 18 ],
+        flags: { global: 1 }
     },
     466: { // Braham
         special: "Delays all enemies for 1 turn",
-        specialName: "Double Barred Flash Gun",
+        specialName: "Double Flash Gun",
         captain: "Boosts ATK and HP of Shooter characters by 1.5x",
-        cooldown: [ 15, 10 ]
+        cooldown: [ 15, 10 ],
+        flags: { global: 1 }
     },
     467: { // Yama
         special: "Changes [RCV] orbs into [STR] orbs",
-        specialName: "Stomach Mountain",
+        specialName: "Mountain Belly",
         captain: "Boosts ATK and RCV of STR characters by 1.5x",
-        cooldown: [ 15, 10 ]
+        cooldown: [ 15, 10 ],
+        flags: { global: 1 }
     },
-    468: { // White Beret Force Yellow Group Skypiea God's Army
+    468: { // Yellow White Beret Skypiea Guard
         special: "Boosts RCV of all characters by 1.5x for 1 turn",
         specialName: "Healing Power",
         cooldown: 25,
         evolution: 470,
-        evolvers: [ 116, 81, 98 ]
+        evolvers: [ 116, 81, 98 ],
+        flags: { global: 1 }
     },
-    469: { // White Beret Force Black Group Skypiea God's Army
+    469: { // Black White Beret Skypiea Guard
         special: "Freely switch orbs between slots once",
         specialName: "Quick Change",
         cooldown: 18,
         evolution: 471,
-        evolvers: [ 116, 82, 99 ]
+        evolvers: [ 116, 82, 99 ],
+        flags: { global: 1 }
     },
-    470: { // White Beret Force Yellow Group Commander Skypiea God's Army
+    470: { // Yellow White Beret Captain Skypiea Guard
         special: "Boosts RCV of all characters by 1.5x for 1 turn",
         specialName: "Healing Power",
         captain: "Boosts RCV of PSY characters by 1.5x",
-        cooldown: 25
+        cooldown: 25,
+        flags: { global: 1 }
     },
-    471: { // White Beret Force Black Group Commander Skypiea God's Army
+    471: { // Black White Beret Captain Skypiea Guard
         special: "Freely switch orbs between slots once",
         specialName: "Quick Change",
-        cooldown: 18
+        cooldown: 18,
+        flags: { global: 1 }
     },
-    472: { // Red God's Guard Group Skypiea God's Army
+    472: { // Eneru's Elect: Red Guard Skypiea Enforcer
         special: "Deals 20x character's ATK in STR damage to one enemy",
         specialName: "Milky Power Axe",
-        cooldown: [ 20, 15 ]
+        cooldown: [ 20, 15 ],
+        flags: { global: 1 }
     },
-    473: { // Blue God's Guard Group Skypiea God's Army
+    473: { // Eneru's Elect: Blue Guard Skypiea Enforcer
         special: "Deals 10x character's ATK in QCK damage to one enemy",
         specialName: "Milky Quick Axe",
-        cooldown: [ 20, 15 ]
+        cooldown: [ 20, 15 ],
+        flags: { global: 1 }
     },
-    474: { // Green God's Guard Group Skypiea God's Army
+    474: { // Eneru's Elect: Green Guard Skypiea Enforcer
         special: "Deals 5x character's ATK in DEX damage to all enemies, reduces Bind duration by 1 turn",
         specialName: "Milky Technique Axe",
-        cooldown: [ 25, 15 ]
+        cooldown: [ 25, 15 ],
+        flags: { global: 1 }
     },
-    475: { // Yellow God's Guard Group Skypiea God's Army
+    475: { // Eneru's Elect: Yellow Guard Skypiea Enforcer
         special: "Deals 5x character's ATK in STR damage to all enemies, recovers 500 HP",
         specialName: "Milky Mind Axe",
-        cooldown: [ 25, 15 ]
+        cooldown: [ 25, 15 ],
+        flags: { global: 1 }
     },
-    476: { // Black God's Guard Group Skypiea God's Army
+    476: { // Eneru's Elect: Black Guard Skypiea Enforcer
         special: "Deals 1,000 fixed damage to one enemy",
         specialName: "Milky Intelligence Axe",
-        cooldown: 20
+        cooldown: 20,
+        flags: { global: 1 }
     },
-    477: { // Red Assault Squad Skypiea God's Army
+    477: { // Red Striker Skypiea Enforcer
         special: "Changes [DEX] orbs into [STR] orbs",
         specialName: "[DEX] Slot Change [STR]",
         cooldown: [ 15, 7 ],
         evolution: 482,
-        evolvers: [ 116, 84, 89, 95 ]
+        evolvers: [ 116, 84, 89, 95 ],
+        flags: { global: 1 }
     },
-    478: { // Blue Assault Squad Skypiea God's Army
+    478: { // Blue Striker Skypiea Enforcer
         special: "Changes [PSY] orbs into [QCK] orbs",
         specialName: "[PSY] Slot Change [QCK]",
         cooldown: [ 15, 7 ],
         evolution: 483,
-        evolvers: [ 116, 85, 90, 96 ]
+        evolvers: [ 116, 85, 90, 96 ],
+        flags: { global: 1 }
     },
-    479: { // Green Assault Squad Skypiea God's Army
+    479: { // Green Striker Skypiea Enforcer
         special: "Changes [INT] orbs into [DEX] orbs",
         specialName: "[INT] Slot Change [DEX]",
         cooldown: [ 15, 7 ],
         evolution: 484,
-        evolvers: [ 116, 86, 91, 97 ]
+        evolvers: [ 116, 86, 91, 97 ],
+        flags: { global: 1 }
     },
-    480: { // Yellow Assault Squad Skypiea God's Army
+    480: { // Yellow Striker Skypiea Enforcer
         special: "Changes [TND] orbs into [PSY] orbs",
         specialName: "[TND] Slot Change [PSY]",
         cooldown: [ 15, 7 ],
         evolution: 485,
-        evolvers: [ 116, 87, 92, 98 ]
+        evolvers: [ 116, 87, 92, 98 ],
+        flags: { global: 1 }
     },
-    481: { // Black Assault Squad Skypiea God's Army
+    481: { // Black Striker Skypiea Enforcer
         special: "Changes [DEX] orbs into [INT] orbs",
         specialName: "[DEX] Slot Change [INT]",
         cooldown: [ 15, 7 ],
         evolution: 486,
-        evolvers: [ 116, 88, 93, 99 ]
+        evolvers: [ 116, 88, 93, 99 ],
+        flags: { global: 1 }
     },
-    482: { // Red Elite Assault Squad Skypiea God's Army
+    482: { // Red Striker Elite Skypiea Enforcer
         special: "Changes [DEX] orbs into [STR] orbs",
         specialName: "[DEX] Slot Change [STR]",
         captain: "Boosts HP of Striker characters by 1.5x",
-        cooldown: [ 15, 7 ]
+        cooldown: [ 15, 7 ],
+        flags: { global: 1 }
     },
-    483: { // Blue Elite Assault Squad Skypiea God's Army
+    483: { // Blue Striker Elite Skypiea Enforcer
         special: "Changes [PSY] orbs into [QCK] orbs",
         specialName: "[PSY] Slot Change [QCK]",
         captain: "Boosts ATK and RCV of QCK characters by 1.2x",
-        cooldown: [ 15, 7 ]
+        cooldown: [ 15, 7 ],
+        flags: { global: 1 }
     },
-    484: { // Green Elite Assault Squad Skypiea God's Army
+    484: { // Green Striker Elite Skypiea Enforcer
         special: "Changes [INT] orbs into [DEX] orbs",
         specialName: "[INT] Slot Change [DEX]",
         captain: "Reduces damage received by 10%",
-        cooldown: [ 15, 7 ]
+        cooldown: [ 15, 7 ],
+        flags: { global: 1 }
     },
-    485: { // Yellow Elite Assault Squad Skypiea God's Army
+    485: { // Yellow Striker Elite Skypiea Enforcer
         special: "Changes [TND] orbs into [PSY] orbs",
         specialName: "[TND] Slot Change [PSY]",
         captain: "Boosts HP and RCV of PSY characters by 1.2x",
-        cooldown: [ 15, 7 ]
+        cooldown: [ 15, 7 ],
+        flags: { global: 1 }
     },
-    486: { // Black Elite Assault Squad Skypiea God's Army
+    486: { // Black Striker Elite Skypiea Enforcer
         special: "Changes [DEX] orbs into [INT] orbs",
         specialName: "[DEX] Slot Change [INT]",
         captain: "Boosts ATK of Striker characters by 1.5x",
-        cooldown: [ 15, 7 ]
+        cooldown: [ 15, 7 ],
+        flags: { global: 1 }
     },
-    487: { // Red Nomad Group Shandia Warrior
+    487: { // Red Nomad Shandian Warrior
         special: "Boosts ATK of STR characters by 1.2x for 1 turn",
-        specialName: "Attack Boost [STR]",
+        specialName: "Attack Boost STR",
         cooldown: [ 25, 15 ],
         evolution: 490,
-        evolvers: [ 115, 300 ]
+        evolvers: [ 115, 300 ],
+        flags: { global: 1 }
     },
-    488: { // Blue Nomad Group Shandia Warrior
+    488: { // Blue Nomad Shandian Warrior
         special: "Boosts ATK of QCK characters by 1.2x for 1 turn",
-        specialName: "Attack Boost [QCK]",
+        specialName: "Attack Boost QCK",
         cooldown: [ 25, 15 ],
         evolution: 491,
-        evolvers: [ 116, 301 ]
+        evolvers: [ 116, 301 ],
+        flags: { global: 1 }
     },
-    489: { // Green Nomad Group Shandia Warrior
+    489: { // Green Nomad Shandian Warrior
         special: "Boosts ATK of DEX characters by 1.2x for 1 turn",
-        specialName: "Attack Boost [DEX]",
+        specialName: "Attack Boost DEX",
         cooldown: [ 25, 15 ],
         evolution: 492,
-        evolvers: [ 117, 302 ]
+        evolvers: [ 117, 302 ],
+        flags: { global: 1 }
     },
-    490: { // Red Nomad Group Expert Shandia Warrior
+    490: { // Red Nomad Adept Shandian Warrior
         special: "Boosts ATK of STR characters by 1.2x for 1 turn",
-        specialName: "Attack Boost [STR]",
+        specialName: "Attack Boost STR",
         captain: "Boosts ATK and HP of Striker characters by 1.2x",
-        cooldown: [ 25, 15 ]
+        cooldown: [ 25, 15 ],
+        flags: { global: 1 }
     },
-    491: { // Blue Nomad Group Expert Shandia Warrior
+    491: { // Blue Nomad Adept Shandian Warrior
         special: "Boosts ATK of QCK characters by 1.2x for 1 turn",
-        specialName: "Attack Boost [QCK]",
+        specialName: "Attack Boost QCK",
         captain: "Boosts RCV of Striker characters by 1.5x",
-        cooldown: [ 25, 15 ]
+        cooldown: [ 25, 15 ],
+        flags: { global: 1 }
     },
-    492: { // Green Nomad Group Expert Shandia Warrior
+    492: { // Green Nomad Adept Shandian Warrior
         special: "Boosts ATK of DEX characters by 1.2x for 1 turn",
-        specialName: "Attack Boost [DEX]",
+        specialName: "Attack Boost DEX",
         captain: "Boosts ATK of DEX characters by 1.2x",
-        cooldown: [ 25, 15 ]
+        cooldown: [ 25, 15 ],
+        flags: { global: 1 }
     },
-    493: { // Yellow Hunting Group Shandia Warrior
+    493: { // Yellow Hunter Shandian Warrior
         special: "Recovers 7x character's RCV in HP",
-        specialName: "Middle Healing",
+        specialName: "Moderate Healing",
         cooldown: [ 20, 15 ],
         evolution: 495,
-        evolvers: [ 117, 81, 87 ]
+        evolvers: [ 117, 81, 87 ],
+        flags: { global: 1 }
     },
-    494: { // Black Hunting Group Shandia Warrior
+    494: { // Black Hunter Shandian Warrior
         special: "Deals 3x character's ATK in INT damage to all enemies, poisons all enemies",
         specialNotes: "Poison deals 0.5x character's ATK in fixed damage at the end of each turn",
         specialName: "Poison Attack",
         cooldown: [ 20, 15 ],
         evolution: 496,
-        evolvers: [ 117, 82, 88 ]
+        evolvers: [ 117, 82, 88 ],
+        flags: { global: 1 }
     },
-    495: { // Yellow Hunting Group Expert Shandia Warrior
+    495: { // Yellow Hunter Adept Shandian Warrior
         special: "Recovers 7x character's RCV in HP",
-        specialName: "Middle Healing",
+        specialName: "Moderate Healing",
         captain: "Recovers 500 HP at the end of each turn",
-        cooldown: [ 20, 15 ]
+        cooldown: [ 20, 15 ],
+        flags: { global: 1 }
     },
-    496: { // Black Hunting Group Expert Shandia Warrior
+    496: { // Black Hunter Adept Shandian Warrior
         special: "Deals 3x character's ATK in INT damage to all enemies, poisons all enemies",
         specialNotes: "Poison deals 0.5x character's ATK in fixed damage at the end of each turn",
         specialName: "Poison Attack",
         captain: "Boosts ATK of Shooter characters by 1.5x",
-        cooldown: [ 20, 15 ]
+        cooldown: [ 20, 15 ],
+        flags: { global: 1 }
     },
     497: { // Portgas D. Ace Mt. Corvo's Brothers 3
         special: "Reduces Bind duration by 4 turns, deals 3x character's ATK in QCK damage to one enemy",
