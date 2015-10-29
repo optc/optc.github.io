@@ -161,7 +161,9 @@ $.fn.dataTable.ext.search.push(function(settings, data, index) {
     // filter by orb controllers
     if (tableData.regexes.ctrlFrom || tableData.regexes.ctrlTo) {
         if (id == 515 || id == 516) return false; // exclude Heracles
-        var temp = window.details[id].special.replace(/\],/g,']');
+        var temp = window.details[id].special;
+        if (temp.constructor == Array) temp = temp.join(',');
+        temp = temp.replace(/\],/g,']');
         if (tableData.regexes.ctrlFrom && tableData.regexes.ctrlFrom.some(function(x) { return !x.test(temp); }))
             return false;
         if (tableData.regexes.ctrlTo && tableData.regexes.ctrlTo.some(function(x) { return !x.test(temp); }))
