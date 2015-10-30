@@ -809,6 +809,13 @@ window.drops = {
             Expert: [ 110, 111, 112, 113, 114, 770, 771, 772, 773, 774, 775 ]
         },
 
+        {
+            name: 'Nightmare Luffy',
+            thumb: 795,
+            Master: [ 794 ],
+            Expert: [ 794 ]
+        },
+
     ],
 
     'Other': [
