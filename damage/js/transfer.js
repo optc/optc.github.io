@@ -87,6 +87,10 @@ var ImportCtrl = function($scope, $rootScope, $state, $stateParams) {
         $scope.data.team[i].unit = window.units[team[i].id - 1];
         $scope.data.team[i].level = team[i].level;
         $scope.data.team[i].candies = $.extend($scope.data.team[i].candies, team[i].candies);
+        // captain warnings
+        if (i < 2 && team[i].id && captains[team[i].id] && captains[team[i].id].warning)
+            noty({ text: captains[team[i].id].warning, type: 'warning', layout: 'topRight',
+                theme: 'relax', timeout: 5000 });
     }
 
     // Data transfer (other data)

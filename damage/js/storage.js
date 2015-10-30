@@ -7,9 +7,14 @@ var doAlert = false;
 var loadValue = function(key,def) {
     var value = JSON.parse(localStorage.getItem(key));
     if (key == 'data' && value && value.team) {
-        value.team = value.team.map(function(x) {
-            if (x && x.unit !== null && x.unit !== undefined && x.unit.constructor == Number)
+        value.team = value.team.map(function(x,n) {
+            if (x && x.unit !== null && x.unit !== undefined && x.unit.constructor == Number) {
                 x.unit = window.units[x.unit];
+                // captain warnings
+                if (n < 2 && x.unit && x.unit.number && captains[x.unit.number + 1] && captains[x.unit.number + 1].warning)
+                    noty({ text: captains[x.unit.number + 1].warning, type: 'warning', layout: 'topRight',
+                        theme: 'relax', timeout: 5000 });
+            }
             return x;
         });
     }
@@ -49,7 +54,7 @@ var StorageCtrl = function($scope) {
     var data = loadValue('data',{ });
     for (var d in data)
         $scope.data[d] = data[d];
-
+    
     var options = loadValue('options',{ });
     for (var o in options) {
         if (o == 'crunchInhibitor' || o == 'sidebarVisible' || o == 'transientMode') continue;

@@ -1634,5 +1634,11 @@ window.captains = {
     793: { // Iceburg, Mayor of W7 and President of Galley-La Company
         atk: function(p) { return p.unit.class.has("Knowledge") ? 1.5 : 1; },
         rcv: function(p) { return p.unit.class.has("Knowledge") ? 1.5 : 1; },
+    },
+    794: {
+        warning: 'Selected captain effect (Monkey D. Luffy Rising Star) is not yet supported.'
+    },
+    795: {
+        warning: 'Selected captain effect (Nightmare Luffy Warrior of Hope) is not yet supported.'
     }
 };
