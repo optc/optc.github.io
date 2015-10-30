@@ -793,5 +793,5 @@ window.units = [
     [ "Iceburg", "INT", [ "Shooter", "Knowledge" ], 3, 9, 6, 2, 35, null, 155, 96, 38, 790, 392, 167, 0 ],
     [ "Iceburg, Mayor of W7 and President of Galley-La Company", "INT", [ "Shooter", "Knowledge" ], 4, 15, 4, 3, 70, null, 723, 343, 122, 1401, 702, 224, 0 ],
     [ "Monkey D. Luffy Rising Star", "INT", [ "Slasher", "Tough" ], 4, 30, 4, 1, 70, null, 264, 181, 0, null, null, null, 0 ],
-    [ null, "INT", [ "Fighter", "Tough" ], 5, 30, 4, 2, 99, null, 1331, 711, 0, null, null, null, 0 ]
+    [ "Nightmare Luffy Warrior of Hope", "INT", [ "Fighter", "Tough" ], 5, 30, 4, 2, 99, null, 1331, 711, 0, 3020, 1520, 0, 0 ]
 ];

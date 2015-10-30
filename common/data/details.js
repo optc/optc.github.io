@@ -5533,7 +5533,7 @@ window.details = {
     795: { // N/A
         special: "Deals huge random INT damage to a random enemy, delays all enemies for 1 turn",
         specialName: "Gum-Gum Storm",
-        captain: "?",
+        captain: "Boosts ATK of Tough characters by 3.5x, reduces crew's ATK and HP at the end of each turn",
         cooldown: 30
     }
 };
