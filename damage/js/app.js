@@ -42,7 +42,12 @@ var SharedRootCtrl = function($scope) {
 
         customHitModifiers: null,
 
-        url: null
+        url: null,
+
+        turnCounter: {
+            enabled: false,
+            value: 0
+        }
 
     };
 

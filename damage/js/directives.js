@@ -296,7 +296,7 @@ directives.slot = function() {
 
 directives.hpBar = function() {
     return {
-        rstrict: 'A',
+        retrict: 'E',
         replace: true,
         template: '<div id="hp"><div id="hpSlider"></div>' + 
             '<div id="hp-rcv"><table><tbody>' +
@@ -325,6 +325,30 @@ directives.hpBar = function() {
                 var newHP = Math.floor(scope.data.percHP * hp / 100);
                 update(null,newHP);
             },true);
+        }
+    };
+};
+
+directives.turnCounter = function() {
+    return {
+        retrict: 'E',
+        replace: true,
+        template: '<div id="turns"><div id="turnSlider"></div>' +
+            '<div id="turnLabel">{{currentTurns}} {{currentTurns == 1 ? "turn" : "turns"}} elapsed</div></div>',
+        link: function(scope, element, attrs) {
+            scope.currentTurns = 0;
+            var slider = element.find('#turnSlider').noUiSlider({
+                start: [ scope.currentTurns ],
+                range: { min: [ 0 ], max: [ 25 ] },
+                step: 1,
+                connect: 'lower'
+            });
+            var update = function(event,value) {
+                scope.currentTurns = parseInt(value, 10);
+                if (event.type == 'change') scope.tdata.turnCounter.value = scope.currentTurns;
+                if (event && !scope.$$phase) scope.$apply();
+            };
+            slider.on({ change: update, slide: update });
         }
     };
 };

@@ -42,6 +42,14 @@ body, html {
     margin: 30px auto 0 auto;
 }
 
+#turns + #hp {
+    margin-top: 15px;
+}
+
+#turns {
+    margin-top: 30px;
+}
+
 #other {
     margin: 20px auto 0 auto;
 }
@@ -275,10 +283,18 @@ body, html {
  * BUTTONS & HP BAR *
  ********************/
 
-#hpSlider {
+#hpSlider, #turnSlider {
     width: 350px;
     height: 12px;
     display: inline-block;
+}
+
+#turnSlider {
+    width: 300px;
+}
+
+#turns > .noUi-connect {
+    background: orchid;
 }
 
 .noUi-handle {

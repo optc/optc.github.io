@@ -1636,9 +1636,9 @@ window.captains = {
         rcv: function(p) { return p.unit.class.has("Knowledge") ? 1.5 : 1; },
     },
     794: {
-        warning: 'Selected captain effect (Monkey D. Luffy Rising Star) is not yet supported.'
+        atk: function(p) { return  p.unit.class.has("Tough") ? Math.max(1.0, 3.0 - 0.1 * p.turnCounter) : 1; }
     },
     795: {
-        warning: 'Selected captain effect (Nightmare Luffy Warrior of Hope) is not yet supported.'
+        atk: function(p) { return  p.unit.class.has("Tough") ? Math.max(1.0, 3.5 - 0.1 * p.turnCounter) : 1; }
     }
 };

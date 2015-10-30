@@ -55,8 +55,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
 
     /* * * * * Scope variables * * * * */
 
-    $scope.$watch('data',doCrunch,true);
-    $scope.$watch('tdata',doCrunch,true);
+    $scope.$watch('data',crunch,true);
+    $scope.$watch('tdata',crunch,true);
 
     /* * * * * Local variables * * * * */
 
@@ -69,7 +69,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
     var shipBonus = { };
     var enabledSpecials = [ ];
 
-    var crunchDebouncer = null;
+    var crunchSelfInhibit = false;
 
     /* * * * * Events * * * * */
 
@@ -86,13 +86,10 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
 
     /* * * * * Crunching * * * * */
 
-    function doCrunch() { // leave as function(...) so it's hoisted up
-        if (crunchDebouncer !== null) $timeout.cancel(crunchDebouncer);
-        crunchDebouncer = $timeout(crunch,25);
-    }
-
-    var crunch = function() {
+    function crunch() { // leave as function(...) so it's hoisted up
+        if (crunchSelfInhibit) return;
         if ($scope.options.crunchInhibitor > 0) return (--$scope.options.crunchInhibitor);
+        crunchSelfInhibit = true;
         initializeDataStructs();
         var result = { };
         ['STR','QCK','DEX','PSY','INT'].forEach(function(type) {
@@ -121,7 +118,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         $scope.numbers = $.extend($scope.numbers, result);
         $scope.numbers.hp = Math.max(1,hpMax);
         $scope.numbers.zombie = checkZombieTeam(result);
-    };
+        $timeout(function() { crunchSelfInhibit = false; });
+    }
 
     var crunchForType = function(type) {
         // compute base damage
@@ -448,6 +446,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         // get enabled specials
         var conflictWarning = false;
         enabledSpecials = [ ];
+        // deactivate turn counter (will be reactivated if necessary)
+        $scope.tdata.turnCounter.enabled = false;
         // orb map effect (fix for Hancock)
         if ($scope.data.profile && profiles[$scope.data.profile].orb)
             enabledSpecials.push({ orb: profiles[$scope.data.profile].orb, permanent: true, sourceSlot: -1 });
@@ -462,6 +462,9 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 else
                     enabledSpecials.push($.extend({ sourceSlot: n },specials[id]));
             }
+            // activate turn counter if necessary
+            if (n < 2 && (id == 794 || id == 795))
+                $scope.tdata.turnCounter.enabled = true;
         });
         if (conflictWarning) 
             $scope.notify({ type: 'error', text: 'One or more specials you selected cannot be activated due to a profile restriction.' });
@@ -510,7 +513,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             data: $scope.data.team[slotNumber],
             tdata: $scope.tdata.team[slotNumber],
             scope: $scope,
-            slot: slotNumber
+            slot: slotNumber,
+            turnCounter: $scope.tdata.turnCounter.value
         };
     };
 
