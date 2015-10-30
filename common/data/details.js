@@ -5527,7 +5527,7 @@ window.details = {
         specialName: "Gum-Gum Storm",
         captain: "Boosts ATK of Tough characters by 3x, reduces crew's current HP by 10% at the end of each turn, reduces his own ATK multiplier by 0.1x at the end of each turn",
         captainNotes: "His ATK multiplier will be 3.5x on the first turn, 3.4x on the second, 3.3x on the third and so on. The reduction stops once the multiplier is 1.0x.",
-        cooldown: 30,
+        cooldown: [ 30, 16 ],
         evolution: 795,
         evolvers: [ 118, 88, 266, 304, 104 ]
     },
@@ -5536,6 +5536,6 @@ window.details = {
         specialName: "Gum-Gum Storm",
         captain: "Boosts ATK of Tough characters by 3.5x, reduces crew's current HP by 10% at the end of each turn, reduces his own ATK multiplier by 0.1x at the end of each turn",
         captainNotes: "His ATK multiplier will be 3.5x on the first turn, 3.4x on the second, 3.3x on the third and so on. The reduction stops once the multiplier is 1.0x.",
-        cooldown: 30
+        cooldown: [ 30, 16 ]
     }
 };
