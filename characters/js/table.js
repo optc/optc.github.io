@@ -169,6 +169,9 @@ $.fn.dataTable.ext.search.push(function(settings, data, index) {
         if (tableData.regexes.ctrlTo && tableData.regexes.ctrlTo.some(function(x) { return !x.test(temp); }))
             return false;
     }
+    // filter by class-filters
+    if (tableData.regexes.classCaptain && !tableData.regexes.classCaptain.test(window.details[id].captain)) return false;
+    if (tableData.regexes.classSpecial && !tableData.regexes.classSpecial.test(window.details[id].special)) return false;
     // end
     return true;
 });

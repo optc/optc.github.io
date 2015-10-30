@@ -73,14 +73,14 @@
 <div class="filter-container">
     <span class="filter-header">Captain ability filters</span>
     <span class="filter width-12 custom" ng-repeat="(n,filter) in filterData" ng-if="filter.target == 'captain'"
-        ng-model="filters.custom[n]" ng-class="{ active: filters.custom[n] }"
+        ng-model="filters.custom[n]" ng-class="{ active: filters.custom[n] }" add-captain-options
         ng-click="filters.custom[n] = !filters.custom[n]">{{filter.name}}</span>
 </div>
 
 <div class="filter-container">
     <span class="filter-header">Special filters</span>
     <span class="filter width-12 custom" ng-repeat="(n,filter) in filterData" ng-if="filter.target.indexOf('special') == 0"
-        ng-model="filters.custom[n]" ng-class="{ active: filters.custom[n] }" add-orb-options
+        ng-model="filters.custom[n]" ng-class="{ active: filters.custom[n] }" add-orb-options add-special-options
         ng-click="filters.custom[n] = !filters.custom[n]">{{filter.name}}</span>
 </div>
 

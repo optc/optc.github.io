@@ -92,6 +92,21 @@ input[type="text"] {
     text-decoration: underline;
 }
 
+#class-filters, #controllers {
+    height: 0;
+    overflow: hidden;
+    transition: 0.2s linear;
+}
+
+#class-filters.enabled{
+    height: 81px;
+    border-bottom: 1px solid #aaa;
+}
+
+#controllers.enabled {
+    height: 73px;
+}
+
 .STR { background: salmon; }
 .QCK { background: lightskyblue; }
 .DEX { background: lightgreen; }
@@ -152,6 +167,12 @@ input[type="text"] {
 
 .class.filter.active, .custom.filter.active, .drop.filter.active, .exc.filter.active {
     background: red;
+    color: white;
+    font-weight: bold;
+}
+
+.subclass.filter.active {
+    background: orchid;
     color: white;
     font-weight: bold;
 }
@@ -251,6 +272,11 @@ input[type="text"] {
     display: block;
     padding: 0 0 5px 0;
     background: rgb(240,240,240);
+    text-align: center;
+}
+
+#controllers > span.separator ~ .filter {
+    margin-bottom: 0;
 }
 
 .pick-column {

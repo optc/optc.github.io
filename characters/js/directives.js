@@ -93,6 +93,50 @@ directives.autoFocus = function($timeout) {
 	};
 };
 
+directives.addCaptainOptions = function($timeout, $compile) {
+    var TARGET = 1;
+    return {
+        restrict: 'A',
+        link: function(scope, element, attrs) {
+            if (scope.n !== TARGET) return;
+            var filter = $('<div id="class-filters" ng-class="{ enabled: filters.custom[' + TARGET + '] }"></div>');
+            var classes = [ 'Fighter', 'Shooter', 'Slasher', 'Striker', 'Freedom', 'Knowledge', 'Tough' ];
+            classes.forEach(function(x,n) {
+                var template = '<span class="filter subclass %c" ng-class="{ active: filters.classCaptain == \'%s\' }" ' +
+                    'ng-click="onCaptainClick($event,\'%s\')">%s</span>';
+                filter.append($(template.replace(/%s/g,x).replace(/%c/,n < 4 ? 'width-6' : 'width-4')));
+            });
+            element.after(filter);
+            $compile(filter)(scope);
+            scope.onCaptainClick = function(e,type) {
+                scope.filters.classCaptain = (scope.filters.classCaptain == type ? null : type);
+            };
+        }
+    };
+};
+
+directives.addSpecialOptions = function($timeout, $compile) {
+    var TARGET = 19;
+    return {
+        restrict: 'A',
+        link: function(scope, element, attrs) {
+            if (scope.n !== TARGET) return;
+            var filter = $('<div id="class-filters" ng-class="{ enabled: filters.custom[' + TARGET + '] }"></div>');
+            var classes = [ 'Fighter', 'Shooter', 'Slasher', 'Striker', 'Freedom', 'Knowledge', 'Tough' ];
+            classes.forEach(function(x,n) {
+                var template = '<span class="filter subclass %c" ng-class="{ active: filters.classSpecial == \'%s\' }" ' +
+                    'ng-click="onSpecialClick($event,\'%s\')">%s</span>';
+                filter.append($(template.replace(/%s/g,x).replace(/%c/,n < 4 ? 'width-6' : 'width-4')));
+            });
+            element.after(filter);
+            $compile(filter)(scope);
+            scope.onSpecialClick = function(e,type) {
+                scope.filters.classSpecial = (scope.filters.classSpecial == type ? null : type);
+            };
+        }
+    };
+};
+
 directives.addOrbOptions = function($timeout, $compile) {
     var TARGET = 25;
     return {
@@ -100,8 +144,8 @@ directives.addOrbOptions = function($timeout, $compile) {
         link: function(scope,element,attrs) {
             if (scope.n !== TARGET) return;
             var orbs = { ctrlFrom: [ ], ctrlTo: [ ] };
-            var filter = $('<span class="custom filter" id="controllers" ' +
-                'ng-show="filters.custom[' + TARGET + ']"><span class="separator">&darr;</span></span>');
+            var filter = $('<div id="controllers" ng-class="{ enabled: filters.custom[' + TARGET + '] }">' +
+                    '<span class="separator">&darr;</span></div>');
             var separator = filter.find('.separator');
             [ 'STR', 'DEX', 'QCK', 'PSY', 'INT', 'RCV', 'TND' ].forEach(function(type) {
                 var template = '<span class="filter orb %s" ng-class="{ active: filters.%f.indexOf(\'%s\') > -1 }" ' +

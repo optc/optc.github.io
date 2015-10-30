@@ -48,6 +48,10 @@ app.controller('SidebarCtrl',function($scope, $rootScope, $stateParams) {
             $scope.table.regexes.ctrlTo = $scope.table.parameters.filters.ctrlTo.split(',').map(function(x) {
                 return new RegExp('Changes.+into[^,]+\\[' + x + '\\]','i');
             });
+        } if (filters.custom[1] && $scope.filters.classCaptain) {
+            $scope.table.regexes.classCaptain = new RegExp('of ' + $scope.filters.classCaptain + ' .*characters');
+        } if (filters.custom[19] && $scope.filters.classSpecial) {
+            $scope.table.regexes.classSpecial = new RegExp('of ' + $scope.filters.classSpecial + ' .*characters');
         }
         // redraw table
         if (!$scope.$$phase) $scope.$apply();
