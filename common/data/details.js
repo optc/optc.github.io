@@ -5525,7 +5525,8 @@ window.details = {
     794: { // Monkey D. Luffy Rising Star
         special: "Deals 10 hits of random INT damage to a random enemy, delays all enemies for 1 turn",
         specialName: "Gum-Gum Storm",
-        captain: "Boosts ATK of Tough characters by 3x, reduces crew's ATK and HP at the end of each turn",
+        captain: "Boosts ATK of Tough characters by 3x, reduces crew's current HP by 10% at the end of each turn, reduces his own multiplier by 0.1x at the end of each turn",
+        captainNotes: "His ATK multiplier will be 3.5x on the first turn, 3.4x on the second, 3.3x on the third and so on. The reduction stops once the multiplier is 1.0x.",
         cooldown: 30,
         evolution: 795,
         evolvers: [ 118, 88, 266, 304, 104 ]
@@ -5533,7 +5534,8 @@ window.details = {
     795: { // Nightmare Luffy Warrior of Hope
         special: "Deals 10 hits of random INT damage to a random enemy, delays all enemies for 1 turn",
         specialName: "Gum-Gum Storm",
-        captain: "Boosts ATK of Tough characters by 3.5x, reduces crew's ATK and HP at the end of each turn",
+        captain: "Boosts ATK of Tough characters by 3.5x, reduces crew's current HP by 10% at the end of each turn, reduces his own multiplier by 0.1x at the end of each turn",
+        captainNotes: "His ATK multiplier will be 3.5x on the first turn, 3.4x on the second, 3.3x on the third and so on. The reduction stops once the multiplier is 1.0x.",
         cooldown: 30
     }
 };
