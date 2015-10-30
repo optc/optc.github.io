@@ -197,33 +197,33 @@ window.specials = {
     465: { // Gedatsu
         orb: function(p) { return p.orb == 2.0 ? 1.25 : (p.orb == 0.5 ? 4/5 : 1); }
     },
-    468: { // White Beret Force Yellow Group Skypiea God's Army
+    468: { // Yellow White Beret Skypiea Guard
         rcv: function(p) { return 1.5; }
     },
-    470: { // White Beret Force Yellow Group Commander Skypiea God's Army
+    470: { // Yellow White Beret Captain Skypiea Guard
         rcv: function(p) { return 1.5; }
     },
-    487: { // Red Nomad Group Shandia Warrior
+    487: { // Red Nomad Shandian Warrior
         atk: function(p) { return p.unit.type == "STR" ? 1.2 : 1; },
         type: 'type'
     },
-    488: { // Blue Nomad Group Shandia Warrior
+    488: { // Blue Nomad Shandian Warrior
         atk: function(p) { return p.unit.type == "QCK" ? 1.2 : 1; },
         type: 'type'
     },
-    489: { // Green Nomad Group Shandia Warrior
+    489: { // Green Nomad Shandian Warrior
         atk: function(p) { return p.unit.type == "DEX" ? 1.2 : 1; },
         type: 'type'
     },
-    490: { // Red Nomad Group Expert Shandia Warrior
+    490: { // Red Nomad Adept Shandian Warrior
         atk: function(p) { return p.unit.type == "STR" ? 1.2 : 1; },
         type: 'type'
     },
-    491: { // Blue Nomad Group Expert Shandia Warrior
+    491: { // Blue Nomad Adept Shandian Warrior
         atk: function(p) { return p.unit.type == "QCK" ? 1.2 : 1; },
         type: 'type'
     },
-    492: { // Green Nomad Group Expert Shandia Warrior
+    492: { // Green Nomad Adept Shandian Warrior
         atk: function(p) { return p.unit.type == "DEX" ? 1.2 : 1; },
         type: 'type'
     },
@@ -657,7 +657,7 @@ window.specials = {
         atk: function(p) { return /STR|DEX|QCK/.test(p.unit.type) ? 1.2 : 1; },
         type: 'type',
     },
-    791: { 
+    791: {  // Tamanegi, Piiman & Ninjin, the Usopp Pirates
         atk: function(p) { return /STR|DEX|QCK/.test(p.unit.type) ? 1.2 : 1; },
         type: 'type',
     }

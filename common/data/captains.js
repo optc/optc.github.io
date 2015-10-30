@@ -801,38 +801,38 @@ window.captains = {
         atk: function(p) { return p.unit.type == "STR" ? 1.5 : 1; },
         hp: function(p) { return p.unit.type == "STR" ? 1.5 : 1; }
     },
-    470: { // White Beret Force Yellow Group Commander Skypiea God's Army
+    470: { // Yellow White Beret Captain Skypiea Guard
         rcv: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; }
     },
-    471: { // White Beret Force Black Group Commander Skypiea God's Army
+    471: { // Black White Beret Captain Skypiea Guard
         atk: function(p) { return p.unit.type == "INT" ? 1.2: 1; },
         hp: function(p) { return p.unit.type == "INT" ? 1.2 : 1; }
     },
-    482: { // Red Elite Assault Squad Skypiea God's Army
+    482: { // Red Striker Elite Skypiea Enforcer
         hp: function(p) { return p.unit.class.has("Striker") ? 1.2 : 1; }
     },
-    483: { // Blue Elite Assault Squad Skypiea God's Army
+    483: { // Blue Striker Elite Skypiea Enforcer
         atk: function(p) { return p.unit.type == "QCK" ? 1.2 : 1; },
         rcv: function(p) { return p.unit.type == "QCK" ? 1.2 : 1; }
     },
-    485: { // Yellow Elite Assault Squad Skypiea God's Army
+    485: { // Yellow Striker Elite Skypiea Enforcer
         hp: function(p) { return p.unit.type == "PSY" ? 1.2 : 1; },
         rcv: function(p) { return p.unit.type == "PSY" ? 1.2 : 1; }
     },
-    486: { // Black Elite Assault Squad Skypiea God's Army
+    486: { // Black Striker Elite Skypiea Enforcer
         atk: function(p) { return p.unit.class.has("Striker") ? 1.2 : 1; }
     },
-    490: { // Red Nomad Group Expert Shandia Warrior
+    490: { // Red Nomad Adept Shandian Warrior
         atk: function(p) { return p.unit.class.has("Striker") ? 1.2 : 1; },
         hp: function(p) { return p.unit.class.has("Striker") ? 1.2 : 1; }
     },
-    491: { // Blue Nomad Group Expert Shandia Warrior
+    491: { // Blue Nomad Adept Shandian Warrior
         rcv: function(p) { return p.unit.class.has("Striker") ? 1.5 : 1; },
     },
-    492: { // Green Nomad Group Expert Shandia Warrior
+    492: { // Green Nomad Adept Shandian Warrior
         atk: function(p) { return p.unit.type == "DEX" ? 1.5 : 1; }
     },
-    496: { // Black Hunting Group Expert Shandia Warrior
+    496: { // Black Hunter Adept Shandian Warrior
         atk: function(p) { return p.unit.class.has("Shooter") ? 1.5 : 1; }
     },
     497: { // Portgas D. Ace Mt. Corvo's Brothers 3
@@ -1625,6 +1625,11 @@ window.captains = {
     },
     789: { // Kuina, Shimotsuki Village's Girl Swordsman
         atk: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; }
+    },
+    791: {  // Tamanegi, Piiman & Ninjin, the Usopp Pirates
+        atk: function(p) { return /STR|DEX|QCK/.test(p.unit.type) ? 1.25 : 1; },
+        hp: function(p) { return /STR|DEX|QCK/.test(p.unit.type) ? 1.25 : 1; },
+        rcv: function(p) { return /STR|DEX|QCK/.test(p.unit.type) ? 1.25 : 1; }
     },
     793: { // Iceburg, Mayor of W7 and President of Galley-La Company
         atk: function(p) { return p.unit.class.has("Knowledge") ? 1.5 : 1; },

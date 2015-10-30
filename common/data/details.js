@@ -5503,10 +5503,10 @@ window.details = {
         evolution: 792,
         evolvers: [ 89, 90, 91 ]
     },
-    791: { // N/A
+    791: { // Tamanegi, Piiman & Ninjin, the Usopp Pirates
         special: "Deals 3x character's ATK in QCK damage to one enemy, boosts ATK of STR, DEX and QCK characters by 1.2x for 3 turns",
         specialName: "March!! Usopp Pirates",
-        captain: "?",
+        captain: "Boosts ATK, HP and RCV of STR, DEX and QCK characters by 1.25x",
         cooldown: 17
     },
     792: { // Iceburg
