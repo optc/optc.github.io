@@ -5513,7 +5513,7 @@ window.details = {
         special: "Changes all orbs into either [STR], [QCK], [DEX], [PSY] or [INT] orbs, freely switch orbs between slots twice, locks all orbs for 1 turn",
         specialName: "The Entushiasm to Keep Skilled Workers in Line",
         cooldown: 22,
-        evolution: 794,
+        evolution: 793,
         evolvers: [ 116, 117, 99 ]
     },
     793: { // Iceburg, Mayor of W7 and President of Galley-La Company
@@ -5521,5 +5521,19 @@ window.details = {
         specialName: "The Entushiasm to Keep Skilled Workers in Line",
         captain: "Boosts ATK and RCV of Knowledge characters by 1.5x",
         cooldown: 22
+    },
+    794: { // Monkey D. Luffy Rising Star
+        special: "Deals huge random INT damage to a random enemy, delays all enemies for 1 turn",
+        specialName: "Gum-Gum Storm",
+        captain: "Boosts ATK of Tough characters by 3x, reduces crew's ATK and HP at the end of each turn",
+        cooldown: 30,
+        evolution: 795,
+        evolvers: [ 118, 88, 266, 304, 104 ]
+    },
+    795: { // N/A
+        special: "Deals huge random INT damage to a random enemy, delays all enemies for 1 turn",
+        specialName: "Gum-Gum Storm",
+        captain: "?",
+        cooldown: 30
     }
 };
