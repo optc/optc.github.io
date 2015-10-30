@@ -5523,15 +5523,15 @@ window.details = {
         cooldown: 22
     },
     794: { // Monkey D. Luffy Rising Star
-        special: "Deals huge random INT damage to a random enemy, delays all enemies for 1 turn",
+        special: "Deals 10 hits of random INT damage to a random enemy, delays all enemies for 1 turn",
         specialName: "Gum-Gum Storm",
         captain: "Boosts ATK of Tough characters by 3x, reduces crew's ATK and HP at the end of each turn",
         cooldown: 30,
         evolution: 795,
         evolvers: [ 118, 88, 266, 304, 104 ]
     },
-    795: { // N/A
-        special: "Deals huge random INT damage to a random enemy, delays all enemies for 1 turn",
+    795: { // Nightmare Luffy Warrior of Hope
+        special: "Deals 10 hits of random INT damage to a random enemy, delays all enemies for 1 turn",
         specialName: "Gum-Gum Storm",
         captain: "Boosts ATK of Tough characters by 3.5x, reduces crew's ATK and HP at the end of each turn",
         cooldown: 30
