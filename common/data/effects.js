@@ -101,6 +101,14 @@ window.effects = {
         rcv: function(p) { return window.effects['Skypiea Warriors'].rcv(p); },
     },
 
+    'Gan Fall': {
+        description: 'Stats of non-Freedom, non-Booster, non-Evolver units reduced by 90%',
+        thumb: 713,
+        atk: function(p) { return p.class.has('Freedom') || p.class.has('Booster') || p.class.has('Evolver') ? 1 : 0.1; },
+        hp: function(p)  { return p.class.has('Freedom') || p.class.has('Booster') || p.class.has('Evolver') ? 1 : 0.1; },
+        rcv: function(p) { return p.class.has('Freedom') || p.class.has('Booster') || p.class.has('Evolver') ? 1 : 0.1; }
+    },
+
     'Orb amplification (1.05x)': {
         description: 'Orb effects amplified by 1.05x',
         thumb: 768,
@@ -113,12 +121,16 @@ window.effects = {
         orb: function(p) { return p.orb == 2.0 ? 1.1 : (p.orb == 0.5 ? 10/11 : 1); }
     },
 
-    'Gan Fall': {
-        description: 'Stats of non-Freedom, non-Booster, non-Evolver units reduced by 90%',
-        thumb: 713,
-        atk: function(p) { return p.class.has('Freedom') || p.class.has('Booster') || p.class.has('Evolver') ? 1 : 0.1; },
-        hp: function(p)  { return p.class.has('Freedom') || p.class.has('Booster') || p.class.has('Evolver') ? 1 : 0.1; },
-        rcv: function(p) { return p.class.has('Freedom') || p.class.has('Booster') || p.class.has('Evolver') ? 1 : 0.1; }
+    'Chain multiplier limiter (2.0x)': {
+        description: 'Limits chain multiplier to 2.0x',
+        thumb: 772,
+        chainLimiter: 2.0
+    },
+
+    'Combo shield (11 hits)': {
+        description: 'Nullifies the first 11 hits in the chain',
+        thumb: 795,
+        comboShield: 11
     }
 
 };

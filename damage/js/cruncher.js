@@ -70,6 +70,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
     var enabledSpecials = [ ];
 
     var crunchSelfInhibit = false;
+    var mapEffect = { };
 
     /* * * * * Events * * * * */
 
@@ -196,6 +197,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
     /* Calculates the highest overall damage for an array of hit modifiers. */
     var optimizeDamage = function(damage,noSorting) {
         // check damage from default order (or custom order) first, we'll use it as a base for comparison
+        if (mapEffect.comboShield) mapEffect.shieldLeft = mapEffect.comboShield;
         var currentResult = getOverallDamage(damage,hitModifiers[0],noSorting);
         for (var i=1;i<hitModifiers.length;++i) {
             var newResult = getOverallDamage(damage,hitModifiers[i],noSorting);
@@ -239,24 +241,39 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
      */
     var computeDamageOfUnit = function(unit,unitAtk,hitModifier) {
         var baseDamage = Math.floor(Math.max(1,unitAtk / unit.combo - currentDefense));
-        var result = 0, bonusDamageBase = 0;
-        if (hitModifier == 'Below Good')
-            return baseDamage * (unit.combo - 3);
-        else if (hitModifier == 'Good') {
-            result = baseDamage * (unit.combo - 2);
+        var result = 0, bonusDamageBase = 0, combo = 0;
+        if (hitModifier == 'Below Good') {
+            combo = unit.combo - 3;
+            //return baseDamage * (unit.combo - 3);
+        } else if (hitModifier == 'Good') {
+            combo = unit.combo - 2;
+            //result = baseDamage * (unit.combo - 2);
             bonusDamageBase = 0.33;
         } else if (hitModifier == 'Great') {
-            result = baseDamage * (unit.combo - 1);
+            combo = unit.combo - 1;
+            //result = baseDamage * (unit.combo - 1);
             bonusDamageBase = 0.66;
         } else if (hitModifier == 'Perfect') { 
-            result = baseDamage * unit.combo;
+            combo = unit.combo;
+            //result = baseDamage * unit.combo;
             bonusDamageBase = 1;
-        } else if (hitModifier == 'Miss')
-            return baseDamage * unit.combo;
-        if (baseDamage > 1)
-            return result + Math.floor(unitAtk * 0.9 * bonusDamageBase);
+        } else if (hitModifier == 'Miss') {
+            combo = unit.combo;
+            //return baseDamage * unit.combo;
+        }
+        // apply combo shield if active
+        var actualCombo = (mapEffect.shieldLeft ? Math.max(0, combo - mapEffect.shieldLeft) : combo);
+        if (mapEffect.shieldLeft) mapEffect.shieldLeft = Math.max(0, mapEffect.shieldLeft - combo);
+        // calculate actual damage
+        if (actualCombo === 0)
+            return 0;
+        else if (bonusDamageBase === 0)
+            return baseDamage * actualCombo;
+        else if (baseDamage > 1)
+            return baseDamage * actualCombo + Math.floor(unitAtk * 0.9 * bonusDamageBase);
         else
-            return result + Math.max(0,Math.floor(unitAtk * (0.9 * bonusDamageBase + 1 / unit.combo)) - currentDefense);
+            return baseDamage * actualCombo +
+                Math.max(0,Math.floor(unitAtk * (0.9 * bonusDamageBase + 1 / unit.combo)) - currentDefense);
     };
 
     /* Computes the actual defense threshold of the enemy after the specials are factored in.
@@ -359,6 +376,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             // update chain multiplier for the next hit
             multipliersUsed.push(currentChainMultiplier);
             currentChainMultiplier = getChainMultiplier(currentChainMultiplier,modifiers[n],chainModifier);
+            if (mapEffect.chainLimiter)
+                currentChainMultiplier = Math.min(mapEffect.chainLimiter, currentChainMultiplier);
             // return value
             return { unit: x.unit, orb: x.orb, damage: result, position: x.position };
         });
@@ -448,9 +467,15 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         enabledSpecials = [ ];
         // deactivate turn counter (will be reactivated if necessary)
         $scope.tdata.turnCounter.enabled = false;
-        // orb map effect (fix for Hancock)
-        if ($scope.data.effect && effects[$scope.data.effect].orb)
-            enabledSpecials.push({ orb: effects[$scope.data.effect].orb, permanent: true, sourceSlot: -1 });
+        // orb map effects
+        if ($scope.data.effect) {
+            if (effects[$scope.data.effect].orb)
+                enabledSpecials.push({ orb: effects[$scope.data.effect].orb, permanent: true, sourceSlot: -1 });
+            else if (effects[$scope.data.effect].chainLimiter)
+                mapEffect = { chainLimiter: effects[$scope.data.effect].chainLimiter };
+            else if (effects[$scope.data.effect].comboShield)
+                mapEffect = { comboShield: effects[$scope.data.effect].comboShield };
+        }
         // team specials
         // "sourceSlot": slot of the unit the special belongs to
         $scope.tdata.team.forEach(function(x,n) {
