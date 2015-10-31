@@ -506,7 +506,7 @@ li.disabled {
 }
 
 .special > div, #profileContainer {
-    width: 230px;
+    width: 233px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;

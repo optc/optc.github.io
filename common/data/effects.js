@@ -1,4 +1,4 @@
-window.profiles = {
+window.effects = {
 
     'Baroque Works (pre-v4.0)': {
         description: 'Stats of non-Fighter units reduced by 90%',
@@ -94,14 +94,20 @@ window.profiles = {
         description: 'Stats of characters whose homeland is not a sky island reduced by 20%, ATK of PSY characters reduced by 50%',
         thumb: 583,
         atk: function(p) {
-            var result = window.profiles['Skypiea Warriors'].atk(p);
+            var result = window.effects['Skypiea Warriors'].atk(p);
             return (p.type == 'PSY' ? 0.5 : 1) * result;
         },
-        hp: function(p) { return window.profiles['Skypiea Warriors'].hp(p); },
-        rcv: function(p) { return window.profiles['Skypiea Warriors'].rcv(p); },
+        hp: function(p) { return window.effects['Skypiea Warriors'].hp(p); },
+        rcv: function(p) { return window.effects['Skypiea Warriors'].rcv(p); },
     },
 
-    'Hancock\'s Bonus (Aokiji\'s Island)': {
+    'Orb amplification (1.05x)': {
+        description: 'Orb effects amplified by 1.05x',
+        thumb: 768,
+        orb: function(p) { return p.orb == 2.0 ? 1.05 : (p.orb == 0.5 ? 20/21 : 1); }
+    },
+
+    'Orb amplification (1.10x)': {
         description: 'Orb effects amplified by 1.10x',
         thumb: 415,
         orb: function(p) { return p.orb == 2.0 ? 1.1 : (p.orb == 0.5 ? 10/11 : 1); }

@@ -5,7 +5,7 @@
     <div class="custom-modal">
         <div id="picker" class="modal-dialog">
             <div class="modal-content animated fadeInDown">
-                <div class="modal-header">Available profiles</div>
+                <div class="modal-header">Map Effects</div>
                 <div class="modal-body">
 
                     <div class="modal-div">
@@ -19,14 +19,14 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr ng-click="pickProfile(null)">
+                                <tr ng-click="pickEffect(null)">
                                     <td class="slot small" decorate-slot="notitle" uid="1"></td>
-                                    <td>Default profile</td>
-                                    <td>No effects</td>
+                                    <td>No map effect</td>
+                                    <td>N/A</td>
                                 </tr>
-                                <tr ng-repeat="(profile,data) in list track by $index" ng-click="pickProfile(profile)">
+                                <tr ng-repeat="(effect,data) in list track by $index" ng-click="pickEffect(effect)">
                                     <td class="slot small" decorate-slot="notitle" uid="data.thumb"></td>
-                                    <td>{{profile}}</td>
+                                    <td>{{effect}}</td>
                                     <td>{{data.description}}</td>
                                 </tr>
                             </tbody>

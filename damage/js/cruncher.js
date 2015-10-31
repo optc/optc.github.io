@@ -42,7 +42,7 @@
  *                        specials (so far).
  */
 
-// TODO Check if the profile bonuses are applied before or after the static bonuses from the ships and other stuff
+// TODO Check if the effect bonuses are applied before or after the static bonuses from the ships and other stuff
 
 var MODIFIERS = [ 'Below Good', 'Good', 'Great', 'Perfect', 'Miss' ];
 var DEFAULT_HIT_MODIFIERS = [ 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect' ]; 
@@ -103,13 +103,13 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             var hp = getStatOfUnit(x,'hp');
             hp += getShipBonus('hp',true,x.unit,n);
             hp *= getShipBonus('hp',false,x.unit,n);
-            hp *= getProfileBonus('hp',x.unit);
+            hp *= getEffectBonus('hp',x.unit);
             hpMax += Math.floor(applyCaptainEffectsToHP(n,hp));
             // rcv
             var rcv = getStatOfUnit(x,'rcv');
             rcv += getShipBonus('rcv',true,x.unit,n);
             rcv *= getShipBonus('rcv',false,x.unit,n);
-            rcv *= getProfileBonus('rcv',x.unit);
+            rcv *= getEffectBonus('rcv',x.unit);
             rcvTotal += Math.floor(applyCaptainEffectsAndSpecialsToRCV(n,rcv));
         });
         result.rcv = Math.max(0,rcvTotal);
@@ -159,7 +159,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             atk += getShipBonus('atk',true,x.unit,n);
             atk *= orb; // orb multiplier (fixed)
             atk *= getTypeMultiplierOfUnit(x.unit,type); // type multiplier (fixed)
-            atk *= getProfileBonus('atk',x.unit); // profile bonus (fixed)
+            atk *= getEffectBonus('atk',x.unit); // effect bonus (fixed)
             result.push({ unit: x, orb: orb, damage: Math.floor(atk) * ship, position: n });
         });
         // apply static multipliers and static bonuses
@@ -282,9 +282,9 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         return result;
     };
 
-    var getProfileBonus = function(type,unit) {
-        if (!$scope.data.profile || !profiles[$scope.data.profile].hasOwnProperty(type)) return 1;
-        return profiles[$scope.data.profile][type](unit.unit || unit);
+    var getEffectBonus = function(type,unit) {
+        if (!$scope.data.effect || !effects[$scope.data.effect].hasOwnProperty(type)) return 1;
+        return effects[$scope.data.effect][type](unit.unit || unit);
     };
 
     var getTypeMultiplierOfUnit = function(unit,against) {
@@ -449,8 +449,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         // deactivate turn counter (will be reactivated if necessary)
         $scope.tdata.turnCounter.enabled = false;
         // orb map effect (fix for Hancock)
-        if ($scope.data.profile && profiles[$scope.data.profile].orb)
-            enabledSpecials.push({ orb: profiles[$scope.data.profile].orb, permanent: true, sourceSlot: -1 });
+        if ($scope.data.effect && effects[$scope.data.effect].orb)
+            enabledSpecials.push({ orb: effects[$scope.data.effect].orb, permanent: true, sourceSlot: -1 });
         // team specials
         // "sourceSlot": slot of the unit the special belongs to
         $scope.tdata.team.forEach(function(x,n) {
@@ -467,7 +467,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 $scope.tdata.turnCounter.enabled = true;
         });
         if (conflictWarning) 
-            $scope.notify({ type: 'error', text: 'One or more specials you selected cannot be activated due to a profile restriction.' });
+            $scope.notify({ type: 'error', text: 'One or more specials you selected cannot be activated due to an active map effect.' });
         // check if defense is down (required by some captain effects)
         computeActualDefense();
         isDefenseDown = enabledSpecials.some(function(x) { return x !== null && x.hasOwnProperty('def'); });
@@ -527,9 +527,9 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if (x.unit === null) return null;
             return {
                 name : x.unit.name,
-                hp   : Math.floor(getStatOfUnit(x,'hp') * getProfileBonus('hp', x)),
-                atk  : Math.floor(getStatOfUnit(x,'atk') * getProfileBonus('atk', x)),
-                rcv  : Math.floor(getStatOfUnit(x,'rcv') * getProfileBonus('rcv', x)),
+                hp   : Math.floor(getStatOfUnit(x,'hp') * getEffectBonus('hp', x)),
+                atk  : Math.floor(getStatOfUnit(x,'atk') * getEffectBonus('atk', x)),
+                rcv  : Math.floor(getStatOfUnit(x,'rcv') * getEffectBonus('rcv', x)),
                 cmb  :  x.unit.combo
             };
         });

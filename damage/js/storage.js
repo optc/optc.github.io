@@ -61,8 +61,8 @@ var StorageCtrl = function($scope) {
         $scope.options[o] = options[o];
     }
 
-    if ($scope.data.profile && !window.profiles.hasOwnProperty($scope.data.profile))
-        $scope.data.profile = null;
+    if ($scope.data.effect && !window.effects.hasOwnProperty($scope.data.effect))
+        $scope.data.effect = null;
 
     if ($scope.data.ship && $scope.data.ship.constructor == Object)
         $scope.data.ship = [ 1, 5 ];

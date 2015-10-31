@@ -229,13 +229,13 @@ controllers.CandyCtrl = function($scope, $state, $stateParams) {
 };
 
 /***************
- * ProfileCtrl *
+ * EffectsCtrl *
  ***************/
 
-controllers.ProfileCtrl = function($scope, $state) {
-    $scope.list = profiles;
-    $scope.pickProfile = function(profile) {
-        $scope.data.profile = profile;
+controllers.EffectsCtrl = function($scope, $state) {
+    $scope.list = effects;
+    $scope.pickEffect = function(effect) {
+        $scope.data.effect = effect;
         $state.go('^');
     };
 };

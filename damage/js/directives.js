@@ -244,7 +244,7 @@ directives.sidebar = function() {
         templateUrl: 'views/sidebar.html',
         replace: true,
         link: function(scope, element, attrs) {
-            scope.profiles = window.profiles;
+            scope.effects = window.effects;
             scope.ships = window.ships;
         }
     };

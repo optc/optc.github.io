@@ -73,12 +73,12 @@ angular.module('optc').config(function($stateProvider, $urlRouterProvider) {
             }
         })
 
-        .state('main.profile',{
-            url: 'profiles',
+        .state('main.effects',{
+            url: 'effects',
             views: {
                 popup: {
-                    templateUrl: 'views/popup/profiles.html',
-                    controller: 'ProfileCtrl'
+                    templateUrl: 'views/popup/effects.html',
+                    controller: 'EffectsCtrl'
                 }
             }
         })
