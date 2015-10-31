@@ -186,6 +186,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
      * above, the overall damage and the hit modifiers used to compute said damage.
      */
     var getOverallDamage = function(damage,hitModifiers,noSorting) {
+        if (mapEffect.comboShield) mapEffect.shieldLeft = mapEffect.comboShield;
         var result = applySpecialMultipliersAndCaptainEffects(damage,hitModifiers,noSorting);
         // apply chain and bonus multipliers
         result = applyChainAndBonusMultipliers(result,hitModifiers);
@@ -197,7 +198,6 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
     /* Calculates the highest overall damage for an array of hit modifiers. */
     var optimizeDamage = function(damage,noSorting) {
         // check damage from default order (or custom order) first, we'll use it as a base for comparison
-        if (mapEffect.comboShield) mapEffect.shieldLeft = mapEffect.comboShield;
         var currentResult = getOverallDamage(damage,hitModifiers[0],noSorting);
         for (var i=1;i<hitModifiers.length;++i) {
             var newResult = getOverallDamage(damage,hitModifiers[i],noSorting);
