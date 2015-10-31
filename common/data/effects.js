@@ -129,8 +129,15 @@ window.effects = {
 
     'Combo shield (11 hits)': {
         description: 'Nullifies the first 11 hits in the chain',
-        thumb: 795,
+        thumb: 794,
         comboShield: 11
+    },
+
+    'Nightmare Luffy, 2nd stage': {
+        description: 'Limits chain multiplier to 2.0x, nullifies the first 11 hits in the chain',
+        thumb: 795,
+        comboShield: 11,
+        chainLimiter: 2.0
     }
 
 };

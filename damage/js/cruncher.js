@@ -470,12 +470,10 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         // orb map effects
         mapEffect = { };
         if ($scope.data.effect) {
-            if (effects[$scope.data.effect].orb)
-                enabledSpecials.push({ orb: effects[$scope.data.effect].orb, permanent: true, sourceSlot: -1 });
-            else if (effects[$scope.data.effect].chainLimiter)
-                mapEffect = { chainLimiter: effects[$scope.data.effect].chainLimiter };
-            else if (effects[$scope.data.effect].comboShield)
-                mapEffect = { comboShield: effects[$scope.data.effect].comboShield };
+            var data = effects[$scope.data.effect];
+            if (data.orb) enabledSpecials.push({ orb: data.orb, permanent: true, sourceSlot: -1 });
+            if (data.chainLimiter) mapEffect.chainLimiter = data.chainLimiter;
+            if (data.comboShield) mapEffect.comboShield = data.comboShield;
         }
         // team specials
         // "sourceSlot": slot of the unit the special belongs to
