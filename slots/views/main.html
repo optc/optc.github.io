@@ -1,0 +1,31 @@
+<div id="outer-container">
+    <div id="container">
+        <div id="content">
+
+            <div id="columns" regulate-height>
+                <div class="column" ng-repeat="unitNumber in range(0,6)" dropzone attach-picker>
+
+                    <div class="unitContainer" draggable>
+
+                        <div class="unit" decorate-slot uid="team[unitNumber].uid"
+                            ng-class="{ empty: !team[unitNumber] || !team[unitNumber].uid }"></div>
+
+                    </div>
+
+                    <div class="slots">
+
+                        <slot-wheel ng-repeat="slotNumber in range(0,slotCount(team[unitNumber].uid))">
+                        </slot-wheel>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="summary" ui-view="summary"></div>
+
+        </div>
+    </div>
+</div>
+
+<div class="unit empty fa fa-trash-o" id="removeSlot" style="display: none" dropzone></div>

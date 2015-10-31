@@ -114,6 +114,16 @@ a.red:hover {
     font-weight: bold;
 }
 
+a.purple {
+    background-color: orchid;
+    color: white;
+}
+
+a.purple:hover {
+    color: orchid;
+    font-weight: bold;
+}
+
 a.yellow {
     background-color: #F4BA70;
     color: white;

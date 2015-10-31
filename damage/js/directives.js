@@ -215,21 +215,6 @@ directives.floatingHeader = function($timeout) {
     };
 };
 
-directives.addAbility = function() {
-    return {
-        restrict: 'A',
-        link: function(scope, element, attrs) {
-            var n = element.closest('tr').index();
-            scope.$watch('data.team[slot].abilities[' + n + ']',function(ability) {
-                element.removeClass('slotsBackground');
-                if (!ability || ability.id === undefined) return;
-                element.addClass('slotsBackground');
-                element.css('background-position', (-32*ability.id-1) + 'px -1px');
-            },true);
-        }
-    };
-};
-
 directives.goBack = function($state) {
 	return {
 		restrict: 'A',
@@ -453,7 +438,7 @@ directives.unitOrb = function() {
             var onShortPress = function(e) {
                 var unit = scope.data.team[scope.slot], tunit = scope.tdata.team[scope.slot];
                 if (!$(e.target).hasClass('unitPortrait')) return;
-                if (unit.unit === null || /unitLevel|unitAbilities/.test(e.target.className) || e.altKey || e.shiftKey) return;
+                if (unit.unit === null || /unitLevel/.test(e.target.className) || e.altKey || e.shiftKey) return;
                 if (e.which == 2 || (e.which == 1 && (e.ctrlKey || e.metaKey || Utils.isClickOnOrb(e,e.target.parentNode)))) {
                     tunit.orb = (tunit.orb == 1 ? 2 : tunit.orb == 2 ? 0.5 : 1);
                     scope.glow();
@@ -498,7 +483,7 @@ directives.unitChain = function() {
             var onMouseUp = function(e) {
                 var unit = scope.data.team[scope.slot], tunit = scope.tdata.team[scope.slot];
                 if (!$(e.target).hasClass('unitPortrait')) return;
-                if (unit.unit === null || /unitLevel|unitAbilities/.test(e.target.className)) return;
+                if (unit.unit === null || /unitLevel/.test(e.target.className)) return;
                 if (e.which == 1 && e.altKey && !Utils.isClickOnOrb(e,e.target.parentNode)) {
                     tunit.lock = (tunit.lock > 0 ? 0 : 2);
                     scope.$apply();
@@ -523,7 +508,7 @@ directives.unitSilence = function() {
             var onMouseUp = function(e) {
                 var unit = scope.data.team[scope.slot], tunit = scope.tdata.team[scope.slot];
                 if (!$(e.target).hasClass('unitPortrait')) return;
-                if (unit.unit === null || /unitLevel|unitAbilities/.test(e.target.className)) return;
+                if (unit.unit === null || /unitLevel/.test(e.target.className)) return;
                 if (e.which == 1 && e.shiftKey && !Utils.isClickOnOrb(e,e.target.parentNode)) {
                     tunit.silence = (tunit.silence > 0 ? 0 : 2);
                     scope.$apply();
@@ -549,23 +534,6 @@ directives.unitCandies = function() {
                 scope.text = (total > 0 ? '+' + total : '');
             };
             scope.$watch('data.team[slot].candies',update,true);
-        }
-    };
-};
-
-directives.unitAbilities = function($timeout) {
-    return {
-        restrict: 'E',
-        replace: true,
-        scope: true,
-        template: '<div class="unitAbilities" ng-show="abilityCount > 0" ui-sref="main.abilities.pick({ slot: slot })">{{abilityCount}}</div>',
-        link: function(scope, element, attrs) {
-            scope.abilityCount = 0;
-            var update = function(data) {
-                scope.abilityCount = 0;
-                data.forEach(function(x) { if (x !== null) ++scope.abilityCount; });
-            };
-            scope.$watch('data.team[slot].abilities',update,true);
         }
     };
 };
@@ -656,39 +624,6 @@ directives.urlContainer = function() {
                 if (!url) return;
                 input.select();
             });
-        }
-    };
-};
-
-directives.abilitySlot = function() {
-    return {
-        restrict: 'E',
-        replace: true,
-        templateUrl: 'views/fragments/abilityslot.html',
-        link: function(scope, element, attrs) {
-            var n = element.closest('tr').index();
-            element.find(".trigger").click(function() {
-                var isActive = element.hasClass('active');
-                $('.ability-button.active').toggleClass('active');
-                if (!isActive) {
-                    element.toggleClass("active"); 
-                    scope.data.team[scope.slot].abilities[n] = null;
-                }
-                scope.$parent.busy = !isActive;
-                if (!scope.$$phase) scope.$apply();
-            });
-            scope.isUsed = function(id) {
-                return scope.data.team[scope.slot].abilities.some(function(x,p) {
-                    return x && p != n && x.id == id;
-                });
-            };
-            scope.pickAbility = function(e,id) {
-                var abilities = scope.data.team[scope.slot].abilities;
-                if (abilities[n] === null || abilities[n].id != id)
-                    abilities[n] = { id: id, level: 1 };
-                $('.ability-button.active').toggleClass('active');
-                scope.$parent.busy = false;
-            };
         }
     };
 };

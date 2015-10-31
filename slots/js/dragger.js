@@ -1,7 +1,5 @@
 (function() {
 
-/**************/
-
 // used to stop the propagation of the click event at the end of the drag operation
 // if the propagation isn't halted, the default behavior (eg the picker opening up) would occur
 var stopPropagation = false;
@@ -67,7 +65,7 @@ var onUnitDragEnter = function(e)  {
         ghostContainer.html(replacedContainer.html());
         if (replacedContainer.hasClass('gray')) ghostContainer.addClass('gray');
         startingSlot.append(ghostContainer);
-        replacedContainer.css('display','none');
+        replacedContainer.css('visibility','hidden');
     }
 };
 
@@ -78,7 +76,7 @@ var onUnitDragLeave = function(e) {
     else {
         ghostContainer.remove();
         ghostContainer.removeClass('gray');
-        $(e.target).find('.unitContainer')[0].style.display = null;
+        $(e.target).find('.unitContainer')[0].style.visibility = null;
         if (onEmptySlot) $(e.target).addClass('empty');
     }
 };
@@ -93,16 +91,13 @@ var onUnitDrop = function(scope) {
             if (startingSlot.index() == endingSlot.index()) return;
             // reset
             var replacedPortrait = endingSlot.find('.unitContainer');
-            replacedPortrait[0].style.display = null;
+            replacedPortrait[0].style.visibility = null;
             ghostContainer.remove();
             // switch units
-            var i = startingSlot.index(), j = endingSlot.index(), temp;
-            temp = scope.data.team[i];
-            scope.data.team[i] = scope.data.team[j];
-            scope.data.team[j] = temp;
-            temp = scope.tdata.team[i];
-            scope.tdata.team[i] = scope.tdata.team[j];
-            scope.tdata.team[j] = temp;
+            var i = startingSlot.index(), j = endingSlot.index();
+            var temp = scope.team[i];
+            scope.team[i] = scope.team[j];
+            scope.team[j] = temp;
             scope.$apply();
         }
         $(e.target.parentNode).removeClass('dragging');
@@ -123,7 +118,7 @@ var onRemoveZoneLeave = function(target) {
 
 var onRemoveZoneDrop = function(scope,target) {
     onRemoveZoneLeave(target);
-    scope.resetSlot(startingSlot.index());
+    scope.team[startingSlot.index()] = null;
     scope.$apply();
 };
 
@@ -146,7 +141,6 @@ directives.draggable = function() {
             .on('down',function(e) {
                 isDown = false;
                 if (e.which > 1 || e.ctrlKey || e.metaKey || e.altKey || e.shiftKey) return;
-                if ($(e.target).parent().hasClass('slide')) return;
                 isDown = true;
             })
             .on('move',function(e) {

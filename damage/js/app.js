@@ -11,12 +11,12 @@ var SharedRootCtrl = function($scope) {
     $scope.data = {
 
         team: [
-            { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 }, abilities: [ null, null, null, null, null ] },
-            { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 }, abilities: [ null, null, null, null, null ] },
-            { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 }, abilities: [ null, null, null, null, null ] },
-            { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 }, abilities: [ null, null, null, null, null ] },
-            { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 }, abilities: [ null, null, null, null, null ] },
-            { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 }, abilities: [ null, null, null, null, null ] }
+            { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 } },
+            { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 } },
+            { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 } },
+            { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 } },
+            { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 } },
+            { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 } }
         ],
 
         percHP: 100.0,
@@ -65,8 +65,7 @@ var SharedRootCtrl = function($scope) {
 
     $scope.resetSlot = function(n,onlyTransitional) {
         if (!onlyTransitional)
-            $scope.data.team[n] = { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 },
-                abilities: [ null, null, null, null, null ] };
+            $scope.data.team[n] = { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 } };
         $scope.tdata.team[n] = { orb: 1, special: false, lock: 0, silence: 0 };
     };
 
@@ -74,9 +73,6 @@ var SharedRootCtrl = function($scope) {
 
     var resetHits = function() {
         $scope.tdata.customHitModifiers = null;
-        $scope.showAbilitySummary = $scope.data.team.some(function(x,n) {
-            return x.abilities.some(function(y) { return y !== null; });
-        });
     };
 
     $scope.$watch('data.team', resetHits, true);
@@ -94,7 +90,7 @@ app
         $rootScope.$on('$stateChangeSuccess',function(e) {
             var state = $state.current.name;
             $rootScope.isPopupVisible = (state != 'main');
-            $rootScope.picking = (state == 'main.candy' || state == 'main.abilities');
+            $rootScope.picking = (state == 'main.candy');
             if (ga) ga('send', 'pageview', '/damage');
         });
     });

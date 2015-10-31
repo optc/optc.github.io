@@ -113,25 +113,7 @@ angular.module('optc').config(function($stateProvider, $urlRouterProvider) {
             },
             params: { slot: 0 }
         })
-
-        .state('main.abilities',{
-            url: 'abilities',
-            views: {
-                popup: {
-                    template: '<div class="backdrop middle-backdrop" ui-sref="main"></div>'
-                }
-            }
-        })
-        .state('main.abilities.pick',{
-            views: {
-                'popup@main': {
-                    templateUrl: 'views/popup/abilities.html',
-                    controller: 'AbilitySlotsCtrl'
-                }
-            },
-            params: { slot: 0 }
-        })
-        
+         
         .state('main.transfer',{
             url: 'transfer/:data',
             views: {
