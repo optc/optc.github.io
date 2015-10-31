@@ -468,6 +468,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         // deactivate turn counter (will be reactivated if necessary)
         $scope.tdata.turnCounter.enabled = false;
         // orb map effects
+        mapEffect = { };
         if ($scope.data.effect) {
             if (effects[$scope.data.effect].orb)
                 enabledSpecials.push({ orb: effects[$scope.data.effect].orb, permanent: true, sourceSlot: -1 });
