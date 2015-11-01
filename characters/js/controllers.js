@@ -58,6 +58,7 @@ app.controller('SidebarCtrl',function($scope, $rootScope, $stateParams) {
     },true);
 
     $scope.clearFilters = function() {
+        filters = { custom: [ ], classes: [ ], stars: [ ] };
         $scope.filters = { custom: [ ], classes: [ ], stars: [ ] };
     };
 
