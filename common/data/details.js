@@ -4608,7 +4608,7 @@ window.details = {
         specialName: "Dragon's Claw",
         captain: "Boosts HP and RCV of all characters by 1.2x, boosts ATK of Freedom characters proportionally to the crew's current HP",
         captainNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the higher the HP is. The multiplier is calculated as 2 + 0.75 * (remaining HP) / (total HP). At full health the boost is equal to 2.75x",
-        cooldown: 21,
+        cooldown: 20,
         evolution: 669,
         evolvers: [ 118, 87, 266, 303, 267 ],
         flags: { rr: 1 }
@@ -4618,7 +4618,7 @@ window.details = {
         specialName: "Dragon's Claw",
         captain: "Boosts HP and RCV of all characters by 1.2x, boosts ATK of Freedom characters proportionally to the crew's current HP",
         captainNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the higher the HP is. The multiplier is calculated as 2 + 0.75 * (remaining HP) / (total HP). At full health the boost is equal to 2.75x",
-        cooldown: 21,
+        cooldown: 20,
         flags: { rr: 1 }
     },
     670: { // Koala
