@@ -28,8 +28,17 @@ angular.module('optc').config(function($stateProvider, $urlRouterProvider) {
                 }
             },
             params: { unit: 0 }
+        })
+         
+        .state('main.transfer',{
+            url: 'transfer/:data',
+            views: {
+                'popup@': {
+                    template: '<div></div>',
+                    controller: 'ImportCtrl'
+                }
+            }
         });
-
 
 });
 

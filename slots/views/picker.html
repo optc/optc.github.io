@@ -17,6 +17,15 @@
                         </div> 
                     </div>
 
+                    <div id="recent">
+                        <span>Recently picked</span>
+                        <div id="recentUnits">
+                            <div class="slot small" ng-repeat="unit in recents" ng-click="pickUnit(unit)"
+                                decorate-slot uid="unit + 1" flag="true">
+                            </div> 
+                        </div>
+                    </div>
+
                 </div>
                 <div class="modal-footer">
                     <button class="btn btn-default" ui-sref="^">Cancel</button> 

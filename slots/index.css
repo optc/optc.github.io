@@ -112,12 +112,19 @@ html, body, body > [ui-view] {
     margin: 2px;
 }
 
+.slot.small {
+    width: 40px;
+    height: 40px;
+    background-size: 40px 40px;
+    margin: 1px;
+}
+
 .unitContainer, .ghostContainer {
     width: 100%;
     position: absolute;
     top: -1px;
     left: -1px;
-    z-index: 1;
+    z-index: 200 !important;
 }
 
 slot-wheel {
@@ -135,6 +142,47 @@ slot-wheel {
     line-height: 1.5em;
     color: salmon;
     text-align: center;
+}
+
+#urlContainer {
+    margin-top: 10px;
+}
+
+#urlContainer > input {
+    width: 85%;
+    position: relative;
+    top: 1px;
+    visibility: hidden;
+}
+
+#urlContainer > .visible {
+    visibility: visible;
+}
+
+#urlContainer > button {
+    width: 10%;
+    margin-right: 5px;
+    padding: 3px 6px;
+}
+
+#transient {
+    padding: 5px;
+    margin: 15px auto 0 auto;
+    cursor: pointer;
+}
+
+#transient:hover {
+    background-color: #FF9E9E;
+    border-color: #EC92A0;
+}
+
+#transient > span {
+    text-decoration: underline;
+    cursor: help;
+}
+
+#transient-explanation {
+    padding: 10px;
 }
 
 /**********
@@ -423,7 +471,7 @@ slot-wheel {
     height: 100%;
     width: 100%;
     display: table;
-    z-index: 100;
+    z-index: 300;
     top: 0;
     left: 0;
 }
@@ -439,7 +487,7 @@ slot-wheel {
     width: 100%;
     height: 100%;
     background-color: rgba(0,0,0,0.65);
-    z-index: 100;
+    z-index: 300;
 }
 
 .inner-container {
@@ -448,12 +496,12 @@ slot-wheel {
     width: 100%;
     height: 100%;
     vertical-align: middle;
-    z-index: 101;
+    z-index: 301;
 }
 
 .custom-modal {
     position: relative;
-    z-index: 101;
+    z-index: 301;
     width: 705px;
     margin: auto;
 }
@@ -515,6 +563,16 @@ slot-wheel {
 
 .modal-div.padded {
     padding: 10px;
+}
+
+#recent > span {
+    border-bottom: 1px solid black;
+    display: block;
+}
+
+#recentUnits {
+    height: 42px;
+    margin-top: 5px;
 }
 
 /***************

@@ -24,6 +24,21 @@
 
             <div id="summary" ui-view="summary"></div>
 
+            <div ng-controller="ExportCtrl" id="urlContainer">
+
+                <button class="btn btn-success pull-right" ng-click="generateURL()">
+                    <i class="fa fa-exchange"></i>
+                </button>
+
+                <input ng-model="url" ng-class="{ visible: url }"></input>
+
+            </div>
+
+            <div id="transient" class="alert alert-danger" ng-show="options.transient" ng-click="options.transient = false">
+                <i class="fa fa-lock"></i>
+                Transient mode enabled. Click to disable.
+            </div>
+
         </div>
     </div>
 </div>
