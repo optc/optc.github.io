@@ -4183,7 +4183,7 @@ window.details = {
     606: { // Zeff the Pirate
         special: "Deals 20x character's ATK in DEX damage to one enemy, changes neighboring slots' orbs into [RCV] orbs",
         specialName: "Red Leg Kick",
-        captain: "Boosts ATK of Fighter characters by 2x if HP is below 50% at the start of the turn",
+        captain: "Boosts ATK of Fighter characters by 2x if HP is above 50% at the start of the turn",
         cooldown: [ 23, 13 ],
         evolution: 607,
         evolvers: [ 117, 80, 86, 97, 102 ]
@@ -4191,7 +4191,7 @@ window.details = {
     607: { // Red Leg Zeff, Captain of the Cook Pirates
         special: "Deals 20x character's ATK in DEX damage to one enemy, changes neighboring slots' orbs into [RCV] orbs",
         specialName: "Red Leg Kick",
-        captain: "Boosts ATK of Fighter characters by 2.5x if HP is below 50% at the start of the turn",
+        captain: "Boosts ATK of Fighter characters by 2.5x if HP is above 50% at the start of the turn",
         cooldown: [ 23, 13 ]
     },
     608: { // Thug Patty
