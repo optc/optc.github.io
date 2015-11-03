@@ -129,7 +129,7 @@ app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, 
 
 app.controller('ColumnsCtrl',function($scope, $rootScope, $state, $stateParams) {
 
-    $scope.columns = { 'ATK/HP': false, 'RCV/HP': false, 'RCV/ATK': false, 'ATK/CMB': false,
+    $scope.columns = { 'HP/ATK': false, 'HP/RCV': false, 'ATK/RCV': false, 'ATK/CMB': false,
         'CMB': false, 'ATK/cost': false, 'HP/cost': false, 'Minimum cooldown': false,
         'Initial cooldown': false };
 

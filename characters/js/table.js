@@ -199,9 +199,9 @@ angular.module('optc') .run(function($rootScope) {
         ];
         additionalColumns.forEach(function(c,n) {
             var temp = 0;
-            if (c == 'ATK/HP') temp = Math.round(x.maxATK / x.maxHP * 100) / 100;
-            else if (c == 'RCV/HP') temp = Math.round(x.maxRCV / x.maxHP * 100) / 100;
-            else if (c == 'RCV/ATK') temp = Math.round(x.maxRCV / x.maxATK * 100) / 100;
+            if (c == 'HP/ATK') temp = Math.round(x.maxHP / x.maxATK * 100) / 100;
+            else if (c == 'HP/RCV') temp = Math.round(x.maxHP / x.maxRCV * 100) / 100;
+            else if (c == 'ATK/RCV') temp = Math.round(x.maxATK / x.maxRCV * 100) / 100;
             else if (c == 'ATK/CMB') temp = Math.round(x.maxATK / x.combo * 100) / 100;
             else if (c == 'ATK/cost') temp = Math.round(x.maxATK / x.cost * 100) / 100;
             else if (c == 'HP/cost') temp = Math.round(x.maxHP / x.cost * 100) / 100;
@@ -214,6 +214,7 @@ angular.module('optc') .run(function($rootScope) {
                 else if (c == 'Initial cooldown') temp = (d.cooldown.constructor == Array ? d.cooldown[0] : d.cooldown);
                 else temp = 'Unknown';
             }
+            if (temp.constructor != String && !isNaN(temp) && !isFinite(temp)) temp = '&#8734;';
             if (temp.constructor != String && isNaN(temp)) temp = 0;
             result.splice(result.length-2, 0, temp);
         });

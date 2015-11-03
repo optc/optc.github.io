@@ -137,6 +137,10 @@ window.defenses = [
     [ 'Frieza (def up)'                     , 'Frieza Fortnight'                     , 'Master', null, 3000 ],
     [ 'Frieza'                              , 'Frieza Fortnight'                     , 'Ultimate', null, 200 ],
     [ 'Frieza (def up)'                     , 'Frieza Fortnight'                     , 'Ultimate', null, 4000 ],
+    [ 'Sea Lapin'                           , 'Breed Fortnight'                      , 'Expert', 799, 200 ],
+    [ 'Kung Fu Dugong'                      , 'Breed Fortnight'                      , 'Expert', 798, 75 ],
+    [ 'Breed (5th round)'                   , 'Breed Fortnight'                      , 'Expert', 796, 100 ],
+    [ 'Breed (6th round)'                   , 'Breed Fortnight'                      , 'Expert', 797, 1000 ],
     /* * * * * Others * * * * */
     [ 'Thatch'                              , 'Whitebeard\'s island, 11th round'     , '', 448, 50 ],
     [ 'Namur'                               , 'Whitebeard\'s island, 12th round'     , '', 450, 500 ],
