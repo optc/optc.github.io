@@ -798,5 +798,6 @@ window.units = [
     [ "Breed, User of the Peto-Peto Fruit", "INT", [ "Knowledge", "Tough" ], 4, 20, 4, 3, 99, null, 867, 818, 200, null, null, null, 0 ],
     [ "Kung Fu Dugong, Sea Animal Pirates", "PSY", [ "Fighter", "Tough" ], 4, 18, 5, 2, 70, null, 60, 374, 98, null, null, null, 0 ],
     [ "Sea Lapin, Sea Animal Pirates", "QCK", [ "Fighter", "Tough" ], 3, 15, 4, 1, 70, null, 523, 207, 33, null, null, null, 0 ],
-    [ "Octopus Boxer, Sea Animal Pirates", "STR", [ "Fighter", "Tough" ], 3, 15, 8, 1, 70, null, 396, 244, 20, null, null, null, 0 ]
+    [ "Octopus Boxer, Sea Animal Pirates", "STR", [ "Fighter", "Tough" ], 3, 15, 8, 1, 70, null, 396, 244, 20, null, null, null, 0 ],
+    [ "B.W. Mr. 2 Bon Clay Voyage Log", "PSY", [ "Fighter", "Freedom" ], 4, 13, 5, 2, 50, null, 467, 233, 101, null, null, null, 0 ]
 ];

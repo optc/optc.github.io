@@ -5567,5 +5567,11 @@ window.details = {
         special: "Changes all orbs into either [STR], [DEX] or [QCK] orbs",
         specialName: "Octopus Tentacle",
         cooldown: 27
+    },
+    801: { // B.W. Mr. 2 Bon Clay Voyage Log
+        special: "Changes [STR], [QCK], [DEX], [INT], bomb and hindrance orbs into either [STR], [QCK], [DEX], [PSY] or [INT] orbs, changes [TND] and [RCV] into [PSY] orbs",
+        specialName: "Clone-Clone Montage",
+        captain: "Boosts ATK of PSY characters by 2x",
+        cooldown: 15
     }
 };
