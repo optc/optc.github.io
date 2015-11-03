@@ -1640,5 +1640,23 @@ window.captains = {
     },
     795: { // Nightmare Luffy Warrior of Hope
         atk: function(p) { return  p.unit.class.has("Tough") ? Math.max(1.0, 3.5 - 0.1 * p.turnCounter) : 1; }
+    },
+    796: { // Breed
+        atk: function(p) { return p.unit.class.has("Knowledge") ? 2 : 1; }
+    },
+    797: { // Breed, User of the Peto-Peto Fruit
+        atk: function(p) { return p.unit.class.has("Knowledge") || p.unit.class.has("Tough") ? 2 : 1; }
+    },
+    798: { // Kung Fu Dugong, Sea Animal Pirates
+        hitAtk: function(p) {
+            return p.modifiers.slice(0,p.chainPosition).subcontains([ "Perfect", "Perfect", "Perfect" ]) ? 2.5 : 1;
+        },
+        hitModifiers: [ 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect' ] // don't remove this
+    },
+    801: { // Mr. 2 Bon Clay Voyage Log: B.W. (Log Bon Clay)
+        atk: function(p) { return p.unit.type == "PSY" ? 2 : 1; }
+    },
+    802: { // Mr. 2 Bon Clay Voyage Dream: Okama Way (Log Bon Clay)
+        atk: function(p) { return p.unit.type == "PSY" ? 2.5 : 1; }
     }
 };

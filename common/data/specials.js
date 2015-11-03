@@ -660,5 +660,17 @@ window.specials = {
     791: { // Tamanegi, Piiman & Ninjin, the Usopp Pirates
         atk: function(p) { return /STR|DEX|QCK/.test(p.unit.type) ? 1.2 : 1; },
         type: 'type',
+    },
+    796: { // Breed
+        atk: function(p) { return p.slot == p.sourceSlot ? 1.75 : 1; },
+        type: 'type',
+    },
+    797: { // Breed, User of the Peto-Peto Fruit
+        atk: function(p) { return p.slot == p.sourceSlot ? 1.75 : 1; },
+        type: 'type',
+    },
+    798: { // Kung Fu Dugong, Sea Animal Pirates
+        atk: function(p) { return p.unit.class.has("Fighter") ? 1.75 : 1; },
+        type: 'class'
     }
 };

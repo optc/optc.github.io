@@ -5544,7 +5544,9 @@ window.details = {
         special: "Slightly boosts chances of getting matching orbs for 3 turns, boosts his own ATK by 1.75x for 1 turn",
         specialName: "Peto-Peto Fruit, The Greatest Power",
         captain: "Boosts ATK of Knowledge characters by 2x",
-        cooldown: 22
+        cooldown: 22,
+        evolution: 797,
+        evolvers: [ 117, 82, 88, 99, 104 ]
     },
     797: { // Breed, User of the Peto-Peto Fruit
         special: "Slightly boosts chances of getting matching orbs for 3 turns, boosts his own ATK by 1.75x for 1 turn",
