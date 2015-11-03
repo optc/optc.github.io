@@ -5567,7 +5567,7 @@ window.details = {
     },
     800: { // Octopus Boxer, Sea Animal Pirates
         special: "Randomly changes all orbs into either [STR], [DEX] or [QCK] orbs",
-        specialName: "Octopus Tentacle",
+        specialName: "Octopus Tentacle Blow",
         cooldown: 27
     },
     801: { // Mr. 2 Bon Clay Voyage Log: B.W. (Log Bon Clay)

@@ -794,11 +794,11 @@ window.units = [
     [ "Iceburg, Mayor of W7 and President of Galley-La Company", "INT", [ "Shooter", "Knowledge" ], 4, 16, 4, 3, 70, 1066998, 723, 343, 122, 1401, 702, 224, 1 ],
     [ "Monkey D. Luffy Rising Star", "INT", [ "Slasher", "Tough" ], 4, 30, 4, 1, 70, 1066998, 259, 179, 0, 1400, 763, 0, 1.5 ],
     [ "Nightmare Luffy Warrior of Hope", "INT", [ "Fighter", "Tough" ], 5, 50, 4, 2, 99, 5000000, 1331, 711, 0, 3020, 1520, 0, 1.5 ],
-    [ "Breed", "INT", "Knowledge", 3, 13, 6, 1, 50, null, 182, 85, 91, 867, 418, 275, 0 ],
+    [ "Breed", "INT", "Knowledge", 3, 13, 6, 1, 50, null, 59, 25, 59, 867, 418, 275, 0 ],
     [ "Breed, User of the Peto-Peto Fruit", "INT", [ "Knowledge", "Tough" ], 4, 20, 4, 3, 99, null, 867, 818, 200, 2002, 1311, 180, 0 ],
-    [ "Kung Fu Dugong, Sea Animal Pirates", "PSY", [ "Fighter", "Tough" ], 4, 18, 5, 2, 70, null, 60, 374, 98, null, null, null, 0 ],
-    [ "Sea Lapin, Sea Animal Pirates", "QCK", [ "Fighter", "Tough" ], 3, 15, 4, 1, 70, null, 523, 207, 33, null, null, null, 0 ],
+    [ "Kung Fu Dugong, Sea Animal Pirates", "PSY", [ "Fighter", "Tough" ], 4, 18, 5, 2, 70, null, 50, 355, 95, 450, 1115, 225, 1.5 ],
+    [ "Sea Lapin, Sea Animal Pirates", "QCK", [ "Fighter", "Tough" ], 3, 15, 4, 1, 70, null, 209, 76, 14, 1757, 724, 112, 1 ],
     [ "Octopus Boxer, Sea Animal Pirates", "STR", [ "Fighter", "Tough" ], 3, 15, 8, 1, 70, null, 396, 244, 20, null, null, null, 0 ],
     [ "Mr. 2 Bon Clay Voyage Log: B.W. (Log Bon Clay)", "PSY", [ "Fighter", "Freedom" ], 4, 13, 5, 2, 50, null, 467, 233, 101, null, null, null, 0 ],
-    [ "Mr. 2 Bon Clay Voyage Dream: Okama Way (Log Bon Clay)", "PSY", [ "Fighter", "Freedom" ], 5, 20, 4, 3, 99, null, 970, 448, 181, null, null, null, 0 ]
+    [ "Mr. 2 Bon Clay Voyage Dream: Okama Way (Log Bon Clay)", "PSY", [ "Fighter", "Freedom" ], 5, 20, 4, 3, 99, null, 970, 448, 181, 1914, 922, 362, 0 ]
 ];
