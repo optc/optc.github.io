@@ -2013,7 +2013,7 @@ window.details = {
         flags: { global: 1 }
     },
     305: { // Monkey D. Garp
-        special: "Changes all orbs into either [PSY] or [RCV] orbs",
+        special: "Randomly changes all orbs into either [PSY] or [RCV] orbs",
         specialName: "Meteor Fist Shower",
         captain: "Boosts ATK and HP of PSY characters by 1.5x",
         cooldown: [ 28, 13 ],
@@ -2022,14 +2022,14 @@ window.details = {
         flags: { global: 1 }
     },
     306: { // Garp the Fist
-        special: "Changes all orbs into either [PSY] or [RCV] orbs",
+        special: "Randomly changes all orbs into either [PSY] or [RCV] orbs",
         specialName: "Meteor Fist Shower",
         captain: "Boosts ATK and HP of PSY characters by 2x",
         cooldown: [ 28, 13 ],
         flags: { global: 1 }
     },
     307: { // Trafalgar Law
-        special: "Changes all orbs other than [DEX] into either [DEX], [RCV] or [TND] orbs",
+        special: "Randomly changes all orbs other than [DEX] into either [DEX], [RCV] or [TND] orbs",
         specialName: "ROOM – Chambres",
         captain: "Boosts ATK of DEX characters by 2.5x",
         cooldown: [ 18, 10 ],
@@ -2038,7 +2038,7 @@ window.details = {
         flags: { global: 1, rr: 1 }
     },
     308: { // Trafalgar Law ROOM
-        special: "Changes all orbs other than [DEX] into either [DEX], [RCV] or [TND] orbs",
+        special: "Randomly changes all orbs other than [DEX] into either [DEX], [RCV] or [TND] orbs",
         specialName: "ROOM – Chambres",
         captain: "Boosts ATK of DEX characters by 2.5x",
         cooldown: [ 18, 10 ],
@@ -2111,7 +2111,7 @@ window.details = {
         flags: { global: 1, rr: 1 }
     },
     317: { // Kalifa
-        special: "Changes all orbs into either [DEX] or [STR] orbs, deals random DEX damage to all enemies",
+        special: "Randomly changes all orbs into either [DEX] or [STR] orbs, deals random DEX damage to all enemies",
         specialName: "Beautiful Secretary's Job",
         captain: "Recovers 500 HP at end of turn, reduces damage received by 10%",
         cooldown: [ 25, 18 ],
@@ -2120,7 +2120,7 @@ window.details = {
         flags: { global: 1 }
     },
     318: { // Beautiful Secretary Kalifa
-        special: "Changes all orbs into either [DEX] or [STR] orbs, deals random DEX damage to all enemies",
+        special: "Randomly changes all orbs into either [DEX] or [STR] orbs, deals random DEX damage to all enemies",
         specialName: "Beautiful Secretary's Job",
         captain: "Recovers 500 HP at end of turn, reduces damage received by 15%",
         cooldown: [ 25, 18 ],
@@ -2281,7 +2281,7 @@ window.details = {
         flags: { global: 1 }
     },
     340: { // Kraken Surume
-        special: "Changes all orbs into either [STR] or [QCK] orbs, deals random STR damage to all enemies",
+        special: "Randomly changes all orbs into either [STR] or [QCK] orbs, deals random STR damage to all enemies",
         specialName: "Kraken Tentacle Crush",
         captain: "Boosts ATK of Striker characters by 2x",
         cooldown: [ 25, 18 ],
@@ -2290,7 +2290,7 @@ window.details = {
         flags: { global: 1 }
     },
     341: { // Kraken Monster of the North
-        special: "Changes all orbs into either [STR] or [QCK] orbs, deals random STR damage to all enemies",
+        special: "Randomly changes all orbs into either [STR] or [QCK] orbs, deals random STR damage to all enemies",
         specialName: "Kraken Tentacle Crush",
         captain: "Boosts ATK of Striker characters by 2x",
         cooldown: [ 25, 18 ],
@@ -2604,7 +2604,7 @@ window.details = {
         flags: { global: 1 }
     },
     387: { // Cindry
-        special: "Changes all orbs into either [PSY] or [INT] orbs, deals random PSY damage to all enemies",
+        special: "Randomly changes all orbs into either [PSY] or [INT] orbs, deals random PSY damage to all enemies",
         specialName: "Square Plate Sword",
         captain: "Boosts RCV of PSY characters by 1.5x",
         cooldown: [ 25, 18 ],
@@ -2613,7 +2613,7 @@ window.details = {
         flags: { global: 1 }
     },
     388: { // Victoria Cindry
-        special: "Changes all orbs into either [PSY] or [INT] orbs, deals random PSY damage to all enemies",
+        special: "Randomly changes all orbs into either [PSY] or [INT] orbs, deals random PSY damage to all enemies",
         specialName: "Square Plate Sword",
         captain: "Boosts RCV of PSY characters by 1.5x",
         cooldown: [ 25, 18 ],
@@ -2766,7 +2766,7 @@ window.details = {
         flags: { global: 1 }
     },
     408: { // Sir Crocodile Warlord of the Sea
-        special: "Changes own orb into [INT], randomizes every other orb, deals 15x character's ATK in INT damage to all enemies",
+        special: "Changes own orb into [INT] and randomizes every other orb, deals 15x character's ATK in INT damage to all enemies",
         specialName: "Ground Death",
         captain: "Reduces damage received by 20%, boosts ATK of Slasher characters by 2x",
         cooldown: [ 23, 18 ],
@@ -2962,7 +2962,7 @@ window.details = {
         cooldown: [ 21, 11 ]
     },
     435: { // Sanji - Traditional Kamabakka Kingdom Duel Style
-        special: "Changes [RCV], [STR] and [DEX] orbs into either [STR] or [QCK] orbs",
+        special: "Randomly changes [RCV], [STR] and [DEX] orbs into either [STR] or [QCK] orbs",
         specialName: "Blooming into a Lovely Maiden",
         captain: "Boosts ATK by 2x following a chain of INT > PSY > QCK attacks no lower than Good",
         cooldown: [ 12, 8 ],
@@ -2970,7 +2970,7 @@ window.details = {
         evolvers: [ 117, 85, 433, 434, 96 ]
     },
     436: { // Sanji Candy-chan
-        special: "Changes [RCV], [STR] and [DEX] orbs into either [STR] or [QCK] orbs",
+        special: "Randomly changes [RCV], [STR] and [DEX] orbs into either [STR] or [QCK] orbs",
         specialName: "Blooming into a Lovely Maiden",
         captain: "Boosts ATK by 2.25x following a chain of INT > PSY > QCK attacks no lower than Good",
         cooldown: [ 12, 8 ]
@@ -2992,7 +2992,7 @@ window.details = {
         flags: { rr: 1, lrr: 1 }
     },
     439: { // Nefertari Vivi Love
-        special: "Changes neighboring slots' orbs into [RCV], randomizes every other orb",
+        special: "Changes neighboring slots' orbs into [RCV] and randomizes every other orb",
         specialName: "Charge! Supersonic Duck Squadron! \"Love\"",
         captain: "Recovers 5x character's RCV in HP at the end of each turn",
         cooldown: [ 16, 16 ],
@@ -3001,7 +3001,7 @@ window.details = {
         flags: { rr: 1, lrr: 1 }
     },
     440: { // Princess Vivi Love
-        special: "Changes neighboring slots' orbs into [RCV], randomizes every other orb",
+        special: "Changes neighboring slots' orbs into [RCV] and randomizes every other orb",
         specialName: "Charge! Supersonic Duck Squadron! \"Love\"",
         captain: "Recovers 7x character's RCV in HP at the end of each turn",
         cooldown: [ 16, 16 ],
@@ -3016,7 +3016,7 @@ window.details = {
         evolvers: [ 441, 442, 443 ]
     },
     445: { // Captain Carue & The Super Spot-Billed Duck Squad
-        special: "Changes all orbs into either [STR], [DEX], [QCK], [PSY] or [INT] orbs, freely switch orbs between slots 3 times",
+        special: "Randomly changes all orbs into either [STR], [DEX], [QCK], [PSY] or [INT] orbs, freely switch orbs between slots 3 times",
         specialName: "Support! Supersonic Duck Squadron!",
         captain: "Boosts ATK of Booster characters by 2.5x if HP is above 70% at the start of the turn",
         cooldown: [ 26, 17 ]
@@ -3102,7 +3102,7 @@ window.details = {
         flags: { global: 1, rr: 1 }
     },
     456: { // Curiel
-        special: "Changes the orbs in the middle row into either [STR] or [DEX] orbs, the orbs in the lower row into either [PSY] or [INT] orbs, freely switch orbs between slots once",
+        special: "Randomly changes the orbs in the middle row into either [STR] or [DEX] orbs, the orbs in the lower row into either [PSY] or [INT] orbs, freely switch orbs between slots once",
         specialName: "Double Cannon",
         captain: "Boosts ATK of Shooter characters by 2x and their RCV by 1.5x",
         cooldown: [ 18, 10 ],
@@ -3111,7 +3111,7 @@ window.details = {
         flags: { global: 1, rr: 1 }
     },
     457: { // Heavy Specialist Curiel
-        special: "Changes the orbs in the middle row into either [STR] or [DEX] orbs, the orbs in the lower row into either [PSY] or [INT] orbs, freely switch orbs between slots once",
+        special: "Randomly changes the orbs in the middle row into either [STR] or [DEX] orbs, the orbs in the lower row into either [PSY] or [INT] orbs, freely switch orbs between slots once",
         specialName: "Double Cannon",
         captain: "Boosts ATK of Shooter characters by 2x and their RCV by 1.5x",
         cooldown: [ 18, 10 ],
@@ -3140,7 +3140,7 @@ window.details = {
         cooldown: [ 14, 10 ]
     },
     461: { // Fugitive Bentham Mr. 2 Bon Clay
-        special: "Changes own orb into [DEX], randomizes every other orb, boosts ATK of Fighter characters by 1.25x for 2 turns",
+        special: "Changes own orb into [DEX] and randomizes every other orb, boosts ATK of Fighter characters by 1.25x for 2 turns",
         specialName: "Swan Arabesque",
         captain: "Boosts ATK of Fighter characters by 2x",
         cooldown: [ 25, 15 ],
@@ -3148,7 +3148,7 @@ window.details = {
         evolvers: [ 117, 80, 86, 97, 102 ]
     },
     462: { // Prison Break Expert Mr. 2 Bon Clay
-        special: "Changes own orb into [DEX], randomizes every other orb, boosts ATK of Fighter characters by 1.25x for 2 turns",
+        special: "Changes own orb into [DEX] and randomizes every other orb, boosts ATK of Fighter characters by 1.25x for 2 turns",
         specialName: "Swan Arabesque",
         captain: "Boosts ATK of Fighter characters by 2x",
         cooldown: [ 25, 15 ]
@@ -4014,7 +4014,7 @@ window.details = {
         flags: { rr: 1 }
     },
     579: { // Roronoa Zoro Voyage Log: Straw Hat Pirates (Log Zoro)
-        special: "Changes hindrance orbs into either [QCK] or [DEX] orbs, deals 15x character's ATK in QCK damage to all enemies",
+        special: "Randomly changes hindrance orbs into either [QCK] or [DEX] orbs, deals 15x character's ATK in QCK damage to all enemies",
         specialName: "Tatsu Maki",
         captain: "Boosts ATK of QCK and DEX characters by 1.5x",
         cooldown: [ 20, 17 ],
@@ -4023,7 +4023,7 @@ window.details = {
         flags: { rr: 1, lrr: 1 }
     },
     580: { // Roronoa Zoro Voyage Dream: Strongest Swordsman (Log Zoro)
-        special: "Changes hindrance orbs into either [QCK] or [DEX] orbs, deals 15x character's ATK in QCK damage to all enemies",
+        special: "Randomly changes hindrance orbs into either [QCK] or [DEX] orbs, deals 15x character's ATK in QCK damage to all enemies",
         specialName: "Tatsu Maki",
         captain: "Boosts ATK of QCK and DEX characters by 2x",
         cooldown: [ 20, 17 ],
@@ -4200,7 +4200,7 @@ window.details = {
         cooldown: [ 14, 7 ]
     },
     609: { // Thug Carne
-        special: "Changes the captain's orb into [RCV], randomizes every other orb",
+        special: "Changes the captain's orb into [RCV] and randomizes every other orb",
         specialName: "Wicked Spirit",
         cooldown: [ 15, 8 ]
     },
@@ -4315,7 +4315,7 @@ window.details = {
         evolvers: [ 117, 82, 83, 99, 104 ]
     },
     630: { // Kaku, Cipher Pol No.9
-        special: "Changes all orbs into either [QCK] or [DEX] orbs, deals random QCK damage to all enemies",
+        special: "Randomly changes all orbs into either [QCK] or [DEX] orbs, deals random QCK damage to all enemies",
         specialName: "Rankyaku - Ran",
         captain: "Boosts ATK of Slasher characters by 1.5x",
         cooldown: 25,
@@ -4323,13 +4323,13 @@ window.details = {
         evolvers: [ [ 117, 90, 96, 301, 101 ], [ 118, 78, 94, 95, 100 ] ]
     },
     631: { // Kaku Rokushiki, Cipher Pol No.9
-        special: "Changes all orbs into either [QCK] or [DEX] orbs, deals random QCK damage to all enemies",
+        special: "Randomly changes all orbs into either [QCK] or [DEX] orbs, deals random QCK damage to all enemies",
         specialName: "Rankyaku - Ran",
         captain: "Boosts ATK of Slasher characters by 2x",
         cooldown: 25
     },
     632: { // Rob Lucci, Cipher Pol No.9
-        special: "Changes all orbs into either [STR], [PSY] or [INT] orbs, deals random STR damage to all enemies, reduces the defense of all enemies by 50% for 2 turns",
+        special: "Randomly changes all orbs into either [STR], [PSY] or [INT] orbs, deals random STR damage to all enemies, reduces the defense of all enemies by 50% for 2 turns",
         specialName: "Shigan - Oren",
         captain: "Boosts ATK of Fighter characters by 1.5x",
         cooldown: 25,
@@ -4337,7 +4337,7 @@ window.details = {
         evolvers: [ [ 117, 89, 95, 300, 100 ], [ 118, 79, 94, 96, 101 ] ]
     },
     633: { // Rob Lucci Rokushiki, Cipher Pol No.9
-        special: "Changes all orbs into either [STR], [PSY] or [INT] orbs, deals random STR damage to all enemies, reduces the defense of all enemies by 50% for 2 turns",
+        special: "Randomly changes all orbs into either [STR], [PSY] or [INT] orbs, deals random STR damage to all enemies, reduces the defense of all enemies by 50% for 2 turns",
         specialName: "Shigan - Oren",
         captain: "Boosts ATK of Fighter characters by 2x",
         cooldown: 25
@@ -4527,13 +4527,13 @@ window.details = {
         cooldown: [ 24, 15 ]
     },
     657: { // Kuroobi of the Sun Pirates
-        special: "Changes [INT] and [PSY] orbs into either [STR] orbs or empty slots",
+        special: "Randomly changes [INT] and [PSY] orbs into either [STR] orbs or empty slots",
         specialName: "Forearm Sledge",
         captain: "Boosts ATK of Fighter characters by 1.5x",
         cooldown: [ 20, 10 ]
     },
     658: { // Choo of the Sun Pirates
-        special: "Changes all orbs into either [INT] or [PSY] orbs",
+        special: "Randomly changes all orbs into either [INT] or [PSY] orbs",
         specialName: "Lipowertzer",
         captain: "Boosts ATK of Shooter characters by 1.5x",
         cooldown: [ 30, 17 ]
@@ -4866,7 +4866,7 @@ window.details = {
         cooldown: 25
     },
     705: { // Three-Headed Baskerville
-        special: "Changes [PSY], [INT], [TND], [RCV] and empty orbs into [STR], [DEX] or [QCK] orbs",
+        special: "Randomly changes [PSY], [INT], [TND], [RCV] and empty orbs into [STR], [DEX] or [QCK] orbs",
         specialName: "Guilty Verdict - \"Slow Death Penalty\"",
         captain: "Boosts ATK and HP of STR characters, DEX characters and QCK characters by 1.25x",
         cooldown: 20
@@ -5385,7 +5385,7 @@ window.details = {
         cooldown: [ 20, 8 ]
     },
     774: { // Very Good
-        special: "Changes [TND], [RCV], empty, bother and bomb orbs into either [STR], [DEX], [QCK], [PSY] or [INT] orbs, freely switch orbs between slots 3 times",
+        special: "Randomly changes [TND], [RCV], empty, bother and bomb orbs into either [STR], [DEX], [QCK], [PSY] or [INT] orbs, freely switch orbs between slots 3 times",
         specialName: "Berry-Berry Fruit",
         captain: "Boosts ATK of Freedom characters by 2x",
         cooldown: [ 20, 11 ]
@@ -5510,14 +5510,14 @@ window.details = {
         cooldown: 17
     },
     792: { // Iceburg
-        special: "Changes all orbs into either [STR], [QCK], [DEX], [PSY] or [INT] orbs, freely switch orbs between slots twice, locks all orbs for 1 turn",
+        special: "Randomly changes all orbs into either [STR], [QCK], [DEX], [PSY] or [INT] orbs, freely switch orbs between slots twice, locks all orbs for 1 turn",
         specialName: "The Entushiasm to Keep Skilled Workers in Line",
         cooldown: 22,
         evolution: 793,
         evolvers: [ 116, 117, 99 ]
     },
     793: { // Iceburg, Mayor of W7 and President of Galley-La Company
-        special: "Changes all orbs into either [STR], [QCK], [DEX], [PSY] or [INT] orbs, freely switch orbs between slots twice, locks all orbs for 1 turn",
+        special: "Randomly changes all orbs into either [STR], [QCK], [DEX], [PSY] or [INT] orbs, freely switch orbs between slots twice, locks all orbs for 1 turn",
         specialName: "The Entushiasm to Keep Skilled Workers in Line",
         captain: "Boosts ATK and RCV of Knowledge characters by 1.5x",
         cooldown: 22
@@ -5566,18 +5566,20 @@ window.details = {
         cooldown: 20
     },
     800: { // Octopus Boxer, Sea Animal Pirates
-        special: "Changes all orbs into either [STR], [DEX] or [QCK] orbs",
+        special: "Randomly changes all orbs into either [STR], [DEX] or [QCK] orbs",
         specialName: "Octopus Tentacle",
         cooldown: 27
     },
     801: { // Mr. 2 Bon Clay Voyage Log: B.W. (Log Bon Clay)
-        special: "Changes [STR], [QCK], [DEX], [INT], bomb and hindrance orbs into either [STR], [QCK], [DEX], [PSY] or [INT] orbs, changes [TND] and [RCV] into [PSY] orbs",
+        special: "Randomly changes [STR], [QCK], [DEX], [INT], bomb and hindrance orbs into either [STR], [QCK], [DEX], [PSY] or [INT] orbs, changes [TND] and [RCV] into [PSY] orbs",
         specialName: "Clone-Clone Montage",
         captain: "Boosts ATK of PSY characters by 2x",
-        cooldown: 15
+        cooldown: 15,
+        evolution: 802,
+        evolvers: [ 87, 94, 98, 103, 303 ]
     },
     802: { // Mr. 2 Bon Clay Voyage Dream: Okama Way (Log Bon Clay)
-        special: "Changes [STR], [QCK], [DEX], [INT], bomb and hindrance orbs into either [STR], [QCK], [DEX], [PSY] or [INT] orbs, changes [TND] and [RCV] into [PSY] orbs",
+        special: "Randomly changes [STR], [QCK], [DEX], [INT], bomb and hindrance orbs into either [STR], [QCK], [DEX], [PSY] or [INT] orbs, changes [TND] and [RCV] into [PSY] orbs",
         specialName: "Clone-Clone Montage",
         captain: "Boosts ATK of PSY characters by 2.5x",
         cooldown: 15

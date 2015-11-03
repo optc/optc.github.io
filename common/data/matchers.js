@@ -224,7 +224,7 @@ window.matchers = [
     {
         name: 'Meat producers',
         target: 'special',
-        matcher: /into.+\[RCV\]/i
+        matcher: /into( either)?[\s,\[\]A-Zor]+\[RCV\]/
     },
 
     {
