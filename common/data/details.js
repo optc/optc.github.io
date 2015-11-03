@@ -5568,10 +5568,16 @@ window.details = {
         specialName: "Octopus Tentacle",
         cooldown: 27
     },
-    801: { // B.W. Mr. 2 Bon Clay Voyage Log
+    801: { // Mr. 2 Bon Clay Voyage Log: B.W. (Log Bon Clay)
         special: "Changes [STR], [QCK], [DEX], [INT], bomb and hindrance orbs into either [STR], [QCK], [DEX], [PSY] or [INT] orbs, changes [TND] and [RCV] into [PSY] orbs",
         specialName: "Clone-Clone Montage",
         captain: "Boosts ATK of PSY characters by 2x",
+        cooldown: 15
+    },
+    802: { // Mr. 2 Bon Clay Voyage Dream: Okama Way (Log Bon Clay)
+        special: "Changes [STR], [QCK], [DEX], [INT], bomb and hindrance orbs into either [STR], [QCK], [DEX], [PSY] or [INT] orbs, changes [TND] and [RCV] into [PSY] orbs",
+        specialName: "Clone-Clone Montage",
+        captain: "Boosts ATK of PSY characters by 2.5x",
         cooldown: 15
     }
 };

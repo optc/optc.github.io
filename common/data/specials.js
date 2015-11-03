@@ -657,7 +657,7 @@ window.specials = {
         atk: function(p) { return /STR|DEX|QCK/.test(p.unit.type) ? 1.2 : 1; },
         type: 'type',
     },
-    791: {  // Tamanegi, Piiman & Ninjin, the Usopp Pirates
+    791: { // Tamanegi, Piiman & Ninjin, the Usopp Pirates
         atk: function(p) { return /STR|DEX|QCK/.test(p.unit.type) ? 1.2 : 1; },
         type: 'type',
     }

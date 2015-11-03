@@ -1626,7 +1626,7 @@ window.captains = {
     789: { // Kuina, Shimotsuki Village's Girl Swordsman
         atk: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; }
     },
-    791: {  // Tamanegi, Piiman & Ninjin, the Usopp Pirates
+    791: { // Tamanegi, Piiman & Ninjin, the Usopp Pirates
         atk: function(p) { return /STR|DEX|QCK/.test(p.unit.type) ? 1.25 : 1; },
         hp: function(p) { return /STR|DEX|QCK/.test(p.unit.type) ? 1.25 : 1; },
         rcv: function(p) { return /STR|DEX|QCK/.test(p.unit.type) ? 1.25 : 1; }
@@ -1635,10 +1635,10 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Knowledge") ? 1.5 : 1; },
         rcv: function(p) { return p.unit.class.has("Knowledge") ? 1.5 : 1; },
     },
-    794: {
+    794: { // Monkey D. Luffy Rising Star
         atk: function(p) { return  p.unit.class.has("Tough") ? Math.max(1.0, 3.0 - 0.1 * p.turnCounter) : 1; }
     },
-    795: {
+    795: { // Nightmare Luffy Warrior of Hope
         atk: function(p) { return  p.unit.class.has("Tough") ? Math.max(1.0, 3.5 - 0.1 * p.turnCounter) : 1; }
     }
 };
