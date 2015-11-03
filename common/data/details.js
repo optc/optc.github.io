@@ -5539,5 +5539,33 @@ window.details = {
         captain: "Boosts ATK of Tough characters by 3.5x, reduces crew's current HP by 10% at the end of each turn, reduces his own ATK multiplier by 0.1x at the end of each turn",
         captainNotes: "His ATK multiplier will be 3.5x on the first turn, 3.4x on the second, 3.3x on the third and so on. The reduction stops once the multiplier is 1.0x. The multiplier affects all Tough units.",
         cooldown: [ 30, 16 ]
+    },
+    796: { // Breed
+        special: "Slightly boosts chances of getting matching orbs for 3 turns, boosts his own ATK by 1.75x for 1 turn",
+        specialName: "Peto-Peto Fruit, The Greatest Power",
+        captain: "Boosts ATK of Knowledge characters by 2x",
+        cooldown: 22
+    },
+    797: { // Breed, User of the Peto-Peto Fruit
+        special: "Slightly boosts chances of getting matching orbs for 3 turns, boosts his own ATK by 1.75x for 1 turn",
+        specialName: "Peto-Peto Fruit, The Greatest Power",
+        captain: "Boosts ATK of Knowledge and Tough characters by 2x",
+        cooldown: 22
+    },
+    798: { // Kung Fu Dugong, Sea Animal Pirates
+        special: "Removes poison, following the activation of the special, if every unit scores a Perfect hit, boosts ATK of Fighter characters by 1.75x in the following turn",
+        specialName: "Dugong Secret! Fist of the Black Fin",
+        captain: "Boosts ATK by 2.5x after scoring 3 Perfects in a row",
+        cooldown: 20
+    },
+    799: { // Sea Lapin, Sea Animal Pirates
+        special: "Randomizes all orbs, recovers 9x character's RCV in HP",
+        specialName: "Sea Animal Healing",
+        cooldown: 20
+    },
+    800: { // Octopus Boxer, Sea Animal Pirates
+        special: "Changes all orbs into either [STR], [DEX] or [QCK] orbs",
+        specialName: "Octopus Tentacle",
+        cooldown: 27
     }
 };
