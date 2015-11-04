@@ -1658,5 +1658,15 @@ window.captains = {
     },
     802: { // Mr. 2 Bon Clay Voyage Dream: Okama Way (Log Bon Clay)
         atk: function(p) { return p.unit.type == "PSY" ? 2.5 : 1; }
+    },
+    803: {
+        atk: function(p) { return p.unit.type == "DEX" ? 1.5 : 1; },
+        rcv: function(p) { return p.unit.type == "DEX" ? 1.5 : 1; }
+    },
+    805: {
+        atk: function(p) { return p.unit.class.has("Striker") ? 2 : 1; }
+    },
+    806: {
+        atk: function(p) { return p.unit.class.has("Striker") ? 2 : 1; }
     }
 };

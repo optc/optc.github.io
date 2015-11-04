@@ -5598,7 +5598,7 @@ window.details = {
         captain: "?",
         cooldown: 27
     },
-    805: { // N/A
+    805: { // Smoker, Navy HQ Captain
         special: "Reduces crew's current HP by 20%, deals 10x the amount of HP subtracted in INT damage to one enemy, amplifies the effect of orbs by 1.75x for 1 turn",
         specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.75x more damage and opposite orbs will deal 1.75x less damage",
         specialName: "White Vine",

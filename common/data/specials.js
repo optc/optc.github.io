@@ -672,5 +672,19 @@ window.specials = {
     798: { // Kung Fu Dugong, Sea Animal Pirates
         atk: function(p) { return p.unit.class.has("Fighter") ? 1.75 : 1; },
         type: 'class'
+    },
+    //803: {
+        //atk: function(p) { },
+        //type: 'type'
+    //},
+    //804: {
+        //atk: function(p) { },
+        //type: 'type'
+    //},
+    805: {
+        orb: function(p) { return p.orb == 2.0 ? 1.75 : (p.orb == 0.5 ? 4/7 : 1); },
+    },
+    806: {
+        orb: function(p) { return p.orb == 2.0 ? 1.75 : (p.orb == 0.5 ? 4/7 : 1); },
     }
 };
