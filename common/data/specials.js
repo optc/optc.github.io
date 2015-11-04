@@ -673,14 +673,14 @@ window.specials = {
         atk: function(p) { return p.unit.class.has("Fighter") ? 1.75 : 1; },
         type: 'class'
     },
- // Hina, Navy HQ Captain
-        //atk: function(p) { },
-        //type: 'type'
-    //},
- // Black Cage Hina, Navy HQ Captain
-        //atk: function(p) { },
-        //type: 'type'
-    //},
+    803: { // Hina, Navy HQ Captain
+        atk: function(p) { return 1.1; },
+        type: 'type'
+    },
+    804: { // Black Cage Hina, Navy HQ Captain
+        atk: function(p) { return 1.1; },
+        type: 'type'
+    },
     805: { // Smoker, Navy HQ Captain
         orb: function(p) { return p.orb == 2.0 ? 1.75 : (p.orb == 0.5 ? 4/7 : 1); },
     },

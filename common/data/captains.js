@@ -1660,6 +1660,10 @@ window.captains = {
         atk: function(p) { return p.unit.type == "PSY" ? 2.5 : 1; }
     },
     803: { // Hina, Navy HQ Captain
+        atk: function(p) { return p.unit.type == "DEX" ? 1.2 : 1; },
+        rcv: function(p) { return p.unit.type == "DEX" ? 1.2 : 1; }
+    },
+    804: { // Black Cage Hina, Navy HQ Captain
         atk: function(p) { return p.unit.type == "DEX" ? 1.5 : 1; },
         rcv: function(p) { return p.unit.type == "DEX" ? 1.5 : 1; }
     },

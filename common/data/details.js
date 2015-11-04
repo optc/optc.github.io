@@ -5585,7 +5585,7 @@ window.details = {
         cooldown: 15
     },
     803: { // Hina, Navy HQ Captain
-        special: "Deals 8 hits of random DEX damage to random enemies, slighly boosts ATK of all characters for 3 turns",
+        special: "Deals 8 hits of random DEX damage to random enemies, boosts ATK of all characters by 1.1x for 3 turns",
         specialNotes: "The target of each of the 8 hits is chosen randomly.",
         specialName: "Black Spear Formation: All-Out Attack!",
         captain: "Boosts ATK and RCV of DEX characters by 1.2x",
@@ -5594,7 +5594,7 @@ window.details = {
         evolvers: [ 117, 80, 86, 302, 102 ]
     },
     804: { // Black Cage Hina, Navy HQ Captain
-        special: "Deals 8 hits of random DEX damage to random enemies, slighly boosts ATK of all characters for 3 turns",
+        special: "Deals 8 hits of random DEX damage to random enemies, boosts ATK of all characters by 1.1x for 3 turns",
         specialNotes: "The target of each of the 8 hits is chosen randomly.",
         specialName: "Black Spear Formation: All-Out Attack!",
         captain: "Boosts ATK and RCV of DEX characters by 1.5x, deals 1x character's ATK in DEX damage to all enemies at the end of each turn",
