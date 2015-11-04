@@ -801,8 +801,8 @@ window.units = [
     [ "Octopus Boxer, Sea Animal Pirates", "STR", [ "Fighter", "Tough" ], 3, 15, 8, 1, 70, null, 396, 244, 20, null, null, null, 0 ],
     [ "Mr. 2 Bon Clay Voyage Log: B.W. (Log Bon Clay)", "PSY", [ "Fighter", "Freedom" ], 4, 13, 5, 2, 50, null, 467, 233, 101, null, null, null, 0 ],
     [ "Mr. 2 Bon Clay Voyage Dream: Okama Way (Log Bon Clay)", "PSY", [ "Fighter", "Freedom" ], 5, 20, 4, 3, 99, null, 970, 448, 181, 1914, 922, 362, 0 ],
-    [ "Hina, Navy HQ Captain", "DEX", [ "Fighter", "Knowledge" ], 4, 18, null, null, null, null, null, null, null, null, null, null, 0 ],
-    [ null, "DEX", [ "Fighter", "Knowledge" ], 5, 30, 5, 1, 50, null, 220, 144, 53, null, null, null, 0 ],
+    [ "Hina, Navy HQ Captain", "DEX", [ "Fighter", "Knowledge" ], 4, 18, 5, 1, 50, null, 188, 128, 48, 976, 544, 190, 0 ],
+    [ null, "DEX", [ "Fighter", "Knowledge" ], 5, 30, null, null, null, null, null, null, null, null, null, null, 0 ],
     [ "Smoker, Navy HQ Captain", "INT", "Striker", 4, 25, 6, 2, 70, null, 791, 345, 53, null, null, null, 0 ],
     [ "Smoker the White Hunter, Navy HQ Captain", "INT", "Striker", 5, 40, 5, 3, 99, null, 1549, 640, 112, 2727, 1289, 234, 0 ]
 ];
