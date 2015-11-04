@@ -854,9 +854,9 @@ window.drops = {
         {
             name: 'Colosseum',
             thumb: 779,
-            Exhibition: [ 776, 778 ],
-            Underground: [ 776, 778 ],
-            Chaos: [ 776, 778, 780 ]
+            Exhibition: [ 776, 778, 803, 805 ],
+            Underground: [ 776, 778, 803 ],
+            Chaos: [ 776, 778, 780, 803 ]
         }
 
    ]
