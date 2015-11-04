@@ -4304,7 +4304,7 @@ window.details = {
     628: { // Tilestone
         special: "Deals 15,000 fixed damage to one enemy",
         specialName: "Keel Crusher",
-        cooldown: 20
+        cooldown: [ 20, 14 ]
     },
     629: { // Franky, Boss of the Franky Family
         special: "Empties all slots with hindrance orbs, deals random INT damage to all enemies",
@@ -4372,7 +4372,7 @@ window.details = {
         special: "Changes [PSY] and [INT] orbs into [QCK] orbs, reduces Bind duration by 1 turn",
         specialName: "Raiding Sword of Frenzy",
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of Slasher characters by 2x",
-        cooldown: 20,
+        cooldown: [ 20, 11 ],
         evolution: 639,
         evolvers: [ 118, 83, 96, 301, 101 ],
         flags: { rr: 1 }
@@ -4381,7 +4381,7 @@ window.details = {
         special: "Changes [PSY] and [INT] orbs into [QCK] orbs, reduces Bind duration by 1 turn",
         specialName: "Raiding Sword of Frenzy",
         captain: "Reduces cooldown of all specials by 3 turns at the start of the fight, boosts ATK of Slasher characters by 2x",
-        cooldown: 20,
+        cooldown: [ 20, 11 ],
         flags: { rr: 1 }
     },
     640: { // Decalvan Brothers
@@ -4778,66 +4778,66 @@ window.details = {
         captain: "Boosts ATK and RCV of Slasher characters by 1.5x",
         cooldown: [ 18, 10 ]
     },
-    691: { // Halberd Corporal Navy Headquarters
+    691: { // Halberd Corporal Navy HQ
         special: "Changes [PSY] orbs into [DEX] orbs",
         specialName: "[PSY] Slot Change [DEX]",
         cooldown: [ 15, 7 ],
         evolution: 696,
         evolvers: [ 116, 97, 302 ]
     },
-    692: { // Pistol Corporal Navy Headquarters
+    692: { // Pistol Corporal Navy HQ
         special: "Changes [PSY] orbs into [QCK] orbs",
         specialName: "[PSY] Slot Change [QCK]",
         cooldown: [ 15, 7 ],
         evolution: 697,
         evolvers: [ 116, 96, 301 ]
     },
-    693: { // Saber Corporal Navy Headquarters
+    693: { // Saber Corporal Navy HQ
         special: "Changes [DEX] orbs into [PSY] orbs",
         specialName: "[DEX] Slot Change [PSY]",
         cooldown: [ 15, 7 ],
         evolution: 698,
         evolvers: [ 116, 98, 303 ]
     },
-    694: { // Bazooka Corporal Navy Headquarters
+    694: { // Bazooka Corporal Navy HQ
         special: "Deals 13x character's ATK in character's type damage to all enemies",
         specialName: "Hyper Burst",
         cooldown: [ 35, 18 ],
         evolution: 699,
         evolvers: [ 116, 95, 300 ]
     },
-    695: { // Knuckle Corporal Navy Headquarters
+    695: { // Knuckle Corporal Navy HQ
         special: "Cuts the current HP of each enemy by 5%",
         specialName: "Light Break",
         cooldown: [ 25, 10 ],
         evolution: 700,
         evolvers: [ 116, 99, 304 ]
     },
-    696: { // Halberd Major Navy Headquarters
+    696: { // Halberd Major Navy HQ
         special: "Changes [PSY] orbs into [DEX] orbs",
         specialName: "[PSY] Slot Change [DEX]",
         captain: "Boosts ATK of Striker characters by 1.75x",
         cooldown: [ 15, 7 ]
     },
-    697: { // Pistol Major Navy Headquarters
+    697: { // Pistol Major Navy HQ
         special: "Changes [PSY] orbs into [QCK] orbs",
         specialName: "[PSY] Slot Change [QCK]",
         captain: "Boosts ATK of Shooter characters by 1.75x",
         cooldown: [ 15, 7 ]
     },
-    698: { // Saber Major Navy Headquarters
+    698: { // Saber Major Navy HQ
         special: "Changes [DEX] orbs into [PSY] orbs",
         specialName: "[DEX] Slot Change [PSY]",
         captain: "Boosts ATK of Slasher characters by 1.75x",
         cooldown: [ 15, 7 ]
     },
-    699: { // Bazooka Major Navy Headquarters
+    699: { // Bazooka Major Navy HQ
         special: "Deals 13x character's ATK in character's type damage to all enemies",
         specialName: "Hyper Burst",
         captain: "Boosts ATK of Shooter characters by 500 units, reduces damage received by 10%",
         cooldown: [ 35, 18 ]
     },
-    700: { // Knuckle Major Navy Headquarters
+    700: { // Knuckle Major Navy HQ
         special: "Cuts the current HP of each enemy by 5%",
         specialName: "Light Break",
         captain: "Boosts ATK of Fighter characters by 1.75x",
@@ -5014,7 +5014,7 @@ window.details = {
         evolution: 724,
         evolvers: [ 117, 92, 98, 98, 103 ]
     },
-    724: { // Ship Cutter T-Bone, Navy Headquarters Captain
+    724: { // Ship Cutter T-Bone, Navy HQ Captain
         special: "Reduces crew's current HP by 80%, deals 5x the amount of HP subtracted in typeless damage to all enemies, reduces damage received by 90% for 1 turn",
         specialName: "Right Angle Flying Bird: Bone Phoenix",
         captain: "Boosts ATK of Slasher characters by 1.75x, recovers 1.5x character's RCV in HP at the end of each turn",
@@ -5359,19 +5359,19 @@ window.details = {
         cooldown: [ 23, 15 ],
         flags: { global: 1 }
     },
-    770: { // Dalmatian, Navy Headquarters Vice Admiral
+    770: { // Dalmatian, Navy HQ Vice Admiral
         special: "Deals 15x character's ATK in STR damage to one enemy, boosts ATK against delayed enemies by 1.3x for 2 turns",
         specialName: "Shigan: Convergence",
         captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of STR characters by 2x",
         cooldown: [ 23, 13 ]
     },
-    771: { // Momonga, Navy Headquarters Vice Admiral
+    771: { // Momonga, Navy HQ Vice Admiral
         special: "Deals 15x character's ATK in PSY damage to one enemy, boosts ATK of Knowledge characters by 1.75x for 1 turn",
         specialName: "Moonwalk: Air Walking",
         captain: "Boosts ATK of Knowledge characters by 2.5x",
         cooldown: [ 25, 15 ]
     },
-    772: { // Onigumo, Navy Headquarters Vice Admiral
+    772: { // Onigumo, Navy HQ Vice Admiral
         special: "Cuts the current HP of each enemy by 10%, changes [PSY] and [INT] orbs into [DEX] orbs",
         specialName: "Eight-Sword Style: Brave Warrior's Continuous Attack",
         captain: "Boosts ATK of Slasher characters by 2x, reduces damage received from QCK enemies by 20%",
@@ -5390,7 +5390,7 @@ window.details = {
         captain: "Boosts ATK of Freedom characters by 2x",
         cooldown: [ 20, 11 ]
     },
-    775: { // Strawberry, Navy Headquarters Vice Admiral
+    775: { // Strawberry, Navy HQ Vice Admiral
         special: "Deals several times the character's ATK in PSY damage to one enemy",
         specialNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the lower the HP is. The multiplier is calculated as: 125 * ( 1 - (remaining HP) / (total HP) )",
         specialName: "Angry Headbutt",
@@ -5451,7 +5451,7 @@ window.details = {
         evolution: 783,
         evolvers: [ 117, 93, 94, 304, 104 ]
     },
-    783: { // Navy Headquarters Ensign Tashigi, Justice's Flower
+    783: { // Navy HQ Ensign Tashigi, Justice's Flower
         special: "Delays all enemies for 1 turn, recovers a small random amount of HP",
         specialName: "Smile of a Natural Beauty",
         captain: "Boosts ATK of Slasher characters by 2x and their RCV by 1.5x",
@@ -5544,7 +5544,7 @@ window.details = {
         special: "Slightly boosts chances of getting matching orbs for 3 turns, boosts his own ATK by 1.75x for 1 turn",
         specialName: "Peto-Peto Fruit, The Greatest Power",
         captain: "Boosts ATK of Knowledge characters by 2x",
-        cooldown: 22,
+        cooldown: [ 22, 14 ],
         evolution: 797,
         evolvers: [ 117, 82, 88, 99, 104 ]
     },
@@ -5552,23 +5552,23 @@ window.details = {
         special: "Slightly boosts chances of getting matching orbs for 3 turns, boosts his own ATK by 1.75x for 1 turn",
         specialName: "Peto-Peto Fruit, The Greatest Power",
         captain: "Boosts ATK of Knowledge and Tough characters by 2x",
-        cooldown: 22
+        cooldown: [ 22, 14 ]
     },
     798: { // Kung Fu Dugong, Sea Animal Pirates
         special: "Removes poison, following the activation of the special, if every unit scores a Perfect hit, boosts ATK of Fighter characters by 1.75x in the following turn",
         specialName: "Dugong Secret! Fist of the Black Fin",
         captain: "Boosts ATK by 2.5x after scoring 3 Perfects in a row",
-        cooldown: 20
+        cooldown: [ 20, 12 ]
     },
     799: { // Sea Lapin, Sea Animal Pirates
         special: "Randomizes all orbs, recovers 9x character's RCV in HP",
         specialName: "Sea Animal Healing",
-        cooldown: 20
+        cooldown: [ 20, 12 ]
     },
     800: { // Octopus Boxer, Sea Animal Pirates
         special: "Randomly changes all orbs into either [STR], [DEX] or [QCK] orbs",
         specialName: "Octopus Tentacle Blow",
-        cooldown: 27
+        cooldown: [ 27, 12 ]
     },
     801: { // Mr. 2 Bon Clay Voyage Log: B.W. (Log Bon Clay)
         special: "Randomly changes [STR], [QCK], [DEX], [INT], bomb and hindrance orbs into either [STR], [QCK], [DEX], [PSY] or [INT] orbs, changes [TND] and [RCV] into [PSY] orbs",
@@ -5583,5 +5583,33 @@ window.details = {
         specialName: "Clone-Clone Montage",
         captain: "Boosts ATK of PSY characters by 2.5x",
         cooldown: 15
+    },
+    803: { // Hina, Navy HQ Captain
+        special: "Deals 8 hits of random DEX damage to random enemies, slighly boosts ATK of all characters for 3 turns",
+        specialNotes: "The target of each of the 8 hits is chosen randomly.",
+        specialName: "Black Spear Formation: All-Out Attack!",
+        captain: "Boosts ATK and RCV of DEX characters by 1.2x",
+        cooldown: 27
+    },
+    804: { // N/A
+        special: "Deals 8 hits of random DEX damage to random enemies, slighly boosts ATK of all characters for 3 turns",
+        specialNotes: "The target of each of the 8 hits is chosen randomly.",
+        specialName: "Black Spear Formation: All-Out Attack!",
+        captain: "?",
+        cooldown: 27
+    },
+    805: { // N/A
+        special: "Reduces crew's current HP by 20%, deals 10x the amount of HP subtracted in INT damage to one enemy, amplifies the effect of orbs by 1.75x for 1 turn",
+        specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.75x more damage and opposite orbs will deal 1.75x less damage",
+        specialName: "White Vine",
+        captain: "?",
+        cooldown: 27
+    },
+    806: { // Smoker the White Hunter, Navy HQ Captain
+        special: "Reduces crew's current HP by 20%, deals 10x the amount of HP subtracted in INT damage to one enemy, amplifies the effect of orbs by 1.75x for 1 turn",
+        specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.75x more damage and opposite orbs will deal 1.75x less damage",
+        specialName: "White Vine",
+        captain: "Boosts ATK of Striker characters by 2x, reduces damage received by 30% if HP is low",
+        cooldown: 27
     }
 };
