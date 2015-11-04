@@ -5589,7 +5589,7 @@ window.details = {
         specialNotes: "The target of each of the 8 hits is chosen randomly.",
         specialName: "Black Spear Formation: All-Out Attack!",
         captain: "Boosts ATK and RCV of DEX characters by 1.2x",
-        cooldown: 27,
+        cooldown: [ 27, 17 ],
         evolution: 804,
         evolvers: [ 117, 80, 86, 302, 102 ]
     },
@@ -5598,14 +5598,14 @@ window.details = {
         specialNotes: "The target of each of the 8 hits is chosen randomly.",
         specialName: "Black Spear Formation: All-Out Attack!",
         captain: "Boosts ATK and RCV of DEX characters by 1.5x, deals 1x character's ATK in DEX damage to all enemies at the end of each turn",
-        cooldown: 27
+        cooldown: [ 27, 17 ]
     },
     805: { // Smoker, Navy HQ Captain
         special: "Reduces crew's current HP by 20%, deals 10x the amount of HP subtracted in INT damage to one enemy, amplifies the effect of orbs by 1.75x for 1 turn",
         specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.75x more damage and opposite orbs will deal 1.75x less damage",
         specialName: "White Vine",
         captain: "Boosts ATK of Striker characters by 2x",
-        cooldown: 27,
+        cooldown: [ 27, 15 ],
         evolution: 806,
         evolvers: [ 118, 83, 88, 99, 304 ]
     },
@@ -5614,6 +5614,6 @@ window.details = {
         specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.75x more damage and opposite orbs will deal 1.75x less damage",
         specialName: "White Vine",
         captain: "Boosts ATK of Striker characters by 2x, reduces damage received by 30% if HP is low",
-        cooldown: 27
+        cooldown: [ 27, 15 ]
     }
 };
