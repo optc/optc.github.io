@@ -608,12 +608,12 @@ window.specials = {
         atk: function(p) { return p.unit.type == "PSY" ? 1.75 : 1; },
         type: 'type'
     },
-    770: { // Dalmatian, Navy Headquarters Vice Admiral
+    770: { // Dalmatian, Navy HQ Vice Admiral
         atk: function(p) { return 1.3; },
         type: 'condition',
         warning: 'Selected special (Dalmatian, Navy Headquarters Vice Admiral) assumes that the enemy has been delayed.'
     },
-    771: { // Momonga, Navy Headquarters Vice Admiral
+    771: { // Momonga, Navy HQ Vice Admiral
         atk: function(p) { return p.unit.class.has("Knowledge") ? 1.75 : 1; },
         type: 'type'
     },
@@ -673,18 +673,18 @@ window.specials = {
         atk: function(p) { return p.unit.class.has("Fighter") ? 1.75 : 1; },
         type: 'class'
     },
-    //803: {
+ // Hina, Navy HQ Captain
         //atk: function(p) { },
         //type: 'type'
     //},
-    //804: {
+ // Black Cage Hina, Navy HQ Captain
         //atk: function(p) { },
         //type: 'type'
     //},
-    805: {
+    805: { // Smoker, Navy HQ Captain
         orb: function(p) { return p.orb == 2.0 ? 1.75 : (p.orb == 0.5 ? 4/7 : 1); },
     },
-    806: {
+    806: { // Smoker the White Hunter, Navy HQ Captain
         orb: function(p) { return p.orb == 2.0 ? 1.75 : (p.orb == 0.5 ? 4/7 : 1); },
     }
 };

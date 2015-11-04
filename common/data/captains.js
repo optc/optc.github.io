@@ -1363,19 +1363,19 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; },
         rcv: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; }
     },
-    696: { // Halberd Major Navy Headquarters
+    696: { // Halberd Major Navy HQ
         atk: function(p) { return p.unit.class.has("Striker") ? 1.75 : 1; }
     },
-    697: { // Pistol Major Navy Headquarters
+    697: { // Pistol Major Navy HQ
         atk: function(p) { return p.unit.class.has("Shooter") ? 1.75 : 1; }
     },
-    698: { // Saber Major Navy Headquarters
+    698: { // Saber Major Navy HQ
         atk: function(p) { return p.unit.class.has("Slasher") ? 1.75 : 1; }
     },
-    699: { // Bazooka Major Navy Headquarters
+    699: { // Bazooka Major Navy HQ
         atkStatic: function(p) { return p.unit.class.has("Shooter") ? 500 : 0; }
     },
-    700: { // Knuckle Major Navy Headquarters
+    700: { // Knuckle Major Navy HQ
         atk: function(p) { return p.unit.class.has("Fighter") ? 1.75 : 1; }
     },
     701: { // Oimo
@@ -1454,7 +1454,7 @@ window.captains = {
     723: { // T-Bone
         atk: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; }
     },
-    724: { // Ship Cutter T-Bone, Navy Headquarters Captain
+    724: { // Ship Cutter T-Bone, Navy HQ Captain
         atk: function(p) { return p.unit.class.has("Slasher") ? 1.75 : 1; }
     },
     727: { // Monkey D. Luffy Gum-Gum Gatling
@@ -1586,19 +1586,19 @@ window.captains = {
         atk: function(p) { return p.unit.type == "INT" ? 1.5 : 1; },
         rcv: function(p) { return p.unit.type == "INT" ? 1.5 : 1; }
     },
-    770: { // Dalmatian, Navy Headquarters Vice Admiral
+    770: { // Dalmatian, Navy HQ Vice Admiral
         atk: function(p) { return p.unit.type == "STR" ? 2 : 1; }
     },
-    771: { // Momonga, Navy Headquarters Vice Admiral
+    771: { // Momonga, Navy HQ Vice Admiral
         atk: function(p) { return p.unit.class.has("Knowledge") ? 2.5 : 1; }
     },
-    772: { // Onigumo, Navy Headquarters Vice Admiral
+    772: { // Onigumo, Navy HQ Vice Admiral
         atk: function(p) { return p.unit.class.has("Slasher") ? 2 : 1; }
     },
     774: { // Very Good
         atk: function(p) { return p.unit.class.has("Freedom") ? 2 : 1; }
     },
-    775: { // Strawberry, Navy Headquarters Vice Admiral
+    775: { // Strawberry, Navy HQ Vice Admiral
         atk: function(p) { return p.unit.class.has("Knowledge") ? 1.5 : 1; },
         hp: function(p) { return p.unit.class.has("Knowledge") ? 1.5 : 1; }
     },
@@ -1619,7 +1619,7 @@ window.captains = {
     782: { // Tashigi, Justice's Flower
         rcv: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; }
     },
-    783: { // Navy Headquarters Ensign Tashigi, Justice's Flower
+    783: { // Navy HQ Ensign Tashigi, Justice's Flower
         atk: function(p) { return p.unit.class.has("Slasher") ? 2 : 1; },
         rcv: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; }
     },
@@ -1659,14 +1659,14 @@ window.captains = {
     802: { // Mr. 2 Bon Clay Voyage Dream: Okama Way (Log Bon Clay)
         atk: function(p) { return p.unit.type == "PSY" ? 2.5 : 1; }
     },
-    803: {
+    803: { // Hina, Navy HQ Captain
         atk: function(p) { return p.unit.type == "DEX" ? 1.5 : 1; },
         rcv: function(p) { return p.unit.type == "DEX" ? 1.5 : 1; }
     },
-    805: {
+    805: { // Smoker, Navy HQ Captain
         atk: function(p) { return p.unit.class.has("Striker") ? 2 : 1; }
     },
-    806: {
+    806: { // Smoker the White Hunter, Navy HQ Captain
         atk: function(p) { return p.unit.class.has("Striker") ? 2 : 1; }
     }
 };

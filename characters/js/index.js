@@ -15,7 +15,7 @@ app
             if (ga) ga('send', 'pageview', '/characters');
             var title = 'One Piece Treasure Cruise Character Table';
             if ($state.current.name == 'main.view')
-                title = window.units[parseInt($stateParams.id,10) - 1].name + ' | ' + title;
+                title = (window.units[parseInt($stateParams.id,10) - 1].name || '?') + ' | ' + title;
             window.document.title = title;
         });
     });
