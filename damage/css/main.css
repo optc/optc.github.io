@@ -117,7 +117,7 @@ body, html {
     transform: translate(-50%, -50%);
 }
 
-.unitContainer, .ghostContainer {
+.unitContainer, .unitContainer + .ghostContainer {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -201,6 +201,10 @@ body, html {
     opacity: 0.5;
 }
 
+.ghosted .unitContainer {
+    display: none;
+}
+
 .unitChain {
     width: 100%;
     height: 100%;
@@ -228,7 +232,7 @@ body, html {
     display: block;
 }
 
-#removeSlot {
+#removeZone {
     line-height: 150%;
 }
 

@@ -3,9 +3,9 @@
         <div id="content">
 
             <div id="columns" regulate-height>
-                <div class="column" ng-repeat="unitNumber in range(0,6)" dropzone attach-picker>
+                <div class="column" ng-repeat="unitNumber in range(0,6)" dropzone="slot" attach-picker>
 
-                    <div class="unitContainer" draggable>
+                    <div class="unitContainer" draggable="slot" removable>
 
                         <div class="unit" decorate-slot uid="team[unitNumber].uid"
                             ng-class="{ empty: !team[unitNumber] || !team[unitNumber].uid }"></div>
@@ -43,4 +43,4 @@
     </div>
 </div>
 
-<div class="unit empty fa fa-trash-o" id="removeSlot" style="display: none" dropzone></div>
+<div class="unit empty fa fa-trash-o" id="removeZone" style="display: none" dropzone></div>

@@ -41,6 +41,8 @@ var SharedRootCtrl = function($scope) {
         ],
 
         customHitModifiers: null,
+        
+        orderOverride: { },
 
         url: null,
 
@@ -71,12 +73,13 @@ var SharedRootCtrl = function($scope) {
 
     /* * * * * Custom hit modifiers resetting * * * * */
 
-    var resetHits = function() {
+    var resetTransitional = function() {
         $scope.tdata.customHitModifiers = null;
+        $scope.tdata.orderOverride = { };
     };
 
-    $scope.$watch('data.team', resetHits, true);
-    $scope.$watch('tdata.team', resetHits, true);
+    $scope.$watch('data.team', resetTransitional, true);
+    $scope.$watch('tdata.team', resetTransitional, true);
 
 };
 

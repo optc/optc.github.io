@@ -1,4 +1,4 @@
-#removeSlot {
+#removeZone {
     position: fixed;
     right: 5px;
     top: 5px;
@@ -12,3 +12,4 @@
 .unitPortrait.gray {
     filter: grayscale(100%);
     -webkit-filter: grayscale(100%);
+}

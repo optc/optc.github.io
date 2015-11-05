@@ -28,6 +28,18 @@ controllers.MainCtrl = function($scope, $rootScope, $state, $stateParams, $contr
         return units[uid - 1].slots;
     };
 
+    $scope.onDrop = function(i,j) {
+        var temp = $rootScope.team[i];
+        $rootScope.team[i] = $rootScope.team[j];
+        $rootScope.team[j] = temp;
+        if (!$rootScope.$$phase) $rootScope.$apply();
+    };
+
+    $scope.onRemove = function(i) {
+        $rootScope.team[i] = null;
+        if (!$rootScope.$$phase) $rootScope.$apply();
+    };
+
     $controller('StorageCtrl', { $scope: $scope });
 
 };

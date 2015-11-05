@@ -126,14 +126,18 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         // compute base damage
         var damage = getBaseDamageForType(type,false);
         // compute best overall damage
-        var overallDamage = optimizeDamage(damage,false);
+        var noSorting = $scope.tdata.orderOverride.hasOwnProperty(type);
+        var overallDamage = optimizeDamage(damage,noSorting);
         // apply damage sorters to base damage, recalculate the new damage and update overallDamage if necessary
-        for (var i=0;i<cptsWith.damageSorters.length;++i) {
-            var baseDamage = $.extend([ ], damage);
-            var newDamage = cptsWith.damageSorters[i].damageSorter(baseDamage);
-            if (newDamage === null) continue;
-            var newOverallDamage = optimizeDamage(newDamage,true);
-            if (newOverallDamage.overall > overallDamage.overall) overallDamage = newOverallDamage;
+        // only done if the user hasn't already specified a custom order of their own
+        if (!noSorting) {
+            for (var i=0;i<cptsWith.damageSorters.length;++i) {
+                var baseDamage = $.extend([ ], damage);
+                var newDamage = cptsWith.damageSorters[i].damageSorter(baseDamage);
+                if (newDamage === null) continue;
+                var newOverallDamage = optimizeDamage(newDamage,true);
+                if (newOverallDamage.overall > overallDamage.overall) overallDamage = newOverallDamage;
+            }
         }
         // return results
         return overallDamage;
@@ -170,8 +174,16 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if (enabledEffects[i].hasOwnProperty('atk'))
                 result = applyCaptainEffectsToDamage(result,enabledEffects[i].atk);
         }
-        // sort from weakest to stongest
-        result.sort(function(x,y) { return x.damage - y.damage; });
+        // if the user has specified a custom order, sort by that
+        if ($scope.tdata.orderOverride.hasOwnProperty(type)) {
+            var order = $scope.tdata.orderOverride[type];
+            result = order.map(function(x) {
+                return result.filter(function(y) {
+                    return y.position == x;
+                })[0];
+            });
+        } else // otherwise, sort from weakest to stongest
+            result.sort(function(x,y) { return x.damage - y.damage; });
         return result;
     };
 

@@ -339,20 +339,6 @@ directives.addLinks = function($stateParams) {
     };
 };
 
-directives.linkButton = function() {
-    return {
-        restrict: 'E',
-        replace: true,
-        templateUrl: '../common/links.html',
-        scope: { exclude: '@' },
-        link: function(scope, element, attrs) {
-            element.find(".trigger").click(function() {
-                $(".menu").toggleClass("active"); 
-            });
-        }
-    };
-};
-
 /***********
  * Filters *
  ***********/

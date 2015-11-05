@@ -51,20 +51,6 @@ directives.slotWheel = function() {
     };
 };
 
-directives.linkButton = function() {
-    return {
-        restrict: 'E',
-        replace: true,
-        templateUrl: '../common/links.html',
-        scope: { exclude: '@' },
-        link: function(scope, element, attrs) {
-            element.find(".trigger").click(function() {
-                element.toggleClass("active"); 
-            });
-        }
-    };
-};
-
 /************************
  * Attribute directives *
  ************************/

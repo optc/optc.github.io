@@ -50,6 +50,7 @@ directives.expandableDamage = function() {
         link: function(scope, element, attrs) {
             scope.detailsVisible = false;
             var timeout = null;
+            element.attr('type', scope.type);
             element.click(function(e) {
                 if (e.which != 1 || e.ctrlKey || e.metaKey) return;
                 element.toggleClass('details');
@@ -73,15 +74,18 @@ directives.detailPane = function($timeout) {
         templateUrl: 'views/details.html',
         scope: true,
         link: function(scope, element, attrs) {
+
             var modifiers = [ 'Below Good', 'Good', 'Great', 'Perfect', 'Miss' ];
+
             var modifyDamage = function(e) {
-                var container = $(e.target).parent();
-                if (!container.hasClass('turnContainer')) return;
-                var custom = $.extend([ ],scope.numbers[scope.type].hitModifiers), n = container.parent().index();
+                var container = $(e.target).closest('.turnContainer');
+                if (!container.length) return;
+                var custom = $.extend([ ],scope.numbers[scope.type].hitModifiers), n = container.index();
                 custom[n] = modifiers[(modifiers.indexOf(custom[n])+1)%5];
                 scope.tdata.customHitModifiers = custom;
                 if (!scope.$$phase) scope.$apply();
             };
+
             element.longpress(
                 function(e) {
                     modifyDamage(e);
@@ -94,6 +98,21 @@ directives.detailPane = function($timeout) {
                     modifyDamage(e);
                 }
             );
+
+            scope.onDrop = function(i,j) {
+                var type = $('.details').attr('type');
+                if (!scope.tdata.orderOverride.hasOwnProperty(type))
+                    scope.tdata.orderOverride[type] = scope.numbers[type].damage.map(function(x) { return x.position; });
+                var temp = scope.tdata.orderOverride[type][i];
+                scope.tdata.orderOverride[type][i] = scope.tdata.orderOverride[type][j];
+                scope.tdata.orderOverride[type][j] = temp;
+                if (!scope.$$phase) scope.$apply();
+            };
+
+            scope.stopPropagation = function(dropped) {
+                return !dropped;
+            };
+
         }
     };
 };
@@ -262,8 +281,14 @@ directives.cruncher = function() {
 directives.units = function() {
     return {
         restrict: 'E',
-        templateUrl: 'views/units.html',
+        template: '<div id="units"><slot></slot><slot></slot><slot></slot><slot></slot><slot></slot><slot></slot></div>',
         replace: true,
+        scope: true,
+        link: function(scope, element, attrs) {
+            scope.stopPropagation = function(dropped) {
+                return true;
+            };
+        }
     };
 };
 
@@ -275,6 +300,31 @@ directives.slot = function() {
         scope: true,
         link: function(scope, element, attrs) {
             scope.slot = element.index();
+            scope.onDrop = function(i, j) {
+                var temp = scope.data.team[i];
+                scope.data.team[i] = scope.data.team[j];
+                scope.data.team[j] = temp;
+                temp = scope.tdata.team[i];
+                scope.tdata.team[i] = scope.tdata.team[j];
+                scope.tdata.team[j] = temp;
+            };
+            scope.isDraggable = function(e) {
+                return !Utils.isClickOnOrb(e, e.target.parentNode);
+            };
+        }
+    };
+};
+
+directives.removeZone = function() {
+    return {
+        restrict: 'E',
+        template: '<div class="unit empty fa fa-trash-o" id="removeZone" dropzone style="display: none"></div>',
+        scope: true,
+        replace: true,
+        link: function(scope, element, attrs) {
+            scope.onRemove = function(i) {
+                scope.resetSlot(i);
+            };
         }
     };
 };
@@ -623,20 +673,6 @@ directives.urlContainer = function() {
             scope.$watch('tdata.url',function(url) {
                 if (!url) return;
                 input.select();
-            });
-        }
-    };
-};
-
-directives.linkButton = function() {
-    return {
-        restrict: 'E',
-        replace: true,
-        templateUrl: '../common/links.html',
-        scope: { exclude: '@' },
-        link: function(scope, element, attrs) {
-            element.find(".trigger").click(function() {
-                $(".menu").toggleClass("active"); 
             });
         }
     };

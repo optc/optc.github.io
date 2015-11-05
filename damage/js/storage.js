@@ -36,11 +36,11 @@ var save = function(key,object) {
 
 /* * * * * Version control * * * * */
 
-var version = JSON.parse(localStorage.getItem('version')) || 10;
+var version = JSON.parse(localStorage.getItem('version')) || 11;
 
-if (version < 10) {
+if (version < 11) {
     doAlert = true;
-    localStorage.setItem('version', JSON.stringify(10));
+    localStorage.setItem('version', JSON.stringify(11));
 }
 
 /* * * * * Controller * * * * */

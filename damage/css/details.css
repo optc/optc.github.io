@@ -62,6 +62,23 @@ hr {
     width: 100%;
 }
 
-.turnContainer:hover {
+.turnContainer > div:hover {
     background-color: rgba(0,0,0,0.1);
+}
+
+.turnContainer.ghosted > div {
+    visibility: hidden;
+}
+
+.turnContainer {
+    height: 58px;
+    width: 140px;
+}
+
+.turnContainer.ghoster > div:not(.ghostContainer) {
+    position: absolute;
+}
+
+.turnContainer.ghoster.ghost-floating > hr {
+    display: none;
 }
