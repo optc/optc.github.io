@@ -40,11 +40,11 @@ app.controller('SidebarCtrl',function($scope, $rootScope, $stateParams) {
         $scope.table.parameters = CharUtils.generateSearchParameters($stateParams.query, $.extend({ }, $scope.filters));
         // build regexes if necessary
         $scope.table.regexes = { };
-        if (filters.custom[25] && $scope.table.parameters.filters.ctrlFrom) {
+        if (filters.custom[26] && $scope.table.parameters.filters.ctrlFrom) {
             $scope.table.regexes.ctrlFrom = $scope.table.parameters.filters.ctrlFrom.split(',').map(function(x) {
                 return new RegExp('Changes[^,]+\\[' + x + '\\][^,]+into','i');
             });
-        } if (filters.custom[25] && $scope.table.parameters.filters.ctrlTo) {
+        } if (filters.custom[26] && $scope.table.parameters.filters.ctrlTo) {
             $scope.table.regexes.ctrlTo = $scope.table.parameters.filters.ctrlTo.split(',').map(function(x) {
                 return new RegExp('Changes.+into[^,]+\\[' + x + '\\]','i');
             });

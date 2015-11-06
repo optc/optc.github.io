@@ -144,6 +144,12 @@ window.matchers = [
     },
 
     {
+        name: 'Conditional ATK boosters',
+        target: 'special',
+        matcher: /Boosts ATK.+against.+enemies/i
+    },
+
+    {
         name: 'Orb lockers',
         target: 'special',
         matcher: /lock.+orbs/i

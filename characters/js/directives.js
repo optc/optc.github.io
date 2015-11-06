@@ -138,7 +138,7 @@ directives.addSpecialOptions = function($timeout, $compile) {
 };
 
 directives.addOrbOptions = function($timeout, $compile) {
-    var TARGET = 25;
+    var TARGET = 26;
     return {
         restrict: 'A',
         link: function(scope,element,attrs) {
