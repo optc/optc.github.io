@@ -203,6 +203,37 @@ span.animated {
     display: inline-block;
 }
 
+.arrow {
+    font-size: 1.5em;
+    bottom: 10px;
+    position: relative;
+    margin: 0 10px 0 10px;
+}
+
+@media (min-width: 1024px) {
+    .arrow {
+        font-size: 2em;
+        bottom: 22px;
+    }
+}
+
+#evolution-table {
+    text-align: center;
+}
+
+#evolution-table td {
+    padding-top: 12px;
+    cursor: pointer;
+}
+
+#evolution-table td:hover {
+    background: #ddd;
+}
+
+#evolution-table .slot:hover {
+    outline: none;
+}
+
 /******************
  * MOBILE SUPPORT *
  ******************/

@@ -1,0 +1,25 @@
+<div class="backdrop" ui-sref="^"></div>
+
+<div class="custom-modal">
+    <div id="picker" class="modal-dialog">
+        <div class="modal-content animated fadeInDown">
+            <div class="modal-header">Pick the Evolution</div>
+            <div class="modal-body">
+
+                <table class="table table-striped" id="evolution-table">
+                    <tbody>
+                        <tr ng-repeat="option in data">
+                            <td><evolution from="option.from" ng-click="pick(option)"
+                                to="option.to" evolvers="option.evolvers"></evolution></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-default" ui-sref="^">Cancel</button> 
+            </div>
+        </div>
+    </div>
+
+</div>

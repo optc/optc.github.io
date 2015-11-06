@@ -3,15 +3,30 @@
 var app = angular.module('optc', [ 'ui.router', 'ui.bootstrap' ]);
 
 var findEvolvers = function(id) {
+    var result = [ ];
     for (var key in details) {
         if (!details[key] || !details[key].evolvers) continue;
-        if (details[key].evolution == id) return details[key].evolvers;
+        if (details[key].evolution == id) 
+            result.push({ from: parseInt(key,10), to: id, evolvers: details[key].evolvers });
         if (details[key].evolution.constructor == Array) {
-            var n = details[key].evolution.indexOf(id);
-            if (n != -1) return details[key].evolvers[n];
+            for (var i=0;i<details[key].evolution.length;++i) {
+                if (details[key].evolution[i] != id) continue;
+                result.push({ from: parseInt(key,10), to: id, evolvers: details[key].evolvers[i]});
+            }
         }
     }
-    return null;
+    return result;
+};
+
+var updateStorageFormat = function(data) {
+    if (data && data.length > 0 && data[0].id) {
+        data = data.map(function(x) {
+            var temp = findEvolvers(x.id);
+            return (temp.length === 0 ? null : temp[0]);
+        });
+        data = data.filter(function(x) { return x !== null; });
+    }
+    return data;
 };
 
 /***********************
@@ -41,6 +56,16 @@ app.config(function($stateProvider, $urlRouterProvider) {
             },
         })
 
+        .state('main.pickEvolution',{
+            params: { data: null },
+            views: {
+                'popup@': {
+                    templateUrl: 'views/pick-evolution.html',
+                    controller: 'EvolutionPickerCtrl',
+                }
+            },
+        })
+
         .state('main.pickMat',{
             url: 'mats',
             params: { mats: true },
@@ -62,8 +87,14 @@ app.controller('MainCtrl',function($scope, $rootScope, $timeout) {
 
     var onPoolChange = function(pool) {
         var temp = JSON.parse(JSON.stringify(pool));
-        temp = temp.map(function(x) { return { id: x.id }; });
-        temp.sort(function(a,b) { return a.id - b.id; });
+        temp = temp.map(function(x) {
+            for (var key in x) {
+                if (key[0] == '$')
+                    delete x[key];
+            }
+            return x;
+        });
+        temp.sort(function(a,b) { return a.to - b.to; });
         localStorage.setItem('evoPool',JSON.stringify(temp));
         updateRequired();
     };
@@ -94,11 +125,9 @@ app.controller('MainCtrl',function($scope, $rootScope, $timeout) {
         // get evolvers
         var temp = { };
         $rootScope.pool.forEach(function(unit) {
-            var evolvers = findEvolvers(unit.id);
-            if (evolvers === null) return;
-            evolvers.forEach(function(x) {
+            unit.evolvers.forEach(function(x) {
                 var key = ('000' + x).slice(-4);
-                temp[key] = (temp[key] || [ ]).concat(unit.id);
+                temp[key] = (temp[key] || [ ]).concat(unit.to);
             });
         });
         // material map
@@ -136,7 +165,8 @@ app.controller('MainCtrl',function($scope, $rootScope, $timeout) {
     };
 
     if (!$rootScope.pool) {
-        $rootScope.pool = JSON.parse(localStorage.getItem('evoPool')) || [ ];
+        var temp = JSON.parse(localStorage.getItem('evoPool')) || [ ];
+        $rootScope.pool = updateStorageFormat(temp);
         $rootScope.$watch('pool',onPoolChange,true);
     }
 
@@ -176,9 +206,15 @@ app.controller('PickerCtrl',function($scope, $rootScope, $state, $stateParams, $
     /* * * * * Scope functions * * * * */
 
     $scope.pickUnit = function(unitNumber) {
-        if (!$stateParams.mats)
-            $rootScope.pool.push({ id: unitNumber + 1 });
-        else {
+        if (!$stateParams.mats) {
+            var evolvers = findEvolvers(unitNumber + 1);
+            if (evolvers.length == 1)
+                $rootScope.pool.push(evolvers[0]);
+            else {
+                $state.go('main.pickEvolution', { data: evolvers });
+                return;
+            }
+        } else {
             var i;
             for (i=0;i<$rootScope.mats.length && $rootScope.mats[i].id != unitNumber + 1;++i);
             if (i == $rootScope.mats.length) $rootScope.mats.push({ id: unitNumber + 1, amount: 1 });
@@ -203,6 +239,14 @@ app.controller('PickerCtrl',function($scope, $rootScope, $state, $stateParams, $
         $scope.units = result;
     };
 
+});
+
+app.controller('EvolutionPickerCtrl',function($scope, $rootScope, $state, $stateParams) {
+    $scope.data = $stateParams.data;
+    $scope.pick = function(data) {
+        $rootScope.pool.push(data);
+        $state.go('^');
+    };
 });
 
 /**************
@@ -317,6 +361,17 @@ app.directive('collapse',function() {
     };
 });
 
+app.directive('evolution',function($state, $stateParams) {
+    return {
+        restrict: 'E',
+        replace: true,
+        scope: { from: '=', to: '=', evolvers: '=' },
+        templateUrl: 'views/evolution.html',
+        link: function(scope, element, attrs) { }
+    };
+});
+
+
 app.directive('importButton',function() {
     return {
         restrict: 'E',
@@ -329,6 +384,7 @@ app.directive('importButton',function() {
                 reader.onload = function(e) {
                     var data = JSON.parse(this.result);
                     if (!data.evoPool || !data.matPool) throw '';
+                    data.evoPool = updateStorageFormat(data.evoPool);
                     scope.pool.splice(0, scope.pool.length);
                     scope.mats.splice(0, scope.mats.length);
                     scope.pool = $.extend(scope.pool, data.evoPool);
