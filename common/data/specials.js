@@ -274,10 +274,10 @@ window.specials = {
     530: { // Shanks, The Black-Clothed Yonkou (Strong World Shanks)
         def: function(p) { return 0; }
     },
-    533: { // Brook Cherry Head
+    533: { // Brook Cherry Blossom Hair
         orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); }
     },
-    534: { // Brook Sakura Color
+    534: { // Brook Cherry Blossom Melody
         orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); }
     },
     542: { // Nola the Giant Snake

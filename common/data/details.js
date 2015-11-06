@@ -2891,9 +2891,9 @@ window.details = {
         captain: "Prevents death as long as HP is above 70%",
         cooldown: [ 24, 15 ]
     },
-    425: { // Ryuuma
+    425: { // Ryuma
         special: "Deals random PSY damage to all enemies",
-        specialName: "Shusui Three-Verse Humming: Arrow-Notch Slash",
+        specialName: "Shusui: Three Verse Arrow Notch Slash",
         captain: "Boosts ATK and HP of Slasher characters by 1.5x",
         cooldown: [ 35, 18 ]
     },
@@ -3673,7 +3673,7 @@ window.details = {
         cooldown: [ 25, 20 ],
         flags: { rr: 1 }
     },
-    531: { // Nico Robin Sakura Snow Storm
+    531: { // Nico Robin Cherry Blossom Blizzard
         special: "Reduces damage received by 30% for 4 turns",
         specialName: "Veinte Fleur - Calendula Sakura",
         captain: "Reduces damage received from STR, DEX and QCK enemies by 30%",
@@ -3682,14 +3682,14 @@ window.details = {
         evolvers: [ 117, 80, 86, 91, 97 ],
         flags: { promo: 1 }
     },
-    532: { // Nico Robin Sakura Full Bloom
+    532: { // Nico Robin Cherry Blossoms in Full Bloom
         special: "Reduces damage received by 30% for 4 turns",
         specialName: "Veinte Fleur - Calendula Sakura",
         captain: "Reduces damage received from STR, DEX and QCK enemies by 30%",
         cooldown: [ 16, 16 ],
         flags: { promo: 1 }
     },
-    533: { // Brook Cherry Head
+    533: { // Brook Cherry Blossom Hair
         special: "Amplifies the effect of orbs by 1.5x for 1 turn, deals 20x character's ATK in QCK damage to one enemy",
         specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.5x more damage and opposite orbs will deal 1.5x less damage",
         specialName: "Swallow Bond en Avant Sakura",
@@ -3699,7 +3699,7 @@ window.details = {
         evolvers: [ 118, 79, 85, 96, 101 ],
         flags: { rr: 1, lrr: 1 }
     },
-    534: { // Brook Sakura Color
+    534: { // Brook Cherry Blossom Melody
         special: "Amplifies the effect of orbs by 1.5x for 1 turn, deals 20x character's ATK in QCK damage to one enemy",
         specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.5x more damage and opposite orbs will deal 1.5x less damage",
         specialName: "Swallow Bond en Avant Sakura",
@@ -3707,7 +3707,7 @@ window.details = {
         cooldown: [ 18, 18 ],
         flags: { rr: 1, lrr: 1 }
     },
-    535: { // Nami Sakura Cloud
+    535: { // Nami Blossom Cloud
         special: "Reduces damage received by 50% for 2 turns, boosts RCV of all characters by 2x for 2 turns",
         specialName: "Mirage Tempo - Fata Morgana Sakura",
         captain: "Boosts RCV of QCK characters by 1.5x",
@@ -3716,7 +3716,7 @@ window.details = {
         evolvers: [ 118, 80, 86, 91, 97 ],
         flags: { rr: 1, lrr: 1 }
     },
-    536: { // Nami Sakura Weather
+    536: { // Nami Blossom Climate
         special: "Reduces damage received by 50% for 2 turns, boosts RCV of all characters by 2x for 2 turns",
         specialName: "Mirage Tempo - Fata Morgana Sakura",
         captain: "Boosts RCV of QCK characters by 2x",

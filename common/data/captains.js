@@ -655,7 +655,7 @@ window.captains = {
     424: { // Humming Brook
         atk: function(p) { return p.unit.type == "QCK" ? 1.5 : 1; }
     },
-    425: { // Ryuuma
+    425: { // Ryuma
         atk: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; },
         hp: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; }
     },
@@ -937,16 +937,16 @@ window.captains = {
     530: { // Shanks, The Black-Clothed Yonkou (Strong World Shanks)
         atk: function(p) { return p.unit.type == "PSY" ? 2 + 0.75 * p.percHP / 100 : 1; }
     },
-    533: { // Brook Cherry Head
+    533: { // Brook Cherry Blossom Hair
         atk: function(p) { return p.unit.type == "QCK" ? 2 : 1; }
     },
-    534: { // Brook Sakura Color
+    534: { // Brook Cherry Blossom Melody
         atk: function(p) { return p.unit.type == "QCK" ? 2 : 1; }
     },
-    535: { // Nami Sakura Cloud
+    535: { // Nami Blossom Cloud
         atk: function(p) { return p.unit.type == "DEX" ? 1.5 : 1; }
     },
-    536: { // Nami Sakura Weather
+    536: { // Nami Blossom Climate
         atk: function(p) { return p.unit.type == "DEX" ? 2 : 1; }
     },
     537: { // Domino
