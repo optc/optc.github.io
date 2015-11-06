@@ -42,6 +42,10 @@ body, html {
     margin: 30px auto 0 auto;
 }
 
+#hp-cell {
+    cursor: pointer;
+}
+
 #turns + #hp {
     margin-top: 15px;
 }

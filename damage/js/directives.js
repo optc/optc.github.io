@@ -335,31 +335,59 @@ directives.hpBar = function() {
         replace: true,
         template: '<div id="hp"><div id="hpSlider"></div>' + 
             '<div id="hp-rcv"><table><tbody>' +
-                '<tr><td>{{ hp.current | number }}</td><td>HP ({{ hp.perc | number }}%)</td></tr>' +
+                '<tr><td id="hp-cell" ng-click="setHP()">{{ hp.current | number }}</td><td>HP ({{ hp.perc | number:2 }}%)</td></tr>' +
                 '<tr><td>{{ numbers.rcv | number }}</td><td>RCV</td></tr>' +
                 '<tr title="Minimum pirate level: {{ numbers.cost.level }}"><td>{{ numbers.cost.cost | number }}</td><td>cost</td></tr>' +
             '</tbody></table></div>',
         link: function(scope, element, attrs) {
-            scope.hp = { current: Math.max(1,Math.floor(scope.numbers.hp * scope.data.percHP / 100)), perc: scope.data.percHP };
-            var slider = element.find('#hpSlider').noUiSlider({
+
+            scope.hp = {
+                current: Math.max(1, Math.round(scope.numbers.hp * scope.data.percHP / 100)),
+                perc: scope.data.percHP
+            };
+
+            var slider = element.find('#hpSlider')[0];
+            var sliderSettings = {
+                animate: false,
                 start: [ scope.hp.current ],
                 range: { min: [ 1 ], max: [ scope.numbers.hp || 1 ] },
                 connect: 'lower'
-            });
-            var update = function(event,value) {
-                scope.hp.current = Math.max(1, Math.floor(value));
-                scope.hp.perc = Math.round(scope.hp.current / scope.numbers.hp * 10000) / 100;
-                currentHP = scope.hp.current;
-                if (event === null) slider.val(value);
-                else if (event.type == 'change') scope.data.percHP = scope.hp.perc;
-                if (event && !scope.$$phase) scope.$apply();
             };
-            slider.on({ change: update, slide: update });
+
+            var update = function(event,value) {
+                scope.hp.current = Math.max(1, Math.round(value));
+                scope.hp.perc = (scope.hp.current / scope.numbers.hp * 100);
+                currentHP = scope.hp.current;
+                if (event === 'set' || event == 'manual')
+                    slider.noUiSlider.set(value);
+                if (event == 'change' || event == 'manual')
+                    scope.data.percHP = scope.hp.perc;
+                if (event !== 'set' && !scope.$$phase)
+                    scope.$apply();
+            };
+
+            var createSlider = function() {
+                if (slider.noUiSlider) slider.noUiSlider.destroy();
+                noUiSlider.create(slider, sliderSettings);
+                slider.noUiSlider.on('change', function(_,__,value) { update('change', value); });
+                slider.noUiSlider.on('slide', function(_,__,value) { update('slide', value); });
+            };
+
+            createSlider();
+
             scope.$watch('numbers.hp',function(hp) {
-                slider.noUiSlider({ range: { min: [ 1 ], max: [ hp || 1 ] } },true);
-                var newHP = Math.floor(scope.data.percHP * hp / 100);
-                update(null,newHP);
+                sliderSettings.range.min = [ 1 ];
+                sliderSettings.range.max = [ hp || 1 ];
+                createSlider();
+                update('set', Math.round(scope.data.percHP * hp / 100));
             },true);
+
+            scope.setHP = function() {
+                var hp = parseInt(prompt('Set HP to:', scope.hp.current), 10);
+                if (isNaN(hp)) return;
+                update('manual', Math.min(scope.numbers.hp, Math.max(1, hp)));
+            };
+
         }
     };
 };
@@ -371,19 +399,32 @@ directives.turnCounter = function() {
         template: '<div id="turns"><div id="turnSlider"></div>' +
             '<div id="turnLabel">{{currentTurns}} {{currentTurns == 1 ? "turn" : "turns"}} elapsed</div></div>',
         link: function(scope, element, attrs) {
+
             scope.currentTurns = 0;
-            var slider = element.find('#turnSlider').noUiSlider({
+
+            var slider = element.find('#turnSlider')[0];
+            var sliderSettings = {
                 start: [ scope.currentTurns ],
                 range: { min: [ 0 ], max: [ 25 ] },
                 step: 1,
                 connect: 'lower'
-            });
+            };
+            
+            var createSlider = function() {
+                if (slider.noUiSlider) slider.noUiSlider.destroy();
+                noUiSlider.create(slider, sliderSettings);
+                slider.noUiSlider.on('change', function(_,__,value) { update('change', value); });
+                slider.noUiSlider.on('slide', function(_,__,value) { update('slide', value); });
+            };
+
             var update = function(event,value) {
                 scope.currentTurns = parseInt(value, 10);
-                if (event.type == 'change') scope.tdata.turnCounter.value = scope.currentTurns;
-                if (event && !scope.$$phase) scope.$apply();
+                if (event == 'change') scope.tdata.turnCounter.value = scope.currentTurns;
+                scope.$apply();
             };
-            slider.on({ change: update, slide: update });
+
+            createSlider();
+
         }
     };
 };
