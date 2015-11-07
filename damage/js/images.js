@@ -27,15 +27,18 @@ app.controller('ImageGeneratorCtrl', function($scope, $filter, $timeout) {
         });
         // indicators
         if ($scope.numbers.cost) {
-            var baseX = 203, baseY = 360;
-            fill(context, 'white', baseX, baseY + 20, 300, 300);
+            var baseX = 10, baseY = 30;
+            fill(context, 'white', baseX, baseY - 15, 160, 66);
             var currentHP = $filter('number')(Math.round($scope.numbers.hp * $scope.data.percHP / 100));
             var percHP = $filter('number')(Math.round($scope.data.percHP * 100) / 100);
             var rcv = $filter('number')($scope.numbers.rcv);
             var cost = $filter('number')($scope.numbers.cost.cost);
-            type(context, { text: currentHP + ' HP (' + percHP + '%)', x: baseX + 188, y: baseY + 35, align: 'center' });
-            type(context, { text: rcv + ' RCV', x: baseX + 188, y: baseY + 55, align: 'center' });
-            type(context, { text: cost + ' cost', x: baseX + 188, y: baseY + 75, align: 'center' });
+            awesome(context, { text: 'f21e', x: baseX + 8, y: baseY, align: 'center' });
+            type(context, { text: currentHP + ' HP (' + percHP + '%)', x: baseX + 25, y: baseY });
+            awesome(context, { text: 'f0f5', x: baseX + 8, y: baseY + 25, align: 'center' });
+            type(context, { text: rcv + ' RCV', x: baseX + 25, y: baseY + 25 });
+            awesome(context, { text: 'f039', x: baseX + 8, y: baseY + 50, align: 'center' });
+            type(context, { text: cost + ' cost', x: baseX + 25, y: baseY + 50 });
         }
     },true);
 
@@ -82,37 +85,31 @@ app.controller('ImageGeneratorCtrl', function($scope, $filter, $timeout) {
         });
     },true);
 
-    // hp bar
-    var baseX = 203, baseY = 360;
-    fill(context, 'black', baseX + 5, baseY, 378, 14);
-    fill(context, 'white', baseX + 6, baseY + 1, 376, 12);
-    fill(context, '#3FB8AF', baseX + 6, baseY + 1, Math.round(376 * $scope.data.percHP / 100), 12);
-
-    baseX = 10; baseY = 10;
+    baseX = 10; baseY = 85;
 
     if ($scope.data.effect) {
         awesome(context, { text: 'f02d', x: baseX + 8, y: baseY + 20, align: 'center' });
         type(context, { text: $scope.data.effect, x: baseX + 25, y: baseY + 20, maxWidth: 155, truncate: true });
-        baseY += 35;
+        baseY += 25;
     }
 
     // ship
     awesome(context, { text: 'f21a', x: baseX + 8, y: baseY + 20, align: 'center' });
     type(context, { text: window.ships[$scope.data.ship[0]].name, x: baseX + 25, y: baseY + 20 });
     type(context, { text: 'Level ' + $scope.data.ship[1], x: baseX + 25, y: baseY + 37 });
-    baseY += 52;
+    baseY += 42;
 
     // defense
     awesome(context, { text: 'f132', x: baseX + 8, y: baseY + 20, align: 'center' });
     type(context, { text: $filter('number')($scope.data.defense) + ' DEF', x: baseX + 25, y: baseY + 20 });
-    baseY += 35;
+    baseY += 25;
 
     // turn counter
     if ($scope.tdata.turnCounter.enabled) {
         awesome(context, { text: 'f162', x: baseX + 8, y: baseY + 20, align: 'center' });
         var turns = $scope.tdata.turnCounter.value;
         type(context, { text: turns + (turns == 1 ? ' turn' : ' turns') + ' elapsed', x: baseX + 25, y: baseY + 20 });
-        baseY += 35;
+        baseY += 25;
     }
 
     // specials
