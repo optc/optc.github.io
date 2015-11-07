@@ -126,6 +126,9 @@ app.controller('ImageGeneratorCtrl', function($scope, $filter, $timeout) {
         type(context, { text: $scope.data.team[i].unit.name,
             x: baseX + 35, y: baseY + 20, maxWidth: 145, truncate: true });
     }
+    if (none) {
+        type(context, { text: 'None', x: baseX + 35, y: baseY + 45, maxWidth: 145, truncate: true });
+    }
 
 
 });
