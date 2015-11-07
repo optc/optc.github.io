@@ -422,8 +422,8 @@ body, html {
 #menu {
     position: fixed;
     top: 0px;
-    left: -16.8em;
-    width: 16.8em;
+    left: -17.9em;
+    width: 17.9em;
     height: 100%;
     transition: left .1s linear;
     margin-bottom: 0;
@@ -514,7 +514,7 @@ li.disabled {
 }
 
 .special > div, #profileContainer {
-    width: 233px;
+    width: 249px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -961,6 +961,18 @@ body > .popover .popover-content {
 
 .cooldown:before {
     content: "Cooldown: ";
+}
+
+/**********
+ * IMAGES *
+ **********/
+
+#canvasContainer {
+    text-align: center;
+}
+
+#canvas {
+    border: 1px solid black;
 }
 
 /******************

@@ -122,6 +122,15 @@ angular.module('optc').config(function($stateProvider, $urlRouterProvider) {
                     controller: 'ImportCtrl'
                 }
             },
+        })
+
+        .state('main.image',{
+            views: {
+                popup: {
+                    templateUrl: 'views/popup/image.html',
+                    controller: 'ImageGeneratorCtrl'
+                }
+            }
         });
 
 });
