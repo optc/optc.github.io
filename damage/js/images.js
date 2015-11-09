@@ -22,7 +22,7 @@ app.controller('ImageGeneratorCtrl', function($scope, $filter, $timeout) {
             context.fillRect(440, 10 + n * 70, 150, 60);
             // text
             var overall = $filter('number')(numbers[which].overall);
-            type(context, { text: 'Damage against ' + which, style: '10.5px "Open Sans"', x: 465, y: 30 + n * 70 });
+            type(context, { text: 'Damage against ' + which, style: '10.5px "Open Sans"', x: 515, y: 30 + n * 70, align: 'center' });
             type(context, { text: overall, style: 'bold 21px "Open Sans"', x: 515, y: 58 + n * 70, align: 'center' });
         });
         // indicators
@@ -62,6 +62,7 @@ app.controller('ImageGeneratorCtrl', function($scope, $filter, $timeout) {
                         gradient.addColorStop(0.2, 'white');
                         gradient.addColorStop(0.3, ORB_COLORS[unit.type]);
                     }
+                    gradient.addColorStop(0.7, 'transparent');
                     gradient.addColorStop(1.0, 'transparent');
                     context.fillStyle = gradient;
                     context.fillRect(0, 0, canvas.width, canvas.height);
@@ -161,7 +162,7 @@ var fill = function(context, color, x, y, w, h) {
 var truncate = function(context, text, maxWidth) {
     var textWidth = context.measureText(text).width;
     var ellipsisWidth = context.measureText('...').width;
-    if (textWidth <= maxWidth || textWidth <= ellipsisWidth) return text;
+    if (textWidth <= maxWidth + 5 || textWidth <= ellipsisWidth) return text;
     do {
         text = text.slice(0, -1);
         textWidth = context.measureText(text).width;
