@@ -53,11 +53,6 @@ var DEFAULT_HIT_MODIFIERS = [ 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfe
 
 var CruncherCtrl = function($scope, $rootScope, $timeout) {
 
-    /* * * * * Scope variables * * * * */
-
-    $scope.$watch('data',crunch,true);
-    $scope.$watch('tdata',crunch,true);
-
     /* * * * * Local variables * * * * */
 
     var cptsWith = { };
@@ -82,6 +77,9 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         else if (!enabled && specials[id].hasOwnProperty('onDeactivation'))
             specials[id].onDeactivation(getParameters(slot));
     });
+
+    $scope.$watch('data',crunch,true);
+    $scope.$watch('tdata',crunch,true);
 
     $rootScope.cruncherReady = true;
 

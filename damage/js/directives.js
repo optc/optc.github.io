@@ -656,9 +656,9 @@ directives.special = function($rootScope) {
             });
             element.click(function(e) {
                 isSelected = !isSelected;
+                $rootScope.$emit('specialToggled', scope.slot, isSelected);
                 scope.tdata.team[scope.slot].special = isSelected;
                 scope.$apply();
-                $rootScope.$emit('specialToggled', scope.slot, isSelected);
             });
         }
     };
