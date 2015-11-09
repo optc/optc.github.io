@@ -72,8 +72,8 @@ app.controller('ImageGeneratorCtrl', function($scope, $filter, $timeout) {
                 // level label
                 fill(context, 'black', baseX + 80, baseY + 95, 31, 16);
                 fill(context, 'white', baseX + 81, baseY + 96, 30, 15);
-                type(context, { text: 'Lv.' + data.level, style: 'bold 10px "Open Sans"',
-                    x: baseX + (data.level < 10 ? 87 : 84), y: baseY + 107 });
+                type(context, { text: 'Lv.' + data.level, style: 'bold 10px "Open Sans"', align: 'center',
+                    x: baseX + 96, y: baseY + 107 });
                 // candy labels
                 var total = data.candies.hp + data.candies.atk + data.candies.rcv;
                 if (total > 0) {
