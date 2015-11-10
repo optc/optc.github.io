@@ -128,7 +128,6 @@ app.controller('ImageGeneratorCtrl', function($scope, $filter, $timeout) {
         type(context, { text: 'None', x: baseX + 35, y: baseY + 45, maxWidth: 145, truncate: true });
     }
 
-
 });
 
 /* * * * * Utility methods * * * * */

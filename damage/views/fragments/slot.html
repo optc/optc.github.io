@@ -17,7 +17,7 @@
         <div class="unitPortrait" decorate-slot="notitle" uid="data.team[slot].unit.number + 1" udata="numbers.team[slot]"></div>
         <unit-orb></unit-orb>
         <unit-chain></unit-chain>
-        <unit-silence></unit-silence>
+        <unit-silence ng-if="slot < 2"></unit-silence>
         <unit-candies></unit-candies>
     </div>
 
