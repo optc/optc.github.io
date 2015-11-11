@@ -652,7 +652,7 @@ window.captains = {
         hp: function(p) { return p.unit.type == "INT" ? 1.5 : 1; },
         rcv: function(p) { return p.unit.type == "INT" ? 1.5 : 1; }
     },
-    424: { // Humming Brook
+    424: { // Humming Swordsman Brook
         atk: function(p) { return p.unit.type == "QCK" ? 1.5 : 1; }
     },
     425: { // Ryuma

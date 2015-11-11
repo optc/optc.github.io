@@ -143,7 +143,7 @@ window.specials = {
     423: { // Brook
         def: function(p) { return 0.5; }
     },
-    424: { // Humming Brook
+    424: { // Humming Swordsman Brook
         def: function(p) { return 0.5; }
     },
     426: { // Masira

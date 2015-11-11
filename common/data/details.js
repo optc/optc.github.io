@@ -2883,19 +2883,22 @@ window.details = {
         captain: "Prevents death as long as HP is above 70%",
         cooldown: [ 24, 15 ],
         evolution: 424,
-        evolvers: [ 117, 79, 85, 96, 101 ]
+        evolvers: [ 117, 79, 85, 96, 101 ],
+        flags: { global: 1 }
     },
-    424: { // Humming Brook
+    424: { // Humming Swordsman Brook
         special: "Recovers 4,343 HP, reduces the defense of all enemies by 50% for 2 turns",
         specialName: "Lullaby Parry",
         captain: "Prevents death as long as HP is above 70%",
-        cooldown: [ 24, 15 ]
+        cooldown: [ 24, 15 ],
+        flags: { global: 1 }
     },
     425: { // Ryuma
         special: "Deals random PSY damage to all enemies",
         specialName: "Shusui: Three Verse Arrow Notch Slash",
         captain: "Boosts ATK and HP of Slasher characters by 1.5x",
-        cooldown: [ 35, 18 ]
+        cooldown: [ 35, 18 ],
+        flags: { global: 1 }
     },
     426: { // Masira
         special: "Boosts ATK of STR characters by 1.05x for 5 turns",
@@ -3673,55 +3676,55 @@ window.details = {
         cooldown: [ 25, 20 ],
         flags: { rr: 1 }
     },
-    531: { // Nico Robin Cherry Blossom Blizzard
+    531: { // Nico Robin Cherry Blossoms Falling
         special: "Reduces damage received by 30% for 4 turns",
-        specialName: "Veinte Fleur - Calendula Sakura",
+        specialName: "Veinte Fleur Calendula: Blossom",
         captain: "Reduces damage received from STR, DEX and QCK enemies by 30%",
         cooldown: [ 16, 16 ],
         evolution: 532,
         evolvers: [ 117, 80, 86, 91, 97 ],
-        flags: { promo: 1 }
+        flags: { promo: 1, global: 1 }
     },
     532: { // Nico Robin Cherry Blossoms in Full Bloom
         special: "Reduces damage received by 30% for 4 turns",
-        specialName: "Veinte Fleur - Calendula Sakura",
+        specialName: "Veinte Fleur Calendula: Blossom",
         captain: "Reduces damage received from STR, DEX and QCK enemies by 30%",
         cooldown: [ 16, 16 ],
-        flags: { promo: 1 }
+        flags: { promo: 1, global: 1 }
     },
     533: { // Brook Cherry Blossom Hair
         special: "Amplifies the effect of orbs by 1.5x for 1 turn, deals 20x character's ATK in QCK damage to one enemy",
         specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.5x more damage and opposite orbs will deal 1.5x less damage",
-        specialName: "Swallow Bond en Avant Sakura",
+        specialName: "Swallow Bond En Avant: Blossom",
         captain: "Boosts ATK of QCK characters by 2x",
         cooldown: [ 18, 18 ],
         evolution: 534,
         evolvers: [ 118, 79, 85, 96, 101 ],
-        flags: { rr: 1, lrr: 1 }
+        flags: { rr: 1, lrr: 1, global: 1 }
     },
     534: { // Brook Cherry Blossom Melody
         special: "Amplifies the effect of orbs by 1.5x for 1 turn, deals 20x character's ATK in QCK damage to one enemy",
         specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.5x more damage and opposite orbs will deal 1.5x less damage",
-        specialName: "Swallow Bond en Avant Sakura",
+        specialName: "Swallow Bond En Avant: Blossom",
         captain: "Boosts ATK of QCK characters by 2x",
         cooldown: [ 18, 18 ],
-        flags: { rr: 1, lrr: 1 }
+        flags: { rr: 1, lrr: 1, global: 1 }
     },
     535: { // Nami Blossom Cloud
         special: "Reduces damage received by 50% for 2 turns, boosts RCV of all characters by 2x for 2 turns",
-        specialName: "Mirage Tempo - Fata Morgana Sakura",
+        specialName: "Mirage Tempo Fata Morgana: Blossom",
         captain: "Boosts RCV of QCK characters by 1.5x",
         cooldown: [ 16, 16 ],
         evolution: 536,
         evolvers: [ 118, 80, 86, 91, 97 ],
-        flags: { rr: 1, lrr: 1 }
+        flags: { rr: 1, lrr: 1, global: 1 }
     },
     536: { // Nami Blossom Climate
         special: "Reduces damage received by 50% for 2 turns, boosts RCV of all characters by 2x for 2 turns",
-        specialName: "Mirage Tempo - Fata Morgana Sakura",
+        specialName: "Mirage Tempo Fata Morgana: Blossom",
         captain: "Boosts RCV of QCK characters by 2x",
         cooldown: [ 16, 16 ],
-        flags: { rr: 1, lrr: 1 }
+        flags: { rr: 1, lrr: 1, global: 1 }
     },
     537: { // Domino
         special: "Reduces Bind and Silence duration by 1 turn, locks all orbs for 1 turn",

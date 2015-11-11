@@ -1,6 +1,6 @@
 (function() {
 
-var doAlert = false, doAlertLock = false;
+var doAlert = false;
 
 /* * * * * Storage methods * * * * */
 
@@ -41,11 +41,6 @@ var version = JSON.parse(localStorage.getItem('version')) || 11;
 if (version < 11) {
     doAlert = true;
     localStorage.setItem('version', JSON.stringify(11));
-}
-
-if (!localStorage.hasOwnProperty('lockSilenceWarning')) {
-    doAlertLock = true;
-    localStorage.setItem('lockSilenceWarning', true);
 }
 
 /* * * * * Controller * * * * */
@@ -96,21 +91,6 @@ var StorageCtrl = function($scope) {
             text: 'Some stuff changed. Refreshing the page and/or clearing your browser\'s cache may be a smart idea.',
             timeout: 10000,
             type: 'error'
-        });
-    }
-    
-    if (doAlertLock) {
-        $scope.notify({
-            text: 'Friendly reminder that you can lock units with Alt+Click and silence captains with Shift+Click.',
-            timeout: 10000,
-            type: 'information',
-            layout: 'topCenter'
-        });
-        $scope.notify({
-            text: 'You can also manually change the attack order via drag-and-drop, by the way.',
-            timeout: 10000,
-            type: 'information',
-            layout: 'topCenter'
         });
     }
 
