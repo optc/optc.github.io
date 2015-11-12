@@ -1644,8 +1644,9 @@ window.details = {
         cooldown: [ 10, 10 ]
     },
     248: { // Tony Tony Chopper Pre-Rampage (Monster Chopper)
-        special: "Deals random STR damage between 1 HP and 200,000 HP to one enemy",
+        special: "Deals random STR damage to one enemy",
         specialName: "Rampage",
+        specialNotes: "Estimated damage range: between 1 HP and 200,000 HP",
         captain: "Boosts ATK of STR characters by 2.5x and reduces their HP by 60%",
         cooldown: [ 30, 15 ],
         evolution: 249,
@@ -1653,8 +1654,9 @@ window.details = {
         flags: { global: 1 }
     },
     249: { // Tony Tony Chopper Post-Rampage (Monster Chopper)
-        special: "Deals random STR damage between 1 HP and 200,000 HP to one enemy",
+        special: "Deals random STR damage to one enemy",
         specialName: "Rampage",
+        specialNotes: "Estimated damage range: between 1 HP and 200,000 HP",
         captain: "Boosts ATK of STR characters by 3x and reduces their HP by 60%",
         cooldown: [ 30, 15 ],
         flags: { global: 1 }
@@ -2894,8 +2896,9 @@ window.details = {
         flags: { global: 1 }
     },
     425: { // Ryuma
-        special: "Deals random PSY damage between 1 HP and 100,000 HP to all enemies",
+        special: "Deals random PSY damage to all enemies",
         specialName: "Shusui: Three Verse Arrow Notch Slash",
+        specialNotes: "Estimated damage range: between 1 HP and 100,000 HP",
         captain: "Boosts ATK and HP of Slasher characters by 1.5x",
         cooldown: [ 35, 18 ],
         flags: { global: 1 }
