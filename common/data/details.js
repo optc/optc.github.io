@@ -3724,7 +3724,7 @@ window.details = {
     535: { // Nami Blossom Cloud
         special: "Reduces damage received by 50% for 2 turns, boosts RCV of all characters by 2x for 2 turns",
         specialName: "Mirage Tempo Fata Morgana: Blossom",
-        captain: "Boosts RCV of QCK characters by 1.5x",
+        captain: "Boosts RCV of DEX characters by 1.5x",
         cooldown: [ 16, 16 ],
         evolution: 536,
         evolvers: [ 118, 80, 86, 91, 97 ],
@@ -3733,7 +3733,7 @@ window.details = {
     536: { // Nami Blossom Climate
         special: "Reduces damage received by 50% for 2 turns, boosts RCV of all characters by 2x for 2 turns",
         specialName: "Mirage Tempo Fata Morgana: Blossom",
-        captain: "Boosts RCV of QCK characters by 2x",
+        captain: "Boosts RCV of DEX characters by 2x",
         cooldown: [ 16, 16 ],
         flags: { rr: 1, lrr: 1, global: 1 }
     },
