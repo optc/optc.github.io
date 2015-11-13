@@ -59,7 +59,7 @@ app.directive('island',function() {
                 var temp = cooldowns[id - 1];
                 if (!temp) return null;
                 if (temp.constructor == Array) return temp[0] + ' \u2192 ' + temp[1] + ' turns';
-                else return temp[0] + ' turns';
+                else return temp + ' \u2192 ? turns';
             };
         }
     };
