@@ -240,6 +240,7 @@ directives.compare = function() {
                 $(e.currentTarget).prop('disabled', true);
                 scope.compare = window.units[suggestion];
                 scope.compareDetails = window.details[suggestion + 1];
+                scope.compareCooldown = window.cooldowns[suggestion];
                 if (!scope.$$phase) scope.$apply();
             });
 

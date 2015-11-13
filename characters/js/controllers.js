@@ -103,6 +103,7 @@ app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, 
     $scope.hybrid = $scope.unit.class && $scope.unit.class.constructor == Array;
     $scope.details = window.details[id];
     $scope.cooldown = window.cooldowns[id - 1];
+    $scope.evolution = window.evolutions[id];
     // derived data
     $scope.evolvesFrom = CharUtils.searchBaseForms(id);
     $scope.usedBy = CharUtils.searchEvolverEvolutions(id);

@@ -1,7 +1,9 @@
 window.ships = [
+
+    // Do NOT change the order of the ships
     
     {
-        name: 'Dingy',
+        name: 'Dinghy',
         thumb: 'ship_0001_c.png',
         description: 'Boosts HP by 1.3x, boosts captain\'s RCV by 120 units',
         hp: function(p) {

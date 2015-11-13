@@ -164,11 +164,11 @@
                                         <span class="notes" ng-if="compareDetails.specialNotes" ng-bind-html="compareDetails.specialNotes | decorate"></span>
                                     </td>
                                 </tr>
-                                <tr ng-if="compareDetails.cooldown">
+                                <tr ng-if="compareCooldown">
                                     <td>Cooldown</td>
                                     <td>
-                                        {{compareDetails.cooldown.length ? compareDetails.cooldown[0] : compareDetails.cooldown}} turns
-                                        {{compareDetails.cooldown.length ? ' (maxed: ' + compareDetails.cooldown[1] + ' turns)' : ''}}
+                                        {{compareCooldown.length ? compareCooldown[0] : compareCooldown}} turns
+                                        {{compareCooldown.length ? ' (maxed: ' + compareCooldown[1] + ' turns)' : ''}}
                                     </td>
                                 </tr>
                             </tbody>
@@ -177,22 +177,22 @@
 
                     <!-- Evolutions -->
 
-                    <h3 class="page-header" ng-if="details.evolution">Evolutions</h3>
+                    <h3 class="page-header" ng-if="evolution.evolution">Evolutions</h3>
 
-                    <table class="table table-striped table-centered table-bordered table-textless" ng-if="details.evolution && !details.evolution.length">
+                    <table class="table table-striped table-centered table-bordered table-textless" ng-if="evolution.evolution && !evolution.evolution.length">
                         <tbody>
                             <tr>
-                                <td><evolution unit="unit" evolvers="details.evolvers"
-                                    evolution="details.evolution" size="medium"></evolution></td>
+                                <td><evolution unit="unit" evolvers="evolution.evolvers"
+                                    evolution="evolution.evolution" size="medium"></evolution></td>
                             </tr>
                         </tbody>
                     </table>
 
-                    <table class="table table-striped table-centered table-bordered table-textless" ng-if="details.evolution && details.evolution.length">
+                    <table class="table table-striped table-centered table-bordered table-textless" ng-if="evolution.evolution && evolution.evolution.length">
                         <tbody>
-                            <tr ng-repeat="evolverSet in details.evolvers">
+                            <tr ng-repeat="evolverSet in evolution.evolvers">
                                 <td>
-                                    <evolution unit="unit" evolvers="evolverSet" evolution="details.evolution[$index]"
+                                    <evolution unit="unit" evolvers="evolverSet" evolution="evolution.evolution[$index]"
                                         size="medium"></evolution> 
                                 </td>
                             </tr>

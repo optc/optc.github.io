@@ -134,8 +134,6 @@ var ImportCtrl = function($scope, $rootScope, $state, $stateParams) {
     }
 
     $scope.options.crunchInhibitor = 0;
-
-    $scope.notify({ text: 'Data transfer completed successfully.', type: 'success' });
     $state.go('^');
 
 };
