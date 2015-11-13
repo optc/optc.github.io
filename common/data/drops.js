@@ -567,7 +567,7 @@ window.drops = {
         },
 
         {
-            name: 'Brook',
+            name: 'Adrift!? Humming Brook',
             thumb: 424,
             Expert: [ 423, 425, -425, -327, -310, -223, -219, -214, -202 ],
             Elite: [ 423, 425, -425, -327, -310, -223, -219, -214, -202 ]

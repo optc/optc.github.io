@@ -4,14 +4,14 @@ var app = angular.module('optc', [ 'ui.router', 'ui.bootstrap' ]);
 
 var findEvolvers = function(id) {
     var result = [ ];
-    for (var key in details) {
-        if (!details[key] || !details[key].evolvers) continue;
-        if (details[key].evolution == id) 
-            result.push({ from: parseInt(key,10), to: id, evolvers: details[key].evolvers });
-        if (details[key].evolution.constructor == Array) {
-            for (var i=0;i<details[key].evolution.length;++i) {
-                if (details[key].evolution[i] != id) continue;
-                result.push({ from: parseInt(key,10), to: id, evolvers: details[key].evolvers[i]});
+    for (var key in evolutions) {
+        if (!evolutions[key] || !evolutions[key].evolvers) continue;
+        if (evolutions[key].evolution == id) 
+            result.push({ from: parseInt(key,10), to: id, evolvers: evolutions[key].evolvers });
+        if (evolutions[key].evolution.constructor == Array) {
+            for (var i=0;i<evolutions[key].evolution.length;++i) {
+                if (evolutions[key].evolution[i] != id) continue;
+                result.push({ from: parseInt(key,10), to: id, evolvers: evolutions[key].evolvers[i]});
             }
         }
     }

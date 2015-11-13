@@ -277,7 +277,7 @@ directives.addTags = function($stateParams, $rootScope) {
         link: function(scope, element, attrs) {
             var id = $stateParams.id, data = details[id];
             // flags
-            var flags = data.flags || { };
+            var flags = window.flags[id] || { };
             element.append($('<span class="tag flag">' + (flags.global ? 'Global' : 'JP only') + '</div>'));
             element.append($('<span class="tag flag">' +
                         (CharUtils.isFarmable(id) ? 'Farmable' : 'Non-farmable') + '</div>'));
@@ -292,6 +292,7 @@ directives.addTags = function($stateParams, $rootScope) {
             if (CharUtils.isOnlyFarmable(id, 'Raid', 'Fortnight'))
                 element.append($('<span class="tag flag">Raid & fortnight only</div>'));
             // matchers
+            if (!data) return;
             matchers.forEach(function(matcher) {
                 var name;
                 // captain effects
@@ -321,7 +322,7 @@ directives.addLinks = function($stateParams) {
         link: function(scope, element, attrs) {
             var id = parseInt($stateParams.id,10), data = details[id], incomplete = units[id - 1].incomplete;
             var ul = $('<ul></ul>');
-            if (!incomplete && data.flags && data.flags.global) {
+            if (!incomplete && window.flags[id] && window.flags[id].global) {
                 var link = 'http://onepiece-treasurecruise.com/en/' + (id == '5' ? 'roronoa-zoro' : 'c-' + id);
                 ul.append($('<li><a href="' + link + '" target="_blank">Official Guide (English)</a></li>'));
             }

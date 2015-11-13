@@ -246,7 +246,9 @@ controllers.EffectsCtrl = function($scope, $state) {
 
 controllers.PopoverCtrl = function($scope) {
     if (!$scope.data.team[$scope.slot].unit) return;
-    $scope.details = window.details[$scope.data.team[$scope.slot].unit.number + 1];
+    var id = $scope.data.team[$scope.slot].unit.number + 1;
+    $scope.details = window.details[id];
+    $scope.cooldown = window.cooldowns[id];
 };
 
 /*****************************

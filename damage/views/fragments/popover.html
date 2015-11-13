@@ -59,9 +59,9 @@
             <tr>
                 <td colspan="5">
                     <div ng-bind-html="details.special | decorate"></div>
-                    <div class="cooldown">
-                        {{details.cooldown.length ? details.cooldown[0] : details.cooldown}} turns
-                        {{details.cooldown.length ? ' (maxed: ' + details.cooldown[1] + ' turns)' : ''}}
+                    <div class="cooldown" ng-if="details.special && cooldown">
+                        {{cooldown.length ? cooldown[0] : cooldown}} turns
+                        {{cooldown.length ? ' (maxed: ' + cooldown[1] + ' turns)' : ''}}
                     </div>
                     <span class="notes" ng-if="details.specialNotes" ng-bind-html="details.specialNotes | decorate"></span>
                 </td>

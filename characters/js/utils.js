@@ -30,11 +30,11 @@ var addMark = function(value, type) {
 
 var flagUnit = function(id, type) {
     reverseDropMap[id] = addMark(reverseDropMap[id], type);
-    if (!details[id].evolution) return;
-    if (details[id].evolution.constructor != Array)
-        flagUnit(details[id].evolution, type);
-    else for (var i=0;i<details[id].evolution.length;++i)
-        flagUnit(details[id].evolution[i], type);
+    if (!evolutions[id]) return;
+    if (evolutions[id].evolution.constructor != Array)
+        flagUnit(evolutions[id].evolution, type);
+    else for (var i=0;i<evolutions[id].evolution.length;++i)
+        flagUnit(evolutions[id].evolution[i], type);
 };
 
 
@@ -65,10 +65,10 @@ CharUtils.generateSearchParameters = function(query, filters) {
 
 CharUtils.searchBaseForms = function(id) {
     var temp = [ ], current = parseInt(id,10);
-    for (var key in details) {
-        if (!details[key].evolution) continue;
-        if (details[key].evolution == current ||
-                (details[key].evolution.indexOf && details[key].evolution.indexOf(current) != -1))
+    for (var key in evolutions) {
+        if (!evolutions[key].evolution) continue;
+        if (evolutions[key].evolution == current ||
+                (evolutions[key].evolution.indexOf && evolutions[key].evolution.indexOf(current) != -1))
             temp.push(parseInt(key,10));
     }
     var result = [ ];
@@ -84,14 +84,14 @@ CharUtils.searchBaseForms = function(id) {
 
 CharUtils.searchEvolverEvolutions = function(id) {
     var result = { }, current = parseInt(id,10);
-    for (var key in details) {
+    for (var key in evolutions) {
         var paddedId = ('000' + key).slice(-4);
-        if (!details[key].evolution) continue;
-        if (details[key].evolvers.indexOf(current) != -1)
-            result[paddedId] = (result[paddedId] || [ ]).concat([ details[key].evolution ]);
-        for (var i=0;i<details[key].evolution.length;++i) {
-            if (details[key].evolvers[i].indexOf(current) != -1)
-                result[paddedId] = (result[paddedId] || [ ]).concat([ details[key].evolution[i] ]);
+        if (!evolutions[key].evolution) continue;
+        if (evolutions[key].evolvers.indexOf(current) != -1)
+            result[paddedId] = (result[paddedId] || [ ]).concat([ evolutions[key].evolution ]);
+        for (var i=0;i<evolutions[key].evolution.length;++i) {
+            if (evolutions[key].evolvers[i].indexOf(current) != -1)
+                result[paddedId] = (result[paddedId] || [ ]).concat([ evolutions[key].evolution[i] ]);
         }
     }
     return result;
@@ -101,12 +101,12 @@ CharUtils.getEvolversOfEvolution = function(from,to,withID) {
     if (!to) return [ ];
     from = parseInt(from,10);
     to = parseInt(to,10);
-    if (details[from].evolution == to) return details[from].evolvers;
-    if (!withID) return details[from].evolvers[details[from].evolution.indexOf(to)];
-    for (var i=0;i<details[from].evolution.length;++i) {
-        if (details[from].evolution[i] != to) continue;
-        if (details[from].evolvers[i].indexOf(withID) == -1) continue;
-        return details[from].evolvers[i];
+    if (evolutions[from].evolution == to) return evolutions[from].evolvers;
+    if (!withID) return evolutions[from].evolvers[evolutions[from].evolution.indexOf(to)];
+    for (var i=0;i<evolutions[from].evolution.length;++i) {
+        if (evolutions[from].evolution[i] != to) continue;
+        if (evolutions[from].evolvers[i].indexOf(withID) == -1) continue;
+        return evolutions[from].evolvers[i];
     }
     return [ ];
 };
@@ -160,6 +160,7 @@ CharUtils.isOnlyFarmable = function(id, types) {
 };
 
 CharUtils.searchSameSpecials = function(id) {
+    if (!details[id]) return [ ];
     var result = [ ];
     for (var key in details) {
         if (key == id || !details[key].special) continue; 

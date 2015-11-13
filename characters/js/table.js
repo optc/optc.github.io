@@ -57,7 +57,7 @@ var getTableColumns = function() {
 $.fn.dataTable.ext.search.push(function(settings, data, index) {
     if (!tableData.parameters) return true;
     var id = parseInt(data[0],10), unit = window.units[id - 1];
-    var flags = details[unit.number + 1].flags || { };
+    var flags = window.flags[unit.number + 1] || { };
     /* * * * * Query filters * * * * */
     // filter by matchers
     for (var matcher in tableData.parameters.matchers) {
@@ -137,7 +137,7 @@ $.fn.dataTable.ext.search.push(function(settings, data, index) {
         }
     }
     // exclusion filters
-    if (filters.noBase && details[id].evolution) return false;
+    if (filters.noBase && (evolutions[id] && evolutions[id].evolution)) return false;
     if (filters.noEvos && Utils.isEvolverBooster(unit)) return false;
     if (filters.noFodder && Utils.isFodder(unit)) return false;
     if (filters.noFortnights && flags.fnonly) return false;
@@ -207,11 +207,10 @@ angular.module('optc') .run(function($rootScope) {
             else if (c == 'HP/cost') temp = Math.round(x.maxHP / x.cost * 100) / 100;
             else if (c == 'CMB') temp = x.combo;
             else if (c == 'Minimum cooldown' || c == 'Initial cooldown') { 
-                var d = details[x.number + 1];
-                if (!d.hasOwnProperty('special')) temp = 'N/A';
-                else if (!d.hasOwnProperty('cooldown')) temp = 'Unknown';
-                else if (c == 'Minimum cooldown' && d.cooldown.constructor == Array) temp = d.cooldown[1];
-                else if (c == 'Initial cooldown') temp = (d.cooldown.constructor == Array ? d.cooldown[0] : d.cooldown);
+                var d = cooldowns[x.number];
+                if (!d) temp = 'N/A';
+                else if (c == 'Minimum cooldown' && d.constructor == Array) temp = d[1];
+                else if (c == 'Initial cooldown') temp = (d.constructor == Array ? d[0] : d);
                 else temp = 'Unknown';
             }
             if (temp.constructor != String && !isNaN(temp) && !isFinite(temp)) temp = '&#8734;';

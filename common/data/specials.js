@@ -1,453 +1,453 @@
 window.specials = {
-    18: { // Sanji Plastic Surgery Shot
+    18: {
         def: function(p) { return 0.5; }
     },
-    24: { // Tony Tony Chopper Arm Point
+    24: {
         def: function(p) { return 0.5; }
     },
-    34: { // Cabin Boy Helmeppo
+    34: {
         def: function(p) { return 0; }
     },
-    127: { // Slasher Group Cabin Boy Blue Pirates
+    127: {
         def: function(p) { return 0.5; }
     },
-    137: { // Shooter Group Cabin Boy Blue Pirates
+    137: {
         def: function(p) { return 0.5; }
     },
-    148: { // Slasher Group Crew Blue Pirates
+    148: {
         def: function(p) { return 0.5; }
     },
-    158: { // Shooter Group Crew Blue Pirates
+    158: {
         def: function(p) { return 0.5; }
     },
-    206: { // Miss Goldenweek Colors Trap: Calming Green
+    206: {
         def: function(p) { return 0.5; }
     },
-    209: { // Miss All Sunday Baroque Works VP
+    209: {
         atk: function(p) { return p.unit.type == "INT" ? 1.5 : 1; },
         type: 'type'
     },
-    210: { // Nico Robin
+    210: {
         atk: function(p) { return p.unit.type == "INT" ? 2 : 1; },
         type: 'type'
     },
-    222: { // Usopp Usopp Hammer
+    222: {
         atk: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; },
         type: 'type'
     },
-    223: { // Usopp Impact
+    223: {
         atk: function(p) { return p.unit.type == "PSY" ? 2 : 1; },
         type: 'type'
     },
-    263: { // Petty Officer Coby
+    263: {
         orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); },
     },
-    267: { // Rainbow Striped Dragon
+    267: {
         def: function(p) { return 0.5; }
     },
-    275: { // Armed Slasher Unit Blue Pirates
+    275: {
         def: function(p) { return 0.5; }
     },
-    285: { // Armed Shooter Unit Blue Pirates
+    285: {
         def: function(p) { return 0.5; }
     },
-    295: { // Brontosaurus
+    295: {
         def: function(p) { return 0.5; }
     },
-    309: { // Basil Hawkins
+    309: {
         def: function(p) { return 0.5; }
     },
-    310: { // Basil Hawkins the Magician
+    310: {
         def: function(p) { return 0.5; }
     },
-    313: { // Urouge
+    313: {
         atk: function(p) { return p.unit.class.has("Striker") ? 1.5 : 1; },
         type: 'class'
     },
-    314: { // Mad Monk Urouge
+    314: {
         atk: function(p) { return p.unit.class.has("Striker") ? 1.5 : 1; },
         type: 'class'
     },
-    323: { // Kaku
+    323: {
         orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); }
     },
-    324: { // Kaku Dock One Carpentry Specialist
+    324: {
         orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); }
     },
-    352: { // Zephyr
+    352: {
         atk: function(p) { return p.unit.class.has("Shooter") ? 1.75 : 1; },
         type: 'class'
     },
-    353: { // Zephyr NEO Navy Commander
+    353: {
         atk: function(p) { return p.unit.class.has("Shooter") ? 1.75 : 1; },
         type: 'class'
     },
-    382: { // Sandora Dragon
+    382: {
         def: function(p) { return 0.5; }
     },
-    385: { // Hogback
+    385: {
         atk: function(p) { return p.unit.class.has("Fighter") ? 1.25 : 1; },
         type: 'class'
     },
-    386: { // Doctor Hogback
+    386: {
         atk: function(p) { return p.unit.class.has("Fighter") ? 1.25 : 1; },
         type: 'class'
     },
-    391: { // Perona
+    391: {
         def: function(p) { return 0.2; }
     },
-    392: { // Ghost Princess Perona
+    392: {
         def: function(p) { return 0.2; }
     },
-    395: { // Miss Merry Christmas
+    395: {
         orb: function(p) { return p.orb == 2.0 ? 1.25 : (p.orb == 0.5 ? 4/5 : 1); }
     },
-    396: { // Miss Merry Christmas Human Mole
+    396: {
         orb: function(p) { return p.orb == 2.0 ? 1.25 : (p.orb == 0.5 ? 4/5 : 1); }
     },
-    399: { // Miss Doublefinger
+    399: {
         atk: function(p) { return p.unit.type == "DEX" ? 1.5 : 1; },
         type: 'type'
     },
-    400: { // Miss Doublefinger Human Spike
+    400: {
         atk: function(p) { return p.unit.type == "DEX" ? 1.5 : 1; },
         type: 'type'
     },
-    401: { // Mr. 1
+    401: {
         atk: function(p) { return p.unit.class.has("Slasher") ? 1.25 : 1; },
         type: 'class'
     },
-    402: { // Mr. 1 Human Sword
+    402: {
         atk: function(p) { return p.unit.class.has("Slasher") ? 1.25 : 1; },
         type: 'class'
     },
-    404: { // Absalom
+    404: {
         rcv: function(p) { return 2; }
     },
-    405: { // Absalom of the Graveyard
+    405: {
         rcv: function(p) { return 2; }
     },
-    406: { // General Zombie
+    406: {
         atk: function(p) { return 1.2; },
         type: 'type'
     },
-    417: { // Donquixote Doflamingo
+    417: {
         orb: function(p) { return p.orb == 2.0 ? 2.0 : (p.orb == 0.5 ? 0.25 : 1); }
     },
-    418: { // Donquixote Doflamingo Warlord of the Sea
+    418: {
         orb: function(p) { return p.orb == 2.0 ? 2.0 : (p.orb == 0.5 ? 0.25 : 1); }
     },
-    419: { // Sanji Parage Shot - Arashi (Kimono Sanji)
+    419: {
         def: function(p) { return 0.5; }
     },
-    423: { // Brook
+    423: {
         def: function(p) { return 0.5; }
     },
-    424: { // Humming Swordsman Brook
+    424: {
         def: function(p) { return 0.5; }
     },
-    426: { // Masira
+    426: {
         atk: function(p) { return p.unit.type == "STR" ? 1.05 : 1; },
         type: 'type'
     },
-    429: { // South Bird and Forest Residents
+    429: {
         def: function(p) { return 0.5; },
     },
-    430: { // Bellamy
+    430: {
         orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); }
     },
-    431: { // Bellamy the Hyena
+    431: {
         orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); }
     },
-    434: { // Caroline
+    434: {
         orb: function(p) { return p.orb == 2.0 ? 1.25 : (p.orb == 0.5 ? 4/5 : 1); }
     },
-    450: { // Namule (Namur)
+    450: {
         atk: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; },
         type: 'class'
     },
-    451: { // One-Hit Namule (Namur)
+    451: {
         atk: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; },
         type: 'class'
     },
-    454: { // Fossa
+    454: {
         atk: function(p) { return p.unit.type == "STR" ? 1.5 : 1; },
         type: 'type'
     },
-    455: { // Fossa the Blazing Katana
+    455: {
         atk: function(p) { return p.unit.type == "STR" ? 1.5 : 1; },
         type: 'type'
     },
-    458: { // Sengoku
+    458: {
         atk: function(p) { return 1.5; },
         type: 'type'
     },
-    459: { // Sengoku the Buddha
+    459: {
         atk: function(p) { return 1.5; },
         type: 'type'
     },
-    461: { // Fugitive Bentham Mr. 2 Bon Clay
+    461: {
         atk: function(p) { return p.unit.class.has("Fighter") ? 1.25 : 1; },
         type: 'class'
     },
-    462: { // Prison Break Expert Mr. 2 Bon Clay
+    462: {
         atk: function(p) { return p.unit.class.has("Fighter") ? 1.25 : 1; },
         type: 'class'
     },
-    465: { // Gedatsu
+    465: {
         orb: function(p) { return p.orb == 2.0 ? 1.25 : (p.orb == 0.5 ? 4/5 : 1); }
     },
-    468: { // Yellow White Beret Skypiea Guard
+    468: {
         rcv: function(p) { return 1.5; }
     },
-    470: { // Yellow White Beret Captain Skypiea Guard
+    470: {
         rcv: function(p) { return 1.5; }
     },
-    487: { // Red Nomad Shandian Warrior
+    487: {
         atk: function(p) { return p.unit.type == "STR" ? 1.2 : 1; },
         type: 'type'
     },
-    488: { // Blue Nomad Shandian Warrior
+    488: {
         atk: function(p) { return p.unit.type == "QCK" ? 1.2 : 1; },
         type: 'type'
     },
-    489: { // Green Nomad Shandian Warrior
+    489: {
         atk: function(p) { return p.unit.type == "DEX" ? 1.2 : 1; },
         type: 'type'
     },
-    490: { // Red Nomad Adept Shandian Warrior
+    490: {
         atk: function(p) { return p.unit.type == "STR" ? 1.2 : 1; },
         type: 'type'
     },
-    491: { // Blue Nomad Adept Shandian Warrior
+    491: {
         atk: function(p) { return p.unit.type == "QCK" ? 1.2 : 1; },
         type: 'type'
     },
-    492: { // Green Nomad Adept Shandian Warrior
+    492: {
         atk: function(p) { return p.unit.type == "DEX" ? 1.2 : 1; },
         type: 'type'
     },
-    505: { // Pell
+    505: {
         atk: function(p) { return p.unit.type == "QCK" ? 1.25 : 1; },
         type: 'type'
     },
-    506: { // Pell The Guardian Falcon of Alabasta
+    506: {
         atk: function(p) { return p.unit.type == "QCK" ? 1.25 : 1; },
         type: 'type'
     },
-    509: { // The Strongest Prisoner, Sir Crocodile Mr. 0, Former CEO of Baroque Works
+    509: {
         atk: function(p) { return p.unit.class.has("Striker") ? 1.5 : 1; },
         type: 'class'
     },
-    510: { // The Strongest Prisoner, Sir Crocodile Warlord of the Sea
+    510: {
         atk: function(p) { return p.unit.class.has("Striker") ? 1.5 : 1; },
         type: 'class'
     },
-    511: { // Prisoner Daz Bonez Mr. 1
+    511: {
         atk: function(p) { return p.unit.class.has("Slasher") ? 1.25 : 1; },
         type: 'class'
     },
-    514: { // Nico Robin Tropical
+    514: {
         def: function(p) { return 0.5; },
         atk: function(p) { return p.unit.type == "INT" ? 1.5 : 1; },
         type: 'type'
     },
-    517: { // Usoppun
+    517: {
         atk: function(p) { return 1.05; },
         type: 'type'
     },
-    518: { // Usoppun, Heracles' Pupil
+    518: {
         atk: function(p) { return 1.05; },
         type: 'type'
     },
-    519: { // Monkey D. Luffy, Merveille's Adventurer (Strong World Luffy)
+    519: {
         atk: function(p) { return p.unit.type == "STR" ? 2 : 1; },
         type: 'type'
     },
-    520: { // Monkey D. Luffy, Straw Hat Pirates' Attack (Strong World Luffy)
+    520: {
         atk: function(p) { return p.unit.type == "STR" ? 2 : 1; },
         type: 'type'
     },
-    529: { // Shanks, Black Clothes and Red Hair (Strong World Shanks)
+    529: {
         def: function(p) { return 0; }
     },
-    530: { // Shanks, The Black-Clothed Yonkou (Strong World Shanks)
+    530: {
         def: function(p) { return 0; }
     },
-    533: { // Brook Cherry Blossom Hair
+    533: {
         orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); }
     },
-    534: { // Brook Cherry Blossom Melody
+    534: {
         orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); }
     },
-    542: { // Nola the Giant Snake
+    542: {
         rcv: function(p) { return 2; }
     },
-    545: { // Enel
+    545: {
         atk: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; },
         type: 'type'
     },
-    546: { // God Enel
+    546: {
         atk: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; },
         type: 'type'
     },
-    549: { // Sadi-chan
+    549: {
         atk: function(p) { return p.defenseDown ? 1.3 : 1; },
         type: 'condition'
     },
-    550: { // Sadi-chan, Impel Down's Chief Guard
+    550: {
         atk: function(p) { return p.defenseDown ? 1.3 : 1; },
         type: 'condition'
     },
-    559: { // Franky, Merveille's Adventurer (Strong World Franky)
+    559: {
         orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); }
     },
-    560: { // Franky, Straw Hat Pirates' Attack (Strong World Franky)
+    560: {
         orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); }
     },
-    568: { // Foxy
+    568: {
         def: function(p) { return 0.5; }
     },
-    569: { // Foxy the Silver Fox
+    569: {
         def: function(p) { return 0.5; }
     },
-    572: { // Usopp Davy Back Fight - Second
+    572: {
         atk: function(p) { return p.unit.class.has("Fighter") ? 2 : 1; },
         type: 'class',
         onActivation: function(p) { p.tdata.lock = Math.max(1,p.tdata.lock); },
         onDeactivation: function(p) { if (p.tdata.lock == 1) p.tdata.lock = 0; }
     },
-    574: { // Aokiji
+    574: {
         atk: function(p) { return p.unit.class.has("Striker") ? 1.75 : 1; },
         type: 'class'
     },
-    575: { // Aokiji the Freezing Man
+    575: {
         atk: function(p) { return p.unit.class.has("Striker") ? 1.75 : 1; },
         type: 'class'
     },
-    576: { // Tea Time Nami
+    576: {
         rcv: function(p) { return 1.5; }
     },
-    582: { // Kamakiri
+    582: {
         atk: function(p) { return p.unit.type == "QCK" ? 1.5 : 1; },
         type: 'type'
     },
-    589: { // Koza
+    589: {
         atk: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; },
         type: 'class'
     },
-    590: { // Koza Rebel Leader
+    590: {
         atk: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; },
         type: 'class'
     },
-    596: { // Tony Tony Chopper Voyage Log: Straw Hat Pirates (Log Chopper)
+    596: {
         def: function(p) { return 0.5; }
     },
-    597: { // Tony Tony Chopper Voyage Dream: Great Doctor (Log Chopper)
+    597: {
         def: function(p) { return 0.5; }
     },
-    600: { // Shanks the Pirate Apprentice
+    600: {
         atk: function(p) { return p.unit.type == "PSY" ? 1.3 : 1; },
         type: 'type'
     },
-    601: { // Shanks of the Roger Pirates
+    601: {
         atk: function(p) { return p.unit.type == "PSY" ? 1.3 : 1; },
         type: 'type'
     },
-    602: { // Enel - 200 Million Volt Thunder God
+    602: {
         atk: function(p) { return p.unit.type == "QCK" ? 2 : 1; },
         type: 'type'
     },
-    603: { // Enel the Lightning Human - 200 Million Volt Thunder God
+    603: {
         atk: function(p) { return p.unit.type == "QCK" ? 2 : 1; },
         type: 'type'
     },
-    612: { // Brook Voyage Log: Straw Hat Pirates (Log Brook)
+    612: {
         atkStatic: function(p) { return 45; }, // TODO Implement me
         rcvStatic: function(p) { return 45; }
     },
-    613: { // Brook Voyage Dream: Promised Meeting (Log Brook)
+    613: {
         atkStatic: function(p) { return 45; }, // TODO Implement me
         rcvStatic: function(p) { return 45; }
     },
-    614: { // Zanbai
+    614: {
         def: function(p) { return 0.5; }
     },
-    617: { // Superhuman Destroyers, Cannon User
+    617: {
         atk: function(p) { return p.unit.class.has("Shooter") ? 1.2 : 1; },
         type: 'class'
     },
-    622: { // Pistol Hoodlum, Green Bounty Hunter
+    622: {
         rcvStatic: function(p) { return 100; }
     },
-    632: { // Rob Lucci, Cipher Pol No.9
+    632: {
         def: function(p) { return 0.5; }
     },
-    633: { // Rob Lucci Rokushiki, Cipher Pol No.9
+    633: {
         def: function(p) { return 0.5; }
     },
-    634: { // Keimi
+    634: {
         atk: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" ? 1.2 : 1; },
         type: 'type'
     },
-    635: { // Keimi, Takoyaki Stand Assistant
+    635: {
         atk: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" ? 1.2 : 1; },
         type: 'type'
     },
-    637: { // Hatchan, Takoyaki Stand Owner
+    637: {
         atk: function(p) { return 1.3; },
         type: 'condition',
         warning: 'Selected special (Hatchan, Takoyaki Stand) assumes that the enemy has a defense buff active.'
     },
-    642: { // Squard
+    642: {
         orb: function(p) { return p.orb == 2.0 ? 1.75 : (p.orb == 0.5 ? 4/7 : 1); },
     },
-    643: { // Maelstrom Spider Squard
+    643: {
         orb: function(p) { return p.orb == 2.0 ? 1.75 : (p.orb == 0.5 ? 4/7 : 1); },
     },
-    644: { // Whitey Bay
+    644: {
         atk: function(p) { return 1.2; },
         type: 'condition',
         warning: 'Selected special (Whitey Bay) assumes that the enemy has been delayed.'
     },
-    645: { // Ice Witch Whitey Bay
+    645: {
         atk: function(p) { return 1.2; },
         type: 'condition',
         warning: 'Selected special (Ice Witch Whitey Bay) assumes that the enemy has been delayed.'
     },
-    648: { // Marco, Commander of the 1st Division of the Whitebeard Pirates
+    648: {
         orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); },
     },
-    649: { // Phoenix Marco, Commander of the 1st Division of the Whitebeard Pirates
+    649: {
         orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); },
     },
-    650: { // Nami Voyage Log: Straw Hat Pirates (Log Nami)
+    650: {
         orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); }
     },
-    651: { // Nami Voyage Dream: World Map (Log Nami)
+    651: {
         orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); }
     },
-    655: { // Pirate Arlong
+    655: {
         orb: function(p) { return p.orb == 2.0 ? 1.25 : (p.orb == 0.5 ? 4/5 : 1); }
     },
-    656: { // Arlong of the Sun Pirates
+    656: {
         orb: function(p) { return p.orb == 2.0 ? 1.25 : (p.orb == 0.5 ? 4/5 : 1); }
     },
-    660: { // Usopp Voyage Log: Straw Hat Pirates (Log Usopp)
+    660: {
         def: function(p) { return 0.5; }
     },
-    661: { // Usopp Voyage Dream: Brave Warrior of the Sea (Log Usopp)
+    661: {
         def: function(p) { return 0.5; }
     },
-    665: { // Koza, Alabasta Citizen
+    665: {
         atk: function(p) { return p.defenseDown ? 1.3 : 1; },
         type: 'condition'
     },
-    666: { // Koza, Leader of the Suna Suna Clan
+    666: {
         atk: function(p) { return p.defenseDown ? 1.3 : 1; },
         type: 'condition'
     },
-    668: { // Sabo
+    668: {
         atk: function(p) { return !p.unit.class.has('Freedom') ? 1 : window.specials[668].multiplier; },
         type: 'class',
         onActivation: function(p) {
@@ -460,7 +460,7 @@ window.specials = {
             });
         }
     },
-    669: { // Sabo the Revolutionary
+    669: {
         atk: function(p) { return !p.unit.class.has('Freedom') ? 1 : window.specials[669].multiplier; },
         type: 'class',
         onActivation: function(p) {
@@ -473,63 +473,63 @@ window.specials = {
             });
         }
     },
-    670: { // Koala
+    670: {
         atk: function(p) { return p.unit.class.has("Fighter") ? 1.75 : 1; },
         type: 'class'
     },
-    671: { // Koala the Revolutionary
+    671: {
         atk: function(p) { return p.unit.class.has("Fighter") ? 1.75 : 1; },
         type: 'class'
     },
-    680: { // Ice Cream Loving Nami
+    680: {
         atk: function(p) { return p.unit.type == "DEX" ? 1.25 : 1; },
         rcv: function(p) { return p.unit.type == "DEX" ? 1.25 : 1; },
         type: 'type'
     },
-    681: { // Lemon Ice Cream Loving Nami
+    681: {
         atk: function(p) { return p.unit.type == "DEX" ? 1.25 : 1; },
         rcv: function(p) { return p.unit.type == "DEX" ? 1.25 : 1; },
         type: 'type'
     },
-    687: { // Calgara
+    687: {
         atk: function(p) { return p.unit.class.has("Freedom") ? 1.3 : 1; },
         type: 'class'
     },
-    688: { // Calgara, the Great Warrior of Shandia
+    688: {
         atk: function(p) { return p.unit.class.has("Freedom") ? 1.3 : 1; },
         type: 'class'
     },
-    689: { // Montblanc Noland
+    689: {
         orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); },
     },
-    690: { // Montblanc Noland, Explorer and Admiral of the Lvneel Kingdom
+    690: {
         orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); },
     },
-    710: { // Franky Voyage Log: Straw Hat Pirates (Log Franky)
+    710: {
         atk: function(p) { return p.unit.class.has("Shooter") ? 1.25 : 1; },
         type: 'class'
     },
-    711: { // Franky Voyage Dream: A Ship to Sail Around the World (Log Franky)
+    711: {
         atk: function(p) { return p.unit.class.has("Shooter") ? 1.25 : 1; },
         type: 'class'
     },
-    712: { // Gan Fall
+    712: {
         atk: function(p) { return p.slot < 2 ? 1.5 : 1; },
         type: 'class'
     },
-    713: { // Gan Fall the Knight of the Sky
+    713: {
         atk: function(p) { return p.slot < 2 ? 1.5 : 1; },
         type: 'class'
     },
-    715: { // Konis
+    715: {
         atk: function(p) { return p.unit.class.has("Freedom") ? 1.5 : 1; },
         type: 'class'
     },
-    716: { // Konis, Skypiean Maiden
+    716: {
         atk: function(p) { return p.unit.class.has("Freedom") ? 1.5 : 1; },
         type: 'class'
     },
-    719: { // Sir Crocodile Logia Warlord of the Sea
+    719: {
         atk: function(p) { return p.unit.class.has("Knowledge") ? window.specials[719].multiplier : 1; },
         type: 'class',
         onActivation: function(p) {
@@ -541,7 +541,7 @@ window.specials = {
             });
         }
     },
-    720: { // Sir Crocodile Logia Former Warlord of the Sea
+    720: {
         atk: function(p) { return p.unit.class.has("Knowledge") ? window.specials[720].multiplier : 1; },
         type: 'class',
         onActivation: function(p) {
@@ -553,71 +553,71 @@ window.specials = {
             });
         }
     },
-    727: { // Monkey D. Luffy Gum-Gum Gatling
+    727: {
         def: function(p) { return 0.5; }
     },
-    730: { // Jabra, Cipher Pol No.9
+    730: {
         atk: function(p) { return p.unit.type == "INT" ? 1.5 : 1; },
         type: 'type'
     },
-    731: { // Jabra Rokushiki, Cipher Pol No.9
+    731: {
         atk: function(p) { return p.unit.type == "INT" ? 1.5 : 1; },
         type: 'type'
     },
-    732: { // Fukuro, Cipher Pol No.9
+    732: {
         def: function(p) { return 0.5; }
     },
-    733: { // Fukuro Rokushiki, Cipher Pol No.9
+    733: {
         def: function(p) { return 0.5; }
     },
-    740: { // Nero
+    740: {
         atk: function(p) { return 1.3; },
         type: 'condition',
         warning: 'Selected special (Nero) assumes that the enemy has a defense buff active.'
     },
-    741: { // Nero, Cipher Pol No.9
+    741: {
         atk: function(p) { return 1.3; },
         type: 'condition',
         warning: 'Selected special (Nero, Cipher Pol No.9) assumes that the enemy has a defense buff active.'
     },
-    742: { // Wanze
+    742: {
         orb: function(p) { return p.orb == 2.0 ? 1.25 : (p.orb == 0.5 ? 4/5 : 1); }
     },
-    743: { // Wanze, Cipher Pol No.7
+    743: {
         orb: function(p) { return p.orb == 2.0 ? 1.25 : (p.orb == 0.5 ? 4/5 : 1); }
     },
-    753: { // Jabra, CP9's Dark Justice
+    753: {
         orb: function(p) { return p.orb == 2.0 ? 1.75 : (p.orb == 0.5 ? 4/7 : 1); },
     },
-    754: { // Jabra, CP9's Strongest Generation
+    754: {
         orb: function(p) { return p.orb == 2.0 ? 1.75 : (p.orb == 0.5 ? 4/7 : 1); },
     },
-    755: { // Blueno, CP9's Dark Justice
+    755: {
         atk: function(p) { return p.unit.class.has("Tough") ? 1.75 : 1; },
         type: 'class'
     },
-    756: { // Blueno, CP9's Strongest Generation
+    756: {
         atk: function(p) { return p.unit.class.has("Tough") ? 1.75 : 1; },
         type: 'class'
     },
-    761: { // Monkey D. Luffy Halloween Monster (Halloween Luffy)
+    761: {
         atk: function(p) { return 1.2; },
         type: 'type'
     },
-    762: { // Usopp Lying Wolf (Halloween Usopp)
+    762: {
         atk: function(p) { return p.unit.type == "PSY" ? 1.75 : 1; },
         type: 'type'
     },
-    770: { // Dalmatian, Navy HQ Vice Admiral
+    770: {
         atk: function(p) { return 1.3; },
         type: 'condition',
         warning: 'Selected special (Dalmatian, Navy Headquarters Vice Admiral) assumes that the enemy has been delayed.'
     },
-    771: { // Momonga, Navy HQ Vice Admiral
+    771: {
         atk: function(p) { return p.unit.class.has("Knowledge") ? 1.75 : 1; },
         type: 'type'
     },
-    780: { // Urouge, Captain of the Fallen Monk Pirates
+    780: {
         atk: function(p) {
             return p.slot == p.sourceSlot ? window.specials[780].multiplier : 1;
         },
@@ -631,7 +631,7 @@ window.specials = {
             });
         }
     },
-    781: { // Mad Monk Urouge, Captain of the Fallen Monk Pirates
+    781: {
         atk: function(p) {
             return p.slot == p.sourceSlot ? window.specials[781].multiplier : 1;
         },
@@ -645,46 +645,46 @@ window.specials = {
             });
         }
     },
-    788: { // Kuina
+    788: {
         atk: function(p) { return p.unit.class.has("Slasher") ? 1.75 : 1; },
         type: 'class',
     },
-    789: { // Kuina, Shimotsuki Village's Girl Swordsman
+    789: {
         atk: function(p) { return p.unit.class.has("Slasher") ? 1.75 : 1; },
         type: 'class',
     },
-    790: { // Tamanegi, Piiman & Ninjin
+    790: {
         atk: function(p) { return /STR|DEX|QCK/.test(p.unit.type) ? 1.2 : 1; },
         type: 'type',
     },
-    791: { // Tamanegi, Piiman & Ninjin, the Usopp Pirates
+    791: {
         atk: function(p) { return /STR|DEX|QCK/.test(p.unit.type) ? 1.2 : 1; },
         type: 'type',
     },
-    796: { // Breed
+    796: {
         atk: function(p) { return p.slot == p.sourceSlot ? 1.75 : 1; },
         type: 'type',
     },
-    797: { // Breed, User of the Peto-Peto Fruit
+    797: {
         atk: function(p) { return p.slot == p.sourceSlot ? 1.75 : 1; },
         type: 'type',
     },
-    798: { // Kung Fu Dugong, Sea Animal Pirates
+    798: {
         atk: function(p) { return p.unit.class.has("Fighter") ? 1.75 : 1; },
         type: 'class'
     },
-    803: { // Hina, Navy HQ Captain
+    803: {
         atk: function(p) { return 1.1; },
         type: 'type'
     },
-    804: { // Black Cage Hina, Navy HQ Captain
+    804: {
         atk: function(p) { return 1.1; },
         type: 'type'
     },
-    805: { // Smoker, Navy HQ Captain
+    805: {
         orb: function(p) { return p.orb == 2.0 ? 1.75 : (p.orb == 0.5 ? 4/7 : 1); },
     },
-    806: { // Smoker the White Hunter, Navy HQ Captain
+    806: {
         orb: function(p) { return p.orb == 2.0 ? 1.75 : (p.orb == 0.5 ? 4/7 : 1); },
     }
 };
