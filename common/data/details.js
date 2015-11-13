@@ -1646,7 +1646,7 @@ window.details = {
     248: { // Tony Tony Chopper Pre-Rampage (Monster Chopper)
         special: "Deals random STR damage to one enemy",
         specialName: "Rampage",
-        specialNotes: "Estimated damage range: between 1 HP and 200,000 HP",
+        specialNotes: "Estimated damage range: between 2,000 HP and 200,000 HP. Empirical evidence suggests the damage is not based on the character's ATK.",
         captain: "Boosts ATK of STR characters by 2.5x and reduces their HP by 60%",
         cooldown: [ 30, 15 ],
         evolution: 249,
@@ -1656,7 +1656,7 @@ window.details = {
     249: { // Tony Tony Chopper Post-Rampage (Monster Chopper)
         special: "Deals random STR damage to one enemy",
         specialName: "Rampage",
-        specialNotes: "Estimated damage range: between 1 HP and 200,000 HP",
+        specialNotes: "Estimated damage range: between 2,000 HP and 200,000 HP. Empirical evidence suggests the damage is not based on the character's ATK.",
         captain: "Boosts ATK of STR characters by 3x and reduces their HP by 60%",
         cooldown: [ 30, 15 ],
         flags: { global: 1 }
@@ -2115,6 +2115,7 @@ window.details = {
     317: { // Kalifa
         special: "Randomly changes all orbs into either [DEX] or [STR] orbs, deals random DEX damage to all enemies",
         specialName: "Beautiful Secretary's Job",
+        specialNotes: "Estimated damage range: between 1 HP and 15,000 HP. Empirical evidence suggests the damage is not based on the character's ATK.",
         captain: "Recovers 500 HP at end of turn, reduces damage received by 10%",
         cooldown: [ 25, 18 ],
         evolution: 318,
@@ -2124,6 +2125,7 @@ window.details = {
     318: { // Beautiful Secretary Kalifa
         special: "Randomly changes all orbs into either [DEX] or [STR] orbs, deals random DEX damage to all enemies",
         specialName: "Beautiful Secretary's Job",
+        specialNotes: "Estimated damage range: between 1 HP and 15,000 HP. Empirical evidence suggests the damage is not based on the character's ATK.",
         captain: "Recovers 500 HP at end of turn, reduces damage received by 15%",
         cooldown: [ 25, 18 ],
         flags: { global: 1 }
@@ -2285,6 +2287,7 @@ window.details = {
     340: { // Kraken Surume
         special: "Randomly changes all orbs into either [STR] or [QCK] orbs, deals random STR damage to all enemies",
         specialName: "Kraken Tentacle Crush",
+        specialNotes: "Estimated damage range: between 1 HP and 15,000 HP. Empirical evidence suggests the damage is not based on the character's ATK.",
         captain: "Boosts ATK of Striker characters by 2x",
         cooldown: [ 25, 18 ],
         evolution: 341,
@@ -2294,6 +2297,7 @@ window.details = {
     341: { // Kraken Monster of the North
         special: "Randomly changes all orbs into either [STR] or [QCK] orbs, deals random STR damage to all enemies",
         specialName: "Kraken Tentacle Crush",
+        specialNotes: "Estimated damage range: between 1 HP and 15,000 HP. Empirical evidence suggests the damage is not based on the character's ATK.",
         captain: "Boosts ATK of Striker characters by 2x",
         cooldown: [ 25, 18 ],
         flags: { global: 1 }
@@ -2386,6 +2390,7 @@ window.details = {
         special: "Changes [TND] and [RCV] orbs into [DEX] orbs, deals random DEX damage to all enemies",
         specialName: "Scratch Body",
         captain: "Boosts ATK of DEX characters by 2.5x if HP is above 99% at the start of the turn",
+        specialNotes: "Estimated damage range: between 5,000 HP and 20,000 HP. Empirical evidence suggests the damage is not based on the character's ATK.",
         cooldown: [ 20, 12 ],
         evolution: 359,
         evolvers: [ 118, 80, 83, 302, 102 ],
@@ -2394,6 +2399,7 @@ window.details = {
     359: { // Roar of the Sea Scratchmen Apoo
         special: "Changes [TND] and [RCV] orbs into [DEX] orbs, deals random DEX damage to all enemies",
         specialName: "Scratch Body",
+        specialNotes: "Estimated damage range: between 5,000 HP and 20,000 HP. Empirical evidence suggests the damage is not based on the character's ATK.",
         captain: "Boosts ATK of DEX characters by 3x if HP is above 99% at the start of the turn",
         cooldown: [ 20, 12 ],
         flags: { global: 1, rr: 1 }
@@ -2608,6 +2614,7 @@ window.details = {
     387: { // Cindry
         special: "Randomly changes all orbs into either [PSY] or [INT] orbs, deals random PSY damage to all enemies",
         specialName: "Square Plate Sword",
+        specialNotes: "Estimated damage range: between 1 HP and 10,000 HP. Empirical evidence suggests the damage is not based on the character's ATK.",
         captain: "Boosts RCV of PSY characters by 1.5x",
         cooldown: [ 25, 18 ],
         evolution: 388,
@@ -2617,6 +2624,7 @@ window.details = {
     388: { // Victoria Cindry
         special: "Randomly changes all orbs into either [PSY] or [INT] orbs, deals random PSY damage to all enemies",
         specialName: "Square Plate Sword",
+        specialNotes: "Estimated damage range: between 1 HP and 10,000 HP. Empirical evidence suggests the damage is not based on the character's ATK.",
         captain: "Boosts RCV of PSY characters by 1.5x",
         cooldown: [ 25, 18 ],
         flags: { global: 1 }
@@ -2898,7 +2906,7 @@ window.details = {
     425: { // Ryuma
         special: "Deals random PSY damage to all enemies",
         specialName: "Shusui: Three Verse Arrow Notch Slash",
-        specialNotes: "Estimated damage range: between 1 HP and 100,000 HP",
+        specialNotes: "Estimated damage range: between 1 HP and 100,000 HP. Empirical evidence suggests the damage is not based on the character's ATK.",
         captain: "Boosts ATK and HP of Slasher characters by 1.5x",
         cooldown: [ 35, 18 ],
         flags: { global: 1 }
