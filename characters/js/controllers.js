@@ -100,7 +100,7 @@ app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, 
     var id = parseInt($stateParams.id, 10);
     $scope.id = id;
     $scope.unit = $.extend({},window.units[id - 1]);
-    $scope.hybrid = $scope.unit.class.constructor == Array;
+    $scope.hybrid = $scope.unit.class && $scope.unit.class.constructor == Array;
     $scope.details = window.details[id];
     $scope.cooldown = window.cooldowns[id - 1];
     // derived data
@@ -125,7 +125,7 @@ app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, 
         $('#compare').prop('disabled', false);
     };
     $scope.getPrevious = function() { return $stateParams.previous.concat($scope.id); };
-    $scope.isSpecialArray = ($scope.details && scope.details.special && $scope.details.special.constructor == Array);
+    $scope.isSpecialArray = ($scope.details && $scope.details.special && $scope.details.special.constructor == Array);
 });
 
 app.controller('ColumnsCtrl',function($scope, $rootScope, $state, $stateParams) {

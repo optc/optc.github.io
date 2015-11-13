@@ -1,6 +1,6 @@
 (function() {
 
-var app = angular.module('optc', [ ]);
+var app = angular.module('optc', [ 'ui.bootstrap' ]);
 
 Utils.parseUnits(false);
 
@@ -52,7 +52,16 @@ app.directive('island',function() {
         restrict: 'E',
         scope: { island: '=', data: '=', type: '=', hiddenUnits: '=' },
         replace: true,
-        templateUrl: 'island.html'
+        templateUrl: 'island.html',
+        link: function(scope, element, attrs) {
+            scope.isTooltipEnabled = function(id) { return !!cooldowns[id - 1]; };
+            scope.getCooldownTooltip = function(id) { 
+                var temp = cooldowns[id - 1];
+                if (!temp) return null;
+                if (temp.constructor == Array) return temp[0] + ' \u2192 ' + temp[1] + ' turns';
+                else return temp[0] + ' turns';
+            };
+        }
     };
 });
 
