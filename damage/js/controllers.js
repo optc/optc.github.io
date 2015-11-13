@@ -248,7 +248,7 @@ controllers.PopoverCtrl = function($scope) {
     if (!$scope.data.team[$scope.slot].unit) return;
     var id = $scope.data.team[$scope.slot].unit.number + 1;
     $scope.details = window.details[id];
-    $scope.cooldown = window.cooldowns[id];
+    $scope.cooldown = window.cooldowns[id - 1];
 };
 
 /*****************************
