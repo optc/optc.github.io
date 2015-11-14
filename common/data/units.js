@@ -789,7 +789,7 @@ window.units = [
 	[ "Kuina", "DEX", "Striker", 3, 9, 6, 2, 35, 136167, 54, 41, 70, 503, 264, 251, 1 ],
 	[ "Kuina, Shimotsuki Village's Girl Swordsman", "DEX", "Slasher", 4, 15, 5, 3, 70, 1066998, 448, 220, 213, 917, 582, 338, 1 ],
 	[ "Tamanegi, Piiman & Ninjin", "QCK", [ "Striker", "Freedom" ], 3, 9, 4, 3, 35, 136167, 80, 10, 66, 716, 142, 249, 1 ],
-	[ "Tamanegi, Piiman & Ninjin, the Usopp Pirates", "QCK", [ "Striker", "Freedom" ], 4, 15, 6, 3, 70, 1066998, 654, 77, 180, 1200, 333, 350, 0 ],
+	[ "Tamanegi, Piiman & Ninjin, the Usopp Pirates", "QCK", [ "Striker", "Freedom" ], 4, 15, 6, 3, 70, 1066998, 654, 77, 180, 1200, 333, 350, 1 ],
 	[ "Iceburg", "INT", [ "Shooter", "Knowledge" ], 3, 9, 6, 2, 35, 136167, 155, 69, 38, 790, 392, 167, 1 ],
 	[ "Iceburg, Mayor of W7 and President of Galley-La Company", "INT", [ "Shooter", "Knowledge" ], 4, 16, 4, 3, 70, 1066998, 723, 343, 122, 1401, 702, 224, 1 ],
 	[ "Monkey D. Luffy Rising Star", "INT", [ "Slasher", "Tough" ], 4, 30, 4, 1, 70, 1066998, 259, 179, 0, 1400, 763, 0, 1.5 ],
