@@ -799,10 +799,10 @@ window.units = [
 	[ "Kung Fu Dugong, Sea Animal Pirates", "PSY", [ "Fighter", "Tough" ], 4, 18, 5, 2, 70, 1778330, 50, 355, 95, 450, 1115, 225, 1.5 ],
 	[ "Sea Lapin, Sea Animal Pirates", "QCK", [ "Fighter", "Tough" ], 3, 15, 4, 1, 70, 711332, 209, 76, 14, 1757, 724, 112, 1 ],
 	[ "Octopus Boxer, Sea Animal Pirates", "STR", [ "Fighter", "Tough" ], 3, 15, 8, 1, 70, 711332, 99, 91, 2, 1563, 846, 93, 1 ],
-	[ "Mr. 2 Bon Clay Voyage Log: B.W. (Log Bon Clay)", "PSY", [ "Fighter", "Freedom" ], 4, 13, 5, 2, 50, null, 467, 233, 101, 1033, 513, 212, 0 ],
+	[ "Mr. 2 Bon Clay Voyage Log: B.W. (Log Bon Clay)", "PSY", [ "Fighter", "Freedom" ], 4, 13, 5, 2, 50, null, 109, 57, 32, 1033, 513, 212, 1 ],
 	[ "Mr. 2 Bon Clay Voyage Dream: Okama Way (Log Bon Clay)", "PSY", [ "Fighter", "Freedom" ], 5, 20, 4, 3, 99, null, 970, 448, 181, 1914, 922, 362, 1 ],
 	[ "Hina, Navy HQ Captain", "DEX", [ "Fighter", "Knowledge" ], 4, 18, 5, 1, 50, null, 188, 128, 48, 977, 544, 191, 1 ],
-	[ "Black Cage Hina, Navy HQ Captain", "DEX", [ "Fighter", "Knowledge" ], 5, 30, 5, 3, 99, null, 920, 488, 159, 1900, 912, 357, 1 ],
+	[ "Black Cage Hina, Navy HQ Captain", "DEX", [ "Fighter", "Knowledge" ], 5, 30, 5, 3, 99, null, 920, 488, 159, 1901, 912, 357, 1 ],
 	[ "Smoker, Navy HQ Captain", "INT", "Striker", 4, 25, 6, 2, 70, null, 710, 310, 44, 1600, 702, 146, 1.5 ],
 	[ "Smoker the White Hunter, Navy HQ Captain", "INT", "Striker", 5, 40, 5, 3, 99, null, 1549, 640, 112, 2727, 1289, 234, 1.5 ]
 ];
