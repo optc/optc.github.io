@@ -279,7 +279,7 @@ directives.addTags = function($stateParams, $rootScope) {
             var id = $stateParams.id, data = details[id];
             // flags
             var flags = window.flags[id] || { };
-            element.append($('<span class="tag flag">' + (flags.global ? 'Global' : 'JP only') + '</div>'));
+            element.append($('<span class="tag flag">' + (flags.global ? 'Global unit' : 'Japan unit') + '</div>'));
             element.append($('<span class="tag flag">' +
                         (CharUtils.isFarmable(id) ? 'Farmable' : 'Non-farmable') + '</div>'));
             if (flags.rr) element.append($('<span class="tag flag">Rare Recruit only</div>'));

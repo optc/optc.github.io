@@ -24,7 +24,7 @@
     <span class="filter-header">Drop filters</span>
     <span ng-repeat="type in [ 'Farmable', 'Non-farmable' ]" class="filter width-6 drop" ng-model="filters.drop"
         ng-class="{ active: filters.drop == type }" ng-click="onFilterClick($event,type)">{{type}}</span>
-    <span ng-repeat="type in [ 'Global only', 'JP only' ]" class="filter width-6 drop" ng-model="filters.server"
+    <span ng-repeat="type in [ 'Global units', 'Japan units' ]" class="filter width-6 drop" ng-model="filters.server"
         ng-class="{ active: filters.server == type }" ng-click="onFilterClick($event,type)">{{type}}</span>
 </div>
 

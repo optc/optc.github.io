@@ -145,8 +145,8 @@ $.fn.dataTable.ext.search.push(function(settings, data, index) {
     if (filters.noSpecials && (flags.lrr || flags.promo || flags.special)) return false;
     // filter by server
     if (filters.server) {
-        if (filters.server == 'Global only' && !flags.global) return false;
-        if (filters.server !== 'Global only' && flags.global) return false;
+        if (filters.server == 'Global units' && !flags.global) return false;
+        if (filters.server !== 'Global units' && flags.global) return false;
     }
     // filter by active matchers
     if (filters.custom.length > 0 && !window.details.hasOwnProperty(id)) return false;
