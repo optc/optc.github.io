@@ -2414,11 +2414,13 @@ window.details = {
 	577: {
 		special: "Deals random typeless damage to all enemies, changes own orb into [STR]",
 		specialName: "Gum-Gum JET Gatling",
+		specialNotes: "Estimated damage range: between 70,000 HP and 200,000 HP. Empirical evidence suggests the damage is not based on the character's ATK.",
 		captain: "Boosts ATK by 4x following a chain of Good > Great > Perfect hits"
 	},
 	578: {
 		special: "Deals random typeless damage to all enemies, changes own orb into [STR]",
 		specialName: "Gum-Gum JET Gatling",
+		specialNotes: "Estimated damage range: between 70,000 HP and 200,000 HP. Empirical evidence suggests the damage is not based on the character's ATK.",
 		captain: "Boosts ATK by 4x following a chain of Good > Great > Perfect hits"
 	},
 	579: {
