@@ -1161,13 +1161,13 @@ window.details = {
 		captain: "Reduces RCV of all characters by 90%, reduces damage received by 40%"
 	},
 	311: {
-		special: "Deals 100x character's ATK in fixed QCK damage to one enemy, reduces crew's HP to 1",
+		special: "Deals 100x character's ATK in fixed damage to one enemy, reduces crew's HP to 1",
 		specialNotes: "Fixed damage means the special entirely bypasses enemy defense",
 		specialName: "Massacre Soldier",
 		captain: "Boosts ATK by 3.5x after scoring 3 hits below Good in a row"
 	},
 	312: {
-		special: "Deals 100x character's ATK in fixed QCK damage to one enemy, reduces crew's HP to 1",
+		special: "Deals 100x character's ATK in fixed damage to one enemy, reduces crew's HP to 1",
 		specialNotes: "Fixed damage means the special entirely bypasses enemy defense",
 		specialName: "Massacre Soldier",
 		captain: "Boosts ATK by 3.5x after scoring 3 hits below Good in a row"
@@ -2119,13 +2119,13 @@ window.details = {
 		captain: "Boosts HP of PSY characters by 2x, boosts chances of getting [RCV] orbs"
 	},
 	519: {
-		special: "Reduces crew's current HP by 99%, deals 25x character's ATK in fixed STR damage to all enemies, boosts ATK of STR characters by 2x for 1 turn",
+		special: "Reduces crew's current HP by 99%, deals 25x character's ATK in fixed damage to all enemies, boosts ATK of STR characters by 2x for 1 turn",
 		specialNotes: "Fixed damage means the special entirely bypasses enemy defense",
 		specialName: "Gum-Gum Gigant Thunder Axe",
 		captain: "Boosts ATK of STR characters by 2x"
 	},
 	520: {
-		special: "Reduces crew's current HP by 99%, deals 25x character's ATK in fixed STR damage to all enemies, boosts ATK of STR characters by 2x for 1 turn",
+		special: "Reduces crew's current HP by 99%, deals 25x character's ATK in fixed damage to all enemies, boosts ATK of STR characters by 2x for 1 turn",
 		specialNotes: "Fixed damage means the special entirely bypasses enemy defense",
 		specialName: "Gum-Gum Gigant Thunder Axe",
 		captain: "Boosts ATK of STR characters by 2.5x"
@@ -3078,14 +3078,14 @@ window.details = {
 		captain: "Boosts RCV of all characters by 5x if HP is low"
 	},
 	717: {
-		special: "Deals 50% of the damage dealt in the previous turn as typeless damage to all enemes",
+		special: "Deals 50% of the damage dealt in the previous turn as typeless damage to all enemies",
 		specialNotes: "The special only includes the damage inflicted through normal attacks.",
 		specialName: "Black Sword - Lightning Slash",
 		captain: "Boosts ATK of Slasher characters by a variable factor between 2x and 2.75x based on the timing of the attack of the previous unit in the chain",
 		captainNotes: "A hit below Good or a Miss will boost the ATK of the next unit by 2x, a Good hit by 2.25x, a Great hit by 2.5x and a Perfect hit by 2.75x. This bonus is applied only to Slasher characters."
 	},
 	718: {
-		special: "Deals 50% of the damage dealt in the previous turn as typeless damage to all enemes",
+		special: "Deals 50% of the damage dealt in the previous turn as typeless damage to all enemies",
 		specialNotes: "The special only includes the damage inflicted through normal attacks.",
 		specialName: "Black Sword - Lightning Slash",
 		captain: "Boosts ATK of Slasher characters by a variable factor between 2x and 2.75x based on the timing of the attack of the previous unit in the chain",
