@@ -696,9 +696,11 @@ window.specials = {
 		type: "condition"
 	},
 	809: {
-		orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); }
+		orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); },
+		def: function(p) { return 0.2; }
 	},
 	810: {
-		orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); }
+		orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); },
+		def: function(p) { return 0.2; }
 	}
 };
