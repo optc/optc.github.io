@@ -3553,5 +3553,31 @@ window.details = {
 		specialName: "White Vine",
 		special: "Reduces crew's current HP by 20%, deals 10x the amount of HP subtracted in INT damage to one enemy, amplifies the effect of orbs by 1.75x for 1 turn",
 		specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.75x more damage and opposite orbs will deal 1.75x less damage"
+	},
+	807: {
+		captain: "Boosts ATK and RCV of Knowledge characters by 1.5x",
+		specialName: "Thunder Charge: Swing Arm",
+		special: "Deals 15x character's ATK in PSY damage to one enemy, boosts ATK against enemies with reduced defense by 1.3x for 3 turns"
+	},
+	808: {
+		captain: "Boosts ATK and RCV of Knowledge characters by 1.5x, recovers a small amount of HP at the end of each turn",
+		specialName: "Thunder Charge: Swing Arm",
+		special: "Deals 15x character's ATK in PSY damage to one enemy, boosts ATK against enemies with reduced defense by 1.3x for 3 turns"
+	},
+	809: {
+		captain: "Boosts ATK and RCV of Tough characters by 1.5x",
+		specialName: "Lola's Attack Chance",
+		special: "Sharply reduces the defense of all enemies, amplifies the effect of orbs by 1.5x for 1 turn",
+		specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.5x more damage and opposite orbs will deal 1.5x less damage"
+	},
+	810: {
+		captain: "Boosts ATK and Tough characters by 2x and their RCV by 1.5x",
+		specialName: "Lola's Attack Chance",
+		special: "Sharply reduces the defense of all enemies, amplifies the effect of orbs by 1.5x for 1 turn",
+		specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.5x more damage and opposite orbs will deal 1.5x less damage"
+	},
+	811: {
+		specialName: "Birdbrain Present",
+		special: "Changes own orb into DEX, freely switch orbs between slots once"
 	}
 };
