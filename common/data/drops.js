@@ -728,7 +728,7 @@ window.drops = {
         },
 
         {
-            name: "Big Proposal Battle",
+            name: "Nami and Lola",
             thumb: 808,
             Expert: [ 807, 809, 811, -811, -645, -641, -502, -11, -12, -9 ],
             Elite: [ 807, 809, 811, -811, -645, -641, -502, -11, -12, -9 ]

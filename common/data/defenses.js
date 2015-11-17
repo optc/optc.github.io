@@ -141,6 +141,10 @@ window.defenses = [
     [ 'Kung Fu Dugong'                      , 'Breed Fortnight'                      , 'Expert', 798, 75 ],
     [ 'Breed (5th round)'                   , 'Breed Fortnight'                      , 'Expert', 796, 100 ],
     [ 'Breed (6th round)'                   , 'Breed Fortnight'                      , 'Expert', 797, 1000 ],
+    [ 'Lola'                                , 'Nami and Lola Fortnight'              , 'Expert', 810, 1000 ],
+    [ 'Nami'                                , 'Nami and Lola Fortnight'              , 'Expert', 808, 200 ],
+    [ 'Absalom'                             , 'Nami and Lola Fortnight'              , 'Expert', 404, 200 ],
+    [ 'Sanji'                               , 'Nami and Lola Fortnight'              , 'Expert', 17, 200 ],
     /* * * * * Others * * * * */
     [ 'Thatch'                              , 'Whitebeard\'s island, 11th round'     , '', 448, 50 ],
     [ 'Namur'                               , 'Whitebeard\'s island, 12th round'     , '', 450, 500 ],
