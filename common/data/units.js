@@ -806,8 +806,8 @@ window.units = [
 	[ "Smoker, Navy HQ Captain", "INT", "Striker", 4, 25, 6, 2, 70, null, 710, 310, 44, 1600, 702, 146, 1.5 ],
 	[ "Smoker the White Hunter, Navy HQ Captain", "INT", "Striker", 5, 40, 5, 3, 99, null, 1549, 640, 112, 2727, 1289, 234, 1.5 ],
 	[ "Pure White Angel Wedding Nami", "PSY", [ "Striker", "Knowledge" ], 4, 13, 5, 1, 50, null, 60, 33, 49, 933, 419, 268, 1 ],
-	[ "Pure White Goddess Wedding Nami", "PSY", [ "Striker", "Knowledge" ], 3, 20, 4, 2, 99, null, 877, 362, 221, 933, 419, 268, 0 ],
-	[ "Lola, Thriller Bark Bride", "STR", [ "Slasher", "Tough" ], 3, 11, 6, 1, 50, null, 388, 209, 48, 1101, 559, 91, 0 ],
-	[ "Courting Lola, Thriller Bark Bride", "STR", [ "Slasher", "Tough" ], 4, 18, 8, 2, 99, null, 1032, 513, 52, null, null, null, 0 ],
-	[ "Risky Brothers", "DEX", [ "Slasher", "Freedom" ], 3, 9, 4, 2, 50, null, 154, 79, 85, null, null, null, 1 ]
+	[ "Pure White Goddess Wedding Nami", "PSY", [ "Striker", "Knowledge" ], 3, 20, 4, 2, 99, null, 877, 362, 221, 1772, 799, 409, 1 ],
+	[ "Lola, Thriller Bark Bride", "STR", [ "Slasher", "Tough" ], 3, 11, 6, 1, 50, null, 103, 70, 32, 1101, 559, 91, 1 ],
+	[ "Courting Lola, Thriller Bark Bride", "STR", [ "Slasher", "Tough" ], 4, 18, 8, 2, 99, null, 1032, 513, 52, 2018, 1009, 147, 1 ],
+	[ "Risky Brothers", "DEX", [ "Slasher", "Freedom" ], 3, 9, 4, 2, 50, null, 30, 15, 40, 707, 368, 287, 1 ]
 ];
