@@ -3567,13 +3567,13 @@ window.details = {
 	809: {
 		captain: "Boosts ATK and RCV of Tough characters by 1.5x",
 		specialName: "Lola's Attack Chance",
-		special: "Reduces the defense of all enemies by 80%, amplifies the effect of orbs by 1.5x for 1 turn",
+		special: "Reduces the defense of all enemies by 80% for 1 turn, amplifies the effect of orbs by 1.5x for 1 turn",
 		specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.5x more damage and opposite orbs will deal 1.5x less damage"
 	},
 	810: {
 		captain: "Boosts ATK of Tough characters by 2x and their RCV by 1.5x, reduces crew's current HP by 10% at the end of each turn",
 		specialName: "Lola's Attack Chance",
-		special: "Reduces the defense of all enemies by 80%, amplifies the effect of orbs by 1.5x for 1 turn",
+		special: "Reduces the defense of all enemies by 80% for 1 turn, amplifies the effect of orbs by 1.5x for 1 turn",
 		specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.5x more damage and opposite orbs will deal 1.5x less damage"
 	},
 	811: {
