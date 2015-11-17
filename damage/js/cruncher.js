@@ -181,7 +181,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 })[0];
             });
         } else // otherwise, sort from weakest to stongest
-            result = sortDamage(result);
+            result.sort(function(x,y) { return x.damage - y.damage; });
         return result;
     };
 
@@ -334,13 +334,6 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         return 1.0;
     };
 
-    var sortDamage = function(data) {
-        return data
-            .map(function(x) { return [ (x.damage / x.unit.unit.combo - currentDefense) * x.unit.unit.combo, x ]; })
-            .sort(function(x,y) { return x[0] - y[0]; })
-            .map(function(x) { return x[1]; });
-    };
-
     /* * * * * Captain effects/specials * * * * */
 
     var applyCaptainEffectsToDamage = function(damage,func,modifiers,isStatic) {
@@ -418,7 +411,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 return { unit: x.unit, orb: x.orb, damage: x.damage * multiplier, position: x.position };
             });
             // sort by damage again
-            if (!noSorting) temp = sortDamage(temp);
+            if (!noSorting) temp = temp.sort(function(x,y) { return x.damage - y.damage; });
             // apply non-static captain effects
             for (var i=0;i<cptsWith.hitModifiers.length;++i)
                 temp = applyCaptainEffectsToDamage(temp,cptsWith.hitModifiers[i].hitAtk,hitModifiers);

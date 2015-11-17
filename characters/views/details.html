@@ -207,8 +207,8 @@
                         <tbody>
                             <tr ng-repeat="tree in evolvesFrom">
                                 <td><div ng-repeat="id in tree">
-                                        <evolution unit="unit" base="id" evolvers="getEvos(id,tree[$index+1] || unit.number+1)"
-                                            evolution="tree[$index+1] || unit.number + 1" size="medium"></evolution></div></td>
+                                    <evolution unit="unit" base="id" evolvers="getEvos(id,tree[$index+1] || unit.number+1)"
+                                        evolution="tree[$index+1] || unit.number + 1" size="medium"></evolution></div></td>
                             </tr>
                         </tbody>
                     </table>
