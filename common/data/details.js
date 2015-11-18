@@ -3560,7 +3560,7 @@ window.details = {
 		special: "Deals 15x character's ATK in PSY damage to one enemy, boosts ATK against enemies with reduced defense by 1.3x for 3 turns"
 	},
 	808: {
-		captain: "Boosts ATK and RCV of Knowledge characters by 1.5x, recovers a small amount of HP at the end of each turn",
+		captain: "Boosts ATK and RCV of Knowledge characters by 1.5x, recovers 2x character's RCV in HP at the end of each turn",
 		specialName: "Thunder Charge: Swing Arm",
 		special: "Deals 15x character's ATK in PSY damage to one enemy, boosts ATK against enemies with reduced defense by 1.3x for 3 turns"
 	},
