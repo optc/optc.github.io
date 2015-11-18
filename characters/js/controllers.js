@@ -105,7 +105,12 @@ app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, 
     $scope.cooldown = window.cooldowns[id - 1];
     $scope.evolution = window.evolutions[id];
     // derived data
-    $scope.evolvesFrom = CharUtils.searchBaseForms(id);
+    var evolvesFrom = CharUtils.searchBaseForms(id);
+    $scope.evolvesFrom = [ ];
+    for (var from in evolvesFrom) {
+        for (var i=0;i<evolvesFrom[from].length;++i)
+            $scope.evolvesFrom.push({ from: parseInt(from, 10), to: $scope.id, via: evolvesFrom[from][i] });
+    }
     $scope.usedBy = CharUtils.searchEvolverEvolutions(id);
     $scope.drops = CharUtils.searchDropLocations(id);
     $scope.tandems = CharUtils.searchTandems(id);

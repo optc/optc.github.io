@@ -4,7 +4,7 @@ var CharUtils = { };
 
 /* * * * * Reverse drop map * * * * */
 
-var reverseDropMap = null;
+var reverseDropMap = null, reverseEvoMap = null;
 var marks = { 'Story Island': 1, 'Special': 2, 'Fortnight': 4, 'Raid': 8 };
 
 var generateReverseDropMap = function() {
@@ -20,6 +20,24 @@ var generateReverseDropMap = function() {
                 }
             }
         }
+    }
+};
+
+
+var updateEvoMap = function(from, to, via) {
+    if (!reverseEvoMap[to]) reverseEvoMap[to] = { };
+    if (!reverseEvoMap[to][from]) reverseEvoMap[to][from] = [ ];
+    reverseEvoMap[to][from].push(via);
+};
+
+var generateReverseEvoMap = function() {
+    reverseEvoMap = { };
+    for (var evo in evolutions) {
+        var from = parseInt(evo, 10);
+        if (evolutions[evo].evolution.constructor != Array)
+            updateEvoMap(from, evolutions[evo].evolution, evolutions[evo].evolvers);
+        else for (var i=0;i<evolutions[evo].evolution.length;++i)
+            updateEvoMap(from, evolutions[evo].evolution[i], evolutions[evo].evolvers[i]);
     }
 };
 
@@ -64,22 +82,10 @@ CharUtils.generateSearchParameters = function(query, filters) {
 };
 
 CharUtils.searchBaseForms = function(id) {
-    var temp = [ ], current = parseInt(id,10);
-    for (var key in evolutions) {
-        if (!evolutions[key].evolution) continue;
-        if (evolutions[key].evolution == current ||
-                (evolutions[key].evolution.indexOf && evolutions[key].evolution.indexOf(current) != -1))
-            temp.push(parseInt(key,10));
-    }
-    var result = [ ];
-    for (var i=0;i<temp.length;++i) {
-        var base = CharUtils.searchBaseForms(temp[i]);
-        if (base.length === 0)
-            result.push([ temp[i] ]);
-        else for (var j=0;j<base.length;++j)
-            result.push(base[j].concat(temp[i].constructor == Array ? temp[i] : [ temp[i] ]));
-    }
-    return result;
+    if (!reverseEvoMap) generateReverseEvoMap();
+    if (!reverseEvoMap[id]) return null;
+    return reverseEvoMap[id];
+
 };
 
 CharUtils.searchEvolverEvolutions = function(id) {

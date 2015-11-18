@@ -201,14 +201,14 @@
 
                     <!-- Evolves from -->
 
-                    <h3 class="page-header" ng-if="evolvesFrom.length > 0">Evolves From</h3>
+                    <h3 class="page-header" ng-if="evolvesFrom">Evolves From</h3>
 
-                    <table class="table table-striped table-centered table-bordered table-textless" ng-if="evolvesFrom.length > 0">
+                    <table class="table table-striped table-centered table-bordered table-textless" ng-if="evolvesFrom">
                         <tbody>
-                            <tr ng-repeat="tree in evolvesFrom">
-                                <td><div ng-repeat="id in tree">
-                                    <evolution unit="unit" base="id" evolvers="getEvos(id,tree[$index+1] || unit.number+1)"
-                                        evolution="tree[$index+1] || unit.number + 1" size="medium"></evolution></div></td>
+                            <tr ng-repeat="data in evolvesFrom">
+                                <td>
+                                    <evolution unit="unit" base="data.from" evolvers="data.via" evolution="data.to" size="medium"></evolution>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
