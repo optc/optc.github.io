@@ -801,13 +801,13 @@ window.units = [
 	[ "Octopus Boxer, Sea Animal Pirates", "STR", [ "Fighter", "Tough" ], 3, 15, 8, 1, 70, 711332, 99, 91, 2, 1563, 846, 93, 1 ],
 	[ "Mr. 2 Bon Clay Voyage Log: B.W. (Log Bon Clay)", "PSY", [ "Fighter", "Freedom" ], 4, 13, 5, 2, 50, null, 109, 57, 32, 1033, 513, 212, 1 ],
 	[ "Mr. 2 Bon Clay Voyage Dream: Okama Way (Log Bon Clay)", "PSY", [ "Fighter", "Freedom" ], 5, 20, 4, 3, 99, null, 970, 448, 181, 1914, 922, 362, 1 ],
-	[ "Hina, Navy HQ Captain", "DEX", [ "Fighter", "Knowledge" ], 4, 18, 5, 1, 50, null, 188, 128, 48, 977, 544, 191, 1 ],
-	[ "Black Cage Hina, Navy HQ Captain", "DEX", [ "Fighter", "Knowledge" ], 5, 30, 5, 3, 99, null, 920, 488, 159, 1901, 912, 357, 1 ],
-	[ "Smoker, Navy HQ Captain", "INT", "Striker", 4, 25, 6, 2, 70, null, 710, 310, 44, 1600, 702, 146, 1.5 ],
-	[ "Smoker the White Hunter, Navy HQ Captain", "INT", "Striker", 5, 40, 5, 3, 99, null, 1549, 640, 112, 2727, 1289, 234, 1.5 ],
-	[ "Pure White Angel Wedding Nami", "PSY", [ "Striker", "Knowledge" ], 4, 13, 5, 1, 50, null, 60, 33, 49, 933, 419, 268, 1 ],
-	[ "Pure White Goddess Wedding Nami", "PSY", [ "Striker", "Knowledge" ], 3, 20, 4, 2, 99, null, 877, 362, 221, 1772, 799, 409, 1 ],
-	[ "Lola, Thriller Bark Bride", "STR", [ "Slasher", "Tough" ], 3, 11, 6, 1, 50, null, 103, 69, 31, 1101, 559, 91, 1 ],
-	[ "Courting Lola, Thriller Bark Bride", "STR", [ "Slasher", "Tough" ], 4, 18, 8, 2, 99, null, 1032, 513, 52, 2018, 1009, 147, 1 ],
-	[ "Risky Brothers", "DEX", [ "Slasher", "Freedom" ], 3, 9, 4, 2, 50, null, 30, 15, 40, 707, 368, 287, 1 ]
+	[ "Hina, Navy HQ Captain", "DEX", [ "Fighter", "Knowledge" ], 4, 18, 5, 1, 50, 392109, 188, 128, 48, 977, 544, 191, 1 ],
+	[ "Black Cage Hina, Navy HQ Captain", "DEX", [ "Fighter", "Knowledge" ], 5, 30, 5, 3, 99, 3000000, 920, 488, 159, 1901, 912, 357, 1 ],
+	[ "Smoker, Navy HQ Captain", "INT", "Striker", 4, 25, 6, 2, 70, 1066998, 710, 309, 44, 1600, 703, 146, 1.5 ],
+	[ "Smoker the White Hunter, Navy HQ Captain", "INT", "Striker", 5, 40, 5, 3, 99, 4000000, 1549, 640, 112, 2727, 1289, 234, 1.5 ],
+	[ "Pure White Angel Wedding Nami", "PSY", [ "Striker", "Knowledge" ], 3, 13, 5, 1, 50, 392109, 60, 33, 49, 933, 419, 268, 1 ],
+	[ "Pure White Goddess Wedding Nami", "PSY", [ "Striker", "Knowledge" ], 4, 20, 4, 2, 99, 3000000, 877, 362, 221, 1772, 799, 409, 1 ],
+	[ "Lola, Thriller Bark Bride", "STR", [ "Slasher", "Tough" ], 3, 11, 6, 1, 50, 261406, 103, 69, 31, 1101, 559, 91, 1 ],
+	[ "Courting Lola, Thriller Bark Bride", "STR", [ "Slasher", "Tough" ], 4, 18, 8, 2, 99, 2000000, 1032, 513, 52, 2018, 1009, 147, 1 ],
+	[ "Risky Brothers", "DEX", [ "Slasher", "Freedom" ], 3, 9, 4, 2, 50, 392109, 30, 15, 40, 707, 368, 287, 1 ]
 ];
