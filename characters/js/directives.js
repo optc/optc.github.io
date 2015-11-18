@@ -241,6 +241,8 @@ directives.compare = function() {
                 scope.compare = window.units[suggestion];
                 scope.compareDetails = window.details[suggestion + 1];
                 scope.compareCooldown = window.cooldowns[suggestion];
+                scope.isCompareSpecialArray = (scope.compareDetails && scope.compareDetails.special &&
+                    scope.compareDetails.special.constructor == Array);
                 if (!scope.$$phase) scope.$apply();
             });
 

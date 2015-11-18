@@ -160,7 +160,16 @@
                                 <tr>
                                     <td>Special</td>
                                     <td>
-                                        <div ng-bind-html="compareDetails.special | decorate"></div>
+                                        <strong class="specialName" ng-if="compareDetails.specialName">{{compareDetails.specialName}}</strong>
+                                        <!-- same special -->
+                                        <div ng-if="!isCompareSpecialArray" ng-bind-html="compareDetails.special | decorate"></div>
+                                        <!-- different specials -->
+                                        <div ng-if="isCompareSpecialArray">
+                                            <span class="badge badge-japan">Japan</span>
+                                            <div ng-bind-html="compareDetails.special[0] | decorate"></div>
+                                            <span class="badge badge-global">Global</span>
+                                            <div ng-bind-html="compareDetails.special[1] | decorate"></div>
+                                        </div>
                                         <span class="notes" ng-if="compareDetails.specialNotes" ng-bind-html="compareDetails.specialNotes | decorate"></span>
                                     </td>
                                 </tr>
