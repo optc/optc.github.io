@@ -3579,5 +3579,24 @@ window.details = {
 	811: {
 		specialName: "Birdbrain Present",
 		special: "Changes own orb into DEX, freely switch orbs between slots once"
+	},
+	812: {
+		specialName: "Hell Howl",
+		special: "Sharply decreases the defense of all enemies for 1 turn"
+	},
+	813: {
+		specialName: "Sticky Spider Net",
+		special: "Delay all enemies for 1 turn, amplifies the effect of orbs by 1.25x for 1 turn",
+		specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.25x more damage and opposite orbs will deal 1.25x less damage"
+	},
+	814: {
+		specialName: "Carpet Scratch",
+		special: "Deals 13x character's ATK in DEX damage to a single enemy, changes captain's orb into [TND]"
+	},
+	815: {
+		captain: "Boosts ATK by 2.5x following a chain of STR > INT > DEX attacks no lower than Good",
+		specialName: "Brick Bat",
+		special: "Deals 10 hits of 5,000 fixed damage to random enemies",
+		specialNotes: "The target of each of the 10 hits is chosen randomly."
 	}
 };

@@ -809,5 +809,9 @@ window.units = [
 	[ "Pure White Goddess Wedding Nami", "PSY", [ "Striker", "Knowledge" ], 4, 20, 4, 2, 99, 3000000, 877, 362, 221, 1772, 799, 409, 1 ],
 	[ "Lola, Thriller Bark Bride", "STR", [ "Slasher", "Tough" ], 3, 11, 6, 1, 50, 261406, 103, 69, 31, 1101, 559, 91, 1 ],
 	[ "Courting Lola, Thriller Bark Bride", "STR", [ "Slasher", "Tough" ], 4, 18, 8, 2, 99, 2000000, 1032, 513, 52, 2018, 1009, 147, 1 ],
-	[ "Risky Brothers", "DEX", [ "Slasher", "Freedom" ], 3, 9, 4, 2, 50, 392109, 30, 15, 40, 707, 368, 287, 1 ]
+	[ "Risky Brothers", "DEX", [ "Slasher", "Freedom" ], 3, 9, 4, 2, 50, 392109, 30, 15, 40, 707, 368, 287, 1 ],
+	[ "Cerberus", "QCK", [ "Fighter", "Tough" ], 3, 14, 5, 2, 50, null, 326, 176, 46, null, null, null, 0 ],
+	[ "Tararan", "INT", [ "Knowledge", "Tough" ], 3, 14, 7, 2, 50, null, 411, 126, 44, null, null, null, 0 ],
+	[ "Bear-Skin Rug", "DEX", [ "Fighter", "Tough" ], 3, 14, 5, 2, 50, null, 238, 74, 151, null, null, null, 0 ],
+	[ "Gekko Moriah, Thriller Bark's Mysterious Four", "INT", "Freedom", 3, 12, 6, 2, 50, null, 233, 101, 0, null, null, null, 0 ]
 ];
