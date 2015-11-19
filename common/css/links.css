@@ -25,15 +25,27 @@
     -webkit-transform: translateX(0);
     -ms-transform: translateX(0);
     transform: translateX(0);
+    border: none !important;
 }
 
 #links-button .btn .fa {
     position: relative;
-    top: -2px;
-    left: -4px;
     font-size: 1.1em;
     -webkit-transition: color 0.3s;
     transition: color 0.3s;
+}
+
+#links-button .btn.trigger .fa {
+    top: -2px;
+    left: -5px;
+}
+
+#links-button .btn:not(.trigger) .fa {
+    top: -7px;
+    left: -11px;
+    width: 26px;
+    height: 26px;
+    padding-top: 7px;
 }
 
 #links-button .btn:hover .fa, .rotater i {
