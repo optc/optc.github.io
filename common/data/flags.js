@@ -425,6 +425,8 @@ window.flags = {
 	438: { rr: 1, lrr: 1 },
 	439: { rr: 1, lrr: 1 },
 	440: { rr: 1, lrr: 1 },
+	446: { global: 1 },
+	447: { global: 1 },
 	448: { global: 1, rr: 1 },
 	449: { global: 1, rr: 1 },
 	450: { global: 1, rr: 1 },

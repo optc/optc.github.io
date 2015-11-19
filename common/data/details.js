@@ -2611,11 +2611,11 @@ window.details = {
 		specialName: "Auto Repair"
 	},
 	624: {
-		special: "Boosts chances of getting [PSY] orbs for 3 turns",
+		special: "Slightly boosts chances of getting [PSY] orbs for 3 turns",
 		specialName: "Slot Rate Upright [PSY]"
 	},
 	625: {
-		special: "Boosts chances of getting [INT] orbs for 3 turns",
+		special: "Slightly boosts chances of getting [INT] orbs for 3 turns",
 		specialName: "Slot Rate Upright [INT]"
 	},
 	626: {
@@ -3604,5 +3604,52 @@ window.details = {
 		specialName: "Brick Bat",
 		special: "Deals 10 hits of 5,000 fixed damage to random enemies",
 		specialNotes: "The target of each of the 10 hits is chosen randomly."
+	},
+	817: {
+		specialName: "[PSY] Slot Change [STR]",
+		special: "Changes [PSY] orbs into [STR] orbs"
+	},
+	818: {
+		specialName: "Quick Change",
+		special: "Freely switch orbs between slots once"
+	},
+	819: {
+		specialName: "Hyper Burst",
+		special: "Deals 13x character's ATK in character's type damage to all enemies"
+	},
+	820: {
+		specialName: "[TND] Slot Change [INT]",
+		special: "Changes [TND] orbs into [INT] orbs"
+	},
+	821: {
+		specialName: "Slot Shuffle",
+		special: "Randomizes all orbs"
+	},
+	822: {
+		specialName: "Healing Up",
+		special: "Boosts RCV of all characters by 100 units for 3 turns"
+	},
+	823: {
+		specialName: "Slot Rate Upright [INT]",
+		special: "Slightly boosts chances of getting [INT] orbs for 3 turns"
+	},
+	824: {
+		specialName: "Auto Repair",
+		special: "Recovers 3x character's RCV in HP at the end of each turn for 5 turns"
+	},
+	825: {
+		captain: "Boosts ATK and HP of STR characters by 1.5x",
+		specialName: "Energy of the Ancient Knight",
+		special: "Boosts ATK of STR character by 200 units for 1 turn"
+	},
+	826: {
+		captain: "Boosts ATK and HP of DEX characters by 1.5x",
+		specialName: "Weakness of the Ancient Knight",
+		special: "Delay all enemies for 1 turn, slightly decreases the ATK of all characters for 2 turns"
+	},
+	827: {
+		captain: "Boosts ATK and HP of QCK characters by 1.5x",
+		specialName: "Poison of the Ancient Knight",
+		special: "Slightly boosts ATK against poisoned enemies"
 	}
 };

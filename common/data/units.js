@@ -814,5 +814,16 @@ window.units = [
 	[ "Tararan", "INT", [ "Knowledge", "Tough" ], 3, 14, 7, 2, 50, null, 411, 126, 44, null, null, null, 0 ],
 	[ "Bear-Skin Rug", "DEX", [ "Fighter", "Tough" ], 3, 14, 5, 2, 50, null, 238, 74, 151, null, null, null, 0 ],
 	[ "Gekko Moriah, Thriller Bark's Mysterious Four", "INT", "Freedom", 3, 12, 6, 2, 50, null, 233, 101, 0, null, null, null, 0 ],
-	[ "Gekko Moriah, Ruler of Thriller Bark", "INT", "Freedom", 4, 20, 4, 3, 99, null, 1355, 451, 0, null, null, null, 0 ]
+	[ "Gekko Moriah, Ruler of Thriller Bark", "INT", "Freedom", 4, 20, 4, 3, 99, null, 1355, 451, 0, null, null, null, 0 ],
+	[ "Soldier Zombie Boastful Shadow", "STR", "Fighter", 2, 7, 6, 0, 35, null, null, null, null, 990, 622, 27, 0 ],
+	[ "Soldier Zombie Quick Shadow", "QCK", "Fighter", 2, 7, 6, 0, 35, null, null, null, null, 944, 590, 43, 0 ],
+	[ "Soldier Zombie Vile Shadow", "DEX", "Fighter", 2, 7, 6, 0, 35, null, null, null, null, 887, 551, 72, 0 ],
+	[ "Soldier Zombie Hateful Shadow", "INT", "Fighter", 2, 7, 6, 0, 35, null, null, null, null, 903, 648, 29, 0 ],
+	[ "Soldier Zombie Proud Shadow", "INT", "Fighter", 2, 7, 6, 0, 35, null, null, null, null, 887, 551, 72, 0 ],
+	[ "Tricky Wild Zombie", "DEX", "Tough", 3, 12, 4, 1, 50, null, 75, 74, 132, null, null, null, 0 ],
+	[ "Brainy Wild Zombie", "INT", "Tough", 3, 12, 4, 1, 50, null, 71, 86, 132, null, null, null, 0 ],
+	[ "Heartful Wild Zombie", "PSY", "Tough", 3, 12, 4, 1, 50, null, 70, 70, 132, null, null, null, 0 ],
+	[ "General Zombie Herculean Shadow", "STR", [ "Slasher", "Tough" ], 3, 20, 6, 1, 70, null, 99, 59, 29, null, null, null, 0 ],
+	[ "General Zombie Peculiar Shadow", "DEX", [ "Slasher", "Tough" ], 3, 20, 6, 1, 70, null, null, null, null, null, null, null, 0 ],
+	[ "General Zombie Swift Shadow", "QCK", [ "Slasher", "Tough" ], 3, 20, 6, 1, 70, null, 113, 54, 29, null, null, null, 0 ]
 ];
