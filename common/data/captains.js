@@ -944,10 +944,10 @@ window.captains = {
 		atk: function(p) { return p.unit.type == "QCK" ? 2 : 1; }
 	},
 	535: {
-		atk: function(p) { return p.unit.type == "DEX" ? 1.5 : 1; }
+		rcv: function(p) { return p.unit.type == "DEX" ? 1.5 : 1; }
 	},
 	536: {
-		atk: function(p) { return p.unit.type == "DEX" ? 2 : 1; }
+		rcv: function(p) { return p.unit.type == "DEX" ? 2 : 1; }
 	},
 	537: {
 		chainModifier: function(p) { return 2; }
