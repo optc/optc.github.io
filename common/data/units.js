@@ -813,5 +813,6 @@ window.units = [
 	[ "Cerberus", "QCK", [ "Fighter", "Tough" ], 3, 14, 5, 2, 50, null, 326, 176, 46, null, null, null, 0 ],
 	[ "Tararan", "INT", [ "Knowledge", "Tough" ], 3, 14, 7, 2, 50, null, 411, 126, 44, null, null, null, 0 ],
 	[ "Bear-Skin Rug", "DEX", [ "Fighter", "Tough" ], 3, 14, 5, 2, 50, null, 238, 74, 151, null, null, null, 0 ],
-	[ "Gekko Moriah, Thriller Bark's Mysterious Four", "INT", "Freedom", 3, 12, 6, 2, 50, null, 233, 101, 0, null, null, null, 0 ]
+	[ "Gekko Moriah, Thriller Bark's Mysterious Four", "INT", "Freedom", 3, 12, 6, 2, 50, null, 233, 101, 0, null, null, null, 0 ],
+	[ "Gekko Moriah, Ruler of Thriller Bark", "INT", "Freedom", 4, 20, 4, 3, 99, null, 1355, 451, 0, null, null, null, 0 ]
 ];

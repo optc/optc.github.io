@@ -3598,5 +3598,11 @@ window.details = {
 		specialName: "Brick Bat",
 		special: "Deals 10 hits of 5,000 fixed damage to random enemies",
 		specialNotes: "The target of each of the 10 hits is chosen randomly."
+	},
+	816: {
+		captain: "Boosts ATK by 2.75x following a chain of STR > INT > DEX attacks no lower than Good",
+		specialName: "Brick Bat",
+		special: "Deals 10 hits of 5,000 fixed damage to random enemies",
+		specialNotes: "The target of each of the 10 hits is chosen randomly."
 	}
 };
