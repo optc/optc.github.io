@@ -4,7 +4,8 @@ var FODDER_REGEX = new RegExp('(' + [
     'Group', 'Ensign Navy HQ', 'Armed \\w+ Unit', '[BM]illions Baroque', 'Eneru\'s Elect',
     'Skypiea (Guard|Enforcer)', 'Shandian',
     '(Seaman|Major|Corporal) Navy', 'Hoodlum.+Bounty Hunter', 'Black Cat Pirates',
-    'Arlong crewmember', 'Gunner|Cannoneer|Assassin Master', 'Giant.*Pirates'
+    'Arlong crewmember', 'Gunner|Cannoneer|Assassin Master', 'Giant.*Pirates',
+    '(Soldier|General) Zombie.*Shadow', 'Wild Zombie'
 ].join(')|(') + ')','i');
 
 var utils = { };
