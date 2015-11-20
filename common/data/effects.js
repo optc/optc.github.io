@@ -64,7 +64,7 @@ window.effects = {
         rcv: function(p) { return p.class.has('Slasher') || p.class.has('Booster') || p.class.has('Evolver') ? 1 : 0.1; }
     },
 
-    'Skypiea Warriors': {
+    'Warriors of Shandia': {
         // Note: The debuff is applied to normal attacks but not to specials
         description: 'Stats of characters whose homeland is not a sky island reduced by 20%',
         thumb: 583,
@@ -88,7 +88,7 @@ window.effects = {
         }
     },
 
-    'Skypiea Warriors, Last Round': {
+    'Warriors of Shandia, Last Round': {
         // Note: The debuff is applied to normal attacks but not to specials
         // Note 2: The 50% reduction is applied to enemy's defense as well, for whatever reason
         description: 'Stats of characters whose homeland is not a sky island reduced by 20%, ATK of PSY characters reduced by 50%',

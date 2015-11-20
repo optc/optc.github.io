@@ -103,8 +103,8 @@ app.controller('ImageGeneratorCtrl', function($scope, $filter, $timeout) {
     baseX = 10; baseY = 85;
 
     if ($scope.data.effect) {
-        awesome(context, { text: 'f02d', x: baseX + 8, y: baseY + 20, align: 'center' });
-        type(context, { text: $scope.data.effect, x: baseX + 25, y: baseY + 20, maxWidth: 155, truncate: true });
+        awesome(context, { text: 'f02d', x: baseX + 8, y: baseY + 20, align: 'center', color: 'darkorchid' });
+        type(context, { text: $scope.data.effect, x: baseX + 25, y: baseY + 20, maxWidth: 155, truncate: true, color: 'darkorchid' });
         baseY += 25;
     }
 
