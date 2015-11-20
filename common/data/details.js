@@ -3448,11 +3448,11 @@ window.details = {
 		captain: "Reduces damage received by 20%"
 	},
 	786: {
-		special: "Seals himself for 10 turns, delay all enemies for 1 turn, reduces damage received by 50% for 4 turns",
+		special: "Seals himself for 10 turns, delays all enemies for 1 turn, reduces damage received by 50% for 4 turns",
 		specialName: "The Resolve to Face Death! \"Open Mind\""
 	},
 	787: {
-		special: "Seals himself for 10 turns, delay all enemies for 1 turn, reduces damage received by 50% for 4 turns",
+		special: "Seals himself for 10 turns, delays all enemies for 1 turn, reduces damage received by 50% for 4 turns",
 		specialName: "The Resolve to Face Death! \"Open Mind\"",
 		captain: "Reduces damage received by 50%, reduces crew's current HP by 10% at the end of each turn"
 	},
@@ -3586,7 +3586,7 @@ window.details = {
 	},
 	813: {
 		specialName: "Sticky Spider Net",
-		special: "Delay all enemies for 1 turn, amplifies the effect of orbs by 1.25x for 1 turn",
+		special: "Delays all enemies for 1 turn, amplifies the effect of orbs by 1.25x for 1 turn",
 		specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.25x more damage and opposite orbs will deal 1.25x less damage"
 	},
 	814: {
@@ -3645,11 +3645,11 @@ window.details = {
 	826: {
 		captain: "Boosts ATK and HP of DEX characters by 1.5x",
 		specialName: "Weakness of the Ancient Knight",
-		special: "Delay all enemies for 1 turn, slightly decreases the ATK of all characters for 2 turns"
+		special: "Delays all enemies for 1 turn, reduces the ATK of all characters by 80% for 2 turns"
 	},
 	827: {
 		captain: "Boosts ATK and HP of QCK characters by 1.5x",
 		specialName: "Poison of the Ancient Knight",
-		special: "Slightly boosts ATK against poisoned enemies"
+		special: "Boosts ATK against poisoned enemies by 1.05x for 999 turns"
 	}
 };

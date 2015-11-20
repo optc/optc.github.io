@@ -706,5 +706,14 @@ window.specials = {
 	825: {
 		atkStatic: function(p) { return 100; },
 		type: "type"
+	},
+	826: {
+		atk: function(p) { return 0.2; },
+		type: "type"
+	},
+	827: {
+		atk: function(p) { return 1.05; },
+		type: "condition",
+		warning: "Selected special (General Zombie Swift Shadow) assumes that the enemy has been poisoned."
 	}
 };
