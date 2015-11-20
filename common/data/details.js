@@ -2656,12 +2656,12 @@ window.details = {
 		captain: "Boosts ATK of Fighter characters by 2x"
 	},
 	634: {
-		special: "Boosts chances of getting [QCK] and [PSY] orbs, boosts ATK of QCK and PSY characters by 1.2x",
+		special: "Boosts chances of getting [QCK] and [PSY] orbs for 3 turns, boosts ATK of QCK and PSY characters by 1.2x for 3 turns",
 		specialName: "Guiding Mermaid Voice",
 		captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK and RCV of QCK and PSY characters by 1.25x"
 	},
 	635: {
-		special: "Boosts chances of getting [QCK] and [PSY] orbs, boosts ATK of QCK and PSY characters by 1.2x",
+		special: "Boosts chances of getting [QCK] and [PSY] orbs for 3 turns, boosts ATK of QCK and PSY characters by 1.2x for 3 turns",
 		specialName: "Guiding Mermaid Voice",
 		captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK and RCV of QCK and PSY characters by 1.5x"
 	},

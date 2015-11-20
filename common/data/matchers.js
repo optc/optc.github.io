@@ -162,6 +162,12 @@ window.matchers = [
     },
 
     {
+        name: 'Orb chance boosters',
+        target: 'special',
+        matcher: /boosts chances of getting.+orbs/i
+    },
+
+    {
         name: 'Orb controllers',
         target: 'special',
         matcher: /(Changes.+orbs)/i
@@ -291,6 +297,12 @@ window.matchers = [
         name: 'Poisoners',
         target: 'special',
         matcher: /poisons/i
+    },
+
+    {
+        name: 'Poison removers',
+        target: 'special',
+        matcher: /Removes poison/i
     },
 
     {
