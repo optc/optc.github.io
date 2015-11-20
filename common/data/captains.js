@@ -1688,5 +1688,49 @@ window.captains = {
 	810: {
 		atk: function(p) { return p.unit.class.has("Tough") ? 2 : 1; },
 		rcv: function(p) { return p.unit.class.has("Tough") ? 1.5 : 1; }
+	},
+	813: {
+		orb: function(p) { return p.orb == 2.0 ? 1.25 : (p.orb == 0.5 ? 4/5 : 1); }
+	},
+	815: {
+		damageSorter: function(d) {
+					return CrunchUtils.okamaSort(d, [ 'STR', 'INT', 'DEX' ]);
+				},
+		hitAtk: function(p) {
+					return CrunchUtils.okamaCheck(p.damage.slice(0,p.chainPosition), p.modifiers, [
+						{ type: 'STR', minModifier: 'Good' },
+						{ type: 'INT', minModifier: 'Good' },
+						{ type: 'DEX', minModifier: 'Good' }
+					]) ? 2.5 : 1;
+				},
+		hitModifiers: [ "Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect" ]
+	},
+	816: {
+		damageSorter: function(d) {
+					return CrunchUtils.okamaSort(d, [ 'STR', 'INT', 'DEX' ]);
+				},
+		hitAtk: function(p) {
+					return CrunchUtils.okamaCheck(p.damage.slice(0,p.chainPosition), p.modifiers, [
+						{ type: 'STR', minModifier: 'Good' },
+						{ type: 'INT', minModifier: 'Good' },
+						{ type: 'DEX', minModifier: 'Good' }
+					]) ? 2.75 : 1;
+				},
+		hitModifiers: [ "Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect" ]
+	},
+	822: {
+		rcvStatic: function(p) { return 100; }
+	},
+	825: {
+		atk: function(p) { return p.unit.type == 'STR' ? 1.5 : 1; },
+		hp: function(p) { return p.unit.type == 'STR' ? 1.5 : 1; }
+	},
+	826: {
+		atk: function(p) { return p.unit.type == 'DEX' ? 1.5 : 1; },
+		hp: function(p) { return p.unit.type == 'DEX' ? 1.5 : 1; }
+	},
+	827: {
+		atk: function(p) { return p.unit.type == 'QCK' ? 1.5 : 1; },
+		hp: function(p) { return p.unit.type == 'QCK' ? 1.5 : 1; }
 	}
 };
