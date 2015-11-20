@@ -822,7 +822,7 @@ window.units = [
 	[ "Soldier Zombie Proud Shadow", "PSY", "Fighter", 2, 7, 6, 0, 35, null, 238, 132, 87, 887, 551, 72, 0 ],
 	[ "Tricky Wild Zombie", "DEX", "Tough", 3, 12, 4, 1, 50, null, 75, 74, 132, null, null, null, 0 ],
 	[ "Brainy Wild Zombie", "INT", "Tough", 3, 12, 4, 1, 50, null, 71, 86, 132, null, null, null, 0 ],
-	[ "Heartful Wild Zombie", "PSY", "Tough", 3, 12, 4, 1, 50, null, 70, 70, 132, null, null, null, 0 ],
+	[ "Hearty Wild Zombie", "PSY", "Tough", 3, 12, 4, 1, 50, null, 70, 70, 132, null, null, null, 0 ],
 	[ "General Zombie Herculean Shadow", "STR", [ "Slasher", "Tough" ], 3, 20, 6, 1, 70, null, 99, 59, 29, null, null, null, 0 ],
 	[ "General Zombie Peculiar Shadow", "DEX", [ "Slasher", "Tough" ], 3, 20, 6, 1, 70, null, null, null, null, null, null, null, 0 ],
 	[ "General Zombie Swift Shadow", "QCK", [ "Slasher", "Tough" ], 3, 20, 6, 1, 70, null, 113, 54, 29, null, null, null, 0 ]
