@@ -390,7 +390,7 @@ window.drops = {
         
     ],
 
-    Special: [
+    'Weekly Island': [
 
         {
             name: 'Rush of Turtles',
@@ -834,6 +834,12 @@ window.drops = {
         },
 
         {
+            name: 'Usoppun',
+            thumb: 518,
+            'Ultimate': [ 517 ]
+        },
+
+        {
             name: 'Heracles',
             thumb: 516,
             Master: [ 87, 97, 113, 117, 118, 294, 295, 303, 429, 515 ],
@@ -878,18 +884,12 @@ window.drops = {
 
     ],
 
-    'Other': [
+    'Special': [
 
         {
             name: 'Chopperman Special Island',
             thumb: 247,
             '': [ 247 ]
-        },
-
-        {
-            name: 'Usoppun Special Island',
-            thumb: 518,
-            '': [ 517 ]
         },
 
         {

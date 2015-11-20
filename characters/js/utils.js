@@ -5,7 +5,7 @@ var CharUtils = { };
 /* * * * * Reverse drop map * * * * */
 
 var reverseDropMap = null, reverseEvoMap = null;
-var marks = { 'Story Island': 1, 'Special': 2, 'Fortnight': 4, 'Raid': 8 };
+var marks = { 'Story Island': 1, 'Weekly Island': 2, 'Fortnight': 4, 'Raid': 8 };
 
 var generateReverseDropMap = function() {
     reverseDropMap = { };
