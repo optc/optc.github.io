@@ -659,7 +659,7 @@ window.units = [
 	[ "Choo of the Sun Pirates", "INT", [ "Shooter", "Tough" ], 3, 10, 5, 1, 50, 392109, 75, 72, 22, 1002, 552, 178, 1 ],
 	[ "Monkey D. Luffy Swim Ring", "QCK", "Fighter", 4, 15, 6, 2, 99, 2000000, 144, 69, 31, 2232, 933, 242, 1 ],
 	[ "Usopp Voyage Log: Straw Hat Pirates (Log Usopp)", "QCK", "Striker", 4, 12, 6, 2, 50, 392109, 155, 67, 47, 1085, 513, 235, 0.7 ],
-	[ "Usopp Voyage Dream: Brave Warrior of the Sea (Log Usopp)", "QCK", "Striker", 5, 20, 4, 3, 99, 3000000, 1024, 468, 185, 2012, 938, 344, 0.7 ],
+	[ "Usopp Voyage Dream: Brave Sea Warrior (Log Usopp)", "QCK", "Striker", 5, 20, 4, 3, 99, 3000000, 1024, 468, 185, 2012, 938, 344, 0.7 ],
 	[ "Nami Holiday", "PSY", [ "Striker", "Knowledge" ], 4, 15, 5, 2, 99, 2000000, 70, 30, 100, 1334, 673, 396, 0.7 ],
 	[ "Nefertari Vivi, Princess of the Alabasta Kingdom", "PSY", [ "Striker", "Freedom" ], 3, 9, 6, 1, 35, 136167, 11, 11, 11, 285, 104, 225, 1 ],
 	[ "Nefertari Vivi, Vice-Leader of the Suna Suna Clan", "PSY", [ "Fighter", "Freedom" ], 4, 15, 6, 2, 70, 1066998, 243, 51, 187, 593, 269, 488, 1 ],
