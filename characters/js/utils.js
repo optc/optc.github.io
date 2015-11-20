@@ -123,7 +123,7 @@ CharUtils.searchDropLocations = function(id) {
         for (var island=0;island<drops[type].length;++island) {
             var temp = [ ];
             for (var stage in drops[type][island]) {
-                if (stage == 'thumb' || stage == 'name' || stage == 'shortName' || stage == 'day') continue;
+                if (stage == 'thumb' || stage == 'name' || stage == 'shortName' || stage == 'day' || stage == 'global') continue;
                 if (drops[type][island][stage].indexOf(id) != -1)
                     temp.push(stage);
             }

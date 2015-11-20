@@ -42,12 +42,13 @@
 
         <script type="text/ng-template" id="type.html">
             <div ng-repeat="island in data[type]" ng-if="island.name != 'Oars Special'" class="island collapsed"
-                collapsable target="island.html" island="island" data="data">
+                collapsable target="island.html" island="island" data="data" ng-show="!onlyGlobal || island.global">
                 <h3>
                     <div decorate-slot uid="island.thumb" class="slot small"></div>
                     <i class="fa fa-chevron-down"></i>
                     <i class="fa fa-chevron-up"></i>
                     <span>{{island.name}}</span>
+                    <i class="fa fa-globe" ng-show="island.global"></i>
                 </h3>
             </div>
         </script>
@@ -88,13 +89,14 @@
 
             <h1 class="page-header">
                 Drop Table
+                <label><input type="checkbox" ng-model="onlyGlobal" ng-change="changeFilters()">Show only Global</label>
                 <label><input type="checkbox" ng-model="noFodder" ng-change="changeFilters()">Hide fodder</label>
                 <label><input type="checkbox" ng-model="noEvolverBooster" ng-change="changeFilters()">Hide Boosters and Evolvers</label>
                 <label><input type="checkbox" ng-model="sortByType" ng-change="changeSorting()">Sort by type</label>
             </h1>
 
             <div ng-repeat="type in [ 'Story Island', 'Special', 'Fortnight', 'Raid', 'Other' ]" class="type collapsed"
-                collapsable hidden-units="hiddenUnits" target="type.html" type="type" data="data">
+                collapsable hidden-units="hiddenUnits" only-global="onlyGlobal" target="type.html" type="type" data="data">
                 <h2>
                     <i class="fa fa-chevron-down"></i>
                     <i class="fa fa-chevron-up"></i>

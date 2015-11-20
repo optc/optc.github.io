@@ -3,24 +3,27 @@ window.drops = {
     'Story Island': [
 
         {
-            "name": "Fushia Village",
-            "thumb": 28,
+            name: "Fushia Village",
+            thumb: 28,
+            global: true,
             "01": [ 119, 120 ],
             "02": [ 27, 115, 119, 120 ],
             "03": [ 28, 78, 79, 80, 119, 120 ]
         },
 
         {
-            "name": "Alvida's Hideout",
-            "thumb": 29,
+            name: "Alvida's Hideout",
+            thumb: 29,
+            global: true,
             "01": [ 121, 123, 127, 131, 136 ],
             "02": [ 78, 79, 80, 121, 122, 123, 126, 131, 132, 137, 138, 141 ],
             "03": [ 29, 115, 121, 122, 123, 126, 127, 128, 131, 132, 133, 136, 137, 138, 141, 171 ]
         },
 
         {
-            "name": "Shells Town",
-            "thumb": 35,
+            name: "Shells Town",
+            thumb: 35,
+            global: true,
             "01": [ 81, 82, 179, 180, 181, 182 ],
             "02": [ 78, 79, 80, 179, 180, 181, 183 ],
             "03": [ 33, 81, 82, 179, 180, 181, 182, 183 ],
@@ -33,8 +36,9 @@ window.drops = {
         },
 
         {
-            "name": "Orange Town",
-            "thumb": 38,
+            name: "Orange Town",
+            thumb: 38,
+            global: true,
             "01": [ 115, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 134, 135, 174 ],
             "02": [ 78, 121, 126, 136, 142, 147, 170 ],
             "03": [ 40, 80, 123, 124, 128, 129, 130, 133, 134, 135, 138, 139, 140, 144, 149, 154, 158, 159, 171 ],
@@ -51,8 +55,9 @@ window.drops = {
         },
 
         {
-            "name": "Syrup Village",
-            "thumb": 45,
+            name: "Syrup Village",
+            thumb: 45,
+            global: true,
             "01": [ 13, 78, 79, 80, 81, 82, 89, 90, 91, 95, 96, 97, 105, 106, 107, 115 ],
             "02": [ 108, 109, 163, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188 ],
             "03": [ 92, 93, 124, 125, 126, 127, 128, 147, 148, 149, 160, 161, 165, 166, 174 ],
@@ -69,8 +74,9 @@ window.drops = {
         },
 
         {
-            "name": "Baratie",
-            "thumb": 57,
+            name: "Baratie",
+            thumb: 57,
+            global: true,
             "01": [ 48, 131, 132, 133, 136, 137, 138, 140 ],
             "02": [ 49, 116, 117, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188 ],
             "03": [ 50, 51, 52, 184, 185, 186, 187, 188 ],
@@ -89,8 +95,9 @@ window.drops = {
         },
 
         {
-            "name": "Arlong Park",
-            "thumb": 65,
+            name: "Arlong Park",
+            thumb: 65,
+            global: true,
             "01": [ 89, 121, 126, 131, 136, 141, 142, 147, 152, 156, 157, 158, 159, 160, 162, 170, 173, 175, 178 ],
             "02": [ 90, 122, 127, 132, 137, 141, 143, 148, 153, 155, 157, 158, 159, 161, 162, 172, 174, 177 ],
             "03": [ 91, 123, 128, 133, 138, 141, 144, 149, 154, 157, 158, 159, 160, 161, 162, 171, 173, 175, 176, 177 ],
@@ -109,8 +116,9 @@ window.drops = {
         },
         
         {
-            "name": "Logue Town",
-            "thumb": 69,
+            name: "Logue Town",
+            thumb: 69,
+            global: true,
             "01": [ 174, 170, 171, 172, 84 ],
             "02": [ 29, 85 ],
             "03": [ 174, 173, 86 ],
@@ -126,8 +134,9 @@ window.drops = {
         },
 
         {
-            "name": "Twin Cape",
-            "thumb": 213,
+            name: "Twin Cape",
+            thumb: 213,
+            global: true,
             "01": [ 215, 83, 95, 110 ],
             "02": [ 174, 96, 111, 83 ],
             "03": [ 173, 174, 97, 112, 83 ],
@@ -141,8 +150,9 @@ window.drops = {
         },
 
         {
-            "name": "Whiskey Peak",
-            "thumb": 201,
+            name: "Whiskey Peak",
+            thumb: 201,
+            global: true,
             "01": [ 237, 238, 239, 110, 118 ],
             "02": [ 111, 118, 240 ],
             "03": [ 84, 118, 235 ],
@@ -161,8 +171,9 @@ window.drops = {
         },
 
         {
-            "name": "Little Garden",
-            "thumb": 292,
+            name: "Little Garden",
+            thumb: 292,
+            global: true,
             "01": [ 289, 162, 141, 83, 116, 117 ],
             "02": [ 83, 85, 90, 293 ],
             "03": [ 83, 84, 89, 294 ],
@@ -181,8 +192,9 @@ window.drops = {
         },
 
         {
-            "name": "Drum Island",
-            "thumb": 326,
+            name: "Drum Island",
+            thumb: 326,
+            global: true,
             "01": [ 328, 94, 117 ],
             "02": [ 84, 94, 116, 334 ],
             "03": [ 78, 79, 80, 81, 82, 94, 334 ],
@@ -201,9 +213,10 @@ window.drops = {
         },
 
         {
-            "name": "Nanohana - Rainbase",
-            "shortName": "Nanohana",
-            "thumb": 383,
+            name: "Nanohana - Rainbase",
+            shortName: "Nanohana",
+            thumb: 383,
+            global: true,
             "01": [ 116, 300, 301, 302, 303, 304, 378 ],
             "02": [ 69, 300, 301, 302, 303, 304 ],
             "03": [ 113, 114, 184, 185, 186, 300, 301, 302, 303, 304 ],
@@ -222,8 +235,9 @@ window.drops = {
         },
 
         {
-            "name": "Alubarna",
-            "thumb": 384,
+            name: "Alubarna",
+            thumb: 384,
+            global: true,
             "01": [ 368, 237, 78, 83, 89 ],
             "02": [ 369, 239, 79, 90, 83 ],
             "03": [ 207, 80, 91, 83 ],
@@ -242,8 +256,9 @@ window.drops = {
         },
 
         {
-            "name": "Jaya",
-            "thumb": 430,
+            name: "Jaya",
+            thumb: 430,
+            global: true,
             "01": [ 215, 105, 106, 107, 108, 109, 115, 116, 381 ],
             "02": [ 171, 91, 97, 96 ],
             "03": [ 170, 426, 89, 95 ],
@@ -262,9 +277,10 @@ window.drops = {
         },
 
         {
-            "name": "Sky Island: Angel Island - Upper Yard",
-            "shortName": "Angel Island",
-            "thumb": 467,
+            name: "Sky Island: Angel Island - Upper Yard",
+            shortName: "Angel Island",
+            thumb: 467,
+            global: true,
             "01": [ 488, 487, 489, 493, 494, 116, 117 ],
             "02": [ 468, 469, 92, 93, 98, 99 ],
             "03": [ 468, 469, 303, 304 ],
@@ -283,9 +299,9 @@ window.drops = {
         },
 
         {
-            "name": "Sky Island: Upper Yard - Ark Maxim",
-            "shortName": "Ark Maxim",
-            "thumb": 545,
+            name: "Sky Island: Upper Yard - Ark Maxim",
+            shortName: "Ark Maxim",
+            thumb: 545,
             "01": [ 94, 300, 301, 541 ],
             "02": [ 94, 301, 302, 464, 543 ],
             "03": [ 94, 302, 303, 542 ],
@@ -301,8 +317,8 @@ window.drops = {
         },
 
         {
-            "name": "Long Ring Long Land",
-            "thumb": 568,
+            name: "Long Ring Long Land",
+            thumb: 568,
             "01": [ 368, 147, 152, 300 ],
             "02": [ 564, 158, 301 ],
             "03": [ 171, 144, 149, 302 ],
@@ -317,8 +333,8 @@ window.drops = {
         },
 
         {
-            "name": "Water Seven",
-            "thumb": 632,
+            name: "Water Seven",
+            thumb: 632,
             "01": [ 614, 87, 88, 266 ],
             "02": [ 84, 85, 86, 173, 174, 237, 238, 239, 266 ],
             "03": [ 110, 266, 615, 616, 617 ],
@@ -337,9 +353,9 @@ window.drops = {
         },
 
         {
-            "name": "Enies Lobby: Entrance",
-            "shortName": "Enies Lobby 1",
-            "thumb": 706,
+            name: "Enies Lobby: Entrance",
+            shortName: "Enies Lobby 1",
+            thumb: 706,
             "01": [ 78, 79, 80, 81, 82, 185, 186, 188, 694 ],
             "02": [ 78, 79, 80, 81, 184, 185, 187, 692 ],
             "03": [ 304, 695, 702 ],
@@ -353,9 +369,9 @@ window.drops = {
         },
 
         {
-            "name": "Enies Lobby: Tower of Justice - Gates of Justice",
-            "shortName": "Enies Lobby 2",
-            "thumb": 737,
+            name: "Enies Lobby: Tower of Justice - Gates of Justice",
+            shortName: "Enies Lobby 2",
+            thumb: 737,
             "01": [ 110 ],
             "02": [ 111 ],
             "03": [ 112 ],
@@ -380,6 +396,7 @@ window.drops = {
             name: 'Rush of Turtles',
             day: 0,
             thumb: 193,
+            global: true,
             ' ': [ 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 189, 190, 191, 192, 193 ]
         },
         {
@@ -392,6 +409,7 @@ window.drops = {
             name: 'Sea Pony Paradise',
             day: 1,
             thumb: 118,
+            global: true,
             ' ': [ 115, 116, 117, 118 ]
         },
 
@@ -399,6 +417,7 @@ window.drops = {
             name: 'Penguin Beach',
             day: 2,
             thumb: 83,
+            global: true,
             ' ': [ 78, 79, 80, 81, 82, 83 ]
         },
 
@@ -406,6 +425,7 @@ window.drops = {
             name: 'Penguin Long Beach',
             day: 2,
             thumb: 266,
+            global: true,
             ' ': [ 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 266 ]
         },
 
@@ -414,6 +434,7 @@ window.drops = {
             name: 'Dragon Sanctuary',
             day: 3,
             thumb: 267,
+            global: true,
             ' ': [ 100, 101, 102, 103, 104, 267 ]
         },
 
@@ -421,6 +442,7 @@ window.drops = {
             name: 'Scissor Cavern',
             day: 4,
             thumb: 95,
+            global: true,
             ' ': [ 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99 ]
         },
 
@@ -434,6 +456,7 @@ window.drops = {
         {
             name: 'Jeweled Porc Sanctuary',
             thumb: 347,
+            global: true,
             ' ': [ 342, 343, 344, 345, 346 ]
         },
     ],
@@ -443,6 +466,7 @@ window.drops = {
         {
             name: 'Buggy\'s Counterattack!!',
             thumb: 39,
+            global: true,
             Expert: [ 36, 37, 38, 99, 109, 114, -4 ],
             Elite: [ 36, 37, 38, 99, 109, 114, -3 ]
         },
@@ -450,6 +474,7 @@ window.drops = {
         {
             name: 'Alvida\'s Romance',
             thumb: 30,
+            global: true,
             Expert: [ 28, 29, 31, 40, 84, 95, 110, 117, -30, -21, -8 ],
             Elite: [ 28, 29, 31, 40, 95, 105, 110, -21, -7 ]
         },
@@ -457,6 +482,7 @@ window.drops = {
         {
             name: 'Kuro\'s Master Plan',
             thumb: 46,
+            global: true,
             Expert: [ 41, 42, 43, 45, -16 ],
             Elite: [ 41, 42, 43, 45, 96, 106, 111, -15 ]
         },
@@ -464,6 +490,7 @@ window.drops = {
         {
             name: 'Arlong: Empire Rising',
             thumb: 66,
+            global: true,
             Expert: [ 61, 62, 63, 65, 89, 95, 105, 110, -12, -66 ],
             Elite: [ 61, 62, 63, 65, 95, 105, 110, -11 ]
         },
@@ -471,6 +498,7 @@ window.drops = {
         {
             name: 'Krieg\'s Assault!',
             thumb: 58,
+            global: true,
             Expert: [ 98, 99, 108, 109, 113, 114, 53, 55, 57, -58, -20 ],
             Elite: [ 98, 99, 108, 109, 113, 114, 53, 55, 57, -58, -20, -19 ]
         },
@@ -478,6 +506,7 @@ window.drops = {
         {
             name: 'Escaped! Morgan',
             thumb: 228,
+            global: true,
             Expert: [ 33, 35, 84, 95, 105, 107, 110, 112, -228, -34, -26, -25, -24, -23, -22 ],
             Elite: [ 33, 35, 84, 95, 105, 107, 110, 112, -228, -34, -26, -25, -24, -23, -22 ]
         },
@@ -485,6 +514,7 @@ window.drops = {
         {
             name: 'Hina\'s Resort Getaway',
             thumb: 232,
+            global: true,
             Expert: [ 43, 49, 79, 85, 96, 106, 231, -230, -229, -221, -208, -62, -54 ],
             Elite: [ 43, 49, 96, 111, 117, 231, -230, -229, -221, -208 ]
         },
@@ -492,6 +522,7 @@ window.drops = {
         {
             name: 'Cobymeppo\'s Proving Ground!',
             thumb: 263,
+            global: true,
             Expert: [ 31, 33, 262, 264, 87, 88, 98, 99, 113, -265, -263, -225, -210, -64, -56, -32 ],
             Elite: [ 31, 33, 262, 264, 87, 88, 98, 99, 113, -265, -263, -225, -210, -64, -56, -32 ]
         },
@@ -499,6 +530,7 @@ window.drops = {
         {
             name: 'Smoker\'s Great Pursuit',
             thumb: 268,
+            global: true,
             Expert: [ 67, 69, 86, 97, 112, -219, -212, -205, -204, -73, -52, -50 ],
             Elite: [ 67, 69, 86, 97, 112, -219, -212, -205, -204, -73, -52, -50 ]
         },
@@ -506,6 +538,7 @@ window.drops = {
         {
             name: 'Tsuru\'s Morning Stroll',
             thumb: 297,
+            global: true,
             Expert: [ 99, 88, 114, 296, 298, 299, -236, -234, -223, -217, -202, -200, -199 ],
             Elite: [ 99, 88, 114, 296, 298, 299, -236, -234, -223, -202, -200 ]
         },
@@ -513,6 +546,7 @@ window.drops = {
         {
             name: 'Kalifa\'s Secret Assignment',
             thumb: 318,
+            global: true,
             Expert: [ 86, 97, 110, 112, 317, 319, -259, -253, -216, -215, -62, -56 ],
             Elite: [ 86, 97, 110, 112, 317, 319, -259, -253, -216, -215, -62, -56 ]
         },
@@ -520,6 +554,7 @@ window.drops = {
         {
             name: 'Lucci\'s Artisan Spirit',
             thumb: 322,
+            global: true,
             Expert: [ 85, 96, 111, 112, 321, 323, 325, -251, -218, -75, -74, -54, -21 ],
             Elite: [ 85, 96, 111, 112, 321, 323, 325, -251, -218, -75, -74, -54, -21 ]
         },
@@ -527,6 +562,7 @@ window.drops = {
         {
             name: 'Franky - Pervert\'s Aesthetic!',
             thumb: 337,
+            global: true,
             Expert: [ 87, 98, 113, 114, 336, 338, 339, -339, -338, -255, -222, -77, -68 ],
             Elite: [ 87, 98, 113, 336, 338, 339, -339, -338, -255, -222, -77, -68 ]
         },
@@ -534,6 +570,7 @@ window.drops = {
         {
             name: 'Deep Sea Kraken',
             thumb: 341,
+            global: true,
             Expert: [ 28, 40, 60, 213, 215, 340, -292, -291, -290, -261, -257, -214, -71, -44 ],
             Elite: [ 28, 40, 60, 213, 215, 340, -292, -291, -290, -261, -257, -214, -71, -44 ]
         },
@@ -541,6 +578,7 @@ window.drops = {
         {
             name: 'Dr. Hogback\'s Lab of the Dead',
             thumb: 386,
+            global: true,
             Expert: [ 385, 387, -388, -335, -314, -36, -16, -11 ],
             Elite: [ 385, 387, -388, -335, -314, -36, -16, -11 ]
         },
@@ -548,6 +586,7 @@ window.drops = {
         {
             name: 'Perona\'s Worden Garden',
             thumb: 392,
+            global: true,
             Expert: [ 391, 393, 394, -394, -393, -329, -316, -47, -34, -4 ],
             Elite: [ 391, 393, 394, -394, -393, -329, -316, -47, -34, -4 ]
         },
@@ -555,6 +594,7 @@ window.drops = {
         {
             name: 'Perv-salom\'s Manly Adventure',
             thumb: 405,
+            global: true,
             Expert: [ 404, 406, 407, -407, -406, -333, -312, -208, -26, -20 ],
             Elite: [ 404, 406, 407, -407, -406, -333, -312, -208, -26, -20 ]
         },
@@ -569,6 +609,7 @@ window.drops = {
         {
             name: 'Adrift!? Humming Brook',
             thumb: 424,
+            global: true,
             Expert: [ 423, 425, -425, -327, -310, -223, -219, -214, -202 ],
             Elite: [ 423, 425, -425, -327, -310, -223, -219, -214, -202 ]
         },
@@ -639,8 +680,8 @@ window.drops = {
         {
             name: 'Red Leg Zeff',
             thumb: 607,
-            Expert: [ 606, 608, 609, -502, -457, -449, -312, -52, -51, -50 ],
-            Elite: [ 606, 608, 609, -502, -457, -449, -312, -52, -51, -50 ]
+            Expert: [ 606, 608, 609, -502, -457, -449, -312, -52, -50 ],
+            Elite: [ 606, 608, 609, -502, -457, -449, -312, -52, -50 ]
         },
 
         {
@@ -742,6 +783,7 @@ window.drops = {
         {
             name: 'Mihawk',
             thumb: 227,
+            global: true,
             Master: [ 86, 112, 118, 226 ],
             Expert: [ 97, 112, 226 ]
         },
@@ -749,6 +791,7 @@ window.drops = {
         {
             name: 'Monster Chopper',
             thumb: 249,
+            global: true,
             Master: [ 84, 110, 118, 248 ],
             Expert: [ 84, 110, 248 ]
         },
@@ -756,6 +799,7 @@ window.drops = {
         {
             name: 'Garp',
             thumb: 306,
+            global: true,
             Master: [ 113, 118, 262, 264, 305 ],
         },
 
@@ -769,6 +813,7 @@ window.drops = {
         {
             name: 'Ivankov',
             thumb: 390,
+            global: true,
             Master: [ 85, 111, 118, 389 ],
             Expert: [ 85, 96, 111, 389 ]
         },
@@ -783,6 +828,7 @@ window.drops = {
         {
             name: 'Blackbeard',
             thumb: 447,
+            global: true,
             Master: [ 84, 110, 118, 300, 446 ],
             Expert: [ 84, 110, 446 ]
         },

@@ -12,6 +12,7 @@ var addImages = function(target) {
 };
 
 app.controller('MainCtrl',function($scope, $rootScope, $timeout) {
+    $rootScope.onlyGlobal = false;
     $scope.data = drops;
     $scope.reverse = function(x) { return -x; };
     $scope.hiddenUnits = [ ];
@@ -41,7 +42,7 @@ app.directive('decorateSlot',function() {
 app.directive('type',function() {
     return {
         restrict: 'E',
-        scope: { type: '=', data: '=', hiddenUnits: '=' },
+        scope: { type: '=', data: '=', hiddenUnits: '=', onlyGlobal: '=' },
         replace: true,
         templateUrl: 'type.html'
     };
@@ -68,7 +69,7 @@ app.directive('island',function() {
 app.directive('collapsable',function($compile) {
     return {
         restrict: 'A',
-        scope: { target: '@', data: '=', type: '=', island: '=', hiddenUnits: '=' },
+        scope: { target: '@', data: '=', type: '=', island: '=', hiddenUnits: '=', onlyGlobal: '=' },
         link: function(scope, element, attrs) {
             var update = function() {
                 if (element.children().length > 1) {
@@ -76,7 +77,7 @@ app.directive('collapsable',function($compile) {
                         element.children().last().remove();
                 } else {
                     if (scope.target == 'type.html')
-                        element.append($compile('<type type="type" data="data" hidden-units="hiddenUnits"></type>')(scope));
+                        element.append($compile('<type type="type" data="data" hidden-units="hiddenUnits" only-global="onlyGlobal"></type>')(scope));
                     else
                         element.append($compile('<island type="type" island="island" data="data" hidden-units="hiddenUnits"></island>')(scope));
                 }
