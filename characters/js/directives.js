@@ -93,8 +93,8 @@ directives.autoFocus = function($timeout) {
 	};
 };
 
-directives.addCaptainOptions = function($timeout, $compile) {
-    var TARGET = 1;
+directives.addCaptainOptions = function($timeout, $compile, MATCHER_IDS) {
+    var TARGET = MATCHER_IDS['captain.ClassBoostingCaptains'];
     return {
         restrict: 'A',
         link: function(scope, element, attrs) {
@@ -115,8 +115,8 @@ directives.addCaptainOptions = function($timeout, $compile) {
     };
 };
 
-directives.addSpecialOptions = function($timeout, $compile) {
-    var TARGET = 19;
+directives.addSpecialOptions = function($timeout, $compile, MATCHER_IDS) {
+    var TARGET = MATCHER_IDS['special.ClassBoostingSpecials'];
     return {
         restrict: 'A',
         link: function(scope, element, attrs) {
@@ -137,8 +137,8 @@ directives.addSpecialOptions = function($timeout, $compile) {
     };
 };
 
-directives.addOrbOptions = function($timeout, $compile) {
-    var TARGET = 27;
+directives.addOrbOptions = function($timeout, $compile, MATCHER_IDS) {
+    var TARGET = MATCHER_IDS['special.OrbControllers'];
     return {
         restrict: 'A',
         link: function(scope,element,attrs) {

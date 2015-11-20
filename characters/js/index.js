@@ -1,8 +1,21 @@
+/* jshint loopfunc:true */
+
 (function() {
 
 var app = angular.module('optc', [ 'ui.router', 'ui.bootstrap', 'ngSanitize' ]);
 
 Utils.parseUnits(false);
+
+/***********************
+ * Reverse matcher map *
+ ***********************/
+
+var reverseMatcherMap = { };
+for (var i=0;i<window.matchers.length;++i) {
+    var data = window.matchers[i], type = (data.target == 'captain' ? 'captain' : 'special');
+    var name = data.name.replace(/-/g,' ').replace(/\s(.)/g,function(x,y) { return y.toUpperCase(); });
+    reverseMatcherMap[type + '.' + name] = i;
+}
 
 /********************
  * GA Configuration *
@@ -18,7 +31,8 @@ app
                 title = (window.units[parseInt($stateParams.id,10) - 1].name || '?') + ' | ' + title;
             window.document.title = title;
         });
-    });
+    })
+    .constant('MATCHER_IDS', reverseMatcherMap);
 
 
 /*****************

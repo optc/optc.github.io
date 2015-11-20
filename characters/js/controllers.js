@@ -30,7 +30,7 @@ app.controller('MainCtrl',function($scope, $rootScope, $state, $stateParams, $ti
 
 });
 
-app.controller('SidebarCtrl',function($scope, $rootScope, $stateParams) {
+app.controller('SidebarCtrl',function($scope, $rootScope, $stateParams, MATCHER_IDS) {
 
     if (!$scope.filters) $scope.filters = filters;
 
@@ -39,17 +39,17 @@ app.controller('SidebarCtrl',function($scope, $rootScope, $stateParams) {
         $scope.table.parameters = CharUtils.generateSearchParameters($stateParams.query, $.extend({ }, $scope.filters));
         // build regexes if necessary
         $scope.table.regexes = { };
-        if (filters.custom[27] && $scope.table.parameters.filters.ctrlFrom) {
+        if (filters.custom[MATCHER_IDS['special.OrbControllers']] && $scope.table.parameters.filters.ctrlFrom) {
             $scope.table.regexes.ctrlFrom = $scope.table.parameters.filters.ctrlFrom.split(',').map(function(x) {
                 return new RegExp('Changes[^,]+\\[' + x + '\\][^,]+into','i');
             });
-        } if (filters.custom[27] && $scope.table.parameters.filters.ctrlTo) {
+        } if (filters.custom[MATCHER_IDS['special.OrbControllers']] && $scope.table.parameters.filters.ctrlTo) {
             $scope.table.regexes.ctrlTo = $scope.table.parameters.filters.ctrlTo.split(',').map(function(x) {
                 return new RegExp('Changes.+into[^,]+\\[' + x + '\\]','i');
             });
-        } if (filters.custom[1] && $scope.filters.classCaptain) {
+        } if (filters.custom[MATCHER_IDS['captain.ClassBoostingCaptains']] && $scope.filters.classCaptain) {
             $scope.table.regexes.classCaptain = new RegExp('of ' + $scope.filters.classCaptain + ' .*characters');
-        } if (filters.custom[19] && $scope.filters.classSpecial) {
+        } if (filters.custom[MATCHER_IDS['special.ClassBoostingSpecials']] && $scope.filters.classSpecial) {
             $scope.table.regexes.classSpecial = new RegExp('of ' + $scope.filters.classSpecial + ' .*characters');
         }
         // redraw table
