@@ -56,11 +56,16 @@ app.directive('island',function() {
         templateUrl: 'island.html',
         link: function(scope, element, attrs) {
             scope.isTooltipEnabled = function(id) { return !!cooldowns[id - 1]; };
-            scope.getCooldownTooltip = function(id) { 
-                var temp = cooldowns[id - 1];
-                if (!temp) return null;
-                if (temp.constructor == Array) return temp[0] + ' \u2192 ' + temp[1] + ' turns';
-                else return temp + ' \u2192 ? turns';
+            scope.getTooltipText = function(id) { 
+                var cooldown = cooldowns[id - 1], unit = units[id - 1];
+                if (!cooldown && (!unit || !unit.name || !unit.incomplete)) return;
+                if (cooldown) {
+                    if (cooldown.constructor == Array) cooldown = cooldown[0] + ' \u2192 ' + cooldown[1] + ' turns';
+                    else cooldown = cooldown + ' \u2192 ? turns';
+                }
+                var result = 'CD: ' + cooldown;
+                if (unit.incomplete && unit.name) result = unit.name + '\n' + result;
+                return result;
             };
         }
     };

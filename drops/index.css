@@ -86,6 +86,10 @@ h1 > label > input {
     background: rgb(220,220,220) !important;
 }
 
+.tooltip-inner {
+    white-space: pre-wrap;
+}
+
 /*******************
  * SLOT THUMBNAILS *
  *******************/
