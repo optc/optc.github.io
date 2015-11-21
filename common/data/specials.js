@@ -703,6 +703,9 @@ window.specials = {
 		orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); },
 		def: function(p) { return 0.2; }
 	},
+	822: {
+		rcvStatic: function(p) { return 100; }
+	},
 	825: {
 		atkStatic: function(p) { return 100; },
 		type: "type"

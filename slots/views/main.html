@@ -24,13 +24,31 @@
 
             <div id="summary" ui-view="summary"></div>
 
-            <div ng-controller="ExportCtrl" id="urlContainer">
+            <div id="urlContainer" ng-class="{ visible: url }">
+                <input ng-model="url"></input>
+            </div>
 
-                <button class="btn btn-success pull-right" ng-click="generateURL()">
+            <div id="buttonContainer">
+
+                <button class="btn btn-info" ui-sref="main.save" ng-disabled="!team.length">
+                    <i class="fa fa-download"></i>
+                </button>
+
+                <button class="btn btn-primary" ui-sref="main.load">
+                    <i class="fa fa-upload"></i>
+                </button>
+
+                <button class="btn btn-danger" ui-sref="main.reset" ng-disabled="!team.length">
+                    <i class="fa fa-eraser"></i>
+                </button>
+
+                <button class="btn btn-success" ng-click="generateURL()" ng-disabled="!team.length">
                     <i class="fa fa-exchange"></i>
                 </button>
 
-                <input ng-model="url" ng-class="{ visible: url }"></input>
+                <!--<button class="btn btn-warning" ui-sref="main.image" ng-disabled="!team.length">
+                    <i class="fa fa-picture-o"></i>
+                </button>-->
 
             </div>
 

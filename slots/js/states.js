@@ -38,7 +38,45 @@ angular.module('optc').config(function($stateProvider, $urlRouterProvider) {
                     controller: 'ImportCtrl'
                 }
             }
+        })
+         
+        .state('main.save',{
+            url: 'save',
+            views: {
+                'popup@': {
+                    templateUrl: 'views/popup/save.html',
+                    controller: 'SlotsCtrl'
+                }
+            }
+        })
+         
+        .state('main.load',{
+            url: 'load',
+            views: {
+                'popup@': {
+                    templateUrl: 'views/popup/load.html',
+                    controller: 'SlotsCtrl'
+                }
+            }
+        })
+         
+        .state('main.reset',{
+            views: {
+                'popup@': {
+                    templateUrl: 'views/popup/reset.html',
+                    controller: 'ResetCtrl'
+                }
+            }
         });
+         
+        //.state('main.image',{
+            //views: {
+                //'popup@': {
+                    //templateUrl: 'views/popup/image.html',
+                    //controller: 'ImageCtrl'
+                //}
+            //}
+        //});
 
 });
 

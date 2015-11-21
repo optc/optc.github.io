@@ -160,21 +160,28 @@ slot-wheel > .ghoster {
     margin-top: 10px;
 }
 
-#urlContainer > input {
-    width: 85%;
+#urlContainer {
     position: relative;
     top: 1px;
-    visibility: hidden;
+    height: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: height 0.1s linear;
+    -moz-transition: height 0.1s linear;
 }
 
-#urlContainer > .visible {
-    visibility: visible;
+#urlContainer.visible {
+    height: 37px;
 }
 
 #urlContainer > button {
     width: 10%;
     margin-right: 5px;
     padding: 3px 6px;
+}
+
+#urlContainer > input {
+    width: 100%;
 }
 
 #transient {
@@ -585,6 +592,31 @@ slot-wheel > .ghoster {
 #recentUnits {
     height: 42px;
     margin-top: 5px;
+}
+
+#saveSlot .alert-danger {
+    margin-bottom: 0;
+}
+
+#saveSlot .padded {
+    padding-bottom: 0;
+}
+
+#loadSlot .modal-div {
+    padding-top: 10px;
+}
+
+#loadSlot tr:hover {
+    background: #ddd;
+    cursor: pointer;
+}
+
+#loadSlot td > div {
+    vertical-align: middle;
+}
+
+#loadSlot td:first-child {
+    padding-left: 5px;
 }
 
 /***************

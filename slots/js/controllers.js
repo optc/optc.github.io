@@ -8,7 +8,7 @@ var controllers = { };
  * MainCtrl *
  ************/
 
-controllers.MainCtrl = function($scope, $rootScope, $state, $stateParams, $controller) { 
+controllers.MainCtrl = function($scope, $rootScope, $state, $stateParams, $controller, $timeout) { 
 
     $rootScope.team = [ null, null, null, null, null, null ];
     $rootScope.options = { transient: false };
@@ -38,6 +38,34 @@ controllers.MainCtrl = function($scope, $rootScope, $state, $stateParams, $contr
     $scope.onRemove = function(i) {
         $rootScope.team[i] = null;
         if (!$rootScope.$$phase) $rootScope.$apply();
+    };
+
+    $scope.generateURL = function() {
+
+        var result, team = $rootScope.team;
+
+        // team
+        
+        var tokens = [ ];
+        for (var i=0;i<6;++i) {
+            var unit = team[i];
+            if (!unit || !unit.uid) tokens.push('!');
+            else {
+                var temp = unit.slots
+                    .filter(function(x) { return x; })
+                    .map(function(x) { return x.id + '' + x.level; })
+                    .join('');
+                tokens.push(unit.uid + ':' + temp);
+            }
+        }
+
+        result = '#/transfer/S' + tokens.join(',') + 'P';
+        $scope.url = window.location.href.match(/^(.+?)#/)[1] + result;
+
+        $timeout(function() {
+            $('#urlContainer > input').select();
+        });
+
     };
 
     $controller('StorageCtrl', { $scope: $scope });
@@ -173,38 +201,62 @@ controllers.ImportCtrl = function($scope, $rootScope, $state, $stateParams) {
 
 };
 
-/**************
- * ExportCtrl *
- **************/
+/*************
+ * SlotsCtrl *
+ *************/
 
-controllers.ExportCtrl = function($scope, $rootScope, $state, $stateParams, $timeout) {
+controllers.SlotsCtrl = function($scope, $rootScope, $state, $stateParams) {
 
-    $scope.generateURL = function() {
+    /* * * * * Local variables * * * * */
 
-        var result, team = $rootScope.team;
+    var lastSavedName = JSON.parse(localStorage.getItem('slots.lastName')) || '';
+    var data = JSON.parse(localStorage.getItem('slots.data')) || { };
 
-        // team
-        
-        var tokens = [ ];
-        for (var i=0;i<6;++i) {
-            var unit = team[i];
-            if (!unit || !unit.uid) tokens.push('!');
-            else {
-                var temp = unit.slots
-                    .filter(function(x) { return x; })
-                    .map(function(x) { return x.id + '' + x.level; })
-                    .join('');
-                tokens.push(unit.uid + ':' + temp);
-            }
+    /* * * * * Local functions * * * * */
+
+    var populate = function(query) {
+        var regex = new RegExp(($scope.query || ''),'i'), result = { };
+        for (var key in data) {
+            if (regex.test(data[key].name))
+                result[key] = data[key];
         }
+        $scope.data = result;
+    };
 
-        result = '#/transfer/S' + tokens.join(',') + 'P';
-        $scope.url = window.location.href.match(/^(.+?)#/)[1] + result;
+    /* * * * * Scope variables * * * * */
 
-        $timeout(function() {
-            $('#urlContainer > input').select();
-        });
+    $scope.lastSlot = lastSavedName;
+    $scope.overwriting = false;
 
+    $scope.$watch('lastSlot',function(value) {
+        if (value)
+            $scope.overwriting = data.hasOwnProperty(value.toLowerCase());
+    });
+
+    $scope.$watch('query',populate);
+
+    /* * * * * Scope functions * * * * */
+
+    $scope.teamClick = function(e,slot) {
+        if (e.which == 1 && !e.ctrlKey && !e.metaKey) {
+            $rootScope.team = slot.team;
+            localStorage.setItem('slots.lastName',JSON.stringify(slot.name));
+            $state.go('^');
+        } else if (e.which == 2 || (e.which == 1 && (e.ctrlKey || e.metaKey))) {
+            var name = slot.name.toLowerCase();
+            delete data[name];
+            delete $scope.data[name];
+            localStorage.setItem('slots.data',JSON.stringify(data));
+        }
+    };
+
+    $scope.doSave = function() {
+        $scope.$broadcast('$validate');
+        var result = { name: $scope.lastSlot, team: $scope.team };
+        data[$scope.lastSlot.toLowerCase()] = result;
+        localStorage.setItem('slots.data',JSON.stringify(data));
+        localStorage.setItem('slots.lastName',JSON.stringify($scope.lastSlot));
+        $state.go('^');
     };
 
 };
@@ -232,6 +284,19 @@ controllers.StorageCtrl = function($scope, $rootScope) {
         if (!transient)
             save();
     });
+
+};
+
+/*************
+ * ResetCtrl *
+ *************/
+
+controllers.ResetCtrl = function($scope, $rootScope, $state) {
+
+    $scope.resetStorage = function() {
+        $rootScope.team = [ ];
+        $state.go('^');
+    };
 
 };
 

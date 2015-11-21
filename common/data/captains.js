@@ -1718,9 +1718,6 @@ window.captains = {
 				},
 		hitModifiers: [ "Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect" ]
 	},
-	822: {
-		rcvStatic: function(p) { return 100; }
-	},
 	825: {
 		atk: function(p) { return p.unit.type == 'STR' ? 1.5 : 1; },
 		hp: function(p) { return p.unit.type == 'STR' ? 1.5 : 1; }

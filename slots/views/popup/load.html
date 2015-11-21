@@ -1,0 +1,36 @@
+<div class="backdrop" ui-sref="^"></div>
+
+<div class="inner-container" id="loadSlot" go-back>
+
+    <div class="custom-modal">
+        <div id="picker" class="modal-dialog">
+            <div class="modal-content animated fadeInDown">
+                <div class="modal-header">Load data</div>
+                <div class="modal-body">
+
+                    <input type="text" id="picker" placeholder="type to filter (ctrl-click or middle-click to delete slot)" ng-model="query" auto-focus class="modal-filter">
+                    <div class="modal-div">
+
+                        <table id="slot-table">
+                            <tbody>
+                                <tr ng-repeat="(key,slot) in data" ng-click="teamClick($event,slot)">
+                                    <td>{{slot.name}}</td>
+                                    <td class="to-the-right">
+                                        <div  class="slot small" ng-repeat="unit in slot.team track by $index"
+                                            ng-if="unit && $index < 6" decorate-slot="notitle" uid="unit.uid"></div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-default" ui-sref="^">Cancel</button> 
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
