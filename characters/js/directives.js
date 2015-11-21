@@ -311,6 +311,7 @@ directives.addTags = function($stateParams, $rootScope) {
                     name = matcher.name;
                     if (!/captains$/.test(name)) name = name.replace(/ers$/,'ing').replace(/s$/,'') + ' captain';
                     else name = name.replace(/s$/,'');
+                    name = name.replace(/iing/,'ying');
                     element.append($('<span class="tag captain">' + name + '</div>'));
                 }
                 // specials
@@ -318,6 +319,7 @@ directives.addTags = function($stateParams, $rootScope) {
                     name = matcher.name;
                     if (!/specials$/.test(name)) name = name.replace(/ers$/,'ing').replace(/s$/,'') + ' special';
                     else name = name.replace(/s$/,'');
+                    name = name.replace(/iing/,'ying');
                     element.append($('<span class="tag special">' + name + '</div>'));
                 }
             });
