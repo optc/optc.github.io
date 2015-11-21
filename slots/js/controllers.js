@@ -150,12 +150,15 @@ controllers.SummaryCtrl = function($scope, $state, $stateParams) {
             for (;level<abilities[n].levels.length && x >= abilities[n].levels[level][0];++level);
             return {
                 points: x,
-                level: level,
+                level: (level == abilities[n].levels.length ? 'MAX' : level),
                 description: (level < 1 ? 'Inactive' : abilities[n].levels[level - 1][1]),
                 missing: (level < abilities[n].levels.length ? abilities[n].levels[level][0] - x : -1),
-                next: (level < abilities[n].levels.length ? abilities[n].levels[level][1] : null)
+                next: (level < abilities[n].levels.length ? abilities[n].levels[level][1] : null),
+                overflow: (level == abilities[n].levels.length ? x - abilities[n].levels.slice(-1)[0][0] : 0)
             };
         });
+
+        console.log($scope.summary);
 
         $scope.summaryEnabled = $scope.summary.some(function(x) { return x !== null; });
 

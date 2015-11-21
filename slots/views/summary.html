@@ -21,6 +21,9 @@
                         {{summary[i].next}}
                         (<b>{{summary[i].missing}}</b> more points needed)
                     </span>
+                    <span ng-if="summary[i].overflow" class="label label-danger">
+                        <b>Unneeded points:</b> {{summary[i].overflow}}
+                    </span>
                 </td>
             </tr>
         </tbody>

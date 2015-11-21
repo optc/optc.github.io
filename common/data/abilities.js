@@ -79,7 +79,7 @@ window.abilities = [
         name: 'Map damage resistance',
         levels: [
             [ 10, 'Map damage reduced by 50%' ],
-            [ 15, 'Map damage reduced by 100%' ],
+            [ 20, 'Map damage reduced by 100%' ],
         ]
     },
 

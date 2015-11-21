@@ -619,6 +619,10 @@ slot-wheel > .ghoster {
     padding-left: 5px;
 }
 
+#summary .label {
+    font-size: 85%;
+}
+
 /***************
  * BACKGROUNDS *
  ***************/
