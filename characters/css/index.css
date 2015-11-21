@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'icomoon';
-	src:url('../res/icomoon.eot?xewvs9');
-	src:url('../res/icomoon.eot?xewvs9#iefix') format('embedded-opentype'),
-		url('../res/icomoon.ttf?xewvs9') format('truetype'),
-		url('../res/icomoon.woff?xewvs9') format('woff'),
-		url('../res/icomoon.svg?xewvs9#icomoon') format('svg');
+	src:url('../../res/icomoon.eot?xewvs9');
+	src:url('../../res/icomoon.eot?xewvs9#iefix') format('embedded-opentype'),
+		url('../../res/icomoon.ttf?xewvs9') format('truetype'),
+		url('../../res/icomoon.woff?xewvs9') format('woff'),
+		url('../../res/icomoon.svg?xewvs9#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -214,16 +214,20 @@ input[type="text"] {
     font-weight: bold;
 }
 
-.fuzzy-toggle {
+.fuzzy-toggle, .night-toggle {
     float: left;
     position: relative;
     top: 1px;
 }
 
-.fuzzy-toggle > input {
+.fuzzy-toggle > input, .night-toggle > input {
     margin-right: 5px;
     position: relative;
     top: 2px;
+}
+
+.night-toggle {
+    margin-right: 5px;
 }
 
 .filter-container:last-child {
@@ -649,6 +653,7 @@ tr.incomplete td:nth-child(2) > a:after {
 
 .clickable {
     cursor: pointer;
+    outline: none !important;
 }
 
 .arrow {

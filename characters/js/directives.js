@@ -57,6 +57,14 @@ directives.characterTable = function($rootScope, $timeout, $compile) {
                 'uib-popover-template="\'views/pick.html\'" popover-append-to-body="\'true\'">Additional columns</a>');
             $compile(pick)(scope);
             pick.insertAfter($('.dataTables_length'));
+            // night toggle
+            var nightToggle = $('<label class="night-toggle"><input type="checkbox">Night mode</input></label>');
+            nightToggle.find('input').change(function(e) {
+                $rootScope.nightMode = e.target.checked;
+                if (!$rootScope.$$phase) $rootScope.$apply();
+            });
+            if ($rootScope.nightMode) nightToggle.find('input').attr('checked', 'checked');
+            nightToggle.insertBefore($('.dataTables_length'));
             // fuzzy toggle
             var fuzzyToggle = $('<label class="fuzzy-toggle"><input type="checkbox">Enable fuzzy search</input></label>');
             fuzzyToggle.attr('title','When enabled, searches will also display units whose name is not an exact match to the search keywords.\nUseful if you don\'t know the correct spelling of a certain unit.');

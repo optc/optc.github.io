@@ -15,6 +15,9 @@ var app = angular.module('optc');
 
 app.controller('MainCtrl',function($scope, $rootScope, $state, $stateParams, $timeout) {
 
+    $rootScope.nightMode = JSON.parse(localStorage.getItem('chars.night')) || false;
+    $scope.$watch('nightMode',function(night) { localStorage.setItem('chars.night', JSON.stringify(night)); });
+
     // query
     if ($stateParams.query != lastQuery) {
         lastQuery = $stateParams.query;
