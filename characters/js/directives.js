@@ -54,7 +54,7 @@ directives.characterTable = function($rootScope, $timeout, $compile) {
             link.insertAfter($('.dataTables_length'));
             // pick column link
             var pick = $('<a id="pick-link" popover-placement="bottom" popover-trigger="click" popover-title="Additional Columns" ' +
-                'popover-template="\'views/pick.html\'" popover-append-to-body="\'true\'">Additional columns</a>');
+                'uib-popover-template="\'views/pick.html\'" popover-append-to-body="\'true\'">Additional columns</a>');
             $compile(pick)(scope);
             pick.insertAfter($('.dataTables_length'));
             // fuzzy toggle

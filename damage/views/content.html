@@ -9,14 +9,25 @@
     <hp-bar></hp-bar>
 
     <div id="other">
-        <button type="button" class="btn btn-xs btn-primary menu-link"
-            ng-click="options.sidebarVisible = !options.sidebarVisible">Settings</a><!--
-     --><button type="button" class="btn btn-xs btn-info" id="reset" ui-sref=".reset">Reset</button><!--
-     --><button type="button" class="btn btn-xs btn-success" ng-click="generateURL()"
-                title="Transfer team" ng-controller="ExportCtrl">
+        <button type="button" class="btn btn-settings menu-link" uib-tooltip="Settings" tooltip-append-to-body="true"
+                ng-click="options.sidebarVisible = !options.sidebarVisible">
+            <i class="fa fa-gear"></i>
+        </a><!--
+     --><button type="button" class="btn btn-info" id="reset" ui-sref=".saveSlot" uib-tooltip="Save" tooltip-append-to-body="true">
+            <i class="fa fa-download"></i>
+        </button><!--
+     --><button type="button" class="btn btn-primary" id="reset" ui-sref=".loadSlot" uib-tooltip="Load" tooltip-append-to-body="true">
+            <i class="fa fa-upload"></i>
+        </button><!--
+     --><button type="button" class="btn btn-danger" id="reset" ui-sref=".reset" uib-tooltip="Reset" tooltip-append-to-body="true">
+            <i class="fa fa-eraser"></i>
+        </button><!--
+     --><button type="button" class="btn btn-success" ng-click="generateURL()"
+                title="Transfer team" ng-controller="ExportCtrl" uib-tooltip="Export URL" tooltip-append-to-body="true">
             <i class="fa fa-exchange"></i>
         </button><!--
-     --><button type="button" class="btn btn-xs btn-warning" ui-sref=".image" title="Generate image">
+     --><button type="button" class="btn btn-warning" ui-sref=".image" title="Generate image"
+                uib-tooltip="Export Image" tooltip-append-to-body="true">
             <i class="fa fa-picture-o"></i>
         </button>
     </div>
@@ -27,7 +38,7 @@
         <i class="fa fa-lock"></i>
         Transient mode enabled. Click to disable.
         <span popover-placement="top" popover-trigger="mouseenter"
-            popover-title="Transient Mode" popover-template="'transient.html'"
+            popover-title="Transient Mode" uib-popover-template="'transient.html'"
             popover-append-to-body="'true'">
             (?)
         </span>

@@ -158,8 +158,6 @@ controllers.SummaryCtrl = function($scope, $state, $stateParams) {
             };
         });
 
-        console.log($scope.summary);
-
         $scope.summaryEnabled = $scope.summary.some(function(x) { return x !== null; });
 
     },true);

@@ -34,30 +34,6 @@ li.STR > div, li.QCK > div, li.DEX > div, li.PSY > div, li.INT > div {
     border: none;
 }
 
-.btn {
-    border: none !important;
-}
-
-.btn-primary:not(:hover) {
-    background-color: #91bddc !important;
-    color: black !important;
-}
-
-.btn-info:not(:hover) {
-    background-color: #bfdef4 !important;
-    color: black !important;
-}
-
-.btn-success:not(:hover) {
-    background-color: #9fe2ba !important;
-    color: black !important;
-}
-
-.btn-warning:not(:hover) {
-    background-color: #ddcc77 !important;
-    color: black !important;
-}
-
 .panel {
     background-color: #4f5b66;
 }

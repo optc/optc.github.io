@@ -85,10 +85,14 @@ app.controller('ImageGeneratorCtrl', function($scope, $filter, $timeout) {
                         x: temp[1], y: temp[2], stroke: 'gray' });
                 }
                 // level label
-                fill(context, 'black', baseX + 80, baseY + 95, 31, 16);
-                fill(context, 'white', baseX + 81, baseY + 96, 30, 15);
-                type(context, { text: 'Lv.' + data.level, style: 'bold 10px "Open Sans"', align: 'center',
-                    x: baseX + 96, y: baseY + 107 });
+                fill(context, 'black', baseX + 70, baseY + 95, 41, 16);
+                fill(context, 'white', baseX + 71, baseY + 96, 40, 15);
+                type(context, {
+                        text: 'Lv.' + (data.level == data.unit.maxLevel ? 'MAX' : data.level),
+                        style: 'bold 10px "Open Sans"',
+                        align: 'center',
+                        x: baseX + 91, y: baseY + 107
+                });
                 // candy labels
                 var total = data.candies.hp + data.candies.atk + data.candies.rcv;
                 if (total > 0) {

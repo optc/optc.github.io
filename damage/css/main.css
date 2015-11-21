@@ -344,18 +344,14 @@ body, html {
     width: 50%;
 }
 
-#other > button {
-    padding: 5px;
+.btn-settings, .btn-settings:focus {
+    background: #555;
+    color: white;
 }
 
-#other > button:nth-child(3), 
-#other > button:last-child {
-    width: 35px;
-}
-
-#other > button:first-child,
-#other > button:nth-child(2) {
-    width: 110px;
+.btn-settings:hover {
+    background: #444;
+    color: white;
 }
 
 #other > :not(:last-child) {
