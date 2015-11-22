@@ -2666,7 +2666,7 @@ window.details = {
 		captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK and RCV of QCK and PSY characters by 1.5x"
 	},
 	636: {
-		special: "Binds himself for 3 turns, reduces damage received by 50% for 3 turns, recovers a small amount of HP at the end of each turn for 3 turns",
+		special: "Binds himself for 3 turns, reduces damage received by 50% for 3 turns, recovers 3.5x character's RCV in HP at the end of each turn for 3 turns",
 		specialName: "Wretched Ballade",
 		captain: "Boosts ATK of characters with cost 2 or less by 3x"
 	},

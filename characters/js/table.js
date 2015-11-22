@@ -14,7 +14,7 @@ var addImage = function(data, type, row, meta) {
         '<a ui-sref="main.view({ id: ' + parseInt(row[0],10) + '})">' + data + '</a>';
 };
 
-var fuse = new Fuse(window.units, { keys: [ 'name' ], id: 'number', threshold: 0.4 });
+var fuse = new Fuse(window.units, { keys: [ 'name' ], id: 'number', threshold: 0.3, distance: 200 });
 var fused = null;
 
 var tableData = null;
