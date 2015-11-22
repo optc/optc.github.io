@@ -15,7 +15,6 @@ var addImage = function(data, type, row, meta) {
 };
 
 var fuse = new Fuse(window.units, { keys: [ 'name' ], id: 'number' });
-var fuzzy = JSON.parse(localStorage.getItem('fuzzy')) || false;
 
 var tableData = null;
 
@@ -74,8 +73,8 @@ $.fn.dataTable.ext.search.push(function(settings, data, index) {
     }
     // filter by query
     if (tableData.parameters.query) {
-        if (!fuzzy && !tableData.parameters.query.test(unit.name)) return false;
-        if (fuzzy && !(new Fuse([ unit ], { keys: [ 'name' ], threshold: 0.3 })).search(tableData.parameters.query.source).length)
+        if (!tableData.fuzzy && !tableData.parameters.query.test(unit.name)) return false;
+        if (tableData.fuzzy && !(new Fuse([ unit ], { keys: [ 'name' ], threshold: 0.3 })).search(tableData.parameters.query.source).length)
             return false;
     }
     /* * * * * Sidebar filters * * * * */
@@ -225,8 +224,8 @@ angular.module('optc') .run(function($rootScope) {
         additional: additionalColumns.length,
         data: data,
         parameters: null,
-        fuzzy: fuzzy,
-        regexes: { }
+        fuzzy: JSON.parse(localStorage.getItem('fuzzy')) || false,
+        regexes: { },
     };
 
     $rootScope.table = tableData;
