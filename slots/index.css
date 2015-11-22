@@ -4,6 +4,7 @@
 
 html, body, body > [ui-view] {
     height: 100%;
+    cursor: default !important;
 }
 
 #outer-container, #container {

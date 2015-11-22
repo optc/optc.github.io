@@ -10,6 +10,7 @@ body, html {
     -moz-user-select: none;
     position: relative;
     overflow: hidden;
+    cursor: default !important;
 }
 
 #main {
@@ -457,7 +458,7 @@ nav.panel {
             transition: background 0.1s linear;
 }
 
-#menu li > div:not(.menuIcon):hover {
+#menu li > div:not(.menuIcon):not(#specialDivider):hover {
     background: #688aac;
     color: white !important;
     cursor: pointer;
