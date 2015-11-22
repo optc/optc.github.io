@@ -14,7 +14,8 @@ var addImage = function(data, type, row, meta) {
         '<a ui-sref="main.view({ id: ' + parseInt(row[0],10) + '})">' + data + '</a>';
 };
 
-var fuse = new Fuse(window.units, { keys: [ 'name' ], id: 'number' });
+var fuse = new Fuse(window.units, { keys: [ 'name' ], id: 'number', threshold: 0.4 });
+var fused = null;
 
 var tableData = null;
 
@@ -74,8 +75,10 @@ $.fn.dataTable.ext.search.push(function(settings, data, index) {
     // filter by query
     if (tableData.parameters.query) {
         if (!tableData.fuzzy && !tableData.parameters.query.test(unit.name)) return false;
-        if (tableData.fuzzy && !(new Fuse([ unit ], { keys: [ 'name' ], threshold: 0.3 })).search(tableData.parameters.query.source).length)
-            return false;
+        if (tableData.fuzzy) {
+            if (fused === null) fused = fuse.search(tableData.parameters.query.source);
+            if (fused.indexOf(id - 1) == -1) return false;
+        }
     }
     /* * * * * Sidebar filters * * * * */
     if (!tableData.parameters.filters) return true;
@@ -179,7 +182,7 @@ $.fn.dataTable.ext.search.push(function(settings, data, index) {
  * Table configuration *
  ***********************/
 
-angular.module('optc') .run(function($rootScope) {
+angular.module('optc') .run(function($rootScope, $timeout) {
 
     var data = window.units.filter(function(x) { return x.name; }).map(function(x,n) {
         var result = [
@@ -233,10 +236,13 @@ angular.module('optc') .run(function($rootScope) {
     $rootScope.characterLog = characterLog;
     $rootScope.showLogFilters = log.length > 0;
 
-    $rootScope.$watch('table',function(table) {
-        tableData = table;
-        if (table.refresh) table.refresh();
-    },true);
+    $timeout(function() {
+        $rootScope.$watch('table',function(table) {
+            tableData = table;
+            if (fused !== null) fused = null;
+            if (table.refresh) table.refresh();
+        },true);
+    });
 
     $rootScope.checkLog = function() {
         var temp = [ ];
