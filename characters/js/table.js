@@ -54,7 +54,7 @@ var getTableColumns = function() {
  * Table filtering *
  *******************/
 
-$.fn.dataTable.ext.search.push(function(settings, data, index) {
+var tableFilter = function(settings, data, index) {
     if (!tableData.parameters) return true;
     var id = parseInt(data[0],10), unit = window.units[id - 1];
     var flags = window.flags[unit.number + 1] || { };
@@ -176,7 +176,7 @@ $.fn.dataTable.ext.search.push(function(settings, data, index) {
     if (tableData.regexes.classSpecial && !tableData.regexes.classSpecial.test(window.details[id].special)) return false;
     // end
     return true;
-});
+};
 
 /***********************
  * Table configuration *
@@ -237,12 +237,14 @@ angular.module('optc') .run(function($rootScope, $timeout) {
     $rootScope.showLogFilters = log.length > 0;
 
     $timeout(function() {
+        $.fn.dataTable.ext.search.push(tableFilter);
         $rootScope.$watch('table',function(table) {
             tableData = table;
-            if (fused !== null) fused = null;
             if (table.refresh) table.refresh();
         },true);
     });
+
+    $rootScope.$on('table.refresh',function() { fused = null; });
 
     $rootScope.checkLog = function() {
         var temp = [ ];

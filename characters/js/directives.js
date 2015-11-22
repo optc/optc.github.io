@@ -47,7 +47,10 @@ directives.characterTable = function($rootScope, $timeout, $compile) {
                     header.setAttribute('loaded',true);
                 }
             });
-            scope.table.refresh = function() { $timeout(function() { element.fnDraw(); }); };
+            scope.table.refresh = function() {
+                $rootScope.$emit('table.refresh');
+                $timeout(function() { element.fnDraw(); });
+            };
             // report link
             var link = $('<span class="help-link">Want to report or request something? Use <a>this form</a>.</span>');
             link.find('a').attr('href', 'https://docs.google.com/forms/d/1jSlwN0Ruyc5bFfxdXlwihqfLdCiELX7HQTabXoCV7hU/viewform?usp=send_form');
@@ -70,7 +73,9 @@ directives.characterTable = function($rootScope, $timeout, $compile) {
             fuzzyToggle.attr('title','When enabled, searches will also display units whose name is not an exact match to the search keywords.\nUseful if you don\'t know the correct spelling of a certain unit.');
             fuzzyToggle.find('input').prop('checked', scope.table.fuzzy);
             fuzzyToggle.find('input').change(function() {
-                scope.table.fuzzy = $(this).is(':checked');
+                var checked = $(this).is(':checked');
+                if (checked == scope.table.fuzzy) return;
+                scope.table.fuzzy = checked;
                 localStorage.setItem('fuzzy', JSON.stringify(scope.table.fuzzy));
                 scope.table.refresh();
             });
