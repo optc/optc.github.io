@@ -196,6 +196,10 @@ input[type="text"] {
 .width-4 { width: 33.33%; }
 .width-3 { width: 25%; }
 
+#mainTable {
+    margin-top: 0 !important;
+}
+
 .help-link {
     float: right;
     margin-right: 10px;
@@ -529,6 +533,26 @@ tr.incomplete td:nth-child(2) > a:after {
 
 #mainTable td:last-child > label > input {
     margin-top: 40%;
+}
+
+#mainTable_wrapper > :first-child {
+    padding: 2px;
+}
+
+#mainTable_wrapper > :first-child > :first-child {
+    width: 100%;
+}
+
+#mainTable_wrapper > :first-child > :last-child {
+    width: 100%;
+}
+
+.dataTables_length > label {
+    margin-bottom: 0;
+}
+
+#mainTable_paginate .pagination {
+    float: right;
 }
 
 /*********

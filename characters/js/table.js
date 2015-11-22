@@ -45,7 +45,7 @@ var getTableColumns = function() {
         var title = x
             .replace(/Minimum cooldown/,'Min CD')
             .replace(/Initial cooldown/,'Max CD');
-        result.splice(result.length-1, 0, { title: title, type: 'numeric' });
+        result.splice(result.length-1, 0, { title: title, type: 'num-string' });
     });
     return result;
 };
@@ -178,6 +178,22 @@ var tableFilter = function(settings, data, index) {
     return true;
 };
 
+/*****************
+ * Table sorting *
+ *****************/
+
+$.fn.dataTable.ext.type.order['num-string-asc'] = function(x,y) {
+    if (x.constructor == String) x = (x == 'Unknown' ? 100 : 101);
+    if (y.constructor == String) y = (y == 'Unknown' ? 100 : 101);
+    return x - y;
+};
+
+$.fn.dataTable.ext.type.order['num-string-desc'] = function(x,y) {
+    if (x.constructor == String) x = (x == 'Unknown' ? -100 : -101);
+    if (y.constructor == String) y = (y == 'Unknown' ? -100 : -101);
+    return y - x;
+};
+
 /***********************
  * Table configuration *
  ***********************/
@@ -189,7 +205,8 @@ angular.module('optc') .run(function($rootScope, $timeout) {
             ('000' + (x.number+1)).slice(-padding),
             x.name,
             x.type,
-            x.class.constructor == Array ? x.class.join(', ') : x.class,
+            
+        x.class.constructor == Array ? x.class.join(', ') : x.class,
             x.maxHP,
             x.maxATK,
             x.maxRCV,

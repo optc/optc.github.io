@@ -1,5 +1,6 @@
-html, body {
-    background-color: #404040;
+html, body,
+.pagination a {
+    background: #404040 !important;
 }
 
 .filter:not(.type):not(.orb) {
@@ -112,4 +113,21 @@ a:hover { color: #53dccd; }
 
 .filter-container:last-child > .filter:last-child {
     border-color: #333;
+}
+
+.paginate_button.active > a {
+    border-color: white !important;
+    background-color: #808080 !important;
+}
+
+.pagination > li > a {
+    color: white;
+}
+
+.pagination a:hover {
+    background: #606060 !important;
+}
+
+.pagination > li:hover > a {
+    color: white;
 }
