@@ -94,11 +94,11 @@ window.effects = {
         description: 'Stats of characters whose homeland is not a sky island reduced by 20%, ATK of PSY characters reduced by 50%',
         thumb: 583,
         atk: function(p) {
-            var result = window.effects['Skypiea Warriors'].atk(p);
+            var result = window.effects['Warriors of Shandia'].atk(p);
             return (p.type == 'PSY' ? 0.5 : 1) * result;
         },
-        hp: function(p) { return window.effects['Skypiea Warriors'].hp(p); },
-        rcv: function(p) { return window.effects['Skypiea Warriors'].rcv(p); },
+        hp: function(p) { return window.effects['Warriors of Shandia'].hp(p); },
+        rcv: function(p) { return window.effects['Warriors of Shandia'].rcv(p); },
     },
 
     'Gan Fall': {
