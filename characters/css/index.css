@@ -499,6 +499,18 @@ tr.incomplete td:nth-child(2) > a:after {
     display: inline-block;
 }
 
+tr.preview td:nth-child(2) > a:after {
+    content: "PREVIEW";
+    padding: 5px;
+    border-radius: 10px;
+    margin-left: 10px;
+    background: orchid;
+    font-size: 9px;
+    color: white;
+    text-decoration: none !important;
+    display: inline-block;
+}
+
 .abilities td:first-child {
     white-space: nowrap;
 }
@@ -772,6 +784,10 @@ unit > a {
 
 unit > a:hover, .clickable:hover {
     outline: 1px solid red;
+}
+
+.preview .stats-pane ~ * {
+    display: none;
 }
 
 /*******************

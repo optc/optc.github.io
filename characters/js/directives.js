@@ -38,7 +38,8 @@ directives.characterTable = function($rootScope, $timeout, $compile) {
                     row.cells[n].textContent = '';
                     // compile
                     $compile($(row).contents())($rootScope);
-                    if (window.units[id - 1].incomplete) $(row).addClass('incomplete');
+                    if (window.units[id - 1].preview) $(row).addClass('preview');
+                    else if (window.units[id - 1].incomplete) $(row).addClass('incomplete');
                     row.setAttribute('loaded','true');
                 },
                 headerCallback : function(header) {

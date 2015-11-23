@@ -825,5 +825,12 @@ window.units = [
 	[ "Hearty Wild Zombie", "PSY", "Tough", 3, 12, 4, 1, 50, null, 70, 70, 132, null, null, null, 0 ],
 	[ "General Zombie Herculean Shadow", "STR", [ "Slasher", "Tough" ], 3, 20, 6, 1, 70, null, 99, 59, 29, null, null, null, 0 ],
 	[ "General Zombie Peculiar Shadow", "DEX", [ "Slasher", "Tough" ], 3, 20, 6, 1, 70, null, null, null, null, null, null, null, 0 ],
-	[ "General Zombie Swift Shadow", "QCK", [ "Slasher", "Tough" ], 3, 20, 6, 1, 70, null, 113, 54, 29, null, null, null, 0 ]
+	[ "General Zombie Swift Shadow", "QCK", [ "Slasher", "Tough" ], 3, 20, 6, 1, 70, null, 113, 54, 29, null, null, null, 0 ],
+	[ ],
+	[ ],
+	[ "Basil Hawkins, Captain of the Hawkins Pirates", "DEX", [ "Knowledge", "Striker" ], 4, 25, null, 0, null, null, null, null, null, null, null, null, 0 ],
+	[ "Basil Hawkins the Magician, Captain of the Hawkins Pirates", "DEX", [ "Knowledge", "Striker" ], 5, 40, null, 0, null, null, null, null, null, null, null, null, 0 ],
+	[ "Wiper, Warrior of Shandia", "STR", [ "Shooter", "Freedom" ], 4, 18, null, 0, null, null, null, null, null, null, null, null, 0 ],
+	[ "Berserk Wiper, Warrior of Shandia", "STR", [ "Shooter", "Freedom" ], 5, 30, null, 0, null, null, null, null, null, null, null, null, 0 ],
+	[ "Mr. 7 & Miss Father's Day", "QCK", "Shooter", 4, 20, null, 0, null, null, null, null, null, null, null, null, 0 ]
 ];

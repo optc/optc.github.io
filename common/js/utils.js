@@ -31,6 +31,7 @@ var parseUnit = function(element,n) {
         number: n
     };
     if (element.indexOf(null) != -1) result.incomplete = true;
+    if (result.combo === null || result.combo === 0) result.preview = true;
     return result;
 };
 

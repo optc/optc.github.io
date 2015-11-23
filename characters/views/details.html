@@ -11,11 +11,17 @@
                     {{unit.name}}
                 </div>
 
-                <div class="modal-body">
+                <div class="modal-body" ng-class="{ preview: unit.preview }">
 
                     <div ng-if="!unit.incomplete" class="slot huge" decorate-slot big="true" uid="unit.number + 1"></div>
 
-                    <div ng-if="unit.incomplete" class="alert alert-danger">This unit's complete information is still partially missing and will soon be added.</div>
+                    <div ng-if="unit.preview" class="alert alert-warning">
+                        <b>WARNING:</b> Currently viewing the preview of an upcoming unit not yet released, the information provided may not be accurate.
+                    </div>
+
+                    <div ng-if="unit.incomplete && !unit.preview" class="alert alert-danger">
+                        This unit's complete information is still partially missing and will soon be added.
+                    </div>
 
                     <h3 class="page-header">
                         Details
@@ -27,7 +33,7 @@
                         </label>
                     </h3>
 
-                    <div class="panel panel-default">
+                    <div class="panel panel-default stats-pane">
                         <table class="table table-striped">
                             <tbody>
                                 <tr>
@@ -57,7 +63,7 @@
                                 <tr>
                                     <td ng-if="!compare">{{unit.combo}}</td>
                                     <td ng-if="compare" comparison="negative">{{unit.combo - compare.combo}}</td>
-                                    <td ng-if="!compare">{{unit.slots}}</td>
+                                    <td ng-if="!compare">{{unit.preview ? '' : unit.slots}}</td>
                                     <td ng-if="compare" comparison="positive">{{unit.slots - compare.slots}}</td>
                                     <td>{{unit.maxLevel}}</td>
                                     <td ng-if="!compare" colspan="{{hybrid ? 2 : 1}}">{{unit.maxEXP | number}}</td>
