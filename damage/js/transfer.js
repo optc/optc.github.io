@@ -29,7 +29,7 @@ var ImportCtrl = function($scope, $rootScope, $state, $stateParams) {
     var team = [ ];
     var regex = /(?:(\d+):(\d+)(?::(\d+):(\d+):(\d+))?|!)/;
     var units = tokens[2].split(/,/);
-    var temp, data, type;
+    var temp, data, type, effectName;
 
     for (var i=0;i<units.length;++i) {
         var matches = units[i].match(regex);
@@ -67,6 +67,18 @@ var ImportCtrl = function($scope, $rootScope, $state, $stateParams) {
         else if (type == 'H') {
             temp = parseFloat(data, 10);
             if (isNaN(temp) || temp < 0 || temp > 100) break;
+        } else if (type == 'E') {
+            var effectID = parseInt(data, 10);
+            if (effectID === 0) {
+                effectName = null;
+                continue;
+            }
+            for (var effect in effects) {
+                if (effects[effect].id != effectID) continue;
+                effectName = effect;
+                break;
+            }
+            if (!effectName) break;
         }
     }
 
@@ -120,6 +132,8 @@ var ImportCtrl = function($scope, $rootScope, $state, $stateParams) {
             });
         } else if (type == 'H') {
             $scope.data.percHP = parseFloat(data, 10);
+        } else if (type == 'E') {
+            $scope.data.effect = effectName;
         }
 
     }
@@ -168,6 +182,7 @@ var ExportCtrl = function($scope) {
         
         result += data.ship[0] + ',' + data.ship[1] + 'B';
         result += (data.defense || 0) + 'D';
+        result += ($scope.data.effect ? window.effects[$scope.data.effect].id : 0) + 'E';
         result += parseInt(team.map(function(x) { return (x.orb == 2 ? 1 : (x.orb == 0.5 ? 2 : 0)); }).join(''),3) + 'O';
         result += parseInt(team.map(function(x) { return x.lock; }).join(''),3) + 'L';
         result += parseInt(team.map(function(x) { return x.silence; }).join(''),3) + 'G';

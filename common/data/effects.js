@@ -1,8 +1,13 @@
 window.effects = {
 
+    // always use unique IDs, and don't ever change an ID once you've set it
+    // IDs must always be greater than 0
+    // last ID used: 16
+
     'Baroque Works (pre-v4.0)': {
         description: 'Stats of non-Fighter units reduced by 90%',
         thumb: 462,
+        id: 1, // don't change this
         atk: function(p) { return !p.class.has('Fighter') ? 0.1 : 1; },
         hp: function(p)  { return !p.class.has('Fighter') ? 0.1 : 1; },
         rcv: function(p) { return !p.class.has('Fighter') ? 0.1 : 1; }
@@ -11,6 +16,7 @@ window.effects = {
     'Baroque Works': {
         description: 'ATK of non-Fighter, non-Booster, non-Evolver units reduced by 90%',
         thumb: 462,
+        id: 2, // don't change this
         atk: function(p) { return p.class.has('Fighter') || p.class.has('Booster') || p.class.has('Evolver') ? 1 : 0.1; },
         hp: function(p)  { return p.class.has('Fighter') || p.class.has('Booster') || p.class.has('Evolver') ? 1 : 0.1; },
         rcv: function(p) { return p.class.has('Fighter') || p.class.has('Booster') || p.class.has('Evolver') ? 1 : 0.1; }
@@ -19,6 +25,7 @@ window.effects = {
     'Prisoner Crocodile (pre-v4.0)': {
         description: 'Stats of non-Striker units reduced by 90%',
         thumb: 510,
+        id: 3, // don't change this
         atk: function(p) { return !p.class.has('Striker') ? 0.1 : 1; },
         hp: function(p)  { return !p.class.has('Striker') ? 0.1 : 1; },
         rcv: function(p) { return !p.class.has('Striker') ? 0.1 : 1; }
@@ -27,6 +34,7 @@ window.effects = {
     'Prisoner Crocodile': {
         description: 'Stats of non-Striker, non-Booster, non-Evolver units reduced by 90%',
         thumb: 510,
+        id: 4, // don't change this
         atk: function(p) { return p.class.has('Striker') || p.class.has('Booster') || p.class.has('Evolver') ? 1 : 0.1; },
         hp: function(p)  { return p.class.has('Striker') || p.class.has('Booster') || p.class.has('Evolver') ? 1 : 0.1; },
         rcv: function(p) { return p.class.has('Striker') || p.class.has('Booster') || p.class.has('Evolver') ? 1 : 0.1; }
@@ -35,6 +43,7 @@ window.effects = {
     'Jailer Domino (pre-v4.0)': {
         description: 'Stats of non-Shooter units reduced by 90%',
         thumb: 538,
+        id: 5, // don't change this
         atk: function(p) { return !p.class.has('Shooter') ? 0.1 : 1; },
         hp: function(p)  { return !p.class.has('Shooter') ? 0.1 : 1; },
         rcv: function(p) { return !p.class.has('Shooter') ? 0.1 : 1; }
@@ -43,6 +52,7 @@ window.effects = {
     'Jailer Domino': {
         description: 'Stats of non-Shooter, non-Booster, non-Evolver units reduced by 90%',
         thumb: 538,
+        id: 6, // don't change this
         atk: function(p) { return p.class.has('Shooter') || p.class.has('Booster') || p.class.has('Evolver') ? 1 : 0.1; },
         hp: function(p)  { return p.class.has('Shooter') || p.class.has('Booster') || p.class.has('Evolver') ? 1 : 0.1; },
         rcv: function(p) { return p.class.has('Shooter') || p.class.has('Booster') || p.class.has('Evolver') ? 1 : 0.1; }
@@ -51,6 +61,7 @@ window.effects = {
     'Chief Guard Sadi-chan (pre-v4.0)': {
         description: 'Stats of non-Slasher units reduced by 90%',
         thumb: 550,
+        id: 7, // don't change this
         atk: function(p) { return !p.class.has('Slasher') ? 0.1 : 1; },
         hp: function(p)  { return !p.class.has('Slasher') ? 0.1 : 1; },
         rcv: function(p) { return !p.class.has('Slasher') ? 0.1 : 1; }
@@ -59,6 +70,7 @@ window.effects = {
     'Chief Guard Sadi-chan': {
         description: 'Stats of non-Slasher, non-Booster, non-Evolver units reduced by 90%',
         thumb: 550,
+        id: 8, // don't change this
         atk: function(p) { return p.class.has('Slasher') || p.class.has('Booster') || p.class.has('Evolver') ? 1 : 0.1; },
         hp: function(p)  { return p.class.has('Slasher') || p.class.has('Booster') || p.class.has('Evolver') ? 1 : 0.1; },
         rcv: function(p) { return p.class.has('Slasher') || p.class.has('Booster') || p.class.has('Evolver') ? 1 : 0.1; }
@@ -68,6 +80,7 @@ window.effects = {
         // Note: The debuff is applied to normal attacks but not to specials
         description: 'Stats of characters whose homeland is not a sky island reduced by 20%',
         thumb: 583,
+        id: 9, // don't change this
         atk: function(p) {
             var id = p.number + 1,
                 matching = ((id > 463 && id < 497) || (id > 539 && id < 547 ) ||
@@ -93,6 +106,7 @@ window.effects = {
         // Note 2: The 50% reduction is applied to enemy's defense as well, for whatever reason
         description: 'Stats of characters whose homeland is not a sky island reduced by 20%, ATK of PSY characters reduced by 50%',
         thumb: 583,
+        id: 10, // don't change this
         atk: function(p) {
             var result = window.effects['Warriors of Shandia'].atk(p);
             return (p.type == 'PSY' ? 0.5 : 1) * result;
@@ -104,6 +118,7 @@ window.effects = {
     'Gan Fall': {
         description: 'Stats of non-Freedom, non-Booster, non-Evolver units reduced by 90%',
         thumb: 713,
+        id: 11, // don't change this
         atk: function(p) { return p.class.has('Freedom') || p.class.has('Booster') || p.class.has('Evolver') ? 1 : 0.1; },
         hp: function(p)  { return p.class.has('Freedom') || p.class.has('Booster') || p.class.has('Evolver') ? 1 : 0.1; },
         rcv: function(p) { return p.class.has('Freedom') || p.class.has('Booster') || p.class.has('Evolver') ? 1 : 0.1; }
@@ -112,30 +127,35 @@ window.effects = {
     'Orb amplification (1.05x)': {
         description: 'Orb effects amplified by 1.05x',
         thumb: 768,
+        id: 12, // don't change this
         orb: function(p) { return p.orb == 2.0 ? 1.05 : (p.orb == 0.5 ? 20/21 : 1); }
     },
 
     'Orb amplification (1.10x)': {
         description: 'Orb effects amplified by 1.10x',
         thumb: 415,
+        id: 13, // don't change this
         orb: function(p) { return p.orb == 2.0 ? 1.1 : (p.orb == 0.5 ? 10/11 : 1); }
     },
 
     'Chain multiplier limiter (2.0x)': {
         description: 'Limits chain multiplier to 2.0x',
         thumb: 772,
+        id: 14, // don't change this
         chainLimiter: 2.0
     },
 
     'Combo shield (11 hits)': {
         description: 'Nullifies the first 11 hits in the chain',
         thumb: 794,
+        id: 15, // don't change this
         comboShield: 11
     },
 
     'Nightmare Luffy, 2nd stage': {
         description: 'Limits chain multiplier to 2.0x, nullifies the first 11 hits in the chain',
         thumb: 795,
+        id: 16, // don't change this
         comboShield: 11,
         chainLimiter: 2.0
     }
