@@ -2,7 +2,7 @@ window.effects = {
 
     // always use unique IDs, and don't ever change an ID once you've set it
     // IDs must always be greater than 0
-    // last ID used: 16
+    // last ID used: 18
 
     'Baroque Works (pre-v4.0)': {
         description: 'Stats of non-Fighter units reduced by 90%',
@@ -158,6 +158,20 @@ window.effects = {
         id: 16, // don't change this
         comboShield: 11,
         chainLimiter: 2.0
+    },
+
+    'Damage reduction (50%)': {
+        description: 'Damage of all units reduced by 50%',
+        thumb: 546,
+        id: 17, // don't change this,
+        atk: function(p) { return 0.5; }
+    },
+
+    'Damage reduction (70%)': {
+        description: 'Damage of all units reduced by 70%',
+        thumb: 765,
+        id: 18, // don't change this,
+        atk: function(p) { return 0.3; }
     }
 
 };
