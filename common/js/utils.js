@@ -10,6 +10,8 @@ var FODDER_REGEX = new RegExp('(' + [
 
 var utils = { };
 
+var fullNames = null;
+
 /* * * * * Unit control * * * * */
 
 var parseUnit = function(element,n) {
@@ -45,6 +47,16 @@ utils.parseUnits = function(skipIncomplete) {
         });
     }
     window.units = window.units.map(parseUnit);
+};
+
+utils.getFullUnitName = function(id) {
+    if (fullNames === null) {
+        fullNames = units.map(function(x,n) {
+            if (!x.name) return null;
+            return x.name + (window.aliases[n + 1] ? ' ' + window.aliases[n + 1].join(', ') : '');
+        });
+    }
+    return fullNames[id - 1];
 };
 
 /* * * * * Thumbnail control * * * * */
@@ -109,7 +121,7 @@ utils.getOppositeType = function(type) {
 
 utils.generateSearchParameters = function(query) {
     if (!query || query.trim().length < 3) return null;
-    query = query.toLowerCase().trim().replace(/SW(\b)/gi,'Strong World$1');
+    query = query.toLowerCase().trim();
     var result = { matchers: { }, ranges: { }, query: [ ] };
     var ranges = { }, params = [ 'hp', 'atk', 'stars', 'cost', 'growth', 'rcv', 'id', 'slots' ];
     var regex = new RegExp('^((type|class):(\\w+)|(' + params.join('|') + ')(>|<|>=|<=|=)([\\d.]+))$');

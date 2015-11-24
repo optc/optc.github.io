@@ -79,8 +79,8 @@ controllers.PickerCtrl = function($scope, $state, $stateParams) {
         }
         // filter by query
         if (parameters.query) {
-            result = result.filter(function(unit) {
-                return parameters.query.test(unit.name);
+            result = result.filter(function(unit, n) {
+                return parameters.query.test(Utils.getFullUnitName(n + 1));
             });
         }
         $scope.units = result;

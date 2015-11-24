@@ -74,7 +74,8 @@ var tableFilter = function(settings, data, index) {
     }
     // filter by query
     if (tableData.parameters.query) {
-        if (!tableData.fuzzy && !tableData.parameters.query.test(unit.name)) return false;
+        var name = Utils.getFullUnitName(id);
+        if (!tableData.fuzzy && !tableData.parameters.query.test(name)) return false;
         if (tableData.fuzzy) {
             if (fused === null) fused = fuse.search(tableData.parameters.query.source);
             if (fused.indexOf(id - 1) == -1) return false;
