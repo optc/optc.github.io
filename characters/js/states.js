@@ -7,12 +7,17 @@ angular.module('optc').config(function($stateProvider, $urlRouterProvider) {
     $stateProvider
 
         .state('main',{
-            url: '^/search/:query',
             templateUrl: 'views/main.html',
-            controller: 'MainCtrl'
+            controller: 'MainCtrl',
+            abstract: true
+        })
+
+        .state('main.search',{
+            url: '^/search/:query',
+            views: { '-': { template: '<div></div>' } }
         })
         
-        .state('main.view',{
+        .state('main.search.view',{
             url: '^/view/:id',
             params: { previous: [ ] },
             views: {

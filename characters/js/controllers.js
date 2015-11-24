@@ -4,7 +4,6 @@
  * Common data *
  ***************/
 
-var lastQuery = null;
 var filters = { custom: [ ], classes: [ ], stars: [ ] };
 
 /***************
@@ -20,17 +19,12 @@ app.controller('MainCtrl',function($scope, $rootScope, $state, $stateParams, $ti
         $rootScope.$watch('nightMode',function(night) { localStorage.setItem('chars.night', JSON.stringify(night)); });
     }
 
-    // query
-    if ($stateParams.query != lastQuery) {
-        lastQuery = $stateParams.query;
-        $scope.query = lastQuery;
-        $scope.table.parameters = CharUtils.generateSearchParameters($stateParams.query, $.extend({ }, $scope.filters));
-        if ($scope.table.refresh) $scope.table.refresh();
-    }
+    $scope.query = $state.params.query;
 
     $scope.$watch('query',function(query) {
-        if (query === null || query === undefined) return;
+        if (query === null || query === undefined || $scope.query == $stateParams.query) return;
         $state.go('.',{ query: $scope.query });
+        $scope.table.parameters = CharUtils.generateSearchParameters($scope.query, $.extend({ }, $scope.filters));
     });
 
 });

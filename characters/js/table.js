@@ -11,7 +11,7 @@ var table = null;
 
 var addImage = function(data, type, row, meta) {
     return '<img class="slot small" data-original="' + Utils.getThumbnailUrl(row[0]) + '"> ' +
-        '<a ui-sref="main.view({ id: ' + parseInt(row[0],10) + '})">' + data + '</a>';
+        '<a ui-sref="main.search.view({ id: ' + parseInt(row[0],10) + '})">' + data + '</a>';
 };
 
 var fuse = new Fuse(window.units, { keys: [ 'name' ], id: 'number', threshold: 0.3, distance: 200 });
