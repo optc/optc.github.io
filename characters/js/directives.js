@@ -302,11 +302,15 @@ directives.addTags = function($stateParams, $rootScope) {
             if (flags.lrr) element.append($('<span class="tag flag">Limited Rare Recruit only</div>'));
             if (flags.promo) element.append($('<span class="tag flag">Promo-code only</div>'));
             if (flags.special) element.append($('<span class="tag flag">One time only characters</div>'));
-            if (CharUtils.isOnlyFarmable(id, 'Raid'))
-                element.append($('<span class="tag flag">Raid only</div>'));
-            if (CharUtils.isOnlyFarmable(id, 'Fortnight'))
+            if (CharUtils.checkFarmable(id, { 'Story Island': true }))
+                element.append($('<span class="tag flag">Story mode only</div>'));
+            if (CharUtils.checkFarmable(id, { Fortnight: true }))
                 element.append($('<span class="tag flag">Fortnight only</div>'));
-            if (CharUtils.isOnlyFarmable(id, 'Raid', 'Fortnight'))
+            if (CharUtils.checkFarmable(id, { Raid: true }))
+                element.append($('<span class="tag flag">Raid only</div>'));
+            if (CharUtils.checkFarmable(id, { 'Story Island': true, Fortnight: true }))
+                element.append($('<span class="tag flag">Story mode & fortnight only</div>'));
+            if (CharUtils.checkFarmable(id, { Raid: true, Fortnight: true }))
                 element.append($('<span class="tag flag">Raid & fortnight only</div>'));
             // matchers
             if (!data) return;

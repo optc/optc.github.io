@@ -157,12 +157,19 @@ CharUtils.isFarmable = function(id, type) {
     return (!type ? true : (reverseDropMap[id] & (marks[type] || 16)) > 0);
 };
 
-CharUtils.isOnlyFarmable = function(id, types) {
+CharUtils.checkFarmable = function(id, locations) {
     if (reverseDropMap === null) generateReverseDropMap();
     if (!reverseDropMap.hasOwnProperty(id)) return false;
-    var n = 0;
-    for (var i=1;i<arguments.length;++i) n |= marks[arguments[i]];
-    return reverseDropMap[id] == n;
+    var data = reverseDropMap[id], include = data, exclude = data, included = false;
+    for (var loc in locations) {
+        var mark = marks[loc];
+        if (locations[loc]) {
+            if ((include & mark) === 0) return false;
+            include = include & ~mark;
+            included = true;
+        } else if ((exclude & mark) == exclude) return false;
+    }
+    return (!included || include === 0);
 };
 
 CharUtils.searchSameSpecials = function(id) {

@@ -18,6 +18,7 @@ var fuse = new Fuse(window.units, { keys: [ 'name' ], id: 'number', threshold: 0
 var fused = null;
 
 var tableData = null;
+var farmableLocations = null;
 
 var log = JSON.parse(localStorage.getItem('characterLog')) || [ ];
 var characterLog = { };
@@ -103,23 +104,9 @@ var tableFilter = function(settings, data, index) {
         var isFarmable = CharUtils.isFarmable(id);
         if (filters.drop == 'Farmable') {
             if (id == 1 || unit.stars >= 3 && !isFarmable) return false;    
-            if (filters.farmable) {
-                // both & neither
-                if (filters.farmable.raid && filters.farmable.fortnight) {
-                    if (!CharUtils.isOnlyFarmable(id, 'Fortnight', 'Raid'))
-                        return false;
-                } else if (filters.farmable.raid === false && filters.farmable.fortnight === false) {
-                    if (CharUtils.isOnlyFarmable(id, 'Fortnight') || CharUtils.isOnlyFarmable(id, 'Raid') ||
-                            CharUtils.isOnlyFarmable(id, 'Raid', 'Fortnight'))
-                        return false;
-                } else {
-                    // raid
-                    if (filters.farmable.raid && !CharUtils.isOnlyFarmable(id, 'Raid')) return false;
-                    if (filters.farmable.raid === false && CharUtils.isOnlyFarmable(id, 'Raid')) return false;
-                    // fortnight
-                    if (filters.farmable.fortnight && !CharUtils.isOnlyFarmable(id, 'Fortnight')) return false;
-                    if (filters.farmable.fortnight === false && CharUtils.isOnlyFarmable(id, 'Fortnight')) return false;
-                }
+            if (farmableLocations !== null) {
+                var farmable = CharUtils.checkFarmable(id, farmableLocations);
+                if (!farmable) return false;
             }
         } else if (filters.drop != 'Farmable') {
             if (id != 1 && (unit.stars < 3 || isFarmable)) return false; 
@@ -256,8 +243,19 @@ angular.module('optc') .run(function($rootScope, $timeout) {
 
     $timeout(function() {
         $.fn.dataTable.ext.search.push(tableFilter);
+        var types = { story: 'Story Island', fortnight: 'Fortnight', raid: 'Raid' };
         $rootScope.$watch('table',function(table) {
             tableData = table;
+            if (table.parameters && table.parameters.filters && table.parameters.filters.farmable) {
+                var filters = table.parameters.filters.farmable;
+                farmableLocations = { };
+                for (var key in types) {
+                    if (filters.hasOwnProperty(key) && filters[key] !== null)
+                        farmableLocations[types[key]] = filters[key];
+                }
+                if (Object.keys(farmableLocations).length === 0)
+                    farmableLocations = null;
+            } else farmableLocations = null;
             if (table.refresh) table.refresh();
         },true);
     });
