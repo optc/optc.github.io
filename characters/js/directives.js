@@ -204,7 +204,7 @@ directives.evolution = function($state, $stateParams) {
             scope.goToState = function(id) {
                 if (id == parseInt($stateParams.id,10)) return;
                 var previous = $stateParams.previous.concat([ $stateParams.id ]);
-                $state.go('main.view',{ id: id, previous: previous });
+                $state.go('main.search.view',{ id: id, previous: previous });
             };
         }
     };
@@ -219,7 +219,7 @@ directives.unit = function($state, $stateParams) {
             scope.goToState = function(id) {
                 if (id == parseInt($stateParams.id,10)) return;
                 var previous = $stateParams.previous.concat([ $stateParams.id ]);
-                $state.go('main.view',{ id: id, previous: previous });
+                $state.go('main.search.view',{ id: id, previous: previous });
             };
         }
     };

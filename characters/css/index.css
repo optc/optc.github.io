@@ -687,9 +687,8 @@ tr.preview td:nth-child(2) > a:after {
     text-align: left;
 }
 
-.clickable {
+.clickable, #clear-input-button {
     cursor: pointer;
-    outline: none !important;
 }
 
 .arrow {
@@ -783,7 +782,7 @@ unit > a {
 }
 
 unit > a:hover, .clickable:hover {
-    outline: 1px solid red;
+    outline: 1px solid red !important;
 }
 
 .preview .stats-pane ~ * {

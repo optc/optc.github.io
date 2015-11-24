@@ -121,7 +121,7 @@ app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, 
     $scope.withButton = $stateParams.previous.length > 0;
     $scope.onBackClick = function() {
         var previous = $stateParams.previous.splice(-1)[0];
-        $state.go('main.view',{ id: previous, previous: $stateParams.previous });
+        $state.go('main.search.view',{ id: previous, previous: $stateParams.previous });
     };
     $scope.clearComparison = function() {
         $scope.compare = null;

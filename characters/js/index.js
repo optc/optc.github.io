@@ -27,7 +27,7 @@ app
             $rootScope.currentState = $state.current.name;
             if (ga) ga('send', 'pageview', '/characters');
             var title = 'One Piece Treasure Cruise Character Table';
-            if ($state.current.name == 'main.view')
+            if ($state.current.name == 'main.search.view')
                 title = (window.units[parseInt($stateParams.id,10) - 1].name || '?') + ' | ' + title;
             window.document.title = title;
         });
