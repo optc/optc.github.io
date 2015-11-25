@@ -62,9 +62,12 @@ hr {
     width: 100%;
 }
 
-.turnContainer > div:hover {
-    background-color: rgba(0,0,0,0.1);
-}
+.turnContainer[current-type=""] > div:hover { background-color: rgba(0,0,0,0.1); }
+.turnContainer[current-type="STR"] > div:hover { background-color: #e27467; }
+.turnContainer[current-type="QCK"] > div:hover { background-color: #7abae2; }
+.turnContainer[current-type="DEX"] > div:hover { background-color: #82d782; }
+.turnContainer[current-type="PSY"] > div:hover { background-color: #e6c200; }
+.turnContainer[current-type="INT"] > div:hover { background-color: #c565c1; }
 
 .turnContainer.ghosted > div {
     visibility: hidden;

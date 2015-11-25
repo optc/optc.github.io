@@ -1,4 +1,4 @@
-<div ng-repeat="turn in numbers[type].damage" dropzone="details" class="turnContainer">
+<div ng-repeat="turn in numbers[type].damage" dropzone="details" class="turnContainer" current-type="{{tdata.typeOverride[type][$index]}}">
 
     <div draggable="details">
 

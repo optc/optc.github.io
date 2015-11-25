@@ -158,10 +158,10 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if (n > 5 || x.unit === null || $scope.tdata.team[n].lock > 0) return;
             var orb = $scope.tdata.team[n].orb;
             var atk = getStatOfUnit(x,'atk'); // basic attack (scales with level);
-            var ship = getShipBonus('atk',false,x.unit,n);
+            var ship = getShipBonus('atk',false,x.unit,n), againstType = type;
             atk += getShipBonus('atk',true,x.unit,n);
             atk *= orb; // orb multiplier (fixed)
-            atk *= getTypeMultiplierOfUnit(x.unit,type); // type multiplier (fixed)
+            atk *= getTypeMultiplierOfUnit(x.unit.type,type); // type multiplier
             atk *= getEffectBonus('atk',x.unit); // effect bonus (fixed)
             result.push({ unit: x, orb: orb, damage: Math.floor(atk) * ship, position: n });
         });
@@ -182,6 +182,16 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             });
         } else // otherwise, sort from weakest to stongest
             result.sort(function(x,y) { return x.damage - y.damage; });
+        // apply type overrides
+        if ($scope.tdata.typeOverride[type]) {
+            var override = $scope.tdata.typeOverride[type];
+            for (var i=0;i<result.length;++i) {
+                if (!override[i]) continue;
+                var currentMultiplier = getTypeMultiplierOfUnit(result[i].unit.unit.type, type);
+                var newMultiplier = getTypeMultiplierOfUnit(result[i].unit.unit.type, override[i]);
+                result[i].damage = Math.floor(result[i].damage * newMultiplier/currentMultiplier);
+            }
+        }
         return result;
     };
 
@@ -314,16 +324,15 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         return effects[$scope.data.effect][type](unit.unit || unit);
     };
 
-    var getTypeMultiplierOfUnit = function(unit,against) {
-        var type = unit.type;
-        if (type == 'STR' && against == 'DEX') return 2;
-        if (type == 'QCK' && against == 'STR') return 2;
-        if (type == 'DEX' && against == 'QCK') return 2;
-        if (type == 'INT' && against == 'PSY') return 2;
-        if (type == 'PSY' && against == 'INT') return 2;
-        if (type == 'STR' && against == 'QCK') return 0.5;
-        if (type == 'QCK' && against == 'DEX') return 0.5;
-        if (type == 'DEX' && against == 'STR') return 0.5;
+    var getTypeMultiplierOfUnit = function(attackerType,attackedType) {
+        if (attackerType == 'STR' && attackedType == 'DEX') return 2;
+        if (attackerType == 'QCK' && attackedType == 'STR') return 2;
+        if (attackerType == 'DEX' && attackedType == 'QCK') return 2;
+        if (attackerType == 'INT' && attackedType == 'PSY') return 2;
+        if (attackerType == 'PSY' && attackedType == 'INT') return 2;
+        if (attackerType == 'STR' && attackedType == 'QCK') return 0.5;
+        if (attackerType == 'QCK' && attackedType == 'DEX') return 0.5;
+        if (attackerType == 'DEX' && attackedType == 'STR') return 0.5;
         return 1;
     };
 

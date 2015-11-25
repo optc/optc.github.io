@@ -31,7 +31,7 @@ app.controller('MainCtrl',function($scope, $rootScope, $state, $stateParams, $ti
 
 app.controller('SidebarCtrl',function($scope, $rootScope, $stateParams, MATCHER_IDS) {
 
-    if (!$scope.filters) $scope.filters = filters;
+    if (!$scope.filters) $rootScope.filters = filters;
 
     $scope.$watch('filters',function(filters) {
         if (!filters || Object.keys(filters).length === 0) return;

@@ -264,11 +264,11 @@ body, html {
     margin-bottom: 0 !important;
 }
 
-.damage.STR, li.STR { background: salmon; }
-.damage.QCK, li.QCK { background: lightskyblue; }
-.damage.DEX, li.DEX { background: lightgreen; }
-.damage.PSY, li.PSY { background: gold; }
-.damage.INT, li.INT { background: orchid; }
+.damage.STR, li.STR, [current-type="STR"] > div { background: salmon; }
+.damage.QCK, li.QCK, [current-type="QCK"] > div { background: lightskyblue; }
+.damage.DEX, li.DEX, [current-type="DEX"] > div { background: lightgreen; }
+.damage.PSY, li.PSY, [current-type="PSY"] > div { background: gold; }
+.damage.INT, li.INT, [current-type="INT"] > div { background: orchid; }
 
 .damageLabel {
     font-size: 75%;

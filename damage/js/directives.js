@@ -52,7 +52,7 @@ directives.expandableDamage = function() {
             var timeout = null;
             element.attr('type', scope.type);
             element.click(function(e) {
-                if (e.which != 1 || e.ctrlKey || e.metaKey) return;
+                if (e.which != 1 || e.ctrlKey || e.metaKey || e.shiftKey) return;
                 element.toggleClass('details');
                 if (timeout) clearTimeout(timeout);
                 if (element.hasClass('details')) {
@@ -76,6 +76,7 @@ directives.detailPane = function($timeout) {
         link: function(scope, element, attrs) {
 
             var modifiers = [ 'Below Good', 'Good', 'Great', 'Perfect', 'Miss' ];
+            var types = [ 'STR', 'QCK', 'DEX', 'PSY', 'INT' ];
 
             var modifyDamage = function(e) {
                 var container = $(e.target).closest('.turnContainer');
@@ -83,6 +84,17 @@ directives.detailPane = function($timeout) {
                 var custom = $.extend([ ],scope.numbers[scope.type].hitModifiers), n = container.index();
                 custom[n] = modifiers[(modifiers.indexOf(custom[n])+1)%5];
                 scope.tdata.customHitModifiers = custom;
+                if (!scope.$$phase) scope.$apply();
+            };
+
+            var modifyType = function(e) {
+                var container = $(e.target).closest('.turnContainer');
+                if (!container.length) return;
+                var typeOverride = scope.tdata.typeOverride, n = container.index();
+                var currentType = (typeOverride[scope.type] ? typeOverride[scope.type][n] || scope.type : scope.type);
+                var nextType = types[(types.indexOf(currentType) + 1) % types.length];
+                if (!scope.tdata.typeOverride[scope.type]) scope.tdata.typeOverride[scope.type] = [ ];
+                scope.tdata.typeOverride[scope.type][n] = nextType;
                 if (!scope.$$phase) scope.$apply();
             };
 
@@ -94,8 +106,10 @@ directives.detailPane = function($timeout) {
                     return false;
                 },
                 function(e) {
-                    if (e.which != 2 && (e.which != 1 || (!e.ctrlKey && !e.metaKey))) return;
-                    modifyDamage(e);
+                    if (e.which == 2 || (e.which == 1 && (e.ctrlKey || e.metaKey)))
+                        modifyDamage(e);
+                    else if (e.which == 1 && e.shiftKey)
+                        modifyType(e);
                 }
             );
 
