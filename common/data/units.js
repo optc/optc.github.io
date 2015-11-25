@@ -831,6 +831,6 @@ window.units = [
 	[ "Basil Hawkins, Captain of the Hawkins Pirates", "DEX", [ "Knowledge", "Striker" ], 4, 25, 6, 2, 70, null, 756, 388, 95, null, null, null, 0 ],
 	[ "Basil Hawkins the Magician, Captain of the Hawkins Pirates", "DEX", [ "Knowledge", "Striker" ], 5, 40, 4, 3, 99, null, 1157, 690, 147, null, null, null, 0 ],
 	[ "Wiper, Warrior of Shandia", "STR", [ "Shooter", "Freedom" ], 4, 18, 6, 1, 50, null, 505, 282, 16, null, null, null, 0 ],
-	[ "Berserker Wiper, Warrior of Shandia", "STR", [ "Shooter", "Freedom" ], 5, 30, null, 0, null, null, null, null, null, null, null, null, 0 ],
+	[ "Berserker Wiper, Warrior of Shandia", "STR", [ "Shooter", "Freedom" ], 5, 30, 6, 3, 99, null, 1140, 543, 25, null, null, null, 0 ],
 	[ "Mr. 7 & Miss Father's Day", "QCK", "Shooter", 4, 20, 6, 2, 70, null, 97, 58, 111, null, null, null, 0 ]
 ];

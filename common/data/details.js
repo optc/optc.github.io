@@ -3667,6 +3667,11 @@ window.details = {
 		specialName: "Burn Bazooka",
 		special: "Boosts ATK of Freedom characters by 1.5x for 1 turn, deals STR damage to all enemies"
 	},
+	833: {
+		captain: "Boosts ATK of Freedom characters up to 2.75x when HP is low, reduces crew's current HP at the end of each turn",
+		specialName: "Burn Bazooka",
+		special: "Boosts ATK of Freedom characters by 1.5x for 1 turn, deals STR damage to all enemies"
+	},
 	834: {
 		captain: "Boosts ATK and RCV of Shooter characters by 1.5x",
 		specialName: "Yellow Gun & Gero Gero Gun",
