@@ -2,6 +2,7 @@ window.aliases = {
     15: [ 'GPU' ],
     207: [ 'Mr. 2 Bonclay' ],
     208: [ 'Mr. 2 Bonclay Bombardier Arabesque' ],
+    217: [ 'Mistake' ],
     221: [ 'Towel Nami' ],
     248: [ 'Monster Chopper' ],
     249: [ 'Monster Chopper' ],
