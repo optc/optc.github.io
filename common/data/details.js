@@ -3663,14 +3663,16 @@ window.details = {
 		special: "Changes the orbs in the top row into [STR] orbs, changes the orbs in the middle row into [DEX] orbs, changes the orbs in the bottom row into [QCK] orbs"
 	},
 	832: {
-		captain: "Boosts ATK of Freedom characters up to 2.5x when HP is low, reduces crew's current HP at the end of each turn",
+		captain: "Boosts ATK of Freedom characters proportionally to the crew's current HP, reduces crew's current HP by 10% at the end of each turn",
 		specialName: "Burn Bazooka",
-		special: "Boosts ATK of Freedom characters by 1.5x for 1 turn, deals STR damage to all enemies"
+		special: "Boosts ATK of Freedom characters by 1.5x for 1 turn, deals STR damage to all enemies",
+		captainNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the lower the HP is. The multiplier is calculated as 1 + 1.5 * (1 - (remaining HP) / (total HP)). At full health, the boost is equal to 1x. With 1 HP left, the boost is equal to 2.5x."
 	},
 	833: {
-		captain: "Boosts ATK of Freedom characters up to 2.75x when HP is low, reduces crew's current HP at the end of each turn",
+		captain: "Boosts ATK of Freedom characters proportionally to the crew's current HP, reduces crew's current HP by 10% at the end of each turn",
 		specialName: "Burn Bazooka",
-		special: "Boosts ATK of Freedom characters by 1.5x for 1 turn, deals STR damage to all enemies"
+		special: "Boosts ATK of Freedom characters by 1.5x for 1 turn, deals STR damage to all enemies",
+		captainNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the lower the HP is. The multiplier is calculated as 1 + 1.75 * (1 - (remaining HP) / (total HP)). At full health, the boost is equal to 1x. With 1 HP left, the boost is equal to 2.75x."
 	},
 	834: {
 		captain: "Boosts ATK and RCV of Shooter characters by 1.5x",
