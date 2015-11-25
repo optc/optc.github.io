@@ -2236,32 +2236,32 @@ window.details = {
 	},
 	541: {
 		special: "Greatly reduces chances of getting [PSY], [INT], [TND] and [RCV] slots for 5 turns",
-		specialName: "White-Barbed Death Match",
+		specialName: "White Thorn Deathmatch",
 		captain: "Boosts ATK of STR characters by 2.5x if HP is below 50% at the start of the turn"
 	},
 	542: {
 		special: "Boosts RCV of all characters by 2x for 1 turn",
-		specialName: "Roar of the Master of the Sky",
+		specialName: "Roar of the Ruler of the Sky",
 		captain: "Boosts HP of all characters by 1.5x"
 	},
 	543: {
 		special: "Reduces crew's current HP by 50%, deals 50x character's ATK in DEX damage to one enemy",
-		specialName: "Reject Dial",
+		specialName: "Reject",
 		captain: "Boosts ATK and HP of Shooter characters by 1.5x, reduces crew's RCV to 0"
 	},
 	544: {
 		special: "Reduces crew's current HP by 50%, deals 50x character's ATK in DEX damage to one enemy",
-		specialName: "Reject Dial",
+		specialName: "Reject",
 		captain: "Boosts ATK of Shooter characters by 2.25x and their HP by 1.5x, reduces crew's RCV to 0"
 	},
 	545: {
 		special: "Deals 6,000 fixed damage to all enemies, boosts ATK of PSY characters by 1.5x for 1 turn",
-		specialName: "60 Million Volt Thunder Dragon",
+		specialName: "60,000,000 Volt Jamboule",
 		captain: "Boosts ATK of PSY characters by 2x"
 	},
 	546: {
 		special: "Deals 6,000 fixed damage to all enemies, boosts ATK of PSY characters by 1.5x for 1 turn",
-		specialName: "60 Million Volt Thunder Dragon",
+		specialName: "60,000,000 Volt Jamboule",
 		captain: "Boosts ATK of PSY characters by 2x, reduces damage received by 20%"
 	},
 	547: {
@@ -2435,7 +2435,7 @@ window.details = {
 	},
 	581: {
 		special: "Cuts the current HP of each enemy by 7%",
-		specialName: "Large Calibre Bazooka",
+		specialName: "High-Caliber Bazooka",
 		captain: "Boosts ATK of STR characters by 1.5x"
 	},
 	582: {
@@ -2445,7 +2445,7 @@ window.details = {
 	},
 	583: {
 		special: "Changes own orb into [INT] and the captain's orb into [DEX], boosts RCV of Shooter characters by 300 units for 3 turns",
-		specialName: "Disrupting Warning Shot",
+		specialName: "Disrupting Fire",
 		captain: "Boosts ATK and RCV of Shooter characters by 1.5x"
 	},
 	584: {

@@ -34,6 +34,10 @@ window.aliases = {
     534: [ 'Sakura Brook' ],
     535: [ 'Sakura Nami' ],
     536: [ 'Sakura Nami' ],
+    543: [ 'Wiper' ],
+    544: [ 'Wiper, Descendant of Great Warrior Calgara' ],
+    545: [ 'Enel' ],
+    546: [ 'God Enel' ],
     553: [ 'Strong World Zoro', 'SW Zoro' ],
     554: [ 'Strong World Zoro', 'SW Zoro' ],
     555: [ 'Strong World Usopp', 'SW Usopp' ],
@@ -50,8 +54,11 @@ window.aliases = {
     578: [ 'Log Luffy' ],
     579: [ 'Log Zoro' ],
     580: [ 'Log Zoro' ],
+    583: [ 'Laki' ],
     596: [ 'Log Chopper' ],
     597: [ 'Log Chopper' ],
+    602: [ 'Enel, 200 Million Volt Thunder God' ],
+    603: [ 'Enel the Lightning Human, 200 Million Volt Thunder God' ],
     604: [ 'Log Sanji' ],
     605: [ 'Log Sanji' ],
     612: [ 'Log Brook' ],
@@ -78,5 +85,7 @@ window.aliases = {
     768: [ 'Halloween Sanji' ],
     769: [ 'Halloween Brook' ],
     801: [ 'Log Bon Clay', 'Log Bonclay' ],
-    802: [ 'Log Bon Clay', 'Log Bonclay' ]
+    802: [ 'Log Bon Clay', 'Log Bonclay' ],
+    832: [ 'Wiper, Warrior of Shandia' ],
+    833: [ 'Berserker Wiper, Warrior of Shandia' ]
 };
