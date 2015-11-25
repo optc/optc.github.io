@@ -3651,5 +3651,25 @@ window.details = {
 		captain: "Boosts ATK and HP of QCK characters by 1.5x",
 		specialName: "Poison of the Ancient Knight",
 		special: "Boosts ATK against poisoned enemies by 1.05x for 999 turns"
+	},
+	830: {
+		captain: "Boosts ATK of Knowledge and Striker characters by 1.75x, deals 2 times the damage received in the previous turn to all enemies at the end of each turn",
+		specialName: "Karma Conviction",
+		special: "Changes the orbs in the top row into [STR], changes the orbs in the middle row into [DEX], changes the orbs in the bottom row into [QCK]"
+	},
+	831: {
+		captain: "Boosts ATK of Knowledge and Striker characters by 2x, deals 2 times the damage received in the previous turn to all enemies at the end of each turn",
+		specialName: "Karma Conviction",
+		special: "Changes the orbs in the top row into [STR], changes the orbs in the middle row into [DEX], changes the orbs in the bottom row into [QCK]"
+	},
+	832: {
+		captain: "Boosts ATK of Freedom characters up to 2.5x when HP is low, reduces crew's current HP at the end of each turn",
+		specialName: "Burn Bazooka",
+		special: "Boosts ATK of Freedom characters by 1.5x for 1 turn, deals STR damage to all enemies"
+	},
+	834: {
+		captain: "Boosts ATK and RCV of Shooter characters by 1.5x",
+		specialName: "Yellow Gun & Gero Gero Gun",
+		special: "Changes own orb into [QCK] and the captain's orb into [PSY]"
 	}
 };
