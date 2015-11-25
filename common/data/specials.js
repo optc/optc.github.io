@@ -718,5 +718,13 @@ window.specials = {
 		atk: function(p) { return 1.05; },
 		type: "condition",
 		warning: "Selected special (General Zombie Swift Shadow) assumes that the enemy has been poisoned."
+	},
+	832: {
+		atk: function(p) { return p.unit.class.has("Freedom") ? 1.5 : 1; },
+		type: "class"
+	},
+	833: {
+		atk: function(p) { return p.unit.class.has("Freedom") ? 1.5 : 1; },
+		type: "class"
 	}
 };

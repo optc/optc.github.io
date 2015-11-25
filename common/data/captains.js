@@ -1729,5 +1729,21 @@ window.captains = {
 	827: {
 		atk: function(p) { return p.unit.type == 'QCK' ? 1.5 : 1; },
 		hp: function(p) { return p.unit.type == 'QCK' ? 1.5 : 1; }
+	},
+	830: {
+		atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Knowledge") ? 1.75 : 1; }
+	},
+	831: {
+		atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Knowledge") ? 2 : 1; }
+	},
+	832: {
+		atk: function(p) { return p.unit.class.has("Freedom") ? 1 + 1.5 * ((100 - p.percHP) / 100) : 1; }
+	},
+	833: {
+		atk: function(p) { return p.unit.class.has("Freedom") ? 1 + 1.75 * ((100 - p.percHP) / 100) : 1; }
+	},
+	834: {
+		atk: function(p) { return p.unit.class.has("Shooter") ? 1.5 : 1; },
+		rcv: function(p) { return p.unit.class.has("Shooter") ? 1.5 : 1; }
 	}
 };
