@@ -233,7 +233,7 @@ app.controller('PickerCtrl',function($scope, $rootScope, $state, $stateParams, $
         // filter by query
         if (parameters.query) {
             result = result.filter(function(unit) {
-                return parameters.query.test(unit.name);
+                return parameters.query.test(Utils.getFullUnitName(unit.number + 1));
             });
         }
         $scope.units = result;
