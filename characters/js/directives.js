@@ -114,11 +114,11 @@ directives.addCaptainOptions = function($timeout, $compile, MATCHER_IDS) {
         link: function(scope, element, attrs) {
             if (scope.n !== TARGET) return;
             var filter = $('<div id="class-filters" ng-class="{ enabled: filters.custom[' + TARGET + '] }"></div>');
-            var classes = [ 'Fighter', 'Shooter', 'Slasher', 'Striker', 'Freedom', 'Knowledge', 'Tough' ];
+            var classes = [ 'Fighter', 'Shooter', 'Slasher', 'Striker', 'Freedom', 'Knowledge', 'Tough', 'Ambition' ];
             classes.forEach(function(x,n) {
                 var template = '<span class="filter subclass %c" ng-class="{ active: filters.classCaptain == \'%s\' }" ' +
                     'ng-click="onCaptainClick($event,\'%s\')">%s</span>';
-                filter.append($(template.replace(/%s/g,x).replace(/%c/,n < 4 ? 'width-6' : 'width-4')));
+                filter.append($(template.replace(/%s/g,x).replace(/%c/,'width-6')));
             });
             element.after(filter);
             $compile(filter)(scope);
@@ -136,11 +136,11 @@ directives.addSpecialOptions = function($timeout, $compile, MATCHER_IDS) {
         link: function(scope, element, attrs) {
             if (scope.n !== TARGET) return;
             var filter = $('<div id="class-filters" ng-class="{ enabled: filters.custom[' + TARGET + '] }"></div>');
-            var classes = [ 'Fighter', 'Shooter', 'Slasher', 'Striker', 'Freedom', 'Knowledge', 'Tough' ];
+            var classes = [ 'Fighter', 'Shooter', 'Slasher', 'Striker', 'Freedom', 'Knowledge', 'Tough', 'Ambition' ];
             classes.forEach(function(x,n) {
                 var template = '<span class="filter subclass %c" ng-class="{ active: filters.classSpecial == \'%s\' }" ' +
                     'ng-click="onSpecialClick($event,\'%s\')">%s</span>';
-                filter.append($(template.replace(/%s/g,x).replace(/%c/,n < 4 ? 'width-6' : 'width-4')));
+                filter.append($(template.replace(/%s/g,x).replace(/%c/,'width-6')));
             });
             element.after(filter);
             $compile(filter)(scope);
