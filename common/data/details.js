@@ -3655,12 +3655,12 @@ window.details = {
 	830: {
 		captain: "Boosts ATK of Knowledge and Striker characters by 1.75x, deals 2 times the damage received in the previous turn to all enemies at the end of each turn",
 		specialName: "Karma Conviction",
-		special: "Changes the orbs in the top row into [STR], changes the orbs in the middle row into [DEX], changes the orbs in the bottom row into [QCK]"
+		special: "Changes the orbs in the top row into [STR] orbs, changes the orbs in the middle row into [DEX] orbs, changes the orbs in the bottom row into [QCK] orbs"
 	},
 	831: {
 		captain: "Boosts ATK of Knowledge and Striker characters by 2x, deals 2 times the damage received in the previous turn to all enemies at the end of each turn",
 		specialName: "Karma Conviction",
-		special: "Changes the orbs in the top row into [STR], changes the orbs in the middle row into [DEX], changes the orbs in the bottom row into [QCK]"
+		special: "Changes the orbs in the top row into [STR] orbs, changes the orbs in the middle row into [DEX] orbs, changes the orbs in the bottom row into [QCK] orbs"
 	},
 	832: {
 		captain: "Boosts ATK of Freedom characters up to 2.5x when HP is low, reduces crew's current HP at the end of each turn",
