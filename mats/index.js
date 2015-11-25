@@ -425,7 +425,7 @@ app.directive('exportButton',function() {
  * Bootstrapping *
  *****************/
 
-Utils.parseUnits(true);
+Utils.parseUnits(false);
 
 Number.prototype.between = function(x,y) { return this >= x && this <= y; }; // yay laziness
 
