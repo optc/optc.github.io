@@ -275,12 +275,12 @@ window.tandems = [
         "units": [ 436, 433, 434, 390 ]
     },
     {
-        "name": "Light the Fire of Shandora",
+        "name": "Light Shandis's Fire!",
         "desc": "Deals 1,000 fixed damage to all enemies, boosts ATK of all characters by 1.3x for 1 turn",
         "units": [ 466, 581, 582, 544 ]
     },
     {
-        "name": "Vearth's Blessing",
+        "name": "Blessings of Vearth",
         "desc": "Recovers 2,000 HP",
         "units": [ 544, 583, 584 ]
     },
