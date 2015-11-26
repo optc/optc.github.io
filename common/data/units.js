@@ -832,5 +832,7 @@ window.units = [
 	[ "Basil Hawkins the Magician, Captain of the Hawkins Pirates", "DEX", [ "Knowledge", "Striker" ], 5, 40, 4, 3, 99, null, 1157, 690, 147, 2239, 1278, 347, 1 ],
 	[ "Wyper, Warrior of Shandia", "STR", [ "Shooter", "Freedom" ], 4, 18, 6, 1, 50, null, 229, 151, 10, 1198, 611, 33, 1 ],
 	[ "Berserker Wyper, Warrior of Shandia", "STR", [ "Shooter", "Freedom" ], 5, 30, 6, 3, 99, null, 1140, 543, 25, null, null, null, 0 ],
-	[ "Mr. 7 & Miss Father's Day", "QCK", [ "Shooter", "Ambition" ], 4, 20, 6, 2, 70, null, 68, 42, 105, 1085, 625, 315, 1 ]
+	[ "Mr. 7 & Miss Father's Day", "QCK", [ "Shooter", "Ambition" ], 4, 20, 6, 2, 70, null, 68, 42, 105, 1085, 625, 315, 1 ],
+	[ "Tyrant Bartholomew Kuma (raid)", "STR", [ "Knowledge", "Tough" ], 4, 30, null, 0, null, null, null, null, null, null, null, null, 0 ],
+	[ "Tyrant Bartholomew Kuma (raid, evolution)", "STR", [ "Knowledge", "Tough" ], 5, 50, null, 0, null, null, null, null, null, null, null, null, 0 ]
 ];
