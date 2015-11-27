@@ -397,9 +397,17 @@ directives.hpBar = function() {
             },true);
 
             scope.setHP = function() {
-                var hp = parseInt(prompt('Set HP to:', scope.hp.current), 10);
+                var hp = prompt('Set HP to:', scope.hp.current), perc = false;
+                if (!hp) return;
+                hp = hp.trim();
+                if (/%$/.test(hp)) perc = true;
+                hp = parseFloat(hp, 10);
+                if (!perc) hp = Math.floor(hp);
                 if (isNaN(hp)) return;
-                update('manual', Math.min(scope.numbers.hp, Math.max(1, hp)));
+                if (!perc) 
+                    update('manual', Math.min(scope.numbers.hp, Math.max(1, hp)));
+                else
+                    update('manual', Math.min(scope.numbers.hp, Math.max(1, Math.round(scope.numbers.hp * hp / 100))));
             };
 
         }
