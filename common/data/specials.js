@@ -364,11 +364,13 @@ window.specials = {
 	},
 	612: {
 		atkStatic: function(p) { return 45; },
-		rcvStatic: function(p) { return 45; }
+		rcvStatic: function(p) { return 45; },
+        type: 'type'
 	},
 	613: {
 		atkStatic: function(p) { return 45; },
-		rcvStatic: function(p) { return 45; }
+		rcvStatic: function(p) { return 45; },
+        type: 'type'
 	},
 	614: {
 		def: function(p) { return 0.5; }
@@ -378,7 +380,8 @@ window.specials = {
 		type: "class"
 	},
 	622: {
-		rcvStatic: function(p) { return 100; }
+		rcvStatic: function(p) { return 100; },
+        type: 'type'
 	},
 	632: {
 		def: function(p) { return 0.5; }
@@ -704,10 +707,11 @@ window.specials = {
 		def: function(p) { return 0.2; }
 	},
 	822: {
-		rcvStatic: function(p) { return 100; }
+		rcvStatic: function(p) { return 100; },
+        type: 'type'
 	},
 	825: {
-		atkStatic: function(p) { return 100; },
+		atkStatic: function(p) { return 200; },
 		type: "type"
 	},
 	826: {

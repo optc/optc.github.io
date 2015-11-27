@@ -85,3 +85,8 @@ hr {
 .turnContainer.ghoster.ghost-floating > hr {
     display: none;
 }
+
+.tooltip-inner {
+    white-space: pre;
+    text-align: left;
+}

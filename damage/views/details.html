@@ -1,6 +1,7 @@
 <div ng-repeat="turn in numbers[type].damage" dropzone="details" class="turnContainer" current-type="{{tdata.typeOverride[type][$index]}}">
 
-    <div draggable="details">
+    <div draggable="details"
+        tooltip-placement="right" uib-tooltip="{{getDamageTooltip(numbers[type].damage[$index].multipliers)}}">
 
         <div class="onTurn">
             #{{$index+1}} ({{numbers[type].hitModifiers[$index]}} / {{ numbers[type].chainMultipliers[$index] | number:1 }}x)

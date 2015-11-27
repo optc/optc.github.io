@@ -130,7 +130,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         // only done if the user hasn't already specified a custom order of their own
         if (!noSorting) {
             for (var i=0;i<cptsWith.damageSorters.length;++i) {
-                var baseDamage = $.extend([ ], damage);
+                var baseDamage = JSON.parse(JSON.stringify(damage));
                 var newDamage = cptsWith.damageSorters[i].damageSorter(baseDamage);
                 if (newDamage === null) continue;
                 var newOverallDamage = optimizeDamage(newDamage,true);
@@ -138,6 +138,11 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             }
         }
         // return results
+        for (var i=0;i<overallDamage.damage.length;++i) {
+            overallDamage.damage[i].multipliers = overallDamage.damage[i].multipliers.filter(function(x) {
+                return x[0] != 1;
+            });
+        }
         return overallDamage;
     };
 
@@ -159,18 +164,20 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             var orb = $scope.tdata.team[n].orb;
             var atk = getStatOfUnit(x,'atk'); // basic attack (scales with level);
             var ship = getShipBonus('atk',false,x.unit,n), againstType = type;
+            var multipliers = [ ];
             atk += getShipBonus('atk',true,x.unit,n);
-            atk *= orb; // orb multiplier (fixed)
-            atk *= getTypeMultiplierOfUnit(x.unit.type,type); // type multiplier
-            atk *= getEffectBonus('atk',x.unit); // effect bonus (fixed)
-            result.push({ unit: x, orb: orb, damage: Math.floor(atk) * ship, position: n });
+            multipliers.push([ orb, 'orb' ]); // orb multiplier (fixed)
+            multipliers.push([ getTypeMultiplierOfUnit(x.unit.type,type), 'type' ]); // type multiplier
+            multipliers.push([ getEffectBonus('atk',x.unit), 'map effect' ]); // effect bonus (fixed)
+            multipliers.push([ ship, 'ship' ]); // ship bonus (fixed)
+            result.push({ unit: x, orb: orb, base: Math.floor(atk), multipliers: multipliers, position: n });
         });
         // apply static multipliers and static bonuses
         for (var i=0;i<enabledEffects.length;++i) {
             if (enabledEffects[i].hasOwnProperty('atkStatic'))
                 result = applyCaptainEffectsToDamage(result,enabledEffects[i].atkStatic,null,true);
             if (enabledEffects[i].hasOwnProperty('atk'))
-                result = applyCaptainEffectsToDamage(result,enabledEffects[i].atk);
+                result = applyCaptainEffectsToDamage(result,enabledEffects[i].atk,null,false);
         }
         // if the user has specified a custom order, sort by that
         if ($scope.tdata.orderOverride.hasOwnProperty(type)) {
@@ -181,7 +188,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 })[0];
             });
         } else // otherwise, sort from weakest to stongest
-            result.sort(function(x,y) { return x.damage - y.damage; });
+            result.sort(function(x,y) { return x.base * totalMultiplier(x.multipliers) - y.base * totalMultiplier(y.multipliers); });
         // apply type overrides
         if ($scope.tdata.typeOverride[type]) {
             var override = $scope.tdata.typeOverride[type];
@@ -189,7 +196,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 if (!override[i]) continue;
                 var currentMultiplier = getTypeMultiplierOfUnit(result[i].unit.unit.type, type);
                 var newMultiplier = getTypeMultiplierOfUnit(result[i].unit.unit.type, override[i]);
-                result[i].damage = Math.floor(result[i].damage * newMultiplier/currentMultiplier);
+                result[i].multipliers.push([ newMultiplier / currentMultiplier, 'type override' ]);
             }
         }
         return result;
@@ -349,8 +356,9 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
     var applyCaptainEffectsToDamage = function(damage,func,modifiers,isStatic) {
         return damage.map(function(x,n) {
             var params = $.extend({ chainPosition: n, damage: damage, modifiers: modifiers },getParameters(x.position));
-            var newDamage = (isStatic ? x.damage + func(params) : x.damage * func(params));
-            return { unit: x.unit, orb: x.orb, damage: newDamage, position: x.position };
+            if (isStatic) x.base += func(params);
+            else x.multipliers.push([ func(params), 'captain effect' ]);
+            return { unit: x.unit, orb: x.orb, base: x.base, multipliers: x.multipliers, position: x.position };
         });
     };
 
@@ -385,9 +393,15 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
 
     var applyChainAndBonusMultipliers = function(damage,modifiers) {
         var multipliersUsed = [ ];
-        var currentChainMultiplier = 1.0;
+        var currentChainMultiplier = 1.0, i;
         var result = damage.map(function(x,n) {
-            var result = x.damage * currentChainMultiplier;
+            for (i=0;i<x.multipliers.length;++i) {
+                if (x.multipliers[i][1] != 'chain') continue;
+                x.multipliers[i][0] = currentChainMultiplier;
+                break;
+            }
+            if (i == x.multipliers.length) x.multipliers.push([ currentChainMultiplier, 'chain' ]);
+            var result = Math.floor(x.base * totalMultiplier(x.multipliers));
             var chainModifier = cptsWith.chainModifiers.reduce(function(prev,next) {
                 return prev * next.chainModifier(getParameters(x.position));
             },1);
@@ -398,7 +412,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if (mapEffect.chainLimiter)
                 currentChainMultiplier = Math.min(mapEffect.chainLimiter, currentChainMultiplier);
             // return value
-            return { unit: x.unit, orb: x.orb, damage: result, position: x.position };
+            return { unit: x.unit, orb: x.orb, damage: result, base: x.base, multipliers: x.multipliers, position: x.position };
         });
         return { result: result, chainMultipliers: multipliersUsed };
     };
@@ -415,18 +429,26 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         specialsCombinations.forEach(function(specials,n) {
             // apply all the specials of the combination to every unit
             var temp = damage.map(function(x,n) {
-                var multiplier = specials.reduce(function(prev,next) {
-                    return prev * next.f($.extend({ sourceSlot: next.sourceSlot },getParameters(x.position)));
-                },1);
-                return { unit: x.unit, orb: x.orb, damage: x.damage * multiplier, position: x.position };
+                var multipliers = $.extend([ ], x.multipliers), base = x.base;
+                specials.forEach(function(data) {
+                    if (!data.s) { // non-static
+                        multipliers.push([
+                            data.f($.extend({ sourceSlot: data.sourceSlot },getParameters(x.position))),
+                            'special (' + shortName($scope.data.team[data.sourceSlot].unit.name) + ')'
+                        ]);
+                    } else { // static
+                        base += data.f($.extend({ sourceSlot: data.sourceSlot },getParameters(x.position)));
+                    }
+                });
+                return { unit: x.unit, orb: x.orb, base: base, multipliers: multipliers, position: x.position };
             });
             // sort by damage again
-            if (!noSorting) temp = temp.sort(function(x,y) { return x.damage - y.damage; });
+            if (!noSorting) temp = temp.sort(function(x,y) { return x.base * totalMultiplier(x.multipliers) - y.base * totalMultiplier(y.multipliers); });
             // apply non-static captain effects
             for (var i=0;i<cptsWith.hitModifiers.length;++i)
                 temp = applyCaptainEffectsToDamage(temp,cptsWith.hitModifiers[i].hitAtk,hitModifiers);
             // calculate the new overall damage
-            var total = temp.reduce(function(prev,next) { return prev + next.damage; },0);
+            var total = temp.reduce(function(prev,next) { return prev + next.base * totalMultiplier(next.multipliers); },0);
             if (total < current) return;
             result = temp;
             current = total;
@@ -435,7 +457,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
     };
 
     var applyEffectDamage = function(damage,func) {
-        for (var i=0;i<damage.length;++i) damage[i].damage *= func(damage[i].unit.unit);
+        for (var i=0;i<damage.length;++i)
+            damage[i].multipliers.push([ func(damage[i].unit.unit), 'map effect' ]);
         return damage;
     };
 
@@ -474,8 +497,9 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         var result = { type: [ ], class: [ ], orb: [ ], condition: [ ] };
         enabledSpecials.forEach(function(data) {
             if (data === null) return;
-            if (data.hasOwnProperty('atk'))
-                result[data.type].push({ sourceSlot: data.sourceSlot, f: data.atk });
+            // notice specials with both atk and atkStatic defined are not supported right now
+            if (data.hasOwnProperty('atk') || data.hasOwnProperty('atkStatic'))
+                result[data.type].push({ sourceSlot: data.sourceSlot, f: (data.atk || data.atkStatic), s: data.hasOwnProperty('atkStatic') });
             if (data.hasOwnProperty('orb'))
                 result.orb.push({ sourceSlot: data.sourceSlot, f: data.orb });
         });
@@ -602,6 +626,14 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             else return -(healAmount / zombies[ids[other]].threshold);
         } else // reducer
             return Math.floor(healAmount / zombies[ids[other]].multiplier);
+    };
+
+    var totalMultiplier = function(data) {
+        return data.reduce(function(prev,next) { return prev * next[0]; },1);
+    };
+
+    var shortName = function(name) {
+        return name.length < 10 ? name : name.slice(0,10) + '...';
     };
 
     // TODO Stop modifying prototypes because you're lazy

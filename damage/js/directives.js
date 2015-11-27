@@ -64,6 +64,11 @@ directives.expandableDamage = function() {
                     timeout = setTimeout(function() { element[0].style.zIndex = 4; },500);
                 }
             });
+            scope.getDamageTooltip = function(data) {
+                return '(Multipliers)\n' + data.map(function(x) {
+                    return Math.round(x[0] * 100) / 100 + 'x from ' + x[1]; 
+                }).join('\n');
+            };
         },
     };
 };
