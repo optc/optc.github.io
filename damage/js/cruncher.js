@@ -210,6 +210,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         var result = applySpecialMultipliersAndCaptainEffects(damage,hitModifiers,noSorting);
         // apply chain and bonus multipliers
         result = applyChainAndBonusMultipliers(result,hitModifiers);
+        if (mapEffect.damage) result.result = applyEffectDamage(result.result, mapEffect.damage);
         var overallDamage = result.result.reduce(function(prev,x) { return prev + x.damage; },0);
         return { damage: result.result, overall: overallDamage,
             hitModifiers: hitModifiers, chainMultipliers: result.chainMultipliers };
@@ -433,6 +434,11 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         return current > -1 ? result : JSON.parse(JSON.stringify(damage));
     };
 
+    var applyEffectDamage = function(damage,func) {
+        for (var i=0;i<damage.length;++i) damage[i].damage *= func(damage[i].unit.unit);
+        return damage;
+    };
+
     /* Calculates all the possible hit modifiers to be used during the calculation.
      * In most cases it will return an array with a single element, either DEFAULT_HIT_MODIFIERS or customModifiers.
      */
@@ -492,6 +498,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if (data.orb) enabledSpecials.push({ orb: data.orb, permanent: true, sourceSlot: -1 });
             if (data.chainLimiter) mapEffect.chainLimiter = data.chainLimiter;
             if (data.comboShield) mapEffect.comboShield = data.comboShield;
+            if (data.damage) mapEffect.damage = data.damage;
         }
         // team specials
         // "sourceSlot": slot of the unit the special belongs to

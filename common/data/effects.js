@@ -2,7 +2,7 @@ window.effects = {
 
     // always use unique IDs, and don't ever change an ID once you've set it
     // IDs must always be greater than 0
-    // last ID used: 18
+    // last ID used: 19
 
     'Baroque Works (pre-v4.0)': {
         description: 'Stats of non-Fighter units reduced by 90%',
@@ -163,15 +163,22 @@ window.effects = {
     'Damage reduction (50%)': {
         description: 'Damage of all units reduced by 50%',
         thumb: 546,
-        id: 17, // don't change this,
+        id: 17, // don't change this
         atk: function(p) { return 0.5; }
     },
 
     'Damage reduction (70%)': {
         description: 'Damage of all units reduced by 70%',
         thumb: 765,
-        id: 18, // don't change this,
+        id: 18, // don't change this
         atk: function(p) { return 0.3; }
+    },
+
+    'Kuma': {
+        description: 'Damage of STR and DEX characters nullified',
+        thumb: 836,
+        id: 19,  // don't change this
+        damage: function(p) { return p.type == 'STR' || p.type == 'DEX' ? 0 : 1; }
     }
 
 };

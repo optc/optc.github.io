@@ -3682,13 +3682,13 @@ window.details = {
 	835: {
 		captain: "Boosts ATK and HP of Knowledge characters by 2x",
 		specialName: "Thrust Pad Cannon",
-		special: "Changes [RCV], [TND], empty, hindrance, and bomb orbs into matching orbs, amplifies the effect of orbs by 1.75x for 1 turn",
+		special: "Changes [RCV], [TND], empty, hindrance and bomb orbs into matching orbs, amplifies the effect of orbs by 1.75x for 1 turn",
 		specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.75x more damage and opposite orbs will deal 1.75x less damage"
 	},
 	836: {
 		captain: "Boosts ATK and HP of Knowledge characters by 2x, deals 5 times the damage received in the previous turn to all enemies at the end of each turn",
 		specialName: "Thrust Pad Cannon",
-		special: "Changes [RCV], [TND], empty, hindrance, and bomb orbs into matching orbs, amplifies the effect of orbs by 1.75x for 1 turn",
+		special: "Changes [RCV], [TND], empty, hindrance and bomb orbs into matching orbs, amplifies the effect of orbs by 1.75x for 1 turn",
 		specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.75x more damage and opposite orbs will deal 1.75x less damage"
 	}
 };

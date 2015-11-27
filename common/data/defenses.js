@@ -30,6 +30,10 @@ window.defenses = [
     [ 'Duval'                               , 'Duval Raid, round 4'                  , 'Master', 652, 2500 ],
     [ 'Duval'                               , 'Duval Raid, round 5'                  , 'Master', 653, 5000 ],
     [ 'Duval (def up)'                      , 'Duval Raid, round 5'                  , 'Master', 653, 15000 ],
+    [ 'Kuma'                                , 'Kuma Raid'                            , 'Master', 835, 750 ],
+    [ 'Kuma (def up)'                       , 'Kuma Raid'                            , 'Master', 835, 1500 ],
+    [ 'Kuma'                                , 'Kuma Raid'                            , 'Ultimate', 836, 1000 ],
+    [ 'Kuma (def up)'                       , 'Kuma Raid'                            , 'Ultimate', 836, 2000 ],
     /* * * * * Story Islands * * * * */
     [ 'Crocodile (def up)'                  , 'Nanohana, chapter 15'                 , '' , 383, 1500 ],
     [ 'Mr. 1'                               , 'Alubarna, chapter 8'                  , '' , 401, 2050 ],
