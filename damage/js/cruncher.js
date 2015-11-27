@@ -131,6 +131,10 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         if (!noSorting) {
             for (var i=0;i<cptsWith.damageSorters.length;++i) {
                 var baseDamage = JSON.parse(JSON.stringify(damage));
+                for (var j=0;j<baseDamage.length;++j) {
+                    baseDamage[j].multipliers = baseDamage[j].multipliers
+                        .filter(function(x) { return x[1] != 'chain' && x[1] != 'captain effect'; });
+                }
                 var newDamage = cptsWith.damageSorters[i].damageSorter(baseDamage);
                 if (newDamage === null) continue;
                 var newOverallDamage = optimizeDamage(newDamage,true);
