@@ -1745,5 +1745,13 @@ window.captains = {
 	834: {
 		atk: function(p) { return p.unit.class.has("Shooter") ? 1.5 : 1; },
 		rcv: function(p) { return p.unit.class.has("Shooter") ? 1.5 : 1; }
+	},
+	835: {
+		atk: function(p) { return p.unit.class.has("Knowledge") ? 2 : 1; },
+		hp: function(p) { return p.unit.class.has("Knowledge") ? 2 : 1; }
+	},
+	836: {
+		atk: function(p) { return p.unit.class.has("Knowledge") ? 2 : 1; },
+		hp: function(p) { return p.unit.class.has("Knowledge") ? 2 : 1; }
 	}
 };

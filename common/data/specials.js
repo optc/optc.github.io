@@ -726,5 +726,11 @@ window.specials = {
 	833: {
 		atk: function(p) { return p.unit.class.has("Freedom") ? 1.5 : 1; },
 		type: "class"
+	},
+	835: {
+		orb: function(p) { return p.orb == 2.0 ? 1.75 : (p.orb == 0.5 ? 4/7 : 1); }
+	},
+	836: {
+		orb: function(p) { return p.orb == 2.0 ? 1.75 : (p.orb == 0.5 ? 4/7 : 1); }
 	}
 };
