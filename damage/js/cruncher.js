@@ -230,9 +230,11 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
     /* Calculates the highest overall damage for an array of hit modifiers. */
     var optimizeDamage = function(damage,noSorting) {
         // check damage from default order (or custom order) first, we'll use it as a base for comparison
-        var currentResult = getOverallDamage(damage,hitModifiers[0],noSorting);
+        var temp = JSON.parse(JSON.stringify(damage));
+        var currentResult = getOverallDamage(temp,hitModifiers[0],noSorting);
         for (var i=1;i<hitModifiers.length;++i) {
-            var newResult = getOverallDamage(damage,hitModifiers[i],noSorting);
+            var newDamage = JSON.parse(JSON.stringify(damage));
+            var newResult = getOverallDamage(newDamage,hitModifiers[i],noSorting);
             if (newResult.overall > currentResult.overall) currentResult = newResult;
         }
         return currentResult;
