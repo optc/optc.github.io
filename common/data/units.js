@@ -834,5 +834,5 @@ window.units = [
 	[ "Berserker Wyper, Warrior of Shandia", "STR", [ "Shooter", "Freedom" ], 5, 30, 6, 3, 99, null, 1140, 543, 25, null, null, null, 0 ],
 	[ "Mr. 7 & Miss Father's Day", "QCK", [ "Shooter", "Ambition" ], 4, 20, 6, 2, 70, null, 68, 42, 105, 1085, 625, 315, 1 ],
 	[ "Tyrant Bartholomew Kuma", "STR", [ "Knowledge", "Tough" ], 5, 30, 4, 2, 70, null, 260, 170, 90, 1201, 623, 190, 1 ],
-	[ "Tyrant Bartholomew Kuma, Government's Human Weapon", "STR", [ "Knowledge", "Tough" ], 5, 50, 7, 3, 99, null, 1159, 572, 190, null, null, null, 0 ]
+	[ "Tyrant Bartholomew Kuma, Government's Human Weapon", "STR", [ "Knowledge", "Tough" ], 5, 50, 7, 3, 99, null, 1159, 572, 190, 3090, 1435, 90, 0 ]
 ];
