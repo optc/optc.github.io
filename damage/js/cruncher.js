@@ -143,9 +143,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         }
         // return results
         for (var i=0;i<overallDamage.damage.length;++i) {
-            overallDamage.damage[i].multipliers = overallDamage.damage[i].multipliers.filter(function(x) {
-                return x[0] != 1;
-            });
+            overallDamage.damage[i].multipliers = overallDamage.damage[i].multipliers.filter(function(x) { return x[0] != 1; });
+            overallDamage.damage[i].multipliers.sort(function(x,y) { return x[1].localeCompare(y[1]); });
         }
         return overallDamage;
     };

@@ -44,7 +44,7 @@ directives.decorateSlot = function($rootScope) {
     };
 };
 
-directives.expandableDamage = function() {
+directives.expandableDamage = function($sce) {
     return {
         restrict: 'A',
         link: function(scope, element, attrs) {
@@ -64,10 +64,8 @@ directives.expandableDamage = function() {
                     timeout = setTimeout(function() { element[0].style.zIndex = 4; },500);
                 }
             });
-            scope.getDamageTooltip = function(data) {
-                return '(Multipliers)\n' + data.map(function(x) {
-                    return Math.round(x[0] * 100) / 100 + 'x from ' + x[1]; 
-                }).join('\n');
+            scope.getApproxTimingBonus = function(data) {
+                return { Perfect: '1.90', Great: '1.60', Good: '1.30' }[data];
             };
         },
     };

@@ -90,3 +90,11 @@ hr {
     white-space: pre;
     text-align: left;
 }
+
+.details-popover-table td:first-child {
+    text-align: right;
+}
+
+.details-popover-table td + td {
+    padding-left: 5px;
+}
