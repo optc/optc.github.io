@@ -126,6 +126,7 @@ var ImportCtrl = function($scope, $rootScope, $state, $stateParams) {
             temp = ('000000' + parseInt(data, 10).toString(2))
                 .slice(-6).split('').map(function(x) { return parseInt(x, 10); });
             temp.forEach(function(x,n) {
+                if (x == 1) $scope.options.sidebarVisible = true;
                 $scope.tdata.team[n].special = (x == 1);
                 if ($rootScope.cruncherReady) $rootScope.$emit('specialToggled', n, x == 1);
                 else emitQueue.push([ n, x == 1 ]);
