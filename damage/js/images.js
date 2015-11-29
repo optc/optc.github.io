@@ -67,7 +67,7 @@ app.controller('ImageGeneratorCtrl', function($scope, $filter, $timeout) {
                 }
                 if ($scope.tdata.team[n].removed) {
                     fill(context, 'rgba(255,255,255,0.7)', baseX + 1, baseY + 1, 110, 110);
-                    awesome(context, { text: 'f00d', x: baseX + 56, y: baseY + 84, align: 'center', style: '100px', color: 'darkred' });
+                    awesome(context, { text: 'f00d', x: baseX + 56, y: baseY + 88, align: 'center', style: '100px', color: 'darkred' });
                 }
                 // orbs
                 var orb = $scope.tdata.team[n].orb;

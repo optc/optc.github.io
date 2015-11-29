@@ -113,14 +113,15 @@ var ImportCtrl = function($scope, $rootScope, $state, $stateParams) {
             temp = data.split(/,/);
             $scope.data.ship = [ parseInt(temp[0], 10), parseInt(temp[1], 10) ];
         } else if (type == 'D') $scope.data.defense = parseInt(data, 10);
-        if (type == 'O' || type == 'L' || type == 'G') {
+        if (type == 'O' || type == 'L' || type == 'G' || type == 'R') {
             temp = ('000000' + parseInt(data, 10).toString(3))
                 .slice(-6).split('').map(function(x) { return parseInt(x, 10); });
             temp.forEach(function(x,n) {
                 var unit = $scope.tdata.team[n];
                 if (type == 'O') unit.orb = (x == 1 ? 2 : (x == 2 ? 0.5 : 1));
                 else if (type == 'L') unit.lock = x;
-                else unit.silence = x;
+                else if (type == 'G') unit.silence = x;
+                else if (type == 'R') unit.removed = x;
             });
         } else if (type == 'S') {
             temp = ('000000' + parseInt(data, 10).toString(2))
@@ -187,6 +188,7 @@ var ExportCtrl = function($scope) {
         result += parseInt(team.map(function(x) { return (x.orb == 2 ? 1 : (x.orb == 0.5 ? 2 : 0)); }).join(''),3) + 'O';
         result += parseInt(team.map(function(x) { return x.lock; }).join(''),3) + 'L';
         result += parseInt(team.map(function(x) { return x.silence; }).join(''),3) + 'G';
+        result += parseInt(team.map(function(x) { return x.removed; }).join(''),3) + 'R';
         result += parseInt(team.map(function(x) { return x.special ? 1 : 0; }).join(''),2) + 'S';
         result += (Math.floor(data.percHP * 100) / 100) + 'H';
 
