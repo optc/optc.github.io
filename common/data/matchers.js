@@ -198,6 +198,12 @@ window.matchers = [
     },
 
     {
+        name: 'Orb emptier',
+        target: 'special',
+        matcher: /empties/i
+    },
+
+    {
         name: 'Slot fillers',
         target: 'special',
         matcher: /(Fills.*slots|empty orbs into|Changes empty slots)/i
