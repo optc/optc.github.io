@@ -899,6 +899,13 @@ window.drops = {
             Expert: [ 794 ]
         },
 
+        {
+            name: 'Tyrant Kuma',
+            thumb: 836,
+            Master: [ 835 ],
+            Expert: [ 835 ]
+        }
+
     ],
 
     'Special': [
@@ -924,9 +931,9 @@ window.drops = {
         {
             name: 'Colosseum',
             thumb: 779,
-            Exhibition: [ 776, 778, 803, 805 ],
-            Underground: [ 776, 778, 803 ],
-            Chaos: [ 776, 778, 780, 803 ]
+            Exhibition: [ 776, 778, 803, 805, 832, 834 ],
+            Underground: [ 776, 778, 803, 832, 834 ],
+            Chaos: [ 776, 778, 780, 803, 830, 832, 834 ]
         }
 
    ]
