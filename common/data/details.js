@@ -3417,13 +3417,13 @@ window.details = {
 		captain: "Reduces damage received by 25%"
 	},
 	780: {
-		special: "Boosts his own ATK by a variable factor for 1 turn",
+		special: "Boosts own ATK by a variable factor for 1 turn",
 		specialNotes: "The exact multiplier used is chosen based on the crew's current HP at the time the special is activated: above 50% HP, the multiplier used is 1.5x; between 20% HP and 50% HP, it's 1.75x; below 20% HP, it's 2x.",
 		specialName: "Precept Deification",
 		captain: "Boosts ATK of all characters by 2x if HP is below 30% at the start of the turn"
 	},
 	781: {
-		special: "Boosts his own ATK by a variable factor for 1 turn",
+		special: "Boosts own ATK by a variable factor for 1 turn",
 		specialNotes: "The exact multiplier used is chosen based on the crew's current HP at the time the special is activated: above 50% HP, the multiplier used is 1.5x; between 20% HP and 50% HP, it's 1.75x; below 20% HP, it's 2x.",
 		specialName: "Precept Deification",
 		captain: "Boosts ATK of all characters by 2.5x if HP is below 30% at the start of the turn"
@@ -3498,12 +3498,12 @@ window.details = {
 		captainNotes: "His ATK multiplier will be 3.5x on the first turn, 3.4x on the second, 3.3x on the third and so on. The reduction stops once the multiplier is 1.0x. The multiplier affects all Tough units."
 	},
 	796: {
-		special: "Slightly boosts chances of getting matching orbs for 3 turns, boosts his own ATK by 1.75x for 1 turn",
+		special: "Slightly boosts chances of getting matching orbs for 3 turns, boosts own ATK by 1.75x for 1 turn",
 		specialName: "Peto-Peto Fruit, The Greatest Power",
 		captain: "Boosts ATK of Knowledge characters by 2x"
 	},
 	797: {
-		special: "Slightly boosts chances of getting matching orbs for 3 turns, boosts his own ATK by 1.75x for 1 turn",
+		special: "Slightly boosts chances of getting matching orbs for 3 turns, boosts own ATK by 1.75x for 1 turn",
 		specialName: "Peto-Peto Fruit, The Greatest Power",
 		captain: "Boosts ATK of Knowledge and Tough characters by 2x"
 	},

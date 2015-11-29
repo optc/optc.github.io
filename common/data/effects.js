@@ -2,7 +2,7 @@ window.effects = {
 
     // always use unique IDs, and don't ever change an ID once you've set it
     // IDs must always be greater than 0
-    // last ID used: 19
+    // last ID used: 21
 
     'Baroque Works (pre-v4.0)': {
         description: 'Stats of non-Fighter units reduced by 90%',
@@ -145,7 +145,7 @@ window.effects = {
         chainLimiter: 2.0
     },
 
-    'Combo shield (11 hits)': {
+    'Hit barrier (11 hits)': {
         description: 'Nullifies the first 11 hits in the chain',
         thumb: 794,
         id: 15, // don't change this
@@ -160,15 +160,15 @@ window.effects = {
         chainLimiter: 2.0
     },
 
-    'Damage reduction (50%)': {
-        description: 'Damage of all units reduced by 50%',
+    'Attack reduction (50%)': {
+        description: 'ATK of all units reduced by 50%',
         thumb: 546,
         id: 17, // don't change this
         atk: function(p) { return 0.5; }
     },
 
-    'Damage reduction (70%)': {
-        description: 'Damage of all units reduced by 70%',
+    'Attack reduction (70%)': {
+        description: 'ATK of all units reduced by 70%',
         thumb: 765,
         id: 18, // don't change this
         atk: function(p) { return 0.3; }
@@ -179,6 +179,20 @@ window.effects = {
         thumb: 836,
         id: 19,  // don't change this
         damage: function(p) { return p.type == 'STR' || p.type == 'DEX' ? 0 : 1; }
+    },
+
+    'Shu (Expert)': {
+        description: 'Attack of Slasher units reduced by 50%',
+        thumb: 773,
+        id: 20, // don't change this
+        atk: function(p) { return p.class.has("Slasher") ? 0.5 : 1; }
+    },
+
+    'Shu (Master)': {
+        description: 'Attack of Slasher units reduced by 70%',
+        thumb: 773,
+        id: 21, // don't change this
+        atk: function(p) { return p.class.has("Slasher") ? 0.3 : 1; }
     }
 
 };

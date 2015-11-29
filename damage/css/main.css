@@ -844,8 +844,17 @@ nav > li > div {
     z-index: 1;
 }
 
+.candyContainer {
+    display: inline-block;
+    position: relative;
+}
+
 .candySlider {
     margin-top: 28px !important;
+}
+
+.candyCurrent {
+    display: block;
 }
 
 #candySliders {
@@ -858,7 +867,7 @@ nav > li > div {
 
 .candyLabel {
     position: absolute;
-    bottom: 40px;
+    bottom: 60px;
     left: 0;
     width: 100%;
     text-align: center;

@@ -696,11 +696,13 @@ directives.candySlider = function($compile) {
     return {
         restrict: 'E',
         replace: true,
-        template: '<input disabled class="candySlider"></input>',
-        scope: { data: '=', type: '@' },
+        template: '<div class="candyContainer"><input disabled class="candySlider"></input>' +
+            '<span class="candyCurrent">{{numbers.team[slot][type] | number}} {{type.toUpperCase()}}</span>',
+        scope: { data: '=', numbers: '=', slot: '=', type: '@' },
         link: function(scope, element, attrs) {
             scope.actualBonus = 0;
             var currentValue = scope.data[scope.type];
+            var input = element.find('input');
             var update = function(value) {
                 if (value == currentValue) return;
                 currentValue = value;
@@ -710,12 +712,12 @@ directives.candySlider = function($compile) {
             };
             var updateMax = function(data) {
                 var used = Object.keys(data).reduce(function(prev,next) { return prev + (next == scope.type ? 0 : data[next]); },0);
-                element.trigger('configure',{ max: Math.min(100,200 - used) });
+                input.trigger('configure',{ max: Math.min(100,200 - used) });
                 currentValue = data[scope.type];
-                element.val(currentValue).trigger('change');
+                input.val(currentValue).trigger('change');
                 scope.actualBonus = currentValue * { hp: 5, atk: 2, rcv: 1 }[scope.type];
             };
-            var slider = element.knob({
+            var slider = input.knob({
                 width: 112,
                 height: 112,
                 min: 0,
@@ -725,8 +727,8 @@ directives.candySlider = function($compile) {
                 release: update,
                 fgColor: { hp: '#fcac68', atk: '#fb6f64', rcv: '#7feb9f' }[scope.type]
             });
-            element.val(currentValue).trigger('change');
-            element.parent().append($compile('<span class="candyLabel">+{{actualBonus}} ' + scope.type.toUpperCase() + '</span>')(scope));
+            input.val(currentValue).trigger('change');
+            element.append($compile('<span class="candyLabel">+{{actualBonus}} ' + scope.type.toUpperCase() + '</span>')(scope));
             scope.$watch('data',updateMax,true);
         }
     };

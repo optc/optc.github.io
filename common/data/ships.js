@@ -159,7 +159,7 @@ window.ships = [
 
     {
         name: 'Dreadnaught Sabre',
-        thumb: null,
+        thumb: 'ship_0014_c1.png',
         description: 'Boosts HP by 1.5x, deals 5,000 typeless damage at the end of the turn',
         hp: function(p) {
             return [ 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.5][p.boatLevel - 1];
