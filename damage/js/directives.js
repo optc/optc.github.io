@@ -603,7 +603,7 @@ directives.unitChain = function() {
                 var unit = scope.data.team[scope.slot], tunit = scope.tdata.team[scope.slot];
                 if (!$(e.target).hasClass('unitPortrait')) return;
                 if (unit.unit === null || /unitLevel/.test(e.target.className)) return;
-                if (e.which == 1 && e.altKey && !Utils.isClickOnOrb(e,e.target.parentNode)) {
+                if (e.which == 1 && (e.altKey || e.metaKey) && !e.shiftKey && !Utils.isClickOnOrb(e,e.target.parentNode)) {
                     tunit.lock = (tunit.lock > 0 ? 0 : 2);
                     scope.$apply();
                     e.preventDefault();
@@ -628,8 +628,37 @@ directives.unitSilence = function() {
                 var unit = scope.data.team[scope.slot], tunit = scope.tdata.team[scope.slot];
                 if (!$(e.target).hasClass('unitPortrait')) return;
                 if (unit.unit === null || /unitLevel/.test(e.target.className)) return;
-                if (e.which == 1 && e.shiftKey && !Utils.isClickOnOrb(e,e.target.parentNode)) {
+                if (e.which == 1 && e.shiftKey && !e.altKey && !e.metaKey && !Utils.isClickOnOrb(e,e.target.parentNode)) {
                     tunit.silence = (tunit.silence > 0 ? 0 : 2);
+                    scope.$apply();
+                    e.preventDefault();
+                    e.stopPropagation();
+                    return false;
+                }
+            };
+            element.parent().mouseup(onMouseUp);
+        }
+    };
+};
+
+directives.unitRemoved = function() {
+    return {
+        restrict: 'E',
+        replace: true,
+        scope: true,
+        template: '<div class="unitRemoved" ng-class="{ active: tdata.team[slot].removed > 0 }"><i class="fa fa-times"></i></div>',
+        link: function(scope, element, attrs) {
+            var parent = element.parent();
+            scope.$watch('tdata.team[slot].removed',function(removed) {
+                if (removed > 0) parent.addClass('gray');
+                else parent.removeClass('gray');
+            });
+            var onMouseUp = function(e) {
+                var unit = scope.data.team[scope.slot], tunit = scope.tdata.team[scope.slot];
+                if (!$(e.target).hasClass('unitPortrait')) return;
+                if (unit.unit === null || /unitLevel/.test(e.target.className)) return;
+                if (e.which == 1 && (e.altKey || e.metaKey) && e.shiftKey && !Utils.isClickOnOrb(e,e.target.parentNode)) {
+                    tunit.removed = (tunit.removed > 0 ? 0 : 2);
                     scope.$apply();
                     e.preventDefault();
                     e.stopPropagation();

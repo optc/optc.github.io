@@ -32,12 +32,12 @@ var SharedRootCtrl = function($scope) {
     $scope.tdata = { // transitional data
 
         team: [
-            { orb: 1, special: false, lock: 0, silence: 0 },
-            { orb: 1, special: false, lock: 0, silence: 0 },
-            { orb: 1, special: false, lock: 0, silence: 0 },
-            { orb: 1, special: false, lock: 0, silence: 0 },
-            { orb: 1, special: false, lock: 0, silence: 0 },
-            { orb: 1, special: false, lock: 0, silence: 0 }
+            { orb: 1, special: false, lock: 0, silence: 0, removed: 0 },
+            { orb: 1, special: false, lock: 0, silence: 0, removed: 0 },
+            { orb: 1, special: false, lock: 0, silence: 0, removed: 0 },
+            { orb: 1, special: false, lock: 0, silence: 0, removed: 0 },
+            { orb: 1, special: false, lock: 0, silence: 0, removed: 0 },
+            { orb: 1, special: false, lock: 0, silence: 0, removed: 0 }
         ],
 
         customHitModifiers: null,
@@ -69,7 +69,7 @@ var SharedRootCtrl = function($scope) {
     $scope.resetSlot = function(n,onlyTransitional) {
         if (!onlyTransitional)
             $scope.data.team[n] = { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 } };
-        $scope.tdata.team[n] = { orb: 1, special: false, lock: 0, silence: 0 };
+        $scope.tdata.team[n] = { orb: 1, special: false, lock: 0, silence: 0, removed: 0 };
     };
 
     /* * * * * Custom hit modifiers resetting * * * * */

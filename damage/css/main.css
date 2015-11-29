@@ -233,7 +233,20 @@ body, html {
     pointer-events: none;
 }
 
-.unitChain.active, .unitSilence.active {
+.unitRemoved {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    width: 100%;
+    height: 100%;
+    display: none;
+    pointer-events: none;
+    font-size: 100px;
+    line-height: 0px;
+    color: darkred;
+}
+
+.unitChain.active, .unitSilence.active, .unitRemoved.active {
     display: block;
 }
 

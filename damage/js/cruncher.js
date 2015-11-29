@@ -66,6 +66,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
 
     var crunchSelfInhibit = false;
     var mapEffect = { };
+    var team = [ ];
 
     /* * * * * Events * * * * */
 
@@ -96,7 +97,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         });
         result.team = getTeamDetails();
         var hpMax = 0, rcvTotal = 0;
-        $scope.data.team.forEach(function(x,n) {
+        team.forEach(function(x,n) {
             if (n > 5 || x.unit === null) return;
             // hp
             var hp = getStatOfUnit(x,'hp');
@@ -112,7 +113,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             rcvTotal += Math.floor(applyCaptainEffectsAndSpecialsToRCV(n,rcv));
         });
         result.rcv = Math.max(0,rcvTotal);
-        var cost = $scope.data.team.slice(1,6).reduce(function(prev,next) { return prev + (!next.unit ? 0 : next.unit.cost); },0);
+        var cost = team.slice(1,6).reduce(function(prev,next) { return prev + (!next.unit ? 0 : next.unit.cost); },0);
         result.cost = { cost: cost, level: Math.max(1,Math.floor(cost / 2) * 2 - 18) };
         $scope.numbers = $.extend($scope.numbers, result);
         $scope.numbers.hp = Math.max(1,hpMax);
@@ -162,7 +163,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
     var getBaseDamageForType = function(type) {
         var result = [ ];
         // populate array with the damage of each unit in the team
-        $scope.data.team.forEach(function(x,n) {
+        team.forEach(function(x,n) {
             if (n > 5 || x.unit === null || $scope.tdata.team[n].lock > 0) return;
             var orb = $scope.tdata.team[n].orb;
             var atk = getStatOfUnit(x,'atk'); // basic attack (scales with level);
@@ -439,7 +440,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                     if (!data.s) { // non-static
                         multipliers.push([
                             data.f($.extend({ sourceSlot: data.sourceSlot },getParameters(x.position))),
-                            'special (' + shortName($scope.data.team[data.sourceSlot].unit.name) + ')'
+                            'special (' + shortName(team[data.sourceSlot].unit.name) + ')'
                         ]);
                     } else { // static
                         base += data.f($.extend({ sourceSlot: data.sourceSlot },getParameters(x.position)));
@@ -529,11 +530,18 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if (data.comboShield) mapEffect.comboShield = data.comboShield;
             if (data.damage) mapEffect.damage = data.damage;
         }
+        // team
+        team = $scope.data.team.map(function(x,n) {
+            if (!$scope.tdata.team[n] || $scope.tdata.team[n].removed)
+                return { unit: null, level: -1, candies: { atk: 0, hp: 0, rcv: 0 } };
+            else
+                return x;
+        }).slice(0,6);
         // team specials
         // "sourceSlot": slot of the unit the special belongs to
         $scope.tdata.team.forEach(function(x,n) {
-            if (!$scope.data.team[n].unit) return;
-            var id = $scope.data.team[n].unit.number + 1;
+            if (!team[n].unit) return;
+            var id = team[n].unit.number + 1;
             if (x.special && specials.hasOwnProperty(id)) {
                 if (specials[id].hasOwnProperty('orb') && enabledSpecials[0] && enabledSpecials[0].permanent)
                     conflictWarning = true;
@@ -552,8 +560,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         // captain effect array
         enabledEffects = [ ];
         for (var i=0;i<2;++i) {
-            if ($scope.data.team[i].unit === null) continue;
-            var id = $scope.data.team[i].unit.number + 1;
+            if (team[i].unit === null) continue;
+            var id = team[i].unit.number + 1;
             if (!window.captains.hasOwnProperty(id)) continue;
             var effect = $.extend({ },window.captains[id]),
                 locked = ($scope.tdata.team[i].lock > 0), silenced = ($scope.tdata.team[i].silence > 0);
@@ -583,12 +591,12 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
 
     var getParameters = function(slotNumber) {
         return {
-            unit: $scope.data.team[slotNumber].unit,
+            unit: team[slotNumber].unit,
             orb: $scope.tdata.team[slotNumber].orb,
             maxHP: $scope.numbers.hp,
             percHP: $scope.data.percHP,
             defenseDown: isDefenseDown,
-            data: $scope.data.team[slotNumber],
+            data: team[slotNumber],
             tdata: $scope.tdata.team[slotNumber],
             scope: $scope,
             slot: slotNumber,
@@ -601,7 +609,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
     };
 
     var getTeamDetails = function() {
-        return $scope.data.team.map(function(x,n) {
+        return team.map(function(x,n) {
             if (x.unit === null) return null;
             return {
                 name : x.unit.name,
@@ -614,7 +622,6 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
     };
 
     var checkZombieTeam = function(data) {
-        var team = $scope.data.team;
         if (!team[0].unit || !team[1].unit) return null;
         var ids = [ team[0].unit.number + 1, team[1].unit.number + 1 ];
         if (!zombies.hasOwnProperty(ids[0]) || !zombies.hasOwnProperty(ids[1])) return;

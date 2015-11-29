@@ -16,7 +16,7 @@ var loadValue = function(key,def) {
                         theme: 'relax', timeout: 5000 });
             }
             return x;
-        });
+        }).slice(0,6);
     }
     if (value !== null) return value;
     return def;
@@ -29,7 +29,7 @@ var save = function(key,object) {
             if (x && x.unit && x.unit.constructor == Object)
                 x.unit = x.unit.number;
             return x;
-        });
+        }).slice(0,6);
     }
     localStorage.setItem(key,JSON.stringify(object));
 };

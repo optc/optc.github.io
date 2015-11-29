@@ -57,13 +57,17 @@ app.controller('ImageGeneratorCtrl', function($scope, $filter, $timeout) {
             image.onload = function() {
                 var baseX = 203 + (n%2 * 115), baseY = 9 + Math.floor(n/2) * 115;
                 context.drawImage(image, baseX, baseY, 112, 112);
-                // lock & silence
+                // lock, silence & removal
                 if ($scope.tdata.team[n].lock) {
                     fill(context, 'rgba(255,255,255,0.7)', baseX + 1, baseY + 1, 110, 110);
                     context.drawImage(lock, baseX, baseY, 112, 112);
                 }
                 if ($scope.tdata.team[n].silence) {
                     context.drawImage(silence, baseX + 72, baseY + 25, 32, 20);
+                }
+                if ($scope.tdata.team[n].removed) {
+                    fill(context, 'rgba(255,255,255,0.7)', baseX + 1, baseY + 1, 110, 110);
+                    awesome(context, { text: 'f00d', x: baseX + 56, y: baseY + 84, align: 'center', style: '100px', color: 'darkred' });
                 }
                 // orbs
                 var orb = $scope.tdata.team[n].orb;
