@@ -900,13 +900,13 @@ window.details = {
 	248: {
 		special: "Deals random STR damage to one enemy",
 		specialName: "Rampage",
-		specialNotes: "Estimated damage range: between 2,000 HP and 200,000 HP. Empirical evidence suggests the damage is not based on the character's ATK.",
+		specialNotes: "Estimated random damage range: between 2,000 HP and 200,000 HP.",
 		captain: "Boosts ATK of STR characters by 2.5x and reduces their HP by 60%"
 	},
 	249: {
 		special: "Deals random STR damage to one enemy",
 		specialName: "Rampage",
-		specialNotes: "Estimated damage range: between 2,000 HP and 200,000 HP. Empirical evidence suggests the damage is not based on the character's ATK.",
+		specialNotes: "Estimated random damage range: between 2,000 HP and 200,000 HP.",
 		captain: "Boosts ATK of STR characters by 3x and reduces their HP by 60%"
 	},
 	250: {
@@ -1195,13 +1195,13 @@ window.details = {
 	317: {
 		special: "Randomly changes all orbs into either [DEX] or [STR] orbs, deals random DEX damage to all enemies",
 		specialName: "Beautiful Secretary's Job",
-		specialNotes: "Estimated damage range: between 1 HP and 15,000 HP. Empirical evidence suggests the damage is not based on the character's ATK.",
+		specialNotes: "Estimated random damage range: between 1 HP and 15,000 HP.",
 		captain: "Recovers 500 HP at end of turn, reduces damage received by 10%"
 	},
 	318: {
 		special: "Randomly changes all orbs into either [DEX] or [STR] orbs, deals random DEX damage to all enemies",
 		specialName: "Beautiful Secretary's Job",
-		specialNotes: "Estimated damage range: between 1 HP and 15,000 HP. Empirical evidence suggests the damage is not based on the character's ATK.",
+		specialNotes: "Estimated random damage range: between 1 HP and 15,000 HP.",
 		captain: "Recovers 500 HP at end of turn, reduces damage received by 15%"
 	},
 	319: {
@@ -1299,13 +1299,13 @@ window.details = {
 	340: {
 		special: "Randomly changes all orbs into either [STR] or [QCK] orbs, deals random STR damage to all enemies",
 		specialName: "Kraken Tentacle Crush",
-		specialNotes: "Estimated damage range: between 1 HP and 15,000 HP. Empirical evidence suggests the damage is not based on the character's ATK.",
+		specialNotes: "Estimated random damage range: between 1 HP and 15,000 HP.",
 		captain: "Boosts ATK of Striker characters by 2x"
 	},
 	341: {
 		special: "Randomly changes all orbs into either [STR] or [QCK] orbs, deals random STR damage to all enemies",
 		specialName: "Kraken Tentacle Crush",
-		specialNotes: "Estimated damage range: between 1 HP and 15,000 HP. Empirical evidence suggests the damage is not based on the character's ATK.",
+		specialNotes: "Estimated random damage range: between 1 HP and 15,000 HP.",
 		captain: "Boosts ATK of Striker characters by 2x"
 	},
 	352: {
@@ -1342,12 +1342,12 @@ window.details = {
 		special: "Changes [TND] and [RCV] orbs into [DEX] orbs, deals random DEX damage to all enemies",
 		specialName: "Scratch Body",
 		captain: "Boosts ATK of DEX characters by 2.5x if HP is above 99% at the start of the turn",
-		specialNotes: "Estimated damage range: between 5,000 HP and 20,000 HP. Empirical evidence suggests the damage is not based on the character's ATK."
+		specialNotes: "Estimated random damage range: between 5,000 HP and 20,000 HP."
 	},
 	359: {
 		special: "Changes [TND] and [RCV] orbs into [DEX] orbs, deals random DEX damage to all enemies",
 		specialName: "Scratch Body",
-		specialNotes: "Estimated damage range: between 5,000 HP and 20,000 HP. Empirical evidence suggests the damage is not based on the character's ATK.",
+		specialNotes: "Estimated random damage range: between 5,000 HP and 20,000 HP.",
 		captain: "Boosts ATK of DEX characters by 3x if HP is above 99% at the start of the turn"
 	},
 	360: {
@@ -1482,13 +1482,13 @@ window.details = {
 	387: {
 		special: "Randomly changes all orbs into either [PSY] or [INT] orbs, deals random PSY damage to all enemies",
 		specialName: "Square Plate Sword",
-		specialNotes: "Estimated damage range: between 1 HP and 10,000 HP. Empirical evidence suggests the damage is not based on the character's ATK.",
+		specialNotes: "Estimated random damage range: between 1 HP and 10,000 HP.",
 		captain: "Boosts RCV of PSY characters by 1.5x"
 	},
 	388: {
 		special: "Randomly changes all orbs into either [PSY] or [INT] orbs, deals random PSY damage to all enemies",
 		specialName: "Square Plate Sword",
-		specialNotes: "Estimated damage range: between 1 HP and 10,000 HP. Empirical evidence suggests the damage is not based on the character's ATK.",
+		specialNotes: "Estimated random damage range: between 1 HP and 10,000 HP.",
 		captain: "Boosts RCV of PSY characters by 1.5x"
 	},
 	389: {
@@ -1675,7 +1675,7 @@ window.details = {
 	425: {
 		special: "Deals random PSY damage to all enemies",
 		specialName: "Shusui: Three Verse Arrow Notch Slash",
-		specialNotes: "Estimated damage range: between 1 HP and 100,000 HP. Empirical evidence suggests the damage is not based on the character's ATK.",
+		specialNotes: "Estimated random damage range: between 1 HP and 100,000 HP.",
 		captain: "Boosts ATK and HP of Slasher characters by 1.5x"
 	},
 	426: {
@@ -1827,11 +1827,13 @@ window.details = {
 	458: {
 		special: "Deals random PSY damage to all enemies, boosts ATK of all characters by 1.5x for 1 turn",
 		specialName: "Zen Shockwave",
+        specialNotes: "Estimated random damage range: between 30,000 HP and 150,000 HP.",
 		captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of characters with cost 20 or less by 3x"
 	},
 	459: {
 		special: "Deals random PSY damage to all enemies, boosts ATK of all characters by 1.5x for 1 turn",
 		specialName: "Zen Shockwave",
+        specialNotes: "Estimated random damage range: between 30,000 HP and 150,000 HP.",
 		captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of characters with cost 20 or less by 3x"
 	},
 	460: {
@@ -2414,13 +2416,13 @@ window.details = {
 	577: {
 		special: "Deals random typeless damage to all enemies, changes own orb into [STR]",
 		specialName: "Gum-Gum JET Gatling",
-		specialNotes: "Estimated damage range: between 70,000 HP and 200,000 HP. Empirical evidence suggests the damage is not based on the character's ATK.",
+		specialNotes: "Estimated random damage range: between 70,000 HP and 200,000 HP.",
 		captain: "Boosts ATK by 4x following a chain of Good > Great > Perfect hits"
 	},
 	578: {
 		special: "Deals random typeless damage to all enemies, changes own orb into [STR]",
 		specialName: "Gum-Gum JET Gatling",
-		specialNotes: "Estimated damage range: between 70,000 HP and 200,000 HP. Empirical evidence suggests the damage is not based on the character's ATK.",
+		specialNotes: "Estimated random damage range: between 70,000 HP and 200,000 HP.",
 		captain: "Boosts ATK by 4x following a chain of Good > Great > Perfect hits"
 	},
 	579: {
@@ -3665,13 +3667,13 @@ window.details = {
 	832: {
 		captain: "Boosts ATK of Freedom characters proportionally to the crew's current HP, reduces crew's current HP by 10% at the end of each turn",
 		specialName: "Burn Bazooka",
-		special: "Boosts ATK of Freedom characters by 1.5x for 1 turn, deals STR damage to all enemies",
+		special: "Boosts ATK of Freedom characters by 1.5x for 1 turn, deals 15x character's ATK in STR damage to all enemies",
 		captainNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the lower the HP is. The multiplier is calculated as 1 + 1.5 * (1 - (remaining HP) / (total HP)). At full health, the boost is equal to 1x. With 1 HP left, the boost is equal to 2.5x."
 	},
 	833: {
 		captain: "Boosts ATK of Freedom characters proportionally to the crew's current HP, reduces crew's current HP by 10% at the end of each turn",
 		specialName: "Burn Bazooka",
-		special: "Boosts ATK of Freedom characters by 1.5x for 1 turn, deals STR damage to all enemies",
+		special: "Boosts ATK of Freedom characters by 1.5x for 1 turn, deals 15x character's ATK in STR damage to all enemies",
 		captainNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the lower the HP is. The multiplier is calculated as 1 + 1.75 * (1 - (remaining HP) / (total HP)). At full health, the boost is equal to 1x. With 1 HP left, the boost is equal to 2.75x."
 	},
 	834: {
