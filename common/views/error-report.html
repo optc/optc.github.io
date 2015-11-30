@@ -1,0 +1,39 @@
+<div>
+
+    <style>
+        #errorReport {
+            position: absolute;
+            top: -32px;
+            right: 15px;
+            transition: all 0.1s linear;
+            -moz-transition: all 0.1s linear;
+            -webkit-transition: all 0.1s linear;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: salmon;
+            color: white;
+            text-align: center;
+            line-height: 30px;
+            cursor: pointer;
+            display: block;
+        }
+
+        #errorReport.enabled {
+            top: 15px;
+        }
+
+        #errorReport:hover {
+            transform: scale(1.2);
+            -moz-transform: scale(1.2);
+            -webkit-transform: scale(1.2);
+        }
+    </style>
+
+    <a id="errorReport" ng-class="{ enabled: caughtException }"
+        uib-tooltip="Error Report" tooltip-placement="left" ng-click="clearError()"
+        target="_blank" ng-href="{{baseURL}}{{caughtException}}">
+        <i class="fa fa-exclamation-triangle"></i>
+    </a>
+
+</div>
