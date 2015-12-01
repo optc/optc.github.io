@@ -684,6 +684,7 @@ window.drops = {
         {
             name: 'Warriors of Shandia! Dreams of a Homeland!',
             thumb: 583,
+            global: true,
             Expert: [ 581, 582, 583, 584, -584, -544, -466, -412, -371, -335, -314, -291 ],
             Elite: [ 581, 582, 583, 584, -584, -544, -466, -412, -371, -335, -314, -291 ]
         },
