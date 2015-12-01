@@ -67,16 +67,20 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
     var crunchSelfInhibit = false;
     var mapEffect = { };
     var team = [ ];
+    var initDone = false;
 
     /* * * * * Events * * * * */
 
     $rootScope.$on('specialToggled', function(e, slot, enabled) {
         var id = $scope.data.team[slot].unit.number + 1;
         if (!specials.hasOwnProperty(id)) return;
-        if (enabled && specials[id].hasOwnProperty('onActivation'))
+        if (enabled && specials[id].hasOwnProperty('onActivation')) {
+            if (!initDone) initializeDataStructs();
             specials[id].onActivation(getParameters(slot));
-        else if (!enabled && specials[id].hasOwnProperty('onDeactivation'))
+        } else if (!enabled && specials[id].hasOwnProperty('onDeactivation')) {
+            if (!initDone) initializeDataStructs();
             specials[id].onDeactivation(getParameters(slot));
+        }
     });
 
     $scope.$watch('data',crunch,true);
@@ -529,6 +533,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
     /* * * * * * Utility functions * * * * */
 
     var initializeDataStructs = function() {
+        initDone = true;
         // get enabled specials
         var conflictWarning = false;
         enabledSpecials = [ ];
