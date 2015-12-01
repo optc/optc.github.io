@@ -218,6 +218,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
      */
     var getOverallDamage = function(damage,hitModifiers,noSorting) {
         if (mapEffect.comboShield) mapEffect.shieldLeft = mapEffect.comboShield;
+        else mapEffect.shieldLeft = 0;
         var result = applySpecialMultipliersAndCaptainEffects(damage,hitModifiers,noSorting);
         // apply chain and bonus multipliers
         result = applyChainAndBonusMultipliers(result,hitModifiers);
@@ -273,9 +274,9 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
      * - BONUS_DAMAGE_GREAT   = max(0,floor(STARTING_DAMAGE * (0.9 * 0.66 + 1/CMB)) - DEFENSE)
      * - BONUS_DAMAGE_PERFECT = max(0,floor(STARTING_DAMAGE * (0.9 + 1/CMB)) - DEFENSE)
      */
-    var computeDamageOfUnit = function(unit,unitAtk,hitModifier) {
+    var computeDamageOfUnit = function(unit, unitAtk, hitModifier, currentHitCount) {
         var baseDamage = Math.floor(Math.max(1,unitAtk / unit.combo - currentDefense));
-        var result = 0, bonusDamageBase = 0, combo = 0;
+        var result = { hits: currentHitCount, result: 0 }, bonusDamageBase = 0, combo = 0, lastHit = 0;
         if (hitModifier == 'Below Good') {
             combo = unit.combo - 3;
             //return baseDamage * (unit.combo - 3);
@@ -295,19 +296,28 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             combo = unit.combo;
             //return baseDamage * unit.combo;
         }
-        // apply combo shield if active
-        var actualCombo = (mapEffect.shieldLeft ? Math.max(0, combo - mapEffect.shieldLeft) : combo);
-        if (mapEffect.shieldLeft) mapEffect.shieldLeft = Math.max(0, mapEffect.shieldLeft - combo);
-        // calculate actual damage
-        if (actualCombo === 0)
-            return 0;
-        else if (bonusDamageBase === 0)
-            return baseDamage * actualCombo;
-        else if (baseDamage > 1)
-            return baseDamage * actualCombo + Math.floor(unitAtk * 0.9 * bonusDamageBase);
-        else
-            return baseDamage * actualCombo +
-                Math.max(0,Math.floor(unitAtk * (0.9 * bonusDamageBase + 1 / unit.combo)) - currentDefense);
+        // apply hits
+        for (var i=0;i<combo;++i) {
+            ++result.hits;
+            // apply combo shield if active
+            if (mapEffect.shieldLeft > 0) {
+                --mapEffect.shieldLeft;
+                continue;
+            }
+            lastHit = unitAtk / unit.combo;
+            // apply hit-based captain effects if any
+            cptsWith.hitMultipliers.forEach(function(x) { lastHit *= x.hit(result.hits); });
+            // apply defense
+            lastHit = Math.floor(Math.max(1, lastHit - currentDefense));
+            // add hit to current total
+            result.result += lastHit;
+        }
+        // apply hit bonus
+        if (bonusDamageBase > 0) {
+            if (lastHit > 1) result.result += Math.floor(unitAtk * 0.9 * bonusDamageBase);
+            else result.result += Math.max(0,Math.floor(unitAtk * (0.9 * bonusDamageBase + 1 / unit.combo)) - currentDefense);
+        }
+        return result;
     };
 
     /* Computes the actual defense threshold of the enemy after the specials are factored in.
@@ -398,7 +408,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
     };
 
     var applyChainAndBonusMultipliers = function(damage,modifiers) {
-        var multipliersUsed = [ ];
+        var multipliersUsed = [ ], currentHits = 0;
         var currentChainMultiplier = 1.0, i;
         var result = damage.map(function(x,n) {
             for (i=0;i<x.multipliers.length;++i) {
@@ -411,7 +421,9 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             var chainModifier = cptsWith.chainModifiers.reduce(function(prev,next) {
                 return prev * next.chainModifier(getParameters(x.position));
             },1);
-            result = computeDamageOfUnit(x.unit.unit,result,modifiers[n]);
+            var temp = computeDamageOfUnit(x.unit.unit,result,modifiers[n],currentHits);
+            currentHits = temp.hits;
+            result = temp.result;
             // update chain multiplier for the next hit
             multipliersUsed.push(currentChainMultiplier);
             currentChainMultiplier = getChainMultiplier(currentChainMultiplier,modifiers[n],chainModifier);
@@ -576,6 +588,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         // find non-static captain effects
         cptsWith = {
             hitModifiers:   enabledEffects.filter(function(x) { return x.hasOwnProperty('hitModifiers');  }),
+            hitMultipliers: enabledEffects.filter(function(x) { return x.hasOwnProperty('hit');  }),
             chainModifiers: enabledEffects.filter(function(x) { return x.hasOwnProperty('chainModifier'); }),
             damageSorters:  enabledEffects.filter(function(x) { return x.hasOwnProperty('damageSorter');  })
         };

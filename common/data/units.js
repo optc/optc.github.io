@@ -844,7 +844,7 @@ window.units = [
 	[ "Baby 5", "STR", [ "Shooter", "Striker" ], 4, 18, 5, 3, 70, null, 159, 176, 63, null, null, null, 0 ],
 	[ "Baby 5, Donquixote Pirates", "STR", [ "Shooter", "Striker" ], 5, 30, 6, 4, 99, null, 894, 718, 191, null, null, null, 0 ],
 	[ "Buffalo", "QCK", [ "Shooter", "Freedom" ], 4, 18, 9, 3, 70, null, 375, 252, 89, null, null, null, 0 ],
-	[ "Buffalo, Donquixote Pirates", "QCK", [ "Shooter", "Freedom" ], 5, 30, 10, 4, 99, null, 1050, 600, 173, null, null, null, 0 ],
+	[ "Buffalo, Donquixote Pirates", "QCK", [ "Shooter", "Freedom" ], 5, 30, 10, 4, 99, null, 1050, 600, 173, 2770, 1096, 295, 0 ],
 	[ "Tom, Tom's Workers", "DEX", [ "Fighter", "Tough" ], 3, 12, 6, 1, 50, null, 159, 95, 30, null, null, null, 0 ],
 	[ "Legendary Shipwright Tom, Tom's Workers", "DEX", [ "Fighter", "Tough" ], 4, 20, 4, 2, 99, null, 1059, 572, 100, null, null, null, 0 ],
 	[ "Cutty Flam, Tom's Workers", "STR", [ "Shooter", "Ambition" ], 3, 13, 6, 2, 70, null, 206, 299, 40, null, null, null, 0 ],
