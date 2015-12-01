@@ -163,6 +163,8 @@ window.defenses = [
     [ 'Nami'                                , 'Nami and Lola Fortnight'              , 'Expert', 808, 200 ],
     [ 'Absalom'                             , 'Nami and Lola Fortnight'              , 'Expert', 404, 200 ],
     [ 'Sanji'                               , 'Nami and Lola Fortnight'              , 'Expert', 17, 200 ],
+    [ 'Iceburg'                             , 'Tom\'s Workers Fortnight'             , 'Expert', 850, 150 ],
+    [ 'Tom'                                 , 'Tom\'s Workers Fortnight'             , 'Expert', 848, 200 ],
     /* * * * * Others * * * * */
     [ 'Thatch'                              , 'Whitebeard\'s island, 11th round'     , '', 448, 50 ],
     [ 'Namur'                               , 'Whitebeard\'s island, 12th round'     , '', 450, 500 ],

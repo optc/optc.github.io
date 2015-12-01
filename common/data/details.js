@@ -3707,12 +3707,12 @@ window.details = {
 	839: {
 		captain: "Boosts ATK of Striker characters by 2x",
 		specialName: "Demon Bamboo",
-		special: "Changes own orb into [INT], boosts own ATK by 2x for 1 turn, deals INT damage to one enemy"
+		special: "Changes own orb into [INT], boosts own ATK by 2x for 1 turn, deals 15x character's ATK in INT damage to one enemy"
 	},
 	840: {
 		captain: "Boosts ATK of Striker characters by 2.5x",
 		specialName: "Demon Bamboo",
-		special: "Changes own orb into [INT], boosts own ATK by 2x for 1 turn, deals INT damage to one enemy"
+		special: "Changes own orb into [INT], boosts own ATK by 2x for 1 turn, deals 15x character's ATK in INT damage to one enemy"
 	},
 	841: {
 		captain: "Recovers 3x character's RCV in HP at the end of each turns, deals 3x character's ATK in PSY damage to all enemies at the end of each turn",
