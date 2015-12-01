@@ -2415,13 +2415,13 @@ window.details = {
 	},
 	577: {
 		special: "Deals random typeless damage to all enemies, changes own orb into [STR]",
-		specialName: "Gum-Gum JET Gatling",
+		specialName: "Gum-Gum Jet Gatling",
 		specialNotes: "Estimated random damage range: between 70,000 HP and 200,000 HP.",
 		captain: "Boosts ATK by 4x following a chain of Good > Great > Perfect hits"
 	},
 	578: {
 		special: "Deals random typeless damage to all enemies, changes own orb into [STR]",
-		specialName: "Gum-Gum JET Gatling",
+		specialName: "Gum-Gum Jet Gatling",
 		specialNotes: "Estimated random damage range: between 70,000 HP and 200,000 HP.",
 		captain: "Boosts ATK by 4x following a chain of Good > Great > Perfect hits"
 	},
@@ -2563,12 +2563,12 @@ window.details = {
 	},
 	612: {
 		special: "Boosts ATK and RCV of all characters by 45 units for 1 turn, reduces damage received by 45% for 1 turn",
-		specialName: "\"45 Degree\" Delight",
+		specialName: "45-Degree Joy",
 		captain: "Boosts ATK of Slasher characters by 1.5x"
 	},
 	613: {
 		special: "Boosts ATK and RCV of all characters by 45 units for 1 turn, reduces damage received by 45% for 1 turn",
-		specialName: "\"45 Degree\" Delight",
+		specialName: "45-Degree Joy",
 		captain: "Boosts ATK, HP and RCV of Slasher characters by 1.5x"
 	},
 	614: {
@@ -3735,12 +3735,12 @@ window.details = {
 		special: "Deals STR damage to all enemies, boosts ATK of Shooter characters by 1.5x for 1 turn. If during that turn every unit scores a Perfect hit, boosts ATK of Shooter, Striker and Slasher characters by 1.5x in the following turn."
 	},
 	845: {
-		captain: "Boosts ATK of all characters by 1.5x starting from the 11th hit in the chain, by 2.5x starting from the 22nd hit",
+		captain: "Boosts ATK of all characters by 1.5x after the 11th hit in the chain, by 2.5x after the 22nd hit",
 		specialName: "Gust: Matasaburo",
 		special: "Changes own orb into [QCK], randomizes every other orb"
 	},
 	846: {
-		captain: "Boosts ATK of all characters by 1.5x starting from the 11th hit in the chain, by 2.5x starting from the 22nd hit, by 2.75x starting from the 30th hit, by 3.5x starting from the 40th hit",
+		captain: "Boosts ATK of all characters by 1.5x after the 11th hit in the chain, by 2.5x after the 22nd hit, by 2.75x after the 30th hit, by 3.5x after the 40th hit",
 		specialName: "Gust: Matasaburo",
 		special: "Changes own orb into [QCK], randomizes every other orb"
 	},
