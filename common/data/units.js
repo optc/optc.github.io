@@ -836,7 +836,7 @@ window.units = [
 	[ "Tyrant Bartholomew Kuma", "STR", [ "Knowledge", "Tough" ], 4, 30, 4, 2, 70, 1066998, 260, 170, 90, 1201, 623, 190, 1 ],
 	[ "Tyrant Bartholomew Kuma, Government's Human Weapon", "STR", [ "Knowledge", "Tough" ], 5, 50, 7, 3, 99, 5000000, 1159, 572, 190, 3090, 1435, 90, 1 ],
 	[ "Caesar Clown", "DEX", [ "Ambition", "Knowledge" ], 4, 18, 5, 3, 70, null, 124, 175, 78, null, null, null, 0 ],
-	[ "Master Caesar", "DEX", [ "Ambition", "Knowledge" ], 5, 30, 4, 4, 99, null, 984, 723, 183, null, null, null, 0 ],
+	[ "Master Caesar", "DEX", [ "Ambition", "Knowledge" ], 5, 30, 4, 4, 99, null, 941, 695, 177, null, null, null, 0 ],
 	[ "Vergo", "INT", [ "Striker", "Tough" ], 4, 18, 6, 3, 70, null, 282, 150, 19, 1515, 782, 89, 1 ],
 	[ "Vergo, Donquixote Pirates", "INT", [ "Striker", "Tough" ], 5, 30, 4, 4, 99, null, 1464, 730, 60, 3003, 1410, 140, 1 ],
 	[ "Monet", "PSY", [ "Freedom", "Knowledge" ], 4, 18, 4, 3, 70, null, 184, 116, 58, null, null, null, 0 ],
@@ -844,9 +844,9 @@ window.units = [
 	[ "Baby 5", "STR", [ "Shooter", "Striker" ], 4, 18, 5, 3, 70, null, 159, 176, 63, null, null, null, 0 ],
 	[ "Baby 5, Donquixote Pirates", "STR", [ "Shooter", "Striker" ], 5, 30, 6, 4, 99, null, 894, 718, 191, null, null, null, 0 ],
 	[ "Buffalo", "QCK", [ "Shooter", "Freedom" ], 4, 18, 9, 3, 70, null, 375, 252, 89, null, null, null, 0 ],
-	[ "Buffalo, Donquixote Pirates", "QCK", [ "Shooter", "Freedom" ], 5, 30, 10, 4, 99, null, 1050, 600, 173, 2770, 1096, 295, 0 ],
-	[ "Tom, Tom's Workers", "DEX", [ "Fighter", "Tough" ], 3, 12, 6, 1, 50, null, 159, 95, 30, null, null, null, 0 ],
+	[ "Buffalo, Donquixote Pirates", "QCK", [ "Shooter", "Freedom" ], 5, 30, 10, 4, 99, null, 1050, 600, 173, 2770, 1096, 295, 1 ],
+	[ "Tom, Tom's Workers", "DEX", [ "Fighter", "Tough" ], 3, 12, 6, 1, 50, null, 159, 95, 30, 1103, 614, 141, 1 ],
 	[ "Legendary Shipwright Tom, Tom's Workers", "DEX", [ "Fighter", "Tough" ], 4, 20, 4, 2, 99, null, 1059, 572, 100, 2207, 1029, 266, 0 ],
-	[ "Cutty Flam, Tom's Workers", "STR", [ "Shooter", "Ambition" ], 3, 13, 6, 2, 70, null, 206, 299, 40, null, null, null, 0 ],
+	[ "Cutty Flam, Tom's Workers", "STR", [ "Shooter", "Ambition" ], 3, 13, 6, 2, 70, null, 24, 138, 15, 924, 932, 139, 1 ],
 	[ "Iceburg, Tom's Workers", "QCK", [ "Striker", "Knowledge" ], 3, 13, 6, 2, 70, null, 269, 188, 69, 1098, 694, 203, 0 ]
 ];

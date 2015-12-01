@@ -795,6 +795,16 @@ window.specials = {
 					});
 				}
 	},
+	847: {
+		atk: function(p) { return 1.05; },
+		orb: function(p) { return p.orb == 2.0 ? 1.15 : (p.orb == 0.5 ? 20/23 : 1); },
+		type: "class"
+	},
+	848: {
+		atk: function(p) { return 1.05; },
+		orb: function(p) { return p.orb == 2.0 ? 1.15 : (p.orb == 0.5 ? 20/23 : 1); },
+		type: "class"
+	},
 	849: {
 		def: function() { return 0.5; }
 	}

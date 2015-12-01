@@ -3747,13 +3747,13 @@ window.details = {
 	847: {
 		captain: "Boosts ATK of all characters by 1.5x if HP is below 30% at the start of the turn",
 		specialName: "Sturdy Boat: Launch",
-		special: "Reduces Silence duration by 5 turns, boosts ATK of all characters by 5% for 3 turns, reduces damage received by 10% for 3 turns, amplifies the effect of orbs by 1.15x for 3 turns, recovers 2/3 of all characters' RCV in HP at the end of each turn",
+		special: "Reduces Silence duration by 5 turns, boosts ATK of all characters by 5% for 3 turns, reduces damage received by 10% for 3 turns, amplifies the effect of orbs by 1.15x for 3 turns, recovers 2/3 of all characters' RCV in HP at the end of each turn for 3 turns",
 		specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.15x more damage and opposite orbs will deal 1.15x less damage"
 	},
 	848: {
 		captain: "Boosts ATK of all characters by 2x if HP is below 30% at the start of the turn",
 		specialName: "Sturdy Boat: Launch",
-		special: "Reduces Silence duration by 5 turns, boosts ATK of all characters by 5% for 3 turns, reduces damage received by 10% for 3 turns, amplifies the effect of orbs by 1.15x for 3 turns, recovers 2/3 of all characters' RCV in HP at the end of each turn",
+		special: "Reduces Silence duration by 5 turns, boosts ATK of all characters by 5% for 3 turns, reduces damage received by 10% for 3 turns, amplifies the effect of orbs by 1.15x for 3 turns, recovers 2/3 of all characters' RCV in HP at the end of each turn for 3 turns",
 		specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.15x more damage and opposite orbs will deal 1.15x less damage"
 	},
 	849: {
