@@ -302,6 +302,7 @@ window.drops = {
             name: "Sky Island: Upper Yard - Ark Maxim",
             shortName: "Ark Maxim",
             thumb: 545,
+            global: true,
             "01": [ 94, 300, 301, 541 ],
             "02": [ 94, 301, 302, 464, 543 ],
             "03": [ 94, 302, 303, 542 ],
