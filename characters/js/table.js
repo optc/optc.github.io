@@ -220,8 +220,8 @@ angular.module('optc') .run(function($rootScope, $timeout) {
                 else if (c == 'Initial cooldown') temp = (d.constructor == Array ? d[0] : d);
                 else temp = 'Unknown';
             }
-            if (temp.constructor != String && !isNaN(temp) && !isFinite(temp)) temp = '&#8734;';
-            if (temp.constructor != String && isNaN(temp)) temp = 0;
+            if (temp && temp.constructor != String && !isNaN(temp) && !isFinite(temp)) temp = '&#8734;';
+            if (temp && temp.constructor != String && isNaN(temp)) temp = 0;
             result.splice(result.length-2, 0, temp);
         });
         return result;

@@ -3754,6 +3754,11 @@ window.details = {
 		specialName: "Sturdy Boat: Launch",
 		special: "Reduces Silence duration by 5 turns, grants various positive effects for 3 turns"
 	},
+	849: {
+		captain: "Boosts ATK of Shooter characters by 1.75x",
+		specialName: "Battle Franky 9",
+		special: "Deals 5 hits of random STR damage to random enemies, reduces the defense of all enemies by 50% for 2 turns"
+	},
 	850: {
 		captain: "Boosts ATK of Striker and Knowledge characters by 1.5x",
 		specialName: "First-class Assistant of the Passionate Worker",
