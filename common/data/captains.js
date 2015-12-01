@@ -1773,16 +1773,16 @@ window.captains = {
 		atk: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 2 : 1; }
 	},
 	845: {
-		hit: function(n) { return n >= 22 ? 2.5 : (n >= 11 ? 1.5 : 1); },
+		hit: function(n) { return n > 22 ? 2.5 : (n > 11 ? 1.5 : 1); },
 		warning: "Selected captain ability (Buffalo) has not been tested yet."
 	},
 	846: {
 		hit: function(n) {
-					return n >= 40 ? 3.5  :
-						   n >= 30 ? 2.75 :
-						   n >= 22 ? 2.5  :
-						   n >= 11 ? 1.5  :
-									 1;
+					return n > 40 ? 3.5  :
+						   n > 30 ? 2.75 :
+						   n > 22 ? 2.5  :
+						   n > 11 ? 1.5  :
+								    1    ;
 				},
 		warning: "Selected captain ability (Buffalo, Donquixote Pirates) has not been tested yet."
 	},

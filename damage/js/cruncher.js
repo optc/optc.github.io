@@ -276,7 +276,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
      */
     var computeDamageOfUnit = function(unit, unitAtk, hitModifier, currentHitCount) {
         var baseDamage = Math.floor(Math.max(1,unitAtk / unit.combo - currentDefense));
-        var result = { hits: currentHitCount, result: 0 }, bonusDamageBase = 0, combo = 0, lastHit = 0;
+        var result = { hits: currentHitCount, result: 0 }, bonusDamageBase = 0, combo = 0, lastAtk = 0, lastHit = 0;
         if (hitModifier == 'Below Good') {
             combo = unit.combo - 3;
             //return baseDamage * (unit.combo - 3);
@@ -304,18 +304,19 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 --mapEffect.shieldLeft;
                 continue;
             }
-            lastHit = unitAtk / unit.combo;
+            lastAtk = unitAtk;
             // apply hit-based captain effects if any
-            cptsWith.hitMultipliers.forEach(function(x) { lastHit *= x.hit(result.hits); });
+            cptsWith.hitMultipliers.forEach(function(x) { lastAtk *= x.hit(result.hits); });
             // apply defense
+            lastHit = lastAtk / unit.combo;
             lastHit = Math.floor(Math.max(1, lastHit - currentDefense));
             // add hit to current total
             result.result += lastHit;
         }
         // apply hit bonus
         if (bonusDamageBase > 0) {
-            if (lastHit > 1) result.result += Math.floor(unitAtk * 0.9 * bonusDamageBase);
-            else result.result += Math.max(0,Math.floor(unitAtk * (0.9 * bonusDamageBase + 1 / unit.combo)) - currentDefense);
+            if (lastHit > 1) result.result += Math.floor(lastAtk * 0.9 * bonusDamageBase);
+            else result.result += Math.max(0,Math.floor(lastAtk * (0.9 * bonusDamageBase + 1 / unit.combo)) - currentDefense);
         }
         return result;
     };
