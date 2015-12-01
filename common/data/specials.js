@@ -365,12 +365,12 @@ window.specials = {
 	612: {
 		atkStatic: function(p) { return 45; },
 		rcvStatic: function(p) { return 45; },
-        type: 'type'
+		type: "type"
 	},
 	613: {
 		atkStatic: function(p) { return 45; },
 		rcvStatic: function(p) { return 45; },
-        type: 'type'
+		type: "type"
 	},
 	614: {
 		def: function(p) { return 0.5; }
@@ -381,7 +381,7 @@ window.specials = {
 	},
 	622: {
 		rcvStatic: function(p) { return 100; },
-        type: 'type'
+		type: "type"
 	},
 	632: {
 		def: function(p) { return 0.5; }
@@ -708,7 +708,7 @@ window.specials = {
 	},
 	822: {
 		rcvStatic: function(p) { return 100; },
-        type: 'type'
+		type: "type"
 	},
 	825: {
 		atkStatic: function(p) { return 200; },
@@ -736,5 +736,66 @@ window.specials = {
 	},
 	836: {
 		orb: function(p) { return p.orb == 2.0 ? 1.75 : (p.orb == 0.5 ? 4/7 : 1); }
+	},
+	837: {
+		atk: function(p) { return p.unit.class.has("Ambition") ? 1.75 : 1; },
+		type: "class"
+	},
+	838: {
+		atk: function(p) { return p.unit.class.has("Ambition") ? 1.75 : 1; },
+		type: "class"
+	},
+	839: {
+		atk: function(p) { return p.slot == p.sourceSlot ? 2 : 1; },
+		type: "type"
+	},
+	840: {
+		atk: function(p) { return p.slot == p.sourceSlot ? 2 : 1; },
+		type: "type"
+	},
+	841: {
+		atk: function(p) { return 1.25; },
+		type: "condition",
+		warning: "Selected special (Monet) assumes that the enemy has been delayed."
+	},
+	842: {
+		atk: function(p) { return 1.25; },
+		type: "condition",
+		warning: "Selected special (Monet, Donquixote Pirates) assumes that the enemy has been delayed."
+	},
+	843: {
+		atk: function(p) {
+					if (window.specials[843].stage) return p.unit.class.has("Shooter") ? 1.5 : 1;
+					else return p.unit.class.has("Shooter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 1.5 : 1;
+				},
+		type: "class",
+		onActivation: function(p) {
+					window.specials[843].multiplier = !window.specials[843].multiplier;
+					p.scope.notify({
+						text: (window.specials[843].multiplier ?
+							'Boosting Shooters. To switch to the second multiplier, disable and re-enable this special' :
+							'Boosting Shooters, Slashers and Strikers. To switch to the first multiplier, disable and re-enable this special'),
+						name: '843warning'
+					});
+				}
+	},
+	844: {
+		atk: function(p) {
+					if (window.specials[843].stage) return p.unit.class.has("Shooter") ? 1.5 : 1;
+					else return p.unit.class.has("Shooter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 1.5 : 1;
+				},
+		type: "class",
+		onActivation: function(p) {
+					window.specials[843].multiplier = !window.specials[843].multiplier;
+					p.scope.notify({
+						text: (window.specials[843].multiplier ?
+							'Boosting Shooters. To switch to the second multiplier, disable and re-enable this special' :
+							'Boosting Shooters, Slashers and Strikers. To switch to the first multiplier, disable and re-enable this special'),
+						name: '843warning'
+					});
+				}
+	},
+	849: {
+		def: function() { return 0.5; }
 	}
 };

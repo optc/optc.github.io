@@ -5,11 +5,7 @@ var app = angular.module('optc');
 app.factory('$exceptionHandler', function($injector) {
     return function(exception, cause) {
         var temp = (exception.stack || exception);
-        var message = temp.split(/\n/)
-            .filter(function(x) {
-                return !/^\s*at/.test(x) || !/\/libs\/js\//.test(x);
-            }).join('\n');
-        $injector.get('$rootScope').caughtException = encodeURIComponent(message);
+        $injector.get('$rootScope').caughtException = encodeURIComponent(temp);
     };
 });
 

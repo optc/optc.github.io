@@ -3710,7 +3710,7 @@ window.details = {
 		special: "Changes own orb into [INT], boosts own ATK by 2x for 1 turn, deals INT damage to one enemy"
 	},
 	840: {
-		captain: "Boosts ATK of Stirker characters by 2.5x",
+		captain: "Boosts ATK of Striker characters by 2.5x",
 		specialName: "Demon Bamboo",
 		special: "Changes own orb into [INT], boosts own ATK by 2x for 1 turn, deals INT damage to one enemy"
 	},
@@ -3745,7 +3745,7 @@ window.details = {
 		special: "Changes own orb into [QCK], randomizes every other orb"
 	},
 	847: {
-		captain: "Boosts ATK of all characters by 2x when HP is low",
+		captain: "Boosts ATK of all characters by 1.5x when HP is low",
 		specialName: "Sturdy Boat: Launch",
 		special: "Reduces Silence duration by 5 turns, grants various positive effects for 3 turns"
 	},
@@ -3762,6 +3762,6 @@ window.details = {
 	850: {
 		captain: "Boosts ATK of Striker and Knowledge characters by 1.5x",
 		specialName: "First-class Assistant of the Passionate Worker",
-		special: "Changes the orbs in the right column into [DEX], [STR] and [QCK] slots, seals himself for 3 turns"
+		special: "Changes the orbs in the right column into [DEX], [STR] and [QCK] orbs, seals himself for 3 turns"
 	}
 };

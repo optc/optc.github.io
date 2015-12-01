@@ -1753,5 +1753,29 @@ window.captains = {
 	836: {
 		atk: function(p) { return p.unit.class.has("Knowledge") ? 2 : 1; },
 		hp: function(p) { return p.unit.class.has("Knowledge") ? 2 : 1; }
+	},
+	837: {
+		atk: function(p) { return p.unit.class.has("Ambition") ? 2 : 1; }
+	},
+	838: {
+		atk: function(p) { return p.unit.class.has("Ambition") ? 2.5 : 1; }
+	},
+	839: {
+		atk: function(p) { return p.unit.class.has("Striker") ? 2 : 1; }
+	},
+	840: {
+		atk: function(p) { return p.unit.class.has("Striker") ? 2.5 : 1; }
+	},
+	843: {
+		atk: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 1.5 : 1; }
+	},
+	844: {
+		atk: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 2 : 1; }
+	},
+	849: {
+		atk: function(p) { return p.unit.class.has("Shooter") ? 1.75 : 1; }
+	},
+	850: {
+		atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Knowledge") ? 1.5 : 1; }
 	}
 };
