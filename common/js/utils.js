@@ -144,7 +144,11 @@ utils.generateSearchParameters = function(query) {
         } else // matcher
             result.matchers[temp[2]] = new RegExp(temp[3],'i');
     });
-    result.query = result.query.length === 0 ? null : new RegExp(result.query.join(' '),'i');
+    if (result.query.length > 0) {
+        var temp = result.query.join(' ');
+        try { result.query = new RegExp(temp,'i'); }
+        catch (e) { result.query = new RegExp(temp.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, '\\$&'), 'i'); }
+    } else result.query = null;
     return result;
 };
 
