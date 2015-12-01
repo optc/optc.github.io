@@ -171,14 +171,14 @@ var tableFilter = function(settings, data, index) {
  *****************/
 
 $.fn.dataTable.ext.type.order['num-string-asc'] = function(x,y) {
-    if (x.constructor == String) x = (x == 'Unknown' ? 100 : 101);
-    if (y.constructor == String) y = (y == 'Unknown' ? 100 : 101);
+    if (x && x.constructor == String) x = (x == 'Unknown' ? 100 : 101);
+    if (y && y.constructor == String) y = (y == 'Unknown' ? 100 : 101);
     return x - y;
 };
 
 $.fn.dataTable.ext.type.order['num-string-desc'] = function(x,y) {
-    if (x.constructor == String) x = (x == 'Unknown' ? -100 : -101);
-    if (y.constructor == String) y = (y == 'Unknown' ? -100 : -101);
+    if (x && x.constructor == String) x = (x == 'Unknown' ? -100 : -101);
+    if (y && y.constructor == String) y = (y == 'Unknown' ? -100 : -101);
     return y - x;
 };
 
