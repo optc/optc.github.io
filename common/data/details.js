@@ -1827,13 +1827,13 @@ window.details = {
 	458: {
 		special: "Deals random PSY damage to all enemies, boosts ATK of all characters by 1.5x for 1 turn",
 		specialName: "Zen Shockwave",
-        specialNotes: "Estimated random damage range: between 30,000 HP and 150,000 HP.",
+		specialNotes: "Estimated random damage range: between 30,000 HP and 150,000 HP.",
 		captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of characters with cost 20 or less by 3x"
 	},
 	459: {
 		special: "Deals random PSY damage to all enemies, boosts ATK of all characters by 1.5x for 1 turn",
 		specialName: "Zen Shockwave",
-        specialNotes: "Estimated random damage range: between 30,000 HP and 150,000 HP.",
+		specialNotes: "Estimated random damage range: between 30,000 HP and 150,000 HP.",
 		captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of characters with cost 20 or less by 3x"
 	},
 	460: {
@@ -3692,5 +3692,71 @@ window.details = {
 		specialName: "Thrust Pad Cannon",
 		special: "Changes [RCV], [TND], empty, hindrance and bomb orbs into matching orbs, amplifies the effect of orbs by 1.75x for 1 turn",
 		specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.75x more damage and opposite orbs will deal 1.75x less damage"
+	},
+	837: {
+		captain: "Boosts ATK of Ambition characters by 2x",
+		specialName: "Gas Robe",
+		special: "Poisons all enemies, boosts ATK of Ambition characters by 1.75x for 2 turns",
+		specialNotes: "Poison deals 0.5x character's ATK in fixed damage at the end of each turn"
+	},
+	838: {
+		captain: "Boosts ATK of Ambition characters by 2.5x",
+		specialName: "Gas Robe",
+		special: "Poisons all enemies, boosts ATK of Ambition characters by 1.75x for 2 turns"
+	},
+	839: {
+		captain: "Boosts ATK of Striker characters by 2x",
+		specialName: "Demon Bamboo",
+		special: "Changes own orb into [INT], boosts own ATK by 2x for 1 turn, deals INT damage to one enemy"
+	},
+	840: {
+		captain: "Boosts ATK of Stirker characters by 2.5x",
+		specialName: "Demon Bamboo",
+		special: "Changes own orb into [INT], boosts own ATK by 2x for 1 turn, deals INT damage to one enemy"
+	},
+	841: {
+		captain: "Recovers 3x character's RCV in HP at the end of each turns, deals 3x character's ATK in PSY damage to all enemies at the end of each turn",
+		specialName: "Snow Rabbit",
+		special: "Delays all enemies for 1 turn, boosts ATK against delayed enemies by 1.25x for 2 turns"
+	},
+	842: {
+		captain: "Recovers 5x character's RCV in HP at the end of each turns, deals 5x character's ATK in PSY damage to all enemies at the end of each turn",
+		specialName: "Snow Rabbit",
+		special: "Delays all enemies for 1 turn, boosts ATK against delayed enemies by 1.25x for 2 turns"
+	},
+	843: {
+		captain: "Boosts ATK of Slasher, Striker and Shooter characters by 1.5x",
+		specialName: "Arms-Morphosis: Missile Girl",
+		special: "Deals STR damage to all enemies, boosts ATK of Shooter characters by 1.5x for 1 turn. If during that turn every unit scores a Perfect hit, boosts ATK of Shooter, Striker and Slasher characters by 1.5x in the following turn."
+	},
+	844: {
+		captain: "Boosts ATK of Slasher, Striker and Shooter characters by 2x",
+		specialName: "Arms-Morphosis: Missile Girl",
+		special: "Deals STR damage to all enemies, boosts ATK of Shooter characters by 1.5x for 1 turn. If during that turn every unit scores a Perfect hit, boosts ATK of Shooter, Striker and Slasher characters by 1.5x in the following turn."
+	},
+	845: {
+		captain: "Boosts ATK of all characters by 1.5x starting from the 11th hit in the chain, by 2.5x starting from the 22nd hit",
+		specialName: "Gust: Matasaburo",
+		special: "Changes own orb into [QCK], randomizes every other orb"
+	},
+	846: {
+		captain: "Boosts ATK of all characters by 1.5x starting from the 11th hit in the chain, by 2.5x starting from the 22nd hit, by 2.75x starting from the 30th hit, by 3.5x starting from the 40th hit",
+		specialName: "Gust: Matasaburo",
+		special: "Changes own orb into [QCK], randomizes every other orb"
+	},
+	847: {
+		captain: "Boosts ATK of all characters by 2x when HP is low",
+		specialName: "Sturdy Boat: Launch",
+		special: "Reduces Silence duration by 5 turns, grants various positive effects for 3 turns"
+	},
+	848: {
+		captain: "Boosts ATK of all characters by 2x when HP is low",
+		specialName: "Sturdy Boat: Launch",
+		special: "Reduces Silence duration by 5 turns, grants various positive effects for 3 turns"
+	},
+	850: {
+		captain: "Boosts ATK of Striker and Knowledge characters by 1.5x",
+		specialName: "First-class Assistant of the Passionate Worker",
+		special: "Changes the orbs in the right column into [DEX], [STR] and [QCK] slots, seals himself for 3 turns"
 	}
 };
