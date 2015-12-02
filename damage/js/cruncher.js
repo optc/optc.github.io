@@ -558,7 +558,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         // team specials
         // "sourceSlot": slot of the unit the special belongs to
         $scope.tdata.team.forEach(function(x,n) {
-            if (!team[n].unit) return;
+            if (!team[n].unit || n > 5) return;
             var id = team[n].unit.number + 1;
             if (x.special && specials.hasOwnProperty(id)) {
                 if (specials[id].hasOwnProperty('orb') && enabledSpecials[0] && enabledSpecials[0].permanent)
