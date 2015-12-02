@@ -400,7 +400,7 @@ window.specials = {
 	637: {
 		atk: function(p) { return 1.3; },
 		type: "condition",
-		warning: "Selected special (Hatchan, Takoyaki Stand) assumes that the enemy has a defense buff active."
+		warning: "Selected special (%name%) assumes that the enemy has a defense buff active."
 	},
 	642: {
 		orb: function(p) { return p.orb == 2.0 ? 1.75 : (p.orb == 0.5 ? 4/7 : 1); }
@@ -411,12 +411,12 @@ window.specials = {
 	644: {
 		atk: function(p) { return 1.2; },
 		type: "condition",
-		warning: "Selected special (Whitey Bay) assumes that the enemy has been delayed."
+		warning: "Selected special (%name%) assumes that the enemy has been delayed."
 	},
 	645: {
 		atk: function(p) { return 1.2; },
 		type: "condition",
-		warning: "Selected special (Ice Witch Whitey Bay) assumes that the enemy has been delayed."
+		warning: "Selected special (%name%) assumes that the enemy has been delayed."
 	},
 	648: {
 		orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); }
@@ -576,12 +576,12 @@ window.specials = {
 	740: {
 		atk: function(p) { return 1.3; },
 		type: "condition",
-		warning: "Selected special (Nero) assumes that the enemy has a defense buff active."
+		warning: "Selected special (%name%) assumes that the enemy has a defense buff active."
 	},
 	741: {
 		atk: function(p) { return 1.3; },
 		type: "condition",
-		warning: "Selected special (Nero, Cipher Pol No.9) assumes that the enemy has a defense buff active."
+		warning: "Selected special (%name%) assumes that the enemy has a defense buff active."
 	},
 	742: {
 		orb: function(p) { return p.orb == 2.0 ? 1.25 : (p.orb == 0.5 ? 4/5 : 1); }
@@ -614,7 +614,7 @@ window.specials = {
 	770: {
 		atk: function(p) { return 1.3; },
 		type: "condition",
-		warning: "Selected special (Dalmatian, Navy Headquarters Vice Admiral) assumes that the enemy has been delayed."
+		warning: "Selected special (%name%) assumes that the enemy has been delayed."
 	},
 	771: {
 		atk: function(p) { return p.unit.class.has("Knowledge") ? 1.75 : 1; },
@@ -721,7 +721,7 @@ window.specials = {
 	827: {
 		atk: function(p) { return 1.05; },
 		type: "condition",
-		warning: "Selected special (General Zombie Swift Shadow) assumes that the enemy has been poisoned."
+		warning: "Selected special (%name%) assumes that the enemy has been poisoned."
 	},
 	832: {
 		atk: function(p) { return p.unit.class.has("Freedom") ? 1.5 : 1; },
@@ -756,12 +756,12 @@ window.specials = {
 	841: {
 		atk: function(p) { return 1.25; },
 		type: "condition",
-		warning: "Selected special (Monet) assumes that the enemy has been delayed."
+		warning: "Selected special (%name%) assumes that the enemy has been delayed."
 	},
 	842: {
 		atk: function(p) { return 1.25; },
 		type: "condition",
-		warning: "Selected special (Monet, Donquixote Pirates) assumes that the enemy has been delayed."
+		warning: "Selected special (%name%) assumes that the enemy has been delayed."
 	},
 	843: {
 		atk: function(p) {
@@ -781,17 +781,17 @@ window.specials = {
 	},
 	844: {
 		atk: function(p) {
-					if (window.specials[843].stage) return p.unit.class.has("Shooter") ? 1.5 : 1;
+					if (window.specials[844].stage) return p.unit.class.has("Shooter") ? 1.5 : 1;
 					else return p.unit.class.has("Shooter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 1.5 : 1;
 				},
 		type: "class",
 		onActivation: function(p) {
-					window.specials[843].multiplier = !window.specials[843].multiplier;
+					window.specials[844].multiplier = !window.specials[844].multiplier;
 					p.scope.notify({
-						text: (window.specials[843].multiplier ?
+						text: (window.specials[844].multiplier ?
 							'Boosting Shooters. To switch to the second multiplier, disable and re-enable this special' :
 							'Boosting Shooters, Slashers and Strikers. To switch to the first multiplier, disable and re-enable this special'),
-						name: '843warning'
+						name: '844warning'
 					});
 				}
 	},

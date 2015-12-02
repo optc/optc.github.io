@@ -11,9 +11,15 @@ var loadValue = function(key,def) {
             if (x && x.unit !== null && x.unit !== undefined && x.unit.constructor == Number) {
                 x.unit = window.units[x.unit];
                 // captain warnings
-                if (n < 2 && x.unit && x.unit.number && captains[x.unit.number + 1] && captains[x.unit.number + 1].warning)
-                    noty({ text: captains[x.unit.number + 1].warning, type: 'warning', layout: 'topRight',
-                        theme: 'relax', timeout: 5000 });
+                if (n < 2 && x.unit && x.unit.number && captains[x.unit.number + 1] && captains[x.unit.number + 1].warning) {
+                    noty({
+                        text: captains[x.unit.number + 1].warning.replace(/%name%/g, window.units[x.unit.number].name),
+                        type: 'warning',
+                        layout: 'topRight',
+                        theme: 'relax',
+                        timeout: 5000
+                    });
+                }
             }
             return x;
         }).slice(0,6);

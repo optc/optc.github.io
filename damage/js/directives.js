@@ -703,8 +703,12 @@ directives.special = function($rootScope) {
                 if (enabled) element.addClass(unit.type);
                 type = (unit ? unit.type : null);
                 isSelected = enabled;
-                if (enabled && window.specials[unit.number+1].warning)
-                    scope.notify({ text: window.specials[unit.number+1].warning, type: 'warning' });
+                if (enabled && window.specials[unit.number+1].warning) {
+                    scope.notify({
+                        text: window.specials[unit.number+1].warning.replace(/%name%/g, window.units[unit.number].name),
+                        type: 'warning'
+                    });
+                }
             });
             scope.$watch('data.team[slot].unit',function(unit) {
                 removeType();

@@ -48,9 +48,15 @@ controllers.PickerCtrl = function($scope, $state, $stateParams) {
         $scope.resetSlot($stateParams.slot,true);
         updateRecent(unitNumber);
         // captain warning
-        if ($stateParams.slot < 2 && captains[unitNumber+1] && captains[unitNumber+1].warning)
-            noty({ text: captains[unitNumber+1].warning, type: 'warning', layout: 'topRight',
-                theme: 'relax', timeout: 5000 });
+        if ($stateParams.slot < 2 && captains[unitNumber+1] && captains[unitNumber+1].warning) {
+            noty({
+                text: captains[unitNumber+1].warning.replace(/\%name\%/g, window.units[unitNumber].name),
+                type: 'warning',
+                layout: 'topRight',
+                theme: 'relax',
+                timeout: 5000
+            });
+        }
         $state.go('^');
     };
 
