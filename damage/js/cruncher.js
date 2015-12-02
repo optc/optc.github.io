@@ -140,10 +140,12 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                     baseDamage[j].multipliers = baseDamage[j].multipliers
                         .filter(function(x) { return x[1] != 'chain' && x[1] != 'captain effect'; });
                 }
-                var newDamage = cptsWith.damageSorters[i].damageSorter(baseDamage);
-                if (newDamage === null) continue;
-                var newOverallDamage = optimizeDamage(newDamage,true);
-                if (newOverallDamage.overall > overallDamage.overall) overallDamage = newOverallDamage;
+                var newDamages = cptsWith.damageSorters[i].damageSorter(baseDamage);
+                if (newDamages === null) continue;
+                for (var k=0;k<newDamages.length;++k) {
+                    var newOverallDamage = optimizeDamage(newDamages[k],true);
+                    if (newOverallDamage.overall > overallDamage.overall) overallDamage = newOverallDamage;
+                }
             }
         }
         // return results

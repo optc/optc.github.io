@@ -29,13 +29,27 @@ window.CrunchUtils.okamaSort = function(array, data) {
         if (i == data.length) break;
     }
     if (temp.length != data.length) return null;
-    else return temp.concat(that);
+    else return [ temp.concat(that) ];
 };
 
 window.CrunchUtils.mihawkSort = function(array) {
-    var temp = array.map(function(x) { return [ x.damage * (x.unit.unit.class.has("Slasher") ? 2.75 : 1), x ]; });
+    var result = [ ];
+    // atk-based
+    var temp = array.map(function(x) {
+        var multiplier = x.multipliers.reduce(function(prev,next) { return prev * next[0]; },1);
+        return [ x.base * multiplier * (x.unit.unit.class.has("Slasher") ? 2.75 : 1), x ];
+    });
     temp.sort(function(x,y) { return x[0] - y[0]; });
-    return temp.map(function(x) { return x[1]; });
+    result.push(temp.map(function(x) { return x[1]; }));
+    // class-based
+    var nonSlashers = [ ], slashers = [ ];
+    array.forEach(function(x) {
+        if (x.unit.unit.class.has("Slasher")) slashers.push(x);
+        else nonSlashers.push(x);
+    });
+    result.push(nonSlashers.concat(slashers));
+    // return result
+    return result;
 };
 
 })();
