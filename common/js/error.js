@@ -5,7 +5,13 @@ var app = angular.module('optc');
 app.factory('$exceptionHandler', function($injector) {
     return function(exception, cause) {
         var temp = (exception.stack || exception);
-        $injector.get('$rootScope').caughtException = encodeURIComponent(temp);
+        var $rootScope = $injector.get('$rootScope');
+        var team = '';
+        if ($rootScope.data && $rootScope.data.team) {
+            team = $rootScope.data.team.map(function(x) { return (!x || !x.unit) ? null : x.unit.number; });
+            team = '\n\n' + JSON.stringify(team);
+        }
+        $rootScope.caughtException = encodeURIComponent(temp + team);
     };
 });
 

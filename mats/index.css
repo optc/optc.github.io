@@ -37,10 +37,6 @@ h2, h2 + div {
     padding: 5px;
 }
 
-#pool > .slot {
-    float: left;
-}
-
 #add {
     border: 1px dashed black;
     border-radius: 5px;
@@ -108,6 +104,10 @@ h2, h2 + div {
 
 #mat-table td, #mat-table th {
     width: 50%;
+}
+
+#mat-table td {
+    font-size: 0;
 }
 
 th:first-child, td:first-child {

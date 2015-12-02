@@ -3764,6 +3764,6 @@ window.details = {
 	850: {
 		captain: "Boosts ATK of Striker and Knowledge characters by 1.5x",
 		specialName: "First-class Assistant of the Passionate Worker",
-		special: "Changes the orbs in the right column into [DEX], [STR] and [QCK] orbs, seals himself for 3 turns"
+		special: "Changes the top right orb into [DEX], the middle right orb into [STR] and the bottom right orb into [QCK], seals himself for 3 turns"
 	}
 };

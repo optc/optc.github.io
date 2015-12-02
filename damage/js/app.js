@@ -6,9 +6,9 @@ var app = angular.module('optc', [ 'ui.router', 'ui.bootstrap', 'ngSanitize' ]);
  * SharedRootCtrl *
  ******************/
 
-var SharedRootCtrl = function($scope) {
+var SharedRootCtrl = function($scope, $rootScope) {
 
-    $scope.data = {
+    $rootScope.data = {
 
         team: [
             { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 } },

@@ -108,14 +108,15 @@ app.controller('MainCtrl',function($scope, $rootScope, $timeout) {
     };
 
     var onSortChange = function(value) {
-        var getId = function(id) {
-            return [ 'STR', 'DEX', 'QCK', 'PSY', 'INT' ].indexOf(window.units[id-1].type || 'INT') * 1000 + id;
-        };
+        var getTypeId = function(type) { return [ 'STR', 'DEX', 'QCK', 'PSY', 'INT' ].indexOf(type); };
         localStorage.setItem('sortMatsByColor',JSON.stringify(value));
         if (value) {
-            var temp = $rootScope.mats.map(function(x) { return [ getId(x.id), x ]; });
-            temp.sort(function(a,b) { return a[0] - b[0]; });
-            temp = temp.map(function(x) { return x[1]; });
+            var temp = $rootScope.mats.map(function(x) {
+                var unit = window.units[x.id - 1];
+                return { type: getTypeId(unit.type || 'INT'), stars: unit.stars, cost: unit.cost, data: x };
+            });
+            temp.sort(firstBy('type').thenBy('stars', -1).thenBy(function(x,y) { return (x.cost - y.cost) * (x.stars < 3 ? -1 : 1); }));
+            temp = temp.map(function(x) { return x.data; });
             $rootScope.mats = temp;
         } else
             $rootScope.mats.sort(function(a,b) { return a.id - b.id; });
