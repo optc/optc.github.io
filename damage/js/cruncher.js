@@ -656,7 +656,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         if (zombies[ids[other]].type == 'zombie') { // zombie
             var works = 1 + healAmount >= Math.floor($scope.numbers.hp * zombies[ids[other]].threshold);
             if (works) return true;
-            else return -(healAmount / zombies[ids[other]].threshold);
+            else return -Math.floor(healAmount / zombies[ids[other]].threshold);
         } else // reducer
             return Math.floor(healAmount / zombies[ids[other]].multiplier);
     };
