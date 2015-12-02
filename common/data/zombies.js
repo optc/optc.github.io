@@ -45,6 +45,18 @@ window.zombies = {
         multiplier: 0.2,
         threshold: 1.0
     },
+    262: { // v2 Coby
+        type: 'healer',
+        multiplier: 2
+    },
+    317: { // Kalifa
+        type: 'healer',
+        amount: 500,
+    },
+    318: { // Kalifa evolved
+        type: 'healer',
+        amount: 500,
+    },
     326: { // Wapol
         type: 'healer',
         multiplier: 10
@@ -68,6 +80,10 @@ window.zombies = {
     440: { // Valentine Vivi evolved
         type: 'healer',
         multiplier: 7
+    },
+    495: { // fodder
+        type: 'healer',
+        amount: 500
     },
     505: { // Pell
         type: 'zombie',
@@ -123,6 +139,22 @@ window.zombies = {
         type: 'healer',
         amount: 618
     },
+    663: { // Young Vivi
+        type: 'healer',
+        multiplier: 3
+    },
+    664: { // Young Vivi evolved
+        type: 'healer',
+        multiplier: 3
+    },
+    723: { // T-Bone
+        type: 'healer',
+        multiplier: 1.2
+    },
+    724: { // T-Bone evolved
+        type: 'healer',
+        multiplier: 1.5
+    },
     725: { // Log Vivi
         type: 'healer',
         amount: 1000
@@ -130,5 +162,29 @@ window.zombies = {
     726: { // Log Vivi evolved
         type: 'healer',
         amount: 2000
+    },
+    746: { // Shirahoshi
+        type: 'zombie',
+        threshold: 0.3
+    },
+    758: { // Fukuro
+        type: 'healer',
+        multiplier: 3
+    },
+    765: { // Halloween Chopper
+        type: 'healer',
+        multiplier: 2
+    },
+    808: { // Wedding Nami
+        type: 'healer',
+        multiplier: 2
+    },
+    841: { // Monet
+        type: 'healer',
+        multiplier: 5
+    },
+    842: { // Monet
+        type: 'healer',
+        multiplier: 5
     }
 };
