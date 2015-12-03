@@ -457,10 +457,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 var multipliers = $.extend([ ], x.multipliers), base = x.base;
                 specials.forEach(function(data) {
                     if (!data.s) { // non-static
-                        multipliers.push([
-                            data.f($.extend({ sourceSlot: data.sourceSlot },getParameters(x.position))),
-                            'special (' + shortName(team[data.sourceSlot].unit.name) + ')'
-                        ]);
+                        var text = (team[data.sourceSlot] ?  'special (' + shortName(team[data.sourceSlot].unit.name) + ')' : 'special');
+                        multipliers.push([ data.f($.extend({ sourceSlot: data.sourceSlot },getParameters(x.position))), text ]);
                     } else { // static
                         base += data.f($.extend({ sourceSlot: data.sourceSlot },getParameters(x.position)));
                     }
