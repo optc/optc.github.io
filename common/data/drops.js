@@ -640,8 +640,9 @@ window.drops = {
         },
 
         {
-            name: 'Super Spot-Billed Duck Squad',
+            name: 'Supersonic Duck Squadron!',
             thumb: 445,
+            global: true,
             Expert: [ 290, 293, 294, 295, 334, 379, 381, 382, 441, 442, 443, 444, -378, -368, -363, -251, -73, -15 ],
             Elite: [ 290, 293, 294, 295, 334, 379, 381, 382, 441, 442, 443, 444, -378, -368, -363, -251, -73, -15 ]
         },

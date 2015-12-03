@@ -88,7 +88,7 @@ window.ships = [
         thumb: 'ship_0007_c.png',
         description: 'Boosts ATK by 1.2x, recovers 350 HP at the end of the turn',
         atk: function(p) {
-            return p.boatLevel < 7 ? 0 : [ 1.1, 1.1, 1.1, 1.2 ][p.boatLevel - 7];
+            return p.boatLevel < 7 ? 1 : [ 1.1, 1.1, 1.1, 1.2 ][p.boatLevel - 7];
         }
     },
 
