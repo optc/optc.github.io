@@ -72,7 +72,9 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
     /* * * * * Events * * * * */
 
     $rootScope.$on('specialToggled', function(e, slot, enabled) {
-        var id = $scope.data.team[slot].unit.number + 1;
+        var unit = $scope.data.team[slot].unit;
+        if (!unit) return;
+        var id = unit.number + 1;
         if (!specials.hasOwnProperty(id)) return;
         if (enabled && specials[id].hasOwnProperty('onActivation')) {
             if (!initDone) initializeDataStructs();

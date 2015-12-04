@@ -8,7 +8,7 @@ app.factory('$exceptionHandler', function($injector) {
         var $rootScope = $injector.get('$rootScope');
         var team = '';
         if ($rootScope.data && $rootScope.data.team) {
-            team = $rootScope.data.team.map(function(x) { return (!x || !x.unit) ? null : x.unit.number; });
+            team = $rootScope.data.team.map(function(x) { return (!x || !x.unit) ? null : x.unit.number + 1; });
             team = '\n\n' + JSON.stringify(team);
         }
         $rootScope.caughtException = encodeURIComponent(temp + team);
