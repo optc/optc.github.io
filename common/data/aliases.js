@@ -71,6 +71,7 @@ window.aliases = {
     603: [ 'Enel the Lightning Human, 200 Million Volt Thunder God' ],
     604: [ 'Log Sanji' ],
     605: [ 'Log Sanji' ],
+    611: [ 'Pudding Pudding' ],
     612: [ 'Log Brook' ],
     613: [ 'Log Brook' ],
     650: [ 'Log Nami' ],
