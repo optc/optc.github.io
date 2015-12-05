@@ -144,8 +144,8 @@ app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, 
             scaleSteps: 10,
             scaleStepWidth: 10,
             sclaeStartValue: 0,
-            tooltipTemplate: '<%= (value * { HP: 4000, ATK: 1500, RCV: 550 }[label] / 100) + " " + label %>',
-            multiTooltipTemplate: '<%= (value * { HP: 4000, ATK: 1500, RCV: 550 }[label] / 100) %>'
+            tooltipTemplate: '<%= Math.round(value * { HP: 4000, ATK: 1500, RCV: 550 }[label] / 100) + " " + label %>',
+            multiTooltipTemplate: '<%= Math.round(value * { HP: 4000, ATK: 1500, RCV: 550 }[label] / 100) %>'
         }
     };
     $scope.$watch('compare',function(compare) {
