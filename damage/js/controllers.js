@@ -215,7 +215,7 @@ controllers.ShipCtrl = function($scope, $state) {
  * ResetCtrl *
  *************/
 
-controllers.ResetCtrl = function($scope, $state) {
+controllers.ResetCtrl = function($scope, $state, $storage) {
     $scope.resetStorage = function() {
         $storage.remove('team');
         for (var i=0;i<6;++i) $scope.resetSlot(i);
