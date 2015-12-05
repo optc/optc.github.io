@@ -12,14 +12,14 @@ var filters = { custom: [ ], classes: [ ], stars: [ ] };
 
 var app = angular.module('optc');
 
-app.controller('MainCtrl',function($scope, $rootScope, $state, $stateParams, $timeout) {
+app.controller('MainCtrl',function($scope, $rootScope, $state, $stateParams, $timeout, $storage) {
 
     var colors = Chart.defaults.global.colours;
     colors = colors.splice(2,0,colors.splice(1,1)[0]);
 
     if (!$rootScope.hasOwnProperty('nightMode')) {
-        $rootScope.nightMode = JSON.parse(localStorage.getItem('chars.night')) || false;
-        $rootScope.$watch('nightMode',function(night) { localStorage.setItem('chars.night', JSON.stringify(night)); });
+        $rootScope.nightMode = $storage.get('chars.night', false);
+        $rootScope.$watch('nightMode',function(night) { $storage.set('chars.night', night); });
     }
 
     $scope.query = $state.params.query;
@@ -96,7 +96,7 @@ app.controller('SidebarCtrl',function($scope, $rootScope, $stateParams, MATCHER_
 
 });
 
-app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, $timeout) {
+app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, $timeout, $storage) {
     // data
     var id = parseInt($stateParams.id, 10);
     $scope.id = id;
@@ -170,7 +170,7 @@ app.controller('ColumnsCtrl',function($scope, $rootScope, $state, $stateParams) 
         'CMB': false, 'ATK/cost': false, 'HP/cost': false, 'Minimum cooldown': false,
         'Initial cooldown': false };
 
-    var additionalColumns = JSON.parse(localStorage.getItem('charColumns')) || [ ];
+    var additionalColumns = $storage.get('charColumns', [ ]);
 
     additionalColumns.forEach(function(x) {
         if ($scope.columns.hasOwnProperty(x))
@@ -179,7 +179,7 @@ app.controller('ColumnsCtrl',function($scope, $rootScope, $state, $stateParams) 
 
     $scope.save = function() {
         var result = Object.keys($scope.columns).filter(function(x) { return $scope.columns[x]; });
-        localStorage.setItem('charColumns',JSON.stringify(result));
+        $storage.set('charColumns', result);
         window.location.reload();
     };
 

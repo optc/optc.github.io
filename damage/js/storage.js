@@ -1,11 +1,12 @@
 (function() {
 
 var doAlert = false;
+var storage = null;
 
 /* * * * * Storage methods * * * * */
 
 var loadValue = function(key,def) {
-    var value = JSON.parse(localStorage.getItem(key));
+    var value = storage.get(key, null);
     if (key == 'data' && value && value.team) {
         value.team = value.team.map(function(x,n) {
             if (x && x.unit !== null && x.unit !== undefined && x.unit.constructor == Number) {
@@ -37,21 +38,14 @@ var save = function(key,object) {
             return x;
         }).slice(0,6);
     }
-    localStorage.setItem(key,JSON.stringify(object));
+    storage.set(key, object);
 };
-
-/* * * * * Version control * * * * */
-
-var version = JSON.parse(localStorage.getItem('version')) || 11;
-
-if (version < 11) {
-    doAlert = true;
-    localStorage.setItem('version', JSON.stringify(11));
-}
 
 /* * * * * Controller * * * * */
 
-var StorageCtrl = function($scope) {
+var StorageCtrl = function($scope, $storage) {
+
+    storage = $storage;
 
     /* * * * * Initialization * * * * */
 
@@ -74,6 +68,14 @@ var StorageCtrl = function($scope) {
         $scope.data.ship = [ 1, 5 ];
 
     $scope.options.crunchInhibitor = 0;
+
+    /* * * * * Version control * * * * */
+
+    var version = $storage.get('version', 11);
+    if (version < 11) {
+        doAlert = true;
+        $storage.set('version', 11);
+    }
 
     /* * * * * Save on changes * * * * */
 

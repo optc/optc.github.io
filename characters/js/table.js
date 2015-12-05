@@ -1,192 +1,192 @@
 (function() {
 
-/**************
- * Table data *
- **************/
+angular.module('optc') .run(function($rootScope, $timeout, $storage) {
 
-var additionalColumns = JSON.parse(localStorage.getItem('charColumns')) || [ ];
+    /**************
+     * Table data *
+     **************/
 
-var padding = Math.floor(Math.log(window.units.length+2) / Math.log(10)) + 1;
-var table = null;
+    var additionalColumns = $storage.get('charColumns', [ ]);
 
-var addImage = function(data, type, row, meta) {
-    return '<img class="slot small" data-original="' + Utils.getThumbnailUrl(row[0]) + '"> ' +
-        '<a ui-sref="main.search.view({ id: ' + parseInt(row[0],10) + '})">' + data + '</a>';
-};
+    var padding = Math.floor(Math.log(window.units.length+2) / Math.log(10)) + 1;
+    var table = null;
 
-var fuse = new Fuse(window.units, { keys: [ 'name' ], id: 'number', threshold: 0.3, distance: 200 });
-var fused = null;
+    var addImage = function(data, type, row, meta) {
+        return '<img class="slot small" data-original="' + Utils.getThumbnailUrl(row[0]) + '"> ' +
+            '<a ui-sref="main.search.view({ id: ' + parseInt(row[0],10) + '})">' + data + '</a>';
+    };
 
-var tableData = null;
-var farmableLocations = null;
+    var fuse = new Fuse(window.units, { keys: [ 'name' ], id: 'number', threshold: 0.3, distance: 200 });
+    var fused = null;
 
-var log = JSON.parse(localStorage.getItem('characterLog')) || [ ];
-var characterLog = { };
-for (var i=0;i<log.length;++i) characterLog[log[i]] = true;
+    var tableData = null;
+    var farmableLocations = null;
 
-/*******************
- * Table functions *
- *******************/
+    var log = $storage.get('characterLog', [ ]);
+    var characterLog = { };
+    for (var i=0;i<log.length;++i) characterLog[log[i]] = true;
 
-var getTableColumns = function() {
-    var result = [
-        { title: 'ID' },
-        { title: 'Name', render: addImage },
-        { title: 'Type' },
-        { title: 'Class' },
-        { title: 'HP' },
-        { title: 'ATK' },
-        { title: 'RCV' },
-        { title: 'Cost' },
-        { title: 'Slots' },
-        { title: 'Stars' },
-        { title: 'CL', orderable: false }
-    ];
-    additionalColumns.forEach(function(x) {
-        var title = x
-            .replace(/Minimum cooldown/,'Min CD')
-            .replace(/Initial cooldown/,'Max CD');
-        result.splice(result.length-1, 0, { title: title, type: 'num-string' });
-    });
-    return result;
-};
+    /*******************
+     * Table functions *
+     *******************/
 
-/*******************
- * Table filtering *
- *******************/
+    var getTableColumns = function() {
+        var result = [
+            { title: 'ID' },
+            { title: 'Name', render: addImage },
+            { title: 'Type' },
+            { title: 'Class' },
+            { title: 'HP' },
+            { title: 'ATK' },
+            { title: 'RCV' },
+            { title: 'Cost' },
+            { title: 'Slots' },
+            { title: 'Stars' },
+            { title: 'CL', orderable: false }
+        ];
+        additionalColumns.forEach(function(x) {
+            var title = x
+                .replace(/Minimum cooldown/,'Min CD')
+                .replace(/Initial cooldown/,'Max CD');
+            result.splice(result.length-1, 0, { title: title, type: 'num-string' });
+        });
+        return result;
+    };
 
-var tableFilter = function(settings, data, index) {
-    if (!tableData.parameters) return true;
-    var id = parseInt(data[0],10), unit = window.units[id - 1];
-    var flags = window.flags[unit.number + 1] || { };
-    /* * * * * Query filters * * * * */
-    // filter by matchers
-    for (var matcher in tableData.parameters.matchers) {
-        if (!tableData.parameters.matchers[matcher].test(unit[matcher]))
-            return false;
-    }
-    // filter by ranges
-    for (var range in tableData.parameters.ranges) {
-        var stat;
-        if (range == 'id') stat = unit.number + 1;
-        else stat = unit.hasOwnProperty(range.toLowerCase()) ? unit[range.toLowerCase()] : unit['max' + range.toUpperCase()];
-        if (stat < tableData.parameters.ranges[range][0] || stat > tableData.parameters.ranges[range][1])
-            return false;
-    }
-    // filter by query
-    if (tableData.parameters.query) {
-        var name = Utils.getFullUnitName(id);
-        if (!tableData.fuzzy && !tableData.parameters.query.test(name)) return false;
-        if (tableData.fuzzy) {
-            if (fused === null) fused = fuse.search(tableData.parameters.query.source);
-            if (fused.indexOf(id - 1) == -1) return false;
+    /*******************
+     * Table filtering *
+     *******************/
+
+    var tableFilter = function(settings, data, index) {
+        if (!tableData.parameters) return true;
+        var id = parseInt(data[0],10), unit = window.units[id - 1];
+        var flags = window.flags[unit.number + 1] || { };
+        /* * * * * Query filters * * * * */
+        // filter by matchers
+        for (var matcher in tableData.parameters.matchers) {
+            if (!tableData.parameters.matchers[matcher].test(unit[matcher]))
+                return false;
         }
-    }
-    /* * * * * Sidebar filters * * * * */
-    if (!tableData.parameters.filters) return true;
-    var filters = tableData.parameters.filters;
-    // filter by type
-    if (filters.type && unit.type !== filters.type) return false;
-    // filter by class
-    if (filters.classes && filters.classes.length) {
-        var singleQuery = filters.classes.length == 1, singleClass = unit.class.length > 2;
-        if (!singleQuery && singleClass) return false;
-        else if (singleQuery && singleClass && filters.classes[0] != unit.class) return false;
-        else if (singleQuery && !singleClass && filters.classes.indexOf(unit.class[0]) == -1 &&
-                filters.classes.indexOf(unit.class[1]) == -1) return false;
-        else if (!singleQuery && !singleClass && (filters.classes.indexOf(unit.class[0]) == -1 ||
-                    filters.classes.indexOf(unit.class[1]) == -1)) return false;
-    }
-    // filter by stars
-    if (filters.stars && filters.stars.length && filters.stars.indexOf(unit.stars) == -1) return false;
-    // filter by drop
-    if (filters.drop) {
-        var isFarmable = CharUtils.isFarmable(id);
-        if (filters.drop == 'Farmable') {
-            if (id == 1 || unit.stars >= 3 && !isFarmable) return false;    
-            if (farmableLocations !== null) {
-                var farmable = CharUtils.checkFarmable(id, farmableLocations);
-                if (!farmable) return false;
-            }
-        } else if (filters.drop != 'Farmable') {
-            if (id != 1 && (unit.stars < 3 || isFarmable)) return false; 
-            if (filters.nonFarmable) {
-                // RR
-                if (filters.nonFarmable.rr && !flags.rr) return false;
-                if (filters.nonFarmable.rr === false && flags.rr) return false;
-                // limited RR
-                if (filters.nonFarmable.lrr && !flags.lrr) return false;
-                if (filters.nonFarmable.lrr === false && flags.lrr) return false;
-                // promo
-                if (filters.nonFarmable.promo && !flags.promo) return false;
-                if (filters.nonFarmable.promo === false && flags.promo) return false;
-                // special
-                if (filters.nonFarmable.special && !flags.special) return false;
-                if (filters.nonFarmable.special === false && flags.special) return false;
+        // filter by ranges
+        for (var range in tableData.parameters.ranges) {
+            var stat;
+            if (range == 'id') stat = unit.number + 1;
+            else stat = unit.hasOwnProperty(range.toLowerCase()) ? unit[range.toLowerCase()] : unit['max' + range.toUpperCase()];
+            if (stat < tableData.parameters.ranges[range][0] || stat > tableData.parameters.ranges[range][1])
+                return false;
+        }
+        // filter by query
+        if (tableData.parameters.query) {
+            var name = Utils.getFullUnitName(id);
+            if (!tableData.fuzzy && !tableData.parameters.query.test(name)) return false;
+            if (tableData.fuzzy) {
+                if (fused === null) fused = fuse.search(tableData.parameters.query.source);
+                if (fused.indexOf(id - 1) == -1) return false;
             }
         }
-    }
-    // exclusion filters
-    if (filters.noBase && (evolutions[id] && evolutions[id].evolution)) return false;
-    if (filters.noEvos && Utils.isEvolverBooster(unit)) return false;
-    if (filters.noFodder && Utils.isFodder(unit)) return false;
-    if (filters.noFortnights && flags.fnonly) return false;
-    if (filters.noRaids && flags.raid) return false;
-    if (filters.noSpecials && (flags.lrr || flags.promo || flags.special)) return false;
-    // filter by server
-    if (filters.server) {
-        if (filters.server == 'Global units' && !flags.global) return false;
-        if (filters.server !== 'Global units' && flags.global) return false;
-    }
-    // filter by active matchers
-    if (filters.custom.length > 0 && !window.details.hasOwnProperty(id)) return false;
-    for (var i=0;i<filters.custom.length;++i) {
-        var target = window.details[id][filters.custom[i].target], m = filters.custom[i];
-        if (!target) return false;
-        if (!(m.include && m.include.indexOf(id) != -1) && !m.matcher.test(target)) return false;
-    }
-    // filter by character log
-    if (filters.noLog && characterLog.hasOwnProperty(id)) return false;
-    if (filters.noMissing && !characterLog.hasOwnProperty(id)) return false;
-    // filter by orb controllers
-    if (tableData.regexes.ctrlFrom || tableData.regexes.ctrlTo) {
-        if (id == 515 || id == 516) return false; // exclude Heracles
-        var temp = window.details[id].special;
-        if (temp.constructor == Array) temp = temp.join(',');
-        temp = temp.replace(/\],/g,']');
-        if (tableData.regexes.ctrlFrom && tableData.regexes.ctrlFrom.some(function(x) { return !x.test(temp); }))
-            return false;
-        if (tableData.regexes.ctrlTo && tableData.regexes.ctrlTo.some(function(x) { return !x.test(temp); }))
-            return false;
-    }
-    // filter by class-filters
-    if (tableData.regexes.classCaptain && !tableData.regexes.classCaptain.test(window.details[id].captain)) return false;
-    if (tableData.regexes.classSpecial && !tableData.regexes.classSpecial.test(window.details[id].special)) return false;
-    // end
-    return true;
-};
+        /* * * * * Sidebar filters * * * * */
+        if (!tableData.parameters.filters) return true;
+        var filters = tableData.parameters.filters;
+        // filter by type
+        if (filters.type && unit.type !== filters.type) return false;
+        // filter by class
+        if (filters.classes && filters.classes.length) {
+            var singleQuery = filters.classes.length == 1, singleClass = unit.class.length > 2;
+            if (!singleQuery && singleClass) return false;
+            else if (singleQuery && singleClass && filters.classes[0] != unit.class) return false;
+            else if (singleQuery && !singleClass && filters.classes.indexOf(unit.class[0]) == -1 &&
+                    filters.classes.indexOf(unit.class[1]) == -1) return false;
+            else if (!singleQuery && !singleClass && (filters.classes.indexOf(unit.class[0]) == -1 ||
+                        filters.classes.indexOf(unit.class[1]) == -1)) return false;
+        }
+        // filter by stars
+        if (filters.stars && filters.stars.length && filters.stars.indexOf(unit.stars) == -1) return false;
+        // filter by drop
+        if (filters.drop) {
+            var isFarmable = CharUtils.isFarmable(id);
+            if (filters.drop == 'Farmable') {
+                if (id == 1 || unit.stars >= 3 && !isFarmable) return false;    
+                if (farmableLocations !== null) {
+                    var farmable = CharUtils.checkFarmable(id, farmableLocations);
+                    if (!farmable) return false;
+                }
+            } else if (filters.drop != 'Farmable') {
+                if (id != 1 && (unit.stars < 3 || isFarmable)) return false; 
+                if (filters.nonFarmable) {
+                    // RR
+                    if (filters.nonFarmable.rr && !flags.rr) return false;
+                    if (filters.nonFarmable.rr === false && flags.rr) return false;
+                    // limited RR
+                    if (filters.nonFarmable.lrr && !flags.lrr) return false;
+                    if (filters.nonFarmable.lrr === false && flags.lrr) return false;
+                    // promo
+                    if (filters.nonFarmable.promo && !flags.promo) return false;
+                    if (filters.nonFarmable.promo === false && flags.promo) return false;
+                    // special
+                    if (filters.nonFarmable.special && !flags.special) return false;
+                    if (filters.nonFarmable.special === false && flags.special) return false;
+                }
+            }
+        }
+        // exclusion filters
+        if (filters.noBase && (evolutions[id] && evolutions[id].evolution)) return false;
+        if (filters.noEvos && Utils.isEvolverBooster(unit)) return false;
+        if (filters.noFodder && Utils.isFodder(unit)) return false;
+        if (filters.noFortnights && flags.fnonly) return false;
+        if (filters.noRaids && flags.raid) return false;
+        if (filters.noSpecials && (flags.lrr || flags.promo || flags.special)) return false;
+        // filter by server
+        if (filters.server) {
+            if (filters.server == 'Global units' && !flags.global) return false;
+            if (filters.server !== 'Global units' && flags.global) return false;
+        }
+        // filter by active matchers
+        if (filters.custom.length > 0 && !window.details.hasOwnProperty(id)) return false;
+        for (var i=0;i<filters.custom.length;++i) {
+            var target = window.details[id][filters.custom[i].target], m = filters.custom[i];
+            if (!target) return false;
+            if (!(m.include && m.include.indexOf(id) != -1) && !m.matcher.test(target)) return false;
+        }
+        // filter by character log
+        if (filters.noLog && characterLog.hasOwnProperty(id)) return false;
+        if (filters.noMissing && !characterLog.hasOwnProperty(id)) return false;
+        // filter by orb controllers
+        if (tableData.regexes.ctrlFrom || tableData.regexes.ctrlTo) {
+            if (id == 515 || id == 516) return false; // exclude Heracles
+            var temp = window.details[id].special;
+            if (temp.constructor == Array) temp = temp.join(',');
+            temp = temp.replace(/\],/g,']');
+            if (tableData.regexes.ctrlFrom && tableData.regexes.ctrlFrom.some(function(x) { return !x.test(temp); }))
+                return false;
+            if (tableData.regexes.ctrlTo && tableData.regexes.ctrlTo.some(function(x) { return !x.test(temp); }))
+                return false;
+        }
+        // filter by class-filters
+        if (tableData.regexes.classCaptain && !tableData.regexes.classCaptain.test(window.details[id].captain)) return false;
+        if (tableData.regexes.classSpecial && !tableData.regexes.classSpecial.test(window.details[id].special)) return false;
+        // end
+        return true;
+    };
 
-/*****************
- * Table sorting *
- *****************/
+    /*****************
+     * Table sorting *
+     *****************/
 
-$.fn.dataTable.ext.type.order['num-string-asc'] = function(x,y) {
-    if (x && x.constructor == String) x = (x == 'Unknown' ? 100 : 101);
-    if (y && y.constructor == String) y = (y == 'Unknown' ? 100 : 101);
-    return x - y;
-};
+    $.fn.dataTable.ext.type.order['num-string-asc'] = function(x,y) {
+        if (x && x.constructor == String) x = (x == 'Unknown' ? 100 : 101);
+        if (y && y.constructor == String) y = (y == 'Unknown' ? 100 : 101);
+        return x - y;
+    };
 
-$.fn.dataTable.ext.type.order['num-string-desc'] = function(x,y) {
-    if (x && x.constructor == String) x = (x == 'Unknown' ? -100 : -101);
-    if (y && y.constructor == String) y = (y == 'Unknown' ? -100 : -101);
-    return y - x;
-};
+    $.fn.dataTable.ext.type.order['num-string-desc'] = function(x,y) {
+        if (x && x.constructor == String) x = (x == 'Unknown' ? -100 : -101);
+        if (y && y.constructor == String) y = (y == 'Unknown' ? -100 : -101);
+        return y - x;
+    };
 
-/***********************
- * Table configuration *
- ***********************/
-
-angular.module('optc') .run(function($rootScope, $timeout) {
+    /***********************
+     * Table configuration *
+     ***********************/
 
     var data = window.units.filter(function(x) { return x.name; }).map(function(x,n) {
         var result = [
@@ -232,7 +232,7 @@ angular.module('optc') .run(function($rootScope, $timeout) {
         additional: additionalColumns.length,
         data: data,
         parameters: null,
-        fuzzy: JSON.parse(localStorage.getItem('fuzzy')) || false,
+        fuzzy: $storage.get('fuzzy', false),
         regexes: { },
     };
 
@@ -269,7 +269,7 @@ angular.module('optc') .run(function($rootScope, $timeout) {
                 temp.push(parseInt(key,10));
         }
         temp.sort(function(a,b) { return a-b; });
-        localStorage.setItem('characterLog',JSON.stringify(temp));
+        $storage.set('characterLog', temp);
         $rootScope.showLogFilters = temp.length > 0;
     };
 

@@ -4,7 +4,7 @@
  * MainCtrl *
  ************/
 
-var MainCtrl = function($scope, $controller, $filter) {
+var MainCtrl = function($scope, $controller, $filter, $storage) {
 
     /* * * * * Bootstrapping * * * * */
     
@@ -12,13 +12,13 @@ var MainCtrl = function($scope, $controller, $filter) {
 
     /* * * * * Theme * * * * */
 
-    var edgyMode = JSON.parse(localStorage.getItem('edgy')) || false;
+    var edgyMode = $storage.get('edgy', false);
     $('#edgy')[0].disabled = !edgyMode;
 
     $(document.body).dblclick(function(e) {
         if (e.target.id != 'main' && e.target.nodeName != 'BODY') return;
         edgyMode = !edgyMode;
-        localStorage.setItem('edgy',JSON.stringify(edgyMode));
+        $storage.set('edgy', edgyMode);
         $('#edgy')[0].disabled = !edgyMode;
     });
 

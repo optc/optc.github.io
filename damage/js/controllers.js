@@ -29,13 +29,13 @@ controllers.DefenseCtrl = function($scope, $state, $stateParams) {
  * PickerCtrl *
  **************/
 
-controllers.PickerCtrl = function($scope, $state, $stateParams) { 
+controllers.PickerCtrl = function($scope, $state, $stateParams, $storage) { 
 
     /* * * * * Scope variables * * * * */
 
     $scope.units = [ ];
     $scope.query = '';
-    $scope.recents = JSON.parse(localStorage.getItem('recentUnits')) || [ ];
+    $scope.recents = $storage.get('recentUnits', [ ]);
 
     $scope.$watch('query',function() { populateList(); },true);
 
@@ -100,7 +100,7 @@ controllers.PickerCtrl = function($scope, $state, $stateParams) {
         if (n < 0) recentUnits.unshift(unitNumber);
         else recentUnits = recentUnits.splice(n,1).concat(recentUnits);
         recentUnits = recentUnits.slice(0,16);
-        localStorage.setItem('recentUnits',JSON.stringify(recentUnits));
+        $storage.set('recentUnits', recentUnits);
     };
 
 };
@@ -109,7 +109,7 @@ controllers.PickerCtrl = function($scope, $state, $stateParams) {
  * SlotsCtrl *
  *************/
 
-controllers.SlotsCtrl = function($scope, $state, $stateParams) {
+controllers.SlotsCtrl = function($scope, $state, $stateParams, $storage) {
 
     /* * * * * Functions * * * * */
 
@@ -124,8 +124,8 @@ controllers.SlotsCtrl = function($scope, $state, $stateParams) {
 
     /* * * * * Local variables * * * * */
 
-    var lastSlotName = JSON.parse(localStorage.getItem('lastSlotName')) || '';
-    var slots = JSON.parse(localStorage.getItem('slots')) || { };
+    var lastSlotName = $storage.get('lastSlotName', '');
+    var slots = $storage.get('slots', { });
 
     /* * * * * Scope variables * * * * */
 
@@ -151,13 +151,13 @@ controllers.SlotsCtrl = function($scope, $state, $stateParams) {
             });
             if (slot.hasOwnProperty('defense')) $scope.data.defense = parseInt(slot.defense, 10) || 0;
             if (slot.hasOwnProperty('ship')) $scope.data.ship = slot.ship;
-            localStorage.setItem('lastSlotName',JSON.stringify(slot.name));
+            $storage.set('lastSlotName', slot.name);
             $state.go('^');
         } else if (e.which == 2 || (e.which == 1 && (e.ctrlKey || e.metaKey))) {
             var name = slot.name.toLowerCase();
             delete slots[name];
             delete $scope.slots[name];
-            localStorage.setItem('slots',JSON.stringify(slots));
+            $storage.setItem('slots',JSON.stringify(slots));
         }
     };
 
@@ -170,8 +170,8 @@ controllers.SlotsCtrl = function($scope, $state, $stateParams) {
         if ($scope.saveShip) result.ship = $scope.data.ship;
         if ($scope.saveDefense) result.defense = parseInt($scope.data.defense, 10) || 0;
         slots[$scope.lastSlot.toLowerCase()] = result;
-        localStorage.setItem('slots',JSON.stringify(slots));
-        localStorage.setItem('lastSlotName',JSON.stringify($scope.lastSlot));
+        $storage.set('slots', slots);
+        $storage.set('lastSlotName', $scope.lastSlot);
         $state.go('^');
     };
 
@@ -217,7 +217,7 @@ controllers.ShipCtrl = function($scope, $state) {
 
 controllers.ResetCtrl = function($scope, $state) {
     $scope.resetStorage = function() {
-        localStorage.removeItem('team');
+        $storage.remove('team');
         for (var i=0;i<6;++i) $scope.resetSlot(i);
         $state.go('^');
     };

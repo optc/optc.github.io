@@ -83,7 +83,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
  * Controllers *
  ***************/
 
-app.controller('MainCtrl',function($scope, $rootScope, $timeout) {
+app.controller('MainCtrl',function($scope, $rootScope, $timeout, $storage) {
 
     var onPoolChange = function(pool) {
         var temp = JSON.parse(JSON.stringify(pool));
@@ -95,7 +95,7 @@ app.controller('MainCtrl',function($scope, $rootScope, $timeout) {
             return x;
         });
         temp.sort(function(a,b) { return a.to - b.to; });
-        localStorage.setItem('evoPool',JSON.stringify(temp));
+        $storage.set('evoPool', temp);
         updateRequired();
     };
 
@@ -103,13 +103,13 @@ app.controller('MainCtrl',function($scope, $rootScope, $timeout) {
         var temp = JSON.parse(JSON.stringify(mats));
         temp = temp.map(function(x) { return { id: x.id, amount: x.amount }; });
         temp.sort(function(a,b) { return a.id - b.id; });
-        localStorage.setItem('matPool',JSON.stringify(temp));
+        $storage.set('matPool', temp);
         updateRequired();
     };
 
     var onSortChange = function(value) {
         var getTypeId = function(type) { return [ 'STR', 'DEX', 'QCK', 'PSY', 'INT' ].indexOf(type); };
-        localStorage.setItem('sortMatsByColor',JSON.stringify(value));
+        $storage.set('sortMatsByColor', value);
         if (value) {
             var temp = $rootScope.mats.map(function(x) {
                 var unit = window.units[x.id - 1];
@@ -166,39 +166,39 @@ app.controller('MainCtrl',function($scope, $rootScope, $timeout) {
     };
 
     if (!$rootScope.pool) {
-        var temp = JSON.parse(localStorage.getItem('evoPool')) || [ ];
+        var temp = $storage.get('evoPool', [ ]);
         $rootScope.pool = updateStorageFormat(temp);
         $rootScope.$watch('pool',onPoolChange,true);
     }
 
     if (!$rootScope.mats) {
-        $rootScope.mats = JSON.parse(localStorage.getItem('matPool')) || [ ];
+        $rootScope.mats = $storage.get('matPool', [ ]);
         $rootScope.$watch('mats',onMatsChange,true);
     }
 
     if (!$scope.sortMatsByColor) {
-        $scope.sortMatsByColor = JSON.parse(localStorage.getItem('sortMatsByColor')) || false;
+        $scope.sortMatsByColor = $storage.get('sortMatsByColor', false);
         $scope.$watch('sortMatsByColor',onSortChange);
     }
 
     $rootScope.matTypes = [ 'Robber Penguins', 'Pirate Penguins', 'Hermit Crabs', 'Armored Crabs',
         'Dragons', 'Sea Horses', 'Plated Lobsters', 'Others' ];
 
-    if (!localStorage.hasOwnProperty('matsCollapsed'))
-        localStorage.setItem('matsCollapsed',JSON.stringify([ false, false ]));
-    $rootScope.collapsed = JSON.parse(localStorage.getItem('matsCollapsed')) || [ false, false ];
+    if (!$storage.has('matsCollapsed'))
+        $storage.set('matsCollapsed', [ false, false ]);
+    $rootScope.collapsed = $storage.get('matsCollapsed', [ false, false ]);
 
 
 
 });
 
-app.controller('PickerCtrl',function($scope, $rootScope, $state, $stateParams, $timeout) {
+app.controller('PickerCtrl',function($scope, $rootScope, $state, $stateParams, $timeout, $storage) {
 
     /* * * * * Scope variables * * * * */
 
     $scope.units = [ ];
     $scope.query = '';
-    $scope.recents = JSON.parse(localStorage.getItem('recentUnits')) || [ ];
+    $scope.recents = $storage.get('recentUnits', [ ]);
 
     $scope.isMats = $stateParams.mats;
 
@@ -343,7 +343,7 @@ app.directive('changeOnClick',function() {
     };
 });
 
-app.directive('collapse',function() {
+app.directive('collapse',function($storage) {
     return {
         restrict: 'E',
         replace: true,
@@ -356,7 +356,7 @@ app.directive('collapse',function() {
                 scope.className = value ? 'fa-chevron-up' : 'fa-chevron-down';
                 if (value) element.parent().next().addClass('collapsed');
                 else element.parent().next().removeClass('collapsed');
-                localStorage.setItem('matsCollapsed',JSON.stringify(scope.collapsed));
+                $storage.set('matsCollapsed', scope.collapsed);
             });
         }
     };
@@ -399,7 +399,7 @@ app.directive('importButton',function() {
     };
 });
 
-app.directive('exportButton',function() {
+app.directive('exportButton',function($storage) {
     return {
         restrict: 'E',
         replace: true,
@@ -407,8 +407,8 @@ app.directive('exportButton',function() {
         link: function(scope, element, attrs) {
             scope.export = function() {
                 var result = {
-                    evoPool: JSON.parse(localStorage.getItem('evoPool')) || [ ],
-                    matPool: JSON.parse(localStorage.getItem('matPool')) || [ ]
+                    evoPool: $storage.get('evoPool', [ ]),
+                    matPool: $storage.get('matPool', [ ])
                 };
                 var blob = new Blob([ JSON.stringify(result) ], { type: 'application/json' });
                 var a = document.createElement('a');

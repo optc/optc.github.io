@@ -76,13 +76,13 @@ controllers.MainCtrl = function($scope, $rootScope, $state, $stateParams, $contr
  * PickerCtrl *
  **************/
 
-controllers.PickerCtrl = function($scope, $state, $stateParams) { 
+controllers.PickerCtrl = function($scope, $state, $stateParams, $storage) { 
 
     /* * * * * Scope variables * * * * */
 
     $scope.units = [ ];
     $scope.query = '';
-    $scope.recents = JSON.parse(localStorage.getItem('slotRecentUnits')) || [ ];
+    $scope.recents = $storage.get('slotRecentUnits', [ ]);
 
     $scope.isMats = $stateParams.mats;
 
@@ -120,7 +120,7 @@ controllers.PickerCtrl = function($scope, $state, $stateParams) {
         if (n < 0) recentUnits.unshift(unitNumber);
         else recentUnits = recentUnits.splice(n,1).concat(recentUnits);
         recentUnits = recentUnits.slice(0,16);
-        localStorage.setItem('slotRecentUnits',JSON.stringify(recentUnits));
+        $storage.set('slotRecentUnits', recentUnits);
     };
 
 };
@@ -206,12 +206,12 @@ controllers.ImportCtrl = function($scope, $rootScope, $state, $stateParams) {
  * SlotsCtrl *
  *************/
 
-controllers.SlotsCtrl = function($scope, $rootScope, $state, $stateParams) {
+controllers.SlotsCtrl = function($scope, $rootScope, $state, $stateParams, $storage) {
 
     /* * * * * Local variables * * * * */
 
-    var lastSavedName = JSON.parse(localStorage.getItem('slots.lastName')) || '';
-    var data = JSON.parse(localStorage.getItem('slots.data')) || { };
+    var lastSavedName = $storage.get('slots.lastName', '');
+    var data = $storage.get('slots.data', { });
 
     /* * * * * Local functions * * * * */
 
@@ -241,13 +241,13 @@ controllers.SlotsCtrl = function($scope, $rootScope, $state, $stateParams) {
     $scope.teamClick = function(e,slot) {
         if (e.which == 1 && !e.ctrlKey && !e.metaKey) {
             $rootScope.team = slot.team;
-            localStorage.setItem('slots.lastName',JSON.stringify(slot.name));
+            $storage.set('slots.lastName', slot.name);
             $state.go('^');
         } else if (e.which == 2 || (e.which == 1 && (e.ctrlKey || e.metaKey))) {
             var name = slot.name.toLowerCase();
             delete data[name];
             delete $scope.data[name];
-            localStorage.setItem('slots.data',JSON.stringify(data));
+            $storage.set('slots.data', data);
         }
     };
 
@@ -255,8 +255,8 @@ controllers.SlotsCtrl = function($scope, $rootScope, $state, $stateParams) {
         $scope.$broadcast('$validate');
         var result = { name: $scope.lastSlot, team: $scope.team };
         data[$scope.lastSlot.toLowerCase()] = result;
-        localStorage.setItem('slots.data',JSON.stringify(data));
-        localStorage.setItem('slots.lastName',JSON.stringify($scope.lastSlot));
+        $storage.set('slots.data', data);
+        $storage.set('slots.lastName', $scope.lastSlot);
         $state.go('^');
     };
 
@@ -266,14 +266,14 @@ controllers.SlotsCtrl = function($scope, $rootScope, $state, $stateParams) {
  * StorageCtrl *
  ***************/
 
-controllers.StorageCtrl = function($scope, $rootScope) {
+controllers.StorageCtrl = function($scope, $rootScope, $storage) {
 
-    var team = JSON.parse(localStorage.getItem('slotTeam')) || null;
+    var team = $storage.get('slotTeam', null);
     if (team === null) team = $rootScope.team;
     else $rootScope.team = team;
 
     var save = function() {
-        localStorage.setItem('slotTeam', JSON.stringify($rootScope.team));
+        $storage.set('slotTeam', $rootScope.team);
     };
 
     $rootScope.$watch('team',function(team) {

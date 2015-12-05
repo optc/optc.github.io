@@ -9,14 +9,14 @@ var app = angular.module('optc');
  * Directives *
  **************/
 
-directives.characterTable = function($rootScope, $timeout, $compile) {
+directives.characterTable = function($rootScope, $timeout, $compile, $storage) {
     return {
         restrict: 'E',
         replace: true,
         template: '<table id="mainTable" class="table table-striped-column panel panel-default"></table>',
         link: function(scope, element, attrs) {
             var table = element.dataTable({
-                iDisplayLength: JSON.parse(localStorage.getItem('unitsPerPage')) || 10,
+                iDisplayLength: $storage.get('unitsPerPage', 10),
                 stateSave: true,
                 data: scope.table.data,
                 columns: scope.table.columns,
@@ -77,7 +77,7 @@ directives.characterTable = function($rootScope, $timeout, $compile) {
                 var checked = $(this).is(':checked');
                 if (checked == scope.table.fuzzy) return;
                 scope.table.fuzzy = checked;
-                localStorage.setItem('fuzzy', JSON.stringify(scope.table.fuzzy));
+                $storage.set('fuzzy', scope.table.fuzzy);
                 scope.table.refresh();
             });
             fuzzyToggle.insertBefore($('.dataTables_length'));

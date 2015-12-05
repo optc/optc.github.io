@@ -34,32 +34,15 @@ app
     })
     .constant('MATCHER_IDS', reverseMatcherMap);
 
-
-/*****************
- * Notifications *
- *****************/
-
-var version = JSON.parse(localStorage.getItem('charVersion')) || 4;
-
-if (version < 4) {
-    localStorage.setItem('charVersion', JSON.stringify(4));
-    setTimeout(function() {
-        noty({
-            text: 'Some stuff changed. Refreshing the page and/or clearing your browser\'s cache may be a smart idea.',
-            timeout: 10000,
-            type: 'error',
-            layout: 'topRight',
-            theme: 'relax'
-        });
-    },500);
-}
-
 /**************
  * Versioning *
  **************/
 
 app
-    .run(function($http) {
+    .run(function($http, $storage) {
+
+        /* * * * * Check version * * * * */
+
         $http.get('../common/data/version.js?ts=' + Date.now())
             .then(function(response) {
                 var version = parseInt(response.data.match(/=\s*(\d+)/)[1],10);
@@ -72,6 +55,24 @@ app
                     theme: 'relax'
                 });
             });
+
+        /* * * * * Alerts * * * * */
+
+        var version = $storage.get('charVersion', 4);
+
+        if (version < 4) {
+            $storage.set('charVersion', 4);
+            setTimeout(function() {
+                noty({
+                    text: 'Some stuff changed. Refreshing the page and/or clearing your browser\'s cache may be a smart idea.',
+                    timeout: 10000,
+                    type: 'error',
+                    layout: 'topRight',
+                    theme: 'relax'
+                });
+            },500);
+        }
+
     });
 
 })();
