@@ -75,38 +75,44 @@
 
                     <h3 class="page-header">Stats</h3>
 
-                    <div class="panel panel-default">
-                        <table class="table table-striped">
-                            <thead>
-                                <tr>
-                                    <th>Level</th>
-                                    <th>HP</th>
-                                    <th>ATK</th>
-                                    <th>RCV</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td ng-if="!compare">{{unit.minHP | number}}</td>
-                                    <td ng-if="compare" comparison="positive">{{unit.minHP - compare.minHP | number}}</td>
-                                    <td ng-if="!compare">{{unit.minATK | number}}</td>
-                                    <td ng-if="compare" comparison="positive">{{unit.minATK - compare.minATK | number}}</td>
-                                    <td ng-if="!compare">{{unit.minRCV | number}}</td>
-                                    <td ng-if="compare" comparison="positive">{{unit.minRCV - compare.minRCV | number}}</td>
-                                </tr>
-                                <tr>
-                                    <td>{{unit.maxLevel}}</td>
-                                    <td ng-if="!compare">{{unit.maxHP | number}}</td>
-                                    <td ng-if="compare" comparison="positive">{{unit.maxHP - compare.maxHP | number}}</td>
-                                    <td ng-if="!compare">{{unit.maxATK | number}}</td>
-                                    <td ng-if="compare" comparison="positive">{{unit.maxATK - compare.maxATK | number}}</td>
-                                    <td ng-if="!compare">{{unit.maxRCV | number}}</td>
-                                    <td ng-if="compare" comparison="positive">{{unit.maxRCV - compare.maxRCV | number}}</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                    <uib-tabset>
+                        <uib-tab heading="Stats">
+                            <table class="table table-striped table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Level</th>
+                                        <th>HP</th>
+                                        <th>ATK</th>
+                                        <th>RCV</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td ng-if="!compare">{{unit.minHP | number}}</td>
+                                        <td ng-if="compare" comparison="positive">{{unit.minHP - compare.minHP | number}}</td>
+                                        <td ng-if="!compare">{{unit.minATK | number}}</td>
+                                        <td ng-if="compare" comparison="positive">{{unit.minATK - compare.minATK | number}}</td>
+                                        <td ng-if="!compare">{{unit.minRCV | number}}</td>
+                                        <td ng-if="compare" comparison="positive">{{unit.minRCV - compare.minRCV | number}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>{{unit.maxLevel}}</td>
+                                        <td ng-if="!compare">{{unit.maxHP | number}}</td>
+                                        <td ng-if="compare" comparison="positive">{{unit.maxHP - compare.maxHP | number}}</td>
+                                        <td ng-if="!compare">{{unit.maxATK | number}}</td>
+                                        <td ng-if="compare" comparison="positive">{{unit.maxATK - compare.maxATK | number}}</td>
+                                        <td ng-if="!compare">{{unit.maxRCV | number}}</td>
+                                        <td ng-if="compare" comparison="positive">{{unit.maxRCV - compare.maxRCV | number}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </uib-tab>
+                        <uib-tab heading="Chart" ng-if="!unit.incomplete">
+                            <canvas id="radar-chart" class="chart chart-radar" chart-data="radar.data"
+                                chart-labels="radar.labels" chart-options="radar.options"></canvas>
+                        </uib-tab>
+                    </uib-tabset>
 
                     <!-- Abilities (non-comparison) -->
 

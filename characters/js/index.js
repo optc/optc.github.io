@@ -2,7 +2,7 @@
 
 (function() {
 
-var app = angular.module('optc', [ 'ui.router', 'ui.bootstrap', 'ngSanitize' ]);
+var app = angular.module('optc', [ 'ui.router', 'ui.bootstrap', 'ngSanitize', 'chart.js' ]);
 
 Utils.parseUnits(false);
 

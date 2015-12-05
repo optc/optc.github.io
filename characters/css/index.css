@@ -789,6 +789,14 @@ unit > a:hover, .clickable:hover {
     display: none;
 }
 
+.tab-pane + .tab-pane {
+    padding-top: 20px;
+}
+
+.chart-container {
+    height: 320px;
+}
+
 /*******************
  * SLOT THUMBNAILS *
  *******************/

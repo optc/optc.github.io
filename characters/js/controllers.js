@@ -130,6 +130,35 @@ app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, 
     };
     $scope.getPrevious = function() { return $stateParams.previous.concat($scope.id); };
     $scope.isSpecialArray = ($scope.details && $scope.details.special && $scope.details.special.constructor == Array);
+    // radar
+    if ($scope.unit.incomplete) return;
+    $scope.radar = {
+        labels: [ 'HP', 'ATK', 'RCV' ],
+        data: [ [
+            $scope.unit.maxHP / 4000 * 100,
+            $scope.unit.maxATK / 1500 * 100,
+            Math.max(0, $scope.unit.maxRCV / 550 * 100)
+        ] ],
+        options: {
+            scaleOverride: true,
+            scaleSteps: 10,
+            scaleStepWidth: 10,
+            sclaeStartValue: 0,
+            tooltipTemplate: '<%= (value * { HP: 4000, ATK: 1500, RCV: 550 }[label] / 100) + " " + label %>',
+            multiTooltipTemplate: '<%= (value * { HP: 4000, ATK: 1500, RCV: 550 }[label] / 100) %>'
+        }
+    };
+    $scope.$watch('compare',function(compare) {
+        $scope.radar.data = $scope.radar.data.slice(0,1);
+        if (compare) {
+            $scope.radar.data.push([
+                $scope.compare.maxHP / 4000 * 100,
+                $scope.compare.maxATK / 1500 * 100,
+                Math.max(0, $scope.compare.maxRCV / 550 * 100)
+            ]);
+        }
+        if (!$scope.$$phase) $scope.$apply();
+    });
 });
 
 app.controller('ColumnsCtrl',function($scope, $rootScope, $state, $stateParams) {
