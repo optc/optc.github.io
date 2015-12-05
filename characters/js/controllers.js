@@ -164,7 +164,7 @@ app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, 
     });
 });
 
-app.controller('ColumnsCtrl',function($scope, $rootScope, $state, $stateParams) {
+app.controller('ColumnsCtrl',function($scope, $rootScope, $state, $stateParams, $storage) {
 
     $scope.columns = { 'HP/ATK': false, 'HP/RCV': false, 'ATK/RCV': false, 'ATK/CMB': false,
         'CMB': false, 'ATK/cost': false, 'HP/cost': false, 'Minimum cooldown': false,
