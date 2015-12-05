@@ -198,7 +198,7 @@ window.matchers = [
     },
 
     {
-        name: 'Orb emptier',
+        name: 'Slot emptiers',
         target: 'special',
         matcher: /empties/i
     },
@@ -206,7 +206,7 @@ window.matchers = [
     {
         name: 'Slot fillers',
         target: 'special',
-        matcher: /(Fills.*slots|empty orbs into|Changes empty slots)/i
+        matcher: /(Fills.*slots|empty orbs into|Changes.+empty.+into)/i
     },
 
     {
