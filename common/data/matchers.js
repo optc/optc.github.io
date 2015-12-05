@@ -200,7 +200,7 @@ window.matchers = [
     {
         name: 'Slot emptiers',
         target: 'special',
-        matcher: /empties/i
+        matcher: /(Empties|Changes.+into.+empty)/i
     },
 
     {

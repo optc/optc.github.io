@@ -14,6 +14,9 @@ var app = angular.module('optc');
 
 app.controller('MainCtrl',function($scope, $rootScope, $state, $stateParams, $timeout) {
 
+    var colors = Chart.defaults.global.colours;
+    colors = colors.splice(2,0,colors.splice(1,1)[0]);
+
     if (!$rootScope.hasOwnProperty('nightMode')) {
         $rootScope.nightMode = JSON.parse(localStorage.getItem('chars.night')) || false;
         $rootScope.$watch('nightMode',function(night) { localStorage.setItem('chars.night', JSON.stringify(night)); });
