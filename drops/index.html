@@ -36,6 +36,8 @@
         <script src="../common/js/directives.js"></script>
         <script src="../common/js/error.js"></script>
 
+        <script src="../characters/js/utils.js"></script>
+
     </head>
 
     <body ng-controller="MainCtrl">
@@ -49,6 +51,7 @@
                     <i class="fa fa-chevron-up"></i>
                     <span>{{island.name}}</span>
                     <i class="fa fa-globe" ng-show="island.global"></i>
+                    <bonus-list ng-if="type == 'Story Island'" y="$index"></bonus-list>
                 </h3>
             </div>
         </script>
@@ -79,10 +82,6 @@
                     </tr>
                 </tbody>
             </table>
-        </script>
-        
-        <script type="text/ng-template" id="popover.html">
-            <div>hey</div>
         </script>
 
         <div id="main" ng-cloak>

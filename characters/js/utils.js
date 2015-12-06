@@ -205,7 +205,7 @@ CharUtils.getIslandBonuses = function(y, day) {
             })[0];
         };
         var global = getBonus(CharUtils.getDayOfWeek(false)), japan = getBonus(CharUtils.getDayOfWeek(true, false));
-        if (global) result.push('GL:' + global.type);
+        if (global && drops['Story Island'][y] && drops['Story Island'][y].global) result.push('GL:' + global.type);
         if (japan) result.push('JP:' + japan.type);
     }
     return result;

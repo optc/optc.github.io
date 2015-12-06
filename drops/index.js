@@ -129,6 +129,17 @@ app.directive('addBonuses',function($timeout) {
     };
 });
 
+app.directive('bonusList',function() {
+    return {
+        restrict: 'E',
+        template: '<span ng-repeat="bonus in bonuses" class="bonus {{bonus.slice(0,2)}} {{bonus.slice(3)}}"></span>',
+        scope: { y: '=' },
+        link: function(scope, element, attrs) {
+            scope.bonuses = CharUtils.getIslandBonuses(scope.y);
+        }
+    };
+});
+
 app.filter('smartSort',function($rootScope) {
     var getId = function(id) {
         id = Math.abs(id);
