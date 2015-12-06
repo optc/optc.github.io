@@ -64,7 +64,19 @@ app.controller('SidebarCtrl',function($scope, $rootScope, $stateParams, MATCHER_
     };
 
     $scope.onFilterClick = function(e, value) {
-        var type = e.target.getAttribute('ng-model').split(/\./)[1];
+        var type = null;
+        if (e.target.hasAttribute('ng-model')) type = e.target.getAttribute('ng-model');
+        else {
+            var target = $(e.target);
+            var child = target.find('.filter[ng-model]').first();
+            if (child.length > 0) type = child.attr('ng-model');
+            else {
+                var parent = target.closest('.filter[ng-model]').first();
+                if (parent.length > 0) type = parent.attr('ng-model');
+            }
+        }
+        if (type === null) return;
+        type = type.split(/\./)[1];
         $scope.filters[type] = ($scope.filters[type] == value ? null : value);
     };
 
