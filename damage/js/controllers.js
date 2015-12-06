@@ -157,7 +157,7 @@ controllers.SlotsCtrl = function($scope, $state, $stateParams, $storage) {
             var name = slot.name.toLowerCase();
             delete slots[name];
             delete $scope.slots[name];
-            $storage.setItem('slots',JSON.stringify(slots));
+            $storage.set('slots', slots);
         }
     };
 
