@@ -115,6 +115,7 @@ app.directive('addBonuses',function($timeout) {
         link: function(scope, element, attrs) {
             var bonusNames = { 'stamina': '0.5x stamina', 'drop': '2x drop', 'beli': '2x beli', 'exp': '2x EXP', };
             $timeout(function() {
+
                 var rows = element[0].rows;
                 window.bonuses.forEach(function(bonus) {
                     var min = (bonus.stop || 0);
@@ -124,6 +125,18 @@ app.directive('addBonuses',function($timeout) {
                         cell.className = bonus.type;
                     }
                 });
+
+                element.find('td, th').hover(
+                    function(e) {
+                        var index = $(this).index() + 1;
+                        if (index == 1) return;
+                        element.find('tr > :nth-child(' + index + ')').each(function(n,x) { $(x).addClass('active'); });
+                    },
+                    function() {
+                        element.find('.active').each(function(n,x) { $(x).removeClass('active'); });
+                    }
+                );
+
             });
         }
     };
