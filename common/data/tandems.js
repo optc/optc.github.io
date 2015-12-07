@@ -275,7 +275,7 @@ window.tandems = [
         "units": [ 436, 433, 434, 390 ]
     },
     {
-        "name": "Light Shandis's Fire!",
+        "name": "Light Shandia's Fire!",
         "desc": "Deals 1,000 fixed damage to all enemies, boosts ATK of all characters by 1.3x for 1 turn",
         "units": [ 466, 581, 582, 544 ]
     },
