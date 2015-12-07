@@ -52,6 +52,7 @@
                     <span>{{island.name}}</span>
                     <i class="fa fa-globe" ng-show="island.global"></i>
                     <bonus-list ng-if="type == 'Story Island'" y="$index"></bonus-list>
+                    <day-label ng-if="type == 'Weekly Island'"></day-label>
                 </h3>
             </div>
         </script>

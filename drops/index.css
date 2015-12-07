@@ -131,6 +131,20 @@ h1 > label > input {
     bottom: 4px;
 }
 
+.day-label {
+    padding: 2px 5px 2px 5px;
+    border-radius: 10px;
+    font-size: 10px;
+    margin-right: 5px;
+    position: relative;
+    bottom: 4px;
+    border: 1px solid black;
+}
+
+.day-label.active {
+    background: plum;
+}
+
 .bonus.drop:after, .bonus.drop:before {
     background: #7bc8a4;
     content: "2x drop";
@@ -149,12 +163,4 @@ h1 > label > input {
 .bonus.exp:after, .bonus.exp:before {
     background: #f16745;
     content: "2x EXP";
-}
-
-.bonus.GL:before {
-    content: "GL: ";
-}
-
-.bonus.JP:before {
-    content: "JP: ";
 }

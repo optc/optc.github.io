@@ -140,6 +140,17 @@ app.directive('bonusList',function() {
     };
 });
 
+app.directive('dayLabel',function() {
+    return {
+        restrict: 'E',
+        template: '<span class="day-label" ng-if="island.day >= 0" ng-class="{ active: isActive }">{{day}}</span>',
+        link: function(scope, element, attrs) {
+            scope.day = [ 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'][scope.island.day];
+            scope.isActive = CharUtils.getDayOfWeek(false) == scope.island.day || CharUtils.getDayOfWeek(true, true) == scope.island.day;
+        }
+    };
+});
+
 app.filter('smartSort',function($rootScope) {
     var getId = function(id) {
         id = Math.abs(id);
