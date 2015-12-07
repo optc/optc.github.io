@@ -164,3 +164,11 @@ h1 > label > input {
     background: #f16745;
     content: "2x EXP";
 }
+
+.bonus.GL:before {
+    content: "GL: ";
+}
+
+.bonus.JP:before {
+    content: "JP: ";
+}
