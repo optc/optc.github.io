@@ -918,6 +918,31 @@ nav > li > div {
     background: lightcoral;
 }
 
+.candySlider {
+    width: 50px !important;
+    height: 27px !important;
+    margin-left: -81px !important;
+    margin-top: 33px !important;
+    border-radius: 10px;
+    font-size: 22px !important;
+}
+
+.candySlider:focus, .candySlider:active {
+    outline: none !important;
+}
+
+.candyContainer:nth-child(2) .candySlider {
+    border: 1px solid #fcac68 !important;
+}
+
+.candyContainer:nth-child(3) .candySlider {
+    border: 1px solid #fb6f64 !important;
+}
+
+.candyContainer:nth-child(4) .candySlider {
+    border: 1px solid #7feb9f !important;
+}
+
 /***********
  * POPOVER *
  ***********/

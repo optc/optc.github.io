@@ -725,11 +725,11 @@ directives.special = function($rootScope) {
     };
 };
 
-directives.candySlider = function($compile) {
+directives.candySlider = function($compile, $timeout) {
     return {
         restrict: 'E',
         replace: true,
-        template: '<div class="candyContainer"><input disabled class="candySlider"></input>' +
+        template: '<div class="candyContainer"><input class="candySlider"></input>' +
             '<span class="candyCurrent">{{numbers.team[slot][type] | number}} {{type.toUpperCase()}}</span>',
         scope: { data: '=', numbers: '=', slot: '=', type: '@' },
         link: function(scope, element, attrs) {
@@ -763,6 +763,7 @@ directives.candySlider = function($compile) {
             input.val(currentValue).trigger('change');
             element.append($compile('<span class="candyLabel">+{{actualBonus}} ' + scope.type.toUpperCase() + '</span>')(scope));
             scope.$watch('data',updateMax,true);
+            if (element.index() == 1) $timeout(function() { input.focus(); });
         }
     };
 };
