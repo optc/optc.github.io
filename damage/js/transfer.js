@@ -168,7 +168,7 @@ var ExportCtrl = function($scope) {
             if (unit.unit === null) tokens.push('!');
             else {
                 var temp = (unit.unit.number + 1) + ':' + unit.level;
-                if (candies.atk + candies.hp + candies.rcv > 0)
+                if (candies && candies.atk + candies.hp + candies.rcv > 0)
                     temp += ':' + [ candies.atk, candies.hp, candies.rcv ].join(':');
                 tokens.push(temp);
             }
