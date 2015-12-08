@@ -172,13 +172,13 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage) {
      * Table sorting *
      *****************/
 
-    $.fn.dataTable.ext.type.order['num-string-asc'] = function(x,y) {
+    jQuery.fn.dataTable.ext.type.order['num-string-asc'] = function(x,y) {
         if (x && x.constructor == String) x = (x == 'Unknown' ? 100 : 101);
         if (y && y.constructor == String) y = (y == 'Unknown' ? 100 : 101);
         return x - y;
     };
 
-    $.fn.dataTable.ext.type.order['num-string-desc'] = function(x,y) {
+    jQuery.fn.dataTable.ext.type.order['num-string-desc'] = function(x,y) {
         if (x && x.constructor == String) x = (x == 'Unknown' ? -100 : -101);
         if (y && y.constructor == String) y = (y == 'Unknown' ? -100 : -101);
         return y - x;
@@ -242,7 +242,7 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage) {
     $rootScope.showLogFilters = log.length > 0;
 
     $timeout(function() {
-        $.fn.dataTable.ext.search.push(tableFilter);
+        jQuery.fn.dataTable.ext.search.push(tableFilter);
         var types = { story: 'Story Island', fortnight: 'Fortnight', raid: 'Raid' };
         $rootScope.$watch('table',function(table) {
             tableData = table;

@@ -98,7 +98,7 @@ var ImportCtrl = function($scope, $rootScope, $state, $stateParams) {
         if (team[i] === null) continue;
         $scope.data.team[i].unit = window.units[team[i].id - 1];
         $scope.data.team[i].level = team[i].level;
-        $scope.data.team[i].candies = $.extend($scope.data.team[i].candies, team[i].candies);
+        $scope.data.team[i].candies = jQuery.extend($scope.data.team[i].candies, team[i].candies);
     }
 
     // Data transfer (other data)

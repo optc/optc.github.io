@@ -388,8 +388,8 @@ app.directive('importButton',function() {
                     data.evoPool = updateStorageFormat(data.evoPool);
                     scope.pool.splice(0, scope.pool.length);
                     scope.mats.splice(0, scope.mats.length);
-                    scope.pool = $.extend(scope.pool, data.evoPool);
-                    scope.mats = $.extend(scope.mats, data.matPool);
+                    scope.pool = jQuery.extend(scope.pool, data.evoPool);
+                    scope.mats = jQuery.extend(scope.mats, data.matPool);
                     if (!scope.$$phase) scope.$apply();
                 };
                 reader.readAsText(this.files[0]);

@@ -84,7 +84,7 @@ directives.detailPane = function($timeout) {
             var modifyDamage = function(e) {
                 var container = $(e.target).closest('.turnContainer');
                 if (!container.length) return;
-                var custom = $.extend([ ],scope.numbers[scope.type].hitModifiers), n = container.index();
+                var custom = jQuery.extend([ ],scope.numbers[scope.type].hitModifiers), n = container.index();
                 custom[n] = modifiers[(modifiers.indexOf(custom[n])+1)%5];
                 scope.tdata.customHitModifiers = custom;
                 if (!scope.$$phase) scope.$apply();

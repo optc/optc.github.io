@@ -27,7 +27,7 @@ app.controller('MainCtrl',function($scope, $rootScope, $state, $stateParams, $ti
     $scope.$watch('query',function(query) {
         if (query === null || query === undefined || $scope.query == $stateParams.query) return;
         $state.go('.',{ query: $scope.query });
-        $scope.table.parameters = CharUtils.generateSearchParameters($scope.query, $.extend({ }, $scope.filters));
+        $scope.table.parameters = CharUtils.generateSearchParameters($scope.query, jQuery.extend({ }, $scope.filters));
     });
 
 });
@@ -38,7 +38,7 @@ app.controller('SidebarCtrl',function($scope, $rootScope, $stateParams, MATCHER_
 
     $scope.$watch('filters',function(filters) {
         if (!filters || Object.keys(filters).length === 0) return;
-        $scope.table.parameters = CharUtils.generateSearchParameters($stateParams.query, $.extend({ }, $scope.filters));
+        $scope.table.parameters = CharUtils.generateSearchParameters($stateParams.query, jQuery.extend({ }, $scope.filters));
         // build regexes if necessary
         $scope.table.regexes = { };
         if (filters.custom[MATCHER_IDS['special.OrbControllers']] && $scope.table.parameters.filters.ctrlFrom) {
@@ -112,7 +112,7 @@ app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, 
     // data
     var id = parseInt($stateParams.id, 10);
     $scope.id = id;
-    $scope.unit = $.extend({},window.units[id - 1]);
+    $scope.unit = jQuery.extend({},window.units[id - 1]);
     $scope.hybrid = $scope.unit.class && $scope.unit.class.constructor == Array;
     $scope.details = window.details[id];
     $scope.cooldown = window.cooldowns[id - 1];

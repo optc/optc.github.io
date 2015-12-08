@@ -66,7 +66,7 @@ CharUtils.generateSearchParameters = function(query, filters) {
     var result = Utils.generateSearchParameters(query);
     if (result === null && Object.keys(filters).length === 0) return null;
     if (filters.class && filters.class.constructor != RegExp) filters.class = new RegExp(filters.class,'i');
-    var temp = $.extend({ },filters);
+    var temp = jQuery.extend({ },filters);
     temp.custom = [ ];
     if (filters.custom) {
         for (var i=0;i<filters.custom.length;++i) {

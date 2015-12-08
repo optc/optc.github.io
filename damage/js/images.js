@@ -164,12 +164,12 @@ var type = function(context, data) {
     } else {
         context.lineWidth = data.strokeWidth || 1;
         context.strokeText(text, data.x, data.y, data.maxWidth || 60);
-        type(context, $.extend(data, { stroke: false }));
+        type(context, jQuery.extend(data, { stroke: false }));
     }
 };
 
 var awesome = function(context, data) {
-    type(context, $.extend(data, {
+    type(context, jQuery.extend(data, {
         text: String.fromCharCode('0x' + data.text),
         style: (data.style || '14px') + ' FontAwesome'
     }));

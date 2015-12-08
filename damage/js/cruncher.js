@@ -121,7 +121,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         result.rcv = Math.max(0,rcvTotal);
         var cost = team.slice(1,6).reduce(function(prev,next) { return prev + (!next.unit ? 0 : next.unit.cost); },0);
         result.cost = { cost: cost, level: Math.max(1,Math.floor(cost / 2) * 2 - 18) };
-        $scope.numbers = $.extend($scope.numbers, result);
+        $scope.numbers = jQuery.extend($scope.numbers, result);
         $scope.numbers.hp = Math.max(1,hpMax);
         $scope.numbers.zombie = checkZombieTeam(result);
         $timeout(function() { crunchSelfInhibit = false; });
@@ -380,7 +380,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
 
     var applyCaptainEffectsToDamage = function(damage,func,modifiers,isStatic) {
         return damage.map(function(x,n) {
-            var params = $.extend({ chainPosition: n, damage: damage, modifiers: modifiers },getParameters(x.position));
+            var params = jQuery.extend({ chainPosition: n, damage: damage, modifiers: modifiers },getParameters(x.position));
             if (isStatic) x.base += func(params);
             else x.multipliers.push([ func(params), 'captain effect' ]);
             return { unit: x.unit, orb: x.orb, base: x.base, multipliers: x.multipliers, position: x.position };
@@ -457,13 +457,13 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         specialsCombinations.forEach(function(specials,n) {
             // apply all the specials of the combination to every unit
             var temp = damage.map(function(x,n) {
-                var multipliers = $.extend([ ], x.multipliers), base = x.base;
+                var multipliers = jQuery.extend([ ], x.multipliers), base = x.base;
                 specials.forEach(function(data) {
                     if (!data.s) { // non-static
                         var text = (team[data.sourceSlot] ?  'special (' + shortName(team[data.sourceSlot].unit.name) + ')' : 'special');
-                        multipliers.push([ data.f($.extend({ sourceSlot: data.sourceSlot },getParameters(x.position))), text ]);
+                        multipliers.push([ data.f(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position))), text ]);
                     } else { // static
-                        base += data.f($.extend({ sourceSlot: data.sourceSlot },getParameters(x.position)));
+                        base += data.f(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position)));
                     }
                 });
                 return { unit: x.unit, orb: x.orb, base: base, multipliers: multipliers, position: x.position };
@@ -567,7 +567,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 if (specials[id].hasOwnProperty('orb') && enabledSpecials[0] && enabledSpecials[0].permanent)
                     conflictWarning = true;
                 else
-                    enabledSpecials.push($.extend({ sourceSlot: n },specials[id]));
+                    enabledSpecials.push(jQuery.extend({ sourceSlot: n },specials[id]));
             }
             // activate turn counter if necessary
             if (n < 2 && (id == 794 || id == 795))
@@ -584,7 +584,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if (team[i].unit === null) continue;
             var id = team[i].unit.number + 1;
             if (!window.captains.hasOwnProperty(id)) continue;
-            var effect = $.extend({ },window.captains[id]),
+            var effect = jQuery.extend({ },window.captains[id]),
                 locked = ($scope.tdata.team[i].lock > 0), silenced = ($scope.tdata.team[i].silence > 0);
             if (locked || silenced) {
                 for (var func in effect) {
@@ -607,7 +607,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         computeSpecialsCombinations();
         $scope.conflictingSpecials = (specialsCombinations.length > 1);
         // get ship bonus
-        shipBonus = $.extend({ bonus: ships[$scope.data.ship[0]] },{ level: $scope.data.ship[1] });
+        shipBonus = jQuery.extend({ bonus: ships[$scope.data.ship[0]] },{ level: $scope.data.ship[1] });
     };
 
 

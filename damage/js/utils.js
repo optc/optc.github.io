@@ -19,7 +19,7 @@ window.CrunchUtils.okamaCheck = function(array, modifiers, data) {
 };
 
 window.CrunchUtils.okamaSort = function(array, data) {
-    var that = $.extend([], array), temp = [ ];
+    var that = jQuery.extend([], array), temp = [ ];
     for (var i=0;i<data.length;++i) {
         for (var j=0;j<that.length;++j) {
             if (that[j].unit.unit.type != data[i]) continue;
