@@ -123,7 +123,7 @@ utils.generateSearchParameters = function(query) {
     if (!query || query.trim().length < 3) return null;
     query = query.toLowerCase().trim();
     var result = { matchers: { }, ranges: { }, query: [ ] };
-    var ranges = { }, params = [ 'hp', 'atk', 'stars', 'cost', 'growth', 'rcv', 'id', 'slots' ];
+    var ranges = { }, params = [ 'hp', 'atk', 'stars', 'cost', 'growth', 'rcv', 'id', 'slots', 'combo' ];
     var regex = new RegExp('^((type|class):(\\w+)|(' + params.join('|') + ')(>|<|>=|<=|=)([\\d.]+))$');
     var tokens = query.replace(/\s+/g,' ').split(' ').filter(function(x) { return x.length > 0; });
     tokens.forEach(function(x) {

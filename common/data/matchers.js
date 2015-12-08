@@ -216,9 +216,21 @@ window.matchers = [
     },
 
     {
+        name: 'Multi-target damage dealers',
+        target: 'special',
+        matcher: /Deals.+to (all|random) enemies/i
+    },
+
+    {
+        name: 'Multi-hit damage dealers',
+        target: 'special',
+        matcher: /Deals \d+ hits/i
+    },
+
+    {
         name: 'Fixed damage dealers',
         target: 'special',
-        matcher: /Deals [\d,]+ fixed damage|(fixed (STR|DEX|QCK|PSY|INT))/i
+        matcher: /Deals.+fixed damage/i
     },
 
     {
