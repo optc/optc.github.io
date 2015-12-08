@@ -89,6 +89,9 @@ window.ships = [
         description: 'Boosts ATK by 1.2x, recovers 350 HP at the end of the turn',
         atk: function(p) {
             return p.boatLevel < 7 ? 1 : [ 1.1, 1.1, 1.1, 1.2 ][p.boatLevel - 7];
+        },
+        heal: function(p) {
+            return [ 50, 100, 125, 150, 175, 200, 250, 275, 300, 350 ][p.boatLevel - 1];
         }
     },
 

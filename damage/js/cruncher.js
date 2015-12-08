@@ -151,9 +151,9 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             }
         }
         // return results
-        for (var i=0;i<overallDamage.damage.length;++i) {
-            overallDamage.damage[i].multipliers = overallDamage.damage[i].multipliers.filter(function(x) { return x[0] != 1; });
-            overallDamage.damage[i].multipliers.sort(function(x,y) { return x[1].localeCompare(y[1]); });
+        for (var l=0;l<overallDamage.damage.length;++l) {
+            overallDamage.damage[l].multipliers = overallDamage.damage[l].multipliers.filter(function(x) { return x[0] != 1; });
+            overallDamage.damage[l].multipliers.sort(function(x,y) { return x[1].localeCompare(y[1]); });
         }
         return overallDamage;
     };
@@ -654,6 +654,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         }
         if (healer == -1 || other == -1) return null;
         var healAmount = zombies[ids[healer]].amount || Math.floor(data.team[healer].rcv * zombies[ids[healer]].multiplier);
+        if (shipBonus.bonus && shipBonus.bonus.heal) healAmount += shipBonus.bonus.heal({ boatLevel: shipBonus.level });
         if (zombies[ids[other]].type == 'zombie') { // zombie
             var works = 1 + healAmount >= Math.floor($scope.numbers.hp * zombies[ids[other]].threshold);
             if (works) return true;
