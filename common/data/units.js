@@ -814,7 +814,7 @@ window.units = [
 	[ "Tararan", "INT", [ "Knowledge", "Tough" ], 3, 14, 7, 2, 50, 392109, 325, 76, 48, 1385, 696, 0, 1 ],
 	[ "Bear-Skin Rug", "DEX", [ "Fighter", "Tough" ], 3, 14, 5, 2, 50, 392109, 203, 52, 155, 1074, 609, 74, 1 ],
 	[ "Gekko Moriah, Thriller Bark's Mysterious Four", "INT", "Freedom", 3, 12, 6, 2, 50, 392109, 205, 92, 0, 1422, 504, 0, 1 ],
-	[ "Gekko Moriah, Ruler of Thriller Bark", "INT", "Freedom", 4, 20, 4, 3, 99, 3000000, 1355, 451, 0, 2603, 913, 0, 0 ],
+	[ "Gekko Moriah, Ruler of Thriller Bark", "INT", "Freedom", 4, 20, 4, 3, 99, 3000000, 1355, 451, 0, 2603, 913, 0, 1.5 ],
 	[ "Soldier Zombie Boastful Shadow", "STR", "Fighter", 2, 7, 6, 0, 35, 90778, 85, 39, 92, 990, 622, 27, 1 ],
 	[ "Soldier Zombie Quick Shadow", "QCK", "Fighter", 2, 7, 6, 0, 35, 90778, 77, 30, 92, 944, 590, 43, 1 ],
 	[ "Soldier Zombie Vile Shadow", "DEX", "Fighter", 2, 7, 6, 0, 35, 90778, 92, 28, 92, 1032, 574, 35, 1 ],
