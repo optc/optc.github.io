@@ -1,14 +1,15 @@
 (function() {
 
+/* * * * * Bootstrapping * * * * */
+
+if (window.hasOwnProperty('units')) Utils.parseUnits(true);
+else window.addEventListener('load',function() { Utils.parseUnits(true); },false);
+
 /************
  * MainCtrl *
  ************/
 
 var MainCtrl = function($scope, $controller, $filter, $storage) {
-
-    /* * * * * Bootstrapping * * * * */
-    
-    Utils.parseUnits(true);
 
     /* * * * * Theme * * * * */
 

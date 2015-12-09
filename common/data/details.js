@@ -3655,12 +3655,12 @@ window.details = {
 		special: "Boosts ATK against poisoned enemies by 1.05x for 999 turns"
 	},
 	830: {
-		captain: "Boosts ATK of Knowledge and Striker characters by 1.75x, deals 2 times the damage received in the previous turn to all enemies at the end of each turn",
+		captain: "Boosts ATK of Knowledge and Striker characters by 1.75x, deals 2 times the damage received in the previous turn in DEX damage to all enemies at the end of each turn",
 		specialName: "Karma Conviction",
 		special: "Changes the orbs in the top row into [STR] orbs, changes the orbs in the middle row into [DEX] orbs, changes the orbs in the bottom row into [QCK] orbs"
 	},
 	831: {
-		captain: "Boosts ATK of Knowledge and Striker characters by 2x, deals 5 times the damage received in the previous turn to all enemies at the end of each turn",
+		captain: "Boosts ATK of Knowledge and Striker characters by 2x, deals 5 times the damage received in the previous turn in DEX damage to all enemies at the end of each turn",
 		specialName: "Karma Conviction",
 		special: "Changes the orbs in the top row into [STR] orbs, changes the orbs in the middle row into [DEX] orbs, changes the orbs in the bottom row into [QCK] orbs"
 	},
@@ -3688,7 +3688,7 @@ window.details = {
 		specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.75x more damage and opposite orbs will deal 1.75x less damage"
 	},
 	836: {
-		captain: "Boosts ATK and HP of Knowledge characters by 2x, deals 5 times the damage received in the previous turn to all enemies at the end of each turn",
+		captain: "Boosts ATK and HP of Knowledge characters by 2x, deals 5 times the damage received in the previous turn in STR damage to all enemies at the end of each turn",
 		specialName: "Thrust Pad Cannon",
 		special: "Changes [RCV], [TND], empty, hindrance and bomb orbs into matching orbs, amplifies the effect of orbs by 1.75x for 1 turn",
 		specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.75x more damage and opposite orbs will deal 1.75x less damage"
