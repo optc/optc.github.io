@@ -721,10 +721,10 @@ window.captains = {
 		rcv: function(p) { return p.percHP <= 30.0 ? 5 : 1; }
 	},
 	444: {
-		atk: function(p) { return p.percHP >= 70.0 && p.unit.class.has("Booster") ? 2 : 1; }
+		atk: function(p) { return p.percHP >= 70.0 && (p.unit.class.has("Booster") || p.unit.class("Evolver")) ? 2 : 1; }
 	},
 	445: {
-		atk: function(p) { return p.percHP >= 70.0 && p.unit.class.has("Booster") ? 2.5 : 1; }
+		atk: function(p) { return p.percHP >= 70.0 && (p.unit.class.has("Booster") || p.unit.class("Evolver")) ? 2.5 : 1; }
 	},
 	446: {
 		atk: function(p) { return p.unit.type == "STR" ? 2 : 1; },

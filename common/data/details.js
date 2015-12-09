@@ -1755,12 +1755,12 @@ window.details = {
 		captain: "Recovers 7x character's RCV in HP at the end of each turn"
 	},
 	444: {
-		captain: "Boosts ATK of Booster characters by 2x if HP is above 70% at the start of the turn"
+		captain: "Boosts ATK of Evolver and Booster characters by 2x if HP is above 70% at the start of the turn"
 	},
 	445: {
 		special: "Randomly changes all orbs into either [STR], [DEX], [QCK], [PSY] or [INT] orbs, freely switch orbs between slots 3 times",
 		specialName: "Support Incoming! Supersonic Duck Squadron!",
-		captain: "Boosts ATK of Booster characters by 2.5x if HP is above 70% at the start of the turn"
+		captain: "Boosts ATK of Evolver and Booster characters by 2.5x if HP is above 70% at the start of the turn"
 	},
 	446: {
 		special: "Deals 10 times the damage received in the previous turn in typeless damage to all enemies",
