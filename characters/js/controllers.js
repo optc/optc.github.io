@@ -32,31 +32,33 @@ app.controller('MainCtrl',function($scope, $rootScope, $state, $stateParams, $ti
 
 });
 
-app.controller('SidebarCtrl',function($scope, $rootScope, $stateParams, MATCHER_IDS) {
+app.controller('SidebarCtrl',function($scope, $rootScope, $stateParams, $timeout, MATCHER_IDS) {
 
     if (!$scope.filters) $rootScope.filters = filters;
 
-    $scope.$watch('filters',function(filters) {
-        if (!filters || Object.keys(filters).length === 0) return;
-        $scope.table.parameters = CharUtils.generateSearchParameters($stateParams.query, jQuery.extend({ }, $scope.filters));
-        // build regexes if necessary
-        $scope.table.regexes = { };
-        if (filters.custom[MATCHER_IDS['special.OrbControllers']] && $scope.table.parameters.filters.ctrlFrom) {
-            $scope.table.regexes.ctrlFrom = $scope.table.parameters.filters.ctrlFrom.split(',').map(function(x) {
-                return new RegExp('Changes[^,]+\\[' + x + '\\][^,]+into','i');
-            });
-        } if (filters.custom[MATCHER_IDS['special.OrbControllers']] && $scope.table.parameters.filters.ctrlTo) {
-            $scope.table.regexes.ctrlTo = $scope.table.parameters.filters.ctrlTo.split(',').map(function(x) {
-                return new RegExp('Changes.+into[^,]+\\[' + x + '\\]','i');
-            });
-        } if (filters.custom[MATCHER_IDS['captain.ClassBoostingCaptains']] && $scope.filters.classCaptain) {
-            $scope.table.regexes.classCaptain = new RegExp('of ' + $scope.filters.classCaptain + ' .*characters');
-        } if (filters.custom[MATCHER_IDS['special.ClassBoostingSpecials']] && $scope.filters.classSpecial) {
-            $scope.table.regexes.classSpecial = new RegExp('of ' + $scope.filters.classSpecial + ' .*characters');
-        }
-        // redraw table
-        if (!$scope.$$phase) $scope.$apply();
-    },true);
+    $timeout(function() {
+        $scope.$watch('filters',function(filters) {
+            if (!filters || Object.keys(filters).length === 0) return;
+            $scope.table.parameters = CharUtils.generateSearchParameters($stateParams.query, jQuery.extend({ }, $scope.filters));
+            // build regexes if necessary
+            $scope.table.regexes = { };
+            if (filters.custom[MATCHER_IDS['special.OrbControllers']] && $scope.table.parameters.filters.ctrlFrom) {
+                $scope.table.regexes.ctrlFrom = $scope.table.parameters.filters.ctrlFrom.split(',').map(function(x) {
+                    return new RegExp('Changes[^,]+\\[' + x + '\\][^,]+into','i');
+                });
+            } if (filters.custom[MATCHER_IDS['special.OrbControllers']] && $scope.table.parameters.filters.ctrlTo) {
+                $scope.table.regexes.ctrlTo = $scope.table.parameters.filters.ctrlTo.split(',').map(function(x) {
+                    return new RegExp('Changes.+into[^,]+\\[' + x + '\\]','i');
+                });
+            } if (filters.custom[MATCHER_IDS['captain.ClassBoostingCaptains']] && $scope.filters.classCaptain) {
+                $scope.table.regexes.classCaptain = new RegExp('of ' + $scope.filters.classCaptain + ' .*characters');
+            } if (filters.custom[MATCHER_IDS['special.ClassBoostingSpecials']] && $scope.filters.classSpecial) {
+                $scope.table.regexes.classSpecial = new RegExp('of ' + $scope.filters.classSpecial + ' .*characters');
+            }
+            // redraw table
+            if (!$scope.$$phase) $scope.$apply();
+        },true);
+    });
 
     $scope.clearFilters = function() {
         filters = { custom: [ ], classes: [ ], stars: [ ] };

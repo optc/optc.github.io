@@ -1759,7 +1759,7 @@ window.details = {
 	},
 	445: {
 		special: "Randomly changes all orbs into either [STR], [DEX], [QCK], [PSY] or [INT] orbs, freely switch orbs between slots 3 times",
-		specialName: "Support! Supersonic Duck Squadron!",
+		specialName: "Support Incoming! Supersonic Duck Squadron!",
 		captain: "Boosts ATK of Booster characters by 2.5x if HP is above 70% at the start of the turn"
 	},
 	446: {
@@ -2018,32 +2018,32 @@ window.details = {
 	},
 	499: {
 		special: "Delays all enemies by 1 turn",
-		specialName: "A Woman's Courage!",
+		specialName: "Women Are Courageous!",
 		captain: "Boosts RCV of Shooter characters by 1.5x"
 	},
 	500: {
 		special: "Delays all enemies by 1 turn",
-		specialName: "A Woman's Courage!",
+		specialName: "Women Are Courageous!",
 		captain: "Boosts RCV of Shooter characters by 2x"
 	},
 	501: {
 		special: "Recovers 5x character's RCV in HP at the end of each turn for 4 turns",
-		specialName: "Medical Student",
+		specialName: "Studying Medicine",
 		captain: "Boosts ATK, HP and RCV of PSY characters by 1.2x"
 	},
 	502: {
 		special: "Recovers 5x character's RCV in HP at the end of each turn for 4 turns",
-		specialName: "Medical Student",
+		specialName: "Studying Medicine",
 		captain: "Boosts ATK, HP and RCV of PSY characters by 1.5x"
 	},
 	503: {
 		special: "Deals 5x character's ATK in INT damage to all enemies, boosts ATK of all characters by 5% for 1 turn, reduces the defense of all enemies by 50% for 1 turn, randomizes all orbs",
-		specialName: "Surprise Dial - Illusion",
+		specialName: "Surprise Dial Illusion",
 		captain: "Boosts HP of INT characters by 1.5x"
 	},
 	504: {
 		special: "Deals 5x character's ATK in INT damage to all enemies, boosts ATK of all characters by 5% for 1 turn, reduces the defense of all enemies by 50% for 1 turn, randomizes all orbs",
-		specialName: "Surprise Dial - Illusion",
+		specialName: "Surprise Dial Illusion",
 		captain: "Boosts HP of INT characters by 2x"
 	},
 	505: {
@@ -2457,12 +2457,12 @@ window.details = {
 	},
 	585: {
 		special: "Changes the captain's orb into [PSY], recovers 9x character's RCV in HP",
-		specialName: "A Bond Inherited from Bellmere",
+		specialName: "The Bond Bellmere Left Us",
 		captain: "Boosts RCV of PSY characters by 1.5x"
 	},
 	586: {
 		special: "Changes the captain's orb into [PSY], recovers 9x character's RCV in HP",
-		specialName: "A Bond Inherited from Bellmere",
+		specialName: "The Bond Bellmere Left Us",
 		captain: "Boosts HP and RCV of PSY characters by 1.5x"
 	},
 	587: {
