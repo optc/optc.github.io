@@ -3074,12 +3074,12 @@ window.details = {
 	715: {
 		special: "Boosts ATK and RCV of Freedom characters by 1.5x for 2 turns, seals herself for 3 turns",
 		specialName: "Angel's Harp - Healing",
-		captain: "Boosts RCV of all characters by 2x if HP is low"
+		captain: "Boosts RCV of all characters by 2x if HP is below 30% at the start of the turn"
 	},
 	716: {
 		special: "Boosts ATK and RCV of Freedom characters by 1.5x for 2 turns, seals herself for 3 turns",
 		specialName: "Angel's Harp - Healing",
-		captain: "Boosts RCV of all characters by 5x if HP is low"
+		captain: "Boosts RCV of all characters by 5x if HP is below 30% at the start of the turn"
 	},
 	717: {
 		special: "Deals 50% of the damage dealt in the previous turn as typeless damage to all enemies",

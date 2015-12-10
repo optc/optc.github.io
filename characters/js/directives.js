@@ -21,7 +21,7 @@ directives.characterTable = function($rootScope, $timeout, $compile, $storage) {
                 data: scope.table.data,
                 columns: scope.table.columns,
                 rowCallback: function(row, data, index) {
-                    if (row.hasAttribute('loaded')) return;
+                    if (!row || row.hasAttribute('loaded')) return;
                     // lazy thumbnails
                     $(row).find('[data-original]').each(function(n,x) {
                         x.setAttribute('src',x.getAttribute('data-original'));

@@ -688,7 +688,11 @@ tr.preview td:nth-child(2) > a:after {
 }
 
 .clickable, #clear-input-button {
-    cursor: pointer;
+    cursor: pointer !important;
+}
+
+#clear-input-button:hover {
+    text-decoration: underline;
 }
 
 .arrow {
