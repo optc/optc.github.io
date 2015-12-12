@@ -33,6 +33,12 @@ window.matchers = [
     },
 
     {
+        name: 'Special boosting captains',
+        target: 'captain',
+        matcher: /Boosts damage.+specials/i
+    },
+
+    {
         name: '2x ATK and HP captains',
         target: 'captain',
         matcher: /Boosts (ATK and HP|ATK, HP).+by 2x/i
