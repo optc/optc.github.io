@@ -858,7 +858,7 @@ window.units = [
 	[ "Jewelry Bonney, Gluttonous Selfish Santa", "PSY", [ "Fighter", "Freedom" ], 4, 12, null, 0, null, null, null, null, null, null, null, null, 0 ],
 	[ "Jewelry Bonney, Gluttonous Greedy Santa", "PSY", [ "Fighter", "Freedom" ], 5, 19, null, 0, null, null, null, null, null, null, null, null, 0 ],
 	[ "Colosseum Coby", "PSY", [ "Fighter", "Ambition" ], 4, 18, null, 0, null, null, null, null, null, null, null, null, 0 ],
-	[ "Colosseum Coby (evolution)", "PSY", [ "Fighter", "Ambition" ], 5, 30, null, 0, null, null, null, null, null, null, null, null, 0 ],
-	[ "Colosseum Alvida", "QCK", [ "Striker", "Freedom" ], 4, 18, null, 0, null, null, null, null, null, null, null, null, 0 ],
-	[ "Colosseum Alvida (evolution)", "QCK", [ "Striker", "Freedom" ], 5, 30, null, 0, null, null, null, null, null, null, null, null, 0 ]
+	[ "Coby, Navy HQ Petty Officer", "PSY", [ "Fighter", "Ambition" ], 5, 30, null, 0, null, null, null, null, null, null, null, null, 0 ],
+	[ "Lady Alvida", "QCK", [ "Striker", "Freedom" ], 4, 18, null, 0, null, null, null, null, null, null, null, null, 0 ],
+	[ "Lady Alvida, Peerless Beauty", "QCK", [ "Striker", "Freedom" ], 5, 30, null, 0, null, null, null, null, null, null, null, null, 0 ]
 ];
