@@ -848,5 +848,17 @@ window.units = [
 	[ "Tom, Tom's Workers", "DEX", [ "Fighter", "Tough" ], 3, 12, 6, 1, 50, 392109, 159, 95, 30, 1103, 614, 141, 1 ],
 	[ "Legendary Shipwright Tom, Tom's Workers", "DEX", [ "Fighter", "Tough" ], 4, 20, 4, 2, 99, 3000000, 1059, 572, 100, 2207, 1029, 266, 1 ],
 	[ "Cutty Flam, Tom's Workers", "STR", [ "Shooter", "Ambition" ], 3, 13, 6, 2, 70, 1066998, 24, 138, 15, 924, 932, 139, 1 ],
-	[ "Iceburg, Tom's Workers", "QCK", [ "Striker", "Knowledge" ], 3, 13, 6, 2, 70, 1066998, 58, 60, 36, 1098, 694, 203, 1 ]
+	[ "Iceburg, Tom's Workers", "QCK", [ "Striker", "Knowledge" ], 3, 13, 6, 2, 70, 1066998, 58, 60, 36, 1098, 694, 203, 1 ],
+	[ "Wapol", "STR", [ "Strength", "Ambition" ], 3, 12, null, 0, null, null, null, null, null, null, null, null, 0 ],
+	[ "Wapol (evolution)", "QCK", [ "Strength", "Ambition" ], 4, 20, null, 0, null, null, null, null, null, null, null, null, 0 ],
+	[ "Unknown", "PSY", [ "Fighter", "Tough" ], 3, 9, null, 0, null, null, null, null, null, null, null, null, 0 ],
+	[ "Unknown", "DEX", [ "Fighter", "Tough" ], 4, 15, null, 0, null, null, null, null, null, null, null, null, 0 ],
+	,
+	,
+	,
+	,
+	[ "Colosseum Coby", "PSY", [ "Fighter", "Ambition" ], 4, 18, null, 0, null, null, null, null, null, null, null, null, 0 ],
+	[ "Colosseum Coby (evolution)", "PSY", [ "Fighter", "Ambition" ], 5, 30, null, 0, null, null, null, null, null, null, null, null, 0 ],
+	[ "Colosseum Alvida", "QCK", [ "Striker", "Freedom" ], 4, 18, null, 0, null, null, null, null, null, null, null, null, 0 ],
+	[ "Colosseum Alvida (evolution)", "QCK", [ "Striker", "Freedom" ], 5, 30, null, 0, null, null, null, null, null, null, null, null, 0 ]
 ];
