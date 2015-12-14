@@ -120,7 +120,7 @@ utils.getOppositeType = function(type) {
 /* * * * * Searching/filtering * * * * */
 
 utils.generateSearchParameters = function(query) {
-    if (!query || query.trim().length < 3) return null;
+    if (!query || query.trim().length < 2) return null;
     query = query.toLowerCase().trim();
     var result = { matchers: { }, ranges: { }, query: [ ] };
     var ranges = { }, params = [ 'hp', 'atk', 'stars', 'cost', 'growth', 'rcv', 'id', 'slots', 'combo' ];
