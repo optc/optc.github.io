@@ -80,7 +80,7 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage) {
             var name = Utils.getFullUnitName(id);
             if (!tableData.fuzzy && !tableData.parameters.query.test(name)) return false;
             if (tableData.fuzzy) {
-                if (fused === null) fused = fuse.search(tableData.parameters.query.source);
+                if (fused === null) fused = fuse.search(tableData.parameters.query.source || 'xyz');
                 if (fused.indexOf(id - 1) == -1) return false;
             }
         }
