@@ -3769,12 +3769,12 @@ window.details = {
 	851: {
 		captain: "Boosts ATK of Ambition characters by 1.5x",
 		specialName: "Snow Country Speciality: Snow Powder Makeup",
-		special: "Deals 20x character's ATK in typeless damage to one enemy, locks all orbs for 1 turn"
+		special: "Deals 20x character's ATK in character's type damage to one enemy, locks all orbs for 1 turn"
 	},
 	852: {
 		captain: "Boosts ATK of Ambition characters by 2x",
 		specialName: "Snow Country Speciality: Snow Powder Makeup",
-		special: "Deals 20x character's ATK in typeless damage to one enemy, locks all orbs for 1 turn"
+		special: "Deals 20x character's ATK in character's type damage to one enemy, locks all orbs for 1 turn"
 	},
 	853: {
 		specialName: "Robson: Serious Mode",
