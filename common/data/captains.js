@@ -1796,5 +1796,27 @@ window.captains = {
 	},
 	850: {
 		atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Knowledge") ? 1.5 : 1; }
+	},
+	851: {
+		atk: function(p) { return p.unit.class.has("Ambition") ? 1.5 : 1; }
+	},
+	852: {
+		atk: function(p) { return p.unit.class.has("Ambition") ? 2 : 1; }
+	},
+	854: {
+		atk: function(p) { return p.unit.type == 'DEX' ? 1.5 : 1; }
+	},
+	855: {
+		atk: function(p) { return p.unit.class.has("Slasher") ? 2 : 1; }
+	},
+	856: {
+		atk: function(p) { return p.unit.class.has("Slasher") ? 2.5 : 1; }
+	},
+	857: {
+		atk: function(p) { return p.unit.type == 'PSY' ? 2 : 1; }
+	},
+	858: {
+		atk: function(p) { return p.unit.type == 'PSY' ? 2 : 1; },
+		rcv: function(p) { return p.unit.type == 'PSY' ? 2 : 1; }
 	}
 };

@@ -807,5 +807,17 @@ window.specials = {
 	},
 	849: {
 		def: function() { return 0.5; }
+	},
+	853: {
+		atk: function(p) { return p.unit.class("Tough") || p.unit.class.has("Fighter") ? 1.2 : 1; },
+		type: "class"
+	},
+	857: {
+		rcv: function(p) { return p.unit.type == 'PSY' ? 1.5 : 1; },
+		type: "type"
+	},
+	858: {
+		rcv: function(p) { return p.unit.type == 'PSY' ? 1.5 : 1; },
+		type: "type"
 	}
 };
