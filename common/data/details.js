@@ -3793,11 +3793,11 @@ window.details = {
 	857: {
 		captain: "Boosts ATK of PSY characters by 2x",
 		specialName: "Bonney's Dinner Time",
-		special: "Changes neighboring slots' orbs into [RCV] orbs, boosts RCV of PSY characters"
+		special: "Changes neighboring slots' orbs into [RCV] orbs, boosts RCV of PSY characters by 1.5x for 1 turn"
 	},
 	858: {
 		captain: "Boosts ATK and RCV of PSY characters by 2x",
 		specialName: "Bonney's Dinner Time",
-		special: "Changes neighboring slots' orbs into [RCV] orbs, boosts RCV of PSY characters"
+		special: "Changes neighboring slots' orbs into [RCV] orbs, boosts RCV of PSY characters by 1.5x for 1 turn"
 	}
 };
