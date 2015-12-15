@@ -156,6 +156,12 @@ window.matchers = [
     },
 
     {
+        name: 'Delayed ATK boosters',
+        target: 'special',
+        matcher: /Following the activation.+boosts.+ATK/i
+    },
+
+    {
         name: 'Orb lockers',
         target: 'special',
         matcher: /lock.+orbs/i
