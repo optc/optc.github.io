@@ -3773,7 +3773,7 @@ window.details = {
 	},
 	853: {
 		specialName: "Robson: Serious Mode",
-		special: "Following the activation of the special, if every unit scores a Perfect hit, boosts ATK of Tough and Fighters characters by 1.2x for 3 turns"
+		special: "Following the activation of the special, if every unit scores a Perfect hit, boosts ATK of Tough and Fighter characters by 1.2x for 3 turns"
 	},
 	854: {
 		captain: "Boosts ATK of DEX chracters by 1.5x, reduces damage received by 10%",
