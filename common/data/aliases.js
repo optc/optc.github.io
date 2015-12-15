@@ -1,6 +1,7 @@
 window.aliases = {
     15: [ 'GPU' ],
     16: [ 'Usopp' ],
+    63: [ 'Hachi' ],
     207: [ 'Mr. 2 Bonclay' ],
     208: [ 'Mr. 2 Bonclay Bombardier Arabesque' ],
     209: [ 'Nico Robin' ],

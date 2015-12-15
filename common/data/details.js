@@ -3765,5 +3765,39 @@ window.details = {
 		captain: "Boosts ATK of Striker and Knowledge characters by 1.5x",
 		specialName: "First-class Assistant of the Passionate Worker",
 		special: "Changes the top right orb into [DEX], the middle right orb into [STR] and the bottom right orb into [QCK], seals himself for 3 turns"
+	},
+	851: {
+		captain: "Boosts ATK of Ambition characters by 1.5x",
+		specialName: "Snow Country Speciality: Snow Powder Makeup",
+		special: "Deals 20x character's ATK in typeless damage to one enemy, locks all orbs for 1 turn"
+	},
+	853: {
+		specialName: "Robson: Serious Mode",
+		special: "Following the activation of the special, if every unit scores a Perfect hit, boosts ATK of Tough and Fighters characters by 1.2x for 3 turns"
+	},
+	854: {
+		captain: "Boosts ATK of DEX chracters by 1.5x, reduces damage received by 10%",
+		specialName: "Guard Point: Winter Coat",
+		special: "Redues damage received by 50% for 3 turns, slightly boosts chances of getting [DEX] orbs for 3 turns"
+	},
+	855: {
+		captain: "Boosts ATK of Slasher characters by 2x",
+		specialName: "Shambles: Ceremony",
+		special: "Changes captain's orb into [RCV], recovers 15x character's RCV in HP"
+	},
+	856: {
+		captain: "Boosts ATK of Slasher characters by 2.5x",
+		specialName: "Shambles: Ceremony",
+		special: "Changes captain's orb into [RCV], recovers 15x character's RCV in HP"
+	},
+	857: {
+		captain: "Boosts ATK of PSY characters by 2x",
+		specialName: "Bonney's Dinner Time",
+		special: "Changes neighboring slots' orbs into [RCV] orbs, boosts RCV of PSY characters"
+	},
+	858: {
+		captain: "Boosts ATK and RCV of PSY characters by 2x",
+		specialName: "Bonney's Dinner Time",
+		special: "Changes neighboring slots' orbs into [RCV] orbs, boosts RCV of PSY characters"
 	}
 };
