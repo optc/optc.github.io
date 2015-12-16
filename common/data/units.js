@@ -857,7 +857,7 @@ window.units = [
 	[ "Trafalgar Law, Christmas Eve Noble", "DEX", [ "Slasher", "Freedom" ], 5, 19, 4, 3, 99, null, 945, 460, 151, 2004, 1029, 314, 1 ],
 	[ "Jewelry Bonney, Gluttonous Selfish Santa", "PSY", [ "Fighter", "Freedom" ], 4, 12, 5, 3, 50, null, 256, 78, 66, null, null, null, 0 ],
 	[ "Jewelry Bonney, Gluttonous Greedy Santa", "PSY", [ "Fighter", "Freedom" ], 5, 19, 4, 3, 99, null, 848, 354, 178, 2380, 769, 338, 1 ],
-	[ "Coby, Navy HQ Petty Officer", "PSY", [ "Fighter", "Ambition" ], 4, 18, 5, 2, 50, null, 304, 116, 32, null, null, null, 0 ],
+	[ "Coby, Navy HQ Petty Officer", "PSY", [ "Fighter", "Ambition" ], 4, 18, 5, 2, 50, null, 304, 116, 32, 1193, 561, 158, 0 ],
 	[ "War Hero Coby, Navy HQ Petty Officer", "PSY", [ "Fighter", "Ambition" ], 5, 30, 4, 3, 99, null, 1121, 500, 104, null, null, null, 0 ],
 	[ "Lady Alvida, Lovely Beauty", "QCK", [ "Striker", "Freedom" ], 4, 18, 5, 1, 50, null, 465, 218, 78, 1030, 534, 197, 0 ],
 	[ "Lady Alvida, Peerless Beauty", "QCK", [ "Striker", "Freedom" ], 5, 30, 6, 3, 99, null, 967, 466, 148, null, null, null, 0 ]
