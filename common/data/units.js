@@ -860,5 +860,5 @@ window.units = [
 	[ "Coby, Navy HQ Petty Officer", "PSY", [ "Fighter", "Ambition" ], 4, 18, 5, 2, 50, null, 267, 98, 27, 1193, 561, 158, 1 ],
 	[ "War Hero Coby, Navy HQ Petty Officer", "PSY", [ "Fighter", "Ambition" ], 5, 30, 4, 3, 99, null, 1121, 500, 104, null, null, null, 0 ],
 	[ "Lady Alvida, Lovely Beauty", "QCK", [ "Striker", "Freedom" ], 4, 18, 5, 1, 50, null, 240, 92, 31, 1030, 534, 197, 1 ],
-	[ "Lady Alvida, Peerless Beauty", "QCK", [ "Striker", "Freedom" ], 5, 30, 6, 3, 99, null, 967, 466, 148, null, null, null, 0 ]
+	[ "Lady Alvida, Peerless Beauty", "QCK", [ "Striker", "Freedom" ], 5, 30, 6, 3, 99, null, 967, 466, 148, 2092, 1000, 307, 1 ]
 ];
