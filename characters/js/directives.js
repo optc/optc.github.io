@@ -305,6 +305,8 @@ directives.compare = function() {
                 scope.compareCooldown = window.cooldowns[suggestion];
                 scope.isCompareSpecialArray = (scope.compareDetails && scope.compareDetails.special &&
                     scope.compareDetails.special.constructor == Array);
+                scope.isCompareCaptainArray = (scope.compareDetails && scope.compareDetails.captain &&
+                    scope.compareDetails.captain.constructor == Array);
                 if (!scope.$$phase) scope.$apply();
             });
 

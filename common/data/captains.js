@@ -772,7 +772,7 @@ window.captains = {
 		atk: function(p) { return p.unit.cost <= 20 ? 3 : 1; }
 	},
 	459: {
-		atk: function(p) { return p.unit.cost <= 20 ? 3 : 1; }
+		atk: function(p) { return p.unit.number == 457 || p.unit.number == 458 || p.unit.cost <= 20 ? 3 : 1; }
 	},
 	461: {
 		atk: function(p) { return p.unit.class.has("Fighter") ? 2 : 1; }

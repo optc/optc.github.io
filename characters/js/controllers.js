@@ -147,6 +147,7 @@ app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, 
     };
     $scope.getPrevious = function() { return $stateParams.previous.concat($scope.id); };
     $scope.isSpecialArray = ($scope.details && $scope.details.special && $scope.details.special.constructor == Array);
+    $scope.isCaptainArray = ($scope.details && $scope.details.captain && $scope.details.captain.constructor == Array);
     // radar
     if ($scope.unit.incomplete) return;
     $scope.radar = {

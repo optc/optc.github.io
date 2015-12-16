@@ -1834,7 +1834,10 @@ window.details = {
 		special: "Deals random PSY damage to all enemies, boosts ATK of all characters by 1.5x for 1 turn",
 		specialName: "Zen Shockwave",
 		specialNotes: "Estimated random damage range: between 30,000 HP and 150,000 HP.",
-		captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of characters with cost 20 or less by 3x"
+		captain: [
+			"Reduces cooldown of all specials by 2 turns at the start of the fight, boosts own ATK and ATK of characters with cost 20 or less by 3x",
+			"Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of characters with cost 20 or less by 3x"
+		]
 	},
 	460: {
 		special: "Recovers 33 HP after the end of each turn for 999 turns, delays all enemies for 1 turn",
@@ -3804,5 +3807,21 @@ window.details = {
 		captain: "Boosts ATK and RCV of PSY characters by 2x",
 		specialName: "Bonney's Dinner Time",
 		special: "Changes neighboring slots' orbs into [RCV] orbs, boosts RCV of PSY characters by 1.5x for 1 turn"
+	},
+	859: {
+		captain: "Boosts ATK of Ambition characters by 1.5x, reduces damage received up to 10% when HP is low",
+		specialName: "Mediation at the Risk of Own's Life",
+		special: "Changes neighboring slots' orbs into [RCV] orbs; if the special is activated with more than 50% health remaining, prevents death as long as HP is above a certain amount for 1 turn"
+	},
+	860: {
+		captain: "Boosts ATK of Ambition characters by 2x, reduces damage received up to 10% when HP is low",
+		specialName: "Mediation at the Risk of Own's Life",
+		special: "Changes neighboring slots' orbs into [RCV] orbs; if the special is activated with more than 50% health remaining, prevents death as long as HP is above a certain amount for 1 turn"
+	},
+	861: {
+		specialName: "Bewitching Lovely Iron Mace",
+		special: "Deals 13x character's ATK in QCK damage to one enemy, reduces damage received by 75% for 1 turn, amplifies the effect of orbs by 1.5x for 1 turn",
+		specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.5x more damage and opposite orbs will deal 1.5x less damage",
+		captain: "Reduces damage received by 10%"
 	}
 };

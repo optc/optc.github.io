@@ -124,7 +124,15 @@
                                 <tr>
                                     <td>Captain Ability</td>
                                     <td>
-                                        <div ng-bind-html="details.captain | decorate"></div>
+                                        <!-- same captain ability -->
+                                        <div ng-if="!isCaptainArray" ng-bind-html="details.captain | decorate"></div>
+                                        <!-- different captain abilities -->
+                                        <div ng-if="isCaptainArray">
+                                            <span class="badge badge-japan">Japan</span>
+                                            <div ng-bind-html="details.captain[0] | decorate"></div>
+                                            <span class="badge badge-global">Global</span>
+                                            <div ng-bind-html="details.captain[1] | decorate"></div>
+                                        </div>
                                         <span class="notes" ng-if="details.captainNotes" ng-bind-html="details.captainNotes | decorate"></span>
                                     </td>
                                 </tr>
@@ -165,7 +173,15 @@
                                 <tr>
                                     <td>Captain Ability</td>
                                     <td>
-                                        <div ng-bind-html="compareDetails.captain | decorate"></div>
+                                        <!-- same captain ability -->
+                                        <div ng-if="!isCompareCaptainArray" ng-bind-html="compareDetails.captain | decorate"></div>
+                                        <!-- different captain abilities -->
+                                        <div ng-if="isCompareCaptainArray">
+                                            <span class="badge badge-japan">Japan</span>
+                                            <div ng-bind-html="compareDetails.captain[0] | decorate"></div>
+                                            <span class="badge badge-global">Global</span>
+                                            <div ng-bind-html="compareDetails.captain[1] | decorate"></div>
+                                        </div>
                                         <span class="notes" ng-if="compareDetails.captainNotes" ng-bind-html="compareDetails.captainNotes | decorate"></span>
                                     </td>
                                 </tr>
