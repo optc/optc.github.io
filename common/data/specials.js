@@ -819,5 +819,11 @@ window.specials = {
 	858: {
 		rcv: function(p) { return p.unit.type == 'PSY' ? 1.5 : 1; },
 		type: "type"
+	},
+	861: {
+		orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); }
+	},
+	862: {
+		orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); }
 	}
 };

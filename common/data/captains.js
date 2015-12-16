@@ -772,8 +772,8 @@ window.captains = {
 		atk: function(p) { return p.unit.cost <= 20 ? 3 : 1; }
 	},
 	459: {
-		atk: function(p) { return p.unit.number == 457 || p.unit.number == 458 || p.unit.cost <= 20 ? 3 : 1; },
-		warning: 'Using the updated version of Sengoku the Buddha\'s captain effect.'
+		atk: function(p) { return p.unit.number == 458 || p.unit.cost <= 20 ? 3 : 1; },
+		warning: "Using the updated version of Sengoku the Buddha's captain effect."
 	},
 	461: {
 		atk: function(p) { return p.unit.class.has("Fighter") ? 2 : 1; }
@@ -1819,5 +1819,14 @@ window.captains = {
 	858: {
 		atk: function(p) { return p.unit.type == 'PSY' ? 2 : 1; },
 		rcv: function(p) { return p.unit.type == 'PSY' ? 2 : 1; }
+	},
+	859: {
+		atk: function(p) { return p.unit.class.has("Ambition") ? 1.5 : 1; }
+	},
+	860: {
+		atk: function(p) { return p.unit.class.has("Ambition") ? 2 : 1; }
+	},
+	862: {
+		atk: function(p) { return p.unit.type == 'QCK' ? 2 : 1; }
 	}
 };
