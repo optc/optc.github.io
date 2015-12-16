@@ -3823,5 +3823,11 @@ window.details = {
 		special: "Deals 13x character's ATK in QCK damage to one enemy, reduces damage received by 75% for 1 turn, amplifies the effect of orbs by 1.5x for 1 turn",
 		specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.5x more damage and opposite orbs will deal 1.5x less damage",
 		captain: "Reduces damage received by 10%"
+	},
+	862: {
+		captain: "Boosts ATK of QCK characters by 2x, reduces damage received by 10%",
+		specialName: "Bewitching Lovely Iron Mace",
+		special: "Deals 13x character's ATK in QCK damage to one enemy, reduces damage received by 75% for 1 turn, amplifies the effect of orbs by 1.5x for 1 turn",
+		specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.5x more damage and opposite orbs will deal 1.5x less damage"
 	}
 };
