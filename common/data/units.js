@@ -667,7 +667,7 @@ window.units = [
 	[ "Koza, Leader of the Suna Suna Clan", "QCK", [ "Striker", "Freedom" ], 4, 15, 4, 2, 70, 1066998, 445, 230, 123, 1000, 503, 341, 1 ],
 	[ "Nefertari Cobra, King of the Alabasta Kingdom", "PSY", "Fighter", 3, 15, 5, 2, 70, 1066998, 523, 294, 31, 1402, 571, 211, 1 ],
 	[ "Sabo", "PSY", [ "Freedom", "Striker" ], 5, 30, 5, 4, 70, 1066998, 369, 279, 169, 1498, 821, 305, 1.5 ],
-	[ "Sabo the Revolutionary", "PSY", [ "Freedom", "Striker" ], 6, 54, 4, 5, 99, 5000000, 1440, 752, 252, 2985, 1422, 451, 1.5 ],
+	[ "Sabo the Revolutionary", "PSY", [ "Freedom", "Striker" ], 6, 55, 4, 5, 99, 5000000, 1440, 752, 252, 2985, 1422, 451, 1.5 ],
 	[ "Koala", "DEX", [ "Fighter", "Freedom" ], 4, 18, 4, 3, 70, 1066998, 94, 122, 48, 996, 644, 226, 1.5 ],
 	[ "Koala the Revolutionary", "DEX", [ "Fighter", "Freedom" ], 5, 29, 4, 4, 99, 4000000, 931, 600, 185, 1934, 1212, 392, 1.5 ],
 	[ "Hack", "STR", [ "Fighter", "Tough" ], 4, 18, 4, 3, 70, 1066998, 188, 136, 21, 1241, 721, 151, 1.5 ],
