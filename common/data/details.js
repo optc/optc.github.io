@@ -3814,7 +3814,7 @@ window.details = {
 		special: "Changes neighboring slots' orbs into [RCV] orbs; if the special is activated with more than 50% health remaining, prevents death as long as HP is above a certain amount for 1 turn"
 	},
 	860: {
-		captain: "Boosts ATK of Ambition characters by 2x, reduces damage received up to 10% when HP is low",
+		captain: "Boosts ATK of Ambition characters by 2x, reduces damage received up to 30% when HP is low",
 		specialName: "Pleading at the Risk of Own's Life",
 		special: "Changes neighboring slots' orbs into [RCV] orbs; if the special is activated with more than 50% health remaining, prevents death as long as HP is above a certain amount for 1 turn"
 	},
