@@ -1,6 +1,6 @@
 (function() {
 
-angular.module('optc') .run(function($rootScope, $timeout, $storage) {
+angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS) {
 
     /**************
      * Table data *
@@ -151,15 +151,22 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage) {
         if (filters.noLog && characterLog.hasOwnProperty(id)) return false;
         if (filters.noMissing && !characterLog.hasOwnProperty(id)) return false;
         // filter by orb controllers
-        if (tableData.regexes.ctrlFrom || tableData.regexes.ctrlTo) {
-            if (id == 515 || id == 516) return false; // exclude Heracles
-            var temp = window.details[id].special;
-            if (temp.constructor == Array) temp = temp.join(',');
-            temp = temp.replace(/\],/g,']');
-            if (tableData.regexes.ctrlFrom && tableData.regexes.ctrlFrom.some(function(x) { return !x.test(temp); }))
-                return false;
-            if (tableData.regexes.ctrlTo && tableData.regexes.ctrlTo.some(function(x) { return !x.test(temp); }))
-                return false;
+        if ($rootScope.filters.custom[MATCHER_IDS['special.OrbControllers']] &&
+                (tableData.parameters.filters.ctrlFrom || tableData.parameters.filters.ctrlTo)) {
+            var orbData = CharUtils.getOrbControllerData(id);
+            if (!orbData) return false;
+            var from = tableData.parameters.filters.ctrlFrom || [ ], to = tableData.parameters.filters.ctrlTo || [ ];
+            var mismatch = true;
+            if (from.length && !to.length)
+                mismatch = from.some(function(x) { return !orbData.from.hasOwnProperty(x); });
+            else if (!from.length && to.length)
+                mismatch = to.some(function(x) { return !orbData.to.hasOwnProperty(x); });
+            else {
+                mismatch = from.some(function(f) {
+                    return to.some(function(t) { return !orbData.map[f] || !orbData.map[f].hasOwnProperty(t); });
+                });
+            }
+            if (mismatch) return false;
         }
         // filter by class-filters
         if (tableData.regexes.classCaptain && !tableData.regexes.classCaptain.test(window.details[id].captain)) return false;

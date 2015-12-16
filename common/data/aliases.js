@@ -1,4 +1,5 @@
 window.aliases = {
+    4: [ 'G2' ],
     15: [ 'GPU' ],
     16: [ 'Usopp' ],
     63: [ 'Hachi' ],

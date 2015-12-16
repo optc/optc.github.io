@@ -1,6 +1,7 @@
 (function() {
 
 var CharUtils = { };
+var orbControllerData = { };
 
 /* * * * * Reverse drop map * * * * */
 
@@ -208,6 +209,40 @@ CharUtils.getIslandBonuses = function(y, day) {
         if (global && drops['Story Island'][y] && drops['Story Island'][y].global) result.push('GL:' + global.type);
         if (japan) result.push('JP:' + japan.type);
     }
+    return result;
+};
+
+CharUtils.getOrbControllerData = function(id) {
+    if (orbControllerData.hasOwnProperty(id) || !window.details[id] || !window.details[id].special)
+        return (orbControllerData[id] || null);
+    var special = window.details[id].special;
+    var data = (special.constructor == Array ? special.join(' / ') : special);
+    var match = data.match(/(changes.+?orbs into.+?orbs)/gi);
+    if (!match) {
+        orbControllerData[id] = null;
+        return null;
+    }
+    var result = { from: { }, to: { }, map: { } };
+    match.forEach(function(match) {
+        var n = match.indexOf(' into ');
+        var from = match.slice(0,n).match(/\[(.+?)\]/gi);
+        var to = match.slice(n + 6).match(/\[(.+?)\]/gi);
+        if (from) {
+            from = from.map(function(x) { return x.slice(1,-1); });
+            from.forEach(function(x) { result.from[x] = true; });
+        }
+        if (to) {
+            to = to.map(function(x) { return x.slice(1,-1); });
+            to.forEach(function(x) { result.to[x] = true; });
+        }
+        if (from && to) {
+            from.forEach(function(f) {
+                if (!result.map[f]) result.map[f] = { };
+                to.forEach(function(x) { result.map[f][x] = true; });
+            });
+        }
+    });
+    orbControllerData[id] = result;
     return result;
 };
 

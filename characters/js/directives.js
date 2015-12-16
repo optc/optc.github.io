@@ -174,7 +174,7 @@ directives.addOrbOptions = function($timeout, $compile, MATCHER_IDS) {
                 if (orbs[target].indexOf(type) == -1) orbs[target].push(type);
                 else orbs[target].splice(orbs[target].indexOf(type), 1);
                 orbs[target] = orbs[target].slice(-2);
-                scope.filters[target] = orbs[target].length === 0 ? null : orbs[target].join(',');
+                scope.filters[target] = orbs[target];
             };
         }
     };
