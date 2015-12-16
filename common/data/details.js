@@ -1202,7 +1202,7 @@ window.details = {
 		special: "Randomly changes all orbs into either [DEX] or [STR] orbs, deals random DEX damage to all enemies",
 		specialName: "Beautiful Secretary's Job",
 		specialNotes: "Estimated random damage range: between 1 HP and 15,000 HP.",
-		captain: "Recovers 500 HP at end of turn, reduces damage received by 15%"
+		captain: "Recovers 1,000 HP at end of turn, reduces damage received by 15%"
 	},
 	319: {
 		special: "Locks all orbs for 1 turn",
