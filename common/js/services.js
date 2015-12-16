@@ -17,22 +17,30 @@ services.$storage = function() {
     
         get: function(key, defaultValue) {
             if (storage === null) return defaultValue;
-            return JSON.parse(storage.getItem(key)) || defaultValue;
+            try {
+                return JSON.parse(storage.getItem(key)) || defaultValue;
+            } catch (e) { return defaultValue; }
         },
 
         set: function(key, value) {
             if (storage === null) return;
-            storage.setItem(key, JSON.stringify(value));
+            try {
+                storage.setItem(key, JSON.stringify(value));
+            } catch(e) { }
         },
 
         has: function(key) {
             if (storage === null) return false;
-            return storage.hasOwnProperty(key);
+            try {
+                return storage.hasOwnProperty(key);
+            } catch(e) { return false; }
         },
 
         remove: function(key) {
             if (storage === null) return;
-            storage.removeItem(key);
+            try {
+                storage.removeItem(key);
+            } catch(e) { }
         }
 
     };
