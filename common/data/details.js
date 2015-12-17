@@ -3555,9 +3555,9 @@ window.details = {
 		specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.75x more damage and opposite orbs will deal 1.75x less damage"
 	},
 	806: {
-		captain: "Boosts ATK of Striker characters by 2x, reduces damage received up to 30% if HP is low",
-		specialName: "White Vine",
 		special: "Reduces crew's current HP by 20%, deals 10x the amount of HP subtracted in INT damage to one enemy, amplifies the effect of orbs by 1.75x for 1 turn",
+		specialName: "White Vine",
+		captain: "Boosts ATK of Striker characters by 2x, reduces damage received up to 30% depending on the crew's current HP",
 		specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.75x more damage and opposite orbs will deal 1.75x less damage"
 	},
 	807: {
@@ -3810,14 +3810,14 @@ window.details = {
 		special: "Changes neighboring slots' orbs into [RCV] orbs, boosts RCV of PSY characters by 1.5x for 1 turn"
 	},
 	859: {
-		captain: "Boosts ATK of Ambition characters by 1.5x, reduces damage received up to 10% when HP is low",
+		captain: "Boosts ATK of Ambition characters by 1.5x, reduces damage received up to 10% depending on the crew's current HP",
 		specialName: "Pleading at the Risk of One's Life",
-		special: "Changes neighboring slots' orbs into [RCV] orbs; if the special is activated with more than 50% health remaining, prevents death as long as HP is above a certain amount for 1 turn"
+		special: "Changes neighboring slots' orbs into [RCV] orbs; if the special is activated with more than 50% health remaining, prevents death for 1 turn"
 	},
 	860: {
-		captain: "Boosts ATK of Ambition characters by 2x, reduces damage received up to 30% when HP is low",
+		captain: "Boosts ATK of Ambition characters by 2x, reduces damage received up to 30% depending on the crew's current HP",
 		specialName: "Pleading at the Risk of One's Life",
-		special: "Changes neighboring slots' orbs into [RCV] orbs; if the special is activated with more than 50% health remaining, prevents death as long as HP is above a certain amount for 1 turn"
+		special: "Changes neighboring slots' orbs into [RCV] orbs; if the special is activated with more than 50% health remaining, prevents death for 1 turn"
 	},
 	861: {
 		specialName: "Bewitching Lovely Iron Mace",
