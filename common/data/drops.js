@@ -855,6 +855,7 @@ window.drops = {
         {
             name: 'Doflamingo',
             thumb: 418,
+            global: true,
             Ultimate: [ 86, 112, 118, 302, 417 ],
             Master: [ 86, 97, 112, 417 ]
         },
