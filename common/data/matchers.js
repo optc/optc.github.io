@@ -158,7 +158,7 @@ window.matchers = [
     {
         name: 'Delayed ATK boosters',
         target: 'special',
-        matcher: /Following the activation.+boosts.+ATK/i
+        matcher: /(Following the activation.+boosts.+ATK|If during that turn.+boosts.+ATK)/i
     },
 
     {

@@ -655,8 +655,9 @@ window.drops = {
         },
 
         {
-            name: 'Prisoner Crocodile',
+            name: 'Crocodile: Life on the Inside',
             thumb: 510,
+            global: true,
             Expert: [ 509, 511, -402, -400, -374, -357, -259, -212, -209 ],
             Elite: [ 509, 511, -402, -400, -374, -357, -259, -212, -209 ]
         },
