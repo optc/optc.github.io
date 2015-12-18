@@ -133,7 +133,7 @@
                                             <span class="badge badge-global">Global</span>
                                             <div ng-bind-html="details.captain[1] | decorate"></div>
                                         </div>
-                                        <span class="notes" ng-if="details.captainNotes" ng-bind-html="details.captainNotes | decorate"></span>
+                                        <span class="notes" ng-if="details.captainNotes" ng-bind-html="details.captainNotes | notes | decorate"></span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -149,7 +149,7 @@
                                             <span class="badge badge-global">Global</span>
                                             <div ng-bind-html="details.special[1] | decorate"></div>
                                         </div>
-                                        <span class="notes" ng-if="details.specialNotes" ng-bind-html="details.specialNotes | decorate"></span>
+                                        <span class="notes" ng-if="details.specialNotes" ng-bind-html="details.specialNotes | notes | decorate"></span>
                                     </td>
                                 </tr>
                                 <tr ng-if="cooldown">
@@ -182,7 +182,7 @@
                                             <span class="badge badge-global">Global</span>
                                             <div ng-bind-html="compareDetails.captain[1] | decorate"></div>
                                         </div>
-                                        <span class="notes" ng-if="compareDetails.captainNotes" ng-bind-html="compareDetails.captainNotes | decorate"></span>
+                                        <span class="notes" ng-if="compareDetails.captainNotes" ng-bind-html="compareDetails.captainNotes | notes | decorate"></span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -198,7 +198,7 @@
                                             <span class="badge badge-global">Global</span>
                                             <div ng-bind-html="compareDetails.special[1] | decorate"></div>
                                         </div>
-                                        <span class="notes" ng-if="compareDetails.specialNotes" ng-bind-html="compareDetails.specialNotes | decorate"></span>
+                                        <span class="notes" ng-if="compareDetails.specialNotes" ng-bind-html="compareDetails.specialNotes | notes | decorate"></span>
                                     </td>
                                 </tr>
                                 <tr ng-if="compareCooldown">

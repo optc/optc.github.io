@@ -50,7 +50,7 @@
             <tr ng-if="slot < 2">
                 <td colspan="5">
                     <div ng-bind-html="details.captain | decorate"></div>
-                    <span class="notes" ng-if="details.captainNotes" ng-bind-html="details.captainNotes | decorate"></span>
+                    <span class="notes" ng-if="details.captainNotes" ng-bind-html="details.captainNotes | notes | decorate"></span>
                 </td>
             </tr>
             <tr class="header">
@@ -63,7 +63,7 @@
                         {{cooldown.length ? cooldown[0] : cooldown}} turns
                         {{cooldown.length ? ' (maxed: ' + cooldown[1] + ' turns)' : ''}}
                     </div>
-                    <span class="notes" ng-if="details.specialNotes" ng-bind-html="details.specialNotes | decorate"></span>
+                    <span class="notes" ng-if="details.specialNotes" ng-bind-html="details.specialNotes | notes | decorate"></span>
                 </td>
             </tr>
         </tbody>

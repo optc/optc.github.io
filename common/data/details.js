@@ -96,6 +96,7 @@ window.details = {
 	20: {
 		special: "Deals 5,000 fixed damage to all enemies",
 		specialName: "Diable Jambe",
+		specialNotes: "#{fixed}",
 		captain: "Boosts ATK and HP of QCK characters by 1.5x"
 	},
 	21: {
@@ -273,7 +274,7 @@ window.details = {
 	},
 	58: {
 		special: "Poisons all enemies",
-		specialNotes: "Poison deals 0.5x character's ATK in fixed damage at the end of each turn",
+		specialNotes: "#{poison}",
 		specialName: "MH5",
 		captain: "Reduces damage received by 20%"
 	},
@@ -738,16 +739,16 @@ window.details = {
 	213: {
 		special: "Deals 20x character's ATK in STR damage to all enemies",
 		specialName: "Sorrowful Charge",
-		captain: "Prevents death as long as HP is above 50%"
+		captain: "Protects from defeat as long as HP is above 50%"
 	},
 	214: {
 		special: "Deals 20x character's ATK in STR damage to all enemies",
 		specialName: "Sorrowful Charge",
-		captain: "Prevents death as long as HP is above 50%"
+		captain: "Protects from defeat as long as HP is above 50%"
 	},
 	215: {
 		special: "Poisons all enemies",
-		specialNotes: "Poison deals 0.5x character's ATK in fixed damage at the end of each turn",
+		specialNotes: "#{poison}",
 		specialName: "Poison Ink",
 		captain: "Boosts HP of Striker characters by 1.5x"
 	},
@@ -824,6 +825,7 @@ window.details = {
 	230: {
 		special: "Deals 200 fixed damage to one enemy",
 		specialName: "Double Hyper Straight",
+		specialNotes: "#{fixed}",
 		captain: "Boosts ATK of STR characters by 1.5x"
 	},
 	231: {
@@ -900,13 +902,13 @@ window.details = {
 	248: {
 		special: "Deals random STR damage to one enemy",
 		specialName: "Rampage",
-		specialNotes: "Estimated random damage range: between 2,000 HP and 200,000 HP.",
+		specialNotes: "#{random : 2,000 : 200,000}",
 		captain: "Boosts ATK of STR characters by 2.5x and reduces their HP by 60%"
 	},
 	249: {
 		special: "Deals random STR damage to one enemy",
 		specialName: "Rampage",
-		specialNotes: "Estimated random damage range: between 2,000 HP and 200,000 HP.",
+		specialNotes: "#{random : 2,000 : 200,000}",
 		captain: "Boosts ATK of STR characters by 3x and reduces their HP by 60%"
 	},
 	250: {
@@ -932,11 +934,13 @@ window.details = {
 	254: {
 		special: "Deals 5,000 fixed damage to all enemies",
 		specialName: "Rose Rondo",
+		specialNotes: "#{fixed}",
 		captain: "Boosts ATK and HP of INT characters by 2x"
 	},
 	255: {
 		special: "Deals 5,000 fixed damage to all enemies",
 		specialName: "Rose Rondo",
+		specialNotes: "#{fixed}",
 		captain: "Boosts ATK and HP of INT characters by 2x"
 	},
 	256: {
@@ -974,7 +978,7 @@ window.details = {
 	},
 	263: {
 		special: "Amplifies the effect of orbs by 1.5x for 2 turns",
-		specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.5x more damage and opposite orbs will deal 1.5x less damage",
+		specialNotes: "#{orb : 1.5}",
 		specialName: "Shave",
 		captain: "Boosts ATK of Fighter characters by 2x"
 	},
@@ -1162,14 +1166,14 @@ window.details = {
 	},
 	311: {
 		special: "Deals 100x character's ATK in fixed damage to one enemy, reduces crew's HP to 1",
-		specialNotes: "Fixed damage means the special entirely bypasses enemy defense",
 		specialName: "Massacre Soldier",
+		specialNotes: "#{fixed}",
 		captain: "Boosts ATK by 3.5x after scoring 3 hits below Good in a row"
 	},
 	312: {
 		special: "Deals 100x character's ATK in fixed damage to one enemy, reduces crew's HP to 1",
-		specialNotes: "Fixed damage means the special entirely bypasses enemy defense",
 		specialName: "Massacre Soldier",
+		specialNotes: "#{fixed}",
 		captain: "Boosts ATK by 3.5x after scoring 3 hits below Good in a row"
 	},
 	313: {
@@ -1195,13 +1199,13 @@ window.details = {
 	317: {
 		special: "Randomly changes all orbs into either [DEX] or [STR] orbs, deals random DEX damage to all enemies",
 		specialName: "Beautiful Secretary's Job",
-		specialNotes: "Estimated random damage range: between 1 HP and 15,000 HP.",
+		specialNotes: "#{random : 1 : 15,000}",
 		captain: "Recovers 500 HP at end of turn, reduces damage received by 10%"
 	},
 	318: {
 		special: "Randomly changes all orbs into either [DEX] or [STR] orbs, deals random DEX damage to all enemies",
 		specialName: "Beautiful Secretary's Job",
-		specialNotes: "Estimated random damage range: between 1 HP and 15,000 HP.",
+		specialNotes: "#{random : 1 : 15,000}",
 		captain: "Recovers 1,000 HP at end of turn, reduces damage received by 15%"
 	},
 	319: {
@@ -1226,13 +1230,13 @@ window.details = {
 	},
 	323: {
 		special: "Amplifies the effect of orbs by 1.5x for 2 turns",
-		specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.5x more damage and opposite orbs will deal 1.5x less damage",
+		specialNotes: "#{orb : 1.5}",
 		specialName: "Mountain Wind",
 		captain: "Boosts HP and RCV of QCK characters by 1.5x"
 	},
 	324: {
 		special: "Amplifies the effect of orbs by 1.5x for 2 turns",
-		specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.5x more damage and opposite orbs will deal 1.5x less damage",
+		specialNotes: "#{orb : 1.5}",
 		specialName: "Mountain Wind",
 		captain: "Boosts HP and RCV of QCK characters by 1.5x"
 	},
@@ -1299,13 +1303,13 @@ window.details = {
 	340: {
 		special: "Randomly changes all orbs into either [STR] or [QCK] orbs, deals random STR damage to all enemies",
 		specialName: "Kraken Tentacle Crush",
-		specialNotes: "Estimated random damage range: between 1 HP and 15,000 HP.",
+		specialNotes: "#{random : 1 : 15,000}",
 		captain: "Boosts ATK of Striker characters by 2x"
 	},
 	341: {
 		special: "Randomly changes all orbs into either [STR] or [QCK] orbs, deals random STR damage to all enemies",
 		specialName: "Kraken Tentacle Crush",
-		specialNotes: "Estimated random damage range: between 1 HP and 15,000 HP.",
+		specialNotes: "#{random : 1 : 15,000}",
 		captain: "Boosts ATK of Striker characters by 2x"
 	},
 	352: {
@@ -1342,21 +1346,21 @@ window.details = {
 		special: "Changes [TND] and [RCV] orbs into [DEX] orbs, deals random DEX damage to all enemies",
 		specialName: "Scratch Body",
 		captain: "Boosts ATK of DEX characters by 2.5x if HP is above 99% at the start of the turn",
-		specialNotes: "Estimated random damage range: between 5,000 HP and 20,000 HP."
+		specialNotes: "#{random : 5,000 : 20,000}"
 	},
 	359: {
 		special: "Changes [TND] and [RCV] orbs into [DEX] orbs, deals random DEX damage to all enemies",
 		specialName: "Scratch Body",
-		specialNotes: "Estimated random damage range: between 5,000 HP and 20,000 HP.",
+		specialNotes: "#{random : 5,000 : 20,000}",
 		captain: "Boosts ATK of DEX characters by 3x if HP is above 99% at the start of the turn"
 	},
 	360: {
-		special: "Deals 10x character's ATK in INT damage to all enemies, prevents death as long as HP is above 50% for 1 turn",
+		special: "Deals 10x character's ATK in INT damage to all enemies, protects from defeat as long as HP is above 50% for 1 turn",
 		specialName: "Prehistoric Power",
 		captain: "Boosts ATK of INT characters by 3x if HP is below 30% at the start of the turn"
 	},
 	361: {
-		special: "Deals 10x character's ATK in INT damage to all enemies, prevents death as long as HP is above 50% for 1 turn",
+		special: "Deals 10x character's ATK in INT damage to all enemies, protects from defeat as long as HP is above 50% for 1 turn",
 		specialName: "Prehistoric Power",
 		captain: "Boosts ATK of INT characters by 3x if HP is below 30% at the start of the turn"
 	},
@@ -1482,13 +1486,13 @@ window.details = {
 	387: {
 		special: "Randomly changes all orbs into either [PSY] or [INT] orbs, deals random PSY damage to all enemies",
 		specialName: "Square Plate Sword",
-		specialNotes: "Estimated random damage range: between 1 HP and 10,000 HP.",
+		specialNotes: "#{random : 1 : 10,000}",
 		captain: "Boosts RCV of PSY characters by 1.5x"
 	},
 	388: {
 		special: "Randomly changes all orbs into either [PSY] or [INT] orbs, deals random PSY damage to all enemies",
 		specialName: "Square Plate Sword",
-		specialNotes: "Estimated random damage range: between 1 HP and 10,000 HP.",
+		specialNotes: "#{random : 1 : 10,000}",
 		captain: "Boosts RCV of PSY characters by 1.5x"
 	},
 	389: {
@@ -1504,11 +1508,13 @@ window.details = {
 	391: {
 		special: "Reduces damage received by 90% for 1 turn, reduces the defense of all enemies by 80% for 1 turn, deals 1,000 fixed damage to all enemies at the end of the following turn",
 		specialName: "Negative Hollow",
+		specialNotes: "#{fixed}",
 		captain: "Boosts RCV of DEX characters by 1.5x"
 	},
 	392: {
 		special: "Reduces damage received by 90% for 1 turn, reduces the defense of all enemies by 80% for 1 turn, deals 1,000 fixed damage to all enemies at the end of the following turn",
 		specialName: "Negative Hollow",
+		specialNotes: "#{fixed}",
 		captain: "Boosts RCV of DEX characters by 2x"
 	},
 	393: {
@@ -1517,17 +1523,18 @@ window.details = {
 	},
 	394: {
 		special: "Deals 500 fixed damage to all enemies",
-		specialName: "The Tempest Called Love"
+		specialName: "The Tempest Called Love",
+		specialNotes: "#{fixed}",
 	},
 	395: {
 		special: "Empties neighboring slots, amplifies the effect of orbs by 1.25x for 1 turn",
-		specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.25x more damage and opposite orbs will deal 1.25x less damage",
+		specialNotes: "#{orb : 1.25}",
 		specialName: "Mole Banana",
 		captain: "Boosts ATK and RCV of QCK characters by 1.2x"
 	},
 	396: {
 		special: "Empties neighboring slots, amplifies the effect of orbs by 1.25x for 1 turn",
-		specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.25x more damage and opposite orbs will deal 1.25x less damage",
+		specialNotes: "#{orb : 1.25}",
 		specialName: "Mole Banana",
 		captain: "Boosts ATK and RCV of QCK characters by 1.2x"
 	},
@@ -1563,7 +1570,7 @@ window.details = {
 	},
 	403: {
 		special: "Deals several times the character's ATK in QCK damage to all enemies",
-		specialNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the lower the HP is. The multiplier is calculated as: 150 * ( 1 - (remaining HP) / (total HP) )",
+		specialNotes: "#{specialProportional : lower : 150 * ( 1 - (remaining HP) / (total HP) )}",
 		specialName: "Backwater Sword Dance",
 		captain: "Reduces damage received by 50% if HP is low, boosts RCV of all characters by 3x if HP is low"
 	},
@@ -1579,7 +1586,8 @@ window.details = {
 	},
 	406: {
 		special: "Reduces crew's HP to 1, deals 1,000 fixed damage to all enemies, boosts ATK of all characters by 1.2x for 1 turn",
-		specialName: "Skills of the Ancient Warriors"
+		specialName: "Skills of the Ancient Warriors",
+		specialNotes: "#{fixed}",
 	},
 	407: {
 		special: "Randomizes all orbs, deals 7x character's ATK in DEX damage to all enemies",
@@ -1603,11 +1611,13 @@ window.details = {
 	411: {
 		special: "Changes neighboring slots' orbs into [STR] orbs, deals 1,000 fixed damage to all enemies",
 		specialName: "Ursa Shock",
+		specialNotes: "#{fixed}",
 		captain: "Boosts ATK and HP of STR characters by 2x"
 	},
 	412: {
 		special: "Changes neighboring slots' orbs into [STR] orbs, deals 1,000 fixed damage to all enemies",
 		specialName: "Ursa Shock",
+		specialNotes: "#{fixed}",
 		captain: "Boosts ATK and HP of STR characters by 2x"
 	},
 	413: {
@@ -1632,13 +1642,13 @@ window.details = {
 	},
 	417: {
 		special: "Freely switch orbs between slots twice, amplifies the effect of orbs by 2x for 1 turn",
-		specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 2x more damage and opposite orbs will deal 2x less damage",
+		specialNotes: "#{orb : 2}",
 		specialName: "Overheat",
 		captain: "Boosts ATK of Slasher characters by 2x"
 	},
 	418: {
 		special: "Freely switch orbs between slots twice, amplifies the effect of orbs by 2x for 1 turn",
-		specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 2x more damage and opposite orbs will deal 2x less damage",
+		specialNotes: "#{orb : 2}",
 		specialName: "Overheat",
 		captain: "Boosts ATK and HP of Slasher characters by 2x"
 	},
@@ -1665,17 +1675,17 @@ window.details = {
 	423: {
 		special: "Recovers 4,343 HP, reduces the defense of all enemies by 50% for 2 turns",
 		specialName: "Lullaby Parry",
-		captain: "Prevents death as long as HP is above 70%"
+		captain: "Protects from defeat as long as HP is above 70%"
 	},
 	424: {
 		special: "Recovers 4,343 HP, reduces the defense of all enemies by 50% for 2 turns",
 		specialName: "Lullaby Parry",
-		captain: "Prevents death as long as HP is above 70%"
+		captain: "Protects from defeat as long as HP is above 70%"
 	},
 	425: {
 		special: "Deals random PSY damage to all enemies",
 		specialName: "Shusui: Three Verse Arrow Notch Slash",
-		specialNotes: "Estimated random damage range: between 1 HP and 100,000 HP.",
+		specialNotes: "#{random : 1 : 100,000}",
 		captain: "Boosts ATK and HP of Slasher characters by 1.5x"
 	},
 	426: {
@@ -1699,13 +1709,13 @@ window.details = {
 	},
 	430: {
 		special: "Amplifies the effect of orbs by 1.5x for 1 turn",
-		specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.5x more damage and opposite orbs will deal 1.5x less damage",
+		specialNotes: "#{orb : 1.5}",
 		specialName: "Spring Hopper",
 		captain: "Boosts ATK of DEX characters by 1.5x"
 	},
 	431: {
 		special: "Amplifies the effect of orbs by 1.5x for 1 turn",
-		specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.5x more damage and opposite orbs will deal 1.5x less damage",
+		specialNotes: "#{orb : 1.5}",
 		specialName: "Spring Hopper",
 		captain: "Boosts ATK and HP of DEX characters by 1.5x"
 	},
@@ -1720,7 +1730,7 @@ window.details = {
 	},
 	434: {
 		special: "Amplifies the effect of orbs by 1.25x for 3 turns",
-		specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.25x more damage and opposite orbs will deal 1.25x less damage",
+		specialNotes: "#{orb : 1.25}",
 		specialName: "Newkama Kenpo - Maiden's Awakening",
 		captain: "Boosts ATK by 2x following a chain of PSY > INT > INT attacks no lower than Good"
 	},
@@ -1737,11 +1747,13 @@ window.details = {
 	437: {
 		special: "Recovers 3x character's RCV in HP, reduces damage received by 80% for 1 turn, deals 1,000 fixed damage to all enemies at the end of the following turn",
 		specialName: "Negative Horo \"Sweet\"",
+		specialNotes: "#{fixed}",
 		captain: "Boosts RCV of all characters by 3x if HP is below 30% at the start of the turn"
 	},
 	438: {
 		special: "Recovers 3x character's RCV in HP, reduces damage received by 80% for 1 turn, deals 1,000 fixed damage to all enemies at the end of the following turn",
 		specialName: "Negative Horo \"Sweet\"",
+		specialNotes: "#{fixed}",
 		captain: "Boosts RCV of all characters by 5x if HP is below 30% at the start of the turn"
 	},
 	439: {
@@ -1806,13 +1818,13 @@ window.details = {
 		special: "Boosts ATK of STR characters by 1.5x for 1 turn, deals 15x character's ATK in STR damage to all enemies",
 		specialName: "Manly Flaming Sword",
 		captain: "Boosts ATK of STR characters by 2x, boosts damage of STR specials by 2x",
-		captainNotes: "Specials that deal fixed damage or cut a percentage of the enemy's HP are not affected by this captain ability"
+		captainNotes: "#{noFixedPerc}"
 	},
 	455: {
 		special: "Boosts ATK of STR characters by 1.5x for 1 turn, deals 15x character's ATK in STR damage to all enemies",
 		specialName: "Manly Flaming Sword",
 		captain: "Boosts ATK of STR characters by 2x, boosts damage of STR specials by 2x",
-		captainNotes: "Specials that deal fixed damage or cut a percentage of the enemy's HP are not affected by this captain ability"
+		captainNotes: "#{noFixedPerc}"
 	},
 	456: {
 		special: "Randomly changes the orbs in the middle row into either [STR] or [DEX] orbs, the orbs in the lower row into either [PSY] or [INT] orbs, freely switch orbs between slots once",
@@ -1827,13 +1839,13 @@ window.details = {
 	458: {
 		special: "Deals random PSY damage to all enemies, boosts ATK of all characters by 1.5x for 1 turn",
 		specialName: "Zen Shockwave",
-		specialNotes: "Estimated random damage range: between 30,000 HP and 150,000 HP.",
+		specialNotes: "#{random : 30,000 : 150,000}",
 		captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of characters with cost 20 or less by 3x"
 	},
 	459: {
 		special: "Deals random PSY damage to all enemies, boosts ATK of all characters by 1.5x for 1 turn",
 		specialName: "Zen Shockwave",
-		specialNotes: "Estimated random damage range: between 30,000 HP and 150,000 HP.",
+		specialNotes: "#{random : 30,000 : 150,000}",
 		captain: [
 			"Reduces cooldown of all specials by 2 turns at the start of the fight, boosts own ATK and ATK of characters with cost 20 or less by 3x",
 			"Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of characters with cost 20 or less by 3x"
@@ -1867,7 +1879,7 @@ window.details = {
 	},
 	465: {
 		special: "Deals 20x character's ATK in QCK damage to one enemy, amplifies the effect of orbs by 1.25x for 2 turns",
-		specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.25x more damage and opposite orbs will deal 1.25x less damage",
+		specialNotes: "#{orb : 1.25}",
 		specialName: "Jet Punch",
 		captain: "Boosts ATK by 3x after scoring 4 hits below Good in a row"
 	},
@@ -1916,7 +1928,8 @@ window.details = {
 	},
 	476: {
 		special: "Deals 1,000 fixed damage to one enemy",
-		specialName: "Milky Intelligence Axe"
+		specialName: "Milky Intelligence Axe",
+		specialNotes: "#{fixed}"
 	},
 	477: {
 		special: "Changes [DEX] orbs into [STR] orbs",
@@ -1996,7 +2009,7 @@ window.details = {
 	},
 	494: {
 		special: "Deals 3x character's ATK in INT damage to all enemies, poisons all enemies",
-		specialNotes: "Poison deals 0.5x character's ATK in fixed damage at the end of each turn",
+		specialNotes: "#{poison}",
 		specialName: "Poison Attack"
 	},
 	495: {
@@ -2006,7 +2019,7 @@ window.details = {
 	},
 	496: {
 		special: "Deals 3x character's ATK in INT damage to all enemies, poisons all enemies",
-		specialNotes: "Poison deals 0.5x character's ATK in fixed damage at the end of each turn",
+		specialNotes: "#{poison}",
 		specialName: "Poison Attack",
 		captain: "Boosts ATK of Shooter characters by 1.5x"
 	},
@@ -2053,12 +2066,12 @@ window.details = {
 	505: {
 		special: "Boosts ATK of QCK characters by 1.25x for 3 turns",
 		specialName: "Flying Claw",
-		captain: "Prevents death as long as HP is above 50%"
+		captain: "Protects from defeat as long as HP is above 50%"
 	},
 	506: {
 		special: "Boosts ATK of QCK characters by 1.25x for 3 turns",
 		specialName: "Flying Claw",
-		captain: "Prevents death as long as HP is above 30%"
+		captain: "Protects from defeat as long as HP is above 30%"
 	},
 	507: {
 		special: "Deals 25x character's ATK in STR damage to one enemy",
@@ -2072,13 +2085,13 @@ window.details = {
 	},
 	509: {
 		special: "Poisons all enemies, boosts ATK of Striker characters by 1.5x for 1 turn",
-		specialNotes: "Poison deals 0.5x character's ATK in fixed damage at the end of each turn",
+		specialNotes: "#{poison}",
 		specialName: "Cruel Trick - Poison Hook",
 		captain: "Boosts ATK of Striker characters by 1.5x"
 	},
 	510: {
 		special: "Poisons all enemies, boosts ATK of Striker characters by 1.5x for 1 turn",
-		specialNotes: "Poison deals 0.5x character's ATK in fixed damage at the end of each turn",
+		specialNotes: "#{poison}",
 		specialName: "Cruel Trick - Poison Hook",
 		captain: "Reduces damage received by 10%, boosts ATK of Striker characters by 2x"
 	},
@@ -2090,12 +2103,12 @@ window.details = {
 	512: {
 		special: "Boosts chances of getting [PSY] orbs and reduces chances of getting [INT] orbs for 3 turns",
 		specialName: "Sneaky Punk Kid Strike",
-		captain: "Prevents death as long as HP is above 50%"
+		captain: "Protects from defeat as long as HP is above 50%"
 	},
 	513: {
 		special: "Boosts chances of getting [PSY] orbs and reduces chances of getting [INT] orbs for 3 turns",
 		specialName: "Sneaky Punk Kid Strike",
-		captain: "Prevents death as long as HP is above 50%, boosts ATK of PSY characters by 1.5x if HP is above 50% at the start of the turn"
+		captain: "Protects from defeat as long as HP is above 50%, boosts ATK of PSY characters by 1.5x if HP is above 50% at the start of the turn"
 	},
 	514: {
 		special: "Boosts ATK of INT characters by 1.5x for 1 turn, reduces the defense of all enemies by 50% for 1 turn",
@@ -2126,35 +2139,35 @@ window.details = {
 	},
 	519: {
 		special: "Reduces crew's current HP by 99%, deals 25x character's ATK in fixed damage to all enemies, boosts ATK of STR characters by 2x for 1 turn",
-		specialNotes: "Fixed damage means the special entirely bypasses enemy defense",
 		specialName: "Gum-Gum Gigant Thunder Axe",
+		specialNotes: "#{fixed}",
 		captain: "Boosts ATK of STR characters by 2x"
 	},
 	520: {
 		special: "Reduces crew's current HP by 99%, deals 25x character's ATK in fixed damage to all enemies, boosts ATK of STR characters by 2x for 1 turn",
-		specialNotes: "Fixed damage means the special entirely bypasses enemy defense",
 		specialName: "Gum-Gum Gigant Thunder Axe",
+		specialNotes: "#{fixed}",
 		captain: "Boosts ATK of STR characters by 2.5x"
 	},
 	521: {
 		special: "Deals several times the character's ATK in INT damage to all enemies",
-		specialNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the lower the HP is. The multiplier is calculated as: 100 * ( 1 - (remaining HP) / (total HP) )",
+		specialNotes: "#{specialProportional : lower : 100 * ( 1 - (remaining HP) / (total HP) )}",
 		specialName: "Diable Jambe - Venaison Shot",
 		captain: "Reduces damage received by 80% if HP is above 99% at the start of the turn"
 	},
 	522: {
 		special: "Deals several times the character's ATK in INT damage to all enemies",
-		specialNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the lower the HP is. The multiplier is calculated as: 100 * ( 1 - (remaining HP) / (total HP) )",
+		specialNotes: "#{specialProportional : lower : 100 * ( 1 - (remaining HP) / (total HP) )}",
 		specialName: "Diable Jambe - Venaison Shot",
 		captain: "Reduces damage received by 80% if HP is above 99% at the start of the turn"
 	},
 	523: {
-		special: "Randomizes all orbs, prevents death as long as HP is above 50% for 1 turn",
+		special: "Randomizes all orbs, protects from defeat as long as HP is above 50% for 1 turn",
 		specialName: "Billy's Electrical Discharge",
 		captain: "Boosts ATK and RCV of Striker characters by 1.5x"
 	},
 	524: {
-		special: "Randomizes all orbs, prevents death as long as HP is above 50% for 1 turn",
+		special: "Randomizes all orbs, protects from defeat as long as HP is above 50% for 1 turn",
 		specialName: "Billy's Electrical Discharge",
 		captain: "Boosts ATK of Striker characters by 2x and their RCV by 1.5x"
 	},
@@ -2182,13 +2195,13 @@ window.details = {
 		special: "Deals 35x character's ATK in PSY damage to all enemies, reduces the defense of all enemies by 100% for 2 turns",
 		specialName: "Conqueror's Haki - Emperor",
 		captain: "Boosts chances of getting [PSY] orbs, boosts ATK of PSY characters proportionally to the crew's current HP",
-		captainNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the higher the HP is. The multiplier is calculated as 2 + 0.75 * (remaining HP) / (total HP). At full health the boost is equal to 2.75x"
+		captainNotes: "#{captainProportional : higher : 2 + 0.75 * (remaining HP) / (total HP) : 2.75 : 2}",
 	},
 	530: {
 		special: "Deals 35x character's ATK in PSY damage to all enemies, reduces the defense of all enemies by 100% for 2 turns",
 		specialName: "Conqueror's Haki - Emperor",
 		captain: "Boosts chances of getting [PSY] orbs, boosts ATK of PSY characters proportionally to the crew's current HP",
-		captainNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the higher the HP is. The multiplier is calculated as 2 + 0.75 * (remaining HP) / (total HP). At full health the boost is equal to 2.75x"
+		captainNotes: "#{captainProportional : higher : 2 + 0.75 * (remaining HP) / (total HP) : 2.75 : 2}"
 	},
 	531: {
 		special: "Reduces damage received by 30% for 4 turns",
@@ -2202,13 +2215,13 @@ window.details = {
 	},
 	533: {
 		special: "Amplifies the effect of orbs by 1.5x for 1 turn, deals 20x character's ATK in QCK damage to one enemy",
-		specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.5x more damage and opposite orbs will deal 1.5x less damage",
+		specialNotes: "#{orb : 1.5}",
 		specialName: "Swallow Bond En Avant: Blossom",
 		captain: "Boosts ATK of QCK characters by 2x"
 	},
 	534: {
 		special: "Amplifies the effect of orbs by 1.5x for 1 turn, deals 20x character's ATK in QCK damage to one enemy",
-		specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.5x more damage and opposite orbs will deal 1.5x less damage",
+		specialNotes: "#{orb : 1.5}",
 		specialName: "Swallow Bond En Avant: Blossom",
 		captain: "Boosts ATK of QCK characters by 2x"
 	},
@@ -2263,20 +2276,22 @@ window.details = {
 	545: {
 		special: "Deals 6,000 fixed damage to all enemies, boosts ATK of PSY characters by 1.5x for 1 turn",
 		specialName: "60,000,000 Volt Jamboule",
+		specialNotes: "#{fixed}",
 		captain: "Boosts ATK of PSY characters by 2x"
 	},
 	546: {
 		special: "Deals 6,000 fixed damage to all enemies, boosts ATK of PSY characters by 1.5x for 1 turn",
 		specialName: "60,000,000 Volt Jamboule",
+		specialNotes: "#{fixed}",
 		captain: "Boosts ATK of PSY characters by 2x, reduces damage received by 20%"
 	},
 	547: {
-		special: "Reduces crew's current HP by 10%, deals 1x character's ATK in STR damage to one enemy, prevents death as long as HP is above 50% for 1 turn",
+		special: "Reduces crew's current HP by 10%, deals 1x character's ATK in STR damage to one enemy, protects from defeat as long as HP is above 50% for 1 turn",
 		specialName: "Crazy Punk Kid Punch",
 		captain: "Boosts chances of getting [RCV] orbs"
 	},
 	548: {
-		special: "Reduces crew's current HP by 10%, deals 1x character's ATK in STR damage to one enemy, prevents death as long as HP is above 50% for 1 turn",
+		special: "Reduces crew's current HP by 10%, deals 1x character's ATK in STR damage to one enemy, protects from defeat as long as HP is above 50% for 1 turn",
 		specialName: "Crazy Punk Kid Punch",
 		captain: "Boosts chances of getting [RCV] orbs, boosts ATK of all characters by 1.2x"
 	},
@@ -2301,11 +2316,13 @@ window.details = {
 	553: {
 		special: "Changes neighboring slots' orbs into [DEX], deals 1,000 fixed damage to all enemies",
 		specialName: "Ashura Ugui",
+		specialNotes: "#{fixed}",
 		captain: "Boosts ATK of DEX characters by 2.75x if HP is below 30% at the start of the turn"
 	},
 	554: {
 		special: "Changes neighboring slots' orbs into [DEX], deals 1,000 fixed damage to all enemies",
 		specialName: "Ashura Ugui",
+		specialNotes: "#{fixed}",
 		captain: "Boosts ATK of DEX characters by 3x if HP is below 30% at the start of the turn"
 	},
 	555: {
@@ -2330,13 +2347,13 @@ window.details = {
 	},
 	559: {
 		special: "Changes own orb into [STR], amplifies the effect of orbs by 1.5x for 2 turns",
-		specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.5x more damage and opposite orbs will deal 1.5x less damage",
+		specialNotes: "#{orb : 1.5}",
 		specialName: "Roar! Zarley Davison",
 		captain: "Boosts ATK of STR characters by 2x, deals 2x character's ATK in STR damage to all enemies at the end of each turn"
 	},
 	560: {
 		special: "Changes own orb into [STR], amplifies the effect of orbs by 1.5x for 2 turns",
-		specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.5x more damage and opposite orbs will deal 1.5x less damage",
+		specialNotes: "#{orb : 1.5}",
 		specialName: "Roar! Zarley Davison",
 		captain: "Boosts ATK of STR characters by 2.25x, deals 2x character's ATK in STR damage to all enemies at the end of each turn"
 	},
@@ -2360,7 +2377,8 @@ window.details = {
 	},
 	565: {
 		special: "Deals 5,000 fixed damage to one enemy",
-		specialName: "Hamburger Hammer"
+		specialName: "Hamburger Hammer",
+		specialNotes: "#{fixed}"
 	},
 	566: {
 		special: "Empties all slots with hindrance orbs",
@@ -2420,13 +2438,13 @@ window.details = {
 	577: {
 		special: "Deals random typeless damage to all enemies, changes own orb into [STR]",
 		specialName: "Gum-Gum Jet Gatling",
-		specialNotes: "Estimated random damage range: between 70,000 HP and 200,000 HP.",
+		specialNotes: "#{random : 70,000 : 200,000}",
 		captain: "Boosts ATK by 4x following a chain of Good > Great > Perfect hits"
 	},
 	578: {
 		special: "Deals random typeless damage to all enemies, changes own orb into [STR]",
 		specialName: "Gum-Gum Jet Gatling",
-		specialNotes: "Estimated random damage range: between 70,000 HP and 200,000 HP.",
+		specialNotes: "#{random : 70,000 : 200,000}",
 		captain: "Boosts ATK by 4x following a chain of Good > Great > Perfect hits"
 	},
 	579: {
@@ -2522,11 +2540,13 @@ window.details = {
 	602: {
 		special: "Reduces crew's current HP by 90%, deals 20,000 fixed damage to all enemies, boosts ATK of QCK characters by 2x for 1 turn",
 		specialName: "200 Million Volt Lightning God",
+		specialNotes: "#{fixed}",
 		captain: "Boosts ATK of QCK characters by 2x"
 	},
 	603: {
 		special: "Reduces crew's current HP by 90%, deals 20,000 fixed damage to all enemies, boosts ATK of QCK characters by 2x for 1 turn",
 		specialName: "200 Million Volt Lightning God",
+		specialNotes: "#{fixed}",
 		captain: "Boosts ATK of QCK characters by 2.25x, recovers 5x character's RCV in HP at the end of each turn"
 	},
 	604: {
@@ -2634,7 +2654,8 @@ window.details = {
 	},
 	628: {
 		special: "Deals 15,000 fixed damage to one enemy",
-		specialName: "Keel Crusher"
+		specialName: "Keel Crusher",
+		specialNotes: "#{fixed}"
 	},
 	629: {
 		special: "Empties all slots with hindrance orbs, deals random INT damage to all enemies",
@@ -2693,25 +2714,25 @@ window.details = {
 	},
 	640: {
 		special: "Changes own orb into [DEX], deals several times the character's ATK in DEX damage to one enemy",
-		specialNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the lower the HP is. The multiplier is calculated as: 50 * ( 1 - (remaining HP) / (total HP) )",
+		specialNotes: "#{specialProportional : lower : 50 * ( 1 - (remaining HP) / (total HP) )}",
 		specialName: "Pirate Brothers - Twin Combo Attack",
 		captain: "Boosts ATK of Fighter characters by 2x, deals 2x character's ATK in DEX damage to all enemies at the end of each turn"
 	},
 	641: {
 		special: "Changes own orb into [DEX], deals several times the character's ATK in DEX damage to one enemy",
-		specialNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the lower the HP is. The multiplier is calculated as: 50 * ( 1 - (remaining HP) / (total HP) )",
+		specialNotes: "#{specialProportional : lower : 50 * ( 1 - (remaining HP) / (total HP) )}",
 		specialName: "Pirate Brothers - Twin Combo Attack",
 		captain: "Boosts ATK of Fighter characters by 2.25x, deals 2x character's ATK in DEX damage to all enemies at the end of each turn"
 	},
 	642: {
 		special: "Reduces crew's current HP by 30%, deals 10x character's ATK in PSY damage to one enemy, amplifies the effect of orbs by 1.75x for 1 turn",
-		specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.75x more damage and opposite orbs will deal 1.75x less damage",
+		specialNotes: "#{orb : 1.75}",
 		specialName: "Great Sword of the Battle Veteran",
 		captain: "Boosts ATK of PSY characters by 2.5x if HP is below 30% at the start of the turn"
 	},
 	643: {
 		special: "Reduces crew's current HP by 30%, deals 10x character's ATK in PSY damage to one enemy, amplifies the effect of orbs by 1.75x for 1 turn",
-		specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.75x more damage and opposite orbs will deal 1.75x less damage",
+		specialNotes: "#{orb : 1.75}",
 		specialName: "Great Sword of the Battle Veteran",
 		captain: "Boosts ATK of PSY characters by 3x if HP is below 30% at the start of the turn"
 	},
@@ -2737,25 +2758,25 @@ window.details = {
 	},
 	648: {
 		special: "Recovers 100x character's RCV in HP, amplifies the effect of orbs by 1.5x for 2 turns",
-		specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.5x more damage and opposite orbs will deal 1.5x less damage",
+		specialNotes: "#{orb : 1.5}",
 		specialName: "Blue Flame Kick",
 		captain: "Reduces damage received by 30% if HP is above 70% at the start of the turn, boosts ATK of QCK and PSY characters by 2.75x if HP is above 70% at the start the turn"
 	},
 	649: {
 		special: "Recovers 100x character's RCV in HP, amplifies the effect of orbs by 1.5x for 2 turns",
-		specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.5x more damage and opposite orbs will deal 1.5x less damage",
+		specialNotes: "#{orb : 1.5}",
 		specialName: "Blue Flame Kick",
 		captain: "Reduces damage received by 30% if HP is above 70% at the start of the turn, boosts ATK of QCK and PSY characters by 2.75x if HP is above 70% at the start the turn"
 	},
 	650: {
 		special: "Deals 5,000 fixed damage to one enemy, amplifies the effect of orbs by 1.5x for 1 turn",
-		specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.5x more damage and opposite orbs will deal 1.5x less damage",
+		specialNotes: "#{fixed} #{orb : 1.5}",
 		specialName: "Thunder Lance Tempo",
 		captain: "Boosts ATK of INT characters by 2x and their RCV by 1.5x"
 	},
 	651: {
 		special: "Deals 5,000 fixed damage to one enemy, amplifies the effect of orbs by 1.5x for 1 turn",
-		specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.5x more damage and opposite orbs will deal 1.5x less damage",
+		specialNotes: "#{fixed} #{orb : 1.5}",
 		specialName: "Thunder Lance Tempo",
 		captain: "Boosts ATK of INT characters by 2x and their RCV by 1.5x"
 	},
@@ -2776,13 +2797,13 @@ window.details = {
 	},
 	655: {
 		special: "Changes empty slots and [TND] orbs into [STR] orbs, deals 10x character's ATK in STR damage to one enemy, amplifies the effect of orbs by 1.25x for 2 turns",
-		specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.25x more damage and opposite orbs will deal 1.25x less damage",
+		specialNotes: "#{orb : 1.25}",
 		specialName: "Tooth Gum",
 		captain: "Boosts ATK of STR characters by 1.5x"
 	},
 	656: {
 		special: "Changes empty slots and [TND] orbs into [STR] orbs, deals 10x character's ATK in STR damage to one enemy, amplifies the effect of orbs by 1.25x for 2 turns",
-		specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.25x more damage and opposite orbs will deal 1.25x less damage",
+		specialNotes: "#{orb : 1.25}",
 		specialName: "Tooth Gum",
 		captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of STR characters by 2x"
 	},
@@ -2839,7 +2860,7 @@ window.details = {
 		captain: "Boosts ATK of all characters by 1.75x, reduces HP and RCV of all characters by 80%"
 	},
 	667: {
-		special: "Prevents death as long as HP is above 50% for 1 turn",
+		special: "Protects from defeat as long as HP is above 50% for 1 turn",
 		specialName: "King's Chopper",
 		captain: "Reduces damage received by 10%, boosts ATK of all characters by 1.5x"
 	},
@@ -2847,13 +2868,13 @@ window.details = {
 		special: "Boosts ATK of Freedom characters by 1.5x for 1 turn. If during that turn every unit scores a Perfect hit, boosts ATK of Freedom characters by 2x in the following turn.",
 		specialName: "Dragon's Claw",
 		captain: "Boosts HP and RCV of all characters by 1.2x, boosts ATK of Freedom characters proportionally to the crew's current HP",
-		captainNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the higher the HP is. The multiplier is calculated as 2 + 0.75 * (remaining HP) / (total HP). At full health the boost is equal to 2.75x"
+		captainNotes: "#{captainProportional : higher : 2 + 0.75 * (remaining HP) / (total HP) : 2.75 : 2}"
 	},
 	669: {
 		special: "Boosts ATK of Freedom characters by 1.5x for 1 turn. If during that turn every unit scores a Perfect hit, boosts ATK of Freedom characters by 2x in the following turn.",
 		specialName: "Dragon's Claw",
 		captain: "Boosts HP and RCV of all characters by 1.2x, boosts ATK of Freedom characters proportionally to the crew's current HP",
-		captainNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the higher the HP is. The multiplier is calculated as 2 + 0.75 * (remaining HP) / (total HP). At full health the boost is equal to 2.75x"
+		captainNotes: "#{captainProportional : higher : 2 + 0.75 * (remaining HP) / (total HP) : 2.75 : 2}"
 	},
 	670: {
 		special: "Boosts ATK of Fighter characters by 1.75x for 1 turn",
@@ -2951,13 +2972,13 @@ window.details = {
 	},
 	689: {
 		special: "Amplifies the effect of orbs by 1.5x for 2 turns",
-		specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.5x more damage and opposite orbs will deal 1.5x less damage",
+		specialNotes: "#{orb : 1.5}",
 		specialName: "Botanist's Great Discovery",
 		captain: "Boosts ATK and RCV of Slasher characters by 1.2x"
 	},
 	690: {
 		special: "Amplifies the effect of orbs by 1.5x for 2 turns",
-		specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.5x more damage and opposite orbs will deal 1.5x less damage",
+		specialNotes: "#{orb : 1.5}",
 		specialName: "Botanist's Great Discovery",
 		captain: "Boosts ATK and RCV of Slasher characters by 1.5x"
 	},
@@ -3061,13 +3082,13 @@ window.details = {
 	},
 	712: {
 		special: "Deals 15x character's ATK in QCK damage to one enemy, boosts ATK of the characters in the top row by 1.5x for 2 turns",
-		specialNotes: "The special boosts the attack of only the crew's captain and the currently selected friend captain",
+		specialNotes: "The special boosts the attack of only the crew's captain and the currently selected friend captain.",
 		specialName: "Sky Knight's Javelin",
 		captain: "Boosts ATK of Striker characters by 2x if HP is above 50% at the start of the turn"
 	},
 	713: {
 		special: "Deals 15x character's ATK in QCK damage to one enemy, boosts ATK of the characters in the top row by 1.5x for 2 turns",
-		specialNotes: "The special boosts the attack of only the crew's captain and the currently selected friend captain",
+		specialNotes: "The special boosts the attack of only the crew's captain and the currently selected friend captain.",
 		specialName: "Sky Knight's Javelin",
 		captain: "Boosts ATK of Striker characters by 2.5x if HP is above 50% at the start of the turn"
 	},
@@ -3104,14 +3125,14 @@ window.details = {
 		specialNotes: "The exact multiplier used is chosen based on the crew's current HP at the time the special is activated: above 30% HP, the multiplier used is 1.5x; below 30% HP, it's 2x.",
 		specialName: "Sables: Pesado",
 		captain: "Boosts ATK of Knowledge characters proportionally to the crew's current HP",
-		captainNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the lower the HP is. The multiplier is calculated as 1.5 + 1.75 * (1 - (remaining HP) / (total HP)). With 1 HP left, the boost is equal to 3.25x"
+		captainNotes: "#{captainProportional : lower : 1.5 + 1.75 * (1 - (remaining HP) / (total HP)) : 1.5 : 3.25}"
 	},
 	720: {
 		special: "Boosts ATK of Knowledge characters by a variable factor for 1 turn, deals 20x character's ATK in DEX damage to all enemies",
 		specialNotes: "The exact multiplier used is chosen based on the crew's current HP at the time the special is activated: above 30% HP, the multiplier used is 1.5x; below 30% HP, it's 2x.",
 		specialName: "Sables: Pesado",
 		captain: "Boosts ATK of Knowledge characters proportionally to the crew's current HP",
-		captainNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the lower the HP is. The multiplier is calculated as 1.5 + 1.75 * (1 - (remaining HP) / (total HP)). With 1 HP left, the boost is equal to 3.25x"
+		captainNotes: "#{captainProportional : lower : 1.5 + 1.75 * (1 - (remaining HP) / (total HP)) : 1.5 : 3.25}"
 	},
 	721: {
 		special: "Randomizes all orbs, including hindrance orbs",
@@ -3161,12 +3182,14 @@ window.details = {
 	730: {
 		special: "Reduces crew's current HP by 99%, deals 2x the amount of HP subtracted in INT damage to all enemies, boosts ATK of INT characters by 1.5x for 1 turn",
 		specialName: "Rankyaku - Lupus Fall",
-		captain: "Boosts ATK and HP of INT characters by 1.2x, deals 9 HP as fixed damage to all enemies at the end of each turn"
+		captain: "Boosts ATK and HP of INT characters by 1.2x, deals 9 HP as fixed damage to all enemies at the end of each turn",
+		captainNotes: "#{fixed}"
 	},
 	731: {
 		special: "Reduces crew's current HP by 99%, deals 2x the amount of HP subtracted in INT damage to all enemies, boosts ATK of INT characters by 1.5x for 1 turn",
 		specialName: "Rankyaku - Lupus Fall",
-		captain: "Boosts ATK and HP of INT characters by 1.5x, deals 9 HP as fixed damage to all enemies at the end of each turn"
+		captain: "Boosts ATK and HP of INT characters by 1.5x, deals 9 HP as fixed damage to all enemies at the end of each turn",
+		captainNotes: "#{fixed}"
 	},
 	732: {
 		special: "Deals 13x character's ATK in STR damage to one enemy, reduces damage received by 50% for 1 turn",
@@ -3220,13 +3243,13 @@ window.details = {
 	},
 	742: {
 		special: "Amplifies the effect of orbs by 1.25x for 2 turns, reduces the defense of all enemies by 80% for 2 turns",
-		specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.25x more damage and opposite orbs will deal 1.25x less damage",
+		specialNotes: "#{orb : 1.25}",
 		specialName: "Ramen Beam",
 		captain: "Boosts ATK and RCV of Freedom characters by 1.2x"
 	},
 	743: {
 		special: "Amplifies the effect of orbs by 1.25x for 2 turns, reduces the defense of all enemies by 80% for 2 turns",
-		specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.25x more damage and opposite orbs will deal 1.25x less damage",
+		specialNotes: "#{orb : 1.25}",
 		specialName: "Ramen Beam",
 		captain: "Boosts ATK and RCV of Freedom characters by 1.5x"
 	},
@@ -3241,9 +3264,9 @@ window.details = {
 		captain: "Boosts ATK of Freedom characters by 2.5x"
 	},
 	746: {
-		special: "Deals 10x character's ATK in QCK damage to all enemies, prevents death as long as HP is above 50% for 1 turn",
+		special: "Deals 10x character's ATK in QCK damage to all enemies, protects from defeat as long as HP is above 50% for 1 turn",
 		specialName: "Megalo Assault!",
-		captain: "Prevents death as long as HP is above 30%"
+		captain: "Protects from defeat as long as HP is above 30%"
 	},
 	747: {
 		special: "Deals 35x character's ATK in STR damage to one enemy, boosts chances of getting matching orbs for 3 turns",
@@ -3259,13 +3282,13 @@ window.details = {
 		special: "Deals random DEX damage to all enemies, randomizes all orbs",
 		specialName: "Rankyaku - Amane Dachi",
 		captain: "Boosts ATK of DEX characters by 1.5x, boosts damage of DEX specials by 1.5x",
-		captainNotes: "Specials that deal fixed damage or cut a percentage of the enemy's HP are not affected by this captain ability"
+		captainNotes: "#{noFixedPerc}"
 	},
 	750: {
 		special: "Deals random DEX damage to all enemies, randomizes all orbs",
 		specialName: "Rankyaku - Amane Dachi",
 		captain: "Boosts ATK of DEX characters by 2x, boosts damage of DEX specials by 2x",
-		captainNotes: "Specials that deal fixed damage or cut a percentage of the enemy's HP are not affected by this captain ability"
+		captainNotes: "#{noFixedPerc}"
 	},
 	751: {
 		special: "Reduces damage received in the next turn by 50% if the special is activated with more than 50% health remaining, by 80% if activated with less than 50% but more than 10% health remaining, by 100% if activated with less than 10% health remaining",
@@ -3279,13 +3302,13 @@ window.details = {
 	},
 	753: {
 		special: "Deals 15x character's ATK in QCK damage to one enemy, amplifies the effect of orbs by 1.75x for 1 turn",
-		specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.75x more damage and opposite orbs will deal 1.75x less damage",
+		specialNotes: "#{orb : 1.75}",
 		specialName: "Moonlight Ten Finger Pistol",
 		captain: "Boosts ATK of Tough characters by 2x"
 	},
 	754: {
 		special: "Deals 15x character's ATK in QCK damage to one enemy, amplifies the effect of orbs by 1.75x for 1 turn",
-		specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.75x more damage and opposite orbs will deal 1.75x less damage",
+		specialNotes: "#{orb : 1.75}",
 		specialName: "Moonlight Ten Finger Pistol",
 		captain: "Boosts ATK of Tough characters by 2.5x"
 	},
@@ -3364,7 +3387,7 @@ window.details = {
 	},
 	769: {
 		special: "Recovers 4,343 HP, poisons all enemies",
-		specialNotes: "Poison deals 0.5x character's ATK in fixed damage at the end of each turn",
+		specialNotes: "#{poison}",
 		specialName: "Lullaby Parry: Horror",
 		captain: "Boosts ATK and RCV of INT characters by 1.5x"
 	},
@@ -3396,7 +3419,7 @@ window.details = {
 	},
 	775: {
 		special: "Deals several times the character's ATK in PSY damage to one enemy",
-		specialNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the lower the HP is. The multiplier is calculated as: 125 * ( 1 - (remaining HP) / (total HP) )",
+		specialNotes: "#{specialProportional : lower : 125 * ( 1 - (remaining HP) / (total HP) )}",
 		specialName: "Angry Headbutt",
 		captain: "Boosts ATK and HP of Knowledge characters by 1.5x"
 	},
@@ -3412,13 +3435,13 @@ window.details = {
 	},
 	778: {
 		special: "Deals several times the character's ATK in QCK damage to one enemy, changes own orb into [QCK]",
-		specialNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the lower the HP is. The multiplier is calculated as: 125 * ( 1 - (remaining HP) / (total HP) )",
+		specialNotes: "#{specialProportional : lower : 125 * ( 1 - (remaining HP) / (total HP) )}",
 		specialName: "Undefeated Sword Technique",
 		captain: "Reduces damage received by 20%"
 	},
 	779: {
 		special: "Deals several times the character's ATK in QCK damage to one enemy, changes own orb into [QCK]",
-		specialNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the lower the HP is. The multiplier is calculated as: 125 * ( 1 - (remaining HP) / (total HP) )",
+		specialNotes: "#{specialProportional : lower : 125 * ( 1 - (remaining HP) / (total HP) )}",
 		specialName: "Undefeated Sword Technique",
 		captain: "Reduces damage received by 25%"
 	},
@@ -3491,14 +3514,14 @@ window.details = {
 	},
 	794: {
 		special: "Deals 10 hits of random INT damage to random enemies, delays all enemies for 1 turn",
-		specialNotes: "The target of each of the 10 hits is chosen randomly.",
+		specialNotes: "#{randomHits : 10}",
 		specialName: "Gum-Gum Storm",
 		captain: "Boosts ATK of Tough characters by 3x, reduces crew's current HP by 10% at the end of each turn, reduces his own ATK multiplier by 0.1x at the end of each turn",
 		captainNotes: "His ATK multiplier will be 3.5x on the first turn, 3.4x on the second, 3.3x on the third and so on. The reduction stops once the multiplier is 1.0x. The multiplier affects all Tough units."
 	},
 	795: {
 		special: "Deals 10 hits of random INT damage to random enemies, delays all enemies for 1 turn",
-		specialNotes: "The target of each of the 10 hits is chosen randomly.",
+		specialNotes: "#{randomHits : 10}",
 		specialName: "Gum-Gum Storm",
 		captain: "Boosts ATK of Tough characters by 3.5x, reduces crew's current HP by 10% at the end of each turn, reduces his own ATK multiplier by 0.1x at the end of each turn",
 		captainNotes: "His ATK multiplier will be 3.5x on the first turn, 3.4x on the second, 3.3x on the third and so on. The reduction stops once the multiplier is 1.0x. The multiplier affects all Tough units."
@@ -3538,13 +3561,13 @@ window.details = {
 	},
 	803: {
 		special: "Deals 8 hits of random DEX damage to random enemies, boosts ATK of all characters by 1.1x for 3 turns",
-		specialNotes: "The target of each of the 8 hits is chosen randomly.",
+		specialNotes: "#{randomHits : 8}",
 		specialName: "Black Spear Formation: All-Out Attack!",
 		captain: "Boosts ATK and RCV of DEX characters by 1.2x"
 	},
 	804: {
 		special: "Deals 8 hits of random DEX damage to random enemies, boosts ATK of all characters by 1.1x for 3 turns",
-		specialNotes: "The target of each of the 8 hits is chosen randomly.",
+		specialNotes: "#{randomHits : 8}",
 		specialName: "Black Spear Formation: All-Out Attack!",
 		captain: "Boosts ATK and RCV of DEX characters by 1.5x, deals 1x character's ATK in DEX damage to all enemies at the end of each turn"
 	},
@@ -3552,13 +3575,13 @@ window.details = {
 		special: "Reduces crew's current HP by 20%, deals 10x the amount of HP subtracted in INT damage to one enemy, amplifies the effect of orbs by 1.75x for 1 turn",
 		specialName: "White Vine",
 		captain: "Boosts ATK of Striker characters by 2x",
-		specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.75x more damage and opposite orbs will deal 1.75x less damage"
+		specialNotes: "#{orb : 1.75}"
 	},
 	806: {
 		special: "Reduces crew's current HP by 20%, deals 10x the amount of HP subtracted in INT damage to one enemy, amplifies the effect of orbs by 1.75x for 1 turn",
 		specialName: "White Vine",
 		captain: "Boosts ATK of Striker characters by 2x, reduces damage received up to 30% depending on the crew's current HP",
-		specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.75x more damage and opposite orbs will deal 1.75x less damage"
+		specialNotes: "#{orb : 1.75}"
 	},
 	807: {
 		captain: "Boosts ATK and RCV of Knowledge characters by 1.5x",
@@ -3574,13 +3597,13 @@ window.details = {
 		captain: "Boosts ATK and RCV of Tough characters by 1.5x",
 		specialName: "Lola's Attack Chance",
 		special: "Reduces the defense of all enemies by 80% for 1 turn, amplifies the effect of orbs by 1.5x for 1 turn",
-		specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.5x more damage and opposite orbs will deal 1.5x less damage"
+		specialNotes: "#{orb : 1.5}"
 	},
 	810: {
 		captain: "Boosts ATK of Tough characters by 2x and their RCV by 1.5x, reduces crew's current HP by 10% at the end of each turn",
 		specialName: "Lola's Attack Chance",
 		special: "Reduces the defense of all enemies by 80% for 1 turn, amplifies the effect of orbs by 1.5x for 1 turn",
-		specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.5x more damage and opposite orbs will deal 1.5x less damage"
+		specialNotes: "#{orb : 1.5}"
 	},
 	811: {
 		specialName: "Birdbrain Present",
@@ -3593,7 +3616,7 @@ window.details = {
 	813: {
 		specialName: "Sticky Spider Net",
 		special: "Delays all enemies for 1 turn, amplifies the effect of orbs by 1.25x for 1 turn",
-		specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.25x more damage and opposite orbs will deal 1.25x less damage"
+		specialNotes: "#{orb : 1.25}"
 	},
 	814: {
 		specialName: "Carpet Scratch",
@@ -3603,13 +3626,13 @@ window.details = {
 		captain: "Boosts ATK by 2.5x following a chain of STR > INT > DEX attacks no lower than Good",
 		specialName: "Brick Bat",
 		special: "Deals 10 hits of 5,000 fixed damage to random enemies",
-		specialNotes: "The target of each of the 10 hits is chosen randomly."
+		specialNotes: "#{fixed} #{randomHits : 10}"
 	},
 	816: {
 		captain: "Boosts ATK by 2.75x following a chain of STR > INT > DEX attacks no lower than Good",
 		specialName: "Brick Bat",
 		special: "Deals 10 hits of 5,000 fixed damage to random enemies",
-		specialNotes: "The target of each of the 10 hits is chosen randomly."
+		specialNotes: "#{fixed} #{randomHits : 10}"
 	},
 	817: {
 		specialName: "[PSY] Slot Change [STR]",
@@ -3672,13 +3695,13 @@ window.details = {
 		captain: "Boosts ATK of Freedom characters proportionally to the crew's current HP, reduces crew's current HP by 10% at the end of each turn",
 		specialName: "Burn Bazooka",
 		special: "Boosts ATK of Freedom characters by 1.5x for 1 turn, deals 15x character's ATK in STR damage to all enemies",
-		captainNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the lower the HP is. The multiplier is calculated as 1 + 1.5 * (1 - (remaining HP) / (total HP)). At full health, the boost is equal to 1x. With 1 HP left, the boost is equal to 2.5x."
+		captainNotes: "#{captainProportional : lower : 1 + 1.5 * (1 - (remaining HP) / (total HP)) : 1 : 2.5}"
 	},
 	833: {
 		captain: "Boosts ATK of Freedom characters proportionally to the crew's current HP, reduces crew's current HP by 10% at the end of each turn",
 		specialName: "Burn Bazooka",
 		special: "Boosts ATK of Freedom characters by 1.5x for 1 turn, deals 15x character's ATK in STR damage to all enemies",
-		captainNotes: "The exact multiplier used to compute the damage is proportional to the crew's remaining HP and is higher the lower the HP is. The multiplier is calculated as 1 + 1.75 * (1 - (remaining HP) / (total HP)). At full health, the boost is equal to 1x. With 1 HP left, the boost is equal to 2.75x."
+		captainNotes: "#{captainProportional : lower : 1 + 1.5 * (1 - (remaining HP) / (total HP)) : 1 : 2.75}"
 	},
 	834: {
 		captain: "Boosts ATK and RCV of Shooter characters by 1.5x",
@@ -3689,19 +3712,19 @@ window.details = {
 		captain: "Boosts ATK and HP of Knowledge characters by 2x",
 		specialName: "Thrust Pad Cannon",
 		special: "Changes [RCV], [TND], empty, hindrance and bomb orbs into matching orbs, amplifies the effect of orbs by 1.75x for 1 turn",
-		specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.75x more damage and opposite orbs will deal 1.75x less damage"
+		specialNotes: "#{orb : 1.75}"
 	},
 	836: {
 		captain: "Boosts ATK and HP of Knowledge characters by 2x, deals 5 times the damage received in the previous turn in STR damage to all enemies at the end of each turn",
 		specialName: "Thrust Pad Cannon",
 		special: "Changes [RCV], [TND], empty, hindrance and bomb orbs into matching orbs, amplifies the effect of orbs by 1.75x for 1 turn",
-		specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.75x more damage and opposite orbs will deal 1.75x less damage"
+		specialNotes: "#{orb : 1.75}"
 	},
 	837: {
 		captain: "Boosts ATK of Ambition characters by 2x",
 		specialName: "Gas Robe",
 		special: "Poisons all enemies, boosts ATK of Ambition characters by 1.75x for 2 turns",
-		specialNotes: "Poison deals 0.5x character's ATK in fixed damage at the end of each turn"
+		specialNotes: "#{poison}"
 	},
 	838: {
 		captain: "Boosts ATK of Ambition characters by 2.5x",
@@ -3752,13 +3775,13 @@ window.details = {
 		captain: "Boosts ATK of all characters by 1.5x if HP is below 30% at the start of the turn",
 		specialName: "Sturdy Boat: Launch",
 		special: "Reduces Silence duration by 5 turns, boosts ATK of all characters by 5% for 3 turns, reduces damage received by 10% for 3 turns, amplifies the effect of orbs by 1.15x for 3 turns, recovers 2x character's RCV in HP at the end of each turn for 3 turns",
-		specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.15x more damage and opposite orbs will deal 1.15x less damage"
+		specialNotes: "#{orb : 1.15}"
 	},
 	848: {
 		captain: "Boosts ATK of all characters by 2x if HP is below 30% at the start of the turn",
 		specialName: "Sturdy Boat: Launch",
 		special: "Reduces Silence duration by 5 turns, boosts ATK of all characters by 5% for 3 turns, reduces damage received by 10% for 3 turns, amplifies the effect of orbs by 1.15x for 3 turns, recovers 2x character's RCV in HP at the end of each turn for 3 turns",
-		specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.15x more damage and opposite orbs will deal 1.15x less damage"
+		specialNotes: "#{orb : 1.15}"
 	},
 	849: {
 		captain: "Boosts ATK of Shooter characters by 1.75x",
@@ -3812,23 +3835,23 @@ window.details = {
 	859: {
 		captain: "Boosts ATK of Ambition characters by 1.5x, reduces damage received up to 10% depending on the crew's current HP",
 		specialName: "Pleading at the Risk of One's Life",
-		special: "Changes neighboring slots' orbs into [RCV] orbs; if the special is activated with more than 50% health remaining, prevents death for 1 turn"
+		special: "Changes neighboring slots' orbs into [RCV] orbs; if the special is activated with more than 50% health remaining, protects from defeat for 1 turn"
 	},
 	860: {
 		captain: "Boosts ATK of Ambition characters by 2x, reduces damage received up to 30% depending on the crew's current HP",
 		specialName: "Pleading at the Risk of One's Life",
-		special: "Changes neighboring slots' orbs into [RCV] orbs; if the special is activated with more than 50% health remaining, prevents death for 1 turn"
+		special: "Changes neighboring slots' orbs into [RCV] orbs; if the special is activated with more than 50% health remaining, protects from defeat for 1 turn"
 	},
 	861: {
 		specialName: "Bewitching Lovely Iron Mace",
 		special: "Deals 13x character's ATK in QCK damage to one enemy, reduces damage received by 75% for 1 turn, amplifies the effect of orbs by 1.5x for 1 turn",
-		specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.5x more damage and opposite orbs will deal 1.5x less damage",
+		specialNotes: "#{orb : 1.5}",
 		captain: "Reduces damage received by 10%"
 	},
 	862: {
 		captain: "Boosts ATK of QCK characters by 2x, reduces damage received by 10%",
 		specialName: "Bewitching Lovely Iron Mace",
 		special: "Deals 13x character's ATK in QCK damage to one enemy, reduces damage received by 75% for 1 turn, amplifies the effect of orbs by 1.5x for 1 turn",
-		specialNotes: "Orb amplification only affects matching and opposite orbs and works both ways: matching orbs will deal 1.5x more damage and opposite orbs will deal 1.5x less damage"
+		specialNotes: "#{orb : 1.5}"
 	}
 };
