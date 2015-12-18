@@ -1838,7 +1838,7 @@ window.details = {
 			"Reduces cooldown of all specials by 2 turns at the start of the fight, boosts own ATK and ATK of characters with cost 20 or less by 3x",
 			"Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of characters with cost 20 or less by 3x"
 		],
-        captainNotes: "The updated version of his captain ability only affects his evolved form, his base form will NOT receive the boost. All evolved Sengoku in the team are included in the bonus."
+		captainNotes: "The updated version of his captain ability only affects his evolved form, his base form will NOT receive the boost. All evolved Sengoku in the team are included in the bonus."
 	},
 	460: {
 		special: "Recovers 33 HP after the end of each turn for 999 turns, delays all enemies for 1 turn",
