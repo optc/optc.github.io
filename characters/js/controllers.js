@@ -40,15 +40,6 @@ app.controller('SidebarCtrl',function($scope, $rootScope, $stateParams, $timeout
         $scope.$watch('filters',function(filters) {
             if (!filters || Object.keys(filters).length === 0) return;
             $scope.table.parameters = CharUtils.generateSearchParameters($stateParams.query, jQuery.extend({ }, $scope.filters));
-            // build regexes if necessary
-            $scope.table.regexes = { };
-            // class boosters
-            if (filters.custom[MATCHER_IDS['captain.ClassBoostingCaptains']] && $scope.filters.classCaptain) {
-                $scope.table.regexes.classCaptain = new RegExp('of ' + $scope.filters.classCaptain + ' .*characters');
-            } if (filters.custom[MATCHER_IDS['special.ClassBoostingSpecials']] && $scope.filters.classSpecial) {
-                $scope.table.regexes.classSpecial = new RegExp('of ' + $scope.filters.classSpecial + ' .*characters');
-            }
-            // redraw table
             if (!$scope.$$phase) $scope.$apply();
         },true);
     });

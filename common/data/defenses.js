@@ -168,7 +168,16 @@ window.defenses = [
     [ 'Robson'                              , 'Wapol Fortnight'                      , 'Expert', 853, 100 ],
     [ 'Wapol (STR)'                         , 'Wapol Fortnight'                      , 'Expert', 851, 1500 ],
     [ 'Wapol (QCK)'                         , 'Wapol Fortnight'                      , 'Expert', 852, 1500 ],
-    [ 'Wapol (QCK, def up)'                 , 'Wapol Fortnight'                      , 'Expert', 852, 4500 ],
+    [ 'Wapol (QCK. def up)'                 , 'Wapol Fortnight'                      , 'Expert', 852, 4500 ] ,
+    /* * * * * Colosseum * * * * */
+    [ 'Dr. Kureha'                          , 'Colosseum, 1st Hina Round'            , 'Chaos' , 333, 20 ],
+    [ 'Hotori and Kotori'                   , 'Colosseum, 2nd Hina Round'            , 'Chaos' , 504, 250 ],
+    [ 'Hamburg'                             , 'Colosseum, 3rd Hina Round'            , 'Chaos' , 565, 200 ],
+    [ 'Pickles'                             , 'Colosseum, 3rd Hina Round'            , 'Chaos' , 566, 250 ],
+    [ 'Big Pan'                             , 'Colosseum, 3rd Hina Round'            , 'Chaos' , 567, 250 ],
+    [ 'Pell'                                , 'Colosseum, 4th Hina Round'            , 'Chaos' , 505, 150 ],
+    [ 'Pell'                                , 'Colosseum, 5th Hina Round'            , 'Chaos' , 505, 150 ],
+    [ 'Hina'                                , 'Colosseum, 5th Hina Round'            , 'Chaos' , 804, 150 ],
     /* * * * * Others * * * * */
     [ 'Thatch'                              , 'Whitebeard\'s island, 11th round'     , '', 448, 50 ],
     [ 'Namur'                               , 'Whitebeard\'s island, 12th round'     , '', 450, 500 ],

@@ -1,7 +1,6 @@
 (function() {
 
 var CharUtils = { };
-var orbControllerData = { };
 
 /* * * * * Reverse drop map * * * * */
 
@@ -212,14 +211,20 @@ CharUtils.getIslandBonuses = function(y, day) {
     return result;
 };
 
+/***********
+ * Caching *
+ ***********/
+
+var orbControllerCache = { }, regexCache = { }, classCache = { captain: { }, special: { } };
+
 CharUtils.getOrbControllerData = function(id) {
-    if (orbControllerData.hasOwnProperty(id) || !window.details[id] || !window.details[id].special)
-        return (orbControllerData[id] || null);
+    if (orbControllerCache.hasOwnProperty(id) || !window.details[id] || !window.details[id].special)
+        return (orbControllerCache[id] || null);
     var special = window.details[id].special;
     var data = (special.constructor == Array ? special.join(' / ') : special);
     var match = data.match(/(changes.+?orbs into.+?orbs)/gi);
     if (!match) {
-        orbControllerData[id] = null;
+        orbControllerCache[id] = null;
         return null;
     }
     var result = { from: { }, to: { }, map: { } };
@@ -242,7 +247,28 @@ CharUtils.getOrbControllerData = function(id) {
             });
         }
     });
-    orbControllerData[id] = result;
+    orbControllerCache[id] = result;
+    return result;
+};
+
+CharUtils.checkMatcher = function(matcher, id) {
+    var target = window.details[id][matcher.target], name = matcher.target + '.' + matcher.name, result;
+    if (regexCache[name] && regexCache[name].hasOwnProperty(id)) return regexCache[name][id];
+    else if (!target) result = false;
+    else if (matcher.include && matcher.include.indexOf(id) != -1) result = true;
+    else result = matcher.matcher.test(target);
+    if (!regexCache.hasOwnProperty(name)) regexCache[name] = { };
+    regexCache[name][id] = result;
+    return result;
+};
+
+CharUtils.isClassBooster = function(target, id, clazz) {
+    var data = window.details[id][target], result;
+    if (!classCache[target].hasOwnProperty(clazz)) classCache[target][clazz] = { };
+    if (classCache[target][clazz].hasOwnProperty(id)) return classCache[target][clazz][id];
+    if (!data) result = false;
+    else result = (new RegExp('of.+' + clazz + '.+characters')).test(data);
+    classCache[target][clazz][id] = result;
     return result;
 };
 

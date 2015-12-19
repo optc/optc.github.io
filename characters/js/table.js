@@ -143,9 +143,8 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
         // filter by active matchers
         if (filters.custom.length > 0 && !window.details.hasOwnProperty(id)) return false;
         for (var i=0;i<filters.custom.length;++i) {
-            var target = window.details[id][filters.custom[i].target], m = filters.custom[i];
-            if (!target) return false;
-            if (!(m.include && m.include.indexOf(id) != -1) && !m.matcher.test(target)) return false;
+            if (!CharUtils.checkMatcher(filters.custom[i], id))
+                return false;
         }
         // filter by character log
         if (filters.noLog && characterLog.hasOwnProperty(id)) return false;
@@ -169,9 +168,10 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
             if (mismatch) return false;
         }
         // filter by class-filters
-        if (tableData.regexes.classCaptain && !tableData.regexes.classCaptain.test(window.details[id].captain)) return false;
-        if (tableData.regexes.classSpecial && !tableData.regexes.classSpecial.test(window.details[id].special)) return false;
-        // end
+        if ($rootScope.filters.custom[MATCHER_IDS['captain.ClassBoostingCaptains']] && filters.classCaptain &&
+                !CharUtils.isClassBooster('captain', id, filters.classCaptain)) return false;
+        if ($rootScope.filters.custom[MATCHER_IDS['special.ClassBoostingSpecials']] && filters.classSpecial &&
+                !CharUtils.isClassBooster('special', id, filters.classSpecial)) return false;
         return true;
     };
 

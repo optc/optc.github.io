@@ -12,7 +12,7 @@ controllers.DefenseCtrl = function($scope, $state, $stateParams) {
 
     $scope.$watch('query',function() {
         var regex = new RegExp($scope.query || '','i');
-        $scope.list = defenses.filter(function(x) { return regex.test(x[0]); });
+        $scope.list = defenses.filter(function(x) { return regex.test(x); });
     });
 
     $scope.pickDefense = function(defense) {
