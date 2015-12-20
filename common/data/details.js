@@ -739,12 +739,14 @@ window.details = {
 	213: {
 		special: "Deals 20x character's ATK in STR damage to all enemies",
 		specialName: "Sorrowful Charge",
-		captain: "Protects from defeat as long as HP is above 50%"
+		captain: "Protects from defeat as long as HP is above 50%",
+		captainNotes: "#{zombie}"
 	},
 	214: {
 		special: "Deals 20x character's ATK in STR damage to all enemies",
 		specialName: "Sorrowful Charge",
-		captain: "Protects from defeat as long as HP is above 50%"
+		captain: "Protects from defeat as long as HP is above 50%",
+		captainNotes: "#{zombie}"
 	},
 	215: {
 		special: "Poisons all enemies",
@@ -1357,11 +1359,13 @@ window.details = {
 	360: {
 		special: "Deals 10x character's ATK in INT damage to all enemies, protects from defeat as long as HP is above 50% for 1 turn",
 		specialName: "Prehistoric Power",
+		specialNotes: "#{zombie}",
 		captain: "Boosts ATK of INT characters by 3x if HP is below 30% at the start of the turn"
 	},
 	361: {
 		special: "Deals 10x character's ATK in INT damage to all enemies, protects from defeat as long as HP is above 50% for 1 turn",
 		specialName: "Prehistoric Power",
+		specialNotes: "#{zombie}",
 		captain: "Boosts ATK of INT characters by 3x if HP is below 30% at the start of the turn"
 	},
 	362: {
@@ -1675,12 +1679,14 @@ window.details = {
 	423: {
 		special: "Recovers 4,343 HP, reduces the defense of all enemies by 50% for 2 turns",
 		specialName: "Lullaby Parry",
-		captain: "Protects from defeat as long as HP is above 70%"
+		captain: "Protects from defeat as long as HP is above 70%",
+		captainNotes: "#{zombie}"
 	},
 	424: {
 		special: "Recovers 4,343 HP, reduces the defense of all enemies by 50% for 2 turns",
 		specialName: "Lullaby Parry",
-		captain: "Protects from defeat as long as HP is above 70%"
+		captain: "Protects from defeat as long as HP is above 70%",
+		captainNotes: "#{zombie}"
 	},
 	425: {
 		special: "Deals random PSY damage to all enemies",
@@ -2066,12 +2072,14 @@ window.details = {
 	505: {
 		special: "Boosts ATK of QCK characters by 1.25x for 3 turns",
 		specialName: "Flying Claw",
-		captain: "Protects from defeat as long as HP is above 50%"
+		captain: "Protects from defeat as long as HP is above 50%",
+		captainNotes: "#{zombie}"
 	},
 	506: {
 		special: "Boosts ATK of QCK characters by 1.25x for 3 turns",
 		specialName: "Flying Claw",
-		captain: "Protects from defeat as long as HP is above 30%"
+		captain: "Protects from defeat as long as HP is above 30%",
+		captainNotes: "#{zombie}"
 	},
 	507: {
 		special: "Deals 25x character's ATK in STR damage to one enemy",
@@ -2103,12 +2111,14 @@ window.details = {
 	512: {
 		special: "Boosts chances of getting [PSY] orbs and reduces chances of getting [INT] orbs for 3 turns",
 		specialName: "Sneaky Punk Kid Strike",
-		captain: "Protects from defeat as long as HP is above 50%"
+		captain: "Protects from defeat as long as HP is above 50%",
+		captainNotes: "#{zombie}"
 	},
 	513: {
 		special: "Boosts chances of getting [PSY] orbs and reduces chances of getting [INT] orbs for 3 turns",
 		specialName: "Sneaky Punk Kid Strike",
-		captain: "Protects from defeat as long as HP is above 50%, boosts ATK of PSY characters by 1.5x if HP is above 50% at the start of the turn"
+		captain: "Protects from defeat as long as HP is above 50%, boosts ATK of PSY characters by 1.5x if HP is above 50% at the start of the turn",
+		captainNotes: "#{zombie}"
 	},
 	514: {
 		special: "Boosts ATK of INT characters by 1.5x for 1 turn, reduces the defense of all enemies by 50% for 1 turn",
@@ -2164,11 +2174,13 @@ window.details = {
 	523: {
 		special: "Randomizes all orbs, protects from defeat as long as HP is above 50% for 1 turn",
 		specialName: "Billy's Electrical Discharge",
+		specialNotes: "#{zombie}",
 		captain: "Boosts ATK and RCV of Striker characters by 1.5x"
 	},
 	524: {
 		special: "Randomizes all orbs, protects from defeat as long as HP is above 50% for 1 turn",
 		specialName: "Billy's Electrical Discharge",
+		specialNotes: "#{zombie}",
 		captain: "Boosts ATK of Striker characters by 2x and their RCV by 1.5x"
 	},
 	525: {
@@ -2288,11 +2300,13 @@ window.details = {
 	547: {
 		special: "Reduces crew's current HP by 10%, deals 1x character's ATK in STR damage to one enemy, protects from defeat as long as HP is above 50% for 1 turn",
 		specialName: "Crazy Punk Kid Punch",
+		specialNotes: "#{zombie}",
 		captain: "Boosts chances of getting [RCV] orbs"
 	},
 	548: {
 		special: "Reduces crew's current HP by 10%, deals 1x character's ATK in STR damage to one enemy, protects from defeat as long as HP is above 50% for 1 turn",
 		specialName: "Crazy Punk Kid Punch",
+		specialNotes: "#{zombie}",
 		captain: "Boosts chances of getting [RCV] orbs, boosts ATK of all characters by 1.2x"
 	},
 	549: {
@@ -2862,6 +2876,7 @@ window.details = {
 	667: {
 		special: "Protects from defeat as long as HP is above 50% for 1 turn",
 		specialName: "King's Chopper",
+		specialNotes: "#{zombie}",
 		captain: "Reduces damage received by 10%, boosts ATK of all characters by 1.5x"
 	},
 	668: {
@@ -3266,7 +3281,9 @@ window.details = {
 	746: {
 		special: "Deals 10x character's ATK in QCK damage to all enemies, protects from defeat as long as HP is above 50% for 1 turn",
 		specialName: "Megalo Assault!",
-		captain: "Protects from defeat as long as HP is above 30%"
+		specialNotes: "#{zombie}",
+		captain: "Protects from defeat as long as HP is above 30%",
+		captainNotes: "#{zombie}"
 	},
 	747: {
 		special: "Deals 35x character's ATK in STR damage to one enemy, boosts chances of getting matching orbs for 3 turns",
@@ -3835,12 +3852,14 @@ window.details = {
 	859: {
 		captain: "Boosts ATK of Ambition characters by 1.5x, reduces damage received up to 10% depending on the crew's current HP",
 		specialName: "Pleading at the Risk of One's Life",
-		special: "Changes neighboring slots' orbs into [RCV] orbs; if the special is activated with more than 50% health remaining, protects from defeat for 1 turn"
+		special: "Changes neighboring slots' orbs into [RCV] orbs; if the special is activated with more than 50% health remaining, protects from defeat for 1 turn",
+		specialNotes: "#{zombie}"
 	},
 	860: {
 		captain: "Boosts ATK of Ambition characters by 2x, reduces damage received up to 30% depending on the crew's current HP",
 		specialName: "Pleading at the Risk of One's Life",
-		special: "Changes neighboring slots' orbs into [RCV] orbs; if the special is activated with more than 50% health remaining, protects from defeat for 1 turn"
+		special: "Changes neighboring slots' orbs into [RCV] orbs; if the special is activated with more than 50% health remaining, protects from defeat for 1 turn",
+		specialNotes: "#{zombie}"
 	},
 	861: {
 		specialName: "Bewitching Lovely Iron Mace",

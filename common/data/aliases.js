@@ -124,6 +124,7 @@ window.aliases = {
     791: [ 'Usopp Pirates' ],
     792: [ 'Iceberg' ],
     793: [ 'Iceberg, Mayor of W7 and President of Galley-La Company' ],
+    799: [ 'Sea Lapahn, Sea Animal Pirates', 'Sea Lapan, Sea Animal Pirates', 'Sea Rapan, Sea Animal Pirates' ],
     801: [ 'Log Bon Clay', 'Log Bonclay' ],
     802: [ 'Log Bon Clay', 'Log Bonclay' ],
     813: [ 'Spider Monkey' ],

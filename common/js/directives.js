@@ -13,7 +13,9 @@ var notes = {
     random: "Estimated random damage range: between #1 HP and #2 HP.",
     randomHits: "The target of each of the #1 hits is chosen randomly.",
     specialProportional: "The exact multiplier used to compute the damage is proportional to the " +
-        "crew's remaining HP and is higher the #1 the HP is. The multiplier is calculated as: #2."
+        "crew's remaining HP and is higher the #1 the HP is. The multiplier is calculated as: #2.",
+    zombie: "The protection only works when attacked by one single enemy and will leave the team with at least 1 HP; " +
+        "the effect will not work when attacked by multiples enemies at once."
 };
 
 /***********
