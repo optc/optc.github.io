@@ -20,6 +20,15 @@
         ng-click="onStarsClick($event,stars)" ng-class="{ active: filters.stars.indexOf(stars) > -1 }"></span>
 </div>
 
+<div class="filter-container expandable" id="cost-container"
+        ng-class="{ expanded: filters.costEnabled }">
+    <span class="filter-header" ng-click="filters.costEnabled = !filters.costEnabled">
+        Cost filter
+        <i class="pull-right fa fa-{{costExpanded ? 'chevron-up' : 'chevron-down'}}"></i>
+    </span>
+    <input type="text" id="cost-slider" name="cost-slider" value="" cost-slider></input>
+</div>
+
 <div class="filter-container">
     <span class="filter-header">Drop filters</span>
     <span ng-repeat="type in [ 'Farmable', 'Non-farmable' ]" class="filter width-6 drop" ng-model="filters.drop"

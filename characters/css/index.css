@@ -18,6 +18,7 @@ body, html {
 #leftContainer {
     margin-left: -1px;
     display: block;
+    overflow-x: hidden;
 }
 
 #queryContainer {
@@ -64,6 +65,11 @@ input[type="text"] {
     font-weight: bold;
     cursor: default;
     border-top: 1px solid #aaa;
+}
+
+.filter-header > i {
+    position: relative;
+    top: 2px;
 }
 
 .filter {
@@ -234,8 +240,24 @@ input[type="text"] {
     margin-right: 5px;
 }
 
+.filter-container {
+    min-height: 31px;
+}
+
 .filter-container:last-child {
     margin-bottom: 25px;
+}
+
+.filter-container.expandable > .filter-header {
+    cursor: pointer;
+}
+
+.filter-container.expandable:not(.expanded) > :not(.filter-header) {
+    display: none;
+}
+
+.filter-container.expanded > .irs {
+    margin: 5px 5% 5px 5%;
 }
 
 .popover:not([title="Additional Columns"]) {

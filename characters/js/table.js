@@ -101,6 +101,8 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
         }
         // filter by stars
         if (filters.stars && filters.stars.length && filters.stars.indexOf(unit.stars) == -1) return false;
+        // filter by cost
+        if (filters.costEnabled && (unit.cost < filters.cost[0] || unit.cost > filters.cost[1])) return false;
         // filter by drop
         if (filters.drop) {
             var isFarmable = CharUtils.isFarmable(id);
