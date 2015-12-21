@@ -393,7 +393,9 @@ directives.addLinks = function($stateParams) {
         replace: true,
         template: '<div class="link-container"></div>',
         link: function(scope, element, attrs) {
-            var id = parseInt($stateParams.id,10), data = details[id], incomplete = units[id - 1].incomplete;
+            var id = parseInt($stateParams.id,10), data = details[id];
+            if (!units[id - 1]) return;
+            var incomplete = units[id - 1].incomplete;
             var ul = $('<ul></ul>');
             if (!incomplete && window.flags[id] && window.flags[id].global) {
                 var link = 'http://onepiece-treasurecruise.com/en/' + (id == '5' ? 'roronoa-zoro' : 'c-' + id);

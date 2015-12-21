@@ -1774,17 +1774,18 @@ window.captains = {
 		atk: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 2 : 1; }
 	},
 	845: {
-		hit: function(n) { return n > 22 ? 2.5 : (n > 11 ? 1.5 : 1); },
-		warning: "Selected captain ability (%name%) has not been tested yet."
+		hit: function(n) {
+		    return n > 22 ? 2.5 :
+				   n > 11 ? 1.5 : 1;
+		}
 	},
 	846: {
 		hit: function(n) {
-					return n > 40 ? 3.5  :
-						   n > 30 ? 2.75 :
-						   n > 22 ? 2.5  :
-						   n > 11 ? 1.5  : 1;
-				},
-		warning: "Selected captain ability (%name%) has not been tested yet."
+		    return n > 40 ? 3.5  :
+				   n > 30 ? 2.75 :
+				   n > 22 ? 2.5  :
+				   n > 11 ? 1.5  : 1;
+		}
 	},
 	847: {
 		atk: function(p) { return p.percHP <= 30.0 ? 1.5 : 1; }

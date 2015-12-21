@@ -131,6 +131,21 @@ angular.module('optc').config(function($stateProvider, $urlRouterProvider) {
                     controller: 'ImageGeneratorCtrl'
                 }
             }
+        })
+
+        .state('main.specials',{
+            url: 'specials',
+            views: {
+                popup: {
+                    templateUrl: 'views/popup/specials.html',
+                    controller: function($scope) {
+                        $scope.units = window.units.filter(function(x,n) {
+                            return details[x.number + 1] && details[x.number + 1].hasOwnProperty('special') &&
+                                (!cooldowns[x.number] || cooldowns[x.number].constructor != Array);
+                        });
+                    }
+                }
+            }
         });
 
 });
