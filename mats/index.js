@@ -111,7 +111,7 @@ app.controller('MainCtrl',function($scope, $rootScope, $timeout, $storage) {
         var getTypeId = function(type) { return [ 'STR', 'DEX', 'QCK', 'PSY', 'INT' ].indexOf(type); };
         $storage.set('sortMatsByColor', value);
         if (value) {
-            var temp = $rootScope.mats.map(function(x) {
+            var temp = $rootScope.mats.map(function(x,n) {
                 var unit = window.units[x.id - 1];
                 return { type: getTypeId(unit.type || 'INT'), stars: unit.stars, cost: unit.cost, data: x };
             });
@@ -247,6 +247,21 @@ app.controller('EvolutionPickerCtrl',function($scope, $rootScope, $state, $state
     $scope.pick = function(data) {
         $rootScope.pool.push(data);
         $state.go('^');
+    };
+});
+
+app.controller('QuickPickCtrl',function($scope, $rootScope, $state, $stateParams) {
+    $scope.quickPick = function(uid) {
+        if (!uid) return;
+        var i;
+        for (i=0;i<$rootScope.mats.length && $rootScope.mats[i].id != uid;++i);
+        if (i == $rootScope.mats.length) $rootScope.mats.push({ id: uid, amount: 1 });
+        else $rootScope.mats[i].amount++;
+    };
+    $scope.range = function(min, max) {
+        var result = new Array(max - min);
+        for (var i=0;i<result.length;++i) result[i] = min + i;
+        return result;
     };
 });
 

@@ -212,13 +212,13 @@ window.matchers = [
     {
         name: 'Slot emptiers',
         target: 'special',
-        matcher: /(Empties|Changes.+into.+empty)/i
+        matcher: /(Empties|Changes.+into.+\[EMPTY\])/i
     },
 
     {
         name: 'Slot fillers',
         target: 'special',
-        matcher: /(Fills.*slots|empty orbs into|Changes.+empty.+into)/i
+        matcher: /(Fills\b|\[EMPTY\] orbs into|Changes.+\[EMPTY\].+into)/i
     },
 
     {
@@ -302,7 +302,7 @@ window.matchers = [
     {
         name: 'Block orb removers',
         target: 'special',
-        matcher: /(empties.+with block|changes.+block.+into)/i,
+        matcher: /(empties.+with \[BLOCK\]|changes.+\[BLOCK\].+into|including.+\[BLOCK\])/i,
     },
 
     {

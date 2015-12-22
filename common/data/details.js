@@ -1543,12 +1543,12 @@ window.details = {
 		captain: "Boosts ATK and RCV of QCK characters by 1.2x"
 	},
 	397: {
-		special: "Fills empty slots with [STR] orbs with a 50% probability, deals 15x character's ATK in damage to all enemies",
+		special: "Fills [EMPTY] orbs with [STR] orbs with a 50% probability, deals 15x character's ATK in damage to all enemies",
 		specialName: "Four Hundred Base Hits",
 		captain: "Boosts ATK by 3x after scoring 5 Perfects in a row"
 	},
 	398: {
-		special: "Fills empty slots with [STR] orbs with a 50% probability, deals 15x character's ATK in damage to all enemies",
+		special: "Fills [EMPTY] orbs with [STR] orbs with a 50% probability, deals 15x character's ATK in damage to all enemies",
 		specialName: "Four Hundred Base Hits",
 		captain: "Boosts ATK by 4x after scoring 5 Perfects in a row"
 	},
@@ -2395,7 +2395,7 @@ window.details = {
 		specialNotes: "#{fixed}"
 	},
 	566: {
-		special: "Empties all slots with block orbs",
+		special: "Empties all slots with [BLOCK] orbs",
 		specialName: "Wipeout Tackle"
 	},
 	567: {
@@ -2413,13 +2413,13 @@ window.details = {
 		captain: "Boosts ATK, HP and RCV of all characters by 1.5x, reduces cooldown of all specials by 1 turn at the start of the fight"
 	},
 	570: {
-		special: "Changes block orbs into [STR], deals 20x character's ATK in STR damage to one enemy",
+		special: "Changes [BLOCK] orbs into [STR], deals 20x character's ATK in STR damage to one enemy",
 		specialName: "Gum-Gum Flail",
 		captain: "Boosts ATK of STR and Fighter characters by 1.5x",
 		captainNotes: "The bonus is cumulative. STR Fighter characters get a 2.25x bonus."
 	},
 	571: {
-		special: "Changes block orbs into [STR], deals 20x character's ATK in STR damage to one enemy",
+		special: "Changes [BLOCK] orbs into [STR], deals 20x character's ATK in STR damage to one enemy",
 		specialName: "Gum-Gum Flail",
 		captain: "Boosts ATK of STR and Fighter characters by 1.5x, reduces cooldown of all specials by 1 turn at the start of the fight",
 		captainNotes: "The bonus is cumulative. STR Fighter characters get a 2.25x bonus."
@@ -2462,12 +2462,12 @@ window.details = {
 		captain: "Boosts ATK by 4x following a chain of Good > Great > Perfect hits"
 	},
 	579: {
-		special: "Randomly changes block orbs into either [QCK] or [DEX] orbs, deals 15x character's ATK in QCK damage to all enemies",
+		special: "Randomly changes [BLOCK] orbs into either [QCK] or [DEX] orbs, deals 15x character's ATK in QCK damage to all enemies",
 		specialName: "Tatsu Maki",
 		captain: "Boosts ATK of QCK and DEX characters by 1.5x"
 	},
 	580: {
-		special: "Randomly changes block orbs into either [QCK] or [DEX] orbs, deals 15x character's ATK in QCK damage to all enemies",
+		special: "Randomly changes [BLOCK] orbs into either [QCK] or [DEX] orbs, deals 15x character's ATK in QCK damage to all enemies",
 		specialName: "Tatsu Maki",
 		captain: "Boosts ATK of QCK and DEX characters by 2x"
 	},
@@ -2672,7 +2672,7 @@ window.details = {
 		specialNotes: "#{fixed}"
 	},
 	629: {
-		special: "Empties all slots with block orbs, deals random INT damage to all enemies",
+		special: "Empties all slots with [BLOCK] orbs, deals random INT damage to all enemies",
 		specialName: "Master Nail",
 		captain: "Boosts ATK of characters with 3 or fewer stars by 2x"
 	},
@@ -2810,19 +2810,19 @@ window.details = {
 		captain: "Reduces cooldown of all specials by 3 turns at the start of the fight, boosts ATK of DEX characters by 2.75x if they have matching orbs"
 	},
 	655: {
-		special: "Changes empty slots and [TND] orbs into [STR] orbs, deals 10x character's ATK in STR damage to one enemy, amplifies the effect of orbs by 1.25x for 2 turns",
+		special: "Changes [EMPTY] and [TND] orbs into [STR] orbs, deals 10x character's ATK in STR damage to one enemy, amplifies the effect of orbs by 1.25x for 2 turns",
 		specialNotes: "#{orb : 1.25}",
 		specialName: "Tooth Gum",
 		captain: "Boosts ATK of STR characters by 1.5x"
 	},
 	656: {
-		special: "Changes empty slots and [TND] orbs into [STR] orbs, deals 10x character's ATK in STR damage to one enemy, amplifies the effect of orbs by 1.25x for 2 turns",
+		special: "Changes [EMPTY] and [TND] orbs into [STR] orbs, deals 10x character's ATK in STR damage to one enemy, amplifies the effect of orbs by 1.25x for 2 turns",
 		specialNotes: "#{orb : 1.25}",
 		specialName: "Tooth Gum",
 		captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of STR characters by 2x"
 	},
 	657: {
-		special: "Randomly changes [INT] and [PSY] orbs into either [STR] orbs or empty slots",
+		special: "Randomly changes [INT] and [PSY] orbs into either [STR] or [EMPTY] orbs",
 		specialName: "Forearm Sledge",
 		captain: "Boosts ATK of Fighter characters by 1.5x"
 	},
@@ -3061,7 +3061,7 @@ window.details = {
 		specialName: "Companion's Guilt"
 	},
 	705: {
-		special: "Randomly changes [PSY], [INT], [TND], [RCV] and empty orbs into [STR], [DEX] or [QCK] orbs",
+		special: "Randomly changes [PSY], [INT], [TND], [RCV] and [EMPTY] orbs into [STR], [DEX] or [QCK] orbs",
 		specialName: "Guilty Verdict - \"Slow Death Penalty\"",
 		captain: "Boosts ATK and HP of STR characters, DEX characters and QCK characters by 1.25x"
 	},
@@ -3086,12 +3086,12 @@ window.details = {
 		captain: "Boosts ATK and RCV of PSY characters by 1.5x"
 	},
 	710: {
-		special: "Empties all slots with block orbs, boosts ATK of Shooter characters by 1.25x for 3 turns, deals 15x character's ATK in PSY damage to all enemies",
+		special: "Empties all slots with [BLOCK] orbs, boosts ATK of Shooter characters by 1.25x for 3 turns, deals 15x character's ATK in PSY damage to all enemies",
 		specialName: "The Man Who Will Build the Ship of Dreams",
 		captain: "Boosts ATK of Shooter characters by 1.5x"
 	},
 	711: {
-		special: "Empties all slots with block orbs, boosts ATK of Shooter characters by 1.25x for 3 turns, deals 15x character's ATK in PSY damage to all enemies",
+		special: "Empties all slots with [BLOCK] orbs, boosts ATK of Shooter characters by 1.25x for 3 turns, deals 15x character's ATK in PSY damage to all enemies",
 		specialName: "The Man Who Will Build the Ship of Dreams",
 		captain: "Boosts ATK of Shooter characters by 2x"
 	},
@@ -3150,12 +3150,12 @@ window.details = {
 		captainNotes: "#{captainProportional : lower : 1.5 + 1.75 * (1 - (remaining HP) / (total HP)) : 1.5 : 3.25}"
 	},
 	721: {
-		special: "Randomizes all orbs, including block orbs",
+		special: "Randomizes all orbs, including [BLOCK] orbs",
 		specialName: "Screw Drop Kick",
 		captain: "Boosts ATK of Fighter characters by 1.5x if HP is is above 99% at the start of the turn"
 	},
 	722: {
-		special: "Randomizes all orbs, including block orbs",
+		special: "Randomizes all orbs, including [BLOCK] orbs",
 		specialName: "Screw Drop Kick",
 		captain: "Boosts ATK of Fighter characters by 2x if HP is is above 99% at the start of the turn"
 	},
@@ -3430,7 +3430,7 @@ window.details = {
 		captain: "Reduces damage received by 20%"
 	},
 	774: {
-		special: "Randomly changes [TND], [RCV], empty, bother and bomb orbs into either [STR], [DEX], [QCK], [PSY] or [INT] orbs, freely switch orbs between slots 3 times",
+		special: "Randomly changes [TND], [RCV], [EMPTY], [BLOCK] and [BOMB] orbs into either [STR], [DEX], [QCK], [PSY] or [INT] orbs, freely switch orbs between slots 3 times",
 		specialName: "Berry-Berry Fruit",
 		captain: "Boosts ATK of Freedom characters by 2x"
 	},
@@ -3567,12 +3567,12 @@ window.details = {
 		specialName: "Octopus Tentacle Blow"
 	},
 	801: {
-		special: "Randomly changes [STR], [QCK], [DEX], [INT], bomb and block orbs into either [STR], [QCK], [DEX], [PSY] or [INT] orbs, changes [TND] and [RCV] into [PSY] orbs",
+		special: "Randomly changes [STR], [QCK], [DEX], [INT], [BOMB] and [BLOCK] orbs into either [STR], [QCK], [DEX], [PSY] or [INT] orbs, changes [TND] and [RCV] into [PSY] orbs",
 		specialName: "Clone-Clone Montage",
 		captain: "Boosts ATK of PSY characters by 2x"
 	},
 	802: {
-		special: "Randomly changes [STR], [QCK], [DEX], [INT], bomb and block orbs into either [STR], [QCK], [DEX], [PSY] or [INT] orbs, changes [TND] and [RCV] into [PSY] orbs",
+		special: "Randomly changes [STR], [QCK], [DEX], [INT], [BOMB] and [BLOCK] orbs into either [STR], [QCK], [DEX], [PSY] or [INT] orbs, changes [TND] and [RCV] into [PSY] orbs",
 		specialName: "Clone-Clone Montage",
 		captain: "Boosts ATK of PSY characters by 2.5x"
 	},
@@ -3728,13 +3728,13 @@ window.details = {
 	835: {
 		captain: "Boosts ATK and HP of Knowledge characters by 2x",
 		specialName: "Thrust Pad Cannon",
-		special: "Changes [RCV], [TND], empty, block and bomb orbs into matching orbs, amplifies the effect of orbs by 1.75x for 1 turn",
+		special: "Changes [RCV], [TND], [EMPTY], [BLOCK] and [BOMB] orbs into matching orbs, amplifies the effect of orbs by 1.75x for 1 turn",
 		specialNotes: "#{orb : 1.75}"
 	},
 	836: {
 		captain: "Boosts ATK and HP of Knowledge characters by 2x, deals 5 times the damage received in the previous turn in STR damage to all enemies at the end of each turn",
 		specialName: "Thrust Pad Cannon",
-		special: "Changes [RCV], [TND], empty, block and bomb orbs into matching orbs, amplifies the effect of orbs by 1.75x for 1 turn",
+		special: "Changes [RCV], [TND], [EMPTY], [BLOCK] and [BOMB] orbs into matching orbs, amplifies the effect of orbs by 1.75x for 1 turn",
 		specialNotes: "#{orb : 1.75}"
 	},
 	837: {

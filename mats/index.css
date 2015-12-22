@@ -80,6 +80,12 @@ h2, h2 + div {
     margin: 1px;
 }
 
+.slot.micro {
+    width: 32px;
+    height: 32px;
+    background-size: 32px 32px;
+}
+
 .amount {
     font-size: 12px;
     position: absolute;
@@ -233,6 +239,41 @@ span.animated {
 
 #evolution-table .slot:hover {
     outline: none;
+}
+
+div > .pull-right {
+    margin-right: 5px;
+}
+
+[title="Quick Pick"] .popover-content {
+    padding: 0;
+}
+
+#quick-pick-table {
+    margin-top: 1px;
+    margin-bottom: 0;
+}
+
+#quick-pick-table td {
+    border: none;
+    padding: 1px;
+    font-size: 0
+}
+
+#quick-pick-table tr:first-child > td {
+    padding-top: 5px;
+}
+
+#quick-pick-table tr:last-child > td {
+    padding-bottom: 5px;
+}
+
+#quick-pick-table td:first-child {
+    padding-left: 5px;
+}
+
+#quick-pick-table td:nth-child(6) {
+    padding-right: 5px;
 }
 
 /******************

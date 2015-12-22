@@ -3,8 +3,7 @@
 (function() {
 
 var app = angular.module('optc');
-
-var directives = { }, filters = { };
+var directives = { };
 
 /*****************
  * UI directives *
@@ -783,36 +782,11 @@ directives.urlContainer = function() {
     };
 };
 
-/***********
- * Filters *
- ***********/
-
-filters.range = function() {
-    return function(input, total) {
-        total = parseInt(total,10);
-        for (var i=0;i<total;++i) input.push(i);
-        return input;
-    };
-};
-
-filters.decorate = function() {
-    return function(input) {
-        if (!input) return 'None';
-        return (input.constructor == Array ? input[0] : input)
-            .replace(/\[?(STR|DEX|QCK|PSY|INT|TND)\]?/g,'<span class="badge $1">$1</span>')
-            .replace(/\[RCV\]/g,'<span class="badge RCV">RCV</span>');
-
-    };
-};
-
 /******************
  * Initialization *
  ******************/
 
 for (var directive in directives)
     app.directive(directive, directives[directive]);
-
-for (var filter in filters)
-    app.filter(filter, filters[filter]);
 
 })();

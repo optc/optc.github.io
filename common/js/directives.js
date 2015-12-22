@@ -47,6 +47,27 @@ directives.linkButton = function() {
  * Filters * 
  ***********/
 
+filters.decorate = function() {
+    return function(input) {
+        if (!input) return 'None';
+        return input
+            .replace(/\[?(STR|DEX|QCK|PSY|INT)\]?/g,'<span class="badge $1">$1</span>')
+            .replace(/\[RCV\]/g,'<span class="badge RCV">RCV</span>')
+            .replace(/\[TND\]/g,'<span class="badge TND"><i class="tnd-icon"></i> TND</span>')
+            .replace(/\[EMPTY\]/g,'<span class="badge EMPTY"><i class="fa fa-circle-o"></i> EMPTY</span>')
+            .replace(/\[BLOCK\]/g,'<span class="badge BLOCK"><i class="block-icon"></i> BLOCK</span>')
+            .replace(/\[BOMB\]/g,'<span class="badge BOMB"><i class="fa fa-bomb"></i> BOMB</span>');
+    };
+};
+
+filters.range = function() {
+    return function(input, total) {
+        total = parseInt(total,10);
+        for (var i=0;i<total;++i) input.push(i);
+        return input;
+    };
+};
+
 filters.notes = function() {
     return function(input) {
         if (!input) return input;

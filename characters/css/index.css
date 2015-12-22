@@ -118,8 +118,10 @@ input[type="text"] {
 .DEX { background: lightgreen; }
 .PSY { background: gold; }
 .INT { background: orchid; }
-.RCV { background: peru; }
-.TND { background: coral; }
+.RCV { background: sandybrown; }
+.TND { background: peru; }
+.BLOCK { background: darkslateblue; }
+.BOMB { background: maroon }
 
 .cell-STR { font-weight: bold; color: red; }
 .cell-QCK { font-weight: bold; color: blue; }
@@ -170,6 +172,22 @@ input[type="text"] {
 
 .stars-6:before { color: #9932cc; content: '\e900\e900\e900\e900\e900\e900'; }
 
+.block-icon:before, .tnd-icon:before {
+    font-style: normal;
+    font-weight: normal;
+    font-family: icomoon;
+    font-size: 11px;
+    position: relative;
+    top: 1px;
+}
+
+.block-icon:before {
+    content: "\e902";
+}
+
+.tnd-icon:before {
+    content: "\e903";
+}
 
 .class.filter.active, .custom.filter.active, .drop.filter.active, .exc.filter.active {
     background: red;
