@@ -1,3 +1,14 @@
+@font-face {
+	font-family: 'icomoon';
+	src:url('../../res/icomoon.eot?xewvs9');
+	src:url('../../res/icomoon.eot?xewvs9#iefix') format('embedded-opentype'),
+		url('../../res/icomoon.ttf?xewvs9') format('truetype'),
+		url('../../res/icomoon.woff?xewvs9') format('woff'),
+		url('../../res/icomoon.svg?xewvs9#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
 /***************
  * MAIN LAYOUT *
  ***************/
@@ -982,8 +993,27 @@ body > .popover .popover-content {
 .popover-data .DEX { background: lightgreen; }
 .popover-data .PSY { background: gold; }
 .popover-data .INT { background: orchid; }
-.popover-data .RCV { background: peru; }
-.popover-data .TND { background: coral; }
+.popover-data .RCV { background: sandybrown; }
+.popover-data .TND { background: peru; }
+.popover-data .BLOCK { background: darkslateblue; }
+.popover-data .BOMB { background: maroon }
+
+.block-icon:before, .tnd-icon:before {
+    font-style: normal;
+    font-weight: normal;
+    font-family: icomoon;
+    font-size: 11px;
+    position: relative;
+    top: 1px;
+}
+
+.block-icon:before {
+    content: "\e902";
+}
+
+.tnd-icon:before {
+    content: "\e903";
+}
 
 .mini-type {
     color: white;
