@@ -2387,7 +2387,7 @@ window.details = {
 	},
 	564: {
 		special: "Reduces Bind duration by 2 turns",
-		specialName: "Sea Surface Splitter"
+		specialName: "Sea Surface Split"
 	},
 	565: {
 		special: "Deals 5,000 fixed damage to one enemy",
@@ -2395,31 +2395,31 @@ window.details = {
 		specialNotes: "#{fixed}"
 	},
 	566: {
-		special: "Empties all slots with hindrance orbs",
-		specialName: "Sweeping Tackle"
+		special: "Empties all slots with block orbs",
+		specialName: "Wipeout Tackle"
 	},
 	567: {
 		special: "Reduces Bind and Silence duration by 1 turn, deals STR damage to all enemies",
-		specialName: "Loach Coaster"
+		specialName: "Mudfish Coaster"
 	},
 	568: {
 		special: "Delays all enemies for 2 turns, freely switch orbs between slots twice",
-		specialName: "Noro Noro Beam",
+		specialName: "Slow Slow Beam",
 		captain: "Boosts ATK, HP and RCV of all characters by 1.25x"
 	},
 	569: {
 		special: "Delays all enemies for 2 turns, freely switch orbs between slots twice",
-		specialName: "Noro Noro Beam",
+		specialName: "Slow Slow Beam",
 		captain: "Boosts ATK, HP and RCV of all characters by 1.5x, reduces cooldown of all specials by 1 turn at the start of the fight"
 	},
 	570: {
-		special: "Changes hindrance orbs into [STR], deals 20x character's ATK in STR damage to one enemy",
+		special: "Changes block orbs into [STR], deals 20x character's ATK in STR damage to one enemy",
 		specialName: "Gum-Gum Flail",
 		captain: "Boosts ATK of STR and Fighter characters by 1.5x",
 		captainNotes: "The bonus is cumulative. STR Fighter characters get a 2.25x bonus."
 	},
 	571: {
-		special: "Changes hindrance orbs into [STR], deals 20x character's ATK in STR damage to one enemy",
+		special: "Changes block orbs into [STR], deals 20x character's ATK in STR damage to one enemy",
 		specialName: "Gum-Gum Flail",
 		captain: "Boosts ATK of STR and Fighter characters by 1.5x, reduces cooldown of all specials by 1 turn at the start of the fight",
 		captainNotes: "The bonus is cumulative. STR Fighter characters get a 2.25x bonus."
@@ -2462,12 +2462,12 @@ window.details = {
 		captain: "Boosts ATK by 4x following a chain of Good > Great > Perfect hits"
 	},
 	579: {
-		special: "Randomly changes hindrance orbs into either [QCK] or [DEX] orbs, deals 15x character's ATK in QCK damage to all enemies",
+		special: "Randomly changes block orbs into either [QCK] or [DEX] orbs, deals 15x character's ATK in QCK damage to all enemies",
 		specialName: "Tatsu Maki",
 		captain: "Boosts ATK of QCK and DEX characters by 1.5x"
 	},
 	580: {
-		special: "Randomly changes hindrance orbs into either [QCK] or [DEX] orbs, deals 15x character's ATK in QCK damage to all enemies",
+		special: "Randomly changes block orbs into either [QCK] or [DEX] orbs, deals 15x character's ATK in QCK damage to all enemies",
 		specialName: "Tatsu Maki",
 		captain: "Boosts ATK of QCK and DEX characters by 2x"
 	},
@@ -2672,7 +2672,7 @@ window.details = {
 		specialNotes: "#{fixed}"
 	},
 	629: {
-		special: "Empties all slots with hindrance orbs, deals random INT damage to all enemies",
+		special: "Empties all slots with block orbs, deals random INT damage to all enemies",
 		specialName: "Master Nail",
 		captain: "Boosts ATK of characters with 3 or fewer stars by 2x"
 	},
@@ -3086,12 +3086,12 @@ window.details = {
 		captain: "Boosts ATK and RCV of PSY characters by 1.5x"
 	},
 	710: {
-		special: "Empties all slots with hindrance orbs, boosts ATK of Shooter characters by 1.25x for 3 turns, deals 15x character's ATK in PSY damage to all enemies",
+		special: "Empties all slots with block orbs, boosts ATK of Shooter characters by 1.25x for 3 turns, deals 15x character's ATK in PSY damage to all enemies",
 		specialName: "The Man Who Will Build the Ship of Dreams",
 		captain: "Boosts ATK of Shooter characters by 1.5x"
 	},
 	711: {
-		special: "Empties all slots with hindrance orbs, boosts ATK of Shooter characters by 1.25x for 3 turns, deals 15x character's ATK in PSY damage to all enemies",
+		special: "Empties all slots with block orbs, boosts ATK of Shooter characters by 1.25x for 3 turns, deals 15x character's ATK in PSY damage to all enemies",
 		specialName: "The Man Who Will Build the Ship of Dreams",
 		captain: "Boosts ATK of Shooter characters by 2x"
 	},
@@ -3150,12 +3150,12 @@ window.details = {
 		captainNotes: "#{captainProportional : lower : 1.5 + 1.75 * (1 - (remaining HP) / (total HP)) : 1.5 : 3.25}"
 	},
 	721: {
-		special: "Randomizes all orbs, including hindrance orbs",
+		special: "Randomizes all orbs, including block orbs",
 		specialName: "Screw Drop Kick",
 		captain: "Boosts ATK of Fighter characters by 1.5x if HP is is above 99% at the start of the turn"
 	},
 	722: {
-		special: "Randomizes all orbs, including hindrance orbs",
+		special: "Randomizes all orbs, including block orbs",
 		specialName: "Screw Drop Kick",
 		captain: "Boosts ATK of Fighter characters by 2x if HP is is above 99% at the start of the turn"
 	},
@@ -3567,12 +3567,12 @@ window.details = {
 		specialName: "Octopus Tentacle Blow"
 	},
 	801: {
-		special: "Randomly changes [STR], [QCK], [DEX], [INT], bomb and hindrance orbs into either [STR], [QCK], [DEX], [PSY] or [INT] orbs, changes [TND] and [RCV] into [PSY] orbs",
+		special: "Randomly changes [STR], [QCK], [DEX], [INT], bomb and block orbs into either [STR], [QCK], [DEX], [PSY] or [INT] orbs, changes [TND] and [RCV] into [PSY] orbs",
 		specialName: "Clone-Clone Montage",
 		captain: "Boosts ATK of PSY characters by 2x"
 	},
 	802: {
-		special: "Randomly changes [STR], [QCK], [DEX], [INT], bomb and hindrance orbs into either [STR], [QCK], [DEX], [PSY] or [INT] orbs, changes [TND] and [RCV] into [PSY] orbs",
+		special: "Randomly changes [STR], [QCK], [DEX], [INT], bomb and block orbs into either [STR], [QCK], [DEX], [PSY] or [INT] orbs, changes [TND] and [RCV] into [PSY] orbs",
 		specialName: "Clone-Clone Montage",
 		captain: "Boosts ATK of PSY characters by 2.5x"
 	},
@@ -3728,13 +3728,13 @@ window.details = {
 	835: {
 		captain: "Boosts ATK and HP of Knowledge characters by 2x",
 		specialName: "Thrust Pad Cannon",
-		special: "Changes [RCV], [TND], empty, hindrance and bomb orbs into matching orbs, amplifies the effect of orbs by 1.75x for 1 turn",
+		special: "Changes [RCV], [TND], empty, block and bomb orbs into matching orbs, amplifies the effect of orbs by 1.75x for 1 turn",
 		specialNotes: "#{orb : 1.75}"
 	},
 	836: {
 		captain: "Boosts ATK and HP of Knowledge characters by 2x, deals 5 times the damage received in the previous turn in STR damage to all enemies at the end of each turn",
 		specialName: "Thrust Pad Cannon",
-		special: "Changes [RCV], [TND], empty, hindrance and bomb orbs into matching orbs, amplifies the effect of orbs by 1.75x for 1 turn",
+		special: "Changes [RCV], [TND], empty, block and bomb orbs into matching orbs, amplifies the effect of orbs by 1.75x for 1 turn",
 		specialNotes: "#{orb : 1.75}"
 	},
 	837: {

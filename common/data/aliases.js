@@ -76,6 +76,7 @@ window.aliases = {
     560: [ 'Strong World Franky', 'SW Franky' ],
     561: [ 'Strong World Ace', 'SW Ace' ],
     562: [ 'Strong World Ace', 'SW Ace' ],
+    567: [ 'Big Pan' ],
     570: [ 'Afro Luffy', 'Afroluffy' ],
     571: [ 'Afro Luffy', 'Afroluffy' ],
     577: [ 'Log Luffy' ],

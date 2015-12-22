@@ -300,9 +300,9 @@ window.matchers = [
     },
 
     {
-        name: 'Hindrance removers',
+        name: 'Block orb removers',
         target: 'special',
-        matcher: /(empties.+with hindrance|changes.+hindrance.+into)/i,
+        matcher: /(empties.+with block|changes.+block.+into)/i,
     },
 
     {
