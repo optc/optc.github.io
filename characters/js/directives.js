@@ -371,7 +371,6 @@ directives.costSlider = function($timeout) {
     return {
         restrict: 'A',
         link: function(scope, element, attrs) {
-            scope.filters.cost = [ 1, 55 ];
             element.ionRangeSlider({
                 grid: true,
                 type: 'double',

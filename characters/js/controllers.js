@@ -4,7 +4,7 @@
  * Common data *
  ***************/
 
-var filters = { custom: [ ], classes: [ ], stars: [ ] };
+var filters = { custom: [ ], classes: [ ], stars: [ ], cost: [ 1, 55 ] };
 
 /***************
  * Controllers *
@@ -39,14 +39,15 @@ app.controller('SidebarCtrl',function($scope, $rootScope, $stateParams, $timeout
     $timeout(function() {
         $scope.$watch('filters',function(filters) {
             if (!filters || Object.keys(filters).length === 0) return;
-            $scope.table.parameters = CharUtils.generateSearchParameters($stateParams.query, jQuery.extend({ }, $scope.filters));
+            var data = jQuery.extend({ }, $scope.filters);
+            $scope.table.parameters = CharUtils.generateSearchParameters($stateParams.query, data);
             if (!$scope.$$phase) $scope.$apply();
         },true);
     });
 
     $scope.clearFilters = function() {
-        filters = { custom: [ ], classes: [ ], stars: [ ] };
-        $scope.filters = { custom: [ ], classes: [ ], stars: [ ] };
+        filters = { custom: [ ], classes: [ ], stars: [ ], cost: [ 1, 55 ] };
+        $scope.filters = { custom: [ ], classes: [ ], stars: [ ], cost: [ 1, 55 ] };
     };
 
     $scope.onFilterClick = function(e, value) {
