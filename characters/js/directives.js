@@ -382,7 +382,7 @@ directives.costSlider = function($timeout) {
                 onFinish: function(data) {
                     scope.filters.cost[0] = data.from;
                     scope.filters.cost[1] = data.to;
-                    scope.table.refresh();
+                    if (!scope.$$phase) scope.$apply();
                 }
             });
         }
