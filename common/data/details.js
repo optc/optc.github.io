@@ -1528,7 +1528,7 @@ window.details = {
 	394: {
 		special: "Deals 500 fixed damage to all enemies",
 		specialName: "The Tempest Called Love",
-		specialNotes: "#{fixed}",
+		specialNotes: "#{fixed}"
 	},
 	395: {
 		special: "Empties neighboring slots, amplifies the effect of orbs by 1.25x for 1 turn",
@@ -1591,7 +1591,7 @@ window.details = {
 	406: {
 		special: "Reduces crew's HP to 1, deals 1,000 fixed damage to all enemies, boosts ATK of all characters by 1.2x for 1 turn",
 		specialName: "Skills of the Ancient Warriors",
-		specialNotes: "#{fixed}",
+		specialNotes: "#{fixed}"
 	},
 	407: {
 		special: "Randomizes all orbs, deals 7x character's ATK in DEX damage to all enemies",
@@ -2207,7 +2207,7 @@ window.details = {
 		special: "Deals 35x character's ATK in PSY damage to all enemies, reduces the defense of all enemies by 100% for 2 turns",
 		specialName: "Conqueror's Haki - Emperor",
 		captain: "Boosts chances of getting [PSY] orbs, boosts ATK of PSY characters proportionally to the crew's current HP",
-		captainNotes: "#{captainProportional : higher : 2 + 0.75 * (remaining HP) / (total HP) : 2.75 : 2}",
+		captainNotes: "#{captainProportional : higher : 2 + 0.75 * (remaining HP) / (total HP) : 2.75 : 2}"
 	},
 	530: {
 		special: "Deals 35x character's ATK in PSY damage to all enemies, reduces the defense of all enemies by 100% for 2 turns",
@@ -3831,22 +3831,22 @@ window.details = {
 	},
 	855: {
 		captain: "Boosts ATK of Slasher characters by 2x",
-		specialName: "Shambles: Ceremony",
+		specialName: "Shambles: Holiday Toast",
 		special: "Changes captain's orb into [RCV], recovers 15x character's RCV in HP"
 	},
 	856: {
 		captain: "Boosts ATK of Slasher characters by 2.5x",
-		specialName: "Shambles: Ceremony",
+		specialName: "Shambles: Holiday Toast",
 		special: "Changes captain's orb into [RCV], recovers 15x character's RCV in HP"
 	},
 	857: {
 		captain: "Boosts ATK of PSY characters by 2x",
-		specialName: "Bonney's Dinner Time",
+		specialName: "Bonney's Holiday Feast",
 		special: "Changes neighboring slots' orbs into [RCV] orbs, boosts RCV of PSY characters by 1.5x for 1 turn"
 	},
 	858: {
 		captain: "Boosts ATK and RCV of PSY characters by 2x",
-		specialName: "Bonney's Dinner Time",
+		specialName: "Bonney's Holiday Feast",
 		special: "Changes neighboring slots' orbs into [RCV] orbs, boosts RCV of PSY characters by 1.5x for 1 turn"
 	},
 	859: {
