@@ -508,7 +508,7 @@ window.units = [
 	[ "Chaka", "STR", [ "Slasher", "Tough" ], 3, 9, 5, 1, 35, 136167, 173, 120, 21, 822, 615, 109, 1 ],
 	[ "Chaka The Guardian Jackal of Alabasta", "STR", [ "Slasher", "Tough" ], 4, 15, 4, 2, 70, 1066998, 740, 531, 81, 1160, 923, 180, 1 ],
 	[ "Sir Crocodile, the Strongest Prisoner Mr. 0, Ex-Baroque Works Leader", "QCK", [ "Striker", "Knowledge" ], 3, 13, 5, 1, 50, 392109, 213, 108, 24, 1161, 565, 135, 1 ],
-	[ "Sir Crocodile, the Strongest Prisoner Warlord of the Sea", "QCK", [ "Striker", "Knowledge" ], 4, 20, 4, 2, 99, 3000000, 1101, 500, 100, 2200, 1150, 188, 1 ],
+	[ "Sir Crocodile, the Strongest Prisoner Ex-Seven Warlords Member", "QCK", [ "Striker", "Knowledge" ], 4, 20, 4, 2, 99, 3000000, 1101, 500, 100, 2200, 1150, 188, 1 ],
 	[ "Daz Bones, Convict Mr. 1", "INT", [ "Slasher", "Knowledge" ], 4, 16, 4, 2, 70, 1066998, 255, 156, 242, 1710, 1011, 55, 1 ],
 	[ "Sabo Mt. Corvo's Brothers 3", "PSY", [ "Striker", "Freedom" ], 4, 10, 5, 2, 35, 90778, 32, 32, 32, 522, 288, 286, 0.7 ],
 	[ "Sabo Mt. Corvo's Brothers 3, Cup of Sworn Brotherhood", "PSY", [ "Striker", "Freedom" ], 5, 18, 4, 3, 70, 1066998, 440, 233, 242, 951, 460, 450, 0.7 ],

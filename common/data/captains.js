@@ -1775,13 +1775,13 @@ window.captains = {
 	},
 	845: {
 		hit: function(n) {
-		    return n > 22 ? 2.5 :
+			return n > 22 ? 2.5 :
 				   n > 11 ? 1.5 : 1;
 		}
 	},
 	846: {
 		hit: function(n) {
-		    return n > 40 ? 3.5  :
+			return n > 40 ? 3.5  :
 				   n > 30 ? 2.75 :
 				   n > 22 ? 2.5  :
 				   n > 11 ? 1.5  : 1;
@@ -1829,5 +1829,8 @@ window.captains = {
 	},
 	862: {
 		atk: function(p) { return p.unit.type == 'QCK' ? 2 : 1; }
+	},
+	863: {
+		atk: function(p) { return p.unit.type == 'QCK' ? 1.75 : 1; }
 	}
 };

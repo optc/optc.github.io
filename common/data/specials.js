@@ -825,5 +825,8 @@ window.specials = {
 	},
 	862: {
 		orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); }
+	},
+	863: {
+		def: function(p) { return 0.5; }
 	}
 };
