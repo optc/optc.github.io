@@ -2094,18 +2094,18 @@ window.details = {
 	509: {
 		special: "Poisons all enemies, boosts ATK of Striker characters by 1.5x for 1 turn",
 		specialNotes: "#{poison}",
-		specialName: "Cruel Trick - Poison Hook",
+		specialName: "Merciless Ploy: Poison Needle",
 		captain: "Boosts ATK of Striker characters by 1.5x"
 	},
 	510: {
 		special: "Poisons all enemies, boosts ATK of Striker characters by 1.5x for 1 turn",
 		specialNotes: "#{poison}",
-		specialName: "Cruel Trick - Poison Hook",
+		specialName: "Merciless Ploy: Poison Needle",
 		captain: "Reduces damage received by 10%, boosts ATK of Striker characters by 2x"
 	},
 	511: {
 		special: "Reduces damage received by 30% for 2 turns, boosts ATK of Slasher character by 1.25x for 2 turns",
-		specialName: "Cruel Slasher - Spider",
+		specialName: "Cruel Blade: Iron Guard",
 		captain: "Boosts ATK of Slasher characters by 2x"
 	},
 	512: {
