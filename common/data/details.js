@@ -3567,12 +3567,12 @@ window.details = {
 		specialName: "Octopus Tentacle Blow"
 	},
 	801: {
-		special: "Randomly changes [STR], [QCK], [DEX], [INT], [BOMB] and [BLOCK] orbs into either [STR], [QCK], [DEX], [PSY] or [INT] orbs, changes [TND] and [RCV] into [PSY] orbs",
+		special: "Randomly changes [STR], [QCK], [DEX], [INT], [BOMB] and [BLOCK] orbs into either [STR], [QCK], [DEX], [PSY] or [INT] orbs, changes [TND] and [RCV] orbs into [PSY] orbs",
 		specialName: "Clone-Clone Montage",
 		captain: "Boosts ATK of PSY characters by 2x"
 	},
 	802: {
-		special: "Randomly changes [STR], [QCK], [DEX], [INT], [BOMB] and [BLOCK] orbs into either [STR], [QCK], [DEX], [PSY] or [INT] orbs, changes [TND] and [RCV] into [PSY] orbs",
+		special: "Randomly changes [STR], [QCK], [DEX], [INT], [BOMB] and [BLOCK] orbs into either [STR], [QCK], [DEX], [PSY] or [INT] orbs, changes [TND] and [RCV] orbs into [PSY] orbs",
 		specialName: "Clone-Clone Montage",
 		captain: "Boosts ATK of PSY characters by 2.5x"
 	},
@@ -3872,5 +3872,10 @@ window.details = {
 		specialName: "Bewitching Lovely Iron Mace",
 		special: "Deals 13x character's ATK in QCK damage to one enemy, reduces damage received by 75% for 1 turn, amplifies the effect of orbs by 1.5x for 1 turn",
 		specialNotes: "#{orb : 1.5}"
+	},
+	863: {
+		captain: "Boosts ATK of QCK characters by 1.75x, recovers 2x character's RCV in HP at the end of each turn",
+		specialName: "Snow Crystal Clima-Tact",
+		special: "Reduces the defense of all enemies by 50% for 2 turns, reduces the ATK of all enemies by 10% for 2 turns"
 	}
 };
