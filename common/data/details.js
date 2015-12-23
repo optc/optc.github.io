@@ -1285,12 +1285,12 @@ window.details = {
 		specialName: "Light Healing"
 	},
 	336: {
-		special: "Freely switch orbs between slots twice",
+		special: "Switches orbs between slots twice",
 		specialName: "Franky Centaur",
 		captain: "Reduces damage received by 10% if HP is above 50% at the start of the turn, boosts ATK of PSY characters by 2x and reduces ATK of every other character by 20% if HP is above 50% at the start of the turn"
 	},
 	337: {
-		special: "Freely switch orbs between slots twice",
+		special: "Switches orbs between slots twice",
 		specialName: "Franky Centaur",
 		captain: "Reduces damage received by 10% if HP is above 50% at the start of the turn, boosts ATK of PSY characters by 2.5x and reduces ATK of every other character by 20% if HP is above 50% at the start of the turn"
 	},
@@ -1645,13 +1645,13 @@ window.details = {
 		captain: "Boosts ATK of QCK and PSY characters by 2.75x and their RCV by 1.5x if HP is above 70% at the start of the turn"
 	},
 	417: {
-		special: "Freely switch orbs between slots twice, amplifies the effect of orbs by 2x for 1 turn",
+		special: "Switches orbs between slots twice, amplifies the effect of orbs by 2x for 1 turn",
 		specialNotes: "#{orb : 2}",
 		specialName: "Overheat",
 		captain: "Boosts ATK of Slasher characters by 2x"
 	},
 	418: {
-		special: "Freely switch orbs between slots twice, amplifies the effect of orbs by 2x for 1 turn",
+		special: "Switches orbs between slots twice, amplifies the effect of orbs by 2x for 1 turn",
 		specialNotes: "#{orb : 2}",
 		specialName: "Overheat",
 		captain: "Boosts ATK and HP of Slasher characters by 2x"
@@ -1776,7 +1776,7 @@ window.details = {
 		captain: "Boosts ATK of Evolver and Booster characters by 2x if HP is above 70% at the start of the turn"
 	},
 	445: {
-		special: "Randomly changes all orbs into either [STR], [DEX], [QCK], [PSY] or [INT] orbs, freely switch orbs between slots 3 times",
+		special: "Randomly changes all orbs into either [STR], [DEX], [QCK], [PSY] or [INT] orbs, switches orbs between slots 3 times",
 		specialName: "Support Incoming! Supersonic Duck Squadron!",
 		captain: "Boosts ATK of Evolver and Booster characters by 2.5x if HP is above 70% at the start of the turn"
 	},
@@ -1833,12 +1833,12 @@ window.details = {
 		captainNotes: "#{noFixedPerc}"
 	},
 	456: {
-		special: "Randomly changes the orbs in the middle row into either [STR] or [DEX] orbs, the orbs in the lower row into either [PSY] or [INT] orbs, freely switch orbs between slots once",
+		special: "Randomly changes the orbs in the middle row into either [STR] or [DEX] orbs, the orbs in the lower row into either [PSY] or [INT] orbs, switches orbs between slots once",
 		specialName: "Double Cannon",
 		captain: "Boosts ATK of Shooter characters by 2x and their RCV by 1.5x"
 	},
 	457: {
-		special: "Randomly changes the orbs in the middle row into either [STR] or [DEX] orbs, the orbs in the lower row into either [PSY] or [INT] orbs, freely switch orbs between slots once",
+		special: "Randomly changes the orbs in the middle row into either [STR] or [DEX] orbs, the orbs in the lower row into either [PSY] or [INT] orbs, switches orbs between slots once",
 		specialName: "Double Cannon",
 		captain: "Boosts ATK of Shooter characters by 2x and their RCV by 1.5x"
 	},
@@ -1904,7 +1904,7 @@ window.details = {
 		specialName: "Healing Power"
 	},
 	469: {
-		special: "Freely switch orbs between slots once",
+		special: "Switches orbs between slots once",
 		specialName: "Quick Change"
 	},
 	470: {
@@ -1913,7 +1913,7 @@ window.details = {
 		captain: "Boosts RCV of PSY characters by 1.5x"
 	},
 	471: {
-		special: "Freely switch orbs between slots once",
+		special: "Switches orbs between slots once",
 		specialName: "Quick Change"
 	},
 	472: {
@@ -2126,13 +2126,13 @@ window.details = {
 		captain: "Boosts ATK of INT characters by 2x"
 	},
 	515: {
-		special: "Changes the orbs in the left column into [INT], [PSY] and [RCV], the orbs in the right column into [STR], [DEX] and [QCK], freely switch orbs between slots 3 times",
+		special: "Changes the orbs in the left column into [INT], [PSY] and [RCV], the orbs in the right column into [STR], [DEX] and [QCK], switches orbs between slots 3 times",
 		specialNotes: "The special is not based on chance, the orbs are always changed with the same pattern. Starting from the top left orb and proceeding clockwise, after the special is used the orbs will be: [INT], [STR], [DEX], [QCK], [RCV] and [PSY]",
 		specialName: "Pop Green",
 		captain: "Boosts ATK, HP and RCV of Shooter characters by 1.5x"
 	},
 	516: {
-		special: "Changes the orbs in the left column into [INT], [PSY] and [RCV], the orbs in the right column into [STR], [DEX] and [QCK], freely switch orbs between slots 3 times",
+		special: "Changes the orbs in the left column into [INT], [PSY] and [RCV], the orbs in the right column into [STR], [DEX] and [QCK], switches orbs between slots 3 times",
 		specialNotes: "The special is not based on chance, the orbs are always changed with the same pattern. Starting from the top left orb and proceeding clockwise, after the special is used the orbs will be: [INT], [STR], [DEX], [QCK], [RCV] and [PSY]",
 		specialName: "Pop Green",
 		captain: "Boosts ATK, HP and RCV of Shooter characters by 1.5x, recovers a bit of HP at the end of each turn"
@@ -2403,12 +2403,12 @@ window.details = {
 		specialName: "Mudfish Coaster"
 	},
 	568: {
-		special: "Delays all enemies for 2 turns, freely switch orbs between slots twice",
+		special: "Delays all enemies for 2 turns, switches orbs between slots twice",
 		specialName: "Slow Slow Beam",
 		captain: "Boosts ATK, HP and RCV of all characters by 1.25x"
 	},
 	569: {
-		special: "Delays all enemies for 2 turns, freely switch orbs between slots twice",
+		special: "Delays all enemies for 2 turns, switches orbs between slots twice",
 		specialName: "Slow Slow Beam",
 		captain: "Boosts ATK, HP and RCV of all characters by 1.5x, reduces cooldown of all specials by 1 turn at the start of the fight"
 	},
@@ -2532,12 +2532,12 @@ window.details = {
 		captain: "Boosts ATK of STR characters by 1.75x, recovers 750 HP at the end of each turn"
 	},
 	598: {
-		special: "Changes own orb into [INT], freely move orbs between slots once",
+		special: "Changes own orb into [INT], switches orbs between slots once",
 		specialName: "Split Split Cannon",
 		captain: "Boosts ATK of characters with fewer than 3 stars by 2.5x"
 	},
 	599: {
-		special: "Changes own orb into [INT], freely move orbs between slots once",
+		special: "Changes own orb into [INT], switches orbs between slots once",
 		specialName: "Split Split Cannon",
 		captain: "Boosts ATK of characters with fewer than 3 stars by 3x"
 	},
@@ -3170,12 +3170,12 @@ window.details = {
 		captain: "Boosts ATK of Slasher characters by 1.75x, recovers 1.5x character's RCV in HP at the end of each turn"
 	},
 	725: {
-		special: "Changes [TND] orbs into [QCK] orbs, freely switch orbs between slots twice",
+		special: "Changes [TND] orbs into [QCK] orbs, switches orbs between slots twice",
 		specialName: "Peacock String Slasher",
 		captain: "Recovers 1,000 HP at the end of each turn"
 	},
 	726: {
-		special: "Changes [TND] orbs into [QCK] orbs, freely switch orbs between slots twice",
+		special: "Changes [TND] orbs into [QCK] orbs, switches orbs between slots twice",
 		specialName: "Peacock String Slasher",
 		captain: "Recovers 2,000 HP at the end of each turn"
 	},
@@ -3350,12 +3350,12 @@ window.details = {
 		captain: "Boosts ATK of PSY characters by 2x, recovers 3x character's RCV in HP at the end of each turn"
 	},
 	759: {
-		special: "Freely switch orbs between slots 3 times, locks all orbs for 1 turn",
+		special: "Switches orbs between slots 3 times, locks all orbs for 1 turn",
 		specialName: "Life Return: Shishi Finger Pistol",
 		captain: "Boosts ATK of STR characters by 2.5x if HP is below 30% at the start of the turn"
 	},
 	760: {
-		special: "Freely switch orbs between slots 3 times, locks all orbs for 1 turn",
+		special: "Switches orbs between slots 3 times, locks all orbs for 1 turn",
 		specialName: "Life Return: Shishi Finger Pistol",
 		captain: "Boosts ATK of STR characters by 3x if HP is below 30% at the start of the turn"
 	},
@@ -3370,7 +3370,7 @@ window.details = {
 		captain: "Boosts ATK and RCV of PSY characters by 1.5x"
 	},
 	763: {
-		special: "Changes own orb into [STR], freely switch orbs between slots once",
+		special: "Changes own orb into [STR], switches orbs between slots once",
 		specialName: "Franken-Franky Centaur",
 		captain: "Boosts ATK of STR characters by 2x"
 	},
@@ -3430,7 +3430,7 @@ window.details = {
 		captain: "Reduces damage received by 20%"
 	},
 	774: {
-		special: "Randomly changes [TND], [RCV], [EMPTY], [BLOCK] and [BOMB] orbs into either [STR], [DEX], [QCK], [PSY] or [INT] orbs, freely switch orbs between slots 3 times",
+		special: "Randomly changes [TND], [RCV], [EMPTY], [BLOCK] and [BOMB] orbs into either [STR], [DEX], [QCK], [PSY] or [INT] orbs, switches orbs between slots 3 times",
 		specialName: "Berry-Berry Fruit",
 		captain: "Boosts ATK of Freedom characters by 2x"
 	},
@@ -3521,11 +3521,11 @@ window.details = {
 		captain: "Boosts ATK, HP and RCV of STR, DEX and QCK characters by 1.25x"
 	},
 	792: {
-		special: "Randomly changes all orbs into either [STR], [QCK], [DEX], [PSY] or [INT] orbs, freely switch orbs between slots twice, locks all orbs for 1 turn",
+		special: "Randomly changes all orbs into either [STR], [QCK], [DEX], [PSY] or [INT] orbs, switches orbs between slots twice, locks all orbs for 1 turn",
 		specialName: "The Entushiasm to Keep Skilled Workers in Line"
 	},
 	793: {
-		special: "Randomly changes all orbs into either [STR], [QCK], [DEX], [PSY] or [INT] orbs, freely switch orbs between slots twice, locks all orbs for 1 turn",
+		special: "Randomly changes all orbs into either [STR], [QCK], [DEX], [PSY] or [INT] orbs, switches orbs between slots twice, locks all orbs for 1 turn",
 		specialName: "The Entushiasm to Keep Skilled Workers in Line",
 		captain: "Boosts ATK and RCV of Knowledge characters by 1.5x"
 	},
@@ -3624,7 +3624,7 @@ window.details = {
 	},
 	811: {
 		specialName: "Birdbrain Present",
-		special: "Changes own orb into DEX, freely switch orbs between slots once"
+		special: "Changes own orb into DEX, switches orbs between slots once"
 	},
 	812: {
 		specialName: "Hell Howl",
@@ -3657,7 +3657,7 @@ window.details = {
 	},
 	818: {
 		specialName: "Quick Change",
-		special: "Freely switch orbs between slots once"
+		special: "Switches orbs between slots once"
 	},
 	819: {
 		specialName: "Hyper Burst",

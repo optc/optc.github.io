@@ -21,9 +21,11 @@ directives.characterTable = function($rootScope, $timeout, $compile, $storage) {
                 data: scope.table.data,
                 columns: scope.table.columns,
                 rowCallback: function(row, data, index) {
-                    if (!row || row.hasAttribute('loaded') || !$(row)) return;
+                    if (!row || row.hasAttribute('loaded')) return;
+                    var $row = $(row);
+                    if (!$row) return;
                     // lazy thumbnails
-                    $(row).find('[data-original]').each(function(n,x) {
+                    $row.find('[data-original]').each(function(n,x) {
                         x.setAttribute('src',x.getAttribute('data-original'));
                         x.removeAttribute('data-original');
                     });

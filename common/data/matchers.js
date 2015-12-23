@@ -206,7 +206,7 @@ window.matchers = [
     {
         name: 'Orb switchers',
         target: 'special',
-        matcher: /freely switch/i
+        matcher: /switches orbs/i
     },
 
     {
