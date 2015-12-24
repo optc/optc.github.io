@@ -861,5 +861,10 @@ window.units = [
 	[ "War Hero Coby, Navy HQ Petty Officer", "PSY", [ "Fighter", "Ambition" ], 5, 30, 4, 3, 99, null, 1121, 500, 104, 2239, 1048, 261, 1 ],
 	[ "Lady Alvida, Lovely Beauty", "QCK", [ "Striker", "Freedom" ], 4, 18, 5, 1, 50, null, 240, 92, 31, 1030, 534, 197, 1 ],
 	[ "Lady Alvida, Peerless Beauty", "QCK", [ "Striker", "Freedom" ], 5, 30, 6, 3, 99, null, 967, 466, 148, 2092, 1000, 307, 1 ],
-	[ "Snowy World Nami", "QCK", [ "Striker", "Knowledge" ], 4, 15, 5, 2, 99, null, 77, 33, 78, 1459, 674, 349, 1 ]
+	[ "Snowy World Nami", "QCK", [ "Striker", "Knowledge" ], 4, 15, 5, 2, 99, null, 77, 33, 78, 1459, 674, 349, 1 ],
+	[ "Boa Hancock, raid", "PSY", [ "Shooter", "Freedom" ], 4, 30, null, 0, null, null, null, null, null, null, null, null, 0 ],
+	[ "Boa Hancock, raid (evolution)", "PSY", [ "Shooter", "Freedom" ], 5, 50, null, 0, null, null, null, null, null, null, null, null, 0 ],
+	[ "Kimono Robin", "INT", [ "Knowledge", "Slasher" ], 4, 15, null, 0, null, null, null, null, null, null, null, null, 0 ],
+	[ "Kimono Usopp", "DEX", "Shooter", 4, 15, null, 0, null, null, null, null, null, null, null, null, 0 ],
+	[ "Kimono Chopper", "STR", [ "Tough", "Knowledge" ], 4, 15, null, 0, null, null, null, null, null, null, null, null, 0 ]
 ];
