@@ -50,6 +50,8 @@ directives.linkButton = function() {
 filters.decorate = function() {
     return function(input) {
         if (!input) return 'None';
+        if (input.constructor == Array) input = input[0];
+        if (input.constructor != String) return 'N/A';
         return input
             .replace(/\[?(STR|DEX|QCK|PSY|INT)\]?/g,'<span class="badge $1">$1</span>')
             .replace(/\[RCV\]/g,'<span class="badge RCV">RCV</span>')
