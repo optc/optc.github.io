@@ -116,8 +116,8 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
                 if (id != 1 && (unit.stars < 3 || isFarmable)) return false; 
                 if (filters.nonFarmable) {
                     // RR
-                    if (filters.nonFarmable.rr && !flags.rr) return false;
-                    if (filters.nonFarmable.rr === false && flags.rr) return false;
+                    if (filters.nonFarmable.rro && !flags.rro) return false;
+                    if (filters.nonFarmable.rro === false && flags.rro) return false;
                     // limited RR
                     if (filters.nonFarmable.lrr && !flags.lrr) return false;
                     if (filters.nonFarmable.lrr === false && flags.lrr) return false;
@@ -142,6 +142,8 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
             if (filters.server == 'Global units' && !flags.global) return false;
             if (filters.server !== 'Global units' && flags.global) return false;
         }
+        // filter by rr pool
+        if ((filters.rr === 'Not in RR pool' && flags.rr) || (filters.rr === 'In RR pool' && !flags.rr)) return false;
         // filter by active matchers
         if (filters.custom.length > 0 && !window.details.hasOwnProperty(id)) return false;
         for (var i=0;i<filters.custom.length;++i) {

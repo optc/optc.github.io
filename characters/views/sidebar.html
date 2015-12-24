@@ -35,14 +35,12 @@
         ng-class="{ active: filters.drop == type }" ng-click="onFilterClick($event,type)">{{type}}</span>
     <span ng-repeat="type in [ 'Global units', 'Japan units' ]" class="filter width-6 drop" ng-model="filters.server"
         ng-class="{ active: filters.server == type }" ng-click="onFilterClick($event,type)">{{type}}</span>
+    <span ng-repeat="type in [ 'In RR pool', 'Not in RR pool' ]" class="filter width-6 drop" ng-model="filters.rr"
+        ng-class="{ active: filters.rr == type }" ng-click="onFilterClick($event,type)">{{type}}</span>
 </div>
 
 <div class="filter-container conditional" ng-show="filters.drop == 'Farmable'">
     <span class="filter-header">Farmable filters</span>
-    <span class="filter width-6 drop" ng-class="{ active: filters.farmable.story }"
-        ng-model="filters.farmable.story" ng-click="onDropFilterClick($event,true)">Story mode-only</span><!--
- --><span class="filter width-6 exc" ng-class="{ active: filters.farmable.story === false }"
-        ng-model="filters.farmable.story" ng-click="onDropFilterClick($event,false)">Hide story-only</span>
     <span class="filter width-6 drop" ng-class="{ active: filters.farmable.fortnight }"
         ng-model="filters.farmable.fortnight" ng-click="onDropFilterClick($event,true)">Fortnight-only</span><!--
  --><span class="filter width-6 exc" ng-class="{ active: filters.farmable.fortnight === false }"
@@ -55,10 +53,6 @@
 
 <div class="filter-container conditional" ng-show="filters.drop == 'Non-farmable'">
     <span class="filter-header">Non-farmable filters</span>
-    <span class="filter width-6 drop" ng-class="{ active: filters.nonFarmable.rr }"
-        ng-model="filters.nonFarmable.rr" ng-click="onDropFilterClick($event,true)">RR-only</span><!--
- --><span class="filter width-6 drop" ng-class="{ active: filters.nonFarmable.rr === false }"
-        ng-model="filters.nonFarmable.rr" ng-click="onDropFilterClick($event,false)">Hide RR-only</span>
     <span class="filter width-6 drop" ng-class="{ active: filters.nonFarmable.lrr }"
         ng-model="filters.nonFarmable.lrr" ng-click="onDropFilterClick($event,true)">Limited RR-only</span><!--
  --><span class="filter width-6 drop" ng-class="{ active: filters.nonFarmable.lrr === false }"
