@@ -27,19 +27,19 @@ app.controller('MainCtrl',function($scope, $rootScope, $state, $stateParams, $ti
     $scope.$watch('query',function(query) {
         if (query === null || query === undefined || $scope.query == $stateParams.query) return;
         $state.go('.',{ query: $scope.query });
-        $scope.table.parameters = CharUtils.generateSearchParameters($scope.query, jQuery.extend({ }, $scope.filters));
+        $scope.table.parameters = CharUtils.generateSearchParameters($scope.query, jQuery.extend({ }, $rootScope.filters));
     });
 
 });
 
 app.controller('SidebarCtrl',function($scope, $rootScope, $stateParams, $timeout, MATCHER_IDS) {
 
-    if (!$scope.filters) $rootScope.filters = filters;
+    if (!$rootScope.filters) $rootScope.filters = filters;
 
     $timeout(function() {
         $scope.$watch('filters',function(filters) {
             if (!filters || Object.keys(filters).length === 0) return;
-            var data = jQuery.extend({ }, $scope.filters);
+            var data = jQuery.extend({ }, $rootScope.filters);
             $scope.table.parameters = CharUtils.generateSearchParameters($stateParams.query, data);
             if (!$scope.$$phase) $scope.$apply();
         },true);
@@ -47,7 +47,7 @@ app.controller('SidebarCtrl',function($scope, $rootScope, $stateParams, $timeout
 
     $scope.clearFilters = function() {
         filters = { custom: [ ], classes: [ ], stars: [ ], cost: [ 1, 55 ] };
-        $scope.filters = { custom: [ ], classes: [ ], stars: [ ], cost: [ 1, 55 ] };
+        $rootScope.filters = { custom: [ ], classes: [ ], stars: [ ], cost: [ 1, 55 ] };
     };
 
     $scope.onFilterClick = function(e, value) {
@@ -64,27 +64,27 @@ app.controller('SidebarCtrl',function($scope, $rootScope, $stateParams, $timeout
         }
         if (type === null) return;
         type = type.split(/\./)[1];
-        $scope.filters[type] = ($scope.filters[type] == value ? null : value);
+        $rootScope.filters[type] = ($rootScope.filters[type] == value ? null : value);
     };
 
     $scope.onClassClick = function(e, clazz) {
-        if ($scope.filters.classes.indexOf(clazz) == -1) {
-            $scope.filters.classes = $scope.filters.classes.slice(0,1);
-            $scope.filters.classes.push(clazz);
+        if ($rootScope.filters.classes.indexOf(clazz) == -1) {
+            $rootScope.filters.classes = $rootScope.filters.classes.slice(0,1);
+            $rootScope.filters.classes.push(clazz);
         }
-        else $scope.filters.classes.splice($scope.filters.classes.indexOf(clazz), 1);
+        else $rootScope.filters.classes.splice($rootScope.filters.classes.indexOf(clazz), 1);
     };
 
     $scope.onStarsClick = function(e, stars) {
-        if ($scope.filters.stars.indexOf(stars) == -1) $scope.filters.stars.push(stars);
-        else $scope.filters.stars.splice($scope.filters.stars.indexOf(stars), 1);
+        if ($rootScope.filters.stars.indexOf(stars) == -1) $rootScope.filters.stars.push(stars);
+        else $rootScope.filters.stars.splice($rootScope.filters.stars.indexOf(stars), 1);
     };
 
     $scope.onDropFilterClick = function(e,value) {
         var tokens = e.target.getAttribute('ng-model').split(/\./).slice(1);
         var type = tokens[0], key = tokens[1];
-        if (!$scope.filters.hasOwnProperty(type)) $scope.filters[type] = { };
-        $scope.filters[type][key] = ($scope.filters[type][key] == value ? null : value);
+        if (!$rootScope.filters.hasOwnProperty(type)) $rootScope.filters[type] = { };
+        $rootScope.filters[type][key] = ($rootScope.filters[type][key] == value ? null : value);
     };
 
     $scope.filterData = window.matchers;

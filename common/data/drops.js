@@ -923,6 +923,14 @@ window.drops = {
             thumb: 836,
             Master: [ 835 ],
             Expert: [ 835 ]
+        },
+
+        {
+            name: 'Empress Boa Hancock',
+            thumb: 865,
+            Ultimate: [ 864 ],
+            Master: [ 864 ],
+            Expert: [ 864 ]
         }
 
     ],
