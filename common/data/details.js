@@ -2205,13 +2205,13 @@ window.details = {
 	},
 	529: {
 		special: "Deals 35x character's ATK in PSY damage to all enemies, reduces the defense of all enemies by 100% for 2 turns",
-		specialName: "Conqueror's Haki - Emperor",
+		specialName: "Conqueror's Haki: Emperor",
 		captain: "Boosts chances of getting [PSY] orbs, boosts ATK of PSY characters proportionally to the crew's current HP",
 		captainNotes: "#{captainProportional : higher : 2 + 0.75 * (remaining HP) / (total HP) : 2.75 : 2}"
 	},
 	530: {
 		special: "Deals 35x character's ATK in PSY damage to all enemies, reduces the defense of all enemies by 100% for 2 turns",
-		specialName: "Conqueror's Haki - Emperor",
+		specialName: "Conqueror's Haki: Emperor",
 		captain: "Boosts chances of getting [PSY] orbs, boosts ATK of PSY characters proportionally to the crew's current HP",
 		captainNotes: "#{captainProportional : higher : 2 + 0.75 * (remaining HP) / (total HP) : 2.75 : 2}"
 	},
@@ -2463,12 +2463,12 @@ window.details = {
 	},
 	579: {
 		special: "Randomly changes [BLOCK] orbs into either [QCK] or [DEX] orbs, deals 15x character's ATK in QCK damage to all enemies",
-		specialName: "Tatsu Maki",
+		specialName: "Dragon Twister",
 		captain: "Boosts ATK of QCK and DEX characters by 1.5x"
 	},
 	580: {
 		special: "Randomly changes [BLOCK] orbs into either [QCK] or [DEX] orbs, deals 15x character's ATK in QCK damage to all enemies",
-		specialName: "Tatsu Maki",
+		specialName: "Dragon Twister",
 		captain: "Boosts ATK of QCK and DEX characters by 2x"
 	},
 	581: {
@@ -3087,12 +3087,12 @@ window.details = {
 	},
 	710: {
 		special: "Empties all slots with [BLOCK] orbs, boosts ATK of Shooter characters by 1.25x for 3 turns, deals 15x character's ATK in PSY damage to all enemies",
-		specialName: "The Man Who Will Build the Ship of Dreams",
+		specialName: "Coup de Vent",
 		captain: "Boosts ATK of Shooter characters by 1.5x"
 	},
 	711: {
 		special: "Empties all slots with [BLOCK] orbs, boosts ATK of Shooter characters by 1.25x for 3 turns, deals 15x character's ATK in PSY damage to all enemies",
-		specialName: "The Man Who Will Build the Ship of Dreams",
+		specialName: "Coup de Vent",
 		captain: "Boosts ATK of Shooter characters by 2x"
 	},
 	712: {
