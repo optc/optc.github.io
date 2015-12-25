@@ -66,6 +66,10 @@ directives.expandableDamage = function($sce) {
             scope.getApproxTimingBonus = function(data) {
                 return { Perfect: '1.90', Great: '1.60', Good: '1.30' }[data];
             };
+            scope.getSubtotal = function(type, n) {
+                if (!scope.numbers || !scope.numbers[type] || !scope.numbers[type].damage) return 0;
+                return scope.numbers[type].damage.slice(0, n+1).reduce(function(p,n) { return p + n.damage; },0);
+            };
         },
     };
 };

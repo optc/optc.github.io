@@ -10,6 +10,10 @@
                 <td>~{{getApproxTimingBonus(numbers[type].hitModifiers[$index])}}x</td>
                 <td>timing bonus</td>
             </tr>
+            <tr class="details-subtotal">
+                <td>Subtotal:</td>
+                <td>{{getSubtotal(type,$index) | number}} HP</td>
+            </tr>
         </table>
     </script>
 
