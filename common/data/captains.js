@@ -1832,5 +1832,12 @@ window.captains = {
 	},
 	863: {
 		atk: function(p) { return p.unit.type == 'QCK' ? 1.75 : 1; }
+	},
+	864: {
+		atk: function(p) { return p.unit.class.has("Freedom") ? 2 : 1; }
+	},
+	865: {
+		atk: function(p) { return p.unit.class.has("Freedom") ? 2 : 1; },
+		hp: function(p) { return p.unit.class.has("Freedom") ? 2 : 1; }
 	}
 };

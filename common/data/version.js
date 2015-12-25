@@ -1,1 +1,1 @@
-window.dbVersion = 22;
+window.dbVersion = 23;

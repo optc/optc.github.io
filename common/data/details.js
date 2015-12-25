@@ -3877,5 +3877,15 @@ window.details = {
 		captain: "Boosts ATK of QCK characters by 1.75x, recovers 2x character's RCV in HP at the end of each turn",
 		specialName: "Snow Crystal Clima-Tact",
 		special: "Reduces the defense of all enemies by 50% for 2 turns, reduces the ATK of all enemies by 10% for 2 turns"
+	},
+	864: {
+		captain: "Boosts ATK of Freedom characters by 2x",
+		specialName: "Slave Arrow",
+		special: "Locks the chain multiplier at 2.5x for 2 turns, delays all enemies for 1 turn"
+	},
+	865: {
+		captain: "Boosts ATK and HP of Freedom characters by 2x",
+		specialName: "Slave Arrow",
+		special: "Locks the chain multiplier at 2.5x for 2 turns, delays all enemies for 1 turn"
 	}
 };

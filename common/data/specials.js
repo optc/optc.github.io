@@ -828,5 +828,11 @@ window.specials = {
 	},
 	863: {
 		def: function(p) { return 0.5; }
+	},
+	864: {
+		warning: "Selected special (%name%) is not supported yet."
+	},
+	865: {
+		warning: "Selected special (%name%) is not supported yet."
 	}
 };
