@@ -890,7 +890,7 @@ window.drops = {
         },
 
         {
-            name: 'Enel',
+            name: 'Eneru',
             thumb: 603,
             Ultimate: [ 85, 111, 118, 301, 602 ],
             Master: [ 85, 111, 118, 602 ] ,
