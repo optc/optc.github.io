@@ -618,7 +618,7 @@ window.drops = {
         },
 
         {
-            name: 'Kimono Strawhats',
+            name: 'Majestic! Meeting the Strawhat Crew',
             thumb: 420,
             Expert: [ 36, 37, 47, 48, 49, 50, 51, 59, 207, 211, 233, 420, 421, 422, -422, -332, -308, -225, -206, -204, -8 ],
             Elite: [ 36, 37, 47, 48, 49, 50, 51, 59, 207, 211, 233, 420, 421, 422, -422, -332, -308, -225, -206, -204, -8 ]
@@ -633,7 +633,7 @@ window.drops = {
         },
 
         {
-            name: 'Candy-chan',
+            name: 'Maiden in Love Candy-chan',
             thumb: 436,
             Expert: [ 433, 434, 435, -384, -372, -371, -359, -217, -210, -19 ],
             Elite: [ 433, 434, 435, -384, -372, -371, -359, -217, -210, -19 ]
@@ -648,7 +648,7 @@ window.drops = {
         },
 
         {
-            name: 'Fugitive Baroque Works',
+            name: 'Jailbreaking Baroque Works',
             thumb: 462,
             Expert: [ 460, 461, -398, -396, -370, -361, -253, -236, -234 ],
             Elite: [ 460, 461, -398, -396, -370, -361, -253, -236, -234 ]
@@ -663,21 +663,21 @@ window.drops = {
         },
 
         {
-            name: 'Domino',
+            name: 'Jailer Domino\' Special Guard',
             thumb: 538,
             Expert: [ 537, 539, 540, -539, -428, -416, -365, -257, -59 ],
             Elite: [ 537, 539, 540, -539, -428, -416, -365, -257, -59 ]
         },
 
         {
-            name: 'Sadi-chan',
+            name: 'Chief Guard Sadi-chan\'s Pun♥ish♥ment',
             thumb: 550,
             Expert: [ 549, 551, 552, -552, -551, -432, -426, -408, -329, -308, -255 ],
             Elite: [ 549, 551, 552, -552, -551, -432, -426, -408, -329, -308, -255 ]
         },
 
         {
-            name: 'Afro Luffy',
+            name: 'Super Fight!? Afro Luffy!',
             thumb: 571,
             Expert: [ 570, 572, 573, -431, -429, -410, -333, -332, -327, -316, -75 ],
             Elite: [ 570, 572, 573, -431, -429, -410, -333, -332, -327, -316, -75 ]
@@ -692,122 +692,131 @@ window.drops = {
         },
 
         {
-            name: 'Pirate Apprentices',
+            name: 'Pirate Apprentices! Shanks and Buggy',
             thumb: 599,
             Expert: [ 598, 600, -504, -467, -463, -414, -372, -332, -310, -77 ],
             Elite: [ 598, 600, -467, -463, -414, -372, -332, -310, -77 ]
         },
 
         {
-            name: 'Red Leg Zeff',
+            name: 'Raging Cook! Red Leg Zeff',
             thumb: 607,
             Expert: [ 606, 608, 609, -502, -457, -449, -312, -52, -50 ],
             Elite: [ 606, 608, 609, -502, -457, -449, -312, -52, -50 ]
         },
 
         {
-            name: 'Keimi & Hachi',
+            name: 'Keimi and Hachi\'s Takoyaki Shop!',
             thumb: 635,
             Expert: [ 634, 636, 637, -636, -464, -451, -396, -370, -367, -359, -64 ],
             Elite: [ 634, 636, 637, -636, -464, -451, -396, -370, -367, -359, -64 ]
         },
 
         {
-            name: 'Pirate Arlong',
+            name: 'Invasion! Pirate Arlong\'s Crew!!',
             thumb: 656,
             Expert: [ 655, 657, 658, -658, -500, -465, -455, -453, -398, -357, -60 ],
             Elite: [ 655, 657, 658, -658, -500, -465, -455, -453, -398, -357, -60 ]
         },
 
         {
-            name: 'Suna Suna Clan',
+            name: 'Fight! Suna Suna Clan!!',
             thumb: 664,
             Expert: [ 663, 665, 667, -667, -522, -508, -506, -459, -378, -221, -73 ],
             Elite: [ 663, 665, 667, -667, -522, -508, -506, -459, -378, -221, -73 ]
         },
 
         {
-            name: 'Noland & Calgara',
+            name: 'Guidance from the Sound of a Bell! Calgara and Noland!',
             thumb: 688,
             Expert: [ 687, 689, -542, -524, -528, -429, -428, -401, -365, -218 ],
             Elite: [ 687, 689, -542, -524, -528, -429, -428, -401, -365, -218 ],
         },
 
         {
-            name: "Gan Fall",
+            name: "Knight of the Sky Gan Fall",
             thumb: 713,
             Expert: [ 712, 714, 715, -716, -546, -541, -520 ],
             Elite: [ 712, 714, 715, -716, -546, -541, -520 ]
         },
 
         {
-            name: "T-Bone",
+            name: "T-Bone's Absolute Justice",
             thumb: 724,
             Expert: [ 721, 723, -590, -564, -563, -529, -526, -384, -361, -219 ],
             Elite: [ 721, 723, -590, -564, -563, -529, -526, -384, -361, -219 ]
         },
 
         {
-            name: "Wanze",
+            name: "Explosive! Wanze's Ramen Kenpo!!",
             thumb: 743,
             Expert: [ 740, 742, -560, -558, -586, -567, -566, -412, -225, -18 ],
             Elite: [ 740, 742, -560, -558, -586, -567, -566, -412, -225, -18 ]
         },
 
         {
-            name: "Twilight Party",
+            name: "Twilight Party DEAD or TREAT!!",
             thumb: 761,
             Expert: [ 761, 762, 763, 764, 765, -610, -588, -565, -556, -426, -408, -261, -217 ],
             Elite: [ 761, 762, 763, 764, 765, -610, -588, -565, -556, -426, -408, -261, -217 ]
         },
 
         {
-            name: "Twilight Party (Global)",
+            name: "Twilight Party DEAD or TREAT!! (Global)",
             thumb: 763,
+            global: true,
             Expert: [ 761, 762, 763, 764, 765, -426, -408, -332, -308, -292, -261, -217, -8 ],
             Elite: [ 761, 762, 763, 764, 765, -426, -408, -332, -308, -292, -261, -217, -8 ]
         },
 
         {
-            name: "Midnight Party",
+            name: "Midnight Party DEAD or TREAT!!",
             thumb: 766,
             Expert: [ 762, 766, 767, 768, 769, -629, -611, -569, -554, -431, -410, -367, -223 ],
             Elite: [ 762, 766, 767, 768, 769, -629, -611, -569, -554, -431, -410, -367, -223 ]
         },
 
         {
-            name: "Midnight Party (Global)",
+            name: "Midnight Party DEAD or TREAT!! (Global)",
             thumb: 768,
+            global: true,
             Expert: [ 762, 766, 767, 768, 769, -431, -367, -291, -253, -251, -223, -212, -75 ],
             Elite: [ 762, 766, 767, 768, 769, -431, -367, -291, -253, -251, -223, -212, -75 ]
         },
 
         {
-            name: "Breed",
+            name: "Evil Manager Breed's Marine Circus!",
             thumb: 797,
             Expert: [ 796, 798, 799, 800, -800, -639, -628, -562, -414, -432, -380, -75 ],
             Elite: [ 796, 798, 799, 800, -800, -639, -628, -562, -414, -432, -380, -75 ]
         },
 
         {
-            name: "Nami and Lola",
+            name: "Nami and Lola's Great Proposal Plan",
             thumb: 808,
             Expert: [ 807, 809, 811, -811, -645, -641, -502, -11, -12, -9 ],
             Elite: [ 807, 809, 811, -811, -645, -641, -502, -11, -12, -9 ]
         },
 
         {
-            name: "Tom's Workers",
+            name: "Legendary Shipbuilding Company Tom's Workers",
             thumb: 848,
             Expert: [ 847, 849, 850, -849, -647, -617, -616, -615, -578, -508, -454 ],
             Elite: [ 847, 849, 850, -849, -647, -617, -616, -615, -578, -508, -454 ]
         },
 
         {
-            name: "Wapol",
+            name: "Wapol's Counterattack",
             thumb: 852,
             Expert: [ 328, 333, 851, 853, 854, -854, -649, -643, -614, -463, -457, -327, -22 ],
             Elite: [ 328, 333, 851, 853, 854, -854, -649, -643, -614, -463, -457, -327, -22 ]
+        },
+
+        {
+            name: "Lightning Speed! Strawhat Crew's Surprise Visit",
+            thumb: 866,
+            Expert: [ 866, 867, 868 ],
+            Elite: [ 866, 867, 868 ]
         }
 
     ],
@@ -816,7 +825,7 @@ window.drops = {
     'Raid': [
 
         {
-            name: 'Mihawk',
+            name: 'Clash!! Mihawk',
             thumb: 227,
             global: true,
             Master: [ 86, 112, 118, 226 ],
@@ -824,7 +833,7 @@ window.drops = {
         },
 
         {
-            name: 'Monster Chopper',
+            name: 'Clash!! Chopper\'s Rampage',
             thumb: 249,
             global: true,
             Master: [ 84, 110, 118, 248 ],
@@ -832,21 +841,21 @@ window.drops = {
         },
 
         {
-            name: 'Garp',
+            name: 'Clash!! Vice-Admiral Garp',
             thumb: 306,
             global: true,
             Master: [ 113, 118, 262, 264, 305 ],
         },
 
         {
-            name: 'Zephyr',
+            name: 'Clash!! Black Arm Zephyr',
             thumb: 353,
             Master: [ 88, 114, 118, 352, 354 ],
             Expert: [ 99, 114, 117, 352, 354 ]
         },
 
         {
-            name: 'Ivankov',
+            name: 'Clash!! Ivankov',
             thumb: 390,
             global: true,
             Master: [ 85, 111, 118, 389 ],
@@ -854,7 +863,7 @@ window.drops = {
         },
 
         {
-            name: 'Doflamingo',
+            name: 'Clash!! Doflamingo',
             thumb: 418,
             global: true,
             Ultimate: [ 86, 112, 118, 302, 417 ],
@@ -862,7 +871,7 @@ window.drops = {
         },
 
         {
-            name: 'Blackbeard',
+            name: 'Clash!! Blackbeard',
             thumb: 447,
             global: true,
             Master: [ 84, 110, 118, 300, 446 ],
@@ -870,27 +879,27 @@ window.drops = {
         },
 
         {
-            name: 'Usoppun',
+            name: 'Clash!? Usopp\'n',
             thumb: 518,
             'Ultimate': [ 517 ]
         },
 
         {
-            name: 'Heracles',
+            name: 'Clash!! Heracles\'n',
             thumb: 516,
             Master: [ 87, 97, 113, 117, 118, 294, 295, 303, 429, 515 ],
             Expert: [ 87, 98, 113, 117, 293, 295, 429, 379, 515 ]
         },
 
         {
-            name: 'Aokiji',
+            name: 'Clash!! Aokiji',
             thumb: 575,
             Ultimate: [ 88, 114, 118, 304, 574 ],
             Master: [ 114, 118, 574 ]
         },
 
         {
-            name: 'Eneru',
+            name: 'Clash!! Eneru',
             thumb: 603,
             Ultimate: [ 85, 111, 118, 301, 602 ],
             Master: [ 85, 111, 118, 602 ] ,
@@ -898,35 +907,35 @@ window.drops = {
         },
 
         {
-            name: 'Duval',
+            name: 'Clash!! Duval',
             thumb: 654,
             Master: [ 112, 118, 302, 652 ],
             Expert: [ 86, 97, 112, 652 ]
         },
 
         {
-            name: 'Buster Call',
+            name: 'Clash!! Buster Call',
             thumb: 771,
             Master: [ 110, 111, 112, 113, 114, 770, 771, 772, 773, 774, 775 ],
             Expert: [ 110, 111, 112, 113, 114, 770, 771, 772, 773, 774, 775 ]
         },
 
         {
-            name: 'Nightmare Luffy',
+            name: 'Clash!! Nightmare Luffy',
             thumb: 795,
             Master: [ 794 ],
             Expert: [ 794 ]
         },
 
         {
-            name: 'Tyrant Kuma',
+            name: 'Clash!! Tyrant Kuma',
             thumb: 836,
             Master: [ 835 ],
             Expert: [ 835 ]
         },
 
         {
-            name: 'Empress Boa Hancock',
+            name: 'Clash!! Pirate Empress Hancock',
             thumb: 865,
             Ultimate: [ 864 ],
             Master: [ 864 ],
@@ -938,19 +947,19 @@ window.drops = {
     'Special': [
 
         {
-            name: 'Chopperman Special Island',
+            name: 'Chopper\'s Sweet Special Adventure',
             thumb: 247,
             '': [ 247 ]
         },
 
         {
-            name: 'Oars Special Raid',
+            name: 'Battle Royal! Oars',
             thumb: 414,
             'Master': [ -367, -316, -314, -312, -308, -259, -257, -255, -253, -251, -221, -218, -217, -210, -75, -30, -16, -15, -8 ]
         },
 
         {
-            name: 'Girls of Summer Paradise Special Island',
+            name: 'Girls of Summer Paradise',
             thumb: 683,
             Expert: [ 659, 680, 682, 684, 686 ]
         },
