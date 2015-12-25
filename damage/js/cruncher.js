@@ -541,7 +541,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 chainSpecials.push({ sourceSlot: data.sourceSlot, chain: data.chain });
         });
         specialsCombinations = Utils.arrayProduct([ result.type.concat(result.class), result.condition, result.orb ]);
-        if (chainSpecials.length === 0) chainSpecials.push({ chain: function() { return 1; } });
+        if (chainSpecials.length === 0) chainSpecials.push({ chain: function(k) { return k; } });
     };
 
     /* * * * * * Utility functions * * * * */
