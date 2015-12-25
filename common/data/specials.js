@@ -830,9 +830,9 @@ window.specials = {
 		def: function(p) { return 0.5; }
 	},
 	864: {
-		warning: "Selected special (%name%) is not supported yet."
+		chain: function(p) { return 2.5; }
 	},
 	865: {
-		warning: "Selected special (%name%) is not supported yet."
+		chain: function(p) { return 2.5; }
 	}
 };

@@ -59,7 +59,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
     var currentDefense = 0;
     var isDefenseDown = false;
 
-    var specialsCombinations = [ ];
+    var specialsCombinations = [ ], chainSpecials = [ ];
     var hitModifiers = [ ];
     var shipBonus = { };
     var enabledSpecials = [ ];
@@ -418,31 +418,39 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
     };
 
     var applyChainAndBonusMultipliers = function(damage,modifiers) {
-        var multipliersUsed = [ ], currentHits = 0;
-        var currentChainMultiplier = 1.0, i;
-        var result = damage.map(function(x,n) {
-            for (i=0;i<x.multipliers.length;++i) {
-                if (x.multipliers[i][1] != 'chain') continue;
-                x.multipliers[i][0] = currentChainMultiplier;
-                break;
+        var currentMax = -1, currentResult = null;
+        chainSpecials.forEach(function(special) {
+            var multipliersUsed = [ ], currentHits = 0, overall = 0;
+            var currentChainMultiplier = special.chain(1.0), i;
+            var result = damage.map(function(x,n) {
+                for (i=0;i<x.multipliers.length;++i) {
+                    if (x.multipliers[i][1] != 'chain') continue;
+                    x.multipliers[i][0] = special.chain(currentChainMultiplier);
+                    break;
+                }
+                if (i == x.multipliers.length) x.multipliers.push([ currentChainMultiplier, 'chain' ]);
+                var result = Math.floor(x.base * totalMultiplier(x.multipliers));
+                var chainModifier = cptsWith.chainModifiers.reduce(function(prev,next) {
+                    return prev * next.chainModifier(getParameters(x.position));
+                },1);
+                var temp = computeDamageOfUnit(x.unit.unit,result,modifiers[n],currentHits);
+                currentHits = temp.hits;
+                result = temp.result;
+                overall += result;
+                // update chain multiplier for the next hit
+                multipliersUsed.push(currentChainMultiplier);
+                currentChainMultiplier = special.chain(getChainMultiplier(currentChainMultiplier,modifiers[n],chainModifier));
+                if (mapEffect.chainLimiter)
+                    currentChainMultiplier = Math.min(mapEffect.chainLimiter, currentChainMultiplier);
+                // return value
+                return { unit: x.unit, orb: x.orb, damage: result, base: x.base, multipliers: x.multipliers, position: x.position };
+            });
+            if (currentMax < overall) {
+                currentMax = overall;
+                currentResult = { result: result, chainMultipliers: multipliersUsed };
             }
-            if (i == x.multipliers.length) x.multipliers.push([ currentChainMultiplier, 'chain' ]);
-            var result = Math.floor(x.base * totalMultiplier(x.multipliers));
-            var chainModifier = cptsWith.chainModifiers.reduce(function(prev,next) {
-                return prev * next.chainModifier(getParameters(x.position));
-            },1);
-            var temp = computeDamageOfUnit(x.unit.unit,result,modifiers[n],currentHits);
-            currentHits = temp.hits;
-            result = temp.result;
-            // update chain multiplier for the next hit
-            multipliersUsed.push(currentChainMultiplier);
-            currentChainMultiplier = getChainMultiplier(currentChainMultiplier,modifiers[n],chainModifier);
-            if (mapEffect.chainLimiter)
-                currentChainMultiplier = Math.min(mapEffect.chainLimiter, currentChainMultiplier);
-            // return value
-            return { unit: x.unit, orb: x.orb, damage: result, base: x.base, multipliers: x.multipliers, position: x.position };
         });
-        return { result: result, chainMultipliers: multipliersUsed };
+        return currentResult;
     };
 
     var applySpecialMultipliersAndCaptainEffects = function(damage,hitModifiers,noSorting) {
@@ -521,6 +529,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
      */
     var computeSpecialsCombinations = function() {
         var result = { type: [ ], class: [ ], orb: [ ], condition: [ ] };
+        chainSpecials = [ ];
         enabledSpecials.forEach(function(data) {
             if (data === null) return;
             // notice specials with both atk and atkStatic defined are not supported right now
@@ -528,9 +537,11 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 result[data.type].push({ sourceSlot: data.sourceSlot, f: (data.atk || data.atkStatic), s: data.hasOwnProperty('atkStatic') });
             if (data.hasOwnProperty('orb'))
                 result.orb.push({ sourceSlot: data.sourceSlot, f: data.orb });
+            if (data.hasOwnProperty('chain'))
+                chainSpecials.push({ sourceSlot: data.sourceSlot, chain: data.chain });
         });
         specialsCombinations = Utils.arrayProduct([ result.type.concat(result.class), result.condition, result.orb ]);
-        return (result.class.length + result.type.length > 1) || result.orb.length > 1 || result.condition.length > 1;
+        if (chainSpecials.length === 0) chainSpecials.push({ chain: function() { return 1; } });
     };
 
     /* * * * * * Utility functions * * * * */
@@ -605,7 +616,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         hitModifiers = getPossibleHitModifiers(cptsWith.hitModifiers);
         // compute special combinations
         computeSpecialsCombinations();
-        $scope.conflictingSpecials = (specialsCombinations.length > 1);
+        $scope.conflictingSpecials = (specialsCombinations.length > 1 || chainSpecials.length > 1);
         // get ship bonus
         shipBonus = jQuery.extend({ bonus: ships[$scope.data.ship[0]] },{ level: $scope.data.ship[1] });
     };
