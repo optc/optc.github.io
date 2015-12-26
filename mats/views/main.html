@@ -1,3 +1,9 @@
+<script id="tooltip.html" type="text/ng-template">
+    <div>
+        <div ng-repeat="uid in unit.evolvers track by $index" class="slot micro" decorate-slot uid="uid"></div>
+    </div>
+</script>
+
 <h2 class="page-header">
     Evolution pool
     <collapse n="0" collapsed="collapsed"></collapse>
@@ -5,9 +11,11 @@
 
 <div>
     Units you plan to evolve. CTRL/Middle-click to remove.
+    CTRL+Shift to remove both the unit and its evolution materials.
     <div id="pool" class="panel">
         <a class="slot small" remove-on-click="pool" target="_blank" add-href
-            decorate-slot uid="unit.to" ng-repeat="unit in pool"></a>
+            decorate-slot uid="unit.to" ng-repeat="unit in pool"
+            uib-tooltip uib-tooltip-template="'tooltip.html'"></a>
 
         <add-button ui-sref=".pick"></add-button>
     </div>
@@ -19,7 +27,7 @@
 </h2>
 
 <div>
-    Materials you currently have. Click to change amount. CTRL/Middle-click to remove.
+    Materials you currently have. Click to change amount.
     <span class="pull-right clickable" title="Quick Pick"
         uib-popover uib-popover-template="'views/popover.html'" popover-trigger="click" popover-title="Quick Pick">
         <i class="fa fa-bolt"></i>

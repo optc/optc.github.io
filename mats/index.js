@@ -83,7 +83,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
  * Controllers *
  ***************/
 
-app.controller('MainCtrl',function($scope, $rootScope, $timeout, $storage) {
+app.controller('MainCtrl',function($scope, $rootScope, $timeout, $storage, $sce) {
 
     var onPoolChange = function(pool) {
         var temp = JSON.parse(JSON.stringify(pool));
@@ -188,7 +188,9 @@ app.controller('MainCtrl',function($scope, $rootScope, $timeout, $storage) {
         $storage.set('matsCollapsed', [ false, false ]);
     $rootScope.collapsed = $storage.get('matsCollapsed', [ false, false ]);
 
-
+    $scope.getEvolutionTooltip = function(data) {
+        return $sce.trustAsHtml('<div>eh</div>');
+    };
 
 });
 
@@ -331,8 +333,19 @@ app.directive('removeOnClick',function() {
                     if (!scope.$$phase) scope.$apply();
                 },function(e) {
                     if (e.which != 2 && !e.ctrlKey && !e.metaKey) return;
-                    var target = (attrs.removeOnClick == 'pool' ? scope.pool : scope.mats);
+                    var isEvoPool = (attrs.removeOnClick == 'pool');
+                    var target = (isEvoPool ? scope.pool : scope.mats);
                     target.splice(scope.$index,1);
+                    if (isEvoPool && e.shiftKey) {
+                        scope.unit.evolvers.forEach(function(id) {
+                            for (var i=0;i<scope.mats.length;++i) {
+                                if (scope.mats[i].id != id) continue;
+                                if (--scope.mats[i].amount === 0)
+                                    scope.mats.splice(i,1);
+                                break;
+                            }
+                        });
+                    }
                     if (!scope.$$phase) scope.$apply();
                     e.preventDefault();
                     e.stopPropagation();

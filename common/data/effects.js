@@ -2,7 +2,7 @@ window.effects = {
 
     // always use unique IDs, and don't ever change an ID once you've set it
     // IDs must always be greater than 0
-    // last ID used: 22
+    // last ID used: 23
 
     'Baroque Works (pre-v4.0)': {
         description: 'Stats of non-Fighter units reduced by 90%',
@@ -150,6 +150,13 @@ window.effects = {
         thumb: 794,
         id: 15, // don't change this
         comboShield: 11
+    },
+
+    'Hit barrier (26 hits)': {
+        description: 'Nullifies the first 26 hits in the chain',
+        thumb: 375,
+        id: 23, // don't change this
+        comboShield: 26
     },
 
     'Nightmare Luffy, 2nd stage': {

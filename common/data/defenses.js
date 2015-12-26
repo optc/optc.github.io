@@ -48,6 +48,13 @@ window.defenses = [
     [ 'Kuma (def up)'                       , 'Kuma Raid'                            , 'Master', 835, 1500 ],
     [ 'Kuma'                                , 'Kuma Raid'                            , 'Ultimate', 836, 1000 ],
     [ 'Kuma (def up)'                       , 'Kuma Raid'                            , 'Ultimate', 836, 2000 ],
+  //[ 'Hancock'                             , 'Hancock Raid'                         , 'Expert', 835, 750 ],
+  //[ 'Hancock (def up)'                    , 'Hancock Raid'                         , 'Expert', 835, 750 ],
+  //[ 'Hancock'                             , 'Hancock Raid'                         , 'Master', 835, 1500 ],
+  //[ 'Hancock (def up)'                    , 'Hancock Raid'                         , 'Master', 835, 1500 ],
+    [ 'Giantess'                            , 'Hancock Raid'                         , 'Ultimate', 375, 250 ],
+    [ 'Hancock'                             , 'Hancock Raid'                         , 'Ultimate', 865, 260 ],
+    [ 'Hancock (def up)'                    , 'Hancock Raid'                         , 'Ultimate', 865, 38850 ],
     /* * * * * Story Islands * * * * */
     [ 'Crocodile (def up)'                  , 'Nanohana, chapter 15'                 , '' , 383, 1500 ],
     [ 'Mr. 1'                               , 'Alubarna, chapter 8'                  , '' , 401, 2050 ],
