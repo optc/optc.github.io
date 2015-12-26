@@ -369,18 +369,22 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         return 1;
     };
 
-    var getChainMultiplier = function(currentChainMultiplier,hit,chainModifier) {
-        if (hit == 'Perfect') return currentChainMultiplier + 0.3 * chainModifier;
-        else if (hit == 'Great') return currentChainMultiplier +  0.1 * chainModifier;
-        else if (hit == 'Good') return currentChainMultiplier;
-        return 1.0;
+    var getChainMultiplier = function(chainBase, hitModifiers, chainModifier) {
+        var result = chainBase;
+        for (var i=0;i<hitModifiers.length;++i) {
+            if (hitModifiers[i] == 'Perfect') result += chainBase * chainModifier * 0.3;
+            else if (hitModifiers[i] == 'Great') result += chainBase * chainModifier * 0.1;
+            else if (hitModifiers[i] == 'Good') result += 0;
+            else result = chainBase;
+        }
+        return result;
     };
 
     /* * * * * Captain effects/specials * * * * */
 
     var applyCaptainEffectsToDamage = function(damage,func,modifiers,isStatic) {
         return damage.map(function(x,n) {
-            var params = jQuery.extend({ chainPosition: n, damage: damage, modifiers: modifiers },getParameters(x.position));
+            var params = jQuery.extend({ damage: damage, modifiers: modifiers },getParameters(x.position, n));
             if (isStatic) x.base += func(params);
             else x.multipliers.push([ func(params), 'captain effect' ]);
             return { unit: x.unit, orb: x.orb, base: x.base, multipliers: x.multipliers, position: x.position };
@@ -421,29 +425,33 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         var currentMax = -1, currentResult = null;
         chainSpecials.forEach(function(special) {
             var multipliersUsed = [ ], currentHits = 0, overall = 0;
-            var currentChainMultiplier = special.chain(1.0), i;
+            var i, params = [ ];
+            for (var j=0;j<damage.length;++j) params.push(getParameters(damage[j].position, j));
             var result = damage.map(function(x,n) {
+                // calculate chain multiplier
+                var chainModifier = cptsWith.chainModifiers.reduce(function(prev,next) {
+                    return prev * next.chainModifier(getParameters(x.position, n));
+                },1);
+                var chainMultiplier = getChainMultiplier(special.chain(params[n]), modifiers.slice(0,n), chainModifier);
+                if (mapEffect.hasOwnProperty('chainLimiter'))
+                    chainMultiplier = Math.min(mapEffect.chainLimiter(params[n]), chainMultiplier);
+                else if (special.hasOwnProperty('chainLimiter'))
+                    chainMultiplier = Math.min(special.chainLimiter(params[n]), chainMultiplier);
+                // add or update chain multiplier to multiplier list
                 for (i=0;i<x.multipliers.length;++i) {
                     if (x.multipliers[i][1] != 'chain') continue;
-                    x.multipliers[i][0] = special.chain(currentChainMultiplier);
+                    x.multipliers[i][0] = chainMultiplier;
                     break;
                 }
-                if (i == x.multipliers.length) x.multipliers.push([ currentChainMultiplier, 'chain' ]);
-                var result = Math.floor(x.base * totalMultiplier(x.multipliers));
-                var chainModifier = cptsWith.chainModifiers.reduce(function(prev,next) {
-                    return prev * next.chainModifier(getParameters(x.position));
-                },1);
-                var temp = computeDamageOfUnit(x.unit.unit,result,modifiers[n],currentHits);
+                if (i == x.multipliers.length) x.multipliers.push([ chainMultiplier, 'chain' ]);
+                // compute damage
+                var unitAtk = Math.floor(x.base * totalMultiplier(x.multipliers));
+                var temp = computeDamageOfUnit(x.unit.unit, unitAtk, modifiers[n], currentHits);
                 currentHits = temp.hits;
-                result = temp.result;
-                overall += result;
-                // update chain multiplier for the next hit
-                multipliersUsed.push(currentChainMultiplier);
-                currentChainMultiplier = special.chain(getChainMultiplier(currentChainMultiplier,modifiers[n],chainModifier));
-                if (mapEffect.chainLimiter)
-                    currentChainMultiplier = Math.min(mapEffect.chainLimiter, currentChainMultiplier);
+                overall += temp.result;
+                multipliersUsed.push(chainMultiplier);
                 // return value
-                return { unit: x.unit, orb: x.orb, damage: result, base: x.base, multipliers: x.multipliers, position: x.position };
+                return { unit: x.unit, orb: x.orb, damage: temp.result, base: x.base, multipliers: x.multipliers, position: x.position };
             });
             if (currentMax < overall) {
                 currentMax = overall;
@@ -538,10 +546,13 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if (data.hasOwnProperty('orb'))
                 result.orb.push({ sourceSlot: data.sourceSlot, f: data.orb });
             if (data.hasOwnProperty('chain'))
-                chainSpecials.push({ sourceSlot: data.sourceSlot, chain: data.chain });
+                chainSpecials.push({ sourceSlot: data.sourceSlot, chain: data.chain, chainLimiter: data.chainLimiter || function() { return Infinity; } });
         });
         specialsCombinations = Utils.arrayProduct([ result.type.concat(result.class), result.condition, result.orb ]);
-        if (chainSpecials.length === 0) chainSpecials.push({ chain: function(k) { return k; } });
+        if (chainSpecials.length === 0) chainSpecials.push({
+            chain: function() { return 1.0; },
+            chainLimiter: function() { return Infinity; }
+        });
     };
 
     /* * * * * * Utility functions * * * * */
@@ -622,7 +633,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
     };
 
 
-    var getParameters = function(slotNumber) {
+    var getParameters = function(slotNumber, chainPosition) {
         return {
             unit: team[slotNumber].unit,
             orb: $scope.tdata.team[slotNumber].orb,
@@ -633,7 +644,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             tdata: $scope.tdata.team[slotNumber],
             scope: $scope,
             slot: slotNumber,
-            turnCounter: $scope.tdata.turnCounter.value
+            turnCounter: $scope.tdata.turnCounter.value,
+            chainPosition: chainPosition
         };
     };
 

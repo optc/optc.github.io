@@ -2,7 +2,7 @@ window.effects = {
 
     // always use unique IDs, and don't ever change an ID once you've set it
     // IDs must always be greater than 0
-    // last ID used: 23
+    // last ID used: 24
 
     'Baroque Works (pre-v4.0)': {
         description: 'Stats of non-Fighter units reduced by 90%',
@@ -142,7 +142,7 @@ window.effects = {
         description: 'Limits chain multiplier to 2.0x',
         thumb: 772,
         id: 14, // don't change this
-        chainLimiter: 2.0
+        chainLimiter: function() { return 2.0; }
     },
 
     'Hit barrier (11 hits)': {
@@ -152,26 +152,12 @@ window.effects = {
         comboShield: 11
     },
 
-    'Hit barrier (26 hits)': {
-        description: 'Nullifies the first 26 hits in the chain',
-        thumb: 375,
-        id: 23, // don't change this
-        comboShield: 26
-    },
-
     'Nightmare Luffy, 2nd stage': {
         description: 'Limits chain multiplier to 2.0x, nullifies the first 11 hits in the chain',
         thumb: 795,
         id: 16, // don't change this
         comboShield: 11,
-        chainLimiter: 2.0
-    },
-
-    'Attack reduction (20%)': {
-        description: 'ATK of all units reduced by 20%',
-        thumb: 567,
-        id: 22, // don't change this
-        atk: function(p) { return 0.8; }
+        chainLimiter: function() { return 2.0; }
     },
 
     'Attack reduction (50%)': {
@@ -207,6 +193,27 @@ window.effects = {
         thumb: 773,
         id: 21, // don't change this
         atk: function(p) { return p.class.has("Slasher") ? 0.3 : 1; }
-    }
+    },
+
+    'Attack reduction (20%)': {
+        description: 'ATK of all units reduced by 20%',
+        thumb: 567,
+        id: 22, // don't change this
+        atk: function(p) { return 0.8; }
+    },
+
+    'Hit barrier (26 hits)': {
+        description: 'Nullifies the first 26 hits in the chain',
+        thumb: 375,
+        id: 23, // don't change this
+        comboShield: 26
+    },
+
+    'Hancock chain bug': {
+        description: 'Allows higher than usual chain multipliers',
+        thumb: 865,
+        id: 24, // don't change this
+        chainLimiter: function(p) { return Infinity; }
+    },
 
 };
