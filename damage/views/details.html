@@ -21,7 +21,7 @@
         tooltip-placement="right" uib-tooltip-template="'tooltip-template.html'">
 
         <div class="onTurn">
-            #{{$index+1}} ({{numbers[type].hitModifiers[$index]}} / {{ numbers[type].chainMultipliers[$index] | number:1 }}x)
+            #{{$index+1}} ({{numbers[type].hitModifiers[$index]}} / {{ numbers[type].chainMultipliers[$index] | number:2 }}x)
         </div>
 
         <div class="damageDealer" title="{{turn.unit.unit.name}}">
