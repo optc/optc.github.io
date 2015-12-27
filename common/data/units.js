@@ -850,7 +850,7 @@ window.units = [
 	[ "Cutty Flam, Tom's Workers", "STR", [ "Shooter", "Ambition" ], 3, 13, 6, 2, 70, 1066998, 24, 138, 15, 924, 932, 139, 1 ],
 	[ "Iceburg, Tom's Workers", "QCK", [ "Striker", "Knowledge" ], 3, 13, 6, 2, 70, 1066998, 58, 60, 36, 1098, 694, 203, 1 ],
 	[ "Tin-Plate Wapol", "STR", [ "Shooter", "Ambition" ], 3, 12, 6, 2, 70, 1066998, 160, 78, 26, 1304, 800, 99, 1 ],
-	[ "Slim-up Wapol", "QCK", [ "Shooter", "Ambition" ], 4, 20, 5, 2, 99, 3000000, 837, 505, 95, 1923, 867, 247, 0 ],
+	[ "Slim-up Wapol", "QCK", [ "Shooter", "Ambition" ], 4, 20, 5, 2, 99, 3000000, 837, 505, 95, 1923, 867, 247, 1 ],
 	[ "Robson", "PSY", [ "Fighter", "Tough" ], 3, 9, 6, 1, 50, 392109, 155, 22, 36, 1574, 318, 151, 1 ],
 	[ "Chopper Playing in the Snow", "DEX", [ "Fighter", "Tough" ], 4, 15, 5, 2, 99, 2000000, 130, 30, 50, 1920, 614, 293, 1 ],
 	[ "Trafalgar Law Holy Night Gentleman", "DEX", [ "Slasher", "Freedom" ], 4, 12, 6, 3, 50, 392109, 182, 93, 43, 995, 489, 198, 1 ],
