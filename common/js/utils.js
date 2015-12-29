@@ -125,6 +125,11 @@ utils.getOppositeType = function(type) {
 
 /* * * * * Searching/filtering * * * * */
 
+utils.getRegex = function(query) {
+    try { return new RegExp(query,'i'); }
+    catch (e) { return new RegExp(query.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, '\\$&'), 'i'); }
+};
+
 utils.generateSearchParameters = function(query) {
     if (!query || query.trim().length < 2) return null;
     query = query.toLowerCase().trim();
@@ -150,11 +155,8 @@ utils.generateSearchParameters = function(query) {
         } else // matcher
             result.matchers[temp[2]] = new RegExp(temp[3],'i');
     });
-    if (result.query.length > 0) {
-        var temp = result.query.join(' ');
-        try { result.query = new RegExp(temp,'i'); }
-        catch (e) { result.query = new RegExp(temp.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, '\\$&'), 'i'); }
-    } else result.query = null;
+    if (result.query.length > 0) result.query = utils.getRegex(result.query.join(' '));
+    else result.query = null;
     return result;
 };
 

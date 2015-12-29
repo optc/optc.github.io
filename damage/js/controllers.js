@@ -11,7 +11,7 @@ var controllers = { };
 controllers.DefenseCtrl = function($scope, $state, $stateParams) { 
 
     $scope.$watch('query',function() {
-        var regex = new RegExp($scope.query || '','i');
+        var regex = Utils.getRegex($scope.query || '');
         $scope.list = defenses.filter(function(x) { return regex.test(x); });
     });
 
@@ -114,7 +114,7 @@ controllers.SlotsCtrl = function($scope, $state, $stateParams, $storage) {
     /* * * * * Functions * * * * */
 
     var populateSlots = function(query) {
-        var regex = new RegExp(($scope.query || ''),'i'), result = { };
+        var regex = Utils.getRegex($scope.query || ''), result = { };
         for (var key in slots) {
             if (regex.test(slots[key].name))
                 result[key] = slots[key];
@@ -187,7 +187,7 @@ controllers.ShipCtrl = function($scope, $state) {
     $scope.list = ships;
 
     $scope.$watch('query',function() {
-        var regex = new RegExp(($scope.query || ''),'i'), result = [ ];
+        var regex = Utils.getRegex($scope.query || ''), result = [ ];
         for (var i=0;i<ships.length;++i) {
             if (regex.test(ships[i].name))
                 result.push(ships[i]);
