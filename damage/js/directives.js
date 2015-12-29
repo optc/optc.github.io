@@ -694,36 +694,56 @@ directives.special = function($rootScope) {
         restrict: 'E',
         replace: true,
         scope: true,
-        template: '<li class="special" ng-show="hasSpecial"><div>{{data.team[slot].unit.name}}</div></li>',
+        template:
+            '<li class="special" ng-show="hasSpecial">' +
+                '<div>{{data.team[slot].unit.name}}</div>' +
+            '</li>',
         link: function(scope, element, attrs) {
+
             scope.slot = element.prevAll('.special').length;
-            var isSelected = scope.tdata.team[scope.slot].special;
-            var removeType = function() { ['STR','DEX','QCK','PSY','INT'].forEach(function(x) { element.removeClass(x); }); };
             scope.hasSpecial = false;
+
+            var removeType = function() { element.removeClass('STR DEX QCK PSY INT'); };
+            var isSelected = scope.tdata.team[scope.slot].special;
+            var order = scope.tdata.specialOrder; // shorthand
+
             scope.$watch('tdata.team[slot].special',function(enabled) {
-                removeType();
                 var unit = scope.data.team[scope.slot].unit;
-                if (enabled) element.addClass(unit.type);
-                type = (unit ? unit.type : null);
                 isSelected = enabled;
-                if (enabled && window.specials[unit.number+1].warning) {
-                    scope.notify({
-                        text: window.specials[unit.number+1].warning.replace(/%name%/g, window.units[unit.number].name),
-                        type: 'warning'
-                    });
-                }
+                removeType(); // remove color from button
+                if (enabled) {
+                    element.addClass(unit.type);
+                    if (window.specials[unit.number+1].warning) {
+                        scope.notify({
+                            text: window.specials[unit.number+1].warning.replace(/%name%/g, unit.name),
+                            type: 'warning'
+                        });
+                    }
+                } else if (order.indexOf(scope.slot) > -1) // remove slot from specialOrder
+                    order.splice(order.indexOf(scope.slot),1);
             });
+
             scope.$watch('data.team[slot].unit',function(unit) {
-                removeType();
+                removeType(); // remove color from button
                 if (scope.tdata.team[scope.slot].special) element.addClass(unit.type);
-                scope.hasSpecial = unit && specials.hasOwnProperty(unit.number+1);
+                scope.hasSpecial = unit && specials.hasOwnProperty(unit.number + 1);
             });
+
             element.click(function(e) {
                 isSelected = !isSelected;
-                $rootScope.$emit('specialToggled', scope.slot, isSelected);
                 scope.tdata.team[scope.slot].special = isSelected;
+                // the event is invoked BEFORE we modify $scope.tdata as the cruncher only uses the event
+                // to fire onActivation/onDeactivation methods; the crunching itself is started
+                // when we modify $scope.tdata and propagate the changes
+                $rootScope.$emit('specialToggled', scope.slot, isSelected);
+                // update special order
+                if (!isSelected && order.indexOf(scope.slot) > -1) // remove slot from specialOrder
+                    order.splice(order.indexOf(scope.slot),1);
+                if (isSelected) // add slot at the end of specialOrder
+                    order.push(scope.slot);
                 scope.$apply();
             });
+
         }
     };
 };

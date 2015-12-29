@@ -125,8 +125,7 @@ var ImportCtrl = function($scope, $rootScope, $state, $stateParams) {
             temp.forEach(function(x,n) {
                 if (x == 1) $scope.options.sidebarVisible = true;
                 $scope.tdata.team[n].special = (x == 1);
-                if ($rootScope.cruncherReady) $rootScope.$emit('specialToggled', n, x == 1);
-                else emitQueue.push([ n, x == 1 ]);
+                $rootScope.$emit('specialToggled', n, x == 1);
             });
         } else if (type == 'H') {
             $scope.data.percHP = parseFloat(data, 10);
@@ -134,15 +133,6 @@ var ImportCtrl = function($scope, $rootScope, $state, $stateParams) {
             $scope.data.effect = effectName;
         }
 
-    }
-
-    // Wait for rcruncher if necessary
-    
-    if (!$rootScope.cruncherReady) {
-        $rootScope.$watch('cruncherReady',function(ready) {
-            if (!ready) return;
-            emitQueue.forEach(function(x) { $rootScope.$emit('specialToggled', x[0], x[1]); });
-        });
     }
 
     $scope.options.crunchInhibitor = 0;

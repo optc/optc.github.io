@@ -830,12 +830,12 @@ window.specials = {
 		def: function(p) { return 0.5; }
 	},
 	864: {
-		chain: function(p) { return 2.5; },
-		chainLimiter: function(p) { return p.chainPosition > 0 ? 2.5 : 1.0; }
+		chainBase: function(p) { return 2.5; },
+        chainLimiter: function(p) { return p.chainPosition > 0 ? 2.5 : 1.0; }
 	},
 	865: {
-		chain: function(p) { return 2.5; },
-		chainLimiter: function(p) { return p.chainPosition > 0 ? 2.5 : 1.0; }
+		chainBase: function(p) { return 2.5; },
+        chainLimiter: function(p) { return p.chainPosition > 0 ? 2.5 : 1.0; }
 	},
 	866: {
 		atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Knowledge") ? 1.3 : 1; },
