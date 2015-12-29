@@ -864,7 +864,7 @@ window.units = [
 	[ "Snowy World Nami", "QCK", [ "Striker", "Knowledge" ], 4, 15, 5, 2, 99, 2000000, 77, 33, 78, 1459, 674, 349, 1 ],
 	[ "Boa Hancock, Captain of the Kuja Pirates", "PSY", [ "Shooter", "Freedom" ], 4, 30, 4, 2, 70, 1066998, 153, 138, 57, 1020, 633, 201, 1 ],
 	[ "Empress Boa Hancock, Captain of the Kuja Pirates", "PSY", [ "Shooter", "Freedom" ], 5, 50, 4, 3, 99, 5000000, 943, 589, 161, 2055, 1378, 375, 1 ],
-	[ "Kimono Robin", "INT", [ "Knowledge", "Slasher" ], 4, 15, null, 0, null, null, null, null, null, null, null, null, 0 ],
-	[ "Kimono Usopp", "DEX", "Shooter", 4, 15, null, 0, null, null, null, null, null, null, null, null, 0 ],
-	[ "Kimono Chopper", "STR", [ "Tough", "Knowledge" ], 4, 15, null, 0, null, null, null, null, null, null, null, null, 0 ]
+	[ "Nico Robin Cien Fleur Wing: The Storm", "INT", [ "Knowledge", "Slasher" ], 4, 15, 4, 2, 99, null, 238, 203, 83, null, null, null, 0 ],
+	[ "Usopp Tabasco Star: The Storm", "DEX", "Shooter", 4, 15, 7, 2, 99, null, 258, 152, 94, null, null, null, 0 ],
+	[ "Tony Tony Chopper Heavy Gong: The Storm", "STR", [ "Tough", "Knowledge" ], 4, 15, 4, 2, 99, null, 417, 212, 79, null, null, null, 0 ]
 ];

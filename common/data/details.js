@@ -3887,5 +3887,20 @@ window.details = {
 		captain: "Boosts ATK and HP of Freedom characters by 2x",
 		specialName: "Slave Arrow",
 		special: "Locks the chain multiplier at 2.5x for 2 turns, delays all enemies for 1 turn"
+	},
+	866: {
+		captain: "Boosts ATK of Knowledge characters by 2x",
+		specialName: "Cien Fleur Wing: The Storm",
+		special: "Boosts ATK of Slasher and Knowledge units by 1.3x for 2 turns, reduces Bind duration by 2 turns"
+	},
+	867: {
+		captain: "Boosts ATK of all characters by 1.5x after the 12th hit in the chain",
+		specialName: "Tabasco Star: The Storm",
+		special: "Delays all enemies for 2 turns, deals 9x character's ATK in DEX damage to all enemies"
+	},
+	868: {
+		captain: "Boosts ATK of all characters by 1.2x, recovers 1,000 HP at the end of the turn",
+		specialName: "Heavy Gong: The Storm",
+		special: "Deals 15x character's ATK in STR damage to one enemy, reduces Bind duration by 3 turns"
 	}
 };
