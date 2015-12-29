@@ -980,7 +980,7 @@ window.details = {
 	},
 	263: {
 		special: "Amplifies the effect of orbs by 1.5x for 2 turns",
-		specialNotes: "#{orb : 1.5}",
+		specialNotes: "#{orb : 1.5x}",
 		specialName: "Shave",
 		captain: "Boosts ATK of Fighter characters by 2x"
 	},
@@ -1232,13 +1232,13 @@ window.details = {
 	},
 	323: {
 		special: "Amplifies the effect of orbs by 1.5x for 2 turns",
-		specialNotes: "#{orb : 1.5}",
+		specialNotes: "#{orb : 1.5x}",
 		specialName: "Mountain Wind",
 		captain: "Boosts HP and RCV of QCK characters by 1.5x"
 	},
 	324: {
 		special: "Amplifies the effect of orbs by 1.5x for 2 turns",
-		specialNotes: "#{orb : 1.5}",
+		specialNotes: "#{orb : 1.5x}",
 		specialName: "Mountain Wind",
 		captain: "Boosts HP and RCV of QCK characters by 1.5x"
 	},
@@ -1532,13 +1532,13 @@ window.details = {
 	},
 	395: {
 		special: "Empties neighboring slots, amplifies the effect of orbs by 1.25x for 1 turn",
-		specialNotes: "#{orb : 1.25}",
+		specialNotes: "#{orb : 1.25x}",
 		specialName: "Mole Banana",
 		captain: "Boosts ATK and RCV of QCK characters by 1.2x"
 	},
 	396: {
 		special: "Empties neighboring slots, amplifies the effect of orbs by 1.25x for 1 turn",
-		specialNotes: "#{orb : 1.25}",
+		specialNotes: "#{orb : 1.25x}",
 		specialName: "Mole Banana",
 		captain: "Boosts ATK and RCV of QCK characters by 1.2x"
 	},
@@ -1646,13 +1646,13 @@ window.details = {
 	},
 	417: {
 		special: "Switches orbs between slots twice, amplifies the effect of orbs by 2x for 1 turn",
-		specialNotes: "#{orb : 2}",
+		specialNotes: "#{orb : 2x}",
 		specialName: "Overheat",
 		captain: "Boosts ATK of Slasher characters by 2x"
 	},
 	418: {
 		special: "Switches orbs between slots twice, amplifies the effect of orbs by 2x for 1 turn",
-		specialNotes: "#{orb : 2}",
+		specialNotes: "#{orb : 2x}",
 		specialName: "Overheat",
 		captain: "Boosts ATK and HP of Slasher characters by 2x"
 	},
@@ -1715,13 +1715,13 @@ window.details = {
 	},
 	430: {
 		special: "Amplifies the effect of orbs by 1.5x for 1 turn",
-		specialNotes: "#{orb : 1.5}",
+		specialNotes: "#{orb : 1.5x}",
 		specialName: "Spring Hopper",
 		captain: "Boosts ATK of DEX characters by 1.5x"
 	},
 	431: {
 		special: "Amplifies the effect of orbs by 1.5x for 1 turn",
-		specialNotes: "#{orb : 1.5}",
+		specialNotes: "#{orb : 1.5x}",
 		specialName: "Spring Hopper",
 		captain: "Boosts ATK and HP of DEX characters by 1.5x"
 	},
@@ -1736,7 +1736,7 @@ window.details = {
 	},
 	434: {
 		special: "Amplifies the effect of orbs by 1.25x for 3 turns",
-		specialNotes: "#{orb : 1.25}",
+		specialNotes: "#{orb : 1.25x}",
 		specialName: "Newkama Kenpo - Maiden's Awakening",
 		captain: "Boosts ATK by 2x following a chain of PSY > INT > INT attacks no lower than Good"
 	},
@@ -1885,7 +1885,7 @@ window.details = {
 	},
 	465: {
 		special: "Deals 20x character's ATK in QCK damage to one enemy, amplifies the effect of orbs by 1.25x for 2 turns",
-		specialNotes: "#{orb : 1.25}",
+		specialNotes: "#{orb : 1.25x}",
 		specialName: "Jet Punch",
 		captain: "Boosts ATK by 3x after scoring 4 hits below Good in a row"
 	},
@@ -2227,13 +2227,13 @@ window.details = {
 	},
 	533: {
 		special: "Amplifies the effect of orbs by 1.5x for 1 turn, deals 20x character's ATK in QCK damage to one enemy",
-		specialNotes: "#{orb : 1.5}",
+		specialNotes: "#{orb : 1.5x}",
 		specialName: "Swallow Bond En Avant: Blossom",
 		captain: "Boosts ATK of QCK characters by 2x"
 	},
 	534: {
 		special: "Amplifies the effect of orbs by 1.5x for 1 turn, deals 20x character's ATK in QCK damage to one enemy",
-		specialNotes: "#{orb : 1.5}",
+		specialNotes: "#{orb : 1.5x}",
 		specialName: "Swallow Bond En Avant: Blossom",
 		captain: "Boosts ATK of QCK characters by 2x"
 	},
@@ -2361,13 +2361,13 @@ window.details = {
 	},
 	559: {
 		special: "Changes own orb into [STR], amplifies the effect of orbs by 1.5x for 2 turns",
-		specialNotes: "#{orb : 1.5}",
+		specialNotes: "#{orb : 1.5x}",
 		specialName: "Roar! Zarley Davison",
 		captain: "Boosts ATK of STR characters by 2x, deals 2x character's ATK in STR damage to all enemies at the end of each turn"
 	},
 	560: {
 		special: "Changes own orb into [STR], amplifies the effect of orbs by 1.5x for 2 turns",
-		specialNotes: "#{orb : 1.5}",
+		specialNotes: "#{orb : 1.5x}",
 		specialName: "Roar! Zarley Davison",
 		captain: "Boosts ATK of STR characters by 2.25x, deals 2x character's ATK in STR damage to all enemies at the end of each turn"
 	},
@@ -2740,13 +2740,13 @@ window.details = {
 	},
 	642: {
 		special: "Reduces crew's current HP by 30%, deals 10x character's ATK in PSY damage to one enemy, amplifies the effect of orbs by 1.75x for 1 turn",
-		specialNotes: "#{orb : 1.75}",
+		specialNotes: "#{orb : 1.75x}",
 		specialName: "Great Sword of the Battle Veteran",
 		captain: "Boosts ATK of PSY characters by 2.5x if HP is below 30% at the start of the turn"
 	},
 	643: {
 		special: "Reduces crew's current HP by 30%, deals 10x character's ATK in PSY damage to one enemy, amplifies the effect of orbs by 1.75x for 1 turn",
-		specialNotes: "#{orb : 1.75}",
+		specialNotes: "#{orb : 1.75x}",
 		specialName: "Great Sword of the Battle Veteran",
 		captain: "Boosts ATK of PSY characters by 3x if HP is below 30% at the start of the turn"
 	},
@@ -2772,25 +2772,25 @@ window.details = {
 	},
 	648: {
 		special: "Recovers 100x character's RCV in HP, amplifies the effect of orbs by 1.5x for 2 turns",
-		specialNotes: "#{orb : 1.5}",
+		specialNotes: "#{orb : 1.5x}",
 		specialName: "Blue Flame Kick",
 		captain: "Reduces damage received by 30% if HP is above 70% at the start of the turn, boosts ATK of QCK and PSY characters by 2.75x if HP is above 70% at the start the turn"
 	},
 	649: {
 		special: "Recovers 100x character's RCV in HP, amplifies the effect of orbs by 1.5x for 2 turns",
-		specialNotes: "#{orb : 1.5}",
+		specialNotes: "#{orb : 1.5x}",
 		specialName: "Blue Flame Kick",
 		captain: "Reduces damage received by 30% if HP is above 70% at the start of the turn, boosts ATK of QCK and PSY characters by 2.75x if HP is above 70% at the start the turn"
 	},
 	650: {
 		special: "Deals 5,000 fixed damage to one enemy, amplifies the effect of orbs by 1.5x for 1 turn",
-		specialNotes: "#{fixed} #{orb : 1.5}",
+		specialNotes: "#{fixed} #{orb : 1.5x}",
 		specialName: "Thunder Lance Tempo",
 		captain: "Boosts ATK of INT characters by 2x and their RCV by 1.5x"
 	},
 	651: {
 		special: "Deals 5,000 fixed damage to one enemy, amplifies the effect of orbs by 1.5x for 1 turn",
-		specialNotes: "#{fixed} #{orb : 1.5}",
+		specialNotes: "#{fixed} #{orb : 1.5x}",
 		specialName: "Thunder Lance Tempo",
 		captain: "Boosts ATK of INT characters by 2x and their RCV by 1.5x"
 	},
@@ -2811,13 +2811,13 @@ window.details = {
 	},
 	655: {
 		special: "Changes [EMPTY] and [TND] orbs into [STR] orbs, deals 10x character's ATK in STR damage to one enemy, amplifies the effect of orbs by 1.25x for 2 turns",
-		specialNotes: "#{orb : 1.25}",
+		specialNotes: "#{orb : 1.25x}",
 		specialName: "Tooth Gum",
 		captain: "Boosts ATK of STR characters by 1.5x"
 	},
 	656: {
 		special: "Changes [EMPTY] and [TND] orbs into [STR] orbs, deals 10x character's ATK in STR damage to one enemy, amplifies the effect of orbs by 1.25x for 2 turns",
-		specialNotes: "#{orb : 1.25}",
+		specialNotes: "#{orb : 1.25x}",
 		specialName: "Tooth Gum",
 		captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of STR characters by 2x"
 	},
@@ -2987,13 +2987,13 @@ window.details = {
 	},
 	689: {
 		special: "Amplifies the effect of orbs by 1.5x for 2 turns",
-		specialNotes: "#{orb : 1.5}",
+		specialNotes: "#{orb : 1.5x}",
 		specialName: "Botanist's Great Discovery",
 		captain: "Boosts ATK and RCV of Slasher characters by 1.2x"
 	},
 	690: {
 		special: "Amplifies the effect of orbs by 1.5x for 2 turns",
-		specialNotes: "#{orb : 1.5}",
+		specialNotes: "#{orb : 1.5x}",
 		specialName: "Botanist's Great Discovery",
 		captain: "Boosts ATK and RCV of Slasher characters by 1.5x"
 	},
@@ -3258,13 +3258,13 @@ window.details = {
 	},
 	742: {
 		special: "Amplifies the effect of orbs by 1.25x for 2 turns, reduces the defense of all enemies by 80% for 2 turns",
-		specialNotes: "#{orb : 1.25}",
+		specialNotes: "#{orb : 1.25x}",
 		specialName: "Ramen Beam",
 		captain: "Boosts ATK and RCV of Freedom characters by 1.2x"
 	},
 	743: {
 		special: "Amplifies the effect of orbs by 1.25x for 2 turns, reduces the defense of all enemies by 80% for 2 turns",
-		specialNotes: "#{orb : 1.25}",
+		specialNotes: "#{orb : 1.25x}",
 		specialName: "Ramen Beam",
 		captain: "Boosts ATK and RCV of Freedom characters by 1.5x"
 	},
@@ -3319,13 +3319,13 @@ window.details = {
 	},
 	753: {
 		special: "Deals 15x character's ATK in QCK damage to one enemy, amplifies the effect of orbs by 1.75x for 1 turn",
-		specialNotes: "#{orb : 1.75}",
+		specialNotes: "#{orb : 1.75x}",
 		specialName: "Moonlight Ten Finger Pistol",
 		captain: "Boosts ATK of Tough characters by 2x"
 	},
 	754: {
 		special: "Deals 15x character's ATK in QCK damage to one enemy, amplifies the effect of orbs by 1.75x for 1 turn",
-		specialNotes: "#{orb : 1.75}",
+		specialNotes: "#{orb : 1.75x}",
 		specialName: "Moonlight Ten Finger Pistol",
 		captain: "Boosts ATK of Tough characters by 2.5x"
 	},
@@ -3592,13 +3592,13 @@ window.details = {
 		special: "Reduces crew's current HP by 20%, deals 10x the amount of HP subtracted in INT damage to one enemy, amplifies the effect of orbs by 1.75x for 1 turn",
 		specialName: "White Vine",
 		captain: "Boosts ATK of Striker characters by 2x",
-		specialNotes: "#{orb : 1.75}"
+		specialNotes: "#{orb : 1.75x}"
 	},
 	806: {
 		special: "Reduces crew's current HP by 20%, deals 10x the amount of HP subtracted in INT damage to one enemy, amplifies the effect of orbs by 1.75x for 1 turn",
 		specialName: "White Vine",
 		captain: "Boosts ATK of Striker characters by 2x, reduces damage received up to 30% depending on the crew's current HP",
-		specialNotes: "#{orb : 1.75}"
+		specialNotes: "#{orb : 1.75x}"
 	},
 	807: {
 		captain: "Boosts ATK and RCV of Knowledge characters by 1.5x",
@@ -3614,13 +3614,13 @@ window.details = {
 		captain: "Boosts ATK and RCV of Tough characters by 1.5x",
 		specialName: "Lola's Attack Chance",
 		special: "Reduces the defense of all enemies by 80% for 1 turn, amplifies the effect of orbs by 1.5x for 1 turn",
-		specialNotes: "#{orb : 1.5}"
+		specialNotes: "#{orb : 1.5x}"
 	},
 	810: {
 		captain: "Boosts ATK of Tough characters by 2x and their RCV by 1.5x, reduces crew's current HP by 10% at the end of each turn",
 		specialName: "Lola's Attack Chance",
 		special: "Reduces the defense of all enemies by 80% for 1 turn, amplifies the effect of orbs by 1.5x for 1 turn",
-		specialNotes: "#{orb : 1.5}"
+		specialNotes: "#{orb : 1.5x}"
 	},
 	811: {
 		specialName: "Birdbrain Present",
@@ -3633,7 +3633,7 @@ window.details = {
 	813: {
 		specialName: "Sticky Spider Net",
 		special: "Delays all enemies for 1 turn, amplifies the effect of orbs by 1.25x for 1 turn",
-		specialNotes: "#{orb : 1.25}"
+		specialNotes: "#{orb : 1.25x}"
 	},
 	814: {
 		specialName: "Carpet Scratch",
@@ -3729,13 +3729,13 @@ window.details = {
 		captain: "Boosts ATK and HP of Knowledge characters by 2x",
 		specialName: "Thrust Pad Cannon",
 		special: "Changes [RCV], [TND], [EMPTY], [BLOCK] and [BOMB] orbs into matching orbs, amplifies the effect of orbs by 1.75x for 1 turn",
-		specialNotes: "#{orb : 1.75}"
+		specialNotes: "#{orb : 1.75x}"
 	},
 	836: {
 		captain: "Boosts ATK and HP of Knowledge characters by 2x, deals 5 times the damage received in the previous turn in STR damage to all enemies at the end of each turn",
 		specialName: "Thrust Pad Cannon",
 		special: "Changes [RCV], [TND], [EMPTY], [BLOCK] and [BOMB] orbs into matching orbs, amplifies the effect of orbs by 1.75x for 1 turn",
-		specialNotes: "#{orb : 1.75}"
+		specialNotes: "#{orb : 1.75x}"
 	},
 	837: {
 		captain: "Boosts ATK of Ambition characters by 2x",
@@ -3792,13 +3792,13 @@ window.details = {
 		captain: "Boosts ATK of all characters by 1.5x if HP is below 30% at the start of the turn",
 		specialName: "Sturdy Boat: Launch",
 		special: "Reduces Silence duration by 5 turns, boosts ATK of all characters by 5% for 3 turns, reduces damage received by 10% for 3 turns, amplifies the effect of orbs by 1.15x for 3 turns, recovers 2x character's RCV in HP at the end of each turn for 3 turns",
-		specialNotes: "#{orb : 1.15}"
+		specialNotes: "#{orb : 1.15x}"
 	},
 	848: {
 		captain: "Boosts ATK of all characters by 2x if HP is below 30% at the start of the turn",
 		specialName: "Sturdy Boat: Launch",
 		special: "Reduces Silence duration by 5 turns, boosts ATK of all characters by 5% for 3 turns, reduces damage received by 10% for 3 turns, amplifies the effect of orbs by 1.15x for 3 turns, recovers 2x character's RCV in HP at the end of each turn for 3 turns",
-		specialNotes: "#{orb : 1.15}"
+		specialNotes: "#{orb : 1.15x}"
 	},
 	849: {
 		captain: "Boosts ATK of Shooter characters by 1.75x",
@@ -3864,14 +3864,14 @@ window.details = {
 	861: {
 		specialName: "Bewitching Lovely Iron Mace",
 		special: "Deals 13x character's ATK in QCK damage to one enemy, reduces damage received by 75% for 1 turn, amplifies the effect of orbs by 1.5x for 1 turn",
-		specialNotes: "#{orb : 1.5}",
+		specialNotes: "#{orb : 1.5x}",
 		captain: "Reduces damage received by 10%"
 	},
 	862: {
 		captain: "Boosts ATK of QCK characters by 2x, reduces damage received by 10%",
 		specialName: "Bewitching Lovely Iron Mace",
 		special: "Deals 13x character's ATK in QCK damage to one enemy, reduces damage received by 75% for 1 turn, amplifies the effect of orbs by 1.5x for 1 turn",
-		specialNotes: "#{orb : 1.5}"
+		specialNotes: "#{orb : 1.5x}"
 	},
 	863: {
 		captain: "Boosts ATK of QCK characters by 1.75x, recovers 2x character's RCV in HP at the end of each turn",
@@ -3902,5 +3902,88 @@ window.details = {
 		captain: "Boosts ATK of all characters by 1.2x, recovers 1,000 HP at the end of the turn",
 		specialName: "Heavy Gong: The Storm",
 		special: "Deals 15x character's ATK in STR damage to one enemy, reduces Bind duration by 3 turns"
+	},
+	869: {
+		captain: "?",
+		specialName: "Black Knight",
+		special: "Changes neighboring slots' orbs into matching orbs, amplifies the effect of orbs by 2x for 1 turn",
+		specialNotes: "#{orb : 2x}"
+	},
+	870: {
+		captain: "Boosts ATK of Ambition characters by 3x until the first hit other than Perfect",
+		specialName: "Black Knight",
+		special: "Changes neighboring slots' orbs into matching orbs, amplifies the effect of orbs by 2x for 1 turn",
+		specialNotes: "#{orb : 2x}"
+	},
+	871: {
+		captain: "?",
+		specialName: "Hobby-Hobby Fruit",
+		special: "Makes all enemies with low HP \"unable to fight\""
+	},
+	872: {
+		captain: "Boosts ATK and RCV of QCK characters by 2x",
+		specialName: "Hobby-Hobby Fruit",
+		special: "Makes all enemies with low HP \"unable to fight\""
+	},
+	873: {
+		captain: "?",
+		specialName: "Nyan Nyan Swim",
+		special: "Changes own orb into [PSY], amplifies the effect of orbs by 1.5x (1 stage) or by 1.75x (2nd stage) for 1 turn",
+		specialNotes: "#{orb: 1.5x or 1.75x} The special has two separate stages; which stages activates depends on the status of your special gauge. It will be possible to accumulate a secondary special gauge once the normal gauge has filled up; the second stage will likely require a full secondary special gauge."
+	},
+	874: {
+		captain: "Boosts ATK of Fighter characters by 3x if HP is low at the start of the turn",
+		specialName: "Nyan Nyan Swim",
+		special: "Changes own orb into [PSY], amplifies the effect of orbs by 1.5x (1 stage) or by 1.75x (2nd stage) for 1 turn",
+		specialNotes: "#{orb: 1.5x or 1.75x} The special has two separate stages; which stages activates depends on the status of your special gauge. It will be possible to accumulate a secondary special gauge once the normal gauge has filled up; the second stage will likely require a full secondary special gauge."
+	},
+	875: {
+		captain: "?",
+		specialName: "Beto Launcher",
+		special: "Changes captain's orb into a matching orb, locks all orbs for 1 turn, deals INT damage to all enemies"
+	},
+	876: {
+		captain: "Boosts ATK of Knowledge and Ambition characters by 2.25x, makes [TND] and [RCV] orbs \"advantageous\" to Knowledge and Ambition characters",
+		captainNotes: "It's believed that \"advantageous\" orbs will behave the same as matching orbs",
+		specialName: "Beto Launcher",
+		special: "Changes captain's orb into a matching orb, locks all orbs for 1 turn, deals INT damage to all enemies"
+	},
+	877: {
+		captain: "?",
+		specialName: "Heaven's Do Art",
+		special: "Greatly reduces any damage received above 2,000 HP for 2 turns"
+	},
+	878: {
+		captain: "Boosts ATK of all characters by 1.5x, boosts amount of beli received by 2x",
+		specialName: "Heaven's Do Art",
+		special: "Greatly reduces any damage received above 2,000 HP for 2 turns"
+	},
+	879: {
+		captain: "Reduces cooldown of all specials by 3 turns at the start of the fight, boosts ATK of Fighter characters by 2x",
+		specialName: "Battle Preservation Fist: Manki Kayaku",
+		special: "Changes all [BLOCK] orbs into [G] orbs, deals random typeless damage to all enemies",
+		specialNotes: "Characters with [G] orbs will deal 1.5x their normal damage"
+	},
+	880: {
+		captain: "?",
+		specialName: "Battle Preservation Fist: Manki Kayaku",
+		special: "Changes all [BLOCK] orbs into [G] orbs, deals random typeless damage to all enemies",
+		specialNotes: "Characters with [G] orbs will deal 1.5x their normal damage"
+	},
+	881: {
+		captain: "?",
+		special: "?"
+	},
+	882: {
+		captain: "?",
+		special: "?"
+	},
+	883: {
+		captain: "?",
+		special: "?"
+	},
+	884: {
+		captain: "?",
+		special: "?"
 	}
 };

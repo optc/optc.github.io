@@ -8,7 +8,7 @@ var notes = {
 	noFixedPerc: "Specials that deal fixed damage or cut a percentage of the enemy's HP are not " +
         "affected by this captain ability",
     orb: "Orb amplification only affects matching and opposite orbs and works both ways: " +
-        "matching orbs will deal #1x more damage and opposite orbs will deal #1x less damage.",
+        "matching orbs will deal #1 more damage and opposite orbs will deal #1 less damage.",
     poison: "Poison deals 0.5x character's ATK in fixed damage at the end of each turn.",
     random: "Estimated random damage range: between #1 HP and #2 HP.",
     randomHits: "The target of each of the #1 hits is chosen randomly.",

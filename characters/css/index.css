@@ -829,7 +829,10 @@ unit > a:hover, .clickable:hover {
     outline: 1px solid red !important;
 }
 
-.preview .stats-pane ~ * {
+.preview .stats-pane + h3,
+.preview .stats-pane + h3 + div,
+.preview [ng-if="evolution.evolution"] ~ *,
+.preview [ng-if*="sameSpecials"] {
     display: none;
 }
 
