@@ -254,7 +254,7 @@ window.matchers = [
     {
         name: 'HP-based damage dealers',
         target: 'specialNotes',
-        matcher: /to compute the damage.*higher the lower the HP is/i
+        matcher: /specialProportional/i
     },
 
     {
