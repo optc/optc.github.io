@@ -1839,5 +1839,16 @@ window.captains = {
 	865: {
 		atk: function(p) { return p.unit.class.has("Freedom") ? 2 : 1; },
 		hp: function(p) { return p.unit.class.has("Freedom") ? 2 : 1; }
+	},
+	866: {
+		atk: function(p) { return p.unit.class.has("Knowledge") ? 2 : 1; }
+	},
+	867: {
+		hit: function(n) {
+					return n > 11 ? 1.5 : 1;
+				}
+	},
+	868: {
+		atk: function(p) { return 1.2; }
 	}
 };

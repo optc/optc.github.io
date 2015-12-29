@@ -186,5 +186,13 @@ window.zombies = {
     842: { // Monet
         type: 'healer',
         multiplier: 5
+    },
+    863: { // Christmas Nami
+        type: 'healer',
+        multiplier: 2
+    },
+    868: { // Kimono Chopper
+        type: 'healer',
+        amount: 1000
     }
 };
