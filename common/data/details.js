@@ -1658,22 +1658,22 @@ window.details = {
 	},
 	419: {
 		special: "Reduces the defense of all enemies by 50% for 2 turns, randomizes all orbs",
-		specialName: "Plastic Shot \"Arashi\"",
+		specialName: "Plastic Shot: The Storm",
 		captain: "Boosts ATK of QCK characters by 2x"
 	},
 	420: {
 		special: "Reduces Silence duration by 3 turns, deals 15x character's ATK in STR damage to one enemy",
-		specialName: "Gum Gum Bazooka \"Arashi\"",
+		specialName: "Gum Gum Bazooka: The Storm",
 		captain: "Boosts ATK, HP and RCV of STR characters by 1.5x"
 	},
 	421: {
 		special: "Reduces Bind duration by 2 turns, deals 10x character's ATK in DEX damage to all enemies",
-		specialName: "108 Pound Phoenix \"Arashi\"",
+		specialName: "108 Pound Phoenix: The Storm",
 		captain: "Boosts ATK, HP and RCV of DEX characters by 1.5x"
 	},
 	422: {
 		special: "Reduces damage received from INT enemies by 100% for 1 turn, recovers a random amount of HP",
-		specialName: "Mirage Tempo \"Arashi\"",
+		specialName: "Mirage Tempo: The Storm",
 		captain: "Boosts ATK, HP and RCV of INT characters by 1.5x"
 	},
 	423: {
