@@ -29,7 +29,7 @@ var SharedRootCtrl = function($scope, $rootScope) {
 
     };
     
-    $scope.tdata = { // transitional data
+    $rootScope.tdata = { // transitional data
 
         team: [
             { orb: 1, special: false, lock: 0, silence: 0, removed: 0 },

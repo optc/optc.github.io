@@ -6,15 +6,19 @@ app.factory('$exceptionHandler', function($injector) {
     return function(exception, cause) {
         var temp = (exception.stack || exception);
         var $rootScope = $injector.get('$rootScope');
-        var team = '';
-        if ($rootScope.data && $rootScope.data.team) {
-            team = $rootScope.data.team.map(function(x) { return (!x || !x.unit) ? null : x.unit.number + 1; });
-            team = '\n\n' + JSON.stringify(team);
+        if ($rootScope.data) {
+            var team = $rootScope.data.team.map(function(x) {
+                return jQuery.extend({ }, x, { unit: x.unit.number + 1 });
+            });
+            var data = jQuery.extend({ }, $rootScope.data, { team: team });
+            temp += '\n\n' + JSON.stringify(data);
         }
-        var agent = '';
-        try { agent = '\n\n' + navigator.userAgent; }
-        catch (e) { }
-        $rootScope.caughtException = encodeURIComponent(temp + team + agent);
+        if ($rootScope.tdata)
+            temp += '\n\n' + JSON.stringify($rootScope.tdata);
+        try {
+            temp += '\n\n' + navigator.userAgent;
+        } catch (e) { }
+        $rootScope.caughtException = encodeURIComponent(temp);
     };
 });
 
