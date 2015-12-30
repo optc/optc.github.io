@@ -879,8 +879,8 @@ window.units = [
 	[ "Jora, Donquixote Pirates", "DEX", [ "Freedom", "Ambition" ], 5, 30, null, 0, null, null, null, null, null, null, null, null, 0 ],
 	[ "Lao-G", "STR", [ "Fighter", "Ambition" ], 4, 18, null, 0, null, null, null, null, null, null, null, null, 0 ],
 	[ "Lao-G, Donquixote Pirates", "STR", [ "Fighter", "Ambition" ], 5, 30, null, 0, null, null, null, null, null, null, null, null, 0 ],
-	[ "Unknown Colosseum unit", "QCK", [ "Shooter", "Freedom" ], 4, 25, null, 0, null, null, null, null, null, null, null, null, 0 ],
-	[ "Unknown Colosseum unit (evolution)", "QCK", [ "Shooter", "Freedom" ], 5, 40, null, 0, null, null, null, null, null, null, null, null, 0 ],
+	[ "Colosseum Apoo", "QCK", [ "Shooter", "Freedom" ], 4, 25, null, 0, null, null, null, null, null, null, null, null, 0 ],
+	[ "Colosseum Apoo (evolution)", "QCK", [ "Shooter", "Freedom" ], 5, 40, null, 0, null, null, null, null, null, null, null, null, 0 ],
 	[ "Colosseum Dorry", "INT", [ "Slasher", "Tough" ], 4, 18, null, 0, null, null, null, null, null, null, null, null, 0 ],
 	[ "Colosseum Dorry (evolution)", "INT", [ "Slasher", "Tough" ], 4, 30, null, 0, null, null, null, null, null, null, null, null, 0 ]
 ];
