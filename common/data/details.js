@@ -3967,7 +3967,7 @@ window.details = {
 	880: {
 		captain: "?",
 		specialName: "Battle Preservation Fist: Manki Kayaku",
-		special: "Changes [BLOCK] orbs into [G] orbs, deals random typeless damage to all enemies",
+		special: "Changes all orbs including [BLOCK] orbs into [G] orbs, deals random typeless damage to all enemies",
 		specialNotes: "Characters with [G] orbs will deal 1.5x their normal damage"
 	},
 	881: {
