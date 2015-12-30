@@ -333,7 +333,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
      * Defense-reducing specials do not stack with each other, so we just use the one that grants the lowest defense.
      */
     var computeActualDefense = function() {
-        currentDefense = $scope.data.defense;
+        currentDefense = parseInt($scope.data.defense, 10) || 0;
         enabledSpecials.forEach(function(x) {
             if (x === null || !x.hasOwnProperty('def')) return;
             currentDefense = Math.min(currentDefense,$scope.data.defense * x.def());
