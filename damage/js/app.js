@@ -32,12 +32,12 @@ var SharedRootCtrl = function($scope, $rootScope) {
     $rootScope.tdata = { // transitional data
 
         team: [
-            { orb: 1, special: false, lock: 0, silence: 0, removed: 0 },
-            { orb: 1, special: false, lock: 0, silence: 0, removed: 0 },
-            { orb: 1, special: false, lock: 0, silence: 0, removed: 0 },
-            { orb: 1, special: false, lock: 0, silence: 0, removed: 0 },
-            { orb: 1, special: false, lock: 0, silence: 0, removed: 0 },
-            { orb: 1, special: false, lock: 0, silence: 0, removed: 0 }
+            { orb: 1, g: false, special: false, lock: 0, silence: 0, removed: 0 },
+            { orb: 1, g: false, special: false, lock: 0, silence: 0, removed: 0 },
+            { orb: 1, g: false, special: false, lock: 0, silence: 0, removed: 0 },
+            { orb: 1, g: false, special: false, lock: 0, silence: 0, removed: 0 },
+            { orb: 1, g: false, special: false, lock: 0, silence: 0, removed: 0 },
+            { orb: 1, g: false, special: false, lock: 0, silence: 0, removed: 0 }
         ],
 
         customHitModifiers: null,
@@ -67,9 +67,13 @@ var SharedRootCtrl = function($scope, $rootScope) {
     };
 
     $scope.resetSlot = function(n,onlyTransitional) {
+        // toggle special if active so deactivation methods run
+        if ($scope.tdata.team[n].special)
+            $rootScope.$emit('specialToggled', n, false);
+        // reset slot
         if (!onlyTransitional)
             $scope.data.team[n] = { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 } };
-        $scope.tdata.team[n] = { orb: 1, special: false, lock: 0, silence: 0, removed: 0 };
+        $scope.tdata.team[n] = { orb: 1, g: false, special: false, lock: 0, silence: 0, removed: 0 };
     };
 
     /* * * * * Custom hit modifiers resetting * * * * */

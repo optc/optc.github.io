@@ -3959,13 +3959,13 @@ window.details = {
 		special: "Greatly reduces any damage received above 2,000 HP for 2 turns"
 	},
 	879: {
-		captain: "Reduces cooldown of all specials by 3 turns at the start of the fight, boosts ATK of Fighter characters by 2x",
+		captain: "?",
 		specialName: "Battle Preservation Fist: Manki Kayaku",
 		special: "Changes all orbs including [BLOCK] orbs into [G] orbs, deals random typeless damage to all enemies",
 		specialNotes: "Characters with [G] orbs will deal 1.5x their normal damage"
 	},
 	880: {
-		captain: "?",
+		captain: "Reduces cooldown of all specials by 3 turns at the start of the fight, boosts ATK of Fighter characters by 2x",
 		specialName: "Battle Preservation Fist: Manki Kayaku",
 		special: "Changes all orbs including [BLOCK] orbs into [G] orbs, deals random typeless damage to all enemies",
 		specialNotes: "Characters with [G] orbs will deal 1.5x their normal damage"

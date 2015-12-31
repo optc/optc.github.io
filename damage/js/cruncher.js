@@ -704,6 +704,14 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         return this.indexOf(what) != -1;
     };
 
+    Array.prototype.count = function(data) {
+        var total = 0;
+        for (var i=0;i<this.length;++i) {
+            if (this[i] == data) ++total;
+        }
+        return total;
+    };
+
     String.prototype.has = function(what) {
         return this == what;
     };

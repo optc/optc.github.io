@@ -40,7 +40,7 @@ window.specials = {
 		type: "type"
 	},
 	263: {
-		orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); }
+		orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2 / 3 : 1); }
 	},
 	267: {
 		def: function(p) { return 0.5; }
@@ -69,10 +69,10 @@ window.specials = {
 		type: "class"
 	},
 	323: {
-		orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); }
+		orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2 / 3 : 1); }
 	},
 	324: {
-		orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); }
+		orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2 / 3 : 1); }
 	},
 	352: {
 		atk: function(p) { return p.unit.class.has("Shooter") ? 1.75 : 1; },
@@ -100,10 +100,10 @@ window.specials = {
 		def: function(p) { return 0.2; }
 	},
 	395: {
-		orb: function(p) { return p.orb == 2.0 ? 1.25 : (p.orb == 0.5 ? 4/5 : 1); }
+		orb: function(p) { return p.orb == 2.0 ? 1.25 : (p.orb == 0.5 ? 4 / 5 : 1); }
 	},
 	396: {
-		orb: function(p) { return p.orb == 2.0 ? 1.25 : (p.orb == 0.5 ? 4/5 : 1); }
+		orb: function(p) { return p.orb == 2.0 ? 1.25 : (p.orb == 0.5 ? 4 / 5 : 1); }
 	},
 	399: {
 		atk: function(p) { return p.unit.type == "DEX" ? 1.5 : 1; },
@@ -154,13 +154,13 @@ window.specials = {
 		def: function(p) { return 0.5; }
 	},
 	430: {
-		orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); }
+		orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2 / 3 : 1); }
 	},
 	431: {
-		orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); }
+		orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2 / 3 : 1); }
 	},
 	434: {
-		orb: function(p) { return p.orb == 2.0 ? 1.25 : (p.orb == 0.5 ? 4/5 : 1); }
+		orb: function(p) { return p.orb == 2.0 ? 1.25 : (p.orb == 0.5 ? 4 / 5 : 1); }
 	},
 	450: {
 		atk: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; },
@@ -195,7 +195,7 @@ window.specials = {
 		type: "class"
 	},
 	465: {
-		orb: function(p) { return p.orb == 2.0 ? 1.25 : (p.orb == 0.5 ? 4/5 : 1); }
+		orb: function(p) { return p.orb == 2.0 ? 1.25 : (p.orb == 0.5 ? 4 / 5 : 1); }
 	},
 	468: {
 		rcv: function(p) { return 1.5; }
@@ -275,10 +275,10 @@ window.specials = {
 		def: function(p) { return 0; }
 	},
 	533: {
-		orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); }
+		orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2 / 3 : 1); }
 	},
 	534: {
-		orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); }
+		orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2 / 3 : 1); }
 	},
 	542: {
 		rcv: function(p) { return 2; }
@@ -300,10 +300,10 @@ window.specials = {
 		type: "condition"
 	},
 	559: {
-		orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); }
+		orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2 / 3 : 1); }
 	},
 	560: {
-		orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); }
+		orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2 / 3 : 1); }
 	},
 	568: {
 		def: function(p) { return 0.5; }
@@ -314,7 +314,7 @@ window.specials = {
 	572: {
 		atk: function(p) { return p.unit.class.has("Fighter") ? 2 : 1; },
 		type: "class",
-		onActivation: function(p) { p.tdata.lock = Math.max(1,p.tdata.lock); },
+		onActivation: function(p) { p.tdata.lock = Math.max(1, p.tdata.lock); },
 		onDeactivation: function(p) { if (p.tdata.lock == 1) p.tdata.lock = 0; }
 	},
 	574: {
@@ -403,10 +403,10 @@ window.specials = {
 		warning: "Selected special (%name%) assumes that the enemy has a defense buff active."
 	},
 	642: {
-		orb: function(p) { return p.orb == 2.0 ? 1.75 : (p.orb == 0.5 ? 4/7 : 1); }
+		orb: function(p) { return p.orb == 2.0 ? 1.75 : (p.orb == 0.5 ? 4 / 7 : 1); }
 	},
 	643: {
-		orb: function(p) { return p.orb == 2.0 ? 1.75 : (p.orb == 0.5 ? 4/7 : 1); }
+		orb: function(p) { return p.orb == 2.0 ? 1.75 : (p.orb == 0.5 ? 4 / 7 : 1); }
 	},
 	644: {
 		atk: function(p) { return 1.2; },
@@ -419,22 +419,22 @@ window.specials = {
 		warning: "Selected special (%name%) assumes that the enemy has been delayed."
 	},
 	648: {
-		orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); }
+		orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2 / 3 : 1); }
 	},
 	649: {
-		orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); }
+		orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2 / 3 : 1); }
 	},
 	650: {
-		orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); }
+		orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2 / 3 : 1); }
 	},
 	651: {
-		orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); }
+		orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2 / 3 : 1); }
 	},
 	655: {
-		orb: function(p) { return p.orb == 2.0 ? 1.25 : (p.orb == 0.5 ? 4/5 : 1); }
+		orb: function(p) { return p.orb == 2.0 ? 1.25 : (p.orb == 0.5 ? 4 / 5 : 1); }
 	},
 	656: {
-		orb: function(p) { return p.orb == 2.0 ? 1.25 : (p.orb == 0.5 ? 4/5 : 1); }
+		orb: function(p) { return p.orb == 2.0 ? 1.25 : (p.orb == 0.5 ? 4 / 5 : 1); }
 	},
 	660: {
 		def: function(p) { return 0.5; }
@@ -455,10 +455,9 @@ window.specials = {
 		type: "class",
 		onActivation: function(p) {
 			var n = (window.specials[668].multiplier == 1.5 ? 1 : 0);
-			window.specials[668].multiplier = [1.5,2][n];
+			window.specials[668].multiplier = [1.5, 2][n];
 			p.scope.notify({
-				text: 'Using the ' + [1.5,2][n] + 'x ATK multiplier. To switch to the ' +
-					[2,1.5][n] + 'x multiplier, disable and re-enable this special',
+				text: 'Using the ' + [1.5, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.5][n] + 'x multiplier, disable and re-enable this special',
 				name: '667warning'
 			});
 		}
@@ -468,10 +467,9 @@ window.specials = {
 		type: "class",
 		onActivation: function(p) {
 			var n = (window.specials[669].multiplier == 1.5 ? 1 : 0);
-			window.specials[669].multiplier = [1.5,2][n];
+			window.specials[669].multiplier = [1.5, 2][n];
 			p.scope.notify({
-				text: 'Using the ' + [1.5,2][n] + 'x ATK multiplier. To switch to the ' +
-					[2,1.5][n] + 'x multiplier, disable and re-enable this special',
+				text: 'Using the ' + [1.5, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.5][n] + 'x multiplier, disable and re-enable this special',
 				name: '668warning'
 			});
 		}
@@ -503,10 +501,10 @@ window.specials = {
 		type: "class"
 	},
 	689: {
-		orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); }
+		orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2 / 3 : 1); }
 	},
 	690: {
-		orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); }
+		orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2 / 3 : 1); }
 	},
 	710: {
 		atk: function(p) { return p.unit.class.has("Shooter") ? 1.25 : 1; },
@@ -584,16 +582,16 @@ window.specials = {
 		warning: "Selected special (%name%) assumes that the enemy has a defense buff active."
 	},
 	742: {
-		orb: function(p) { return p.orb == 2.0 ? 1.25 : (p.orb == 0.5 ? 4/5 : 1); }
+		orb: function(p) { return p.orb == 2.0 ? 1.25 : (p.orb == 0.5 ? 4 / 5 : 1); }
 	},
 	743: {
-		orb: function(p) { return p.orb == 2.0 ? 1.25 : (p.orb == 0.5 ? 4/5 : 1); }
+		orb: function(p) { return p.orb == 2.0 ? 1.25 : (p.orb == 0.5 ? 4 / 5 : 1); }
 	},
 	753: {
-		orb: function(p) { return p.orb == 2.0 ? 1.75 : (p.orb == 0.5 ? 4/7 : 1); }
+		orb: function(p) { return p.orb == 2.0 ? 1.75 : (p.orb == 0.5 ? 4 / 7 : 1); }
 	},
 	754: {
-		orb: function(p) { return p.orb == 2.0 ? 1.75 : (p.orb == 0.5 ? 4/7 : 1); }
+		orb: function(p) { return p.orb == 2.0 ? 1.75 : (p.orb == 0.5 ? 4 / 7 : 1); }
 	},
 	755: {
 		atk: function(p) { return p.unit.class.has("Tough") ? 1.75 : 1; },
@@ -621,9 +619,7 @@ window.specials = {
 		type: "type"
 	},
 	780: {
-		atk: function(p) {
-			return p.slot == p.sourceSlot ? window.specials[780].multiplier : 1;
-		},
+		atk: function(p) { return p.slot == p.sourceSlot ? window.specials[780].multiplier : 1; },
 		type: "type",
 		onActivation: function(p) {
 			var n = (p.percHP <= 20 ? 2 : (p.percHP <= 50 ? 1.75 : 1.5));
@@ -635,9 +631,7 @@ window.specials = {
 		}
 	},
 	781: {
-		atk: function(p) {
-			return p.slot == p.sourceSlot ? window.specials[781].multiplier : 1;
-		},
+		atk: function(p) { return p.slot == p.sourceSlot ? window.specials[781].multiplier : 1; },
 		type: "type",
 		onActivation: function(p) {
 			var n = (p.percHP <= 20 ? 2 : (p.percHP <= 50 ? 1.75 : 1.5));
@@ -685,10 +679,10 @@ window.specials = {
 		type: "type"
 	},
 	805: {
-		orb: function(p) { return p.orb == 2.0 ? 1.75 : (p.orb == 0.5 ? 4/7 : 1); }
+		orb: function(p) { return p.orb == 2.0 ? 1.75 : (p.orb == 0.5 ? 4 / 7 : 1); }
 	},
 	806: {
-		orb: function(p) { return p.orb == 2.0 ? 1.75 : (p.orb == 0.5 ? 4/7 : 1); }
+		orb: function(p) { return p.orb == 2.0 ? 1.75 : (p.orb == 0.5 ? 4 / 7 : 1); }
 	},
 	807: {
 		atk: function(p) { return p.defenseDown ? 1.3 : 1; },
@@ -699,11 +693,11 @@ window.specials = {
 		type: "condition"
 	},
 	809: {
-		orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); },
+		orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2 / 3 : 1); },
 		def: function(p) { return 0.2; }
 	},
 	810: {
-		orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); },
+		orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2 / 3 : 1); },
 		def: function(p) { return 0.2; }
 	},
 	822: {
@@ -732,10 +726,10 @@ window.specials = {
 		type: "class"
 	},
 	835: {
-		orb: function(p) { return p.orb == 2.0 ? 1.75 : (p.orb == 0.5 ? 4/7 : 1); }
+		orb: function(p) { return p.orb == 2.0 ? 1.75 : (p.orb == 0.5 ? 4 / 7 : 1); }
 	},
 	836: {
-		orb: function(p) { return p.orb == 2.0 ? 1.75 : (p.orb == 0.5 ? 4/7 : 1); }
+		orb: function(p) { return p.orb == 2.0 ? 1.75 : (p.orb == 0.5 ? 4 / 7 : 1); }
 	},
 	837: {
 		atk: function(p) { return p.unit.class.has("Ambition") ? 1.75 : 1; },
@@ -765,44 +759,44 @@ window.specials = {
 	},
 	843: {
 		atk: function(p) {
-					if (window.specials[843].stage) return p.unit.class.has("Shooter") ? 1.5 : 1;
-					else return p.unit.class.has("Shooter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 1.5 : 1;
-				},
+			if (window.specials[843].stage) return p.unit.class.has("Shooter") ? 1.5 : 1;
+			else return p.unit.class.has("Shooter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 1.5 : 1;
+		},
 		type: "class",
 		onActivation: function(p) {
-					window.specials[843].multiplier = !window.specials[843].multiplier;
-					p.scope.notify({
-						text: (window.specials[843].multiplier ?
-							'Boosting Shooters. To switch to the second multiplier, disable and re-enable this special' :
-							'Boosting Shooters, Slashers and Strikers. To switch to the first multiplier, disable and re-enable this special'),
-						name: '843warning'
-					});
-				}
+			window.specials[843].multiplier = !window.specials[843].multiplier;
+			p.scope.notify({
+				text: (window.specials[843].multiplier ?
+					'Boosting Shooters. To switch to the second multiplier, disable and re-enable this special' :
+					'Boosting Shooters, Slashers and Strikers. To switch to the first multiplier, disable and re-enable this special'),
+				name: '843warning'
+			});
+		}
 	},
 	844: {
 		atk: function(p) {
-					if (window.specials[844].stage) return p.unit.class.has("Shooter") ? 1.5 : 1;
-					else return p.unit.class.has("Shooter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 1.5 : 1;
-				},
+			if (window.specials[844].stage) return p.unit.class.has("Shooter") ? 1.5 : 1;
+			else return p.unit.class.has("Shooter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 1.5 : 1;
+		},
 		type: "class",
 		onActivation: function(p) {
-					window.specials[844].multiplier = !window.specials[844].multiplier;
-					p.scope.notify({
-						text: (window.specials[844].multiplier ?
-							'Boosting Shooters. To switch to the second multiplier, disable and re-enable this special' :
-							'Boosting Shooters, Slashers and Strikers. To switch to the first multiplier, disable and re-enable this special'),
-						name: '844warning'
-					});
-				}
+			window.specials[844].multiplier = !window.specials[844].multiplier;
+			p.scope.notify({
+				text: (window.specials[844].multiplier ?
+					'Boosting Shooters. To switch to the second multiplier, disable and re-enable this special' :
+					'Boosting Shooters, Slashers and Strikers. To switch to the first multiplier, disable and re-enable this special'),
+				name: '844warning'
+			});
+		}
 	},
 	847: {
 		atk: function(p) { return 1.05; },
-		orb: function(p) { return p.orb == 2.0 ? 1.15 : (p.orb == 0.5 ? 20/23 : 1); },
+		orb: function(p) { return p.orb == 2.0 ? 1.15 : (p.orb == 0.5 ? 20 / 23 : 1); },
 		type: "class"
 	},
 	848: {
 		atk: function(p) { return 1.05; },
-		orb: function(p) { return p.orb == 2.0 ? 1.15 : (p.orb == 0.5 ? 20/23 : 1); },
+		orb: function(p) { return p.orb == 2.0 ? 1.15 : (p.orb == 0.5 ? 20 / 23 : 1); },
 		type: "class"
 	},
 	849: {
@@ -821,10 +815,10 @@ window.specials = {
 		type: "type"
 	},
 	861: {
-		orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); }
+		orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2 / 3 : 1); }
 	},
 	862: {
-		orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2/3 : 1); }
+		orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2 / 3 : 1); }
 	},
 	863: {
 		def: function(p) { return 0.5; }
@@ -838,7 +832,47 @@ window.specials = {
 		chainLimiter: function(p) { return p.chainPosition > 0 ? 2.5 : 1.0; }
 	},
 	866: {
-		atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Knowledge") ? 1.3 : 1; },
+		atk: function(p) {
+			return p.unit.class.has("Slasher") || p.unit.class.has("Knowledge") ? 1.3 : 1;
+		},
 		type: "class"
+	},
+	869: {
+		orb: function(p) { return p.orb == 2.0 ? 2.0 : (p.orb == 0.5 ? 0.25 : 1); }
+	},
+	870: {
+		orb: function(p) { return p.orb == 2.0 ? 2.0 : (p.orb == 0.5 ? 0.25 : 1); }
+	},
+	873: {
+		orb: function(p) {
+			if (window.specials[873].first) return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2 / 3 : 1);
+			else return p.orb == 2.0 ? 1.75 : (p.orb == 0.5 ? 4 / 7 : 1);
+		},
+		type: "class",
+		onActivation: function(p) {
+			window.specials[873].first = !window.specials[873].first;
+			p.scope.notify({
+				text: (window.specials[873].first ?
+					'Activating the first stage. To switch to the second stage, disable and re-enable this special' :
+					'Activating the second stage. To switch to the first stage, disable and re-enable this special'),
+				name: '873warning'
+			});
+		}
+	},
+	874: {
+		orb: function(p) {
+			if (window.specials[874].first) return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 2 / 3 : 1);
+			else return p.orb == 2.0 ? 1.75 : (p.orb == 0.5 ? 4 / 7 : 1);
+		},
+		type: "class",
+		onActivation: function(p) {
+			window.specials[874].first = !window.specials[874].first;
+			p.scope.notify({
+				text: (window.specials[874].first ?
+					'Activating the first stage. To switch to the second stage, disable and re-enable this special' :
+					'Activating the second stage. To switch to the first stage, disable and re-enable this special'),
+				name: '874warning'
+			});
+		}
 	}
 };
