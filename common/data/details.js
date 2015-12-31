@@ -100,7 +100,7 @@ window.details = {
 		captain: "Boosts ATK and HP of QCK characters by 1.5x"
 	},
 	21: {
-		special: "Changes neighboring slots' orbs into [RCV] orbs",
+		special: "Changes adjacent orbs into [RCV] orbs",
 		specialName: "Hearty Yell",
 		captain: "Boosts RCV of PSY characters by 1.2x"
 	},
@@ -110,7 +110,7 @@ window.details = {
 		captain: "Boosts RCV of PSY characters by 1.5x"
 	},
 	23: {
-		special: "Changes neighboring slots' orbs into [RCV] orbs",
+		special: "Changes adjacent orbs into [RCV] orbs",
 		specialName: "Scope",
 		captain: "Boosts RCV of INT characters by 1.5x"
 	},
@@ -191,7 +191,7 @@ window.details = {
 		captain: "Boosts ATK of INT characters by 2x"
 	},
 	40: {
-		special: "Changes neighboring slots' orbs into [RCV] orbs",
+		special: "Changes adjacent orbs into [RCV] orbs",
 		specialName: "[RCV] Slot Storm",
 		captain: "Reduces damage received from Shooter enemies by 30%"
 	},
@@ -230,7 +230,7 @@ window.details = {
 		specialName: "[TND] Slot Change [RCV]"
 	},
 	48: {
-		special: "Changes neighboring slots' orbs into [RCV] orbs",
+		special: "Changes adjacent orbs into [RCV] orbs",
 		specialName: "[RCV] Slot Storm"
 	},
 	49: {
@@ -1092,12 +1092,12 @@ window.details = {
 		captain: "Boosts ATK of Shooter characters by 1.5x"
 	},
 	291: {
-		special: "Changes neighboring slots' orbs into [RCV] orbs",
+		special: "Changes adjacent orbs into [RCV] orbs",
 		specialName: "[RCV] Slot Storm",
 		captain: "Reduces damage received from INT enemies by 50%"
 	},
 	292: {
-		special: "Changes neighboring slots' orbs into [RCV] orbs",
+		special: "Changes adjacent orbs into [RCV] orbs",
 		specialName: "[RCV] Slot Storm",
 		captain: "Reduces damage received from PSY enemies by 50%"
 	},
@@ -1531,13 +1531,13 @@ window.details = {
 		specialNotes: "#{fixed}"
 	},
 	395: {
-		special: "Empties neighboring slots, amplifies the effect of orbs by 1.25x for 1 turn",
+		special: "Empties adjacent slots, amplifies the effect of orbs by 1.25x for 1 turn",
 		specialNotes: "#{orb : 1.25x}",
 		specialName: "Mole Banana",
 		captain: "Boosts ATK and RCV of QCK characters by 1.2x"
 	},
 	396: {
-		special: "Empties neighboring slots, amplifies the effect of orbs by 1.25x for 1 turn",
+		special: "Empties adjacent slots, amplifies the effect of orbs by 1.25x for 1 turn",
 		specialNotes: "#{orb : 1.25x}",
 		specialName: "Mole Banana",
 		captain: "Boosts ATK and RCV of QCK characters by 1.2x"
@@ -1613,13 +1613,13 @@ window.details = {
 		captain: "Boosts ATK of Fighter characters by 2.5x"
 	},
 	411: {
-		special: "Changes neighboring slots' orbs into [STR] orbs, deals 1,000 fixed damage to all enemies",
+		special: "Changes adjacent orbs into [STR] orbs, deals 1,000 fixed damage to all enemies",
 		specialName: "Ursa Shock",
 		specialNotes: "#{fixed}",
 		captain: "Boosts ATK and HP of STR characters by 2x"
 	},
 	412: {
-		special: "Changes neighboring slots' orbs into [STR] orbs, deals 1,000 fixed damage to all enemies",
+		special: "Changes adjacent orbs into [STR] orbs, deals 1,000 fixed damage to all enemies",
 		specialName: "Ursa Shock",
 		specialNotes: "#{fixed}",
 		captain: "Boosts ATK and HP of STR characters by 2x"
@@ -1763,12 +1763,12 @@ window.details = {
 		captain: "Boosts RCV of all characters by 5x if HP is below 30% at the start of the turn"
 	},
 	439: {
-		special: "Changes neighboring slots' orbs into [RCV] and randomizes every other orb",
+		special: "Changes adjacent orbs into [RCV] and randomizes every other orb",
 		specialName: "Charge! Supersonic Duck Squadron! \"Love\"",
 		captain: "Recovers 5x character's RCV in HP at the end of each turn"
 	},
 	440: {
-		special: "Changes neighboring slots' orbs into [RCV] and randomizes every other orb",
+		special: "Changes adjacent orbs into [RCV] and randomizes every other orb",
 		specialName: "Charge! Supersonic Duck Squadron! \"Love\"",
 		captain: "Recovers 7x character's RCV in HP at the end of each turn"
 	},
@@ -2328,13 +2328,13 @@ window.details = {
 		specialName: "Cursed Shout"
 	},
 	553: {
-		special: "Changes neighboring slots' orbs into [DEX], deals 1,000 fixed damage to all enemies",
+		special: "Changes adjacent orbs into [DEX], deals 1,000 fixed damage to all enemies",
 		specialName: "Ashura Ugui",
 		specialNotes: "#{fixed}",
 		captain: "Boosts ATK of DEX characters by 2.75x if HP is below 30% at the start of the turn"
 	},
 	554: {
-		special: "Changes neighboring slots' orbs into [DEX], deals 1,000 fixed damage to all enemies",
+		special: "Changes adjacent orbs into [DEX], deals 1,000 fixed damage to all enemies",
 		specialName: "Ashura Ugui",
 		specialNotes: "#{fixed}",
 		captain: "Boosts ATK of DEX characters by 3x if HP is below 30% at the start of the turn"
@@ -2574,12 +2574,12 @@ window.details = {
 		captain: "Boosts ATK of Fighter characters by 2x, reduces damage received by 20%"
 	},
 	606: {
-		special: "Deals 20x character's ATK in DEX damage to one enemy, changes neighboring slots' orbs into [RCV] orbs",
+		special: "Deals 20x character's ATK in DEX damage to one enemy, changes adjacent orbs into [RCV] orbs",
 		specialName: "Red Leg Kick",
 		captain: "Boosts ATK of Fighter characters by 2x if HP is above 50% at the start of the turn"
 	},
 	607: {
-		special: "Deals 20x character's ATK in DEX damage to one enemy, changes neighboring slots' orbs into [RCV] orbs",
+		special: "Deals 20x character's ATK in DEX damage to one enemy, changes adjacent orbs into [RCV] orbs",
 		specialName: "Red Leg Kick",
 		captain: "Boosts ATK of Fighter characters by 2.5x if HP is above 50% at the start of the turn"
 	},
@@ -2596,7 +2596,7 @@ window.details = {
 		specialName: "[TND] Slot Change [RCV]"
 	},
 	611: {
-		special: "Changes neighboring slots' orbs into [RCV] orbs",
+		special: "Changes adjacent orbs into [RCV] orbs",
 		specialName: "[RCV] Slot Storm"
 	},
 	612: {
@@ -3232,7 +3232,7 @@ window.details = {
 		captain: "Boosts ATK of Slasher characters by 2.5x if HP is above 50% at the start of the turn"
 	},
 	737: {
-		special: "Changes [RCV] orbs into [QCK] orbs, changes neighboring slots' orbs into [QCK] orbs",
+		special: "Changes [RCV] orbs into [QCK] orbs, changes adjacent orbs into [QCK] orbs",
 		specialName: "Shigan - Bachi",
 		captain: "Boosts ATK of Fighter characters by 2.75x if HP is below 30% at the start of the turn"
 	},
@@ -3842,23 +3842,23 @@ window.details = {
 	857: {
 		captain: "Boosts ATK of PSY characters by 2x",
 		specialName: "Bonney's Holiday Feast",
-		special: "Changes neighboring slots' orbs into [RCV] orbs, boosts RCV of PSY characters by 1.5x for 1 turn"
+		special: "Changes adjacent orbs into [RCV] orbs, boosts RCV of PSY characters by 1.5x for 1 turn"
 	},
 	858: {
 		captain: "Boosts ATK and RCV of PSY characters by 2x",
 		specialName: "Bonney's Holiday Feast",
-		special: "Changes neighboring slots' orbs into [RCV] orbs, boosts RCV of PSY characters by 1.5x for 1 turn"
+		special: "Changes adjacent orbs into [RCV] orbs, boosts RCV of PSY characters by 1.5x for 1 turn"
 	},
 	859: {
 		captain: "Boosts ATK of Ambition characters by 1.5x, reduces damage received up to 10% depending on the crew's current HP",
 		specialName: "Pleading at the Risk of One's Life",
-		special: "Changes neighboring slots' orbs into [RCV] orbs; if the special is activated with more than 50% health remaining, protects from defeat for 1 turn",
+		special: "Changes adjacent orbs into [RCV] orbs; if the special is activated with more than 50% health remaining, protects from defeat for 1 turn",
 		specialNotes: "#{zombie}"
 	},
 	860: {
 		captain: "Boosts ATK of Ambition characters by 2x, reduces damage received up to 30% depending on the crew's current HP",
 		specialName: "Pleading at the Risk of One's Life",
-		special: "Changes neighboring slots' orbs into [RCV] orbs; if the special is activated with more than 50% health remaining, protects from defeat for 1 turn",
+		special: "Changes adjacent orbs into [RCV] orbs; if the special is activated with more than 50% health remaining, protects from defeat for 1 turn",
 		specialNotes: "#{zombie}"
 	},
 	861: {
@@ -3906,13 +3906,13 @@ window.details = {
 	869: {
 		captain: "?",
 		specialName: "Black Knight",
-		special: "Changes neighboring slots' orbs into matching orbs, amplifies the effect of orbs by 2x for 1 turn",
+		special: "Changes adjacent orbs into matching orbs, amplifies the effect of orbs by 2x for 1 turn",
 		specialNotes: "#{orb : 2x}"
 	},
 	870: {
 		captain: "Boosts ATK of Ambition characters by 3x until the first hit other than Perfect",
 		specialName: "Black Knight",
-		special: "Changes neighboring slots' orbs into matching orbs, amplifies the effect of orbs by 2x for 1 turn",
+		special: "Changes adjacent orbs into matching orbs, amplifies the effect of orbs by 2x for 1 turn",
 		specialNotes: "#{orb : 2x}"
 	},
 	871: {
