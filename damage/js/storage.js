@@ -24,6 +24,7 @@ var loadValue = function(key,def) {
             }
             return x;
         }).slice(0,6);
+        if (isNaN(value.defense)) value.defense = 0;
     }
     if (value !== null) return value;
     return def;

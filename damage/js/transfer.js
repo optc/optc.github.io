@@ -179,7 +179,7 @@ var ExportCtrl = function($scope) {
         // others
         
         result += data.ship[0] + ',' + data.ship[1] + 'B';
-        result += (data.defense || 0) + 'D';
+        result += (data.defense && data.defense.constructor == Number ? data.defense : 0) + 'D';
         result += ($scope.data.effect ? window.effects[$scope.data.effect].id : 0) + 'E';
         result += parseInt(team.map(function(x) { return (x.orb == 2 ? 1 : (x.orb == 0.5 ? 2 : 0)); }).join(''),3) + 'O';
         result += parseInt(team.map(function(x) { return x.lock; }).join(''),3) + 'L';
