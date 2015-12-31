@@ -96,6 +96,7 @@ app.controller('SidebarCtrl',function($scope, $rootScope, $stateParams, $timeout
 });
 
 app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, $timeout, $storage) {
+
     // data
     var id = parseInt($stateParams.id, 10);
     $scope.id = id;
@@ -104,6 +105,7 @@ app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, 
     $scope.details = window.details[id];
     $scope.cooldown = window.cooldowns[id - 1];
     $scope.evolution = window.evolutions[id];
+
     // derived data
     var evolvesFrom = CharUtils.searchBaseForms(id);
     $scope.evolvesFrom = [ ];
@@ -117,6 +119,15 @@ app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, 
     $scope.manuals = CharUtils.searchDropLocations(-id);
     $scope.sameSpecials = CharUtils.searchSameSpecials(id);
     $scope.collapsed = { to: true, from: true, used: true, drops: true, manuals: true }; 
+
+    // hidden elements
+    var isPreview = $scope.unit.preview;
+    var hasStats = [ 'minHP', 'minATK', 'minRCV', 'maxHP', 'maxATK', 'maxRCV' ].some(function(x) { return $scope.unit[x]; });
+    $scope.hidden = {
+        stats: isPreview && !hasStats,
+        abilities: isPreview && !window.details.hasOwnProperty($scope.id)
+    };
+
     // events/functions
     $scope.getEvos = CharUtils.getEvolversOfEvolution;
     $scope.sizeOf = function(target) { return Object.keys(target).length; };
@@ -133,6 +144,7 @@ app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, 
     $scope.getPrevious = function() { return $stateParams.previous.concat($scope.id); };
     $scope.isSpecialArray = ($scope.details && $scope.details.special && $scope.details.special.constructor == Array);
     $scope.isCaptainArray = ($scope.details && $scope.details.captain && $scope.details.captain.constructor == Array);
+
     // radar
     if ($scope.unit.incomplete) return;
     $scope.radar = {
@@ -162,6 +174,7 @@ app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, 
         }
         if (!$scope.$$phase) $scope.$apply();
     });
+
 });
 
 app.controller('ColumnsCtrl',function($scope, $rootScope, $state, $stateParams, $storage) {

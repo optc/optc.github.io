@@ -73,9 +73,9 @@
                         </table>
                     </div>
 
-                    <h3 class="page-header">Stats</h3>
+                    <h3 class="page-header" ng-hide="hidden.stats">Stats</h3>
 
-                    <uib-tabset>
+                    <uib-tabset ng-hide="hidden.stats">
                         <uib-tab heading="Stats">
                             <table class="table table-striped table-bordered">
                                 <thead>
@@ -116,9 +116,9 @@
 
                     <!-- Abilities (non-comparison) -->
 
-                    <h3 class="page-header">Abilities</h3>
+                    <h3 class="page-header" ng-hide="hidden.abilities">Abilities</h3>
 
-                    <div class="panel panel-default">
+                    <div class="panel panel-default" ng-hide="hidden.abilities">
                         <table class="table table-striped-column abilities">
                             <tbody>
                                 <tr>
@@ -165,9 +165,9 @@
 
                     <!-- Abilities (compared unit) -->
 
-                    <h3 class="page-header" ng-if="compare">Abilities (compared unit)</h3>
+                    <h3 class="page-header" ng-if="compare" ng-hide="hidden.abilities">Abilities (compared unit)</h3>
 
-                    <div class="panel panel-default" ng-if="compare">
+                    <div class="panel panel-default" ng-if="compare" ng-hide="hidden.abilities">
                         <table class="table table-striped-column abilities">
                             <tbody>
                                 <tr>
@@ -214,9 +214,10 @@
 
                     <!-- Evolutions -->
 
-                    <h3 class="page-header" ng-if="evolution.evolution">Evolutions</h3>
+                    <h3 class="page-header" ng-if="evolution.evolution" ng-hide="hidden.evolution">Evolutions</h3>
 
-                    <table class="table table-striped table-centered table-bordered table-textless" ng-if="evolution.evolution && !evolution.evolution.length">
+                    <table class="table table-striped table-centered table-bordered table-textless"
+                            ng-if="evolution.evolution && !evolution.evolution.length" ng-hide="hidden.evolution">
                         <tbody>
                             <tr>
                                 <td><evolution unit="unit" evolvers="evolution.evolvers"
@@ -225,7 +226,8 @@
                         </tbody>
                     </table>
 
-                    <table class="table table-striped table-centered table-bordered table-textless" ng-if="evolution.evolution && evolution.evolution.length">
+                    <table class="table table-striped table-centered table-bordered table-textless"
+                            ng-if="evolution.evolution && evolution.evolution.length" ng-hide="hidden.evolution">
                         <tbody>
                             <tr ng-repeat="evolverSet in evolution.evolvers">
                                 <td>
@@ -238,9 +240,10 @@
 
                     <!-- Evolves from -->
 
-                    <h3 class="page-header" ng-if="evolvesFrom.length > 0">Evolves From</h3>
+                    <h3 class="page-header" ng-if="evolvesFrom.length > 0" ng-hide="hidden.evolutionFrom">Evolves From</h3>
 
-                    <table class="table table-striped table-centered table-bordered table-textless" ng-if="evolvesFrom.length > 0">
+                    <table class="table table-striped table-centered table-bordered table-textless"
+                            ng-if="evolvesFrom.length > 0" ng-hide="hidden.evolutionFrom">
                         <tbody>
                             <tr ng-repeat="data in evolvesFrom">
                                 <td>
@@ -252,9 +255,9 @@
 
                     <!-- Used by -->
 
-                    <h3 class="page-header" ng-if="sizeOf(usedBy) > 0">Evolutions Requiring This Unit</h3>
+                    <h3 class="page-header" ng-if="sizeOf(usedBy) > 0" ng-hide="hidden.required">Evolutions Requiring This Unit</h3>
 
-                    <table ng-if="sizeOf(usedBy) > 0" class="table table-striped table-centered table-bordered table-textless">
+                    <table ng-if="sizeOf(usedBy) > 0" class="table table-striped table-centered table-bordered table-textless" ng-hide="hidden.required">
                         <tbody>
                             <tr ng-if="collapsed.used && sizeOf(usedBy) > 3">
                                 <td><button class="btn btn-info collapse-button"
@@ -273,9 +276,9 @@
 
                    <!-- Same specials -->
 
-                    <h3 class="page-header" ng-if="sizeOf(sameSpecials) > 0">Units With the Same Special</h3>
+                    <h3 class="page-header" ng-if="sizeOf(sameSpecials) > 0" ng-hide="hidden.sameSpecial">Units With the Same Special</h3>
 
-                    <table ng-if="sizeOf(sameSpecials) > 0" class="table table-striped table-centered table-bordered table-textless">
+                    <table ng-if="sizeOf(sameSpecials) > 0" class="table table-striped table-centered table-bordered table-textless" ng-hide="hidden.sameSpecial">
                         <tbody>
                             <tr>
                                 <td><unit uid="id" ng-repeat="id in sameSpecials"></unit></td>

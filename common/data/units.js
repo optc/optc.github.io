@@ -868,7 +868,7 @@ window.units = [
 	[ "Usopp Tabasco Star: The Storm", "DEX", "Shooter", 4, 15, 7, 2, 99, 2000000, 258, 152, 94, 1866, 704, 343, 1 ],
 	[ "Tony Tony Chopper Heavy Gong: The Storm", "STR", [ "Tough", "Knowledge" ], 4, 15, 4, 2, 99, 2000000, 303, 168, 70, 2171, 900, 231, 1 ],
 	[ "Donquixote Doflamingo, Donquixote Pirates", "QCK", [ "Ambition", "Knowledge" ], 5, 30, null, 0, null, null, null, null, null, null, null, null, 0 ],
-	[ "Heavenly Yaksha Donquixote Doflamingo, Donquixote Pirates", "QCK", [ "Ambition", "Knowledge" ], 6, 55, null, 0, null, null, null, null, null, 2800, 1530, 405, 0 ],
+	[ "Heavenly Yaksha Donquixote Doflamingo, Donquixote Pirates", "QCK", [ "Ambition", "Knowledge" ], 6, 55, 4, 4, 99, null, null, null, null, 2800, 1530, 405, 0 ],
 	[ "Sugar", "QCK", [ "Freedom", "Knowledge" ], 4, 18, null, 0, null, null, null, null, null, null, null, null, 0 ],
 	[ "Sugar, Donquixote Pirates", "QCK", [ "Freedom", "Knowledge" ], 5, 30, null, 0, null, null, null, null, null, null, null, null, 0 ],
 	[ "Señor Pink", "PSY", [ "Freedom", "Fighter" ], 4, 18, null, 0, null, null, null, null, null, null, null, null, 0 ],
