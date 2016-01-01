@@ -618,8 +618,9 @@ window.drops = {
         },
 
         {
-            name: 'Majestic! Meeting the Strawhat Crew',
+            name: 'Rising Sun, Rising Fortunes',
             thumb: 420,
+            global: true,
             Expert: [ 36, 37, 47, 48, 49, 50, 51, 59, 207, 211, 233, 420, 421, 422, -422, -332, -308, -225, -206, -204, -8 ],
             Elite: [ 36, 37, 47, 48, 49, 50, 51, 59, 207, 211, 233, 420, 421, 422, -422, -332, -308, -225, -206, -204, -8 ]
         },

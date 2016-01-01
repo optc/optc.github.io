@@ -420,7 +420,7 @@ window.units = [
 	[ "Sanji Parage Shot: The Storm", "QCK", [ "Fighter", "Tough" ], 4, 10, 5, 2, 99, 2000000, 486, 207, 32, 2015, 900, 217, 0.7 ],
 	[ "Monkey D. Luffy Gum-Gum Bazooka: The Storm", "STR", [ "Fighter", "Freedom" ], 4, 15, 6, 2, 99, 2000000, 404, 227, 39, 1748, 1250, 192, 1 ],
 	[ "Roronoa Zoro Three Thousand Worlds: The Storm", "DEX", [ "Slasher", "Ambition" ], 4, 15, 6, 2, 99, 2000000, 426, 222, 37, 2175, 1188, 132, 1 ],
-	[ "Nami Mirage Tempo: The Storm", "INT", [ "Striker", "Knowledge" ], 4, 15, 5, 2, 99, 2000000, 348, 201, 75, 1260, 988, 361, 1 ],
+	[ "Nami Mirage Tempo: The Heavens", "INT", [ "Striker", "Knowledge" ], 4, 15, 5, 2, 99, 2000000, 348, 201, 75, 1260, 988, 361, 1 ],
 	[ "Brook", "QCK", [ "Slasher", "Freedom" ], 3, 12, 5, 1, 50, 392109, 220, 43, 45, 1190, 430, 208, 1 ],
 	[ "Humming Swordsman Brook", "QCK", [ "Slasher", "Freedom" ], 4, 20, 4, 2, 99, 3000000, 1138, 368, 162, 2108, 980, 332, 1 ],
 	[ "Ryuma", "PSY", "Slasher", 4, 18, 5, 2, 99, 3000000, 1138, 368, 162, 2005, 1088, 162, 1 ],
