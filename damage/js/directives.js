@@ -543,18 +543,19 @@ directives.levelSlider = function($timeout) {
     };
 };
 
-directives.unitOrb = function() {
+directives.unitOrb = function($rootScope) {
+    var ORBS = [ 0.5, 1, 2, 'g' ];
     return {
         restrict: 'E',
         replace: true,
         scope: true,
-        template: '<div class="unitOrb {{glow()}}"><i class="fa" ng-class="{ \'fa-caret-up\': ' +
-            'tdata.team[slot].orb == 2, \'fa-caret-down\': tdata.team[slot].orb == 0.5 }"></i></div>',
+        templateUrl: 'views/fragments/orb.html',
         link: function(scope, element, attrs) {
             scope.glow = function() {
                 var unit = scope.tdata.team[scope.slot];
                 if (unit.orb == 1) return 'none';
                 if (unit.orb == 2) return scope.data.team[scope.slot].unit.type;
+                if (unit.orb == 'g') return 'G';
                 return Utils.getOppositeType(scope.data.team[scope.slot].unit.type) + ' opposite';
             };
             var onShortPress = function(e) {
@@ -562,7 +563,8 @@ directives.unitOrb = function() {
                 if (!$(e.target).hasClass('unitPortrait')) return;
                 if (unit.unit === null || /unitLevel/.test(e.target.className) || e.altKey || e.shiftKey) return;
                 if (e.which == 2 || (e.which == 1 && (e.ctrlKey || e.metaKey || Utils.isClickOnOrb(e,e.target.parentNode)))) {
-                    tunit.orb = (tunit.orb == 1 ? 2 : tunit.orb == 2 ? 0.5 : 1);
+                    var n = ORBS.indexOf(tunit.orb);
+                    tunit.orb = ORBS[(n + 1) % ($rootScope.options.gOrbsEnabled > 0 ? ORBS.length : ORBS.length - 1)];
                     scope.glow();
                     scope.$apply();
                     e.preventDefault();
@@ -572,7 +574,8 @@ directives.unitOrb = function() {
             };
             var onLongPress = function(e) {
                 var unit = scope.data.team[scope.slot], tunit = scope.tdata.team[scope.slot];
-                tunit.orb = (tunit.orb == 1 ? 2 : tunit.orb == 2 ? 0.5 : 1);
+                var n = ORBS.indexOf(tunit.orb);
+                tunit.orb = ORBS[(n + 1) % ($rootScope.options.gOrbsEnabled > 0 ? ORBS.length : ORBS.length - 1)];
                 scope.glow();
                 scope.$apply();
                 e.preventDefault();

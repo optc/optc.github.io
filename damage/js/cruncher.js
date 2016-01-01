@@ -177,6 +177,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             var atk = getStatOfUnit(x,'atk'); // basic attack (scales with level);
             var ship = getShipBonus('atk',false,x.unit,n), againstType = type;
             var multipliers = [ ];
+            if (orb == 'g') orb = 1.5;
             atk += getShipBonus('atk',true,x.unit,n);
             multipliers.push([ orb, 'orb' ]); // orb multiplier (fixed)
             multipliers.push([ getTypeMultiplierOfUnit(x.unit.type,type), 'type' ]); // type multiplier

@@ -1658,7 +1658,7 @@ window.details = {
 	},
 	419: {
 		special: "Reduces the defense of all enemies by 50% for 2 turns, randomizes all orbs",
-		specialName: "Plastic Shot: The Storm",
+		specialName: "Parage Shot: The Storm",
 		captain: "Boosts ATK of QCK characters by 2x"
 	},
 	420: {

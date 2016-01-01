@@ -3,7 +3,7 @@
 var app = angular.module('optc');
 
 var BOX_COLORS = { STR: 'salmon', QCK: 'lightskyblue', DEX: 'lightgreen', PSY: 'gold', INT: 'orchid' };
-var ORB_COLORS = { STR: 'orangered', QCK: 'dodgerblue', DEX: 'lightgreen', PSY: 'gold', INT: 'orchid' };
+var ORB_COLORS = { STR: 'orangered', QCK: 'dodgerblue', DEX: 'lightgreen', PSY: 'gold', INT: 'orchid', G: 'orange' };
 
 var lock = new Image(), silence = new Image();
 lock.src = 'res/chain.png';
@@ -74,7 +74,7 @@ app.controller('ImageGeneratorCtrl', function($scope, $filter, $timeout) {
                 if (orb != 1.0) {
                     var gradient = context.createRadialGradient(baseX + 20, baseY + 21, 13, baseX + 22, baseY + 22, 35);
                     if (orb < 1) gradient.addColorStop(0.1, ORB_COLORS[Utils.getOppositeType(unit.type)]);
-                    else gradient.addColorStop(0.1, ORB_COLORS[unit.type]);
+                    else gradient.addColorStop(0.1, ORB_COLORS[orb == 'g' ? 'G' : unit.type]);
                     if (orb < 1) gradient.addColorStop(0.2, 'black');
                     else {
                         gradient.addColorStop(0.2, 'white');
@@ -84,9 +84,14 @@ app.controller('ImageGeneratorCtrl', function($scope, $filter, $timeout) {
                     gradient.addColorStop(1.0, 'transparent');
                     context.fillStyle = gradient;
                     context.fillRect(0, 0, canvas.width, canvas.height);
-                    var temp = (orb < 1 ? [ 'f0d7', baseX + 13, baseY + 31 ] : [ 'f0d8', baseX + 13, baseY + 28 ]);
-                    awesome(context, { text: temp[0], style: '28px', color: 'white',
-                        x: temp[1], y: temp[2], stroke: 'gray' });
+                    if (orb != 'g') {
+                        var temp = (orb < 1 ? [ 'f0d7', baseX + 13, baseY + 31 ] : [ 'f0d8', baseX + 13, baseY + 28 ]);
+                        awesome(context, { text: temp[0], style: '28px', color: 'white',
+                            x: temp[1], y: temp[2], stroke: 'gray' });
+                    } else {
+                        type(context, { text: 'G', style: 'bold 20px "Open Sans"',
+                            x: baseX + 13, y: baseY + 28, color: 'white', stroke: 'black', strokeWidth: 2 });
+                    }
                 }
                 // level label
                 fill(context, 'black', baseX + 70, baseY + 95, 41, 16);

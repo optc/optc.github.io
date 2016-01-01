@@ -1735,9 +1735,6 @@ window.captains = {
 		atk: function(p) { return p.unit.class.has("Tough") ? 2 : 1; },
 		rcv: function(p) { return p.unit.class.has("Tough") ? 1.5 : 1; }
 	},
-	813: {
-		orb: function(p) { return p.orb == 2.0 ? 1.25 : (p.orb == 0.5 ? 4 / 5 : 1); }
-	},
 	815: {
 		damageSorter: function(d) { return CrunchUtils.okamaSort(d, ['STR', 'INT', 'DEX']); },
 		hitAtk: function(p) {

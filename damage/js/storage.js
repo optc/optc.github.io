@@ -58,7 +58,7 @@ var StorageCtrl = function($scope, $storage) {
     
     var options = loadValue('options',{ });
     for (var o in options) {
-        if (o == 'crunchInhibitor' || o == 'sidebarVisible' || o == 'transientMode') continue;
+        if (o != 'slidersEnabled') continue;
         $scope.options[o] = options[o];
     }
 
@@ -69,6 +69,11 @@ var StorageCtrl = function($scope, $storage) {
         $scope.data.ship = [ 1, 5 ];
 
     $scope.options.crunchInhibitor = 0;
+
+    if ($scope.data.team) {
+        for (var i=0;i<6;++i)
+            $scope.slotChanged(i);
+    }
 
     /* * * * * Version control * * * * */
 

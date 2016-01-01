@@ -44,6 +44,12 @@
     background-image: radial-gradient(9px 3px, circle cover, oldlace, mediumorchid, rgb(50,50,50));
 }
 
+.unitOrb.G {
+    background-image: -webkit-radial-gradient(9px 3px, circle cover, oldlace, orange, orangered);
+    background-image: -moz-radial-gradient(9px 3px, circle cover, oldlace, orange, orangered);
+    background-image: radial-gradient(9px 3px, circle cover, oldlace, orange, orangered);
+}
+
 .unitOrb .fa {
     position: relative;
     font-size: 2em;
@@ -52,6 +58,17 @@
 
 .unitOrb .fa-caret-up { top: -3px; }
 .unitOrb .fa-caret-down { top: -1px; }
+
+.g-orb {
+    color: white;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 18px;
+    margin-right: 2px;
+    text-shadow: 0 0 5px black;
+    position: relative;
+    top: 1px;
+}
 
 /***********************
  *     ORB GLOWING     *
@@ -62,6 +79,7 @@
 .unitOrb.QCK { animation: glowBlue .5s linear infinite alternate; }
 .unitOrb.PSY { animation: glowOrange .5s linear infinite alternate; }
 .unitOrb.INT { animation: glowPurple .5s linear infinite alternate; }
+.unitOrb.G { animation: glowG .5s linear infinite alternate; }
 .unitOrb.opposite { animation: glowBlack .5s linear infinite alternate; }
 
 @keyframes glowRed {
@@ -94,3 +112,7 @@
     to { box-shadow: 0 0 5px black, 0 0 10px black, 0 0 15px black, 0 0 20px black, 0 0 35px black, 0 0 40px black, 0 0 50px black, 0 0 75px black; }
 }
 
+@keyframes glowG {
+    from { box-shadow 0 0 10px white, 0 0 20px white, 0 0 30px white, 0 0 40px orangered, 0 0 70px orangered, 0 0 80px orangered, 0 0 100px orangered, 0 0 150px orangered; }
+    to { box-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px white, 0 0 20px orangered, 0 0 35px orangered, 0 0 40px orangered, 0 0 50px orangered, 0 0 75px orangered; }
+}

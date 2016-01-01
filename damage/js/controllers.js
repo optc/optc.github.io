@@ -45,7 +45,7 @@ controllers.PickerCtrl = function($scope, $state, $stateParams, $storage) {
         $scope.resetSlot($stateParams.slot);
         $scope.data.team[$stateParams.slot].unit = units[unitNumber];
         $scope.data.team[$stateParams.slot].level = 1;
-        $scope.resetSlot($stateParams.slot,true);
+        $scope.slotChanged($stateParams.slot);
         updateRecent(unitNumber);
         // captain warning
         if ($stateParams.slot < 2 && captains[unitNumber+1] && captains[unitNumber+1].warning) {
@@ -148,6 +148,7 @@ controllers.SlotsCtrl = function($scope, $state, $stateParams, $storage) {
             slot.team.map(function(x,n) {
                 $scope.resetSlot(n);
                 if (x !== null) $scope.data.team[n] = { unit: units[x.unit], level: x.level, candies: x.candies };
+                $scope.slotChanged(n);
             });
             if (slot.hasOwnProperty('defense')) $scope.data.defense = parseInt(slot.defense, 10) || 0;
             if (slot.hasOwnProperty('ship')) $scope.data.ship = slot.ship;

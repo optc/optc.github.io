@@ -52,4 +52,11 @@ window.CrunchUtils.mihawkSort = function(array) {
     return result;
 };
 
+window.CrunchUtils.getOrbMultiplier = function(orb, baseMultiplier, boostedMultiplier) {
+    if (orb == 1.0) return baseMultiplier;
+    if (orb == 2.0 || orb == 'g') return boostedMultiplier;
+    if (orb == 0.5) return 1 / boostedMultiplier;
+    return 1;
+};
+
 })();
