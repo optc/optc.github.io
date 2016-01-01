@@ -3904,7 +3904,7 @@ window.details = {
 		special: "Deals 15x character's ATK in STR damage to one enemy, reduces Bind duration by 3 turns"
 	},
 	869: {
-		captain: "?",
+		captain: "Boosts ATK of Ambition characters by 3x until the first hit other than Perfect",
 		specialName: "Black Knight",
 		special: "Changes adjacent orbs into matching orbs, amplifies the effect of orbs by 2x for 1 turn",
 		specialNotes: "#{orb : 2x}"
@@ -3916,29 +3916,29 @@ window.details = {
 		specialNotes: "#{orb : 2x}"
 	},
 	871: {
-		captain: "?",
+		captain: "Boosts ATK and RCV of QCK characters by 1.5x",
 		specialName: "Hobby-Hobby Fruit",
-		special: "Makes all enemies with low HP \"unable to fight\""
+		special: "Removes all enemies with HP below 20%"
 	},
 	872: {
 		captain: "Boosts ATK and RCV of QCK characters by 2x",
 		specialName: "Hobby-Hobby Fruit",
-		special: "Makes all enemies with low HP \"unable to fight\""
+		special: "Removes all enemies with HP below 20%"
 	},
 	873: {
-		captain: "?",
+		captain: "Boosts ATK of Fighter characters by 2.5x if HP is low at the start of the turn",
 		specialName: "Nyan Nyan Swim",
 		special: "Changes own orb into [PSY], amplifies the effect of orbs by 1.5x (1 stage) or by 1.75x (2nd stage) for 1 turn",
-		specialNotes: "#{orb: 1.5x or 1.75x} The special has two separate stages; which stages activates depends on the status of your special gauge. It will be possible to accumulate a secondary special gauge once the normal gauge has filled up; the second stage will likely require a full secondary special gauge."
+		specialNotes: "#{orb: 1.5x or 1.75x} The special has two separate stages. The first stage activates 6 turns before the special gauge is fully charged; the second stage activates once the special gauge is full. The special can be used as soon as the first stage is reached."
 	},
 	874: {
 		captain: "Boosts ATK of Fighter characters by 3x if HP is low at the start of the turn",
 		specialName: "Nyan Nyan Swim",
 		special: "Changes own orb into [PSY], amplifies the effect of orbs by 1.5x (1 stage) or by 1.75x (2nd stage) for 1 turn",
-		specialNotes: "#{orb: 1.5x or 1.75x} The special has two separate stages; which stages activates depends on the status of your special gauge. It will be possible to accumulate a secondary special gauge once the normal gauge has filled up; the second stage will likely require a full secondary special gauge."
+		specialNotes: "#{orb: 1.5x or 1.75x} The special has two separate stages. The first stage activates 6 turns before the special gauge is fully charged; the second stage activates once the special gauge is full. The special can be used as soon as the first stage is reached."
 	},
 	875: {
-		captain: "?",
+		captain: "Boosts ATK of Knowledge and Ambition characters by 2x, makes [TND] and [RCV] orbs \"advantageous\" to Knowledge and Ambition characters",
 		specialName: "Beto Launcher",
 		special: "Changes captain's orb into a matching orb, locks all orbs for 1 turn, deals INT damage to all enemies"
 	},
@@ -3949,7 +3949,7 @@ window.details = {
 		special: "Changes captain's orb into a matching orb, locks all orbs for 1 turn, deals INT damage to all enemies"
 	},
 	877: {
-		captain: "?",
+		captain: "Boosts amount of beli received by 2x",
 		specialName: "Heaven's Do Art",
 		special: "Greatly reduces any damage received above 2,000 HP for 2 turns"
 	},
@@ -3959,7 +3959,7 @@ window.details = {
 		special: "Greatly reduces any damage received above 2,000 HP for 2 turns"
 	},
 	879: {
-		captain: "?",
+		captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of Fighter characters by 1.75x",
 		specialName: "Battle Preservation Fist: Manki Kayaku",
 		special: "Changes all orbs including [BLOCK] orbs into [G] orbs, deals random typeless damage to all enemies",
 		specialNotes: "Characters with [G] orbs will deal 1.5x their normal damage"

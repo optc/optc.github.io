@@ -1914,6 +1914,13 @@ window.captains = {
 	868: {
 		atk: function(p) { return 1.2; }
 	},
+	869: {
+		hitAtk: function(p) {
+			if (!p.unit.class.has("Ambition")) return 1;
+			return p.modifiers.slice(0, p.chainPosition).count("Perfect") == p.chainPosition ? 3 : 1;
+		},
+		hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
+	},
 	870: {
 		hitAtk: function(p) {
 			if (!p.unit.class.has("Ambition")) return 1;
@@ -1921,9 +1928,16 @@ window.captains = {
 		},
 		hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
 	},
+	871: {
+		atk: function(p) { return p.unit.type == "QCK" ? 1.5 : 1; },
+		rcv: function(p) { return p.unit.type == "QCK" ? 1.5 : 1; }
+	},
 	872: {
 		atk: function(p) { return p.unit.type == "QCK" ? 2 : 1; },
 		rcv: function(p) { return p.unit.type == "QCK" ? 2 : 1; }
+	},
+	873: {
+		atk: function(p) { return p.class.has("Fighter") && p.percHP <= 30.0 ? 2.5 : 1; }
 	},
 	874: {
 		atk: function(p) { return p.class.has("Fighter") && p.percHP <= 30.0 ? 3 : 1; }
@@ -1935,6 +1949,9 @@ window.captains = {
 	},
 	878: {
 		atk: function(p) { return 1.5; }
+	},
+	879: {
+		atk: function(p) { return p.unit.class.has("Fighter") ? 1.75 : 1; }
 	},
 	880: {
 		atk: function(p) { return p.unit.class.has("Fighter") ? 2 : 1; }
