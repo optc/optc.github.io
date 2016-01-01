@@ -3938,36 +3938,39 @@ window.details = {
 		specialNotes: "#{orb: 1.5x or 1.75x} The special has two separate stages. The first stage activates 6 turns before the special gauge is fully charged; the second stage activates once the special gauge is full. The special can be used as soon as the first stage is reached."
 	},
 	875: {
-		captain: "Boosts ATK of Knowledge and Ambition characters by 2x, makes [TND] and [RCV] orbs \"advantageous\" to Knowledge and Ambition characters",
+		captain: "Boosts ATK of Knowledge and Ambition characters by 2x, makes [TND] and [RCV] orbs \"beneficial\" to Knowledge and Ambition characters",
 		specialName: "Beto Launcher",
-		special: "Changes captain's orb into a matching orb, locks all orbs for 1 turn, deals INT damage to all enemies"
+		special: "Changes the captain's orb into a matching orb, locks all orbs for 1 turn, deals INT damage to all enemies",
+		captainNotes: "\"Beneficial\" orbs grant the same ATK boost as matching orbs while retaining their original function."
 	},
 	876: {
-		captain: "Boosts ATK of Knowledge and Ambition characters by 2.25x, makes [TND] and [RCV] orbs \"advantageous\" to Knowledge and Ambition characters",
-		captainNotes: "It's believed that \"advantageous\" orbs will behave the same as matching orbs",
+		captain: "Boosts ATK of Knowledge and Ambition characters by 2.25x, makes [TND] and [RCV] orbs \"beneficial\" to Knowledge and Ambition characters",
+		captainNotes: "\"Beneficial\" orbs grant the same ATK boost as matching orbs while retaining their original function.",
 		specialName: "Beto Launcher",
-		special: "Changes captain's orb into a matching orb, locks all orbs for 1 turn, deals INT damage to all enemies"
+		special: "Changes the captain's orb into a matching orb, locks all orbs for 1 turn, deals INT damage to all enemies"
 	},
 	877: {
 		captain: "Boosts amount of beli received by 2x",
 		specialName: "Heaven's Do Art",
-		special: "Greatly reduces any damage received above 2,000 HP for 2 turns"
+		special: "Reduces any damage received above 2,000 HP by 88% for 1 turn",
+		specialNotes: "The exact formula for the damage received is: 2000 + ((total damage) - 2000) * 0.12"
 	},
 	878: {
 		captain: "Boosts ATK of all characters by 1.5x, boosts amount of beli received by 2x",
 		specialName: "Heaven's Do Art",
-		special: "Greatly reduces any damage received above 2,000 HP for 2 turns"
+		special: "Reduces any damage received above 2,000 HP by 88% for 1 turn",
+		specialNotes: "The exact formula for the damage received is: 2000 + ((total damage) - 2000) * 0.12"
 	},
 	879: {
 		captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of Fighter characters by 1.75x",
 		specialName: "Battle Preservation Fist: Manki Kayaku",
 		special: "Changes all orbs including [BLOCK] orbs into [G] orbs, deals random typeless damage to all enemies",
-		specialNotes: "Characters with [G] orbs will deal 1.5x their normal damage"
+		specialNotes: "Characters with [G] orbs will deal 1.5x their normal damage. [G] orbs cannot be locked, but they are affected by orb boosters."
 	},
 	880: {
 		captain: "Reduces cooldown of all specials by 3 turns at the start of the fight, boosts ATK of Fighter characters by 2x",
 		specialName: "Battle Preservation Fist: Manki Kayaku",
 		special: "Changes all orbs including [BLOCK] orbs into [G] orbs, deals random typeless damage to all enemies",
-		specialNotes: "Characters with [G] orbs will deal 1.5x their normal damage"
+		specialNotes: "Characters with [G] orbs will deal 1.5x their normal damage. [G] orbs cannot be locked, but they are affected by orb boosters."
 	}
 };
