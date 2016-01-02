@@ -3918,12 +3918,14 @@ window.details = {
 	871: {
 		captain: "Boosts ATK and RCV of QCK characters by 1.5x",
 		specialName: "Hobby-Hobby Fruit",
-		special: "Removes all enemies with HP below 20%"
+		special: "Removes all enemies with HP below 20%",
+		specialNotes: "The special bypasses all known protective buffs. If the enemy can revive after being defeated, however, the special will only reduce the enemy's HP to 0 and trigger their revive effect."
 	},
 	872: {
 		captain: "Boosts ATK and RCV of QCK characters by 2x",
 		specialName: "Hobby-Hobby Fruit",
-		special: "Removes all enemies with HP below 20%"
+		special: "Removes all enemies with HP below 20%",
+		specialNotes: "The special bypasses all known protective buffs. If the enemy can revive after being defeated, however, the special will only reduce the enemy's HP to 0 and trigger their revive effect."
 	},
 	873: {
 		captain: "Boosts ATK of Fighter characters by 2.5x if HP is below 30% at the start of the turn",
