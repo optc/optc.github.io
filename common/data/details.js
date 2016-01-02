@@ -3926,13 +3926,13 @@ window.details = {
 		special: "Removes all enemies with HP below 20%"
 	},
 	873: {
-		captain: "Boosts ATK of Fighter characters by 2.5x if HP is low at the start of the turn",
+		captain: "Boosts ATK of Fighter characters by 2.5x if HP is below 30% at the start of the turn",
 		specialName: "Nyan Nyan Swim",
 		special: "Changes own orb into [PSY], amplifies the effect of orbs by 1.5x (1st stage) or by 1.75x (2nd stage) for 1 turn",
 		specialNotes: "#{orb: 1.5x or 1.75x} The special has two separate stages. The first stage activates 6 turns before the special gauge is fully charged; the second stage activates once the special gauge is full. The special can be used as soon as the first stage is reached."
 	},
 	874: {
-		captain: "Boosts ATK of Fighter characters by 3x if HP is low at the start of the turn",
+		captain: "Boosts ATK of Fighter characters by 3x if HP is below 30% at the start of the turn",
 		specialName: "Nyan Nyan Swim",
 		special: "Changes own orb into [PSY], amplifies the effect of orbs by 1.5x (1st stage) or by 1.75x (2nd stage) for 1 turn",
 		specialNotes: "#{orb: 1.5x or 1.75x} The special has two separate stages. The first stage activates 6 turns before the special gauge is fully charged; the second stage activates once the special gauge is full. The special can be used as soon as the first stage is reached."

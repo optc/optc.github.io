@@ -9,7 +9,7 @@ else window.addEventListener('load',function() { Utils.parseUnits(true); },false
  * MainCtrl *
  ************/
 
-var MainCtrl = function($scope, $controller, $filter, $storage) {
+var MainCtrl = function($scope, $rootScope, $controller, $filter, $storage) {
 
     /* * * * * Theme * * * * */
 
@@ -58,7 +58,7 @@ var MainCtrl = function($scope, $controller, $filter, $storage) {
 
     var notifications = { };
 
-    $scope.notify = function(data) {
+    $rootScope.notify = function(data) {
         data = jQuery.extend({ type: 'information' },data);
         if (data.name && notifications[data[name]]) notifications[data[name]].close(); 
         var notification = noty(jQuery.extend({ timeout: 2500, layout: 'topRight', theme: 'relax' }, data));

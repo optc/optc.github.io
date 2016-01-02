@@ -145,7 +145,8 @@ controllers.SlotsCtrl = function($scope, $state, $stateParams, $storage) {
 
     $scope.teamClick = function(e,slot) {
         if (e.which == 1 && !e.ctrlKey && !e.metaKey) {
-            slot.team.map(function(x,n) {
+            slot.team.forEach(function(x,n) {
+                if (n > 5) return;
                 $scope.resetSlot(n);
                 if (x !== null) $scope.data.team[n] = { unit: units[x.unit], level: x.level, candies: x.candies };
                 $scope.slotChanged(n);

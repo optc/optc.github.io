@@ -1939,6 +1939,11 @@ window.captains = {
 	874: {
 		atk: function(p) { return p.class.has("Fighter") && p.percHP <= 30.0 ? 3 : 1; }
 	},
+	875: {
+		atk: function(p) {
+			return p.unit.class.has("Knowledge") || p.unit.class.has("Ambition") ? 2 : 1;
+		}
+	},
 	876: {
 		atk: function(p) {
 			return p.unit.class.has("Knowledge") || p.unit.class.has("Ambition") ? 2.25 : 1;

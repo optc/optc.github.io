@@ -864,7 +864,7 @@ window.specials = {
 	},
 	874: {
 		orb: function(p) {
-			if (window.specials[873].first) return CrunchUtils.getOrbMultiplier(p.orb, 1, 1.5);
+			if (window.specials[874].first) return CrunchUtils.getOrbMultiplier(p.orb, 1, 1.5);
 			else return CrunchUtils.getOrbMultiplier(p.orb, 1, 1.75);
 		},
 		type: "class",

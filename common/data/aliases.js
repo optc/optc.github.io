@@ -134,5 +134,7 @@ window.aliases = {
     849: [ 'Franky, Tom\'s Workers' ],
     850: [ 'Iceburg, Tom\'s Workers' ],
     873: [ 'Senor Pink', 'Senior Pink' ],
-    874: [ 'Senor Pink', 'Senior Pink' ]
+    874: [ 'Senor Pink', 'Senior Pink' ],
+    877: [ 'Giolla' ],
+    878: [ 'Giolla, Donquixote Pirates' ],
 };
