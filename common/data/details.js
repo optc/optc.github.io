@@ -3942,14 +3942,14 @@ window.details = {
 	875: {
 		captain: "Boosts ATK of Knowledge and Ambition characters by 2x, makes [TND] and [RCV] orbs \"beneficial\" to Knowledge and Ambition characters",
 		specialName: "Beto Launcher",
-		special: "Changes the captain's orb into a matching orb, locks all orbs for 1 turn, deals INT damage to all enemies",
+		special: "Changes the captain's orb into a matching orb, locks all orbs for 1 turn, deals 13x character's ATK in INT damage to all enemies",
 		captainNotes: "\"Beneficial\" orbs grant the same ATK boost as matching orbs while retaining their original function."
 	},
 	876: {
 		captain: "Boosts ATK of Knowledge and Ambition characters by 2.25x, makes [TND] and [RCV] orbs \"beneficial\" to Knowledge and Ambition characters",
 		captainNotes: "\"Beneficial\" orbs grant the same ATK boost as matching orbs while retaining their original function.",
 		specialName: "Beto Launcher",
-		special: "Changes the captain's orb into a matching orb, locks all orbs for 1 turn, deals INT damage to all enemies"
+		special: "Changes the captain's orb into a matching orb, locks all orbs for 1 turn, deals 13x character's ATK in INT damage to all enemies"
 	},
 	877: {
 		captain: "Boosts amount of beli received by 2x",
