@@ -1773,12 +1773,12 @@ window.details = {
 		captain: "Recovers 7x character's RCV in HP at the end of each turn"
 	},
 	444: {
-		captain: "Boosts ATK of Evolver and Booster characters by 2x if HP is above 70% at the start of the turn"
+		captain: "Boosts ATK of Evolver and Booster characters by 2x if HP is above 50% at the start of the turn"
 	},
 	445: {
 		special: "Randomly changes all orbs into either [STR], [DEX], [QCK], [PSY] or [INT] orbs, switches orbs between slots 3 times",
 		specialName: "Support Incoming! Supersonic Duck Squadron!",
-		captain: "Boosts ATK of Evolver and Booster characters by 2.5x if HP is above 70% at the start of the turn"
+		captain: "Boosts ATK of Evolver and Booster characters by 2.5x if HP is above 50% at the start of the turn"
 	},
 	446: {
 		special: "Deals 10 times the damage received in the previous turn in typeless damage to all enemies",
@@ -3771,12 +3771,12 @@ window.details = {
 	843: {
 		captain: "Boosts ATK of Slasher, Striker and Shooter characters by 1.5x",
 		specialName: "Arms-Morphosis: Missile Girl",
-		special: "Deals STR damage to all enemies, boosts ATK of Shooter characters by 1.5x for 1 turn. If during that turn every unit scores a Perfect hit, boosts ATK of Shooter, Striker and Slasher characters by 1.5x in the following turn."
+		special: "Deals 15x character's ATK in STR damage to all enemies, boosts ATK of Shooter characters by 1.5x for 1 turn. If during that turn every unit scores a Perfect hit, boosts ATK of Shooter, Striker and Slasher characters by 1.5x in the following turn."
 	},
 	844: {
 		captain: "Boosts ATK of Slasher, Striker and Shooter characters by 2x",
 		specialName: "Arms-Morphosis: Missile Girl",
-		special: "Deals STR damage to all enemies, boosts ATK of Shooter characters by 1.5x for 1 turn. If during that turn every unit scores a Perfect hit, boosts ATK of Shooter, Striker and Slasher characters by 1.5x in the following turn."
+		special: "Deals 15x character's ATK in STR damage to all enemies, boosts ATK of Shooter characters by 1.5x for 1 turn. If during that turn every unit scores a Perfect hit, boosts ATK of Shooter, Striker and Slasher characters by 1.5x in the following turn."
 	},
 	845: {
 		captain: "Boosts ATK of all characters by 1.5x after the 11th hit in the chain, by 2.5x after the 22nd hit",

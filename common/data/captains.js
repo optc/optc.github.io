@@ -745,12 +745,12 @@ window.captains = {
 	},
 	444: {
 		atk: function(p) {
-			return p.percHP >= 70.0 && (p.unit.class.has("Booster") || p.unit.class.has("Evolver")) ? 2 : 1;
+			return p.percHP >= 50.0 && (p.unit.class.has("Booster") || p.unit.class.has("Evolver")) ? 2 : 1;
 		}
 	},
 	445: {
 		atk: function(p) {
-			return p.percHP >= 70.0 && (p.unit.class.has("Booster") || p.unit.class.has("Evolver")) ? 2.5 : 1;
+			return p.percHP >= 50.0 && (p.unit.class.has("Booster") || p.unit.class.has("Evolver")) ? 2.5 : 1;
 		}
 	},
 	446: {
