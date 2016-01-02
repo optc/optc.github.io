@@ -4,7 +4,7 @@ var CharUtils = { };
 
 /* * * * * Reverse drop map * * * * */
 
-var reverseDropMap = null, reverseEvoMap = null;
+var reverseDropMap = null;
 var marks = { 'Story Island': 1, 'Weekly Island': 2, 'Fortnight': 4, 'Raid': 8 };
 
 var generateReverseDropMap = function() {
@@ -23,23 +23,6 @@ var generateReverseDropMap = function() {
     }
 };
 
-
-var updateEvoMap = function(from, to, via) {
-    if (!reverseEvoMap[to]) reverseEvoMap[to] = { };
-    if (!reverseEvoMap[to][from]) reverseEvoMap[to][from] = [ ];
-    reverseEvoMap[to][from].push(via);
-};
-
-var generateReverseEvoMap = function() {
-    reverseEvoMap = { };
-    for (var evo in evolutions) {
-        var from = parseInt(evo, 10);
-        if (evolutions[evo].evolution.constructor != Array)
-            updateEvoMap(from, evolutions[evo].evolution, evolutions[evo].evolvers);
-        else for (var i=0;i<evolutions[evo].evolution.length;++i)
-            updateEvoMap(from, evolutions[evo].evolution[i], evolutions[evo].evolvers[i]);
-    }
-};
 
 var addMark = function(value, type) {
     if (!value) value = 0;
@@ -79,13 +62,6 @@ CharUtils.generateSearchParameters = function(query, filters) {
         result.filters = temp;
     }
     return result;
-};
-
-CharUtils.searchBaseForms = function(id) {
-    if (!reverseEvoMap) generateReverseEvoMap();
-    if (!reverseEvoMap[id]) return null;
-    return reverseEvoMap[id];
-
 };
 
 CharUtils.searchEvolverEvolutions = function(id) {

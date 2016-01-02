@@ -107,7 +107,7 @@ app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, 
     $scope.evolution = window.evolutions[id];
 
     // derived data
-    var evolvesFrom = CharUtils.searchBaseForms(id);
+    var evolvesFrom = Utils.searchBaseForms(id);
     $scope.evolvesFrom = [ ];
     for (var from in evolvesFrom) {
         for (var i=0;i<evolvesFrom[from].length;++i)

@@ -239,7 +239,8 @@ app.controller('PickerCtrl',function($scope, $rootScope, $state, $stateParams, $
                 return parameters.query.test(Utils.getFullUnitName(unit.number + 1));
             });
         }
-        $scope.units = result;
+        $scope.units = result
+            .filter(function(x) { return Utils.searchBaseForms(x.number + 1); });
     };
 
 });

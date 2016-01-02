@@ -10,7 +10,7 @@ var FODDER_REGEX = new RegExp('(' + [
 
 var utils = { };
 
-var fullNames = null;
+var fullNames = null, reverseEvoMap = null;
 
 /* * * * * Unit control * * * * */
 
@@ -166,6 +166,29 @@ utils.isFodder = function(unit) {
 
 utils.isEvolverBooster = function(unit) {
     return /Evolver|Booster/i.test(unit.class);
+};
+
+utils.searchBaseForms = function(id) {
+    if (!reverseEvoMap) generateReverseEvoMap();
+    if (!reverseEvoMap[id]) return null;
+    return reverseEvoMap[id];
+};
+
+var updateEvoMap = function(from, to, via) {
+    if (!reverseEvoMap[to]) reverseEvoMap[to] = { };
+    if (!reverseEvoMap[to][from]) reverseEvoMap[to][from] = [ ];
+    reverseEvoMap[to][from].push(via);
+};
+
+var generateReverseEvoMap = function() {
+    reverseEvoMap = { };
+    for (var evo in evolutions) {
+        var from = parseInt(evo, 10);
+        if (evolutions[evo].evolution.constructor != Array)
+            updateEvoMap(from, evolutions[evo].evolution, evolutions[evo].evolvers);
+        else for (var i=0;i<evolutions[evo].evolution.length;++i)
+            updateEvoMap(from, evolutions[evo].evolution[i], evolutions[evo].evolvers[i]);
+    }
 };
 
 /* * * * * Body * * * * */
