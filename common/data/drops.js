@@ -320,6 +320,7 @@ window.drops = {
         {
             name: "Long Ring Long Land",
             thumb: 568,
+            global: true,
             "01": [ 368, 147, 152, 300 ],
             "02": [ 564, 158, 301 ],
             "03": [ 171, 144, 149, 302 ],
