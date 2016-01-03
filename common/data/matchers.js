@@ -164,7 +164,7 @@ window.matchers = [
     {
         name: 'Orb lockers',
         target: 'special',
-        matcher: /[^b]lock.+orbs/i
+        matcher: /locks.+orbs/i
     },
 
     {
