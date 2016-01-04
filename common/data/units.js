@@ -879,8 +879,8 @@ window.units = [
 	[ "Jora, Donquixote Pirates", "DEX", [ "Freedom", "Ambition" ], 5, 30, 4, 4, 99, null, 1404, 442, 146, 2886, 881, 347, 1 ],
 	[ "Lao-G", "STR", [ "Fighter", "Ambition" ], 4, 18, 5, 3, 70, null, 117, 130, 37, 1026, 783, 182, [ 1.5, 0.7, 1.5 ] ],
 	[ "Lao-G, Donquixote Pirates", "STR", [ "Fighter", "Ambition" ], 5, 30, 4, 4, 99, null, 968, 721, 143, 2021, 1421, 291, [ 1.5, 0.7, 1.5 ] ],
-	[ "Colosseum Apoo", "QCK", [ "Shooter", "Freedom" ], 4, 25, null, 0, null, null, null, null, null, null, null, null, 0 ],
-	[ "Colosseum Apoo (evolution)", "QCK", [ "Shooter", "Freedom" ], 5, 40, null, 0, null, null, null, null, null, null, null, null, 0 ],
-	[ "Colosseum Dorry", "INT", [ "Slasher", "Tough" ], 4, 18, null, 0, null, null, null, null, null, null, null, null, 0 ],
-	[ "Colosseum Dorry (evolution)", "INT", [ "Slasher", "Tough" ], 4, 30, null, 0, null, null, null, null, null, null, null, null, 0 ]
+	[ "Scratchmen Apoo, Captain of the On Air Pirates", "QCK", [ "Shooter", "Freedom" ], 4, 25, null, 0, null, null, null, null, null, null, null, null, 0 ],
+	[ "Roar of the Sea Scratchmen Apoo, Captain of the On Air Pirates", "QCK", [ "Shooter", "Freedom" ], 5, 40, null, 0, null, null, null, null, null, null, null, null, 0 ],
+	[ "Dorry the Blue Ogre", "INT", [ "Slasher", "Tough" ], 4, 18, null, 0, null, null, null, null, null, null, null, null, 0 ],
+	[ "Dorry the Blue Ogre (evolution)", "INT", [ "Slasher", "Tough" ], 4, 30, null, 0, null, null, null, null, null, null, null, null, 0 ]
 ];
