@@ -4,6 +4,17 @@
     </div>
 </script>
 
+<script id="required-by.html" type="text/ng-template">
+    <div>
+        Required by:
+        <ul>
+            <li ng-repeat="character in getRequiredBy(id)">
+                {{character}}
+            </li>
+        </ul>
+    </div>
+</script>
+
 <h2 class="page-header">
     Evolution pool
     <collapse n="0" collapsed="collapsed"></collapse>
@@ -53,12 +64,14 @@
         <tr ng-repeat="type in matTypes" ng-if="required[type] || available[type]">
             <td>
                 <a class="slot small" ng-repeat="(id,units) in required[type].missing | orderBy:'id'" target="_blank"
-                    add-href decorate-slot uid="id" amount="units.length" units="units" available="available">
+                    add-href decorate-slot uid="id" amount="units.length" units="units" available="available"
+                    uib-tooltip uib-tooltip-template="'required-by.html'" tooltip-placement="top">
                 </a>
             </td>
             <td>
                 <a class="slot small" ng-repeat="(id,units) in required[type].completed | orderBy:'id'" target="_blank"
-                    add-href decorate-slot uid="id" amount="units.length" units="units" available="available">
+                    add-href decorate-slot uid="id" amount="units.length" units="units" available="available"
+                    uib-tooltip uib-tooltip-template="'required-by.html'" tooltip-placement="top">
                 </a>
             </td>
         </tr>

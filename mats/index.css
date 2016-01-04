@@ -276,6 +276,18 @@ div > .pull-right {
     padding-right: 5px;
 }
 
+#mat-table .tooltip-inner {
+    text-align: left;
+    padding-bottom: 0;
+    outline: 1px solid white;
+}
+
+#mat-table .tooltip-inner ul {
+    padding: 0;
+    list-style: inside;
+    padding-bottom: 5px;
+}
+
 /******************
  * MOBILE SUPPORT *
  ******************/

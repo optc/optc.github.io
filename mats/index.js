@@ -192,6 +192,24 @@ app.controller('MainCtrl',function($scope, $rootScope, $timeout, $storage, $sce)
         return $sce.trustAsHtml('<div>eh</div>');
     };
 
+    $scope.getRequiredBy = function(uid) {
+        uid = parseInt(uid, 10);
+        var result = { };
+        $scope.pool.forEach(function(unit) {
+            if (unit.evolvers && unit.evolvers.indexOf(uid) > -1) {
+                var name = units[unit.from - 1].name;
+                if (name.length > 20) name = name.slice(0,20) + '...';
+                result[name] = true;
+            }
+        });
+        result = Object.keys(result);
+        if (result.length > 10) {
+            result = result.slice(0,9);
+            result.push('...');
+        }
+        return result;
+    };
+
 });
 
 app.controller('PickerCtrl',function($scope, $rootScope, $state, $stateParams, $timeout, $storage) {
