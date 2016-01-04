@@ -68,6 +68,15 @@ controllers.MainCtrl = function($scope, $rootScope, $state, $stateParams, $contr
 
     };
 
+    $scope.quickFill = function(slotNumber) {
+        var slot = $rootScope.team[slotNumber];
+        if (!slot || !slot.uid) return;
+        var slotCount = units[slot.uid - 1].slots;
+        slot.slots = [ ];
+        for (var i=0;i<slotCount;++i)
+            slot.slots.push({ id: [ 2, 3, 1, 6, 4][i], level: 5 });
+    };
+
     $controller('StorageCtrl', { $scope: $scope });
 
 };

@@ -5,6 +5,10 @@
             <div id="columns" regulate-height>
                 <div class="column" ng-repeat="unitNumber in range(0,6)" dropzone="slot" attach-picker>
 
+                    <div class="quick-fill" ng-class="{ visible: team[unitNumber].uid }" ng-click="quickFill(unitNumber)">
+                        Quick fill
+                    </div>
+
                     <div class="unitContainer" draggable="slot" removable>
 
                         <div class="unit" decorate-slot uid="team[unitNumber].uid"

@@ -75,7 +75,7 @@ html, body, body > [ui-view] {
 
 .slots {
     position: absolute;
-    top: 66px;
+    top: 94px;
 }
 
 .unit {
@@ -123,7 +123,7 @@ html, body, body > [ui-view] {
 .unitContainer, .ghostContainer {
     width: 100%;
     position: absolute;
-    top: -1px;
+    top: 27px;
     left: -1px;
 }
 
@@ -203,6 +203,24 @@ slot-wheel > .ghoster {
 
 #transient-explanation {
     padding: 10px;
+}
+
+.quick-fill {
+    width: 62px;
+    height: 21px;
+    margin: 2px 0 2px 0;
+    outline: 1px solid #777;
+    text-align: center;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+.quick-fill.visible {
+    visibility: visible;
+}
+
+.quick-fill:hover {
+    background: #ddd;
 }
 
 /**********

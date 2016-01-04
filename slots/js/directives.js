@@ -96,7 +96,7 @@ directives.regulateHeight = function($timeout) {
                 var max = team.reduce(function(prev, next) {
                     return (next && next.uid ? Math.max(prev, units[next.uid-1].slots) : prev);
                 },0);
-                $timeout(function() { element.css('height',(68+40*max) + 'px'); });
+                $timeout(function() { element.css('height',(96+40*max) + 'px'); });
             },true);
         }
     };
