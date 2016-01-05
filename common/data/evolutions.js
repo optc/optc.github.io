@@ -1061,7 +1061,7 @@ window.evolutions = {
 	},
 	682: {
 		evolution: 683,
-		evolvers: [ 117, 81, 87, 98, 103 ]
+		evolvers: [ 117, 81, 87, 98, 303 ]
 	},
 	684: {
 		evolution: 685,
@@ -1105,7 +1105,7 @@ window.evolutions = {
 	},
 	710: {
 		evolution: 711,
-		evolvers: [ 117, 87, 94, 103, 303 ]
+		evolvers: [ 117, 87, 94, 303, 103 ]
 	},
 	712: {
 		evolution: 713,
@@ -1273,7 +1273,7 @@ window.evolutions = {
 	},
 	837: {
 		evolution: 838,
-		evolvers: [ 82, 86, 97, 302, 102 ]
+		evolvers: [ 83, 86, 97, 302, 102 ]
 	},
 	839: {
 		evolution: 840,
@@ -1329,7 +1329,7 @@ window.evolutions = {
 	},
 	873: {
 		evolution: 874,
-		evolvers: [ 101, 83, 85, 96, 301 ]
+		evolvers: [ 118, 87, 94, 303, 103 ]
 	},
 	875: {
 		evolution: 876,
