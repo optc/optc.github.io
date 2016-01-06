@@ -418,8 +418,8 @@ window.units = [
 	[ "Donquixote Doflamingo", "DEX", [ "Slasher", "Ambition" ], 4, 30, 4, 1, 70, 1066998, 200, 186, 30, 1061, 790, 145, 1 ],
 	[ "Donquixote Doflamingo Warlord of the Sea", "DEX", [ "Slasher", "Ambition" ], 5, 50, 5, 2, 99, 4000000, 932, 721, 118, 2311, 1500, 255, 1 ],
 	[ "Sanji Parage Shot: The Storm", "QCK", [ "Fighter", "Tough" ], 4, 10, 5, 2, 99, 2000000, 486, 207, 32, 2015, 900, 217, 0.7 ],
-	[ "Monkey D. Luffy Gum-Gum Bazooka: The Storm", "STR", [ "Fighter", "Freedom" ], 4, 15, 6, 2, 99, 2000000, 404, 227, 39, 1748, 1250, 192, 1 ],
-	[ "Roronoa Zoro Three Thousand Worlds: The Storm", "DEX", [ "Slasher", "Ambition" ], 4, 15, 6, 2, 99, 2000000, 426, 222, 37, 2175, 1188, 132, 1 ],
+	[ "Monkey D. Luffy Gum-Gum Bazooka: Supremacy", "STR", [ "Fighter", "Freedom" ], 4, 15, 6, 2, 99, 2000000, 404, 227, 39, 1748, 1250, 192, 1 ],
+	[ "Roronoa Zoro Three Thousand Worlds: The Final Stroke", "DEX", [ "Slasher", "Ambition" ], 4, 15, 6, 2, 99, 2000000, 426, 222, 37, 2175, 1188, 132, 1 ],
 	[ "Nami Mirage Tempo: The Heavens", "INT", [ "Striker", "Knowledge" ], 4, 15, 5, 2, 99, 2000000, 348, 201, 75, 1260, 988, 361, 1 ],
 	[ "Brook", "QCK", [ "Slasher", "Freedom" ], 3, 12, 5, 1, 50, 392109, 220, 43, 45, 1190, 430, 208, 1 ],
 	[ "Humming Swordsman Brook", "QCK", [ "Slasher", "Freedom" ], 4, 20, 4, 2, 99, 3000000, 1138, 368, 162, 2108, 980, 332, 1 ],
@@ -879,8 +879,8 @@ window.units = [
 	[ "Jora, Donquixote Pirates", "DEX", [ "Freedom", "Ambition" ], 5, 30, 4, 4, 99, null, 1404, 442, 146, 2886, 881, 347, 1 ],
 	[ "Lao-G", "STR", [ "Fighter", "Ambition" ], 4, 18, 5, 3, 70, null, 117, 130, 37, 1026, 783, 182, [ 1.5, 0.7, 1.5 ] ],
 	[ "Lao-G, Donquixote Pirates", "STR", [ "Fighter", "Ambition" ], 5, 30, 4, 4, 99, null, 968, 721, 143, 2021, 1421, 291, [ 1.5, 0.7, 1.5 ] ],
-	[ "Scratchmen Apoo, Captain of the On Air Pirates", "QCK", [ "Shooter", "Freedom" ], 4, 25, null, 0, null, null, null, null, null, null, null, null, 0 ],
+	[ "Scratchmen Apoo, Captain of the On Air Pirates", "QCK", [ "Shooter", "Freedom" ], 4, 25, 5, 2, 70, null, 767, 348, 110, null, null, null, 0 ],
 	[ "Roar of the Sea Scratchmen Apoo, Captain of the On Air Pirates", "QCK", [ "Shooter", "Freedom" ], 5, 40, null, 0, null, null, null, null, null, null, null, null, 0 ],
-	[ "Dorry the Blue Ogre", "INT", [ "Slasher", "Tough" ], 4, 18, null, 0, null, null, null, null, null, null, null, null, 0 ],
-	[ "Dorry the Blue Ogre (evolution)", "INT", [ "Slasher", "Tough" ], 4, 30, null, 0, null, null, null, null, null, null, null, null, 0 ]
+	[ "Dorry, Giant Warrior Pirates", "INT", [ "Slasher", "Tough" ], 4, 18, 6, 1, 50, null, 473, 190, 32, null, null, null, 0 ],
+	[ "Dorry the Blue Ogre, Giant Warrior Pirates", "INT", [ "Slasher", "Tough" ], 4, 30, null, 0, null, null, null, null, null, null, null, null, 0 ]
 ];

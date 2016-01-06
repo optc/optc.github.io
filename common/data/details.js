@@ -1663,17 +1663,17 @@ window.details = {
 	},
 	420: {
 		special: "Reduces Silence duration by 3 turns, deals 15x character's ATK in STR damage to one enemy",
-		specialName: "Gum Gum Bazooka: The Storm",
+		specialName: "Gum Gum Bazooka: Supremacy",
 		captain: "Boosts ATK, HP and RCV of STR characters by 1.5x"
 	},
 	421: {
 		special: "Reduces Bind duration by 2 turns, deals 10x character's ATK in DEX damage to all enemies",
-		specialName: "108 Pound Phoenix: The Storm",
+		specialName: "Three Thousand Worlds: The Final Stroke",
 		captain: "Boosts ATK, HP and RCV of DEX characters by 1.5x"
 	},
 	422: {
 		special: "Reduces damage received from INT enemies by 100% for 1 turn, recovers a random amount of HP",
-		specialName: "Mirage Tempo: The Storm",
+		specialName: "Mirage Tempo: The Heavens",
 		captain: "Boosts ATK, HP and RCV of INT characters by 1.5x"
 	},
 	423: {
@@ -3971,5 +3971,15 @@ window.details = {
 		specialName: "Battle Preservation Fist: Manki Kayaku",
 		special: "Changes all orbs including [BLOCK] orbs into [G] orbs, deals random typeless damage to all enemies",
 		specialNotes: "Characters with [G] orbs will deal 1.5x their normal damage. [G] orbs cannot be locked, but they are affected by orb boosters."
+	},
+	881: {
+		captain: "Boosts ATK of Shooter and Freedom characters by 2x following a chain of Good > Great > Perfect hits",
+		specialName: "Fighting Music: Conflict Chekera",
+		special: "Doubles damage received for 2 turns, sharply decreases RCV for 2 turns, boosts ATK of Shooter and Freedom characters by 1.75x for 1 turn"
+	},
+	883: {
+		captain: "Boosts ATK and RCV of Tough characters by 1.25x",
+		specialName: "Hakoku Sovereignity",
+		special: "Deals INT damage to all enemies, boosts ATK of Tough characters by 1.5x for 1 turn. If \"Hakoku Sovereignity\" is used again in the same turn the special is activated in, boosts ATK of Tough characters by 2x instead."
 	}
 };
