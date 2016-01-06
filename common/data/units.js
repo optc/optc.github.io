@@ -880,7 +880,7 @@ window.units = [
 	[ "Lao-G", "STR", [ "Fighter", "Ambition" ], 4, 18, 5, 3, 70, null, 117, 130, 37, 1026, 783, 182, [ 1.5, 0.7, 1.5 ] ],
 	[ "Lao-G, Donquixote Pirates", "STR", [ "Fighter", "Ambition" ], 5, 30, 4, 4, 99, null, 968, 721, 143, 2021, 1421, 291, [ 1.5, 0.7, 1.5 ] ],
 	[ "Scratchmen Apoo, Captain of the On Air Pirates", "QCK", [ "Shooter", "Freedom" ], 4, 25, 5, 2, 70, null, 767, 348, 110, null, null, null, 0 ],
-	[ "Roar of the Sea Scratchmen Apoo, Captain of the On Air Pirates", "QCK", [ "Shooter", "Freedom" ], 5, 40, null, 0, null, null, null, null, null, null, null, null, 0 ],
-	[ "Dorry, Giant Warrior Pirates", "INT", [ "Slasher", "Tough" ], 4, 18, 6, 1, 50, null, 473, 190, 32, null, null, null, 0 ],
-	[ "Dorry the Blue Ogre, Giant Warrior Pirates", "INT", [ "Slasher", "Tough" ], 4, 30, null, 0, null, null, null, null, null, null, null, null, 0 ]
+	[ "Roar of the Sea Scratchmen Apoo, Captain of the On Air Pirates", "QCK", [ "Shooter", "Freedom" ], 5, 40, 5, 3, 99, null, 1188, 639, 175, null, null, null, 0 ],
+	[ "Dorry, Giant Warrior Pirates", "INT", [ "Slasher", "Tough" ], 4, 18, 6, 1, 50, null, 308, 135, 22, null, null, null, 0 ],
+	[ "Dorry the Blue Ogre, Giant Warrior Pirates", "INT", [ "Slasher", "Tough" ], 4, 30, 4, 3, 99, null, 1366, 449, 64, null, null, null, 0 ]
 ];
