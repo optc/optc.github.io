@@ -3983,13 +3983,13 @@ window.details = {
 		special: "Doubles damage received for 2 turns, sharply decreases RCV for 2 turns, boosts ATK of Shooter and Freedom characters by 1.75x for 1 turn"
 	},
 	883: {
-		captain: "Boosts ATK and RCV of Tough characters by 1.25x",
+		captain: "Boosts ATK and HP of Tough characters by 1.25x",
 		specialName: "Hakoku Sovereignity",
-		special: "Deals INT damage to all enemies, boosts ATK of Tough characters by 1.5x for 1 turn. If \"Hakoku Sovereignity\" is used again in the same turn the special is activated in, boosts ATK of Tough characters by 2x instead."
+		special: "Deals 20x character's ATK in INT damage to all enemies, boosts ATK of Tough characters by 1.5x for 1 turn. If \"Hakoku Sovereignity\" is used again in the same turn the special is activated in, boosts ATK of Tough characters by 2x instead."
 	},
 	884: {
-		captain: "Boosts ATK and RCV of Tough characters by 1.5x",
+		captain: "Boosts ATK and HP of Tough characters by 1.5x",
 		specialName: "Hakoku Sovereignity",
-		special: "Deals INT damage to all enemies, boosts ATK of Tough characters by 1.5x for 1 turn. If \"Hakoku Sovereignity\" is used again in the same turn the special is activated in, boosts ATK of Tough characters by 2x instead."
+		special: "Deals 20x character's ATK in INT damage to all enemies, boosts ATK of Tough characters by 1.5x for 1 turn. If \"Hakoku Sovereignity\" is used again in the same turn the special is activated in, boosts ATK of Tough characters by 2x instead."
 	}
 };
