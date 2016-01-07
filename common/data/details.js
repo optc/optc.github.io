@@ -2736,13 +2736,13 @@ window.details = {
 		captain: "Boosts ATK of Fighter characters by 2.25x, deals 2x character's ATK in DEX damage to all enemies at the end of each turn"
 	},
 	642: {
-		special: "Reduces crew's current HP by 30%, deals 10x character's ATK in PSY damage to one enemy, amplifies the effect of orbs by 1.75x for 1 turn",
+		special: "Reduces crew's current HP by 30%, deals 10x character's ATK in fixed damage to one enemy, amplifies the effect of orbs by 1.75x for 1 turn",
 		specialNotes: "#{orb : 1.75x}",
 		specialName: "Great Sword of the Battle Veteran",
 		captain: "Boosts ATK of PSY characters by 2.5x if HP is below 30% at the start of the turn"
 	},
 	643: {
-		special: "Reduces crew's current HP by 30%, deals 10x character's ATK in PSY damage to one enemy, amplifies the effect of orbs by 1.75x for 1 turn",
+		special: "Reduces crew's current HP by 30%, deals 10x character's ATK in fixed damage to one enemy, amplifies the effect of orbs by 1.75x for 1 turn",
 		specialNotes: "#{orb : 1.75x}",
 		specialName: "Great Sword of the Battle Veteran",
 		captain: "Boosts ATK of PSY characters by 3x if HP is below 30% at the start of the turn"
