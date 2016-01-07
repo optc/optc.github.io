@@ -413,6 +413,9 @@ window.flags = {
 	417: { global: 1 },
 	418: { global: 1 },
 	419: { global: 1, promo: 1, special: 1 },
+	420: { global: 1 },
+	421: { global: 1 },
+	422: { global: 1 },
 	423: { global: 1 },
 	424: { global: 1 },
 	425: { global: 1 },
@@ -657,5 +660,5 @@ window.flags = {
 	856: { rr: 1, rro: 1, global: 1 },
 	857: { rr: 1, rro: 1, global: 1 },
 	858: { rr: 1, rro: 1, global: 1 },
-    863: { special: 1 }
+	863: { special: 1 }
 };

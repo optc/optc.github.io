@@ -1663,7 +1663,7 @@ window.details = {
 	},
 	420: {
 		special: "Reduces Silence duration by 3 turns, deals 15x character's ATK in STR damage to one enemy",
-		specialName: "Gum Gum Bazooka: Supremacy",
+		specialName: "Gum-Gum Bazooka: Supremacy",
 		captain: "Boosts ATK, HP and RCV of STR characters by 1.5x"
 	},
 	421: {

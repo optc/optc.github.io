@@ -5,7 +5,7 @@ var CharUtils = { };
 /* * * * * Reverse drop map * * * * */
 
 var reverseDropMap = null;
-var marks = { 'Story Island': 1, 'Weekly Island': 2, 'Fortnight': 4, 'Raid': 8 };
+var marks = { 'Story Island': 1, 'Weekly Island': 2, 'Fortnight': 4, 'Raid': 8, 'Colosseum': 16 };
 
 var generateReverseDropMap = function() {
     reverseDropMap = { };
@@ -16,7 +16,10 @@ var generateReverseDropMap = function() {
                 if (data.constructor != Array) continue;
                 for (var i=0;i<data.length;++i) {
                     if (data[i] < 0 || CharUtils.isFarmable(data[i], type)) continue;
-                    flagUnit(data[i], type);
+                    if (drops[type][island].name == 'Colosseum')
+                        flagUnit(data[i], 'Colosseum');
+                    else
+                        flagUnit(data[i], type);
                 }
             }
         }
@@ -26,7 +29,7 @@ var generateReverseDropMap = function() {
 
 var addMark = function(value, type) {
     if (!value) value = 0;
-    return (value | (marks[type] || 16));
+    return (value | (marks[type] || 32));
 };
 
 var flagUnit = function(id, type) {
@@ -130,7 +133,7 @@ CharUtils.searchTandems = function(id) {
 CharUtils.isFarmable = function(id, type) {
     if (reverseDropMap === null) generateReverseDropMap();
     if (!reverseDropMap.hasOwnProperty(id)) return false;
-    return (!type ? true : (reverseDropMap[id] & (marks[type] || 16)) > 0);
+    return (!type ? true : (reverseDropMap[id] & (marks[type] || 32)) > 0);
 };
 
 CharUtils.checkFarmable = function(id, locations) {
