@@ -882,5 +882,8 @@ window.units = [
 	[ "Scratchmen Apoo, Captain of the On Air Pirates", "QCK", [ "Shooter", "Freedom" ], 4, 25, 5, 2, 70, null, 767, 348, 110, null, null, null, 0 ],
 	[ "Roar of the Sea Scratchmen Apoo, Captain of the On Air Pirates", "QCK", [ "Shooter", "Freedom" ], 5, 40, 5, 3, 99, null, 1188, 639, 175, null, null, null, 0 ],
 	[ "Dorry, Giant Warrior Pirates", "INT", [ "Slasher", "Tough" ], 4, 18, 6, 1, 50, null, 261, 120, 19, 1420, 503, 94, 1 ],
-	[ "Dorry the Blue Ogre", "INT", [ "Slasher", "Tough" ], 4, 30, 4, 3, 99, null, 1366, 449, 64, 2640, 1000, 155, 1 ]
+	[ "Dorry the Blue Ogre", "INT", [ "Slasher", "Tough" ], 4, 30, 4, 3, 99, null, 1366, 449, 64, 2640, 1000, 155, 1 ],
+	[ "Kimono Jimbe", "PSY", [ "Fighter", "Tough" ], 4, 20, null, 0, null, null, null, null, null, null, null, null, 0 ],
+	[ "Kimono Mr. 1", "STR", [ "Slasher", "Knowledge" ], 4, 17, null, 0, null, null, null, null, null, null, null, null, 0 ],
+	[ "Kimono Buggy", "QCK", [ "Ambition", "Freedom" ], 4, 17, null, 0, null, null, null, null, null, null, null, null, 0 ]
 ];

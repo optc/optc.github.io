@@ -140,4 +140,7 @@ window.aliases = {
     874: [ 'Senor Pink', 'Senior Pink' ],
     877: [ 'Giolla' ],
     878: [ 'Giolla, Donquixote Pirates' ],
+    885: [ 'Kimono Jinbe', 'Kimono Jimbei', 'Kimono Jinbei' ],
+    886: [ 'Kimono Mr. 1' ],
+    887: [ 'Kimono Buggy' ],
 };
