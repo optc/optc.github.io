@@ -828,6 +828,9 @@ window.drops = {
 
         {
             name: "Seashore Banquet! The Crazy Ones Appear!",
+            thumb: 885,
+            Expert: [ 885, 886, 887 ],
+            Elite: [ 885, 886, 887 ]
         }
 
     ],

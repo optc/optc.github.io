@@ -2380,7 +2380,7 @@ window.details = {
 		captain: "Boosts HP of Shooter characters by 1.5x and their ATK by 3x if they have a matching orb, by 2x otherwise"
 	},
 	563: {
-		special: "Deal small PSY damage to one enemy, changes [INT] orbs into [RCV] orbs",
+		special: "Deal 3x character's ATK in PSY damage to one enemy, changes [INT] orbs into [RCV] orbs",
 		specialName: "Cutie Baton"
 	},
 	564: {
