@@ -1957,6 +1957,20 @@ window.captains = {
 	880: {
 		atk: function(p) { return p.unit.class.has("Fighter") ? 2 : 1; }
 	},
+	881: {
+		hitAtk: function(p) {
+			if (!p.unit.class.has("Shooter") && !p.unit.class.has("Freedom")) return 1;
+			return p.modifiers.slice(0, p.chainPosition).subcontains(["Good", "Great", "Perfect"]) ? 2 : 1;
+		},
+		hitModifiers: ["Good", "Great", "Perfect", "Perfect", "Perfect", "Perfect"]
+	},
+	882: {
+		hitAtk: function(p) {
+			if (!p.unit.class.has("Shooter") && !p.unit.class.has("Freedom")) return 1;
+			return p.modifiers.slice(0, p.chainPosition).subcontains(["Good", "Great", "Perfect"]) ? 3 : 1;
+		},
+		hitModifiers: ["Good", "Great", "Perfect", "Perfect", "Perfect", "Perfect"]
+	},
 	883: {
 		atk: function(p) { return p.unit.class.has("Tough") ? 1.25 : 1; },
 		hp: function(p) { return p.unit.class.has("Tough") ? 1.25 : 1; }

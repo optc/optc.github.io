@@ -878,6 +878,18 @@ window.specials = {
 			});
 		}
 	},
+	881: {
+		atk: function(p) {
+			return p.unit.class.has("Shooter") || p.unit.class.has("Freedom") ? 1.75 : 1;
+		},
+		type: "class"
+	},
+	882: {
+		atk: function(p) {
+			return p.unit.class.has("Shooter") || p.unit.class.has("Freedom") ? 1.75 : 1;
+		},
+		type: "class"
+	},
 	883: {
 		atk: function(p) { return !p.unit.class.has('Tough') ? 1 : window.specials[883].multiplier; },
 		type: "class",

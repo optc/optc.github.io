@@ -1674,7 +1674,7 @@ window.details = {
 	422: {
 		special: "Reduces damage received from INT enemies by 100% for 1 turn, recovers a random amount of HP",
 		specialName: "Mirage Tempo: The Heavens",
-        specialNotes: "Estimated healing range: between 1,000 HP and 3,000 HP.",
+		specialNotes: "Estimated healing range: between 1,000 HP and 3,000 HP.",
 		captain: "Boosts ATK, HP and RCV of INT characters by 1.5x"
 	},
 	423: {
@@ -3976,12 +3976,12 @@ window.details = {
 	881: {
 		captain: "Boosts ATK of Shooter and Freedom characters by 2x following a chain of Good > Great > Perfect hits",
 		specialName: "Fighting Music: Conflict Chekera",
-		special: "Doubles damage received for 2 turns, sharply decreases RCV for 2 turns, boosts ATK of Shooter and Freedom characters by 1.75x for 1 turn"
+		special: "Doubles damage received for 2 turns, reduces RCV by 90% for 2 turns, boosts ATK of Shooter and Freedom characters by 1.75x for 1 turn"
 	},
 	882: {
 		captain: "Boosts ATK of Shooter and Freedom characters by 3x following a chain of Good > Great > Perfect hits",
 		specialName: "Fighting Music: Conflict Chekera",
-		special: "Doubles damage received for 2 turns, sharply decreases RCV for 2 turns, boosts ATK of Shooter and Freedom characters by 1.75x for 1 turn"
+		special: "Doubles damage received for 2 turns, reduces RCV by 90% for 2 turns, boosts ATK of Shooter and Freedom characters by 1.75x for 1 turn"
 	},
 	883: {
 		captain: "Boosts ATK and HP of Tough characters by 1.25x",
