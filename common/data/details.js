@@ -1674,6 +1674,7 @@ window.details = {
 	422: {
 		special: "Reduces damage received from INT enemies by 100% for 1 turn, recovers a random amount of HP",
 		specialName: "Mirage Tempo: The Heavens",
+        specialNotes: "Estimated healing range: between 1,000 HP and 3,000 HP.",
 		captain: "Boosts ATK, HP and RCV of INT characters by 1.5x"
 	},
 	423: {

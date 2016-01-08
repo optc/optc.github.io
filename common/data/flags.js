@@ -561,6 +561,8 @@ window.flags = {
 	590: { global: 1, rr: 1, rro: 1 },
 	596: { rr: 1, rro: 1, lrr: 1, global: 1 },
 	597: { rr: 1, rro: 1, lrr: 1, global: 1 },
+    602: { global: 1 },
+    603: { global: 1 },
 	604: { rr: 1, rro: 1, lrr: 1, global: 1 },
 	605: { rr: 1, rro: 1, lrr: 1, global: 1 },
 	610: { global: 1 },

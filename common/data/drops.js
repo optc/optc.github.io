@@ -391,7 +391,7 @@ window.drops = {
         },
 
         {
-            name: "Thriller Bark: Mouth Gate - Hogback's Mansion",
+            name: "Thriller Bark: Mouth Gate - Hogback's Residence",
             shortName: "Thriller Bark 1",
             thumb: 816,
             "01": [ 89, 90, 91, 387, 817, 818, 819, 820, 821 ],
@@ -405,6 +405,11 @@ window.drops = {
             "09": [ 116, 117, 820, 821, 825, 826, 827 ],
             "10": [ 78, 79, 80, 81, 82, 393, 817, 818, 819, 820, 821, 822, 823, 824 ],
             "11": [ 98, 99, 113, 114, 303, 304, 815, 817, 818, 819, 820, 821, 825, 826, 827 ]
+        },
+
+        {
+            name: "Thriller Bark: Moria's Mast Mansion",
+            shortName: "Thriller Bark 2"
         }
         
     ],
@@ -819,6 +824,10 @@ window.drops = {
             thumb: 866,
             Expert: [ 41, 42, 53, 235, 395, 397, 419, 426, 427, 432, 563, 564, 866, 867, 868, -709, -673, -671, -633, -500, -467, -465, -451, -431 ],
             Elite: [ 41, 42, 53, 235, 395, 397, 419, 426, 427, 432, 563, 564, 866, 867, 868, -709, -673, -671, -633, -500, -467, -465, -451, -431 ]
+        },
+
+        {
+            name: "Seashore Banquet! The Crazy Ones Appear!",
         }
 
     ],
@@ -903,6 +912,7 @@ window.drops = {
         {
             name: 'Clash!! Eneru',
             thumb: 603,
+            global: true,
             Ultimate: [ 85, 111, 118, 301, 602 ],
             Master: [ 85, 111, 118, 602 ] ,
             Expert: [ 111, 118, 602 ]
