@@ -105,6 +105,7 @@ app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, 
     $scope.details = window.details[id];
     $scope.cooldown = window.cooldowns[id - 1];
     $scope.evolution = window.evolutions[id];
+    $scope.family = window.families[id - 1];
 
     // derived data
     var evolvesFrom = Utils.searchBaseForms(id);
@@ -118,7 +119,23 @@ app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, 
     $scope.tandems = CharUtils.searchTandems(id);
     $scope.manuals = CharUtils.searchDropLocations(-id);
     $scope.sameSpecials = CharUtils.searchSameSpecials(id);
-    $scope.collapsed = { to: true, from: true, used: true, drops: true, manuals: true }; 
+    $scope.collapsed = { to: true, from: true, used: true, drops: true, manuals: true, families: true }; 
+
+    $scope.families = [ ];
+    window.families.forEach(function(family,n) {
+        if (family != $scope.family || n+1 == $scope.id) return;
+        var id = n +1;
+        if (!CharUtils.isFarmable(id) || Utils.searchBaseForms(id)) return;
+        var name = units[id - 1].name;
+        if (name.length  > 25) name = name.slice(0,22) + '...';
+        CharUtils.searchDropLocations(id).forEach(function(location) {
+            $scope.families.push({
+                uid: n + 1,
+                name: name,
+                location: location
+            });
+        });
+    });
 
     // hidden elements
     var isPreview = $scope.unit.preview;

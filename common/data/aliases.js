@@ -119,6 +119,8 @@ window.aliases = {
     767: [ 'Halloween Robin' ],
     768: [ 'Halloween Sanji' ],
     769: [ 'Halloween Brook' ],
+    782: [ 'Kimono Tashigi' ],
+    783: [ 'Kimono Tashigi' ],
     786: [ 'Dr. Hiruruk' ],
     787: [ 'Dr. Hiruruk, Quack Doctor' ],
     790: [ 'Usopp Pirates' ],

@@ -373,6 +373,39 @@
                         </tbody>
                     </table>
 
+                    <!-- Family -->
+
+                    <h3 class="page-header" ng-if="families.length > 0">Family: {{family}}</h3>
+
+                    <table ng-if="collapsed.families && families.length > 3" class="table table-striped table-centered table-bordered table-textless">
+                        <tbody>
+                            <tr ng-if="collapsed.families && families.length > 3">
+                                <td><button class="btn btn-info collapse-button"
+                                        ng-click="collapsed.families = false">Click to show farmable versions</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <table ng-if="families.length > 0" class="table table-striped drop-table">
+                        <thead ng-show="!collapsed.families || families.length < 4">
+                            <tr>
+                                <th>Variant</th>
+                                <th>Farm Location</th>
+                                <th>Chapter/Difficulty</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-if="!collapsed.families || families.length < 4" ng-repeat="data in families">
+                                <td>
+                                    <div class="slot small" decorate-slot uid="data.uid"></div>
+                                    <a ui-sref="main.search.view({ id: data.uid, previous: getPrevious() })">{{data.name}}</a>
+                                </td>
+                                <td>{{data.location.name}}</td>
+                                <td>{{data.location.data.join(', ')}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
                     <!-- Tags -->
 
                     <h3 class="page-header">Tags</h3>
