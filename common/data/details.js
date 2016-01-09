@@ -2102,7 +2102,7 @@ window.details = {
 		captain: "Reduces damage received by 10%, boosts ATK of Striker characters by 2x"
 	},
 	511: {
-		special: "Reduces damage received by 30% for 2 turns, boosts ATK of Slasher character by 1.25x for 2 turns",
+		special: "Reduces damage received by 30% for 2 turns, boosts ATK of Slasher characters by 1.25x for 2 turns",
 		specialName: "Cruel Blade: Iron Guard",
 		captain: "Boosts ATK of Slasher characters by 2x"
 	},
@@ -2475,7 +2475,7 @@ window.details = {
 		captain: "Boosts ATK of STR characters by 1.5x"
 	},
 	582: {
-		special: "Deals 10x character's ATK in QCK damage to one enemy, boosts ATK of QCK character by 1.5x for 1 turn",
+		special: "Deals 10x character's ATK in QCK damage to one enemy, boosts ATK of QCK characters by 1.5x for 1 turn",
 		specialName: "Burn Blade",
 		captain: "Boosts ATK and HP of Striker characters by 1.5x"
 	},
@@ -3684,7 +3684,7 @@ window.details = {
 	825: {
 		captain: "Boosts ATK and HP of STR characters by 1.5x",
 		specialName: "Energy of the Ancient Knight",
-		special: "Boosts ATK of STR character by 200 units for 1 turn"
+		special: "Boosts ATK of STR characters by 200 units for 1 turn"
 	},
 	826: {
 		captain: "Boosts ATK and HP of DEX characters by 1.5x",
@@ -3889,7 +3889,7 @@ window.details = {
 	866: {
 		captain: "Boosts ATK of Knowledge characters by 2x",
 		specialName: "Cien Fleur Wing: The Storm",
-		special: "Boosts ATK of Slasher and Knowledge units by 1.3x for 2 turns, reduces Bind duration by 2 turns"
+		special: "Boosts ATK of Slasher and Knowledge characters by 1.3x for 2 turns, reduces Bind duration by 2 turns"
 	},
 	867: {
 		captain: "Boosts ATK of all characters by 1.5x after the 12th hit in the chain",

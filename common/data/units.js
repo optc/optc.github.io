@@ -880,7 +880,7 @@ window.units = [
 	[ "Lao-G", "STR", [ "Fighter", "Ambition" ], 4, 18, 5, 3, 70, null, 117, 130, 37, 1026, 783, 182, [ 1.5, 0.7, 1.5 ] ],
 	[ "Lao-G, Donquixote Pirates", "STR", [ "Fighter", "Ambition" ], 5, 30, 4, 4, 99, null, 968, 721, 143, 2021, 1421, 291, [ 1.5, 0.7, 1.5 ] ],
 	[ "Scratchmen Apoo, Captain of the On Air Pirates", "QCK", [ "Shooter", "Freedom" ], 4, 25, 5, 2, 70, null, 646, 261, 83, 1188, 639, 175, 1 ],
-	[ "Roar of the Sea Scratchmen Apoo, Captain of the On Air Pirates", "QCK", [ "Shooter", "Freedom" ], 5, 40, 5, 3, 99, null, 1188, 639, 175, 2310, 1189, 351, 1 ],
+	[ "Roar of the Sea Scratchmen Apoo, Captain of the On Air Pirates", "QCK", [ "Shooter", "Freedom" ], 5, 40, 5, 3, 99, null, 1188, 639, 175, 2309, 1188, 351, 1 ],
 	[ "Dorry, Giant Warrior Pirates", "INT", [ "Slasher", "Tough" ], 4, 18, 6, 1, 50, null, 261, 120, 19, 1420, 503, 94, 1 ],
 	[ "Dorry the Blue Ogre", "INT", [ "Slasher", "Tough" ], 4, 30, 4, 3, 99, null, 1366, 449, 64, 2640, 1000, 155, 1 ],
 	[ "Kimono Jimbe", "PSY", [ "Fighter", "Tough" ], 4, 20, null, 0, null, null, null, null, null, null, null, null, 0 ],
