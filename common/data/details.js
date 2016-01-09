@@ -2401,12 +2401,12 @@ window.details = {
 		specialName: "Mudfish Coaster"
 	},
 	568: {
-		special: "Delays all enemies for 2 turns, switches orbs between slots twice",
+		special: "Delays all enemies for 2 turns, reduces the defense of all enemies by 50% for 2 turns, switches orbs between slots twice",
 		specialName: "Slow Slow Beam",
 		captain: "Boosts ATK, HP and RCV of all characters by 1.25x"
 	},
 	569: {
-		special: "Delays all enemies for 2 turns, switches orbs between slots twice",
+		special: "Delays all enemies for 2 turns, reduces the defense of all enemies by 50% for 2 turns, switches orbs between slots twice",
 		specialName: "Slow Slow Beam",
 		captain: "Boosts ATK, HP and RCV of all characters by 1.5x, reduces cooldown of all specials by 1 turn at the start of the fight"
 	},
@@ -2520,12 +2520,12 @@ window.details = {
 		captain: "Boosts ATK of all characters by 2x, reduces HP and RCV of all characters by 80%"
 	},
 	596: {
-		special: "Deals 20x character's ATK in STR damage to one enemy, reduces the defense of one enemy by 50% for 3 turns",
+		special: "Deals 20x character's ATK in STR damage to one enemy, reduces the defense of all enemies by 50% for 3 turns",
 		specialName: "Rozeo Michelli",
 		captain: "Boosts ATK of STR characters by 1.5x, recovers 500 HP at the end of each turn"
 	},
 	597: {
-		special: "Deals 20x character's ATK in STR damage to one enemy, reduces the defense of one enemy by 50% for 3 turns",
+		special: "Deals 20x character's ATK in STR damage to one enemy, reduces the defense of all enemies by 50% for 3 turns",
 		specialName: "Rozeo Michelli",
 		captain: "Boosts ATK of STR characters by 1.75x, recovers 750 HP at the end of each turn"
 	},

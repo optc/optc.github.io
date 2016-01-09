@@ -230,7 +230,7 @@ window.defenses = [
     [ 'Baby Turtle'                         , ''                                     , '', 109, 10000 ],
     [ 'Adult Turtle'                        , ''                                     , '', 114, 20000 ],
     [ 'Elder Turtle'                        , ''                                     , '', 193, 100000 ],
-    [ 'Princess Turtle'                     , ''                                     , '', 595, 444444 ],
+    [ 'Princess Turtle'                     , ''                                     , '', 595, 500000 ],
     // Evolvers
     [ 'Hermit Crab'                         , ''                                     , '', 93, 2000 ],
     [ 'Armored Crab'                        , ''                                     , '', 99, 10000 ],
