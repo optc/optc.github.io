@@ -1,0 +1,27 @@
+<div class="backdrop" ui-sref="^"></div>
+
+<div class="inner-container" go-back>
+
+    <div class="custom-modal" id="quickpick-modal">
+        <div id="picker" class="modal-dialog">
+            <div class="modal-content animated fadeInDown">
+                <div class="modal-header">Quick Pick</div>
+
+                <div class="modal-body">
+
+                    <textarea id="quickPicker" placeholder="One character's name per line"
+                        ng-model="quickPickContent" quick-pick auto-focus>
+                    </textarea>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-primary" ng-click="quickPick()">Okay</button> 
+                    <button class="btn btn-default" ui-sref="^">Close</button> 
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>

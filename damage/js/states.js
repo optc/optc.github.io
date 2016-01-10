@@ -133,6 +133,15 @@ angular.module('optc').config(function($stateProvider, $urlRouterProvider) {
             }
         })
 
+        .state('main.quickpick',{
+            views: {
+                popup: {
+                    templateUrl: 'views/popup/quickpick.html',
+                    controller: 'QuickPickCtrl'
+                }
+            }
+        })
+
         .state('main.specials',{
             url: 'specials',
             views: {

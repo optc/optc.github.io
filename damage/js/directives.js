@@ -266,6 +266,32 @@ directives.goBack = function($state) {
     };
 };
 
+directives.quickPick = function() {
+	return {
+		restrict: 'A',
+        link: function(scope, element, attrs) {
+            var fuse = new Fuse(window.units, { keys: [ 'name' ], id: 'number', threshold: 0.3, distance: 200 });
+            element.textcomplete([{
+                match: /^(\w{2,})$/m,
+                index: 1,
+                search: function(term, callback) {
+                    var result = [ ];
+                    try { result = fuse.search(term); }
+                    catch (e) { }
+                    callback(result.slice(0,7).filter(function(x) { return x > 0; }));
+                },
+                template: function (value) {
+                    var thumb = Utils.getThumbnailUrl(value + 1);
+                    return '<span><img class="quickpick-icon" src="' + thumb + '"> ' + window.units[value].name + '</span>';
+                },
+                replace: function(value) {
+                    return window.units[value].name;
+                },
+            }]);
+        }
+    };
+};
+
 /************************
  * Component directives *
  ************************/

@@ -70,6 +70,10 @@ body, html {
     margin: 20px auto 0 auto;
 }
 
+#other > button {
+    width: 40px;
+}
+
 #transient {
     width: 440px;
     padding: 5px;
@@ -379,6 +383,16 @@ body, html {
     color: white;
 }
 
+.btn-orchid {
+    color: white;
+    background: orchid;
+}
+
+.btn-orchid:hover {
+    color: white;
+    background: mediumorchid;
+}
+
 #other > :not(:last-child) {
     margin-right: 5px;
 }
@@ -672,6 +686,18 @@ nav > li > div {
     margin: auto;
 }
 
+#quickpick-modal {
+    max-width: 405px;
+}
+
+#quickpick-modal > .modal-dialog {
+    max-width: 405px;
+}
+
+#quickpick-modal .modal-body {
+    height: 300px;
+}
+
 .modal-dialog {
     width: 705px;
 }
@@ -952,6 +978,16 @@ nav > li > div {
 
 .candyContainer:nth-child(4) .candySlider {
     border: 1px solid #7feb9f !important;
+}
+
+#quickPicker {
+    width: 100%;
+    height: 100%;
+}
+
+.quickpick-icon {
+    width: 24px;
+    height: 24px;
 }
 
 /***********

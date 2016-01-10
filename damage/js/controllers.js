@@ -259,6 +259,56 @@ controllers.PopoverCtrl = function($scope) {
     $scope.cooldown = window.cooldowns[id - 1];
 };
 
+/*****************
+ * QuickPickCtrl *
+ *****************/
+
+controllers.QuickPickCtrl = function($scope, $state) {
+
+    var pickUnit = function(slotNumber, unitNumber) {
+        $scope.resetSlot(slotNumber);
+        if (unitNumber) {
+            $scope.data.team[slotNumber].unit = units[unitNumber - 1];
+            $scope.data.team[slotNumber].level = 1;
+            $scope.slotChanged(slotNumber);
+        }
+        if (slotNumber < 2 && captains[unitNumber] && captains[unitNumber].warning) {
+            noty({
+                text: captains[unitNumber].warning.replace(/\%name\%/g, window.units[unitNumber].name),
+                type: 'warning',
+                layout: 'topRight',
+                theme: 'relax',
+                timeout: 5000
+            });
+        }
+    };
+
+    $scope.quickPick = function() {
+
+        var data = $scope.quickPickContent.split(/[\r\n]/)
+            .filter(function(x) { return x && x.trim().length > 0; })
+            .map(function(x) { return x.trim(); });
+
+        window.units.forEach(function(unit) {
+            while (data.indexOf(unit.name) >= 0)
+                data.splice(data.indexOf(unit.name), 1, unit.number);
+        });
+
+        data = data.map(function(x) {
+            if (x && !isNaN(x) && x >= 0 && x < units.length) return x + 1;
+            return null;
+        });
+
+        data = data.slice(0,6);
+        for (var i=0;i<6;++i)
+            pickUnit(i, data[i]);
+
+        $state.go('^');
+
+    };
+
+};
+
 /*****************************
  * Controller initialization *
  *****************************/
