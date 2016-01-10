@@ -173,6 +173,10 @@ window.defenses = [
     [ 'Wapol (STR)'                         , 'Wapol Fortnight'                      , 'Expert', 851, 1500 ],
     [ 'Wapol (QCK)'                         , 'Wapol Fortnight'                      , 'Expert', 852, 1500 ],
     [ 'Wapol (QCK. def up)'                 , 'Wapol Fortnight'                      , 'Expert', 852, 4500 ] ,
+    [ 'Usopp'                               , 'Kimono Strawhats Fortnight'           , 'Expert', 867, 100 ],
+    [ 'Chopper'                             , 'Kimono Strawhats Fortnight'           , 'Expert', 868, 100 ],
+    [ 'Robin'                               , 'Kimono Strawhats Fortnight'           , 'Expert', 866, 100 ] ,
+    [ 'Robin (def up)'                      , 'Kimono Strawhats Fortnight'           , 'Expert', 866, 10000 ] ,
     /* * * * * Colosseum * * * * */
     [ 'Dr. Kureha'                          , 'Colosseum, 1st Hina Round'            , 'Chaos' , 333, 20 ],
     [ 'Hotori and Kotori'                   , 'Colosseum, 2nd Hina Round'            , 'Chaos' , 504, 250 ],
