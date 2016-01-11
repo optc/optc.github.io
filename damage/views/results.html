@@ -1,5 +1,10 @@
 <div id="stats">
 
+    <div id="surprise" ng-class="{ active: surpriseActive }">
+        <img src="http://i63.tinypic.com/2hflv8k.png" id="surprise1">
+        <img src="http://i65.tinypic.com/11ubyhc.png" id="surprise2">
+    </div>
+
     <div class="damage {{type}}" ng-repeat="type in ['STR','QCK','DEX','PSY','INT']" expandable-damage>
 
         <span class="damageLabel">Damage against {{type}}</span>

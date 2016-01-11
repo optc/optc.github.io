@@ -6,7 +6,7 @@ var app = angular.module('optc', [ 'ui.router', 'ui.bootstrap', 'ngSanitize' ]);
  * SharedRootCtrl *
  ******************/
 
-var SharedRootCtrl = function($scope, $rootScope) {
+var SharedRootCtrl = function($scope, $rootScope, $timeout) {
 
     $rootScope.data = {
 
@@ -110,6 +110,20 @@ var SharedRootCtrl = function($scope, $rootScope) {
 
     $scope.$watch('data.team', resetTransitional, true);
     $scope.$watch('tdata.team', resetTransitional, true);
+
+    /* * * * * Surprise * * * * */
+
+    $scope.$watch('data.team', function(team) {
+        if (!team) return;
+        $timeout(function() {
+            var temp = team.map(function(x) { return x.unit ? x.unit.number + 1 : null; });
+            var units = [ 15, 227, 251, 261, 308, 358, 400, 408, 418, 511, 590 ];
+            var total = temp
+                .map(function(x) { return units.indexOf(x) > -1 ? 1 : 0; })
+                .reduce(function(p,n) { return p + n; },0);
+            $rootScope.surpriseActive = (total >= 5);
+        },100);
+    },true);
 
 };
 
