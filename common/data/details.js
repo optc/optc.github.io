@@ -3992,5 +3992,20 @@ window.details = {
 		captain: "Boosts ATK and HP of Tough characters by 1.5x",
 		specialName: "Hakoku Sovereignity",
 		special: "Deals 20x character's ATK in INT damage to all enemies, boosts ATK of Tough characters by 1.5x for 1 turn. If \"Hakoku Sovereignity\" is used again in the same turn the special is activated in, boosts ATK of Tough characters by 2x instead."
+	},
+	885: {
+		captain: "Boosts ATK of Fighter characters by 2x, reduces damage received by 10%",
+		specialName: "Arabesque Brick Fist: Sun",
+		special: "Cuts the current HP of each enemy by 10%, boosts ATK of Fighter characters by 1.5x for 2 turns if crew's HP is low when the special is activated"
+	},
+	886: {
+		captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of Slasher characters by 2x",
+		specialName: "Daisy Blade",
+		special: "Deals 15x character's ATK in STR damage to all enemies, boosts ATK of Slasher characters by 1.5x for 2 turns if crew's HP is low when the special is activated"
+	},
+	887: {
+		captain: "Boosts the ATK of Ambition characters by 1.5x, boosts amount of beli received by 1.2x",
+		specialName: "Special Muggy Ball: Flashy",
+		special: "Reduces the defense of all enemies for 1 turn, deals 15x character's ATK in QCK damage to all enemies"
 	}
 };

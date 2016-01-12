@@ -117,7 +117,7 @@ var SharedRootCtrl = function($scope, $rootScope, $timeout) {
         if (!team) return;
         $timeout(function() {
             var temp = team.map(function(x) { return x.unit ? x.unit.number + 1 : null; });
-            var units = [ 15, 227, 251, 261, 308, 358, 400, 408, 418, 511, 590 ];
+            var units = [ 8, 15, 227, 251, 261, 308, 358, 400, 408, 418, 511, 590 ];
             var total = temp
                 .map(function(x) { return units.indexOf(x) > -1 ? 1 : 0; })
                 .reduce(function(p,n) { return p + n; },0);
