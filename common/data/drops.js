@@ -827,7 +827,7 @@ window.drops = {
         },
 
         {
-            name: "Seashore Banquet! The Crazy Ones Appear!",
+            name: "Riverside Banquet! Enter the Crazy Ones!",
             thumb: 885,
             Expert: [ 885, 886, 887, -887, -704, -703, -677, -675, -504, -453, -416 ],
             Elite: [ 885, 886, 887, -887, -704, -703, -677, -675, -504, -453, -416 ]

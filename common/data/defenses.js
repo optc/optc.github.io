@@ -177,9 +177,9 @@ window.defenses = [
     [ 'Chopper'                             , 'Kimono Strawhats Fortnight'           , 'Expert', 868, 100 ],
     [ 'Robin'                               , 'Kimono Strawhats Fortnight'           , 'Expert', 866, 100 ] ,
     [ 'Robin (def up)'                      , 'Kimono Strawhats Fortnight'           , 'Expert', 866, 10000 ] ,
-    [ 'Mr. 1'                               , 'Seashore Banquet Fortnight'           , 'Expert', 886, 5000 ] ,
-    [ 'Mr. 1 (def up)'                      , 'Seashore Banquet Fortnight'           , 'Expert', 886, 10000 ] ,
-    [ 'Jimbe'                               , 'Seashore Banquet Fortnight'           , 'Expert', 885, 185 ] ,
+    [ 'Mr. 1'                               , 'Riverside Banquet Fortnight'           , 'Expert', 886, 5000 ] ,
+    [ 'Mr. 1 (def up)'                      , 'Riverside Banquet Fortnight'           , 'Expert', 886, 10000 ] ,
+    [ 'Jimbe'                               , 'Riverside Banquet Fortnight'           , 'Expert', 885, 185 ] ,
     /* * * * * Colosseum * * * * */
     [ 'Dr. Kureha'                          , 'Colosseum, 1st Hina Round'            , 'Chaos' , 333, 20 ],
     [ 'Hotori and Kotori'                   , 'Colosseum, 2nd Hina Round'            , 'Chaos' , 504, 250 ],
