@@ -126,7 +126,7 @@ var ImportCtrl = function($scope, $rootScope, $state, $stateParams) {
             temp.forEach(function(x,n) {
                 var unit = $scope.tdata.team[n];
                 unit.orb = (x == 1 ? 2 : (x == 2 ? 0.5 : (x == 3 ? 'g' : 1)));
-                if (unit.orb == 'g' && !$rootScope.options.gOrbsEnabled) unit.orb = 1;
+                if (unit.orb == 'g' && !$rootScope.areGOrbsEnabled()) unit.orb = 1;
             });
         } else if (type == 'S') {
             temp = ('000000' + parseInt(data, 10).toString(2))

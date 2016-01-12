@@ -2,7 +2,7 @@ window.effects = {
 
     // always use unique IDs, and don't ever change an ID once you've set it
     // IDs must always be greater than 0
-    // last ID used: 24
+    // last ID used: 25
 
     'Baroque Works (pre-v4.0)': {
         description: 'Stats of non-Fighter units reduced by 90%',
@@ -214,6 +214,13 @@ window.effects = {
         thumb: 865,
         id: 24, // don't change this
         chainLimiter: function(p) { return Infinity; }
+    },
+
+    'There\'s the G!': {
+        description: 'Activates [G] orb support even when Lao-G is not in the team',
+        thumb: 880,
+        id: 25, // don't change this
+        gOrbsEnabled: true
     },
 
 };

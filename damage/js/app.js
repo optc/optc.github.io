@@ -91,14 +91,34 @@ var SharedRootCtrl = function($scope, $rootScope, $timeout) {
             window.events[uid].onInsertion($rootScope);
     };
 
-    // reset g slots automatically
-    $scope.$watch('options.gOrbsEnabled',function(count) {
-        if (count > 0) return;
+    /* * * * * [G] orb control * * * * */
+
+    var resetGOrbs = function() {
         for (var i=0;i<6;++i) {
             if ($scope.tdata.team[i].orb == 'g')
                 $scope.tdata.team[i].orb = 1;
         }
+    };
+
+    // reset g slots automatically
+    $scope.$watch('options.gOrbsEnabled',function() {
+        if (!$rootScope.areGOrbsEnabled())
+            resetGOrbs();
     });
+
+    $scope.$watch('data.effect',function() {
+        if (!$rootScope.areGOrbsEnabled())
+            resetGOrbs();
+    });
+
+    $rootScope.areGOrbsEnabled = function() {
+        if ($rootScope.options.gOrbsEnabled > 0) return true;
+        if ($rootScope.data.effect) {
+            var effect = window.effects[$rootScope.data.effect];
+            if (effect && effect.gOrbsEnabled) return true;
+        }
+        return false;
+    };
 
     /* * * * * Custom hit modifiers resetting * * * * */
 
