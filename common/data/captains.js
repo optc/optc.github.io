@@ -1978,5 +1978,14 @@ window.captains = {
 	884: {
 		atk: function(p) { return p.unit.class.has("Tough") ? 1.5 : 1; },
 		hp: function(p) { return p.unit.class.has("Tough") ? 1.5 : 1; }
+	},
+	885: {
+		atk: function(p) { return p.unit.class.has("Fighter") ? 2 : 1; }
+	},
+	886: {
+		atk: function(p) { return p.unit.class.has("Slasher") ? 2 : 1; }
+	},
+	887: {
+		atk: function(p) { return p.unit.class.has("Ambition") ? 1.5 : 1; }
 	}
 };

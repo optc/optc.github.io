@@ -913,5 +913,16 @@ window.specials = {
 				name: '884warning'
 			});
 		}
+	},
+	885: {
+		atk: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; },
+		type: "class"
+	},
+	886: {
+		atk: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; },
+		type: "class"
+	},
+	887: {
+		def: function(p) { return 0.2; }
 	}
 };

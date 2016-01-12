@@ -4001,11 +4001,11 @@ window.details = {
 	886: {
 		captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of Slasher characters by 2x",
 		specialName: "Daisy Blade",
-		special: "Deals 15x character's ATK in STR damage to all enemies, boosts ATK of Slasher characters by 1.5x for 2 turns if crew's HP is low when the special is activated"
+		special: "Deals 15x character's ATK in STR damage to all enemies, boosts ATK of Slasher characters by 1.5x for 2 turns if HP is below 30% when the special is activated"
 	},
 	887: {
 		captain: "Boosts the ATK of Ambition characters by 1.5x, boosts amount of beli received by 1.2x",
 		specialName: "Special Muggy Ball: Flashy",
-		special: "Reduces the defense of all enemies for 1 turn, deals 15x character's ATK in QCK damage to all enemies"
+		special: "Sharply reduces the defense of all enemies for 1 turn, deals 15x character's ATK in QCK damage to all enemies"
 	}
 };
