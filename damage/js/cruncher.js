@@ -230,7 +230,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         else mapEffect.shieldLeft = 0;
         var result = applySpecialMultipliersAndCaptainEffects(damage,hitModifiers,noSorting);
         // apply chain and bonus multipliers
-        result = applyChainAndBonusMultipliers(result,hitModifiers);
+        result = applyChainAndBonusMultipliers(result,hitModifiers,noSorting);
         if (mapEffect.damage) result.result = applyEffectDamage(result.result, mapEffect.damage);
         var overallDamage = result.result.reduce(function(prev,x) { return prev + x.damage; },0);
         return { damage: result.result, overall: overallDamage,
@@ -330,6 +330,17 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         return result;
     };
 
+    var sortDamageForDefense = function(damage, modifiers) {
+        var temp = damage.map(function(x,n) {
+            var atk = Math.floor(x.base * totalMultiplier(x.multipliers)) * 2.5; // assume the unit is at the end of the chain
+            var result = computeDamageOfUnit(x.unit.unit,atk,modifiers[n],0);
+            return [ result.result, n, x ];
+        });
+        temp.sort(function(x,y) { return (x[0] - y[0] || x[1] - y[1]); });
+        return temp.map(function(x) { return x[2]; });
+    };
+
+
     /* Computes the actual defense threshold of the enemy after the specials are factored in.
      * Defense-reducing specials do not stack with each other, so we just use the one that grants the lowest defense.
      */
@@ -423,12 +434,13 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         return maximum;
     };
 
-    var applyChainAndBonusMultipliers = function(damage,modifiers) {
+    var applyChainAndBonusMultipliers = function(damage,modifiers,noSorting) {
         var currentMax = -1, currentResult = null;
         chainSpecials.forEach(function(special) {
             var multipliersUsed = [ ], currentHits = 0, overall = 0;
             var i, params = [ ];
             for (var j=0;j<damage.length;++j) params.push(getParameters(damage[j].position, j));
+            if (!noSorting) damage = sortDamageForDefense(damage, modifiers);
             var result = damage.map(function(x,n) {
                 // calculate chain multiplier
                 var chainModifier = cptsWith.chainModifiers.reduce(function(prev,next) {
@@ -487,7 +499,9 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 return { unit: x.unit, orb: x.orb, base: base, multipliers: multipliers, position: x.position };
             });
             // sort by damage again
-            if (!noSorting) temp = temp.sort(function(x,y) { return x.base * totalMultiplier(x.multipliers) - y.base * totalMultiplier(y.multipliers); });
+            if (!noSorting) temp = temp.sort(function(x,y) {
+                return x.base * totalMultiplier(x.multipliers) - y.base * totalMultiplier(y.multipliers);
+            });
             // apply non-static captain effects
             for (var i=0;i<cptsWith.hitModifiers.length;++i)
                 temp = applyCaptainEffectsToDamage(temp,cptsWith.hitModifiers[i].hitAtk,hitModifiers);

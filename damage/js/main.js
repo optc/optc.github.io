@@ -31,7 +31,7 @@ var MainCtrl = function($scope, $rootScope, $controller, $filter, $storage) {
         if (value) {
             $scope.notify({
                 text: 'Two or more specials you selected are incompatible with each other, ' + 
-                    'only the strongest combination will be used.',
+                    'trying to compute the strongest combination.',
                 type: 'error'
             });
         }
