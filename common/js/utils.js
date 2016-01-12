@@ -65,20 +65,14 @@ utils.getThumbnailUrl = function(n) {
     if (n === null || n === undefined || (window.units && window.units[n-1].incomplete))
         return 'http://onepiece-treasurecruise.com/wp-content/themes/onepiece-treasurecruise/images/noimage.png';
     var id = ('0000' + n).slice(-4).replace(/(057[54])/,'0$1'); // missing aokiji image
-    if (n >= 855 && n <= 858) // TODO REMOVE ME temporary thumbs for Christmas units
-        return 'http://onepiece-treasurecruise.com/en/wp-content/uploads/sites/2/f' + id + '.png';
-    else
-        return 'http://onepiece-treasurecruise.com/wp-content/uploads/f' + id + '.png';
+    return 'http://onepiece-treasurecruise.com/wp-content/uploads/f' + id + '.png';
 };
 
 utils.getBigThumbnailUrl = function(n) {
     if (window.units[n-1].incomplete)
         return 'http://onepiece-treasurecruise.com/wp-content/themes/onepiece-treasurecruise/images/noimage.png';
     var id = ('0000' + n).slice(-4).replace(/(057[54])/,'0$1'); // missing aokiji image
-    if (n >= 855 && n <= 858) // TODO REMOVE ME temporary thumbs for Christmas units
-        return 'http://onepiece-treasurecruise.com/en/wp-content/uploads/sites/2/c' + id + '.png';
-    else
-        return 'http://onepiece-treasurecruise.com/wp-content/uploads/c' + id + '.png';
+    return 'http://onepiece-treasurecruise.com/wp-content/uploads/c' + id + '.png';
 };
 
 utils.getThumbnailTitle = function(arg) {
