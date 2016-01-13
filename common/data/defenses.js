@@ -177,6 +177,7 @@ window.defenses = [
     [ 'Chopper'                             , 'Kimono Strawhats Fortnight'           , 'Expert', 868, 100 ],
     [ 'Robin'                               , 'Kimono Strawhats Fortnight'           , 'Expert', 866, 100 ] ,
     [ 'Robin (def up)'                      , 'Kimono Strawhats Fortnight'           , 'Expert', 866, 10000 ] ,
+    [ 'Buggy'                               , 'Riverside Banquet Fortnight'           , 'Expert', 887, 100 ] ,
     [ 'Mr. 1'                               , 'Riverside Banquet Fortnight'           , 'Expert', 886, 5000 ] ,
     [ 'Mr. 1 (def up)'                      , 'Riverside Banquet Fortnight'           , 'Expert', 886, 10000 ] ,
     [ 'Jimbe'                               , 'Riverside Banquet Fortnight'           , 'Expert', 885, 185 ] ,
