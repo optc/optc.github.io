@@ -4011,7 +4011,7 @@ window.details = {
 	888: {
 		specialName: "Negative Ghost",
 		special: "Slightly reduces the ATK of all enemies for 3 turns",
-		specialNotes: "The reduction does not apply to the damage from specials"
+		specialNotes: "The reduction does not apply to damage from specials"
 	},
 	889: {
 		captain: "Boosts ATK and RCV of DEX characters by 1.2x",
