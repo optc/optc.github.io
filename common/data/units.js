@@ -886,7 +886,7 @@ window.units = [
 	[ "Jimbe, Shark Soldier", "PSY", [ "Fighter", "Tough" ], 4, 20, 4, 2, 99, 3000000, 84, 34, 29, 1990, 1020, 298, 1 ],
 	[ "Mr. 1, West Blue Swordsman", "STR", [ "Slasher", "Knowledge" ], 4, 17, 6, 2, 99, 2000000, 45, 24, 19, 2024, 1044, 118, 1.5 ],
 	[ "Buggy, Cheerfully Crazy", "QCK", [ "Ambition", "Freedom" ], 4, 17, 5, 2, 99, 2000000, 32, 19, 30, 1790, 694, 285, 1.5 ],
-	[ "Hollow Hollow Ghost", "PSY", "Freedom", 2, 6, 4, 0, 35, null, 52, 28, 110, null, null, null, 0 ],
+	[ "Hollow Hollow Ghost", "PSY", "Freedom", 2, 6, 4, 0, 35, null, 40, 20, 100, 150, 90, 190, 1 ],
 	[ "Perona, Thriller Bark's Mysterious Four", "DEX", [ "Shooter", "Ambition" ], 3, 12, 4, 1, 50, null, 149, 75, 66, null, null, null, 0 ],
 	[ "Perona, Giant Ghost Princess", "DEX", [ "Shooter", "Ambition" ], 4, 20, 5, 3, 99, null, 772, 381, 159, null, null, null, 0 ],
 	[ "Doctor Hogback, Thriller Bark's Mysterious Four", "INT", [ "Fighter", "Knowledge" ], 3, 15, 5, 2, 70, null, 225, 101, 42, null, null, null, 0 ],

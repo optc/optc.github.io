@@ -1987,5 +1987,42 @@ window.captains = {
 	},
 	887: {
 		atk: function(p) { return p.unit.class.has("Ambition") ? 1.5 : 1; }
+	},
+	889: {
+		atk: function(p) { return p.unit.type == "DEX" ? 1.2 : 1; },
+		rcv: function(p) { return p.unit.type == "DEX" ? 1.2 : 1; }
+	},
+	890: {
+		atk: function(p) { return p.unit.type == "DEX" ? 1.5 : 1; },
+		rcv: function(p) { return p.unit.type == "DEX" ? 1.5 : 1; }
+	},
+	891: {
+		atk: function(p) { return p.unit.class.has("Tough") ? 1.5 : 1; },
+		hp: function(p) { return p.unit.class.has("Tough") ? 1.5 : 1; }
+	},
+	892: {
+		chainModifier: function(p) { return 2; }
+	},
+	893: {
+		hitAtk: function(p) {
+			if (!p.unit.class.has("Tough")) return 1;
+			return p.modifiers.slice(0, p.chainPosition)
+				.subcontains(["Perfect", "Perfect", "Perfect"]) ? 3 : 1;
+		},
+		hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
+	},
+	894: {
+		hitAtk: function(p) {
+			if (!p.unit.class.has("Ambition")) return 1;
+			return p.modifiers.slice(0, p.chainPosition)
+				.subcontains(["Good", "Great", "Perfect"]) ? 3 : 1;
+		},
+		hitModifiers: ["Good", "Great", "Perfect", "Perfect", "Perfect", "Perfect"]
+	},
+	895: {
+		atk: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; }
+	},
+	896: {
+		atk: function(p) { return p.unit.class.has("Slasher") ? 2 : 1; }
 	}
 };

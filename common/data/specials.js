@@ -924,5 +924,9 @@ window.specials = {
 	},
 	887: {
 		def: function(p) { return 0.2; }
+	},
+	891: {
+		atk: function(p) { return p.unit.class.has("Tough") ? 1.25 : 1; },
+		type: "class"
 	}
 };
