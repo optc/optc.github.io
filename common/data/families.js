@@ -885,5 +885,14 @@ var families = [
     'Dorry',
     'Jimbe',
     'Daz Bones',
-    'Buggy'
+    'Buggy',
+    null,
+    'Perona',
+    'Perona',
+    'Hogback',
+    'Absalom',
+    'Oars',
+    'Gecko Moria',
+    'Brook',
+    'Brook'
 ];
