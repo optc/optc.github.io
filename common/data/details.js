@@ -4048,11 +4048,11 @@ window.details = {
 	895: {
 		captain: "Boosts ATK of Slasher characters by 1.5x",
 		specialName: "Dying Chorus: Binks' Sake",
-		special: "Recovers 6x character's RCV in HP at the end of each turn for 6 turns"
+		special: "Recovers 6x character's RCV in HP at the end of each turn for 3 turns"
 	},
 	896: {
 		captain: "Boosts ATK of Slasher characters by 2x",
 		specialName: "Dying Chorus: Binks' Sake",
-		special: "Recovers 6x character's RCV in HP at the end of each turn for 6 turns"
+		special: "Recovers 6x character's RCV in HP at the end of each turn for 3 turns"
 	}
 };
