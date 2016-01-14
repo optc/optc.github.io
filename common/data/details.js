@@ -4019,7 +4019,7 @@ window.details = {
 		special: "Changes [STR] orbs into [DEX] orbs, deals 10x character's ATK in DEX damage to all enemies"
 	},
 	890: {
-		captain: "?",
+		captain: "Boosts ATK and RCV of DEX characters by 1.5x",
 		specialName: "Ghost Rap",
 		special: "Changes [STR] orbs into [DEX] orbs, deals 10x character's ATK in DEX damage to all enemies"
 	},
