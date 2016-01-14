@@ -107,13 +107,13 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
         if (filters.drop) {
             var isFarmable = CharUtils.isFarmable(id);
             if (filters.drop == 'Farmable') {
-                if (id == 1 || unit.stars >= 3 && !isFarmable) return false;    
+                if (id == 1 || !isFarmable) return false;    
                 if (farmableLocations !== null) {
                     var farmable = CharUtils.checkFarmable(id, farmableLocations);
                     if (!farmable) return false;
                 }
             } else if (filters.drop != 'Farmable') {
-                if (id != 1 && (unit.stars < 3 || isFarmable)) return false; 
+                if (id != 1 && isFarmable) return false; 
                 if (filters.nonFarmable) {
                     // RR
                     if (filters.nonFarmable.rro && !flags.rro) return false;

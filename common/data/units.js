@@ -888,10 +888,10 @@ window.units = [
 	[ "Buggy, Cheerfully Crazy", "QCK", [ "Ambition", "Freedom" ], 4, 17, 5, 2, 99, 2000000, 32, 19, 30, 1790, 694, 285, 1.5 ],
 	[ "Hollow Hollow Ghost", "PSY", "Freedom", 2, 6, 4, 0, 35, null, 52, 28, 110, null, null, null, 0 ],
 	[ "Perona, Thriller Bark's Mysterious Four", "DEX", [ "Shooter", "Ambition" ], 3, 12, 4, 1, 50, null, 149, 75, 66, null, null, null, 0 ],
-	[ "Perona, Giant Ghost Princess", "DEX", [ "Shooter", "Ambition" ], 4, 20, 5, 3, null, null, 772, 381, 159, null, null, null, 0 ],
+	[ "Perona, Giant Ghost Princess", "DEX", [ "Shooter", "Ambition" ], 4, 20, 5, 3, 99, null, 772, 381, 159, null, null, null, 0 ],
 	[ "Doctor Hogback, Thriller Bark's Mysterious Four", "INT", [ "Fighter", "Knowledge" ], 3, 15, 5, 2, 70, null, 225, 101, 42, null, null, null, 0 ],
 	[ "Absalom of the Graveyard, Thriller Bark's Mysterious Four", "STR", [ "Shooter", "Tough" ], 3, 15, 6, 2, 70, null, 251, 143, 17, null, null, null, 0 ],
-	[ "Oars, Special Zombie", "STR", [ "Fighter", "Tough" ], 4, 50, 4, 2, 99, null, 1500, 700, 1, 2700, 1440, -500, 1 ],
+	[ "Oars, Special Zombie", "STR", [ "Fighter", "Tough" ], 4, 50, 4, 2, 99, null, 1500, 700, 1, 2700, 1440, -499, 1 ],
 	[ "Gecko Moria, Shadow's Asgard", "INT", [ "Ambition", "Tough" ], 5, 30, 4, 3, 99, null, 1000, 500, -500, null, null, null, 0 ],
 	[ "Brook, Gentleman Skeleton", "DEX", [ "Slasher", "Freedom" ], 3, 10, 5, 1, 50, null, 148, 96, 37, null, null, null, 0 ],
 	[ "Brook, Straw Hat Pirates", "DEX", [ "Slasher", "Freedom" ], 4, 16, 6, 3, 99, null, 1000, 442, 140, null, null, null, 0 ]
