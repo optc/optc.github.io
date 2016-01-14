@@ -885,5 +885,14 @@ window.units = [
 	[ "Dorry the Blue Ogre", "INT", [ "Slasher", "Tough" ], 5, 30, 4, 3, 99, 3000000, 1366, 449, 64, 2640, 1000, 156, 1 ],
 	[ "Jimbe, Shark Soldier", "PSY", [ "Fighter", "Tough" ], 4, 20, 4, 2, 99, 3000000, 84, 34, 29, 1990, 1020, 298, 1 ],
 	[ "Mr. 1, West Blue Swordsman", "STR", [ "Slasher", "Knowledge" ], 4, 17, 6, 2, 99, 2000000, 45, 24, 19, 2024, 1044, 118, 1.5 ],
-	[ "Buggy, Cheerfully Crazy", "QCK", [ "Ambition", "Freedom" ], 4, 17, 5, 2, 99, 2000000, 32, 19, 30, 1790, 694, 285, 1.5 ]
+	[ "Buggy, Cheerfully Crazy", "QCK", [ "Ambition", "Freedom" ], 4, 17, 5, 2, 99, 2000000, 32, 19, 30, 1790, 694, 285, 1.5 ],
+	[ "Hollow Hollow Ghost", "PSY", "Freedom", 2, 6, 4, 0, 35, null, 52, 28, 110, null, null, null, 0 ],
+	[ "Perona, Thriller Bark's Mysterious Four", "DEX", [ "Shooter", "Ambition" ], 3, 12, 4, 1, 50, null, 149, 75, 66, null, null, null, 0 ],
+	[ "Ghost Princess Perona, Thriller Bark's Mysterious Four", "DEX", [ "Shooter", "Ambition" ], 4, 20, 5, 3, null, null, 772, 381, 159, null, null, null, 0 ],
+	[ "Doctor Hogback, Thriller Bark's Mysterious Four", "INT", [ "Fighter", "Knowledge" ], 3, 15, 5, 2, 70, null, 225, 101, 42, null, null, null, 0 ],
+	[ "Absalom of the Graveyard, Thriller Bark's Mysterious Four", "STR", [ "Shooter", "Tough" ], 3, 15, 6, 2, 70, null, 251, 143, 17, null, null, null, 0 ],
+	[ "Oars, Special Zombie", "STR", [ "Fighter", "Tough" ], 4, 50, 4, 2, 99, null, 1597, 760, -400, null, null, null, 0 ],
+	[ "Gecko Moria, Shadow's Asgard", "INT", [ "Ambition", "Tough" ], 5, 30, 4, 3, 99, null, 1000, 500, -500, null, null, null, 0 ],
+	[ "Brook, Gentleman Skeleton", "DEX", [ "Slasher", "Freedom" ], 3, 10, 5, 1, 50, null, 148, 96, 37, null, null, null, 0 ],
+	[ "Brook, Straw Hat Pirates", "DEX", [ "Slasher", "Freedom" ], 4, 16, 6, 3, 99, null, 1000, 442, 140, null, null, null, 0 ]
 ];

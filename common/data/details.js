@@ -4007,5 +4007,52 @@ window.details = {
 		captain: "Boosts the ATK of Ambition characters by 1.5x, boosts amount of beli received by 1.2x",
 		specialName: "Special Muggy Ball: Flashy",
 		special: "Reduces the defense of all enemies by 80% for 1 turn, deals 15x character's ATK in QCK damage to all enemies"
+	},
+	888: {
+		specialName: "Negative Ghost",
+		special: "Slightly reduces the ATK of all enemies for 3 turns",
+		specialNotes: "The reduction does not apply to the damage from specials"
+	},
+	889: {
+		captain: "Boosts ATK and RCV of DEX characters by 1.2x",
+		specialName: "Ghost Rap",
+		special: "Changes [STR] orbs into [DEX] orbs, deals 10x character's ATK in DEX damage to all enemies"
+	},
+	890: {
+		captain: "?",
+		specialName: "Ghost Rap",
+		special: "Changes [STR] orbs into [DEX] orbs, deals 10x character's ATK in DEX damage to all enemies"
+	},
+	891: {
+		captain: "Boosts ATK and RCV of Tough characters by 1.75x",
+		specialName: "Resurrection of the Dead",
+		special: "Reduces damage received by 50% for 1 turn, boosts ATK of Tough characters by 1.25x for 1 turn",
+		specialNotes: "SPECIALNOTES"
+	},
+	892: {
+		captain: "Boosts chain multiplier by 2x",
+		specialName: "Hands of the Dead",
+		special: "Switches orbs between slots three times"
+	},
+	893: {
+		captain: "Boosts ATK of Tough characters by 3x after scoring 3 Perfects in a row",
+		specialName: "Oars Ball",
+		special: "Reduces damage received by 50% for 1 turn, deals 30x character's ATK in STR damage to all enemies"
+	},
+	894: {
+		captain: "Boosts ATK of Ambition characters by 3x following a chain of Good > Great > Perfect hits",
+		specialName: "Brick Bat: Black Box",
+		special: "Empties all slots with [INT] orbs, deals high INT damage to one enemy",
+		specialNotes: "The exact damage dealt is proportional to the number of [INT] orbs consumed"
+	},
+	895: {
+		captain: "Boosts ATK of Slasher characters by 1.5x",
+		specialName: "Dying Chorus: Binks' Sake",
+		special: "Recovers 6x character's RCV in HP at the end of each turn for 6 turns"
+	},
+	896: {
+		captain: "Boosts ATK of Slasher characters by 2x",
+		specialName: "Dying Chorus: Binks' Sake",
+		special: "Recovers 6x character's RCV in HP at the end of each turn for 6 turns"
 	}
 };
