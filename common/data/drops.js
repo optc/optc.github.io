@@ -653,8 +653,9 @@ window.drops = {
         },
 
         {
-            name: 'Maiden in Love Candy-chan',
+            name: 'Little Ms. Candy the Maiden-Hearted!',
             thumb: 436,
+            global: true,
             Expert: [ 433, 434, 435, -384, -372, -371, -359, -217, -210, -19 ],
             Elite: [ 433, 434, 435, -384, -372, -371, -359, -217, -210, -19 ]
         },
@@ -821,8 +822,8 @@ window.drops = {
         {
             name: "Legendary Shipbuilding Company Tom's Workers",
             thumb: 848,
-            Expert: [ 847, 849, 850, -849, -647, -617, -616, -615, -578, -508, -454 ],
-            Elite: [ 847, 849, 850, -849, -647, -617, -616, -615, -578, -508, -454 ]
+            Expert: [ 847, 849, 850, -849, -647, -617, -616, -615, -578, -508, -455 ],
+            Elite: [ 847, 849, 850, -849, -647, -617, -616, -615, -578, -508, -455 ]
         },
 
         {
