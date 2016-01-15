@@ -308,5 +308,10 @@ window.tandems = [
         "name": "Absolute Justice Divine Punishment",
         "desc": "Deals 3,000 fixed damage to all enemies",
         "units": [ 696, 697, 698, 699, 700 ]
+    },
+    {
+        "name": "Lightning Bone Sword: Gavotte Bond en Avant",
+        "desc": "Cuts the current HP of each enemy by 4%",
+        "units": [ 12, 15, 709, 896 ]
     }
 ];
