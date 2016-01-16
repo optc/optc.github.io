@@ -9,6 +9,7 @@ var loadValue = function(key,def) {
     var value = storage.get(key, null);
     if (key == 'data' && value && value.team) {
         value.team = value.team.map(function(x,n) {
+            if (!x || !x.hasOwnProperty('unit') || x.unit === undefined) x.unit = null;
             if (x && x.unit !== null && x.unit !== undefined && x.unit.constructor == Number) {
                 x.unit = window.units[x.unit];
                 // captain warnings
