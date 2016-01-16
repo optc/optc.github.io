@@ -4042,8 +4042,8 @@ window.details = {
 	894: {
 		captain: "Boosts ATK of Ambition characters by 3x following a chain of Good > Great > Perfect hits",
 		specialName: "Brick Bat: Black Box",
-		special: "Empties all slots with [INT] orbs, deals high INT damage to one enemy",
-		specialNotes: "The exact damage dealt is proportional to the number of [INT] orbs consumed"
+		special: "Empties all slots with [INT] orbs, deals several times the character's ATK in INT damage to one enemy",
+		specialNotes: "The exact multiplier used is chosen based on the number of [INT] orbs consumed: 1 orb will give a 10x multiplier, 2 orbs 15x, 3 orbs 20x, 4 orbs 50x, 5 orbs 100x, 6 orbs 200x. It's not possible to activate the special without consuming at least one [INT] orb."
 	},
 	895: {
 		captain: "Boosts ATK of Slasher characters by 1.5x",
