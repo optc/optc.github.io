@@ -1933,10 +1933,10 @@ window.captains = {
 		rcv: function(p) { return p.unit.type == "QCK" ? 2 : 1; }
 	},
 	873: {
-		atk: function(p) { return p.class.has("Fighter") && p.percHP <= 30.0 ? 2.5 : 1; }
+		atk: function(p) { return p.unit.class.has("Fighter") && p.percHP <= 30.0 ? 2.5 : 1; }
 	},
 	874: {
-		atk: function(p) { return p.class.has("Fighter") && p.percHP <= 30.0 ? 3 : 1; }
+		atk: function(p) { return p.unit.class.has("Fighter") && p.percHP <= 30.0 ? 3 : 1; }
 	},
 	875: {
 		atk: function(p) {
