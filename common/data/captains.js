@@ -342,7 +342,7 @@ window.captains = {
 		hp: function(p) { return p.unit.type == "PSY" ? 2 : 1; }
 	},
 	299: {
-		hp: function(p) { return p.unit.type == "DEX" ? 2 : 1; }
+		atk: function(p) { return p.unit.type == "DEX" ? 2 : 1; }
 	},
 	305: {
 		atk: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; },
