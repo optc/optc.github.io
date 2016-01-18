@@ -106,6 +106,7 @@ app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, 
     $scope.cooldown = window.cooldowns[id - 1];
     $scope.evolution = window.evolutions[id];
     $scope.family = window.families[id - 1];
+    $scope.customLevel = { };
 
     // derived data
     var evolvesFrom = Utils.searchBaseForms(id);
@@ -163,6 +164,19 @@ app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, 
     $scope.getPrevious = function() { return $stateParams.previous.concat($scope.id); };
     $scope.isSpecialArray = ($scope.details && $scope.details.special && $scope.details.special.constructor == Array);
     $scope.isCaptainArray = ($scope.details && $scope.details.captain && $scope.details.captain.constructor == Array);
+
+    $scope.$watch('customLevel.level',function(level) {
+        if (isNaN(level) || level < 1 || level > $scope.unit.maxLevel) {
+            $scope.customLevel.enabled = false;
+            return;
+        }
+        jQuery.extend($scope.customLevel, {
+            enabled: true,
+            atk: CharUtils.getStatOfUnit($scope.unit, 'atk', level),
+            hp: CharUtils.getStatOfUnit($scope.unit, 'hp', level),
+            rcv: CharUtils.getStatOfUnit($scope.unit, 'rcv', level),
+        });
+    });
 
     // radar
     if ($scope.unit.incomplete) return;

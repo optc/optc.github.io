@@ -105,6 +105,15 @@
                                         <td ng-if="!compare">{{unit.maxRCV | number}}</td>
                                         <td ng-if="compare" comparison="positive">{{unit.maxRCV - compare.maxRCV | number}}</td>
                                     </tr>
+                                    <tr ng-if="!compare && !incomplete">
+                                        <td>
+                                            <input type="number" placeholder="Level"
+                                                ng-model="customLevel.level" min="1" max="unit.maxLevel">
+                                        </td>
+                                        <td><span ng-show="customLevel.enabled">{{customLevel.hp | number:0}}</span></td>
+                                        <td><span ng-show="customLevel.enabled">{{customLevel.atk | number:0}}</span></td>
+                                        <td><span ng-show="customLevel.enabled">{{customLevel.rcv | number:0}}<span></td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </uib-tab>

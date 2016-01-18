@@ -190,6 +190,14 @@ CharUtils.getIslandBonuses = function(y, day) {
     return result;
 };
 
+CharUtils.getStatOfUnit = function(unit, stat, level) {
+    var maxLevel = (unit.maxLevel == 1 ? 1 : unit.maxLevel -1);
+    var growth = unit.growth[stat] || 1;
+    var minStat = 'min' + stat.toUpperCase(), maxStat = 'max' + stat.toUpperCase();
+    var result = unit[minStat] + (unit[maxStat] - unit[minStat]) * Math.pow((level-1) / maxLevel, growth);
+    return Math.floor(result);
+};
+
 /***********
  * Caching *
  ***********/

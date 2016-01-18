@@ -639,7 +639,7 @@ window.units = [
 	[ "Doma", "QCK", "Slasher", 4, 18, 4, 3, 70, 1066998, 89, 144, 43, 1098, 733, 187, 0.7 ],
 	[ "Bohemian Knight Doma", "QCK", "Slasher", 5, 29, 4, 4, 99, 4000000, 1020, 695, 150, 2134, 1268, 328, 0.7 ],
 	[ "Decalvan Brothers", "DEX", "Fighter", 4, 18, 6, 3, 70, 1066998, 240, 89, 28, 1880, 668, 73, 0.7 ],
-	[ "Decalvan Brothers, Sibling Bonds", "DEX", "Fighter", 5, 29, 5, 4, 99, 4000000, 1824, 602, 50, 3330, 1183, 158, 0.7 ],
+	[ "Decalvan Brothers, Brothers' Bond", "DEX", "Fighter", 5, 29, 5, 4, 99, 4000000, 1824, 602, 50, 3330, 1183, 158, 0.7 ],
 	[ "Squard", "PSY", [ "Striker", "Tough" ], 4, 18, 5, 3, 70, 1066998, 198, 190, 0, 1351, 810, 0, 0.7 ],
 	[ "Maelstrom Spider Squard", "PSY", [ "Striker", "Tough" ], 5, 29, 5, 4, 99, 4000000, 960, 755, -1, 2755, 1434, -150, 0.7 ],
 	[ "Whitey Bay", "INT", [ "Slasher", "Ambition" ], 4, 18, 5, 3, 70, 1066998, 109, 93, 44, 1140, 600, 223, 0.7 ],
