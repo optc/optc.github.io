@@ -113,12 +113,15 @@ app.directive('collapsable',function($compile, $timeout) {
 
             scope.$watch('query',function() {
                 if (scope.target != 'type.html' || scope.query.constructor == String) return;
-                if (scope.query.source.length && scope.query.source != '(?:)') expand();
-                $timeout(function() {
-                    var visible = element.find('> div:not(.ng-hide)').length;
-                    if (visible === 0 || scope.query.source == '(?:)') collapse();
-                    else expand();
-                });
+                var validQuery = (scope.query.source.length && scope.query.source != '(?:)');
+                if (!validQuery) collapse();
+                else {
+                    expand();
+                    $timeout(function() {
+                        var visible = element.find('> div:not(.ng-hide)').length;
+                        if (visible === 0) collapse();
+                    });
+                }
             });
 
         }
