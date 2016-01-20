@@ -270,7 +270,7 @@ window.tandems = [
         "units": [ 339, 338, 614, 337 ]
     },
     {
-        "name": "Maiden's Awakening - Do You Like my Floral Dress?",
+        "name": "Maiden's Awakening: Do you like floral prints?",
         "desc": "Deals the cumulative ATK of all the characters in the tandem to all enemies, recovers 1,180 HP, boosts ATK of all characters by 1.2x for 1 turn",
         "units": [ 436, 433, 434, 390 ]
     },

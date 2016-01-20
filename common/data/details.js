@@ -1732,23 +1732,23 @@ window.details = {
 	},
 	433: {
 		special: "Reduces Bind and Silence duration by 1 turn",
-		specialName: "Newkama Temptation",
+		specialName: "New Kama Seduction",
 		captain: "Boosts ATK by 2x following a chain of QCK > STR > DEX attacks no lower than Good"
 	},
 	434: {
 		special: "Amplifies the effect of orbs by 1.25x for 3 turns",
 		specialNotes: "#{orb : 1.25x}",
-		specialName: "Newkama Kenpo - Maiden's Awakening",
+		specialName: "New Kama Karate Maiden's Awakening",
 		captain: "Boosts ATK by 2x following a chain of PSY > INT > INT attacks no lower than Good"
 	},
 	435: {
 		special: "Randomly changes [RCV], [STR] and [DEX] orbs into either [STR] or [QCK] orbs",
-		specialName: "Blooming into a Lovely Maiden",
+		specialName: "Maiden's Bloom",
 		captain: "Boosts ATK by 2x following a chain of INT > PSY > QCK attacks no lower than Good"
 	},
 	436: {
 		special: "Randomly changes [RCV], [STR] and [DEX] orbs into either [STR] or [QCK] orbs",
-		specialName: "Blooming into a Lovely Maiden",
+		specialName: "Maiden's Bloom",
 		captain: "Boosts ATK by 2.25x following a chain of INT > PSY > QCK attacks no lower than Good"
 	},
 	437: {
@@ -2716,56 +2716,56 @@ window.details = {
 	},
 	638: {
 		special: "Changes [PSY] and [INT] orbs into [QCK] orbs, reduces Bind duration by 1 turn",
-		specialName: "Raiding Sword of Frenzy",
+		specialName: "Bohemian Reverse Slash",
 		captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of Slasher characters by 2x"
 	},
 	639: {
 		special: "Changes [PSY] and [INT] orbs into [QCK] orbs, reduces Bind duration by 1 turn",
-		specialName: "Raiding Sword of Frenzy",
+		specialName: "Bohemian Reverse Slash",
 		captain: "Reduces cooldown of all specials by 3 turns at the start of the fight, boosts ATK of Slasher characters by 2x"
 	},
 	640: {
 		special: "Changes own orb into [DEX], deals several times the character's ATK in DEX damage to one enemy",
 		specialNotes: "#{specialProportional : lower : 50 * ( 1 - (remaining HP) / (total HP) )}",
-		specialName: "Pirate Brothers - Twin Combo Attack",
+		specialName: "Pirate Brothers: Twin Strike",
 		captain: "Boosts ATK of Fighter characters by 2x, deals 2x character's ATK in DEX damage to all enemies at the end of each turn"
 	},
 	641: {
 		special: "Changes own orb into [DEX], deals several times the character's ATK in DEX damage to one enemy",
 		specialNotes: "#{specialProportional : lower : 50 * ( 1 - (remaining HP) / (total HP) )}",
-		specialName: "Pirate Brothers - Twin Combo Attack",
+		specialName: "Pirate Brothers: Twin Strike",
 		captain: "Boosts ATK of Fighter characters by 2.25x, deals 2x character's ATK in DEX damage to all enemies at the end of each turn"
 	},
 	642: {
 		special: "Reduces crew's current HP by 30%, deals 10x character's ATK in fixed damage to one enemy, amplifies the effect of orbs by 1.75x for 1 turn",
 		specialNotes: "#{orb : 1.75x}",
-		specialName: "Great Sword of the Battle Veteran",
+		specialName: "Raging Greatsword",
 		captain: "Boosts ATK of PSY characters by 2.5x if HP is below 30% at the start of the turn"
 	},
 	643: {
 		special: "Reduces crew's current HP by 30%, deals 10x character's ATK in fixed damage to one enemy, amplifies the effect of orbs by 1.75x for 1 turn",
 		specialNotes: "#{orb : 1.75x}",
-		specialName: "Great Sword of the Battle Veteran",
+		specialName: "Raging Greatsword",
 		captain: "Boosts ATK of PSY characters by 3x if HP is below 30% at the start of the turn"
 	},
 	644: {
 		special: "Reduces Bind and Silence duration by 2 turns, boosts ATK against delayed enemies by 1.2x for 3 turns",
-		specialName: "The Witch's Ice Breaker",
+		specialName: "Witch's Icebreaker",
 		captain: "Boosts ATK of INT characters by 2x"
 	},
 	645: {
 		special: "Reduces Bind and Silence duration by 2 turns, boosts ATK against delayed enemies by 1.2x for 3 turns",
-		specialName: "The Witch's Ice Breaker",
+		specialName: "Witch's Icebreaker",
 		captain: "Boosts ATK of INT characters by 2.5x"
 	},
 	646: {
 		special: "Deals 20x character's ATK in STR damage to all enemies, boosts chances of getting [STR] orbs for 3 turns",
-		specialName: "Battleship Drop",
+		specialName: "Vanguard Breaker",
 		captain: "Boosts ATK of Shooter characters by 2.5x if HP is below 30% at the start of the turn"
 	},
 	647: {
 		special: "Deals 20x character's ATK in STR damage to all enemies, boosts chances of getting [STR] orbs for 3 turns",
-		specialName: "Battleship Drop",
+		specialName: "Vanguard Breaker",
 		captain: "Boosts ATK of Shooter characters by 2.75x if HP is below 30% at the start of the turn"
 	},
 	648: {
