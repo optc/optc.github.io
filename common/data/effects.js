@@ -84,7 +84,7 @@ window.effects = {
         atk: function(p) {
             var id = p.number + 1,
                 matching = ((id > 463 && id < 497) || (id > 539 && id < 547 ) ||
-                    [ 313, 314, 503, 504, 581, 582, 583, 584 ].indexOf(id) != -1);
+                    [ 313, 314, 503, 504, 581, 582, 583, 584, 780, 781 ].indexOf(id) != -1);
             return !matching ? 0.8 : 1;
         },
         hp: function(p) {

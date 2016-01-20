@@ -29,10 +29,10 @@ td:first-child {
     white-space: nowrap;
 }
 
-.island:not(.collapsed) > h3 > .fa-chevron-down,
-.island.collapsed > h3 > .fa-chevron-up,
-.type.collapsed > h2 > .fa-chevron-up,
-.type:not(.collapsed) > h2 > .fa-chevron-down {
+.island:not(.collapsed) > h3 > .fa-chevron-right,
+.island.collapsed > h3 > .fa-chevron-down,
+.type.collapsed > h2 > .fa-chevron-down,
+.type:not(.collapsed) > h2 > .fa-chevron-right {
     display: none;
 }
 
@@ -46,6 +46,12 @@ h1 > label {
     position: relative;
     bottom: 5px;
     margin-left: 15px;
+}
+
+h1 > input {
+    font-size: 14px;
+    position: relative;
+    top: 13px;
 }
 
 h1 > label > input {

@@ -12,10 +12,18 @@ var addImages = function(target) {
 };
 
 app.controller('MainCtrl',function($scope, $rootScope, $timeout) {
+
+    // variables
     $rootScope.onlyGlobal = false;
+    $rootScope.query = '';
     $scope.data = drops;
-    $scope.reverse = function(x) { return -x; };
     $scope.hiddenUnits = [ ];
+
+    // units
+    $scope.reverse = function(x) { return -x; };
+    $scope.changeSorting = function() { $rootScope.sortByType = $scope.sortByType; };
+    $scope.changeQueryFilter = function() { $scope.query = Utils.getRegex($scope.queryFilter); };
+
     $scope.changeFilters = function() {
         $scope.hiddenUnits = [ ];
         for (var i=0;i<units.length;++i) {
@@ -24,7 +32,7 @@ app.controller('MainCtrl',function($scope, $rootScope, $timeout) {
         }
         if (!$scope.$$phase) $scope.$apply();
     };
-    $scope.changeSorting = function() { $rootScope.sortByType = $scope.sortByType; };
+
 });
 
 app.directive('decorateSlot',function() {
@@ -71,29 +79,59 @@ app.directive('island',function() {
     };
 });
 
-app.directive('collapsable',function($compile) {
+app.directive('collapsable',function($compile, $timeout) {
     return {
         restrict: 'A',
-        scope: { target: '@', data: '=', type: '=', island: '=', hiddenUnits: '=', onlyGlobal: '=' },
+        scope: { target: '@', data: '=', type: '=', island: '=', hiddenUnits: '=', onlyGlobal: '=', query: '=' },
         link: function(scope, element, attrs) {
-            var update = function() {
-                if (element.children().length > 1) {
-                    while (element.children().length > 1)
-                        element.children().last().remove();
-                } else {
-                    if (scope.target == 'type.html')
-                        element.append($compile('<type type="type" data="data" hidden-units="hiddenUnits" only-global="onlyGlobal"></type>')(scope));
-                    else
-                        element.append($compile('<island type="type" island="island" data="data" hidden-units="hiddenUnits"></island>')(scope));
-                }
-                element.toggleClass('collapsed');
+
+            var collapse = function() {
+                if (element.children().length == 1) return;
+                while (element.children().length > 1)
+                    element.children().last().remove();
+                element.addClass('collapsed');
             };
+
+            var expand = function() {
+                if (element.children().length > 1) return;
+                if (scope.target == 'type.html')
+                    element.append($compile('<type type="type" data="data" hidden-units="hiddenUnits" only-global="onlyGlobal"></type>')(scope));
+                else
+                    element.append($compile('<island type="type" island="island" data="data" hidden-units="hiddenUnits"></island>')(scope));
+                element.removeClass('collapsed');
+            };
+
+            var update = function() {
+                if (element.children().length > 1) collapse();
+                else expand();
+            };
+
             element.find('> h3, > h2').click(function(e) {
                 if (e.which != 1) return;
                 update();
             });
+
+            scope.$watch('query',function() {
+                if (scope.target != 'type.html' || scope.query.constructor == String) return;
+                if (scope.query.source.length && scope.query.source != '(?:)') expand();
+                $timeout(function() {
+                    var visible = element.find('> div:not(.ng-hide)').length;
+                    if (visible === 0 || scope.query.source == '(?:)') collapse();
+                    else expand();
+                });
+            });
+
         }
     };
+});
+
+app.directive('autoFocus',function($timeout) {
+	return {
+		restrict: 'A',
+		link: function(scope, element, attrs) {
+			$timeout(function(){ element[0].focus(); });
+		}
+	};
 });
 
 app.directive('hideWhenEmpty',function() {
