@@ -440,7 +440,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             var multipliersUsed = [ ], currentHits = 0, overall = 0;
             var i, params = [ ];
             for (var j=0;j<damage.length;++j) params.push(getParameters(damage[j].position, j));
-            if (!noSorting) damage = sortDamageForDefense(damage, modifiers);
+            if (!noSorting && cptsWith.hitModifiers.length === 0) damage = sortDamageForDefense(damage, modifiers);
             var result = damage.map(function(x,n) {
                 // calculate chain multiplier
                 var chainModifier = cptsWith.chainModifiers.reduce(function(prev,next) {
