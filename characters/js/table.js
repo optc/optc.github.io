@@ -16,7 +16,14 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
             '<a ui-sref="main.search.view({ id: ' + parseInt(row[0],10) + '})">' + data + '</a>';
     };
 
-    var fuse = new Fuse(window.units, { keys: [ 'name' ], id: 'number', threshold: 0.3, distance: 200 });
+    var fuse = new Fuse(window.units, {
+        keys: [ 'name' ],
+        id: 'number',
+        threshold: 0.3,
+        distance: 200,
+        getFn: function(obj, path) { return !obj ? null : obj[path]; }
+    });
+
     var fused = null;
 
     var tableData = null;
