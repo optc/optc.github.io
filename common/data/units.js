@@ -894,5 +894,13 @@ window.units = [
 	[ "Oars, Special Zombie", "STR", [ "Fighter", "Tough" ], 4, 50, 4, 2, 99, 4000000, 1500, 700, 0, 2700, 1440, -500, 1 ],
 	[ "Gecko Moria, Shadow's Asgard", "INT", [ "Ambition", "Tough" ], 5, 30, 4, 3, 99, 4000000, 1000, 500, -500, 3180, 1430, -999, 0 ],
 	[ "Brook, Gentleman Skeleton", "DEX", [ "Slasher", "Freedom" ], 3, 10, 5, 1, 50, 392109, 148, 96, 37, 1067, 491, 196, 1 ],
-	[ "Brook, Straw Hat Pirates", "DEX", [ "Slasher", "Freedom" ], 4, 16, 6, 3, 99, 3000000, 1000, 442, 140, 1990, 847, 316, 0 ]
+	[ "Brook, Straw Hat Pirates", "DEX", [ "Slasher", "Freedom" ], 4, 16, 6, 3, 99, 3000000, 1000, 442, 140, 1990, 847, 316, 0 ],
+	,
+	,
+	,
+	[ "Colosseum Franky", "DEX", [ "Shooter", "Freedom" ], 4, 25, null, 0, null, null, null, null, null, null, null, null, 0 ],
+	[ "Colosseum Franky (evolution)", "DEX", [ "Shooter", "Freedom" ], 5, 40, null, 0, null, null, null, null, null, null, null, null, 0 ],
+	[ "Broggy, Giant Warrior Pirates", "PSY", [ "Slasher", "Tough" ], 4, 18, null, 0, null, null, null, null, null, null, null, null, 0 ],
+	[ "Broggy the Red Ogre", "PSY", [ "Slasher", "Tough" ], 5, 30, null, 0, null, null, null, null, null, null, null, null, 0 ],
+	[ "Unknown Colosseum Character", "STR", [ "Fighter", "Tough" ], 4, 20, null, 0, null, null, null, null, null, null, null, null, 0 ]
 ];
