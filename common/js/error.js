@@ -18,6 +18,9 @@ app.factory('$exceptionHandler', function($injector) {
         try {
             temp += '\n\n' + navigator.userAgent;
         } catch (e) { }
+        try {
+            temp += '\n\n' + window.location.pathname + window.location.hash;
+        } catch (e) { }
         $rootScope.caughtException = encodeURIComponent(temp);
     };
 });
