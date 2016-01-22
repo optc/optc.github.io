@@ -13,7 +13,7 @@ var generateReverseDropMap = function() {
         for (var island in drops[type]) {
             for (var stage in drops[type][island]) {
                 var data = drops[type][island][stage];
-                if (data.constructor != Array) continue;
+                if (!data || data.constructor != Array) continue;
                 for (var i=0;i<data.length;++i) {
                     if (data[i] < 0 || CharUtils.isFarmable(data[i], type)) continue;
                     if (drops[type][island].name == 'Colosseum')
