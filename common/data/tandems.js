@@ -256,27 +256,27 @@ window.tandems = [
     },
     {
         "name": "Trinity Attack",
-        "desc": "Deals 2 times the cumulative ATK of all the characters in the tandem to all enemies, boosts ATK of PSY characters by 1.2x until the rest of the current turn",
+        "desc": "Deals 2 times the cumulative ATK of all the characters in the tandem to all enemies, boosts ATK of PSY characters by 1.2x until the end of the current turn",
         "units": [ 338, 339, 336 ]
     },
     {
         "name": "Super Trinity Attack",
-        "desc": "Deals 2 times the cumulative ATK of all the characters in the tandem to all enemies, boosts ATK of PSY characters by 1.4x until the rest of the current turn",
+        "desc": "Deals 2 times the cumulative ATK of all the characters in the tandem to all enemies, boosts ATK of PSY characters by 1.4x until the end of the current turn",
         "units": [ 338, 339, 337 ]
     },
     {
         "name": "Super Quartet Attack",
-        "desc": "Deals 2 times the cumulative ATK of all the characters in the tandem to all enemies, boosts ATK of PSY characters by 1.5x until the rest of the current turn",
+        "desc": "Deals 2 times the cumulative ATK of all the characters in the tandem to all enemies, boosts ATK of PSY characters by 1.5x until the end of the current turn",
         "units": [ 339, 338, 614, 337 ]
     },
     {
         "name": "Maiden's Awakening: Do you like floral prints?",
-        "desc": "Deals the cumulative ATK of all the characters in the tandem to all enemies, recovers 1,180 HP, boosts ATK of all characters by 1.2x until the rest of the current turn",
+        "desc": "Deals the cumulative ATK of all the characters in the tandem to all enemies, recovers 1,180 HP, boosts ATK of all characters by 1.2x until the end of the current turn",
         "units": [ 436, 433, 434, 390 ]
     },
     {
         "name": "Light Shandia's Fire!",
-        "desc": "Deals 1,000 fixed damage to all enemies, boosts ATK of all characters by 1.3x until the rest of the current turn",
+        "desc": "Deals 1,000 fixed damage to all enemies, boosts ATK of all characters by 1.3x until the end of the current turn",
         "units": [ 466, 581, 582, 544 ]
     },
     {
@@ -316,7 +316,7 @@ window.tandems = [
     },
     {
         "name": "Giant Pirates' Charge",
-        "desc": "Deals 3 times the cumulative ATK of all the characters in the tandem to all enemies, boosts ATK of Tough characters by 1.4x until the rest of the current turn",
+        "desc": "Deals 3 times the cumulative ATK of all the characters in the tandem to all enemies, boosts ATK of Tough characters by 1.4x until the end of the current turn",
         "units": [ 884, 903 ]
     }
 ];
