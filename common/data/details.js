@@ -2551,13 +2551,13 @@ window.details = {
 	},
 	602: {
 		special: "Reduces crew's current HP by 90%, deals 20,000 fixed damage to all enemies, boosts ATK of QCK characters by 2x for 1 turn",
-		specialName: "200 Million Volt Lightning God",
+		specialName: "200,000,000 Volt Amaru",
 		specialNotes: "#{fixed}",
 		captain: "Boosts ATK of QCK characters by 2x"
 	},
 	603: {
 		special: "Reduces crew's current HP by 90%, deals 20,000 fixed damage to all enemies, boosts ATK of QCK characters by 2x for 1 turn",
-		specialName: "200 Million Volt Lightning God",
+		specialName: "200,000,000 Volt Amaru",
 		specialNotes: "#{fixed}",
 		captain: "Boosts ATK of QCK characters by 2.25x, recovers 5x character's RCV in HP at the end of each turn"
 	},
@@ -2738,13 +2738,13 @@ window.details = {
 	},
 	642: {
 		special: "Reduces crew's current HP by 30%, deals 10x character's ATK in fixed damage to one enemy, amplifies the effect of orbs by 1.75x for 1 turn",
-		specialNotes: "#{orb : 1.75x}",
+		specialNotes: "#{fixed} #{orb : 1.75x}",
 		specialName: "Raging Greatsword",
 		captain: "Boosts ATK of PSY characters by 2.5x if HP is below 30% at the start of the turn"
 	},
 	643: {
 		special: "Reduces crew's current HP by 30%, deals 10x character's ATK in fixed damage to one enemy, amplifies the effect of orbs by 1.75x for 1 turn",
-		specialNotes: "#{orb : 1.75x}",
+		specialNotes: "#{fixed} #{orb : 1.75x}",
 		specialName: "Raging Greatsword",
 		captain: "Boosts ATK of PSY characters by 3x if HP is below 30% at the start of the turn"
 	},
