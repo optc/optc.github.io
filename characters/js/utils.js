@@ -98,22 +98,22 @@ CharUtils.getEvolversOfEvolution = function(from,to,withID) {
 
 CharUtils.searchDropLocations = function(id) {
     var result = [ ];
-    for (var type in drops) {
-        for (var island=0;island<drops[type].length;++island) {
+    for (var type in window.drops) {
+        for (var island=0;island<window.drops[type].length;++island) {
             var temp = [ ];
-            for (var stage in drops[type][island]) {
+            for (var stage in window.drops[type][island]) {
                 if (stage == 'thumb' || stage == 'name' || stage == 'shortName' || stage == 'day' || stage == 'global') continue;
-                if (drops[type][island][stage].indexOf(id) != -1)
+                if (window.drops[type][island][stage].indexOf(id) != -1)
                     temp.push(stage);
             }
             if (temp.length > 0) {
                 temp.sort();
-                var name = drops[type][island].name;
+                var name = window.drops[type][island].name;
                 if (type == 'Fortnight') name += ' Fortnight';
                 else if (type == 'Raid') name += ' Raid';
-                var data = { name: name, thumb: drops[type][island].thumb, data: temp };
-                if (type == 'Story Island' || drops[type][island].hasOwnProperty('day'))
-                    data.bonuses = CharUtils.getIslandBonuses(island, drops[type][island].day);
+                var data = { name: name, thumb: window.drops[type][island].thumb, data: temp };
+                if (type == 'Story Island' || window.drops[type][island].hasOwnProperty('day'))
+                    data.bonuses = CharUtils.getIslandBonuses(island, window.drops[type][island].day);
                 result.push(data);
             }
         }

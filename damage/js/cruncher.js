@@ -205,11 +205,11 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         // apply type overrides
         if ($scope.tdata.typeOverride[type]) {
             var override = $scope.tdata.typeOverride[type];
-            for (var i=0;i<result.length;++i) {
-                if (!override[i]) continue;
-                var currentMultiplier = getTypeMultiplierOfUnit(result[i].unit.unit.type, type);
-                var newMultiplier = getTypeMultiplierOfUnit(result[i].unit.unit.type, override[i]);
-                result[i].multipliers.push([ newMultiplier / currentMultiplier, 'type override' ]);
+            for (var k=0;k<result.length;++k) {
+                if (!override[k]) continue;
+                var currentMultiplier = getTypeMultiplierOfUnit(result[k].unit.unit.type, type);
+                var newMultiplier = getTypeMultiplierOfUnit(result[k].unit.unit.type, override[k]);
+                result[k].multipliers.push([ newMultiplier / currentMultiplier, 'type override' ]);
             }
         }
         return result;
@@ -645,7 +645,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         computeSpecialsCombinations();
         $scope.conflictingSpecials = (specialsCombinations.length > 1 || chainSpecials.length > 1);
         // get ship bonus
-        shipBonus = jQuery.extend({ bonus: ships[$scope.data.ship[0]] },{ level: $scope.data.ship[1] });
+        shipBonus = jQuery.extend({ bonus: window.ships[$scope.data.ship[0]] },{ level: $scope.data.ship[1] });
     };
 
 

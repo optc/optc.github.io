@@ -172,7 +172,9 @@ directives.addOrbOptions = function($timeout, $compile, MATCHER_IDS) {
             element.after(filter);
             $compile(filter)(scope);
             scope.onOrbClick = function(e,type) {
-                var target = e.target.getAttribute('ng-model').match(/filters\.(.+)$/)[1];
+                var target = e.target.getAttribute('ng-model');
+                if (!target) return;
+                target = target.match(/filters\.(.+)$/)[1];
                 if (orbs[target].indexOf(type) == -1) orbs[target].push(type);
                 else orbs[target].splice(orbs[target].indexOf(type), 1);
                 orbs[target] = orbs[target].slice(-2);
