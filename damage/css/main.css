@@ -317,28 +317,6 @@ body, html {
     word-wrap: break-word;
 }
 
-#surprise {
-    position: absolute;
-    left: 0px;
-    top: -100px;
-    width: 150px;
-    height: 160px;
-    overflow: hidden;
-}
-
-#surprise > img {
-    position: absolute;
-    left: 30px;
-    top: 100px;
-    transition: top 0.3s linear;
-}
-
-#surprise.active:not(:hover) > img { top: 0; }
-
-#surprise2 { visibility: hidden; }
-#surprise:hover > #surprise1 { visibility: hidden; }
-#surprise:hover > #surprise2 { visibility: visible; }
-
 /********************
  * BUTTONS & HP BAR *
  ********************/
