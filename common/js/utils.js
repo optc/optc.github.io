@@ -128,8 +128,8 @@ utils.generateSearchParameters = function(query) {
     if (!query || query.trim().length < 2) return null;
     query = query.toLowerCase().trim();
     var result = { matchers: { }, ranges: { }, query: [ ] };
-    var ranges = { }, params = [ 'hp', 'atk', 'stars', 'cost', 'growth', 'rcv', 'id', 'slots', 'combo' ];
-    var regex = new RegExp('^((type|class):(\\w+)|(' + params.join('|') + ')(>|<|>=|<=|=)([\\d.]+))$');
+    var ranges = { }, params = [ 'hp', 'atk', 'stars', 'cost', 'growth', 'rcv', 'id', 'slots', 'combo', 'exp', 'minCD', 'maxCD' ];
+    var regex = new RegExp('^((type|class):(\\w+)|(' + params.join('|') + ')(>|<|>=|<=|=)([\\d.]+))$', 'i');
     var tokens = query.replace(/\s+/g,' ').split(' ').filter(function(x) { return x.length > 0; });
     tokens.forEach(function(x) {
         var temp = x.match(regex);
@@ -137,6 +137,7 @@ utils.generateSearchParameters = function(query) {
             result.query.push(x);
         else if (temp[4] !== undefined) { // numeric operator
             var left = temp[4], op = temp[5], right = parseFloat(temp[6],10);
+            if (left == 'exp') left = 'maxEXP';
             if (!result.ranges.hasOwnProperty(left)) result.ranges[left] = [ 0, Infinity ];
             if (op == '=') {
                 result.ranges[left][0] = right;

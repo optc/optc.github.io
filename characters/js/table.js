@@ -76,10 +76,16 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
         }
         // filter by ranges
         for (var range in tableData.parameters.ranges) {
-            var stat;
-            if (range == 'id') stat = unit.number + 1;
-            else stat = unit.hasOwnProperty(range.toLowerCase()) ? unit[range.toLowerCase()] : unit['max' + range.toUpperCase()];
-            if (stat < tableData.parameters.ranges[range][0] || stat > tableData.parameters.ranges[range][1])
+            var stat, range_ = range.toLowerCase();
+            if (range == 'id')
+                stat = unit.number + 1;
+            else if (range_ == 'mincd' || range_ == 'maxcd') {
+                stat = window.cooldowns[unit.number];
+                if (stat) stat = stat[range_ == 'mincd' ? 0 : 1];
+            } else
+                stat = unit[range] || unit[range.toLowerCase()] || unit['max' + range.toUpperCase()];
+            if (stat === null || stat === undefined ||
+                    stat < tableData.parameters.ranges[range][0] || stat > tableData.parameters.ranges[range][1])
                 return false;
         }
         // filter by query

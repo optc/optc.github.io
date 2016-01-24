@@ -279,8 +279,8 @@ input[type="text"] {
 }
 
 .popover:not([title="Additional Columns"]) {
-    width: 450px !important;
-    max-width: 450px;
+    width: 500px !important;
+    max-width: 500px;
     left: initial !important;
     right: 25px;
 }
