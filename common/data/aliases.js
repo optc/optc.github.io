@@ -153,4 +153,7 @@ window.aliases = {
     885: [ 'Kimono Jinbe', 'Kimono Jimbei', 'Kimono Jinbei' ],
     886: [ 'Kimono Mr. 1' ],
     887: [ 'Kimono Buggy' ],
+    897: [ 'Kimono Crocodile' ],
+    898: [ 'Kimono Mr. 3', 'Kimono Galdino' ],
+    899: [ 'Kimono Mr. 2', 'Kimono Bonclay', 'Kimono Bon Clay' ]
 };
