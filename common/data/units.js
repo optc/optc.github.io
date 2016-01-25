@@ -898,9 +898,9 @@ window.units = [
 	[],
 	[],
 	[],
-	[ "Colosseum Franky", "DEX", [ "Shooter", "Freedom" ], 4, 25, null, 0, null, null, null, null, null, null, null, null, 0 ],
-	[ "Colosseum Franky (evolution)", "DEX", [ "Shooter", "Freedom" ], 5, 40, null, 0, null, null, null, null, null, null, null, null, 0 ],
+	[ "Cyborg Franky", "DEX", [ "Shooter", "Freedom" ], 4, 25, null, 0, null, null, null, null, null, null, null, null, 0 ],
+	[ "Cyborg Franky (evolution)", "DEX", [ "Shooter", "Freedom" ], 5, 40, null, 0, null, null, null, null, null, null, null, null, 0 ],
 	[ "Broggy, Giant Warrior Pirates", "PSY", [ "Slasher", "Tough" ], 4, 18, null, 0, null, null, null, null, null, null, null, null, 0 ],
 	[ "Broggy the Red Ogre", "PSY", [ "Slasher", "Tough" ], 5, 30, null, 0, null, null, null, null, null, null, null, null, 0 ],
-	[ "Unknown Colosseum Character", "STR", [ "Fighter", "Tough" ], 4, 20, null, 0, null, null, null, null, null, null, null, null, 0 ]
+	[ "Yokozuna", "STR", [ "Fighter", "Tough" ], 4, 20, null, 0, null, null, null, null, null, null, null, null, 0 ]
 ];

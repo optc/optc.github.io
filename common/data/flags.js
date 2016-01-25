@@ -679,5 +679,6 @@ window.flags = {
 	878: { rr: 1, rro: 1 },
 	879: { rr: 1, rro: 1 },
 	880: { rr: 1, rro: 1 },
+	895: { special: 1 },
 	896: { special: 1 }
 };
