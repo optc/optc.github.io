@@ -894,5 +894,9 @@ window.families = [
 	"Oars",
 	"Gecko Moria",
 	"Brook",
-	"Brook"
+	"Brook",
+	,
+	"Crocodile",
+	"Galdino",
+	"Bon Clay"
 ];

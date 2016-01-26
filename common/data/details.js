@@ -4054,5 +4054,20 @@ window.details = {
 		captain: "Boosts ATK of Slasher characters by 2x",
 		specialName: "Dying Chorus: Binks' Sake",
 		special: "Recovers 6x character's RCV in HP at the end of each turn for 3 turns"
+	},
+	897: {
+		captain: "Boosts ATK of Knowledge and Ambition characters by 2x",
+		specialName: "Ground Death: Thirst",
+		special: "Changes own orb into [STR], randomizes all other orbs, cuts the current HP of all enemies by 10%"
+	},
+	898: {
+		captain: "Boosts ATK and RCV of Striker and Knowledge characters by 1.5x",
+		specialName: "Championship Fight: Little Garden Three",
+		special: "Deals 10x character's ATK in QCK damage to all enemies, changes adjacent orbs into [G] orbs"
+	},
+	899: {
+		captain: "Boosts ATK of Fighter and Freedom characters by 1.75x and their RCV by 1.25x",
+		specialName: "Hymn to Friendship: \"Okama Way\" Two",
+		special: "Reduces Silence duration by 5 turns, recovers 10x character's RCV in HP"
 	}
 };
