@@ -4061,7 +4061,7 @@ window.details = {
 		special: "Changes own orb into [STR], randomizes all other orbs, cuts the current HP of all enemies by 10%"
 	},
 	898: {
-		captain: "Boosts ATK and RCV of Striker and Knowledge characters by 1.5x",
+		captain: "Boosts ATK and HP of Striker and Knowledge characters by 1.5x",
 		specialName: "Championship Fight: Little Garden Three",
 		special: "Deals 10x character's ATK in QCK damage to all enemies, changes adjacent orbs into [G] orbs"
 	},

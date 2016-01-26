@@ -2024,5 +2024,26 @@ window.captains = {
 	},
 	896: {
 		atk: function(p) { return p.unit.class.has("Slasher") ? 2 : 1; }
+	},
+	897: {
+		atk: function(p) {
+			return p.unit.class.has("Knowledge") || p.unit.class.has("Ambition") ? 2 : 1;
+		}
+	},
+	898: {
+		atk: function(p) {
+			return p.unit.class.has("Striker") || p.unit.class.has("Knowledge") ? 1.5 : 1;
+		},
+		hp: function(p) {
+			return p.unit.class.has("Striker") || p.unit.class.has("Knowledge") ? 1.5 : 1;
+		}
+	},
+	899: {
+		atk: function(p) {
+			return p.unit.class.has("Fighter") || p.unit.class.has("Freedom") ? 1.75 : 1;
+		},
+		hp: function(p) {
+			return p.unit.class.has("Fighter") || p.unit.class.has("Freedom") ? 1.25 : 1;
+		}
 	}
 };
