@@ -3986,12 +3986,12 @@ window.details = {
 	883: {
 		captain: "Boosts ATK and HP of Tough characters by 1.25x",
 		specialName: "Hakoku Sovereignity",
-		special: "Deals 20x character's ATK in INT damage to all enemies, boosts ATK of Tough characters by 1.5x for 1 turn. If \"Hakoku Sovereignity\" is used again in the same turn the special is activated in, boosts ATK of Tough characters by 2x instead."
+		special: "Deals 20x character's ATK in character's type damage to all enemies, boosts ATK of Tough characters by 1.5x for 1 turn. If \"Hakoku Sovereignity\" is used again in the same turn the special is activated in, boosts ATK of Tough characters by 2x instead."
 	},
 	884: {
 		captain: "Boosts ATK and HP of Tough characters by 1.5x",
 		specialName: "Hakoku Sovereignity",
-		special: "Deals 20x character's ATK in INT damage to all enemies, boosts ATK of Tough characters by 1.5x for 1 turn. If \"Hakoku Sovereignity\" is used again in the same turn the special is activated in, boosts ATK of Tough characters by 2x instead."
+		special: "Deals 20x character's ATK in character's type damage to all enemies, boosts ATK of Tough characters by 1.5x for 1 turn. If \"Hakoku Sovereignity\" is used again in the same turn the special is activated in, boosts ATK of Tough characters by 2x instead."
 	},
 	885: {
 		captain: "Boosts ATK of Fighter characters by 2x, reduces damage received by 10%",
@@ -4069,5 +4069,28 @@ window.details = {
 		captain: "Boosts ATK of Fighter and Freedom characters by 1.75x and their RCV by 1.25x",
 		specialName: "Hymn to Friendship: \"Okama Way\" Two",
 		special: "Reduces Silence duration by 5 turns, recovers 10x character's RCV in HP"
+	},
+	900: {
+		captain: "Boosts ATK of Shooter characters by 2x if HP is above 99% at the start of the turn",
+		specialName: "Franky Destroy Gun",
+		special: "Deals 6 hits of fixed random damage to random enemies, randomly changes Shooter and Freedom characters' opposite orbs into either [G] orbs or matching orbs",
+		specialNotes: "The orb shuffle only applies to Shooter and Freedom characters, other classes are unaffected."
+	},
+	901: {
+		captain: "Boosts ATK of Shooter characters by 2.75x if HP is above 99% at the start of the turn",
+		specialName: "Franky Destroy Gun",
+		special: "Deals 6 hits of fixed random damage to random enemies, randomly changes Shooter and Freedom characters' opposite orbs into either [G] orbs or matching orbs",
+		specialNotes: "The orb shuffle only applies to Shooter and Freedom characters, other classes are unaffected."
+	},
+	902: {
+		captain: "Boosts ATK and HP of Tough chracters by 1.25x",
+		specialName: "Hakoku Sovereignity",
+		special: "Deals 20x character's ATK in character's type damage to all enemies, boosts ATK of Tough characters by 1.5x for 1 turn. If \"Hakoku Sovereignity\" is used again in the same turn the special is activated in, boosts ATK of Tough characters by 2x instead."
+	},
+	904: {
+		captain: "Protects from defeat as long as HP is above a certain amount",
+		captainNotes: "#{zombie}",
+		specialName: "Yokozuna Slap!",
+		special: "Deals 20x character's ATK in STR damage to one enemy, delays all enemies for 1 turn"
 	}
 };

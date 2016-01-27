@@ -898,9 +898,9 @@ window.units = [
 	[ "Sir Crocodile, Sand General", "STR", [ "Knowledge", "Ambition" ], 4, 20, 5, 2, 99, 3000000, 89, 41, 24, 2142, 1149, 208, 1 ],
 	[ "Mr. 3, Makeshift Musician", "QCK", [ "Striker", "Knowledge" ], 4, 17, 4, 2, 99, 2000000, 24, 14, 33, 1703, 622, 312, 1.5 ],
 	[ "Mr. 2 Bon Clay, Dubious Samurai", "INT", [ "Fighter", "Freedom" ], 4, 17, 4, 2, 99, 2000000, 42, 20, 22, 1810, 804, 235, 1.5 ],
-	[ "Cyborg Franky", "DEX", [ "Shooter", "Freedom" ], 4, 25, null, 0, null, null, null, null, null, null, null, null, 0 ],
-	[ "Cyborg Franky (evolution)", "DEX", [ "Shooter", "Freedom" ], 5, 40, null, 0, null, null, null, null, null, null, null, null, 0 ],
-	[ "Broggy, Giant Warrior Pirates", "PSY", [ "Slasher", "Tough" ], 4, 18, null, 0, null, null, null, null, null, null, null, null, 0 ],
+	[ "Fresh Franky, Health Comes First", "DEX", [ "Shooter", "Freedom" ], 4, 25, 6, 2, 70, null, 659, 244, 85, null, null, null, 0 ],
+	[ "Cyborg Franky", "DEX", [ "Shooter", "Freedom" ], 5, 40, 8, 3, 99, null, 1269, 618, 167, null, null, null, 0 ],
+	[ "Broggy, Giant Warrior Pirates", "PSY", [ "Slasher", "Tough" ], 4, 18, 5, 1, 50, null, 461, 196, 32, null, null, null, 0 ],
 	[ "Broggy the Red Ogre", "PSY", [ "Slasher", "Tough" ], 5, 30, null, 0, null, null, null, null, null, null, null, null, 0 ],
-	[ "Yokozuna", "STR", [ "Fighter", "Tough" ], 4, 20, null, 0, null, null, null, null, null, null, null, null, 0 ]
+	[ "Yokozuna", "STR", [ "Fighter", "Tough" ], 5, 20, 4, 2, 70, null, 558, 185, 48, null, null, null, 0 ]
 ];

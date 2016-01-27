@@ -2045,5 +2045,9 @@ window.captains = {
 		hp: function(p) {
 			return p.unit.class.has("Fighter") || p.unit.class.has("Freedom") ? 1.25 : 1;
 		}
+	},
+	902: {
+		atk: function(p) { return p.class.has("Tough") ? 1.25 : 1; },
+		hp: function(p) { return p.class.has("Tough") ? 1.25 : 1; }
 	}
 };
