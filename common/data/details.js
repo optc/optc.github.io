@@ -4093,7 +4093,7 @@ window.details = {
 		special: "Deals 20x character's ATK in character's type damage to all enemies, boosts ATK of Tough characters by 1.5x for 1 turn. If \"Hakoku Sovereignity\" is used again in the same turn the special is activated in, boosts ATK of Tough characters by 2x instead."
 	},
 	904: {
-		captain: "Protects from defeat as long as HP is above a certain amount",
+		captain: "Protects from defeat as long as HP is above 50%",
 		captainNotes: "#{zombie}",
 		specialName: "Yokozuna Slap!",
 		special: "Deals 20x character's ATK in STR damage to one enemy, delays all enemies for 1 turn"
