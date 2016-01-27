@@ -5,6 +5,7 @@ var notes = {
         "crew's remaining HP and is higher the #1 the HP is. The multiplier is calculated as #2. " +
         "At full health the boost is equal to #3x, with 1 HP left to #4x.",
     fixed: "Fixed damage means it entirely bypasses the enemy's defense.",
+    gOrbs: "Characters with [G] orbs will deal 1.5x their normal damage. [G] orbs are affected by orb boosters.",
 	noFixedPerc: "Specials that deal fixed damage or cut a percentage of the enemy's HP are not " +
         "affected by this captain ability",
     orb: "Orb amplification only affects matching and opposite orbs and works both ways: " +

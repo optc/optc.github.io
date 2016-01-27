@@ -900,7 +900,7 @@ window.units = [
 	[ "Mr. 2 Bon Clay, Dubious Samurai", "INT", [ "Fighter", "Freedom" ], 4, 17, 4, 2, 99, 2000000, 42, 20, 22, 1810, 804, 235, 1.5 ],
 	[ "Fresh Franky, Health Comes First", "DEX", [ "Shooter", "Freedom" ], 4, 25, 6, 2, 70, null, 659, 244, 85, null, null, null, 0 ],
 	[ "Cyborg Franky", "DEX", [ "Shooter", "Freedom" ], 5, 40, 8, 3, 99, null, 1269, 618, 167, null, null, null, 0 ],
-	[ "Broggy, Giant Warrior Pirates", "PSY", [ "Slasher", "Tough" ], 4, 18, 5, 1, 50, null, 261, 120, 20, null, null, null, 0 ],
-	[ "Broggy the Red Ogre", "PSY", [ "Slasher", "Tough" ], 5, 30, 5, 3, 99, null, 573, 239, 40, null, null, null, 0 ],
-	[ "Yokozuna", "STR", [ "Fighter", "Tough" ], 5, 20, 4, 2, 70, null, 558, 185, 48, null, null, null, 0 ]
+	[ "Broggy, Giant Warrior Pirates", "PSY", [ "Slasher", "Tough" ], 4, 18, 5, 1, 50, null, 261, 120, 20, 1354, 539, 90, 0 ],
+	[ "Broggy the Red Ogre", "PSY", [ "Slasher", "Tough" ], 5, 30, 5, 3, 99, null, 573, 239, 40, null, null, null, 1 ],
+	[ "Yokozuna", "STR", [ "Fighter", "Tough" ], 4, 20, 4, 2, 70, null, 520, 170, 45, 1852, 700, 162, 1 ]
 ];

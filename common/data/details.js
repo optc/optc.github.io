@@ -3965,13 +3965,13 @@ window.details = {
 		captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of Fighter characters by 1.75x",
 		specialName: "Battle Preservation Fist: Manki Kayaku",
 		special: "Changes all orbs including [BLOCK] orbs into [G] orbs, deals random typeless damage to all enemies",
-		specialNotes: "Characters with [G] orbs will deal 1.5x their normal damage. [G] orbs are affected by orb boosters."
+		specialNotes: "#{gOrbs}"
 	},
 	880: {
 		captain: "Reduces cooldown of all specials by 3 turns at the start of the fight, boosts ATK of Fighter characters by 2x",
 		specialName: "Battle Preservation Fist: Manki Kayaku",
 		special: "Changes all orbs including [BLOCK] orbs into [G] orbs, deals random typeless damage to all enemies",
-		specialNotes: "Characters with [G] orbs will deal 1.5x their normal damage. [G] orbs are affected by orb boosters."
+		specialNotes: "#{gOrbs}"
 	},
 	881: {
 		captain: "Boosts ATK of Shooter and Freedom characters by 2x following a chain of Good > Great > Perfect hits",
@@ -4063,7 +4063,8 @@ window.details = {
 	898: {
 		captain: "Boosts ATK and HP of Striker and Knowledge characters by 1.5x",
 		specialName: "Championship Fight: Little Garden Three",
-		special: "Deals 10x character's ATK in QCK damage to all enemies, changes adjacent orbs into [G] orbs"
+		special: "Deals 10x character's ATK in QCK damage to all enemies, changes adjacent orbs into [G] orbs",
+		specialNotes: "#{gOrbs}"
 	},
 	899: {
 		captain: "Boosts ATK of Fighter and Freedom characters by 1.75x and their RCV by 1.25x",
@@ -4073,14 +4074,14 @@ window.details = {
 	900: {
 		captain: "Boosts ATK of Shooter characters by 2x if HP is above 99% at the start of the turn",
 		specialName: "Franky Destroy Gun",
-		special: "Deals 6 hits of 2,000 fixed damage to random enemies, randomly changes Shooter and Freedom characters' opposite orbs into either [G] orbs or matching orbs",
-		specialNotes: "The orb shuffle only applies to Shooter and Freedom characters, other classes are unaffected."
+		special: "Deals 6 hits of 2,000 fixed damage to random enemies, randomly changes opposite orbs on Shooter and Freedom characters into either [G] orbs or matching orbs",
+		specialNotes: "The orb shuffle only applies to Shooter and Freedom characters, other classes are unaffected. #{gOrbs}"
 	},
 	901: {
 		captain: "Boosts ATK of Shooter characters by 2.75x if HP is above 99% at the start of the turn",
 		specialName: "Franky Destroy Gun",
-		special: "Deals 6 hits of 2,000 fixed damage to random enemies, randomly changes Shooter and Freedom characters' opposite orbs into either [G] orbs or matching orbs",
-		specialNotes: "The orb shuffle only applies to Shooter and Freedom characters, other classes are unaffected."
+		special: "Deals 6 hits of 2,000 fixed damage to random enemies, randomly changes opposite orbs on Shooter and Freedom characters into either [G] orbs or matching orbs",
+		specialNotes: "The orb shuffle only applies to Shooter and Freedom characters, other classes are unaffected. #{gOrbs}"
 	},
 	902: {
 		captain: "Boosts ATK and HP of Tough characters by 1.25x",

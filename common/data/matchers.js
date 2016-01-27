@@ -338,7 +338,7 @@ window.matchers = [
     {
         name: 'Zombies',
         target: 'special',
-        matcher: /Prevents death/i
+        matcher: /Protects from defeat/i
     }
 
 ];
