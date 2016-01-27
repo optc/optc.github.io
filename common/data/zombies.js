@@ -194,5 +194,9 @@ window.zombies = {
     868: { // Kimono Chopper
         type: 'healer',
         amount: 1000
+    },
+    904: { // Yokozuna
+        type: 'zombie',
+        threshold: 0.5
     }
 };

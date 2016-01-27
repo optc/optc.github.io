@@ -940,5 +940,17 @@ window.specials = {
 				name: '902warning'
 			});
 		}
+	},
+	903: {
+		atk: function(p) { return !p.unit.class.has('Tough') ? 1 : window.specials[903].multiplier; },
+		type: "class",
+		onActivation: function(p) {
+			var n = (window.specials[903].multiplier == 1.5 ? 1 : 0);
+			window.specials[903].multiplier = [1.5, 2][n];
+			p.scope.notify({
+				text: 'Using the ' + [1.5, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.5][n] + 'x multiplier, disable and re-enable this special',
+				name: '902warning'
+			});
+		}
 	}
 };

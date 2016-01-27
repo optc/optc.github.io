@@ -4083,7 +4083,12 @@ window.details = {
 		specialNotes: "The orb shuffle only applies to Shooter and Freedom characters, other classes are unaffected."
 	},
 	902: {
-		captain: "Boosts ATK and HP of Tough chracters by 1.25x",
+		captain: "Boosts ATK and HP of Tough characters by 1.25x",
+		specialName: "Hakoku Sovereignity",
+		special: "Deals 20x character's ATK in character's type damage to all enemies, boosts ATK of Tough characters by 1.5x for 1 turn. If \"Hakoku Sovereignity\" is used again in the same turn the special is activated in, boosts ATK of Tough characters by 2x instead."
+	},
+	903: {
+		captain: "Boosts ATK and HP of Tough characters by 1.5x",
 		specialName: "Hakoku Sovereignity",
 		special: "Deals 20x character's ATK in character's type damage to all enemies, boosts ATK of Tough characters by 1.5x for 1 turn. If \"Hakoku Sovereignity\" is used again in the same turn the special is activated in, boosts ATK of Tough characters by 2x instead."
 	},

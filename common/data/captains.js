@@ -2049,5 +2049,9 @@ window.captains = {
 	902: {
 		atk: function(p) { return p.class.has("Tough") ? 1.25 : 1; },
 		hp: function(p) { return p.class.has("Tough") ? 1.25 : 1; }
+	},
+	903: {
+		atk: function(p) { return p.class.has("Tough") ? 1.25 : 1; },
+		hp: function(p) { return p.class.has("Tough") ? 1.25 : 1; }
 	}
 };
