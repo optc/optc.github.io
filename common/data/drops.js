@@ -849,7 +849,7 @@ window.drops = {
 
         {
             name: "Mountaintop Banquet! Enter the Generals!",
-            thumb: null,
+            thumb: 897,
             Expert: [ 897, 898, 899, -899, -754, -702, -701, -669, -528, -466, -449, -464 ],
             Elite: [ 897, 898, 899, -899, -754, -702, -701, -669, -528, -466, -449, -464 ]
         }
