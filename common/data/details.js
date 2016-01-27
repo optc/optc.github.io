@@ -4073,13 +4073,13 @@ window.details = {
 	900: {
 		captain: "Boosts ATK of Shooter characters by 2x if HP is above 99% at the start of the turn",
 		specialName: "Franky Destroy Gun",
-		special: "Deals 6 hits of fixed random damage to random enemies, randomly changes Shooter and Freedom characters' opposite orbs into either [G] orbs or matching orbs",
+		special: "Deals 6 hits of 2,000 fixed damage to random enemies, randomly changes Shooter and Freedom characters' opposite orbs into either [G] orbs or matching orbs",
 		specialNotes: "The orb shuffle only applies to Shooter and Freedom characters, other classes are unaffected."
 	},
 	901: {
 		captain: "Boosts ATK of Shooter characters by 2.75x if HP is above 99% at the start of the turn",
 		specialName: "Franky Destroy Gun",
-		special: "Deals 6 hits of fixed random damage to random enemies, randomly changes Shooter and Freedom characters' opposite orbs into either [G] orbs or matching orbs",
+		special: "Deals 6 hits of 2,000 fixed damage to random enemies, randomly changes Shooter and Freedom characters' opposite orbs into either [G] orbs or matching orbs",
 		specialNotes: "The orb shuffle only applies to Shooter and Freedom characters, other classes are unaffected."
 	},
 	902: {
