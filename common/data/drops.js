@@ -699,8 +699,9 @@ window.drops = {
         },
 
         {
-            name: 'Super Fight!? Afro Luffy!',
+            name: 'Brother Soul! Afro Luffy!',
             thumb: 571,
+            global: true,
             Expert: [ 570, 572, 573, -431, -429, -410, -333, -332, -327, -316, -75 ],
             Elite: [ 570, 572, 573, -431, -429, -410, -333, -332, -327, -316, -75 ]
         },
