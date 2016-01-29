@@ -902,5 +902,17 @@ window.families = [
 	"Franky",
 	"Broggy",
 	"Broggy",
-	"Yokozuna"
+	"Yokozuna",
+	"Roronoa Zoro",
+	"Roronoa Zoro",
+	"Nico Robin",
+	"Nico Robin",
+	"Tony Tony Chopper",
+	"Tony Tony Chopper",
+	"Sanji",
+	"Sanji",
+	"Brook",
+	"Brook",
+	"Nico Nico Robin",
+	"Nico Nico Robin"
 ];
