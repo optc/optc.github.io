@@ -10,6 +10,7 @@ window.aliases = {
     221: [ 'Towel Nami' ],
     224: [ 'Sanji' ],
     225: [ 'Sanji' ],
+    247: [ 'Chopperman', 'Chopper Man' ],
     248: [ 'Monster Chopper' ],
     249: [ 'Monster Chopper' ],
     260: [ 'Whitebeard' ],

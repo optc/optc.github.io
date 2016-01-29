@@ -245,6 +245,7 @@ window.flags = {
 	244: { global: 1 },
 	245: { global: 1 },
 	246: { global: 1 },
+	247: { global: 1, special: 1 },
 	248: { global: 1 },
 	249: { global: 1 },
 	250: { global: 1, rr: 1, rro: 1 },
