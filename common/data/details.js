@@ -2133,7 +2133,7 @@ window.details = {
 		special: "Changes the orbs in the left column into [INT], [PSY] and [RCV], the orbs in the right column into [STR], [DEX] and [QCK], switches orbs between slots 3 times",
 		specialNotes: "The special is not based on chance, the orbs are always changed with the same pattern. Starting from the top left orb and proceeding clockwise, after the special is used the orbs will be: [INT], [STR], [DEX], [QCK], [RCV] and [PSY]",
 		specialName: "Pop Green",
-		captain: "Boosts ATK, HP and RCV of Shooter characters by 1.5x, recovers a bit of HP at the end of each turn"
+		captain: "Boosts ATK, HP and RCV of Shooter characters by 1.5x, recovers 1x character's RCV in HP at the end of each turn"
 	},
 	517: {
 		special: "Empties all slots with [RCV] orbs, boosts ATK of all characters by 5% for 2 turns",
