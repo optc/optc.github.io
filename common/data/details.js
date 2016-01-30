@@ -4098,5 +4098,25 @@ window.details = {
 		captainNotes: "#{zombie}",
 		specialName: "Yokozuna Slap!",
 		special: "Deals 20x character's ATK in STR damage to one enemy, delays all enemies for 1 turn"
+	},
+	909: {
+		captain: "?",
+		specialName: "Hero of Justice! Chopper Mask!!",
+		special: "Recovers 5,000 HP, boosts ATK of PSY units for 2 turns"
+	},
+	910: {
+		specialName: "Hero of Justice! Chopper Mask!!",
+		special: "Recovers 5,000 HP, boosts ATK of PSY units for 2 turns",
+		captain: "?"
+	},
+	913: {
+		captain: "?",
+		specialName: "Black Magic Summoning: Advent of the Demon Lord Satan",
+		special: "Changes [BLOCK] orbs into matching orbs, randomly changes opposite orbs into either [STR], [QCK], [DEX], [PSY] or [INT] orbs"
+	},
+	914: {
+		captain: "?",
+		specialName: "Black Magic Summoning: Advent of the Demon Lord Satan",
+		special: "Changes [BLOCK] orbs into matching orbs, randomly changes opposite orbs into either [STR], [QCK], [DEX], [PSY] or [INT] orbs"
 	}
 };
