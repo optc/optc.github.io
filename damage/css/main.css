@@ -1025,15 +1025,16 @@ body > .popover .popover-content {
     padding: 0;
 }
 
-.popover-data .STR { background: salmon; }
-.popover-data .QCK { background: lightskyblue; }
-.popover-data .DEX { background: lightgreen; }
-.popover-data .PSY { background: gold; }
-.popover-data .INT { background: orchid; }
-.popover-data .RCV { background: sandybrown; }
-.popover-data .TND { background: peru; }
+.popover-data .STR   { background: salmon; }
+.popover-data .QCK   { background: lightskyblue; }
+.popover-data .DEX   { background: lightgreen; }
+.popover-data .PSY   { background: gold; }
+.popover-data .INT   { background: orchid; }
+.popover-data .RCV   { background: sandybrown; }
+.popover-data .TND   { background: peru; }
 .popover-data .BLOCK { background: darkslateblue; }
-.popover-data .BOMB { background: maroon }
+.popover-data .BOMB  { background: maroon; }
+.popover-data .G     { background: orange; }
 
 .block-icon:before, .tnd-icon:before {
     font-style: normal;

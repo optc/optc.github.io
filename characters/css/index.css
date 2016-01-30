@@ -113,15 +113,16 @@ input[type="text"] {
     height: 73px;
 }
 
-.STR { background: salmon; }
-.QCK { background: lightskyblue; }
-.DEX { background: lightgreen; }
-.PSY { background: gold; }
-.INT { background: orchid; }
-.RCV { background: sandybrown; }
-.TND { background: peru; }
+.STR   { background: salmon; }
+.QCK   { background: lightskyblue; }
+.DEX   { background: lightgreen; }
+.PSY   { background: gold; }
+.INT   { background: orchid; }
+.RCV   { background: sandybrown; }
+.TND   { background: peru; }
 .BLOCK { background: darkslateblue; }
-.BOMB { background: maroon }
+.BOMB  { background: maroon; }
+.G     { background: orange; }
 
 .cell-STR { font-weight: bold; color: red; }
 .cell-QCK { font-weight: bold; color: blue; }
