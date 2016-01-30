@@ -792,7 +792,7 @@ window.units = [
 	[ "Tamanegi, Piiman & Ninjin, the Usopp Pirates", "QCK", [ "Striker", "Freedom" ], 4, 15, 6, 3, 70, 1066998, 654, 77, 180, 1200, 333, 350, 1 ],
 	[ "Iceburg", "INT", [ "Shooter", "Knowledge" ], 3, 9, 6, 2, 35, 136167, 155, 69, 38, 790, 392, 167, 1 ],
 	[ "Iceburg, Mayor of W7 and President of Galley-La Company", "INT", [ "Shooter", "Knowledge" ], 4, 16, 4, 3, 70, 1066998, 723, 343, 122, 1401, 702, 224, 1 ],
-	[ "Monkey D. Luffy Rising Star", "INT", [ "Slasher", "Tough" ], 4, 30, 4, 1, 70, 1066998, 259, 179, 0, 1400, 763, 0, 1.5 ],
+	[ "Monkey D. Luffy Star of Hope", "INT", [ "Slasher", "Tough" ], 4, 30, 4, 1, 70, 1066998, 259, 179, 0, 1400, 763, 0, 1.5 ],
 	[ "Nightmare Luffy Warrior of Hope", "INT", [ "Fighter", "Tough" ], 5, 50, 4, 2, 99, 5000000, 1331, 711, 0, 3020, 1520, 0, 1.5 ],
 	[ "Breed", "INT", "Knowledge", 3, 13, 6, 1, 50, 392109, 59, 25, 59, 867, 418, 275, 1.5 ],
 	[ "Breed, User of the Peto-Peto Fruit", "INT", [ "Knowledge", "Tough" ], 4, 20, 4, 3, 99, 3000000, 867, 818, 200, 2002, 1311, 180, 1.5 ],
