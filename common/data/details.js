@@ -4099,6 +4099,16 @@ window.details = {
 		specialName: "Yokozuna Slap!",
 		special: "Deals 20x character's ATK in STR damage to one enemy, delays all enemies for 1 turn"
 	},
+	907: {
+		specialName: "Cien Fleur: Big Tree",
+		special: "Delays all enemies, locks all orbs, deals 5,000 fixed damage to all enemies, reduces crew's HP to 1",
+		captain: "?"
+	},
+	908: {
+		specialName: "Cien Fleur: Big Tree",
+		special: "Delays all enemies, locks all orbs, deals 5,000 fixed damage to all enemies, reduces crew's HP to 1",
+		captain: "?"
+	},
 	909: {
 		captain: "?",
 		specialName: "Hero of Justice! Chopper Mask!!",
@@ -4107,6 +4117,16 @@ window.details = {
 	910: {
 		specialName: "Hero of Justice! Chopper Mask!!",
 		special: "Recovers 5,000 HP, boosts ATK of PSY units for 2 turns",
+		captain: "?"
+	},
+	911: {
+		specialName: "Diable Jambe: Premier Hachis",
+		special: "Deals DEX damage to one enemy, boosts ATK of Tough characters",
+		captain: "?"
+	},
+	912: {
+		specialName: "Diable Jambe: Premier Hachis",
+		special: "Deals DEX damage to one enemy, boosts ATK of Tough characters",
 		captain: "?"
 	},
 	913: {
