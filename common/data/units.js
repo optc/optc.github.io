@@ -892,7 +892,7 @@ window.units = [
 	[ "Doctor Hogback, Thriller Bark's Mysterious Four", "INT", [ "Fighter", "Knowledge" ], 3, 15, 5, 2, 70, 1066998, 148, 75, 30, 1492, 535, 247, 1 ],
 	[ "Absalom of the Graveyard, Thriller Bark's Mysterious Four", "STR", [ "Shooter", "Tough" ], 3, 15, 6, 2, 70, 1066998, 156, 102, 13, 1803, 813, 96, 1 ],
 	[ "Oars, Special Zombie", "STR", [ "Fighter", "Tough" ], 4, 50, 4, 2, 99, 4000000, 1500, 700, 0, 2700, 1440, -500, 1 ],
-	[ "Gecko Moria, Shadow's Asgard", "INT", [ "Ambition", "Tough" ], 5, 30, 4, 3, 99, 4000000, 1000, 500, -500, 3180, 1430, -999, 0 ],
+	[ "Gecko Moria, Shadow's Asgard", "INT", [ "Ambition", "Tough" ], 5, 30, 4, 3, 99, 4000000, 1000, 500, -500, 3180, 1430, -999, 1 ],
 	[ "Brook, Gentleman Skeleton", "DEX", [ "Slasher", "Freedom" ], 3, 10, 5, 1, 50, 392109, 148, 96, 37, 1067, 491, 196, 1 ],
 	[ "Brook, Straw Hat Pirates", "DEX", [ "Slasher", "Freedom" ], 4, 16, 6, 3, 99, 3000000, 1000, 442, 140, 1990, 847, 316, 0 ],
 	[ "Sir Crocodile, Sand General", "STR", [ "Knowledge", "Ambition" ], 4, 20, 5, 2, 99, 3000000, 89, 41, 24, 2142, 1149, 208, 1 ],
