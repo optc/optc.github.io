@@ -41,15 +41,15 @@ var MainCtrl = function($scope, $rootScope, $controller, $filter, $storage) {
     $scope.$watch('numbers.zombie',function(zombie) {
         if (zombieNoty !== null) zombieNoty.close();
         if (zombie === undefined || zombie === null) return;
-        if (zombie < 0) 
+        if (zombie[0] == 'zombie' && !zombie[1]) 
             zombieNoty = $scope.notify({ timeout: 0, type: 'warning',
-                text: 'Selected zombie team will not work (HP is too high, maximum HP allowed: ' + $filter('number')(-zombie) + ')' });
-        else if (zombie === true)
+                text: 'Selected zombie team will not work (HP is too high, maximum HP allowed: ' + $filter('number')(zombie[2]) + ')' });
+        else if (zombie[0] === 'zombie' && zombie[1])
             zombieNoty = $scope.notify({ timeout: 0, type: 'success',
-                text: 'Selected zombie team will work' });
-        else if (zombie > 0)
+                text: 'Selected zombie team will work (maximum HP allowed: ' + $filter('number')(zombie[2]) + ')' });
+        else if (zombie[0] == 'reducer')
             zombieNoty = $scope.notify({ timeout: 0, type: 'information',
-                text: 'Maximum tankable damage: ' + $filter('number')(zombie) + ' HP',});
+                text: 'Maximum tankable damage: ' + $filter('number')(zombie[1]) + ' HP per turn',});
     });
 
     $scope.showGatherButton = window.units.some(function(x) { return !x.incomplete && x.growth && x.growth.atk === 0; });

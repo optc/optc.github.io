@@ -383,6 +383,7 @@ directives.hpBar = function() {
             '<div id="hp-rcv"><table><tbody>' +
                 '<tr><td id="hp-cell" ng-click="setHP()">{{ hp.current | number }}</td><td>HP ({{ hp.perc | number:2 }}%)</td></tr>' +
                 '<tr><td>{{ numbers.rcv | number }}</td><td>RCV</td></tr>' +
+                '<tr ng-show="numbers.healPerTurn"><td>{{ numbers.healPerTurn | number }}</td><td>heal/turn</td></tr>' +
                 '<tr title="Minimum pirate level: {{ numbers.cost.level }}"><td>{{ numbers.cost.cost | number }}</td><td>cost</td></tr>' +
             '</tbody></table></div>',
         link: function(scope, element, attrs) {

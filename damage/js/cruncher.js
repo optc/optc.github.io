@@ -123,7 +123,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         result.cost = { cost: cost, level: Math.max(1,Math.floor(cost / 2) * 2 - 18) };
         $scope.numbers = jQuery.extend($scope.numbers, result);
         $scope.numbers.hp = Math.max(1,hpMax);
-        $scope.numbers.zombie = checkZombieTeam(result);
+        checkHealAndZombie(result, $scope.numbers);
         $timeout(function() { crunchSelfInhibit = false; });
     }
 
@@ -670,24 +670,34 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         });
     };
 
-    var checkZombieTeam = function(data) {
-        if (!team[0].unit || !team[1].unit) return null;
-        var ids = [ team[0].unit.number + 1, team[1].unit.number + 1 ];
-        if (!window.zombies.hasOwnProperty(ids[0]) || !window.zombies.hasOwnProperty(ids[1])) return;
-        var healer = -1, other = -1;
+    var checkHealAndZombie = function(data, numbers) {
+        delete numbers.zombie;
+        delete numbers.healPerTurn;
+        // compute data
+        var healAmount = 0, zombieThreshold = 0, tankReducer = null;
         for (var i=0;i<2;++i) {
-           if (window.zombies[ids[i]].type == 'healer') healer = i;
-           else other = i;
+            if (!team[i].unit) continue;
+            var id = team[i].unit.number + 1, zombie = window.zombies[id];
+            if (!zombie) continue;
+            if (zombie.type == 'healer') {
+                if (zombie.hasOwnProperty('amount')) healAmount += zombie.amount;
+                else healAmount += Math.floor(data.team[i].rcv * zombie.multiplier);
+            } else if (zombie.type == 'reducer')
+                tankReducer = [ zombie.multiplier, zombie.threshold ];
+            else if (zombie.type == 'zombie')
+                zombieThreshold = zombie.threshold;
         }
-        if (healer == -1 || other == -1) return null;
-        var healAmount = window.zombies[ids[healer]].amount || Math.floor(data.team[healer].rcv * window.zombies[ids[healer]].multiplier);
-        if (shipBonus.bonus && shipBonus.bonus.heal) healAmount += shipBonus.bonus.heal({ boatLevel: shipBonus.level });
-        if (window.zombies[ids[other]].type == 'zombie') { // zombie
-            var works = 1 + healAmount >= Math.floor($scope.numbers.hp * window.zombies[ids[other]].threshold);
-            if (works) return true;
-            else return -Math.floor(healAmount / window.zombies[ids[other]].threshold);
-        } else // reducer
-            return Math.floor(healAmount / window.zombies[ids[other]].multiplier);
+        if (shipBonus.bonus && shipBonus.bonus.heal)
+            healAmount += shipBonus.bonus.heal({ boatLevel: shipBonus.level });
+        // get heal per turn
+        if (healAmount > 0) numbers.healPerTurn = healAmount;
+        else return; // nothing to do if there's no healer
+        // get zombie/reducer
+        if (zombieThreshold > 0) { // healer + zombie
+            var works = 1 + healAmount >= Math.floor(numbers.hp * zombieThreshold);
+            numbers.zombie = [ 'zombie', works, Math.floor(healAmount / zombieThreshold) ];
+        } else if (tankReducer !== null) // healer + reducer
+            numbers.zombie = ['reducer', Math.floor(healAmount / tankReducer[0]) ];
     };
 
     var totalMultiplier = function(data) {
