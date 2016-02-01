@@ -4099,13 +4099,13 @@ window.details = {
 		special: "Deals 20x character's ATK in STR damage to one enemy, delays all enemies for 1 turn"
 	},
 	905: {
-		captain: "Boosts ATK of Slasher characters by 2.5x if HP is low",
+		captain: "Boosts ATK of Slasher characters by 2.5x if HP is below 30% at the start of the turn",
 		specialName: "Two Gorilla Cut",
 		special: "Changes own orb into [STR], boosts his own ATK by 1.5x for 2 turns (1st stage), the ATK of Slasher characters by 1.5x for 2 turns (2nd stage) or the ATK of Slasher characters by 1.75x for 2 turns (3rd stage)",
 		specialNotes: "The special has three separate stages. The first stage activates after 17 turns, the second stage after 21 turns, the 3rd stage after 24 turns. The special can be used as soon as the first stage is reached."
 	},
 	906: {
-		captain: "Boosts ATK of Slasher characters by 2.75x if HP is low",
+		captain: "Boosts ATK of Slasher characters by 2.75x if HP is below 30% at the start of the turn",
 		specialName: "Two Gorilla Cut",
 		special: "Changes own orb into [STR], boosts his own ATK by 1.5x for 2 turns (1st stage), the ATK of Slasher characters by 1.5x for 2 turns (2nd stage) or the ATK of Slasher characters by 1.75x for 2 turns (3rd stage)",
 		specialNotes: "The special has three separate stages. The first stage activates after 17 turns, the second stage after 21 turns, the 3rd stage after 24 turns. The special can be used as soon as the first stage is reached."
@@ -4113,12 +4113,12 @@ window.details = {
 	907: {
 		specialName: "Cien Fleur: Big Tree",
 		special: "Delays all enemies, locks all orbs, deals 5,000 fixed damage to all enemies, reduces crew's HP to 1",
-		captain: "Boosts ATK and RCV of Knowledge characters by 1.5x if HP is low"
+		captain: "Boosts ATK and RCV of Knowledge characters by 1.5x if HP is below 30% at the start of the turn"
 	},
 	908: {
 		specialName: "Cien Fleur: Big Tree",
 		special: "Delays all enemies, locks all orbs, deals 5,000 fixed damage to all enemies, reduces crew's HP to 1",
-		captain: "Boosts ATK and RCV of Knowledge characters by 2.5x and their RCV by 1.75x if HP is low"
+		captain: "Boosts ATK of Knowledge characters by 2.5x and their RCV by 1.75x if HP is below 30% at the start of the turn"
 	},
 	909: {
 		captain: "Boosts ATK and RCV of PSY characters by 1.5x",
