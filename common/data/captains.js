@@ -2059,5 +2059,49 @@ window.captains = {
 	903: {
 		atk: function(p) { return p.class.has("Tough") ? 1.25 : 1; },
 		hp: function(p) { return p.class.has("Tough") ? 1.25 : 1; }
+	},
+	905: {
+		atk: function(p) { return p.unit.class.has("Slasher") && p.percHP <= 30 ? 2.5 : 1; }
+	},
+	906: {
+		atk: function(p) { return p.unit.class.has("Slasher") && p.percHP <= 30 ? 2.75 : 1; }
+	},
+	907: {
+		atk: function(p) { return p.unit.class.has("Knowledge") && p.percHP <= 30 ? 1.5 : 1; },
+		rcv: function(p) { return p.unit.class.has("Knowledge") && p.percHP <= 30 ? 1.5 : 1; }
+	},
+	908: {
+		atk: function(p) { return p.unit.class.has("Knowledge") && p.percHP <= 30 ? 2.5 : 1; },
+		rcv: function(p) { return p.unit.class.has("Knowledge") && p.percHP <= 30 ? 1.75 : 1; }
+	},
+	909: {
+		atk: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; },
+		rcv: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; }
+	},
+	910: {
+		atk: function(p) { return p.unit.type == "PSY" ? 2 : 1; },
+		rcv: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; }
+	},
+	911: {
+		atk: function(p) { return p.unit.class.has("Tough") ? 1.5 : 1; },
+		hp: function(p) { return p.unit.class.has("Tough") ? 1.5 : 1; }
+	},
+	912: {
+		atk: function(p) { return p.unit.class.has("Tough") ? 2.25 : 1; },
+		hp: function(p) { return p.unit.class.has("Tough") ? 2.25 : 1; }
+	},
+	913: {
+		atk: function(p) { return p.unit.type != "QCK" ? 1 : (p.orb == 2.0 ? 3 : 1); }
+	},
+	914: {
+		atk: function(p) { return p.unit.type != "QCK" ? 1 : (p.orb == 2.0 ? 3 : 1.2); }
+	},
+	915: {
+		atk: function(p) { return p.unit.class.has("Knowledge") ? 1.2 : 1; },
+		rcv: function(p) { return p.unit.class.has("Knowledge") ? 1.2 : 1; }
+	},
+	916: {
+		atk: function(p) { return p.unit.class.has("Knowledge") ? 1.75 : 1; },
+		rcv: function(p) { return p.unit.class.has("Knowledge") ? 1.75 : 1; }
 	}
 };

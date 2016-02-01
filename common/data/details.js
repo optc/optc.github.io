@@ -3931,11 +3931,17 @@ window.details = {
 		special: [
 			{
 				"description": "Changes own orb into [PSY], amplifies the effect of orbs by 1.5x for 1 turn",
-				"cooldown": 13
+				"cooldown": [
+					13,
+					8
+				]
 			},
 			{
-				"description": "Changes own orb into [PSY], amplifies the effect of orbs by 1.75x for 1 turn",
-				"cooldown": 19
+				"description": "changes own orb into [psy], amplifies the effect of orbs by 1.75x for 1 turn",
+				"cooldown": [
+					19,
+					14
+				]
 			}
 		],
 		specialNotes: "#{orb: 1.5x or 1.75x} #{stages}"
@@ -3946,11 +3952,17 @@ window.details = {
 		special: [
 			{
 				"description": "Changes own orb into [PSY], amplifies the effect of orbs by 1.5x for 1 turn",
-				"cooldown": 13
+				"cooldown": [
+					13,
+					8
+				]
 			},
 			{
-				"description": "Changes own orb into [PSY], amplifies the effect of orbs by 1.75x for 1 turn",
-				"cooldown": 19
+				"description": "changes own orb into [psy], amplifies the effect of orbs by 1.75x for 1 turn",
+				"cooldown": [
+					19,
+					14
+				]
 			}
 		],
 		specialNotes: "#{orb: 1.5x or 1.75x} #{stages}"

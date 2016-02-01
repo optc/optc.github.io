@@ -952,5 +952,85 @@ window.specials = {
 				name: '902warning'
 			});
 		}
+	},
+	905: {
+		atk: function(p) {
+			if (!window.specials[905].stage) return p.slot == p.sourceSlot ? 1.5 : 1;
+			if (window.specials[905].stage == 1) return p.unit.class.has("Slasher") ? 1.5 : 1;
+			if (window.specials[905].stage == 2) return p.unit.class.has("Slasher") ? 1.75 : 1;
+		},
+		type: "class",
+		stage: -1,
+		onActivation: function(p) {
+			window.specials[905].stage = (window.specials[905].stage + 1) % 3;
+			p.scope.notify({
+				text: 'Activating stage #' + (window.specials[905].stage + 1) + '. To move onto the next stage, disable and re-enable this special.',
+				name: '905warning'
+			});
+		}
+	},
+	906: {
+		atk: function(p) {
+			if (!window.specials[906].stage) return p.slot == p.sourceSlot ? 1.5 : 1;
+			if (window.specials[906].stage == 1) return p.unit.class.has("Slasher") ? 1.5 : 1;
+			if (window.specials[906].stage == 2) return p.unit.class.has("Slasher") ? 1.75 : 1;
+		},
+		type: "class",
+		stage: -1,
+		onActivation: function(p) {
+			window.specials[906].stage = (window.specials[906].stage + 1) % 3;
+			p.scope.notify({
+				text: 'Activating stage #' + (window.specials[906].stage + 1) + '. To move onto the next stage, disable and re-enable this special.',
+				name: '906warning'
+			});
+		}
+	},
+	909: {
+		atk: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; },
+		type: "type"
+	},
+	910: {
+		atk: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; },
+		type: "type"
+	},
+	911: {
+		atk: function(p) {
+			if (!window.specials[911].stage) return p.unit.class.has("Tough") ? 1.2 : 1;
+			if (window.specials[911].stage == 1) return p.unit.class.has("Tough") ? 2 : 1;
+		},
+		type: "class",
+		stage: -1,
+		onActivation: function(p) {
+			window.specials[911].stage = (window.specials[911].stage + 1) % 2;
+			p.scope.notify({
+				text: 'Activating stage #' + (window.specials[911].stage + 1) + '. To move onto the next stage, disable and re-enable this special.',
+				name: '911warning'
+			});
+		}
+	},
+	912: {
+		atk: function(p) {
+			if (!window.specials[912].stage) return p.unit.class.has("Tough") ? 1.2 : 1;
+			if (window.specials[912].stage == 1) return p.unit.class.has("Tough") ? 2 : 1;
+		},
+		type: "class",
+		stage: -1,
+		onActivation: function(p) {
+			window.specials[912].stage = (window.specials[912].stage + 1) % 2;
+			p.scope.notify({
+				text: 'Activating stage #' + (window.specials[912].stage + 1) + '. To move onto the next stage, disable and re-enable this special.',
+				name: '912warning'
+			});
+		}
+	},
+	915: {
+		atk: function(p) { return p.unit.class.has("Knowledge") ? 1.5 : 1; },
+		rcv: function(p) { return p.unit.class.has("Knowledge") ? 1.5 : 1; },
+		type: "class"
+	},
+	916: {
+		atk: function(p) { return p.unit.class.has("Knowledge") ? 1.5 : 1; },
+		rcv: function(p) { return p.unit.class.has("Knowledge") ? 1.5 : 1; },
+		type: "class"
 	}
 };
