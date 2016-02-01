@@ -3937,7 +3937,7 @@ window.details = {
 				]
 			},
 			{
-				"description": "changes own orb into [psy], amplifies the effect of orbs by 1.75x for 1 turn",
+				"description": "Changes own orb into [psy], amplifies the effect of orbs by 1.75x for 1 turn",
 				"cooldown": [
 					19,
 					14
@@ -3958,7 +3958,7 @@ window.details = {
 				]
 			},
 			{
-				"description": "changes own orb into [psy], amplifies the effect of orbs by 1.75x for 1 turn",
+				"description": "Changes own orb into [psy], amplifies the effect of orbs by 1.75x for 1 turn",
 				"cooldown": [
 					19,
 					14

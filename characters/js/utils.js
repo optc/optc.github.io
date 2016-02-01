@@ -208,7 +208,7 @@ CharUtils.getOrbControllerData = function(id) {
     if (orbControllerCache.hasOwnProperty(id) || !window.details[id] || !window.details[id].special)
         return (orbControllerCache[id] || null);
     var special = window.details[id].special;
-    var data = (special.constructor == Array ? special.join(' / ') : special);
+    var data = (special.constructor != String ? JSON.stringify(special) : special);
     var match = data.match(/(changes.+?orbs into.+?orbs)/gi);
     if (!match) {
         orbControllerCache[id] = null;
