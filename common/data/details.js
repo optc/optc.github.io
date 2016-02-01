@@ -4033,7 +4033,7 @@ window.details = {
 		special: "Deals 15x character's ATK in STR damage to all enemies, boosts ATK of Slasher characters by 1.5x for 1 turn if HP is below 30% when the special is activated"
 	},
 	887: {
-		captain: "Boosts the ATK of Ambition characters by 1.5x, boosts amount of beli received by 1.2x",
+		captain: "Boosts ATK of Ambition characters by 1.5x, boosts amount of beli received by 1.2x",
 		specialName: "Special Muggy Ball: Flashy",
 		special: "Reduces the defense of all enemies by 80% for 1 turn, deals 15x character's ATK in QCK damage to all enemies"
 	},
@@ -4214,7 +4214,7 @@ window.details = {
 				"cooldown": 25
 			}
 		],
-		captain: "Boosts ATK and HP of Tough characters by 2.25x, their HP by 1.5x, recovers 4x character's RCV in HP at the end of each turn",
+		captain: "Boosts ATK of Tough characters by 2.25x, their HP by 1.5x, recovers 4x character's RCV in HP at the end of each turn",
 		specialNotes: "#{stages}"
 	},
 	913: {
