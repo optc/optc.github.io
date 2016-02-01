@@ -911,8 +911,8 @@ window.units = [
 	[ "Chopper Mask, the Hero Who Protects the World", "PSY", [ "Fighter", "Knowledge" ], 5, 30, 4, 4, 99, null, 1479, 537, 215, null, null, null, 0 ],
 	[ "Sanji, Kamabakka Queendom Fugitive", "DEX", [ "Tough", "Fighter" ], 4, 18, 4, 3, 70, null, 212, 124, 20, 1575, 700, 128, 1 ],
 	[ "Sanji, the Cook of Love Who Laid His Manliness on the Line", "DEX", [ "Tough", "Fighter" ], 5, 30, 4, 4, 99, null, 1498, 634, 85, 2925, 1350, 202, 1 ],
-	[ "Brook, Harahetternia's Demon Lord", "QCK", [ "Freedom", "Slasher" ], 4, 18, 6, 3, 70, null, 159, 90, 39, 1282, 595, 199, 1 ],
+	[ "Brook, Harahetternia's Demon Lord", "QCK", [ "Freedom", "Slasher" ], 4, 18, 6, 3, 70, null, 159, 90, 39, 1282, 596, 200, 1 ],
 	[ "Brook, BONE to be Wild!!!", "QCK", [ "Freedom", "Slasher" ], 5, 18, 4, 4, 99, null, 1220, 531, 150, 2390, 1136, 351, 1 ],
-	[ "Nico Robin, Bride of Ohara", "QCK", [ "Knowledge", "Fighter" ], 4, 12, 4, 2, 50, null, 139, 68, 55, 899, 409, 105, 0 ],
+	[ "Nico Robin, Bride of Ohara", "QCK", [ "Knowledge", "Fighter" ], 4, 12, 4, 2, 50, null, 72, 38, 43, 899, 409, 105, 1 ],
 	[ "Beautiful and Talented Woman Wedding Robin", "QCK", [ "Knowledge", "Fighter" ], 5, 20, 4, 3, 99, null, 826, 327, 143, null, null, null, 0 ]
 ];

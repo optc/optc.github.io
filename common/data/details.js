@@ -4214,7 +4214,7 @@ window.details = {
 				"cooldown": 25
 			}
 		],
-		captain: "Boosts ATK and HP of Tough characters by 2.25x, their HP by 1.5x, recovers a small amount of HP at the end of each turn",
+		captain: "Boosts ATK and HP of Tough characters by 2.25x, their HP by 1.5x, recovers 4x character's RCV in HP at the end of each turn",
 		specialNotes: "#{stages}"
 	},
 	913: {

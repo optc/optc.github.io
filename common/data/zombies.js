@@ -198,5 +198,9 @@ window.zombies = {
     904: { // Yokozuna
         type: 'zombie',
         threshold: 0.5
+    },
+    912: { // SH Sanji
+        type: 'healer',
+        multiplier: 4
     }
 };
