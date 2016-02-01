@@ -3388,10 +3388,10 @@ window.details = {
 		captain: "Boosts ATK of QCK characters by 2x"
 	},
 	767: {
-		special: [
-			"Changes the orbs in the top row into [DEX] orbs, removes blindness",
-			"Changes the orbs in the top row into [DEX] orbs, reduces Silence duration by 1 turn"
-		],
+		special: {
+			"japan": "Changes the orbs in the top row into [DEX] orbs, removes blindness",
+			"global": "Changes the orbs in the top row into [DEX] orbs, reduces Silence duration by 1 turn"
+		},
 		specialName: "Ojos Fleur: Thriller",
 		captain: "Boosts ATK and RCV of DEX characters by 1.5x"
 	},
@@ -3928,14 +3928,32 @@ window.details = {
 	873: {
 		captain: "Boosts ATK of Fighter characters by 2.5x if HP is below 30% at the start of the turn",
 		specialName: "Nyan Nyan Swim",
-		special: "Changes own orb into [PSY], amplifies the effect of orbs by 1.5x (1st stage) or by 1.75x (2nd stage) for 1 turn",
-		specialNotes: "#{orb: 1.5x or 1.75x} The special has two separate stages. The first stage activates 6 turns before the special gauge is fully charged; the second stage activates once the special gauge is full. The special can be used as soon as the first stage is reached."
+		special: [
+			{
+				"description": "Changes own orb into [PSY], amplifies the effect of orbs by 1.5x for 1 turn",
+				"cooldown": 13
+			},
+			{
+				"description": "Changes own orb into [PSY], amplifies the effect of orbs by 1.75x for 1 turn",
+				"cooldown": 19
+			}
+		],
+		specialNotes: "#{orb: 1.5x or 1.75x} #{stages}"
 	},
 	874: {
 		captain: "Boosts ATK of Fighter characters by 3x if HP is below 30% at the start of the turn",
 		specialName: "Nyan Nyan Swim",
-		special: "Changes own orb into [PSY], amplifies the effect of orbs by 1.5x (1st stage) or by 1.75x (2nd stage) for 1 turn",
-		specialNotes: "#{orb: 1.5x or 1.75x} The special has two separate stages. The first stage activates 6 turns before the special gauge is fully charged; the second stage activates once the special gauge is full. The special can be used as soon as the first stage is reached."
+		special: [
+			{
+				"description": "Changes own orb into [PSY], amplifies the effect of orbs by 1.5x for 1 turn",
+				"cooldown": 13
+			},
+			{
+				"description": "Changes own orb into [PSY], amplifies the effect of orbs by 1.75x for 1 turn",
+				"cooldown": 19
+			}
+		],
+		specialNotes: "#{orb: 1.5x or 1.75x} #{stages}"
 	},
 	875: {
 		captain: "Boosts ATK of Knowledge and Ambition characters by 2x",
@@ -4101,14 +4119,40 @@ window.details = {
 	905: {
 		captain: "Boosts ATK of Slasher characters by 2.5x if HP is below 30% at the start of the turn",
 		specialName: "Two Gorilla Cut",
-		special: "Changes own orb into [STR], boosts his own ATK by 1.5x for 2 turns (1st stage), the ATK of Slasher characters by 1.5x for 2 turns (2nd stage) or the ATK of Slasher characters by 1.75x for 2 turns (3rd stage)",
-		specialNotes: "The special has three separate stages. The first stage activates after 17 turns, the second stage after 21 turns, the 3rd stage after 24 turns. The special can be used as soon as the first stage is reached."
+		special: [
+			{
+				"description": "Changes own orb into [STR], boosts his own ATK by 1.5x for 2 turns",
+				"cooldown": 17
+			},
+			{
+				"description": "Changes own orb into [STR], boosts ATK of Slasher characters by 1.5x for 2 turns",
+				"cooldown": 21
+			},
+			{
+				"description": "Changes own orb into [STR], boosts ATK of Slasher characters by 1.75x for 2 turns",
+				"cooldown": 24
+			}
+		],
+		specialNotes: "#{stages}"
 	},
 	906: {
 		captain: "Boosts ATK of Slasher characters by 2.75x if HP is below 30% at the start of the turn",
 		specialName: "Two Gorilla Cut",
-		special: "Changes own orb into [STR], boosts his own ATK by 1.5x for 2 turns (1st stage), the ATK of Slasher characters by 1.5x for 2 turns (2nd stage) or the ATK of Slasher characters by 1.75x for 2 turns (3rd stage)",
-		specialNotes: "The special has three separate stages. The first stage activates after 17 turns, the second stage after 21 turns, the 3rd stage after 24 turns. The special can be used as soon as the first stage is reached."
+		special: [
+			{
+				"description": "Changes own orb into [STR], boosts his own ATK by 1.5x for 2 turns",
+				"cooldown": 17
+			},
+			{
+				"description": "Changes own orb into [STR], boosts ATK of Slasher characters by 1.5x for 2 turns",
+				"cooldown": 21
+			},
+			{
+				"description": "Changes own orb into [STR], boosts ATK of Slasher characters by 1.75x for 2 turns",
+				"cooldown": 24
+			}
+		],
+		specialNotes: "#{stages}"
 	},
 	907: {
 		specialName: "Cien Fleur: Big Tree",
@@ -4133,15 +4177,33 @@ window.details = {
 	},
 	911: {
 		specialName: "Diable Jambe: Premier Hachis",
-		special: "Deals 13x (1st stage) or 20x (2nd stage) character's ATK in DEX damage to one enemy, boosts ATK of Tough characters by 1.2x (1st stage) or 2x (2nd stage) for 1 turn",
+		special: [
+			{
+				"description": "Deals 13x character's ATK in DEX damage to one enemy, boosts ATK of Tough characters by 1.2x for 1 turn",
+				"cooldown": 15
+			},
+			{
+				"description": "Deals 20x character's ATK in DEX damage to one enemy, boosts ATK of Tough characters by 2x for 1 turn",
+				"cooldown": 25
+			}
+		],
 		captain: "Boosts ATK and HP of Tough characters by 1.5x",
-		specialNotes: "The special has two separate stages. The first stage activates after 15 turns, the second stage after 25 turns. The special can be used as soon as the first stage is reached."
+		specialNotes: "#{stages}"
 	},
 	912: {
 		specialName: "Diable Jambe: Premier Hachis",
-		special: "Deals 13x (1st stage) or 20x (2nd stage) character's ATK in DEX damage to one enemy, boosts ATK of Tough characters by 1.2x (1st stage) or 2x (2nd stage) for 1 turn",
+		special: [
+			{
+				"description": "Deals 13x character's ATK in DEX damage to one enemy, boosts ATK of Tough characters by 1.2x for 1 turn",
+				"cooldown": 15
+			},
+			{
+				"description": "Deals 20x character's ATK in DEX damage to one enemy, boosts ATK of Tough characters by 2x for 1 turn",
+				"cooldown": 25
+			}
+		],
 		captain: "Boosts ATK and HP of Tough characters by 2.25x, their HP by 1.5x, recovers a small amount of HP at the end of each turn",
-		specialNotes: "The special has two separate stages. The first stage activates after 15 turns, the second stage after 25 turns. The special can be used as soon as the first stage is reached."
+		specialNotes: "#{stages}"
 	},
 	913: {
 		captain: "Boosts ATK of QCK characters by 2.5x if they have a matching orb",

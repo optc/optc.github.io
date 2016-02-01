@@ -78,10 +78,10 @@ var StorageCtrl = function($scope, $storage) {
 
     /* * * * * Version control * * * * */
 
-    var version = $storage.get('version', 11);
-    if (version < 11) {
+    var version = $storage.get('version', 12);
+    if (version < 12) {
         doAlert = true;
-        $storage.set('version', 11);
+        $storage.set('version', 12);
     }
 
     /* * * * * Save on changes * * * * */

@@ -58,10 +58,10 @@ app
 
         /* * * * * Alerts * * * * */
 
-        var version = $storage.get('charVersion', 4);
+        var version = $storage.get('charVersion', 5);
 
-        if (version < 4) {
-            $storage.set('charVersion', 4);
+        if (version < 5) {
+            $storage.set('charVersion', 5);
             setTimeout(function() {
                 noty({
                     text: 'Some stuff changed. Refreshing the page and/or clearing your browser\'s cache may be a smart idea.',

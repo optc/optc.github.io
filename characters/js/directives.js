@@ -259,10 +259,12 @@ directives.compare = function() {
                 scope.compare = window.units[suggestion];
                 scope.compareDetails = window.details[suggestion + 1];
                 scope.compareCooldown = window.cooldowns[suggestion];
-                scope.isCompareSpecialArray = (scope.compareDetails && scope.compareDetails.special &&
+                scope.isCompareCaptainHybrid = (scope.compareDetails && scope.compareDetails.captain &&
+                    scope.compareDetails.captain.global);
+                scope.isCompareSpecialHybrid = (scope.compareDetails && scope.compareDetails.special &&
+                    scope.compareDetails.special.global);
+                scope.isCompareSpecialStaged = (scope.compareDetails && scope.compareDetails.special &&
                     scope.compareDetails.special.constructor == Array);
-                scope.isCompareCaptainArray = (scope.compareDetails && scope.compareDetails.captain &&
-                    scope.compareDetails.captain.constructor == Array);
                 if (!scope.$$phase) scope.$apply();
             });
 

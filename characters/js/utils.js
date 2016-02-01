@@ -243,7 +243,10 @@ CharUtils.checkMatcher = function(matcher, id) {
     if (regexCache[name] && regexCache[name].hasOwnProperty(id)) return regexCache[name][id];
     else if (!target) result = false;
     else if (matcher.include && matcher.include.indexOf(id) != -1) result = true;
-    else result = matcher.matcher.test(target);
+    else {
+        if (target.constructor != String) target = JSON.stringify(target);
+        result = matcher.matcher.test(target);
+    }
     if (!regexCache.hasOwnProperty(name)) regexCache[name] = { };
     regexCache[name][id] = result;
     return result;
@@ -254,7 +257,10 @@ CharUtils.isClassBooster = function(target, id, clazz) {
     if (!classCache[target].hasOwnProperty(clazz)) classCache[target][clazz] = { };
     if (classCache[target][clazz].hasOwnProperty(id)) return classCache[target][clazz][id];
     if (!data) result = false;
-    else result = (new RegExp('of.+' + clazz + '.+characters')).test(data);
+    else {
+        if (data.constructor != String) data = JSON.stringify(data);
+        result = (new RegExp('of.+' + clazz + '.+characters')).test(data);
+    }
     classCache[target][clazz][id] = result;
     return result;
 };

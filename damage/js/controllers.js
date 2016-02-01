@@ -255,8 +255,16 @@ controllers.EffectsCtrl = function($scope, $state) {
 controllers.PopoverCtrl = function($scope) {
     if (!$scope.data.team[$scope.slot].unit) return;
     var id = $scope.data.team[$scope.slot].unit.number + 1;
-    $scope.details = window.details[id];
+    $scope.details = window.details[id] ? JSON.parse(JSON.stringify(window.details[id])) : null;
     $scope.cooldown = window.cooldowns[id - 1];
+    if (!$scope.details || !$scope.details.special) return;
+    if ($scope.details.special.japan)
+        $scope.details.special = $scope.details.special.japan;
+    if ($scope.details.special.constructor == Array) {
+        var lastStage = $scope.details.special.slice(-1)[0];
+        $scope.cooldown = lastStage.cooldown;
+        $scope.details.special = lastStage.description;
+    }
 };
 
 /*****************

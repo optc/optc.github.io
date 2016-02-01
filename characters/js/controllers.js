@@ -162,8 +162,9 @@ app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, 
         $('#compare').prop('disabled', false);
     };
     $scope.getPrevious = function() { return $stateParams.previous.concat($scope.id); };
-    $scope.isSpecialArray = ($scope.details && $scope.details.special && $scope.details.special.constructor == Array);
-    $scope.isCaptainArray = ($scope.details && $scope.details.captain && $scope.details.captain.constructor == Array);
+    $scope.isCaptainHybrid = ($scope.details && $scope.details.captain && $scope.details.captain.global);
+    $scope.isSpecialHybrid = ($scope.details && $scope.details.special && $scope.details.special.global);
+    $scope.isSpecialStaged = ($scope.details && $scope.details.special && $scope.details.special.constructor == Array);
 
     $scope.$watch('customLevel.level',function(level) {
         if (isNaN(level) || level < 1 || level > $scope.unit.maxLevel) {
