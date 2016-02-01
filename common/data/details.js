@@ -3938,10 +3938,9 @@ window.details = {
 		specialNotes: "#{orb: 1.5x or 1.75x} The special has two separate stages. The first stage activates 6 turns before the special gauge is fully charged; the second stage activates once the special gauge is full. The special can be used as soon as the first stage is reached."
 	},
 	875: {
-		captain: "Boosts ATK of Knowledge and Ambition characters by 2x, makes [TND] and [RCV] orbs \"beneficial\" to Knowledge and Ambition characters",
+		captain: "Boosts ATK of Knowledge and Ambition characters by 2x",
 		specialName: "Beto Launcher",
-		special: "Changes the captain's orb into a matching orb, locks all orbs for 1 turn, deals 13x character's ATK in INT damage to all enemies",
-		captainNotes: "\"Beneficial\" orbs grant the same ATK boost as matching orbs while retaining their original function."
+		special: "Changes the captain's orb into a matching orb, locks all orbs for 1 turn, deals 13x character's ATK in INT damage to all enemies"
 	},
 	876: {
 		captain: "Boosts ATK of Knowledge and Ambition characters by 2.25x, makes [TND] and [RCV] orbs \"beneficial\" to Knowledge and Ambition characters",
@@ -4099,44 +4098,69 @@ window.details = {
 		specialName: "Yokozuna Slap!",
 		special: "Deals 20x character's ATK in STR damage to one enemy, delays all enemies for 1 turn"
 	},
+	905: {
+		captain: "Boosts ATK of Slasher characters by 2.5x if HP is low",
+		specialName: "Two Gorilla Cut",
+		special: "Changes own orb into [STR], boosts his own ATK by 1.5x for 2 turns (1st stage), the ATK of Slasher characters by 1.5x for 2 turns (2nd stage) or the ATK of Slasher characters by 1.75x for 2 turns (3rd stage)",
+		specialNotes: "The special has three separate stages. The first stage activates after 17 turns, the second stage after 21 turns, the 3rd stage after 24 turns. The special can be used as soon as the first stage is reached."
+	},
+	906: {
+		captain: "Boosts ATK of Slasher characters by 2.75x if HP is low",
+		specialName: "Two Gorilla Cut",
+		special: "Changes own orb into [STR], boosts his own ATK by 1.5x for 2 turns (1st stage), the ATK of Slasher characters by 1.5x for 2 turns (2nd stage) or the ATK of Slasher characters by 1.75x for 2 turns (3rd stage)",
+		specialNotes: "The special has three separate stages. The first stage activates after 17 turns, the second stage after 21 turns, the 3rd stage after 24 turns. The special can be used as soon as the first stage is reached."
+	},
 	907: {
 		specialName: "Cien Fleur: Big Tree",
 		special: "Delays all enemies, locks all orbs, deals 5,000 fixed damage to all enemies, reduces crew's HP to 1",
-		captain: "?"
+		captain: "Boosts ATK and RCV of Knowledge characters by 1.5x if HP is low"
 	},
 	908: {
 		specialName: "Cien Fleur: Big Tree",
 		special: "Delays all enemies, locks all orbs, deals 5,000 fixed damage to all enemies, reduces crew's HP to 1",
-		captain: "?"
+		captain: "Boosts ATK and RCV of Knowledge characters by 2.5x and their RCV by 1.75x if HP is low"
 	},
 	909: {
-		captain: "?",
+		captain: "Boosts ATK and RCV of PSY characters by 1.5x",
 		specialName: "Hero of Justice! Chopper Mask!!",
-		special: "Recovers 5,000 HP, boosts ATK of PSY units for 2 turns"
+		special: "Recovers 5,000 HP, boosts ATK of PSY characters by 1.5x for 2 turns"
 	},
 	910: {
 		specialName: "Hero of Justice! Chopper Mask!!",
-		special: "Recovers 5,000 HP, boosts ATK of PSY units for 2 turns",
-		captain: "?"
+		special: "Recovers 5,000 HP, boosts ATK of PSY characters by 1.5x for 2 turns",
+		captain: "Boosts ATK of PSY characters by 2x, their RCV by 1.5x, makes [INT] orbs \"beneficial\" to PSY characters",
+		captainNotes: "\"Beneficial\" orbs grant the same ATK boost as matching orbs."
 	},
 	911: {
 		specialName: "Diable Jambe: Premier Hachis",
-		special: "Deals DEX damage to one enemy, boosts ATK of Tough characters",
-		captain: "?"
+		special: "Deals 13x (1st stage) or 20x (2nd stage) character's ATK in DEX damage to one enemy, boosts ATK of Tough characters by 1.2x (1st stage) or 2x (2nd stage) for 1 turn",
+		captain: "Boosts ATK and HP of Tough characters by 1.5x",
+		specialNotes: "The special has two separate stages. The first stage activates after 15 turns, the second stage after 25 turns. The special can be used as soon as the first stage is reached."
 	},
 	912: {
 		specialName: "Diable Jambe: Premier Hachis",
-		special: "Deals DEX damage to one enemy, boosts ATK of Tough characters",
-		captain: "?"
+		special: "Deals 13x (1st stage) or 20x (2nd stage) character's ATK in DEX damage to one enemy, boosts ATK of Tough characters by 1.2x (1st stage) or 2x (2nd stage) for 1 turn",
+		captain: "?",
+		specialNotes: "The special has two separate stages. The first stage activates after 15 turns, the second stage after 25 turns. The special can be used as soon as the first stage is reached."
 	},
 	913: {
-		captain: "?",
+		captain: "Boosts ATK of QCK characters by 2.5x if they have a matching orb",
 		specialName: "Black Magic Summoning: Advent of the Demon Lord Satan",
 		special: "Changes [BLOCK] orbs into matching orbs, randomly changes opposite orbs into either [STR], [QCK], [DEX], [PSY] or [INT] orbs"
 	},
 	914: {
-		captain: "?",
+		captain: "Boosts ATK of QCK characters by 3x if they have a matching orb, by 1.2x otherwise",
 		specialName: "Black Magic Summoning: Advent of the Demon Lord Satan",
 		special: "Changes [BLOCK] orbs into matching orbs, randomly changes opposite orbs into either [STR], [QCK], [DEX], [PSY] or [INT] orbs"
+	},
+	915: {
+		captain: "Boosts ATK and RCV of Knowledge characters by 1.2x",
+		specialName: "Feeling of Mutual Love",
+		special: "Boosts ATK and RCV of Knowledge characters by 1.5x for 1 turn"
+	},
+	916: {
+		captain: "Boosts ATK and RCV of Knowledge characters by 1.75x",
+		specialName: "Feeling of Mutual Love",
+		special: "Boosts ATK and RCV of Knowledge characters by 1.5x for 1 turn"
 	}
 };
