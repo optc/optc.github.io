@@ -225,6 +225,10 @@ input[type="text"] {
     margin-top: 0 !important;
 }
 
+#mainTable_wrapper {
+    width: 99%;
+}
+
 .help-link {
     float: right;
     margin-right: 10px;
