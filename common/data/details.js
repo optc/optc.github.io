@@ -4112,12 +4112,12 @@ window.details = {
 	},
 	907: {
 		specialName: "Cien Fleur: Big Tree",
-		special: "Delays all enemies, locks all orbs, deals 5,000 fixed damage to all enemies, reduces crew's HP to 1",
+		special: "Delays all enemies for 1 turn, locks all orbs for 1 turn, deals 5,000 fixed damage to all enemies, reduces crew's HP to 1",
 		captain: "Boosts ATK and RCV of Knowledge characters by 1.5x if HP is below 30% at the start of the turn"
 	},
 	908: {
 		specialName: "Cien Fleur: Big Tree",
-		special: "Delays all enemies, locks all orbs, deals 5,000 fixed damage to all enemies, reduces crew's HP to 1",
+		special: "Delays all enemies for 1 turn, locks all orbs for 1 turn, deals 5,000 fixed damage to all enemies, reduces crew's HP to 1",
 		captain: "Boosts ATK of Knowledge characters by 2.5x and their RCV by 1.75x if HP is below 30% at the start of the turn"
 	},
 	909: {
