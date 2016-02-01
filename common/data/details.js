@@ -4140,7 +4140,7 @@ window.details = {
 	912: {
 		specialName: "Diable Jambe: Premier Hachis",
 		special: "Deals 13x (1st stage) or 20x (2nd stage) character's ATK in DEX damage to one enemy, boosts ATK of Tough characters by 1.2x (1st stage) or 2x (2nd stage) for 1 turn",
-		captain: "?",
+		captain: "Boosts ATK and HP of Tough characters by 2.25x, their HP by 1.5x, recovers a small amount of HP at the end of each turn",
 		specialNotes: "The special has two separate stages. The first stage activates after 15 turns, the second stage after 25 turns. The special can be used as soon as the first stage is reached."
 	},
 	913: {
