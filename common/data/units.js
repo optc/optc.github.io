@@ -907,7 +907,7 @@ window.units = [
 	[ "Roronoa Zoro, Pupil of the World's Strongest Swordsman", "STR", [ "Slasher", "Ambition" ], 5, 30, 5, 4, 99, null, 1403, 687, 67, 2830, 1390, 190, 1 ],
 	[ "Nico Robin, Tequila Wolf Inmate", "INT", [ "Knowledge", "Fighter" ], 4, 18, 4, 3, 70, null, 131, 91, 41, 1021, 679, 217, 1 ],
 	[ "Nico Robin, Light of the Revolution", "INT", [ "Knowledge", "Fighter" ], 5, 30, 4, 4, 99, null, 946, 593, 178, 2011, 1156, 400, 1 ],
-	[ "Tony Tony Chopper, Torino Kingdom's Peace Mediator", "PSY", [ "Fighter", "Knowledge" ], 4, 18, 6, 3, 70, null, 493, 189, 91, null, null, null, 0 ],
+	[ "Tony Tony Chopper, Torino Kingdom's Peace Mediator", "PSY", [ "Fighter", "Knowledge" ], 4, 18, 6, 3, 70, null, 187, 70, 42, 1300, 504, 220, 1 ],
 	[ "Chopper Mask, the Hero Who Protects the World", "PSY", [ "Fighter", "Knowledge" ], 5, 30, 4, 4, 99, null, 1479, 537, 215, null, null, null, 0 ],
 	[ "Sanji, Kamabakka Queendom Fugitive", "DEX", [ "Tough", "Fighter" ], 4, 18, 4, 3, 70, null, 212, 124, 20, 1575, 700, 128, 1 ],
 	[ "Sanji, the Cook of Love Who Laid His Manliness on the Line", "DEX", [ "Tough", "Fighter" ], 5, 30, 4, 4, 99, null, 1498, 634, 85, 2925, 1350, 202, 1 ],
