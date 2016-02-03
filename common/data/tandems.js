@@ -290,12 +290,12 @@ window.tandems = [
         "units": [ 565, 566, 567 ]
     },
     {
-        "name": "Anything Goes Shot Cannon",
+        "name": "Everything Cannon",
         "desc": "Deals 3 times the ATK of the last character in the tandem to the enemies in the front column, reduces damage received by 20% for 1 turn",
         "units": [ 615, 616, 617, 614 ]
     },
     {
-        "name": "Super Anything Goes Shot Cannon",
+        "name": "Super Everything Cannon",
         "desc": "Deals 7 times the ATK of the last character in the tandem to all enemies",
         "units": [ 614, 615, 616, 617, 629 ]
     },

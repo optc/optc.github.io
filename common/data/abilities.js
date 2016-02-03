@@ -10,7 +10,7 @@ window.abilities = [
     },
 
     {
-        name: 'Cooldown reduction',
+        name: 'Charge specials',
         levels: [
             [ 10, 'Cooldown of all specials reduced by 1 turn at the start of the fight' ],
             [ 20, 'Cooldown of all specials reduced by 2 turns at the start of the fight' ]
@@ -18,7 +18,7 @@ window.abilities = [
     },
 
     {
-        name: 'Bind reduction',
+        name: 'Bind resistance',
         levels: [
             [ 10, 'Bind duration reduced by 1 turn' ],
             [ 15, 'Bind duration reduced by 2 turns' ],
@@ -27,7 +27,7 @@ window.abilities = [
     },
 
     {
-        name: 'Silence reduction',
+        name: 'Silence resistance',
         levels: [
             [ 10, 'Silence duration reduced by 1 turn' ],
             [ 15, 'Silence duration reduced by 2 turns' ],
@@ -36,7 +36,7 @@ window.abilities = [
     },
 
     {
-        name: 'Automatic healing',
+        name: 'Auto-heal',
         levels: [
             [ 5, '100 HP recovered at the end of each turn' ],
             [ 8, '200 HP recovered at the end of each turn' ],
@@ -47,7 +47,7 @@ window.abilities = [
     },
 
     {
-        name: 'Increased RCV',
+        name: 'RCV boost',
         levels: [
             [ 5, 'Crew\'s RCV boosted by 100 units' ],
             [ 8, 'Crew\'s RCV boosted by 200 units' ],
@@ -58,7 +58,7 @@ window.abilities = [
     },
 
     {
-        name: 'Matching orb chance',
+        name: 'Slot rate boost',
         levels: [
             [ 5, 'Boosted chances (20%) of getting matching orbs' ],
             [ 10, 'Boosted chances (22.2%) of getting matching orbs' ],
@@ -84,7 +84,7 @@ window.abilities = [
     },
 
     {
-        name: 'Automatic revive',
+        name: 'Resilience',
         levels: [
             [ 5, '5% chance to withstand a lethal enemy hit' ],
             [ 10, '10% chance to withstand a lethal enemy hit' ],

@@ -898,7 +898,7 @@ window.details = {
 	},
 	247: {
 		special: "Recovers 1,224 HP",
-		specialName: "Kyun Spark",
+		specialName: "Kyuun Spark",
 		captain: "Reduces damage received by 10%"
 	},
 	248: {
@@ -2424,12 +2424,12 @@ window.details = {
 	},
 	572: {
 		special: "Boosts ATK of Fighter characters by 2x for 1 turn, binds himself for 15 turns",
-		specialName: "Tenacious Yell",
+		specialName: "Roar of Mettle",
 		captain: "Boosts ATK of Fighter characters by 2.5x if HP is above 99% at the start of the turn"
 	},
 	573: {
 		special: "Reduces Silence duration by 2 turns, recovers 10x character's RCV in HP",
-		specialName: "Noble Support",
+		specialName: "Manly Support",
 		captain: "Boosts RCV of all characters by 1.2x"
 	},
 	574: {
@@ -2609,20 +2609,20 @@ window.details = {
 	},
 	614: {
 		special: "Reduces the defense of all enemies by 50% for 1 turn, deals 10x character's ATK in PSY damage to all enemies",
-		specialName: "Dismantling Chop",
+		specialName: "Demolisher Chop",
 		captain: "Boosts ATK of characters with cost 20 or less by 2.25x if HP is below 30% at the start of the turn"
 	},
 	615: {
 		special: "Deals random STR damage to one enemy",
-		specialName: "Destroy Axe"
+		specialName: "Demolisher Axe"
 	},
 	616: {
 		special: "Changes the captain's orb into STR",
-		specialName: "Destroy Spear"
+		specialName: "Demolisher Spear"
 	},
 	617: {
 		special: "Boosts ATK of Shooter characters by 1.2x for 1 turn",
-		specialName: "Destroy Cannon"
+		specialName: "Demolisher Cannon"
 	},
 	618: {
 		special: "Deals 20x character's ATK in STR damage to one enemy",
@@ -2630,7 +2630,7 @@ window.details = {
 	},
 	619: {
 		special: "Cuts the current HP of each enemy by 5%",
-		specialName: "Light Break"
+		specialName: "Slight Break"
 	},
 	620: {
 		special: "Changes [INT] orbs into [QCK] orbs",
@@ -2642,7 +2642,7 @@ window.details = {
 	},
 	622: {
 		special: "Boosts RCV of all characters by 100 units for 3 turns",
-		specialName: "Healing Up"
+		specialName: "Patch Job"
 	},
 	623: {
 		special: "Recovers 3x character's RCV in HP at the end of each turn for 5 turns",
@@ -2650,11 +2650,11 @@ window.details = {
 	},
 	624: {
 		special: "Slightly boosts chances of getting [PSY] orbs for 3 turns",
-		specialName: "Slot Rate Upright [PSY]"
+		specialName: "Slot Rate Up [PSY]"
 	},
 	625: {
 		special: "Slightly boosts chances of getting [INT] orbs for 3 turns",
-		specialName: "Slot Rate Upright [INT]"
+		specialName: "Slot Rate Up [INT]"
 	},
 	626: {
 		special: "Deals 13x character's ATK in character's type damage to all enemies",
@@ -2676,22 +2676,22 @@ window.details = {
 	},
 	630: {
 		special: "Randomly changes all orbs into either [QCK] or [DEX] orbs, deals random QCK damage to all enemies",
-		specialName: "Rankyaku - Ran",
+		specialName: "Tempest Kick: Slaughter",
 		captain: "Boosts ATK of Slasher characters by 1.5x"
 	},
 	631: {
 		special: "Randomly changes all orbs into either [QCK] or [DEX] orbs, deals random QCK damage to all enemies",
-		specialName: "Rankyaku - Ran",
+		specialName: "Tempest Kick: Slaughter",
 		captain: "Boosts ATK of Slasher characters by 2x"
 	},
 	632: {
 		special: "Randomly changes all orbs into either [STR], [PSY] or [INT] orbs, deals random STR damage to all enemies, reduces the defense of all enemies by 50% for 2 turns",
-		specialName: "Shigan - Oren",
+		specialName: "Finger Pistol: Yellow Lotus",
 		captain: "Boosts ATK of Fighter characters by 1.5x"
 	},
 	633: {
 		special: "Randomly changes all orbs into either [STR], [PSY] or [INT] orbs, deals random STR damage to all enemies, reduces the defense of all enemies by 50% for 2 turns",
-		specialName: "Shigan - Oren",
+		specialName: "Finger Pistol: Yellow Lotus",
 		captain: "Boosts ATK of Fighter characters by 2x"
 	},
 	634: {
@@ -3013,7 +3013,7 @@ window.details = {
 	},
 	695: {
 		special: "Cuts the current HP of each enemy by 5%",
-		specialName: "Light Break"
+		specialName: "Slight Break"
 	},
 	696: {
 		special: "Changes [PSY] orbs into [DEX] orbs",
@@ -3037,7 +3037,7 @@ window.details = {
 	},
 	700: {
 		special: "Cuts the current HP of each enemy by 5%",
-		specialName: "Light Break",
+		specialName: "Slight Break",
 		captain: "Boosts ATK of Fighter characters by 1.75x"
 	},
 	701: {
@@ -3670,11 +3670,11 @@ window.details = {
 		special: "Randomizes all orbs"
 	},
 	822: {
-		specialName: "Healing Up",
+		specialName: "Patch Job",
 		special: "Boosts RCV of all characters by 100 units for 3 turns"
 	},
 	823: {
-		specialName: "Slot Rate Upright [INT]",
+		specialName: "Slot Rate Up [INT]",
 		special: "Slightly boosts chances of getting [INT] orbs for 3 turns"
 	},
 	824: {
@@ -4220,12 +4220,12 @@ window.details = {
 	913: {
 		captain: "Boosts ATK of QCK characters by 2.5x if they have a matching orb",
 		specialName: "Black Magic Summoning: Advent of the Demon Lord Satan",
-		special: "Changes [BLOCK] orbs into matching orbs, randomly changes opposite orbs into either [STR], [QCK], [DEX], [PSY] or [INT] orbs"
+		special: "Seals himself for 1 turn, changes [BLOCK] orbs into matching orbs, randomly changes opposite orbs into either [STR], [QCK], [DEX], [PSY] or [INT] orbs"
 	},
 	914: {
 		captain: "Boosts ATK of QCK characters by 3x if they have a matching orb, by 1.2x otherwise",
 		specialName: "Black Magic Summoning: Advent of the Demon Lord Satan",
-		special: "Changes [BLOCK] orbs into matching orbs, randomly changes opposite orbs into either [STR], [QCK], [DEX], [PSY] or [INT] orbs"
+		special: "Seals himself for 1 turn, changes [BLOCK] orbs into matching orbs, randomly changes opposite orbs into either [STR], [QCK], [DEX], [PSY] or [INT] orbs"
 	},
 	915: {
 		captain: "Boosts ATK and RCV of Knowledge characters by 1.2x",
