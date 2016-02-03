@@ -908,7 +908,7 @@ window.units = [
 	[ "Nico Robin, Tequila Wolf Inmate", "INT", [ "Knowledge", "Fighter" ], 4, 18, 4, 3, 70, null, 131, 91, 41, 1021, 679, 217, 1 ],
 	[ "Nico Robin, Light of the Revolution", "INT", [ "Knowledge", "Fighter" ], 5, 30, 4, 4, 99, null, 946, 593, 178, 2011, 1156, 400, 1 ],
 	[ "Tony Tony Chopper, Torino Kingdom's Peace Mediator", "PSY", [ "Fighter", "Knowledge" ], 4, 18, 6, 3, 70, null, 187, 70, 42, 1300, 504, 220, 1 ],
-	[ "Chopper Mask, the Hero Who Protects the World", "PSY", [ "Fighter", "Knowledge" ], 5, 30, 4, 4, 99, null, 1479, 537, 215, null, null, null, 0 ],
+	[ "Chopper Mask, the Hero Who Protects the World", "PSY", [ "Fighter", "Knowledge" ], 5, 30, 4, 4, 99, null, 1234, 447, 170, 2500, 912, 405, 1 ],
 	[ "Sanji, Kamabakka Queendom Fugitive", "DEX", [ "Tough", "Fighter" ], 4, 18, 4, 3, 70, null, 212, 124, 20, 1575, 700, 128, 1 ],
 	[ "Sanji, the Cook of Love Who Laid His Manliness on the Line", "DEX", [ "Tough", "Fighter" ], 5, 30, 4, 4, 99, null, 1498, 634, 85, 2925, 1350, 202, 1 ],
 	[ "Brook, Harahetternia's Demon Lord", "QCK", [ "Freedom", "Slasher" ], 4, 18, 6, 3, 70, null, 159, 90, 39, 1282, 596, 200, 1 ],
