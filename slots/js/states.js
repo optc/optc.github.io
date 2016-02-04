@@ -67,16 +67,16 @@ angular.module('optc').config(function($stateProvider, $urlRouterProvider) {
                     controller: 'ResetCtrl'
                 }
             }
-        });
+        })
          
-        //.state('main.image',{
-            //views: {
-                //'popup@': {
-                    //templateUrl: 'views/popup/image.html',
-                    //controller: 'ImageCtrl'
-                //}
-            //}
-        //});
+        .state('main.image',{
+            views: {
+                'popup@': {
+                    templateUrl: 'views/popup/image.html',
+                    controller: 'ImageGeneratorCtrl'
+                }
+            }
+        });
 
 });
 

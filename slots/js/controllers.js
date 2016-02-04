@@ -138,9 +138,9 @@ controllers.PickerCtrl = function($scope, $state, $stateParams, $storage) {
  * SummaryCtrl *
  ***************/
 
-controllers.SummaryCtrl = function($scope, $state, $stateParams) {
+controllers.SummaryCtrl = function($scope, $rootScope, $state, $stateParams) {
 
-    $scope.summary = [ ];
+    $rootScope.summary = [ ];
 
     $scope.$watch('team',function(team) {
 
@@ -153,7 +153,7 @@ controllers.SummaryCtrl = function($scope, $state, $stateParams) {
             });
         });
 
-        $scope.summary = points.map(function(x,n) {
+        $rootScope.summary = points.map(function(x,n) {
             if (x === 0) return null;
             var level = 0;
             for (;level<abilities[n].levels.length && x >= abilities[n].levels[level][0];++level);
@@ -167,7 +167,7 @@ controllers.SummaryCtrl = function($scope, $state, $stateParams) {
             };
         });
 
-        $scope.summaryEnabled = $scope.summary.some(function(x) { return x !== null; });
+        $rootScope.summaryEnabled = $rootScope.summary.some(function(x) { return x !== null; });
 
     },true);
 

@@ -96,7 +96,7 @@ directives.regulateHeight = function($timeout) {
                 var max = team.reduce(function(prev, next) {
                     return (next && next.uid ? Math.max(prev, units[next.uid-1].slots) : prev);
                 },0);
-                $timeout(function() { element.css('height',(96+40*max) + 'px'); });
+                $timeout(function() { element.css('height',(96+45*max) + 'px'); });
             },true);
         }
     };
@@ -118,11 +118,12 @@ directives.addAbility = function() {
 
             scope.$watch('team[unitNumber].slots[slotNumber]',function(slot) {
                 element.removeClass('slotsBackground');
-                element.parent().removeClass('color0 color1 color2 color3 color4 color5 color6 color7 color8 color9');
+                element.parent().parent().removeClass('color0 color1 color2 color3 color4 color5 color6 color7 color8 color9');
                 if (!slot || slot.id === undefined) return;
                 element.addClass('slotsBackground');
-                element.css('background-position', (-32*slot.id-1) + 'px -1px');
-                element.parent().addClass('color' + slot.id);
+                element.css('background-position', (-32*slot.id-1) + 'px -7px');
+                element.css('background-size', '363px 43px');
+                element.parent().parent().addClass('color' + slot.id);
             },true);
 
         }
