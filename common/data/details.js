@@ -2670,7 +2670,7 @@ window.details = {
 		specialNotes: "#{fixed}"
 	},
 	629: {
-		special: "Empties all slots with [BLOCK] orbs, deals random INT damage to all enemies",
+		special: "Empties all slots including those with [BLOCK] orbs, deals random INT damage to all enemies",
 		specialName: "Master Nail",
 		captain: "Boosts ATK of characters with 3 or fewer stars by 2x"
 	},

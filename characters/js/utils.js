@@ -47,7 +47,7 @@ var flagUnit = function(id, type) {
 CharUtils.generateSearchParameters = function(query, filters) {
     if (/^\d+$/.test(query)) {
         var n = parseInt(query,10);
-        if (n > 0 && n < units.length) query = 'id=' + query;
+        if (n > 0 && n <= units.length) query = 'id=' + query;
     }
     var result = Utils.generateSearchParameters(query);
     if (result === null && Object.keys(filters).length === 0) return null;
