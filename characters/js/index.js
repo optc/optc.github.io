@@ -30,7 +30,7 @@ app
             if ($state.current.name == 'main.search.view') {
                 var unit = window.units[parseInt($stateParams.id,10) - 1];
                 title = (unit.name || '?') + ' | ' + title;
-                if (unit.incomplete) title = '(Preview) ' + title;
+                if (unit.preview) title = '(Preview) ' + title;
             }
             window.document.title = title;
         });
