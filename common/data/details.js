@@ -4243,12 +4243,18 @@ window.details = {
 		special: "Deals 5,000 fixed damage to one enemy, delays all enemies for 1 turn, changes [RCV] orbs on Shooter characters into matching orbs",
 		specialNotes: "The orb shuffle only applies to Shooter characters, other classes are unaffected."
 	},
+	918: {
+		captain: "Boosts ATK of Shooter characters by 1.75x, recovers a small amount of health at the end of each turn",
+		specialName: "Kuja's Haki Arrow",
+		special: "Deals 5,000 fixed damage to one enemy, delays all enemies for 1 turn, changes [RCV] orbs on Shooter characters into matching orbs",
+		specialNotes: "The orb shuffle only applies to Shooter characters, other classes are unaffected."
+	},
 	919: {
-		specialName: "Spike of the Warrior Defending Their Country",
+		specialName: "Spike of the Warrior Defending Her Country",
 		special: "Reduces damage received from STR enemies by 50% for 2 turns"
 	},
 	920: {
-		specialName: "Snake Bow of the Warrior Defending Their Country",
+		specialName: "Snake Bow of the Warrior Defending Her Country",
 		special: "Changes the orbs in the middle row into [RCV] orbs, changes the orbs in the top row inti [TND] orbs"
 	}
 };
