@@ -4236,5 +4236,19 @@ window.details = {
 		captain: "Boosts ATK and RCV of Knowledge characters by 1.75x",
 		specialName: "Feeling of Mutual Love",
 		special: "Boosts ATK and RCV of Knowledge characters by 1.5x for 1 turn"
+	},
+	917: {
+		captain: "Boosts ATK of Shooter characters by 1.5x",
+		specialName: "Kuja's Haki Arrow",
+		special: "Deals 5,000 fixed damage to one enemy, delays all enemies for 1 turn, changes [RCV] orbs on Shooter characters into matching orbs",
+		specialNotes: "The orb shuffle only applies to Shooter characters, other classes are unaffected."
+	},
+	919: {
+		specialName: "Spike of the Warrior Defending Their Country",
+		special: "Reduces damage received from STR enemies by 50% for 2 turns"
+	},
+	920: {
+		specialName: "Snake Bow of the Warrior Defending Their Country",
+		special: "Changes the orbs in the middle row into [RCV] orbs, changes the orbs in the top row inti [TND] orbs"
 	}
 };

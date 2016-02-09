@@ -916,5 +916,7 @@ window.families = [
 	"Nico Nico Robin",
 	"Nico Nico Robin",
 	"Marguerite",
-	"Marguerite"
+	"Marguerite",
+	"Aphelandra",
+	"Sweet Pea"
 ];
