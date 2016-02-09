@@ -859,8 +859,8 @@ window.drops = {
         {
             name: "Men are Forbidden!? The Secret Flower Garden",
             thumb: null,
-            Expert: [ 917, 919, 920 ],
-            Elite: [ 917, 919, 920 ]
+            Expert: [ 917, 919, 920, -756, -720, -706, -542 ],
+            Elite: [ 917, 919, 920, -756, -720, -706, -542 ]
         }
 
     ],

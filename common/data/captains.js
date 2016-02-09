@@ -2103,5 +2103,11 @@ window.captains = {
 	916: {
 		atk: function(p) { return p.unit.class.has("Knowledge") ? 1.75 : 1; },
 		rcv: function(p) { return p.unit.class.has("Knowledge") ? 1.75 : 1; }
+	},
+	917: {
+		atk: function(p) { return p.unit.class.has("Shooter") ? 1.5 : 1; }
+	},
+	918: {
+		atk: function(p) { return p.unit.class.has("Shooter") ? 1.75 : 1; }
 	}
 };

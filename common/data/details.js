@@ -4255,6 +4255,6 @@ window.details = {
 	},
 	920: {
 		specialName: "Snake Bow of the Warrior Defending Her Country",
-		special: "Changes the orbs in the middle row into [RCV] orbs, changes the orbs in the top row inti [TND] orbs"
+		special: "Changes the orbs in the middle row into [RCV] orbs, changes the orbs in the bottom row into [TND] orbs"
 	}
 };
