@@ -56,7 +56,7 @@ directives.characterTable = function($rootScope, $timeout, $compile, $storage) {
             };
             // report link
             var link = $('<span class="help-link">Want to report or request something? Use <a>this form</a>.</span>');
-            link.find('a').attr('href', 'https://docs.google.com/forms/d/1jSlwN0Ruyc5bFfxdXlwihqfLdCiELX7HQTabXoCV7hU/viewform?usp=send_form');
+            link.find('a').attr('href', 'http://goo.gl/forms/4FWGgVOQKh');
             link.insertAfter($('.dataTables_length'));
             // pick column link
             var pick = $('<a id="pick-link" popover-placement="bottom" popover-trigger="click" popover-title="Additional Columns" ' +
