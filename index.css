@@ -23,6 +23,33 @@ body {
     transform: translate3d(0,-50%,0);
 }
 
+#changelog {
+    position: relative;
+    margin-right: 25px;
+    top: 60%;
+    padding: 35px;
+    float: right;
+    background-color: #74B0E4;
+}
+
+#changelog > p {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    
+}
+
+#changelog > ul {
+    list-style-type: none;
+    text-align: left;
+    margin: auto;
+    padding-left: 0;
+}
+
+#update {
+    font-size: 20;    
+}
+
 .button {
     display: block;
     width: 250px;
