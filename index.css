@@ -24,13 +24,12 @@ body {
 }
 
 #changelog {
-    position: relative;
-    margin-right: 25px;
-    top: 50%;
+    position: fixed;
     padding: 35px;
     float: right;
-    background-color: #74B0E4;
-    display: none;
+    bottom: 10;
+    right: 10;
+    z-index: -1;
 }
 
 #changelog > p {
@@ -49,6 +48,12 @@ body {
 
 #update {
     font-size: 20;    
+}
+
+@media only screen and (max-width: 1000px) { 
+  #changelog { 
+    display: none; 
+  } 
 }
 
 .button {
