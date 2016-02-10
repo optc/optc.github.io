@@ -26,10 +26,11 @@ body {
 #changelog {
     position: relative;
     margin-right: 25px;
-    top: 60%;
+    top: 50%;
     padding: 35px;
     float: right;
     background-color: #74B0E4;
+    display: none;
 }
 
 #changelog > p {
