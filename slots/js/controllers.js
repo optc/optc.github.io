@@ -78,6 +78,7 @@ controllers.MainCtrl = function($scope, $rootScope, $state, $stateParams, $contr
     };
 
     $controller('StorageCtrl', { $scope: $scope });
+    $controller('DismissalCtrl');
 
 };
 

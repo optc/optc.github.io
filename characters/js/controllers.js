@@ -12,7 +12,7 @@ var filters = { custom: [ ], classes: [ ], stars: [ ], cost: [ 1, 55 ] };
 
 var app = angular.module('optc');
 
-app.controller('MainCtrl',function($scope, $rootScope, $state, $stateParams, $timeout, $storage) {
+app.controller('MainCtrl',function($scope, $rootScope, $state, $stateParams, $timeout, $storage, $controller) {
 
     var colors = Chart.defaults.global.colours;
     colors = colors.splice(2,0,colors.splice(1,1)[0]);
@@ -29,6 +29,8 @@ app.controller('MainCtrl',function($scope, $rootScope, $state, $stateParams, $ti
         $state.go('.',{ query: $scope.query });
         $scope.table.parameters = CharUtils.generateSearchParameters($scope.query, jQuery.extend({ }, $rootScope.filters));
     });
+
+    $controller('DismissalCtrl');
 
 });
 

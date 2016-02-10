@@ -1,6 +1,6 @@
 (function() {
 
-var app = angular.module('optc', [ 'ui.router', 'ui.bootstrap' ]);
+var app = angular.module('optc', [ 'ui.router', 'ui.bootstrap', 'ngDialog' ]);
 
 var findEvolvers = function(id) {
     var result = [ ];
@@ -83,7 +83,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
  * Controllers *
  ***************/
 
-app.controller('MainCtrl',function($scope, $rootScope, $timeout, $storage, $sce) {
+app.controller('MainCtrl',function($scope, $rootScope, $timeout, $storage, $sce, $controller) {
 
     var onPoolChange = function(pool) {
         var temp = JSON.parse(JSON.stringify(pool));
@@ -209,6 +209,8 @@ app.controller('MainCtrl',function($scope, $rootScope, $timeout, $storage, $sce)
         }
         return result;
     };
+
+    $controller('DismissalCtrl');
 
 });
 

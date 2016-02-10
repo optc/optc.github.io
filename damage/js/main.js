@@ -70,6 +70,7 @@ var MainCtrl = function($scope, $rootScope, $controller, $filter, $storage) {
     // instantiate storage controller separately
     
     $controller('StorageCtrl', { $scope: $scope });
+    $controller('DismissalCtrl');
 
 };
 

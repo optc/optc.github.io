@@ -1,6 +1,6 @@
 (function() {
 
-var app = angular.module('optc', [ 'ui.bootstrap' ]);
+var app = angular.module('optc', [ 'ui.bootstrap', 'ngDialog' ]);
 
 Utils.parseUnits(false);
 
@@ -11,7 +11,7 @@ var addImages = function(target) {
     });
 };
 
-app.controller('MainCtrl',function($scope, $rootScope, $timeout) {
+app.controller('MainCtrl',function($scope, $rootScope, $timeout, $controller) {
 
     // variables
     $rootScope.onlyGlobal = false;
@@ -32,6 +32,8 @@ app.controller('MainCtrl',function($scope, $rootScope, $timeout) {
         }
         if (!$scope.$$phase) $scope.$apply();
     };
+
+    $controller('DismissalCtrl');
 
 });
 

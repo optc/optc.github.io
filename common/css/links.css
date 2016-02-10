@@ -1,5 +1,9 @@
 /* Adapted from http://codepen.io/suez/pen/vAais */
 
+#dismissalBody {
+    font-size: 0.8em;
+}
+
 #links-button {
     position: fixed;
     right: 20px;
