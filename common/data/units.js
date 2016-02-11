@@ -914,7 +914,7 @@ window.units = [
 	[ "Brook, Harahetternia's Demon Lord", "QCK", [ "Freedom", "Slasher" ], 4, 18, 6, 3, 70, 1066998, 159, 90, 39, 1281, 597, 201, 1 ],
 	[ "Brook, BONE to be Wild!!!", "QCK", [ "Freedom", "Slasher" ], 5, 30, 4, 4, 99, 4000000, 1220, 531, 150, 2392, 1137, 352, 1 ],
 	[ "Nico Robin, Bride of Ohara", "QCK", [ "Knowledge", "Fighter" ], 4, 12, 4, 2, 50, null, 72, 38, 43, 899, 409, 105, 1 ],
-	[ "Beautiful and Talented Woman Wedding Robin", "QCK", [ "Knowledge", "Fighter" ], 5, 20, 4, 3, 99, null, 826, 327, 143, null, null, null, 0 ],
+	[ "Beautiful and Talented Woman Wedding Robin", "QCK", [ "Knowledge", "Fighter" ], 5, 20, 4, 3, 99, null, 826, 327, 143, 1851, 812, 371, 0 ],
 	[ "Marguerite", "QCK", "Shooter", 3, 13, 4, 1, 50, 392109, 80, 53, 37, 920, 577, 207, 1 ],
 	[ "Marguerite, Warrior Defending Her Country", "QCK", "Shooter", 4, 20, 5, 2, 99, 3000000, 854, 516, 145, 1563, 1070, 335, 0 ],
 	[ "Aphelandra", "QCK", "Slasher", 3, 15, 6, 1, 70, 1066998, 98, 42, 32, 2001, 604, 141, 1 ],
