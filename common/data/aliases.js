@@ -1,4 +1,3 @@
-
 window.aliases = {
     1: ['モンキー・D・ルフィ'],
     2: ['モンキー・D・ルフィ ゴムゴムの銃(ピストル)'],
@@ -898,7 +897,7 @@ window.aliases = {
     896: [''],
     897: [ 'Kimono Crocodile' ],
     898: [ 'Kimono Mr. 3', 'Kimono Galdino', 'Kimono Mr 3' ],
-    899: [ 'Kimono Mr. 2', 'Kimono Bonclay', 'Kimono Bon Clay', 'Kimono Mr 2' ]
+    899: [ 'Kimono Mr. 2', 'Kimono Bonclay', 'Kimono Bon Clay', 'Kimono Mr 2' ],
     900: [''],
     901: [''],
     902: [''],
