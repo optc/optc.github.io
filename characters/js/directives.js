@@ -294,6 +294,32 @@ directives.comparison = function() {
     };
 };
 
+directives.addNames = function($stateParams, $rootScope) {
+    var name = window.aliases;
+    return {
+        restrict: 'E',
+        replace: true,
+        template: '<table class="table table-striped-column abilities"><tbody></tbody></table>',
+        link: function(scope, element, attrs) {
+            var id = $stateParams.id, data = details[id];
+
+                var currentAliases = name[id];
+                console.log(currentAliases);
+                if(currentAliases[0]!=''){
+                element.append($('<tr><td>Japanese</td><td><div>'+ currentAliases[0] +'</div></td></tr>'));
+                }
+                if(currentAliases[1]!=''){
+                    element.append($('<tr><td>French</td><td><div>'+ currentAliases[1] +'</div></td></tr>'));
+                }
+                if(currentAliases[2]){
+                    currentAliases.splice(0, 2);
+                    element.append($('<tr><td>Others</td><td><div>'+ currentAliases +'</div></td></tr>'));
+                }
+                }
+    }
+};    
+    
+    
 directives.addTags = function($stateParams, $rootScope) {
     return {
         restrict: 'E',
