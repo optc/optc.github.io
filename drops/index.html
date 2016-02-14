@@ -66,8 +66,18 @@
         <script type="text/ng-template" id="island.html">
             <table class="table table-striped">
                 <tbody>
+                    <tr ng-if="island.condition" hide-when-empty>
+                        <td>Condition</td>
+                        <td>{{island.condition}} </td>
+                    </tr>
+                    <tr ng-if="island.challenge">
+                        <td>Challenge</td>
+                        <td>{{island.challenge}} </td>
+                    </tr>
+                </tbody>
+                <tbody>
                     <tr ng-repeat="(stage,data) in island"
-                        ng-if="stage != 'thumb' && stage != 'day' && stage != 'name' && stage != 'shortName' && stage != 'global'">
+                        ng-if="stage != 'thumb' && stage != 'day' && stage != 'name' && stage != 'shortName' && stage != 'global' && stage != 'condition' && stage != 'challenge'">
                         <td>
                             {{type == 'Story Island' ? 'Stage ' + stage : (stage.length < 2 ? 'Any' : stage)}}
                         </td>

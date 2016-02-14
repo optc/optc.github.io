@@ -569,6 +569,7 @@ window.drops = {
             name: 'Smoker\'s Great Pursuit',
             thumb: 268,
             global: true,
+            challenge: 'Total Damage dealt to enemies',
             Expert: [ 67, 69, 86, 97, 112, -219, -212, -206, -204, -73, -52, -50 ],
             Elite: [ 67, 69, 86, 97, 112, -219, -212, -206, -204, -73, -52, -50 ]
         },
@@ -585,6 +586,7 @@ window.drops = {
             name: 'Kalifa\'s Secret Assignment',
             thumb: 318,
             global: true,
+            condition: 'You may only bring STR units into this island',
             Expert: [ 86, 97, 110, 112, 317, 319, -259, -253, -216, -215, -62, -56 ],
             Elite: [ 86, 97, 110, 112, 317, 319, -259, -253, -216, -215, -62, -56 ]
         },
@@ -593,6 +595,7 @@ window.drops = {
             name: 'Lucci\'s Artisan Spirit',
             thumb: 322,
             global: true,
+            condition: 'You may only bring DEX units for 15 and 30 Stamina',
             Expert: [ 85, 96, 111, 112, 321, 323, 325, -251, -218, -75, -74, -54, -21 ],
             Elite: [ 85, 96, 111, 112, 321, 323, 325, -251, -218, -75, -74, -54, -21 ]
         },
@@ -601,6 +604,7 @@ window.drops = {
             name: 'Franky - Pervert\'s Aesthetic!',
             thumb: 337,
             global: true,
+            condition: 'You may only bring INT units for 15 and 30 Stamina',
             Expert: [ 87, 98, 113, 114, 336, 338, 339, -339, -338, -255, -222, -77, -68 ],
             Elite: [ 87, 98, 113, 336, 338, 339, -339, -338, -255, -222, -77, -68 ]
         },
@@ -609,6 +613,8 @@ window.drops = {
             name: 'Deep Sea Kraken',
             thumb: 341,
             global: true,
+            condition: 'You may only bring QCK units for 15 and 30 Stamina',
+            challenge: 'Low Teamcost, fast Clear and perfect Taps',
             Expert: [ 28, 40, 60, 213, 215, 340, -292, -291, -290, -261, -257, -214, -71, -44 ],
             Elite: [ 28, 40, 60, 213, 215, 340, -292, -291, -290, -261, -257, -214, -71, -44 ]
         },
@@ -617,6 +623,7 @@ window.drops = {
             name: 'Dr. Hogback\'s Lab of the Dead',
             thumb: 386,
             global: true,
+            condition: 'You may only bring PSY units for 15 and 30 Stamina',
             Expert: [ 385, 387, -388, -335, -314, -36, -16, -11 ],
             Elite: [ 385, 387, -388, -335, -314, -36, -16, -11 ]
         },
@@ -625,6 +632,8 @@ window.drops = {
             name: 'Perona\'s Worden Garden',
             thumb: 392,
             global: true,
+            condition: 'You can only get STR, QCK, INT and Food Orbs',
+            challenge: 'Amount of hits over 50,000',
             Expert: [ 391, 393, 394, -394, -393, -329, -316, -47, -34, -4 ],
             Elite: [ 391, 393, 394, -394, -393, -329, -316, -47, -34, -4 ]
         },
@@ -633,6 +642,7 @@ window.drops = {
             name: 'Perv-salom\'s Manly Adventure',
             thumb: 405,
             global: true,
+            condition: 'You can only get QCK, DEX, PSY and Food Orbs',
             Expert: [ 404, 406, 407, -407, -406, -333, -312, -208, -26, -20 ],
             Elite: [ 404, 406, 407, -407, -406, -333, -312, -208, -26, -20 ]
         },
@@ -649,6 +659,8 @@ window.drops = {
             name: 'Adrift!? Humming Brook',
             thumb: 424,
             global: true,
+            condition: 'You can only get STR, DEX, INT and PSY Orbs',
+            challenge: 'Total Damage dealt to enemies',
             Expert: [ 423, 425, -425, -327, -310, -223, -219, -214, -202 ],
             Elite: [ 423, 425, -425, -327, -310, -223, -219, -214, -202 ]
         },
@@ -657,6 +669,7 @@ window.drops = {
             name: 'Little Ms. Candy the Maiden-Hearted!',
             thumb: 436,
             global: true,
+            condition: 'Each non-Okama in your Team will take 60 Damage each turn',
             Expert: [ 433, 434, 435, -384, -372, -371, -359, -217, -210, -19 ],
             Elite: [ 433, 434, 435, -384, -372, -371, -359, -217, -210, -19 ]
         },
@@ -665,6 +678,7 @@ window.drops = {
             name: 'Supersonic Duck Squadron!',
             thumb: 445,
             global: true,
+            condition: 'Higher Chance of Food orbs',
             Expert: [ 290, 293, 294, 295, 334, 379, 381, 382, 441, 442, 443, 444, -378, -368, -363, -251, -73, -15 ],
             Elite: [ 290, 293, 294, 295, 334, 379, 381, 382, 441, 442, 443, 444, -378, -368, -363, -251, -73, -15 ]
         },
@@ -672,6 +686,7 @@ window.drops = {
         {
             name: 'Jailbreaking Baroque Works',
             thumb: 462,
+            condition: 'Striker, Shooter and Slashers are weakend.',
             Expert: [ 460, 461, -398, -396, -370, -361, -253, -236, -234 ],
             Elite: [ 460, 461, -398, -396, -370, -361, -253, -236, -234 ]
         },
@@ -680,6 +695,7 @@ window.drops = {
             name: 'Crocodile: Life on the Inside',
             thumb: 510,
             global: true,
+            condition: 'Shooters, Fighter and Slashers are weakend',
             Expert: [ 509, 511, -402, -400, -374, -357, -259, -212, -209 ],
             Elite: [ 509, 511, -402, -400, -374, -357, -259, -212, -209 ]
         },
@@ -687,6 +703,7 @@ window.drops = {
         {
             name: 'Jailer Domino\' Special Guard',
             thumb: 538,
+            condition: 'Striker, Slasher and Fighter are weakend',
             Expert: [ 537, 539, 540, -539, -428, -416, -365, -257, -59 ],
             Elite: [ 537, 539, 540, -539, -428, -416, -365, -257, -59 ]
         },
@@ -694,6 +711,7 @@ window.drops = {
         {
             name: 'Chief Guard Sadi-chan\'s Pun♥ish♥ment',
             thumb: 550,
+            condition: 'Shooter, Striker and Fighter are weakend',
             Expert: [ 549, 551, 552, -552, -551, -432, -426, -408, -329, -308, -255 ],
             Elite: [ 549, 551, 552, -552, -551, -432, -426, -408, -329, -308, -255 ]
         },
@@ -710,6 +728,7 @@ window.drops = {
             name: 'Warriors of Shandia! Dreams of a Homeland!',
             thumb: 583,
             global: true,
+            condition: 'All Units considered from the “Sea” will lose 20% to all stats',
             Expert: [ 581, 582, 583, 584, -584, -544, -466, -412, -371, -335, -314, -291 ],
             Elite: [ 581, 582, 583, 584, -584, -544, -466, -412, -371, -335, -314, -291 ]
         },
@@ -717,6 +736,7 @@ window.drops = {
         {
             name: 'Pirate Apprentices! Shanks and Buggy',
             thumb: 599,
+            condition: 'You cannot use any two units that are the same',
             Expert: [ 598, 600, -504, -467, -463, -414, -372, -332, -310, -77 ],
             Elite: [ 598, 600, -467, -463, -414, -372, -332, -310, -77 ]
         },
@@ -724,6 +744,7 @@ window.drops = {
         {
             name: 'Raging Cook! Red Leg Zeff',
             thumb: 607,
+            condition: 'You cannot use any two units that are the same',
             Expert: [ 606, 608, 609, -502, -457, -449, -312, -52, -50 ],
             Elite: [ 606, 608, 609, -502, -457, -449, -312, -52, -50 ]
         },
@@ -731,6 +752,7 @@ window.drops = {
         {
             name: 'Keimi and Hachi\'s Takoyaki Shop!',
             thumb: 635,
+            condition: 'No Units above the cost of 49 is allowed',
             Expert: [ 634, 636, 637, -636, -464, -451, -396, -370, -367, -359, -64 ],
             Elite: [ 634, 636, 637, -636, -464, -451, -396, -370, -367, -359, -64 ]
         },
@@ -738,6 +760,7 @@ window.drops = {
         {
             name: 'Invasion! Pirate Arlong\'s Crew!!',
             thumb: 656,
+            condition: 'You can only get STR, QCK, DEX, PSY and INT orbs',
             Expert: [ 655, 657, 658, -658, -500, -465, -455, -453, -398, -357, -60 ],
             Elite: [ 655, 657, 658, -658, -500, -465, -455, -453, -398, -357, -60 ]
         },
@@ -745,6 +768,7 @@ window.drops = {
         {
             name: 'Fight! Suna Suna Clan!!',
             thumb: 664,
+            condition: 'Heatwave causes damage every 2 turns',
             Expert: [ 663, 665, 667, -667, -522, -508, -506, -459, -378, -221, -73 ],
             Elite: [ 663, 665, 667, -667, -522, -508, -506, -459, -378, -221, -73 ]
         },
@@ -752,6 +776,7 @@ window.drops = {
         {
             name: 'Guidance from the Sound of a Bell! Calgara and Noland!',
             thumb: 688,
+            condition: 'Bomb orbs appear',
             Expert: [ 687, 689, -542, -524, -528, -429, -428, -401, -365, -218 ],
             Elite: [ 687, 689, -542, -524, -528, -429, -428, -401, -365, -218 ],
         },
@@ -759,6 +784,7 @@ window.drops = {
         {
             name: "Knight of the Sky Gan Fall",
             thumb: 713,
+            condition: 'Every class but Freedom is weakend',
             Expert: [ 712, 714, 715, -716, -546, -541, -520 ],
             Elite: [ 712, 714, 715, -716, -546, -541, -520 ]
         },
@@ -766,6 +792,7 @@ window.drops = {
         {
             name: "T-Bone's Absolute Justice",
             thumb: 724,
+            condition: 'You can only bring INT, PSY and QCK units',
             Expert: [ 721, 723, -590, -564, -563, -529, -526, -384, -361, -219 ],
             Elite: [ 721, 723, -590, -564, -563, -529, -526, -384, -361, -219 ]
         },
@@ -773,6 +800,7 @@ window.drops = {
         {
             name: "Explosive! Wanze's Ramen Kenpo!!",
             thumb: 743,
+            condition: 'You can only bring STR, QCK and DEX units',
             Expert: [ 740, 742, -560, -558, -586, -567, -566, -412, -225, -18 ],
             Elite: [ 740, 742, -560, -558, -586, -567, -566, -412, -225, -18 ]
         },
@@ -810,6 +838,7 @@ window.drops = {
         {
             name: "Evil Manager Breed's Marine Circus!",
             thumb: 797,
+            condition: 'You can only bring Fighter and Tough units',
             Expert: [ 796, 798, 799, 800, -800, -639, -628, -562, -414, -432, -380, -75 ],
             Elite: [ 796, 798, 799, 800, -800, -639, -628, -562, -414, -432, -380, -75 ]
         },
