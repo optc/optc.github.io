@@ -918,5 +918,12 @@ window.units = [
 	[ "Marguerite", "QCK", "Shooter", 3, 13, 4, 1, 50, 392109, 80, 53, 37, 920, 577, 207, 1 ],
 	[ "Marguerite, Warrior Defending Her Country", "QCK", "Shooter", 4, 20, 5, 2, 99, 3000000, 854, 516, 145, 1563, 1070, 335, 0 ],
 	[ "Aphelandra", "QCK", "Slasher", 3, 15, 6, 1, 70, 1066998, 98, 42, 32, 2001, 604, 141, 1 ],
-	[ "Sweet Pea", "STR", [ "Tough", "Shooter" ], 3, 15, 4, 2, 70, 1066998, 210, 157, 26, 1041, 1041, 155, 1 ]
+	[ "Sweet Pea", "STR", [ "Tough", "Shooter" ], 3, 15, 4, 2, 70, 1066998, 210, 157, 26, 1041, 1041, 155, 1 ],
+    [],
+    [],
+    ["Colosseum Kid", "STR", ["Impact","Ambition"],null,null,null,null,null,null,null,null,null,null,null,null,null],
+    ["Colosseum Kid Evolution", "STR", ["Impact","Ambition"],null,null,null,null,null,null,null,null,null,null,null,null,null],
+    ["Colosseum Sadi", "QCK", ["Impact","Freedom"],null,null,null,null,null,null,null,null,null,null,null,null,null],
+    ["Colosseum Sadi Evolution", "QCK", ["Impact","Freedom"],null,null,null,null,null,null,null,null,null,null,null,null,null],
+    ["Unknow Unit", "INT", ["Slasher","Ambition"],null,null,null,null,null,null,null,null,null,null,null,null,null]
 ];

@@ -304,7 +304,7 @@ directives.addNames = function($stateParams, $rootScope) {
             var id = $stateParams.id, data = details[id];
 
                 var currentAliases = name[id];
-                console.log(currentAliases);
+                //console.log(currentAliases);
                 if(currentAliases[0]!=''){
                 element.append($('<tr><td>Japanese</td><td><div>'+ currentAliases[0] +'</div></td></tr>'));
                 }
