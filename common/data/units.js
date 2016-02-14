@@ -921,9 +921,9 @@ window.units = [
 	[ "Sweet Pea", "STR", [ "Tough", "Shooter" ], 3, 15, 4, 2, 70, 1066998, 210, 157, 26, 1041, 1041, 155, 1 ],
     [],
     [],
-    ["Colosseum Kid", "STR", ["Impact","Ambition"],null,null,null,null,null,null,null,null,null,null,null,null,null],
-    ["Colosseum Kid Evolution", "STR", ["Impact","Ambition"],null,null,null,null,null,null,null,null,null,null,null,null,null],
-    ["Colosseum Sadi", "QCK", ["Impact","Freedom"],null,null,null,null,null,null,null,null,null,null,null,null,null],
-    ["Colosseum Sadi Evolution", "QCK", ["Impact","Freedom"],null,null,null,null,null,null,null,null,null,null,null,null,null],
+    ["Colosseum Kid", "STR", ["Striker","Ambition"],null,null,null,null,null,null,null,null,null,null,null,null,null],
+    ["Colosseum Kid Evolution", "STR", ["Striker","Ambition"],null,null,null,null,null,null,null,null,null,null,null,null,null],
+    ["Colosseum Sadi", "QCK", ["Striker","Freedom"],null,null,null,null,null,null,null,null,null,null,null,null,null],
+    ["Colosseum Sadi Evolution", "QCK", ["Striker","Freedom"],null,null,null,null,null,null,null,null,null,null,null,null,null],
     ["Unknow Unit", "INT", ["Slasher","Ambition"],null,null,null,null,null,null,null,null,null,null,null,null,null]
 ];
