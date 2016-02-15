@@ -217,7 +217,7 @@ app.controller('ColumnsCtrl',function($scope, $rootScope, $state, $stateParams, 
 
     $scope.columns = { 'HP/ATK': false, 'HP/RCV': false, 'ATK/RCV': false, 'ATK/CMB': false,
         'CMB': false, 'ATK/cost': false, 'HP/cost': false, 'Minimum cooldown': false,
-        'Initial cooldown': false };
+        'Initial cooldown': false,'MAX EXP': false };
 
     var additionalColumns = $storage.get('charColumns', [ ]);
 

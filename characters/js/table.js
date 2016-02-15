@@ -53,7 +53,8 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
         additionalColumns.forEach(function(x) {
             var title = x
                 .replace(/Minimum cooldown/,'Min CD')
-                .replace(/Initial cooldown/,'Max CD');
+                .replace(/Initial cooldown/,'Max CD')
+                .replace(/MAX EXP/,'MAX EXP');
             result.splice(result.length-1, 0, { title: title, type: 'num-string' });
         });
         return result;
@@ -236,6 +237,7 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
             else if (c == 'ATK/cost') temp = Math.round(x.maxATK / x.cost * 100) / 100;
             else if (c == 'HP/cost') temp = Math.round(x.maxHP / x.cost * 100) / 100;
             else if (c == 'CMB') temp = x.combo;
+            else if (c == 'MAX EXP') temp = x.maxEXP;
             else if (c == 'Minimum cooldown' || c == 'Initial cooldown') { 
                 var d = cooldowns[x.number];
                 if (!d) temp = 'N/A';
