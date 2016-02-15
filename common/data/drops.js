@@ -1,4 +1,4 @@
-window.drops = {
+﻿window.drops = {
 
     'Story Island': [
 
@@ -846,6 +846,7 @@ window.drops = {
         {
             name: "Nami and Lola's Great Proposal Plan",
             thumb: 808,
+            condition: 'You can only bring Slasher and Knowledge units. (No Evolution/Booster)',
             Expert: [ 807, 809, 811, -811, -645, -641, -631, -502, -11, -12, -9 ],
             Elite: [ 807, 809, 811, -811, -645, -641, -631, -502, -11, -12, -9 ]
         },
@@ -853,6 +854,7 @@ window.drops = {
         {
             name: "Legendary Shipbuilding Company Tom's Workers",
             thumb: 848,
+            condition: 'You can only bring Impact and Freedom units',
             Expert: [ 847, 849, 850, -849, -647, -617, -616, -615, -578, -508, -455 ],
             Elite: [ 847, 849, 850, -849, -647, -617, -616, -615, -578, -508, -455 ]
         },
@@ -860,6 +862,7 @@ window.drops = {
         {
             name: "Wapol's Counterattack",
             thumb: 852,
+            condition: 'You can only bring Shooter and Ambition units',
             Expert: [ 328, 330, 331, 333, 851, 853, 854, -854, -649, -643, -614, -463, -457, -327, -22 ],
             Elite: [ 328, 330, 331, 333, 851, 853, 854, -854, -649, -643, -614, -463, -457, -327, -22 ]
         },
@@ -874,6 +877,7 @@ window.drops = {
         {
             name: "Riverside Banquet! Enter the Crazy Ones!",
             thumb: 885,
+            condition: 'Highly increased chance of TND, Bomb, and G orbs',
             Expert: [ 885, 886, 887, -887, -704, -703, -677, -675, -504, -453, -416 ],
             Elite: [ 885, 886, 887, -887, -704, -703, -677, -675, -504, -453, -416 ]
         },
@@ -881,6 +885,7 @@ window.drops = {
         {
             name: "Mountaintop Banquet! Enter the Generals!",
             thumb: 897,
+            condition: 'Only STR/DEX/QCK/PSY/INT orbs will appear',
             Expert: [ 897, 898, 899, -899, -754, -702, -701, -669, -528, -466, -449, -464 ],
             Elite: [ 897, 898, 899, -899, -754, -702, -701, -669, -528, -466, -449, -464 ]
         },
@@ -888,6 +893,7 @@ window.drops = {
         {
             name: "Men are Forbidden!? The Secret Flower Garden",
             thumb: 918,
+            condition: 'You can only bring DEX units',
             Expert: [ 917, 919, 920, -920, -791, -756, -720, -706, -705, -542, -541, -522 ],
             Elite: [ 917, 919, 920, -920, -791, -756, -720, -706, -705, -542, -541, -522 ]
         }
