@@ -61,7 +61,7 @@ app.directive('type',function() {
 app.directive('island',function() {
     return {
         restrict: 'E',
-        scope: { island: '=', data: '=', type: '=', hiddenUnits: '=', condition: '=', challenge: '=' },
+        scope: { island: '=', data: '=', type: '=', hiddenUnits: '=', condition: '=', challenge: '=', completion: '=' },
         replace: true,
         templateUrl: 'island.html',
         link: function(scope, element, attrs) {
