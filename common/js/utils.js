@@ -65,6 +65,8 @@ utils.getThumbnailUrl = function(n) {
     if (n === null || n === undefined || (window.units && window.units[n-1].incomplete))
         return 'http://onepiece-treasurecruise.com/wp-content/themes/onepiece-treasurecruise/images/noimage.png';
     var id = ('0000' + n).slice(-4).replace(/(057[54])/,'0$1'); // missing aokiji image
+    if(id=='0742')
+        return 'http://onepiece-treasurecruise.com/wp-content/uploads/f0742-2.png';
     return 'http://onepiece-treasurecruise.com/wp-content/uploads/f' + id + '.png';
 };
 
