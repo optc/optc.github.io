@@ -1,4 +1,4 @@
-window.units = [
+﻿window.units = [
 	[ "Monkey D. Luffy", "STR", "Fighter", 2, 1, 5, 0, 5, 163, 42, 15, 8, 134, 68, 15, 1 ],
 	[ "Monkey D. Luffy Gum-Gum Pistol", "STR", "Fighter", 3, 4, 6, 0, 20, 26184, 130, 76, 14, 510, 249, 49, 0.7 ],
 	[ "Monkey D. Luffy Gum-Gum Bazooka", "STR", "Fighter", 4, 7, 6, 2, 35, 136167, 404, 227, 39, 975, 522, 105, 1 ],
@@ -919,11 +919,11 @@ window.units = [
 	[ "Marguerite, Warrior Defending Her Country", "QCK", "Shooter", 4, 20, 5, 2, 99, 3000000, 854, 516, 145, 1563, 1070, 335, 0 ],
 	[ "Aphelandra", "QCK", "Slasher", 3, 15, 6, 1, 70, 1066998, 98, 42, 32, 2001, 604, 141, 1 ],
 	[ "Sweet Pea", "STR", [ "Tough", "Shooter" ], 3, 15, 4, 2, 70, 1066998, 210, 157, 26, 1041, 1041, 155, 1 ],
-    ["Bride Boa", "INT", ["Shooter","Freedom"], 4 , 13 , 4 , 2 , 50 ,null, 142 , 91 , 46 ,null,null,null,null],
-    ["Bride Boa Evolution", "INT", ["Shooter","Freedom"], 5 , 20 , 4 , 3 , 99 ,null, 832 , 497 , 106 ,null,null,null,null],
-    ["Colosseum Kid", "STR", ["Striker","Ambition"],null,null,null,null,null,null,null,null,null,null,null,null,null],
-    ["Colosseum Kid Evolution", "STR", ["Striker","Ambition"],null,null,null,null,null,null,null,null,null,null,null,null,null],
-    ["Colosseum Sadi", "QCK", ["Striker","Freedom"],null,null,null,null,null,null,null,null,null,null,null,null,null],
-    ["Colosseum Sadi Evolution", "QCK", ["Striker","Freedom"],null,null,null,null,null,null,null,null,null,null,null,null,null],
-    ["Colosseum Vice Admiral Doberman", "INT", ["Slasher","Ambition"],null,null,null,null,null,null,null,null,null,null,null,null,null]
+        ["Bride Boa", "INT", ["Shooter","Freedom"], 4 , 13 , 4 , 2 , 50 ,null, 142 , 91 , 46 ,null,null,null,null],
+        ["Bride Boa Evolution", "INT", ["Shooter","Freedom"], 5 , 20 , 4 , 3 , 99 ,null, 832 , 497 , 106 ,1913,1012,294,1],
+        ["Colosseum Kid", "STR", ["Striker","Ambition"],null,null,null,null,null,null,null,null,null,null,null,null,null],
+        ["Colosseum Kid Evolution", "STR", ["Striker","Ambition"],null,null,null,null,null,null,null,null,null,null,null,null,null],
+        ["Colosseum Sadi", "QCK", ["Striker","Freedom"],null,null,null,null,null,null,null,null,null,null,null,null,null],
+        ["Colosseum Sadi Evolution", "QCK", ["Striker","Freedom"],null,null,null,null,null,null,null,null,null,null,null,null,null],
+        ["Colosseum Vice Admiral Doberman", "INT", ["Slasher","Ambition"],null,null,null,null,null,null,null,null,null,null,null,null,null]
 ];
