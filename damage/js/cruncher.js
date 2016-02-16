@@ -318,14 +318,14 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             cptsWith.hitMultipliers.forEach(function(x) { lastAtk *= x.hit(result.hits); });
             // apply defense
             lastHit = lastAtk / unit.combo;
-            lastHit = Math.floor(Math.max(1, lastHit - currentDefense));
+            lastHit = Math.ceil(Math.max(1, lastHit - currentDefense));
             // add hit to current total
             result.result += lastHit;
         }
         // apply hit bonus
         if (bonusDamageBase > 0) {
-            if (lastHit > 1) result.result += Math.floor(lastAtk * 0.9 * bonusDamageBase);
-            else result.result += Math.max(0,Math.floor(lastAtk * (0.9 * bonusDamageBase + 1 / unit.combo)) - currentDefense);
+            if (lastHit > 1) result.result += Math.ceil(lastAtk * 0.9 * bonusDamageBase);
+            else result.result += Math.max(0,Math.ceil(lastAtk * (0.9 * bonusDamageBase + 1 / unit.combo)) - currentDefense);
         }
         return result;
     };
