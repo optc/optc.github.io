@@ -4256,5 +4256,13 @@ window.details = {
 	920: {
 		specialName: "Snake Bow of the Warrior Defending Her Country",
 		special: "Changes the orbs in the middle row into [RCV] orbs, changes the orbs in the bottom row into [TND] orbs"
-	}
+	},
+    921: {
+        captain: "Boosts ATK and RCV of Freedom characters by 1.2x",
+        special: "Recovers 5000 HP and amplifies the effect of orbs by 1.5x for 2 turns"
+    },
+    922: {
+        captain: "Boosts ATK and RCV of Freedom characters by 1.75x",
+        special: "Recovers 5000 HP and amplifies the effect of orbs by 1.5x for 2 turns"
+    }
 };

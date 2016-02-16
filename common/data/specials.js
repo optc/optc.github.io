@@ -1032,5 +1032,11 @@ window.specials = {
 		atk: function(p) { return p.unit.class.has("Knowledge") ? 1.5 : 1; },
 		rcv: function(p) { return p.unit.class.has("Knowledge") ? 1.5 : 1; },
 		type: "class"
-	}
+	},
+    921: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, 1, 1.5); }
+    },
+    922: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, 1, 1.5); }
+    }
 };
