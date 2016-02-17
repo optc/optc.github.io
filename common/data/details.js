@@ -1,4 +1,4 @@
-window.details = {
+﻿window.details = {
 	1: {
 		special: "Deals 5x character's ATK in STR damage to one enemy",
 		specialName: "Spinning Gum Punch"
@@ -4257,12 +4257,34 @@ window.details = {
 		specialName: "Snake Bow of the Warrior Defending Her Country",
 		special: "Changes the orbs in the middle row into [RCV] orbs, changes the orbs in the bottom row into [TND] orbs"
 	},
-    921: {
-        captain: "Boosts ATK and RCV of Freedom characters by 1.2x",
-        special: "Recovers 5000 HP and amplifies the effect of orbs by 1.5x for 2 turns"
-    },
-    922: {
-        captain: "Boosts ATK and RCV of Freedom characters by 1.75x",
-        special: "Recovers 5000 HP and amplifies the effect of orbs by 1.5x for 2 turns"
-    }
+	921: {
+		captain: "Boosts ATK and RCV of Freedom characters by 1.2x",
+		special: "Recovers 5000 HP and amplifies the effect of orbs by 1.5x for 2 turns"
+	},
+	922: {
+		captain: "Boosts ATK and RCV of Freedom characters by 1.75x",
+		special: "Recovers 5000 HP and amplifies the effect of orbs by 1.5x for 2 turns"
+	},
+	923: {
+		captain: "Boosts ATK of Ambition characters by 2x at Full Heath, and by 2.75x at Low Health",
+		special: "Empties all slots with [STR] orbs, deals several times the character's ATK in STR damage to one enemy",
+		specialNotes: "The exact multiplier used is chosen based on the number of [STR] orbs consumed: 1 orb will give a 10x multiplier, 2 orbs 15x, 3 orbs 20x, 4 orbs 50x, 5 orbs 100x, 6 orbs 200x. It's not possible to activate the special without consuming at least one [STR] orb."
+	},
+	924: {
+		captain: "Boosts ATK of Ambition characters by 2x at Full Heath, and by 2.75x at Low Health",
+		special: "Empties all slots with [STR] orbs, deals several times the character's ATK in STR damage to one enemy",
+		specialNotes: "The exact multiplier used is chosen based on the number of [STR] orbs consumed: 1 orb will give a 10x multiplier, 2 orbs 15x, 3 orbs 20x, 4 orbs 50x, 5 orbs 100x, 6 orbs 200x. It's not possible to activate the special without consuming at least one [STR] orb."
+	},
+	925: {
+		captain: "Boosts ATK of Tough characters by 2x",
+		special: "Deals 15x ATK to 1 enemy in [QCK] damage, boosts damage dealt to enemies with reduced DEF by 1.3x"
+	},
+	926: {
+		captain: "Boosts ATK of Tough characters by 2x",
+		special: "Deals 15x ATK to 1 enemy in [QCK] damage, boosts damage dealt to enemies with reduced DEF by 1.3x"
+	},
+	927: {
+		captain: "Boosts ATK and HP of Ambition Units by 1.5x",
+		special: "Take 1.5x Additional damage; Slasher and Ambition type characters gain 1.2x ATK for 1 turn"
+	}
 };

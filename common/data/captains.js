@@ -2110,12 +2110,32 @@ window.captains = {
 	918: {
 		atk: function(p) { return p.unit.class.has("Shooter") ? 1.75 : 1; }
 	},
-    921: {
-        atk: function(p) { return p.unit.class.has("Freedom") ? 1.2 : 1; },
-        rcv: function(p) { return p.unit.class.has("Freedom") ? 1.2 : 1; }
-    },
-    922: {
-        atk: function(p) { return p.unit.class.has("Freedom") ? 1.75 : 1; },
-        rcv: function(p) { return p.unit.class.has("Freedom") ? 1.75 : 1; }
-    }
+	921: {
+		atk: function(p) { return p.unit.class.has("Freedom") ? 1.2 : 1; },
+		rcv: function(p) { return p.unit.class.has("Freedom") ? 1.2 : 1; }
+	},
+	922: {
+		atk: function(p) { return p.unit.class.has("Freedom") ? 1.75 : 1; },
+		rcv: function(p) { return p.unit.class.has("Freedom") ? 1.75 : 1; }
+	},
+	923: {
+		atk: function(p) {
+			return p.unit.class.has("Ambition") ? 2 + .75 * ((100 - p.percHP) / 100) : 1;
+		}
+	},
+	924: {
+		atk: function(p) {
+			return p.unit.class.has("Ambition") ? 2 + .75 * ((100 - p.percHP) / 100) : 1;
+		}
+	},
+	925: {
+		atk: function(p) { return p.unit.class.has("Tough") ? 2 : 1; }
+	},
+	926: {
+		atk: function(p) { return p.unit.class.has("Tough") ? 2 : 1; }
+	},
+	927: {
+		atk: function(p) { return p.unit.class.has("Ambition") ? 1.5 : 1; },
+		hp: function(p) { return p.unit.class.has("Ambition") ? 1.5 : 1; }
+	}
 };
