@@ -921,9 +921,9 @@
 	[ "Sweet Pea", "STR", [ "Tough", "Shooter" ], 3, 15, 4, 2, 70, 1066998, 210, 157, 26, 1041, 1041, 155, 1 ],
 	["Bride Boa", "INT", ["Shooter","Freedom"], 4 , 13 , 4 , 2 , 50 ,null, 142 , 91 , 46 ,null,null,null,null],
 	["Bride Boa Evolution", "INT", ["Shooter","Freedom"], 5 , 20 , 4 , 3 , 99 ,null, 832 , 497 , 106 ,1913,1012,294,1],
-	["Colosseum Kid", "STR", ["Striker","Ambition"], 4, 25, 4, 2, 70, null,null,null,null,null,null,null,null],
-	["Colosseum Kid Evolution", "STR", ["Striker","Ambition"], 5,null,null,null,null,null,null,null,null,null,null,null,null],
-	["Colosseum Sadi", "QCK", ["Striker","Freedom"],4, 18, 6, 1, 50,null,null,null,null,null,null,null,null],
-	["Colosseum Sadi Evolution", "QCK", ["Striker","Freedom"], 5, null,null,null,null,null,null,null,null,null,null,null,null],
-	["Colosseum Vice Admiral Doberman", "INT", ["Slasher","Ambition"], 4, 20, 6, 2, 70,null,null,null,null,null,null,null,null]
+	["Colosseum Kid", "STR", ["Striker","Ambition"], 4, 25, 4, 2, 70, null, 710, 309, 44,null,null,null,null],
+	["Colosseum Kid Evolution", "STR", ["Striker","Ambition"], 5, 40, 4, 3, 99, null, 1549, 640, 112,null,null,null,null],
+	["Colosseum Sadi", "QCK", ["Striker","Freedom"],4, 18, 6, 1, 50,null, 413, 246, 88, 977, 544, 191, 1],
+	["Colosseum Sadi Evolution", "QCK", ["Striker","Freedom"], 5, 30, 4, 3, 99, null, 920, 488, 159,null,null,null,null],
+	["Colosseum Vice Admiral Doberman", "INT", ["Slasher","Ambition"], 4, 20, 6, 2, 70,null, 200, 210, 71,null,null,null,null]
 ];

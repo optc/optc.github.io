@@ -664,7 +664,7 @@ window.drops = {
             thumb: 392,
             global: true,
             condition: 'You can only get STR, QCK, INT and Food Orbs',
-            challenge: 'Amount of hits over 50,000',
+            challenge: 'Total number hits over 50,000',
             Expert: [ 391, 393, 394, -394, -393, -329, -316, -47, -34, -4 ],
             Elite: [ 391, 393, 394, -394, -393, -329, -316, -47, -34, -4 ]
         },
@@ -760,6 +760,7 @@ window.drops = {
             thumb: 583,
             global: true,
             condition: 'All Units considered from the “Sea” will lose 20% to all stats',
+			challenge: 'Total number hits over 50,000',
             Expert: [ 581, 582, 583, 584, -584, -544, -466, -412, -371, -335, -314, -291 ],
             Elite: [ 581, 582, 583, 584, -584, -544, -466, -412, -371, -335, -314, -291 ]
         },
