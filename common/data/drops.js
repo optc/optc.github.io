@@ -592,6 +592,8 @@ window.drops = {
             name: 'Cobymeppo\'s Proving Ground!',
             thumb: 263,
             global: true,
+            challenge:'Total number of hits above 50,000',
+            challengeData: [['5 Times','1x Yellow Elder'],['15 Times','1x ATK Cotton Candy'],['25 Times','3x Rainbow Gems']],
             Expert: [ 31, 33, 262, 264, 87, 88, 98, 99, 113, -265, -263, -225, -210, -64, -56, -32 ],
             Elite: [ 31, 33, 262, 264, 87, 88, 98, 99, 113, -265, -263, -225, -210, -64, -56, -32 ]
         },
@@ -601,6 +603,7 @@ window.drops = {
             thumb: 268,
             global: true,
             challenge: 'Total Damage dealt to enemies',
+            challengeData: [['600,000 Damage','1x Green Elder'],['1,400,000 Damage','1y Rainbow Gem & 1x HP Cotton Candy'],['3,000,000 Damage','2x Rainbow Gems & 1x Skull Book']],
             Expert: [ 67, 69, 86, 97, 112, -219, -212, -206, -204, -73, -52, -50 ],
             Elite: [ 67, 69, 86, 97, 112, -219, -212, -206, -204, -73, -52, -50 ]
         },
@@ -636,6 +639,8 @@ window.drops = {
             thumb: 337,
             global: true,
             condition: 'You may only bring INT units for 15 and 30 Stamina',
+            challenge: 'Total Damage dealt to enemies in one turn',
+            challengeData: [['150,000 Damage','1x Yellow Elder'],['400,000 Damage','1x ATK Cotton Candy'],['800,000 Damage','3x Rainbow Gems']],
             Expert: [ 87, 98, 113, 114, 336, 338, 339, -339, -338, -255, -222, -77, -68 ],
             Elite: [ 87, 98, 113, 336, 338, 339, -339, -338, -255, -222, -77, -68 ]
         },
@@ -646,6 +651,7 @@ window.drops = {
             global: true,
             condition: 'You may only bring QCK units for 15 and 30 Stamina',
             challenge: 'Low Teamcost, fast Clear and perfect Taps',
+            challengeData: [['200,000 Points','1x Red Elder'],['400,000 Points','1x HP Cotton Candy'],['700,000 Points','3x Rainbow Gems']],
             Expert: [ 28, 40, 60, 213, 215, 340, -292, -291, -290, -261, -257, -214, -71, -44 ],
             Elite: [ 28, 40, 60, 213, 215, 340, -292, -291, -290, -261, -257, -214, -71, -44 ]
         },
@@ -664,7 +670,8 @@ window.drops = {
             thumb: 392,
             global: true,
             condition: 'You can only get STR, QCK, INT and Food Orbs',
-            challenge: 'Total number hits over 50,000',
+            challenge: 'Total number of hits over 50,000',
+            challengeData: [['3 Times','1x Green Elder'],['12 Times','1x RCV Cotton Candy'],['25 Times','3x Rainbow Gems']],
             Expert: [ 391, 393, 394, -394, -393, -329, -316, -47, -34, -4 ],
             Elite: [ 391, 393, 394, -394, -393, -329, -316, -47, -34, -4 ]
         },
@@ -692,6 +699,7 @@ window.drops = {
             global: true,
             condition: 'You can only get STR, DEX, INT and PSY Orbs',
             challenge: 'Total Damage dealt to enemies',
+            challengeData: [['500,000 Damage','1x Black Elder'],['1,500,000 Damage','1x ATK Cotton Candy'],['3,000,000 Damage','3x Rainbow Gems']],
             Expert: [ 423, 425, -425, -327, -310, -223, -219, -214, -202 ],
             Elite: [ 423, 425, -425, -327, -310, -223, -219, -214, -202 ]
         },
@@ -717,6 +725,7 @@ window.drops = {
         {
             name: 'Jailbreaking Baroque Works',
             thumb: 462,
+            global: true,
             condition: 'Striker, Shooter and Slashers are weakend.',
             Expert: [ 460, 461, -398, -396, -370, -361, -253, -236, -234 ],
             Elite: [ 460, 461, -398, -396, -370, -361, -253, -236, -234 ]
@@ -751,6 +760,8 @@ window.drops = {
             name: 'Brother Soul! Afro Luffy!',
             thumb: 571,
             global: true,
+            challenge: 'Total number of hits over 50,000',
+            challengeData: [['3 Times','1x Red Elder'],['12 Times','1x RCV Cotton Candy'],['34 Times','3x Rainbow Gems & 1x Skull Book']],
             Expert: [ 570, 572, 573, -431, -429, -410, -333, -332, -327, -316, -75 ],
             Elite: [ 570, 572, 573, -431, -429, -410, -333, -332, -327, -316, -75 ]
         },
@@ -760,7 +771,8 @@ window.drops = {
             thumb: 583,
             global: true,
             condition: 'All Units considered from the “Sea” will lose 20% to all stats',
-			challenge: 'Total number hits over 50,000',
+			challenge: 'Total number of hits over 50,000',
+            challengeData: [['4 Times','1x Black Elder'],['16 Times','1x ATK Cotton Candy'],['38 Times','3x Rainbow Gems']],
             Expert: [ 581, 582, 583, 584, -584, -544, -466, -412, -371, -335, -314, -291 ],
             Elite: [ 581, 582, 583, 584, -584, -544, -466, -412, -371, -335, -314, -291 ]
         },

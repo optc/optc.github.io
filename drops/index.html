@@ -56,7 +56,8 @@
                     <i class="fa fa-chevron-right"></i>
                     <i class="fa fa-chevron-down"></i>
                     <span>{{island.name}}</span>
-                    <i class="fa fa-globe" ng-show="island.global"></i>
+                    <i class="fa fa-globe" ng-show="island.global" title="Available On Global"></i>
+                    <i class="fa fa-star" ng-show="island.challenge" title="Challenge Available"></i>
                     <bonus-list ng-if="type == 'Story Island'" y="$index"></bonus-list>
                     <day-label ng-if="type == 'Weekly Island'"></day-label>
                 </h3>
@@ -68,24 +69,29 @@
                 <tbody>
                     <tr ng-if="island.completion" hide-when-empty>
                         <td>Completion</td>
-                        <td>{{island.completion}} </td>
+                        <td colspan="2">{{island.completion}} </td>
                     </tr>
                     <tr ng-if="island.condition" hide-when-empty>
                         <td>Condition</td>
-                        <td>{{island.condition}} </td>
+                        <td colspan="2">{{island.condition}} </td>
                     </tr>
                     <tr ng-if="island.challenge">
                         <td>Challenge</td>
-                        <td>{{island.challenge}} </td>
+                        <td colspan="2">{{island.challenge}} </td>
+                    </tr>
+                    <tr ng-repeat="challenge in island.challengeData">
+                        <td></td>
+                        <td>{{challenge[0]}}</td>
+                        <td>{{challenge[1]}}</td>
                     </tr>
                 </tbody>
                 <tbody>
                     <tr ng-repeat="(stage,data) in island"
-                        ng-if="stage != 'thumb' && stage != 'day' && stage != 'name' && stage != 'shortName' && stage != 'global' && stage != 'condition' && stage != 'challenge' && stage != 'completion'">
+                        ng-if="stage != 'thumb' && stage != 'day' && stage != 'name' && stage != 'shortName' && stage != 'global' && stage != 'condition' && stage != 'challenge' && stage != 'completion' && stage != 'challengeData'">
                         <td>
                             {{type == 'Story Island'&& stage!='Completion Units' ? 'Stage ' + stage : (stage.length < 2 ? 'Any' : stage)}}
                         </td>
-                        <td hide-when-empty>
+                        <td hide-when-empty colspan="2">
                             <a ng-repeat="uid in data | smartSort:'false'" ng-if="uid > 0 && !hiddenUnits[uid]"
                                 decorate-slot uid="uid" class="slot small" 
                                 href="../characters/#/view/{{uid}}" target="_blank"
