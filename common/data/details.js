@@ -4268,13 +4268,13 @@
 	923: {
 		captain: "Boosts ATK of Ambition characters proportionally to the crew's current HP",
 		captainNotes: "#{captainProportional : lower : 2 + .75 * (1 - (remaining HP) / (total HP)) : 1.5 : 3.25}",
-		special: "Empties all slots with [STR] orbs, deals several times the character's ATK in STR damage to one enemy",
+		special: "Empties all slots, deals STR damage based on number of [STR] slots emptied to one enemy",
 		specialNotes: "The exact multiplier used is chosen based on the number of [STR] orbs consumed: 1 orb will give a 10x multiplier, 2 orbs 15x, 3 orbs 20x, 4 orbs 50x, 5 orbs 100x, 6 orbs 200x. It's not possible to activate the special without consuming at least one [STR] orb."
 	},
 	924: {
 		captain: "Boosts ATK of Ambition characters proportionally to the crew's current HP",
 		captainNotes: "#{captainProportional : lower : 2 + .75 * (1 - (remaining HP) / (total HP)) : 1.5 : 3.25}",
-		special: "Empties all slots with [STR] orbs, deals several times the character's ATK in STR damage to one enemy",
+		special: "Empties all slots, deals STR damage based on number of [STR] slots emptied to one enemy",
 		specialNotes: "The exact multiplier used is chosen based on the number of [STR] orbs consumed: 1 orb will give a 10x multiplier, 2 orbs 15x, 3 orbs 20x, 4 orbs 50x, 5 orbs 100x, 6 orbs 200x. It's not possible to activate the special without consuming at least one [STR] orb."
 	},
 	925: {
