@@ -2088,7 +2088,7 @@ window.captains = {
 	},
 	912: {
 		atk: function(p) { return p.unit.class.has("Tough") ? 2.25 : 1; },
-		hp: function(p) { return p.unit.class.has("Tough") ? 2.25 : 1; }
+		hp: function(p) { return p.unit.class.has("Tough") ? 1.5 : 1; }
 	},
 	913: {
 		atk: function(p) { return p.unit.type != "QCK" ? 1 : (p.orb == 2.0 ? 3 : 1); }
@@ -2132,7 +2132,7 @@ window.captains = {
 		atk: function(p) { return p.unit.class.has("Tough") ? 2 : 1; }
 	},
 	926: {
-		atk: function(p) { return p.unit.class.has("Tough") ? 2 : 1; }
+		atk: function(p) { return p.unit.class.has("Tough") ? 2.5 : 1; }
 	},
 	927: {
 		atk: function(p) { return p.unit.class.has("Ambition") ? 1.5 : 1; },

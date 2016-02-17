@@ -4280,11 +4280,11 @@
 		special: "Deals 15x ATK to 1 enemy in [QCK] damage, boosts damage dealt to enemies with reduced DEF by 1.3x"
 	},
 	926: {
-		captain: "Boosts ATK of Tough characters by 2x",
+		captain: "Boosts ATK of Tough characters by 2.5x",
 		special: "Deals 15x ATK to 1 enemy in [QCK] damage, boosts damage dealt to enemies with reduced DEF by 1.3x"
 	},
 	927: {
 		captain: "Boosts ATK and HP of Ambition Units by 1.5x",
-		special: "Take 1.5x Additional damage; Slasher and Ambition type characters gain 1.2x ATK for 1 turn"
+		special: "Take 1.5x Additional damage; Slasher and Ambition type characters gain 1.2x ATK for 3 turns"
 	}
 };
