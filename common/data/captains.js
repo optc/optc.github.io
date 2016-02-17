@@ -2120,12 +2120,20 @@ window.captains = {
 	},
 	923: {
 		atk: function(p) {
-			return p.unit.class.has("Ambition") ? 2 + .75 * ((100 - p.percHP) / 100) : 1;
+            if(p.percHP<30){ 
+                return p.unit.class.has("Ambition") ? 2.5 : 1;
+            } else {
+                return p.unit.class.has("Ambition") ? 2 : 1;
+            }	
 		}
 	},
 	924: {
 		atk: function(p) {
-			return p.unit.class.has("Ambition") ? 2 + .75 * ((100 - p.percHP) / 100) : 1;
+			if(p.percHP<30){
+                return p.unit.class.has("Ambition") ? 2.75 : 1;
+            } else {
+                return p.unit.class.has("Ambition") ? 2 : 1;
+            }
 		}
 	},
 	925: {

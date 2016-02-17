@@ -4272,21 +4272,21 @@ window.details = {
 		specialNotes: "The exact multiplier used is chosen based on the number of [STR] orbs consumed: 1 orb will give a 10x multiplier, 2 orbs 15x, 3 orbs 20x, 4 orbs 50x, 5 orbs 100x, 6 orbs 200x. It's not possible to activate the special without consuming at least one [STR] orb."
 	},
 	924: {
-		captain: "oosts ATK of Ambition characters by 2x or by 2.75x",
+		captain: "Boosts ATK of Ambition characters by 2x or by 2.75x",
 		captainNotes: "#{captainFixed : 2x : HP<30% : 2.75x}",
 		special: "Empties all slots, deals STR damage based on number of [STR] slots emptied to one enemy",
 		specialNotes: "The exact multiplier used is chosen based on the number of [STR] orbs consumed: 1 orb will give a 10x multiplier, 2 orbs 15x, 3 orbs 20x, 4 orbs 50x, 5 orbs 100x, 6 orbs 200x. It's not possible to activate the special without consuming at least one [STR] orb."
 	},
 	925: {
 		captain: "Boosts ATK of Tough characters by 2x",
-		special: "Deals 15x ATK to 1 enemy in [QCK] damage, boosts damage dealt to enemies with reduced DEF by 1.3x for 3 turns"
+		special: "Deals 15x ATK to 1 enemy in [QCK] damage, boosts ATK against enemies with reduced defense by 1.3x for 3 turns"
 	},
 	926: {
 		captain: "Boosts ATK of Tough characters by 2.5x",
-		special: "Deals 15x ATK to 1 enemy in [QCK] damage, boosts damage dealt to enemies with reduced DEF by 1.3x for 3 turns"
+		special: "Deals 15x ATK to 1 enemy in [QCK] damage, boosts ATK against enemies with reduced defense by 1.3x for 3 turns"
 	},
 	927: {
 		captain: "Boosts ATK and HP of Ambition Units by 1.5x",
-		special: "Take 1.5x Additional damage; Slasher and Ambition type characters gain 1.2x ATK for 3 turns"
+		special: "Take 1.5x Additional damage; Boosts ATK of Slasher and Ambition characters by 1.2x for 3 turns"
 	}
 };

@@ -1038,5 +1038,13 @@ window.specials = {
     },
     922: {
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, 1, 1.5); }
+    },
+    925: {
+        atk: function(p) { return p.defenseDown ? 1.3 : 1; },
+		type: "condition"
+    },
+    926: {
+        atk: function(p) { return p.defenseDown ? 1.3 : 1; },
+		type: "condition"
     }
 };
