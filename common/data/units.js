@@ -919,11 +919,11 @@ window.units = [
 	[ "Marguerite, Warrior Defending Her Country", "QCK", "Shooter", 4, 20, 5, 2, 99, 3000000, 854, 516, 145, 1563, 1070, 335, 0 ],
 	[ "Aphelandra", "QCK", "Slasher", 3, 15, 6, 1, 70, 1066998, 98, 42, 32, 2001, 604, 141, 1 ],
 	[ "Sweet Pea", "STR", [ "Tough", "Shooter" ], 3, 15, 4, 2, 70, 1066998, 210, 157, 26, 1041, 1041, 155, 1 ],
-	["Bride Boa", "INT", ["Shooter","Freedom"], 4 , 13 , 4 , 2 , 50 ,null, 142 , 91 , 46 ,null,null,null,null],
-	["Bride Boa Evolution", "INT", ["Shooter","Freedom"], 5 , 20 , 4 , 3 , 99 ,null, 832 , 497 , 106 ,1913,1012,294,1],
-	["Colosseum Kid", "STR", ["Striker","Ambition"], 4, 25, 4, 2, 70, null, 710, 309, 44,null,null,null,null],
-	["Colosseum Kid Evolution", "STR", ["Striker","Ambition"], 5, 40, 4, 3, 99, null, 1549, 640, 112,null,null,null,null],
-	["Colosseum Sadi", "QCK", ["Striker","Freedom"],4, 18, 6, 1, 50,null, 413, 246, 88, 977, 544, 191, 1],
-	["Colosseum Sadi Evolution", "QCK", ["Striker","Freedom"], 5, 30, 4, 3, 99, null, 920, 488, 159, 1901, 912, 357, 1],
-	["Colosseum Vice Admiral Doberman", "INT", ["Slasher","Ambition"], 4, 20, 6, 2, 70,null, 200, 210, 71, 1085, 951, 205, 1]
+	["Boa Hancock, Bride of the Island of Women", "INT", ["Shooter","Freedom"], 4 , 13 , 4 , 2 , 50 ,null, 142 , 91 , 46 ,null,null,null,null],
+	["Empress in Love Hancock, Wedding", "INT", ["Shooter","Freedom"], 5 , 20 , 4 , 3 , 99 ,null, 832 , 497 , 106 ,1913,1012,294,1],
+	["South Blue's Captain Kid", "STR", ["Striker","Ambition"], 4, 25, 4, 2, 70, null, 710, 309, 44,null,null,null,null],
+	["Captain Kid, Captain of the Kid Pirates", "STR", ["Striker","Ambition"], 5, 40, 4, 3, 99, null, 1549, 640, 112,null,null,null,null],
+	["Chief Guard Sadi-chan", "QCK", ["Striker","Freedom"],4, 18, 6, 1, 50,null, 413, 246, 88, 977, 544, 191, 1],
+	["Chief Guard Sadi-chan, Commander of the Jailer Beasts", "QCK", ["Striker","Freedom"], 5, 30, 4, 3, 99, null, 920, 488, 159, 1901, 912, 357, 1],
+	["Doberman, Navy HQ Vice Admiral", "INT", ["Slasher","Ambition"], 4, 20, 6, 2, 70,null, 200, 210, 71, 1085, 951, 205, 1]
 ];
