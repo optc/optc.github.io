@@ -924,6 +924,6 @@
 	["Colosseum Kid", "STR", ["Striker","Ambition"], 4, 25, 4, 2, 70, null, 710, 309, 44,null,null,null,null],
 	["Colosseum Kid Evolution", "STR", ["Striker","Ambition"], 5, 40, 4, 3, 99, null, 1549, 640, 112,null,null,null,null],
 	["Colosseum Sadi", "QCK", ["Striker","Freedom"],4, 18, 6, 1, 50,null, 413, 246, 88, 977, 544, 191, 1],
-	["Colosseum Sadi Evolution", "QCK", ["Striker","Freedom"], 5, 30, 4, 3, 99, null, 920, 488, 159,null,null,null,null],
-	["Colosseum Vice Admiral Doberman", "INT", ["Slasher","Ambition"], 4, 20, 6, 2, 70,null, 200, 210, 71,null,null,null,null]
+	["Colosseum Sadi Evolution", "QCK", ["Striker","Freedom"], 5, 30, 4, 3, 99, null, 920, 488, 159, 1901, 912, 357, 1],
+	["Colosseum Vice Admiral Doberman", "INT", ["Slasher","Ambition"], 4, 20, 6, 2, 70,null, 200, 210, 71, 1085, 951, 205, 1]
 ];
