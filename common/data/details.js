@@ -1863,12 +1863,12 @@ window.details = {
 	},
 	461: {
 		special: "Changes own orb into [DEX] and randomizes every other orb, boosts ATK of Fighter characters by 1.25x for 2 turns",
-		specialName: "Swan Arabesque",
+		specialName: "Escape Dance: White Swan Arabesque",
 		captain: "Boosts ATK of Fighter characters by 2x"
 	},
 	462: {
 		special: "Changes own orb into [DEX] and randomizes every other orb, boosts ATK of Fighter characters by 1.25x for 2 turns",
-		specialName: "Swan Arabesque",
+		specialName: "Escape Dance: White Swan Arabesque",
 		captain: "Boosts ATK of Fighter characters by 2x"
 	},
 	463: {
@@ -2500,12 +2500,12 @@ window.details = {
 		captain: "Boosts HP and RCV of PSY characters by 1.5x"
 	},
 	587: {
-		special: "Removes poison, reduces Bind and Seal duration by 2 turns",
+		special: "Removes poison, reduces Bind and Silence duration by 2 turns",
 		specialName: "Merciful Painkiller",
 		captain: "Recovers 3x character's RCV in HP at the end of each turn"
 	},
 	588: {
-		special: "Removes poison, reduces Bind and Seal duration by 2 turns",
+		special: "Removes poison, reduces Bind and Silence duration by 2 turns",
 		specialName: "Merciful Painkiller",
 		captain: "Recovers 5x character's RCV in HP at the end of each turn"
 	},

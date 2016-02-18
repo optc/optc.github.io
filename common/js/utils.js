@@ -5,7 +5,7 @@ var FODDER_REGEX = new RegExp('(' + [
     'Skypiea (Guard|Enforcer)', 'Shandian',
     '(Seaman|Major|Corporal) Navy', 'Hoodlum.+Bounty Hunter', 'Black Cat Pirates',
     'Arlong crewmember', 'Gunner|Cannoneer|Assassin Master', 'Giant.*Pirates',
-    '(Soldier|General) Zombie.*Shadow', 'Wild Zombie'
+    '(Soldier|General) Zombie.*Shadow', 'Wild Zombie','Street Punk'
 ].join(')|(') + ')','i');
 
 var utils = { };

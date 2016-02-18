@@ -1,4 +1,4 @@
-﻿window.units = [
+window.units = [
 	[ "Monkey D. Luffy", "STR", "Fighter", 2, 1, 5, 0, 5, 163, 42, 15, 8, 134, 68, 15, 1 ],
 	[ "Monkey D. Luffy Gum-Gum Pistol", "STR", "Fighter", 3, 4, 6, 0, 20, 26184, 130, 76, 14, 510, 249, 49, 0.7 ],
 	[ "Monkey D. Luffy Gum-Gum Bazooka", "STR", "Fighter", 4, 7, 6, 2, 35, 136167, 404, 227, 39, 975, 522, 105, 1 ],
@@ -459,7 +459,7 @@
 	[ "Sengoku", "PSY", [ "Fighter", "Knowledge" ], 5, 30, 4, 4, 70, 1066998, 610, 278, 157, 2020, 758, 228, 1 ],
 	[ "Sengoku the Buddha", "PSY", [ "Fighter", "Knowledge" ], 6, 54, 4, 5, 99, 5000000, 1962, 711, 191, 3429, 1338, 389, 1 ],
 	[ "Criminal Galdino Mr. 3", "PSY", [ "Slasher", "Knowledge" ], 3, 12, 4, 2, 70, 1066998, 588, 333, 133, 1033, 687, 233, 1 ],
-	[ "Fugitive Bentham Mr. 2 Bon Clay", "DEX", [ "Fighter", "Freedom" ], 3, 12, 5, 1, 50, 392109, 178, 104, 32, 980, 529, 187, 1 ],
+	[ "Escapee Bentham Mr. 2 Bon Clay", "DEX", [ "Fighter", "Freedom" ], 3, 12, 5, 1, 50, 392109, 178, 104, 32, 980, 529, 187, 1 ],
 	[ "Prison Break Expert Mr. 2 Bon Clay", "DEX", [ "Fighter", "Freedom" ], 4, 20, 4, 2, 99, 3000000, 921, 460, 146, 1830, 978, 323, 1 ],
 	[ "Satori", "PSY", [ "Shooter", "Knowledge" ], 4, 15, 4, 2, 70, 1066998, 479, 190, 158, 1422, 576, 272, 1 ],
 	[ "Shura", "INT", "Striker", 4, 15, 4, 2, 70, 1066998, 330, 420, 93, 1030, 1002, 175, 1 ],
@@ -615,7 +615,7 @@
 	[ "Zambai", "PSY", "Shooter", 3, 16, 4, 2, 70, 1066998, 230, 90, 48, 1580, 702, 168, 1 ],
 	[ "Demolisher Axeman", "STR", [ "Slasher", "Tough" ], 3, 20, 6, 1, 60, 899032, 1200, 500, 15, 1500, 900, 35, 1.5 ],
 	[ "Demolisher Spearman", "STR", [ "Striker", "Tough" ], 3, 20, 6, 1, 60, 899032, 1200, 500, 16, 1700, 800, 38, 1.5 ],
-	[ "Demolisher Gunner", "STR", [ "Shooter", "Tough" ], 3, 20, 6, 1, 60, 899032, 1200, 500, 14, 1300, 1000, 32, 1.5 ],
+	[ "Demolisher G\0unner", "STR", [ "Shooter", "Tough" ], 3, 20, 6, 1, 60, 899032, 1200, 500, 14, 1300, 1000, 32, 1.5 ],
 	[ "Street Punk: Brawler Red Bounty Hunter", "STR", "Fighter", 3, 13, 6, 1, 60, 674274, 102, 85, 28, 1158, 790, 90, 1 ],
 	[ "Street Punk: Brawler Green Bounty Hunter", "DEX", "Fighter", 3, 13, 6, 1, 60, 674274, 108, 75, 32, 1175, 754, 102, 1 ],
 	[ "Street Punk: Blade Blue Bounty Hunter", "QCK", "Slasher", 3, 13, 5, 1, 60, 674274, 153, 66, 40, 1215, 653, 128, 1 ],
