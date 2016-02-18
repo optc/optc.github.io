@@ -4056,8 +4056,7 @@ window.details = {
 		captain: "Boosts ATK and RCV of Tough characters by 1.75x",
 		specialName: "Resurrection of the Dead",
 		special: "Reduces damage received by 50% for 1 turn, boosts ATK of Tough characters by 1.25x for 1 turn",
-		specialNotes: "SPECIALNOTES"
-	},
+		},
 	892: {
 		captain: "Boosts chain multiplier by 2x",
 		specialName: "Hands of the Dead",

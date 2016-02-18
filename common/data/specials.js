@@ -882,12 +882,14 @@ window.specials = {
 		atk: function(p) {
 			return p.unit.class.has("Shooter") || p.unit.class.has("Freedom") ? 1.75 : 1;
 		},
+		rcv: function(p) { .1; },
 		type: "class"
 	},
 	882: {
 		atk: function(p) {
 			return p.unit.class.has("Shooter") || p.unit.class.has("Freedom") ? 1.75 : 1;
 		},
+		rcv: function(p) { .1; },
 		type: "class"
 	},
 	883: {
@@ -1046,5 +1048,11 @@ window.specials = {
     926: {
         atk: function(p) { return p.defenseDown ? 1.3 : 1; },
 		type: "condition"
+    },
+	927: {
+        atk: function(p) {
+			return p.unit.class.has("Slasher") || p.unit.class.has("Ambition") ? 1.2 : 1;
+		},
+		type: "class"
     }
 };
