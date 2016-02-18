@@ -882,11 +882,14 @@ window.specials = {
 		atk: function(p) {
 			return p.unit.class.has("Shooter") || p.unit.class.has("Freedom") ? 1.75 : 1;
 		},
-		rcv: function(p) { return 2; },
+		rcv: function(p) { return 0.1; },
 		type: "class"
 	},
 	882: {
-		rcv: function(p) { return 0.5; },
+		atk: function(p) {
+			return p.unit.class.has("Shooter") || p.unit.class.has("Freedom") ? 1.75 : 1;
+		},
+		rcv: function(p) { return 0.1; },
 		type: "class"
 	},
 	883: {
