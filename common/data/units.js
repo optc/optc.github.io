@@ -921,7 +921,7 @@ window.units = [
 	[ "Sweet Pea", "STR", [ "Tough", "Shooter" ], 3, 15, 4, 2, 70, 1066998, 210, 157, 26, 1041, 1041, 155, 1 ],
 	["Boa Hancock, Bride of the Island of Women", "INT", ["Shooter","Freedom"], 4 , 13 , 4 , 2 , 50 ,null, 142 , 91 , 46 ,null,null,null,null],
 	["Empress in Love Hancock, Wedding", "INT", ["Shooter","Freedom"], 5 , 20 , 4 , 3 , 99 ,null, 832 , 497 , 106 ,1913,1012,294,1],
-	["South Blue's Captain Kid", "STR", ["Striker","Ambition"], 4, 25, 4, 2, 70, null, 710, 309, 44,null,null,null,null],
+	["South Blue's Captain Kid", "STR", ["Striker","Ambition"], 4, 25, 4, 2, 70, null, 710, 309, 44,1600,703,146,null],
 	["Captain Kid, Captain of the Kid Pirates", "STR", ["Striker","Ambition"], 5, 40, 4, 3, 99, null, 1549, 640, 112,2727,1319,224,1],
 	["Chief Guard Sadi-chan", "QCK", ["Striker","Freedom"],4, 18, 6, 1, 50,392109, 413, 246, 88, 977, 544, 191, null],
 	["Chief Guard Sadi-chan, Commander of the Jailer Beasts", "QCK", ["Striker","Freedom"], 5, 30, 4, 3, 99, null, 920, 488, 159, 1901, 912, 357, 1],
