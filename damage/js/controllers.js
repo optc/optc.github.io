@@ -224,6 +224,14 @@ controllers.ResetCtrl = function($scope, $state, $storage) {
         $state.go('^');
     };
 };
+    
+/*******************
+ * InstructionCtrl *
+ ******************/
+
+controllers.InstructionCtrl = function() {
+    //Do nothing
+};
 
 /*************
  * CandyCtrl *

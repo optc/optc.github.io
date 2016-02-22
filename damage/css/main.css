@@ -102,16 +102,14 @@ body, html {
 }
 
 #instructions {
-    position: relative;
-    text-align: center;
-    padding: 25px;
-    z-index: 8;
+    padding-left:10px
 }
-#instructions > p > span {
-    background: skyblue;
-    padding: 2px;
-    border-radius: 5px;
+
+#instructions > ul {
+    list-style-type: none;
+    margin-left: 15px;
 }
+
 
 /******************
  * MAIN UNIT PANE *
