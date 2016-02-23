@@ -921,13 +921,13 @@ window.units = [
 	[ "Sweet Pea", "STR", [ "Tough", "Shooter" ], 3, 15, 4, 2, 70, 1066998, 210, 157, 26, 1041, 1041, 155, 1 ],
 	["Boa Hancock, Bride of the Island of Women", "INT", ["Shooter","Freedom"], 4 , 13 , 4 , 2 , 50 ,null, 142 , 91 , 46 ,912,556,153,null],
 	["Empress in Love Hancock, Wedding", "INT", ["Shooter","Freedom"], 5 , 20 , 4 , 3 , 99 ,null, 832 , 497 , 106 ,1913,1012,294,1],
-	["South Blue's Captain Kid", "STR", ["Striker","Ambition"], 4, 25, 4, 2, 70, null, 710, 309, 44,1600,703,146,null],
-	["Captain Kid, Captain of the Kid Pirates", "STR", ["Striker","Ambition"], 5, 40, 4, 3, 99, null, 1549, 640, 112,2727,1319,224,1],
-	["Chief Guard Sadi-chan", "QCK", ["Striker","Freedom"],4, 18, 6, 1, 50,392109, 413, 246, 88, 977, 544, 191, null],
-	["Chief Guard Sadi-chan, Commander of the Jailer Beasts", "QCK", ["Striker","Freedom"], 5, 30, 4, 3, 99, null, 920, 488, 159, 1901, 912, 357, 1],
-	["Doberman, Navy HQ Vice Admiral", "INT", ["Slasher","Ambition"], 4, 20, 6, 2, 70,null, 200, 210, 71, 1085, 951, 205, 1],
-	["Hannyabal", "DEX", ["Ambition","Striker"],3, 13, 6, 1, 50, null, 157, 44, 39, null, null, null, null],
-	["Hannyabal Evolved", "DEX", ["Ambition","Striker"],4, 20, 4, 2, 99, 1333, 429, 102, null, null, null, null, null],
-	["Saldeath", "INT", ["Striker","Knowledge"], 3, 15, 4, 2, 70, null, 34, 25, 34, null, null, null, null],
-	["Blugori", "DEX", ["Tough","Slasher"], 3, 11, 4, 0, 50, null, 103, 99, 1, null, null, null, null]
+	["South Blue's Captain Kid", "STR", ["Striker","Ambition"], 4, 25, 4, 2, 70, 1066998, 710, 309, 44,1600,703,146,1],
+	["Captain Kid, Captain of the Kid Pirates", "STR", ["Striker","Ambition"], 5, 40, 4, 3, 99, 4000000, 1549, 640, 112,2727,1319,224,1],
+	["Chief Guard Sadi-chan", "QCK", ["Striker","Freedom"],4, 18, 6, 1, 50,392109, 413, 246, 88, 977, 544, 191, 1],
+	["Chief Guard Sadi-chan, Commander of the Jailer Beasts", "QCK", ["Striker","Freedom"], 5, 30, 4, 3, 99, 3000000, 920, 488, 159, 1901, 912, 357, 1],
+	["Doberman, Navy HQ Vice Admiral", "INT", ["Slasher","Ambition"], 4, 20, 6, 2, 70, 1778330, 200, 210, 71, 1085, 951, 205, 1],
+	["Hannyabal", "DEX", ["Ambition","Striker"],3, 13, 6, 1, 50, 392109, 157, 44, 39, 1412, 497, 151, 1],
+	["Hannyabal Evolved", "DEX", ["Ambition","Striker"],4, 20, 4, 2, 99, 3000000, 1333, 429, 102, 2603, 940, 205, 1],
+	["Saldeath", "INT", ["Striker","Knowledge"], 3, 15, 4, 2, 70, 1066998, 34, 25, 34, 1095, 501, 274, 1],
+	["Blugori", "DEX", ["Tough","Slasher"], 3, 11, 4, 0, 50, 392109, 103, 99, 1, 1119, 999, 31, 1]
 ];
