@@ -2158,9 +2158,9 @@ window.captains = {
 	929: {
 		atk: function(p) {
 			if(p.percHP<30){
-                return p.unit.class.has("Ambition") ? 1.75 : 1;
+                return p.unit.class.has("Ambition") ? 2.25 : 1;
             } else {
-                return p.unit.class.has("Striker") ? 1.75 : 1;
+                return p.unit.class.has("Striker") ? 2.25 : 1;
             }
 		}
 	},

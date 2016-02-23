@@ -929,5 +929,8 @@ window.units = [
 	["Hannyabal", "DEX", ["Ambition","Striker"],3, 13, 6, 1, 50, 392109, 157, 44, 39, 1412, 497, 151, 1],
 	["Hannyabal Evolved", "DEX", ["Ambition","Striker"],4, 20, 4, 2, 99, 3000000, 1333, 429, 102, 2603, 940, 205, 1],
 	["Saldeath", "INT", ["Striker","Knowledge"], 3, 15, 4, 2, 70, 1066998, 34, 25, 34, 1095, 501, 274, 1],
-	["Blugori", "DEX", ["Tough","Slasher"], 3, 11, 4, 0, 50, 392109, 103, 99, 1, 1119, 999, 31, 1]
+	["Blugori", "DEX", ["Tough","Slasher"], 3, 11, 4, 0, 50, 392109, 103, 99, 1, 1119, 999, 31, 1],
+	["Pica", null, [null], 4, null, null, null, null, null, null, null, null, null, null, null, null],
+	["Pica Evolved", null, [null], 5, null, null, null, null, null, null, null, null, null, null, null, null]
+
 ];
