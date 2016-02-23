@@ -2145,5 +2145,26 @@ window.captains = {
 	927: {
 		atk: function(p) { return p.unit.class.has("Ambition") ? 1.5 : 1; },
 		hp: function(p) { return p.unit.class.has("Ambition") ? 1.5 : 1; }
+	},
+	928: {
+		atk: function(p) {
+			if(p.percHP<30){
+                return p.unit.class.has("Ambition") ? 1.75 : 1;
+            } else {
+                return p.unit.class.has("Striker") ? 1.75 : 1;
+            }
+		}
+	},
+	929: {
+		atk: function(p) {
+			if(p.percHP<30){
+                return p.unit.class.has("Ambition") ? 1.75 : 1;
+            } else {
+                return p.unit.class.has("Striker") ? 1.75 : 1;
+            }
+		}
+	},
+	930: {
+		chainModifier: function(p) { return 2; }
 	}
 };

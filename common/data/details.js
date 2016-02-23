@@ -4294,5 +4294,24 @@ window.details = {
 		captain: "Boosts ATK and HP of Ambition Units by 1.5x",
 		specialName: "Unwavering Hammer of Justice",
 		special: "Take 1.5x Additional damage; Boosts ATK of Slasher and Ambition characters by 1.2x for 3 turns"
+	},
+	928: {
+		captain: "Boosts ATK of Ambition Characters by 1.75x while above 30% HP and boosts ATK of Impact Characters by 1.75x while below 30% HP",
+		special: "Deals 7x his ATK in [DEX] damage to all enemies, and boosts ATK against Poisoned units by 1.3x for 3 turns",
+		specialName: "Hell Wisdom Rush"
+	},
+	929: {
+		captain: "Boosts ATK of Ambition Characters by 1.75x while above 30% HP and boosts ATK of Impact Characters by 1.75x while below 30% HP",
+		special: "Deals 7x his ATK in [DEX] damage to all enemies, and boosts ATK against Poisoned units by 1.3x for 3 turns",
+		specialName: "Hannyabal Evolved Special"
+	},
+	930: {
+		captain: "Boosts chain multiplier by 2x",
+		specialName: "Blugori Flute",
+		special: "Changes orbs in left column to [DEX], then [QCK], then [INT]. Locks himself for 3 turns."
+	},
+	931: {
+		specialName: "Blugori Attack",
+		special: "Deals 13x ATK to 1 enemy in [DEX] Damage. Turns [BLOCK] orbs into [RCV] orbs"
 	}
 };

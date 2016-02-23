@@ -940,6 +940,14 @@ window.drops = {
             condition: 'You can only bring DEX units',
             Expert: [ 917, 919, 920, -920, -791, -756, -720, -706, -705, -542, -541, -522 ],
             Elite: [ 917, 919, 920, -920, -791, -756, -720, -706, -705, -542, -541, -522 ]
+        },
+		
+		{
+            name: "Hannyabal's Great Ambition",
+            thumb: 929,
+            condition: 'You can only bring STR units',
+            Expert: [ 928, 929, 930, 931 ],
+            Elite: [ 928, 929, 930, 931 ]
         }
 
     ],
