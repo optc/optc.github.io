@@ -926,8 +926,8 @@ window.units = [
 	["Chief Guard Sadi-chan", "QCK", ["Striker","Freedom"],4, 18, 6, 1, 50,392109, 413, 246, 88, 977, 544, 191, null],
 	["Chief Guard Sadi-chan, Commander of the Jailer Beasts", "QCK", ["Striker","Freedom"], 5, 30, 4, 3, 99, null, 920, 488, 159, 1901, 912, 357, 1],
 	["Doberman, Navy HQ Vice Admiral", "INT", ["Slasher","Ambition"], 4, 20, 6, 2, 70,null, 200, 210, 71, 1085, 951, 205, 1],
-	["Hannyabal", "QCK", ["Striker","Freedom"],4, 13, 6, 1, 50, null, 157, 44, 39, null, null, null, null],
-	["Hannyabal Evolved", "QCK", ["Striker","Freedom"],5, 18, 6, 1, 50, null, null, null, null, null, null, null, null],
+	["Hannyabal", "DEX", ["Ambition","Striker"],3, 13, 6, 1, 50, null, 157, 44, 39, null, null, null, null],
+	["Hannyabal Evolved", "DEX", ["Ambition","Striker"],4, 20, 4, 2, 99, 1333, 429, 102, null, null, null, null, null],
 	["Saldeath", "INT", ["Striker","Knowledge"], 3, 15, 4, 2, 70, null, 34, 25, 34, null, null, null, null],
 	["Blugori", "DEX", ["Tough","Slasher"], 3, 11, 4, 0, 50, null, 103, 99, 1, null, null, null, null]
 ];
