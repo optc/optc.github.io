@@ -209,18 +209,11 @@ window.effects = {
         comboShield: 26
     },
 
-    'Hancock chain bug': {
-        description: 'Allows higher than usual chain multipliers',
-        thumb: 865,
-        id: 24, // don't change this
-        chainLimiter: function(p) { return Infinity; }
-    },
-
     'There\'s the G!': {
         description: 'Activates [G] orb support even when Lao-G is not in the team',
         thumb: 880,
-        id: 25, // don't change this
+        id: 24, // don't change this
         gOrbsEnabled: true
-    },
+    }
 
 };
