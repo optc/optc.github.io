@@ -42,10 +42,13 @@
         <script src="../common/js/dismissal.js"></script>
 
         <script src="../characters/js/utils.js"></script>
+        
+        <script src="../common/libs/js/moment.js"></script>
+        <script src="../common/libs/js/moment-timezone.js"></script>
 
     </head>
 
-    <body ng-controller="MainCtrl">
+    <body ng-controller="MainCtrl" onload="updateTimes()">
 
         <script type="text/ng-template" id="type.html">
             <div ng-repeat="island in data[type]" ng-if="island.name != 'Oars Special'" class="island collapsed"
@@ -134,7 +137,11 @@
             </div>
 
             <h1 class="page-header">Bonus Table</h1>
-
+            
+            <div>
+                <p id="times"></p>
+            </div>
+            
             <table class="table table-striped" id="bonus-table" add-bonuses>
                 <thead>
                     <tr>

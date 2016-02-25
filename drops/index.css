@@ -188,3 +188,6 @@ h1 > label > input {
 .bonus.JP:before {
     content: "JP: ";
 }
+#times {
+    text-align: center;
+}

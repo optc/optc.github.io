@@ -224,3 +224,13 @@ app.filter('smartSort',function($rootScope) {
 });
 
 })();
+
+function refreshTimer(){
+var refresh=1000; // Refresh rate in milli seconds
+mytime=setTimeout('updateTimes()',refresh)
+}
+
+function updateTimes(){
+    document.getElementById("times").innerHTML = "Global: <b>"+moment().tz('America/Los_Angeles').format('LTS')+"</b> | Japan: <b>"+moment().tz('Asia/Tokyo').format('LTS')+"</b>";
+    tt=refreshTimer();
+}
