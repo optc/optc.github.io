@@ -930,7 +930,16 @@ window.units = [
 	["Hannyabal, Impel Down Vice Warden", "DEX", ["Ambition","Striker"],4, 20, 4, 2, 99, 3000000, 1333, 429, 102, 2603, 940, 205, 1],
 	["Saldeath", "INT", ["Striker","Knowledge"], 3, 15, 4, 2, 70, 1066998, 34, 25, 34, 1095, 501, 274, 1],
 	["Blugori", "DEX", ["Tough","Slasher"], 3, 11, 4, 0, 50, 392109, 103, 99, 1, 1119, 999, 31, 1],
-	["Pica", null, [null], 4, null, null, null, null, null, null, null, null, null, null, null, null],
-	["Pica Evolved", null, [null], 5, null, null, null, null, null, null, null, null, null, null, null, null]
-
+	["Raid Pica", "PSY", ["Tough","Ambition"], 4, null, null, null, null, null, null, null, null, null, null, null, null],
+	["Raid Pica Evolved", "PSY", ["Tough","Ambition"], 5, null, null, null, null, null, null, null, null, null, null, null, null],
+    ["Legend Jimbei", "INT", ["Fighter","Tough"], 5, null, null, null, null, null, null, null, null, null, null, null, null],
+    ["Legend Jimbei Evolved", "INT", ["Fighter","Tough"], 6, null, null, null, null, null, null, null, null, null, null, null, null],
+    ["3D2Y Luffy", "QCK", ["Fighter","Freedom"], 4, null, null, null, null, null, null, null, null, null, null, null, null],
+    ["3D2Y Luffy Evolved", "QCK", ["Fighter","Freedom"], 5, null, null, null, null, null, null, null, null, null, null, null, null],
+    ["3D2Y Nami", "PSY", ["Stiker","Knowledge"], 4, null, null, null, null, null, null, null, null, null, null, null, null],
+    ["3D2Y Nami Evolved", "PSY", ["Stiker","Knowledge"], 5, null, null, null, null, null, null, null, null, null, null, null, null],
+    ["3D2Y Usopp", "DEX", "Fighter", 4, null, null, null, null, null, null, null, null, null, null, null, null],
+    ["3D2Y Usopp Evolved", "DEX", "Shooter", 5, null, null, null, null, null, null, null, null, null, null, null, null],
+    ["3D2Y Franky", "STR", ["Freedom","Shooter"], 4, null, null, null, null, null, null, null, null, null, null, null, null],
+    ["3D2Y Franky Evolved", "STR", ["Stiker","Knowledge"], 5, null, null, null, null, null, null, null, null, null, null, null, null]
 ];
