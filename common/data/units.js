@@ -941,5 +941,5 @@ window.units = [
     ["3D2Y Usopp", "DEX", "Fighter", 4, null, null, null, null, null, null, null, null, null, null, null, null],
     ["3D2Y Usopp Evolved", "DEX", "Shooter", 5, null, null, null, null, null, null, null, null, null, null, null, null],
     ["3D2Y Franky", "STR", ["Freedom","Shooter"], 4, null, null, null, null, null, null, null, null, null, null, null, null],
-    ["3D2Y Franky Evolved", "STR", ["Stiker","Knowledge"], 5, null, null, null, null, null, null, null, null, null, null, null, null]
+    ["3D2Y Franky Evolved", "STR", ["Stiker","Shooter"], 5, null, null, null, null, null, null, null, null, null, null, null, null]
 ];
