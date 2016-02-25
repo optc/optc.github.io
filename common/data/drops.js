@@ -1072,6 +1072,13 @@ window.drops = {
             Ultimate: [ 864 ],
             Master: [ 864 ],
             Expert: [ 864 ]
+        },
+        
+        {
+            name: 'Clash!! Pica',
+            thumb: 932,
+            Master: [ 932 ],
+            Expert: [ 932 ]
         }
 
     ],
