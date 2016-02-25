@@ -231,12 +231,12 @@ mytime=setTimeout('updateTimes()',refresh)
 }
 
 function updateTimes(){
-    document.getElementById("times").innerHTML = "Global: <b>"+moment().tz('America/Los_Angeles').format('LTS')+"</b> | Japan: <b>"+moment().tz('Asia/Tokyo').format('LTS')+"</b>";
+    document.getElementById("times").innerHTML = "Global: <b>"+moment().tz('America/Los_Angeles').format('H:mm:ss')+"</b> | Japan: <b>"+moment().tz('Asia/Tokyo').format('H:mm:ss')+"</b>";
     
-    if(moment().tz('Asia/Tokyo').format('H')>12){
+    if(moment().tz('Asia/Tokyo').format('H')>12 && moment().tz('Asia/Tokyo').format('H')<23){
         document.getElementById("timesNote").innerHTML = "<b>Japan Bonuses are currently active<b>";
     }else{
-         document.getElementById("timesNote").innerHTML = "The Events in the Japanese Version only last from 12AM till 12PM";
+         document.getElementById("timesNote").innerHTML = "The Events in the Japanese Version only last from 12:00 till 23:00";
     }
     tt=refreshTimer();
 }
