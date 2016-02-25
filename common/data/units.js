@@ -936,10 +936,10 @@ window.units = [
     ["Legend Jimbei Evolved", "INT", ["Fighter","Tough"], 6, null, null, null, null, null, null, null, null, null, null, null, null],
     ["3D2Y Luffy", "QCK", ["Fighter","Freedom"], 4, null, null, null, null, null, null, null, null, null, null, null, null],
     ["3D2Y Luffy Evolved", "QCK", ["Fighter","Freedom"], 5, null, null, null, null, null, null, null, null, null, null, null, null],
-    ["3D2Y Nami", "PSY", ["Stiker","Knowledge"], 4, null, null, null, null, null, null, null, null, null, null, null, null],
-    ["3D2Y Nami Evolved", "PSY", ["Stiker","Knowledge"], 5, null, null, null, null, null, null, null, null, null, null, null, null],
+    ["3D2Y Nami", "PSY", ["Striker","Knowledge"], 4, null, null, null, null, null, null, null, null, null, null, null, null],
+    ["3D2Y Nami Evolved", "PSY", ["Striker","Knowledge"], 5, null, null, null, null, null, null, null, null, null, null, null, null],
     ["3D2Y Usopp", "DEX", "Fighter", 4, null, null, null, null, null, null, null, null, null, null, null, null],
     ["3D2Y Usopp Evolved", "DEX", "Shooter", 5, null, null, null, null, null, null, null, null, null, null, null, null],
     ["3D2Y Franky", "STR", ["Freedom","Shooter"], 4, null, null, null, null, null, null, null, null, null, null, null, null],
-    ["3D2Y Franky Evolved", "STR", ["Stiker","Shooter"], 5, null, null, null, null, null, null, null, null, null, null, null, null]
+    ["3D2Y Franky Evolved", "STR", ["Freedom","Shooter"], 5, null, null, null, null, null, null, null, null, null, null, null, null]
 ];
