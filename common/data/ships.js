@@ -187,7 +187,7 @@ window.ships = [
             [ 1.2, 1.2, 1.2, 1.25, 1.25, 1.3, 1.3, 1.4, 1.4, 1.5 ][p.boatLevel - 1];
         },
         hp: function(p) {
-            return !p.unit.class.has('Freedom') ? 0.3 :
+            return !p.unit.class.has('Freedom') ? 0.01 :
                 [ 1, 1.1, 1.1, 1.1, 1.2, 1.2, 1.25, 1.25, 1.35, 1.35 ][p.boatLevel - 1];
         }
     }
