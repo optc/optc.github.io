@@ -4320,11 +4320,11 @@ window.details = {
 		special: [
 			{
 				"description": "For Ambition and Tough characters, changes [EMPTY] and Bad orbs to Matching. Cuts enemy HP by 10%",
-				"cooldown": 25
+				"cooldown": [ 24, 11 ]
 			},
 			{
 				"description": "For all characters, changes [EMPTY] and Bad orbs to Matching. Cuts enemy HP by 20%",
-				"cooldown": 31
+				"cooldown": [ 31, 17 ]
 			}
 		],
 		specialNotes: "#{stages}"	
@@ -4335,11 +4335,11 @@ window.details = {
 		special: [
 			{
 				"description": "For Ambition and Tough characters, changes [EMPTY] and Bad orbs to Matching. Cuts enemy HP by 10%",
-				"cooldown": 25
+				"cooldown": [ 24, 11 ]
 			},
 			{
-				"description": "For Ambition and Tough characters, changes [EMPTY] and Bad orbs to Matching. Cuts enemy HP by 20%",
-				"cooldown": 31
+				"description": "For all characters, changes [EMPTY] and Bad orbs to Matching. Cuts enemy HP by 20%",
+				"cooldown": [ 31, 17 ]
 			}
 		],
 		specialNotes: "#{stages}"
