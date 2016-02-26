@@ -4313,7 +4313,7 @@ window.details = {
 	931: {
 		specialName: "Large Axe of Punishment",
 		special: "Deals 13x ATK to 1 enemy in [DEX] Damage. Turns [BLOCK] orbs into [RCV] orbs"
-	}
+	},
 	932: {
 		captain: "Boosts ATK of Tough Characters by 1.5x, and their HP by 1.5x",
 		specialName: "Rock Domination Wall",
@@ -4327,7 +4327,8 @@ window.details = {
 				"cooldown": 31
 			}
 		],
-		specialNotes: "#{stages}"	}
+		specialNotes: "#{stages}"	
+		},
 	933: {
 		captain: "Boosts ATK of Tough Characters by 2.25x, and their HP by 1.5x",
 		specialName: "Rock Domination Wall",
