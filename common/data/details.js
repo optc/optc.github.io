@@ -4341,6 +4341,6 @@ window.details = {
 				"cooldown": 31
 			}
 		],
-		specialNotes: "#{stages}"	}
+		specialNotes: "#{stages}"
 	}
 };
