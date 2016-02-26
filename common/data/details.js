@@ -4314,4 +4314,33 @@ window.details = {
 		specialName: "Large Axe of Punishment",
 		special: "Deals 13x ATK to 1 enemy in [DEX] Damage. Turns [BLOCK] orbs into [RCV] orbs"
 	}
+	932: {
+		captain: "Boosts ATK of Tough Characters by 1.5x, and their HP by 1.5x",
+		specialName: "Rock Domination Wall",
+		special: [
+			{
+				"description": "For Ambition and Tough characters, changes [EMPTY] and Bad orbs to Matching. Cuts enemy HP by 10%",
+				"cooldown": 25
+			},
+			{
+				"description": "For all characters, changes [EMPTY] and Bad orbs to Matching. Cuts enemy HP by 20%",
+				"cooldown": 31
+			}
+		],
+		specialNotes: "#{stages}"	}
+	933: {
+		captain: "Boosts ATK of Tough Characters by 2.25x, and their HP by 1.5x",
+		specialName: "Rock Domination Wall",
+		special: [
+			{
+				"description": "For Ambition and Tough characters, changes [EMPTY] and Bad orbs to Matching. Cuts enemy HP by 10%",
+				"cooldown": 25
+			},
+			{
+				"description": "For Ambition and Tough characters, changes [EMPTY] and Bad orbs to Matching. Cuts enemy HP by 20%",
+				"cooldown": 31
+			}
+		],
+		specialNotes: "#{stages}"	}
+	}
 };

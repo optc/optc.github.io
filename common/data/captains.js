@@ -2166,5 +2166,13 @@ window.captains = {
 	},
 	930: {
 		chainModifier: function(p) { return 2; }
+	},
+	932: {
+		atk: function(p) { return p.unit.class.has("Tough") ? 2.25 : 1; },
+		hp: function(p) { return p.unit.class.has("Tough") ? 1.5 : 1; }
+	},
+	933: {
+		atk: function(p) { return p.unit.class.has("Tough") ? 2.25 : 1; },
+		hp: function(p) { return p.unit.class.has("Tough") ? 1.5 : 1; }
 	}
 };
