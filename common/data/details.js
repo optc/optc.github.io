@@ -4320,7 +4320,7 @@ window.details = {
 		special: [
 			{
 				"description": "For Ambition and Tough characters, changes [EMPTY] and Bad orbs to Matching. Cuts enemy HP by 10%",
-				"cooldown": [ 24, 11 ]
+				"cooldown": [ 25, 11 ]
 			},
 			{
 				"description": "For all characters, changes [EMPTY] and Bad orbs to Matching. Cuts enemy HP by 20%",
@@ -4335,7 +4335,7 @@ window.details = {
 		special: [
 			{
 				"description": "For Ambition and Tough characters, changes [EMPTY] and Bad orbs to Matching. Cuts enemy HP by 10%",
-				"cooldown": [ 24, 11 ]
+				"cooldown": [ 25, 11 ]
 			},
 			{
 				"description": "For all characters, changes [EMPTY] and Bad orbs to Matching. Cuts enemy HP by 20%",
