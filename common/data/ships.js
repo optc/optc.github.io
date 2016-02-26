@@ -179,16 +179,16 @@ window.ships = [
     },
     
     { //14
-        name: 'Boa Ship',
+        name: 'Kuja Pirate Ship',
         thumb: null,
         description: 'Boosts ATK of Freedom characters by 1.5x and their HP by 1.35x, reduces the HP of everyone else by ?x. Special: heals the crew by 6,500HP (cooldown: 15 turns).',
         atk: function(p) {
             return !p.unit.class.has('Freedom') ? 1 :
-            [ 1.2, 1.2, 1.2, 1.25, 1.25, 1.3, 1.3, 1.4, 1.4, 1.5 ][p.boatLevel - 1];
+            [ 1.2, 1.2, 1.2, 1.2, 1.2, 1.3, 1.3, 1.3, 1.4, 1.5 ][p.boatLevel - 1];
         },
         hp: function(p) {
             return !p.unit.class.has('Freedom') ? 0.01 :
-                [ 1, 1.1, 1.1, 1.1, 1.2, 1.2, 1.25, 1.25, 1.35, 1.35 ][p.boatLevel - 1];
+                [ 1.2, 1.2, 1.2, 1.2, 1.2, 1.3, 1.3, 1.3, 1.3, 1.35 ][p.boatLevel - 1];
         }
     }
 
