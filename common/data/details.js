@@ -4343,5 +4343,13 @@ window.details = {
 			}
 		],
 		specialNotes: "#{stages}"
+	},
+	943: {
+		specialName: "The Nightmare of Barujimoa",
+		special: "Reduces damage receied from [QCK] enemies by 100% for 1 turn"
+	},
+	944: {
+		specialName: "The Nightmare of Barujimoa",
+		special: "Reduces damage receied from [QCK] enemies by 100% for 1 turn"
 	}
 };
