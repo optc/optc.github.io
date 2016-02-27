@@ -898,7 +898,9 @@ window.drops = {
         {
             name: "Legendary Shipbuilding Company Tom's Workers",
             thumb: 848,
-            condition: 'You can only bring Impact and Freedom units',
+            condition: 'You can only bring Impact and Freedom units. (No Evo/Boosters)',
+            challenge: 'Total Damage dealt to enemies in one turn',
+            challengeData: [['100,000 Damage','1x DEX Elder Turtle'],['500,000 Damage','1x Rainbow Gem, 1x ATK Cotton Candy'],['2,000,000 Damage','2x Rainbow Gems, 1x Auto-Heal Forbidden Tome']],
             Expert: [ 847, 849, 850, -849, -647, -617, -616, -615, -578, -508, -455 ],
             Elite: [ 847, 849, 850, -849, -647, -617, -616, -615, -578, -508, -455 ]
         },
