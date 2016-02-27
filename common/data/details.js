@@ -4344,6 +4344,14 @@ window.details = {
 		],
 		specialNotes: "#{stages}"
 	},
+	940: {
+		specialName: "Fat Usopp Special",
+		special: "Deals [DEX] damage to all enemies, and boosts the ATK of [DEX] characters"
+	},
+	941: {
+		specialName: "Fat Usopp Special",
+		special: "Deals [DEX] damage to all enemies, and boosts the ATK of [DEX] characters"
+	},
 	943: {
 		specialName: "The Nightmare of Barujimoa",
 		special: "Reduces damage receied from [QCK] enemies by 100% for 1 turn"
