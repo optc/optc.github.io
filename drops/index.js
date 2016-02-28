@@ -236,7 +236,7 @@ function updateTimes(){
     if(moment().tz('Asia/Tokyo').format('H')>12 && moment().tz('Asia/Tokyo').format('H')<23){
         document.getElementById("timesNote").innerHTML = "<b>Japan Bonuses are currently active<b>";
     }else{
-         document.getElementById("timesNote").innerHTML = "The Events in the Japanese Version only last from 12:00 till 23:00";
+         document.getElementById("timesNote").innerHTML = "The  in the Japanese Version only last from 12:00 till 23:00";
     }
     tt=refreshTimer();
 }
