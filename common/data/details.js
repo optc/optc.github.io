@@ -4344,19 +4344,27 @@ window.details = {
 		],
 		specialNotes: "#{stages}"
 	},
+	938: {
+		specialName: "Cyclone Burst",
+		special: "Reduces Bind duration for one character completely, for Striker and Knowledge characters, changes Bad orbs to Matching"
+	},
+	939: {
+		specialName: "Cyclone Burst",
+		special: "Reduces Bind duration for one character completely, for Striker and Knowledge characters, changes Bad orbs to Matching"
+	},
 	940: {
-		specialName: "Fat Usopp Special",
+		specialName: "Sure Kill: Exploding Star",
 		special: "Deals [DEX] damage to all enemies, and boosts the ATK of [DEX] characters"
 	},
 	941: {
-		specialName: "Fat Usopp Special",
+		specialName: "Sure Kill: Exploding Star",
 		special: "Deals [DEX] damage to all enemies, and boosts the ATK of [DEX] characters"
 	},
-	943: {
+	942: {
 		specialName: "The Nightmare of Barujimoa",
 		special: "Reduces damage receied from [QCK] enemies by 100% for 1 turn"
 	},
-	944: {
+	943: {
 		specialName: "The Nightmare of Barujimoa",
 		special: "Reduces damage receied from [QCK] enemies by 100% for 1 turn"
 	}
