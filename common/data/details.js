@@ -4344,6 +4344,16 @@ window.details = {
 		],
 		specialNotes: "#{stages}"
 	},
+	936: {
+		specialName: "Luffy Special",
+		special: "Deals QCK damage, and makes Perfects easier to hit",
+		specialNotes: "Not sure how this will work at the moment"
+	},
+	937: {
+		specialName: "Luffy Special",
+		special: "Deals QCK damage, and makes Perfects easier to hit",
+		specialNotes: "Not sure how this will work at the moment"
+	},
 	938: {
 		specialName: "Cyclone Burst",
 		special: "Reduces Bind duration for one character completely, for Striker and Knowledge characters, changes Bad orbs to Matching"
