@@ -2687,12 +2687,14 @@ window.details = {
 	632: {
 		special: "Randomly changes all orbs into either [STR], [PSY] or [INT] orbs, deals random STR damage to all enemies, reduces the defense of all enemies by 50% for 2 turns",
 		specialName: "Finger Pistol: Yellow Lotus",
-		captain: "Boosts ATK of Fighter characters by 1.5x"
+		captain: "Boosts ATK of Fighter characters by 1.5x",
+		specialNotes: "#{random : 2,000 : 20,000}"
 	},
 	633: {
 		special: "Randomly changes all orbs into either [STR], [PSY] or [INT] orbs, deals random STR damage to all enemies, reduces the defense of all enemies by 50% for 2 turns",
 		specialName: "Finger Pistol: Yellow Lotus",
-		captain: "Boosts ATK of Fighter characters by 2x"
+		captain: "Boosts ATK of Fighter characters by 2x",
+		specialNotes: "#{random : 2,000 : 20,000}"
 	},
 	634: {
 		special: "Boosts chances of getting [QCK] and [PSY] orbs for 3 turns, boosts ATK of QCK and PSY characters by 1.2x for 3 turns",
