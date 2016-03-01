@@ -4346,38 +4346,66 @@ window.details = {
 		],
 		specialNotes: "#{stages}"
 	},
+	934: {
+		captain: "Boosts the ATK of Fighter Characters by 2x, and their HP by 1.5x. If HP is above 70% or below 30%, boosts Fighter Characters ATK by 2.75 instead",
+		specialName: "Legend Jinbei Special",
+		special: "For 1 turn, Perfects become harder to hit. Deals Large [INT] damage to all enemies. Change all Fighter Character orbs to Matching"
+	},
+	935: {
+		captain: "Boosts the ATK of Fighter Characters by 2x, and their HP by 1.5x. If HP is above 70% or below 30%, boosts Fighter Characters ATK by 2.75 instead",
+		specialName: "Legend Jinbei Special",
+		special: "For 1 turn, Perfects become harder to hit. Deals Large [INT] damage to all enemies. Change all Fighter Character orbs to Matching"
+	},
 	936: {
+		captain: "Boosts Chain Multiplier by 3x",
 		specialName: "Luffy Special",
-		special: "Deals QCK damage, and makes Perfects easier to hit",
+		special: "Deals 20x ATK as [QCK] damage, and makes Perfects easier to hit",
 		specialNotes: "Not sure how this will work at the moment"
 	},
 	937: {
+		captain: "Boosts Chain Multiplier by 3.5x and boosts HP by 1.2x",
 		specialName: "Luffy Special",
-		special: "Deals QCK damage, and makes Perfects easier to hit",
+		special: "Deals 20x ATK as [QCK] damage, and makes Perfects easier to hit",
 		specialNotes: "Not sure how this will work at the moment"
 	},
 	938: {
+		captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of Knowledge characters by 2x",
 		specialName: "Cyclone Burst",
-		special: "Reduces Bind duration for one character completely, for Striker and Knowledge characters, changes Bad orbs to Matching"
+		special: "Reduces Bind duration for one character completely. For Striker and Knowledge characters, changes Bad orbs to Matching"
 	},
 	939: {
+		captain: "Reduces cooldown of all specials by 3 turns at the start of the fight, boosts ATK of Knowledge characters by 2x",
 		specialName: "Cyclone Burst",
-		special: "Reduces Bind duration for one character completely, for Striker and Knowledge characters, changes Bad orbs to Matching"
+		special: "Reduces Bind duration for one character completely. For Striker and Knowledge characters, changes Bad orbs to Matching"
 	},
 	940: {
+		captain: "Boosts [DEX] Characters ATK and HP by 1.5x",
 		specialName: "Sure Kill: Exploding Star",
-		special: "Deals [DEX] damage to all enemies, and boosts the ATK of [DEX] characters"
+		special: "Deals 13x ATK as [DEX] damage to all enemies, and boosts the ATK of [DEX] characters by 1.75x for 1 turn"
 	},
 	941: {
+		captain: "Boosts [DEX] Characters ATK by 2.25x and their HP by 1.75x",
 		specialName: "Sure Kill: Exploding Star",
-		special: "Deals [DEX] damage to all enemies, and boosts the ATK of [DEX] characters"
+		special: "Deals 13x ATK as [DEX] damage to all enemies, and boosts the ATK of [DEX] characters by 1.75x for 1 turn"
 	},
 	942: {
+		captain: "Boosts [STR] Characters ATK and HP by 1.5x",
 		specialName: "The Nightmare of Barujimoa",
 		special: "Reduces damage receied from [QCK] enemies by 100% for 1 turn"
 	},
 	943: {
+		captain: "Boosts [STR] Characters ATK by 2.25x and their HP by 1.75x",
 		specialName: "The Nightmare of Barujimoa",
 		special: "Reduces damage receied from [QCK] enemies by 100% for 1 turn"
+	},
+	944: {
+		captain: "Boosts the ATK and RCV of Ambition Characters by 1.2x",
+		specialName: "Bridal Perona Special",
+		special: "Boosts the ATK and RCV of Ambition Characters by 1.5x for 1 turn"
+	},
+	945: {
+		captain: "Boosts the ATK and RCV of Ambition Characters by 1.2x",
+		specialName: "Bridal Perona Special",
+		special: "Boosts the ATK and RCV of Ambition Characters by 1.5x for 1 turn"
 	}
 };

@@ -727,5 +727,16 @@ window.flags = {
 	915: { rr: 1, rro: 1, lrr: 1 },
 	916: { rr: 1, rro: 1, lrr: 1 },
     921: { rr: 1, rro: 1, lrr: 1 },
-    922: { rr: 1, rro: 1, lrr: 1 }
+    922: { rr: 1, rro: 1, lrr: 1 },
+	934: { rr: 1, rro: 1 },
+	935: { rr: 1, rro: 1 },
+	936: { rr: 1, rro: 1 },
+	937: { rr: 1, rro: 1 },
+	938: { rr: 1, rro: 1 },
+	939: { rr: 1, rro: 1 },
+	940: { rr: 1, rro: 1 },
+	941: { rr: 1, rro: 1 },
+	942: { rr: 1, rro: 1 },
+	943: { rr: 1, rro: 1, lrr: 1 },
+	944: { rr: 1, rro: 1, lrr: 1 }
 };

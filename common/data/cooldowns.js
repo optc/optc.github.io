@@ -932,14 +932,16 @@ window.cooldowns = [
 	[ 30, 17 ],
 	null, //Pica has Stages - Look into details
 	null, //Pica has Stages - Look into details
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null
+    19,
+    19,
+    19,
+    19,
+    24,
+    24,
+    21,
+    21,
+    15,
+	15,
+    13,
+	13
 ];
