@@ -18,6 +18,8 @@ app.controller('MainCtrl',function($scope, $rootScope, $timeout, $controller) {
     $rootScope.query = '';
     $scope.data = drops;
     $scope.hiddenUnits = [ ];
+    var searchQuery = location.search.replace('?','');
+    
 
     // units
     $scope.reverse = function(x) { return -x; };
@@ -33,6 +35,11 @@ app.controller('MainCtrl',function($scope, $rootScope, $timeout, $controller) {
         if (!$scope.$$phase) $scope.$apply();
     };
 
+    //Use URI for one time search
+    if(searchQuery!=""){
+        $scope.query = Utils.getRegex(decodeURI(searchQuery.replace(/Adrift!?|%20Fortnight|%20Raid/g,"")));
+    }
+    
     $controller('DismissalCtrl');
 
 });
@@ -239,4 +246,8 @@ function updateTimes(){
          document.getElementById("timesNote").innerHTML = "The  in the Japanese Version only last from 12:00 till 23:00";
     }
     tt=refreshTimer();
+}
+window.onload = function() {
+    //Also add the URI Search into the Search Bar
+    document.getElementById("search").value = decodeURI(location.search.replace('?','').replace(/Adrift!?|%20Fortnight|%20Raid/g,""));
 }

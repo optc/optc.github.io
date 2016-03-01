@@ -359,7 +359,7 @@
                             <tr ng-if="!collapsed.drops || drops.length < 4" ng-repeat="drop in drops">
                                 <td>
                                     <div class="slot small" decorate-slot uid="drop.thumb"></div>
-                                    {{drop.name}}
+                                    <a href="{{'../drops/?'+drop.name}}" target="_blank">{{drop.name}}</a>
                                     <span ng-repeat="bonus in drop.bonuses" class="bonus {{bonus.slice(0,2)}} {{bonus.slice(3)}}"></span>
                                 </td>
                                 <td>{{drop.data.join(', ')}}</td>
@@ -391,7 +391,7 @@
                             <tr ng-if="!collapsed.manuals || manuals.length < 4" ng-repeat="drop in manuals">
                                 <td>
                                     <div class="slot small" decorate-slot uid="drop.thumb"></div>
-                                    {{drop.name}}
+                                    <a href="{{'../drops/?'+drop.name}}" target="_blank">{{drop.name}}</a>
                                 </td>
                                 <td>{{drop.data.join(', ')}}</td>
                             </tr>

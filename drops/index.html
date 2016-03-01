@@ -123,7 +123,7 @@
                 <label><input type="checkbox" ng-model="noEvolverBooster" ng-change="changeFilters()">Hide Boosters and Evolvers</label>
                 <label><input type="checkbox" ng-model="sortByType" ng-change="changeSorting()">Sort by type</label>
                 <input class="pull-right" type="text" placeholder="Filter by name" auto-focus
-                    ng-model="queryFilter" ng-model-options="{ debounce: 500 }" ng-change="changeQueryFilter()">
+                    ng-model="queryFilter" ng-model-options="{ debounce: 500 }" ng-change="changeQueryFilter()" id="search">
             </h1>
 
             <div ng-repeat="type in [ 'Story Island', 'Weekly Island', 'Fortnight', 'Raid', 'Special' ]"
