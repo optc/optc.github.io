@@ -4391,12 +4391,12 @@ window.details = {
 	942: {
 		captain: "Boosts [STR] Characters ATK and HP by 1.5x",
 		specialName: "The Nightmare of Barujimoa",
-		special: "Reduces damage receied from [QCK] enemies by 100% for 1 turn"
+		special: "Reduces damage received from [QCK] enemies by 100% for 1 turn"
 	},
 	943: {
 		captain: "Boosts [STR] Characters ATK by 2.25x and their HP by 1.75x",
 		specialName: "The Nightmare of Barujimoa",
-		special: "Reduces damage receied from [QCK] enemies by 100% for 1 turn"
+		special: "Reduces damage received from [QCK] enemies by 100% for 1 turn"
 	},
 	944: {
 		captain: "Boosts the ATK and RCV of Ambition Characters by 1.2x",
