@@ -935,7 +935,7 @@ window.units = [
     ["Legend Jimbei", "INT", ["Fighter","Tough"], 5, 30, 5, 4, 70, null, 572, 268, 102, null, null, null, null],
     ["Legend Jimbei Evolved", "INT", ["Fighter","Tough"], 6, 55, 4, 5, 99, null, 1787, 733, 179, 3400, 1440, 347, 1],
     ["3D2Y Luffy", "QCK", ["Fighter","Freedom"], 4, 18, 7, 3, 70, null, 151, 150, 21, null, null, null, null],
-    ["3D2Y Luffy Evolved", "QCK", ["Fighter","Freedom"], 5, null, null, null, null, null, null, null, null, null, null, null, null],
+    ["3D2Y Luffy Evolved", "QCK", ["Fighter","Freedom"], 5, 30, 4, 4, 99, null, 1173, 712, 99, null, null, null, null, null],
     ["3D2Y Nami", "PSY", ["Striker","Knowledge"], 4, 18, 4, 3, 70, null, 141, 80, 48, null, null, null, null],
     ["3D2Y Nami Evolved", "PSY", ["Striker","Knowledge"], 5, 30, 5, 4, 99, null, 1037, 522, 189, null, null, null, null],
     ["3D2Y Usopp", "DEX", "Fighter", 4, 18, 6, 3, 70, null, 271, 52, 34, null, null, null, null],

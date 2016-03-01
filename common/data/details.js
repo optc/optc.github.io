@@ -4349,24 +4349,26 @@ window.details = {
 	934: {
 		captain: "Boosts the ATK of Fighter Characters by 2x, and their HP by 1.5x. If HP is above 70% or below 30%, boosts Fighter Characters ATK by 2.75 instead",
 		specialName: "Legend Jinbei Special",
-		special: "For 1 turn, Perfects become harder to hit. Deals Large [INT] damage to all enemies. Change all Fighter Character orbs to Matching"
+		special: "For 1 turn, Perfects become harder to hit. Deals Large [INT] damage to all enemies. Change all Fighter Character orbs to Matching",
+		specialNotes: "Decreases timing window to hit a Perfect. (Animation remains the same)"
 	},
 	935: {
 		captain: "Boosts the ATK of Fighter Characters by 2x, and their HP by 1.5x. If HP is above 70% or below 30%, boosts Fighter Characters ATK by 2.75 instead",
 		specialName: "Legend Jinbei Special",
-		special: "For 1 turn, Perfects become harder to hit. Deals Large [INT] damage to all enemies. Change all Fighter Character orbs to Matching"
+		special: "For 1 turn, Perfects become harder to hit. Deals Large [INT] damage to all enemies. Change all Fighter Character orbs to Matching",
+		specialNotes: "Decreases timing window to hit a Perfect. (Animation remains the same)"
 	},
 	936: {
 		captain: "Boosts Chain Multiplier by 3x",
 		specialName: "Luffy Special",
 		special: "Deals 20x ATK as [QCK] damage, and makes Perfects easier to hit",
-		specialNotes: "Not sure how this will work at the moment"
+		specialNotes: "Increases timing window to hit a Perfect. (Animation remains the same)"
 	},
 	937: {
 		captain: "Boosts Chain Multiplier by 3.5x and boosts HP by 1.2x",
 		specialName: "Luffy Special",
 		special: "Deals 20x ATK as [QCK] damage, and makes Perfects easier to hit",
-		specialNotes: "Not sure how this will work at the moment"
+		specialNotes: "Increases timing window to hit a Perfect. (Animation remains the same)"
 	},
 	938: {
 		captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of Knowledge characters by 2x",
