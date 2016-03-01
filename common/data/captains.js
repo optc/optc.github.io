@@ -2182,7 +2182,8 @@ window.captains = {
             } else {
                 return p.unit.class.has("Fighter") ? 2 : 1;
             }
-		}
+		},
+		hp: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; }
 	},
 	935: {
 		atk: function(p) {
@@ -2191,7 +2192,8 @@ window.captains = {
             } else {
                 return p.unit.class.has("Fighter") ? 2 : 1;
             }
-		}
+		},
+		hp: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; }
 	},
 	936: {
 		chainModifier: function(p) { return 3; }
