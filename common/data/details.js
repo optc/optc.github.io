@@ -4365,13 +4365,13 @@ window.details = {
 		specialNotes: "Increases timing window to hit a Perfect. (Animation remains the same)"
 	},
 	937: {
-		captain: "Boosts Chain Multiplier by 3.5x and boosts HP by 1.2x",
+		captain: "Boosts Chain Multiplier by 3.5x and boosts HP by 1.25x",
 		specialName: "Luffy Special",
 		special: "Deals 20x ATK as [QCK] damage, and makes Perfects easier to hit",
 		specialNotes: "Increases timing window to hit a Perfect. (Animation remains the same)"
 	},
 	938: {
-		captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of Knowledge characters by 2x",
+		captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of Knowledge characters by 1.5x",
 		specialName: "Cyclone Burst",
 		special: "Reduces Bind duration for one character completely. For Striker and Knowledge characters, changes Bad orbs to Matching"
 	},
@@ -4386,7 +4386,7 @@ window.details = {
 		special: "Deals 13x ATK as [DEX] damage to all enemies, and boosts the ATK of [DEX] characters by 1.75x for 1 turn"
 	},
 	941: {
-		captain: "Boosts [DEX] Characters ATK by 2.25x and their HP by 1.75x",
+		captain: "Boosts [DEX] Characters ATK by 1.5x and their HP by 2.25x",
 		specialName: "Sure Kill: Exploding Star",
 		special: "Deals 13x ATK as [DEX] damage to all enemies, and boosts the ATK of [DEX] characters by 1.75x for 1 turn"
 	},
@@ -4406,7 +4406,7 @@ window.details = {
 		special: "Boosts the ATK and RCV of Ambition Characters by 1.5x for 1 turn"
 	},
 	945: {
-		captain: "Boosts the ATK and RCV of Ambition Characters by 1.2x",
+		captain: "Boosts the ATK and RCV of Ambition Characters by 1.75x",
 		specialName: "Bridal Perona Special",
 		special: "Boosts the ATK and RCV of Ambition Characters by 1.5x for 1 turn"
 	}
