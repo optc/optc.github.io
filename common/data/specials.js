@@ -1064,5 +1064,23 @@ window.specials = {
         atk: function(p) { return 1.3; },
 		type: "condition",
 		warning: "Selected special (%name%) assumes that the enemy has been poisoned."
+    },
+	940: {
+		atk: function(p) { return p.unit.type == "DEX" ? 1.75 : 1; },
+		type: "type"
+    },
+	941: {
+		atk: function(p) { return p.unit.type == "DEX" ? 1.75 : 1; },
+		type: "type"
+    },
+	944: {
+		atk: function(p) { return p.unit.class.has("Ambition") ? 1.5 : 1; },
+		rcv: function(p) { return p.unit.class.has("Ambition") ? 1.5 : 1; },
+		type: "class"
+    },
+	945: {
+		atk: function(p) { return p.unit.class.has("Ambition") ? 1.5 : 1; },
+		rcv: function(p) { return p.unit.class.has("Ambition") ? 1.5 : 1; },
+		type: "class"
     }
 };
