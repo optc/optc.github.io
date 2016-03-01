@@ -934,7 +934,7 @@ window.units = [
 	["Pica, Donquixote Pirates", "PSY", ["Tough","Ambition"], 5, 50, 4, 2, 99, 5000000, 1660, 552, 5, 4050, 1180, 9, 1],
     ["Legend Jimbei", "INT", ["Fighter","Tough"], 5, 30, 5, 4, 70, null, 572, 268, 102, null, null, null, null],
     ["Legend Jimbei Evolved", "INT", ["Fighter","Tough"], 6, 55, 4, 5, 99, null, 1787, 733, 179, 3400, 1440, 347, 1],
-    ["3D2Y Luffy", "QCK", ["Fighter","Freedom"], 4, 18, 7, 3, 70, null, 151, 150, 21, null, null, null, null],
+    ["3D2Y Luffy", "QCK", ["Fighter","Freedom"], 4, 18, 7, 3, 70, null, 151, 150, 21, 1220, 764, 149, null],
     ["3D2Y Luffy Evolved", "QCK", ["Fighter","Freedom"], 5, 30, 4, 4, 99, null, 1173, 712, 99, null, null, null, null, null],
     ["3D2Y Nami", "PSY", ["Striker","Knowledge"], 4, 18, 4, 3, 70, null, 141, 80, 48, null, null, null, null],
     ["3D2Y Nami Evolved", "PSY", ["Striker","Knowledge"], 5, 30, 5, 4, 99, null, 1037, 522, 189, null, null, null, null],
