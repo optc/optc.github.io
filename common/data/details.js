@@ -4348,25 +4348,25 @@ window.details = {
 	},
 	934: {
 		captain: "Boosts the ATK of Fighter Characters by 2x, and their HP by 1.5x. If HP is above 70% or below 30%, boosts Fighter Characters ATK by 2.75 instead",
-		specialName: "Legend Jinbei Special",
+		specialName: "Fishman Karate!! Shark Fist Tile Breaker",
 		special: "For 1 turn, Perfects become harder to hit. Deals Large [INT] damage to all enemies. Change all Fighter Character orbs to Matching",
 		specialNotes: "Decreases timing window to hit a Perfect. (Animation remains the same)"
 	},
 	935: {
 		captain: "Boosts the ATK of Fighter Characters by 2x, and their HP by 1.5x. If HP is above 70% or below 30%, boosts Fighter Characters ATK by 2.75 instead",
-		specialName: "Legend Jinbei Special",
+		specialName: "Fishman Karate!! Shark Fist Tile Breaker",
 		special: "For 1 turn, Perfects become harder to hit. Deals Large [INT] damage to all enemies. Change all Fighter Character orbs to Matching",
 		specialNotes: "Decreases timing window to hit a Perfect. (Animation remains the same)"
 	},
 	936: {
 		captain: "Boosts Chain Multiplier by 3x",
-		specialName: "Luffy Special",
+		specialName: "Gum-Gum Giant Jet Shell",
 		special: "Deals 20x ATK as [QCK] damage, and makes Perfects easier to hit",
 		specialNotes: "Increases timing window to hit a Perfect. (Animation remains the same)"
 	},
 	937: {
 		captain: "Boosts Chain Multiplier by 3.5x and boosts HP by 1.25x",
-		specialName: "Luffy Special",
+		specialName: "Gum-Gum Giant Jet Shell",
 		special: "Deals 20x ATK as [QCK] damage, and makes Perfects easier to hit",
 		specialNotes: "Increases timing window to hit a Perfect. (Animation remains the same)"
 	},
@@ -4382,32 +4382,32 @@ window.details = {
 	},
 	940: {
 		captain: "Boosts [DEX] Characters ATK and HP by 1.5x",
-		specialName: "Sure Kill: Exploding Star",
+		specialName: "Sure Kill! Exploding Star!!",
 		special: "Deals 13x ATK as [DEX] damage to all enemies, and boosts the ATK of [DEX] characters by 1.75x for 1 turn"
 	},
 	941: {
 		captain: "Boosts [DEX] Characters ATK by 1.5x and their HP by 2.25x",
-		specialName: "Sure Kill: Exploding Star",
+		specialName: "Sure Kill! Exploding Star!!",
 		special: "Deals 13x ATK as [DEX] damage to all enemies, and boosts the ATK of [DEX] characters by 1.75x for 1 turn"
 	},
 	942: {
 		captain: "Boosts [STR] Characters ATK and HP by 1.5x",
-		specialName: "The Nightmare of Barujimoa",
+		specialName: "Future Country's Big Incident: The Nightmare of Barujimoa",
 		special: "Reduces damage received from [QCK] enemies by 100% for 1 turn"
 	},
 	943: {
 		captain: "Boosts [STR] Characters ATK by 2.25x and their HP by 1.75x",
-		specialName: "The Nightmare of Barujimoa",
+		specialName: "Future Country's Big Incident: The Nightmare of Barujimoa",
 		special: "Reduces damage received from [QCK] enemies by 100% for 1 turn"
 	},
 	944: {
 		captain: "Boosts the ATK and RCV of Ambition Characters by 1.2x",
-		specialName: "Bridal Perona Special",
+		specialName: "Spiritual Bouquet",
 		special: "Boosts the ATK and RCV of Ambition Characters by 1.5x for 1 turn"
 	},
 	945: {
 		captain: "Boosts the ATK and RCV of Ambition Characters by 1.75x",
-		specialName: "Bridal Perona Special",
+		specialName: "Spiritual Bouquet",
 		special: "Boosts the ATK and RCV of Ambition Characters by 1.5x for 1 turn"
 	}
 };
