@@ -938,10 +938,10 @@ window.units = [
     ["Monkey D. Luffy, Vow to his Friends: 3D2Y", "QCK", ["Fighter","Freedom"], 5, 30, 4, 4, 99, null, 1173, 712, 99, 2406, 1415, 257, null],
     ["Nami, Seeker of Weather Science", "PSY", ["Striker","Knowledge"], 4, 18, 4, 3, 70, null, 141, 80, 48, 1102, 584, 233, null],
     ["Nami, Weatheria's Cat Burglar", "PSY", ["Striker","Knowledge"], 5, 30, 5, 4, 99, null, 1037, 522, 189, null, null, null, null],
-    ["Usopp, Boin Archipelago's Glutton", "DEX", "Fighter", 4, 18, 6, 3, 70, null, 271, 52, 34, null, null, null, null],
+    ["Usopp, Boin Archipelago's Glutton", "DEX", "Fighter", 4, 18, 6, 3, 70, null, 271, 52, 34, 1748, 453, 172, null],
     ["Usopp, Swindling Forest's Resolute Warrior", "DEX", "Shooter", 5, 30, 4, 4, 99, null, 1669, 398, 131, 3239, 800, 323, null],
     ["Franky, Cyborg Fighting Mecha Animals", "STR", ["Freedom","Shooter"], 4, 18, 4, 3, 70, null, 220, 112, 22, 1603, 686, 131, null],
     ["Cyborg Franky, Sacred Beast of Barujimoa", "STR", ["Freedom","Shooter"], 5, 30, 4, 4, 99, null, 1535, 635, 88, null, null, null, null],
 	["Perona, Malicious Old Castle Bride", "PSY", ["Shooter","Ambition"], 4, 13, 4, 2, 50, null, 59, 34, 47, 814, 392, 223, null],
-    ["Fancy Princess Wedding Perona", "PSY", ["Shooter","Ambition"], 5, 20, 5, 3, 99, null, 740, 333, 172, null, null, null, null]
+    ["Fancy Princess Wedding Perona", "PSY", ["Shooter","Ambition"], 5, 20, 5, 3, 99, null, 740, 333, 172, 1787, 787, 390, null]
 ];
