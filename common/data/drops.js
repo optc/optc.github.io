@@ -383,6 +383,7 @@ window.drops = {
             name: "Enies Lobby: Entrance",
             shortName: "Enies Lobby 1",
             thumb: 706,
+			global: true,
             completion: '5x Rainbow Gems',
             "Completion Units": [708],
             "01": [ 78, 79, 80, 81, 82, 185, 186, 188, 694 ],
@@ -750,6 +751,7 @@ window.drops = {
         {
             name: 'Chief Guard Sadi-chan\'s Pun♥ish♥ment',
             thumb: 550,
+			global: true,
             condition: 'Shooter, Striker and Fighter are weakend',
             Expert: [ 549, 551, 552, -552, -551, -432, -426, -408, -329, -308, -255 ],
             Elite: [ 549, 551, 552, -552, -551, -432, -426, -408, -329, -308, -255 ]
