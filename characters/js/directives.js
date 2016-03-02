@@ -304,7 +304,6 @@ directives.addNames = function($stateParams, $rootScope) {
             var id = $stateParams.id, data = details[id];
 
                 var currentAliases = name[id];
-                //console.log(currentAliases);
                 if(currentAliases[0]!=''){
                 element.append($('<tr><td>Japanese</td><td><div>'+ currentAliases[0] +'</div></td></tr>'));
                 }
@@ -312,8 +311,8 @@ directives.addNames = function($stateParams, $rootScope) {
                     element.append($('<tr><td>French</td><td><div>'+ currentAliases[1] +'</div></td></tr>'));
                 }
                 if(currentAliases[2]){
-                    currentAliases.splice(0, 2);
-                    element.append($('<tr><td>Others</td><td><div>'+ currentAliases +'</div></td></tr>'));
+                    var otherAliases = currentAliases.toString().replace(/(.*?),(.*?),/,"");
+                    element.append($('<tr><td>Others</td><td><div>'+ otherAliases +'</div></td></tr>'));
                 }
                 }
     }
