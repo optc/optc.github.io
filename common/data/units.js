@@ -941,7 +941,7 @@ window.units = [
     ["Usopp, Boin Archipelago's Glutton", "DEX", "Fighter", 4, 18, 6, 3, 70, null, 271, 52, 34, 1748, 453, 172, null],
     ["Usopp, Swindling Forest's Resolute Warrior", "DEX", "Shooter", 5, 30, 4, 4, 99, null, 1669, 398, 131, 3239, 800, 323, null],
     ["Franky, Cyborg Fighting Mecha Animals", "STR", ["Freedom","Shooter"], 4, 18, 4, 3, 70, null, 220, 112, 22, 1603, 686, 131, null],
-    ["Cyborg Franky, Sacred Beast of Barujimoa", "STR", ["Freedom","Shooter"], 5, 30, 4, 4, 99, null, 1535, 635, 88, null, null, null, null],
+    ["Cyborg Franky, Sacred Beast of Barujimoa", "STR", ["Freedom","Shooter"], 5, 30, 4, 4, 99, null, 1535, 635, 88, 2810, 1249, 244, null],
 	["Perona, Malicious Old Castle Bride", "PSY", ["Shooter","Ambition"], 4, 13, 4, 2, 50, null, 59, 34, 47, 814, 392, 223, null],
     ["Fancy Princess Wedding Perona", "PSY", ["Shooter","Ambition"], 5, 20, 5, 3, 99, null, 740, 333, 172, 1787, 787, 390, null]
 ];
