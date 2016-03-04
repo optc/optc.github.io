@@ -1028,6 +1028,7 @@ window.drops = {
         {
             name: 'Clash!! Aokiji',
             thumb: 575,
+            global: true,
             Ultimate: [ 88, 114, 118, 304, 574 ],
             Master: [ 114, 118, 574 ]
         },
