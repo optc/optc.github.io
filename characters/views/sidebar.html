@@ -9,7 +9,7 @@
 
 <div class="filter-container">
     <span class="filter-header">Class filters</span>
-    <span ng-repeat="(n,class) in [ 'Fighter', 'Shooter', 'Slasher', 'Striker', 'Freedom', 'Knowledge', 'Tough', 'Ambition' ]"
+    <span ng-repeat="(n,class) in [ 'Fighter', 'Shooter', 'Slasher', 'Striker', 'Free Spirit', 'Knowledge', 'Tough', 'Ambition' ]"
         class="filter width-6 class" ng-click="onClassClick($event,class)"
         ng-class="{ active: filters.classes.indexOf(class) > -1 }">{{class}}</span>
 </div>

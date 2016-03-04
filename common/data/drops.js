@@ -723,7 +723,7 @@ window.drops = {
         },
 
         {
-            name: 'Jailbreaking Baroque Works',
+            name: 'Prison Break! Baroque Works',
             thumb: 462,
             global: true,
             condition: 'Striker, Shooter and Slashers are weakend.',
@@ -749,7 +749,7 @@ window.drops = {
         },
 
         {
-            name: 'Chief Guard Sadi-chan\'s Pun♥ish♥ment',
+            name: 'Chief Jailer Sadie: Cruel and Unusual',
             thumb: 550,
 			global: true,
             condition: 'Shooter, Striker and Fighter are weakend',
@@ -829,7 +829,7 @@ window.drops = {
         {
             name: "Knight of the Sky Gan Fall",
             thumb: 713,
-            condition: 'Every class but Freedom is weakend',
+            condition: 'Every class but Free Spirit is weakend',
             Expert: [ 712, 714, 715, -716, -546, -541, -520 ],
             Elite: [ 712, 714, 715, -716, -546, -541, -520 ]
         },
@@ -899,7 +899,7 @@ window.drops = {
         {
             name: "Legendary Shipbuilding Company Tom's Workers",
             thumb: 848,
-            condition: 'You can only bring Impact and Freedom units. (No Evo/Boosters)',
+            condition: 'You can only bring Impact and Free Spirit units. (No Evo/Boosters)',
             challenge: 'Total Damage dealt to enemies in one turn',
             challengeData: [['100,000 Damage','1x DEX Elder Turtle'],['500,000 Damage','1x Rainbow Gem, 1x ATK Cotton Candy'],['2,000,000 Damage','2x Rainbow Gems, 1x Auto-Heal Forbidden Tome']],
             Expert: [ 847, 849, 850, -849, -647, -617, -616, -615, -578, -508, -455 ],

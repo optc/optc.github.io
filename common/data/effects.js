@@ -116,12 +116,12 @@ window.effects = {
     },
 
     'Gan Fall': {
-        description: 'Stats of non-Freedom, non-Booster, non-Evolver units reduced by 90%',
+        description: 'Stats of non-Free Spirit, non-Booster, non-Evolver units reduced by 90%',
         thumb: 713,
         id: 11, // don't change this
-        atk: function(p) { return p.class.has('Freedom') || p.class.has('Booster') || p.class.has('Evolver') ? 1 : 0.1; },
-        hp: function(p)  { return p.class.has('Freedom') || p.class.has('Booster') || p.class.has('Evolver') ? 1 : 0.1; },
-        rcv: function(p) { return p.class.has('Freedom') || p.class.has('Booster') || p.class.has('Evolver') ? 1 : 0.1; }
+        atk: function(p) { return p.class.has('Free Spirit') || p.class.has('Booster') || p.class.has('Evolver') ? 1 : 0.1; },
+        hp: function(p)  { return p.class.has('Free Spirit') || p.class.has('Booster') || p.class.has('Evolver') ? 1 : 0.1; },
+        rcv: function(p) { return p.class.has('Free Spirit') || p.class.has('Booster') || p.class.has('Evolver') ? 1 : 0.1; }
     },
 
     'Orb amplification (1.05x)': {

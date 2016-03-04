@@ -2880,15 +2880,15 @@ window.details = {
 		captain: "Reduces damage received by 10%, boosts ATK of all characters by 1.5x"
 	},
 	668: {
-		special: "Boosts ATK of Freedom characters by 1.5x for 1 turn. If during that turn every unit scores a Perfect hit, boosts ATK of Freedom characters by 2x in the following turn.",
+		special: "Boosts ATK of Free Spirit characters by 1.5x for 1 turn. If during that turn every unit scores a Perfect hit, boosts ATK of Free Spirit characters by 2x in the following turn.",
 		specialName: "Dragon's Claw",
-		captain: "Boosts HP and RCV of all characters by 1.2x, boosts ATK of Freedom characters proportionally to the crew's current HP",
+		captain: "Boosts HP and RCV of all characters by 1.2x, boosts ATK of Free Spirit characters proportionally to the crew's current HP",
 		captainNotes: "#{captainProportional : higher : 2 + 0.75 * (remaining HP) / (total HP) : 2.75 : 2}"
 	},
 	669: {
-		special: "Boosts ATK of Freedom characters by 1.5x for 1 turn. If during that turn every unit scores a Perfect hit, boosts ATK of Freedom characters by 2x in the following turn.",
+		special: "Boosts ATK of Free Spirit characters by 1.5x for 1 turn. If during that turn every unit scores a Perfect hit, boosts ATK of Free Spirit characters by 2x in the following turn.",
 		specialName: "Dragon's Claw",
-		captain: "Boosts HP and RCV of all characters by 1.2x, boosts ATK of Freedom characters proportionally to the crew's current HP",
+		captain: "Boosts HP and RCV of all characters by 1.2x, boosts ATK of Free Spirit characters proportionally to the crew's current HP",
 		captainNotes: "#{captainProportional : higher : 2 + 0.75 * (remaining HP) / (total HP) : 2.75 : 2}"
 	},
 	670: {
@@ -2914,12 +2914,12 @@ window.details = {
 	674: {
 		special: "Removes poison, reduces damage received by 50% for 2 turns, recovers 13x character's RCV in HP at the end of each turn for 2 turns",
 		specialName: "Emporio Healing Hormone",
-		captain: "Boosts ATK of Freedom characters by 2x"
+		captain: "Boosts ATK of Free Spirit characters by 2x"
 	},
 	675: {
 		special: "Removes poison, reduces damage received by 50% for 2 turns, recovers 13x character's RCV in HP at the end of each turn for 2 turns",
 		specialName: "Emporio Healing Hormone",
-		captain: "Boosts ATK of Freedom characters by 2.5x"
+		captain: "Boosts ATK of Free Spirit characters by 2.5x"
 	},
 	676: {
 		special: "Reduces any damage received above 5,000 HP by 97% for 3 turns",
@@ -2976,14 +2976,14 @@ window.details = {
 		captain: "Boosts ATK and RCV of Slasher characters by 1.5x"
 	},
 	687: {
-		special: "Deals 13x character's ATK in STR damage to all enemies, boosts ATK of Freedom characters by 1.3x for 1 turn",
+		special: "Deals 13x character's ATK in STR damage to all enemies, boosts ATK of Free Spirit characters by 1.3x for 1 turn",
 		specialName: "First Spear of the Battle",
-		captain: "Boosts ATK of Freedom characters by 1.5x"
+		captain: "Boosts ATK of Free Spirit characters by 1.5x"
 	},
 	688: {
-		special: "Deals 13x character's ATK in STR damage to all enemies, boosts ATK of Freedom characters by 1.3x for 1 turn",
+		special: "Deals 13x character's ATK in STR damage to all enemies, boosts ATK of Free Spirit characters by 1.3x for 1 turn",
 		specialName: "First Spear of the Battle",
-		captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of Freedom characters by 2x"
+		captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of Free Spirit characters by 2x"
 	},
 	689: {
 		special: "Amplifies the effect of orbs by 1.5x for 2 turns",
@@ -3112,12 +3112,12 @@ window.details = {
 		specialName: "Pegasus' Neigh"
 	},
 	715: {
-		special: "Boosts ATK and RCV of Freedom characters by 1.5x for 2 turns, seals herself for 3 turns",
+		special: "Boosts ATK and RCV of Free Spirit characters by 1.5x for 2 turns, seals herself for 3 turns",
 		specialName: "Angel's Harp - Healing",
 		captain: "Boosts RCV of all characters by 2x if HP is below 30% at the start of the turn"
 	},
 	716: {
-		special: "Boosts ATK and RCV of Freedom characters by 1.5x for 2 turns, seals herself for 3 turns",
+		special: "Boosts ATK and RCV of Free Spirit characters by 1.5x for 2 turns, seals herself for 3 turns",
 		specialName: "Angel's Harp - Healing",
 		captain: "Boosts RCV of all characters by 5x if HP is below 30% at the start of the turn"
 	},
@@ -3182,7 +3182,7 @@ window.details = {
 	727: {
 		special: "Deals 10x character's ATK in DEX damage to all enemies, reduces the defense of all enemies by 50% for 1 turn",
 		specialName: "Gum-Gum Gatling",
-		captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of Freedom and Fighter characters by 1.75x"
+		captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of Free Spirit and Fighter characters by 1.75x"
 	},
 	728: {
 		special: "Randomizes all orbs, recovers 6x character's RCV in HP at the end of each turn for 3 turns",
@@ -3244,7 +3244,7 @@ window.details = {
 	739: {
 		special: "Reduces Bind duration by 5 turns, randomizes all orbs",
 		specialName: "Coup de Boo",
-		captain: "Boosts ATK of Freedom characters by 2x"
+		captain: "Boosts ATK of Free Spirit characters by 2x"
 	},
 	740: {
 		special: "Deals 10x character's ATK in QCK damage to all enemies, boosts ATK against enemies with increased defense by 1.3x for 2 turns",
@@ -3260,23 +3260,23 @@ window.details = {
 		special: "Amplifies the effect of orbs by 1.25x for 2 turns, reduces the defense of all enemies by 80% for 2 turns",
 		specialNotes: "#{orb : 1.25x}",
 		specialName: "Ramen Beam",
-		captain: "Boosts ATK and RCV of Freedom characters by 1.2x"
+		captain: "Boosts ATK and RCV of Free Spirit characters by 1.2x"
 	},
 	743: {
 		special: "Amplifies the effect of orbs by 1.25x for 2 turns, reduces the defense of all enemies by 80% for 2 turns",
 		specialNotes: "#{orb : 1.25x}",
 		specialName: "Ramen Beam",
-		captain: "Boosts ATK and RCV of Freedom characters by 1.5x"
+		captain: "Boosts ATK and RCV of Free Spirit characters by 1.5x"
 	},
 	744: {
 		special: "Reduces damage received by 50% for 3 turns",
 		specialName: "Flame Fence",
-		captain: "Boosts ATK of Freedom characters by 2x"
+		captain: "Boosts ATK of Free Spirit characters by 2x"
 	},
 	745: {
 		special: "Reduces damage received by 50% for 3 turns",
 		specialName: "Flame Fence",
-		captain: "Boosts ATK of Freedom characters by 2.5x"
+		captain: "Boosts ATK of Free Spirit characters by 2.5x"
 	},
 	746: {
 		special: "Deals 10x character's ATK in QCK damage to all enemies, protects from defeat as long as HP is above 50% for 1 turn",
@@ -3432,7 +3432,7 @@ window.details = {
 	774: {
 		special: "Randomly changes [TND], [RCV], [EMPTY], [BLOCK] and [BOMB] orbs into either [STR], [DEX], [QCK], [PSY] or [INT] orbs, switches orbs between slots 3 times",
 		specialName: "Berry-Berry Fruit",
-		captain: "Boosts ATK of Freedom characters by 2x"
+		captain: "Boosts ATK of Free Spirit characters by 2x"
 	},
 	775: {
 		special: "Deals several times the character's ATK in PSY damage to one enemy",
@@ -3709,15 +3709,15 @@ window.details = {
 		special: "Changes the orbs in the top row into [STR] orbs, changes the orbs in the middle row into [DEX] orbs, changes the orbs in the bottom row into [QCK] orbs"
 	},
 	832: {
-		captain: "Boosts ATK of Freedom characters proportionally to the crew's current HP, reduces crew's current HP by 10% at the end of each turn",
+		captain: "Boosts ATK of Free Spirit characters proportionally to the crew's current HP, reduces crew's current HP by 10% at the end of each turn",
 		specialName: "Burn Bazooka",
-		special: "Boosts ATK of Freedom characters by 1.5x for 1 turn, deals 15x character's ATK in STR damage to all enemies",
+		special: "Boosts ATK of Free Spirit characters by 1.5x for 1 turn, deals 15x character's ATK in STR damage to all enemies",
 		captainNotes: "#{captainProportional : lower : 1 + 1.5 * (1 - (remaining HP) / (total HP)) : 1 : 2.5}"
 	},
 	833: {
-		captain: "Boosts ATK of Freedom characters proportionally to the crew's current HP, reduces crew's current HP by 10% at the end of each turn",
+		captain: "Boosts ATK of Free Spirit characters proportionally to the crew's current HP, reduces crew's current HP by 10% at the end of each turn",
 		specialName: "Burn Bazooka",
-		special: "Boosts ATK of Freedom characters by 1.5x for 1 turn, deals 15x character's ATK in STR damage to all enemies",
+		special: "Boosts ATK of Free Spirit characters by 1.5x for 1 turn, deals 15x character's ATK in STR damage to all enemies",
 		captainNotes: "#{captainProportional : lower : 1 + 1.75 * (1 - (remaining HP) / (total HP)) : 1 : 2.75}"
 	},
 	834: {
@@ -3879,12 +3879,12 @@ window.details = {
 		special: "Reduces the defense of all enemies by 50% for 2 turns, reduces the ATK of all enemies by 10% for 2 turns"
 	},
 	864: {
-		captain: "Boosts ATK of Freedom characters by 2x",
+		captain: "Boosts ATK of Free Spirit characters by 2x",
 		specialName: "Slave Arrow",
 		special: "Locks the chain multiplier at 2.5x for 2 turns, delays all enemies for 1 turn"
 	},
 	865: {
-		captain: "Boosts ATK and HP of Freedom characters by 2x",
+		captain: "Boosts ATK and HP of Free Spirit characters by 2x",
 		specialName: "Slave Arrow",
 		special: "Locks the chain multiplier at 2.5x for 2 turns, delays all enemies for 1 turn"
 	},
@@ -4005,14 +4005,14 @@ window.details = {
 		specialNotes: "#{gOrbs}"
 	},
 	881: {
-		captain: "Boosts ATK of Shooter and Freedom characters by 2x following a chain of Good > Great > Perfect hits",
+		captain: "Boosts ATK of Shooter and Free Spirit characters by 2x following a chain of Good > Great > Perfect hits",
 		specialName: "Fighting Music: Conflict Chekera",
-		special: "Doubles damage received for 2 turns, reduces RCV by 90% for 2 turns, boosts ATK of Shooter and Freedom characters by 1.75x for 1 turn"
+		special: "Doubles damage received for 2 turns, reduces RCV by 90% for 2 turns, boosts ATK of Shooter and Free Spirit characters by 1.75x for 1 turn"
 	},
 	882: {
-		captain: "Boosts ATK of Shooter and Freedom characters by 3x following a chain of Good > Great > Perfect hits",
+		captain: "Boosts ATK of Shooter and Free Spirit characters by 3x following a chain of Good > Great > Perfect hits",
 		specialName: "Fighting Music: Conflict Chekera",
-		special: "Doubles damage received for 2 turns, reduces RCV by 90% for 2 turns, boosts ATK of Shooter and Freedom characters by 1.75x for 1 turn"
+		special: "Doubles damage received for 2 turns, reduces RCV by 90% for 2 turns, boosts ATK of Shooter and Free Spirit characters by 1.75x for 1 turn"
 	},
 	883: {
 		captain: "Boosts ATK and HP of Tough characters by 1.25x",
@@ -4097,21 +4097,21 @@ window.details = {
 		specialNotes: "#{gOrbs}"
 	},
 	899: {
-		captain: "Boosts ATK of Fighter and Freedom characters by 1.75x and their RCV by 1.25x",
+		captain: "Boosts ATK of Fighter and Free Spirit characters by 1.75x and their RCV by 1.25x",
 		specialName: "Hymn to Friendship: \"Okama Way\" Two",
 		special: "Reduces Silence duration by 5 turns, recovers 10x character's RCV in HP"
 	},
 	900: {
 		captain: "Boosts ATK of Shooter characters by 2x if HP is above 99% at the start of the turn",
 		specialName: "Franky Destroy Gun",
-		special: "Deals 6 hits of 2,000 fixed damage to random enemies, randomly changes opposite orbs on Shooter and Freedom characters into either [G] orbs or matching orbs",
-		specialNotes: "The orb shuffle only applies to Shooter and Freedom characters, other classes are unaffected. #{gOrbs}"
+		special: "Deals 6 hits of 2,000 fixed damage to random enemies, randomly changes opposite orbs on Shooter and Free Spirit characters into either [G] orbs or matching orbs",
+		specialNotes: "The orb shuffle only applies to Shooter and Free Spirit characters, other classes are unaffected. #{gOrbs}"
 	},
 	901: {
 		captain: "Boosts ATK of Shooter characters by 2.75x if HP is above 99% at the start of the turn",
 		specialName: "Franky Destroy Gun",
-		special: "Deals 6 hits of 2,000 fixed damage to random enemies, randomly changes opposite orbs on Shooter and Freedom characters into either [G] orbs or matching orbs",
-		specialNotes: "The orb shuffle only applies to Shooter and Freedom characters, other classes are unaffected. #{gOrbs}"
+		special: "Deals 6 hits of 2,000 fixed damage to random enemies, randomly changes opposite orbs on Shooter and Free Spirit characters into either [G] orbs or matching orbs",
+		specialNotes: "The orb shuffle only applies to Shooter and Free Spirit characters, other classes are unaffected. #{gOrbs}"
 	},
 	902: {
 		captain: "Boosts ATK and HP of Tough characters by 1.25x",
@@ -4259,12 +4259,12 @@ window.details = {
 		special: "Changes the orbs in the middle row into [RCV] orbs, changes the orbs in the bottom row into [TND] orbs"
 	},
 	921: {
-		captain: "Boosts ATK and RCV of Freedom characters by 1.2x",
+		captain: "Boosts ATK and RCV of Free Spirit characters by 1.2x",
 		specialName: "Pure and Beautiful Shyness",
 		special: "Recovers 5000 HP and amplifies the effect of orbs by 1.5x for 2 turns"
 	},
 	922: {
-		captain: "Boosts ATK and RCV of Freedom characters by 1.75x",
+		captain: "Boosts ATK and RCV of Free Spirit characters by 1.75x",
 		specialName: "Pure and Beautiful Shyness",
 		special: "Recovers 5000 HP and amplifies the effect of orbs by 1.5x for 2 turns"
 	},

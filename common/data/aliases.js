@@ -943,5 +943,13 @@ window.aliases = {
     942: ['','','Timeskip Franky','3D2Y Franky'],
     943: ['','','Timeskip Franky','3D2Y Franky'],
 	944: ['','','Wedding Perona'],
-    945: ['','','Bride Perona']
+    945: ['','','Bride Perona'],
+    946: ['',''],
+    947: ['',''],
+    948: ['',''],
+    949: ['',''],
+    950: ['',''],
+    951: ['',''],
+    952: ['',''],
+    953: ['','']
 };

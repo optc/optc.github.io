@@ -131,9 +131,10 @@ utils.generateSearchParameters = function(query) {
     query = query.toLowerCase().trim();
     var result = { matchers: { }, ranges: { }, query: [ ] };
     var ranges = { }, params = [ 'hp', 'atk', 'stars', 'cost', 'growth', 'rcv', 'id', 'slots', 'combo', 'exp', 'minCD', 'maxCD' ];
-    var regex = new RegExp('^((type|class):(\\w+)|(' + params.join('|') + ')(>|<|>=|<=|=)([\\d.]+))$', 'i');
+    var regex = new RegExp('^((type|class):(\\w+\\s{0,1}\\w+)|(' + params.join('|') + ')(>|<|>=|<=|=)([\\d.]+))$', 'i');
     var tokens = query.replace(/\s+/g,' ').split(' ').filter(function(x) { return x.length > 0; });
     tokens.forEach(function(x) {
+        x = x.replace("_", ' ');
         var temp = x.match(regex);
         if (!temp) // if it couldn't be parsed, treat it as string
             result.query.push(x);

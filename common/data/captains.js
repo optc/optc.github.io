@@ -1322,12 +1322,12 @@ window.captains = {
 		atk: function(p) { return 1.75; }
 	},
 	668: {
-		atk: function(p) { return p.unit.class.has("Freedom") ? 2 + 0.75 * p.percHP / 100 : 1; },
+		atk: function(p) { return p.unit.class.has("Free Spirit") ? 2 + 0.75 * p.percHP / 100 : 1; },
 		hp: function(p) { return 1.2; },
 		rcv: function(p) { return 1.2; }
 	},
 	669: {
-		atk: function(p) { return p.unit.class.has("Freedom") ? 2 + 0.75 * p.percHP / 100 : 1; },
+		atk: function(p) { return p.unit.class.has("Free Spirit") ? 2 + 0.75 * p.percHP / 100 : 1; },
 		hp: function(p) { return 1.2; },
 		rcv: function(p) { return 1.2; }
 	},
@@ -1345,10 +1345,10 @@ window.captains = {
 		atk: function(p) { return p.unit.class.has("Fighter") ? 2 : 1; }
 	},
 	674: {
-		atk: function(p) { return p.unit.class.has("Freedom") ? 2 : 1; }
+		atk: function(p) { return p.unit.class.has("Free Spirit") ? 2 : 1; }
 	},
 	675: {
-		atk: function(p) { return p.unit.class.has("Freedom") ? 2.5 : 1; }
+		atk: function(p) { return p.unit.class.has("Free Spirit") ? 2.5 : 1; }
 	},
 	676: {
 		atk: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; }
@@ -1381,10 +1381,10 @@ window.captains = {
 		rcv: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; }
 	},
 	687: {
-		atk: function(p) { return p.unit.class.has("Freedom") ? 1.5 : 1; }
+		atk: function(p) { return p.unit.class.has("Free Spirit") ? 1.5 : 1; }
 	},
 	688: {
-		atk: function(p) { return p.unit.class.has("Freedom") ? 2 : 1; }
+		atk: function(p) { return p.unit.class.has("Free Spirit") ? 2 : 1; }
 	},
 	689: {
 		atk: function(p) { return p.unit.class.has("Slasher") ? 1.2 : 1; },
@@ -1498,7 +1498,7 @@ window.captains = {
 	},
 	727: {
 		atk: function(p) {
-			return p.unit.class.has("Freedom") || p.unit.class.has("Fighter") ? 1.75 : 1;
+			return p.unit.class.has("Free Spirit") || p.unit.class.has("Fighter") ? 1.75 : 1;
 		}
 	},
 	728: {
@@ -1537,21 +1537,21 @@ window.captains = {
 		atk: function(p) { return p.unit.cost >= 21 ? 2 : 1; }
 	},
 	739: {
-		atk: function(p) { return p.unit.class.has("Freedom") ? 2 : 1; }
+		atk: function(p) { return p.unit.class.has("Free Spirit") ? 2 : 1; }
 	},
 	742: {
-		atk: function(p) { return p.unit.class.has("Freedom") ? 1.2 : 1; },
-		rcv: function(p) { return p.unit.class.has("Freedom") ? 1.2 : 1; }
+		atk: function(p) { return p.unit.class.has("Free Spirit") ? 1.2 : 1; },
+		rcv: function(p) { return p.unit.class.has("Free Spirit") ? 1.2 : 1; }
 	},
 	743: {
-		atk: function(p) { return p.unit.class.has("Freedom") ? 1.5 : 1; },
-		rcv: function(p) { return p.unit.class.has("Freedom") ? 1.5 : 1; }
+		atk: function(p) { return p.unit.class.has("Free Spirit") ? 1.5 : 1; },
+		rcv: function(p) { return p.unit.class.has("Free Spirit") ? 1.5 : 1; }
 	},
 	744: {
-		atk: function(p) { return p.unit.class.has("Freedom") ? 2 : 1; }
+		atk: function(p) { return p.unit.class.has("Free Spirit") ? 2 : 1; }
 	},
 	745: {
-		atk: function(p) { return p.unit.class.has("Freedom") ? 2.5 : 1; }
+		atk: function(p) { return p.unit.class.has("Free Spirit") ? 2.5 : 1; }
 	},
 	747: {
 		atk: function(p) { return !p.unit.class.has("Tough") ? 1 : (p.orb == 2.0 ? 3 : 2.5); },
@@ -1637,7 +1637,7 @@ window.captains = {
 		atk: function(p) { return p.unit.class.has("Slasher") ? 2 : 1; }
 	},
 	774: {
-		atk: function(p) { return p.unit.class.has("Freedom") ? 2 : 1; }
+		atk: function(p) { return p.unit.class.has("Free Spirit") ? 2 : 1; }
 	},
 	775: {
 		atk: function(p) { return p.unit.class.has("Knowledge") ? 1.5 : 1; },
@@ -1790,12 +1790,12 @@ window.captains = {
 	},
 	832: {
 		atk: function(p) {
-			return p.unit.class.has("Freedom") ? 1 + 1.5 * ((100 - p.percHP) / 100) : 1;
+			return p.unit.class.has("Free Spirit") ? 1 + 1.5 * ((100 - p.percHP) / 100) : 1;
 		}
 	},
 	833: {
 		atk: function(p) {
-			return p.unit.class.has("Freedom") ? 1 + 1.75 * ((100 - p.percHP) / 100) : 1;
+			return p.unit.class.has("Free Spirit") ? 1 + 1.75 * ((100 - p.percHP) / 100) : 1;
 		}
 	},
 	834: {
@@ -1895,11 +1895,11 @@ window.captains = {
 		atk: function(p) { return p.unit.type == 'QCK' ? 1.75 : 1; }
 	},
 	864: {
-		atk: function(p) { return p.unit.class.has("Freedom") ? 2 : 1; }
+		atk: function(p) { return p.unit.class.has("Free Spirit") ? 2 : 1; }
 	},
 	865: {
-		atk: function(p) { return p.unit.class.has("Freedom") ? 2 : 1; },
-		hp: function(p) { return p.unit.class.has("Freedom") ? 2 : 1; }
+		atk: function(p) { return p.unit.class.has("Free Spirit") ? 2 : 1; },
+		hp: function(p) { return p.unit.class.has("Free Spirit") ? 2 : 1; }
 	},
 	866: {
 		atk: function(p) { return p.unit.class.has("Knowledge") ? 2 : 1; }
@@ -1959,14 +1959,14 @@ window.captains = {
 	},
 	881: {
 		hitAtk: function(p) {
-			if (!p.unit.class.has("Shooter") && !p.unit.class.has("Freedom")) return 1;
+			if (!p.unit.class.has("Shooter") && !p.unit.class.has("Free Spirit")) return 1;
 			return p.modifiers.slice(0, p.chainPosition).subcontains(["Good", "Great", "Perfect"]) ? 2 : 1;
 		},
 		hitModifiers: ["Good", "Great", "Perfect", "Perfect", "Perfect", "Perfect"]
 	},
 	882: {
 		hitAtk: function(p) {
-			if (!p.unit.class.has("Shooter") && !p.unit.class.has("Freedom")) return 1;
+			if (!p.unit.class.has("Shooter") && !p.unit.class.has("Free Spirit")) return 1;
 			return p.modifiers.slice(0, p.chainPosition).subcontains(["Good", "Great", "Perfect"]) ? 3 : 1;
 		},
 		hitModifiers: ["Good", "Great", "Perfect", "Perfect", "Perfect", "Perfect"]
@@ -2040,10 +2040,10 @@ window.captains = {
 	},
 	899: {
 		atk: function(p) {
-			return p.unit.class.has("Fighter") || p.unit.class.has("Freedom") ? 1.75 : 1;
+			return p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? 1.75 : 1;
 		},
 		hp: function(p) {
-			return p.unit.class.has("Fighter") || p.unit.class.has("Freedom") ? 1.25 : 1;
+			return p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? 1.25 : 1;
 		}
 	},
 	900: {
@@ -2111,12 +2111,12 @@ window.captains = {
 		atk: function(p) { return p.unit.class.has("Shooter") ? 1.75 : 1; }
 	},
 	921: {
-		atk: function(p) { return p.unit.class.has("Freedom") ? 1.2 : 1; },
-		rcv: function(p) { return p.unit.class.has("Freedom") ? 1.2 : 1; }
+		atk: function(p) { return p.unit.class.has("Free Spirit") ? 1.2 : 1; },
+		rcv: function(p) { return p.unit.class.has("Free Spirit") ? 1.2 : 1; }
 	},
 	922: {
-		atk: function(p) { return p.unit.class.has("Freedom") ? 1.75 : 1; },
-		rcv: function(p) { return p.unit.class.has("Freedom") ? 1.75 : 1; }
+		atk: function(p) { return p.unit.class.has("Free Spirit") ? 1.75 : 1; },
+		rcv: function(p) { return p.unit.class.has("Free Spirit") ? 1.75 : 1; }
 	},
 	923: {
 		atk: function(p) {
