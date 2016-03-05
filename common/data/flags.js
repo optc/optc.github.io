@@ -560,6 +560,8 @@ window.flags = {
 	571: { global: 1 },
 	572: { global: 1 },
 	573: { global: 1 },
+    574: { global: 1 },
+    575: { global: 1 },
 	576: { special: 1 },
 	577: { rr: 1, rro: 1, global: 1 },
 	578: { rr: 1, rro: 1, global: 1 },
