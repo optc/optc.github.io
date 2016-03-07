@@ -944,12 +944,12 @@ window.units = [
 	[ "Cyborg Franky, Sacred Beast of Barujimoa", "STR", [ "Free Spirit", "Shooter" ], 5, 30, 4, 4, 99, null, 1535, 635, 88, 2810, 1249, 244, null],
 	[ "Perona, Malicious Old Castle Bride", "PSY", [ "Shooter", "Ambition" ], 4, 13, 4, 2, 50, null, 59, 34, 47, 814, 392, 223, null],
 	[ "Fancy Princess Wedding Perona", "PSY", [ "Shooter", "Ambition" ], 5, 20, 5, 3, 99, null, 740, 333, 172, 1787, 787, 390, null],
-	[],
-	[],
-	[],
-	[],
+	[ "Rakuyo", "INT", [ "Striker", "Tough" ], 4, null, null, null, null, null, null, null, null, null, null, null, null ],
+	[ "Fossa", "INT", [ "Slasher", "Tough" ], 4, null, null, null, null, null, null, null, null, null, null, null, null ],
+	[ "Curiel", "STR", [ "Shooter", "Tough" ], 4, null, null, null, null, null, null, null, null, null, null, null, null ],
+	[ "Thatch", "PSY", [ "Slasher", "Knowledge" ], 4, null, null, null, null, null, null, null, null, null, null, null, null ],
 	[ "Colosseum Ace", "PSY", [ "Free Spirit", "Fighter" ], 4, 25, null, null, null, null, null, null, null, null, null, null, null],
 	[ "Colosseum Ace Evolution", "PSY", [ "Free Spirit", "Fighter" ], 5, 40, null, null, null, null, null, null, null, null, null, null, null],
-	[ "Unknown Colosseum Unit", "DEX", [ "Striker", "Shooter" ], 3, 13, null, null, null, null, null, null, null, null, null, null, null],
- 	[ "Unknown Colosseum Unit Evolution", "DEX", [ "Striker", "Shooter" ], 4, 20, null, null, null, null, null, null, null, null, null, null, null]
+	[ "Colosseum Beckman", "DEX", [ "Striker", "Shooter" ], 3, 13, null, null, null, null, null, null, null, null, null, null, null],
+ 	[ "Colosseum Beckman Evolution", "DEX", [ "Striker", "Shooter" ], 4, 20, null, null, null, null, null, null, null, null, null, null, null]
 ];
