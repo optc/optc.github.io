@@ -4347,13 +4347,13 @@ window.details = {
 		specialNotes: "#{stages}"
 	},
 	934: {
-		captain: "Boosts the ATK of Fighter Characters by 2x, and their HP by 1.5x. If HP is above 70% or below 30%, boosts Fighter Characters ATK by 2.75 instead",
+		captain: "Boosts ATK of Fighter Characters by 2x, and their HP by 1.5x. If HP is above 70% or below 30%, boosts ATK of Fighter Characters by 2.75 instead",
 		specialName: "Fishman Karate!! Shark Fist Tile Breaker",
 		special: "For 1 turn, Perfects become harder to hit. Deals Large [INT] damage to all enemies. Change all Fighter Character orbs to Matching",
 		specialNotes: "Decreases timing window to hit a Perfect. (Animation remains the same)"
 	},
 	935: {
-		captain: "Boosts the ATK of Fighter Characters by 2x, and their HP by 1.5x. If HP is above 70% or below 30%, boosts Fighter Characters ATK by 2.75 instead",
+		captain: "Boosts ATK of Fighter Characters by 2x, and their HP by 1.5x. If HP is above 70% or below 30%, boosts ATK of Fighter Characters by 2.75 instead",
 		specialName: "Fishman Karate!! Shark Fist Tile Breaker",
 		special: "For 1 turn, Perfects become harder to hit. Deals Large [INT] damage to all enemies. Change all Fighter Character orbs to Matching",
 		specialNotes: "Decreases timing window to hit a Perfect. (Animation remains the same)"
@@ -4381,53 +4381,53 @@ window.details = {
 		special: "Reduces Bind duration for one character completely. For Striker and Knowledge characters, changes Bad orbs to Matching"
 	},
 	940: {
-		captain: "Boosts [DEX] Characters ATK and HP by 1.5x",
+		captain: "Boosts ATK and HP of [DEX] Characters by 1.5x",
 		specialName: "Sure Kill! Exploding Star!!",
-		special: "Deals 13x ATK as [DEX] damage to all enemies, and boosts the ATK of [DEX] characters by 1.75x for 1 turn"
+		special: "Deals 13x ATK as [DEX] damage to all enemies, and boosts ATK of [DEX] characters by 1.75x for 1 turn"
 	},
 	941: {
-		captain: "Boosts [DEX] Characters ATK by 1.5x and their HP by 2.25x",
+		captain: "Boosts ATK of [DEX] Characters by 1.5x and their HP by 2.25x",
 		specialName: "Sure Kill! Exploding Star!!",
-		special: "Deals 13x ATK as [DEX] damage to all enemies, and boosts the ATK of [DEX] characters by 1.75x for 1 turn"
+		special: "Deals 13x ATK as [DEX] damage to all enemies, and boosts ATK of [DEX] characters by 1.75x for 1 turn"
 	},
 	942: {
-		captain: "Boosts [STR] Characters ATK and HP by 1.5x",
+		captain: "Boosts ATK and HP of [STR] Characters by 1.5x",
 		specialName: "Future Country's Big Incident: The Nightmare of Barujimoa",
 		special: "Reduces damage received from [QCK] enemies by 100% for 1 turn"
 	},
 	943: {
-		captain: "Boosts [STR] Characters ATK by 2.25x and their HP by 1.75x",
+		captain: "Boosts ATK of [STR] Characters by 2.25x and their HP by 1.75x",
 		specialName: "Future Country's Big Incident: The Nightmare of Barujimoa",
 		special: "Reduces damage received from [QCK] enemies by 100% for 1 turn"
 	},
 	944: {
-		captain: "Boosts the ATK and RCV of Ambition Characters by 1.2x",
+		captain: "Boosts ATK and RCV of Ambition Characters by 1.2x",
 		specialName: "Spiritual Bouquet",
-		special: "Boosts the ATK and RCV of Ambition Characters by 1.5x for 1 turn"
+		special: "Boosts ATK and RCV of Ambition Characters by 1.5x for 1 turn"
 	},
 	945: {
-		captain: "Boosts the ATK and RCV of Ambition Characters by 1.75x",
+		captain: "Boosts ATK and RCV of Ambition Characters by 1.75x",
 		specialName: "Spiritual Bouquet",
-		special: "Boosts the ATK and RCV of Ambition Characters by 1.5x for 1 turn"
+		special: "Boosts ATK and RCV of Ambition Characters by 1.5x for 1 turn"
 	},
 	946: {
 		specialName: "Persuit of the Morning Star",
-		captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts the ATK of Striker Characters by 1.75x",
+		captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of Striker Characters by 1.75x",
 		special: "Change Friend Captain and changes own orb into [INT]"
 	},
 	947: {
-		captain: "Boosts the ATK of [INT] Characters by 1.5x, Boosts damage of [INT] specials by 1.5x",
+		captain: "Boosts ATK of [INT] Characters by 1.5x, Boosts damage of [INT] specials by 1.5x",
 		specialName: "Flame Flash",
 		special: "[STR] and [INT] Characters gain 1.3x ATK for 1 turn. Deals random [INT] damage",
 		captainNotes: "#{noFixedPerc}"
 	},
 	948: {
-		captain: "Boosts the ATK of Shooter Characters by 1.5x and boosts their RCV by 1.2x",
+		captain: "Boosts ATK of Shooter Characters by 1.5x and their RCV by 1.2x",
 		specialName: "Twin Cannons",
 		special: "Randomly changes all orbs to either [STR] or [INT]. Deals random [STR] damage"
 	},
 	949: {
-		captain: "Boosts the ATK of Slasher Characters by 2x, recovers 2x character's RCV in HP at the end of each turn",
+		captain: "Boosts ATK of Slasher Characters by 2x, recovers 2x character's RCV in HP at the end of each turn",
 		specialName: "Ties with Ace",
 		special: "Reduces Silence by 3 turns, and recovers 4,000 HP",
 		specialNotes: "Silence will refer to effects that prevent you from activating Special Abilities"
