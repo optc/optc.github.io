@@ -937,7 +937,7 @@ window.units = [
 	[ "Monkey D. Luffy, Summit War Survivor", "QCK", [ "Fighter", "Free Spirit" ], 4, 18, 7, 3, 70, null, 151, 150, 21, 1220, 764, 149, null],
 	[ "Monkey D. Luffy, Vow to his Friends: 3D2Y", "QCK", [ "Fighter", "Free Spirit" ], 5, 30, 4, 4, 99, null, 1173, 712, 99, 2406, 1415, 257, null],
 	[ "Nami, Seeker of Weather Science", "PSY", [ "Striker", "Knowledge" ], 4, 18, 4, 3, 70, null, 141, 80, 48, 1102, 584, 233, null],
-	[ "Nami, Weatheria's Cat Burglar", "PSY", [ "Striker", "Knowledge" ], 5, 30, 5, 4, 99, null, 1037, 522, 189, null, null, null, null],
+	[ "Nami, Weatheria's Cat Burglar", "PSY", [ "Striker", "Knowledge" ], 5, 30, 5, 4, 99, null, 1037, 522, 189, 2119, 1081, 413, null],
 	[ "Usopp, Boin Archipelago's Glutton", "DEX", "Fighter", 4, 18, 6, 3, 70, null, 271, 52, 34, 1748, 453, 172, null],
 	[ "Usopp, Swindling Forest's Resolute Warrior", "DEX", "Shooter", 5, 30, 4, 4, 99, null, 1669, 398, 131, 3239, 800, 323, null],
 	[ "Franky, Cyborg Fighting Mecha Animals", "STR", [ "Free Spirit", "Shooter" ], 4, 18, 4, 3, 70, null, 220, 112, 22, 1603, 686, 131, null],
