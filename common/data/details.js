@@ -1325,11 +1325,11 @@ window.details = {
 		captain: "Boosts ATK of Shooter characters by 2.5x"
 	},
 	354: {
-		special: "Reduces Bind and Silence duration by 3 turns",
+		special: "Reduces Bind and Despair duration by 3 turns",
 		specialName: "Two-Sword Dance"
 	},
 	355: {
-		special: "Reduces Bind and Silence duration by 3 turns",
+		special: "Reduces Bind and Despair duration by 3 turns",
 		specialName: "Two-Sword Dance"
 	},
 	356: {
@@ -1662,7 +1662,7 @@ window.details = {
 		captain: "Boosts ATK of QCK characters by 2x"
 	},
 	420: {
-		special: "Reduces Silence duration by 3 turns, deals 15x character's ATK in STR damage to one enemy",
+		special: "Reduces Despair duration by 3 turns, deals 15x character's ATK in STR damage to one enemy",
 		specialName: "Gum-Gum Bazooka: Supremacy",
 		captain: "Boosts ATK, HP and RCV of STR characters by 1.5x"
 	},
@@ -1701,7 +1701,7 @@ window.details = {
 		captain: "Boosts HP of STR characters by 2x"
 	},
 	427: {
-		special: "Reduces Bind and Silence duration by 2 turns",
+		special: "Reduces Bind and Despair duration by 2 turns",
 		specialName: "Havoc Sonar",
 		captain: "Boosts HP of DEX characters by 2x"
 	},
@@ -1731,7 +1731,7 @@ window.details = {
 		specialName: "Big Chop"
 	},
 	433: {
-		special: "Reduces Bind and Silence duration by 1 turn",
+		special: "Reduces Bind and Despair duration by 1 turn",
 		specialName: "New Kama Seduction",
 		captain: "Boosts ATK by 2x following a chain of QCK > STR > DEX attacks no lower than Good"
 	},
@@ -2246,12 +2246,12 @@ window.details = {
 		captain: "Boosts RCV of DEX characters by 2x"
 	},
 	537: {
-		special: "Reduces Bind and Silence duration by 1 turn, locks all orbs for 1 turn",
+		special: "Reduces Bind and Despair duration by 1 turn, locks all orbs for 1 turn",
 		specialName: "Sea Stone Handcuffs",
 		captain: "Boosts chain multiplier by 2x"
 	},
 	538: {
-		special: "Reduces Bind and Silence duration by 1 turn, locks all orbs for 1 turn",
+		special: "Reduces Bind and Despair duration by 1 turn, locks all orbs for 1 turn",
 		specialName: "Sea Stone Handcuffs",
 		captain: "Boosts chain multiplier by 2x, recovers 2x character's RCV in HP at the end of each turn"
 	},
@@ -2397,7 +2397,7 @@ window.details = {
 		specialName: "Wipeout Tackle"
 	},
 	567: {
-		special: "Reduces Bind and Silence duration by 1 turn, deals STR damage to all enemies",
+		special: "Reduces Bind and Despair duration by 1 turn, deals STR damage to all enemies",
 		specialName: "Mudfish Coaster"
 	},
 	568: {
@@ -2428,7 +2428,7 @@ window.details = {
 		captain: "Boosts ATK of Fighter characters by 2.5x if HP is above 99% at the start of the turn"
 	},
 	573: {
-		special: "Reduces Silence duration by 2 turns, recovers 10x character's RCV in HP",
+		special: "Reduces Despair duration by 2 turns, recovers 10x character's RCV in HP",
 		specialName: "Manly Support",
 		captain: "Boosts RCV of all characters by 1.2x"
 	},
@@ -2500,12 +2500,12 @@ window.details = {
 		captain: "Boosts HP and RCV of PSY characters by 1.5x"
 	},
 	587: {
-		special: "Removes poison, reduces Bind and Silence duration by 2 turns",
+		special: "Removes poison, reduces Bind and Despair duration by 2 turns",
 		specialName: "Merciful Painkiller",
 		captain: "Recovers 3x character's RCV in HP at the end of each turn"
 	},
 	588: {
-		special: "Removes poison, reduces Bind and Silence duration by 2 turns",
+		special: "Removes poison, reduces Bind and Despair duration by 2 turns",
 		specialName: "Merciful Painkiller",
 		captain: "Recovers 5x character's RCV in HP at the end of each turn"
 	},
@@ -2751,12 +2751,12 @@ window.details = {
 		captain: "Boosts ATK of PSY characters by 3x if HP is below 30% at the start of the turn"
 	},
 	644: {
-		special: "Reduces Bind and Silence duration by 2 turns, boosts ATK against delayed enemies by 1.2x for 3 turns",
+		special: "Reduces Bind and Despair duration by 2 turns, boosts ATK against delayed enemies by 1.2x for 3 turns",
 		specialName: "Witch's Icebreaker",
 		captain: "Boosts ATK of INT characters by 2x"
 	},
 	645: {
-		special: "Reduces Bind and Silence duration by 2 turns, boosts ATK against delayed enemies by 1.2x for 3 turns",
+		special: "Reduces Bind and Despair duration by 2 turns, boosts ATK against delayed enemies by 1.2x for 3 turns",
 		specialName: "Witch's Icebreaker",
 		captain: "Boosts ATK of INT characters by 2.5x"
 	},
@@ -2832,7 +2832,7 @@ window.details = {
 		captain: "Boosts ATK of Shooter characters by 1.5x"
 	},
 	659: {
-		special: "Reduces Bind and Silence duration by 2 turns, reduces damage received by 50% for 2 turns",
+		special: "Reduces Bind and Despair duration by 2 turns, reduces damage received by 50% for 2 turns",
 		specialName: "Gum-Gum Balloon Swim",
 		captain: "Boosts ATK by 2.5x after scoring 3 Perfects in a row"
 	},
@@ -3076,12 +3076,12 @@ window.details = {
 		captain: "Boosts ATK and HP of STR characters by 1.5x"
 	},
 	708: {
-		special: "Reduces Bind and Silence duration by 3 turns",
+		special: "Reduces Bind and Despair duration by 3 turns",
 		specialName: "Cien Fleur - Wing",
 		captain: "Boosts ATK and RCV of PSY characters by 1.2x"
 	},
 	709: {
-		special: "Reduces Bind and Silence duration by 3 turns",
+		special: "Reduces Bind and Despair duration by 3 turns",
 		specialName: "Cien Fleur - Wing",
 		captain: "Boosts ATK and RCV of PSY characters by 1.5x"
 	},
@@ -3380,7 +3380,7 @@ window.details = {
 		captain: "Boosts ATK and RCV of Striker characters by 1.5x"
 	},
 	765: {
-		special: "Reduces Silence duration by 3 turns",
+		special: "Reduces Despair duration by 3 turns",
 		specialName: "Scope Magic",
 		captain: "Recovers 2x character's RCV in HP at the end of each turn"
 	},
@@ -3392,7 +3392,7 @@ window.details = {
 	767: {
 		special: {
 			"japan": "Changes the orbs in the top row into [DEX] orbs, removes blindness",
-			"global": "Changes the orbs in the top row into [DEX] orbs, reduces Silence duration by 1 turn"
+			"global": "Changes the orbs in the top row into [DEX] orbs, reduces Despair duration by 1 turn"
 		},
 		specialName: "Ojos Fleur: Thriller",
 		captain: "Boosts ATK and RCV of DEX characters by 1.5x"
@@ -3485,11 +3485,11 @@ window.details = {
 		captain: "Boosts ATK of Slasher characters by 2x and their RCV by 1.5x"
 	},
 	784: {
-		special: "Reduces Silence duration by 2 turns, removes blindness",
+		special: "Reduces Despair duration by 2 turns, removes blindness",
 		specialName: "Yelling at Lascivious Young Women"
 	},
 	785: {
-		special: "Reduces Silence duration by 2 turns, removes blindness",
+		special: "Reduces Despair duration by 2 turns, removes blindness",
 		specialName: "Yelling at Lascivious Young Women",
 		captain: "Reduces damage received by 20%"
 	},
@@ -3791,13 +3791,13 @@ window.details = {
 	847: {
 		captain: "Boosts ATK of all characters by 1.5x if HP is below 30% at the start of the turn",
 		specialName: "Sturdy Boat: Launch",
-		special: "Reduces Silence duration by 5 turns, boosts ATK of all characters by 5% for 3 turns, reduces damage received by 10% for 3 turns, amplifies the effect of orbs by 1.15x for 3 turns, recovers 2x character's RCV in HP at the end of each turn for 3 turns",
+		special: "Reduces Despair duration by 5 turns, boosts ATK of all characters by 5% for 3 turns, reduces damage received by 10% for 3 turns, amplifies the effect of orbs by 1.15x for 3 turns, recovers 2x character's RCV in HP at the end of each turn for 3 turns",
 		specialNotes: "#{orb : 1.15x}"
 	},
 	848: {
 		captain: "Boosts ATK of all characters by 2x if HP is below 30% at the start of the turn",
 		specialName: "Sturdy Boat: Launch",
-		special: "Reduces Silence duration by 5 turns, boosts ATK of all characters by 5% for 3 turns, reduces damage received by 10% for 3 turns, amplifies the effect of orbs by 1.15x for 3 turns, recovers 2x character's RCV in HP at the end of each turn for 3 turns",
+		special: "Reduces Despair duration by 5 turns, boosts ATK of all characters by 5% for 3 turns, reduces damage received by 10% for 3 turns, amplifies the effect of orbs by 1.15x for 3 turns, recovers 2x character's RCV in HP at the end of each turn for 3 turns",
 		specialNotes: "#{orb : 1.15x}"
 	},
 	849: {
@@ -4099,7 +4099,7 @@ window.details = {
 	899: {
 		captain: "Boosts ATK of Fighter and Free Spirit characters by 1.75x and their RCV by 1.25x",
 		specialName: "Hymn to Friendship: \"Okama Way\" Two",
-		special: "Reduces Silence duration by 5 turns, recovers 10x character's RCV in HP"
+		special: "Reduces Despair duration by 5 turns, recovers 10x character's RCV in HP"
 	},
 	900: {
 		captain: "Boosts ATK of Shooter characters by 2x if HP is above 99% at the start of the turn",
@@ -4135,15 +4135,15 @@ window.details = {
 		special: [
 			{
 				"description": "Changes own orb into [STR], boosts his own ATK by 1.5x for 2 turns",
-				"cooldown": 17
+				"cooldown": [ 17, 11 ]
 			},
 			{
 				"description": "Changes own orb into [STR], boosts ATK of Slasher characters by 1.5x for 2 turns",
-				"cooldown": 21
+				"cooldown": [ 21, 15 ]
 			},
 			{
 				"description": "Changes own orb into [STR], boosts ATK of Slasher characters by 1.75x for 2 turns",
-				"cooldown": 24
+				"cooldown": [ 24, 18 ]
 			}
 		],
 		specialNotes: "#{stages}"
@@ -4154,15 +4154,15 @@ window.details = {
 		special: [
 			{
 				"description": "Changes own orb into [STR], boosts his own ATK by 1.5x for 2 turns",
-				"cooldown": 17
+				"cooldown": [ 17, 11 ]
 			},
 			{
 				"description": "Changes own orb into [STR], boosts ATK of Slasher characters by 1.5x for 2 turns",
-				"cooldown": 21
+				"cooldown": [ 21, 15 ]
 			},
 			{
 				"description": "Changes own orb into [STR], boosts ATK of Slasher characters by 1.75x for 2 turns",
-				"cooldown": 24
+				"cooldown": [ 24, 18 ]
 			}
 		],
 		specialNotes: "#{stages}"
@@ -4412,13 +4412,13 @@ window.details = {
 	},
 	946: {
 		specialName: "Persuit of the Morning Star",
-		captain: "Boosts the ATK of Striker Characters by 1.75x. Reduces cooldown of all specials by 3 turns at the start of the fight",
+		captain: "Boosts the ATK of Striker Characters by 1.75x. Reduces cooldown of all specials by 1 turn at the start of the fight",
 		special: "Change Friend Captain and this unit's orb to [INT]"
 	},
 	947: {
 		captain: "Boosts the ATK of [INT] Characters by 1.5x, Boosts damage of [INT] specials by 1.5x",
 		specialName: "Flame Flash",
-		special: "[STR] and [INT] Characters gain 1.3x ATK, Deals random [INT] damage",
+		special: "[STR] and [INT] Characters gain 1.3x ATK for 1 turn. Deals random [INT] damage",
 		captainNotes: "#{noFixedPerc}"
 	},
 	948: {
@@ -4430,5 +4430,6 @@ window.details = {
 		captain: "Boosts the ATK of Slasher Characters by 2x, recovers 2x character's RCV in HP at the end of each turn",
 		specialName: "Ties with Ace",
 		special: "Reduces Silence by 3 turns, and heals for 4,000"
+		specialNotes: "Silence will refer to effects that prevent you from activating Special Abilities"
 	}
 };
