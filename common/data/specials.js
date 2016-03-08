@@ -1082,5 +1082,9 @@ window.specials = {
 		atk: function(p) { return p.unit.class.has("Ambition") ? 1.5 : 1; },
 		rcv: function(p) { return p.unit.class.has("Ambition") ? 1.5 : 1; },
 		type: "class"
+    },
+	947: {
+		atk: function(p) { return p.unit.type == "STR" || return p.unit.type == "INT" ? 1.3 : 1; },
+		type: "type"
     }
 };
