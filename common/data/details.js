@@ -4409,5 +4409,26 @@ window.details = {
 		captain: "Boosts the ATK and RCV of Ambition Characters by 1.75x",
 		specialName: "Spiritual Bouquet",
 		special: "Boosts the ATK and RCV of Ambition Characters by 1.5x for 1 turn"
+	},
+	946: {
+		specialName: "Persuit of the Morning Star",
+		captain: "Boosts the ATK of Striker Characters by 1.75x. Reduces cooldown of all specials by 3 turns at the start of the fight",
+		special: "Change Friend Captain and this unit's orb to [INT]"
+	},
+	947: {
+		captain: "Boosts the ATK of [INT] Characters by 1.5x, Boosts damage of [INT] specials by 1.5x",
+		specialName: "Flame Flash",
+		special: "[STR] and [INT] Characters gain 1.3x ATK, Deals random [INT] damage",
+		captainNotes: "#{noFixedPerc}"
+	},
+	948: {
+		captain: "Boosts the ATK of Shooter Characters by 1.5x and boosts their RCV by 1.2x",
+		specialName: "Twin Cannons",
+		special: "Randomly changes all orbs to either [STR] or [INT]. Deals random [STR] damage"
+	},
+	949: {
+		captain: "Boosts the ATK of Slasher Characters by 2x, recovers 2x character's RCV in HP at the end of each turn",
+		specialName: "Ties with Ace",
+		special: "Reduces Silence by 3 turns, and heals for 4,000"
 	}
 };

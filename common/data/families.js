@@ -943,5 +943,13 @@ window.families = [
 	"Franky",
 	"Franky",
 	"Perona",
-	"Perona"
+	"Perona",
+	"Rakuyo",
+	"Fossa",
+	"Curiel",
+	"Thatch",
+	"Ace",
+	"Ace",
+	"Beckman",
+	"Beckman"
 ];
