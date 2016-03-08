@@ -1084,7 +1084,7 @@ window.specials = {
 		type: "class"
     },
 	947: {
-		atk: function(p) { return p.unit.type == "STR" || return p.unit.type == "INT" ? 1.3 : 1; },
+		atk: function(p) { return p.unit.type == "STR" || return p.unit.type == "INT" ? 1.3 : 1; }
 		type: "type"
     }
 };

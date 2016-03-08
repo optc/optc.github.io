@@ -4349,13 +4349,13 @@ window.details = {
 	934: {
 		captain: "Boosts ATK of Fighter Characters by 2x, and their HP by 1.5x. If HP is above 70% or below 30%, boosts ATK of Fighter Characters by 2.75 instead",
 		specialName: "Fishman Karate!! Shark Fist Tile Breaker",
-		special: "For 1 turn, Perfects become harder to hit. Deals Large [INT] damage to all enemies. Change all Fighter Character orbs to Matching",
+		special: "For 1 turn, Perfects become harder to hit. Deals 20x character's ATK in [INT] damage to all enemies. Change all Fighter Character orbs to Matching",
 		specialNotes: "Decreases timing window to hit a Perfect. (Animation remains the same)"
 	},
 	935: {
 		captain: "Boosts ATK of Fighter Characters by 2x, and their HP by 1.5x. If HP is above 70% or below 30%, boosts ATK of Fighter Characters by 2.75 instead",
 		specialName: "Fishman Karate!! Shark Fist Tile Breaker",
-		special: "For 1 turn, Perfects become harder to hit. Deals Large [INT] damage to all enemies. Change all Fighter Character orbs to Matching",
+		special: "For 1 turn, Perfects become harder to hit. Deals 20x character's ATK in [INT] damage to all enemies. Change all Fighter Character orbs to Matching",
 		specialNotes: "Decreases timing window to hit a Perfect. (Animation remains the same)"
 	},
 	936: {
@@ -4418,7 +4418,7 @@ window.details = {
 	947: {
 		captain: "Boosts ATK of [INT] Characters by 1.5x, Boosts damage of [INT] specials by 1.5x",
 		specialName: "Flame Flash",
-		special: "[STR] and [INT] Characters gain 1.3x ATK for 1 turn. Deals random [INT] damage",
+		special: "[STR] and [INT] Characters gain 1.3x ATK for 1 turn. Deals 10x character's ATK in [INT] damage to all enemies",
 		captainNotes: "#{noFixedPerc}"
 	},
 	948: {
