@@ -2231,5 +2231,18 @@ window.captains = {
 	945: {
 		atk: function(p) { return p.unit.class.has("Ambition") ? 1.75 : 1; },
 		rcv: function(p) { return p.unit.class.has("Ambition") ? 1.75 : 1; }
+	},
+	946: {
+		atk: function(p) { return p.unit.class.has("Striker") ? 1.75 : 1; }
+	},
+	947: {
+		atk: function(p) { return p.unit.type == "INT" ? 1.5 : 1; }
+	},
+	948: {
+		atk: function(p) { return p.unit.class.has("Shooter") ? 1.5 : 1; },
+		rcv: function(p) { return p.unit.class.has("Shooter") ? 1.2 : 1; }
+	},
+	949: {
+		atk: function(p) { return p.unit.class.has("Slasher") ? 2 : 1; }
 	}
 };

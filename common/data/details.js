@@ -4412,8 +4412,8 @@ window.details = {
 	},
 	946: {
 		specialName: "Persuit of the Morning Star",
-		captain: "Boosts the ATK of Striker Characters by 1.75x. Reduces cooldown of all specials by 1 turn at the start of the fight",
-		special: "Change Friend Captain and this unit's orb to [INT]"
+		captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts the ATK of Striker Characters by 1.75x",
+		special: "Change Friend Captain and changes own orb into [INT]"
 	},
 	947: {
 		captain: "Boosts the ATK of [INT] Characters by 1.5x, Boosts damage of [INT] specials by 1.5x",
@@ -4429,7 +4429,7 @@ window.details = {
 	949: {
 		captain: "Boosts the ATK of Slasher Characters by 2x, recovers 2x character's RCV in HP at the end of each turn",
 		specialName: "Ties with Ace",
-		special: "Reduces Silence by 3 turns, and heals for 4,000",
+		special: "Reduces Silence by 3 turns, and recovers 4,000 HP",
 		specialNotes: "Silence will refer to effects that prevent you from activating Special Abilities"
 	}
 };
