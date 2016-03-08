@@ -27,11 +27,11 @@ window.abilities = [
     },
 
     {
-        name: 'Silence resistance',
+        name: 'Despair resistance',
         levels: [
-            [ 10, 'Silence duration reduced by 1 turn' ],
-            [ 15, 'Silence duration reduced by 2 turns' ],
-            [ 20, 'Silence duration reduced by 3 turns' ]
+            [ 10, 'Despair duration reduced by 1 turn' ],
+            [ 15, 'Despair duration reduced by 2 turns' ],
+            [ 20, 'Despair duration reduced by 3 turns' ]
         ]
     },
 

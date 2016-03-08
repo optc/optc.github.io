@@ -953,7 +953,7 @@ window.drops = {
             Elite: [ 928, 930, 931, -752, -758, -520, -729, -733, -787, -930, -544, -506 ]
         },
         {
-            name: "[Preview] Whitebeard Pirates Commanders",
+            name: "Encounter! Whitebeard Pirates!",
             thumb: null,
             condition: "You can only bring PSY units",
             Expert: [ 946, 947, 948, 949],
@@ -1104,7 +1104,7 @@ window.drops = {
 
         {
             name: 'Battle Royal! Oars',
-            thumb: 414,
+            thumb: 893,
             'Master': [ -367, -316, -314, -312, -308, -259, -257, -255, -253, -251, -221, -218, -217, -210, -75, -30, -16, -15, -8 ]
         },
 

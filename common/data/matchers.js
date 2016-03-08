@@ -294,9 +294,9 @@ window.matchers = [
     },
 
     {
-        name: 'Silence reducers',
+        name: 'Despair reducers',
         target: 'special',
-        matcher: /reduces.+silence.+duration/i,
+        matcher: /reduces.+despair.+duration/i,
     },
 
     {

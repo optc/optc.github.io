@@ -944,12 +944,12 @@ window.units = [
 	[ "Cyborg Franky, Sacred Beast of Barujimoa", "STR", [ "Free Spirit", "Shooter" ], 5, 30, 4, 4, 99, null, 1535, 635, 88, 2810, 1249, 244, null],
 	[ "Perona, Malicious Old Castle Bride", "PSY", [ "Shooter", "Ambition" ], 4, 13, 4, 2, 50, null, 59, 34, 47, 814, 392, 223, null],
 	[ "Fancy Princess Wedding Perona", "PSY", [ "Shooter", "Ambition" ], 5, 20, 5, 3, 99, null, 740, 333, 172, 1787, 787, 390, null],
-	[ "Whitebeard 7th Division Commander, Rakuyo", "INT", [ "Striker", "Tough" ], 4, 25, 6, 3, 99, null, 58, 27, 33, null, null, null, null],
-	[ "Whitebeard 15th Division Commander, Fossa", "INT", [ "Slasher", "Tough" ], 4, 25, 6, 3, 99, null, 48, 35, 20, null, null, null, null],
-	[ "Whitebeard 10th Division Commander, Curiel", "STR", [ "Shooter", "Tough" ], 4, 25, 5, 3, 99, null, 33, 39, 30, null, null, null, null],
-	[ "Whitebeard 4th Division Commander, Thatch", "PSY", [ "Slasher", "Knowledge" ], 4, 25, 5, 3, 99, null, 80, 37, 37, null, null, null, null],
-	[ "Colosseum Ace", "PSY", [ "Free Spirit", "Fighter" ], 4, 25, null, null, null, null, null, null, null, null, null, null, null],
-	[ "Colosseum Ace Evolution", "PSY", [ "Free Spirit", "Fighter" ], 5, 40, null, null, null, null, null, null, null, null, null, null, null],
-	[ "Colosseum Beckman", "DEX", [ "Striker", "Shooter" ], 3, 13, null, null, null, null, null, null, null, null, null, null, null],
- 	[ "Colosseum Beckman Evolution", "DEX", [ "Striker", "Shooter" ], 4, 20, null, null, null, null, null, null, null, null, null, null, null]
+	[ "Whitebeard 7th Division Commander, Rakuyo", "INT", [ "Striker", "Tough" ], 4, 25, 6, 3, 99, null, 58, 27, 33, 2077, 1055, 218, null],
+	[ "Whitebeard 15th Division Commander, Fossa", "INT", [ "Slasher", "Tough" ], 4, 25, 6, 3, 99, null, 48, 35, 20, 1911, 1231, 187, null],
+	[ "Whitebeard 10th Division Commander, Curiel", "STR", [ "Shooter", "Tough" ], 4, 25, 5, 3, 99, null, 33, 39, 30, 1706, 1252, 187, null],
+	[ "Whitebeard 4th Division Commander, Thatch", "PSY", [ "Slasher", "Knowledge" ], 4, 25, 5, 3, 99, null, 80, 37, 37, 1996, 1088, 226, null],
+	[ "Ace, Whitebeard 2nd Div. Commander", "PSY", [ "Free Spirit", "Fighter" ], 4, 25, null, null, null, null, null, null, null, null, null, null, null],
+	[ "Fire Fist Ace, Whitebeard 2nd Div. Commander", "PSY", [ "Free Spirit", "Fighter" ], 5, 40, null, null, null, null, null, null, null, null, null, null, null],
+	[ "Ben Beckman", "DEX", [ "Striker", "Shooter" ], 3, 13, null, null, null, null, null, null, null, null, null, null, null],
+ 	[ "Ben Beckman, Red Hair Pirates", "DEX", [ "Striker", "Shooter" ], 4, 20, null, null, null, null, null, null, null, null, null, null, null]
 ];
