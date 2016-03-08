@@ -4429,7 +4429,7 @@ window.details = {
 	949: {
 		captain: "Boosts the ATK of Slasher Characters by 2x, recovers 2x character's RCV in HP at the end of each turn",
 		specialName: "Ties with Ace",
-		special: "Reduces Silence by 3 turns, and heals for 4,000"
+		special: "Reduces Silence by 3 turns, and heals for 4,000",
 		specialNotes: "Silence will refer to effects that prevent you from activating Special Abilities"
 	}
 };
