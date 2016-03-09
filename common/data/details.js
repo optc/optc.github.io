@@ -4336,11 +4336,11 @@ window.details = {
 		specialName: "Rock Domination Wall",
 		special: [
 			{
-				"description": "For Ambition and Tough characters, changes [EMPTY] and Bad orbs to Matching. Cuts enemy HP by 10%",
+				"description": "For Ambition and Tough characters, changes [EMPTY] and Bad orbs to Matching. Cuts the current HP of all enemies by 20%",
 				"cooldown": [ 25, 11 ]
 			},
 			{
-				"description": "For all characters, changes [EMPTY] and Bad orbs to Matching. Cuts enemy HP by 20%",
+				"description": "For all characters, changes [EMPTY] and Bad orbs to Matching. Cuts the current HP of all enemies by 20%",
 				"cooldown": [ 31, 17 ]
 			}
 		],
