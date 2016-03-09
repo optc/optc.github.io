@@ -4386,7 +4386,7 @@ window.details = {
 		special: "Deals 13x ATK as [DEX] damage to all enemies, and boosts ATK of [DEX] characters by 1.75x for 1 turn"
 	},
 	941: {
-		captain: "Boosts ATK of [DEX] Characters by 1.5x and their HP by 2.25x",
+		captain: "Boosts ATK of [DEX] Characters by 1.75x and their HP by 2.25x",
 		specialName: "Sure Kill! Exploding Star!!",
 		special: "Deals 13x ATK as [DEX] damage to all enemies, and boosts ATK of [DEX] characters by 1.75x for 1 turn"
 	},
@@ -4431,5 +4431,27 @@ window.details = {
 		specialName: "Ties with Ace",
 		special: "Reduces Silence by 3 turns, and recovers 4,000 HP",
 		specialNotes: "Silence will refer to effects that prevent you from activating Special Abilities"
-	}
+	},
+	950: {
+		captain: "Boosts ATK of Brawler and Free Spirit Characters by 2x after scoring 3 Perfects in a row",
+		specialName: "Pillars of Flame",
+		special: "Reduces Special Cooldown of Brawler and Free Spirit Characters by 1 turn. Reduces damage received by 50% for 1 turn.",
+		specialNotes: "Reducing Special Cooldown works as if you took an extra turn"
+	},
+	951: {
+		captain: "Boosts ATK of Brawler and Free Spirit Characters by 2.5x after scoring 3 Perfects in a row",
+		specialName: "Pillars of Flame",
+		special: "Reduces Special Cooldown of Brawler and Free Spirit Characters by 1 turn. Reduces damage received by 50% for 1 turn.",
+		specialNotes: "Reducing Special Cooldown works as if you took an extra turn"
+	},
+	952: {
+		captain: "Boosts ATK and HP of Shooter and Striker Characters by 1.5x",
+		specialName: "Butt of Gun Attack",
+		special: "Deals 13x ATK in [DEX] Damage to one enemy. Changes Captain's orb into matching."
+	},
+	953: {
+		captain: "Boosts ATK and HP of Shooter and Striker Characters by 1.5x",
+		specialName: "Butt of Gun Attack",
+		special: "Deals 13x ATK in [DEX] Damage to one enemy. Changes Captain's orb into matching."
+	},
 };
