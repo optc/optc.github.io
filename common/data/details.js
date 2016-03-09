@@ -4272,14 +4272,14 @@ window.details = {
 		captain: "Boosts ATK of Ambition characters by 2x or by 2.5x",
 		captainNotes: "#{captainFixed : 2x : HP<30% : 2.5x}",
 		specialName: "Repel: Weapons Reflect",
-		special: "Empties all slots, deals STR damage based on number of [STR] slots emptied to one enemy",
+		special: "Empties all slots, deals STR damage based on number of [STR] slots emptied to all enemies",
 		specialNotes: "The exact multiplier used is chosen based on the number of [STR] orbs consumed: 0 orbs - 3.5x ATK; 1 orb - 7x ATK; 2 orbs - 14x ATK; 3 orbs - 21x ATK; 4 orbs - 35x ATK; 5 orbs - 91x ATK; 6 orbs - 140x ATK."
 	},
 	924: {
 		captain: "Boosts ATK of Ambition characters by 2x or by 2.75x",
 		captainNotes: "#{captainFixed : 2x : HP<30% : 2.75x}",
 		specialName: "Repel: Weapons Reflect",
-		special: "Empties all slots, deals STR damage based on number of [STR] slots emptied to one enemy",
+		special: "Empties all slots, deals STR damage based on number of [STR] slots emptied to all enemies",
 		specialNotes: "The exact multiplier used is chosen based on the number of [STR] orbs consumed: 0 orbs - 3.5x ATK; 1 orb - 7x ATK; 2 orbs - 14x ATK; 3 orbs - 21x ATK; 4 orbs - 35x ATK; 5 orbs - 91x ATK; 6 orbs - 140x ATK."
 	},
 	925: {
