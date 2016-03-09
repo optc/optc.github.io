@@ -954,7 +954,7 @@ window.drops = {
         },
         {
             name: "Encounter! Whitebeard Pirates!",
-            thumb: null,
+            thumb: 946,
             condition: "You can only bring PSY units",
             Expert: [ 946, 947, 948, 949, -718, -750, -760, -526, -793, -735, -546, -738],
             Elite: [ 946, 947, 948, 949, -718, -750, -760, -526, -793, -735, -546, -738]

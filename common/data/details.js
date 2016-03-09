@@ -4411,7 +4411,7 @@ window.details = {
 		special: "Boosts ATK and RCV of Ambition Characters by 1.5x for 1 turn"
 	},
 	946: {
-		specialName: "Persuit of the Morning Star",
+		specialName: "Lock-on Iron Ball",
 		captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of Striker Characters by 1.75x",
 		special: "Change Friend Captain and changes own orb into [INT]"
 	},
@@ -4434,24 +4434,24 @@ window.details = {
 	},
 	950: {
 		captain: "Boosts ATK of Brawler and Free Spirit Characters by 2.5x after scoring 3 Perfects in a row",
-		specialName: "Pillars of Flame",
+		specialName: "Flame Commandment: Fire Pillar",
 		special: "Reduces Special Cooldown of Brawler and Free Spirit Characters by 1 turn. Reduces damage received by 50% for 1 turn.",
 		specialNotes: "Reducing Special Cooldown works as if you took an extra turn"
 	},
 	951: {
 		captain: "Boosts ATK of Brawler and Free Spirit Characters by 2.75x after scoring 3 Perfects in a row",
-		specialName: "Pillars of Flame",
+		specialName: "Flame Commandment: Fire Pillar",
 		special: "Reduces Special Cooldown of Brawler and Free Spirit Characters by 1 turn. Reduces damage received by 50% for 1 turn.",
 		specialNotes: "Reducing Special Cooldown works as if you took an extra turn"
 	},
 	952: {
-		captain: "Boosts ATK and HP of Shooter and Striker Characters by 1.5x",
-		specialName: "Butt of Gun Attack",
+		captain: "Boosts ATK and HP of Shooter and Striker Characters by 1.2x",
+		specialName: "Life-saving Gunstock Blow",
 		special: "Deals 13x ATK in [DEX] Damage to one enemy. Changes Captain's orb into matching."
 	},
 	953: {
 		captain: "Boosts ATK and HP of Shooter and Striker Characters by 1.5x",
-		specialName: "Butt of Gun Attack",
+		specialName: "Life-saving Gunstock Blow",
 		special: "Deals 13x ATK in [DEX] Damage to one enemy. Changes Captain's orb into matching."
 	},
 };
