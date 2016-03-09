@@ -4433,13 +4433,13 @@ window.details = {
 		specialNotes: "Silence will refer to effects that prevent you from activating Special Abilities"
 	},
 	950: {
-		captain: "Boosts ATK of Brawler and Free Spirit Characters by 2x after scoring 3 Perfects in a row",
+		captain: "Boosts ATK of Brawler and Free Spirit Characters by 2.5x after scoring 3 Perfects in a row",
 		specialName: "Pillars of Flame",
 		special: "Reduces Special Cooldown of Brawler and Free Spirit Characters by 1 turn. Reduces damage received by 50% for 1 turn.",
 		specialNotes: "Reducing Special Cooldown works as if you took an extra turn"
 	},
 	951: {
-		captain: "Boosts ATK of Brawler and Free Spirit Characters by 2.5x after scoring 3 Perfects in a row",
+		captain: "Boosts ATK of Brawler and Free Spirit Characters by 2.75x after scoring 3 Perfects in a row",
 		specialName: "Pillars of Flame",
 		special: "Reduces Special Cooldown of Brawler and Free Spirit Characters by 1 turn. Reduces damage received by 50% for 1 turn.",
 		specialNotes: "Reducing Special Cooldown works as if you took an extra turn"
