@@ -949,7 +949,7 @@ window.units = [
 	[ "Whitebeard 10th Division Commander, Curiel", "STR", [ "Shooter", "Tough" ], 4, 25, 5, 3, 99, 3000000, 33, 39, 30, 1706, 1251, 212, 1],
 	[ "Whitebeard 4th Division Commander, Thatch", "PSY", [ "Slasher", "Knowledge" ], 4, 25, 5, 3, 99, 3000000, 80, 37, 37, 1995, 1088, 227, 1],
 	[ "Ace, Whitebeard 2nd Div. Commander", "PSY", [ "Free Spirit", "Fighter" ], 4, 25, 5, 2, 70, null, 606, 313, 54, null, null, null, null],
-	[ "Fire Fist Ace, Whitebeard 2nd Div. Commander", "PSY", [ "Free Spirit", "Fighter" ], 5, 40, null, null, null, null, null, null, null, null, null, null, null],
+	[ "Fire Fist Ace, Whitebeard 2nd Div. Commander", "PSY", [ "Free Spirit", "Fighter" ], 5, 40, 4, 3, 99, null, null, null, null, 2599, 1271, 271, null],
 	[ "Ben Beckman", "DEX", [ "Striker", "Shooter" ], 3, 13, 6, 1, 35, null, 131, 98, 25, null, null, null, null],
  	[ "Ben Beckman, Red Hair Pirates", "DEX", [ "Striker", "Shooter" ], 4, 20, 4, 2, 70, null, 867, 329, 122, null, null, null, null]
 ];
