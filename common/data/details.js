@@ -4272,14 +4272,14 @@ window.details = {
 		captain: "Boosts ATK of Ambition characters by 2x or by 2.5x",
 		captainNotes: "#{captainFixed : 2x : HP<30% : 2.5x}",
 		specialName: "Repel: Weapons Reflect",
-		special: "Empties all slots, deals STR damage based on number of [STR] slots emptied to all enemies",
+		special: "Empties all slots, deals [STR] damage based on number of [STR] slots emptied to all enemies",
 		specialNotes: "The exact multiplier used is chosen based on the number of [STR] orbs consumed: 0 orbs - 3.5x ATK; 1 orb - 7x ATK; 2 orbs - 14x ATK; 3 orbs - 21x ATK; 4 orbs - 35x ATK; 5 orbs - 91x ATK; 6 orbs - 140x ATK."
 	},
 	924: {
 		captain: "Boosts ATK of Ambition characters by 2x or by 2.75x",
 		captainNotes: "#{captainFixed : 2x : HP<30% : 2.75x}",
 		specialName: "Repel: Weapons Reflect",
-		special: "Empties all slots, deals STR damage based on number of [STR] slots emptied to all enemies",
+		special: "Empties all slots, deals [STR] damage based on number of [STR] slots emptied to all enemies",
 		specialNotes: "The exact multiplier used is chosen based on the number of [STR] orbs consumed: 0 orbs - 3.5x ATK; 1 orb - 7x ATK; 2 orbs - 14x ATK; 3 orbs - 21x ATK; 4 orbs - 35x ATK; 5 orbs - 91x ATK; 6 orbs - 140x ATK."
 	},
 	925: {
@@ -4453,5 +4453,100 @@ window.details = {
 		captain: "Boosts ATK and HP of Shooter and Striker Characters by 1.5x",
 		specialName: "Life-saving Gunstock Blow",
 		special: "Deals 13x ATK in [DEX] Damage to one enemy. Changes Captain's orb into matching."
+	},
+	954:{
+		captain: "Boosts ATK and HP of [QCK] Characters by 1.5x",
+		specialName: "Gyaro Special",
+		special: "Reduces the defense of all enemies by 80% for 2 turns"
+	},
+	955:{
+		captain: "Boosts ATK and HP of [PSY] Characters by 1.5x",
+		specialName: "Makuro Special",
+		special: "Boosts ATK against enemies with reduced defense by 1.2x for 2 turns"
+	},
+	956:{
+		captain: "Boosts ATK and HP of [INT] Characters by 1.5x",
+		specialName: "Tansui Special",
+		special: "Boosts ATK of Touch characters by 1.2x for 2 turns"
+	},
+	957:{
+		specialName: "Blue Gunner Special",
+		special: "Recover 2,000 HP"
+	},
+	958:{
+		specialName: "Black Gunner Special",
+		special: "Reduces Bind duration by 2 turns"
+	},
+	959:{
+		specialName: "Green Gunman Special",
+		special: "Reduces Despair duration by 2 turns"
+	},
+	960:{
+		specialName: "Blue Gunman Special",
+		special: "Randomly changes all orbs into either [STR], [DEX], [QCK], [PSY] or [INT] orbs"
+	},
+	961:{
+		specialName: "Red Gunman Special",
+		special: "Amplifies the effect of orbs by 1.25x for 1 turn"
+	},
+	962:{
+		specialName: "Yellow Gunman Special",
+		special: "Changes captain's orb into [RCV]"
+	},
+	963:{
+		captain: "Boosts ATK of characters with cost between 50 and 55 by 2x",
+		specialName: "Charloss Special",
+		special: "Reduces the defense of all enemies by 100% for 1 turn and randomizes all orbs"
+	},
+	964:{
+		captain: "Boosts ATK, HP, and RCV of characters with cost between 50 and 55 by 1.5x",
+		specialName: "Wrath of the Creator Bloodline",
+		special: "Boosts ATK of all characters by 1.1x for 1 turn. If \"Wrath of the Creator Bloodline\" is used again in the same turn the special is activated in, boosts ATK of all characters by 1.5x instead."
+	},
+	965:{
+		captain: "Boosts ATK of characters with cost between 50 and 55 by 1.5x, recovers 500 HP at the end of each turn",
+		specialName: "Wrath of the Creator Bloodline",
+		special: "Boosts ATK of all characters by 1.1x for 1 turn. If \"Wrath of the Creator Bloodline\" is used again in the same turn the special is activated in, boosts ATK of all characters by 1.5x instead."
+	},
+	966:{
+		captain: "Boosts ATK of Ambition Characters by 2.25x",
+		specialName: "Kid Special",
+		special: "Empties all slots, deals [QCK] damage based on number of [QCK] slots emptied to all enemies",
+		specialNotes: "The exact multiplier used is chosen based on the number of [QCK] orbs consumed: We do not know the values yet"
+	},
+	967:{
+		captain: "Boosts ATK of Free Spirit Characters by 2.25x",
+		specialName: "Trafalgar Law Special",
+		special: "Recovers 20x character's RCV in HP. Switches orbs between slots twice"
+	},
+	968:{
+		specialName: "High Heat Ray Laser",
+		special: "Deals 25x ATK to one enemy. Changes own orb to matching orb"
+	},
+	969:{
+		specialName: "High Heat Ray Laser",
+		special: "Deals 25x ATK to one enemy. Changes own orb to matching orb"
+	},
+	970:{
+		specialName: "High Heat Ray Laser",
+		special: "Deals 25x ATK to one enemy. Changes own orb to matching orb"
+	},
+	971:{
+		specialName: "High Heat Ray Laser",
+		special: "Deals 25x ATK to one enemy. Changes own orb to matching orb"
+	},
+	972:{
+		specialName: "High Heat Ray Laser",
+		special: "Deals 25x ATK to one enemy. Changes own orb to matching orb"
+	},
+	973:{
+		captain: "Boosts ATK of Tough Characters by 2x if HP is above 99% at the start of the turn",
+		specialName: "Sentoumaru Special",
+		special: "Deals 20,000 fixed damage to one enemy. Changes friend captain's orb into Matching orb"
+	},
+	974:{
+		captain: "Boosts ATK of Tough Characters by 2.5x if HP is above 99% at the start of the turn",
+		specialName: "Sentoumaru Special",
+		special: "Deals 20,000 fixed damage to one enemy. Changes friend captain's orb into Matching orb"
 	},
 };

@@ -206,5 +206,9 @@ window.zombies = {
 	949: { //Fortnight Thatch
 		type: 'healer',
         multiplier: 2
+	},
+	965: {//Saint Charloss
+		type: 'healer',
+		amount: 500 
 	}
 };
