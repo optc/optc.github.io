@@ -2244,5 +2244,87 @@ window.captains = {
 	},
 	949: {
 		atk: function(p) { return p.unit.class.has("Slasher") ? 2 : 1; }
+	},
+	950: {
+		hitAtk: function(p) {
+			if (!p.unit.class.has("Fighter") || !p.unit.class.has("Free Spirit")) return 1;
+			return p.modifiers.slice(0, p.chainPosition)
+				.subcontains(["Perfect", "Perfect", "Perfect"]) ? 2.5 : 1;
+		},
+		hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
+	},
+	951: {
+		hitAtk: function(p) {
+			if (!p.unit.class.has("Fighter") || !p.unit.class.has("Free Spirit")) return 1;
+			return p.modifiers.slice(0, p.chainPosition)
+				.subcontains(["Perfect", "Perfect", "Perfect"]) ? 2.5 : 1;
+		},
+		hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
+	},
+	952: {
+		atk: function(p) {
+			return p.unit.class.has("Shooter") || p.unit.class.has("Striker") ? 1.2 : 1;
+		},
+		hp: function(p) {
+			return p.unit.class.has("Shooter") || p.unit.class.has("Striker") ? 1.2 : 1;
+		}
+	},
+	953: {
+		atk: function(p) {
+			return p.unit.class.has("Shooter") || p.unit.class.has("Striker") ? 1.5 : 1;
+		},
+		hp: function(p) {
+			return p.unit.class.has("Shooter") || p.unit.class.has("Striker") ? 1.5 : 1;
+		}
+	},
+	954: {
+		atk: function(p) { return p.unit.type == "QCK" ? 1.5 : 1; },
+		hp: function(p) { return p.unit.type == "QCK" ? 1.5 : 1; }
+	},
+	955: {
+		atk: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; },
+		hp: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; }
+	},
+	956: {
+		atk: function(p) { return p.unit.type == "INT" ? 1.5 : 1; },
+		hp: function(p) { return p.unit.type == "INT" ? 1.5 : 1; }
+	},
+	963: {
+		atk: function(p) { 
+			if(p.unit.cost >= 50 && p.unit.cost <= 55) return 2; 
+			return 1;
+		}
+	},
+	964: {
+		atk: function(p) { 
+			if(p.unit.cost >= 50 && p.unit.cost <= 55) return 1.5; 
+			return 1;
+		},
+		hp: function(p) { 
+			if(p.unit.cost >= 50 && p.unit.cost <= 55) return 1.5; 
+			return 1;
+		},
+		rcv: function(p) { 
+			if(p.unit.cost >= 50 && p.unit.cost <= 55) return 1.5; 
+			return 1;
+		}
+	},
+	965: {
+		atk: function(p) { 
+			if(p.unit.cost >= 50 && p.unit.cost <= 55) return 1.5; 
+			return 1;
+		}
+	},
+	966: {
+		atk: function(p) { return p.unit.class.has("Ambition") ? 2.25 : 1; }
+	},
+	967: {
+		atk: function(p) { return p.unit.class.has("Free Spirit") ? 2.25 : 1; }
+	},
+	973: {
+		atk: function(p) { return p.unit.class.has("Tough") && p.percHP >= 99.0 ? 2 : 1; }
+	},
+	974: {
+		atk: function(p) { return p.unit.class.has("Tough") && p.percHP >= 99.0 ? 2.5 : 1; }
 	}
 };

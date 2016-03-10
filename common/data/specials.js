@@ -1086,5 +1086,45 @@ window.specials = {
 	947: {
 		atk: function(p) { return p.unit.type == "STR" || p.unit.type == "INT" ? 1.3 : 1; },
 		type: "type"
-    }
+    },
+	954: {
+		def: function(p) { return 0.2; }		
+	},
+	955: {
+		atk: function(p) { return p.defenseDown ? 1.2 : 1; },
+		type: "condition"
+	},
+	956: {
+		atk: function(p) { return p.unit.class.has("Tough") ? 1.2 : 1; }
+	},
+	961: {
+		orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, 1, 1.25); }
+	},
+	963: {
+		def: function(p) { return 0; }
+	},
+	965: {
+		atk: function(p) { return window.specials[965].multiplier; },
+		type: "class",
+		onActivation: function(p) {
+			var n = (window.specials[965].multiplier == 1.5 ? 1 : 0);
+			window.specials[965].multiplier = [1.1, 1.5][n];
+			p.scope.notify({
+				text: 'Using the ' + [1.1, 1.5][n] + 'x ATK multiplier. To switch to the ' + [1.5, 1.1][n] + 'x multiplier, disable and re-enable this special',
+				name: '965warning'
+			});
+		}
+	},
+	966: {
+		atk: function(p) { return window.specials[966].multiplier; },
+		type: "class",
+		onActivation: function(p) {
+			var n = (window.specials[966].multiplier == 1.5 ? 1 : 0);
+			window.specials[966].multiplier = [1.1, 1.5][n];
+			p.scope.notify({
+				text: 'Using the ' + [1.1, 1.5][n] + 'x ATK multiplier. To switch to the ' + [1.5, 1.1][n] + 'x multiplier, disable and re-enable this special',
+				name: '965warning'
+			});
+		}
+	}
 };
