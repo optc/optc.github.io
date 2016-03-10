@@ -963,7 +963,7 @@ window.units = [
 	[ "Yellow Gunman Bodyguard", "PSY", "Shooter", 3, 11, 6, 1, 60, 1123790, 89, 73, 46, 855, 656, 213, 1],
 	[ "Saint Charloss", "STR", "Shooter", 6, 99, 7, 0, 99, 1000000, 5, 320, -500, 25, 554, -400, 1],
 	[ "Saint Roswald", "DEX", "Shooter", 6, 99, 7, 0, 99, 1000000, 6, 334, -600, 30, 601, -500, 1],
-	[ "Saint Shalulia", "QCK", "Shooter", 6, 99, 7, 0, 99, 1000000, 4, 293, -400, 20, 503, -300, 0],
+	[ "Saint Shalulia", "QCK", "Shooter", 6, 99, 7, 0, 99, 1000000, 4, 293, -400, 20, 503, -300, 1],
 	[ "Super Rookie Eustass Kid", "QCK", [ "Ambition", "Striker" ], 4, 20, 5, 3, 99, 3000000, 462, 299, 19, 2301, 1205, 128, 1],
 	[ "Super Rookie Trafalgar Law", "INT", [ "Slasher", "Free Spirit" ], 4, 20, 4, 3, 99, 3000000, 440, 244, 41, 2035, 1013, 243, 1],
 	[ "Pacifista PX-1", "DEX", [ "Shooter", "Tough" ], 4, 40, 4, 0, 70, 1422664, 2000, 1000, -100, 2009, 1016, 1, 1],
