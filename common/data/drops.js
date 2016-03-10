@@ -624,7 +624,7 @@ window.drops = {
             thumb: 268,
             global: true,
             challenge: 'Total Damage dealt to enemies',
-            challengeData: [['600,000 Damage','1x Green Elder'],['1,400,000 Damage','1y Rainbow Gem & 1x HP Cotton Candy'],['3,000,000 Damage','2x Rainbow Gems & 1x Skull Book']],
+            challengeData: [['600,000 Damage','1x Green Elder'],['1,400,000 Damage','1y Rainbow Gem & 1x HP Cotton Candy'],['3,000,000 Damage','2x Rainbow Gems, 1x Forbidden Tome']],
             Expert: [ 67, 69, 86, 97, 112, -219, -212, -206, -204, -73, -52, -50 ],
             Elite: [ 67, 69, 86, 97, 112, -219, -212, -206, -204, -73, -52, -50 ]
         },
@@ -783,7 +783,7 @@ window.drops = {
             thumb: 571,
             global: true,
             challenge: 'Total number of hits over 50,000',
-            challengeData: [['3 Times','1x Red Elder'],['12 Times','1x RCV Cotton Candy'],['34 Times','3x Rainbow Gems & 1x Skull Book']],
+            challengeData: [['3 Times','1x Red Elder'],['12 Times','1x RCV Cotton Candy'],['34 Times','3x Rainbow Gems & 1x Forbidden Tome']],
             Expert: [ 570, 572, 573, -431, -429, -410, -333, -332, -327, -316, -75 ],
             Elite: [ 570, 572, 573, -431, -429, -410, -333, -332, -327, -316, -75 ]
         },
@@ -820,7 +820,7 @@ window.drops = {
             thumb: 635,
             condition: 'No Units above the cost of 49 is allowed',
 			challenge: 'Total number of hits over 50,000',
-            challengeData: [['4 Times','1x Blue Elder'],['8 Times','1x Rainbow Gem, 1x HP Cotton Candy'],['22 Times','2x Rainbow Gems, Orb Matching Forbidden Book']],
+            challengeData: [['4 Times','1x Blue Elder'],['8 Times','1x Rainbow Gem, 1x HP Cotton Candy'],['22 Times','2x Rainbow Gems, 1x Orb Matching Forbidden Tome']],
             Expert: [ 634, 636, 637, -636, -464, -451, -396, -370, -367, -359, -64 ],
             Elite: [ 634, 636, 637, -636, -464, -451, -396, -370, -367, -359, -64 ]
         },
