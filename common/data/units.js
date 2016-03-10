@@ -955,12 +955,12 @@ window.units = [
 	[ "Gyaro", "QCK", [ "Slasher", "Tough" ], 3, 7, 6, 2, 50, 392109, 950, 427, 36, 1420, 627, 98, 1],
 	[ "Makuro", "PSY", [ "Shooter", "Tough" ], 3, 7, 4, 2, 50, 392109, 972, 390, 44, 1447, 591, 110, 1],
 	[ "Tansui", "INT", [ "Fighter", "Tough" ], 3, 7, 4, 2, 50, 392109, 933, 468, 31, 1368, 701, 84, 1],
-	[ "Blue Gunner Bodyguard", "QCK", "Shooter", 3, 11, 6, 1, 60, 1123790, 72, 57, 59, 743, 556, 265, 1],
-	[ "Black Gunner Bodyguard", "INT", "Shooter", 3, 11, 6, 1, 60, 1123790, 64, 64, 57, 709, 597, 257, 1],
-	[ "Green Gunman Bodyguard", "DEX", "Shooter", 3, 11, 6, 1, 60, 1123790, 80, 69, 51, 785, 640, 230, 1],
-	[ "Blue Gunman Bodyguard", "QCK", "Shooter", 3, 11, 6, 1, 60, 1123790, 84, 66, 52, 805, 612, 236, 1],
-	[ "Red Gunman Bodyguard", "STR", "Shooter", 3, 11, 6, 1, 60, 1123790, 82, 80, 44, 821, 700, 204, 1],
-	[ "Yellow Gunman Bodyguard", "PSY", "Shooter", 3, 11, 6, 1, 60, 1123790, 89, 73, 46, 855, 656, 213, 1],
+	[ "Agile Gunman, Blue Bodyguard", "QCK", "Shooter", 3, 11, 6, 1, 60, 1123790, 72, 57, 59, 743, 556, 265, 1],
+	[ "Tricky Gunman, Black Bodyguard", "INT", "Shooter", 3, 11, 6, 1, 60, 1123790, 64, 64, 57, 709, 597, 257, 1],
+	[ "Fine Gunman, Green Bodyguard", "DEX", "Shooter", 3, 11, 6, 1, 60, 1123790, 80, 69, 51, 785, 640, 230, 1],
+	[ "Swift Gunman, Blue Bodyguard", "QCK", "Shooter", 3, 11, 6, 1, 60, 1123790, 84, 66, 52, 805, 612, 236, 1],
+	[ "Strong Gunman, Red Bodyguard", "STR", "Shooter", 3, 11, 6, 1, 60, 1123790, 82, 80, 44, 821, 700, 204, 1],
+	[ "Heart Gunman, Yellow Bodyguard", "PSY", "Shooter", 3, 11, 6, 1, 60, 1123790, 89, 73, 46, 855, 656, 213, 1],
 	[ "Saint Charloss", "STR", "Shooter", 6, 99, 7, 0, 99, 1000000, 5, 320, -500, 25, 554, -400, 1],
 	[ "Saint Roswald", "DEX", "Shooter", 6, 99, 7, 0, 99, 1000000, 6, 334, -600, 30, 601, -500, 1],
 	[ "Saint Shalulia", "QCK", "Shooter", 6, 99, 7, 0, 99, 1000000, 4, 293, -400, 20, 503, -300, 1],
@@ -971,6 +971,6 @@ window.units = [
 	[ "Pacifista PX-3", "QCK", [ "Shooter", "Tough" ], 4, 40, 4, 0, 70, 1422664, 2000, 1000, -100, 2009, 1016, 1, 1],
 	[ "Pacifista PX-4", "STR", [ "Shooter", "Tough" ], 4, 40, 4, 0, 70, 1422664, 2000, 1000, -100, 2009, 1016, 1, 1],
 	[ "Pacifista PX-5", "INT", [ "Shooter", "Tough" ], 4, 40, 4, 0, 70, 1422664, 2000, 1000, -100, 2009, 1016, 1, 1],
-	[ "Sentoumaru", "PSY", [ "Fighter", "Tough" ], 3, 12, 5, 1, 50, 392109, 105, 38, 10, 1202, 557, 137, 1],
-	[ "Sentoumaru Evolved", "PSY", [ "Fighter", "Tough" ], 4, 20, 4, 3, 99, 3000000, 1125, 497, 92, 2209, 1000, 214, 1]
+	[ "Sentomaru", "PSY", [ "Fighter", "Tough" ], 3, 12, 5, 1, 50, 392109, 105, 38, 10, 1202, 557, 137, 1],
+	[ "Sentomaru, Navy HQ Science Unit Commander", "PSY", [ "Fighter", "Tough" ], 4, 20, 4, 3, 99, 3000000, 1125, 497, 92, 2209, 1000, 214, 1]
 ];

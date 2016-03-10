@@ -318,5 +318,10 @@ window.tandems = [
         "name": "Giant Pirates' Charge",
         "desc": "Deals 3 times the cumulative ATK of all the characters in the tandem to all enemies, boosts ATK of Tough characters by 1.4x until the end of the current turn",
         "units": [ 884, 903 ]
-    }
+    },
+	{
+		"name": "Kidnapping Trio Rampage",
+		"desc": "Deals 3,000 fixed damage to all enemies",
+		"units": [ 954, 955, 956 ]
+	}
 ];

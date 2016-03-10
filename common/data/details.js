@@ -4456,17 +4456,17 @@ window.details = {
 	},
 	954:{
 		captain: "Boosts ATK and HP of [QCK] Characters by 1.5x",
-		specialName: "Gyaro Special",
+		specialName: "Goldfish Fencing! I'll Dye the Sea Red with Your Blood",
 		special: "Reduces the defense of all enemies by 80% for 2 turns"
 	},
 	955:{
 		captain: "Boosts ATK and HP of [PSY] Characters by 1.5x",
-		specialName: "Makuro Special",
+		specialName: "Get Rich Quick Scheme! We're All Gonna Be Rich",
 		special: "Boosts ATK against enemies with reduced defense by 1.2x for 2 turns"
 	},
 	956:{
 		captain: "Boosts ATK and HP of [INT] Characters by 1.5x",
-		specialName: "Tansui Special",
+		specialName: "Fishman karate! I'll Finish You",
 		special: "Boosts ATK of Touch characters by 1.2x for 2 turns"
 	},
 	957:{
@@ -4495,7 +4495,7 @@ window.details = {
 	},
 	963:{
 		captain: "Boosts ATK of characters with cost between 50 and 55 by 2x",
-		specialName: "Charloss Special",
+		specialName: "Saint Charloss' Stroll",
 		special: "Reduces the defense of all enemies by 100% for 1 turn and randomizes all orbs"
 	},
 	964:{
@@ -4516,7 +4516,7 @@ window.details = {
 	},
 	967:{
 		captain: "Boosts ATK of Free Spirit Characters by 2.25x",
-		specialName: "Trafalgar Law Special",
+		specialName: "Surgeon of Death's First Aid Surgery",
 		special: "Recovers 20x character's RCV in HP. Switches orbs between slots twice"
 	},
 	968:{
@@ -4548,5 +4548,5 @@ window.details = {
 		captain: "Boosts ATK of Tough Characters by 2.5x if HP is above 99% at the start of the turn",
 		specialName: "Sentoumaru Special",
 		special: "Deals 20,000 fixed damage to one enemy. Changes friend captain's orb into Matching orb"
-	},
+	}
 };
