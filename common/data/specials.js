@@ -1103,24 +1103,24 @@ window.specials = {
 	963: {
 		def: function(p) { return 0; }
 	},
-	965: {
-		atk: function(p) { return window.specials[965].multiplier; },
+	964: {
+		atk: function(p) { return window.specials[964].multiplier; },
 		type: "class",
 		onActivation: function(p) {
-			var n = (window.specials[965].multiplier == 1.5 ? 1 : 0);
-			window.specials[965].multiplier = [1.1, 1.5][n];
+			var n = (window.specials[964].multiplier == 1.1 ? 1 : 0);
+			window.specials[964].multiplier = [1.1, 1.5][n];
 			p.scope.notify({
 				text: 'Using the ' + [1.1, 1.5][n] + 'x ATK multiplier. To switch to the ' + [1.5, 1.1][n] + 'x multiplier, disable and re-enable this special',
 				name: '965warning'
 			});
 		}
 	},
-	966: {
-		atk: function(p) { return window.specials[966].multiplier; },
+	965: {
+		atk: function(p) { return window.specials[965].multiplier; },
 		type: "class",
 		onActivation: function(p) {
-			var n = (window.specials[966].multiplier == 1.5 ? 1 : 0);
-			window.specials[966].multiplier = [1.1, 1.5][n];
+			var n = (window.specials[965].multiplier == 1.1 ? 1 : 0);
+			window.specials[965].multiplier = [1.1, 1.5][n];
 			p.scope.notify({
 				text: 'Using the ' + [1.1, 1.5][n] + 'x ATK multiplier. To switch to the ' + [1.5, 1.1][n] + 'x multiplier, disable and re-enable this special',
 				name: '965warning'
