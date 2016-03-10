@@ -819,6 +819,8 @@ window.drops = {
             name: 'Keimi and Hachi\'s Takoyaki Shop!',
             thumb: 635,
             condition: 'No Units above the cost of 49 is allowed',
+			challenge: 'Total number of hits over 50,000',
+            challengeData: [['4 Times','1x Blue Elder'],['8 Times','1x Rainbow Gem, 1x HP Cotton Candy'],['22 Times','2x Rainbow Gems, Orb Matching Forbidden Book']],
             Expert: [ 634, 636, 637, -636, -464, -451, -396, -370, -367, -359, -64 ],
             Elite: [ 634, 636, 637, -636, -464, -451, -396, -370, -367, -359, -64 ]
         },
