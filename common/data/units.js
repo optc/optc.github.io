@@ -965,7 +965,7 @@ window.units = [
 	[ "Saint Roswald", "DEX", "Shooter", 6, 99, 7, 0, 99, null, null, null, null, null, null, null, null],
 	[ "Saint Shalulia", "QCK", "Shooter", 6, 99, 7, 0, 99, null, null, null, null, null, null, null, null],
 	[ "Super Rookie Eustass Kid", "QCK", [ "Ambition", "Striker" ], 4, 20, 5, 3, 99, null, 462, 299, 19, null, null, null, null],
-	[ "Super Rookie Trafalgar Law", "INT", [ "Slasher", "Free Spirit" ], 4, 20, 4, 3, 99, null, null, null, null, null, null, null, null],
+	[ "Super Rookie Trafalgar Law", "INT", [ "Slasher", "Free Spirit" ], 4, 20, 4, 3, 99, null, null, null, null, 2035, 1013, 243, null],
 	[ "Pacifista PX-1", "DEX", [ "Shooter", "Tough" ], 4, 40, 4, 0, 70, null, 2000, 1000, -100, 2009, 1016, 0, null],
 	[ "Pacifista PX-2", "PSY", [ "Shooter", "Tough" ], 4, 40, 4, 0, 70, null, 2000, 1000, -100, 2009, 1016, 0, null],
 	[ "Pacifista PX-3", "QCK", [ "Shooter", "Tough" ], 4, 40, 4, 0, 70, null, 2000, 1000, -100, 2009, 1016, 0, null],
