@@ -4392,12 +4392,12 @@ window.details = {
 	},
 	942: {
 		captain: "Boosts ATK and HP of [STR] Characters by 1.5x",
-		specialName: "Future Country's Big Incident: The Nightmare of Barujimoa",
+		specialName: "Future Country's Big Incident: The Nightmare of Baldimore",
 		special: "Reduces damage received from [QCK] enemies by 100% for 1 turn"
 	},
 	943: {
 		captain: "Boosts ATK of [STR] Characters by 2.25x and their HP by 1.75x",
-		specialName: "Future Country's Big Incident: The Nightmare of Barujimoa",
+		specialName: "Future Country's Big Incident: The Nightmare of Baldimore",
 		special: "Reduces damage received from [QCK] enemies by 100% for 1 turn"
 	},
 	944: {
