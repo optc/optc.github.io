@@ -4467,7 +4467,7 @@ window.details = {
 	956:{
 		captain: "Boosts ATK and HP of [INT] Characters by 1.5x",
 		specialName: "Fishman karate! I'll Finish You",
-		special: "Boosts ATK of Touch characters by 1.2x for 2 turns"
+		special: "Boosts ATK of Tough characters by 1.2x for 2 turns"
 	},
 	957:{
 		specialName: "Blue Gunner Special",

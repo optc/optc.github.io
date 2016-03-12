@@ -390,7 +390,7 @@ directives.addLinks = function($stateParams) {
             }
             if (!isNaN(gw[id-1])) {
                 ul.append($('<li><a href="http://xn--pck6bvfc.gamewith.jp/article/show/' + gw[id-1] + '" target="_blank">' +
-                        'GameWith Page (Japanese)</a></li>'));
+                        'GameWith Page (Japanese)</a> | <a href="http://translate.google.com/translate?sl=ja&tl=en&u=http://xn--pck6bvfc.gamewith.jp/article/show/' + gw[id-1] + '" target="_blank">' +'Google Translate</a></li>'));
             }
             if (ul.children().length > 0)
                 element.append(ul);
