@@ -4511,8 +4511,8 @@ window.details = {
 	966:{
 		captain: "Boosts ATK of Ambition Characters by 2.25x",
 		specialName: "Kid Special",
-		special: "Empties all slots, deals [QCK] damage based on number of [QCK] slots emptied to all enemies",
-		specialNotes: "The exact multiplier used is chosen based on the number of [QCK] orbs consumed: We do not know the values yet"
+		special: "Empties slots with [QCK] orbs, deals [QCK] damage based on number of [QCK] slots emptied to all enemies",
+		specialNotes: "The exact multiplier used is chosen based on the number of [QCK] orbs consumed: 0 orbs - Can't activate; 1 orb - 14x ATK; 2 orbs - 21x ATK; 3 orbs - 35x ATK; 4 orbs - 49x ATK; 5 orbs - 91x ATK; 6 orbs - 140x ATK."
 	},
 	967:{
 		captain: "Boosts ATK of Free Spirit Characters by 2.25x",
