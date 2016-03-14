@@ -178,7 +178,7 @@ window.effects = {
         description: 'Damage of STR and DEX characters nullified',
         thumb: 836,
         id: 19,  // don't change this
-        damage: function(p) { return p.type == 'STR' || p.type == 'DEX' ? 0 : 1; }
+        atk: function(p) { return p.type == 'STR' || p.type == 'DEX' ? 0 : 1; }
     },
 
     'Shu (Expert)': {
