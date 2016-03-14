@@ -181,7 +181,7 @@ window.ships = [
     { //14
         name: 'Kuja Pirate Ship',
         thumb: null,
-        description: 'Boosts ATK of Free Spirit characters by 1.5x and their HP by 1.35x, reduces the HP of everyone else by ?x. Special: heals the crew by 6,500HP (cooldown: 15 turns).',
+        description: 'Boosts ATK of Free Spirit characters by 1.5x and their HP by 1.35x, reduces the HP of everyone else by 99%. Special: heals the crew by 6,500HP (cooldown: 15 turns).',
         atk: function(p) {
             return !p.unit.class.has('Free Spirit') ? 1 :
             [ 1.2, 1.2, 1.2, 1.2, 1.2, 1.3, 1.3, 1.3, 1.4, 1.5 ][p.boatLevel - 1];
@@ -189,6 +189,18 @@ window.ships = [
         hp: function(p) {
             return !p.unit.class.has('Free Spirit') ? 0.01 :
                 [ 1.2, 1.2, 1.2, 1.2, 1.2, 1.3, 1.3, 1.3, 1.3, 1.35 ][p.boatLevel - 1];
+        }
+    },
+    
+    { //15
+        name: 'Enel Ship',
+        thumb: null,
+        description: 'Boosts ATK of QCK and PSY characters by 1.5x and their HP by 1.2x. Special: Deals 56560 fixed Damage to all enemies (cooldown: 17 Turns)',
+        atk: function(p) {
+            return p.unit.type == "PSY" || p.unit.type == "QCK" ? [ 1.2, 1.2, 1.2, 1.2, 1.2, 1.3, 1.3, 1.3, 1.4, 1.5 ][p.boatLevel - 1] : 1;
+        },
+        hp: function(p) {
+            return p.unit.type == "PSY" || p.unit.type == "QCK" ? [ 1, 1, 1, 1, 1, 1.1, 1.1, 1.1, 1.1, 1.2 ][p.boatLevel - 1] : 1;
         }
     }
 

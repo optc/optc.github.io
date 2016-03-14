@@ -972,5 +972,7 @@ window.units = [
 	[ "Pacifista PX-4", "STR", [ "Shooter", "Tough" ], 4, 40, 4, 0, 70, 1422664, 2000, 1000, -100, 2009, 1016, 1, 1],
 	[ "Pacifista PX-5", "INT", [ "Shooter", "Tough" ], 4, 40, 4, 0, 70, 1422664, 2000, 1000, -100, 2009, 1016, 1, 1],
 	[ "Sentomaru", "PSY", [ "Fighter", "Tough" ], 3, 12, 5, 1, 50, 392109, 105, 38, 10, 1202, 557, 137, 1],
-	[ "Sentomaru, Navy HQ Science Unit Commander", "PSY", [ "Fighter", "Tough" ], 4, 20, 4, 3, 99, 3000000, 1125, 497, 92, 2209, 1000, 214, 1]
+	[ "Sentomaru, Navy HQ Science Unit Commander", "PSY", [ "Fighter", "Tough" ], 4, 20, 4, 3, 99, 3000000, 1125, 497, 92, 2209, 1000, 214, 1],
+    ["Kid Smoker","DEX",["Striker","Ambition"],4,10,null,null,null,null,null,null,null,null,null,null,null],
+    ["Kid Smoker Evolution","DEX",["Striker","Ambition"],5,18,null,null,null,null,null,null,null,null,null,null,null]
 ];

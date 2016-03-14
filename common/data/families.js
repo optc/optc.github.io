@@ -972,5 +972,7 @@ window.families = [
 	"Pacifista",
 	"Pacifista",
 	"Sentomaru",
-	"Sentomaru"
+	"Sentomaru",
+    "Smoker",
+    "Smoker"
 ];
