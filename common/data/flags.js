@@ -762,5 +762,7 @@ window.flags = {
 	942: { rr: 1, rro: 1 },
 	943: { rr: 1, rro: 1 },
 	944: { rr: 1, rro: 1, lrr: 1 },
-	945: { rr: 1, rro: 1, lrr: 1 }
+	945: { rr: 1, rro: 1, lrr: 1 },
+	975: { rr: 1, rro: 1, lrr: 1 },
+	976: { rr: 1, rro: 1, lrr: 1 }
 };

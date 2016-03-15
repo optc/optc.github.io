@@ -2326,5 +2326,15 @@ window.captains = {
 	},
 	974: {
 		atk: function(p) { return p.unit.class.has("Tough") && p.percHP >= 99.0 ? 2.5 : 1; }
+	},
+	975: {
+		atk: function(p) {
+			return p.unit.class.has("Striker") || p.unit.class.has("Ambition") ? 2 : 1;
+		}
+	},
+	976: {
+		atk: function(p) {
+			return p.unit.class.has("Striker") || p.unit.class.has("Ambition") ? 2 : 1;
+		}
 	}
 };

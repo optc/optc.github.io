@@ -4548,5 +4548,18 @@ window.details = {
 		captain: "Boosts ATK of Tough Characters by 2.5x if HP is above 99% at the start of the turn",
 		specialName: "Sentoumaru Special",
 		special: "Deals 20,000 fixed damage to one enemy. Changes friend captain's orb into Matching orb"
+	},
+	975:{
+		captain: "Boosts ATK of Ambition Characters by 2x. Reduces damage received by 10%",
+		specialName: "Kid Smoker Special",
+		special: "Boosts the ATK of Striker and Ambition Characters by 1.3x for 1 turn. Protects from defeat as long as HP is above 50% for 1 turn",
+		specialNotes: "#{zombie}"
+	},
+	976:{
+		captain: "Boosts ATK of Ambition Characters by 2x. Reduces damage received by 10%",
+		specialName: "Kid Smoker Special",
+		special: "Boosts the ATK of Striker and Ambition Characters by 1.3x for 1 turn. Protects from defeat as long as HP is above 50% for 1 turn",
+		specialNotes: "#{zombie}"
 	}
+
 };

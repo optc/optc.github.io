@@ -974,5 +974,5 @@ window.units = [
 	[ "Sentomaru", "PSY", [ "Fighter", "Tough" ], 3, 12, 5, 1, 50, 392109, 105, 38, 10, 1202, 557, 137, 1],
 	[ "Sentomaru, Navy HQ Science Unit Commander", "PSY", [ "Fighter", "Tough" ], 4, 20, 4, 3, 99, 3000000, 1125, 497, 92, 2209, 1000, 214, 1],
     ["Kid Smoker","DEX",["Striker","Ambition"],4,10,null,null,null,null,null,null,null,null,null,null,null],
-    ["Kid Smoker Evolution","DEX",["Striker","Ambition"],5,18,null,null,null,null,null,null,null,null,null,null,null]
+    ["Kid Smoker Evolution","DEX",["Striker","Ambition"], 5, 18, 4, 3, 70, null, 556, 240, 241, null, null, null, null]
 ];

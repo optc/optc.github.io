@@ -1126,5 +1126,15 @@ window.specials = {
 				name: '965warning'
 			});
 		}
-	}
+	},
+	975: {
+		atk: function(p) { return p.unit.class.has("Ambition") ? 1.3 : 1; },
+		atk: function(p) { return p.unit.class.has("Striker") ? 1.3 : 1; },
+		type: "class"
+    },
+	976: {
+		atk: function(p) { return p.unit.class.has("Ambition") ? 1.3 : 1; },
+		atk: function(p) { return p.unit.class.has("Striker") ? 1.3 : 1; },
+		type: "class"
+    }
 };
