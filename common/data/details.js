@@ -4550,14 +4550,14 @@ window.details = {
 		special: "Deals 20,000 fixed damage to one enemy. Changes friend captain's orb into Matching orb"
 	},
 	975:{
-		captain: "Boosts ATK of Ambition Characters by 2x. Reduces damage received by 10%",
-		specialName: "Kid Smoker Special",
+		captain: "Reduces damage received by 10%",
+		specialName: "A Threat That Puts Adults to Shame",
 		special: "Boosts the ATK of Striker and Ambition Characters by 1.3x for 1 turn. Protects from defeat as long as HP is above 50% for 1 turn",
 		specialNotes: "#{zombie}"
 	},
 	976:{
 		captain: "Boosts ATK of Ambition Characters by 2x. Reduces damage received by 10%",
-		specialName: "Kid Smoker Special",
+		specialName: "A Threat That Puts Adults to Shame",
 		special: "Boosts the ATK of Striker and Ambition Characters by 1.3x for 1 turn. Protects from defeat as long as HP is above 50% for 1 turn",
 		specialNotes: "#{zombie}"
 	}
