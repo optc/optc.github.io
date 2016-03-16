@@ -804,6 +804,7 @@ window.drops = {
         {
             name: 'Pirate Apprentices! Shanks and Buggy',
             thumb: 599,
+			global: true,
             condition: 'You cannot use any two units that are the same',
             Expert: [ 598, 600, -504, -467, -463, -414, -372, -332, -310, -77 ],
             Elite: [ 598, 600, -467, -463, -414, -372, -332, -310, -77 ]
