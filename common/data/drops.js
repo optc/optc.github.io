@@ -605,6 +605,8 @@ window.drops = {
             name: 'Hina\'s Resort Getaway',
             thumb: 232,
             global: true,
+            challenge: 'High Score calculated with Crew Cost, Turns Taken and Tap Accuracy',
+            challengeData: [['150,000','Blue Elder'],['450,000','ATK Cotton Candy'],['750,000','3x Rainbow Gems']],
             Expert: [ 43, 49, 79, 85, 96, 106, 231, -230, -229, -221, -208, -62, -54 ],
             Elite: [ 43, 49, 96, 111, 117, 231, -230, -229, -221, -208 ]
         },
