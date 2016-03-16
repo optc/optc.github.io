@@ -193,7 +193,7 @@ window.ships = [
     },
     
     { //15
-        name: 'Enel Ship',
+        name: 'Ark Maxim',
         thumb: null,
         description: 'Boosts ATK of QCK and PSY characters by 1.5x and their HP by 1.2x. Special: Deals 56560 fixed Damage to all enemies (cooldown: 17 Turns)',
         atk: function(p) {
