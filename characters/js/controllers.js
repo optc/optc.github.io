@@ -4,7 +4,7 @@
  * Common data *
  ***************/
 
-var filters = { custom: [ ], classes: [ ], stars: [ ], cost: [ 1, 55 ] };
+var filters = { custom: [ ], classes: [ ], stars: [ ], cost: [ 1, 99 ] };
 
 /***************
  * Controllers *
@@ -48,8 +48,8 @@ app.controller('SidebarCtrl',function($scope, $rootScope, $stateParams, $timeout
     });
 
     $scope.clearFilters = function() {
-        filters = { custom: [ ], classes: [ ], stars: [ ], cost: [ 1, 55 ] };
-        $rootScope.filters = { custom: [ ], classes: [ ], stars: [ ], cost: [ 1, 55 ] };
+        filters = { custom: [ ], classes: [ ], stars: [ ], cost: [ 1, 99 ] };
+        $rootScope.filters = { custom: [ ], classes: [ ], stars: [ ], cost: [ 1, 99 ] };
     };
 
     $scope.onFilterClick = function(e, value) {
