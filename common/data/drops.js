@@ -978,13 +978,21 @@ window.drops = {
             Expert: [ 928, 930, 931, -752, -758, -520, -729, -733, -787, -930, -544, -506 ],
             Elite: [ 928, 930, 931, -752, -758, -520, -729, -733, -787, -930, -544, -506 ]
         },
+		
         {
-            name: "Encounter! Whitebeard Pirates!",
+            name: "Encounter! Whitebeard Pirates",
             thumb: 946,
             condition: "You can only bring PSY units",
             Expert: [ 946, 947, 948, 949, -718, -750, -760, -526, -793, -735, -546, -738],
             Elite: [ 946, 947, 948, 949, -718, -750, -760, -526, -793, -735, -546, -738]
-        }
+        },
+		
+		{
+			name: "Clash! Whitebeard Pirates",
+			condition: "You can only bring INT units",
+			Expert: [ 979, 980, 981, 949 ],
+			Elite: [ 979, 980, 981, 949 ]
+		}
 
     ],
 
@@ -1116,7 +1124,13 @@ window.drops = {
             thumb: 932,
             Master: [ 932 ],
             Expert: [ 932 ]
-        }
+        },
+		
+		{
+			name: 'Clash!! Kizaru',
+			Ultimate: [ 977 ],
+			Master: [ 977 ]
+		}
 
     ],
 
