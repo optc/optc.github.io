@@ -4570,7 +4570,7 @@ window.details = {
 				"cooldown": 19
 			},
 			{
-				"description": "Changes own orb into [QCK]. Reduces Special Cooldown of Shooters and Fighters by 1 turn. Adds .5x to Chain Miltiplier for 2 turns",
+				"description": "Changes own orb into [QCK]. Reduces Special Cooldown of Shooters and Fighters by 1 turn. Adds .5x to Chain multiplier for 2 turns",
 				"cooldown": 25
 			}
 		],
@@ -4585,7 +4585,7 @@ window.details = {
 				"cooldown": 19
 			},
 			{
-				"description": "Changes own orb into [QCK]. Reduces Special Cooldown of Shooters and Fighters by 1 turn. Adds .5x to Chain Miltiplier for 2 turns",
+				"description": "Changes own orb into [QCK]. Reduces Special Cooldown of Shooters and Fighters by 1 turn. Adds .5x to Chain multiplier for 2 turns",
 				"cooldown": 25
 			}
 		],
