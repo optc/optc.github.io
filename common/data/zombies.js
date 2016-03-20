@@ -201,7 +201,7 @@ window.zombies = {
     },
     912: { // SH Sanji
         type: 'healer',
-        multiplier: 4
+        multiplier: 2
     },
 	949: { //Fortnight Thatch
 		type: 'healer',

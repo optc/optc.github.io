@@ -1136,5 +1136,26 @@ window.specials = {
 		atk: function(p) { return p.unit.class.has("Ambition") ? 1.3 : 1; },
 		atk: function(p) { return p.unit.class.has("Striker") ? 1.3 : 1; },
 		type: "class"
+    },
+    977: {
+        chainAdd: function(p) {return 1;},
+        chain: function(p) { return p.scope.numbers.DEX.chainMultipliers[p.chainPosition]+0.5;},
+        chainLimiter: function(p) { return p.scope.numbers.DEX.chainMultipliers[p.chainPosition]+0.5;},
+        onActivation: function(p) {
+            p.scope.notify({
+				text: 'Please reactivate this Special everytime you change anything',
+				name: '977warning'
+			});
+        }
+    },
+    978: {
+        chain: function(p) { return p.scope.numbers.DEX.chainMultipliers[p.chainPosition]+0.5;},
+        chainLimiter: function(p) { return p.scope.numbers.DEX.chainMultipliers[p.chainPosition]+0.5;},
+        onActivation: function(p) {
+            p.scope.notify({
+				text: 'Please reactivate this Special everytime you change anything',
+				name: '977warning'
+			});
+        }
     }
 };
