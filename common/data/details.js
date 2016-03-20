@@ -4560,6 +4560,36 @@ window.details = {
 		specialName: "A Threat That Puts Adults to Shame",
 		special: "Boosts the ATK of Striker and Ambition Characters by 1.3x for 1 turn. Protects from defeat as long as HP is above 50% for 1 turn",
 		specialNotes: "#{zombie}"
+	},
+	977:{
+		captain: "Boosts ATK of Shooter Characters by 2x",
+		specialName: "Yata no Kagami (Sacred Mirror)",
+		special: [
+			{
+				"description": "Changes own orb into [QCK]. Reduces Special Cooldown of Shooters and Fighters by 1 turn",
+				"cooldown": 19
+			},
+			{
+				"description": "Changes own orb into [QCK]. Reduces Special Cooldown of Shooters and Fighters by 1 turn. Adds .5x to Chain Miltiplier for 2 turns",
+				"cooldown": 25
+			}
+		],
+		specialNotes: "#{stages}"
+	},
+	978:{
+		captain: "Reduces cooldown of Shooter specials by 2 turns at the start of the fight, boosts ATK of Shooter Characters by 2.25x and Health by 1.5x",
+		specialName: "Yata no Kagami (Sacred Mirror)",
+		special: [
+			{
+				"description": "Changes own orb into [QCK]. Reduces Special Cooldown of Shooters and Fighters by 1 turn",
+				"cooldown": 19
+			},
+			{
+				"description": "Changes own orb into [QCK]. Reduces Special Cooldown of Shooters and Fighters by 1 turn. Adds .5x to Chain Miltiplier for 2 turns",
+				"cooldown": 25
+			}
+		],
+		specialNotes: "#{stages}"
 	}
 
 };
