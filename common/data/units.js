@@ -975,9 +975,9 @@ window.units = [
 	[ "Sentomaru, Navy HQ Science Unit Commander", "PSY", [ "Fighter", "Tough" ], 4, 20, 4, 3, 99, 3000000, 1125, 497, 92, 2209, 1000, 214, 1],
 	[ "Smoker, Wild Lone Wolf","DEX",["Striker","Ambition"], 4, 10, 6, 3, 35, null, 210, 86, 100, 610, 286, 273, null],
 	[ "Smoker, Solitary Lone Wolf","DEX",["Striker","Ambition"], 5, 18, 4, 3, 70, null, 556, 240, 241, null, null, null, null],
-	[ "Kizaru","QCK",["Shooter","Fighter"], 4, 30, 4, 2, 70, null, 221, 169, 36,  1241, 741, 160, null],
-	[ "Kizaru, Light Human","QCK",["Shooter","Fighter"], 5, 50, 5, 3, 99, null, 1179, 665, 130, 2506, 1410, 277, null],
+	[ "Kizaru","QCK",["Shooter","Fighter"], 4, 30, 4, 2, 70, 1066998, 221, 169, 36,  1241, 741, 160, 1],
+	[ "Kizaru, Light Human","QCK",["Shooter","Fighter"], 5, 50, 5, 3, 99, 5000000, 1179, 665, 130, 2506, 1410, 277, 1],
 	[ "Izo","PSY",["Shooter","Knowledge"], 4, 25, null, null, null, null, null, null, null, null,null,null,null],
 	[ "Blamenco","DEX",["Striker","Free Spirit"], 4, 25, null, null, null, null, null, null, null, null,null,null,null],
-	[ "Namur","PSY",["Fighter","Tough"], 4, 25, null, null, null, null, null, null, null, null,null,null,null]
+	[ "Namule","PSY",["Fighter","Tough"], 4, 25, null, null, null, null, null, null, null, null,null,null,null]
 ];
