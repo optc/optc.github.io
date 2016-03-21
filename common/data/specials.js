@@ -1138,24 +1138,11 @@ window.specials = {
 		type: "class"
     },
     977: {
-        chainAdd: function(p) {return 1;},
-        chain: function(p) { return p.scope.numbers.DEX.chainMultipliers[p.chainPosition]+0.5;},
-        chainLimiter: function(p) { return p.scope.numbers.DEX.chainMultipliers[p.chainPosition]+0.5;},
-        onActivation: function(p) {
-            p.scope.notify({
-				text: 'Please reactivate this Special everytime you change anything',
-				name: '977warning'
-			});
-        }
+        chain: function(p) { return 1;},
+        chainAddition: function(p) {return 0.5},
     },
     978: {
-        chain: function(p) { return p.scope.numbers.DEX.chainMultipliers[p.chainPosition]+0.5;},
-        chainLimiter: function(p) { return p.scope.numbers.DEX.chainMultipliers[p.chainPosition]+0.5;},
-        onActivation: function(p) {
-            p.scope.notify({
-				text: 'Please reactivate this Special everytime you change anything',
-				name: '977warning'
-			});
-        }
+        chain: function(p) {return 1;},
+        chainAddition: function(p){ return 0.5;},
     }
 };
