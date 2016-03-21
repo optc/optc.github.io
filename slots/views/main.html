@@ -34,29 +34,33 @@
 
             <div id="buttonContainer">
 
-                <button class="btn btn-info" ui-sref="main.save" ng-disabled="!team.length">
+                <button class="btn color6" ui-sref="main.copy"  uib-tooltip="Copy" tooltip-append-to-body="true">
+                    <i class="fa fa-refresh"></i>
+                </button>
+
+                <button class="btn btn-info" ui-sref="main.save" ng-disabled="!team.length"  uib-tooltip="Save" tooltip-append-to-body="true">
                     <i class="fa fa-download"></i>
                 </button>
 
-                <button class="btn btn-primary" ui-sref="main.load">
+                <button class="btn btn-primary" ui-sref="main.load"  uib-tooltip="Load" tooltip-append-to-body="true">
                     <i class="fa fa-upload"></i>
                 </button>
 
-                <button class="btn btn-danger" ui-sref="main.reset" ng-disabled="!team.length">
+                <button class="btn btn-danger" ui-sref="main.reset" ng-disabled="!team.length"  uib-tooltip="Reset" tooltip-append-to-body="true">
                     <i class="fa fa-eraser"></i>
                 </button>
 
-                <button class="btn btn-success" ng-click="generateURL()" ng-disabled="!team.length">
+                <button class="btn btn-success" ng-click="generateURL()" ng-disabled="!team.length"  uib-tooltip="Export URL" tooltip-append-to-body="true">
                     <i class="fa fa-exchange"></i>
                 </button>
 
-                <button class="btn btn-warning" ui-sref="main.image" ng-disabled="!team.length">
+                <button class="btn btn-warning" ui-sref="main.image" ng-disabled="!team.length"  uib-tooltip="Export Image" tooltip-append-to-body="true">
                     <i class="fa fa-picture-o"></i>
                 </button>
 
             </div>
 
-            <div id="transient" class="alert alert-danger" ng-show="options.transient" ng-click="options.transient = false">
+            <div id="transient" class="alert alert-danger" ng-show="options.transient" ng-click="options.transient = false"  uib-tooltip="Save" tooltip-append-to-body="true">
                 <i class="fa fa-lock"></i>
                 Transient mode enabled. Click to disable.
             </div>
