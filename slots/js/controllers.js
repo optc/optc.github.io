@@ -189,6 +189,7 @@ controllers.SummaryCtrl = function($scope, $rootScope, $state, $stateParams) {
  **************/
 
 controllers.ImportCtrl = function($scope, $rootScope, $state, $stateParams) {
+    history.replaceState(null, null, '#/');
 
     var data = $stateParams.data;
 
