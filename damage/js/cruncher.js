@@ -424,7 +424,14 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
     };
 
     var applyChainAndBonusMultipliers = function(damage,modifiers) {
-        var currentMax = -1, currentResult = null;
+        var currentMax = -1, currentResult = null, addition = 0.0;
+
+        //get the highest Chain Addition if it exists
+        chainAddition.forEach(function(special){
+                    if(addition<special.chainAddition())
+                        addition = special.chainAddition();
+                });
+//        
         chainSpecials.forEach(function(special) {
             var multipliersUsed = [ ], currentHits = 0, overall = 0;
             var i, params = [ ];
@@ -435,9 +442,9 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                     return prev * next.chainModifier(getParameters(x.position, n));
                 },1);
                 var chainMultiplier = getChainMultiplier(special.chain(params[n]), modifiers.slice(0,n), chainModifier);
-                //Add flat Multiplier Bonuses
-                if(special.hasOwnProperty('chainAddition'))
-                    chainMultiplier = chainMultiplier + special.chainAddition(params[n]);
+                //Add flat Multiplier Bonuses if they exist
+                if(addition>0.0)
+                    chainMultiplier = chainMultiplier + addition;
                 if (mapEffect.hasOwnProperty('chainLimiter'))
                     chainMultiplier = Math.min(mapEffect.chainLimiter(params[n]), chainMultiplier);
                 else if (special.hasOwnProperty('chainLimiter'))
@@ -545,6 +552,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
     var computeSpecialsCombinations = function() {
         var result = { type: [ ], class: [ ], orb: [ ], condition: [ ] };
         chainSpecials = [ ];
+        chainAddition = [ ];
         enabledSpecials.forEach(function(data) {
             if (data === null) return;
             // notice specials with both atk and atkStatic defined are not supported right now
@@ -553,7 +561,9 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if (data.hasOwnProperty('orb'))
                 result.orb.push({ sourceSlot: data.sourceSlot, f: data.orb });
             if (data.hasOwnProperty('chain'))
-                chainSpecials.push({ sourceSlot: data.sourceSlot, chain: data.chain, chainLimiter: data.chainLimiter || function() { return Infinity; }, chainAddition: data.chainAddition || function(){ return 0;} });
+                chainSpecials.push({ sourceSlot: data.sourceSlot, chain: data.chain, chainLimiter: data.chainLimiter || function() { return Infinity; } });
+            if (data.hasOwnProperty('chainAddition'))
+                chainAddition.push({chainAddition: data.chainAddition || function(){ return 0.0;} });
         });
         specialsCombinations = Utils.arrayProduct([ result.type.concat(result.class), result.condition, result.orb ]);
         if (chainSpecials.length === 0) chainSpecials.push({
@@ -634,7 +644,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         hitModifiers = getPossibleHitModifiers(cptsWith.hitModifiers);
         // compute special combinations
         computeSpecialsCombinations();
-        $scope.conflictingSpecials = (specialsCombinations.length > 1 || chainSpecials.length > 1);
+        $scope.conflictingSpecials = (specialsCombinations.length > 1 || chainSpecials.length > 1 || chainAddition.length > 1);
         // get ship bonus
         shipBonus = jQuery.extend({ bonus: window.ships[$scope.data.ship[0]] },{ level: $scope.data.ship[1] });
     };

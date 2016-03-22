@@ -1138,12 +1138,10 @@ window.specials = {
 		type: "class"
     },
     977: {
-        chain: function(p) { return 1;},
-        chainAddition: function(p) {return 0.5},
+        chainAddition: function(p) {return 0.5;}
     },
     978: {
-        chain: function(p) {return 1;},
-        chainAddition: function(p){ return 0.5;},
+        chainAddition: function(p){ return 0.5;}
     },
     981: {
         atk: function(p) { return p.slot == p.sourceSlot ? 1.75 : 1; },
