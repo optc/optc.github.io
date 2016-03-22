@@ -4590,6 +4590,24 @@ window.details = {
 			}
 		],
 		specialNotes: "#{stages}"
-	}
+	},
+    979: {
+        captain: "Boosts ATK of [PSY] and [DEX] characters by 1.75x and their RCV by 1.2x",
+        specialName: "Flintlock Barrage",
+        special: "Randomly changes all orbs into either [PSY] or [DEX] orbs, deals random PSY damage to all enemies",
+        specialNotes: "Random Damage is currently unknown"
+    },
+    980: {
+        captain: "Boosts ATK of [DEX] and [STR] characters by 1.75x and their RCV by 1.2x",
+        specialName: "Hidden King Mallet",
+        special: "Changes own orb into [DEX] and randomizes every other orb"
+    },
+    981: {
+        captain: "Boosts ATK of Fighters and Tough characters by 2x and sharply reduces their RCV",
+        captainNotes: "The RCV Reduction is around 90%",
+        specialName: "Martial Art Diving Fist",
+        special: "Boosts own ATK by 1.75x for 1 turn and deals 800 fixed damage to one enemy",
+        specialNotes: "#{fixed}"
+    }
 
 };
