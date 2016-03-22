@@ -948,10 +948,10 @@ window.units = [
 	[ "Fossa, Whitebeard 15th Div. Commander", "INT", [ "Slasher", "Tough" ], 4, 25, 6, 3, 99, 3000000, 48, 35, 20, 1910, 1231, 187, 1],
 	[ "Curiel, Whitebeard 10th Div. Commander", "STR", [ "Shooter", "Tough" ], 4, 25, 5, 3, 99, 3000000, 33, 39, 30, 1706, 1251, 212, 1],
 	[ "Thatch, Whitebeard 4th Div. Commander", "PSY", [ "Slasher", "Knowledge" ], 4, 25, 5, 3, 99, 3000000, 80, 37, 37, 1995, 1088, 227, 1],
-	[ "Ace, Whitebeard 2nd Div. Commander", "PSY", [ "Free Spirit", "Fighter" ], 4, 25, 5, 2, 70, null, 606, 313, 54, 1496, 744, 152, null],
-	[ "Fire Fist Ace, Whitebeard 2nd Div. Commander", "PSY", [ "Free Spirit", "Fighter" ], 5, 40, 4, 3, 99, null, 1431, 690, 110, 2599, 1271, 271, null],
-	[ "Ben Beckman", "DEX", [ "Striker", "Shooter" ], 3, 13, 6, 1, 35, null, 131, 98, 25, 935, 375, 163, null],
- 	[ "Ben Beckman, Red Hair Pirates", "DEX", [ "Striker", "Shooter" ], 4, 20, 4, 2, 70, null, 867, 329, 122, 1403, 800, 229, null],
+	[ "Ace, Whitebeard 2nd Div. Commander", "PSY", [ "Free Spirit", "Fighter" ], 4, 25, 5, 2, 70, 1066998, 606, 313, 54, 1496, 744, 152, 1],
+	[ "Fire Fist Ace, Whitebeard 2nd Div. Commander", "PSY", [ "Free Spirit", "Fighter" ], 5, 40, 4, 3, 99, 4000000, 1431, 690, 110, 2599, 1271, 271, 1],
+	[ "Ben Beckman", "DEX", [ "Striker", "Shooter" ], 3, 13, 6, 1, 35, 136167, 131, 98, 25, 935, 375, 163, 1],
+ 	[ "Ben Beckman, Red Hair Pirates", "DEX", [ "Striker", "Shooter" ], 4, 20, 4, 2, 70, 1778330, 867, 329, 122, 1403, 800, 229, 1],
 	[ "Gyaro", "QCK", [ "Slasher", "Tough" ], 3, 7, 6, 2, 50, 392109, 950, 427, 36, 1420, 627, 98, 1],
 	[ "Makuro", "PSY", [ "Shooter", "Tough" ], 3, 7, 4, 2, 50, 392109, 972, 390, 44, 1447, 591, 110, 1],
 	[ "Tansui", "INT", [ "Fighter", "Tough" ], 3, 7, 4, 2, 50, 392109, 933, 468, 31, 1368, 701, 84, 1],
@@ -977,7 +977,7 @@ window.units = [
 	[ "Smoker, Solitary Lone Wolf","DEX",["Striker","Ambition"], 5, 18, 4, 3, 70, null, 556, 240, 241, null, null, null, null],
 	[ "Kizaru","QCK",["Shooter","Fighter"], 4, 30, 4, 2, 70, 1066998, 221, 169, 36,  1241, 741, 160, 1],
 	[ "Kizaru, Light Human","QCK",["Shooter","Fighter"], 5, 50, 5, 3, 99, 5000000, 1179, 665, 130, 2506, 1410, 277, 1],
-	[ "Izo","PSY",["Shooter","Knowledge"], 4, 25, null, null, null, null, null, null, null, null,null,null,null],
-	[ "Blamenco","DEX",["Striker","Free Spirit"], 4, 25, null, null, null, null, null, null, null, null,null,null,null],
-	[ "Namule","PSY",["Fighter","Tough"], 4, 25, null, null, null, null, null, null, null, null,null,null,null]
+	[ "Izo Whitebeard 16th Div. Commander","PSY",["Shooter","Knowledge"], 4, 25, 6, 3, 99, null, 37, 22, 39, null,null,null,null],
+	[ "Blamenco Whitebeard 6th Div. Commander","DEX",["Striker","Free Spirit"], 4, 25, 4, 2, 99, null, 66, 40, 18, null,null,null,null],
+	[ "Namule Whitebeard 8th Div. Commander","PSY",["Fighter","Tough"], 4, 25, 4, 3, 99, null, 49, 48, 26, null,null,null,null]
 ];

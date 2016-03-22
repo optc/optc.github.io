@@ -2331,5 +2331,24 @@ window.captains = {
 		atk: function(p) {
 			return p.unit.class.has("Striker") || p.unit.class.has("Ambition") ? 2 : 1;
 		}
-	}
+	},
+    977: {
+        atk: function(p) { return p.unit.class.has("Shooter") ? 2 : 1; }
+    },
+    978: {
+        atk: function(p) { return p.unit.class.has("Shooter") ? 2.25 : 1; },
+        hp: function(p) { return p.unit.class.has("Shooter") ? 1.5 : 1; }
+    },
+    979: {
+        atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "DEX" ? 1.75 : 1; },
+        rcv: function(p) { return p.unit.type == "PSY" || p.unit.type == "DEX" ? 1.2 : 1; }
+    },
+    980: {
+        atk: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" ? 1.75 : 1; },
+        rcv: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" ? 1.2 : 1; }
+    },
+    981: {
+        atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Tough") ? 2 : 1; },
+        rcv: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Tough") ? 0.1 : 1; }
+    }
 };
