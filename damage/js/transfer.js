@@ -7,6 +7,7 @@
  **************/
 
 var ImportCtrl = function($scope, $rootScope, $state, $stateParams) {
+    history.replaceState(null, null, '#/');
 
     var checkInt = function(n, min, max) {
         var temp = parseInt(n, 10);
