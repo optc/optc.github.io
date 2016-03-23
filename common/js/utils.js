@@ -152,7 +152,7 @@
         query = query.toLowerCase().trim();
         var result = {matchers: {}, ranges: {}, query: []};
         var ranges = {}, params = ['hp', 'atk', 'stars', 'cost', 'growth', 'rcv', 'id', 'slots', 'combo', 'exp', 'minCD', 'maxCD'];
-        var regex = new RegExp('^((type|class):(\\w+\\s{0,1}\\w+)|(' + params.join('|') + ')(>|<|>=|<=|=)([\\d.]+))$', 'i');
+        var regex = new RegExp('^((type|class):(\\w+\\s{0,1}\\w+)|(' + params.join('|') + ')(>|<|>=|<=|=)([-?\\d.]+))$', 'i');
         var tokens = query.replace(/\s+/g, ' ').split(' ').filter(function (x) {
             return x.length > 0;
         });
@@ -162,11 +162,18 @@
             if (!temp) // if it couldn't be parsed, treat it as string
                 result.query.push(x);
             else if (temp[4] !== undefined) { // numeric operator
-                var parameter = temp[4], op = temp[5], value = parseFloat(temp[6], 10);
+                var parameter = temp[4],
+                        op = temp[5],
+                        value = parseFloat(temp[6], 10);
                 if (parameter === 'exp')
                     parameter = 'maxEXP';
-                if (!result.ranges.hasOwnProperty(parameter))
-                    result.ranges[parameter] = [0, Infinity];
+                if (!result.ranges.hasOwnProperty(parameter)) {
+                    if (op === '>' || op === '>=') {
+                        result.ranges[parameter] = [0, Number.POSITIVE_INFINITY];
+                    } else if (op === '<' || op === '<=') {
+                        result.ranges[parameter] = [Number.NEGATIVE_INFINITY, 0];
+                    }
+                }
                 if (op === '=') {
                     result.ranges[parameter][0] = value;
                     result.ranges[parameter][1] = value;
