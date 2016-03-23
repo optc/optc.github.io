@@ -673,7 +673,7 @@ window.drops = {
             thumb: 341,
             global: true,
             condition: 'You may only bring QCK units for 15 and 30 Stamina',
-            challenge: 'Low Teamcost, fast Clear and perfect Taps',
+            challenge: 'Low Teamcost, Fast Clear and Perfect Taps',
             challengeData: [['200,000 Points','1x Red Elder'],['400,000 Points','1x HP Cotton Candy'],['700,000 Points','3x Rainbow Gems']],
             Expert: [ 28, 40, 60, 213, 215, 340, -292, -291, -290, -261, -257, -214, -71, -44 ],
             Elite: [ 28, 40, 60, 213, 215, 340, -292, -291, -290, -261, -257, -214, -71, -44 ]
@@ -684,6 +684,8 @@ window.drops = {
             thumb: 386,
             global: true,
             condition: 'You may only bring PSY units for 15 and 30 Stamina',
+			challenge: 'Low Teamcost, Fast Clear and Perfect Taps',
+            challengeData: [['10,000 Points','1x Black Elder'],['40,000 Points','1x Rainbow Gem, 1x ATK Cotton Candy'],['70,000 Points','2x Rainbow Gems, 1x Damage Reduction Forbidden Tome']],
             Expert: [ 385, 387, -388, -335, -314, -36, -16, -11 ],
             Elite: [ 385, 387, -388, -335, -314, -36, -16, -11 ]
         },
