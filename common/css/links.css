@@ -167,12 +167,19 @@
     transform: translateX(-15em);
 }
 
+#links-button.active .rotater:nth-child(6) > a {
+    -webkit-transform: translateX(-18em);
+    -ms-transform: translateX(-18em);
+    transform: translateX(-18em);
+}
+
 #link-damage > .btn { background: #85C1F5; }
 #link-characters > .btn { background: #7FCA9F; }
 #link-drops > .btn { background: #F4BA70; }
 #link-tally > .btn { background: #E96D63; }
 #link-report > .btn { background: orchid; }
 #link-slots > .btn { background: #99cc66; }
+#links-home > .btn { background: #939393; }
 
 .tip { color: black; }
 
