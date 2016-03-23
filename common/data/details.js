@@ -4470,27 +4470,27 @@ window.details = {
 		special: "Boosts ATK of Tough characters by 1.2x for 2 turns"
 	},
 	957:{
-		specialName: "Blue Gunner Special",
+		specialName: "First Aid",
 		special: "Recover 2,000 HP"
 	},
 	958:{
-		specialName: "Black Gunner Special",
+		specialName: "Bind Purge",
 		special: "Reduces Bind duration by 2 turns"
 	},
 	959:{
-		specialName: "Green Gunman Special",
+		specialName: "Captain Soul Recovery",
 		special: "Reduces Despair duration by 2 turns"
 	},
 	960:{
-		specialName: "Blue Gunman Special",
+		specialName: "Slot Color Shuffle",
 		special: "Randomly changes all orbs into either [STR], [DEX], [QCK], [PSY] or [INT] orbs"
 	},
 	961:{
-		specialName: "Red Gunman Special",
+		specialName: "Slot Power Light",
 		special: "Amplifies the effect of orbs by 1.25x for 1 turn"
 	},
 	962:{
-		specialName: "Yellow Gunman Special",
+		specialName: "Captain Slot Change RCV",
 		special: "Changes captain's orb into [RCV]"
 	},
 	963:{
