@@ -181,7 +181,7 @@ window.zombies = {
     },
     841: { // Monet
         type: 'healer',
-        multiplier: 5
+        multiplier: 3
     },
     842: { // Monet
         type: 'healer',

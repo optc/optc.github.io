@@ -425,7 +425,7 @@
                                     <div class="slot small" decorate-slot uid="data.uid"></div>
                                     <a ui-sref="main.search.view({ id: data.uid, previous: getPrevious() })">{{data.name}}</a>
                                 </td>
-                                <td>{{data.location.name}}</td>
+                                <td><a href="{{'../drops/?'+data.location.name}}" target="_blank">{{data.location.name}}</a></td>
                                 <td>{{data.location.data.join(', ')}}</td>
                             </tr>
                         </tbody>

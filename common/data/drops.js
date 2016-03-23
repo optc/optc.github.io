@@ -989,6 +989,7 @@ window.drops = {
 		
 		{
 			name: "Clash! Whitebeard Pirates",
+            thumb: 979,
 			condition: "You can only bring INT units",
 			Expert: [ 979, 980, 981, 949, -459, -838, -842, -524, -789, -736, -731, -563 ],
 			Elite: [ 979, 980, 981, 949, -459, -838, -842, -524, -789, -736, -731, -563 ]

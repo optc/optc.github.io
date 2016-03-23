@@ -977,7 +977,7 @@ window.units = [
 	[ "Smoker, Solitary Lone Wolf","DEX",["Striker","Ambition"], 5, 18, 4, 3, 70, null, 556, 240, 241, null, null, null, null],
 	[ "Kizaru","QCK",["Shooter","Fighter"], 4, 30, 4, 2, 70, 1066998, 221, 169, 36,  1241, 741, 160, 1],
 	[ "Kizaru, Light Human","QCK",["Shooter","Fighter"], 5, 50, 5, 3, 99, 5000000, 1179, 665, 130, 2506, 1410, 277, 1],
-	[ "Izo Whitebeard 16th Div. Commander","PSY",["Shooter","Knowledge"], 4, 25, 6, 3, 99, null, 37, 22, 39, null,null,null,null],
-	[ "Blamenco Whitebeard 6th Div. Commander","DEX",["Striker","Free Spirit"], 4, 25, 4, 2, 99, null, 66, 40, 18, null,null,null,null],
-	[ "Namule Whitebeard 8th Div. Commander","PSY",["Fighter","Tough"], 4, 25, 4, 3, 99, null, 49, 48, 26, null,null,null,null]
+	[ "Izo Whitebeard 16th Div. Commander","PSY",["Shooter","Knowledge"], 4, 25, 6, 3, 99, 3000000, 37, 22, 39, 1910, 990, 300, 1 ],
+	[ "Blamenco Whitebeard 6th Div. Commander","DEX",["Striker","Free Spirit"], 4, 25, 4, 2, 99, 3000000, 66, 40, 18, 2394, 1268, 126, 1 ],
+	[ "Namule Whitebeard 8th Div. Commander","PSY",["Fighter","Tough"], 4, 25, 4, 3, 99, 3000000, 49, 48, 26, 2148, 1305, 154, 1 ]
 ];
