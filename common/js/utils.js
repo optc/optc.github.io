@@ -172,19 +172,21 @@
                         result.ranges[parameter] = [0, Number.POSITIVE_INFINITY];
                     } else if (op === '<' || op === '<=') {
                         result.ranges[parameter] = [Number.NEGATIVE_INFINITY, 0];
+                    }else{
+                         result.ranges[parameter] = [Number.NEGATIVE_INFINITY, Number.POSITIVE_INFINITY];
                     }
                 }
                 if (op === '=') {
                     result.ranges[parameter][0] = value;
                     result.ranges[parameter][1] = value;
                 } else if (op === '<') {
-                    result.ranges[parameter][1] = Math.min(result.ranges[parameter][1], value - 1);
+                    result.ranges[parameter][1] =  value - 1;
                 } else if (op === '<=') {
-                    result.ranges[parameter][1] = Math.min(result.ranges[parameter][1], value);
+                    result.ranges[parameter][1] = value;
                 } else if (op === '>') {
-                    result.ranges[parameter][0] = Math.max(result.ranges[parameter][0], value + 1);
+                    result.ranges[parameter][0] =  value + 1;
                 } else if (op === '>=') {
-                    result.ranges[parameter][0] = Math.max(result.ranges[parameter][0], value);
+                    result.ranges[parameter][0] =  value;
                 }
             } else // matcher
                 result.matchers[temp[2]] = new RegExp(temp[3], 'i');
