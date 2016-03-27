@@ -989,15 +989,15 @@ window.units = [
     [],
     [],
     [ "Machvise","INT",["Free Spirit","Tough"], 4, 18, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Machvise Evolution","INT",["Free Spirit","Tough"], 5, 30, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Machvise, Donquixote Pirates","INT",["Free Spirit","Tough"], 5, 30, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Gladius","QCK",["Shooter","Ambition"], 4, 18, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Gladius Evolution","QCK",["Shooter","Ambition"], 5, 30, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Gladius, Donquixote Pirates","QCK",["Shooter","Ambition"], 5, 30, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Violet","PSY",["Fighter","Knowledge"], 4, 18, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Violet Evolution","PSY",["Fighter","Knowledge"], 5, 30, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Violet, Donquixote Pirates","PSY",["Fighter","Knowledge"], 5, 30, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Dellinger","DEX",["Tough","Fighter"], 4, 18, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Dellinger Evolution","DEX",["Tough","Fighter"], 5, 30, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Dellinger, Donquixote Pirates","DEX",["Tough","Fighter"], 5, 30, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Diamante","STR",["Ambition","Striker"], 4, 18, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Diamante Evolution","STR",["Ambition","Striker"], 5, 30, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Diamante, Donquixote Pirates","STR",["Ambition","Striker"], 5, 30, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Corazon","DEX",["Free Spirit","Knowledge"], 5, 30, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Corazon Evolution","DEX",["Free Spirit","Knowledge"], 6, 55, null, null, null, null, null, null, null, null, null, null, null ]
+    [ "Corazon, Donquixote Pirates","DEX",["Free Spirit","Knowledge"], 6, 55, null, null, null, null, null, null, null, null, null, null, null ]
 ];
