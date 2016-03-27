@@ -4608,6 +4608,17 @@ window.details = {
         specialName: "Martial Art Diving Fist",
         special: "Boosts own ATK by 1.75x for 1 turn and deals 800 fixed damage to one enemy",
         specialNotes: "#{fixed}"
-    }
+    },
+	994:{
+		special: "Reduce special cooldown of Knowledge and Fighter Units, and shows the stats of enemies",
+		specialName: "Peeping Mind",
+		specialNotes: "Shows enemy Attack, Defense, Combo Hits, Current / Total HP, Attack Interval, 'Specials based on turns?', and 'Effect after Death'",
+	},
+	995:{
+		special: "Reduce special cooldown of Knowledge and Fighter Units, and shows the stats of enemies",
+		specialName: "Peeping Mind",
+		specialNotes: "Shows enemy Attack, Defense, Combo Hits, Current / Total HP, Attack Interval, 'Specials based on turns?', and 'Effect after Death'",
+	}
+
 
 };
