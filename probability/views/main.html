@@ -31,7 +31,7 @@
 						ng-change="changeBaseValues()" id="copies">
 					Skillups: <input type="text" class="number-field" ng-model="skillups" placeholder="e.g. 10" auto-focus
 						ng-change="changeBaseValues()" id="skillups">
-					<label><input type="checkbox" ng-model="specialEvent" ng-change="changeBaseValues()">SpecialUp Event</label>
+					<label><input type="checkbox" ng-model="specialEvent" ng-change="changeBaseValues()">Special x2 Event</label>
 					
 				</div>
 				
@@ -69,6 +69,10 @@
 
                 <button class="btn btn-success" ng-click="generateURL()" ng-disabled="!character"  uib-tooltip="Export URL" tooltip-append-to-body="true">
                     <i class="fa fa-exchange"></i>
+                </button>
+                
+                <button type="button" class="btn" ui-sref="main.instruction" title="Instructions" uib-tooltip="Instructions" tooltip-append-to-body="true">
+                    <i class="fa fa-question-circle"></i>
                 </button>
 
             </div>

@@ -20,7 +20,7 @@ onmessage = function(e) {
 		prob += result;
 		
 		socketProgress = Math.round(i / copies * 100);
-		
+         
 		data = 
 		{
 			finished: false,
@@ -31,6 +31,8 @@ onmessage = function(e) {
 		
 	}
 	
+    if (isNaN(prob) || !isFinite(prob))
+        prob = 0.999;
 	data = 
 	{
 		finished: true,

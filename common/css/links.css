@@ -173,6 +173,12 @@
     transform: translateX(-18em);
 }
 
+#links-button.active .rotater:nth-child(7) > a {
+    -webkit-transform: translateX(-21em);
+    -ms-transform: translateX(-21em);
+    transform: translateX(-21em);
+}
+
 #link-damage > .btn { background: #85C1F5; }
 #link-characters > .btn { background: #7FCA9F; }
 #link-drops > .btn { background: #F4BA70; }
@@ -180,6 +186,7 @@
 #link-report > .btn { background: orchid; }
 #link-slots > .btn { background: #99cc66; }
 #links-home > .btn { background: #939393; }
+#link-prob > .btn { background: #DEA5A4; }
 
 .tip { color: black; }
 

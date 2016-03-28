@@ -35,6 +35,16 @@ angular.module('optc').config(function($stateProvider, $urlRouterProvider) {
                 }
             }
         })
+    
+        .state('main.instruction',{
+                    url: 'instruction',
+                    views: {
+                        'popup@': {
+                            templateUrl: 'views/popup/instruction.html',
+                            controller: 'InstructionCtrl'
+                        }
+                    }
+                })
          
 
 

@@ -33,6 +33,7 @@ controllers.MainCtrl = ['$scope', '$rootScope', '$state', '$stateParams', '$cont
 		var data = {copies: $scope.copies, skillups: $scope.skillups, special_event: $scope.specialEvent};
 		SpecialProbability.compute(data).then(
 			function(data) {
+                console.log(data);
 				if (data.finished == true) {
 					if (data.result >= 0.6) {
 						$scope.specialProbabilityColor = "green";
@@ -41,7 +42,7 @@ controllers.MainCtrl = ['$scope', '$rootScope', '$state', '$stateParams', '$cont
 					} else {
 						$scope.specialProbabilityColor = "red";
 					}
-					$scope.specialProbabilityResult = (data.result * 100).toFixed(1);
+					$scope.specialProbabilityResult = Math.min((data.result * 100),99.9).toFixed(1);
 					$scope.specialProbabilityProgressBar = "Complete";
 					$scope.isSpecialReady = true;
 				} 
@@ -88,7 +89,8 @@ controllers.MainCtrl = ['$scope', '$rootScope', '$state', '$stateParams', '$cont
 					} else {
 						$scope.socketProbabilityColor = "red";
 					}
-					$scope.socketProbabilityResult = (data.result * 100).toFixed(1);
+					$scope.socketProbabilityResult = Math.min((data.result * 100),99.9).toFixed(1);
+                    console.log($scope.socketProbabilityResult);
 					$scope.socketProbabilityProgressBar = "Complete";
 					$scope.isSocketReady = true;
 				} 
@@ -238,6 +240,14 @@ controllers.ResetCtrl = function($scope, $rootScope, $state) {
         $rootScope.character = null;
         $state.go('^');
     };
+};
+    
+/*******************
+ * InstructionCtrl *
+ ******************/
+
+controllers.InstructionCtrl = function() {
+    //Do nothing
 };
 
 /******************
