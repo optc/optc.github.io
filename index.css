@@ -81,9 +81,11 @@ body {
 .red    { background-color: #E96D63; }
 .purple { background-color: #DA70D6; }
 .yellow { background-color: #F4BA70; }
+.pink   { background-color: #DEA5A4; }
 
 .green:hover  { background-color: #6EB98E; }
 .blue:hover   { background-color: #74B0E4; }
 .red:hover    { background-color: #D85C52; }
 .purple:hover { background-color: #C96995; }
 .yellow:hover { background-color: #E3A969; }
+.pink:hover   { background-color: #A57777; }
