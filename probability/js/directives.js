@@ -37,7 +37,7 @@ directives.slotWheel = function() {
             scope.pickAbility = function(e,id) {
                 var slots = scope.character.slots;
                 if (!slots[scope.slotNumber] || slots[scope.slotNumber].id != id) {
-                    slots[scope.slotNumber] = { id: id, level: 5 };
+                    slots[scope.slotNumber] = { id: id, level: 1 };
 				}
                 element.find('.ability-button').toggleClass('active');
                 element.toggleClass('active'); 
