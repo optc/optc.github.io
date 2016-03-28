@@ -290,19 +290,19 @@ window.matchers = [
     {
         name: 'Bind reducers',
         target: 'special',
-        matcher: /reduces.+bind.+duration/i,
+        matcher: /reduces.+bind.+duration/i
     },
 
     {
         name: 'Despair reducers',
         target: 'special',
-        matcher: /reduces.+despair.+duration/i,
+        matcher: /reduces.+despair.+duration/i
     },
 
     {
         name: 'Block orb removers',
         target: 'special',
-        matcher: /(empties.+with \[BLOCK\]|changes.+\[BLOCK\].+into|including.+\[BLOCK\])/i,
+        matcher: /(empties.+with \[BLOCK\]|changes.+\[BLOCK\].+into|including.+\[BLOCK\])/i
     },
 
     {
@@ -339,6 +339,12 @@ window.matchers = [
         name: 'Zombies',
         target: 'special',
         matcher: /Protects from defeat/i
-    }
+    },
+	
+	{
+		name: 'Special Cooldown Reducer',
+		target: 'special',
+		matcher: /reduces special cooldown/i
+	}
 
 ];
