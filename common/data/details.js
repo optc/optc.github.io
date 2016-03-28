@@ -3983,13 +3983,13 @@ window.details = {
 	877: {
 		captain: "Boosts amount of beli received by 2x",
 		specialName: "Heaven's Do Art",
-		special: "Reduces any damage received above 2,000 HP by 88% for 1 turn",
+		special: "Reduces any damage received above 2,000 HP by 88% for 2 turns",
 		specialNotes: "The exact formula for the damage received is: 2000 + ((total damage) - 2000) * 0.12"
 	},
 	878: {
 		captain: "Boosts ATK of all characters by 1.5x, boosts amount of beli received by 2x",
 		specialName: "Heaven's Do Art",
-		special: "Reduces any damage received above 2,000 HP by 88% for 1 turn",
+		special: "Reduces any damage received above 2,000 HP by 88% for 2 turns",
 		specialNotes: "The exact formula for the damage received is: 2000 + ((total damage) - 2000) * 0.12"
 	},
 	879: {
@@ -4609,7 +4609,15 @@ window.details = {
         special: "Boosts own ATK by 1.75x for 1 turn and deals 800 fixed damage to one enemy",
         specialNotes: "#{fixed}"
     },
-	994:{
+    990: {
+        specialName: "10,000 Ton Vise of Hell",
+        special: "Changes [RCV] orbs into matching orbs"
+    },
+    991: {
+        specialName: "10,000 Ton Vise of Hell",
+        special: "Changes [RCV] orbs into matching orbs"
+    },
+	994: {
 		special: "Reduce special cooldown of Knowledge and Fighter Units, and shows the stats of enemies",
 		specialName: "Peeping Mind",
 		specialNotes: "Shows enemy Attack, Defense, Combo Hits, Current / Total HP, Attack Interval, 'Specials based on turns?', and 'Effect after Death'",
