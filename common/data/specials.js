@@ -720,6 +720,30 @@ window.specials = {
 		type: "condition",
 		warning: "Selected special (%name%) assumes that the enemy has been poisoned."
 	},
+    828: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Ambition") ? window.specials[828].multiplier : 1; },
+		type: "class",
+		onActivation: function(p) {
+			var n = (p.percHP < 20 ? 1.75 : 1);
+			window.specials[828].multiplier = n;
+			p.scope.notify({
+				text: 'HP ' + (n == 1.75 ? 'below' : 'above') + ' 20%, using the ' + n + 'x multiplier.',
+				name: '828warning'
+			});
+		}  
+    },
+    829: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Ambition") ? window.specials[829].multiplier : 1; },
+		type: "class",
+		onActivation: function(p) {
+			var n = (p.percHP < 20 ? 1.75 : 1);
+			window.specials[829].multiplier = n;
+			p.scope.notify({
+				text: 'HP ' + (n == 1.75 ? 'below' : 'above') + ' 20%, using the ' + n + 'x multiplier.',
+				name: '829warning'
+			});
+		}
+    },
 	832: {
 		atk: function(p) { return p.unit.class.has("Free Spirit") ? 1.5 : 1; },
 		type: "class"

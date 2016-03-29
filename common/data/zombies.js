@@ -179,6 +179,14 @@ window.zombies = {
         type: 'healer',
         multiplier: 2
     },
+    828: { //Kid Law
+        type: 'zombie',
+        treshold: 0.5
+    },
+    829: { //Kid Law Evolution
+        type: 'zombie',
+        treshold: 0.3
+    },
     841: { // Monet
         type: 'healer',
         multiplier: 3

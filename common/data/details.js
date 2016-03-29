@@ -3698,6 +3698,18 @@ window.details = {
 		specialName: "Poison of the Ancient Knight",
 		special: "Boosts ATK against poisoned enemies by 1.05x for 999 turns"
 	},
+    828: {
+        specialName: "Surprise Stab",
+        special: "Deals 3x character's ATK in [PSY] damage to one enemy, Boosts ATK of Slasher and Ambition characters by 1.75x for 1 turns if used below 20% HP",
+        captain: "Protects from defeat as long as HP is above 50%",
+		captainNotes: "#{zombie}" 
+    },
+    829: {
+        specialName: "Surprise Stab",
+        special: "Deals 3x character's ATK in [PSY] damage to one enemy, Boosts ATK of Slasher and Ambition characters by 1.75x for 1 turns if used below 20% HP",
+        captain: "Protects from defeat as long as HP is above 30%",
+		captainNotes: "#{zombie}" 
+    },
 	830: {
 		captain: "Boosts ATK of Knowledge and Striker characters by 1.75x, deals 2 times the damage received in the previous turn in DEX damage to all enemies at the end of each turn",
 		specialName: "Karma Conviction",
