@@ -842,6 +842,10 @@ unit > a:hover, .clickable:hover {
     height: 320px;
 }
 
+.chart-line {
+    height: 338px !important;
+}
+
 /*******************
  * SLOT THUMBNAILS *
  *******************/

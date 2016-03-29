@@ -44,7 +44,7 @@ controllers.PickerCtrl = function($scope, $state, $stateParams, $storage) {
     $scope.pickUnit = function(unitNumber) {
         $scope.resetSlot($stateParams.slot);
         $scope.data.team[$stateParams.slot].unit = units[unitNumber];
-        $scope.data.team[$stateParams.slot].level = 1;
+        $scope.data.team[$stateParams.slot].level = $scope.data.team[$stateParams.slot].unit.maxLevel;
         $scope.slotChanged($stateParams.slot);
         updateRecent(unitNumber);
         // captain warning

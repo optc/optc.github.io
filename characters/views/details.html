@@ -121,6 +121,18 @@
                             <canvas id="radar-chart" class="chart chart-radar" chart-data="radar.data"
                                 chart-labels="radar.labels" chart-options="radar.options"></canvas>
                         </uib-tab>
+                        <uib-tab heading="HP Growth" ng-if="!unit.incomplete">
+                            <canvas id="line-chart" class="chart chart-line" chart-data="radarHP.data" chart-series="radarHP.series"
+                                chart-labels="radarHP.labels"></canvas>
+                        </uib-tab>
+                        <uib-tab heading="ATK Growth" ng-if="!unit.incomplete">
+                            <canvas id="line-chart" class="chart chart-line" chart-data="radarATK.data" chart-series="radarATK.series"
+                                chart-labels="radarATK.labels"></canvas>
+                        </uib-tab>
+                        <uib-tab heading="RCV Growth" ng-if="!unit.incomplete">
+                            <canvas id="line-chart" class="chart chart-line" chart-data="radarRCV.data" chart-series="radarRCV.series"
+                                chart-labels="radarRCV.labels"></canvas>
+                        </uib-tab>
                     </uib-tabset>
 
                     <!-- Abilities (non-comparison) -->
