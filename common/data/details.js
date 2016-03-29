@@ -4629,6 +4629,14 @@ window.details = {
         specialName: "10,000 Ton Vise of Hell",
         special: "Changes [RCV] orbs into matching orbs"
     },
+	992: {
+		special: "Cuts the current HP of each enemy by __% and changes own orb into [QCK]",
+		specialName: "Punc Rock Fest"
+	},
+	993: {
+		special: "Cuts the current HP of each enemy by __% and changes own orb into [QCK]",
+		specialName: "Punc Rock Fest"
+	},
 	994: {
 		special: "Reduces Special Cooldown of Knowledge and Fighter Units, and shows the stats of enemies",
 		specialName: "Peeping Mind",
