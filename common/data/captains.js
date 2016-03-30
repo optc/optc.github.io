@@ -2350,5 +2350,14 @@ window.captains = {
     981: {
         atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Tough") ? 2 : 1; },
         rcv: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Tough") ? 0.1 : 1; }
+    },
+    982: {
+        atk: function(p) {return p.unit.class.has("Slasher") ? 2  : 1}
+    },
+    983: {
+        atk: function(p) {return p.unit.class.has("Slasher") ? 2.25  : 1}
+    },
+    984: {
+        atk: function(p) {return p.unit.class.has("Striker") ? 2.25  : 1}
     }
 };
