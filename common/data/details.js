@@ -4621,6 +4621,19 @@ window.details = {
         special: "Boosts own ATK by 1.75x for 1 turn and deals 800 fixed damage to one enemy",
         specialNotes: "#{fixed}"
     },
+    982: {
+        captain: "Boosts ATK of Slasher characters by 2x",
+        special: "Deals 25x character's ATK to one enemy, changes bottom row into matching orbs"
+    },
+    983: {
+        captain: "Boosts ATK of Slasher characters by 2.25x, makes [RCV] and [TND] orbs \"beneficial\" to Slasher characters",
+        captainNotes: "\"Beneficial\" orbs grant the same ATK boost as matching orbs.",
+        special: "Deals 25x character's ATK to one enemy, changes bottom row into matching orbs"
+    },
+    984: {
+        captain: "Boosts ATK of Striker characters by 2.25x",
+        special: "Delays all enemies for 1 turn, Locks all orbs for 1 turn"
+    },
     990: {
         specialName: "10,000 Ton Vise of Hell",
         special: "Changes [RCV] orbs into matching orbs"
@@ -4646,7 +4659,13 @@ window.details = {
 		special: "Reduces Special Cooldown of Knowledge and Fighter Units, and shows the stats of enemies",
 		specialName: "Peeping Mind",
 		specialNotes: "Shows enemy Attack, Defense, Combo Hits, Current / Total HP, Attack Interval, 'Specials based on turns?', and 'Effect after Death'",
-	}
+	},
+    996: {
+        special: "For Tough characters, changes Bad orbs to Matching orbs."
+    },
+    997: {
+        special: "For Tough characters, changes Bad orbs to Matching orbs."
+    }
 
 
 };
