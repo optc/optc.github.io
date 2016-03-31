@@ -815,6 +815,7 @@ window.drops = {
         {
             name: 'Raging Cook! Red Leg Zeff',
             thumb: 607,
+			global: true,
             condition: 'You cannot use any two units that are the same',
             Expert: [ 606, 608, 609, -502, -457, -449, -312, -52, -50 ],
             Elite: [ 606, 608, 609, -502, -457, -449, -312, -52, -50 ]
