@@ -953,7 +953,7 @@ window.units = [
 	[ "Ben Beckman", "DEX", [ "Striker", "Shooter" ], 3, 13, 6, 1, 35, 136167, 131, 98, 25, 935, 375, 163, 1],
  	[ "Ben Beckman, Red Hair Pirates", "DEX", [ "Striker", "Shooter" ], 4, 20, 4, 2, 70, 1778330, 867, 329, 122, 1403, 800, 229, 1],
 	[ "Gyaro", "QCK", [ "Slasher", "Tough" ], 3, 7, 6, 2, 50, 392109, 950, 427, 36, 1420, 627, 98, 1],
-	[ "Makuro", "PSY", [ "Shooter", "Tough" ], 3, 7, 4, 2, 50, 392109, 972, 390, 44, 1447, 591, 110, 1],
+	[ "Macro", "PSY", [ "Shooter", "Tough" ], 3, 7, 4, 2, 50, 392109, 972, 390, 44, 1447, 591, 110, 1],
 	[ "Tansui", "INT", [ "Fighter", "Tough" ], 3, 7, 4, 2, 50, 392109, 933, 468, 31, 1368, 701, 84, 1],
 	[ "Agile Gunman, Blue Bodyguard", "QCK", "Shooter", 3, 11, 6, 1, 60, 1123790, 72, 57, 59, 743, 556, 265, 1],
 	[ "Tricky Gunman, Black Bodyguard", "INT", "Shooter", 3, 11, 6, 1, 60, 1123790, 64, 64, 57, 709, 597, 257, 1],
