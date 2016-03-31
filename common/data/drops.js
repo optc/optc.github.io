@@ -1132,9 +1132,15 @@ window.drops = {
 		
 		{
 			name: 'Clash!! Kizaru',
+            thumb: 978,
 			Ultimate: [ 977 ],
 			Master: [ 977 ]
-		}
+		},
+        
+        {
+            name: 'Clash!? Fake Straw Hat Pirates',
+            Ultimate: [ 985, 986, 987, 988, 989]
+        }
 
     ],
 

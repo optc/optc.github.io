@@ -4665,6 +4665,14 @@ window.details = {
     },
     997: {
         special: "For Tough characters, changes Bad orbs to Matching orbs."
+    },
+    998: {
+        specialName: "Hira Release: Death Enjambre",
+        special: "Delays all enemies for ? turns, deals severe typeless damage for multiple turns"
+    },
+    999: {
+        specialName: "Hira Release: Death Enjambre",
+        special: "Delays all enemies for ? turns, deals severe typeless damage for multiple turns"
     }
 
 
