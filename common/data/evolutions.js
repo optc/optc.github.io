@@ -1465,30 +1465,34 @@ window.evolutions = {
     },
     982: {
         evolution: 983,
-        evolvers: [ 118, 85, 94, 301, 101]
+        evolvers: [ 118, 85, 94, 301, 101 ]
+    },
+    985: {
+        evolution: 989,
+        evolvers: [ 986, 987, 988 ]
     },
     990: {
         evolution: 991,
-        evolvers: [ 99, 304, 304, 104, 104]
+        evolvers: [ 99, 304, 304, 104, 104 ]
     },
     992: {
         evolution: 993,
-        evolvers: []
+        evolvers: [ 118, 83, 85, 96, 101 ]
     },
     994: {
         evolution: 995,
-        evolvers: []
+        evolvers: [ 118, 87, 94, 303, 103 ]
     },
     996: {
         evolution: 997,
-        evolvers: [ 80, 86, 266, 302, 102]
+        evolvers: [ 80, 86, 266, 302, 102 ]
     },
     998: {
         evolution: 999,
-        evolvers: [ 118, 83, 84, 95, 100]
+        evolvers: [ 118, 83, 84, 95, 100 ]
     },
     1000: {
         evolution: 1001,
-        evolvers: []
+        evolvers: [ 118, 86, 266, 302, 267 ]
     }
 };
