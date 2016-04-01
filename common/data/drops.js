@@ -1060,7 +1060,8 @@ window.drops = {
         {
             name: 'Clash!? Usopp\'n',
             thumb: 518,
-            'Ultimate': [ 517 ]
+            showManual: true,
+            'Ultimate': [ 517, -15, -16, -223 ]
         },
 
         {
@@ -1139,7 +1140,9 @@ window.drops = {
         
         {
             name: 'Clash!? Fake Straw Hat Pirates',
-            Ultimate: [ 985, 986, 987, 988, 989]
+            showManual: true,
+            thumb: 989,
+            Ultimate: [ 985, 986, 987, 988, -989, -15, -556, -528, -520, -20]
         }
 
     ],

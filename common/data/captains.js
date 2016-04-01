@@ -2359,5 +2359,8 @@ window.captains = {
     },
     984: {
         atk: function(p) {return p.unit.class.has("Striker") ? 2.25  : 1}
+    },
+    989: {
+        atk: function(p) { return p.unit.cost < 30 && p.unit.cost >20 ? 2.5 : 1; }
     }
 };

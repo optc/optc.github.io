@@ -4634,6 +4634,18 @@ window.details = {
         captain: "Boosts ATK of Striker characters by 2.25x",
         special: "Delays all enemies for 1 turn, Locks all orbs for 1 turn"
     },
+    985:{
+      captainNotes: "Acts as a Daimyo Turtle and thus gives 15k EXP"  
+    },
+    986:{
+      captainNotes: "Acts as a Daimyo Turtle and thus gives 15k EXP"  
+    },
+    987:{
+      captainNotes: "Acts as a Daimyo Turtle and thus gives 15k EXP"  
+    },
+    988:{
+      captainNotes: "Acts as a Daimyo Turtle and thus gives 15k EXP"  
+    },
 	989:{
 		captain: "Boosts ATK of characters with cost above 20 and below 30 by 2.5x",
 		special: "Changes the orbs in the left column into [G], [QCK] and [DEX], the orbs in the right column into [STR], [PSY] and [INT]",
