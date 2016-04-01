@@ -1139,10 +1139,10 @@ window.drops = {
 		},
         
         {
-            name: 'Clash!? Fake Straw Hat Pirates',
+            name: 'Clash!? Impostor Straw Hat Pirates',
             showManual: true,
             thumb: 989,
-            Ultimate: [ 985, 986, 987, 988, -989, -15, -556, -528, -520, -20]
+            Ultimate: [ 985, 986, 987, 988, -989, -4, -8, -11, -12, -15, -16, -556, -528, -520, -554, -558, -20]
         }
 
     ],
