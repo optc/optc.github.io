@@ -982,5 +982,22 @@ window.cooldowns = [
     [ 16, 8 ],
 	[ 22, 12 ],
 	[ 22, 12 ],
-	[ 22, 14 ]
+	[ 22, 14 ],
+	null,
+    null,
+	null,
+    null,
+	19,
+	15,
+	15,
+	20,
+	20,
+	null, //Violet
+	null, //Violet
+	null, //Dellinger 
+	null, //Dellinger 
+	23,
+	23,
+	23,
+	23
 ];

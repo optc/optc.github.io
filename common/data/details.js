@@ -4634,46 +4634,113 @@ window.details = {
         captain: "Boosts ATK of Striker characters by 2.25x",
         special: "Delays all enemies for 1 turn, Locks all orbs for 1 turn"
     },
+	989:{
+		captain: "Boosts ATK of characters with cost above 20 and below 30 by 2.5x",
+		special: "Changes the orbs in the left column into [G], [QCK] and [DEX], the orbs in the right column into [STR], [PSY] and [INT]",
+		specialName: "Bluff Piracy"
+	}
     990: {
+		captain: "Boosts ATK of Freedom characters by 2.5x if HP is above 99% at the start of the turn",
         specialName: "10,000 Ton Vise of Hell",
         special: "Changes [RCV] orbs into matching orbs"
     },
     991: {
+		captain: "Boosts ATK of Freedom characters by 2.75x if HP is above 99% at the start of the turn",
         specialName: "10,000 Ton Vise of Hell",
         special: "Changes [RCV] orbs into matching orbs"
     },
 	992: {
-		special: "Cuts the current HP of each enemy by __% and changes own orb into [QCK]",
+		captain: "Boosts ATK of [QCK] characters by 2x",
+		special: "Cuts the current HP of each enemy by 20% and changes own orb into [QCK]",
 		specialName: "Punc Rock Fest"
 	},
 	993: {
-		special: "Cuts the current HP of each enemy by __% and changes own orb into [QCK]",
+		captain: "Boosts ATK of [QCK] characters by 2.5x",
+		special: "Cuts the current HP of each enemy by 20% and changes own orb into [QCK]",
 		specialName: "Punc Rock Fest"
 	},
 	994: {
+		captain: "Boosts amount of beli received by 2x",
 		special: "Reduces Special Cooldown of Knowledge and Fighter Units, and shows the stats of enemies",
 		specialName: "Peeping Mind",
-		specialNotes: "Shows enemy Attack, Defense, Combo Hits, Current / Total HP, Attack Interval, 'Specials based on turns?', and 'Effect after Death'",
+		special: [
+			{
+				"description": "Reduces Special Cooldown of Knowledge and Fighters by 1 turn. Shows Enemy Attack, Defense, Combo Hits, Current / Total HP, Attack Interval, 'Specials based on turns?', and 'Effect after Death?'",
+				"cooldown": 13
+			},
+			{
+				"description": "Reduces Special Cooldown of Knowledge and Fighters by 2 turn. Shows Enemy Attack, Defense, Combo Hits, Current / Total HP, Attack Interval, 'Specials based on turns?', and 'Effect after Death?'",
+				"cooldown": 20
+			}
+		],
+		specialNotes: "#{stages}"
 	},
 	995:{
+		captain: "Boosts amount of beli received by 3x",
 		special: "Reduces Special Cooldown of Knowledge and Fighter Units, and shows the stats of enemies",
 		specialName: "Peeping Mind",
-		specialNotes: "Shows enemy Attack, Defense, Combo Hits, Current / Total HP, Attack Interval, 'Specials based on turns?', and 'Effect after Death'",
+		special: [
+			{
+				"description": "Reduces Special Cooldown of Knowledge and Fighters by 1 turn. Shows Enemy Attack, Defense, Combo Hits, Current / Total HP, Attack Interval, 'Specials based on turns?', and 'Effect after Death?'",
+				"cooldown": 13
+			},
+			{
+				"description": "Reduces Special Cooldown of Knowledge and Fighters by 2 turn. Shows Enemy Attack, Defense, Combo Hits, Current / Total HP, Attack Interval, 'Specials based on turns?', and 'Effect after Death?'",
+				"cooldown": 20
+			}
+		],
+		specialNotes: "#{stages}"
 	},
     996: {
-        special: "For Tough characters, changes Bad orbs to Matching orbs."
+        captain: "Boosts ATK of Tough characters by 2x",
+        special: [
+			{
+				"description": "For Tough characters, changes [EMPTY] and Bad orbs to Matching.",
+				"cooldown": 11
+			},
+			{
+				"description": "For all characters, changes [EMPTY] and Bad orbs to Matching.",
+				"cooldown": 20
+			}
+		],
+		specialNotes: "#{stages}"
     },
     997: {
-        special: "For Tough characters, changes Bad orbs to Matching orbs."
+		captain: "Boosts ATK of Tough characters by 2.25x, makes [TND] and [RCV] orbs \"beneficial\" to Tough characters",
+		captainNotes: "\"Beneficial\" orbs grant the same ATK boost as matching orbs while retaining their original function.",
+        special: [
+			{
+				"description": "For Tough characters, changes [EMPTY] and Bad orbs to Matching.",
+				"cooldown": 11
+			},
+			{
+				"description": "For all characters, changes [EMPTY] and Bad orbs to Matching.",
+				"cooldown": 20
+			}
+		],
+		specialNotes: "#{stages}"
     },
     998: {
+		captain: "Boosts ATK of Ambition characters by 2x and reduces cooldown of all specials by 1 turns at the start of the fight",
         specialName: "Hira Release: Death Enjambre",
-        special: "Delays all enemies for ? turns, deals severe typeless damage for multiple turns"
+        special: "Delays all enemies for 2 turns, deals severe typeless damage to all enemies at the end of the turn for 5 turns"
     },
     999: {
+		captain: "Boosts ATK of Ambition characters by 2.25x and reduces cooldown of all specials by 2 turns at the start of the fight",
         specialName: "Hira Release: Death Enjambre",
-        special: "Delays all enemies for ? turns, deals severe typeless damage for multiple turns"
-    }
-
+        special: "Delays all enemies for 2 turns, deals severe typeless damage to all enemies at the end of the turn for 5 turns"
+    },
+	1000:{
+		captain: "Boosts ATK of all characters proportional to the crew's current HP. Heals for 1.5x his RCV at the end of the turn each time you hit a Good. Heals for .5x his RCV at the end of the turn each time you hit a Great",
+		captainNotes: "#{captainProportional : higher : 0 + 2 * (remaining HP) / (total HP) : 2 : 0 }",
+		special: "Recovers 25x character's RCV in HP. Reduces Bind and Despair duration by 3 turns",
+		specialName: "Love Sacrifice"
+	},
+	1001:{
+		captain: "Boosts ATK of all characters proportional to the crew's current HP. Heals for 1.5x his RCV at the end of the turn each time you hit a Good. Heals for .5x his RCV at the end of the turn each time you hit a Great",
+		captainNotes: "#{captainProportional : higher : 0 + 2 * (remaining HP) / (total HP) : 2 : 0 }",
+		special: "Recovers 25x character's RCV in HP. Reduces Bind and Despair duration by 3 turns",
+		specialName: "Love Sacrifice"
+	}
 
 };
