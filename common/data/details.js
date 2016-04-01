@@ -4732,13 +4732,13 @@ window.details = {
     },
 	1000:{
 		captain: "Boosts ATK of all characters proportional to the crew's current HP. Heals for 1.5x his RCV at the end of the turn each time you hit a Good. Heals for .5x his RCV at the end of the turn each time you hit a Great",
-		captainNotes: "#{captainProportional : higher : 0 + 2 * (remaining HP) / (total HP) : 2 : 0 }",
+		captainNotes: "#{captainProportional : higher : 1 + 1 * (remaining HP) / (total HP) : 2 : 1 }",
 		special: "Recovers 25x character's RCV in HP. Reduces Bind and Despair duration by 3 turns",
 		specialName: "Love Sacrifice"
 	},
 	1001:{
 		captain: "Boosts ATK of all characters proportional to the crew's current HP. Heals for 1.5x his RCV at the end of the turn each time you hit a Good. Heals for .5x his RCV at the end of the turn each time you hit a Great",
-		captainNotes: "#{captainProportional : higher : 0 + 2 * (remaining HP) / (total HP) : 2 : 0 }",
+		captainNotes: "#{captainProportional : higher : 1 + 1 * (remaining HP) / (total HP) : 2 : 1 }",
 		special: "Recovers 25x character's RCV in HP. Reduces Bind and Despair duration by 3 turns",
 		specialName: "Love Sacrifice"
 	}

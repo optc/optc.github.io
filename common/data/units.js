@@ -992,7 +992,7 @@ window.units = [
     [ "Machvise, Donquixote Pirates","INT",["Free Spirit","Tough"], 5, 30, 4, 4, 99, null, 1523, 643, 49, null, null, null, null ],
     [ "Gladius","QCK",["Shooter","Ambition"], 4, 18, 6, 3, 70, null, 102, 161, 32, null, null, null, null ],
     [ "Gladius, Donquixote Pirates","QCK",["Shooter","Ambition"], 5, 30, 4, 4, 99, null, 1000, 767, 101, 2375, 1371, 271, null ],
-    [ "Violet","PSY",["Fighter","Knowledge"], 4, 18, 5, 3, 70, null, 147, 48, 77, null, null, null, null ],
+    [ "Violet","PSY",["Fighter","Knowledge"], 4, 18, 5, 3, 70, null, 147, 48, 77, 1157, 451, 274, null ],
     [ "Violet, Donquixote Pirates","PSY",["Fighter","Knowledge"], 5, 30, 4, 4, 99, null, 1095, 400, 220, 2217, 813, 483, null ],
     [ "Dellinger","DEX",["Tough","Fighter"], 4, 18, 6, 3, 70, null, 91, 147, 51, 999, 755, 192, null ],
     [ "Dellinger, Donquixote Pirates","DEX",["Tough","Fighter"], 5, 30, 4, 4, 99, null, 933, 692, 143, 2087, 1362, 324, null ],
