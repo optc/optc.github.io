@@ -4640,12 +4640,12 @@ window.details = {
 		specialName: "Bluff Piracy"
 	},
     990: {
-		captain: "Boosts ATK of Freedom characters by 2.5x if HP is above 99% at the start of the turn",
+		captain: "Boosts ATK of Free Spirit characters by 2.5x if HP is above 99% at the start of the turn",
         specialName: "10,000 Ton Vise of Hell",
         special: "Changes [RCV] orbs into matching orbs"
     },
     991: {
-		captain: "Boosts ATK of Freedom characters by 2.75x if HP is above 99% at the start of the turn",
+		captain: "Boosts ATK of Free Spirit characters by 2.75x if HP is above 99% at the start of the turn",
         specialName: "10,000 Ton Vise of Hell",
         special: "Changes [RCV] orbs into matching orbs"
     },
