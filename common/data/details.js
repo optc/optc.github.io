@@ -4638,7 +4638,7 @@ window.details = {
 		captain: "Boosts ATK of characters with cost above 20 and below 30 by 2.5x",
 		special: "Changes the orbs in the left column into [G], [QCK] and [DEX], the orbs in the right column into [STR], [PSY] and [INT]",
 		specialName: "Bluff Piracy"
-	}
+	},
     990: {
 		captain: "Boosts ATK of Freedom characters by 2.5x if HP is above 99% at the start of the turn",
         specialName: "10,000 Ton Vise of Hell",
