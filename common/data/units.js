@@ -996,7 +996,7 @@ window.units = [
     [ "Violet, Donquixote Pirates","PSY",["Fighter","Knowledge"], 5, 30, 4, 4, 99, null, 1095, 400, 220, 2217, 813, 483, null ],
     [ "Dellinger","DEX",["Tough","Fighter"], 4, 18, 6, 3, 70, null, 91, 147, 51, 999, 755, 192, null ],
     [ "Dellinger, Donquixote Pirates","DEX",["Tough","Fighter"], 5, 30, 4, 4, 99, null, 933, 692, 143, 2087, 1362, 324, null ],
-    [ "Diamante","STR",["Ambition","Striker"], 4, 18, 6, 3, 70, null, 698, 452, 48, null, null, null, null ],
+    [ "Diamante","STR",["Ambition","Striker"], 4, 18, 6, 3, 70, null, 698, 452, 48, 1500, 866, 90, null ],
     [ "Diamante, Donquixote Pirates","STR",["Ambition","Striker"], 5, 30, 5, 4, 99, null, 1443, 812, 50, 2840, 1421, 174, null ],
     [ "Corazon, Donquixote Pirates","DEX",["Free Spirit","Knowledge"], 5, 30, 4, 4, 70, null, 406, 196, 155, 1503, 694, 320, null ],
     [ "Donquixote Rocinante","DEX",["Free Spirit","Knowledge"], 6, 55, 4, 5, 99, null, 1428, 628, 272, 2746, 1222, 555, null ]
