@@ -4735,12 +4735,12 @@ window.details = {
     998: {
 		captain: "Boosts ATK of Ambition characters by 2x and reduces cooldown of all specials by 1 turns at the start of the fight",
         specialName: "Hira Release: Death Enjambre",
-        special: "Delays all enemies for 2 turns, deals severe typeless damage to all enemies at the end of the turn for 5 turns"
+        special: "Delays all enemies for 2 turns, deals 50x character's ATK as typeless damage to all enemies at the end of the turn for 5 turns"
     },
     999: {
 		captain: "Boosts ATK of Ambition characters by 2.25x and reduces cooldown of all specials by 2 turns at the start of the fight",
         specialName: "Hira Release: Death Enjambre",
-        special: "Delays all enemies for 2 turns, deals severe typeless damage to all enemies at the end of the turn for 5 turns"
+        special: "Delays all enemies for 2 turns, deals 50x character's ATK as typeless damage to all enemies at the end of the turn for 5 turns"
     },
 	1000:{
 		captain: "Boosts ATK of all characters proportional to the crew's current HP. Heals for 1.5x his RCV at the end of the turn each time you hit a Good. Heals for .5x his RCV at the end of the turn each time you hit a Great",

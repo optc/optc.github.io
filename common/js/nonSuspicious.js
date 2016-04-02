@@ -16,7 +16,10 @@ $(document).keydown(function(e) {
     
     // Add a Spinning Chopperman to the index Page
     var kon = document.createElement("img");
-    kon.src = "http://i.imgur.com/gKxW9cm.png";
+    //Chopperman
+    //kon.src = "http://i.imgur.com/gKxW9cm.png";
+    //Fat Usoppp
+    kon.src = "http://i.imgur.com/zy5IoXu.png";
     kon.alt = "Chopperman";
     kon.id = "Chopper";
     
