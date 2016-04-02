@@ -89,3 +89,26 @@ body {
 .purple:hover { background-color: #C96995; }
 .yellow:hover { background-color: #E3A969; }
 .pink:hover   { background-color: #A57777; }
+
+.overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: table;
+    z-index: 100;
+}
+
+.hide {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.65);
+    z-index: 100;
+}
+
+#hide > img {
+    margin-top: 15%;
+    animation: fa-spin 3s infinite linear;
+}
