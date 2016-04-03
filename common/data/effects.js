@@ -214,6 +214,14 @@ window.effects = {
         thumb: 880,
         id: 24, // don't change this
         gOrbsEnabled: true
+    },
+    
+    'Colosseum Franky': {
+        description: 'Activates [G] orb Support, boosts Orbs by 1.5x',
+        thumb: 560,
+        id: 25,
+        orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 10/15 : 1); },
+        gOrbsEnabled: true
     }
 
 };

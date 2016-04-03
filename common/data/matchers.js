@@ -356,13 +356,13 @@ window.matchers = [
     {
         name: 'Single Target Damage Dealer',
         target: 'special',
-        matcher: /deals.+one enemy/i
+        matcher: /deals.+to one enemy/i
     },
     
     {
         name: 'Multi Target Damage Dealer',
         target: 'special',
-        matcher: /deals.+all enemies/i
+        matcher: /deals.+to all enemies/i
     }
 
 ];
