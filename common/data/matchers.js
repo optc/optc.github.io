@@ -116,6 +116,12 @@ window.matchers = [
         target: 'captain',
         matcher: /Protects from defeat/i
     },
+    
+    {
+        name: 'End of Turn Damage Dealer',
+        target: 'captain',
+        matcher: /deals.+end of each turn/i
+    },
 
     /* * * * * Specials * * * * */
 
@@ -345,6 +351,18 @@ window.matchers = [
 		name: 'Special Cooldown Reducer',
 		target: 'special',
 		matcher: /reduces special cooldown/i
-	}
+	},
+    
+    {
+        name: 'Single Target Damage Dealer',
+        target: 'special',
+        matcher: /deals.+one enemy/i
+    },
+    
+    {
+        name: 'Multi Target Damage Dealer',
+        target: 'special',
+        matcher: /deals.+all enemies/i
+    }
 
 ];
