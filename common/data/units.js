@@ -987,7 +987,7 @@ window.units = [
     [ "Cocoa & Nora Gitsune, Impostor Straw Hat Pirates","INT","Ambition", 3, 5, 6, 0, 20, 17456, 79, 21, 28, 489, 224, 110, 1],
     [ "Manjaro & Drip, Impostor Straw Hat Pirates","DEX","Ambition", 3, 5, 6, 0, 20, 17456, 44, 34, 21, 387, 308, 97, 1],
     [ "Mounblutain & Turco, Impostor Straw Hat Pirates","PSY","Ambition", 3, 5, 6, 0, 20, 17456, 103, 23, 18, 612, 258 , 79, 1],
-    [ "Imposter Straw Hats","STR",["Ambition","Shooter"], 4, 15, 8, 3, 50, 653515, 561, 330, 36, 1288, 604, 110, 1],
+    [ "Impostor Straw Hats","STR",["Ambition","Shooter"], 4, 15, 8, 3, 50, 653515, 561, 330, 36, 1288, 604, 110, 1],
     [ "Machvise","INT",["Free Spirit","Tough"], 4, 18, 4, 3, 70, null, 203, 127, 34, 1589, 716, 105, null ],
     [ "Machvise, Donquixote Pirates","INT",["Free Spirit","Tough"], 5, 30, 4, 4, 99, null, 1523, 643, 49, null, null, null, null ],
     [ "Gladius","QCK",["Shooter","Ambition"], 4, 18, 6, 3, 70, null, 102, 161, 32, null, null, null, null ],

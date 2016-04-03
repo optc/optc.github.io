@@ -4647,7 +4647,7 @@ window.details = {
       captainNotes: "Acts as a Daimyo Turtle and thus gives 15k EXP"  
     },
 	989:{
-		captain: "Boosts ATK of characters with cost above 20 and below 30 by 2.5x",
+		captain: "Boosts ATK of characters with cost above 20 and below 30 by 2.5x, but reduces the HP of every character by 90%",
 		special: "Changes the orbs in the left column into [G], [QCK] and [DEX], the orbs in the right column into [STR], [PSY] and [INT]",
 		specialName: "Bluff Piracy"
 	},
