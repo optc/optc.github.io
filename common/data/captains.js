@@ -2362,5 +2362,35 @@ window.captains = {
     },
     989: {
         atk: function(p) { return p.unit.cost < 30 && p.unit.cost >20 ? 2.5 : 1; }
+    },
+    990: {
+        atk: function(p) { return p.unit.class.has("Free Spirit") && p.percHP >= 99.0 ? 2.5 : 1; }
+    },
+    991: {
+        atk: function(p) { return p.unit.class.has("Free Spirit") && p.percHP >= 99.0 ? 2.75 : 1; }
+    },
+    992: {
+        atk: function(p) { return p.unit.type == "QCK" ? 2 : 1 ; }
+    },
+    993: {
+        atk: function(p) { return p.unit.type == "QCK" ? 2.5 : 1 ; }
+    },
+    996: {
+         atk: function(p) {return p.unit.class.has("Tough") ? 2  : 1; }
+    },
+    997: {
+         atk: function(p) {return p.unit.class.has("Tough") ? 2.25  : 1; }
+    },
+    998: {
+         atk: function(p) {return p.unit.class.has("Ambition") ? 2  : 1; }
+    },
+    999: {
+         atk: function(p) {return p.unit.class.has("Ambition") ? 2.25  : 1; }
+    },
+    1000: {
+        atk: function(p) { return  2  * p.percHP / 100; }
+    },
+    1001: {
+        atk: function(p) { return  2  * p.percHP / 100; }
     }
 };
