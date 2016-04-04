@@ -998,6 +998,6 @@ window.aliases = {
     997: ['',''],
     998: ['',''],
     999: ['',''],
-    1000: ['','','Rocinante'],
-    1001: ['','','Rocinante']
+    1000: ['','','Rocinante','Rosinante'],
+    1001: ['','','Rocinante','Corazon']
 };
