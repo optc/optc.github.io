@@ -1061,6 +1061,7 @@ window.drops = {
             name: 'Clash!? Usopp\'n',
             thumb: 518,
             showManual: true,
+			global: true,
             'Ultimate': [ 517, -15, -16, -223 ]
         },
 
