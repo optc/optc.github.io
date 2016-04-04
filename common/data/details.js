@@ -4623,15 +4623,18 @@ window.details = {
     },
     982: {
         captain: "Boosts ATK of Slasher characters by 2x",
+		specialName: "Flower Sword Straight Cut",
         special: "Deals 25x character's ATK to one enemy, changes bottom row into matching orbs"
     },
     983: {
         captain: "Boosts ATK of Slasher characters by 2.25x, makes [RCV] and [TND] orbs \"beneficial\" to Slasher characters",
         captainNotes: "\"Beneficial\" orbs grant the same ATK boost as matching orbs.",
+		specialName: "Flower Sword Straight Cut",
         special: "Deals 25x character's ATK to one enemy, changes bottom row into matching orbs"
     },
     984: {
         captain: "Boosts ATK of Striker characters by 2.25x",
+		specialName: "Shrouds and Rattling Knot",
         special: "Delays all enemies for 1 turn, Locks all orbs for 1 turn"
     },
     985:{
@@ -4715,6 +4718,7 @@ window.details = {
 				"cooldown": 20
 			}
 		],
+		specialName: "Decapitation High Heel",
 		specialNotes: "#{stages}"
     },
     997: {
@@ -4730,6 +4734,7 @@ window.details = {
 				"cooldown": 20
 			}
 		],
+		specialName: "Decapitation High Heel",
 		specialNotes: "#{stages}"
     },
     998: {
