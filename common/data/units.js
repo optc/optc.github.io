@@ -990,7 +990,7 @@ window.units = [
     [ "Impostor Straw Hats","STR",["Ambition","Shooter"], 4, 15, 8, 3, 50, 653515, 561, 330, 36, 1288, 604, 110, 1],
     [ "Machvise","INT",["Free Spirit","Tough"], 4, 18, 4, 3, 70, null, 203, 127, 34, 1589, 716, 105, null ],
     [ "Machvise, Donquixote Pirates","INT",["Free Spirit","Tough"], 5, 30, 4, 4, 99, null, 1523, 643, 49, null, null, null, null ],
-    [ "Gladius","QCK",["Shooter","Ambition"], 4, 18, 6, 3, 70, null, 102, 161, 32, null, null, null, null ],
+    [ "Gladius","QCK",["Shooter","Ambition"], 4, 18, 6, 3, 70, null, 102, 161, 32, 1079, 813, 154, null ],
     [ "Gladius, Donquixote Pirates","QCK",["Shooter","Ambition"], 5, 30, 4, 4, 99, null, 1000, 767, 101, 2375, 1371, 271, null ],
     [ "Violet","PSY",["Fighter","Knowledge"], 4, 18, 5, 3, 70, null, 147, 48, 77, 1157, 451, 274, null ],
     [ "Violet, Donquixote Pirates","PSY",["Fighter","Knowledge"], 5, 30, 4, 4, 99, null, 1095, 400, 220, 2217, 813, 483, null ],
