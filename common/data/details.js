@@ -4768,7 +4768,7 @@ window.details = {
 	1003: {
 		captain: "Boosts ATK of Fighter characters by 2x",
 		special: "Reduces Numbness duration by 3 turns and deals 7x ATK as [STR] damage to one enemy",
-		specialName: "Bepo's Ultimate Fist!!"
+		specialName: "Bepo's Ultimate Fist!!",
 		specialNotes: "Numbness causes that unit to have a chance of not attacking and breaking chain"
 	},
 	1004: {
