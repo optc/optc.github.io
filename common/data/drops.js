@@ -1001,8 +1001,9 @@ window.drops = {
 		{
 			name: "Let's Find Our Captain! Heart Pirates!",
 			condition: "You can only bring QCK units",
-			Expert: [ 1002, 1004, 1005 ],
-			Elite: [ 1002, 1004, 1005 ]
+            thumb: 1003,
+			Expert: [ 1002, 1004, 1005, -748, -844, -558, -846, -737, -1006, -785, -564 ],
+			Elite: [ 1002, 1004, 1005, -748, -844, -558, -846, -737, -1006, -785, -564 ]
 		}
 
     ],
