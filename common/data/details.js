@@ -4747,17 +4747,41 @@ window.details = {
         specialName: "Hira Release: Death Enjambre",
         special: "Delays all enemies for 2 turns, deals 50x character's ATK as typeless damage to all enemies at the end of the turn for 5 turns"
     },
-	1000:{
+	1000: {
 		captain: "Boosts ATK of all characters proportional to the crew's current HP. Heals for 1.5x his RCV at the end of the turn each time you hit a Good. Heals for .5x his RCV at the end of the turn each time you hit a Great",
 		captainNotes: "#{captainProportional : higher : 1 + 1 * (remaining HP) / (total HP) : 2 : 1 }",
 		special: "Recovers 25x character's RCV in HP. Reduces Bind and Despair duration by 3 turns",
 		specialName: "Love Sacrifice"
 	},
-	1001:{
+	1001: {
 		captain: "Boosts ATK of all characters proportional to the crew's current HP. Heals for 1.5x his RCV at the end of the turn each time you hit a Good. Heals for .5x his RCV at the end of the turn each time you hit a Great",
 		captainNotes: "#{captainProportional : higher : 1 + 1 * (remaining HP) / (total HP) : 2 : 1 }",
 		special: "Recovers 25x character's RCV in HP. Reduces Bind and Despair duration by 3 turns",
 		specialName: "Love Sacrifice"
 	}
-
+	1002: {
+		captain: "Boosts ATK of Fighter characters by 1.5x",
+		special: "Reduces Paralysis duration by 2 turns",
+		specialName: "Bepo Special"
+	},
+	1003: {
+		captain: "Boosts ATK of Fighter characters by 1.5x",
+		special: "Reduces Paralysis duration by 2 turns",
+		specialName: "Bepo Special"
+	},
+	1004: {
+		captain: "Boosts RCV of all characters by 1.5x",
+		specialName: "Sachi & Penguin Special",
+		special: "Changes the orbs in the left column into [RCV] orbs"
+	},
+	1005: {
+		captain: "Boosts ATK of Tough characters by 1.5x",
+		specialName: "Jean Bart Special",
+		special: "Boosts own ATK by 1.75x for 1 turn"
+	},
+	1006: {
+		captain: "Boosts ATK and HP of Tough characters by 1.5x",
+		specialName: "Jean Bart Special",
+		special: "Boosts own ATK by 1.75x for 1 turn"
+	}
 };
