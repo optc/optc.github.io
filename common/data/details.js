@@ -4758,7 +4758,7 @@ window.details = {
 		captainNotes: "#{captainProportional : higher : 1 + 1 * (remaining HP) / (total HP) : 2 : 1 }",
 		special: "Recovers 25x character's RCV in HP. Reduces Bind and Despair duration by 3 turns",
 		specialName: "Love Sacrifice"
-	}
+	},
 	1002: {
 		captain: "Boosts ATK of Fighter characters by 1.5x",
 		special: "Reduces Paralysis duration by 2 turns",
