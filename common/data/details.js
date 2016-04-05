@@ -4761,27 +4761,29 @@ window.details = {
 	},
 	1002: {
 		captain: "Boosts ATK of Fighter characters by 1.5x",
-		special: "Reduces Paralysis duration by 2 turns",
-		specialName: "Bepo Special"
+		special: "Reduces Numbness duration by 3 turns and deals 7x ATK as [STR] damage to one enemy",
+		specialName: "Bepo's Ultimate Fist!!",
+		specialNotes: "Numbness causes that unit to have a chance of not attacking and breaking chain"
 	},
 	1003: {
-		captain: "Boosts ATK of Fighter characters by 1.5x",
-		special: "Reduces Paralysis duration by 2 turns",
-		specialName: "Bepo Special"
+		captain: "Boosts ATK of Fighter characters by 2x",
+		special: "Reduces Numbness duration by 3 turns and deals 7x ATK as [STR] damage to one enemy",
+		specialName: "Bepo's Ultimate Fist!!"
+		specialNotes: "Numbness causes that unit to have a chance of not attacking and breaking chain"
 	},
 	1004: {
 		captain: "Boosts RCV of all characters by 1.5x",
-		specialName: "Sachi & Penguin Special",
+		specialName: "Hilarious Combination",
 		special: "Changes the orbs in the left column into [RCV] orbs"
 	},
 	1005: {
 		captain: "Boosts ATK of Tough characters by 1.5x",
-		specialName: "Jean Bart Special",
+		specialName: "Rush to Freedom",
 		special: "Boosts own ATK by 1.75x for 1 turn"
 	},
 	1006: {
 		captain: "Boosts ATK and HP of Tough characters by 1.5x",
-		specialName: "Jean Bart Special",
+		specialName: "Rush to Freedom",
 		special: "Boosts own ATK by 1.75x for 1 turn"
 	}
 };

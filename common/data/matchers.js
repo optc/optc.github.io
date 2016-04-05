@@ -348,21 +348,27 @@ window.matchers = [
     },
 	
 	{
-		name: 'Special Cooldown Reducer',
+		name: 'Special cooldown reducer',
 		target: 'special',
 		matcher: /reduces special cooldown/i
 	},
     
     {
-        name: 'Single Target Damage Dealer',
+        name: 'Single target damage dealer',
         target: 'special',
         matcher: /deals.+to one enemy/i
     },
     
     {
-        name: 'Multi Target Damage Dealer',
+        name: 'Multi target damage dealer',
         target: 'special',
         matcher: /deals.+to all enemies/i
-    }
+    },
+	
+	{
+		name: 'Numbness reducers',
+        target: 'special',
+        matcher: /reduces.+numbness.+duration/i
+	}
 
 ];

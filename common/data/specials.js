@@ -1170,5 +1170,13 @@ window.specials = {
     981: {
         atk: function(p) { return p.slot == p.sourceSlot ? 1.75 : 1; },
 		type: "type"
-    }
+    },
+	1005: {
+		atk: function(p) { return p.slot == p.sourceSlot ? 1.75 : 1; },
+		type: "type"
+	},
+	1006: {
+		atk: function(p) { return p.slot == p.sourceSlot ? 1.75 : 1; },
+		type: "type"
+	},
 };

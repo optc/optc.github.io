@@ -1000,9 +1000,9 @@ window.units = [
     [ "Diamante, Donquixote Pirates","STR",["Ambition","Striker"], 5, 30, 5, 4, 99, null, 1443, 812, 50, 2840, 1421, 174, null ],
     [ "Corazon, Donquixote Pirates","DEX",["Free Spirit","Knowledge"], 5, 30, 4, 4, 70, null, 406, 196, 155, 1503, 694, 320, null ],
     [ "Donquixote Rosinante","DEX",["Free Spirit","Knowledge"], 6, 55, 4, 5, 99, null, 1428, 628, 272, 2746, 1222, 555, null ],
-	[ "New Bepo", "STR", ["Figher", "Tough"], 3, 12, 4, 1, 50, null, 96, 53, 46, null, null, null, null],
-	[ "New Bepo, Heart Pirates", "STR", ["Figher", "Tough"], 4, 20, 4, 2, 99, null, 921, 461, 162, null, null, null, null],
-	[ "Sachi & Penguin", "QCK", ["Figher", "Free Spirit"], 4, 15, 5, 2, 70, null, 92, 37, 36, null, null, null, null],
+	[ "Bepo, Heart Pirates", "STR", ["Figher", "Tough"], 3, 12, 4, 1, 50, null, 96, 53, 46, null, null, null, null],
+	[ "Martial Artist Bepo, Heart Pirates", "STR", ["Figher", "Tough"], 4, 20, 4, 2, 99, null, 921, 461, 162, null, null, null, null],
+	[ "Sachi and Penguin, Heart Pirates", "QCK", ["Figher", "Free Spirit"], 4, 15, 5, 2, 70, null, 92, 37, 36, null, null, null, null],
 	[ "Jean Bart", "STR", ["Tough", "Fighter"], 3, 12, 5, 1, 50, null, 194, 55, 13, null, null, null, null],
-	[ "Jean Bart Evolved", "STR", ["Tough", "Fighter"], 4, 20, 4, 2, 99, null, 1337, 488, 44, null, null, null, null]
+	[ "Jean Bart, Heart Pirates", "STR", ["Tough", "Fighter"], 4, 20, 4, 2, 99, null, 1337, 488, 44, null, null, null, null]
 ];

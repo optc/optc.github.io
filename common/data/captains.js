@@ -2393,5 +2393,21 @@ window.captains = {
     },
     1001: {
         atk: function(p) { return  2  * p.percHP / 100; }
-    }
+    },
+	1002: {
+		atk: function(p) {return p.unit.class.has("Fighter") ? 1.5 : 1; }
+	},
+	1003: {
+		atk: function(p) {return p.unit.class.has("Fighter") ? 2 : 1; }
+	},
+	1004: {
+		rcv: function(p) { return 1.5; }
+	},
+	1005: {
+		atk: function(p) {return p.unit.class.has("Tough") ? 1.5 : 1; }
+	},
+	1006: {
+		atk: function(p) {return p.unit.class.has("Tough") ? 1.5 : 1; },
+		hp: function(p) {return p.unit.class.has("Tough") ? 1.5 : 1; }
+	},
 };
