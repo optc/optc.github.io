@@ -116,7 +116,7 @@ directives.addCaptainOptions = function($timeout, $compile, MATCHER_IDS) {
         link: function(scope, element, attrs) {
             if (scope.n !== TARGET) return;
             var filter = $('<div id="class-filters" ng-class="{ enabled: filters.custom[' + TARGET + '] }"></div>');
-            var classes = [ 'Fighter', 'Shooter', 'Slasher', 'Striker', 'Free Spirit', 'Knowledge', 'Tough', 'Ambition' ];
+            var classes = [ 'Fighter', 'Shooter', 'Slasher', 'Striker', 'Free Spirit', 'Cerebral', 'Tough', 'Ambition' ];
             classes.forEach(function(x,n) {
                 var template = '<span class="filter subclass %c" ng-class="{ active: filters.classCaptain == \'%s\' }" ' +
                     'ng-click="onCaptainClick($event,\'%s\')">%s</span>';
@@ -138,7 +138,7 @@ directives.addSpecialOptions = function($timeout, $compile, MATCHER_IDS) {
         link: function(scope, element, attrs) {
             if (scope.n !== TARGET) return;
             var filter = $('<div id="class-filters" ng-class="{ enabled: filters.custom[' + TARGET + '] }"></div>');
-            var classes = [ 'Fighter', 'Shooter', 'Slasher', 'Striker', 'Free Spirit', 'Knowledge', 'Tough', 'Ambition' ];
+            var classes = [ 'Fighter', 'Shooter', 'Slasher', 'Striker', 'Free Spirit', 'Cerebral', 'Tough', 'Ambition' ];
             classes.forEach(function(x,n) {
                 var template = '<span class="filter subclass %c" ng-class="{ active: filters.classSpecial == \'%s\' }" ' +
                     'ng-click="onSpecialClick($event,\'%s\')">%s</span>';

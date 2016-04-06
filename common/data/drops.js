@@ -922,7 +922,7 @@ window.drops = {
         {
             name: "Nami and Lola's Great Proposal Plan",
             thumb: 808,
-            condition: 'You can only bring Slasher and Knowledge units. (No Evolution/Booster)',
+            condition: 'You can only bring Slasher and Cerebral units. (No Evolution/Booster)',
             Expert: [ 807, 809, 811, -811, -645, -641, -631, -502, -11, -12, -9 ],
             Elite: [ 807, 809, 811, -811, -645, -641, -631, -502, -11, -12, -9 ]
         },

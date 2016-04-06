@@ -3136,17 +3136,17 @@ window.details = {
 		captainNotes: "A hit below Good or a Miss will boost the ATK of the next unit by 2x, a Good hit by 2.25x, a Great hit by 2.5x and a Perfect hit by 2.75x. This bonus is applied only to Slasher characters."
 	},
 	719: {
-		special: "Boosts ATK of Knowledge characters by a variable factor for 1 turn, deals 20x character's ATK in DEX damage to all enemies",
+		special: "Boosts ATK of Cerebral characters by a variable factor for 1 turn, deals 20x character's ATK in DEX damage to all enemies",
 		specialNotes: "The exact multiplier used is chosen based on the crew's current HP at the time the special is activated: above 30% HP, the multiplier used is 1.5x; below 30% HP, it's 2x.",
 		specialName: "Sables: Pesado",
-		captain: "Boosts ATK of Knowledge characters proportionally to the crew's current HP",
+		captain: "Boosts ATK of Cerebral characters proportionally to the crew's current HP",
 		captainNotes: "#{captainProportional : lower : 1.5 + 1.75 * (1 - (remaining HP) / (total HP)) : 1.5 : 3.25}"
 	},
 	720: {
-		special: "Boosts ATK of Knowledge characters by a variable factor for 1 turn, deals 20x character's ATK in DEX damage to all enemies",
+		special: "Boosts ATK of Cerebral characters by a variable factor for 1 turn, deals 20x character's ATK in DEX damage to all enemies",
 		specialNotes: "The exact multiplier used is chosen based on the crew's current HP at the time the special is activated: above 30% HP, the multiplier used is 1.5x; below 30% HP, it's 2x.",
 		specialName: "Sables: Pesado",
-		captain: "Boosts ATK of Knowledge characters proportionally to the crew's current HP",
+		captain: "Boosts ATK of Cerebral characters proportionally to the crew's current HP",
 		captainNotes: "#{captainProportional : lower : 1.5 + 1.75 * (1 - (remaining HP) / (total HP)) : 1.5 : 3.25}"
 	},
 	721: {
@@ -3310,12 +3310,12 @@ window.details = {
 	751: {
 		special: "Reduces damage received in the next turn by 50% if the special is activated with more than 50% health remaining, by 80% if activated with less than 50% but more than 10% health remaining, by 100% if activated with less than 10% health remaining",
 		specialName: "Sheep Cloud Tidal Wave",
-		captain: "Boosts ATK and RCV of Knowledge characters by 1.5x"
+		captain: "Boosts ATK and RCV of Cerebral characters by 1.5x"
 	},
 	752: {
 		special: "Reduces damage received in the next turn by 50% if the special is activated with more than 50% health remaining, by 80% if activated with less than 50% but more than 10% health remaining, by 100% if activated with less than 10% health remaining",
 		specialName: "Sheep Cloud Tidal Wave",
-		captain: "Boosts ATK of Knowledge characters by 2.25x and their RCV by 1.5x"
+		captain: "Boosts ATK of Cerebral characters by 2.25x and their RCV by 1.5x"
 	},
 	753: {
 		special: "Deals 15x character's ATK in QCK damage to one enemy, amplifies the effect of orbs by 1.75x for 1 turn",
@@ -3414,9 +3414,9 @@ window.details = {
 		captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of STR characters by 2x"
 	},
 	771: {
-		special: "Deals 15x character's ATK in PSY damage to one enemy, boosts ATK of Knowledge characters by 1.75x for 1 turn",
+		special: "Deals 15x character's ATK in PSY damage to one enemy, boosts ATK of Cerebral characters by 1.75x for 1 turn",
 		specialName: "Moonwalk: Air Walking",
-		captain: "Boosts ATK of Knowledge characters by 2.5x"
+		captain: "Boosts ATK of Cerebral characters by 2.5x"
 	},
 	772: {
 		special: "Cuts the current HP of each enemy by 10%, changes [PSY] and [INT] orbs into [DEX] orbs",
@@ -3438,7 +3438,7 @@ window.details = {
 		special: "Deals several times the character's ATK in PSY damage to one enemy",
 		specialNotes: "#{specialProportional : lower : 125 * ( 1 - (remaining HP) / (total HP) )}",
 		specialName: "Angry Headbutt",
-		captain: "Boosts ATK and HP of Knowledge characters by 1.5x"
+		captain: "Boosts ATK and HP of Cerebral characters by 1.5x"
 	},
 	776: {
 		specialName: "Boisterous Lucky Shot!!",
@@ -3527,7 +3527,7 @@ window.details = {
 	793: {
 		special: "Randomly changes all orbs into either [STR], [QCK], [DEX], [PSY] or [INT] orbs, switches orbs between slots twice, locks all orbs for 1 turn",
 		specialName: "The Entushiasm to Keep Skilled Workers in Line",
-		captain: "Boosts ATK and RCV of Knowledge characters by 1.5x"
+		captain: "Boosts ATK and RCV of Cerebral characters by 1.5x"
 	},
 	794: {
 		special: "Deals 10 hits of random INT damage to random enemies, delays all enemies for 1 turn",
@@ -3546,12 +3546,12 @@ window.details = {
 	796: {
 		special: "Slightly boosts chances of getting matching orbs for 3 turns, boosts own ATK by 1.75x for 1 turn",
 		specialName: "Peto-Peto Fruit, The Greatest Power",
-		captain: "Boosts ATK of Knowledge characters by 2x"
+		captain: "Boosts ATK of Cerebral characters by 2x"
 	},
 	797: {
 		special: "Slightly boosts chances of getting matching orbs for 3 turns, boosts own ATK by 1.75x for 1 turn",
 		specialName: "Peto-Peto Fruit, The Greatest Power",
-		captain: "Boosts ATK of Knowledge and Tough characters by 2x"
+		captain: "Boosts ATK of Cerebral and Tough characters by 2x"
 	},
 	798: {
 		special: "Removes poison, following the activation of the special, if every unit scores a Perfect hit, boosts ATK of Fighter characters by 1.75x in the following turn",
@@ -3601,12 +3601,12 @@ window.details = {
 		specialNotes: "#{orb : 1.75x}"
 	},
 	807: {
-		captain: "Boosts ATK and RCV of Knowledge characters by 1.5x",
+		captain: "Boosts ATK and RCV of Cerebral characters by 1.5x",
 		specialName: "Thunder Charge: Swing Arm",
 		special: "Deals 15x character's ATK in PSY damage to one enemy, boosts ATK against enemies with reduced defense by 1.3x for 3 turns"
 	},
 	808: {
-		captain: "Boosts ATK and RCV of Knowledge characters by 1.5x, recovers 2x character's RCV in HP at the end of each turn",
+		captain: "Boosts ATK and RCV of Cerebral characters by 1.5x, recovers 2x character's RCV in HP at the end of each turn",
 		specialName: "Thunder Charge: Swing Arm",
 		special: "Deals 15x character's ATK in PSY damage to one enemy, boosts ATK against enemies with reduced defense by 1.3x for 3 turns"
 	},
@@ -3711,12 +3711,12 @@ window.details = {
 		captainNotes: "#{zombie}" 
     },
 	830: {
-		captain: "Boosts ATK of Knowledge and Striker characters by 1.75x, deals 2 times the damage received in the previous turn in DEX damage to all enemies at the end of each turn",
+		captain: "Boosts ATK of Cerebral and Striker characters by 1.75x, deals 2 times the damage received in the previous turn in DEX damage to all enemies at the end of each turn",
 		specialName: "Karma Conviction",
 		special: "Changes the orbs in the top row into [STR] orbs, changes the orbs in the middle row into [DEX] orbs, changes the orbs in the bottom row into [QCK] orbs"
 	},
 	831: {
-		captain: "Boosts ATK of Knowledge and Striker characters by 2x, deals 5 times the damage received in the previous turn in DEX damage to all enemies at the end of each turn",
+		captain: "Boosts ATK of Cerebral and Striker characters by 2x, deals 5 times the damage received in the previous turn in DEX damage to all enemies at the end of each turn",
 		specialName: "Karma Conviction",
 		special: "Changes the orbs in the top row into [STR] orbs, changes the orbs in the middle row into [DEX] orbs, changes the orbs in the bottom row into [QCK] orbs"
 	},
@@ -3738,13 +3738,13 @@ window.details = {
 		special: "Changes own orb into [QCK] and the captain's orb into [PSY]"
 	},
 	835: {
-		captain: "Boosts ATK and HP of Knowledge characters by 2x",
+		captain: "Boosts ATK and HP of Cerebral characters by 2x",
 		specialName: "Thrust Pad Cannon",
 		special: "Changes [RCV], [TND], [EMPTY], [BLOCK] and [BOMB] orbs into matching orbs, amplifies the effect of orbs by 1.75x for 1 turn",
 		specialNotes: "#{orb : 1.75x}"
 	},
 	836: {
-		captain: "Boosts ATK and HP of Knowledge characters by 2x, deals 5 times the damage received in the previous turn in STR damage to all enemies at the end of each turn",
+		captain: "Boosts ATK and HP of Cerebral characters by 2x, deals 5 times the damage received in the previous turn in STR damage to all enemies at the end of each turn",
 		specialName: "Thrust Pad Cannon",
 		special: "Changes [RCV], [TND], [EMPTY], [BLOCK] and [BOMB] orbs into matching orbs, amplifies the effect of orbs by 1.75x for 1 turn",
 		specialNotes: "#{orb : 1.75x}"
@@ -3818,7 +3818,7 @@ window.details = {
 		special: "Deals 5 hits of random STR damage to random enemies, reduces the defense of all enemies by 50% for 2 turns"
 	},
 	850: {
-		captain: "Boosts ATK of Striker and Knowledge characters by 1.5x",
+		captain: "Boosts ATK of Striker and Cerebral characters by 1.5x",
 		specialName: "First-class Assistant of the Passionate Worker",
 		special: "Changes the top right orb into [DEX], the middle right orb into [STR] and the bottom right orb into [QCK], seals himself for 3 turns"
 	},
@@ -3901,9 +3901,9 @@ window.details = {
 		special: "Locks the chain multiplier at 2.5x for 2 turns, delays all enemies for 1 turn"
 	},
 	866: {
-		captain: "Boosts ATK of Knowledge characters by 2x",
+		captain: "Boosts ATK of Cerebral characters by 2x",
 		specialName: "Cien Fleur Wing: The Storm",
-		special: "Boosts ATK of Slasher and Knowledge characters by 1.3x for 2 turns, reduces Bind duration by 2 turns"
+		special: "Boosts ATK of Slasher and Cerebral characters by 1.3x for 2 turns, reduces Bind duration by 2 turns"
 	},
 	867: {
 		captain: "Boosts ATK of all characters by 1.5x after the 12th hit in the chain",
@@ -3982,12 +3982,12 @@ window.details = {
 		specialNotes: "#{orb: 1.5x or 1.75x} #{stages}"
 	},
 	875: {
-		captain: "Boosts ATK of Knowledge and Ambition characters by 2x",
+		captain: "Boosts ATK of Cerebral and Ambition characters by 2x",
 		specialName: "Beto Launcher",
 		special: "Changes the captain's orb into a matching orb, locks all orbs for 1 turn, deals 13x character's ATK in INT damage to all enemies"
 	},
 	876: {
-		captain: "Boosts ATK of Knowledge and Ambition characters by 2.25x, makes [TND] and [RCV] orbs \"beneficial\" to Knowledge and Ambition characters",
+		captain: "Boosts ATK of Cerebral and Ambition characters by 2.25x, makes [TND] and [RCV] orbs \"beneficial\" to Cerebral and Ambition characters",
 		captainNotes: "\"Beneficial\" orbs grant the same ATK boost as matching orbs while retaining their original function.",
 		specialName: "Beto Launcher",
 		special: "Changes the captain's orb into a matching orb, locks all orbs for 1 turn, deals 13x character's ATK in INT damage to all enemies"
@@ -4098,12 +4098,12 @@ window.details = {
 		special: "Recovers 6x character's RCV in HP at the end of each turn for 3 turns"
 	},
 	897: {
-		captain: "Boosts ATK of Knowledge and Ambition characters by 2x",
+		captain: "Boosts ATK of Cerebral and Ambition characters by 2x",
 		specialName: "Ground Death: Thirst",
 		special: "Changes own orb into [STR], randomizes all other orbs, cuts the current HP of all enemies by 10%"
 	},
 	898: {
-		captain: "Boosts ATK and HP of Striker and Knowledge characters by 1.5x",
+		captain: "Boosts ATK and HP of Striker and Cerebral characters by 1.5x",
 		specialName: "Championship Fight: Little Garden Three",
 		special: "Deals 10x character's ATK in QCK damage to all enemies, changes adjacent orbs into [G] orbs",
 		specialNotes: "#{gOrbs}"
@@ -4182,12 +4182,12 @@ window.details = {
 	907: {
 		specialName: "Cien Fleur: Big Tree",
 		special: "Delays all enemies for 1 turn, locks all orbs for 1 turn, deals 5,000 fixed damage to all enemies, reduces crew's HP to 1",
-		captain: "Boosts ATK and RCV of Knowledge characters by 1.5x if HP is below 30% at the start of the turn"
+		captain: "Boosts ATK and RCV of Cerebral characters by 1.5x if HP is below 30% at the start of the turn"
 	},
 	908: {
 		specialName: "Cien Fleur: Big Tree",
 		special: "Delays all enemies for 1 turn, locks all orbs for 1 turn, deals 5,000 fixed damage to all enemies, reduces crew's HP to 1",
-		captain: "Boosts ATK of Knowledge characters by 2.5x and their RCV by 1.75x if HP is below 30% at the start of the turn"
+		captain: "Boosts ATK of Cerebral characters by 2.5x and their RCV by 1.75x if HP is below 30% at the start of the turn"
 	},
 	909: {
 		captain: "Boosts ATK and RCV of PSY characters by 1.5x",
@@ -4241,14 +4241,14 @@ window.details = {
 		special: "Seals himself for 1 turn, changes [BLOCK] orbs into matching orbs, randomly changes opposite orbs into either [STR], [QCK], [DEX], [PSY] or [INT] orbs"
 	},
 	915: {
-		captain: "Boosts ATK and RCV of Knowledge characters by 1.2x",
+		captain: "Boosts ATK and RCV of Cerebral characters by 1.2x",
 		specialName: "Feeling of Mutual Love",
-		special: "Boosts ATK and RCV of Knowledge characters by 1.5x for 1 turn"
+		special: "Boosts ATK and RCV of Cerebral characters by 1.5x for 1 turn"
 	},
 	916: {
-		captain: "Boosts ATK and RCV of Knowledge characters by 1.75x",
+		captain: "Boosts ATK and RCV of Cerebral characters by 1.75x",
 		specialName: "Feeling of Mutual Love",
-		special: "Boosts ATK and RCV of Knowledge characters by 1.5x for 1 turn"
+		special: "Boosts ATK and RCV of Cerebral characters by 1.5x for 1 turn"
 	},
 	917: {
 		captain: "Boosts ATK of Shooter characters by 1.5x",
@@ -4383,14 +4383,14 @@ window.details = {
 		specialNotes: "Increases timing window to hit a Perfect. (Animation remains the same)"
 	},
 	938: {
-		captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of Knowledge characters by 1.5x",
+		captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of Cerebral characters by 1.5x",
 		specialName: "Cyclone Burst",
-		special: "Reduces Bind duration for one character completely. For Striker and Knowledge characters, changes Bad orbs to Matching"
+		special: "Reduces Bind duration for one character completely. For Striker and Cerebral characters, changes Bad orbs to Matching"
 	},
 	939: {
-		captain: "Reduces cooldown of all specials by 3 turns at the start of the fight, boosts ATK of Knowledge characters by 2x",
+		captain: "Reduces cooldown of all specials by 3 turns at the start of the fight, boosts ATK of Cerebral characters by 2x",
 		specialName: "Cyclone Burst",
-		special: "Reduces Bind duration for one character completely. For Striker and Knowledge characters, changes Bad orbs to Matching"
+		special: "Reduces Bind duration for one character completely. For Striker and Cerebral characters, changes Bad orbs to Matching"
 	},
 	940: {
 		captain: "Boosts ATK and HP of [DEX] Characters by 1.5x",
@@ -4676,15 +4676,15 @@ window.details = {
 	},
 	994: {
 		captain: "Boosts amount of beli received by 2x",
-		special: "Reduces Special Cooldown of Knowledge and Fighter Units, and shows the stats of enemies",
+		special: "Reduces Special Cooldown of Cerebral and Fighter Units, and shows the stats of enemies",
 		specialName: "Peeping Mind",
 		special: [
 			{
-				"description": "Reduces Special Cooldown of Knowledge and Fighters by 1 turn. Shows Enemy Attack, Defense, Combo Hits, Current / Total HP, Attack Interval, 'Specials based on turns?', and 'Effect after Death?'",
+				"description": "Reduces Special Cooldown of Cerebral and Fighters by 1 turn. Shows Enemy Attack, Defense, Combo Hits, Current / Total HP, Attack Interval, 'Specials based on turns?', and 'Effect after Death?'",
 				"cooldown": 13
 			},
 			{
-				"description": "Reduces Special Cooldown of Knowledge and Fighters by 2 turn. Shows Enemy Attack, Defense, Combo Hits, Current / Total HP, Attack Interval, 'Specials based on turns?', and 'Effect after Death?'",
+				"description": "Reduces Special Cooldown of Cerebral and Fighters by 2 turn. Shows Enemy Attack, Defense, Combo Hits, Current / Total HP, Attack Interval, 'Specials based on turns?', and 'Effect after Death?'",
 				"cooldown": 20
 			}
 		],
@@ -4692,15 +4692,15 @@ window.details = {
 	},
 	995:{
 		captain: "Boosts amount of beli received by 3x",
-		special: "Reduces Special Cooldown of Knowledge and Fighter Units, and shows the stats of enemies",
+		special: "Reduces Special Cooldown of Cerebral and Fighter Units, and shows the stats of enemies",
 		specialName: "Peeping Mind",
 		special: [
 			{
-				"description": "Reduces Special Cooldown of Knowledge and Fighters by 1 turn. Shows Enemy Attack, Defense, Combo Hits, Current / Total HP, Attack Interval, 'Specials based on turns?', and 'Effect after Death?'",
+				"description": "Reduces Special Cooldown of Cerebral and Fighters by 1 turn. Shows Enemy Attack, Defense, Combo Hits, Current / Total HP, Attack Interval, 'Specials based on turns?', and 'Effect after Death?'",
 				"cooldown": 13
 			},
 			{
-				"description": "Reduces Special Cooldown of Knowledge and Fighters by 2 turn. Shows Enemy Attack, Defense, Combo Hits, Current / Total HP, Attack Interval, 'Specials based on turns?', and 'Effect after Death?'",
+				"description": "Reduces Special Cooldown of Cerebral and Fighters by 2 turn. Shows Enemy Attack, Defense, Combo Hits, Current / Total HP, Attack Interval, 'Specials based on turns?', and 'Effect after Death?'",
 				"cooldown": 20
 			}
 		],

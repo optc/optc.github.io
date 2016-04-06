@@ -531,7 +531,7 @@ window.specials = {
 		type: "class"
 	},
 	719: {
-		atk: function(p) { return p.unit.class.has("Knowledge") ? window.specials[719].multiplier : 1; },
+		atk: function(p) { return p.unit.class.has("Cerebral") ? window.specials[719].multiplier : 1; },
 		type: "class",
 		onActivation: function(p) {
 			var n = (p.percHP <= 30 ? 2 : 1.5);
@@ -543,7 +543,7 @@ window.specials = {
 		}
 	},
 	720: {
-		atk: function(p) { return p.unit.class.has("Knowledge") ? window.specials[720].multiplier : 1; },
+		atk: function(p) { return p.unit.class.has("Cerebral") ? window.specials[720].multiplier : 1; },
 		type: "class",
 		onActivation: function(p) {
 			var n = (p.percHP <= 30 ? 2 : 1.5);
@@ -615,7 +615,7 @@ window.specials = {
 		warning: "Selected special (%name%) assumes that the enemy has been delayed."
 	},
 	771: {
-		atk: function(p) { return p.unit.class.has("Knowledge") ? 1.75 : 1; },
+		atk: function(p) { return p.unit.class.has("Cerebral") ? 1.75 : 1; },
 		type: "type"
 	},
 	780: {
@@ -860,7 +860,7 @@ window.specials = {
 	},
 	866: {
 		atk: function(p) {
-			return p.unit.class.has("Slasher") || p.unit.class.has("Knowledge") ? 1.3 : 1;
+			return p.unit.class.has("Slasher") || p.unit.class.has("Cerebral") ? 1.3 : 1;
 		},
 		type: "class"
 	},
@@ -1050,13 +1050,13 @@ window.specials = {
 		}
 	},
 	915: {
-		atk: function(p) { return p.unit.class.has("Knowledge") ? 1.5 : 1; },
-		rcv: function(p) { return p.unit.class.has("Knowledge") ? 1.5 : 1; },
+		atk: function(p) { return p.unit.class.has("Cerebral") ? 1.5 : 1; },
+		rcv: function(p) { return p.unit.class.has("Cerebral") ? 1.5 : 1; },
 		type: "class"
 	},
 	916: {
-		atk: function(p) { return p.unit.class.has("Knowledge") ? 1.5 : 1; },
-		rcv: function(p) { return p.unit.class.has("Knowledge") ? 1.5 : 1; },
+		atk: function(p) { return p.unit.class.has("Cerebral") ? 1.5 : 1; },
+		rcv: function(p) { return p.unit.class.has("Cerebral") ? 1.5 : 1; },
 		type: "class"
 	},
     921: {
