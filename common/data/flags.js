@@ -509,6 +509,8 @@ window.flags = {
 	512: { global: 1, rr: 1, rro: 1, lrr: 1, promo: 1 },
 	513: { global: 1, rr: 1, rro: 1, lrr: 1, promo: 1 },
 	514: { rr: 1, rro: 1, lrr: 1 },
+    517: { global: 1 },
+    518: { global: 1 },
 	519: { rr: 1, rro: 1 },
 	520: { rr: 1, rro: 1 },
 	521: { rr: 1, rro: 1 },
