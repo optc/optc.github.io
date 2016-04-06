@@ -625,7 +625,7 @@ window.drops = {
             name: 'Smoker\'s Great Pursuit',
             thumb: 268,
             global: true,
-            challenge: 'Total Damage dealt to enemies',
+            challenge: 'Cumulative Damage dealt to enemies in a single run',
             challengeData: [['600,000 Damage','1x Green Elder'],['1,400,000 Damage','1y Rainbow Gem & 1x HP Cotton Candy'],['3,000,000 Damage','2x Rainbow Gems, 1x Forbidden Tome']],
             Expert: [ 67, 69, 86, 97, 112, -219, -212, -206, -204, -73, -52, -50 ],
             Elite: [ 67, 69, 86, 97, 112, -219, -212, -206, -204, -73, -52, -50 ]
@@ -723,7 +723,7 @@ window.drops = {
             thumb: 424,
             global: true,
             condition: 'You can only get STR, DEX, INT and PSY Orbs',
-            challenge: 'Total Damage dealt to enemies',
+            challenge: 'Cumulative Damage dealt to enemies in a single run',
             challengeData: [['500,000 Damage','1x Black Elder'],['1,500,000 Damage','1x ATK Cotton Candy'],['3,000,000 Damage','3x Rainbow Gems']],
             Expert: [ 423, 425, -425, -327, -310, -223, -219, -214, -202 ],
             Elite: [ 423, 425, -425, -327, -310, -223, -219, -214, -202 ]
@@ -859,6 +859,8 @@ window.drops = {
             name: "Knight of the Sky Gan Fall",
             thumb: 713,
             condition: 'Every class but Free Spirit is weakend',
+			challenge: 'Cumulative Damage dealt to enemies in a single run',
+            challengeData: [['600,000','1x Blue Elder'],['2,000,000','1x RCV Cotton Candy, 1x Rainbow Gem'],['5,000,000','1x Anti-Lock Forbidden Tome, 2x Rainbow Gems']],
             Expert: [ 712, 714, 715, -716, -546, -541, -520 ],
             Elite: [ 712, 714, 715, -716, -546, -541, -520 ]
         },
