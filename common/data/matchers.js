@@ -11,7 +11,7 @@ window.matchers = [
     {
         name: 'Class-boosting captains',
         target: 'captain',
-        matcher: /Boosts (ATK|HP|RCV|ATK and HP|ATK and RCV|HP and RCV|ATK, HP and RCV) of[^,]+(Slasher|Striker|Fighter|Shooter|Free Spirit|Knowledge|Tough|Ambition)/i
+        matcher: /Boosts (ATK|HP|RCV|ATK and HP|ATK and RCV|HP and RCV|ATK, HP and RCV) of[^,]+(Slasher|Striker|Fighter|Shooter|Free Spirit|Cerebral|Tough|Ambition)/i
     },
 
     {
@@ -134,7 +134,7 @@ window.matchers = [
     {
         name: 'Class-boosting specials',
         target: 'special',
-        matcher: /Boosts (ATK|HP|RCV|ATK and HP|ATK and RCV|HP and RCV|ATK, HP and RCV) of[^,]+(Slasher|Striker|Fighter|Shooter|Free Spirit|Knowledge|Tough|Ambition)/i
+        matcher: /Boosts (ATK|HP|RCV|ATK and HP|ATK and RCV|HP and RCV|ATK, HP and RCV) of[^,]+(Slasher|Striker|Fighter|Shooter|Free Spirit|Cerebral|Tough|Ambition)/i
     },
 
     {
