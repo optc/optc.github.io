@@ -858,11 +858,11 @@ window.drops = {
         {
             name: "Knight of the Sky Gan Fall",
             thumb: 713,
-            condition: 'Every class but Free Spirit is weakend',
+            condition: '30: Non-Free Spirit, Evolver, or Booster class characters are weakend; 15: Striker and Shooter class characters are weakened',
 			challenge: 'Cumulative Damage dealt to enemies in a single run',
             challengeData: [['600,000','1x Blue Elder'],['2,000,000','1x RCV Cotton Candy, 1x Rainbow Gem'],['5,000,000','1x Anti-Lock Forbidden Tome, 2x Rainbow Gems']],
-            Expert: [ 712, 714, 715, -716, -546, -541, -520 ],
-            Elite: [ 712, 714, 715, -716, -546, -541, -520 ]
+            Expert: [ 712, 714, 715, -716, -546, -541, -520, -400, -202, -363 ],
+            Elite: [ 712, 714, 715, -716, -546, -541, -520, -400, -202, -363 ]
         },
 
         {
