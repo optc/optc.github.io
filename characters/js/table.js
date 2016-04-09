@@ -68,6 +68,8 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
         if (!tableData.parameters) return true;
         var id = parseInt(data[0],10), unit = window.units[id - 1];
         var flags = window.flags[unit.number + 1] || { };
+        var farmableSocket = CharUtils.hasFarmableSocket(unit.number);
+        
         /* * * * * Query filters * * * * */
         // filter by matchers
         for (var matcher in tableData.parameters.matchers) {
@@ -157,6 +159,8 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
         }
         // filter by rr pool
         if ((filters.rr === 'Not in RR pool' && flags.rr) || (filters.rr === 'In RR pool' && !flags.rr)) return false;
+        //filter by farmable Sockets
+        if ((filters.socket === 'No Farmable Sockets' && farmableSocket) || (filters.socket === 'Farmable Sockets' && !farmableSocket)) return false;
         // filter by active matchers
         if (filters.custom.length > 0 && !window.details.hasOwnProperty(id)) return false;
         for (var i=0;i<filters.custom.length;++i) {

@@ -264,6 +264,20 @@ CharUtils.isClassBooster = function(target, id, clazz) {
     classCache[target][clazz][id] = result;
     return result;
 };
+    
+CharUtils.hasFarmableSocket = function(id) {
+    var farmableSocket = false;
+    var ownFamily = window.families[id];
+    
+    window.families.forEach(function(family,n){
+       if (ownFamily == family) {
+           var famId = n+1;
+           if(CharUtils.isFarmable(famId) || CharUtils.isFarmable(Utils.searchBaseForms(famId))) farmableSocket = true;
+       }
+    });
+    
+    return farmableSocket;
+}
 
 /******************
  * Initialization *
