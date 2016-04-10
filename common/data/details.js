@@ -1755,13 +1755,13 @@ window.details = {
 		special: "Recovers 3x character's RCV in HP, reduces damage received by 80% for 1 turn, deals 1,000 fixed damage to all enemies at the end of the following turn",
 		specialName: "Negative Horo \"Sweet\"",
 		specialNotes: "#{fixed}",
-		captain: "Boosts RCV of all characters by 3x if HP is below 30% at the start of the turn"
+		captain: "Boosts RCV of [DEX] characters by 3x if HP is below 30% at the start of the turn"
 	},
 	438: {
 		special: "Recovers 3x character's RCV in HP, reduces damage received by 80% for 1 turn, deals 1,000 fixed damage to all enemies at the end of the following turn",
 		specialName: "Negative Horo \"Sweet\"",
 		specialNotes: "#{fixed}",
-		captain: "Boosts RCV of all characters by 5x if HP is below 30% at the start of the turn"
+		captain: "Boosts RCV of [DEX] characters by 5x if HP is below 30% at the start of the turn"
 	},
 	439: {
 		special: "Changes adjacent orbs into [RCV] and randomizes every other orb",

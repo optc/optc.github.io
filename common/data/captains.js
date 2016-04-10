@@ -738,10 +738,10 @@ window.captains = {
 		hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
 	},
 	437: {
-		rcv: function(p) { return p.percHP <= 30.0 ? 3 : 1; }
+		rcv: function(p) { return p.unit.type == "DEX" && p.percHP <= 30.0 ? 3 : 1; }
 	},
 	438: {
-		rcv: function(p) { return p.percHP <= 30.0 ? 5 : 1; }
+		rcv: function(p) { return p.unit.type == "DEX" && p.percHP <= 30.0 ? 5 : 1; }
 	},
 	444: {
 		atk: function(p) {
