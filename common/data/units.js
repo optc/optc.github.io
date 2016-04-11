@@ -1004,5 +1004,9 @@ window.units = [
 	[ "Martial Artist Bepo, Heart Pirates", "STR", ["Figher", "Tough"], 4, 20, 4, 2, 99, 3000000, 921, 461, 162, 1803, 1054, 307, 1],
 	[ "Sachi and Penguin, Heart Pirates", "QCK", ["Figher", "Free Spirit"], 4, 15, 5, 2, 70, 1066998, 92, 37, 36, 1059, 701, 231, 1],
 	[ "Jean Bart", "STR", ["Tough", "Fighter"], 3, 12, 5, 1, 50, 392109, 194, 55, 13, 1404, 541, 96, 1],
-	[ "Jean Bart, Heart Pirates", "STR", ["Tough", "Fighter"], 4, 20, 4, 2, 99, 3000000, 1337, 488, 44, 2614, 1069, 153, 1]
+	[ "Jean Bart, Heart Pirates", "STR", ["Tough", "Fighter"], 4, 20, 4, 2, 99, 3000000, 1337, 488, 44, 2614, 1069, 153, 1],
+    [ "Monet","QCK",["Free Spirit","Cerebral"], 4, 13, null, null, null, null, null, null, null, null, null, null, null],
+    [ "Monet Evolution","QCK",["Free Spirit","Cerebral"], 5, 20, null, null, null, null, null, null, null, null, null, null, null]
 ];
+// [ "Name", "Type", ["Class1","Class2"], null, null, null, null, null, null, null, null, null, null, null, null, null]
+// or [ "Name", "Type", "Class1", null, null, null, null, null, null, null, null, null, null, null, null, null]
