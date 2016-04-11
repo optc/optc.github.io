@@ -768,7 +768,7 @@ window.drops = {
         {
             name: 'Jailer Domino\' Special Guard',
             thumb: 538,
-            condition: 'Striker, Slasher and Fighter are weakend',
+            condition: '30: Non-Shooter, Evolver, or Booster class characters are weakend; 15: Fighter and Slasher class characters are weakened',
             Expert: [ 537, 539, 540, -539, -428, -416, -365, -257, -59 ],
             Elite: [ 537, 539, 540, -539, -428, -416, -365, -257, -59 ]
         },
@@ -777,7 +777,7 @@ window.drops = {
             name: 'Chief Jailer Sadie: Cruel and Unusual',
             thumb: 550,
 			global: true,
-            condition: 'Shooter, Striker and Fighter are weakend',
+            condition: '30: Non-Fighter, Evolver, or Booster class characters are weakend; 15: Striker and Shooter class characters are weakened',
             Expert: [ 549, 551, 552, -552, -551, -432, -426, -408, -329, -308, -255 ],
             Elite: [ 549, 551, 552, -552, -551, -432, -426, -408, -329, -308, -255 ]
         },
