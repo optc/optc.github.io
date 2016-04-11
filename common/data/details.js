@@ -4574,7 +4574,7 @@ window.details = {
 		specialNotes: "#{zombie}"
 	},
 	977:{
-		captain: "Boosts ATK of Shooter Characters by 2x",
+		captain: "Boosts ATK of Shooter characters by 2x",
 		specialName: "Yata no Kagami (Sacred Mirror)",
 		special: [
 			{
@@ -4589,7 +4589,7 @@ window.details = {
 		specialNotes: "#{stages}"
 	},
 	978:{
-		captain: "Reduces cooldown of Shooter specials by 2 turns at the start of the fight, boosts ATK of Shooter Characters by 2.25x and Health by 1.5x",
+		captain: "Reduces cooldown of Shooter specials by 2 turns at the start of the fight, boosts ATK of Shooter characters by 2.25x and boosts HP of Shooter characters by 1.5x",
 		specialName: "Yata no Kagami (Sacred Mirror)",
 		special: [
 			{
