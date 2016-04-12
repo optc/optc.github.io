@@ -2410,4 +2410,10 @@ window.captains = {
 		atk: function(p) {return p.unit.class.has("Tough") ? 1.5 : 1; },
 		hp: function(p) {return p.unit.class.has("Tough") ? 1.5 : 1; }
 	},
+	1007: {
+		atk: function(p) { return p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral") ? 1.5 : 1; }
+	},
+	1008: {
+		atk: function(p) { return p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral") ? 2 : 1; }
+	}
 };

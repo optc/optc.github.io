@@ -826,8 +826,8 @@ window.units = [
 	[ "General Zombie Herculean Shadow", "STR", [ "Slasher", "Tough" ], 3, 20, 6, 1, 70, 1066998, 99, 59, 29, 1702, 813, 0, 1 ],
 	[ "General Zombie Peculiar Shadow", "DEX", [ "Slasher", "Tough" ], 3, 20, 6, 1, 70, 1066998, 102, 57, 29, 1727, 802, 0, 1 ],
 	[ "General Zombie Swift Shadow", "QCK", [ "Slasher", "Tough" ], 3, 20, 6, 1, 70, 1066998, 113, 54, 29, 1768, 789, 0, 1 ],
-	["Trafalgar Law, the Boy from the White City","PSY",["Slasher","Ambition"], 4, 10, 4, 3, 35, null, 442, 60, 0, 455, 497, 222, null],
-	["Trafalgar Law, the Boy Saved by Fate","PSY",["Slasher","Ambition"], 5, 18, 5, 3, 70, null, 442, 424, 149, 696, 762, 390, null],
+	["Trafalgar Law, the Boy from the White City","PSY",["Slasher","Ambition"], 4, 10, 4, 3, 35, 90778, 442, 60, 0, 455, 497, 222, 1],
+	["Trafalgar Law, the Boy Saved by Fate","PSY",["Slasher","Ambition"], 5, 18, 5, 3, 70, 1066998, 442, 424, 149, 696, 762, 390, 1],
 	[ "Basil Hawkins, Captain of the Hawkins Pirates", "DEX", [ "Cerebral", "Striker" ], 4, 25, 6, 2, 70, 1066998, 639, 298, 69, 1219, 745, 201, 1 ],
 	[ "Basil Hawkins the Magician, Captain of the Hawkins Pirates", "DEX", [ "Cerebral", "Striker" ], 5, 40, 4, 3, 99, 4000000, 1157, 690, 147, 2239, 1278, 347, 1 ],
 	[ "Wyper, Warrior of Shandia", "STR", [ "Shooter", "Free Spirit" ], 4, 18, 6, 1, 50, 392109, 229, 151, 10, 1198, 611, 33, 1 ],
@@ -1005,8 +1005,8 @@ window.units = [
 	[ "Sachi and Penguin, Heart Pirates", "QCK", ["Figher", "Free Spirit"], 4, 15, 5, 2, 70, 1066998, 92, 37, 36, 1059, 701, 231, 1],
 	[ "Jean Bart", "STR", ["Tough", "Fighter"], 3, 12, 5, 1, 50, 392109, 194, 55, 13, 1404, 541, 96, 1],
 	[ "Jean Bart, Heart Pirates", "STR", ["Tough", "Fighter"], 4, 20, 4, 2, 99, 3000000, 1337, 488, 44, 2614, 1069, 153, 1],
-    [ "Monet","QCK",["Free Spirit","Cerebral"], 4, 13, null, null, null, null, null, null, null, null, null, null, null],
-    [ "Monet Evolution","QCK",["Free Spirit","Cerebral"], 5, 20, null, null, null, null, null, null, null, null, null, null, null]
+    [ "Monet Cold Season Cherry Blossoms","QCK",["Free Spirit","Cerebral"], 4, 13, 6, 2, 50, null, 67, 37, 55, 884, 428, 204, null],
+    [ "Monet Coldest Season Cherry Blossoms","QCK",["Free Spirit","Cerebral"], 5, 20, 6, 3, 99, null, 831, 366, 162, 1660, 869, 384, null]
 ];
 // [ "Name", "Type", ["Class1","Class2"], null, null, null, null, null, null, null, null, null, null, null, null, null]
 // or [ "Name", "Type", "Class1", null, null, null, null, null, null, null, null, null, null, null, null, null]

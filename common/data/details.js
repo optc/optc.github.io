@@ -4785,5 +4785,15 @@ window.details = {
 		captain: "Boosts ATK and HP of Tough characters by 1.5x",
 		specialName: "Rush to Freedom",
 		special: "Boosts own ATK by 1.75x for 1 turn"
+	},
+	1007: {
+		captain: "Boosts ATK of Cerebral and Free Spirit characters by 1.5x",
+		specialName: "Cherry Blossom Storm: Spring Pattern",
+		special: "Changes adjacent orbs into [RCV] and recovers 3,000 HP"
+	},
+	1008: {
+		captain: "Boosts ATK of Cerebral and Free Spirit characters by 2x. Recovers 3x character's RCV in HP at the end of each turn",
+		specialName: "Cherry Blossom Storm: Spring Pattern",
+		special: "Changes adjacent orbs into [RCV] and recovers 3,000 HP"
 	}
 };

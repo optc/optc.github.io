@@ -218,5 +218,9 @@ window.zombies = {
 	965: {//Saint Charloss
 		type: 'healer',
 		amount: 500 
+	},
+	1008: {//Sakura Monet
+		type: 'healer',
+        multiplier: 3
 	}
 };
