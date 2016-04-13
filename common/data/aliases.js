@@ -1006,5 +1006,6 @@ window.aliases = {
 	1005: ['',''],
 	1006: ['',''],
 	1007: ['','','Sakura Monet'],
-	1008: ['','','Sakura Monet']
+	1008: ['','','Sakura Monet'],
+	1009: ['','', 'Afro Luffy', 'Afroluffy' ],
 };

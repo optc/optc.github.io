@@ -2415,5 +2415,12 @@ window.captains = {
 	},
 	1008: {
 		atk: function(p) { return p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral") ? 2 : 1; }
+	},
+	1009: {
+		atk: function(p) {
+			return p.unit.class.has("Fighter") && p.unit.type == "STR" ? 2.25 :
+				p.unit.type == "STR" || p.unit.class.has("Fighter") ? 1.5 :
+				1;
+		}
 	}
 };

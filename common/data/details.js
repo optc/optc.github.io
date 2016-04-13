@@ -4795,5 +4795,12 @@ window.details = {
 		captain: "Boosts ATK of Cerebral and Free Spirit characters by 2x. Recovers 3x character's RCV in HP at the end of each turn",
 		specialName: "Cherry Blossom Storm: Spring Pattern",
 		special: "Changes adjacent orbs into [RCV] and recovers 3,000 HP"
+	},
+	1009: {
+		special: "Changes [BLOCK] orbs into [STR], deals 20x character's ATK in STR damage to one enemy",
+		specialName: "Gum-Gum Flail",
+		captain: "Boosts ATK of [STR] and Fighter characters by 1.5x, reduces cooldown of all specials by 1 turn at the start of the fight",
+		captainNotes: "The bonus is cumulative. STR Fighter characters get a 2.25x bonus.",
+		specialNotes: "This Luffy is from a code from Pre-ordering One Piece Kizuna Boost Card Battle"
 	}
 };
