@@ -4800,7 +4800,6 @@ window.details = {
 		special: "Changes [BLOCK] orbs into [STR], deals 20x character's ATK in STR damage to one enemy",
 		specialName: "Gum-Gum Flail",
 		captain: "Boosts ATK of [STR] and Fighter characters by 1.5x, reduces cooldown of all specials by 1 turn at the start of the fight",
-		captainNotes: "The bonus is cumulative. STR Fighter characters get a 2.25x bonus.",
-		specialNotes: "This Luffy is from a code from Pre-ordering One Piece Kizuna Boost Card Battle"
+		captainNotes: "The bonus is cumulative. STR Fighter characters get a 2.25x bonus."
 	}
 };
