@@ -402,6 +402,7 @@ window.drops = {
             name: "Enies Lobby: Tower of Justice - Gates of Justice",
             shortName: "Enies Lobby 2",
             thumb: 737,
+            global: true,
             completion: 'Ship: Thousand Sunny - 5x Rainbow Gems',
             "Completion Units": [739],
             "01": [ 110 ],
@@ -768,6 +769,7 @@ window.drops = {
         {
             name: 'Jailer Domino\' Special Guard',
             thumb: 538,
+            global: true,
             condition: '30: Non-Shooter, Evolver, or Booster class characters are weakend; 15: Fighter and Slasher class characters are weakened',
             Expert: [ 537, 539, 540, -539, -428, -416, -365, -257, -59 ],
             Elite: [ 537, 539, 540, -539, -428, -416, -365, -257, -59 ]
