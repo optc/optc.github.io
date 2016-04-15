@@ -991,12 +991,12 @@ window.captains = {
 	543: {
 		atk: function(p) { return p.unit.class.has("Shooter") ? 1.5 : 1; },
 		hp: function(p) { return p.unit.class.has("Shooter") ? 1.5 : 1; },
-		rcv: function(p) { return 0; }
+		rcv: function(p) { return p.unit.class.has("Shooter") ? 0 : 1; }
 	},
 	544: {
 		atk: function(p) { return p.unit.class.has("Shooter") ? 2.25 : 1; },
 		hp: function(p) { return p.unit.class.has("Shooter") ? 1.5 : 1; },
-		rcv: function(p) { return 0; }
+		rcv: function(p) { return p.unit.class.has("Shooter") ? 0 : 1; }
 	},
 	545: {
 		atk: function(p) { return p.unit.type == "PSY" ? 2 : 1; }

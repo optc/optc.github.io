@@ -1007,7 +1007,17 @@ window.units = [
 	[ "Jean Bart, Heart Pirates", "STR", ["Tough", "Fighter"], 4, 20, 4, 2, 99, 3000000, 1337, 488, 44, 2614, 1069, 153, 1],
     [ "Monet Cold Season Cherry Blossoms","QCK",["Free Spirit","Cerebral"], 4, 13, 6, 2, 50, null, 67, 37, 55, 884, 428, 204, null],
     [ "Monet Coldest Season Cherry Blossoms","QCK",["Free Spirit","Cerebral"], 5, 20, 6, 3, 99, null, 831, 366, 162, 1660, 869, 384, null],
-	[ "Kizuna BOOST Luffy", "STR", ["Fighter","Tough"], 4, 20, 6, 2, 99, 3000000, 465, 232, 36, 1978, 1170, 220, null]
+	[ "Kizuna BOOST Luffy", "STR", ["Fighter","Tough"], 4, 20, 6, 2, 99, 3000000, 465, 232, 36, 1978, 1170, 220, null],
+    [],
+    [],
+    [],
+    [],
+    [],
+	[ "Colosseum Capone", "INT", ["Shooter","Ambition"], 4, 25, null, null, null, null, null, null, null, null, null, null, null],
+	[ "Colosseum Capone Evolution", "INT", ["Shooter","Ambition"], 5, 40, null, null, null, null, null, null, null, null, null, null, null],
+	[ "Colosseum Unkown", "PSY", ["Slasher","Ambition"], 4, 18, null, null, null, null, null, null, null, null, null, null, null],
+	[ "Colosseum Unkown Evolution", "PSY", ["Slasher","Tough"], 5, 30, null, null, null, null, null, null, null, null, null, null, null],
+	[ "Colosseum Kaku", "DEX", "Slasher", 4, 20, null, null, null, null, null, null, null, null, null, null, null]
 ];
 // [ "Name", "Type", ["Class1","Class2"], null, null, null, null, null, null, null, null, null, null, null, null, null]
 // or [ "Name", "Type", "Class1", null, null, null, null, null, null, null, null, null, null, null, null, null]

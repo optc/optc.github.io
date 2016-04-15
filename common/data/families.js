@@ -1007,5 +1007,15 @@ window.families = [
 	"Jean Bart",
 	"Monet",
 	"Monet",
-	"Monkey D. Luffy"
+	"Monkey D. Luffy",
+    null,
+    null,
+    null,
+    null,
+    null,
+    "Capone Bege",
+    "Capone Bege",
+    null,
+    null,
+    "Kaku"
 ];
