@@ -1008,14 +1008,14 @@ window.families = [
 	"Monet",
 	"Monet",
 	"Monkey D. Luffy",
-    null,
-    null,
-    null,
-    null,
-    null,
+    "Count Butler",
+    "Count Butler",
+    "President Heaby",
+    "General Hotdog",
+    "Tony Tony Chopper",
     "Capone Bege",
     "Capone Bege",
-    null,
-    null,
-    "Kaku"
+    "Brownbeard",
+    "Brownbeard",
+    "Lulu"
 ];
