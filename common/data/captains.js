@@ -2436,5 +2436,8 @@ window.captains = {
 					return 1.5;
 				} return 1;
 		}
+	},
+	1014:{
+		atk: function(p) {return p.unit.class.has("Tough") ? 2 : 1; }
 	}
 };

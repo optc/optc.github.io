@@ -1179,4 +1179,17 @@ window.specials = {
 		atk: function(p) { return p.slot == p.sourceSlot ? 1.75 : 1; },
 		type: "type"
 	},
+	1010: {
+		atk: function(p) { return p.slot == p.sourceSlot ? 1.3 : 1; },
+		type: "type"
+	},
+	1011: {
+		atk: function(p) { return p.slot == p.sourceSlot ? 1.3 : 1; },
+		type: "type"
+	},
+	1013: {
+		atk: function(p) { return 1.2; },
+		type: "condition",
+		warning: "Selected special (%name%) assumes that the enemy has been delayed."
+	}
 };
