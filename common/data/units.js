@@ -1009,7 +1009,7 @@ window.units = [
     [ "Monet Coldest Season Cherry Blossoms","QCK",["Free Spirit","Cerebral"], 5, 20, 6, 3, 99, null, 831, 366, 162, 1660, 869, 384, null],
 	[ "Kizuna BOOST Luffy", "STR", ["Fighter","Tough"], 4, 20, 6, 2, 99, 3000000, 465, 232, 36, 1978, 1170, 220, null],
     [ "Count Butler", "INT", ["Ambition","Cerebral"], 3, 12, 4, 1, 50, null, 103, 25, 41, 1172, 377, 220, null ],
-    [ "Count Butler Evolution", "INT", ["Ambition","Cerebral"], 4, 20, 5, 2, 99, null, 1175, 606, 50, 2152, 1100, 220, null ],
+    [ "Count Butler Evolution", "INT", ["Ambition","Tough"], 4, 20, 5, 2, 99, null, 1175, 606, 50, 2152, 1100, 220, null ],
     [ "President Heaby", "QCK", ["Slasher","Ambition"], 3, 15, 6, 1, 70, null, 118, 78, 32, null, null, null, null ],
     [ "General Hotdog", "DEX", ["Fighter","Ambition"], 3, 15, 4, 1, 70, null, 105, 86, 24, null, null, null, null ],
     [ "Tony Tony Chopper, Animal King", "PSY", ["Fighter","Tough"], 4, 16, 4, 2, 70, null, 63, 40, 44, null, null, null, null ],
