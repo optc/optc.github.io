@@ -2422,5 +2422,18 @@ window.captains = {
 				p.unit.type == "STR" || p.unit.class.has("Fighter") ? 1.5 :
 				1;
 		}
+	},
+	1010:{
+		atk: function(p) {return p.unit.class.has("Ambition") ? 1.5 : 1; }
+	},
+	1011:{
+		atk: function(p) {
+			return p.unit.class.has("Ambition") && p.unit.class.has("Tough") ? 2.625 :
+				if (p.unit.class.has("Ambition")){
+					return 1.75;
+				} else if (p.unit.class.has("Tough")){
+					return 1.5;
+				} :	1;
+		}
 	}
 };

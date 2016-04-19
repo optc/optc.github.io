@@ -4801,5 +4801,29 @@ window.details = {
 		specialName: "Gum-Gum Flail",
 		captain: "Boosts ATK of [STR] and Fighter characters by 1.5x, reduces cooldown of all specials by 1 turn at the start of the fight",
 		captainNotes: "The bonus is cumulative. STR Fighter characters get a 2.25x bonus."
+	},
+	1010:{
+		captain: "Boosts ATK of Ambition characters by 1.5x",
+		special: "Boosts own ATK by 1.3x for 5 turns, reduces damage received by 20% for 5 turns, deals [INT] damage to one enemy",
+		specialName: "Evil Beast Horn Pierce"
+	},
+	1011:{
+		captain: "Boosts ATK of Ambition characters by 1.75x, and boosts ATK of Tough characters by 1.5x",
+		captainNotes: "The bonus is cumulative. Ambition Tough characters get a 2.625x bonus.",
+		special: "Boosts own ATK by 1.3x for 5 turns, reduces damage received by 20% for 5 turns, deals [INT] damage to one enemy",
+		specialName: "Evil Beast Horn Pierce"
+	},
+	1012: {
+		special: "Changes the orbs in the left column into [RCV], [QCK] and [DEX], binds himself for 2 turns",
+		specialName "Phantom Snake Sword"
+	},
+	1013: {
+		special: "Boosts ATK against delayed enemies by 1.2x for 1 turns",
+		specialName "Iron Chain of Bondage"
+	},
+	1014: {
+		special: "Binds himself for 1 turn and makes Perfects easier to hit for 2 turns",
+		specialName "Rouse the Scapegoat",
+		captain: "Boosts ATK of Tough characters by 2x, and Recovers 2x character's RCV in HP at the end of each turn"
 	}
 };
