@@ -4804,26 +4804,26 @@ window.details = {
 	},
 	1010:{
 		captain: "Boosts ATK of Ambition characters by 1.5x",
-		special: "Boosts own ATK by 1.3x for 5 turns, reduces damage received by 20% for 5 turns, deals [INT] damage to one enemy",
-		specialName: "Evil Beast Horn Pierce"
+		special: "Boosts own ATK by 1.3x for 5 turns, reduces damage received by 20% for 5 turns, deals 13x character's ATK as [INT] damage to one enemy",
+		specialName: "Evil Beast's Horn Pierce"
 	},
 	1011:{
 		captain: "Boosts ATK of Ambition characters by 1.75x, and boosts ATK of Tough characters by 1.5x",
 		captainNotes: "The bonus is cumulative. Ambition Tough characters get a 2.625x bonus.",
-		special: "Boosts own ATK by 1.3x for 5 turns, reduces damage received by 20% for 5 turns, deals [INT] damage to one enemy",
-		specialName: "Evil Beast Horn Pierce"
+		special: "Boosts own ATK by 1.3x for 5 turns, reduces damage received by 20% for 5 turns, deals 13x character's ATK as [INT] damage to one enemy",
+		specialName: "Evil Beast's Horn Pierce"
 	},
 	1012: {
 		specialName: "Phantom Snake Sword",
 		special: "Changes the orbs in the left column into [RCV], [QCK] and [DEX], binds himself for 2 turns"
 	},
 	1013: {
-		specialName: "Iron Chain of Bondage",
+		specialName: "Binding Iron Chain",
 		special: "Boosts ATK against delayed enemies by 1.2x for 1 turns"
 	},
 	1014: {
 		special: "Binds himself for 1 turn and makes Perfects easier to hit for 2 turns",
-		specialName: "Rouse the Scapegoat",
+		specialName: "Scapegoat Substitute",
 		captain: "Boosts ATK of Tough characters by 2x, and Recovers 2x character's RCV in HP at the end of each turn"
 	}
 };
