@@ -222,5 +222,9 @@ window.zombies = {
 	1008: {//Sakura Monet
 		type: 'healer',
         multiplier: 3
+	},
+	1014: {//Tony Tony Chopper, Animal King
+		type: 'healer',
+        multiplier: 2
 	}
 };

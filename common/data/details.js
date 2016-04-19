@@ -4814,12 +4814,12 @@ window.details = {
 		specialName: "Evil Beast Horn Pierce"
 	},
 	1012: {
-		special: "Changes the orbs in the left column into [RCV], [QCK] and [DEX], binds himself for 2 turns",
-		specialName "Phantom Snake Sword"
+		specialName "Phantom Snake Sword",
+		special: "Changes the orbs in the left column into [RCV], [QCK] and [DEX], binds himself for 2 turns"
 	},
 	1013: {
-		special: "Boosts ATK against delayed enemies by 1.2x for 1 turns",
-		specialName "Iron Chain of Bondage"
+		specialName "Iron Chain of Bondage",
+		special: "Boosts ATK against delayed enemies by 1.2x for 1 turns"
 	},
 	1014: {
 		special: "Binds himself for 1 turn and makes Perfects easier to hit for 2 turns",
