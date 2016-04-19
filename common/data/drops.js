@@ -558,6 +558,7 @@ window.drops = {
             name: 'Buggy\'s Counterattack!!',
             thumb: 39,
             global: true,
+			condition: "None",
             Expert: [ 36, 37, 38, 99, 109, 114, -4 ],
             Elite: [ 36, 37, 38, 99, 109, 114, -3 ]
         },
@@ -566,6 +567,7 @@ window.drops = {
             name: 'Alvida\'s Romance',
             thumb: 30,
             global: true,
+			condition: "None",
             Expert: [ 28, 29, 31, 40, 84, 95, 110, 117, -30, -21, -8 ],
             Elite: [ 28, 29, 31, 40, 95, 105, 110, -21, -7 ]
         },
@@ -574,6 +576,7 @@ window.drops = {
             name: 'Kuro\'s Master Plan',
             thumb: 46,
             global: true,
+			condition: "None",
             Expert: [ 41, 42, 43, 45, -16 ],
             Elite: [ 41, 42, 43, 45, 96, 106, 111, -15 ]
         },
@@ -582,6 +585,7 @@ window.drops = {
             name: 'Arlong: Empire Rising',
             thumb: 66,
             global: true,
+			condition: "None",
             Expert: [ 61, 62, 63, 65, 89, 95, 105, 110, -12, -66 ],
             Elite: [ 61, 62, 63, 65, 95, 105, 110, -11 ]
         },
@@ -590,6 +594,7 @@ window.drops = {
             name: 'Krieg\'s Assault!',
             thumb: 58,
             global: true,
+			condition: "None",
             Expert: [ 98, 99, 108, 109, 113, 114, 53, 55, 57, -58, -20 ],
             Elite: [ 98, 99, 108, 109, 113, 114, 53, 55, 57, -58, -20, -19 ]
         },
@@ -598,6 +603,7 @@ window.drops = {
             name: 'Escaped! Morgan',
             thumb: 228,
             global: true,
+			condition: "None",
             Expert: [ 33, 35, 84, 95, 105, 107, 110, 112, -228, -34, -26, -25, -24, -23, -22 ],
             Elite: [ 33, 35, 84, 95, 105, 107, 110, 112, -228, -34, -26, -25, -24, -23, -22 ]
         },
@@ -606,6 +612,7 @@ window.drops = {
             name: 'Hina\'s Resort Getaway',
             thumb: 232,
             global: true,
+			condition: "None",
             challenge: 'High Score calculated with Crew Cost, Turns Taken and Tap Accuracy',
             challengeData: [['150,000','Blue Elder'],['450,000','ATK Cotton Candy'],['750,000','3x Rainbow Gems']],
             Expert: [ 43, 49, 79, 85, 96, 106, 231, -230, -229, -221, -208, -62, -54 ],
@@ -616,6 +623,7 @@ window.drops = {
             name: 'Cobymeppo\'s Proving Ground!',
             thumb: 263,
             global: true,
+			condition: "None",
             challenge:'Total number of hits above 50,000',
             challengeData: [['5 Times','1x Yellow Elder'],['15 Times','1x ATK Cotton Candy'],['25 Times','3x Rainbow Gems']],
             Expert: [ 31, 33, 262, 264, 87, 88, 98, 99, 113, -265, -263, -225, -210, -64, -56, -32 ],
@@ -626,6 +634,7 @@ window.drops = {
             name: 'Smoker\'s Great Pursuit',
             thumb: 268,
             global: true,
+			condition: "None",
             challenge: 'Cumulative Damage dealt to enemies in a single run',
             challengeData: [['600,000 Damage','1x Green Elder'],['1,400,000 Damage','1y Rainbow Gem & 1x HP Cotton Candy'],['3,000,000 Damage','2x Rainbow Gems, 1x Forbidden Tome']],
             Expert: [ 67, 69, 86, 97, 112, -219, -212, -206, -204, -73, -52, -50 ],
@@ -636,6 +645,7 @@ window.drops = {
             name: 'Tsuru\'s Morning Stroll',
             thumb: 297,
             global: true,
+			condition: "None",
             Expert: [ 99, 88, 114, 296, 298, 299, -236, -234, -223, -217, -202, -200, -199 ],
             Elite: [ 99, 88, 114, 296, 298, 299, -236, -234, -223, -202, -200 ]
         },
@@ -715,6 +725,7 @@ window.drops = {
             name: 'Rising Sun, Rising Fortunes',
             thumb: 420,
             global: true,
+			condition: "None",
             Expert: [ 36, 37, 47, 48, 49, 50, 51, 59, 63, 211, 233, 420, 421, 422, -422, -332, -308, -225, -206, -204, -8 ],
             Elite: [ 36, 37, 47, 48, 49, 50, 51, 59, 63, 211, 233, 420, 421, 422, -422, -332, -308, -225, -206, -204, -8 ]
         },
@@ -886,6 +897,7 @@ window.drops = {
         {
             name: "Twilight Party DEAD or TREAT!!",
             thumb: 761,
+			condition: "None",
             Expert: [ 761, 762, 763, 764, 765, -610, -588, -565, -556, -426, -408, -261, -217 ],
             Elite: [ 761, 762, 763, 764, 765, -610, -588, -565, -556, -426, -408, -261, -217 ]
         },
@@ -894,6 +906,7 @@ window.drops = {
             name: "Twilight Party DEAD or TREAT!! (Global)",
             thumb: 763,
             global: true,
+			condition: "None",
             Expert: [ 761, 762, 763, 764, 765, -426, -408, -332, -308, -292, -261, -217, -8 ],
             Elite: [ 761, 762, 763, 764, 765, -426, -408, -332, -308, -292, -261, -217, -8 ]
         },
@@ -901,6 +914,7 @@ window.drops = {
         {
             name: "Midnight Party DEAD or TREAT!!",
             thumb: 766,
+			condition: "None",
             Expert: [ 762, 766, 767, 768, 769, -629, -611, -569, -554, -431, -410, -367, -223 ],
             Elite: [ 762, 766, 767, 768, 769, -629, -611, -569, -554, -431, -410, -367, -223 ]
         },
@@ -909,6 +923,7 @@ window.drops = {
             name: "Midnight Party DEAD or TREAT!! (Global)",
             thumb: 768,
             global: true,
+			condition: "None",
             Expert: [ 762, 766, 767, 768, 769, -431, -367, -291, -253, -251, -223, -212, -75 ],
             Elite: [ 762, 766, 767, 768, 769, -431, -367, -291, -253, -251, -223, -212, -75 ]
         },
@@ -950,6 +965,7 @@ window.drops = {
         {
             name: "Lightning Speed! Strawhat Crew's Surprise Visit",
             thumb: 866,
+			condition: "None",
             Expert: [ 41, 42, 53, 235, 395, 397, 419, 426, 427, 432, 563, 564, 866, 867, 868, -709, -673, -671, -633, -500, -467, -465, -451, -431 ],
             Elite: [ 41, 42, 53, 235, 395, 397, 419, 426, 427, 432, 563, 564, 866, 867, 868, -709, -673, -671, -633, -500, -467, -465, -451, -431 ]
         },
@@ -1012,6 +1028,8 @@ window.drops = {
         
         {
 			name: "Rare Animal Island's Count Butler",
+			thumb: 1011,
+			condition: "None",
 			Expert: [ 1010, 1012, 1013, 1014, -1014, -530, -840, -560, -880, -739, -812, -565 ],
 			Elite: [ 1010, 1012, 1013, 1014, -1014, -530, -840, -560, -880, -739, -812, -565 ]
 		}
