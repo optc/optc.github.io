@@ -4825,5 +4825,32 @@ window.details = {
 		special: "Binds himself for 1 turn and makes Perfects easier to hit for 2 turns",
 		specialName: "Scapegoat Substitute",
 		captain: "Boosts ATK of Tough characters by 2x, and Recovers 2x character's RCV in HP at the end of each turn"
+	},
+	1015: {
+		captain: "Boosts ATK of [INT] characters by 2.75x if they have a matching orb",
+		special: "Randomizes all orbs. Boosts ATK of [INT] characters by 1.5x for 1 turn. If during that turn every unit scores a Perfect hit, boosts ATK of [INT] characters by 1.5x for the next 2 turns",
+		specialName: ".44 Caliber Cannon"
+	},
+	1016: {
+		captain: "Boosts ATK of [INT] characters by 3x if they have a matching orb, by 1.5x otherwise",
+		special: "Randomizes all orbs. Boosts ATK of [INT] characters by 1.5x for 1 turn. If during that turn every unit scores a Perfect hit, boosts ATK of [INT] characters by 1.5x for the next 2 turns",
+		specialName: ".44 Caliber Cannon"
+	},
+	1017: {
+		captain: "Boosts HP of Slasher characters by 1.5x",
+		special: "Changes own orb into [PSY]. Deals several times the character's ATK in [PSY] damage to one enemy. Boosts ATK of Slasher characters by 1.5x for 1 turn",
+		specialName: "Brownbeard Special",
+		specialNotes: "#{specialProportional : lower : 125 * ( 1 - (remaining HP) / (total HP) )}",
+	},
+	1018: {
+		captain: "Boosts HP of Slasher characters by 1.5x",
+		special: "Changes own orb into [PSY]. Deals several times the character's ATK in [PSY] damage to one enemy. Boosts ATK of Slasher characters by 1.5x for 1 turn",
+		specialName: "Brownbeard Special",
+		specialNotes: "#{specialProportional : lower : 125 * ( 1 - (remaining HP) / (total HP) )}",
+	},
+	1019: {
+		captain: "Reduces damage received from [QCK] enemies by 50%",
+		special: "Switches orbs between slots 2 times and deals 2000 fixed damage to one enemy",
+		specialName: "Lulu Special"
 	}
 };

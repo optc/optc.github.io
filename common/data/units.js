@@ -1014,7 +1014,7 @@ window.units = [
     [ "General Hotdog", "DEX", ["Fighter","Ambition"], 3, 15, 4, 1, 70, 1422664, 105, 86, 24, 1147, 890, 181, 1 ],
     [ "Tony Tony Chopper, Animal King", "PSY", ["Fighter","Tough"], 4, 16, 4, 2, 70, 1422664, 63, 40, 44, 1154, 719, 280, 1 ],
 	[ "Colosseum Capone", "INT", ["Shooter","Ambition"], 4, 25, null, null, null, null, null, null, null, null, null, null, null],
-	[ "Colosseum Capone Evolution", "INT", ["Shooter","Ambition"], 5, 40, null, null, null, null, null, null, null, null, null, null, null],
+	[ "Colosseum Capone Evolution", "INT", ["Shooter","Ambition"], 5, 40, 6, 3, 99, null, 900, 688, 197, null, null, null, null],
 	[ "Colosseum Brownbeard", "PSY", ["Slasher","Ambition"], 4, 18, null, null, null, null, null, null, null, null, null, null, null],
 	[ "Colosseum Brownbeard Evolution", "PSY", ["Slasher","Tough"], 5, 30, null, null, null, null, null, null, null, null, null, null, null],
 	[ "Colosseum Lulu", "DEX", "Slasher", 4, 20, null, null, null, null, null, null, null, null, null, null, null]
