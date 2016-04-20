@@ -4840,13 +4840,13 @@ window.details = {
 		captain: "Boosts HP of Slasher characters by 1.5x",
 		special: "Changes own orb into [PSY]. Deals several times the character's ATK in [PSY] damage to one enemy. Boosts ATK of Slasher characters by 1.5x for 1 turn",
 		specialName: "Ravaging Cutlass Dance",
-		specialNotes: "#{specialProportional : lower : 125 * ( 1 - (remaining HP) / (total HP) )}",
+		specialNotes: "#{specialProportional : lower : 75 * ( 1 - (remaining HP) / (total HP) )}",
 	},
 	1018: {
 		captain: "Boosts ATK of Slasher characters by 1.5x and their HP by 2x",
 		special: "Changes own orb into [PSY]. Deals several times the character's ATK in [PSY] damage to one enemy. Boosts ATK of Slasher characters by 1.5x for 1 turn",
 		specialName: "Ravaging Cutlass Dance",
-		specialNotes: "#{specialProportional : lower : 125 * ( 1 - (remaining HP) / (total HP) )}",
+		specialNotes: "#{specialProportional : lower : 75 * ( 1 - (remaining HP) / (total HP) )}",
 	},
 	1019: {
 		captain: "Reduces damage received from [QCK] enemies by 50%",

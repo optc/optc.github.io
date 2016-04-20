@@ -1013,11 +1013,11 @@ window.units = [
     [ "President Heaby", "QCK", ["Slasher","Ambition"], 3, 15, 6, 1, 70, 1422664, 118, 78, 32, 1221, 799, 203, 1 ],
     [ "General Hotdog", "DEX", ["Fighter","Ambition"], 3, 15, 4, 1, 70, 1422664, 105, 86, 24, 1147, 890, 181, 1 ],
     [ "Tony Tony Chopper, Animal King", "PSY", ["Fighter","Tough"], 4, 16, 4, 2, 70, 1422664, 63, 40, 44, 1154, 719, 280, 1 ],
-	[ "Capone Bege, Captain of the Firetank Pirates", "INT", ["Shooter","Ambition"], 4, 25, null, null, null, null, null, null, null, null, null, null, null],
+	[ "Capone Bege, Captain of the Firetank Pirates", "INT", ["Shooter","Ambition"], 4, 25, 4, 2, 70, null, 494, 313, 80, null, null, null, null],
 	[ "Capone 'Gang' Bege, Captain of the Firetank Pirates", "INT", ["Shooter","Ambition"], 5, 40, 6, 3, 99, null, 900, 688, 197, 1903, 1361, 379, null],
-	[ "Brownbeard", "PSY", ["Slasher","Ambition"], 4, 18, null, null, null, null, null, null, null, null, null, null, null],
-	[ "Brownbeard, Alligator Centaur", "PSY", ["Slasher","Tough"], 5, 30, null, null, null, null, null, null, null, null, null, null, null],
-	[ "Peeply Lulu Galley-La Company Dock One Foreman ", "DEX", "Slasher", 4, 20, null, null, null, null, null, null, null, null, null, null, null]
+	[ "Brownbeard", "PSY", ["Slasher","Ambition"], 4, 18, 6, 2, 50, null, 230, 101, 33, null, null, null, null],
+	[ "Brownbeard, Alligator Centaur", "PSY", ["Slasher","Tough"], 5, 30, 6, 2, 99, null, 1127, 444, 90, null, null, null, null],
+	[ "Peeply Lulu Galley-La Company Dock One Foreman ", "DEX", "Slasher", 4, 20, 6, 2, 70, null, 155, 93, 40, null, null, null, null]
 ];
 // [ "Name", "Type", ["Class1","Class2"], null, null, null, null, null, null, null, null, null, null, null, null, null]
 // or [ "Name", "Type", "Class1", null, null, null, null, null, null, null, null, null, null, null, null, null]
