@@ -755,6 +755,8 @@ window.drops = {
             thumb: 445,
             global: true,
             condition: 'Higher Chance of Food orbs',
+            challenge: 'Cumulative Damage dealt to enemies in a single run',
+            challengeData: [['450,000 Damage','1x Yellow Elder'],['1,250,000 Damage','1x RCV Cotton Candy'],['3,000,000 Damage','3x Rainbow Gems']],
             Expert: [ 290, 293, 294, 295, 334, 379, 381, 382, 441, 442, 443, 444, -378, -368, -363, -251, -73, -15 ],
             Elite: [ 290, 293, 294, 295, 334, 379, 381, 382, 441, 442, 443, 444, -378, -368, -363, -251, -73, -15 ]
         },
@@ -773,6 +775,8 @@ window.drops = {
             thumb: 510,
             global: true,
             condition: 'Shooters, Fighter and Slashers are weakend',
+            challenge: 'Cumulative Damage dealt to enemies in a single run',
+            challengeData: [['120,000 Damage','1x Blue Elder'],['600,000 Damage','1x HP Cotton Candy, 1x Rainbow Gem'],['2,500,000 Damage','1x CDR Forbidden Tome, 2x Rainbow Gems']],
             Expert: [ 509, 511, -402, -400, -374, -357, -259, -212, -209 ],
             Elite: [ 509, 511, -402, -400, -374, -357, -259, -212, -209 ]
         },

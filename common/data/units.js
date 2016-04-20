@@ -615,7 +615,7 @@ window.units = [
 	[ "Zambai", "PSY", "Shooter", 3, 16, 4, 2, 70, 1066998, 230, 90, 48, 1580, 702, 168, 1 ],
 	[ "Demolisher Axeman", "STR", [ "Slasher", "Tough" ], 3, 20, 6, 1, 60, 899032, 1200, 500, 15, 1500, 900, 35, 1.5 ],
 	[ "Demolisher Spearman", "STR", [ "Striker", "Tough" ], 3, 20, 6, 1, 60, 899032, 1200, 500, 16, 1700, 800, 38, 1.5 ],
-	[ "Demolisher G\0unner", "STR", [ "Shooter", "Tough" ], 3, 20, 6, 1, 60, 899032, 1200, 500, 14, 1300, 1000, 32, 1.5 ],
+	[ "Demolisher Gunner", "STR", [ "Shooter", "Tough" ], 3, 20, 6, 1, 60, 899032, 1200, 500, 14, 1300, 1000, 32, 1.5 ],
 	[ "Street Punk: Brawler Red Bounty Hunter", "STR", "Fighter", 3, 13, 6, 1, 60, 674274, 102, 85, 28, 1158, 790, 90, 1 ],
 	[ "Street Punk: Brawler Green Bounty Hunter", "DEX", "Fighter", 3, 13, 6, 1, 60, 674274, 108, 75, 32, 1175, 754, 102, 1 ],
 	[ "Street Punk: Blade Blue Bounty Hunter", "QCK", "Slasher", 3, 13, 5, 1, 60, 674274, 153, 66, 40, 1215, 653, 128, 1 ],
@@ -1009,15 +1009,15 @@ window.units = [
     [ "Monet Coldest Season Cherry Blossoms","QCK",["Free Spirit","Cerebral"], 5, 20, 6, 3, 99, null, 831, 366, 162, 1660, 869, 384, null],
 	[ "Kizuna BOOST Luffy", "STR", ["Fighter","Tough"], 4, 20, 6, 2, 99, 3000000, 465, 232, 36, 1978, 1170, 220, 1 ],
     [ "Count Butler", "INT", ["Ambition","Cerebral"], 3, 12, 4, 1, 50, 392109, 103, 25, 41, 1172, 377, 220, 1 ],
-    [ "Count Butler Evolution", "INT", ["Ambition","Tough"], 4, 20, 5, 2, 99, 3000000, 1175, 606, 50, 2152, 1100, 220, 1 ],
+    [ "Count Butler (Ruling Power)", "INT", ["Ambition","Tough"], 4, 20, 5, 2, 99, 3000000, 1175, 606, 50, 2152, 1100, 220, 1 ],
     [ "President Heaby", "QCK", ["Slasher","Ambition"], 3, 15, 6, 1, 70, 1422664, 118, 78, 32, 1221, 799, 203, 1 ],
     [ "General Hotdog", "DEX", ["Fighter","Ambition"], 3, 15, 4, 1, 70, 1422664, 105, 86, 24, 1147, 890, 181, 1 ],
     [ "Tony Tony Chopper, Animal King", "PSY", ["Fighter","Tough"], 4, 16, 4, 2, 70, 1422664, 63, 40, 44, 1154, 719, 280, 1 ],
-	[ "Colosseum Capone", "INT", ["Shooter","Ambition"], 4, 25, null, null, null, null, null, null, null, null, null, null, null],
-	[ "Colosseum Capone Evolution", "INT", ["Shooter","Ambition"], 5, 40, 6, 3, 99, null, 900, 688, 197, null, null, null, null],
-	[ "Colosseum Brownbeard", "PSY", ["Slasher","Ambition"], 4, 18, null, null, null, null, null, null, null, null, null, null, null],
-	[ "Colosseum Brownbeard Evolution", "PSY", ["Slasher","Tough"], 5, 30, null, null, null, null, null, null, null, null, null, null, null],
-	[ "Colosseum Lulu", "DEX", "Slasher", 4, 20, null, null, null, null, null, null, null, null, null, null, null]
+	[ "Capone Bege, Captain of the Firetank Pirates", "INT", ["Shooter","Ambition"], 4, 25, null, null, null, null, null, null, null, null, null, null, null],
+	[ "Capone 'Gang' Bege, Captain of the Firetank Pirates", "INT", ["Shooter","Ambition"], 5, 40, 6, 3, 99, null, 900, 688, 197, 1903, 1361, 379, null],
+	[ "Brownbeard", "PSY", ["Slasher","Ambition"], 4, 18, null, null, null, null, null, null, null, null, null, null, null],
+	[ "Brownbeard, Alligator Centaur", "PSY", ["Slasher","Tough"], 5, 30, null, null, null, null, null, null, null, null, null, null, null],
+	[ "Peeply Lulu Galley-La Company Dock One Foreman ", "DEX", "Slasher", 4, 20, null, null, null, null, null, null, null, null, null, null, null]
 ];
 // [ "Name", "Type", ["Class1","Class2"], null, null, null, null, null, null, null, null, null, null, null, null, null]
 // or [ "Name", "Type", "Class1", null, null, null, null, null, null, null, null, null, null, null, null, null]
