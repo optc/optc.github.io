@@ -775,7 +775,7 @@ window.drops = {
             thumb: 510,
             global: true,
             condition: '30: Non-Striker, Evolver, or Booster class characters are weakend; 15: Fighter and Shooter class characters are weakened',
-            challenge: 'Cumulative Damage dealt to enemies in a single run',
+            challenge: 'Total Damage dealt to enemies in one turn',
             challengeData: [['120,000 Damage','1x Blue Elder'],['600,000 Damage','1x HP Cotton Candy, 1x Rainbow Gem'],['2,500,000 Damage','1x CDR Forbidden Tome, 2x Rainbow Gems']],
             Expert: [ 509, 511, -402, -400, -374, -357, -259, -212, -209 ],
             Elite: [ 509, 511, -402, -400, -374, -357, -259, -212, -209 ]
