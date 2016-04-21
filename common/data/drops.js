@@ -604,8 +604,6 @@ window.drops = {
             thumb: 228,
             global: true,
 			condition: "None",
-            Expert: [ 33, 35, 84, 95, 105, 107, 110, 112, -228, -34, -26, -25, -24, -23, -22 ],
-            Elite: [ 33, 35, 84, 95, 105, 107, 110, 112, -228, -34, -26, -25, -24, -23, -22 ],
 			"All Difficulties": [ 33, 35, 84, 95, 105, 107, 110, 112, -228, -34, -26, -25, -24, -23, -22 ]
         },
 
@@ -627,8 +625,7 @@ window.drops = {
 			condition: "None",
             challenge:'Total number of hits above 50,000',
             challengeData: [['5 Times','1x Yellow Elder'],['15 Times','1x ATK Cotton Candy'],['25 Times','3x Rainbow Gems']],
-            Expert: [ 31, 33, 262, 264, 87, 88, 98, 99, 113, -265, -263, -225, -210, -64, -56, -32 ],
-            Elite: [ 31, 33, 262, 264, 87, 88, 98, 99, 113, -265, -263, -225, -210, -64, -56, -32 ]
+            "All Difficulties": [ 31, 33, 262, 264, 87, 88, 98, 99, 113, -265, -263, -225, -210, -64, -56, -32 ]
         },
 
         {
@@ -638,8 +635,7 @@ window.drops = {
 			condition: "None",
             challenge: 'Cumulative Damage dealt to enemies in a single run',
             challengeData: [['600,000 Damage','1x Green Elder'],['1,400,000 Damage','1y Rainbow Gem & 1x HP Cotton Candy'],['3,000,000 Damage','2x Rainbow Gems, 1x Forbidden Tome']],
-            Expert: [ 67, 69, 86, 97, 112, -219, -212, -206, -204, -73, -52, -50 ],
-            Elite: [ 67, 69, 86, 97, 112, -219, -212, -206, -204, -73, -52, -50 ]
+            "All Difficulties": [ 67, 69, 86, 97, 112, -219, -212, -206, -204, -73, -52, -50 ]
         },
 
         {
@@ -656,8 +652,7 @@ window.drops = {
             thumb: 318,
             global: true,
             condition: 'You may only bring STR units into this island',
-            Expert: [ 86, 97, 110, 112, 317, 319, -259, -253, -216, -215, -62, -56 ],
-            Elite: [ 86, 97, 110, 112, 317, 319, -259, -253, -216, -215, -62, -56 ]
+            "All Difficulties": [ 86, 97, 110, 112, 317, 319, -259, -253, -216, -215, -62, -56 ]
         },
 
         {
@@ -665,8 +660,7 @@ window.drops = {
             thumb: 322,
             global: true,
             condition: 'You may only bring DEX units for 15 and 30 Stamina',
-            Expert: [ 85, 96, 111, 112, 321, 323, 325, -251, -218, -75, -74, -54, -21 ],
-            Elite: [ 85, 96, 111, 112, 321, 323, 325, -251, -218, -75, -74, -54, -21 ]
+            "All Difficulties": [ 85, 96, 111, 112, 321, 323, 325, -251, -218, -75, -74, -54, -21 ]
         },
 
         {
@@ -687,8 +681,7 @@ window.drops = {
             condition: 'You may only bring QCK units for 15 and 30 Stamina',
             challenge: 'Low Teamcost, Fast Clear and Perfect Taps',
             challengeData: [['200,000 Points','1x Red Elder'],['400,000 Points','1x HP Cotton Candy'],['700,000 Points','3x Rainbow Gems']],
-            Expert: [ 28, 40, 60, 213, 215, 340, -292, -291, -290, -261, -257, -214, -71, -44 ],
-            Elite: [ 28, 40, 60, 213, 215, 340, -292, -291, -290, -261, -257, -214, -71, -44 ]
+            "All Difficulties": [ 28, 40, 60, 213, 215, 340, -292, -291, -290, -261, -257, -214, -71, -44 ]
         },
 
         {
@@ -698,8 +691,7 @@ window.drops = {
             condition: 'You may only bring PSY units for 15 and 30 Stamina',
 			challenge: 'Low Teamcost, Fast Clear and Perfect Taps',
             challengeData: [['10,000 Points','1x Black Elder'],['40,000 Points','1x Rainbow Gem, 1x ATK Cotton Candy'],['70,000 Points','2x Rainbow Gems, 1x Damage Reduction Forbidden Tome']],
-            Expert: [ 385, 387, -388, -335, -314, -36, -16, -11 ],
-            Elite: [ 385, 387, -388, -335, -314, -36, -16, -11 ]
+            "All Difficulties": [ 385, 387, -388, -335, -314, -36, -16, -11 ]
         },
 
         {
@@ -709,8 +701,7 @@ window.drops = {
             condition: 'You can only get STR, QCK, INT and Food Orbs',
             challenge: 'Total number of hits over 50,000',
             challengeData: [['3 Times','1x Green Elder'],['12 Times','1x RCV Cotton Candy'],['25 Times','3x Rainbow Gems']],
-            Expert: [ 391, 393, 394, -394, -393, -329, -316, -47, -34, -4 ],
-            Elite: [ 391, 393, 394, -394, -393, -329, -316, -47, -34, -4 ]
+            "All Difficulties": [ 391, 393, 394, -394, -393, -329, -316, -47, -34, -4 ]
         },
 
         {
@@ -718,8 +709,7 @@ window.drops = {
             thumb: 405,
             global: true,
             condition: 'You can only get QCK, DEX, PSY and Food Orbs',
-            Expert: [ 404, 406, 407, -407, -406, -333, -312, -208, -26, -20 ],
-            Elite: [ 404, 406, 407, -407, -406, -333, -312, -208, -26, -20 ]
+            "All Difficulties": [ 404, 406, 407, -407, -406, -333, -312, -208, -26, -20 ]
         },
 
         {
@@ -727,8 +717,7 @@ window.drops = {
             thumb: 420,
             global: true,
 			condition: "None",
-            Expert: [ 36, 37, 47, 48, 49, 50, 51, 59, 63, 211, 233, 420, 421, 422, -422, -332, -308, -225, -206, -204, -8 ],
-            Elite: [ 36, 37, 47, 48, 49, 50, 51, 59, 63, 211, 233, 420, 421, 422, -422, -332, -308, -225, -206, -204, -8 ]
+            "All Difficulties": [ 36, 37, 47, 48, 49, 50, 51, 59, 63, 211, 233, 420, 421, 422, -422, -332, -308, -225, -206, -204, -8 ]
         },
 
         {
@@ -738,8 +727,7 @@ window.drops = {
             condition: 'You can only get STR, DEX, INT and PSY Orbs',
             challenge: 'Cumulative Damage dealt to enemies in a single run',
             challengeData: [['500,000 Damage','1x Black Elder'],['1,500,000 Damage','1x ATK Cotton Candy'],['3,000,000 Damage','3x Rainbow Gems']],
-            Expert: [ 423, 425, -425, -327, -310, -223, -219, -214, -202 ],
-            Elite: [ 423, 425, -425, -327, -310, -223, -219, -214, -202 ]
+            "All Difficulties": [ 423, 425, -425, -327, -310, -223, -219, -214, -202 ]
         },
 
         {
@@ -747,8 +735,7 @@ window.drops = {
             thumb: 436,
             global: true,
             condition: 'Each non-Okama in your Team will take 60 Damage each turn',
-            Expert: [ 433, 434, 435, -384, -372, -371, -359, -217, -210, -19 ],
-            Elite: [ 433, 434, 435, -384, -372, -371, -359, -217, -210, -19 ]
+            "All Difficulties": [ 433, 434, 435, -384, -372, -371, -359, -217, -210, -19 ]
         },
 
         {
@@ -758,8 +745,7 @@ window.drops = {
             condition: 'Higher Chance of Food orbs',
             challenge: 'Cumulative Damage dealt to enemies in a single run',
             challengeData: [['450,000 Damage','1x Yellow Elder'],['1,250,000 Damage','1x RCV Cotton Candy'],['3,000,000 Damage','3x Rainbow Gems']],
-            Expert: [ 290, 293, 294, 295, 334, 379, 381, 382, 441, 442, 443, 444, -378, -368, -363, -251, -73, -15 ],
-            Elite: [ 290, 293, 294, 295, 334, 379, 381, 382, 441, 442, 443, 444, -378, -368, -363, -251, -73, -15 ]
+            "All Difficulties": [ 290, 293, 294, 295, 334, 379, 381, 382, 441, 442, 443, 444, -378, -368, -363, -251, -73, -15 ]
         },
 
         {
@@ -767,8 +753,7 @@ window.drops = {
             thumb: 462,
             global: true,
             condition: 'Striker, Shooter and Slashers are weakend.',
-            Expert: [ 460, 461, -398, -396, -370, -361, -253, -236, -234 ],
-            Elite: [ 460, 461, -398, -396, -370, -361, -253, -236, -234 ]
+            "All Difficulties": [ 460, 461, -398, -396, -370, -361, -253, -236, -234 ]
         },
 
         {
@@ -778,8 +763,7 @@ window.drops = {
             condition: '30: Non-Striker, Evolver, or Booster class characters are weakend; 15: Fighter and Shooter class characters are weakened (Note: Multi-class characters such as Fighter / Slasher are not affected)',
             challenge: 'Total Damage dealt to enemies in one turn',
             challengeData: [['120,000 Damage','1x Blue Elder'],['600,000 Damage','1x HP Cotton Candy, 1x Rainbow Gem'],['2,500,000 Damage','1x CDR Forbidden Tome, 2x Rainbow Gems']],
-            Expert: [ 509, 511, -402, -400, -374, -357, -259, -212, -209 ],
-            Elite: [ 509, 511, -402, -400, -374, -357, -259, -212, -209 ]
+            "All Difficulties": [ 509, 511, -402, -400, -374, -357, -259, -212, -209 ]
         },
 
         {
@@ -787,8 +771,7 @@ window.drops = {
             thumb: 538,
             global: true,
             condition: '30: Non-Shooter, Evolver, or Booster class characters are weakend; 15: Fighter and Slasher class characters are weakened',
-            Expert: [ 537, 539, 540, -539, -428, -416, -365, -257, -59 ],
-            Elite: [ 537, 539, 540, -539, -428, -416, -365, -257, -59 ]
+            "All Difficulties": [ 537, 539, 540, -539, -428, -416, -365, -257, -59 ]
         },
 
         {
@@ -796,8 +779,7 @@ window.drops = {
             thumb: 550,
 			global: true,
             condition: '30: Non-Fighter, Evolver, or Booster class characters are weakend; 15: Striker and Shooter class characters are weakened',
-            Expert: [ 549, 551, 552, -552, -551, -432, -426, -408, -329, -308, -255 ],
-            Elite: [ 549, 551, 552, -552, -551, -432, -426, -408, -329, -308, -255 ]
+            "All Difficulties": [ 549, 551, 552, -552, -551, -432, -426, -408, -329, -308, -255 ]
         },
 
         {
@@ -806,8 +788,7 @@ window.drops = {
             global: true,
             challenge: 'Total number of hits over 50,000',
             challengeData: [['3 Times','1x Red Elder'],['12 Times','1x RCV Cotton Candy'],['34 Times','3x Rainbow Gems & 1x Forbidden Tome']],
-            Expert: [ 570, 572, 573, -431, -429, -410, -333, -332, -327, -316, -75 ],
-            Elite: [ 570, 572, 573, -431, -429, -410, -333, -332, -327, -316, -75 ]
+            "All Difficulties": [ 570, 572, 573, -431, -429, -410, -333, -332, -327, -316, -75 ]
         },
 
         {
@@ -817,8 +798,7 @@ window.drops = {
             condition: 'All Units considered from the “Sea” will lose 20% to all stats',
 			challenge: 'Total number of hits over 50,000',
             challengeData: [['4 Times','1x Black Elder'],['16 Times','1x ATK Cotton Candy'],['38 Times','3x Rainbow Gems']],
-            Expert: [ 581, 582, 583, 584, -584, -544, -466, -412, -371, -335, -314, -291 ],
-            Elite: [ 581, 582, 583, 584, -584, -544, -466, -412, -371, -335, -314, -291 ]
+            "All Difficulties": [ 581, 582, 583, 584, -584, -544, -466, -412, -371, -335, -314, -291 ]
         },
 
         {
@@ -835,8 +815,7 @@ window.drops = {
             thumb: 607,
 			global: true,
             condition: 'You cannot use any two units that are the same',
-            Expert: [ 606, 608, 609, -502, -457, -449, -312, -52, -50 ],
-            Elite: [ 606, 608, 609, -502, -457, -449, -312, -52, -50 ]
+            "All Difficulties": [ 606, 608, 609, -502, -457, -449, -312, -52, -50 ]
         },
 
         {
@@ -845,32 +824,28 @@ window.drops = {
             condition: 'No Units above the cost of 49 is allowed',
 			challenge: 'Total number of hits over 50,000',
             challengeData: [['4 Times','1x Blue Elder'],['8 Times','1x Rainbow Gem, 1x HP Cotton Candy'],['22 Times','2x Rainbow Gems, 1x Orb Matching Forbidden Tome']],
-            Expert: [ 634, 636, 637, -636, -464, -451, -396, -370, -367, -359, -64 ],
-            Elite: [ 634, 636, 637, -636, -464, -451, -396, -370, -367, -359, -64 ]
+            "All Difficulties": [ 634, 636, 637, -636, -464, -451, -396, -370, -367, -359, -64 ]
         },
 
         {
             name: 'Invasion! Pirate Arlong\'s Crew!!',
             thumb: 656,
             condition: 'You can only get STR, QCK, DEX, PSY and INT orbs',
-            Expert: [ 655, 657, 658, -658, -500, -465, -455, -453, -398, -357, -60 ],
-            Elite: [ 655, 657, 658, -658, -500, -465, -455, -453, -398, -357, -60 ]
+            "All Difficulties": [ 655, 657, 658, -658, -500, -465, -455, -453, -398, -357, -60 ]
         },
 
         {
             name: 'Fight! Suna Suna Clan!!',
             thumb: 664,
             condition: 'Heatwave causes damage every 2 turns',
-            Expert: [ 663, 665, 667, -667, -522, -508, -506, -459, -378, -221, -73 ],
-            Elite: [ 663, 665, 667, -667, -522, -508, -506, -459, -378, -221, -73 ]
+            "All Difficulties": [ 663, 665, 667, -667, -522, -508, -506, -459, -378, -221, -73 ]
         },
 
         {
             name: 'Guidance from the Sound of a Bell! Calgara and Noland!',
             thumb: 688,
             condition: 'Bomb orbs appear',
-            Expert: [ 687, 689, -542, -524, -528, -429, -428, -401, -365, -218 ],
-            Elite: [ 687, 689, -542, -524, -528, -429, -428, -401, -365, -218 ],
+            "All Difficulties": [ 687, 689, -542, -524, -528, -429, -428, -401, -365, -218 ]
         },
 
         {
@@ -879,32 +854,28 @@ window.drops = {
             condition: '30: Non-Free Spirit, Evolver, or Booster class characters are weakend; 15: Striker and Shooter class characters are weakened',
 			challenge: 'Cumulative Damage dealt to enemies in a single run',
             challengeData: [['600,000','1x Blue Elder'],['2,000,000','1x RCV Cotton Candy, 1x Rainbow Gem'],['5,000,000','1x Anti-Lock Forbidden Tome, 2x Rainbow Gems']],
-            Expert: [ 712, 714, 715, -716, -546, -541, -520, -400, -202, -363, -204 ],
-            Elite: [ 712, 714, 715, -716, -546, -541, -520, -400, -202, -363, -204 ]
+            "All Difficulties": [ 712, 714, 715, -716, -546, -541, -520, -400, -202, -363, -204 ]
         },
 
         {
             name: "T-Bone's Absolute Justice",
             thumb: 724,
             condition: 'You can only bring INT, PSY and QCK units',
-            Expert: [ 721, 723, -590, -564, -563, -530, -526, -384, -361, -219 ],
-            Elite: [ 721, 723, -590, -564, -563, -530, -526, -384, -361, -219 ]
+            "All Difficulties": [ 721, 723, -590, -564, -563, -530, -526, -384, -361, -219 ]
         },
 
         {
             name: "Explosive! Wanze's Ramen Kenpo!!",
             thumb: 743,
             condition: 'You can only bring STR, QCK and DEX units',
-            Expert: [ 740, 742, -560, -558, -586, -567, -566, -412, -225, -18 ],
-            Elite: [ 740, 742, -560, -558, -586, -567, -566, -412, -225, -18 ]
+            "All Difficulties": [ 740, 742, -560, -558, -586, -567, -566, -412, -225, -18 ]
         },
 
         {
             name: "Twilight Party DEAD or TREAT!!",
             thumb: 761,
 			condition: "None",
-            Expert: [ 761, 762, 763, 764, 765, -610, -588, -565, -556, -426, -408, -261, -217 ],
-            Elite: [ 761, 762, 763, 764, 765, -610, -588, -565, -556, -426, -408, -261, -217 ]
+            "All Difficulties": [ 761, 762, 763, 764, 765, -610, -588, -565, -556, -426, -408, -261, -217 ]
         },
 
         {
@@ -912,16 +883,14 @@ window.drops = {
             thumb: 763,
             global: true,
 			condition: "None",
-            Expert: [ 761, 762, 763, 764, 765, -426, -408, -332, -308, -292, -261, -217, -8 ],
-            Elite: [ 761, 762, 763, 764, 765, -426, -408, -332, -308, -292, -261, -217, -8 ]
+            "All Difficulties": [ 761, 762, 763, 764, 765, -426, -408, -332, -308, -292, -261, -217, -8 ]
         },
 
         {
             name: "Midnight Party DEAD or TREAT!!",
             thumb: 766,
 			condition: "None",
-            Expert: [ 762, 766, 767, 768, 769, -629, -611, -569, -554, -431, -410, -367, -223 ],
-            Elite: [ 762, 766, 767, 768, 769, -629, -611, -569, -554, -431, -410, -367, -223 ]
+            "All Difficulties": [ 762, 766, 767, 768, 769, -629, -611, -569, -554, -431, -410, -367, -223 ]
         },
 
         {
@@ -929,24 +898,21 @@ window.drops = {
             thumb: 768,
             global: true,
 			condition: "None",
-            Expert: [ 762, 766, 767, 768, 769, -431, -367, -291, -253, -251, -223, -212, -75 ],
-            Elite: [ 762, 766, 767, 768, 769, -431, -367, -291, -253, -251, -223, -212, -75 ]
+            "All Difficulties": [ 762, 766, 767, 768, 769, -431, -367, -291, -253, -251, -223, -212, -75 ]
         },
 
         {
             name: "Evil Manager Breed's Marine Circus!",
             thumb: 797,
             condition: 'You can only bring Fighter and Tough units',
-            Expert: [ 796, 798, 799, 800, -800, -639, -628, -562, -414, -432, -380, -75 ],
-            Elite: [ 796, 798, 799, 800, -800, -639, -628, -562, -414, -432, -380, -75 ]
+            "All Difficulties": [ 796, 798, 799, 800, -800, -639, -628, -562, -414, -432, -380, -75 ]
         },
 
         {
             name: "Nami and Lola's Great Proposal Plan",
             thumb: 808,
             condition: 'You can only bring Slasher and Cerebral units. (No Evolution/Booster)',
-            Expert: [ 807, 809, 811, -811, -645, -641, -631, -502, -11, -12, -9 ],
-            Elite: [ 807, 809, 811, -811, -645, -641, -631, -502, -11, -12, -9 ]
+            "All Difficulties": [ 807, 809, 811, -811, -645, -641, -631, -502, -11, -12, -9 ]
         },
 
         {
@@ -955,88 +921,77 @@ window.drops = {
             condition: 'You can only bring Impact and Free Spirit units. (No Evo/Boosters)',
             challenge: 'Total Damage dealt to enemies in one turn',
             challengeData: [['100,000 Damage','1x DEX Elder Turtle'],['500,000 Damage','1x Rainbow Gem, 1x ATK Cotton Candy'],['2,000,000 Damage','2x Rainbow Gems, 1x Auto-Heal Forbidden Tome']],
-            Expert: [ 847, 849, 850, -849, -647, -617, -616, -615, -578, -508, -455 ],
-            Elite: [ 847, 849, 850, -849, -647, -617, -616, -615, -578, -508, -455 ]
+            "All Difficulties": [ 847, 849, 850, -849, -647, -617, -616, -615, -578, -508, -455 ]
         },
 
         {
             name: "Wapol's Counterattack",
             thumb: 852,
             condition: 'You can only bring Shooter and Ambition units',
-            Expert: [ 328, 330, 331, 333, 851, 853, 854, -854, -649, -643, -614, -463, -457, -327, -22 ],
-            Elite: [ 328, 330, 331, 333, 851, 853, 854, -854, -649, -643, -614, -463, -457, -327, -22 ]
+            "All Difficulties": [ 328, 330, 331, 333, 851, 853, 854, -854, -649, -643, -614, -463, -457, -327, -22 ]
         },
 
         {
             name: "Lightning Speed! Strawhat Crew's Surprise Visit",
             thumb: 866,
 			condition: "None",
-            Expert: [ 41, 42, 53, 235, 395, 397, 419, 426, 427, 432, 563, 564, 866, 867, 868, -709, -673, -671, -633, -500, -467, -465, -451, -431 ],
-            Elite: [ 41, 42, 53, 235, 395, 397, 419, 426, 427, 432, 563, 564, 866, 867, 868, -709, -673, -671, -633, -500, -467, -465, -451, -431 ]
+            "All Difficulties": [ 41, 42, 53, 235, 395, 397, 419, 426, 427, 432, 563, 564, 866, 867, 868, -709, -673, -671, -633, -500, -467, -465, -451, -431 ]
         },
 
         {
             name: "Riverside Banquet! Enter the Crazy Ones!",
             thumb: 885,
             condition: 'Highly increased chance of TND, Bomb, and G orbs',
-            Expert: [ 885, 886, 887, -887, -704, -703, -677, -675, -504, -453, -416 ],
-            Elite: [ 885, 886, 887, -887, -704, -703, -677, -675, -504, -453, -416 ]
+            "All Difficulties": [ 885, 886, 887, -887, -704, -703, -677, -675, -504, -453, -416 ]
         },
 
         {
             name: "Mountaintop Banquet! Enter the Generals!",
             thumb: 897,
             condition: 'Only STR/DEX/QCK/PSY/INT orbs will appear',
-            Expert: [ 897, 898, 899, -899, -754, -702, -701, -669, -528, -466, -449, -464 ],
-            Elite: [ 897, 898, 899, -899, -754, -702, -701, -669, -528, -466, -449, -464 ]
+            "All Difficulties": [ 897, 898, 899, -899, -754, -702, -701, -669, -528, -466, -449, -464 ]
         },
 
         {
             name: "Men are Forbidden!? The Secret Flower Garden",
             thumb: 918,
             condition: 'You can only bring DEX units',
-            Expert: [ 917, 919, 920, -920, -791, -756, -720, -706, -705, -542, -541, -522 ],
-            Elite: [ 917, 919, 920, -920, -791, -756, -720, -706, -705, -542, -541, -522 ]
+            "All Difficulties": [ 917, 919, 920, -920, -791, -756, -720, -706, -705, -542, -541, -522 ]
         },
 		
 		{
             name: "Hannyabal's Great Ambition",
             thumb: 929,
             condition: 'You can only bring STR units',
-            Expert: [ 928, 930, 931, -752, -758, -520, -729, -733, -787, -930, -544, -506 ],
-            Elite: [ 928, 930, 931, -752, -758, -520, -729, -733, -787, -930, -544, -506 ]
+            "All Difficulties": [ 928, 930, 931, -752, -758, -520, -729, -733, -787, -930, -544, -506 ]
         },
 		
         {
             name: "Encounter! Whitebeard Pirates",
             thumb: 946,
             condition: "You can only bring PSY units",
-            Expert: [ 946, 947, 948, 949, -718, -750, -760, -526, -793, -735, -546, -738],
-            Elite: [ 946, 947, 948, 949, -718, -750, -760, -526, -793, -735, -546, -738]
+            "All Difficulties": [ 946, 947, 948, 949, -718, -750, -760, -526, -793, -735, -546, -738]
         },
 		
 		{
 			name: "Clash! Whitebeard Pirates",
             thumb: 979,
 			condition: "You can only bring INT units",
-			Expert: [ 979, 980, 981, 949, -459, -838, -842, -524, -789, -736, -731, -563 ],
-			Elite: [ 979, 980, 981, 949, -459, -838, -842, -524, -789, -736, -731, -563 ]
+			"All Difficulties": [ 979, 980, 981, 949, -459, -838, -842, -524, -789, -736, -731, -563 ]
 		},
 		
 		{
 			name: "Let's Find Our Captain! Heart Pirates!",
 			condition: "You can only bring QCK units",
             thumb: 1003,
-			Expert: [ 1002, 1004, 1005, -748, -844, -558, -846, -737, -1006, -785, -564 ],
-			Elite: [ 1002, 1004, 1005, -748, -844, -558, -846, -737, -1006, -785, -564 ]
+			"All Difficulties": [ 1002, 1004, 1005, -748, -844, -558, -846, -737, -1006, -785, -564 ]
 		},
         
         {
 			name: "Rare Animal Island's Count Butler",
 			thumb: 1011,
 			condition: "None",
-			Expert: [ 1010, 1012, 1013, 1014, -1014, -530, -840, -560, -880, -739, -812, -565 ],
-			Elite: [ 1010, 1012, 1013, 1014, -1014, -530, -840, -560, -880, -739, -812, -565 ]
+			"All Difficulties": [ 1010, 1012, 1013, 1014, -1014, -530, -840, -560, -880, -739, -812, -565 ]
 		}
 
     ],
@@ -1212,9 +1167,9 @@ window.drops = {
         {
             name: 'Colosseum',
             thumb: 779,
-            Exhibition: [ 776, 778, 803, 832, 834, 859, 861, 883, 902, 904, 925, 927, 952, 984 ],
-            Underground: [ 776, 778, 803, 832, 834, 859, 861, 883, 902, 904, 925, 927, 952, 984 ],
-            Chaos: [ 776, 778, 780, 803, 805, 830, 832, 834, 859, 861, 881, 883, 900, 902, 923, 925, 950, 982, 984, 1015 ]
+            Exhibition: [ 776, 778, 803, 832, 834, 859, 861, 883, 902, 904, 925, 927, 952, 984, 1017, 1019 ],
+            Underground: [ 776, 778, 803, 832, 834, 859, 861, 883, 902, 904, 925, 927, 952, 984, 1017, 1019 ],
+            Chaos: [ 776, 778, 780, 803, 805, 830, 832, 834, 859, 861, 881, 883, 900, 902, 923, 925, 950, 982, 984, 1017, 1015 ]
         }
 
    ]
