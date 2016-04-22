@@ -1016,8 +1016,8 @@ window.units = [
 	[ "Capone Bege, Captain of the Firetank Pirates", "INT", ["Shooter","Ambition"], 4, 25, 4, 2, 70, null, 494, 313, 80, null, null, null, null],
 	[ "Capone 'Gang' Bege, Captain of the Firetank Pirates", "INT", ["Shooter","Ambition"], 5, 40, 6, 3, 99, null, 900, 688, 197, 1903, 1361, 379, null],
 	[ "Brownbeard", "PSY", ["Slasher","Ambition"], 4, 18, 6, 2, 50, null, 230, 101, 33, null, null, null, null],
-	[ "Brownbeard, Alligator Centaur", "PSY", ["Slasher","Tough"], 5, 30, 6, 2, 99, null, 1127, 444, 90, null, null, null, null],
-	[ "Peeply Lulu Galley-La Company Dock One Foreman ", "DEX", "Slasher", 4, 20, 6, 2, 70, null, 155, 93, 40, null, null, null, null]
+	[ "Brownbeard, Alligator Centaur", "PSY", ["Slasher","Tough"], 5, 30, 6, 2, 99, null, 1127, 444, 90, 2500, 1000, 220, null],
+	[ "Peeply Lulu Galley-La Company Dock One Foreman ", "DEX", "Slasher", 4, 20, 6, 2, 70, null, 155, 93, 40, 1184, 720, 280, null]
 ];
 // [ "Name", "Type", ["Class1","Class2"], null, null, null, null, null, null, null, null, null, null, null, null, null]
 // or [ "Name", "Type", "Class1", null, null, null, null, null, null, null, null, null, null, null, null, null]
