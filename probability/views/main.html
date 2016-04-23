@@ -13,7 +13,8 @@
                             ng-class="{ empty: !character || !character.uid }"></div>
 
                     </div>
-
+                    <p ng-if="slotCount(character.uid)">Select which Sockets your Unit already has.</p>
+                    <p ng-if="!slotCount(character.uid)">This Unit has no Sockets.</p>
                     <div class="slots">
 
                         <slot-wheel ng-repeat="slotNumber in range(0, slotCount(character.uid))">

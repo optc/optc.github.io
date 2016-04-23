@@ -202,6 +202,18 @@ window.ships = [
         hp: function(p) {
             return p.unit.type == "PSY" || p.unit.type == "QCK" ? [ 1, 1, 1, 1, 1, 1.1, 1.1, 1.1, 1.1, 1.2 ][p.boatLevel - 1] : 1;
         }
-    }
+    },
+    
+    { // 16
+        name: 'Red Force',
+        thumb: null,
+        description: 'Boosts ATK of Cerebral characters by 1.5x and their HP by 1.5x, Increased Orb Rate for Cerebral characters.',
+        atk: function(p) {
+            return  !p.unit.class.has('Cerebral') ? 1 : [ 1.0, 1.0, 1.0, 1.0, 1.2, 1.2, 1.2, 1.2, 1.2, 1.5 ][p.boatLevel - 1];
+        },
+        hp: function(p) {
+            return !p.unit.class.has('Cerebral') ? 1 : [ 1.0, 1.0, 1.0, 1.0, 1.2, 1.2, 1.2, 1.2, 1.2, 1.5 ][p.boatLevel - 1];
+        }
+    },
 
 ];
