@@ -1000,9 +1000,9 @@ window.units = [
     [ "Diamante, Donquixote Pirates","STR",["Ambition","Striker"], 5, 30, 5, 4, 99, 4000000, 1443, 812, 50, 2840, 1421, 174, 1 ],
     [ "Corazon, Donquixote Pirates","DEX",["Free Spirit","Cerebral"], 5, 30, 4, 4, 70, 1066998, 406, 196, 155, 1503, 694, 320, 1 ],
     [ "Donquixote Rosinante","DEX",["Free Spirit","Cerebral"], 6, 55, 4, 5, 99, 5000000, 1428, 628, 272, 2746, 1222, 555, 1 ],
-	[ "Bepo, Heart Pirates", "STR", ["Figher", "Tough"], 3, 12, 4, 1, 50, 392109, 96, 53, 46, 1003, 525, 213, 1],
-	[ "Martial Artist Bepo, Heart Pirates", "STR", ["Figher", "Tough"], 4, 20, 4, 2, 99, 3000000, 921, 461, 162, 1803, 1054, 307, 1],
-	[ "Sachi and Penguin, Heart Pirates", "QCK", ["Figher", "Free Spirit"], 4, 15, 5, 2, 70, 1066998, 92, 37, 36, 1059, 701, 231, 1],
+	[ "Bepo, Heart Pirates", "STR", ["Fighter", "Tough"], 3, 12, 4, 1, 50, 392109, 96, 53, 46, 1003, 525, 213, 1],
+	[ "Martial Artist Bepo, Heart Pirates", "STR", ["Fighter", "Tough"], 4, 20, 4, 2, 99, 3000000, 921, 461, 162, 1803, 1054, 307, 1],
+	[ "Sachi and Penguin, Heart Pirates", "QCK", ["Fighter", "Free Spirit"], 4, 15, 5, 2, 70, 1066998, 92, 37, 36, 1059, 701, 231, 1],
 	[ "Jean Bart", "STR", ["Tough", "Fighter"], 3, 12, 5, 1, 50, 392109, 194, 55, 13, 1404, 541, 96, 1],
 	[ "Jean Bart, Heart Pirates", "STR", ["Tough", "Fighter"], 4, 20, 4, 2, 99, 3000000, 1337, 488, 44, 2614, 1069, 153, 1],
     [ "Monet Cold Season Cherry Blossoms","QCK",["Free Spirit","Cerebral"], 4, 13, 6, 2, 50, null, 67, 37, 55, 884, 428, 204, null],
@@ -1017,7 +1017,10 @@ window.units = [
 	[ "Capone 'Gang' Bege, Captain of the Firetank Pirates", "INT", ["Shooter","Ambition"], 5, 40, 6, 3, 99, null, 900, 688, 197, 1903, 1361, 379, null],
 	[ "Brownbeard", "PSY", ["Slasher","Ambition"], 4, 18, 6, 2, 50, null, 230, 101, 33, null, null, null, null],
 	[ "Brownbeard, Alligator Centaur", "PSY", ["Slasher","Tough"], 5, 30, 6, 2, 99, null, 1127, 444, 90, 2500, 1000, 220, null],
-	[ "Peeply Lulu Galley-La Company Dock One Foreman ", "DEX", "Slasher", 4, 20, 6, 2, 70, null, 155, 93, 40, 1184, 720, 280, null]
+	[ "Peeply Lulu Galley-La Company Dock One Foreman ", "DEX", "Slasher", 4, 20, 6, 2, 70, null, 155, 93, 40, 1184, 720, 280, null],
+    [],
+    [],
+    [ " Luffy: Monkey D. Luffy Road to Pirate King", "PSY", ["Fighter","Free Spirit"], 4, 15, null, null, null, null, null, null, null, null, null, null, null]
 ];
 // [ "Name", "Type", ["Class1","Class2"], null, null, null, null, null, null, null, null, null, null, null, null, null]
 // or [ "Name", "Type", "Class1", null, null, null, null, null, null, null, null, null, null, null, null, null]

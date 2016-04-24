@@ -77,9 +77,9 @@ window.ships = [
     { // 5
         name: 'Miss Love Duck',
         thumb: 'ship_0006_c.png',
-        description: 'Reduces damage received by 10%, boosts ATK of each character by 100 units',
+        description: 'Reduces damage received by 10%, boosts ATK of Striker characters by 100 units',
         atkStatic: function(p) {
-            return p.boatLevel < 7 ? 0 : [ 50, 50, 50, 100 ][p.boatLevel - 7];
+            return !p.unit.class.has('Striker') ? 0 : [ 0, 0, 0, 0, 0, 0, 50, 50, 50, 100 ][p.boatLevel -1];
         }
     },
 

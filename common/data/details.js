@@ -1853,7 +1853,7 @@ window.details = {
 		special: "Deals random PSY damage to all enemies, boosts ATK of all characters by 1.5x for 1 turn",
 		specialName: "Zen Shockwave",
 		specialNotes: "#{random : 30,000 : 150,000}",
-		captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts own ATK and ATK of characters with cost 20 or less by 3x",
+		captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of characters with cost 20 or less by 3x as well as himself",
 		captainNotes: "His captain ability only affects his evolved form, his base form will NOT receive the boost. All evolved Sengoku units in the team are included in the bonus."
 	},
 	460: {
@@ -2852,13 +2852,13 @@ window.details = {
 		captain: "Boosts ATK of PSY characters by 2x"
 	},
 	663: {
-		special: "Deals several times the character's ATK in PSY damage to one enemy, recovers 5x character's RCV in HP at the end of each turn for 5 turns",
+		special: "Deals PSY damage to one enemy according to HP, recovers 5x character's RCV in HP at the end of each turn for 5 turns",
 		specialNotes: "The exact damage is proportional to the crew's remaining HP and is higher the lower the HP is. The formula used is 80000 * (1 - (current HP) / (total HP))",
 		specialName: "Vivi's Important Security Guard",
 		captain: "Recovers 2x character's RCV in HP at the end of each turn"
 	},
 	664: {
-		special: "Deals several times the character's ATK in PSY damage to one enemy, recovers 5x character's RCV in HP at the end of each turn for 5 turns",
+		special: "Deals PSY damage to one enemy according to HP, recovers 5x character's RCV in HP at the end of each turn for 5 turns",
 		specialNotes: "The exact damage is proportional to the crew's remaining HP and is higher the lower the HP is. The formula used is 80000 * (1 - (current HP) / (total HP))",
 		specialName: "Vivi's Important Security Guard",
 		captain: "Recovers 3x character's RCV in HP at the end of each turn"
@@ -4851,6 +4851,7 @@ window.details = {
 	1019: {
 		captain: "Reduces damage received from [QCK] enemies by 50%",
 		special: "Switches orbs between slots 2 times and deals 2000 fixed damage to one enemy",
-		specialName: "Blacksmithing Measurement: Double Slash"
+		specialName: "Blacksmithing Measurement: Double Slash",
+        specialNotes: "#{fixed}"
 	}
 };

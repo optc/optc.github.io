@@ -745,7 +745,7 @@ window.drops = {
             condition: 'Higher Chance of Food orbs',
             challenge: 'Cumulative Damage dealt to enemies in a single run',
             challengeData: [['450,000 Damage','1x Yellow Elder'],['1,250,000 Damage','1x RCV Cotton Candy'],['3,000,000 Damage','3x Rainbow Gems']],
-            "All Difficulties": [ 290, 293, 294, 295, 334, 379, 381, 382, 441, 442, 443, 444, -378, -368, -363, -251, -73, -15 ]
+            "All Difficulties": [ 290, 293, 294, 295, 334, 379, 381, 382, 429, 441, 442, 443, 444, -378, -368, -363, -251, -73, -15 ]
         },
 
         {

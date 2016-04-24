@@ -786,14 +786,14 @@ window.specials = {
 	},
 	843: {
 		atk: function(p) {
-			if (window.specials[843].stage) return p.unit.class.has("Shooter") ? 1.5 : 1;
+			if (window.specials[843].first) return p.unit.class.has("Shooter") ? 1.5 : 1;
 			else return p.unit.class.has("Shooter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 1.5 : 1;
 		},
 		type: "class",
 		onActivation: function(p) {
-			window.specials[843].multiplier = !window.specials[843].multiplier;
+			window.specials[843].first = !window.specials[843].first;
 			p.scope.notify({
-				text: (window.specials[843].multiplier ?
+				text: (window.specials[843].first ?
 					'Boosting Shooters. To switch to the second multiplier, disable and re-enable this special' :
 					'Boosting Shooters, Slashers and Strikers. To switch to the first multiplier, disable and re-enable this special'),
 				name: '843warning'
@@ -802,14 +802,14 @@ window.specials = {
 	},
 	844: {
 		atk: function(p) {
-			if (window.specials[844].stage) return p.unit.class.has("Shooter") ? 1.5 : 1;
+			if (window.specials[844].first) return p.unit.class.has("Shooter") ? 1.5 : 1;
 			else return p.unit.class.has("Shooter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 1.5 : 1;
 		},
 		type: "class",
 		onActivation: function(p) {
-			window.specials[844].multiplier = !window.specials[844].multiplier;
+			window.specials[844].first = !window.specials[844].first;
 			p.scope.notify({
-				text: (window.specials[844].multiplier ?
+				text: (window.specials[844].first ?
 					'Boosting Shooters. To switch to the second multiplier, disable and re-enable this special' :
 					'Boosting Shooters, Slashers and Strikers. To switch to the first multiplier, disable and re-enable this special'),
 				name: '844warning'
@@ -1191,5 +1191,21 @@ window.specials = {
 		atk: function(p) { return 1.2; },
 		type: "condition",
 		warning: "Selected special (%name%) assumes that the enemy has been delayed."
-	}
+	},
+    1015: {
+        atk: function(p) { return p.unit.type == "INT" ? 1.5 : 1; },
+		type: "type"
+    },
+    1016: {
+        atk: function(p) { return p.unit.type == "INT" ? 1.5 : 1; },
+		type: "type"
+    },
+    1017: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1},
+        type: "class"
+    },
+    1018: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1},
+        type: "class"
+    }
 };

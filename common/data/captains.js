@@ -2439,5 +2439,18 @@ window.captains = {
 	},
 	1014:{
 		atk: function(p) {return p.unit.class.has("Tough") ? 2 : 1; }
-	}
+	},
+    1015: {
+        atk: function(p) { return !p.unit.type == "INT" ? 1 : (p.orb == 2.0 ? 2.75 : 1); }
+    },
+    1016: {
+        atk: function(p) { return !p.unit.type == "INT" ? 1 : (p.orb == 2.0 ? 3 : 1.5); }
+    },
+    1017: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; }
+    },
+    1018: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Slasher") ? 2 : 1; }
+    }
 };
