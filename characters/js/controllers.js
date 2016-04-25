@@ -142,6 +142,17 @@ app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, 
                     location: location
                 });
             });
+            
+            //Super Hack Job to show Karoo as a socket for Vivi
+            if (family == "Nefertari Vivi"){
+                if (!$scope.families.filter(function(e) { return e.uid == 445; }).length>0){
+                    $scope.families.push({
+                        uid: 445,
+                        name: units[444].name,
+                        location:  {data: ["All Difficulties"], name: "Supersonic Duck Squadron! Fortnight", thumb:445}
+                    });
+                }
+            }
         });
     }
 
