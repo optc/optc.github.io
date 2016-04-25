@@ -1020,6 +1020,7 @@ window.units = [
 	[ "Peeply Lulu Galley-La Company Dock One Foreman ", "DEX", "Slasher", 4, 20, 6, 2, 70, null, 155, 93, 40, 1184, 720, 280, null],
     [ "Sakura Sugar", "INT", ["Shooter","Cerebral"], 4, 13, null, null, null, null, null, null, null, null, null, null, null],
     [ "Sakura Sugar Evolution", "INT", ["Shooter","Cerebral"], 5, 20, null, null, null, null, null, null, null, null, null, null, null],
+    [ "Monkey D. Luffy Road to Pirate King", "PSY", ["Fighter","Free Spirit"], 4, 15, 4, 2, 99, null, null, null, null, 2000, 1000, 300, null],
 	[],
     [ "Unknown Unit #1", "INT", ["Tough","Fighter"], 4, 18, null, null, null, null, null, null, null, null, null, null, null],
     [ "Unknown Unit #1 Evolution", "INT", ["Tough","Fighter"], 5, 30, null, null, null, null, null, null, null, null, null, null, null],
