@@ -1018,9 +1018,21 @@ window.units = [
 	[ "Brownbeard", "PSY", ["Slasher","Ambition"], 4, 18, 6, 2, 50, null, 230, 101, 33, null, null, null, null],
 	[ "Brownbeard, Alligator Centaur", "PSY", ["Slasher","Tough"], 5, 30, 6, 2, 99, null, 1127, 444, 90, 2500, 1000, 220, null],
 	[ "Peeply Lulu Galley-La Company Dock One Foreman ", "DEX", "Slasher", 4, 20, 6, 2, 70, null, 155, 93, 40, 1184, 720, 280, null],
-    [],
-    [],
-    [ " Luffy: Monkey D. Luffy Road to Pirate King", "PSY", ["Fighter","Free Spirit"], 4, 15, null, null, null, null, null, null, null, null, null, null, null]
-];
+    [ "Sakura Sugar", "INT", ["Shooter","Cerebral"], 4, 13, null, null, null, null, null, null, null, null, null, null, null],
+    [ "Sakura Sugar Evolution", "INT", ["Shooter","Cerebral"], 5, 20, null, null, null, null, null, null, null, null, null, null, null],
+	[],
+    [ "Unknown Unit #1", "INT", ["Tough","Fighter"], 4, 18, null, null, null, null, null, null, null, null, null, null, null],
+    [ "Unknown Unit #1 Evolution", "INT", ["Tough","Fighter"], 5, 30, null, null, null, null, null, null, null, null, null, null, null],
+    [ "Unknown Unit #2", "QCK", ["Fighter","Free Spirit"], 4, 18, null, null, null, null, null, null, null, null, null, null, null],
+    [ "Unknown Unit #2 Evolution", "QCK", ["Fighter","Free Spirit"], 5, 30, null, null, null, null, null, null, null, null, null, null, null],
+    [ "Unknown Unit #3", "DEX", ["Fighter","Ambition"], 4, 18, null, null, null, null, null, null, null, null, null, null, null],
+    [ "Unknown Unit #3 Evolution", "DEX", ["Fighter","Ambition"], 5, 30, null, null, null, null, null, null, null, null, null, null, null],
+    [ "Unknown Unit #4", "PSY", ["Tough","Fighter"], 4, 18, null, null, null, null, null, null, null, null, null, null, null],
+    [ "Unknown Unit #4 Evolution", "PSY", ["Tough","Fighter"], 5, 30, null, null, null, null, null, null, null, null, null, null, null],
+    [ "Unknown Unit #5", "STR", ["Slasher","Striker"], 4, 18, null, null, null, null, null, null, null, null, null, null, null],
+    [ "Unknown Unit #5 Evolution", "STR", ["Slasher","Striker"], 5, 30, null, null, null, null, null, null, null, null, null, null, null],
+    [ "Unknown Legend #6", "STR", ["Striker","Ambition"], 5, 30, null, null, null, null, null, null, null, null, null, null, null],
+    [ "Unknown Legend #6 Evolution", "STR", ["Striker","Ambition"], 6, 55, null, null, null, null, null, null, null, null, null, null, null]
+	];
 // [ "Name", "Type", ["Class1","Class2"], null, null, null, null, null, null, null, null, null, null, null, null, null]
 // or [ "Name", "Type", "Class1", null, null, null, null, null, null, null, null, null, null, null, null, null]

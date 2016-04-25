@@ -1161,7 +1161,10 @@ window.drops = {
         {
             name: 'Girls of Summer Paradise',
             thumb: 683,
-            Expert: [ 659, 680, 682, 684, 686 ]
+            challenge: 'Total number of hits over 30,000',
+            challengeData: [['10 Times','Vivi\'s Breather Unit'],['35 Times','1x HP Cotton Candy'],['72 Times','3x Rainbow Gems']],
+            Expert: [ 659, 680, 682, 684, 686 ],
+			"Completion Units": [686]
         },
 
         {

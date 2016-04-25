@@ -4853,5 +4853,10 @@ window.details = {
 		special: "Switches orbs between slots 2 times and deals 2000 fixed damage to one enemy",
 		specialName: "Blacksmithing Measurement: Double Slash",
         specialNotes: "#{fixed}"
+	},
+	1022:{
+		captain: "Boosts ATK of all characters by 2x and boosts amount of beli received by 1.2x",
+		special: "Deals 13x character's ATK as [PSY] damage to all enemies. Changes [BOMB], [EMPTY], and [TND] orbs to [PSY]",
+		specialName: "Gum-Gum Gigant Rifle: New Star"
 	}
 };
