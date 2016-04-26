@@ -830,7 +830,7 @@ window.specials = {
 		def: function() { return 0.5; }
 	},
 	853: {
-		atk: function(p) { return p.unit.class("Tough") || p.unit.class.has("Fighter") ? 1.2 : 1; },
+		atk: function(p) { return p.unit.class.has("Tough") || p.unit.class.has("Fighter") ? 1.2 : 1; },
 		type: "class"
 	},
 	857: {
@@ -1119,7 +1119,8 @@ window.specials = {
 		type: "condition"
 	},
 	956: {
-		atk: function(p) { return p.unit.class.has("Tough") ? 1.2 : 1; }
+		atk: function(p) { return p.unit.class.has("Tough") ? 1.2 : 1; },
+		type: "class"
 	},
 	961: {
 		orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, 1, 1.25); }
