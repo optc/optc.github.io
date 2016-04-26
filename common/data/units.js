@@ -1022,18 +1022,18 @@ window.units = [
     [ "Sakura Sugar Evolution", "INT", ["Shooter","Cerebral"], 5, 20, null, null, null, null, null, null, null, null, null, null, null],
     [ "Monkey D. Luffy Road to Pirate King", "PSY", ["Fighter","Free Spirit"], 4, 15, 4, 2, 99, null, 200, 56, 55, 2000, 1000, 300, null],
 	[],
-    [ "Unknown Unit #1", "INT", ["Tough","Fighter"], 4, 18, null, null, null, null, null, null, null, null, null, null, null],
-    [ "Unknown Unit #1 Evolution", "INT", ["Tough","Fighter"], 5, 30, null, null, null, null, null, null, null, null, null, null, null],
-    [ "Unknown Unit #2", "QCK", ["Fighter","Free Spirit"], 4, 18, null, null, null, null, null, null, null, null, null, null, null],
-    [ "Unknown Unit #2 Evolution", "QCK", ["Fighter","Free Spirit"], 5, 30, null, null, null, null, null, null, null, null, null, null, null],
-    [ "Unknown Unit #3", "DEX", ["Fighter","Ambition"], 4, 18, null, null, null, null, null, null, null, null, null, null, null],
-    [ "Unknown Unit #3 Evolution", "DEX", ["Fighter","Ambition"], 5, 30, null, null, null, null, null, null, null, null, null, null, null],
-    [ "Unknown Unit #4", "PSY", ["Tough","Fighter"], 4, 18, null, null, null, null, null, null, null, null, null, null, null],
-    [ "Unknown Unit #4 Evolution", "PSY", ["Tough","Fighter"], 5, 30, null, null, null, null, null, null, null, null, null, null, null],
-    [ "Unknown Unit #5", "STR", ["Slasher","Striker"], 4, 18, null, null, null, null, null, null, null, null, null, null, null],
-    [ "Unknown Unit #5 Evolution", "STR", ["Slasher","Striker"], 5, 30, null, null, null, null, null, null, null, null, null, null, null],
-    [ "Unknown Legend #6", "STR", ["Striker","Ambition"], 5, 30, null, null, null, null, null, null, null, null, null, null, null],
-    [ "Unknown Legend #6 Evolution", "STR", ["Striker","Ambition"], 6, 55, null, null, null, null, null, null, null, null, null, null, null]
+    [ "Don Chinjao", "INT", ["Tough","Fighter"], 4, 18, null, null, null, null, null, null, null, null, null, null, null],
+    [ "Don Chinjao, the Drill", "INT", ["Tough","Fighter"], 5, 30, null, null, null, null, null, null, null, null, null, null, null],
+    [ "Blue Gilly", "QCK", ["Fighter","Free Spirit"], 4, 18, null, null, null, null, null, null, null, null, null, null, null],
+    [ "Blue Gilly Evolution", "QCK", ["Fighter","Free Spirit"], 5, 30, null, null, null, null, null, null, null, null, null, null, null],
+    [ "Funk Brothers", "DEX", ["Fighter","Ambition"], 4, 18, null, null, null, null, null, null, null, null, null, null, null],
+    [ "Funk Brothers Evolution", "DEX", ["Fighter","Ambition"], 5, 30, null, null, null, null, null, null, null, null, null, null, null],
+    [ "Hajrudin", "PSY", ["Tough","Fighter"], 4, 18, null, null, null, null, null, null, null, null, null, null, null],
+    [ "Hajrudin Evolution", "PSY", ["Tough","Fighter"], 5, 30, null, null, null, null, null, null, null, null, null, null, null],
+    [ "Abdullah and Jeet", "STR", ["Slasher","Striker"], 4, 18, null, null, null, null, null, null, null, null, null, null, null],
+    [ "Abdullah and Jeet Evolution", "STR", ["Slasher","Striker"], 5, 30, null, null, null, null, null, null, null, null, null, null, null],
+    [ "Bartoloemo", "STR", ["Striker","Ambition"], 5, 30, null, null, null, null, null, null, null, null, null, null, null],
+    [ "Bartoloemo Evolution", "STR", ["Striker","Ambition"], 6, 55, null, null, null, null, null, null, null, null, null, null, null]
 	];
 // [ "Name", "Type", ["Class1","Class2"], null, null, null, null, null, null, null, null, null, null, null, null, null]
 // or [ "Name", "Type", "Class1", null, null, null, null, null, null, null, null, null, null, null, null, null]
