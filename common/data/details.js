@@ -4854,6 +4854,18 @@ window.details = {
 		specialName: "Blacksmithing Measurement: Double Slash",
         specialNotes: "#{fixed}"
 	},
+    1020: {
+        captain: "Boosts ATK and RCV of Shooter and Cerebral characters by 1.5x.",
+        captainNotes: "This effect does not stack for units that have both classes.",
+        specialName: "Sweet Fruit Trap",
+        special: "Recovers 9x characters RCV in HP. Changes captain's orb into Matching orb"
+    },
+    1021: {
+        captain: "Boosts ATK and RCV of Shooter and Cerebral characters by 1.75x.",
+        captainNotes: "This effect does not stack for units that have both classes.",
+        specialName: "Sweet Fruit Trap",
+        special: "Recovers 9x characters RCV in HP. Changes captain's orb into Matching orb"
+    },
 	1022: {
 		captain: "Boosts ATK of all characters by 2x and boosts amount of beli received by 1.2x",
 		special: "Deals 13x character's ATK as [PSY] damage to all enemies. Changes [BOMB], [EMPTY], and [TND] orbs to [PSY]",

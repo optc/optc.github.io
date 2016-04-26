@@ -2452,5 +2452,13 @@ window.captains = {
     1018: {
         atk: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; },
         hp: function(p) { return p.unit.class.has("Slasher") ? 2 : 1; }
+    },
+    1020: {
+        atk: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") ? 1.5 : 1; },
+        rcv: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") ? 1.5 : 1; }
+    },
+    1021: {
+        atk: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") ? 1.75 : 1; },
+        rcv: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") ? 1.75 : 1; }
     }
 };
