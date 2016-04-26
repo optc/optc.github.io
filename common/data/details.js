@@ -4854,17 +4854,17 @@ window.details = {
 		specialName: "Blacksmithing Measurement: Double Slash",
         specialNotes: "#{fixed}"
 	},
-	1022:{
+	1022: {
 		captain: "Boosts ATK of all characters by 2x and boosts amount of beli received by 1.2x",
 		special: "Deals 13x character's ATK as [PSY] damage to all enemies. Changes [BOMB], [EMPTY], and [TND] orbs to [PSY]",
 		specialName: "Gum-Gum Gigant Rifle: New Star"
 	},
-	1024{
+	1024: {
 		special: "Amplifies the effect of orbs by a large amount for a variable number of turns proportionally to the crew's current HP",
 		specialNotes: "We don't currently know how large the boost is nor do we know how many turns he boosts by. Lower HP = Longer Boost",
 		specialName: "Eight-Impact Fist! Blow of Resentment"
 	},
-	1025{
+	1025: {
 		special: "Amplifies the effect of orbs by a large amount for a variable number of turns proportionally to the crew's current HP",
 		specialNotes: "We don't currently know how large the boost is nor do we know how many turns he boosts by. Lower HP = Longer Boost",
 		specialName: "Eight-Impact Fist! Blow of Resentment"
