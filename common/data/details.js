@@ -1510,15 +1510,15 @@ window.details = {
 		captain: "Boosts ATK by 2.75x following a chain of DEX > INT > QCK attacks no lower than Good"
 	},
 	391: {
-		special: "Reduces damage received by 90% for 1 turn, reduces the defense of all enemies by 80% for 1 turn, deals 1,000 fixed damage to all enemies at the end of the following turn",
+		special: "Reduces damage received by 90% for 1 turn, reduces the defense of all enemies by 80% for 1 turn, poisons enemies for 1,000 damage for a single turn",
 		specialName: "Negative Hollow",
-		specialNotes: "#{fixed}",
+		specialNotes: "#{poison}",
 		captain: "Boosts RCV of DEX characters by 1.5x"
 	},
 	392: {
-		special: "Reduces damage received by 90% for 1 turn, reduces the defense of all enemies by 80% for 1 turn, deals 1,000 fixed damage to all enemies at the end of the following turn",
+		special: "Reduces damage received by 90% for 1 turn, reduces the defense of all enemies by 80% for 1 turn, poisons enemies for 1,000 damage for a single turn",
 		specialName: "Negative Hollow",
-		specialNotes: "#{fixed}",
+		specialNotes: "#{poison}",
 		captain: "Boosts RCV of DEX characters by 2x"
 	},
 	393: {
@@ -4887,6 +4887,6 @@ window.details = {
 	},
 	1027: {
 		specialName: "Shooting Moon",
-		special: "Changes both Captain orbs into Matching orbs, and switches orbs between slots three times"
+		special: "Changes Captain orb into Matching orb, and switches orbs between slots three times"
 	}
 };

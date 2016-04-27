@@ -819,8 +819,9 @@ window.drops = {
         },
 
         {
-            name: 'Keimi and Hachi\'s Takoyaki Shop!',
+            name: 'Camie and Hachi\'s Takoyaki Shop!',
             thumb: 635,
+			global: true,
             condition: 'No Units above the cost of 49 is allowed',
 			challenge: 'Total number of hits over 50,000',
             challengeData: [['4 Times','1x Blue Elder'],['8 Times','1x Rainbow Gem, 1x HP Cotton Candy'],['22 Times','2x Rainbow Gems, 1x Orb Matching Forbidden Tome']],
