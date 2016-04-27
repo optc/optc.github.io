@@ -4710,11 +4710,11 @@ window.details = {
         captain: "Boosts ATK of Tough characters by 2x",
         special: [
 			{
-				"description": "For Tough characters, changes [EMPTY] and Bad orbs to Matching.",
+				"description": "For Tough characters, changes [EMPTY] and Bad orbs to Matching orbs.",
 				"cooldown": 11
 			},
 			{
-				"description": "For all characters, changes [EMPTY] and Bad orbs to Matching.",
+				"description": "For all characters, changes [EMPTY] and Bad orbs to Matching orbs.",
 				"cooldown": 20
 			}
 		],
@@ -4726,11 +4726,11 @@ window.details = {
 		captainNotes: "\"Beneficial\" orbs grant the same ATK boost as matching orbs while retaining their original function.",
         special: [
 			{
-				"description": "For Tough characters, changes [EMPTY] and Bad orbs to Matching.",
+				"description": "For Tough characters, changes [EMPTY] and Bad orbs to Matching orbs.",
 				"cooldown": 11
 			},
 			{
-				"description": "For all characters, changes [EMPTY] and Bad orbs to Matching.",
+				"description": "For all characters, changes [EMPTY] and Bad orbs to Matching orbs.",
 				"cooldown": 20
 			}
 		],
@@ -4880,5 +4880,13 @@ window.details = {
 		special: "Amplifies the effect of orbs by a large amount for a variable number of turns proportionally to the crew's current HP",
 		specialNotes: "We don't currently know how large the boost is nor do we know how many turns he boosts by. Lower HP = Longer Boost",
 		specialName: "Eight-Impact Fist! Blow of Resentment"
+	},
+	1026: {
+		specialName: "Shooting Moon",
+		special: "Changes both Captain orbs into Matching orbs, and switches orbs between slots three times"
+	},
+	1027: {
+		specialName: "Shooting Moon",
+		special: "Changes both Captain orbs into Matching orbs, and switches orbs between slots three times"
 	}
 };
