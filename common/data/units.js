@@ -1032,8 +1032,8 @@ window.units = [
     [ "Hajrudin, Pirate Mercenary", "PSY", ["Tough","Fighter"], 5, 30, null, null, null, null, null, null, null, null, null, null, null],
     [ "Abdullah and Jeet", "STR", ["Slasher","Striker"], 4, 18, null, null, null, null, null, null, null, null, null, null, null],
     [ "Abdullah and Jeet, Former Bounty Hunters", "STR", ["Slasher","Striker"], 5, 30, null, null, null, null, null, null, null, null, null, null, null],
-    [ "bartolomeo", "STR", ["Striker","Ambition"], 5, 30, null, null, null, null, null, null, null, null, null, null, null],
-    [ "bartolomeo Evolution", "STR", ["Striker","Ambition"], 6, 55, null, null, null, null, null, null, null, null, null, null, null]
+    [ "Bartolomeo", "STR", ["Striker","Ambition"], 5, 30, null, null, null, null, null, null, null, null, null, null, null],
+    [ "Bartolomeo Evolution", "STR", ["Striker","Ambition"], 6, 55, null, null, null, null, null, null, null, null, null, null, null]
 	];
 // [ "Name", "Type", ["Class1","Class2"], null, null, null, null, null, null, null, null, null, null, null, null, null]
 // or [ "Name", "Type", "Class1", null, null, null, null, null, null, null, null, null, null, null, null, null]

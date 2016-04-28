@@ -4883,10 +4883,21 @@ window.details = {
 	},
 	1026: {
 		specialName: "Shooting Moon",
-		special: "Changes both Captain orbs into Matching orbs, and switches orbs between slots three times"
+		special: "Changes Captain orb into Matching orbs, and switches orbs between slots three times"
 	},
 	1027: {
 		specialName: "Shooting Moon",
 		special: "Changes Captain orb into Matching orb, and switches orbs between slots three times"
-	}
+	},
+    1028: {
+        specialName: "Rah-Rah-Rah Rampage",
+        special: "Deals random damage to all enemies, boost ATK past a certain number of hits for multiple turns.",
+        specialNotes: "Buffalo's Captain as a Special essentially"
+    
+    },
+    1029: {
+        specialName: "Rah-Rah-Rah Rampage",
+        special: "Deals random damage to all enemies, boost ATK past a certain number of hits for multiple turns.",
+        specialNotes: "Buffalo's Captain as a Special essentially"
+    }
 };
