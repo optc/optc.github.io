@@ -993,7 +993,14 @@ window.drops = {
 			thumb: 1011,
 			condition: "None",
 			"All Difficulties": [ 1010, 1012, 1013, 1014, -1014, -530, -840, -560, -880, -739, -812, -565 ]
-		}
+		},
+        
+        {
+            name: "Temptation!? The Queen of Kamabakka Queendom!",
+            thumb: null,
+            condition: "None so far",
+            "All Dificulties": [ -874, -876, -878, -554, -813, -814, -566]
+        }
 
     ],
 

@@ -4899,5 +4899,15 @@ window.details = {
         specialName: "Rah-Rah-Rah Rampage",
         special: "Deals random damage to all enemies, boost ATK past a certain number of hits for multiple turns.",
         specialNotes: "Buffalo's Captain as a Special essentially"
+    },
+    1030: {
+        specialName: "Hero's Gungnir",
+        special: "Reduces crew's HP to 1, deals damage to one enemy depending on the amount of HP removed. Boosts ATK.",
+        specialNotes: "We do not know the ATK boost or the Damage just yet. Will be added when the unit releases."
+    },
+    1031: {
+        specialName: "Hero's Gungnir",
+        special: "Reduces crew's HP to 1, deals damage to one enemy depending on the amount of HP removed. Boosts ATK.",
+        specialNotes: "We do not know the ATK boost or the Damage just yet. Will be added when the unit releases."
     }
 };
