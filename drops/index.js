@@ -37,7 +37,7 @@ app.controller('MainCtrl',function($scope, $rootScope, $timeout, $controller) {
 
     //Use URI for one time search
     if(searchQuery!=""){
-        $scope.query = Utils.getRegex(decodeURI(searchQuery.replace(/!\?%20The%20Secret%20Flower%20Garden|Temptation!\?%20|Clash!(!|\?)%20|Adrift!?|%20Fortnight|%20Raid/g,"")));
+        $scope.query = Utils.getRegex(decodeURI(searchQuery.replace(/%20Fortnight|%20Raid/g,"").replace(/\?/,"\\?")));
     }
     
     $controller('DismissalCtrl');
@@ -249,5 +249,5 @@ function updateTimes(){
 }
 window.onload = function() {
     //Also add the URI Search into the Search Bar
-    document.getElementById("search").value = decodeURI(location.search.replace('?','').replace(/!\?%20The%20Secret%20Flower%20Garden|Temptation!\?%20|Clash!(!|\?)%20|Adrift!?|%20Fortnight|%20Raid/g,""));
+    document.getElementById("search").value = decodeURI(location.search.replace('?','').replace(/%20Fortnight|%20Raid/g,"").replace(/\?/,"\\?"));
 }
