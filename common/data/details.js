@@ -3740,13 +3740,13 @@ window.details = {
 	835: {
 		captain: "Boosts ATK and HP of Cerebral characters by 2x",
 		specialName: "Thrust Pad Cannon",
-		special: "Changes [RCV], [TND], [EMPTY], [BLOCK] and [BOMB] orbs into matching orbs, amplifies the effect of orbs by 1.75x for 1 turn",
+		special: "Changes [RCV], [TND], [EMPTY], [BLOCK] and [BOMB] orbs into Matching orbs, amplifies the effect of orbs by 1.75x for 1 turn",
 		specialNotes: "#{orb : 1.75x}"
 	},
 	836: {
 		captain: "Boosts ATK and HP of Cerebral characters by 2x, deals 5 times the damage received in the previous turn in STR damage to all enemies at the end of each turn",
 		specialName: "Thrust Pad Cannon",
-		special: "Changes [RCV], [TND], [EMPTY], [BLOCK] and [BOMB] orbs into matching orbs, amplifies the effect of orbs by 1.75x for 1 turn",
+		special: "Changes [RCV], [TND], [EMPTY], [BLOCK] and [BOMB] orbs into Matching orbs, amplifies the effect of orbs by 1.75x for 1 turn",
 		specialNotes: "#{orb : 1.75x}"
 	},
 	837: {
@@ -4909,5 +4909,15 @@ window.details = {
         specialName: "Hero's Gungnir",
         special: "Reduces crew's HP to 1, deals damage to one enemy depending on the amount of HP removed. Boosts ATK.",
         specialNotes: "We do not know the ATK boost or the Damage just yet. Will be added when the unit releases."
-    }
+    },
+	1032: {
+		special: "Reduces Special Cooldown of Shooters and Strikers by 1 turn. For Shooters and Strikers, changes Badly Matching orbs into [RCV] orbs.",
+		specialName: "Surprise Pincer Attack",
+		specialNotes: "Rough translation, a proper translation will be put in once characters are released"
+	},
+	1033: {
+		special: "Reduces Special Cooldown of Shooters and Strikers by 1 turn. For Shooters and Strikers, changes Badly Matching orbs into [RCV] orbs.",
+		specialName: "Surprise Pincer Attack",
+		specialNotes: "Rough translation, a proper translation will be put in once characters are released"
+	}
 };
