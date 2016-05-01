@@ -1022,18 +1022,18 @@ window.units = [
     [ "Sugar Cherry", "INT", ["Shooter","Cerebral"], 5, 20, 5, 3, 99, null, 731, 300, 198, 1621, 717, 442, null],
     [ "Monkey D. Luffy Road to Pirate King", "PSY", ["Fighter","Free Spirit"], 4, 15, 4, 2, 99, null, 200, 56, 55, 2000, 1000, 300, null],
 	[],
-    [ "Don Chinjao", "INT", ["Tough","Fighter"], 4, 18, null, null, null, null, null, null, null, null, null, null, null],
-    [ "Don Chinjao, Flower Country Gang", "INT", ["Tough","Fighter"], 5, 30, null, null, null, null, null, null, null, null, null, null, null],
-    [ "Blue Gilly", "QCK", ["Fighter","Free Spirit"], 4, 18, null, null, null, null, null, null, null, null, null, null, null],
-    [ "Blue GIlly, Jao Kun Do Martial Artist", "QCK", ["Fighter","Free Spirit"], 5, 30, null, null, null, null, null, null, null, null, null, null, null],
-    [ "Funk Brothers", "DEX", ["Fighter","Ambition"], 4, 18, null, null, null, null, null, null, null, null, null, null, null],
-    [ "Funk Brothers, Mogaro Kingdom Assassins", "DEX", ["Fighter","Ambition"], 5, 30, null, null, null, null, null, null, null, null, null, null, null],
-    [ "Hajrudin", "PSY", ["Tough","Fighter"], 4, 18, null, null, null, null, null, null, null, null, null, null, null],
-    [ "Hajrudin, Pirate Mercenary", "PSY", ["Tough","Fighter"], 5, 30, null, null, null, null, null, null, null, null, null, null, null],
-    [ "Abdullah and Jeet", "STR", ["Slasher","Striker"], 4, 18, null, null, null, null, null, null, null, null, null, null, null],
-    [ "Abdullah and Jeet, Former Bounty Hunters", "STR", ["Slasher","Striker"], 5, 30, null, null, null, null, null, null, null, null, null, null, null],
-    [ "Bartolomeo", "STR", ["Striker","Ambition"], 5, 30, null, null, null, null, null, null, null, null, null, null, null],
-    [ "Bartolomeo Evolution", "STR", ["Striker","Ambition"], 6, 55, null, null, null, null, null, null, null, null, null, null, null]
+    [ "Don Chinjao", "INT", ["Tough","Fighter"], 4, 18, 6, 3, 70, null, 226, 187, 17, null, null, null, null],
+    [ "Don Chinjao, Flower Country Gang", "INT", ["Tough","Fighter"], 5, 30, 4, 4, 99, null, 1433, 746, 68, null, null, null, null],
+    [ "Blue Gilly", "QCK", ["Fighter","Free Spirit"], 4, 18, 6, 3, 70, null, 197, 138, 37, null, null, null, null],
+    [ "Blue GIlly, Jao Kun Do Martial Artist", "QCK", ["Fighter","Free Spirit"], 5, 30, 7, 4, 99, null, 1253, 630, 129, null, null, null, null],
+    [ "Funk Brothers", "DEX", ["Fighter","Ambition"], 4, 18, 5, 3, 70, null, 60, 172, 44, null, null, null, null],
+    [ "Funk Brothers, Mogaro Kingdom Assassins", "DEX", ["Fighter","Ambition"], 5, 30, 8, 4, 99, null, 1500, 824, 77, 2920, 1250, 226, null],
+    [ "Hajrudin", "PSY", ["Tough","Fighter"], 4, 18, 5, 3, 70, null, 201, 177, 38, null, null, null, null],
+    [ "Hajrudin, Pirate Mercenary", "PSY", ["Tough","Fighter"], 5, 30, 4, 4, 99, null, 1337, 740, 57, null, null, null, null],
+    [ "Abdullah and Jeet", "STR", ["Slasher","Striker"], 4, 18, 6, 3, 70, null, 143, 143, 52, null, null, null, null],
+    [ "Abdullah and Jeet, Former Bounty Hunters", "STR", ["Slasher","Striker"], 5, 30, null, null, 99, null, null, null, null, null, null, null, null],
+    [ "Bartolomeo", "STR", ["Striker","Ambition"], 5, 30, 4, 4, 70, null, 403, 278, 58, null, null, null, null],
+    [ "Bartolomeo Evolution", "STR", ["Striker","Ambition"], 6, 55, 4, 5, 99, null, 1550, 769, 181, 3505, 1431, 341, null]
 	];
 // [ "Name", "Type", ["Class1","Class2"], null, null, null, null, null, null, null, null, null, null, null, null, null]
 // or [ "Name", "Type", "Class1", null, null, null, null, null, null, null, null, null, null, null, null, null]
