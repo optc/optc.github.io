@@ -1031,7 +1031,7 @@ window.units = [
     [ "Hajrudin", "PSY", ["Tough","Fighter"], 4, 18, 5, 3, 70, null, 201, 177, 38, null, null, null, null],
     [ "Hajrudin, Pirate Mercenary", "PSY", ["Tough","Fighter"], 5, 30, 4, 4, 99, null, 1337, 740, 57, null, null, null, null],
     [ "Abdullah and Jeet", "STR", ["Slasher","Striker"], 4, 18, 6, 3, 70, null, 143, 143, 52, null, null, null, null],
-    [ "Abdullah and Jeet, Former Bounty Hunters", "STR", ["Slasher","Striker"], 5, 30, null, null, 99, null, null, null, null, null, null, null, null],
+    [ "Abdullah and Jeet, Former Bounty Hunters", "STR", ["Slasher","Striker"], 5, 30, 6, 4, 99, null, 920, 673, 156, null, null, null, null],
     [ "Bartolomeo", "STR", ["Striker","Ambition"], 5, 30, 4, 4, 70, null, 403, 278, 58, null, null, null, null],
     [ "Bartolomeo Evolution", "STR", ["Striker","Ambition"], 6, 55, 4, 5, 99, null, 1550, 769, 181, 3505, 1431, 341, null]
 	];
