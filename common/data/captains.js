@@ -2460,5 +2460,43 @@ window.captains = {
     1021: {
         atk: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") ? 1.75 : 1; },
         rcv: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") ? 1.75 : 1; }
+    },
+    1022: {
+        atk: function(p) { return 2; }
+    },
+    1024: {
+        atk: function(p) { return p.unit.class.has("Tough") ? 2 : 1; }
+    },
+    1025: {
+        atk: function(p) { return p.unit.class.has("Tough") || p.unit.class.has("Striker") ? 2 : 1; }
+    },
+    1026: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; },
+        rcv: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; }
+    },
+    1027: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? 2 : 1; },
+        rcv: function(p) { return p.unit.class.has("Fighter") ? 2 : 1; }
+    },
+    1028: {
+        hit: function(n) { return n > 21 ? 2.5 : 1; }
+    },
+    1029: {
+        hit: function(n) {
+			return n > 36 ? 3.5 :
+				n > 21 ? 2.5 : 1;
+		}
+    },
+    1030: {
+        atk: function(p) { return p.unit.class.has("Tough") && p.percHP >= 99.0 ? 2.5 : 1; }
+    },
+    1031: {
+        atk: function(p) { return p.unit.class.has("Tough") && p.percHP >= 99.0 ? 2.75 : 1; }
+    },
+    1032: {
+         atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Slasher") ? 1.5 : 1; }
+    },
+    1033: {
+         atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Slasher") ? 2.25 : 1; }
     }
 };

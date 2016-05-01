@@ -1208,5 +1208,41 @@ window.specials = {
     1018: {
         atk: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1},
         type: "class"
+    },
+    1024: {
+        orb: function(p) {
+            if(p.percHP >= 70.0){
+                return CrunchUtils.getOrbMultiplier(p.orb, 1, 1.25);
+            }else if(p.percHP >= 30.0){
+                return CrunchUtils.getOrbMultiplier(p.orb, 1, 1.5);
+            }else{
+                return CrunchUtils.getOrbMultiplier(p.orb, 1, 1.75);
+            }
+        }
+    },
+    1025: {
+        orb: function(p) {
+            if(p.percHP >= 70.0){
+                return CrunchUtils.getOrbMultiplier(p.orb, 1, 1.25);
+            }else if(p.percHP >= 30.0){
+                return CrunchUtils.getOrbMultiplier(p.orb, 1, 1.5);
+            }else{
+                return CrunchUtils.getOrbMultiplier(p.orb, 1, 1.75);
+            }
+        }
+    },
+    1028: {
+        //TODO
+       hit: function(n) { return n > 30 ? 1.75 : 1; } 
+    },
+    1029: {
+        //TODO
+       hit: function(n) { return n > 30 ? 1.75 : 1; } 
+    },
+    1030: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 2.25 : 1; }
+    },
+    1031: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 2.25 : 1; }
     }
 };

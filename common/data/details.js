@@ -4873,18 +4873,18 @@ window.details = {
 	},
 	1024: {
 		captain: "Boosts ATK of Tough characters by 2x",
-		special: "Amplifies the effect of orbs by a large amount for a variable number of turns proportionally to the crew's current HP",
-		specialNotes: "We don't currently know how large the boost is nor do we know how many turns he boosts by. Lower HP = Longer Boost",
+		special: "Boosts orbs for 2 turns, the exact multiplier changes depending on the current HP at the time the special was activated. ",
+		specialNotes: "Below 30% -> 1.75x orb boost, between 30% and 70% -> 1.5x, above 70% -> 1.25x",
 		specialName: "Eight-Impact Fist! Blow of Resentment"
 	},
 	1025: {
 		captain: "Boosts ATK of Tough and Striker characters by 2x",
-		special: "Amplifies the effect of orbs by a large amount for a variable number of turns proportionally to the crew's current HP",
-		specialNotes: "We don't currently know how large the boost is nor do we know how many turns he boosts by. Lower HP = Longer Boost",
+		special: "Boosts orbs for 2 turns, the exact multiplier changes depending on the current HP at the time the special was activated. ",
+		specialNotes: "Below 30% -> 1.75x orb boost, between 30% and 70% -> 1.5x, above 70% -> 1.25x",
 		specialName: "Eight-Impact Fist! Blow of Resentment"
 	},
 	1026: {
-		captain: "Boosts ATK and RCV of Fighters by 2x",
+		captain: "Boosts ATK and RCV of Fighters by 1.5x",
 		specialName: "Shooting Moon",
 		special: "Changes Captain orb into Matching orb, and switches orbs between slots three times"
 	},
@@ -4900,7 +4900,7 @@ window.details = {
         specialNotes: "Buffalo's Captain as a Special essentially"
     },
     1029: {
-		captain: "Boosts ATK of all characters by 2.5x after the 21st hit in the chain",
+		captain: "Boosts ATK of all characters by 2.5x after the 21st hit in the chain and by 3.5x after the 36th hit",
         specialName: "Rah-Rah-Rah Rampage",
         special: "Deals random damage to all enemies, boost ATK of all characters by 1.75x after 30th hit in the chain for 3 turns.",
         specialNotes: "Buffalo's Captain as a Special essentially"
@@ -4908,39 +4908,35 @@ window.details = {
     1030: {
 		captain: "Boosts ATK of Tough characters by 2.5x if HP is above 99% at the start of the turn",
         specialName: "Hero's Gungnir",
-        special: "Reduces crew's HP to 1, deals damage to one enemy depending on the amount of HP removed. Boosts ATK.",
-        specialNotes: "We do not know the ATK boost or the Damage just yet. Will be added when the unit releases."
+        special: "Reduces crew's HP to 1, deals 10x the removed HP as damage to one enemy. Boosts own ATK by 2.25x for 1 turn."
     },
     1031: {
 		captain: "Boosts ATK of Tough characters by 2.75x if HP is above 99% at the start of the turn",
         specialName: "Hero's Gungnir",
-        special: "Reduces crew's HP to 1, deals damage to one enemy depending on the amount of HP removed. Boosts ATK.",
-        specialNotes: "We do not know the ATK boost or the Damage just yet. Will be added when the unit releases."
+        special: "Reduces crew's HP to 1, deals 10x the removed HP as damage to one enemy. Boosts own ATK by 2.25x for 1 turn."
     },
 	1032: {
-		captain: "Reduces cooldown of Slasher and Striker characters by 1 turn at the start of the fight and...",
+		captain: "Boosts ATK of Striker and Slasher characters by 1.5x and reduces cooldown of Slasher and Striker characters by 1 turn at the start of the fight",
 		special: "Reduces Special Cooldown of Slasher and Strikers by 1 turn. For Slasher and Strikers, changes Badly Matching orbs into [RCV] orbs.",
-		specialName: "Surprise Pincer Attack",
-		specialNotes: "Rough translation, a proper translation will be put in once characters are released"
+		specialName: "Surprise Pincer Attack"
 	},
 	1033: {
-		captain: "Reduces cooldown of Slasher and Striker characters by 1 turn at the start of the fight and...",
+		captain: "Boosts ATK of Striker and Slasher characters by 2.25x and reduces cooldown of Slasher and Striker characters by 2 turn at the start of the fight",
 		special: "Reduces Special Cooldown of Slasher and Strikers by 1 turn. For Slasher and Strikers, changes Badly Matching orbs into [RCV] orbs.",
-		specialName: "Surprise Pincer Attack",
-		specialNotes: "Rough translation, a proper translation will be put in once characters are released"
+		specialName: "Surprise Pincer Attack"
 	},
 	1034: {
-		captain: "Boosts ATK of Striker characters by a variable amount depending on how many Strikers are on your team. If you don't attack with Bartoloemo, reduces damage received by 30% for that turn.",
+		captain: "Boosts ATK of Striker characters by a variable amount depending on how many Strikers are on your team. If you don't attack with Bartolomeo, reduces damage received by 30% for that turn.",
 		captainNotes: "ATK boost with 1 Striker is 1.25x. With 2 Strikers: 1.5x. With 3 Strikers: 1.75x. With 4 Strikers: 2x. With 5 Stikers: 2.5x. With 6 Strikers: 2.75x",
 		special: "Protects from defeat for 1 turn, and deals several times character's ATK in Typeless damage to one enemy",
-		specialNotes: "#{specialProportional : lower : 150 * ( 1 - (remaining HP) / (total HP) )}",
+		specialNotes: "#{specialProportional : lower : 150 * ( 1 - (remaining HP) / (total HP) )} <br> #{zombie}",
 		specialName: "Bari Bari No Pistol"
 	},
 	1035: {
-		captain: "Boosts ATK of Striker characters by a variable amount depending on how many Strikers are on your team. If you don't attack with Bartoloemo, reduces damage received by 30% for that turn.",
+		captain: "Boosts ATK of Striker characters by a variable amount depending on how many Strikers are on your team. If you don't attack with Bartolomeo, reduces damage received by 30% for that turn.",
 		captainNotes: "ATK boost with 1 Striker is 1.25x. With 2 Strikers: 1.5x. With 3 Strikers: 1.75x. With 4 Strikers: 2x. With 5 Stikers: 2.5x. With 6 Strikers: 2.75x",
 		special: "Protects from defeat for 1 turn, and deals several times character's ATK in Typeless damage to one enemy",
-		specialNotes: "#{specialProportional : lower : 150 * ( 1 - (remaining HP) / (total HP) )}",
+		specialNotes: "#{specialProportional : lower : 150 * ( 1 - (remaining HP) / (total HP) )} <br> #{zombie}",
 		specialName: "Bari Bari No Pistol"
 	}
 };
