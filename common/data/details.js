@@ -1512,13 +1512,13 @@ window.details = {
 	391: {
 		special: "Reduces damage received by 90% for 1 turn, reduces the defense of all enemies by 80% for 1 turn, poisons enemies for 1,000 damage for a single turn",
 		specialName: "Negative Hollow",
-		specialNotes: "#{poison}",
+		specialNotes: "Poison damage deals 1,000 damage exactly and will ignore enemy armor at the end of your turn",
 		captain: "Boosts RCV of DEX characters by 1.5x"
 	},
 	392: {
 		special: "Reduces damage received by 90% for 1 turn, reduces the defense of all enemies by 80% for 1 turn, poisons enemies for 1,000 damage for a single turn",
 		specialName: "Negative Hollow",
-		specialNotes: "#{poison}",
+		specialNotes: "Poison damage deals 1,000 damage exactly and will ignore enemy armor at the end of your turn",
 		captain: "Boosts RCV of DEX characters by 2x"
 	},
 	393: {
@@ -1752,15 +1752,15 @@ window.details = {
 		captain: "Boosts ATK by 2.25x following a chain of INT > PSY > QCK attacks no lower than Good"
 	},
 	437: {
-		special: "Recovers 3x character's RCV in HP, reduces damage received by 80% for 1 turn, deals 1,000 fixed damage to all enemies at the end of the following turn",
+		special: "Recovers 3x character's RCV in HP, reduces damage received by 80% for 1 turn, poisons enemies for 1,000 for a single turn",
 		specialName: "Negative Horo \"Sweet\"",
-		specialNotes: "#{fixed}",
+		specialNotes: "Poison damage deals 1,000 damage exactly and will ignore enemy armor at the end of your turn",
 		captain: "Boosts RCV of [DEX] characters by 3x if HP is below 30% at the start of the turn"
 	},
 	438: {
-		special: "Recovers 3x character's RCV in HP, reduces damage received by 80% for 1 turn, deals 1,000 fixed damage to all enemies at the end of the following turn",
+		special: "Recovers 3x character's RCV in HP, reduces damage received by 80% for 1 turn, poisons enemies for 1,000 for a single turn",
 		specialName: "Negative Horo \"Sweet\"",
-		specialNotes: "#{fixed}",
+		specialNotes: "Poison damage deals 1,000 damage exactly and will ignore enemy armor at the end of your turn",
 		captain: "Boosts RCV of [DEX] characters by 5x if HP is below 30% at the start of the turn"
 	},
 	439: {
@@ -4227,7 +4227,7 @@ window.details = {
 				"cooldown": 25
 			}
 		],
-		captain: "Boosts ATK of Tough characters by 2.25x, their HP by 1.5x, recovers 2x character's RCV in HP at the end of each turn",
+		captain: "Boosts ATK of Tough characters by 2.25x, and their HP by 1.5x. Recovers 2x character's RCV in HP at the end of each turn",
 		specialNotes: "#{stages}"
 	},
 	913: {
