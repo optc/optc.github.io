@@ -1023,7 +1023,7 @@ window.units = [
     [ "Monkey D. Luffy Road to Pirate King", "PSY", ["Fighter","Free Spirit"], 4, 15, 4, 2, 99, null, 200, 56, 55, 2000, 1000, 300, null],
 	[],
     [ "Don Chinjao", "INT", ["Tough","Fighter"], 4, 18, 6, 3, 70, null, 226, 187, 17, null, null, null, null],
-    [ "Don Chinjao, Flower Country Gang", "INT", ["Tough","Fighter"], 5, 30, 4, 4, 99, null, 1433, 746, 68, 2818, 1424, 185, null],
+    [ "Don Chinjao, Flower Country Gang", "INT", ["Tough","Striker"], 5, 30, 4, 4, 99, null, 1433, 746, 68, 2818, 1424, 185, null],
     [ "Blue Gilly", "QCK", ["Fighter","Free Spirit"], 4, 18, 6, 3, 70, null, 197, 138, 37, null, null, null, null],
     [ "Blue Gilly, Jao Kun Do Martial Artist", "QCK", ["Fighter","Free Spirit"], 5, 30, 7, 4, 99, null, 1253, 630, 129, null, null, null, null],
     [ "Funk Brothers", "DEX", ["Fighter","Ambition"], 4, 18, 5, 3, 70, null, 60, 172, 44, null, null, null, null],
