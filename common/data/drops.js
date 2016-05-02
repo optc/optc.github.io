@@ -998,8 +998,8 @@ window.drops = {
         {
             name: "Temptation!? The Queen of Kamabakka Queendom!",
             thumb: null,
-            condition: "None so far",
-            "All Dificulties": [ -874, -876, -878, -554, -813, -814, -566]
+            condition: "Only DEX/RCV/TND orbs will appear",
+            "All Dificulties": [ 1036, 1038, -874, -876, -878, -554, -813, -814, -566]
         }
 
     ],

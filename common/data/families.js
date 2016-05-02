@@ -1033,5 +1033,9 @@ window.families = [
 	"Abdullah and Jeet",
 	"Abdullah and Jeet",
 	"Bartomoleo",
-	"Bartomoleo"
+	"Bartomoleo",
+    "Emporio Ivankov",
+    "Emporio Ivankov",
+    "Inazuma",
+    "Inazuma"
 ];

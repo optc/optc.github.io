@@ -29,7 +29,7 @@ body {
     float: right;
     bottom: 10;
     right: 10;
-    z-index: -1;
+/*    z-index: -1;*/
 }
 
 #changelog > p {
@@ -111,4 +111,19 @@ body {
 #hide > img {
     margin-top: 15%;
     animation: fa-spin 3s infinite linear;
+}
+
+.slot {
+    display: inline-block;
+}
+
+.slot:hover {
+    outline: 1px solid red;
+}
+
+.slot.small {
+    width: 40px;
+    height: 40px;
+    background-size: 40px 40px;
+    margin: 1px;
 }

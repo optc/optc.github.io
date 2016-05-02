@@ -40,3 +40,21 @@ $(document).keydown(function(e) {
   }
 
 });
+
+window.onload = function() {
+    
+    //Add new Units with Pics here so they show up in the Updates
+    /// Units are about the Max you can add, otherwise you would need to implement another tr for them
+    var newUnits = [ 1011, 1012, 1013, 1014, 1016, 1018, 1019 ];
+
+    for (var i = 0, len = newUnits.length; i < len; i++) {
+        var unit = document.createElement("a");
+        unit.href = "/characters/#/view/"+newUnits[i];
+        unit.className = "slot small";
+        unit.target = "_blank";
+        unit.title = window.units[newUnits[i]-1][0];
+        unit.style = "background-image: url("+Utils.getThumbnailUrl(newUnits[i])+");";
+        
+        document.getElementById("newUnits").appendChild(unit);
+    }
+}
