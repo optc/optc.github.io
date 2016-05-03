@@ -1034,10 +1034,10 @@ window.units = [
     [ "Abdullah and Jeet, Former Bounty Hunters", "STR", ["Slasher","Striker"], 5, 30, 6, 4, 99, null, 920, 673, 156, 1970, 1346, 344, null],
     [ "Bartolomeo", "STR", ["Striker","Ambition"], 5, 30, 4, 4, 70, null, 403, 278, 58, 1623, 813, 232, null],
     [ "Bartolomeo the Cannibal", "STR", ["Striker","Ambition"], 6, 55, 4, 5, 99, null, 1550, 769, 181, 3505, 1431, 341, null],
-    [ "New Ivankov", "QCK", ["Free Spirit","Fighter"], 3, 12, null, null, null, null, null, null, null, null, null, null, null],
-    [ "New Ivankov Evolution", "QCK", ["Free Spirit","Fighter"], 4, 20, null, null, null, null, null, null, null, null, null, null, null],
-    [ "New Inazuma", "DEX", ["Free Spirit","Fighter"], 3, 7, null, null, null, null, null, null, null, null, null, null, null],
-    [ "New Inazuma", "DEX", ["Free Spirit","Fighter"], 4, 15, null, null, null, null, null, null, null, null, null, null, null]
+    [ "New Ivankov", "QCK", ["Free Spirit","Fighter"], 3, 12, null, null, null, null, 161, 39, 39, null, null, null, null],
+    [ "New Ivankov Evolution", "QCK", ["Free Spirit","Fighter"], 4, 20, null, null, 99, null, null, null, null, null, null, null, null],
+    [ "New Inazuma", "DEX", ["Free Spirit","Fighter"], 3, 7, 6, null, null, null, 39, 22, 30, 797, 321, 149, null],
+    [ "New Inazuma Evolution", "DEX", ["Free Spirit","Fighter"], 4, 15, 4, 2, 99, null, 730, 267, 100, null, null, null, null]
 	];
 // [ "Name", "Type", ["Class1","Class2"], null, null, null, null, null, null, null, null, null, null, null, null, null]
 // or [ "Name", "Type", "Class1", null, null, null, null, null, null, null, null, null, null, null, null, null]

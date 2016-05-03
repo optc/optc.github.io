@@ -2468,7 +2468,8 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Tough") ? 2 : 1; }
     },
     1025: {
-        atk: function(p) { return p.unit.class.has("Tough") || p.unit.class.has("Striker") ? 2 : 1; }
+        atk: function(p) { return p.unit.class.has("Tough") ? 2 : 1; },
+        hp: function(p) { return p.unit.class.has("Striker") ? 2 : 1; }
     },
     1026: {
         atk: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; },
@@ -2498,5 +2499,23 @@ window.captains = {
     },
     1033: {
          atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Slasher") ? 2.25 : 1; }
+    },
+    1036: {
+		hitAtk: function(p) {
+			return !p.unit.class.has("Free Spirit")? 1 : p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? 2 : 1;
+		},
+		hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
+	},
+    1037: {
+		hitAtk: function(p) {
+			return !p.unit.class.has("Free Spirit")? 1 : p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? 2.5 : 1;
+		},
+		hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
+	},
+    1038: {
+        atk: function(p) { return p.unit.type == "DEX" || p.unit.type == "QCK" ? 1.2 : 1; }
+    },
+    1039: {
+        atk: function(p) { return p.unit.type == "DEX" || p.unit.type == "QCK" ? 1.5 : 1; }
     }
 };

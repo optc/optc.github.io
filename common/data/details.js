@@ -4878,7 +4878,8 @@ window.details = {
 		specialName: "Eight-Impact Fist! Blow of Resentment"
 	},
 	1025: {
-		captain: "Boosts ATK of Tough and Striker characters by 2x",
+		captain: "Boosts ATK of Tough characters by 2x and boosts the HP of Striker characters by 2x",
+        captainNotes: "A character with both classes will get both boosts",
 		special: "Boosts orbs for 2 turns, the exact multiplier changes depending on the current HP at the time the special was activated. ",
 		specialNotes: "Below 30% -> 1.75x orb boost, between 30% and 70% -> 1.5x, above 70% -> 1.25x",
 		specialName: "Eight-Impact Fist! Blow of Resentment"
@@ -4938,5 +4939,25 @@ window.details = {
 		special: "Protects from defeat for 1 turn, and deals several times character's ATK in Typeless damage to one enemy",
 		specialNotes: "#{specialProportional : lower : 150 * ( 1 - (remaining HP) / (total HP) )} <br> #{zombie}",
 		specialName: "Bari Bari No Pistol"
-	}
+	},
+    1036: {
+        captain: "Boosts ATK of Free Spirit characters by 2x after scoring 3 Perfects in a row",
+        special: "Deals 13x ATK in QCK Damage to one Enemy, Changes Orbs depending on the current HP",
+        specialNotes: "HP>99%: Middle Left and Bottom Left Orbs to matching <br> 99%>HP>30%: Left Column to [G] orbs <br> HP<30%: Left Column to [RCV]"
+    },
+    1037: {
+        captain: "Boosts ATK of Free Spirit characters by 2.5x after scoring 3 Perfects in a row",
+        special: "Deals 13x ATK in QCK Damage to one Enemy, Changes Orbs depending on the current HP",
+        specialNotes: "HP>99%: Middle Left and Bottom Left Orbs to matching <br> 99%>HP>30%: Left Column to [G] orbs <br> HP<30%: Left Column to [RCV]"
+    },
+    1038: {
+        captain: "Boosts ATK and RCV of [DEX] and [QCK] units by 1.2x",
+        special: "Switch orbs between slots once, recover a small amount of health",
+        specialNotes: "The Heal amount will be updated once we figure it out"
+    },
+    1039: {
+        captain: "Boosts ATK and RCV of [DEX] and [QCK] units by 1.5x",
+        special: "Switch orbs between slots once, recover a small amount of health",
+        specialNotes: "The Heal amount will be updated once we figure it out"
+    }
 };
