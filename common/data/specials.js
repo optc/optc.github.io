@@ -594,11 +594,11 @@ window.specials = {
 		orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, 1, 1.75); }
 	},
 	755: {
-		atk: function(p) { return p.unit.class.has("Tough") ? 1.75 : 1; },
+		atk: function(p) { return p.unit.class.has("Powerhouse") ? 1.75 : 1; },
 		type: "class"
 	},
 	756: {
-		atk: function(p) { return p.unit.class.has("Tough") ? 1.75 : 1; },
+		atk: function(p) { return p.unit.class.has("Powerhouse") ? 1.75 : 1; },
 		type: "class"
 	},
 	761: {
@@ -830,7 +830,7 @@ window.specials = {
 		def: function() { return 0.5; }
 	},
 	853: {
-		atk: function(p) { return p.unit.class.has("Tough") || p.unit.class.has("Fighter") ? 1.2 : 1; },
+		atk: function(p) { return p.unit.class.has("Powerhouse") || p.unit.class.has("Fighter") ? 1.2 : 1; },
 		type: "class"
 	},
 	857: {
@@ -917,7 +917,7 @@ window.specials = {
 		type: "class"
 	},
 	883: {
-		atk: function(p) { return !p.unit.class.has('Tough') ? 1 : window.specials[883].multiplier; },
+		atk: function(p) { return !p.unit.class.has('Powerhouse') ? 1 : window.specials[883].multiplier; },
 		type: "class",
 		onActivation: function(p) {
 			var n = (window.specials[883].multiplier == 1.5 ? 1 : 0);
@@ -929,7 +929,7 @@ window.specials = {
 		}
 	},
 	884: {
-		atk: function(p) { return !p.unit.class.has('Tough') ? 1 : window.specials[884].multiplier; },
+		atk: function(p) { return !p.unit.class.has('Powerhouse') ? 1 : window.specials[884].multiplier; },
 		type: "class",
 		onActivation: function(p) {
 			var n = (window.specials[884].multiplier == 1.5 ? 1 : 0);
@@ -952,11 +952,11 @@ window.specials = {
 		def: function(p) { return 0.2; }
 	},
 	891: {
-		atk: function(p) { return p.unit.class.has("Tough") ? 1.25 : 1; },
+		atk: function(p) { return p.unit.class.has("Powerhouse") ? 1.25 : 1; },
 		type: "class"
 	},
 	902: {
-		atk: function(p) { return !p.unit.class.has('Tough') ? 1 : window.specials[902].multiplier; },
+		atk: function(p) { return !p.unit.class.has('Powerhouse') ? 1 : window.specials[902].multiplier; },
 		type: "class",
 		onActivation: function(p) {
 			var n = (window.specials[902].multiplier == 1.5 ? 1 : 0);
@@ -968,7 +968,7 @@ window.specials = {
 		}
 	},
 	903: {
-		atk: function(p) { return !p.unit.class.has('Tough') ? 1 : window.specials[903].multiplier; },
+		atk: function(p) { return !p.unit.class.has('Powerhouse') ? 1 : window.specials[903].multiplier; },
 		type: "class",
 		onActivation: function(p) {
 			var n = (window.specials[903].multiplier == 1.5 ? 1 : 0);
@@ -1021,8 +1021,8 @@ window.specials = {
 	},
 	911: {
 		atk: function(p) {
-			if (!window.specials[911].stage) return p.unit.class.has("Tough") ? 1.2 : 1;
-			if (window.specials[911].stage == 1) return p.unit.class.has("Tough") ? 2 : 1;
+			if (!window.specials[911].stage) return p.unit.class.has("Powerhouse") ? 1.2 : 1;
+			if (window.specials[911].stage == 1) return p.unit.class.has("Powerhouse") ? 2 : 1;
 		},
 		type: "class",
 		stage: -1,
@@ -1036,8 +1036,8 @@ window.specials = {
 	},
 	912: {
 		atk: function(p) {
-			if (!window.specials[912].stage) return p.unit.class.has("Tough") ? 1.2 : 1;
-			if (window.specials[912].stage == 1) return p.unit.class.has("Tough") ? 2 : 1;
+			if (!window.specials[912].stage) return p.unit.class.has("Powerhouse") ? 1.2 : 1;
+			if (window.specials[912].stage == 1) return p.unit.class.has("Powerhouse") ? 2 : 1;
 		},
 		type: "class",
 		stage: -1,
@@ -1119,7 +1119,7 @@ window.specials = {
 		type: "condition"
 	},
 	956: {
-		atk: function(p) { return p.unit.class.has("Tough") ? 1.2 : 1; },
+		atk: function(p) { return p.unit.class.has("Powerhouse") ? 1.2 : 1; },
 		type: "class"
 	},
 	961: {

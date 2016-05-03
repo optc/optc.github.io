@@ -905,7 +905,7 @@ window.drops = {
         {
             name: "Evil Manager Breed's Marine Circus!",
             thumb: 797,
-            condition: 'You can only bring Fighter and Tough units',
+            condition: 'You can only bring Fighter and Powerhouse units',
             "All Difficulties": [ 796, 798, 799, 800, -800, -639, -628, -562, -414, -432, -380, -75 ]
         },
 

@@ -3288,12 +3288,12 @@ window.details = {
 	747: {
 		special: "Deals 35x character's ATK in STR damage to one enemy, boosts chances of getting matching orbs for 3 turns",
 		specialName: "Rokuougan",
-		captain: "Boosts ATK of Tough characters by 3x if they have a matching orb, by 2.5x otherwise, reduces crew's RCV to 0"
+		captain: "Boosts ATK of Powerhouse characters by 3x if they have a matching orb, by 2.5x otherwise, reduces crew's RCV to 0"
 	},
 	748: {
 		special: "Deals 35x character's ATK in STR damage to one enemy, boosts chances of getting matching orbs for 3 turns",
 		specialName: "Rokuougan",
-		captain: "Boosts ATK of Tough characters by 3x if they have a matching orb, by 2.5x otherwise, reduces crew's RCV to 0"
+		captain: "Boosts ATK of Powerhouse characters by 3x if they have a matching orb, by 2.5x otherwise, reduces crew's RCV to 0"
 	},
 	749: {
 		special: "Deals random DEX damage to all enemies, randomizes all orbs",
@@ -3321,21 +3321,21 @@ window.details = {
 		special: "Deals 15x character's ATK in QCK damage to one enemy, amplifies the effect of orbs by 1.75x for 1 turn",
 		specialNotes: "#{orb : 1.75x}",
 		specialName: "Moonlight Ten Finger Pistol",
-		captain: "Boosts ATK of Tough characters by 2x"
+		captain: "Boosts ATK of Powerhouse characters by 2x"
 	},
 	754: {
 		special: "Deals 15x character's ATK in QCK damage to one enemy, amplifies the effect of orbs by 1.75x for 1 turn",
 		specialNotes: "#{orb : 1.75x}",
 		specialName: "Moonlight Ten Finger Pistol",
-		captain: "Boosts ATK of Tough characters by 2.5x"
+		captain: "Boosts ATK of Powerhouse characters by 2.5x"
 	},
 	755: {
-		special: "Reduces damage received by 50% for 1 turn, boosts ATK of Tough characters by 1.75x for 1 turn",
+		special: "Reduces damage received by 50% for 1 turn, boosts ATK of Powerhouse characters by 1.75x for 1 turn",
 		specialName: "Tekkai - Rin",
 		captain: "Boosts ATK of INT characters by 1.5x, reduces damage received from PSY enemies by 20%"
 	},
 	756: {
-		special: "Reduces damage received by 50% for 1 turn, boosts ATK of Tough characters by 1.75x for 1 turn",
+		special: "Reduces damage received by 50% for 1 turn, boosts ATK of Powerhouse characters by 1.75x for 1 turn",
 		specialName: "Tekkai - Rin",
 		captain: "Boosts ATK of INT characters by 2x, reduces damage received from PSY enemies by 30%"
 	},
@@ -3533,15 +3533,15 @@ window.details = {
 		special: "Deals 10 hits of random INT damage to random enemies, delays all enemies for 1 turn",
 		specialNotes: "#{randomHits : 10}",
 		specialName: "Gum-Gum Storm",
-		captain: "Boosts ATK of Tough characters by 3x, reduces crew's current HP by 10% at the end of each turn, reduces his own ATK multiplier by 0.1x at the end of each turn",
-		captainNotes: "His ATK multiplier will be 3.0x on the first turn, 2.9x on the second, 2.8x on the third and so on. The reduction stops once the multiplier is 1.0x. The multiplier affects all Tough units."
+		captain: "Boosts ATK of Powerhouse characters by 3x, reduces crew's current HP by 10% at the end of each turn, reduces his own ATK multiplier by 0.1x at the end of each turn",
+		captainNotes: "His ATK multiplier will be 3.0x on the first turn, 2.9x on the second, 2.8x on the third and so on. The reduction stops once the multiplier is 1.0x. The multiplier affects all Powerhouse units."
 	},
 	795: {
 		special: "Deals 10 hits of random INT damage to random enemies, delays all enemies for 1 turn",
 		specialNotes: "#{randomHits : 10}",
 		specialName: "Gum-Gum Storm",
-		captain: "Boosts ATK of Tough characters by 3.5x, reduces crew's current HP by 10% at the end of each turn, reduces his own ATK multiplier by 0.1x at the end of each turn",
-		captainNotes: "His ATK multiplier will be 3.5x on the first turn, 3.4x on the second, 3.3x on the third and so on. The reduction stops once the multiplier is 1.0x. The multiplier affects all Tough units."
+		captain: "Boosts ATK of Powerhouse characters by 3.5x, reduces crew's current HP by 10% at the end of each turn, reduces his own ATK multiplier by 0.1x at the end of each turn",
+		captainNotes: "His ATK multiplier will be 3.5x on the first turn, 3.4x on the second, 3.3x on the third and so on. The reduction stops once the multiplier is 1.0x. The multiplier affects all Powerhouse units."
 	},
 	796: {
 		special: "Slightly boosts chances of getting matching orbs for 3 turns, boosts own ATK by 1.75x for 1 turn",
@@ -3551,7 +3551,7 @@ window.details = {
 	797: {
 		special: "Slightly boosts chances of getting matching orbs for 3 turns, boosts own ATK by 1.75x for 1 turn",
 		specialName: "Peto-Peto Fruit, The Greatest Power",
-		captain: "Boosts ATK of Cerebral and Tough characters by 2x"
+		captain: "Boosts ATK of Cerebral and Powerhouse characters by 2x"
 	},
 	798: {
 		special: "Removes poison, following the activation of the special, if every unit scores a Perfect hit, boosts ATK of Fighter characters by 1.75x in the following turn",
@@ -3611,13 +3611,13 @@ window.details = {
 		special: "Deals 15x character's ATK in PSY damage to one enemy, boosts ATK against enemies with reduced defense by 1.3x for 3 turns"
 	},
 	809: {
-		captain: "Boosts ATK and RCV of Tough characters by 1.5x",
+		captain: "Boosts ATK and RCV of Powerhouse characters by 1.5x",
 		specialName: "Lola's Attack Chance",
 		special: "Reduces the defense of all enemies by 80% for 1 turn, amplifies the effect of orbs by 1.5x for 1 turn",
 		specialNotes: "#{orb : 1.5x}"
 	},
 	810: {
-		captain: "Boosts ATK of Tough characters by 2x and their RCV by 1.5x, reduces crew's current HP by 10% at the end of each turn",
+		captain: "Boosts ATK of Powerhouse characters by 2x and their RCV by 1.5x, reduces crew's current HP by 10% at the end of each turn",
 		specialName: "Lola's Attack Chance",
 		special: "Reduces the defense of all enemies by 80% for 1 turn, amplifies the effect of orbs by 1.5x for 1 turn",
 		specialNotes: "#{orb : 1.5x}"
@@ -3834,7 +3834,7 @@ window.details = {
 	},
 	853: {
 		specialName: "Robson: Serious Mode",
-		special: "Following the activation of the special, if every unit scores a Perfect hit, boosts ATK of Tough and Fighters characters by 1.2x for 3 turns"
+		special: "Following the activation of the special, if every unit scores a Perfect hit, boosts ATK of Powerhouse and Fighters characters by 1.2x for 3 turns"
 	},
 	854: {
 		captain: "Boosts ATK of DEX chracters by 1.5x, reduces damage received by 10%",
@@ -4027,14 +4027,14 @@ window.details = {
 		special: "Doubles damage received for 2 turns, reduces RCV by 90% for 2 turns, boosts ATK of Shooter and Free Spirit characters by 1.75x for 1 turn"
 	},
 	883: {
-		captain: "Boosts ATK and HP of Tough characters by 1.25x",
+		captain: "Boosts ATK and HP of Powerhouse characters by 1.25x",
 		specialName: "Hakoku Sovereignity",
-		special: "Deals 20x character's ATK in character's type damage to all enemies, boosts ATK of Tough characters by 1.5x for 1 turn. If \"Hakoku Sovereignity\" is used again in the same turn the special is activated in, boosts ATK of Tough characters by 2x instead."
+		special: "Deals 20x character's ATK in character's type damage to all enemies, boosts ATK of Powerhouse characters by 1.5x for 1 turn. If \"Hakoku Sovereignity\" is used again in the same turn the special is activated in, boosts ATK of Powerhouse characters by 2x instead."
 	},
 	884: {
-		captain: "Boosts ATK and HP of Tough characters by 1.5x",
+		captain: "Boosts ATK and HP of Powerhouse characters by 1.5x",
 		specialName: "Hakoku Sovereignity",
-		special: "Deals 20x character's ATK in character's type damage to all enemies, boosts ATK of Tough characters by 1.5x for 1 turn. If \"Hakoku Sovereignity\" is used again in the same turn the special is activated in, boosts ATK of Tough characters by 2x instead."
+		special: "Deals 20x character's ATK in character's type damage to all enemies, boosts ATK of Powerhouse characters by 1.5x for 1 turn. If \"Hakoku Sovereignity\" is used again in the same turn the special is activated in, boosts ATK of Powerhouse characters by 2x instead."
 	},
 	885: {
 		captain: "Boosts ATK of Fighter characters by 2x, reduces damage received by 10%",
@@ -4067,9 +4067,9 @@ window.details = {
 		special: "Changes [STR] orbs into [DEX] orbs, deals 10x character's ATK in DEX damage to all enemies"
 	},
 	891: {
-		captain: "Boosts ATK and RCV of Tough characters by 1.75x",
+		captain: "Boosts ATK and RCV of Powerhouse characters by 1.75x",
 		specialName: "Resurrection of the Dead",
-		special: "Reduces damage received by 50% for 1 turn, boosts ATK of Tough characters by 1.25x for 1 turn",
+		special: "Reduces damage received by 50% for 1 turn, boosts ATK of Powerhouse characters by 1.25x for 1 turn",
 		},
 	892: {
 		captain: "Boosts chain multiplier by 2x",
@@ -4077,7 +4077,7 @@ window.details = {
 		special: "Switches orbs between slots three times"
 	},
 	893: {
-		captain: "Boosts ATK of Tough characters by 3x after scoring 3 Perfects in a row",
+		captain: "Boosts ATK of Powerhouse characters by 3x after scoring 3 Perfects in a row",
 		specialName: "Oars Ball",
 		special: "Reduces damage received by 50% for 1 turn, deals 30x character's ATK in STR damage to all enemies"
 	},
@@ -4126,14 +4126,14 @@ window.details = {
 		specialNotes: "The orb shuffle only applies to Shooter and Free Spirit characters, other classes are unaffected. #{gOrbs}"
 	},
 	902: {
-		captain: "Boosts ATK and HP of Tough characters by 1.25x",
+		captain: "Boosts ATK and HP of Powerhouse characters by 1.25x",
 		specialName: "Hakoku Sovereignity",
-		special: "Deals 20x character's ATK in character's type damage to all enemies, boosts ATK of Tough characters by 1.5x for 1 turn. If \"Hakoku Sovereignity\" is used again in the same turn the special is activated in, boosts ATK of Tough characters by 2x instead."
+		special: "Deals 20x character's ATK in character's type damage to all enemies, boosts ATK of Powerhouse characters by 1.5x for 1 turn. If \"Hakoku Sovereignity\" is used again in the same turn the special is activated in, boosts ATK of Powerhouse characters by 2x instead."
 	},
 	903: {
-		captain: "Boosts ATK and HP of Tough characters by 1.5x",
+		captain: "Boosts ATK and HP of Powerhouse characters by 1.5x",
 		specialName: "Hakoku Sovereignity",
-		special: "Deals 20x character's ATK in character's type damage to all enemies, boosts ATK of Tough characters by 1.5x for 1 turn. If \"Hakoku Sovereignity\" is used again in the same turn the special is activated in, boosts ATK of Tough characters by 2x instead."
+		special: "Deals 20x character's ATK in character's type damage to all enemies, boosts ATK of Powerhouse characters by 1.5x for 1 turn. If \"Hakoku Sovereignity\" is used again in the same turn the special is activated in, boosts ATK of Powerhouse characters by 2x instead."
 	},
 	904: {
 		captain: "Protects from defeat as long as HP is above 50%",
@@ -4204,30 +4204,30 @@ window.details = {
 		specialName: "Diable Jambe: Premier Hachis",
 		special: [
 			{
-				"description": "Deals 13x character's ATK in DEX damage to one enemy, boosts ATK of Tough characters by 1.2x for 1 turn",
+				"description": "Deals 13x character's ATK in DEX damage to one enemy, boosts ATK of Powerhouse characters by 1.2x for 1 turn",
 				"cooldown": 15
 			},
 			{
-				"description": "Deals 20x character's ATK in DEX damage to one enemy, boosts ATK of Tough characters by 2x for 1 turn",
+				"description": "Deals 20x character's ATK in DEX damage to one enemy, boosts ATK of Powerhouse characters by 2x for 1 turn",
 				"cooldown": 25
 			}
 		],
-		captain: "Boosts ATK and HP of Tough characters by 1.5x",
+		captain: "Boosts ATK and HP of Powerhouse characters by 1.5x",
 		specialNotes: "#{stages}"
 	},
 	912: {
 		specialName: "Diable Jambe: Premier Hachis",
 		special: [
 			{
-				"description": "Deals 13x character's ATK in DEX damage to one enemy, boosts ATK of Tough characters by 1.2x for 1 turn",
+				"description": "Deals 13x character's ATK in DEX damage to one enemy, boosts ATK of Powerhouse characters by 1.2x for 1 turn",
 				"cooldown": 15
 			},
 			{
-				"description": "Deals 20x character's ATK in DEX damage to one enemy, boosts ATK of Tough characters by 2x for 1 turn",
+				"description": "Deals 20x character's ATK in DEX damage to one enemy, boosts ATK of Powerhouse characters by 2x for 1 turn",
 				"cooldown": 25
 			}
 		],
-		captain: "Boosts ATK of Tough characters by 2.25x, and their HP by 1.5x. Recovers 2x character's RCV in HP at the end of each turn",
+		captain: "Boosts ATK of Powerhouse characters by 2.25x, and their HP by 1.5x. Recovers 2x character's RCV in HP at the end of each turn",
 		specialNotes: "#{stages}"
 	},
 	913: {
@@ -4295,12 +4295,12 @@ window.details = {
 		specialNotes: "The exact multiplier used is chosen based on the number of [STR] orbs consumed: 0 orbs - 3.5x ATK; 1 orb - 7x ATK; 2 orbs - 14x ATK; 3 orbs - 21x ATK; 4 orbs - 35x ATK; 5 orbs - 91x ATK; 6 orbs - 140x ATK."
 	},
 	925: {
-		captain: "Boosts ATK of Tough characters by 2x",
+		captain: "Boosts ATK of Powerhouse characters by 2x",
 		specialName: "Let's go, Jailer Beasts!",
 		special: "Deals 15x ATK to 1 enemy in [QCK] damage, boosts ATK against enemies with reduced defense by 1.3x for 3 turns"
 	},
 	926: {
-		captain: "Boosts ATK of Tough characters by 2.5x",
+		captain: "Boosts ATK of Powerhouse characters by 2.5x",
 		specialName: "Let's go, Jailer Beasts!",
 		special: "Deals 15x ATK to 1 enemy in [QCK] damage, boosts ATK against enemies with reduced defense by 1.3x for 3 turns"
 	},
@@ -4329,11 +4329,11 @@ window.details = {
 		special: "Deals 13x ATK to 1 enemy in [DEX] Damage. Turns [BLOCK] orbs into [RCV] orbs"
 	},
 	932: {
-		captain: "Boosts ATK of Tough Characters by 1.5x, and their HP by 1.5x",
+		captain: "Boosts ATK of Powerhouse Characters by 1.5x, and their HP by 1.5x",
 		specialName: "Rock Domination Wall",
 		special: [
 			{
-				"description": "For Ambition and Tough characters, changes [EMPTY] and Bad orbs to Matching. Cuts the current HP of all enemies by 20%",
+				"description": "For Ambition and Powerhouse characters, changes [EMPTY] and Bad orbs to Matching. Cuts the current HP of all enemies by 20%",
 				"cooldown": [ 25, 11 ]
 			},
 			{
@@ -4344,11 +4344,11 @@ window.details = {
 		specialNotes: "#{stages}"	
 		},
 	933: {
-		captain: "Boosts ATK of Tough Characters by 2.25x, and their HP by 1.5x",
+		captain: "Boosts ATK of Powerhouse Characters by 2.25x, and their HP by 1.5x",
 		specialName: "Rock Domination Wall",
 		special: [
 			{
-				"description": "For Ambition and Tough characters, changes [EMPTY] and Bad orbs to Matching. Cuts the current HP of all enemies by 20%",
+				"description": "For Ambition and Powerhouse characters, changes [EMPTY] and Bad orbs to Matching. Cuts the current HP of all enemies by 20%",
 				"cooldown": [ 25, 11 ]
 			},
 			{
@@ -4479,7 +4479,7 @@ window.details = {
 	956:{
 		captain: "Boosts ATK and HP of [INT] Characters by 1.5x",
 		specialName: "Fishman karate! I'll Finish You",
-		special: "Boosts ATK of Tough characters by 1.2x for 2 turns"
+		special: "Boosts ATK of Powerhouse characters by 1.2x for 2 turns"
 	},
 	957:{
 		specialName: "First Aid",
@@ -4552,12 +4552,12 @@ window.details = {
 		special: "Deals 25x ATK to one enemy. Changes own orb to matching orb"
 	},
 	973:{
-		captain: "Boosts ATK of Tough Characters by 2x if HP is above 99% at the start of the turn",
+		captain: "Boosts ATK of Powerhouse Characters by 2x if HP is above 99% at the start of the turn",
 		specialName: "Sentoumaru Special",
 		special: "Deals 20,000 fixed damage to one enemy. Changes friend captain's orb into Matching orb"
 	},
 	974:{
-		captain: "Boosts ATK of Tough Characters by 2.5x if HP is above 99% at the start of the turn",
+		captain: "Boosts ATK of Powerhouse Characters by 2.5x if HP is above 99% at the start of the turn",
 		specialName: "Sentoumaru Special",
 		special: "Deals 20,000 fixed damage to one enemy. Changes friend captain's orb into Matching orb"
 	},
@@ -4615,7 +4615,7 @@ window.details = {
         special: "Changes own orb into [DEX] and randomizes every other orb"
     },
     981: {
-        captain: "Boosts ATK of Fighters and Tough characters by 2x and sharply reduces their RCV",
+        captain: "Boosts ATK of Fighters and Powerhouse characters by 2x and sharply reduces their RCV",
         captainNotes: "The RCV Reduction is around 90%",
         specialName: "Martial Art Diving Fist",
         special: "Boosts own ATK by 1.75x for 1 turn and deals 800 fixed damage to one enemy",
@@ -4707,10 +4707,10 @@ window.details = {
 		specialNotes: "#{stages}"
 	},
     996: {
-        captain: "Boosts ATK of Tough characters by 2x",
+        captain: "Boosts ATK of Powerhouse characters by 2x",
         special: [
 			{
-				"description": "For Tough characters, changes [EMPTY] and Bad orbs to Matching orbs.",
+				"description": "For Powerhouse characters, changes [EMPTY] and Bad orbs to Matching orbs.",
 				"cooldown": 11
 			},
 			{
@@ -4722,11 +4722,11 @@ window.details = {
 		specialNotes: "#{stages}"
     },
     997: {
-		captain: "Boosts ATK of Tough characters by 2.25x, makes [TND] and [RCV] orbs \"beneficial\" to Tough characters",
+		captain: "Boosts ATK of Powerhouse characters by 2.25x, makes [TND] and [RCV] orbs \"beneficial\" to Powerhouse characters",
 		captainNotes: "\"Beneficial\" orbs grant the same ATK boost as matching orbs while retaining their original function.",
         special: [
 			{
-				"description": "For Tough characters, changes [EMPTY] and Bad orbs to Matching orbs.",
+				"description": "For Powerhouse characters, changes [EMPTY] and Bad orbs to Matching orbs.",
 				"cooldown": 11
 			},
 			{
@@ -4777,12 +4777,12 @@ window.details = {
 		special: "Changes the orbs in the left column into [RCV] orbs"
 	},
 	1005: {
-		captain: "Boosts ATK of Tough characters by 1.5x",
+		captain: "Boosts ATK of Powerhouse characters by 1.5x",
 		specialName: "Rush to Freedom",
 		special: "Boosts own ATK by 1.75x for 1 turn"
 	},
 	1006: {
-		captain: "Boosts ATK and HP of Tough characters by 1.5x",
+		captain: "Boosts ATK and HP of Powerhouse characters by 1.5x",
 		specialName: "Rush to Freedom",
 		special: "Boosts own ATK by 1.75x for 1 turn"
 	},
@@ -4808,8 +4808,8 @@ window.details = {
 		specialName: "Evil Beast's Horn Pierce"
 	},
 	1011:{
-		captain: "Boosts ATK of Ambition characters by 1.75x, and boosts ATK of Tough characters by 1.5x",
-		captainNotes: "The bonus is cumulative. Ambition Tough characters get a 2.625x bonus.",
+		captain: "Boosts ATK of Ambition characters by 1.75x, and boosts ATK of Powerhouse characters by 1.5x",
+		captainNotes: "The bonus is cumulative. Ambition Powerhouse characters get a 2.625x bonus.",
 		special: "Boosts own ATK by 1.3x for 5 turns, reduces damage received by 20% for 5 turns, deals 13x character's ATK as [INT] damage to one enemy",
 		specialName: "Evil Beast's Horn Pierce"
 	},
@@ -4824,7 +4824,7 @@ window.details = {
 	1014: {
 		special: "Binds himself for 1 turn and makes Perfects easier to hit for 2 turns",
 		specialName: "Scapegoat Substitute",
-		captain: "Boosts ATK of Tough characters by 2x, and Recovers 2x character's RCV in HP at the end of each turn"
+		captain: "Boosts ATK of Powerhouse characters by 2x, and Recovers 2x character's RCV in HP at the end of each turn"
 	},
 	1015: {
 		captain: "Boosts ATK of [INT] characters by 2.75x if they have a matching orb",
@@ -4872,13 +4872,13 @@ window.details = {
 		specialName: "Gum-Gum Gigant Rifle: New Star"
 	},
 	1024: {
-		captain: "Boosts ATK of Tough characters by 2x",
+		captain: "Boosts ATK of Powerhouse characters by 2x",
 		special: "Boosts orbs for 2 turns, the exact multiplier changes depending on the current HP at the time the special was activated. ",
 		specialNotes: "Below 30% -> 1.75x orb boost, between 30% and 70% -> 1.5x, above 70% -> 1.25x",
 		specialName: "Eight-Impact Fist! Blow of Resentment"
 	},
 	1025: {
-		captain: "Boosts ATK of Tough characters by 2x and boosts the HP of Striker characters by 2x",
+		captain: "Boosts ATK of Powerhouse characters by 2x and boosts the HP of Striker characters by 2x",
         captainNotes: "A character with both classes will get both boosts",
 		special: "Boosts orbs for 2 turns, the exact multiplier changes depending on the current HP at the time the special was activated. ",
 		specialNotes: "Below 30% -> 1.75x orb boost, between 30% and 70% -> 1.5x, above 70% -> 1.25x",
@@ -4907,12 +4907,12 @@ window.details = {
         specialNotes: "Buffalo's Captain as a Special essentially"
     },
     1030: {
-		captain: "Boosts ATK of Tough characters by 2.5x if HP is above 99% at the start of the turn",
+		captain: "Boosts ATK of Powerhouse characters by 2.5x if HP is above 99% at the start of the turn",
         specialName: "Hero's Gungnir",
         special: "Reduces crew's HP to 1, deals 10x the removed HP as damage to one enemy. Boosts own ATK by 2.25x for 1 turn."
     },
     1031: {
-		captain: "Boosts ATK of Tough characters by 2.75x if HP is above 99% at the start of the turn",
+		captain: "Boosts ATK of Powerhouse characters by 2.75x if HP is above 99% at the start of the turn",
         specialName: "Hero's Gungnir",
         special: "Reduces crew's HP to 1, deals 10x the removed HP as damage to one enemy. Boosts own ATK by 2.25x for 1 turn."
     },
