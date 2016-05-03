@@ -4943,21 +4943,23 @@ window.details = {
     1036: {
         captain: "Boosts ATK of Free Spirit characters by 2x after scoring 3 Perfects in a row",
         special: "Deals 13x ATK in QCK Damage to one Enemy, Changes Orbs depending on the current HP",
+        specialName: "Kenpo: Kick Thrust Drop",
         specialNotes: "HP>99%: Middle Left and Bottom Left Orbs to matching <br> 99%>HP>30%: Left Column to [G] orbs <br> HP<30%: Left Column to [RCV]"
     },
     1037: {
         captain: "Boosts ATK of Free Spirit characters by 2.5x after scoring 3 Perfects in a row",
         special: "Deals 13x ATK in QCK Damage to one Enemy, Changes Orbs depending on the current HP",
+        specialName: "Kenpo: Kick Thrust Drop",
         specialNotes: "HP>99%: Middle Left and Bottom Left Orbs to matching <br> 99%>HP>30%: Left Column to [G] orbs <br> HP<30%: Left Column to [RCV]"
     },
     1038: {
         captain: "Boosts ATK and RCV of [DEX] and [QCK] units by 1.2x",
-        special: "Switch orbs between slots once, recover a small amount of health",
-        specialNotes: "The Heal amount will be updated once we figure it out"
+        special: "Switches orbs between slots once, recovers 0.3x character's RCV in HP",
+        specialName: "Great Scissors"
     },
     1039: {
         captain: "Boosts ATK and RCV of [DEX] and [QCK] units by 1.5x",
-        special: "Switch orbs between slots once, recover a small amount of health",
-        specialNotes: "The Heal amount will be updated once we figure it out"
+        special: "Switches orbs between slots once, recovers 0.3x character's RCV in HP",
+        specialName: "Great Scissors"
     }
 };

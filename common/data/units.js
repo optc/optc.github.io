@@ -1022,22 +1022,22 @@ window.units = [
     [ "Sugar Cherry", "INT", ["Shooter","Cerebral"], 5, 20, 5, 3, 99, null, 731, 300, 198, 1621, 717, 442, null],
     [ "Monkey D. Luffy Road to Pirate King", "PSY", ["Fighter","Free Spirit"], 4, 15, 4, 2, 99, null, 200, 56, 55, 2000, 1000, 300, null],
 	[],
-    [ "Don Chinjao", "INT", ["Tough","Fighter"], 4, 18, 6, 3, 70, null, 226, 187, 17, 1505, 808, 100, null],
-    [ "Don Chinjao, Flower Country Gang", "INT", ["Tough","Striker"], 5, 30, 4, 4, 99, null, 1433, 746, 68, 2818, 1424, 185, null],
-    [ "Blue Gilly", "QCK", ["Fighter","Free Spirit"], 4, 18, 6, 3, 70, null, 197, 138, 37, 1329, 688, 160, null],
-    [ "Blue Gilly, Jao Kun Do Martial Artist", "QCK", ["Fighter","Free Spirit"], 5, 30, 7, 4, 99, null, 1253, 630, 129, 2555, 1300, 279, null],
-    [ "Funk Brothers", "DEX", ["Fighter","Ambition"], 4, 18, 5, 3, 70, null, 60, 172, 44, 937, 824, 109, null],
-    [ "Funk Brothers, Mogaro Kingdom Assassins", "DEX", ["Fighter","Ambition"], 5, 30, 8, 4, 99, null, 1500, 824, 77, 2920, 1250, 226, null],
-    [ "Hajrudin", "PSY", ["Tough","Fighter"], 4, 18, 5, 3, 70, null, 201, 177, 38, 1403, 795, 116, null],
-    [ "Hajrudin, Pirate Mercenary", "PSY", ["Tough","Fighter"], 5, 30, 4, 4, 99, null, 1337, 740, 57, 2700, 1402, 205, null],
-    [ "Abdullah and Jeet", "STR", ["Slasher","Striker"], 4, 18, 6, 3, 70, null, 143, 143, 52, 969, 722, 206, null],
-    [ "Abdullah and Jeet, Former Bounty Hunters", "STR", ["Slasher","Striker"], 5, 30, 6, 4, 99, null, 920, 673, 156, 1970, 1346, 344, null],
-    [ "Bartolomeo", "STR", ["Striker","Ambition"], 5, 30, 4, 4, 70, null, 403, 278, 58, 1623, 813, 232, null],
-    [ "Bartolomeo the Cannibal", "STR", ["Striker","Ambition"], 6, 55, 4, 5, 99, null, 1550, 769, 181, 3505, 1431, 341, null],
-    [ "New Ivankov", "QCK", ["Free Spirit","Fighter"], 3, 12, null, null, null, null, 161, 39, 39, null, null, null, null],
-    [ "New Ivankov Evolution", "QCK", ["Free Spirit","Fighter"], 4, 20, null, null, 99, null, null, null, null, null, null, null, null],
-    [ "New Inazuma", "DEX", ["Free Spirit","Fighter"], 3, 7, 6, null, null, null, 39, 22, 30, 797, 321, 149, null],
-    [ "New Inazuma Evolution", "DEX", ["Free Spirit","Fighter"], 4, 15, 4, 2, 99, null, 730, 267, 100, null, null, null, null]
+    [ "Don Chinjao", "INT", [ "Tough","Fighter" ], 4, 18, 6, 3, 70, null, 226, 187, 17, 1505, 808, 100, null ],
+    [ "Don Chinjao, Flower Country Gang", "INT", [ "Tough","Striker" ], 5, 30, 4, 4, 99, null, 1433, 746, 68, 2818, 1424, 185, null ],
+    [ "Blue Gilly", "QCK", [ "Fighter","Free Spirit" ], 4, 18, 6, 3, 70, null, 197, 138, 37, 1329, 688, 160, null ],
+    [ "Blue Gilly, Jao Kun Do Martial Artist", "QCK", [ "Fighter","Free Spirit" ], 5, 30, 7, 4, 99, null, 1253, 630, 129, 2555, 1300, 279, null ],
+    [ "Funk Brothers", "DEX", [ "Fighter","Ambition" ], 4, 18, 5, 3, 70, null, 60, 172, 44, 937, 824, 109, null ],
+    [ "Funk Brothers, Mogaro Kingdom Assassins", "DEX", [ "Fighter","Ambition" ], 5, 30, 8, 4, 99, null, 1500, 824, 77, 2920, 1250, 226, null ],
+    [ "Hajrudin", "PSY", [ "Tough","Fighter" ], 4, 18, 5, 3, 70, null, 201, 177, 38, 1403, 795, 116, null ],
+    [ "Hajrudin, Pirate Mercenary", "PSY", [ "Tough","Fighter" ], 5, 30, 4, 4, 99, null, 1337, 740, 57, 2700, 1402, 205, null ],
+    [ "Abdullah and Jeet", "STR", [ "Slasher","Striker" ], 4, 18, 6, 3, 70, null, 143, 143, 52, 969, 722, 206, null ],
+    [ "Abdullah and Jeet, Former Bounty Hunters", "STR", [ "Slasher","Striker" ], 5, 30, 6, 4, 99, null, 920, 673, 156, 1970, 1346, 344, null ],
+    [ "Bartolomeo", "STR", [ "Striker","Ambition" ], 5, 30, 4, 4, 70, null, 403, 278, 58, 1623, 813, 232, null ],
+    [ "Bartolomeo the Cannibal", "STR", [ "Striker","Ambition" ], 6, 55, 4, 5, 99, null, 1550, 769, 181, 3505, 1431, 341, null ],
+    [ "Emporio Ivankov Queen of the Secret Garden", "QCK", [ "Free Spirit","Fighter" ], 3, 12, null, null, null, null, 161, 39, 39, null, null, null, null ],
+    [ "Emporio Ivankov Queen of the Garden of Miracles", "QCK", [ "Free Spirit","Fighter" ], 4, 20, null, null, 99, null, null, null, null, null, null, null, null ],
+    [ "Inazuma Maiden of the Secret Garden", "DEX", [ "Free Spirit","Fighter" ], 3, 7, 6, null, null, null, 39, 22, 30, 797, 321, 149, null ],
+    [ "Inazuma Maiden Planning to Change ", "DEX", [ "Free Spirit","Fighter" ], 4, 15, 4, 2, 99, null, 730, 267, 100, null, null, null, null ]
 	];
-// [ "Name", "Type", ["Class1","Class2"], null, null, null, null, null, null, null, null, null, null, null, null, null]
-// or [ "Name", "Type", "Class1", null, null, null, null, null, null, null, null, null, null, null, null, null]
+// [ "Name", "Type", [ "Class1","Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ]
+// or [ "Name", "Type", "Class1", null, null, null, null, null, null, null, null, null, null, null, null, null ]
