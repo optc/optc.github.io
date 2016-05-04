@@ -4333,7 +4333,7 @@ window.details = {
 		specialName: "Rock Domination Wall",
 		special: [
 			{
-				"description": "For Ambition and Powerhouse characters, changes [EMPTY] and Bad orbs to Matching. Cuts the current HP of all enemies by 20%",
+				"description": "For Ambition and Powerhouse characters, changes [EMPTY] and Bad orbs to Matching. Cuts the current HP of all enemies by 10%",
 				"cooldown": [ 25, 11 ]
 			},
 			{
@@ -4348,7 +4348,7 @@ window.details = {
 		specialName: "Rock Domination Wall",
 		special: [
 			{
-				"description": "For Ambition and Powerhouse characters, changes [EMPTY] and Bad orbs to Matching. Cuts the current HP of all enemies by 20%",
+				"description": "For Ambition and Powerhouse characters, changes [EMPTY] and Bad orbs to Matching. Cuts the current HP of all enemies by 10%",
 				"cooldown": [ 25, 11 ]
 			},
 			{
