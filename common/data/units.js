@@ -1037,7 +1037,11 @@ window.units = [
     [ "Emporio Ivankov Queen of the Secret Garden", "QCK", [ "Free Spirit","Fighter" ], 3, 12, 5, 1, 50, 392109, 161, 39, 39, 1198, 492, 202, 1 ],
     [ "Emporio Ivankov Queen of the Garden of Miracles", "QCK", [ "Free Spirit","Fighter" ], 4, 20, 4, 2, 99, 3000000, 1120, 443, 141, 2007, 906, 322, 1 ],
     [ "Inazuma Maiden of the Secret Garden", "DEX", [ "Free Spirit","Fighter" ], 3, 7, 6, 1, 35, 136167, 39, 22, 30, 797, 321, 149, 1 ],
-    [ "Inazuma Maiden Planning to Change ", "DEX", [ "Free Spirit","Fighter" ], 4, 15, 4, 2, 99, 1066998, 730, 267, 100, 1209, 694, 229, 1 ]
+    [ "Inazuma Maiden Planning to Change ", "DEX", [ "Free Spirit","Fighter" ], 4, 15, 4, 2, 99, 1066998, 730, 267, 100, 1209, 694, 229, 1 ],
+    [ "Colosseum Jozu", "STR", [ "Fighter", "Powerhouse" ], 4, 25, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Colosseum Jozu Evolution", "STR", [ "Fighter", "Powerhouse" ], 5, 40, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Colosseum Killer", "DEX", [ "Striker", "Slasher" ], 4, 25, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Colosseum Killer Evolution", "DEX", [ "Striker", "Slasher" ], 5, 40, null, null, null, null, null, null, null, null, null, null, null ]
 	];
-// [ "Name", "Type", [ "Class1","Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ]
+// [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ]
 // or [ "Name", "Type", "Class1", null, null, null, null, null, null, null, null, null, null, null, null, null ]
