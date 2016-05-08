@@ -1240,9 +1240,11 @@ window.specials = {
        hit: function(n) { return n > 30 ? 1.75 : 1; } 
     },
     1030: {
-        atk: function(p) { return p.slot == p.sourceSlot ? 2.25 : 1; }
+        atk: function(p) { return p.slot == p.sourceSlot ? 2.25 : 1; },
+		type: "type"
     },
     1031: {
-        atk: function(p) { return p.slot == p.sourceSlot ? 2.25 : 1; }
+        atk: function(p) { return p.slot == p.sourceSlot ? 2.25 : 1; },
+		type: "type"
     }
 };
