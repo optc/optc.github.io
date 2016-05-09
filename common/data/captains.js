@@ -2501,10 +2501,10 @@ window.captains = {
          atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Slasher") ? 2.25 : 1; }
     },
     1034: {
-         atk: function(p) { return 2.75; }
+        atk: function(p) { return p.unit.class.has("Striker") ? 2.75 : 1; }
     },
     1035: {
-         atk: function(p) { return 2.75; }
+        atk: function(p) { return p.unit.class.has("Striker") ? 2.75 : 1; }
     },
     1036: {
 		hitAtk: function(p) {
