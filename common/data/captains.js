@@ -1,6 +1,6 @@
 window.captains = {
 	2: {
-		atk: function(p) { return p.unit.type == "STR" ? 1.5 : 1; }
+		atk: function(p){ return p.unit.type == "STR" ? 1.5 : 1; }
 	},
 	3: {
 		atk: function(p) { return p.unit.type == "STR" ? 1.5 : 1; }
@@ -2499,6 +2499,12 @@ window.captains = {
     },
     1033: {
          atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Slasher") ? 2.25 : 1; }
+    },
+    1034: {
+         atk: function(p) { return 2.75; }
+    },
+    1035: {
+         atk: function(p) { return 2.75; }
     },
     1036: {
 		hitAtk: function(p) {

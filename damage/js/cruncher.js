@@ -101,6 +101,10 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         ['STR','QCK','DEX','PSY','INT'].forEach(function(type) {
             result[type] = crunchForType(type);
         });
+        var classArray = ['Fighter', 'Slasher', 'Free Spirit', 'Powerhouse', 'Shooter', 'Striker', 'Cerebral', 'Ambition'];
+        for (var i = 0, j = classArray.length; i < j; i++) {
+            result[classArray[i]] = 0;
+        }
         result.team = getTeamDetails();
         var hpMax = 0, rcvTotal = 0;
         team.forEach(function(x,n) {
@@ -117,7 +121,16 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             rcv *= getShipBonus('rcv',false,x.unit,n);
             rcv *= getEffectBonus('rcv',x.unit);
             rcvTotal += Math.floor(applyCaptainEffectsAndSpecialsToRCV(n,rcv));
+            //Counting how many of each class on a team
+            //If unit has only one class
+            if(x.unit.class[2]){
+                result[x.unit.class]++;
+            }else{//if unit has 2 classes
+                result[x.unit.class[0]]++;
+                result[x.unit.class[1]]++;
+            }
         });
+//window.alert("Fighter: " + result[classArray[0]] + " Slasher: " + result[classArray[1]] + " Free Spirit: " + result[classArray[2]] + " Powerhouse: " + result[classArray[3]] + " Shooter: " + result[classArray[4]] + " Striker: " + result[classArray[5]] + " Cerebral: " + result[classArray[6]] + " Ambition: " + result[classArray[7]]);
         result.rcv = Math.max(0,rcvTotal);
         var cost = team.slice(1,6).reduce(function(prev,next) { return prev + (!next.unit ? 0 : next.unit.cost); },0);
         result.cost = { cost: cost, level: Math.max(1,Math.floor(cost / 2) * 2 - 18) };

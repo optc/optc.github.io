@@ -31,7 +31,7 @@ window.CrunchUtils.okamaSort = function(array, data) {
     if (temp.length != data.length) return null;
     else return [ temp.concat(that) ];
 };
-
+    
 window.CrunchUtils.mihawkSort = function(array) {
     var result = [ ];
     // atk-based
