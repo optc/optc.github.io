@@ -321,22 +321,27 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         // apply hits
         for (var i=0;i<combo;++i) {
             ++result.hits;
-            // apply combo shield if active
-            if (mapEffect.shieldLeft > 0) {
-                --mapEffect.shieldLeft;
-                continue;
-            }
             lastAtk = unitAtk;
             // apply hit-based captain effects if any
             cptsWith.hitMultipliers.forEach(function(x) { lastAtk *= x.hit(result.hits); });
             // apply defense
             lastHit = lastAtk / unit.combo;
             lastHit = Math.ceil(Math.max(1, lastHit - currentDefense));
+            // apply combo shield if active
+            if (mapEffect.shieldLeft > 0) {
+                if (!mapEffect.comboType) {
+                    --mapEffect.shieldLeft;
+                }
+                continue;
+            }
             // add hit to current total
             result.result += lastHit;
         }
+        if (mapEffect.comboType == hitModifier && mapEffect.shieldLeft > 0) {
+            --mapEffect.shieldLeft;
+        }
         // apply hit bonus
-        if (bonusDamageBase > 0) {
+        if (bonusDamageBase > 0 && mapEffect.shieldLeft == 0) {
             if (lastHit > 1) result.result += Math.ceil(lastAtk * 0.9 * bonusDamageBase);
             else result.result += Math.max(0,Math.ceil(lastAtk * (0.9 * bonusDamageBase + 1 / unit.combo)) - currentDefense);
         }
@@ -601,6 +606,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if (data.orb) enabledSpecials.push({ orb: data.orb, permanent: true, sourceSlot: -1 });
             if (data.chainLimiter) mapEffect.chainLimiter = data.chainLimiter;
             if (data.comboShield) mapEffect.comboShield = data.comboShield;
+            if (data.comboType) mapEffect.comboType = data.comboType;
             if (data.damage) mapEffect.damage = data.damage;
         }
         // team

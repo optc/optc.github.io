@@ -2,7 +2,7 @@ window.effects = {
 
     // always use unique IDs, and don't ever change an ID once you've set it
     // IDs must always be greater than 0
-    // last ID used: 25
+    // last ID used: 27
 
     'Baroque Works (pre-v4.0)': {
         description: 'Stats of non-Fighter units reduced by 90%',
@@ -222,6 +222,22 @@ window.effects = {
         id: 25,
         orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 10/15 : 1); },
         gOrbsEnabled: true
+    },
+    
+    'Colosseum Kid': {
+        description: 'Perfect hit barrier (2 hits)',
+        thumb: 966,
+        id: 26,
+        comboShield: 2,
+        comboType: 'Perfect'
+    },
+    
+    'Colosseum Fukuro': {
+        description: 'Perfect hit barrier (3 hits)',
+        thumb: 758,
+        id: 27,
+        comboShield: 3,
+        comboType: 'Perfect'
     }
 
 };
