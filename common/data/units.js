@@ -1021,7 +1021,7 @@ window.units = [
     [ "Sugar Cherry Tree", "INT", ["Shooter","Cerebral"], 4, 13, 7, 2, 50, null, null, null, null, 799, 355, 249, null],
     [ "Sugar Cherry", "INT", ["Shooter","Cerebral"], 5, 20, 5, 3, 99, null, 731, 300, 198, 1621, 717, 442, null],
     [ "Monkey D. Luffy Road to Pirate King", "PSY", ["Fighter","Free Spirit"], 4, 15, 4, 2, 99, 2000000, 200, 56, 55, 2000, 1000, 300, 1 ],
-	[],
+	[ "Portgas D. Ace Dream that Lead to the Pirate King", "INT", [ "Shooter", "Free Spirit" ], 4, 20, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Don Chinjao", "INT", [ "Powerhouse","Fighter" ], 4, 18, 6, 3, 70, 1066998, 226, 187, 17, 1505, 808, 100, 1 ],
     [ "Don Chinjao, Flower Country Gang", "INT", [ "Powerhouse","Striker" ], 5, 30, 4, 4, 99, 4000000, 1433, 746, 68, 2818, 1424, 185, 1 ],
     [ "Blue Gilly", "QCK", [ "Fighter","Free Spirit" ], 4, 18, 6, 3, 70, 1066998, 197, 138, 37, 1330, 689, 162, 1 ],
@@ -1038,10 +1038,12 @@ window.units = [
     [ "Emporio Ivankov Queen of the Garden of Miracles", "QCK", [ "Free Spirit","Fighter" ], 4, 20, 4, 2, 99, 3000000, 1120, 443, 141, 2007, 906, 322, 1 ],
     [ "Inazuma Maiden of the Secret Garden", "DEX", [ "Free Spirit","Fighter" ], 3, 7, 6, 1, 35, 136167, 39, 22, 30, 797, 321, 149, 1 ],
     [ "Inazuma Maiden Planning to Change ", "DEX", [ "Free Spirit","Fighter" ], 4, 15, 4, 2, 99, 1066998, 730, 267, 100, 1209, 694, 229, 1 ],
-    [ "Colosseum Jozu", "STR", [ "Fighter", "Powerhouse" ], 4, 25, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Colosseum Jozu Evolution", "STR", [ "Fighter", "Powerhouse" ], 5, 40, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Colosseum Killer", "DEX", [ "Striker", "Slasher" ], 4, 25, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Colosseum Killer Evolution", "DEX", [ "Striker", "Slasher" ], 5, 40, null, null, null, null, null, null, null, null, null, null, null ]
+    [ "Jozu Whitebeard 3rd Div. Commander", "STR", [ "Fighter", "Powerhouse" ], 4, 25, 6, 2, 70, null, null, null, null, null, null, null, null ],
+    [ "\"Diamond\" Jozu Whitebeard 3rd Div. Commander", "STR", [ "Fighter", "Powerhouse" ], 5, 40, 5, 3, 99, null, 1392, 640, 120, null, null, null, null ],
+    [ "Killer, Kid Pirates", "DEX", [ "Striker", "Slasher" ], 4, 25, 6, 2, 70, null, null, null, null, null, null, null, null ],
+    [ "\"Massacre Soldier\" Killer, Kid PIrates", "DEX", [ "Striker", "Slasher" ], 5, 40, 4, 3, 99, null, null, null, null, null, null, null, null ],
+    [ "Legend Law", "PSY", [ "Slasher", "Free Spirit" ], 5, 30, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Legend Law Evolution", "PSY", [ "Slasher", "Free Spirit" ], 6, 55, null, null, null, null, null, null, null, null, null, null, null ]
 	];
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ]
 // or [ "Name", "Type", "Class1", null, null, null, null, null, null, null, null, null, null, null, null, null ]

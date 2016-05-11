@@ -2523,5 +2523,21 @@ window.captains = {
     },
     1039: {
         atk: function(p) { return p.unit.type == "DEX" || p.unit.type == "QCK" ? 1.5 : 1; }
+    },
+    1040: {
+        atk: function(p) { return p.unit.type == "STR" ? 1.5 : 1; },
+        hp: function(p) { return p.unit.type == "STR" ? 1.5 : 1; }
+    },
+    1041: {
+        atk: function(p) { return p.unit.type == "STR" ? 2 : 1; },
+        hp: function(p) { return p.unit.type == "STR" ? 2 : 1; }
+    },
+    1042: {
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Slasher") ? 2 : 1;},
+        rcv: function(p) { return 0; }
+    },
+    1043: {
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Slasher") ? (p.orb == 2.0 ? 2.75 : 2) : 1;},
+        rcv: function(p) { return 0; }
     }
 };

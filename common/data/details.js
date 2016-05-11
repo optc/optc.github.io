@@ -4961,5 +4961,27 @@ window.details = {
         captain: "Boosts ATK and RCV of [DEX] and [QCK] units by 1.5x",
         special: "Switches orbs between slots once, recovers 0.3x character's RCV in HP",
         specialName: "Great Scissors"
+    },
+    1040: {
+        captain: "Boosts ATK and HP of [STR] units by 1.5x",
+        special: "Deals severe random STR damage to all enemies. Boosts ATK of everyone by 1.5x if HP is below 30% at the time the special is activated",
+        specialName: "Ice Throw",
+        specialNotes: "Random Damage Ranges will be added as a Note when we find it."
+    },
+    1041: {
+        captain: "Boosts ATK and HP of [STR] units by 2x",
+        special: "Deals severe random STR damage to all enemies. Boosts ATK of everyone by 1.5x if HP is below 30% at the time the special is activated",
+        specialName: "Ice Throw",
+        specialNotes: "Random Damage Ranges will be added as a Note when we find it."
+    },
+    1042: {
+        captain: "Boosts ATK of Striker and Slasher characters by 2x, reduces crew's RCV to 0.",
+        special: "Changes [STR] and [QCK] orbs on Strikers and Slashers to matching orbs, cuts the current HP of one enemy by 7%",
+        specialName: "Hitting Size"
+    },
+    1043: {
+        captain: "Boosts ATK of Striker and Slasher characters by 2.75x if they have a matching Orb, by 2x otherwise, reduces crew's RCV to 0.",
+        special: "Changes [STR] and [QCK] orbs on Strikers and Slashers to matching orbs, cuts the current HP of one enemy by 7%",
+        specialName: "Hitting Size"
     }
 };

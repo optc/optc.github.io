@@ -1246,5 +1246,13 @@ window.specials = {
     1031: {
         atk: function(p) { return p.slot == p.sourceSlot ? 2.25 : 1; },
 		type: "type"
+    },
+    1040: {
+        atk: function(p) { return p.percHP < 30.0 ? 1.5 : 1; },
+		type: "type"
+    },
+    1041: {
+        atk: function(p) { return p.percHP < 30.0 ? 1.5 : 1; },
+		type: "type"
     }
 };

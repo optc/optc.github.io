@@ -1021,7 +1021,7 @@ window.families = [
 	"Sugar",
 	"Sugar",
 	"Monkey D. Luffy",
-	"",
+	"Portgas D. Ace",
 	"Don Chinjao",
 	"Don Chinjao",
 	"Blue Gilly",
@@ -1037,5 +1037,9 @@ window.families = [
     "Emporio Ivankov",
     "Emporio Ivankov",
     "Inazuma",
-    "Inazuma"
+    "Inazuma",
+    "Jozu",
+    "Jozu",
+    "Killer",
+    "Killer"
 ];
