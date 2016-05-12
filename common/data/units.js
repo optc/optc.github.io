@@ -1042,7 +1042,7 @@ window.units = [
     [ "\"Diamond\" Jozu Whitebeard 3rd Div. Commander", "STR", [ "Fighter", "Powerhouse" ], 5, 40, 5, 3, 99, null, 1392, 640, 120, null, null, null, null ],
     [ "Killer, Kid Pirates", "DEX", [ "Striker", "Slasher" ], 4, 25, 6, 2, 70, null, null, null, null, null, null, null, null ],
     [ "\"Massacre Soldier\" Killer, Kid PIrates", "DEX", [ "Striker", "Slasher" ], 5, 40, 4, 3, 99, null, null, null, null, null, null, null, null ],
-    [ "Trafalgar Law, Worst Generation", "PSY", [ "Slasher", "Free Spirit" ], 5, 30, 4, 4, 70, null, 549, 341, 138, null, null, null, null ],
+    [ "Trafalgar Law, Worst Generation", "PSY", [ "Slasher", "Free Spirit" ], 5, 30, 4, 4, 70, null, 549, 341, 138, 1378, 813, 297, null ],
     [ "Trafalgar Law Warlord of the Sea", "PSY", [ "Slasher", "Free Spirit" ], 6, 55, 6, 5, 99, null, 1302, 747, 241, 2790, 1484, 470, null ]
 	];
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ]
