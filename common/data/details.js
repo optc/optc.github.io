@@ -4990,7 +4990,7 @@ window.details = {
         specialName: "Hitting Size"
     },
     1044: {
-        captain: "Boosts ATK of Slaher and Free Spirit characters by 2x at the start of the chain, by 3x after the 3rd Perfect and by 4x after the 5th Perfect.",
+        captain: "Boosts ATK of Slasher and Free Spirit characters by 2x at the start of the chain, by 3x after the 3rd Perfect and by 4x after the 5th Perfect.",
         specialName: "Gamma Knife",
         special: [
 			{
@@ -5005,7 +5005,7 @@ window.details = {
 		specialNotes: "#{stages}"
     },
     1045: {
-        captain: "Boosts ATK of Slaher and Free Spirit characters by 2x at the start of the chain, by 3x after the 3rd Perfect and by 4x after the 5th Perfect.",
+        captain: "Boosts ATK of Slasher and Free Spirit characters by 2x at the start of the chain, by 3x after the 3rd Perfect and by 4x after the 5th Perfect.",
         specialName: "Gamma Knife",
         special: [
 			{

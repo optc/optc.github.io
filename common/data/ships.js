@@ -215,5 +215,12 @@ window.ships = [
             return !p.unit.class.has('Cerebral') ? 1 : [ 1.1, 1.1, 1.2, 1.2, 1.2, 1.2, 1.2, 1.3, 1.3, 1.35 ][p.boatLevel - 1];
         }
     },
+    
+    { // 17
+        name: '2nd Anniversary Thousand Sunny',
+        thumb: null,
+        description: 'Boosts ATK by 1.5x. At the beggining of the stage all specials are charged already.',
+        atk: function(p) { return 1.5; },
+    }
 
 ];
