@@ -2464,6 +2464,9 @@ window.captains = {
     1022: {
         atk: function(p) { return 2; }
     },
+    1023: {
+        atk: function(p) { return p.unit.class.has("Free Spirit") ? 2.25 : 1; }
+    },
     1024: {
         atk: function(p) { return p.unit.class.has("Powerhouse") ? 2 : 1; }
     },
@@ -2539,5 +2542,19 @@ window.captains = {
     1043: {
         atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Slasher") ? (p.orb == 2.0 ? 2.75 : 2) : 1;},
         rcv: function(p) { return 0; }
+    },
+    1044: {
+        hitAtk: function(p) {
+            if (!p.unit.class.has("Slasher") && !p.unit.class.has("Free Spirit")) return 1;
+			return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 4 : p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? 3 : 2;
+		},
+		hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
+    },
+    1045: {
+        hitAtk: function(p) {
+            if (!p.unit.class.has("Slasher") && !p.unit.class.has("Free Spirit")) return 1;
+			return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 4 : p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? 3 : 2;
+		},
+		hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
     }
 };

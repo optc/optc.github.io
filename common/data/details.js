@@ -4871,6 +4871,11 @@ window.details = {
 		special: "Deals 13x character's ATK as [PSY] damage to all enemies. Changes [BOMB], [EMPTY], and [TND] orbs to [PSY]",
 		specialName: "Gum-Gum Gigant Rifle: New Star"
 	},
+    1023: {
+        captain: "Boosts ATK of Free Spirit characters by 2.25x",
+        special: "Deals 13x characters ATK in INT damage to all enemies, boosts atk of Free Spirit characters by 1.75x for one turn.",
+        specialName: "Flame Mirror: Dawn"
+    },
 	1024: {
 		captain: "Boosts ATK of Powerhouse characters by 2x",
 		special: "Boosts orbs for 2 turns, the exact multiplier changes depending on the current HP at the time the special was activated. ",
@@ -4983,5 +4988,35 @@ window.details = {
         captain: "Boosts ATK of Striker and Slasher characters by 2.75x if they have a matching Orb, by 2x otherwise, reduces crew's RCV to 0.",
         special: "Changes [STR] and [QCK] orbs on Strikers and Slashers to matching orbs, cuts the current HP of one enemy by 7%",
         specialName: "Hitting Size"
+    },
+    1044: {
+        captain: "Boosts ATK of Slaher and Free Spirit characters by 2x at the start of the chain, by 3x after the 3rd Perfect and by 4x after the 5th Perfect.",
+        specialName: "Gamma Knife",
+        special: [
+			{
+				"description": "Makes Damage and Health Cutting Specials of Slasher and Free Spirit characters bypass all defensive Buffs, deals 20x his ATK in PSY damage to one enemy.",
+				"cooldown": 18
+			},
+			{
+				"description": "Makes Damage and Health Cutting Specials of all characters bypass all defensive Buffs, deals 20x his ATK in PSY damage to one enemy.",
+				"cooldown": 25
+			}
+		],
+		specialNotes: "#{stages}"
+    },
+    1045: {
+        captain: "Boosts ATK of Slaher and Free Spirit characters by 2x at the start of the chain, by 3x after the 3rd Perfect and by 4x after the 5th Perfect.",
+        specialName: "Gamma Knife",
+        special: [
+			{
+				"description": "Makes Damage and Health Cutting Specials of Slasher and Free Spirit characters bypass all defensive Buffs, deals 20x his ATK in PSY damage to one enemy.",
+				"cooldown": 18
+			},
+			{
+				"description": "Makes Damage and Health Cutting Specials of all characters bypass all defensive Buffs, deals 20x his ATK in PSY damage to one enemy.",
+				"cooldown": 25
+			}
+		],
+		specialNotes: "#{stages}"
     }
 };

@@ -1209,6 +1209,10 @@ window.specials = {
         atk: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1},
         type: "class"
     },
+    1023: {
+        atk: function(p) { return p.unit.class.has("Free Spirit") ? 1.75 : 1},
+        type: "class"
+    },
     1024: {
         orb: function(p) {
             if(p.percHP >= 70.0){

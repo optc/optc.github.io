@@ -1176,6 +1176,13 @@ window.drops = {
             Expert: [ 659, 680, 682, 684 ],
 			"Completion Units": [686]
         },
+        
+        {
+            name: '2nd Anniversary Celebration! Duel! Ace',
+            thumb: 1023,
+            Expert: [ 1023 ],
+            Master: [ 1023 ]
+        },
 
         {
             name: 'Colosseum',
