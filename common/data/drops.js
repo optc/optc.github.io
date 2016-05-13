@@ -1156,6 +1156,14 @@ window.drops = {
             showManual: true,
             thumb: 989,
             Ultimate: [ 985, 986, 987, 988, -989, -4, -8, -11, -12, -15, -16, -556, -528, -520, -554, -558, -20, -217, -709]
+        },
+        
+        {
+            name: 'Sabo Raid',
+            thumb: null,
+            Ultimate: [ 1046 ],
+            Master: [ 1046 ],
+            Expert: [ 1046 ]
         }
 
     ],

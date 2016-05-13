@@ -1043,7 +1043,9 @@ window.units = [
     [ "Killer, Kid Pirates", "DEX", [ "Striker", "Slasher" ], 4, 25, 6, 2, 70, 1066998, 455, 310, 36, 949, 797, 113, 1 ],
     [ "\"Massacre Soldier\" Killer, Kid PIrates", "DEX", [ "Striker", "Slasher" ], 5, 40, 4, 3, 99, 4000000, 887, 728, 64, 1879, 1424, 189, 1 ],
     [ "Trafalgar Law, Worst Generation", "PSY", [ "Slasher", "Free Spirit" ], 5, 30, 4, 4, 70, null, 549, 341, 138, 1378, 813, 297, null ],
-    [ "Trafalgar Law Warlord of the Sea", "PSY", [ "Slasher", "Free Spirit" ], 6, 55, 6, 5, 99, null, 1302, 747, 241, 2790, 1484, 470, null ]
+    [ "Trafalgar Law Warlord of the Sea", "PSY", [ "Slasher", "Free Spirit" ], 6, 55, 6, 5, 99, null, 1302, 747, 241, 2790, 1484, 470, null ],
+    [ "Raid Sabo", "DEX", [ "Free Spirit", "Fighter" ], 4, 30, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Raid Sabo Evolution", "DEX", [ "Free Spirit", "Fighter" ], 5, 50, null, null, null, null, null, null, null, null, null, null, null ]
 	];
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ]
 // or [ "Name", "Type", "Class1", null, null, null, null, null, null, null, null, null, null, null, null, null ]
