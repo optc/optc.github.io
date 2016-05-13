@@ -1002,6 +1002,12 @@ window.drops = {
             thumb: 1037,
             condition: "Only DEX/RCV/TND orbs will appear",
             "All Dificulties": [ 1036, 1038, -874, -876, -878, -554, -813, -814, -566]
+        },
+        {
+            name: "The One Who Seeks the Truth of History: Archaeologist Nico Olvia",
+            thumb: null,
+            condition: "None so far",
+            "All Difficulties": [ -556, -567, -586, -614, -816, -870, -872, -908]
         }
 
     ],
