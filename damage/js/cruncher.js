@@ -345,6 +345,11 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if (lastHit > 1) result.result += Math.ceil(lastAtk * 0.9 * bonusDamageBase);
             else result.result += Math.max(0,Math.ceil(lastAtk * (0.9 * bonusDamageBase + 1 / unit.combo)) - currentDefense);
         }
+        // apply fixed threshold barrier if active
+        if (mapEffect.barrierThreshold && result.result > mapEffect.barrierThreshold) {
+            result.result = mapEffect.barrierThreshold +
+                Math.floor((result.result - mapEffect.barrierThreshold) * (1 - mapEffect.barrierReduction));
+        }
         return result;
     };
 
@@ -608,6 +613,10 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if (data.comboShield) mapEffect.comboShield = data.comboShield;
             if (data.comboType) mapEffect.comboType = data.comboType;
             if (data.damage) mapEffect.damage = data.damage;
+            if (data.barrierThreshold) {
+                mapEffect.barrierThreshold = data.barrierThreshold;
+                mapEffect.barrierReduction = data.barrierReduction;
+            }
         }
         // team
         team = $scope.data.team.map(function(x,n) {
