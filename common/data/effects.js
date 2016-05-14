@@ -219,9 +219,16 @@ window.effects = {
     'Colosseum Franky': {
         description: 'Activates [G] orb Support, boosts Orbs by 1.5x',
         thumb: 560,
-        id: 25,
+        id: 25, // don't change this
         orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 10/15 : 1); },
         gOrbsEnabled: true
-    }
+    },
+
+    'Colosseum Killer': {
+        description: 'ATK of all units reduced by 95%',
+        thumb: 1043,
+        id: 26, // don't change this
+        atk: function(p) { return 0.05; }
+    },
 
 };

@@ -4680,11 +4680,11 @@ window.details = {
 		specialName: "Peeping Mind",
 		special: [
 			{
-				"description": "Reduces Special Cooldown of Cerebral and Fighters by 1 turn. Shows Enemy Attack, Defense, Combo Hits, Current / Total HP, Attack Interval, 'Specials based on turns?', and 'Effect after Death?'",
+				"description": "Reduces Special Cooldown of Cerebral and Fighters by 1 turn. Shows Enemy Attack, De\fense, Combo Hits, Current / Total HP, Attack Interval, 'Specials based on turns?', and 'Effect after Death?'",
 				"cooldown": 13
 			},
 			{
-				"description": "Reduces Special Cooldown of Cerebral and Fighters by 2 turn. Shows Enemy Attack, Defense, Combo Hits, Current / Total HP, Attack Interval, 'Specials based on turns?', and 'Effect after Death?'",
+				"description": "Reduces Special Cooldown of Cerebral and Fighters by 2 turn. Shows Enemy Attack, De\fense, Combo Hits, Current / Total HP, Attack Interval, 'Specials based on turns?', and 'Effect after Death?'",
 				"cooldown": 20
 			}
 		],
@@ -4696,11 +4696,11 @@ window.details = {
 		specialName: "Peeping Mind",
 		special: [
 			{
-				"description": "Reduces Special Cooldown of Cerebral and Fighters by 1 turn. Shows Enemy Attack, Defense, Combo Hits, Current / Total HP, Attack Interval, 'Specials based on turns?', and 'Effect after Death?'",
+				"description": "Reduces Special Cooldown of Cerebral and Fighters by 1 turn. Shows Enemy Attack, De\fense, Combo Hits, Current / Total HP, Attack Interval, 'Specials based on turns?', and 'Effect after Death?'",
 				"cooldown": 13
 			},
 			{
-				"description": "Reduces Special Cooldown of Cerebral and Fighters by 2 turn. Shows Enemy Attack, Defense, Combo Hits, Current / Total HP, Attack Interval, 'Specials based on turns?', and 'Effect after Death?'",
+				"description": "Reduces Special Cooldown of Cerebral and Fighters by 2 turn. Shows Enemy Attack, De\fense, Combo Hits, Current / Total HP, Attack Interval, 'Specials based on turns?', and 'Effect after Death?'",
 				"cooldown": 20
 			}
 		],
