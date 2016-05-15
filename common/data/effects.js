@@ -2,7 +2,7 @@ window.effects = {
 
     // always use unique IDs, and don't ever change an ID once you've set it
     // IDs must always be greater than 0
-    // last ID used: 28
+    // last ID used: 29
 
     'Baroque Works (pre-v4.0)': {
         description: 'Stats of non-Fighter units reduced by 90%',
@@ -219,15 +219,22 @@ window.effects = {
     'Colosseum Franky': {
         description: 'Activates [G] orb Support, boosts Orbs by 1.5x',
         thumb: 560,
-        id: 25,
+        id: 25, // don't change this
         orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 10/15 : 1); },
         gOrbsEnabled: true
+    },
+
+    'Colosseum Killer': {
+        description: 'ATK of all units reduced by 95%',
+        thumb: 1043,
+        id: 26, // don't change this
+        atk: function(p) { return 0.05; }
     },
     
     'Colosseum Kid': {
         description: 'Perfect hit barrier (2 hits)',
         thumb: 966,
-        id: 26,
+        id: 27,
         comboShield: 2,
         comboType: 'Perfect'
     },
@@ -235,7 +242,7 @@ window.effects = {
     'Colosseum Fukuro': {
         description: 'Perfect hit barrier (3 hits)',
         thumb: 758,
-        id: 27,
+        id: 28,
         comboShield: 3,
         comboType: 'Perfect'
     },
@@ -243,7 +250,7 @@ window.effects = {
     'Colosseum Cricket': {
         description: 'Fixed threshold barrier (200,000)',
         thumb: 428,
-        id: 28,
+        id: 29,
         barrierThreshold: 200000,
         barrierReduction: 0.99
     }
