@@ -1159,8 +1159,8 @@ window.drops = {
         },
         
         {
-            name: 'Sabo Raid',
-            thumb: null,
+            name: 'Clash!! Sabo',
+            thumb: 1047,
             Ultimate: [ 1046 ],
             Master: [ 1046 ],
             Expert: [ 1046 ]

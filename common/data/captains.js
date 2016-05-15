@@ -2556,5 +2556,17 @@ window.captains = {
 			return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 4 : p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? 3 : 2;
 		},
 		hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
-    }
+    },
+    1046: {
+		hitAtk: function(p) {
+			return !p.unit.class.has("Free Spirit") ? 1 : p.modifiers.slice(0, p.chainPosition).subcontains(["Good", "Great", "Perfect"]) ? 3.5 : 1;
+		},
+		hitModifiers: ["Good", "Great", "Perfect", "Perfect", "Perfect", "Perfect"]
+	},
+    1047: {
+		hitAtk: function(p) {
+			return !p.unit.class.has("Free Spirit") ? 1 : p.modifiers.slice(0, p.chainPosition).subcontains(["Good", "Great", "Perfect"]) ? 3.5 : 1;
+		},
+		hitModifiers: ["Good", "Great", "Perfect", "Perfect", "Perfect", "Perfect"]
+	}
 };
