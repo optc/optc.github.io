@@ -1258,5 +1258,11 @@ window.specials = {
     1041: {
         atk: function(p) { return p.percHP < 30.0 ? 1.5 : 1; },
 		type: "type"
+    },
+    1046: {
+        staticMult: function(p) { return 55; }
+    },
+    1047: {
+        staticMult: function(p) { return 55; }
     }
 };

@@ -244,8 +244,35 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         var result = applySpecialMultipliersAndCaptainEffects(damage,hitModifiers,noSorting);
         // apply chain and bonus multipliers
         result = applyChainAndBonusMultipliers(result,hitModifiers);
-        if (mapEffect.damage) result.result = applyEffectDamage(result.result, mapEffect.damage);
+        if (mapEffect.damage) result.result = applyEffectDamage(result.result, mapEffect.damage);        
+        
+        //Specials that add multiplier damage
+        //Very Specific for Raid Sabo for now
+        var conditionalMultiplier = 1.0;
+        if(!(staticMultiplier.length > 1)){
+            //Check if conditional Boosts are activated since they raise 
+            for (var j=0;j<enabledSpecials.length;++j) {
+                if  (enabledSpecials[j].type=='condition'){
+                    conditionalMultiplier = enabledSpecials[j].atk();
+                }
+            }
+            //Add the static extra Damage to each attacking member
+            for (var j=0;j<enabledSpecials.length;++j) {
+                if (enabledSpecials[j].hasOwnProperty('staticMult')){
+                    var slot = enabledSpecials[j].sourceSlot-1;
+                    var baseDamage = getStatOfUnit(team[slot+1],'atk');
+                    var mult = enabledSpecials[j].staticMult();
+                    var staticDamage = Math.ceil(baseDamage*mult*conditionalMultiplier);
+                    for(var i=0; i<result.result.length;i++){ 
+                        if((hitModifiers[i]=="Great")||(hitModifiers[i]=="Good")||(hitModifiers[i]=="Perfect")){
+                            result.result[i].damage += staticDamage;
+                        }
+                    }
+                }
+            }
+        }
         var overallDamage = result.result.reduce(function(prev,x) { return prev + x.damage; },0);
+        
         return { damage: result.result, overall: overallDamage,
             hitModifiers: hitModifiers, chainMultipliers: result.chainMultipliers };
     };
@@ -255,11 +282,13 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         // check damage from default order (or custom order) first, we'll use it as a base for comparison
         var temp = JSON.parse(JSON.stringify(damage));
         var currentResult = getOverallDamage(temp,hitModifiers[0],noSorting);
+        
         for (var i=1;i<hitModifiers.length;++i) {
             var newDamage = JSON.parse(JSON.stringify(damage));
             var newResult = getOverallDamage(newDamage,hitModifiers[i],noSorting);
             if (newResult.overall > currentResult.overall) currentResult = newResult;
         }
+        
         return currentResult;
     };
 
@@ -576,6 +605,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         var result = { type: [ ], class: [ ], orb: [ ], condition: [ ] };
         chainSpecials = [ ];
         chainAddition = [ ];
+        staticMultiplier = [ ];
         enabledSpecials.forEach(function(data) {
             if (data === null) return;
             // notice specials with both atk and atkStatic defined are not supported right now
@@ -587,6 +617,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 chainSpecials.push({ sourceSlot: data.sourceSlot, chain: data.chain, chainLimiter: data.chainLimiter || function() { return Infinity; } });
             if (data.hasOwnProperty('chainAddition'))
                 chainAddition.push({chainAddition: data.chainAddition || function(){ return 0.0;} });
+            if (data.hasOwnProperty('staticMult'))
+                staticMultiplier.push({staticMultiplier: "Yes" });
         });
         specialsCombinations = Utils.arrayProduct([ result.type.concat(result.class), result.condition, result.orb ]);
         if (chainSpecials.length === 0) chainSpecials.push({
@@ -673,6 +705,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         // compute special combinations
         computeSpecialsCombinations();
         $scope.conflictingSpecials = (specialsCombinations.length > 1 || chainSpecials.length > 1 || chainAddition.length > 1);
+        $scope.conflictingMultipliers = ( staticMultiplier.length > 1 )
         // get ship bonus
         shipBonus = jQuery.extend({ bonus: window.ships[$scope.data.ship[0]] },{ level: $scope.data.ship[1] });
     };
