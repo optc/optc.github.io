@@ -321,24 +321,34 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         // apply hits
         for (var i=0;i<combo;++i) {
             ++result.hits;
-            // apply combo shield if active
-            if (mapEffect.shieldLeft > 0) {
-                --mapEffect.shieldLeft;
-                continue;
-            }
             lastAtk = unitAtk;
             // apply hit-based captain effects if any
             cptsWith.hitMultipliers.forEach(function(x) { lastAtk *= x.hit(result.hits); });
             // apply defense
             lastHit = lastAtk / unit.combo;
             lastHit = Math.ceil(Math.max(1, lastHit - currentDefense));
+            // apply combo shield if active
+            if (mapEffect.shieldLeft > 0) {
+                if (!mapEffect.comboType) {
+                    --mapEffect.shieldLeft;
+                }
+                continue;
+            }
             // add hit to current total
             result.result += lastHit;
         }
+        if (mapEffect.comboType == hitModifier && mapEffect.shieldLeft > 0) {
+            --mapEffect.shieldLeft;
+        }
         // apply hit bonus
-        if (bonusDamageBase > 0) {
+        if (bonusDamageBase > 0 && mapEffect.shieldLeft == 0) {
             if (lastHit > 1) result.result += Math.ceil(lastAtk * 0.9 * bonusDamageBase);
             else result.result += Math.max(0,Math.ceil(lastAtk * (0.9 * bonusDamageBase + 1 / unit.combo)) - currentDefense);
+        }
+        // apply fixed threshold barrier if active
+        if (mapEffect.barrierThreshold && result.result > mapEffect.barrierThreshold) {
+            result.result = mapEffect.barrierThreshold +
+                Math.floor((result.result - mapEffect.barrierThreshold) * (1 - mapEffect.barrierReduction));
         }
         return result;
     };
@@ -601,7 +611,12 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if (data.orb) enabledSpecials.push({ orb: data.orb, permanent: true, sourceSlot: -1 });
             if (data.chainLimiter) mapEffect.chainLimiter = data.chainLimiter;
             if (data.comboShield) mapEffect.comboShield = data.comboShield;
+            if (data.comboType) mapEffect.comboType = data.comboType;
             if (data.damage) mapEffect.damage = data.damage;
+            if (data.barrierThreshold) {
+                mapEffect.barrierThreshold = data.barrierThreshold;
+                mapEffect.barrierReduction = data.barrierReduction;
+            }
         }
         // team
         team = $scope.data.team.map(function(x,n) {

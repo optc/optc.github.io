@@ -2,7 +2,7 @@ window.effects = {
 
     // always use unique IDs, and don't ever change an ID once you've set it
     // IDs must always be greater than 0
-    // last ID used: 25
+    // last ID used: 29
 
     'Baroque Works (pre-v4.0)': {
         description: 'Stats of non-Fighter units reduced by 90%',
@@ -230,5 +230,29 @@ window.effects = {
         id: 26, // don't change this
         atk: function(p) { return 0.05; }
     },
+    
+    'Colosseum Kid': {
+        description: 'Perfect hit barrier (2 hits)',
+        thumb: 966,
+        id: 27,
+        comboShield: 2,
+        comboType: 'Perfect'
+    },
+    
+    'Colosseum Fukuro': {
+        description: 'Perfect hit barrier (3 hits)',
+        thumb: 758,
+        id: 28,
+        comboShield: 3,
+        comboType: 'Perfect'
+    },
+    
+    'Colosseum Cricket': {
+        description: 'Fixed threshold barrier (200,000)',
+        thumb: 428,
+        id: 29,
+        barrierThreshold: 200000,
+        barrierReduction: 0.99
+    }
 
 };
