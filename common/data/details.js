@@ -4710,11 +4710,11 @@ window.details = {
         captain: "Boosts ATK of Powerhouse characters by 2x",
         special: [
 			{
-				"description": "For Powerhouse characters, changes [EMPTY] and Bad orbs to Matching orbs.",
+				"description": "For Powerhouse characters, changes Bad orbs to Matching orbs.",
 				"cooldown": 11
 			},
 			{
-				"description": "For all characters, changes [EMPTY] and Bad orbs to Matching orbs.",
+				"description": "For all characters, changes Bad orbs to Matching orbs.",
 				"cooldown": 20
 			}
 		],
@@ -4726,11 +4726,11 @@ window.details = {
 		captainNotes: "\"Beneficial\" orbs grant the same ATK boost as matching orbs while retaining their original function.",
         special: [
 			{
-				"description": "For Powerhouse characters, changes [EMPTY] and Bad orbs to Matching orbs.",
+				"description": "For Powerhouse characters, changes Bad orbs to Matching orbs.",
 				"cooldown": 11
 			},
 			{
-				"description": "For all characters, changes [EMPTY] and Bad orbs to Matching orbs.",
+				"description": "For all characters, changes Bad orbs to Matching orbs.",
 				"cooldown": 20
 			}
 		],
