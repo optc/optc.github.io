@@ -5020,13 +5020,13 @@ window.details = {
 		specialNotes: "#{stages}"
     },
     1046: {
-        captain: "Boosts ATK of Freedom Units by 2.75x following a chain of Good > Great > Perfect hits",
+        captain: "Boosts ATK of Free Spirit Units by 2.75x following a chain of Good > Great > Perfect hits",
         specialName: "Dragon Claw Fist: Dragon's Breath",
         special: "Deals random typeless damage to all enemies. For two turns every attacking character gets 55x Sabos ATK as additional typeless bonus damage if you hit a Good/Great/Perfect",
         specialNotes: "The random Damage will get added soon. <br> The Max amount of Bonus damage you can do is 1,325×55×6×2=874,500"
     },
     1047: {
-        captain: "Boosts ATK of Freedom Units by 3.5x following a chain of Good > Great > Perfect hits",
+        captain: "Boosts ATK of Free Spirit Units by 3.5x following a chain of Good > Great > Perfect hits",
         specialName: "Dragon Claw Fist: Dragon's Breath",
         special: "Deals random typeless damage to all enemies. For two turns every attacking character gets 55x Sabos ATK as additional typeless bonus damage if you hit a Good/Great/Perfect",
         specialNotes: "The random Damage will get added soon. <br> The Max amount of Bonus damage you can do is 1,325×55×6×2=874,500"
