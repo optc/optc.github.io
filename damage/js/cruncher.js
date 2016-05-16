@@ -249,20 +249,25 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         //Specials that add multiplier damage
         //Very Specific for Raid Sabo for now
         var conditionalMultiplier = 1.0;
+        //Since we need this for defense down, and defense down gets saved for all slots we just go with slot 0
+        var params = getParameters(0);
         if(!(staticMultiplier.length > 1)){
             //Check if conditional Boosts are activated since they raise 
-            for (var j=0;j<enabledSpecials.length;++j) {
-                if  (enabledSpecials[j].type=='condition'){
-                    conditionalMultiplier = enabledSpecials[j].atk();
+            for (var x=0;x<enabledSpecials.length;++x) {
+                if  (enabledSpecials[x].type=='condition'){
+                    var thisMult = enabledSpecials[x].atk(params);
+                    if(thisMult>conditionalMultiplier){
+                        conditionalMultiplier = thisMult;
+                    }
                 }
             }
             //Add the static extra Damage to each attacking member
-            for (var j=0;j<enabledSpecials.length;++j) {
-                if (enabledSpecials[j].hasOwnProperty('staticMult')){
-                    var slot = enabledSpecials[j].sourceSlot;
+            for (var y=0;y<enabledSpecials.length;++y) {
+                if (enabledSpecials[y].hasOwnProperty('staticMult')){
+                    var slot = enabledSpecials[y].sourceSlot;
                     var baseDamage = getStatOfUnit(team[slot],'atk');
                     var atkCandies = team[slot].candies.atk * 2;
-                    var mult = enabledSpecials[j].staticMult();
+                    var mult = enabledSpecials[y].staticMult();
                     var staticDamage = Math.ceil((baseDamage+atkCandies)*mult*conditionalMultiplier);
                     for(var i=0; i<result.result.length;i++){ 
                         if((hitModifiers[i]=="Great")||(hitModifiers[i]=="Good")||(hitModifiers[i]=="Perfect")){
