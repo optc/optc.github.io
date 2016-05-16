@@ -259,10 +259,11 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             //Add the static extra Damage to each attacking member
             for (var j=0;j<enabledSpecials.length;++j) {
                 if (enabledSpecials[j].hasOwnProperty('staticMult')){
-                    var slot = enabledSpecials[j].sourceSlot-1;
-                    var baseDamage = getStatOfUnit(team[slot+1],'atk');
+                    var slot = enabledSpecials[j].sourceSlot;
+                    var baseDamage = getStatOfUnit(team[slot],'atk');
+                    var atkCandies = team[slot].candies.atk * 2;
                     var mult = enabledSpecials[j].staticMult();
-                    var staticDamage = Math.ceil(baseDamage*mult*conditionalMultiplier);
+                    var staticDamage = Math.ceil((baseDamage+atkCandies)*mult*conditionalMultiplier);
                     for(var i=0; i<result.result.length;i++){ 
                         if((hitModifiers[i]=="Great")||(hitModifiers[i]=="Good")||(hitModifiers[i]=="Perfect")){
                             result.result[i].damage += staticDamage;

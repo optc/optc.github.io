@@ -1045,5 +1045,10 @@ window.families = [
     "Trafalgar Law",
     "Trafalgar Law",
     "Sabo",
-    "Sabo"
+    "Sabo",
+    "Nico Olvia",
+    "Nico Olvia",
+    "Saul",
+    "Saul",
+    "Nico Robin"
 ];
