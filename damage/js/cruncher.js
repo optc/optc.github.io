@@ -130,7 +130,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 result[x.unit.class[1]]++;
             }
         });
-//window.alert("Fighter: " + result[classArray[0]] + " Slasher: " + result[classArray[1]] + " Free Spirit: " + result[classArray[2]] + " Powerhouse: " + result[classArray[3]] + " Shooter: " + result[classArray[4]] + " Striker: " + result[classArray[5]] + " Cerebral: " + result[classArray[6]] + " Ambition: " + result[classArray[7]]);
+window.alert("Fighter: " + result[classArray[0]] + " Slasher: " + result[classArray[1]] + " Free Spirit: " + result[classArray[2]] + " Powerhouse: " + result[classArray[3]] + " Shooter: " + result[classArray[4]] + " Striker: " + result[classArray[5]] + " Cerebral: " + result[classArray[6]] + " Ambition: " + result[classArray[7]]);
         result.rcv = Math.max(0,rcvTotal);
         var cost = team.slice(1,6).reduce(function(prev,next) { return prev + (!next.unit ? 0 : next.unit.cost); },0);
         result.cost = { cost: cost, level: Math.max(1,Math.floor(cost / 2) * 2 - 18) };
