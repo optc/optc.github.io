@@ -2504,10 +2504,10 @@ window.captains = {
          atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Slasher") ? 2.25 : 1; }
     },
     1034: {
-        atk: function(p) { return p.unit.class.has("Striker") ? 2.75 : 1; }
+        atk: function(p) { return p.unit.class.has("Striker") ? p.classCount.Striker==6 ? 2.75 : p.classCount.Striker==5 ? 2.5 : p.classCount.Striker==4 ? 2 : p.classCount.Striker==3 ? 1.75 : p.classCount.Striker==2 ? 1.5 : p.classCount.Striker==1 ? 1.25 : 1 : 1; }
     },
     1035: {
-        atk: function(p) { return p.unit.class.has("Striker") ? 2.75 : 1; }
+        atk: function(p) { return p.unit.class.has("Striker") ? p.classCount.Striker==6 ? 2.75 : p.classCount.Striker==5 ? 2.5 : p.classCount.Striker==4 ? 2 : p.classCount.Striker==3 ? 1.75 : p.classCount.Striker==2 ? 1.5 : p.classCount.Striker==1 ? 1.25 : 1 : 1; }
     },
     1036: {
 		hitAtk: function(p) {

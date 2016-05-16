@@ -101,10 +101,6 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         ['STR','QCK','DEX','PSY','INT'].forEach(function(type) {
             result[type] = crunchForType(type);
         });
-        var classArray = ['Fighter', 'Slasher', 'Free Spirit', 'Powerhouse', 'Shooter', 'Striker', 'Cerebral', 'Ambition'];
-        for (var i = 0, j = classArray.length; i < j; i++) {
-            result[classArray[i]] = 0;
-        }
         result.team = getTeamDetails();
         var hpMax = 0, rcvTotal = 0;
         team.forEach(function(x,n) {
@@ -121,16 +117,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             rcv *= getShipBonus('rcv',false,x.unit,n);
             rcv *= getEffectBonus('rcv',x.unit);
             rcvTotal += Math.floor(applyCaptainEffectsAndSpecialsToRCV(n,rcv));
-            //Counting how many of each class on a team
-            //If unit has only one class
-            if(x.unit.class[2]){
-                result[x.unit.class]++;
-            }else{//if unit has 2 classes
-                result[x.unit.class[0]]++;
-                result[x.unit.class[1]]++;
-            }
         });
-//window.alert("Fighter: " + result[classArray[0]] + " Slasher: " + result[classArray[1]] + " Free Spirit: " + result[classArray[2]] + " Powerhouse: " + result[classArray[3]] + " Shooter: " + result[classArray[4]] + " Striker: " + result[classArray[5]] + " Cerebral: " + result[classArray[6]] + " Ambition: " + result[classArray[7]]);
         result.rcv = Math.max(0,rcvTotal);
         var cost = team.slice(1,6).reduce(function(prev,next) { return prev + (!next.unit ? 0 : next.unit.cost); },0);
         result.cost = { cost: cost, level: Math.max(1,Math.floor(cost / 2) * 2 - 18) };
@@ -249,9 +236,9 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         //Specials that add multiplier damage
         //Very Specific for Raid Sabo for now
         var conditionalMultiplier = 1.0;
-        //Since we need this for defense down, and defense down gets saved for all slots we just go with slot 0
-        var params = getParameters(0);
-        if(!(staticMultiplier.length > 1)){
+        if(staticMultiplier.length == 1){
+            //Since we need this for defense down, and defense down gets saved for all slots we just go with slot 0
+            var params = getParameters(0);
             //Check if conditional Boosts are activated since they raise 
             for (var x=0;x<enabledSpecials.length;++x) {
                 if  (enabledSpecials[x].type=='condition'){
@@ -267,7 +254,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                     var slot = enabledSpecials[y].sourceSlot;
                     var baseDamage = getStatOfUnit(team[slot],'atk');
                     var atkCandies = team[slot].candies.atk * 2;
-                    var mult = enabledSpecials[y].staticMult();
+                    var mult = enabledSpecials[y].staticMult(params);
                     var staticDamage = Math.ceil((baseDamage+atkCandies)*mult*conditionalMultiplier);
                     for(var i=0; i<result.result.length;i++){ 
                         if((hitModifiers[i]=="Great")||(hitModifiers[i]=="Good")||(hitModifiers[i]=="Perfect")){
@@ -715,7 +702,27 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         // get ship bonus
         shipBonus = jQuery.extend({ bonus: window.ships[$scope.data.ship[0]] },{ level: $scope.data.ship[1] });
     };
-
+    
+    //Returns an Object with a counter of classes in the current Team
+    //Used for Bartolomeos Captain ability so far
+    var classCounter = function() {
+        var classes = {};
+        var classArray = ['Fighter', 'Slasher', 'Free Spirit', 'Powerhouse', 'Shooter', 'Striker', 'Cerebral', 'Ambition'];
+        for (var i = 0, j = classArray.length; i < j; i++) {
+            classes[classArray[i]] = 0;
+        }
+        for(var z=0;z<team.length;z++){
+            if(team[z].unit){
+                if(team[z].unit.class.length==2){
+                    classes[team[z].unit.class[0]]++;
+                    classes[team[z].unit.class[1]]++; 
+                }else if(team[z].unit.class.length==1){
+                    classes[team[z].unit.class]++;
+                }
+            }
+        }
+        return classes;
+    };
 
     var getParameters = function(slotNumber, chainPosition) {
         return {
@@ -729,7 +736,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             scope: $scope,
             slot: slotNumber,
             turnCounter: $scope.tdata.turnCounter.value,
-            chainPosition: chainPosition
+            chainPosition: chainPosition,
+            classCount: classCounter()
         };
     };
 
