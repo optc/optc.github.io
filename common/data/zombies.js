@@ -226,5 +226,9 @@ window.zombies = {
 	1014: {//Tony Tony Chopper, Animal King
 		type: 'healer',
         multiplier: 2
-	}
+	},
+    1052: {//Kid Robin
+        type: 'healer',
+        amount: 1000
+    }
 };

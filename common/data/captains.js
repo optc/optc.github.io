@@ -2568,5 +2568,20 @@ window.captains = {
 			return !p.unit.class.has("Free Spirit") ? 1 : p.modifiers.slice(0, p.chainPosition).subcontains(["Good", "Great", "Perfect"]) ? 3.5 : 1;
 		},
 		hitModifiers: ["Good", "Great", "Perfect", "Perfect", "Perfect", "Perfect"]
-	}
+	},
+    1048: {
+        atk: function(p) { return p.unit.type == 'PSY' ? 1.2 : 1; },
+        rcv: function(p) { return p.unit.type == 'PSY' ? 1.2 : 1; }
+    },
+    1049: {
+        atk: function(p) { return p.unit.type == 'PSY' ? (p.percHP >= 30.0 ? 1.5 : 2.25) : 1; },
+        rcv: function(p) { return p.unit.type == 'PSY' ? 1.5 : 1; }
+    },
+    1050: {
+        atk: function(p) { return p.unit.type == 'PSY' ? 1.5 : 1; }
+    },
+    1051: {
+        atk: function(p) { return p.unit.type == 'PSY' ? 2 : 1; }
+    }
+    
 };

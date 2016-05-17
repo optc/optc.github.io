@@ -5037,24 +5037,25 @@ window.details = {
 		specialName: "Mother's Wish to Fight The World"		
 	},
 	1049: {
-		captain: "Boosts ATK and RCV of [PSY] Units by 1.5x",
+		captain: "Boosts ATK and RCV of [PSY] Units by 1.5x, when HP is low the ATK multiplier becomes 2.25x",
+        captainNotes: "The low HP threshold is estimated to be 30%",
 		special: "Reduces Numbness duration by 3 turns and Recovers 4x character's RCV in HP at the end of each turn for 3 turns",
 		specialName: "Mother's Wish to Fight The World"		
 	},
 	1050: {
 		captain: "Boosts ATK of [PSY] Units by 1.5x",
 		special: "Reduces Bind duration by 4 turns, and Reduces damage received by 50% for 2 turns",
-		specialName: "Saul's Laughter: Dereshishishi"
+		specialName: "Dereshishishi Towards Hope"
 	},
 	1051: {
-		captain: "Boosts ATK of [PSY] Units by 1.5x",
+		captain: "Boosts ATK of [PSY] Units by 2x",
 		special: "Reduces Bind duration by 4 turns, and Reduces damage received by 50% for 2 turns",
-		specialName: "Saul's Laughter: Dereshishishi"
+		specialName: "Dereshishishi Towards Hope"
 	},
 	1052: {
 		captain: "Recovers 1,000 HP at the end of each turn",
 		special: "Reduces Silence duration by 2 turns",
-		specialName: "Young Robin Special",
+		specialName: "Knowledge the World is Afraid of",
 		specialNotes: "Silence will refer to effects that prevent you from activating Special Abilities"
-	},
+	}
 };
