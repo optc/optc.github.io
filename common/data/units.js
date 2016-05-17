@@ -1046,9 +1046,9 @@ window.units = [
     [ "Trafalgar Law Warlord of the Sea", "PSY", [ "Slasher", "Free Spirit" ], 6, 55, 6, 5, 99, 5000000, 1302, 747, 241, 2790, 1484, 470, 1 ],
     [ "Sabo, Dragon Claw", "DEX", [ "Free Spirit", "Fighter" ], 4, 30, 5, 2, 70, 1066998, 233, 140, 34, 1296, 686, 186, 1 ],
     [ "Sabo, Revolutionary Army Chief of Staff", "DEX", [ "Free Spirit", "Fighter" ], 5, 50, 4, 3, 99, 5000000, 1228, 602, 142, 2484, 1325, 340, 1 ],
-    [ "Nico Olvia", "PSY", [ "Shooter", "Cerebral" ], 3, 12, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Nico Olvia", "PSY", [ "Shooter", "Cerebral" ], 3, 12, 6, 1, 50, null, 77, 29, 59, 883, 404, 274, null ],
     [ "Nico Olvia Evolution", "PSY", [ "Shooter", "Cerebral" ], 4, 20, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Saul", "PSY", [ "Powerhouse", "Free Spirit" ], 3, 12, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Saul", "PSY", [ "Powerhouse", "Free Spirit" ], 3, 12, 5, 1, 50, null, 173, 56, 29, null, null, null, null ],
     [ "Saul Evolution", "PSY", [ "Powerhouse", "Free Spirit" ], 4, 20, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Kid Robin", "QCK", [ "Cerebral", "Fighter" ], 3, 9, null, null, null, null, null, null, null, null, null, null, null ]
 	];

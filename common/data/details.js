@@ -4441,7 +4441,7 @@ window.details = {
 	949: {
 		captain: "Boosts ATK of Slasher Characters by 2x, recovers 2x character's RCV in HP at the end of each turn",
 		specialName: "Ties with Ace",
-		special: "Reduces Silence by 3 turns, and recovers 4,000 HP",
+		special: "Reduces Silence duration by 3 turns, and recovers 4,000 HP",
 		specialNotes: "Silence will refer to effects that prevent you from activating Special Abilities"
 	},
 	950: {
@@ -5030,5 +5030,31 @@ window.details = {
         specialName: "Dragon Claw Fist: Dragon's Breath",
         special: "Deals random typeless damage to all enemies. For two turns every attacking character gets 55x Sabos ATK as additional typeless bonus damage if you hit a Good/Great/Perfect",
         specialNotes: "The random Damage will get added soon. <br> The Max amount of Bonus damage you can do is 1,325×55×6×2=874,500"
-    }
+    },
+	1048: {
+		captain: "Boosts ATK and RCV of [PSY] Units by 1.2x",
+		special: "Reduces Numbness duration by 3 turns and Recovers 4x character's RCV in HP at the end of each turn for 3 turns",
+		specialName: "Mother's Wish to Fight The World"		
+	},
+	1049: {
+		captain: "Boosts ATK and RCV of [PSY] Units by 1.5x",
+		special: "Reduces Numbness duration by 3 turns and Recovers 4x character's RCV in HP at the end of each turn for 3 turns",
+		specialName: "Mother's Wish to Fight The World"		
+	},
+	1050: {
+		captain: "Boosts ATK of [PSY] Units by 1.5x",
+		special: "Reduces Bind duration by 4 turns, and Reduces damage received by 50% for 2 turns",
+		specialName: "Saul's Laughter: Dereshishishi"
+	},
+	1051: {
+		captain: "Boosts ATK of [PSY] Units by 1.5x",
+		special: "Reduces Bind duration by 4 turns, and Reduces damage received by 50% for 2 turns",
+		specialName: "Saul's Laughter: Dereshishishi"
+	},
+	1052: {
+		captain: "Recovers 1,000 HP at the end of each turn",
+		special: "Reduces Silence duration by 2 turns",
+		specialName: "Young Robin Special",
+		specialNotes: "Silence will refer to effects that prevent you from activating Special Abilities"
+	},
 };
