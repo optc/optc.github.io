@@ -2397,6 +2397,7 @@ window.details = {
 		specialName: "Wipeout Tackle"
 	},
 	567: {
+		special: "Reduces Bind and Despair duration by 1 turn, deals 15x the character's ATK as STR damage to all enemies",
 		specialName: "Mudfish Coaster"
 	},
 	568: {

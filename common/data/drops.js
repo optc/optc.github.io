@@ -731,9 +731,11 @@ window.drops = {
         },
 
         {
-            name: 'Little Ms. Candy the Maiden-Hearted!',
+            name: 'Maiden in Love - First Sight',
             thumb: 436,
             global: true,
+            challenge: 'Damage dealt in a single Round',
+            challengeData: [['350,000','1x Black Elder'], ['900,000','1x HP Cotton Candy'], ['2,000,000','3x Rainbow Gems']],
             condition: 'Each non-Okama in your Team will take 60 Damage each turn',
             "All Difficulties": [ 433, 434, 435, -384, -372, -371, -359, -217, -210, -19 ]
         },
@@ -829,7 +831,7 @@ window.drops = {
         },
 
         {
-            name: 'Invasion! Pirate Arlong\'s Crew!!',
+            name: 'Shark Attack! Arlong Pirates',
             thumb: 656,
             condition: 'You can only get STR, QCK, DEX, PSY and INT orbs',
             "All Difficulties": [ 655, 657, 658, -658, -500, -465, -455, -453, -398, -357, -60 ]
@@ -906,6 +908,8 @@ window.drops = {
             name: "Evil Manager Breed's Marine Circus!",
             thumb: 797,
             condition: 'You can only bring Fighter and Powerhouse units',
+            challenge: 'High Score calculated with Crew Cost and Turns Taken',
+            challengeData: [['100,000','1x Purple Elder'],['400,000','1x RCV Candy, 1x Rainbow Gem'],['750,000','1x Auto-Heal Skullbook, 2x Rainbow Gem']],
             "All Difficulties": [ 796, 798, 799, 800, -800, -639, -628, -562, -414, -432, -380, -75 ]
         },
 
