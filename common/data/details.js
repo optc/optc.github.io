@@ -3298,12 +3298,14 @@ window.details = {
 	749: {
 		special: "Deals random DEX damage to all enemies, randomizes all orbs",
 		specialName: "Rankyaku - Amane Dachi",
+        specialNotes: "The random damage is between 10,000 and 90,000",
 		captain: "Boosts ATK of DEX characters by 1.5x, boosts damage of DEX specials by 1.5x",
 		captainNotes: "#{noFixedPerc}"
 	},
 	750: {
 		special: "Deals random DEX damage to all enemies, randomizes all orbs",
 		specialName: "Rankyaku - Amane Dachi",
+        specialNotes: "The random damage is between 10,000 and 90,000",
 		captain: "Boosts ATK of DEX characters by 2x, boosts damage of DEX specials by 2x",
 		captainNotes: "#{noFixedPerc}"
 	},
@@ -4969,15 +4971,13 @@ window.details = {
     },
     1040: {
         captain: "Boosts ATK and HP of [STR] units by 1.5x",
-        special: "Deals severe random STR damage to all enemies. Boosts ATK of everyone by 1.5x if HP is below 30% at the time the special is activated",
-        specialName: "Ice Throw",
-        specialNotes: "Random Damage Ranges will be added as a Note when we find it."
+        special: "Deals 30x the character's ATK as STR damage to all enemies. Boosts ATK of everyone by 1.5x if HP is below 30% at the time the special is activated",
+        specialName: "Ice Throw"
     },
     1041: {
         captain: "Boosts ATK and HP of [STR] units by 2x",
-        special: "Deals severe random STR damage to all enemies. Boosts ATK of everyone by 1.5x if HP is below 30% at the time the special is activated",
-        specialName: "Ice Throw",
-        specialNotes: "Random Damage Ranges will be added as a Note when we find it."
+        special: "Deals 30x the character's ATK as STR damage to all enemies. Boosts ATK of everyone by 1.5x if HP is below 30% at the time the special is activated",
+        specialName: "Ice Throw"
     },
     1042: {
         captain: "Boosts ATK of Striker and Slasher characters by 2x, reduces crew's RCV to 0.",

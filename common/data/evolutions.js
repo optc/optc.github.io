@@ -1525,11 +1525,11 @@ window.evolutions = {
 	},
 	1024: {
 		evolution: 1025,
-        evolvers: []
+        evolvers: [ 88, 266, 94, 100, 104 ]
 	},
 	1026: {
 		evolution: 1027,
-        evolvers: []
+        evolvers: [ 85, 96, 301, 301, 101 ]
 	},
 	1028: {
 		evolution: 1029,
@@ -1541,11 +1541,11 @@ window.evolutions = {
 	},
 	1032: {
 		evolution: 1033,
-        evolvers: []
+        evolvers: [ 118, 84, 87, 300, 303 ]
 	},
 	1034: {
 		evolution: 1035,
-        evolvers: []
+        evolvers: [ 118, 84, 266, 300, 267]
 	},
     1036: {
         evolution: 1037,
@@ -1557,7 +1557,7 @@ window.evolutions = {
     },
     1040: {
         evolution: 1041,
-        evolvers: []
+        evolvers: [ 118, 83, 84, 95, 300 ]
     },
     1042: {
         evolution: 1043,
