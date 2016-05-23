@@ -12,7 +12,7 @@ var notes = {
     orb: "Orb amplification only affects matching and opposite orbs and works both ways: " +
         "matching orbs will deal #1 more damage and opposite orbs will deal #1 less damage.",
     poison: "Poison deals 0.5x character's ATK in fixed damage at the end of each turn.",
-    random: "Estimated random damage range: between #1 HP and #2 HP.",
+    random: "Estimated random damage range: between #1 HP and #2 HP #3.",
     randomHits: "The target of each of the #1 hits is chosen randomly.",
     specialProportional: "The exact multiplier used to compute the damage is proportional to the " +
         "crew's remaining HP and is higher the #1 the HP is. The multiplier is calculated as: #2.",

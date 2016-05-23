@@ -3533,14 +3533,14 @@ window.details = {
 	},
 	794: {
 		special: "Deals 10 hits of random INT damage to random enemies, delays all enemies for 1 turn",
-		specialNotes: "#{randomHits : 10}",
+		specialNotes: "#{randomHits : 10}<br>#{random : 1,000 : 30,000 : for each hit}",
 		specialName: "Gum-Gum Storm",
 		captain: "Boosts ATK of Powerhouse characters by 3x, reduces crew's current HP by 10% at the end of each turn, reduces his own ATK multiplier by 0.1x at the end of each turn",
 		captainNotes: "His ATK multiplier will be 3.0x on the first turn, 2.9x on the second, 2.8x on the third and so on. The reduction stops once the multiplier is 1.0x. The multiplier affects all Powerhouse units."
 	},
 	795: {
 		special: "Deals 10 hits of random INT damage to random enemies, delays all enemies for 1 turn",
-		specialNotes: "#{randomHits : 10}",
+		specialNotes: "#{randomHits : 10}<br>#{random : 1,000 : 30,000 : for each hit}",
 		specialName: "Gum-Gum Storm",
 		captain: "Boosts ATK of Powerhouse characters by 3.5x, reduces crew's current HP by 10% at the end of each turn, reduces his own ATK multiplier by 0.1x at the end of each turn",
 		captainNotes: "His ATK multiplier will be 3.5x on the first turn, 3.4x on the second, 3.3x on the third and so on. The reduction stops once the multiplier is 1.0x. The multiplier affects all Powerhouse units."
@@ -4682,11 +4682,11 @@ window.details = {
 		specialName: "Peeping Mind",
 		special: [
 			{
-				"description": "Reduces Special Cooldown of Cerebral and Fighters by 1 turn. Shows Enemy Attack, De\fense, Combo Hits, Current / Total HP, Attack Interval, 'Specials based on turns?', and 'Effect after Death?'",
+				"description": "Reduces Special Cooldown of Cerebral and Fighters by 1 turn. Shows Enemy Attack, Defence, Combo Hits, Current / Total HP, Attack Interval, 'Specials based on turns', and 'Effect after Death'",
 				"cooldown": 13
 			},
 			{
-				"description": "Reduces Special Cooldown of Cerebral and Fighters by 2 turn. Shows Enemy Attack, De\fense, Combo Hits, Current / Total HP, Attack Interval, 'Specials based on turns?', and 'Effect after Death?'",
+				"description": "Reduces Special Cooldown of Cerebral and Fighters by 2 turn. Shows Enemy Attack, Defence, Combo Hits, Current / Total HP, Attack Interval, 'Specials based on turns', and 'Effect after Death'",
 				"cooldown": 20
 			}
 		],
@@ -4698,11 +4698,11 @@ window.details = {
 		specialName: "Peeping Mind",
 		special: [
 			{
-				"description": "Reduces Special Cooldown of Cerebral and Fighters by 1 turn. Shows Enemy Attack, De\fense, Combo Hits, Current / Total HP, Attack Interval, 'Specials based on turns?', and 'Effect after Death?'",
+				"description": "Reduces Special Cooldown of Cerebral and Fighters by 1 turn. Shows Enemy Attack, Defence, Combo Hits, Current / Total HP, Attack Interval, 'Specials based on turns', and 'Effect after Death'",
 				"cooldown": 13
 			},
 			{
-				"description": "Reduces Special Cooldown of Cerebral and Fighters by 2 turn. Shows Enemy Attack, De\fense, Combo Hits, Current / Total HP, Attack Interval, 'Specials based on turns?', and 'Effect after Death?'",
+				"description": "Reduces Special Cooldown of Cerebral and Fighters by 2 turn. Shows Enemy Attack, Defence, Combo Hits, Current / Total HP, Attack Interval, 'Specials based on turns', and 'Effect after Death'",
 				"cooldown": 20
 			}
 		],
@@ -4880,14 +4880,14 @@ window.details = {
     },
 	1024: {
 		captain: "Boosts ATK of Powerhouse characters by 2x",
-		special: "Boosts orbs for 2 turns, the exact multiplier changes depending on the current HP at the time the special was activated. ",
+		special: "Amplifies the effect of orbs for 2 turns, the exact multiplier changes depending on the current HP at the time the special was activated. ",
 		specialNotes: "Below 30% -> 1.75x orb boost, between 30% and 70% -> 1.5x, above 70% -> 1.25x",
 		specialName: "Eight-Impact Fist! Blow of Resentment"
 	},
 	1025: {
 		captain: "Boosts ATK of Powerhouse characters by 2x and boosts the HP of Striker characters by 2x",
         captainNotes: "A character with both classes will get both boosts",
-		special: "Boosts orbs for 2 turns, the exact multiplier changes depending on the current HP at the time the special was activated. ",
+		special: "Amplifies the effect of orbs for 2 turns, the exact multiplier changes depending on the current HP at the time the special was activated. ",
 		specialNotes: "Below 30% -> 1.75x orb boost, between 30% and 70% -> 1.5x, above 70% -> 1.25x",
 		specialName: "Eight-Impact Fist! Blow of Resentment"
 	},

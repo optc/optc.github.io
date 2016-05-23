@@ -219,8 +219,8 @@ window.ships = [
     { // 17
         name: '2nd Anniversary Thousand Sunny',
         thumb: null,
-        description: 'Boosts ATK by 1.5x. At the beggining of the stage all specials are charged already.',
-        atk: function(p) { return 1.5; },
+        description: 'Boosts ATK by 1.2x.',
+        atk: function(p) { return 1.2; },
     }
 
 ];
