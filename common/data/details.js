@@ -5057,5 +5057,15 @@ window.details = {
 		special: "Reduces Silence duration by 2 turns",
 		specialName: "Knowledge the World is Afraid of",
 		specialNotes: "Silence will refer to effects that prevent you from activating Special Abilities"
-	}
+	},
+    1053: {
+        captain: "Boosts RCV of Cerebral characters by 1.5x",
+        special: "Reduces Numbness and Despair duration by 3 turns, removes Blindness",
+        specialName: "Precocious Provocation"
+    },
+    1054: {
+        captain: "Boosts RCV of Cerebral characters by 2x",
+        special: "Reduces Numbness and Despair duration by 3 turns, removes Blindness",
+        specialName: "Precocious Provocation"
+    }
 };

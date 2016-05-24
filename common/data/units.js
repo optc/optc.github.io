@@ -1051,8 +1051,8 @@ window.units = [
     [ "Jaguar D. Saul", "PSY", [ "Powerhouse", "Free Spirit" ], 3, 12, 5, 1, 50, 392109, 173, 56, 29, 1353, 514, 157, 1 ],
     [ "Jaguar D. Saul, Navy HQ Vice Admiral", "PSY", [ "Powerhouse", "Free Spirit" ], 4, 20, 4, 2, 99, 3000000, 1278, 441, 110, 2448, 929, 236, 1 ],
     [ "Nico Robin, Girl of Ohara", "QCK", [ "Cerebral", "Fighter" ], 3, 9, 4, 2, 50, 392109, 38, 18, 94, 522, 273, 378, 1 ],
-    [ "Kid Hina", "QCK", [ "Striker", "Cerebral" ], 4, 10, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Kid Hina Evolution", "QCK", [ "Striker", "Cerebral" ], 5, 18, null, null, null, null, null, null, null, null, null, null, null ]
+    [ "Hina, Graceful Honor Student", "QCK", [ "Striker", "Cerebral" ], 4, 10, 5, 3, 35, null, null, null, null, 511, 220, 257, null ],
+    [ "Hina, Polite Honor Student", "QCK", [ "Striker", "Cerebral" ], 5, 18, 5, 3, 70, null, 501, 198, 259, null, null, null, null ]
 	];
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ]
 // or [ "Name", "Type", "Class1", null, null, null, null, null, null, null, null, null, null, null, null, null ]
