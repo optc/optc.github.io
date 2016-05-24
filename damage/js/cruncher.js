@@ -486,6 +486,9 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 var chainModifier = cptsWith.chainModifiers.reduce(function(prev,next) {
                     return prev * next.chainModifier(getParameters(x.position, n));
                 },1);
+                //Computing Chain Modifier from map effects
+                if (mapEffect.hasOwnProperty('chainModifier'))
+                    chainModifier = Math.min(mapEffect.chainModifier(params[n]), chainModifier);
                 var chainMultiplier = getChainMultiplier(special.chain(params[n]), modifiers.slice(0,n), chainModifier);
                 //Add flat Multiplier Bonuses if they exist
                 if(addition>0.0)
@@ -634,6 +637,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         if ($scope.data.effect) {
             var data = effects[$scope.data.effect];
             if (data.orb) enabledSpecials.push({ orb: data.orb, permanent: true, sourceSlot: -1 });
+            if (data.chainModifier) mapEffect.chainModifier = data.chainModifier;
             if (data.chainLimiter) mapEffect.chainLimiter = data.chainLimiter;
             if (data.comboShield) mapEffect.comboShield = data.comboShield;
             if (data.comboType) mapEffect.comboType = data.comboType;

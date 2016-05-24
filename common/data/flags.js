@@ -738,6 +738,8 @@ window.flags = {
 	793: { rr: 1, rro: 1 },
 	801: { rr: 1, rro: 1, lrr: 1 },
 	802: { rr: 1, rro: 1, lrr: 1 },
+    828: { rr: 1, rro: 1, lrr: 1 },
+	829: { rr: 1, rro: 1, lrr: 1 },
 	837: { rr: 1, rro: 1 },
 	838: { rr: 1, rro: 1 },
 	839: { rr: 1, rro: 1 },
@@ -826,5 +828,7 @@ window.flags = {
     1034: { rr: 1, rro: 1 },
     1035: { rr: 1, rro: 1 },
     1044: { rr: 1, rro: 1 },
-    1045: { rr: 1, rro: 1 }
+    1045: { rr: 1, rro: 1 },
+    1053: { rr: 1, rro: 1, lrr: 1 },
+    1054: { rr: 1, rro: 1, lrr: 1 }  
 };
