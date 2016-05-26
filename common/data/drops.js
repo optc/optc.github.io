@@ -477,6 +477,22 @@ window.drops = {
             "12": [ ],
             "13": [ 111, 181, 184, 185, 186, 691, 692, 693, 694, 695, 971 ],
             "14": [ 111, 112, 113, 114, 185, 186, 187, 691, 693, 695, 968, 969, 970, 972, 973 ]
+        },
+		
+		{
+            name: "Amazon Lily",
+            shortName: "Amazon Lily",
+            thumb: 917,
+            completion: '5x Rainbow Gems',
+            "01": [ ],
+            "02": [ 1059 ],
+            "03": [ 1061 ],
+            "04": [ 1062 ],
+            "05": [ 1062 ],
+            "06": [ ],
+            "07": [ ],
+            "08": [ 1055, 1057 ],
+            "09": [ 1055, 1057 ]
         }
         
     ],
@@ -833,6 +849,7 @@ window.drops = {
         {
             name: 'Shark Attack! Arlong Pirates',
             thumb: 656,
+			global: true,
             condition: 'You can only get STR, QCK, DEX, PSY and INT orbs',
             "All Difficulties": [ 655, 657, 658, -658, -500, -465, -455, -453, -398, -357, -60 ]
         },
@@ -840,6 +857,7 @@ window.drops = {
         {
             name: 'Fight! Suna Suna Clan!!',
             thumb: 664,
+			global: true,
             condition: 'Heatwave causes damage every 2 turns',
             "All Difficulties": [ 663, 665, 667, -667, -522, -508, -506, -459, -378, -221, -73 ]
         },

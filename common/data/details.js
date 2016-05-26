@@ -5069,12 +5069,12 @@ window.details = {
         specialName: "Precocious Provocation"
     },
 	1055: {
-        special: "Deals 20x character's ATK in [DEX] damage to one enemy. boosts ATK against Strongly Poisoned enemies by 1.4x for 2 turns ",
+        special: "Deals 20x character's ATK in [DEX] damage to one enemy. Boosts ATK against Strongly Poisoned enemies by 1.4x for 2 turns ",
         specialName: "Sandersonia Special"
     },
 	1056: {
         captain: "Boosts ATK of Powerhouse characters by 2x and their RCV by 1.25x",
-        special: "Deals 20x character's ATK in [DEX] damage to one enemy. boosts ATK against Strongly Poisoned enemies by 1.4x for 2 turns ",
+        special: "Deals 20x character's ATK in [DEX] damage to one enemy. Boosts ATK against Strongly Poisoned enemies by 1.4x for 2 turns ",
         specialName: "Sandersonia Special"
     },
 	1057: {
