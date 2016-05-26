@@ -5102,7 +5102,7 @@ window.details = {
     },
 	1061: {
         captain: "Boosts ATK of Shooter characters by 2x",
-		special: "Locks the chain multiplier at 2x for 2 turns"
+		special: "Locks the chain multiplier at 2x for 2 turns",
         specialName: "Kikyo Special"
     },
 	1062: {
