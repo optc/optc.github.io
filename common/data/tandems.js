@@ -323,5 +323,10 @@ window.tandems = [
 		"name": "Kidnapping Trio Rampage",
 		"desc": "Deals 3,000 fixed damage to all enemies",
 		"units": [ 954, 955, 956 ]
-	}
+	},
+    {
+        "name": "Snake Pit Dance",
+        "desc": "Deals 3 times the cumulative ATK of all the characters in the tandem to all enemies, boosts ATK of Tough characters by 1.3x until the end of the current turn",
+        "units": [ 1056, 1058 ]
+    },
 ];

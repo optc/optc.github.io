@@ -1264,5 +1264,39 @@ window.specials = {
     },
     1047: {
         staticMult: function(p) { return 55; }
-    }
+    },
+    1055: {
+		atk: function(p) { return 1.4; },
+		type: "condition",
+		warning: "Selected special (%name%) assumes that the enemy has been STRONGLY Poisoned."
+	},
+    1056: {
+		atk: function(p) { return 1.4; },
+		type: "condition",
+		warning: "Selected special (%name%) assumes that the enemy has been STRONGLY Poisoned."
+	},
+    1059: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, 1, 1.5); }
+    },
+    1060: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, 1, 1.5); }
+    },
+    1061: {
+		chain: function(p) { return 2; },
+		chainLimiter: function(p) { return p.chainPosition > 0 ? 2 : 1.0; }
+	},
+    1063: {
+        atk: function(p) { return p.unit.class.has("Shooter") ? 1.3 : 1},
+        type: "class"
+    },
+    1065: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, 1, 1.25); }
+    },
+    1066: {
+        chainAddition: function(p){ return 0.1;}
+    },
+    1067: {
+		atk: function(p) { return p.slot == p.sourceSlot ? 1.5 : 1; },
+		type: "type"
+	},
 };

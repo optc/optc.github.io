@@ -230,5 +230,9 @@ window.zombies = {
     1052: {//Kid Robin
         type: 'healer',
         amount: 1000
+    },
+    1062: {//Gloriosa
+        type: 'healer',
+        multiplier: 2
     }
 };

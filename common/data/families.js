@@ -1052,5 +1052,19 @@ window.families = [
     "Saul",
     "Nico Robin",
     "Hina",
-    "Hina"
+    "Hina",
+    "Boa Sandersonia",
+    "Boa Sandersonia",
+    "Boa Marigold",
+    "Boa Marigold",
+    "Marguerite",
+    "Marguerite",
+    "Kikyo",
+    "Gloriosa",
+    "Destructive Female Archer, Kuja Warriors",
+    "Scheming Female Archer, Kuja Warriors",
+    "Smart Swordswoman, Kuja Warriors",
+    "Bright Swordswoman, Kuja Warriors",
+    "Skilled Female Fighter, Kuja Warriors",
+    "Nimble Female Fighter, Kuja Warriors"
 ];
