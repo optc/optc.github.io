@@ -482,7 +482,7 @@ window.drops = {
 		{
             name: "Amazon Lily",
             shortName: "Amazon Lily",
-            thumb: 917,
+            thumb: 1056,
             completion: '5x Rainbow Gems',
             "01": [ ],
             "02": [ 1059 ],
