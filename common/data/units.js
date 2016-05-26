@@ -1052,7 +1052,21 @@ window.units = [
     [ "Jaguar D. Saul, Navy HQ Vice Admiral", "PSY", [ "Powerhouse", "Free Spirit" ], 4, 20, 4, 2, 99, 3000000, 1278, 441, 110, 2448, 929, 236, 1 ],
     [ "Nico Robin, Girl of Ohara", "QCK", [ "Cerebral", "Fighter" ], 3, 9, 4, 2, 50, 392109, 38, 18, 94, 522, 273, 378, 1 ],
     [ "Hina, Graceful Honor Student", "QCK", [ "Striker", "Cerebral" ], 4, 10, 5, 3, 35, null, null, null, null, 511, 220, 257, null ],
-    [ "Hina, Polite Honor Student", "QCK", [ "Striker", "Cerebral" ], 5, 18, 5, 3, 70, null, 501, 198, 259, null, null, null, null ]
+    [ "Hina, Polite Honor Student", "QCK", [ "Striker", "Cerebral" ], 5, 18, 5, 3, 70, null, 501, 198, 259, null, null, null, null ],
+    [ "Boa Sandersonia", "DEX", [ "Striker" ], 3, 12, 6, 1, 50, null, 249, 72, 47, null, null, null, null ],
+    [ "Kuja Pirates, Boa Sandersonia", "DEX", [ "Striker", "Powerhouse" ], 4, 20, 4, 3, 99, null, 1043, 442, 137, null, null, null, null ],
+    [ "Boa Marigold", "STR", [ "Striker" ], 3, 12, 5, 1, 50, null, 183, 40, 31, null, null, null, null ],
+    [ "Kuja Pirates, Boa Marigold", "STR", [ "Slasher", "Powerhouse" ], 4, 20, 4, 3, 99, null, 1003, 470, 110, null, null, null, null ],
+    [ "Story Marguerite", "PSY", [ "Shooter" ], 3, 9, 4, 1, 35, null, 136, 72, 62, null, null, null, null ],
+    [ "Kuja Pirates, Marguerite", "PSY", [ "Shooter" ], 4, 15, 5, 2, 70, null, 642, 339, 143, null, null, null, null ],
+    [ "Kikyo", "QCK", [ "Shooter" ], 4, 14, 5, 2, 70, null, 132, 94, 56, null, null, null, null ],
+    [ "Gloriosa", "INT", [ "Cerebral", "Fighter" ], 3, 14, 4, 2, 60, null, 586, 351, 79, null, null, null, null ],
+    [ "Kuja Warrior, Red Archer", "STR", [ "Shooter" ], 3, 10, 5, 1, 60, null, 62, 31, 40, null, null, null, null ],
+    [ "Kuja Warrior, Black Archer", "INT", [ "Shooter" ], 3, 10, 5, 1, 60, null, 58, 28, 44, null, null, null, null ],
+    [ "Kuja Warrior, Black Swordswoman", "INT", [ "Slasher" ], 3, 10, 4, 1, 60, null, 65, 98, 25, null, null, null, null ],
+    [ "Kuja Warrior, Yellow Swordswoman", "PSY", [ "Slasher" ], 3, 10, 4, 1, 60, null, 63, 90, 30, null, null, null, null ],
+    [ "Kuja Warrior, Green Fighter", "DEX", [ "Fighter", "Powerhouse" ], 3, 10, 6, 1, 60, null, 120, 50, 26, null, null, null, null ],
+    [ "Kuja Warrior, Blue Fighter ", "QCK", [ "Fighter", "Powerhouse" ], 3, 10, 6, 1, 60, null, 128, 47, 24, null, null, null, null ],
 	];
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ]
 // or [ "Name", "Type", "Class1", null, null, null, null, null, null, null, null, null, null, null, null, null ]

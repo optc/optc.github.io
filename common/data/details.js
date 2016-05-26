@@ -5067,5 +5067,78 @@ window.details = {
         captain: "Boosts RCV of Cerebral characters by 2x",
         special: "Reduces Numbness and Despair duration by 3 turns, removes Blindness",
         specialName: "Precocious Provocation"
+    },
+	1055: {
+        special: "Deals 20x character's ATK in [DEX] damage to one enemy. boosts ATK against Strongly Poisoned enemies by 1.4x for 2 turns ",
+        specialName: "Sandersonia Special"
+    },
+	1056: {
+        captain: "Boosts ATK of Powerhouse characters by 2x and their RCV by 1.25x",
+        special: "Deals 20x character's ATK in [DEX] damage to one enemy. boosts ATK against Strongly Poisoned enemies by 1.4x for 2 turns ",
+        specialName: "Sandersonia Special"
+    },
+	1057: {
+		special: "Strongly poisons one enemy",
+		specialNotes: "Strong poison deals 5x character's ATK in fixed damage at the end of each turn",
+        specialName: "Marigold Special"
+    },
+	1058: {
+        captain: "Boosts ATK of Powerhouse characters by 2x and their HP by 1.25x",
+		special: "Strongly poisons one enemy",
+		specialNotes: "Strong poison deals 5x character's ATK in fixed damage at the end of each turn",
+        specialName: "Marigold Special"
+    },
+	1059: {
+        captain: "Boosts ATK and RCV of Shooter characters by 1.2x",
+        special: "Deals 5,000 fixed damage to one enemy. Amplifies the effect of orbs by 1.5x for 1 turn",
+		specialNotes: "#{orb : 1.5x}",
+        specialName: "Marguerite Special"
+    },
+	1060: {
+        captain: "Boosts ATK and RCV of Shooter characters by 1.5x",
+        special: "Deals 5,000 fixed damage to one enemy. Amplifies the effect of orbs by 1.5x for 1 turn",
+		specialNotes: "#{orb : 1.5x}",
+        specialName: "Marguerite Special"
+    },
+	1061: {
+        captain: "Boosts ATK of Shooter characters by 2x",
+		special: "Locks the chain multiplier at 2x for 2 turns"
+        specialName: "Kikyo Special"
+    },
+	1062: {
+        captain: "Boosts ATK of Cerebral characters by 2x and Recovers 2x character's RCV in HP at the end of each turn",
+        special: "Recovers 13x character's RCV in HP",
+        specialName: "Glorisa Special"
+    },
+	1063: {
+        captain: "Boosts ATK and HP of Shooter characters by 1.2x",
+        special: "Boosts ATK of Shooter characters by 1.3x for 1 turn",
+        specialName: "STR Kuja Archer Special"
+    },
+	1064: {
+        captain: "Boosts ATK and HP of [INT] characters by 1.2x",
+        special: "Recovers 3x character's RCV in HP at the end of each turn for 5 turns",
+        specialName: "INT Kuja Archer Special"
+    },
+	1065: {
+        captain: "Boosts ATK of Slasher characters by 1.5x",
+		special: "Amplifies the effect of orbs by 1.25x for 1 turn",
+		specialNotes: "#{orb : 1.25x}",
+        specialName: "INT Kuja Swordswoman Special"
+    },
+	1066: {
+        captain: "Boosts ATK and HP of [PSY] characters by 1.2x",
+        special: "Adds .1x to Chain multiplier for 1 turn",
+        specialName: "INT Kuja Swordswoman Special"
+    },
+	1067: {
+        captain: "Boosts ATK of Fighter characters by 1.5x",
+        special: "Boosts own ATK by 1.5x for 1 turn",
+        specialName: "DEX Kuja Fighter Special"
+    },
+	1068: {
+        captain: "Boosts chain multiplier by 1.5x",
+        special: "Changes own orb into [QCK]",
+        specialName: "QCK Kuja Fighter Special"
     }
 };
