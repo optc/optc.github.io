@@ -5,7 +5,7 @@
         'Skypiea (Guard|Enforcer)', 'Shandian',
         '(Seaman|Major|Corporal) Navy', 'Hoodlum.+Bounty Hunter', 'Black Cat Pirates',
         'Arlong crewmember', 'Gunner|Cannoneer|Assassin Master', '^(Female|Giant).*Pirates',
-        '(Soldier|General) Zombie.*Shadow', 'Wild Zombie', 'Street Punk'
+        '(Soldier|General) Zombie.*Shadow', 'Wild Zombie', 'Street Punk', 'Kuja Warriors'
     ].join(')|(') + ')', 'i');
 
     var utils = {};
