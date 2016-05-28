@@ -5140,5 +5140,128 @@ window.details = {
         captain: "Boosts chain multiplier by 1.5x",
         special: "Changes captain's orb into [QCK]",
         specialName: "Captain Slot Change QCK"
-    }
+    },
+	1074: {
+		captain: "Unknown",
+		special: "Unknown",
+		specialName: "King Riku Special"
+	},
+	1075: {
+		captain: "Unknown",
+		special: "Unknown",
+		specialName: "King Riku Special"
+	},
+	1076:{
+		captain: "Unknown",
+		special: [
+			{
+				"description": "Delays all enemies for 1 turn. Locks all orbs for 1 turn. Cuts the current HP of one enemy by unknown percent",
+			},
+			{
+				"description": "Delays all enemies for 1 turn. Locks all orbs for 1 turn. Cuts the current HP of one enemy by unknown percent",
+			}
+		],
+		specialNotes: "#{stages}",
+        specialName: "Leo Special"
+	},
+	1077:{
+		captain: "Unknown",
+		special: [
+			{
+				"description": "Delays all enemies for 1 turn. Locks all orbs for 1 turn. Cuts the current HP of one enemy by unknown percent",
+			},
+			{
+				"description": "Delays all enemies for 1 turn. Locks all orbs for 1 turn. Cuts the current HP of one enemy by unknown larger percent",
+			}
+		],
+		specialNotes: "#{stages}",
+        specialName: "Leo Special"
+	},
+	1078: {
+		captain: "Unknown",
+		special: [
+			{
+				"description": "Recovers an unknown amount and removes some negative effects.",
+			},
+			{
+				"description": "Recovers an unknown amount and removes some negative effects. (Stronger somehow)",
+			}
+		],
+		specialNotes: "#{stages}",
+		specialName: "Mansherry Special"
+	},
+	1079: {
+		captain: "Unknown",
+		special: [
+			{
+				"description": "Recovers an unknown amount and removes some negative effects.",
+			},
+			{
+				"description": "Recovers an unknown amount and removes some negative effects. (Stronger somehow)",
+			}
+		],
+		specialNotes: "#{stages}",
+		specialName: "Mansherry Special"
+	},
+	1080: {
+		captain: "Unknown",
+		special: "Unknown",
+		specialName: "Kyros Special"
+	},
+	1081: {
+		captain: "Unknown",
+		special: "Unknown",
+		specialName: "Kyros Special"
+	},
+	1082: {
+		captain: "Unknown",
+		special: "Unknown",
+		specialName: "Don Sai Special"
+	},
+	1083: {
+		captain: "Unknown",
+		special: "Unknown",
+		specialName: "Don Sai Special"
+	},
+	1084: {
+		captain: "Unknown",
+		special: "Unknown",
+		specialName: "Fujitora Special"
+	},
+	1085: {
+		captain: "Unknown",
+		special: "Unknown",
+		specialName: "Fujitora Special"
+	},
+	1086: {
+		captain: "Unknown",
+		special: "Unknown",
+		specialName: "Colosseum Musshuru Special"
+	},
+	1087: {
+		captain: "Unknown",
+		special: "Unknown",
+		specialName: "Colosseum Musshuru Special"
+	},
+	1088: {
+		captain: "Unknown",
+		special: "Unknown",
+		specialName: "Colosseum Saga Special"
+	},
+	1089: {
+		captain: "Unknown",
+		special: "Unknown",
+		specialName: "Colosseum Saga Special"
+	},
+	1090: {
+		captain: "Unknown",
+		special: "Unknown",
+		specialName: "Colosseum X Drake Special"
+	},
+	1091: {
+		captain: "Unknown",
+		special: "Unknown",
+		specialName: "Colosseum X Drake Special"
+	}
+	
 };
