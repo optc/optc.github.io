@@ -4998,7 +4998,7 @@ window.details = {
 				"cooldown": 18
 			},
 			{
-				"description": "Makes Damage and Health Cutting Specials of all characters bypass all defensive Buffs, deals 20x his ATK in PSY damage to one enemy.",
+				"description": "Makes Damage and Health Cutting Specials of all characters bypass all defensive Buffs, deals 50x his ATK in PSY damage to one enemy.",
 				"cooldown": 25
 			}
 		],
@@ -5013,7 +5013,7 @@ window.details = {
 				"cooldown": 18
 			},
 			{
-				"description": "Makes Damage and Health Cutting Specials of all characters bypass all defensive Buffs, deals 20x his ATK in PSY damage to one enemy.",
+				"description": "Makes Damage and Health Cutting Specials of all characters bypass all defensive Buffs, deals 50x his ATK in PSY damage to one enemy.",
 				"cooldown": 25
 			}
 		],
