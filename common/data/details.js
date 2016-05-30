@@ -5205,12 +5205,12 @@ window.details = {
 	},
 	1080: {
 		captain: "Unknown",
-		special: "Deals unknown damage to one enemy, changes own orb to [DEX] and bossts own ATK",
+		special: "Deals unknown damage to one enemy, changes own orb to [DEX] and boosts own ATK",
 		specialName: "Trueno Bastardo"
 	},
 	1081: {
 		captain: "Unknown",
-		special: "Deals unknown damage to one enemy, changes own orb to [DEX] and bossts own ATK",
+		special: "Deals unknown damage to one enemy, changes own orb to [DEX] and boosts own ATK",
 		specialName: "Trueno Bastardo"
 	},
 	1082: {
@@ -5224,14 +5224,16 @@ window.details = {
 		specialName: "Don Sai Special"
 	},
 	1084: {
-		captain: "Unknown",
-		special: "Unknown",
-		specialName: "Fujitora Special"
+		captain: "Boosts HP of Ambition characters by 1.5x and their ATK by 3x if they have a matching orb, by 1.5x otherwise. Makes [TND] and [RCV] orbs \"beneficial\" to Ambition characters",
+		special: "Cuts the current HP of each enemy by 20%. At the end of the turn, cuts the current HP of each enemy by 20% for 3 turns",
+		specialNote: "Does not stack with other 'end of turn damage' abilities",
+		specialName: "Gravito: Heavens Fall"
 	},
 	1085: {
-		captain: "Unknown",
-		special: "Unknown",
-		specialName: "Fujitora Special"
+		captain: "Boosts HP of Ambition characters by 1.5x and their ATK by 3x if they have a matching orb, by 1.5x otherwise. Makes [TND] and [RCV] orbs \"beneficial\" to Ambition characters",
+		special: "Cuts the current HP of each enemy by 20%. At the end of the turn, cuts the current HP of each enemy by 20% for 3 turns",
+		specialNote: "Does not stack with other 'end of turn damage' abilities",
+		specialName: "Gravito: Heavens Fall"
 	},
 	1086: {
 		captain: "Unknown",
