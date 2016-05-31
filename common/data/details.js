@@ -5163,7 +5163,7 @@ window.details = {
     },
 	1073: {
         captain: "Boosts ATK of Slasher characters by 1.5x",
-        special: "Deals 20x ATK in [STR] damage to one enemy. Boosts ATK of Powerhouse characters by 1.5x for 1 turn.",
+        special: "Deals 5x ATK in [QCK] damage to all enemies and randomizes all orbs",
         specialName: "Needless Special"
     },
 	1074: {
