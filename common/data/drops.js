@@ -1110,6 +1110,7 @@ window.drops = {
         {
             name: 'Clash!! Heracles\'n',
             thumb: 516,
+            global: true,
             Master: [ 87, 97, 113, 117, 118, 294, 295, 303, 429, 515 ],
             Expert: [ 87, 98, 113, 117, 293, 295, 429, 379, 515 ]
         },
