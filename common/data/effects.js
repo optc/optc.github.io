@@ -2,7 +2,8 @@ window.effects = {
 
     // always use unique IDs, and don't ever change an ID once you've set it
     // IDs must always be greater than 0
-    // last ID used: 29
+    // last ID used: 31
+    // Use p.type instead of p.unit.type here
 
     'Baroque Works (pre-v4.0)': {
         description: 'Stats of non-Fighter units reduced by 90%',
@@ -260,6 +261,15 @@ window.effects = {
         thumb: 1047,
         id: 30,
         chainModifier: function(p) { return 0.5; }
+    },
+    
+    'Pirate Ship Competition! \"Dead End\" Opens!': {
+        description: 'STR/DEX/QCK ATK 1.6x and HP 0.2x. INT/PSY ATK 0.2x and HP 1.6x',
+        thumb: null,
+        id: 31,
+        atk: function(p) { console.log(p); return (p.type == "STR" || p.type == "DEX" || p.type == "QCK") ? 1.6 : 0.2; },
+        hp: function(p) { return (p.type == "STR" || p.type == "DEX" || p.type == "QCK") ? 0.2 : 1.6; }
+        
     }
 
 };
