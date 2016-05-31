@@ -5141,86 +5141,129 @@ window.details = {
         special: "Changes captain's orb into [QCK]",
         specialName: "Captain Slot Change QCK"
     },
+	1069: {
+        captain: "Boosts ATK of Ambition characters by 1.5x",
+        special: "Deals 9x ATK in [DEX] damage to one enemy. Changes own orb into [DEX]",
+        specialName: "Shuraiya Special"
+    },
+	1070: {
+        captain: "Boosts ATK of Ambition characters by 2.25x",
+        special: "Deals 9x ATK in [DEX] damage to one enemy. Changes own orb into [DEX]",
+        specialName: "Shuraiya Special"
+    },
+	1071: {
+        captain: "Boosts ATK of characters with cost 20 or less by 1.5x",
+        special: "Deals 20x ATK in [STR] damage to one enemy. Boosts ATK of Powerhouse characters by 1.5x for 1 turn.",
+        specialName: "Gasparde Special"
+    },
+	1072: {
+        captain: "Boosts ATK of characters with cost 30 or less by 2x and boosts the HP of Powerhouse characters by 1.2x",
+        special: "Deals 20x ATK in [STR] damage to one enemy. Boosts ATK of Powerhouse characters by 1.5x for 1 turn.",
+        specialName: "Gasparde Special"
+    },
+	1073: {
+        captain: "Boosts ATK of Slasher characters by 1.5x",
+        special: "Deals 20x ATK in [STR] damage to one enemy. Boosts ATK of Powerhouse characters by 1.5x for 1 turn.",
+        specialName: "Needless Special"
+    },
 	1074: {
-		captain: "Unknown",
+		captain: "Boosts ATK of [INT] characters by 2x",
 		special: "Changes [QCK] and [PSY] orbs into [INT] orbs.",
 		specialName: "Tenacious Sword of Destruction"
 	},
 	1075: {
-		captain: "Unknown",
+		captain: "Boosts ATK and HP of [INT] characters by 2x",
 		special: "Changes [QCK] and [PSY] orbs into [INT] orbs.",
 		specialName: "Tenacious Sword of Destruction"
 	},
 	1076:{
-		captain: "Unknown",
+		captain: "Boosts ATK of Striker and Free Spirit characters by 1.75x",
 		special: [
 			{
-				"description": "Delays all enemies for 1 turn. Locks all orbs for 1 turn. Cuts the current HP of one enemy by unknown percent",
+				"description": "Delays all enemies for 1 turn. Locks all orbs for 1 turn. Cuts the current HP of one enemy by 10%",
+				"cooldown": 16
 			},
 			{
-				"description": "Delays all enemies for 1 turn. Locks all orbs for 1 turn. Cuts the current HP of one enemy by unknown percent",
+				"description": "Delays all enemies for 1 turn. Locks all orbs for 1 turn. Cuts the current HP of one enemy by 20%",
+				"cooldown": 20
 			}
 		],
 		specialNotes: "#{stages}",
         specialName: "Haute Couture: Patchwork"
 	},
 	1077:{
-		captain: "Unknown",
+		captain: "Boosts ATK of Striker and Free Spirit characters by 2.25x and their HP by 1.5x",
 		special: [
 			{
-				"description": "Delays all enemies for 1 turn. Locks all orbs for 1 turn. Cuts the current HP of one enemy by unknown percent",
+				"description": "Delays all enemies for 1 turn. Locks all orbs for 1 turn. Cuts the current HP of one enemy by 10%",
+				"cooldown": 16
 			},
 			{
-				"description": "Delays all enemies for 1 turn. Locks all orbs for 1 turn. Cuts the current HP of one enemy by unknown larger percent",
+				"description": "Delays all enemies for 1 turn. Locks all orbs for 1 turn. Cuts the current HP of one enemy by 20%",
+				"cooldown": 20
 			}
 		],
 		specialNotes: "#{stages}",
         specialName: "Haute Couture: Patchwork"
 	},
 	1078: {
-		captain: "Unknown",
+		captain: "Recovers 3x character's RCV in HP at the end of each turn",
 		special: [
 			{
-				"description": "Recovers an unknown amount and removes some negative effects.",
+				"description": "Recovers 6x character's RCV in HP. Removes Numbness",
+				"cooldown": 14
 			},
 			{
-				"description": "Recovers an unknown amount and removes some negative effects. (Stronger somehow)",
-			}
+				"description": "Recovers 15x character's RCV in HP. Removes Numbness, Poison, RCV Down, and Blindness",
+				"cooldown": 19
+			},
+			{
+				"description": "Recovers 50x character's RCV in HP. Removes Numbness, Poison, RCV Down, and Blindness",
+				"cooldown": 24
+			},
 		],
 		specialNotes: "#{stages}",
 		specialName: "Chiyupopo"
 	},
 	1079: {
-		captain: "Unknown",
+		captain: "Recovers 4x character's RCV in HP at the end of each turn",
 		special: [
 			{
-				"description": "Recovers an unknown amount and removes some negative effects.",
+				"description": "Recovers 6x character's RCV in HP. Removes Numbness",
+				"cooldown": 14
 			},
 			{
-				"description": "Recovers an unknown amount and removes some negative effects. (Stronger somehow)",
-			}
+				"description": "Recovers 15x character's RCV in HP. Removes Numbness, Poison, RCV Down, and Blindness",
+				"cooldown": 19
+			},
+			{
+				"description": "Recovers 50x character's RCV in HP. Removes Numbness, Poison, RCV Down, and Blindness",
+				"cooldown": 24
+			},
 		],
 		specialNotes: "#{stages}",
 		specialName: "Chiyupopo"
 	},
 	1080: {
-		captain: "Unknown",
-		special: "Deals unknown damage to one enemy, changes own orb to [DEX] and boosts own ATK",
+		captain: "Boosts ATK of characters with cost 20 or less by 2.5x",
+		special: "Deals [DEX] damage to one enemy, changes own orb to [DEX] and boosts own ATK by 2x for 1 turn",
 		specialName: "Trueno Bastardo"
 	},
 	1081: {
-		captain: "Unknown",
-		special: "Deals unknown damage to one enemy, changes own orb to [DEX] and boosts own ATK",
+		captain: "Boosts ATK of characters with cost 30 or less by 2.5x",
+		special: "Deals [DEX] damage to one enemy, changes own orb to [DEX] and boosts own ATK by 2x for 1 turn",
 		specialName: "Trueno Bastardo"
 	},
 	1082: {
-		captain: "Unknown",
-		special: "Deals severe damage to all enemies, if at low health boosts ATK of Striker and Fighter characters",
+		captain: "Boosts ATK of Striker and Fighter characters by 1.2x",
+		special: "Deals severe [STR] damage to all enemies. Boosts ATK of Striker and Fighter characters by a variable amount depending on the current HP at the time the special was activated.",
+		specialNotes: "Below 30% -> __ boost, between 30% and 70% -> __, above 70% -> __",
 		specialName: "Don Sai Special"
 	},
 	1083: {
-		captain: "Unknown",
-		special: "Deals severe damage to all enemies, if at low health boosts ATK of Striker and Fighter characters",
+		captain: "Boosts ATK of Striker and Fighter characters by 1.5x at the start of the chain, and by 3x after the 3rd Perfect",
+		special: "Deals severe [STR] damage to all enemies. Boosts ATK of Striker and Fighter characters by a variable amount depending on the current HP at the time the special was activated.",
+		specialNotes: "Below 30% -> __ boost, between 30% and 70% -> __, above 70% -> __",
 		specialName: "Don Sai Special"
 	},
 	1084: {
