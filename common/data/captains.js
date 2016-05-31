@@ -2625,5 +2625,59 @@ window.captains = {
     },
     1068: {
 		chainModifier: function(p) { return 1.5; }
+	},
+    1069:{
+        atk: function(p) { return p.unit.class.has("Ambition") ? 1.5 : 1;}
+    },
+    1070:{
+        atk: function(p) { return p.unit.class.has("Ambition") ? 2.25 : 1;}
+    },
+    1071: {
+		atk: function(p) { return p.unit.cost <= 20 ? 1.5 : 1; }
+	},
+    1072: {
+		atk: function(p) { return p.unit.cost <= 30 ? 2 : 1; },
+        hp: function(p) { return p.unit.class.has("Powerhouse") ? 1.2 : 1;}
+	},
+    1073:{
+        atk: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1;}
+    },
+    1074: {
+        atk: function(p) { return p.unit.type == 'INT' ? 2 : 1; }
+    },
+    1075: {
+        atk: function(p) { return p.unit.type == 'INT' ? 2 : 1; },
+        hp: function(p) { return p.unit.type == 'INT' ? 2 : 1; }
+    },
+    1076: {
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Free Spirit") ? 1.75 : 1; }
+    },
+    1077: {
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Free Spirit") ? 2.25 : 1; },
+        hp: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Free Spirit") ? 1.5 : 1; }
+    },
+    1080: {
+		atk: function(p) { return p.unit.cost <= 20 ? 2.5 : 1; }
+	},
+    1081: {
+		atk: function(p) { return p.unit.cost <= 30 ? 2.5 : 1; }
+	},
+    1082: {
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Fighter") ? 1.2 : 1; }
+    },
+    1083: {
+        hitAtk: function(p) {
+            if (!p.unit.class.has("Striker") && !p.unit.class.has("Fighter")) return 1;
+			return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? 3 : 1.5;
+		},
+		hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
+    },
+    1084: {
+		atk: function(p) { return !p.unit.class.has("Ambition") ? 1 : (p.orb == 2.0 ? 3 : 1.5); },
+		hp: function(p) { return p.unit.class.has("Ambition") ? 1.5 : 1; }
+	},
+    1085: {
+		atk: function(p) { return !p.unit.class.has("Ambition") ? 1 : (p.orb == 2.0 ? 3 : 1.5); },
+		hp: function(p) { return p.unit.class.has("Ambition") ? 1.5 : 1; }
 	}
 };

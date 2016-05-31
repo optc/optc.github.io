@@ -5144,27 +5144,27 @@ window.details = {
 	1069: {
         captain: "Boosts ATK of Ambition characters by 1.5x",
         special: "Deals 9x ATK in [DEX] damage to one enemy. Changes own orb into [DEX]",
-        specialName: "Shuraiya Special"
+        specialName: "Fighting Method of the Pirate Executioner"
     },
 	1070: {
         captain: "Boosts ATK of Ambition characters by 2.25x",
         special: "Deals 9x ATK in [DEX] damage to one enemy. Changes own orb into [DEX]",
-        specialName: "Shuraiya Special"
+        specialName: "Fighting Method of the Pirate Executioner"
     },
 	1071: {
         captain: "Boosts ATK of characters with cost 20 or less by 1.5x",
         special: "Deals 20x ATK in [STR] damage to one enemy. Boosts ATK of Powerhouse characters by 1.5x for 1 turn.",
-        specialName: "Gasparde Special"
+        specialName: "Emerald Porcupine Robe"
     },
 	1072: {
         captain: "Boosts ATK of characters with cost 30 or less by 2x and boosts the HP of Powerhouse characters by 1.2x",
         special: "Deals 20x ATK in [STR] damage to one enemy. Boosts ATK of Powerhouse characters by 1.5x for 1 turn.",
-        specialName: "Gasparde Special"
+        specialName: "Emerald Porcupine Robe"
     },
 	1073: {
         captain: "Boosts ATK of Slasher characters by 1.5x",
         special: "Deals 5x ATK in [QCK] damage to all enemies and randomizes all orbs",
-        specialName: "Needless Special"
+        specialName: "Drilling Hooks"
     },
 	1074: {
 		captain: "Boosts ATK of [INT] characters by 2x",

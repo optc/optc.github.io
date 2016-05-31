@@ -1299,4 +1299,42 @@ window.specials = {
 		atk: function(p) { return p.slot == p.sourceSlot ? 1.5 : 1; },
 		type: "type"
 	},
+    1071: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 1.5 : 1},
+        type: "class"
+    },
+    1072: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 1.5 : 1},
+        type: "class"
+    },
+    1080: {
+		atk: function(p) { return p.slot == p.sourceSlot ? 2 : 1; },
+		type: "type"
+	},
+    1081: {
+		atk: function(p) { return p.slot == p.sourceSlot ? 2 : 1; },
+		type: "type"
+	},
+    1082: {
+        orb: function(p) {
+            if(p.percHP >= 70.0){
+                return p.unit.class.has("Striker") || p.unit.class.has("Fighter") ? 1.2 : 1;
+            }else if(p.percHP >= 20.0){
+                return p.unit.class.has("Striker") || p.unit.class.has("Fighter") ? 1.5 : 1;
+            }else{
+                return p.unit.class.has("Striker") || p.unit.class.has("Fighter") ? 1.75 : 1;
+            }
+        }
+    },
+    1083: {
+        orb: function(p) {
+            if(p.percHP >= 70.0){
+                return p.unit.class.has("Striker") || p.unit.class.has("Fighter") ? 1.2 : 1;
+            }else if(p.percHP >= 20.0){
+                return p.unit.class.has("Striker") || p.unit.class.has("Fighter") ? 1.5 : 1;
+            }else{
+                return p.unit.class.has("Striker") || p.unit.class.has("Fighter") ? 1.75 : 1;
+            }
+        }
+    }
 };
