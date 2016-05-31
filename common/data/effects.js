@@ -264,11 +264,11 @@ window.effects = {
     },
     
     'Pirate Ship Competition! \"Dead End\" Opens!': {
-        description: 'STR/DEX/QCK ATK 1.6x and HP 0.2x. INT/PSY ATK 0.2x and HP 1.6x',
+        description: 'STR/DEX/QCK ATK 1.6x and HP 0.1x. INT/PSY ATK 0.2x and HP 2x',
         thumb: null,
         id: 31,
         atk: function(p) { console.log(p); return (p.type == "STR" || p.type == "DEX" || p.type == "QCK") ? 1.6 : 0.2; },
-        hp: function(p) { return (p.type == "STR" || p.type == "DEX" || p.type == "QCK") ? 0.2 : 1.6; }
+        hp: function(p) { return (p.type == "STR" || p.type == "DEX" || p.type == "QCK") ? 0.1 : 2.0; }
         
     }
 
