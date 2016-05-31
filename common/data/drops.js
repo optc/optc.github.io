@@ -1035,9 +1035,9 @@ window.drops = {
         
         {
             name: "Pirate Ship Competition! \"Dead End\" Opens!",
-            thumb: null,
-            condition: "???",
-            "All Difficulties": [ -562, -906, -914, -645, -890, -587, -629, -888]
+            thumb: 1072,
+            condition: "STR/DEX/QCK units get their ATK boosted by 1.6x and their HP reduced by 80%. INT/PSY units get their ATK reduced by 80% and their HP boosted by 1.6x",
+            "All Difficulties": [ 1069, 1071, 1073, -562, -906, -914, -645, -890, -587, -629, -888]
         }
 
     ],
