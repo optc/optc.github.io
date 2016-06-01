@@ -5256,13 +5256,13 @@ window.details = {
 	},
 	1082: {
 		captain: "Boosts ATK of Striker and Fighter characters by 1.2x",
-		special: "Deals severe [STR] damage to all enemies. Boosts ATK of Striker and Fighter characters by a variable amount depending on the current HP at the time the special was activated.",
+		special: "Deals severe [STR] damage to all enemies. For 2 turns, boosts ATK of Striker and Fighter characters by a variable amount depending on the current HP at the time the special was activated.",
 		specialNotes: "Below 30% -> 1.75 boost, between 30% and 70% -> 1.5, above 70% -> 1.2",
 		specialName: "Don Sai Special"
 	},
 	1083: {
 		captain: "Boosts ATK of Striker and Fighter characters by 1.5x at the start of the chain, and by 3x after the 3rd Perfect",
-		special: "Deals severe [STR] damage to all enemies. Boosts ATK of Striker and Fighter characters by a variable amount depending on the current HP at the time the special was activated.",
+		special: "Deals severe [STR] damage to all enemies. For 2 turns, boosts ATK of Striker and Fighter characters by a variable amount depending on the current HP at the time the special was activated.",
 		specialNotes: "Below 30% -> 1.75 boost, between 30% and 70% -> 1.5, above 70% -> 1.2",
 		specialName: "Don Sai Special"
 	},
