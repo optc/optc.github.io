@@ -425,6 +425,7 @@ window.drops = {
             name: "Thriller Bark: Mouth Gate - Hogback's Residence",
             shortName: "Thriller Bark 1",
             thumb: 816,
+            global: true,
             completion: '5x Rainbow Gems',
             "01": [ 89, 90, 91, 387, 817, 818, 819, 820, 821 ],
             "02": [ 89, 90, 91, 92, 93, 812, 817, 818, 819, 820, 821 ],
