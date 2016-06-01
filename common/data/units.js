@@ -1074,7 +1074,7 @@ window.units = [
     [ "Needless", "QCK", [ "Slasher", "Ambition" ], 3, 14, 6, 1, 70, 1066998, 88, 120, 37, 973, 802, 223, 1 ],
     [ "Ricky", "INT", [ "Cerebral", "Striker" ], 4, 18, 6, 3, 70, null, 207, 102, 62, null, null, null, null ],
     [ "Ricky, Mysterious Gladiator", "INT", [ "Cerebral", "Striker" ], 5, 30, 6, 4, 99, null, 1102, 467, 199, null, null, null, null ],
-    [ "Leo", "QCK", [ "Striker", "Free Spirit" ], 4, 18, 5, 3, 70, null, 131, 142, 54, null, null, null, null ],
+    [ "Leo", "QCK", [ "Striker", "Free Spirit" ], 4, 18, 5, 3, 70, null, 131, 142, 54, 989, 700, 222, null ],
     [ "Leo, Captain of the Tontatta Warriors", "QCK", [ "Striker", "Free Spirit" ], 5, 30, 4, 4, 99, null, 918, 637, 177, null, null, null, null ],
     [ "Mansherry", "PSY", "Striker", 4, 18, 6, 3, 70, null, 100, 94, 86, null, null, null, null ],
     [ "Mansherry, Princess of the Tontatta Tribe", "PSY", [ "Striker", "Free Spirit" ], 5, 30, 4, 4, 99, null, 642, 371, 260, 1510, 642, 557, null ],
