@@ -5279,33 +5279,36 @@ window.details = {
 		specialName: "Gravito: Heavens Fall"
 	},
 	1086: {
-		captain: "Unknown",
-		special: "Unknown",
+		captain: "Boosts ATK and RCV of Ambition characters by 1.5x",
+		specialNotes: "#{orb : 1.5x}",
+		special: "Randomizes all orbs including [BLOCK] orbs. Amplifies the effect of orbs by 1.5x for 2 turns",
 		specialName: "Colosseum Musshuru Special"
 	},
 	1087: {
-		captain: "Unknown",
-		special: "Unknown",
+		captain: "Boosts ATK and RCV of Ambition characters by 1.5x",
+		specialNotes: "#{orb : 1.5x}",
+		special: "Randomizes all orbs including [BLOCK] orbs. Amplifies the effect of orbs by 1.5x for 2 turns",
 		specialName: "Colosseum Musshuru Special"
 	},
 	1088: {
-		captain: "Unknown",
-		special: "Unknown",
+		captain: "Boosts ATK of Slasher characters by 2x",
+		special: "Greatly reduces crew's HP, deals severe [QCK] damage to all enemies. Boosts ATK of Slasher and Ambition units by 1.5x for 1 turn.",
 		specialName: "Colosseum Saga Special"
 	},
 	1089: {
-		captain: "Unknown",
-		special: "Unknown",
+		captain: "Boosts ATK of Slasher characters by 2x and the HP of Ambition characters by 1.75x",
+		captainNotes: "Slasher + Ambition characters gain ATK AND HP",
+		special: "Greatly reduces crew's HP, deals severe [QCK] damage to all enemies. Boosts ATK of Slasher and Ambition units by 1.5x for 1 turn.",
 		specialName: "Colosseum Saga Special"
 	},
 	1090: {
-		captain: "Unknown",
-		special: "Unknown",
+		captain: "Boosts ATK of all characters by 2x if HP is below 30% at the start of the turn",
+		special: "Deals severe [PSY] damage to one enemy. If HP < 30% then changes adjacent orbs to Matching orbs",
 		specialName: "Colosseum X Drake Special"
 	},
 	1091: {
-		captain: "Unknown",
-		special: "Unknown",
+		captain: "Boosts ATK of all characters by 2.5x if HP is below 30% at the start of the turn",
+		special: "Deals severe [PSY] damage to one enemy. If HP < 30% then changes adjacent orbs to Matching orbs",
 		specialName: "Colosseum X Drake Special"
 	}
 	

@@ -1067,11 +1067,11 @@ window.units = [
     [ "Bright Swordswoman, Kuja Warriors", "PSY", "Slasher", 3, 10, 4, 1, 60, 674274, 63, 90, 30, 762, 843, 191, 1 ],
     [ "Skilled Female Fighter, Kuja Warriors", "DEX", [ "Fighter", "Powerhouse" ], 3, 10, 6, 1, 60, 674274, 120, 50, 26, 1204, 668, 175, 1 ],
     [ "Nimble Female Fighter, Kuja Warriors", "QCK", [ "Fighter", "Powerhouse" ], 3, 10, 6, 1, 60, 674274, 128, 47, 24, 1261, 649, 170, 1 ],
-    [ "Shuraiya Bascùd", "DEX", [ "Fighter", "Ambition" ], 3, 9, 5, 2, 35, null, 402, 190, 65, null, null, null, null ],
-    [ "Shuraiya Bascùd, Pirate Executioner", "DEX", [ "Fighter", "Ambition" ], 4, 15, 4, 2, 70, null, 812, 358, 80, null, null, null, null ],
-    [ "Gasparde", "STR", [ "Powerhouse", "Fighter" ], 3, 12, 5, 1, 50, null, 129, 67, 18, null, null, null, null ],
-    [ "Gasparde, Gasparde Pirates", "STR", [ "Powerhouse", "Fighter" ], 4, 20, 5, 4, 99, null, 1437, 516, 63, null, null, null, null ],
-    [ "Needless", "QCK", [ "Slasher", "Ambition" ], 3, 14, 6, 1, 70, null, 88, 120, 37, null, null, null, null ],
+    [ "Shuraiya Bascùd", "DEX", [ "Fighter", "Ambition" ], 3, 9, 5, 2, 35, 136167, 402, 190, 65, 879, 410, 127, 1 ],
+    [ "Shuraiya Bascùd, Pirate Executioner", "DEX", [ "Fighter", "Ambition" ], 4, 15, 4, 2, 70, 1066998, 812, 358, 80, 1474, 742, 188, 1 ],
+    [ "Gasparde", "STR", [ "Powerhouse", "Fighter" ], 3, 12, 5, 1, 50, 392109, 129, 67, 18, 1494, 571, 101, 1 ],
+    [ "Gasparde, Gasparde Pirates", "STR", [ "Powerhouse", "Fighter" ], 4, 20, 5, 4, 99, 3000000, 1437, 516, 63, 2501, 1002, 198, 1 ],
+    [ "Needless", "QCK", [ "Slasher", "Ambition" ], 3, 14, 6, 1, 70, 1066998, 88, 120, 37, 973, 802, 223, 1 ],
     [ "Ricky", "INT", [ "Cerebral", "Striker" ], 4, 18, 6, 3, 70, null, 207, 102, 62, null, null, null, null ],
     [ "Ricky, Mysterious Gladiator", "INT", [ "Cerebral", "Striker" ], 5, 30, 6, 4, 99, null, 1102, 467, 199, null, null, null, null ],
     [ "Leo", "QCK", [ "Striker", "Free Spirit" ], 4, 18, 5, 3, 70, null, 131, 142, 54, null, null, null, null ],
@@ -1082,14 +1082,14 @@ window.units = [
     [ "Kyros, Former Captain of the Riku Royal Army", "DEX", [ "Slasher", "Powerhouse" ], 5, 30, 4, 4, 99, null, 1042, 657, 143, null, null, null, null ],
     [ "Don Sai", "STR", [ "Striker", "Fighter" ], 4, 18, 4, 3, 70, null, 130, 130, 31, null, null, null, null ],
     [ "Don Sai, Flower Country Gang", "STR", [ "Striker", "Fighter" ], 5, 30, 4, 4, 99, null, 1231, 631, 87, null, null, null, null ],
-    [ "Fujitora", "INT", [ "Ambition", "Powerhouse" ], 5, 30, 4, 4, 70, null, 430, 250, 77, 1890, 754, 204, null ],
-    [ "Fujitora, Marine Admiral", "INT", [ "Ambition", "Powerhouse" ], 6, 55, 4, 5, 99, null, 1820, 700, 201, 3809, 1380, 325, null ],
-    [ "Colosseum Musshuru", "INT", [ "Ambition", "Fighter" ], 3, 16, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Fujitora", "INT", [ "Ambition", "Powerhouse" ], 5, 30, 4, 4, 70, 1066998, 430, 250, 77, 1890, 754, 204, 1 ],
+    [ "Fujitora, Marine Admiral", "INT", [ "Ambition", "Powerhouse" ], 6, 55, 4, 5, 99, 5000000, 1820, 700, 201, 3809, 1380, 325, 1 ],
+    [ "Colosseum Musshuru", "INT", [ "Ambition", "Fighter" ], 3, 16, 6, 2, 50, null, 128, 127, 40, null, null, null, null ],
     [ "Colosseum Musshuru", "INT", [ "Ambition", "Fighter" ], 4, 26, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Colosseum Saga", "QCK", [ "Slasher", "Ambition" ], 3, 16, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Colosseum Saga", "QCK", [ "Slasher", "Ambition" ], 4, 26, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Colosseum X Drake", "PSY", [ "Cerebral", "Slasher" ], 4, 25, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Colosseum X Drake", "PSY", [ "Cerebral", "Powerhouse" ], 5, 40, null, null, null, null, null, null, null, null, null, null, null ]
+    [ "Colosseum Saga", "QCK", [ "Slasher", "Ambition" ], 3, 16, 5, 2, 50, 392109, 177, 132, 25, null, null, null, null ],
+    [ "Colosseum Saga", "QCK", [ "Slasher", "Ambition" ], 4, 26, 4, 3, 99, 3000000, 912, 497, 93, null, null, null, null ],
+    [ "Colosseum X Drake", "PSY", [ "Cerebral", "Slasher" ], 4, 25, 5, 2, 70, 1066998, 708, 315, 77, null, null, null, null ],
+    [ "Colosseum X Drake", "PSY", [ "Cerebral", "Powerhouse" ], 5, 40, 4, 3, 99, null, 1297, 631, 130, null, null, null, null ]
 	];
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ]
 // or [ "Name", "Type", "Class1", null, null, null, null, null, null, null, null, null, null, null, null, null ]
