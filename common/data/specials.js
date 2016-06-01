@@ -1336,5 +1336,19 @@ window.specials = {
                 return p.unit.class.has("Striker") || p.unit.class.has("Fighter") ? 1.75 : 1;
             }
         }
+    },
+    1086: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, 1, 1.5); }
+    },
+    1087: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, 1, 1.5); }
+    },
+    1088: {
+        atk: function(p) { return p.unit.class.has("Slasher" || "Ambition") ? 1.5 : 1},
+        type: "class"
+    },
+    1089: {
+        atk: function(p) { return p.unit.class.has("Slasher" || "Ambition") ? 1.5 : 1},
+        type: "class"
     }
 };

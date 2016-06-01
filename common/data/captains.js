@@ -2679,5 +2679,26 @@ window.captains = {
     1085: {
 		atk: function(p) { return !p.unit.class.has("Ambition") ? 1 : (p.orb == 2.0 ? 3 : 1.5); },
 		hp: function(p) { return p.unit.class.has("Ambition") ? 1.5 : 1; }
-	}
+	},
+    1086:{
+        atk: function(p) { return p.unit.class.has("Ambition") ? 1.5 : 1;},
+        rcv: function(p) { return p.unit.class.has("Ambition") ? 1.5 : 1;}
+    },
+    1087:{
+        atk: function(p) { return p.unit.class.has("Ambition") ? 2 : 1;},
+        rcv: function(p) { return p.unit.class.has("Ambition") ? 1.5 : 1;}
+    },
+    1088:{
+        atk: function(p) { return p.unit.class.has("Slasher") ? 2 : 1;}
+    },
+    1089:{
+        atk: function(p) { return p.unit.class.has("Slasher") ? 2 : 1;},
+        hp: function(p) { return p.unit.class.has("Ambition") ? 1.75 : 1;}
+    },
+    1090: {
+		atk: function(p) { return p.percHP <= 30.0 ? 2 : 1; }
+	},
+    1091: {
+		atk: function(p) { return p.percHP <= 30.0 ? 2.5 : 1; }
+	},
 };

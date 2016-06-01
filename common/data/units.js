@@ -1085,11 +1085,11 @@ window.units = [
     [ "Fujitora", "INT", [ "Ambition", "Powerhouse" ], 5, 30, 4, 4, 70, 1066998, 430, 250, 77, 1890, 754, 204, 1 ],
     [ "Fujitora, Marine Admiral", "INT", [ "Ambition", "Powerhouse" ], 6, 55, 4, 5, 99, 5000000, 1820, 700, 201, 3809, 1380, 325, 1 ],
     [ "Colosseum Musshuru", "INT", [ "Ambition", "Fighter" ], 3, 16, 6, 2, 50, null, 128, 127, 40, null, null, null, null ],
-    [ "Colosseum Musshuru", "INT", [ "Ambition", "Fighter" ], 4, 26, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Colosseum Musshuru", "INT", [ "Ambition", "Fighter" ], 4, 26, 667, 472, 131, null, null, null, null, null, null, null, null ],
     [ "Colosseum Saga", "QCK", [ "Slasher", "Ambition" ], 3, 16, 5, 2, 50, 392109, 177, 132, 25, null, null, null, null ],
     [ "Colosseum Saga", "QCK", [ "Slasher", "Ambition" ], 4, 26, 4, 3, 99, 3000000, 912, 497, 93, null, null, null, null ],
     [ "Colosseum X Drake", "PSY", [ "Cerebral", "Slasher" ], 4, 25, 5, 2, 70, 1066998, 708, 315, 77, null, null, null, null ],
-    [ "Colosseum X Drake", "PSY", [ "Cerebral", "Powerhouse" ], 5, 40, 4, 3, 99, null, 1297, 631, 130, null, null, null, null ]
+    [ "Colosseum X Drake", "PSY", [ "Cerebral", "Powerhouse" ], 5, 40, 4, 3, 99, null, 1297, 631, 130, 2599, 1230, 300, null ]
 	];
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ]
 // or [ "Name", "Type", "Class1", null, null, null, null, null, null, null, null, null, null, null, null, null ]

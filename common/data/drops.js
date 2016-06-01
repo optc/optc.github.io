@@ -789,6 +789,8 @@ window.drops = {
             thumb: 538,
             global: true,
             condition: '30: Non-Shooter, Evolver, or Booster class characters are weakend; 15: Fighter and Slasher class characters are weakened',
+            challenge: 'Cumulative Damage dealt to enemies in a single run',
+            challengeData: [['600,000 Damage','1x Yellow Elder'],['2,000,000 Damage','1x HP Cotton Candy, 1x Rainbow Gem'],['5,000,000 Damage','1x Matching Orb Forbidden Tome, 2x Rainbow Gems']],
             "All Difficulties": [ 537, 539, 540, -539, -428, -416, -365, -257, -59 ]
         },
 

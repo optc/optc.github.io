@@ -5257,13 +5257,13 @@ window.details = {
 	1082: {
 		captain: "Boosts ATK of Striker and Fighter characters by 1.2x",
 		special: "Deals severe [STR] damage to all enemies. Boosts ATK of Striker and Fighter characters by a variable amount depending on the current HP at the time the special was activated.",
-		specialNotes: "Below 30% -> __ boost, between 30% and 70% -> __, above 70% -> __",
+		specialNotes: "Below 30% -> 1.75 boost, between 30% and 70% -> 1.5, above 70% -> 1.2",
 		specialName: "Don Sai Special"
 	},
 	1083: {
 		captain: "Boosts ATK of Striker and Fighter characters by 1.5x at the start of the chain, and by 3x after the 3rd Perfect",
 		special: "Deals severe [STR] damage to all enemies. Boosts ATK of Striker and Fighter characters by a variable amount depending on the current HP at the time the special was activated.",
-		specialNotes: "Below 30% -> __ boost, between 30% and 70% -> __, above 70% -> __",
+		specialNotes: "Below 30% -> 1.75 boost, between 30% and 70% -> 1.5, above 70% -> 1.2",
 		specialName: "Don Sai Special"
 	},
 	1084: {
@@ -5282,34 +5282,34 @@ window.details = {
 		captain: "Boosts ATK and RCV of Ambition characters by 1.5x",
 		specialNotes: "#{orb : 1.5x}",
 		special: "Randomizes all orbs including [BLOCK] orbs. Amplifies the effect of orbs by 1.5x for 2 turns",
-		specialName: "Colosseum Musshuru Special"
+		specialName: "Lot Stiffen"
 	},
 	1087: {
-		captain: "Boosts ATK and RCV of Ambition characters by 1.5x",
+		captain: "Boosts ATK of Ambition characters by 2x and their RCV by 1.5x",
 		specialNotes: "#{orb : 1.5x}",
 		special: "Randomizes all orbs including [BLOCK] orbs. Amplifies the effect of orbs by 1.5x for 2 turns",
-		specialName: "Colosseum Musshuru Special"
+		specialName: "Lot Stiffen"
 	},
 	1088: {
 		captain: "Boosts ATK of Slasher characters by 2x",
-		special: "Greatly reduces crew's HP, deals severe [QCK] damage to all enemies. Boosts ATK of Slasher and Ambition units by 1.5x for 1 turn.",
-		specialName: "Colosseum Saga Special"
+		special: "Reduces crew's HP by 70%, deals severe [QCK] damage to all enemies. Boosts ATK of Slasher and Ambition units by 1.5x for 1 turn.",
+		specialName: "Seven Stars Sword of Darkness"
 	},
 	1089: {
 		captain: "Boosts ATK of Slasher characters by 2x and the HP of Ambition characters by 1.75x",
 		captainNotes: "Slasher + Ambition characters gain ATK AND HP",
-		special: "Greatly reduces crew's HP, deals severe [QCK] damage to all enemies. Boosts ATK of Slasher and Ambition units by 1.5x for 1 turn.",
-		specialName: "Colosseum Saga Special"
+		special: "Reduces crew's HP by 70%, deals severe [QCK] damage to all enemies. Boosts ATK of Slasher and Ambition units by 1.5x for 1 turn.",
+		specialName: "Seven Stars Sword of Darkness"
 	},
 	1090: {
 		captain: "Boosts ATK of all characters by 2x if HP is below 30% at the start of the turn",
 		special: "Deals severe [PSY] damage to one enemy. If HP < 30% then changes adjacent orbs to Matching orbs",
-		specialName: "Colosseum X Drake Special"
+		specialName: "Double Edge of Revolt"
 	},
 	1091: {
 		captain: "Boosts ATK of all characters by 2.5x if HP is below 30% at the start of the turn",
 		special: "Deals severe [PSY] damage to one enemy. If HP < 30% then changes adjacent orbs to Matching orbs",
-		specialName: "Colosseum X Drake Special"
+		specialName: "Double Edge of Revolt"
 	}
 	
 };
