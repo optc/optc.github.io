@@ -1316,7 +1316,7 @@ window.specials = {
 		type: "type"
 	},
     1082: {
-        orb: function(p) {
+        atk: function(p) {
             if(p.percHP >= 70.0){
                 return p.unit.class.has("Striker") || p.unit.class.has("Fighter") ? 1.2 : 1;
             }else if(p.percHP >= 20.0){
@@ -1324,10 +1324,11 @@ window.specials = {
             }else{
                 return p.unit.class.has("Striker") || p.unit.class.has("Fighter") ? 1.75 : 1;
             }
-        }
+        },
+        type: "class"
     },
     1083: {
-        orb: function(p) {
+        atk: function(p) {
             if(p.percHP >= 70.0){
                 return p.unit.class.has("Striker") || p.unit.class.has("Fighter") ? 1.2 : 1;
             }else if(p.percHP >= 20.0){
@@ -1335,7 +1336,8 @@ window.specials = {
             }else{
                 return p.unit.class.has("Striker") || p.unit.class.has("Fighter") ? 1.75 : 1;
             }
-        }
+        },
+        type: "class"
     },
     1086: {
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, 1, 1.5); }
