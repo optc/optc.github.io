@@ -3702,13 +3702,13 @@ window.details = {
 	},
     828: {
         specialName: "Surprise Stab",
-        special: "Deals 3x character's ATK in [PSY] damage to one enemy, Boosts ATK of Slasher and Ambition characters by 1.75x for 1 turns if used below 20% HP",
+        special: "Deals 3x character's ATK in [PSY] damage to one enemy, Boosts ATK of Slasher and Driven characters by 1.75x for 1 turns if used below 20% HP",
         captain: "Protects from defeat as long as HP is above 50%",
 		captainNotes: "#{zombie}" 
     },
     829: {
         specialName: "Surprise Stab",
-        special: "Deals 3x character's ATK in [PSY] damage to one enemy, Boosts ATK of Slasher and Ambition characters by 1.75x for 1 turns if used below 20% HP",
+        special: "Deals 3x character's ATK in [PSY] damage to one enemy, Boosts ATK of Slasher and Driven characters by 1.75x for 1 turns if used below 20% HP",
         captain: "Protects from defeat as long as HP is above 30%",
 		captainNotes: "#{zombie}" 
     },
@@ -3752,15 +3752,15 @@ window.details = {
 		specialNotes: "#{orb : 1.75x}"
 	},
 	837: {
-		captain: "Boosts ATK of Ambition characters by 2x",
+		captain: "Boosts ATK of Driven characters by 2x",
 		specialName: "Gas Robe",
-		special: "Poisons all enemies, boosts ATK of Ambition characters by 1.75x for 2 turns",
+		special: "Poisons all enemies, boosts ATK of Driven characters by 1.75x for 2 turns",
 		specialNotes: "#{poison}"
 	},
 	838: {
-		captain: "Boosts ATK of Ambition characters by 2.5x",
+		captain: "Boosts ATK of Driven characters by 2.5x",
 		specialName: "Gas Robe",
-		special: "Poisons all enemies, boosts ATK of Ambition characters by 1.75x for 2 turns"
+		special: "Poisons all enemies, boosts ATK of Driven characters by 1.75x for 2 turns"
 	},
 	839: {
 		captain: "Boosts ATK of Striker characters by 2x",
@@ -3825,12 +3825,12 @@ window.details = {
 		special: "Changes the top right orb into [DEX], the middle right orb into [STR] and the bottom right orb into [QCK], seals himself for 3 turns"
 	},
 	851: {
-		captain: "Boosts ATK of Ambition characters by 1.5x",
+		captain: "Boosts ATK of Driven characters by 1.5x",
 		specialName: "Snow Country Speciality: Snow Powder Makeup",
 		special: "Deals 20x character's ATK in character's type damage to one enemy, locks all orbs for 1 turn"
 	},
 	852: {
-		captain: "Boosts ATK of Ambition characters by 2x",
+		captain: "Boosts ATK of Driven characters by 2x",
 		specialName: "Snow Country Speciality: Snow Powder Makeup",
 		special: "Deals 20x character's ATK in character's type damage to one enemy, locks all orbs for 1 turn"
 	},
@@ -3864,13 +3864,13 @@ window.details = {
 		special: "Changes adjacent orbs into [RCV] orbs, boosts RCV of PSY characters by 1.5x for 1 turn"
 	},
 	859: {
-		captain: "Boosts ATK of Ambition characters by 1.5x, reduces damage received up to 10% depending on the crew's current HP",
+		captain: "Boosts ATK of Driven characters by 1.5x, reduces damage received up to 10% depending on the crew's current HP",
 		specialName: "Pleading at the Risk of One's Life",
 		special: "Changes adjacent orbs into [RCV] orbs; if the special is activated with more than 50% health remaining, protects from defeat for 1 turn",
 		specialNotes: "#{zombie}"
 	},
 	860: {
-		captain: "Boosts ATK of Ambition characters by 2x, reduces damage received up to 30% depending on the crew's current HP",
+		captain: "Boosts ATK of Driven characters by 2x, reduces damage received up to 30% depending on the crew's current HP",
 		specialName: "Pleading at the Risk of One's Life",
 		special: "Changes adjacent orbs into [RCV] orbs; if the special is activated with more than 50% health remaining, protects from defeat for 1 turn",
 		specialNotes: "#{zombie}"
@@ -3918,13 +3918,13 @@ window.details = {
 		special: "Deals 15x character's ATK in STR damage to one enemy, reduces Bind duration by 3 turns"
 	},
 	869: {
-		captain: "Boosts ATK of Ambition characters by 3x until the first hit other than Perfect",
+		captain: "Boosts ATK of Driven characters by 3x until the first hit other than Perfect",
 		specialName: "Black Knight",
 		special: "Changes adjacent orbs into matching orbs, amplifies the effect of orbs by 2x for 1 turn",
 		specialNotes: "#{orb : 2x}"
 	},
 	870: {
-		captain: "Boosts ATK of Ambition characters by 3x until the first hit other than Perfect",
+		captain: "Boosts ATK of Driven characters by 3x until the first hit other than Perfect",
 		specialName: "Black Knight",
 		special: "Changes adjacent orbs into matching orbs, amplifies the effect of orbs by 2x for 1 turn",
 		specialNotes: "#{orb : 2x}"
@@ -3984,12 +3984,12 @@ window.details = {
 		specialNotes: "#{orb: 1.5x or 1.75x} #{stages}"
 	},
 	875: {
-		captain: "Boosts ATK of Cerebral and Ambition characters by 2x",
+		captain: "Boosts ATK of Cerebral and Driven characters by 2x",
 		specialName: "Beto Launcher",
 		special: "Changes the captain's orb into a matching orb, locks all orbs for 1 turn, deals 13x character's ATK in INT damage to all enemies"
 	},
 	876: {
-		captain: "Boosts ATK of Cerebral and Ambition characters by 2.25x, makes [TND] and [RCV] orbs \"beneficial\" to Cerebral and Ambition characters",
+		captain: "Boosts ATK of Cerebral and Driven characters by 2.25x, makes [TND] and [RCV] orbs \"beneficial\" to Cerebral and Driven characters",
 		captainNotes: "\"Beneficial\" orbs grant the same ATK boost as matching orbs while retaining their original function.",
 		specialName: "Beto Launcher",
 		special: "Changes the captain's orb into a matching orb, locks all orbs for 1 turn, deals 13x character's ATK in INT damage to all enemies"
@@ -4049,7 +4049,7 @@ window.details = {
 		special: "Deals 15x character's ATK in STR damage to all enemies, boosts ATK of Slasher characters by 1.5x for 1 turn if HP is below 30% when the special is activated"
 	},
 	887: {
-		captain: "Boosts ATK of Ambition characters by 1.5x, boosts amount of beli received by 1.2x",
+		captain: "Boosts ATK of Driven characters by 1.5x, boosts amount of beli received by 1.2x",
 		specialName: "Special Muggy Ball: Flashy",
 		special: "Reduces the defense of all enemies by 80% for 1 turn, deals 15x character's ATK in QCK damage to all enemies"
 	},
@@ -4084,7 +4084,7 @@ window.details = {
 		special: "Reduces damage received by 50% for 1 turn, deals 30x character's ATK in STR damage to all enemies"
 	},
 	894: {
-		captain: "Boosts ATK of Ambition characters by 3x following a chain of Good > Great > Perfect hits",
+		captain: "Boosts ATK of Driven characters by 3x following a chain of Good > Great > Perfect hits",
 		specialName: "Brick Bat: Black Box",
 		special: "Empties all slots with [INT] orbs, deals several times the character's ATK in INT damage to one enemy",
 		specialNotes: "The exact multiplier used is chosen based on the number of [INT] orbs consumed: 1 orb will give a 10x multiplier, 2 orbs 15x, 3 orbs 20x, 4 orbs 50x, 5 orbs 100x, 6 orbs 200x. It's not possible to activate the special without consuming at least one [INT] orb."
@@ -4100,7 +4100,7 @@ window.details = {
 		special: "Recovers 6x character's RCV in HP at the end of each turn for 3 turns"
 	},
 	897: {
-		captain: "Boosts ATK of Cerebral and Ambition characters by 2x",
+		captain: "Boosts ATK of Cerebral and Driven characters by 2x",
 		specialName: "Ground Death: Thirst",
 		special: "Changes own orb into [STR], randomizes all other orbs, cuts the current HP of all enemies by 10%"
 	},
@@ -4283,14 +4283,14 @@ window.details = {
 		special: "Recovers 5000 HP and amplifies the effect of orbs by 1.5x for 2 turns"
 	},
 	923: {
-		captain: "Boosts ATK of Ambition characters by 2x or by 2.5x",
+		captain: "Boosts ATK of Driven characters by 2x or by 2.5x",
 		captainNotes: "#{captainFixed : 2x : HP<30% : 2.5x}",
 		specialName: "Repel: Weapons Reflect",
 		special: "Empties all slots, deals [STR] damage based on number of [STR] slots emptied to all enemies",
 		specialNotes: "The exact multiplier used is chosen based on the number of [STR] orbs consumed: 0 orbs - 3.5x ATK; 1 orb - 7x ATK; 2 orbs - 14x ATK; 3 orbs - 21x ATK; 4 orbs - 35x ATK; 5 orbs - 91x ATK; 6 orbs - 140x ATK."
 	},
 	924: {
-		captain: "Boosts ATK of Ambition characters by 2x or by 2.75x",
+		captain: "Boosts ATK of Driven characters by 2x or by 2.75x",
 		captainNotes: "#{captainFixed : 2x : HP<30% : 2.75x}",
 		specialName: "Repel: Weapons Reflect",
 		special: "Empties all slots, deals [STR] damage based on number of [STR] slots emptied to all enemies",
@@ -4307,17 +4307,17 @@ window.details = {
 		special: "Deals 15x ATK to 1 enemy in [QCK] damage, boosts ATK against enemies with reduced defense by 1.3x for 3 turns"
 	},
 	927: {
-		captain: "Boosts ATK and HP of Ambition Units by 1.5x",
+		captain: "Boosts ATK and HP of Driven Units by 1.5x",
 		specialName: "Unwavering Hammer of Justice",
-		special: "Take 1.5x Additional damage; Boosts ATK of Slasher and Ambition characters by 1.2x for 3 turns"
+		special: "Take 1.5x Additional damage; Boosts ATK of Slasher and Driven characters by 1.2x for 3 turns"
 	},
 	928: {
-		captain: "Boosts ATK of Ambition Characters by 1.75x while above 30% HP and boosts ATK of Striker Characters by 1.75x while below 30% HP",
+		captain: "Boosts ATK of Driven Characters by 1.75x while above 30% HP and boosts ATK of Striker Characters by 1.75x while below 30% HP",
 		special: "Deals 7x his ATK in [DEX] damage to all enemies, and boosts ATK against Poisoned enemies by 1.3x for 3 turns",
 		specialName: "Hell Wisdom Rush"
 	},
 	929: {
-		captain: "Boosts ATK of Ambition Characters by 2.25x while above 30% HP and boosts ATK of Striker Characters by 2.25x while below 30% HP",
+		captain: "Boosts ATK of Driven Characters by 2.25x while above 30% HP and boosts ATK of Striker Characters by 2.25x while below 30% HP",
 		special: "Deals 7x his ATK in [DEX] damage to all enemies, and boosts ATK against Poisoned enemies by 1.3x for 3 turns",
 		specialName: "Hell Wisdom Rush"
 	},
@@ -4335,7 +4335,7 @@ window.details = {
 		specialName: "Rock Domination Wall",
 		special: [
 			{
-				"description": "For Ambition and Powerhouse characters, changes [EMPTY] and Bad orbs to Matching. Cuts the current HP of all enemies by 10%",
+				"description": "For Driven and Powerhouse characters, changes [EMPTY] and Bad orbs to Matching. Cuts the current HP of all enemies by 10%",
 				"cooldown": [ 25, 11 ]
 			},
 			{
@@ -4350,7 +4350,7 @@ window.details = {
 		specialName: "Rock Domination Wall",
 		special: [
 			{
-				"description": "For Ambition and Powerhouse characters, changes [EMPTY] and Bad orbs to Matching. Cuts the current HP of all enemies by 10%",
+				"description": "For Driven and Powerhouse characters, changes [EMPTY] and Bad orbs to Matching. Cuts the current HP of all enemies by 10%",
 				"cooldown": [ 25, 11 ]
 			},
 			{
@@ -4415,14 +4415,14 @@ window.details = {
 		special: "Reduces damage received from [QCK] enemies by 100% for 1 turn"
 	},
 	944: {
-		captain: "Boosts ATK and RCV of Ambition Characters by 1.2x",
+		captain: "Boosts ATK and RCV of Driven Characters by 1.2x",
 		specialName: "Spiritual Bouquet",
-		special: "Boosts ATK and RCV of Ambition Characters by 1.5x for 1 turn"
+		special: "Boosts ATK and RCV of Driven Characters by 1.5x for 1 turn"
 	},
 	945: {
-		captain: "Boosts ATK and RCV of Ambition Characters by 1.75x",
+		captain: "Boosts ATK and RCV of Driven Characters by 1.75x",
 		specialName: "Spiritual Bouquet",
-		special: "Boosts ATK and RCV of Ambition Characters by 1.5x for 1 turn"
+		special: "Boosts ATK and RCV of Driven Characters by 1.5x for 1 turn"
 	},
 	946: {
 		specialName: "Lock-on Iron Ball",
@@ -4523,7 +4523,7 @@ window.details = {
 		special: "Boosts ATK of all characters by 1.1x for 1 turn. If \"Wrath of the Creator Bloodline\" is used again in the same turn the special is activated in, boosts ATK of all characters by 1.5x instead."
 	},
 	966:{
-		captain: "Boosts ATK of Ambition Characters by 2.25x",
+		captain: "Boosts ATK of Driven Characters by 2.25x",
 		specialName: "Kid Special",
 		special: "Empties slots with [QCK] orbs, deals [QCK] damage based on number of [QCK] slots emptied to all enemies",
 		specialNotes: "The exact multiplier used is chosen based on the number of [QCK] orbs consumed: 0 orbs - Can't activate; 1 orb - 14x ATK; 2 orbs - 21x ATK; 3 orbs - 35x ATK; 4 orbs - 49x ATK; 5 orbs - 91x ATK; 6 orbs - 140x ATK."
@@ -4566,13 +4566,13 @@ window.details = {
 	975:{
 		captain: "Reduces damage received by 10%",
 		specialName: "A Threat That Puts Adults to Shame",
-		special: "Boosts the ATK of Striker and Ambition Characters by 1.3x for 1 turn. Protects from defeat as long as HP is above 50% for 1 turn",
+		special: "Boosts the ATK of Striker and Driven Characters by 1.3x for 1 turn. Protects from defeat as long as HP is above 50% for 1 turn",
 		specialNotes: "#{zombie}"
 	},
 	976:{
-		captain: "Boosts ATK of Ambition Characters by 2x. Reduces damage received by 10%",
+		captain: "Boosts ATK of Driven Characters by 2x. Reduces damage received by 10%",
 		specialName: "A Threat That Puts Adults to Shame",
-		special: "Boosts the ATK of Striker and Ambition Characters by 1.3x for 1 turn. Protects from defeat as long as HP is above 50% for 1 turn",
+		special: "Boosts the ATK of Striker and Driven Characters by 1.3x for 1 turn. Protects from defeat as long as HP is above 50% for 1 turn",
 		specialNotes: "#{zombie}"
 	},
 	977:{
@@ -4740,12 +4740,12 @@ window.details = {
 		specialNotes: "#{stages}"
     },
     998: {
-		captain: "Boosts ATK of Ambition characters by 2x and reduces cooldown of all specials by 1 turns at the start of the fight",
+		captain: "Boosts ATK of Driven characters by 2x and reduces cooldown of all specials by 1 turns at the start of the fight",
         specialName: "Hira Release: Death Enjambre",
         special: "Delays all enemies for 2 turns, deals 50x character's ATK as typeless damage to all enemies at the end of the turn for 5 turns"
     },
     999: {
-		captain: "Boosts ATK of Ambition characters by 2.25x and reduces cooldown of all specials by 2 turns at the start of the fight",
+		captain: "Boosts ATK of Driven characters by 2.25x and reduces cooldown of all specials by 2 turns at the start of the fight",
         specialName: "Hira Release: Death Enjambre",
         special: "Delays all enemies for 2 turns, deals 50x character's ATK as typeless damage to all enemies at the end of the turn for 5 turns"
     },
@@ -4805,13 +4805,13 @@ window.details = {
 		captainNotes: "The bonus is cumulative. STR Fighter characters get a 2.25x bonus."
 	},
 	1010:{
-		captain: "Boosts ATK of Ambition characters by 1.5x",
+		captain: "Boosts ATK of Driven characters by 1.5x",
 		special: "Boosts own ATK by 1.3x for 5 turns, reduces damage received by 20% for 5 turns, deals 13x character's ATK as [INT] damage to one enemy",
 		specialName: "Evil Beast's Horn Pierce"
 	},
 	1011:{
-		captain: "Boosts ATK of Ambition characters by 1.75x, and boosts ATK of Powerhouse characters by 1.5x",
-		captainNotes: "The bonus is cumulative. Ambition Powerhouse characters get a 2.625x bonus.",
+		captain: "Boosts ATK of Driven characters by 1.75x, and boosts ATK of Powerhouse characters by 1.5x",
+		captainNotes: "The bonus is cumulative. Driven Powerhouse characters get a 2.625x bonus.",
 		special: "Boosts own ATK by 1.3x for 5 turns, reduces damage received by 20% for 5 turns, deals 13x character's ATK as [INT] damage to one enemy",
 		specialName: "Evil Beast's Horn Pierce"
 	},
@@ -5142,12 +5142,12 @@ window.details = {
         specialName: "Captain Slot Change QCK"
     },
 	1069: {
-        captain: "Boosts ATK of Ambition characters by 1.5x",
+        captain: "Boosts ATK of Driven characters by 1.5x",
         special: "Deals 9x ATK in [DEX] damage to one enemy. Changes own orb into [DEX]",
         specialName: "Fighting Method of the Pirate Executioner"
     },
 	1070: {
-        captain: "Boosts ATK of Ambition characters by 2.25x",
+        captain: "Boosts ATK of Driven characters by 2.25x",
         special: "Deals 9x ATK in [DEX] damage to one enemy. Changes own orb into [DEX]",
         specialName: "Fighting Method of the Pirate Executioner"
     },
@@ -5267,38 +5267,38 @@ window.details = {
 		specialName: "Don Sai Special"
 	},
 	1084: {
-		captain: "Boosts HP of Ambition characters by 1.5x and their ATK by 3x if they have a matching orb, by 1.5x otherwise. Makes [TND] and [RCV] orbs \"beneficial\" to Ambition characters",
+		captain: "Boosts HP of Driven characters by 1.5x and their ATK by 3x if they have a matching orb, by 1.5x otherwise. Makes [TND] and [RCV] orbs \"beneficial\" to Driven characters",
 		special: "Cuts the current HP of each enemy by 20%. At the end of the turn, cuts the current HP of each enemy by 20% for 3 turns",
 		specialNote: "Does not stack with other 'end of turn damage' abilities",
 		specialName: "Gravito: Heavens Fall"
 	},
 	1085: {
-		captain: "Boosts HP of Ambition characters by 1.5x and their ATK by 3x if they have a matching orb, by 1.5x otherwise. Makes [TND] and [RCV] orbs \"beneficial\" to Ambition characters",
+		captain: "Boosts HP of Driven characters by 1.5x and their ATK by 3x if they have a matching orb, by 1.5x otherwise. Makes [TND] and [RCV] orbs \"beneficial\" to Driven characters",
 		special: "Cuts the current HP of each enemy by 20%. At the end of the turn, cuts the current HP of each enemy by 20% for 3 turns",
 		specialNote: "Does not stack with other 'end of turn damage' abilities",
 		specialName: "Gravito: Heavens Fall"
 	},
 	1086: {
-		captain: "Boosts ATK and RCV of Ambition characters by 1.5x",
+		captain: "Boosts ATK and RCV of Driven characters by 1.5x",
 		specialNotes: "#{orb : 1.5x}",
 		special: "Randomizes all orbs including [BLOCK] orbs. Amplifies the effect of orbs by 1.5x for 2 turns",
 		specialName: "Lot Stiffen"
 	},
 	1087: {
-		captain: "Boosts ATK of Ambition characters by 2x and their RCV by 1.5x",
+		captain: "Boosts ATK of Driven characters by 2x and their RCV by 1.5x",
 		specialNotes: "#{orb : 1.5x}",
 		special: "Randomizes all orbs including [BLOCK] orbs. Amplifies the effect of orbs by 1.5x for 2 turns",
 		specialName: "Lot Stiffen"
 	},
 	1088: {
 		captain: "Boosts ATK of Slasher characters by 2x",
-		special: "Reduces crew's HP by 70%, deals severe [QCK] damage to all enemies. Boosts ATK of Slasher and Ambition units by 1.5x for 1 turn.",
+		special: "Reduces crew's HP by 70%, deals severe [QCK] damage to all enemies. Boosts ATK of Slasher and Driven units by 1.5x for 1 turn.",
 		specialName: "Seven Stars Sword of Darkness"
 	},
 	1089: {
-		captain: "Boosts ATK of Slasher characters by 2x and the HP of Ambition characters by 1.75x",
-		captainNotes: "Slasher + Ambition characters gain ATK AND HP",
-		special: "Reduces crew's HP by 70%, deals severe [QCK] damage to all enemies. Boosts ATK of Slasher and Ambition units by 1.5x for 1 turn.",
+		captain: "Boosts ATK of Slasher characters by 2x and the HP of Driven characters by 1.75x",
+		captainNotes: "Slasher + Driven characters gain ATK AND HP",
+		special: "Reduces crew's HP by 70%, deals severe [QCK] damage to all enemies. Boosts ATK of Slasher and Driven units by 1.5x for 1 turn.",
 		specialName: "Seven Stars Sword of Darkness"
 	},
 	1090: {

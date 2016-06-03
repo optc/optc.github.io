@@ -953,7 +953,7 @@ window.drops = {
         {
             name: "Wapol's Counterattack",
             thumb: 852,
-            condition: 'You can only bring Shooter and Ambition units',
+            condition: 'You can only bring Shooter and Driven units',
             "All Difficulties": [ 328, 330, 331, 333, 851, 853, 854, -854, -649, -643, -614, -463, -457, -327, -22 ]
         },
 
@@ -988,7 +988,7 @@ window.drops = {
         },
 		
 		{
-            name: "Hannyabal's Great Ambition",
+            name: "Hannyabal's Great Driven",
             thumb: 929,
             condition: 'You can only bring STR units',
             "All Difficulties": [ 928, 930, 931, -752, -758, -520, -729, -733, -787, -930, -544, -506 ]

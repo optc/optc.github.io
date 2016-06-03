@@ -721,7 +721,7 @@ window.specials = {
 		warning: "Selected special (%name%) assumes that the enemy has been poisoned."
 	},
     828: {
-        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Ambition") ? window.specials[828].multiplier : 1; },
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Driven") ? window.specials[828].multiplier : 1; },
 		type: "class",
 		onActivation: function(p) {
 			var n = (p.percHP < 20 ? 1.75 : 1);
@@ -733,7 +733,7 @@ window.specials = {
 		}  
     },
     829: {
-        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Ambition") ? window.specials[829].multiplier : 1; },
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Driven") ? window.specials[829].multiplier : 1; },
 		type: "class",
 		onActivation: function(p) {
 			var n = (p.percHP < 20 ? 1.75 : 1);
@@ -759,11 +759,11 @@ window.specials = {
 		orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, 1, 1.75); }
 	},
 	837: {
-		atk: function(p) { return p.unit.class.has("Ambition") ? 1.75 : 1; },
+		atk: function(p) { return p.unit.class.has("Driven") ? 1.75 : 1; },
 		type: "class"
 	},
 	838: {
-		atk: function(p) { return p.unit.class.has("Ambition") ? 1.75 : 1; },
+		atk: function(p) { return p.unit.class.has("Driven") ? 1.75 : 1; },
 		type: "class"
 	},
 	839: {
@@ -1075,7 +1075,7 @@ window.specials = {
     },
 	927: {
         atk: function(p) {
-			return p.unit.class.has("Slasher") || p.unit.class.has("Ambition") ? 1.2 : 1;
+			return p.unit.class.has("Slasher") || p.unit.class.has("Driven") ? 1.2 : 1;
 		},
 		type: "class"
     },
@@ -1098,13 +1098,13 @@ window.specials = {
 		type: "type"
     },
 	944: {
-		atk: function(p) { return p.unit.class.has("Ambition") ? 1.5 : 1; },
-		rcv: function(p) { return p.unit.class.has("Ambition") ? 1.5 : 1; },
+		atk: function(p) { return p.unit.class.has("Driven") ? 1.5 : 1; },
+		rcv: function(p) { return p.unit.class.has("Driven") ? 1.5 : 1; },
 		type: "class"
     },
 	945: {
-		atk: function(p) { return p.unit.class.has("Ambition") ? 1.5 : 1; },
-		rcv: function(p) { return p.unit.class.has("Ambition") ? 1.5 : 1; },
+		atk: function(p) { return p.unit.class.has("Driven") ? 1.5 : 1; },
+		rcv: function(p) { return p.unit.class.has("Driven") ? 1.5 : 1; },
 		type: "class"
     },
 	947: {
@@ -1153,12 +1153,12 @@ window.specials = {
 		}
 	},
 	975: {
-		atk: function(p) { return p.unit.class.has("Ambition") ? 1.3 : 1; },
+		atk: function(p) { return p.unit.class.has("Driven") ? 1.3 : 1; },
 		atk: function(p) { return p.unit.class.has("Striker") ? 1.3 : 1; },
 		type: "class"
     },
 	976: {
-		atk: function(p) { return p.unit.class.has("Ambition") ? 1.3 : 1; },
+		atk: function(p) { return p.unit.class.has("Driven") ? 1.3 : 1; },
 		atk: function(p) { return p.unit.class.has("Striker") ? 1.3 : 1; },
 		type: "class"
     },
@@ -1346,11 +1346,11 @@ window.specials = {
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, 1, 1.5); }
     },
     1088: {
-        atk: function(p) { return p.unit.class.has("Slasher" || "Ambition") ? 1.5 : 1},
+        atk: function(p) { return p.unit.class.has("Slasher" || "Driven") ? 1.5 : 1},
         type: "class"
     },
     1089: {
-        atk: function(p) { return p.unit.class.has("Slasher" || "Ambition") ? 1.5 : 1},
+        atk: function(p) { return p.unit.class.has("Slasher" || "Driven") ? 1.5 : 1},
         type: "class"
     }
 };
