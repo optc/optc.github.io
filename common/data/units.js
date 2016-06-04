@@ -1085,9 +1085,9 @@ window.units = [
     [ "Fujitora", "INT", [ "Driven", "Powerhouse" ], 5, 30, 4, 4, 70, 1066998, 430, 250, 77, 1890, 754, 204, 1 ],
     [ "Fujitora, Marine Admiral", "INT", [ "Driven", "Powerhouse" ], 6, 55, 4, 5, 99, 5000000, 1820, 700, 201, 3809, 1380, 325, 1 ],
     [ "Colosseum Musshuru", "INT", [ "Driven", "Fighter" ], 3, 16, 6, 2, 50, null, 128, 127, 40, null, null, null, null ],
-    [ "Colosseum Musshuru", "INT", [ "Driven", "Fighter" ], 4, 26, 667, 472, 131, null, null, null, null, null, null, null, null ],
+    [ "Colosseum Musshuru", "INT", [ "Driven", "Fighter" ], 4, 26, 4, 3, 99, null, 667, 472, 131, 1419, 1142, 302, null ],
     [ "Colosseum Saga", "QCK", [ "Slasher", "Driven" ], 3, 16, 5, 2, 50, 392109, 177, 132, 25, null, null, null, null ],
-    [ "Colosseum Saga", "QCK", [ "Slasher", "Driven" ], 4, 26, 4, 3, 99, 3000000, 912, 497, 93, null, null, null, null ],
+    [ "Colosseum Saga", "QCK", [ "Slasher", "Driven" ], 4, 26, 4, 3, 99, 3000000, 912, 497, 93, 1952, 1093, 220, null ],
     [ "Colosseum X Drake", "PSY", [ "Cerebral", "Slasher" ], 4, 25, 5, 2, 70, 1066998, 708, 315, 77, null, null, null, null ],
     [ "Colosseum X Drake", "PSY", [ "Cerebral", "Powerhouse" ], 5, 40, 4, 3, 99, null, 1297, 631, 130, 2599, 1230, 300, null ]
 	];
