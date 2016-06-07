@@ -5023,13 +5023,13 @@ window.details = {
         captain: "Boosts ATK of Free Spirit Units by 2.75x following a chain of Good > Great > Perfect hits",
         specialName: "Dragon Claw Fist: Dragon's Breath",
         special: "Deals random typeless damage to all enemies. For two turns every attacking character gets 55x Sabos ATK as additional typeless bonus damage if you hit a Good/Great/Perfect",
-        specialNotes: "The random Damage will get added soon. <br> The Max amount of Bonus damage you can do is 1,325×55×6×2=874,500"
+        specialNotes: "The Random Damage is between 10k and 30k <br> Extra Damage can only be boosted by conditional Boosters"
     },
     1047: {
         captain: "Boosts ATK of Free Spirit Units by 3.5x following a chain of Good > Great > Perfect hits",
         specialName: "Dragon Claw Fist: Dragon's Breath",
         special: "Deals random typeless damage to all enemies. For two turns every attacking character gets 55x Sabos ATK as additional typeless bonus damage if you hit a Good/Great/Perfect",
-        specialNotes: "The random Damage will get added soon. <br> The Max amount of Bonus damage you can do is 1,325×55×6×2=874,500"
+        specialNotes: "The Random Damage is between 10k and 30k <br> Extra Damage can only be boosted by conditional Boosters"
     },
 	1048: {
 		captain: "Boosts ATK and RCV of [PSY] Units by 1.2x",
@@ -5310,6 +5310,15 @@ window.details = {
 		captain: "Boosts ATK of all characters by 2.5x if HP is below 30% at the start of the turn",
 		special: "Deals severe [PSY] damage to one enemy. If HP < 30% then changes adjacent orbs to Matching orbs",
 		specialName: "Double Edge of Revolt"
-	}
-	
+	},
+    1092: {
+        captain: "Boosts RCV of all characters depending on the current Health.",
+        captainNotes: "The Lower the Health the Higher the Bonus, at 1HP the multiplier is 1.5x",
+        special: "Changes the Friend Captains orb into a matching Orb, recovers 3.000HP"
+    },
+	1092: {
+        captain: "Boosts RCV of all characters depending on the current Health.",
+        captainNotes: "The Lower the Health the Higher the Bonus, at 1HP the multiplier is ?x",
+        special: "Changes the Friend Captains orb into a matching Orb, recovers 3.000HP"
+    }
 };

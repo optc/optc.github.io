@@ -988,7 +988,7 @@ window.drops = {
         },
 		
 		{
-            name: "Hannyabal's Great Driven",
+            name: "Hannyabal's Great Ambition",
             thumb: 929,
             condition: 'You can only bring STR units',
             "All Difficulties": [ 928, 930, 931, -752, -758, -520, -729, -733, -787, -930, -544, -506 ]

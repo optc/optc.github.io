@@ -188,7 +188,7 @@ window.matchers = [
     {
         name: 'Orb controllers',
         target: 'special',
-        matcher: /(Changes.+orbs)/i
+        matcher: /(Changes.+(orb|orbs))/i
     },
 
     {
