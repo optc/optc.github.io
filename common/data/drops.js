@@ -858,18 +858,20 @@ window.drops = {
         },
 
         {
-            name: 'Fight! Suna Suna Clan!!',
+            name: 'Fight! Sand-Sand Band!!',
             thumb: 664,
-			global: true,
+            global: true,
             condition: 'Heatwave causes damage every 2 turns',
-            "All Difficulties": [ 663, 665, 667, -667, -522, -508, -506, -459, -378, -221, -73 ]
+            "Japan": [ 663, 665, 667, -667, -522, -508, -506, -459, -378, -221, -73 ],
+            "Global": [ 663, 665, 667, -667, -639, -508, -506, -459, -378, -221, -73 ]
         },
 
         {
-            name: 'Guidance from the Sound of a Bell! Calgara and Noland!',
+            name: 'Led by the Light of Shandora! Calgara & Noland!',
             thumb: 688,
             condition: 'Bomb orbs appear',
-            "All Difficulties": [ 687, 689, -542, -524, -528, -429, -428, -401, -365, -218 ]
+            "Japan": [ 687, 689, -542, -524, -528, -429, -428, -401, -365, -218 ],
+            "Global": [ 687, 689, -542, -645, -647, -429, -428, -401, -365, -218 ]
         },
 
         {
@@ -898,31 +900,19 @@ window.drops = {
         {
             name: "Twilight Party DEAD or TREAT!!",
             thumb: 761,
-			condition: "None",
-            "All Difficulties": [ 761, 762, 763, 764, 765, -610, -588, -565, -556, -426, -408, -261, -217 ]
-        },
-
-        {
-            name: "Twilight Party DEAD or TREAT!! (Global)",
-            thumb: 763,
             global: true,
 			condition: "None",
-            "All Difficulties": [ 761, 762, 763, 764, 765, -426, -408, -332, -308, -292, -261, -217, -8 ]
+            "Japan": [ 761, 762, 763, 764, 765, -610, -588, -565, -556, -426, -408, -261, -217 ],
+            "Global": [ 761, 762, 763, 764, 765, -426, -408, -332, -308, -292, -261, -217, -8 ]
         },
 
         {
             name: "Midnight Party DEAD or TREAT!!",
             thumb: 766,
-			condition: "None",
-            "All Difficulties": [ 762, 766, 767, 768, 769, -629, -611, -569, -554, -431, -410, -367, -223 ]
-        },
-
-        {
-            name: "Midnight Party DEAD or TREAT!! (Global)",
-            thumb: 768,
             global: true,
 			condition: "None",
-            "All Difficulties": [ 762, 766, 767, 768, 769, -431, -367, -291, -253, -251, -223, -212, -75 ]
+            "Japan": [ 762, 766, 767, 768, 769, -629, -611, -569, -554, -431, -410, -367, -223 ],
+            "Global": [ 762, 766, 767, 768, 769, -431, -367, -291, -253, -251, -223, -212, -75 ]
         },
 
         {
