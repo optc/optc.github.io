@@ -270,6 +270,44 @@ window.effects = {
         atk: function(p) { console.log(p); return (p.type == "STR" || p.type == "DEX" || p.type == "QCK") ? 1.6 : 0.2; },
         hp: function(p) { return (p.type == "STR" || p.type == "DEX" || p.type == "QCK") ? 0.1 : 2.0; }
         
+    },
+    
+    '3-hit Good Barrier': {
+        description: 'You need to hit 3 Goods before you do any Damage',
+        thumb: null,
+        id: 32,
+        comboShield: 3,
+        comboType: 'Good'
+    },
+    
+    '3-hit Great Barrier': {
+        description: 'You need to hit 3 Greats before you do any Damage',
+        thumb: null,
+        id: 33,
+        comboShield: 3,
+        comboType: 'Great'
+    },
+    
+    '10-Hit Hit Barrier': {
+        description: 'You will only do damage once the combo meter reaches 10 hits',
+        thumb: null,
+        id: 34,
+        comboShield: 10
+    },
+    
+    '1.25x Orb Boost': {
+        description: 'Used by Christmas Law in Saga Colosseum',
+        thumb: 856,
+        id: 35,
+        orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 10/15 : 1); }
+    },
+    
+    '700k Damage Treshold Barrier': {
+        description: 'Used by Saga. You cannot do more that 700k damage in one hit',
+        thumb: null,
+        id: 36,
+        barrierThreshold: 700000,
+        barrierReduction: 0.99
     }
 
 };

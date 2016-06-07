@@ -585,6 +585,18 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                     result.push(JSON.parse(JSON.stringify(captains[i].hitModifiers)));
             }
         }
+        // Auto sorting for Hit Barriers
+        if (mapEffect.comboType){
+            var mapComboArray = []
+            for(var cmb=0;cmb<mapEffect.comboShield;cmb++){
+                mapComboArray.push(mapEffect.comboType);
+            }
+            var cmbLeft = 6-mapEffect.comboShield;
+            for(var cmb=0;cmb<cmbLeft;cmb++){
+                mapComboArray.push("Perfect");
+            }
+            result.push(mapComboArray);
+        }
         return result;
     };
 
