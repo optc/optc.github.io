@@ -299,6 +299,9 @@ window.specials = {
 		atk: function(p) { return p.defenseDown ? 1.3 : 1; },
 		type: "condition"
 	},
+    552: {
+		def: function(p) { return 0; }
+	},
 	559: {
 		orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, 1, 1.5); }
 	},

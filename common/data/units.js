@@ -1025,7 +1025,7 @@ window.units = [
     [ "Don Chinjao", "INT", [ "Powerhouse","Fighter" ], 4, 18, 6, 3, 70, 1066998, 226, 187, 17, 1505, 808, 100, 1 ],
     [ "Don Chinjao, Flower Country Gang", "INT", [ "Powerhouse","Striker" ], 5, 30, 4, 4, 99, 4000000, 1433, 746, 68, 2818, 1424, 185, 1 ],
     [ "Blue Gilly", "QCK", [ "Fighter","Free Spirit" ], 4, 18, 6, 3, 70, 1066998, 197, 138, 37, 1330, 689, 162, 1 ],
-    [ "Blue Gilly, Jao Kun Do Martial Artist", "QCK", [ "Fighter","Free Spirit" ], 5, 30, 7, 4, 99, 5000000, 1253, 630, 129, 2552, 1300, 277, 1 ],
+    [ "Blue Gilly, Jao Kun Do Martial Artist", "QCK", [ "Fighter","Free Spirit" ], 5, 30, 7, 4, 99, 4000000, 1253, 630, 129, 2552, 1300, 277, 1 ],
     [ "Funk Brothers", "DEX", [ "Fighter","Driven" ], 4, 18, 5, 3, 70, 1066998, 60, 172, 44, 937, 824, 109, 1 ],
     [ "Funk Brothers, Mogaro Kingdom Assassins", "DEX", [ "Fighter","Driven" ], 5, 30, 8, 4, 99, 4000000, 1500, 824, 77, 2920, 1251, 226, 1 ],
     [ "Hajrudin", "PSY", [ "Powerhouse","Fighter" ], 4, 18, 5, 3, 70, 1066998, 201, 177, 38, 1403, 795, 116, 1 ],
