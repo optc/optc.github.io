@@ -1070,7 +1070,7 @@ window.units = [
     [ "Shuraiya Bascùd", "DEX", [ "Fighter", "Driven" ], 3, 9, 5, 2, 35, 136167, 402, 190, 65, 879, 410, 127, 1 ],
     [ "Shuraiya Bascùd, Pirate Executioner", "DEX", [ "Fighter", "Driven" ], 4, 15, 4, 2, 70, 1066998, 812, 358, 80, 1474, 742, 188, 1 ],
     [ "Gasparde", "STR", [ "Powerhouse", "Fighter" ], 3, 12, 5, 1, 50, 392109, 129, 67, 18, 1494, 571, 101, 1 ],
-    [ "Gasparde, Gasparde Pirates", "STR", [ "Powerhouse", "Fighter" ], 4, 20, 5, 4, 99, 3000000, 1437, 516, 63, 2501, 1002, 198, 1 ],
+    [ "Gasparde, Gasparde Pirates", "STR", [ "Powerhouse", "Striker" ], 4, 20, 5, 4, 99, 3000000, 1437, 516, 63, 2501, 1002, 198, 1 ],
     [ "Needless", "QCK", [ "Slasher", "Driven" ], 3, 14, 6, 1, 70, 1066998, 88, 120, 37, 973, 802, 223, 1 ],
     [ "Ricky", "INT", [ "Cerebral", "Striker" ], 4, 18, 6, 3, 70, 1066998, 207, 102, 62, 1177, 524, 246, 1 ],
     [ "Ricky, Mysterious Gladiator", "INT", [ "Cerebral", "Striker" ], 5, 30, 6, 4, 99, 4000000, 1102, 467, 199, 2689, 900, 395, 1 ],
