@@ -2093,7 +2093,7 @@ window.details = {
 		special: "Poisons all enemies, boosts ATK of Striker characters by 1.5x for 1 turn",
 		specialNotes: "#{poison}",
 		specialName: "Merciless Ploy: Poison Needle",
-		captain: "Boosts ATK of Striker characters by 1.5x"
+		captain: "Boosts ATK of Striker characters by 2x"
 	},
 	510: {
 		special: "Poisons all enemies, boosts ATK of Striker characters by 1.5x for 1 turn",
