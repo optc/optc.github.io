@@ -5316,7 +5316,7 @@ window.details = {
         captainNotes: "The Lower the Health the Higher the Bonus, at 1HP the multiplier is 1.5x",
         special: "Changes the Friend Captains orb into a matching Orb, recovers 3.000HP"
     },
-	1092: {
+	1093: {
         captain: "Boosts RCV of all characters depending on the current Health.",
         captainNotes: "The Lower the Health the Higher the Bonus, at 1HP the multiplier is 2x",
         special: "Changes the Friend Captains orb into a matching Orb, recovers 3.000HP",

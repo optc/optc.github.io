@@ -166,6 +166,12 @@ window.matchers = [
         target: 'special',
         matcher: /(Following the activation.+boosts.+ATK|If during that turn.+boosts.+ATK)/i
     },
+    
+    {
+        name: 'RCV boosters',
+        target: 'special',
+        matcher: /Boosts RCV/i
+    },
 
     {
         name: 'Orb lockers',

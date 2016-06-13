@@ -1091,7 +1091,12 @@ window.units = [
     [ "Colosseum X Drake", "PSY", [ "Cerebral", "Slasher" ], 4, 25, 5, 2, 70, 1066998, 708, 315, 77, null, null, null, null ],
     [ "Colosseum X Drake", "PSY", [ "Cerebral", "Powerhouse" ], 5, 40, 4, 3, 99, null, 1297, 631, 130, 2599, 1230, 300, null ],
     [ "Kid Rebecca", "PSY", [ "Striker", "Free Spirit" ], 4, 10, 6, 2, 35, null, 462, 130, 328, null, null, null, null ],
-    [ "Kid Rebecca Evolution", "PSY", [ "Striker", "Free Spirit" ], 5, 17, 4, 3, 70, null, 400, 93, 262, null, null, null, null ]
+    [ "Kid Rebecca Evolution", "PSY", [ "Striker", "Free Spirit" ], 5, 17, 4, 3, 70, null, 400, 93, 262, null, null, null, null ],
+    [ "Dr. Indigo", "DEX", [ "Cerebral", "Shooter" ], 3, 12, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Dr. Indigo Evolution", "DEX", [ "Cerebral", "Shooter" ], 4, 20, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Scarlet", "INT", [ "Powerhouse", "Free Spirit" ], 3, 12, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Scarlet Evolution", "INT", [ "Powerhouse", "Free Spirit" ], 4, 20, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Billy the Thunder Bird", "INT", [ "Shooter", "Powerhouse" ], 3, 10, null, null, null, null, null, null, null, null, null, null, null ]
 	];
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ]
 // or [ "Name", "Type", "Class1", null, null, null, null, null, null, null, null, null, null, null, null, null ]

@@ -1038,8 +1038,8 @@ window.drops = {
         
         {
             name: "Dr. Indigo & Scarlet!",
-            condition: "???",
-            "All Difficulties": [ -912, -1014, -647, -891, -590, -524, -611]
+            condition: "Boosts Fighters/Slashers HP by ?x, Driven/Powerhouse ATK by ?x, Lowers Stiker/Shooter/Free Spirit/Cerebral HP and ATK by ?x",
+            "All Difficulties": [ 1094, 1096, 1098, -912, -1014, -647, -891, -590, -524, -611]
         },
 
     ],
