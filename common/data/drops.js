@@ -1038,8 +1038,9 @@ window.drops = {
         
         {
             name: "Dr. Indigo & Scarlet!",
-            condition: "Boosts Fighters/Slashers HP by ?x, Driven/Powerhouse ATK by ?x, Lowers Stiker/Shooter/Free Spirit/Cerebral HP and ATK by ?x",
-            "All Difficulties": [ 1094, 1096, 1098, -912, -1014, -647, -891, -590, -524, -611]
+			thumb: 1095,
+            condition: "Boosts ATK of Driven and Powerhouse characters by 2x, other classes get .5x ATK. Boosts HP of Slasher and Fighter characters by 2x, other classes get .5x HP. (This STACKS for characters with multiple classes)",
+            "All Difficulties": [ 1094, 1096, 1098, -649, -910, -647, -891, -590, -524, -611, -893, -1098]
         },
 
     ],

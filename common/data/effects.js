@@ -308,6 +308,14 @@ window.effects = {
         id: 36,
         barrierThreshold: 700000,
         barrierReduction: 0.99
+    },
+	
+	'Dr. Indigo & Scarlet! Fortnight': {
+        description: 'Boosts ATK of Driven and Powerhouse characters by 2x, other classes get .5x ATK. Boosts HP of Slasher and Fighter characters by 2x, other classes get .5x HP.',
+        thumb: null,
+        id: 37,
+        atk: function(p) { return p.class.has('Driven') && p.class.has('Powerhouse') ? 4 : ( p.class.has('Driven') || p.class.has('Powerhouse') ? 2 : 0.5;) },
+        hp: function(p) { return p.class.has('Slasher') && p.class.has('Fighter') ? 4 : ( p.class.has('Slasher') || p.class.has('Fighter') ? 2 : 0.5;) }
     }
 
 };

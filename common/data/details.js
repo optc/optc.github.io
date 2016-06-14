@@ -5256,13 +5256,13 @@ window.details = {
 	},
 	1082: {
 		captain: "Boosts ATK of Striker and Fighter characters by 1.2x",
-		special: "Deals severe [STR] damage to all enemies. For 2 turns, boosts ATK of Striker and Fighter characters by a variable amount depending on the current HP at the time the special was activated.",
+		special: "Deals 20x ATK in [STR] damage to all enemies. For 2 turns, boosts ATK of Striker and Fighter characters by a variable amount depending on the current HP at the time the special was activated.",
 		specialNotes: "Below 30% -> 1.75 boost, between 30% and 70% -> 1.5, above 70% -> 1.2",
 		specialName: "Don Sai Special"
 	},
 	1083: {
 		captain: "Boosts ATK of Striker and Fighter characters by 1.5x at the start of the chain, and by 3x after the 3rd Perfect",
-		special: "Deals severe [STR] damage to all enemies. For 2 turns, boosts ATK of Striker and Fighter characters by a variable amount depending on the current HP at the time the special was activated.",
+		special: "Deals 20x ATK in [STR] damage to all enemies. For 2 turns, boosts ATK of Striker and Fighter characters by a variable amount depending on the current HP at the time the special was activated.",
 		specialNotes: "Below 30% -> 1.75 boost, between 30% and 70% -> 1.5, above 70% -> 1.2",
 		specialName: "Don Sai Special"
 	},
@@ -5292,33 +5292,60 @@ window.details = {
 	},
 	1088: {
 		captain: "Boosts ATK of Slasher characters by 2x",
-		special: "Reduces crew's HP by 70%, deals severe [QCK] damage to all enemies. Boosts ATK of Slasher and Driven units by 1.5x for 1 turn.",
+		special: "Reduces crew's HP by 70%, deals 15x ATK in [QCK] damage to all enemies. Boosts ATK of Slasher and Driven units by 1.5x for 1 turn.",
 		specialName: "Seven Stars Sword of Darkness"
 	},
 	1089: {
 		captain: "Boosts ATK of Slasher characters by 2x and the HP of Driven characters by 1.75x",
 		captainNotes: "Slasher + Driven characters gain ATK AND HP",
-		special: "Reduces crew's HP by 70%, deals severe [QCK] damage to all enemies. Boosts ATK of Slasher and Driven units by 1.5x for 1 turn.",
+		special: "Reduces crew's HP by 70%, deals 15x ATK in [QCK] damage to all enemies. Boosts ATK of Slasher and Driven units by 1.5x for 1 turn.",
 		specialName: "Seven Stars Sword of Darkness"
 	},
 	1090: {
 		captain: "Boosts ATK of all characters by 2x if HP is below 30% at the start of the turn",
-		special: "Deals severe [PSY] damage to one enemy. If HP < 30% then changes adjacent orbs to Matching orbs",
+		special: "Deals 25x ATK in [PSY] damage to one enemy. If HP < 30% then changes adjacent orbs to Matching orbs",
 		specialName: "Double Edge of Revolt"
 	},
 	1091: {
 		captain: "Boosts ATK of all characters by 2.5x if HP is below 30% at the start of the turn",
-		special: "Deals severe [PSY] damage to one enemy. If HP < 30% then changes adjacent orbs to Matching orbs",
+		special: "Deals 25x ATK in [PSY] damage to one enemy. If HP < 30% then changes adjacent orbs to Matching orbs",
 		specialName: "Double Edge of Revolt"
 	},
     1092: {
         captain: "Boosts RCV of all characters depending on the current Health.",
         captainNotes: "The Lower the Health the Higher the Bonus, at 1HP the multiplier is 1.5x",
-        special: "Changes the Friend Captains orb into a matching Orb, recovers 3.000HP"
+        special: "Changes the Friend Captains orb into a matching Orb, recovers 3.000HP",
+		specialName: "Kid Rebecca Specail"
     },
 	1093: {
         captain: "Boosts RCV of all characters depending on the current Health.",
         captainNotes: "The Lower the Health the Higher the Bonus, at 1HP the multiplier is 2x",
         special: "Changes the Friend Captains orb into a matching Orb, recovers 3.000HP",
+		specialName: "Kid Rebecca Specail"
+    },
+	1094: {
+        captain: "Boosts ATK of Cerebral characters by 2x.",
+        special: "Reduces crew's current HP by 80%, deals 6x the removed HP as damage to all enemies. Reduces damage received by 80% for 1 turn.",
+		specialName: "Dr. Indigo Special"
+    },
+	1095: {
+        captain: "Boosts ATK of Cerebral characters by 2x.",
+        special: "Reduces crew's current HP by 80%, deals 6x the removed HP as damage to all enemies. Reduces damage received by 80% for 1 turn.",
+		specialName: "Dr. Indigo Special"
+    },
+	1096: {
+        captain: "Boosts ATK of Powerhouse characters by 3x after the 5th Perfect.",
+        special: "Deals [INT] damage to one enemy. Boosts own ATK by 1.75x for 1 turn.",
+		specialName: "Scarlet Special"
+    },
+	1097: {
+        captain: "Boosts ATK of Powerhouse characters by 3x after the 5th Perfect.",
+        special: "Deals [INT] damage to one enemy. Boosts own ATK by 1.75x for 1 turn.",
+		specialName: "Scarlet Special"
+    },
+	1098: {
+        captain: "Boosts chain multiplier by 2x",
+        special: "Randomizes all orbs including [BLOCK] orbs and switches orbs between slots once.",
+		specialName: "Bill the Thunder Bird Special"
     }
 };

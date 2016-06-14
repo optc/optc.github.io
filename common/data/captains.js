@@ -2701,4 +2701,10 @@ window.captains = {
     1091: {
 		atk: function(p) { return p.percHP <= 30.0 ? 2.5 : 1; }
 	},
+	1092: {
+		rcv: function(p) { return 1 + .5 * ((100 - p.percHP) / 100); }
+	},
+	1093: {
+		rcv: function(p) { return 1 + 1 * ((100 - p.percHP) / 100);	}
+	}
 };
