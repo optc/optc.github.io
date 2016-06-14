@@ -309,13 +309,36 @@ window.effects = {
         barrierThreshold: 700000,
         barrierReduction: 0.99
     },
-	/*
+    
 	'Dr. Indigo & Scarlet! Fortnight': {
         description: 'Boosts ATK of Driven and Powerhouse characters by 2x, other classes get .5x ATK. Boosts HP of Slasher and Fighter characters by 2x, other classes get .5x HP.',
         thumb: null,
         id: 37,
-        atk: function(p) { return p.class.has('Driven') && p.class.has('Powerhouse') ? 4 : ( p.class.has('Driven') || p.class.has('Powerhouse') ? 2 : 0.5;) },
-        hp: function(p) { return p.class.has('Slasher') && p.class.has('Fighter') ? 4 : ( p.class.has('Slasher') || p.class.has('Fighter') ? 2 : 0.5;) }
-    }*/
+        atk: function(p) { 
+                            var boost1 = 1.0, boost2 = 1.0, boost3 = 1.0, boost4 = 1.0, boost5 = 1.0;
+                            if(p.class.has('Driven')) { boost1 = 2.0}
+                            if(p.class.has('Powerhouse')) { boost2 = 2.0}
+                            if(!(p.class.has('Driven')&&p.class.has('Powerhouse')) && p.class.constructor === Array){
+                            if(!p.class.has('Driven')){ boost3 = 0.5}
+                            if(!p.class.has('Powerhouse')){ boost4 = 0.5}}
+                            if(p.class.constructor === String){
+                                if(!(p.class.has('Driven') || p.class.has('Powerhouse'))){ boost5 = 0.5}
+                            }
+                            console.log("1:" +boost1 + " 2: "+boost2+" 3: "+boost3+" 4: "+boost4);
+                            return 1*boost1*boost2*boost3*boost4*boost5; 
+                        },
+        hp: function(p) {
+                            var boost1 = 1.0, boost2 = 1.0, boost3 = 1.0, boost4 = 1.0, boost5 = 1.0;
+                            if(p.class.has('Fighter')) { boost1 = 2.0}
+                            if(p.class.has('Slasher')) { boost2 = 2.0}
+                            if(!(p.class.has('Fighter')&&p.class.has('Slasher')) && p.class.constructor === Array){
+                            if(!p.class.has('Fighter')){ boost3 = 0.5}
+                            if(!p.class.has('Slasher')){ boost4 = 0.5}}
+                            if(p.class.constructor === String){
+                                if(!(p.class.has('Fighter') || p.class.has('Slasher'))){ boost5 = 0.5}
+                            }
+                            return 1*boost1*boost2*boost3*boost4*boost5;
+                        }
+    }
 
 };
