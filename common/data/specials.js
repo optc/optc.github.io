@@ -1355,5 +1355,13 @@ window.specials = {
     1089: {
         atk: function(p) { return p.unit.class.has("Slasher" || "Driven") ? 1.5 : 1},
         type: "class"
+    },
+    1096: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 1.75 : 1; },
+		type: "type"
+    },
+    1097: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 1.75 : 1; },
+		type: "type"
     }
 };

@@ -2706,5 +2706,26 @@ window.captains = {
 	},
 	1093: {
 		rcv: function(p) { return 1 + 1 * ((100 - p.percHP) / 100);	}
-	}
+	},
+    1094: {
+        atk: function(p) { return p.class.has('Cerebral') ? 2.0 : 1.0; }
+    },
+    1095: {
+        atk: function(p) { return p.class.has('Cerebral') ? 2.0 : 1.0; }
+    },
+    1096: {
+        hitAtk: function(p) {
+			return !(p.class.has('Powerhouse')) ? 1.0 : p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 3 : 1;
+		},
+		hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
+    },
+    1097: {
+        hitAtk: function(p) {
+			return !(p.class.has('Powerhouse')) ? 1.0 : p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 3.5 : 1;
+		},
+		hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
+    },
+    1098: {
+        chainModifier: function(p) { return 2; }
+    }
 };

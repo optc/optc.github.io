@@ -1093,9 +1093,9 @@ window.units = [
     [ "Kid Rebecca", "PSY", [ "Striker", "Free Spirit" ], 4, 10, 6, 2, 35, null, 462, 130, 328, null, null, null, null ],
     [ "Kid Rebecca Evolution", "PSY", [ "Striker", "Free Spirit" ], 5, 17, 4, 3, 70, null, 400, 93, 262, null, null, null, null ],
     [ "Dr. Indigo", "DEX", [ "Cerebral", "Shooter" ], 3, 12, 4, 1, 50, null, 66, 36, 41, null, null, null, null ],
-    [ "Dr. Indigo Evolution", "DEX", [ "Cerebral", "Shooter" ], 4, 20, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Scarlet", "INT", [ "Powerhouse", "Free Spirit" ], 3, 12, 5, 1, 50, null, 121, 47, 5, null, null, null, null ],
-    [ "Scarlet Evolution", "INT", [ "Powerhouse", "Free Spirit" ], 4, 20, 4, 2, null, null, 1271, 467, 30, null, null, null, null ],
+    [ "Dr. Indigo, Golden Lion Pirates", "DEX", [ "Cerebral", "Shooter" ], 4, 20, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Commander Scarlet", "INT", [ "Powerhouse", "Free Spirit" ], 3, 12, 5, 1, 50, null, 121, 47, 5, null, null, null, null ],
+    [ "Commander Scarlet, Golden Lion Pirates", "INT", [ "Powerhouse", "Free Spirit" ], 4, 20, 4, 2, null, null, 1271, 467, 30, null, null, null, null ],
     [ "Billy the Thunder Bird", "PSY", [ "Shooter", "Powerhouse" ], 3, 10, 4, 2, 50, null, 54, 99, 40, null, null, null, null ]
 	];
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ]

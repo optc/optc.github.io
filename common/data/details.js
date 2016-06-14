@@ -5326,26 +5326,26 @@ window.details = {
 	1094: {
         captain: "Boosts ATK of Cerebral characters by 2x.",
         special: "Reduces crew's current HP by 80%, deals 6x the removed HP as damage to all enemies. Reduces damage received by 80% for 1 turn.",
-		specialName: "Dr. Indigo Special"
+		specialName: "Mass Juggling"
     },
 	1095: {
         captain: "Boosts ATK of Cerebral characters by 2x.",
         special: "Reduces crew's current HP by 80%, deals 6x the removed HP as damage to all enemies. Reduces damage received by 80% for 1 turn.",
-		specialName: "Dr. Indigo Special"
+		specialName: "Mass Juggling"
     },
 	1096: {
         captain: "Boosts ATK of Powerhouse characters by 3x after the 5th Perfect.",
         special: "Deals [INT] damage to one enemy. Boosts own ATK by 1.75x for 1 turn.",
-		specialName: "Scarlet Special"
+		specialName: "Crash Drumming"
     },
 	1097: {
-        captain: "Boosts ATK of Powerhouse characters by 3x after the 5th Perfect.",
+        captain: "Boosts ATK of Powerhouse characters by 3.5x after the 5th Perfect.",
         special: "Deals [INT] damage to one enemy. Boosts own ATK by 1.75x for 1 turn.",
-		specialName: "Scarlet Special"
+		specialName: "Crash Drumming"
     },
 	1098: {
         captain: "Boosts chain multiplier by 2x",
         special: "Randomizes all orbs including [BLOCK] orbs and switches orbs between slots once.",
-		specialName: "Bill the Thunder Bird Special"
+		specialName: "Mutation-Induced Thunder"
     }
 };
