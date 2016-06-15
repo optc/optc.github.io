@@ -5315,13 +5315,13 @@ window.details = {
         captain: "Boosts RCV of all characters depending on the current Health.",
         captainNotes: "The Lower the Health the Higher the Bonus, at 1HP the multiplier is 1.5x",
         special: "Changes the Friend Captains orb into a matching Orb, recovers 3.000HP",
-		specialName: "Kid Rebecca Specail"
+		specialName: "Present After the Rain"
     },
 	1093: {
         captain: "Boosts RCV of all characters depending on the current Health.",
         captainNotes: "The Lower the Health the Higher the Bonus, at 1HP the multiplier is 2x",
         special: "Changes the Friend Captains orb into a matching Orb, recovers 3.000HP",
-		specialName: "Kid Rebecca Specail"
+		specialName: "Present After the Rain"
     },
 	1094: {
         captain: "Boosts ATK of Cerebral characters by 2x.",
