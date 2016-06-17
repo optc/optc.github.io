@@ -233,37 +233,6 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         result = applyChainAndBonusMultipliers(result,hitModifiers);
         if (mapEffect.damage) result.result = applyEffectDamage(result.result, mapEffect.damage);        
         
-        //Specials that add multiplier damage
-        //Very Specific for Raid Sabo for now
-        var conditionalMultiplier = 1.0;
-        if(staticMultiplier.length == 1){
-            //Since we need this for defense down, and defense down gets saved for all slots we just go with slot 0
-            var params = getParameters(0);
-            //Check if conditional Boosts are activated since they raise 
-            for (var x=0;x<enabledSpecials.length;++x) {
-                if  (enabledSpecials[x].type=='condition'){
-                    var thisMult = enabledSpecials[x].atk(params);
-                    if(thisMult>conditionalMultiplier){
-                        conditionalMultiplier = thisMult;
-                    }
-                }
-            }
-            //Add the static extra Damage to each attacking member
-            for (var y=0;y<enabledSpecials.length;++y) {
-                if (enabledSpecials[y].hasOwnProperty('staticMult')){
-                    var slot = enabledSpecials[y].sourceSlot;
-                    var baseDamage = getStatOfUnit(team[slot],'atk');
-                    var atkCandies = team[slot].candies.atk * 2;
-                    var mult = enabledSpecials[y].staticMult(params);
-                    var staticDamage = Math.ceil((baseDamage+atkCandies)*mult*conditionalMultiplier);
-                    for(var i=0; i<result.result.length;i++){ 
-                        if((hitModifiers[i]=="Great")||(hitModifiers[i]=="Good")||(hitModifiers[i]=="Perfect")){
-                            result.result[i].damage += staticDamage;
-                        }
-                    }
-                }
-            }
-        }
         var overallDamage = result.result.reduce(function(prev,x) { return prev + x.damage; },0);
         
         return { damage: result.result, overall: overallDamage,
@@ -367,6 +336,14 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if (lastHit > 1) result.result += Math.ceil(lastAtk * 0.9 * bonusDamageBase);
             else result.result += Math.max(0,Math.ceil(lastAtk * (0.9 * bonusDamageBase + 1 / unit.combo)) - currentDefense);
         }
+        
+        //Apply Static Bonus Damage From Specials
+        var staticBonusDamage = computeFlatBonusDamage(hitModifier);
+        if (bonusDamageBase > 0 && mapEffect.shieldLeft == 0) {
+            if (lastHit > 1) result.result += staticBonusDamage;
+            else if((staticBonusDamage - currentDefense)>0) result.result += (staticBonusDamage - currentDefense);
+        }
+        
         // apply fixed threshold barrier if active
         if (mapEffect.barrierThreshold && result.result > mapEffect.barrierThreshold) {
             result.result = mapEffect.barrierThreshold +
@@ -633,6 +610,41 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             chain: function() { return 1.0; },
             chainLimiter: function() { return Infinity; }
         });
+    };
+    
+    var computeFlatBonusDamage = function(hitModifier) {
+        
+        var resultDamage = 0;
+        //Specials that add multiplier damage
+        //Very Specific for Raid Sabo for now
+        var conditionalMultiplier = 1.0;
+        if(staticMultiplier.length == 1){
+            //Since we need this for defense down, and defense down gets saved for all slots we just go with slot 0
+            var params = getParameters(0);
+            //Check if conditional Boosts are activated since they raise 
+            for (var x=0;x<enabledSpecials.length;++x) {
+                if  (enabledSpecials[x].type=='condition'){
+                    var thisMult = enabledSpecials[x].atk(params);
+                    if(thisMult>conditionalMultiplier){
+                        conditionalMultiplier = thisMult;
+                    }
+                }
+            }
+            //Add the static extra Damage to each attacking member
+            for (var y=0;y<enabledSpecials.length;++y) {
+                if (enabledSpecials[y].hasOwnProperty('staticMult')){
+                    var slot = enabledSpecials[y].sourceSlot;
+                    var baseDamage = getStatOfUnit(team[slot],'atk');
+                    var atkCandies = team[slot].candies.atk * 2;
+                    var mult = enabledSpecials[y].staticMult(params);
+                    var staticDamage = Math.ceil((baseDamage+atkCandies)*mult*conditionalMultiplier);
+                    if((hitModifier == 'Great')||(hitModifier == 'Good')||(hitModifier == 'Perfect')){
+                        resultDamage += staticDamage;
+                    } 
+                }
+            }
+        }  
+        return resultDamage;
     };
 
     /* * * * * * Utility functions * * * * */
