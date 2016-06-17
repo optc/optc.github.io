@@ -878,12 +878,13 @@ window.drops = {
         },
 
         {
-            name: "Knight of the Sky Gan Fall",
+            name: "Sky Night Ganfor",
             thumb: 713,
             condition: '30: Non-Free Spirit, Evolver, or Booster class characters are weakend; 15: Striker and Shooter class characters are weakened',
 			challenge: 'Cumulative Damage dealt to enemies in a single run',
             challengeData: [['600,000','1x Blue Elder'],['2,000,000','1x RCV Cotton Candy, 1x Rainbow Gem'],['5,000,000','1x Anti-Lock Forbidden Tome, 2x Rainbow Gems']],
-            "All Difficulties": [ 712, 714, 715, -716, -546, -541, -520, -400, -202, -363, -204 ]
+            "Japan": [ 712, 714, 715, -716, -546, -541, -520, -400, -202, -363, -204 ],
+            "Global": [ 712, 714, 715, -716, -643, -546, -541, -400, -202, -363, -204 ]
         },
 
         {
