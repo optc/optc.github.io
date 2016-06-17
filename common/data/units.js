@@ -1096,7 +1096,15 @@ window.units = [
     [ "Dr. Indigo, Golden Lion Pirates", "DEX", [ "Cerebral", "Shooter" ], 4, 20, 4, 2, 99, 3000000, 903, 432, 163, 1796, 911, 352, 1 ],
     [ "Commander Scarlet", "INT", [ "Powerhouse", "Free Spirit" ], 3, 12, 5, 1, 50, 392109, 121, 47, 5, 1323, 520, 59, 1 ],
     [ "Commander Scarlet, Golden Lion Pirates", "INT", [ "Powerhouse", "Free Spirit" ], 4, 20, 4, 2, 99, 3000000, 1271, 467, 30, 2302, 980, 92, 1 ],
-    [ "Billy the Thunder Bird", "PSY", [ "Shooter", "Powerhouse" ], 3, 10, 4, 2, 50, 392109, 54, 99, 40, 556, 803, 217, 1 ]
+    [ "Billy the Thunder Bird", "PSY", [ "Shooter", "Powerhouse" ], 3, 10, 4, 2, 50, 392109, 54, 99, 40, 556, 803, 217, 1 ],
+    [],
+    [],
+    [ "Colosseum Zephyr", "STR", [ "Fighter", "Driven" ], 4, 25, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Colosseum Zephyr Evolution", "STR", [ "Fighter", "Driven" ], 5, 40, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Colosseum Ain", "INT", [ "Slasher", "Cerebral" ], 4, 18, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Colosseum Ain Evolution", "INT", [ "Slasher", "Cerebral" ], 5, 30, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Colosseum Binz", "DEX", [ "Striker", "Free Spirit" ], 4, 18, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Colosseum Binz Evolution", "DEX", [ "Striker", "Free Spirit" ], 5, 30, null, null, null, null, null, null, null, null, null, null, null ]
 	];
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ]
 // or [ "Name", "Type", "Class1", null, null, null, null, null, null, null, null, null, null, null, null, null ]
