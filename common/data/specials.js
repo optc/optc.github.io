@@ -1240,11 +1240,13 @@ window.specials = {
     },
     1028: {
         //TODO
-       hit: function(n) { return n > 30 ? 1.75 : 1; } 
+        hit: function(n) { return n > 30 ? 1.75 : 1; },
+        type: "condition"
     },
     1029: {
         //TODO
-       hit: function(n) { return n > 30 ? 1.75 : 1; } 
+        hit: function(n) { return n > 30 ? 1.75 : 1; },
+        type: "condition"
     },
     1030: {
         atk: function(p) { return p.slot == p.sourceSlot ? 2.25 : 1; },

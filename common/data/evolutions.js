@@ -1629,15 +1629,15 @@ window.evolutions = {
     },
     1086: {
         evolution: 1087,
-        evolvers: []
+        evolvers: [ 117, 88, 99, 304, 104 ]
     },
     1088: {
         evolution: 1089,
-        evolvers: []
+        evolvers: [ 117, 85, 96, 301, 101 ]
     },
     1090: {
         evolution: 1091,
-        evolvers: []
+        evolvers: [ 118, 83, 89, 303, 103 ]
     },
     1092: {
         evolution: 1093,
@@ -1645,11 +1645,11 @@ window.evolutions = {
     },
     1094: {
         evolution: 1095,
-        evolvers: []
+        evolvers: [ 117, 80, 86, 97, 102 ]
     },
     1096: {
         evolution: 1097,
-        evolvers: []
+        evolvers: [ 117, 82, 82, 99, 104]
     },
     1101: {
         evolution: 1102,
