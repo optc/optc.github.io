@@ -28,11 +28,14 @@
 			<div id="calculation-area">
 				
 				<div class="small-container">
+                    <label><input type="checkbox" ng-model="specialEvent" ng-change="changeBaseValues()">Special x2 Event </label>
+                    &nbsp; &nbsp;
+                    <label><input type="checkbox" ng-model="jpnVersion" ng-change="changeBaseValues()">Japanese Version</label>
+                    <p></p>
 					Copies/Books: <input type="text" class="number-field" ng-model="copies" placeholder="e.g. 65" auto-focus
 						ng-change="changeBaseValues()" id="copies">
 					Skillups: <input type="text" class="number-field" ng-model="skillups" placeholder="e.g. 10" auto-focus
 						ng-change="changeBaseValues()" id="skillups">
-					<label><input type="checkbox" ng-model="specialEvent" ng-change="changeBaseValues()">Special x2 Event</label>
 					
 				</div>
 				

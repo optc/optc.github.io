@@ -1104,7 +1104,9 @@ window.units = [
     [ "Colosseum Ain", "INT", [ "Slasher", "Cerebral" ], 4, 18, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Colosseum Ain Evolution", "INT", [ "Slasher", "Cerebral" ], 5, 30, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Colosseum Binz", "DEX", [ "Striker", "Free Spirit" ], 4, 18, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Colosseum Binz Evolution", "DEX", [ "Striker", "Free Spirit" ], 5, 30, null, null, null, null, null, null, null, null, null, null, null ]
+    [ "Colosseum Binz Evolution", "DEX", [ "Striker", "Free Spirit" ], 5, 30, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Secret Coby", "DEX", [ "Fighter", "Cerebral" ], 4, 13, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Secret Coby Evolution", "DEX", [ "Fighter", "Cerebral" ], 5, 20, null, null, null, null, null, null, null, null, null, null, null ]
 	];
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ]
 // or [ "Name", "Type", "Class1", null, null, null, null, null, null, null, null, null, null, null, null, null ]

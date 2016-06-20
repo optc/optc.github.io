@@ -4,10 +4,14 @@ onmessage = function(e) {
 	var skillups = parseInt(e.data.skillups);
 	
 	var probability = 0.125;
+    if (e.data.jpn_server == true) {
+		probability = .2;
+	}
 	// if special event selected probability is doubled
 	if (e.data.special_event == true) {
 		probability *= 2;
 	}
+    
 	
 	var prob = 0;
 	var result = 0;

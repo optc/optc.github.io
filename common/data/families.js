@@ -1104,5 +1104,7 @@ window.families = [
     "Ain",
     "Ain",
     "Binz",
-    "Binz"
+    "Binz",
+    "Coby",
+    "Coby"
 ];
