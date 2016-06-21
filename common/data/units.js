@@ -1090,23 +1090,21 @@ window.units = [
     [ "Saga, Cursed Holy Sword", "QCK", [ "Slasher", "Driven" ], 4, 26, 4, 3, 99, 3000000, 912, 497, 93, 1952, 1093, 220, 1 ],
     [ "X Drake, Captain of the Drake Pirates", "PSY", [ "Cerebral", "Slasher" ], 4, 25, 5, 2, 70, 1066998, 545, 220, 52, 1353, 693, 179, 1 ],
     [ "\"Red Flag\" X Drake, Captain of the Drake Pirates", "PSY", [ "Cerebral", "Powerhouse" ], 5, 40, 4, 3, 99, 4000000, 1297, 631, 130, 2599, 1230, 300, 1 ],
-    [ "Rebecca, Parasol Rhytm", "PSY", [ "Striker", "Free Spirit" ], 4, 10, 6, 2, 35, null, 462, 130, 328, null, null, null, null ],
-    [ "Rebecca, Rainbow Melody", "PSY", [ "Striker", "Free Spirit" ], 5, 17, 4, 3, 70, null, 400, 93, 262, null, null, null, null ],
+    [ "Rebecca, Parasol Rhytm", "PSY", [ "Striker", "Free Spirit" ], 4, 10, 6, 2, 35, 90778, 59, 14, 79, 462, 130, 328, 1 ],
+    [ "Rebecca, Rainbow Melody", "PSY", [ "Striker", "Free Spirit" ], 5, 17, 4, 3, 70, 1066998, 400, 93, 262, 896, 300, 505, 1 ],
     [ "Dr. Indigo", "DEX", [ "Cerebral", "Shooter" ], 3, 12, 4, 1, 50, 392109, 66, 36, 41, 965, 497, 209, 1 ],
     [ "Dr. Indigo, Golden Lion Pirates", "DEX", [ "Cerebral", "Shooter" ], 4, 20, 4, 2, 99, 3000000, 903, 432, 163, 1796, 911, 352, 1 ],
     [ "Commander Scarlet", "INT", [ "Powerhouse", "Free Spirit" ], 3, 12, 5, 1, 50, 392109, 121, 47, 5, 1323, 520, 59, 1 ],
     [ "Commander Scarlet, Golden Lion Pirates", "INT", [ "Powerhouse", "Free Spirit" ], 4, 20, 4, 2, 99, 3000000, 1271, 467, 30, 2302, 980, 92, 1 ],
     [ "Billy the Thunder Bird", "PSY", [ "Shooter", "Powerhouse" ], 3, 10, 4, 2, 50, 392109, 54, 99, 40, 556, 803, 217, 1 ],
-    [],
-    [],
+    [ "Coby, Petty Officer in the Rain", "DEX", [ "Fighter", "Cerebral" ], 4, 13, 6, 2, 50, null, null, null, null, 151, 84, 57, null ],
+    [ "Coby, Petty Officer Sparkling with Dew", "DEX", [ "Fighter", "Cerebral" ], 5, 20, 4, 3, 99, null, 897, 429, 134, null, null, null, null ],
     [ "Colosseum Zephyr", "STR", [ "Fighter", "Driven" ], 4, 25, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Colosseum Zephyr Evolution", "STR", [ "Fighter", "Driven" ], 5, 40, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Colosseum Ain", "INT", [ "Slasher", "Cerebral" ], 4, 18, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Colosseum Ain Evolution", "INT", [ "Slasher", "Cerebral" ], 5, 30, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Colosseum Binz", "DEX", [ "Striker", "Free Spirit" ], 4, 18, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Colosseum Binz Evolution", "DEX", [ "Striker", "Free Spirit" ], 5, 30, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Secret Coby", "DEX", [ "Fighter", "Cerebral" ], 4, 13, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Secret Coby Evolution", "DEX", [ "Fighter", "Cerebral" ], 5, 20, null, null, null, null, null, null, null, null, null, null, null ]
+    [ "Colosseum Binz Evolution", "DEX", [ "Striker", "Free Spirit" ], 5, 30, null, null, null, null, null, null, null, null, null, null, null ]
 	];
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ]
 // or [ "Name", "Type", "Class1", null, null, null, null, null, null, null, null, null, null, null, null, null ]

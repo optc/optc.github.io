@@ -3630,7 +3630,7 @@ window.details = {
 	},
 	812: {
 		specialName: "Hell Howl",
-		special: "Sharply decreases the defense of all enemies for 1 turn"
+		special: "Sharply reduces the defense of all enemies for 1 turn"
 	},
 	813: {
 		specialName: "Sticky Spider Net",
@@ -5181,11 +5181,11 @@ window.details = {
 		special: [
 			{
 				"description": "Delays all enemies for 1 turn. Locks all orbs for 1 turn. Cuts the current HP of one enemy by 10%",
-				"cooldown": 16
+				"cooldown": [ 16, 12]
 			},
 			{
 				"description": "Delays all enemies for 1 turn. Locks all orbs for 1 turn. Cuts the current HP of one enemy by 20%",
-				"cooldown": 20
+				"cooldown": [ 20, 16 ]
 			}
 		],
 		specialNotes: "#{stages}",
@@ -5196,11 +5196,11 @@ window.details = {
 		special: [
 			{
 				"description": "Delays all enemies for 1 turn. Locks all orbs for 1 turn. Cuts the current HP of one enemy by 10%",
-				"cooldown": 16
+				"cooldown": [ 16, 12]
 			},
 			{
 				"description": "Delays all enemies for 1 turn. Locks all orbs for 1 turn. Cuts the current HP of one enemy by 20%",
-				"cooldown": 20
+				"cooldown": [ 20, 16 ]
 			}
 		],
 		specialNotes: "#{stages}",
@@ -5296,7 +5296,7 @@ window.details = {
 		specialName: "Seven Stars Sword of Darkness"
 	},
 	1089: {
-		captain: "Boosts ATK of Slasher characters by 2x and the HP of Driven characters by 1.75x",
+		captain: "Boosts ATK of Slasher characters by 2x and boosts HP of Driven characters by 1.75x",
 		captainNotes: "Slasher + Driven characters gain ATK AND HP",
 		special: "Reduces crew's HP by 70%, deals 15x ATK in [QCK] damage to all enemies. Boosts ATK of Slasher and Driven units by 1.5x for 1 turn.",
 		specialName: "Seven Stars Sword of Darkness"
@@ -5347,5 +5347,15 @@ window.details = {
         captain: "Boosts chain multiplier by 2x",
         special: "Randomizes all orbs including [BLOCK] orbs and switches orbs between slots once.",
 		specialName: "Mutation-Induced Thunder"
+    },
+    1099: {
+        captain: "Boosts ATK of Fighter characters by 2x",
+        special: "Changes Bad orbs into [EMPTY] orbs, amplifies the effect of orbs by 1.5x for 2 turns",
+        specialName: "\"To the End of the Clouds\""
+    },
+    1100: {
+        captain: "Boosts ATK of Fighter characters by 2.25x and their RCV by 1.2x",
+        special: "Changes Bad orbs into [EMPTY] orbs, amplifies the effect of orbs by 1.5x for 2 turns",
+        specialName: "\"To the End of the Clouds\""
     }
 };

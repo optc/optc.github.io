@@ -1324,7 +1324,7 @@ window.specials = {
         atk: function(p) {
             if(p.percHP >= 70.0){
                 return p.unit.class.has("Striker") || p.unit.class.has("Fighter") ? 1.2 : 1;
-            }else if(p.percHP >= 20.0){
+            }else if(p.percHP >= 30.0){
                 return p.unit.class.has("Striker") || p.unit.class.has("Fighter") ? 1.5 : 1;
             }else{
                 return p.unit.class.has("Striker") || p.unit.class.has("Fighter") ? 1.75 : 1;
@@ -1336,7 +1336,7 @@ window.specials = {
         atk: function(p) {
             if(p.percHP >= 70.0){
                 return p.unit.class.has("Striker") || p.unit.class.has("Fighter") ? 1.2 : 1;
-            }else if(p.percHP >= 20.0){
+            }else if(p.percHP >= 30.0){
                 return p.unit.class.has("Striker") || p.unit.class.has("Fighter") ? 1.5 : 1;
             }else{
                 return p.unit.class.has("Striker") || p.unit.class.has("Fighter") ? 1.75 : 1;

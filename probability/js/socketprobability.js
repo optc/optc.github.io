@@ -4,7 +4,6 @@ onmessage = function(e) {
 	var slots = e.data.slots;
 	var temp = slots.slice(0);
 
-	console.log(slots);
 	
 	var approximationLimit = 500000;
 	var domain = 10;

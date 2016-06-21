@@ -267,7 +267,7 @@ window.effects = {
         description: 'STR/DEX/QCK ATK 1.6x and HP 0.1x. INT/PSY ATK 0.2x and HP 2x',
         thumb: null,
         id: 31,
-        atk: function(p) { console.log(p); return (p.type == "STR" || p.type == "DEX" || p.type == "QCK") ? 1.6 : 0.2; },
+        atk: function(p) { return (p.type == "STR" || p.type == "DEX" || p.type == "QCK") ? 1.6 : 0.2; },
         hp: function(p) { return (p.type == "STR" || p.type == "DEX" || p.type == "QCK") ? 0.1 : 2.0; }
         
     },
@@ -324,7 +324,6 @@ window.effects = {
                             if(p.class.constructor === String){
                                 if(!(p.class.has('Driven') || p.class.has('Powerhouse'))){ boost5 = 0.5}
                             }
-                            console.log("1:" +boost1 + " 2: "+boost2+" 3: "+boost3+" 4: "+boost4);
                             return 1*boost1*boost2*boost3*boost4*boost5; 
                         },
         hp: function(p) {

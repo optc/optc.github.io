@@ -34,7 +34,6 @@ controllers.MainCtrl = ['$scope', '$rootScope', '$state', '$stateParams', '$cont
 		var data = {copies: $scope.copies, skillups: $scope.skillups, special_event: $scope.specialEvent, jpn_server: $scope.jpnVersion};
 		SpecialProbability.compute(data).then(
 			function(data) {
-                console.log(data);
 				if (data.finished == true) {
 					if (data.result >= 0.6) {
 						$scope.specialProbabilityColor = "green";
@@ -71,7 +70,7 @@ controllers.MainCtrl = ['$scope', '$rootScope', '$state', '$stateParams', '$cont
 		// create slot array
 		var slots = Array.apply(null, Array($scope.slots)).map(function (x) { return 0; });;
 		for (i = 0; i < $scope.character.slots.length; ++i) {
-			console.log($scope.character.slots[i]);
+			//console.log($scope.character.slots[i]);
 			var obj = $scope.character.slots[i];
 			if (obj != null) {
 				slots[i] = obj.level;
@@ -91,7 +90,7 @@ controllers.MainCtrl = ['$scope', '$rootScope', '$state', '$stateParams', '$cont
 						$scope.socketProbabilityColor = "red";
 					}
 					$scope.socketProbabilityResult = Math.min((data.result * 100),99.9).toFixed(1);
-                    console.log($scope.socketProbabilityResult);
+                    //console.log($scope.socketProbabilityResult);
 					$scope.socketProbabilityProgressBar = "Complete";
 					$scope.isSocketReady = true;
 				} 
