@@ -5357,5 +5357,63 @@ window.details = {
         captain: "Boosts ATK of Fighter characters by 2.25x and their RCV by 1.2x",
         special: "Changes Bad orbs into [EMPTY] orbs, amplifies the effect of orbs by 1.5x for 2 turns",
         specialName: "\"To the End of the Clouds\""
-    }
+    },
+	1101: {
+        captain: "Boosts ATK of all characters by 2.25x until the first hit other than Perfect. Reduces crew's current HP at the end of each turn",
+        special: "Reduces crew's current HP by 80%, deals 10x the amount of HP subtracted in typeless damage to one enemy. Boosts ATK of [STR] and [INT] characters by 1.75x for 1 turn",
+        specialName: "Colosseum Zephyr Special"
+    },
+	1102: {
+        captain: "Boosts ATK of all characters by 2.75x until the first hit other than Perfect. Reduces crew's current HP at the end of each turn",
+        special: "Reduces crew's current HP by 80%, deals 10x the amount of HP subtracted in typeless damage to one enemy. Boosts ATK of [STR] and [INT] characters by 1.75x for 1 turn",
+        specialName: "Colosseum Zephyr Special"
+    },
+	1103: {
+        captain: "Boosts ATK and RCV of Cerebral characters by 1.5x",
+        		special: [
+			{
+				"description": "Recovers 12% of crew's MAX HP",
+				"cooldown": 21
+			},
+			{
+				"description": "Recovers 24% of crew's MAX HP",
+				"cooldown": 24
+			},
+			{
+				"description": "Recovers 36% of crew's MAX HP",
+				"cooldown": 27
+			},
+		],
+		specialNotes: "#{stages}",
+        specialName: "Colosseum Ain Special"
+    },
+	1104: {
+        captain: "Boosts ATK and RCV of Cerebral characters by 1.75x",
+        		special: [
+			{
+				"description": "Recovers 12% of crew's MAX HP",
+				"cooldown": 21
+			},
+			{
+				"description": "Recovers 24% of crew's MAX HP",
+				"cooldown": 24
+			},
+			{
+				"description": "Recovers 36% of crew's MAX HP",
+				"cooldown": 27
+			},
+		],
+		specialNotes: "#{stages}",
+        specialName: "Colosseum Ain Special"
+    },
+	1105: {
+        captain: "Boosts ATK of Striker and Free Spirit characters by 1.5x, deals 2x character's ATK in [STR] damage to all enemies at the end of each turn",
+        special: "Delays all enemies for 1 turn. Adds .2x to Chain multiplier for 2 turns. Makes Perfects easier to hit for 2 turns.",
+        specialName: "Colosseum Binz Special"
+    },
+	1106: {
+        captain: "Boosts ATK of Striker and Free Spirit characters by 2x, deals 2x character's ATK in [STR] damage to all enemies at the end of each turn",
+        special: "Delays all enemies for 1 turn. Adds .2x to Chain multiplier for 2 turns. Makes Perfects easier to hit for 2 turns.",
+        specialName: "Colosseum Binz Special"
+    },
 };
