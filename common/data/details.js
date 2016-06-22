@@ -5359,14 +5359,14 @@ window.details = {
         specialName: "\"To the End of the Clouds\""
     },
 	1101: {
-        captain: "Boosts ATK of all characters by 2.25x until the first hit other than Perfect. Reduces crew's current HP at the end of each turn",
+        captain: "Boosts ATK of all characters by 2.25x until the first hit other than Perfect. Reduces crew's current HP by 10% at the end of each turn",
         special: "Reduces crew's current HP by 80%, deals 10x the amount of HP subtracted in typeless damage to one enemy. Boosts ATK of [STR] and [INT] characters by 1.75x for 1 turn",
-        specialName: "Colosseum Zephyr Special"
+        specialName: "Black Arm's Last Impact"
     },
 	1102: {
-        captain: "Boosts ATK of all characters by 2.75x until the first hit other than Perfect. Reduces crew's current HP at the end of each turn",
+        captain: "Boosts ATK of all characters by 2.75x until the first hit other than Perfect. Reduces crew's current HP by 10% at the end of each turn",
         special: "Reduces crew's current HP by 80%, deals 10x the amount of HP subtracted in typeless damage to one enemy. Boosts ATK of [STR] and [INT] characters by 1.75x for 1 turn",
-        specialName: "Colosseum Zephyr Special"
+        specialName: "Black Arm's Last Impact"
     },
 	1103: {
         captain: "Boosts ATK and RCV of Cerebral characters by 1.5x",
@@ -5385,7 +5385,7 @@ window.details = {
 			},
 		],
 		specialNotes: "#{stages}",
-        specialName: "Colosseum Ain Special"
+        specialName: "Return Return Fruit"
     },
 	1104: {
         captain: "Boosts ATK and RCV of Cerebral characters by 1.75x",
@@ -5404,16 +5404,16 @@ window.details = {
 			},
 		],
 		specialNotes: "#{stages}",
-        specialName: "Colosseum Ain Special"
+        specialName: "Return Return Fruit"
     },
 	1105: {
         captain: "Boosts ATK of Striker and Free Spirit characters by 1.5x, deals 2x character's ATK in [STR] damage to all enemies at the end of each turn",
         special: "Delays all enemies for 1 turn. Adds .2x to Chain multiplier for 2 turns. Makes Perfects easier to hit for 2 turns.",
-        specialName: "Colosseum Binz Special"
+        specialName: "Mosa Mosa Dance"
     },
 	1106: {
         captain: "Boosts ATK of Striker and Free Spirit characters by 2x, deals 2x character's ATK in [STR] damage to all enemies at the end of each turn",
         special: "Delays all enemies for 1 turn. Adds .2x to Chain multiplier for 2 turns. Makes Perfects easier to hit for 2 turns.",
-        specialName: "Colosseum Binz Special"
-    },
+        specialName: "Mosa Mosa Dance"
+    }
 };

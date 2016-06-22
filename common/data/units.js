@@ -1099,12 +1099,12 @@ window.units = [
     [ "Billy the Thunder Bird", "PSY", [ "Shooter", "Powerhouse" ], 3, 10, 4, 2, 50, 392109, 54, 99, 40, 556, 803, 217, 1 ],
     [ "Coby, Petty Officer in the Rain", "DEX", [ "Fighter", "Cerebral" ], 4, 13, 6, 2, 50, null, null, null, null, 151, 84, 57, null ],
     [ "Coby, Petty Officer Sparkling with Dew", "DEX", [ "Fighter", "Cerebral" ], 5, 20, 4, 3, 99, null, 897, 429, 134, null, null, null, null ],
-    [ "Colosseum Zephyr", "STR", [ "Fighter", "Driven" ], 4, 25, 5, 2, 70, null, null, null, null, 1384, 822, 0, null ],
-    [ "Colosseum Zephyr Evolution", "STR", [ "Fighter", "Driven" ], 5, 40, 4, 3, 99, null, 1318, 749, 0, null, null, null, null ],
-    [ "Colosseum Ain", "INT", [ "Slasher", "Cerebral" ], 4, 18, 5, 2, 50, 392109, 197, 101, 54, 1078, 492, 217, null ],
-    [ "Colosseum Ain Evolution", "INT", [ "Slasher", "Cerebral" ], 5, 30, 4, 3, 99, 3000000, 1019, 447, 169, null, null, null, null ],
-    [ "Colosseum Binz", "DEX", [ "Striker", "Free Spirit" ], 4, 18, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Colosseum Binz Evolution", "DEX", [ "Striker", "Free Spirit" ], 5, 30, 4, 3, 99, null, 1091, 484, 115, null, null, null, null ]
+    [ "Black Arm Zephyr", "STR", [ "Fighter", "Driven" ], 4, 25, 5, 2, 70, null, 545, 404, 0, 1384, 822, 0, null ],
+    [ "Black Arm Zephyr, Former Navy HQ Admiral", "STR", [ "Fighter", "Driven" ], 5, 40, 4, 3, 99, null, 1318, 749, 0, null, null, null, null ],
+    [ "Ain, NEO Marines", "INT", [ "Slasher", "Cerebral" ], 4, 18, 5, 2, 50, 392109, 197, 101, 54, 1078, 492, 217, null ],
+    [ "Ain, Zephyr's Last Pupil", "INT", [ "Slasher", "Cerebral" ], 5, 30, 4, 3, 99, 3000000, 1019, 447, 169, null, null, null, null ],
+    [ "Binz, NEO Marines", "DEX", [ "Striker", "Free Spirit" ], 4, 18, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Binz, Zephyr's Last Pupil", "DEX", [ "Striker", "Free Spirit" ], 5, 30, 4, 3, 99, null, 1091, 484, 115, null, null, null, null ]
 	];
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ]
 // or [ "Name", "Type", "Class1", null, null, null, null, null, null, null, null, null, null, null, null, null ]

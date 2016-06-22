@@ -1365,5 +1365,25 @@ window.specials = {
     1097: {
         atk: function(p) { return p.slot == p.sourceSlot ? 1.75 : 1; },
 		type: "type"
-    }
+    },
+    1099: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, 1, 1.5); }
+    },
+    1100: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, 1, 1.5); }
+    },
+    1101: {
+		atk: function(p) { return p.unit.type == "STR" || p.unit.type == "INT" ? 1.75 : 1; },
+		type: "type"
+    },
+    1102: {
+		atk: function(p) { return p.unit.type == "STR" || p.unit.type == "INT" ? 1.75 : 1; },
+		type: "type"
+    },
+    1105: {
+        chainAddition: function(p){ return 0.2;}
+    },
+    1105: {
+        chainAddition: function(p){ return 0.2;}
+    },
 };

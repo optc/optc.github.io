@@ -2727,5 +2727,38 @@ window.captains = {
     },
     1098: {
         chainModifier: function(p) { return 2; }
+    },
+    1099: {
+        atk: function(p) { return p.class.has('Fighter') ? 2.0 : 1.0; }
+    },
+    1100: {
+        atk: function(p) { return p.class.has('Fighter') ? 2.25 : 1.0; },
+        rcv: function(p) { return p.class.has('Fighter') ? 1.2 : 1.0; }
+    },
+    1101: {
+		hitAtk: function(p) {
+			return p.modifiers.slice(0, p.chainPosition).count("Perfect") == p.chainPosition ? 2.25 : 1;
+		},
+		hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
+	},
+    1102: {
+		hitAtk: function(p) {
+			return p.modifiers.slice(0, p.chainPosition).count("Perfect") == p.chainPosition ? 2.75 : 1;
+		},
+		hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
+	},
+    1103: {
+        atk: function(p) { return p.class.has('Cerebral') ? 1.5 : 1.0; },
+        rcv: function(p) { return p.class.has('Cerebral') ? 1.5 : 1.0; }
+    },
+    1104: {
+        atk: function(p) { return p.class.has('Cerebral') ? 1.75 : 1.0; },
+        rcv: function(p) { return p.class.has('Cerebral') ? 1.75 : 1.0; }
+    },
+    1105: {
+         atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Free Spirit") ? 1.5 : 1; }
+    },
+    1106: {
+         atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Free Spirit") ? 2 : 1; }
     }
 };
