@@ -710,8 +710,8 @@ window.units = [
 	[ "Nico Robin, Straw Hat Pirates", "PSY", [ "Fighter", "Cerebral" ], 4, 16, 5, 3, 99, 3000000, 938, 430, 155, 1892, 881, 351, 1 ],
 	[ "Franky Voyage Log: Straw Hat Pirates", "PSY", [ "Shooter", "Free Spirit" ], 4, 12, 4, 2, 50, 392109, 242, 100, 34, 1330, 597, 151, 1 ],
 	[ "Franky Voyage Dream: Ship of the Seven Seas", "PSY", [ "Shooter", "Free Spirit" ], 5, 20, 6, 3, 99, 3000000, 1259, 550, 112, 2372, 1100, 231, 1 ],
-	[ "Gan Fall", "QCK", "Striker", 3, 12, 6, 1, 50, 392109, 80, 40, 48, 930, 452, 185, 1.5 ],
-	[ "Gan Fall the Knight of the Sky", "QCK", "Striker", 4, 20, 4, 2, 99, 3000000, 884, 401, 151, 1704, 1202, 300, 1.5 ],
+	[ "Ganfor", "QCK", "Striker", 3, 12, 6, 1, 50, 392109, 80, 40, 48, 930, 452, 185, 1.5 ],
+	[ "Sky Knight Ganfor", "QCK", "Striker", 4, 20, 4, 2, 99, 3000000, 884, 401, 151, 1704, 1202, 300, 1.5 ],
 	[ "Pierre", "DEX", "Fighter", 3, 12, 4, 1, 50, 392109, 69, 32, 38, 920, 480, 182, 1 ],
 	[ "Konis", "PSY", "Free Spirit", 3, 9, 5, 2, 35, 136167, 58, 10, 32, 503, 190, 232, 1 ],
 	[ "Konis, Skypiean Maiden", "PSY", "Free Spirit", 4, 15, 4, 3, 70, 1066998, 458, 145, 196, 912, 388, 387, 1 ],
@@ -1104,7 +1104,9 @@ window.units = [
     [ "Ain, NEO Marines", "INT", [ "Slasher", "Cerebral" ], 4, 18, 5, 2, 50, 392109, 197, 101, 54, 1078, 492, 217, null ],
     [ "Ain, Zephyr's Last Pupil", "INT", [ "Slasher", "Cerebral" ], 5, 30, 4, 3, 99, 3000000, 1019, 447, 169, null, null, null, null ],
     [ "Binz, NEO Marines", "DEX", [ "Striker", "Free Spirit" ], 4, 18, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Binz, Zephyr's Last Pupil", "DEX", [ "Striker", "Free Spirit" ], 5, 30, 4, 3, 99, null, 1091, 484, 115, null, null, null, null ]
+    [ "Binz, Zephyr's Last Pupil", "DEX", [ "Striker", "Free Spirit" ], 5, 30, 4, 3, 99, null, 1091, 484, 115, null, null, null, null ],
+    [ "Shiki", "STR", [ "Driven", "Slasher" ], 4, 30, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Shiki Evolved", "STR", [ "Driven", "Slasher" ], 5, 50, null, null, null, null, null, null, null, null, null, null, null ]
 	];
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ]
 // or [ "Name", "Type", "Class1", null, null, null, null, null, null, null, null, null, null, null, null, null ]

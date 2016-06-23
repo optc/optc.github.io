@@ -1,6 +1,6 @@
 window.captains = {
 	2: {
-		atk: function(p){ return p.unit.type == "STR" ? 1.5 : 1; }
+		atk: function(p) { return p.unit.type == "STR" ? 1.5 : 1; }
 	},
 	3: {
 		atk: function(p) { return p.unit.type == "STR" ? 1.5 : 1; }

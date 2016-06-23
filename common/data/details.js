@@ -5370,18 +5370,18 @@ window.details = {
     },
 	1103: {
         captain: "Boosts ATK and RCV of Cerebral characters by 1.5x",
-        		special: [
+        special: [
 			{
 				"description": "Recovers 12% of crew's MAX HP",
-				"cooldown": 21
+				"cooldown": [ 21, 11 ]
 			},
 			{
 				"description": "Recovers 24% of crew's MAX HP",
-				"cooldown": 24
+				"cooldown": [ 24, 14 ]
 			},
 			{
 				"description": "Recovers 36% of crew's MAX HP",
-				"cooldown": 27
+				"cooldown": [ 27, 17 ]
 			},
 		],
 		specialNotes: "#{stages}",
@@ -5389,18 +5389,18 @@ window.details = {
     },
 	1104: {
         captain: "Boosts ATK and RCV of Cerebral characters by 1.75x",
-        		special: [
+        special: [
 			{
 				"description": "Recovers 12% of crew's MAX HP",
-				"cooldown": 21
+				"cooldown": [ 21, 11 ]
 			},
 			{
 				"description": "Recovers 24% of crew's MAX HP",
-				"cooldown": 24
+				"cooldown": [ 24, 14 ]
 			},
 			{
 				"description": "Recovers 36% of crew's MAX HP",
-				"cooldown": 27
+				"cooldown": [ 27, 17 ]
 			},
 		],
 		specialNotes: "#{stages}",

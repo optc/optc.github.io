@@ -338,6 +338,14 @@ window.effects = {
                             }
                             return 1*boost1*boost2*boost3*boost4*boost5;
                         }
-    }
+    },
+    
+    'Colosseum Tashigi': {
+        description: '25 hit barrier and 2x chain limit',
+        thumb: null,
+        id: 38,
+        comboShield: 25,
+        chainLimiter: function() { return 2.0; }
+    },
 
 };
