@@ -5415,5 +5415,15 @@ window.details = {
         captain: "Boosts ATK of Striker and Free Spirit characters by 2x, deals 2x character's ATK in [STR] damage to all enemies at the end of each turn",
         special: "Delays all enemies for 1 turn. Adds .2x to Chain multiplier for 2 turns. Makes Perfects easier to hit for 2 turns.",
         specialName: "Mosa Mosa Dance"
-    }
+    },
+	1107: {
+		captain: "Boosts ATK and HP of Driven characters by 1.5x",
+        special: "Deals severe Typeless damage to all enemies. Changes [BLOCK], [G], and [BOMB] orbs on Driven characters to Matching orbs. Boosts ATK of Driven characters by 1.75x for 1 turn.",
+        specialName: "Shiki Special"
+	},
+	1108: {
+		captain: "Boosts ATK and HP of Driven characters by 2x",
+        special: "Deals severe Typeless damage to all enemies. Changes [BLOCK], [G], and [BOMB] orbs on Driven characters to Matching orbs. Boosts ATK of Driven characters by 1.75x for 1 turn.",
+        specialName: "Shiki Special"
+	}
 };

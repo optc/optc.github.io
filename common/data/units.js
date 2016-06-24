@@ -1105,8 +1105,8 @@ window.units = [
     [ "Ain, Zephyr's Last Pupil", "INT", [ "Slasher", "Cerebral" ], 5, 30, 4, 3, 99, 3000000, 1019, 447, 169, 1986, 870, 357, null ],
     [ "Binz, NEO Marines", "DEX", [ "Striker", "Free Spirit" ], 4, 18, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Binz, Zephyr's Last Pupil", "DEX", [ "Striker", "Free Spirit" ], 5, 30, 4, 3, 99, null, 1091, 484, 115, 2107, 1042, 280, null ],
-    [ "Shiki", "STR", [ "Driven", "Slasher" ], 4, 30, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Shiki Evolved", "STR", [ "Driven", "Slasher" ], 5, 50, null, null, null, null, null, null, null, null, null, null, null ]
+    [ "Shiki", "STR", [ "Driven", "Slasher" ], 4, 30, 4, 2, 70, null, 244, 164, 39, null, null, null, null ],
+    [ "Shiki Evolved", "STR", [ "Driven", "Slasher" ], 5, 50, null, 3, 99, null, null, null, null, 2424, 1407, 292, null ]
 	];
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ]
 // or [ "Name", "Type", "Class1", null, null, null, null, null, null, null, null, null, null, null, null, null ]
