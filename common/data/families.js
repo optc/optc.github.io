@@ -1106,5 +1106,16 @@ window.families = [
     "Binz",
     "Binz",
 	"Shiki",
-	"Shiki"
+	"Shiki",
+    null,
+    null,
+    null,
+    null,
+    null,
+    "Monkey D. Luffy",
+    "Monkey D. Luffy",
+    "Sanji",
+    "Sanji",
+    "Nami",
+    "Nami"
 ];

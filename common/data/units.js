@@ -1117,7 +1117,7 @@ window.units = [
 	[ "Sanji, Dream-Pursuing Adventurer", "INT", [ "Fighter", "Powerhouse" ], 4, 17, 4, 3, 70, 1066998, 268, 115, 32, 1545, 698, 122, null ],
 	[ "Sanji, Loyal Strawhat Crew", "INT", [ "Fighter", "Powerhouse" ], 5, 27, 5, 4, 99, 4000000, 1471, 630, 86, 2834, 1224, 226, null ],
 	[ "Nami, Dream-Pursuing Adventurer", "QCK", [ "Striker", "Cerebral" ], 4, 17, 5, 3, 70, 1066998, 190, 81, 57, 1051, 602, 230, null ],
-	[ "Sanji, Loyal Strawhat Crew", "QCK", [ "Striker", "Cerebral" ], 5, 27, 6, 4, 99, 4000000, 979, 540, 191, 1980, 1000, 455, null ]
+	[ "Nami, Loyal Strawhat Crew", "QCK", [ "Striker", "Cerebral" ], 5, 27, 6, 4, 99, 4000000, 979, 540, 191, 1980, 1000, 455, null ]
 	];
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ]
 // or [ "Name", "Type", "Class1", null, null, null, null, null, null, null, null, null, null, null, null, null ]
