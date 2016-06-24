@@ -1099,14 +1099,25 @@ window.units = [
     [ "Billy the Thunder Bird", "PSY", [ "Shooter", "Powerhouse" ], 3, 10, 4, 2, 50, 392109, 54, 99, 40, 556, 803, 217, 1 ],
     [ "Coby, Petty Officer in the Rain", "DEX", [ "Fighter", "Cerebral" ], 4, 13, 6, 2, 50, null, null, null, null, 151, 84, 57, null ],
     [ "Coby, Petty Officer Sparkling with Dew", "DEX", [ "Fighter", "Cerebral" ], 5, 20, 4, 3, 99, null, 897, 429, 134, null, null, null, null ],
-    [ "Black Arm Zephyr", "STR", [ "Fighter", "Driven" ], 4, 25, 5, 2, 70, null, 545, 404, 0, 1384, 822, 0, null ],
-    [ "Black Arm Zephyr, Former Navy HQ Admiral", "STR", [ "Fighter", "Driven" ], 5, 40, 4, 3, 99, null, 1318, 749, 0, 2620, 1500, 0, null ],
-    [ "Ain, NEO Marines", "INT", [ "Slasher", "Cerebral" ], 4, 18, 5, 2, 50, 392109, 197, 101, 54, 1078, 492, 217, null ],
-    [ "Ain, Zephyr's Last Pupil", "INT", [ "Slasher", "Cerebral" ], 5, 30, 4, 3, 99, 3000000, 1019, 447, 169, 1986, 870, 357, null ],
-    [ "Binz, NEO Marines", "DEX", [ "Striker", "Free Spirit" ], 4, 18, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Binz, Zephyr's Last Pupil", "DEX", [ "Striker", "Free Spirit" ], 5, 30, 4, 3, 99, null, 1091, 484, 115, 2107, 1042, 280, null ],
-    [ "Shiki", "STR", [ "Driven", "Slasher" ], 4, 30, 4, 2, 70, null, 244, 164, 39, null, null, null, null ],
-    [ "Shiki Evolved", "STR", [ "Driven", "Slasher" ], 5, 50, null, 3, 99, null, null, null, null, 2424, 1407, 292, null ]
+    [ "Black Arm Zephyr", "STR", [ "Fighter", "Driven" ], 4, 25, 5, 2, 70, 1066998, 545, 404, 0, 1384, 822, 0, 1 ],
+    [ "Black Arm Zephyr, Former Navy HQ Admiral", "STR", [ "Fighter", "Driven" ], 5, 40, 4, 3, 99, 4000000, 1318, 749, 0, 2620, 1500, 0, 1 ],
+    [ "Ain, NEO Marines", "INT", [ "Slasher", "Cerebral" ], 4, 18, 5, 2, 50, 392109, 197, 101, 54, 1078, 492, 217, 1 ],
+    [ "Ain, Zephyr's Last Pupil", "INT", [ "Slasher", "Cerebral" ], 5, 30, 4, 3, 99, 3000000, 1019, 447, 169, 1986, 870, 357, 1 ],
+    [ "Binz, NEO Marines", "DEX", [ "Striker", "Free Spirit" ], 4, 18, 4, 2, 50, 392109, 220, 122, 32, 1164, 541, 167, 1 ],
+    [ "Binz, Zephyr's Last Pupil", "DEX", [ "Striker", "Free Spirit" ], 5, 30, 4, 3, 99, 3000000, 1091, 484, 115, 2107, 1042, 280, 1 ],
+    [ "Golden Lion Shiki", "STR", [ "Driven", "Slasher" ], 4, 30, 4, 2, 70, 1066998, 244, 164, 39, 1274, 709, 177, 1 ],
+    [ "Golden Lion Shiki, Golden Lion Pirates", "STR", [ "Driven", "Slasher" ], 5, 50, 4, 3, 99, 5000000, 1218, 638, 138, 2424, 1407, 292, 1 ],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [ "Monkey D. Luffy, Dream-Pursuing Adventurer", "STR", [ "Fighter", "Free Spirit" ], 4, 17, 4, 3, 70, 1066998, 242, 148, 28, 1505, 744, 106, null ],
+	[ "Monkey D. Luffy, Loyal Strawhat Crew", "STR", [ "Fighter", "Free Spirit" ], 5, 27, 8, 4, 99, 4000000, 1438, 676, 72, 2722, 1411, 176, null ],
+	[ "Sanji, Dream-Pursuing Adventurer", "INT", [ "Fighter", "Powerhouse" ], 4, 17, 4, 3, 70, 1066998, 268, 115, 32, 1545, 698, 122, null ],
+	[ "Sanji, Loyal Strawhat Crew", "INT", [ "Fighter", "Powerhouse" ], 5, 27, 5, 4, 99, 4000000, 1471, 630, 86, 2834, 1224, 226, null ],
+	[ "Nami, Dream-Pursuing Adventurer", "QCK", [ "Striker", "Cerebral" ], 4, 17, 5, 3, 70, 1066998, 190, 81, 57, 1051, 602, 230, null ],
+	[ "Sanji, Loyal Strawhat Crew", "QCK", [ "Striker", "Cerebral" ], 5, 27, 6, 4, 99, 4000000, 979, 540, 191, 1980, 1000, 455, null ]
 	];
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ]
 // or [ "Name", "Type", "Class1", null, null, null, null, null, null, null, null, null, null, null, null, null ]

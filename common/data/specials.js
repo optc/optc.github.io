@@ -1386,4 +1386,12 @@ window.specials = {
     1105: {
         chainAddition: function(p){ return 0.2;}
     },
+    1107: {
+        atk: function(p) { return p.unit.class.has("Driven") ? 1.75 : 1; },
+        type: "class"
+    },
+    1108: {
+        atk: function(p) { return p.unit.class.has("Driven") ? 1.75 : 1; },
+        type: "class"
+    }
 };

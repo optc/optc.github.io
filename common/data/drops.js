@@ -1043,7 +1043,13 @@ window.drops = {
             condition: "Boosts ATK of Driven and Powerhouse characters by 2x, other classes get .5x ATK. Boosts HP of Slasher and Fighter characters by 2x, other classes get .5x HP. (This STACKS for characters with multiple classes)",
             "All Difficulties": [ 1094, 1096, 1098, -649, -910, -647, -891, -590, -611, -893, -1098, -912]
         },
-
+        
+        {
+            name: "Robin and Nami's Secret Undercover Investigation",
+            thumb: null,
+            condition: "None so far",
+            "All Difficulties": [ -23, -628, -639, -641, -892, -937, -939, -941 ]
+        }
     ],
 
             

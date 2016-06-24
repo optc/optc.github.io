@@ -2147,13 +2147,13 @@ window.details = {
 	},
 	519: {
 		special: "Reduces crew's current HP by 99%, deals 25x character's ATK in fixed damage to all enemies, boosts ATK of STR characters by 2x for 1 turn",
-		specialName: "Gum-Gum Gigant Thunder Axe",
+		specialName: "Gum-Gum Gigant Thor Axe",
 		specialNotes: "#{fixed}",
 		captain: "Boosts ATK of STR characters by 2x"
 	},
 	520: {
 		special: "Reduces crew's current HP by 99%, deals 25x character's ATK in fixed damage to all enemies, boosts ATK of STR characters by 2x for 1 turn",
-		specialName: "Gum-Gum Gigant Thunder Axe",
+		specialName: "Gum-Gum Gigant Thor Axe",
 		specialNotes: "#{fixed}",
 		captain: "Boosts ATK of STR characters by 2.5x"
 	},
@@ -5418,12 +5418,48 @@ window.details = {
     },
 	1107: {
 		captain: "Boosts ATK and HP of Driven characters by 1.5x",
-        special: "Deals severe Typeless damage to all enemies. Changes [BLOCK], [G], and [BOMB] orbs on Driven characters to Matching orbs. Boosts ATK of Driven characters by 1.75x for 1 turn.",
-        specialName: "Shiki Special"
+        special: "Deals 30x the character's ATK as Typeless damage to all enemies. Changes [BLOCK], [G], and [BOMB] orbs on Driven characters to Matching orbs. Boosts ATK of Driven characters by 1.75x for 1 turn.",
+        specialName: "Lion's Threat: Imperial Earth Bind"
 	},
 	1108: {
 		captain: "Boosts ATK and HP of Driven characters by 2x",
-        special: "Deals severe Typeless damage to all enemies. Changes [BLOCK], [G], and [BOMB] orbs on Driven characters to Matching orbs. Boosts ATK of Driven characters by 1.75x for 1 turn.",
-        specialName: "Shiki Special"
+        special: "Deals 30x the character's ATK as Typeless damage to all enemies. Changes [BLOCK], [G], and [BOMB] orbs on Driven characters to Matching orbs. Boosts ATK of Driven characters by 1.75x for 1 turn.",
+        specialName: "Lion's Threat: Imperial Earth Bind"
+	},
+    1114: {
+		special: "Reduces crew's current HP by 99%, deals 25x character's ATK in fixed damage to all enemies, boosts ATK of STR characters by 2x for 1 turn",
+		specialName: "Gum-Gum Gigant Axe",
+		specialNotes: "#{fixed}",
+		captain: "Boosts ATK of STR characters by 2x"
+	},
+	1115: {
+		special: "Reduces crew's current HP by 99%, deals 25x character's ATK in fixed damage to all enemies, boosts ATK of STR characters by 2x for 1 turn",
+		specialName: "Gum-Gum Gigant Axe",
+		specialNotes: "#{fixed}",
+		captain: "Boosts ATK of STR characters by 2.5x"
+	},
+	1116: {
+		special: "Deals several times the character's ATK in INT damage to all enemies",
+		specialNotes: "#{specialProportional : lower : 100 * ( 1 - (remaining HP) / (total HP) )}",
+		specialName: "Diable Jambe: Concassé",
+		captain: "Reduces damage received by 80% if HP is above 99% at the start of the turn"
+	},
+	1117: {
+		special: "Deals several times the character's ATK in INT damage to all enemies",
+		specialNotes: "#{specialProportional : lower : 100 * ( 1 - (remaining HP) / (total HP) )}",
+		specialName: "Diable Jambe: Concassé",
+		captain: "Reduces damage received by 80% if HP is above 99% at the start of the turn"
+	},
+	1118: {
+		special: "Randomizes all orbs, protects from defeat as long as HP is above 50% for 1 turn",
+		specialName: "10,000-Carat Smile",
+		specialNotes: "#{zombie}",
+		captain: "Boosts ATK and RCV of Striker characters by 1.5x"
+	},
+	1119: {
+		special: "Randomizes all orbs, protects from defeat as long as HP is above 50% for 1 turn",
+		specialName: "10,000-Carat Smile",
+		specialNotes: "#{zombie}",
+		captain: "Boosts ATK of Striker characters by 2x and their RCV by 1.5x"
 	}
 };

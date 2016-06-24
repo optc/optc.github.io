@@ -2760,5 +2760,13 @@ window.captains = {
     },
     1106: {
          atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Free Spirit") ? 2 : 1; }
+    },
+    1107: {
+        atk: function(p) { return p.unit.class.has("Driven") ? 1.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Driven") ? 1.5 : 1; }
+    },
+    1108: {
+        atk: function(p) { return p.unit.class.has("Driven") ? 2 : 1; },
+        hp: function(p) { return p.unit.class.has("Driven") ? 2 : 1; }
     }
 };
