@@ -877,6 +877,6 @@ window.flags = {
     1083: { rr: 1, rro: 1 },
     1084: { rr: 1, rro: 1 },
     1085: { rr: 1, rro: 1 },
-    1107: { rr: 1, rro: 1, lrr: 1 },
-    1108: { rr: 1, rro: 1, lrr: 1 }
+    1099: { rr: 1, rro: 1, lrr: 1 },
+    1100: { rr: 1, rro: 1, lrr: 1 }
 };
