@@ -1117,7 +1117,21 @@ window.units = [
 	[ "Sanji, Dream-Pursuing Adventurer", "INT", [ "Fighter", "Powerhouse" ], 4, 17, 4, 3, 70, 1066998, 268, 115, 32, 1545, 698, 122, null ],
 	[ "Sanji, Loyal Strawhat Crew", "INT", [ "Fighter", "Powerhouse" ], 5, 27, 5, 4, 99, 4000000, 1471, 630, 86, 2834, 1224, 226, null ],
 	[ "Nami, Dream-Pursuing Adventurer", "QCK", [ "Striker", "Cerebral" ], 4, 17, 5, 3, 70, 1066998, 190, 81, 57, 1051, 602, 230, null ],
-	[ "Nami, Loyal Strawhat Crew", "QCK", [ "Striker", "Cerebral" ], 5, 27, 6, 4, 99, 4000000, 979, 540, 191, 1980, 1000, 455, null ]
+	[ "Nami, Loyal Strawhat Crew", "QCK", [ "Striker", "Cerebral" ], 5, 27, 6, 4, 99, 4000000, 979, 540, 191, 1980, 1000, 455, null ],
+    [],
+    [],
+    [ "Unknown Legend", "QCK", [ "Slasher", "Driven" ], 5, 30, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Unknown Legend Evolution", "QCK", [ "Slasher", "Driven" ], 6, 55, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Unknown Character", "PSY", [ "Slasher", "Cerebral" ], 4, 18, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Unknown Character Evolution", "PSY", [ "Slasher", "Cerebral" ], 5, 30, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Unknown Character", "DEX", [ "Powerhouse", "Striker" ], 4, 18, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Unknown Character Evolution", "DEX", [ "Powerhouse", "Striker" ], 5, 30, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Unknown Character", "INT", [ "Slasher", "Driven" ], 4, 18, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Unknown Character Evolution", "INT", [ "Slasher", "Driven" ], 5, 30, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Unknown Character", "STR", [ "Powerhouse", "Fighter" ], 4, 18, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Unknown Character Evolution", "STR", [ "Powerhouse", "Fighter" ], 5, 30, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Unknown Character", "QCK", [ "Shooter", "Fighter" ], 4, 18, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Unknown Character Evolution", "QCK", [ "Shooter", "Fighter" ], 5, 30, null, null, null, null, null, null, null, null, null, null, null ]
 	];
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ]
 // or [ "Name", "Type", "Class1", null, null, null, null, null, null, null, null, null, null, null, null, null ]
