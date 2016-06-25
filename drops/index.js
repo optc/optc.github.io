@@ -238,7 +238,8 @@ mytime=setTimeout('updateTimes()',refresh)
 }
 
 function updateTimes(){
-    document.getElementById("times").innerHTML = "Global: <b>"+moment().tz('America/Los_Angeles').format('H:mm:ss')+"</b> | Japan: <b>"+moment().tz('Asia/Tokyo').format('H:mm:ss')+"</b>";
+    //Japan can also be Etc/GMT-9
+    document.getElementById("times").innerHTML = "Global: <b>"+moment().tz('Etc/GMT+8').format('H:mm:ss')+"</b> | Japan: <b>"+moment().tz('Asia/Tokyo').format('H:mm:ss')+"</b>";
     
     if(moment().tz('Asia/Tokyo').format('H')>12 && moment().tz('Asia/Tokyo').format('H')<23){
         document.getElementById("timesNote").innerHTML = "The Bonuses in the Japanese Version only last from 12:00 till 23:00<br><b>Japan Bonuses are currently active<b>";
