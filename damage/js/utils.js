@@ -32,22 +32,36 @@ window.CrunchUtils.okamaSort = function(array, data) {
     else return [ temp.concat(that) ];
 };
     
-window.CrunchUtils.mihawkSort = function(array) {
+/* Sorts by class (units not belonging to the specified class(es) at the
+ * beginning), then by ATK. classMultiplier is the multiplier units belonging
+ * to the specified class(es) receive. */
+window.CrunchUtils.classSort = function(array, classMultiplier, classes) {
     var result = [ ];
+    function isUnitAMatch(unit) {
+        for (var n = 0;n<classes.length;n++) {
+            if (unit.class.has(classes[n])) {
+                return true;
+            }
+        }
+        return false;
+    }
     // atk-based
     var temp = array.map(function(x) {
         var multiplier = x.multipliers.reduce(function(prev,next) { return prev * next[0]; },1);
-        return [ x.base * multiplier * (x.unit.unit.class.has("Slasher") ? 2.75 : 1), x ];
+        return [ x.base * multiplier * (isUnitAMatch(x.unit.unit) ? classMultiplier : 1), x ];
     });
     temp.sort(function(x,y) { return x[0] - y[0]; });
     result.push(temp.map(function(x) { return x[1]; }));
     // class-based
-    var nonSlashers = [ ], slashers = [ ];
+    var beginning = [ ], end = [ ];
     array.forEach(function(x) {
-        if (x.unit.unit.class.has("Slasher")) slashers.push(x);
-        else nonSlashers.push(x);
+        if (isUnitAMatch(x.unit.unit)) {
+            end.push(x);
+        } else {
+            beginning.push(x);
+        }
     });
-    result.push(nonSlashers.concat(slashers));
+    result.push(beginning.concat(end));
     // return result
     return result;
 };
