@@ -1457,7 +1457,7 @@ window.captains = {
 		rcv: function(p) { return p.percHP <= 30 ? 5 : 1; }
 	},
 	717: {
-		damageSorter: function(d) { return CrunchUtils.mihawkSort(d); },
+		damageSorter: function(d) { return CrunchUtils.classSort(d, 2.75, [ "Slasher" ]); },
 		hitAtk: function(p) {
 			if (!p.unit.class.has('Slasher')) return 1;
 			var prev = p.modifiers.slice(p.chainPosition - 1, p.chainPosition)[0];
@@ -1466,7 +1466,7 @@ window.captains = {
 		hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
 	},
 	718: {
-		damageSorter: function(d) { return CrunchUtils.mihawkSort(d); },
+		damageSorter: function(d) { return CrunchUtils.classSort(d, 2.75, [ "Slasher" ]); },
 		hitAtk: function(p) {
 			if (!p.unit.class.has('Slasher')) return 1;
 			var prev = p.modifiers.slice(p.chainPosition - 1, p.chainPosition)[0];
@@ -1911,6 +1911,7 @@ window.captains = {
 		atk: function(p) { return 1.2; }
 	},
 	869: {
+		damageSorter: function(d) { return CrunchUtils.classSort(d, 3, [ "Driven" ]); },
 		hitAtk: function(p) {
 			if (!p.unit.class.has("Driven")) return 1;
 			return p.modifiers.slice(0, p.chainPosition).count("Perfect") == p.chainPosition ? 3 : 1;
@@ -1918,6 +1919,7 @@ window.captains = {
 		hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
 	},
 	870: {
+		damageSorter: function(d) { return CrunchUtils.classSort(d, 3, [ "Driven" ]); },
 		hitAtk: function(p) {
 			if (!p.unit.class.has("Driven")) return 1;
 			return p.modifiers.slice(0, p.chainPosition).count("Perfect") == p.chainPosition ? 3 : 1;
@@ -1958,6 +1960,7 @@ window.captains = {
 		atk: function(p) { return p.unit.class.has("Fighter") ? 2 : 1; }
 	},
 	881: {
+		damageSorter: function(d) { return CrunchUtils.classSort(d, 2, [ "Shooter", "Free Spirit" ]); },
 		hitAtk: function(p) {
 			if (!p.unit.class.has("Shooter") && !p.unit.class.has("Free Spirit")) return 1;
 			return p.modifiers.slice(0, p.chainPosition).subcontains(["Good", "Great", "Perfect"]) ? 2 : 1;
@@ -1965,6 +1968,7 @@ window.captains = {
 		hitModifiers: ["Good", "Great", "Perfect", "Perfect", "Perfect", "Perfect"]
 	},
 	882: {
+		damageSorter: function(d) { return CrunchUtils.classSort(d, 3, [ "Shooter", "Free Spirit" ]); },
 		hitAtk: function(p) {
 			if (!p.unit.class.has("Shooter") && !p.unit.class.has("Free Spirit")) return 1;
 			return p.modifiers.slice(0, p.chainPosition).subcontains(["Good", "Great", "Perfect"]) ? 3 : 1;
@@ -2004,6 +2008,7 @@ window.captains = {
 		chainModifier: function(p) { return 2; }
 	},
 	893: {
+		damageSorter: function(d) { return CrunchUtils.classSort(d, 3, [ "Powerhouse" ]); },
 		hitAtk: function(p) {
 			if (!p.unit.class.has("Powerhouse")) return 1;
 			return p.modifiers.slice(0, p.chainPosition)
@@ -2012,6 +2017,7 @@ window.captains = {
 		hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
 	},
 	894: {
+		damageSorter: function(d) { return CrunchUtils.classSort(d, 3, [ "Driven" ]); },
 		hitAtk: function(p) {
 			if (!p.unit.class.has("Driven")) return 1;
 			return p.modifiers.slice(0, p.chainPosition)
@@ -2246,6 +2252,7 @@ window.captains = {
 		atk: function(p) { return p.unit.class.has("Slasher") ? 2 : 1; }
 	},
 	950: {
+		damageSorter: function(d) { return CrunchUtils.classSort(d, 2.5, [ "Free Spirit" ]); },
 		hitAtk: function(p) {
 			if (!p.unit.class.has("Fighter") && !p.unit.class.has("Free Spirit")) return 1;
 			return p.modifiers.slice(0, p.chainPosition)
@@ -2254,6 +2261,7 @@ window.captains = {
 		hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
 	},
 	951: {
+		damageSorter: function(d) { return CrunchUtils.classSort(d, 2.75, [ "Free Spirit" ]); },
 		hitAtk: function(p) {
 			if (!p.unit.class.has("Fighter") && !p.unit.class.has("Free Spirit")) return 1;
 			return p.modifiers.slice(0, p.chainPosition)
@@ -2510,12 +2518,14 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Striker") ? p.classCount.Striker==6 ? 2.75 : p.classCount.Striker==5 ? 2.5 : p.classCount.Striker==4 ? 2 : p.classCount.Striker==3 ? 1.75 : p.classCount.Striker==2 ? 1.5 : p.classCount.Striker==1 ? 1.25 : 1 : 1; }
     },
     1036: {
+		damageSorter: function(d) { return CrunchUtils.classSort(d, 2, [ "Free Spirit" ]); },
 		hitAtk: function(p) {
 			return !p.unit.class.has("Free Spirit")? 1 : p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? 2 : 1;
 		},
 		hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
 	},
     1037: {
+		damageSorter: function(d) { return CrunchUtils.classSort(d, 2.5, [ "Free Spirit" ]); },
 		hitAtk: function(p) {
 			return !p.unit.class.has("Free Spirit")? 1 : p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? 2.5 : 1;
 		},
@@ -2544,6 +2554,7 @@ window.captains = {
         rcv: function(p) { return 0; }
     },
     1044: {
+		damageSorter: function(d) { return CrunchUtils.classSort(d, 4, [ "Slasher", "Free Spirit" ]); },
         hitAtk: function(p) {
             if (!p.unit.class.has("Slasher") && !p.unit.class.has("Free Spirit")) return 1;
 			return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 4 : p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? 3 : 2;
@@ -2551,6 +2562,7 @@ window.captains = {
 		hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
     },
     1045: {
+		damageSorter: function(d) { return CrunchUtils.classSort(d, 4, [ "Slasher", "Free Spirit" ]); },
         hitAtk: function(p) {
             if (!p.unit.class.has("Slasher") && !p.unit.class.has("Free Spirit")) return 1;
 			return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 4 : p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? 3 : 2;
@@ -2558,12 +2570,14 @@ window.captains = {
 		hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
     },
     1046: {
+		damageSorter: function(d) { return CrunchUtils.classSort(d, 3.5, [ "Free Spirit" ]); },
 		hitAtk: function(p) {
 			return !p.unit.class.has("Free Spirit") ? 1 : p.modifiers.slice(0, p.chainPosition).subcontains(["Good", "Great", "Perfect"]) ? 2.75 : 1;
 		},
 		hitModifiers: ["Good", "Great", "Perfect", "Perfect", "Perfect", "Perfect"]
 	},
     1047: {
+		damageSorter: function(d) { return CrunchUtils.classSort(d, 3.5, [ "Free Spirit" ]); },
 		hitAtk: function(p) {
 			return !p.unit.class.has("Free Spirit") ? 1 : p.modifiers.slice(0, p.chainPosition).subcontains(["Good", "Great", "Perfect"]) ? 3.5 : 1;
 		},
@@ -2666,6 +2680,7 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Fighter") ? 1.2 : 1; }
     },
     1083: {
+		damageSorter: function(d) { return CrunchUtils.classSort(d, 3, [ "Striker", "Fighter" ]); },
         hitAtk: function(p) {
             if (!p.unit.class.has("Striker") && !p.unit.class.has("Fighter")) return 1;
 			return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? 3 : 1.5;
@@ -2714,12 +2729,14 @@ window.captains = {
         atk: function(p) { return p.class.has('Cerebral') ? 2.0 : 1.0; }
     },
     1096: {
+		damageSorter: function(d) { return CrunchUtils.classSort(d, 3, [ "Powerhouse" ]); },
         hitAtk: function(p) {
 			return !(p.unit.class.has('Powerhouse')) ? 1.0 : p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 3 : 1;
 		},
 		hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
     },
     1097: {
+		damageSorter: function(d) { return CrunchUtils.classSort(d, 3.5, [ "Powerhouse" ]); },
         hitAtk: function(p) {
 			return !(p.unit.class.has('Powerhouse')) ? 1.0 : p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 3.5 : 1;
 		},
