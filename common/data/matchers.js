@@ -80,6 +80,12 @@ window.matchers = [
         target: 'captain',
         matcher: /(after scoring|following a chain)/i
     },
+    
+    {
+        name: '"Beneficial" Orb captains',
+        target: 'captain',
+        matcher: /Makes ((STR|DEX|QCK|PSY|INT|\[RCV\]|\[TND\])|((STR|DEX|QCK|PSY|INT|\[RCV\]|\[TND\]) and (STR|DEX|QCK|PSY|INT|\[RCV\]|\[TND\]))) orbs "beneficial"/i
+    },
 
     {
         name: 'Chain multipliers',

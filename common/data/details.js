@@ -4199,7 +4199,7 @@ window.details = {
 	910: {
 		specialName: "Hero of Justice! Chopper Mask!!",
 		special: "Recovers 5,000 HP, boosts ATK of PSY characters by 1.5x for 2 turns",
-		captain: "Boosts ATK of PSY characters by 2x, their RCV by 1.5x, makes [INT] orbs \"beneficial\" to PSY characters",
+		captain: "Boosts ATK of PSY characters by 2x, their RCV by 1.5x, makes INT orbs \"beneficial\" to PSY characters",
 		captainNotes: "\"Beneficial\" orbs grant the same ATK boost as matching orbs."
 	},
 	911: {

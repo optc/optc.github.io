@@ -134,6 +134,7 @@ input[type="text"] {
 .BLOCK { background: darkslateblue; }
 .BOMB  { background: maroon; }
 .G     { background: orange; }
+.EMPTY { background: #777; }
 
 .cell-STR { font-weight: bold; color: red; }
 .cell-QCK { font-weight: bold; color: blue; }
@@ -326,7 +327,7 @@ input[type="text"] {
 }
 
 #controllers > span:not(.separator) {
-    width: 14.28%;
+    width: 9.09090909%;
     display: inline-block;
     padding: 2px 0;
     cursor: pointer;
