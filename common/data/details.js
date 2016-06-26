@@ -4335,11 +4335,11 @@ window.details = {
 		specialName: "Rock Domination Wall",
 		special: [
 			{
-				"description": "For Driven and Powerhouse characters, changes [EMPTY] and Bad orbs to Matching. Cuts the current HP of all enemies by 10%",
+				"description": "For Driven and Powerhouse characters, changes [EMPTY] and Bad orbs into Matching. Cuts the current HP of all enemies by 10%",
 				"cooldown": [ 25, 11 ]
 			},
 			{
-				"description": "For all characters, changes [EMPTY] and Bad orbs to Matching. Cuts the current HP of all enemies by 20%",
+				"description": "For all characters, changes [EMPTY] and Bad orbs into Matching. Cuts the current HP of all enemies by 20%",
 				"cooldown": [ 31, 17 ]
 			}
 		],
@@ -4350,11 +4350,11 @@ window.details = {
 		specialName: "Rock Domination Wall",
 		special: [
 			{
-				"description": "For Driven and Powerhouse characters, changes [EMPTY] and Bad orbs to Matching. Cuts the current HP of all enemies by 10%",
+				"description": "For Driven and Powerhouse characters, changes [EMPTY] and Bad orbs into Matching. Cuts the current HP of all enemies by 10%",
 				"cooldown": [ 25, 11 ]
 			},
 			{
-				"description": "For all characters, changes [EMPTY] and Bad orbs to Matching. Cuts the current HP of all enemies by 20%",
+				"description": "For all characters, changes [EMPTY] and Bad orbs into Matching. Cuts the current HP of all enemies by 20%",
 				"cooldown": [ 31, 17 ]
 			}
 		],
