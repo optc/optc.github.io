@@ -5461,5 +5461,61 @@ window.details = {
 		specialName: "10,000-Carat Smile",
 		specialNotes: "#{zombie}",
 		captain: "Boosts ATK of Striker characters by 2x and their RCV by 1.5x"
-	}
+	},
+	1120: {
+		special: "Deals random typeless damage to all enemies, changes own orb into [STR]",
+		specialName: "Gum-Gum JET Gatling",
+		specialNotes: "#{random : 70,000 : 200,000}",
+		captain: "Boosts ATK by 4x following a chain of Good > Great > Perfect hits"
+	},
+	1121: {
+		special: "Deals random typeless damage to all enemies, changes own orb into [STR]",
+		specialName: "Gum-Gum JET Gatling",
+		specialNotes: "#{random : 70,000 : 200,000}",
+		captain: "Boosts ATK by 4x following a chain of Good > Great > Perfect hits"
+	},
+	1128: {
+		special: "Reduces Numbness and Despair by (Large number) of turns. Cuts the current HP of one enemy by ??%",
+		specialName: "Tactician's Savage Cut"
+	},
+	1129: {
+		special: "Reduces Numbness and Despair by (Large number) of turns. Cuts the current HP of one enemy by ??%",
+		specialName: "Tactician's Savage Cut"
+	},
+	1130: {
+		special: [
+			{
+				"description": "Deals severe typeless damage to all enemies",
+				"cooldown": null
+			},
+			{
+				"description": "Deals (Larger) severe typeless damage to all enemies",
+				"cooldown": null
+			},
+			{
+				"description": "Deals (Largest) severe typeless damage to all enemies",
+				"cooldown": null
+			},
+		],
+		specialNotes: "#{stages}",
+		specialName: "King Punch"
+	},
+	1131: {
+		special: [
+			{
+				"description": "Deals severe typeless damage to all enemies",
+				"cooldown": null
+			},
+			{
+				"description": "Deals (Larger) severe typeless damage to all enemies",
+				"cooldown": null
+			},
+			{
+				"description": "Deals (Largest) severe typeless damage to all enemies",
+				"cooldown": null
+			},
+		],
+		specialNotes: "#{stages}",
+		specialName: "King Punch"
+	},
 };

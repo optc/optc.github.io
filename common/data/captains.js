@@ -2785,5 +2785,31 @@ window.captains = {
     1108: {
         atk: function(p) { return p.unit.class.has("Driven") ? 2 : 1; },
         hp: function(p) { return p.unit.class.has("Driven") ? 2 : 1; }
-    }
+    },
+	1114: {
+		atk: function(p) { return p.unit.type == "STR" ? 2 : 1; }
+	},
+	1115: {
+		atk: function(p) { return p.unit.type == "STR" ? 2.5 : 1; }
+	},
+	1118: {
+		atk: function(p) { return p.unit.class.has("Striker") ? 1.5 : 1; },
+		rcv: function(p) { return p.unit.class.has("Striker") ? 1.5 : 1; }
+	},
+	1119: {
+		atk: function(p) { return p.unit.class.has("Striker") ? 2 : 1; },
+		rcv: function(p) { return p.unit.class.has("Striker") ? 1.5 : 1; }
+	},
+	1120: {
+		hitAtk: function(p) {
+			return p.modifiers.slice(0, p.chainPosition).subcontains(["Good", "Great", "Perfect"]) ? 4 : 1;
+		},
+		hitModifiers: ["Good", "Great", "Perfect", "Perfect", "Perfect", "Perfect"]
+	},
+	1121: {
+		hitAtk: function(p) {
+			return p.modifiers.slice(0, p.chainPosition).subcontains(["Good", "Great", "Perfect"]) ? 4 : 1;
+		},
+		hitModifiers: ["Good", "Great", "Perfect", "Perfect", "Perfect", "Perfect"]
+	}
 };

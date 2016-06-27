@@ -1117,5 +1117,19 @@ window.families = [
     "Sanji",
     "Sanji",
     "Nami",
-    "Nami"
+    "Nami",
+	"Monkey D. Luffy",
+    "Monkey D. Luffy",
+	"Cavendish",
+	"Cavendish",
+	"Suleiman",
+	"Suleiman",
+	"Orlumbus",
+	"Orlumbus",
+	"Dagama",
+	"Dagama",
+	"Elizabello",
+	"Elizabello",
+	"Ideo",
+	"Ideo"
 ];
