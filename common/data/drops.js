@@ -1260,8 +1260,6 @@ var bonuses = [
     { type: 'drop'    , x: 6 , y: 8  },
     { type: 'drop'    , x: 6 , y: 15 },
     { type: 'drop'    , x: 6 , y: 22 },
-    { type: 'drop'    , x: 0 , y: 24 },
-    { type: 'drop'    , x: 5 , y: 24 },
     { type: 'beli'    , x: 6 , y: 3  },
     { type: 'beli'    , x: 1 , y: 4  },
     { type: 'beli'    , x: 6 , y: 10 },

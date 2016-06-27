@@ -667,7 +667,7 @@ window.captains = {
 		rcv: function(p) { return p.unit.type == "INT" ? 1.5 : 1; }
 	},
 	424: {
-		atk: function(p) { return p.unit.type == "QCK" ? 1.5 : 1; }
+		atk: function(p) { return 1.5; }
 	},
 	425: {
 		atk: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; },

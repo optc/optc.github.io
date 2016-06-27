@@ -1686,7 +1686,7 @@ window.details = {
 	424: {
 		special: "Recovers 4,343 HP, reduces the defense of all enemies by 50% for 2 turns",
 		specialName: "Lullaby Parry",
-		captain: "Protects from defeat as long as HP is above 70%",
+		captain: "Boosts ATK of the whole crew by 1.5x and protects from defeat as long as HP is above 70%",
 		captainNotes: "#{zombie}"
 	},
 	425: {
