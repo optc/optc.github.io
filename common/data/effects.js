@@ -357,11 +357,12 @@ window.effects = {
                             if(p.class.has('Cerebral')) { boost1 = 2.0}
                             if(p.class.has('Free Spirit')) { boost2 = 2.0}
                             if(!(p.class.has('Cerebral')&&p.class.has('Free Spirit')) && p.class.constructor === Array){
-                            if(!p.class.has('Cerebreal')){ boost3 = 0.5}
+                            if(!p.class.has('Cerebral')){ boost3 = 0.5}
                             if(!p.class.has('Free Spirit')){ boost4 = 0.5}}
                             if(p.class.constructor === String){
                                 if(!(p.class.has('Cerebral') || p.class.has('Free Spirit'))){ boost5 = 0.5}
                             }
+                            //console.log(boost1+" "+boost2+" "+boost3+" "+boost4+" "+boost5)
                             return 1*boost1*boost2*boost3*boost4*boost5; 
                         },
         hp: function(p) {
