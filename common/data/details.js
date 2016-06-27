@@ -5426,6 +5426,9 @@ window.details = {
         special: "Deals 30x the character's ATK as Typeless damage to all enemies. Changes [BLOCK], [G], and [BOMB] orbs on Driven characters to Matching orbs. Boosts ATK of Driven characters by 1.75x for 1 turn.",
         specialName: "Lion's Threat: Imperial Earth Bind"
 	},
+    1113: {
+        specialName: "Fury of the Little Monster: \"This is War!!!\""  
+    },
     1114: {
 		special: "Reduces crew's current HP by 99%, deals 25x character's ATK in fixed damage to all enemies, boosts ATK of STR characters by 2x for 1 turn",
 		specialName: "Gum-Gum Gigant Axe",

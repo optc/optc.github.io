@@ -1047,8 +1047,8 @@ window.drops = {
         {
             name: "Robin and Nami's Secret Undercover Investigation",
             thumb: null,
-            condition: "None so far",
-            "All Difficulties": [ -23, -628, -639, -641, -892, -937, -939, -941 ]
+            condition: "Boosts ATK of Cerebral and Free Spirit characters by 2x, other classes get .5x ATK. Boosts HP of Striker and Shooter characters by 2x, other classes get .5x HP. (This STACKS for characters with multiple classes)",
+            "All Difficulties": [ 1109, 1111, 1113, -23, -628, -639, -641, -892, -937, -939, -941 ]
         }
     ],
 

@@ -2,7 +2,7 @@ window.effects = {
 
     // always use unique IDs, and don't ever change an ID once you've set it
     // IDs must always be greater than 0
-    // last ID used: 31
+    // last ID used: 39
     // Use p.type instead of p.unit.type here
 
     'Baroque Works (pre-v4.0)': {
@@ -312,7 +312,7 @@ window.effects = {
     
 	'Dr. Indigo & Scarlet! Fortnight': {
         description: 'Boosts ATK of Driven and Powerhouse characters by 2x, other classes get .5x ATK. Boosts HP of Slasher and Fighter characters by 2x, other classes get .5x HP.',
-        thumb: null,
+        thumb: 1095,
         id: 37,
         atk: function(p) { 
                             var boost1 = 1.0, boost2 = 1.0, boost3 = 1.0, boost4 = 1.0, boost5 = 1.0;
@@ -346,6 +346,36 @@ window.effects = {
         id: 38,
         comboShield: 25,
         chainLimiter: function() { return 2.0; }
+    },
+    
+    'Robin and Nami\'s Secret Undercover Investigation': {
+        description: 'Boosts ATK of Cerebral and Free Spirit characters by 2x, other classes get .5x ATK. Boosts HP of Striker and Shooter characters by 2x, other classes get .5x HP.',
+        thumb: null,
+        id: 39,
+        atk: function(p) { 
+                            var boost1 = 1.0, boost2 = 1.0, boost3 = 1.0, boost4 = 1.0, boost5 = 1.0;
+                            if(p.class.has('Cerebral')) { boost1 = 2.0}
+                            if(p.class.has('Free Spirit')) { boost2 = 2.0}
+                            if(!(p.class.has('Cerebral')&&p.class.has('Free Spirit')) && p.class.constructor === Array){
+                            if(!p.class.has('Cerebreal')){ boost3 = 0.5}
+                            if(!p.class.has('Free Spirit')){ boost4 = 0.5}}
+                            if(p.class.constructor === String){
+                                if(!(p.class.has('Cerebral') || p.class.has('Free Spirit'))){ boost5 = 0.5}
+                            }
+                            return 1*boost1*boost2*boost3*boost4*boost5; 
+                        },
+        hp: function(p) {
+                            var boost1 = 1.0, boost2 = 1.0, boost3 = 1.0, boost4 = 1.0, boost5 = 1.0;
+                            if(p.class.has('Striker')) { boost1 = 2.0}
+                            if(p.class.has('Shooter')) { boost2 = 2.0}
+                            if(!(p.class.has('Striker')&&p.class.has('Shooter')) && p.class.constructor === Array){
+                            if(!p.class.has('Striker')){ boost3 = 0.5}
+                            if(!p.class.has('Shooter')){ boost4 = 0.5}}
+                            if(p.class.constructor === String){
+                                if(!(p.class.has('Striker') || p.class.has('Shooter'))){ boost5 = 0.5}
+                            }
+                            return 1*boost1*boost2*boost3*boost4*boost5;
+                        }
     },
 
 };
