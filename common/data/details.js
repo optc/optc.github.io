@@ -5426,7 +5426,29 @@ window.details = {
         special: "Deals 30x the character's ATK as Typeless damage to all enemies. Changes [BLOCK], [G], and [BOMB] orbs on Driven characters to Matching orbs. Boosts ATK of Driven characters by 1.75x for 1 turn.",
         specialName: "Lion's Threat: Imperial Earth Bind"
 	},
+    1109: {
+        captain: "Boosts amount of Beli received by 1.5x",
+        special: "Changes [BLOCK] orbs into [PSY] orbs for [PSY] characters",
+        specialName: "Cat Burglar's Undercover Investigation"
+    },
+    1110: {
+        captain: "Boosts amount of Beli received by 1.5x",
+        special: "Changes [BLOCK] orbs into [PSY] orbs for [PSY] characters",
+        specialName: "Cat Burglar's Undercover Investigation"
+    },
+    1111: {
+        captain: "Boosts ATK and RCV of Cerebral characters by 1.25x",
+        special: "Amplifies the effect of orbs by 1.25x for 3 turns, recovers 7x character's RCV at the end of the turn for 3 turns.",
+        specialName: "Impish Sultry Dance"
+    },
+    1112: {
+        captain: "Boosts ATK and RCV of Cerebral characters by 1.5x",
+        special: "Amplifies the effect of orbs by 1.25x for 3 turns, recovers 7x character's RCV at the end of the turn for 3 turns.",
+        specialName: "Impish Sultry Dance"
+    },
     1113: {
+        captain: "Boosts ATK of [INT] units by 2x",
+        special: "Boosts ATK of all characters by 1.2x for 1 turn",
         specialName: "Fury of the Little Monster: \"This is War!!!\""  
     },
     1114: {

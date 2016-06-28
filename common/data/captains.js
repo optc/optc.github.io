@@ -2786,6 +2786,17 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Driven") ? 2 : 1; },
         hp: function(p) { return p.unit.class.has("Driven") ? 2 : 1; }
     },
+    1111: {
+        atk: function(p) { return p.class.has("Cerebral") ? 1.25 : 1; },
+        rcv: function(p) { return p.class.has("Cerebral") ? 1.25 : 1; }  
+    },
+    1112: {
+        atk: function(p) { return p.class.has("Cerebral") ? 1.5 : 1; },
+        rcv: function(p) { return p.class.has("Cerebral") ? 1.5 : 1; }
+    },
+    1113: {
+        atk: function(p) { return p.unit.type == "INT" ? 2 : 1; }  
+    },
 	1114: {
 		atk: function(p) { return p.unit.type == "STR" ? 2 : 1; }
 	},

@@ -1393,5 +1393,15 @@ window.specials = {
     1108: {
         atk: function(p) { return p.unit.class.has("Driven") ? 1.75 : 1; },
         type: "class"
+    },
+    1111: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, 1, 1.25); }
+    },
+    1112: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, 1, 1.25); }
+    },
+    1113: {
+        atk: function(p) { return 1.2; },
+        type: "type"
     }
 };
