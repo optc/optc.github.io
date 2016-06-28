@@ -2397,10 +2397,10 @@ window.captains = {
          atk: function(p) {return p.unit.class.has("Driven") ? 2.25  : 1; }
     },
     1000: {
-        atk: function(p) { return  2  * p.percHP / 100; }
+        atk: function(p) { return  1 + p.percHP / 100; }
     },
     1001: {
-        atk: function(p) { return  2  * p.percHP / 100; }
+        atk: function(p) { return  1 + p.percHP / 100; }
     },
 	1002: {
 		atk: function(p) {return p.unit.class.has("Fighter") ? 1.5 : 1; }
