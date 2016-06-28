@@ -1205,6 +1205,14 @@ window.drops = {
             Ultimate: [ 1046 ],
             Master: [ 1046 ],
             Expert: [ 1046 ]
+        },
+        
+        {
+            name: 'Clash!! Shiki',
+            thumb: 1108,
+            Ultimate: [ 1107 ],
+            Master: [ 1107 ],
+            Expert: [ 1107 ]
         }
 
     ],
