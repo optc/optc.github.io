@@ -5432,7 +5432,7 @@ window.details = {
         specialName: "Cat Burglar's Undercover Investigation"
     },
     1110: {
-        captain: "Boosts amount of Beli received by 1.5x",
+        captain: "Boosts ATK and RCV of [PSY] characters by 1.25x and the amount of Beli received by 1.5x",
         special: "Changes [BLOCK] orbs into [PSY] orbs for [PSY] characters",
         specialName: "Cat Burglar's Undercover Investigation"
     },
