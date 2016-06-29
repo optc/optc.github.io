@@ -5499,6 +5499,24 @@ window.details = {
 		specialNotes: "#{random : 70,000 : 200,000}",
 		captain: "Boosts ATK by 4x following a chain of Good > Great > Perfect hits"
 	},
+	1122: {
+		captain: "Boosts ATK of [STR], [DEX], and [QCK] characters by 2.5x, but boosts his OWN attack by 4x",
+		captainNotes: "Cavendish only boosts Friend or Sub Cavendish by 2.5x for a total of 10x boost with two Cavendish captains",
+		special: "Removes all positive buffs on Your team. Deals 15x the character's ATK as Typeless damage to all enemies. Boosts Cavendish's ATK by 1.75x for 2 turns, amplifies the effect of Cavendish's orb by 1.75x for 2 turns, locks all orbs for 2 turns, and changes own orb to [QCK].",
+		specialNotes: "Boosted ATK and Orb Effectivess only works for the Cavndish who uses his Special. He may empty all other orb slots.",
+		specialName: "Sickle Weasel of Rommel"
+	},
+	1123: {
+		captain: "Boosts ATK of [STR], [DEX], and [QCK] characters by 2.5x, but boosts his OWN attack by 4x",
+		captainNotes: "Cavendish only boosts Friend or Sub Cavendish by 2.5x for a total of 10x boost with two Cavendish captains",
+		special: "Removes all positive buffs on Your team. Deals 15x the character's ATK as Typeless damage to all enemies. Boosts Cavendish's ATK by 1.75x for 2 turns, amplifies the effect of Cavendish's orb by 1.75x for 2 turns, locks all orbs for 2 turns, and changes own orb to [QCK].",
+		specialNotes: "Boosted ATK and Orb Effectivess only works for the Cavndish who uses his Special. He may empty all other orb slots.",
+		specialName: "Sickle Weasel of Rommel"
+	},
+	1126: {
+		special: "Empties all slots with [BLOCK] orbs, deals severe typeless damage based on number of [BLOCK] slots emptied to all enemies. Changes [EMPTY] orbs into Matching orbs",
+		specialName: "Orlumbus Special"
+	},
 	1128: {
 		special: "Reduces Numbness and Despair by (Large number) of turns. Cuts the current HP of one enemy by ??%",
 		specialName: "Tactician's Savage Cut"
