@@ -5503,14 +5503,14 @@ window.details = {
 		captain: "Boosts ATK of [STR], [DEX], and [QCK] characters by 2.5x, but boosts his OWN attack by 4x",
 		captainNotes: "Cavendish only boosts Friend or Sub Cavendish by 2.5x for a total of 10x boost with two Cavendish captains",
 		special: "Removes all positive buffs on Your team. Deals 15x the character's ATK as Typeless damage to all enemies. Boosts Cavendish's ATK by 1.75x for 2 turns, amplifies the effect of Cavendish's orb by 1.75x for 2 turns, locks all orbs for 2 turns, and changes own orb to [QCK].",
-		specialNotes: "Boosted ATK and Orb Effectivess only works for the Cavndish who uses his Special. He may empty all other orb slots.",
+		specialNotes: "Boosted ATK and Orb Effectivess only works for the Cavendish who uses his Special. He may empty all other orb slots.",
 		specialName: "Sickle Weasel of Rommel"
 	},
 	1123: {
 		captain: "Boosts ATK of [STR], [DEX], and [QCK] characters by 2.5x, but boosts his OWN attack by 4x",
 		captainNotes: "Cavendish only boosts Friend or Sub Cavendish by 2.5x for a total of 10x boost with two Cavendish captains",
 		special: "Removes all positive buffs on Your team. Deals 15x the character's ATK as Typeless damage to all enemies. Boosts Cavendish's ATK by 1.75x for 2 turns, amplifies the effect of Cavendish's orb by 1.75x for 2 turns, locks all orbs for 2 turns, and changes own orb to [QCK].",
-		specialNotes: "Boosted ATK and Orb Effectivess only works for the Cavndish who uses his Special. He may empty all other orb slots.",
+		specialNotes: "Boosted ATK and Orb Effectivess only works for the Cavendish who uses his Special. He may empty all other orb slots.",
 		specialName: "Sickle Weasel of Rommel"
 	},
 	1126: {
