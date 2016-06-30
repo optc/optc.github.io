@@ -5513,52 +5513,89 @@ window.details = {
 		specialNotes: "Boosted ATK and Orb Effectivess only works for the Cavendish who uses his Special. He may empty all other orb slots.",
 		specialName: "Sickle Weasel of Rommel"
 	},
+	1124: {
+		captain: "Boosts ATK of Slashers characters by 3x, reduces his own ATK multiplier by 0.1x at the end of each turn",
+		captainNotes: "His ATK multiplier will be 3x on the first turn, 2.9x on the second, 2.8x on the third and so on. The reduction stops once the multiplier is 1.0x. The multiplier affects all Slasher units.",
+		special: "Deals 13x character's ATK in [PSY] damage to all enemies, changes own orb and captain's orb into Matching orbs.",
+	},
+	1125: {
+		captain: "Boosts ATK of Slashers characters by 3.5x, reduces his own ATK multiplier by 0.1x at the end of each turn",
+		captainNotes: "His ATK multiplier will be 3x on the first turn, 2.9x on the second, 2.8x on the third and so on. The reduction stops once the multiplier is 1.0x. The multiplier affects all Slasher units.",
+		special: "Deals 13x character's ATK in [PSY] damage to all enemies, changes own orb and captain's orb into Matching orbs.",
+	},
 	1126: {
+		captain: "Boosts ATK and HP of [DEX] characters by 1.5x",
+		special: "Empties all slots with [BLOCK] orbs, deals severe typeless damage based on number of [BLOCK] slots emptied to all enemies. Changes [EMPTY] orbs into Matching orbs",
+		specialName: "Orlumbus Special"
+	},
+	1127: {
+		captain: "Boosts ATK and HP of [DEX] characters by 2x",
 		special: "Empties all slots with [BLOCK] orbs, deals severe typeless damage based on number of [BLOCK] slots emptied to all enemies. Changes [EMPTY] orbs into Matching orbs",
 		specialName: "Orlumbus Special"
 	},
 	1128: {
-		special: "Reduces Numbness and Despair by (Large number) of turns. Cuts the current HP of one enemy by ??%",
+		captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of all characters by 1.75x",
+		special: "Reduces Numbness and Despair by 5 turns. Cuts the current HP of one enemy by 10%",
 		specialName: "Tactician's Savage Cut"
 	},
 	1129: {
-		special: "Reduces Numbness and Despair by (Large number) of turns. Cuts the current HP of one enemy by ??%",
+		captain: "Reduces cooldown of all specials by 2 turn at the start of the fight, boosts ATK of all characters by 2x",
+		special: "Reduces Numbness and Despair by 5 turns. Cuts the current HP of one enemy by 10%",
 		specialName: "Tactician's Savage Cut"
 	},
 	1130: {
+		captain: "Boosts ATK and HP of Fighter and Tough characters by 1.5x",
 		special: [
 			{
-				"description": "Deals severe typeless damage to all enemies",
-				"cooldown": null
+				"description": "Deals 7x character's ATK in typeless damage to all enemies",
+				"cooldown": 12
 			},
 			{
-				"description": "Deals (Larger) severe typeless damage to all enemies",
-				"cooldown": null
+				"description": "Deals 15x character's ATK in typeless damage to all enemies",
+				"cooldown": 20
 			},
 			{
-				"description": "Deals (Largest) severe typeless damage to all enemies",
-				"cooldown": null
+				"description": "Deals 25x character's ATK in typeless damage to all enemies",
+				"cooldown": 26
 			},
 		],
-		specialNotes: "#{stages}",
+		specialNotes: "For each turn AFTER Elizabello's special reaches stage 3, damage is boosted by 23.75x per turn for an additional 20 turns, for a max damage of 487.25x character's ATK to all enemies.",
 		specialName: "King Punch"
 	},
 	1131: {
+		captain: "Boosts ATK and HP of Fighter and Tough characters by 2x",
 		special: [
 			{
-				"description": "Deals severe typeless damage to all enemies",
-				"cooldown": null
+				"description": "Deals 7x character's ATK in typeless damage to all enemies",
+				"cooldown": 12
 			},
 			{
-				"description": "Deals (Larger) severe typeless damage to all enemies",
-				"cooldown": null
+				"description": "Deals 15x character's ATK in typeless damage to all enemies",
+				"cooldown": 20
 			},
 			{
-				"description": "Deals (Largest) severe typeless damage to all enemies",
-				"cooldown": null
+				"description": "Deals 25x character's ATK in typeless damage to all enemies",
+				"cooldown": 26
 			},
+		specialNotes: "For each turn AFTER Elizabello's special reaches stage 3, damage is boosted by 23.75x per turn for an additional 20 turns, for a max damage of 487.25x character's ATK to all enemies.",
+		specialName: "King Punch"
+		],
+		specialNotes: "For each turn AFTER Elizabello's special reaches stage 3, damage is boosted by 23.75x per turn for an additional 20 turns, for a max damage of 487.25x character's ATK to all enemies.",
+		specialName: "King Punch"
+	},
+	1132: {
+		captain: "Boosts ATK and HP of Fighter characters by 1.5x",
+		special: [
+			{
+				"description": "Deals severe [QCK] damage to all enemies, boosts ATK of Fighter characters by 1.5x for 1 turn",
+				"cooldown": 18
+			},
+			{
+				"description": "Deals severe [QCK] damage to all enemies, boosts ATK of Fighter characters by 1.5x for 1 turn",
+				"cooldown": 23
+			}
 		],
 		specialNotes: "#{stages}",
-		specialName: "King Punch"
+		specialName: "Ideo Special"
 	},
 };
