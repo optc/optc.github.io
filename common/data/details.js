@@ -5563,7 +5563,7 @@ window.details = {
 		specialName: "King Punch"
 	},
 	1131: {
-		captain: "Boosts ATK and HP of Fighter and Tough characters by 2x",
+		captain: "Boosts ATK and HP of Fighter and Tough characters by 1.5x",
 		special: [
 			{
 				"description": "Deals 7x character's ATK in typeless damage to all enemies",
@@ -5596,4 +5596,19 @@ window.details = {
 		specialNotes: "#{stages}",
 		specialName: "Ideo Special"
 	},
+	1133: {
+		captain: "Boosts ATK and HP of Fighter characters by 1.5x",
+		special: [
+			{
+				"description": "Deals severe [QCK] damage to all enemies, boosts ATK of Fighter characters by 1.5x for 1 turn",
+				"cooldown": 18
+			},
+			{
+				"description": "Deals severe [QCK] damage to all enemies, boosts ATK of Fighter characters by 1.5x for 1 turn",
+				"cooldown": 23
+			}
+		],
+		specialNotes: "#{stages}",
+		specialName: "Ideo Special"
+	}
 };
