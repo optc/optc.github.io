@@ -5577,8 +5577,6 @@ window.details = {
 				"description": "Deals 25x character's ATK in typeless damage to all enemies",
 				"cooldown": 26
 			},
-		specialNotes: "For each turn AFTER Elizabello's special reaches stage 3, damage is boosted by 23.75x per turn for an additional 20 turns, for a max damage of 487.25x character's ATK to all enemies.",
-		specialName: "King Punch"
 		],
 		specialNotes: "For each turn AFTER Elizabello's special reaches stage 3, damage is boosted by 23.75x per turn for an additional 20 turns, for a max damage of 487.25x character's ATK to all enemies.",
 		specialName: "King Punch"
