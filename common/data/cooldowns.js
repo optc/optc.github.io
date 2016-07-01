@@ -1124,10 +1124,10 @@ window.cooldowns = [
 	20,
 	20,
 	20,
-	20,
-	20,
-	20,
-	20,
+	[ 20, 14 ],
+    [ 20, 14 ],
+	[ 20, 15 ],
+	[ 20, 15 ],
 	null,//Elizabello
 	null,//Elizabello
 	null,//Ideo

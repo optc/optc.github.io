@@ -2825,5 +2825,45 @@ window.captains = {
 			return p.modifiers.slice(0, p.chainPosition).subcontains(["Good", "Great", "Perfect"]) ? 4 : 1;
 		},
 		hitModifiers: ["Good", "Great", "Perfect", "Perfect", "Perfect", "Perfect"]
-	}
+	},
+    1124: {
+		atk: function(p) {
+			return p.unit.class.has("Slasher") ? Math.max(1.0, 3.0 - 0.1 * p.turnCounter) : 1;
+		}
+	},
+	1125: {
+		atk: function(p) {
+			return p.unit.class.has("Slasher") ? Math.max(1.0, 3.5 - 0.1 * p.turnCounter) : 1;
+		}
+	},
+    1126: {
+        atk: function(p) { return p.unit.type == "DEX" ? 1.5 : 1; },
+        hp: function(p) { return p.unit.type == "DEX" ? 1.5 : 1; }
+    },
+    1127: {
+        atk: function(p) { return p.unit.type == "DEX" ? 2.25 : 1; },
+        hp: function(p) { return p.unit.type == "DEX" ? 1.5 : 1; }
+    },
+    1128: {
+        atk: function(p) { return 1.75; }
+    },
+    1129: {
+        atk: function(p) { return 2; }
+    },
+    1130: {
+        atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? 1.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? 1.5 : 1; }
+    },
+    1131: {
+        atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? 2.25 : 1; },
+        hp: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? 1.5 : 1; }
+    },
+    1132: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; }
+    },
+    1133: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? 2.25 : 1; },
+        hp: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; }
+    }
 };

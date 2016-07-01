@@ -234,5 +234,9 @@ window.zombies = {
     1062: {//Gloriosa
         type: 'healer',
         multiplier: 2
+    },
+    1133: {
+        type: 'healer',
+        multiplier: 2
     }
 };

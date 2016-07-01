@@ -1124,12 +1124,12 @@ window.units = [
     [ "Cavendish Evolved", "QCK", [ "Slasher", "Driven" ], 6, 55, 4, 5, 99, null, 1541, 749, 231, 2970, 1460, 438, null ],
     [ "Suleiman", "PSY", [ "Slasher", "Cerebral" ], 4, 18, 6, 3, 70, null, 102, 151, 34, null, null, null, null ],
     [ "Suleiman the Beheader", "PSY", [ "Slasher", "Cerebral" ], 5, 30, 7, 4, 99, null, 903, 713, 144, null, null, null, null ],
-    [ "Orlumbus", "DEX", [ "Powerhouse", "Striker" ], 4, 18, 4, 3, 70, null, 201, 102, 22, null, null, null, null ],
-    [ "Massacre Rule Orlumbus", "DEX", [ "Powerhouse", "Striker" ], 5, 30, 6, 4, 99, null, 1389, 584, 103, null, null, null, null ],
+    [ "Orlumbus", "DEX", [ "Powerhouse", "Striker" ], 4, 18, 4, 3, 70, null, 201, 102, 22, 1461, 668, 152, null ],
+    [ "Massacre Rule Orlumbus", "DEX", [ "Powerhouse", "Striker" ], 5, 30, 6, 4, 99, null, 1389, 584, 103, 3065, 1188, 231, null ],
     [ "Dagama", "INT", [ "Slasher", "Driven" ], 4, 18, 6, 3, 70, null, 177, 52, 31, null, null, null, null ],
     [ "Dagama, Tactician of Prodence Kingdom", "INT", [ "Slasher", "Driven" ], 5, 30, 5, 4, 99, null, 1255, 490, 150, null, null, null, null ],
     [ "Elizabello II", "STR", [ "Powerhouse", "Fighter" ], 4, 18, 5, 3, 70, null, 123, 157, 20, null, null, null, null ],
-    [ "Elizabello II, King of Prodence Kingdom", "STR", [ "Powerhouse", "Fighter" ], 5, 30, 4, 4, 99, null, 1070, 724, 131, null, null, null, null ],
+    [ "Elizabello II, King of Prodence Kingdom", "STR", [ "Powerhouse", "Fighter" ], 5, 30, 4, 4, 99, null, 1070, 724, 131, 2152, 1400, 303, null ],
     [ "Ideo", "QCK", [ "Shooter", "Fighter" ], 4, 18, 5, 3, 70, null, 151, 120, 29, null, null, null, null ],
     [ "Destruction Cannon Ideo", "QCK", [ "Shooter", "Fighter" ], 5, 30, 5, 4, 99, null, 1171, 603, 123, null, null, null, null ]
 	];

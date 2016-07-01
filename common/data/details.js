@@ -5520,7 +5520,7 @@ window.details = {
 	},
 	1125: {
 		captain: "Boosts ATK of Slashers characters by 3.5x, reduces his own ATK multiplier by 0.1x at the end of each turn",
-		captainNotes: "His ATK multiplier will be 3x on the first turn, 2.9x on the second, 2.8x on the third and so on. The reduction stops once the multiplier is 1.0x. The multiplier affects all Slasher units.",
+		captainNotes: "His ATK multiplier will be 3.5x on the first turn, 3.4x on the second, 3.3x on the third and so on. The reduction stops once the multiplier is 1.0x. The multiplier affects all Slasher units.",
 		special: "Deals 13x character's ATK in [PSY] damage to all enemies, changes own orb and captain's orb into Matching orbs.",
 	},
 	1126: {
@@ -5529,7 +5529,7 @@ window.details = {
 		specialName: "Orlumbus Special"
 	},
 	1127: {
-		captain: "Boosts ATK and HP of [DEX] characters by 2x",
+		captain: "Boosts ATK of [DEX] characters by 2.25x and their HP by 1.5x",
 		special: "Empties all slots with [BLOCK] orbs, deals severe typeless damage based on number of [BLOCK] slots emptied to all enemies. Changes [EMPTY] orbs into Matching orbs",
 		specialName: "Orlumbus Special"
 	},
@@ -5544,38 +5544,38 @@ window.details = {
 		specialName: "Tactician's Savage Cut"
 	},
 	1130: {
-		captain: "Boosts ATK and HP of Fighter and Tough characters by 1.5x",
+		captain: "Boosts ATK and HP of Fighter and Powerhouse characters by 1.5x",
 		special: [
 			{
 				"description": "Deals 7x character's ATK in typeless damage to all enemies",
-				"cooldown": 12
+				"cooldown": [ 12, 6 ]
 			},
 			{
 				"description": "Deals 15x character's ATK in typeless damage to all enemies",
-				"cooldown": 20
+				"cooldown": [ 20, 14 ]
 			},
 			{
 				"description": "Deals 25x character's ATK in typeless damage to all enemies",
-				"cooldown": 26
+				"cooldown": [ 26, 20 ]
 			},
 		],
 		specialNotes: "For each turn AFTER Elizabello's special reaches stage 3, damage is boosted by 23.75x per turn for an additional 20 turns, for a max damage of 487.25x character's ATK to all enemies.",
 		specialName: "King Punch"
 	},
 	1131: {
-		captain: "Boosts ATK and HP of Fighter and Tough characters by 1.5x",
+		captain: "Boosts ATK and HP of Fighter and Powerhouse characters by 1.5x",
 		special: [
 			{
 				"description": "Deals 7x character's ATK in typeless damage to all enemies",
-				"cooldown": 12
+				"cooldown": [ 12, 6 ]
 			},
 			{
 				"description": "Deals 15x character's ATK in typeless damage to all enemies",
-				"cooldown": 20
+				"cooldown": [ 20, 14 ]
 			},
 			{
 				"description": "Deals 25x character's ATK in typeless damage to all enemies",
-				"cooldown": 26
+				"cooldown": [ 26, 20 ]
 			},
 		],
 		specialNotes: "For each turn AFTER Elizabello's special reaches stage 3, damage is boosted by 23.75x per turn for an additional 20 turns, for a max damage of 487.25x character's ATK to all enemies.",
@@ -5586,26 +5586,26 @@ window.details = {
 		special: [
 			{
 				"description": "Deals severe [QCK] damage to all enemies, boosts ATK of Fighter characters by 1.5x for 1 turn",
-				"cooldown": 18
+				"cooldown": [ 18, 12 ]
 			},
 			{
-				"description": "Deals severe [QCK] damage to all enemies, boosts ATK of Fighter characters by 1.5x for 1 turn",
-				"cooldown": 23
+				"description": "Deals severe [QCK] damage to all enemies, boosts ATK of Fighter characters by 1.75x for 1 turn",
+				"cooldown": [ 23, 17 ]
 			}
 		],
 		specialNotes: "#{stages}",
 		specialName: "Ideo Special"
 	},
 	1133: {
-		captain: "Boosts ATK and HP of Fighter characters by 1.5x",
+		captain: "Boosts ATK of Fighter characters by 2.25x and their HP by 1.5x. Recovers 2x character's RCV in HP at the end of each turn",
 		special: [
 			{
 				"description": "Deals severe [QCK] damage to all enemies, boosts ATK of Fighter characters by 1.5x for 1 turn",
-				"cooldown": 18
+				"cooldown": [ 18, 12 ]
 			},
 			{
-				"description": "Deals severe [QCK] damage to all enemies, boosts ATK of Fighter characters by 1.5x for 1 turn",
-				"cooldown": 23
+				"description": "Deals severe [QCK] damage to all enemies, boosts ATK of Fighter characters by 1.75x for 1 turn",
+				"cooldown": [ 23, 17 ]
 			}
 		],
 		specialNotes: "#{stages}",
