@@ -4363,13 +4363,13 @@ window.details = {
 	934: {
 		captain: "Boosts ATK of Fighter Characters by 2x, and their HP by 1.5x. If HP is above 70% or below 30%, boosts ATK of Fighter Characters by 2.75 instead",
 		specialName: "Fishman Karate!! Shark Fist Tile Breaker",
-		special: "For 1 turn, Perfects become harder to hit. Deals 20x character's ATK in [INT] damage to all enemies. Change all Fighter Character orbs to Matching",
+		special: "For 1 turn, Perfects become harder to hit. Deals 20x character's ATK in [INT] damage to all enemies. Changes all Fighter Character orbs to Matching",
 		specialNotes: "Decreases timing window to hit a Perfect. (Animation remains the same)"
 	},
 	935: {
 		captain: "Boosts ATK of Fighter Characters by 2x, and their HP by 1.5x. If HP is above 70% or below 30%, boosts ATK of Fighter Characters by 2.75 instead",
 		specialName: "Fishman Karate!! Shark Fist Tile Breaker",
-		special: "For 1 turn, Perfects become harder to hit. Deals 20x character's ATK in [INT] damage to all enemies. Change all Fighter Character orbs to Matching",
+		special: "For 1 turn, Perfects become harder to hit. Deals 20x character's ATK in [INT] damage to all enemies. Changes all Fighter Character orbs to Matching",
 		specialNotes: "Decreases timing window to hit a Perfect. (Animation remains the same)"
 	},
 	936: {
@@ -4626,13 +4626,13 @@ window.details = {
     982: {
         captain: "Boosts ATK of Slasher characters by 2x",
 		specialName: "Flower Sword Straight Cut",
-        special: "Deals 25x character's ATK to one enemy, changes bottom row into matching orbs"
+        special: "Deals 25x character's ATK to one enemy, changes bottom row orbs into matching orbs"
     },
     983: {
         captain: "Boosts ATK of Slasher characters by 2.25x, makes [RCV] and [TND] orbs \"beneficial\" to Slasher characters",
         captainNotes: "\"Beneficial\" orbs grant the same ATK boost as matching orbs.",
 		specialName: "Flower Sword Straight Cut",
-        special: "Deals 25x character's ATK to one enemy, changes bottom row into matching orbs"
+        special: "Deals 25x character's ATK to one enemy, changes bottom row orbs into matching orbs"
     },
     984: {
         captain: "Boosts ATK of Striker characters by 2.25x",

@@ -206,7 +206,7 @@ window.matchers = [
     {
         name: 'Full-board orb controllers',
         target: 'special',
-        matcher: /(Changes[^,]+all orbs|Changes the orbs in|Changes[^,]*every other orb)/i
+        matcher: /(Changes.+(orb|orbs)).+Matching/i
     },
 
     {
@@ -225,6 +225,13 @@ window.matchers = [
         name: 'Orb switchers',
         target: 'special',
         matcher: /switches orbs/i
+    },
+    
+    {
+        name: 'Orb matcher',
+        target: 'special',
+        matcher: /(Changes.+(orb|orbs))[^,]+Matching/i,
+        include: [ 1036, 1037 ]
     },
 
     {
