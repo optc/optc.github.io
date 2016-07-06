@@ -5372,15 +5372,15 @@ window.details = {
         captain: "Boosts ATK and RCV of Cerebral characters by 1.5x",
         special: [
 			{
-				"description": "Recovers 12% of crew's MAX HP",
+				"description": "Recovers 12% of crew's MAX HP and randomizes all orbs including [BLOCK] orbs",
 				"cooldown": [ 21, 11 ]
 			},
 			{
-				"description": "Recovers 24% of crew's MAX HP",
+				"description": "Recovers 24% of crew's MAX HP and randomizes all orbs including [BLOCK] orbs",
 				"cooldown": [ 24, 14 ]
 			},
 			{
-				"description": "Recovers 36% of crew's MAX HP",
+				"description": "Recovers 36% of crew's MAX HP and randomizes all orbs including [BLOCK] orbs",
 				"cooldown": [ 27, 17 ]
 			},
 		],
@@ -5391,15 +5391,15 @@ window.details = {
         captain: "Boosts ATK and RCV of Cerebral characters by 1.75x",
         special: [
 			{
-				"description": "Recovers 12% of crew's MAX HP",
+				"description": "Recovers 12% of crew's MAX HP and randomizes all orbs including [BLOCK] orbs",
 				"cooldown": [ 21, 11 ]
 			},
 			{
-				"description": "Recovers 24% of crew's MAX HP",
+				"description": "Recovers 24% of crew's MAX HP and randomizes all orbs including [BLOCK] orbs",
 				"cooldown": [ 24, 14 ]
 			},
 			{
-				"description": "Recovers 36% of crew's MAX HP",
+				"description": "Recovers 36% of crew's MAX HP and randomizes all orbs including [BLOCK] orbs",
 				"cooldown": [ 27, 17 ]
 			},
 		],
@@ -5526,12 +5526,12 @@ window.details = {
 	1126: {
 		captain: "Boosts ATK and HP of [DEX] characters by 1.5x",
 		special: "Empties all slots with [BLOCK] orbs, deals severe typeless damage based on number of [BLOCK] slots emptied to all enemies. Changes [EMPTY] orbs into Matching orbs",
-		specialName: "Orlumbus Special"
+		specialName: "Admiral Killer Bowling"
 	},
 	1127: {
 		captain: "Boosts ATK of [DEX] characters by 2.25x and their HP by 1.5x",
 		special: "Empties all slots with [BLOCK] orbs, deals severe typeless damage based on number of [BLOCK] slots emptied to all enemies. Changes [EMPTY] orbs into Matching orbs",
-		specialName: "Orlumbus Special"
+		specialName: "Admiral Killer Bowling"
 	},
 	1128: {
 		captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of all characters by 1.75x",
@@ -5594,7 +5594,7 @@ window.details = {
 			}
 		],
 		specialNotes: "#{stages}",
-		specialName: "Ideo Special"
+		specialName: "Destruction Cannon"
 	},
 	1133: {
 		captain: "Boosts ATK of Fighter characters by 2.25x and their HP by 1.5x. Recovers 2x character's RCV in HP at the end of each turn",
@@ -5609,6 +5609,6 @@ window.details = {
 			}
 		],
 		specialNotes: "#{stages}",
-		specialName: "Ideo Special"
+		specialName: "Destruction Cannon"
 	}
 };
