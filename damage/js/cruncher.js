@@ -369,8 +369,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if (key.indexOf(type) !== 0) continue;
             var isStatic = (key.indexOf('Static') !== -1);
             if (isStatic != static) continue;
-            if (static) result += shipBonus.bonus[key]({ boatLevel: shipBonus.level, unit: unit, slot: slot });
-            else result *= shipBonus.bonus[key]({ boatLevel: shipBonus.level, unit: unit, slot: slot });
+            if (static) result += shipBonus.bonus[key]({ boatLevel: shipBonus.level, unit: unit, slot: slot, classCount: classCounter() });
+            else result *= shipBonus.bonus[key]({ boatLevel: shipBonus.level, unit: unit, slot: slot, classCount: classCounter()  });
         }
         return result;
     };
