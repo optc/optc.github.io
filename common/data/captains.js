@@ -2826,6 +2826,12 @@ window.captains = {
 		},
 		hitModifiers: ["Good", "Great", "Perfect", "Perfect", "Perfect", "Perfect"]
 	},
+    1122: {
+      atk: function(p) { return p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.type == "DEX" ? 2.5 : 1; }  
+    },
+    1123: {
+      atk: function(p) { return p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.type == "DEX" ? 2.5 : 1; }  
+    },
     1124: {
 		atk: function(p) {
 			return p.unit.class.has("Slasher") ? Math.max(1.0, 3.0 - 0.1 * p.turnCounter) : 1;
