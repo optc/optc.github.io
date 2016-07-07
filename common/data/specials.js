@@ -1403,5 +1403,39 @@ window.specials = {
     1113: {
         atk: function(p) { return 1.2; },
         type: "type"
+    },
+    1122: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 1.75 : 1; },
+        type: "type",
+        orb: function(p) { return p.slot == p.sourceSlot ? CrunchUtils.getOrbMultiplier(p.orb, 1, 1.75) : CrunchUtils.getOrbMultiplier(p.orb, 1, 1)}
+    },
+    1123: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 1.75 : 1; },
+        type: "type",
+        orb: function(p) { return p.slot == p.sourceSlot ? CrunchUtils.getOrbMultiplier(p.orb, 1, 1.75) : CrunchUtils.getOrbMultiplier(p.orb, 1, 1)}
+    },
+    1132: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? window.specials[1132].multiplier : 1; },
+		type: "class",
+		onActivation: function(p) {
+			var n = (window.specials[1132].multiplier == 1.5 ? 1 : 0);
+			window.specials[1132].multiplier = [1.5, 1.75][n];
+			p.scope.notify({
+				text: 'Using the ' + [1.5, 1.75][n] + 'x ATK multiplier. To switch to the ' + [1.75, 1.5][n] + 'x multiplier, disable and re-enable this special',
+				name: '1133warning'
+			});
+		}
+    },
+    1133: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? window.specials[1133].multiplier : 1; },
+		type: "class",
+		onActivation: function(p) {
+			var n = (window.specials[1133].multiplier == 1.5 ? 1 : 0);
+			window.specials[1133].multiplier = [1.5, 1.75][n];
+			p.scope.notify({
+				text: 'Using the ' + [1.5, 1.75][n] + 'x ATK multiplier. To switch to the ' + [1.75, 1.5][n] + 'x multiplier, disable and re-enable this special',
+				name: '1133warning'
+			});
+		}
     }
 };
