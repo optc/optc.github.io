@@ -1404,6 +1404,12 @@ window.specials = {
         atk: function(p) { return 1.2; },
         type: "type"
     },
+    1114: {
+        atk: function(p) { return p.class.type == "STR" ? 2 : 1; }  
+    },
+    1115: {
+        atk: function(p) { return p.class.type == "STR" ? 2 : 1; }  
+    },
     1122: {
         atk: function(p) { return p.slot == p.sourceSlot ? 1.75 : 1; },
         type: "type",
