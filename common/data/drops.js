@@ -1046,10 +1046,18 @@ window.drops = {
         
         {
             name: "Robin and Nami's Secret Undercover Investigation",
-            thumb: null,
+            thumb: 1112,
             condition: "Boosts ATK of Cerebral and Free Spirit characters by 2x, other classes get .5x ATK. Boosts HP of Striker and Shooter characters by 2x, other classes get .5x HP. (This STACKS for characters with multiple classes)",
             "All Difficulties": [ 1109, 1111, 1113, -23, -628, -639, -641, -892, -937, -939, -941 ]
-        }
+        },
+		
+		{
+            name: "Behind the Scenes Intelligency Agency, CP9",
+            thumb: null,
+            condition: "Only [STR], [QCK], [DEX], [INT], and [PSY] orbs appear",
+            "All Difficulties": [ 1136, 1137, 1138, 1139, -935, -643, -673, -894, -943, -995, -615, -705, -704 ]
+        },
+		
     ],
 
             
