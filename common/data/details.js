@@ -4683,11 +4683,11 @@ window.details = {
 		special: [
 			{
 				"description": "Reduces Special Cooldown of Cerebral and Fighters by 1 turn. Shows Enemy Attack, Defence, Combo Hits, Current / Total HP, Attack Interval, 'Specials based on turns', and 'Effect after Death'",
-				"cooldown": 13
+				"cooldown": [ 13, 7 ]
 			},
 			{
 				"description": "Reduces Special Cooldown of Cerebral and Fighters by 2 turn. Shows Enemy Attack, Defence, Combo Hits, Current / Total HP, Attack Interval, 'Specials based on turns', and 'Effect after Death'",
-				"cooldown": 20
+				"cooldown": [ 20, 14 ]
 			}
 		],
 		specialNotes: "#{stages}"
@@ -4699,11 +4699,11 @@ window.details = {
 		special: [
 			{
 				"description": "Reduces Special Cooldown of Cerebral and Fighters by 1 turn. Shows Enemy Attack, Defence, Combo Hits, Current / Total HP, Attack Interval, 'Specials based on turns', and 'Effect after Death'",
-				"cooldown": 13
+				"cooldown": [ 13, 7 ]
 			},
 			{
 				"description": "Reduces Special Cooldown of Cerebral and Fighters by 2 turn. Shows Enemy Attack, Defence, Combo Hits, Current / Total HP, Attack Interval, 'Specials based on turns', and 'Effect after Death'",
-				"cooldown": 20
+				"cooldown": [ 20, 14 ]
 			}
 		],
 		specialNotes: "#{stages}"
@@ -5610,5 +5610,35 @@ window.details = {
 		],
 		specialNotes: "#{stages}",
 		specialName: "Destruction Cannon"
-	}
+	},
+	1134: {
+		captain: "Boosts ATK and RCV for Striker and Slasher characters by 1.2x",
+		special: "Reduces Special Cooldown of [INT] characters by 1 turn.",
+		specialName: "Young Tashigi Special",
+	},
+	1135: {
+		captain: "Boosts ATK and RCV for Striker and Slasher characters by 1.5x",
+		special: "Reduces Special Cooldown of [INT] characters by 1 turn.",
+		specialName: "Young Tashigi Special",
+	},
+	1136: {
+		captain: "Boosts ATK and HP of [QCK] characters by 1.5x",
+		special: "For [QCK] characters, changes [TND] and [RCV] orbs into [QCK] orbs",
+		specialName: "Fukuro Special"
+	},
+	1137: {
+		captain: "Boosts ATK of Powerhouse characters by 2.25x",
+		special: "Deals 13x character's ATK in [STR] damage to one enemy. For Free Spirit characters, amplifies the effects of orbs by 1.5x for 2 turns",
+		specialName: "Jabra Special",
+	},
+	1138: {
+		captain: "Reduces damage received by 25%",
+		special: "Reduces damage received by 60%, and boosts ATK of Powerhouse and Fighter characters by 1.3x for 1 turn",
+		specialName: "Blueno Special"
+	},
+	1139: {
+		captain: "Boosts ATK and RCV of Striker characters by 1.5x",
+		special: "Randomly changes all orbs (including [BLOCK] orbs) into either [STR], [DEX], [QCK], [PSY], or [INT] orbs",
+		specialName: "Kumadori Special"
+	},
 };

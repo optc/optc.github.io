@@ -1131,8 +1131,21 @@ window.units = [
     [ "Elizabello II", "STR", [ "Powerhouse", "Fighter" ], 4, 18, 5, 3, 70, 1066998, 123, 157, 20, 1137, 800, 177, 1 ],
     [ "Elizabello II, King of Prodence Kingdom", "STR", [ "Powerhouse", "Fighter" ], 5, 30, 4, 4, 99, 4000000, 1070, 724, 131, 2152, 1400, 303, 1 ],
     [ "Ideo", "QCK", [ "Shooter", "Fighter" ], 4, 18, 5, 3, 70, 1066998, 151, 120, 29, 1230, 679, 180, 1 ],
-    [ "Destruction Cannon Ideo", "QCK", [ "Shooter", "Fighter" ], 5, 30, 5, 4, 99, 4000000, 1171, 603, 123, 2404, 1318, 294, 1 ]
+    [ "Destruction Cannon Ideo", "QCK", [ "Shooter", "Fighter" ], 5, 30, 5, 4, 99, 4000000, 1171, 603, 123, 2404, 1318, 294, 1 ],
+	[ "Young Tashigi", "INT", [ "Striker", "Cerebral" ], 4, 10, 6, 3, 35, null, 204, 71, 108, null, null, null, null ],
+    [ "Young Tashigi", "INT", [ "Striker", "Cerebral" ], 5, 18, 4, 3, 70, null, 1088, 483, 418, null, null, null, null ],
+	[ "Fukuro, Secret Intelligence Agency CP9", "QCK", [ "Powerhouse", "Fighter" ], 4, 20, 8, 2, 99, null, 73, 32, 38, null, null, null, null ],
+	[ "Jabra, Secret Intelligence Agency CP9", "STR", [ "Powerhouse", "Free Spirit" ], 4, 25, 6, 3, 99, null, 76, 59, 29, null, null, null, null ],
+	[ "Blueno, Secret Intelligence Agency CP9", "PSY", [ "Powerhouse", "Fighter" ], 4, 20, 4, 2, 99, null, 99, 30, 19, null, null, null, null ],
+	[ "Kumadori, Secret Intelligence Agency CP9", "DEX", [ "Powerhouse", "Striker" ], 4, 20, 4, 2, 99, null, 84, 35, 32, null, null, null, null ],
+	[ "Colosseum Moria", "DEX", [ "Slasher", "Driven" ], 25, null, null, null, null, null, null, null, null, null, null, null, null ],
+	[ "Colosseum Moria Evolved", "DEX", [ "Slasher", "Driven" ], 40, null, null, null, null, null, null, null, null, null, null, null, null ],
+	[ "Nurse Foxy", "STR", [ "Free Spirit", "Fighter" ], 16, null, null, null, null, null, null, null, null, null, null, null, null ],
+	[ "Nurse Foxy Evolved", "STR", [ "Free Spirit", "Shooter" ], 26, null, null, null, null, null, null, null, null, null, null, null, null ],
+	[ "Porche", "PSY", [ "Shooter", "Striker" ], 10, null, null, null, null, null, null, null, null, null, null, null, null ],
+	[ "Porche Evolved", "PSY", [ "Shooter", "Slasher" ], 20, null, null, null, null, null, null, null, null, null, null, null, null ],
 	];
+	
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ]
 // or [ "Name", "Type", "Class1", null, null, null, null, null, null, null, null, null, null, null, null, null ]
 // [ "Name", "Type", [ "Class1", "Class2" ], Stars, Cost, Combo, sockets, maxLVL, EXPToMax, lvl1HP, lvl1ATK, lvl1RCV, MAXHP, MAXATK, MAXRCV, Growth Rate ]
