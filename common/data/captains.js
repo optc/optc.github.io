@@ -2862,8 +2862,8 @@ window.captains = {
         hp: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? 1.5 : 1; }
     },
     1131: {
-        atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? 2.25 : 1; },
-        hp: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? 1.5 : 1; }
+        atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? 1.5 : 1; },
+        hp: function(p) { return 2; }
     },
     1132: {
         atk: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; },
@@ -2872,5 +2872,24 @@ window.captains = {
     1133: {
         atk: function(p) { return p.unit.class.has("Fighter") ? 2.25 : 1; },
         hp: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; }
-    }
+    },
+    1134: {
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Slasher") ? 1.2 : 1; },
+        rcv: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Slasher") ? 1.2 : 1; }
+    },
+    1135: {
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Slasher") ? 1.5 : 1; },
+        rcv: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Slasher") ? 1.5 : 1; }
+    },
+    1136: {
+        atk: function(p) { return p.unit.type == "QCK" ? 1.5 : 1; },
+        hp: function(p) { return p.unit.type == "QCK" ? 1.5 : 1; }
+    },
+    1137: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 2.25 : 1; }
+    },
+    1139: {
+        atk: function(p) { return p.unit.class.has("Striker") ? 1.5 : 1; },
+        rcv: function(p) { return p.unit.class.has("Striker") ? 1.5 : 1; }
+    },
 };

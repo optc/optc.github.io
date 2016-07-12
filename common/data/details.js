@@ -5563,7 +5563,7 @@ window.details = {
 		specialName: "King Punch"
 	},
 	1131: {
-		captain: "Boosts ATK and HP of Fighter and Powerhouse characters by 1.5x",
+		captain: "Boosts ATK of Fighter and Powerhouse characters by 1.5x, and HP of all characters by 2x",
 		special: [
 			{
 				"description": "Deals 7x character's ATK in typeless damage to all enemies",

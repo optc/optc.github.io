@@ -1443,5 +1443,9 @@ window.specials = {
 				name: '1133warning'
 			});
 		}
+    },
+    1138: {
+        atk: function(p) { return p.unit.class.has("Powerhouse" || "Fighter") ? 1.3 : 1},
+        type: "class"
     }
 };
