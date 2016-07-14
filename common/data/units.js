@@ -1154,7 +1154,7 @@ window.units = [
     [ "Sphinx", "STR", [ "Fighter", "Powerhouse" ], 3, 30, 4, 1, 70, null, 622, 339, -300, null, null, null, null ],
     [ "Story Saldeath", "DEX", [ "Cerebral", "Fighter" ], 3, 15, 4, 2, 70, null, 163, 131, 57, null, null, null, null ],
     [ "Army Wolf", "QCK", "Fighter", 2, 8, 6, 0, 50, null, 36, 31, 21, null, null, null, null ],
-    [ "Story Hannyabal", "PSY", [ "Driven", "Striker" ], 3, 9, 6, 1, 35, null, 70, 31, 29, null, null, null, null ],
+    [ "Story Hannyabal", "PSY", [ "Driven", "Striker" ], 3, 9, 6, 1, 35, null, 70, 31, 29, 824, 412, 128, null ],
     [ "Story Hannyabal Evolved", "PSY", [ "Driven", "Striker" ], 4, 16, 4, 3, 70, null, 749, 352, 100, null, null, null, null ],
     [ "Story Magellan", "STR", [ "Powerhouse", "Shooter" ], 3, 18, 4, 1, 50, null, 154, 56, -250, 1093, 470, -250, null ],
     [ "Story Magellan Evolved", "STR", [ "Powerhouse", "Shooter" ], 4, 30, 5, 3, 99, null, 1014, 470, -250, null, null, null, null ],
