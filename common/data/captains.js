@@ -2059,12 +2059,12 @@ window.captains = {
 		atk: function(p) { return p.unit.class.has("Shooter") && p.percHP >= 99.0 ? 2.75 : 1; }
 	},
 	902: {
-		atk: function(p) { return p.class.has("Powerhouse") ? 1.25 : 1; },
-		hp: function(p) { return p.class.has("Powerhouse") ? 1.25 : 1; }
+		atk: function(p) { return p.unit.class.has("Powerhouse") ? 1.25 : 1; },
+		hp: function(p) { return p.unit.class.has("Powerhouse") ? 1.25 : 1; }
 	},
 	903: {
-		atk: function(p) { return p.class.has("Powerhouse") ? 1.25 : 1; },
-		hp: function(p) { return p.class.has("Powerhouse") ? 1.25 : 1; }
+		atk: function(p) { return p.unit.class.has("Powerhouse") ? 1.25 : 1; },
+		hp: function(p) { return p.unit.class.has("Powerhouse") ? 1.25 : 1; }
 	},
 	905: {
 		atk: function(p) { return p.unit.class.has("Slasher") && p.percHP <= 30 ? 2.5 : 1; }
@@ -2723,10 +2723,10 @@ window.captains = {
 		rcv: function(p) { return 1 + 1 * ((100 - p.percHP) / 100);	}
 	},
     1094: {
-        atk: function(p) { return p.class.has('Cerebral') ? 2.0 : 1.0; }
+        atk: function(p) { return p.unit.class.has('Cerebral') ? 2.0 : 1.0; }
     },
     1095: {
-        atk: function(p) { return p.class.has('Cerebral') ? 2.0 : 1.0; }
+        atk: function(p) { return p.unit.class.has('Cerebral') ? 2.0 : 1.0; }
     },
     1096: {
 		damageSorter: function(d) { return CrunchUtils.classSort(d, 3, [ "Powerhouse" ]); },
@@ -2746,11 +2746,11 @@ window.captains = {
         chainModifier: function(p) { return 2; }
     },
     1099: {
-        atk: function(p) { return p.class.has('Fighter') ? 2.0 : 1.0; }
+        atk: function(p) { return p.unit.class.has('Fighter') ? 2.0 : 1.0; }
     },
     1100: {
-        atk: function(p) { return p.class.has('Fighter') ? 2.25 : 1.0; },
-        rcv: function(p) { return p.class.has('Fighter') ? 1.2 : 1.0; }
+        atk: function(p) { return p.unit.class.has('Fighter') ? 2.25 : 1.0; },
+        rcv: function(p) { return p.unit.class.has('Fighter') ? 1.2 : 1.0; }
     },
     1101: {
 		hitAtk: function(p) {
@@ -2765,12 +2765,12 @@ window.captains = {
 		hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
 	},
     1103: {
-        atk: function(p) { return p.class.has('Cerebral') ? 1.5 : 1.0; },
-        rcv: function(p) { return p.class.has('Cerebral') ? 1.5 : 1.0; }
+        atk: function(p) { return p.unit.class.has('Cerebral') ? 1.5 : 1.0; },
+        rcv: function(p) { return p.unit.class.has('Cerebral') ? 1.5 : 1.0; }
     },
     1104: {
-        atk: function(p) { return p.class.has('Cerebral') ? 1.75 : 1.0; },
-        rcv: function(p) { return p.class.has('Cerebral') ? 1.75 : 1.0; }
+        atk: function(p) { return p.unit.class.has('Cerebral') ? 1.75 : 1.0; },
+        rcv: function(p) { return p.unit.class.has('Cerebral') ? 1.75 : 1.0; }
     },
     1105: {
          atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Free Spirit") ? 1.5 : 1; }
