@@ -1139,7 +1139,7 @@ window.units = [
 	[ "Blueno, Secret Intelligence Agency CP9", "PSY", [ "Powerhouse", "Fighter" ], 4, 20, 4, 2, 99, 2000000, 99, 30, 19, 2330, 712, 193, 1 ],
 	[ "Kumadori, Secret Intelligence Agency CP9", "DEX", [ "Powerhouse", "Striker" ], 4, 20, 4, 2, 99, 2000000, 84, 35, 32, 1707, 803, 277, 1 ],
 	[ "Colosseum Moria", "DEX", [ "Slasher", "Driven" ], 4, 25, 4, 2, 70, null, 689, 223, 31, 1505, 700, 112, null ],
-	[ "Colosseum Moria Evolved", "DEX", [ "Slasher", "Driven" ], 5, 40, 4, 3, 99, 4000000, 1419, 629, 79, 2237, 925, 155, null ],
+	[ "Colosseum Moria Evolved", "DEX", [ "Slasher", "Driven" ], 5, 40, 4, 3, 99, 4000000, 1419, 629, 79, 3023, 1211, 229, null ],
 	[ "Dying Colosseum Foxy", "STR", [ "Free Spirit", "Fighter" ], 3, 16, 5, 2, 50, null, 165, 94, 44, 949, 503, 162, null ],
 	[ "Nurse Foxy Evolved", "STR", [ "Free Spirit", "Shooter" ], 4, 26, 4, 3, 99, null, 867, 424, 120, 1877, 942, 313, null ],
 	[ "Porche", "PSY", [ "Shooter", "Striker" ], 3, 10, 6, 2, 35, null, 129, 62, 40, null, null, null, null ],
