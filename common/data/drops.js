@@ -494,7 +494,30 @@ window.drops = {
             "07": [ 1067, 1068, 88 ],
             "08": [ 1055, 1057, 111, 113 ],
             "09": [ 1055, 1057, 110, 112 ]
-        }
+        },
+		
+		{
+            name: "Impel Down",
+            shortName: "Impel Down",
+            thumb: null,
+            completion: '5x Rainbow Gems',
+            "01": [ 931 ],
+            "02": [ 540, 931 ],
+            "03": [ 1153, 931 ],
+            "04": [ 1154, 931 ],
+            "05": [ 1151, 931 ],
+            "06": [ 1158 ],
+            "07": [ 1155, 931 ],
+            "08": [  ],
+            "09": [  ],
+			"10": [  ],
+			"11": [ 551, 539, 1151, 1152, 931, 552 ],
+			"12": [ 1156, 549 ],
+			"13": [  ],
+			"14": [ 1152 ],
+			"15": [  ],
+			"16": [ 1158 ],
+        },
         
     ],
 
@@ -892,6 +915,7 @@ window.drops = {
         {
             name: "T-Bone's Absolute Justice",
             thumb: 724,
+			global: true,
             condition: 'You can only bring INT, PSY and QCK units',
             "All Difficulties": [ 721, 723, -590, -564, -563, -530, -526, -384, -361, -219 ]
         },
@@ -899,6 +923,7 @@ window.drops = {
         {
             name: "Explosive! Wanze's Ramen Kenpo!!",
             thumb: 743,
+			global: true,
             condition: 'You can only bring STR, QCK and DEX units',
             "All Difficulties": [ 740, 742, -560, -558, -586, -567, -566, -412, -225, -18 ]
         },

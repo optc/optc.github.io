@@ -3773,12 +3773,12 @@ window.details = {
 		special: "Changes own orb into [INT], boosts own ATK by 2x for 1 turn, deals 15x character's ATK in INT damage to one enemy"
 	},
 	841: {
-		captain: "Recovers 3x character's RCV in HP at the end of each turns, deals 3x character's ATK in PSY damage to all enemies at the end of each turn",
+		captain: "Recovers 3x character's RCV in HP at the end of each turn, deals 3x character's ATK in PSY damage to all enemies at the end of each turn",
 		specialName: "Snow Rabbit",
 		special: "Delays all enemies for 1 turn, boosts ATK against delayed enemies by 1.25x for 2 turns"
 	},
 	842: {
-		captain: "Recovers 5x character's RCV in HP at the end of each turns, deals 5x character's ATK in PSY damage to all enemies at the end of each turn",
+		captain: "Recovers 5x character's RCV in HP at the end of each turn, deals 5x character's ATK in PSY damage to all enemies at the end of each turn",
 		specialName: "Snow Rabbit",
 		special: "Delays all enemies for 1 turn, boosts ATK against delayed enemies by 1.25x for 2 turns"
 	},
@@ -5640,5 +5640,104 @@ window.details = {
 		captain: "Boosts ATK and RCV of Striker characters by 1.5x",
 		special: "Randomly changes all orbs (including [BLOCK] orbs) into either [STR], [DEX], [QCK], [PSY], or [INT] orbs",
 		specialName: "Kumadori Special"
+	},
+	1140: {
+		captain: "Boosts ATK of Driven characters by 2x",
+		special: "Changes own orb into [DEX] and deals 300,000 Fixed damage to one enemy",
+		specialName: "Colosseum Moria Special"
+	},
+	1141: {
+		captain: "Boosts ATK of Driven characters by 2.25x, recovers 3x character's RCV in HP at the end of each turn",
+		special: "Changes own orb into [DEX] and deals 300,000 Fixed damage to one enemy",
+		specialName: "Colosseum Moria Special"
+	},
+	1142: {
+		captain: "Boosts ATK of Free Spirit characters by 1.5x",
+		special: "Deals 10 hits of random [STR] damage to random enemies. Delays all enemies for 1 turn",
+		specialNotes: "#{randomHits : 10}<br>#{random : 1,000 : 30,000 : for each hit}",
+		specialName: "Colosseum Foxy Special"
+	},
+	1143: {
+		captain: "Boosts ATK of Free Spirit characters by 2x. Reduces cooldown of Free Spirit characters by 2 turns at the start of the fight",
+		special: "Deals 10 hits of random [STR] damage to random enemies. Delays all enemies for 1 turn",
+		specialNotes: "#{randomHits : 10}<br>#{random : 1,000 : 30,000 : for each hit}",
+		specialName: "Colosseum Foxy Special"
+	},
+	1144: {
+		captain: "Boosts ATK of Cerebral characters by 1.75x",
+		special: "Deals 5x character's ATK in [PSY] damage to all enemies. Recovers 15x character's RCV in HP",
+		specialName: "Colosseum Porche Special"
+	},
+	1145: {
+		captain: "Boosts ATK of Cerebral characters by 1.75x and their RCV by 1.5x",
+		special: "Deals 5x character's ATK in [PSY] damage to all enemies. Recovers 15x character's RCV in HP",
+		specialName: "Colosseum Porche Special"
+	},
+	1146:{
+		specialName: "Bind Purge",
+		special: "Reduces Bind duration by 2 turns"
+	},
+	1147:{
+		specialName: "Shock Recovery - Light",
+		special: "Reduces Numbness by 1 turn"
+	},
+	1148:{
+		special: "Recovers 7x character's RCV in HP",
+		specialName: "Moderate Healing",
+	},
+	1149:{
+		special: "Deals 3x character's ATK in INT damage to all enemies, poisons all enemies",
+		specialNotes: "#{poison}",
+		specialName: "Poison Attack",
+	},
+	1150:{
+		special: "Changes Captain orb into Matching orb",
+		specialName: "Captain Orb Change",
+	},
+	1151: {
+		special: "Cuts the current HP of one enemy by 10%",
+		specialName: "Minotaur Special"
+	},
+	1152: {
+		special: "Deals 7 hits of random [INT] damage to random enemies. ______ (Incomplete translation)",
+		specialNotes: "#{randomHits : 7}",
+		specialName: "Minozebra Special",
+	},
+	1153: {
+		special: "Reduces the defense of all enemies by 100% and boosts ATK of Powerhouse characters by 1.25x for 1 turn",
+		specialName: "Sphinx Special"
+	},
+	1154: {
+		captain: "Boosts ATK of Powerhouse characters by 2x and their HP by 1.3x",
+		special: "Reduces crew's current HP by 30%. Boosts ATK of Powerhouse characters by 1.5x",
+		specialName: "Saldeath Special",
+	},
+	1155: {
+		special: "Deals 7x character's ATK in QCK damage to all enemies",
+		specialName: "Army Wolf Special"
+	},
+	1156: {
+		captain: "Boosts ATK of Driven characters by 1.2x if HP is above 50% at the start of the turn",
+		special: "Removes poison. Protects from defeat as long as HP is above 50% for 1 turn",
+		specialName: "Story Hannyabal Special",
+		specialNotes: "#{zombie}",
+	},
+	1157: {
+		captain: "Boosts ATK of Driven and Striker characters by 1.75x if HP is above 50% at the start of the turn",
+		special: "Removes poison. Protects from defeat as long as HP is above 50% for 1 turn",
+		specialName: "Story Hannyabal Special",
+		specialNotes: "#{zombie}",
+	},
+	1158: {
+		captain: "Boosts ATK of Shooter, Striker, and Powerhouse characters by 1.75x",
+		special: "Cuts the current HP of all enemys by 20%. Strongly poisons one enemy, and poisons all other enemies.",
+		specialNotes: "Strong poison deals 5x character's ATK in fixed damage at the end of each turn. Regular poison deals .5x character's ATK in fixed damage at the end of each turn.",
+		specialName: "Magellan Special"
+	},
+	1159: {
+		captain: "Boosts ATK of Shooter, Striker, and Powerhouse characters by 2.25x",
+		special: "Cuts the current HP of all enemys by 20%. Strongly poisons one enemy, and poisons all other enemies.",
+		specialNotes: "Strong poison deals 5x character's ATK in fixed damage at the end of each turn. Regular poison deals .5x character's ATK in fixed damage at the end of each turn.",
+		specialName: "Magellan Special"
 	},
 };
