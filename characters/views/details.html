@@ -158,6 +158,21 @@
                                     </td>
                                 </tr>
                                 <tr>
+                                    <td>Sailor Ability</td>
+                                    <td>
+                                        <!-- same sailor ability -->
+                                        <div ng-if="!isSailorHybrid" ng-bind-html="details.sailor | decorate"></div>
+                                        <!-- different sailor abilities -->
+                                        <div ng-if="isSailorHybrid">
+                                            <span class="badge badge-japan">Japan</span>
+                                            <div ng-bind-html="details.sailor.japan | decorate"></div>
+                                            <span class="badge badge-global">Global</span>
+                                            <div ng-bind-html="details.sailor.global | decorate"></div>
+                                        </div>
+                                        <span class="notes" ng-if="details.sailorNotes" ng-bind-html="details.sailorNotes | notes | decorate"></span>
+                                    </td>
+                                </tr>
+                                <tr>
                                     <td>Special</td>
                                     <td>
                                         <strong class="specialName" ng-if="details.specialName">{{details.specialName}}</strong>
@@ -212,6 +227,21 @@
                                             <div ng-bind-html="compareDetails.captain.global | decorate"></div>
                                         </div>
                                         <span class="notes" ng-if="compareDetails.captainNotes" ng-bind-html="compareDetails.captainNotes | notes | decorate"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Sailor Ability</td>
+                                    <td>
+                                        <!-- same sailor ability -->
+                                        <div ng-if="!isCompareSailorHybrid" ng-bind-html="compareDetails.sailor | decorate"></div>
+                                        <!-- different sailor abilities -->
+                                        <div ng-if="isCompareSailorHybrid">
+                                            <span class="badge badge-japan">Japan</span>
+                                            <div ng-bind-html="compareDetails.sailor.japan | decorate"></div>
+                                            <span class="badge badge-global">Global</span>
+                                            <div ng-bind-html="compareDetails.sailor.global | decorate"></div>
+                                        </div>
+                                        <span class="notes" ng-if="compareDetails.sailorNotes" ng-bind-html="compareDetails.sailorNotes | notes | decorate"></span>
                                     </td>
                                 </tr>
                                 <tr>

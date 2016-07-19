@@ -130,6 +130,30 @@ directives.addCaptainOptions = function($timeout, $compile, MATCHER_IDS) {
         }
     };
 };
+    
+directives.addSailorOptions = function($timeout, $compile, MATCHER_IDS) {
+    //TO DO ONCE WE FIND OUT WHAT SAILOR ABILITIES DO ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    /*
+    var TARGET = MATCHER_IDS['captain.ClassBoostingCaptains'];
+    return {
+        restrict: 'A',
+        link: function(scope, element, attrs) {
+            if (scope.n !== TARGET) return;
+            var filter = $('<div id="class-filters" ng-class="{ enabled: filters.custom[' + TARGET + '] }"></div>');
+            var classes = [ 'Fighter', 'Shooter', 'Slasher', 'Striker', 'Free Spirit', 'Cerebral', 'Powerhouse', 'Driven' ];
+            classes.forEach(function(x,n) {
+                var template = '<span class="filter subclass %c" ng-class="{ active: filters.classCaptain == \'%s\' }" ' +
+                    'ng-click="onCaptainClick($event,\'%s\')">%s</span>';
+                filter.append($(template.replace(/%s/g,x).replace(/%c/,'width-6')));
+            });
+            element.after(filter);
+            $compile(filter)(scope);
+            scope.onCaptainClick = function(e,type) {
+                scope.filters.classCaptain = (scope.filters.classCaptain == type ? null : type);
+            };
+        }
+    };*/
+};
 
 directives.addSpecialOptions = function($timeout, $compile, MATCHER_IDS) {
     var TARGET = MATCHER_IDS['special.ClassBoostingSpecials'];
@@ -261,6 +285,8 @@ directives.compare = function() {
                 scope.compareCooldown = window.cooldowns[suggestion];
                 scope.isCompareCaptainHybrid = (scope.compareDetails && scope.compareDetails.captain &&
                     scope.compareDetails.captain.global);
+                scope.isCompareSailorHybrid = (scope.compareDetails && scope.compareDetails.sailor &&
+                    scope.compareDetails.sailor.global);
                 scope.isCompareSpecialHybrid = (scope.compareDetails && scope.compareDetails.special &&
                     scope.compareDetails.special.global);
                 scope.isCompareSpecialStaged = (scope.compareDetails && scope.compareDetails.special &&
@@ -356,6 +382,14 @@ directives.addTags = function($stateParams, $rootScope) {
                     else name = name.replace(/s$/,'');
                     name = name.replace(/iing/,'ying');
                     element.append($('<span class="tag captain">' + name + '</div>'));
+                }
+                // sailor effects
+                if (matcher.target == 'sailor' && matcher.matcher.test(data.sailor)) {
+                    name = matcher.name;
+                    if (!/sailor$/.test(name)) name = name.replace(/ers$/,'ing').replace(/s$/,'') + ' sailor';
+                    else name = name.replace(/s$/,'');
+                    name = name.replace(/iing/,'ying');
+                    element.append($('<span class="tag sailor">' + name + '</div>'));
                 }
                 // specials
                 if (matcher.target.indexOf('special') === 0 && matcher.matcher.test(data[matcher.target])) {
