@@ -1,14 +1,12 @@
 window.details = {
 	1: {
 		special: "Deals 5x character's ATK in STR damage to one enemy",
-		specialName: "Spinning Gum Punch",
-        sailorAbility: "This is a test"
+		specialName: "Spinning Gum Punch"
 	},
 	2: {
 		special: "Deals 7x character's ATK in STR damage to one enemy",
 		specialName: "Gum-Gum Pistol",
-		captain: "Boosts ATK of STR characters by 1.5x",
-        sailorAbility: "This is a DIFFERENT test"
+		captain: "Boosts ATK of STR characters by 1.5x"
 	},
 	3: {
 		special: "Deals 15x character's ATK in STR damage to one enemy",
