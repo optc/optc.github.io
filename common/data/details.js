@@ -5699,8 +5699,8 @@ window.details = {
 		specialName: "Minotaur Special"
 	},
 	1152: {
-		special: "Deals 7 hits of random [INT] damage to random enemies. ______ (Incomplete translation)",
-		specialNotes: "#{randomHits : 7}",
+		special: "Deals 3 hits of 7x character's ATK in [INT] damage to random enemies.",
+		specialNotes: "#{randomHits : 3}",
 		specialName: "Minozebra Special",
 	},
 	1153: {
