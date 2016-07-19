@@ -1080,7 +1080,7 @@ window.drops = {
 		
 		{
             name: "Behind the Scenes Intelligency Agency, CP9",
-            thumb: null,
+            thumb: 1137,
             condition: "Only [STR], [QCK], [DEX], [INT], and [PSY] orbs appear",
             "All Difficulties": [ 1136, 1137, 1138, 1139, -935, -643, -673, -894, -943, -995, -615, -705, -704 ]
         },

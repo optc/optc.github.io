@@ -4207,11 +4207,11 @@ window.details = {
 		special: [
 			{
 				"description": "Deals 13x character's ATK in DEX damage to one enemy, boosts ATK of Powerhouse characters by 1.2x for 1 turn",
-				"cooldown": 15
+				"cooldown": [ 15, 7 ]
 			},
 			{
 				"description": "Deals 20x character's ATK in DEX damage to one enemy, boosts ATK of Powerhouse characters by 2x for 1 turn",
-				"cooldown": 25
+				"cooldown": [ 25, 18 ]
 			}
 		],
 		captain: "Boosts ATK and HP of Powerhouse characters by 1.5x",
@@ -4222,11 +4222,11 @@ window.details = {
 		special: [
 			{
 				"description": "Deals 13x character's ATK in DEX damage to one enemy, boosts ATK of Powerhouse characters by 1.2x for 1 turn",
-				"cooldown": 15
+				"cooldown": [ 15, 7 ]
 			},
 			{
 				"description": "Deals 20x character's ATK in DEX damage to one enemy, boosts ATK of Powerhouse characters by 2x for 1 turn",
-				"cooldown": 25
+				"cooldown": [ 25, 18 ]
 			}
 		],
 		captain: "Boosts ATK of Powerhouse characters by 2.25x, and their HP by 1.5x. Recovers 2x character's RCV in HP at the end of each turn",
@@ -5653,14 +5653,14 @@ window.details = {
 	},
 	1142: {
 		captain: "Boosts ATK of Free Spirit characters by 1.5x",
-		special: "Deals 10 hits of random [STR] damage to random enemies. Delays all enemies for 1 turn",
-		specialNotes: "#{randomHits : 10}<br>#{random : 1,000 : 30,000 : for each hit}",
+		special: "Deals 15 hits of random [STR] damage to random enemies. Delays all enemies for 1 turn",
+		specialNotes: "#{randomHits : 15}",
 		specialName: "Colosseum Foxy Special"
 	},
 	1143: {
 		captain: "Boosts ATK of Free Spirit characters by 2x. Reduces cooldown of Free Spirit characters by 2 turns at the start of the fight",
-		special: "Deals 10 hits of random [STR] damage to random enemies. Delays all enemies for 1 turn",
-		specialNotes: "#{randomHits : 10}<br>#{random : 1,000 : 30,000 : for each hit}",
+		special: "Deals 15 hits of random [STR] damage to random enemies. Delays all enemies for 1 turn",
+		specialNotes: "#{randomHits : 15},
 		specialName: "Colosseum Foxy Special"
 	},
 	1144: {
