@@ -5660,7 +5660,7 @@ window.details = {
 	1143: {
 		captain: "Boosts ATK of Free Spirit characters by 2x. Reduces cooldown of Free Spirit characters by 2 turns at the start of the fight",
 		special: "Deals 15 hits of random [STR] damage to random enemies. Delays all enemies for 1 turn",
-		specialNotes: "#{randomHits : 15},
+		specialNotes: "#{randomHits : 15}",
 		specialName: "Colosseum Foxy Special"
 	},
 	1144: {
