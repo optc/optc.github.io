@@ -238,5 +238,9 @@ window.zombies = {
     1133: {
         type: 'healer',
         multiplier: 2
+    },
+    1141: {//Story Moira
+        type: 'healer',
+        multiplier: 3
     }
 };

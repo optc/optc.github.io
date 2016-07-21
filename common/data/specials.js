@@ -1447,5 +1447,14 @@ window.specials = {
     1138: {
         atk: function(p) { return p.unit.class.has("Powerhouse" || "Fighter") ? 1.3 : 1},
         type: "class"
+    },
+    1153: {
+        def: function(p) { return 0; },
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 1.25 : 1},
+        type: "class" 
+    },
+    1154: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 1.5 : 1},
+        type: "class"
     }
 };

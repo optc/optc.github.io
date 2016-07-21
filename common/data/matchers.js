@@ -382,6 +382,32 @@ window.matchers = [
 		name: 'Numbness reducers',
         target: 'special',
         matcher: /reduces.+numbness.+duration/i
-	}
+	},
+    
+    /* * * * * Sailor * * * * */
+    
+    {
+        name: 'Has Sailor Ability',
+        target: 'sailor',
+        matcher: /\S/i
+    },
+    
+    {
+        name: 'Type-boosting sailors',
+        target: 'sailor',
+        matcher: /Boosts (ATK|HP|RCV|ATK and HP|ATK and RCV|HP and RCV|ATK, HP and RCV) of[^,]+(STR|DEX|QCK|PSY|INT)\b/i
+    },
+    
+    {
+        name: 'Class-boosting sailors',
+        target: 'sailor',
+        matcher: /Boosts (ATK|HP|RCV|ATK and HP|ATK and RCV|HP and RCV|ATK, HP and RCV) of[^,]+(Slasher|Striker|Fighter|Shooter|Free Spirit|Cerebral|Powerhouse|Driven)/i
+    },
+    
+    {
+        name: '"Beneficial" Orb sailors',
+        target: 'sailor',
+        matcher: /Makes (\[STR\]|\[DEX\]|\[QCK\]|\[PSY\]|\[INT\]|\[RCV\]|\[TND\]) orbs "beneficial"/i
+    },
 
 ];

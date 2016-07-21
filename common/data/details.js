@@ -14,9 +14,13 @@ window.details = {
 		captain: "Boosts ATK of STR characters by 1.5x"
 	},
 	4: {
+        captain: {
+			"global": "Boosts ATK of STR characters by 2x",
+			"japan": "Boosts ATK of STR characters by 2x, and ATK of all others by 1.5x"
+		},
+        captainNotes: "The calculator will use the JPN captain",
 		special: "Deals 25x character's ATK in STR damage to one enemy",
-		specialName: "Gum-Gum Twin Jet Pistol",
-		captain: "Boosts ATK of STR characters by 2x"
+		specialName: "Gum-Gum Twin Jet Pistol"
 	},
 	5: {
 		special: "Deals 7x character's ATK in DEX damage to one enemy",
@@ -1170,13 +1174,15 @@ window.details = {
 		special: "Deals 100x character's ATK in fixed damage to one enemy, reduces crew's HP to 1",
 		specialName: "Massacre Soldier",
 		specialNotes: "#{fixed}",
-		captain: "Boosts ATK by 3.5x after scoring 3 hits below Good in a row"
+		captain: "Boosts ATK by 3.5x after scoring 3 hits below Good in a row",
+        sailor: "When HP is below x%, boosts ATK of Cerebral Characters by 50"
 	},
 	312: {
 		special: "Deals 100x character's ATK in fixed damage to one enemy, reduces crew's HP to 1",
 		specialName: "Massacre Soldier",
 		specialNotes: "#{fixed}",
-		captain: "Boosts ATK by 3.5x after scoring 3 hits below Good in a row"
+		captain: "Boosts ATK by 3.5x after scoring 3 hits below Good in a row",
+        sailor: "When HP is below x%, boosts ATK of Cerebral Characters by 50"
 	},
 	313: {
 		special: "Boosts ATK of Striker characters by 1.5x for 1 turn, deals 25x character's ATK in PSY damage to one enemy",
@@ -1191,12 +1197,14 @@ window.details = {
 	315: {
 		special: "Changes [PSY] and [INT] orbs into [STR] orbs, empties slots with [DEX] and [QCK] orbs",
 		specialName: "Aye Aye, Captain!",
-		captain: "Boosts ATK, HP and RCV of Fighter characters by 1.5x"
+		captain: "Boosts ATK, HP and RCV of Fighter characters by 1.5x",
+        sailor: "Reduces numbess for 2 turns for himself"
 	},
 	316: {
 		special: "Changes [PSY] and [INT] orbs into [STR] orbs, empties slots with [DEX] and [QCK] orbs",
 		specialName: "Aye Aye, Captain!",
-		captain: "Boosts ATK, HP and RCV of Fighter characters by 1.5x"
+		captain: "Boosts ATK, HP and RCV of Fighter characters by 1.5x",
+        sailor: "Reduces numbess for 2 turns for himself"
 	},
 	317: {
 		special: "Randomly changes all orbs into either [DEX] or [STR] orbs, deals random DEX damage to all enemies",
@@ -1360,13 +1368,15 @@ window.details = {
 		special: "Deals 10x character's ATK in INT damage to all enemies, protects from defeat as long as HP is above 50% for 1 turn",
 		specialName: "Prehistoric Power",
 		specialNotes: "#{zombie}",
-		captain: "Boosts ATK of INT characters by 3x if HP is below 30% at the start of the turn"
+		captain: "Boosts ATK of INT characters by 3x if HP is below 30% at the start of the turn",
+        sailor: "Boosts HP of Powerhouse Units by 100"
 	},
 	361: {
 		special: "Deals 10x character's ATK in INT damage to all enemies, protects from defeat as long as HP is above 50% for 1 turn",
 		specialName: "Prehistoric Power",
 		specialNotes: "#{zombie}",
-		captain: "Boosts ATK of INT characters by 3x if HP is below 30% at the start of the turn"
+		captain: "Boosts ATK of INT characters by 3x if HP is below 30% at the start of the turn",
+        sailor: "Boosts HP of Powerhouse Units by 100"
 	},
 	362: {
 		special: "For 2 turns, boosts the amount healed by RCV orbs by 1.5x, then 2x, then 2.5x from the third crew member onward",
@@ -1381,12 +1391,14 @@ window.details = {
 	364: {
 		special: "Changes [STR] and [DEX] orbs into [QCK] orbs",
 		specialName: "Gang Fortress",
-		captain: "Boosts ATK and RCV of QCK characters by 2x"
+		captain: "Boosts ATK and RCV of QCK characters by 2x",
+        sailor: "Boosts RCV of Crew by 10"
 	},
 	365: {
 		special: "Changes [STR] and [DEX] orbs into [QCK] orbs",
 		specialName: "Gang Fortress",
-		captain: "Boosts ATK and RCV of QCK characters by 2x"
+		captain: "Boosts ATK and RCV of QCK characters by 2x",
+        sailor: "Boosts RCV of Crew by 10"
 	},
 	366: {
 		special: "Deals 20x character's ATK in INT damage to all enemies, reduces Bind duration by 5 turns",
@@ -1804,12 +1816,14 @@ window.details = {
 	450: {
 		special: "Boosts ATK of Fighter characters by 1.5x for 1 turn, deals 25x character's ATK in DEX damage to one enemy",
 		specialName: "Number Eight's One Hit",
-		captain: "Boosts ATK of Fighter characters by 2x and their HP by 1.5x"
+		captain: "Boosts ATK of Fighter characters by 2x and their HP by 1.5x",
+        sailor: "Boosts ATK of Fighter characters by 20"
 	},
 	451: {
 		special: "Boosts ATK of Fighter characters by 1.5x for 1 turn, deals 25x character's ATK in DEX damage to one enemy",
 		specialName: "Number Eight's One Hit",
-		captain: "Boosts ATK of Fighter characters by 2x and their HP by 1.5x"
+		captain: "Boosts ATK of Fighter characters by 2x and their HP by 1.5x",
+        sailor: "Boosts ATK of Fighter characters by 20"
 	},
 	452: {
 		special: "Changes own orb and the captain's orb into [PSY]",
@@ -1836,12 +1850,14 @@ window.details = {
 	456: {
 		special: "Randomly changes the orbs in the middle row into either [STR] or [DEX] orbs, the orbs in the lower row into either [PSY] or [INT] orbs, switches orbs between slots once",
 		specialName: "Double Cannon",
-		captain: "Boosts ATK of Shooter characters by 2x and their RCV by 1.5x"
+		captain: "Boosts ATK of Shooter characters by 2x and their RCV by 1.5x",
+        sailor: "Makes [PSY] orbs \"beneficial\" for this unit"
 	},
 	457: {
 		special: "Randomly changes the orbs in the middle row into either [STR] or [DEX] orbs, the orbs in the lower row into either [PSY] or [INT] orbs, switches orbs between slots once",
 		specialName: "Double Cannon",
-		captain: "Boosts ATK of Shooter characters by 2x and their RCV by 1.5x"
+		captain: "Boosts ATK of Shooter characters by 2x and their RCV by 1.5x",
+        sailor: "Makes [PSY] orbs \"beneficial\" for this unit"
 	},
 	458: {
 		special: "Deals random PSY damage to all enemies, boosts ATK of all characters by 1.5x for 1 turn",
@@ -2161,45 +2177,53 @@ window.details = {
 		special: "Deals several times the character's ATK in INT damage to all enemies",
 		specialNotes: "#{specialProportional : lower : 100 * ( 1 - (remaining HP) / (total HP) )}",
 		specialName: "Diable Jambe - Venaison Shot",
-		captain: "Reduces damage received by 80% if HP is above 99% at the start of the turn"
+		captain: "Reduces damage received by 80% if HP is above 99% at the start of the turn",
+        sailor: "Reduces Numbnesss by 3 turns for self"
 	},
 	522: {
 		special: "Deals several times the character's ATK in INT damage to all enemies",
 		specialNotes: "#{specialProportional : lower : 100 * ( 1 - (remaining HP) / (total HP) )}",
 		specialName: "Diable Jambe - Venaison Shot",
-		captain: "Reduces damage received by 80% if HP is above 99% at the start of the turn"
+		captain: "Reduces damage received by 80% if HP is above 99% at the start of the turn",
+        sailor: "Reduces Numbnesss by 3 turns for self"
 	},
 	523: {
 		special: "Randomizes all orbs, protects from defeat as long as HP is above 50% for 1 turn",
 		specialName: "Billy's Electrical Discharge",
 		specialNotes: "#{zombie}",
-		captain: "Boosts ATK and RCV of Striker characters by 1.5x"
+		captain: "Boosts ATK and RCV of Striker characters by 1.5x",
+        sailor: "Makes [DEX] orbs \"beneficial\" for this unit"
 	},
 	524: {
 		special: "Randomizes all orbs, protects from defeat as long as HP is above 50% for 1 turn",
 		specialName: "Billy's Electrical Discharge",
 		specialNotes: "#{zombie}",
-		captain: "Boosts ATK of Striker characters by 2x and their RCV by 1.5x"
+		captain: "Boosts ATK of Striker characters by 2x and their RCV by 1.5x",
+        sailor: "Makes [DEX] orbs \"beneficial\" for this unit"
 	},
 	525: {
 		special: "Deals random PSY damage to all enemies, randomizes all orbs",
 		specialName: "Three-Verse Humming: Arrow-Notch Slash",
-		captain: "Boosts ATK of PSY characters by 2x"
+		captain: "Boosts ATK of PSY characters by 2x",
+        sailor: "Boosts RCV of PSY Characters by 15"
 	},
 	526: {
 		special: "Deals random PSY damage to all enemies, randomizes all orbs",
 		specialName: "Three-Verse Humming: Arrow-Notch Slash",
-		captain: "Boosts ATK of PSY characters by 2x, reduces damage received from INT enemies by 30%"
+		captain: "Boosts ATK of PSY characters by 2x, reduces damage received from INT enemies by 30%",
+        sailor: "Boosts RCV of PSY Characters by 15"
 	},
 	527: {
 		special: "Removes poison, recovers 15x character's RCV in HP",
 		specialName: "Devoted Healing - \"I'm Glad You are Safe\"",
-		captain: "Boosts ATK and RCV of DEX characters by 1.5x"
+		captain: "Boosts ATK and RCV of DEX characters by 1.5x",
+        sailor: "When HP is below x%, boosts own RCV by 50"
 	},
 	528: {
 		special: "Removes poison, recovers 15x character's RCV in HP",
 		specialName: "Devoted Healing - \"I'm Glad You are Safe\"",
-		captain: "Boosts ATK and RCV of DEX characters by 2x"
+		captain: "Boosts ATK and RCV of DEX characters by 2x",
+        sailor: "When HP is below x%, boosts own RCV by 50"
 	},
 	529: {
 		special: "Deals 35x character's ATK in PSY damage to all enemies, reduces the defense of all enemies by 100% for 2 turns",
@@ -2329,45 +2353,53 @@ window.details = {
 		special: "Changes adjacent orbs into [DEX], deals 1,000 fixed damage to all enemies",
 		specialName: "Ashura Ugui",
 		specialNotes: "#{fixed}",
-		captain: "Boosts ATK of DEX characters by 2.75x if HP is below 30% at the start of the turn"
+		captain: "Boosts ATK of DEX characters by 2.75x if HP is below 30% at the start of the turn",
+        sailor: "Boosts ATK of Slasher Characters by 20"
 	},
 	554: {
 		special: "Changes adjacent orbs into [DEX], deals 1,000 fixed damage to all enemies",
 		specialName: "Ashura Ugui",
 		specialNotes: "#{fixed}",
-		captain: "Boosts ATK of DEX characters by 3x if HP is below 30% at the start of the turn"
+		captain: "Boosts ATK of DEX characters by 3x if HP is below 30% at the start of the turn",
+        sailor: "Boosts ATK of Slasher Characters by 20"
 	},
 	555: {
 		special: "Delays all enemies for 3 turns, cuts the current HP of each enemy by 10%",
 		specialName: "Heavenly Dragon Star",
-		captain: "Boosts ATK of Shooter characters by 2x"
+		captain: "Boosts ATK of Shooter characters by 2x",
+        sailor: "Boosts RCV of Shooter Characters by 10"
 	},
 	556: {
 		special: "Delays all enemies for 3 turns, cuts the current HP of each enemy by 10%",
 		specialName: "Heavenly Dragon Star",
-		captain: "Boosts ATK of Shooter characters by 2x and their RCV by 1.5x"
+		captain: "Boosts ATK of Shooter characters by 2x and their RCV by 1.5x",
+        sailor: "Boosts RCV of Shooter Characters by 10"
 	},
 	557: {
 		special: "Boosts chances of getting [INT] orbs for 3 turns",
 		specialName: "Ochenta Fleur - Cuatro Manus Shock",
-		captain: "Boosts ATK and RCV of INT characters by 1.5x"
+		captain: "Boosts ATK and RCV of INT characters by 1.5x",
+        sailor: "Reduces blindness by 3 turn"
 	},
 	558: {
 		special: "Boosts chances of getting [INT] orbs for 3 turns",
 		specialName: "Ochenta Fleur - Cuatro Manus Shock",
-		captain: "Boosts ATK and RCV of INT characters by 2x"
+		captain: "Boosts ATK and RCV of INT characters by 2x",
+        sailor: "Reduces blindness by 3 turn"
 	},
 	559: {
 		special: "Changes own orb into [STR], amplifies the effect of orbs by 1.5x for 2 turns",
 		specialNotes: "#{orb : 1.5x}",
 		specialName: "Roar! Zarley Davison",
-		captain: "Boosts ATK of STR characters by 2x, deals 2x character's ATK in STR damage to all enemies at the end of each turn"
+		captain: "Boosts ATK of STR characters by 2x, deals 2x character's ATK in STR damage to all enemies at the end of each turn",
+        sailor: "Boosts ATK of Shooter Characters by 20"
 	},
 	560: {
 		special: "Changes own orb into [STR], amplifies the effect of orbs by 1.5x for 2 turns",
 		specialNotes: "#{orb : 1.5x}",
 		specialName: "Roar! Zarley Davison",
-		captain: "Boosts ATK of STR characters by 2.25x, deals 2x character's ATK in STR damage to all enemies at the end of each turn"
+		captain: "Boosts ATK of STR characters by 2.25x, deals 2x character's ATK in STR damage to all enemies at the end of each turn",
+        sailor: "Boosts ATK of Shooter Characters by 20"
 	},
 	561: {
 		special: "Reduces crew's current HP by 40%, deals 15x the amount of HP subtracted in typeless damage to all enemies, locks all orbs for 1 turn",
@@ -2719,56 +2751,68 @@ window.details = {
 	638: {
 		special: "Changes [PSY] and [INT] orbs into [QCK] orbs, reduces Bind duration by 1 turn",
 		specialName: "Bohemian Reverse Slash",
-		captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of Slasher characters by 2x"
+		captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of Slasher characters by 2x",
+        sailor: "Restores his own special by 1 turn when it is rewinded",
+        sailorNotes: "Some Units can increase your cooldown by 1/2 Turns, this Sailor Ability decreases that by 1 Turn"
 	},
 	639: {
 		special: "Changes [PSY] and [INT] orbs into [QCK] orbs, reduces Bind duration by 1 turn",
 		specialName: "Bohemian Reverse Slash",
-		captain: "Reduces cooldown of all specials by 3 turns at the start of the fight, boosts ATK of Slasher characters by 2x"
+		captain: "Reduces cooldown of all specials by 3 turns at the start of the fight, boosts ATK of Slasher characters by 2x",
+        sailor: "Restores his own special by 1 turn when it is rewinded",
+        sailorNotes: "Some Units can increase your cooldown by 1/2 Turns, this Sailor Ability decreases that by 1 Turn"
 	},
 	640: {
 		special: "Changes own orb into [DEX], deals several times the character's ATK in DEX damage to one enemy",
 		specialNotes: "#{specialProportional : lower : 50 * ( 1 - (remaining HP) / (total HP) )}",
 		specialName: "Pirate Brothers: Twin Strike",
-		captain: "Boosts ATK of Fighter characters by 2x, deals 2x character's ATK in DEX damage to all enemies at the end of each turn"
+		captain: "Boosts ATK of Fighter characters by 2x, deals 2x character's ATK in DEX damage to all enemies at the end of each turn",
+        sailor: "When HP is below x%, boosts ATK of Fighter Characters by 100"
 	},
 	641: {
 		special: "Changes own orb into [DEX], deals several times the character's ATK in DEX damage to one enemy",
 		specialNotes: "#{specialProportional : lower : 50 * ( 1 - (remaining HP) / (total HP) )}",
 		specialName: "Pirate Brothers: Twin Strike",
-		captain: "Boosts ATK of Fighter characters by 2.25x, deals 2x character's ATK in DEX damage to all enemies at the end of each turn"
+		captain: "Boosts ATK of Fighter characters by 2.25x, deals 2x character's ATK in DEX damage to all enemies at the end of each turn",
+        sailor: "When HP is below x%, boosts ATK of Fighter Characters by 100"
 	},
 	642: {
 		special: "Reduces crew's current HP by 30%, deals 10x character's ATK in fixed damage to one enemy, amplifies the effect of orbs by 1.75x for 1 turn",
 		specialNotes: "#{fixed} #{orb : 1.75x}",
 		specialName: "Raging Greatsword",
-		captain: "Boosts ATK of PSY characters by 2.5x if HP is below 30% at the start of the turn"
+		captain: "Boosts ATK of PSY characters by 2.5x if HP is below 30% at the start of the turn",
+        sailor: "Recovers 2 turns of numbness on self"
 	},
 	643: {
 		special: "Reduces crew's current HP by 30%, deals 10x character's ATK in fixed damage to one enemy, amplifies the effect of orbs by 1.75x for 1 turn",
 		specialNotes: "#{fixed} #{orb : 1.75x}",
 		specialName: "Raging Greatsword",
-		captain: "Boosts ATK of PSY characters by 3x if HP is below 30% at the start of the turn"
+		captain: "Boosts ATK of PSY characters by 3x if HP is below 30% at the start of the turn",
+        sailor: "Recovers 2 turns of numbness on self"
 	},
 	644: {
 		special: "Reduces Bind and Despair duration by 2 turns, boosts ATK against delayed enemies by 1.2x for 3 turns",
 		specialName: "Witch's Icebreaker",
-		captain: "Boosts ATK of INT characters by 2x"
+		captain: "Boosts ATK of INT characters by 2x",
+        sailor: "Boosts ATK and RCV of INT characters by 20"
 	},
 	645: {
 		special: "Reduces Bind and Despair duration by 2 turns, boosts ATK against delayed enemies by 1.2x for 3 turns",
 		specialName: "Witch's Icebreaker",
-		captain: "Boosts ATK of INT characters by 2.5x"
+		captain: "Boosts ATK of INT characters by 2.5x",
+        sailor: "Boosts ATK and RCV of INT characters by 20"
 	},
 	646: {
 		special: "Deals 20x character's ATK in STR damage to all enemies, boosts chances of getting [STR] orbs for 3 turns",
 		specialName: "Vanguard Breaker",
-		captain: "Boosts ATK of Shooter characters by 2.5x if HP is below 30% at the start of the turn"
+		captain: "Boosts ATK of Shooter characters by 2.5x if HP is below 30% at the start of the turn",
+        sailor: "Boosts ATK of STR characters by 30"
 	},
 	647: {
 		special: "Deals 20x character's ATK in STR damage to all enemies, boosts chances of getting [STR] orbs for 3 turns",
 		specialName: "Vanguard Breaker",
-		captain: "Boosts ATK of Shooter characters by 2.75x if HP is below 30% at the start of the turn"
+		captain: "Boosts ATK of Shooter characters by 2.75x if HP is below 30% at the start of the turn",
+        sailor: "Boosts ATK of STR characters by 30"
 	},
 	648: {
 		special: "Recovers 100x character's RCV in HP, amplifies the effect of orbs by 1.5x for 2 turns",
@@ -4690,7 +4734,9 @@ window.details = {
 				"cooldown": [ 20, 14 ]
 			}
 		],
-		specialNotes: "#{stages}"
+		specialNotes: "#{stages}",
+        sailor: "Restores her own special by 1 turn when it is rewinded",
+        sailorNotes: "Some Units can increase your cooldown by 1/2 Turns, this Sailor Ability decreases that by 1 Turn"
 	},
 	995:{
 		captain: "Boosts amount of beli received by 3x",
@@ -4706,7 +4752,9 @@ window.details = {
 				"cooldown": [ 20, 14 ]
 			}
 		],
-		specialNotes: "#{stages}"
+		specialNotes: "#{stages}",
+        sailor: "Restores her own special by 1 turn when it is rewinded",
+        sailorNotes: "Some Units can increase your cooldown by 1/2 Turns, this Sailor Ability decreases that by 1 Turn"
 	},
     996: {
         captain: "Boosts ATK of Powerhouse characters by 2x",
@@ -5467,25 +5515,29 @@ window.details = {
 		special: "Deals several times the character's ATK in INT damage to all enemies",
 		specialNotes: "#{specialProportional : lower : 100 * ( 1 - (remaining HP) / (total HP) )}",
 		specialName: "Diable Jambe: Concassé",
-		captain: "Reduces damage received by 80% if HP is above 99% at the start of the turn"
+		captain: "Reduces damage received by 80% if HP is above 99% at the start of the turn",
+        sailor: "Reduces Numbnesss by 3 turns for self"
 	},
 	1117: {
 		special: "Deals several times the character's ATK in INT damage to all enemies",
 		specialNotes: "#{specialProportional : lower : 100 * ( 1 - (remaining HP) / (total HP) )}",
 		specialName: "Diable Jambe: Concassé",
-		captain: "Reduces damage received by 80% if HP is above 99% at the start of the turn"
+		captain: "Reduces damage received by 80% if HP is above 99% at the start of the turn",
+        sailor: "Reduces Numbnesss by 3 turns for self"
 	},
 	1118: {
 		special: "Randomizes all orbs, protects from defeat as long as HP is above 50% for 1 turn",
 		specialName: "10,000-Carat Smile",
 		specialNotes: "#{zombie}",
-		captain: "Boosts ATK and RCV of Striker characters by 1.5x"
+		captain: "Boosts ATK and RCV of Striker characters by 1.5x",
+        sailor: "Makes [DEX] orbs \"beneficial\" for this unit"
 	},
 	1119: {
 		special: "Randomizes all orbs, protects from defeat as long as HP is above 50% for 1 turn",
 		specialName: "10,000-Carat Smile",
 		specialNotes: "#{zombie}",
-		captain: "Boosts ATK of Striker characters by 2x and their RCV by 1.5x"
+		captain: "Boosts ATK of Striker characters by 2x and their RCV by 1.5x",
+        sailor: "Makes [DEX] orbs \"beneficial\" for this unit"
 	},
 	1120: {
 		special: "Deals random typeless damage to all enemies, changes own orb into [STR]",
