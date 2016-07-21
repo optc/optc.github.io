@@ -5792,4 +5792,16 @@ window.details = {
 		specialNotes: "Strong poison deals 5x character's ATK in fixed damage at the end of each turn. Regular poison deals .5x character's ATK in fixed damage at the end of each turn.",
 		specialName: "Magellan Special"
 	},
+    1178: {
+        captain: "Boosts ATK of [STR] characters by 2x if HP is above 99% at the start of the turn. Reduces damage received by 50%",
+        special: "Deals random typeless damage to all enemies. Randomizes all orbs including [BLOCK] orbs.",
+		specialName: "Oars, The Devil Special",
+		specialNotes: "#{random : 30,000 : 150,000}",
+    },
+    1179: {
+        captain: "Boosts ATK of [STR] characters by 2.75x if HP is above 99% at the start of the turn. Reduces damage received by 50%",
+        special: "Deals random typeless damage to all enemies. Randomizes all orbs including [BLOCK] orbs.",
+		specialName: "Oars, The Devil Special",
+		specialNotes: "#{random : 30,000 : 150,000}",
+    },
 };

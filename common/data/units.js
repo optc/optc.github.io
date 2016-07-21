@@ -1158,6 +1158,27 @@ window.units = [
     [ "Story Hannyabal Evolved", "PSY", [ "Driven", "Striker" ], 4, 16, 4, 3, 70, 1066998, 749, 352, 100, 1590, 755, 190, 1 ],
     [ "Story Magellan", "STR", [ "Powerhouse", "Shooter" ], 3, 18, 4, 1, 50, 392109, 154, 56, -250, 1093, 470, -250, 1 ],
     [ "Story Magellan Evolved", "STR", [ "Powerhouse", "Shooter" ], 4, 30, 5, 3, 99, 3000000, 1014, 470, -250, 3000, 1159, -300, 1 ],
+    [ null, "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ null, "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ null, "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ null, "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ null, "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ null, "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ null, "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ null, "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ null, "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ null, "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ null, "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ null, "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ null, "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ null, "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ null, "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ null, "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ null, "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ null, "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Oars", "STR", [ "Fighter", "Powerhouse" ], 4, 30, 4, 1, 70, null, 902, 473, 74, null, null, null, null ],
+    [ "Oars, the Devil", "STR", [ "Fighter", "Powerhouse" ], 5, 50, 4, 2, 99, null, 1920, 977, -444, 4400, 1402, -444, null ],
+    
 	];
 	
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ]

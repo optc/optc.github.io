@@ -2926,5 +2926,11 @@ window.captains = {
     },
     1159: {
         atk: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Striker") || p.unit.class.has("Powerhouse") ? 2.25 : 1; }
-    }
+    },
+    1178: {
+        atk: function(p) { return p.unit.type == "STR" && p.percHP >= 99.0 ? 2 : 1; }
+    },
+    1179: {
+        atk: function(p) { return p.unit.type == "STR" && p.percHP >= 99.0 ? 2.75 : 1; }
+    },
 };
