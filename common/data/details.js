@@ -5786,6 +5786,26 @@ window.details = {
 		specialNotes: "Strong poison deals 5x character's ATK in fixed damage at the end of each turn. Regular poison deals .5x character's ATK in fixed damage at the end of each turn.",
 		specialName: "Magellan Special"
 	},
+    1162: {//Tesoro
+        captain: "Under Investigation",
+        special: "Under Investigation",
+        specialName: "Tesoro Special",
+    },
+    1163: {//Tesoro Evolved
+        captain: "Under Investigation",
+        special: "Under Investigation",
+        specialName: "Tesoro Special",
+    },
+    1164: {//Carina
+        captain: "Under Investigation",
+        special: "Under Investigation",
+        specialName: "Carina Special",
+    },
+    1165: {//Carina Evolved
+        captain: "Under Investigation",
+        special: "Under Investigation",
+        specialName: "Carina Special",
+    },
 	1159: {
 		captain: "Boosts ATK of Shooter, Striker, and Powerhouse characters by 2.25x",
 		special: "Cuts the current HP of all enemys by 20%. Strongly poisons one enemy, and poisons all other enemies.",

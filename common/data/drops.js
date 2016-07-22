@@ -1085,6 +1085,13 @@ window.drops = {
             condition: "Only [STR], [QCK], [DEX], [INT], and [PSY] orbs appear",
             "All Difficulties": [ 1136, 1137, 1138, 1139, -935, -643, -673, -894, -943, -995, -615, -705, -704 ]
         },
+        
+        {
+            name: "Welcome To The Gran Tesoro!",
+            thumb: null,
+            condition: "Unknown",
+            "All Difficulties": [ -578, -999, -991, -993, -675, -508, -616, -703 ]
+        },
 		
     ],
 
@@ -1188,6 +1195,7 @@ window.drops = {
         {
             name: 'Clash!! Buster Call',
             thumb: 771,
+            global: true,
             Master: [ 110, 111, 112, 113, 114, 770, 771, 772, 773, 774, 775 ],
             Expert: [ 110, 111, 112, 113, 114, 770, 771, 772, 773, 774, 775 ]
         },
@@ -1249,7 +1257,15 @@ window.drops = {
             Ultimate: [ 1107 ],
             Master: [ 1107 ],
             Expert: [ 1107 ]
-        }
+        },
+        
+        {
+            name: 'Clash!! Tesoro',
+            thumb: 1163,
+            Ultimate: [ 1162, 1164 ],
+            Master: [ 1162, 1164 ],
+            Expert: [ 1162, 1164 ]
+        },
 
     ],
 
