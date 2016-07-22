@@ -384,11 +384,11 @@ directives.addTags = function($stateParams, $rootScope) {
                     element.append($('<span class="tag captain">' + name + '</div>'));
                 }
                 // sailor effects
-                if (matcher.target == 'sailor' && matcher.matcher.test(data.sailor)) {
+                if (matcher.target.indexOf('sailor') === 0 && matcher.matcher.test(data[matcher.target]) && data[matcher.target].length>3) {
                     name = matcher.name;
-                    if (!/sailor$/.test(name)) name = name.replace(/ers$/,'ing').replace(/s$/,'') + ' sailor';
+                    /*if (!/sailor$/.test(name)) name = name.replace(/ers$/,'ing').replace(/s$/,'') + ' sailor';
                     else name = name.replace(/s$/,'');
-                    name = name.replace(/iing/,'ying');
+                    name = name.replace(/iing/,'ying');*/
                     element.append($('<span class="tag sailor">' + name + '</div>'));
                 }
                 // specials
