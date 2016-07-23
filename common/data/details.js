@@ -4726,11 +4726,11 @@ window.details = {
 		specialName: "Peeping Mind",
 		special: [
 			{
-				"description": "Reduces Special Cooldown of Cerebral and Fighters by 1 turn. Shows Enemy Attack, Defence, Combo Hits, Current / Total HP, Attack Interval, 'Specials based on turns', and 'Effect after Death'",
+				"description": "Reduces Special Cooldown of Cerebral and Fighters by 1 turn. Shows Enemy Attack, Defense, Combo Hits, Current / Total HP, Attack Interval, 'Specials based on turns', and 'Effect after Death'",
 				"cooldown": [ 13, 7 ]
 			},
 			{
-				"description": "Reduces Special Cooldown of Cerebral and Fighters by 2 turn. Shows Enemy Attack, Defence, Combo Hits, Current / Total HP, Attack Interval, 'Specials based on turns', and 'Effect after Death'",
+				"description": "Reduces Special Cooldown of Cerebral and Fighters by 2 turn. Shows Enemy Attack, Defense, Combo Hits, Current / Total HP, Attack Interval, 'Specials based on turns', and 'Effect after Death'",
 				"cooldown": [ 20, 14 ]
 			}
 		],
@@ -4744,11 +4744,11 @@ window.details = {
 		specialName: "Peeping Mind",
 		special: [
 			{
-				"description": "Reduces Special Cooldown of Cerebral and Fighters by 1 turn. Shows Enemy Attack, Defence, Combo Hits, Current / Total HP, Attack Interval, 'Specials based on turns', and 'Effect after Death'",
+				"description": "Reduces Special Cooldown of Cerebral and Fighters by 1 turn. Shows Enemy Attack, Defense, Combo Hits, Current / Total HP, Attack Interval, 'Specials based on turns', and 'Effect after Death'",
 				"cooldown": [ 13, 7 ]
 			},
 			{
-				"description": "Reduces Special Cooldown of Cerebral and Fighters by 2 turn. Shows Enemy Attack, Defence, Combo Hits, Current / Total HP, Attack Interval, 'Specials based on turns', and 'Effect after Death'",
+				"description": "Reduces Special Cooldown of Cerebral and Fighters by 2 turn. Shows Enemy Attack, Defense, Combo Hits, Current / Total HP, Attack Interval, 'Specials based on turns', and 'Effect after Death'",
 				"cooldown": [ 20, 14 ]
 			}
 		],
@@ -5787,23 +5787,23 @@ window.details = {
 		specialName: "Magellan Special"
 	},
     1162: {//Tesoro
-        captain: "Under Investigation",
-        special: "Under Investigation",
+        captain: "Boosts ATK of [PSY] units by 1.75x and boosts amount of Beli received by 1.5x",
+        special: "Deals large [PSY] damage to all enemies, and if HP is above 50%, changes all orbs to [PSY] orbs",
         specialName: "Tesoro Special",
     },
     1163: {//Tesoro Evolved
-        captain: "Under Investigation",
-        special: "Under Investigation",
+        captain: "Unit Not Yet Available",
+        special: "Deals large [PSY] damage to all enemies, and if HP is above 50%, changes all orbs to [PSY] orbs",
         specialName: "Tesoro Special",
     },
     1164: {//Carina
-        captain: "Under Investigation",
-        special: "Under Investigation",
+        captain: "Boosts RCV of all characters by 1.2x",
+        special: "Boosts RCV by 1.5x for 1 turn and amplifies the effects of orbs by 1.5x for 1 turn",
         specialName: "Carina Special",
     },
     1165: {//Carina Evolved
-        captain: "Under Investigation",
-        special: "Under Investigation",
+        captain: "Boosts RCV of all characters by 1.5x",
+        special: "Boosts RCV by 1.5x for 1 turn and amplifies the effects of orbs by 1.5x for 1 turn",
         specialName: "Carina Special",
     },
 	1159: {
