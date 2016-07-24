@@ -2927,6 +2927,14 @@ window.captains = {
     1159: {
         atk: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Striker") || p.unit.class.has("Powerhouse") ? 2.25 : 1; }
     },
+    1160: {
+        atk: function(p) { return p.unit.class.has("Free Spirit") ? 1.5 : 1; },  
+        rcv: function(p) { return p.unit.class.has("Free Spirit") ? 1.5 : 1; }  
+    },
+    1161: {
+        atk: function(p) { return p.unit.class.has("Free Spirit") ? 2 : 1; },  
+        rcv: function(p) { return p.unit.class.has("Free Spirit") ? 1.5 : 1; }  
+    },
     1178: {
         atk: function(p) { return p.unit.type == "STR" && p.percHP >= 99.0 ? 2 : 1; }
     },

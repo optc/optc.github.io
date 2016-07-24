@@ -5786,6 +5786,20 @@ window.details = {
 		specialNotes: "Strong poison deals 5x character's ATK in fixed damage at the end of each turn. Regular poison deals .5x character's ATK in fixed damage at the end of each turn.",
 		specialName: "Magellan Special"
 	},
+    1159: {
+		captain: "Boosts ATK of Shooter, Striker, and Powerhouse characters by 2.25x",
+		special: "Cuts the current HP of all enemys by 20%. Strongly poisons one enemy, and poisons all other enemies.",
+		specialNotes: "Strong poison deals 5x character's ATK in fixed damage at the end of each turn. Regular poison deals .5x character's ATK in fixed damage at the end of each turn.",
+		specialName: "Magellan Special"
+	},
+    1160: {
+        captain: "Boosts ATK and RCV of Free Spirit characters by 1.5x",
+        special: "Completely removes lock from captain, reduces lock of other units by 3 and recovers 2k HP"
+    },
+    1161: {
+        captain: "Boosts ATK of Free Spirit characters by 2x and their RCV by 1.5x",
+        special: "Completely removes lock from captain, reduces lock of other units by 3 and recovers 2k HP"
+    },
     1162: {//Tesoro
         captain: "Boosts ATK of [PSY] units by 1.75x and boosts amount of Beli received by 1.5x",
         special: "Deals large [PSY] damage to all enemies, and if HP is above 50%, changes all orbs to [PSY] orbs",
@@ -5806,12 +5820,6 @@ window.details = {
         special: "Boosts RCV by 1.5x for 1 turn and amplifies the effects of orbs by 1.5x for 1 turn",
         specialName: "Carina Special",
     },
-	1159: {
-		captain: "Boosts ATK of Shooter, Striker, and Powerhouse characters by 2.25x",
-		special: "Cuts the current HP of all enemys by 20%. Strongly poisons one enemy, and poisons all other enemies.",
-		specialNotes: "Strong poison deals 5x character's ATK in fixed damage at the end of each turn. Regular poison deals .5x character's ATK in fixed damage at the end of each turn.",
-		specialName: "Magellan Special"
-	},
     1178: {
         captain: "Boosts ATK of [STR] characters by 2x if HP is above 99% at the start of the turn. Reduces damage received by 50%",
         special: "Deals random typeless damage to all enemies. Randomizes all orbs including [BLOCK] orbs.",
