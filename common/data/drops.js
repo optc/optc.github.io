@@ -1188,6 +1188,7 @@ window.drops = {
         {
             name: 'Clash!! Duval',
             thumb: 654,
+            global: true,
             Master: [ 112, 118, 302, 652 ],
             Expert: [ 86, 97, 112, 652 ]
         },
@@ -1261,8 +1262,7 @@ window.drops = {
         
         {
             name: 'Clash!! Tesoro',
-            thumb: 1163,
-            Ultimate: [ 1162, 1164 ],
+            thumb: 1162, //Change to evolved Tereso once he arrives
             Master: [ 1162, 1164 ],
             Expert: [ 1162, 1164 ]
         },
