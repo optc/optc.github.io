@@ -772,7 +772,7 @@ window.units = [
 	[ "Momonga, Navy HQ Vice Admiral", "PSY", [ "Cerebral", "Slasher" ], 4, 20, 6, 3, 99, 4000000, 298, 142, 20, 2618, 1111, 163, 1.5 ],
 	[ "Onigumo, Navy HQ Vice Admiral", "DEX", [ "Slasher", "Driven" ], 4, 20, 8, 3, 99, 4000000, 213, 118, 54, 2000, 1021, 318, 1.5 ],
 	[ "Shu", "INT", [ "Fighter", "Free Spirit" ], 3, 12, 4, 2, 70, 1066998, 56, 89, 23, 943, 969, 150, 1 ],
-	[ "Very Good", "QCK", [ "Free Spirit", "Striker" ], 3, 12, 4, 2, 70, 1066998, 203, 57, 15, 1808, 703, 103, 1 ],
+	[ "Berry Good", "QCK", [ "Free Spirit", "Striker" ], 3, 12, 4, 2, 70, 1066998, 203, 57, 15, 1808, 703, 103, 1 ],
 	[ "Strawberry, Navy HQ Vice Admiral", "PSY", [ "Cerebral", "Slasher" ], 3, 16, 6, 2, 99, 3000000, 142, 64, 33, 1883, 943, 178, 1 ],
 	[ "Lucky Roo", "PSY", [ "Shooter", "Free Spirit" ], 3, 13, 6, 2, 35, 136167, 303, 169, 30, 904, 460, 98, 0.7 ],
 	[ "Lucky Roo of the Red Hair Pirates", "PSY", [ "Shooter", "Free Spirit" ], 4, 20, 5, 3, 70, 1778330, 842, 412, 70, 1606, 789, 188, 0.7 ],
