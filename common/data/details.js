@@ -5455,12 +5455,12 @@ window.details = {
         specialName: "Return Return Fruit"
     },
 	1105: {
-        captain: "Boosts ATK of Striker and Free Spirit characters by 1.5x, deals 2x character's ATK in [STR] damage to all enemies at the end of each turn",
+        captain: "Boosts ATK of Striker and Free Spirit characters by 1.5x, deals 2x character's ATK in typeless damage to all enemies at the end of each turn",
         special: "Delays all enemies for 1 turn. Adds .2x to Chain multiplier for 2 turns. Makes Perfects easier to hit for 2 turns.",
         specialName: "Mosa Mosa Dance"
     },
 	1106: {
-        captain: "Boosts ATK of Striker and Free Spirit characters by 2x, deals 2x character's ATK in [STR] damage to all enemies at the end of each turn",
+        captain: "Boosts ATK of Striker and Free Spirit characters by 2x, deals 2x character's ATK in typeless damage to all enemies at the end of each turn",
         special: "Delays all enemies for 1 turn. Adds .2x to Chain multiplier for 2 turns. Makes Perfects easier to hit for 2 turns.",
         specialName: "Mosa Mosa Dance"
     },

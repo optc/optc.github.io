@@ -1158,7 +1158,6 @@ window.units = [
     [ "Hannyabal, Vice Warden of the Underwater Prison Impel Down", "PSY", [ "Driven", "Striker" ], 4, 16, 4, 3, 70, 1066998, 749, 352, 100, 1590, 755, 190, 1 ],
     [ "Magellan, Chief Warden", "STR", [ "Powerhouse", "Shooter" ], 3, 18, 4, 1, 50, 392109, 154, 56, -250, 1093, 470, -250, 1 ],
     [ "Magellan, Chief Warden of the Underwater Prison Impel Down", "STR", [ "Powerhouse", "Shooter" ], 4, 30, 5, 3, 99, 3000000, 1014, 470, -250, 3000, 1159, -300, 1 ],
-    [ "Summer Koala", "QCK", [ "Class1", "Class2" ], 4, 13, 6, 2, 50, null, 133, 79, 37, null, null, null, null ],
     [ "Summer Koala Evolution", "QCK", [ "Fighter", "Free Spirit" ], 5, 20, 4, 3, 99, null, 902, 412, 123, null, null, null, null ],
     [ "Gild Tesoro", "PSY", [ "Cerebral", "Driven" ], 4, 30, 5, 5, 99, 3000000, 187, 156, 56, 1756, 1094, 268, 1 ],
     [ "Gild Tesoro Evolved", "PSY", [ "Cerebral", "Driven" ], 5, 50, 4, 5, 99, 5000000, 1756, 1094, 268, null, null, null, null ],

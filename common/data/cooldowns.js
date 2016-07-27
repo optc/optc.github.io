@@ -996,8 +996,8 @@ window.cooldowns = [
 	null, //Violet
 	null, //Dellinger 
 	null, //Dellinger 
-	23,
-	23,
+	[ 23, 17 ],
+	[ 23, 17 ],
 	23,
 	23,
 	[ 20, 12 ],
@@ -1080,8 +1080,8 @@ window.cooldowns = [
 	null, //Mansherry
 	[ 18, 12 ],
 	[ 18, 12 ],
-	23,
-	23,
+	[ 23, 17 ],
+	[ 23, 17 ],
 	24,
 	24,
 	[ 20, 10 ],
@@ -1158,8 +1158,8 @@ window.cooldowns = [
     23,
     21,
     21,
-    null,
-    null,
+    [ 13, 13 ],
+    [ 13, 13 ],
     [ 25, 14 ],
     [ 25, 14 ],
     [ 17, 10 ],

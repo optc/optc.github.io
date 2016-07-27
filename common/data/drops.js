@@ -444,7 +444,9 @@ window.drops = {
             name: "Thriller Bark: Moria's Mast Mansion",
             shortName: "Thriller Bark 2",
             thumb: 894,
+            global: true,
             completion: '5x Rainbow Gems',
+            "Completion Units": [895],
             "01": [ 817, 818, 819, 888 ],
             "02": [ 393, 888, 889 ],
             "03": [ 425 ],
@@ -499,7 +501,7 @@ window.drops = {
 		{
             name: "Impel Down",
             shortName: "Impel Down",
-            thumb: null,
+            thumb: 1159,
             completion: '5x Rainbow Gems',
             "01": [ 931 ],
             "02": [ 540, 931 ],
@@ -905,6 +907,7 @@ window.drops = {
         {
             name: "Sky Night Ganfor",
             thumb: 713,
+            global: true,
             condition: '30: Non-Free Spirit, Evolver, or Booster class characters are weakend; 15: Striker and Shooter class characters are weakened',
 			challenge: 'Cumulative Damage dealt to enemies in a single run',
             challengeData: [['600,000','1x Blue Elder'],['2,000,000','1x RCV Cotton Candy, 1x Rainbow Gem'],['5,000,000','1x Anti-Lock Forbidden Tome, 2x Rainbow Gems']],
@@ -976,6 +979,8 @@ window.drops = {
             name: "Wapol's Counterattack",
             thumb: 852,
             condition: 'You can only bring Shooter and Driven units',
+            challenge: 'Cumulative Damage dealt to enemies in a single run',
+            challengeData: [['??? Damage','1x ??? Elder'],['??? Damage','1x ??? Cotton Candy, 1x Rainbow Gem'],['??? Damage','2x Rainbow Gems, 1x ??? Forbidden Tome']],
             "All Difficulties": [ 328, 330, 331, 333, 851, 853, 854, -854, -649, -643, -614, -463, -457, -327, -22 ]
         },
 
@@ -1088,9 +1093,9 @@ window.drops = {
         
         {
             name: "Welcome To The Gran Tesoro!",
-            thumb: null,
-            condition: "Unknown",
-            "All Difficulties": [ -578, -999, -991, -993, -675, -508, -616, -703 ]
+            thumb: 1167,
+            condition: "None",
+            "All Difficulties": [ 1166, 1168, 1170, -578, -999, -991, -993, -675, -508, -616, -703 ]
         },
 		
     ],
