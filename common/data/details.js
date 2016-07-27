@@ -4099,7 +4099,7 @@ window.details = {
 	},
 	888: {
 		specialName: "Negative Ghost",
-		special: "Slightly reduces the ATK of all enemies for 3 turns",
+		special: "Slightly reduces the ATK of all enemies by 10% for 3 turns",
 		specialNotes: "The reduction does not apply to damage from specials"
 	},
 	889: {
@@ -4251,7 +4251,7 @@ window.details = {
 		special: [
 			{
 				"description": "Deals 13x character's ATK in DEX damage to one enemy, boosts ATK of Powerhouse characters by 1.2x for 1 turn",
-				"cooldown": [ 15, 7 ]
+				"cooldown": [ 15, 8 ]
 			},
 			{
 				"description": "Deals 20x character's ATK in DEX damage to one enemy, boosts ATK of Powerhouse characters by 2x for 1 turn",
@@ -4266,7 +4266,7 @@ window.details = {
 		special: [
 			{
 				"description": "Deals 13x character's ATK in DEX damage to one enemy, boosts ATK of Powerhouse characters by 1.2x for 1 turn",
-				"cooldown": [ 15, 7 ]
+				"cooldown": [ 15, 8 ]
 			},
 			{
 				"description": "Deals 20x character's ATK in DEX damage to one enemy, boosts ATK of Powerhouse characters by 2x for 1 turn",
@@ -5666,27 +5666,27 @@ window.details = {
 	1134: {
 		captain: "Boosts ATK and RCV for Striker and Slasher characters by 1.2x",
 		special: "Reduces Special Cooldown of [INT] characters by 1 turn.",
-		specialName: "Young Tashigi Special",
+		specialName: "Non-Negotiable Quest",
 	},
 	1135: {
 		captain: "Boosts ATK and RCV for Striker and Slasher characters by 1.5x",
 		special: "Reduces Special Cooldown of [INT] characters by 1 turn.",
-		specialName: "Young Tashigi Special",
+		specialName: "Non-Negotiable Quest",
 	},
-	1136: {
+	1136: { //Fortnight Fukuro
 		captain: "Boosts ATK and HP of [QCK] characters by 1.5x",
 		special: "For [QCK] characters, changes [TND] and [RCV] orbs into [QCK] orbs",
-		specialName: "Fukuro Special"
+		specialName: "Stern Beast Secret Technique: 'Owl Thrasher'"
 	},
-	1137: {
+	1137: { //Fortnight Jabra
 		captain: "Boosts ATK of Powerhouse characters by 2.25x",
 		special: "Deals 13x character's ATK in [STR] damage to one enemy. For Free Spirit characters, amplifies the effects of orbs by 1.5x for 2 turns",
-		specialName: "Jabra Special",
+		specialName: "Fatal Sneak Attack",
 	},
 	1138: {
 		captain: "Reduces damage received by 25%",
 		special: "Reduces damage received by 60%, and boosts ATK of Powerhouse and Fighter characters by 1.3x for 1 turn",
-		specialName: "Blueno Special"
+		specialName: "Iron Mass: Ring Sneak Attack"
 	},
 	1139: {
 		captain: "Boosts ATK and RCV of Striker characters by 1.5x",
@@ -5819,6 +5819,41 @@ window.details = {
         captain: "Boosts RCV of all characters by 1.5x",
         special: "Boosts RCV by 1.5x for 1 turn and amplifies the effects of orbs by 1.5x for 1 turn",
         specialName: "Carina Special",
+    },
+    1166: {//Baccarat
+        captain: "Gives chance of duplicating a drop upon completion of the island.",
+        captainNotes: "Does not work if she was not your captain upon starting the island. Stacks with double Baccarat, giving you two chances of getting an extra drop.",
+        special: "Boosts chance of matching orbs and reduces the ATK of enemies for 1 turn",
+        specialName: "Real Rakiraki",
+    },
+    1167: {//Baccarat Evolved
+        captain: "Boosts ATK of all characters by 1.2x. Gives chance of duplicating a drop upon completion of the island.",
+        captainNotes: "Does not work if she was not your captain upon starting the island. Stacks with double Baccarat, giving you two chances of getting an extra drop.",
+        special: "Boosts chance of matching orbs and reduces the ATK of enemies for 1 turn",
+        specialName: "Real Rakiraki",
+    },
+    1168: {//Dice
+        captain: "Boosts ATK of [STR] characters by 2x if HP is below 30% at the start of the turn",
+        special: "Boosts ATK of [STR] characters by a variable factor for 1 turn",
+		specialNotes: "The exact multiplier used is chosen based on the crew's current HP at the time the special is activated: above 30% HP, the multiplier used is 1.1x; below 30% HP, it's 1.75x.",
+        specialName: "Delt Trump Card",
+    },
+    1169: {//Dice Evolved
+        captain: "Boosts ATK of [STR] characters proportionally to the crew's current HP",
+		captainNotes: "#{captainProportional : lower : 1 + 1.5 * (1 - (remaining HP) / (total HP)) : 1 : 2.5}",
+        special: "Boosts ATK of [STR] characters by a variable factor for 1 turn",
+		specialNotes: "The exact multiplier used is chosen based on the crew's current HP at the time the special is activated: above 30% HP, the multiplier used is 1.1x; below 30% HP, it's 1.75x.",
+        specialName: "Delt Trump Card",
+    },
+    1170: {//Tanaka
+        captain: "Boosts ATK of [QCK] characters by 1.5x",
+        special: "Reduces Bind and Despair duration by 3 turns and swaps Badly Matching, [BLOCK], and [BOMB] orbs to [EMPTY]",
+		specialName: "Nuke Nuke no Mi",
+    },
+    1171: {//Tanaka Evolved
+        captain: "Boosts ATK of [QCK] characters by 2x",
+        special: "Reduces Bind and Despair duration by 3 turns and swaps Badly Matching, [BLOCK], and [BOMB] orbs to [EMPTY]",
+		specialName: "Nuke Nuke no Mi",
     },
     1178: {
         captain: "Boosts ATK of [STR] characters by 2x if HP is above 99% at the start of the turn. Reduces damage received by 50%",
