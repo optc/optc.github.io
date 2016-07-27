@@ -4568,7 +4568,7 @@ window.details = {
 	},
 	966:{
 		captain: "Boosts ATK of Driven Characters by 2.25x",
-		specialName: "Kid Special",
+		specialName: "Repel",
 		special: "Empties slots with [QCK] orbs, deals [QCK] damage based on number of [QCK] slots emptied to all enemies",
 		specialNotes: "The exact multiplier used is chosen based on the number of [QCK] orbs consumed: 0 orbs - Can't activate; 1 orb - 14x ATK; 2 orbs - 21x ATK; 3 orbs - 35x ATK; 4 orbs - 49x ATK; 5 orbs - 91x ATK; 6 orbs - 140x ATK."
 	},
@@ -4599,12 +4599,12 @@ window.details = {
 	},
 	973:{
 		captain: "Boosts ATK of Powerhouse Characters by 2x if HP is above 99% at the start of the turn",
-		specialName: "Sentoumaru Special",
+		specialName: "Ironclad Thrust: Dwarf Guard of the World",
 		special: "Deals 20,000 fixed damage to one enemy. Changes friend captain's orb into Matching orb"
 	},
 	974:{
 		captain: "Boosts ATK of Powerhouse Characters by 2.5x if HP is above 99% at the start of the turn",
-		specialName: "Sentoumaru Special",
+		specialName: "Ironclad Thrust: Dwarf Guard of the World",
 		special: "Deals 20,000 fixed damage to one enemy. Changes friend captain's orb into Matching orb"
 	},
 	975:{
@@ -5306,13 +5306,13 @@ window.details = {
 		captain: "Boosts ATK of Striker and Fighter characters by 1.2x",
 		special: "Deals 20x ATK in [STR] damage to all enemies. For 2 turns, boosts ATK of Striker and Fighter characters by a variable amount depending on the current HP at the time the special was activated.",
 		specialNotes: "Below 30% -> 1.75 boost, between 30% and 70% -> 1.5, above 70% -> 1.2",
-		specialName: "Don Sai Special"
+		specialName: "Drill Dragon: Drill Nail"
 	},
 	1083: {
 		captain: "Boosts ATK of Striker and Fighter characters by 1.5x at the start of the chain, and by 3x after the 3rd Perfect",
 		special: "Deals 20x ATK in [STR] damage to all enemies. For 2 turns, boosts ATK of Striker and Fighter characters by a variable amount depending on the current HP at the time the special was activated.",
 		specialNotes: "Below 30% -> 1.75 boost, between 30% and 70% -> 1.5, above 70% -> 1.2",
-		specialName: "Don Sai Special"
+		specialName: "Drill Dragon: Drill Nail"
 	},
 	1084: {
 		captain: "Boosts HP of Driven characters by 1.5x and their ATK by 3x if they have a matching orb, by 1.5x otherwise. Makes [TND] and [RCV] orbs \"beneficial\" to Driven characters",
@@ -5676,7 +5676,7 @@ window.details = {
 	1136: { //Fortnight Fukuro
 		captain: "Boosts ATK and HP of [QCK] characters by 1.5x",
 		special: "For [QCK] characters, changes [TND] and [RCV] orbs into [QCK] orbs",
-		specialName: "Stern Beast Secret Technique: 'Owl Thrasher'"
+		specialName: "Stern Beast: Secret Technique: 'Owl Thrasher' Sneak Attack"
 	},
 	1137: { //Fortnight Jabra
 		captain: "Boosts ATK of Powerhouse characters by 2.25x",
@@ -5691,51 +5691,51 @@ window.details = {
 	1139: {
 		captain: "Boosts ATK and RCV of Striker characters by 1.5x",
 		special: "Randomly changes all orbs (including [BLOCK] orbs) into either [STR], [DEX], [QCK], [PSY], or [INT] orbs",
-		specialName: "Kumadori Special"
+		specialName: "Lack of Pure Chi: Lion Finger Gun Sneak Attack"
 	},
-	1140: {
+	1140: {// Colosseum Moriah
 		captain: "Boosts ATK of Driven characters by 2x",
 		special: "Changes own orb into [DEX] and deals 300,000 Fixed damage to one enemy",
-		specialName: "Colosseum Moria Special"
+		specialName: "Horn Blade Shadow"
 	},
-	1141: {
+	1141: {// Colosseum Moriah
 		captain: "Boosts ATK of Driven characters by 2.25x, recovers 3x character's RCV in HP at the end of each turn",
 		special: "Changes own orb into [DEX] and deals 300,000 Fixed damage to one enemy",
-		specialName: "Colosseum Moria Special"
+		specialName: "Horn Blade Shadow"
 	},
-	1142: {
+	1142: {// Colosseum Foxy
 		captain: "Boosts ATK of Free Spirit characters by 1.5x",
 		special: "Deals 15 hits of random [STR] damage to random enemies. Delays all enemies for 1 turn",
 		specialNotes: "#{randomHits : 15}",
-		specialName: "Colosseum Foxy Special"
+		specialName: "Gorilla Punch: Golden Strike"
 	},
-	1143: {
+	1143: {// Colosseum Foxy
 		captain: "Boosts ATK of Free Spirit characters by 2x. Reduces cooldown of Free Spirit characters by 2 turns at the start of the fight",
 		special: "Deals 15 hits of random [STR] damage to random enemies. Delays all enemies for 1 turn",
 		specialNotes: "#{randomHits : 15}",
-		specialName: "Colosseum Foxy Special"
+		specialName: "Gorilla Punch: Golden Strike"
 	},
-	1144: {
+	1144: {// Colosseum Porche
 		captain: "Boosts ATK of Cerebral characters by 1.75x",
 		special: "Deals 5x character's ATK in [PSY] damage to all enemies. Recovers 15x character's RCV in HP",
-		specialName: "Colosseum Porche Special"
+		specialName: "Cutie Baton: Flower Shuriken"
 	},
-	1145: {
+	1145: {// Colosseum Porche
 		captain: "Boosts ATK of Cerebral characters by 1.75x and their RCV by 1.5x",
 		special: "Deals 5x character's ATK in [PSY] damage to all enemies. Recovers 15x character's RCV in HP",
-		specialName: "Colosseum Porche Special"
+		specialName: "Cutie Baton: Flower Shuriken"
 	},
 	1146:{
 		specialName: "Bind Purge",
 		special: "Reduces Bind duration by 2 turns"
 	},
 	1147:{
-		specialName: "Shock Recovery - Light",
-		special: "Reduces Numbness by 1 turn"
-	},
-	1148:{
 		special: "Recovers 7x character's RCV in HP",
 		specialName: "Moderate Healing",
+	},
+    1148:{
+		specialName: "Numbness Recovery - Light",
+		special: "Reduces Numbness by 1 turn"
 	},
 	1149:{
 		special: "Deals 3x character's ATK in INT damage to all enemies, poisons all enemies",
@@ -5746,51 +5746,51 @@ window.details = {
 		special: "Changes Captain orb into Matching orb",
 		specialName: "Captain Orb Change",
 	},
-	1151: {
+	1151: {//Minotaur
 		special: "Cuts the current HP of one enemy by 10%",
-		specialName: "Minotaur Special"
+		specialName: "Tough Jailer Beast: Spiked Club"
 	},
 	1152: {
 		special: "Deals 3 hits of 7x character's ATK in [INT] damage to random enemies.",
 		specialNotes: "#{randomHits : 3}",
-		specialName: "Minozebra Special",
+		specialName: "Shy Jailer Beast: Spiked Mace",
 	},
 	1153: {
 		special: "Reduces the defense of all enemies by 100% and boosts ATK of Powerhouse characters by 1.25x for 1 turn",
-		specialName: "Sphinx Special"
+		specialName: "Demon Lord's Roar"
 	},
 	1154: {
 		captain: "Boosts ATK of Powerhouse characters by 2x and their HP by 1.3x",
 		special: "Reduces crew's current HP by 30%. Boosts ATK of Powerhouse characters by 1.5x",
-		specialName: "Saldeath Special",
+		specialName: "Leader of the Jailers",
 	},
 	1155: {
 		special: "Deals 7x character's ATK in QCK damage to all enemies",
-		specialName: "Army Wolf Special"
+		specialName: "Monsterous Appetite"
 	},
 	1156: {
 		captain: "Boosts ATK of Driven characters by 1.2x if HP is above 50% at the start of the turn",
 		special: "Removes poison. Protects from defeat as long as HP is above 50% for 1 turn",
-		specialName: "Story Hannyabal Special",
+		specialName: "Abyss Road",
 		specialNotes: "#{zombie}",
 	},
 	1157: {
 		captain: "Boosts ATK of Driven and Striker characters by 1.75x if HP is above 50% at the start of the turn",
 		special: "Removes poison. Protects from defeat as long as HP is above 50% for 1 turn",
-		specialName: "Story Hannyabal Special",
+		specialName: "Abyss Road",
 		specialNotes: "#{zombie}",
 	},
 	1158: {
 		captain: "Boosts ATK of Shooter, Striker, and Powerhouse characters by 1.75x",
 		special: "Cuts the current HP of all enemys by 20%. Strongly poisons one enemy, and poisons all other enemies.",
 		specialNotes: "Strong poison deals 5x character's ATK in fixed damage at the end of each turn. Regular poison deals .5x character's ATK in fixed damage at the end of each turn.",
-		specialName: "Magellan Special"
+		specialName: "Poison Puffer Fish"
 	},
     1159: {
 		captain: "Boosts ATK of Shooter, Striker, and Powerhouse characters by 2.25x",
 		special: "Cuts the current HP of all enemys by 20%. Strongly poisons one enemy, and poisons all other enemies.",
 		specialNotes: "Strong poison deals 5x character's ATK in fixed damage at the end of each turn. Regular poison deals .5x character's ATK in fixed damage at the end of each turn.",
-		specialName: "Magellan Special"
+		specialName: "Poison Puffer Fish"
 	},
     1160: {
         captain: "Boosts ATK and RCV of Free Spirit characters by 1.5x",
@@ -5803,57 +5803,57 @@ window.details = {
     1162: {//Tesoro
         captain: "Boosts ATK of [PSY] units by 1.75x and boosts amount of Beli received by 1.5x",
         special: "Deals large [PSY] damage to all enemies, and if HP is above 50%, changes all orbs to [PSY] orbs",
-        specialName: "Tesoro Special",
+        specialName: "Gold-Gold Fruit",
     },
     1163: {//Tesoro Evolved
         captain: "Unit Not Yet Available",
         special: "Deals large [PSY] damage to all enemies, and if HP is above 50%, changes all orbs to [PSY] orbs",
-        specialName: "Tesoro Special",
+        specialName: "Gold-Gold Fruit",
     },
     1164: {//Carina
         captain: "Boosts RCV of all characters by 1.2x",
         special: "Boosts RCV by 1.5x for 1 turn and amplifies the effects of orbs by 1.5x for 1 turn",
-        specialName: "Carina Special",
+        specialName: "Sexy Diva",
     },
     1165: {//Carina Evolved
         captain: "Boosts RCV of all characters by 1.5x",
         special: "Boosts RCV by 1.5x for 1 turn and amplifies the effects of orbs by 1.5x for 1 turn",
-        specialName: "Carina Special",
+        specialName: "Sexy Diva",
     },
     1166: {//Baccarat
         captain: "Gives chance of duplicating a drop upon completion of the island.",
         captainNotes: "Does not work if she was not your captain upon starting the island. Stacks with double Baccarat, giving you two chances of getting an extra drop.",
         special: "Boosts chance of matching orbs and reduces the ATK of enemies for 1 turn",
-        specialName: "Real Rakiraki",
+        specialName: "Lucky-Lucky Fruit",
     },
     1167: {//Baccarat Evolved
         captain: "Boosts ATK of all characters by 1.2x. Gives chance of duplicating a drop upon completion of the island.",
         captainNotes: "Does not work if she was not your captain upon starting the island. Stacks with double Baccarat, giving you two chances of getting an extra drop.",
         special: "Boosts chance of matching orbs and reduces the ATK of enemies for 1 turn",
-        specialName: "Real Rakiraki",
+        specialName: "Lucky-Lucky Fruit",
     },
     1168: {//Dice
         captain: "Boosts ATK of [STR] characters by 2x if HP is below 30% at the start of the turn",
         special: "Boosts ATK of [STR] characters by a variable factor for 1 turn",
 		specialNotes: "The exact multiplier used is chosen based on the crew's current HP at the time the special is activated: above 30% HP, the multiplier used is 1.1x; below 30% HP, it's 1.75x.",
-        specialName: "Delt Trump Card",
+        specialName: "Trump Card Dealer",
     },
     1169: {//Dice Evolved
         captain: "Boosts ATK of [STR] characters proportionally to the crew's current HP",
 		captainNotes: "#{captainProportional : lower : 1 + 1.5 * (1 - (remaining HP) / (total HP)) : 1 : 2.5}",
         special: "Boosts ATK of [STR] characters by a variable factor for 1 turn",
 		specialNotes: "The exact multiplier used is chosen based on the crew's current HP at the time the special is activated: above 30% HP, the multiplier used is 1.1x; below 30% HP, it's 1.75x.",
-        specialName: "Delt Trump Card",
+        specialName: "Trump Card Dealer",
     },
     1170: {//Tanaka
         captain: "Boosts ATK of [QCK] characters by 1.5x",
         special: "Reduces Bind and Despair duration by 3 turns and swaps Badly Matching, [BLOCK], and [BOMB] orbs to [EMPTY]",
-		specialName: "Nuke Nuke no Mi",
+		specialName: "Escape-Escape Fruit",
     },
     1171: {//Tanaka Evolved
         captain: "Boosts ATK of [QCK] characters by 2x",
         special: "Reduces Bind and Despair duration by 3 turns and swaps Badly Matching, [BLOCK], and [BOMB] orbs to [EMPTY]",
-		specialName: "Nuke Nuke no Mi",
+		specialName: "Escape-Escape Fruit",
     },
     1178: {
         captain: "Boosts ATK of [STR] characters by 2x if HP is above 99% at the start of the turn. Reduces damage received by 50%",
