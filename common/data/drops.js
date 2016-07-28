@@ -978,9 +978,9 @@ window.drops = {
         {
             name: "Wapol's Counterattack",
             thumb: 852,
-            condition: 'You can only bring Shooter and Driven units',
+            condition: 'You can only bring Shooter and Driven units. (No Evo/Boosters)',
             challenge: 'Cumulative Damage dealt to enemies in a single run',
-            challengeData: [['??? Damage','1x ??? Elder'],['??? Damage','1x ??? Cotton Candy, 1x Rainbow Gem'],['??? Damage','2x Rainbow Gems, 1x ??? Forbidden Tome']],
+            challengeData: [['400,000 Damage','1x QCK Elder Turtle'],['1,400,000 Damage','1x ATK Cotton Candy, 1x Rainbow Gem'],['4,000,000 Damage','2x Rainbow Gems, 1x Despair Forbidden Tome']],
             "All Difficulties": [ 328, 330, 331, 333, 851, 853, 854, -854, -649, -643, -614, -463, -457, -327, -22 ]
         },
 
