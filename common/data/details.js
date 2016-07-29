@@ -5998,11 +5998,11 @@ window.details = {
     1191: {
         captain: "Boosts ATK of all characters by 2x and their HP by 1.25x. If you defeat an enemy, increases ATK boost slighty. Stacks up to 8 times to a maximum of 3.5x If you did not defeat an enemy, lose all ATK boost stacks.",
         special: "Increases duration of any Class/Type boosting buffs and Orb Amplification buffs by 1 turn",
-        specialName: "Aokiji Special",
+        specialName: "Ice Age",
     },
     1192: {
         captain: "Boosts ATK of all characters by 2x and their HP by 1.25x. If you defeat an enemy, increases ATK boost slighty. Stacks up to 8 times to a maximum of 3.5x If you did not defeat an enemy, lose all ATK boost stacks.",
         special: "Increases duration of any Class/Type boosting buffs and Orb Amplification buffs by 1 turn",
-        specialName: "Aokiji Special",
+        specialName: "Ice Age",
     },
 };
