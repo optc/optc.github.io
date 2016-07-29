@@ -2753,14 +2753,14 @@ window.details = {
 		specialName: "Bohemian Reverse Slash",
 		captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of Slasher characters by 2x",
         sailor: "Restores his own special by 1 turn when it is rewinded",
-        sailorNotes: "Some Units can increase your cooldown by 1/2 Turns, this Sailor Ability decreases that by 1 Turn"
+        sailorNotes: "Some Units can decrease your cooldown by 1/2 Turns, this Sailor Ability decreases that by an additional 1 Turn"
 	},
 	639: {
 		special: "Changes [PSY] and [INT] orbs into [QCK] orbs, reduces Bind duration by 1 turn",
 		specialName: "Bohemian Reverse Slash",
 		captain: "Reduces cooldown of all specials by 3 turns at the start of the fight, boosts ATK of Slasher characters by 2x",
         sailor: "Restores his own special by 1 turn when it is rewinded",
-        sailorNotes: "Some Units can increase your cooldown by 1/2 Turns, this Sailor Ability decreases that by 1 Turn"
+        sailorNotes: "Some Units can decrease your cooldown by 1/2 Turns, this Sailor Ability decreases that by an additional 1 Turn"
 	},
 	640: {
 		special: "Changes own orb into [DEX], deals several times the character's ATK in DEX damage to one enemy",
@@ -4736,7 +4736,7 @@ window.details = {
 		],
 		specialNotes: "#{stages}",
         sailor: "Restores her own special by 1 turn when it is rewinded",
-        sailorNotes: "Some Units can increase your cooldown by 1/2 Turns, this Sailor Ability decreases that by 1 Turn"
+        sailorNotes: "Some Units can decrease your cooldown by 1/2 Turns, this Sailor Ability decreases that by an additional 1 Turn"
 	},
 	995:{
 		captain: "Boosts amount of beli received by 3x",
@@ -4754,7 +4754,7 @@ window.details = {
 		],
 		specialNotes: "#{stages}",
         sailor: "Restores her own special by 1 turn when it is rewinded",
-        sailorNotes: "Some Units can increase your cooldown by 1/2 Turns, this Sailor Ability decreases that by 1 Turn"
+        sailorNotes: "Some Units can decrease your cooldown by 1/2 Turns, this Sailor Ability decreases that by an additional 1 Turn"
 	},
     996: {
         captain: "Boosts ATK of Powerhouse characters by 2x",
@@ -5822,13 +5822,13 @@ window.details = {
     },
     1166: {//Baccarat
         captain: "Gives chance of duplicating a drop upon completion of the island.",
-        captainNotes: "Does not work if she was not your captain upon starting the island. Stacks with double Baccarat, giving you two chances of getting an extra drop.",
+        captainNotes: "Does not work if she was not your captain upon starting the island. Stacks with other addional drop captains, giving you two chances of getting an extra drop.",
         special: "Boosts chance of matching orbs and reduces the ATK of enemies for 1 turn",
         specialName: "Lucky-Lucky Fruit",
     },
     1167: {//Baccarat Evolved
         captain: "Boosts ATK of all characters by 1.2x. Gives chance of duplicating a drop upon completion of the island.",
-        captainNotes: "Does not work if she was not your captain upon starting the island. Stacks with double Baccarat, giving you two chances of getting an extra drop.",
+        captainNotes: "Does not work if she was not your captain upon starting the island. Stacks with other addional drop captains, giving you two chances of getting an extra drop.",
         special: "Boosts chance of matching orbs and reduces the ATK of enemies for 1 turn",
         specialName: "Lucky-Lucky Fruit",
     },
@@ -5847,24 +5847,162 @@ window.details = {
     },
     1170: {//Tanaka
         captain: "Boosts ATK of [QCK] characters by 1.5x",
-        special: "Reduces Bind and Despair duration by 3 turns and swaps Badly Matching, [BLOCK], and [BOMB] orbs to [EMPTY]",
+        special: "Reduces Bind duration by 3 turns and swaps Badly Matching, [BLOCK], and [BOMB] orbs to [EMPTY]",
 		specialName: "Escape-Escape Fruit",
     },
     1171: {//Tanaka Evolved
         captain: "Boosts ATK of [QCK] characters by 2x",
-        special: "Reduces Bind and Despair duration by 3 turns and swaps Badly Matching, [BLOCK], and [BOMB] orbs to [EMPTY]",
+        special: "Reduces Bind duration by 3 turns and swaps Badly Matching, [BLOCK], and [BOMB] orbs to [EMPTY]",
 		specialName: "Escape-Escape Fruit",
     },
+    1172: {
+		special: "Deals random PSY damage to all enemies, randomizes all orbs",
+		specialName: "Three-Verse Humming: Arrow-Notch Slash",
+		captain: "Boosts ATK of PSY characters by 2x",
+        sailor: "Boosts RCV of PSY Characters by 15"
+	},
+	1173: {
+		special: "Deals random PSY damage to all enemies, randomizes all orbs",
+		specialName: "Three-Verse Humming: Arrow-Notch Slash",
+		captain: "Boosts ATK of PSY characters by 2x, reduces damage received from INT enemies by 30%",
+        sailor: "Boosts RCV of PSY Characters by 15"
+	},
+    1174: {
+		special: "Changes adjacent orbs into [DEX], deals 1,000 fixed damage to all enemies",
+		specialName: "Ashura Ugui",
+		specialNotes: "#{fixed}",
+		captain: "Boosts ATK of DEX characters by 2.75x if HP is below 30% at the start of the turn",
+        sailor: "Boosts ATK of Slasher Characters by 20"
+	},
+	1175: {
+		special: "Changes adjacent orbs into [DEX], deals 1,000 fixed damage to all enemies",
+		specialName: "Ashura Ugui",
+		specialNotes: "#{fixed}",
+		captain: "Boosts ATK of DEX characters by 3x if HP is below 30% at the start of the turn",
+        sailor: "Boosts ATK of Slasher Characters by 20"
+	},
+    1176: {
+		special: "Removes poison, recovers 15x character's RCV in HP",
+		specialName: "Devoted Healing - \"I'm Glad You are Safe\"",
+		captain: "Boosts ATK and RCV of DEX characters by 1.5x",
+        sailor: "When HP is below x%, boosts own RCV by 50"
+	},
+	1177: {
+		special: "Removes poison, recovers 15x character's RCV in HP",
+		specialName: "Devoted Healing - \"I'm Glad You are Safe\"",
+		captain: "Boosts ATK and RCV of DEX characters by 2x",
+        sailor: "When HP is below x%, boosts own RCV by 50"
+	},
     1178: {
         captain: "Boosts ATK of [STR] characters by 2x if HP is above 99% at the start of the turn. Reduces damage received by 50%",
         special: "Deals random typeless damage to all enemies. Randomizes all orbs including [BLOCK] orbs.",
-		specialName: "Oars, The Devil Special",
+		specialName: "Not Rubber Gum-Gum Jet Gatling",
 		specialNotes: "#{random : 30,000 : 150,000}",
     },
     1179: {
         captain: "Boosts ATK of [STR] characters by 2.75x if HP is above 99% at the start of the turn. Reduces damage received by 50%",
         special: "Deals random typeless damage to all enemies. Randomizes all orbs including [BLOCK] orbs.",
-		specialName: "Oars, The Devil Special",
+		specialName: "Not Rubber Gum-Gum Jet Gatling",
 		specialNotes: "#{random : 30,000 : 150,000}",
+    },
+    1181: {
+        captain: "Boosts ATK of [DEX] characters by 2.5x",
+        special: "Deals 15x character's ATK in [DEX] damage to all enemies. Makes [RCV] and [TND] orbs \"beneficial\" to Slasher characters for 3 turns",
+        specialName: "Blenheim Special",
+        sailor: "Makes [STR] orbs \"beneficial\" for this unit"
+    },
+    1182: {
+        captain: "Boosts ATK of [DEX] characters by 2.5x",
+        special: "Deals 15x character's ATK in [DEX] damage to all enemies. Makes [RCV] and [TND] orbs \"beneficial\" to Slasher characters for 3 turns",
+        specialName: "Blenheim Special",
+        sailor: "Makes [STR] orbs \"beneficial\" for this unit"
+    },
+    1183: {
+        captain: "Boosts ATK of [PSY] characters by 2.5x",
+        special: "Empties all slots with [PSY] orbs, deals several times the character's ATK in [PSY] damage to one enemy",
+		specialNotes: "The exact multiplier used is chosen based on the number of [PSY] orbs consumed: 1 orb will give a 10x multiplier, 2 orbs 15x, 3 orbs 20x, 4 orbs 50x, 5 orbs 100x, 6 orbs 200x. It's not possible to activate the special without consuming at least one [PSY] orb.",
+        specialName: "Kingdew Special",
+        sailor: "If HP is above 99% at the start of the turn, boosts ATK of [PSY] Characters by 75"
+    },
+    1184: {
+        captain: "Boosts ATK of [PSY] characters by 2.5x",
+        special: "Empties all slots with [PSY] orbs, deals several times the character's ATK in [PSY] damage to one enemy",
+		specialNotes: "The exact multiplier used is chosen based on the number of [PSY] orbs consumed: 1 orb will give a 10x multiplier, 2 orbs 15x, 3 orbs 20x, 4 orbs 50x, 5 orbs 100x, 6 orbs 200x. It's not possible to activate the special without consuming at least one [PSY] orb.",
+        specialName: "Kingdew Special",
+        sailor: "If HP is above 99% at the start of the turn, boosts ATK of [PSY] Characters by 75"
+    },
+    1185: {
+        captain: "Boosts ATK of Slasher and Cerebral units by 1.75x. Gives chance of duplicating a drop upon completion of the island.",
+        captainNotes: "Does not work if she was not your captain upon starting the island. Stacks with other addional drop captains, giving you two chances of getting an extra drop.",
+        special: [
+			{
+				"description": "Deals [INT] damage to all enemies. Changes own orb into [INT]. Reduces Special Cooldown of Slasher and Cerebral units by 1 turn",
+				"cooldown": null,
+			},
+			{
+				"description": "Deals [INT] damage to all enemies. Changes own orb into [INT]. Reduces Special Cooldown of Slasher and Cerebral units by 2 turns",
+				"cooldown": null,
+			}
+		],
+        specialName: "Haruta Special",
+        sailor: "Restores his own special by 1 turn when it is rewinded",
+        sailorNotes: "Some Units can decrease your cooldown by 1/2 Turns, this Sailor Ability decreases that by an additional 1 Turn"
+    },
+    1186: {
+        captain: "Boosts ATK of Slasher and Cerebral units by 1.75x. Gives chance of duplicating a drop upon completion of the island.",
+        captainNotes: "Does not work if she was not your captain upon starting the island. Stacks with other addional drop captains, giving you two chances of getting an extra drop.",
+        special: [
+			{
+				"description": "Deals [INT] damage to all enemies. Changes own orb into [INT]. Reduces Special Cooldown of Slasher and Cerebral units by 1 turn",
+				"cooldown": null,
+			},
+			{
+				"description": "Deals [INT] damage to all enemies. Changes own orb into [INT]. Reduces Special Cooldown of Slasher and Cerebral units by 2 turns",
+				"cooldown": null,
+			}
+		],
+        specialName: "Haruta Special",
+        sailor: "Restores his own special by 1 turn when it is rewinded",
+        sailorNotes: "Some Units can decrease your cooldown by 1/2 Turns, this Sailor Ability decreases that by an additional 1 Turn"
+    },
+    1187: {
+        captain: "Boosts ATK of [STR] characters by 2.5x",
+        special: "Deals 7 hits of random damage to random enemies. Reduces Bind and Despair duration by 3 turns",
+		specialNotes: "#{randomHits : 7}<br>#{random : ??? : ??? : for each hit}",
+        specialName: "Atmos Special",
+        sailor: "Boosts ATK, HP, and RCV of all characters by 20"
+    },
+    1188: {
+        captain: "Boosts ATK of [STR] characters by 2.5x",
+        special: "Deals 7 hits of random damage to random enemies. Reduces Bind and Despair duration by 3 turns",
+		specialNotes: "#{randomHits : 7}<br>#{random : ??? : ??? : for each hit}",
+        specialName: "Atmos Special",
+        sailor: "Boosts ATK, HP, and RCV of all characters by 20"
+    },
+    1189: {
+        captain: "Boosts ATK of [QCK] characters by 2.25x, makes [DEX] orbs \"beneficial\" to [QCK] characters",
+		captainNotes: "\"Beneficial\" orbs grant the same ATK boost as matching orbs.",
+        special: "Reduces enemy Barrier timers by 1 turn",
+        specialNotes: "Does not affect DEF Boost or % Damage reduction buffs. Reduces timers for Barriers such as Perfect/Great/Good Barriers and Combo Hit Barriers",
+        specialName: "Speed Jiru Special",
+        sailor: "Boosts ATK of [QCK] characters by 40"
+    },
+    1190: {
+        captain: "Boosts ATK of [QCK] characters by 2.25x, makes [DEX] orbs \"beneficial\" to [QCK] characters",
+		captainNotes: "\"Beneficial\" orbs grant the same ATK boost as matching orbs.",
+        special: "Reduces enemy Barrier timers by 1 turn",
+        specialNotes: "Does not affect DEF Boost or % Damage reduction buffs. Reduces timers for Barriers such as Perfect/Great/Good Barriers and Combo Hit Barriers",
+        specialName: "Speed Jiru Special",
+        sailor: "Boosts ATK of [QCK] characters by 40"
+    },
+    1191: {
+        captain: "Boosts ATK of all characters by 2x and their HP by 1.25x. If you defeat an enemy, increases ATK boost slighty. Stacks up to 8 times to a maximum of 3.5x If you did not defeat an enemy, lose all ATK boost stacks.",
+        special: "Increases duration of any Class/Type boosting buffs and Orb Amplification buffs by 1 turn",
+        specialName: "Aokiji Special",
+    },
+    1192: {
+        captain: "Boosts ATK of all characters by 2x and their HP by 1.25x. If you defeat an enemy, increases ATK boost slighty. Stacks up to 8 times to a maximum of 3.5x If you did not defeat an enemy, lose all ATK boost stacks.",
+        special: "Increases duration of any Class/Type boosting buffs and Orb Amplification buffs by 1 turn",
+        specialName: "Aokiji Special",
     },
 };
