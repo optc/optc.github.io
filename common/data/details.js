@@ -2753,14 +2753,14 @@ window.details = {
 		specialName: "Bohemian Reverse Slash",
 		captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of Slasher characters by 2x",
         sailor: "Restores his own special by 1 turn when it is rewinded",
-        sailorNotes: "Some Units can decrease your cooldown by 1/2 Turns, this Sailor Ability decreases that by an additional 1 Turn"
+        sailorNotes: "Some enemies can increase your cooldown by 1/2 Turns, this Sailor Ability decreases that by 1 Turn"
 	},
 	639: {
 		special: "Changes [PSY] and [INT] orbs into [QCK] orbs, reduces Bind duration by 1 turn",
 		specialName: "Bohemian Reverse Slash",
 		captain: "Reduces cooldown of all specials by 3 turns at the start of the fight, boosts ATK of Slasher characters by 2x",
         sailor: "Restores his own special by 1 turn when it is rewinded",
-        sailorNotes: "Some Units can decrease your cooldown by 1/2 Turns, this Sailor Ability decreases that by an additional 1 Turn"
+        sailorNotes: "Some enemies can increase your cooldown by 1/2 Turns, this Sailor Ability decreases that by 1 Turn"
 	},
 	640: {
 		special: "Changes own orb into [DEX], deals several times the character's ATK in DEX damage to one enemy",
@@ -4736,7 +4736,7 @@ window.details = {
 		],
 		specialNotes: "#{stages}",
         sailor: "Restores her own special by 1 turn when it is rewinded",
-        sailorNotes: "Some Units can decrease your cooldown by 1/2 Turns, this Sailor Ability decreases that by an additional 1 Turn"
+        sailorNotes: "Some enemies can increase your cooldown by 1/2 Turns, this Sailor Ability decreases that by 1 Turn"
 	},
 	995:{
 		captain: "Boosts amount of beli received by 3x",
@@ -4754,7 +4754,7 @@ window.details = {
 		],
 		specialNotes: "#{stages}",
         sailor: "Restores her own special by 1 turn when it is rewinded",
-        sailorNotes: "Some Units can decrease your cooldown by 1/2 Turns, this Sailor Ability decreases that by an additional 1 Turn"
+        sailorNotes: "Some enemies can increase your cooldown by 1/2 Turns, this Sailor Ability decreases that by 1 Turn"
 	},
     996: {
         captain: "Boosts ATK of Powerhouse characters by 2x",
@@ -5946,7 +5946,7 @@ window.details = {
 		],
         specialName: "Haruta Special",
         sailor: "Restores his own special by 1 turn when it is rewinded",
-        sailorNotes: "Some Units can decrease your cooldown by 1/2 Turns, this Sailor Ability decreases that by an additional 1 Turn"
+        sailorNotes: "Some enemies can increase your cooldown by 1/2 Turns, this Sailor Ability decreases that by 1 Turn"
     },
     1186: {
         captain: "Boosts ATK of Slasher and Cerebral units by 1.75x. Gives chance of duplicating a drop upon completion of the island.",
@@ -5963,7 +5963,7 @@ window.details = {
 		],
         specialName: "Haruta Special",
         sailor: "Restores his own special by 1 turn when it is rewinded",
-        sailorNotes: "Some Units can decrease your cooldown by 1/2 Turns, this Sailor Ability decreases that by an additional 1 Turn"
+        sailorNotes: "Some enemies can increase your cooldown by 1/2 Turns, this Sailor Ability decreases that by 1 Turn"
     },
     1187: {
         captain: "Boosts ATK of [STR] characters by 2.5x",
