@@ -2941,4 +2941,14 @@ window.captains = {
     1179: {
         atk: function(p) { return p.unit.type == "STR" && p.percHP >= 99.0 ? 2.75 : 1; }
     },
+	1191: {
+        atk: function(p) {
+			return Math.min(3.5, 2.0 + 0.1875 * p.turnCounter);
+		}
+	},
+	1192: {
+        atk: function(p) {
+			return Math.min(3.5, 2.0 + 0.1875 * p.turnCounter);
+		}
+	},
 };
