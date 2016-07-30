@@ -5240,7 +5240,7 @@ window.details = {
         specialName: "Haute Couture: Patchwork"
 	},
 	1077:{
-		captain: "Boosts ATK of Striker and Free Spirit characters by 2.25x and their HP by 1.5x",
+		captain: "Boosts ATK of Striker and Free Spirit characters by 2.25x and their RCV by 1.5x",
 		special: [
 			{
 				"description": "Delays all enemies for 1 turn. Locks all orbs for 1 turn. Cuts the current HP of one enemy by 10%",

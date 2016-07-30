@@ -2668,7 +2668,7 @@ window.captains = {
     },
     1077: {
         atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Free Spirit") ? 2.25 : 1; },
-        hp: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Free Spirit") ? 1.5 : 1; }
+        rcv: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Free Spirit") ? 1.5 : 1; }
     },
     1080: {
 		atk: function(p) { return p.unit.cost <= 20 ? 2.5 : 1; }
@@ -2950,5 +2950,6 @@ window.captains = {
         atk: function(p) {
 			return Math.min(3.5, 2.0 + 0.1875 * p.turnCounter);
 		}
+		hp: function(p) { return 1.25; }
 	},
 };
