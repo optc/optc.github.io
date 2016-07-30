@@ -1189,8 +1189,8 @@ window.units = [
     [ "Atmos Evolution", "STR", [ "Slasher", "Powerhouse" ], 5, 30, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Speed Jiru", "QCK", [ "Striker", "Driven" ], 4, 18, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Speed Jiru Evolution", "QCK", [ "Striker", "Driven" ], 5, 30, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "6* Aokiji", "QCK", [ "Striker", "Shooter" ], 5, 30, null, 3, 70, 1066998, 362, 271, 103, 1599, 800, 240, null ],
-    [ "6* Aokiji Evolution", "QCK", [ "Striker", "Shooter" ], 6, 55, null, 4, 99, 5000000, 1524, 740, 196, 3300, 1466, 392, null ],
+    [ "6* Aokiji", "QCK", [ "Striker", "Shooter" ], 5, 30, 4, 3, 70, 1066998, 362, 271, 103, 1599, 800, 240, null ],
+    [ "6* Aokiji Evolution", "QCK", [ "Striker", "Shooter" ], 6, 55, 4, 4, 99, 5000000, 1524, 740, 196, 3300, 1466, 392, null ],
 	];
 	
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ]
