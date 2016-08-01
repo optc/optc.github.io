@@ -953,6 +953,7 @@ window.drops = {
         {
             name: "Evil Manager Breed's Marine Circus!",
             thumb: 797,
+            global: true,
             condition: 'You can only bring Fighter and Powerhouse units',
             challenge: 'High Score calculated with Crew Cost, Turns Taken and Tap Accuracy',
             challengeData: [['100,000','1x Purple Elder'],['400,000','1x RCV Candy, 1x Rainbow Gem'],['750,000','1x Auto-Heal Skullbook, 2x Rainbow Gem']],

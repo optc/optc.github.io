@@ -265,7 +265,7 @@ window.effects = {
     
     'Pirate Ship Competition! \"Dead End\" Opens!': {
         description: 'STR/DEX/QCK ATK 1.6x and HP 0.1x. INT/PSY ATK 0.2x and HP 2x',
-        thumb: null,
+        thumb: 1072,
         id: 31,
         atk: function(p) { return (p.type == "STR" || p.type == "DEX" || p.type == "QCK") ? 1.6 : 0.2; },
         hp: function(p) { return (p.type == "STR" || p.type == "DEX" || p.type == "QCK") ? 0.1 : 2.0; }
@@ -304,7 +304,7 @@ window.effects = {
     
     '700k Damage Treshold Barrier': {
         description: 'Used by Saga. You cannot do more that 700k damage in one hit',
-        thumb: null,
+        thumb: 1089,
         id: 36,
         barrierThreshold: 700000,
         barrierReduction: 0.99
@@ -350,7 +350,7 @@ window.effects = {
     
     'Robin and Nami\'s Secret Undercover Investigation': {
         description: 'Boosts ATK of Cerebral and Free Spirit characters by 2x, other classes get .5x ATK. Boosts HP of Striker and Shooter characters by 2x, other classes get .5x HP.',
-        thumb: null,
+        thumb: 1112,
         id: 39,
         atk: function(p) { 
                             var boost1 = 1.0, boost2 = 1.0, boost3 = 1.0, boost4 = 1.0, boost5 = 1.0;
