@@ -1458,5 +1458,37 @@ window.specials = {
     1154: {
         atk: function(p) { return p.unit.class.has("Powerhouse") ? 1.5 : 1},
         type: "class"
-    }
+    },
+    1164: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, 1, 1.5); },
+		rcv: function(p) { return 1.5; }
+	},
+    1165: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, 1, 1.5); },
+		rcv: function(p) { return 1.5; }
+	},
+    1168: {
+		atk: function(p) { return p.unit.type == "STR" ? window.specials[1168].multiplier : 1; },
+		type: "class",
+		onActivation: function(p) {
+			var n = (p.percHP <= 30 ? 1.75 : 1.1);
+			window.specials[1168].multiplier = n;
+			p.scope.notify({
+				text: 'HP ' + (n == 1.75 ? 'below' : 'above') + ' 30%, using the ' + n + 'x multiplier.',
+				name: '1168warning'
+			});
+		}
+	},
+    1169: {
+		atk: function(p) { return p.unit.type == "STR" ? window.specials[1169].multiplier : 1; },
+		type: "class",
+		onActivation: function(p) {
+			var n = (p.percHP <= 30 ? 1.75 : 1.1);
+			window.specials[1169].multiplier = n;
+			p.scope.notify({
+				text: 'HP ' + (n == 1.75 ? 'below' : 'above') + ' 30%, using the ' + n + 'x multiplier.',
+				name: '1169warning'
+			});
+		}
+	},
 };

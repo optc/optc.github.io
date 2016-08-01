@@ -5794,11 +5794,15 @@ window.details = {
 	},
     1160: {
         captain: "Boosts ATK and RCV of Free Spirit characters by 1.5x",
-        special: "Completely removes lock from captain, reduces lock of other units by 3 and recovers 2k HP"
+        special: "Reduces Bind, Despair, and Silence duration by 3 turns, and recovers 2,000 HP",
+		specialNotes: "Silence will refer to effects that prevent you from activating Special Abilities",
+        specialName: "Summer Koala Special"
     },
     1161: {
         captain: "Boosts ATK of Free Spirit characters by 2x and their RCV by 1.5x",
-        special: "Completely removes lock from captain, reduces lock of other units by 3 and recovers 2k HP"
+        special: "Reduces Bind, Despair, and Silence duration by 3 turns, and recovers 2,000 HP",
+		specialNotes: "Silence will refer to effects that prevent you from activating Special Abilities",
+        specialName: "Summer Koala Special"
     },
     1162: {//Tesoro
         captain: "Boosts ATK of [PSY] units by 1.75x and boosts amount of Beli received by 1.5x",
@@ -5905,30 +5909,30 @@ window.details = {
 		specialName: "Not Rubber Gum-Gum Jet Gatling",
 		specialNotes: "#{random : 30,000 : 150,000}",
     },
-    1181: {
+    1181: { //Blenheim
         captain: "Boosts ATK of [DEX] characters by 2.5x",
         special: "Deals 15x character's ATK in [DEX] damage to all enemies. Makes [RCV] and [TND] orbs \"beneficial\" to Slasher characters for 3 turns",
-        specialName: "Blenheim Special",
+        specialName: "Anger of the Ki Sword",
         sailor: "Makes [STR] orbs \"beneficial\" for this unit"
     },
-    1182: {
+    1182: { //Blenheim
         captain: "Boosts ATK of [DEX] characters by 2.5x",
         special: "Deals 15x character's ATK in [DEX] damage to all enemies. Makes [RCV] and [TND] orbs \"beneficial\" to Slasher characters for 3 turns",
-        specialName: "Blenheim Special",
+        specialName: "Anger of the Ki Sword",
         sailor: "Makes [STR] orbs \"beneficial\" for this unit"
     },
     1183: {
         captain: "Boosts ATK of [PSY] characters by 2.5x",
         special: "Empties all slots with [PSY] orbs, deals several times the character's ATK in [PSY] damage to one enemy",
-		specialNotes: "The exact multiplier used is chosen based on the number of [PSY] orbs consumed: 1 orb will give a 10x multiplier, 2 orbs 15x, 3 orbs 20x, 4 orbs 50x, 5 orbs 100x, 6 orbs 200x. It's not possible to activate the special without consuming at least one [PSY] orb.",
-        specialName: "Kingdew Special",
+		specialNotes: "The exact multiplier used is chosen based on the number of [PSY] orbs consumed: 1 orb will give a 13x multiplier, 2 orbs 19x, 3 orbs 26x, 4 orbs 65x, 5 orbs 130x, 6 orbs 230x. It's not possible to activate the special without consuming at least one [PSY] orb.",
+        specialName: "Brass Knuckle Destruction",
         sailor: "If HP is above 99% at the start of the turn, boosts ATK of [PSY] Characters by 75"
     },
     1184: {
         captain: "Boosts ATK of [PSY] characters by 2.5x",
         special: "Empties all slots with [PSY] orbs, deals several times the character's ATK in [PSY] damage to one enemy",
-		specialNotes: "The exact multiplier used is chosen based on the number of [PSY] orbs consumed: 1 orb will give a 10x multiplier, 2 orbs 15x, 3 orbs 20x, 4 orbs 50x, 5 orbs 100x, 6 orbs 200x. It's not possible to activate the special without consuming at least one [PSY] orb.",
-        specialName: "Kingdew Special",
+		specialNotes: "The exact multiplier used is chosen based on the number of [PSY] orbs consumed: 1 orb will give a 13x multiplier, 2 orbs 19x, 3 orbs 26x, 4 orbs 65x, 5 orbs 130x, 6 orbs 230x. It's not possible to activate the special without consuming at least one [PSY] orb.",
+        specialName: "Brass Knuckle Destruction",
         sailor: "If HP is above 99% at the start of the turn, boosts ATK of [PSY] Characters by 75"
     },
     1185: {
@@ -5937,14 +5941,14 @@ window.details = {
         special: [
 			{
 				"description": "Deals [INT] damage to all enemies. Changes own orb into [INT]. Reduces Special Cooldown of Slasher and Cerebral units by 1 turn",
-				"cooldown": null,
+				"cooldown": 8,
 			},
 			{
 				"description": "Deals [INT] damage to all enemies. Changes own orb into [INT]. Reduces Special Cooldown of Slasher and Cerebral units by 2 turns",
-				"cooldown": null,
+				"cooldown": 17,
 			}
 		],
-        specialName: "Haruta Special",
+        specialName: "Extreme Speed - One Sword Style, Ten Slashes",
         sailor: "Restores his own special by 1 turn when it is rewinded",
         sailorNotes: "Some enemies can increase your cooldown by 1/2 Turns, this Sailor Ability decreases that by 1 Turn"
     },
@@ -5954,14 +5958,14 @@ window.details = {
         special: [
 			{
 				"description": "Deals [INT] damage to all enemies. Changes own orb into [INT]. Reduces Special Cooldown of Slasher and Cerebral units by 1 turn",
-				"cooldown": null,
+				"cooldown": 8,
 			},
 			{
 				"description": "Deals [INT] damage to all enemies. Changes own orb into [INT]. Reduces Special Cooldown of Slasher and Cerebral units by 2 turns",
-				"cooldown": null,
+				"cooldown": 17,
 			}
 		],
-        specialName: "Haruta Special",
+        specialName: "Extreme Speed - One Sword Style, Ten Slashes",
         sailor: "Restores his own special by 1 turn when it is rewinded",
         sailorNotes: "Some enemies can increase your cooldown by 1/2 Turns, this Sailor Ability decreases that by 1 Turn"
     },
@@ -5969,14 +5973,14 @@ window.details = {
         captain: "Boosts ATK of [STR] characters by 2.5x",
         special: "Deals 7 hits of random damage to random enemies. Reduces Bind and Despair duration by 3 turns",
 		specialNotes: "#{randomHits : 7}<br>#{random : ??? : ??? : for each hit}",
-        specialName: "Atmos Special",
+        specialName: "Advancing Continuous Sword Attack",
         sailor: "Boosts ATK, HP, and RCV of all characters by 20"
     },
     1188: {
         captain: "Boosts ATK of [STR] characters by 2.5x",
         special: "Deals 7 hits of random damage to random enemies. Reduces Bind and Despair duration by 3 turns",
 		specialNotes: "#{randomHits : 7}<br>#{random : ??? : ??? : for each hit}",
-        specialName: "Atmos Special",
+        specialName: "Advancing Continuous Sword Attack",
         sailor: "Boosts ATK, HP, and RCV of all characters by 20"
     },
     1189: {
@@ -5984,7 +5988,7 @@ window.details = {
 		captainNotes: "\"Beneficial\" orbs grant the same ATK boost as matching orbs.",
         special: "Reduces enemy Barrier timers by 1 turn",
         specialNotes: "Does not affect DEF Boost or % Damage reduction buffs. Reduces timers for Barriers such as Perfect/Great/Good Barriers and Combo Hit Barriers",
-        specialName: "Speed Jiru Special",
+        specialName: "Break Bullet",
         sailor: "Boosts ATK of [QCK] characters by 40"
     },
     1190: {
@@ -5992,7 +5996,7 @@ window.details = {
 		captainNotes: "\"Beneficial\" orbs grant the same ATK boost as matching orbs.",
         special: "Reduces enemy Barrier timers by 1 turn",
         specialNotes: "Does not affect DEF Boost or % Damage reduction buffs. Reduces timers for Barriers such as Perfect/Great/Good Barriers and Combo Hit Barriers",
-        specialName: "Speed Jiru Special",
+        specialName: "Break Bullet",
         sailor: "Boosts ATK of [QCK] characters by 40"
     },
     1191: {
