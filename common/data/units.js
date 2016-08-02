@@ -1191,8 +1191,8 @@ window.units = [
     [ "Speed Jiru, Shield and Lance", "QCK", [ "Striker", "Driven" ], 5, 30, 4, 4, 99, 4000000, 1110, 412, 99, 2905, 1152, 288, 1 ],
     [ "Blue Pheasant, Fleet Admiral", "QCK", [ "Striker", "Shooter" ], 5, 30, 4, 3, 70, 1066998, 362, 271, 103, 1599, 800, 240, 1 ],
     [ "Kuzan", "QCK", [ "Striker", "Shooter" ], 6, 55, 4, 4, 99, 5000000, 1524, 740, 196, 3300, 1466, 392, 1 ],
-    [ "Summertime Hancock", "DEX", [ "Fighter", "Free Spirit" ], 4, 13, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Summertime Hancock Evolved", "DEX", [ "Fighter", "Free Spirit" ], 5, 20, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Boa Hancock, Beachgoing Empress", "DEX", [ "Fighter", "Free Spirit" ], 4, 13, 4, 2, 50, null, 181, 132, 47, 945, 539, 181, null ],
+    [ "Boa Hancock, Maiden Drowned in Love", "DEX", [ "Fighter", "Free Spirit" ], 5, 20, 4, 3, 99, null, 863, 448, 144, 1724, 1132, 326, null ],
 	];
 	
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ]

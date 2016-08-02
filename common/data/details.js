@@ -5941,11 +5941,11 @@ window.details = {
         special: [
 			{
 				"description": "Deals [INT] damage to all enemies. Changes own orb into [INT]. Reduces Special Cooldown of Slasher and Cerebral units by 1 turn",
-				"cooldown": 8,
+				"cooldown": [ 8, 3 ],
 			},
 			{
 				"description": "Deals [INT] damage to all enemies. Changes own orb into [INT]. Reduces Special Cooldown of Slasher and Cerebral units by 2 turns",
-				"cooldown": 17,
+				"cooldown": [ 17, 12 ],
 			}
 		],
         specialName: "Extreme Speed - One Sword Style, Ten Slashes",
@@ -5958,11 +5958,11 @@ window.details = {
         special: [
 			{
 				"description": "Deals [INT] damage to all enemies. Changes own orb into [INT]. Reduces Special Cooldown of Slasher and Cerebral units by 1 turn",
-				"cooldown": 8,
+				"cooldown": [ 8, 3 ],
 			},
 			{
 				"description": "Deals [INT] damage to all enemies. Changes own orb into [INT]. Reduces Special Cooldown of Slasher and Cerebral units by 2 turns",
-				"cooldown": 17,
+				"cooldown": [ 17, 12 ],
 			}
 		],
         specialName: "Extreme Speed - One Sword Style, Ten Slashes",
@@ -6008,5 +6008,15 @@ window.details = {
         captain: "Boosts ATK of all characters by 2x and their HP by 1.25x. If you defeat an enemy, increases ATK boost slighty. Stacks up to 8 times to a maximum of 3.5x If you did not defeat an enemy, lose all ATK boost stacks.",
         special: "Increases duration of any Class/Type boosting buffs and Orb Amplification buffs by 1 turn",
         specialName: "Ice Age",
+    },
+    1193: {
+        captain: "Boosts ATK of Free Spirit characters by 2x",
+        special: "Recovers 13x character's RCV in HP and locks the chain multiplier at 2.5x for 1 turn",
+        specialName: "Sweet Style Petrification",
+    },
+    1194: {
+        captain: "Boosts ATK of Free Spirit characters by 2.5x",
+        special: "Recovers 13x character's RCV in HP and locks the chain multiplier at 2.5x for 1 turn",
+        specialName: "Sweet Style Petrification",
     },
 };

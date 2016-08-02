@@ -1491,4 +1491,12 @@ window.specials = {
 			});
 		}
 	},
+    1193: {
+		chain: function(p) { return 2.5; },
+		chainLimiter: function(p) { return p.chainPosition > 0 ? 2.5 : 1.0; }
+	},
+	1194: {
+		chain: function(p) { return 2.5; },
+		chainLimiter: function(p) { return p.chainPosition > 0 ? 2.5 : 1.0; }
+	},
 };

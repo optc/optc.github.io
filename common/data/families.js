@@ -1169,7 +1169,7 @@ window.families = [
     "Dice",
     "Dice",
     "Tanaka",
-    "Tanaka",,
+    "Tanaka",
     null,
     null,
     null,
@@ -1191,4 +1191,6 @@ window.families = [
     "Speed Jiru",
     "Aokiji",
     "Aokiji",
+    "Boa Hancock",
+    "Boa Hancock",
 ];
