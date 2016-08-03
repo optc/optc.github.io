@@ -1499,4 +1499,12 @@ window.specials = {
 		chain: function(p) { return 2.5; },
 		chainLimiter: function(p) { return p.chainPosition > 0 ? 2.5 : 1.0; }
 	},
+	1195: {
+		atk: function(p) { return p.unit.class.has("Striker") ? 1.75 : 1; },
+		type: "class"
+	},
+	1196: {
+		atk: function(p) { return p.unit.class.has("Striker") ? 1.75 : 1; },
+		type: "class"
+	},
 };

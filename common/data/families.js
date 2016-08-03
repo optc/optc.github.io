@@ -1193,4 +1193,7 @@ window.families = [
     "Aokiji",
     "Boa Hancock",
     "Boa Hancock",
+	"Gan Fall",
+	"Gan Fall",
+	"Ohm",
 ];

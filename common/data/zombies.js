@@ -242,5 +242,13 @@ window.zombies = {
     1141: {//Story Moira
         type: 'healer',
         multiplier: 3
-    }
+    },
+	1195: {//Colo Ganfor
+		type: 'healer',
+        multiplier: 2
+	},
+	1196: {//Colo Ganfor
+		type: 'healer',
+        multiplier: 5
+	},
 };

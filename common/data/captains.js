@@ -3035,4 +3035,13 @@ window.captains = {
     1194: {
 		atk: function(p) { return p.unit.class.has("Free Spirit") ? 2.5 : 1; }
 	},
+	1195: {
+		atk: function(p) { return p.unit.class.has("Striker") ? 1.75 : 1; }
+	},
+    1196: {
+		atk: function(p) { return p.unit.class.has("Striker") ? 2 : 1; }
+	},
+	1197: {
+		atk: function(p) { return p.unit.class.has("Powerhouse") || p.unit.class.has("Cerebral") ? (p.orb == 2.0 ? 2.5 : 1) : 1; }
+	},
 };

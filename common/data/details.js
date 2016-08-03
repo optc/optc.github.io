@@ -5940,11 +5940,11 @@ window.details = {
         captainNotes: "Does not work if she was not your captain upon starting the island. Stacks with other addional drop captains, giving you two chances of getting an extra drop.",
         special: [
 			{
-				"description": "Deals [INT] damage to all enemies. Changes own orb into [INT]. Reduces Special Cooldown of Slasher and Cerebral units by 1 turn",
+				"description": "Deals 4x character's ATK in [INT] damage to all enemies. Changes own orb into [INT].",
 				"cooldown": [ 8, 3 ],
 			},
 			{
-				"description": "Deals [INT] damage to all enemies. Changes own orb into [INT]. Reduces Special Cooldown of Slasher and Cerebral units by 2 turns",
+				"description": "Deals 15x character's ATK in [INT] damage to all enemies. Changes own orb into [INT]. Reduces Special Cooldown of Slasher and Cerebral units by 1 turn",
 				"cooldown": [ 17, 12 ],
 			}
 		],
@@ -5957,11 +5957,11 @@ window.details = {
         captainNotes: "Does not work if she was not your captain upon starting the island. Stacks with other addional drop captains, giving you two chances of getting an extra drop.",
         special: [
 			{
-				"description": "Deals [INT] damage to all enemies. Changes own orb into [INT]. Reduces Special Cooldown of Slasher and Cerebral units by 1 turn",
+				"description": "Deals 4x character's ATK in [INT] damage to all enemies. Changes own orb into [INT].",
 				"cooldown": [ 8, 3 ],
 			},
 			{
-				"description": "Deals [INT] damage to all enemies. Changes own orb into [INT]. Reduces Special Cooldown of Slasher and Cerebral units by 2 turns",
+				"description": "Deals 15x character's ATK in [INT] damage to all enemies. Changes own orb into [INT]. Reduces Special Cooldown of Slasher and Cerebral units by 1 turn",
 				"cooldown": [ 17, 12 ],
 			}
 		],
@@ -5972,14 +5972,14 @@ window.details = {
     1187: {
         captain: "Boosts ATK of [STR] characters by 2.5x",
         special: "Deals 7 hits of random damage to random enemies. Reduces Bind and Despair duration by 3 turns",
-		specialNotes: "#{randomHits : 7}<br>#{random : ??? : ??? : for each hit}",
+		specialNotes: "#{randomHits : 7}<br>#{random : 5000 : 20000 : for each hit}",
         specialName: "Advancing Continuous Sword Attack",
         sailor: "Boosts ATK, HP, and RCV of all characters by 20"
     },
     1188: {
         captain: "Boosts ATK of [STR] characters by 2.5x",
         special: "Deals 7 hits of random damage to random enemies. Reduces Bind and Despair duration by 3 turns",
-		specialNotes: "#{randomHits : 7}<br>#{random : ??? : ??? : for each hit}",
+		specialNotes: "#{randomHits : 7}<br>#{random : 5000 : 20000 : for each hit}",
         specialName: "Advancing Continuous Sword Attack",
         sailor: "Boosts ATK, HP, and RCV of all characters by 20"
     },
@@ -6019,4 +6019,19 @@ window.details = {
         special: "Recovers 13x character's RCV in HP and locks the chain multiplier at 2.5x for 1 turn",
         specialName: "Sweet Style Petrification",
     },
+	1195: {
+		captain: "Boosts ATK of Striker characters by 1.75x. Recovers 2x character's RCV in HP at the end of each turn",
+		special: "Reduces crew's current HP by 60%, deals 8x the amount of HP subtracted in typeless damage to all enemies. Boosts ATK of Striker characters by 1.75x for 1 turn",
+		specialName: "Split Air Hole",
+	},
+	1196: {
+		captain: "Boosts ATK of Striker characters by 2x. Recovers 5x character's RCV in HP at the end of each turn",
+		special: "Reduces crew's current HP by 60%, deals 8x the amount of HP subtracted in typeless damage to all enemies. Boosts ATK of Striker characters by 1.75x for 1 turn",
+		specialName: "Split Air Hole",
+	},
+	1197: {
+		captain: "Boosts ATK of Cerebral and Powerhouse characters by 2.5x if they have a matching orb, by 1x otherwise, reduces crew's RCV to 0",
+        special: "For Cerebral and Powerhouse characters, changes all orbs including [BLOCK] orbs to Badly Matching. Deals [INT] damage to all enemies",
+        specialName: "Investigator of Sorrow",
+	}
 };
