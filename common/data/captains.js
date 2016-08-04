@@ -3017,6 +3017,24 @@ window.captains = {
     1184: {
 		atk: function(p) { return p.unit.type == "QCK" ? 2.25 : 1; }
 	},
+    1185: {
+        atk: function(p) { return p.unit.class.has("Slasher")  || p.unit.class.has("Cerebral") ? 1.75 : 1; }
+    },
+    1186: {
+        atk: function(p) { return p.unit.class.has("Slasher")  || p.unit.class.has("Cerebral") ? 1.75 : 1; }
+    },
+    1187: {
+        atk: function(p) { return p.unit.type == "STR" ? 2.5 : 1; }
+    },
+    1188: {
+        atk: function(p) { return p.unit.type == "STR" ? 2.5 : 1; }
+    },
+    1189: {
+        atk: function(p) { return p.unit.type == "QCK" ? 2.25 : 1; }
+    },
+    1190: {
+        atk: function(p) { return p.unit.type == "QCK" ? 2.25 : 1; }
+    },
 	1191: {
         atk: function(p) {
 			return Math.min(3.5, 2.0 + 0.1875 * p.turnCounter);
