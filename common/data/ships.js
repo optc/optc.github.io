@@ -240,9 +240,9 @@ window.ships = [
     {
         name: "Doflamingo Ship",
         thumb: null,
-        description: 'Boosts ATK of Ambition Characters by 1.5x and their HP by 1.35x. Special: Makes Perfects easier to Hit, Adds 0.2 to Chain  (cooldown: 15 Turns)',
-        atk: function(p) { return !p.unit.class.has('Ambition') ? 1 : [ 1.2, 1.2, 1.3, 1.3, 1.3, 1.3, 1.4, 1.4, 1.4, 1.5][p.boatLevel - 1]},
-        hp: function(p) { return !p.unit.class.has('Ambition') ? 1 : [ 1.1, 1.1, 1.1, 1.15, 1.2, 1.2, 1.2, 1.2, 1.2, 1.35][p.boatLevel - 1]}
+        description: 'Boosts ATK of Driven Characters by 1.5x and their HP by 1.35x. Special: Makes Perfects easier to Hit, Adds 0.2 to Chain  (cooldown: 15 Turns)',
+        atk: function(p) { return !p.unit.class.has('Driven') ? 1 : [ 1.2, 1.2, 1.3, 1.3, 1.3, 1.3, 1.4, 1.4, 1.4, 1.5][p.boatLevel - 1]},
+        hp: function(p) { return !p.unit.class.has('Driven') ? 1 : [ 1.1, 1.1, 1.1, 1.15, 1.2, 1.2, 1.2, 1.2, 1.2, 1.35][p.boatLevel - 1]}
     }
 
 ];
