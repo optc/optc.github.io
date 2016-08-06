@@ -1446,6 +1446,9 @@ window.specials = {
 			});
 		}
     },
+    1137: {
+    	orb: function(p) { return p.unit.class.has("Free Spirit") ? CrunchUtils.getOrbMultiplier(p.orb, 1, 1.5) : CrunchUtils.getOrbMultiplier(p.orb, 1, 1); }	
+    },
     1138: {
         atk: function(p) { return p.unit.class.has("Powerhouse" || "Fighter") ? 1.3 : 1},
         type: "class"
