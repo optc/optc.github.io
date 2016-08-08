@@ -3062,4 +3062,12 @@ window.captains = {
 	1197: {
 		atk: function(p) { return p.unit.class.has("Powerhouse") || p.unit.class.has("Cerebral") ? (p.orb == 2.0 ? 2.5 : 1) : 1; }
 	},
+    1198: {
+		atk: function(p) { return p.unit.class.has("Free Spirit") ? 1.5 : 1; },
+		rcv: function(p) { return p.unit.class.has("Free Spirit") ? 1.5 : 1; }
+	},
+    1199: {
+		atk: function(p) { return p.unit.class.has("Free Spirit") ? 1.5 : 1; },
+		rcv: function(p) { return p.unit.class.has("Free Spirit") ? 1.5 : 1; }
+	},
 };

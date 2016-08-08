@@ -1196,8 +1196,8 @@ window.units = [
 	[ "Ganfor, Former God of Skypiea", "PSY", "Striker", 4, 18, 6, 2, 50, null, 222, 122, 22, 1122, 622, 122, null ],
 	[ "Ganfor, God of Skypiea", "PSY", "Striker", 5, 30, 4, 3, 99, null, 1111, 611, 111, 2122, 1222, 222, null ],
 	[ "Ohm, Sky Breeder", "INT", [ "Cerebral", "Powerhouse" ], 4, 20, 6, 3, 70, null, 197, 169, -200, 1710, 1170, -150, null ],
-    [ "Summertime Jewelry Bonney", "STR", [ "Fighter", "Free Spirit" ], 4, 12, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Summertime Jewelry Bonney Evolved", "STR", [ "Fighter", "Free Spirit" ], 5, 20, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Jewelry Bonney, Daughter of Summer", "STR", [ "Fighter", "Free Spirit" ], 4, 12, 6, 1, 50, null, 388, 212, 86, null, null, null, null ],
+    [ "Jewelry Bonney, Daughter of Summer Evolved", "STR", [ "Fighter", "Free Spirit" ], 5, 20, 4, 2, 99, null, 929, 500, 149, 2000, 989, 301, null ],
     [ "Summertime Violet", "QCK", [ "Fighter", "Cerebral" ], 4, 12, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Summertime Violet Evolved", "QCK", [ "Fighter", "Cerebral" ], 5, 20, null, null, null, null, null, null, null, null, null, null, null ],
 	];

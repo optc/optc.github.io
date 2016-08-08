@@ -6033,5 +6033,17 @@ window.details = {
 		captain: "Boosts ATK of Cerebral and Powerhouse characters by 2.5x if they have a matching orb, by 1x otherwise, reduces crew's RCV to 0",
         special: "For Cerebral and Powerhouse characters, changes all orbs including [BLOCK] orbs to Badly Matching. Deals [INT] damage to all enemies",
         specialName: "Investigator of Sorrow",
-	}
+	},
+    1198: {
+        captain: "Boosts ATK and RCV of Free Spirit characters by 1.5x",
+        special: "Empties all slots with [RCV] orbs, recover a percentage of MAX HP based on the number of [RCV] orbs emptied",
+		specialNotes: "The exact percentage healed is chosen based on the number of [RCV] orbs consumed: 1 orb will give a ??? multiplier, 2 orbs ???, 3 orbs ???, 4 orbs ???, 5 orbs ???, 6 orbs 20%. It's not possible to activate the special without consuming at least one [RCV] orb.",
+        specialName: "Appetite Or Sex Appeal - Has it Switched Yet!?",
+    },
+    1199: {
+        captain: "Boosts ATK and RCV of Free Spirit characters by 1.5x",
+        special: "Empties all slots with [RCV] orbs, recover a percentage of MAX HP based on the number of [RCV] orbs emptied",
+		specialNotes: "The exact percentage healed is chosen based on the number of [RCV] orbs consumed: 1 orb will give a ??? multiplier, 2 orbs ???, 3 orbs ???, 4 orbs ???, 5 orbs ???, 6 orbs 20%. It's not possible to activate the special without consuming at least one [RCV] orb.",
+        specialName: "Appetite Or Sex Appeal - Has it Switched Yet!?",
+    },
 };
