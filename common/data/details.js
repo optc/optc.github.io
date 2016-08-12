@@ -5228,11 +5228,11 @@ window.details = {
 		captain: "Boosts ATK of Striker and Free Spirit characters by 1.75x",
 		special: [
 			{
-				"description": "Delays all enemies for 1 turn. Locks all orbs for 1 turn. Cuts the current HP of one enemy by 10%",
-				"cooldown": [ 16, 12]
+				"description": "Delays all enemies for 1 turn. Locks all orbs for 1 turn. Cuts the current HP of all enemies by 10%",
+				"cooldown": [ 16, 12 ]
 			},
 			{
-				"description": "Delays all enemies for 1 turn. Locks all orbs for 1 turn. Cuts the current HP of one enemy by 20%",
+				"description": "Delays all enemies for 1 turn. Locks all orbs for 1 turn. Cuts the current HP of all enemies by 20%",
 				"cooldown": [ 20, 16 ]
 			}
 		],
@@ -5243,11 +5243,11 @@ window.details = {
 		captain: "Boosts ATK of Striker and Free Spirit characters by 2.25x and their RCV by 1.5x",
 		special: [
 			{
-				"description": "Delays all enemies for 1 turn. Locks all orbs for 1 turn. Cuts the current HP of one enemy by 10%",
-				"cooldown": [ 16, 12]
+				"description": "Delays all enemies for 1 turn. Locks all orbs for 1 turn. Cuts the current HP of all enemies by 10%",
+				"cooldown": [ 16, 12 ]
 			},
 			{
-				"description": "Delays all enemies for 1 turn. Locks all orbs for 1 turn. Cuts the current HP of one enemy by 20%",
+				"description": "Delays all enemies for 1 turn. Locks all orbs for 1 turn. Cuts the current HP of all enemies by 20%",
 				"cooldown": [ 20, 16 ]
 			}
 		],
@@ -6036,14 +6036,12 @@ window.details = {
 	},
     1198: {
         captain: "Boosts ATK and RCV of Free Spirit characters by 1.5x",
-        special: "Empties all slots with [RCV] orbs, recover a percentage of MAX HP based on the number of [RCV] orbs emptied",
-		specialNotes: "The exact percentage healed is chosen based on the number of [RCV] orbs consumed: 1 orb will give a ??? multiplier, 2 orbs ???, 3 orbs ???, 4 orbs ???, 5 orbs ???, 6 orbs 20%. It's not possible to activate the special without consuming at least one [RCV] orb.",
+        special: "Empties all slots with [RCV] orbs, recover 20% of MAX HP",
         specialName: "Appetite Or Sex Appeal - Has it Switched Yet!?",
     },
     1199: {
         captain: "Boosts ATK and RCV of Free Spirit characters by 1.5x",
-        special: "Empties all slots with [RCV] orbs, recover a percentage of MAX HP based on the number of [RCV] orbs emptied",
-		specialNotes: "The exact percentage healed is chosen based on the number of [RCV] orbs consumed: 1 orb will give a ??? multiplier, 2 orbs ???, 3 orbs ???, 4 orbs ???, 5 orbs ???, 6 orbs 20%. It's not possible to activate the special without consuming at least one [RCV] orb.",
+        special: "Empties all slots with [RCV] orbs, recover 20% of MAX HP",
         specialName: "Appetite Or Sex Appeal - Has it Switched Yet!?",
     },
     1202: {

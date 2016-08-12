@@ -1161,7 +1161,7 @@ window.units = [
     [ "Koala, Beach Angel", "QCK", [ "Fighter", "Free Spirit" ], 4, 13, 6, 2, 50, 392109, 133, 79, 37, 994, 479, 187, 1 ],
     [ "Koala, Goddess of Paradise", "QCK", [ "Fighter", "Free Spirit" ], 5, 20, 4, 3, 99, 3000000, 902, 412, 123, 1822, 984, 359, 1 ],
     [ "Gild Tesoro", "PSY", [ "Cerebral", "Driven" ], 4, 30, 5, 5, 99, 3000000, 187, 156, 56, 1756, 1094, 268, 1 ],
-    [ "Gild Tesoro Evolved", "PSY", [ "Cerebral", "Driven" ], 5, 50, 4, 5, 99, 5000000, 1756, 1094, 268, null, null, null, null ],
+    [ "Gild Tesoro, Casino King of Gran Tesoro", "PSY", [ "Cerebral", "Driven" ], 5, 50, 4, 5, 99, 5000000, 1756, 1094, 268, 2256, 1300, 306, 1 ],
     [ "Carina", "DEX", [ "Cerebral", "Slasher" ], 3, 10, 5, 1, 35, 136167, 98, 54, 58, 652, 394, 185, 1 ],
     [ "Carina, Diva of Gran Tesoro", "DEX", [ "Cerebral", "Slasher" ], 4, 20, 5, 3, 70, 1066998, 597, 321, 132, 1074, 719, 306, 1 ],
     [ "Baccarat", "INT", [ "Fighter", "Striker" ], 3, 12, 5, 2, 50, 392109, 44, 31, 123, 888, 444, 222, 1 ],
@@ -1178,7 +1178,7 @@ window.units = [
     [ "Chopper, Loyal Straw Hat Crew", "DEX", [ "Shooter", "Cerebral" ], 5, 27, 4, 4, 99, 4000000, 1110, 571, 179, 2212, 1099, 368, 1 ],
     [ "Oars", "STR", [ "Fighter", "Powerhouse" ], 4, 30, 4, 1, 70, 1066998, 902, 473, 74, 2018, 1028, -444, 1 ],
     [ "Oars, the Devil", "STR", [ "Fighter", "Powerhouse" ], 5, 50, 4, 2, 99, 4000000, 1920, 977, -444, 4400, 1402, -444, 1 ],
-    [ "Rainbow Armored Crab", "INT", "Evolver", null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Rainbow Armored Crab", "INT", "Evolver", 3, 4, 5, 0, 1, 0, 30, 500, 0, 30, 500, 0, 1 ],
     [ "Blenheim", "DEX", [ "Slasher", "Powerhouse" ], 4, 18, 6, 3, 70, 1066998, 206, 106, 19, 1051, 624, 95, 1 ],
     [ "Blenheim, The Cutlass", "DEX", [ "Slasher", "Powerhouse" ], 5, 30, 6, 4, 99, 4000000, 949, 512, 44, 2643, 1355, 224, 1 ],
     [ "Kingdew", "PSY", [ "Fighter", "Powerhouse" ], 4, 18, 5, 3, 70, 1066998, 232, 94, 38, 1123, 522, 161, 1 ],
@@ -1196,15 +1196,15 @@ window.units = [
     [ "Ganfor, Former God of Skypiea", "PSY", "Striker", 4, 18, 6, 2, 50, 392109, 222, 122, 22, 1122, 622, 122, 1 ],
     [ "Ganfor, God of Skypiea", "PSY", "Striker", 5, 30, 4, 3, 99, 3000000, 1111, 611, 111, 2122, 1222, 222, 1 ],
     [ "Ohm, Sky Breeder", "INT", [ "Cerebral", "Powerhouse" ], 4, 20, 6, 3, 70, 1778330, 197, 169, -200, 1710, 1170, -150, 1 ],
-    [ "Jewelry Bonney, Daughter of Summer", "STR", [ "Fighter", "Free Spirit" ], 4, 12, 6, 1, 50, 392109, 388, 212, 86, 1006, 559, 194, 1 ],
-    [ "Jewelry Bonney, Daughter of Summer Evolved", "STR", [ "Fighter", "Free Spirit" ], 5, 20, 4, 2, 99, 3000000, 929, 500, 149, 2000, 989, 301, 1 ],
+    [ "Jewelry Bonney, Splashing Sapphire", "STR", [ "Fighter", "Free Spirit" ], 4, 12, 6, 1, 50, 392109, 388, 212, 86, 1006, 559, 194, 1 ],
+    [ "Jewelry Bonney, Pearl White Gleam", "STR", [ "Fighter", "Free Spirit" ], 5, 20, 4, 2, 99, 3000000, 929, 500, 149, 2000, 989, 301, 1 ],
     [ "Summertime Violet", "QCK", [ "Fighter", "Cerebral" ], 4, 12, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Summertime Violet Evolved", "QCK", [ "Fighter", "Cerebral" ], 5, 20, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Yoki", "PSY", [ "Slasher", "Free Spirit" ], 3, 12, 6, 1, 50, 392109, 102, 91, 36, 902, 584, 201, 1 ],
     [ "Calico Yoki", "PSY", [ "Slasher", "Free Spirit" ], 4, 20, 4, 3, 99, 3000000, 840, 516, 170, 1583, 1153, 315, 1 ],
-    [ "Rumba Pirates Brook", "QCK", [ "Slasher", "Free Spirit" ], 3, 12, 5, 1, 50, 392109, 139, 80, 31, 1006, 528, 184, 1 ],
-    [ "Rumba Pirates Captain Musician and Swordman Brook", "QCK", [ "Slasher", "Free Spirit" ], 4, 20, 4, 2, 99, 3000000, 942, 466, 139, 1894, 984, 299, 1 ],
-    [ "Rumba Pirates Laboon", "STR", "Fighter", 3, 9, 6, 1, 50, 392109, 155, 55, 23, 1302, 570, 151, 1 ]
+    [ "Rumbar Pirates Brook", "QCK", [ "Slasher", "Free Spirit" ], 3, 12, 5, 1, 50, 392109, 139, 80, 31, 1006, 528, 184, 1 ],
+    [ "Rumbar Pirates Captain Musician and Swordman Brook", "QCK", [ "Slasher", "Free Spirit" ], 4, 20, 4, 2, 99, 3000000, 942, 466, 139, 1894, 984, 299, 1 ],
+    [ "Rumbar Pirates Laboon", "STR", "Fighter", 3, 9, 6, 1, 50, 392109, 155, 55, 23, 1302, 570, 151, 1 ]
 	];
 	
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ]

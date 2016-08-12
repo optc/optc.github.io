@@ -1745,11 +1745,11 @@ window.evolutions = {
     },
     1160: {
         evolution: 1161,
-        evolvers: []
+        evolvers: [ 117, 79, 85, 96, 101 ]
     },
     1162: {
         evolution: 1163,
-        evolvers: []
+        evolvers: [ 118, 1180 ]
     },
     1164: {
         evolution: 1165,
