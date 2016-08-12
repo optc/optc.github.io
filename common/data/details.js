@@ -6046,4 +6046,28 @@ window.details = {
 		specialNotes: "The exact percentage healed is chosen based on the number of [RCV] orbs consumed: 1 orb will give a ??? multiplier, 2 orbs ???, 3 orbs ???, 4 orbs ???, 5 orbs ???, 6 orbs 20%. It's not possible to activate the special without consuming at least one [RCV] orb.",
         specialName: "Appetite Or Sex Appeal - Has it Switched Yet!?",
     },
+    1202: {
+        captain: "Boosts ATK of Free Spirit characters by 1.5x",
+        specialName: "Session of Pirates",
+        special: "Changes [PSY] orbs on Free Spirit characters into matching orbs"
+    },
+    1203: {
+        captain: "Boosts ATK of Free Spirit characters by 2.25x",
+        specialName: "Session of Pirates",
+        special: "Changes [PSY] orbs on Free Spirit characters into matching orbs"
+    },
+    1204: {
+        captain: "Boosts ATK and RCV of Free Spirit characters by 1.2x",
+        specialName: "Awakening Tune Power",
+        special: "Deals 500 damage to each Enemy, changes [RCV] orbs into [EMPTY] and [EMPTY] into [PSY] orbs"
+    },
+    1205: {
+        captain: "Boosts ATK and RCV of Free Spirit characters by 1.5x",
+        specialName: "Awakening Tune Power",
+        special: "Deals 500 damage to each Enemy, changes [RCV] orbs into [EMPTY] and [EMPTY] into [PSY] orbs"
+    },
+    1206: {
+        captain: "Boosts HP by 1.3x",
+        specialName: "Chorus echoing in the sea"
+    }
 };

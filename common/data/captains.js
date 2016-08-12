@@ -3070,4 +3070,21 @@ window.captains = {
 		atk: function(p) { return p.unit.class.has("Free Spirit") ? 1.5 : 1; },
 		rcv: function(p) { return p.unit.class.has("Free Spirit") ? 1.5 : 1; }
 	},
+    1202: {
+        atk: function(p) { return p.unit.class.has("Free Spirit") ? 1.5 : 1; }
+    },
+    1203: {
+        atk: function(p) { return p.unit.class.has("Free Spirit") ? 2.25 : 1; }
+    },
+    1204: {
+        atk: function(p) { return p.unit.class.has("Free Spirit") ? 1.2 : 1; },
+        rcv: function(p) { return p.unit.class.has("Free Spirit") ? 1.2 : 1; }
+    },
+    1205: {
+        atk: function(p) { return p.unit.class.has("Free Spirit") ? 1.5 : 1; },
+        rcv: function(p) { return p.unit.class.has("Free Spirit") ? 1.5 : 1; }
+    },
+    1206: {
+        hp: function(p) { return 1.3; }
+    }
 };

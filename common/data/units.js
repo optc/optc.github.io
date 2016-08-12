@@ -1193,13 +1193,18 @@ window.units = [
     [ "Kuzan", "QCK", [ "Striker", "Shooter" ], 6, 55, 4, 4, 99, 5000000, 1524, 740, 196, 3300, 1466, 392, 1 ],
     [ "Boa Hancock, Beachgoing Empress", "DEX", [ "Fighter", "Free Spirit" ], 4, 13, 4, 2, 50, null, 181, 132, 47, 945, 539, 181, null ],
     [ "Boa Hancock, Maiden Drowned in Love", "DEX", [ "Fighter", "Free Spirit" ], 5, 20, 4, 3, 99, null, 863, 448, 144, 1724, 1132, 326, null ],
-	[ "Ganfor, Former God of Skypiea", "PSY", "Striker", 4, 18, 6, 2, 50, null, 222, 122, 22, 1122, 622, 122, null ],
-	[ "Ganfor, God of Skypiea", "PSY", "Striker", 5, 30, 4, 3, 99, null, 1111, 611, 111, 2122, 1222, 222, null ],
-	[ "Ohm, Sky Breeder", "INT", [ "Cerebral", "Powerhouse" ], 4, 20, 6, 3, 70, null, 197, 169, -200, 1710, 1170, -150, null ],
-    [ "Jewelry Bonney, Daughter of Summer", "STR", [ "Fighter", "Free Spirit" ], 4, 12, 6, 1, 50, null, 388, 212, 86, null, null, null, null ],
-    [ "Jewelry Bonney, Daughter of Summer Evolved", "STR", [ "Fighter", "Free Spirit" ], 5, 20, 4, 2, 99, null, 929, 500, 149, 2000, 989, 301, null ],
+    [ "Ganfor, Former God of Skypiea", "PSY", "Striker", 4, 18, 6, 2, 50, 392109, 222, 122, 22, 1122, 622, 122, 1 ],
+    [ "Ganfor, God of Skypiea", "PSY", "Striker", 5, 30, 4, 3, 99, 3000000, 1111, 611, 111, 2122, 1222, 222, 1 ],
+    [ "Ohm, Sky Breeder", "INT", [ "Cerebral", "Powerhouse" ], 4, 20, 6, 3, 70, 1778330, 197, 169, -200, 1710, 1170, -150, 1 ],
+    [ "Jewelry Bonney, Daughter of Summer", "STR", [ "Fighter", "Free Spirit" ], 4, 12, 6, 1, 50, 392109, 388, 212, 86, 1006, 559, 194, 1 ],
+    [ "Jewelry Bonney, Daughter of Summer Evolved", "STR", [ "Fighter", "Free Spirit" ], 5, 20, 4, 2, 99, 3000000, 929, 500, 149, 2000, 989, 301, 1 ],
     [ "Summertime Violet", "QCK", [ "Fighter", "Cerebral" ], 4, 12, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Summertime Violet Evolved", "QCK", [ "Fighter", "Cerebral" ], 5, 20, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Yoki", "PSY", [ "Slasher", "Free Spirit" ], 3, 12, 6, 1, 50, 392109, 102, 91, 36, 902, 584, 201, 1 ],
+    [ "Calico Yoki", "PSY", [ "Slasher", "Free Spirit" ], 4, 20, 4, 3, 99, 3000000, 840, 516, 170, 1583, 1153, 315, 1 ],
+    [ "Rumba Pirates Brook", "QCK", [ "Slasher", "Free Spirit" ], 3, 12, 5, 1, 50, 392109, 139, 80, 31, 1006, 528, 184, 1 ],
+    [ "Rumba Pirates Captain Musician and Swordman Brook", "QCK", [ "Slasher", "Free Spirit" ], 4, 20, 4, 2, 99, 3000000, 942, 466, 139, 1894, 984, 299, 1 ],
+    [ "Rumba Pirates Laboon", "STR", "Fighter", 3, 9, 6, 1, 50, 392109, 155, 55, 23, 1302, 570, 151, 1 ]
 	];
 	
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ]
