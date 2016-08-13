@@ -1270,7 +1270,7 @@ window.drops = {
             name: 'Clash!! Tesoro',
             thumb: 1162, //Change to evolved Tereso once he arrives
             Master: [ 1162, 1164 ],
-            Expert: [ 1162, 1164 ]
+            Ultimate: [ 1162, 1164, 1180 ]
         },
 
     ],
@@ -1286,6 +1286,8 @@ window.drops = {
         {
             name: 'Battle Royal! Oars',
             thumb: 893,
+            challenge:'Total number of hits above 50,000',
+            challengeData: [['6 Times','1x Forbidden Tome + 1x Red Elder'],['14 Times','1x Forbidden Tome, 1x RCV Cotton Candy, 1x Rainbow Gem'],['32 Times','1x Anti-Bind Forbidden Tome, 2x Rainbow Gems']],
             'Master': [ -367, -316, -314, -312, -308, -259, -257, -255, -253, -251, -221, -218, -217, -210, -75, -30, -16, -15, -8 ]
         },
 
