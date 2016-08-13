@@ -6068,7 +6068,7 @@ window.details = {
     1206: {
         captain: "Boosts HP by 1.3x",
         specialName: "Chorus echoing in the sea",
-        special: "Prevents death for one turn",
-        specialNotes: "HP Requirement noy yet known"
+        special: "Protects from defeat as long as HP is above 50%",
+        specialNotes: "#{zombie}"
     }
 };
