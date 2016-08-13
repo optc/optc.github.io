@@ -1383,7 +1383,7 @@ window.specials = {
     1105: {
         chainAddition: function(p){ return 0.2;}
     },
-    1105: {
+    1106: {
         chainAddition: function(p){ return 0.2;}
     },
     1107: {
