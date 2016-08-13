@@ -2938,6 +2938,9 @@ window.captains = {
     1162: {
 		atk: function(p) { return p.unit.type == "PSY" ? 1.75 : 1; }
 	},
+    1163: {
+        atk: function(p) { return (p.unit.type == "PSY" && (p.unit.class.has("Driven") || p.unit.class.has("Cerebral"))) ? 2.625 : (p.unit.type == "PSY" && !(p.unit.class.has("Driven") || p.unit.class.has("Cerebral"))) ? 1.75 : (!(p.unit.type == "PSY") && (p.unit.class.has("Driven") || p.unit.class.has("Cerebral"))) ? 1.5 : 1; }
+    },
     1164: {
 		rcv: function(p) { return 1.2; }
 	},

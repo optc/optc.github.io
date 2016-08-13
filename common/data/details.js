@@ -5810,7 +5810,8 @@ window.details = {
         specialName: "Gold-Gold Fruit",
     },
     1163: {//Tesoro Evolved
-        captain: "Unit Not Yet Available",
+        captain: "Boosts ATK of PSY units by 1.75x. Also boosts ATK of Driven and Cerebral units by 1.5x. Boosts amount of Beli received by 2x",
+        captainNotes: "The two Boosts stack with each other so a PSY Driven or a PSY Cerebral Unit will be boosted by 2.625",
         special: "Deals large [PSY] damage to all enemies, and if HP is above 50%, changes all orbs to [PSY] orbs",
         specialName: "Gold-Gold Fruit",
     },
@@ -6066,6 +6067,8 @@ window.details = {
     },
     1206: {
         captain: "Boosts HP by 1.3x",
-        specialName: "Chorus echoing in the sea"
+        specialName: "Chorus echoing in the sea",
+        special: "Prevents death for one turn",
+        specialNotes: "HP Requirement noy yet known"
     }
 };

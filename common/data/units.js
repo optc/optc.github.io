@@ -1200,10 +1200,10 @@ window.units = [
     [ "Jewelry Bonney, Pearl White Gleam", "STR", [ "Fighter", "Free Spirit" ], 5, 20, 4, 2, 99, 3000000, 929, 500, 149, 2000, 989, 301, 1 ],
     [ "Summertime Violet", "QCK", [ "Fighter", "Cerebral" ], 4, 12, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Summertime Violet Evolved", "QCK", [ "Fighter", "Cerebral" ], 5, 20, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Yoki", "PSY", [ "Slasher", "Free Spirit" ], 3, 12, 6, 1, 50, 392109, 102, 91, 36, 902, 584, 201, 1 ],
-    [ "Calico Yoki", "PSY", [ "Slasher", "Free Spirit" ], 4, 20, 4, 3, 99, 3000000, 840, 516, 170, 1583, 1153, 315, 1 ],
+    [ "Yorki", "PSY", [ "Slasher", "Free Spirit" ], 3, 12, 6, 1, 50, 392109, 102, 91, 36, 902, 584, 201, 1 ],
+    [ "Calico Yorki", "PSY", [ "Slasher", "Free Spirit" ], 4, 20, 4, 3, 99, 3000000, 840, 516, 170, 1583, 1153, 315, 1 ],
     [ "Rumbar Pirates Brook", "QCK", [ "Slasher", "Free Spirit" ], 3, 12, 5, 1, 50, 392109, 139, 80, 31, 1006, 528, 184, 1 ],
-    [ "Rumbar Pirates Captain Musician and Swordman Brook", "QCK", [ "Slasher", "Free Spirit" ], 4, 20, 4, 2, 99, 3000000, 942, 466, 139, 1894, 984, 299, 1 ],
+    [ "Rumba Pirates Musician and Swordman Brook", "QCK", [ "Slasher", "Free Spirit" ], 4, 20, 4, 2, 99, 3000000, 942, 466, 139, 1894, 984, 299, 1 ],
     [ "Rumbar Pirates Laboon", "STR", "Fighter", 3, 9, 6, 1, 50, 392109, 155, 55, 23, 1302, 570, 151, 1 ]
 	];
 	
