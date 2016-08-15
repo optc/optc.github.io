@@ -434,6 +434,7 @@ directives.hpBar = function() {
                 if (!hp) return;
                 hp = hp.trim();
                 if (/%$/.test(hp)) perc = true;
+                if(!perc) hp = eval(hp); //Enable User Input to be calculated
                 hp = parseFloat(hp, 10);
                 if (!perc) hp = Math.floor(hp);
                 if (isNaN(hp)) return;
