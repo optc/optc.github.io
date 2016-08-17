@@ -6070,5 +6070,55 @@ window.details = {
         specialName: "Chorus echoing in the sea",
         special: "Protects from defeat as long as HP is above 50%",
         specialNotes: "#{zombie}"
-    }
+    },
+    1207: {
+		special: "Boosts chances of getting [INT] orbs for 3 turns",
+		specialName: "Ochenta Fleur - Cuatro Manus Shock",
+		captain: "Boosts ATK and RCV of INT characters by 1.5x",
+        sailor: "Reduces blindness by 3 turn"
+	},
+	1208: {
+		special: "Boosts chances of getting [INT] orbs for 3 turns",
+		specialName: "Ochenta Fleur - Cuatro Manus Shock",
+		captain: "Boosts ATK and RCV of INT characters by 2x",
+        sailor: "Reduces blindness by 3 turn"
+	},
+    1209: {
+		special: "Delays all enemies for 3 turns, cuts the current HP of each enemy by 10%",
+		specialName: "Heavenly Dragon Star",
+		captain: "Boosts ATK of Shooter characters by 2x",
+        sailor: "Boosts RCV of Shooter Characters by 10"
+	},
+	1210: {
+		special: "Delays all enemies for 3 turns, cuts the current HP of each enemy by 10%",
+		specialName: "Heavenly Dragon Star",
+		captain: "Boosts ATK of Shooter characters by 2x and their RCV by 1.5x",
+        sailor: "Boosts RCV of Shooter Characters by 10"
+	},
+	1211: {
+		special: "Changes own orb into [STR], amplifies the effect of orbs by 1.5x for 2 turns",
+		specialNotes: "#{orb : 1.5x}",
+		specialName: "Roar! Zarley Davison",
+		captain: "Boosts ATK of STR characters by 2x, deals 2x character's ATK in STR damage to all enemies at the end of each turn",
+        sailor: "Boosts ATK of Shooter Characters by 20"
+	},
+	1212: {
+		special: "Changes own orb into [STR], amplifies the effect of orbs by 1.5x for 2 turns",
+		specialNotes: "#{orb : 1.5x}",
+		specialName: "Roar! Zarley Davison",
+		captain: "Boosts ATK of STR characters by 2.25x, deals 2x character's ATK in STR damage to all enemies at the end of each turn",
+        sailor: "Boosts ATK of Shooter Characters by 20"
+	},
+    1213: {
+        captain: "Boosts ATK of Slasher by 2x, the HP of Strikers by 1.25x, and the RCV of Shooters by 1.25x",
+        specialName: "Exciting Transfiguration",
+        special: "Recovers some HP. For 4 turns, makes [BOMB] orbs \"beneficial\"",
+        specialNotes: "\"Beneficial\" orbs grant the same ATK boost as matching orbs while retaining their original function."
+    },
+    1214: {
+        captain: "Boosts ATK of Slasher by 5x, the HP of Strikers by 1.2x, and the RCV of Shooters by 1.2x",
+        specialName: "Exciting Transfiguration",
+        special: "Recovers some HP. For 4 turns, makes [BOMB] orbs \"beneficial\"",
+        specialNotes: "\"Beneficial\" orbs grant the same ATK boost as matching orbs while retaining their original function."
+    },
 };

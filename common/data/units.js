@@ -1191,20 +1191,28 @@ window.units = [
     [ "Speed Jiru, Shield and Lance", "QCK", [ "Striker", "Driven" ], 5, 30, 4, 4, 99, 4000000, 1110, 412, 99, 2905, 1152, 288, 1 ],
     [ "Blue Pheasant, Marine Admiral", "QCK", [ "Striker", "Shooter" ], 5, 30, 4, 3, 70, 1066998, 362, 271, 103, 1599, 800, 240, 1 ],
     [ "Kuzan", "QCK", [ "Striker", "Shooter" ], 6, 55, 4, 4, 99, 5000000, 1524, 740, 196, 3300, 1466, 392, 1 ],
-    [ "Boa Hancock, Beachgoing Empress", "DEX", [ "Fighter", "Free Spirit" ], 4, 13, 4, 2, 50, null, 181, 132, 47, 945, 539, 181, null ],
-    [ "Boa Hancock, Maiden Drowned in Love", "DEX", [ "Fighter", "Free Spirit" ], 5, 20, 4, 3, 99, null, 863, 448, 144, 1724, 1132, 326, null ],
+    [ "Boa Hancock, Beachgoing Empress", "DEX", [ "Fighter", "Free Spirit" ], 4, 13, 4, 2, 50, 392109, 181, 132, 47, 945, 539, 181, 1 ],
+    [ "Boa Hancock, Maiden Drowned in Love", "DEX", [ "Fighter", "Free Spirit" ], 5, 20, 4, 3, 99, 3000000, 863, 448, 144, 1724, 1132, 326, 1 ],
     [ "Ganfor, Former God of Skypiea", "PSY", "Striker", 4, 18, 6, 2, 50, 392109, 222, 122, 22, 1122, 622, 122, 1 ],
     [ "Ganfor, God of Skypiea", "PSY", "Striker", 5, 30, 4, 3, 99, 3000000, 1111, 611, 111, 2122, 1222, 222, 1 ],
     [ "Ohm, Sky Breeder", "INT", [ "Cerebral", "Powerhouse" ], 4, 20, 6, 3, 70, 1778330, 197, 169, -200, 1710, 1170, -150, 1 ],
     [ "Jewelry Bonney, Splashing Sapphire", "STR", [ "Fighter", "Free Spirit" ], 4, 12, 6, 1, 50, 392109, 388, 212, 86, 1006, 559, 194, 1 ],
     [ "Jewelry Bonney, Pearl White Gleam", "STR", [ "Fighter", "Free Spirit" ], 5, 20, 4, 2, 99, 3000000, 929, 500, 149, 2000, 989, 301, 1 ],
-    [ "Summertime Violet", "QCK", [ "Fighter", "Cerebral" ], 4, 12, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Summertime Violet Evolved", "QCK", [ "Fighter", "Cerebral" ], 5, 20, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Violet, Stirring Summer Vacation", "QCK", [ "Fighter", "Cerebral" ], 4, 12, 5, 1, 50, 392109, 109, 58, 55, 923, 480, 243, 1 ],
+    [ "Violet, Blushing Summer Vacation", "QCK", [ "Fighter", "Cerebral" ], 5, 20, 4, 2, 99, 3000000, 855, 420, 192, 1654, 837, 404, 1 ],
     [ "Yorki", "PSY", [ "Slasher", "Free Spirit" ], 3, 12, 6, 1, 50, 392109, 102, 91, 36, 902, 584, 201, 1 ],
     [ "Calico Yorki", "PSY", [ "Slasher", "Free Spirit" ], 4, 20, 4, 3, 99, 3000000, 840, 516, 170, 1583, 1153, 315, 1 ],
     [ "Rumbar Pirates Brook", "QCK", [ "Slasher", "Free Spirit" ], 3, 12, 5, 1, 50, 392109, 139, 80, 31, 1006, 528, 184, 1 ],
     [ "Rumba Pirates Musician and Swordman Brook", "QCK", [ "Slasher", "Free Spirit" ], 4, 20, 4, 2, 99, 3000000, 942, 466, 139, 1894, 984, 299, 1 ],
-    [ "Rumbar Pirates Laboon", "STR", "Fighter", 3, 9, 6, 1, 50, 392109, 155, 55, 23, 1302, 570, 151, 1 ]
+    [ "Rumbar Pirates Laboon", "STR", "Fighter", 3, 9, 6, 1, 50, 392109, 155, 55, 23, 1302, 570, 151, 1 ],
+    [ "Nico Robin, Dream-Pursuing Adventurer", "INT", [ "Fighter", "Cerebral" ], 4, 17, 4, 3, 70, 1066998, 213, 96, 45, 1147, 626, 216, 1 ],
+	[ "Nico Robin, Loyal Straw Hat Crew", "INT", [ "Fighter", "Cerebral" ], 5, 27, 4, 4, 99, 4000000, 1098, 551, 180, 2076, 1099, 400, 1 ],
+    [ "Usopp, Dream-Pursuing Adventurer", "QCK", "Shooter", 4, 17, 6, 3, 70, 1066998, 224, 90, 47, 1222, 593, 208, 1 ],
+	[ "Usopp, Loyal Straw Hat Crew", "QCK", "Shooter", 5, 27, 5, 4, 99, 4000000, 1167, 542, 174, 2301, 954, 376, 1 ],
+	[ "Franky, Dream-Pursuing Adventurer", "STR", [ "Shooter", "Free Spirit" ], 4, 17, 6, 3, 70, 1066998, 244, 140, 21, 1590, 738, 95, 1 ],
+	[ "Franky, Loyal Straw Hat Crew", "STR", [ "Shooter", "Free Spirit" ], 5, 27, 5, 4, 99, 4000000, 1525, 660, 50, 2801, 1395, 161, 1 ],
+    [ "Baby 5, Dolphin Floatie", "STR", [ "Slasher", "Striker" ], 4, 13, 4, 2, 50, 392109, 101, 103, 34, 910, 563, 177, null ],
+    [ "Baby 5, Dolphin Rider", "STR", [ "Slasher", "Striker" ], 5, 20, 4, 3, 99, 3000000, 843, 489, 130, 1624, 1212, 309, null ]
 	];
 	
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ]

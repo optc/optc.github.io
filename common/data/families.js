@@ -1204,5 +1204,13 @@ window.families = [
     "Yoki",
     "Brook",
     "Brook",
-    "Laboon"
+    "Laboon",
+    "Nico Robin",
+    "Nico Robin",
+    "Usopp",
+	"Usopp",
+    "Franky",
+	"Franky",
+    "Baby 5",
+	"Baby 5",
 ];
