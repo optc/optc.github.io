@@ -6045,6 +6045,18 @@ window.details = {
         special: "Empties all slots with [RCV] orbs, recover 20% of MAX HP",
         specialName: "Appetite Or Sex Appeal - Has it Switched Yet!?",
     },
+    1200: {
+        captain: "Boosts ATK and RCV of Cerebral characters by 1.5x",
+        special: "Reduces Silence duration by 2 turns. If your HP is below 30%, changes top row into Matching Orbs",
+        specialName: "Passionate Look, 'I'm a Bad Guy...'",
+        sailor: "Reduces Silence duration against this unit by 2 turns"
+    },
+    1201: {
+        captain: "Boosts ATK and RCV of Cerebral characters by 1.5x",
+        special: "Reduces Silence duration by 2 turns. If your HP is below 30%, changes top row into Matching Orbs",
+        specialName: "Passionate Look, 'I'm a Bad Guy...'",
+        sailor: "Reduces Silence duration against this unit by 2 turns"
+    },
     1202: {
         captain: "Boosts ATK of Free Spirit characters by 1.5x",
         specialName: "Session of Pirates",
@@ -6110,13 +6122,13 @@ window.details = {
         sailor: "Boosts ATK of Shooter Characters by 20"
 	},
     1213: {
-        captain: "Boosts ATK of Slasher by 2x, the HP of Strikers by 1.25x, and the RCV of Shooters by 1.25x",
+        captain: "Boosts ATK of Slasher characters by 2x, the HP of Striker characters by 1.25x, and the RCV of Shooter characters by 1.25x",
         specialName: "Exciting Transfiguration",
         special: "Recovers some HP. For 4 turns, makes [BOMB] orbs \"beneficial\"",
         specialNotes: "\"Beneficial\" orbs grant the same ATK boost as matching orbs while retaining their original function."
     },
     1214: {
-        captain: "Boosts ATK of Slasher by 5x, the HP of Strikers by 1.2x, and the RCV of Shooters by 1.2x",
+        captain: "Boosts ATK of Slasher characters by 5x, the HP of Striker characters by 1.2x, and the RCV of Shooter characters by 1.2x",
         specialName: "Exciting Transfiguration",
         special: "Recovers some HP. For 4 turns, makes [BOMB] orbs \"beneficial\"",
         specialNotes: "\"Beneficial\" orbs grant the same ATK boost as matching orbs while retaining their original function."
