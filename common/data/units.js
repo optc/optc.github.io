@@ -1203,7 +1203,7 @@ window.units = [
     [ "Yorki", "PSY", [ "Slasher", "Free Spirit" ], 3, 12, 6, 1, 50, 392109, 102, 91, 36, 902, 584, 201, 1 ],
     [ "Calico Yorki", "PSY", [ "Slasher", "Free Spirit" ], 4, 20, 4, 3, 99, 3000000, 840, 516, 170, 1583, 1153, 315, 1 ],
     [ "Rumbar Pirates Brook", "QCK", [ "Slasher", "Free Spirit" ], 3, 12, 5, 1, 50, 392109, 139, 80, 31, 1006, 528, 184, 1 ],
-    [ "Rumba Pirates Musician and Swordman Brook", "QCK", [ "Slasher", "Free Spirit" ], 4, 20, 4, 2, 99, 3000000, 942, 466, 139, 1894, 984, 299, 1 ],
+    [ "Rumbar Pirates Musician and Swordman Brook", "QCK", [ "Slasher", "Free Spirit" ], 4, 20, 4, 2, 99, 3000000, 942, 466, 139, 1894, 984, 299, 1 ],
     [ "Rumbar Pirates Laboon", "STR", "Fighter", 3, 9, 6, 1, 50, 392109, 155, 55, 23, 1302, 570, 151, 1 ],
     [ "Nico Robin, Dream-Pursuing Adventurer", "INT", [ "Fighter", "Cerebral" ], 4, 17, 4, 3, 70, 1066998, 213, 96, 45, 1147, 626, 216, 1 ],
 	[ "Nico Robin, Loyal Straw Hat Crew", "INT", [ "Fighter", "Cerebral" ], 5, 27, 4, 4, 99, 4000000, 1098, 551, 180, 2076, 1099, 400, 1 ],
@@ -1212,7 +1212,11 @@ window.units = [
 	[ "Franky, Dream-Pursuing Adventurer", "STR", [ "Shooter", "Free Spirit" ], 4, 17, 6, 3, 70, 1066998, 244, 140, 21, 1590, 738, 95, 1 ],
 	[ "Franky, Loyal Straw Hat Crew", "STR", [ "Shooter", "Free Spirit" ], 5, 27, 5, 4, 99, 4000000, 1525, 660, 50, 2801, 1395, 161, 1 ],
     [ "Baby 5, Dolphin Floatie", "STR", [ "Slasher", "Striker" ], 4, 13, 4, 2, 50, 392109, 101, 103, 34, 910, 563, 177, null ],
-    [ "Baby 5, Dolphin Rider", "STR", [ "Slasher", "Striker" ], 5, 20, 4, 3, 99, 3000000, 843, 489, 130, 1624, 1212, 309, null ]
+    [ "Baby 5, Dolphin Rider", "STR", [ "Slasher", "Striker" ], 5, 20, 4, 3, 99, 3000000, 843, 489, 130, 1624, 1212, 309, null ],
+    [ "Unknown World Pirates Unit", "DEX", [ "Shooter", "Striker" ], 4, 20, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Unknown World Pirates Unit", "QCK", [ "Powerhouse", "Striker" ], 4, 20, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Unknown World Pirates Unit", "PSY", [ "Fighter", "Cerebral" ], 4, 20, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Unknown Hancock", "STR", [ "Shooter", "Free Spirit" ], 4, 20, null, null, null, null, null, null, null, null, null, null, null ],
 	];
 	
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ]

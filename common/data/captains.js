@@ -3014,24 +3014,6 @@ window.captains = {
     1188: {
 		atk: function(p) { return p.unit.type == "STR" ? 2.5 : 1; }
 	},
-    1184: {
-		atk: function(p) { return p.unit.type == "QCK" ? 2.25 : 1; }
-	},
-    1184: {
-		atk: function(p) { return p.unit.type == "QCK" ? 2.25 : 1; }
-	},
-    1185: {
-        atk: function(p) { return p.unit.class.has("Slasher")  || p.unit.class.has("Cerebral") ? 1.75 : 1; }
-    },
-    1186: {
-        atk: function(p) { return p.unit.class.has("Slasher")  || p.unit.class.has("Cerebral") ? 1.75 : 1; }
-    },
-    1187: {
-        atk: function(p) { return p.unit.type == "STR" ? 2.5 : 1; }
-    },
-    1188: {
-        atk: function(p) { return p.unit.type == "STR" ? 2.5 : 1; }
-    },
     1189: {
         atk: function(p) { return p.unit.type == "QCK" ? 2.25 : 1; }
     },
@@ -3089,5 +3071,36 @@ window.captains = {
     },
     1206: {
         hp: function(p) { return 1.3; }
-    }
+    },
+    1207: {
+		atk: function(p) { return p.unit.type == "INT" ? 1.5 : 1; },
+		rcv: function(p) { return p.unit.type == "INT" ? 1.5 : 1; }
+	},
+	1208: {
+		atk: function(p) { return p.unit.type == "INT" ? 2 : 1; },
+		rcv: function(p) { return p.unit.type == "INT" ? 2 : 1; }
+	},
+    1209: {
+		atk: function(p) { return p.unit.class.has("Shooter") ? 2 : 1; }
+	},
+	1210: {
+		atk: function(p) { return p.unit.class.has("Shooter") ? 2 : 1; },
+		rcv: function(p) { return p.unit.class.has("Shooter") ? 1.5 : 1; }
+	},
+	1211: {
+		atk: function(p) { return p.unit.type == "STR" ? 2 : 1; }
+	},
+	1212: {
+		atk: function(p) { return p.unit.type == "STR" ? 2.25 : 1; }
+	},
+    1213: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; },
+        rcv: function(p) { return p.unit.class.has("Shooter") ? 1.2 : 1; },
+        hp: function(p) { return p.unit.class.has("Striker") ? 1.2 : 1; },
+    },
+    1214: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? 2 : 1; },
+        rcv: function(p) { return p.unit.class.has("Shooter") ? 1.25 : 1; },
+        hp: function(p) { return p.unit.class.has("Striker") ? 1.25 : 1; },
+    },
 };

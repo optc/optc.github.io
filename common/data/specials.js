@@ -1510,4 +1510,10 @@ window.specials = {
 		atk: function(p) { return p.unit.class.has("Striker") ? 1.75 : 1; },
 		type: "class"
 	},
+    1211: {
+		orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, 1, 1.5); }
+	},
+	1212: {
+		orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, 1, 1.5); }
+	},
 };
