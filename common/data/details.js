@@ -1198,13 +1198,13 @@ window.details = {
 		special: "Changes [PSY] and [INT] orbs into [STR] orbs, empties slots with [DEX] and [QCK] orbs",
 		specialName: "Aye Aye, Captain!",
 		captain: "Boosts ATK, HP and RCV of Fighter characters by 1.5x",
-        sailor: "Reduces numbess for 2 turns for himself"
+        sailor: "Reduces Paralysis for 2 turns for himself"
 	},
 	316: {
 		special: "Changes [PSY] and [INT] orbs into [STR] orbs, empties slots with [DEX] and [QCK] orbs",
 		specialName: "Aye Aye, Captain!",
 		captain: "Boosts ATK, HP and RCV of Fighter characters by 1.5x",
-        sailor: "Reduces numbess for 2 turns for himself"
+        sailor: "Reduces Paralysis for 2 turns for himself"
 	},
 	317: {
 		special: "Randomly changes all orbs into either [DEX] or [STR] orbs, deals random DEX damage to all enemies",
@@ -2178,14 +2178,14 @@ window.details = {
 		specialNotes: "#{specialProportional : lower : 100 * ( 1 - (remaining HP) / (total HP) )}",
 		specialName: "Diable Jambe - Venaison Shot",
 		captain: "Reduces damage received by 80% if HP is above 99% at the start of the turn",
-        sailor: "Reduces Numbnesss by 3 turns for self"
+        sailor: "Reduces Paralysiss by 3 turns for self"
 	},
 	522: {
 		special: "Deals several times the character's ATK in INT damage to all enemies",
 		specialNotes: "#{specialProportional : lower : 100 * ( 1 - (remaining HP) / (total HP) )}",
 		specialName: "Diable Jambe - Venaison Shot",
 		captain: "Reduces damage received by 80% if HP is above 99% at the start of the turn",
-        sailor: "Reduces Numbnesss by 3 turns for self"
+        sailor: "Reduces Paralysiss by 3 turns for self"
 	},
 	523: {
 		special: "Randomizes all orbs, protects from defeat as long as HP is above 50% for 1 turn",
@@ -2781,14 +2781,14 @@ window.details = {
 		specialNotes: "#{fixed} #{orb : 1.75x}",
 		specialName: "Raging Greatsword",
 		captain: "Boosts ATK of PSY characters by 2.5x if HP is below 30% at the start of the turn",
-        sailor: "Recovers 2 turns of numbness on self"
+        sailor: "Recovers 2 turns of Paralysis on self"
 	},
 	643: {
 		special: "Reduces crew's current HP by 30%, deals 10x character's ATK in fixed damage to one enemy, amplifies the effect of orbs by 1.75x for 1 turn",
 		specialNotes: "#{fixed} #{orb : 1.75x}",
 		specialName: "Raging Greatsword",
 		captain: "Boosts ATK of PSY characters by 3x if HP is below 30% at the start of the turn",
-        sailor: "Recovers 2 turns of numbness on self"
+        sailor: "Recovers 2 turns of Paralysis on self"
 	},
 	644: {
 		special: "Reduces Bind and Despair duration by 2 turns, boosts ATK against delayed enemies by 1.2x for 3 turns",
@@ -4811,15 +4811,15 @@ window.details = {
 	},
 	1002: {
 		captain: "Boosts ATK of Fighter characters by 1.5x",
-		special: "Reduces Numbness duration by 3 turns and deals 7x ATK as [STR] damage to one enemy",
+		special: "Reduces Paralysis duration by 3 turns and deals 7x ATK as [STR] damage to one enemy",
 		specialName: "Bepo's Ultimate Fist!!",
-		specialNotes: "Numbness causes that unit to have a chance of not attacking and breaking chain"
+		specialNotes: "Paralysis causes that unit to have a chance of not attacking and breaking chain"
 	},
 	1003: {
 		captain: "Boosts ATK of Fighter characters by 2x",
-		special: "Reduces Numbness duration by 3 turns and deals 7x ATK as [STR] damage to one enemy",
+		special: "Reduces Paralysis duration by 3 turns and deals 7x ATK as [STR] damage to one enemy",
 		specialName: "Bepo's Ultimate Fist!!",
-		specialNotes: "Numbness causes that unit to have a chance of not attacking and breaking chain"
+		specialNotes: "Paralysis causes that unit to have a chance of not attacking and breaking chain"
 	},
 	1004: {
 		captain: "Boosts RCV of all characters by 1.5x",
@@ -5081,13 +5081,13 @@ window.details = {
     },
 	1048: {
 		captain: "Boosts ATK and RCV of [PSY] Units by 1.2x",
-		special: "Reduces Numbness duration by 3 turns and Recovers 4x character's RCV in HP at the end of each turn for 3 turns",
+		special: "Reduces Paralysis duration by 3 turns and Recovers 4x character's RCV in HP at the end of each turn for 3 turns",
 		specialName: "Mother's Wish to Fight The World"		
 	},
 	1049: {
 		captain: "Boosts ATK and RCV of [PSY] Units by 1.5x, when HP is low the ATK multiplier becomes 2.25x",
         captainNotes: "The low HP threshold is estimated to be 30%",
-		special: "Reduces Numbness duration by 3 turns and Recovers 4x character's RCV in HP at the end of each turn for 3 turns",
+		special: "Reduces Paralysis duration by 3 turns and Recovers 4x character's RCV in HP at the end of each turn for 3 turns",
 		specialName: "Mother's Wish to Fight The World"		
 	},
 	1050: {
@@ -5108,12 +5108,12 @@ window.details = {
 	},
     1053: {
         captain: "Boosts RCV of Cerebral characters by 1.5x",
-        special: "Reduces Numbness and Despair duration by 3 turns, removes Blindness",
+        special: "Reduces Paralysis and Despair duration by 3 turns, removes Blindness",
         specialName: "Precocious Provocation"
     },
     1054: {
         captain: "Boosts RCV of Cerebral characters by 2x",
-        special: "Reduces Numbness and Despair duration by 3 turns, removes Blindness",
+        special: "Reduces Paralysis and Despair duration by 3 turns, removes Blindness",
         specialName: "Precocious Provocation"
     },
 	1055: {
@@ -5258,15 +5258,15 @@ window.details = {
 		captain: "Recovers 3x character's RCV in HP at the end of each turn",
 		special: [
 			{
-				"description": "Recovers 6x character's RCV in HP. Removes Numbness",
+				"description": "Recovers 6x character's RCV in HP. Removes Paralysis",
 				"cooldown": 14
 			},
 			{
-				"description": "Recovers 15x character's RCV in HP. Removes Numbness, Poison, RCV Down, and Blindness",
+				"description": "Recovers 15x character's RCV in HP. Removes Paralysis, Poison, RCV Down, and Blindness",
 				"cooldown": 19
 			},
 			{
-				"description": "Recovers 50x character's RCV in HP. Removes Numbness, Poison, RCV Down, and Blindness",
+				"description": "Recovers 50x character's RCV in HP. Removes Paralysis, Poison, RCV Down, and Blindness",
 				"cooldown": 24
 			},
 		],
@@ -5277,15 +5277,15 @@ window.details = {
 		captain: "Recovers 4x character's RCV in HP at the end of each turn",
 		special: [
 			{
-				"description": "Recovers 6x character's RCV in HP. Removes Numbness",
+				"description": "Recovers 6x character's RCV in HP. Removes Paralysis",
 				"cooldown": 14
 			},
 			{
-				"description": "Recovers 15x character's RCV in HP. Removes Numbness, Poison, RCV Down, and Blindness",
+				"description": "Recovers 15x character's RCV in HP. Removes Paralysis, Poison, RCV Down, and Blindness",
 				"cooldown": 19
 			},
 			{
-				"description": "Recovers 50x character's RCV in HP. Removes Numbness, Poison, RCV Down, and Blindness",
+				"description": "Recovers 50x character's RCV in HP. Removes Paralysis, Poison, RCV Down, and Blindness",
 				"cooldown": 24
 			},
 		],
@@ -5516,14 +5516,14 @@ window.details = {
 		specialNotes: "#{specialProportional : lower : 100 * ( 1 - (remaining HP) / (total HP) )}",
 		specialName: "Diable Jambe: Concassé",
 		captain: "Reduces damage received by 80% if HP is above 99% at the start of the turn",
-        sailor: "Reduces Numbnesss by 3 turns for self"
+        sailor: "Reduces Paralysiss by 3 turns for self"
 	},
 	1117: {
 		special: "Deals several times the character's ATK in INT damage to all enemies",
 		specialNotes: "#{specialProportional : lower : 100 * ( 1 - (remaining HP) / (total HP) )}",
 		specialName: "Diable Jambe: Concassé",
 		captain: "Reduces damage received by 80% if HP is above 99% at the start of the turn",
-        sailor: "Reduces Numbnesss by 3 turns for self"
+        sailor: "Reduces Paralysiss by 3 turns for self"
 	},
 	1118: {
 		special: "Randomizes all orbs, protects from defeat as long as HP is above 50% for 1 turn",
@@ -5587,12 +5587,12 @@ window.details = {
 	},
 	1128: {
 		captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of all characters by 1.75x",
-		special: "Reduces Numbness and Despair by 5 turns. Cuts the current HP of one enemy by 10%",
+		special: "Reduces Paralysis and Despair by 5 turns. Cuts the current HP of one enemy by 10%",
 		specialName: "Tactician's Savage Cut"
 	},
 	1129: {
 		captain: "Reduces cooldown of all specials by 2 turn at the start of the fight, boosts ATK of all characters by 2x",
-		special: "Reduces Numbness and Despair by 5 turns. Cuts the current HP of one enemy by 10%",
+		special: "Reduces Paralysis and Despair by 5 turns. Cuts the current HP of one enemy by 10%",
 		specialName: "Tactician's Savage Cut"
 	},
 	1130: {
@@ -5734,8 +5734,8 @@ window.details = {
 		specialName: "Moderate Healing",
 	},
     1148:{
-		specialName: "Numbness Recovery - Light",
-		special: "Reduces Numbness by 1 turn"
+		specialName: "Paralysis Recovery - Light",
+		special: "Reduces Paralysis by 1 turn"
 	},
 	1149:{
 		special: "Deals 3x character's ATK in INT damage to all enemies, poisons all enemies",
@@ -6147,7 +6147,7 @@ window.details = {
 	},
 	1217: { //nightin
 		captain: "Boosts ATK and RCV of Cerebral characters by 1.5x",
-		special: "Reduces Numbness and Bind duration by 2 turns. Deal 10x her ATK in [PSY] damage to one enemy",
+		special: "Reduces Paralysis and Bind duration by 2 turns. Deal 10x her ATK in [PSY] damage to one enemy",
 		specialName: "Catepillar Soul Shot",
 	},
 	1218: {//hancock

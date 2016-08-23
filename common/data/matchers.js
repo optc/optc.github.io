@@ -385,9 +385,9 @@ window.matchers = [
 	},
 	
 	{
-		name: 'Numbness reducers',
+		name: 'Paralysis reducers',
         target: 'special',
-        matcher: /reduces.+numbness.+duration/i
+        matcher: /reduces.+Paralysis/i
 	},
     
     /* * * * * Sailor * * * * */
