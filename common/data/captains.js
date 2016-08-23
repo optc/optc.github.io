@@ -3103,4 +3103,33 @@ window.captains = {
         rcv: function(p) { return p.unit.class.has("Shooter") ? 1.25 : 1; },
         hp: function(p) { return p.unit.class.has("Striker") ? 1.25 : 1; },
     },
+    1215: {
+		damageSorter: function(d) { return CrunchUtils.okamaSort(d, ['QCK', 'PSY', 'DEX']); },
+		hitAtk: function(p) {
+			return CrunchUtils.okamaCheck(p.damage.slice(0, p.chainPosition), p.modifiers, [{
+				type: 'QCK',
+				minModifier: 'Good'
+			}, {
+				type: 'PSY',
+				minModifier: 'Good'
+			}, {
+				type: 'DEX',
+				minModifier: 'Good'
+			}]) ? 2.5 : 1;
+		},
+		hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
+	},
+    1216: {
+		atk: function(p) { return p.unit.class.has("Powerhouse") ? 2 : 1; }
+	},
+    1217: {
+		atk: function(p) { return p.unit.class.has("Cerebral") ? 1.5 : 1; },
+		rcv: function(p) { return p.unit.class.has("Cerebral") ? 1.5 : 1; }
+	},
+    1218: {
+		hitAtk: function(p) {
+			return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? 2.5 : 1;
+		},
+		hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
+	},
 };

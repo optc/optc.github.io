@@ -422,7 +422,7 @@ directives.addLinks = function($stateParams) {
                 ul.append($('<li><a href="http://onepiece-treasurecruise.com/c-' + id + '" target="_blank">' +
                         'Official Guide (Japanese)</a></li>'));
             }
-            if (!isNaN(gw[id-1])) {
+            if (gw[id-1] != null) {
                 ul.append($('<li><a href="http://xn--pck6bvfc.gamewith.jp/article/show/' + gw[id-1] + '" target="_blank">' +
                         'GameWith Page (Japanese)</a> | <a href="http://translate.google.com/translate?sl=ja&tl=en&u=http://xn--pck6bvfc.gamewith.jp/article/show/' + gw[id-1] + '" target="_blank">' +'Google Translate</a></li>'));
             }
