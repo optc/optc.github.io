@@ -6133,4 +6133,26 @@ window.details = {
         special: "Recovers 10x character's RCV in HP. For 4 turns, makes [BOMB] orbs \"beneficial\"",
         specialNotes: "\"Beneficial\" orbs grant the same ATK boost as matching orbs while retaining their original function."
     },
+	1215: { //Gairam
+		captain: "Boosts ATK by 2.5x following a chain of [QCK] > [PSY] > [DEX] attacks no lower than Good",
+		special: "Deals 5 hits of 2,000 fixed damage to random enemies and reduces any damage received above 5,000 HP by 80% for 1 turn",
+		specialNotes: "#{randomHits : 5}",
+		specialName: "Totem Cube"
+	},
+	1216: { //sebastian
+		captain: "Boosts ATK of Powerhouse characters by 2x and reduces damage taken based on current HP by up to 20%",
+		captainNotes: "The lower the HP, the larger the damage reduction. At 50% HP you take 10% reduced damage",
+		special: "Reduces damage received by 50% for 1 turn, and changes own orb to [QCK]",
+		specialName: "Camouflage Air",
+	},
+	1217: { //nightin
+		captain: "Boosts ATK and RCV of Cerebral characters by 1.5x",
+		special: "Reduces Numbness and Bind duration by 2 turns. Deal 10x her ATK in [PSY] damage to one enemy",
+		specialName: "Catepillar Soul Shot",
+	},
+	1218: {//hancock
+		captain: "Boosts ATK by 2.5x after scoring 3 Perfects in a row",
+		special: "Locks all orbs for 1 turn. If HP is below 30%, changes own orb and the captain's orb into matching. ",
+		specialName: "Everybody Confusing Fragrance",
+	},
 };

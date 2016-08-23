@@ -1213,10 +1213,10 @@ window.units = [
 	[ "Franky, Loyal Straw Hat Crew", "STR", [ "Shooter", "Free Spirit" ], 5, 27, 5, 4, 99, 4000000, 1525, 660, 50, 2801, 1395, 161, 1 ],
     [ "Baby 5, Dolphin Floatie", "STR", [ "Slasher", "Striker" ], 4, 13, 4, 2, 50, 392109, 101, 103, 34, 910, 563, 177, null ],
     [ "Baby 5, Dolphin Rider", "STR", [ "Slasher", "Striker" ], 5, 20, 4, 3, 99, 3000000, 843, 489, 130, 1624, 1212, 309, null ],
-    [ "Unknown World Pirates Unit", "DEX", [ "Shooter", "Striker" ], 4, 20, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Unknown World Pirates Unit", "QCK", [ "Powerhouse", "Striker" ], 4, 20, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Unknown World Pirates Unit", "PSY", [ "Fighter", "Cerebral" ], 4, 20, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Unknown Hancock", "STR", [ "Shooter", "Free Spirit" ], 4, 20, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Gairam, World Pirates", "DEX", [ "Shooter", "Striker" ], 4, 20, 6, 2, 99, 3000000, 85, 35, 15, 1735, 1135, 175, 1 ],
+    [ "Sebastian, World Pirates", "QCK", [ "Powerhouse", "Striker" ], 4, 20, 6, 2, 99, 3000000, 108, 58, 0, 2258, 1258, 0, 1 ],
+    [ "Nightin, World Pirates", "PSY", [ "Fighter", "Cerebral" ], 4, 20, 4, 2, 99, 3000000, 64, 27, 32, 1654, 987, 321, 1 ],
+    [ "Boa Hancock, Amazon Lily Princess", "STR", [ "Shooter", "Free Spirit" ], 4, 20, 4, 3, 99, 3000000, 72, 42, 22, 1692, 1202, 262, 1 ],
 	];
 	
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ]

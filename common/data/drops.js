@@ -1110,9 +1110,9 @@ window.drops = {
         
         {
             name: "World Pirates!",
-            thumb: null,
+            thumb: 1215,
             condition: "Total Crew Cost must be lower than 180 (Including friend captain)",
-            "All Difficulties": [ 1215, 1216, 1217, -1025, -1029, -1033, -671, -956, -964, -633, -504, -416 ]
+            "All Difficulties": [ 1215, 1216, 1217, 1218, -1025, -1029, -1033, -671, -956, -964, -633, -504, -1218 ]
         },
 		
     ],
