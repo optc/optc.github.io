@@ -1217,10 +1217,10 @@ window.units = [
     [ "Sebastian, World Pirates", "QCK", [ "Powerhouse", "Striker" ], 4, 20, 6, 2, 99, 3000000, 108, 58, 0, 2258, 1258, 0, 1 ],
     [ "Nightin, World Pirates", "PSY", [ "Fighter", "Cerebral" ], 4, 20, 4, 2, 99, 3000000, 64, 27, 32, 1654, 987, 321, 1 ],
     [ "Boa Hancock, Amazon Lily Princess", "STR", [ "Shooter", "Free Spirit" ], 4, 20, 4, 3, 99, 3000000, 72, 42, 22, 1692, 1202, 262, 1 ],
-    [ "Oars Jr.", "STR", [ "Slasher", "Powerhouse" ], 4, 16, 6, 2, 50, null, 266, 119, 9, null, null, null, null ],
-    [ "Oars Jr. of the Whitebeard Pirates", "STR", [ "Slasher", "Powerhouse" ], 5, 26, 4, 3, 99, null, 1241, 482, 31, 2802, 1171, 90, null ],
     [ "Byrnndi World", "INT", [ "Shooter", "Driven" ], 4, 25, 4, 2, 70, null, 472, 331, 19, 1093, 809, 97, null ],
     [ "Byrnndi World, Captain of the World Pirates", "INT", [ "Shooter", "Driven" ], 5, 40, 4, 3, 99, null, 1011, 744, 52, 1990, 1483, 170, null ],
+	[ "Oars Jr.", "STR", [ "Slasher", "Powerhouse" ], 4, 16, 6, 2, 50, null, 266, 119, 9, null, null, null, null ],
+    [ "Oars Jr. of the Whitebeard Pirates", "STR", [ "Slasher", "Powerhouse" ], 5, 26, 4, 3, 99, null, 1241, 482, 31, 2802, 1171, 90, null ],
 	];
 	
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ]
