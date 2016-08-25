@@ -6165,7 +6165,7 @@ window.details = {
 			{
 				"description": "Deals 15x character's ATK in [INT] damage to one enemy. Reduces crew's current HP by 50%. Boosts ATK of Shooter characters by 1.5x for 1 turn",
 				"cooldown": [ 28, 12 ],
-			}
+			},
 			{
 				"description": "Deals 25x character's ATK in [INT] damage to one enemy. Reduces crew's current HP by 50%. Boosts ATK of Shooter characters by 2x for 1 turn",
 				"cooldown": [ 34, 18 ],
@@ -6183,7 +6183,7 @@ window.details = {
 			{
 				"description": "Deals 15x character's ATK in [INT] damage to one enemy. Reduces crew's current HP by 50%. Boosts ATK of Shooter characters by 1.5x for 1 turn",
 				"cooldown": [ 28, 12 ],
-			}
+			},
 			{
 				"description": "Deals 25x character's ATK in [INT] damage to one enemy. Reduces crew's current HP by 50%. Boosts ATK of Shooter characters by 2x for 1 turn",
 				"cooldown": [ 34, 18 ],
