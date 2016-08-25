@@ -6155,4 +6155,53 @@ window.details = {
 		special: "Locks all orbs for 1 turn. If HP is below 30%, changes own orb and the captain's orb into matching. ",
 		specialName: "Everybody Confusing Fragrance",
 	},
+	1219: {//Byrnndi World Colosseum
+        captain: "Boosts ATK of Shooters by 1x. If you defeat an enemy, increases ATK boost slighty. Stacks up to 16 times to a maximum of 3x If you did not defeat an enemy, lose all ATK boost stacks.",
+		special: [
+			{
+				"description": "Deals 7x character's ATK in [INT] damage to one enemy. Reduces crew's current HP by 50%. Boosts ATK of Shooter characters by 1.2x for 1 turn",
+				"cooldown": [ 22, 6 ],
+			},
+			{
+				"description": "Deals 15x character's ATK in [INT] damage to one enemy. Reduces crew's current HP by 50%. Boosts ATK of Shooter characters by 1.5x for 1 turn",
+				"cooldown": [ 28, 12 ],
+			}
+			{
+				"description": "Deals 25x character's ATK in [INT] damage to one enemy. Reduces crew's current HP by 50%. Boosts ATK of Shooter characters by 2x for 1 turn",
+				"cooldown": [ 34, 18 ],
+			},
+		],        
+		specialName: "More More, 10 Times \"Iron Hammer\"",
+	},
+	1220: {//Byrnndi World Colosseum
+        captain: "Boosts ATK of Shooters by 1x. If you defeat an enemy, increases ATK boost slighty. Stacks up to 10 times to a maximum of 3.25x If you did not defeat an enemy, lose all ATK boost stacks.",
+		special: [
+			{
+				"description": "Deals 7x character's ATK in [INT] damage to one enemy. Reduces crew's current HP by 50%. Boosts ATK of Shooter characters by 1.2x for 1 turn",
+				"cooldown": [ 22, 6 ],
+			},
+			{
+				"description": "Deals 15x character's ATK in [INT] damage to one enemy. Reduces crew's current HP by 50%. Boosts ATK of Shooter characters by 1.5x for 1 turn",
+				"cooldown": [ 28, 12 ],
+			}
+			{
+				"description": "Deals 25x character's ATK in [INT] damage to one enemy. Reduces crew's current HP by 50%. Boosts ATK of Shooter characters by 2x for 1 turn",
+				"cooldown": [ 34, 18 ],
+			},
+		],        
+		specialName: "More More, 10 Times \"Iron Hammer\"",
+	},
+	1221: {//Colosseum Oars Jr
+		captain: "Boosts ATK of Slasher characters by 1.75x and the HP of Powerhouse characters by 1.2x",
+		special: "Deals 25x character's ATK in [STR] damage to one enemy. For 1 turn, makes [STR] orb \"beneficial\" for all characters",
+        specialNotes: "\"Beneficial\" orbs grant the same ATK boost as matching orbs.",
+		specialName: "Blood of the Devil Warrior",
+	},
+	1222: {//Colosseum Oars Jr
+		captain: "Boosts ATK of Slasher characters by 2x and the HP of Powerhouse characters by 1.75x",
+		special: "Deals 25x character's ATK in [STR] damage to one enemy. For 1 turn, makes [STR] orb \"beneficial\" for all characters",
+        specialNotes: "\"Beneficial\" orbs grant the same ATK boost as matching orbs.",
+		specialName: "Blood of the Devil Warrior",
+	},
 };
+

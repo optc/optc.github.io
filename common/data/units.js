@@ -1097,7 +1097,7 @@ window.units = [
     [ "Commander Scarlet", "INT", [ "Powerhouse", "Free Spirit" ], 3, 12, 5, 1, 50, 392109, 121, 47, 5, 1323, 520, 59, 1 ],
     [ "Commander Scarlet, Golden Lion Pirates", "INT", [ "Powerhouse", "Free Spirit" ], 4, 20, 4, 2, 99, 3000000, 1271, 467, 30, 2302, 980, 92, 1 ],
     [ "Billy the Thunder Bird", "PSY", [ "Shooter", "Powerhouse" ], 3, 10, 4, 2, 50, 392109, 54, 99, 40, 556, 803, 217, 1 ],
-    [ "Coby, Petty Officer in the Rain", "DEX", [ "Fighter", "Cerebral" ], 4, 13, 6, 2, 50, 392109, 79, 50, 47, 151, 84, 57, 1 ],
+    [ "Coby, Petty Officer in the Rain", "DEX", [ "Fighter", "Cerebral" ], 4, 13, 6, 2, 50, 392109, 79, 50, 47, 963, 471, 178, 1 ],
     [ "Coby, Petty Officer Sparkling with Dew", "DEX", [ "Fighter", "Cerebral" ], 5, 20, 4, 3, 99, 3000000, 897, 429, 134, 1946, 995, 344, 1 ],
     [ "Black Arm Zephyr", "STR", [ "Fighter", "Driven" ], 4, 25, 5, 2, 70, 1066998, 545, 404, 0, 1384, 822, 0, 1 ],
     [ "Black Arm Zephyr, Former Navy HQ Admiral", "STR", [ "Fighter", "Driven" ], 5, 40, 4, 3, 99, 4000000, 1318, 749, 0, 2620, 1500, 0, 1 ],
@@ -1217,10 +1217,10 @@ window.units = [
     [ "Sebastian, World Pirates", "QCK", [ "Powerhouse", "Striker" ], 4, 20, 6, 2, 99, 3000000, 108, 58, 0, 2258, 1258, 0, 1 ],
     [ "Nightin, World Pirates", "PSY", [ "Fighter", "Cerebral" ], 4, 20, 4, 2, 99, 3000000, 64, 27, 32, 1654, 987, 321, 1 ],
     [ "Boa Hancock, Amazon Lily Princess", "STR", [ "Shooter", "Free Spirit" ], 4, 20, 4, 3, 99, 3000000, 72, 42, 22, 1692, 1202, 262, 1 ],
-    [ "Oars Jr.", "STR", [ "Slasher", "Powerhouse" ], 4, 16, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Oars Jr. of the Whitebeard Pirates", "STR", [ "Slasher", "Powerhouse" ], 5, 26, null, null, 99, null, null, null, null, null, null, null, null ],
-    [ "Byrnndi World", "INT", [ "Shooter", "Driven" ], 4, 25, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Byrnndi World, Captain of the World Pirates", "INT", [ "Shooter", "Driven" ], 5, 40, null, null, 99, null, null, null, null, null, null, null, null ],
+    [ "Oars Jr.", "STR", [ "Slasher", "Powerhouse" ], 4, 16, 6, 2, 50, null, 266, 119, 9, null, null, null, null ],
+    [ "Oars Jr. of the Whitebeard Pirates", "STR", [ "Slasher", "Powerhouse" ], 5, 26, 4, 3, 99, null, 1241, 482, 31, 2802, 1171, 90, null ],
+    [ "Byrnndi World", "INT", [ "Shooter", "Driven" ], 4, 25, 4, 2, 70, null, 472, 331, 19, 1093, 809, 97, null ],
+    [ "Byrnndi World, Captain of the World Pirates", "INT", [ "Shooter", "Driven" ], 5, 40, 4, 3, 99, null, 1011, 744, 52, 1990, 1483, 170, null ],
 	];
 	
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ]
