@@ -1217,8 +1217,8 @@ window.cooldowns = [
 	[ 17, 10 ],
 	[ 17, 11 ],
 	[ 25, 14 ],
-	[ 29, 16 ],
-	[ 29, 16 ],
 	null, //byrnndi world
 	null,//byrnndi world
+	[ 29, 16 ],
+	[ 29, 16 ],
 ];
