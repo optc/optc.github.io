@@ -1516,4 +1516,36 @@ window.specials = {
 	1212: {
 		orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, 1, 1.5); }
 	},
+    1219: {
+		atk: function(p) {
+			if (!window.specials[1219].stage) return p.unit.class.has("Shooter") ? 1.2 : 1;
+			if (window.specials[1219].stage == 1) return p.unit.class.has("Shooter") ? 1.5 : 1;
+			if (window.specials[1219].stage == 2) return p.unit.class.has("Shooter") ? 2 : 1;
+		},
+		type: "class",
+		stage: -1,
+		onActivation: function(p) {
+			window.specials[1219].stage = (window.specials[1219].stage + 1) % 3;
+			p.scope.notify({
+				text: 'Activating stage #' + (window.specials[1219].stage + 1) + '. To move onto the next stage, disable and re-enable this special.',
+				name: '1219warning'
+			});
+		}
+	},
+    1220: {
+		atk: function(p) {
+			if (!window.specials[1220].stage) return p.unit.class.has("Shooter") ? 1.2 : 1;
+			if (window.specials[1220].stage == 1) return p.unit.class.has("Shooter") ? 1.5 : 1;
+			if (window.specials[1220].stage == 2) return p.unit.class.has("Shooter") ? 2 : 1;
+		},
+		type: "class",
+		stage: -1,
+		onActivation: function(p) {
+			window.specials[1220].stage = (window.specials[1220].stage + 1) % 3;
+			p.scope.notify({
+				text: 'Activating stage #' + (window.specials[1220].stage + 1) + '. To move onto the next stage, disable and re-enable this special.',
+				name: '1219warning'
+			});
+		}
+	},
 };

@@ -972,6 +972,7 @@ window.drops = {
         {
             name: "Legendary Shipbuilding Company Tom's Workers",
             thumb: 848,
+            global: true,
             condition: 'You can only bring Impact and Free Spirit units. (No Evo/Boosters)',
             challenge: 'Total Damage dealt to enemies in one turn',
             challengeData: [['100,000 Damage','1x DEX Elder Turtle'],['500,000 Damage','1x Rainbow Gem, 1x ATK Cotton Candy'],['2,000,000 Damage','2x Rainbow Gems, 1x Auto-Heal Forbidden Tome']],
@@ -1310,9 +1311,10 @@ window.drops = {
         {
             name: 'Girls of Summer Paradise',
             thumb: 683,
+            global: true,
             challenge: 'Total number of hits over 30,000',
             challengeData: [['10 Times','Vivi\'s Breather Unit'],['35 Times','1x HP Cotton Candy'],['72 Times','3x Rainbow Gems']],
-            Expert: [ 659, 680, 682, 684 ],
+            Expert: [ 659, 680, 682, 684, 1200, 1198 ],
 			"Completion Units": [686]
         },
         

@@ -3132,4 +3132,22 @@ window.captains = {
 		},
 		hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
 	},
+    1219: {
+        atk: function(p) {
+			return p.unit.class.has("Shooter") ? Math.min(3, 1 + 0.125 * p.turnCounter) : 1;
+		}
+	},
+	1220: {
+        atk: function(p) {
+			return p.unit.class.has("Shooter") ? Math.min(3.25, 1 + 0.225 * p.turnCounter) : 1;
+		}
+	},
+    1221: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? 1.75 : 1; },
+        hp: function(p) { return p.unit.class.has("Powerhouse") ? 1.2 : 1; },
+    },
+    1222: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? 2 : 1; },
+        hp: function(p) { return p.unit.class.has("Powerhouse") ? 1.75 : 1; },
+    },
 };

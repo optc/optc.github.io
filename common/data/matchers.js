@@ -387,7 +387,7 @@ window.matchers = [
 	{
 		name: 'Paralysis reducers',
         target: 'special',
-        matcher: /(reduces|remove).+Paralysis/i
+        matcher: /(reduces|remove).+Paralysis/i 
 	},
     
     /* * * * * Sailor * * * * */
