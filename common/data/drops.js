@@ -655,7 +655,7 @@ window.drops = {
             global: true,
 			condition: "None",
             challenge: 'High Score calculated with Crew Cost, Turns Taken and Tap Accuracy',
-            challengeData: [['150,000','Blue Elder'],['450,000','ATK Cotton Candy'],['750,000','3x Rainbow Gems']],
+            challengeData: [['150,000','1x Blue Elder'],['450,000','1x ATK Cotton Candy'],['750,000','3x Rainbow Gems']],
             Expert: [ 43, 49, 79, 85, 96, 106, 231, -230, -229, -221, -208, -62, -54 ],
             Elite: [ 43, 49, 96, 111, 117, 231, -230, -229, -221, -208 ]
         },
@@ -965,6 +965,7 @@ window.drops = {
         {
             name: "Nami and Lola's Great Proposal Plan",
             thumb: 808,
+            global: true,
             condition: 'You can only bring Slasher and Cerebral units. (No Evolution/Booster)',
             "All Difficulties": [ 807, 809, 811, -811, -645, -641, -631, -502, -11, -12, -9 ]
         },
@@ -1036,6 +1037,8 @@ window.drops = {
 			name: "Clash! Whitebeard Pirates",
             thumb: 979,
 			condition: "You can only bring INT units",
+            challenge: 'High Score calculated with Crew Cost, Turns Taken and Tap Accuracy',
+            challengeData: [['150,000','1x Blue Elder'],['420,000','1x HP Cotton Candy, 1x Rainbow Gem'],['700,000','2x Rainbow Gems, 1x Orb Forbidden Tome']],
 			"All Difficulties": [ 979, 980, 981, 949, -459, -838, -842, -524, -789, -736, -731, -563 ]
 		},
 		
