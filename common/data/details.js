@@ -3341,14 +3341,14 @@ window.details = {
 	},
 	749: {
 		special: "Deals random DEX damage to all enemies, randomizes all orbs",
-		specialName: "Rankyaku - Amane Dachi",
+		specialName: "Tempest Kick: Sky Slicer",
         specialNotes: "The random damage is between 10,000 and 90,000",
 		captain: "Boosts ATK of DEX characters by 1.5x, boosts damage of DEX specials by 1.5x",
 		captainNotes: "#{noFixedPerc}"
 	},
 	750: {
 		special: "Deals random DEX damage to all enemies, randomizes all orbs",
-		specialName: "Rankyaku - Amane Dachi",
+		specialName: "Tempest Kick: Sky Slicer",
         specialNotes: "The random damage is between 10,000 and 90,000",
 		captain: "Boosts ATK of DEX characters by 2x, boosts damage of DEX specials by 2x",
 		captainNotes: "#{noFixedPerc}"
