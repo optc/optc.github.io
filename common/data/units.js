@@ -1237,8 +1237,8 @@ window.units = [
     [ "Maynard the Pursuer, Navy HQ Vice Admiral", "PSY", [ "Slasher", "Powerhouse" ], 5, 30, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Bastille, Navy HQ Vice Admiral", "STR", [ "Slasher", "Driven" ], 4, 15, null, null, null, null, null, null, null, null, null, null, null ],
     [ "\"Shark Cutter\" Bastille, Navy HQ Vice Admiral", "STR", [ "Slasher", "Driven" ], 5, 30, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Yellow Monkey, Navy HQ's Strongest Forces", "PSY", [ "Slasher", "Shooter" ], 5, 30, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Borsalino", "PSY", [ "Slasher", "Shooter" ], 6, 55, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Yellow Monkey, Navy HQ's Strongest Forces", "PSY", [ "Slasher", "Shooter" ], 5, 30, null, 3, 70, null, 316, 293, 101, 1376, 841, 279, null ],
+    [ "Borsalino", "PSY", [ "Slasher", "Shooter" ], 6, 55, 5, 4, 99, null, 1321, 776, 231, 2590, 1489, 500, null ],
 	];
 	
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ]
