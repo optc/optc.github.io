@@ -1573,17 +1573,17 @@ window.specials = {
         onDeactivation: function(p) {
             window.specials[1232].turnedOn = false;
         }
-    },
+    }, /*
     1233: {//Tashigi
         //TODO
         affinity: function(p){ return 1.5; },
-        type: "color affinity"
+        type: "affinity",
     },
     1234: {//Tashigi
          //TODO
         affinity: function(p){ return 1.5; },
-        type: "color affinity"
-    },
+        type: "affinity",
+    },*/
     1239: {
         turnedOn: false,
         onActivation: function(p) {
