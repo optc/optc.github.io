@@ -6204,33 +6204,33 @@ window.details = {
 		specialName: "Blood of the Devil Warrior",
 	},
     1229: {//Sentomaru
-		captain: "Unknown",
+		captain: "Boosts the ATK of Powerhouse characters by 2x, and his OWN ATK by 2x.",
 		special: "Deals 100,000 fixed damage to one enemy. Reduces Special Cooldown of your top row by 2 turns",
         sailor: "Cannot be Blown Away (Such as Raid Boss Kuma)",
-		specialName: "Sentomaru Special",
+		specialName: "Leg-Locked Heave-Ho",
 	},
     1230: {//Sentomaru
 		captain: "Boosts the ATK of Powerhouse characters by 2.5x, but boost his OWN ATK by 2.75x. Reduces damage received by 10%",
 		special: "Deals 100,000 fixed damage to one enemy. Reduces Special Cooldown of your top row by 2 turns",
         sailor: "Cannot be Blown Away (Such as Raid Boss Kuma)",
-		specialName: "Sentomaru Special",
+		specialName: "Leg-Locked Heave-Ho",
 	},
     1231: {//Smoker
-		captain: "Unknown",
+		captain: "Boosts ATK of Striker and Driven characters by 1.75x and reduces their RCV by 50%. If this character becomes your captain in the middle of an island, reduces damage received by 30% and boosts ATK of Striker and Driven characters by 1.25x",
 		special: "Deals large [DEX] damage to one enemy. Swaps this unit with your captain for 2 turns",
         specialNotes: "This is the same type of ability as raid boss Shiki's swap.",
-		specialName: "Smoker Special",
+		specialName: "Armed - White Launcher",
         sailor: "Boosts ATK of Striker characters by 50",
 	},
     1232: {//Smoker
 		captain: "Boosts ATK of Striker and Driven characters by 2.25x and reduces their RCV by 50%. If this character becomes your captain in the middle of an island, reduces damage received by 30% and boosts ATK of Striker and Driven characters by 1.3x",
 		special: "Deals large [DEX] damage to one enemy. Swaps this unit with your captain for 2 turns",
         specialNotes: "This is the same type of ability as raid boss Shiki's swap.",
-		specialName: "Smoker Special",
+		specialName: "Armed - White Launcher",
         sailor: "Boosts ATK of Striker characters by 50",
 	},
     1233: {//Tashigi
-		captain: "Unknown",
+		captain: "Boosts the ATK of Slasher and Cerebral characters by 1.5x, and their RCV by 1.2x",
 		special: "Deals 15x character's ATK in [QCK] damage to all enemies. Boosts the 'Color Affinity' of Slasher and Cerebral character's regular attacks by a large amount for 2 turns",
         specialNotes: "'Color Affinity' is a new mechanic and must be explored",
 		specialName: "Cutting Drizzle",
@@ -6244,29 +6244,29 @@ window.details = {
         sailor: "Boosts RCV of Slasher characters by 30",
 	},
     1235: {//Maynard
-		captain: "Unknown",
+		captain: "Boosts ATK of [PSY] characters by 1.75x, deals 3x character's ATK to all enemies at the end of each turn",
 		special: "Deals several times the character's ATK in [PSY] damage to one enemy. Delays all enemies for 1 turn",
 		specialNotes: "#{specialProportional : higher : ??? * (remaining HP) / (total HP) }",
-		specialName: "Maynard Special",
+		specialName: "Sword of Silence",
         sailor: "Reduces duration of Blindness for 3 turns",
 	},
     1236: {//Maynard
 		captain: "Boosts ATK of [PSY] characters by 2x, deals 5x character's ATK to all enemies at the end of each turn",
         special: "Deals several times the character's ATK in [PSY] damage to one enemy. Delays all enemies for 1 turn",
 		specialNotes: "#{specialProportional : higher : ??? * (remaining HP) / (total HP) }",
-		specialName: "Maynard Special",
+		specialName: "Sword of Silence",
         sailor: "Reduces duration of Blindness for 3 turns",
 	},
     1237: {//Bastille
-		captain: "Unknown",
+		captain: "Boosts ATK of all characters by 2x after the 15th hit in the chain",
 		special: "Deals 20x character's ATK in [STR] damage to all enemies. Boost ATK of all characters by 2x after 30th hit in the chain for 3 turns.",
-		specialName: "Bastille Special",
+		specialName: "Shark Cutter - Flash",
         sailor: "Makes [QCK] orbs \"beneficial\" for this unit"
 	},
     1238: {//Bastille
-		captain: "Boosts ATK of all characters by 2x after the 15st hit in the chain and by 3x after the 30th hit",
+		captain: "Boosts ATK of all characters by 2x after the 15th hit in the chain and by 3x after the 30th hit",
 		special: "Deals 20x character's ATK in [STR] damage to all enemies. Boost ATK of all characters by 2x after 30th hit in the chain for 3 turns.",
-		specialName: "Bastille Special",
+		specialName: "Shark Cutter - Flash",
         sailor: "Makes [QCK] orbs \"beneficial\" for this unit"
 	},
     1239: {//6* Kizaru
@@ -6274,15 +6274,15 @@ window.details = {
         specialName: "Yasakani no Magatama",
         special: [
 			{
-				"description": "Unknown",
+				"description": "For Shooter and Slasher characters, randomize all orbs. Deals 10 hits of small random typeless damage to random enemies.",
 				"cooldown": [ 6, 3 ],
 			},
 			{
-				"description": "Unknown",
+				"description": "For Shooter and Slasher characters, randomize all orbs. Recovers 5x character's RCV in HP. Deals 10 hits of random typeless damage to random enemies.",
 				"cooldown": [ 12, 9 ],
 			},
 			{
-				"description": "Changes all orbs on Shooter and Slasher characters into Matching orbs. Recovers 10x character's RCV in HP. Deals 10 hits of random typeless damage to random enemies.",
+				"description": "Changes all orbs on Shooter and Slasher characters into Matching orbs. Recovers 10x character's RCV in HP. Deals 10 hits of large random typeless damage to random enemies.",
 				"cooldown": [ 20, 17 ],
 			},
 		],    
@@ -6293,15 +6293,15 @@ window.details = {
         specialName: "Yasakani no Magatama",
         special: [
 			{
-				"description": "Unknown",
+				"description": "For Shooter and Slasher characters, randomize all orbs. Deals 10 hits of small random typeless damage to random enemies.",
 				"cooldown": [ 6, 3 ],
 			},
 			{
-				"description": "Unknown",
+				"description": "For Shooter and Slasher characters, randomize all orbs. Recovers 5x character's RCV in HP. Deals 10 hits of random typeless damage to random enemies.",
 				"cooldown": [ 12, 9 ],
 			},
 			{
-				"description": "Changes all orbs on Shooter and Slasher characters into Matching orbs. Recovers 10x character's RCV in HP. Deals 10 hits of random typeless damage to random enemies.",
+				"description": "Changes all orbs on Shooter and Slasher characters into Matching orbs. Recovers 10x character's RCV in HP. Deals 10 hits of large random typeless damage to random enemies.",
 				"cooldown": [ 20, 17 ],
 			},
 		],    

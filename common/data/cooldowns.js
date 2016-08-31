@@ -1221,4 +1221,23 @@ window.cooldowns = [
 	null,//byrnndi world
 	[ 29, 16 ],
 	[ 29, 16 ],
+	null,
+	null,
+	null,
+	null,
+	null,
+	null,
+	22,
+	22,
+	19,
+	19,
+	23,
+	23,
+	20,
+	20,
+	22,
+	22,
+	null,//Kizaru
+	null,//Kizaru
+	
 ];
