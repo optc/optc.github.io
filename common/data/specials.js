@@ -1548,4 +1548,66 @@ window.specials = {
 			});
 		}
 	},
+    1231: {
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[1231].turnedOn = true;
+			p.scope.notify({
+				text: 'Only affects damage if Smoker is your captain',
+				name: '1231warning'
+			});
+		},
+        onDeactivation: function(p) {
+            window.specials[1231].turnedOn = false;
+        }
+    },
+    1232: {
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[1232].turnedOn = true;
+			p.scope.notify({
+				text: 'Only affects damage if Smoker is your captain',
+				name: '1232warning'
+			});
+		},
+        onDeactivation: function(p) {
+            window.specials[1232].turnedOn = false;
+        }
+    },
+    1233: {//Tashigi
+        //TODO
+        affinity: function(p){ return 1.5; },
+        type: "color affinity"
+    },
+    1234: {//Tashigi
+         //TODO
+        affinity: function(p){ return 1.5; },
+        type: "color affinity"
+    },
+    1239: {
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[1239].turnedOn = true;
+			p.scope.notify({
+				text: 'Only affects damage if Kizaru is your captain',
+				name: '1239warning'
+			});
+		},
+        onDeactivation: function(p) {
+            window.specials[1239].turnedOn = false;
+        }
+    },
+    1240: {
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[1240].turnedOn = true;
+			p.scope.notify({
+				text: 'Only affects damage if Kizaru is your captain',
+				name: '1240warning'
+			});
+		},
+        onDeactivation: function(p) {
+            window.specials[1240].turnedOn = false;
+        }
+    },
 };

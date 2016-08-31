@@ -3150,4 +3150,61 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Slasher") ? 2 : 1; },
         hp: function(p) { return p.unit.class.has("Powerhouse") ? 1.75 : 1; },
     },
+    1229: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 2 : p.unit.class.has("Powerhouse") ? 2 : 1; }  
+    },
+    1230: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 2.75 : p.unit.class.has("Powerhouse") ? 2.5 : 1; }  
+    },
+    1231: {
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? (window.specials[1231].turnedOn || window.specials[1232].turnedOn ? 2.1875 : 1.75) : 1; },
+        rcv: function(p) { return .5 }
+    },
+    1232: {
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? (window.specials[1231].turnedOn || window.specials[1232].turnedOn ? 2.925 : 2.25) : 1; },
+        rcv: function(p) { return .5 }
+    },
+    1233: {
+		atk: function(p) {
+			return p.unit.class.has("Slasher") && p.unit.class.has("Cerebral") ? 2.25 :
+				p.unit.class.has("Slasher") || p.unit.class.has("Cerebral") ? 1.5 :
+				1;
+		},
+        rcv: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Cerebral") ? 1.2 : 1; }
+	},
+    1234: {
+		atk: function(p) {
+			return p.unit.class.has("Slasher") && p.unit.class.has("Cerebral") ? 2.56 :
+				p.unit.class.has("Slasher") || p.unit.class.has("Cerebral") ? 1.6 :
+				1;
+		},
+        rcv: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Cerebral") ? 1.3 : 1; }
+	},
+    1235: {
+		atk: function(p) { return p.unit.type == "PSY" ? 1.75 : 1; },
+	},
+    1236: {
+		atk: function(p) { return p.unit.type == "PSY" ? 2 : 1; },
+	},
+    1237: {
+		hit: function(n) {
+			return n > 15 ? 2 : 1;
+		}
+	},
+    1238: {
+		hit: function(n) {
+			return n > 30 ? 3 :
+				n > 15 ? 2 : 1;
+		}
+	},
+    1239: {
+        atk: function(p){ 
+            return window.specials[1239].turnedOn || window.specials[1240].turnedOn ? 3 : 2; },
+        rcv: function(p) { return 1.3 }
+    },
+    1240: {
+        atk: function(p){ 
+            return window.specials[1239].turnedOn || window.specials[1240].turnedOn ? 3 : 2; },
+        rcv: function(p) { return 1.3 }
+    },
 };

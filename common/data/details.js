@@ -6242,21 +6242,22 @@ window.details = {
 		specialName: "Leg-Locked Heave-Ho",
 	},
     1231: {//Smoker
-		captain: "Boosts ATK of Striker and Driven characters by 1.75x and reduces their RCV by 50%. If this character becomes your captain in the middle of an island, reduces damage received by 30% and boosts ATK of Striker and Driven characters by 1.25x",
+		captain: "Boosts ATK of Striker and Driven characters by 1.75x and reduces RCV of all characters by 50%. If this character becomes your captain in the middle of an island, reduces damage received by 30% and boosts ATK of Striker and Driven characters by 1.25x",
 		special: "Deals large [DEX] damage to one enemy. Swaps this unit with your captain for 2 turns",
         specialNotes: "This is the same type of ability as raid boss Shiki's swap.",
 		specialName: "Armed - White Launcher",
         sailor: "Boosts ATK of Striker characters by 50",
 	},
     1232: {//Smoker
-		captain: "Boosts ATK of Striker and Driven characters by 2.25x and reduces their RCV by 50%. If this character becomes your captain in the middle of an island, reduces damage received by 30% and boosts ATK of Striker and Driven characters by 1.3x",
+		captain: "Boosts ATK of Striker and Driven characters by 2.25x and reduces RCV of all characters by 50%. If this character becomes your captain in the middle of an island, reduces damage received by 30% and boosts ATK of Striker and Driven characters by 1.3x",
 		special: "Deals large [DEX] damage to one enemy. Swaps this unit with your captain for 2 turns",
-        specialNotes: "This is the same type of ability as raid boss Shiki's swap.",
+        specialNotes: "This is the same type of ability as raid boss Shiki's swap. You cannot use it if another effect swaps your captain. (Such as if Shiki swaps first)",
 		specialName: "Armed - White Launcher",
         sailor: "Boosts ATK of Striker characters by 50",
 	},
     1233: {//Tashigi
 		captain: "Boosts the ATK of Slasher and Cerebral characters by 1.5x, and their RCV by 1.2x",
+        captainNotes: "Attack boost stacks, so a Slasher Cerebral unit has 2.25x ATK",
 		special: "Deals 15x character's ATK in [QCK] damage to all enemies. Boosts the 'Color Affinity' of Slasher and Cerebral character's regular attacks by a large amount for 2 turns",
         specialNotes: "'Color Affinity' is a new mechanic and must be explored",
 		specialName: "Cutting Drizzle",
@@ -6264,6 +6265,7 @@ window.details = {
 	},
     1234: {//Tashigi
 		captain: "Boosts the ATK of Slasher and Cerebral characters by 1.6x, and their RCV by 1.3x",
+        captainNotes: "Attack boost stacks, so a Slasher Cerebral unit has 2.56x ATK",
 		special: "Deals 15x character's ATK in [QCK] damage to all enemies. Boosts the 'Color Affinity' of Slasher and Cerebral character's regular attacks by a large amount for 2 turns",
         specialNotes: "'Color Affinity' is a new mechanic and must be explored",
 		specialName: "Cutting Drizzle",
@@ -6309,7 +6311,7 @@ window.details = {
 			},
 			{
 				"description": "Changes all orbs on Shooter and Slasher characters into Matching orbs. Recovers 10x character's RCV in HP. Deals 10 hits of large random typeless damage to random enemies.",
-				"cooldown": [ 20, 17 ],
+				"cooldown": [ 20, 17 ], 
 			},
 		],    
 		specialNotes: "#{randomHits : 10}",

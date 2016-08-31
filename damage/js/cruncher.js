@@ -192,6 +192,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if (enabledEffects[i].hasOwnProperty('atk'))
                 result = applyCaptainEffectsToDamage(result,enabledEffects[i].atk,null,false,enabledEffects[i].sourceSlot);
         }
+        
         // if the user has specified a custom order, sort by that
         if ($scope.tdata.orderOverride.hasOwnProperty(type)) {
             var order = $scope.tdata.orderOverride[type];
@@ -586,7 +587,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
      * The function should return true if there's a conflict between specials
      */
     var computeSpecialsCombinations = function() {
-        var result = { type: [ ], class: [ ], orb: [ ], condition: [ ] };
+        var result = { type: [ ], class: [ ], orb: [ ], affinity: [ ], condition: [ ] };
         chainSpecials = [ ];
         chainAddition = [ ];
         staticMultiplier = [ ];
@@ -597,6 +598,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 result[data.type].push({ sourceSlot: data.sourceSlot, f: (data.atk || data.atkStatic), s: data.hasOwnProperty('atkStatic') });
             if (data.hasOwnProperty('orb'))
                 result.orb.push({ sourceSlot: data.sourceSlot, f: data.orb });
+            if (data.hasOwnProperty('affinity'))
+                result.affinity.push({ sourceSlot: data.sourceSlot, f: data.affinity });
             if (data.hasOwnProperty('chain'))
                 chainSpecials.push({ sourceSlot: data.sourceSlot, chain: data.chain, chainLimiter: data.chainLimiter || function() { return Infinity; } });
             if (data.hasOwnProperty('chainAddition'))
