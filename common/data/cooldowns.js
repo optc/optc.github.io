@@ -1227,8 +1227,8 @@ window.cooldowns = [
 	null,
 	null,
 	null,
-	22,
-	22,
+	22,//Sentomaru
+	22,//Sentomaru
 	19,
 	19,
 	23,

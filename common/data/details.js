@@ -6205,13 +6205,39 @@ window.details = {
 	},
     1229: {//Sentomaru
 		captain: "Boosts the ATK of Powerhouse characters by 2x, and his OWN ATK by 2x.",
-		special: "Deals 100,000 fixed damage to one enemy. Reduces Special Cooldown of your top row by 2 turns",
-        sailor: "Cannot be Blown Away (Such as Raid Boss Kuma)",
+        special: [
+			{
+				"description": "Deals 500 fixed damage to one enemy. Reduces Special Cooldown of your top row by 1 turn",
+				"cooldown": 11,
+			},
+			{
+				"description": "Deals 5,000 fixed damage to one enemy. Reduces Special Cooldown of your top row by 1 turn",
+				"cooldown": 15,
+			},
+			{
+				"description": "Deals 100,000 fixed damage to one enemy. Reduces Special Cooldown of your top row by 2 turns",
+				"cooldown": 22, 
+			},
+		],
+		sailor: "Cannot be Blown Away (Such as Raid Boss Kuma)",
 		specialName: "Leg-Locked Heave-Ho",
 	},
     1230: {//Sentomaru
 		captain: "Boosts the ATK of Powerhouse characters by 2.5x, but boost his OWN ATK by 2.75x. Reduces damage received by 10%",
-		special: "Deals 100,000 fixed damage to one enemy. Reduces Special Cooldown of your top row by 2 turns",
+        special: [
+			{
+				"description": "Deals 500 fixed damage to one enemy. Reduces Special Cooldown of your top row by 1 turn",
+				"cooldown": 11,
+			},
+			{
+				"description": "Deals 5,000 fixed damage to one enemy. Reduces Special Cooldown of your top row by 1 turn",
+				"cooldown": 15,
+			},
+			{
+				"description": "Deals 100,000 fixed damage to one enemy. Reduces Special Cooldown of your top row by 2 turns",
+				"cooldown": 22, 
+			},
+		],
         sailor: "Cannot be Blown Away (Such as Raid Boss Kuma)",
 		specialName: "Leg-Locked Heave-Ho",
 	},
@@ -6274,11 +6300,11 @@ window.details = {
         specialName: "Yasakani no Magatama",
         special: [
 			{
-				"description": "For Shooter and Slasher characters, randomize all orbs. Deals 10 hits of small random typeless damage to random enemies.",
+				"description": "For Shooter and Slasher characters, randomizes all non-matching orbs. Deals 10 hits of small random typeless damage to random enemies.",
 				"cooldown": [ 6, 3 ],
 			},
 			{
-				"description": "For Shooter and Slasher characters, randomize all orbs. Recovers 5x character's RCV in HP. Deals 10 hits of random typeless damage to random enemies.",
+				"description": "For Shooter and Slasher characters, randomizes all non-matching orbs. Recovers 5x character's RCV in HP. Deals 10 hits of random typeless damage to random enemies.",
 				"cooldown": [ 12, 9 ],
 			},
 			{
