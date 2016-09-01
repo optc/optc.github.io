@@ -809,6 +809,8 @@ window.flags = {
     827: { global: 1 },
     828: { rr: 1, rro: 1, lrr: 1 },
 	829: { rr: 1, rro: 1, lrr: 1 },
+    835: { global: 1 },
+    836: { global: 1 },
 	837: { rr: 1, rro: 1, global: 1 },
 	838: { rr: 1, rro: 1, global: 1 },
 	839: { rr: 1, rro: 1, global: 1 },

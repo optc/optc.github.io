@@ -6203,6 +6203,36 @@ window.details = {
         specialNotes: "\"Beneficial\" orbs grant the same ATK boost as matching orbs.",
 		specialName: "Blood of the Devil Warrior",
 	},
+    1223: { // Story Bastille
+        captain: "Boosts the ATK of [INT] characters by 2x",
+        special: "Deals 25x character's ATK in [INT] damage to all enemies",
+        specialName: "Shark Knife - Flash",
+    },
+    1224: { // Story Yamakaji
+        captain: "Boosts the ATK of Slasher characters by 2x",
+        special: "Reduces damage received by 60% for 1 turn",
+        specialName: "Appreciation For The Great Men",
+    },
+    1225: { // Story Hina
+        captain: "Boosts the ATK and RCV of [INT] characters by 1.5x",
+        special: "Delays all enemies for 1 turn, and locks all orbs for 1 turn",
+        specialName: "Binding Iron Tablet",
+    },
+    1226: { // Story Smoker
+        captain: "Boosts the ATK of Driven characters by 2x",
+        special: "Cuts the current HP of one enemy by 10% and changes own orb into [PSY]",
+        specialName: "Seastone Truncheon",
+    },
+    1227: { //Story Mihawk
+        captain: "Reduces cooldown of Slasher specials by 2 turns at the start of the fight. Boosts the ATK of Slasher characters by 2.25x",
+        special: "Deals 100,000 fixed damage to one enemy, and boosts own ATK by 1.75x for 1 turn ",
+        specialName: "Black Blade - Slashing Burial Drop",
+    },
+    1228: { // Story Kizaru
+        captain: "Boosts the ATK of Shooter characters by 2.5x",
+        special: "For Shooter characters, changes [BLOCK] orbs into Matching, and deals large [DEX] damage to all enemies",
+        specialName: "The Cave of the Sun Goddess",
+    },
     1229: {//Sentomaru
 		captain: "Boosts the ATK of Powerhouse characters by 2x, and his OWN ATK by 2x.",
         special: [
@@ -6321,11 +6351,11 @@ window.details = {
         specialName: "Yasakani no Magatama",
         special: [
 			{
-				"description": "For Shooter and Slasher characters, randomize all orbs. Deals 10 hits of small random typeless damage to random enemies.",
+				"description": "For Shooter and Slasher characters,randomizes all non-matching orbs. Deals 10 hits of small random typeless damage to random enemies.",
 				"cooldown": [ 6, 3 ],
 			},
 			{
-				"description": "For Shooter and Slasher characters, randomize all orbs. Recovers 5x character's RCV in HP. Deals 10 hits of random typeless damage to random enemies.",
+				"description": "For Shooter and Slasher characters, randomizes all non-matching orbs. Recovers 5x character's RCV in HP. Deals 10 hits of random typeless damage to random enemies.",
 				"cooldown": [ 12, 9 ],
 			},
 			{

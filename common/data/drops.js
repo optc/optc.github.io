@@ -521,6 +521,25 @@ window.drops = {
 			"16": [ 1158 ],
         },
         
+        {
+            name: "Marineford",
+            shortName: "Marineford",
+            thumb: 1228,
+            completion: '5x Rainbow Gems',
+            "01": [  ],
+            "02": [ 1223 ],
+            "03": [  ],
+            "04": [  ],
+            "05": [ 1224 ],
+            "06": [ 1225 ],
+            "07": [  ],
+            "08": [ 815 ],
+            "09": [ 1226 ],
+			"10": [  ],
+			"11": [ 1227 ],
+			"12": [ 1228 ]
+        },
+        
     ],
 
     'Weekly Island': [
@@ -1237,6 +1256,7 @@ window.drops = {
         {
             name: 'Clash!! Tyrant Kuma',
             thumb: 836,
+            global: true,
             Master: [ 835 ],
             Expert: [ 835 ]
         },
@@ -1308,7 +1328,7 @@ window.drops = {
             thumb: 893,
             challenge:'Total number of hits above 50,000',
             challengeData: [['6 Times','1x Forbidden Tome + 1x Red Elder'],['14 Times','1x Forbidden Tome, 1x RCV Cotton Candy, 1x Rainbow Gem'],['32 Times','1x Anti-Bind Forbidden Tome, 2x Rainbow Gems']],
-            'Master': [ -367, -316, -314, -312, -308, -259, -257, -255, -253, -251, -221, -218, -217, -210, -75, -30, -16, -15, -8 ]
+            "All Difficulties": [ -367, -316, -314, -312, -308, -259, -257, -255, -253, -251, -221, -218, -217, -210, -75, -30, -16, -15, -8 ]
         },
 
         {
@@ -1317,15 +1337,14 @@ window.drops = {
             global: true,
             challenge: 'Total number of hits over 30,000',
             challengeData: [['10 Times','Vivi\'s Breather Unit'],['35 Times','1x HP Cotton Candy'],['72 Times','3x Rainbow Gems']],
-            Expert: [ 659, 680, 682, 684, 1200, 1198 ],
+            "All Difficulties": [ 659, 680, 682, 684, 1200, 1198 ],
 			"Completion Units": [686]
         },
         
         {
             name: '2nd Anniversary Celebration! Duel! Ace',
             thumb: 1023,
-            Expert: [ 1023 ],
-            Master: [ 1023 ]
+            "All Difficulties": [ 1023 ]
         },
 
         {

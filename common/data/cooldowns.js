@@ -1221,12 +1221,12 @@ window.cooldowns = [
 	null,//byrnndi world
 	[ 29, 16 ],
 	[ 29, 16 ],
-	null,
-	null,
-	null,
-	null,
-	null,
-	null,
+	20,
+	15,
+	16,
+	17,
+	23,
+	22,
 	22,//Sentomaru
 	22,//Sentomaru
 	19,
