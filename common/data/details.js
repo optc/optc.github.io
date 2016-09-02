@@ -5043,11 +5043,11 @@ window.details = {
         special: [
 			{
 				"description": "Makes Damage and Health Cutting Specials of Slasher and Free Spirit characters bypass all defensive Buffs, deals 20x his ATK in PSY damage to one enemy.",
-				"cooldown": 18
+				"cooldown": [ 18, 13 ]
 			},
 			{
 				"description": "Makes Damage and Health Cutting Specials of all characters bypass all defensive Buffs, deals 50x his ATK in PSY damage to one enemy.",
-				"cooldown": 25
+				"cooldown": [ 25, 20 ]
 			}
 		],
 		specialNotes: "#{stages}"
@@ -5058,11 +5058,11 @@ window.details = {
         special: [
 			{
 				"description": "Makes Damage and Health Cutting Specials of Slasher and Free Spirit characters bypass all defensive Buffs, deals 20x his ATK in PSY damage to one enemy.",
-				"cooldown": 18
+				"cooldown": [ 18, 13 ]
 			},
 			{
 				"description": "Makes Damage and Health Cutting Specials of all characters bypass all defensive Buffs, deals 50x his ATK in PSY damage to one enemy.",
-				"cooldown": 25
+				"cooldown": [ 25, 20 ]
 			}
 		],
 		specialNotes: "#{stages}"

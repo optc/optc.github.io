@@ -1226,7 +1226,7 @@ window.units = [
     [ "Hina, of Marineford", "INT", [ "Fighter", "Cerebral" ], 3, 15, 5, 2, 70, null, 205, 105, 61, null, null, null, null ],
     [ "Smoker, of Marineford", "PSY", [ "Striker", "Driven" ], 3, 15, 6, 2, 70, null, 241, 160, 33, null, null, null, null ],
     [ "Mihawk, of Marineford", "QCK", "Slasher", 4, 30, 4, 3, 99, null, 167, 124, 6, 2119, 1390, 132, null ],
-    [ "Kizaru, of Marineford", "DEX", [ "Shooter", "Fighter" ], 4, 30, 4, 3, 99, null, 166, 109, 50, null, null, null, null ],
+    [ "Kizaru, of Marineford", "DEX", [ "Shooter", "Fighter" ], 4, 30, 4, 3, 99, null, 166, 109, 50, 2084, 1252, 209, null ],
     [ "Sentomaru, Navy HQ Officer", "INT", [ "Striker", "Slasher" ], 4, 15, 6, 3, 50, 392109, 251, 96, 30, 1603, 442, 140, 1 ],
     [ "Sentomaru of the Axe, Navy HQ Officer", "INT", [ "Striker", "Slasher" ], 5, 30, 4, 4, 99, 4000000, 1524, 376, 90, 3205, 1006, 362, 1 ],
     [ "Smoker, G-5 Unit 01", "DEX", [ "Striker", "Driven" ], 4, 15, 6, 3, 50, 392109, 178, 159, 22, 1324, 659, 99, 1 ],
