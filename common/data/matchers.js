@@ -210,12 +210,6 @@ window.matchers = [
     },
 
     {
-        name: 'Orb Matcher',
-        target: 'special',
-        matcher: /(Changes.+(orb|orbs)).+Matching/i
-    },
-
-    {
         name: 'Self-orb controllers',
         target: 'special',
         matcher: /Changes.+own orb.+into/i
@@ -234,7 +228,7 @@ window.matchers = [
     },
     
     {
-        name: 'Orb matcher',
+        name: 'Orb matchers',
         target: 'special',
         matcher: /(Changes.+(orb|orbs))[^,]+Matching/i,
         include: [ 1036, 1037 ]

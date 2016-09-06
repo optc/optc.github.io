@@ -260,7 +260,7 @@ window.ships = [
     { // 21
         name: 'Burning WB Ship',
         thumb: null,
-        description: 'Boosts ATK by 1.5x, and HP by 1.4x. Take damage at the end of each turn. Special: Cuts the current HP of all enemies by 20%.  (cooldown MAX: ?? Turns)',
+        description: 'Boosts ATK by 1.5x, and HP by 1.4x. Take 5% current HP damage at the end of each turn. Special: Cuts the current HP of all enemies by 20%.  (cooldown MAX: 18 Turns)',
         atk: function(p) {
             return 1.5;
         },

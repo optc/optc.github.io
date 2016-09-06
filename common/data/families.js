@@ -1239,4 +1239,11 @@ window.families = [
     "Bastille",
     "Kizaru",
     "Kizaru",
+    "Koala",
+    "Koala",
+    "Hack",
+    "Hack",
+    "Monkey D. Luffy",
+    "Portgas D. Ace",
+	"Portgas D. Ace",
 ];

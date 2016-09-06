@@ -1239,6 +1239,13 @@ window.units = [
     [ "\"Shark Cutter\" Bastille, Navy HQ Vice Admiral", "STR", [ "Slasher", "Driven" ], 5, 30, 7, 4, 99, 4000000, 1222, 519, 83, 2606, 1313, 259, 1 ],
     [ "Yellow Monkey, Navy HQ's Strongest Forces", "PSY", [ "Slasher", "Shooter" ], 5, 30, 6, 3, 70, 1066998, 316, 293, 101, 1376, 841, 279, 1 ],
     [ "Borsalino", "PSY", [ "Slasher", "Shooter" ], 6, 55, 5, 4, 99, 5000000, 1321, 776, 231, 2590, 1489, 500, 1 ],
+    [ "Koala, Fishman Karate Assistant Instructor", "STR", [ "Fighter", "Free Spirit" ], 3, 12, 4, 1, 50, null, 33, 40, 49, 764, 543, 196, null ],
+    [ "Koala, Revolutionary Army Fishman Karate Assistant Instructor", "STR", [ "Fighter", "Free Spirit" ], 4, 20, 4, 3, 99, null, 700, 481, 137, 1426, 1190, 357, null ],
+    [ "Hack, Fishman Karate Instructor", "INT", [ "Fighter", "Powerhouse" ], 3, 12, 6, 1, 50, null, null, null, null, 904, 570, 91, null ],
+    [ "Hack, Revolutionary Army Fishman Karate Instructor", "INT", [ "Fighter", "Powerhouse" ], 4, 20, 5, 2, 99, null, 849, 523, 51, null, null, null, null ],
+    [ "Luffy, At Marineford", "QCK", [ "Fighter", "Striker" ], 4, 25, 4, 3, 99, 3000000, 340, 195, 22, 1890, 1242, 309, null ],
+    [ "Ace, At Marineford", "STR", [ "Fighter", "Shooter" ], 4, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Ace, At Marineford Evolved", "STR", [ "Fighter", "Shooter" ], 5, null, null, null, null, null, null, null, null, null, null, null, null ],
 	];
 	
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ]

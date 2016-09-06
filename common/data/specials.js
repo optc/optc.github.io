@@ -1351,11 +1351,11 @@ window.specials = {
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, 1, 1.5); }
     },
     1088: {
-        atk: function(p) { return p.unit.class.has("Slasher" || "Driven") ? 1.5 : 1},
+        atk: function(p) { return p.unit.class.has("Slasher" || p.unit.class.has("Driven")) ? 1.5 : 1},
         type: "class"
     },
     1089: {
-        atk: function(p) { return p.unit.class.has("Slasher" || "Driven") ? 1.5 : 1},
+        atk: function(p) { return p.unit.class.has("Slasher" || p.unit.class.has("Driven")) ? 1.5 : 1},
         type: "class"
     },
     1096: {

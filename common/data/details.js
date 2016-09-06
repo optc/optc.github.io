@@ -5070,13 +5070,13 @@ window.details = {
     1046: {
         captain: "Boosts ATK of Free Spirit Units by 2.75x following a chain of Good > Great > Perfect hits",
         specialName: "Dragon Claw Fist: Dragon's Breath",
-        special: "Deals random typeless damage to all enemies. For two turns every attacking character gets 55x Sabos ATK as additional typeless bonus damage if you hit a Good/Great/Perfect",
+        special: "Deals random typeless damage to all enemies. For 2 turns every attacking character gets 55x character's ATK as additional typeless bonus damage if you hit a Good/Great/Perfect",
         specialNotes: "The Random Damage is between 10k and 30k <br> Extra Damage can only be boosted by conditional Boosters"
     },
     1047: {
         captain: "Boosts ATK of Free Spirit Units by 3.5x following a chain of Good > Great > Perfect hits",
         specialName: "Dragon Claw Fist: Dragon's Breath",
-        special: "Deals random typeless damage to all enemies. For two turns every attacking character gets 55x Sabos ATK as additional typeless bonus damage if you hit a Good/Great/Perfect",
+        special: "Deals random typeless damage to all enemies. For 2 turns every attacking character gets 55x character's ATK as additional typeless bonus damage if you hit a Good/Great/Perfect",
         specialNotes: "The Random Damage is between 10k and 30k <br> Extra Damage can only be boosted by conditional Boosters"
     },
 	1048: {
@@ -6317,13 +6317,13 @@ window.details = {
 	},
     1237: {//Bastille
 		captain: "Boosts ATK of all characters by 2x after the 15th hit in the chain",
-		special: "Deals 20x character's ATK in [STR] damage to all enemies. Boost ATK of all characters by 2x after 30th hit in the chain for 3 turns.",
+		special: "Deals 20x character's ATK in [STR] damage to all enemies. Boost ATK of all characters by 2x after 30th hit in the chain for 1 turn.",
 		specialName: "Shark Cutter - Flash",
         sailor: "Makes [QCK] orbs \"beneficial\" for this unit"
 	},
     1238: {//Bastille
 		captain: "Boosts ATK of all characters by 2x after the 15th hit in the chain and by 3x after the 30th hit",
-		special: "Deals 20x character's ATK in [STR] damage to all enemies. Boost ATK of all characters by 2x after 30th hit in the chain for 3 turns.",
+		special: "Deals 20x character's ATK in [STR] damage to all enemies. Boost ATK of all characters by 2x after 30th hit in the chain for 1 turn.",
 		specialName: "Shark Cutter - Flash",
         sailor: "Makes [QCK] orbs \"beneficial\" for this unit"
 	},
@@ -6364,6 +6364,46 @@ window.details = {
 			},
 		],    
 		specialNotes: "#{randomHits : 10}",
+    },
+    1241: {//Fortnight Koala
+        captain: "Boosts chain multiplier by 1.5x. Recovers 1x character's RCV in HP at the end of each turn",
+        special: "Deals 11x character's ATK in [STR] damage to one enemy. For 1 turn every attacking character gets 15x character's ATK as additional typeless bonus damage if you hit a Good/Great/Perfect",
+        specialName: "Fishman Karate, Midair Upwards Kick",
+    },
+    1242: {//Fortnight Koala
+        captain: "Boosts chain multiplier by 2x. Recovers 2x character's RCV in HP at the end of each turn",
+        special: "Deals 11x character's ATK in [STR] damage to one enemy. For 1 turn every attacking character gets 15x character's ATK as additional typeless bonus damage if you hit a Good/Great/Perfect",
+        specialName: "Fishman Karate, Midair Upwards Kick",
+    },
+    1243: {// Fortnight Hack
+        captain: "Boosts ATK of Fighter and Powerhouse characters by 1.3x",
+        captainNotes: "Effect stacks, so Fighter/Powerhouse characters get 1.69x ATK",
+        special: "Deals 15x character's ATK in [INT] damage to all enemies. Changes own orb into [INT] and changes adjacent orbs into [G] orbs",
+        specialName:"Fishman karate, KO blow",
+        specialNotes: "#{gOrbs}"
+    },
+    1244: {// Fortnight Hack
+        captain: "Boosts ATK of Fighter characters by 1.75x and the ATK of Powerhouse characters by 1.3x",
+        captainNotes: "Effect stacks, so Fighter/Powerhouse characters get 2.275x ATK",
+        special: "Deals 15x character's ATK in [INT] damage to all enemies. Changes own orb into [INT] and changes adjacent orbs into [G] orbs",
+        specialName:"Fishman karate, KO blow",
+        specialNotes: "#{gOrbs}"
+    },
+    1245: {// Event Luffy
+        captain: "Boosts ATK of Fighter characters by 1.75x. If HP is below 10%, boosts ATK of Fighter characters by 3x instead.",
+        special: "Deals random [QCK] damage to all enemies, and boosts ATK of Fighter characters by 1.3x for 1 turn. If \"Light of a Firefly, Fire Daruma\" is used again in the same turn the special is activated in, boosts ATK of Fighter characters by 2x instead.",
+        specialName:"Gomu Gomu no Stamp Gatling",
+        specialNotes: "Light of a Firefly, Fire Daruma is Event Ace's special ability.",
+    },
+    1246: {// Event Ace
+        captain: "Unknown",
+        special: "Unknown",
+        specialName:"Light of a Firefly, Fire Daruma",
+    },
+    1247: {// Event Ace
+        captain: "Unknown",
+        special: "Unknown",
+        specialName:"Light of a Firefly, Fire Daruma",
     },
 };
 
