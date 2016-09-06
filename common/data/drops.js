@@ -986,7 +986,8 @@ window.drops = {
             thumb: 808,
             global: true,
             condition: 'You can only bring Slasher and Cerebral units. (No Evolution/Booster)',
-            "All Difficulties": [ 807, 809, 811, -811, -645, -641, -631, -502, -11, -12, -9 ]
+            "Japan": [ 807, 809, 811, -811, -645, -641, -631, -502, -11, -12, -9 ],
+            "Global": [ 807, 809, 811, -811, -645, -451, -631, -502, -11, -12, -9 ],
         },
 
         {
@@ -996,7 +997,8 @@ window.drops = {
             condition: 'You can only bring Impact and Free Spirit units. (No Evo/Boosters)',
             challenge: 'Total Damage dealt to enemies in one turn',
             challengeData: [['100,000 Damage','1x DEX Elder Turtle'],['500,000 Damage','1x Rainbow Gem, 1x ATK Cotton Candy'],['2,000,000 Damage','2x Rainbow Gems, 1x Auto-Heal Forbidden Tome']],
-            "All Difficulties": [ 847, 849, 850, -849, -647, -617, -616, -615, -578, -508, -455 ]
+            "Japan": [ 847, 849, 850, -849, -647, -617, -616, -615, -578, -508, -455 ],
+            "Global": [ 847, 849, 850, -849, -750, -617, -616, -615, -578, -508, -455 ]
         },
 
         {
@@ -1136,6 +1138,13 @@ window.drops = {
             thumb: 1215,
             condition: "Total Crew Cost must be lower than 180 (Including friend captain)",
             "All Difficulties": [ 1215, 1216, 1217, 1218, -1025, -1029, -1033, -671, -956, -964, -633, -504, -1218 ]
+        },
+        
+        {
+            name: "Revolutionary Armed Forces!",
+            thumb: null,
+            condition: "Free Spirit Characters have their cooldowns reduced by 10 turns at the start of the fight",
+            "All Difficulties": [  ]
         },
 		
     ],
@@ -1353,7 +1362,28 @@ window.drops = {
             Exhibition: [ 776, 778, 803, 832, 834, 859, 861, 883, 902, 904, 925, 927, 952, 984, 1017, 1019, 1197 ],
             Underground: [ 776, 778, 803, 832, 834, 859, 861, 883, 902, 904, 925, 927, 952, 984, 1017, 1019, 1197 ],
             Chaos: [ 776, 778, 780, 803, 805, 830, 832, 834, 859, 861, 881, 883, 900, 902, 923, 925, 950, 982, 984, 1017, 1015, 1040, 1042, 1086, 1088, 1090, 1101, 1103, 1105, 1140, 1142, 1144, 1195 ]
-        }
+        },
+        
+        {
+            name: 'Rescue Ace Event - Akainu',
+            thumb: null,
+            challenge: "10, 20, 30 stamina difficulty. 30 Stamina has a chance of dropping the Universal Skill Book.",
+            "All Difficulties": [ -261, -562, -720, -748, -935 ]
+        },
+        
+        {
+            name: 'Rescue Ace Event - Aokiji',
+            thumb: null,
+            challenge: "10, 20, 30 stamina difficulty. 30 Stamina has a chance of dropping the Universal Skill Book.",
+            "All Difficulties": [ -416, -459, -530, -669, -578 ]
+        },
+        
+        {
+            name: 'Rescue Ace Event - Kizaru',
+            thumb: null,
+            challenge: "10, 20, 30 stamina difficulty. 30 Stamina has a chance of dropping the Universal Skill Book.",
+            "All Difficulties": [ -367, -649, -718, -870, -1001 ]
+        },
 
    ]
 

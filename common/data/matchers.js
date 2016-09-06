@@ -327,13 +327,13 @@ window.matchers = [
     {
         name: 'Bind reducers',
         target: 'special',
-        matcher: /(reduces|remove).+bind.+duration/i
+        matcher: /(reduces|removes).+bind.+duration/i
     },
 
     {
         name: 'Despair reducers',
         target: 'special',
-        matcher: /(reduces|remove).+despair.+duration/i
+        matcher: /(reduces|removes).+despair.+duration/i
     },
 
     {
@@ -345,7 +345,7 @@ window.matchers = [
     {
         name: 'Blindness removers',
         target: 'special',
-        matcher: /(reduces|remove) blindness/i
+        matcher: /(reduces|removes) blindness/i
     },
 
     {
@@ -387,7 +387,7 @@ window.matchers = [
 	{
 		name: 'Paralysis reducers',
         target: 'special',
-        matcher: /(reduces|remove).+Paralysis/i 
+        matcher: /(reduces|removes).+Paralysis/i 
 	},
     
     /* * * * * Sailor * * * * */

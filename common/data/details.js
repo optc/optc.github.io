@@ -5938,7 +5938,7 @@ window.details = {
     },
     1185: {
         captain: "Boosts ATK of Slasher and Cerebral units by 1.75x. Gives chance of duplicating a drop upon completion of the island.",
-        captainNotes: "Does not work if she was not your captain upon starting the island. Stacks with other addional drop captains, giving you two chances of getting an extra drop.",
+        captainNotes: "Does not work if he was not your captain upon starting the island. Stacks with other addional drop captains, giving you two chances of getting an extra drop.",
         special: [
 			{
 				"description": "Deals 4x character's ATK in [INT] damage to all enemies. Changes own orb into [INT].",
@@ -5955,7 +5955,7 @@ window.details = {
     },
     1186: {
         captain: "Boosts ATK of Slasher and Cerebral units by 1.75x. Gives chance of duplicating a drop upon completion of the island.",
-        captainNotes: "Does not work if she was not your captain upon starting the island. Stacks with other addional drop captains, giving you two chances of getting an extra drop.",
+        captainNotes: "Does not work if he was not your captain upon starting the island. Stacks with other addional drop captains, giving you two chances of getting an extra drop.",
         special: [
 			{
 				"description": "Deals 4x character's ATK in [INT] damage to all enemies. Changes own orb into [INT].",
@@ -6215,7 +6215,7 @@ window.details = {
     },
     1225: { // Story Hina
         captain: "Boosts the ATK and RCV of [INT] characters by 1.5x",
-        special: "Delays all enemies for 1 turn, and locks all orbs for 1 turn",
+        special: "Delays all enemies for 1 turn, and locks own orb for 1 turn",
         specialName: "Binding Iron Tablet",
     },
     1226: { // Story Smoker
