@@ -329,6 +329,12 @@ window.matchers = [
         target: 'special',
         matcher: /(reduces|removes).+despair.+duration/i
     },
+    
+    {
+        name: 'Silence reducers',
+        target: 'special',
+        matcher: /(reduces|removes).+silence.+duration/i
+    },
 
     {
         name: 'Block orb removers',
