@@ -345,7 +345,7 @@ window.matchers = [
     {
         name: 'Blindness removers',
         target: 'special',
-        matcher: /(reduces|removes) blindness/i
+        matcher: /(reduces|removes).+blindness/i
     },
 
     {
