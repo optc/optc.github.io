@@ -535,8 +535,8 @@ window.drops = {
             "07": [  ],
             "08": [ 815 ],
             "09": [ 1226 ],
-			"10": [  ],
-			"11": [ 1227 ],
+			"10": [ 1227 ],
+			"11": [  ],
 			"12": [ 1228 ]
         },
         
@@ -1004,6 +1004,7 @@ window.drops = {
         {
             name: "Wapol's Counterattack",
             thumb: 852,
+            global: true,
             condition: 'You can only bring Shooter and Driven units. (No Evo/Boosters)',
             challenge: 'Cumulative Damage dealt to enemies in a single run',
             challengeData: [['400,000 Damage','1x QCK Elder Turtle'],['1,400,000 Damage','1x ATK Cotton Candy, 1x Rainbow Gem'],['4,000,000 Damage','2x Rainbow Gems, 1x Despair Forbidden Tome']],
@@ -1178,6 +1179,7 @@ window.drops = {
         {
             name: 'Clash!! Black Arm Zephyr',
             thumb: 353,
+            global: true,
             Master: [ 88, 114, 118, 352, 354 ],
             Expert: [ 99, 114, 117, 352, 354 ]
         },
@@ -1359,29 +1361,29 @@ window.drops = {
         {
             name: 'Colosseum',
             thumb: 779,
-            Exhibition: [ 776, 778, 803, 832, 834, 859, 861, 883, 902, 904, 925, 927, 952, 984, 1017, 1019, 1197, 1221 ],
-            Underground: [ 776, 778, 803, 832, 834, 859, 861, 883, 902, 904, 925, 927, 952, 984, 1017, 1019, 1197, 1221 ],
-            Chaos: [ 776, 778, 780, 803, 805, 830, 832, 834, 859, 861, 881, 883, 900, 902, 923, 925, 950, 982, 984, 1017, 1015, 1040, 1042, 1086, 1088, 1090, 1101, 1103, 1105, 1140, 1142, 1144, 1195, 1219, 1221 ]
+            Exhibition: [ 776, 778, 803, 832, 834, 859, 861, 883, 902, 904, 925, 927, 952, 984, 1017, 1019, 1197, 1221, 1252, 1253 ],
+            Underground: [ 776, 778, 803, 832, 834, 859, 861, 883, 902, 904, 925, 927, 952, 984, 1017, 1019, 1197, 1221, 1252, 1253 ],
+            Chaos: [ 776, 778, 780, 803, 805, 830, 832, 834, 859, 861, 881, 883, 900, 902, 923, 925, 950, 982, 984, 1017, 1015, 1040, 1042, 1086, 1088, 1090, 1101, 1103, 1105, 1140, 1142, 1144, 1195, 1219, 1221, 1250, 1252 ]
         },
         
         {
             name: 'Rescue Ace Event - Akainu',
             thumb: null,
-            challenge: "10, 20, 30 stamina difficulty. 30 Stamina has a chance of dropping the Universal Skill Book.",
+            challenge: "10, 20, 30, 35 stamina difficulty. 30 and 35 Stamina has a chance of dropping the Universal Skill Book.",
             "All Difficulties": [ -261, -562, -720, -748, -935 ]
         },
         
         {
             name: 'Rescue Ace Event - Aokiji',
             thumb: null,
-            challenge: "10, 20, 30 stamina difficulty. 30 Stamina has a chance of dropping the Universal Skill Book.",
+            challenge: "10, 20, 30, 35 stamina difficulty. 30 and 35 Stamina has a chance of dropping the Universal Skill Book.",
             "All Difficulties": [ -416, -459, -530, -669, -578 ]
         },
         
         {
             name: 'Rescue Ace Event - Kizaru',
             thumb: null,
-            challenge: "10, 20, 30 stamina difficulty. 30 Stamina has a chance of dropping the Universal Skill Book.",
+            challenge: "10, 20, 30, 35 stamina difficulty. 30 and 35 Stamina has a chance of dropping the Universal Skill Book.",
             "All Difficulties": [ -367, -649, -718, -870, -1001 ]
         },
 

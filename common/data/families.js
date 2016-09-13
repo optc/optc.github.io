@@ -1246,4 +1246,10 @@ window.families = [
     "Monkey D. Luffy",
     "Portgas D. Ace",
 	"Portgas D. Ace",
+    "Marco",
+    "Marco",
+    "Marco",
+    "Marco",
+    "Doma",
+    "Shura",
 ];

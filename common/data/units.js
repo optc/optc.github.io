@@ -1161,7 +1161,7 @@ window.units = [
     [ "Koala, Beach Angel", "QCK", [ "Fighter", "Free Spirit" ], 4, 13, 6, 2, 50, 392109, 133, 79, 37, 994, 479, 187, 1 ],
     [ "Koala, Goddess of Paradise", "QCK", [ "Fighter", "Free Spirit" ], 5, 20, 4, 3, 99, 3000000, 902, 412, 123, 1822, 984, 359, 1 ],
     [ "Gild Tesoro", "PSY", [ "Cerebral", "Driven" ], 4, 30, 5, 5, 99, 3000000, 187, 156, 56, 1756, 1094, 268, 1 ],
-    [ "Gild Tesoro, Casino King of Gran Tesoro", "PSY", [ "Cerebral", "Driven" ], 5, 50, 4, 5, 99, 5000000, 1756, 1094, 268, 2256, 1300, 306, 1 ],
+    [ "Gild Tesoro, Casino King of Gran Tesoro", "PSY", [ "Cerebral", "Driven" ], 5, 50, 4, 5, 99, 2000000, 1756, 1094, 268, 2256, 1300, 306, 1 ],
     [ "Carina", "DEX", [ "Cerebral", "Slasher" ], 3, 10, 5, 1, 35, 136167, 98, 54, 58, 652, 394, 185, 1 ],
     [ "Carina, Diva of Gran Tesoro", "DEX", [ "Cerebral", "Slasher" ], 4, 20, 5, 3, 70, 1066998, 597, 321, 132, 1074, 719, 306, 1 ],
     [ "Baccarat", "INT", [ "Fighter", "Striker" ], 3, 12, 5, 2, 50, 392109, 44, 31, 123, 888, 444, 222, 1 ],
@@ -1246,6 +1246,12 @@ window.units = [
     [ "Luffy, At Marineford", "QCK", [ "Fighter", "Striker" ], 4, 25, 4, 3, 99, 3000000, 340, 195, 22, 1890, 1242, 309, null ],
     [ "Ace, At Marineford", "STR", [ "Fighter", "Shooter" ], 4, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Ace, At Marineford Evolved", "STR", [ "Fighter", "Shooter" ], 5, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Kimono Marco", "DEX", [ "Fighter", "Powerhouse" ], 4, 13, 4, 2, 50, null, null, null, null, 940, 504, 201, null ],
+    [ "Kimono Marco Evolved", "DEX", [ "Fighter", "Powerhouse" ], 5, 13, 4, 3, 99, null, 870, 452, 164, null, null, null, null ],
+    [ "Coliseum Marco", "QCK", [ "Fighter", "Powerhouse" ], 4, 25, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Coliseum Marco Evolved", "QCK", [ "Fighter", "Powerhouse" ], 5, 40, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Coliseum Doma", "INT", "Slasher", 4, 30, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Coliseum Shura", "DEX", "Striker", 4, 20, null, null, null, null, null, null, null, null, null, null, null ],
 	];
 	
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ]

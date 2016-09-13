@@ -5578,11 +5578,13 @@ window.details = {
 	1126: {
 		captain: "Boosts ATK and HP of [DEX] characters by 1.5x",
 		special: "Empties all slots with [BLOCK] orbs, deals severe typeless damage based on number of [BLOCK] slots emptied to all enemies. Changes [EMPTY] orbs into Matching orbs",
+        specialNotes: "The exact multiplier used is chosen based on the number of [BLOCK] orbs consumed: 0 orbs - Cannot Activate; 1 orb - 20x ATK; 2 orbs - 40x ATK; 3 orbs - 100x ATK; 4 orbs - 200x ATK; 5 orbs - 300x ATK; 6 orbs - 500x ATK.",
 		specialName: "Admiral Killer Bowling"
 	},
-	1127: {
+	1127: {//orlumbus
 		captain: "Boosts ATK of [DEX] characters by 2.25x and their HP by 1.5x",
 		special: "Empties all slots with [BLOCK] orbs, deals severe typeless damage based on number of [BLOCK] slots emptied to all enemies. Changes [EMPTY] orbs into Matching orbs",
+        specialNotes: "The exact multiplier used is chosen based on the number of [BLOCK] orbs consumed: 0 orbs - Cannot Activate; 1 orb - 20x ATK; 2 orbs - 40x ATK; 3 orbs - 100x ATK; 4 orbs - 200x ATK; 5 orbs - 300x ATK; 6 orbs - 500x ATK.",
 		specialName: "Admiral Killer Bowling"
 	},
 	1128: {
@@ -6070,12 +6072,12 @@ window.details = {
     1204: {
         captain: "Boosts ATK and RCV of Free Spirit characters by 1.2x",
         specialName: "Awakening Tune Power",
-        special: "Deals 500 damage to each Enemy, changes [RCV] orbs into [EMPTY] and [EMPTY] into [PSY] orbs"
+        special: "Deals 500 fixed damage to each Enemy, changes [RCV] orbs into [EMPTY] and [EMPTY] into [PSY] orbs"
     },
     1205: {
         captain: "Boosts ATK and RCV of Free Spirit characters by 1.5x",
         specialName: "Awakening Tune Power",
-        special: "Deals 500 damage to each Enemy, changes [RCV] orbs into [EMPTY] and [EMPTY] into [PSY] orbs"
+        special: "Deals 500 fixed damage to each Enemy, changes [RCV] orbs into [EMPTY] and [EMPTY] into [PSY] orbs"
     },
     1206: {
         captain: "Boosts HP by 1.3x",
@@ -6404,6 +6406,32 @@ window.details = {
         captain: "Unknown",
         special: "Unknown",
         specialName:"Light of a Firefly, Fire Daruma",
+    },
+    1248: {// Kimono Marco
+        captain: "Boosts ATK of Fighter and Powerhouse characters by 1.6x",
+        special: "Recovers 3,000 HP and reduces damage received by 50% for 1 turn",
+        specialName:"Shining Daylight - Dayflower",
+    },
+    1249: {// Kimono Marco
+        captain: "Boosts ATK of Fighter and Powerhouse characters by 1.3x",
+        special: "Recovers 3,000 HP and reduces damage received by 50% for 1 turn",
+        specialName:"Shining Daylight - Dayflower",
+    },
+    1250: {// Coliseum Marco
+        captain: "Unknown",
+        special: "Unknown",
+    },
+    1251: {// Coliseum Marco
+        captain: "Unknown",
+        special: "Unknown",
+    },
+    1252: {// Coliseum Doma
+        captain: "Unknown",
+        special: "Unknown",
+    },
+    1253: {// Coliseum Shura
+        captain: "Unknown",
+        special: "Unknown",
     },
 };
 
