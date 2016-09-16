@@ -1147,6 +1147,13 @@ window.drops = {
             condition: "Free Spirit Characters have their cooldowns reduced by 10 turns at the start of the fight",
             "All Difficulties": [ 1241, 1243, -1035, -965, -1031, -1081, -754, -966, -502, -707, -955 ]
         },
+        
+        {
+            name: "Gather! Whitebeard Alliance",
+            thumb: null,
+            condition: "Unknown",
+            "All Difficulties": [ -669, -1077, -1079, -967, -972, -974, -750, -701, -500 ]
+        },
 		
     ],
 

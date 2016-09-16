@@ -134,7 +134,7 @@ window.ships = [
 
     { // 10
         name: 'Aokiji\'s Bike',
-        thumb: null,
+        thumb: 'ship_0011_c1.png',
         description: 'Boosts ATK and HP of Striker characters by 1.5x, greatly reduces the appearance of RCV orbs',
         atk: function(p) {
             return !p.unit.class.has('Striker') ? 1 :
@@ -148,7 +148,7 @@ window.ships = [
 
     { // 11
         name: 'Ace\'s Striker',
-        thumb: null,
+        thumb: 'ship_0012_c1.png',
         description: 'Boosts ATK of Shooter characters by 1.5x and their HP by 1.3x, reduces cooldown of all specials by 1 turn at the start of the fight',
         atk: function(p) {
             return !p.unit.class.has('Shooter') ? 1 :
@@ -180,7 +180,7 @@ window.ships = [
     
     { //14
         name: 'Kuja Pirate Ship',
-        thumb: null,
+        thumb: 'ship_0015_c1.png',
         description: 'Boosts ATK of Free Spirit characters by 1.5x and their HP by 1.35x, reduces the HP of everyone else by 99%. Special: heals the crew by 6,500HP (cooldown: 15 turns).',
         atk: function(p) {
             return !p.unit.class.has('Free Spirit') ? 1 :
@@ -194,7 +194,7 @@ window.ships = [
     
     { //15
         name: 'Ark Maxim',
-        thumb: null,
+        thumb: 'ship_0016_c1.png',
         description: 'Boosts ATK of QCK and PSY characters by 1.5x and their HP by 1.2x. Special: Deals 56560 fixed Damage to all enemies (cooldown: 17 Turns)',
         atk: function(p) {
             return p.unit.type == "PSY" || p.unit.type == "QCK" ? [ 1.2, 1.2, 1.2, 1.2, 1.2, 1.3, 1.3, 1.3, 1.4, 1.5 ][p.boatLevel - 1] : 1;
@@ -206,7 +206,7 @@ window.ships = [
     
     { // 16
         name: 'Red Force',
-        thumb: null,
+        thumb: 'ship_0017_c1.png',
         description: 'Boosts ATK of Cerebral characters by 1.5x and their HP by 1.35x, Increased Orb Rate for Cerebral characters.',
         atk: function(p) {
             return  !p.unit.class.has('Cerebral') ? 1 : [ 1.0, 1.2, 1.2, 1.2, 1.25, 1.3, 1.4, 1.4, 1.4, 1.5 ][p.boatLevel - 1];
@@ -218,14 +218,14 @@ window.ships = [
     
     { // 17
         name: '2nd Anniversary Thousand Sunny',
-        thumb: null,
+        thumb: 'ship_0018_c1.png',
         description: 'Boosts ATK by 1.2x.',
         atk: function(p) { return 1.2; },
     }, 
     
     { // 18
         name: 'Sun Pirates Ship',
-        thumb: null,
+        thumb: 'ship_0019_c.png',
         description: 'Boosts ATK and HP of Fighter characters depending on the number of Fighters on the team. Sharply reduces ATK and HP of non-Fighter units.',
         atk: function(p) {
             return !p.unit.class.has('Fighter') ? .05 :

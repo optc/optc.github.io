@@ -251,4 +251,20 @@ window.zombies = {
 		type: 'healer',
         multiplier: 5
 	},
+    1241: {//Fortnight Koala
+        type: 'healer',
+        multiplier: 1
+    },
+    1242: {//Fortnight Koala
+        type: 'healer',
+        multiplier: 2
+    },
+    1250: {//Colo Marco
+        type: 'healer',
+        multiplier: 2.5
+    },
+    1251: {//Colo Marco
+        type: 'healer',
+        multiplier: 2.5
+    },
 };

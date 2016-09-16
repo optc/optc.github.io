@@ -6408,30 +6408,56 @@ window.details = {
         specialName:"Light of a Firefly, Fire Daruma",
     },
     1248: {// Kimono Marco
-        captain: "Boosts ATK of Fighter and Powerhouse characters by 1.6x",
+        captain: "Boosts ATK of Fighter and Powerhouse characters by 1.3x",
+        captainNotes: "Ability stacks, so Fighter/Powerhouse characters gets ATK boosted by 1.69x",
         special: "Recovers 3,000 HP and reduces damage received by 50% for 1 turn",
         specialName:"Shining Daylight - Dayflower",
     },
     1249: {// Kimono Marco
-        captain: "Boosts ATK of Fighter and Powerhouse characters by 1.3x",
+        captain: "Boosts ATK of Fighter and Powerhouse characters by 1.6x",
+        captainNotes: "Ability stacks, so Fighter/Powerhouse characters gets ATK boosted by 2.56x",
         special: "Recovers 3,000 HP and reduces damage received by 50% for 1 turn",
         specialName:"Shining Daylight - Dayflower",
     },
     1250: {// Coliseum Marco
-        captain: "Unknown",
-        special: "Unknown",
+        captain: "Boosts ATK of Powerhouse characters by 1.5x and Recovers a variable amount of character's RCV in HP at the end of each turn depending on how many Powerhouse characters are on your team",
+        captainNotes: "1x Powerhouse: .5x RCV | 2x Powerhouse: .75x RCV | 3x Powerhouse: 1x RCV | 4x Powerhouse: 1.5x RCV | 5x Powerhouse: 2x RCV | 6x Powerhouse: 2.5x RCV",
+        special: [
+			{
+				"description": "Randomizes all orbs, and boosts the ATK of Powerhouse characters by 1.5x for 1 turn",
+				"cooldown": [ 21, 6 ],
+			},
+			{
+				"description": "Randomizes non-matching orbs, and boosts ATK of Powerhouse characters by 1.5x for 1 turn",
+				"cooldown": [ 24, 9 ],
+			},
+		], 
+        specialName: "Burning Vanguard",
     },
     1251: {// Coliseum Marco
-        captain: "Unknown",
-        special: "Unknown",
+        captain: "Boosts ATK of Powerhouse characters by 2x and Recovers a variable amount of character's RCV in HP at the end of each turn depending on how many Powerhouse characters are on your team",
+        captainNotes: "1x Powerhouse: .5x RCV | 2x Powerhouse: .75x RCV | 3x Powerhouse: 1x RCV | 4x Powerhouse: 1.5x RCV | 5x Powerhouse: 2x RCV | 6x Powerhouse: 2.5x RCV",
+        special: [
+			{
+				"description": "Randomizes all orbs, and boosts the ATK of Powerhouse characters by 1.5x for 1 turn",
+				"cooldown": [ 21, 6 ],
+			},
+			{
+				"description": "Randomizes non-matching orbs, and boosts ATK of Powerhouse characters by 1.5x for 1 turn",
+				"cooldown": [ 24, 9 ],
+			},
+		], 
+        specialName: "Burning Vanguard",
     },
     1252: {// Coliseum Doma
-        captain: "Unknown",
-        special: "Unknown",
+        captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of [INT] characters by 2x",
+        special: "Changes adjacent orbs into [INT] orbs. Deals 20x character's ATK in [INT] damage to all enemies.",
+        specialName: "Reversed Twin Blades - Surprise Thrust",
     },
     1253: {// Coliseum Shura
-        captain: "Unknown",
-        special: "Unknown",
+        captain: "Boosts ATK of [DEX] characters by 2.25x if HP is above 99% at the start of the turn",
+        special: "For 1 turn, Perfects become harder to hit. If during that turn every unit scores a Perfect hit, boosts ATK of [DEX] characters by 1.75x in the following turn.",
+        specialName: "Angry Instigator",
     },
 };
 

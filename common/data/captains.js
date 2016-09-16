@@ -3207,4 +3207,54 @@ window.captains = {
             return window.specials[1239].turnedOn || window.specials[1240].turnedOn ? 3 : 2; },
         rcv: function(p) { return 1.3 }
     },
+    1241: {
+        chainModifier: function(p) { return 1.5; }
+    },
+    1242: {
+        chainModifier: function(p) { return 2; }
+    },
+    1243: {
+        atk: function(p) {
+			return p.unit.class.has("Fighter") && p.unit.class.has("Powerhouse") ? 1.69 :
+				p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? 1.3 :
+				1;
+		},
+    },
+    1244: {
+        atk: function(p) {
+			return p.unit.class.has("Fighter") && p.unit.class.has("Powerhouse") ? 2.276 :
+				p.unit.class.has("Fighter") && !p.unit.class.has("Powerhouse") ? 1.75 : 
+                !p.unit.class.has("Fighter") && p.unit.class.has("Powerhouse") ? 1.3 :
+				1;
+		},
+    },
+    1245: {
+        atk: function(p) { return !p.unit.class.has("Fighter") ? 1 : p.percHP <= 10.0 && p.unit.class.has("Fighter") ? 3 : 1.75; }
+    },
+    1248: {
+        atk: function(p) {
+			return p.unit.class.has("Fighter") && p.unit.class.has("Powerhouse") ? 1.69 :
+				p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? 1.3 :
+				1;
+		},
+    },
+    1249: {
+        atk: function(p) {
+			return p.unit.class.has("Fighter") && p.unit.class.has("Powerhouse") ? 2.56 :
+				p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? 1.6 :
+				1;
+		},
+    },
+    1250: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 1.5 : 1; },
+    },
+    1251: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 2 : 1; },
+    },
+    1252: {
+        atk: function(p) { return p.unit.type == "INT" ? 2 : 1; },
+    },
+    1253: {
+		atk: function(p) { return p.unit.type == "DEX" && p.percHP >= 99.0 ? 2.25 : 1; }
+	},
 };

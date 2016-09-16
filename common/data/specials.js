@@ -1610,4 +1610,34 @@ window.specials = {
             window.specials[1240].turnedOn = false;
         }
     },
+    1241: {
+        staticMult: function(p) { return 15; }
+    },
+    1242: {
+        staticMult: function(p) { return 15; }
+    },
+    1245: {
+		atk: function(p) { return !p.unit.class.has('Fighter') ? 1 : window.specials[1245].multiplier; },
+		type: "class",
+		onActivation: function(p) {
+			var n = (window.specials[1245].multiplier == 1.3 ? 1 : 0);
+			window.specials[1245].multiplier = [1.3, 2][n];
+			p.scope.notify({
+				text: 'Using the ' + [1.3, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.3][n] + 'x multiplier, disable and re-enable this special',
+				name: '1245warning'
+			});
+		}
+	},
+    1250: {
+		atk: function(p) { return p.unit.class.has("Powerhouse") ? 1.5 : 1; },
+		type: "class"
+	},
+    1251: {
+		atk: function(p) { return p.unit.class.has("Powerhouse") ? 1.5 : 1; },
+		type: "class"
+	},
+    1253: {
+		atk: function(p) { return p.unit.type == "STR" ? 1.75 : 1; },
+		type: "class"
+	},
 };

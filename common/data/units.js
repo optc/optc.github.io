@@ -1246,12 +1246,12 @@ window.units = [
     [ "Luffy, At Marineford", "QCK", [ "Fighter", "Striker" ], 4, 25, 4, 3, 99, 3000000, 340, 195, 22, 1890, 1242, 309, null ],
     [ "Ace, At Marineford", "STR", [ "Fighter", "Shooter" ], 4, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Ace, At Marineford Evolved", "STR", [ "Fighter", "Shooter" ], 5, null, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Kimono Marco", "DEX", [ "Fighter", "Powerhouse" ], 4, 13, 4, 2, 50, null, null, null, null, 940, 504, 201, null ],
-    [ "Kimono Marco Evolved", "DEX", [ "Fighter", "Powerhouse" ], 5, 13, 4, 3, 99, null, 870, 452, 164, null, null, null, null ],
-    [ "Coliseum Marco", "QCK", [ "Fighter", "Powerhouse" ], 4, 25, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Coliseum Marco Evolved", "QCK", [ "Fighter", "Powerhouse" ], 5, 40, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Coliseum Doma", "INT", "Slasher", 4, 30, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Coliseum Shura", "DEX", "Striker", 4, 20, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Kimono Marco", "DEX", [ "Fighter", "Powerhouse" ], 4, 13, 4, 2, 50, null, 142, 79, 40, 940, 504, 201, null ],
+    [ "Kimono Marco Evolved", "DEX", [ "Fighter", "Powerhouse" ], 5, 13, 4, 3, 99, null, 870, 452, 164, 1804, 1017, 374, null ],
+    [ "Coliseum Marco", "QCK", [ "Fighter", "Powerhouse" ], 4, 25, 4, 2, 70, 1066998, 740, 322, 100, 1377, 684, 187, null ],
+    [ "Coliseum Marco Evolved", "QCK", [ "Fighter", "Powerhouse" ], 5, 40, 4, 3, 99, 4000000, 1309, 620, 142, null, null, null, null ],
+    [ "Coliseum Doma", "INT", "Slasher", 4, 30, 6, 3, 99, 3000000, 201, 102, 21, 2001, 1201, 251, null ],
+    [ "Coliseum Shura", "DEX", "Striker", 4, 20, 4, 2, 70, 1778330, 254, 240, 48, 1092, 1029, 179, null ],
 	];
 	
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ]
