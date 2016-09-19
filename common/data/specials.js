@@ -1423,19 +1423,19 @@ window.specials = {
         orb: function(p) { return p.slot == p.sourceSlot ? CrunchUtils.getOrbMultiplier(p.orb, 1, 1.75) : CrunchUtils.getOrbMultiplier(p.orb, 1, 1)}
     },
     1132: {
-        atk: function(p) { return p.unit.class.has("Fighter") ? window.specials[1132].multiplier : 1; },
+        atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Shooter")  ? window.specials[1132].multiplier : 1; },
 		type: "class",
 		onActivation: function(p) {
 			var n = (window.specials[1132].multiplier == 1.5 ? 1 : 0);
 			window.specials[1132].multiplier = [1.5, 1.75][n];
 			p.scope.notify({
 				text: 'Using the ' + [1.5, 1.75][n] + 'x ATK multiplier. To switch to the ' + [1.75, 1.5][n] + 'x multiplier, disable and re-enable this special',
-				name: '1133warning'
+				name: '1132warning'
 			});
 		}
     },
     1133: {
-        atk: function(p) { return p.unit.class.has("Fighter") ? window.specials[1133].multiplier : 1; },
+        atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Shooter") ? window.specials[1133].multiplier : 1; },
 		type: "class",
 		onActivation: function(p) {
 			var n = (window.specials[1133].multiplier == 1.5 ? 1 : 0);
@@ -1450,7 +1450,7 @@ window.specials = {
     	orb: function(p) { return p.unit.class.has("Free Spirit") ? CrunchUtils.getOrbMultiplier(p.orb, 1, 1.5) : CrunchUtils.getOrbMultiplier(p.orb, 1, 1); }	
     },
     1138: {
-        atk: function(p) { return p.unit.class.has("Powerhouse" || "Fighter") ? 1.3 : 1},
+        atk: function(p) { return p.unit.class.has("Powerhouse") || p.unit.class.has("Fighter") ? 1.3 : 1},
         type: "class"
     },
     1153: {

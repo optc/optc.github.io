@@ -5240,7 +5240,7 @@ window.details = {
         specialName: "Haute Couture: Patchwork"
 	},
 	1077:{
-		captain: "Boosts ATK of Striker and Free Spirit characters by 2.25x and their RCV by 1.5x",
+		captain: "Boosts ATK of Striker and Free Spirit characters by 2.25x and their HP by 1.5x",
 		special: [
 			{
 				"description": "Delays all enemies for 1 turn. Locks all orbs for 1 turn. Cuts the current HP of all enemies by 10%",
@@ -6072,12 +6072,12 @@ window.details = {
     1204: {
         captain: "Boosts ATK and RCV of Free Spirit characters by 1.2x",
         specialName: "Awakening Tune Power",
-        special: "Deals 500 fixed damage to each Enemy, changes [RCV] orbs into [EMPTY] and [EMPTY] into [PSY] orbs"
+        special: "Deals 500 fixed damage to each Enemy, changes [RCV] orbs into [QCK] and [TND] into [PSY] orbs"
     },
     1205: {
         captain: "Boosts ATK and RCV of Free Spirit characters by 1.5x",
         specialName: "Awakening Tune Power",
-        special: "Deals 500 fixed damage to each Enemy, changes [RCV] orbs into [EMPTY] and [EMPTY] into [PSY] orbs"
+        special: "Deals 500 fixed damage to each Enemy, changes [RCV] orbs into [QCK] and [TND] into [PSY] orbs"
     },
     1206: {
         captain: "Boosts HP by 1.3x",

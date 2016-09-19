@@ -1243,7 +1243,7 @@ window.units = [
     [ "Koala, Revolutionary Army Fishman Karate Assistant Instructor", "STR", [ "Fighter", "Free Spirit" ], 4, 20, 4, 3, 99, 3000000, 700, 481, 137, 1426, 1190, 357, 1 ],
     [ "Hack, Fishman Karate Instructor", "INT", [ "Fighter", "Powerhouse" ], 3, 12, 6, 1, 50, 392109, 79, 55, 12, 904, 570, 91, 1 ],
     [ "Hack, Revolutionary Army Fishman Karate Instructor", "INT", [ "Fighter", "Powerhouse" ], 4, 20, 5, 2, 99, 3000000, 849, 523, 51, 1872, 1201, 172, 1 ],
-    [ "Luffy, At Marineford", "QCK", [ "Fighter", "Striker" ], 4, 25, 4, 3, 99, 3000000, 340, 195, 22, 1890, 1242, 309, null ],
+    [ "Luffy, At Marineford", "QCK", [ "Fighter", "Striker" ], 5, 25, 4, 3, 99, 3000000, 340, 195, 22, 1890, 1242, 309, null ],
     [ "Ace, At Marineford", "STR", [ "Fighter", "Shooter" ], 4, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Ace, At Marineford Evolved", "STR", [ "Fighter", "Shooter" ], 5, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Kimono Marco", "DEX", [ "Fighter", "Powerhouse" ], 4, 13, 4, 2, 50, null, 142, 79, 40, 940, 504, 201, null ],
@@ -1252,6 +1252,9 @@ window.units = [
     [ "Coliseum Marco Evolved", "QCK", [ "Fighter", "Powerhouse" ], 5, 40, 4, 3, 99, 4000000, 1309, 620, 142, null, null, null, null ],
     [ "Coliseum Doma", "INT", "Slasher", 4, 30, 6, 3, 99, 3000000, 201, 102, 21, 2001, 1201, 251, null ],
     [ "Coliseum Shura", "DEX", "Striker", 4, 20, 4, 2, 70, 1778330, 254, 240, 48, 1092, 1029, 179, null ],
+    [ "Fortnight Squard", "QCK", [ "Striker", "Slasher" ], 4, 25, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Fortnight Decalvan Brothers", "PSY", "Fighter", 4, 25, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Fortnight Whitey Bay", "DEX", [ "Slasher", "Driven" ], 4, 25, null, null, null, null, null, null, null, null, null, null, null ],
 	];
 	
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ]
