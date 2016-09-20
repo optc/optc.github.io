@@ -1150,7 +1150,7 @@ window.drops = {
         
         {
             name: "Gather! Whitebeard Alliance",
-            thumb: null,
+            thumb: 1254,
             condition: "Driven Characters have their cooldowns reduced by 10 turns at the start of the fight",
             "All Difficulties": [ 1254, 1255, 1256, -669, -1077, -1079, -967, -972, -974, -750, -701, -500 ]
         },
