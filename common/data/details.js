@@ -6453,11 +6453,27 @@ window.details = {
         captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of [INT] characters by 2x",
         special: "Changes adjacent orbs into [INT] orbs. Deals 20x character's ATK in [INT] damage to all enemies.",
         specialName: "Reversed Twin Blades - Surprise Thrust",
+        sailor: "Reduces own Silence by 1 Turn"
     },
     1253: {// Coliseum Shura
         captain: "Boosts ATK of [DEX] characters by 2.25x if HP is above 99% at the start of the turn",
         special: "For 1 turn, Perfects become harder to hit. If during that turn every unit scores a Perfect hit, boosts ATK of [DEX] characters by 1.75x in the following turn.",
         specialName: "Angry Instigator",
     },
+    1254: {//FN Squard
+        captain: " Boost ATK of Striker characters by 2.5x until the first hit other than Perfect. Reduce crew's current HP by 5% at the end of each turn.",
+        special: "Deals 10x his ATK to one enemy, reduces crews current HP by 30% and reduces enemies defense by a certain amount for one turn",
+        sailor: "Reduces his own Numbness by 1 turn"
+    },
+    1255: {//FN DeCalvan
+        captain: "Boosts ATK of all characters by 1.5x after the 11th hit in the chain, by 2x after the 16th hit, by 2.5x after the 22nd hit",
+        special: "For 1 turn, makes Perfects slightly easier to hit and amplifies the effect of orbs by 1.5x",
+        sailor: "When HP is low, boost base ATK of Fighters by 40"
+    },
+    1256: {//FN Bailey
+        captain: "Boosts ATK of Slasher and Driven characters by 2x and reduces their RCV by 90%",
+        special: "Shuffle non-matching orbs on Slashers and Driven characters, boost Atk against enemies with increased defense by 1.3x for 1 turn",
+        sailor: "Boosts ATK and RCV of Driven characters by 10"
+    }
 };
 

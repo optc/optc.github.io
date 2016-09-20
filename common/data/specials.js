@@ -1640,4 +1640,15 @@ window.specials = {
 		atk: function(p) { return p.unit.type == "STR" ? 1.75 : 1; },
 		type: "class"
 	},
+    1254: {
+        def: function(p) { return 0.5; } //TODO: get correct value
+    },
+    1255: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, 1, 1.5); }
+    },
+    1256: {
+        atk: function(p) { return 1.3 },
+        type: "condition",
+        warning: "Selected special (%name%) assumes that the enemy has a defense buff active."
+    }
 };

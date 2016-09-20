@@ -3255,6 +3255,15 @@ window.captains = {
         atk: function(p) { return p.unit.type == "INT" ? 2 : 1; },
     },
     1253: {
-		atk: function(p) { return p.unit.type == "DEX" && p.percHP >= 99.0 ? 2.25 : 1; }
-	},
+        atk: function(p) { return p.unit.type == "DEX" && p.percHP >= 99.0 ? 2.25 : 1; }
+    },
+    1254: {
+        hitAtk: function(p) {
+            return p.modifiers.slice(0, p.chainPosition).count("Perfect") == p.chainPosition ? p.unit.class.has("Striker") ? 2.75 : 1 : 1; },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
+    },
+    1256: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Driven") ? 2 : 1; },
+        rcv: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Driven") ? 0.1 : 1; },
+    }
 };
