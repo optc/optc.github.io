@@ -5259,15 +5259,15 @@ window.details = {
 		special: [
 			{
 				"description": "Recovers 6x character's RCV in HP. Removes Paralysis",
-				"cooldown": 14
+				"cooldown": [ 14, 8 ]
 			},
 			{
 				"description": "Recovers 15x character's RCV in HP. Removes Paralysis, Poison, RCV Down, and Blindness",
-				"cooldown": 19
+				"cooldown": [ 19, 13 ]
 			},
 			{
 				"description": "Recovers 50x character's RCV in HP. Removes Paralysis, Poison, RCV Down, and Blindness",
-				"cooldown": 24
+				"cooldown": [ 24, 18 ]
 			},
 		],
 		specialNotes: "#{stages}",
@@ -5278,15 +5278,15 @@ window.details = {
 		special: [
 			{
 				"description": "Recovers 6x character's RCV in HP. Removes Paralysis",
-				"cooldown": 14
+				"cooldown": [ 14, 8 ]
 			},
 			{
 				"description": "Recovers 15x character's RCV in HP. Removes Paralysis, Poison, RCV Down, and Blindness",
-				"cooldown": 19
+				"cooldown": [ 19, 13 ]
 			},
 			{
 				"description": "Recovers 50x character's RCV in HP. Removes Paralysis, Poison, RCV Down, and Blindness",
-				"cooldown": 24
+				"cooldown": [ 24, 18 ]
 			},
 		],
 		specialNotes: "#{stages}",
