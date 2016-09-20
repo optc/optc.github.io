@@ -1076,8 +1076,8 @@ window.cooldowns = [
 	17,
 	[ 20, 16 ], //Leo
 	[ 20, 16 ], //Leo
-	null, //Mansherry
-	null, //Mansherry
+	[ 24, 18 ], //Mansherry
+	[ 24, 18 ], //Mansherry
 	[ 18, 12 ],
 	[ 18, 12 ],
 	[ 23, 17 ],
