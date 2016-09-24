@@ -1241,18 +1241,21 @@ window.cooldowns = [
 	null,//Kizaru
 	[ 19, 11 ],
 	[ 19, 11 ],
-    	[ 20, 15 ],
-    	[ 20, 15 ],
-    	[ 23, 17 ],
-    	null,
-    	null,
-    	[ 13, 13 ],
-    	[ 13, 13 ],
-    	null,//Colo Marco
-    	null,//Colo Marco
-    	[ 24, 14 ],
-    	[ 14, 6 ],
-    	[ 21, 14 ],
-    	[ 19, 12 ],
-    	[ 18, 12 ]
+    [ 20, 15 ],
+    [ 20, 15 ],
+    [ 23, 17 ],
+    [ 17, 17 ],
+    [ 17, 17 ],
+    [ 13, 13 ],
+    [ 13, 13 ],
+    null,//Colo Marco
+    null,//Colo Marco
+    [ 24, 14 ],
+    [ 14, 6 ],
+    [ 21, 14 ],
+    [ 19, 12 ],
+    [ 18, 12 ],
+    null,//Young Whitebeard
+    null,//Young Whitebeard
+    
 ];
