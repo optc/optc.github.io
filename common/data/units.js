@@ -1119,7 +1119,7 @@ window.units = [
 	[ "Nami, Dream-Pursuing Adventurer", "QCK", [ "Striker", "Cerebral" ], 4, 17, 5, 3, 70, 1066998, 190, 81, 57, 1051, 602, 230, 1 ],
 	[ "Nami, Loyal Straw Hat Crew", "QCK", [ "Striker", "Cerebral" ], 5, 27, 6, 4, 99, 4000000, 979, 540, 191, 1980, 1000, 455, 1 ],
     [ "Monkey D. Luffy, Wakes of the Endless Dream, Straw Hat Crew", "STR", [ "Fighter", "Free Spirit" ], 5, 30, 4, 3, 70, 1066998, 390, 290, 150, 1559, 840, 290, 1 ],
-	[ "Monkey D. Luffy, A Vow in the Great Age of Pirates - Pirate King, "STR", [ "Fighter", "Free Spirit" ], 6, 55, 4, 4, 99, 5000000, 1490, 776, 250, 3440, 1430, 351, 1 ],
+	[ "Monkey D. Luffy, A Vow in the Great Age of Pirates - Pirate King", "STR", [ "Fighter", "Free Spirit" ], 6, 55, 4, 4, 99, 5000000, 1490, 776, 250, 3440, 1430, 351, 1 ],
     [ "Cavendish", "QCK", [ "Slasher", "Driven" ], 5, 30, 4, 4, 70, 1066998, 504, 277, 148, 1603, 808, 287, 1 ],
     [ "Cavendish of Hakuba", "QCK", [ "Slasher", "Driven" ], 6, 55, 4, 5, 99, 5000000, 1541, 749, 231, 2970, 1460, 438, 1 ],
     [ "Suleiman", "PSY", [ "Slasher", "Cerebral" ], 4, 18, 6, 3, 70, 1066998, 102, 151, 34, 981, 780, 201, 1 ],
