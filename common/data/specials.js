@@ -1575,12 +1575,12 @@ window.specials = {
         }
     }, /*
     1233: {//Tashigi
-        //TODO
+        //TODO Slasher/Cerebral
         affinity: function(p){ return 1.5; },
         type: "affinity",
     },
     1234: {//Tashigi
-         //TODO
+         //TODO Slasher/Cerebral
         affinity: function(p){ return 1.5; },
         type: "affinity",
     },*/
@@ -1628,6 +1628,30 @@ window.specials = {
 			});
 		}
 	},
+    1246: {
+		atk: function(p) { return !p.unit.class.has('Fighter') ? 1 : window.specials[1246].multiplier; },
+		type: "class",
+		onActivation: function(p) {
+			var n = (window.specials[1246].multiplier == 1.3 ? 1 : 0);
+			window.specials[1246].multiplier = [1.3, 2][n];
+			p.scope.notify({
+				text: 'Using the ' + [1.3, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.3][n] + 'x multiplier, disable and re-enable this special',
+				name: '1246warning'
+			});
+		}
+	},
+    1247: {
+		atk: function(p) { return !p.unit.class.has('Fighter') ? 1 : window.specials[1247].multiplier; },
+		type: "class",
+		onActivation: function(p) {
+			var n = (window.specials[1247].multiplier == 1.3 ? 1 : 0);
+			window.specials[1247].multiplier = [1.3, 2][n];
+			p.scope.notify({
+				text: 'Using the ' + [1.3, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.3][n] + 'x multiplier, disable and re-enable this special',
+				name: '1247warning'
+			});
+		}
+	},
     1250: {
 		atk: function(p) { return p.unit.class.has("Powerhouse") ? 1.5 : 1; },
 		type: "class"
@@ -1650,5 +1674,31 @@ window.specials = {
         atk: function(p) { return 1.3 },
         type: "condition",
         warning: "Selected special (%name%) assumes that the enemy has a defense buff active."
-    }
+    },
+/*  1261: {//Young Senor Pink
+        //TODO Free Spirit / Shooter
+        affinity: function(p){ return 1.5; },
+        type: "affinity",
+    },
+    1262: {//Young Senor Pink
+         //TODO Free Spirit / Shooter
+        affinity: function(p){ return 1.5; },
+        type: "affinity",
+    },*/
+    1263: {
+		atk: function(p) { return p.slot == p.sourceSlot ? 2 : 1; },
+		type: "type"
+	},
+	1264: {
+		atk: function(p) { return p.slot == p.sourceSlot ? 2 : 1; },
+		type: "type"
+	},
+    1265: {
+		atk: function(p) { return p.unit.class.has("Free Spirit") ? 1.75 : 1; },
+		type: "class"
+	},
+    1266: {
+		atk: function(p) { return p.unit.class.has("Free Spirit") ? 1.75 : 1; },
+		type: "class"
+	},
 };

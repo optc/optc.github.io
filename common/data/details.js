@@ -2379,13 +2379,13 @@ window.details = {
 		special: "Boosts chances of getting [INT] orbs for 3 turns",
 		specialName: "Ochenta Fleur - Cuatro Manus Shock",
 		captain: "Boosts ATK and RCV of INT characters by 1.5x",
-        sailor: "Reduces duration of Blindness by 3 turn"
+        sailor: "Reduces duration of Blindness by 3 turns"
 	},
 	558: {
 		special: "Boosts chances of getting [INT] orbs for 3 turns",
 		specialName: "Ochenta Fleur - Cuatro Manus Shock",
 		captain: "Boosts ATK and RCV of INT characters by 2x",
-        sailor: "Reduces duration of Blindness by 3 turn"
+        sailor: "Reduces duration of Blindness by 3 turns"
 	},
 	559: {
 		special: "Changes own orb into [STR], amplifies the effect of orbs by 1.5x for 2 turns",
@@ -4407,13 +4407,13 @@ window.details = {
 	934: {
 		captain: "Boosts ATK of Fighter Characters by 2x, and their HP by 1.5x. If HP is above 70% or below 30%, boosts ATK of Fighter Characters by 2.75 instead",
 		specialName: "Fishman Karate!! Shark Fist Tile Breaker",
-		special: "For 1 turn, Perfects become harder to hit. Deals 20x character's ATK in [INT] damage to all enemies. Changes all Fighter Character orbs to Matching",
+		special: "For 1 turn, Perfects become harder to hit. Deals 20x character's ATK in [INT] damage to all enemies. Changes all Fighter Character orbs into Matching",
 		specialNotes: "Decreases timing window to hit a Perfect. (Animation remains the same)"
 	},
 	935: {
 		captain: "Boosts ATK of Fighter Characters by 2x, and their HP by 1.5x. If HP is above 70% or below 30%, boosts ATK of Fighter Characters by 2.75 instead",
 		specialName: "Fishman Karate!! Shark Fist Tile Breaker",
-		special: "For 1 turn, Perfects become harder to hit. Deals 20x character's ATK in [INT] damage to all enemies. Changes all Fighter Character orbs to Matching",
+		special: "For 1 turn, Perfects become harder to hit. Deals 20x character's ATK in [INT] damage to all enemies. Changes all Fighter Character orbs into matching",
 		specialNotes: "Decreases timing window to hit a Perfect. (Animation remains the same)"
 	},
 	936: {
@@ -4431,12 +4431,12 @@ window.details = {
 	938: {
 		captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of Cerebral characters by 1.5x",
 		specialName: "Cyclone Burst",
-		special: "Reduces Bind duration for one character completely. For Striker and Cerebral characters, changes Bad orbs to Matching"
+		special: "Reduces Bind duration for one character completely. For Striker and Cerebral characters, changes Bad orbs into matching"
 	},
 	939: {
 		captain: "Reduces cooldown of all specials by 3 turns at the start of the fight, boosts ATK of Cerebral characters by 2x",
 		specialName: "Cyclone Burst",
-		special: "Reduces Bind duration for one character completely. For Striker and Cerebral characters, changes Bad orbs to Matching"
+		special: "Reduces Bind duration for one character completely. For Striker and Cerebral characters, changes Bad orbs into matching"
 	},
 	940: {
 		captain: "Boosts ATK and HP of [DEX] Characters by 1.5x",
@@ -4579,23 +4579,23 @@ window.details = {
 	},
 	968:{
 		specialName: "High Heat Ray Laser",
-		special: "Deals 25x ATK to one enemy. Changes own orb to matching orb"
+		special: "Deals 25x ATK to one enemy. Changes own orb into matching orb"
 	},
 	969:{
 		specialName: "High Heat Ray Laser",
-		special: "Deals 25x ATK to one enemy. Changes own orb to matching orb"
+		special: "Deals 25x ATK to one enemy. Changes own orb into matching orb"
 	},
 	970:{
 		specialName: "High Heat Ray Laser",
-		special: "Deals 25x ATK to one enemy. Changes own orb to matching orb"
+		special: "Deals 25x ATK to one enemy. Changes own orb into matching orb"
 	},
 	971:{
 		specialName: "High Heat Ray Laser",
-		special: "Deals 25x ATK to one enemy. Changes own orb to matching orb"
+		special: "Deals 25x ATK to one enemy. Changes own orb into matching orb"
 	},
 	972:{
 		specialName: "High Heat Ray Laser",
-		special: "Deals 25x ATK to one enemy. Changes own orb to matching orb"
+		special: "Deals 25x ATK to one enemy. Changes own orb into matching orb"
 	},
 	973:{
 		captain: "Boosts ATK of Powerhouse Characters by 2x if HP is above 99% at the start of the turn",
@@ -4760,11 +4760,11 @@ window.details = {
         captain: "Boosts ATK of Powerhouse characters by 2x",
         special: [
 			{
-				"description": "For Powerhouse characters, changes Bad orbs to Matching orbs.",
+				"description": "For Powerhouse characters, changes Bad orbs into matching orbs.",
 				"cooldown": 11
 			},
 			{
-				"description": "For all characters, changes Bad orbs to Matching orbs.",
+				"description": "For all characters, changes Bad orbs into matching orbs.",
 				"cooldown": 20
 			}
 		],
@@ -4776,11 +4776,11 @@ window.details = {
 		captainNotes: "\"Beneficial\" orbs grant the same ATK boost as matching orbs while retaining their original function.",
         special: [
 			{
-				"description": "For Powerhouse characters, changes Bad orbs to Matching orbs.",
+				"description": "For Powerhouse characters, changes Bad orbs into matching orbs.",
 				"cooldown": 11
 			},
 			{
-				"description": "For all characters, changes Bad orbs to Matching orbs.",
+				"description": "For all characters, changes Bad orbs into matching orbs.",
 				"cooldown": 20
 			}
 		],
@@ -4999,13 +4999,13 @@ window.details = {
         captain: "Boosts ATK of Free Spirit characters by 2x after scoring 3 Perfects in a row",
         special: "Deals 13x ATK in QCK Damage to one Enemy, Changes Orbs depending on the current HP",
         specialName: "Kenpo: Kick Thrust Drop",
-        specialNotes: "HP>99%: Middle Left and Bottom Left Orbs to matching <br> 99%>HP>30%: Left Column to [G] orbs <br> HP<30%: Left Column to [RCV]"
+        specialNotes: "HP>99%: Middle Left and Bottom Left Orbs into matching <br> 99%>HP>30%: Left Column to [G] orbs <br> HP<30%: Left Column to [RCV]"
     },
     1037: {
         captain: "Boosts ATK of Free Spirit characters by 2.5x after scoring 3 Perfects in a row",
         special: "Deals 13x ATK in QCK Damage to one Enemy, Changes Orbs depending on the current HP",
         specialName: "Kenpo: Kick Thrust Drop",
-        specialNotes: "HP>99%: Middle Left and Bottom Left Orbs to matching <br> 99%>HP>30%: Left Column to [G] orbs <br> HP<30%: Left Column to [RCV]"
+        specialNotes: "HP>99%: Middle Left and Bottom Left Orbs into matching <br> 99%>HP>30%: Left Column to [G] orbs <br> HP<30%: Left Column to [RCV]"
     },
     1038: {
         captain: "Boosts ATK and RCV of [DEX] and [QCK] characters by 1.2x",
@@ -5029,12 +5029,12 @@ window.details = {
     },
     1042: {
         captain: "Boosts ATK of Striker and Slasher characters by 2x, reduces crew's RCV to 0.",
-        special: "Changes [STR] and [QCK] orbs on Strikers and Slashers to matching orbs, cuts the current HP of one enemy by 7%",
+        special: "Changes [STR] and [QCK] orbs on Strikers and Slashers into matching orbs, cuts the current HP of one enemy by 7%",
         specialName: "Hitting Size"
     },
     1043: {
         captain: "Boosts ATK of Striker and Slasher characters by 2.75x if they have a matching Orb, by 2x otherwise, reduces crew's RCV to 0.",
-        special: "Changes [STR] and [QCK] orbs on Strikers and Slashers to matching orbs, cuts the current HP of one enemy by 7%",
+        special: "Changes [STR] and [QCK] orbs on Strikers and Slashers into matching orbs, cuts the current HP of one enemy by 7%",
         specialName: "Hitting Size"
     },
     1044: {
@@ -5351,12 +5351,12 @@ window.details = {
 	},
 	1090: {
 		captain: "Boosts ATK of all characters by 2x if HP is below 30% at the start of the turn",
-		special: "Deals 25x ATK in [PSY] damage to one enemy. If HP < 30% then changes adjacent orbs to Matching orbs",
+		special: "Deals 25x ATK in [PSY] damage to one enemy. If HP < 30% then changes adjacent orbs into matching orbs",
 		specialName: "Double Edge of Revolt"
 	},
 	1091: {
 		captain: "Boosts ATK of all characters by 2.5x if HP is below 30% at the start of the turn",
-		special: "Deals 25x ATK in [PSY] damage to one enemy. If HP < 30% then changes adjacent orbs to Matching orbs",
+		special: "Deals 25x ATK in [PSY] damage to one enemy. If HP < 30% then changes adjacent orbs into matching orbs",
 		specialName: "Double Edge of Revolt"
 	},
     1092: {
@@ -5466,12 +5466,12 @@ window.details = {
     },
 	1107: {
 		captain: "Boosts ATK and HP of Driven characters by 1.5x",
-        special: "Deals 30x the character's ATK as Typeless damage to all enemies. Changes [BLOCK], [G], and [BOMB] orbs on Driven characters to Matching orbs. Boosts ATK of Driven characters by 1.75x for 1 turn.",
+        special: "Deals 30x the character's ATK as Typeless damage to all enemies. Changes [BLOCK], [G], and [BOMB] orbs on Driven characters into matching orbs. Boosts ATK of Driven characters by 1.75x for 1 turn.",
         specialName: "Lion's Threat: Imperial Earth Bind"
 	},
 	1108: {
 		captain: "Boosts ATK and HP of Driven characters by 2x",
-        special: "Deals 30x the character's ATK as Typeless damage to all enemies. Changes [BLOCK], [G], and [BOMB] orbs on Driven characters to Matching orbs. Boosts ATK of Driven characters by 1.75x for 1 turn.",
+        special: "Deals 30x the character's ATK as Typeless damage to all enemies. Changes [BLOCK], [G], and [BOMB] orbs on Driven characters into matching orbs. Boosts ATK of Driven characters by 1.75x for 1 turn.",
         specialName: "Lion's Threat: Imperial Earth Bind"
 	},
     1109: {
@@ -6397,17 +6397,17 @@ window.details = {
         captain: "Boosts ATK of Fighter characters by 1.75x. If HP is below 10%, boosts ATK of Fighter characters by 3x instead.",
         special: "Deals random [QCK] damage to all enemies, and boosts ATK of Fighter characters by 1.3x for 1 turn. If \"Light of a Firefly, Fire Daruma\" is used again in the same turn the special is activated in, boosts ATK of Fighter characters by 2x instead.",
         specialName:"Gomu Gomu no Stamp Gatling",
-        specialNotes: "Light of a Firefly, Fire Daruma is Event Ace's special ability.",
+        specialNotes: "Firefly Light, Fiery Doll is Event Ace's special ability.",
     },
     1246: {// Event Ace
         captain: "Boosts ATK of Fighter characters by 1.2x",
         special: "Reduces crew's current HP by 90%, deals 55x character's ATK in typeless damage to all enemies, and boosts ATK of Fighter characters by 1.3x for 1 turn. If \"Gomu Gomu no Stamp Gatling\" is used again in the same turn the special is activated in, boosts ATK of Fighter characters by 2x instead.",
-        specialName:"Light of a Firefly, Fire Daruma",
+        specialName:"Firefly Light, Fiery Doll",
     },
     1247: {// Event Ace
         captain: "Boosts HP of Fighter characters by 1.2x and their ATK by 2.75x if they have a matching orb, by 2x otherwise",
         special: "Reduces crew's current HP by 90%, deals 55x character's ATK in typeless damage to all enemies, and boosts ATK of Fighter characters by 1.3x for 1 turn. If \"Gomu Gomu no Stamp Gatling\" is used again in the same turn the special is activated in, boosts ATK of Fighter characters by 2x instead.",
-        specialName:"Light of a Firefly, Fire Daruma",
+        specialName:"Firefly Light, Fiery Doll",
     },
     1248: {// Kimono Marco
         captain: "Boosts ATK of Fighter and Powerhouse characters by 1.3x",
@@ -6485,15 +6485,15 @@ window.details = {
         special: [
 			{
 				"description": "Cuts the current HP of each enemy by 10%",
-				"cooldown": [ 23 ],
+				"cooldown": [ 23, 12 ],
 			},
 			{
 				"description": "Cuts the current HP of each enemy by 20%",
-				"cooldown": [ 28 ],
+				"cooldown": [ 28, 17 ],
 			},
             {
 				"description": "Cuts the current HP of each enemy by 40%",
-				"cooldown": [ 36 ],
+				"cooldown": [ 36, 25 ],
 			},
 		], 
         specialName: "Earth Shattering Fist",
@@ -6503,15 +6503,15 @@ window.details = {
         special: [
 			{
 				"description": "Cuts the current HP of each enemy by 10%",
-				"cooldown": [ 23 ],
+				"cooldown": [ 23, 12 ],
 			},
 			{
 				"description": "Cuts the current HP of each enemy by 20%",
-				"cooldown": [ 28 ],
+				"cooldown": [ 28, 17 ],
 			},
             {
 				"description": "Cuts the current HP of each enemy by 40%",
-				"cooldown": [ 36 ],
+				"cooldown": [ 36, 25 ],
 			},
 		],
         specialName: "Earth Shattering Fist",
@@ -6523,18 +6523,18 @@ window.details = {
         specialName: "Five Color Strings (Goshikito)",
     },
     1260: {//Young Doflamingo
-        captain: "Boosts ATK of Driven and Cerebral characters by 2.5x",
+        captain: "Reduces cooldown of Driven specials by 1 turn at the start of the fight. Boosts ATK of Driven characters by 2.5x",
         special: "Deals 25x character's ATK in typeless damage to all enemies. For 3 turns, makes [STR], [DEX], [QCK], [PSY], and [INT] orbs \"beneficial\" for Driven characters",
         specialNotes: "\"Beneficial\" orbs grant the same ATK boost as matching orbs while retaining their original function.",
         specialName: "Five Color Strings (Goshikito)",
     },
-    1261: {//Young Senior Pink
+    1261: {//Young Senor Pink
         captain: "Boosts ATK of Free Spirit characters by 1.5x. Heals for .75x his RCV at the end of the turn each time you hit a Perfect.",
         special: "Randomizes all orbs. Boosts the 'Color Affinity' of Free Spirit and Shooter character's regular attacks by 1.5x for 1 turn",
         specialNotes: "'Color Affinity' boosts color type advantages. For example, a STR unit normally deals 2x to a DEX unit and .5x to QCK. With Color Affinity boost, it will deal 3x to DEX and .25x to QCK. ",
         specialName: "Blood and Gunpowder of the Underground Family",
     },
-    1262: {//Young Senior Pink
+    1262: {//Young Senor Pink
         captain: "Boosts ATK of Free Spirit characters by 1.75x. Heals for .75x his RCV at the end of the turn each time you hit a Perfect.",
         special: "Randomizes all orbs. Boosts the 'Color Affinity' of Free Spirit and Shooter character's regular attacks by 1.5x for 1 turn",
         specialNotes: "'Color Affinity' boosts color type advantages. For example, a STR unit normally deals 2x to a DEX unit and .5x to QCK. With Color Affinity boost, it will deal 3x to DEX and .25x to QCK. ",
@@ -6549,6 +6549,82 @@ window.details = {
         captain: "Boosts ATK of characters with cost 30 or less by 2.5x",
         special: "Deals 20,000 fixed damage to one enemy. Boosts own ATK by 2x for 2 turns",
         specialName: "Iron Leg Sanctions",
+    },
+    1265: {//Kimono Ace
+        captain: "Boosts ATK of Shooter characters by 2x",
+        special: "Recovers 3,000 HP and boosts the ATK of Free Spirit characters by 1.75x for 1 turn",
+        specialName: "Kimono Ace Special",
+    },
+    1266: {//Kimono Ace Evo
+        captain: "Boosts ATK of Shooter characters by 2.5x",
+        special: "Recovers 3,000 HP and boosts the ATK of Free Spirit characters by 1.75x for 1 turn",
+        specialName: "Kimono Ace Special",
+    },
+    1267: {//Legend Blackbeard
+        captain: "Unknown",
+        special: "Unknown",
+        specialName: "Blackbeard Special",
+    },
+    1268: {//Legend Blackbeard
+        captain: "Unknown",
+        special: "Unknown",
+        specialName: "Blackbeard Special",
+    },
+    1269: {//Laffitte
+        captain: "Unknown",
+        special: "Unknown",
+        specialName: "Laffitte Special",
+    },
+    1270: {//Laffitte
+        captain: "Unknown",
+        special: "Unknown",
+        specialName: "Laffitte Special",
+    },
+    1271: {//Van Augur
+        captain: "Unknown",
+        special: "Changes some slots into Matching orbs. For Shooter characters, amplifies the effect of orbs by 1.75x for 1 turn",
+        sailor: "Reduces duration of Blindness by X turns",
+        specialName: "Laffitte Special",
+    },
+    1272: {//Van Augur Evo
+        captain: "Unknown",
+        special: "Changes some slots into Matching orbs. For Shooter characters, amplifies the effect of orbs by 1.75x for 1 turn",
+        sailor: "Reduces duration of Blindness by X turns",
+        specialName: "Van Augur Special",
+    },
+    1273: {//Jesus Burgess
+        captain: "Unknown",
+        special: "Deals damage to all enemies. Boosts ATK of ___ characters for several turns",
+        sailor: "Boosts HP of X characters by Y",
+        specialName: "Jesus Burgess Special",
+    },
+    1274: {//Jesus Burgess Evo
+        captain: "Unknown",
+        special: "Deals damage to all enemies. Boosts ATK of ___ characters for several turns",
+        sailor: "Boosts HP of X characters by Y",
+        specialName: "Jesus Burgess Special",
+    },
+    1275: {//Shiliew
+        captain: "Unknown",
+        special: "Unknown",
+        specialName: "Shiliew Special",
+    },
+    1276: {//Shiliew
+        captain: "Unknown",
+        special: "Unknown",
+        specialName: "Shiliew Special",
+    },
+    1277: {//Doc Q
+        captain: "Unknown",
+        special: "Reduces crew's current HP by __%. Changes ____ orbs on ____ Characters into Matching Orbs,",
+        sailor: "Boosts amount healed from [RCV] orbs",
+        specialName: "Doc Q Special",
+    },
+    1278: {//Doc Q
+        captain: "Unknown",
+        special: "Reduces crew's current HP by __%. Changes ____ orbs on ____ Characters into Matching Orbs,",
+        sailor: "Boosts amount healed from [RCV] orbs",
+        specialName: "Doc Q Special",
     },
 };
 

@@ -3265,5 +3265,35 @@ window.captains = {
     1256: {
         atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Driven") ? 2 : 1; },
         rcv: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Driven") ? 0.1 : 1; },
-    }
+    },
+    1257: {
+		atk: function(p) { return p.percHP <= 50.0 ? 2 : 1; }
+    },
+    1258: {
+		atk: function(p) { return p.percHP <= 50.0 ? 2.5 : 1; }
+    },
+    1259: {
+        atk: function(p) { return p.unit.class.has("Driven") ? 2.5 : 1; },
+    },
+    1260: {
+        atk: function(p) { return p.unit.class.has("Driven") ? 2.5 : 1; },
+    },
+    1261: {
+        atk: function(p) { return p.unit.class.has("Free Spirit") ? 1.5 : 1; },
+    },
+    1262: {
+        atk: function(p) { return p.unit.class.has("Free Spirit") ? 1.75 : 1; },
+    },
+    1263: {
+		atk: function(p) { return p.unit.cost <= 20 ? 2.5 : 1; }
+	},
+    1264: {
+		atk: function(p) { return p.unit.cost <= 30 ? 2.5 : 1; }
+	},
+    1265: {
+        atk: function(p) { return p.unit.class.has("Shooters") ? 2 : 1; },
+    },
+    1266: {
+        atk: function(p) { return p.unit.class.has("Shooters") ? 2.5 : 1; },
+    },
 };
