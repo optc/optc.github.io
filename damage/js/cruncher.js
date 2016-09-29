@@ -746,8 +746,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if(team[z].unit){
                 if(team[z].unit.class.length==2){
                     classes[team[z].unit.class[0]]++;
-                    classes[team[z].unit.class[1]]++; 
-                }else if(team[z].unit.class.length==1){
+                    classes[team[z].unit.class[1]]++;
+                }else{
                     classes[team[z].unit.class]++;
                 }
             }
