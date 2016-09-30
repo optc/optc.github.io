@@ -6571,7 +6571,7 @@ window.details = {
         specialName: "World Shaking Impact",
     },
     1269: {//Laffitte
-        captain: "Unknown",
+        captain: "Recovers 3x character's RCV in HP at the end of each turn. Deals 3x character's ATK in [DEX] damage to all enemies at the end of each turn.",
         special: "Reduces Bind and Despair duration by 2 turns. Makes Badly Matching and [BLOCK] orbs not reduce damage for 4 turns",
         specialNotes: "Ex. A STR character with a QCK orb will still deal regular damage",
         sailor: "Boosts ATK of all characters by 100 if your captain is a Driven character",
@@ -6585,7 +6585,7 @@ window.details = {
         specialName: "Laffitte Special",
     },
     1271: {//Van Augur
-        captain: "Unknown",
+        captain: "Boosts ATK of Shooter characters by 2x",
         special: "Changes orbs in the top row into Matching orbs. For Shooter characters, amplifies the effect of orbs by 1.75x for 1 turn",
         sailor: "Reduces duration of Blindness by 5 turns",
         specialName: "Van Augur Special",
@@ -6597,20 +6597,21 @@ window.details = {
         specialName: "Van Augur Special",
     },
     1273: {//Jesus Burgess
-        captain: "Unknown",
-        special: "Deals large [STR] damage to all enemies. Boosts ATK of Fighter characters by 1.5x for 5 turns",
-        sailor: "Boosts HP of all characters by 75",
-        specialName: "Jesus Burgess Special",
-    },
-    1274: {//Jesus Burgess Evo
-        captain: "Boosts ATK of Fighter and Powerhouse characters by 1.5x and their HP by 1.15x",
+        captain: "Boosts ATK of Fighter and Powerhouse characters by 1.5x and their HP by 1.15",
         captainNotes: "Boosts stack, so a Fighter/Powerhouse character gets 2.25x ATK and 1.3225 HP",
         special: "Deals large [STR] damage to all enemies. Boosts ATK of Fighter characters by 1.5x for 5 turns",
         sailor: "Boosts HP of all characters by 75",
         specialName: "Jesus Burgess Special",
     },
+    1274: {//Jesus Burgess Evo
+        captain: "Boosts ATK of Fighter and Powerhouse characters by 1.6x and their HP by 1.15x",
+        captainNotes: "Boosts stack, so a Fighter/Powerhouse character gets 2.56x ATK and 1.3225 HP",
+        special: "Deals large [STR] damage to all enemies. Boosts ATK of Fighter characters by 1.5x for 5 turns",
+        sailor: "Boosts HP of all characters by 75",
+        specialName: "Jesus Burgess Special",
+    },
     1275: {//Shiliew
-        captain: "Unknown",
+        captain: "Boosts ATK and HP of Slasher characters by 1.5x",
         special: "For each enemy, has a small chance to instantly defeat that enemy.",
         specialNotes: "Not sure how this is affected by resetting or against bosses",
         sailor: "Completely resists Silence on this character",
@@ -6624,13 +6625,13 @@ window.details = {
         specialName: "Shiliew Special",
     },
     1277: {//Doc Q
-        captain: "Unknown",
+        captain: "Reduces RCV of all characters by 99%. Boosts ATK of Slasher and Striker characters by 2.25x if HP is above 99% at the start of the turn",
         special: "Reduces crew's current HP by 10%. Changes [BLOCK], [TND], and [RCV] orbs on Slasher and Striker Characters into Matching Orbs.",
         sailor: "Boosts amount healed from [RCV] orbs by 150 each",
         specialName: "Doc Q Special",
     },
     1278: {//Doc Q Evo
-        captain: "Reduces RCV of all characters by __%. Boosts ATK of Slasher and Striker characters by 2.75x if HP is above 99% at the start of the turn",
+        captain: "Reduces RCV of all characters by 99%. Boosts ATK of Slasher and Striker characters by 2.75x if HP is above 99% at the start of the turn",
         special: "Reduces crew's current HP by 10%. Changes [BLOCK], [TND], and [RCV] orbs on Slasher and Striker Characters into Matching Orbs.",
         sailor: "Boosts amount healed from [RCV] orbs by 150 each",
         specialName: "Doc Q Special",

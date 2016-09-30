@@ -1701,4 +1701,27 @@ window.specials = {
 		atk: function(p) { return p.unit.class.has("Free Spirit") ? 1.75 : 1; },
 		type: "class"
 	},
+    1271: {
+    	orb: function(p) { return p.unit.class.has("Shooter") ? CrunchUtils.getOrbMultiplier(p.orb, 1, 1.75) : CrunchUtils.getOrbMultiplier(p.orb, 1, 1); }	
+    },
+    1272: {
+    	orb: function(p) { return p.unit.class.has("Shooter") ? CrunchUtils.getOrbMultiplier(p.orb, 1, 1.75) : CrunchUtils.getOrbMultiplier(p.orb, 1, 1); }	
+    },
+    1273: {
+		atk: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; },
+		type: "class"
+	},
+    1274: {
+		atk: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; },
+		type: "class"
+	},
+    1282: {
+		atk: function(p) { return 1.2; },
+		type: "class",
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, 1, 1.2); },
+	},
+    1283: {
+		atk: function(p) { return p.unit.class.has("Driven") ? 1.5 : 1; },
+		type: "class"
+	},
 };
