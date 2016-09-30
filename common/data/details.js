@@ -14,11 +14,7 @@ window.details = {
 		captain: "Boosts ATK of STR characters by 1.5x"
 	},
 	4: {
-        captain: {
-			"global": "Boosts ATK of STR characters by 2x",
-			"japan": "Boosts ATK of STR characters by 2x, and ATK of all others by 1.5x"
-		},
-        captainNotes: "The calculator will use the JPN captain",
+        captain: "Boosts ATK of STR characters by 2x, and ATK of all others by 1.5x",
 		special: "Deals 25x character's ATK in STR damage to one enemy",
 		specialName: "Gum-Gum Twin Jet Pistol"
 	},
@@ -6240,15 +6236,15 @@ window.details = {
         special: [
 			{
 				"description": "Deals 500 fixed damage to one enemy. Reduces Special Cooldown of your top row by 1 turn",
-				"cooldown": 11,
+				"cooldown": [ 11, 4 ],
 			},
 			{
 				"description": "Deals 5,000 fixed damage to one enemy. Reduces Special Cooldown of your top row by 1 turn",
-				"cooldown": 15,
+				"cooldown": [ 15, 8 ],
 			},
 			{
 				"description": "Deals 100,000 fixed damage to one enemy. Reduces Special Cooldown of your top row by 2 turns",
-				"cooldown": 22, 
+				"cooldown": [ 22, 15 ], 
 			},
 		],
 		sailor: "Cannot be Blown Away (Such as Raid Boss Kuma)",
@@ -6259,15 +6255,15 @@ window.details = {
         special: [
 			{
 				"description": "Deals 500 fixed damage to one enemy. Reduces Special Cooldown of your top row by 1 turn",
-				"cooldown": 11,
+				"cooldown": [ 11, 4 ],
 			},
 			{
 				"description": "Deals 5,000 fixed damage to one enemy. Reduces Special Cooldown of your top row by 1 turn",
-				"cooldown": 15,
+				"cooldown": [ 15, 8 ],
 			},
 			{
 				"description": "Deals 100,000 fixed damage to one enemy. Reduces Special Cooldown of your top row by 2 turns",
-				"cooldown": 22, 
+				"cooldown": [ 22, 15 ], 
 			},
 		],
         sailor: "Cannot be Blown Away (Such as Raid Boss Kuma)",
@@ -6576,40 +6572,41 @@ window.details = {
     },
     1269: {//Laffitte
         captain: "Unknown",
-        special: "Reduces Bind and Despair duration by __ turns. Makes Badly Matching orbs not reduce damage for __ turns",
+        special: "Reduces Bind and Despair duration by 2 turns. Makes Badly Matching and [BLOCK] orbs not reduce damage for 4 turns",
         specialNotes: "Ex. A STR character with a QCK orb will still deal regular damage",
-        sailor: "Boosts ATK of all characters if your captain is a ____ character",
+        sailor: "Boosts ATK of all characters by 100 if your captain is a Driven character",
         specialName: "Laffitte Special",
     },
     1270: {//Laffitte
-         captain: "Unknown",
-        special: "Reduces Bind and Despair duration by __ turns. Makes Badly Matching orbs not reduce damage for __ turns",
+        captain: "Recovers 3x character's RCV in HP at the end of each turn. Deals 7x character's ATK in [DEX] damage to all enemies at the end of each turn.",
+        special: "Reduces Bind and Despair duration by 2 turns. Makes Badly Matching and [BLOCK] orbs not reduce damage for 4 turns",
         specialNotes: "Ex. A STR character with a QCK orb will still deal regular damage",
-        sailor: "Boosts ATK of all characters if your captain is a ____ character",
+        sailor: "Boosts ATK of all characters by 100 if your captain is a Driven character",
         specialName: "Laffitte Special",
     },
     1271: {//Van Augur
         captain: "Unknown",
-        special: "Changes some slots into Matching orbs. For Shooter characters, amplifies the effect of orbs by 1.75x for 1 turn",
-        sailor: "Reduces duration of Blindness by X turns",
-        specialName: "Laffitte Special",
+        special: "Changes orbs in the top row into Matching orbs. For Shooter characters, amplifies the effect of orbs by 1.75x for 1 turn",
+        sailor: "Reduces duration of Blindness by 5 turns",
+        specialName: "Van Augur Special",
     },
     1272: {//Van Augur Evo
-        captain: "Unknown",
-        special: "Changes some slots into Matching orbs. For Shooter characters, amplifies the effect of orbs by 1.75x for 1 turn",
-        sailor: "Reduces duration of Blindness by X turns",
+        captain: "Reduces cooldown of Shooter specials by 1 turn at the start of the fight. Boosts ATK of Shooter characters by 2.5x.",
+        special: "Changes orbs in the top row into Matching orbs. For Shooter characters, amplifies the effect of orbs by 1.75x for 1 turn",
+        sailor: "Reduces duration of Blindness by 5 turns",
         specialName: "Van Augur Special",
     },
     1273: {//Jesus Burgess
         captain: "Unknown",
-        special: "Deals damage to all enemies. Boosts ATK of ___ characters for several turns",
-        sailor: "Boosts HP of X characters by Y",
+        special: "Deals large [STR] damage to all enemies. Boosts ATK of Fighter characters by 1.5x for 5 turns",
+        sailor: "Boosts HP of all characters by 75",
         specialName: "Jesus Burgess Special",
     },
     1274: {//Jesus Burgess Evo
-        captain: "Unknown",
-        special: "Deals damage to all enemies. Boosts ATK of ___ characters for several turns",
-        sailor: "Boosts HP of X characters by Y",
+        captain: "Boosts ATK of Fighter and Powerhouse characters by 1.5x and their HP by 1.15x",
+        captainNotes: "Boosts stack, so a Fighter/Powerhouse character gets 2.25x ATK and 1.3225 HP",
+        special: "Deals large [STR] damage to all enemies. Boosts ATK of Fighter characters by 1.5x for 5 turns",
+        sailor: "Boosts HP of all characters by 75",
         specialName: "Jesus Burgess Special",
     },
     1275: {//Shiliew
@@ -6619,8 +6616,8 @@ window.details = {
         sailor: "Completely resists Silence on this character",
         specialName: "Shiliew Special",
     },
-    1276: {//Shiliew
-        captain: "Unknown",
+    1276: {//Shiliew Evo
+        captain: "Boosts ATK and HP of Slasher characters by 2x",
         special: "For each enemy, has a small chance to instantly defeat that enemy.",
         specialNotes: "Not sure how this is affected by resetting or against bosses",
         sailor: "Completely resists Silence on this character",
@@ -6628,15 +6625,51 @@ window.details = {
     },
     1277: {//Doc Q
         captain: "Unknown",
-        special: "Reduces crew's current HP by __%. Changes ____ orbs on ____ Characters into Matching Orbs,",
-        sailor: "Boosts amount healed from [RCV] orbs",
+        special: "Reduces crew's current HP by 10%. Changes [BLOCK], [TND], and [RCV] orbs on Slasher and Striker Characters into Matching Orbs.",
+        sailor: "Boosts amount healed from [RCV] orbs by 150 each",
         specialName: "Doc Q Special",
     },
-    1278: {//Doc Q
-        captain: "Unknown",
-        special: "Reduces crew's current HP by __%. Changes ____ orbs on ____ Characters into Matching Orbs,",
-        sailor: "Boosts amount healed from [RCV] orbs",
+    1278: {//Doc Q Evo
+        captain: "Reduces RCV of all characters by __%. Boosts ATK of Slasher and Striker characters by 2.75x if HP is above 99% at the start of the turn",
+        special: "Reduces crew's current HP by 10%. Changes [BLOCK], [TND], and [RCV] orbs on Slasher and Striker Characters into Matching Orbs.",
+        sailor: "Boosts amount healed from [RCV] orbs by 150 each",
         specialName: "Doc Q Special",
+    },
+    1279: {//John Giant
+        captain: "Boosts ATK and HP of Slasher characters by 1.5x",
+        special: "Reduces damage received in the next turn by 50% if the special is activated with less than 50% health remaining",
+        specialName: "John Giant Special",
+    },
+    1280: {//Marineford Aokiji
+        captain: "Boosts ATK of [PSY] characters by 2.5x",
+        special: "Deals 10,000 fixed damage to all enemies and locks all orbs for 1 turn",
+        specialName: "Aokiji Special",
+    },
+    1281: {//Marineford Garp
+        captain: "Boosts ATK of Fighter characters by 2.25x and reduces damage received by 10%",
+        special: "Deals 25x character's ATK in [STR] damage to one enemy that bypasses all defensive Buffs",
+        specialNotes: "Ignores barriers, DEF, and Damage Reduction buffs",
+        specialName: "Garp Special",
+    },
+    1282: {//Marineford Sengoku
+        captain: "Boosts ATK of Cerebral characters by 2.5x",
+        special: "Reduces cooldown of all specials by 1 turn. Boosts the ATK of all characters by 1.2x and amplifies the effect of orbs by 1.2x for 1 turn",
+        specialName: "Sengoku Special",
+    },
+    1283: {//Marineford Akainu
+        captain: "Boosts ATK of Driven characters by 2.5x",
+        special: "Deals 35x character's ATK in [INT] damage to one enemy. Boosts the ATK of Driven characters by 1.5x for 1 turn",
+        specialName: "Akainu Special",
+    },
+    1284: {//Wild Luffy
+        captain: "Boosts ATK of Striker characters by 1.5x and their HP by 1.2x",
+        special: "Reduces duration of Bind and Silence by 3 turns. Randomizes own orb. (Including [BLOCK] orb)",
+        specialName: "Wild Luffy Special",
+    },
+    1285: {//Wild Luffy Evolved
+        captain: "Boosts ATK of Striker characters by 1.5x and their HP by 1.2x",
+        special: "Reduces duration of Bind and Silence by 3 turns. Randomizes own orb. (Including [BLOCK] orb)",
+        specialName: "Wild Luffy Special",
     },
 };
 

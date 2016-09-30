@@ -1277,6 +1277,13 @@ window.units = [
     [ "Shiliew Evolved", "INT", [ "Driven", "Slasher" ], 5, 30, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Doc Q", "PSY", [ "Slasher", "Striker" ], 4, 15, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Doc Q Evolved", "PSY", [ "Slasher", "Striker" ], 5, 30, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "John Giant", "DEX", [ "Slasher", "Driven" ], 3, 15, 6, 3, 70, null, 301, 92, 59, null, null, null, null ],
+    [ "Aokiji, of Marineford", "PSY", [ "Slasher", "Free Spirit" ], 4, 30, 4, 3, 99, null, 257, 129, 58, null, null, null, null ],
+    [ "Garp, of Marineford", "STR", [ "Fighter", "Powerhouse" ], 4, 30, 5, 3, 99, null, 171, 64, 62, null, null, null, null ],
+    [ "Sengoku, of Marineford", "STR", [ "Fighter", "Powerhouse" ], 4, 30, 5, 3, 99, null, 213, 96, 95, null, null, null, null ],
+    [ "Akainu, of Marineford", "STR", [ "Fighter", "Powerhouse" ], 4, 30, 5, 3, 99, null, 133, 100, 0, null, null, null, null ],
+    [ "Wild Luffy", "PSY", [ "Striker", "Powerhouse" ], 4, 15, 6, 3, 50, null, 226, 154, 51, null, null, null, null ],
+    [ "Wild Luffy Evolved", "PSY", [ "Striker", "Powerhouse" ], 5, null, null, null, null, null, null, null, null, null, null, null, null ]
 	];
 	
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ]
