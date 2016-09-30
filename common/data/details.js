@@ -6558,14 +6558,14 @@ window.details = {
     },
     1267: {//Legend Blackbeard
         captain: "Boosts the ATK of all characters by 2.75x and their HP by 1.5x if you have a Striker, Shooter, Fighter, and Slasher on your crew. Attacks will ignore defensive barriers and buffs.",
-        captainNotes: "Attacks are still affected by DEF value. DEF boost buffs (Blue shield) still reduce your damage, but Damage Negating (Yellow shield) and % Damage Reduction (Rainbow shield) are ignored). Not sure how the ability is affected by characters with multiple classes. Enemy attacks will go through YOUR defensive buffs.",
+        captainNotes: "Attacks are still affected by DEF value. DEF boost buffs (Blue shield) still reduce your damage, but Damage Negating (Yellow shield) and % Damage Reduction (Rainbow shield) are ignored). Multiple class characters count as a character of each class. Enemy attacks will go through YOUR defensive buffs.",
         special: "Cuts the current HP of each enemy by 30%. If Blackbeard is a captain, this ability will ignore damage negating abilities and barriers",
         specialNotes: "If Blackbeard is not a captain, the effect works exactly like Whitebeard special and is affected by barriers.",
         specialName: "World Shaking Impact",
     },
     1268: {//Legend Blackbeard
         captain: "Boosts the ATK of all characters by 2.75x and their HP by 1.5x if you have a Striker, Shooter, Fighter, and Slasher on your crew. Attacks will ignore defensive barriers and buffs.",
-        captainNotes: "Attacks are still affected by DEF value. DEF boost buffs (Blue shield) still reduce your damage, but Damage Negating (Yellow shield) and % Damage Reduction (Rainbow shield) are ignored). Not sure how the ability is affected by characters with multiple classes. Enemy attacks will go through YOUR defensive buffs.",
+        captainNotes: "Attacks are still affected by DEF value. DEF boost buffs (Blue shield) still reduce your damage, but Damage Negating (Yellow shield) and % Damage Reduction (Rainbow shield) are ignored). Multiple class characters count as a character of each class. Enemy attacks will go through YOUR defensive buffs.",
         special: "Cuts the current HP of each enemy by 30%. If Blackbeard is a captain, this ability will ignore damage negating abilities and barriers",
         specialNotes: "If Blackbeard is not a captain, the effect works exactly like Whitebeard special and is affected by barriers.",
         specialName: "World Shaking Impact",
@@ -6613,14 +6613,14 @@ window.details = {
     1275: {//Shiliew
         captain: "Boosts ATK and HP of Slasher characters by 1.5x",
         special: "For each enemy, has a small chance to instantly defeat that enemy.",
-        specialNotes: "Not sure how this is affected by resetting or against bosses",
+        specialNotes: "About 25% chance of killing ANY character. Cannot be reset by exiting, but can try for different kills by continuing attack.",
         sailor: "Completely resists Silence on this character",
         specialName: "Shiliew Special",
     },
     1276: {//Shiliew Evo
         captain: "Boosts ATK and HP of Slasher characters by 2x",
         special: "For each enemy, has a small chance to instantly defeat that enemy.",
-        specialNotes: "Not sure how this is affected by resetting or against bosses",
+        specialNotes: "About 25% chance of killing ANY character. Cannot be reset by exiting, but can try for different kills by continuing attack.",
         sailor: "Completely resists Silence on this character",
         specialName: "Shiliew Special",
     },
