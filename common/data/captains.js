@@ -3233,11 +3233,11 @@ window.captains = {
         atk: function(p) { return !p.unit.class.has("Fighter") ? 1 : p.percHP <= 10.0 && p.unit.class.has("Fighter") ? 3 : 1.75; }
     },
     1246: {
-	atk: function(p) { return p.unit.class.has("Fighter") ? 1.2; }
+        atk: function(p) { return p.unit.class.has("Fighter") ? 1.2 : 1; }
     },
     1247: {
-	atk: function(p) { return !p.unit.class.has("Fighter") ? 1 : (p.orb == 2.0 ? 2.75 : 2); },
-	hp: function(p) { return p.unit.class.has("Fighter") ? 1.2 : 1; }
+        atk: function(p) { return !p.unit.class.has("Fighter") ? 1 : (p.orb == 2.0 ? 2.75 : 2); },
+        hp: function(p) { return p.unit.class.has("Fighter") ? 1.2 : 1; }
     },
     1248: {
         atk: function(p) {
