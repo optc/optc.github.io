@@ -1283,7 +1283,7 @@ window.units = [
     [ "Sengoku, of Marineford", "INT", [ "Cerebral", "Fighter" ], 4, 30, 5, 3, 99, 3000000, 213, 96, 95, 1942, 972, 304, 1 ],
     [ "Akainu, of Marineford", "INT", [ "Driven", "Fighter" ], 4, 30, 5, 3, 99, 3000000, 133, 100, 0, 2000, 1381, 0, 1 ],
     [ "Wild Luffy", "PSY", [ "Striker", "Powerhouse" ], 4, 15, 6, 3, 50, null, 226, 154, 51, null, null, null, null ],
-    [ "Wild Luffy Evolved", "PSY", [ "Striker", "Powerhouse" ], 5, 30, 4, 3, 99, null, null, null, null, 2491, 1325, 261, null ]
+    [ "Wild Luffy Evolved", "PSY", [ "Striker", "Powerhouse" ], 5, 30, 4, 3, 99, null, null, null, null, 2491, 1325, 261, null ] 
 	];
 	
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ]
