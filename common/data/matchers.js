@@ -78,7 +78,7 @@ window.matchers = [
     {
         name: 'Positional captains',
         target: 'captain',
-        matcher: /(after scoring|following a chain)/i
+        matcher: /(after scoring|following a chain|perfect|great|good)/i
     },
     
     {

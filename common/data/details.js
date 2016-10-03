@@ -6668,7 +6668,7 @@ window.details = {
         specialName: "Wild Luffy Special",
     },
     1285: {//Wild Luffy Evolved
-        captain: "Boosts ATK of Striker characters by 1.5x and their HP by 1.2x",
+        captain: "Boosts ATK of Striker characters by 1.5x and their HP by 1.25x. After scoring 3 Perfects in a row, boosts ATK of Striker characters by 3.375x instead.",
         special: "Reduces duration of Bind and Silence by 3 turns. Randomizes own orb. (Including [BLOCK] orb)",
         specialName: "Wild Luffy Special",
     },

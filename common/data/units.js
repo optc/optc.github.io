@@ -1273,8 +1273,8 @@ window.units = [
     [ "Van Augur Evolved", "QCK", [ "Shooter", "Cerebral" ], 5, 30, 6, 4, 99, 4000000, 831, 578, 140, 1890, 1371, 357, 1 ],
     [ "Jesus Burgess", "STR", [ "Fighter", "Powerhouse" ], 4, 15, 6, 3, 50, 392109, 187, 122, 1, 1520, 603, 1, 1 ],
     [ "Jesus Burgess Evolved", "STR", [ "Fighter", "Powerhouse" ], 5, 30, 4, 4, 99, 4000000, 1439, 522, 1, 3870, 1368, 1, 1 ],
-    [ "Shiliew", "INT", [ "Driven", "Slasher" ], 4, 15, 6, 3, 50, 392109, 132, 142, -300, 1244, 689, -300, 1 ],
-    [ "Shiliew Evolved", "INT", [ "Driven", "Slasher" ], 5, 30, 4, 4, 99, 4000000, 1168, 622, -300, 2500, 1490, -300, 1 ],
+    [ "Shiryu", "INT", [ "Driven", "Slasher" ], 4, 15, 6, 3, 50, 392109, 132, 142, -300, 1244, 689, -300, 1 ],
+    [ "Shiryu Evolved", "INT", [ "Driven", "Slasher" ], 5, 30, 4, 4, 99, 4000000, 1168, 622, -300, 2500, 1490, -300, 1 ],
     [ "Doc Q", "PSY", [ "Slasher", "Striker" ], 4, 15, 4, 3, 50, 392109, 52, 131, 89, 703, 624, 254, 1 ],
     [ "Doc Q Evolved", "PSY", [ "Slasher", "Striker" ], 5, 30, 4, 4, 99, 4000000, 609, 549, 201, 1403, 1290, 491, 1 ],
     [ "John Giant", "DEX", [ "Slasher", "Driven" ], 3, 15, 6, 3, 70, 1066998, 301, 92, 59, 1794, 709, 140, 1 ],
@@ -1283,7 +1283,7 @@ window.units = [
     [ "Sengoku, of Marineford", "INT", [ "Cerebral", "Fighter" ], 4, 30, 5, 3, 99, 3000000, 213, 96, 95, 1942, 972, 304, 1 ],
     [ "Akainu, of Marineford", "INT", [ "Driven", "Fighter" ], 4, 30, 5, 3, 99, 3000000, 133, 100, 0, 2000, 1381, 0, 1 ],
     [ "Wild Luffy", "PSY", [ "Striker", "Powerhouse" ], 4, 15, 6, 3, 50, null, 226, 154, 51, null, null, null, null ],
-    [ "Wild Luffy Evolved", "PSY", [ "Striker", "Powerhouse" ], 5, null, null, null, null, null, null, null, null, null, null, null, null ]
+    [ "Wild Luffy Evolved", "PSY", [ "Striker", "Powerhouse" ], 5, 30, 4, 3, 99, null, null, null, null, 2491, 1325, 261, null ]
 	];
 	
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ]

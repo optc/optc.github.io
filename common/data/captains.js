@@ -3399,7 +3399,10 @@ window.captains = {
         hp: function(p) { return p.unit.class.has("Striker") ? 1.2 : 1; },
     },
     1285: {
-        atk: function(p) { return p.unit.class.has("Striker") ? 1.5 : 1; },
-        hp: function(p) { return p.unit.class.has("Striker") ? 1.2 : 1; },
+        damageSorter: function(d) { return CrunchUtils.classSort(d, 3.375, [ "Striker" ]); },
+		hitAtk: function(p) {
+			return !p.unit.class.has("Striker") ? 1 : p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? 3.375 : 1.5;
+		},
+        hp: function(p) { return p.unit.class.has("Striker") ? 1.25 : 1; },
     },
 };
