@@ -5,7 +5,7 @@ var CharUtils = { };
 /* * * * * Reverse drop map * * * * */
 
 var reverseDropMap = null;
-var marks = { 'Story Island': 1, 'Weekly Island': 2, 'Fortnight': 4, 'Raid': 8, 'Colosseum': 16 };
+var marks = { 'Story Island': 1, 'Weekly Island': 2, 'Fortnight': 4, 'Raid': 8, 'Coliseum': 16 };
 
 var generateReverseDropMap = function() {
     reverseDropMap = { };
@@ -16,8 +16,8 @@ var generateReverseDropMap = function() {
                 if (!data || data.constructor != Array) continue;
                 for (var i=0;i<data.length;++i) {
                     if (data[i] < 0 || CharUtils.isFarmable(data[i], type)) continue;
-                    if (drops[type][island].name == 'Colosseum')
-                        flagUnit(data[i], 'Colosseum');
+                    if (drops[type][island].name == 'Coliseum')
+                        flagUnit(data[i], 'Coliseum');
                     else
                         flagUnit(data[i], type);
                 }

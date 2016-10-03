@@ -217,7 +217,7 @@ window.effects = {
         gOrbsEnabled: true
     },
     
-    'Colosseum Franky': {
+    'Coliseum Franky': {
         description: 'Activates [G] orb Support, boosts Orbs by 1.5x',
         thumb: 560,
         id: 25, // don't change this
@@ -225,14 +225,14 @@ window.effects = {
         gOrbsEnabled: true
     },
 
-    'Colosseum Killer': {
+    'Coliseum Killer': {
         description: 'ATK of all units reduced by 95%',
         thumb: 1043,
         id: 26, // don't change this
         atk: function(p) { return 0.05; }
     },
     
-    'Colosseum Kid': {
+    'Coliseum Kid': {
         description: 'Perfect hit barrier (2 hits)',
         thumb: 966,
         id: 27,
@@ -240,7 +240,7 @@ window.effects = {
         comboType: 'Perfect'
     },
     
-    'Colosseum Fukuro': {
+    'Coliseum Fukuro': {
         description: 'Perfect hit barrier (3 hits)',
         thumb: 758,
         id: 28,
@@ -248,7 +248,7 @@ window.effects = {
         comboType: 'Perfect'
     },
     
-    'Colosseum Cricket': {
+    'Coliseum Cricket': {
         description: 'Fixed threshold barrier (200,000)',
         thumb: 428,
         id: 29,
@@ -296,7 +296,7 @@ window.effects = {
     },
     
     '1.25x Orb Boost': {
-        description: 'Used by Christmas Law in Saga Colosseum',
+        description: 'Used by Christmas Law in Saga Coliseum',
         thumb: 856,
         id: 35,
         orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 10/15 : 1); }
@@ -340,7 +340,7 @@ window.effects = {
                         }
     },
     
-    'Colosseum Tashigi': {
+    'Coliseum Tashigi': {
         description: '25 hit barrier and 2x chain limit',
         thumb: null,
         id: 38,

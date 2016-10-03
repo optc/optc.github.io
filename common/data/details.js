@@ -5691,34 +5691,34 @@ window.details = {
 		special: "Randomly changes all orbs (including [BLOCK] orbs) into either [STR], [DEX], [QCK], [PSY], or [INT] orbs",
 		specialName: "Lack of Pure Chi: Lion Finger Gun Sneak Attack"
 	},
-	1140: {// Colosseum Moriah
+	1140: {// Coliseum Moriah
 		captain: "Boosts ATK of Driven characters by 2x",
 		special: "Changes own orb into [DEX] and deals 300,000 Fixed damage to one enemy",
 		specialName: "Horn Blade Shadow"
 	},
-	1141: {// Colosseum Moriah
+	1141: {// Coliseum Moriah
 		captain: "Boosts ATK of Driven characters by 2.25x, recovers 3x character's RCV in HP at the end of each turn",
 		special: "Changes own orb into [DEX] and deals 300,000 Fixed damage to one enemy",
 		specialName: "Horn Blade Shadow"
 	},
-	1142: {// Colosseum Foxy
+	1142: {// Coliseum Foxy
 		captain: "Boosts ATK of Free Spirit characters by 1.5x",
 		special: "Deals 15 hits of random [STR] damage to random enemies. Delays all enemies for 1 turn",
 		specialNotes: "#{randomHits : 15}",
 		specialName: "Gorilla Punch: Golden Strike"
 	},
-	1143: {// Colosseum Foxy
+	1143: {// Coliseum Foxy
 		captain: "Boosts ATK of Free Spirit characters by 2x. Reduces cooldown of Free Spirit characters by 2 turns at the start of the fight",
 		special: "Deals 15 hits of random [STR] damage to random enemies. Delays all enemies for 1 turn",
 		specialNotes: "#{randomHits : 15}",
 		specialName: "Gorilla Punch: Golden Strike"
 	},
-	1144: {// Colosseum Porche
+	1144: {// Coliseum Porche
 		captain: "Boosts ATK of Cerebral characters by 1.75x",
 		special: "Deals 5x character's ATK in [PSY] damage to all enemies. Recovers 15x character's RCV in HP",
 		specialName: "Cutie Baton: Flower Shuriken"
 	},
-	1145: {// Colosseum Porche
+	1145: {// Coliseum Porche
 		captain: "Boosts ATK of Cerebral characters by 1.75x and their RCV by 1.5x",
 		special: "Deals 5x character's ATK in [PSY] damage to all enemies. Recovers 15x character's RCV in HP",
 		specialName: "Cutie Baton: Flower Shuriken"
@@ -6153,7 +6153,7 @@ window.details = {
 		special: "Locks all orbs for 1 turn. If HP is below 30%, changes own orb and the captain's orb into matching. ",
 		specialName: "Everybody Confusing Fragrance",
 	},
-	1219: {//Byrnndi World Colosseum
+	1219: {//Byrnndi World Coliseum
         captain: "Boosts ATK of Shooters by 1x. If you defeat an enemy, increases ATK boost slighty. Stacks up to 16 times to a maximum of 3x If you did not defeat an enemy, lose all ATK boost stacks.",
 		special: [
 			{
@@ -6171,7 +6171,7 @@ window.details = {
 		],        
 		specialName: "More More, 10 Times \"Iron Hammer\"",
 	},
-	1220: {//Byrnndi World Colosseum
+	1220: {//Byrnndi World Coliseum
         captain: "Boosts ATK of Shooters by 1x. If you defeat an enemy, increases ATK boost slighty. Stacks up to 10 times to a maximum of 3.25x If you did not defeat an enemy, lose all ATK boost stacks.",
 		special: [
 			{
@@ -6189,13 +6189,13 @@ window.details = {
 		],        
 		specialName: "More More, 10 Times \"Iron Hammer\"",
 	},
-	1221: {//Colosseum Oars Jr
+	1221: {//Coliseum Oars Jr
 		captain: "Boosts ATK of Slasher characters by 1.75x and the HP of Powerhouse characters by 1.2x",
 		special: "Deals 25x character's ATK in [STR] damage to one enemy. For 1 turn, makes [STR] orb \"beneficial\" for all characters",
         specialNotes: "\"Beneficial\" orbs grant the same ATK boost as matching orbs.",
 		specialName: "Blood of the Devil Warrior",
 	},
-	1222: {//Colosseum Oars Jr
+	1222: {//Coliseum Oars Jr
 		captain: "Boosts ATK of Slasher characters by 2x and the HP of Powerhouse characters by 1.75x",
 		special: "Deals 25x character's ATK in [STR] damage to one enemy. For 1 turn, makes [STR] orb \"beneficial\" for all characters",
         specialNotes: "\"Beneficial\" orbs grant the same ATK boost as matching orbs.",
