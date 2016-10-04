@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" itemprop="description" content="One Piece Treasure Cruise Turtle Time Calculator">
+        <meta name="author" content="Zeenigami and Mondfischer">
+        <meta name="keywords" content="OPTC, One Piece Treasure Cruise, Database, Calculator, Guides, Help, Walkthroughs, Tutorials, turtle times">
+		<title>Turtle Time Calc</title>
+        <link rel="stylesheet" type="text/css" href="../common/css/links.css" />
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/main.css">
+		<link href="css/polyglot-language-switcher-2.css" rel="stylesheet">
+		<link rel="shortcut icon" type="image/ico" href="favicon.ico">
+		<link href='https://fonts.googleapis.com/css?family=Squada+One|Lora' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jstimezonedetect/1.0.4/jstz.min.js"></script>
+		<script src="app/lib/moment.min.js"></script>
+		<script src="app/lib/angular-local-storage.min.js"></script>
+		<script src="app/lib/angular-translate.min.js"></script>
+		<script src="app/lib/angular-timer.min.js"></script>
+		<script src="app/lib/humanize-duration.js"></script>
+		<script src="app/lib/ng-table.min.js"></script>
+		<script src="app/lib/ui-bootstrap-tpls-0.13.0.min.js"></script>
+		<script src="app/lib/angular-polyglot.language.switcher.js"></script>
+		<script src="app/lib/ics.js"></script>
+		<script src="app/lib/FileSaver.js"></script>
+		<script src="app/lib/Blob.js"></script>
+		<script src="app/lib/bower_components/momentjs/locale/de.js"></script>
+		<script src="app/lib/bower_components/momentjs/locale/es.js"></script>
+		<script src="app/lib/bower_components/momentjs/locale/fr.js"></script>
+		<script src="app/lib/bower_components/angular-animate/angular-animate.min.js"></script>
+		<script src="app/app.js"></script>
+		<script src="app/controllers/turtleCtrlBeta.js"></script>
+		<script src="app/controllers/localeCtrl.js"></script>
+		<script src="app/controllers/navbarCtrl.js"></script>
+		<script src="app/controllers/modalCtrl.js"></script>
+		<script src="app/directives/collapseDirective.js"></script>
+		<script src="app/directives/turtleBetaDirective.js"></script>
+		<script src="app/services/turtleFact.js"></script>
+		<script src="app/config/localizeConfig.js"></script>
+
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })
+          (window,document,'script','//www.google-analytics.com/analytics.js','ga');
+          ga('create', 'UA-73715806-1', 'auto');
+          ga('send', 'pageview', '/turtles');
+        </script>
+	</head>
+
+	<body ng-app="app" ng-controller="LocaleCtrl as locale" ng-cloak ng-click="collapse=false">
+		<nav class="navbar navbar-default" ng-controller="NavbarCtrl" ng-click="$event.stopPropagation()">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" ng-click="isCollapsed=!isCollapsed">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span> 
+					</button>
+				</div>
+				<div class="navbar-collapse init" collapse="isCollapsed">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="index.html">{{ 'NAV_TURTLE' | translate }}</a></li>
+						<li><a href="barrel.html">{{ 'NAV_BARREL' | translate }}</a></li>
+						<li id="settings"><a href="settings.html">{{ 'NAV_SETTINGS' | translate }}</a></li>
+					</ul>
+					<div class="language-picker nav pull-right">
+						<pls id="pls1" items="plsModel.languages" open-mode="click" show-flag="true" selected-lang="{{locale.flag}}" language-changed-callback="onLanguageChanged(lang)"></pls>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+		<div class="jumbotron">
+			<div class="container" ng-controller="TurtleCtrlBeta as turtle">
+				<h1 class="page-title">{{'TT_TITLE' | translate}}</h1>
+				<div>
+					<div class="id">
+						<span>{{'TT_DIGIT' | translate}}</span>
+						<input type="number" min="0" max="9" ng-model="turtle.id" class="input-id" select-on-click>
+						<input class="digit" type="checkbox" name="militaryTime" ng-model="turtle.military"><span>{{'TT_FORMAT' | translate}}</span>
+					</div>
+					<p>{{'TT_TIMEZONE' | translate}} {{turtle.timezone}}</p>
+					<div class="btn-group game-version ttc-version">
+						<label class="btn btn-default" ng-model="turtle.version" btn-radio="'global'">GLOBAL</label>
+						<label class="btn btn-default" ng-model="turtle.version" btn-radio="'jpn'">JPN</label>
+					</div>
+					<div class="ttime-global">
+						<turtle-beta 
+							class="ttime-day"
+							military="turtle.military"
+							index="$index"
+							numid="turtle.id"
+							ng-repeat="t in turtle.range(4) track by $index"
+							locale="locale.locale"
+							version="'turtle.version'"
+							ng-show="turtle.version === 'global'"
+							>
+						</turtle-beta>
+						<div>
+						<turtle-beta 
+							class="ttime-day"
+							military="turtle.military"
+							index="$index"
+							numid="turtle.id"
+							ng-repeat="t in turtle.range(4) track by $index"
+							locale="locale.locale"
+							version="turtle.version"
+							ng-show="turtle.version !== 'global'"
+							>
+						</turtle-beta>
+						<!-- <p ng-show="turtle.version !== 'global'">JPN: Fixed! Sorry for the inconvenience. The last two dates are incorrect and will be updated once I know the correct times.</p> -->
+					</div>
+					<div class="add-to-calendar" ng-show="!turtle.iOS">
+						<a class="btn btn-default" ng-click="turtle.get_cal()">
+							{{'TT_ADD_CALENDAR' | translate}}
+						</a>
+					</div>
+				</div>
+
+				<button class="btn btn-info btn-notif" ng-click="isCollapsed1 = !isCollapsed1" ng-show="turtle.notif_support" ng-init="isCollapsed1 = true">{{'TT_NOTIFICATION' | translate}}</button>
+				<div collapse="isCollapsed1" ng-show="turtle.notif_support" class="settings-notif init">
+					<div>
+						<span>{{'TT_NOTIF_MINUTES' | translate}}: </span>
+						<input type="number" min="0" max="999" class="input-id" ng-model="turtle.notif_time" select-on-click>
+					</div>
+					<div>
+						<input type="checkbox" name="sound" ng-model="turtle.notif_sound"> <span>{{'TT_NOTIF_SOUND' | translate}}</span>
+						<button class="btn btn-sm btn-default" ng-click="turtle.example_notification()">{{'TT_NOTIF_EXAMPLE' | translate}}</button>
+					</div>
+				</div>
+
+				
+			</div>
+                Credit to Cyung for original code. We will be updating with Friday dates for Global soon.
+		</div>
+        <error-report></error-report>
+        <link-button exclude="turtles"></link-button>
+	</body>
+</html>

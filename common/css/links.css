@@ -6,8 +6,8 @@
 
 #links-button {
     position: fixed;
-    right: 20px;
-    bottom: 5px;
+    bottom: 20px;
+    right: 5px;
     transform: translateX(-50%) translateY(-50%);
     width: 2em;
     height: 2em;
@@ -179,6 +179,12 @@
     transform: translateX(-21em);
 }
 
+#links-button.active .rotater:nth-child(8) > a {
+    -webkit-transform: translateX(-24em);
+    -ms-transform: translateX(-24em);
+    transform: translateX(-24em);
+}
+
 #link-damage > .btn { background: #85C1F5; }
 #link-characters > .btn { background: #7FCA9F; }
 #link-drops > .btn { background: #F4BA70; }
@@ -187,6 +193,7 @@
 #link-slots > .btn { background: #99cc66; }
 #links-home > .btn { background: #939393; }
 #link-prob > .btn { background: #DEA5A4; }
+#link-turtles > .btn { background: #ce4500; }
 
 .tip { color: black; }
 
