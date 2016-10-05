@@ -1284,4 +1284,13 @@ window.families = [
     "Akainu",
     "Monkey D. Luffy",
     "Monkey D. Luffy",
+    "Baby 5",
+	"Baby 5",
+    "Trafalgar Law",
+	"Trafalgar Law",
+    "Buffalo",
+    "Lao G",
+    "Lao G",
+    "Boa Sandersonia",
+    "Boa Sandersonia",
 ];

@@ -3576,14 +3576,14 @@ window.details = {
 		specialNotes: "#{randomHits : 10}<br>#{random : 1,000 : 30,000 : for each hit}",
 		specialName: "Gum-Gum Storm",
 		captain: "Boosts ATK of Powerhouse characters by 3x, reduces crew's current HP by 10% at the end of each turn, reduces his own ATK multiplier by 0.1x at the end of each turn",
-		captainNotes: "His ATK multiplier will be 3.0x on the first turn, 2.9x on the second, 2.8x on the third and so on. The reduction stops once the multiplier is 1.0x. The multiplier affects all Powerhouse characters."
+		captainNotes: "His ATK multiplier will be 3.0x on the first turn, 2.9x on the second, 2.8x on the third and so on. The reduction stops once the multiplier is 1.0x. The multiplier affects all Powerhouse characters. You will not die to the HP reduction"
 	},
 	795: {
 		special: "Deals 10 hits of random INT damage to random enemies, delays all enemies for 1 turn",
 		specialNotes: "#{randomHits : 10}<br>#{random : 1,000 : 30,000 : for each hit}",
 		specialName: "Gum-Gum Storm",
 		captain: "Boosts ATK of Powerhouse characters by 3.5x, reduces crew's current HP by 10% at the end of each turn, reduces his own ATK multiplier by 0.1x at the end of each turn",
-		captainNotes: "His ATK multiplier will be 3.5x on the first turn, 3.4x on the second, 3.3x on the third and so on. The reduction stops once the multiplier is 1.0x. The multiplier affects all Powerhouse characters."
+		captainNotes: "His ATK multiplier will be 3.5x on the first turn, 3.4x on the second, 3.3x on the third and so on. The reduction stops once the multiplier is 1.0x. The multiplier affects all Powerhouse characters. You will not die to the HP reduction"
 	},
 	796: {
 		special: "Slightly boosts chances of getting matching orbs for 3 turns, boosts own ATK by 1.75x for 1 turn",
@@ -6665,12 +6665,81 @@ window.details = {
     1284: {//Wild Luffy
         captain: "Boosts ATK of Striker characters by 1.5x and their HP by 1.2x",
         special: "Reduces duration of Bind and Silence by 3 turns. Randomizes own orb. (Including [BLOCK] orb)",
+        sailor: "Reduces duration of Silence against this character by 3 turns",
         specialName: "Wild Luffy Special",
     },
     1285: {//Wild Luffy Evolved
         captain: "Boosts ATK of Striker characters by 1.5x and their HP by 1.25x. After scoring 3 Perfects in a row, boosts ATK of Striker characters by 3.375x instead.",
-        special: "Reduces duration of Bind and Silence by 3 turns. Randomizes own orb. (Including [BLOCK] orb)",
+        special: "Reduces duration of Despair and Silence by 3 turns. Randomizes Non-Matching orbs. (Including [BLOCK] orb)",
+        sailor: "Reduces duration of Silence against this character by 3 turns",
         specialName: "Wild Luffy Special",
+    },
+    1286: {//Kid Baby 5
+        captain: "Boosts ATK and RCV of [PSY] characters by 1.3x",
+        special: "Cuts the current HP of each enemy by 10%. Boosts ATK of Shooter characters by 1.5x for 1 turn",
+        specialName: "Kid Baby 5 Special",
+    },
+    1287: {//Kid Baby 5
+        captain: "Boosts ATK and RCV of [PSY] characters by 1.5x",
+        special: "Cuts the current HP of each enemy by 10%. Boosts ATK of Shooter characters by 1.5x for 1 turn",
+        specialName: "Kid Baby 5 Special",
+    },
+    1288: {//Kid Law
+        captain: "Boosts ATK of Driven characters by 2.5x, reduces crew's current HP by 10% at the end of each turn, reduces his own ATK multiplier by 0.1x at the end of each turn",
+		captainNotes: "His ATK multiplier will be 2.5x on the first turn, 2.4x on the second, 2.3x on the third and so on. The reduction stops once the multiplier is 1.0x. The multiplier affects all Driven characters. You will not die to the HP reduction",
+        special: "Reduces cooldown of Driven specials by 1 turn. If during that turn every unit scores a Perfect hit, reduces cooldown of Driven specials by 1 turn.",
+        specialName: "Kid Law Special",
+    },
+    1289: {//Kid Law
+        captain: "Boosts ATK of Driven characters by 2.75x, reduces crew's current HP by 10% at the end of each turn, reduces his own ATK multiplier by 0.1x at the end of each turn",
+		captainNotes: "His ATK multiplier will be 2.75x on the first turn, 2.65x on the second, 2.55x on the third and so on. The reduction stops once the multiplier is 1.0x. The multiplier affects all Driven characters. You will not die to the HP reduction",
+        special: "Reduces cooldown of Driven specials by 1 turn. If during that turn every unit scores a Perfect hit, reduces cooldown of Driven specials by 1 turn.",
+        specialName: "Kid Law Special",
+    },
+    1290: {//Kid Buffalo
+        captain: "Recovers 500 HP at the end of each turn",
+        special: "Changes own orb into [INT], and Captain orb into [BOMB]",
+        specialName: "Kid Buffalo Special",
+    },
+    1291: {//Lao G, Coliseum
+        captain: "Boosts ATK of Driven characters by 1.75x",
+        special: "Changes [PSY], [INT], [RCV], and [TND] orbs into [G] orbs. Locks orbs for 1 turn. If during that turn every unit scores a Perfect hit, changes [G] orbs into Matching Orbs",
+        specialName: "Lao G Special",
+    },
+    1292: {//Lao G, Coliseum
+        captain: "Boosts ATK of Driven characters by 2.5x if they have a matching orb, by 2x otherwise",
+        special: "Changes [PSY], [INT], [RCV], and [TND] orbs into [G] orbs. Locks orbs for 1 turn. If during that turn every unit scores a Perfect hit, changes [G] orbs into Matching Orbs",
+        specialName: "Lao G Special",
+    },
+    1293: {//Coliseum Sandersonia
+        captain: "Boosts ATK of Fighter characters by 1.75x, deals 2 times the damage received in the previous turn in [PSY] damage to all enemies at the end of each turn",
+        special: [
+			{
+				"description": "Changes Captain orb into Matching, and reduces damage received from [PSY] enemies by 40%",
+				"cooldown": [ 21, 11 ],
+			},
+            {
+				"description": "Changes Captain orb into Matching, and reduces damage received from [PSY] enemies by a variable factor.",
+				"cooldown": [ 26, 16 ],
+			},
+		],
+        specialNotes: "The exact multiplier used is chosen based on the crew's current HP at the time the special is activated: above 50% HP, the multiplier used is 50%; between 50% and 10%, it's 80%; below 10% HP, it's 100%.",
+        specialName: "Coliseum Sandersonia Special",
+    },
+    1294: {//Coliseum Sandersonia
+        captain: "Boosts ATK of Fighter characters by 1.75x, deals 2 times the damage received in the previous turn in [PSY] damage to all enemies at the end of each turn",
+        special: [
+			{
+				"description": "Changes Captain orb into Matching, and reduces damage received from [PSY] enemies by 40%",
+				"cooldown": [ 21, 11 ],
+			},
+            {
+				"description": "Changes Captain orb into Matching, and reduces damage received from [PSY] enemies by a variable factor.",
+				"cooldown": [ 26, 16 ],
+			},
+		],
+        specialNotes: "The exact multiplier used is chosen based on the crew's current HP at the time the special is activated: above 50% HP, the multiplier used is 50%; between 50% and 10%, it's 80%; below 10% HP, it's 100%.",
+        specialName: "Coliseum Sandersonia Special",
     },
 };
 
