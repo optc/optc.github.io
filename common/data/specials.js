@@ -1573,17 +1573,13 @@ window.specials = {
         onDeactivation: function(p) {
             window.specials[1232].turnedOn = false;
         }
-    }, /*
+    },
     1233: {//Tashigi
-        //TODO Slasher/Cerebral
-        affinity: function(p){ return 1.5; },
-        type: "affinity",
+        affinity: function(p){ return p.unit.class.has("Slasher") || p.unit.class.has("Cerebral") ? 1.5 : 1; }
     },
     1234: {//Tashigi
-         //TODO Slasher/Cerebral
-        affinity: function(p){ return 1.5; },
-        type: "affinity",
-    },*/
+        affinity: function(p){ return p.unit.class.has("Slasher") || p.unit.class.has("Cerebral") ? 1.5 : 1; }
+    },
     1239: {
         turnedOn: false,
         onActivation: function(p) {
@@ -1675,16 +1671,12 @@ window.specials = {
         type: "condition",
         warning: "Selected special (%name%) assumes that the enemy has a defense buff active."
     },
-/*  1261: {//Young Senor Pink
-        //TODO Free Spirit / Shooter
-        affinity: function(p){ return 1.5; },
-        type: "affinity",
+    1261: {//Young Senor Pink
+        affinity: function(p){ return p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 1.5 : 1; }
     },
     1262: {//Young Senor Pink
-         //TODO Free Spirit / Shooter
-        affinity: function(p){ return 1.5; },
-        type: "affinity",
-    },*/
+        affinity: function(p){ return p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 1.5 : 1; }
+    },
     1263: {
 		atk: function(p) { return p.slot == p.sourceSlot ? 2 : 1; },
 		type: "type"

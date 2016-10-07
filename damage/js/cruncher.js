@@ -180,7 +180,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if (orb == 'g') orb = 1.5;
             atk += getShipBonus('atk',true,x.unit,n);
             multipliers.push([ orb, 'orb' ]); // orb multiplier (fixed)
-            multipliers.push([ getTypeMultiplierOfUnit(x.unit.type,type), 'type' ]); // type multiplier
+            multipliers.push([ getTypeMultiplierOfUnit(x.unit.type,type, x), 'type' ]); // type multiplier
             multipliers.push([ getEffectBonus('atk',x.unit), 'map effect' ]); // effect bonus (fixed)
             multipliers.push([ ship, 'ship' ]); // ship bonus (fixed)
             result.push({ unit: x, orb: orb, base: Math.floor(atk), multipliers: multipliers, position: n });
@@ -208,8 +208,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             var override = $scope.tdata.typeOverride[type];
             for (var k=0;k<result.length;++k) {
                 if (!override[k]) continue;
-                var currentMultiplier = getTypeMultiplierOfUnit(result[k].unit.unit.type, type);
-                var newMultiplier = getTypeMultiplierOfUnit(result[k].unit.unit.type, override[k]);
+                var currentMultiplier = getTypeMultiplierOfUnit(result[k].unit.unit.type, type, result[k]);
+                var newMultiplier = getTypeMultiplierOfUnit(result[k].unit.unit.type, override[k], result[k]);
                 result[k].multipliers.push([ newMultiplier / currentMultiplier, 'type override' ]);
             }
         }
@@ -381,16 +381,31 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         return effects[$scope.data.effect][type](unit.unit || unit);
     };
 
-    var getTypeMultiplierOfUnit = function(attackerType,attackedType) {
-        if (attackerType == 'STR' && attackedType == 'DEX') return 2;
-        if (attackerType == 'QCK' && attackedType == 'STR') return 2;
-        if (attackerType == 'DEX' && attackedType == 'QCK') return 2;
-        if (attackerType == 'INT' && attackedType == 'PSY') return 2;
-        if (attackerType == 'PSY' && attackedType == 'INT') return 2;
-        if (attackerType == 'STR' && attackedType == 'QCK') return 0.5;
-        if (attackerType == 'QCK' && attackedType == 'DEX') return 0.5;
-        if (attackerType == 'DEX' && attackedType == 'STR') return 0.5;
-        return 1;
+    var getTypeMultiplierOfUnit = function(attackerType,attackedType, unit) {
+        var typeMult = 1, affinityMult = 1;
+        
+        if (attackerType == 'STR' && attackedType == 'DEX') typeMult = 2;
+        if (attackerType == 'QCK' && attackedType == 'STR') typeMult = 2;
+        if (attackerType == 'DEX' && attackedType == 'QCK') typeMult = 2;
+        if (attackerType == 'INT' && attackedType == 'PSY') typeMult = 2;
+        if (attackerType == 'PSY' && attackedType == 'INT') typeMult = 2;
+        if (attackerType == 'STR' && attackedType == 'QCK') typeMult = 0.5;
+        if (attackerType == 'QCK' && attackedType == 'DEX') typeMult = 0.5;
+        if (attackerType == 'DEX' && attackedType == 'STR') typeMult = 0.5;
+        
+        //Get the strongest Color affinity Mult if it exists and apply it
+        affinityMultiplier.forEach(function(special){
+                    if(affinityMult<special.affinityMultiplier(unit))
+                        affinityMult = special.affinityMultiplier(unit);
+                });
+        
+        //Calculate the new Affinity mult
+        if(affinityMult != 1){
+            if(typeMult == 2) typeMult *= affinityMult;
+            if(typeMult == 0.5) typeMult *= (affinityMult-1);
+        }
+        
+        return typeMult;
     };
 
     var getChainMultiplier = function(chainBase, hitModifiers, chainModifier) {
@@ -453,7 +468,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                     if(addition<special.chainAddition())
                         addition = special.chainAddition();
                 });
-//        
+        
         chainSpecials.forEach(function(special) {
             var multipliersUsed = [ ], currentHits = 0, overall = 0;
             var i, params = [ ];
@@ -590,6 +605,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         var result = { type: [ ], class: [ ], orb: [ ], affinity: [ ], condition: [ ] };
         chainSpecials = [ ];
         chainAddition = [ ];
+        affinityMultiplier = [ ];
         staticMultiplier = [ ];
         enabledSpecials.forEach(function(data) {
             if (data === null) return;
@@ -603,9 +619,11 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if (data.hasOwnProperty('chain'))
                 chainSpecials.push({ sourceSlot: data.sourceSlot, chain: data.chain, chainLimiter: data.chainLimiter || function() { return Infinity; } });
             if (data.hasOwnProperty('chainAddition'))
-                chainAddition.push({chainAddition: data.chainAddition || function(){ return 0.0;} });
+                chainAddition.push({chainAddition: data.chainAddition || function(){ return 0.0; } });
             if (data.hasOwnProperty('staticMult'))
                 staticMultiplier.push({staticMultiplier: "Yes" });
+            if (data.hasOwnProperty('affinity'))
+                affinityMultiplier.push({affinityMultiplier: data.affinity || function(){ return 1.0; }});
         });
         specialsCombinations = Utils.arrayProduct([ result.type.concat(result.class), result.condition, result.orb ]);
         if (chainSpecials.length === 0) chainSpecials.push({
@@ -728,7 +746,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         hitModifiers = getPossibleHitModifiers(cptsWith.hitModifiers);
         // compute special combinations
         computeSpecialsCombinations();
-        $scope.conflictingSpecials = (specialsCombinations.length > 1 || chainSpecials.length > 1 || chainAddition.length > 1);
+        $scope.conflictingSpecials = (specialsCombinations.length > 1 || chainSpecials.length > 1 || chainAddition.length > 1 || affinityMultiplier.length > 1);
         $scope.conflictingMultipliers = ( staticMultiplier.length > 1 )
         // get ship bonus
         shipBonus = jQuery.extend({ bonus: window.ships[$scope.data.ship[0]] },{ level: $scope.data.ship[1] });
