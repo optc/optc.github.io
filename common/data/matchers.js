@@ -205,9 +205,9 @@ window.matchers = [
     },
     
     {
-    	name: 'Full-board orb controllers',
-    	target: 'special',
-    	matcher: /(Changes[^,]+all orbs|Changes the orbs in|Changes[^,]*every other orb)/i
+        name: 'Full-board orb controllers',
+        target: 'special',
+        matcher: /(Changes[^,]+all orbs|Changes the orbs in|Changes[^,]*every other orb)/i
     },
 
     {
@@ -378,18 +378,18 @@ window.matchers = [
         target: 'special',
         matcher: /Protects from defeat/i
     },
-	
-	{
-		name: 'Special cooldown reducer',
-		target: 'special',
-		matcher: /reduces special cooldown/i
-	},
-	
-	{
-		name: 'Paralysis reducers',
+    
+    {
+        name: 'Special cooldown reducer',
+        target: 'special',
+        matcher: /reduces special cooldown/i
+    },
+    
+    {
+        name: 'Paralysis reducers',
         target: 'special',
         matcher: /(reduces|removes).+Paralysis/i 
-	},
+    },
     
     /* * * * * Sailor * * * * */
     

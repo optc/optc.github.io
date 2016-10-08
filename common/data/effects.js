@@ -310,7 +310,7 @@ window.effects = {
         barrierReduction: 0.99
     },
     
-	'Dr. Indigo & Scarlet! Fortnight': {
+    'Dr. Indigo & Scarlet! Fortnight': {
         description: 'Boosts ATK of Driven and Powerhouse characters by 2x, other classes get .5x ATK. Boosts HP of Slasher and Fighter characters by 2x, other classes get .5x HP.',
         thumb: 1095,
         id: 37,

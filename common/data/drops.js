@@ -383,7 +383,7 @@ window.drops = {
             name: "Enies Lobby: Entrance",
             shortName: "Enies Lobby 1",
             thumb: 706,
-			global: true,
+            global: true,
             completion: '5x Rainbow Gems',
             "Completion Units": [708],
             "01": [ 78, 79, 80, 81, 82, 185, 186, 188, 694 ],
@@ -482,8 +482,8 @@ window.drops = {
             "13": [ 111, 181, 184, 185, 186, 691, 692, 693, 694, 695, 971 ],
             "14": [ 111, 112, 113, 114, 185, 186, 187, 691, 693, 695, 968, 969, 970, 972, 973 ]
         },
-		
-		{
+        
+        {
             name: "Amazon Lily",
             shortName: "Amazon Lily",
             thumb: 1056,
@@ -498,8 +498,8 @@ window.drops = {
             "08": [ 1055, 1057, 111, 113 ],
             "09": [ 1055, 1057, 110, 112 ]
         },
-		
-		{
+        
+        {
             name: "Impel Down",
             shortName: "Impel Down",
             thumb: 1159,
@@ -513,13 +513,13 @@ window.drops = {
             "07": [ 1155, 931 ],
             "08": [  ],
             "09": [  ],
-			"10": [  ],
-			"11": [ 551, 539, 1151, 1152, 931, 552 ],
-			"12": [ 1156, 549 ],
-			"13": [  ],
-			"14": [ 1152 ],
-			"15": [  ],
-			"16": [ 1158 ],
+            "10": [  ],
+            "11": [ 551, 539, 1151, 1152, 931, 552 ],
+            "12": [ 1156, 549 ],
+            "13": [  ],
+            "14": [ 1152 ],
+            "15": [  ],
+            "16": [ 1158 ],
         },
         
         {
@@ -536,9 +536,9 @@ window.drops = {
             "07": [  ],
             "08": [ 815 ],
             "09": [ 1226 ],
-			"10": [ 1227 ],
-			"11": [  ],
-			"12": [ 1228 ]
+            "10": [ 1227 ],
+            "11": [  ],
+            "12": [ 1228 ]
         },
         
         {
@@ -555,12 +555,12 @@ window.drops = {
             "07": [  ],
             "08": [ 1281, 1282 ],
             "09": [ 1280 ],
-			"10": [ 1283 ],
-			"11": [ 1283 ],
-			"12": [  ],
+            "10": [ 1283 ],
+            "11": [ 1283 ],
+            "12": [  ],
             "13": [  ],
-			"14": [ 1283 ],
-			"15": [ 1283 ],
+            "14": [ 1283 ],
+            "15": [ 1283 ],
         },
         
     ],
@@ -642,7 +642,7 @@ window.drops = {
             name: 'Buggy\'s Counterattack!!',
             thumb: 39,
             global: true,
-			condition: "None",
+            condition: "None",
             Expert: [ 36, 37, 38, 99, 109, 114, -4 ],
             Elite: [ 36, 37, 38, 99, 109, 114, -3 ]
         },
@@ -651,7 +651,7 @@ window.drops = {
             name: 'Alvida\'s Romance',
             thumb: 30,
             global: true,
-			condition: "None",
+            condition: "None",
             Expert: [ 28, 29, 31, 40, 84, 95, 110, 117, -30, -21, -8 ],
             Elite: [ 28, 29, 31, 40, 95, 105, 110, -21, -7 ]
         },
@@ -660,7 +660,7 @@ window.drops = {
             name: 'Kuro\'s Master Plan',
             thumb: 46,
             global: true,
-			condition: "None",
+            condition: "None",
             Expert: [ 41, 42, 43, 45, -16 ],
             Elite: [ 41, 42, 43, 45, 96, 106, 111, -15 ]
         },
@@ -669,7 +669,7 @@ window.drops = {
             name: 'Arlong: Empire Rising',
             thumb: 66,
             global: true,
-			condition: "None",
+            condition: "None",
             Expert: [ 61, 62, 63, 65, 89, 95, 105, 110, -12, -66 ],
             Elite: [ 61, 62, 63, 65, 95, 105, 110, -11 ]
         },
@@ -678,7 +678,7 @@ window.drops = {
             name: 'Krieg\'s Assault!',
             thumb: 58,
             global: true,
-			condition: "None",
+            condition: "None",
             Expert: [ 98, 99, 108, 109, 113, 114, 53, 55, 57, -58, -20 ],
             Elite: [ 98, 99, 108, 109, 113, 114, 53, 55, 57, -58, -20, -19 ]
         },
@@ -687,15 +687,15 @@ window.drops = {
             name: 'Escaped! Morgan',
             thumb: 228,
             global: true,
-			condition: "None",
-			"All Difficulties": [ 33, 35, 84, 95, 105, 107, 110, 112, -228, -34, -26, -25, -24, -23, -22 ]
+            condition: "None",
+            "All Difficulties": [ 33, 35, 84, 95, 105, 107, 110, 112, -228, -34, -26, -25, -24, -23, -22 ]
         },
 
         {
             name: 'Hina\'s Resort Getaway',
             thumb: 232,
             global: true,
-			condition: "None",
+            condition: "None",
             challenge: 'High Score calculated with Crew Cost, Turns Taken and Tap Accuracy',
             challengeData: [['150,000','1x Blue Elder'],['450,000','1x ATK Cotton Candy'],['750,000','3x Rainbow Gems']],
             Expert: [ 43, 49, 79, 85, 96, 106, 231, -230, -229, -221, -208, -62, -54 ],
@@ -706,7 +706,7 @@ window.drops = {
             name: 'Cobymeppo\'s Proving Ground!',
             thumb: 263,
             global: true,
-			condition: "None",
+            condition: "None",
             challenge:'Total number of hits above 50,000',
             challengeData: [['5 Times','1x Yellow Elder'],['15 Times','1x ATK Cotton Candy'],['25 Times','3x Rainbow Gems']],
             "All Difficulties": [ 31, 33, 262, 264, 87, 88, 98, 99, 113, -265, -263, -225, -210, -64, -56, -32 ]
@@ -716,7 +716,7 @@ window.drops = {
             name: 'Smoker\'s Great Pursuit',
             thumb: 268,
             global: true,
-			condition: "None",
+            condition: "None",
             challenge: 'Cumulative Damage dealt to enemies in a single run',
             challengeData: [['600,000 Damage','1x Green Elder'],['1,400,000 Damage','1y Rainbow Gem & 1x HP Cotton Candy'],['3,000,000 Damage','2x Rainbow Gems, 1x Forbidden Tome']],
             "All Difficulties": [ 67, 69, 86, 97, 112, -219, -212, -206, -204, -73, -52, -50 ]
@@ -726,7 +726,7 @@ window.drops = {
             name: 'Tsuru\'s Morning Stroll',
             thumb: 297,
             global: true,
-			condition: "None",
+            condition: "None",
             Expert: [ 99, 88, 114, 296, 298, 299, -236, -234, -223, -217, -202, -200, -199 ],
             Elite: [ 99, 88, 114, 296, 298, 299, -236, -234, -223, -202, -200 ]
         },
@@ -773,7 +773,7 @@ window.drops = {
             thumb: 386,
             global: true,
             condition: 'You may only bring PSY units for 15 and 30 Stamina',
-			challenge: 'High Score calculated with Crew Cost, Turns Taken and Tap Accuracy',
+            challenge: 'High Score calculated with Crew Cost, Turns Taken and Tap Accuracy',
             challengeData: [['10,000 Points','1x Black Elder'],['40,000 Points','1x Rainbow Gem, 1x ATK Cotton Candy'],['70,000 Points','2x Rainbow Gems, 1x Damage Reduction Forbidden Tome']],
             "All Difficulties": [ 385, 387, -388, -335, -314, -36, -16, -11 ]
         },
@@ -800,7 +800,7 @@ window.drops = {
             name: 'Rising Sun, Rising Fortunes',
             thumb: 420,
             global: true,
-			condition: "None",
+            condition: "None",
             "All Difficulties": [ 36, 37, 47, 48, 49, 50, 51, 59, 63, 211, 233, 420, 421, 422, -422, -332, -308, -225, -206, -204, -8 ]
         },
 
@@ -867,9 +867,9 @@ window.drops = {
         {
             name: 'Chief Jailer Sadie: Cruel and Unusual',
             thumb: 550,
-			global: true,
+            global: true,
             condition: '30: Non-Slasher, Evolver, or Booster class characters are weakend; 15: Striker and Shooter class characters are weakened',
-			challenge: 'High Score calculated with Clear Speed and Crew Cost. (Crew cost can basically be ignored)',
+            challenge: 'High Score calculated with Clear Speed and Crew Cost. (Crew cost can basically be ignored)',
             challengeData: [['60,000 Points','1x Black Elder'],['160,000 Points','1x ATK Cotton Candy'],['300,000 Points','3x Rainbow Gems']],
             "All Difficulties": [ 549, 551, 552, -552, -551, -432, -426, -408, -329, -308, -255 ]
         },
@@ -888,7 +888,7 @@ window.drops = {
             thumb: 583,
             global: true,
             condition: 'All Units considered from the “Sea” will lose 20% to all stats',
-			challenge: 'Total number of hits over 50,000',
+            challenge: 'Total number of hits over 50,000',
             challengeData: [['4 Times','1x Black Elder'],['16 Times','1x ATK Cotton Candy'],['38 Times','3x Rainbow Gems']],
             "All Difficulties": [ 581, 582, 583, 584, -584, -544, -466, -412, -371, -335, -314, -291 ]
         },
@@ -896,7 +896,7 @@ window.drops = {
         {
             name: 'Pirate Apprentices! Shanks and Buggy',
             thumb: 599,
-			global: true,
+            global: true,
             condition: 'You cannot use any two units that are the same',
             Expert: [ 598, 600, -504, -467, -463, -414, -372, -332, -310, -77 ],
             Elite: [ 598, 600, -467, -463, -414, -372, -332, -310, -77 ]
@@ -905,7 +905,7 @@ window.drops = {
         {
             name: 'Raging Cook! Red Leg Zeff',
             thumb: 607,
-			global: true,
+            global: true,
             condition: 'You cannot use any two units that are the same',
             "All Difficulties": [ 606, 608, 609, -502, -457, -449, -312, -52, -50 ]
         },
@@ -913,9 +913,9 @@ window.drops = {
         {
             name: 'Camie and Hachi\'s Takoyaki Shop!',
             thumb: 635,
-			global: true,
+            global: true,
             condition: 'No Units above the cost of 49 is allowed',
-			challenge: 'Total number of hits over 50,000',
+            challenge: 'Total number of hits over 50,000',
             challengeData: [['4 Times','1x Blue Elder'],['8 Times','1x Rainbow Gem, 1x HP Cotton Candy'],['22 Times','2x Rainbow Gems, 1x Orb Matching Forbidden Tome']],
             "All Difficulties": [ 634, 636, 637, -636, -464, -451, -396, -370, -367, -359, -64 ]
         },
@@ -923,7 +923,7 @@ window.drops = {
         {
             name: 'Shark Attack! Arlong Pirates',
             thumb: 656,
-			global: true,
+            global: true,
             condition: 'You can only get STR, QCK, DEX, PSY and INT orbs',
             "All Difficulties": [ 655, 657, 658, -658, -500, -465, -455, -453, -398, -357, -60 ]
         },
@@ -951,7 +951,7 @@ window.drops = {
             thumb: 713,
             global: true,
             condition: '30: Non-Free Spirit, Evolver, or Booster class characters are weakend; 15: Striker and Shooter class characters are weakened',
-			challenge: 'Cumulative Damage dealt to enemies in a single run',
+            challenge: 'Cumulative Damage dealt to enemies in a single run',
             challengeData: [['600,000','1x Blue Elder'],['2,000,000','1x RCV Cotton Candy, 1x Rainbow Gem'],['5,000,000','1x Anti-Lock Forbidden Tome, 2x Rainbow Gems']],
             "Japan": [ 712, 714, 715, -716, -546, -541, -520, -400, -202, -363, -204 ],
             "Global": [ 712, 714, 715, -716, -643, -546, -541, -400, -202, -363, -204 ]
@@ -960,7 +960,7 @@ window.drops = {
         {
             name: "T-Bone's Absolute Justice",
             thumb: 724,
-			global: true,
+            global: true,
             condition: 'You can only bring INT, PSY and QCK units',
             "Japan": [ 721, 723, -590, -564, -563, -530, -526, -384, -361, -219 ],
             "Global": [ 721, 723, -590, -564, -563, -530, -641, -384, -361, -219 ]
@@ -969,7 +969,7 @@ window.drops = {
         {
             name: "Explosive! Wanze's Ramen Kenpo!!",
             thumb: 743,
-			global: true,
+            global: true,
             condition: 'You can only bring STR, QCK and DEX units',
             "Japan": [ 740, 742, -560, -558, -586, -567, -566, -412, -225, -18 ],
             "Global": [ 740, 742, -671, -673, -586, -567, -566, -412, -225, -18 ]
@@ -979,7 +979,7 @@ window.drops = {
             name: "Twilight Party DEAD or TREAT!!",
             thumb: 761,
             global: true,
-			condition: "None",
+            condition: "None",
             "Japan": [ 761, 762, 763, 764, 765, -610, -588, -565, -556, -426, -408, -261, -217 ],
             "Global": [ 761, 762, 763, 764, 765, -426, -408, -332, -308, -292, -261, -217, -8 ]
         },
@@ -988,7 +988,7 @@ window.drops = {
             name: "Midnight Party DEAD or TREAT!!",
             thumb: 766,
             global: true,
-			condition: "None",
+            condition: "None",
             "Japan": [ 762, 766, 767, 768, 769, -629, -611, -569, -554, -431, -410, -367, -223 ],
             "Global": [ 762, 766, 767, 768, 769, -431, -367, -291, -253, -251, -223, -212, -75 ]
         },
@@ -1037,7 +1037,7 @@ window.drops = {
         {
             name: "Lightning Speed! Strawhat Crew's Surprise Visit",
             thumb: 866,
-			condition: "None",
+            condition: "None",
             challenge:'Total number of hits above 50,000',
             challengeData: [['4 Times','1x INT Elder'],['9 Times','1x ATK Cotton Candy, 1x Rainbow Gem'],['22 Times','1x Anti-Silence Forbidden Tome, 2x Rainbow Gems']],
             "All Difficulties": [ 41, 42, 53, 235, 395, 397, 419, 426, 427, 432, 563, 564, 866, 867, 868, -709, -673, -671, -633, -500, -467, -465, -451, -431 ]
@@ -1063,45 +1063,45 @@ window.drops = {
             condition: 'You can only bring DEX units',
             "All Difficulties": [ 917, 919, 920, -920, -791, -756, -720, -706, -705, -542, -541, -522 ]
         },
-		
-		{
+        
+        {
             name: "Hannyabal's Great Ambition",
             thumb: 929,
             condition: 'You can only bring STR units',
             "All Difficulties": [ 928, 930, 931, -752, -758, -520, -729, -733, -787, -930, -544, -506 ]
         },
-		
+        
         {
             name: "Encounter! Whitebeard Pirates",
             thumb: 946,
             condition: "You can only bring PSY units",
             "All Difficulties": [ 946, 947, 948, 949, -718, -750, -760, -526, -793, -735, -546, -738]
         },
-		
-		{
-			name: "Clash! Whitebeard Pirates",
-            thumb: 979,
-			condition: "You can only bring INT units",
-            challenge: 'High Score calculated with Crew Cost, Turns Taken and Tap Accuracy',
-            challengeData: [['150,000','1x Blue Elder'],['420,000','1x HP Cotton Candy, 1x Rainbow Gem'],['700,000','2x Rainbow Gems, 1x Orb Forbidden Tome']],
-			"All Difficulties": [ 979, 980, 981, 949, -459, -838, -842, -524, -789, -736, -731, -563 ]
-		},
-		
-		{
-			name: "Let's Find Our Captain! Heart Pirates!",
-			condition: "You can only bring QCK units",
-            thumb: 1003,
-			"All Difficulties": [ 1002, 1004, 1005, -748, -844, -558, -846, -737, -1006, -785, -564 ]
-		},
         
         {
-			name: "Rare Animal Island's Count Butler",
-			thumb: 1011,
-			condition: "None",
+            name: "Clash! Whitebeard Pirates",
+            thumb: 979,
+            condition: "You can only bring INT units",
+            challenge: 'High Score calculated with Crew Cost, Turns Taken and Tap Accuracy',
+            challengeData: [['150,000','1x Blue Elder'],['420,000','1x HP Cotton Candy, 1x Rainbow Gem'],['700,000','2x Rainbow Gems, 1x Orb Forbidden Tome']],
+            "All Difficulties": [ 979, 980, 981, 949, -459, -838, -842, -524, -789, -736, -731, -563 ]
+        },
+        
+        {
+            name: "Let's Find Our Captain! Heart Pirates!",
+            condition: "You can only bring QCK units",
+            thumb: 1003,
+            "All Difficulties": [ 1002, 1004, 1005, -748, -844, -558, -846, -737, -1006, -785, -564 ]
+        },
+        
+        {
+            name: "Rare Animal Island's Count Butler",
+            thumb: 1011,
+            condition: "None",
             global: true,
             "Global": [ 1010, 1012, 1013, 1014, -1014, -530, -840, -671, -880, -739, -812, -565 ],
-			"Japan": [ 1010, 1012, 1013, 1014, -1014, -530, -840, -560, -880, -739, -812, -565 ]
-		},
+            "Japan": [ 1010, 1012, 1013, 1014, -1014, -530, -840, -560, -880, -739, -812, -565 ]
+        },
         
         {
             name: "Temptation!? The Queen of Kamabakka Queendom!",
@@ -1126,7 +1126,7 @@ window.drops = {
         
         {
             name: "Dr. Indigo & Scarlet!",
-			thumb: 1095,
+            thumb: 1095,
             condition: "Boosts ATK of Driven and Powerhouse characters by 2x, other classes get .5x ATK. Boosts HP of Slasher and Fighter characters by 2x, other classes get .5x HP. (This STACKS for characters with multiple classes)",
             "All Difficulties": [ 1094, 1096, 1098, -649, -910, -647, -891, -590, -611, -893, -1098, -912]
         },
@@ -1137,8 +1137,8 @@ window.drops = {
             condition: "Boosts ATK of Cerebral and Free Spirit characters by 2x, other classes get .5x ATK. Boosts HP of Striker and Shooter characters by 2x, other classes get .5x HP. (This STACKS for characters with multiple classes)",
             "All Difficulties": [ 1109, 1111, 1113, -23, -628, -639, -641, -892, -937, -939, -941 ]
         },
-		
-		{
+        
+        {
             name: "Behind the Scenes Intelligency Agency, CP9",
             thumb: 1137,
             condition: "Only [STR], [QCK], [DEX], [INT], and [PSY] orbs appear",
@@ -1186,7 +1186,7 @@ window.drops = {
             condition: "Child-like characters get their ATK and HP boosted by 3.5x, RCV by 1.5x, and cooldowns reduced by 7 turns at the start of the fight",
             "All Difficulties": [ 1286, 1288, 1290, -963, -1045, -251, -760, -1083, -1129, -506, -1062, -702 ]
         },
-		
+        
     ],
 
             
@@ -1251,7 +1251,7 @@ window.drops = {
             name: 'Clash!? Usopp\'n',
             thumb: 518,
             showManual: true,
-			global: true,
+            global: true,
             'Ultimate': [ 517, -15, -16, -223 ]
         },
 
@@ -1325,13 +1325,13 @@ window.drops = {
             Master: [ 932 ],
             Expert: [ 932 ]
         },
-		
-		{
-			name: 'Clash!! Kizaru',
+        
+        {
+            name: 'Clash!! Kizaru',
             thumb: 978,
-			Ultimate: [ 977 ],
-			Master: [ 977 ]
-		},
+            Ultimate: [ 977 ],
+            Master: [ 977 ]
+        },
         
         {
             name: 'Clash!? Impostor Straw Hat Pirates',
@@ -1388,7 +1388,7 @@ window.drops = {
             challenge: 'Total number of hits over 30,000',
             challengeData: [['10 Times','Vivi\'s Breather Unit'],['35 Times','1x HP Cotton Candy'],['72 Times','3x Rainbow Gems']],
             "All Difficulties": [ 659, 680, 682, 684, 1200, 1198 ],
-			"Completion Units": [686]
+            "Completion Units": [686]
         },
         
         {

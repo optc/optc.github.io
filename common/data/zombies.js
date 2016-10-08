@@ -211,22 +211,22 @@ window.zombies = {
         type: 'healer',
         multiplier: 2
     },
-	949: { //Fortnight Thatch
-		type: 'healer',
+    949: { //Fortnight Thatch
+        type: 'healer',
         multiplier: 2
-	},
-	965: {//Saint Charloss
-		type: 'healer',
-		amount: 500 
-	},
-	1008: {//Sakura Monet
-		type: 'healer',
+    },
+    965: {//Saint Charloss
+        type: 'healer',
+        amount: 500 
+    },
+    1008: {//Sakura Monet
+        type: 'healer',
         multiplier: 3
-	},
-	1014: {//Tony Tony Chopper, Animal King
-		type: 'healer',
+    },
+    1014: {//Tony Tony Chopper, Animal King
+        type: 'healer',
         multiplier: 2
-	},
+    },
     1052: {//Kid Robin
         type: 'healer',
         amount: 1000
@@ -243,14 +243,14 @@ window.zombies = {
         type: 'healer',
         multiplier: 3
     },
-	1195: {//Colo Ganfor
-		type: 'healer',
+    1195: {//Colo Ganfor
+        type: 'healer',
         multiplier: 2
-	},
-	1196: {//Colo Ganfor
-		type: 'healer',
+    },
+    1196: {//Colo Ganfor
+        type: 'healer',
         multiplier: 5
-	},
+    },
     1241: {//Fortnight Koala
         type: 'healer',
         multiplier: 1
