@@ -1716,4 +1716,18 @@ window.specials = {
         atk: function(p) { return p.unit.class.has("Driven") ? 1.5 : 1; },
         type: "class"
     },
+    1286: {
+        atk: function(p) { return p.unit.class.has("Shooter") ? 1.5 : 1; },
+        type: "class"
+    },
+    1287: {
+        atk: function(p) { return p.unit.class.has("Shooter") ? 1.5 : 1; },
+        type: "class"
+    },
+    1297: {
+        affinity: function(p){ return p.unit.type == "STR" ? 1.75 : 1; }
+    },
+    1298: {
+        affinity: function(p){ return p.unit.type == "STR" ? 1.75 : 1; }
+    },
 };

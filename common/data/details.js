@@ -6288,7 +6288,7 @@ window.details = {
     1233: {//Tashigi
         captain: "Boosts the ATK of Slasher and Cerebral characters by 1.5x, and their RCV by 1.2x",
         captainNotes: "Attack boost stacks, so a Slasher Cerebral unit has 2.25x ATK",
-        special: "Deals 15x character's ATK in [QCK] damage to all enemies. Boosts the 'Color Affinity' of Slasher and Cerebral character's regular attacks by 1.5x for 2 turns",
+        special: "Deals 15x character's ATK in [QCK] damage to all enemies. Boosts the Color Affinity of Slasher and Cerebral characters by 1.5x for 2 turns",
         specialNotes: "'Color Affinity' boosts color type advantages. For example, a STR unit normally deals 2x to a DEX unit and .5x to QCK. With Color Affinity boost, it will deal 3x to DEX and .25x to QCK. ",
         specialName: "Cutting Drizzle",
         sailor: "Boosts RCV of Slasher characters by 30",
@@ -6296,7 +6296,7 @@ window.details = {
     1234: {//Tashigi
         captain: "Boosts the ATK of Slasher and Cerebral characters by 1.6x, and their RCV by 1.3x",
         captainNotes: "Attack boost stacks, so a Slasher Cerebral unit has 2.56x ATK",
-        special: "Deals 15x character's ATK in [QCK] damage to all enemies. Boosts the 'Color Affinity' of Slasher and Cerebral character's regular attacks by 1.5x for 2 turns",
+        special: "Deals 15x character's ATK in [QCK] damage to all enemies. Boosts the Color Affinity of Slasher and Cerebral characters by 1.5x for 2 turns",
         specialNotes: "'Color Affinity' boosts color type advantages. For example, a STR unit normally deals 2x to a DEX unit and .5x to QCK. With Color Affinity boost, it will deal 3x to DEX and .25x to QCK. ",
         specialName: "Cutting Drizzle",
         sailor: "Boosts RCV of Slasher characters by 30",
@@ -6526,13 +6526,13 @@ window.details = {
     },
     1261: {//Young Senor Pink
         captain: "Boosts ATK of Free Spirit characters by 1.5x. Heals for .75x his RCV at the end of the turn each time you hit a Perfect.",
-        special: "Randomizes all orbs. Boosts the 'Color Affinity' of Free Spirit and Shooter character's regular attacks by 1.5x for 1 turn",
+        special: "Randomizes all orbs. Boosts the Color Affinity of Free Spirit and Shooter characters by 1.5x for 1 turn",
         specialNotes: "'Color Affinity' boosts color type advantages. For example, a STR unit normally deals 2x to a DEX unit and .5x to QCK. With Color Affinity boost, it will deal 3x to DEX and .25x to QCK. ",
         specialName: "Blood and Gunpowder of the Underground Family",
     },
     1262: {//Young Senor Pink
         captain: "Boosts ATK of Free Spirit characters by 1.75x. Heals for .75x his RCV at the end of the turn each time you hit a Perfect.",
-        special: "Randomizes all orbs. Boosts the 'Color Affinity' of Free Spirit and Shooter character's regular attacks by 1.5x for 1 turn",
+        special: "Randomizes all orbs. Boosts the Color Affinity of Free Spirit and Shooter characters by 1.5x for 1 turn",
         specialNotes: "'Color Affinity' boosts color type advantages. For example, a STR unit normally deals 2x to a DEX unit and .5x to QCK. With Color Affinity boost, it will deal 3x to DEX and .25x to QCK. ",
         specialName: "Blood and Gunpowder of the Underground Family",
     },
@@ -6727,7 +6727,7 @@ window.details = {
         specialName: "Coliseum Sandersonia Special",
     },
     1294: {//Coliseum Sandersonia
-        captain: "Boosts ATK of Fighter characters by 1.75x, deals 2 times the damage received in the previous turn in [PSY] damage to all enemies at the end of each turn",
+        captain: "Boosts ATK of Fighter characters by 2x, deals 4 times the damage received in the previous turn in [PSY] damage to all enemies at the end of each turn",
         special: [
             {
                 "description": "Changes Captain orb into Matching, and reduces damage received from [PSY] enemies by 40%",
@@ -6740,6 +6740,28 @@ window.details = {
         ],
         specialNotes: "The exact multiplier used is chosen based on the crew's current HP at the time the special is activated: above 50% HP, the multiplier used is 50%; between 50% and 10%, it's 80%; below 10% HP, it's 100%.",
         specialName: "Coliseum Sandersonia Special",
+    },
+    1295: {//Halloween Kalifa
+        captain: "Boosts ATK and RCV of [STR] characters by 1.5x",
+        special: "Reduces duration of Paralysis by 3 turns, removes poison, and reduces the defense of all enemies by 100% for 1 turn",
+        specialName: "Halloween Kalifa Special",
+    },
+    1296: {//Halloween Kalifa
+        captain: "Boosts ATK of [STR] characters by 2x and their RCV by 1.5x",
+        special: "Reduces duration of Paralysis by 3 turns, removes poison, and reduces the defense of all enemies by 100% for 1 turn",
+        specialName: "Halloween Kalifa Special",
+    },
+    1297: {
+        captain: "Boosts ATK by 2.5x following a chain of [STR] > [STR] > [STR] attacks no lower than Good",
+        special: "Deals 50x character's ATK in [STR] damage to all enemies. Changes orbs for [STR] characters into [STR] orbs. Boosts the Color Affinity of [STR] characters by 1.75x for 1 turn",
+        specialNotes: "'Color Affinity' boosts color type advantages. For example, a STR unit normally deals 2x to a DEX unit and .5x to QCK. With Color Affinity boost, it will deal 3x to DEX and .25x to QCK. ",
+        specialName: "Great Eruption",
+    },
+    1298: {
+        captain: "Boosts ATK by 3x following a chain of [STR] > [STR] > [STR] attacks no lower than Good",
+        special: "Deals 50x character's ATK in [STR] damage to all enemies. Changes orbs for [STR] characters into [STR] orbs. Boosts the Color Affinity of [STR] characters by 1.75x for 1 turn",
+        specialNotes: "'Color Affinity' boosts color type advantages. For example, a STR unit normally deals 2x to a DEX unit and .5x to QCK. With Color Affinity boost, it will deal 3x to DEX and .25x to QCK. ",
+        specialName: "Great Eruption",
     },
 };
 

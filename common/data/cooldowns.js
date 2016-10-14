@@ -1293,4 +1293,8 @@ window.cooldowns = [
     29,
     null,//Coliseumn Sandersonia
     null,//Coliseumn Sandersonia
+    [ 16, 16 ],
+    [ 16, 16 ],
+    [ 32, 16 ],
+    [ 32, 16 ],
 ];

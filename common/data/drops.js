@@ -1120,7 +1120,8 @@ window.drops = {
         {
             name: "Pirate Ship Competition! \"Dead End\" Opens!",
             thumb: 1072,
-            condition: "STR/DEX/QCK units get their ATK boosted by 1.6x and their HP reduced by 90%. INT/PSY units get their ATK reduced by 80% and their HP boosted by 2.0x",
+            //OLD condition: "STR/DEX/QCK units get their ATK boosted by 1.6x and their HP reduced by 90%. INT/PSY units get their ATK reduced by 80% and their HP boosted by 2.0x",
+            condition: "STR/DEX/QCK units get their ATK boosted by 1.6x. INT/PSY units get their HP boosted by 2.0x",
             "All Difficulties": [ 1069, 1071, 1073, -562, -906, -914, -645, -890, -587, -629, -888, -1070]
         },
         
@@ -1358,9 +1359,15 @@ window.drops = {
         
         {
             name: 'Clash!! Tesoro',
-            thumb: 1162, //Change to evolved Tereso once he arrives
+            thumb: 1163, 
             Master: [ 1162, 1164 ],
             Ultimate: [ 1162, 1164, 1180 ]
+        },
+        
+        {
+            name: 'Clash!! Akainu',
+            thumb: 1298,
+            Ultimate: [ 1297 ]
         },
 
     ],
@@ -1424,6 +1431,13 @@ window.drops = {
             thumb: null,
             challenge: "10, 20, 30, 35 stamina difficulty. 30 and 35 Stamina has a chance of dropping the Universal Skill Book.",
             "All Difficulties": [ -367, -649, -718, -870, -1001 ]
+        },
+        
+        {
+            name: 'Young Whitebeard Event',
+            thumb: 1258,
+            challenge: "Has a chance of appearing at the end of ANY Raid boss. You MUST use the same team that you just used to complete the raid boss to fight Young Whitebeard.",
+            "All Difficulties": [ 1257 ]
         },
 
    ]
