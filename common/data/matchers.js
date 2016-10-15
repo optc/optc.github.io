@@ -175,6 +175,12 @@ window.matchers = [
     },
     
     {
+        name: 'Color Affinity boosters',
+        target: 'special',
+        matcher: /Boosts the Color Affinity/i
+    },
+    
+    {
         name: 'RCV boosters',
         target: 'special',
         matcher: /Boosts RCV/i

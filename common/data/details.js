@@ -6289,7 +6289,7 @@ window.details = {
         captain: "Boosts the ATK of Slasher and Cerebral characters by 1.5x, and their RCV by 1.2x",
         captainNotes: "Attack boost stacks, so a Slasher Cerebral unit has 2.25x ATK",
         special: "Deals 15x character's ATK in [QCK] damage to all enemies. Boosts the Color Affinity of Slasher and Cerebral characters by 1.5x for 2 turns",
-        specialNotes: "'Color Affinity' boosts color type advantages. For example, a STR unit normally deals 2x to a DEX unit and .5x to QCK. With Color Affinity boost, it will deal 3x to DEX and .25x to QCK. ",
+        specialNotes: "#{colorAffinity : 1.5}",
         specialName: "Cutting Drizzle",
         sailor: "Boosts RCV of Slasher characters by 30",
     },
@@ -6297,7 +6297,7 @@ window.details = {
         captain: "Boosts the ATK of Slasher and Cerebral characters by 1.6x, and their RCV by 1.3x",
         captainNotes: "Attack boost stacks, so a Slasher Cerebral unit has 2.56x ATK",
         special: "Deals 15x character's ATK in [QCK] damage to all enemies. Boosts the Color Affinity of Slasher and Cerebral characters by 1.5x for 2 turns",
-        specialNotes: "'Color Affinity' boosts color type advantages. For example, a STR unit normally deals 2x to a DEX unit and .5x to QCK. With Color Affinity boost, it will deal 3x to DEX and .25x to QCK. ",
+        specialNotes: "#{colorAffinity : 1.5}",
         specialName: "Cutting Drizzle",
         sailor: "Boosts RCV of Slasher characters by 30",
     },
@@ -6527,13 +6527,13 @@ window.details = {
     1261: {//Young Senor Pink
         captain: "Boosts ATK of Free Spirit characters by 1.5x. Heals for .75x his RCV at the end of the turn each time you hit a Perfect.",
         special: "Randomizes all orbs. Boosts the Color Affinity of Free Spirit and Shooter characters by 1.5x for 1 turn",
-        specialNotes: "'Color Affinity' boosts color type advantages. For example, a STR unit normally deals 2x to a DEX unit and .5x to QCK. With Color Affinity boost, it will deal 3x to DEX and .25x to QCK. ",
+        specialNotes: "#{colorAffinity : 1.5}",
         specialName: "Blood and Gunpowder of the Underground Family",
     },
     1262: {//Young Senor Pink
         captain: "Boosts ATK of Free Spirit characters by 1.75x. Heals for .75x his RCV at the end of the turn each time you hit a Perfect.",
         special: "Randomizes all orbs. Boosts the Color Affinity of Free Spirit and Shooter characters by 1.5x for 1 turn",
-        specialNotes: "'Color Affinity' boosts color type advantages. For example, a STR unit normally deals 2x to a DEX unit and .5x to QCK. With Color Affinity boost, it will deal 3x to DEX and .25x to QCK. ",
+        specialNotes: "#{colorAffinity : 1.5}",
         specialName: "Blood and Gunpowder of the Underground Family",
     },
     1263: {//Young Vergo
@@ -6754,13 +6754,13 @@ window.details = {
     1297: {
         captain: "Boosts ATK by 2.5x following a chain of [STR] > [STR] > [STR] attacks no lower than Good",
         special: "Deals 50x character's ATK in [STR] damage to all enemies. Changes orbs for [STR] characters into [STR] orbs. Boosts the Color Affinity of [STR] characters by 1.75x for 1 turn",
-        specialNotes: "'Color Affinity' boosts color type advantages. For example, a STR unit normally deals 2x to a DEX unit and .5x to QCK. With Color Affinity boost, it will deal 3x to DEX and .25x to QCK. ",
+        specialNotes: "#{colorAffinity : 1.75}",
         specialName: "Great Eruption",
     },
     1298: {
         captain: "Boosts ATK by 3x following a chain of [STR] > [STR] > [STR] attacks no lower than Good",
         special: "Deals 50x character's ATK in [STR] damage to all enemies. Changes orbs for [STR] characters into [STR] orbs. Boosts the Color Affinity of [STR] characters by 1.75x for 1 turn",
-        specialNotes: "'Color Affinity' boosts color type advantages. For example, a STR unit normally deals 2x to a DEX unit and .5x to QCK. With Color Affinity boost, it will deal 3x to DEX and .25x to QCK. ",
+        specialNotes: "#{colorAffinity : 1.75}",
         specialName: "Great Eruption",
     },
 };

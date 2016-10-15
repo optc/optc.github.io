@@ -18,7 +18,8 @@ var notes = {
         "crew's remaining HP and is higher the #1 the HP is. The multiplier is calculated as: #2.",
     stages: "The special can be used as soon as the first stage is reached.",
     zombie: "The protection only works when attacked by one single enemy and will leave the team with at least 1 HP; " +
-        "the effect will not work when attacked by multiples enemies at once."
+        "the effect will not work when attacked by multiples enemies at once.",
+    colorAffinity: "'Color Affinity' boosts color type advantages. For example, a STR unit normally deals 2x to a DEX unit and .5x to QCK. With this Color Affinity boost, it will deal (2*#1)x to DEX and (0.5*(#1-1))x to QCK."
 };
 
 /***********
