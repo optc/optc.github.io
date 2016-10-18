@@ -3468,4 +3468,29 @@ window.captains = {
         },
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
     },
+    1299: {
+        atk: function(p) { return p.unit.type == "INT" ? 1.2 : 1; },
+        rcv: function(p) { return p.unit.type == "INT" ? 1.2 : 1; },
+    },
+    1300: {
+        atk: function(p) { return p.unit.type == "INT" ? 1.5 : 1; },
+        rcv: function(p) { return p.unit.type == "INT" ? 1.5 : 1; },
+    },
+    1301: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? 1.75 : 1; },
+    },
+    1302: {
+        atk: function(p) {
+            return p.unit.class.has("Slasher") && p.unit.class.has("Driven") ? 2.625 :
+                p.unit.class.has("Slasher") && !p.unit.class.has("Driven") ? 1.75 : 
+                !p.unit.class.has("Slasher") && p.unit.class.has("Driven") ? 1.5 :
+                1;
+        },
+    },
+    1303: {
+        atk: function(p) { return p.unit.class.has("Cerebral") ? 1.5 : 1; },
+    },
+    1304: {
+        atk: function(p) { return p.unit.class.has("Cerebral") ? 2 : 1; },
+    },
 };

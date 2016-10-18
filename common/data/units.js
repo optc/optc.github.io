@@ -1297,8 +1297,12 @@ window.units = [
     [ "Halloween Kalifa Evolved", "STR", [ "Fighter", "Cerebral" ], 5, 20, 5, 3, 99, 3000000, 759, 351, 229, 1655, 839, 464, null ],
     [ "Akainu", "STR", [ "Driven", "Fighter" ], 4, 30, 4, 2, 70, 1066998, 286, 216, 0, 1618, 816, 49, 1 ],
     [ "Akainu, Magma Man", "STR", [ "Driven", "Fighter" ], 5, 50, 4, 3, 99, 5000000, 1518, 716, 44, 3168, 1444, 99, 1 ],
-    [ "Halloween Rebecca", "INT", "Fighter", 4, null, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Halloween Rebecca Evolved", "INT", "Fighter", 5, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Halloween Rebecca", "INT", "Fighter", 4, 12, 7, 1, 50, 392109, 87, 43, 38, 961, 453, 221, null ],
+    [ "Halloween Rebecca Evolved", "INT", "Fighter", 5, 20, 5, 3, 99, 3000000, 900, 391, 168, 1862, 912, 361, null ],
+    [ "Jailbreak Buggy", "QCK", [ "Slasher", "Driven" ], 3, 12, 4, 1, 50, null, 72, 33, 28, null, null, null, null ],
+    [ "Jailbreak Buggy Evolved", "QCK", [ "Slasher", "Driven" ], 4, 20, 4, 3, 99, null, 852, 371, 130, null, null, null, null ],
+    [ "Jailbreak Mr. 3", "INT", [ "Cerebral", "Striker" ], 3, 12, 5, 1, 50, null, 79, 29, 31, null, null, null, null ],
+    [ "Jailbreak Mr. 3 Evolved", "INT", [ "Cerebral", "Striker" ], 4, 20, 4, 3, 99, null, 932, 323, 138, null, null, null, null ],
     ];
     
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ]

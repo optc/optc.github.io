@@ -1548,6 +1548,10 @@ window.specials = {
             });
         }
     },
+    1227: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 1.75 : 1; },
+        type: "type"
+    },
     1231: {
         turnedOn: false,
         onActivation: function(p) {
@@ -1729,5 +1733,13 @@ window.specials = {
     },
     1298: {
         affinity: function(p){ return p.unit.type == "STR" ? 1.75 : 1; }
+    },
+    1299: {
+        atk: function(p) { return p.unit.type == "INT" ? 1.75 : 1; },
+        type: "class"
+    },
+    1300: {
+        atk: function(p) { return p.unit.type == "INT" ? 1.75 : 1; },
+        type: "class"
     },
 };

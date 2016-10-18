@@ -1120,6 +1120,7 @@ window.drops = {
         {
             name: "Pirate Ship Competition! \"Dead End\" Opens!",
             thumb: 1072,
+            global: true,
             //OLD condition: "STR/DEX/QCK units get their ATK boosted by 1.6x and their HP reduced by 90%. INT/PSY units get their ATK reduced by 80% and their HP boosted by 2.0x",
             condition: "STR/DEX/QCK units get their ATK boosted by 1.6x. INT/PSY units get their HP boosted by 2.0x",
             "All Difficulties": [ 1069, 1071, 1073, -562, -906, -914, -645, -890, -587, -629, -888, -1070]
@@ -1186,6 +1187,13 @@ window.drops = {
             thumb: 1287,
             condition: "Child-like characters get their ATK and HP boosted by 3.5x, RCV by 1.5x, and cooldowns reduced by 7 turns at the start of the fight",
             "All Difficulties": [ 1286, 1288, 1290, -963, -1045, -251, -760, -1083, -1129, -506, -1062, -702 ]
+        },
+        
+        {
+            name: "Jailbreak Battle! Mr. 3 and Buggy",
+            thumb: 1304,
+            condition: "Shooter and Fighter characters are Silenced for 99 turns and have their ATK reduced by a variable amount. (75% on 30 stamina)",
+            "All Difficulties": [ 1301, 1303, 1152, 1151, 551, 539, -718, -752, -1125, -1133, -15, -203, -733, -1056, -1060 ]
         },
         
     ],
@@ -1396,6 +1404,12 @@ window.drops = {
             challengeData: [['10 Times','Vivi\'s Breather Unit'],['35 Times','1x HP Cotton Candy'],['72 Times','3x Rainbow Gems']],
             "All Difficulties": [ 659, 680, 682, 684, 1200, 1198 ],
             "Completion Units": [686]
+        },
+        
+        {
+            name: 'Halloween Event Characters',
+            thumb: 1300,
+            "All Difficulties": [ 1300 ],
         },
         
         {

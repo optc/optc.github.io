@@ -6727,7 +6727,7 @@ window.details = {
         specialName: "Coliseum Sandersonia Special",
     },
     1294: {//Coliseum Sandersonia
-        captain: "Boosts ATK of Fighter characters by 2x, deals 4 times the damage received in the previous turn in [PSY] damage to all enemies at the end of each turn",
+        captain: "Boosts ATK of Powerhouse characters by 2x, deals 4 times the damage received in the previous turn in [PSY] damage to all enemies at the end of each turn",
         special: [
             {
                 "description": "Changes Captain orb into Matching, and reduces damage received from [PSY] enemies by 40%",
@@ -6751,17 +6751,48 @@ window.details = {
         special: "Reduces duration of Paralysis by 3 turns, removes poison, and reduces the defense of all enemies by 100% for 1 turn",
         specialName: "Halloween Kalifa Special",
     },
-    1297: {
+    1297: {//Akainu
         captain: "Boosts ATK by 2.5x following a chain of [STR] > [STR] > [STR] attacks no lower than Good",
         special: "Deals 50x character's ATK in [STR] damage to all enemies. Changes orbs for [STR] characters into [STR] orbs. Boosts the Color Affinity of [STR] characters by 1.75x for 1 turn",
         specialNotes: "#{colorAffinity : 1.75}",
         specialName: "Great Eruption",
     },
-    1298: {
+    1298: {//Akainu
         captain: "Boosts ATK by 3x following a chain of [STR] > [STR] > [STR] attacks no lower than Good",
         special: "Deals 50x character's ATK in [STR] damage to all enemies. Changes orbs for [STR] characters into [STR] orbs. Boosts the Color Affinity of [STR] characters by 1.75x for 1 turn",
         specialNotes: "#{colorAffinity : 1.75}",
         specialName: "Great Eruption",
+    },
+    1299: {//Halloween Rebecca
+        captain: "Boosts ATK and RCV of [INT] characters by 1.2x",
+        special: "Recovers 3,000 HP and boosts ATK of [INT] characters by 1.75x for 1 turn",
+        specialName: "Halloween Rebecca Special",
+    },
+    1300: {//Halloween Rebecca
+        captain: "Boosts ATK and RCV of [INT] characters by 1.5x",
+        special: "Recovers 3,000 HP and boosts ATK of [INT] characters by 1.75x for 1 turn",
+        specialName: "Halloween Rebecca Special",
+    },
+    1301: {//Jailbreak Buggy
+        captain: "Boosts ATK of Slasher characters by 1.75x",
+        special: "Reduces crew's HP to 1, empties all slots, and deals 30x character's ATK in [QCK] damage to all enemies",
+        specialName: "Jailbreak Buggy Special",
+    },
+    1302: {//Jailbreak Buggy
+        captain: "Boosts ATK of Slasher characters by 1.75x and boosts ATK of Driven characters by 1.5x",
+        captainNotes: "The bonus is cumulative. Slasher Driven characters get a 2.625x bonus.",
+        special: "Reduces crew's HP to 1, empties all slots, and deals 30x character's ATK in [QCK] damage to all enemies",
+        specialName: "Jailbreak Buggy Special",
+    },
+    1303: {//Jailbreak Mr. 3
+        captain: "Boosts ATK of Cerebral characters by 1.5x. If you don't attack with Mr. 3, reduces damage received by 10% for that turn.",
+        special: "Reduces damage received by 60% for 2 turns",
+        specialName: "Jailbreak Mr. 3 Special",
+    },
+    1304: {//Jailbreak Mr. 3
+        captain: "Boosts ATK of Cerebral characters by 2x. If you don't attack with Mr. 3, reduces damage received by 10% for that turn.",
+        special: "Reduces damage received by 60% for 2 turns",
+        specialName: "Jailbreak Mr. 3 Special",
     },
 };
 
