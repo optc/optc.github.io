@@ -2,7 +2,7 @@ window.effects = {
 
     // always use unique IDs, and don't ever change an ID once you've set it
     // IDs must always be greater than 0
-    // last ID used: 39
+    // last ID used: 41
     // Use p.type instead of p.unit.type here
 
     'Baroque Works (pre-v4.0)': {
@@ -342,7 +342,7 @@ window.effects = {
     
     'Coliseum Tashigi': {
         description: '25 hit barrier and 2x chain limit',
-        thumb: null,
+        thumb: 783,
         id: 38,
         comboShield: 25,
         chainLimiter: function() { return 2.0; }
@@ -377,6 +377,21 @@ window.effects = {
                             }
                             return 1*boost1*boost2*boost3*boost4*boost5;
                         }
+    },
+    
+    'Gild Tesoro - 40 Stamina': {
+        description: 'Boosts the Orbs of all characters by 1.4x',
+        thumb: 1163,
+        id: 40,
+        orb: function(p) { return p.orb == 2.0 ? 1.4 : (p.orb == 0.5 ? 20/28 : 1); }
+    },
+    
+    'Gild Tesoro - 60 Stamina': {
+        description: 'Boosts the Orbs and ATK of all characters by 1.4x',
+        thumb: 1163,
+        id: 41,
+        orb: function(p) { return p.orb == 2.0 ? 1.4 : (p.orb == 0.5 ? 20/28 : 1); },
+        atk: function(p) { return 1.5; }
     },
 
 };
