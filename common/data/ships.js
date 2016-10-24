@@ -240,7 +240,7 @@ window.ships = [
     { // 19
         name: "Doflamingo Ship",
         thumb: null,
-        description: 'Boosts ATK of Driven Characters by 1.5x and their HP by 1.35x. Special: Makes Perfects easier to Hit, Adds 0.2 to Chain  (cooldown: 15 Turns)',
+        description: 'Boosts ATK of Driven Characters by 1.5x and their HP by 1.35x. Makes Perfects easier to Hit for Driven characters. Special: Adds 0.2 to Chain  (cooldown: 15 Turns)',
         atk: function(p) { return !p.unit.class.has('Driven') ? 1 : [ 1.2, 1.2, 1.3, 1.3, 1.3, 1.3, 1.4, 1.4, 1.4, 1.5][p.boatLevel - 1]},
         hp: function(p) { return !p.unit.class.has('Driven') ? 1 : [ 1.1, 1.1, 1.1, 1.15, 1.2, 1.2, 1.2, 1.2, 1.2, 1.35][p.boatLevel - 1]}
     },
@@ -248,7 +248,7 @@ window.ships = [
     { // 20
         name: 'The Rocket Man',
         thumb: null,
-        description: 'Boosts ATK and Powerhouse characters by 1.55x, and heals at the end of every turn for a variable amount depending on the number of Powerhouse characters on the team. (At MAX, heals 900 per turn with 6 Powerhouse characters) Sharply reduces HP of non-Powerhouse units. Special: Deals 99,999 typeless damage to one unit.  (cooldown MAX: 17 Turns)',
+        description: 'Boosts ATK of Powerhouse characters by 1.55x, and heals at the end of every turn for a variable amount depending on the number of Powerhouse characters on the team. (At MAX, heals 900 per turn with 6 Powerhouse characters) Sharply reduces HP of non-Powerhouse units. Special: Deals 99,999 typeless damage to one unit.  (cooldown MAX: 17 Turns)',
         atk: function(p) {
             return !p.unit.class.has('Powerhouse') ? 1 : [ 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.4, 1.55 ][p.boatLevel - 1];
         },

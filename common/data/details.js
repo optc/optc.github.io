@@ -5236,7 +5236,7 @@ window.details = {
         specialName: "Haute Couture: Patchwork"
     },
     1077:{
-        captain: "Boosts ATK of Striker and Free Spirit characters by 2.25x and their HP by 1.5x",
+        captain: "Boosts ATK of Striker and Free Spirit characters by 2.25x and their RCV by 1.5x",
         special: [
             {
                 "description": "Delays all enemies for 1 turn. Locks all orbs for 1 turn. Cuts the current HP of all enemies by 10%",
@@ -6793,6 +6793,16 @@ window.details = {
         captain: "Boosts ATK of Cerebral characters by 2x. If you don't attack with Mr. 3, reduces damage received by 10% for that turn.",
         special: "Reduces damage received by 60% for 2 turns",
         specialName: "Jailbreak Mr. 3 Special",
+    },
+    1305: {//Halloween Sugar
+        captain:  "Boosts ATK of Cerebral characters by 1.3x and recovers 500 HP at the end of each turn",
+        special: "Changes Badly Matching, [BLOCK], and [BOMB] orbs into [G] orbs. Reduces Special Cooldown of 1 character by 1 turn",
+        specialName: "Aggressive 'Trick-Or-Treat'",
+    },
+    1306: {//Halloween Sugar
+        captain:  "Boosts ATK of Cerebral characters by 1.75x and recovers 1,000 HP at the end of each turn",
+        special: "Changes Badly Matching, [BLOCK], and [BOMB] orbs into [G] orbs. Reduces Special Cooldown of 1 character by 1 turn",
+        specialName: "Aggressive 'Trick-Or-Treat'",
     },
 };
 
