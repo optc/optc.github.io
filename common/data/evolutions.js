@@ -1987,12 +1987,40 @@ window.evolutions = {
         evolution: 1306,
         evolvers: [  ]
     },
+    1307: {
+        evolution: 1308,
+        evolvers: [  ]
+    },
     1309: {
         evolution: 1310,
         evolvers: [  ]
     },
     1311: {
         evolution: 1312,
+        evolvers: [  ]
+    },
+    1313: {
+        evolution: 1314,
+        evolvers: [  ]
+    },
+    1315: {
+        evolution: 1316,
+        evolvers: [  ]
+    },
+    1317: {
+        evolution: 1318,
+        evolvers: [  ]
+    },
+    1319: {
+        evolution: 1320,
+        evolvers: [  ]
+    },
+    1321: {
+        evolution: 1322,
+        evolvers: [  ]
+    },
+    1323: {
+        evolution: 1324,
         evolvers: [  ]
     },
 };

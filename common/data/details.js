@@ -5201,7 +5201,7 @@ window.details = {
         specialName: "Emerald Porcupine Robe"
     },
     1072: {
-        captain: "Boosts ATK of characters with cost 30 or less by 2x and boosts the HP of Powerhouse characters by 1.2x",
+        captain: "Boosts ATK of characters with cost 20 or less by 2x and boosts the HP of Powerhouse characters by 1.2x",
         special: "Deals 20x ATK in [STR] damage to one enemy. Boosts ATK of Powerhouse characters by 1.5x for 1 turn.",
         specialName: "Emerald Porcupine Robe"
     },
@@ -6803,6 +6803,104 @@ window.details = {
         captain:  "Boosts ATK of Cerebral characters by 1.75x and recovers 1,000 HP at the end of each turn",
         special: "Changes Badly Matching, [BLOCK], and [BOMB] orbs into [G] orbs. Reduces Special Cooldown of 1 character by 1 turn",
         specialName: "Aggressive 'Trick-Or-Treat'",
+    },
+    1307: {//Halloween Bartolomeo
+        captain: "Boosts ATK of Driven characters by 1.75x. If you don't attack with Bartolomeo, reduces damage received by 10% for that turn.",
+        special: "Reduces damage received by 50% for 1 turn. If during that turn every unit scores a Perfect hit, reduces damage received by 80% in the following turn",
+        specialName: "Vulgar provocation",
+    },
+    1308: {//Halloween Bartolomeo
+        captain: "Boosts ATK of Driven characters by 2x. If you don't attack with Bartolomeo, reduces damage received by 20% for that turn.",
+        special: "Reduces damage received by 50% for 1 turn. If during that turn every unit scores a Perfect hit, reduces damage received by 80% in the following turn",
+        specialName: "Vulgar provocation",
+    },
+    1309: {//Coliseum Kinemon
+        captain: "Boosts ATK of Free Spirit characters by 2x, recovers 1x character's RCV in HP at the end of each turn",
+        special: "Reduces Special Cooldown of Slasher and Free Spirit characters by 1 turn and if HP is above 70%, changes adjacent orbs into Matching Orbs",
+        specialName: "Coliseum Kinemon Special",
+    },
+    1310: {//Coliseum Kinemon
+        captain: "Boosts ATK of Free Spirit characters by 2.5x, recovers 2x character's RCV in HP at the end of each turn",
+        special: "Reduces Special Cooldown of Slasher and Free Spirit characters by 1 turn and if HP is above 70%, changes adjacent orbs into Matching Orbs",
+        specialName: "Coliseum Kinemon Special",
+    },
+    1311: {//Coliseum Marigold
+        captain: "Boosts ATK and HP of Powerhouse characters by 1.5x",
+        special: "Deals 20x character's ATK in [INT] damage to all enemies. Reduces enemy Damage Threshold timers by 1 turn",
+        specialNotes: "Damage Threshold is the buff enemies gain that grealy reduces damage taken over a certain amount",
+        specialName: "Coliseum Marigold Special",
+    },
+    1312: {//Coliseum Marigold
+        captain: "Boosts ATK and HP of Powerhouse characters by 1.75x",
+        special: "Deals 20x character's ATK in [INT] damage to all enemies. Reduces enemy Damage Threshold timers by 1 turn",
+        specialNotes: "Damage Threshold is the buff enemies gain that grealy reduces damage taken over a certain amount",
+        specialName: "Coliseum Marigold Special",
+    },
+    1313: {//Akainu
+        captain: "Unknown",
+        special: "Unknown",
+        specialName: "Akainu Special",
+    },
+    1314: {//Akainu
+        captain: "Unknown",
+        special: "Unknown",
+        specialName: "Akainu Special",
+    },
+    1315: {//Coby
+        captain: "Unknown",
+        special: "Unknown",
+        specialName: "Coby Special",
+    },
+    1316: {//Coby
+        captain: "Unknown",
+        special: "Unknown",
+        specialName: "Coby Special",
+    },
+    1317: {//Garp
+        captain: "Unknown",
+        special: "Unknown",
+        specialName: "Garp Special",
+    },
+    1318: {//Garp
+        captain: "Unknown",
+        special: "Unknown",
+        specialName: "Garp Special",
+    },
+    1319: {//Lady Tsuru
+        captain: "Unknown",
+        special: "Unknown",
+        specialName: "Lady Tsuru Special",
+    },
+    1320: {//Lady Tsuru
+        captain: "Unknown",
+        special: "Unknown",
+        specialName: "Lady Tsuru Special",
+    },
+    1321: {//Momonga
+        captain: "Unknown",
+        special: "Deals damage to all enemies. Boosts ATK against delayed enemies by __x for _ turns",
+        specialName: "Momonga Special",
+        sailor: "Boosts ATK of ____ characters by ___ if your captain is a ___ character",
+    },
+    1322: {//Momonga
+        captain: "Unknown",
+        special: "Deals damage to all enemies. Boosts ATK against delayed enemies by __x for _ turns",
+        specialName: "Momonga Special",
+        sailor: "Boosts ATK of ____ characters by ___ if your captain is a ___ character",
+    },
+    1323: {//Onigumo
+        captain: "Unknown",
+        special: "Randomize ___ orbs. Makes [STR], [DEX], and [QCK] orbs \"beneficial\" to Driven and Slasher characters",
+        specialNotes: "\"Beneficial\" orbs grant the same ATK boost as matching orbs while retaining their original function.",
+        specialName: "Onigumo Special",
+        sailor: "Reduces Paralysis for 2 turns for himself"
+    },
+    1324: {//Onigumo
+        captain: "Unknown",
+        special: "Randomize ___ orbs. Makes [STR], [DEX], and [QCK] orbs \"beneficial\" to Driven and Slasher characters",
+        specialNotes: "\"Beneficial\" orbs grant the same ATK boost as matching orbs while retaining their original function.",
+        specialName: "Onigumo Special",
+        sailor: "Reduces Paralysis for 2 turns for himself"
     },
 };
 
