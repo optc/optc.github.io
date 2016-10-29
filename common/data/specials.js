@@ -1742,4 +1742,30 @@ window.specials = {
         atk: function(p) { return p.unit.type == "INT" ? 1.75 : 1; },
         type: "class"
     },
+    1313: {
+        atk: function(p) { return p.unit.cost >= 50 ? 1.75 : 1; },
+        type: "class"
+    },
+    1314: {
+        atk: function(p) { return p.unit.cost >= 50 ? 1.75 : 1; },
+        type: "class"
+    },
+    1319: {
+        atk: function(p) { return 1.5; },
+        type: "class"
+    },
+    1320: {
+        atk: function(p) { return 1.5; },
+        type: "class"
+    },
+    1321: {
+        atk: function(p) { return 1.5; },
+        type: "condition",
+        warning: "Selected special (%name%) assumes that the enemy has been delayed."
+    },
+    1322: {
+        atk: function(p) { return 1.5; },
+        type: "condition",
+        warning: "Selected special (%name%) assumes that the enemy has been delayed."
+    },
 };

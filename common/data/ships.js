@@ -258,14 +258,23 @@ window.ships = [
     },
     
     { // 21
-        name: 'Burning WB Ship',
+        name: 'Burning Whitebeard Ship',
         thumb: null,
-        description: 'Boosts ATK by 1.5x, and HP by 1.4x. Take 5% current HP damage at the end of each turn. Special: Cuts the current HP of all enemies by 20%.  (cooldown MAX: 18 Turns)',
+        description: 'Boosts HP by 1.3x',
+        hp: function(p) {
+            return 1.3;
+        },
+    },
+    
+    { // 22
+        name: 'Garp Ship',
+        thumb: null,
+        description: 'Boosts ATK of [STR] and [PSY] characters by 1.5x, and their HP by 1.25x',
         atk: function(p) {
-            return 1.5;
+            return p.unit.type == "PSY" || p.unit.type == "STR" ? [ 1.2, 1.2, 1.2, 1.2, 1.2, 1.3, 1.3, 1.3, 1.4, 1.5 ][p.boatLevel - 1] : 1;
         },
         hp: function(p) {
-            return 1.4;
+            return p.unit.type == "PSY" || p.unit.type == "STR" ? [ 1, 1, 1, 1, 1, 1.1, 1.1, 1.1, 1.15, 1.25 ][p.boatLevel - 1] : 1;
         },
     },
 

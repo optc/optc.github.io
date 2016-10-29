@@ -2449,10 +2449,10 @@ window.captains = {
         atk: function(p) {return p.unit.class.has("Powerhouse") ? 2 : 1; }
     },
     1015: {
-        atk: function(p) { return !p.unit.type == "INT" ? 1 : (p.orb == 2.0 ? 2.75 : 1); }
+        atk: function(p) { return p.unit.type == "INT" ? (p.orb == 2.0 ? 2.75 : 1) : 1; },
     },
     1016: {
-        atk: function(p) { return !p.unit.type == "INT" ? 1 : (p.orb == 2.0 ? 3 : 1.5); }
+        atk: function(p) { return p.unit.type == "INT" ? (p.orb == 2.0 ? 3 : 1.5) : 1; },
     },
     1017: {
         atk: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; }
@@ -3492,5 +3492,91 @@ window.captains = {
     },
     1304: {
         atk: function(p) { return p.unit.class.has("Cerebral") ? 2 : 1; },
+    },
+    1305: {
+        atk: function(p) { return p.unit.class.has("Cerebral") ? 1.3 : 1; },
+    },
+    1306: {
+        atk: function(p) { return p.unit.class.has("Cerebral") ? 1.75 : 1; },
+    },
+    1307: {
+        atk: function(p) { return p.unit.class.has("Driven") ? 1.75 : 1; },
+    },
+    1308: {
+        atk: function(p) { return p.unit.class.has("Driven") ? 2 : 1; },
+    },
+    1309: {
+        atk: function(p) { return p.unit.class.has("Free Spirit") ? 2 : 1; },
+    },
+    1310: {
+        atk: function(p) { return p.unit.class.has("Free Spirit") ? 2.5 : 1; },
+    },
+    1311: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 1.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Powerhouse") ? 1.5 : 1; },
+    },
+    1312: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 1.75 : 1; },
+        hp: function(p) { return p.unit.class.has("Powerhouse") ? 1.75 : 1; },
+    },
+    1313: {
+        //Akainu NEEDS TO BE CHANGED
+        atk: function(p) { return p.unit.type == "STR" ? (p.orb == 2.0 ? 3.9375 : 2.25) : 2.25; },
+    },
+    1314: {
+        //Akainu NEEDS TO BE CHANGED
+        atk: function(p) { return p.unit.type == "STR" ? (p.orb == 2.0 ? 3.9375 : 2.25) : 2.25; },
+    },
+    1315: {
+        hitAtk: function(p) {
+            return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 3.5 : 
+            p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect"]) ? 3 :
+            p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? 2.75 :
+            p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect"]) ? 2.5 : 1;
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
+    },
+    1316: {
+        hitAtk: function(p) {
+            return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 3.5 : 
+            p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect"]) ? 3 :
+            p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? 2.75 :
+            p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect"]) ? 2.5 : 1;
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
+    },
+    1317: {
+        atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "STR" ? 2.5 : 1; },
+    },
+    1318: {
+        atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "STR" ? 2.5 : 1; },
+    },
+    1321: {
+        atk: function(p) { if((p.colorCount.INT>=1 && p.colorCount.PSY>=1 && p.colorCount.STR>=1 && p.colorCount.DEX>=1 && p.colorCount.QCK>=1) && (p.unit.class.has("Cerebral") || p.unit.class.has("Slasher"))) 
+                return 2.5;
+            else
+                return 1; 
+               },
+    },
+    1322: {
+        atk: function(p) { if((p.colorCount.INT>=1 && p.colorCount.PSY>=1 && p.colorCount.STR>=1 && p.colorCount.DEX>=1 && p.colorCount.QCK>=1) && (p.unit.class.has("Cerebral") || p.unit.class.has("Slasher")))
+                return 2.5;
+            else
+                return 1; 
+               },
+    },
+    1323: {
+        atk: function(p) {
+            return p.unit.class.has("Slasher") && p.unit.class.has("Driven") ? 2.56 :
+                p.unit.class.has("Driven") || p.unit.class.has("Slasher") ? 1.6 :
+                1;
+        }
+    },
+    1324: {
+        atk: function(p) {
+            return p.unit.class.has("Slasher") && p.unit.class.has("Driven") ? 2.56 :
+                p.unit.class.has("Driven") || p.unit.class.has("Slasher") ? 1.6 :
+                1;
+        }
     },
 };

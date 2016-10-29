@@ -772,6 +772,20 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         }
         return classes;
     };
+    
+    var colorCounter = function() {
+        var colors = {};
+        var colorArray = ['STR', 'DEX', 'QCK', 'INT', 'PSY'];
+        for (var i = 0, j = colorArray.length; i < j; i++) {
+            colors[colorArray[i]] = 0;
+        }
+        for(var z=0;z<team.length;z++){
+            if(team[z].unit){
+                colors[team[z].unit.type]++;
+                }
+            }
+        return colors;
+    };
 
     var getParameters = function(slotNumber, chainPosition) {
         return {
