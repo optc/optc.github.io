@@ -6850,27 +6850,53 @@ window.details = {
     },
     1315: {//Coby
         captain: "Boosts ATK by 2.5x after the 2nd Perfect, 2.75x after the 3rd Perfect, 3x after the 4th Perfect, and by 3.5x after the 5th Perfect.",
-        special: "If HP is below 3,000, removes No Healing debuff. Recovers 13x character's RCV in HP",
+        special: [
+            {
+                "description": "If HP is below 3,000, reduces No Healing debuff by 1 turn. Recovers 3x character's RCV in HP",
+                "cooldown": 15,
+            },
+            {
+                "description": "If HP is below 3,000, reduces No Healing debuff by 3 turns. Recovers 6x character's RCV in HP",
+                "cooldown": 20,
+            },
+            {
+                "description": "If HP is below 3,000, removes No Healing debuff. Recovers 13x character's RCV in HP",
+                "cooldown": 24,
+            },
+        ],
         specialNotes: "No Healing debuff completely stops healing abilities. This is the debuff used in Akainu raid",
         sailor: "Reduces duration of Blindness by 5 turns",
         specialName: "Coby Special",
     },
     1316: {//Coby
         captain: "Boosts ATK by 2.5x after the 2nd Perfect, 2.75x after the 3rd Perfect, 3x after the 4th Perfect, and by 3.5x after the 5th Perfect.",
-        special: "If HP is below 3,000, removes No Healing debuff. Recovers 13x character's RCV in HP",
+        special: [
+            {
+                "description": "If HP is below 3,000, reduces No Healing debuff by 1 turn. Recovers 3x character's RCV in HP",
+                "cooldown": 15,
+            },
+            {
+                "description": "If HP is below 3,000, reduces No Healing debuff by 3 turns. Recovers 6x character's RCV in HP",
+                "cooldown": 20,
+            },
+            {
+                "description": "If HP is below 3,000, removes No Healing debuff. Recovers 13x character's RCV in HP",
+                "cooldown": 24,
+            },
+        ],
         specialNotes: "No Healing debuff completely stops healing abilities. This is the debuff used in Akainu raid",
         sailor: "Reduces duration of Blindness by 5 turns",
         specialName: "Coby Special",
     },
     1317: {//Garp
         captain: "Boosts ATK of [STR] and [PSY] characters by 2.5x",
-        special: "Deals 30x character's ATK as fixed damage to all enemies that bypasses all defensive Buffs. Delays all enemies for 1 turn. Reduces the defense of all enemies by __ for 1 turn.",
+        special: "Deals 30x character's ATK as fixed [STR] damage to all enemies that bypasses all defensive Buffs. Delays all enemies for 1 turn. Reduces the defense of all enemies by 80% for 1 turn.",
         sailor: "Boosts ATK of all characters by 75",
         specialName: "Garp Special",
     },
     1318: {//Garp
         captain: "Boosts ATK of [STR] and [PSY] characters by 2.5x",
-        special: "Deals 30x character's ATK as fixed damage to all enemies that bypasses all defensive Buffs. Delays all enemies for 1 turn. Reduces the defense of all enemies by __ for 1 turn.",
+        special: "Deals 30x character's ATK as fixed [STR] damage to all enemies that bypasses all defensive Buffs. Delays all enemies for 1 turn. Reduces the defense of all enemies by 80% for 1 turn.",
         sailor: "Boosts ATK of all characters by 75",
         specialName: "Garp Special",
     },
@@ -6915,6 +6941,16 @@ window.details = {
         specialNotes: "\"Beneficial\" orbs grant the same ATK boost as matching orbs while retaining their original function.",
         specialName: "Onigumo Special",
         sailor: "Reduces Paralysis for 5 turns for himself"
+    },
+    1325: {//Halloween Corazon
+        captain: "Recovers 3x character's RCV in HP at the end of each turn",
+        special: "If HP is above 99%, changes [STR], [DEX], and [QCK] orbs into Matching orbs for Cerebral and Free Spirit characters",
+        specialName: "Amulet Flame",
+    },
+    1326: {//Halloween Corazon
+        captain: "Boosts ATK by 1.3x and recovers 4x character's RCV in HP at the end of each turn",
+        special: "If HP is above 99%, changes [STR], [DEX], and [QCK] orbs into Matching orbs for Cerebral and Free Spirit characters",
+        specialName: "Amulet Flame",
     },
 };
 

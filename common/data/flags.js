@@ -978,6 +978,8 @@ window.flags = {
     1093: { rr: 1, rro: 1, lrr: 1 },
     1099: { rr: 1, rro: 1, lrr: 1 },
     1100: { rr: 1, rro: 1, lrr: 1 },
+    1107: { global: 1 },
+    1108: { global: 1 },
     1114: { rr: 1, rro: 1, global: 1 },
     1115: { rr: 1, rro: 1, global: 1 },
     1116: { rr: 1, rro: 1, global: 1 },

@@ -376,7 +376,7 @@ window.matchers = [
     {
         name: 'Poison removers',
         target: 'special',
-        matcher: /(reduces|removes).+poison/i 
+        matcher: /removes.+poison/i 
     },
 
     {

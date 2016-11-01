@@ -1198,9 +1198,9 @@ window.drops = {
         
         {
             name: "Tontatta Kingdom Island",
-            thumb: null,
-            condition: "",
-            "All Difficulties": [ -1085, -1127, -1131, -1058, -758, -760, -735, -4, -508 ]
+            thumb: 1330,
+            condition: "Slasher characters are weakened",
+            "All Difficulties": [ 1327, 1329, 1330, -1085, -1127, -1131, -1058, -758, -760, -735, -4, -508 ]
         },
         
     ],
@@ -1416,7 +1416,7 @@ window.drops = {
         {
             name: 'Halloween Event Characters',
             thumb: 1300,
-            "All Difficulties": [ 1299, 1305 ],
+            "All Difficulties": [ 1299, 1305, 1325 ],
         },
         
         {

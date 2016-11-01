@@ -3401,9 +3401,11 @@ window.captains = {
     1285: {
         damageSorter: function(d) { return CrunchUtils.classSort(d, 3.375, [ "Striker" ]); },
         hitAtk: function(p) {
-            return !p.unit.class.has("Striker") ? 1 : p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? 3.375 : 1.5;
+            if (!p.unit.class.has("Striker")) return 1;
+            return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? 3.375 : 1.5;
         },
         hp: function(p) { return p.unit.class.has("Striker") ? 1.25 : 1; },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
     },
     1286: {
         atk: function(p) { return p.unit.type == "PSY" ? 1.3 : 1; },
@@ -3578,5 +3580,8 @@ window.captains = {
                 p.unit.class.has("Driven") || p.unit.class.has("Slasher") ? 1.6 :
                 1;
         }
+    },
+    1326: {
+        atk: function(p) { return 1.3; },
     },
 };

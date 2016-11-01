@@ -271,10 +271,10 @@ window.ships = [
         thumb: null,
         description: 'Boosts ATK of [STR] and [PSY] characters by 1.5x, and their HP by 1.25x',
         atk: function(p) {
-            return p.unit.type == "PSY" || p.unit.type == "STR" ? [ 1.2, 1.2, 1.2, 1.2, 1.2, 1.3, 1.3, 1.3, 1.4, 1.5 ][p.boatLevel - 1] : 1;
+            return p.unit.type == "PSY" || p.unit.type == "STR" ? [ 1.2, 1.25, 1.25, 1.3, 1.35, 1.35, 1.4, 1.4, 1.45, 1.5 ][p.boatLevel - 1] : 1;
         },
         hp: function(p) {
-            return p.unit.type == "PSY" || p.unit.type == "STR" ? [ 1, 1, 1, 1, 1, 1.1, 1.1, 1.1, 1.15, 1.25 ][p.boatLevel - 1] : 1;
+            return p.unit.type == "PSY" || p.unit.type == "STR" ? [ 1.1, 1.1, 1.15, 1.15, 1.15, 1.2, 1.2, 1.25, 1.25, 1.25 ][p.boatLevel - 1] : 1;
         },
     },
 
