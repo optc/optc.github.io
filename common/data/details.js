@@ -6549,12 +6549,12 @@ window.details = {
     1265: {//Kimono Ace
         captain: "Boosts ATK of Shooter characters by 2x",
         special: "Recovers 3,000 HP and boosts the ATK of Free Spirit characters by 1.75x for 1 turn",
-        specialName: "Kimono Ace Special",
+        specialName: "Looking to the Full Moon",
     },
     1266: {//Kimono Ace Evo
         captain: "Boosts ATK of Shooter characters by 2.5x",
         special: "Recovers 3,000 HP and boosts the ATK of Free Spirit characters by 1.75x for 1 turn",
-        specialName: "Kimono Ace Special",
+        specialName: "Looking to the Full Moon",
     },
     1267: {//Legend Blackbeard
         captain: "Boosts the ATK of all characters by 2.75x and their HP by 1.5x if you have a Striker, Shooter, Fighter, and Slasher on your crew. Attacks will ignore defensive barriers and buffs.",
@@ -6575,141 +6575,141 @@ window.details = {
         special: "Reduces Bind and Despair duration by 2 turns. Makes Badly Matching and [BLOCK] orbs not reduce damage for 4 turns",
         specialNotes: "Ex. A STR character with a QCK orb will still deal regular damage",
         sailor: "Boosts ATK of all characters by 100 if your captain is a Driven character",
-        specialName: "Laffitte Special",
+        specialName: "Horrifying Suggestion",
     },
     1270: {//Laffitte
         captain: "Recovers 3x character's RCV in HP at the end of each turn. Deals 7x character's ATK in [DEX] damage to all enemies at the end of each turn.",
         special: "Reduces Bind and Despair duration by 2 turns. Makes Badly Matching and [BLOCK] orbs not reduce damage for 4 turns",
         specialNotes: "Ex. A STR character with a QCK orb will still deal regular damage",
         sailor: "Boosts ATK of all characters by 100 if your captain is a Driven character",
-        specialName: "Laffitte Special",
+        specialName: "Horrifying Suggestion",
     },
     1271: {//Van Augur
         captain: "Boosts ATK of Shooter characters by 2x",
         special: "Changes orbs in the top row into Matching orbs. For Shooter characters, amplifies the effect of orbs by 1.75x for 1 turn",
         sailor: "Reduces duration of Blindness by 5 turns",
-        specialName: "Van Augur Special",
+        specialName: "Other Side of Fate",
     },
     1272: {//Van Augur Evo
         captain: "Reduces cooldown of Shooter specials by 1 turn at the start of the fight. Boosts ATK of Shooter characters by 2.5x.",
         special: "Changes orbs in the top row into Matching orbs. For Shooter characters, amplifies the effect of orbs by 1.75x for 1 turn",
         sailor: "Reduces duration of Blindness by 5 turns",
-        specialName: "Van Augur Special",
+        specialName: "Other Side of Fate",
     },
     1273: {//Jesus Burgess
         captain: "Boosts ATK of Fighter and Powerhouse characters by 1.5x and their HP by 1.15",
         captainNotes: "Boosts stack, so a Fighter/Powerhouse character gets 2.25x ATK and 1.3225 HP",
         special: "Deals large [STR] damage to all enemies. Boosts ATK of Fighter characters by 1.5x for 5 turns",
         sailor: "Boosts HP of all characters by 75",
-        specialName: "Jesus Burgess Special",
+        specialName: "Champion of the Wild Roar",
     },
     1274: {//Jesus Burgess Evo
         captain: "Boosts ATK of Fighter and Powerhouse characters by 1.6x and their HP by 1.15x",
         captainNotes: "Boosts stack, so a Fighter/Powerhouse character gets 2.56x ATK and 1.3225 HP",
         special: "Deals large [STR] damage to all enemies. Boosts ATK of Fighter characters by 1.5x for 5 turns",
         sailor: "Boosts HP of all characters by 75",
-        specialName: "Jesus Burgess Special",
+        specialName: "Champion of the Wild Roar",
     },
     1275: {//Shiliew
         captain: "Boosts ATK and HP of Slasher characters by 1.5x",
         special: "For each enemy, has a small chance to instantly defeat that enemy.",
         specialNotes: "About 25% chance of killing ANY character. Cannot be reset by exiting, but can try for different kills by continuing attack.",
         sailor: "Completely resists Silence on this character",
-        specialName: "Shiliew Special",
+        specialName: "Handling Hell",
     },
     1276: {//Shiliew Evo
         captain: "Boosts ATK and HP of Slasher characters by 2x",
         special: "For each enemy, has a small chance to instantly defeat that enemy.",
         specialNotes: "About 25% chance of killing ANY character. Cannot be reset by exiting, but can try for different kills by continuing attack.",
         sailor: "Completely resists Silence on this character",
-        specialName: "Shiliew Special",
+        specialName: "Handling Hell",
     },
     1277: {//Doc Q
         captain: "Reduces RCV of all characters by 99%. Boosts ATK of Slasher and Striker characters by 2.25x if HP is above 99% at the start of the turn",
         special: "Reduces crew's current HP by 10%. Changes [BLOCK], [TND], and [RCV] orbs on Slasher and Striker Characters into Matching Orbs.",
         sailor: "Boosts amount healed from [RCV] orbs by 150 each",
-        specialName: "Doc Q Special",
+        specialName: "Reaping of Desperate Lives",
     },
     1278: {//Doc Q Evo
         captain: "Reduces RCV of all characters by 99%. Boosts ATK of Slasher and Striker characters by 2.75x if HP is above 99% at the start of the turn",
         special: "Reduces crew's current HP by 10%. Changes [BLOCK], [TND], and [RCV] orbs on Slasher and Striker Characters into Matching Orbs.",
         sailor: "Boosts amount healed from [RCV] orbs by 150 each",
-        specialName: "Doc Q Special",
+        specialName: "Reaping of Desperate Lives",
     },
     1279: {//John Giant
         captain: "Boosts ATK and HP of Slasher characters by 1.5x",
         special: "Reduces damage received in the next turn by 50% if the special is activated with less than 50% health remaining",
-        specialName: "John Giant Special",
+        specialName: "Manifesto to the Weak",
     },
     1280: {//Marineford Aokiji
         captain: "Boosts ATK of [PSY] characters by 2.5x",
         special: "Deals 10,000 fixed damage to all enemies and locks all orbs for 1 turn",
-        specialName: "Aokiji Special",
+        specialName: "Ice Chunks - Trident",
     },
     1281: {//Marineford Garp
         captain: "Boosts ATK of Fighter characters by 2.25x and reduces damage received by 10%",
         special: "Deals 25x character's ATK in [STR] damage to one enemy that bypasses all defensive Buffs",
         specialNotes: "Ignores barriers, DEF, and Damage Reduction buffs",
-        specialName: "Garp Special",
+        specialName: "Fist of Love - Falling Fortress",
     },
     1282: {//Marineford Sengoku
         captain: "Boosts ATK of Cerebral characters by 2.5x",
         special: "Reduces cooldown of all specials by 1 turn. Boosts the ATK of all characters by 1.2x and amplifies the effect of orbs by 1.2x for 1 turn",
-        specialName: "Sengoku Special",
+        specialName: "Encircling Wall around Marineford Bay",
     },
     1283: {//Marineford Akainu
         captain: "Boosts ATK of Driven characters by 2.5x",
         special: "Deals 35x character's ATK in [INT] damage to one enemy. Boosts the ATK of Driven characters by 1.5x for 1 turn",
-        specialName: "Akainu Special",
+        specialName: "Dark Dog",
     },
     1284: {//Wild Luffy
         captain: "Boosts ATK of Striker characters by 1.5x and their HP by 1.2x",
         special: "Reduces duration of Bind and Silence by 3 turns. Randomizes own orb. (Including [BLOCK] orb)",
         sailor: "Reduces duration of Silence against this character by 3 turns",
-        specialName: "Wild Luffy Special",
+        specialName: "Wild Hunt",
     },
     1285: {//Wild Luffy Evolved
         captain: "Boosts ATK of Striker characters by 1.5x and their HP by 1.25x. After scoring 3 Perfects in a row, boosts ATK of Striker characters by 3.375x instead.",
         special: "Reduces duration of Despair and Silence by 3 turns. Randomizes Non-Matching orbs. (Including [BLOCK] orb)",
         sailor: "Reduces duration of Silence against this character by 3 turns",
-        specialName: "Wild Luffy Special",
+        specialName: "Wild Hunt",
     },
     1286: {//Kid Baby 5
         captain: "Boosts ATK and RCV of [PSY] characters by 1.3x",
         special: "Cuts the current HP of each enemy by 10%. Boosts ATK of Shooter characters by 1.5x for 1 turn",
-        specialName: "Kid Baby 5 Special",
+        specialName: "Handgun Legs",
     },
     1287: {//Kid Baby 5
         captain: "Boosts ATK and RCV of [PSY] characters by 1.5x",
         special: "Cuts the current HP of each enemy by 10%. Boosts ATK of Shooter characters by 1.5x for 1 turn",
-        specialName: "Kid Baby 5 Special",
+        specialName: "Handgun Legs",
     },
     1288: {//Kid Law
         captain: "Boosts ATK of Driven characters by 2.5x, reduces crew's current HP by 10% at the end of each turn, reduces his own ATK multiplier by 0.1x at the end of each turn",
         captainNotes: "His ATK multiplier will be 2.5x on the first turn, 2.4x on the second, 2.3x on the third and so on. The reduction stops once the multiplier is 1.0x. The multiplier affects all Driven characters. You will not die to the HP reduction",
         special: "Reduces cooldown of Driven specials by 1 turn. If during that turn every unit scores a Perfect hit, reduces cooldown of Driven specials by 1 turn.",
-        specialName: "Kid Law Special",
+        specialName: "Outcome of Sparta",
     },
     1289: {//Kid Law
         captain: "Boosts ATK of Driven characters by 2.75x, reduces crew's current HP by 10% at the end of each turn, reduces his own ATK multiplier by 0.1x at the end of each turn",
         captainNotes: "His ATK multiplier will be 2.75x on the first turn, 2.65x on the second, 2.55x on the third and so on. The reduction stops once the multiplier is 1.0x. The multiplier affects all Driven characters. You will not die to the HP reduction",
         special: "Reduces cooldown of Driven specials by 1 turn. If during that turn every unit scores a Perfect hit, reduces cooldown of Driven specials by 1 turn.",
-        specialName: "Kid Law Special",
+        specialName: "Outcome of Sparta",
     },
     1290: {//Kid Buffalo
         captain: "Recovers 500 HP at the end of each turn",
         special: "Changes own orb into [INT], and Captain orb into [BOMB]",
-        specialName: "Kid Buffalo Special",
+        specialName: "Rude Prank",
     },
     1291: {//Lao G, Coliseum
         captain: "Boosts ATK of Driven characters by 1.75x",
         special: "Changes [PSY], [INT], [RCV], and [TND] orbs into [G] orbs. Locks orbs for 1 turn. If during that turn every unit scores a Perfect hit, changes [G] orbs into Matching Orbs",
-        specialName: "Lao G Special",
+        specialName: "Lower Back Pain Stance - The Eyes of Blight Impact",
     },
     1292: {//Lao G, Coliseum
         captain: "Boosts ATK of Driven characters by 2.5x if they have a matching orb, by 2x otherwise",
         special: "Changes [PSY], [INT], [RCV], and [TND] orbs into [G] orbs. Locks orbs for 1 turn. If during that turn every unit scores a Perfect hit, changes [G] orbs into Matching Orbs",
-        specialName: "Lao G Special",
+        specialName: "Lower Back Pain Stance - The Eyes of Blight Impact",
     },
     1293: {//Coliseum Sandersonia
         captain: "Boosts ATK of Fighter characters by 1.75x, deals 2 times the damage received in the previous turn in [PSY] damage to all enemies at the end of each turn",
@@ -6724,7 +6724,7 @@ window.details = {
             },
         ],
         specialNotes: "The exact multiplier used is chosen based on the crew's current HP at the time the special is activated: above 50% HP, the multiplier used is 50%; between 50% and 10%, it's 80%; below 10% HP, it's 100%.",
-        specialName: "Coliseum Sandersonia Special",
+        specialName: "Snake Dance",
     },
     1294: {//Coliseum Sandersonia
         captain: "Boosts ATK of Powerhouse characters by 2x, deals 4 times the damage received in the previous turn in [PSY] damage to all enemies at the end of each turn",
@@ -6739,7 +6739,7 @@ window.details = {
             },
         ],
         specialNotes: "The exact multiplier used is chosen based on the crew's current HP at the time the special is activated: above 50% HP, the multiplier used is 50%; between 50% and 10%, it's 80%; below 10% HP, it's 100%.",
-        specialName: "Coliseum Sandersonia Special",
+        specialName: "Snake Dance",
     },
     1295: {//Halloween Kalifa
         captain: "Boosts ATK and RCV of [STR] characters by 1.5x",
@@ -6766,33 +6766,33 @@ window.details = {
     1299: {//Halloween Rebecca
         captain: "Boosts ATK and RCV of [INT] characters by 1.2x",
         special: "Recovers 3,000 HP and boosts ATK of [INT] characters by 1.75x for 1 turn",
-        specialName: "Halloween Rebecca Special",
+        specialName: "Driving Away Evil Spirits of Sin - Cat Pose",
     },
     1300: {//Halloween Rebecca
         captain: "Boosts ATK and RCV of [INT] characters by 1.5x",
         special: "Recovers 3,000 HP and boosts ATK of [INT] characters by 1.75x for 1 turn",
-        specialName: "Halloween Rebecca Special",
+        specialName: "Driving Away Evil Spirits of Sin - Cat Pose",
     },
     1301: {//Jailbreak Buggy
         captain: "Boosts ATK of Slasher characters by 1.75x",
         special: "Reduces crew's HP to 1, empties all slots, and deals 30x character's ATK in [QCK] damage to all enemies",
-        specialName: "Jailbreak Buggy Special",
+        specialName: "Special Muggy Ball",
     },
     1302: {//Jailbreak Buggy
         captain: "Boosts ATK of Slasher characters by 1.75x and boosts ATK of Driven characters by 1.5x",
         captainNotes: "The bonus is cumulative. Slasher Driven characters get a 2.625x bonus.",
         special: "Reduces crew's HP to 1, empties all slots, and deals 30x character's ATK in [QCK] damage to all enemies",
-        specialName: "Jailbreak Buggy Special",
+        specialName: "Special Muggy Ball",
     },
     1303: {//Jailbreak Mr. 3
         captain: "Boosts ATK of Cerebral characters by 1.5x. If you don't attack with Mr. 3, reduces damage received by 10% for that turn.",
         special: "Reduces damage received by 60% for 2 turns",
-        specialName: "Jailbreak Mr. 3 Special",
+        specialName: "Extra Large Candle Wall",
     },
     1304: {//Jailbreak Mr. 3
         captain: "Boosts ATK of Cerebral characters by 2x. If you don't attack with Mr. 3, reduces damage received by 10% for that turn.",
         special: "Reduces damage received by 60% for 2 turns",
-        specialName: "Jailbreak Mr. 3 Special",
+        specialName: "Extra Large Candle Wall",
     },
     1305: {//Halloween Sugar
         captain:  "Boosts ATK of Cerebral characters by 1.3x and recovers 500 HP at the end of each turn",
@@ -6807,34 +6807,34 @@ window.details = {
     1307: {//Halloween Bartolomeo
         captain: "Boosts ATK of Driven characters by 1.75x. If you don't attack with Bartolomeo, reduces damage received by 10% for that turn.",
         special: "Reduces damage received by 50% for 1 turn. If during that turn every unit scores a Perfect hit, reduces damage received by 80% in the following turn",
-        specialName: "Vulgar provocation",
+        specialName: "Vulgar Provocation",
     },
     1308: {//Halloween Bartolomeo
         captain: "Boosts ATK of Driven characters by 2x. If you don't attack with Bartolomeo, reduces damage received by 20% for that turn.",
         special: "Reduces damage received by 50% for 1 turn. If during that turn every unit scores a Perfect hit, reduces damage received by 80% in the following turn",
-        specialName: "Vulgar provocation",
+        specialName: "Vulgar Provocation",
     },
     1309: {//Coliseum Kinemon
         captain: "Boosts ATK of Free Spirit characters by 2x, recovers 1x character's RCV in HP at the end of each turn",
         special: "Reduces Special Cooldown of Slasher and Free Spirit characters by 1 turn and if HP is above 70%, changes adjacent orbs into Matching Orbs",
-        specialName: "Coliseum Kinemon Special",
+        specialName: "Poof",
     },
     1310: {//Coliseum Kinemon
         captain: "Boosts ATK of Free Spirit characters by 2.5x, recovers 2x character's RCV in HP at the end of each turn",
         special: "Reduces Special Cooldown of Slasher and Free Spirit characters by 1 turn and if HP is above 70%, changes adjacent orbs into Matching Orbs",
-        specialName: "Coliseum Kinemon Special",
+        specialName: "Poof",
     },
     1311: {//Coliseum Marigold
         captain: "Boosts ATK and HP of Powerhouse characters by 1.5x",
         special: "Deals 20x character's ATK in [INT] damage to all enemies. Reduces enemy Damage Threshold timers by 1 turn",
         specialNotes: "Damage Threshold is the buff enemies gain that grealy reduces damage taken over a certain amount",
-        specialName: "Coliseum Marigold Special",
+        specialName: "King Cobra Machetes",
     },
     1312: {//Coliseum Marigold
         captain: "Boosts ATK and HP of Powerhouse characters by 1.75x",
         special: "Deals 20x character's ATK in [INT] damage to all enemies. Reduces enemy Damage Threshold timers by 1 turn",
         specialNotes: "Damage Threshold is the buff enemies gain that grealy reduces damage taken over a certain amount",
-        specialName: "Coliseum Marigold Special",
+        specialName: "King Cobra Machetes",
     },
     1313: {//Akainu
         captain: "Boosts ATK by 2.25x. If they have a [STR] orb, boosts ATK by an additional 1.75x. Boosts chances of getting [STR] orbs",
@@ -6866,7 +6866,7 @@ window.details = {
         ],
         specialNotes: "No Healing debuff completely stops healing abilities. This is the debuff used in Akainu raid",
         sailor: "Reduces duration of Blindness by 5 turns",
-        specialName: "Coby Special",
+        specialName: "Echoing Cry of the Soul",
     },
     1316: {//Coby
         captain: "Boosts ATK by 2.5x after the 2nd Perfect, 2.75x after the 3rd Perfect, 3x after the 4th Perfect, and by 3.5x after the 5th Perfect.",
@@ -6886,44 +6886,44 @@ window.details = {
         ],
         specialNotes: "No Healing debuff completely stops healing abilities. This is the debuff used in Akainu raid",
         sailor: "Reduces duration of Blindness by 5 turns",
-        specialName: "Coby Special",
+        specialName: "Echoing Cry of the Soul",
     },
     1317: {//Garp
         captain: "Boosts ATK of [STR] and [PSY] characters by 2.5x",
         special: "Deals 30x character's ATK as fixed [STR] damage to all enemies that bypasses all defensive Buffs. Delays all enemies for 1 turn. Reduces the defense of all enemies by 80% for 1 turn.",
         sailor: "Boosts ATK of all characters by 75",
-        specialName: "Garp Special",
+        specialName: "Super Large Iron Ball",
     },
     1318: {//Garp
         captain: "Boosts ATK of [STR] and [PSY] characters by 2.5x",
         special: "Deals 30x character's ATK as fixed [STR] damage to all enemies that bypasses all defensive Buffs. Delays all enemies for 1 turn. Reduces the defense of all enemies by 80% for 1 turn.",
         sailor: "Boosts ATK of all characters by 75",
-        specialName: "Garp Special",
+        specialName: "Super Large Iron Balll",
     },
     1319: {//Lady Tsuru
         captain: "Heals for 1.5x her RCV at the end of the turn each time you hit a Good. Heals for .1x her RCV at the end of the turn each time you hit a Perfect",
         special: "Deals 10 hits of random [QCK] damage to random enemies. Boosts ATK of all characters by 1.5x for 1 turn",
         specialNotes: "#{randomHits : 10}<br>#{random : ??? : ??? : for each hit}",
         sailor: "Reduces duration of Paralysis by 1 turn",
-        specialName: "Lady Tsuru Special",
+        specialName: "A Decree of the Veteran",
     },
     1320: {//Lady Tsuru
         captain: "Heals for 1.5x her RCV at the end of the turn each time you hit a Good. Heals for .1x her RCV at the end of the turn each time you hit a Perfect",
         special: "Deals 10 hits of random [QCK] damage to random enemies. Boosts ATK of all characters by 1.5x for 1 turn",
         specialNotes: "#{randomHits : 10}<br>#{random : ??? : ??? : for each hit}",
         sailor: "Reduces duration of Paralysis by 1 turn",
-        specialName: "Lady Tsuru Special",
+        specialName: "A Decree of the Veteran",
     },
     1321: {//Momonga
         captain: "Boosts the ATK of Cerebral and Slasher characters by 2.5x and reduces damage taken by 10% if you have a [STR], [DEX], [QCK], [INT], and [PSY] character on your crew.",
         special: "Deals 15x character's ATK as [DEX] damage to all enemies. Boosts ATK against delayed enemies by 1.5x for 2 turns",
-        specialName: "Momonga Special",
+        specialName: "Front Line Dissection",
         sailor: "Boosts ATK of Slasher and Cerebral characters by 75 if your captain is a Cerebral character",
     },
     1322: {//Momonga
         captain: "Boosts the ATK of Cerebral and Slasher characters by 2.5x and reduces damage taken by 10% if you have a [STR], [DEX], [QCK], [INT], and [PSY] character on your crew.",
         special: "Deals 15x character's ATK as [DEX] damage to all enemies. Boosts ATK against delayed enemies by 1.5x for 2 turns",
-        specialName: "Momonga Special",
+        specialName: "Front Line Dissection",
         sailor: "Boosts ATK of Slasher and Cerebral characters by 75 if your captain is a Cerebral character",
     },
     1323: {//Onigumo
@@ -6931,7 +6931,7 @@ window.details = {
         captainNotes: "The bonus is cumulative. Slasher + Driven characters get a 2.56x bonus.",
         special: "Randomize [RCV], [TND], and [BOMB] orbs. Makes [STR], [DEX], and [QCK] orbs \"beneficial\" to Driven and Slasher characters for 2 turns",
         specialNotes: "\"Beneficial\" orbs grant the same ATK boost as matching orbs while retaining their original function.",
-        specialName: "Onigumo Special",
+        specialName: "Onigumo of Dismantling Swordsmanship",
         sailor: "Reduces Paralysis for 5 turns for himself"
     },
     1324: {//Onigumo
@@ -6939,7 +6939,7 @@ window.details = {
         captainNotes: "The bonus is cumulative. Slasher + Driven characters get a 2.56x bonus.",
         special: "Randomize [RCV], [TND], and [BOMB] orbs. Makes [STR], [DEX], and [QCK] orbs \"beneficial\" to Driven and Slasher characters for 2 turns",
         specialNotes: "\"Beneficial\" orbs grant the same ATK boost as matching orbs while retaining their original function.",
-        specialName: "Onigumo Special",
+        specialName: "Onigumo of Dismantling Swordsmanship",
         sailor: "Reduces Paralysis for 5 turns for himself"
     },
     1325: {//Halloween Corazon
@@ -6951,6 +6951,57 @@ window.details = {
         captain: "Boosts ATK by 1.3x and recovers 4x character's RCV in HP at the end of each turn",
         special: "If HP is above 99%, changes [STR], [DEX], and [QCK] orbs into Matching orbs for Cerebral and Free Spirit characters",
         specialName: "Amulet Flame",
+    },
+    1327: {//Fornight Leo
+        captain: "Boost ATK of characters with cost 20 or less by 2x",
+        special: [
+            {
+                "description": "Deals 3x character's ATK as [DEX] damage to one enemy, change own orb into [DEX]",
+                "cooldown": 11,
+            },
+            {
+                "description": "Deal 15x character's ATK as [DEX] damage to one enemy, changes own and friend's orb into Matching orbs",
+                "cooldown": 19,
+            }
+        ],
+        specialName: "Tail Hammer",
+    },
+    1328: {//Fornight Leo
+        captain: "Boost ATK of characters with cost 20 or less by 2.5x",
+        special: [
+            {
+                "description": "Deals 3x character's ATK as [DEX] damage to one enemy, change own orb into [DEX]",
+                "cooldown": 11,
+            },
+            {
+                "description": "Deal 15x character's ATK as [DEX] damage to one enemy, changes own and friend's orb into Matching orbs",
+                "cooldown": 19,
+            }
+        ],
+        specialName: "Tail Hammer",
+    },
+    1329: {//Wicca
+        captain: "Reduces cooldown of Fighter and Free Spirit specials by 1 turn at the start of the fight. Gives chance of duplicating a drop upon completion of the island. ",
+        special: [
+            {
+                "description": "Deals 6 fixed damage to all enemies. Randomizes orbs of upper row characters",
+                "cooldown": 9,
+            },
+            {
+                "description": "Deals 15 fixed damage to all enemies. Recovers 3x character's RCV in HP",
+                "cooldown": 11,
+            },
+            {
+                "description": "Deals 300 fixed damage to all enemies. Boosts the Color Affinity of Fighters and Free Spirit characters by ___x",
+                "cooldown": 16,
+            },
+        ],
+        specialName: "The Work of Fairies",
+    },
+    1330: {//Gancho
+        captain: "Boosts ATK of Striker characters by 1.5x and recovers 2x character's RCV in HP at the end of each turn",
+        special: "Switches orbs between slots twice. Makes Badly Matching and [BLOCK] orbs not reduce damage for 2 turns",
+        specialName: "Tonta Knowledge",
     },
 };
 
