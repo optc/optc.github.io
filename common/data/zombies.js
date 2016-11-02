@@ -283,4 +283,8 @@ window.zombies = {
         type: 'healer',
         multiplier: 2
     },
+    1330: {//Gancho
+        type: 'healer',
+        multiplier: 2
+    }
 };
