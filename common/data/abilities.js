@@ -62,7 +62,7 @@ window.abilities = [
         levels: [
             [ 5, 'Boosted chances (20%) of getting matching orbs' ],
             [ 10, 'Boosted chances (22.2%) of getting matching orbs' ],
-            [ 20, 'Boosted chances (25%) of getting matching orbs' ],
+            [ 20, 'Boosted chances (25%) of getting matching orbs' ]
         ]
     },
 
@@ -71,7 +71,7 @@ window.abilities = [
         levels: [
             [ 10, 'Poison damage reduced by 20%' ],
             [ 15, 'Poison damage reduced by 50%' ],
-            [ 20, 'Poison damage reduced by 100%' ],
+            [ 20, 'Poison damage reduced by 100%' ]
         ]
     },
 
@@ -79,7 +79,7 @@ window.abilities = [
         name: 'Map damage resistance',
         levels: [
             [ 10, 'Map damage reduced by 50%' ],
-            [ 20, 'Map damage reduced by 100%' ],
+            [ 20, 'Map damage reduced by 100%' ]
         ]
     },
 

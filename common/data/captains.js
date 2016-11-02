@@ -3584,4 +3584,13 @@ window.captains = {
     1326: {
         atk: function(p) { return 1.3; },
     },
+    1327: {
+        atk: function(p) { return p.unit.cost <= 20 ? 2 : 1; },
+    },
+    1328: {
+        atk: function(p) { return p.unit.cost <= 20 ? 2.5 : 1; },
+    },
+    1330: {
+        atk: function(p) { return p.unit.class.has("Striker") ? 1.5 : 1; }
+    }
 };

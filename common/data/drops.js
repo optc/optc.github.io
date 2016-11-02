@@ -1367,6 +1367,7 @@ window.drops = {
         {
             name: 'Clash!! Shiki',
             thumb: 1108,
+            global: true,
             Ultimate: [ 1107 ],
             Master: [ 1107 ],
             Expert: [ 1107 ]
