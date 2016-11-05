@@ -800,7 +800,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             slot: slotNumber,
             turnCounter: $scope.tdata.turnCounter.value,
             chainPosition: chainPosition,
-            classCount: classCounter()
+            classCount: classCounter(),
+            colorCount: colorCounter()
         };
     };
 
