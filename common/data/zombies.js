@@ -181,11 +181,11 @@ window.zombies = {
     },
     828: { //Kid Law
         type: 'zombie',
-        treshold: 0.5
+        threshold: 0.5
     },
     829: { //Kid Law Evolution
         type: 'zombie',
-        treshold: 0.3
+        threshold: 0.3
     },
     841: { // Monet
         type: 'healer',
