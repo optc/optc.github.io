@@ -255,6 +255,11 @@ window.ships = [
         hp: function(p) {
             return p.unit.class.has('Powerhouse') ? 1 : 0.01;
         },
+        heal: function(p) {
+            return p.classCount.Powerhouse == 1 ? 1 : p.classCount.Powerhouse == 2 ? 10 : p.classCount.Powerhouse == 3 ? 20 : p.classCount.Powerhouse == 4 ? 30 : p.classCount.Powerhouse == 5 ? 100 : p.classCount.Powerhouse == 6 ? 900 : 0;
+            debugger;  
+        },
+        
     },
     
     { // 21

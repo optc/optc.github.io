@@ -840,7 +840,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 zombieThreshold = zombie.threshold;
         }
         if (shipBonus.bonus && shipBonus.bonus.heal)
-            healAmount += shipBonus.bonus.heal({ boatLevel: shipBonus.level });
+            healAmount += shipBonus.bonus.heal({ boatLevel: shipBonus.level, classCount: classCounter() });
         // get heal per turn
         if (healAmount > 0) numbers.healPerTurn = healAmount;
         else return; // nothing to do if there's no healer
