@@ -1205,6 +1205,13 @@ window.drops = {
             "All Difficulties": [ 1327, 1329, 1330, -1085, -1127, -1131, -1058, -758, -760, -735, -4, -508 ]
         },
         
+        {
+            name: "Tontatta Kingdom Island",
+            thumb: null,
+            //condition: "Unknown",
+            "All Difficulties": [ -720, -1186, -1190, -756, -1188, -1151, -1153, -738 ]
+        },
+        
     ],
 
             
