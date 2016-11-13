@@ -1329,6 +1329,17 @@ window.units = [
     [ "Warrior Leo, Tontatta Tribe - Tonta Corps", "DEX", [ "Striker", "Free Spirit" ], 4, 20, 4, 3, 99, 3000000, 810, 472, 140, 1724, 1134, 281, 1 ],
     [ "Wicca", "QCK", [ "Fighter", "Free Spirit" ], 3, 15, 8, 2, 70, 1066998, 101, 88, 11, 1017, 888, 219, 1 ],
     [ "Gancho", "INT", [ "Striker", "Cerebral" ], 3, 15, 6, 2, 70, 1066998, 158, 129, 84, 1008, 629, 334, 1 ],
+    [ "", "", "", null, null, null, null, null, null, null, null, null, null, null, null, null],
+    [ "", "", "", null, null, null, null, null, null, null, null, null, null, null, null, null],
+    [ "", "", "", null, null, null, null, null, null, null, null, null, null, null, null, null],
+    [ "", "", "", null, null, null, null, null, null, null, null, null, null, null, null, null],
+    [ "", "", "", null, null, null, null, null, null, null, null, null, null, null, null, null],
+    [ "", "", "", null, null, null, null, null, null, null, null, null, null, null, null, null],
+    [ "Kanjuro", "PSY", [ "Striker", "Free Spirit" ], 4, 25, null, null, null, null, null, null, null, null, null, null, null],
+    [ "Kanjuro Evolved", "PSY", [ "Striker", "Free Spirit" ], 5, 40, null, null, null, null, null, null, null, null, null, null, null],
+    [ "Tony Tony Chopper Jump Point", "DEX", [ "Fighter", "Powerhouse" ], 4, 20, null, null, null, null, null, null, null, null, null, null, null],
+    [ "Gedatsu", "QCK", [ "Driven", "Free Spirit" ], 4, 16, null, null, null, null, null, null, null, null, null, null, null],
+    [ "Gedatsu Evolved", "QCK", [ "Driven", "Free Spirit" ], 5, 26, null, null, null, null, null, null, null, null, null, null, null],
     ];
     
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ]

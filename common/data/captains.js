@@ -2906,11 +2906,11 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Free Spirit") ? 2 : 1; }
     },
     1144: {
-        atk: function(p) { return p.unit.class.has("Cerebral") ? 1.75 : 1; }
+        atk: function(p) { return p.unit.type == "PSY" ? 1.75 : 1; }
     },
     1145: {
-        atk: function(p) { return p.unit.class.has("Cerebral") ? 1.75 : 1; },
-        rcv: function(p) { return p.unit.class.has("Cerebral") ? 1.5 : 1; }
+        atk: function(p) { return p.unit.type == "PSY" ? 1.75 : 1; },
+        rcv: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; }
     },
     1154: {
         atk: function(p) { return p.unit.class.has("Powerhouse") ? 2 : 1; },
@@ -3523,6 +3523,7 @@ window.captains = {
     },
     1313: {
         //Akainu NEEDS TO BE CHANGED
+        //[This works for STR and DEX units, just need a custom orb for QCK, INT, PSY units. Orb matchers like Oars and Onigumo are still a pain] atk: function(p) { return p.unit.type == "STR" ? (p.orb == 2.0 ? 3.9375 : 2.25) : p.unit.type == "DEX" ? (p.orb == 0.5 ? 3.9375 : 2.25) : 2.25; },
         atk: function(p) { return p.unit.type == "STR" ? (p.orb == 2.0 ? 3.9375 : 2.25) : 2.25; },
     },
     1314: {
@@ -3531,10 +3532,10 @@ window.captains = {
     },
     1315: {
         hitAtk: function(p) {
-            return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 3.5 : 
-            p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect"]) ? 3 :
-            p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? 2.75 :
-            p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect"]) ? 2.5 : 1;
+            return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 3 : 
+            //p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect"]) ? 3 :
+            //p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? 2.75 :
+            p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect"]) ? 2 : 1;
         },
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
     },
@@ -3548,14 +3549,14 @@ window.captains = {
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
     },
     1317: {
-        atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "STR" ? 2.5 : 1; },
+        atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "STR" ? 2 : 1; },
     },
     1318: {
         atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "STR" ? 2.5 : 1; },
     },
     1321: {
         atk: function(p) { if((p.colorCount.INT>=1 && p.colorCount.PSY>=1 && p.colorCount.STR>=1 && p.colorCount.DEX>=1 && p.colorCount.QCK>=1) && (p.unit.class.has("Cerebral") || p.unit.class.has("Slasher"))) 
-                return 2.5;
+                return 2.25;
             else
                 return 1; 
                },
@@ -3569,8 +3570,8 @@ window.captains = {
     },
     1323: {
         atk: function(p) {
-            return p.unit.class.has("Slasher") && p.unit.class.has("Driven") ? 2.56 :
-                p.unit.class.has("Driven") || p.unit.class.has("Slasher") ? 1.6 :
+            return p.unit.class.has("Slasher") && p.unit.class.has("Driven") ? 1.69 :
+                p.unit.class.has("Driven") || p.unit.class.has("Slasher") ? 1.3 :
                 1;
         }
     },
