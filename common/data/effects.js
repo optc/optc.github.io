@@ -311,11 +311,12 @@ window.effects = {
     },
     
     'Dr. Indigo & Scarlet! Fortnight': {
-        description: 'Boosts ATK of Driven and Powerhouse characters by 2x, other classes get .5x ATK. Boosts HP of Slasher and Fighter characters by 2x, other classes get .5x HP.',
+        //OLD description: 'Boosts ATK of Driven and Powerhouse characters by 2x, other classes get .5x ATK. Boosts HP of Slasher and Fighter characters by 2x, other classes get .5x HP.',
+        description: 'Boosts ATK of Driven characters by 2x and boosts HP for Powerhouse characters by 2x.',
         thumb: 1095,
         id: 37,
         atk: function(p) { 
-                            var boost1 = 1.0, boost2 = 1.0, boost3 = 1.0, boost4 = 1.0, boost5 = 1.0;
+/*                            var boost1 = 1.0, boost2 = 1.0, boost3 = 1.0, boost4 = 1.0, boost5 = 1.0;
                             if(p.class.has('Driven')) { boost1 = 2.0}
                             if(p.class.has('Powerhouse')) { boost2 = 2.0}
                             if(!(p.class.has('Driven')&&p.class.has('Powerhouse')) && p.class.constructor === Array){
@@ -324,10 +325,11 @@ window.effects = {
                             if(p.class.constructor === String){
                                 if(!(p.class.has('Driven') || p.class.has('Powerhouse'))){ boost5 = 0.5}
                             }
-                            return 1*boost1*boost2*boost3*boost4*boost5; 
+                            return 1*boost1*boost2*boost3*boost4*boost5;*/ 
+                            return p.class.has('Driven') ? 2 : 1;
                         },
         hp: function(p) {
-                            var boost1 = 1.0, boost2 = 1.0, boost3 = 1.0, boost4 = 1.0, boost5 = 1.0;
+/*                            var boost1 = 1.0, boost2 = 1.0, boost3 = 1.0, boost4 = 1.0, boost5 = 1.0;
                             if(p.class.has('Fighter')) { boost1 = 2.0}
                             if(p.class.has('Slasher')) { boost2 = 2.0}
                             if(!(p.class.has('Fighter')&&p.class.has('Slasher')) && p.class.constructor === Array){
@@ -336,7 +338,8 @@ window.effects = {
                             if(p.class.constructor === String){
                                 if(!(p.class.has('Fighter') || p.class.has('Slasher'))){ boost5 = 0.5}
                             }
-                            return 1*boost1*boost2*boost3*boost4*boost5;
+                            return 1*boost1*boost2*boost3*boost4*boost5;*/
+                            return p.class.has('Powerhouse') ? 2 : 1;
                         }
     },
     
@@ -383,15 +386,16 @@ window.effects = {
         description: 'Boosts the Orbs of all characters by 1.4x',
         thumb: 1163,
         id: 40,
-        orb: function(p) { return p.orb == 2.0 ? 1.4 : (p.orb == 0.5 ? 20/28 : 1); }
+        orb: function(p) { return p.orb == 2.0 ? 1.4 : (p.orb == 0.5 ? 5/7 : 1); },
+        atk: function(p) { return 1.4; }
     },
     
     'Gild Tesoro - 60 Stamina': {
         description: 'Boosts the Orbs and ATK of all characters by 1.4x',
         thumb: 1163,
         id: 41,
-        orb: function(p) { return p.orb == 2.0 ? 1.4 : (p.orb == 0.5 ? 20/28 : 1); },
-        atk: function(p) { return 1.5; }
+        orb: function(p) { return p.orb == 2.0 ? 1.2 : (p.orb == 0.5 ? 5/6 : 1); },
+        atk: function(p) { return 1.2; }
     },
 
 };

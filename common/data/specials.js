@@ -1768,4 +1768,7 @@ window.specials = {
         type: "condition",
         warning: "Selected special (%name%) assumes that the enemy has been delayed."
     },
+    1329: {
+        affinity: function(p){ return p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? 1.25 : 1; }
+    }
 };

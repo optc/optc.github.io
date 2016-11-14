@@ -241,7 +241,7 @@ window.details = {
     50: {
         special: "Deals 5x character's ATK in STR damage to one enemy",
         specialName: "The Meatball Of Doom",
-        captain: "Recovers 4x character's RCV in HP at the end of each turn"
+        captain: "Recovers 3x character's RCV in HP at the end of each turn"
     },
     51: {
         captain: "Recovers 3x character's RCV in HP at the end of each turn"
@@ -3881,7 +3881,7 @@ window.details = {
     854: {
         captain: "Boosts ATK of DEX chracters by 1.5x, reduces damage received by 10%",
         specialName: "Guard Point: Winter Coat",
-        special: "Redues damage received by 50% for 3 turns, slightly boosts chances of getting [DEX] orbs for 3 turns"
+        special: "Reduces damage received by 50% for 3 turns, slightly boosts chances of getting [DEX] orbs for 3 turns"
     },
     855: {
         captain: "Boosts ATK of Slasher characters by 2x",
@@ -5482,12 +5482,12 @@ window.details = {
     },
     1111: {
         captain: "Boosts ATK and RCV of Cerebral characters by 1.25x",
-        special: "Amplifies the effect of orbs by 1.25x for 3 turns, recovers 7x character's RCV at the end of the turn for 3 turns.",
+        special: "Amplifies the effect of orbs by 1.25x for 3 turns, recovers 8x character's RCV at the end of the turn for 3 turns.",
         specialName: "Impish Sultry Dance"
     },
     1112: {
         captain: "Boosts ATK and RCV of Cerebral characters by 1.5x",
-        special: "Amplifies the effect of orbs by 1.25x for 3 turns, recovers 7x character's RCV at the end of the turn for 3 turns.",
+        special: "Amplifies the effect of orbs by 1.25x for 3 turns, recovers 8x character's RCV at the end of the turn for 3 turns.",
         specialName: "Impish Sultry Dance"
     },
     1113: {
@@ -5714,12 +5714,12 @@ window.details = {
         specialName: "Gorilla Punch: Golden Strike"
     },
     1144: {// Coliseum Porche
-        captain: "Boosts ATK of Cerebral characters by 1.75x",
+        captain: "Boosts ATK of [PSY] characters by 1.75x",
         special: "Deals 5x character's ATK in [PSY] damage to all enemies. Recovers 15x character's RCV in HP",
         specialName: "Cutie Baton: Flower Shuriken"
     },
     1145: {// Coliseum Porche
-        captain: "Boosts ATK of Cerebral characters by 1.75x and their RCV by 1.5x",
+        captain: "Boosts ATK of [PSY] characters by 1.75x and their RCV by 1.5x",
         special: "Deals 5x character's ATK in [PSY] damage to all enemies. Recovers 15x character's RCV in HP",
         specialName: "Cutie Baton: Flower Shuriken"
     },
@@ -6849,19 +6849,19 @@ window.details = {
         specialName: "Meteor Volcano",
     },
     1315: {//Coby
-        captain: "Boosts ATK by 2.5x after the 2nd Perfect, 2.75x after the 3rd Perfect, 3x after the 4th Perfect, and by 3.5x after the 5th Perfect.",
+        captain: "Boosts ATK by 2x after the 2nd Perfect and by 3x after the 5th Perfect.",
         special: [
             {
                 "description": "If HP is below 3,000, reduces No Healing debuff by 1 turn. Recovers 3x character's RCV in HP",
-                "cooldown": 15,
+                "cooldown": [ 15, 9 ],
             },
             {
                 "description": "If HP is below 3,000, reduces No Healing debuff by 3 turns. Recovers 6x character's RCV in HP",
-                "cooldown": 20,
+                "cooldown": [ 20, 14 ],
             },
             {
                 "description": "If HP is below 3,000, removes No Healing debuff. Recovers 13x character's RCV in HP",
-                "cooldown": 24,
+                "cooldown": [ 24, 18 ],
             },
         ],
         specialNotes: "No Healing debuff completely stops healing abilities. This is the debuff used in Akainu raid",
@@ -6873,15 +6873,15 @@ window.details = {
         special: [
             {
                 "description": "If HP is below 3,000, reduces No Healing debuff by 1 turn. Recovers 3x character's RCV in HP",
-                "cooldown": 15,
+                "cooldown": [ 15, 9 ],
             },
             {
                 "description": "If HP is below 3,000, reduces No Healing debuff by 3 turns. Recovers 6x character's RCV in HP",
-                "cooldown": 20,
+                "cooldown": [ 20, 14 ],
             },
             {
                 "description": "If HP is below 3,000, removes No Healing debuff. Recovers 13x character's RCV in HP",
-                "cooldown": 24,
+                "cooldown": [ 24, 18 ],
             },
         ],
         specialNotes: "No Healing debuff completely stops healing abilities. This is the debuff used in Akainu raid",
@@ -6889,7 +6889,7 @@ window.details = {
         specialName: "Echoing Cry of the Soul",
     },
     1317: {//Garp
-        captain: "Boosts ATK of [STR] and [PSY] characters by 2.5x",
+        captain: "Boosts ATK of [STR] and [PSY] characters by 2x",
         special: "Deals 30x character's ATK as fixed [STR] damage to all enemies that bypasses all defensive Buffs. Delays all enemies for 1 turn. Reduces the defense of all enemies by 80% for 1 turn.",
         sailor: "Boosts ATK of all characters by 75",
         specialName: "Super Large Iron Ball",
@@ -6901,7 +6901,7 @@ window.details = {
         specialName: "Super Large Iron Balll",
     },
     1319: {//Lady Tsuru
-        captain: "Heals for 1.5x her RCV at the end of the turn each time you hit a Good. Heals for .1x her RCV at the end of the turn each time you hit a Perfect",
+        captain: "Heals for 1x her RCV at the end of the turn each time you hit a Good. Heals for .1x her RCV at the end of the turn each time you hit a Perfect",
         special: "Deals 10 hits of random [QCK] damage to random enemies. Boosts ATK of all characters by 1.5x for 1 turn",
         specialNotes: "#{randomHits : 10}<br>#{random : ??? : ??? : for each hit}",
         sailor: "Reduces duration of Paralysis by 1 turn",
@@ -6915,7 +6915,7 @@ window.details = {
         specialName: "A Decree of the Veteran",
     },
     1321: {//Momonga
-        captain: "Boosts the ATK of Cerebral and Slasher characters by 2.5x and reduces damage taken by 10% if you have a [STR], [DEX], [QCK], [INT], and [PSY] character on your crew.",
+        captain: "Boosts the ATK of Cerebral and Slasher characters by 2.25x and reduces damage taken by 10% if you have a [STR], [DEX], [QCK], [INT], and [PSY] character on your crew.",
         special: "Deals 15x character's ATK as [DEX] damage to all enemies. Boosts ATK against delayed enemies by 1.5x for 2 turns",
         specialName: "Front Line Dissection",
         sailor: "Boosts ATK of Slasher and Cerebral characters by 75 if your captain is a Cerebral character",
@@ -6927,8 +6927,8 @@ window.details = {
         sailor: "Boosts ATK of Slasher and Cerebral characters by 75 if your captain is a Cerebral character",
     },
     1323: {//Onigumo
-        captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of Slasher and Driven characters by 1.6x",
-        captainNotes: "The bonus is cumulative. Slasher + Driven characters get a 2.56x bonus.",
+        captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of Slasher and Driven characters by 1.3x",
+        captainNotes: "The bonus is cumulative. Slasher + Driven characters get a 1.69x bonus.",
         special: "Randomize [RCV], [TND], and [BOMB] orbs. Makes [STR], [DEX], and [QCK] orbs \"beneficial\" to Driven and Slasher characters for 2 turns",
         specialNotes: "\"Beneficial\" orbs grant the same ATK boost as matching orbs while retaining their original function.",
         specialName: "Onigumo of Dismantling Swordsmanship",
@@ -6957,11 +6957,11 @@ window.details = {
         special: [
             {
                 "description": "Deals 3x character's ATK as [DEX] damage to one enemy, change own orb into [DEX]",
-                "cooldown": 11,
+                "cooldown": [ 11, 4 ],
             },
             {
                 "description": "Deal 15x character's ATK as [DEX] damage to one enemy, changes own and friend's orb into Matching orbs",
-                "cooldown": 19,
+                "cooldown": [ 19, 12 ],
             }
         ],
         specialName: "Tail Hammer",
@@ -6971,11 +6971,11 @@ window.details = {
         special: [
             {
                 "description": "Deals 3x character's ATK as [DEX] damage to one enemy, change own orb into [DEX]",
-                "cooldown": 11,
+                "cooldown": [ 11, 4 ],
             },
             {
                 "description": "Deal 15x character's ATK as [DEX] damage to one enemy, changes own and friend's orb into Matching orbs",
-                "cooldown": 19,
+                "cooldown": [ 19, 12 ],
             }
         ],
         specialName: "Tail Hammer",
@@ -6985,15 +6985,15 @@ window.details = {
         special: [
             {
                 "description": "Deals 6 fixed damage to all enemies. Randomizes orbs of upper row characters",
-                "cooldown": 9,
+                "cooldown": [ 9, 3 ],
             },
             {
                 "description": "Deals 15 fixed damage to all enemies. Recovers 3x character's RCV in HP",
-                "cooldown": 11,
+                "cooldown": [ 11, 5 ],
             },
             {
-                "description": "Deals 300 fixed damage to all enemies. Boosts the Color Affinity of Fighters and Free Spirit characters by ___x",
-                "cooldown": 16,
+                "description": "Deals 300 fixed damage to all enemies. Boosts the Color Affinity of Fighters and Free Spirit characters by 1.25x",
+                "cooldown": [ 16, 10 ],
             },
         ],
         specialName: "The Work of Fairies",

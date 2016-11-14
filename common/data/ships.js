@@ -240,7 +240,7 @@ window.ships = [
     { // 19
         name: "Doflamingo Ship",
         thumb: null,
-        description: 'Boosts ATK of Driven Characters by 1.5x and their HP by 1.35x. Makes Perfects easier to Hit for Driven characters. Special: Adds 0.2 to Chain  (cooldown: 15 Turns)',
+        description: 'Boosts ATK of Driven Characters by 1.5x and their HP by 1.35x. Makes Perfects easier to Hit for Driven characters. Special: Adds 0.2 to Chain  (cooldown MAX: 15 Turns)',
         atk: function(p) { return !p.unit.class.has('Driven') ? 1 : [ 1.2, 1.2, 1.3, 1.3, 1.3, 1.3, 1.4, 1.4, 1.4, 1.5][p.boatLevel - 1]},
         hp: function(p) { return !p.unit.class.has('Driven') ? 1 : [ 1.1, 1.1, 1.1, 1.15, 1.2, 1.2, 1.2, 1.2, 1.2, 1.35][p.boatLevel - 1]}
     },
@@ -255,6 +255,10 @@ window.ships = [
         hp: function(p) {
             return p.unit.class.has('Powerhouse') ? 1 : 0.01;
         },
+        heal: function(p) {
+            return p.classCount.Powerhouse == 1 ? 1 : p.classCount.Powerhouse == 2 ? 10 : p.classCount.Powerhouse == 3 ? 20 : p.classCount.Powerhouse == 4 ? 30 : p.classCount.Powerhouse == 5 ? 100 : p.classCount.Powerhouse == 6 ? 900 : 0;  
+        },
+        
     },
     
     { // 21
@@ -275,6 +279,18 @@ window.ships = [
         },
         hp: function(p) {
             return p.unit.type == "PSY" || p.unit.type == "STR" ? [ 1.1, 1.1, 1.15, 1.15, 1.15, 1.2, 1.2, 1.25, 1.25, 1.25 ][p.boatLevel - 1] : 1;
+        },
+    },
+    
+    { //23
+        name: 'Polar Tang',
+        thumb: null,
+        description: 'Boosts ATK of Slashers and Free Spirit characters by 1.5x and their HP by 1.25x. Special: Heals for 10k when low HP (cooldown MAX: 18 turns)',
+        atk: function(p) {
+            return !(p.unit.class.has('Slasher') || p.unit.class.has('Free Spirit')) ? 1 : [ 1.3, 1.3, 1.3, 1.3, 1.3, 1.3, 1.4, 1.4, 1.4, 1.5 ][p.boatLevel - 1];
+        },
+        hp: function(p) {
+            return !(p.unit.class.has('Slasher') || p.unit.class.has('Free Spirit')) ? 1 : [ 1.1, 1.1, 1.1, 1.1, 1.2, 1.2, 1.2, 1.2, 1.25, 1.25 ][p.boatLevel - 1];
         },
     },
 

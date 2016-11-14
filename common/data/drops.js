@@ -1010,7 +1010,7 @@ window.drops = {
             global: true,
             condition: 'You can only bring Slasher and Cerebral units. (No Evolution/Booster)',
             "Japan": [ 807, 809, 811, -811, -645, -641, -631, -502, -11, -12, -9 ],
-            "Global": [ 807, 809, 811, -811, -645, -451, -631, -502, -11, -12, -9 ],
+            "Global": [ 807, 809, 811, -811, -760, -675, -631, -502, -11, -12, -9 ],
         },
 
         {
@@ -1130,7 +1130,8 @@ window.drops = {
             name: "Dr. Indigo & Scarlet!",
             thumb: 1095,
             global: true,
-            condition: "Boosts ATK of Driven and Powerhouse characters by 2x, other classes get .5x ATK. Boosts HP of Slasher and Fighter characters by 2x, other classes get .5x HP. (This STACKS for characters with multiple classes)",
+            //OLD condition: "Boosts ATK of Driven and Powerhouse characters by 2x, other classes get .5x ATK. Boosts HP of Slasher and Fighter characters by 2x, other classes get .5x HP. (This STACKS for characters with multiple classes)",
+            condition: "Boosts ATK of Driven characters by 2x and boosts HP for Powerhouse characters by 2x.",
             "All Difficulties": [ 1094, 1096, 1098, -649, -910, -647, -891, -590, -611, -893, -1098, -912]
         },
         
@@ -1159,7 +1160,7 @@ window.drops = {
             name: "Rumbar Pirates!",
             thumb: 1203,
             condition: "'Musical' units get their stats boosted by 1.5x (Dancers, Singers, Playing an instrument, etc)",
-            "All Difficulties": [ 1202, 1204, 1206, -1001, -997, -1207, -677, -896, -631, -954, -1206, -617 ]
+            "All Difficulties": [ 1202, 1204, 1206, -1001, -997, -1207, -677, -896, -631, -954, -1206, -617, -1027 ]
         },
         
         {
@@ -1202,6 +1203,13 @@ window.drops = {
             thumb: 1330,
             condition: "Slasher characters are weakened",
             "All Difficulties": [ 1327, 1329, 1330, -1085, -1127, -1131, -1058, -758, -760, -735, -4, -508 ]
+        },
+        
+        {
+            name: "Tontatta Kingdom Island",
+            thumb: null,
+            //condition: "Unknown",
+            "All Difficulties": [ -720, -1186, -1190, -756, -1188, -1151, -1153, -738 ]
         },
         
     ],
@@ -1324,8 +1332,8 @@ window.drops = {
             name: 'Clash!! Tyrant Kuma',
             thumb: 836,
             global: true,
-            Master: [ 835 ],
-            Expert: [ 835 ]
+            Ultimate: [ 835 ],
+            Master: [ 835 ]
         },
 
         {
@@ -1437,21 +1445,21 @@ window.drops = {
         
         {
             name: 'Rescue Ace Event - Akainu',
-            thumb: null,
+            thumb: 1283,
             challenge: "10, 20, 30, 35 stamina difficulty. 30 and 35 Stamina has a chance of dropping the Universal Skill Book.",
             "All Difficulties": [ -261, -562, -720, -748, -935 ]
         },
         
         {
             name: 'Rescue Ace Event - Aokiji',
-            thumb: null,
+            thumb: 1280,
             challenge: "10, 20, 30, 35 stamina difficulty. 30 and 35 Stamina has a chance of dropping the Universal Skill Book.",
             "All Difficulties": [ -416, -459, -530, -669, -578 ]
         },
         
         {
             name: 'Rescue Ace Event - Kizaru',
-            thumb: null,
+            thumb: 1228,
             challenge: "10, 20, 30, 35 stamina difficulty. 30 and 35 Stamina has a chance of dropping the Universal Skill Book.",
             "All Difficulties": [ -367, -649, -718, -870, -1001 ]
         },
