@@ -1201,15 +1201,15 @@ window.drops = {
         {
             name: "Tontatta Kingdom Island",
             thumb: 1330,
-            condition: "Slasher characters are weakened",
+            condition: "Slasher characters have their ATK reduced and their specials silenced",
             "All Difficulties": [ 1327, 1329, 1330, -1085, -1127, -1131, -1058, -758, -760, -735, -4, -508 ]
         },
         
         {
             name: "Tontatta Kingdom Island",
-            thumb: null,
-            //condition: "Unknown",
-            "All Difficulties": [ -720, -1186, -1190, -756, -1188, -1151, -1153, -738 ]
+            thumb: 1332,
+            condition: "Striker characters have their ATK reduced and their specials silenced",
+            "All Difficulties": [ 1331, 1333, 1334, -720, -1186, -1190, -756, -1188, -1151, -1153, -738 ]
         },
         
     ],
