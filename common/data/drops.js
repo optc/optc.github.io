@@ -1199,17 +1199,17 @@ window.drops = {
         },
         
         {
-            name: "Tontatta Kingdom Island",
+            name: "Tontatta Kingdom Island Part 1: Leo",
             thumb: 1330,
-            condition: "Slasher characters are weakened",
+            condition: "Slasher characters are Silenced for 99 turns and have their ATK reduced by a variable amount. (75% on 30 stamina)",
             "All Difficulties": [ 1327, 1329, 1330, -1085, -1127, -1131, -1058, -758, -760, -735, -4, -508 ]
         },
         
         {
-            name: "Tontatta Kingdom Island",
-            thumb: null,
-            //condition: "Unknown",
-            "All Difficulties": [ -720, -1186, -1190, -756, -1188, -1151, -1153, -738 ]
+            name: "Tontatta Kingdom Island Part 2: Mansherry",
+            thumb: 1332,
+            condition: "Striker characters are Silenced for 99 turns and have their ATK reduced by a variable amount. (70% on 30 stamina)",
+            "All Difficulties": [ 1331, 1333, 1334, -720, -1186, -1190, -756, -1188, -1151, -1153, -738 ]
         },
         
     ],
