@@ -1770,5 +1770,11 @@ window.specials = {
     },
     1329: {
         affinity: function(p){ return p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? 1.25 : 1; }
-    }
+    },
+    1335: {
+        chainAddition: function(p){ return 0.5;}
+    },
+    1336: {
+        chainAddition: function(p){ return 0.5;}
+    },
 };

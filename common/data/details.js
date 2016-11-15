@@ -4401,11 +4401,7 @@ window.details = {
         specialNotes: "#{stages}"
     },
     934: {
-<<<<<<< HEAD
-        captain: "Boosts ATK of Fighter characters by 2x, and their HP by 1.5x. If HP is above 70% or below 30%, boosts ATK of Fighter characters by 2.75x instead",
-=======
         captain: "Boosts ATK of Fighter characters by 2x, and their HP by 1.5x. If HP is above 70% or below 30%, boosts ATK of Fighter characters by 2.75 instead",
->>>>>>> refs/remotes/optc-db/master
         specialName: "Fishman Karate!! Shark Fist Tile Breaker",
         special: "For 1 turn, Perfects become harder to hit. Deals 20x character's ATK in [INT] damage to all enemies. Changes all Fighter Character orbs into Matching",
         specialNotes: "Decreases timing window to hit a Perfect. (Animation remains the same)"
@@ -7007,11 +7003,7 @@ window.details = {
         special: "Switches orbs between slots twice. Makes Badly Matching and [BLOCK] orbs not reduce damage for 2 turns",
         specialName: "Tonta Knowledge",
     },
-<<<<<<< HEAD
-        1331: {//Mansherry
-=======
     1331: {//Mansherry
->>>>>>> refs/remotes/optc-db/master
         captain: "Recovers 2x character's RCV in HP at the end of each turn",
         special: [
             {

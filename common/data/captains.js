@@ -3612,5 +3612,25 @@ window.captains = {
     },
     1330: {
         atk: function(p) { return p.unit.class.has("Striker") ? 1.5 : 1; }
-    }
+    },
+    1333: {
+        atk: function(p) { 
+            return p.unit.class.has("Powerhouse") && p.unit.type == "STR" ? 1.96 :
+                p.unit.class.has("Powerhouse") || p.unit.type == "STR" ? 1.4 :
+                1;
+        }
+    },
+    1334: {
+        atk: function(p) { 
+            return p.unit.class.has("Free Spirit") && p.unit.type == "DEX" ? 1.96 :
+                p.unit.class.has("Free Spirit") || p.unit.type == "DEX" ? 1.4 :
+                1;
+        }
+    },
+    1335: {
+        atk: function(p) { return p.unit.class.has("Free Spirit") ? 2 : 1; }
+    },
+    1336: {
+        atk: function(p) { return p.unit.class.has("Free Spirit") ? 2 : 1; }
+    },
 };
