@@ -1151,7 +1151,7 @@ window.cooldowns = [
     15,
     [ 25, 18 ],
     19,
-    25,
+    [ 25, 18 ],
     21,
     [ 10, 4 ],
     23,
@@ -1329,4 +1329,10 @@ window.cooldowns = [
     null,//Leo
     null,//Wicca
     [ 20, 12 ],
+    null,//Mansherry
+    null,//Mansherry
+    [ 20, 12 ],
+    [ 19, 12 ],
+    [ 6, 6 ],
+    [ 6, 6 ],
 ];

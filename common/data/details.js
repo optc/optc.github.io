@@ -1171,14 +1171,14 @@ window.details = {
         specialName: "Massacre Soldier",
         specialNotes: "#{fixed}",
         captain: "Boosts ATK by 3.5x after scoring 3 hits below Good in a row",
-        sailor: "When HP is below x%, boosts ATK of Cerebral Characters by 50"
+        sailor: "When HP is below x%, boosts ATK of Cerebral characters by 50"
     },
     312: {
         special: "Deals 100x character's ATK in fixed damage to one enemy, reduces crew's HP to 1",
         specialName: "Massacre Soldier",
         specialNotes: "#{fixed}",
         captain: "Boosts ATK by 3.5x after scoring 3 hits below Good in a row",
-        sailor: "When HP is below x%, boosts ATK of Cerebral Characters by 50"
+        sailor: "When HP is below x%, boosts ATK of Cerebral characters by 50"
     },
     313: {
         special: "Boosts ATK of Striker characters by 1.5x for 1 turn, deals 25x character's ATK in PSY damage to one enemy",
@@ -2201,13 +2201,13 @@ window.details = {
         special: "Deals random PSY damage to all enemies, randomizes all orbs",
         specialName: "Three-Verse Humming: Arrow-Notch Slash",
         captain: "Boosts ATK of PSY characters by 2x",
-        sailor: "Boosts RCV of PSY Characters by 15"
+        sailor: "Boosts RCV of PSY characters by 15"
     },
     526: {
         special: "Deals random PSY damage to all enemies, randomizes all orbs",
         specialName: "Three-Verse Humming: Arrow-Notch Slash",
         captain: "Boosts ATK of PSY characters by 2x, reduces damage received from INT enemies by 30%",
-        sailor: "Boosts RCV of PSY Characters by 15"
+        sailor: "Boosts RCV of PSY characters by 15"
     },
     527: {
         special: "Removes poison, recovers 15x character's RCV in HP",
@@ -2350,26 +2350,26 @@ window.details = {
         specialName: "Ashura Ugui",
         specialNotes: "#{fixed}",
         captain: "Boosts ATK of DEX characters by 2.75x if HP is below 30% at the start of the turn",
-        sailor: "Boosts ATK of Slasher Characters by 20"
+        sailor: "Boosts ATK of Slasher characters by 20"
     },
     554: {
         special: "Changes adjacent orbs into [DEX], deals 1,000 fixed damage to all enemies",
         specialName: "Ashura Ugui",
         specialNotes: "#{fixed}",
         captain: "Boosts ATK of DEX characters by 3x if HP is below 30% at the start of the turn",
-        sailor: "Boosts ATK of Slasher Characters by 20"
+        sailor: "Boosts ATK of Slasher characters by 20"
     },
     555: {
         special: "Delays all enemies for 3 turns, cuts the current HP of each enemy by 10%",
         specialName: "Heavenly Dragon Star",
         captain: "Boosts ATK of Shooter characters by 2x",
-        sailor: "Boosts RCV of Shooter Characters by 10"
+        sailor: "Boosts RCV of Shooter characters by 10"
     },
     556: {
         special: "Delays all enemies for 3 turns, cuts the current HP of each enemy by 10%",
         specialName: "Heavenly Dragon Star",
         captain: "Boosts ATK of Shooter characters by 2x and their RCV by 1.5x",
-        sailor: "Boosts RCV of Shooter Characters by 10"
+        sailor: "Boosts RCV of Shooter characters by 10"
     },
     557: {
         special: "Boosts chances of getting [INT] orbs for 3 turns",
@@ -2388,14 +2388,14 @@ window.details = {
         specialNotes: "#{orb : 1.5x}",
         specialName: "Roar! Zarley Davison",
         captain: "Boosts ATK of STR characters by 2x, deals 2x character's ATK in STR damage to all enemies at the end of each turn",
-        sailor: "Boosts ATK of Shooter Characters by 20"
+        sailor: "Boosts ATK of Shooter characters by 20"
     },
     560: {
         special: "Changes own orb into [STR], amplifies the effect of orbs by 1.5x for 2 turns",
         specialNotes: "#{orb : 1.5x}",
         specialName: "Roar! Zarley Davison",
         captain: "Boosts ATK of STR characters by 2.25x, deals 2x character's ATK in STR damage to all enemies at the end of each turn",
-        sailor: "Boosts ATK of Shooter Characters by 20"
+        sailor: "Boosts ATK of Shooter characters by 20"
     },
     561: {
         special: "Reduces crew's current HP by 40%, deals 15x the amount of HP subtracted in typeless damage to all enemies, locks all orbs for 1 turn",
@@ -2763,14 +2763,14 @@ window.details = {
         specialNotes: "#{specialProportional : lower : 50 * ( 1 - (remaining HP) / (total HP) )}",
         specialName: "Pirate Brothers: Twin Strike",
         captain: "Boosts ATK of Fighter characters by 2x, deals 2x character's ATK in DEX damage to all enemies at the end of each turn",
-        sailor: "When HP is below x%, boosts ATK of Fighter Characters by 100"
+        sailor: "When HP is below x%, boosts ATK of Fighter characters by 100"
     },
     641: {
         special: "Changes own orb into [DEX], deals several times the character's ATK in DEX damage to one enemy",
         specialNotes: "#{specialProportional : lower : 50 * ( 1 - (remaining HP) / (total HP) )}",
         specialName: "Pirate Brothers: Twin Strike",
         captain: "Boosts ATK of Fighter characters by 2.25x, deals 2x character's ATK in DEX damage to all enemies at the end of each turn",
-        sailor: "When HP is below x%, boosts ATK of Fighter Characters by 100"
+        sailor: "When HP is below x%, boosts ATK of Fighter characters by 100"
     },
     642: {
         special: "Reduces crew's current HP by 30%, deals 10x character's ATK in fixed damage to one enemy, amplifies the effect of orbs by 1.75x for 1 turn",
@@ -4352,12 +4352,12 @@ window.details = {
         special: "Take 1.5x Additional damage; Boosts ATK of Slasher and Driven characters by 1.2x for 3 turns"
     },
     928: {
-        captain: "Boosts ATK of Driven Characters by 1.75x while above 30% HP and boosts ATK of Striker Characters by 1.75x while below 30% HP",
+        captain: "Boosts ATK of Driven characters by 1.75x while above 30% HP and boosts ATK of Striker characters by 1.75x while below 30% HP",
         special: "Deals 7x his ATK in [DEX] damage to all enemies, and boosts ATK against Poisoned enemies by 1.3x for 3 turns",
         specialName: "Hell Wisdom Rush"
     },
     929: {
-        captain: "Boosts ATK of Driven Characters by 2.25x while above 30% HP and boosts ATK of Striker Characters by 2.25x while below 30% HP",
+        captain: "Boosts ATK of Driven characters by 2.25x while above 30% HP and boosts ATK of Striker characters by 2.25x while below 30% HP",
         special: "Deals 7x his ATK in [DEX] damage to all enemies, and boosts ATK against Poisoned enemies by 1.3x for 3 turns",
         specialName: "Hell Wisdom Rush"
     },
@@ -4371,7 +4371,7 @@ window.details = {
         special: "Deals 13x ATK to 1 enemy in [DEX] Damage. Turns [BLOCK] orbs into [RCV] orbs"
     },
     932: {
-        captain: "Boosts ATK of Powerhouse Characters by 1.5x, and their HP by 1.5x",
+        captain: "Boosts ATK of Powerhouse characters by 1.5x, and their HP by 1.5x",
         specialName: "Rock Domination Wall",
         special: [
             {
@@ -4386,7 +4386,7 @@ window.details = {
         specialNotes: "#{stages}"	
         },
     933: {
-        captain: "Boosts ATK of Powerhouse Characters by 2.25x, and their HP by 1.5x",
+        captain: "Boosts ATK of Powerhouse characters by 2.25x, and their HP by 1.5x",
         specialName: "Rock Domination Wall",
         special: [
             {
@@ -4401,13 +4401,13 @@ window.details = {
         specialNotes: "#{stages}"
     },
     934: {
-        captain: "Boosts ATK of Fighter Characters by 2x, and their HP by 1.5x. If HP is above 70% or below 30%, boosts ATK of Fighter Characters by 2.75x instead",
+        captain: "Boosts ATK of Fighter characters by 2x, and their HP by 1.5x. If HP is above 70% or below 30%, boosts ATK of Fighter characters by 2.75x instead",
         specialName: "Fishman Karate!! Shark Fist Tile Breaker",
         special: "For 1 turn, Perfects become harder to hit. Deals 20x character's ATK in [INT] damage to all enemies. Changes all Fighter Character orbs into Matching",
         specialNotes: "Decreases timing window to hit a Perfect. (Animation remains the same)"
     },
     935: {
-        captain: "Boosts ATK of Fighter Characters by 2x, and their HP by 1.5x. If HP is above 70% or below 30%, boosts ATK of Fighter Characters by 2.75 instead",
+        captain: "Boosts ATK of Fighter characters by 2x, and their HP by 1.5x. If HP is above 70% or below 30%, boosts ATK of Fighter characters by 2.75 instead",
         specialName: "Fishman Karate!! Shark Fist Tile Breaker",
         special: "For 1 turn, Perfects become harder to hit. Deals 20x character's ATK in [INT] damage to all enemies. Changes all Fighter Character orbs into matching",
         specialNotes: "Decreases timing window to hit a Perfect. (Animation remains the same)"
@@ -4435,91 +4435,91 @@ window.details = {
         special: "Reduces Bind duration for one character completely. For Striker and Cerebral characters, changes Bad orbs into matching"
     },
     940: {
-        captain: "Boosts ATK and HP of [DEX] Characters by 1.5x",
+        captain: "Boosts ATK and HP of [DEX] characters by 1.5x",
         specialName: "Sure Kill! Exploding Star!!",
         special: "Deals 13x ATK as [DEX] damage to all enemies, and boosts ATK of [DEX] characters by 1.75x for 1 turn"
     },
     941: {
-        captain: "Boosts ATK of [DEX] Characters by 1.75x and their HP by 2.25x",
+        captain: "Boosts ATK of [DEX] characters by 1.75x and their HP by 2.25x",
         specialName: "Sure Kill! Exploding Star!!",
         special: "Deals 13x ATK as [DEX] damage to all enemies, and boosts ATK of [DEX] characters by 1.75x for 1 turn"
     },
     942: {
-        captain: "Boosts ATK and HP of [STR] Characters by 1.5x",
+        captain: "Boosts ATK and HP of [STR] characters by 1.5x",
         specialName: "Future Country's Big Incident: The Nightmare of Baldimore",
         special: "Reduces damage received from [QCK] enemies by 100% for 1 turn"
     },
     943: {
-        captain: "Boosts ATK of [STR] Characters by 2.25x and their HP by 1.75x",
+        captain: "Boosts ATK of [STR] characters by 2.25x and their HP by 1.75x",
         specialName: "Future Country's Big Incident: The Nightmare of Baldimore",
         special: "Reduces damage received from [QCK] enemies by 100% for 1 turn"
     },
     944: {
-        captain: "Boosts ATK and RCV of Driven Characters by 1.2x",
+        captain: "Boosts ATK and RCV of Driven characters by 1.2x",
         specialName: "Spiritual Bouquet",
-        special: "Boosts ATK and RCV of Driven Characters by 1.5x for 1 turn"
+        special: "Boosts ATK and RCV of Driven characters by 1.5x for 1 turn"
     },
     945: {
-        captain: "Boosts ATK and RCV of Driven Characters by 1.75x",
+        captain: "Boosts ATK and RCV of Driven characters by 1.75x",
         specialName: "Spiritual Bouquet",
-        special: "Boosts ATK and RCV of Driven Characters by 1.5x for 1 turn"
+        special: "Boosts ATK and RCV of Driven characters by 1.5x for 1 turn"
     },
     946: {
         specialName: "Lock-on Iron Ball",
-        captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of Striker Characters by 1.75x",
+        captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of Striker characters by 1.75x",
         special: "Change Friend Captain and changes own orb into [INT]"
     },
     947: {
-        captain: "Boosts ATK of [INT] Characters by 1.5x, Boosts damage of [INT] specials by 1.5x",
+        captain: "Boosts ATK of [INT] characters by 1.5x, Boosts damage of [INT] specials by 1.5x",
         specialName: "Flame Flash",
-        special: "[STR] and [INT] Characters gain 1.3x ATK for 1 turn. Deals 10x character's ATK in [INT] damage to all enemies",
+        special: "[STR] and [INT] characters gain 1.3x ATK for 1 turn. Deals 10x character's ATK in [INT] damage to all enemies",
         captainNotes: "#{noFixedPerc}"
     },
     948: {
-        captain: "Boosts ATK of Shooter Characters by 1.5x and their RCV by 1.2x",
+        captain: "Boosts ATK of Shooter characters by 1.5x and their RCV by 1.2x",
         specialName: "Twin Cannons",
         special: "Randomly changes all orbs to either [STR] or [INT]. Deals random [STR] damage"
     },
     949: {
-        captain: "Boosts ATK of Slasher Characters by 2x, recovers 2x character's RCV in HP at the end of each turn",
+        captain: "Boosts ATK of Slasher characters by 2x, recovers 2x character's RCV in HP at the end of each turn",
         specialName: "Ties with Ace",
         special: "Reduces Silence duration by 3 turns, and recovers 4,000 HP",
         specialNotes: "Silence will refer to effects that prevent you from activating Special Abilities"
     },
     950: {
-        captain: "Boosts ATK of Fighter and Free Spirit Characters by 2.5x after scoring 3 Perfects in a row",
+        captain: "Boosts ATK of Fighter and Free Spirit characters by 2.5x after scoring 3 Perfects in a row",
         specialName: "Flame Commandment: Fire Pillar",
-        special: "Reduces Special Cooldown of Fighter and Free Spirit Characters by 1 turn. Reduces damage received by 50% for 1 turn.",
+        special: "Reduces Special Cooldown of Fighter and Free Spirit characters by 1 turn. Reduces damage received by 50% for 1 turn.",
         specialNotes: "Reducing Special Cooldown works as if you took an extra turn"
     },
     951: {
-        captain: "Boosts ATK of Fighter and Free Spirit Characters by 2.75x after scoring 3 Perfects in a row",
+        captain: "Boosts ATK of Fighter and Free Spirit characters by 2.75x after scoring 3 Perfects in a row",
         specialName: "Flame Commandment: Fire Pillar",
-        special: "Reduces Special Cooldown of Fighter and Free Spirit Characters by 1 turn. Reduces damage received by 50% for 1 turn.",
+        special: "Reduces Special Cooldown of Fighter and Free Spirit characters by 1 turn. Reduces damage received by 50% for 1 turn.",
         specialNotes: "Reducing Special Cooldown works as if you took an extra turn"
     },
     952: {
-        captain: "Boosts ATK and HP of Shooter and Striker Characters by 1.2x",
+        captain: "Boosts ATK and HP of Shooter and Striker characters by 1.2x",
         specialName: "Life-saving Gunstock Blow",
         special: "Deals 13x ATK in [DEX] Damage to one enemy. Changes Captain's orb into matching."
     },
     953: {
-        captain: "Boosts ATK and HP of Shooter and Striker Characters by 1.5x",
+        captain: "Boosts ATK and HP of Shooter and Striker characters by 1.5x",
         specialName: "Life-saving Gunstock Blow",
         special: "Deals 13x ATK in [DEX] Damage to one enemy. Changes Captain's orb into matching."
     },
     954:{
-        captain: "Boosts ATK and HP of [QCK] Characters by 1.5x",
+        captain: "Boosts ATK and HP of [QCK] characters by 1.5x",
         specialName: "Goldfish Fencing! I'll Dye the Sea Red with Your Blood",
         special: "Reduces the defense of all enemies by 80% for 2 turns"
     },
     955:{
-        captain: "Boosts ATK and HP of [PSY] Characters by 1.5x",
+        captain: "Boosts ATK and HP of [PSY] characters by 1.5x",
         specialName: "Get Rich Quick Scheme! We're All Gonna Be Rich",
         special: "Boosts ATK against enemies with reduced defense by 1.2x for 2 turns"
     },
     956:{
-        captain: "Boosts ATK and HP of [INT] Characters by 1.5x",
+        captain: "Boosts ATK and HP of [INT] characters by 1.5x",
         specialName: "Fishman karate! I'll Finish You",
         special: "Boosts ATK of Powerhouse characters by 1.2x for 2 turns"
     },
@@ -4563,13 +4563,13 @@ window.details = {
         special: "Boosts ATK of all characters by 1.1x for 1 turn. If \"Wrath of the Creator Bloodline\" is used again in the same turn the special is activated in, boosts ATK of all characters by 1.5x instead."
     },
     966:{
-        captain: "Boosts ATK of Driven Characters by 2.25x",
+        captain: "Boosts ATK of Driven characters by 2.25x",
         specialName: "Repel",
         special: "Empties slots with [QCK] orbs, deals [QCK] damage based on number of [QCK] slots emptied to all enemies",
         specialNotes: "The exact multiplier used is chosen based on the number of [QCK] orbs consumed: 0 orbs - Can't activate; 1 orb - 14x ATK; 2 orbs - 21x ATK; 3 orbs - 35x ATK; 4 orbs - 49x ATK; 5 orbs - 91x ATK; 6 orbs - 140x ATK."
     },
     967:{
-        captain: "Boosts ATK of Free Spirit Characters by 2.25x",
+        captain: "Boosts ATK of Free Spirit characters by 2.25x",
         specialName: "Surgeon of Death's First Aid Surgery",
         special: "Recovers 20x character's RCV in HP. Switches orbs between slots twice"
     },
@@ -4594,25 +4594,25 @@ window.details = {
         special: "Deals 25x ATK to one enemy. Changes own orb into matching orb"
     },
     973:{
-        captain: "Boosts ATK of Powerhouse Characters by 2x if HP is above 99% at the start of the turn",
+        captain: "Boosts ATK of Powerhouse characters by 2x if HP is above 99% at the start of the turn",
         specialName: "Ironclad Thrust: Dwarf Guard of the World",
         special: "Deals 20,000 fixed damage to one enemy. Changes friend captain's orb into Matching orb"
     },
     974:{
-        captain: "Boosts ATK of Powerhouse Characters by 2.5x if HP is above 99% at the start of the turn",
+        captain: "Boosts ATK of Powerhouse characters by 2.5x if HP is above 99% at the start of the turn",
         specialName: "Ironclad Thrust: Dwarf Guard of the World",
         special: "Deals 20,000 fixed damage to one enemy. Changes friend captain's orb into Matching orb"
     },
     975:{
         captain: "Reduces damage received by 10%",
         specialName: "A Threat That Puts Adults to Shame",
-        special: "Boosts the ATK of Striker and Driven Characters by 1.3x for 1 turn. Protects from defeat as long as HP is above 50% for 1 turn",
+        special: "Boosts the ATK of Striker and Driven characters by 1.3x for 1 turn. Protects from defeat as long as HP is above 50% for 1 turn",
         specialNotes: "#{zombie}"
     },
     976:{
-        captain: "Boosts ATK of Driven Characters by 2x. Reduces damage received by 10%",
+        captain: "Boosts ATK of Driven characters by 2x. Reduces damage received by 10%",
         specialName: "A Threat That Puts Adults to Shame",
-        special: "Boosts the ATK of Striker and Driven Characters by 1.3x for 1 turn. Protects from defeat as long as HP is above 50% for 1 turn",
+        special: "Boosts the ATK of Striker and Driven characters by 1.3x for 1 turn. Protects from defeat as long as HP is above 50% for 1 turn",
         specialNotes: "#{zombie}"
     },
     977:{
@@ -5862,27 +5862,27 @@ window.details = {
         special: "Deals random PSY damage to all enemies, randomizes all orbs",
         specialName: "Three-Verse Humming: Arrow-Notch Slash",
         captain: "Boosts ATK of PSY characters by 2x",
-        sailor: "Boosts RCV of PSY Characters by 15"
+        sailor: "Boosts RCV of PSY characters by 15"
     },
     1173: {
         special: "Deals random PSY damage to all enemies, randomizes all orbs",
         specialName: "Three-Verse Humming: Arrow-Notch Slash",
         captain: "Boosts ATK of PSY characters by 2x, reduces damage received from INT enemies by 30%",
-        sailor: "Boosts RCV of PSY Characters by 15"
+        sailor: "Boosts RCV of PSY characters by 15"
     },
     1174: {
         special: "Changes adjacent orbs into [DEX], deals 1,000 fixed damage to all enemies",
         specialName: "Ashura Ugui",
         specialNotes: "#{fixed}",
         captain: "Boosts ATK of DEX characters by 2.75x if HP is below 30% at the start of the turn",
-        sailor: "Boosts ATK of Slasher Characters by 20"
+        sailor: "Boosts ATK of Slasher characters by 20"
     },
     1175: {
         special: "Changes adjacent orbs into [DEX], deals 1,000 fixed damage to all enemies",
         specialName: "Ashura Ugui",
         specialNotes: "#{fixed}",
         captain: "Boosts ATK of DEX characters by 3x if HP is below 30% at the start of the turn",
-        sailor: "Boosts ATK of Slasher Characters by 20"
+        sailor: "Boosts ATK of Slasher characters by 20"
     },
     1176: {
         special: "Removes poison, recovers 15x character's RCV in HP",
@@ -5925,14 +5925,14 @@ window.details = {
         special: "Empties all slots with [PSY] orbs, deals several times the character's ATK in [PSY] damage to one enemy",
         specialNotes: "The exact multiplier used is chosen based on the number of [PSY] orbs consumed: 1 orb will give a 13x multiplier, 2 orbs 19x, 3 orbs 26x, 4 orbs 65x, 5 orbs 130x, 6 orbs 230x. It's not possible to activate the special without consuming at least one [PSY] orb.",
         specialName: "Brass Knuckle Destruction",
-        sailor: "If HP is above 99% at the start of the turn, boosts ATK of [PSY] Characters by 75"
+        sailor: "If HP is above 99% at the start of the turn, boosts ATK of [PSY] characters by 75"
     },
     1184: {
         captain: "Boosts ATK of [PSY] characters by 2.5x",
         special: "Empties all slots with [PSY] orbs, deals several times the character's ATK in [PSY] damage to one enemy",
         specialNotes: "The exact multiplier used is chosen based on the number of [PSY] orbs consumed: 1 orb will give a 13x multiplier, 2 orbs 19x, 3 orbs 26x, 4 orbs 65x, 5 orbs 130x, 6 orbs 230x. It's not possible to activate the special without consuming at least one [PSY] orb.",
         specialName: "Brass Knuckle Destruction",
-        sailor: "If HP is above 99% at the start of the turn, boosts ATK of [PSY] Characters by 75"
+        sailor: "If HP is above 99% at the start of the turn, boosts ATK of [PSY] characters by 75"
     },
     1185: {
         captain: "Boosts ATK of Slasher and Cerebral characters by 1.75x. Gives chance of duplicating a drop upon completion of the island.",
@@ -6097,27 +6097,27 @@ window.details = {
         special: "Delays all enemies for 3 turns, cuts the current HP of each enemy by 10%",
         specialName: "Heavenly Dragon Star",
         captain: "Boosts ATK of Shooter characters by 2x",
-        sailor: "Boosts RCV of Shooter Characters by 10"
+        sailor: "Boosts RCV of Shooter characters by 10"
     },
     1210: {
         special: "Delays all enemies for 3 turns, cuts the current HP of each enemy by 10%",
         specialName: "Heavenly Dragon Star",
         captain: "Boosts ATK of Shooter characters by 2x and their RCV by 1.5x",
-        sailor: "Boosts RCV of Shooter Characters by 10"
+        sailor: "Boosts RCV of Shooter characters by 10"
     },
     1211: {
         special: "Changes own orb into [STR], amplifies the effect of orbs by 1.5x for 2 turns",
         specialNotes: "#{orb : 1.5x}",
         specialName: "Roar! Zarley Davison",
         captain: "Boosts ATK of STR characters by 2x, deals 2x character's ATK in STR damage to all enemies at the end of each turn",
-        sailor: "Boosts ATK of Shooter Characters by 20"
+        sailor: "Boosts ATK of Shooter characters by 20"
     },
     1212: {
         special: "Changes own orb into [STR], amplifies the effect of orbs by 1.5x for 2 turns",
         specialNotes: "#{orb : 1.5x}",
         specialName: "Roar! Zarley Davison",
         captain: "Boosts ATK of STR characters by 2.25x, deals 2x character's ATK in STR damage to all enemies at the end of each turn",
-        sailor: "Boosts ATK of Shooter Characters by 20"
+        sailor: "Boosts ATK of Shooter characters by 20"
     },
     1213: {
         captain: "Boosts ATK of Slasher characters by 1.5x, the HP of Striker characters by 1.2x, and the RCV of Shooter characters by 1.2x",
@@ -6626,13 +6626,13 @@ window.details = {
     },
     1277: {//Doc Q
         captain: "Reduces RCV of all characters by 99%. Boosts ATK of Slasher and Striker characters by 2.25x if HP is above 99% at the start of the turn",
-        special: "Reduces crew's current HP by 10%. Changes [BLOCK], [TND], and [RCV] orbs on Slasher and Striker Characters into Matching Orbs.",
+        special: "Reduces crew's current HP by 10%. Changes [BLOCK], [TND], and [RCV] orbs on Slasher and Striker characters into Matching Orbs.",
         sailor: "Boosts amount healed from [RCV] orbs by 150 each",
         specialName: "Reaping of Desperate Lives",
     },
     1278: {//Doc Q Evo
         captain: "Reduces RCV of all characters by 99%. Boosts ATK of Slasher and Striker characters by 2.75x if HP is above 99% at the start of the turn",
-        special: "Reduces crew's current HP by 10%. Changes [BLOCK], [TND], and [RCV] orbs on Slasher and Striker Characters into Matching Orbs.",
+        special: "Reduces crew's current HP by 10%. Changes [BLOCK], [TND], and [RCV] orbs on Slasher and Striker characters into Matching Orbs.",
         sailor: "Boosts amount healed from [RCV] orbs by 150 each",
         specialName: "Reaping of Desperate Lives",
     },
@@ -7002,6 +7002,56 @@ window.details = {
         captain: "Boosts ATK of Striker characters by 1.5x and recovers 2x character's RCV in HP at the end of each turn",
         special: "Switches orbs between slots twice. Makes Badly Matching and [BLOCK] orbs not reduce damage for 2 turns",
         specialName: "Tonta Knowledge",
+    },
+        1331: {//Mansherry
+        captain: "Recovers 2x character's RCV in HP at the end of each turn",
+        special: [
+            {
+                "description": "Reduces Bind duration for one character by 4 turns. Recovers 7x character's RCV in HP.",
+                "cooldown": [ 18, 11 ],
+            },
+            {
+                "description": "Reduces Bind duration for one character by 7 turns. Recovers 15x character's RCV in HP.",
+                "cooldown": [ 24, 17 ],
+            },
+        ],
+        specialName: "Mansherry Special",
+    },
+    1332: {//Mansherry
+        captain: "Recovers 3x character's RCV in HP at the end of each turn",
+        special: [
+            {
+                "description": "Reduces Bind duration for one character by 4 turns. Recovers 7x character's RCV in HP.",
+                "cooldown": [ 18, 11 ],
+            },
+            {
+                "description": "Reduces Bind duration for one character by 7 turns. Recovers 15x character's RCV in HP.",
+                "cooldown": [ 24, 17 ],
+            },
+        ],
+        specialName: "Mansherry Special",
+    },
+    1333: {//Kabu
+        captain: "Boosts ATK of [STR] and Powerhouse characters by 1.4x",
+        captainNotes: "The bonus is cumulative. [STR] Powerhouse characters get a 1.96x bonus.",
+        special: "Slightly boosts chances of getting [STR] orbs and boosts own ATK by 1.2x for 2 turns",
+        specialName: "Kabu Special",
+    },
+    1334: {//Bian
+        captain: "Boosts ATK of [DEX] and Free Spirit characters by 1.4x",
+        captainNotes: "The bonus is cumulative. [DEX] Free Spirit characters get a 1.96x bonus.",
+        special: "Poisons all enemies and randomizes all orbs",
+        specialName: "Kabu Special",
+    },
+    1335: {//Wedding Sabo
+        captain: "Reduces cooldown of Free Spirit specials by 3 turns at the start of the fight. Boosts ATK of Free Spirit characters by 2x.",
+        special: "Changes Friend Captain orb into matching. Adds .5x to Chain multiplier for 1 turn",
+        specialName: "Wedding Sabo Special",
+    },
+    1336: {//Wedding Sabo
+        captain: "Reduces cooldown of Free Spirit specials by 3 turns at the start of the fight. Boosts ATK of Free Spirit characters by 2x.",
+        special: "Changes Friend Captain orb into matching. Adds .5x to Chain multiplier for 1 turn",
+        specialName: "Wedding Sabo Special",
     },
 };
 
