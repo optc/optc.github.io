@@ -6202,37 +6202,37 @@ window.details = {
         specialName: "Blood of the Devil Warrior",
     },
     1223: { // Story Bastille
-        captain: "Boosts the ATK of [INT] characters by 2x",
+        captain: "Boosts ATK of [INT] characters by 2x",
         special: "Deals 25x character's ATK in [INT] damage to all enemies",
         specialName: "Shark Knife - Flash",
     },
     1224: { // Story Yamakaji
-        captain: "Boosts the ATK of Slasher characters by 2x",
+        captain: "Boosts ATK of Slasher characters by 2x",
         special: "Reduces damage received by 60% for 1 turn",
         specialName: "Appreciation For The Great Men",
     },
     1225: { // Story Hina
-        captain: "Boosts the ATK and RCV of [INT] characters by 1.5x",
+        captain: "Boosts ATK and RCV of [INT] characters by 1.5x",
         special: "Delays all enemies for 1 turn, and locks own orb for 1 turn",
         specialName: "Binding Iron Tablet",
     },
     1226: { // Story Smoker
-        captain: "Boosts the ATK of Driven characters by 2x",
+        captain: "Boosts ATK of Driven characters by 2x",
         special: "Cuts the current HP of one enemy by 10% and changes own orb into [PSY]",
         specialName: "Seastone Truncheon",
     },
     1227: { //Story Mihawk
-        captain: "Reduces cooldown of Slasher specials by 2 turns at the start of the fight. Boosts the ATK of Slasher characters by 2.25x",
+        captain: "Reduces cooldown of Slasher specials by 2 turns at the start of the fight. Boosts ATK of Slasher characters by 2.25x",
         special: "Deals 100,000 fixed damage to one enemy, and boosts own ATK by 1.75x for 1 turn ",
         specialName: "Black Blade - Slashing Burial Drop",
     },
     1228: { // Story Kizaru
-        captain: "Boosts the ATK of Shooter characters by 2.5x",
+        captain: "Boosts ATK of Shooter characters by 2.5x",
         special: "For Shooter characters, changes [BLOCK] orbs into Matching, and deals large [DEX] damage to all enemies",
         specialName: "The Cave of the Sun Goddess",
     },
     1229: {//Sentomaru
-        captain: "Boosts the ATK of Powerhouse characters by 2x, and his OWN ATK by 2x.",
+        captain: "Boosts ATK of Powerhouse characters by 2x, and his OWN ATK by 2x.",
         special: [
             {
                 "description": "Deals 500 fixed damage to one enemy. Reduces Special Cooldown of your top row by 1 turn",
@@ -6251,7 +6251,7 @@ window.details = {
         specialName: "Leg-Locked Heave-Ho",
     },
     1230: {//Sentomaru
-        captain: "Boosts the ATK of Powerhouse characters by 2.5x, but boost his OWN ATK by 2.75x. Reduces damage received by 10%",
+        captain: "Boosts ATK of Powerhouse characters by 2.5x, but boost his OWN ATK by 2.75x. Reduces damage received by 10%",
         special: [
             {
                 "description": "Deals 500 fixed damage to one enemy. Reduces Special Cooldown of your top row by 1 turn",
@@ -6286,7 +6286,7 @@ window.details = {
         sailor: "Boosts ATK of Striker characters by 50",
     },
     1233: {//Tashigi
-        captain: "Boosts the ATK of Slasher and Cerebral characters by 1.5x, and their RCV by 1.2x",
+        captain: "Boosts ATK of Slasher and Cerebral characters by 1.5x, and their RCV by 1.2x",
         captainNotes: "Attack boost stacks, so a Slasher Cerebral unit has 2.25x ATK",
         special: "Deals 15x character's ATK in [QCK] damage to all enemies. Boosts the Color Affinity of Slasher and Cerebral characters by 1.5x for 2 turns",
         specialNotes: "#{colorAffinity : 1.5}",
@@ -6294,7 +6294,7 @@ window.details = {
         sailor: "Boosts RCV of Slasher characters by 30",
     },
     1234: {//Tashigi
-        captain: "Boosts the ATK of Slasher and Cerebral characters by 1.6x, and their RCV by 1.3x",
+        captain: "Boosts ATK of Slasher and Cerebral characters by 1.6x, and their RCV by 1.3x",
         captainNotes: "Attack boost stacks, so a Slasher Cerebral unit has 2.56x ATK",
         special: "Deals 15x character's ATK in [QCK] damage to all enemies. Boosts the Color Affinity of Slasher and Cerebral characters by 1.5x for 2 turns",
         specialNotes: "#{colorAffinity : 1.5}",

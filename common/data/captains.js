@@ -3146,10 +3146,29 @@ window.captains = {
     1221: {
         atk: function(p) { return p.unit.class.has("Slasher") ? 1.75 : 1; },
         hp: function(p) { return p.unit.class.has("Powerhouse") ? 1.2 : 1; },
-    },
+    }, 
     1222: {
         atk: function(p) { return p.unit.class.has("Slasher") ? 2 : 1; },
         hp: function(p) { return p.unit.class.has("Powerhouse") ? 1.75 : 1; },
+    },
+    1223: {
+        atk: function(p) { return p.unit.type == "INT" ? 2 : 1; }
+    },
+    1224: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? 2 : 1; }
+    },
+    1225: {
+        atk: function(p) { return p.unit.type == "INT" ? 1.5 : 1; },
+        rcv: function(p) { return p.unit.type == "INT" ? 1.5 : 1; },
+    },
+    1226: {
+        atk: function(p) { return p.unit.class.has("Driven") ? 2 : 1; }
+    },
+    1227: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? 2.25 : 1; }
+    },
+    1228: {
+        atk: function(p) { return p.unit.class.has("Shooter") ? 2.5 : 1; }
     },
     1229: {
         atk: function(p) { return p.slot == p.sourceSlot ? 2 : p.unit.class.has("Powerhouse") ? 2 : 1; }  
@@ -3593,5 +3612,25 @@ window.captains = {
     },
     1330: {
         atk: function(p) { return p.unit.class.has("Striker") ? 1.5 : 1; }
-    }
+    },
+    1333: {
+        atk: function(p) { 
+            return p.unit.class.has("Powerhouse") && p.unit.type == "STR" ? 1.96 :
+                p.unit.class.has("Powerhouse") || p.unit.type == "STR" ? 1.4 :
+                1;
+        }
+    },
+    1334: {
+        atk: function(p) { 
+            return p.unit.class.has("Free Spirit") && p.unit.type == "DEX" ? 1.96 :
+                p.unit.class.has("Free Spirit") || p.unit.type == "DEX" ? 1.4 :
+                1;
+        }
+    },
+    1335: {
+        atk: function(p) { return p.unit.class.has("Free Spirit") ? 2 : 1; }
+    },
+    1336: {
+        atk: function(p) { return p.unit.class.has("Free Spirit") ? 2 : 1; }
+    },
 };
