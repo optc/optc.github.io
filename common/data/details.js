@@ -7015,7 +7015,7 @@ window.details = {
                 "cooldown": [ 24, 17 ],
             },
         ],
-        specialName: "Mansherry Special",
+        specialName: "Tears of Healing",
     },
     1332: {//Mansherry
         captain: "Recovers 3x character's RCV in HP at the end of each turn",
@@ -7029,19 +7029,19 @@ window.details = {
                 "cooldown": [ 24, 17 ],
             },
         ],
-        specialName: "Mansherry Special",
+        specialName: "Tears of Healing",
     },
     1333: {//Kabu
         captain: "Boosts ATK of [STR] and Powerhouse characters by 1.4x",
         captainNotes: "The bonus is cumulative. [STR] Powerhouse characters get a 1.96x bonus.",
         special: "Slightly boosts chances of getting [STR] orbs and boosts own ATK by 1.2x for 2 turns",
-        specialName: "Kabu Special",
+        specialName: "Yellow Kabu Squad",
     },
     1334: {//Bian
         captain: "Boosts ATK of [DEX] and Free Spirit characters by 1.4x",
         captainNotes: "The bonus is cumulative. [DEX] Free Spirit characters get a 1.96x bonus.",
         special: "Poisons all enemies and randomizes all orbs",
-        specialName: "Kabu Special",
+        specialName: "Pink Bee Squad",
     },
     1335: {//Wedding Sabo
         captain: "Reduces cooldown of Free Spirit specials by 3 turns at the start of the fight. Boosts ATK of Free Spirit characters by 2x.",
@@ -7052,6 +7052,44 @@ window.details = {
         captain: "Reduces cooldown of Free Spirit specials by 3 turns at the start of the fight. Boosts ATK of Free Spirit characters by 2x.",
         special: "Changes Friend Captain orb into matching. Adds .5x to Chain multiplier for 1 turn",
         specialName: "Wedding Sabo Special",
+    },
+    1337: {//Kanjuro
+        captain: "Boosts ATK of Striker and Free Spirit characters by 2x",
+        special: "Changes [STR], [QCK], [DEX], [PSY] and [INT] orbs into Matching orbs and [RCV], [TND], [EMPTY], [BLOCK] and [BOMB] orbs into Badly Matching orbs for Free Spirit and Striker characters.",
+        specialName: "Brushman's Brush",
+    },
+    1338: {//Kanjuro
+        captain: "Boosts ATK of Striker and Free Spirit characters by 2.25x, reduces damage received by 10%",
+        special: "Changes [STR], [QCK], [DEX], [PSY] and [INT] orbs into Matching orbs and [RCV], [TND], [EMPTY], [BLOCK], [G] and [BOMB] orbs into Badly Matching orbs for Free Spirit and Striker characters.",
+        specialName: "Brushman's Brush",
+    },
+    1339: {//Chopper Jump Point
+        captain: "Boosts ATK of [DEX] characters by 2.25x",
+        special: [
+            {
+                "description": "Reduces duration of Paralysis by 1 turn. Adds .2x to Chain multiplier for 1 turn",
+                "cooldown": [ 18, 8 ],
+            },
+            {
+                "description": "Reduces duration of Paralysis by 2 turn. Adds .3x to Chain multiplier for 1 turn",
+                "cooldown": [ 23, 13 ],
+            },
+            {
+                "description": "Reduces duration of Paralysis by 2 turn. Adds .5x to Chain multiplier for 1 turn",
+                "cooldown": [ 25, 15 ],
+            },
+        ],
+        specialName: "Flight Power Strengthening - Jump Point",
+    },
+    1340: {//Gedatsu
+        captain: "Boosts ATK of [QCK] characters by 1.5x",
+        special: "Delays all enemies for 1 turn. Cuts the current HP of all enemies by 10%",
+        specialName: "Swamp Cloud Burger",
+    },
+    1341: {//Getdatsu
+        captain: "Boosts ATK of [QCK] characters by 1.75x. After scoring 3 Perfects in a row, boosts ATK of [QCK] characters by 2.625x instead.",
+        special: "Delays all enemies for 1 turn. Cuts the current HP of all enemies by 10%",
+        specialName: "Swamp Cloud Burger",
     },
 };
 

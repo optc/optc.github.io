@@ -3633,4 +3633,24 @@ window.captains = {
     1336: {
         atk: function(p) { return p.unit.class.has("Free Spirit") ? 2 : 1; }
     },
+    1337: {
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Free Spirit") ? 2 : 1; }
+    },
+    1338: {
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Free Spirit") ? 2.25 : 1; }
+    },
+    1339: {
+        atk: function(p) { return p.unit.type == "DEX" ? 2.25 : 1; }
+    },
+    1340: {
+        atk: function(p) { return p.unit.type == "QCK" ? 1.5 : 1; }
+    },
+    1341: {
+        //damageSorter: function(d) { return CrunchUtils.classSort(d, 2.625, "QCK"); }, //Boosts work, but the sorter doesn't
+        hitAtk: function(p) {
+            if (!(p.unit.type == "QCK")) return 1;
+            return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? 2.625 : 1.75;
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
+    },
 };
