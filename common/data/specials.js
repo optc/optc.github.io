@@ -1777,4 +1777,7 @@ window.specials = {
     1336: {
         chainAddition: function(p){ return 0.5;}
     },
+    1339: {
+        chainAddition: function(p){ return 0.5;}
+    },
 };

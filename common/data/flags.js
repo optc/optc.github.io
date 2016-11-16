@@ -1050,6 +1050,8 @@ window.flags = {
     1262: { rr: 1, rro: 1, lrr: 1 },
     1263: { rr: 1, rro: 1, lrr: 1 },
     1264: { rr: 1, rro: 1, lrr: 1 },
+    1265: { rr: 1, rro: 1, lrr: 1 },
+    1266: { rr: 1, rro: 1, lrr: 1 },
     1267: { rr: 1, rro: 1 },
     1268: { rr: 1, rro: 1 },
     1269: { rr: 1, rro: 1 },
