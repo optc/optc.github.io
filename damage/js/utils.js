@@ -65,6 +65,36 @@ window.CrunchUtils.classSort = function(array, classMultiplier, classes) {
     // return result
     return result;
 };
+    
+/*window.CrunchUtils.typeSort = function(array, typeMultiplier, types) {
+    var result = [ ];
+    function isUnitAMatch(unit) {
+        if (unit.type == types) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    var temp = array.map(function(x) {
+        var multiplier = x.multipliers.reduce(function(prev,next) { return prev * next[0]; },1);
+        return [ x.base * multiplier * (isUnitAMatch(x.unit.unit) ? typeMultiplier : 1), x ];
+    });
+    temp.sort(function(x,y) { return x[0] - y[0]; });
+    result.push(temp.map(function(x) { return x[1]; }));
+    // class-based
+    var beginning = [ ], end = [ ];
+    array.forEach(function(x) {
+        if (isUnitAMatch(x.unit.unit)) {
+            end.push(x);
+        } else {
+            beginning.push(x);
+        }
+    });
+    result.push(beginning.concat(end));
+    // return result
+    return result;
+};*/
 
 window.CrunchUtils.getOrbMultiplier = function(orb, baseMultiplier, boostedMultiplier) {
     if (orb == 1.0) return baseMultiplier;
