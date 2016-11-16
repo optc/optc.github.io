@@ -1778,6 +1778,18 @@ window.specials = {
         chainAddition: function(p){ return 0.5;}
     },
     1339: {
-        chainAddition: function(p){ return 0.5;}
+        chainAddition: function(p) {
+            if (!window.specials[1339].stage) return 0.2;
+            if (window.specials[1339].stage == 1) return 0.3;
+            if (window.specials[1339].stage == 2) return 0.5;
+        },
+        stage: -1,
+        onActivation: function(p) {
+            window.specials[1339].stage = (window.specials[1339].stage + 1) % 3;
+            p.scope.notify({
+                text: 'Activating stage #' + (window.specials[1339].stage + 1) + '. To move onto the next stage, disable and re-enable this special.',
+                name: '1339warning'
+            });
+        }
     },
 };
