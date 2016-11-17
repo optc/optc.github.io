@@ -1338,6 +1338,6 @@ window.cooldowns = [
     [ 27, 15 ],
     [ 27, 15 ],
     null,//Jump Point Chopper
-    23,
-    23,
+    [ 23, 13 ],
+    [ 23, 13 ],
 ];

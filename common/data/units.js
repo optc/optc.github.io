@@ -1333,13 +1333,13 @@ window.units = [
     [ "Mansherry, Princess of Tontatta Kingdom", "PSY", [ "Striker", "Free Spirit" ], 4, 20, 4, 3, 99, 3000000, 606, 303, 234, 1472, 604, 497, 1],
     [ "Kabu", "STR", [ "Striker", "Powerhouse" ], 3, 15, 6, 2, 70, 1066998, 64, 37, 16, 1604, 964, 106, 1],
     [ "Bian", "DEX", [ "Striker", "Free Spirit" ], 3, 15, 4, 2, 70, 1066998, 38, 28, 28, 888, 789, 288, 1],
-    [ "Debonair Sabo", "INT", [ "Striker", "Free Spirit" ], 4, 13, 6, 2, 50, null, null, null, null, 1106, 574, 171, null],
+    [ "Debonair Sabo", "INT", [ "Striker", "Free Spirit" ], 4, 13, 6, 2, 50, null, 203, 142, 32, 1106, 574, 171, null],
     [ "Debonair Sabo Evolved", "INT", [ "Striker", "Free Spirit" ], 5, 20, 4, 4, 99, 3000000, 1035, 501, 126, 2191, 1281, 307, null],
     [ "Kanjuro", "PSY", [ "Striker", "Free Spirit" ], 4, 25, 6, 4, 70, 1066998, 554, 261, 35, 1275, 707, 183, null],
     [ "Evening Shower Kanjuro", "PSY", [ "Striker", "Free Spirit" ], 5, 40, 4, 5, 99, 4000000, 1209, 645, 133, null, null, null, null],
-    [ "Tony Tony Chopper Jump Point", "DEX", [ "Fighter", "Powerhouse" ], 4, 20, null, null, null, null, null, null, null, null, null, null, null],
-    [ "Gedatsu", "QCK", [ "Driven", "Free Spirit" ], 4, 16, 4, 2, 50, null, 109, 122, 38, 753, 505, 193, null],
-    [ "Gedatsu Evolved", "QCK", [ "Driven", "Free Spirit" ], 5, 26, 4, 3, 99, null, 692, 448, 142, null, null, null, null],
+    [ "Tony Tony Chopper Jump Point", "DEX", [ "Fighter", "Powerhouse" ], 4, 20, 5, 2, 99, null, 162, 91, 29, null, null, null, null],
+    [ "Gedatsu", "QCK", [ "Driven", "Free Spirit" ], 4, 16, 4, 2, 50, 392109, 109, 122, 38, 753, 505, 193, null],
+    [ "Gedatsu Evolved", "QCK", [ "Driven", "Free Spirit" ], 5, 26, 4, 3, 99, null, 692, 448, 142, 1443, 1220, 288, null],
     ];
     
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ]

@@ -7055,12 +7055,12 @@ window.details = {
     },
     1337: {//Kanjuro
         captain: "Boosts ATK of Striker and Free Spirit characters by 2x",
-        special: "Changes [STR], [QCK], [DEX], [PSY] and [INT] orbs into Matching orbs and [RCV], [TND], [EMPTY], [BLOCK] and [BOMB] orbs into Badly Matching orbs for Free Spirit and Striker characters.",
+        special: "Changes [STR], [QCK], [DEX], [PSY] and [INT] orbs into Matching orbs and [RCV], [TND], [EMPTY], [G] and [BOMB] orbs into Badly Matching orbs for Free Spirit and Striker characters.",
         specialName: "Brushman's Brush",
     },
     1338: {//Kanjuro
         captain: "Boosts ATK of Striker and Free Spirit characters by 2.25x, reduces damage received by 10%",
-        special: "Changes [STR], [QCK], [DEX], [PSY] and [INT] orbs into Matching orbs and [RCV], [TND], [EMPTY], [BLOCK], [G] and [BOMB] orbs into Badly Matching orbs for Free Spirit and Striker characters.",
+        special: "Changes [STR], [QCK], [DEX], [PSY] and [INT] orbs into Matching orbs and [RCV], [TND], [EMPTY], [G] and [BOMB] orbs into Badly Matching orbs for Free Spirit and Striker characters.",
         specialName: "Brushman's Brush",
     },
     1339: {//Chopper Jump Point
