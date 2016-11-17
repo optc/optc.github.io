@@ -3628,7 +3628,7 @@ window.captains = {
         }
     },
     1335: {
-        atk: function(p) { return p.unit.class.has("Free Spirit") ? 2 : 1; }
+        atk: function(p) { return p.unit.class.has("Free Spirit") ? 1.5 : 1; }
     },
     1336: {
         atk: function(p) { return p.unit.class.has("Free Spirit") ? 2 : 1; }
@@ -3649,8 +3649,8 @@ window.captains = {
         //damageSorter: function(d) { return CrunchUtils.classSort(d, 2.625, "QCK"); }, //Boosts work, but the sorter doesn't
         hitAtk: function(p) {
             if (!(p.unit.type == "QCK")) return 1;
-            return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? 2.625 : 1.75;
+            return p.modifiers.slice(0, p.chainPosition).subcontains(["Below Good", "Below Good", "Below Good"]) ? 2.625 : 1.75;
         },
-        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
+        hitModifiers: ["Below Good", "Below Good", "Below Good", "Perfect", "Perfect", "Perfect"]
     },
 };

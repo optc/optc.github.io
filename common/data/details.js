@@ -5986,7 +5986,7 @@ window.details = {
         captain: "Boosts ATK of [QCK] characters by 2.25x, makes [DEX] orbs \"beneficial\" to [QCK] characters",
         captainNotes: "\"Beneficial\" orbs grant the same ATK boost as matching orbs.",
         special: "Reduces enemy Barrier timers by 1 turn",
-        specialNotes: "Does not affect DEF Boost or % Damage reduction buffs. Reduces timers for Barriers such as Perfect/Great/Good Barriers and Combo Hit Barriers",
+        specialNotes: "Does not affect DEF Boost or % Damage reduction buffs. Reduces timers for Barriers such as Perfect/Great/Good Barriers, Combo Hit Barriers and Orb Hit Barriers",
         specialName: "Break Bullet",
         sailor: "Boosts ATK of [QCK] characters by 40"
     },
@@ -5994,7 +5994,7 @@ window.details = {
         captain: "Boosts ATK of [QCK] characters by 2.25x, makes [DEX] orbs \"beneficial\" to [QCK] characters",
         captainNotes: "\"Beneficial\" orbs grant the same ATK boost as matching orbs.",
         special: "Reduces enemy Barrier timers by 1 turn",
-        specialNotes: "Does not affect DEF Boost or % Damage reduction buffs. Reduces timers for Barriers such as Perfect/Great/Good Barriers and Combo Hit Barriers",
+        specialNotes: "Does not affect DEF Boost or % Damage reduction buffs. Reduces timers for Barriers such as Perfect/Great/Good Barriers, Combo Hit Barriers and Orb Hit Barriers",
         specialName: "Break Bullet",
         sailor: "Boosts ATK of [QCK] characters by 40"
     },
@@ -7044,12 +7044,12 @@ window.details = {
         specialName: "Pink Bee Squad",
     },
     1335: {//Wedding Sabo
-        captain: "Reduces cooldown of Free Spirit specials by 3 turns at the start of the fight. Boosts ATK of Free Spirit characters by 2x.",
+        captain: "Reduces cooldown of all specials by 2 turns at the start of the fight. Boosts ATK of Free Spirit characters by 1.5x.",
         special: "Changes Friend Captain orb into matching. Adds .5x to Chain multiplier for 1 turn",
         specialName: "Wedding Sabo Special",
     },
     1336: {//Wedding Sabo
-        captain: "Reduces cooldown of Free Spirit specials by 3 turns at the start of the fight. Boosts ATK of Free Spirit characters by 2x.",
+        captain: "Reduces cooldown of all specials by 3 turns at the start of the fight. Boosts ATK of Free Spirit characters by 2x.",
         special: "Changes Friend Captain orb into matching. Adds .5x to Chain multiplier for 1 turn",
         specialName: "Wedding Sabo Special",
     },
@@ -7087,7 +7087,7 @@ window.details = {
         specialName: "Swamp Cloud Burger",
     },
     1341: {//Getdatsu
-        captain: "Boosts ATK of [QCK] characters by 1.75x. After scoring 3 Perfects in a row, boosts ATK of [QCK] characters by 2.625x instead.",
+        captain: "Boosts ATK of [QCK] characters by 1.75x. After scoring 3 hits below Good in a row, boosts ATK of [QCK] characters by 2.625x instead.",
         special: "Delays all enemies for 1 turn. Cuts the current HP of all enemies by 10%",
         specialName: "Swamp Cloud Burger",
     },
