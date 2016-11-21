@@ -838,7 +838,7 @@ window.drops = {
             name: 'Prison Break! Baroque Works',
             thumb: 462,
             global: true,
-            condition: '30: Non-Fighter, Evolver, or Booster class characters are weakend; 15: Striker and Slasher class characters are weakened (Note: Multi-class characters such as Fighter / Powerhouse are not affected)'',
+            condition: '30: Non-Fighter, Evolver, or Booster class characters are weakend; 15: Striker and Slasher class characters are weakened (Note: Multi-class characters such as Fighter / Powerhouse are not affected)',
             challenge: 'Damage dealt in a single Round',
             challengeData: [['???','1x ??? Elder'], ['???','1x ?? Cotton Candy'], ['???','3x Rainbow Gems']],
             "All Difficulties": [ 460, 461, -398, -396, -370, -361, -253, -236, -234 ]
