@@ -838,7 +838,7 @@ window.drops = {
             name: 'Prison Break! Baroque Works',
             thumb: 462,
             global: true,
-            condition: 'Striker, Shooter and Slashers are weakend.',
+            condition: '30: Non-Fighter, Evolver, or Booster class characters are weakend; 15: Striker and Slasher class characters are weakened (Note: Multi-class characters such as Fighter / Powerhouse are not affected)'',
             challenge: 'Damage dealt in a single Round',
             challengeData: [['???','1x ??? Elder'], ['???','1x ?? Cotton Candy'], ['???','3x Rainbow Gems']],
             "All Difficulties": [ 460, 461, -398, -396, -370, -361, -253, -236, -234 ]
@@ -848,7 +848,7 @@ window.drops = {
             name: 'Crocodile: Life on the Inside',
             thumb: 510,
             global: true,
-            condition: '30: Non-Striker, Evolver, or Booster class characters are weakend; 15: Fighter and Shooter class characters are weakened (Note: Multi-class characters such as Fighter / Slasher are not affected)',
+            condition: '30: Non-Striker, Evolver, or Booster class characters are weakend; 15: Fighter and Shooter class characters are weakened (Note: Multi-class characters such as Striker / Slasher are not affected)',
             challenge: 'Total Damage dealt to enemies in one turn',
             challengeData: [['120,000 Damage','1x Blue Elder'],['600,000 Damage','1x HP Cotton Candy, 1x Rainbow Gem'],['2,500,000 Damage','1x CDR Forbidden Tome, 2x Rainbow Gems']],
             "All Difficulties": [ 509, 511, -402, -400, -374, -357, -259, -212, -209 ]

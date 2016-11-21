@@ -5613,7 +5613,7 @@ window.details = {
         specialName: "King Punch"
     },
     1131: {
-        captain: "Boosts ATK of Fighter and Powerhouse characters by 1.5x, and HP of all characters by 2x",
+        captain: "Boosts ATK of Fighter and Powerhouse characters by 1.5x and their HP by 2x",
         special: [
             {
                 "description": "Deals 7x character's ATK in typeless damage to all enemies",
@@ -7007,7 +7007,7 @@ window.details = {
         captain: "Recovers 2x character's RCV in HP at the end of each turn",
         special: [
             {
-                "description": "Reduces Bind duration for one character by 4 turns. Recovers 7x character's RCV in HP.",
+                "description": "Reduces Bind duration for one character by 3 turns. Recovers 7x character's RCV in HP.",
                 "cooldown": [ 18, 11 ],
             },
             {
@@ -7021,7 +7021,7 @@ window.details = {
         captain: "Recovers 3x character's RCV in HP at the end of each turn",
         special: [
             {
-                "description": "Reduces Bind duration for one character by 4 turns. Recovers 7x character's RCV in HP.",
+                "description": "Reduces Bind duration for one character by 3 turns. Recovers 7x character's RCV in HP.",
                 "cooldown": [ 18, 11 ],
             },
             {

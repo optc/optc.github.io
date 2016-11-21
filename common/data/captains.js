@@ -2864,7 +2864,7 @@ window.captains = {
     },
     1131: {
         atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? 1.5 : 1; },
-        hp: function(p) { return 2; }
+        hp: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? 2 : 1; }
     },
     1132: {
         atk: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; },
