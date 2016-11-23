@@ -487,6 +487,7 @@ window.drops = {
             name: "Amazon Lily",
             shortName: "Amazon Lily",
             thumb: 1056,
+            global: true,
             completion: '5x Rainbow Gems',
             "01": [ 919, 301, 300 ],
             "02": [ 1059, 301, 303 ],
@@ -503,6 +504,7 @@ window.drops = {
             name: "Impel Down",
             shortName: "Impel Down",
             thumb: 1159,
+            global: true,
             completion: '5x Rainbow Gems',
             "01": [ 931 ],
             "02": [ 540, 931 ],
@@ -1138,6 +1140,7 @@ window.drops = {
         {
             name: "Robin and Nami's Secret Undercover Investigation",
             thumb: 1112,
+            global: true,
             condition: "Boosts ATK of Cerebral and Free Spirit characters by 2x, other classes get .5x ATK. Boosts HP of Striker and Shooter characters by 2x, other classes get .5x HP. (This STACKS for characters with multiple classes)",
             "All Difficulties": [ 1109, 1111, 1113, -23, -628, -639, -641, -892, -937, -939, -941 ]
         },
@@ -1152,6 +1155,7 @@ window.drops = {
         {
             name: "Welcome To The Gran Tesoro!",
             thumb: 1167,
+            global: true,
             condition: "None",
             "All Difficulties": [ 1166, 1168, 1170, -578, -999, -991, -993, -675, -508, -616, -703 ]
         },

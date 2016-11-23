@@ -6898,7 +6898,7 @@ window.details = {
         captain: "Boosts ATK of [STR] and [PSY] characters by 2.5x",
         special: "Deals 30x character's ATK as fixed [STR] damage to all enemies that bypasses all defensive Buffs. Delays all enemies for 1 turn. Reduces the defense of all enemies by 80% for 1 turn.",
         sailor: "Boosts ATK of all characters by 75",
-        specialName: "Super Large Iron Balll",
+        specialName: "Super Large Iron Ball",
     },
     1319: {//Lady Tsuru
         captain: "Heals for 1x her RCV at the end of the turn each time you hit a Good. Heals for .1x her RCV at the end of the turn each time you hit a Perfect",
