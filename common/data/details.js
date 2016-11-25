@@ -6664,14 +6664,14 @@ window.details = {
     },
     1284: {//Wild Luffy
         captain: "Boosts ATK of Striker characters by 1.5x and their HP by 1.2x",
-        special: "Reduces duration of Bind and Silence by 3 turns. Randomizes own orb. (Including [BLOCK] orb)",
-        sailor: "Reduces duration of Silence against this character by 3 turns",
+        special: "Reduces Bind and Silence duration by 3 turns. Randomizes own orb. (Including [BLOCK] orb)",
+        sailor: "Reduces Silence duration against this character by 3 turns",
         specialName: "Wild Hunt",
     },
     1285: {//Wild Luffy Evolved
         captain: "Boosts ATK of Striker characters by 1.5x and their HP by 1.25x. After scoring 3 Perfects in a row, boosts ATK of Striker characters by 3.375x instead.",
-        special: "Reduces duration of Despair and Silence by 3 turns. Randomizes Non-Matching orbs. (Including [BLOCK] orb)",
-        sailor: "Reduces duration of Silence against this character by 3 turns",
+        special: "Reduces Bind and Silence duration by 3 turns. Randomizes Non-Matching orbs. (Including [BLOCK] orb)",
+        sailor: "Reduces Silence duration against this character by 3 turns",
         specialName: "Wild Hunt",
     },
     1286: {//Kid Baby 5
@@ -7126,7 +7126,7 @@ window.details = {
         specialName: "Humandrills Special",
     },
     1349: {//Haredas
-        captain: "Boosts ATK, HP and RCV of Shooter and Cerebral characters by 1.5x",
+        captain: "Boost ATK of Cerebral characters by 1.5x and their RCV by 1.75x",
         special: "Empty all slots including [BLOCK] orbs, and boost ATK of Cerebral characters by 1.2x for 1 turn",
         specialName: "Haredas Special",
     },
