@@ -7091,5 +7091,62 @@ window.details = {
         special: "Delays all enemies for 1 turn. Cuts the current HP of all enemies by 10%",
         specialName: "Swamp Cloud Burger",
     },
+    1342: {//Dedan
+        captain: "Boosts HP of [PSY] characters by 1.75x",
+        special: "Reduces Silence duration by 2 turns",
+        specialNotes: "Silence will refer to effects that prevent you from activating Special Abilities",
+        specialName: "Dadan Special",
+    },
+    1343: {//Porchemy
+        captain: "Reduces crew's current HP by 50%. Boosts ATK of Driven characters by 2x.",
+        special: "Deals 13x character's Atk in [DEX] damage to one enemy, and boosts ATK against enemies with reduced defense by 1.3x for 1 turn",
+        specialName: "Porchemy Special",
+    },
+    1344: {//Bluejam
+        captain: "Reduces crew's current HP by 50%. Boosts ATK of Driven characters by 2.25x.",
+        special: "Deals large [STR] damage to one enemy, and boosts ATK of Driven characters by 1.3x for 1 turn",
+        specialName: "Porchemy Special",
+    },
+    1345: {//Jimbe
+        captain: "Boosts ATK of Fighter characters by 2.5x",
+        special: "Reduces Despair duration by 5 turns. Reduces Special Cooldown of your top row by 1 turn",
+        specialName: "Jimbe Special",
+    },
+    1346: {//Heracles'n
+        captain: "Boosts ATK, HP and RCV of Shooter and Cerebral characters by 1.5x",
+        special: "Randomizes all orbs, including [BLOCK] orbs, switches orbs between slots 3 times",
+        specialName: "Heracles'n Special",
+    },
+    1347: {//Torino Kingdom Monsters
+        special: "Change own orb into [PSY], and deals 25x character's attack in [PSY] damage to one enemy",
+        specialName: "Torino Kingdom Monsters Special",
+    },
+    1348: {//Humandrills
+        special: "Boosts ATK of all characters by 1.2x for 1 turn and amplifies the effect of orbs by 1.2x for 1 turn",
+        specialName: "Humandrills Special",
+    },
+    1349: {//Haredas
+        captain: "Boosts ATK, HP and RCV of Shooter and Cerebral characters by 1.5x",
+        special: "Empty all slots including [BLOCK] orbs, and boost ATK of Cerebral characters by 1.2x for 1 turn",
+        specialName: "Haredas Special",
+    },
+    1350: {//Longarm Tribe Theives
+        special: "Switches orbs between slots 3 times",
+        specialName: "Longarm Tribe Theives Special",
+    },
+    1351: {//Tequila Wolf Guard
+        special: "Reduces the defense of all by 50% and delays all enemies for 1 turn",
+        specialName: "Tequila Wolf Guard Special",
+    },
+    1352: {//Ivankov
+        captain: "Boosts ATK of Fighter characters by 2x, boosts Atk of Fighter characters by 3.5x after the 5th Perfect",
+        special: "Following the activation of the special, if every unit scores a Perfect hit, reduces damage received by 90% in the following turn",
+        specialName: "Ivankov Special",
+    },
+    1353: {//Rayleigh
+        captain: "Boosts ATK of Cerebral characters by 2.5x",
+        special: "Deals 50,000 Fixed damage to one enemy, Adds 0.5 to Chain multiplier for 1 turn",
+        specialName: "Rayleigh Special",
+    },
 };
 
