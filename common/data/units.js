@@ -1352,6 +1352,23 @@ window.units = [
     [ "Tequila Wolf Guard", "INT", "Shooter", 3, 9, 7, 1, 70, null, 51, 38, 21, null, null, null, null],
     [ "Ivankov", "DEX", [ "Fighter", "Free Spirit" ], 4, 20, 8, 3, 99, null, null, null, null, 2034, 935, 299, null],
     [ "Rayleigh", "QCK", [ "Fighter", "Cerebral" ], 4, 30, 6, 3, 99, null, 388, 298, 97, 2037, 1264, 294, null],
+    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Timeskip Zoro", "DEX", [ "Driven", "Slasher" ], 5, 30, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Timeskip Zoro Evolved", "DEX", [ "Driven", "Slasher" ], 6, 55, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Timeskip Franky", "PSY", [ "Shooter", "Free Spirit" ], 4, 15, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Timeskip Franky Evolved", "PSY", [ "Shooter", "Free Spirit" ], 5, 30, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Timeskip Nami", "INT", [ "Cerebral", "Striker" ], 4, 15, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Timeskip Nami Evolved", "INT", [ "Cerebral", "Striker" ], 5, 30, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Timeskip Sanji", "STR", [ "Fighter", "Powerhouse" ], 4, 15, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Timeskip Sanji Evolved", "STR", [ "Fighter", "Powerhouse" ], 5, 30, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Timeskip Chopper", "QCK", [ "Striker", "Powerhouse" ], 4, 15, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Timeskip Chopper Evolved", "QCK", [ "Striker", "Powerhouse" ], 5, 30, null, null, null, null, null, null, null, null, null, null, null ],
     ];
     
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ]
