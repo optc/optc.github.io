@@ -1340,6 +1340,18 @@ window.units = [
     [ "Tony Tony Chopper Jump Point", "DEX", [ "Fighter", "Powerhouse" ], 4, 20, 5, 2, 99, null, 162, 91, 29, null, null, null, null],
     [ "Gedatsu", "QCK", [ "Driven", "Free Spirit" ], 4, 16, 4, 2, 50, 392109, 109, 122, 38, 753, 505, 193, null],
     [ "Gedatsu Evolved", "QCK", [ "Driven", "Free Spirit" ], 5, 26, 4, 3, 99, null, 692, 448, 142, 1443, 1220, 288, null],
+    [ "Dadan", "PSY", [ "Slasher", "Powerhouse" ], 3, 12, 6, 2, 50, null, null, null, null, 1844, 703, 151, null],
+    [ "Porchemy", "DEX", [ "Fighter", "Driven" ], 3, 13, 6, 1, 50, null, 125, 106, 6, 1734, 891, 34, null],
+    [ "Bluejam", "STR", [ "Shooter", "Driven" ], 3, 13, 5, 1, 70, null, null, null, null, 1809, 1043, 9, null],
+    [ "Jimbe", "STR", [ "Fighter", "Powerhouse" ], 4, 30, 5, 3, 99, null, 510, 261, 73, 2329, 1144, 229, null],
+    [ "Heracles'n", "Dex", [ "Cerebral", "Shooter" ], 4, 20, 4, 3, 99, null, null, null, null, 2095, 899, 303, null],
+    [ "Torino Kingdom Monsters", "PSY", [ "Fighter", "Powerhouse" ], 3, 13, 4, 1, 70, null, 109, 66, 12, null, null, null, null],
+    [ "Humandrills", "STr", [ "Slasher", "Powerhouse" ], 3, 13, 6, 1, 70, null, 133, 112, 0, null, null, null, null],
+    [ "Haredas", "PSY", [ "Cerebral", "Shooter" ], 3, 13, 4, 1, 70, null, null, null, null, null, null, null, null],
+    [ "Longarm Tribe Theives", "QCK", [ "Driven", "Slasher" ], 3, 13, 5, 1, 70, null, null, null, null, null, null, null, null],
+    [ "Tequila Wolf Guard", "INT", "Shooter", 3, 9, 7, 1, 70, null, 51, 38, 21, null, null, null, null],
+    [ "Ivankov", "DEX", [ "Fighter", "Free Spirit" ], 4, 20, 8, 3, 99, null, null, null, null, 2034, 935, 299, null],
+    [ "Rayleigh", "QCK", [ "Fighter", "Cerebral" ], 4, 30, 6, 3, 99, null, 388, 298, 97, 2037, 1264, 294, null],
     ];
     
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ]

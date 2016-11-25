@@ -565,6 +565,27 @@ window.drops = {
             "15": [ 1283 ],
         },
         
+        {
+            name: "3D2Y - Timeskip Training",
+            shortName: "3D2Y",
+            thumb: 1353,
+            completion: '5x Rainbow Gems',
+            "01": [ 1342 ],
+            "02": [ 1343 ],
+            "03": [  ],
+            "04": [ 1344 ],
+            "05": [ 1345 ],
+            "06": [ 1346 ],
+            "07": [ 1347 ],
+            "08": [ 1348 ],
+            "09": [ 1349 ],
+            "10": [  ],
+            "11": [ 1350 ],
+            "12": [ 1351 ],
+            "13": [ 1352 ],
+            "14": [ 1353 ],
+        },
+        
     ],
 
     'Weekly Island': [
@@ -624,10 +645,17 @@ window.drops = {
         },
 
         {
-            name: 'Scissor Cavern, Intern',
+            name: 'Scissor Cavern, Inner Cave',
             day: 4,
             thumb: 304,
             ' ': [ 89, 90, 91, 92, 93, 95, 96, 97, 98, 99, 300, 301, 302, 303, 304 ]
+        },
+        
+        {
+            name: 'Scissor Cavern, Deepest Parts',
+            day: 4,
+            thumb: 1180,
+            ' ': [ 89, 90, 91, 92, 93, 95, 96, 97, 98, 99, 300, 301, 302, 303, 304, 1180 ]
         },
 
         {
@@ -1216,6 +1244,12 @@ window.drops = {
             "All Difficulties": [ 1331, 1333, 1334, -720, -1186, -1190, -756, -1188, -1151, -1153, -738 ]
         },
         
+        {
+            name: "Big Mom Pirates!",
+            thumb: null,
+            "All Difficulties": [ -1123, -1184, -1182, -1152, -1157, -8, -840, -736, -610 ]
+        },
+        
     ],
 
             
@@ -1389,6 +1423,7 @@ window.drops = {
         {
             name: 'Clash!! Tesoro',
             thumb: 1163, 
+            global: true,
             Master: [ 1162, 1164 ],
             Ultimate: [ 1162, 1164, 1180 ]
         },
