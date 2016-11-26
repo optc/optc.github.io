@@ -7091,7 +7091,7 @@ window.details = {
         special: "Delays all enemies for 1 turn. Cuts the current HP of all enemies by 10%",
         specialName: "Swamp Cloud Burger",
     },
-    1342: {//Dedan
+    1342: {//Dadan
         captain: "Boosts HP of [PSY] characters by 1.75x",
         special: "Reduces Silence duration by 2 turns",
         specialNotes: "Silence will refer to effects that prevent you from activating Special Abilities",
@@ -7105,7 +7105,7 @@ window.details = {
     1344: {//Bluejam
         captain: "Reduces crew's current HP by 50%. Boosts ATK of Driven characters by 2.25x.",
         special: "Deals large [STR] damage to one enemy, and boosts ATK of Driven characters by 1.3x for 1 turn",
-        specialName: "Porchemy Special",
+        specialName: "Bluejam Special",
     },
     1345: {//Jimbe
         captain: "Boosts ATK of Fighter characters by 2.5x",

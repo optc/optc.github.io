@@ -3657,11 +3657,11 @@ window.captains = {
         hp: function(p) { return p.unit.type == "PSY" ? 1.75 : 1; }
     },
     1343: {
-        hp: function(p) { return p.unit.class.has("Driven") ? 0.5 : 1; },
+        hp: function(p) { return 0.5; },
         atk: function(p) { return p.unit.class.has("Driven") ? 2 : 1; },
     },
     1344: {
-        hp: function(p) { return p.unit.class.has("Driven") ? 0.5 : 1; },
+        hp: function(p) { return 0.5; },
         atk: function(p) { return p.unit.class.has("Driven") ? 2.25 : 1; },
     },
     1345: {

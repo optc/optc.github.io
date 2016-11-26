@@ -1772,10 +1772,10 @@ window.specials = {
         affinity: function(p){ return p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? 1.25 : 1; }
     },
     1335: {
-        chainAddition: function(p){ return 0.5;}
+        chainAddition: function(p){ return 0.5; }
     },
     1336: {
-        chainAddition: function(p){ return 0.5;}
+        chainAddition: function(p){ return 0.5; }
     },
     1339: {
         chainAddition: function(p) {
@@ -1791,5 +1791,28 @@ window.specials = {
                 name: '1339warning'
             });
         }
+    },
+    1343: {
+        atk: function(p) { return p.defenseDown ? 1.3 : 1; },
+        type: "condition"
+    },
+    1344: {
+        atk: function(p) { return p.unit.class.has("Driven") ? 1.3 : 1; },
+        type: "class"
+    },
+    1348: {
+        atk: function(p) { return 1.2; },
+        type: "class",
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, 1, 1.2); },
+    },
+    1349: {
+        atk: function(p) { return p.unit.class.has("Cerebral") ? 1.2 : 1; },
+        type: "class"
+    },
+    1351: {
+        def: function(p) { return 0.5; }
+    },
+    1353: {
+        chainAddition: function(p){ return 0.5; }
     },
 };
