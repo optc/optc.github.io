@@ -2174,14 +2174,14 @@ window.details = {
         specialNotes: "#{specialProportional : lower : 100 * ( 1 - (remaining HP) / (total HP) )}",
         specialName: "Diable Jambe - Venaison Shot",
         captain: "Reduces damage received by 80% if HP is above 99% at the start of the turn",
-        sailor: "Reduces Paralysiss by 3 turns for self"
+        sailor: "Reduces Paralysis by 3 turns for self"
     },
     522: {
         special: "Deals several times the character's ATK in INT damage to all enemies",
         specialNotes: "#{specialProportional : lower : 100 * ( 1 - (remaining HP) / (total HP) )}",
         specialName: "Diable Jambe - Venaison Shot",
         captain: "Reduces damage received by 80% if HP is above 99% at the start of the turn",
-        sailor: "Reduces Paralysiss by 3 turns for self"
+        sailor: "Reduces Paralysis by 3 turns for self"
     },
     523: {
         special: "Randomizes all orbs, protects from defeat as long as HP is above 50% for 1 turn",
@@ -5512,14 +5512,14 @@ window.details = {
         specialNotes: "#{specialProportional : lower : 100 * ( 1 - (remaining HP) / (total HP) )}",
         specialName: "Diable Jambe: Concassé",
         captain: "Reduces damage received by 80% if HP is above 99% at the start of the turn",
-        sailor: "Reduces Paralysiss by 3 turns for self"
+        sailor: "Reduces Paralysis by 3 turns for self"
     },
     1117: {
         special: "Deals several times the character's ATK in INT damage to all enemies",
         specialNotes: "#{specialProportional : lower : 100 * ( 1 - (remaining HP) / (total HP) )}",
         specialName: "Diable Jambe: Concassé",
         captain: "Reduces damage received by 80% if HP is above 99% at the start of the turn",
-        sailor: "Reduces Paralysiss by 3 turns for self"
+        sailor: "Reduces Paralysis by 3 turns for self"
     },
     1118: {
         special: "Randomizes all orbs, protects from defeat as long as HP is above 50% for 1 turn",
@@ -5609,7 +5609,7 @@ window.details = {
                 "cooldown": [ 26, 20 ]
             },
         ],
-        specialNotes: "For each turn AFTER Elizabello's special reaches stage 3, damage is boosted by 23.75x per turn for an additional 20 turns, for a max damage of 500xx character's ATK to all enemies.",
+        specialNotes: "For each turn AFTER Elizabello's special reaches stage 3, damage is boosted by 23.75x per turn for an additional 20 turns, for a max damage of 500x character's ATK to all enemies.",
         specialName: "King Punch"
     },
     1131: {
@@ -7147,6 +7147,86 @@ window.details = {
         captain: "Boosts ATK of Cerebral characters by 2.5x",
         special: "Deals 50,000 Fixed damage to one enemy, Adds 0.5 to Chain multiplier for 1 turn",
         specialName: "Rayleigh Special",
+    },
+    1365: {//Timeskip Nami
+        captain: "Not released",
+        special: [
+            {
+                "description": "Reduces duration of Paralysis and Silence by variable turns. Delays all enemies for variable turns",
+                "cooldown": null,
+            },
+            {
+                "description": "Reduces duration of Paralysis and Silence by variable turns. Delays all enemies for variable turns",
+                "cooldown": null,
+            },
+            {
+                "description": "Reduces duration of Paralysis and Silence by variable turns. Delays all enemies for variable turns",
+                "cooldown": null,
+            },
+        ],
+        specialNotes: "Silence will refer to effects that prevent you from activating Special Abilities. Nami's special is a multi stage special, for now it will show 3 stages, but we don't know how many stages her special has.",
+        sailor: "Completely resists Silence on this character",
+        specialName: "Nami Special",
+    },
+    1366: {//Timeskip Nami
+        captain: "Not released",
+        special: [
+            {
+                "description": "Reduces duration of Paralysis and Silence by variable turns. Delays all enemies for variable turns",
+                "cooldown": null,
+            },
+            {
+                "description": "Reduces duration of Paralysis and Silence by variable turns. Delays all enemies for variable turns",
+                "cooldown": null,
+            },
+            {
+                "description": "Reduces duration of Paralysis and Silence by variable turns. Delays all enemies for variable turns",
+                "cooldown": null,
+            },
+        ],
+        specialNotes: "Silence will refer to effects that prevent you from activating Special Abilities. Nami's special is a multi stage special, for now it will show 3 stages, but we don't know how many stages her special has.",
+        sailor: "Completely resists Silence on this character",
+        specialName: "Nami Special",
+    },
+    1367: {//Timeskip Sanji
+        captain: "Not released",
+        special: [
+            {
+                "description": "Reduce damage recieved by variable amount and boosts orbs by variable amount for 1 turn.",
+                "cooldown": null,
+            },
+            {
+                "description": "Reduce damage recieved by variable amount and boosts orbs by variable amount for 1 turn.",
+                "cooldown": null,
+            },
+            {
+                "description": "Reduce damage recieved by variable amount and boosts orbs by variable amount for 1 turn.",
+                "cooldown": null,
+            },
+        ],
+        specialNotes: "If his special works like Elizabello: For every turn after Sanji's special has reached MAX stage, it will increase the orb boost and damage recieved to a variable amount at max after a variable amount of turns. Sanji's special is a multi stage special, for now it will show 3 stages, but we don't know how many stages his special has.",
+        sailor: "Boosts ATK of himself by a variable amount.",
+        specialName: "Sanji Special",
+    },
+    1368: {//Timeskip Sanji
+        captain: "Not released",
+        special: [
+            {
+                "description": "Reduce damage recieved by variable amount and boosts orbs by variable amount for 1 turn.",
+                "cooldown": null,
+            },
+            {
+                "description": "Reduce damage recieved by variable amount and boosts orbs by variable amount for 1 turn.",
+                "cooldown": null,
+            },
+            {
+                "description": "Reduce damage recieved by variable amount and boosts orbs by variable amount for 1 turn.",
+                "cooldown": null,
+            },
+        ],
+        specialNotes: "If his special works like Elizabello: For every turn after Sanji's special has reached MAX stage, it will increase the orb boost and damage recieved to a variable amount at max after a variable amount of turns. Sanji's special is a multi stage special, for now it will show 3 stages, but we don't know how many stages his special has.",
+        sailor: "Boosts ATK of himself by a variable amount.",
+        specialName: "Sanji Special",
     },
 };
 
