@@ -5585,12 +5585,12 @@ window.details = {
     },
     1128: {
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of all characters by 1.75x",
-        special: "Reduces Paralysis and Despair by 5 turns. Cuts the current HP of one enemy by 10%",
+        special: "Reduces Paralysis and Despair duration by 5 turns. Cuts the current HP of one enemy by 10%",
         specialName: "Tactician's Savage Cut"
     },
     1129: {
         captain: "Reduces cooldown of all specials by 2 turn at the start of the fight, boosts ATK of all characters by 2x",
-        special: "Reduces Paralysis and Despair by 5 turns. Cuts the current HP of one enemy by 10%",
+        special: "Reduces Paralysis and Despair duration by 5 turns. Cuts the current HP of one enemy by 10%",
         specialName: "Tactician's Savage Cut"
     },
     1130: {
@@ -7227,6 +7227,16 @@ window.details = {
         specialNotes: "If his special works like Elizabello: For every turn after Sanji's special has reached MAX stage, it will increase the orb boost and damage recieved to a variable amount at max after a variable amount of turns. Sanji's special is a multi stage special, for now it will show 3 stages, but we don't know how many stages his special has.",
         sailor: "Boosts ATK of himself by a variable amount.",
         specialName: "Sanji Special",
+    },
+    1369: {//Timeskip Chopper
+        captain: "Not released",
+        special: "Changes certain orbs on [QCK] characters into [QCK], cuts the current HP of one enemy by x%",
+        sailor: "Makes [STR] orbs \"beneficial\" for this unit",
+    },
+    1370: {//Timeskip Chopper
+        captain: "Not released",
+        special: "Changes certain orbs on [QCK] characters into [QCK], cuts the current HP of one enemy by x%",
+        sailor: "Makes [STR] orbs \"beneficial\" for this unit",
     },
 };
 

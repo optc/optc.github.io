@@ -386,7 +386,7 @@ window.effects = {
         description: 'Boosts the Orbs and ATK of all characters by 1.1x',
         thumb: 1162,
         id: 40,
-        orb: function(p) { return p.orb == 2.0 ? 1.1 : (p.orb == 0.5 ? 5/6 : 1); },
+        orb: function(p) { return p.orb == 2.0 ? 1.1 : (p.orb == 0.5 ? 10/11 : 1); },
         atk: function(p) { return 1.1; }
     },
     
@@ -394,7 +394,7 @@ window.effects = {
         description: 'Boosts the Orbs and ATK of all characters by 1.2x',
         thumb: 1163,
         id: 41,
-        orb: function(p) { return p.orb == 2.0 ? 1.2 : (p.orb == 0.5 ? 5/7 : 1); },
+        orb: function(p) { return p.orb == 2.0 ? 1.2 : (p.orb == 0.5 ? 5/6 : 1); },
         atk: function(p) { return 1.2; }
     },
 
