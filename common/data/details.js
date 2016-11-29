@@ -7171,7 +7171,7 @@ window.details = {
         specialName: "Tamago Special",
     },
     1358: {//Secret Rayleigh
-        captain: "Boosts chain multiplier by 3x, recovers 1.5x character's RCV in HP at the end of each turn",
+        captain: "Boosts chain multiplier by 2x, recovers 1.5x character's RCV in HP at the end of each turn",
         special: "Recovers 15x character's RCV in HP, amplifies the effect of orbs by 1.5x for 1 turn",
         specialName: "Rayleigh Special",
         specialNotes: "#{orb : 1.5x}",
