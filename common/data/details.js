@@ -7148,6 +7148,18 @@ window.details = {
         special: "Deals 50,000 Fixed damage to one enemy, Adds 0.5 to Chain multiplier for 1 turn",
         specialName: "Rayleigh Special",
     },
+    1361: {//6* Zoro
+        captain: "If you have 5 or more Slashers on your crew, boosts ATK of Slasher characters by 2.5x and their HP by 1.5x. If you defeated an enemy last turn, boosts ATK of Slashers by 3x instead",
+        captainNotes: "You only need to kill at least 1 character in the last turn to gain his 3x ATK boost. If a character dies and revives, you will retain the 3x ATK boost",
+        special: "Deals 60x character's ATK as typeless damage to all enemies. If Zoro is your Captain, boosts ATK of Slashers by 2x for 1 turn. If he is a Sailor, boosts ATK by 1.75x for 1 turn",
+        specialName: "Three Blade Style Secret Skill: Crossroad of Six Paths",
+    },
+    1362: {//6* Zoro
+        captain: "If you have 5 or more Slashers on your crew, boosts ATK of Slasher characters by 2.5x and their HP by 1.5x. If you defeated an enemy last turn, boosts ATK of Slashers by 3x instead",
+        captainNotes: "You only need to kill at least 1 character in the last turn to gain his 3x ATK boost. If a character dies and revives, you will retain the 3x ATK boost",
+        special: "Deals 60x character's ATK as typeless damage to all enemies. If Zoro is your Captain, boosts ATK of Slashers by 2x for 1 turn. If he is a Sailor, boosts ATK by 1.75x for 1 turn",
+        specialName: "Three Blade Style Secret Skill: Crossroad of Six Paths",
+    },
     1365: {//Timeskip Nami
         captain: "Not released",
         special: [

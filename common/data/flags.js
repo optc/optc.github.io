@@ -853,6 +853,8 @@ window.flags = {
     857: { rr: 1, rro: 1, lrr: 1, global: 1 },
     858: { rr: 1, rro: 1, lrr: 1, global: 1 },
     863: { special: 1 },
+    864: { global: 1 },
+    865: { global: 1 },
     869: { rr: 1, rro: 1, global: 1 },
     870: { rr: 1, rro: 1, global: 1 },
     871: { rr: 1, rro: 1, global: 1 },

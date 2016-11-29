@@ -3684,7 +3684,17 @@ window.captains = {
         },
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
     },
-    1353:{
+    1353: {
         atk: function(p) { return p.unit.class.has("Cerebral") ? 2.5 : 1; },
-    }
+    },
+    1361: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? p.classCount.Slasher>=5 ? Math.max(2.5, 2.5 + .5 * Math.min(p.turnCounter,1)) : 1 : 1; },
+        hp: function(p) { return p.unit.class.has("Slasher") ?
+            p.classCount.Slasher>=5 ? 1.5 : 1 : 1; },
+    },
+    1362: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? p.classCount.Slasher>=5 ? Math.max(2.5, 2.5 + .5 * Math.min(p.turnCounter,1)) : 1 : 1; },
+        hp: function(p) { return p.unit.class.has("Slasher") ?
+            p.classCount.Slasher>=5 ? 1.5 : 1 : 1; },
+    },
 };

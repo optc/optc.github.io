@@ -1377,6 +1377,7 @@ window.drops = {
         {
             name: 'Clash!! Pirate Empress Hancock',
             thumb: 865,
+            global: true,
             Ultimate: [ 864 ],
             Master: [ 864 ],
             Expert: [ 864 ]
@@ -1421,7 +1422,7 @@ window.drops = {
         },
         
         {
-            name: 'Clash!! Tesoro',
+            name: 'Clash!! Gild Tesoro',
             thumb: 1163, 
             global: true,
             Master: [ 1162, 1164 ],

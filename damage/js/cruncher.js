@@ -710,7 +710,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                     enabledSpecials.push(jQuery.extend({ sourceSlot: n },specials[id]));
             }
             // activate turn counter if necessary
-            if (n < 2 && (id == 794 || id == 795 || id == 1191 || id == 1192 || id == 1219 || id == 1220))
+            if (n < 2 && (id == 794 || id == 795 || id == 1191 || id == 1192 || id == 1219 || id == 1220 || id == 1361 || id == 1362))
                 $scope.tdata.turnCounter.enabled = true;
         });
         if (conflictWarning) 
