@@ -1206,13 +1206,13 @@ window.details = {
         special: "Randomly changes all orbs into either [DEX] or [STR] orbs, deals random DEX damage to all enemies",
         specialName: "Beautiful Secretary's Job",
         specialNotes: "#{random : 1 : 15,000}",
-        captain: "Recovers 500 HP at end of turn, reduces damage received by 10%"
+        captain: "Recovers 500 HP at end of each turn, reduces damage received by 10%"
     },
     318: {
         special: "Randomly changes all orbs into either [DEX] or [STR] orbs, deals random DEX damage to all enemies",
         specialName: "Beautiful Secretary's Job",
         specialNotes: "#{random : 1 : 15,000}",
-        captain: "Recovers 1,000 HP at end of turn, reduces damage received by 15%"
+        captain: "Recovers 1,000 HP at end of each turn, reduces damage received by 15%"
     },
     319: {
         special: "Locks all orbs for 1 turn",
@@ -4415,13 +4415,13 @@ window.details = {
     936: {
         captain: "Boosts Chain Multiplier by 3x",
         specialName: "Gum-Gum Giant Jet Shell",
-        special: "Deals 20x ATK as [QCK] damage, and makes Perfects easier to hit",
+        special: "Deals 20x ATK as [QCK] damage, and makes Perfects easier to hit for 3 turns",
         specialNotes: "Increases timing window to hit a Perfect. (Animation remains the same)"
     },
     937: {
         captain: "Boosts Chain Multiplier by 3.5x and boosts HP by 1.25x",
         specialName: "Gum-Gum Giant Jet Shell",
-        special: "Deals 20x ATK as [QCK] damage, and makes Perfects easier to hit",
+        special: "Deals 20x ATK as [QCK] damage, and makes Perfects easier to hit for 3 turns",
         specialNotes: "Increases timing window to hit a Perfect. (Animation remains the same)"
     },
     938: {
@@ -7095,58 +7095,97 @@ window.details = {
         captain: "Boosts HP of [PSY] characters by 1.75x",
         special: "Reduces Silence duration by 2 turns",
         specialNotes: "Silence will refer to effects that prevent you from activating Special Abilities",
-        specialName: "Dadan Special",
+        specialName: "Rogue Threat",
     },
     1343: {//Porchemy
         captain: "Reduces crew's current HP by 50%. Boosts ATK of Driven characters by 2x.",
         special: "Deals 13x character's Atk in [DEX] damage to one enemy, and boosts ATK against enemies with reduced defense by 1.3x for 1 turn",
-        specialName: "Porchemy Special",
+        specialName: "Spiked Glove of Punishment",
     },
     1344: {//Bluejam
         captain: "Reduces crew's current HP by 50%. Boosts ATK of Driven characters by 2.25x.",
         special: "Deals large [STR] damage to one enemy, and boosts ATK of Driven characters by 1.3x for 1 turn",
-        specialName: "Bluejam Special",
+        specialName: "Bullet Purge",
     },
     1345: {//Jimbe
         captain: "Boosts ATK of Fighter characters by 2.5x",
         special: "Reduces Despair duration by 5 turns. Reduces Special Cooldown of your top row by 1 turn",
-        specialName: "Jimbe Special",
+        specialName: "Gathering Strength for a Counter Attack",
     },
     1346: {//Heracles'n
         captain: "Boosts ATK, HP and RCV of Shooter and Cerebral characters by 1.5x",
         special: "Randomizes all orbs, including [BLOCK] orbs, switches orbs between slots 3 times",
-        specialName: "Heracles'n Special",
+        specialName: "Survival Techniques of the Hungry Baron",
     },
     1347: {//Torino Kingdom Monsters
         special: "Change own orb into [PSY], and deals 25x character's attack in [PSY] damage to one enemy",
-        specialName: "Torino Kingdom Monsters Special",
+        specialName: "Tsubami Behemoth",
     },
     1348: {//Humandrills
         special: "Boosts ATK of all characters by 1.2x for 1 turn and amplifies the effect of orbs by 1.2x for 1 turn",
-        specialName: "Humandrills Special",
+        specialName: "Imitation Tactics",
     },
     1349: {//Haredas
         captain: "Boost ATK of Cerebral characters by 1.5x and their RCV by 1.75x",
         special: "Empty all slots including [BLOCK] orbs, and boost ATK of Cerebral characters by 1.2x for 1 turn",
-        specialName: "Haredas Special",
+        specialName: "Gust 'Wind Knot'",
     },
     1350: {//Longarm Tribe Theives
         special: "Switches orbs between slots 3 times",
-        specialName: "Longarm Tribe Theives Special",
+        specialName: "Longarm Tribe of Tehna Gehna",
     },
     1351: {//Tequila Wolf Guard
         special: "Reduces the defense of all by 50% and delays all enemies for 1 turn",
-        specialName: "Tequila Wolf Guard Special",
+        specialName: "Covering Fire",
     },
     1352: {//Ivankov
         captain: "Boosts ATK of Fighter characters by 2x, boosts Atk of Fighter characters by 3.5x after the 5th Perfect",
         special: "Following the activation of the special, if every unit scores a Perfect hit, reduces damage received by 90% in the following turn",
-        specialName: "Ivankov Special",
+        specialName: "Rolling Beauty",
     },
     1353: {//Rayleigh
         captain: "Boosts ATK of Cerebral characters by 2.5x",
-        special: "Deals 50,000 Fixed damage to one enemy, Adds 0.5 to Chain multiplier for 1 turn",
+        special: "Deals 50,000 Fixed damage to one enemy, adds 0.5 to Chain multiplier for 1 turn",
+        specialName: "Guidence to Control Haki",
+    },
+    1354: {//Pekoms
+        captain: "Boosts ATK of Powerhouse characters by 1.5x",
+        special: "Changes [RCV] and [EMPTY] orbs on Fighter characters into Matching orbs. Makes Perfects easier to hit for 1 turn.",
+        specialName: "Pekoms Special",
+        specialNotes: "Increases timing window to hit a Perfect. (Animation remains the same)"
+    },
+    1355: {//Pekoms
+        captain: "Boosts ATK, HP and RCV of Powerhouse characters by 1.5x",
+        special: "Changes [RCV] and [EMPTY] orbs on Fighter characters into Matching orbs. Makes Perfects easier to hit for 1 turn.",
+        specialName: "Pekoms Special",
+        specialNotes: "Increases timing window to hit a Perfect. (Animation remains the same)"
+    },
+    1356: {//Tamago
+        captain: "Boosts ATK of Cerebral characters by 1.5x and the HP of Striker characters by 1.5x",
+        special: "Boosts RCV of all characters by 1.75x and delays all enemies by 1 turn.",
+        specialName: "Tamago Special",
+    },
+    1357: {//Tamago
+        captain: "Boosts ATK of Cerebral characters by 1.75x and the HP of Striker characters by 1.75x",
+        special: "Boosts RCV of all characters by 1.75x and delays all enemies by 1 turn.",
+        specialName: "Tamago Special",
+    },
+    1358: {//Secret Rayleigh
+        captain: "Boosts chain multiplier by 3x, recovers 1.5x character's RCV in HP at the end of each turn",
+        special: "Recovers 15x character's RCV in HP, amplifies the effect of orbs by 1.5x for 1 turn",
         specialName: "Rayleigh Special",
+        specialNotes: "#{orb : 1.5x}",
+    },
+    1359: {//Secret Rayleigh
+        captain: "Boosts chain multiplier by 3x, recovers 1.5x character's RCV in HP at the end of each turn",
+        special: "Recovers 15x character's RCV in HP, amplifies the effect of orbs by 1.5x for 1 turn",
+        specialName: "Rayleigh Special",
+        specialNotes: "#{orb : 1.5x}",
+    },
+    1360: {//Winter Luffy
+        captain: "Boosts ATK characters with cost 30 or less by 2x and their HP by 1.2x",
+        special: "Changes own orb into [QCK], deals 15x character's ATK in [QCK] damage to one enemy",
+        specialName: "Winter Luffy Special",
     },
     1361: {//6* Zoro
         captain: "If you have 5 or more Slashers on your crew, boosts ATK of Slasher characters by 2.5x and their HP by 1.5x. If you defeated an enemy last turn, boosts ATK of Slashers by 3x instead",
@@ -7160,8 +7199,20 @@ window.details = {
         special: "Deals 60x character's ATK as typeless damage to all enemies. If Zoro is your Captain, boosts ATK of Slashers by 2x for 1 turn. If he is a Sailor, boosts ATK by 1.75x for 1 turn",
         specialName: "Three Blade Style Secret Skill: Crossroad of Six Paths",
     },
-    1365: {//Timeskip Nami
+    1363: {//Timeskip Franky
+        captain: "Boosts ATK of [PSY] chatacters by 2x, reduces damage taken by 10%",
+        special: "Deals random [PSY] damage to all enemies, amplifies the effect of orbs for [PSY] characters by 2x for 1 turn",
+        specialNotes: "#{orb : 2x}",
+        sailor: "Boosts ATK of [PSY] characters by 100",
+    },
+    1364: {//Timeskip Franky
         captain: "Not released",
+        special: "Deals random [PSY] damage to all enemies, amplifies the effect of orbs for [PSY] characters by 2x for 1 turn",
+        specialNotes: "#{orb : 2x}",
+        sailor: "Boosts ATK of [PSY] characters by 100",
+    },
+    1365: {//Timeskip Nami
+        captain: "Boosts ATK and RCV of Cerebral characters by 1.5x",
         special: [
             {
                 "description": "Reduces duration of Paralysis and Silence by variable turns. Delays all enemies for variable turns",
@@ -7172,7 +7223,7 @@ window.details = {
                 "cooldown": null,
             },
             {
-                "description": "Reduces duration of Paralysis and Silence by variable turns. Delays all enemies for variable turns",
+                "description": "Reduces duration of Paralysis and Silence by 5 turns. Delays all enemies for 2 turns",
                 "cooldown": null,
             },
         ],
@@ -7192,7 +7243,7 @@ window.details = {
                 "cooldown": null,
             },
             {
-                "description": "Reduces duration of Paralysis and Silence by variable turns. Delays all enemies for variable turns",
+                "description": "Reduces duration of Paralysis and Silence by 5 turns. Delays all enemies for 2 turns",
                 "cooldown": null,
             },
         ],
@@ -7201,7 +7252,7 @@ window.details = {
         specialName: "Nami Special",
     },
     1367: {//Timeskip Sanji
-        captain: "Not released",
+        captain: "Boosts ATK of [STR] characters by 2x",
         special: [
             {
                 "description": "Reduce damage recieved by variable amount and boosts orbs by variable amount for 1 turn.",
@@ -7212,12 +7263,12 @@ window.details = {
                 "cooldown": null,
             },
             {
-                "description": "Reduce damage recieved by variable amount and boosts orbs by variable amount for 1 turn.",
+                "description": "Reduce damage recieved by 70% and boosts orbs by 1.75x for 1 turn.",
                 "cooldown": null,
             },
         ],
         specialNotes: "If his special works like Elizabello: For every turn after Sanji's special has reached MAX stage, it will increase the orb boost and damage recieved to a variable amount at max after a variable amount of turns. Sanji's special is a multi stage special, for now it will show 3 stages, but we don't know how many stages his special has.",
-        sailor: "Boosts ATK of himself by a variable amount.",
+        sailor: "Boosts ATK of himself by 50",
         specialName: "Sanji Special",
     },
     1368: {//Timeskip Sanji
@@ -7232,23 +7283,39 @@ window.details = {
                 "cooldown": null,
             },
             {
-                "description": "Reduce damage recieved by variable amount and boosts orbs by variable amount for 1 turn.",
+                "description": "Reduce damage recieved by 70% and boosts orbs by 1.75x for 1 turn.",
                 "cooldown": null,
             },
         ],
         specialNotes: "If his special works like Elizabello: For every turn after Sanji's special has reached MAX stage, it will increase the orb boost and damage recieved to a variable amount at max after a variable amount of turns. Sanji's special is a multi stage special, for now it will show 3 stages, but we don't know how many stages his special has.",
-        sailor: "Boosts ATK of himself by a variable amount.",
+        sailor: "Boosts ATK of himself by 50",
         specialName: "Sanji Special",
     },
     1369: {//Timeskip Chopper
-        captain: "Not released",
-        special: "Changes certain orbs on [QCK] characters into [QCK], cuts the current HP of one enemy by x%",
+        captain: "Boosts ATK of [QCK] characters by 1.5x and their HP and RCV by variable amount",
+        special: "Changes [DEX] and [RCV] on [QCK] characters into [QCK], cuts the current HP of one enemy by 15%",
         sailor: "Makes [STR] orbs \"beneficial\" for this unit",
+        specialName: "Chopper Special",
     },
     1370: {//Timeskip Chopper
         captain: "Not released",
-        special: "Changes certain orbs on [QCK] characters into [QCK], cuts the current HP of one enemy by x%",
+        special: "Changes [DEX] and [RCV] on [QCK] characters into [QCK], cuts the current HP of one enemy by 15%",
         sailor: "Makes [STR] orbs \"beneficial\" for this unit",
+        specialName: "Chopper Special",
+    },
+    1371: {//Wild Zoro
+        captain: "Boosts ATK of Slasher and Powerhouse characters by 2x at the start of the chain, by 2.25x after the 3rd Perfect and by 2.5x after the 5th Perfect.",
+        special: "Reduces Despair duration by 3 turns. Reduces Special Cooldown of Slasher and Powerhouse characters by 2 turn",
+        sailor: "Restores his own special by 2 turns when it is rewinded",
+        sailorNotes: "Some enemies can increase your cooldown by 1/2 Turns, this Sailor Ability decreases that by 2 turns",
+        specialName: "Wild Zoro Special",
+    },
+    1372: {//Wild Zoro
+        captain: "Boosts ATK of Slasher and Powerhouse characters by 2x at the start of the chain, by 2.25x after the 3rd Perfect and by 2.5x after the 5th Perfect.",
+        special: "Reduces Despair duration by 3 turns. Reduces Special Cooldown of Slasher and Powerhouse characters by 2 turn",
+        sailor: "Restores his own special by 2 turns when it is rewinded",
+        sailorNotes: "Some enemies can increase your cooldown by 1/2 Turns, this Sailor Ability decreases that by 2 turns",
+        specialName: "Wild Zoro Special",
     },
 };
 

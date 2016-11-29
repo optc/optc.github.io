@@ -1246,8 +1246,8 @@ window.drops = {
         
         {
             name: "Big Mom Pirates!",
-            thumb: null,
-            "All Difficulties": [ -1123, -1184, -1182, -1152, -1157, -8, -840, -736, -610 ]
+            thumb: 1355,
+            "All Difficulties": [ 1354, 1356, -1123, -1184, -1182, -1152, -1157, -8, -840, -736, -610 ]
         },
         
     ],

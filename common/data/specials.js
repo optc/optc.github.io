@@ -1815,28 +1815,18 @@ window.specials = {
     1353: {
         chainAddition: function(p){ return 0.5; }
     },
+    1356: {
+        rcv: function(p){ return 1.75; }
+    },
+    1357: {
+        rcv: function(p){ return 1.75; }
+    },
     1361: {
-        atk: function(p) { return !p.unit.class.has('Slasher') ? 1 : window.specials[1361].multiplier; },
+        atk: function(p) { return !p.unit.class.has('Slasher') ? 1 : p.sourceSlot < 2 ? 2 : 1.75 ; },
         type: "class",
-        onActivation: function(p) {
-            var n = (window.specials[1361].multiplier == 2 ? 1 : 0);
-            window.specials[1361].multiplier = [2, 1.75][n];
-            p.scope.notify({
-                text: 'Using the ' + [2, 1.75][n] + 'x ATK multiplier. To switch to the ' + [2, 1.3][n] + 'x multiplier, disable and re-enable this special',
-                name: '1361warning'
-            });
-        }
     },
     1362: {
-        atk: function(p) { return !p.unit.class.has('Slasher') ? 1 : window.specials[1362].multiplier; },
+        atk: function(p) { return !p.unit.class.has('Slasher') ? 1 : p.sourceSlot < 2 ? 2 : 1.75 ; },
         type: "class",
-        onActivation: function(p) {
-            var n = (window.specials[1362].multiplier == 2 ? 1 : 0);
-            window.specials[1362].multiplier = [2, 1.75][n];
-            p.scope.notify({
-                text: 'Using the ' + [2, 1.75][n] + 'x ATK multiplier. To switch to the ' + [2, 1.3][n] + 'x multiplier, disable and re-enable this special',
-                name: '1362warning'
-            });
-        }
     },
 };

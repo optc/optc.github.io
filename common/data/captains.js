@@ -3687,6 +3687,32 @@ window.captains = {
     1353: {
         atk: function(p) { return p.unit.class.has("Cerebral") ? 2.5 : 1; },
     },
+    1354:{
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 1.5 : 1; },
+    },
+    1355:{
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 1.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Powerhouse") ? 1.5 : 1; },
+        rcv: function(p) { return p.unit.class.has("Powerhouse") ? 1.5 : 1; }
+    },
+    1356: {
+        atk: function(p) { return p.unit.class.has("Cerebral") ? 1.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Striker") ? 1.5 : 1; }
+    },
+    1357: {
+        atk: function(p) { return p.unit.class.has("Cerebral") ? 1.75 : 1; },
+        hp: function(p) { return p.unit.class.has("Striker") ? 1.75 : 1; }
+    },
+    1358: {
+        chainModifier: function(p) { return 2; }
+    },
+    1359: {
+        chainModifier: function(p) { return 3; }
+    },
+    1360: {
+        atk: function(p) { return p.unit.cost <= 30 ? 2 : 1; },
+        hp: function(p) { return p.unit.cost <= 30 ? 1.2 : 1; }
+    },
     1361: {
         atk: function(p) { return p.unit.class.has("Slasher") ? p.classCount.Slasher>=5 ? Math.max(2.5, 2.5 + .5 * Math.min(p.turnCounter,1)) : 1 : 1; },
         hp: function(p) { return p.unit.class.has("Slasher") ?
@@ -3696,5 +3722,21 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Slasher") ? p.classCount.Slasher>=5 ? Math.max(2.5, 2.5 + .5 * Math.min(p.turnCounter,1)) : 1 : 1; },
         hp: function(p) { return p.unit.class.has("Slasher") ?
             p.classCount.Slasher>=5 ? 1.5 : 1 : 1; },
+    },
+    1371: {
+        damageSorter: function(d) { return CrunchUtils.classSort(d, 4, [ "Slasher", "Powerhouse" ]); },
+        hitAtk: function(p) {
+            if (!p.unit.class.has("Slasher") && !p.unit.class.has("Powerhouse")) return 1;
+            return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 2.5 : p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? 2.25 : 2;
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
+    },
+    1372: {
+        damageSorter: function(d) { return CrunchUtils.classSort(d, 4, [ "Slasher", "Powerhouse" ]); },
+        hitAtk: function(p) {
+            if (!p.unit.class.has("Slasher") && !p.unit.class.has("Powerhouse")) return 1;
+            return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 2.5 : p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? 2.25 : 2;
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
     },
 };

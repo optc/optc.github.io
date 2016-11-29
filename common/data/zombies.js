@@ -295,4 +295,12 @@ window.zombies = {
         type: 'healer',
         multiplier: 3
     },
+    1358: {//Rayleigh
+        type: 'healer',
+        multiplier: 1.5
+    },
+    1359: {//Rayleigh
+        type: 'healer',
+        multiplier: 1.5
+    },
 };
