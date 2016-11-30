@@ -7255,15 +7255,15 @@ window.details = {
         captain: "Boosts ATK of [STR] characters by 2x",
         special: [
             {
-                "description": "Reduce damage recieved by variable amount and boosts orbs by variable amount for 1 turn.",
+                "description": "Reduces damage received by variable amount and amplifies the effect of orbs by variable amount for 1 turn.",
                 "cooldown": null,
             },
             {
-                "description": "Reduce damage recieved by variable amount and boosts orbs by variable amount for 1 turn.",
+                "description": "Reduces damage received by variable amount and amplifies the effect of orbs by variable amount for 1 turn.",
                 "cooldown": null,
             },
             {
-                "description": "Reduce damage recieved by 70% and boosts orbs by 1.75x for 1 turn.",
+                "description": "Reduces damage received by 70% and amplifies the effect of orbs by 1.75x for 1 turn.",
                 "cooldown": null,
             },
         ],
@@ -7275,15 +7275,15 @@ window.details = {
         captain: "Not released",
         special: [
             {
-                "description": "Reduce damage recieved by variable amount and boosts orbs by variable amount for 1 turn.",
+                "description": "Reduces damage received by variable amount and amplifies the effect of orbs by variable amount for 1 turn.",
                 "cooldown": null,
             },
             {
-                "description": "Reduce damage recieved by variable amount and boosts orbs by variable amount for 1 turn.",
+                "description": "Reduces damage received by variable amount and amplifies the effect of orbs by variable amount for 1 turn.",
                 "cooldown": null,
             },
             {
-                "description": "Reduce damage recieved by 70% and boosts orbs by 1.75x for 1 turn.",
+                "description": "Reduces damage received by 70% and amplifies the effect of orbs by 1.75x for 1 turn.",
                 "cooldown": null,
             },
         ],

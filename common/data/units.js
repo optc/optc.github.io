@@ -1355,7 +1355,7 @@ window.units = [
     [ "Pekoms", "STR", [ "Powerhouse", "Fighter" ], 3, 12, 5, 2, 50, null, null, null, null, null, null, null, null ],
     [ "Pekoms Evolved", "STR", [ "Powerhouse", "Fighter" ], 4, 20, 5, 3, 99, null, null, null, null, 2033, 1303, 169, null ],
     [ "Tamago", "INT", [ "Cerebral", "Striker" ], 3, 12, 5, 2, null, null, null, null, null, null, null, null, null ],
-    [ "Tamago Evolved", "INT", [ "Cerebral", "Striker" ], 4, 20, 4, 3, null, null, null, null, null, null, null, null, null ],
+    [ "Tamago Evolved", "INT", [ "Cerebral", "Striker" ], 4, 20, 4, 3, 99, null, null, null, null, 1651, 1012, 315, null ],
     [ "Bartender Rayleigh", "DEX", [ "Fighter", "Cerebral" ], 4, 13, 5, 3, 50, 392109, null, null, null, null, null, null, null ],
     [ "Bartender Rayleigh Evolved", "DEX", [ "Fighter", "Cerebral" ], 5, 20, 4, 4, 99, 3000000, null, null, null, null, null, null, null ],
     [ "Luffy, Winter Island Adventure", "QCK", [ "Fighter", "Free Spirit" ], 4, 15, 6, 3, 99, null, null, null, null, 2005, 945, 286, null ],
