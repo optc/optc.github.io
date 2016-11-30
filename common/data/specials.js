@@ -461,7 +461,7 @@ window.specials = {
             window.specials[668].multiplier = [1.5, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.5][n] + 'x multiplier, disable and re-enable this special',
-                name: '667warning'
+                name: '668warning'
             });
         }
     },
@@ -473,7 +473,7 @@ window.specials = {
             window.specials[669].multiplier = [1.5, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.5][n] + 'x multiplier, disable and re-enable this special',
-                name: '668warning'
+                name: '669warning'
             });
         }
     },
@@ -1828,5 +1828,33 @@ window.specials = {
     1362: {
         atk: function(p) { return !p.unit.class.has('Slasher') ? 1 : p.sourceSlot < 2 ? 2 : 1.75 ; },
         type: "class",
+    },
+    1363: {
+        orb: function(p) { return p.unit.type == "PSY" ? CrunchUtils.getOrbMultiplier(p.orb, 1, 2) : CrunchUtils.getOrbMultiplier(p.orb, 1, 1); },	
+    },
+    1364: {
+        orb: function(p) { return p.unit.type == "PSY" ? CrunchUtils.getOrbMultiplier(p.orb, 1, 2) : CrunchUtils.getOrbMultiplier(p.orb, 1, 1); },	
+    },
+    1367:{
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, 1, window.specials[1367].multiplier); },
+        onActivation: function(p) {
+            var n = (window.specials[1367].multiplier == 1.5 ? 1 : 0);
+            window.specials[1367].multiplier = [1.5, 1.75][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.5, 1.75][n] + 'x Orb boost. To switch to the ' + [1.75, 1.5][n] + 'x Orb boost, disable and re-enable this special',
+                name: '1367warning'
+            });
+        },
+    },
+    1368:{
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, 1, window.specials[1368].multiplier); },
+        onActivation: function(p) {
+            var n = (window.specials[1368].multiplier == 1.5 ? 1 : 0);
+            window.specials[1368].multiplier = [1.5, 1.75][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.5, 1.75][n] + 'x Orb boost. To switch to the ' + [1.75, 1.5][n] + 'x Orb boost, disable and re-enable this special',
+                name: '1368warning'
+            });
+        },
     },
 };
