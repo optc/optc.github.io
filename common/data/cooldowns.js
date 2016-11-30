@@ -1361,14 +1361,14 @@ window.cooldowns = [
     [ 15, 15 ],
     20,
     20,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
+    21,
+    21,
+    null,//New World Nami
+    null,//New World Nami
+    null,//New World Sanji
+    null,//New World Sanji
+    12,
+    12,
     [ 15, 15 ],
     [ 15, 15 ],
 ];
