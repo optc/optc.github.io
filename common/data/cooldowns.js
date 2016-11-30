@@ -1229,14 +1229,14 @@ window.cooldowns = [
     22,
     [ 22, 15 ],//Sentomaru
     [ 22, 15 ],//Sentomaru
-    19,
-    19,
-    23,
-    23,
-    20,
+    [ 19, 12 ],
+    [ 19, 12 ],
+    [ 23, 15 ],
+    [ 23, 15 ],
     [ 20, 13 ],
-    22,
-    22,
+    [ 20, 13 ],
+    [ 22, 14 ],
+    [ 22, 14 ],
     null,//Kizaru
     null,//Kizaru
     [ 19, 11 ],
@@ -1367,8 +1367,8 @@ window.cooldowns = [
     null,//New World Nami
     null,//New World Sanji
     null,//New World Sanji
-    12,
-    12,
+    [ 12, 6 ],
+    [ 12, 6 ],
     [ 15, 15 ],
     [ 15, 15 ],
 ];

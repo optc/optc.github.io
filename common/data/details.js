@@ -7218,15 +7218,15 @@ window.details = {
         special: [
             {
                 "description": "Reduces duration of Paralysis and Silence by 1 turn. Delays all enemies for 1 turn",
-                "cooldown": 13,
+                "cooldown": [ 13, 8 ],
             },
             {
                 "description": "Reduces duration of Paralysis and Silence by 2 turns. Delays all enemies for 1 turn",
-                "cooldown": 15,
+                "cooldown": [ 15, 10 ],
             },
             {
                 "description": "Reduces duration of Paralysis and Silence by 5 turns. Delays all enemies for 2 turns",
-                "cooldown": 18,
+                "cooldown": [ 18, 13 ],
             },
         ],
         specialNotes: "Silence will refer to effects that prevent you from activating Special Abilities.",
@@ -7238,15 +7238,15 @@ window.details = {
         special: [
             {
                 "description": "Reduces duration of Paralysis and Silence by 1 turn. Delays all enemies for 1 turn",
-                "cooldown": 13,
+                "cooldown": [ 13, 8 ],
             },
             {
                 "description": "Reduces duration of Paralysis and Silence by 2 turns. Delays all enemies for 1 turn",
-                "cooldown": 15,
+                "cooldown": [ 15, 10 ],
             },
             {
                 "description": "Reduces duration of Paralysis and Silence by 5 turns. Delays all enemies for 2 turns",
-                "cooldown": 18,
+                "cooldown": [ 18, 13 ],
             },
         ],
         specialNotes: "Silence will refer to effects that prevent you from activating Special Abilities.",
@@ -7258,11 +7258,11 @@ window.details = {
         special: [
             {
                 "description": "Reduces damage received by 50% and amplifies the effect of orbs by 1.5x for 1 turn.",
-                "cooldown": 11,
+                "cooldown": [ 11, 6 ],
             },
             {
                 "description": "Reduces damage received by 70% and amplifies the effect of orbs by 1.75x for 1 turn.",
-                "cooldown": 20,
+                "cooldown": [ 20, 15 ],
             },
         ],
         specialNotes: "#{orb : 1.75x}",
@@ -7274,11 +7274,11 @@ window.details = {
         special: [
             {
                 "description": "Reduces damage received by 50% and amplifies the effect of orbs by 1.5x for 1 turn.",
-                "cooldown": 11,
+                "cooldown": [ 11, 6 ],
             },
             {
                 "description": "Reduces damage received by 70% and amplifies the effect of orbs by 1.75x for 1 turn.",
-                "cooldown": 20,
+                "cooldown": [ 20, 15 ],
             },
         ],
         specialNotes: "#{orb : 1.75x}",
