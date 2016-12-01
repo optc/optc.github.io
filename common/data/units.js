@@ -1367,10 +1367,10 @@ window.units = [
     [ "Nami, Reunion of the Straw Hat Pirates", "INT", [ "Cerebral", "Striker" ], 5, 30, 4, 4, 99, 4000000, 921, 431, 156, 2171, 1109, 440, 1 ],
     [ "Sanji, Gathering of the Straw Hats", "STR", [ "Fighter", "Powerhouse" ], 4, 15, 4, 3, 50, 392109, 242, 162, 24, 1182, 556, 148, 1 ],
     [ "Sanji, Reunion of the Straw Hat Pirates", "STR", [ "Fighter", "Powerhouse" ], 5, 30, 4, 4, 99, 4000000, 1112, 500, 99, 2603, 1437, 260, 1 ],
-    [ "Chopper, Gathering of the Straw Hats", "QCK", [ "Striker", "Powerhouse" ], 4, 15, 6, 3, 50, 392109, 202, 109, 31, 1062, 503, 186, 1 ],
-    [ "Chopper, Reunion of the Straw Hat Pirates", "QCK", [ "Striker", "Powerhouse" ], 5, 30, 4, 4, 99, 4000000, 990, 434, 137, 2377, 1188, 379, 1 ],
-    [ "Wild Zoro", "QCK", [ "Slasher", "Powerhouse" ], 4, 15, 4, 3, 50, 392109, 244, 144, 22, 1122, 596, 77, null ],
-    [ "Wild Zoro Evolved", "QCK", [ "Slasher", "Powerhouse" ], 5, 30, 4, 4, 99, 4000000, 1022, 499, 55, 2711, 1322, 161, null ],
+    [ "Tony Tony Chopper, Gathering of the Straw Hats", "QCK", [ "Striker", "Powerhouse" ], 4, 15, 6, 3, 50, 392109, 202, 109, 31, 1062, 503, 186, 1 ],
+    [ "Tony Tony Chopper, Reunion of the Straw Hat Pirates", "QCK", [ "Striker", "Powerhouse" ], 5, 30, 4, 4, 99, 4000000, 990, 434, 137, 2377, 1188, 379, 1 ],
+    [ "Roronoa Zoro, Wild Pirate", "QCK", [ "Slasher", "Powerhouse" ], 4, 15, 4, 3, 50, 392109, 244, 144, 22, 1122, 596, 77, null ],
+    [ "Roronoa Zoro, Pioneer of Land", "QCK", [ "Slasher", "Powerhouse" ], 5, 30, 4, 4, 99, 4000000, 1022, 499, 55, 2711, 1322, 161, null ],
     ];
     
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ]
