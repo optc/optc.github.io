@@ -3687,27 +3687,27 @@ window.captains = {
     1353: {
         atk: function(p) { return p.unit.class.has("Cerebral") ? 2.5 : 1; },
     },
-    1354:{
+    1354: {
+        chainModifier: function(p) { return 2; }
+    },
+    1355: {
+        chainModifier: function(p) { return 3; }
+    },
+    1356:{
         atk: function(p) { return p.unit.class.has("Powerhouse") ? 1.5 : 1; },
     },
-    1355:{
+    1357:{
         atk: function(p) { return p.unit.class.has("Powerhouse") ? 1.5 : 1; },
         hp: function(p) { return p.unit.class.has("Powerhouse") ? 1.5 : 1; },
         rcv: function(p) { return p.unit.class.has("Powerhouse") ? 1.5 : 1; }
     },
-    1356: {
+    1358: {
         atk: function(p) { return p.unit.class.has("Cerebral") ? 1.5 : 1; },
         hp: function(p) { return p.unit.class.has("Striker") ? 1.5 : 1; }
     },
-    1357: {
+    1359: {
         atk: function(p) { return p.unit.class.has("Cerebral") ? 1.75 : 1; },
         hp: function(p) { return p.unit.class.has("Striker") ? 1.75 : 1; }
-    },
-    1358: {
-        chainModifier: function(p) { return 2; }
-    },
-    1359: {
-        chainModifier: function(p) { return 3; }
     },
     1360: {
         atk: function(p) { return p.unit.cost <= 30 ? 2 : 1; },
@@ -3741,7 +3741,7 @@ window.captains = {
         atk: function(p) { return p.unit.type == "STR" ? 2 : 1; }
     },
     1368: {
-        atk: function(p) { return !p.unit.type == "STR" ? 1 : p.percHP <= 30.0 ? 3 : 2.5; }
+        atk: function(p) { return !(p.unit.type == "STR") ? 1 : p.percHP <= 30.0 ? 3 : 2.5; }
     },
     1369: {
         atk: function(p) { return p.unit.type == "QCK" ? 1.5 : 1; },
@@ -3765,7 +3765,7 @@ window.captains = {
         damageSorter: function(d) { return CrunchUtils.classSort(d, 4, [ "Slasher", "Powerhouse" ]); },
         hitAtk: function(p) {
             if (!p.unit.class.has("Slasher") && !p.unit.class.has("Powerhouse")) return 1;
-            return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 2.5 : p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? 2.25 : 2;
+            return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 3 : p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? 2.5 : 2;
         },
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
     },

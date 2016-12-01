@@ -1815,10 +1815,16 @@ window.specials = {
     1353: {
         chainAddition: function(p){ return 0.5; }
     },
-    1356: {
+    1354: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, 1, 1.5); },
+    },
+    1355: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, 1, 1.5); },
+    },
+    1358: {
         rcv: function(p){ return 1.75; }
     },
-    1357: {
+    1359: {
         rcv: function(p){ return 1.75; }
     },
     1361: {

@@ -7148,39 +7148,39 @@ window.details = {
         special: "Deals 50,000 Fixed damage to one enemy, adds 0.5 to Chain multiplier for 1 turn",
         specialName: "Guidence to Control Haki",
     },
-    1354: {//Pekoms
-        captain: "Boosts ATK of Powerhouse characters by 1.5x",
-        special: "Changes [RCV] and [EMPTY] orbs on Fighter characters into Matching orbs. Makes Perfects easier to hit for 1 turn.",
-        specialName: "Pekoms Special",
-        specialNotes: "Increases timing window to hit a Perfect. (Animation remains the same)"
-    },
-    1355: {//Pekoms
-        captain: "Boosts ATK, HP and RCV of Powerhouse characters by 1.5x",
-        special: "Changes [RCV] and [EMPTY] orbs on Fighter characters into Matching orbs. Makes Perfects easier to hit for 1 turn.",
-        specialName: "Pekoms Special",
-        specialNotes: "Increases timing window to hit a Perfect. (Animation remains the same)"
-    },
-    1356: {//Tamago
-        captain: "Boosts ATK of Cerebral characters by 1.5x and the HP of Striker characters by 1.5x",
-        special: "Boosts RCV of all characters by 1.75x and delays all enemies by 1 turn.",
-        specialName: "Tamago Special",
-    },
-    1357: {//Tamago
-        captain: "Boosts ATK of Cerebral characters by 1.75x and the HP of Striker characters by 1.75x",
-        special: "Boosts RCV of all characters by 1.75x and delays all enemies by 1 turn.",
-        specialName: "Tamago Special",
-    },
-    1358: {//Secret Rayleigh
+    1354: {//Secret Rayleigh
         captain: "Boosts chain multiplier by 2x, recovers 1.5x character's RCV in HP at the end of each turn",
         special: "Recovers 15x character's RCV in HP, amplifies the effect of orbs by 1.5x for 1 turn",
         specialName: "Rayleigh Special",
         specialNotes: "#{orb : 1.5x}",
     },
-    1359: {//Secret Rayleigh
+    1355: {//Secret Rayleigh
         captain: "Boosts chain multiplier by 3x, recovers 1.5x character's RCV in HP at the end of each turn",
         special: "Recovers 15x character's RCV in HP, amplifies the effect of orbs by 1.5x for 1 turn",
         specialName: "Rayleigh Special",
         specialNotes: "#{orb : 1.5x}",
+    },
+    1356: {//Pekoms
+        captain: "Boosts ATK of Powerhouse characters by 1.5x",
+        special: "Changes [RCV] and [EMPTY] orbs on Fighter characters into Matching orbs. Makes Perfects easier to hit for 1 turn.",
+        specialName: "Pekoms Special",
+        specialNotes: "Increases timing window to hit a Perfect. (Animation remains the same)"
+    },
+    1357: {//Pekoms
+        captain: "Boosts ATK, HP and RCV of Powerhouse characters by 1.5x",
+        special: "Changes [RCV] and [EMPTY] orbs on Fighter characters into Matching orbs. Makes Perfects easier to hit for 1 turn.",
+        specialName: "Pekoms Special",
+        specialNotes: "Increases timing window to hit a Perfect. (Animation remains the same)"
+    },
+    1358: {//Tamago
+        captain: "Boosts ATK of Cerebral characters by 1.5x and the HP of Striker characters by 1.5x",
+        special: "Boosts RCV of all characters by 1.75x and delays all enemies by 1 turn.",
+        specialName: "Tamago Special",
+    },
+    1359: {//Tamago
+        captain: "Boosts ATK of Cerebral characters by 1.75x and the HP of Striker characters by 1.75x",
+        special: "Boosts RCV of all characters by 1.75x and delays all enemies by 1 turn.",
+        specialName: "Tamago Special",
     },
     1360: {//Winter Luffy
         captain: "Boosts ATK characters with cost 30 or less by 2x and their HP by 1.2x",
@@ -7302,14 +7302,14 @@ window.details = {
         special: "Reduces Despair duration by 3 turns. Reduces Special Cooldown of Slasher and Powerhouse characters by 2 turn",
         sailor: "Restores his own special by 2 turns when it is rewinded",
         sailorNotes: "Some enemies can increase your cooldown by 1/2 Turns, this Sailor Ability decreases that by 2 turns",
-        specialName: "Wild Zoro Special",
+        specialName: "Wild Plan",
     },
     1372: {//Wild Zoro
-        captain: "Boosts ATK of Slasher and Powerhouse characters by 2x at the start of the chain, by 2.25x after the 3rd Perfect and by 2.5x after the 5th Perfect.",
+        captain: "Boosts ATK of Slasher and Powerhouse characters by 2x at the start of the chain, by 2.5x after the 3rd Perfect and by 3x after the 5th Perfect.",
         special: "Reduces Despair duration by 3 turns. Reduces Special Cooldown of Slasher and Powerhouse characters by 2 turn",
         sailor: "Restores his own special by 2 turns when it is rewinded",
         sailorNotes: "Some enemies can increase your cooldown by 1/2 Turns, this Sailor Ability decreases that by 2 turns",
-        specialName: "Wild Zoro Special",
+        specialName: "Wild Plan",
     },
 };
 

@@ -899,8 +899,8 @@ window.drops = {
             thumb: 550,
             global: true,
             condition: '30: Non-Slasher, Evolver, or Booster class characters are weakend; 15: Striker and Shooter class characters are weakened',
-            challenge: 'High Score calculated with Clear Speed and Crew Cost. (Crew cost can basically be ignored)',
-            challengeData: [['60,000 Points','1x Black Elder'],['160,000 Points','1x ATK Cotton Candy'],['300,000 Points','3x Rainbow Gems']],
+            challenge: 'Cumulative Damage dealt to enemies in a single run',
+            challengeData: [['600,000 Damage','1x Black Elder'],['2,000,000 Damage','1x ATK Cotton Candy, 1x Rainbow Gem'],['5,000,000 Damage','1x Defence Boost Forbidden Tome, 2x Rainbow Gems']],
             "All Difficulties": [ 549, 551, 552, -552, -551, -432, -426, -408, -329, -308, -255 ]
         },
 
