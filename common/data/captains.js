@@ -3769,4 +3769,12 @@ window.captains = {
         },
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
     },
+    1373: {
+        atk: function(p) { return p.unit.type == "INT" ? 1.5 : 1; },
+        hp: function(p) { return p.unit.type == "INT" ? 1.2 : 1; },
+    },
+    1374: {
+        atk: function(p) { return p.unit.type == "INT" ? 2.25 : 1; },
+        hp: function(p) { return p.unit.type == "INT" ? 1.5 : 1; },
+    },
 };

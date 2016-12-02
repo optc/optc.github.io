@@ -7311,5 +7311,35 @@ window.details = {
         sailorNotes: "Some enemies can increase your cooldown by 1/2 Turns, this Sailor Ability decreases that by 2 turns",
         specialName: "Wild Plan",
     },
+    1373: {//Magellan
+        captain: "Boosts ATK of INT characters by 1.5x and their HP by 1.2x, deals 5 times the damage received in the previous turn in [INT] damage to all enemies at the end of each turn",
+        special: [
+            {
+                "description": "Poisons all enemies and delays all enemies for 1 turn.",
+                "cooldown": 25,
+            },
+            {
+                "description": "Inflicts Toxic to all enemies and delays all enemies for 1 turn.",
+                "cooldown": 31,
+            },
+        ],
+        specialName: "Magellan Special",
+        specialNotes: "Toxic starts at 0.5x character's attack and increases by 3x at the end of every turn until 1,500,000 damage per turn.",
+    },
+    1374: {//Magellan
+        captain: "Boosts ATK of INT characters by 2.25x and their HP by 1.5x, deals 5 times the damage received in the previous turn in [INT] damage to all enemies at the end of each turn",
+        special: [
+            {
+                "description": "Poisons all enemies and delays all enemies for 1 turn.",
+                "cooldown": 25,
+            },
+            {
+                "description": "Inflicts Toxic to all enemies and delays all enemies for 1 turn.",
+                "cooldown": 31,
+            },
+        ],
+        specialName: "Magellan Special",
+        specialNotes: "Toxic starts at 0.5x character's attack and increases by 3x at the end of every turn until 1,500,000 damage per turn.",
+    },
 };
 

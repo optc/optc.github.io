@@ -1434,6 +1434,11 @@ window.drops = {
             thumb: 1298,
             Ultimate: [ 1297 ]
         },
+        {
+            name: 'Clash!! Warden Magellan',
+            thumb: 1374,
+            Master: [ 1373 ],
+        },
 
     ],
 

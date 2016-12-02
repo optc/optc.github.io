@@ -1371,4 +1371,6 @@ window.cooldowns = [
     [ 12, 6 ],
     [ 15, 15 ],
     [ 15, 15 ],
+    null,//Magellan
+    null,//Magellan
 ];
