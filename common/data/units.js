@@ -1369,10 +1369,10 @@ window.units = [
     [ "Sanji, Reunion of the Straw Hat Pirates", "STR", [ "Fighter", "Powerhouse" ], 5, 30, 4, 4, 99, 4000000, 1112, 500, 99, 2603, 1437, 260, 1 ],
     [ "Tony Tony Chopper, Gathering of the Straw Hats", "QCK", [ "Striker", "Powerhouse" ], 4, 15, 6, 3, 50, 392109, 202, 109, 31, 1062, 503, 186, 1 ],
     [ "Tony Tony Chopper, Reunion of the Straw Hat Pirates", "QCK", [ "Striker", "Powerhouse" ], 5, 30, 4, 4, 99, 4000000, 990, 434, 137, 2377, 1188, 379, 1 ],
-    [ "Roronoa Zoro, Wild Pirate", "QCK", [ "Slasher", "Powerhouse" ], 4, 15, 4, 3, 50, 392109, 244, 144, 22, 1122, 596, 77, null ],
-    [ "Roronoa Zoro, Pioneer of Land", "QCK", [ "Slasher", "Powerhouse" ], 5, 30, 4, 4, 99, 4000000, 1022, 499, 55, 2711, 1322, 161, null ],
-    [ "Magellan", "INT", [ "Striker", "Shooter" ], 4, 30, 6, 1, 70, 1066998, 210, 107, 29, 1226, 659, 102, null ],
-    [ "Magellan Evolved", "INT", [ "Striker", "Shooter" ], 5, 50, 5, 2, 99, 5000000, 1149, 590, 57, 2605, 1316, 207, null ]
+    [ "Roronoa Zoro, Wild Pirate", "QCK", [ "Slasher", "Powerhouse" ], 4, 15, 4, 3, 50, 392109, 244, 144, 22, 1122, 596, 77, 1 ],
+    [ "Roronoa Zoro, Pioneer of Land", "QCK", [ "Slasher", "Powerhouse" ], 5, 30, 4, 4, 99, 4000000, 1022, 499, 55, 2711, 1322, 161, 1 ],
+    [ "Magellan", "INT", [ "Striker", "Shooter" ], 4, 30, 6, 1, 70, 1066998, 210, 107, 29, 1226, 659, 102, 1 ],
+    [ "Magellan, Chief Warden of Impel Down", "INT", [ "Striker", "Shooter" ], 5, 50, 5, 2, 99, 5000000, 1149, 590, 57, 2605, 1316, 207, 1 ]
     ];
     
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ]

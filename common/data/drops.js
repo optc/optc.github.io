@@ -1437,6 +1437,7 @@ window.drops = {
         {
             name: 'Clash!! Warden Magellan',
             thumb: 1374,
+            condition: "Take 7% MAX Health in Environmental Damage",
             Master: [ 1373 ],
             Expert: [ 1373 ],
         },

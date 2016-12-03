@@ -7316,14 +7316,14 @@ window.details = {
         special: [
             {
                 "description": "Poisons all enemies and delays all enemies for 1 turn.",
-                "cooldown": 25,
+                "cooldown": [ 25, 10 ],
             },
             {
                 "description": "Inflicts Toxic to all enemies and delays all enemies for 1 turn.",
-                "cooldown": 31,
+                "cooldown": [ 31, 16 ],
             },
         ],
-        specialName: "Magellan Special",
+        specialName: "Poison Dragon",
         specialNotes: "Toxic starts at 0.5x character's attack and increases by 3x at the end of every turn until 1,500,000 damage per turn.",
     },
     1374: {//Magellan
@@ -7331,14 +7331,14 @@ window.details = {
         special: [
             {
                 "description": "Poisons all enemies and delays all enemies for 1 turn.",
-                "cooldown": 25,
+                "cooldown": [ 25, 10 ],
             },
             {
                 "description": "Inflicts Toxic to all enemies and delays all enemies for 1 turn.",
-                "cooldown": 31,
+                "cooldown": [ 31, 16 ],
             },
         ],
-        specialName: "Magellan Special",
+        specialName: "Poison Dragon",
         specialNotes: "Toxic starts at 0.5x character's attack and increases by 3x at the end of every turn until 1,500,000 damage per turn.",
     },
 };
