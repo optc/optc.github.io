@@ -6659,7 +6659,7 @@ window.details = {
     },
     1283: {//Marineford Akainu
         captain: "Boosts ATK of Driven characters by 2.5x",
-        special: "Deals 35x character's ATK in [INT] damage to one enemy. Boosts the ATK of Driven characters by 1.5x for 1 turn",
+        special: "Deals 35x character's ATK in [INT] damage to one enemy. Boosts ATK of Driven characters by 1.5x for 1 turn",
         specialName: "Dark Dog",
     },
     1284: {//Wild Luffy
