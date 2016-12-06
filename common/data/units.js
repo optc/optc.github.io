@@ -1377,6 +1377,8 @@ window.units = [
     [ "Coliseum Dellinger Evolved", "QCK", [ "Powerhouse", "Fighter" ], 5, 40, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Coliseum Marguerite", "DEX", [ "Shooter", "Slasher" ], 3, 16, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Coliseum Marguerite Evolved", "DEX", [ "Shooter", "Slasher" ], 4, 26, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Invasion Boss Shanks", "INT", [ "Cerebral", "Free Spirit" ], 4, 30, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Invasion Boss Shanks Evolved", "INT", [ "Cerebral", "Free Spirit" ], 5, 50, null, null, null, null, null, null, null, null, null, null, null ],
     ];
     
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ]

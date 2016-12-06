@@ -1511,10 +1511,17 @@ window.drops = {
         },
         
         {
-            name: 'Young Whitebeard Event',
+            name: 'Invasion! Young Whitebeard',
             thumb: 1258,
             condition: "Has a chance of appearing at the end of ANY Raid boss. You MUST use the same team that you just used to complete the raid boss to fight Young Whitebeard.",
             "All Difficulties": [ 1257 ]
+        },
+        
+        {
+            name: 'Invasion! Red Hair Shanks',
+            thumb: 1380,
+            condition: "Has a chance of appearing at the end of ANY Chaos Coliseum boss. You MUST use the same team that you just used to complete the Coliseum boss to fight Shanks.",
+            "All Difficulties": [ 1379 ]
         },
 
    ]
