@@ -3777,4 +3777,24 @@ window.captains = {
         atk: function(p) { return p.unit.type == "INT" ? 2.25 : 1; },
         hp: function(p) { return p.unit.type == "INT" ? 1.5 : 1; },
     },
+    1375: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 2.5 : 1; },
+    },
+    1376: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 2.75 : 1; },
+    },
+    1377: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Shooter") ? 1.3 : 1; },
+        rcv: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Shooter") ? 1.3 : 1; }
+    },
+    1378: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Shooter") ? 1.75 : 1; },
+        rcv: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Shooter") ? 1.75 : 1; }
+    },
+    1379: {
+        atk: function(p) { return p.unit.class.has("Cerebral") ? 2 : 1; },
+    },
+    1380: {
+        atk: function(p) { return p.unit.class.has("Cerebral") ? 2.5 : 1; },
+    },
 };

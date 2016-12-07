@@ -1373,12 +1373,12 @@ window.units = [
     [ "Roronoa Zoro, Pioneer of Land", "QCK", [ "Slasher", "Powerhouse" ], 5, 30, 4, 4, 99, 4000000, 1022, 499, 55, 2711, 1322, 161, 1 ],
     [ "Magellan", "INT", [ "Striker", "Shooter" ], 4, 30, 6, 1, 70, 1066998, 210, 107, 29, 1226, 659, 102, 1 ],
     [ "Magellan, Chief Warden of Impel Down", "INT", [ "Striker", "Shooter" ], 5, 50, 5, 2, 99, 5000000, 1149, 590, 57, 2605, 1316, 207, 1 ],
-    [ "Coliseum Dellinger", "QCK", [ "Powerhouse", "Fighter" ], 4, 25, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Coliseum Dellinger Evolved", "QCK", [ "Powerhouse", "Fighter" ], 5, 40, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Coliseum Marguerite", "DEX", [ "Shooter", "Slasher" ], 3, 16, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Coliseum Marguerite Evolved", "DEX", [ "Shooter", "Slasher" ], 4, 26, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Invasion Boss Shanks", "INT", [ "Cerebral", "Free Spirit" ], 4, 30, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Invasion Boss Shanks Evolved", "INT", [ "Cerebral", "Free Spirit" ], 5, 50, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Coliseum Dellinger", "QCK", [ "Powerhouse", "Fighter" ], 4, 25, 5, 2, 70, null, null, null, null, 1134, 749, 171, null ],
+    [ "Coliseum Dellinger Evolved", "QCK", [ "Powerhouse", "Fighter" ], 5, 40, 7, 3, 99, null, 1062, 668, 109, null, null, null, null ],
+    [ "Coliseum Marguerite", "DEX", [ "Shooter", "Slasher" ], 3, 16, 5, 2, 50, 392109, null, null, null, null, null, null, null ],
+    [ "Coliseum Marguerite Evolved", "DEX", [ "Shooter", "Slasher" ], 4, 26, 5, 3, 99, null, null, null, null, 1759, 974, 403, null ],
+    [ "Invasion Boss Shanks", "INT", [ "Cerebral", "Free Spirit" ], 4, 30, 4, 2, 70, 1778330, null, null, null, null, null, null, null ],
+    [ "Invasion Boss Shanks Evolved", "INT", [ "Cerebral", "Free Spirit" ], 5, 50, 4, 3, 99, 5000000, null, null, null, 2552, 1440, 353, null ],
     ];
     
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ]

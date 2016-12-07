@@ -1863,4 +1863,14 @@ window.specials = {
             });
         },
     },
+    1375: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 1.5 : 1; },
+        type: "type",
+        orb: function(p) { return p.slot == p.sourceSlot ? CrunchUtils.getOrbMultiplier(p.orb, 1, 1.5) : CrunchUtils.getOrbMultiplier(p.orb, 1, 1)}
+    },
+    1376: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 1.5 : 1; },
+        type: "type",
+        orb: function(p) { return p.slot == p.sourceSlot ? CrunchUtils.getOrbMultiplier(p.orb, 1, 1.5) : CrunchUtils.getOrbMultiplier(p.orb, 1, 1)}
+    },
 };
