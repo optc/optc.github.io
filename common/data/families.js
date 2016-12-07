@@ -1373,4 +1373,10 @@ window.families = [
     "Roronoa Zoro",
     "Magellan",
     "Magellan",
+    "Dellinger",
+    "Dellinger",
+    "Marguerite",
+    "Marguerite",
+    "Shanks",
+    "Shanks",
 ];

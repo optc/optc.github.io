@@ -1375,10 +1375,10 @@ window.units = [
     [ "Magellan, Chief Warden of Impel Down", "INT", [ "Striker", "Shooter" ], 5, 50, 5, 2, 99, 5000000, 1149, 590, 57, 2605, 1316, 207, 1 ],
     [ "Coliseum Dellinger", "QCK", [ "Powerhouse", "Fighter" ], 4, 25, 5, 2, 70, null, null, null, null, 1134, 749, 171, null ],
     [ "Coliseum Dellinger Evolved", "QCK", [ "Powerhouse", "Fighter" ], 5, 40, 7, 3, 99, null, 1062, 668, 109, null, null, null, null ],
-    [ "Coliseum Marguerite", "DEX", [ "Shooter", "Slasher" ], 3, 16, 5, 2, 50, 392109, null, null, null, null, null, null, null ],
+    [ "Coliseum Marguerite", "DEX", [ "Shooter", "Slasher" ], 3, 16, 5, 2, 50, 392109, 93, 72, 62, 895, 520, 206, null ],
     [ "Coliseum Marguerite Evolved", "DEX", [ "Shooter", "Slasher" ], 4, 26, 5, 3, 99, null, null, null, null, 1759, 974, 403, null ],
-    [ "Invasion Boss Shanks", "INT", [ "Cerebral", "Free Spirit" ], 4, 30, 4, 2, 70, 1778330, null, null, null, null, null, null, null ],
-    [ "Invasion Boss Shanks Evolved", "INT", [ "Cerebral", "Free Spirit" ], 5, 50, 4, 3, 99, 5000000, null, null, null, 2552, 1440, 353, null ],
+    [ "Invasion Boss Shanks", "INT", [ "Cerebral", "Free Spirit" ], 4, 30, 4, 2, 70, 1778330, 1094, 514, 126, 1674, 767, 242, null ],
+    [ "Invasion Boss Shanks Evolved", "INT", [ "Cerebral", "Free Spirit" ], 5, 50, 4, 3, 99, 5000000, 1600, 692, 200, 2552, 1440, 353, null ],
     ];
     
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ]
