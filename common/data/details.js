@@ -5552,24 +5552,26 @@ window.details = {
         captainNotes: "Cavendish only boosts Friend or Sub Cavendish by 2.5x for a total of 10x boost with two Cavendish captains",
         special: "Removes all positive buffs on Your team. Deals 15x the character's ATK as Typeless damage to all enemies. Boosts Cavendish's ATK by 1.75x for 2 turns, amplifies the effect of Cavendish's orb by 1.75x for 2 turns, locks his orb for 2 turns, and changes own orb to [QCK].",
         specialNotes: "Boosted ATK and Orb Effectivess only works for the Cavendish who uses his Special.",
-        specialName: "Sickle Weasel of Rommel"
+        specialName: "Slicing Winds of Rommel"
     },
     1123: {
         captain: "Boosts ATK of [STR], [DEX], and [QCK] characters by 2.5x, but boosts his OWN attack by 4x",
         captainNotes: "Cavendish only boosts Friend or Sub Cavendish by 2.5x for a total of 10x boost with two Cavendish captains",
         special: "Removes all positive buffs on Your team. Deals 15x the character's ATK as Typeless damage to all enemies. Boosts Cavendish's ATK by 1.75x for 2 turns, amplifies the effect of Cavendish's orb by 1.75x for 2 turns, locks his orb for 2 turns, and changes own orb to [QCK].",
         specialNotes: "Boosted ATK and Orb Effectivess only works for the Cavendish who uses his Special.",
-        specialName: "Sickle Weasel of Rommel"
+        specialName: "Slicing Winds of Rommel"
     },
     1124: {
         captain: "Boosts ATK of Slashers characters by 3x, reduces his own ATK multiplier by 0.1x at the end of each turn",
         captainNotes: "His ATK multiplier will be 3x on the first turn, 2.9x on the second, 2.8x on the third and so on. The reduction stops once the multiplier is 1.0x. The multiplier affects all Slasher characters.",
         special: "Deals 13x character's ATK in [PSY] damage to all enemies, changes own orb and captain's orb into Matching orbs.",
+        specialName: "Idle Execution"
     },
     1125: {
         captain: "Boosts ATK of Slashers characters by 3.5x, reduces his own ATK multiplier by 0.1x at the end of each turn",
         captainNotes: "His ATK multiplier will be 3.5x on the first turn, 3.4x on the second, 3.3x on the third and so on. The reduction stops once the multiplier is 1.0x. The multiplier affects all Slasher characters.",
         special: "Deals 13x character's ATK in [PSY] damage to all enemies, changes own orb and captain's orb into Matching orbs.",
+        specialName: "Idle Execution"
     },
     1126: {
         captain: "Boosts ATK and HP of [DEX] characters by 1.5x",
