@@ -4111,7 +4111,7 @@ window.details = {
     891: {
         captain: "Boosts ATK and RCV of Powerhouse characters by 1.75x",
         specialName: "Resurrection of the Dead",
-        special: "Reduces damage received by 50% for 1 turn, boosts ATK of Powerhouse characters by 1.25x for 1 turn",
+        special: "Reduces damage received by 50% for 1 turn, boosts ATK of Powerhouse characters by 1.25x for 1 turn"
         },
     892: {
         captain: "Boosts chain multiplier by 2x",
@@ -6597,14 +6597,14 @@ window.details = {
         specialName: "Other Side of Fate",
     },
     1273: {//Jesus Burgess
-        captain: "Boosts ATK of Fighter and Powerhouse characters by 1.5x and their HP by 1.15",
+        captain: "Boosts ATK of Fighter and Powerhouse characters by 1.5x and their HP by 1.2",
         captainNotes: "Boosts stack, so a Fighter/Powerhouse character gets 2.25x ATK and 1.3225 HP",
         special: "Deals large [STR] damage to all enemies. Boosts ATK of Fighter characters by 1.5x for 5 turns",
         sailor: "Boosts HP of all characters by 75",
         specialName: "Champion of the Wild Roar",
     },
     1274: {//Jesus Burgess Evo
-        captain: "Boosts ATK of Fighter and Powerhouse characters by 1.6x and their HP by 1.15x",
+        captain: "Boosts ATK of Fighter and Powerhouse characters by 1.6x and their HP by 1.2x",
         captainNotes: "Boosts stack, so a Fighter/Powerhouse character gets 2.56x ATK and 1.3225 HP",
         special: "Deals large [STR] damage to all enemies. Boosts ATK of Fighter characters by 1.5x for 5 turns",
         sailor: "Boosts HP of all characters by 75",

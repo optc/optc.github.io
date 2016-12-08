@@ -3361,9 +3361,9 @@ window.captains = {
                 1;
         },
         hp: function(p) {
-            return p.unit.class.has("Fighter") && p.unit.class.has("Powerhouse") ? 1.3225 :
-                p.unit.class.has("Fighter") && !p.unit.class.has("Powerhouse") ? 1.15 : 
-                !p.unit.class.has("Fighter") && p.unit.class.has("Powerhouse") ? 1.15 :
+            return p.unit.class.has("Fighter") && p.unit.class.has("Powerhouse") ? 1.44 :
+                p.unit.class.has("Fighter") && !p.unit.class.has("Powerhouse") ? 1.2 : 
+                !p.unit.class.has("Fighter") && p.unit.class.has("Powerhouse") ? 1.2 :
                 1;
         },
     },
@@ -3375,9 +3375,9 @@ window.captains = {
                 1;
         },
         hp: function(p) {
-            return p.unit.class.has("Fighter") && p.unit.class.has("Powerhouse") ? 1.3225 :
-                p.unit.class.has("Fighter") && !p.unit.class.has("Powerhouse") ? 1.15 : 
-                !p.unit.class.has("Fighter") && p.unit.class.has("Powerhouse") ? 1.15 :
+            return p.unit.class.has("Fighter") && p.unit.class.has("Powerhouse") ? 1.44 :
+                p.unit.class.has("Fighter") && !p.unit.class.has("Powerhouse") ? 1.2 : 
+                !p.unit.class.has("Fighter") && p.unit.class.has("Powerhouse") ? 1.2 :
                 1;
         },
     },

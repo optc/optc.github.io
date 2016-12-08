@@ -1874,9 +1874,9 @@ window.specials = {
         orb: function(p) { return p.slot == p.sourceSlot ? CrunchUtils.getOrbMultiplier(p.orb, 1, 1.5) : CrunchUtils.getOrbMultiplier(p.orb, 1, 1)}
     },
     1379: {
-        orb: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral")) ? CrunchUtils.getOrbMultiplier(p.orb, 1, 1.5) : CrunchUtils.getOrbMultiplier(p.orb, 1, 1); }	
+        orb: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral")) ? CrunchUtils.getOrbMultiplier(p.orb, 1, 2) : CrunchUtils.getOrbMultiplier(p.orb, 1, 1); }	
     },
     1380: {
-        orb: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral")) ? CrunchUtils.getOrbMultiplier(p.orb, 1, 1.5) : CrunchUtils.getOrbMultiplier(p.orb, 1, 1); }	
+        orb: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral")) ? CrunchUtils.getOrbMultiplier(p.orb, 1, 2) : CrunchUtils.getOrbMultiplier(p.orb, 1, 1); }	
     },
 };
