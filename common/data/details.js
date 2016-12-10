@@ -7347,13 +7347,13 @@ window.details = {
         captain: "Boosts ATK of Powerhouse characters by 2.5x, reduces crew's HP by 50%, doubles damage received",
         special: "Deals 20x character's ATK in [QCK] damage to one enemy, Boosts Dellinger's ATK by 1.5x for 1 turn, amplifies the effect of Dellinger's orb by 1.5x for 1 turn, and changes own orb to [QCK].",
         specialNotes: "Boosted ATK and Orb Effectivess only works for the Dellinger who uses his Special.",
-        specialName: "Dellinger Special",
+        specialName: "Deadly Fangs of Rage",
     },
     1376: {//Dellinger
         captain: "Boosts ATK of Powerhouse characters by 2.75x, reduces crew's HP by 20%, doubles damage received",
         special: "Deals 20x character's ATK in [QCK] damage to one enemy, Boosts Dellinger's ATK by 1.5x for 1 turn, amplifies the effect of Dellinger's orb by 1.5x for 1 turn, and changes own orb to [QCK].",
         specialNotes: "Boosted ATK and Orb Effectivess only works for the Dellinger who uses his Special.",
-        specialName: "Dellinger Special",
+        specialName: "Deadly Fangs of Rage",
     },
     1377: {//Marguerite
         captain: "Boosts ATK and RCV of Slasher and Shooter characters by 1.3x",
@@ -7370,12 +7370,12 @@ window.details = {
     1379: {//Shanks
         captain: "Boosts chances of getting Matching orbs, boosts ATK of Cerebral characters by 2x",
         special: "Reduces Paralysis duration by 3 turns. For Cerebral and Free Spirit characters, amplifies the effects of orbs by 2x for 1 turn. Makes [RCV] and [TND] orbs \"beneficial\" to Cerebral and Free Spirit characters for 1 turns.",
-        specialName: "Shanks Special",
+        specialName: "A Decision Made over Sake",
     },
     1380: {//Shanks
         captain: "Boosts chances of getting Matching orbs, boosts ATK of Cerebral characters by 2.5x",
         special: "Reduces Paralysis duration by 3 turns. For Cerebral and Free Spirit characters, amplifies the effects of orbs by 2x for 1 turn. Makes [RCV] and [TND] orbs \"beneficial\" to Cerebral and Free Spirit characters for 1 turns.",
-        specialName: "Shanks Special",
+        specialName: "A Decision Made over Sake",
     },
 };
 
