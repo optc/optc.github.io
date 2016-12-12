@@ -1252,8 +1252,8 @@ window.drops = {
         
         {
             name: "Soldier-san's Training!",
-            thumb: null,
-            "All Difficulties": [ -748, -1234, -1075, -1230, -1155, -1154, -846, -842, -739 ]
+            thumb: 1384,
+            "All Difficulties": [ 1383, 1385, -748, -1234, -1075, -1230, -1155, -1154, -846, -842, -739 ]
         },
         
     ],

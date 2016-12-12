@@ -1379,8 +1379,14 @@ window.units = [
     [ "Marguerite, Ambition of the Kuja Pirates", "DEX", [ "Shooter", "Slasher" ], 4, 26, 5, 3, 99, 3000000, 830, 452, 143, 1759, 974, 403, 1 ],
     [ "Shanks, Captain of the Red Hair Pirates", "INT", [ "Cerebral", "Free Spirit" ], 4, 30, 4, 2, 70, 1778330, 1094, 514, 126, 1674, 767, 242, 1 ],
     [ "'Red Hair' Shanks, Captain of the Red Hair Pirates", "INT", [ "Cerebral", "Free Spirit" ], 5, 50, 4, 3, 99, 5000000, 1600, 692, 200, 2552, 1440, 353, 1 ],
+    [ "Christmas Tashigi", "PSY", [ "Slasher", "Cerebral" ], 4, 13, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Christmas Tashigi Evolved", "PSY", [ "Slasher", "Cerebral" ], 5, 20, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Toy Soldier", "QCK", [ "Striker", "Shooter" ], 3, 13, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Toy Soldier Evolved", "QCK", [ "Striker", "Shooter" ], 4, 20, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Training Rebecca", "PSY", [ "Striker", "Free Spirit" ], 3, 9, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Training Rebecca Evolved", "PSY", [ "Striker", "Free Spirit" ], 4, 15, null, null, null, null, null, null, null, null, null, null, null ],
     ];
     
-// [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ]
-// or [ "Name", "Type", "Class1", null, null, null, null, null, null, null, null, null, null, null, null, null ]
-// [ "Name", "Type", [ "Class1", "Class2" ], Stars, Cost, Combo, sockets, maxLVL, EXPToMax, lvl1HP, lvl1ATK, lvl1RCV, MAXHP, MAXATK, MAXRCV, Growth Rate ]
+// [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+// or [ "Name", "Type", "Class1", null, null, null, null, null, null, null, null, null, null, null, null, null ],
+// [ "Name", "Type", [ "Class1", "Class2" ], Stars, Cost, Combo, sockets, maxLVL, EXPToMax, lvl1HP, lvl1ATK, lvl1RCV, MAXHP, MAXATK, MAXRCV, Growth Rate ],
