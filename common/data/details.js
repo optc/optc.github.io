@@ -7398,7 +7398,7 @@ window.details = {
         specialName: "Toy Soldier Special",
     },
     1385: {//Rebecca
-        captain: "Reduces damage received by x%",
+        captain: "Reduces damage received by 20%",
         special: "Removes blindness",
         specialName: "Rebecca Special",
     },
