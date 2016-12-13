@@ -7389,12 +7389,12 @@ window.details = {
     },
     1383: {//Soldier-San
         captain: "Boosts ATK of Striker characters by 2x. Increases damage recieved by 1.5x",
-        special: "Reduces Paralysis, Bind, Despair, and Silence duration by 1 turn. Randomizes all orbs into either Badly Matching [BLOCK] or [EMPTY] orbs",
+        special: "Reduces Paralysis, Bind, Despair, and Silence duration by 1 turn. Randomizes all Badly Matching, [BLOCK], or [EMPTY] orbs",
         specialName: "Angry Extermination of Bugs",
     },
     1384: {//Soldier-San
-        captain: "Boosts ATK of Striker characters by 2x. Increases damage recieved by 2x",
-        special: "Reduces Paralysis, Bind, Despair, and Silence duration by 1 turn. Randomizes all orbs into either Badly Matching [BLOCK] or [EMPTY] orbs",
+        captain: "Boosts ATK of Striker characters by 2.5x. Increases damage recieved by 1.5x",
+        special: "Reduces Paralysis, Bind, Despair, and Silence duration by 1 turn. Randomizes all Badly Matching, [BLOCK], or [EMPTY] orbs",
         specialName: "Angry Extermination of Bugs",
     },
     1385: {//Rebecca
