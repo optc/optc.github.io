@@ -3797,4 +3797,18 @@ window.captains = {
     1380: {
         atk: function(p) { return p.unit.class.has("Cerebral") ? 2.5 : 1; },
     },
+    1381: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Cerebral") ? 1.2 : 1; },
+        rcv: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Cerebral") ? 1.2 : 1; }
+    },
+    1382: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Cerebral") ? 1.75 : 1; },
+        rcv: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Cerebral") ? 1.75 : 1; }
+    },
+    1383: {
+        atk: function(p) { return p.unit.class.has("Striker") ? 2 : 1; },
+    },
+    1384: {
+        atk: function(p) { return p.unit.class.has("Striker") ? 2.5 : 1; },
+    },
 };

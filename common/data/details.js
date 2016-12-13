@@ -1792,12 +1792,12 @@ window.details = {
     446: {
         special: "Deals 10 times the damage received in the previous turn in typeless damage to all enemies",
         specialName: "Black Hole",
-        captain: "Doubles damage received, boosts ATK of STR characters by 2x and their HP by 1.5x"
+        captain: "Increases damage recieved by 2x, boosts ATK of STR characters by 2x and their HP by 1.5x"
     },
     447: {
         special: "Deals 10 times the damage received in the previous turn in typeless damage to all enemies",
         specialName: "Black Hole",
-        captain: "Doubles damage received, boosts ATK of STR characters by 2.5x and their HP by 2.25x"
+        captain: "Increases damage recieved by 2x, boosts ATK of STR characters by 2.5x and their HP by 2.25x"
     },
     448: {
         special: "Boosts chances of getting [QCK] orbs for 3 turns",
@@ -4061,12 +4061,12 @@ window.details = {
     881: {
         captain: "Boosts ATK of Shooter and Free Spirit characters by 2x following a chain of Good > Great > Perfect hits",
         specialName: "Fighting Music: Conflict Chekera",
-        special: "Doubles damage received for 2 turns, reduces RCV by 90% for 2 turns, boosts ATK of Shooter and Free Spirit characters by 1.75x for 1 turn"
+        special: "Increases damage recieved by 2x for 2 turns, reduces RCV by 90% for 2 turns, boosts ATK of Shooter and Free Spirit characters by 1.75x for 1 turn"
     },
     882: {
         captain: "Boosts ATK of Shooter and Free Spirit characters by 3x following a chain of Good > Great > Perfect hits",
         specialName: "Fighting Music: Conflict Chekera",
-        special: "Doubles damage received for 2 turns, reduces RCV by 90% for 2 turns, boosts ATK of Shooter and Free Spirit characters by 1.75x for 1 turn"
+        special: "Increases damage recieved by 2x for 2 turns, reduces RCV by 90% for 2 turns, boosts ATK of Shooter and Free Spirit characters by 1.75x for 1 turn"
     },
     883: {
         captain: "Boosts ATK and HP of Powerhouse characters by 1.25x",
@@ -7344,13 +7344,13 @@ window.details = {
         specialNotes: "Toxic starts at 0.5x character's attack and increases by 3x at the end of every turn until 1,500,000 damage per turn.",
     },
     1375: {//Dellinger
-        captain: "Boosts ATK of Powerhouse characters by 2.5x, reduces crew's HP by 50%, doubles damage received",
+        captain: "Boosts ATK of Powerhouse characters by 2.5x, reduces crew's HP by 50%, Increases damage recieved by 2x",
         special: "Deals 20x character's ATK in [QCK] damage to one enemy, Boosts Dellinger's ATK by 1.5x for 1 turn, amplifies the effect of Dellinger's orb by 1.5x for 1 turn, and changes own orb to [QCK].",
         specialNotes: "Boosted ATK and Orb Effectivess only works for the Dellinger who uses his Special.",
         specialName: "Deadly Fangs of Rage",
     },
     1376: {//Dellinger
-        captain: "Boosts ATK of Powerhouse characters by 2.75x, reduces crew's HP by 20%, doubles damage received",
+        captain: "Boosts ATK of Powerhouse characters by 2.75x, reduces crew's HP by 20%, Increases damage recieved by 2x",
         special: "Deals 20x character's ATK in [QCK] damage to one enemy, Boosts Dellinger's ATK by 1.5x for 1 turn, amplifies the effect of Dellinger's orb by 1.5x for 1 turn, and changes own orb to [QCK].",
         specialNotes: "Boosted ATK and Orb Effectivess only works for the Dellinger who uses his Special.",
         specialName: "Deadly Fangs of Rage",
@@ -7376,6 +7376,36 @@ window.details = {
         captain: "Boosts chances of getting Matching orbs, boosts ATK of Cerebral characters by 2.5x",
         special: "Reduces Paralysis duration by 3 turns. For Cerebral and Free Spirit characters, amplifies the effects of orbs by 2x for 1 turn. Makes [RCV] and [TND] orbs \"beneficial\" to Cerebral and Free Spirit characters for 1 turns.",
         specialName: "A Decision Made over Sake",
+    },
+    1381: {//Christmas Tashigi
+        captain: "Boosts ATK and RCV of Slasher and Cerebral characters by 1.2x",
+        special: "Reduces Silence duration by 1 turn, and recovers 12,240 HP",
+        specialName: "Tashigi Special",
+    },
+    1382: {//Christmas Tashigi
+        captain: "Boosts ATK and RCV of Slasher and Cerebral characters by 1.75x",
+        special: "Reduces Silence duration by 1 turn, and recovers 12,240 HP",
+        specialName: "Tashigi Special",
+    },
+    1383: {//Soldier-San
+        captain: "Boosts ATK of Striker characters by 2x. Increases damage recieved by 1.5x",
+        special: "Reduces Paralysis, Bind, Despair, and Silence duration by 1 turn. Randomizes all orbs into either Badly Matching [BLOCK] or [EMPTY] orbs",
+        specialName: "Toy Soldier Special",
+    },
+    1384: {//Soldier-San
+        captain: "Boosts ATK of Striker characters by 2x. Increases damage recieved by 2x",
+        special: "Reduces Paralysis, Bind, Despair, and Silence duration by 1 turn. Randomizes all orbs into either Badly Matching [BLOCK] or [EMPTY] orbs",
+        specialName: "Toy Soldier Special",
+    },
+    1385: {//Rebecca
+        captain: "Reduces damage received by x%",
+        special: "Removes blindness",
+        specialName: "Rebecca Special",
+    },
+    1386: {//Rebecca
+        captain: "Reduces damage received by 25%",
+        special: "Removes blindness",
+        specialName: "Rebecca Special",
     },
 };
 

@@ -1379,4 +1379,10 @@ window.aliases = {
     1378: ['マーガレット 九蛇の覇気使い', '', 'Coliseum Marguerite'],
     1379: ['シャンクス 赤髪海賊団大頭', '', 'Coliseum Shanks'],
     1380: ['赤髪のシャンクス 赤髪海賊団大頭', '', 'Coliseum Shanks'],
+    1381: ['', '', 'Christmas Tashigi'],
+    1382: ['', '', 'Christmas Tashigi'],
+    1383: ['', '', 'Toy Soldier', 'Kyros'],
+    1384: ['', '', 'Toy Soldier', 'Kyros'],
+    1385: ['', '', 'Kid Rebecca'],
+    1386: ['', '', 'Kid Rebecca'],
 };

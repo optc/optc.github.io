@@ -1529,6 +1529,14 @@ window.drops = {
             condition: "Has a chance of appearing at the end of ANY Chaos Coliseum boss. You MUST use the same team that you just used to complete the Coliseum boss to fight Shanks.",
             "All Difficulties": [ 1379 ]
         },
+        
+        {
+            name: 'The Flashback Before the Reunion! Fight all your Enemies!',
+            thumb: null,
+            condition: "The fight gets more difficult every time you complete it until it gets to 40 stamina.",
+            "Final Stage": [ 37, 38, 53, 55, 43, 36, 45, 57, 65, 203, 205, 383, 395, 397, 399, 401, 464, 465, 541, 545, 630, 632, 728, 730, 815, 889, 893, 973, 1055, 1057, 1158, 1156, 1227, 1228, 1280, 1283, 1353],
+            "Evolvers and Boosters": [ 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 115, 116, 117, 118, 266, 300, 301, 302, 303, 304, 1180, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 189, 190, 191, 192, 193, 342, 343, 344, 345, 346, 347, 348, 349, 350, 351 ]
+        },
 
    ]
 
