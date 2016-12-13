@@ -7153,13 +7153,13 @@ window.details = {
     1354: {//Secret Rayleigh
         captain: "Boosts chain multiplier by 2x, recovers 1.5x character's RCV in HP at the end of each turn",
         special: "Recovers 15x character's RCV in HP, amplifies the effect of orbs by 1.5x for 1 turn",
-        specialName: "Rayleigh Special",
+        specialName: "Straight Stimultaion",
         specialNotes: "#{orb : 1.5x}",
     },
     1355: {//Secret Rayleigh
         captain: "Boosts chain multiplier by 3x, recovers 1.5x character's RCV in HP at the end of each turn",
         special: "Recovers 15x character's RCV in HP, amplifies the effect of orbs by 1.5x for 1 turn",
-        specialName: "Rayleigh Special",
+        specialName: "Straight Stimultaion",
         specialNotes: "#{orb : 1.5x}",
     },
     1356: {//Pekoms
@@ -7390,22 +7390,22 @@ window.details = {
     1383: {//Soldier-San
         captain: "Boosts ATK of Striker characters by 2x. Increases damage recieved by 1.5x",
         special: "Reduces Paralysis, Bind, Despair, and Silence duration by 1 turn. Randomizes all orbs into either Badly Matching [BLOCK] or [EMPTY] orbs",
-        specialName: "Toy Soldier Special",
+        specialName: "Angry Extermination of Bugs",
     },
     1384: {//Soldier-San
         captain: "Boosts ATK of Striker characters by 2x. Increases damage recieved by 2x",
         special: "Reduces Paralysis, Bind, Despair, and Silence duration by 1 turn. Randomizes all orbs into either Badly Matching [BLOCK] or [EMPTY] orbs",
-        specialName: "Toy Soldier Special",
+        specialName: "Angry Extermination of Bugs",
     },
     1385: {//Rebecca
         captain: "Reduces damage received by 20%",
         special: "Removes blindness",
-        specialName: "Rebecca Special",
+        specialName: "Mother's Promise",
     },
     1386: {//Rebecca
         captain: "Reduces damage received by 25%",
         special: "Removes blindness",
-        specialName: "Rebecca Special",
+        specialName: "Mother's Promise",
     },
 };
 
