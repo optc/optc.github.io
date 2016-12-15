@@ -1385,4 +1385,7 @@ window.families = [
     "Kyros",
     "Rebecca",
     "Rebecca",
+    "Monkey D. Luffy",
+    "Roronoa Zoro",
+    "Nami",
 ];
