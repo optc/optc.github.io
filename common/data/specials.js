@@ -1882,4 +1882,12 @@ window.specials = {
     1389: {
         orb: function(p) { return p.unit.type == "INT" ? CrunchUtils.getOrbMultiplier(p.orb, 1, 1.75) : CrunchUtils.getOrbMultiplier(p.orb, 1, 1); },	
     },
+    1390: {
+        atk: function(p) { return p.unit.cost <= 40 ? 1.75 : 1; },
+        type: "class"
+    },
+    1391: {
+        atk: function(p) { return p.unit.cost <= 40 ? 1.75 : 1; },
+        type: "class"
+    },
 };

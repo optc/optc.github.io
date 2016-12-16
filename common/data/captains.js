@@ -3812,11 +3812,19 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Striker") ? 2.5 : 1; },
     },
     
-    1338: {
+    1388: {
         atk: function(p) { return p.unit.type == "DEX" ? 2.5 : 1; },
     },
-    1339: {
+    1389: {
         atk: function(p) { return p.unit.type == "INT" ? 2 : 1; },
         rcv: function(p) { return p.unit.type == "INT" ? 1.5 : 1; },
+    },
+    1390: {
+        atk: function(p) { return p.unit.cost <= 40 ? 1.5 : 0.5; },
+        hp: function(p) { return p.unit.cost <= 40 ? 1 : 0.5; }
+    },
+    1391: {
+        atk: function(p) { return p.unit.cost <= 40 ? 1.5 : 0.5; },
+        hp: function(p) { return p.unit.cost <= 40 ? 1 : 0.5; }
     },
 };

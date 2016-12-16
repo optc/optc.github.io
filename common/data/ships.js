@@ -293,5 +293,13 @@ window.ships = [
             return !(p.unit.class.has('Slasher') || p.unit.class.has('Free Spirit')) ? 1 : [ 1.1, 1.1, 1.1, 1.1, 1.2, 1.2, 1.2, 1.2, 1.25, 1.25 ][p.boatLevel - 1];
         },
     },
+    { // 24
+        name: 'New Year\'s Big Top',
+        thumb: null,
+        description: 'Boosts ATK, Berry, and EXP by 1.5x',
+        atk: function(p) {
+            return 1.5;
+        },
+    },
 
 ];

@@ -6841,13 +6841,13 @@ window.details = {
     1313: {//Akainu
         captain: "Boosts ATK by 2.25x. If they have a [STR] orb, boosts ATK by an additional 1.75x. Boosts chances of getting [STR] orbs",
         captainNotes: "If a character has a [STR] orb, regardless of type, they will have a 3.9375x ATK boost",
-        special: "Deals large typeless damage to all enemies and randomizes non-[STR] orbs. boosts ATK of characters with cost 50 or higher by 1.75x for 2 turns",
+        special: "Deals large typeless damage to all enemies and randomizes non-[STR] orbs. Boosts ATK of characters with cost 50 or higher by 1.75x for 2 turns",
         specialName: "Meteor Volcano",
     },
     1314: {//Akainu
         captain: "Boosts ATK by 2.25x. If they have a [STR] orb, boosts ATK by an additional 1.75x. Boosts chances of getting [STR] orbs",
         captainNotes: "If a character has a [STR] orb, regardless of type, they will have a 3.9375x ATK boost",
-        special: "Deals large typeless damage to all enemies and randomizes non-[STR] orbs. boosts ATK of characters with cost 50 or higher by 1.75x for 2 turns",
+        special: "Deals large typeless damage to all enemies and randomizes non-[STR] orbs. Boosts ATK of characters with cost 50 or higher by 1.75x for 2 turns",
         specialName: "Meteor Volcano",
     },
     1315: {//Coby
@@ -6983,7 +6983,8 @@ window.details = {
         specialName: "Tail Hammer",
     },
     1329: {//Wicca
-        captain: "Reduces cooldown of Fighter and Free Spirit specials by 1 turn at the start of the fight. Gives chance of duplicating a drop upon completion of the island. ",
+        captain: "Reduces cooldown of Fighter and Free Spirit specials by 1 turn at the start of the fight. Gives chance of duplicating a drop upon completion of the island.",
+        captainNotes: "Does not work if she was not your captain upon starting the island. Stacks with other addional drop captains, giving you two chances of getting an extra drop.",
         special: [
             {
                 "description": "Deals 6 fixed damage to all enemies. Randomizes orbs of upper row characters",
@@ -7415,10 +7416,22 @@ window.details = {
         specialName: "Ittoriyu - Hong Kong Bird",
     },
     1389: {//Nami 5+
-        captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, Boosts ATK of [INT] characters by 2x and their RCV by 1.5x. ",
-        special: "Deals 20x character's ATK in [INT] damage to all enemies. Amplifies the effect of orbs for [INT] characters by 1.75x for 1 turn ",
+        captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, Boosts ATK of [INT] characters by 2x and their RCV by 1.5x.",
+        special: "Deals 20x character's ATK in [INT] damage to all enemies. Amplifies the effect of orbs for [INT] characters by 1.75x for 1 turn",
         specialName: "Thunder Breed Tempo",
         specialNotes: "#{orb : 1.75x}",
+    },
+    1390: {//Buggy Legend
+        captain: "Boosts ATK of characters with cost 40 or less by 1.5x and reduces the HP and ATK of chatacters with cost 41 and greater by 0.5x. Gurantees duplicating a drop upon completion of the island.",
+        captainNotes: "Does not work if he was not your captain upon starting the island. Stacks with other addional drop captains, giving you two chances of getting an extra drop.",
+        special: "Randomizes all orbs. Boosts ATK of characters with cost 40 or less by 1.75x for 2 turns",
+        specialName: "Baggy Special",
+    },
+    1391: {//Buggy Legend
+        captain: "Boosts ATK of characters with cost 40 or less by 1.5x and reduces the HP and ATK of chatacters with cost 41 and greater by 0.5x. Gurantees duplicating a drop upon completion of the island.",
+        captainNotes: "Does not work if he was not your captain upon starting the island. Stacks with other addional drop captains, giving you two chances of getting an extra drop.",
+        special: "Randomizes all orbs. Boosts ATK of characters with cost 40 or less by 1.75x for 2 turns",
+        specialName: "Baggy Special",
     },
 };
 
