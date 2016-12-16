@@ -7412,7 +7412,7 @@ window.details = {
     },
     1388: {//Zoro 5+
         captain: "Boosts ATK of [DEX] characters by 2.5x",
-        special: "Cuts the current HP of each enemy by 10%. Reduces cooldown of [DEX] specials by 1 turn.",
+        special: "Cuts the current HP of each enemy by 10%. Reduces special cooldown of [DEX] specials by 1 turn.",
         specialName: "Ittoriyu - Hong Kong Bird",
     },
     1389: {//Nami 5+
