@@ -1153,6 +1153,8 @@ window.flags = {
     1322: { rr: 1, rro: 1 },
     1323: { rr: 1, rro: 1 },
     1324: { rr: 1, rro: 1 },
+    1335: { rr: 1, rro: 1, lrr: 1 },
+    1336: { rr: 1, rro: 1, lrr: 1 },
     1354: { rr: 1, rro: 1, lrr: 1 },
     1355: { rr: 1, rro: 1, lrr: 1 },
     1360: { promo: 1 },
