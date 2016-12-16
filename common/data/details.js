@@ -7049,12 +7049,12 @@ window.details = {
     1335: {//Wedding Sabo
         captain: "Reduces cooldown of all specials by 2 turns at the start of the fight. Boosts ATK of Free Spirit characters by 1.5x.",
         special: "Changes Friend Captain orb into matching. Adds .5x to Chain multiplier for 1 turn",
-        specialName: "Wedding Sabo Special",
+        specialName: "Gentleman's Welcome",
     },
     1336: {//Wedding Sabo
         captain: "Reduces cooldown of all specials by 3 turns at the start of the fight. Boosts ATK of Free Spirit characters by 2x.",
         special: "Changes Friend Captain orb into matching. Adds .5x to Chain multiplier for 1 turn",
-        specialName: "Wedding Sabo Special",
+        specialName: "Gentleman's Welcome",
     },
     1337: {//Kanjuro
         captain: "Boosts ATK of Striker and Free Spirit characters by 2x",
@@ -7166,29 +7166,29 @@ window.details = {
     1356: {//Pekoms
         captain: "Boosts ATK of Powerhouse characters by 1.5x",
         special: "Changes [RCV] and [EMPTY] orbs on Fighter characters into Matching orbs. Makes Perfects easier to hit for 1 turn.",
-        specialName: "Pekoms Special",
+        specialName: "Serious Threat",
         specialNotes: "Increases timing window to hit a Perfect. (Animation remains the same)"
     },
     1357: {//Pekoms
         captain: "Boosts ATK, HP and RCV of Powerhouse characters by 1.5x",
         special: "Changes [RCV] and [EMPTY] orbs on Fighter characters into Matching orbs. Makes Perfects easier to hit for 1 turn.",
-        specialName: "Pekoms Special",
+        specialName: "Serious Threat",
         specialNotes: "Increases timing window to hit a Perfect. (Animation remains the same)"
     },
     1358: {//Tamago
         captain: "Boosts ATK of Cerebral characters by 1.5x and the HP of Striker characters by 1.5x",
         special: "Boosts RCV of all characters by 1.75x and delays all enemies by 1 turn.",
-        specialName: "Tamago Special",
+        specialName: "The Long Legged Gentleman's Resolution",
     },
     1359: {//Tamago
         captain: "Boosts ATK of Cerebral characters by 1.75x and the HP of Striker characters by 1.75x",
         special: "Boosts RCV of all characters by 1.75x and delays all enemies by 1 turn.",
-        specialName: "Tamago Special",
+        specialName: "The Long Legged Gentleman's Resolution",
     },
     1360: {//Winter Luffy
         captain: "Boosts ATK characters with cost 30 or less by 2x and their HP by 1.2x",
         special: "Changes own orb into [QCK], deals 15x character's ATK in [QCK] damage to one enemy",
-        specialName: "Winter Luffy Special",
+        specialName: "Gum-Gum Twin Jet Pistol: Snowflake",
     },
     1361: {//6* Zoro
         captain: "If you have 5 or more Slashers on your crew, boosts ATK of Slasher characters by 2.5x and their HP by 1.5x. If you defeated an enemy last turn, boosts ATK of Slashers by 3x instead",
@@ -7425,13 +7425,13 @@ window.details = {
         captain: "Boosts ATK of characters with cost 40 or less by 1.5x and reduces the HP and ATK of chatacters with cost 41 and greater by 0.5x. Gurantees duplicating a drop upon completion of the island.",
         captainNotes: "Does not work if he was not your captain upon starting the island. Stacks with other addional drop captains, giving you two chances of getting an extra drop.",
         special: "Randomizes all orbs. Boosts ATK of characters with cost 40 or less by 1.75x for 2 turns",
-        specialName: "Baggy Special",
+        specialName: "Chop-Chop Clown Car",
     },
     1391: {//Buggy Legend
         captain: "Boosts ATK of characters with cost 40 or less by 1.5x and reduces the HP and ATK of chatacters with cost 41 and greater by 0.5x. Gurantees duplicating a drop upon completion of the island.",
         captainNotes: "Does not work if he was not your captain upon starting the island. Stacks with other addional drop captains, giving you two chances of getting an extra drop.",
         special: "Randomizes all orbs. Boosts ATK of characters with cost 40 or less by 1.75x for 2 turns",
-        specialName: "Baggy Special",
+        specialName: "Chop-Chop Clown Car",
     },
 };
 
