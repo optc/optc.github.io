@@ -1386,8 +1386,8 @@ window.units = [
     [ "Rebecca, Surviving Bloodline of the Former Royal Family", "PSY", [ "Striker", "Free Spirit" ], 3, 9, 5, 1, 35, 136167, 70, 27, 40, 502, 301, 197, 1 ],
     [ "Rebecca, Target from the Former Royal Family's Bloodline", "PSY", [ "Striker", "Free Spirit" ], 4, 15, 4, 3, 70, 1066998, 441, 239, 153, 819, 492, 348, 1 ],
     [ "", "STR", [ "Fighter", "Free Spirit" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Roronoa Zoro 5+", "DEX", [ "Slasher", "Driven" ], 5, 30, 4, 3, 99, 3000000, 803, 669, 55, 2501, 1434, 233, null ],
-    [ "Nami 5+", "INT", [ "Striker", "Cerebral" ], 5, 30, 4, 3, 99, 3000000, 705, 496, 181, 1970, 1200, 420, null ],
+    [ "Roronoa Zoro, Unfortunate Port Bird: Yakkoudori", "DEX", [ "Slasher", "Driven" ], 5, 30, 4, 3, 99, 3000000, 803, 669, 55, 2501, 1434, 233, 1 ],
+    [ "Nami, Weather Egg: Thunder Breed Tempo", "INT", [ "Striker", "Cerebral" ], 5, 30, 4, 3, 99, 3000000, 705, 496, 181, 1970, 1200, 420, 1 ],
     [ "Legend Baggy", "INT", [ "Driven", "Shooter" ], 5, 30, 4, 3, 70, 1066998, 296, 199, 133, 1310, 577, 299, null ],
     [ "Legend Baggy Evolved", "INT", [ "Driven", "Shooter" ],6, 40, 4, 5, 99, 5000000, 1244, 504, 220, 2506, 1149, 491, null ],
     ];
