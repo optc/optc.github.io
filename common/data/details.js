@@ -7371,11 +7371,13 @@ window.details = {
         captain: "Boosts chances of getting Matching orbs, boosts ATK of Cerebral characters by 2x",
         special: "Reduces Paralysis duration by 3 turns. For Cerebral and Free Spirit characters, amplifies the effects of orbs by 2x for 1 turn. Makes [RCV] and [TND] orbs \"beneficial\" to Cerebral and Free Spirit characters for 1 turns.",
         specialName: "A Decision Made over Sake",
+        specialNotes: "#{orb : 2x}",
     },
     1380: {//Shanks
         captain: "Boosts chances of getting Matching orbs, boosts ATK of Cerebral characters by 2.5x",
         special: "Reduces Paralysis duration by 3 turns. For Cerebral and Free Spirit characters, amplifies the effects of orbs by 2x for 1 turn. Makes [RCV] and [TND] orbs \"beneficial\" to Cerebral and Free Spirit characters for 1 turns.",
         specialName: "A Decision Made over Sake",
+        specialNotes: "#{orb : 2x}",
     },
     1381: {//Christmas Tashigi
         captain: "Boosts ATK and RCV of Slasher and Cerebral characters by 1.2x",
@@ -7406,6 +7408,17 @@ window.details = {
         captain: "Reduces damage received by 25%",
         special: "Removes blindness",
         specialName: "Mother's Promise",
+    },
+    1388: {//Zoro 5+
+        captain: "Boosts ATK of [DEX] characters by 2.5x",
+        special: "Cuts the current HP of each enemy by 10%. Reduces cooldown of [DEX] specials by 1 turn.",
+        specialName: "Ittoriyu - Hong Kong Bird",
+    },
+    1389: {//Nami 5+
+        captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, Boosts ATK of [INT] characters by 2x and their RCV by 1.5x. ",
+        special: "Deals 20x character's ATK in [INT] damage to all enemies. Amplifies the effect of orbs for [INT] characters by 1.75x for 1 turn ",
+        specialName: "Thunder Breed Tempo",
+        specialNotes: "#{orb : 1.75x}",
     },
 };
 

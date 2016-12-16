@@ -1321,8 +1321,8 @@ window.units = [
     [ "'Grand Staff Officer' Tsuru, Navy HQ Vice Admiral", "QCK", [ "Cerebral", "Shooter" ], 5, 30, 4, 4, 99, 4000000, 832, 467, 175, 1960, 1252, 419, 1 ],
     [ "Momonga, Monster Slash of the Great Commander", "DEX", [ "Cerebral", "Slasher" ], 4, 15, 6, 3, 50, 392109, 136, 120, 35, 993, 591, 172, 1 ],
     [ "Momonga, Monster Slash of the Great Commander, Navy Vice Admiral", "DEX", [ "Cerebral", "Slasher" ], 5, 30, 4, 4, 99, 4000000, 939, 529, 133, 2342, 1296, 330, 1 ],
-    [ "Onigumo, Swordsman of the Eight Sword Current", "INT", [ "Driven", "Slasher" ], 4, 15, 6, 3, 50, 392109, 172, 136, 5, 1294, 638, 99, 1 ],
-    [ "Onigumo, Swordsman of the Eight Sword Current, Navy Vice Admiral", "INT", [ "Driven", "Slasher" ], 5, 30, 4, 4, 99, 4000000, 1243, 572, 46, 2598, 1383, 225, 1 ],
+    [ "Onigumo, Swordsman of the Eight-Sword Style", "INT", [ "Driven", "Slasher" ], 4, 15, 6, 3, 50, 392109, 172, 136, 5, 1294, 638, 99, 1 ],
+    [ "Onigumo, Swordsman of the Eight-Sword Style, Navy Vice Admiral", "INT", [ "Driven", "Slasher" ], 5, 30, 4, 4, 99, 4000000, 1243, 572, 46, 2598, 1383, 225, 1 ],
     [ "Royal Vampire Corazon", "PSY", [ "Cerebral", "Free Spirit" ], 4, 12, 6, 1, 50, 392109, 84, 51, 33, 935, 526, 206, 1 ],
     [ "Royal Vampire Corazon, Halloween Night - Masquerade", "PSY", [ "Cerebral", "Free Spirit" ], 5, 20, 4, 3, 99, 3000000, 869, 467, 170, 1840, 1014, 337, 1 ],
     [ "Leo, Tontatta Tribe - Tonta Corps", "DEX", [ "Striker", "Free Spirit" ], 3, 12, 5, 1, 50, 392109, 40, 40, 40, 888, 518, 180, 1 ],
@@ -1385,6 +1385,9 @@ window.units = [
     [ "Toy Soldier, Thunder Soldier", "QCK", [ "Striker", "Shooter" ], 4, 20, 4, 4, 99, 3000000, 792, 557, 151, 1552, 1300, 300, 1 ],
     [ "Rebecca, Surviving Bloodline of the Former Royal Family", "PSY", [ "Striker", "Free Spirit" ], 3, 9, 5, 1, 35, 136167, 70, 27, 40, 502, 301, 197, 1 ],
     [ "Rebecca, Target from the Former Royal Family's Bloodline", "PSY", [ "Striker", "Free Spirit" ], 4, 15, 4, 3, 70, 1066998, 441, 239, 153, 819, 492, 348, 1 ],
+    [ "", "STR", [ "Fighter", "Free Spirit" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Roronoa Zoro 5+", "DEX", [ "Slasher", "Driven" ], 5, 30, 4, 3, 99, null, 803, 669, 55, 2501, 1434, 233, null ],
+    [ "Nami 5+", "INT", [ "Striker", "Cerebral" ], 5, 30, 4, 3, 99, null, 705, 496, 181, 1970, 1200, 420, null ],
     ];
     
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
