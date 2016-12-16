@@ -3811,12 +3811,4 @@ window.captains = {
     1384: {
         atk: function(p) { return p.unit.class.has("Striker") ? 2.5 : 1; },
     },
-    
-    1338: {
-        atk: function(p) { return p.unit.type == "DEX" ? 2.5 : 1; },
-    },
-    1339: {
-        atk: function(p) { return p.unit.type == "INT" ? 2 : 1; },
-        rcv: function(p) { return p.unit.type == "INT" ? 1.5 : 1; },
-    },
 };

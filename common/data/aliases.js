@@ -1385,6 +1385,4 @@ window.aliases = {
     1384: ['オモチャの兵隊さん 雷兵', '', 'Toy Soldier', 'Kyros'],
     1385: ['レベッカ 生き残った旧王家の血', '', 'Kid Rebecca'],
     1386: ['レベッカ 狙われる旧王家の血', '', 'Kid Rebecca'],
-    1388: ['', '', 'Mega Zoro'],
-    1389: ['', '', 'Mega Nami'],
 };

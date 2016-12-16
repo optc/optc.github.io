@@ -1879,7 +1879,4 @@ window.specials = {
     1380: {
         orb: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral")) ? CrunchUtils.getOrbMultiplier(p.orb, 1, 2) : CrunchUtils.getOrbMultiplier(p.orb, 1, 1); }	
     },
-    1389: {
-        orb: function(p) { return p.unit.type == "INT" ? CrunchUtils.getOrbMultiplier(p.orb, 1, 1.75) : CrunchUtils.getOrbMultiplier(p.orb, 1, 1); },	
-    },
 };
