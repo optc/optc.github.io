@@ -1388,8 +1388,8 @@ window.units = [
     [ "", "STR", [ "Fighter", "Free Spirit" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Roronoa Zoro, Unfortunate Port Bird: Yakkoudori", "DEX", [ "Slasher", "Driven" ], 5, 30, 4, 3, 99, 3000000, 803, 669, 55, 2501, 1434, 233, 1 ],
     [ "Nami, Weather Egg: Thunder Breed Tempo", "INT", [ "Striker", "Cerebral" ], 5, 30, 4, 3, 99, 3000000, 705, 496, 181, 1970, 1200, 420, 1 ],
-    [ "Legend Baggy", "INT", [ "Driven", "Shooter" ], 5, 30, 4, 3, 70, 1066998, 296, 199, 133, 1310, 577, 299, null ],
-    [ "Legend Baggy Evolved", "INT", [ "Driven", "Shooter" ],6, 40, 4, 5, 99, 5000000, 1244, 504, 220, 2506, 1149, 491, null ],
+    [ "Legend Baggy", "INT", [ "Driven", "Shooter" ], 5, 30, 5, 3, 70, 1066998, 296, 199, 133, 1310, 577, 299, null ],
+    [ "Legend Baggy Evolved", "INT", [ "Driven", "Shooter" ],6, 40, 5, 5, 99, 5000000, 1244, 504, 220, 2506, 1149, 491, null ],
     ];
     
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
