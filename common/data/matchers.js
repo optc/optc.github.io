@@ -397,6 +397,24 @@ window.matchers = [
         matcher: /(reduces|removes).+Paralysis/i 
     },
     
+    {
+        name: 'Chain Boosters',
+        target: 'special',
+        matcher: /Adds.+to Chain/i 
+    },
+    
+    {
+        name: 'Chain Lockers',
+        target: 'special',
+        matcher: /Locks the chain multiplier/i 
+    },
+    
+    {
+        name: '"Beneficial" Orb Enablers',
+        target: 'special',
+        matcher: /Makes.+ orbs "beneficial"/i
+    },
+    
     /* * * * * Sailor * * * * */
     
     {
