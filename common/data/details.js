@@ -6600,14 +6600,14 @@ window.details = {
     },
     1273: {//Jesus Burgess
         captain: "Boosts ATK of Fighter and Powerhouse characters by 1.5x and their HP by 1.2",
-        captainNotes: "Boosts stack, so a Fighter/Powerhouse character gets 2.25x ATK and 1.3225 HP",
+        captainNotes: "Boosts stack, so a Fighter/Powerhouse character gets 2.25x ATK and 1.44x HP",
         special: "Deals large [STR] damage to all enemies. Boosts ATK of Fighter characters by 1.5x for 5 turns",
         sailor: "Boosts HP of all characters by 75",
         specialName: "Champion of the Wild Roar",
     },
     1274: {//Jesus Burgess Evo
         captain: "Boosts ATK of Fighter and Powerhouse characters by 1.6x and their HP by 1.2x",
-        captainNotes: "Boosts stack, so a Fighter/Powerhouse character gets 2.56x ATK and 1.3225 HP",
+        captainNotes: "Boosts stack, so a Fighter/Powerhouse character gets 2.56x ATK and 1.44x HP",
         special: "Deals large [STR] damage to all enemies. Boosts ATK of Fighter characters by 1.5x for 5 turns",
         sailor: "Boosts HP of all characters by 75",
         specialName: "Champion of the Wild Roar",
