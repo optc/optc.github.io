@@ -1385,8 +1385,8 @@ window.aliases = {
     1384: ['オモチャの兵隊さん 雷兵', '', 'Toy Soldier', 'Kyros'],
     1385: ['レベッカ 生き残った旧王家の血', '', 'Kid Rebecca'],
     1386: ['レベッカ 狙われる旧王家の血', '', 'Kid Rebecca'],
-    1388: ['', '', 'Mega Zoro'],
-    1389: ['', '', 'Mega Nami'],
-    1390: ['', '', 'Legend Buggy', 'Legend Baggy'],
-    1391: ['', '', 'Legend Buggy', 'Legend Baggy'],
+    1388: ['ロロノア・ゾロ 厄港鳥（ヤッコウドリ）', '', 'Mega Zoro'],
+    1389: ['ナミ サンダーブリード＝テンポ', '', 'Mega Nami'],
+    1390: ['道化のバギー バギー海賊団船長', '', 'Legend Buggy', 'Legend Baggy'],
+    1391: ['キャプテン・バギー', '', 'Legend Buggy', 'Legend Baggy'],
 };

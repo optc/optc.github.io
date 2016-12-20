@@ -1333,8 +1333,8 @@ window.units = [
     [ "Mansherry, Princess of Tontatta Kingdom", "PSY", [ "Striker", "Free Spirit" ], 4, 20, 4, 3, 99, 3000000, 606, 303, 234, 1472, 604, 497, 1],
     [ "Kabu", "STR", [ "Striker", "Powerhouse" ], 3, 15, 6, 2, 70, 1066998, 64, 37, 16, 1604, 964, 106, 1],
     [ "Bian", "DEX", [ "Striker", "Free Spirit" ], 3, 15, 4, 2, 70, 1066998, 38, 28, 28, 888, 789, 288, 1],
-    [ "Sabo, One Night with a Noblewoman", "INT", [ "Striker", "Free Spirit" ], 4, 13, 6, 2, 50, 392109, 203, 142, 32, 1106, 574, 171, 1],
-    [ "Sabo, Phantom of the Opera", "INT", [ "Striker", "Free Spirit" ], 5, 20, 4, 4, 99, 3000000, 1035, 501, 126, 2191, 1281, 307, 1],
+    [ "Sabo, One Act with You", "INT", [ "Striker", "Free Spirit" ], 4, 13, 6, 2, 50, 392109, 203, 142, 32, 1106, 574, 171, 1],
+    [ "Sabo, Phantom of the Theatre", "INT", [ "Striker", "Free Spirit" ], 5, 20, 4, 4, 99, 3000000, 1035, 501, 126, 2191, 1281, 307, 1],
     [ "Kanjuro", "PSY", [ "Striker", "Free Spirit" ], 4, 25, 6, 4, 70, 1066998, 554, 261, 35, 1275, 707, 183, 1],
     [ "Evening Shower Kanjuro", "PSY", [ "Striker", "Free Spirit" ], 5, 40, 4, 5, 99, 4000000, 1209, 645, 133, 2414, 1253, 330, 1],
     [ "Tony Tony Chopper Jump Point", "DEX", [ "Fighter", "Powerhouse" ], 4, 20, 5, 2, 99, 3000000, 162, 91, 29, 2334, 892, 296, 1],
@@ -1388,8 +1388,8 @@ window.units = [
     [ "", "STR", [ "Fighter", "Free Spirit" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Roronoa Zoro, Unfortunate Port Bird: Yakkoudori", "DEX", [ "Slasher", "Driven" ], 5, 30, 4, 3, 99, 3000000, 803, 669, 55, 2501, 1434, 233, 1 ],
     [ "Nami, Weather Egg: Thunder Breed Tempo", "INT", [ "Striker", "Cerebral" ], 5, 30, 4, 3, 99, 3000000, 705, 496, 181, 1970, 1200, 420, 1 ],
-    [ "Legend Baggy", "INT", [ "Driven", "Shooter" ], 5, 30, 5, 3, 70, 1066998, 296, 199, 133, 1310, 577, 299, null ],
-    [ "Legend Baggy Evolved", "INT", [ "Driven", "Shooter" ],6, 40, 5, 5, 99, 5000000, 1244, 504, 220, 2506, 1149, 491, null ],
+    [ "Buggy Clown, Captain of the Buggy Pirates", "INT", [ "Driven", "Shooter" ], 5, 30, 5, 3, 70, 1066998, 296, 199, 133, 1310, 577, 299, 1 ],
+    [ "Captain Buggy", "INT", [ "Driven", "Shooter" ],6, 40, 5, 5, 99, 5000000, 1244, 504, 220, 2506, 1149, 491, 1 ],
     ];
     
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
