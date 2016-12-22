@@ -586,6 +586,22 @@ window.drops = {
             "14": [ 1353 ],
         },
         
+        {
+            name: "Return to Sabaody Archipelago",
+            shortName: "Straw Hat Return",
+            thumb: 1393,
+            completion: '5x Rainbow Gems',
+            "01": [  ],
+            "02": [  ],
+            "03": [ 1393 ],
+            "04": [  ],
+            "05": [  ],
+            "06": [  ],
+            "07": [  ],
+            "08": [  ],
+            "09": [ 1392 ],
+        },
+        
     ],
 
     'Weekly Island': [

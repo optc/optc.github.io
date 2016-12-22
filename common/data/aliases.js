@@ -1389,4 +1389,6 @@ window.aliases = {
     1389: ['ナミ サンダーブリード＝テンポ', '', 'Mega Nami'],
     1390: ['道化のバギー バギー海賊団船長', '', 'Legend Buggy', 'Legend Baggy'],
     1391: ['キャプテン・バギー', '', 'Legend Buggy', 'Legend Baggy'],
+    1392: ['', '', ''],
+    1393: ['', '', 'Fake Straw Hat', 'Impostor Straw Hat', 'Imposter Straw Hat'],
 };

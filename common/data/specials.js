@@ -1890,4 +1890,13 @@ window.specials = {
         atk: function(p) { return p.unit.cost <= 40 ? 1.75 : 1; },
         type: "class"
     },
+    1392: {
+        atk: function(p) { return p.unit.type == "PSY" ? 1.75 : 1; },
+        type: "class"
+    },
+    1393: {
+        atk: function(p) { return 1.1; },
+        type: "class",
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, 1, 1.1); },
+    },
 };

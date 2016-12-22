@@ -1379,8 +1379,8 @@ window.units = [
     [ "Marguerite, Ambition of the Kuja Pirates", "DEX", [ "Shooter", "Slasher" ], 4, 26, 5, 3, 99, 3000000, 830, 452, 143, 1759, 974, 403, 1 ],
     [ "Shanks, Captain of the Red Hair Pirates", "INT", [ "Cerebral", "Free Spirit" ], 4, 30, 4, 2, 70, 1778330, 1094, 514, 126, 1674, 767, 242, 1 ],
     [ "'Red Hair' Shanks, Captain of the Red Hair Pirates", "INT", [ "Cerebral", "Free Spirit" ], 5, 50, 4, 3, 99, 5000000, 1600, 692, 200, 2552, 1440, 353, 1 ],
-    [ "Christmas Tashigi", "PSY", [ "Slasher", "Cerebral" ], 4, 13, 6, 3, 50, 392109, 109, 74, 55, 802, 474, 244, null ],
-    [ "Christmas Tashigi Evolved", "PSY", [ "Slasher", "Cerebral" ], 5, 20, 5, 4, 99, 3000000, 742, 416, 198, null, null, null, null ],
+    [ "Tashigi, Silent Night Star", "PSY", [ "Slasher", "Cerebral" ], 4, 13, 6, 3, 50, 392109, 109, 74, 55, 802, 474, 244, null ],
+    [ "Tashigi, Holy Night Heroine", "PSY", [ "Slasher", "Cerebral" ], 5, 20, 5, 4, 99, 3000000, 742, 416, 198, null, null, null, null ],
     [ "Toy Soldier", "QCK", [ "Striker", "Shooter" ], 3, 13, 5, 2, 50, 392109, 81, 72, 28, 867, 611, 186, 1 ],
     [ "Toy Soldier, Thunder Soldier", "QCK", [ "Striker", "Shooter" ], 4, 20, 4, 4, 99, 3000000, 792, 557, 151, 1552, 1300, 300, 1 ],
     [ "Rebecca, Surviving Bloodline of the Former Royal Family", "PSY", [ "Striker", "Free Spirit" ], 3, 9, 5, 1, 35, 136167, 70, 27, 40, 502, 301, 197, 1 ],
@@ -1390,6 +1390,8 @@ window.units = [
     [ "Nami, Weather Egg: Thunder Breed Tempo", "INT", [ "Striker", "Cerebral" ], 5, 30, 4, 3, 99, 3000000, 705, 496, 181, 1970, 1200, 420, 1 ],
     [ "Buggy Clown, Captain of the Buggy Pirates", "INT", [ "Driven", "Shooter" ], 5, 30, 5, 3, 70, 1066998, 296, 199, 133, 1310, 577, 299, 1 ],
     [ "Captain Buggy", "INT", [ "Driven", "Shooter" ],6, 40, 5, 5, 99, 5000000, 1244, 504, 220, 2506, 1149, 491, 1 ],
+    [ "Sentomaru Story", "PSY", [ "Slasher", "Striker" ], 4, 20, 5, 3, 99, null, null, null, null, 2805, 955, 201, null ],
+    [ "Demalo Black", "INT", [ "Shooter", "Driven" ], 4, 15, 7, 1, 99, null, 102, 105, 49, null, null, null, null ],
     ];
     
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],

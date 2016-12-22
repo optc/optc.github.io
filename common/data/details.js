@@ -7433,5 +7433,16 @@ window.details = {
         special: "Randomizes all orbs. Boosts ATK of characters with cost 40 or less by 1.75x for 2 turns",
         specialName: "Chop-Chop Clown Car",
     },
+    1392: {//Sentomaru
+        captain: "Boosts ATK of Striker characters by 2x and boosts the HP of [PSY] characters by 1.25x",
+        captainNotes: "A character with both classes will get both boosts",
+        special: "Deals 25x character's ATK in [PSY] damage to all enemies. If during that turn every unit scores a Perfect hit, boosts ATK of [PSY] characters by 1.75x in the following turn.",
+        specialName: "Large Cutting Axe",
+    },
+    1393: {//Demaro Black
+        captain: "Boosts ATK of characters with cost 30 or less by 2x",
+        special: "Boosts the ATK of all characters by 1.1x, slightly boosts chances of getting matching orbs and amplifies the effect of orbs by 1.1x for 7 turns",
+        specialName: "Three Forked Tongue",
+    },
 };
 
