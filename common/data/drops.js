@@ -528,6 +528,7 @@ window.drops = {
             name: "Marineford",
             shortName: "Marineford",
             thumb: 1228,
+            global: true,
             completion: '5x Rainbow Gems',
             "01": [  ],
             "02": [ 1223 ],
@@ -1106,6 +1107,7 @@ window.drops = {
         {
             name: "Men are Forbidden!? The Secret Flower Garden",
             thumb: 918,
+            global: true,
             condition: 'You can only bring DEX units',
             "All Difficulties": [ 917, 919, 920, -920, -791, -756, -720, -706, -705, -542, -541, -522 ]
         },
@@ -1113,6 +1115,7 @@ window.drops = {
         {
             name: "Hannyabal's Great Ambition",
             thumb: 929,
+            global: true,
             condition: 'You can only bring STR units',
             "All Difficulties": [ 928, 930, 931, -752, -758, -520, -729, -733, -787, -930, -544, -506 ]
         },
