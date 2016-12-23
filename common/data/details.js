@@ -7410,6 +7410,12 @@ window.details = {
         special: "Removes blindness",
         specialName: "Mother's Promise",
     },
+    1387: {//Luffy 5+
+        captain: "Boosts ATK of all characters by 2.25x and their HP by 1.25x. Boosts ATK by an additional 1.25x after scoring 4 Perfects in a row",
+        captainNotes: "After 4 Perfects, your captain boost is 2.8125x",
+        special: "Deals 40x character's ATK in [STR] damage to all enemies, and delays all enemies for 1 turn",
+        specialName: "Luffy+ Special",
+    },
     1388: {//Zoro 5+
         captain: "Boosts ATK of [DEX] characters by 2.5x",
         special: "Cuts the current HP of each enemy by 10%. Reduces special cooldown of [DEX] specials by 1 turn.",
