@@ -1412,6 +1412,7 @@ window.units = [
     [ "Timeskip Chopper", "STR", [ "Fighter", "Powerhouse" ], 4, 15, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Timeskip Chopper Evolved", "STR", [ "Fighter", "Powerhouse" ], 5, 30, null, null, null, null, null, null, null, null, null, null, null ],
     [ "6+ Whitebeard", "STR", [ "Striker", "Powerhouse" ], 6, 65, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Ray Shop Sanji", "INT", [ "Fighter", "Powerhouse" ], 4, 20, null, null, null, null, null, null, null, null, null, null, null ],
     ];
     
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],

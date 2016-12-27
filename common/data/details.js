@@ -7480,6 +7480,78 @@ window.details = {
         special: "For Slasher characters, randomizes all non-matching orbs. Swaps this unit with your captain for 2 turns",
         specialName: "Out-of-Control White Smoke",
     },
+    1403: {//Timeskip Luffy
+        captain: "Boosts ATK of Free Spirit characters by 2.5x, reduce damage received by 15%. If you use \"Gomu Gomu no Red Hawk\" THIS LUFFY boosts ATK of Free Spirit characters by 4x instead.",
+        special: "Deal very large [QCK] damage to one enemy and [QCK], [DEX], and [PSY] orbs are treated as beneficial for 3 turns",
+        specialName: "Gomu Gomu no Red Hawk",
+    },
+    1404: {//Timeskip Luffy
+        captain: "Boosts ATK of Free Spirit characters by 2.5x, reduce damage received by 15%. If you use \"Gomu Gomu no Red Hawk\" THIS LUFFY boosts ATK of Free Spirit characters by 4x instead.",
+        special: "Deal very large [QCK] damage to one enemy and [QCK], [DEX], and [PSY] orbs are treated as beneficial for 3 turns",
+        specialName: "Gomu Gomu no Red Hawk",
+    },
+    1405: {//Timeskip Usopp
+        captain: "Boost ATK of Shooters by 1.75x, and their RCV by 1.25x",
+        special: "Deals 10 hits of 2,000 fixed damage to random enemies, boosts ATK of Shooters against enemies with delay protection by 1.75x and amplifies the effect of orbs by 1.75x for 1 turn",
+        specialName: "Usopp Special",
+        sailor: "When HP is low, boost ATK and RCV of Shooters by 100",
+        
+    },
+    1406: {//Timeskip Usopp
+        captain: "Boost ATK of Shooters by 1.75x, and their RCV by 1.25x",
+        special: "Deals 10 hits of 2,000 fixed damage to random enemies, boosts ATK of Shooters against enemies with delay protection by 1.75x and amplifies the effect of orbs by 1.75x for 1 turn",
+        specialName: "Usopp Special",
+        sailor: "When HP is low, boost ATK and RCV of Shooters by 100",
+    },
+    1407: {//Timeskip Robin
+        captain: "Boosts ATK of [DEX] and [PSY] characters by 1.75x an their RCV by 1.25x",
+        special: "Reduces Despair duration by 3 turns and boosts ATK of [DEX] and [PSY] characters by 2x for 1 turn",
+        specialName: "Robin Special",
+        sailor: "Reduces duration of Blindness by 3 turns"
+    },
+    1408: {//Timeskip Robin
+        captain: "Boosts ATK of [DEX] and [PSY] characters by 1.75x an their RCV by 1.25x",
+        special: "Reduces Despair duration by 3 turns and boosts ATK of [DEX] and [PSY] characters by 2x for 1 turn",
+        specialName: "Robin Special",
+        sailor: "Reduces duration of Blindness by 3 turns"
+    },
+    1409: {//Timeskip Brook
+        captain: "Protects from defeat as long as HP is above x%",
+        special: "Delay all enemies by 1 turn, and boosts ATK of Slasher and Free Spirit characters by 1.75x for 1 turn",
+        specialName: "Brook Special",
+        sailor: "Completely resists Paralysis on this character",
+    },
+    1410: {//Timeskip Brook
+        captain: "Protects from defeat as long as HP is above x%",
+        special: "Delay all enemies by 1 turn, and boosts ATK of Slasher and Free Spirit characters by 1.75x for 1 turn",
+        specialName: "Brook Special",
+        sailor: "Completely resists Paralysis on this character",
+    },
+    1411: {//Timeskip Chopper Again
+        captain: "Boosts ATK of Powerhouse characters by 2.25x, reduces crew's RCV to 0",
+        special: "Reduce enemies damage reduction and increase defense duration by 3 turns and deals extra large typeless damage to all enemies",
+        specialnotes: "This does not affect threshold damage reduction",
+        specialName: "Chopper Special",
+        sailor: "If Chopper has a [STR] orb and you hit a Perfect with him, keep his [STR] orb for the next turn",
+    },
+    1412: {//Timeskip Chopper Again
+        captain: "Boosts ATK of Powerhouse characters by 2.25x, reduces crew's RCV to 0",
+        special: "Reduce enemies damage reduction and increase defense duration by 3 turns and deals extra large typeless damage to all enemies",
+        specialnotes: "This does not affect threshold damage reduction",
+        specialName: "Chopper Special",
+        sailor: "If Chopper has a [STR] orb and you hit a Perfect with him, keep his [STR] orb for the next turn",
+    },
+    1413: {//6+ Whitebeard
+        captain: "Boosts ATK of all characters by 3x if HP is below 30% at the start of the turn, 1.75x otherwise",
+        special: "Cuts the current HP of each enemy by 30%, reduces special cooldown of all specials by 1 turn.",
+        specialName: "Seaquake",
+    },
+    1414: {//Shop Sanji
+        captain: "Boosts ATK of Powerhouse characters by 2.5x",
+        special: "Changes own orb into [INT] and reduce the special cooldown of Powerhouse characters by 1 turn.",
+        specialName: "Sanji Special",
+    },
+    
     
 };
 

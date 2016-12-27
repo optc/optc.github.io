@@ -3837,7 +3837,29 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Striker") ? 2 : 1; },
         hp: function(p) { return p.unit.type == "PSY" ? 1.25 : 1; },
     },
-    1391: {
+    1393: {
         atk: function(p) { return p.unit.cost <= 30 ? 2 : 1; },
+    },
+    1394: {
+        atk: function(p) { return p.unit.type == "QCK" || return p.unit.type == "STR" ? 1.5 : 1; },
+        rcv: function(p) { return p.unit.type == "QCK" || return p.unit.type == "STR" ? 1.1 : 1; },
+    },
+    1395: {
+        atk: function(p) { return p.unit.type == "QCK" || return p.unit.type == "STR" ? 2.25 : 1; },
+        rcv: function(p) { return p.unit.type == "QCK" || return p.unit.type == "STR" ? 1.2 : 1; },
+    },
+    1396: {
+        atk: function(p) { return p.unit.class.has("Driven") ? 1.75 : 1; },
+        hp: function(p) { return p.unit.class.has("Striker") ? 1.25 : 1; },
+    },
+    1397: {
+        atk: function(p) { return p.unit.class.has("Driven") ? 2 : 1; },
+        hp: function(p) { return p.unit.class.has("Striker") ? 1.5 : 1; },
+    },
+    1398: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Cerebral") ? 1.5 : 1; }
+    },
+    1399: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Cerebral") ? 1.5 : 1; }
     },
 };
