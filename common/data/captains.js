@@ -3841,12 +3841,12 @@ window.captains = {
         atk: function(p) { return p.unit.cost <= 30 ? 2 : 1; },
     },
     1394: {
-        atk: function(p) { return p.unit.type == "QCK" || return p.unit.type == "STR" ? 1.5 : 1; },
-        rcv: function(p) { return p.unit.type == "QCK" || return p.unit.type == "STR" ? 1.1 : 1; },
+        atk: function(p) { return p.unit.type == "QCK" || p.unit.type == "STR" ? 1.5 : 1; },
+        rcv: function(p) { return p.unit.type == "QCK" || p.unit.type == "STR" ? 1.1 : 1; },
     },
     1395: {
-        atk: function(p) { return p.unit.type == "QCK" || return p.unit.type == "STR" ? 2.25 : 1; },
-        rcv: function(p) { return p.unit.type == "QCK" || return p.unit.type == "STR" ? 1.2 : 1; },
+        atk: function(p) { return p.unit.type == "QCK" || p.unit.type == "STR" ? 2.25 : 1; },
+        rcv: function(p) { return p.unit.type == "QCK" || p.unit.type == "STR" ? 1.2 : 1; },
     },
     1396: {
         atk: function(p) { return p.unit.class.has("Driven") ? 1.75 : 1; },
