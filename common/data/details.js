@@ -7450,5 +7450,36 @@ window.details = {
         special: "Boosts the ATK of all characters by 1.1x, slightly boosts chances of getting matching orbs and amplifies the effect of orbs by 1.1x for 7 turns",
         specialName: "Three Forked Tongue",
     },
+    1394: {//Kimono Baby 5
+        captain: "Boosts ATK of [STR] and [QCK] characters by 2.25x an their RCV by 1.2x",
+        special: "Recovers 7x character's RCV in HP. Boosts ATK of Fighter and Striker characters by 1.5x for 1 turn",
+        specialName: "Nation's Ambition",
+    },
+    1395: {//Kimono Baby 5
+        captain: "Boosts ATK of [STR] and [QCK] characters by 1.5x an their RCV by 1.1x",
+        special: "Recovers 7x character's RCV in HP. Boosts ATK of Fighter and Striker characters by 1.5x for 1 turn",
+        specialName: "Nation's Ambition",
+    },
+    1396: {//Tashigi Shambles
+        captain: "Boosts ATK of Driven characters by 1.75x and the HP of Striker Characters by 1.25x",
+        special: "Deals 7 hits of random [DEX] damage to random enemies. Reduces the defense of all by 80% and delays all enemies for 1 turn",
+        specialName: "Surprise Jitte Onslaught",
+    },
+    1397: {//Tashigi Shambles
+        captain: "Boosts ATK of Driven characters by 2x and the HP of Striker Characters by 1.5x",
+        special: "Deals 7 hits of random [DEX] damage to random enemies. Reduces the defense of all by 80% and delays all enemies for 1 turn",
+        specialName: "Surprise Jitte Onslaught",
+    },
+    1398: {//Smoker Shambles
+        captain: "Boosts ATK of Slasher and Cerebral characters by 1.5x",
+        special: "For Slasher characters, randomizes all non-matching orbs. Swaps this unit with your captain for 2 turns",
+        specialName: "Out-of-Control White Smoke",
+    },
+    1399: {//Smoker Shambles
+        captain: "Boosts ATK of Slasher and Cerebral characters by 1.5x, reduces damage received by 15%",
+        special: "For Slasher characters, randomizes all non-matching orbs. Swaps this unit with your captain for 2 turns",
+        specialName: "Out-of-Control White Smoke",
+    },
+    
 };
 

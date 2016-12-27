@@ -1392,4 +1392,10 @@ window.families = [
     "Buggy",
     "Sentomaru",
     "Demalo Black",
+    "Baby 5",
+    "Baby 5",
+    "Tashigi",
+    "Tashigi",
+    "Smoker",
+    "Smoker",
 ];
