@@ -7486,11 +7486,11 @@ window.details = {
         special: [
             {
                 "description": "Deals [STR] damage to all enemies, reduces Bind and Despair duration by 1 turn and boosts Color Affinity of Shooters by 1.5x for 1 turn",
-                "cooldown": 26,
+                "cooldown": [ 26, null ],
             },
             {
                 "description": "Deals large [STR] damage to all enemies, reduces Bind and Despair duration by 2 turn and boosts Color Affinity of Shooters by 1.75x for 1 turn",
-                "cooldown": 33,
+                "cooldown": [ 33, null ],
             },
         ],
         specialName: "Gladius Special",
@@ -7501,25 +7501,25 @@ window.details = {
         special: [
             {
                 "description": "Deals [STR] damage to all enemies, reduces Bind and Despair duration by 1 turn and boosts Color Affinity of Shooters by 1.5x for 1 turn",
-                "cooldown": 26,
+                "cooldown": [ 26, null ],
             },
             {
                 "description": "Deals large [STR] damage to all enemies, reduces Bind and Despair duration by 2 turn and boosts Color Affinity of Shooters by 1.75x for 1 turn",
-                "cooldown": 33,
+                "cooldown": [ 33, null ],
             },
         ],
         specialName: "Gladius Special",
     },
     1402: {//Colo Dalton
-        captain: "",
+        captain: "Not Translated",
         special: [
             {
                 "description": "Deals 3x character's ATK in [PSY] damage to one enemy, boosts the ATK of [PSY] characters by 1.3x for 1 turn",
-                "cooldown": 14,
+                "cooldown": [ 14, null ],
             },
             {
                 "description": "Deals 13x character's ATK in [PSY] damage to one enemy, boosts the ATK of [PSY] characters by 1.5x for 1 turn",
-                "cooldown": 18,
+                "cooldown": [ 18, null ],
             },
         ],
         specialName: "Dalton Special",
