@@ -7594,7 +7594,5 @@ window.details = {
         special: "Changes own orb into [INT] and reduce the special cooldown of Powerhouse characters by 1 turn.",
         specialName: "Sanji Special",
     },
-    
-    
 };
 
