@@ -3881,11 +3881,12 @@ window.captains = {
     1403: {
         atk: function(p){ 
             return p.unit.class.has("Free Spirit") && window.specials[1403].turnedOn ? 4 : 2.5; 
+            
         },
     },
     1404: {
         atk: function(p){ 
-            return p.unit.class.has("Free Spirit") && window.specials[1404].turnedOn ? 4 : 2.5; 
+              return p.unit.class.has("Free Spirit") ? (window.specials[1404].turnedOn ? 4 : 2.5) : 1;
         },
     },
     

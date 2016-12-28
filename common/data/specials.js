@@ -1904,7 +1904,7 @@ window.specials = {
         onActivation: function(p) {
             window.specials[1403].turnedOn = true;
             p.scope.notify({
-                text: 'Only affects damage if Luffy is your captain',
+                text: 'Only affects damage is Luffy is your captain, and each Luffy only boosts his own Captain damage.',
                 name: '1403warning'
             });
         },
@@ -1917,7 +1917,7 @@ window.specials = {
         onActivation: function(p) {
             window.specials[1404].turnedOn = true;
             p.scope.notify({
-                text: 'Only affects damage if Luffy is your captain',
+                text: 'Only affects damage is Luffy is your captain, and each Luffy only boosts his own Captain damage.',
                 name: '1404warning'
             });
         },

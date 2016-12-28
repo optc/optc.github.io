@@ -1402,7 +1402,7 @@ window.units = [
     [ "Gladius, Pica Military Executive", "STR", [ "Driven", "Shooter" ], 5, 40, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Coliseum Dalton", "PSY", [ "Slasher", "Cerebral" ], 4, 20, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Timeskip Luffy", "QCK", [ "Fighter", "Free Spirit" ], 5, 30, null, 4, 70, 1066998, null, null, null, null, null, null, null ],
-    [ "Timeskip Luffy Evolved", "QCK", [ "Fighter", "Free Spirit" ], 6, 55, null, 5, 99, 5000000, null, null, null, null, null, null, null ],
+    [ "Timeskip Luffy Evolved", "QCK", [ "Fighter", "Free Spirit" ], 6, 55, 4, 5, 99, 5000000, 1, 1, 1, 3000, 1500, 1, null ],
     [ "Timeskip Usopp", "PSY", "Shooter", 4, 15, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Timeskip Usopp Evolved", "PSY", "Shooter", 5, 30, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Timeskip Robin", "DEX", [ "Fighter", "Cerebral" ], 4, 15, null, null, null, null, null, null, null, null, null, null, null ],
