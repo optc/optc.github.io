@@ -1899,4 +1899,30 @@ window.specials = {
         type: "class",
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, 1, 1.1); },
     },
+    1403: {
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[1403].turnedOn = true;
+            p.scope.notify({
+                text: 'Only affects damage if Luffy is your captain',
+                name: '1403warning'
+            });
+        },
+        onDeactivation: function(p) {
+            window.specials[1403].turnedOn = false;
+        }
+    },
+    1404: {
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[1404].turnedOn = true;
+            p.scope.notify({
+                text: 'Only affects damage if Luffy is your captain',
+                name: '1404warning'
+            });
+        },
+        onDeactivation: function(p) {
+            window.specials[1404].turnedOn = false;
+        }
+    },
 };

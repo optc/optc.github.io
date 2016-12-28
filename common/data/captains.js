@@ -3862,4 +3862,31 @@ window.captains = {
     1399: {
         atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Cerebral") ? 1.5 : 1; }
     },
+    1400: {
+        atk: function(p) {
+            return p.unit.class.has("Shooter") && p.unit.class.has("Driven") ? 2.275 :
+                p.unit.class.has("Shooter") && !p.unit.class.has("Driven") ? 1.75 : 
+                !p.unit.class.has("Shooter") && p.unit.class.has("Driven") ? 1.3 :
+                1;
+        },
+    },
+    1401: {
+        atk: function(p) {
+            return p.unit.class.has("Shooter") && p.unit.class.has("Driven") ? 2.625 :
+                p.unit.class.has("Shooter") && !p.unit.class.has("Driven") ? 1.75 : 
+                !p.unit.class.has("Shooter") && p.unit.class.has("Driven") ? 1.5 :
+                1;
+        },
+    },
+    1403: {
+        atk: function(p){ 
+            return p.unit.class.has("Free Spirit") && window.specials[1403].turnedOn ? 4 : 2.5; 
+        },
+    },
+    1404: {
+        atk: function(p){ 
+            return p.unit.class.has("Free Spirit") && window.specials[1404].turnedOn ? 4 : 2.5; 
+        },
+    },
+    
 };

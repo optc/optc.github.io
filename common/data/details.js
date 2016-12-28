@@ -7480,6 +7480,50 @@ window.details = {
         special: "For Slasher characters, randomizes all non-matching orbs. Swaps this unit with your captain for 2 turns",
         specialName: "Out-of-Control White Smoke",
     },
+    1400: {//Colo Gladius
+        captain: "Boosts ATK of Shooter characters by 1.75x and boosts ATK of Driven characters by 1.3x",
+        captainNotes: "The bonus is cumulative. Shooter Driven characters get a 2.275x bonus.",
+        special: [
+            {
+                "description": "Deals [STR] damage to all enemies, reduces Bind and Despair duration by 1 turn and boosts Color Affinity of Shooters by 1.5x for 1 turn",
+                "cooldown": 26,
+            },
+            {
+                "description": "Deals large [STR] damage to all enemies, reduces Bind and Despair duration by 2 turn and boosts Color Affinity of Shooters by 1.75x for 1 turn",
+                "cooldown": 33,
+            },
+        ],
+        specialName: "Gladius Special",
+    },
+    1401: {//Colo Gladius
+        captain: "Boosts ATK of Shooter characters by 1.75x and boosts ATK of Driven characters by 1.5x",
+        captainNotes: "The bonus is cumulative. Shooter Driven characters get a 2.625x bonus.",
+        special: [
+            {
+                "description": "Deals [STR] damage to all enemies, reduces Bind and Despair duration by 1 turn and boosts Color Affinity of Shooters by 1.5x for 1 turn",
+                "cooldown": 26,
+            },
+            {
+                "description": "Deals large [STR] damage to all enemies, reduces Bind and Despair duration by 2 turn and boosts Color Affinity of Shooters by 1.75x for 1 turn",
+                "cooldown": 33,
+            },
+        ],
+        specialName: "Gladius Special",
+    },
+    1402: {//Colo Dalton
+        captain: "",
+        special: [
+            {
+                "description": "Deals 3x character's ATK in [PSY] damage to one enemy, boosts the ATK of [PSY] characters by 1.3x for 1 turn",
+                "cooldown": 14,
+            },
+            {
+                "description": "Deals 13x character's ATK in [PSY] damage to one enemy, boosts the ATK of [PSY] characters by 1.5x for 1 turn",
+                "cooldown": 18,
+            },
+        ],
+        specialName: "Dalton Special",
+    },
     1403: {//Timeskip Luffy
         captain: "Boosts ATK of Free Spirit characters by 2.5x, reduce damage received by 15%. If you use \"Gomu Gomu no Red Hawk\" THIS LUFFY boosts ATK of Free Spirit characters by 4x instead.",
         special: "Deal very large [QCK] damage to one enemy and [QCK], [DEX], and [PSY] orbs are treated as beneficial for 3 turns",
@@ -7495,7 +7539,6 @@ window.details = {
         special: "Deals 10 hits of 2,000 fixed damage to random enemies, boosts ATK of Shooters against enemies with delay protection by 1.75x and amplifies the effect of orbs by 1.75x for 1 turn",
         specialName: "Usopp Special",
         sailor: "When HP is low, boost ATK and RCV of Shooters by 100",
-        
     },
     1406: {//Timeskip Usopp
         captain: "Boost ATK of Shooters by 1.75x, and their RCV by 1.25x",
