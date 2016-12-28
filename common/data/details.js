@@ -7451,12 +7451,12 @@ window.details = {
         specialName: "Three Forked Tongue",
     },
     1394: {//Kimono Baby 5
-        captain: "Boosts ATK of [STR] and [QCK] characters by 2.25x an their RCV by 1.2x",
+        captain: "Boosts ATK of [STR] and [QCK] characters by 1.5x an their RCV by 1.1x",
         special: "Recovers 7x character's RCV in HP. Boosts ATK of Fighter and Striker characters by 1.5x for 1 turn",
         specialName: "Nation's Ambition",
     },
     1395: {//Kimono Baby 5
-        captain: "Boosts ATK of [STR] and [QCK] characters by 1.5x an their RCV by 1.1x",
+        captain: "Boosts ATK of [STR] and [QCK] characters by 2.25x an their RCV by 1.2x",
         special: "Recovers 7x character's RCV in HP. Boosts ATK of Fighter and Striker characters by 1.5x for 1 turn",
         specialName: "Nation's Ambition",
     },
@@ -7486,14 +7486,14 @@ window.details = {
         special: [
             {
                 "description": "Deals [STR] damage to all enemies, reduces Bind and Despair duration by 1 turn and boosts Color Affinity of Shooters by 1.5x for 1 turn",
-                "cooldown": [ 26, null ],
+                "cooldown": [ 26, 11 ],
             },
             {
                 "description": "Deals large [STR] damage to all enemies, reduces Bind and Despair duration by 2 turn and boosts Color Affinity of Shooters by 1.75x for 1 turn",
-                "cooldown": [ 33, null ],
+                "cooldown": [ 33, 18 ],
             },
         ],
-        specialName: "Gladius Special",
+        specialName: "Stonewall Punk",
     },
     1401: {//Colo Gladius
         captain: "Boosts ATK of Shooter characters by 1.75x and boosts ATK of Driven characters by 1.5x",
@@ -7501,28 +7501,28 @@ window.details = {
         special: [
             {
                 "description": "Deals [STR] damage to all enemies, reduces Bind and Despair duration by 1 turn and boosts Color Affinity of Shooters by 1.5x for 1 turn",
-                "cooldown": [ 26, null ],
+                "cooldown": [ 26, 11 ],
             },
             {
                 "description": "Deals large [STR] damage to all enemies, reduces Bind and Despair duration by 2 turn and boosts Color Affinity of Shooters by 1.75x for 1 turn",
-                "cooldown": [ 33, null ],
+                "cooldown": [ 33, 18 ],
             },
         ],
-        specialName: "Gladius Special",
+        specialName: "Stonewall Punk",
     },
     1402: {//Colo Dalton
-        captain: "Not Translated",
+        captain: "Boosts ATK of [PSY] and [QCK] characters by 2x",
         special: [
             {
-                "description": "Deals 3x character's ATK in [PSY] damage to one enemy, boosts the ATK of [PSY] characters by 1.3x for 1 turn",
+                "description": "Deals 3x character's ATK in [PSY] damage to one enemy, boosts ATK of [PSY] characters by 1.3x for 1 turn",
                 "cooldown": [ 14, null ],
             },
             {
-                "description": "Deals 13x character's ATK in [PSY] damage to one enemy, boosts the ATK of [PSY] characters by 1.5x for 1 turn",
+                "description": "Deals 13x character's ATK in [PSY] damage to one enemy, boosts ATK of [PSY] characters by 1.5x for 1 turn",
                 "cooldown": [ 18, null ],
             },
         ],
-        specialName: "Dalton Special",
+        specialName: "Offense Battle Axe",
     },
     1403: {//Timeskip Luffy
         captain: "Boosts ATK of Free Spirit characters by 2.5x, reduce damage received by 15%. If you use \"Gomu Gomu no Red Hawk\" THIS LUFFY boosts ATK of Free Spirit characters by 4x instead.",

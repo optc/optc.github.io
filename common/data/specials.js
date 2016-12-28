@@ -1899,6 +1899,51 @@ window.specials = {
         type: "class",
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, 1, 1.1); },
     },
+    1394: {
+        atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Striker") ? 1.5 : 1; },
+    },
+    1395: {
+        atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Striker") ? 1.5 : 1; },
+    },
+    1396: {
+        def: function(p) { return 0.2; }
+    },
+    1397: {
+        def: function(p) { return 0.2; }
+    },
+    1400: {
+        affinity: function(p) { return p.unit.class.has("Shooter") ? window.specials[1400].multiplier : 1; },
+        onActivation: function(p) {
+            var n = (window.specials[1400].multiplier == 1.5 ? 1 : 0);
+            window.specials[1400].multiplier = [1.5, 1.75][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.5, 1.75][n] + 'x Affinity boost. To switch to the ' + [1.75, 1.5][n] + 'x Affinity boost, disable and re-enable this special',
+                name: '1400warning'
+            });
+        },
+    },
+    1401: {
+        affinity: function(p) { return p.unit.class.has("Shooter") ? window.specials[1401].multiplier : 1; },
+        onActivation: function(p) {
+            var n = (window.specials[1401].multiplier == 1.5 ? 1 : 0);
+            window.specials[1401].multiplier = [1.5, 1.75][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.5, 1.75][n] + 'x Affinity boost. To switch to the ' + [1.75, 1.5][n] + 'x Affinity boost, disable and re-enable this special',
+                name: '1401warning'
+            });
+        },
+    },
+    1402: {
+        atk: function(p) { return p.unit.type == "PSY" ? window.specials[1402].multiplier : 1; },
+        onActivation: function(p) {
+            var n = (window.specials[1402].multiplier == 1.3 ? 1 : 0);
+            window.specials[1402].multiplier = [1.3, 1.5][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.3, 1.5][n] + 'x Affinity boost. To switch to the ' + [1.5, 1.3][n] + 'x Affinity boost, disable and re-enable this special',
+                name: '1402warning'
+            });
+        },
+    },
     1403: {
         turnedOn: false,
         onActivation: function(p) {

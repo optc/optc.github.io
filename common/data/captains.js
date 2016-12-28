@@ -3878,6 +3878,9 @@ window.captains = {
                 1;
         },
     },
+    1402: {
+        atk: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" ? 2 : 1; },
+    },
     1403: {
         atk: function(p){ 
             return p.unit.class.has("Free Spirit") && window.specials[1403].turnedOn ? 4 : 2.5; 
@@ -3889,5 +3892,12 @@ window.captains = {
               return p.unit.class.has("Free Spirit") ? (window.specials[1404].turnedOn ? 4 : 2.5) : 1;
         },
     },
-    
+    1405: {
+        atk: function(p) { return p.unit.class.has("Shooter") ? 1.75 : 1; },
+        rcv: function(p) { return p.unit.class.has("Shooter") ? 1.25 : 1; },
+    },
+    1406: {
+        atk: function(p) { return p.unit.class.has("Shooter") ? 1.75 : 1; },
+        rcv: function(p) { return p.unit.class.has("Shooter") ? 1.25 : 1; },
+    },
 };

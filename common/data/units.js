@@ -1395,11 +1395,11 @@ window.units = [
     [ "Kimono Baby 5", "QCK", [ "Slasher", "Striker" ], 4, 13, 6, 2, 50, 392109, 164, 130, 40, null, null, null, null ],
     [ "Kimono Baby 5 Evolved", "QCK", [ "Slasher", "Striker" ], 5, 20, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Tashigi Shambles", "DEX", [ "Striker", "Driven" ], 3, 11, 6, 1, 50, 392109, 103, 34, 23, 1034, 543, 113, 1 ],
-    [ "Tashigi Shambles, 7 Foot Jitte", "DEX", [ "Striker", "Driven" ], 4, 19, 5, 3, 9, 3000000, 914, 463, 103, 2134, 1043, 231, 1 ],
+    [ "Tashigi Shambles, 7 Foot Jitte", "DEX", [ "Striker", "Driven" ], 4, 19, 5, 3, 99, 3000000, 914, 463, 103, 2134, 1043, 231, 1 ],
     [ "Smoker Shambles", "QCK", [ "Slasher", "Cerebral" ], 3, 11, 6, 1, 50, 392109, 76, 26, 41, 886, 466, 186, 1 ],
     [ "Smoker Shambles, Shigure", "QCK", [ "Slasher", "Cerebral" ], 4, 19, 4, 3, 99, 3000000, 706, 416, 160, 1606, 910, 361, 1 ],
-    [ "Gladius", "STR", [ "Driven", "Shooter" ], 4, 25, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Gladius, Pica Military Executive", "STR", [ "Driven", "Shooter" ], 5, 40, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Gladius", "STR", [ "Driven", "Shooter" ], 4, 25, 7, 2, 70, null, null, null, null, null, null, null, null ],
+    [ "Gladius, Pica Military Executive", "STR", [ "Driven", "Shooter" ], 5, 40, 4, 3, 99, 4000000, 986, 698, 86, 2188, 1419, 208, null ],
     [ "Coliseum Dalton", "PSY", [ "Slasher", "Cerebral" ], 4, 20, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Timeskip Luffy", "QCK", [ "Fighter", "Free Spirit" ], 5, 30, null, 4, 70, 1066998, null, null, null, null, null, null, null ],
     [ "Timeskip Luffy Evolved", "QCK", [ "Fighter", "Free Spirit" ], 6, 55, 4, 5, 99, 5000000, 1, 1, 1, 3000, 1500, 1, null ],
@@ -1411,7 +1411,7 @@ window.units = [
     [ "Timeskip Brook Evolved", "INT", [ "Slasher", "Free Spirit" ], 5, 30, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Timeskip Chopper", "STR", [ "Fighter", "Powerhouse" ], 4, 15, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Timeskip Chopper Evolved", "STR", [ "Fighter", "Powerhouse" ], 5, 30, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "6+ Whitebeard", "STR", [ "Striker", "Powerhouse" ], 6, 65, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "6+ Whitebeard", "STR", [ "Striker", "Powerhouse" ], 6, 65, 4, 5, 99, 5000000, 3148, 996, 142, null, null, null, null ],
     [ "Naked Sanji", "INT", [ "Fighter", "Powerhouse" ], 4, 20, null, null, null, null, null, null, null, null, null, null, null ],
     ];
     
