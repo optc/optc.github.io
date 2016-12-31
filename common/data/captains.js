@@ -3919,4 +3919,11 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Powerhouse") ? 2.75 : 1; },
         rcv: function(p) { return 0; }
     },
+    1413: {
+        atk: function(p) { return p.percHP <= 30.0 ? 3 : 1.75; },
+        hp: function(p) { return 1.2; }
+    },
+    1414: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 2.5 : 1; },
+    },
 };
