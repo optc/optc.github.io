@@ -3883,13 +3883,13 @@ window.captains = {
     },
     1403: {
         atk: function(p){ 
-            return p.unit.class.has("Free Spirit") && window.specials[1403].turnedOn ? 4 : 2.5; 
+            return p.unit.class.has("Free Spirit") ? ((!window.specials[1403].turnedOn || (window.specials[1403].multiplier == null)) ? 2.5 : window.specials[1403].multiplier) : 1; 
             
         },
     },
     1404: {
         atk: function(p){ 
-              return p.unit.class.has("Free Spirit") ? (window.specials[1404].turnedOn ? 4 : 2.5) : 1;
+            return p.unit.class.has("Free Spirit") ? ((!window.specials[1404].turnedOn || (window.specials[1404].multiplier == null)) ? 2.5 : window.specials[1404].multiplier) : 1;
         },
     },
     1405: {
@@ -3897,7 +3897,26 @@ window.captains = {
         rcv: function(p) { return p.unit.class.has("Shooter") ? 1.25 : 1; },
     },
     1406: {
-        atk: function(p) { return p.unit.class.has("Shooter") ? 1.75 : 1; },
-        rcv: function(p) { return p.unit.class.has("Shooter") ? 1.25 : 1; },
+        atk: function(p) { return p.unit.class.has("Shooter") ? 2.25 : 1; },
+        rcv: function(p) { return p.unit.class.has("Shooter") ? 1.5 : 1; },
+    },
+    1407: {
+        atk: function(p) { return p.unit.type == "DEX" || p.unit.type == "PSY" ? 1.75 : 1; },
+        rcv: function(p) { return p.unit.type == "DEX" || p.unit.type == "PSY" ? 1.25 : 1; },
+    },
+    1408: {
+        atk: function(p) { return p.unit.type == "DEX" || p.unit.type == "PSY" ? 2.25 : 1; },
+        rcv: function(p) { return p.unit.type == "DEX" || p.unit.type == "PSY" ? 1.5 : 1; },
+    },
+    1410: {
+        chainModifier: function(p) { return 2.5; }
+    },
+    1411: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 2.25 : 1; },
+        rcv: function(p) { return 0; }
+    },
+    1412: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 2.75 : 1; },
+        rcv: function(p) { return 0; }
     },
 };

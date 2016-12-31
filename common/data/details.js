@@ -2626,12 +2626,12 @@ window.details = {
         specialName: "[RCV] Slot Storm"
     },
     612: {
-        special: "Boosts ATK and RCV of all characters by 45 characters for 1 turn, reduces damage received by 45% for 1 turn",
+        special: "Boosts ATK and RCV of all characters by 45 for 1 turn, reduces damage received by 45% for 1 turn",
         specialName: "45-Degree Joy",
         captain: "Boosts ATK of Slasher characters by 1.5x"
     },
     613: {
-        special: "Boosts ATK and RCV of all characters by 45 characters for 1 turn, reduces damage received by 45% for 1 turn",
+        special: "Boosts ATK and RCV of all characters by 45 for 1 turn, reduces damage received by 45% for 1 turn",
         specialName: "45-Degree Joy",
         captain: "Boosts ATK, HP and RCV of Slasher characters by 1.5x"
     },
@@ -7000,6 +7000,7 @@ window.details = {
             },
         ],
         specialName: "The Work of Fairies",
+        specialNotes: "#{colorAffinity : 1.25}",
     },
     1330: {//Gancho
         captain: "Boosts ATK of Striker characters by 1.5x and recovers 2x character's RCV in HP at the end of each turn",
@@ -7485,30 +7486,32 @@ window.details = {
         captainNotes: "The bonus is cumulative. Shooter Driven characters get a 2.275x bonus.",
         special: [
             {
-                "description": "Deals [STR] damage to all enemies, reduces Bind and Despair duration by 1 turn and boosts Color Affinity of Shooters by 1.5x for 1 turn",
+                "description": "Deals [STR] damage to all enemies, reduces Bind and Despair duration by 1 turn and boosts the Color Affinity of Shooters by 1.5x for 1 turn",
                 "cooldown": [ 26, 11 ],
             },
             {
-                "description": "Deals large [STR] damage to all enemies, reduces Bind and Despair duration by 2 turn and boosts Color Affinity of Shooters by 1.75x for 1 turn",
+                "description": "Deals large [STR] damage to all enemies, reduces Bind and Despair duration by 2 turn and boosts the Color Affinity of Shooters by 1.75x for 1 turn",
                 "cooldown": [ 33, 18 ],
             },
         ],
         specialName: "Stonewall Punk",
+        specialNotes: "#{colorAffinity : 1.75}",
     },
     1401: {//Colo Gladius
         captain: "Boosts ATK of Shooter characters by 1.75x and boosts ATK of Driven characters by 1.5x",
         captainNotes: "The bonus is cumulative. Shooter Driven characters get a 2.625x bonus.",
         special: [
             {
-                "description": "Deals [STR] damage to all enemies, reduces Bind and Despair duration by 1 turn and boosts Color Affinity of Shooters by 1.5x for 1 turn",
+                "description": "Deals [STR] damage to all enemies, reduces Bind and Despair duration by 1 turn and boosts the Color Affinity of Shooters by 1.5x for 1 turn",
                 "cooldown": [ 26, 11 ],
             },
             {
-                "description": "Deals large [STR] damage to all enemies, reduces Bind and Despair duration by 2 turn and boosts Color Affinity of Shooters by 1.75x for 1 turn",
+                "description": "Deals large [STR] damage to all enemies, reduces Bind and Despair duration by 2 turn and boosts the Color Affinity of Shooters by 1.75x for 1 turn",
                 "cooldown": [ 33, 18 ],
             },
         ],
         specialName: "Stonewall Punk",
+        specialNotes: "#{colorAffinity : 1.75}",
     },
     1402: {//Colo Dalton
         captain: "Boosts ATK of [PSY] and [QCK] characters by 2x",
@@ -7527,65 +7530,85 @@ window.details = {
     1403: {//Timeskip Luffy
         captain: "Boosts ATK of Free Spirit characters by 2.5x, reduce damage received by 15%. If you use \"Gomu Gomu no Red Hawk\" THIS LUFFY boosts ATK of Free Spirit characters by 4x instead.",
         captainNotes: "Using Luffy's special will change his own captain boost to 4x. If both Luffy's specials are used, the total ATK boost will be 16x",
-        special: "Deal large [QCK] damage to one enemy, and makes [QCK], [DEX], and [PSY] orbs \"beneficial\" for 3 turns",
+        special: [
+            {
+                "description": "Deals 25x character's ATK in [QCK] damage to one enemy, and makes [QCK], [DEX], and [PSY] orbs \"beneficial\" for 1 turn",
+                "cooldown": [ 14, null ],
+            },
+            {
+                "description": "Deals 60x character's ATK in [QCK] damage to one enemy, and makes [QCK], [DEX], and [PSY] orbs \"beneficial\" for 3 turns",
+                "cooldown": [ 18, null ],
+            },
+        ],
         specialName: "Gomu Gomu no Red Hawk",
     },
     1404: {//Timeskip Luffy
         captain: "Boosts ATK of Free Spirit characters by 2.5x, reduce damage received by 15%. If you use \"Gomu Gomu no Red Hawk\" THIS LUFFY boosts ATK of Free Spirit characters by 4x instead.",
         captainNotes: "Using Luffy's special will change his own captain boost to 4x. If both Luffy's specials are used, the total ATK boost will be 16x",
-        special: "Deal large [QCK] damage to one enemy, and makes [QCK], [DEX], and [PSY] orbs \"beneficial\" for 3 turns",
+        special: [
+            {
+                "description": "Deals 25x character's ATK in [QCK] damage to one enemy, and makes [QCK], [DEX], and [PSY] orbs \"beneficial\" for 1 turn",
+                "cooldown": [ 14, null ],
+            },
+            {
+                "description": "Deals 60x character's ATK in [QCK] damage to one enemy, and makes [QCK], [DEX], and [PSY] orbs \"beneficial\" for 3 turns",
+                "cooldown": [ 18, null ],
+            },
+        ],
         specialName: "Gomu Gomu no Red Hawk",
     },
     1405: {//Timeskip Usopp
         captain: "Boost ATK of Shooters by 1.75x, and their RCV by 1.25x",
         special: "Deals 10 hits of 2,000 fixed damage to random enemies, boosts ATK of Shooters against enemies with delay protection by 1.75x and amplifies the effect of orbs by 1.75x for 1 turn",
         specialNotes: "This is a new form of Conditional Boost",
-        specialName: "Usopp Special",
+        specialName: "Meteor Shooting",
         sailor: "When HP is low, boost ATK and RCV of Shooters by 100",
     },
     1406: {//Timeskip Usopp
-        captain: "Boost ATK of Shooters by 1.75x, and their RCV by 1.25x",
+        captain: "Boost ATK of Shooters by 2.25x, and their RCV by 1.5x",
         special: "Deals 10 hits of 2,000 fixed damage to random enemies, boosts ATK of Shooters against enemies with delay protection by 1.75x and amplifies the effect of orbs by 1.75x for 1 turn",
         specialNotes: "This is a new form of Conditional Boost",
-        specialName: "Usopp Special",
+        specialName: "Meteor Shooting",
         sailor: "When HP is low, boost ATK and RCV of Shooters by 100",
     },
     1407: {//Timeskip Robin
         captain: "Boosts ATK of [DEX] and [PSY] characters by 1.75x an their RCV by 1.25x",
         special: "Reduces Despair duration by 3 turns and boosts ATK of [DEX] and [PSY] characters by 2x for 1 turn",
-        specialName: "Robin Special",
+        specialName: "Mil Fleur: Gigantesco Mano Stomp",
         sailor: "Reduces duration of Blindness by 3 turns",
     },
     1408: {//Timeskip Robin
-        captain: "Boosts ATK of [DEX] and [PSY] characters by 1.75x an their RCV by 1.25x",
+        captain: "Boosts ATK of [DEX] and [PSY] characters by 2.25x an their RCV by 1.5x",
         special: "Reduces Despair duration by 3 turns and boosts ATK of [DEX] and [PSY] characters by 2x for 1 turn",
-        specialName: "Robin Special",
+        specialName: "Mil Fleur: Gigantesco Mano Stomp",
         sailor: "Reduces duration of Blindness by 3 turns",
     },
     1409: {//Timeskip Brook
-        captain: "Protects from defeat as long as HP is above x%",
+        captain: "Protects from defeat as long as HP is above 30%",
+        captainNotes: "#{zombie}",
         special: "Delays all enemies by 1 turn, and boosts ATK of Slasher and Free Spirit characters by 1.75x for 1 turn",
-        specialName: "Brook Special",
+        specialName: "Soul's Murder Soul: Soul Solid",
         sailor: "Completely resists Paralysis on this character",
     },
     1410: {//Timeskip Brook
-        captain: "Protects from defeat as long as HP is above x%",
+        captain: "Boosts chain multiplier by 2.5x. Protects from defeat as long as HP is above 30%",
+        captainNotes: "#{zombie}",
         special: "Delays all enemies by 1 turn, and boosts ATK of Slasher and Free Spirit characters by 1.75x for 1 turn",
-        specialName: "Brook Special",
+        specialName: "Soul's Murder Soul: Soul Solid",
         sailor: "Completely resists Paralysis on this character",
     },
     1411: {//Timeskip Chopper Again
         captain: "Boosts ATK of Powerhouse characters by 2.25x, reduces crew's RCV to 0",
-        special: "Reduce enemies Damage Reduction and Increased Defense duration by 3 turns and deals extra large typeless damage to all enemies",
+        special: "Reduce enemies Damage Reduction and Increased Defense duration by 3 turns and deals 60x character's ATK in typeless damage to all enemies",
         specialNotes: "This does not affect threshold damage reduction. Damage Reduction is the rainbow shield buff enemies have, and Increased Defense is the blue shiled buff enemies have",
-        specialName: "Chopper Special",
+        specialName: "Carving Hoof Palm: Coconut",
         sailor: "If Chopper has a [STR] orb and you hit a Perfect with him, keep his [STR] orb for the next turn",
     },
     1412: {//Timeskip Chopper Again
-        captain: "Boosts ATK of Powerhouse characters by 2.25x, reduces crew's RCV to 0",
-        special: "Reduce enemies Damage Reduction and Increased Defense duration by 3 turns and deals extra large typeless damage to all enemies",
+        captain: "Boosts ATK of Powerhouse characters by 2.75x, reduces crew's RCV to 0",
+        special: "Reduce enemies Damage Reduction and Increased Defense duration by 3 turns and deals 60x character's ATK in typeless damage to all enemies",
         specialNotes: "This does not affect threshold damage reduction. Damage Reduction is the rainbow shield buff enemies have, and Increased Defense is the blue shiled buff enemies have",
-        specialName: "Chopper Special",
+        specialName: "Carving Hoof Palm: Coconut",
         sailor: "If Chopper has a [STR] orb and you hit a Perfect with him, keep his [STR] orb for the next turn",
     },
     1413: {//6+ Whitebeard

@@ -1945,29 +1945,65 @@ window.specials = {
         },
     },
     1403: {
-        turnedOn: false,
         onActivation: function(p) {
+            var n = (window.specials[1403].multiplier == 3.16 ? 1 : 0);
             window.specials[1403].turnedOn = true;
+            window.specials[1403].multiplier = [3.16, 4][n];
             p.scope.notify({
-                text: 'Only affects damage is Luffy is your captain, and each Luffy only boosts his own Captain damage.',
+                text: 'Only affects damage is Luffy is your captain, and each Luffy only boosts his own Captain damage. Using the ' + [10, 16][n] + 'x Captain boost. To switch to the ' + [10, 16][n] + 'x Captain boost, disable and re-enable this special',
                 name: '1403warning'
             });
         },
         onDeactivation: function(p) {
             window.specials[1403].turnedOn = false;
         }
+        
     },
     1404: {
-        turnedOn: false,
         onActivation: function(p) {
+            var n = (window.specials[1404].multiplier == 3.16 ? 1 : 0);
             window.specials[1404].turnedOn = true;
+            window.specials[1404].multiplier = [3.16, 4][n];
             p.scope.notify({
-                text: 'Only affects damage is Luffy is your captain, and each Luffy only boosts his own Captain damage.',
+                text: 'Only affects damage is Luffy is your captain, and each Luffy only boosts his own Captain damage. Toggle to change between effective captain boosts. Using the ' + [10, 16][n] + 'x Captain boost. To switch to the ' + [10, 16][n] + 'x Captain boost, disable and re-enable this special',
                 name: '1404warning'
             });
         },
         onDeactivation: function(p) {
             window.specials[1404].turnedOn = false;
         }
+        
+    },
+    1405: {
+        atk: function(p) { return p.unit.class.has("Shooter") ? 1.75 : 1; },
+        type: "class",
+        orb: function(p) { return p.unit.class.has("Shooter") ? CrunchUtils.getOrbMultiplier(p.orb, 1, 1.75) : CrunchUtils.getOrbMultiplier(p.orb, 1, 1); },
+        warning: "Selected special (%name%) assumes that the enemy has Delay Protection."
+    },
+    1406: {
+        atk: function(p) { return p.unit.class.has("Shooter") ? 1.75 : 1; },
+        type: "class",
+        orb: function(p) { return p.unit.class.has("Shooter") ? CrunchUtils.getOrbMultiplier(p.orb, 1, 1.75) : CrunchUtils.getOrbMultiplier(p.orb, 1, 1); },
+        warning: "Selected special (%name%) assumes that the enemy has Delay Protection."
+    },
+    1407: {
+        atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "DEX" ? 2 : 1; },
+        type: "type"
+    },
+    1408: {
+        atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "DEX" ? 2 : 1; },
+        type: "type"
+    },
+    1409: {
+        atk: function(p) {
+            return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 1.75 : 1;
+        },
+        type: "class"
+    },
+    1410: {
+        atk: function(p) {
+            return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 1.75 : 1;
+        },
+        type: "class"
     },
 };

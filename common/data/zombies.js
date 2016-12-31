@@ -303,4 +303,12 @@ window.zombies = {
         type: 'healer',
         multiplier: 1.5
     },
+    1409: { // New World Brook
+        type: 'zombie',
+        threshold: 0.3
+    },
+    1410: { // New World Brook
+        type: 'zombie',
+        threshold: 0.3
+    },
 };

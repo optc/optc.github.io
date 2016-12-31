@@ -1398,20 +1398,19 @@ window.cooldowns = [
     [ 21, 14 ],
     [ 19, 14 ],
     [ 19, 14 ],
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
+    null,//Colo Gladius
+    null,//Colo Gladius
+    null,//Colo Dalton
+    null,//New World Luffy
+    null,//New World Luffy
+    20,
+    20,
+    22,
+    22,
+    [ 16, 10 ],
+    [ 16, 10 ],
+    25,
+    25,
     [ 25, 17 ],
     [ 6, 6 ],
     
