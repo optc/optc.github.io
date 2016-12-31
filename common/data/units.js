@@ -1406,11 +1406,11 @@ window.units = [
     [ "Timeskip Usopp", "PSY", "Shooter", 4, 15, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Timeskip Usopp Evolved", "PSY", "Shooter", 5, 30, 4, 4, 99, 4000000, 1147, 446, 144, 2712, 1144, 340, null ],
     [ "Timeskip Robin", "DEX", [ "Fighter", "Cerebral" ], 4, 15, 4, 3, 50, 392109, 182, 119, 33, null, null, null, null ],
-    [ "Timeskip Robin Evolved", "DEX", [ "Fighter", "Cerebral" ], 5, 30, 4, 4, 99, 4000000, null, null, null, 1251, 1257, 403, null ],
+    [ "Timeskip Robin Evolved", "DEX", [ "Fighter", "Cerebral" ], 5, 30, 4, 4, 99, 4000000, 946, 479, 165, 2151, 1257, 403, null ],
     [ "Timeskip Brook", "INT", [ "Slasher", "Free Spirit" ], 4, 15, 6, 3, 50, 392109, 220, 117, 27, null, null, null, null ],
     [ "Timeskip Brook Evolved", "INT", [ "Slasher", "Free Spirit" ], 5, 30, 4, 4, 99, 4000000, 1176, 482, 131, null, null, null, null ],
     [ "Timeskip Chopper", "STR", [ "Fighter", "Powerhouse" ], 4, 15, 4, 3, 50, 392109, 233, 77, 34, 1362, 439, 170, null ],
-    [ "Timeskip Chopper Evolved", "STR", [ "Fighter", "Powerhouse" ], 5, 30, 4, 4, 99, 4000000, 1362, 515, 0, 3000, 1501, 170, null ],
+    [ "Timeskip Chopper Evolved", "STR", [ "Fighter", "Powerhouse" ], 5, 30, 4, 4, 99, 4000000, 1362, 515, 0, 3000, 1499, 170, null ],
     [ "6+ Whitebeard", "STR", [ "Striker", "Powerhouse" ], 6, 65, 4, 5, 99, 5000000, 3148, 996, 142, 3806, 1558, 347, null ],
     [ "Naked Sanji", "INT", [ "Fighter", "Powerhouse" ], 4, 20, null, null, null, null, null, null, null, null, null, null, null ],
     ];
