@@ -7560,14 +7560,14 @@ window.details = {
     1405: {//Timeskip Usopp
         captain: "Boost ATK of Shooters by 1.75x, and their RCV by 1.25x",
         special: "Deals 10 hits of 2,000 fixed damage to random enemies, boosts ATK of Shooters against enemies with delay protection by 1.75x and amplifies the effect of orbs by 1.75x for 1 turn",
-        specialNotes: "This is a new form of Conditional Boost",
+        specialNotes: "This is a new form of Conditional Boost. The boost does not act like a Monet or Dalmatian boost, but is only activated if conditions are met and does not stack with other Class boosts or Orb boosts.",
         specialName: "Assault Meteor Shower",
         sailor: "When HP is low, boost ATK and RCV of Shooters by 100",
     },
     1406: {//Timeskip Usopp
         captain: "Boost ATK of Shooters by 2.25x, and their RCV by 1.5x",
         special: "Deals 10 hits of 2,000 fixed damage to random enemies, boosts ATK of Shooters against enemies with delay protection by 1.75x and amplifies the effect of orbs by 1.75x for 1 turn",
-        specialNotes: "This is a new form of Conditional Boost",
+        specialNotes: "This is a new form of Conditional Boost. The boost does not act like a Monet or Dalmatian boost, but is only activated if conditions are met and does not stack with other Class boosts or Orb boosts.",
         specialName: "Assault Meteor Shower",
         sailor: "When HP is low, boost ATK and RCV of Shooters by 100",
     },
