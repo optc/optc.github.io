@@ -1281,6 +1281,12 @@ window.drops = {
             "All Difficulties": [ 1396, 1398, -1192, -1232, -1238, -844, -838, -1159, -1389, -12, -737, -257 ]
         },
         
+        {
+            name: "Marines! Sengoku the Fleet Admiral!",
+            thumb: null,
+            "All Difficulties": [ -870, -1276, -1274, -1236, -874, -253, -1223, -813 ]
+        },
+        
     ],
 
             

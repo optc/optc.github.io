@@ -301,5 +301,13 @@ window.ships = [
             return 1.5;
         },
     },
+    { // 25
+        name: 'Thousand Sunny: Coated',
+        thumb: 'null',
+        description: 'Boosts ATK by 1.5x. Special: reduces damage received by 50% for 1 turn (cooldown: 16 turns).',
+        atk: function(p) {
+            return [ 1.3, 1.3, 1.3, 1.3, 1.35, 1.35, 1.35, 1.4, 1.45, 1.5 ][p.boatLevel - 1];
+        }
+    },
 
 ];

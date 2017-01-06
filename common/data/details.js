@@ -7532,12 +7532,12 @@ window.details = {
         captainNotes: "Using Luffy's special will change his own captain boost to 4x. If both Luffy's specials are used, the total ATK boost will be 16x",
         special: [
             {
-                "description": "Deals 25x character's ATK in [QCK] damage to one enemy, and makes [QCK], [DEX], and [PSY] orbs \"beneficial\" for 1 turn",
-                "cooldown": [ 14, null ],
+                "description": "Deals 25x character's ATK in [QCK] damage to one enemy, and makes [QCK], [DEX], and [PSY] orbs \"beneficial\" to Fighter and Free Spirit characters for 1 turn",
+                "cooldown": [ 14, 9 ],
             },
             {
                 "description": "Deals 60x character's ATK in [QCK] damage to one enemy, and makes [QCK], [DEX], and [PSY] orbs \"beneficial\" for 3 turns",
-                "cooldown": [ 18, null ],
+                "cooldown": [ 18, 13 ],
             },
         ],
         specialName: "Gomu Gomu no Red Hawk",
@@ -7547,12 +7547,12 @@ window.details = {
         captainNotes: "Using Luffy's special will change his own captain boost to 4x. If both Luffy's specials are used, the total ATK boost will be 16x",
         special: [
             {
-                "description": "Deals 25x character's ATK in [QCK] damage to one enemy, and makes [QCK], [DEX], and [PSY] orbs \"beneficial\" for 1 turn",
-                "cooldown": [ 14, null ],
+                "description": "Deals 25x character's ATK in [QCK] damage to one enemy, and makes [QCK], [DEX], and [PSY] orbs \"beneficial\" to Fighter and Free Spirit characters for 1 turn",
+                "cooldown": [ 14, 9 ],
             },
             {
                 "description": "Deals 60x character's ATK in [QCK] damage to one enemy, and makes [QCK], [DEX], and [PSY] orbs \"beneficial\" for 3 turns",
-                "cooldown": [ 18, null ],
+                "cooldown": [ 18, 13 ],
             },
         ],
         specialName: "Gomu Gomu no Red Hawk",
@@ -7561,14 +7561,14 @@ window.details = {
         captain: "Boost ATK of Shooters by 1.75x, and their RCV by 1.25x",
         special: "Deals 10 hits of 2,000 fixed damage to random enemies, boosts ATK of Shooters against enemies with delay protection by 1.75x and amplifies the effect of orbs by 1.75x for 1 turn",
         specialNotes: "This is a new form of Conditional Boost",
-        specialName: "Meteor Shooting",
+        specialName: "Assault Meteor Shower",
         sailor: "When HP is low, boost ATK and RCV of Shooters by 100",
     },
     1406: {//Timeskip Usopp
         captain: "Boost ATK of Shooters by 2.25x, and their RCV by 1.5x",
         special: "Deals 10 hits of 2,000 fixed damage to random enemies, boosts ATK of Shooters against enemies with delay protection by 1.75x and amplifies the effect of orbs by 1.75x for 1 turn",
         specialNotes: "This is a new form of Conditional Boost",
-        specialName: "Meteor Shooting",
+        specialName: "Assault Meteor Shower",
         sailor: "When HP is low, boost ATK and RCV of Shooters by 100",
     },
     1407: {//Timeskip Robin
