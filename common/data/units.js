@@ -1413,6 +1413,12 @@ window.units = [
     [ "Tony Tony Chopper: Monster Point, Reunion of the Straw Hat Pirates", "STR", [ "Fighter", "Powerhouse" ], 5, 30, 4, 4, 99, 4000000, 1362, 515, 0, 3000, 1499, 170, 1 ],
     [ "Whitebeard: Four Emperors", "STR", [ "Striker", "Powerhouse" ], 6, 65, 4, 5, 99, 5000000, 3148, 996, 142, 3806, 1558, 347, 1 ],
     [ "Sanji, Making Food and Drinks", "INT", [ "Fighter", "Powerhouse" ], 4, 20, 5, 3, 99, 3000000, 557, 363, 32, 2276, 1200, 210, 1 ],
+    [ "Fortnight Sengoku", "PSY", [ "Fighter", "Cerebral" ], 3, 13, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Fortnight Sengoku, Evolved", "PSY", [ "Fighter", "Cerebral" ], 4, 20, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Ronse", "STR", [ "Slasher", "Powerhouse" ], 4, 15, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Stainless", "INT", [ "Slasher", "Cerebral" ], 4, 15, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Kimono Lucci", "INT", [ "Fighter", "Powerhouse" ], 4, 13, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Kimono Lucci, Evolved", "INT", [ "Fighter", "Powerhouse" ], 5, 20, null, null, null, null, null, null, null, null, null, null, null ],
     ];
     
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],

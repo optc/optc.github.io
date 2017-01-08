@@ -305,10 +305,10 @@ window.zombies = {
     },
     1409: { // New World Brook
         type: 'zombie',
-        threshold: 0.3
+        threshold: 0.5
     },
     1410: { // New World Brook
         type: 'zombie',
-        threshold: 0.3
+        threshold: 0.5
     },
 };

@@ -1171,14 +1171,14 @@ window.details = {
         specialName: "Massacre Soldier",
         specialNotes: "#{fixed}",
         captain: "Boosts ATK by 3.5x after scoring 3 hits below Good in a row",
-        sailor: "When HP is below x%, boosts ATK of Cerebral characters by 50"
+        sailor: "When HP is below 30% at the start of the turn, boosts ATK of Cerebral characters by 50"
     },
     312: {
         special: "Deals 100x character's ATK in fixed damage to one enemy, reduces crew's HP to 1",
         specialName: "Massacre Soldier",
         specialNotes: "#{fixed}",
         captain: "Boosts ATK by 3.5x after scoring 3 hits below Good in a row",
-        sailor: "When HP is below x%, boosts ATK of Cerebral characters by 50"
+        sailor: "When HP is below 30% at the start of the turn, boosts ATK of Cerebral characters by 50"
     },
     313: {
         special: "Boosts ATK of Striker characters by 1.5x for 1 turn, deals 25x character's ATK in PSY damage to one enemy",
@@ -1388,13 +1388,13 @@ window.details = {
         special: "Changes [STR] and [DEX] orbs into [QCK] orbs",
         specialName: "Gang Fortress",
         captain: "Boosts ATK and RCV of QCK characters by 2x",
-        sailor: "Boosts RCV of Crew by 10"
+        sailor: "Boosts RCV of all characters by 10"
     },
     365: {
         special: "Changes [STR] and [DEX] orbs into [QCK] orbs",
         specialName: "Gang Fortress",
         captain: "Boosts ATK and RCV of QCK characters by 2x",
-        sailor: "Boosts RCV of Crew by 10"
+        sailor: "Boosts RCV of all characters by 10"
     },
     366: {
         special: "Deals 20x character's ATK in INT damage to all enemies, reduces Bind duration by 5 turns",
@@ -2213,13 +2213,13 @@ window.details = {
         special: "Removes poison, recovers 15x character's RCV in HP",
         specialName: "Devoted Healing - \"I'm Glad You are Safe\"",
         captain: "Boosts ATK and RCV of DEX characters by 1.5x",
-        sailor: "When HP is below x%, boosts own RCV by 50"
+        sailor: "When HP is below 30% at the start of the turn, boosts own RCV by 50"
     },
     528: {
         special: "Removes poison, recovers 15x character's RCV in HP",
         specialName: "Devoted Healing - \"I'm Glad You are Safe\"",
         captain: "Boosts ATK and RCV of DEX characters by 2x",
-        sailor: "When HP is below x%, boosts own RCV by 50"
+        sailor: "When HP is below 30% at the start of the turn, boosts own RCV by 50"
     },
     529: {
         special: "Deals 35x character's ATK in PSY damage to all enemies, reduces the defense of all enemies by 100% for 2 turns",
@@ -2763,14 +2763,14 @@ window.details = {
         specialNotes: "#{specialProportional : lower : 50 * ( 1 - (remaining HP) / (total HP) )}",
         specialName: "Pirate Brothers: Twin Strike",
         captain: "Boosts ATK of Fighter characters by 2x, deals 2x character's ATK in DEX damage to all enemies at the end of each turn",
-        sailor: "When HP is below x%, boosts ATK of Fighter characters by 100"
+        sailor: "When HP is below 30% at the start of the turn, boosts ATK of Fighter characters by 100"
     },
     641: {
         special: "Changes own orb into [DEX], deals several times the character's ATK in DEX damage to one enemy",
         specialNotes: "#{specialProportional : lower : 50 * ( 1 - (remaining HP) / (total HP) )}",
         specialName: "Pirate Brothers: Twin Strike",
         captain: "Boosts ATK of Fighter characters by 2.25x, deals 2x character's ATK in DEX damage to all enemies at the end of each turn",
-        sailor: "When HP is below x%, boosts ATK of Fighter characters by 100"
+        sailor: "When HP is below 30% at the start of the turn, boosts ATK of Fighter characters by 100"
     },
     642: {
         special: "Reduces crew's current HP by 30%, deals 10x character's ATK in fixed damage to one enemy, amplifies the effect of orbs by 1.75x for 1 turn",
@@ -5890,13 +5890,13 @@ window.details = {
         special: "Removes poison, recovers 15x character's RCV in HP",
         specialName: "Devoted Healing - \"I'm Glad You are Safe\"",
         captain: "Boosts ATK and RCV of DEX characters by 1.5x",
-        sailor: "When HP is below x%, boosts own RCV by 50"
+        sailor: "When HP is below 30% at the start of the turn, boosts own RCV by 50"
     },
     1177: {
         special: "Removes poison, recovers 15x character's RCV in HP",
         specialName: "Devoted Healing - \"I'm Glad You are Safe\"",
         captain: "Boosts ATK and RCV of DEX characters by 2x",
-        sailor: "When HP is below x%, boosts own RCV by 50"
+        sailor: "When HP is below 30% at the start of the turn, boosts own RCV by 50"
     },
     1178: {
         captain: "Boosts ATK of [STR] characters by 2x if HP is above 99% at the start of the turn. Reduces damage received by 50%",
@@ -6469,7 +6469,7 @@ window.details = {
     1255: {//FN DeCalvan
         captain: "Boosts ATK of all characters by 1.5x after the 11th hit in the chain, by 2x after the 16th hit, by 2.5x after the 22nd hit",
         special: "For 1 turn, makes Perfects slightly easier to hit and amplifies the effect of orbs by 1.5x",
-        sailor: "When HP is low, boost base ATK of Fighters by 40",
+        sailor: "When HP is below 30% at the start of the turn, boost base ATK of Fighters by 40",
         specialName: "Large Fleet Commander",
     },
     1256: {//FN Whitey Bay
@@ -6892,13 +6892,15 @@ window.details = {
     },
     1317: {//Garp
         captain: "Boosts ATK of [STR] and [PSY] characters by 2x",
-        special: "Deals 30x character's ATK as fixed [STR] damage to all enemies that bypasses all defensive Buffs. Delays all enemies for 1 turn. Reduces the defense of all enemies by 80% for 1 turn.",
+        special: "Deals 30x character's ATK in [STR] damage to all enemies that will ignore damage negating abilities and barriers. Delays all enemies for 1 turn. Reduces the defense of all enemies by 80% for 1 turn.",
+        specialNotes: "Damage that ignores damage negating abilities and barriers is similar to 6* Blackbeard's special when he is captain",
         sailor: "Boosts ATK of all characters by 75",
         specialName: "Super Large Iron Ball",
     },
     1318: {//Garp
         captain: "Boosts ATK of [STR] and [PSY] characters by 2.5x",
-        special: "Deals 30x character's ATK as fixed [STR] damage to all enemies that bypasses all defensive Buffs. Delays all enemies for 1 turn. Reduces the defense of all enemies by 80% for 1 turn.",
+        special: "Deals 30x character's ATK in [STR] damage to all enemies that will ignore damage negating abilities and barriers. Delays all enemies for 1 turn. Reduces the defense of all enemies by 80% for 1 turn.",
+        specialNotes: "Damage that ignores damage negating abilities and barriers is similar to 6* Blackbeard's special when he is captain",
         sailor: "Boosts ATK of all characters by 75",
         specialName: "Super Large Iron Ball",
     },
@@ -7303,14 +7305,14 @@ window.details = {
     },
     1371: {//Wild Zoro
         captain: "Boosts ATK of Slasher and Powerhouse characters by 2x at the start of the chain, by 2.25x after the 3rd Perfect and by 2.5x after the 5th Perfect.",
-        special: "Reduces Despair duration by 3 turns. Reduces Special Cooldown of Slasher and Powerhouse characters by 2 turn",
+        special: "Reduces Despair duration by 3 turns. Reduces Special Cooldown of Slasher and Powerhouse characters by 2 turns",
         sailor: "Restores his own special by 2 turns when it is rewinded",
         sailorNotes: "Some enemies can increase your cooldown by 1/2 Turns, this Sailor Ability decreases that by 2 turns",
         specialName: "Wild Plan",
     },
     1372: {//Wild Zoro
         captain: "Boosts ATK of Slasher and Powerhouse characters by 2x at the start of the chain, by 2.5x after the 3rd Perfect and by 3x after the 5th Perfect.",
-        special: "Reduces Despair duration by 3 turns. Reduces Special Cooldown of Slasher and Powerhouse characters by 2 turn",
+        special: "Reduces Despair duration by 3 turns. Reduces Special Cooldown of Slasher and Powerhouse characters by 2 turns",
         sailor: "Restores his own special by 2 turns when it is rewinded",
         sailorNotes: "Some enemies can increase your cooldown by 1/2 Turns, this Sailor Ability decreases that by 2 turns",
         specialName: "Wild Plan",
@@ -7559,17 +7561,17 @@ window.details = {
     },
     1405: {//Timeskip Usopp
         captain: "Boost ATK of Shooters by 1.75x, and their RCV by 1.25x",
-        special: "Deals 10 hits of 2,000 fixed damage to random enemies, boosts ATK of Shooters against enemies with delay protection by 1.75x and amplifies the effect of orbs by 1.75x for 1 turn",
+        special: "Deals 10 hits of 2,000 fixed damage to random enemies, boosts ATK of Shooters by 1.75x and amplifies the effect of orbs by 1.75x for 1 turn if enemies have delay protection",
         specialNotes: "This is a new form of Conditional Boost. The boost does not act like a Monet or Dalmatian boost, but is only activated if conditions are met and does not stack with other Class boosts or Orb boosts.",
         specialName: "Assault Meteor Shower",
-        sailor: "When HP is low, boost ATK and RCV of Shooters by 100",
+        sailor: "When HP is below 30% at the start of the turn, boost ATK and RCV of Shooters by 100",
     },
     1406: {//Timeskip Usopp
         captain: "Boost ATK of Shooters by 2.25x, and their RCV by 1.5x",
-        special: "Deals 10 hits of 2,000 fixed damage to random enemies, boosts ATK of Shooters against enemies with delay protection by 1.75x and amplifies the effect of orbs by 1.75x for 1 turn",
+        special: "Deals 10 hits of 2,000 fixed damage to random enemies, boosts ATK of Shooters by 1.75x and amplifies the effect of orbs by 1.75x for 1 turn if enemies have delay protection",
         specialNotes: "This is a new form of Conditional Boost. The boost does not act like a Monet or Dalmatian boost, but is only activated if conditions are met and does not stack with other Class boosts or Orb boosts.",
         specialName: "Assault Meteor Shower",
-        sailor: "When HP is low, boost ATK and RCV of Shooters by 100",
+        sailor: "When HP is below 30% at the start of the turn, boost ATK and RCV of Shooters by 100",
     },
     1407: {//Timeskip Robin
         captain: "Boosts ATK of [DEX] and [PSY] characters by 1.75x an their RCV by 1.25x",
@@ -7584,14 +7586,14 @@ window.details = {
         sailor: "Reduces duration of Blindness by 3 turns",
     },
     1409: {//Timeskip Brook
-        captain: "Protects from defeat as long as HP is above 30%",
+        captain: "Protects from defeat as long as HP is above 50%",
         captainNotes: "#{zombie}",
         special: "Delays all enemies by 1 turn, and boosts ATK of Slasher and Free Spirit characters by 1.75x for 1 turn",
         specialName: "Soul's Murder Soul: Soul Solid",
         sailor: "Completely resists Paralysis on this character",
     },
     1410: {//Timeskip Brook
-        captain: "Boosts chain multiplier by 2.5x. Protects from defeat as long as HP is above 30%",
+        captain: "Boosts chain multiplier by 2.5x. Protects from defeat as long as HP is above 50%",
         captainNotes: "#{zombie}",
         special: "Delays all enemies by 1 turn, and boosts ATK of Slasher and Free Spirit characters by 1.75x for 1 turn",
         specialName: "Soul's Murder Soul: Soul Solid",
@@ -7618,7 +7620,7 @@ window.details = {
     },
     1414: {//Shop Sanji
         captain: "Boosts ATK of Powerhouse characters by 2.5x",
-        special: "Changes own orb into [INT] and reduce the special cooldown of Powerhouse characters by 1 turn.",
+        special: "Changes own orb into [INT] and reduces Special Cooldown of Powerhouse characters by 1 turn.",
         specialName: "Sanji Special",
     },
 };

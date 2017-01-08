@@ -1278,13 +1278,15 @@ window.drops = {
         {
             name: "Shambles! Tashigi and Smoker?!?",
             thumb: 1397,
+            condition: "Your captain will be switched with your middle right character when you encounter Law.",
             "All Difficulties": [ 1396, 1398, -1192, -1232, -1238, -844, -838, -1159, -1389, -12, -737, -257 ]
         },
         
         {
             name: "Marines! Sengoku the Fleet Admiral!",
-            thumb: null,
-            "All Difficulties": [ -870, -1276, -1274, -1236, -874, -253, -1223, -813 ]
+            thumb: 1416,
+            condition: "You can only bring INT units",
+            "All Difficulties": [ 1415, 1417, 1418, -1418, -870, -1276, -1274, -1236, -874, -253, -1223, -813 ]
         },
         
     ],
