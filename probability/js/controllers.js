@@ -123,6 +123,20 @@ controllers.MainCtrl = ['$scope', '$rootScope', '$state', '$stateParams', '$cont
     	if (!uid) return;
     	return units[uid - 1].name;
     };
+    
+    $scope.quickFillSlots = function() {
+        $scope.character.slots = [ ];
+        for (var i=0;i<$scope.slots;++i)
+        	$scope.character.slots.push({ id: [ 2, 3, 1, 6, 4][i], level: 0 });
+    };
+    
+    $scope.quickFillSkillups = function(uid) {
+    	if (!uid) return;
+    	var cooldown = window.cooldowns[uid - 1];
+    	var maxSkillups = cooldown[0] - cooldown[1];
+    	if (!maxSkillups) return;
+    	$scope.skillups = maxSkillups;
+    };
 
     $scope.onRemove = function(i) {
         $rootScope.character = null;

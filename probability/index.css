@@ -233,6 +233,14 @@ slot-wheel > .ghoster {
     background: #ddd;
 }
 
+.quick-fill-slots {
+	margin: 2px auto;
+}
+
+.quick-fill-skillups {
+	display: inline-block;
+}
+
 .label.label-danger {
     display: inline-block;
     white-space: nowrap;
