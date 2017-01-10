@@ -4757,11 +4757,11 @@ window.details = {
         special: [
             {
                 "description": "For Powerhouse characters, changes Bad orbs into matching orbs.",
-                "cooldown": 11
+                "cooldown": [ 11, 5 ]
             },
             {
                 "description": "For all characters, changes Bad orbs into matching orbs.",
-                "cooldown": 20
+                "cooldown": [ 20, 14 ]
             }
         ],
         specialName: "Decapitation High Heel",
@@ -4773,11 +4773,11 @@ window.details = {
         special: [
             {
                 "description": "For Powerhouse characters, changes Bad orbs into matching orbs.",
-                "cooldown": 11
+                "cooldown": [ 11, 5 ]
             },
             {
                 "description": "For all characters, changes Bad orbs into matching orbs.",
-                "cooldown": 20
+                "cooldown": [ 20, 14 ]
             }
         ],
         specialName: "Decapitation High Heel",
@@ -7622,6 +7622,26 @@ window.details = {
         captain: "Boosts ATK of Powerhouse characters by 2.5x",
         special: "Changes own orb into [INT] and reduces Special Cooldown of Powerhouse characters by 1 turn.",
         specialName: "Sanji Special",
+    },
+    1415: {//Fortnight Sengoku
+        captain: "Boost ATK of characters with cost 30 or less by 1.5x",
+        special: "Reduces Special Cooldown of all characters by 1 turn and boosts ATK of characters with cost 30 or less by 1.5x for 1 turn",
+        specialName: "Sengoku Special",
+    },
+    1416: {//Fortnight Sengoku
+        captain: "Boost ATK of characters with cost 30 or less by 2.25x and their HP by 1.2x",
+        special: "Reduces Special Cooldown of all characters by 1 turn and boosts ATK of characters with cost 30 or less by 1.5x for 1 turn",
+        specialName: "Sengoku Special",
+    },
+    1417: {//Ronse
+        captain: "Boosts ATK and HP of [STR] characters by 1.5x",
+        special: "Cuts the current HP of all enemies by 10%, changes [BLOCK] orbs into [STR] orbs for [STR] characters",
+        specialName: "Ronse Special",
+    },
+    1418: {//Stainless
+        captain: "Not Translated",
+        special: "Not Translated",
+        specialName: "Stainless Special",
     },
 };
 

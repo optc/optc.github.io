@@ -1246,7 +1246,7 @@ window.units = [
     [ "'Straw Hat' Monkey D Luffy, Marineford Flight ", "QCK", [ "Fighter", "Striker" ], 5, 25, 4, 3, 99, 3000000, 340, 195, 22, 1890, 1242, 309, 1 ],
     [ "'Fire Fist' Portgas D. Ace, On the Execution Platform", "STR", [ "Fighter", "Shooter" ], 4, 12, 4, 0, 35, 136167, 79, 30, 2, 590, 302, 5, 1 ],
     [ "'Fire Fist' Portgas D. Ace, Marineford Flight", "STR", [ "Fighter", "Shooter" ], 5, 25, 4, 3, 99, 4000000, 1403, 793, 121, 2120, 1281, 246, 1 ],
-    [ "Marco, Fluttering in Neck the Autumn Breeze", "DEX", [ "Fighter", "Powerhouse" ], 4, 13, 4, 2, 50, 392109, 142, 79, 40, 940, 504, 201, 1 ],
+    [ "Marco, Collar Fluttering in the Autumn Breeze", "DEX", [ "Fighter", "Powerhouse" ], 4, 13, 4, 2, 50, 392109, 142, 79, 40, 940, 504, 201, 1 ],
     [ "Marco, Tipsy Kimono", "DEX", [ "Fighter", "Powerhouse" ], 5, 20, 4, 3, 99, 3000000, 870, 452, 164, 1804, 1017, 374, 1 ],
     [ "Marco, Whitebeard Pirates", "QCK", [ "Fighter", "Powerhouse" ], 4, 25, 4, 2, 70, 1066998, 740, 322, 100, 1377, 684, 187, 1 ],
     [ "Whitebeard Pirates Marco, Revival of Flame", "QCK", [ "Fighter", "Powerhouse" ], 5, 40, 4, 3, 99, 4000000, 1309, 620, 142, 2370, 1236, 335, 1 ],
@@ -1418,7 +1418,7 @@ window.units = [
     [ "Ronse", "STR", [ "Slasher", "Powerhouse" ], 4, 15, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Stainless", "INT", [ "Slasher", "Cerebral" ], 4, 15, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Kimono Lucci", "INT", [ "Fighter", "Powerhouse" ], 4, 13, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Kimono Lucci, Evolved", "INT", [ "Fighter", "Powerhouse" ], 5, 20, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Kimono Lucci, Evolved", "INT", [ "Fighter", "Powerhouse" ], 5, 20, 5, 3, 99, null, null, null, null, 2299, 1333, 152, null ],
     ];
     
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
