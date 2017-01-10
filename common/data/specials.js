@@ -2006,4 +2006,20 @@ window.specials = {
         },
         type: "class"
     },
+    1415: {
+        atk: function(p) { return p.unit.cost <= 30 ? 1.5 : 1; },
+        type: "class"
+    },
+    1416: {
+        atk: function(p) { return p.unit.cost <= 30 ? 1.5 : 1; },
+        type: "class"
+    },
+    1419: {
+        atk: function(p) { return p.defenseDown ? 1.5 : 1; },
+        type: "condition"
+    },
+    1420: {
+        atk: function(p) { return p.defenseDown ? 1.5 : 1; },
+        type: "condition"
+    },
 };

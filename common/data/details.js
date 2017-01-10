@@ -7621,27 +7621,37 @@ window.details = {
     1414: {//Shop Sanji
         captain: "Boosts ATK of Powerhouse characters by 2.5x",
         special: "Changes own orb into [INT] and reduces Special Cooldown of Powerhouse characters by 1 turn.",
-        specialName: "Sanji Special",
+        specialName: "Are you ready?",
     },
     1415: {//Fortnight Sengoku
         captain: "Boost ATK of characters with cost 30 or less by 1.5x",
         special: "Reduces Special Cooldown of all characters by 1 turn and boosts ATK of characters with cost 30 or less by 1.5x for 1 turn",
-        specialName: "Sengoku Special",
+        specialName: "Unshakeable Resolution of the Wise Master",
     },
     1416: {//Fortnight Sengoku
         captain: "Boost ATK of characters with cost 30 or less by 2.25x and their HP by 1.2x",
         special: "Reduces Special Cooldown of all characters by 1 turn and boosts ATK of characters with cost 30 or less by 1.5x for 1 turn",
-        specialName: "Sengoku Special",
+        specialName: "Unshakeable Resolution of the Wise Master",
     },
     1417: {//Ronse
         captain: "Boosts ATK and HP of [STR] characters by 1.5x",
         special: "Cuts the current HP of all enemies by 10%, changes [BLOCK] orbs into [STR] orbs for [STR] characters",
-        specialName: "Ronse Special",
+        specialName: "Raid Battle-Axe: One Flash",
     },
     1418: {//Stainless
-        captain: "Not Translated",
-        special: "Not Translated",
-        specialName: "Stainless Special",
+        captain: "Boosts ATK and RCV of INT characters by 1.5x",
+        special: "Reduces any damage received above 5,000 HP by 97% for 1 turn",
+        specialName: "Defence of the Command Line",
+    },
+    1419: {//Kimono Lucci
+        captain: "Boosts ATK of Powerhouse characters by 2.5x, reduce damage received by 10%",
+        special: "Recovers 5,000 HP and boosts ATK against enemies with reduced defense by 1.5x for 1 turns",
+        specialName: "Lucci Special",
+    },
+    1420: {//Kimono Lucci
+        captain: "Boosts ATK of Powerhouse characters by 2.5x, reduce damage received by 10%",
+        special: "Recovers 5,000 HP and boosts ATK against enemies with reduced defense by 1.5x for 1 turns",
+        specialName: "Lucci Special",
     },
 };
 

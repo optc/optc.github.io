@@ -3926,4 +3926,25 @@ window.captains = {
     1414: {
         atk: function(p) { return p.unit.class.has("Powerhouse") ? 2.5 : 1; },
     },
+    1415: {
+        atk: function(p) { return p.unit.cost <= 30 ? 1.5 : 1; },
+    },
+    1416: {
+        atk: function(p) { return p.unit.cost <= 30 ? 2.25 : 1; },
+        hp: function(p) { return p.unit.cost <= 30 ? 1.2 : 1; },
+    },
+    1417: {
+        atk: function(p) { return p.unit.type == "STR" ? 1.5 : 1; },
+        rcv: function(p) { return p.unit.type == "STR" ? 1.5 : 1; },
+    },
+    1418: {
+        atk: function(p) { return p.unit.type == "INT" ? 1.5 : 1; },
+        rcv: function(p) { return p.unit.type == "INT" ? 1.5 : 1; },
+    },
+    1419: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 2.5 : 1; },
+    },
+    1420: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 2.5 : 1; },
+    },
 };
