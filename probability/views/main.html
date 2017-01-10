@@ -10,7 +10,10 @@
                     <div class="unitContainer">
 
                         <div class="unit" decorate-slot uid="character.uid"
-                            ng-class="{ empty: !character || !character.uid }"></div>
+                            ng-class="{ empty: !character || !character.uid }"
+                            popover-placement="right" popover-enable="{{character}}"
+                            popover-trigger="mouseenter" popover-title="{{character.name}}"
+                            uib-popover-template="'views/fragments/popover.html'"></div>
 
                     </div>
                     <p ng-if="slotCount(character.uid)">Select which Sockets your Unit already has.</p>

@@ -104,7 +104,7 @@ controllers.MainCtrl = ['$scope', '$rootScope', '$state', '$stateParams', '$cont
 	};
 	
     $rootScope.changeUnit = function(unit, uid) {
-        $scope.character = { uid: uid, slots: [ ] };
+        $scope.character = { uid: uid, slots: [ ], name: $scope.returnName(uid) };
 		$scope.slots = $scope.slotCount(uid);
     };
 
@@ -117,6 +117,11 @@ controllers.MainCtrl = ['$scope', '$rootScope', '$state', '$stateParams', '$cont
     $scope.slotCount = function(uid) {
         if (!uid) return 0;
         return units[uid - 1].slots;
+    };
+    
+    $scope.returnName = function(uid) {
+    	if (!uid) return;
+    	return units[uid - 1].name;
     };
 
     $scope.onRemove = function(i) {
@@ -248,6 +253,25 @@ controllers.ResetCtrl = function($scope, $rootScope, $state) {
 
 controllers.InstructionCtrl = function() {
     //Do nothing
+};
+
+/***************
+ * PopoverCtrl *
+ ***************/
+
+controllers.PopoverCtrl = function($scope) {
+    if (!$scope.character) return;
+    var id = $scope.character.uid;
+    $scope.details = window.details[id] ? JSON.parse(JSON.stringify(window.details[id])) : null;
+    $scope.cooldown = window.cooldowns[id - 1];
+    if (!$scope.details || !$scope.details.special) return;
+    if ($scope.details.special.japan)
+        $scope.details.special = $scope.details.special.japan;
+    if ($scope.details.special.constructor == Array) {
+        var lastStage = $scope.details.special.slice(-1)[0];
+        $scope.cooldown = lastStage.cooldown;
+        $scope.details.special = lastStage.description;
+    }
 };
 
 /******************
