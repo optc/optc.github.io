@@ -980,7 +980,7 @@ window.drops = {
             thumb: 664,
             global: true,
             condition: 'Heatwave causes damage every 2 turns',
-            "Japan": [ 663, 665, 667, -667, -522, -508, -506, -459, -378, -221, -73 ],
+            "Japan": [ 663, 665, 667, -667, -522, -508, -506, -459, -378, -221, -73, -1117 ],
             "Global": [ 663, 665, 667, -667, -639, -508, -506, -459, -378, -221, -73 ]
         },
 
@@ -989,7 +989,7 @@ window.drops = {
             thumb: 688,
             global: true,
             condition: 'Bomb orbs appear',
-            "Japan": [ 687, 689, -542, -524, -528, -429, -428, -402, -365, -218 ],
+            "Japan": [ 687, 689, -542, -524, -528, -429, -428, -402, -365, -218, -1119, -1177 ],
             "Global": [ 687, 689, -542, -645, -647, -429, -428, -402, -365, -218 ]
         },
 
@@ -1000,7 +1000,7 @@ window.drops = {
             condition: '30: Non-Free Spirit, Evolver, or Booster class characters are weakend; 15: Striker and Shooter class characters are weakened',
             challenge: 'Cumulative Damage dealt to enemies in a single run',
             challengeData: [['600,000','1x Blue Elder'],['2,000,000','1x RCV Cotton Candy, 1x Rainbow Gem'],['5,000,000','1x Lock Resistance Forbidden Tome, 2x Rainbow Gems']],
-            "Japan": [ 712, 714, 715, -716, -546, -541, -520, -400, -202, -363, -204 ],
+            "Japan": [ 712, 714, 715, -716, -546, -541, -520, -1115, -400, -202, -363, -204 ],
             "Global": [ 712, 714, 715, -716, -643, -546, -541, -400, -202, -363, -204 ]
         },
 
@@ -1009,7 +1009,7 @@ window.drops = {
             thumb: 724,
             global: true,
             condition: 'You can only bring INT, PSY and QCK units',
-            "Japan": [ 721, 723, -590, -564, -563, -530, -526, -384, -361, -219 ],
+            "Japan": [ 721, 723, -590, -564, -563, -530, -526, -384, -361, -219, -1173 ],
             "Global": [ 721, 723, -590, -564, -563, -530, -641, -384, -361, -219 ]
         },
 
@@ -1018,7 +1018,7 @@ window.drops = {
             thumb: 743,
             global: true,
             condition: 'You can only bring STR, QCK and DEX units',
-            "Japan": [ 740, 742, -560, -558, -586, -567, -566, -412, -225, -18 ],
+            "Japan": [ 740, 742, -560, -558, -586, -567, -566, -412, -225, -18, -1208, -1212 ],
             "Global": [ 740, 742, -671, -673, -586, -567, -566, -412, -225, -18 ]
         },
 
@@ -1027,7 +1027,7 @@ window.drops = {
             thumb: 761,
             global: true,
             condition: "None",
-            "Japan": [ 761, 762, 763, 764, 765, -610, -588, -565, -556, -426, -408, -261, -217 ],
+            "Japan": [ 761, 762, 763, 764, 765, -610, -588, -565, -556, -426, -408, -261, -217, -1210 ],
             "Global": [ 761, 762, 763, 764, 765, -426, -408, -332, -308, -292, -261, -217, -8 ]
         },
 
@@ -1036,7 +1036,7 @@ window.drops = {
             thumb: 766,
             global: true,
             condition: "None",
-            "Japan": [ 762, 766, 767, 768, 769, -629, -611, -569, -554, -431, -410, -367, -223 ],
+            "Japan": [ 762, 766, 767, 768, 769, -629, -611, -569, -554, -431, -410, -367, -223, -1175 ],
             "Global": [ 762, 766, 767, 768, 769, -431, -367, -291, -253, -251, -223, -212, -75 ]
         },
 
@@ -1067,8 +1067,8 @@ window.drops = {
             condition: 'You can only bring Impact and Free Spirit units. (No Evo/Boosters)',
             challenge: 'Total Damage dealt to enemies in one turn',
             challengeData: [['100,000 Damage','1x DEX Elder Turtle'],['500,000 Damage','1x Rainbow Gem, 1x ATK Cotton Candy'],['2,000,000 Damage','2x Rainbow Gems, 1x Auto-Heal Forbidden Tome']],
-            "Japan": [ 847, 849, 850, -849, -647, -617, -616, -615, -578, -508, -455 ],
-            "Global": [ 847, 849, 850, -849, -750, -617, -616, -615, -578, -508, -455 ]
+            "Japan": [ 847, 849, 850, -849, -647, -617, -616, -615, -578, -508, -455, -1121 ],
+            "Global": [ 847, 849, 850, -849, -750, -617, -616, -615, -578, -508, -455, -1121 ]
         },
 
         {
@@ -1101,7 +1101,7 @@ window.drops = {
             name: "Mountaintop Banquet! Enter the Generals!",
             thumb: 897,
             condition: 'Only STR/DEX/QCK/PSY/INT orbs will appear',
-            "All Difficulties": [ 897, 898, 899, -899, -754, -702, -701, -669, -528, -466, -449, -464 ]
+            "All Difficulties": [ 897, 898, 899, -899, -754, -702, -701, -669, -528, -466, -449, -464, -1177 ]
         },
 
         {
@@ -1109,7 +1109,7 @@ window.drops = {
             thumb: 918,
             global: true,
             condition: 'You can only bring DEX units',
-            "All Difficulties": [ 917, 919, 920, -920, -791, -756, -720, -706, -705, -542, -541, -522 ]
+            "All Difficulties": [ 917, 919, 920, -920, -791, -756, -720, -706, -705, -542, -541, -522, -1117 ]
         },
         
         {
@@ -1117,14 +1117,16 @@ window.drops = {
             thumb: 929,
             global: true,
             condition: 'You can only bring STR units',
-            "All Difficulties": [ 928, 930, 931, -752, -758, -520, -729, -733, -787, -930, -544, -506 ]
+            "All Difficulties": [ 928, 930, 931, -752, -758, -520, -729, -733, -787, -930, -544, -506, -1115 ]
         },
         
         {
             name: "Encounter! Whitebeard Pirates",
             thumb: 946,
+            global: true,
             condition: "You can only bring PSY units",
-            "All Difficulties": [ 946, 947, 948, 949, -718, -750, -760, -526, -793, -735, -546, -738]
+            "Japan": [ 946, 947, 948, 949, -718, -750, -760, -526, -793, -735, -546, -738, -1173 ],
+            "Global": [ 946, 947, 948, 949, -718, -524, -1119, -528, -1177, -526, -793, -735, -546, -738, -1173 ]
         },
         
         {
@@ -1133,14 +1135,14 @@ window.drops = {
             condition: "You can only bring INT units",
             challenge: 'High Score calculated with Crew Cost, Turns Taken and Tap Accuracy',
             challengeData: [['150,000','1x Blue Elder'],['420,000','1x HP Cotton Candy, 1x Rainbow Gem'],['700,000','2x Rainbow Gems, 1x Orb Forbidden Tome']],
-            "All Difficulties": [ 979, 980, 981, 949, -459, -838, -842, -524, -789, -736, -731, -563 ]
+            "All Difficulties": [ 979, 980, 981, 949, -459, -838, -842, -524, -789, -736, -731, -563, -1119 ]
         },
         
         {
             name: "Let's Find Our Captain! Heart Pirates!",
             condition: "You can only bring QCK units",
             thumb: 1003,
-            "All Difficulties": [ 1002, 1004, 1005, -748, -844, -558, -846, -737, -1006, -785, -564 ]
+            "All Difficulties": [ 1002, 1004, 1005, -748, -844, -558, -846, -737, -1006, -785, -564, -1208 ]
         },
         
         {
@@ -1149,21 +1151,21 @@ window.drops = {
             condition: "None",
             global: true,
             "Global": [ 1010, 1012, 1013, 1014, -1014, -530, -840, -671, -880, -739, -812, -565 ],
-            "Japan": [ 1010, 1012, 1013, 1014, -1014, -530, -840, -560, -880, -739, -812, -565 ]
+            "Japan": [ 1010, 1012, 1013, 1014, -1014, -530, -840, -560, -880, -739, -812, -565, -1212 ]
         },
         
         {
             name: "Temptation!? The Queen of Kamabakka Queendom!",
             thumb: 1037,
             condition: "Only DEX/RCV/TND orbs will appear",
-            "All Dificulties": [ 1036, 1038, -874, -876, -878, -554, -813, -814, -566]
+            "All Dificulties": [ 1036, 1038, -874, -876, -878, -554, -813, -814, -566, -1175 ]
         },
         
         {
             name: "The One Who Seeks the Truth of History: Archaeologist Nico Olvia",
             thumb: 1049,
             condition: "Only TND/RCV/INT orbs will appear",
-            "All Difficulties": [ 1048, 1050, 1052, -556, -567, -586, -614, -816, -870, -872, -908]
+            "All Difficulties": [ 1048, 1050, 1052, -556, -567, -586, -614, -816, -870, -872, -908, -1210 ]
         },
         
         {
@@ -1204,7 +1206,7 @@ window.drops = {
             thumb: 1167,
             global: true,
             condition: "None",
-            "All Difficulties": [ 1166, 1168, 1170, -578, -999, -991, -993, -675, -508, -616, -703 ]
+            "All Difficulties": [ 1166, 1168, 1170, -578, -999, -991, -993, -675, -508, -616, -703, -1121 ]
         },
         
         {
@@ -1440,7 +1442,7 @@ window.drops = {
             name: 'Clash!? Impostor Straw Hat Pirates',
             showManual: true,
             thumb: 989,
-            Ultimate: [ 985, 986, 987, 988, -989, -4, -8, -11, -12, -15, -16, -556, -528, -520, -554, -558, -20, -217, -709]
+            Ultimate: [ 985, 986, 987, 988, -989, -4, -8, -11, -12, -15, -16, -556, -528, -520, -554, -558, -20, -217, -709, -1115, -1177, -1175, -1210, -1208 ]
         },
         
         {
@@ -1539,7 +1541,7 @@ window.drops = {
             name: 'Rescue Ace Event - Aokiji',
             thumb: 1280,
             condition: "10, 20, 30, 35 stamina difficulty. 30 and 35 Stamina has a chance of dropping the Universal Skill Book.",
-            "All Difficulties": [ -416, -459, -530, -669, -578 ]
+            "All Difficulties": [ -416, -459, -530, -669, -578, -1121 ]
         },
         
         {

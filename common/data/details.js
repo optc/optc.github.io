@@ -5038,11 +5038,11 @@ window.details = {
         specialName: "Gamma Knife",
         special: [
             {
-                "description": "Makes Damage and Health Cutting Specials of Slasher and Free Spirit characters bypass all defensive Buffs, deals 20x his ATK in PSY damage to one enemy.",
+                "description": "Makes Damage and Health Cutting Specials of Slasher and Free Spirit characters bypass all defensive Buffs, deals 20x character's ATK in fixed PSY damage to one enemy.",
                 "cooldown": [ 18, 13 ]
             },
             {
-                "description": "Makes Damage and Health Cutting Specials of all characters bypass all defensive Buffs, deals 50x his ATK in PSY damage to one enemy.",
+                "description": "Makes Damage and Health Cutting Specials of all characters bypass all defensive Buffs, deals 50x character's ATK in fixed PSY damage to one enemy.",
                 "cooldown": [ 25, 20 ]
             }
         ],
@@ -5053,11 +5053,11 @@ window.details = {
         specialName: "Gamma Knife",
         special: [
             {
-                "description": "Makes Damage and Health Cutting Specials of Slasher and Free Spirit characters bypass all defensive Buffs, deals 20x his ATK in PSY damage to one enemy.",
+                "description": "Makes Damage and Health Cutting Specials of Slasher and Free Spirit characters bypass all defensive Buffs, deals 20x character's ATK in fixed PSY damage to one enemy.",
                 "cooldown": [ 18, 13 ]
             },
             {
-                "description": "Makes Damage and Health Cutting Specials of all characters bypass all defensive Buffs, deals 50x his ATK in PSY damage to one enemy.",
+                "description": "Makes Damage and Health Cutting Specials of all characters bypass all defensive Buffs, deals 50x character's ATK in fixed PSY damage to one enemy.",
                 "cooldown": [ 25, 20 ]
             }
         ],
@@ -5550,14 +5550,14 @@ window.details = {
     1122: {
         captain: "Boosts ATK of [STR], [DEX], and [QCK] characters by 2.5x, but boosts his OWN attack by 4x",
         captainNotes: "Cavendish only boosts Friend or Sub Cavendish by 2.5x for a total of 10x boost with two Cavendish captains",
-        special: "Removes all positive buffs on Your team. Deals 15x the character's ATK as Typeless damage to all enemies. Boosts Cavendish's ATK by 1.75x for 2 turns, amplifies the effect of Cavendish's orb by 1.75x for 2 turns, locks his orb for 2 turns, and changes own orb to [QCK].",
+        special: "Removes all positive buffs on Your team. Deals 15x the character's ATK as Typeless damage to all enemies. Boosts Cavendish's ATK by 2.25x for 2 turns, amplifies the effect of Cavendish's orb by 1.5x for 2 turns, locks his orb for 2 turns, and changes own orb to [QCK].",
         specialNotes: "Boosted ATK and Orb Effectivess only works for the Cavendish who uses his Special.",
         specialName: "Slicing Winds of Rommel"
     },
     1123: {
         captain: "Boosts ATK of [STR], [DEX], and [QCK] characters by 2.5x, but boosts his OWN attack by 4x",
         captainNotes: "Cavendish only boosts Friend or Sub Cavendish by 2.5x for a total of 10x boost with two Cavendish captains",
-        special: "Removes all positive buffs on Your team. Deals 15x the character's ATK as Typeless damage to all enemies. Boosts Cavendish's ATK by 1.75x for 2 turns, amplifies the effect of Cavendish's orb by 1.75x for 2 turns, locks his orb for 2 turns, and changes own orb to [QCK].",
+        special: "Removes all positive buffs on Your team. Deals 15x the character's ATK as Typeless damage to all enemies. Boosts Cavendish's ATK by 2.25x for 2 turns, amplifies the effect of Cavendish's orb by 1.5x for 2 turns, locks his orb for 2 turns, and changes own orb to [QCK].",
         specialNotes: "Boosted ATK and Orb Effectivess only works for the Cavendish who uses his Special.",
         specialName: "Slicing Winds of Rommel"
     },

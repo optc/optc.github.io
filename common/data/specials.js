@@ -1413,14 +1413,14 @@ window.specials = {
         type: "type" 
     },
     1122: {
-        atk: function(p) { return p.slot == p.sourceSlot ? 1.75 : 1; },
+        atk: function(p) { return p.slot == p.sourceSlot ? 2.25 : 1; },
         type: "type",
-        orb: function(p) { return p.slot == p.sourceSlot ? CrunchUtils.getOrbMultiplier(p.orb, 1, 1.75) : CrunchUtils.getOrbMultiplier(p.orb, 1, 1)}
+        orb: function(p) { return p.slot == p.sourceSlot ? CrunchUtils.getOrbMultiplier(p.orb, 1, 1.5) : CrunchUtils.getOrbMultiplier(p.orb, 1, 1)}
     },
     1123: {
-        atk: function(p) { return p.slot == p.sourceSlot ? 1.75 : 1; },
+        atk: function(p) { return p.slot == p.sourceSlot ? 2.25 : 1; },
         type: "type",
-        orb: function(p) { return p.slot == p.sourceSlot ? CrunchUtils.getOrbMultiplier(p.orb, 1, 1.75) : CrunchUtils.getOrbMultiplier(p.orb, 1, 1)}
+        orb: function(p) { return p.slot == p.sourceSlot ? CrunchUtils.getOrbMultiplier(p.orb, 1, 1.5) : CrunchUtils.getOrbMultiplier(p.orb, 1, 1)}
     },
     1132: {
         atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Shooter")  ? window.specials[1132].multiplier : 1; },
