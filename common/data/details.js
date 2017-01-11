@@ -7635,12 +7635,12 @@ window.details = {
     },
     1417: {//Ronse
         captain: "Boosts ATK and HP of [STR] characters by 1.5x",
-        special: "Cuts the current HP of all enemies by 10%, changes [BLOCK] orbs into [STR] orbs for [STR] characters",
+        special: "Cuts the current HP of all enemies by 10%, changes [BLOCK] orbs into [STR] orbs for Slasher characters",
         specialName: "Raid Battle-Axe: One Flash",
     },
     1418: {//Stainless
         captain: "Boosts ATK and RCV of INT characters by 1.5x",
-        special: "Reduces any damage received above 5,000 HP by 97% for 1 turn",
+        special: "Reduces any damage received above 5,000 HP by 99% for 1 turn",
         specialName: "Defence of the Command Line",
     },
     1419: {//Kimono Lucci
