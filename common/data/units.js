@@ -1419,6 +1419,10 @@ window.units = [
     [ "Stainless", "INT", [ "Slasher", "Cerebral" ], 4, 15, 5, 2, 70, 1066998, 82, 57, 20, 1408, 874, 202, 1 ],
     [ "Kimono Lucci", "INT", [ "Fighter", "Powerhouse" ], 4, 13, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Kimono Lucci, Evolved", "INT", [ "Fighter", "Powerhouse" ], 5, 20, 5, 3, 99, null, null, null, null, 2299, 1333, 152, null ],
+    [ "Coliseum Diamante", "INT", [ "Driven", "Striker" ], 4, 25, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Coliseum Diamante, Evolved", "INT", [ "Driven", "Striker" ], 5, 40, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Coliseum T-Bone", "QCK", [ "Cerebral", "Slasher" ], 4, 26, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Coliseum Gin", "DEX", "Striker", 4, 20, null, null, null, null, null, null, null, null, null, null, null ],
     ];
     
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],

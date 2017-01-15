@@ -1901,9 +1901,11 @@ window.specials = {
     },
     1394: {
         atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Striker") ? 1.5 : 1; },
+        type: "class"
     },
     1395: {
         atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Striker") ? 1.5 : 1; },
+        type: "class"
     },
     1396: {
         def: function(p) { return 0.2; }
