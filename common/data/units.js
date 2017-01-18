@@ -1417,12 +1417,12 @@ window.units = [
     [ "Sengoku the Buddha, Wise Warrior", "PSY", [ "Fighter", "Cerebral" ], 4, 20, 5, 3, 99, 3000000, 920, 440, 100, 2059, 1059, 304, 1 ],
     [ "Ronse", "STR", [ "Slasher", "Powerhouse" ], 4, 15, 6, 1, 70, 1066998, 106, 59, 1, 2018, 901, 3, 1 ],
     [ "Stainless", "INT", [ "Slasher", "Cerebral" ], 4, 15, 5, 2, 70, 1066998, 82, 57, 20, 1408, 874, 202, 1 ],
-    [ "Kimono Lucci", "INT", [ "Fighter", "Powerhouse" ], 4, 13, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Kimono Lucci, Evolved", "INT", [ "Fighter", "Powerhouse" ], 5, 20, 5, 3, 99, null, null, null, null, 2299, 1333, 152, null ],
-    [ "Coliseum Diamante", "INT", [ "Driven", "Striker" ], 4, 25, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Coliseum Diamante, Evolved", "INT", [ "Driven", "Slasher" ], 5, 40, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Coliseum T-Bone", "QCK", [ "Cerebral", "Slasher" ], 4, 26, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Coliseum Gin", "DEX", "Striker", 4, 20, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Kimono Lucci", "INT", [ "Fighter", "Powerhouse" ], 4, 13, 5, 2, 50, 392109, 152, 93, 13, 1202, 556, 73, null ],
+    [ "Kimono Lucci, Evolved", "INT", [ "Fighter", "Powerhouse" ], 5, 20, 5, 3, 99, 3000000, 1129, 499, 152, 2299, 1333, 152, null ],
+    [ "Coliseum Diamante", "INT", [ "Driven", "Striker" ], 4, 25, 5, 2, 70, 1066998, 505, 388, 12, 1202, 770, 91, null ],
+    [ "Coliseum Diamante, Evolved", "INT", [ "Driven", "Slasher" ], 5, 40, 4, 3, 99, 4000000, 1131, 711, 47, 2400, 1457, 168, null ],
+    [ "Coliseum T-Bone", "QCK", [ "Cerebral", "Slasher" ], 4, 26, 4, 3, 99, null, null, null, null, null, null, null, null ],
+    [ "Coliseum Gin", "DEX", "Striker", 4, 20, 4, 2, 70, null, 110, 69, 32, null, null, null, null ],
     ];
     
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],

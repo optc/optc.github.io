@@ -7654,7 +7654,7 @@ window.details = {
         specialName: "Lucci Special",
     },
     1421: {//Coliseum Diamante
-        captain: "Not Translated",
+        captain: "Boosts ATK of Driven characters by 2x",
         special: "Deals large [INT] damage to all enemies. If HP is full at the time the special was activated, boosts ATK of Driven characters by 2x, 1.5x otherwise",
         specialName: "Diamante Special",
     },
@@ -7664,7 +7664,7 @@ window.details = {
         specialName: "Diamante Special",
     },
     1423: {//Coliseum T-Bone
-        captain: "Not Translated",
+        captain: "Boosts ATK of the whole crew by 1.75x and recovers 918 HP at end of each turn,",
         special: "If HP is below 500, reduces damage received by 99% for 1 turn",
         specialName: "T-Bone Special",
     },

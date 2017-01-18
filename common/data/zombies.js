@@ -311,4 +311,8 @@ window.zombies = {
         type: 'zombie',
         threshold: 0.5
     },
+    1423: { // Colo T-Bone
+        type: 'healer',
+        amount: 918
+    },
 };
