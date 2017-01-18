@@ -312,9 +312,9 @@ window.ships = [
     { // 26
         name: 'Kizaru\'s Cannonball',
         thumb: null,
-        description: 'Boosts ATK of Shooter characters by 1.5x and their HP by 1.2x, reduces cooldown of all specials by 1 turn at the start of the fight. Special: Cuts the current HP of each enemy by 7% (cooldown: 15 turns).',
+        description: 'Boosts ATK of Shooter characters by 1.55x and their HP by 1.2x, reduces cooldown of all specials by 1 turn at the start of the fight. Special: Cuts the current HP of each enemy by 7% (cooldown: 15 turns).',
         atk: function(p) {
-            return [ 1.2, 1.2, 1.3, 1.3, 1.3, 1.4, 1.4, 1.4, 1.4, 1.5 ][p.boatLevel - 1];
+            return [ 1.2, 1.2, 1.3, 1.3, 1.3, 1.4, 1.4, 1.4, 1.4, 1.55 ][p.boatLevel - 1];
         },
         hp: function(p) {
             return [ 1.1, 1.1, 1.1, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2 ][p.boatLevel - 1];

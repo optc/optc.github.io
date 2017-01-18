@@ -1361,8 +1361,8 @@ window.cooldowns = [
     [ 15, 15 ],
     [ 20, 16 ],
     [ 20, 16 ],
-    21,
-    21,
+    [ 21, 15 ],
+    [ 21, 15 ],
     null,//New World Nami
     null,//New World Nami
     null,//New World Sanji
@@ -1403,8 +1403,8 @@ window.cooldowns = [
     null,//Colo Dalton
     null,//New World Luffy
     null,//New World Luffy
-    20,
-    20,
+    [ 20, 14 ],
+    [ 20, 14 ],
     [ 22, 16 ],
     [ 22, 16 ],
     [ 16, 10 ],
@@ -1419,8 +1419,8 @@ window.cooldowns = [
     [ 22, 15 ],
     [ 15, 15 ],
     [ 15, 15 ],
-    33,
-    33,
-    26,
-    16,
+    [ 33, 17 ],
+    [ 33, 17 ],
+    [ 26, 14 ],
+    [ 16, 7 ],
 ];
