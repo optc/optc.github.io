@@ -7655,12 +7655,12 @@ window.details = {
     },
     1421: {//Coliseum Diamante
         captain: "Boosts ATK of Driven characters by 2x",
-        special: "Deals large [INT] damage to all enemies. If HP is full at the time the special was activated, boosts ATK of Driven characters by 2x, 1.5x otherwise",
+        special: "Deals large [INT] damage to all enemies. If HP is full at the time the special was activated, boosts ATK of Driven characters by 2x for 1 turn, 1.5x otherwise",
         specialName: "Diamante Special",
     },
     1422: {//Coliseum Diamante
-        captain: "Boosts ATK of Driven characters by 2.25x and boosts HP of Stiker and Slasher characters by 1.5x",
-        special: "Deals large [INT] damage to all enemies. If HP is full at the time the special was activated, boosts ATK of Driven characters by 2x, 1.5x otherwise",
+        captain: "Boosts ATK of Driven characters by 2.25x and boosts HP of Striker and Slasher characters by 1.5x",
+        special: "Deals large [INT] damage to all enemies. If HP is full at the time the special was activated, boosts ATK of Driven characters by 2x for 1 turn, 1.5x otherwise",
         specialName: "Diamante Special",
     },
     1423: {//Coliseum T-Bone
