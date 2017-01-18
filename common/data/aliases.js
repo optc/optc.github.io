@@ -1419,4 +1419,8 @@ window.aliases = {
     1418: ['カイゼルヒゲ', '', ''],
     1419: ['', '', 'Kimono Lucci'],
     1420: ['', '', 'Kimono Lucci'],
+    1421: ['', '', 'Coliseum Diamante'],
+    1422: ['', '', 'Coliseum Diamante'],
+    1423: ['', '', 'Coliseum T-Bone'],
+    1424: ['', '', 'Coliseum Gin'],
 };

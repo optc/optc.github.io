@@ -296,17 +296,28 @@ window.ships = [
     { // 24
         name: 'New Year\'s Big Top',
         thumb: null,
-        description: 'Boosts ATK, Berry, and EXP by 1.5x',
+        description: 'Boosts ATK by 1.2x',
         atk: function(p) {
-            return 1.5;
+            return 1.2;
         },
     },
     { // 25
         name: 'Thousand Sunny: Coated',
-        thumb: 'null',
+        thumb: null,
         description: 'Boosts ATK by 1.5x. Special: reduces damage received by 50% for 1 turn (cooldown: 16 turns).',
         atk: function(p) {
             return [ 1.3, 1.3, 1.3, 1.3, 1.35, 1.35, 1.35, 1.4, 1.45, 1.5 ][p.boatLevel - 1];
+        }
+    },
+    { // 26
+        name: 'Kizaru\'s Cannonball',
+        thumb: null,
+        description: 'Boosts ATK of Shooter characters by 1.5x and their HP by 1.2x, reduces cooldown of all specials by 1 turn at the start of the fight. Special: Cuts the current HP of each enemy by 7% (cooldown: 15 turns).',
+        atk: function(p) {
+            return [ 1.2, 1.2, 1.3, 1.3, 1.3, 1.4, 1.4, 1.4, 1.4, 1.5 ][p.boatLevel - 1];
+        },
+        hp: function(p) {
+            return [ 1.1, 1.1, 1.1, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2 ][p.boatLevel - 1];
         }
     },
 

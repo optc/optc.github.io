@@ -2024,4 +2024,24 @@ window.specials = {
         atk: function(p) { return p.defenseDown ? 1.5 : 1; },
         type: "condition"
     },
+    1421: {
+        atk: function(p) {
+            if(p.percHP == 100.0){
+                return p.unit.class.has("Driven") ? 1.75 : 1;
+            }else{
+                return p.unit.class.has("Driven") ? 1.75 : 1;
+            }
+        },
+        type: "class"
+    },
+    1422: {
+        atk: function(p) {
+            if(p.percHP == 100.0){
+                return p.unit.class.has("Driven") ? 1.75 : 1;
+            }else{
+                return p.unit.class.has("Driven") ? 1.75 : 1;
+            }
+        },
+        type: "class"
+    },
 };

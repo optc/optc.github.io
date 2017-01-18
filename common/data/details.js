@@ -7653,5 +7653,26 @@ window.details = {
         special: "Recovers 5,000 HP and boosts ATK against enemies with reduced defense by 1.5x for 1 turns",
         specialName: "Lucci Special",
     },
+    1421: {//Coliseum Diamante
+        captain: "Not Translated",
+        special: "Deals large [INT] damage to all enemies. If HP is full at the time the special was activated, boosts ATK of Driven characters by 2x, 1.5x otherwise",
+        specialName: "Diamante Special",
+    },
+    1422: {//Coliseum Diamante
+        captain: "Boosts ATK of Driven characters by 2.25x and boosts HP of Stiker and Slasher characters by 1.5x",
+        special: "Deals large [INT] damage to all enemies. If HP is full at the time the special was activated, boosts ATK of Driven characters by 2x, 1.5x otherwise",
+        specialName: "Diamante Special",
+    },
+    1423: {//Coliseum T-Bone
+        captain: "Not Translated",
+        special: "If HP is below 500, reduces damage received by 99% for 1 turn",
+        specialName: "T-Bone Special",
+    },
+    1424: {//Coliseum Gin
+        captain: "Boosts ATK of Striker characters proportionally to the crew's current HP",
+        //captainNotes: "#{captainProportional : higher : 1 + 1.25 * (remaining HP) / (total HP) : 2.25 : 2}"
+        special: "Deals 500 fixed damage to each enemy and reduces Special Cooldown of Striker characters by 1 turn.",
+        specialName: "Gin Special",
+    },
 };
 
