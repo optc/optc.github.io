@@ -978,7 +978,7 @@ window.units = [
     [ "Kizaru", "QCK", ["Shooter", "Fighter"], 4, 30, 4, 2, 70, 1066998, 221, 169, 36,  1241, 741, 160, 1],
     [ "Kizaru, Light Human", "QCK", ["Shooter", "Fighter"], 5, 50, 5, 3, 99, 5000000, 1179, 665, 130, 2506, 1410, 277, 1],
     [ "Izo Whitebeard 16th Div. Commander", "PSY", ["Shooter", "Cerebral"], 4, 25, 6, 3, 99, 3000000, 37, 22, 39, 1910, 990, 300, 1 ],
-    [ "Blamenco Whitebeard 6th Div. Commander", "DEX", ["Striker", "Free Spirit"], 4, 25, 4, 2, 99, 3000000, 66, 40, 18, 2394, 1268, 126, 1 ],
+    [ "Blamenco Whitebeard 6th Div. Commander", "DEX", ["Striker", "Free Spirit"], 4, 25, 4, 3, 99, 3000000, 66, 40, 18, 2394, 1268, 126, 1 ],
     [ "Namule Whitebeard 8th Div. Commander", "PSY", ["Fighter", "Powerhouse"], 4, 25, 4, 3, 99, 3000000, 49, 48, 26, 2148, 1305, 154, 1 ],
     [ "Vista Whitebeard 5th Div. Commander", "QCK", ["Slasher", "Powerhouse"], 4, 25, 5, 2, 70, 1066998, 694, 277, 48, 1603, 700, 141, 1 ],
     [ "Flower Sword Vista Whitebeard 5th Div. Commander", "QCK", ["Slasher", "Powerhouse"], 5, 40, 4, 3, 99, 4000000, 1534, 634, 98, 2830, 1257, 228, 1 ],

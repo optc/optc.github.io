@@ -7671,7 +7671,7 @@ window.details = {
     1424: {//Coliseum Gin
         captain: "Boosts ATK of Striker characters proportionally to the crew's current HP",
         //captainNotes: "#{captainProportional : higher : 1 + 1.25 * (remaining HP) / (total HP) : 2.25 : 2}"
-        special: "Deals 500 fixed damage to each enemy and reduces Special Cooldown of Striker characters by 1 turn.",
+        special: "Deals 500 fixed damage to all enemies and reduces Special Cooldown of Striker characters by 1 turn.",
         specialName: "Gin Special",
     },
 };
