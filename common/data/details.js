@@ -7666,13 +7666,13 @@ window.details = {
     1423: {//Coliseum T-Bone
         captain: "Boosts ATK of the whole crew by 1.75x and recovers 918 HP at end of each turn,",
         special: "If HP is below 500, reduces damage received by 99% for 1 turn",
-        specialName: "T-Bone Special",
+        specialName: "For the Sake of Justice",
     },
     1424: {//Coliseum Gin
         captain: "Boosts ATK of Striker characters proportionally to the crew's current HP",
         //captainNotes: "#{captainProportional : higher : 1 + 1.25 * (remaining HP) / (total HP) : 2.25 : 2}"
         special: "Deals 500 fixed damage to all enemies and reduces Special Cooldown of Striker characters by 1 turn.",
-        specialName: "Gin Special",
+        specialName: "General Commander's Fight",
     },
 };
 
