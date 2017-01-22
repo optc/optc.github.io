@@ -2037,9 +2037,9 @@ window.specials = {
     1422: {
         atk: function(p) {
             if(p.percHP == 100.0){
-                return p.unit.class.has("Driven") ? 1.75 : 1;
+                return p.unit.class.has("Driven") ? 2 : 1;
             }else{
-                return p.unit.class.has("Driven") ? 1.75 : 1;
+                return p.unit.class.has("Driven") ? 1.5 : 1;
             }
         },
         type: "class"
