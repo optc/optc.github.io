@@ -812,7 +812,7 @@ window.drops = {
             condition: 'You may only bring QCK units for 15 and 30 Stamina',
             challenge: 'High Score calculated with Crew Cost, Turns Taken and Tap Accuracy',
             challengeData: [['200,000 Points','1x Red Elder'],['400,000 Points','1x HP Cotton Candy'],['700,000 Points','3x Rainbow Gems']],
-            "All Difficulties": [ 28, 40, 60, 213, 215, 340, -292, -291, -290, -261, -257, -214, -71, -44 ]
+            "All Difficulties": [ 28, 40, 60, 213, 215, 340, -292, -291, -290, -261, -257, -214, -71, -44, -1413 ]
         },
 
         {
@@ -1027,8 +1027,8 @@ window.drops = {
             thumb: 761,
             global: true,
             condition: "None",
-            "Japan": [ 761, 762, 763, 764, 765, -610, -588, -565, -556, -426, -408, -261, -217, -1210 ],
-            "Global": [ 761, 762, 763, 764, 765, -426, -408, -332, -308, -292, -261, -217, -8 ]
+            "Japan": [ 761, 762, 763, 764, 765, -610, -588, -565, -556, -426, -408, -261, -217, -1210, -1413 ],
+            "Global": [ 761, 762, 763, 764, 765, -426, -408, -332, -308, -292, -261, -217, -8, -1413 ]
         },
 
         {
@@ -1132,10 +1132,12 @@ window.drops = {
         {
             name: "Clash! Whitebeard Pirates",
             thumb: 979,
+            global: true,
             condition: "You can only bring INT units",
             challenge: 'High Score calculated with Crew Cost, Turns Taken and Tap Accuracy',
             challengeData: [['150,000','1x Blue Elder'],['420,000','1x HP Cotton Candy, 1x Rainbow Gem'],['700,000','2x Rainbow Gems, 1x Orb Forbidden Tome']],
-            "All Difficulties": [ 979, 980, 981, 949, -459, -838, -842, -524, -789, -736, -731, -563, -1119 ]
+            "Japan": [ 979, 980, 981, 949, -459, -838, -842, -524, -789, -736, -731, -563, -1119 ],
+            "Global": [ 979, 980, 981, 949, -459, -838, -842, -560, -789, -736, -731, -563, -1212 ]
         },
         
         {
@@ -1534,7 +1536,7 @@ window.drops = {
             name: 'Rescue Ace Event - Akainu',
             thumb: 1283,
             condition: "10, 20, 30, 35 stamina difficulty. 30 and 35 Stamina has a chance of dropping the Universal Skill Book.",
-            "All Difficulties": [ -261, -562, -720, -748, -935 ]
+            "All Difficulties": [ -261, -562, -720, -748, -935, -1413 ]
         },
         
         {
