@@ -1421,7 +1421,7 @@ window.units = [
     [ "Kimono Lucci, Evolved", "INT", [ "Fighter", "Powerhouse" ], 5, 20, 5, 3, 99, 3000000, 1129, 499, 152, 2299, 1333, 152, null ],
     [ "Coliseum Diamante", "INT", [ "Driven", "Striker" ], 4, 25, 5, 2, 70, 1066998, 505, 388, 12, 1202, 770, 91, null ],
     [ "Coliseum Diamante, Evolved", "INT", [ "Driven", "Slasher" ], 5, 40, 4, 3, 99, 4000000, 1131, 711, 47, 2400, 1457, 168, null ],
-    [ "Coliseum T-Bone", "QCK", [ "Cerebral", "Slasher" ], 4, 26, 4, 3, 99, null, null, null, null, 1752, 1199, 300, null ],
+    [ "Coliseum T-Bone", "QCK", [ "Cerebral", "Slasher" ], 4, 26, 4, 3, 99, null, 99, 98, 50, 1752, 1199, 300, null ],
     [ "Coliseum Gin", "DEX", "Striker", 4, 20, 4, 2, 70, null, 110, 69, 32, 1228, 801, 191, null ],
     ];
     
