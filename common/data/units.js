@@ -1423,6 +1423,12 @@ window.units = [
     [ "Coliseum Diamante, Evolved", "INT", [ "Driven", "Slasher" ], 5, 40, 4, 3, 99, 4000000, 1131, 711, 47, 2400, 1457, 168, null ],
     [ "Coliseum T-Bone", "QCK", [ "Cerebral", "Slasher" ], 4, 26, 4, 3, 99, null, 99, 98, 50, 1752, 1199, 300, null ],
     [ "Coliseum Gin", "DEX", "Striker", 4, 20, 4, 2, 70, null, 110, 69, 32, 1228, 801, 191, null ],
+    [ "Don Sai FortNight Character #1", "QCK", [ "Fighter", "Striker" ], null, null, null, null, null, null, null, null, null, null, null, null, null],
+    [ "Don Sai FortNight Character #1, Evolved", "QCK", [ "Fighter", "Striker" ], null, null, null, null, null, null, null, null, null, null, null, null, null],
+    [ "Don Sai FortNight Character #2", "QCK", [ "Fighter", "Driven" ], null, null, null, null, null, null, null, null, null, null, null, null, null],
+    [ "Don Sai FortNight Character #3", "DEX", [ "Slasher, Shooter" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Raid Franky", "DEX", [ "Striker", "Free Spirit" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Raid Franky, Evolved", "DEX", [ "Striker", "Free Spirit" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     ];
     
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],

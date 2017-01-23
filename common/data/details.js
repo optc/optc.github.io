@@ -7674,5 +7674,29 @@ window.details = {
         special: "Deals 500 fixed damage to all enemies and reduces Special Cooldown of Striker characters by 1 turn.",
         specialName: "General Commander's Fight",
     },
+    1425: {//Don Sai Fortnight Character #1
+        captain: "",
+        special: "",
+    },
+    1426: {//Don Sai Fortnight Character #1, Evolved
+        captain: "",
+        special: "",
+    },
+    1427: {//Don Sai Fortnight Character #2
+        captain: "",
+        special: "",
+    },
+    1428: {//Don Sai Fortnight Character #3
+        captain: "",
+        special: "",
+    },
+    1429: {//Raid Franky
+        captain: "",
+        special: "",
+    },
+    1430: {//Raid Franky, Evolved
+        captain: "",
+        special: "",
+    },
 };
 
