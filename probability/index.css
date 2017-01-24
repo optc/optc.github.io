@@ -233,6 +233,14 @@ slot-wheel > .ghoster {
     background: #ddd;
 }
 
+.quick-fill-slots {
+	margin: 2px auto;
+}
+
+.quick-fill-skillups {
+	display: inline-block;
+}
+
 .label.label-danger {
     display: inline-block;
     white-space: nowrap;
@@ -690,6 +698,37 @@ canvas {
 
 #summary .label {
     font-size: 85%;
+}
+
+/***********
+ * POPOVER *
+ ***********/
+ 
+.popover {
+    width: 400px;
+} 
+
+.popover-content {
+    color: black;
+    font-size: 90%;
+    padding: 0;
+}
+ 
+.popover-data {
+    font-size: 90%;
+}
+
+.popover-data table {
+    margin: 0;
+}
+
+.popover-data td {
+    width: 25%;
+    padding: 4px !important;
+}
+
+.popover-data .header > td {
+    font-weight: bold;
 }
 
 /***************
