@@ -6650,8 +6650,8 @@ window.details = {
     },
     1281: {//Marineford Garp
         captain: "Boosts ATK of Fighter characters by 2.25x and reduces damage received by 10%",
-        special: "Deals 25x character's ATK in [STR] damage to one enemy that bypasses all defensive Buffs",
-        specialNotes: "Ignores barriers, DEF, and Damage Reduction buffs",
+        special: "Deals 25x character's ATK in [STR] damage to one enemy that will ignore damage negating abilities and barriers.",
+        specialNotes: "Damage that ignores damage negating abilities and barriers is similar to 6* Blackbeard's special when he is captain",
         specialName: "Fist of Love - Falling Fortress",
     },
     1282: {//Marineford Sengoku
@@ -7520,11 +7520,11 @@ window.details = {
         special: [
             {
                 "description": "Deals 3x character's ATK in [PSY] damage to one enemy, boosts ATK of [PSY] characters by 1.3x for 1 turn",
-                "cooldown": [ 14, null ],
+                "cooldown": [ 14, 4 ],
             },
             {
                 "description": "Deals 13x character's ATK in [PSY] damage to one enemy, boosts ATK of [PSY] characters by 1.5x for 1 turn",
-                "cooldown": [ 18, null ],
+                "cooldown": [ 18, 8 ],
             },
         ],
         specialName: "Offense Battle Axe",
@@ -7561,14 +7561,14 @@ window.details = {
     },
     1405: {//Timeskip Usopp
         captain: "Boost ATK of Shooters by 1.75x, and their RCV by 1.25x",
-        special: "Deals 10 hits of 2,000 fixed damage to random enemies, boosts ATK of Shooters by 1.75x and amplifies the effect of orbs by 1.75x for 1 turn if enemies have delay protection",
+        special: "Deals 10 hits of 2,000 fixed damage to random enemies, and if enemies have delay protection at the time the special was activated, boosts ATK of Shooters by 1.75x and amplifies the effect of orbs by 1.75x for 1 turn",
         specialNotes: "This is a new form of Conditional Boost. The boost does not act like a Monet or Dalmatian boost, but is only activated if conditions are met and does not stack with other Class boosts or Orb boosts.",
         specialName: "Assault Meteor Shower",
         sailor: "When HP is below 30% at the start of the turn, boost ATK and RCV of Shooters by 100",
     },
     1406: {//Timeskip Usopp
         captain: "Boost ATK of Shooters by 2.25x, and their RCV by 1.5x",
-        special: "Deals 10 hits of 2,000 fixed damage to random enemies, boosts ATK of Shooters by 1.75x and amplifies the effect of orbs by 1.75x for 1 turn if enemies have delay protection",
+        special: "Deals 10 hits of 2,000 fixed damage to random enemies, and if enemies have delay protection at the time the special was activated, boosts ATK of Shooters by 1.75x and amplifies the effect of orbs by 1.75x for 1 turn",
         specialNotes: "This is a new form of Conditional Boost. The boost does not act like a Monet or Dalmatian boost, but is only activated if conditions are met and does not stack with other Class boosts or Orb boosts.",
         specialName: "Assault Meteor Shower",
         sailor: "When HP is below 30% at the start of the turn, boost ATK and RCV of Shooters by 100",
