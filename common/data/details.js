@@ -7666,13 +7666,43 @@ window.details = {
     1423: {//Coliseum T-Bone
         captain: "Boosts ATK of the whole crew by 1.75x and recovers 918 HP at end of each turn,",
         special: "If HP is below 500, reduces damage received by 99% for 1 turn",
-        specialName: "T-Bone Special",
+        specialName: "For the Sake of Justice",
     },
     1424: {//Coliseum Gin
         captain: "Boosts ATK of Striker characters proportionally to the crew's current HP",
         //captainNotes: "#{captainProportional : higher : 1 + 1.25 * (remaining HP) / (total HP) : 2.25 : 2}"
         special: "Deals 500 fixed damage to all enemies and reduces Special Cooldown of Striker characters by 1 turn.",
-        specialName: "Gin Special",
+        specialName: "General Commander's Fight",
+    },
+    1425: {//Don Sai 3*
+        captain: "Boosts ATK of Fighter and Striker characters by 1.75x",
+        special: "Deals 25x character's ATK in QCK damage to one enemy.  When this special ativates when a character is locked, then for 3 turns boosts the effect of orbs by 1.5x",
+        specialName: "",
+    },
+    1426: {//Don Sai 4*
+        captain: "Boosts ATK of Fighter and Striker characters by 2x and their HP by 1.25x",
+        special: "Deals 25x character's ATK in QCK damage to one enemy.  When this special ativates when a character is locked, then for 3 turns boosts the effect of orbs by 1.5x",
+        specialName: "",
+    },
+    1427: {//Boo 4*
+        captain: "Boosts ATK of QCK characters by 2x",
+        special: "Ignores defensive barriers and deals 15x character's ATK in QCK damage to one enemy",
+        specialName: "",
+    },
+    1428: {//Jean Ango 4*
+        captain: "Boosts amount of beli received by 1.5x, and gives chance of duplicating a drop upon completion of the island",
+        special: "When the enemy is delayed, reduces the special cooldown of all characters by 1 turn and boosts own attack by 1.75x for 1 turn",
+        specialName: "",
+    },
+    1429: {//Raid Franky
+        captain: "",
+        special: "",
+        specialName: "",
+    },
+    1430: {//Raid Franky, Evolved
+        captain: "",
+        special: "",
+        specialName: "",
     },
 };
 

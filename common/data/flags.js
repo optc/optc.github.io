@@ -724,7 +724,7 @@ window.flags = {
     724: { global: 1 },
     725: { global: 1, rr: 1, rro: 1, lrr: 1 },
     726: { global: 1, rr: 1, rro: 1, lrr: 1 },
-    727: { special: 1 },
+    727: { special: 1, global: 1 },
     728: { global: 1 },
     729: { global: 1 },
     730: { global: 1 },
