@@ -7676,12 +7676,12 @@ window.details = {
     },
     1425: {//Don Sai 3*
         captain: "Boosts ATK of Fighter and Striker characters by 1.75x",
-        special: "Deals 25x character's ATK in QCK damage to one enemy.  When this special ativates when a character is locked, then for 3 turns boosts the effect of orbs by 1.5x",
+        special: "Deals 25x character's ATK in QCK damage to one enemy.  When this special activates when a character is locked, then for 3 turns boosts the effect of orbs by 1.5x",
         specialName: "",
     },
     1426: {//Don Sai 4*
         captain: "Boosts ATK of Fighter and Striker characters by 2x and their HP by 1.25x",
-        special: "Deals 25x character's ATK in QCK damage to one enemy.  When this special ativates when a character is locked, then for 3 turns boosts the effect of orbs by 1.5x",
+        special: "Deals 25x character's ATK in QCK damage to one enemy.  When this special activates when a character is locked, then for 3 turns boosts the effect of orbs by 1.5x",
         specialName: "",
     },
     1427: {//Boo 4*
