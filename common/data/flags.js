@@ -1212,4 +1212,6 @@ window.flags = {
     1414: { shop: 1 },
     1419: { rr: 1, rro: 1, lrr: 1, },
     1420: { rr: 1, rro: 1, lrr: 1, },
+    1429: { rr: 1, rro: 1, lrr: 1, },
+    1430: { rr: 1, rro: 1, lrr: 1, },
 };

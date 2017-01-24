@@ -1255,7 +1255,7 @@ window.drops = {
         
         {
             name: "Tontatta Kingdom Island Part 1: Leo",
-            thumb: 1330,
+            thumb: 1328,
             condition: "Slasher characters are Silenced for 99 turns and have their ATK reduced by a variable amount. (75% on 30 stamina)",
             "All Difficulties": [ 1327, 1329, 1330, -1085, -1127, -1131, -1058, -758, -760, -735, -4, -508 ]
         },
@@ -1291,6 +1291,13 @@ window.drops = {
             thumb: 1416,
             condition: "You can only bring INT units",
             "All Difficulties": [ 1415, 1417, 1418, -1418, -870, -1276, -1274, -1236, -874, -253, -1223, -813 ]
+        },
+        
+        {
+            name: "Happo Navy! The 13th Leader Appears!",
+            thumb: 1426,
+            condition: "You can only bring DEX units",
+            "All Difficulties": [ 1425, 1427, 1428, -1240, -1272, -1270, -1227, -1224, -872, -878, -255, -812 ]
         },
         
     ],

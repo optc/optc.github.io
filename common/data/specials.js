@@ -2044,4 +2044,17 @@ window.specials = {
         },
         type: "class"
     },
+    1426: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, 1, 1.5); },
+        warning: "Selected special (%name%) assumes that an ally has been inflicted with Bind."
+    },
+    1427: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, 1, 1.5); },
+        warning: "Selected special (%name%) assumes that an ally has been inflicted with Bind."
+    },
+    1406: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 1.75 : 1; },
+        type: "class",
+        warning: "Selected special (%name%) assumes that the enemy has been Delayed."
+    },
 };
