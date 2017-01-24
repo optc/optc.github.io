@@ -7676,33 +7676,36 @@ window.details = {
     },
     1425: {//Don Sai 3*
         captain: "Boosts ATK of Fighter and Striker characters by 1.75x",
-        special: "Deals 25x character's ATK in QCK damage to one enemy.  When this special activates when a character is locked, then for 3 turns boosts the effect of orbs by 1.5x",
-        specialName: "",
+        special: "Deals 25x character's ATK in QCK damage to one enemy.  When this special ativates when a character is locked, amplifies the effect of orbs by 1.5x for 3 turns",
+        specialName: "Military Leg Heel",
     },
     1426: {//Don Sai 4*
         captain: "Boosts ATK of Fighter and Striker characters by 2x and their HP by 1.25x",
-        special: "Deals 25x character's ATK in QCK damage to one enemy.  When this special activates when a character is locked, then for 3 turns boosts the effect of orbs by 1.5x",
-        specialName: "",
+        special: "Deals 25x character's ATK in QCK damage to one enemy.  When this special ativates when a character is locked, amplifies the effect of orbs by 1.5x for 3 turns",
+        specialName: "Military Leg Heel",
     },
     1427: {//Boo 4*
         captain: "Boosts ATK of QCK characters by 2x",
-        special: "Ignores defensive barriers and deals 15x character's ATK in QCK damage to one enemy",
-        specialName: "",
+        special: "Deals 15x character's ATK in QCK damage to one enemy that will ignore damage negating abilities and barriers.",
+        specialNotes: "Damage that ignores damage negating abilities and barriers is similar to 6* Blackbeard's special when he is captain",
+        specialName: "Unblockable Eight Fists",
     },
     1428: {//Jean Ango 4*
-        captain: "Boosts amount of beli received by 1.5x, and gives chance of duplicating a drop upon completion of the island",
-        special: "When the enemy is delayed, reduces the special cooldown of all characters by 1 turn and boosts own attack by 1.75x for 1 turn",
-        specialName: "",
+        captain: "Boosts amount of beli received by 1.5x, and gives small chance of duplicating a drop upon completion of the island",
+        captainNotes: "Does not work if he was not your captain upon starting the island. Stacks with other addional drop captains, giving you two chances of getting an extra drop.",
+        special: "If the enemy is delayed at the time the special is activated, reduces Special Cooldown of all characters by 1 turn and boosts own attack by 1.75x for 1 turn",
+        specialNotes: "This is a new form of Conditional Boost. The boost does not act like a Monet or Dalmatian boost, but is only activated if conditions are met and does not stack with other Class boosts or Orb boosts.",
+        specialName: "Looting the Losers",
     },
-    1429: {//Raid Franky
-        captain: "",
-        special: "",
-        specialName: "",
+    1429: {//Valentines Mansherry
+        captain: "Boost the RCV of Striker and Free Spirit characters by 1.5x",
+        special: "Reduces Bind, Despair, and Parlysis duration by 3 turns and recovers 2000 HP at the end of each turn for 3 turns",
+        specialName: "Boy's Unknown Taste of Hard Work",
     },
-    1430: {//Raid Franky, Evolved
-        captain: "",
-        special: "",
-        specialName: "",
+    1430: {//Valentines Mansherry, Evolved
+        captain: "Boost the RCV of Striker and Free Spirit characters by 2x",
+        special: "Reduces Bind, Despair, and Parlysis duration by 3 turns and recovers 2000 HP at the end of each turn for 3 turns",
+        specialName: "Boy's Unknown Taste of Hard Work",
     },
 };
 
