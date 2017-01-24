@@ -1426,7 +1426,7 @@ window.units = [
     [ "Don Sai, Unevolved", "QCK", [ "Fighter", "Striker" ], 3, 13, 5, 1, 50, null, 105, 59, 19, null, null, null, null],
     [ "Don Sai, Evolved", "QCK", [ "Fighter", "Striker" ], 4, 20, 4, 3, null, null, 1123, 527, 57, null, null, null, null],
     [ "Boo", "QCK", [ "Fighter", "Driven" ], 4, 15, 6, 3, 70, null, 305, 159, 29, null, null, null, null],
-    [ "Jean Ango", "DEX", [ "Slasher, Shooter" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Jean Ango", "DEX", [ "Slasher, Shooter" ], 3, 13, 6, 2, 70, null, 158, 173, 21, null, null, null, null ],
     [ "Raid Franky", "DEX", [ "Striker", "Free Spirit" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Raid Franky, Evolved", "DEX", [ "Striker", "Free Spirit" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     ];
