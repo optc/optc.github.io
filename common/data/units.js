@@ -1443,7 +1443,7 @@ window.units = [
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Boa Hancock: Snake Princess", "QCK", [ "Free Spirit", "Shooter" ], 6, 65, 4, 5, 99, 5000000, 1559, 803, 303, 1559, 1500, 303, null ],
+    [ "Boa Hancock: Snake Princess", "QCK", [ "Free Spirit", "Shooter" ], 6, 65, 4, 5, 99, 5000000, 1559, 803, 303, 2900, 1500, 600, null ],
     ];
     
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
