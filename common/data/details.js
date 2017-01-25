@@ -7707,4 +7707,11 @@ window.details = {
         special: "Reduces Bind, Despair, and Parlysis duration by 3 turns and recovers 2000 HP at the end of each turn for 3 turns",
         specialName: "Boy's Unknown Taste of Hard Work",
     },
+    
+    1445: {
+        captain: "Boosts ATK of [QCK] and [PSY] characters by ???x if HP is above 70% at the start of the turn. If HP is below 70%, Boosts RCV of [QCK] and [PSY] units by 1.5x instead.",
+        captainNotes: "Unclear what the captain boost is yet, but in the damage calculator she is currently set to 3x",
+        special: "Boosts ATK and RCV of [QCK] and [PSY] characters by 1.75x for 1 turn, and delays all enemies for 1 turn. Changes your Captain orb to [RCV]. If HP is above 70%, changes left column into Matching orbs.",
+        specialName: "Boa Hancock Special",
+    },
 };

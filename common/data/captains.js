@@ -3973,4 +3973,12 @@ window.captains = {
     1429: {
         rcv: function(p) { return p.unit.class.has("Free Spirit") || p.unit.class.has("Striker") ? 2 : 1; },
     },
+    1445: {
+        atk: function(p) {
+            return (p.unit.type == "QCK" || p.unit.type == "PSY") && p.percHP >= 70.0 ? 3 : 1;
+        },
+        rcv: function(p) {
+            return (p.unit.type == "QCK" || p.unit.type == "PSY") && p.percHP <= 70.0 ? 1.5 : 1;
+        }
+    },
 };
