@@ -7644,7 +7644,7 @@ window.details = {
         specialName: "Defence of the Command Line",
     },
     1419: {//Kimono Lucci
-        captain: "Boosts ATK of Powerhouse characters by 2.5x, reduce damage received by 10%",
+        captain: "Boosts ATK of Powerhouse characters by 2x, reduce damage received by 10%",
         special: "Recovers 5,000 HP and boosts ATK against enemies with reduced defense by 1.5x for 1 turns",
         specialName: "Lucci Special",
     },
@@ -7676,12 +7676,12 @@ window.details = {
     },
     1425: {//Don Sai 3*
         captain: "Boosts ATK of Fighter and Striker characters by 1.75x",
-        special: "Deals 25x character's ATK in QCK damage to one enemy.  When this special ativates when a character is locked, amplifies the effect of orbs by 1.5x for 3 turns",
+        special: "Deals 25x character's ATK in QCK damage to one enemy. If a character is locked at the time the special was activated, amplifies the effect of orbs by 1.5x for 3 turns",
         specialName: "Military Leg Heel",
     },
     1426: {//Don Sai 4*
         captain: "Boosts ATK of Fighter and Striker characters by 2x and their HP by 1.25x",
-        special: "Deals 25x character's ATK in QCK damage to one enemy.  When this special ativates when a character is locked, amplifies the effect of orbs by 1.5x for 3 turns",
+        special: "Deals 25x character's ATK in QCK damage to one enemy. If a character is locked at the time the special was activated, amplifies the effect of orbs by 1.5x for 3 turns",
         specialName: "Military Leg Heel",
     },
     1427: {//Boo 4*
@@ -7708,4 +7708,3 @@ window.details = {
         specialName: "Boy's Unknown Taste of Hard Work",
     },
 };
-

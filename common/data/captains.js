@@ -3942,7 +3942,7 @@ window.captains = {
         rcv: function(p) { return p.unit.type == "INT" ? 1.5 : 1; },
     },
     1419: {
-        atk: function(p) { return p.unit.class.has("Powerhouse") ? 2.5 : 1; },
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 2 : 1; },
     },
     1420: {
         atk: function(p) { return p.unit.class.has("Powerhouse") ? 2.5 : 1; },
