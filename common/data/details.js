@@ -7670,7 +7670,7 @@ window.details = {
     },
     1424: {//Coliseum Gin
         captain: "Boosts ATK of Striker characters proportionally to the crew's current HP",
-        //captainNotes: "#{captainProportional : higher : 1 + 1.25 * (remaining HP) / (total HP) : 2.25 : 2}"
+        captainNotes: "#{captainProportional : higher : 1 + 1.25 * (remaining HP) / (total HP) : 2.25 : 1}",
         special: "Deals 500 fixed damage to all enemies and reduces Special Cooldown of Striker characters by 1 turn.",
         specialName: "General Commander's Fight",
     },

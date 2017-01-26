@@ -3957,6 +3957,9 @@ window.captains = {
     1423: {
         atk: function(p) { return 1.75; },
     },
+    1424: {
+        atk: function(p) { return p.unit.class.has("Striker") ? 1 + 1.25 * p.percHP / 100 : 1; }
+    },
     1425: {
         atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Fighter") ? 1.75 : 1; },
     },
