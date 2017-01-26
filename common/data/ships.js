@@ -239,7 +239,7 @@ window.ships = [
     
     { // 19
         name: "Doflamingo Ship",
-        thumb: null,
+        thumb: 'ship_0020_c.png',
         description: 'Boosts ATK of Driven Characters by 1.5x and their HP by 1.35x. Makes Perfects easier to Hit for Driven characters. Special: Adds 0.2 to Chain  (cooldown MAX: 15 Turns)',
         atk: function(p) { return !p.unit.class.has('Driven') ? 1 : [ 1.2, 1.2, 1.3, 1.3, 1.3, 1.3, 1.4, 1.4, 1.4, 1.5][p.boatLevel - 1]},
         hp: function(p) { return !p.unit.class.has('Driven') ? 1 : [ 1.1, 1.1, 1.1, 1.15, 1.2, 1.2, 1.2, 1.2, 1.2, 1.35][p.boatLevel - 1]}
@@ -247,7 +247,7 @@ window.ships = [
     
     { // 20
         name: 'The Rocket Man',
-        thumb: null,
+        thumb: 'ship_0021_c.png',
         description: 'Boosts ATK of Powerhouse characters by 1.55x, and heals at the end of every turn for a variable amount depending on the number of Powerhouse characters on the team. (At MAX, heals 900 per turn with 6 Powerhouse characters) Sharply reduces HP of non-Powerhouse units. Special: Deals 99,999 typeless damage to one unit.  (cooldown MAX: 17 Turns)',
         atk: function(p) {
             return !p.unit.class.has('Powerhouse') ? 1 : [ 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.4, 1.55 ][p.boatLevel - 1];
@@ -263,7 +263,7 @@ window.ships = [
     
     { // 21
         name: 'Burning Whitebeard Ship',
-        thumb: null,
+        thumb: 'ship_0022_c.png',
         description: 'Boosts HP by 1.3x',
         hp: function(p) {
             return 1.3;
@@ -272,7 +272,7 @@ window.ships = [
     
     { // 22
         name: 'Garp Ship',
-        thumb: null,
+        thumb: 'ship_0023_c.png',
         description: 'Boosts ATK of [STR] and [PSY] characters by 1.5x, and their HP by 1.25x',
         atk: function(p) {
             return p.unit.type == "PSY" || p.unit.type == "STR" ? [ 1.2, 1.25, 1.25, 1.3, 1.35, 1.35, 1.4, 1.4, 1.45, 1.5 ][p.boatLevel - 1] : 1;
@@ -284,7 +284,7 @@ window.ships = [
     
     { //23
         name: 'Polar Tang',
-        thumb: null,
+        thumb: 'ship_0024_c.png',
         description: 'Boosts ATK of Slashers and Free Spirit characters by 1.5x and their HP by 1.25x. Special: Heals for 10k when low HP (cooldown MAX: 18 turns)',
         atk: function(p) {
             return !(p.unit.class.has('Slasher') || p.unit.class.has('Free Spirit')) ? 1 : [ 1.3, 1.3, 1.3, 1.3, 1.3, 1.3, 1.4, 1.4, 1.4, 1.5 ][p.boatLevel - 1];
@@ -295,7 +295,7 @@ window.ships = [
     },
     { // 24
         name: 'New Year\'s Big Top',
-        thumb: null,
+        thumb: 'ship_0025_c.png',
         description: 'Boosts ATK by 1.2x',
         atk: function(p) {
             return 1.2;
@@ -303,7 +303,7 @@ window.ships = [
     },
     { // 25
         name: 'Thousand Sunny: Coated',
-        thumb: null,
+        thumb: 'ship_0026_c.png',
         description: 'Boosts ATK by 1.5x. Special: reduces damage received by 50% for 1 turn (cooldown: 16 turns).',
         atk: function(p) {
             return [ 1.3, 1.3, 1.3, 1.3, 1.35, 1.35, 1.35, 1.4, 1.45, 1.5 ][p.boatLevel - 1];

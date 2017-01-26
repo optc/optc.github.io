@@ -6871,7 +6871,7 @@ window.details = {
         specialName: "Echoing Cry of the Soul",
     },
     1316: {//Coby
-        captain: "Boosts ATK by 2.5x after the 2nd Perfect, 2.75x after the 3rd Perfect, 3x after the 4th Perfect, and by 3.5x after the 5th Perfect.",
+        captain: "Boosts ATK by 2.5x after the 2nd Perfect and by 3.5x after the 5th Perfect.",
         special: [
             {
                 "description": "If HP is below 3,000, reduces No Healing debuff by 1 turn. Recovers 3x character's RCV in HP",
@@ -7708,14 +7708,14 @@ window.details = {
         specialName: "Boy's Unknown Taste of Hard Work",
     },
     1431: {//Raid Franky
-        captain: "",
-        special: "",
-        specialName: "",
+        captain: "Not Released",
+        special: "Not Released",
+        specialName: "Franky Special",
     },
     1432: {//Raid Franky Evolved
-        captain: "",
-        special: "",
-        specialName: "",
+        captain: "Not Released",
+        special: "Not Released",
+        specialName: "Franky Special",
     },
     1445: {
         captain: "Boosts ATK of [QCK] and [PSY] characters by ???x if HP is above 70% at the start of the turn. If HP is below 70%, Boosts RCV of [QCK] and [PSY] units by 1.5x instead.",

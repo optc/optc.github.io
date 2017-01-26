@@ -1428,7 +1428,7 @@ window.units = [
     [ "Boo, Happo Navy", "QCK", [ "Fighter", "Driven" ], 4, 15, 6, 3, 70, 1066998, 305, 159, 29, 1672, 1005, 111, 1],
     [ "Jean Ango", "DEX", [ "Slasher, Shooter" ], 3, 12, 6, 2, 70, 1066998, 158, 173, 21, 1055, 1196, 73, 1 ],
     [ "Secret Mansherry", "DEX", [ "Striker", "Free Spirit" ], 4, 13, 6, 2, 50, 392109, 42, 24, 66, 890, 329, 261, null ],
-    [ "Secret Mansherry, Evolved", "DEX", [ "Striker", "Free Spirit" ], 5, 20, 4, 4, 99, 3000000, 803, 251, 213, null, null, null, null ],
+    [ "Secret Mansherry, Evolved", "DEX", [ "Striker", "Free Spirit" ], 5, 20, 4, 4, 99, 3000000, 803, 251, 213, 1777, 656, 486, null ],
     [ "Raid Franky", "PSY", [ "Free Spirit", "Powerhouse" ], 4, 30, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Raid Franky, Evolved", "PSY", [ "Free Spirit", "Powerhouse" ], 5, 50, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
