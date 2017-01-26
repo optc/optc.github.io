@@ -7707,7 +7707,16 @@ window.details = {
         special: "Reduces Bind, Despair, and Parlysis duration by 3 turns and recovers 2000 HP at the end of each turn for 3 turns",
         specialName: "Boy's Unknown Taste of Hard Work",
     },
-    
+    1431: {//Raid Franky
+        captain: "",
+        special: "",
+        specialName: "",
+    },
+    1432: {//Raid Franky Evolved
+        captain: "",
+        special: "",
+        specialName: "",
+    },
     1445: {
         captain: "Boosts ATK of [QCK] and [PSY] characters by ???x if HP is above 70% at the start of the turn. If HP is below 70%, Boosts RCV of [QCK] and [PSY] units by 1.5x instead.",
         captainNotes: "Unclear what the captain boost is yet, but in the damage calculator she is currently set to 3x",
