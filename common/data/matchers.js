@@ -11,7 +11,7 @@ window.matchers = [
     {
         name: 'Class-boosting captains',
         target: 'captain',
-        matcher: /Boosts (ATK|HP|RCV|ATK and HP|ATK and RCV|HP and RCV|ATK, HP and RCV) of[^,]+(Slasher|Striker|Fighter|Shooter|Freedom|Knowledge|Tough|Ambition)/i
+        matcher: /Boosts (ATK|HP|RCV|ATK and HP|ATK and RCV|HP and RCV|ATK, HP and RCV) of[^,]+(Slasher|Striker|Fighter|Shooter|Free Spirit|Cerebral|Powerhouse|Driven)/i
     },
 
     {
@@ -78,7 +78,14 @@ window.matchers = [
     {
         name: 'Positional captains',
         target: 'captain',
-        matcher: /(after scoring|following a chain)/i
+        matcher: /(after scoring|following a chain|perfect|great|good)/i
+    },
+    
+    {
+        name: '"Beneficial" Orb captains',
+        target: 'captain',
+        matcher: /"beneficial/i
+        //matcher: /Makes ((STR|DEX|QCK|PSY|INT|\[RCV\]|\[TND\])|((STR|DEX|QCK|PSY|INT|\[RCV\]|\[TND\]) and (STR|DEX|QCK|PSY|INT|\[RCV\]|\[TND\]))) orbs "beneficial"/i
     },
 
     {
@@ -116,6 +123,12 @@ window.matchers = [
         target: 'captain',
         matcher: /Protects from defeat/i
     },
+    
+    {
+        name: 'End of Turn Damage Dealer',
+        target: 'captain',
+        matcher: /deals.+end of each turn/i
+    },
 
     /* * * * * Specials * * * * */
 
@@ -128,7 +141,7 @@ window.matchers = [
     {
         name: 'Class-boosting specials',
         target: 'special',
-        matcher: /Boosts (ATK|HP|RCV|ATK and HP|ATK and RCV|HP and RCV|ATK, HP and RCV) of[^,]+(Slasher|Striker|Fighter|Shooter|Freedom|Knowledge|Tough|Ambition)/i
+        matcher: /Boosts (ATK|HP|RCV|ATK and HP|ATK and RCV|HP and RCV|ATK, HP and RCV) of[^,]+(Slasher|Striker|Fighter|Shooter|Free Spirit|Cerebral|Powerhouse|Driven)/i
     },
 
     {
@@ -160,6 +173,18 @@ window.matchers = [
         target: 'special',
         matcher: /(Following the activation.+boosts.+ATK|If during that turn.+boosts.+ATK)/i
     },
+    
+    {
+        name: 'Color Affinity boosters',
+        target: 'special',
+        matcher: /Boosts the Color Affinity/i
+    },
+    
+    {
+        name: 'RCV boosters',
+        target: 'special',
+        matcher: /Boosts RCV/i
+    },
 
     {
         name: 'Orb lockers',
@@ -182,9 +207,9 @@ window.matchers = [
     {
         name: 'Orb controllers',
         target: 'special',
-        matcher: /(Changes.+orbs)/i
+        matcher: /(Changes.+(orb|orbs))/i
     },
-
+    
     {
         name: 'Full-board orb controllers',
         target: 'special',
@@ -208,6 +233,13 @@ window.matchers = [
         target: 'special',
         matcher: /switches orbs/i
     },
+    
+    {
+        name: 'Orb matchers',
+        target: 'special',
+        matcher: /(Changes.+(orb|orbs))[^,]+Matching/i,
+        include: [ 1036, 1037 ]
+    },
 
     {
         name: 'Slot emptiers',
@@ -225,6 +257,12 @@ window.matchers = [
         name: 'Delayers',
         target: 'special',
         matcher: /delays/i
+    },
+    
+    {
+        name: 'Single-target damage dealer',
+        target: 'special',
+        matcher: /deals.+to one enemy/i
     },
 
     {
@@ -290,25 +328,31 @@ window.matchers = [
     {
         name: 'Bind reducers',
         target: 'special',
-        matcher: /reduces.+bind.+duration/i,
+        matcher: /(reduces|removes).+bind.+duration/i
     },
 
     {
+        name: 'Despair reducers',
+        target: 'special',
+        matcher: /(reduces|removes).+despair.+duration/i
+    },
+    
+    {
         name: 'Silence reducers',
         target: 'special',
-        matcher: /reduces.+silence.+duration/i,
+        matcher: /(reduces|removes).+silence.+duration/i
     },
 
     {
         name: 'Block orb removers',
         target: 'special',
-        matcher: /(empties.+with \[BLOCK\]|changes.+\[BLOCK\].+into|including.+\[BLOCK\])/i,
+        matcher: /(empties.+with \[BLOCK\]|changes.+\[BLOCK\].+into|including.+\[BLOCK\])/i
     },
 
     {
         name: 'Blindness removers',
         target: 'special',
-        matcher: /removes blindness/i
+        matcher: /(reduces|removes).+blindness/i
     },
 
     {
@@ -332,13 +376,69 @@ window.matchers = [
     {
         name: 'Poison removers',
         target: 'special',
-        matcher: /Removes poison/i
+        matcher: /removes.+poison/i 
     },
 
     {
         name: 'Zombies',
         target: 'special',
         matcher: /Protects from defeat/i
-    }
+    },
+    
+    {
+        name: 'Special cooldown reducer',
+        target: 'special',
+        matcher: /reduces special cooldown/i
+    },
+    
+    {
+        name: 'Paralysis reducers',
+        target: 'special',
+        matcher: /(reduces|removes).+Paralysis/i 
+    },
+    
+    {
+        name: 'Chain Boosters',
+        target: 'special',
+        matcher: /Adds.+to Chain/i 
+    },
+    
+    {
+        name: 'Chain Lockers',
+        target: 'special',
+        matcher: /Locks the chain multiplier/i 
+    },
+    
+    {
+        name: '"Beneficial" Orb Enablers',
+        target: 'special',
+        matcher: /Makes.+ orbs "beneficial"/i
+    },
+    
+    /* * * * * Sailor * * * * */
+    
+    {
+        name: 'Has Sailor Ability',
+        target: 'sailor',
+        matcher: /\S/i
+    },
+    
+    {
+        name: 'Type-boosting sailors',
+        target: 'sailor',
+        matcher: /Boosts (ATK|HP|RCV|ATK and HP|ATK and RCV|HP and RCV|ATK, HP and RCV) of[^,]+(STR|DEX|QCK|PSY|INT)\b/i
+    },
+    
+    {
+        name: 'Class-boosting sailors',
+        target: 'sailor',
+        matcher: /Boosts (ATK|HP|RCV|ATK and HP|ATK and RCV|HP and RCV|ATK, HP and RCV) of[^,]+(Slasher|Striker|Fighter|Shooter|Free Spirit|Cerebral|Powerhouse|Driven)/i
+    },
+    
+    {
+        name: '"Beneficial" Orb sailors',
+        target: 'sailor',
+        matcher: /Makes (\[STR\]|\[DEX\]|\[QCK\]|\[PSY\]|\[INT\]|\[RCV\]|\[TND\]) orbs "beneficial"/i
+    },
 
 ];

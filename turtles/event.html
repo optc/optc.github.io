@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Turtle Time Calc</title>
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/main.css">
+		<link href="css/polyglot-language-switcher-2.css" rel="stylesheet">
+		<link rel="shortcut icon" type="image/ico" href="favicon.ico">
+		<link href='https://fonts.googleapis.com/css?family=Squada+One|Lora' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jstimezonedetect/1.0.4/jstz.min.js"></script>
+		<script src="app/lib/moment.min.js"></script>
+		<script src="app/lib/angular-local-storage.min.js"></script>
+		<script src="app/lib/angular-translate.min.js"></script>
+		<script src="app/lib/angular-timer.min.js"></script>
+		<script src="app/lib/humanize-duration.js"></script>
+		<script src="app/lib/ng-table.min.js"></script>
+		<script src="app/lib/ui-bootstrap-tpls-0.13.0.min.js"></script>
+		<script src="app/lib/angular-polyglot.language.switcher.js"></script>
+		<script src="app/lib/momentjs/locale/de.js"></script>
+		<script src="app/lib/momentjs/locale/es.js"></script>
+		<script src="app/lib/bower_components/angular-animate/angular-animate.min.js"></script>
+		<script src="app/app.js"></script>
+		<script src="app/controllers/eventCtrl.js"></script>
+		<script src="app/controllers/localeCtrl.js"></script>
+		<script src="app/controllers/navbarCtrl.js"></script>
+		<script src="app/directives/eventDirective.js"></script>
+		<script src="app/directives/collapseDirective.js"></script>
+		<script src="app/config/localizeConfig.js"></script>
+	</head>
+
+	<body ng-app="app" ng-controller="LocaleCtrl as locale" ng-cloak>
+		
+		<nav class="navbar navbar-default" ng-controller="NavbarCtrl" ng-click="$event.stopPropagation()">
+				<div class="container">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" ng-click="isCollapsed=!isCollapsed">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span> 
+						</button>
+					</div>
+					<div class="navbar-collapse init" collapse="isCollapsed">
+						<ul class="nav navbar-nav">
+							<li><a href="index.html">{{ 'NAV_TURTLE' | translate }}</a></li>
+							<li><a href="barrel.html">{{ 'NAV_BARREL' | translate }}</a></li>
+							<li id="settings"><a href="settings.html">{{ 'NAV_SETTINGS' | translate }}</a></li>
+						</ul>
+						<div class="language-picker nav pull-right">
+							<pls id="pls1" items="plsModel.languages" open-mode="click" show-flag="true" selected-lang="{{locale.flag}}" language-changed-callback="onLanguageChanged(lang)"></pls>
+						</div>
+					</div>
+				</div>
+		</nav>
+
+		<div class="jumbotron" ng-controller="EventCtrl as event">
+			<div class="container">
+<!-- 				<h1>{{'TT_TITLE' | translate}}</h1>
+				<div>
+					<div class="id">
+						<span>{{'TT_DIGIT' | translate}}</span>
+						<input type="number" min="0" max="9" ng-model="event.id" class="input-id" select-on-click>
+						<input type="checkbox" name="militaryTime" ng-model="event.military">{{'TT_FORMAT' | translate}}
+					</div>
+					<p>{{'TT_TIMEZONE' | translate}} {{event.timezone}}</p>
+					<event-day 
+						military="event.military"
+						index="$index"
+						my-id="event.id"
+						my-time="event.my_time"
+						ng-repeat="t in event.range(3) track by $index"
+						locale="locale.locale"
+						>
+					</event-day>
+				</div> -->
+<!-- 				<h2><a href="http://robocafaz.com/sugo/">Sugofest</a> 
+					<timer end-time="1436929200000" max-time-unit="'hour'">{{hhours}}:{{mminutes}}:{{sseconds}}</timer>
+				</h2>
+				<hr> -->
+				<div class="btn-group game-version event-version">
+					<label class="btn btn-default" ng-model="event.global" btn-radio="'global'">GLOBAL</label>
+					<label class="btn btn-default" ng-model="event.global" btn-radio="'jpn'">JPN</label>
+				</div>
+				<h2>{{'BB_TIME' | translate}}
+					<isle-time global="true" ng-show="event.version()"></isle-time>
+					<isle-time global="false" ng-show="!event.version()"></isle-time>
+					<!-- <isle-time global="event.next_day_jpn" ng-show="!event.version()"></isle-time> -->
+				</h2>
+				<div class="bb-hours">
+					<input type="checkbox" name="bbAlt" ng-model="event.show_hours">{{'BB_ALT' | translate}}
+				</div>
+				<table ng-table class="table table-bordered table-striped" id="bonus-isles">
+					<tr>
+						<th>{{'BB_DATE' | translate}}</th>
+						<th>2x Drop</th>
+						<th>1/2 Stamina</th>
+						<th ng-show="!event.show_hours">2x Beli</th>
+					</tr>
+					<tr ng-repeat="day in event.times">
+						<td data-title="'Date'">{{day.date}}</td>
+						<td data-title="'2x Drop'">{{day.drop}}</td>
+						<td data-title="'1/2 Stamina'">{{day.stamina}}</td>
+						<td data-title="'2x Beli'" ng-show="!event.show_hours">{{day.beli}}</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+
+	</body>
+
+</html>

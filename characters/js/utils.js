@@ -5,7 +5,7 @@ var CharUtils = { };
 /* * * * * Reverse drop map * * * * */
 
 var reverseDropMap = null;
-var marks = { 'Story Island': 1, 'Weekly Island': 2, 'Fortnight': 4, 'Raid': 8, 'Colosseum': 16 };
+var marks = { 'Story Island': 1, 'Weekly Island': 2, 'Fortnight': 4, 'Raid': 8, 'Coliseum': 16 };
 
 var generateReverseDropMap = function() {
     reverseDropMap = { };
@@ -16,8 +16,8 @@ var generateReverseDropMap = function() {
                 if (!data || data.constructor != Array) continue;
                 for (var i=0;i<data.length;++i) {
                     if (data[i] < 0 || CharUtils.isFarmable(data[i], type)) continue;
-                    if (drops[type][island].name == 'Colosseum')
-                        flagUnit(data[i], 'Colosseum');
+                    if (drops[type][island].name == 'Coliseum')
+                        flagUnit(data[i], 'Coliseum');
                     else
                         flagUnit(data[i], type);
                 }
@@ -102,7 +102,7 @@ CharUtils.searchDropLocations = function(id) {
         for (var island=0;island<window.drops[type].length;++island) {
             var temp = [ ];
             for (var stage in window.drops[type][island]) {
-                if (stage == 'thumb' || stage == 'name' || stage == 'shortName' || stage == 'day' || stage == 'global') continue;
+                if (stage == 'thumb' || stage == 'name' || stage == 'shortName' || stage == 'day' || stage == 'global' || stage == 'condition' || stage == 'completion' || stage == 'challenge' || stage == 'challengeData' || stage == 'showManual') continue;
                 if (window.drops[type][island][stage].indexOf(id) != -1)
                     temp.push(stage);
             }
@@ -264,6 +264,24 @@ CharUtils.isClassBooster = function(target, id, clazz) {
     classCache[target][clazz][id] = result;
     return result;
 };
+    
+CharUtils.hasFarmableSocket = function(id) {
+    var farmableSocket = false;
+    var ownFamily = window.families[id];
+    
+    //return false if unit has no Sockets?
+    var unit = window.units[id];
+    if (unit.slots<1) return farmableSocket;
+    
+    window.families.forEach(function(family,n){
+       if (ownFamily == family) {
+           var famId = n+1;
+           if(CharUtils.isFarmable(famId) || CharUtils.isFarmable(Utils.searchBaseForms(famId))) farmableSocket = true;
+       }
+    });
+    
+    return farmableSocket;
+}
 
 /******************
  * Initialization *

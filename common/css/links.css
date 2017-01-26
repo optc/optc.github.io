@@ -6,8 +6,8 @@
 
 #links-button {
     position: fixed;
-    right: 20px;
-    bottom: 5px;
+    bottom: 20px;
+    right: 5px;
     transform: translateX(-50%) translateY(-50%);
     width: 2em;
     height: 2em;
@@ -167,12 +167,40 @@
     transform: translateX(-15em);
 }
 
+#links-button.active .rotater:nth-child(6) > a {
+    -webkit-transform: translateX(-18em);
+    -ms-transform: translateX(-18em);
+    transform: translateX(-18em);
+}
+
+#links-button.active .rotater:nth-child(7) > a {
+    -webkit-transform: translateX(-21em);
+    -ms-transform: translateX(-21em);
+    transform: translateX(-21em);
+}
+
+#links-button.active .rotater:nth-child(8) > a {
+    -webkit-transform: translateX(-24em);
+    -ms-transform: translateX(-24em);
+    transform: translateX(-24em);
+}
+
+#links-button.active .rotater:nth-child(9) > a {
+    -webkit-transform: translateY(-4em);
+    -ms-transform: translateY(-4em);
+    transform: translateY(-4em);
+}
+
 #link-damage > .btn { background: #85C1F5; }
 #link-characters > .btn { background: #7FCA9F; }
 #link-drops > .btn { background: #F4BA70; }
 #link-tally > .btn { background: #E96D63; }
 #link-report > .btn { background: orchid; }
 #link-slots > .btn { background: #99cc66; }
+#links-home > .btn { background: #939393; }
+#link-prob > .btn { background: #DEA5A4; }
+#link-turtles > .btn { background: #ce4500; }
+#link-es > .btn { background: linear-gradient(#ff0000 30%, #ffff00 30%, #ffff00 70%, #ff0000 30%); }
 
 .tip { color: black; }
 
@@ -191,3 +219,6 @@
     text-decoration: none !important;
 }
 
+.top {
+    left: -1em;
+}

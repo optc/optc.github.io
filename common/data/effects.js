@@ -2,7 +2,8 @@ window.effects = {
 
     // always use unique IDs, and don't ever change an ID once you've set it
     // IDs must always be greater than 0
-    // last ID used: 25
+    // last ID used: 41
+    // Use p.type instead of p.unit.type here
 
     'Baroque Works (pre-v4.0)': {
         description: 'Stats of non-Fighter units reduced by 90%',
@@ -116,12 +117,12 @@ window.effects = {
     },
 
     'Gan Fall': {
-        description: 'Stats of non-Freedom, non-Booster, non-Evolver units reduced by 90%',
+        description: 'Stats of non-Free Spirit, non-Booster, non-Evolver units reduced by 90%',
         thumb: 713,
         id: 11, // don't change this
-        atk: function(p) { return p.class.has('Freedom') || p.class.has('Booster') || p.class.has('Evolver') ? 1 : 0.1; },
-        hp: function(p)  { return p.class.has('Freedom') || p.class.has('Booster') || p.class.has('Evolver') ? 1 : 0.1; },
-        rcv: function(p) { return p.class.has('Freedom') || p.class.has('Booster') || p.class.has('Evolver') ? 1 : 0.1; }
+        atk: function(p) { return p.class.has('Free Spirit') || p.class.has('Booster') || p.class.has('Evolver') ? 1 : 0.1; },
+        hp: function(p)  { return p.class.has('Free Spirit') || p.class.has('Booster') || p.class.has('Evolver') ? 1 : 0.1; },
+        rcv: function(p) { return p.class.has('Free Spirit') || p.class.has('Booster') || p.class.has('Evolver') ? 1 : 0.1; }
     },
 
     'Orb amplification (1.05x)': {
@@ -178,7 +179,7 @@ window.effects = {
         description: 'Damage of STR and DEX characters nullified',
         thumb: 836,
         id: 19,  // don't change this
-        damage: function(p) { return p.type == 'STR' || p.type == 'DEX' ? 0 : 1; }
+        atk: function(p) { return p.type == 'STR' || p.type == 'DEX' ? 0 : 1; }
     },
 
     'Shu (Expert)': {
@@ -209,18 +210,192 @@ window.effects = {
         comboShield: 26
     },
 
-    'Hancock chain bug': {
-        description: 'Allows higher than usual chain multipliers',
-        thumb: 865,
-        id: 24, // don't change this
-        chainLimiter: function(p) { return Infinity; }
-    },
-
     'There\'s the G!': {
         description: 'Activates [G] orb support even when Lao-G is not in the team',
         thumb: 880,
-        id: 25, // don't change this
+        id: 24, // don't change this
         gOrbsEnabled: true
+    },
+    
+    'Coliseum Franky': {
+        description: 'Activates [G] orb Support, boosts Orbs by 1.5x',
+        thumb: 560,
+        id: 25, // don't change this
+        orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 10/15 : 1); },
+        gOrbsEnabled: true
+    },
+
+    'Coliseum Killer': {
+        description: 'ATK of all units reduced by 95%',
+        thumb: 1043,
+        id: 26, // don't change this
+        atk: function(p) { return 0.05; }
+    },
+    
+    'Coliseum Kid': {
+        description: 'Perfect hit barrier (2 hits)',
+        thumb: 966,
+        id: 27,
+        comboShield: 2,
+        comboType: 'Perfect'
+    },
+    
+    'Coliseum Fukuro': {
+        description: 'Perfect hit barrier (3 hits)',
+        thumb: 758,
+        id: 28,
+        comboShield: 3,
+        comboType: 'Perfect'
+    },
+    
+    'Coliseum Cricket': {
+        description: 'Fixed threshold barrier (200,000)',
+        thumb: 428,
+        id: 29,
+        barrierThreshold: 200000,
+        barrierReduction: 0.99
+    },
+    
+    'Sabo Raid Boss': {
+        description: 'Reduces Chain By Half',
+        thumb: 1047,
+        id: 30,
+        chainModifier: function(p) { return 0.5; }
+    },
+    
+    'Pirate Ship Competition! \"Dead End\" Opens!': {
+        description: 'STR/DEX/QCK ATK 1.6x. INT/PSY HP 2x',
+        thumb: 1072,
+        id: 31,
+        atk: function(p) { return (p.type == "STR" || p.type == "DEX" || p.type == "QCK") ? 1.6 : 1; },
+        hp: function(p) { return (p.type == "STR" || p.type == "DEX" || p.type == "QCK") ? 1 : 2.0; }
+        
+    },
+    
+    '3-hit Good Barrier': {
+        description: 'You need to hit 3 Goods before you do any Damage',
+        thumb: null,
+        id: 32,
+        comboShield: 3,
+        comboType: 'Good'
+    },
+    
+    '3-hit Great Barrier': {
+        description: 'You need to hit 3 Greats before you do any Damage',
+        thumb: null,
+        id: 33,
+        comboShield: 3,
+        comboType: 'Great'
+    },
+    
+    '10-Hit Hit Barrier': {
+        description: 'You will only do damage once the combo meter reaches 10 hits',
+        thumb: null,
+        id: 34,
+        comboShield: 10
+    },
+    
+    '1.25x Orb Boost': {
+        description: 'Used by Christmas Law in Saga Coliseum',
+        thumb: 856,
+        id: 35,
+        orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 10/15 : 1); }
+    },
+    
+    '700k Damage Treshold Barrier': {
+        description: 'Used by Saga. You cannot do more that 700k damage in one hit',
+        thumb: 1089,
+        id: 36,
+        barrierThreshold: 700000,
+        barrierReduction: 0.99
+    },
+    
+    'Dr. Indigo & Scarlet! Fortnight': {
+        //OLD description: 'Boosts ATK of Driven and Powerhouse characters by 2x, other classes get .5x ATK. Boosts HP of Slasher and Fighter characters by 2x, other classes get .5x HP.',
+        description: 'Boosts ATK of Driven characters by 2x and boosts HP for Powerhouse characters by 2x.',
+        thumb: 1095,
+        id: 37,
+        atk: function(p) { 
+/*                            var boost1 = 1.0, boost2 = 1.0, boost3 = 1.0, boost4 = 1.0, boost5 = 1.0;
+                            if(p.class.has('Driven')) { boost1 = 2.0}
+                            if(p.class.has('Powerhouse')) { boost2 = 2.0}
+                            if(!(p.class.has('Driven')&&p.class.has('Powerhouse')) && p.class.constructor === Array){
+                            if(!p.class.has('Driven')){ boost3 = 0.5}
+                            if(!p.class.has('Powerhouse')){ boost4 = 0.5}}
+                            if(p.class.constructor === String){
+                                if(!(p.class.has('Driven') || p.class.has('Powerhouse'))){ boost5 = 0.5}
+                            }
+                            return 1*boost1*boost2*boost3*boost4*boost5;*/ 
+                            return p.class.has('Driven') ? 2 : 1;
+                        },
+        hp: function(p) {
+/*                            var boost1 = 1.0, boost2 = 1.0, boost3 = 1.0, boost4 = 1.0, boost5 = 1.0;
+                            if(p.class.has('Fighter')) { boost1 = 2.0}
+                            if(p.class.has('Slasher')) { boost2 = 2.0}
+                            if(!(p.class.has('Fighter')&&p.class.has('Slasher')) && p.class.constructor === Array){
+                            if(!p.class.has('Fighter')){ boost3 = 0.5}
+                            if(!p.class.has('Slasher')){ boost4 = 0.5}}
+                            if(p.class.constructor === String){
+                                if(!(p.class.has('Fighter') || p.class.has('Slasher'))){ boost5 = 0.5}
+                            }
+                            return 1*boost1*boost2*boost3*boost4*boost5;*/
+                            return p.class.has('Powerhouse') ? 2 : 1;
+                        }
+    },
+    
+    'Coliseum Tashigi': {
+        description: '25 hit barrier and 2x chain limit',
+        thumb: 783,
+        id: 38,
+        comboShield: 25,
+        chainLimiter: function() { return 2.0; }
+    },
+    
+    'Robin and Nami\'s Secret Undercover Investigation': {
+        description: 'Boosts ATK of Cerebral and Free Spirit characters by 2x, other classes get .5x ATK. Boosts HP of Striker and Shooter characters by 2x, other classes get .5x HP.',
+        thumb: 1112,
+        id: 39,
+        atk: function(p) { 
+                            var boost1 = 1.0, boost2 = 1.0, boost3 = 1.0, boost4 = 1.0, boost5 = 1.0;
+                            if(p.class.has('Cerebral')) { boost1 = 2.0}
+                            if(p.class.has('Free Spirit')) { boost2 = 2.0}
+                            if(!(p.class.has('Cerebral')&&p.class.has('Free Spirit')) && p.class.constructor === Array){
+                            if(!p.class.has('Cerebral')){ boost3 = 0.5}
+                            if(!p.class.has('Free Spirit')){ boost4 = 0.5}}
+                            if(p.class.constructor === String){
+                                if(!(p.class.has('Cerebral') || p.class.has('Free Spirit'))){ boost5 = 0.5}
+                            }
+                            //console.log(boost1+" "+boost2+" "+boost3+" "+boost4+" "+boost5)
+                            return 1*boost1*boost2*boost3*boost4*boost5; 
+                        },
+        hp: function(p) {
+                            var boost1 = 1.0, boost2 = 1.0, boost3 = 1.0, boost4 = 1.0, boost5 = 1.0;
+                            if(p.class.has('Striker')) { boost1 = 2.0}
+                            if(p.class.has('Shooter')) { boost2 = 2.0}
+                            if(!(p.class.has('Striker')&&p.class.has('Shooter')) && p.class.constructor === Array){
+                            if(!p.class.has('Striker')){ boost3 = 0.5}
+                            if(!p.class.has('Shooter')){ boost4 = 0.5}}
+                            if(p.class.constructor === String){
+                                if(!(p.class.has('Striker') || p.class.has('Shooter'))){ boost5 = 0.5}
+                            }
+                            return 1*boost1*boost2*boost3*boost4*boost5;
+                        }
+    },
+    
+    'Gild Tesoro - 40 Stamina': {
+        description: 'Boosts the Orbs and ATK of all characters by 1.1x',
+        thumb: 1162,
+        id: 40,
+        orb: function(p) { return p.orb == 2.0 ? 1.1 : (p.orb == 0.5 ? 10/11 : 1); },
+        atk: function(p) { return 1.1; }
+    },
+    
+    'Gild Tesoro - 60 Stamina': {
+        description: 'Boosts the Orbs and ATK of all characters by 1.2x',
+        thumb: 1163,
+        id: 41,
+        orb: function(p) { return p.orb == 2.0 ? 1.2 : (p.orb == 0.5 ? 5/6 : 1); },
+        atk: function(p) { return 1.2; }
     },
 
 };

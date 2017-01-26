@@ -76,7 +76,17 @@ controllers.MainCtrl = function($scope, $rootScope, $state, $stateParams, $contr
         for (var i=0;i<slotCount;++i)
             slot.slots.push({ id: [ 2, 3, 1, 6, 4][i], level: 5 });
     };
+        var notifications = { };
 
+    $rootScope.notify = function(data) {
+        data = jQuery.extend({ type: 'information' },data);
+        if (data.name && notifications[data[name]]) notifications[data[name]].close(); 
+        var notification = noty(jQuery.extend({ timeout: 2500, layout: 'topRight', theme: 'relax' }, data));
+        if (data.name) notifications[data[name]] = notification;
+        return notification;
+
+    };
+    
     $controller('StorageCtrl', { $scope: $scope });
     $controller('DismissalCtrl');
 
@@ -179,6 +189,7 @@ controllers.SummaryCtrl = function($scope, $rootScope, $state, $stateParams) {
  **************/
 
 controllers.ImportCtrl = function($scope, $rootScope, $state, $stateParams) {
+    history.replaceState(null, null, '#/');
 
     var data = $stateParams.data;
 
@@ -309,6 +320,38 @@ controllers.ResetCtrl = function($scope, $rootScope, $state) {
         $state.go('^');
     };
 
+};
+
+/******************
+ * CopyCtrl used to copy current Calc Team *
+ ******************/
+
+controllers.CopyCtrl = function($scope, $storage, $rootScope, $state){
+    var validate = function(data){
+        return data.team.some(function(unitData) {
+             return unitData.unit !== null;
+         });
+    };
+    
+    $scope.copyCurrentCalcTeam = function () {
+        var data = $storage.get('data');
+
+        if(validate(data)!== true){
+            $rootScope.notify({
+                text: 'No characters found.' + 
+                    ' Your current calc team seems to be empty.',
+                type: 'error'
+            });
+            $state.go('^');
+            return;
+        } 
+        
+        var result = data.team.map(function(unitData) {
+            return {uid:  unitData.unit !== null ? unitData.unit + 1 : unitData.unit, slots: []};
+        });
+        $rootScope.team = result;
+        $state.go('^');
+    };
 };
 
 /******************

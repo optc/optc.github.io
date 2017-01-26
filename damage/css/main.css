@@ -101,6 +101,16 @@ body, html {
     -webkit-animation-duration: 0.5s !important;
 }
 
+#instructions {
+    padding-left:10px
+}
+
+#instructions > ul {
+    list-style-type: none;
+    margin-left: 15px;
+}
+
+
 /******************
  * MAIN UNIT PANE *
  ******************/

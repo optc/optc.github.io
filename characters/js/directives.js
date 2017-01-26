@@ -56,7 +56,7 @@ directives.characterTable = function($rootScope, $timeout, $compile, $storage) {
             };
             // report link
             var link = $('<span class="help-link">Want to report or request something? Use <a>this form</a>.</span>');
-            link.find('a').attr('href', 'https://docs.google.com/forms/d/1jSlwN0Ruyc5bFfxdXlwihqfLdCiELX7HQTabXoCV7hU/viewform?usp=send_form');
+            link.find('a').attr('href', 'https://discord.gg/MRhRrbF');
             link.insertAfter($('.dataTables_length'));
             // pick column link
             var pick = $('<a id="pick-link" popover-placement="bottom" popover-trigger="click" popover-title="Additional Columns" ' +
@@ -116,7 +116,7 @@ directives.addCaptainOptions = function($timeout, $compile, MATCHER_IDS) {
         link: function(scope, element, attrs) {
             if (scope.n !== TARGET) return;
             var filter = $('<div id="class-filters" ng-class="{ enabled: filters.custom[' + TARGET + '] }"></div>');
-            var classes = [ 'Fighter', 'Shooter', 'Slasher', 'Striker', 'Freedom', 'Knowledge', 'Tough', 'Ambition' ];
+            var classes = [ 'Fighter', 'Shooter', 'Slasher', 'Striker', 'Free Spirit', 'Cerebral', 'Powerhouse', 'Driven' ];
             classes.forEach(function(x,n) {
                 var template = '<span class="filter subclass %c" ng-class="{ active: filters.classCaptain == \'%s\' }" ' +
                     'ng-click="onCaptainClick($event,\'%s\')">%s</span>';
@@ -130,6 +130,30 @@ directives.addCaptainOptions = function($timeout, $compile, MATCHER_IDS) {
         }
     };
 };
+    
+directives.addSailorOptions = function($timeout, $compile, MATCHER_IDS) {
+    //TO DO ONCE WE FIND OUT WHAT SAILOR ABILITIES DO ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    /*
+    var TARGET = MATCHER_IDS['captain.ClassBoostingCaptains'];
+    return {
+        restrict: 'A',
+        link: function(scope, element, attrs) {
+            if (scope.n !== TARGET) return;
+            var filter = $('<div id="class-filters" ng-class="{ enabled: filters.custom[' + TARGET + '] }"></div>');
+            var classes = [ 'Fighter', 'Shooter', 'Slasher', 'Striker', 'Free Spirit', 'Cerebral', 'Powerhouse', 'Driven' ];
+            classes.forEach(function(x,n) {
+                var template = '<span class="filter subclass %c" ng-class="{ active: filters.classCaptain == \'%s\' }" ' +
+                    'ng-click="onCaptainClick($event,\'%s\')">%s</span>';
+                filter.append($(template.replace(/%s/g,x).replace(/%c/,'width-6')));
+            });
+            element.after(filter);
+            $compile(filter)(scope);
+            scope.onCaptainClick = function(e,type) {
+                scope.filters.classCaptain = (scope.filters.classCaptain == type ? null : type);
+            };
+        }
+    };*/
+};
 
 directives.addSpecialOptions = function($timeout, $compile, MATCHER_IDS) {
     var TARGET = MATCHER_IDS['special.ClassBoostingSpecials'];
@@ -138,7 +162,7 @@ directives.addSpecialOptions = function($timeout, $compile, MATCHER_IDS) {
         link: function(scope, element, attrs) {
             if (scope.n !== TARGET) return;
             var filter = $('<div id="class-filters" ng-class="{ enabled: filters.custom[' + TARGET + '] }"></div>');
-            var classes = [ 'Fighter', 'Shooter', 'Slasher', 'Striker', 'Freedom', 'Knowledge', 'Tough', 'Ambition' ];
+            var classes = [ 'Fighter', 'Shooter', 'Slasher', 'Striker', 'Free Spirit', 'Cerebral', 'Powerhouse', 'Driven' ];
             classes.forEach(function(x,n) {
                 var template = '<span class="filter subclass %c" ng-class="{ active: filters.classSpecial == \'%s\' }" ' +
                     'ng-click="onSpecialClick($event,\'%s\')">%s</span>';
@@ -163,7 +187,7 @@ directives.addOrbOptions = function($timeout, $compile, MATCHER_IDS) {
             var filter = $('<div id="controllers" ng-class="{ enabled: filters.custom[' + TARGET + '] }">' +
                     '<span class="separator">&darr;</span></div>');
             var separator = filter.find('.separator');
-            [ 'STR', 'DEX', 'QCK', 'PSY', 'INT', 'RCV', 'TND' ].forEach(function(type) {
+            [ 'STR', 'DEX', 'QCK', 'PSY', 'INT', 'RCV', 'TND', 'BLOCK', 'EMPTY', 'BOMB', 'G' ].forEach(function(type) {
                 var template = '<span class="filter orb %s" ng-class="{ active: filters.%f.indexOf(\'%s\') > -1 }" ' +
                     'ng-model="filters.%f" ng-click="onOrbClick($event,\'%s\')">%S</span>';
                 separator.before($(template.replace(/%s/g,type).replace(/%S/g,type[0]).replace(/%f/g,'ctrlFrom')));
@@ -261,6 +285,8 @@ directives.compare = function() {
                 scope.compareCooldown = window.cooldowns[suggestion];
                 scope.isCompareCaptainHybrid = (scope.compareDetails && scope.compareDetails.captain &&
                     scope.compareDetails.captain.global);
+                scope.isCompareSailorHybrid = (scope.compareDetails && scope.compareDetails.sailor &&
+                    scope.compareDetails.sailor.global);
                 scope.isCompareSpecialHybrid = (scope.compareDetails && scope.compareDetails.special &&
                     scope.compareDetails.special.global);
                 scope.isCompareSpecialStaged = (scope.compareDetails && scope.compareDetails.special &&
@@ -294,6 +320,31 @@ directives.comparison = function() {
     };
 };
 
+directives.addNames = function($stateParams, $rootScope) {
+    var name = window.aliases;
+    return {
+        restrict: 'E',
+        replace: true,
+        template: '<table class="table table-striped-column abilities"><tbody></tbody></table>',
+        link: function(scope, element, attrs) {
+            var id = $stateParams.id, data = details[id];
+
+                var currentAliases = name[id];
+                if(currentAliases[0]!=''){
+                element.append($('<tr><td>Japanese</td><td><div>'+ currentAliases[0] +'</div></td></tr>'));
+                }
+                if(currentAliases[1]!=''){
+                    element.append($('<tr><td>French</td><td><div>'+ currentAliases[1] +'</div></td></tr>'));
+                }
+                if(currentAliases[2]){
+                    var otherAliases = currentAliases.toString().replace(/(.*?),(.*?),/,"");
+                    element.append($('<tr><td>Others</td><td><div>'+ otherAliases +'</div></td></tr>'));
+                }
+                }
+    }
+};    
+    
+    
 directives.addTags = function($stateParams, $rootScope) {
     return {
         restrict: 'E',
@@ -309,6 +360,7 @@ directives.addTags = function($stateParams, $rootScope) {
             if (flags.rr) element.append($('<span class="tag flag">Rare Recruit only</div>'));
             if (flags.lrr) element.append($('<span class="tag flag">Limited Rare Recruit only</div>'));
             if (flags.promo) element.append($('<span class="tag flag">Promo-code only</div>'));
+            if (flags.shop) element.append($('<span class="tag flag">Rayleigh Shop Unit</div>'));
             if (flags.special) element.append($('<span class="tag flag">One time only characters</div>'));
             if (CharUtils.checkFarmable(id, { 'Story Island': true }))
                 element.append($('<span class="tag flag">Story mode only</div>'));
@@ -331,6 +383,14 @@ directives.addTags = function($stateParams, $rootScope) {
                     else name = name.replace(/s$/,'');
                     name = name.replace(/iing/,'ying');
                     element.append($('<span class="tag captain">' + name + '</div>'));
+                }
+                // sailor effects
+                if (matcher.target.indexOf('sailor') === 0 && matcher.matcher.test(data[matcher.target]) && !(data[matcher.target] === undefined)) {
+                    name = matcher.name;
+                    /*if (!/sailor$/.test(name)) name = name.replace(/ers$/,'ing').replace(/s$/,'') + ' sailor';
+                    else name = name.replace(/s$/,'');
+                    name = name.replace(/iing/,'ying');*/
+                    element.append($('<span class="tag sailor">' + name + '</div>'));
                 }
                 // specials
                 if (matcher.target.indexOf('special') === 0 && matcher.matcher.test(data[matcher.target])) {
@@ -363,9 +423,9 @@ directives.addLinks = function($stateParams) {
                 ul.append($('<li><a href="http://onepiece-treasurecruise.com/c-' + id + '" target="_blank">' +
                         'Official Guide (Japanese)</a></li>'));
             }
-            if (!isNaN(gw[id-1])) {
+            if (gw[id-1] != null) {
                 ul.append($('<li><a href="http://xn--pck6bvfc.gamewith.jp/article/show/' + gw[id-1] + '" target="_blank">' +
-                        'GameWith Page (Japanese)</a></li>'));
+                        'GameWith Page (Japanese)</a> | <a href="http://translate.google.com/translate?sl=ja&tl=en&u=http://xn--pck6bvfc.gamewith.jp/article/show/' + gw[id-1] + '" target="_blank">' +'Google Translate</a></li>'));
             }
             if (ul.children().length > 0)
                 element.append(ul);

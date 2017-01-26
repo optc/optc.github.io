@@ -18,6 +18,8 @@ app.controller('MainCtrl',function($scope, $rootScope, $timeout, $controller) {
     $rootScope.query = '';
     $scope.data = drops;
     $scope.hiddenUnits = [ ];
+    var searchQuery = location.search.replace('?','');
+    
 
     // units
     $scope.reverse = function(x) { return -x; };
@@ -33,6 +35,11 @@ app.controller('MainCtrl',function($scope, $rootScope, $timeout, $controller) {
         if (!$scope.$$phase) $scope.$apply();
     };
 
+    //Use URI for one time search
+    if(searchQuery!=""){
+        $scope.query = Utils.getRegex(decodeURI(searchQuery.replace(/%20Fortnight|%20Raid/g,"").replace(/\?/,"\\?")));
+    }
+    
     $controller('DismissalCtrl');
 
 });
@@ -61,7 +68,7 @@ app.directive('type',function() {
 app.directive('island',function() {
     return {
         restrict: 'E',
-        scope: { island: '=', data: '=', type: '=', hiddenUnits: '=' },
+        scope: { island: '=', data: '=', type: '=', hiddenUnits: '=', condition: '=', challenge: '=', completion: '=', showManual: '=' },
         replace: true,
         templateUrl: 'island.html',
         link: function(scope, element, attrs) {
@@ -224,3 +231,24 @@ app.filter('smartSort',function($rootScope) {
 });
 
 })();
+
+function refreshTimer(){
+var refresh=1000; // Refresh rate in milli seconds
+mytime=setTimeout('updateTimes()',refresh)
+}
+
+function updateTimes(){
+    //Japan can also be Etc/GMT-9
+    document.getElementById("times").innerHTML = "Global: <b>"+moment().tz('Etc/GMT+8').format('H:mm:ss')+"</b> | Japan: <b>"+moment().tz('Asia/Tokyo').format('H:mm:ss')+"</b>";
+    
+    if(moment().tz('Asia/Tokyo').format('H')>12 && moment().tz('Asia/Tokyo').format('H')<23){
+        document.getElementById("timesNote").innerHTML = "The Bonuses in the Japanese Version only last from 12:00 till 23:00<br><b>Japan Bonuses are currently active<b>";
+    }else{
+         document.getElementById("timesNote").innerHTML = "The Bonuses in the Japanese Version only last from 12:00 till 23:00<br><b>Japan Bonuses are currently not active<b>";
+    }
+    tt=refreshTimer();
+}
+window.onload = function() {
+    //Also add the URI Search into the Search Bar
+    document.getElementById("search").value = decodeURI(location.search.replace('?','').replace(/%20Fortnight|%20Raid/g,"").replace(/\?/,"\\?"));
+}

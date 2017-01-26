@@ -1,0 +1,105 @@
+<div id="outer-container">
+    <div id="container">
+        <div id="content">
+				<h1 class="page-header">
+					Probability Calculator
+				</h1>
+            <div >
+                <div class="small-container" attach-picker>
+
+                    <div class="unitContainer">
+
+                        <div class="unit" decorate-slot uid="character.uid"
+                            ng-class="{ empty: !character || !character.uid }"
+                            popover-placement="right" popover-enable="{{character}}"
+                            popover-trigger="mouseenter" popover-title="{{character.name}}"
+                            uib-popover-template="'views/fragments/popover.html'"></div>
+
+                    </div>
+                    <p ng-if="slotCount(character.uid)">Select which Sockets your Unit already has.</p>
+                    <p ng-if="!slotCount(character.uid)">This Unit has no Sockets.</p>
+                    <div class="quick-fill quick-fill-slots" 
+                    	ng-class="{ visible: character.uid }" ng-click="quickFillSlots()">
+                        Quick fill
+                    </div>
+                    <div class="slots">
+
+                        <slot-wheel ng-repeat="slotNumber in range(0, slotCount(character.uid))">
+                        </slot-wheel>
+
+                    </div>
+
+                </div>
+            </div>
+			
+			<div id="calculation-area">
+				
+				<div class="small-container">
+                    <label><input type="checkbox" ng-model="specialEvent" ng-change="changeBaseValues()">Special x2 Event </label>
+                    &nbsp; &nbsp;
+                    <label><input type="checkbox" ng-model="jpnVersion" ng-change="changeBaseValues()">Japanese Version</label>
+                    <p></p>
+					Copies/Books: <input type="text" class="number-field" ng-model="copies" placeholder="e.g. 65" auto-focus
+						ng-change="changeBaseValues()" id="copies">
+                    <p></p>
+					Number of Skill-Ups You Need: <input type="text" class="number-field" ng-model="skillups" placeholder="e.g. 10" auto-focus
+						ng-change="changeBaseValues()" id="skillups">
+					<div class="quick-fill quick-fill-skillups" 
+						ng-class="{ visible: character.uid }" ng-click="quickFillSkillups(character.uid)">
+                        Quick fill
+                    </div>
+					
+				</div>
+				
+				<div class="small-container">
+					<p>  
+					Probability to get {{skillups}} skillups with {{copies}} copies/books:<br>
+					<label ng-attr-style="color: {{specialProbabilityColor}}" class="result">{{specialProbabilityResult}}%</label>
+					</p>
+					<uib-progressbar animate="false" value="specialProbabilityProgress" type="success"><b>{{specialProbabilityProgressBar}}</b></uib-progressbar>
+					<button ng-click="!isSpecialReady||calculateSpecialUp()">Calculate</button>
+				</div>
+
+				<div class="small-container">
+					<p>  
+					Probability to max above Powers with {{copies}} copies: <br>
+					Note: Slots chosen above are how many you CURRENTLY have <br>
+					To change how many of a type you have, click on the number <br>
+					<label ng-attr-style="color: {{socketProbabilityColor}}" class="result">{{socketProbabilityResult}}% </label>
+					</p>
+					<uib-progressbar animate="false" value="socketProbabilityProgress" type="success"><b>{{socketProbabilityProgressBar}}</b></uib-progressbar>
+					<button ng-click="!isSocketReady||calculateSocketUp()">Calculate</button>
+				</div>
+
+				
+
+			</div>
+
+            <div id="urlContainer" ng-class="{ visible: url }">
+                <input ng-model="url"></input>
+            </div>
+
+            <div id="buttonContainer">
+
+                <button class="btn btn-danger" ui-sref="main.reset" ng-disabled="!character"  uib-tooltip="Reset" tooltip-append-to-body="true">
+                    <i class="fa fa-eraser"></i>
+                </button>
+
+                <button class="btn btn-success" ng-click="generateURL()" ng-disabled="!character"  uib-tooltip="Export URL" tooltip-append-to-body="true">
+                    <i class="fa fa-exchange"></i>
+                </button>
+                
+                <button type="button" class="btn" ui-sref="main.instruction" title="Instructions" uib-tooltip="Instructions" tooltip-append-to-body="true">
+                    <i class="fa fa-question-circle"></i>
+                </button>
+
+            </div>
+
+            <div id="transient" class="alert alert-danger" ng-show="options.transient" ng-click="options.transient = false"  uib-tooltip="Save" tooltip-append-to-body="true">
+                <i class="fa fa-lock"></i>
+                Transient mode enabled. Click to disable.
+            </div>
+
+        </div>
+    </div>
+</div>
