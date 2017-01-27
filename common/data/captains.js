@@ -3970,11 +3970,35 @@ window.captains = {
     1427: {
         atk: function(p) { return p.unit.type == "QCK" ? 2 : 1; },
     },
-    1428: {
+    1429: {
         rcv: function(p) { return p.unit.class.has("Free Spirit") || p.unit.class.has("Striker") ? 1.5 : 1; },
     },
-    1429: {
+    1430: {
         rcv: function(p) { return p.unit.class.has("Free Spirit") || p.unit.class.has("Striker") ? 2 : 1; },
+    },
+    1431: {
+        atk: function(p) { if(p.colorCount.INT>=1 && p.colorCount.PSY>=1 && p.colorCount.STR>=1 && p.colorCount.DEX>=1 && p.colorCount.QCK>=1) 
+                return 2;
+            else
+                return 1; 
+               },
+        hp: function(p) { if(p.classCount.FreeSpirit>=1 && p.classCount.Fighter>=1 && p.classCount.Shooter>=1 && p.classCount.Slasher>=1 && p.classCount.Powerhouse>=1 && p.classCount.Driven>=1) 
+                return 1.2;
+            else
+                return 1; 
+               },
+    },
+    1432: {
+        atk: function(p) { if(p.colorCount.INT>=1 && p.colorCount.PSY>=1 && p.colorCount.STR>=1 && p.colorCount.DEX>=1 && p.colorCount.QCK>=1) 
+                return 2.5;
+            else
+                return 1; 
+               },
+        hp: function(p) { if(p.classCount.FreeSpirit>=1 && p.classCount.Fighter>=1 && p.classCount.Shooter>=1 && p.classCount.Slasher>=1 && p.classCount.Powerhouse>=1 && p.classCount.Driven>=1) 
+                return 1.5;
+            else
+                return 1; 
+               },
     },
     1445: {
         atk: function(p) {

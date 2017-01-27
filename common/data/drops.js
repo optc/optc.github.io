@@ -1492,10 +1492,10 @@ window.drops = {
             Expert: [ 1373 ],
         },
         {
-            name: 'Clash!! Warden Magellan',
+            name: 'Clash!! Shogun Franky',
             thumb: 1432,
-            Master: [ 1431 ],
-            Ultimate: [ 1431 ],
+            Master: [ 1431, 215, 799 ],
+            Ultimate: [ 1431, 215, 799 ],
         },
 
     ],

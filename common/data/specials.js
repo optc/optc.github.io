@@ -2057,6 +2057,14 @@ window.specials = {
         type: "class",
         warning: "Selected special (%name%) assumes that the enemy has been Delayed."
     },
+    1431: {
+        atk: function(p) { return 1.5; },
+        type: "type"
+    },
+    1432: {
+        atk: function(p) { return 1.5; },
+        type: "type"
+    },
     1445: {
         atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "QCK" ? 1.75 : 1; },
         rcv: function(p) { return p.unit.type == "PSY" || p.unit.type == "QCK" ? 1.75 : 1; },
