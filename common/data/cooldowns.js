@@ -1431,8 +1431,8 @@ window.cooldowns = [
     [ 14, 14 ],
     [ 33, 17 ],
     [ 33, 17 ],
-    null,
-    null,
+    null,//Hody Jones
+    null,//Hody Jones
     null,
     null,
     null,

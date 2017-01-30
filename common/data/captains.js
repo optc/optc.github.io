@@ -4000,6 +4000,18 @@ window.captains = {
                 return 1; 
                },
     },
+    1433: {
+        atk: function(p) { 
+            return p.unit.class.has("Powerhouse") ? p.classCount.Powerhouse==6 ? 3 : p.classCount.Powerhouse==5 ? 2.5 : p.classCount.Powerhouse==4 ? 2 : p.classCount.Powerhouse==3 ? 1.75 : p.classCount.Powerhouse==2 ? 1.5 : p.classCount.Powerhouse==1 ? 1.25 : 1 : 1; },
+        hp: function(p) { 
+            return p.unit.class.has("Powerhouse") ? p.classCount.Powerhouse==6 ? 2 : p.classCount.Powerhouse==5 ? 1.75 : p.classCount.Powerhouse==4 ? 1.75 : p.classCount.Powerhouse==3 ? 1.5 : p.classCount.Powerhouse==2 ? 1.5 : p.classCount.Powerhouse==1 ? 1.25 : 1 : 1; },
+    },
+    1434: {
+        atk: function(p) { 
+            return p.unit.class.has("Powerhouse") ? p.classCount.Powerhouse==6 ? 3 : p.classCount.Powerhouse==5 ? 2.5 : p.classCount.Powerhouse==4 ? 2 : p.classCount.Powerhouse==3 ? 1.75 : p.classCount.Powerhouse==2 ? 1.5 : p.classCount.Powerhouse==1 ? 1.25 : 1 : 1; },
+        hp: function(p) { 
+            return p.unit.class.has("Powerhouse") ? p.classCount.Powerhouse==6 ? 2 : p.classCount.Powerhouse==5 ? 1.75 : p.classCount.Powerhouse==4 ? 1.75 : p.classCount.Powerhouse==3 ? 1.5 : p.classCount.Powerhouse==2 ? 1.5 : p.classCount.Powerhouse==1 ? 1.25 : 1 : 1; },
+    },
     1445: {
         atk: function(p) {
             return (p.unit.type == "QCK" || p.unit.type == "PSY") && p.percHP >= 70.0 ? 3 : 1;
