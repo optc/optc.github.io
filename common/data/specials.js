@@ -2071,6 +2071,18 @@ window.specials = {
         atk: function(p) { return 1.5; },
         type: "type"
     },
+    1437: {
+        atk: function(p) { return 1.5; },
+        type: "condition",
+        orb: function(p) { return p.unit.class.has("Powerhouse") ? CrunchUtils.getOrbMultiplier(p.orb, 1, 1.75) : CrunchUtils.getOrbMultiplier(p.orb, 1, 1); },
+        warning: "Selected special (%name%) assumes that the enemy has been delayed."
+    },
+    1438: {
+        atk: function(p) { return 1.5; },
+        type: "condition",
+        orb: function(p) { return p.unit.class.has("Powerhouse") ? CrunchUtils.getOrbMultiplier(p.orb, 1, 1.75) : CrunchUtils.getOrbMultiplier(p.orb, 1, 1); },
+        warning: "Selected special (%name%) assumes that the enemy has been delayed."
+    },
     1439: {
         atk: function(p) { return p.unit.class.has("Powerhouse") ? 1.75 : 1; },
         type: "class"
@@ -2086,6 +2098,16 @@ window.specials = {
     1442: {
         chain: function(p) { return 2.5; },
         chainLimiter: function(p) { return p.chainPosition > 0 ? 2.5 : 1.0; }
+    },
+    1443: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 1.5 : 1; },
+        type: "class",
+        orb: function(p) { return p.unit.class.has("Powerhouse") ? CrunchUtils.getOrbMultiplier(p.orb, 1, 1.5) : CrunchUtils.getOrbMultiplier(p.orb, 1, 1); },
+    },
+    1444: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 1.5 : 1; },
+        type: "class",
+        orb: function(p) { return p.unit.class.has("Powerhouse") ? CrunchUtils.getOrbMultiplier(p.orb, 1, 1.5) : CrunchUtils.getOrbMultiplier(p.orb, 1, 1); },
     },
     1445: {
         atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "QCK" ? 1.75 : 1; },

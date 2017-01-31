@@ -7721,7 +7721,7 @@ window.details = {
         captain: "Reduces cooldown of Powerhouse specials by 1 turns at the start of the fight, reduces crew's current HP by 10% at the end of each turn, and boosts ATK of Powerhouse characters 3x and HP of Powerhouse characters by 2x if there are 6 Powerhouse characters in your crew.",
         special: [
             {
-                "description": "Deals ???x character's ATK in [INT] damage to all enemies, reduces Special Cooldown of Powerhouse characters by 1 turn, reduces damage received by 60% for 1 turn",
+                "description": "Deals 60x character's ATK in [INT] damage to all enemies, reduces Special Cooldown of Powerhouse characters by 1 turn, reduces damage received by 60% for 1 turn",
                 "cooldown": [ 12, null ],
             },
             {
@@ -7735,7 +7735,7 @@ window.details = {
         captain: "Reduces cooldown of Powerhouse specials by 1 turns at the start of the fight, reduces crew's current HP by 10% at the end of each turn, and boosts ATK of Powerhouse characters 3x and HP of Powerhouse characters by 2x if there are 6 Powerhouse characters in your crew.",
         special: [
             {
-                "description": "Deals ???x character's ATK in [INT] damage to all enemies, reduces Special Cooldown of Powerhouse characters by 1 turn, reduces damage received by 60% for 1 turn",
+                "description": "Deals 60x character's ATK in [INT] damage to all enemies, reduces Special Cooldown of Powerhouse characters by 1 turn, reduces damage received by 60% for 1 turn",
                 "cooldown": [ 12, null ],
             },
             {
@@ -7762,14 +7762,14 @@ window.details = {
     1437: {//Ikaros Much
         captain: "Boosts ATK of Powerhouse and Striker characters by 1.3x",
         captainNotes: "The bonus is cumulative. Powerhouse + Striker characters get a 1.69x bonus.",
-        special: "Reduce crew's current HP by 50%, amplifies the effect of orbs for Powerhouse characters by ???x and boosts ATK against delayed enemies by 1.5x for 1 turn",
+        special: "Reduce crew's current HP by 50%, amplifies the effect of orbs for Powerhouse characters by 1.75x and boosts ATK against delayed enemies by 1.5x for 1 turn",
         specialName: "Squid Spear",
         sailor: "Makes [STR], [QCK], [DEX], [PSY] and [INT] orbs \"beneficial\" for this unit if there are 6 Powerhouse characters in your crew",
     },
     1438: {//Ikaros Much
         captain: "Boosts ATK of Powerhouse and Striker characters by 1.6x",
         captainNotes: "The bonus is cumulative. Powerhouse + Striker characters get a 2.56x bonus.",
-        special: "Reduce crew's current HP by 50%, amplifies the effect of orbs for Powerhouse characters by ???x and boosts ATK against delayed enemies by 1.5x for 1 turn",
+        special: "Reduce crew's current HP by 50%, amplifies the effect of orbs for Powerhouse characters by 1.75x and boosts ATK against delayed enemies by 1.5x for 1 turn",
         specialName: "Squid Spear",
         sailor: "Makes [STR], [QCK], [DEX], [PSY] and [INT] orbs \"beneficial\" for this unit if there are 6 Powerhouse characters in your crew",
     },
@@ -7799,13 +7799,13 @@ window.details = {
     },
     1443: {//Dosun
         captain: "Boosts ATK of Powerhouse characters by 2.75x following a chain of Good > Great > Perfect hits",
-        special: "Changes [RCV], [TND], [EMPTY], [BLOCK] and [BOMB] orbs into [STR], [QCK], [DEX], [PSY] or [INT] orbs, boosts ATK of Powerhouse characters by ???x and amplifies the effect of orbs by ???x for 1 turn",
+        special: "Changes [RCV], [TND], [EMPTY], [BLOCK] and [BOMB] orbs into [STR], [QCK], [DEX], [PSY] or [INT] orbs, boosts ATK of Powerhouse characters by 1.5x and amplifies the effect of orbs by 1.5x for 1 turn",
         specialName: "Papara Hammer",
         sailor: "Boost ATK of all characters by 150 and HP of all characters by 50 if there are 6 Powerhouse characters in your crew",
     },
     1444: {//Dosun
         captain: "Boosts ATK of Powerhouse characters by 3.25x following a chain of Good > Great > Perfect hits",
-        special: "Changes [RCV], [TND], [EMPTY], [BLOCK] and [BOMB] orbs into [STR], [QCK], [DEX], [PSY] or [INT] orbs, boosts ATK of Powerhouse characters by ???x and amplifies the effect of orbs by ???x for 1 turn",
+        special: "Changes [RCV], [TND], [EMPTY], [BLOCK] and [BOMB] orbs into [STR], [QCK], [DEX], [PSY] or [INT] orbs, boosts ATK of Powerhouse characters by 1.5x and amplifies the effect of orbs by 1.5x for 1 turn",
         specialName: "Papara Hammer",
         sailor: "Boost ATK of all characters by 150 and HP of all characters by 50 if there are 6 Powerhouse characters in your crew",
     },
