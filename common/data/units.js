@@ -1440,7 +1440,7 @@ window.units = [
     [ "Daruma", "DEX", [ "Powerhouse", "Fighter" ], 4, 15, 4, 3, 50, 392109, 174, 133, 21, null, null, null, null ],
     [ "Daruma, New Fishman Pirates", "DEX", [ "Powerhouse", "Fighter" ], 5, 30, 4, 4, 99, 4000000, null, null, null, 2341, 1430, 270, null ],
     [ "Zeo", "INT", [ "Powerhouse", "Striker" ], 4, 15, null, 3, 50, 392109, null, null, null, null, null, null, null ],
-    [ "Zeo, New Fishman Pirates", "INT", [ "Powerhouse", "Striker" ], 5, 30, null, 4, 99, 4000000, null, null, null, 2424, 1362, 279, null ],
+    [ "Zeo, New Fishman Pirates", "INT", [ "Powerhouse", "Striker" ], 5, 30, 4, 4, 99, 4000000, 1, 1, 1, 2424, 1362, 279, null ],
     [ "Dosun", "STR", [ "Powerhouse", "Striker" ], 4, 15, null, 3, 50, 392109, null, null, null, null, null, null, null ],
     [ "Dosun, New Fishman Pirates", "STR", [ "Powerhouse", "Striker" ], 5, 30, 7, 4, 99, 4000000, 1369, 430, 50, null, null, null, null ],
     [ "Boa Hancock: Snake Princess", "QCK", [ "Free Spirit", "Shooter" ], 6, 65, 4, 5, 99, 5000000, 1559, 803, 303, 2900, 1500, 600, null ],

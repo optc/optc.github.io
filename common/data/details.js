@@ -7786,13 +7786,13 @@ window.details = {
         sailor: "Completely resists Silence on this character",
     },
     1441: {//Zeo
-        captain: "Boosts ATK of [INT] characters by 1.5x, reduces damage received by 10%",
+        captain: "Boosts ATK of [INT] characters by 1.5x, and reduces damage received by 10%",
         special: "Makes Perfects easier to hit, locks all orbs, and locks the chain multiplier at 2.5x for 1 turn",
         specialName: "Flail Hidden From God",
         sailor: "Completely resists Blindness if your Captain is a Powerhouse character",
     },
     1442: {//Zeo
-        captain: "Not Translated",
+        captain: "Boosts ATK of [INT] characters by 2.25x and reduces damage received by 20%",
         special: "Makes Perfects easier to hit, locks all orbs, and locks the chain multiplier at 2.5x for 1 turn",
         specialName: "Flail Hidden From God",
         sailor: "Completely resists Blindness if your Captain is a Powerhouse character",
