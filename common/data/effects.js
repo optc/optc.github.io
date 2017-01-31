@@ -397,5 +397,12 @@ window.effects = {
         orb: function(p) { return p.orb == 2.0 ? 1.2 : (p.orb == 0.5 ? 5/6 : 1); },
         atk: function(p) { return 1.2; }
     },
+    
+    '20-Hit Hit Barrier': {
+        description: 'You will only do damage once the combo meter reaches 20 hits',
+        thumb: null,
+        id: 42,
+        comboShield: 20
+    },
 
 };

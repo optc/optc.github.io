@@ -4002,15 +4002,72 @@ window.captains = {
     },
     1433: {
         atk: function(p) { 
-            return p.unit.class.has("Powerhouse") ? p.classCount.Powerhouse==6 ? 3 : p.classCount.Powerhouse==5 ? 2.5 : p.classCount.Powerhouse==4 ? 2 : p.classCount.Powerhouse==3 ? 1.75 : p.classCount.Powerhouse==2 ? 1.5 : p.classCount.Powerhouse==1 ? 1.25 : 1 : 1; },
+            return p.unit.class.has("Powerhouse") ? p.classCount.Powerhouse==6 ? 3 : 1 : 1; },
         hp: function(p) { 
-            return p.unit.class.has("Powerhouse") ? p.classCount.Powerhouse==6 ? 2 : p.classCount.Powerhouse==5 ? 1.75 : p.classCount.Powerhouse==4 ? 1.75 : p.classCount.Powerhouse==3 ? 1.5 : p.classCount.Powerhouse==2 ? 1.5 : p.classCount.Powerhouse==1 ? 1.25 : 1 : 1; },
+            return p.unit.class.has("Powerhouse") ? p.classCount.Powerhouse==6 ? 2 : 1 : 1; },
     },
     1434: {
         atk: function(p) { 
-            return p.unit.class.has("Powerhouse") ? p.classCount.Powerhouse==6 ? 3 : p.classCount.Powerhouse==5 ? 2.5 : p.classCount.Powerhouse==4 ? 2 : p.classCount.Powerhouse==3 ? 1.75 : p.classCount.Powerhouse==2 ? 1.5 : p.classCount.Powerhouse==1 ? 1.25 : 1 : 1; },
+            return p.unit.class.has("Powerhouse") ? p.classCount.Powerhouse==6 ? 3 : 1 : 1; },
         hp: function(p) { 
-            return p.unit.class.has("Powerhouse") ? p.classCount.Powerhouse==6 ? 2 : p.classCount.Powerhouse==5 ? 1.75 : p.classCount.Powerhouse==4 ? 1.75 : p.classCount.Powerhouse==3 ? 1.5 : p.classCount.Powerhouse==2 ? 1.5 : p.classCount.Powerhouse==1 ? 1.25 : 1 : 1; },
+            return p.unit.class.has("Powerhouse") ? p.classCount.Powerhouse==6 ? 2 : 1 : 1; },
+    },
+    1435: {
+        atk: function(p) { 
+            return p.unit.class.has("Slasher") ? 2 : 1; },
+        hp: function(p) { 
+            return p.unit.class.has("Powerhouse") ? 1.2 : 1; },
+    },
+    1436: {
+        atk: function(p) { 
+            return p.unit.class.has("Slasher") ? 2.5 : 1; },
+        hp: function(p) { 
+            return p.unit.class.has("Powerhouse") ? 1.5 : 1; },
+    },
+    1437: {
+        atk: function(p) {
+            return p.unit.class.has("Powerhouse") && p.unit.class.has("Striker") ? 1.69 :
+                p.unit.class.has("Powerhouse") || p.unit.class.has("Striker") ? 1.3 :
+                1;
+        }
+    },
+    1438: {
+        atk: function(p) {
+            return p.unit.class.has("Powerhouse") && p.unit.class.has("Striker") ? 2.56 :
+                p.unit.class.has("Powerhouse") || p.unit.class.has("Striker") ? 1.6 :
+                1;
+        }
+    },
+    1439: {
+        atk: function(p) {
+            return p.unit.class.has("Powerhouse") || p.unit.class.has("Fighter") ? 1.2 : 1;
+        }
+    },
+    1440: {
+        atk: function(p) {
+            return p.unit.class.has("Powerhouse") || p.unit.class.has("Fighter") ? 1.5 : 1;
+        }
+    },
+    1441: {
+        atk: function(p) { return p.unit.type == "INT" ? 1.5 : 1; },
+    },
+    1443: {
+        damageSorter: function(d) { return CrunchUtils.classSort(d, 2.75, [ "Powerhouse" ]); },
+        hitAtk: function(p) {
+            if (!p.unit.class.has("Powerhouse")) return 1;
+            return p.modifiers.slice(0, p.chainPosition)
+                .subcontains(["Good", "Great", "Perfect"]) ? 2.75 : 1;
+        },
+        hitModifiers: ["Good", "Great", "Perfect", "Perfect", "Perfect", "Perfect"]
+    },
+    1444: {
+        damageSorter: function(d) { return CrunchUtils.classSort(d, 3.25, [ "Powerhouse" ]); },
+        hitAtk: function(p) {
+            if (!p.unit.class.has("Powerhouse")) return 1;
+            return p.modifiers.slice(0, p.chainPosition)
+                .subcontains(["Good", "Great", "Perfect"]) ? 3.25 : 1;
+        },
+        hitModifiers: ["Good", "Great", "Perfect", "Perfect", "Perfect", "Perfect"]
     },
     1445: {
         atk: function(p) {

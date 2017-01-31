@@ -1750,6 +1750,12 @@ window.specials = {
         atk: function(p) { return p.unit.cost >= 50 ? 1.75 : 1; },
         type: "class"
     },
+    1317: {
+        def: function(p) { return 0.2; }
+    },
+    1318: {
+        def: function(p) { return 0.2; }
+    },
     1319: {
         atk: function(p) { return 1.5; },
         type: "class"
@@ -2064,6 +2070,22 @@ window.specials = {
     1432: {
         atk: function(p) { return 1.5; },
         type: "type"
+    },
+    1439: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 1.75 : 1; },
+        type: "class"
+    },
+    1440: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 1.75 : 1; },
+        type: "class"
+    },
+    1441: {
+        chain: function(p) { return 2.5; },
+        chainLimiter: function(p) { return p.chainPosition > 0 ? 2.5 : 1.0; }
+    },
+    1442: {
+        chain: function(p) { return 2.5; },
+        chainLimiter: function(p) { return p.chainPosition > 0 ? 2.5 : 1.0; }
     },
     1445: {
         atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "QCK" ? 1.75 : 1; },

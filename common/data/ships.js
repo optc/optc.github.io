@@ -314,10 +314,24 @@ window.ships = [
         thumb: null,
         description: 'Boosts ATK of Shooter characters by 1.55x and their HP by 1.2x, reduces cooldown of all specials by 1 turn at the start of the fight. Special: Cuts the current HP of each enemy by 7% (cooldown: 15 turns).',
         atk: function(p) {
-            return [ 1.2, 1.2, 1.3, 1.3, 1.3, 1.4, 1.4, 1.4, 1.4, 1.55 ][p.boatLevel - 1];
+            return !(p.unit.class.has('Shooter')) ? 1 : [ 1.2, 1.2, 1.3, 1.3, 1.3, 1.4, 1.4, 1.4, 1.4, 1.55 ][p.boatLevel - 1];
         },
         hp: function(p) {
-            return [ 1.1, 1.1, 1.1, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2 ][p.boatLevel - 1];
+            return !(p.unit.class.has('Shooter')) ? 1 : [ 1.1, 1.1, 1.1, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2 ][p.boatLevel - 1];
+        }
+    },
+    
+    { // 27
+        name: 'Going Luffy SENPAI!',
+        thumb: null,
+        description: 'Boosts ATK of Striker characters by 1.5x and their HP by 1.2x. Special: Reduces any damage received above 10,000 HP by large amount (cooldown: 17 turns). Incremental stats for this sip are 100% wrong, but level 10 stats are right',
+        atk: function(p) {
+            return !p.unit.class.has('Striker') ? 1 :
+                [ 1.2, 1.2, 1.2, 1.2, 1.3, 1.3, 1.3, 1.4, 1.4, 1.5 ][p.boatLevel - 1];
+        },
+        hp: function(p) {
+            return !p.unit.class.has('Striker') ? 1 :
+                [ 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2 ][p.boatLevel - 1];
         }
     },
 

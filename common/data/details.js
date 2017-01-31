@@ -1792,12 +1792,12 @@ window.details = {
     446: {
         special: "Deals 10 times the damage received in the previous turn in typeless damage to all enemies",
         specialName: "Black Hole",
-        captain: "Increases damage recieved by 2x, boosts ATK of STR characters by 2x and their HP by 1.5x"
+        captain: "Increases damage received by 2x, boosts ATK of STR characters by 2x and their HP by 1.5x"
     },
     447: {
         special: "Deals 10 times the damage received in the previous turn in typeless damage to all enemies",
         specialName: "Black Hole",
-        captain: "Increases damage recieved by 2x, boosts ATK of STR characters by 2.5x and their HP by 2.25x"
+        captain: "Increases damage received by 2x, boosts ATK of STR characters by 2.5x and their HP by 2.25x"
     },
     448: {
         special: "Boosts chances of getting [QCK] orbs for 3 turns",
@@ -4061,12 +4061,12 @@ window.details = {
     881: {
         captain: "Boosts ATK of Shooter and Free Spirit characters by 2x following a chain of Good > Great > Perfect hits",
         specialName: "Fighting Music: Conflict Chekera",
-        special: "Increases damage recieved by 2x for 2 turns, reduces RCV by 90% for 2 turns, boosts ATK of Shooter and Free Spirit characters by 1.75x for 1 turn"
+        special: "Increases damage received by 2x for 2 turns, reduces RCV by 90% for 2 turns, boosts ATK of Shooter and Free Spirit characters by 1.75x for 1 turn"
     },
     882: {
         captain: "Boosts ATK of Shooter and Free Spirit characters by 3x following a chain of Good > Great > Perfect hits",
         specialName: "Fighting Music: Conflict Chekera",
-        special: "Increases damage recieved by 2x for 2 turns, reduces RCV by 90% for 2 turns, boosts ATK of Shooter and Free Spirit characters by 1.75x for 1 turn"
+        special: "Increases damage received by 2x for 2 turns, reduces RCV by 90% for 2 turns, boosts ATK of Shooter and Free Spirit characters by 1.75x for 1 turn"
     },
     883: {
         captain: "Boosts ATK and HP of Powerhouse characters by 1.25x",
@@ -6037,12 +6037,12 @@ window.details = {
     },
     1198: {
         captain: "Boosts ATK and RCV of Free Spirit characters by 1.5x",
-        special: "Empties all slots with [RCV] orbs, recover 20% of MAX HP",
+        special: "Empties all slots with [RCV] orbs, recover 20% of crew's MAX HP",
         specialName: "Appetite Or Sex Appeal - Has it Switched Yet!?",
     },
     1199: {
         captain: "Boosts ATK and RCV of Free Spirit characters by 1.5x",
-        special: "Empties all slots with [RCV] orbs, recover 20% of MAX HP",
+        special: "Empties all slots with [RCV] orbs, recover 20% of crew's MAX HP",
         specialName: "Appetite Or Sex Appeal - Has it Switched Yet!?",
     },
     1200: {
@@ -6140,7 +6140,7 @@ window.details = {
         specialName: "Totem Cube"
     },
     1216: { //sebastian
-        captain: "Boosts ATK of Powerhouse characters by 2x and reduces damage taken based on current HP by up to 20%",
+        captain: "Boosts ATK of Powerhouse characters by 2x and reduces damage received based on current HP by up to 20%",
         captainNotes: "The lower the HP, the larger the damage reduction. At 50% HP you take 10% reduced damage",
         special: "Reduces damage received by 50% for 1 turn, and changes own orb to [QCK]",
         specialName: "Camouflage Air",
@@ -6829,13 +6829,13 @@ window.details = {
     1311: {//Coliseum Marigold
         captain: "Boosts ATK and HP of Powerhouse characters by 1.5x",
         special: "Deals 20x character's ATK in [INT] damage to all enemies. Reduces enemy Damage Threshold timers by 1 turn",
-        specialNotes: "Damage Threshold is the buff enemies gain that grealy reduces damage taken over a certain amount",
+        specialNotes: "Damage Threshold is the buff enemies gain that grealy reduces damage received over a certain amount",
         specialName: "King Cobra Machetes",
     },
     1312: {//Coliseum Marigold
         captain: "Boosts ATK and HP of Powerhouse characters by 1.75x",
         special: "Deals 20x character's ATK in [INT] damage to all enemies. Reduces enemy Damage Threshold timers by 1 turn",
-        specialNotes: "Damage Threshold is the buff enemies gain that grealy reduces damage taken over a certain amount",
+        specialNotes: "Damage Threshold is the buff enemies gain that grealy reduces damage received over a certain amount",
         specialName: "King Cobra Machetes",
     },
     1313: {//Akainu
@@ -6919,13 +6919,13 @@ window.details = {
         specialName: "A Decree of the Veteran",
     },
     1321: {//Momonga
-        captain: "Boosts the ATK of Cerebral and Slasher characters by 2.25x and reduces damage taken by 10% if there's a [STR], [DEX], [QCK], [INT], and [PSY] character on your crew.",
+        captain: "Boosts the ATK of Cerebral and Slasher characters by 2.25x and reduces damage received by 10% if there's a [STR], [DEX], [QCK], [INT], and [PSY] character on your crew.",
         special: "Deals 15x character's ATK as [DEX] damage to all enemies. Boosts ATK against delayed enemies by 1.5x for 2 turns",
         specialName: "Front Line Dissection",
         sailor: "Boosts ATK of Slasher and Cerebral characters by 75 if your captain is a Cerebral character",
     },
     1322: {//Momonga
-        captain: "Boosts the ATK of Cerebral and Slasher characters by 2.5x and reduces damage taken by 10% if there's a [STR], [DEX], [QCK], [INT], and [PSY] character on your crew.",
+        captain: "Boosts the ATK of Cerebral and Slasher characters by 2.5x and reduces damage received by 10% if there's a [STR], [DEX], [QCK], [INT], and [PSY] character on your crew.",
         special: "Deals 15x character's ATK as [DEX] damage to all enemies. Boosts ATK against delayed enemies by 1.5x for 2 turns",
         specialName: "Front Line Dissection",
         sailor: "Boosts ATK of Slasher and Cerebral characters by 75 if your captain is a Cerebral character",
@@ -7206,14 +7206,14 @@ window.details = {
         specialName: "Three Blade Style Secret Skill: Crossroad of Six Paths",
     },
     1363: {//Timeskip Franky
-        captain: "Boosts ATK of [PSY] characters by 2x, reduces damage taken by 10%",
+        captain: "Boosts ATK of [PSY] characters by 2x, reduces damage received by 10%",
         special: "Deals random [PSY] damage to all enemies, amplifies the effect of orbs for [PSY] characters by 2x for 1 turn",
         specialNotes: "#{orb : 2x}",
         sailor: "Boosts HP of [PSY] characters by 100",
         specialName: "Franky Fireball",
     },
     1364: {//Timeskip Franky
-        captain: "Boosts ATK of [PSY] characters by 2.5x, reduces damage taken by 10%",
+        captain: "Boosts ATK of [PSY] characters by 2.5x, reduces damage received by 10%",
         special: "Deals random [PSY] damage to all enemies, amplifies the effect of orbs for [PSY] characters by 2x for 1 turn",
         specialNotes: "#{orb : 2x}",
         sailor: "Boosts HP of [PSY] characters by 100",
@@ -7348,13 +7348,13 @@ window.details = {
         specialNotes: "Toxic starts at 0.5x character's attack and increases by 3x at the end of every turn until 1,500,000 damage per turn.",
     },
     1375: {//Dellinger
-        captain: "Boosts ATK of Powerhouse characters by 2.5x, reduces crew's HP by 50%, Increases damage recieved by 2x",
+        captain: "Boosts ATK of Powerhouse characters by 2.5x, reduces crew's HP by 50%, Increases damage received by 2x",
         special: "Deals 20x character's ATK in [QCK] damage to one enemy, Boosts Dellinger's ATK by 1.5x for 1 turn, amplifies the effect of Dellinger's orb by 1.5x for 1 turn, and changes own orb to [QCK].",
         specialNotes: "Boosted ATK and Orb Effectivess only works for the Dellinger who uses his Special.",
         specialName: "Deadly Fangs of Rage",
     },
     1376: {//Dellinger
-        captain: "Boosts ATK of Powerhouse characters by 2.75x, reduces crew's HP by 20%, Increases damage recieved by 2x",
+        captain: "Boosts ATK of Powerhouse characters by 2.75x, reduces crew's HP by 20%, Increases damage received by 2x",
         special: "Deals 20x character's ATK in [QCK] damage to one enemy, Boosts Dellinger's ATK by 1.5x for 1 turn, amplifies the effect of Dellinger's orb by 1.5x for 1 turn, and changes own orb to [QCK].",
         specialNotes: "Boosted ATK and Orb Effectivess only works for the Dellinger who uses his Special.",
         specialName: "Deadly Fangs of Rage",
@@ -7394,12 +7394,12 @@ window.details = {
         specialName: "Tashigi Special",
     },
     1383: {//Soldier-San
-        captain: "Boosts ATK of Striker characters by 2x. Increases damage recieved by 1.5x",
+        captain: "Boosts ATK of Striker characters by 2x. Increases damage received by 1.5x",
         special: "Reduces Paralysis, Bind, Despair, and Silence duration by 1 turn. Randomizes all Badly Matching, [BLOCK], or [EMPTY] orbs",
         specialName: "Angry Extermination of Bugs",
     },
     1384: {//Soldier-San
-        captain: "Boosts ATK of Striker characters by 2.5x. Increases damage recieved by 1.5x",
+        captain: "Boosts ATK of Striker characters by 2.5x. Increases damage received by 1.5x",
         special: "Reduces Paralysis, Bind, Despair, and Silence duration by 1 turn. Randomizes all Badly Matching, [BLOCK], or [EMPTY] orbs",
         specialName: "Angry Extermination of Bugs",
     },
@@ -7561,14 +7561,14 @@ window.details = {
     },
     1405: {//Timeskip Usopp
         captain: "Boost ATK of Shooters by 1.75x, and their RCV by 1.25x",
-        special: "Deals 10 hits of 2,000 fixed damage to random enemies, and if enemies have delay protection at the time the special was activated, boosts ATK of Shooters by 1.75x and amplifies the effect of orbs by 1.75x for 1 turn",
+        special: "Deals 10 hits of 2,000 fixed damage to random enemies, and if enemies have delay protection at the time the special was activated, boosts ATK of Shooters by 1.75x and amplifies the effect of orbs for Shooters by 1.75x for 1 turn",
         specialNotes: "This is a new form of Conditional Boost. The boost does not act like a Monet or Dalmatian boost, but is only activated if conditions are met and does not stack with other Class boosts or Orb boosts.",
         specialName: "Assault Meteor Shower",
         sailor: "When HP is below 30% at the start of the turn, boost ATK and RCV of Shooters by 100",
     },
     1406: {//Timeskip Usopp
         captain: "Boost ATK of Shooters by 2.25x, and their RCV by 1.5x",
-        special: "Deals 10 hits of 2,000 fixed damage to random enemies, and if enemies have delay protection at the time the special was activated, boosts ATK of Shooters by 1.75x and amplifies the effect of orbs by 1.75x for 1 turn",
+        special: "Deals 10 hits of 2,000 fixed damage to random enemies, and if enemies have delay protection at the time the special was activated, boosts ATK of Shooters by 1.75x and amplifies the effect of orbs for Shooters by 1.75x for 1 turn",
         specialNotes: "This is a new form of Conditional Boost. The boost does not act like a Monet or Dalmatian boost, but is only activated if conditions are met and does not stack with other Class boosts or Orb boosts.",
         specialName: "Assault Meteor Shower",
         sailor: "When HP is below 30% at the start of the turn, boost ATK and RCV of Shooters by 100",
@@ -7718,8 +7718,7 @@ window.details = {
         specialName: "General Cannon",
     },
     1433: {//Hody Jones
-        captain: "Reduces cooldown of Powerhouse specials by 1 turns at the start of the fight, reduces crew's current HP by 10% at the end of each turn, and boosts ATK and HP of Powerhouse characters by a variable amount depending on how many Powerhouse characters are on your team.",
-        captainNotes: "With 6 Powerhouse characters, the HP boost is 2x and the ATK boost is 3x. The boosts for HP and ATK below 6 characters are estimated and NOT confirmed",
+        captain: "Reduces cooldown of Powerhouse specials by 1 turns at the start of the fight, reduces crew's current HP by 10% at the end of each turn, and boosts ATK of Powerhouse characters 3x and HP of Powerhouse characters by 2x if there are 6 Powerhouse characters in your crew.",
         special: [
             {
                 "description": "Deals ???x character's ATK in [INT] damage to all enemies, reduces Special Cooldown of Powerhouse characters by 1 turn, reduces damage received by 60% for 1 turn",
@@ -7733,8 +7732,7 @@ window.details = {
         specialName: "Water Bullets",
     },
     1434: {//Hody Jones
-        captain: "Reduces cooldown of Powerhouse specials by 1 turns at the start of the fight, reduces crew's current HP by 10% at the end of each turn, and boosts ATK and HP of Powerhouse characters by a variable amount depending on how many Powerhouse characters are on your team.",
-        captainNotes: "With 6 Powerhouse characters, the HP boost is 2x and the ATK boost is 3x. The boosts for HP and ATK below 6 characters are estimated and NOT confirmed",
+        captain: "Reduces cooldown of Powerhouse specials by 1 turns at the start of the fight, reduces crew's current HP by 10% at the end of each turn, and boosts ATK of Powerhouse characters 3x and HP of Powerhouse characters by 2x if there are 6 Powerhouse characters in your crew.",
         special: [
             {
                 "description": "Deals ???x character's ATK in [INT] damage to all enemies, reduces Special Cooldown of Powerhouse characters by 1 turn, reduces damage received by 60% for 1 turn",
@@ -7748,68 +7746,68 @@ window.details = {
         specialName: "Water Bullets",
     },
     1435: {//Hyouzou
-        captain: "Not Translated",
-        special: "Makes Perfects harder to hit for 1 turn, changes [STR], [QCK], [DEX], [PSY] and [INT] orbs into Matching orbs for Powerhouse characters, delays all enemies for 1 turn, recovers ??? HP.",
-        specialName: "Hyouzou Special",
+        captain: "Boosts ATK of Slashers by 2x and HP of Powerhouse characters by 1.2x",
+        special: "Makes Perfects harder to hit for 1 turn, changes [STR], [QCK], [DEX], [PSY] and [INT] orbs into Matching orbs for Powerhouse characters, delays all enemies for 1 turn, recovers 20% of crew's MAX HP.",
+        specialName: "Staggering Slash",
         specialNotes: "Decreases timing window to hit a Perfect. (Animation remains the same)",
-        sailor: "Boost ATK of all characters by ??? if there are 6 Powerhouse characters in your crew",
+        sailor: "Boost ATK of all characters by 150 if there are 6 Powerhouse characters in your crew",
     },
     1436: {//Hyouzou
-        captain: "Not Translated",
-        special: "Makes Perfects harder to hit for 1 turn, changes [STR], [QCK], [DEX], [PSY] and [INT] orbs into Matching orbs for Powerhouse characters, delays all enemies for 1 turn, recovers ??? HP.",
-        specialName: "Hyouzou Special",
+        captain: "Boosts ATK of Slashers by 2.5x and HP of Powerhouse characters by 1.5x",
+        special: "Makes Perfects harder to hit for 1 turn, changes [STR], [QCK], [DEX], [PSY] and [INT] orbs into Matching orbs for Powerhouse characters, delays all enemies for 1 turn, recovers 20% of crew's MAX HP.",
+        specialName: "Staggering Slash",
         specialNotes: "Decreases timing window to hit a Perfect. (Animation remains the same)",
-        sailor: "Boost ATK of all characters by ??? if there are 6 Powerhouse characters in your crew",
+        sailor: "Boost ATK of all characters by 150 if there are 6 Powerhouse characters in your crew",
     },
     1437: {//Ikaros Much
-        captain: "Not Translated",
-        special: "Reduce crew's current HP, amplifies the effect of orbs by ???x for ??? turns and boosts ATK against delayed enemies by ???x for ??? turns",
-        specialName: "Ikaros Much Special",
-        specialNotes: "Orb boost may also require enemy to be delayed to activate.",
-        sailor: "Makes [STR], [QCK], [DEX], [PSY] and [INT] orbs \"beneficial\" for all characters if there are 6 Powerhouse characters in your crew",
+        captain: "Boosts ATK of Powerhouse and Striker characters by 1.3x",
+        captainNotes: "The bonus is cumulative. Powerhouse + Striker characters get a 1.69x bonus.",
+        special: "Reduce crew's current HP by 50%, amplifies the effect of orbs for Powerhouse characters by ???x and boosts ATK against delayed enemies by 1.5x for 1 turn",
+        specialName: "Squid Spear",
+        sailor: "Makes [STR], [QCK], [DEX], [PSY] and [INT] orbs \"beneficial\" for this unit if there are 6 Powerhouse characters in your crew",
     },
     1438: {//Ikaros Much
-        captain: "Not Translated",
-        special: "Reduce crew's current HP, amplifies the effect of orbs by ???x for ??? turns and boosts ATK against delayed enemies by ???x for ??? turns",
-        specialName: "Ikaros Much Special",
-        specialNotes: "Orb boost may also require enemy to be delayed to activate.",
-        sailor: "Makes [STR], [QCK], [DEX], [PSY] and [INT] orbs \"beneficial\" for all characters if there are 6 Powerhouse characters in your crew",
+        captain: "Boosts ATK of Powerhouse and Striker characters by 1.6x",
+        captainNotes: "The bonus is cumulative. Powerhouse + Striker characters get a 2.56x bonus.",
+        special: "Reduce crew's current HP by 50%, amplifies the effect of orbs for Powerhouse characters by ???x and boosts ATK against delayed enemies by 1.5x for 1 turn",
+        specialName: "Squid Spear",
+        sailor: "Makes [STR], [QCK], [DEX], [PSY] and [INT] orbs \"beneficial\" for this unit if there are 6 Powerhouse characters in your crew",
     },
     1439: {//Daruma
-        captain: "Not Translated",
-        special: "Reduces Paralysis and Silence duration by ??? turns, Deals ???x character's ATK in [DEX] damage to one enemy, boosts ATK of Powerhouse characters by ???x for 1 turn",
-        specialName: "Daruma Special",
+        captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of Powerhouse and Fighter characters by 1.2x",
+        special: "Reduces Paralysis and Silence duration by 2 turns, cuts the current HP of one enemy by 10%, boosts ATK of Powerhouse characters by 1.75x for 1 turn",
+        specialName: "Fire Daruma Cutter",
         sailor: "Completely resists Silence on this character",
     },
     1440: {//Daruma
-        captain: "Not Translated",
-        special: "Reduces Paralysis and Silence duration by ??? turns, Deals ???x character's ATK in [DEX] damage to one enemy, boosts ATK of Powerhouse characters by ???x for 1 turn",
-        specialName: "Daruma Special",
+        captain: "Reduces cooldown of all specials by 4 turns at the start of the fight, boosts ATK of Powerhouse and Fighter characters by 1.5x",
+        special: "Reduces Paralysis and Silence duration by 2 turns, cuts the current HP of one enemy by 10%, boosts ATK of Powerhouse characters by 1.75x for 1 turn",
+        specialName: "Fire Daruma Cutter",
         sailor: "Completely resists Silence on this character",
     },
     1441: {//Zeo
-        captain: "Not Translated",
+        captain: "Boosts ATK of [INT] characters by 1.5x, reduces damage received by 10%",
         special: "Makes Perfects easier to hit, locks all orbs, and locks the chain multiplier at 2.5x for 1 turn",
-        specialName: "Zeo Special",
+        specialName: "Flail Hidden From God",
         sailor: "Completely resists Blindness if your Captain is a Powerhouse character",
     },
     1442: {//Zeo
         captain: "Not Translated",
         special: "Makes Perfects easier to hit, locks all orbs, and locks the chain multiplier at 2.5x for 1 turn",
-        specialName: "Zeo Special",
+        specialName: "Flail Hidden From God",
         sailor: "Completely resists Blindness if your Captain is a Powerhouse character",
     },
     1443: {//Dosun
-        captain: "Not Translated",
-        special: "Changes certain orbs into [STR], [QCK], [DEX], [PSY] or [INT] orbs, boosts ATK of Powerhouse characters by ???x and amplifies the effect of orbs by ???x for ??? turns",
-        specialName: "Dosun Special",
-        sailor: "Boost ATK and HP of all characters by ??? if there are 6 Powerhouse characters in your crew",
+        captain: "Boosts ATK of Powerhouse characters by 2.75x following a chain of Good > Great > Perfect hits",
+        special: "Changes [RCV], [TND], [EMPTY], [BLOCK] and [BOMB] orbs into [STR], [QCK], [DEX], [PSY] or [INT] orbs, boosts ATK of Powerhouse characters by ???x and amplifies the effect of orbs by ???x for 1 turn",
+        specialName: "Papara Hammer",
+        sailor: "Boost ATK of all characters by 150 and HP of all characters by 50 if there are 6 Powerhouse characters in your crew",
     },
     1444: {//Dosun
-        captain: "Not Translated",
-        special: "Changes certain orbs into [STR], [QCK], [DEX], [PSY] or [INT] orbs, boosts ATK of Powerhouse characters by ???x and amplifies the effect of orbs by ???x for ??? turns",
-        specialName: "Dosun Special",
-        sailor: "Boost ATK and HP of all characters by ??? if there are 6 Powerhouse characters in your crew",
+        captain: "Boosts ATK of Powerhouse characters by 3.25x following a chain of Good > Great > Perfect hits",
+        special: "Changes [RCV], [TND], [EMPTY], [BLOCK] and [BOMB] orbs into [STR], [QCK], [DEX], [PSY] or [INT] orbs, boosts ATK of Powerhouse characters by ???x and amplifies the effect of orbs by ???x for 1 turn",
+        specialName: "Papara Hammer",
+        sailor: "Boost ATK of all characters by 150 and HP of all characters by 50 if there are 6 Powerhouse characters in your crew",
     },
     1445: {//Boa Hancock+
         captain: "Boosts ATK of [QCK] and [PSY] characters by ???x if HP is above 70% at the start of the turn. If HP is below 70%, Boosts RCV of [QCK] and [PSY] units by 1.5x instead.",
