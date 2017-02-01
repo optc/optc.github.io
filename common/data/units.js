@@ -1443,7 +1443,7 @@ window.units = [
     [ "Zeo, Ghosts of Fish Street", "INT", [ "Powerhouse", "Striker" ], 5, 30, 6, 4, 99, 4000000, 1078, 441, 96, 2424, 1362, 279, null ],
     [ "Dosun, New Fishman Pirate", "STR", [ "Powerhouse", "Striker" ], 4, 15, null, 3, 50, 392109, null, null, null, null, null, null, null ],
     [ "Dosun, Ghosts of Fish Street", "STR", [ "Powerhouse", "Striker" ], 5, 30, 7, 4, 99, 4000000, 1369, 430, 50, 3059, 1333, 189, null ],
-    [ "Boa Hancock: Snake Princess", "QCK", [ "Free Spirit", "Shooter" ], 6, 65, 4, 5, 99, 5000000, 1559, 803, 303, 2900, 1500, 600, null ],
+    [ "Boa Hancock: Snake Princess", "QCK", [ "Free Spirit", "Shooter" ], 6, 65, 4, 5, 99, 5000000, 1559, 803, 303, 3002, 1480, 507, null ],
     ];
     
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
