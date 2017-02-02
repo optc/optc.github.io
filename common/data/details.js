@@ -1580,7 +1580,7 @@ window.details = {
         specialName: "Iron Guard",
         captain: "Reduces damage received by 10%, boosts ATK of Slasher characters by 2x"
     },
-    403: { 
+    403: {
         special: "Deals several times the character's ATK in QCK damage to all enemies",
         specialNotes: "#{specialProportional : lower : 150 * ( 1 - (remaining HP) / (total HP) )}",
         specialName: "Backwater Sword Dance",
@@ -7817,27 +7817,28 @@ window.details = {
         specialName: "Aromatic Foot",
     },
     1446: {//Sogeking 5+
-        captain: "Doubles shooters ATK and boosts shooters RCV by 1.25x.",
+        captain: "Boosts ATK of Shooters by 2x and RCV of Shooters by 1.25x.",
         special: "Deals random PSY damage to all enemies and delays enemies by 3 turns.",
-        specialName: "Sogeking Special",
+        specialName: "Green Star: Platanus Shuriken",
     },
     1447: {//Sanji 5+
         captain: "Boosts Powerhouse characters ATK by 2.5x and reduces damage take by 10%.",
         special: [
             {
-                "description": "Deals 5,000 fixed damage to all enemies and boosts crew's attack by 1.2x for 1 turn.",
-                "cooldown": [ 15, null ],
+                "description": "Deals 5,000 fixed damage to all enemies and boosts own ATK by 1.2x for 1 turn.",
+                "cooldown": [ 15, 10 ],
             },
             {
-                "description": "Deals 50,000 fixed damage to all enemies and boosts crew's attack by 1.5x for 1 turn.",
-                "cooldown": [ 20, null ],
+                "description": "Deals 50,000 fixed damage to all enemies and boosts own ATK by 1.5x for 1 turn.",
+                "cooldown": [ 20, 15 ],
             },
         ],
-        specialName: "Sanji Special",
+        specialName: "Grill Shot",
     },
     1448: {//Chopper 5+
         captain: "Boosts Fighter characters ATK by 2.5x.",
-        special: "Deals PSY damage based on current HP and is higher the more HP you have.  Changes [Block] orbs on Fighter characters into matching.",
-        specialName: "Chopper Special",
+        special: "Deals PSY damage according to HP. Changes [Block] orbs on Fighter characters into matching.",
+        specialNotes: "The exact damage is proportional to the crew's remaining HP and is higher the higher the HP is. The formula used is ???? * (current HP) / (total HP)",
+        specialName: "Weight Gain: Heavy Gong",
     },
 };
