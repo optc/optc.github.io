@@ -4070,11 +4070,11 @@ window.captains = {
         hitModifiers: ["Good", "Great", "Perfect", "Perfect", "Perfect", "Perfect"]
     },
     1445: {
-        atk: function(p) {
-            return (p.unit.type == "QCK" || p.unit.type == "PSY") && p.percHP >= 70.0 ? 3 : 1;
+        atk: function(p) { 
+            return (p.unit.type == "QCK" || p.unit.type == "PSY") ? 2.25 + 0.5 * p.percHP / 100 : 1; 
         },
         rcv: function(p) {
-            return (p.unit.type == "QCK" || p.unit.type == "PSY") && p.percHP <= 70.0 ? 1.5 : 1;
+            return (p.unit.type == "QCK" || p.unit.type == "PSY") && p.percHP <= 50.0 ? 1.5 : 1;
         }
     },
 };

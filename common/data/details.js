@@ -7718,29 +7718,31 @@ window.details = {
         specialName: "General Cannon",
     },
     1433: {//Hody Jones
-        captain: "Reduces cooldown of Powerhouse specials by 1 turns at the start of the fight, reduces crew's current HP by 10% at the end of each turn, and boosts ATK of Powerhouse characters 3x and HP of Powerhouse characters by 2x if there are 6 Powerhouse characters in your crew.",
+        captain: "Reduces cooldown of Powerhouse specials by 1 turns at the start of the fight, reduces crew's current HP by 10% at the end of each turn, and boosts ATK of Powerhouse characters 3x if there are 6 Powerhouse characters in your crew and HP of Powerhouse characters by up to 2x depending on how many Powerhouse characters are in your crew.",
+        captainNotes: "Hody's HP boost is dependent on how many Powerhouse characters are in your crew, however, we do not have any numbers for this yet, so he will only boost HP if there are 6 powerhouse units FOR NOW.",
         special: [
             {
                 "description": "Deals 60x character's ATK in [INT] damage to all enemies, reduces Special Cooldown of Powerhouse characters by 1 turn, reduces damage received by 60% for 1 turn",
-                "cooldown": [ 12, null ],
+                "cooldown": [ 12, 7 ],
             },
             {
                 "description": "Deals ???x character's ATK in [INT] damage to all enemies, reduces Special Cooldown of Powerhouse characters by 2 turns, reduces damage received by 90% for 1 turn",
-                "cooldown": [ 22, null ],
+                "cooldown": [ 22, 17 ],
             },
         ],
         specialName: "Water Bullets",
     },
     1434: {//Hody Jones
-        captain: "Reduces cooldown of Powerhouse specials by 1 turns at the start of the fight, reduces crew's current HP by 10% at the end of each turn, and boosts ATK of Powerhouse characters 3x and HP of Powerhouse characters by 2x if there are 6 Powerhouse characters in your crew.",
+        captain: "Reduces cooldown of Powerhouse specials by 1 turns at the start of the fight, reduces crew's current HP by 10% at the end of each turn, and boosts ATK of Powerhouse characters 3x if there are 6 Powerhouse characters in your crew and HP of Powerhouse characters by up to 2x depending on how many Powerhouse characters are in your crew.",
+        captainNotes: "Hody's HP boost is dependent on how many Powerhouse characters are in your crew, however, we do not have any numbers for this yet, so he will only boost HP if there are 6 powerhouse units FOR NOW.",
         special: [
             {
                 "description": "Deals 60x character's ATK in [INT] damage to all enemies, reduces Special Cooldown of Powerhouse characters by 1 turn, reduces damage received by 60% for 1 turn",
-                "cooldown": [ 12, null ],
+                "cooldown": [ 12, 7 ],
             },
             {
                 "description": "Deals ???x character's ATK in [INT] damage to all enemies, reduces Special Cooldown of Powerhouse characters by 2 turns, reduces damage received by 90% for 1 turn",
-                "cooldown": [ 22, null ],
+                "cooldown": [ 22, 17 ],
             },
         ],
         specialName: "Water Bullets",
@@ -7810,9 +7812,8 @@ window.details = {
         sailor: "Boost ATK of all characters by 150 and HP of all characters by 50 if there are 6 Powerhouse characters in your crew",
     },
     1445: {//Boa Hancock+
-        captain: "Boosts ATK of [QCK] and [PSY] characters by ???x if HP is above 70% at the start of the turn. If HP is below 70%, Boosts RCV of [QCK] and [PSY] units by 1.5x instead.",
-        captainNotes: "Unclear what the captain boost is yet, but in the damage calculator she is currently set to 3x",
+        captain: "Boosts ATK of [QCK] and [PSY] characters proportionally to the crew's current HP. If HP is below 50%, Boosts RCV of [QCK] and [PSY] units by 1.5x.",
         special: "Boosts ATK and RCV of [QCK] and [PSY] characters by 1.75x for 1 turn, and delays all enemies for 1 turn. Changes your Captain orb to [RCV]. If HP is above 70%, changes left column into Matching orbs.",
-        specialName: "Boa Hancock Special",
+        specialName: "Aromatic Foot",
     },
 };
