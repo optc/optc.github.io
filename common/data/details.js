@@ -1580,7 +1580,7 @@ window.details = {
         specialName: "Iron Guard",
         captain: "Reduces damage received by 10%, boosts ATK of Slasher characters by 2x"
     },
-    403: {
+    403: { 
         special: "Deals several times the character's ATK in QCK damage to all enemies",
         specialNotes: "#{specialProportional : lower : 150 * ( 1 - (remaining HP) / (total HP) )}",
         specialName: "Backwater Sword Dance",
@@ -7815,5 +7815,29 @@ window.details = {
         captain: "Boosts ATK of [QCK] and [PSY] characters proportionally to the crew's current HP. If HP is below 50%, Boosts RCV of [QCK] and [PSY] units by 1.5x.",
         special: "Boosts ATK and RCV of [QCK] and [PSY] characters by 1.75x for 1 turn, and delays all enemies for 1 turn. Changes your Captain orb to [RCV]. If HP is above 70%, changes left column into Matching orbs.",
         specialName: "Aromatic Foot",
+    },
+    1446: {//Sogeking 5+
+        captain: "Doubles shooters ATK and boosts shooters RCV by 1.25x.",
+        special: "Deals random PSY damage to all enemies and delays enemies by 3 turns.",
+        specialName: "Sogeking Special",
+    },
+    1447: {//Sanji 5+
+        captain: "Boosts Powerhouse characters ATK by 2.5x and reduces damage take by 10%.",
+        special: [
+            {
+                "description": "Deals 5,000 fixed damage to all enemies and boosts crew's attack by 1.2x for 1 turn.",
+                "cooldown": [ 15, null ],
+            },
+            {
+                "description": "Deals 50,000 fixed damage to all enemies and boosts crew's attack by 1.5x for 1 turn.",
+                "cooldown": [ 20, null ],
+            },
+        ],
+        specialName: "Sanji Special",
+    },
+    1448: {//Chopper 5+
+        captain: "Boosts Fighter characters ATK by 2.5x.",
+        special: "Deals PSY damage based on current HP and is higher the more HP you have.  Changes [Block] orbs on Fighter characters into matching.",
+        specialName: "Chopper Special",
     },
 };
