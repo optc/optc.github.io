@@ -1445,8 +1445,8 @@ window.units = [
     [ "Dosun, Ghosts of Fishman District", "STR", [ "Powerhouse", "Striker" ], 5, 30, 7, 4, 99, 4000000, 1369, 430, 50, 3059, 1333, 189, 1 ],
     [ "Boa Hancock: Snake Princess", "QCK", [ "Free Spirit", "Shooter" ], 6, 65, 4, 5, 99, 5000000, 1559, 803, 303, 3002, 1480, 507, 1 ],
     [ "Sogeking 5+", "PSY", [ "Shooter" ], 5, 30, 4, 3, 99, 3000000, 770, 292, 189, null, null, null, null ],
-    [ "Sanji  5+", "QCK", [ "Fighter", "Powerhouse" ], 5, 30, 4, 3, 99, 3000000, 550, 515, 175, null, null, null, null ],
-    [ "Chopper 5+", "PSY", [ "Fighter", "Free Spirit" ], 5, 30, 4, 2, 50, 392109, 699, 490, 90, null, null, null, null ],
+    [ "Sanji  5+", "QCK", [ "Fighter", "Powerhouse" ], 5, 30, 4, 3, 99, 3000000, 550, 515, 175, 2709, 1337, 251, null ],
+    [ "Chopper 5+", "PSY", [ "Fighter", "Free Spirit" ], 5, 30, 4, 2, 50, 392109, 699, 490, 90, 2336, 1236, 346, null ],
     ];
     
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],

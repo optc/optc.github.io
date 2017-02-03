@@ -7815,6 +7815,7 @@ window.details = {
         captain: "Boosts ATK of [QCK] and [PSY] characters proportionally to the crew's current HP. If HP is below 50%, Boosts RCV of [QCK] and [PSY] units by 1.5x.",
         special: "Boosts ATK and RCV of [QCK] and [PSY] characters by 1.75x for 1 turn, and delays all enemies for 1 turn. Changes your Captain orb to [RCV]. If HP is above 70%, changes left column into Matching orbs.",
         specialName: "Aromatic Foot",
+        captainNotes: "#{captainProportional : higher : 2.25 + 0.5 * (remaining HP) / (total HP) : 2.75 : 2.25}"
     },
     1446: {//Sogeking 5+
         captain: "Boosts ATK of Shooters by 2x and RCV of Shooters by 1.25x.",
