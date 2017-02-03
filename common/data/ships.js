@@ -324,14 +324,14 @@ window.ships = [
     { // 27
         name: 'Going Luffy SENPAI!',
         thumb: null,
-        description: 'Boosts ATK of Striker characters by 1.5x and their HP by 1.2x. Special: Reduces any damage received above 10,000 HP by large amount (cooldown: 17 turns). Incremental stats for this sip are 100% wrong, but level 10 stats are right',
+        description: 'Boosts ATK of Striker characters by 1.5x and their HP by 1.2x. Special: Reduces any damage received above 10,000 HP by large amount (cooldown: 17 turns).',
         atk: function(p) {
             return !p.unit.class.has('Striker') ? 1 :
-                [ 1.2, 1.2, 1.2, 1.2, 1.3, 1.3, 1.3, 1.4, 1.4, 1.5 ][p.boatLevel - 1];
+                [ 1.1, 1.2, 1.2, 1.2, 1.2, 1.3, 1.3, 1.4, 1.4, 1.5 ][p.boatLevel - 1];
         },
         hp: function(p) {
             return !p.unit.class.has('Striker') ? 1 :
-                [ 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2 ][p.boatLevel - 1];
+                [ 1.1, 1.1, 1.1, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2 ][p.boatLevel - 1];
         }
     },
 

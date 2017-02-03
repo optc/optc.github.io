@@ -1300,6 +1300,13 @@ window.drops = {
             "All Difficulties": [ 1425, 1427, 1428, -1240, -1272, -1270, -1227, -1224, -872, -878, -255, -812 ]
         },
         
+        {
+            name: "Protect Violet-Chan!!",
+            thumb: null,
+            //condition: "You can only bring DEX units",
+            "All Difficulties": [ -935, -1278, -1378, -1324, -880, -876, -259, -1226, -814 ]
+        },
+        
     ],
 
             
