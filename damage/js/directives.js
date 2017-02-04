@@ -595,9 +595,9 @@ directives.unitOrb = function($rootScope) {
 			var n = ORBS.indexOf(tunit.orb);
 			$rootScope.notify({ text: unit.unit.type});
 			if(unit.unit.type == "STR" || unit.unit.type == "DEX")
-				tunit.orb = ORBS[(n + ((!$rootScope.areGOrbsEnabled() && $rootScope.areSTROrbsEnabled() && n == ORBS.length - 3) ? 2 : 1)) % ($rootScope.areGOrbsEnabled() ? ($rootScope.areSTROrbsEnabled() ? ORBS.length : ORBS.length - 1) : ($rootScope.areSTROrbsEnabled() ? ORBS.length : ORBS.length - 2))];
-			else
 				tunit.orb = ORBS[(n + 1) % ($rootScope.areGOrbsEnabled() || $rootScope.areSTROrbsEnabled() ? ORBS.length - 1 : ORBS.length - 2)];
+			else
+				tunit.orb = ORBS[(n + ((!$rootScope.areGOrbsEnabled() && $rootScope.areSTROrbsEnabled() && n == ORBS.length - 3) ? 2 : 1)) % ($rootScope.areGOrbsEnabled() ? ($rootScope.areSTROrbsEnabled() ? ORBS.length : ORBS.length - 1) : ($rootScope.areSTROrbsEnabled() ? ORBS.length : ORBS.length - 2))];
                     scope.glow();
                     scope.$apply();
                     e.preventDefault();
