@@ -592,8 +592,7 @@ directives.unitOrb = function($rootScope) {
                 if (!$(e.target).hasClass('unitPortrait')) return;
                 if (unit.unit === null || /unitLevel/.test(e.target.className) || e.altKey || e.shiftKey) return;
 								$rootScope.notify({ text: !$rootScope.areGOrbsEnabled() && $rootScope.areSTROrbsEnabled() ? "2" : "1" });
-								$rootScope.notify({ text: !$rootScope.areGOrbsEnabled()});
-								$rootScope.notify({ text: $rootScope.areSTROrbsEnabled()});
+								$rootScope.notify({ text: n });
 								$rootScope.notify({ text: $rootScope.areGOrbsEnabled() ? ($rootScope.areSTROrbsEnabled() ? ORBS.length : ORBS.length - 1) : ($rootScope.areSTROrbsEnabled() ? ORBS.length : ORBS.length - 2)});
                 if (e.which == 2 || (e.which == 1 && (e.ctrlKey || e.metaKey || Utils.isClickOnOrb(e,e.target.parentNode)))) {
                     var n = ORBS.indexOf(tunit.orb);
