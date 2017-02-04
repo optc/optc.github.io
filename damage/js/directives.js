@@ -584,6 +584,7 @@ directives.unitOrb = function($rootScope) {
                 if (unit.orb == 1) return 'none';
                 if (unit.orb == 2) return scope.data.team[scope.slot].unit.type;
                 if (unit.orb == 'g') return 'G';
+                if (unit.orb == 'str') return 'S';
                 return Utils.getOppositeType(scope.data.team[scope.slot].unit.type) + ' opposite';
             };
             var onShortPress = function(e) {
