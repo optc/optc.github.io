@@ -126,7 +126,7 @@ var ImportCtrl = function($scope, $rootScope, $state, $stateParams) {
                 .slice(-6).split('').map(function(x) { return parseInt(x, 10); });
             temp.forEach(function(x,n) {
                 var unit = $scope.tdata.team[n];
-                unit.orb = (x == 1 ? 2 : (x == 2 ? 0.5 : (x == 3 ? 'g' : 1)));
+                unit.orb = (x == 1 ? 2 : (x == 2 ? 0.5 : (x == 3 ? 'g' : (x == 4 ? 'str' : 1))));
                 if (unit.orb == 'g' && !$rootScope.areGOrbsEnabled()) unit.orb = 1;
             });
         } else if (type == 'S') {
