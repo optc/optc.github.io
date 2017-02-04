@@ -141,7 +141,7 @@ var SharedRootCtrl = function($scope, $rootScope, $timeout) {
             resetSTROrbs();
     });
 
-    $rootScope.areSTRrbsEnabled = function() {
+    $rootScope.areSTROrbsEnabled = function() {
         if ($rootScope.options.strOrbsEnabled > 0) return true;
         if ($rootScope.data.effect) {
             var effect = window.effects[$rootScope.data.effect];
