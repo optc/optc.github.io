@@ -50,6 +50,12 @@
     background-image: radial-gradient(9px 3px, circle cover, oldlace, orange, orangered);
 }
 
+.unitOrb.S {
+    background-image: -webkit-radial-gradient(9px 3px, circle cover, oldlace, orangered, rgb(50,50,50));
+    background-image: -moz-radial-gradient(9px 3px, circle cover, oldlace, orangered, rgb(50,50,50));
+    background-image: radial-gradient(9px 3px, circle cover, oldlace, orangered, rgb(50,50,50));
+}
+
 .unitOrb .fa {
     position: relative;
     font-size: 2em;
