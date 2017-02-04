@@ -98,7 +98,7 @@ app.controller('ImageGeneratorCtrl', function($scope, $filter, $timeout) {
                         awesome(context, { text: temp[0], style: '28px', color: 'white',
                             x: temp[1], y: temp[2], stroke: 'gray' });
                     } else if (orb == 'g') {
-                        type(context, { text: 'G', style: 'bold 20px "Open Sans"',
+                        type(context, { text: 'S', style: 'bold 20px "Open Sans"',
                             x: baseX + 13, y: baseY + 28, color: 'white', stroke: 'black', strokeWidth: 2 });
                     } else {
                         type(context, { text: 'S', style: 'bold 20px "Open Sans"',
