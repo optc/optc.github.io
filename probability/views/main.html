@@ -10,11 +10,18 @@
                     <div class="unitContainer">
 
                         <div class="unit" decorate-slot uid="character.uid"
-                            ng-class="{ empty: !character || !character.uid }"></div>
+                            ng-class="{ empty: !character || !character.uid }"
+                            popover-placement="right" popover-enable="{{character}}"
+                            popover-trigger="mouseenter" popover-title="{{character.name}}"
+                            uib-popover-template="'views/fragments/popover.html'"></div>
 
                     </div>
                     <p ng-if="slotCount(character.uid)">Select which Sockets your Unit already has.</p>
                     <p ng-if="!slotCount(character.uid)">This Unit has no Sockets.</p>
+                    <div class="quick-fill quick-fill-slots" 
+                    	ng-class="{ visible: character.uid }" ng-click="quickFillSlots()">
+                        Quick fill
+                    </div>
                     <div class="slots">
 
                         <slot-wheel ng-repeat="slotNumber in range(0, slotCount(character.uid))">
@@ -37,6 +44,10 @@
                     <p></p>
 					Number of Skill-Ups You Need: <input type="text" class="number-field" ng-model="skillups" placeholder="e.g. 10" auto-focus
 						ng-change="changeBaseValues()" id="skillups">
+					<div class="quick-fill quick-fill-skillups" 
+						ng-class="{ visible: character.uid }" ng-click="quickFillSkillups(character.uid)">
+                        Quick fill
+                    </div>
 					
 				</div>
 				

@@ -264,11 +264,11 @@ window.effects = {
     },
     
     'Pirate Ship Competition! \"Dead End\" Opens!': {
-        description: 'STR/DEX/QCK ATK 1.6x and HP 0.1x. INT/PSY ATK 0.2x and HP 2x',
+        description: 'STR/DEX/QCK ATK 1.6x. INT/PSY HP 2x',
         thumb: 1072,
         id: 31,
-        atk: function(p) { return (p.type == "STR" || p.type == "DEX" || p.type == "QCK") ? 1.6 : 0.2; },
-        hp: function(p) { return (p.type == "STR" || p.type == "DEX" || p.type == "QCK") ? 0.1 : 2.0; }
+        atk: function(p) { return (p.type == "STR" || p.type == "DEX" || p.type == "QCK") ? 1.6 : 1; },
+        hp: function(p) { return (p.type == "STR" || p.type == "DEX" || p.type == "QCK") ? 1 : 2.0; }
         
     },
     
@@ -396,6 +396,13 @@ window.effects = {
         id: 41,
         orb: function(p) { return p.orb == 2.0 ? 1.2 : (p.orb == 0.5 ? 5/6 : 1); },
         atk: function(p) { return 1.2; }
+    },
+    
+    '20-Hit Hit Barrier': {
+        description: 'You will only do damage once the combo meter reaches 20 hits',
+        thumb: null,
+        id: 42,
+        comboShield: 20
     },
 
 };

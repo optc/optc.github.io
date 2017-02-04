@@ -9,7 +9,7 @@ var app = angular.module('optc', [ 'ui.router', 'ui.bootstrap', 'ngSanitize', 'n
 var SharedRootCtrl = function($scope, $rootScope, $timeout) {
 
     $rootScope.data = {
-
+        //setting default values
         team: [
             { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 } },
             { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 } },
@@ -20,8 +20,8 @@ var SharedRootCtrl = function($scope, $rootScope, $timeout) {
         ],
 
         percHP: 100.0,
-
-        ship: [ 1, 5 ],
+        
+        ship: [ 1, 10 ],
 
         defense: 0,
 
@@ -61,6 +61,7 @@ var SharedRootCtrl = function($scope, $rootScope, $timeout) {
 
     $rootScope.options = {
         gOrbsEnabled: 0,
+        strOrbsEnabled: 0,
         slidersEnabled: true,
         sidebarVisible: false,
         transientMode: false,
@@ -116,6 +117,35 @@ var SharedRootCtrl = function($scope, $rootScope, $timeout) {
         if ($rootScope.data.effect) {
             var effect = window.effects[$rootScope.data.effect];
             if (effect && effect.gOrbsEnabled) return true;
+        }
+        return false;
+    };
+
+    /* * * * * [STR] orb control * * * * */
+
+    var resetSTROrbs = function() {
+        for (var i=0;i<6;++i) {
+            if ($scope.tdata.team[i].orb == 'str')
+                $scope.tdata.team[i].orb = 1;
+        }
+    };
+
+    // reset g slots automatically
+    $scope.$watch('options.strOrbsEnabled',function() {
+        if (!$rootScope.areSTROrbsEnabled())
+            resetSTROrbs();
+    });
+
+    $scope.$watch('data.effect',function() {
+        if (!$rootScope.areSTROrbsEnabled())
+            resetSTROrbs();
+    });
+
+    $rootScope.areSTRrbsEnabled = function() {
+        if ($rootScope.options.strOrbsEnabled > 0) return true;
+        if ($rootScope.data.effect) {
+            var effect = window.effects[$rootScope.data.effect];
+            if (effect && effect.strOrbsEnabled) return true;
         }
         return false;
     };

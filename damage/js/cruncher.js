@@ -756,17 +756,32 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
     //Used for Bartolomeos Captain ability so far
     var classCounter = function() {
         var classes = {};
-        var classArray = ['Fighter', 'Slasher', 'Free Spirit', 'Powerhouse', 'Shooter', 'Striker', 'Cerebral', 'Ambition'];
+        var classArray = ['Fighter', 'Slasher', 'FreeSpirit', 'Powerhouse', 'Shooter', 'Striker', 'Cerebral', 'Driven'];
         for (var i = 0, j = classArray.length; i < j; i++) {
             classes[classArray[i]] = 0;
         }
         for(var z=0;z<team.length;z++){
             if(team[z].unit){
                 if(team[z].unit.class.length==2){
-                    classes[team[z].unit.class[0]]++;
-                    classes[team[z].unit.class[1]]++;
+                    if(team[z].unit.class[0] == 'Free Spirit'){
+                        classes['FreeSpirit']++;
+                    }
+                    else{
+                        classes[team[z].unit.class[0]]++;
+                    }
+                    if(team[z].unit.class[1] == 'Free Spirit'){
+                        classes['FreeSpirit']++;
+                    }
+                    else{
+                        classes[team[z].unit.class[1]]++;
+                    }
                 }else{
-                    classes[team[z].unit.class]++;
+                    if(team[z].unit.class == 'Free Spirit'){
+                        classes['FreeSpirit']++;
+                    }
+                    else{
+                        classes[team[z].unit.class]++;
+                    }
                 }
             }
         }

@@ -2035,6 +2035,10 @@ window.evolutions = {
         evolution: 1332,
         evolvers: [ 116, 117, 81, 92, 103 ]
     },
+    1335: {
+        evolution: 1336,
+        evolvers: [ 117, 88, 94, 99, 104 ]
+    },
     1337: {
         evolution: 1338,
         evolvers: [ 118, 98, 98, 303, 267 ]
@@ -2107,6 +2111,10 @@ window.evolutions = {
         evolution: 1386,
         evolvers: [ 116, 117, 81, 98 ]
     },
+    4: {
+        evolution: 1387,
+        evolvers: [  ]
+    },
     8: {
         evolution: 1388,
         evolvers: [  ]
@@ -2117,6 +2125,98 @@ window.evolutions = {
     },
     1390: {
         evolution: 1391,
+        evolvers: [ 118, 88, 99, 304, 267 ]
+    },
+    1394: {
+        evolution: 1395,
+        evolvers: [ 117, 118, 84, 85 ]
+    },
+    1396: {
+        evolution: 1397,
+        evolvers: [ 117, 80, 91, 97, 102 ]
+    },
+    1398: {
+        evolution: 1399,
+        evolvers: [ 117, 79, 90, 96, 101 ]
+    },
+    1400: {
+        evolution: 1401,
         evolvers: [  ]
+    },
+    1403: {
+        evolution: 1404,
+        evolvers: [ 118, 85, 266, 301, 267 ]
+    },
+    1405: {
+        evolution: 1406,
+        evolvers: [ 1180, 87, 98, 303, 103 ]
+    },
+    1407: {
+        evolution: 1408,
+        evolvers: [ 1180, 117, 94, 302, 303 ]
+    },
+    1409: {
+        evolution: 1410,
+        evolvers: [ 1180, 83, 88, 304, 104 ]
+    },
+    1411: {
+        evolution: 1412,
+        evolvers: [ 1180, 118, 89, 95, 100 ]
+    },
+    261: {
+        evolution: 1413,
+        evolvers: [  ]
+    },
+    1415: {
+        evolution: 1416,
+        evolvers: [ 116, 117, 92, 98, 103 ]
+    },
+    1419: {
+        evolution: 1420,
+        evolvers: [ 84, 88, 300, 304, 104 ]
+    },
+    1421: {
+        evolution: 1422,
+        evolvers: [ 118, 94, 99, 304, 267 ]
+    },
+    1425: {
+        evolution: 1426,
+        evolvers: [ 117, 79, 85, 96, 101 ]
+    },
+    1429: {
+        evolution: 1430,
+        evolvers: [ 117, 83, 86, 91, 97 ]
+    },
+    416: {
+        evolution: 1445,
+        evolvers: [  ]
+    },
+    1431: {
+        evolution: 1432,
+        evolvers: [ 118, 266, 300, 301, 302 ]
+    },
+    1433: {
+        evolution: 1434,
+        evolvers: [ 118, 266, 267, 99, 304 ]
+    },
+    1435: {
+        evolution: 1436,
+        evolvers: [ 118, 96, 1180, 101, 301 ]
+    },
+    1437: {
+        evolution: 1438,
+        evolvers: [ 87, 1180, 94, 103, 303 ]
+    },
+    1439: {
+        evolution: 1440,
+        evolvers: [ 118, 83, 86, 102, 302 ]
+    },
+    1441: {
+        evolution: 1442,
+        evolvers: [ 266, 93, 104, 104, 304 ]
+    },
+    1443: {
+        evolution: 1444,
+        evolvers: [ 95, 95, 1180, 300, 300 ]
     },
 };

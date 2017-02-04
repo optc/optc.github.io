@@ -153,6 +153,15 @@ app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, 
                     });
                 }
             }
+            if (family == "Demalo Black"){
+                if (!$scope.families.filter(function(e) { return e.uid == 985; }).length>0){
+                    $scope.families.push({
+                        uid: 985,
+                        name: units[985].name,
+                        location:  {data: ["Ultimate"], name: "Clash!? Impostor Straw Hat Pirates", thumb:989}
+                    });
+                }
+            }
         });
     }
 
