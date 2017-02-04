@@ -1548,6 +1548,12 @@ window.specials = {
             });
         }
     },
+    1221: {
+        orb: function(p) { return p.unit.type == "QCK" ? (p.orb == 0.5 ? CrunchUtils.getOrbMultiplier(p.orb, 1, 0.25) : p.orb) : (p.orb == 'str' ? CrunchUtils.getOrbMultiplier(p.orb, 1, 2) : p.orb); }
+    },
+    1222: {
+        orb: function(p) { return p.unit.type == "QCK" ? (p.orb == 0.5 ? CrunchUtils.getOrbMultiplier(p.orb, 1, 0.25) : p.orb) : (p.orb == 'str' ? CrunchUtils.getOrbMultiplier(p.orb, 1, 2) : p.orb); }
+    },
     1227: {
         atk: function(p) { return p.slot == p.sourceSlot ? 1.75 : 1; },
         type: "type"
