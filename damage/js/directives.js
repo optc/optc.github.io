@@ -593,7 +593,6 @@ directives.unitOrb = function($rootScope) {
                 if (unit.unit === null || /unitLevel/.test(e.target.className) || e.altKey || e.shiftKey) return;
                 if (e.which == 2 || (e.which == 1 && (e.ctrlKey || e.metaKey || Utils.isClickOnOrb(e,e.target.parentNode)))) {
 			var n = ORBS.indexOf(tunit.orb);
-			$rootScope.notify({ text: unit.unit.type});
 			if(unit.unit.type == "STR" || unit.unit.type == "DEX")
 				tunit.orb = ORBS[(n + 1) % ($rootScope.areGOrbsEnabled() || $rootScope.areSTROrbsEnabled() ? ORBS.length - 1 : ORBS.length - 2)];
 			else
@@ -606,14 +605,17 @@ directives.unitOrb = function($rootScope) {
                 }
             };
             var onLongPress = function(e) {
-                var unit = scope.data.team[scope.slot], tunit = scope.tdata.team[scope.slot];
-                var n = ORBS.indexOf(tunit.orb);
-                tunit.orb = ORBS[(n + 1) % ($rootScope.areGOrbsEnabled() || $rootScope.areSTROrbsEnabled() ? ORBS.length : ORBS.length - 1)];
-                scope.glow();
-                scope.$apply();
-                e.preventDefault();
-                e.stopPropagation();
-                return false;
+							var unit = scope.data.team[scope.slot], tunit = scope.tdata.team[scope.slot];
+							var n = ORBS.indexOf(tunit.orb);
+							if(unit.unit.type == "STR" || unit.unit.type == "DEX")
+								tunit.orb = ORBS[(n + 1) % ($rootScope.areGOrbsEnabled() || $rootScope.areSTROrbsEnabled() ? ORBS.length - 1 : ORBS.length - 2)];
+							else
+								tunit.orb = ORBS[(n + ((!$rootScope.areGOrbsEnabled() && $rootScope.areSTROrbsEnabled() && n == ORBS.length - 3) ? 2 : 1)) % ($rootScope.areGOrbsEnabled() ? ($rootScope.areSTROrbsEnabled() ? ORBS.length : ORBS.length - 1) : ($rootScope.areSTROrbsEnabled() ? ORBS.length : ORBS.length - 2))];
+							scope.glow();
+							scope.$apply();
+							e.preventDefault();
+							e.stopPropagation();
+							return false;
             };
             element.parent().longpress(onLongPress,onShortPress);
         },
