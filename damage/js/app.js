@@ -81,7 +81,7 @@ var SharedRootCtrl = function($scope, $rootScope, $timeout) {
         // reset slot
         if (!onlyTransitional)
             $scope.data.team[n] = { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 } };
-        $scope.tdata.team[n] = { orb: 1, g: false, special: false, lock: 0, silence: 0, removed: 0 };
+        $scope.tdata.team[n] = { orb: 1, g: false, str: false, special: false, lock: 0, silence: 0, removed: 0 };
     };
 
     // to be invoked every time a new unit is set in a slot so the insertion events can be triggered
@@ -130,7 +130,7 @@ var SharedRootCtrl = function($scope, $rootScope, $timeout) {
         }
     };
 
-    // reset g slots automatically
+    // reset STR slots automatically
     $scope.$watch('options.strOrbsEnabled',function() {
         if (!$rootScope.areSTROrbsEnabled())
             resetSTROrbs();
