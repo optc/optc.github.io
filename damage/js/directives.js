@@ -572,7 +572,7 @@ directives.levelSlider = function($timeout) {
 };
 
 directives.unitOrb = function($rootScope) {
-    var ORBS = [ 0.5, 1, 2, 'g' ];
+    var ORBS = [ 0.5, 1, 2, 'g', 'str' ];
     return {
         restrict: 'E',
         replace: true,
