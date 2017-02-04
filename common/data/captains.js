@@ -3541,13 +3541,10 @@ window.captains = {
         hp: function(p) { return p.unit.class.has("Powerhouse") ? 1.75 : 1; },
     },
     1313: {
-        //Akainu NEEDS TO BE CHANGED
-        //[This works for STR and DEX units, just need a custom orb for QCK, INT, PSY units. Orb matchers like Oars and Onigumo are still a pain] atk: function(p) { return p.unit.type == "STR" ? (p.orb == 2.0 ? 3.9375 : 2.25) : p.unit.type == "DEX" ? (p.orb == 0.5 ? 3.9375 : 2.25) : 2.25; },
-        atk: function(p) { return p.unit.type == "STR" ? (p.orb == 2.0 ? 3.9375 : 2.25) : 2.25; },
+        atk: function(p) { return p.unit.type == "STR" ? (p.orb == 2.0 ? 3.9375 : 2.25) : p.unit.type == "DEX" ? (p.orb == 0.5 ? 3.9375 : 2.25) : p.orb == 'str' ? 3.9375 : 2.25; },
     },
     1314: {
-        //Akainu NEEDS TO BE CHANGED
-        atk: function(p) { return p.unit.type == "STR" ? (p.orb == 2.0 ? 3.9375 : 2.25) : 2.25; },
+        atk: function(p) { return p.unit.type == "STR" ? (p.orb == 2.0 ? 3.9375 : 2.25) : p.unit.type == "DEX" ? (p.orb == 0.5 ? 3.9375 : 2.25) : p.orb == 'str' ? 3.9375 : 2.25; },
     },
     1315: {
         hitAtk: function(p) {
