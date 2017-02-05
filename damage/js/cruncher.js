@@ -603,7 +603,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
      * The function should return true if there's a conflict between specials
      */
     var computeSpecialsCombinations = function() {
-        var result = { type: [ ], class: [ ], orb: [ ], affinity: [ ], condition: [ ] };
+        var result = { type: [ ], class: [ ], orb: [ ], affinity: [ ], condition: [ ]};
         chainSpecials = [ ];
         chainAddition = [ ];
         affinityMultiplier = [ ];
@@ -682,6 +682,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         if ($scope.data.effect) {
             var data = effects[$scope.data.effect];
             if (data.orb) enabledSpecials.push({ orb: data.orb, permanent: true, sourceSlot: -1 });
+            if (data.orb) enabledSpecials.push({ orb: data.orb, permanent: true, sourceSlot: -1 });
             if (data.chainModifier) mapEffect.chainModifier = data.chainModifier;
             if (data.chainLimiter) mapEffect.chainLimiter = data.chainLimiter;
             if (data.comboShield) mapEffect.comboShield = data.comboShield;
@@ -705,7 +706,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if (!team[n].unit || n > 5) return;
             var id = team[n].unit.number + 1;
             if (x.special && specials.hasOwnProperty(id)) {
-                if (specials[id].hasOwnProperty('orb') && enabledSpecials[0] && enabledSpecials[0].permanent)
+                if (specials[id].hasOwnProperty('orb') && !specials[id].hasOwnProperty('type') && enabledSpecials[0] && enabledSpecials[0].permanent)
                     conflictWarning = true;
                 else
                     enabledSpecials.push(jQuery.extend({ sourceSlot: n },specials[id]));
