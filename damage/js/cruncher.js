@@ -174,7 +174,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         team.forEach(function(x,n) {
             if (n > 5 || x.unit === null || $scope.tdata.team[n].lock > 0) return;
             var orb = $scope.tdata.team[n].orb;
-            var type = $scope.tdata.team[n].type;
+            var type = $scope.tdata.team[n].unit.type;
             var atk = getStatOfUnit(x,'atk'); // basic attack (scales with level);
             var ship = getShipBonus('atk',false,x.unit,n), againstType = type;
             var multipliers = [ ];
