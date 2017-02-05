@@ -131,7 +131,9 @@ window.events = {
     },
     1313: {
         onInsertion: function($scope) {
-            if (++$scope.options.strOrbsEnabled == 1)
+            if(window.specials[1221].turnedOn || window.specials[1222].turnedOn)
+                $scope.notify({ text: 'While a beneficial orbs special is active, [STR] orbs will have no effect. Please use matching orbs as [STR] orbs' });
+            else if (++$scope.options.strOrbsEnabled == 1)
                 $scope.notify({ text: 'Enabling [STR] orbs support.' });
         },
         onRemoval: function($scope) {
@@ -140,8 +142,9 @@ window.events = {
         }
     },
     1314: {
-        onInsertion: function($scope) {
-            if (++$scope.options.strOrbsEnabled == 1)
+            if(window.specials[1221].turnedOn || window.specials[1222].turnedOn)
+                $scope.notify({ text: 'While a beneficial orbs special is active, [STR] orbs will have no effect. Please use matching orbs as [STR] orbs' });
+            else if (++$scope.options.strOrbsEnabled == 1)
                 $scope.notify({ text: 'Enabling [STR] orbs support.' });
         },
         onRemoval: function($scope) {
