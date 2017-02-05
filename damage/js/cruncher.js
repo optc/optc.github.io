@@ -180,7 +180,6 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if (orb == 'g') orb = 1.5;
             if (orb == 0.5 && x.unit.type == 'DEX' && (window.specials[1221].turnedOn || window.specials[1222].turnedOn)) orb = 2;
             if (orb == 'str') orb = (window.specials[1221].turnedOn || window.specials[1222].turnedOn) ? 2 : 1;
-            $scope.notify({ type: 'error', text: orb });
             atk += getShipBonus('atk',true,x.unit,n);
             multipliers.push([ orb, 'orb' ]); // orb multiplier (fixed)
             multipliers.push([ getTypeMultiplierOfUnit(x.unit.type,type, x), 'type' ]); // type multiplier
