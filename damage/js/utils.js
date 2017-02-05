@@ -97,10 +97,16 @@ window.CrunchUtils.classSort = function(array, classMultiplier, classes) {
 };*/
 
 window.CrunchUtils.getOrbMultiplier = function(orb, baseMultiplier, boostedMultiplier) {
-    if (orb == 1.0 || orb == 'str') return baseMultiplier;
-    if (orb == 2.0 || orb == 'g') return boostedMultiplier;
+  if(window.specials[1221].turnedOn || window.specials[1222].turnedOn){
+    if (orb == 'str') return boostedMultiplier;
+    if (orb == 0.5) return boostedMultiplier;
+  }else{
+    if (orb == 'str') return baseMultiplier;
     if (orb == 0.5) return 1 / boostedMultiplier;
-    return 1;
+  }
+  if (orb == 1.0) return baseMultiplier;
+  if (orb == 2.0 || orb == 'g') return boostedMultiplier;
+  return 1;
 };
 
 })();
