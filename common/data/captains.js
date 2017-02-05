@@ -3542,13 +3542,13 @@ window.captains = {
     },
     1313: {
         atk: function(p) {
-            return (window.specials[1221].turnedOn || window.specials[1222].turnedOn || p.unit.type == "STR") ? (p.orb == 2.0 ? 3.9375 : 2.25) : (p.unit.type == "DEX" ? (p.orb == 0.5 ? 3.9375 : 2.25) : (p.orb == 1.5 ? 3.9375 : 2.25));
+            return (window.specials[1221].turnedOn || window.specials[1222].turnedOn || p.unit.type == "STR") ? (p.orb == 2.0 ? 3.9375 : 2.25) : (p.unit.type == "DEX" ? (p.orb == 0.5 ? 3.9375 : 2.25) : (p.orb == 'str' ? 3.9375 : 2.25));
             $scope.notify({ text: p.orb });
         },
     },
     1314: {
         atk: function(p) {
-            return (window.specials[1221].turnedOn || window.specials[1222].turnedOn || p.unit.type == "STR") ? (p.orb == 2.0 ? 3.9375 : 2.25) : (p.unit.type == "DEX" ? (p.orb == 0.5 ? 3.9375 : 2.25) : (p.orb == 1.5 ? 3.9375 : 2.25));
+            return (window.specials[1221].turnedOn || window.specials[1222].turnedOn || p.unit.type == "STR") ? (p.orb == 2.0 ? 3.9375 : 2.25) : (p.unit.type == "DEX" ? (p.orb == 0.5 ? 3.9375 : 2.25) : (p.orb == 'str' ? 3.9375 : 2.25));
         },
     },
     1315: {
