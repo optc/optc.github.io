@@ -1549,8 +1549,13 @@ window.specials = {
         }
     },
     1221: {
-        orb: function(p) { return ((p.unit.type == "DEX" && p.orb == 0.5) ? CrunchUtils.getOrbMultiplier(p.orb, 1, 0.25) : ((p.unit.type != "STR" && p.orb == 'str') ? CrunchUtils.getOrbMultiplier(p.orb, 1, 2) : p.orb)); },
-        type: "beneficial"
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[1221].turnedOn = true;
+        },
+        onDeactivation: function(p) {
+            window.specials[1221].turnedOn = false;
+        }
     },
     1222: {
         orb: function(p) { return ((p.unit.type == "DEX" && p.orb == 0.5) ? CrunchUtils.getOrbMultiplier(p.orb, 1, 0.25) : ((p.unit.type != "STR" && p.orb == 'str') ? CrunchUtils.getOrbMultiplier(p.orb, 1, 2) : p.orb)); },
