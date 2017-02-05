@@ -3541,10 +3541,20 @@ window.captains = {
         hp: function(p) { return p.unit.class.has("Powerhouse") ? 1.75 : 1; },
     },
     1313: {
-        atk: function(p) { return p.unit.type == "STR" ? (p.orb == 2.0 ? 3.9375 : 2.25) : p.unit.type == "DEX" ? (p.orb == 0.5 ? 3.9375 : 2.25) : p.orb == 'str' ? 3.9375 : 2.25; },
+        atk: function(p) { 
+          if(window.specials[1221].turnedOn || window.specials[1222].turnedOn)
+            return p.orb == 2.0 ? 3.9375 : 2.25;
+          else
+            return p.unit.type == "STR" ? (p.orb == 2.0 ? 3.9375 : 2.25) : (p.unit.type == "DEX" ? (p.orb == 0.5 ? 3.9375 : 2.25) : (p.orb == 'str' ? 3.9375 : 2.25));
+        },
     },
     1314: {
-        atk: function(p) { return p.unit.type == "STR" ? (p.orb == 2.0 ? 3.9375 : 2.25) : p.unit.type == "DEX" ? (p.orb == 0.5 ? 3.9375 : 2.25) : p.orb == 'str' ? 3.9375 : 2.25; },
+        atk: function(p) { 
+          if(window.specials[1221].turnedOn || window.specials[1222].turnedOn)
+            return p.orb == 2.0 ? 3.9375 : 2.25;
+          else
+            return p.unit.type == "STR" ? (p.orb == 2.0 ? 3.9375 : 2.25) : (p.unit.type == "DEX" ? (p.orb == 0.5 ? 3.9375 : 2.25) : (p.orb == 'str' ? 3.9375 : 2.25));
+        },
     },
     1315: {
         hitAtk: function(p) {
