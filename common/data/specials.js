@@ -1552,11 +1552,6 @@ window.specials = {
         turnedOn: false,
         onActivation: function(p) {
             window.specials[1221].turnedOn = true;
-            if($scope.options.gOrbsEnabled > 1)
-                p.scope.notify({
-                    text: 'While this special is active, [STR] orbs will have no effect. Please use matching orbs as [STR] orbs',
-                    name: '1221warning'
-                });
         },
         onDeactivation: function(p) {
             window.specials[1221].turnedOn = false;
@@ -1566,11 +1561,6 @@ window.specials = {
         turnedOn: false,
         onActivation: function(p) {
             window.specials[1222].turnedOn = true;
-            if($scope.options.gOrbsEnabled > 1)
-                p.scope.notify({
-                    text: 'While this special is active, [STR] orbs will have no effect. Please use matching orbs as [STR] orbs',
-                    name: '1222warning'
-                });
         },
         onDeactivation: function(p) {
             window.specials[1222].turnedOn = false;
