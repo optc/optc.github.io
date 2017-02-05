@@ -142,6 +142,7 @@ window.events = {
         }
     },
     1314: {
+        onInsertion: function($scope) {
             if(window.specials[1221].turnedOn || window.specials[1222].turnedOn)
                 $scope.notify({ text: 'While a beneficial orbs special is active, [STR] orbs will have no effect. Please use matching orbs as [STR] orbs' });
             else if (++$scope.options.strOrbsEnabled == 1)
