@@ -179,7 +179,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             var multipliers = [ ];
             if (orb == 'g') orb = 1.5;
             if (orb == 0.5 && x.unit.type == 'DEX' && (window.specials[1221].turnedOn || window.specials[1222].turnedOn)) orb = 2;
-            if (orb == 'str') orb = (window.specials[1221].turnedOn || window.specials[1222].turnedOn) ? 2.0 : 0.99;
+            if (orb == 'str') orb = (window.specials[1221].turnedOn || window.specials[1222].turnedOn) ? 2 : 1;
             $scope.notify({ type: 'error', text: orb });
             $scope.notify({ type: 'error', text: x.unit.type });
             atk += getShipBonus('atk',true,x.unit,n);
