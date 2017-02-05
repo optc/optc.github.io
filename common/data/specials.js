@@ -1552,14 +1552,29 @@ window.specials = {
         turnedOn: false,
         onActivation: function(p) {
             window.specials[1221].turnedOn = true;
+            if($scope.options.gOrbsEnabled > 1)
+                p.scope.notify({
+                    text: 'While this special is active, [STR] orbs will have no effect. Please use matching orbs as [STR] orbs',
+                    name: '1221warning'
+                });
         },
         onDeactivation: function(p) {
             window.specials[1221].turnedOn = false;
         }
     },
     1222: {
-        orb: function(p) { return ((p.unit.type == "DEX" && p.orb == 0.5) ? CrunchUtils.getOrbMultiplier(p.orb, 1, 0.25) : ((p.unit.type != "STR" && p.orb == 'str') ? CrunchUtils.getOrbMultiplier(p.orb, 1, 2) : p.orb)); },
-        type: "beneficial"
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[1221].turnedOn = true;
+            if($scope.options.gOrbsEnabled > 1)
+                p.scope.notify({
+                    text: 'While this special is active, [STR] orbs will have no effect. Please use matching orbs as [STR] orbs',
+                    name: '1221warning'
+                });
+        },
+        onDeactivation: function(p) {
+            window.specials[1221].turnedOn = false;
+        }
     },
     1227: {
         atk: function(p) { return p.slot == p.sourceSlot ? 1.75 : 1; },
