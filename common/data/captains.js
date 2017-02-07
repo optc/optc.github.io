@@ -4022,7 +4022,7 @@ window.captains = {
         atk: function(p) { 
             return p.unit.class.has("Slasher") ? 2.5 : 1; },
         hp: function(p) { 
-            return p.unit.class.has("Powerhouse") ? 1.5 : 1; },
+            return p.unit.class.has("Powerhouse") ? 1.25 : 1; },
     },
     1437: {
         atk: function(p) {
@@ -4083,5 +4083,11 @@ window.captains = {
     },
     1447: {
         atk: function(p) { return p.unit.class.has("Powerhouse") ? 2.5 : 1; },
+    },
+    1450: {
+        atk: function(p) { return p.unit.class.has("Cerebral") ? 1.75 : 1; },
+    },
+    1452: {
+        atk: function(p) { return p.unit.type != "DEX" ? 1 : (p.orb == 2.0 ? 2.5 : 2); }
     },
 };

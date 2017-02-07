@@ -1421,7 +1421,7 @@ window.units = [
     [ "Rob Lucci, Home of Happi", "INT", [ "Fighter", "Powerhouse" ], 5, 20, 5, 3, 99, 3000000, 1129, 499, 42, 2299, 1333, 152, 1 ],
     [ "Diamante, Ripple-Ripple Man", "INT", [ "Driven", "Striker" ], 4, 25, 5, 2, 70, 1066998, 505, 388, 12, 1202, 770, 91, 1 ],
     [ "Diamante, Donquiote Family Executive", "INT", [ "Driven", "Slasher" ], 5, 40, 4, 3, 99, 4000000, 1131, 711, 47, 2400, 1457, 168, 1 ],
-    [ "T-Bone, Navy HP Colonel", "QCK", [ "Cerebral", "Slasher" ], 4, 26, 4, 3, 99, 3000000, 99, 98, 50, 1752, 1199, 300, 1 ],
+    [ "T-Bone, Navy HQ Colonel", "QCK", [ "Cerebral", "Slasher" ], 4, 26, 4, 3, 99, 3000000, 99, 98, 50, 1752, 1199, 300, 1 ],
     [ "Gin, Krieg Pirates Combat Commander", "DEX", "Striker", 4, 20, 4, 2, 70, 1778330, 110, 69, 32, 1228, 801, 191, 1 ],
     [ "Don Sai, Happo Navy", "QCK", [ "Fighter", "Striker" ], 3, 13, 5, 1, 50, 392109, 105, 59, 19, 1205, 620, 106, 1],
     [ "Don Sai, Happo Navy's 13th Leader", "QCK", [ "Fighter", "Striker" ], 4, 20, 4, 3, 99, 3000000, 1123, 527, 57, 2192, 1301, 181, 1],
@@ -1447,6 +1447,19 @@ window.units = [
     [ "Sogeking 5+", "PSY", [ "Shooter" ], 5, 30, 4, 3, 99, 3000000, 770, 292, 189, null, null, null, null ],
     [ "Sanji  5+", "QCK", [ "Fighter", "Powerhouse" ], 5, 30, 4, 3, 99, 3000000, 550, 515, 175, 2709, 1337, 251, null ],
     [ "Chopper 5+", "PSY", [ "Fighter", "Free Spirit" ], 5, 30, 4, 2, 50, 392109, 699, 490, 90, 2336, 1236, 346, null ],
+    [ "Violet", "DEX", [ "Fighter", "Cerebral" ], 3, 13, 6, 2, 50, 392109, 88, 43, 89, null, null, null, null ],
+    [ "Violet, Evolved", "DEX", [ "Fighter", "Cerebral" ], 4, 20, 6, 3, 99, 3000000, 643, 349, 184, null, null, null, null ],
+    [ "Sanji Disguise", "DEX", [ "Fighter", "Powerhouse" ], 3, 13, 4, 2, 50, 392109, 103, 56, 23, 1023, 567, 103, null ],
+    [ "Sanji Disguise, Evolved", "DEX", [ "Fighter", "Powerhouse" ], 4, 20, 4, 3, 99, 3000000, 923, 543, 92, null, null, null, null ],
+    [ "Valentines Marguerite", "STR", [ "Shooter", "Free Spirit" ], 4, 13, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Valentines Marguerite, Evolved", "STR", [ "Shooter", "Free Spirit" ], 5, 20, 5, 4, 99, 3000000, null, null, null, 1755, 1081, 348, null ],
+    [ "Coliseum Chinjao", "PSY", [ "Striker", "Powerhouse" ], 4, 25, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Coliseum Chinjao, Evolved", "PSY", [ "Fighter", "Powerhouse" ], 5, 40, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Coliseum Kuro", "INT", [ "Slasher", "Cerebral" ], 4, 16, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Coliseum Kuro, Evolved", "INT", [ "Slasher", "Cerebral" ], 6, 26, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Coliseum Miss Valentine", "STR", [ "Fighter", "Free Spirit" ], 3, 10, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Coliseum Miss Valentine, Evolved", "STR", [ "Fighter", "Free Spirit" ], 4, 20, null, null, null, null, null, null, null, null, null, null, null ],
+    
     ];
     
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],

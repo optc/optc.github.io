@@ -6894,14 +6894,14 @@ window.details = {
         captain: "Boosts ATK of [STR] and [PSY] characters by 2x",
         special: "Deals 30x character's ATK in [STR] damage to all enemies that will ignore damage negating abilities and barriers. Delays all enemies for 1 turn. Reduces the defense of all enemies by 80% for 1 turn.",
         specialNotes: "Damage that ignores damage negating abilities and barriers is similar to 6* Blackbeard's special when he is captain",
-        sailor: "Boosts ATK of all characters by 75",
+        sailor: "Boosts HP of all characters by 75",
         specialName: "Super Large Iron Ball",
     },
     1318: {//Garp
         captain: "Boosts ATK of [STR] and [PSY] characters by 2.5x",
         special: "Deals 30x character's ATK in [STR] damage to all enemies that will ignore damage negating abilities and barriers. Delays all enemies for 1 turn. Reduces the defense of all enemies by 80% for 1 turn.",
         specialNotes: "Damage that ignores damage negating abilities and barriers is similar to 6* Blackbeard's special when he is captain",
-        sailor: "Boosts ATK of all characters by 75",
+        sailor: "Boosts HP of all characters by 75",
         specialName: "Super Large Iron Ball",
     },
     1319: {//Lady Tsuru
@@ -7722,11 +7722,11 @@ window.details = {
         captainNotes: "Hody's HP boost is dependent on how many Powerhouse characters are in your crew, however, we do not have any numbers for this yet, so he will only boost HP if there are 6 powerhouse units FOR NOW.",
         special: [
             {
-                "description": "Deals 60x character's ATK in [INT] damage to all enemies, reduces Special Cooldown of Powerhouse characters by 1 turn, reduces damage received by 60% for 1 turn",
+                "description": "Deals 10x character's ATK in [INT] damage to one enemy, reduces Special Cooldown of Powerhouse characters by 1 turn, reduces damage received by 60% for 1 turn",
                 "cooldown": [ 12, 7 ],
             },
             {
-                "description": "Deals ???x character's ATK in [INT] damage to all enemies, reduces Special Cooldown of Powerhouse characters by 2 turns, reduces damage received by 90% for 1 turn",
+                "description": "Deals 60x character's ATK in [INT] damage to one enemy, reduces Special Cooldown of Powerhouse characters by 2 turns, reduces damage received by 90% for 1 turn",
                 "cooldown": [ 22, 17 ],
             },
         ],
@@ -7737,11 +7737,11 @@ window.details = {
         captainNotes: "Hody's HP boost is dependent on how many Powerhouse characters are in your crew, however, we do not have any numbers for this yet, so he will only boost HP if there are 6 powerhouse units FOR NOW.",
         special: [
             {
-                "description": "Deals 60x character's ATK in [INT] damage to all enemies, reduces Special Cooldown of Powerhouse characters by 1 turn, reduces damage received by 60% for 1 turn",
+                "description": "Deals 10x character's ATK in [INT] damage to one enemy, reduces Special Cooldown of Powerhouse characters by 1 turn, reduces damage received by 60% for 1 turn",
                 "cooldown": [ 12, 7 ],
             },
             {
-                "description": "Deals ???x character's ATK in [INT] damage to all enemies, reduces Special Cooldown of Powerhouse characters by 2 turns, reduces damage received by 90% for 1 turn",
+                "description": "Deals 60x character's ATK in [INT] damage to one enemy, reduces Special Cooldown of Powerhouse characters by 2 turns, reduces damage received by 90% for 1 turn",
                 "cooldown": [ 22, 17 ],
             },
         ],
@@ -7755,7 +7755,7 @@ window.details = {
         sailor: "Boost ATK of all characters by 150 if there are 6 Powerhouse characters in your crew",
     },
     1436: {//Hyouzou
-        captain: "Boosts ATK of Slashers by 2.5x and HP of Powerhouse characters by 1.5x",
+        captain: "Boosts ATK of Slashers by 2.5x and HP of Powerhouse characters by 1.25x",
         special: "Makes Perfects harder to hit for 1 turn, changes [STR], [QCK], [DEX], [PSY] and [INT] orbs into Matching orbs for Powerhouse characters, delays all enemies for 1 turn, recovers 20% of crew's MAX HP.",
         specialName: "Staggering Slash",
         specialNotes: "Decreases timing window to hit a Perfect. (Animation remains the same)",
@@ -7803,18 +7803,18 @@ window.details = {
         captain: "Boosts ATK of Powerhouse characters by 2.75x following a chain of Good > Great > Perfect hits",
         special: "Changes [RCV], [TND], [EMPTY], [BLOCK] and [BOMB] orbs into [STR], [QCK], [DEX], [PSY] or [INT] orbs, boosts ATK of Powerhouse characters by 1.5x and amplifies the effect of orbs by 1.5x for 1 turn",
         specialName: "Papara Hammer",
-        sailor: "Boost ATK of all characters by 150 and HP of all characters by 50 if there are 6 Powerhouse characters in your crew",
+        sailor: "Boost HP of all characters by 150 and also ATK of all characters by 50 if there are 6 Powerhouse characters in your crew",
     },
     1444: {//Dosun
         captain: "Boosts ATK of Powerhouse characters by 3.25x following a chain of Good > Great > Perfect hits",
         special: "Changes [RCV], [TND], [EMPTY], [BLOCK] and [BOMB] orbs into [STR], [QCK], [DEX], [PSY] or [INT] orbs, boosts ATK of Powerhouse characters by 1.5x and amplifies the effect of orbs by 1.5x for 1 turn",
         specialName: "Papara Hammer",
-        sailor: "Boost ATK of all characters by 150 and HP of all characters by 50 if there are 6 Powerhouse characters in your crew",
+        sailor: "Boost HP of all characters by 150 and also ATK of all characters by 50 if there are 6 Powerhouse characters in your crew",
     },
     1445: {//Boa Hancock+
         captain: "Boosts ATK of [QCK] and [PSY] characters proportionally to the crew's current HP. If HP is below 50%, Boosts RCV of [QCK] and [PSY] units by 1.5x.",
         special: "Boosts ATK and RCV of [QCK] and [PSY] characters by 1.75x for 1 turn, and delays all enemies for 1 turn. Changes your Captain orb to [RCV]. If HP is above 50%, changes left column into Matching orbs.",
-        specialName: "Aromatic Foot",
+        specialName: "Perfume Femur",
         captainNotes: "#{captainProportional : higher : 2.25 + 0.5 * (remaining HP) / (total HP) : 2.75 : 2.25}"
     },
     1446: {//Sogeking 5+
@@ -7841,5 +7841,37 @@ window.details = {
         special: "Deals PSY damage according to HP. Changes [Block] orbs on Fighter characters into matching.",
         specialNotes: "The exact damage is proportional to the crew's remaining HP and is higher the higher the HP is. The formula used is ???? * (current HP) / (total HP)",
         specialName: "Weight Gain: Heavy Gong",
+    },
+    1449: {//Violet
+        captain: "Not Translated",
+        special: "Reduces the defense of all enemies by 50% for 1 turn, and if HP is below 50%, randomly changes all orbs to either [RCV] or [TND] orbs",
+        specialName: "Clairvoyance",
+    },
+    1450: {//Violet
+        captain: "Boosts ATK of Cerebral characters by 1.75x. Heals for .5x character's RCV at the end of the turn each time you hit a Great.",
+        special: "Reduces the defense of all enemies by 50% for 1 turn, and if HP is below 50%, randomly changes all orbs to either [RCV] or [TND] orbs",
+        specialName: "Clairvoyance",
+    },
+    1451: {//Moustache Sanji
+        captain: "Not Translated",
+        special: "Deals 15x character's ATK in DEX damage to one enemy, and boosts chances of getting DEX orbs for 1 turn",
+        specialName: "Diable Jambe: Love Shot",
+    },
+    1452: {//Moustache Sanji
+        captain: "Boosts ATK of [DEX] characters by 2.5x if they have a matching orb, by 2x otherwise. Slightly boosts chances of getting [DEX] orbs",
+        special: "Deals 15x character's ATK in DEX damage to one enemy, and boosts chances of getting DEX orbs for 1 turn",
+        specialName: "Diable Jambe: Love Shot",
+    },
+    1453: {//Valentines Margeurite
+        captain: "Not Translated",
+        special: "Changes Orbs depending on the current HP",
+        specialNotes: "<br> HP>70%: Top row to [QCK], middle row to [STR] <br> HP<30%: Top row to [RCV], middle row to [QCK], bottom row to [STR]",
+        specialName: "",
+    },
+    1454: {//Valentines Margeurite
+        captain: "Not Translated",
+        special: "Changes Orbs depending on the current HP",
+        specialNotes: "<br> HP>70%: Top row to [QCK], middle row to [STR] <br> HP<30%: Top row to [RCV], middle row to [QCK], bottom row to [STR]",
+        specialName: "",
     },
 };
