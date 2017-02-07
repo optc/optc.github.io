@@ -1456,7 +1456,7 @@ window.units = [
     [ "Coliseum Chinjao", "PSY", [ "Striker", "Powerhouse" ], 4, 25, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Coliseum Chinjao, Evolved", "PSY", [ "Fighter", "Powerhouse" ], 5, 40, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Coliseum Kuro", "INT", [ "Slasher", "Cerebral" ], 4, 16, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Coliseum Kuro, Evolved", "INT", [ "Slasher", "Cerebral" ], 6, 26, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Coliseum Kuro, Evolved", "INT", [ "Slasher", "Cerebral" ], 5, 26, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Coliseum Miss Valentine", "STR", [ "Fighter", "Free Spirit" ], 3, 10, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Coliseum Miss Valentine, Evolved", "STR", [ "Fighter", "Free Spirit" ], 4, 20, null, null, null, null, null, null, null, null, null, null, null ],
     
