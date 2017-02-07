@@ -7843,7 +7843,7 @@ window.details = {
         specialName: "Weight Gain: Heavy Gong",
     },
     1449: {//Violet
-        captain: "Not Translated",
+        captain: "Boosts ATK of Cerebral characters by 1.5x. Heals for .3x character's RCV at the end of the turn each time you hit a Great.",
         special: "Reduces the defense of all enemies by 50% for 1 turn, and if HP is below 50%, randomly changes all orbs to either [RCV] or [TND] orbs",
         specialName: "Clairvoyance",
     },
@@ -7853,7 +7853,7 @@ window.details = {
         specialName: "Clairvoyance",
     },
     1451: {//Moustache Sanji
-        captain: "Not Translated",
+        captain: "Boosts ATK of [DEX] characters by 2.25x if they have a matching orb, by 1.5x otherwise. Slightly boosts chances of getting [DEX] orbs",
         special: "Deals 15x character's ATK in DEX damage to one enemy, and boosts chances of getting DEX orbs for 1 turn",
         specialName: "Diable Jambe: Love Shot",
     },
@@ -7866,12 +7866,12 @@ window.details = {
         captain: "Not Translated",
         special: "Changes Orbs depending on the current HP",
         specialNotes: "<br> HP>70%: Top row to [QCK], middle row to [STR] <br> HP<30%: Top row to [RCV], middle row to [QCK], bottom row to [STR]",
-        specialName: "",
+        specialName: "Doki Doki Heart",
     },
     1454: {//Valentines Margeurite
-        captain: "Not Translated",
+        captain: "Boosts ATK of [STR], [DEX] and [QCK] characters by 1.75x an their RCV by 1.5x",
         special: "Changes Orbs depending on the current HP",
         specialNotes: "<br> HP>70%: Top row to [QCK], middle row to [STR] <br> HP<30%: Top row to [RCV], middle row to [QCK], bottom row to [STR]",
-        specialName: "",
+        specialName: "Doki Doki Heart",
     },
 };

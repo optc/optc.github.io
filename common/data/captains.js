@@ -4084,8 +4084,14 @@ window.captains = {
     1447: {
         atk: function(p) { return p.unit.class.has("Powerhouse") ? 2.5 : 1; },
     },
+    1449: {
+        atk: function(p) { return p.unit.class.has("Cerebral") ? 1.5 : 1; },
+    },
     1450: {
         atk: function(p) { return p.unit.class.has("Cerebral") ? 1.75 : 1; },
+    },
+    1451: {
+        atk: function(p) { return p.unit.type != "DEX" ? 1 : (p.orb == 2.0 ? 2.25 : 1.5); }
     },
     1452: {
         atk: function(p) { return p.unit.type != "DEX" ? 1 : (p.orb == 2.0 ? 2.5 : 2); }

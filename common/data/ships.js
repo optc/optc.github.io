@@ -264,9 +264,12 @@ window.ships = [
     { // 21
         name: 'Burning Whitebeard Ship',
         thumb: 'ship_0022_c.png',
-        description: 'Boosts HP by 1.3x',
+        description: 'Boosts ATK by 1.5x and HP by 1.4x. Special: Cuts the current HP of each enemy by 20% (cooldown: 17 turns).',
+        atk: function(p) {
+            return 1.5;
+        },
         hp: function(p) {
-            return 1.3;
+            return 1.4;
         },
     },
     
