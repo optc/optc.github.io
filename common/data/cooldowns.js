@@ -1224,7 +1224,7 @@ window.cooldowns = [
     [ 20, 10 ],
     [ 15, 9 ],
     16,
-    17,
+    [ 17, 10 ],
     [ 23, 16 ],
     22,
     [ 22, 15 ],//Sentomaru
@@ -1315,8 +1315,8 @@ window.cooldowns = [
     [ 25, 18 ],
     null,//Coby
     null,//Coby
-    22,
-    22,
+    [ 22, 17 ],
+    [ 22, 17 ],
     [ 21, 17 ],
     [ 21, 17 ],
     [ 18, 12 ],
@@ -1453,10 +1453,10 @@ window.cooldowns = [
     [ 20, 13 ],
     [ 12, 12 ],
     [ 12, 12 ],
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
+    null,//Colo Don Chinjao
+    null,//Colo Don Chinjao
+    [ 18, 7 ],
+    [ 18, 7 ],
+    [ 22, 11 ],
+    [ 22, 11 ],
 ];

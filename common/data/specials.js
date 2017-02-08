@@ -2126,4 +2126,12 @@ window.specials = {
             });
         }
     },
+    1459: {
+        atk: function(p) { return p.defenseDown ? 1.5 : 1; },
+        type: "condition"
+    },
+    1460: {
+        atk: function(p) { return p.defenseDown ? 1.5 : 1; },
+        type: "condition"
+    },
 };

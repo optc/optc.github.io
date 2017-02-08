@@ -4973,7 +4973,7 @@ window.details = {
         specialName: "Surprise Pincer Attack"
     },
     1033: {
-        captain: "Boosts ATK of Striker and Slasher characters by 2.25x and reduces cooldown of Slasher and Striker characters by 2 turn at the start of the fight",
+        captain: "Boosts ATK of Striker and Slasher characters by 2.25x and reduces cooldown of Slasher and Striker characters by 2 turns at the start of the fight",
         special: "Reduces Special Cooldown of Slasher and Strikers by 1 turn. For Slasher and Strikers, changes Badly Matching orbs into [RCV] orbs.",
         specialName: "Surprise Pincer Attack"
     },
@@ -5591,7 +5591,7 @@ window.details = {
         specialName: "Tactician's Savage Cut"
     },
     1129: {
-        captain: "Reduces cooldown of all specials by 2 turn at the start of the fight, boosts ATK of all characters by 2x",
+        captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of all characters by 2x",
         special: "Reduces Paralysis and Despair duration by 5 turns. Cuts the current HP of one enemy by 10%",
         specialName: "Tactician's Savage Cut"
     },
@@ -7492,7 +7492,7 @@ window.details = {
                 "cooldown": [ 26, 11 ],
             },
             {
-                "description": "Deals large [STR] damage to all enemies, reduces Bind and Despair duration by 2 turn and boosts the Color Affinity of Shooters by 1.75x for 1 turn",
+                "description": "Deals large [STR] damage to all enemies, reduces Bind and Despair duration by 2 turns and boosts the Color Affinity of Shooters by 1.75x for 1 turn",
                 "cooldown": [ 33, 18 ],
             },
         ],
@@ -7508,7 +7508,7 @@ window.details = {
                 "cooldown": [ 26, 11 ],
             },
             {
-                "description": "Deals large [STR] damage to all enemies, reduces Bind and Despair duration by 2 turn and boosts the Color Affinity of Shooters by 1.75x for 1 turn",
+                "description": "Deals large [STR] damage to all enemies, reduces Bind and Despair duration by 2 turns and boosts the Color Affinity of Shooters by 1.75x for 1 turn",
                 "cooldown": [ 33, 18 ],
             },
         ],
@@ -7873,5 +7873,53 @@ window.details = {
         special: "Changes Orbs depending on the current HP",
         specialNotes: "<br> HP>70%: Top row to [QCK], middle row to [STR] <br> HP<30%: Top row to [RCV], middle row to [QCK], bottom row to [STR]",
         specialName: "Doki Doki Heart",
+    },
+    1455: {//Coliseum Don Chinjao
+        captain: "Boosts ATK of Driven characters by ???x until the first hit other than Perfect and recovers ??? HP at end of each turn",
+        special: [
+            {
+                "description": "Cuts the current HP of one enemy by 20%, reduces damage received by 50% for 1 turn",
+                "cooldown": [ 20, 10 ],
+            },
+            {
+                "description": "Cuts the current HP of one enemy by 25%, reduces damage received by 70% for 1 turn",
+                "cooldown": [ 30, 15 ],
+            },
+        ],
+        specialName: "Chinjao Special",
+    },
+    1456: {//Coliseum Don Chinjao
+        captain: "Boosts ATK of Driven characters by 2.75x until the first hit other than Perfect and recovers 120 HP at end of each turn",
+        special: [
+            {
+                "description": "Cuts the current HP of one enemy by 20%, reduces damage received by 50% for 1 turn",
+                "cooldown": [ 20, 10 ],
+            },
+            {
+                "description": "Cuts the current HP of one enemy by 25%, reduces damage received by 70% for 1 turn",
+                "cooldown": [ 30, 15 ],
+            },
+        ],
+        specialName: "Chinjao Special",
+    },
+    1457: {//Coliseum Kuro
+        captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of [QCK] and [INT] characters by 1.75x",
+        special: "Reduces Bind and Despair duration by 2 turns, changes own orb into [INT] and randomizes non-matching orbs for Slasher and Cerebral characters.",
+        specialName: "Kuro Special",
+    },
+    1458: {//Coliseum Kuro
+        captain: "Reduces cooldown of all specials by 2 turn at the start of the fight, boosts ATK of [QCK] and [INT] characters by 2x",
+        special: "Reduces Bind and Despair duration by 2 turns, changes own orb into [INT] and randomizes non-matching orbs for Slasher and Cerebral characters.",
+        specialName: "Kuro Special",
+    },
+    1459: {//Coliseum Miss Valentine
+        captain: "Boosts ATK by 1.75x following a chain of Good > Good > Great > Perfect hits",
+        special: "Binds self for 2 turns, makes [BOMB] orbs \"beneficial\" and boosts ATK against enemies with reduced defense by 1.5x for 1 turn.",
+        specialName: "Miss Valentine Special",
+    },
+    1460: {//Coliseum Miss Valentine
+        captain: "Boosts ATK by 2.14x following a chain of Good > Good > Great > Perfect hits",
+        special: "Binds self for 2 turns, makes [BOMB] orbs \"beneficial\" and boosts ATK against enemies with reduced defense by 1.5x for 1 turn.",
+        specialName: "Miss Valentine Special",
     },
 };
