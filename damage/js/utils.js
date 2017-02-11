@@ -66,7 +66,7 @@ window.CrunchUtils.classSort = function(array, classMultiplier, classes) {
     return result;
 };
     
-/*window.CrunchUtils.typeSort = function(array, typeMultiplier, types) {
+window.CrunchUtils.typeSort = function(array, typeMultiplier, types) {
     var result = [ ];
     function isUnitAMatch(unit) {
         if (unit.type == types) {
@@ -92,9 +92,8 @@ window.CrunchUtils.classSort = function(array, classMultiplier, classes) {
         }
     });
     result.push(beginning.concat(end));
-    // return result
     return result;
-};*/
+};
 
 window.CrunchUtils.getOrbMultiplier = function(orb, baseMultiplier, boostedMultiplier) {
     if (orb == 1.0) return baseMultiplier;
