@@ -1459,4 +1459,7 @@ window.aliases = {
     1458: ['', '', 'Coliseum Kuro'],
     1459: ['', '', 'Coliseum Miss Valentine'],
     1460: ['', '', 'Coliseum Miss Valentine'],
+    1461: ['', '', 'Winter Zoro'],
+    1462: ['', '', 'Valentine Luffy'],
+    1463: ['', '', 'Valentine Luffy'],
 };

@@ -1250,4 +1250,5 @@ window.flags = {
     1445: { rr: 1, rro: 1 },
     1453: { rr: 1, rro: 1, lrr: 1, },
     1454: { rr: 1, rro: 1, lrr: 1, },
+    1461: { special: 1 },
 };

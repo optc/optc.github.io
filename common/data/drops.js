@@ -1539,6 +1539,13 @@ window.drops = {
         },
         
         {
+            name: 'Valentines Day Characters',
+            thumb: 1463,
+            "Luffy": [ 1462, 29, 563, 1059 ],
+            "Chopper": [  ],
+        },
+        
+        {
             name: '2nd Anniversary Celebration! Duel! Ace',
             thumb: 1023,
             "All Difficulties": [ 1023 ]

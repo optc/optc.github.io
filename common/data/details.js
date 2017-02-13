@@ -7875,7 +7875,7 @@ window.details = {
         specialName: "Doki Doki Heart",
     },
     1455: {//Coliseum Don Chinjao
-        captain: "Boosts ATK of Driven characters by ???x until the first hit other than Perfect and recovers ??? HP at end of each turn",
+        captain: "Boosts ATK of Driven characters by 2.5x until the first hit other than Perfect and recovers 120 HP at end of each turn",
         special: [
             {
                 "description": "Cuts the current HP of one enemy by 20%, reduces damage received by 50% for 1 turn",
@@ -7921,5 +7921,17 @@ window.details = {
         captain: "Boosts ATK by 2.14x following a chain of Good > Good > Great > Perfect hits",
         special: "Binds self for 2 turns, makes [BOMB] orbs \"beneficial\" and boosts ATK against enemies with reduced defense by 1.5x for 1 turn.",
         specialName: "Miss Valentine Special",
+    },
+    1462: {//Valentines Day Luffy
+        captain: "Boosts chain multiplier by 2x",
+        special: "Reduces crew's current HP by 50%, cuts the current HP of each enemy by 20%, and makes [PSY] and [STR] orbs \"beneficial\" to Fighter characters",
+        sailor: "Reduces Paralysis for 2 turns for himself",
+        specialName: "Luffy Special",
+    },
+    1463: {//Valentines Day Luffy
+        captain: "Boosts chain multiplier by 2.5x",
+        special: "Reduces crew's current HP by 50%, cuts the current HP of each enemy by 20%, and makes [PSY] and [STR] orbs \"beneficial\" to Fighter characters",
+        sailor: "Reduces Paralysis for 2 turns for himself",
+        specialName: "Luffy Special",
     },
 };

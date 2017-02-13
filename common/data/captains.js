@@ -4096,6 +4096,14 @@ window.captains = {
     1452: {
         atk: function(p) { return p.unit.type != "DEX" ? 1 : (p.orb == 2.0 ? 2.5 : 2); }
     },
+    1455: {
+        damageSorter: function(d) { return CrunchUtils.classSort(d, 2.5, [ "Powerhouse" ]); },
+        hitAtk: function(p) {
+            if (!p.unit.class.has("Powerhouse")) return 1;
+            return p.modifiers.slice(0, p.chainPosition).count("Perfect") == p.chainPosition ? 2.75 : 1;
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
+    },
     1456: {
         damageSorter: function(d) { return CrunchUtils.classSort(d, 2.75, [ "Powerhouse" ]); },
         hitAtk: function(p) {
@@ -4103,6 +4111,12 @@ window.captains = {
             return p.modifiers.slice(0, p.chainPosition).count("Perfect") == p.chainPosition ? 2.75 : 1;
         },
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
+    },
+    1457: {
+        atk: function(p) { return p.unit.type == "INT" || p.unit.type == "QCK" ? 1.75 : 1; },
+    },
+    1458: {
+        atk: function(p) { return p.unit.type == "INT" || p.unit.type == "QCK" ? 2 : 1; },
     },
     1459: {
         hitAtk: function(p) {
@@ -4115,5 +4129,11 @@ window.captains = {
             return p.modifiers.slice(0, p.chainPosition).subcontains(["Good", "Good", "Great", "Perfect"]) ? 2 : 1;
         },
         hitModifiers: ["Good", "Good", "Great", "Perfect", "Perfect", "Perfect"]
+    },
+    1462: {
+        chainModifier: function(p) { return 2; }
+    },
+    1463: {
+        chainModifier: function(p) { return 2.5; }
     },
 };

@@ -315,6 +315,10 @@ window.zombies = {
         type: 'healer',
         amount: 918
     },
+    1455: { // Colo Don Chinjao
+        type: 'healer',
+        amount: 120
+    },
     1456: { // Colo Don Chinjao
         type: 'healer',
         amount: 120

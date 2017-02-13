@@ -1455,10 +1455,13 @@ window.units = [
     [ "Valentines Marguerite, Evolved", "STR", [ "Shooter", "Free Spirit" ], 5, 20, 5, 4, 99, 3000000, null, null, null, 1755, 1081, 348, null ],
     [ "Coliseum Chinjao", "PSY", [ "Striker", "Powerhouse" ], 4, 25, 5, 2, 70, 1066998, 613, 321, 24, null, null, null, null ],
     [ "Coliseum Chinjao, Evolved", "PSY", [ "Fighter", "Powerhouse" ], 5, 40, 7, 3, 99, 4000000, 1177, 576, 77, 2707, 1367, 212, null ],
-    [ "Coliseum Kuro", "INT", [ "Slasher", "Cerebral" ], 3, 16, 6, 2, 50, null, null, null, null, 892, 557, 187, null ],
+    [ "Coliseum Kuro", "INT", [ "Slasher", "Cerebral" ], 3, 16, 6, 2, 50, 392109, null, null, null, 892, 557, 187, null ],
     [ "Coliseum Kuro, Evolved", "INT", [ "Slasher", "Cerebral" ], 4, 26, 10, 3, 99, 3000000, null, null, null, 1664, 1299, 310, null ],
-    [ "Coliseum Miss Valentine", "STR", [ "Fighter", "Free Spirit" ], 3, 10, 5, 2, 35, null, 92, 49, 26, 755, 390, 148, null ],
+    [ "Coliseum Miss Valentine", "STR", [ "Fighter", "Free Spirit" ], 3, 10, 5, 2, 35, 136167, 92, 49, 26, 755, 390, 148, null ],
     [ "Coliseum Miss Valentine, Evolved", "STR", [ "Fighter", "Free Spirit" ], 4, 20, 4, 3, 70, 1778330, 687, 319, 90, null, null, null, null ],
+    [ "Probably Winter Zoro", "QCK", [ "Slasher", "Driven" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Valentines Luffy", "PSY", [ "Fighter", "Free Spirit" ], 4, 12, 4, 2, 50, 392109, null, null, null, null, null, null, null ],
+    [ "Valentines Luffy, Evolved", "PSY", [ "Fighter", "Free Spirit" ], 5, null, null, null, 99, 4000000, null, null, null, null, null, null, null ],
     ];
     
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
