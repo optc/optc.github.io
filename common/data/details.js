@@ -7889,7 +7889,7 @@ window.details = {
         specialName: "Chinjao Special",
     },
     1456: {//Coliseum Don Chinjao
-        captain: "Boosts ATK of Driven characters by 2.75x until the first hit other than Perfect and recovers 120 HP at end of each turn",
+        captain: "Boosts ATK of Powerhouse characters by 2.75x until the first hit other than Perfect and recovers 120 HP at end of each turn",
         special: [
             {
                 "description": "Cuts the current HP of one enemy by 20%, reduces damage received by 50% for 1 turn",

@@ -3646,7 +3646,7 @@ window.captains = {
         atk: function(p) { return p.unit.type == "QCK" ? 1.5 : 1; }
     },
     1341: {
-        //damageSorter: function(d) { return CrunchUtils.classSort(d, 2.625, "QCK"); }, //Boosts work, but the sorter doesn't
+        damageSorter: function(d) { return CrunchUtils.typeSort(d, 2.625, "QCK"); }, 
         hitAtk: function(p) {
             if (!(p.unit.type == "QCK")) return 1;
             return p.modifiers.slice(0, p.chainPosition).subcontains(["Below Good", "Below Good", "Below Good"]) ? 2.625 : 1.75;
