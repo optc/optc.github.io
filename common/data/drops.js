@@ -1566,6 +1566,9 @@ window.drops = {
             name: 'Rescue Ace Event - Aokiji',
             thumb: 1280,
             condition: "10, 20, 30, 35 stamina difficulty. 30 and 35 Stamina has a chance of dropping the Universal Skill Book.",
+            "Characters": [ 67, 69, 262, 264, 298 ],
+            "Boosters and Evolvers": [ 113, 192, 350, 266, 83, 118 ],
+            "Global": [ -416, -459, -530, -217, -004, -1387, -12, -221, -1389, -77, -210, -253, -259, -310, -312, -361, -363, -414, -453, -645, -647, -752, -756, -937, -939, -991, -520, -1115, -524, -1119, -558, -1208, -1245, -25, -202, -208, -206, -502, -787, -789, -739 ],
             "Japan": [ -416, -459, -530, -669, -578, -1121 ]
         },
         
@@ -1573,6 +1576,9 @@ window.drops = {
             name: 'Rescue Ace Event - Kizaru',
             thumb: 1228,
             condition: "10, 20, 30, 35 stamina difficulty. 30 and 35 Stamina has a chance of dropping the Universal Skill Book.",
+            "Characters": [ 968, 969, 970, 971, 972, 231, 775, 1223, 49, 43 ],
+            "Boosters and Evolvers": [ 112, 191, 349, 266, 83, 118 ],
+            "Global": [ -367, -649, -718, -16, -1446, -20, -1447, -73, -251, -257, -308, -359, -365, -412, -457, -639, -750, -758, -912, -914, -941, -993, -522, -1117, -526, -1173, -556, -1210, -1245, -223, -15, -23, -25, -200, -225, -546, -500, -506, -569, -791, -793 ],
             "Japan": [ -367, -649, -718, -870, -1001 ]
         },
         
