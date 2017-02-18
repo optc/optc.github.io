@@ -4130,10 +4130,23 @@ window.captains = {
         },
         hitModifiers: ["Good", "Good", "Great", "Perfect", "Perfect", "Perfect"]
     },
+    1461: {
+        damageSorter: function(d) { return CrunchUtils.typeSort(d, 2.6, "QCK"); }, 
+        hitAtk: function(p) {
+            if (!(p.unit.type == "QCK")) return 1;
+            return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? 2.6 : 2;
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
+    },
     1462: {
         chainModifier: function(p) { return 2; }
     },
     1463: {
         chainModifier: function(p) { return 2.5; }
+    },
+    1464: {//CHANGE THIS IF THIS ISN'T SABO
+        atk: function(p) { return p.unit.class.has("Free Spirit") ? 2.75 : 1; },
+        hp: function(p) { return 1.2; },
+        rcv: function(p) { return 1.2; }
     },
 };

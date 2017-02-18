@@ -7886,7 +7886,7 @@ window.details = {
                 "cooldown": [ 30, 15 ],
             },
         ],
-        specialName: "Chinjao Special",
+        specialName: "Legend told to the Grandchild",
     },
     1456: {//Coliseum Don Chinjao
         captain: "Boosts ATK of Powerhouse characters by 2.75x until the first hit other than Perfect and recovers 120 HP at end of each turn",
@@ -7900,38 +7900,58 @@ window.details = {
                 "cooldown": [ 30, 15 ],
             },
         ],
-        specialName: "Chinjao Special",
+        specialName: "Legend told to the Grandchild",
     },
     1457: {//Coliseum Kuro
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of [QCK] and [INT] characters by 1.75x",
         special: "Reduces Bind and Despair duration by 2 turns, changes own orb into [INT] and randomizes non-matching orbs for Slasher and Cerebral characters.",
-        specialName: "Kuro Special",
+        specialName: "Pussyfoot Maneuver",
     },
     1458: {//Coliseum Kuro
         captain: "Reduces cooldown of all specials by 2 turn at the start of the fight, boosts ATK of [QCK] and [INT] characters by 2x",
         special: "Reduces Bind and Despair duration by 2 turns, changes own orb into [INT] and randomizes non-matching orbs for Slasher and Cerebral characters.",
-        specialName: "Kuro Special",
+        specialName: "Pussyfoot Maneuver",
     },
     1459: {//Coliseum Miss Valentine
         captain: "Boosts ATK by 1.75x following a chain of Good > Good > Great > Perfect hits",
         special: "Binds self for 2 turns, makes [BOMB] orbs \"beneficial\" and boosts ATK against enemies with reduced defense by 1.5x for 1 turn.",
-        specialName: "Miss Valentine Special",
+        specialName: "Crescendo Stone",
     },
     1460: {//Coliseum Miss Valentine
         captain: "Boosts ATK by 2.14x following a chain of Good > Good > Great > Perfect hits",
         special: "Binds self for 2 turns, makes [BOMB] orbs \"beneficial\" and boosts ATK against enemies with reduced defense by 1.5x for 1 turn.",
-        specialName: "Miss Valentine Special",
+        specialName: "Crescendo Stone",
+    },
+    1461: {//Snow Zoro
+        captain: "Boosts ATK of [QCK] characters by 2x at the start of the chain, by 2.6x after the 3rd Perfect.",
+        special: "Deals 11x character's ATK in [QCK] damage to one enemy, boosts ATK of [QCK] characters by 1.5x for 1 turn",
+        specialName: "Demoltion: Ice Crush",
     },
     1462: {//Valentines Day Luffy
         captain: "Boosts chain multiplier by 2x",
         special: "Reduces crew's current HP by 50%, cuts the current HP of each enemy by 20%, and makes [PSY] and [STR] orbs \"beneficial\" to Fighter characters",
         sailor: "Reduces Paralysis for 2 turns for himself",
-        specialName: "Luffy Special",
+        specialName: "Gum-Gum Gigant Axe - Sweets",
     },
     1463: {//Valentines Day Luffy
         captain: "Boosts chain multiplier by 2.5x",
         special: "Reduces crew's current HP by 50%, cuts the current HP of each enemy by 20%, and makes [PSY] and [STR] orbs \"beneficial\" to Fighter characters",
         sailor: "Reduces Paralysis for 2 turns for himself",
-        specialName: "Luffy Special",
+        specialName: "Gum-Gum Gigant Axe - Sweets",
+    },
+    1464: {//6+ Sabo CHANGE THIS IF THIS ISN'T SABO
+        captain: "Boosts HP and RCV of all characters by 1.2x, boosts ATK of Free Spirit characters by 2.75x",
+        captainNotes: "THIS IS ALL A PLACEHOLDER",
+        special: [
+            {
+                "description": "Boosts ATK of Free Spirit characters by 1.5x for 1 turn. If during that turn you score 5 Perfect hits, boosts ATK of Free Spirit characters by 2x in the following turn.",
+                "cooldown": [ null, null ],
+            },
+            {
+                "description": "Boosts ATK of Free Spirit characters by 1.75x for 1 turn. If during that turn you score 4 Perfect hits, boosts ATK of Free Spirit characters by 2x in the following turn.",
+                "cooldown": [ 20, 14 ],
+            },
+        ],
+        specialName: "Burning Dragon Claw Fist",
     },
 };
