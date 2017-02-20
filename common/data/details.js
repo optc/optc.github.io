@@ -7939,13 +7939,13 @@ window.details = {
         sailor: "Reduces Paralysis for 2 turns for himself",
         specialName: "Gum-Gum Gigant Axe - Sweets",
     },
-    1463: {//Valentines Day Chopper
+    1464: {//Valentines Day Chopper
         captain: "Protects from defeat as long as HP is above ???%",
         captainNotes: "#{zombie}",
         special: "Recovers 6x character's RCV in HP and reduces Paralysis duration by 3 turns",
         specialName: "Devoted Healing - \"Instant Recovery\"",
     },
-    1464: {//Valentines Day Chopper
+    1465: {//Valentines Day Chopper
         captain: "Boosts ATK and RCV of all characters by 1.25x, protects from defeat as long as HP is above ???%",
         captainNotes: "#{zombie}",
         special: "Recovers 6x character's RCV in HP and reduces Paralysis duration by 3 turns",
