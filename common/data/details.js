@@ -5066,13 +5066,13 @@ window.details = {
     1046: {
         captain: "Boosts ATK of Free Spirit characters by 2.75x following a chain of Good > Great > Perfect hits",
         specialName: "Dragon Claw Fist: Dragon's Breath",
-        special: "Deals random typeless damage to all enemies. For 2 turns every attacking character gets 55x character's ATK as additional typeless bonus damage if you hit a Good/Great/Perfect",
+        special: "Deals random typeless damage to all enemies. For 2 turns every attacking character gets 55x character's ATK as additional typeless bonus damage if you hit no lower than Good",
         specialNotes: "The Random Damage is between 10k and 30k <br> Extra Damage can only be boosted by conditional Boosters"
     },
     1047: {
         captain: "Boosts ATK of Free Spirit characters by 3.5x following a chain of Good > Great > Perfect hits",
         specialName: "Dragon Claw Fist: Dragon's Breath",
-        special: "Deals random typeless damage to all enemies. For 2 turns every attacking character gets 55x character's ATK as additional typeless bonus damage if you hit a Good/Great/Perfect",
+        special: "Deals random typeless damage to all enemies. For 2 turns every attacking character gets 55x character's ATK as additional typeless bonus damage if you hit no lower than Good",
         specialNotes: "The Random Damage is between 10k and 30k <br> Extra Damage can only be boosted by conditional Boosters"
     },
     1048: {
@@ -5782,13 +5782,13 @@ window.details = {
     },
     1158: {
         captain: "Boosts ATK of Shooter, Striker, and Powerhouse characters by 1.75x",
-        special: "Cuts the current HP of all enemys by 20%. Strongly poisons one enemy, and poisons all other enemies.",
+        special: "Cuts the current HP of all enemies by 20%. Strongly poisons one enemy, and poisons all other enemies.",
         specialNotes: "Strong poison deals 5x character's ATK in fixed damage at the end of each turn. Regular poison deals .5x character's ATK in fixed damage at the end of each turn.",
         specialName: "Poison Puffer Fish"
     },
     1159: {
         captain: "Boosts ATK of Shooter, Striker, and Powerhouse characters by 2.25x",
-        special: "Cuts the current HP of all enemys by 20%. Strongly poisons one enemy, and poisons all other enemies.",
+        special: "Cuts the current HP of all enemies by 20%. Strongly poisons one enemy, and poisons all other enemies.",
         specialNotes: "Strong poison deals 5x character's ATK in fixed damage at the end of each turn. Regular poison deals .5x character's ATK in fixed damage at the end of each turn.",
         specialName: "Poison Puffer Fish"
     },
@@ -6070,12 +6070,12 @@ window.details = {
     1204: {
         captain: "Boosts ATK and RCV of Free Spirit characters by 1.2x",
         specialName: "Awakening Tune Power",
-        special: "Deals 500 fixed damage to each Enemy, changes [RCV] orbs into [QCK] and [TND] into [PSY] orbs"
+        special: "Deals 500 fixed damage to all enemies, changes [RCV] orbs into [QCK] and [TND] into [PSY] orbs"
     },
     1205: {
         captain: "Boosts ATK and RCV of Free Spirit characters by 1.5x",
         specialName: "Awakening Tune Power",
-        special: "Deals 500 fixed damage to each Enemy, changes [RCV] orbs into [QCK] and [TND] into [PSY] orbs"
+        special: "Deals 500 fixed damage to all enemies, changes [RCV] orbs into [QCK] and [TND] into [PSY] orbs"
     },
     1206: {
         captain: "Boosts HP by 1.3x",
@@ -7128,7 +7128,7 @@ window.details = {
         specialName: "Tsubami Behemoth",
     },
     1348: {//Humandrills
-        special: "Boosts ATK of all characters by 1.2x for 1 turn and amplifies the effect of orbs by 1.2x for 1 turn",
+        special: "Boosts ATK of all characters by 1.2x for 2 turns and amplifies the effect of orbs by 1.2x for 2 turns",
         specialName: "Imitation Tactics",
     },
     1349: {//Haredas
@@ -7939,7 +7939,19 @@ window.details = {
         sailor: "Reduces Paralysis for 2 turns for himself",
         specialName: "Gum-Gum Gigant Axe - Sweets",
     },
-    1464: {//6+ Sabo CHANGE THIS IF THIS ISN'T SABO
+    1463: {//Valentines Day Chopper
+        captain: "Protects from defeat as long as HP is above ???%",
+        captainNotes: "#{zombie}",
+        special: "Recovers 6x character's RCV in HP and reduces Paralysis duration by 3 turns",
+        specialName: "Devoted Healing - \"Instant Recovery\"",
+    },
+    1464: {//Valentines Day Chopper
+        captain: "Boosts ATK and RCV of all characters by 1.25x, protects from defeat as long as HP is above ???%",
+        captainNotes: "#{zombie}",
+        special: "Recovers 6x character's RCV in HP and reduces Paralysis duration by 3 turns",
+        specialName: "Devoted Healing - \"Instant Recovery\"",
+    },
+    1472: {//6+ Sabo CHANGE THIS IF THIS ISN'T SABO
         captain: "Boosts HP and RCV of all characters by 1.2x, boosts ATK of Free Spirit characters by 2.75x",
         captainNotes: "THIS IS ALL A PLACEHOLDER",
         special: [

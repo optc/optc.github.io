@@ -2134,7 +2134,7 @@ window.specials = {
         atk: function(p) { return p.defenseDown ? 1.5 : 1; },
         type: "condition"
     },
-    1464: {//CHANGE THIS IF THIS ISN'T SABO
+    1472: {//CHANGE THIS IF THIS ISN'T SABO
         atk: function(p) { return !p.unit.class.has('Free Spirit') ? 1 : window.specials[1464].multiplier; },
         type: "class",
         onActivation: function(p) {

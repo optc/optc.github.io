@@ -4144,7 +4144,11 @@ window.captains = {
     1463: {
         chainModifier: function(p) { return 2.5; }
     },
-    1464: {//CHANGE THIS IF THIS ISN'T SABO
+    1464: {
+        atk: function(p) { return 1.25; },
+        rcv: function(p) { return 1.25; }
+    },
+    1472: {//CHANGE THIS IF THIS ISN'T SABO
         atk: function(p) { return p.unit.class.has("Free Spirit") ? 2.75 : 1; },
         hp: function(p) { return 1.2; },
         rcv: function(p) { return 1.2; }

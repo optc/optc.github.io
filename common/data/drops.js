@@ -571,6 +571,7 @@ window.drops = {
             name: "3D2Y - Timeskip Training",
             shortName: "3D2Y",
             thumb: 1353,
+            global: true,
             completion: '5x Rainbow Gems',
             "01": [ 1342 ],
             "02": [ 1343 ],
@@ -1315,9 +1316,9 @@ window.drops = {
         
         {
             name: "Sentomaru's Rampage! Stop the Rookies!",
-            thumb: null,
-            //condition: "You can only bring STR units",
-            "All Difficulties": [ -1268, -1322, -1228, -906, -914, -310, -1061 ]
+            thumb: 1469,
+            condition: "You can only bring QCK units",
+            "All Difficulties": [ 1468, 1470, 1471, -1268, -1322, -1228, -906, -914, -310, -1061, -1470 ]
         },
         
     ],
@@ -1556,7 +1557,7 @@ window.drops = {
             name: 'Valentines Day Characters',
             thumb: 1463,
             "Luffy": [ 1462, 29, 563, 1059, 345, 192, 113, 108, 115, 116, 117, 1180, 266, 94, 83 ],
-            "Chopper": [  ],
+            "Chopper": [ 1464, 1155, 354, 728, 1061, 83, 94, 115, 116, 117, 266, 1180, 109, 114, 193, 346 ],
         },
         
         {
