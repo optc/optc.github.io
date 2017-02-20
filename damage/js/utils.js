@@ -95,8 +95,12 @@ window.CrunchUtils.typeSort = function(array, typeMultiplier, types) {
     return result;
 };
 
-window.CrunchUtils.getOrbMultiplier = function(orb, baseMultiplier, boostedMultiplier) {
-    if (orb == 1.0) return baseMultiplier;
+window.CrunchUtils.getOrbMultiplier = function(orb, type, baseMultiplier, boostedMultiplier) {
+    if(window.specials[1221].turnedOn || window.specials[1222].turnedOn){
+        if (orb == 'str') return boostedMultiplier;
+        if (orb == 0.5 && type == 'DEX') return boostedMultiplier;
+    }
+    if (orb == 1.0 || orb == 'str') return baseMultiplier;
     if (orb == 2.0 || orb == 'g') return boostedMultiplier;
     if (orb == 0.5) return 1 / boostedMultiplier;
     return 1;

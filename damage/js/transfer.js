@@ -116,7 +116,7 @@ var ImportCtrl = function($scope, $rootScope, $state, $stateParams) {
                 .slice(-6).split('').map(function(x) { return parseInt(x, 10); });
             temp.forEach(function(x,n) {
                 var unit = $scope.tdata.team[n];
-                if (type == 'O') unit.orb = (x == 1 ? 2 : (x == 2 ? 0.5 : (x == 3 ? 'g' : 1)));
+                if (type == 'O') unit.orb = (x == 1 ? 2 : (x == 2 ? 0.5 : (x == 3 ? 'g' : (x == 4 ? 'str' : 1))));
                 else if (type == 'L') unit.lock = x;
                 else if (type == 'G') unit.silence = x;
                 else if (type == 'R') unit.removed = x;
@@ -126,7 +126,7 @@ var ImportCtrl = function($scope, $rootScope, $state, $stateParams) {
                 .slice(-6).split('').map(function(x) { return parseInt(x, 10); });
             temp.forEach(function(x,n) {
                 var unit = $scope.tdata.team[n];
-                unit.orb = (x == 1 ? 2 : (x == 2 ? 0.5 : (x == 3 ? 'g' : 1)));
+                unit.orb = (x == 1 ? 2 : (x == 2 ? 0.5 : (x == 3 ? 'g' : (x == 4 ? 'str' : 1))));
                 if (unit.orb == 'g' && !$rootScope.areGOrbsEnabled()) unit.orb = 1;
             });
         } else if (type == 'S') {
@@ -191,7 +191,7 @@ var ExportCtrl = function($scope) {
         result += (data.defense && data.defense.constructor == Number ? data.defense : parseInt(data.defense)) + 'D';
         //result += (data.defense != 0 ) + 'D';
         result += ($scope.data.effect ? window.effects[$scope.data.effect].id : 0) + 'E';
-        result += parseInt(team.map(function(x) { return ({ '2': 1, '0.5': 2, 'g': 3, '1': 0 }['' + x.orb] || 0); }).join(''),4) + 'Q';
+        result += parseInt(team.map(function(x) { return ({ '2': 1, '0.5': 2, 'g': 3, 'str': 4, '1': 0 }['' + x.orb] || 0); }).join(''),4) + 'Q';
         result += parseInt(team.map(function(x) { return x.lock; }).join(''),3) + 'L';
         result += parseInt(team.map(function(x) { return x.silence; }).join(''),3) + 'G';
         result += parseInt(team.map(function(x) { return x.removed; }).join(''),3) + 'R';
