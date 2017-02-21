@@ -7942,14 +7942,50 @@ window.details = {
     1464: {//Valentines Day Chopper
         captain: "Protects from defeat as long as HP is above ???%",
         captainNotes: "#{zombie}",
-        special: "Recovers 6x character's RCV in HP and reduces Paralysis duration by 3 turns",
+        special: "Recovers 6x character's RCV in HP and reduces Paralysis duration by 2 turns",
+        sailor: "Boosts amount healed from [RCV] orbs by 100 each",
         specialName: "Devoted Healing - \"Instant Recovery\"",
     },
     1465: {//Valentines Day Chopper
         captain: "Boosts ATK and RCV of all characters by 1.25x, protects from defeat as long as HP is above ???%",
         captainNotes: "#{zombie}",
-        special: "Recovers 6x character's RCV in HP and reduces Paralysis duration by 3 turns",
+        special: "Recovers 6x character's RCV in HP and reduces Paralysis duration by 2 turns",
+        sailor: "Boosts amount healed from [RCV] orbs by 100 each",
         specialName: "Devoted Healing - \"Instant Recovery\"",
+    },
+    1466: {//Secret Cavendish
+        captain: "Boosts ATK of [QCK] and [PSY] characters by 2x",
+        special: "Reduces the defense of all enemies by 100% for 1 turn. changes own orb into [STR] and friend captain's orb into [PSY]",
+        specialName: "Cavendish Special",
+    },
+    1467: {//Secret Cavendish
+        captain: "Boosts ATK of [QCK] and [PSY] characters by 2.25x and their RCV by 1.3x",
+        special: "Reduces the defense of all enemies by 100% for 1 turn. changes own orb into [STR] and friend captain's orb into [PSY]",
+        specialName: "Cavendish Special",
+    },
+    1468: {//Fortnight Sentomaru 
+        captain: "Boosts ATK of [STR] characters by 1.75x and the HP of Powerhouse characters by 1.2x",
+        captainNotes: "Captain ability stacks, so a [STR] Powerhouse character benefits from both parts",
+        special: "Delays all enemies for 1 turn. Changes own orb into Matching orb",
+        specialName: "Sentomaru Special",
+    },
+    1469: {//Fortnight Sentomaru Evolved
+        captain: "Boosts ATK of [STR] characters by 2x and the HP of Powerhouse characters by 1.25x",
+        captainNotes: "Captain ability stacks, so a [STR] Powerhouse character benefits from both parts",
+        special: "Delays all enemies for 1 turn. Changes own orb into Matching orb",
+        specialName: "Sentomaru Special",
+    },
+    1470: {//Lip Service Doughty
+        captain: "Boosts ATK of Slasher and Powerhouse characters by 1.5x, but boost his OWN ATK by 3x",
+        captainNotes: "Captain ability does not stack with itself (Will not boost another Doughty by 3x)",
+        special: "Deals 8x character's ATK as [STR] damage to one enemy. Changes captain orb into [RCV]",
+        specialName: "Lip Service Doughty Special",
+    },
+    1471: {//Albion
+        captain: "Boosts ATK of Slasher and Driven characters proportionally to the crew's current HP",
+        captainNotes: "#{captainProportional : lower : 1 + 1 * (1 - (remaining HP) / (total HP)) : 1 : 2}",
+        special: "Reduces crew's HP by 90%, deals 1x the removed HP as damage to all enemies.",
+        specialName: "Albion Special",
     },
     1472: {//6+ Sabo CHANGE THIS IF THIS ISN'T SABO
         captain: "Boosts HP and RCV of all characters by 1.2x, boosts ATK of Free Spirit characters by 2.75x",
