@@ -1466,10 +1466,10 @@ window.units = [
     [ "Chopper's Tea Party", "INT", [ "Shooter", "Powerhouse" ], 5, 20, 4, 3, 99, 3000000, 841, 315, 150, 1906, 999, 347, null ],
     [ "Valentines Cavendish", "PSY", [ "Slasher", "Driven" ], 4, 13, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Valentines Cavendish, Evolved", "PSY", [ "Slasher", "Driven" ], 5, 20, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Fortnight Sentomaru", "STR", [ "Fighter", "Powerhouse" ], 3, 13, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Fortnight Sentomaru, Evolved", "STR", [ "Striker", "Powerhouse" ], 4, 20, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "'Lip Service' Doughty", "STR", [ "Slasher", "Powerhouse" ], 3, 15, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Albion", "DEX", [ "Slasher", "Driven" ], 3, 15, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Fortnight Sentomaru", "STR", [ "Fighter", "Powerhouse" ], 3, 13, 6, 2, 50, 392109, 95, 45, 21, 1055, 595, 101, null ],
+    [ "Fortnight Sentomaru, Evolved", "STR", [ "Striker", "Powerhouse" ], 4, 20, 6, 3, 99, 3000000, 945, 485, 95, 2170, 1150, 205, null ],
+    [ "'Lip Service' Doughty", "STR", [ "Slasher", "Powerhouse" ], 3, 15, 6, 1, 70, 1066998, 140, 115, 11, 1310, 850, 139, null ],
+    [ "Albion", "DEX", [ "Slasher", "Driven" ], 3, 15, 4, 1, 70, 1066998, 120, 110, 12, 985, 840, 198, null ],
     [ "6+ Sabo - This is 100% a placeholder", "PSY", [ "Striker", "Free Spirit" ], 6, 65, 4, 5, 99, 5000000, 1500, 800, 250, 3000, 1500, 500, null ],
     ];
     

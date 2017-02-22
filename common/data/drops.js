@@ -1301,21 +1301,21 @@ window.drops = {
         },
         
         {
-            name: "Happo Navy! The 13th Leader Appears!",
+            name: "Chinjao Family! The 13th Leader Appears!",
             thumb: 1426,
             condition: "You can only bring DEX units",
             "All Difficulties": [ 1425, 1427, 1428, -1240, -1272, -1270, -1227, -1224, -872, -878, -255, -812 ]
         },
         
         {
-            name: "Protect Violet-Chan!!",
+            name: "Fugitive of Love and Passion!!",
             thumb: 1450,
             condition: "You can only bring STR units",
             "All Difficulties": [ 1449, 1451, -935, -1278, -1318, -1324, -880, -876, -259, -1226, -814 ]
         },
         
         {
-            name: "Sentomaru's Rampage! Stop the Rookies!",
+            name: "Gatekeeper of the New World! Stop the Rookies!",
             thumb: 1469,
             condition: "You can only bring QCK units",
             "All Difficulties": [ 1468, 1470, 1471, -1268, -1322, -1228, -906, -914, -310, -1061, -1470 ]

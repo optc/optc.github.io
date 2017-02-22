@@ -4146,9 +4146,32 @@ window.captains = {
     1463: {
         chainModifier: function(p) { return 2.5; }
     },
-    1464: {
+    1465: {
         atk: function(p) { return 1.25; },
         rcv: function(p) { return 1.25; }
+    },
+    1466: {
+        atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "QCK" ? 2 : 1; },
+    },
+    1467: {
+        atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "QCK" ? 2.25 : 1; },
+        rcv: function(p) { return p.unit.type == "PSY" || p.unit.type == "QCK" ? 1.3 : 1; },
+    },
+    1468: {
+        atk: function(p) { return p.unit.type == "STR" ? 1.75 : 1; },
+        hp: function(p) { return p.unit.class.has("Powerhouse") ? 1.2 : 1; },
+    },
+    1469: {
+        atk: function(p) { return p.unit.type == "STR" ? 2 : 1; },
+        hp: function(p) { return p.unit.class.has("Powerhouse") ? 1.25 : 1; },
+    },
+    1470: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 3 : p.unit.class.has("Powerhouse") || p.unit.class.has("Slasher") ? 1.5 : 1; }  
+    },
+    1471: {
+        atk: function(p) {
+            return p.unit.class.has("Slasher") ? 1 + 1 * ((100 - p.percHP) / 100) : 1;
+        }
     },
     1472: {//CHANGE THIS IF THIS ISN'T SABO
         atk: function(p) { return p.unit.class.has("Free Spirit") ? 2.75 : 1; },
