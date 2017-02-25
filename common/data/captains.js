@@ -4173,7 +4173,7 @@ window.captains = {
             return p.unit.class.has("Slasher") ? 1 + 1 * ((100 - p.percHP) / 100) : 1;
         }
     },
-    1472: {//CHANGE THIS IF THIS ISN'T SABO
+    1492: {//CHANGE THIS IF THIS ISN'T SABO
         atk: function(p) { return p.unit.class.has("Free Spirit") ? 2.75 : 1; },
         hp: function(p) { return 1.2; },
         rcv: function(p) { return 1.2; }

@@ -4158,13 +4158,13 @@ window.details = {
     900: {
         captain: "Boosts ATK of Shooter characters by 2x if HP is above 99% at the start of the turn",
         specialName: "Franky Destroy Gun",
-        special: "Deals 6 hits of 2,000 fixed damage to random enemies, randomly changes opposite orbs on Shooter and Free Spirit characters into either [G] orbs or matching orbs",
+        special: "Deals 6 hits of 2,000 fixed damage to random enemies, randomly changes Badly Matching orbs on Shooter and Free Spirit characters into either [G] orbs or matching orbs",
         specialNotes: "The orb shuffle only applies to Shooter and Free Spirit characters, other classes are unaffected. #{gOrbs}"
     },
     901: {
         captain: "Boosts ATK of Shooter characters by 2.75x if HP is above 99% at the start of the turn",
         specialName: "Franky Destroy Gun",
-        special: "Deals 6 hits of 2,000 fixed damage to random enemies, randomly changes opposite orbs on Shooter and Free Spirit characters into either [G] orbs or matching orbs",
+        special: "Deals 6 hits of 2,000 fixed damage to random enemies, randomly changes Badly Matching orbs on Shooter and Free Spirit characters into either [G] orbs or matching orbs",
         specialNotes: "The orb shuffle only applies to Shooter and Free Spirit characters, other classes are unaffected. #{gOrbs}"
     },
     902: {
@@ -4275,12 +4275,12 @@ window.details = {
     913: {
         captain: "Boosts ATK of QCK characters by 2.5x if they have a matching orb",
         specialName: "Black Magic Summoning: Advent of the Demon Lord Satan",
-        special: "Seals himself for 1 turn, changes [BLOCK] orbs into matching orbs, randomly changes opposite orbs into either [STR], [QCK], [DEX], [PSY] or [INT] orbs"
+        special: "Seals himself for 1 turn, changes [BLOCK] orbs into matching orbs, randomly changes Badly Matching orbs into either [STR], [QCK], [DEX], [PSY] or [INT] orbs"
     },
     914: {
         captain: "Boosts ATK of QCK characters by 3x if they have a matching orb, by 1.2x otherwise",
         specialName: "Black Magic Summoning: Advent of the Demon Lord Satan",
-        special: "Seals himself for 1 turn, changes [BLOCK] orbs into matching orbs, randomly changes opposite orbs into either [STR], [QCK], [DEX], [PSY] or [INT] orbs"
+        special: "Seals himself for 1 turn, changes [BLOCK] orbs into matching orbs, randomly changes Badly Matching orbs into either [STR], [QCK], [DEX], [PSY] or [INT] orbs"
     },
     915: {
         captain: "Boosts ATK and RCV of Cerebral characters by 1.2x",
@@ -7967,27 +7967,27 @@ window.details = {
         captain: "Boosts ATK of [STR] characters by 1.75x and the HP of Powerhouse characters by 1.2x",
         captainNotes: "Captain ability stacks, so a [STR] Powerhouse character benefits from both parts",
         special: "Delays all enemies for 1 turn. Changes own orb into Matching orb",
-        specialName: "Sentomaru Special",
+        specialName: "Warning of the New World",
     },
     1469: {//Fortnight Sentomaru Evolved
         captain: "Boosts ATK of [STR] characters by 2x and the HP of Powerhouse characters by 1.25x",
         captainNotes: "Captain ability stacks, so a [STR] Powerhouse character benefits from both parts",
         special: "Delays all enemies for 1 turn. Changes own orb into Matching orb",
-        specialName: "Sentomaru Special",
+        specialName: "Warning of the New World",
     },
     1470: {//Lip Service Doughty
         captain: "Boosts ATK of Slasher and Powerhouse characters by 1.5x, but boost his OWN ATK by 3x",
         captainNotes: "Captain ability does not stack with itself (Will not boost another Doughty by 3x)",
         special: "Deals 8x character's ATK as [STR] damage to one enemy. Changes captain orb into [RCV]",
-        specialName: "Lip Service Doughty Special",
+        specialName: "Meat Grinder Blade",
     },
     1471: {//Albion
         captain: "Boosts ATK of Slasher and Driven characters proportionally to the crew's current HP",
         captainNotes: "#{captainProportional : lower : 1 + 1 * (1 - (remaining HP) / (total HP)) : 1 : 2}",
         special: "Reduces crew's HP by 90%, deals 1x the removed HP as damage to all enemies.",
-        specialName: "Albion Special",
+        specialName: "Deep Claw Stab",
     },
-    1472: {//6+ Sabo CHANGE THIS IF THIS ISN'T SABO
+    1492: {//6+ Sabo CHANGE THIS IF THIS ISN'T SABO
         captain: "Boosts HP and RCV of all characters by 1.2x, boosts ATK of Free Spirit characters by 2.75x",
         captainNotes: "THIS IS ALL A PLACEHOLDER",
         special: [

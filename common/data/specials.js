@@ -2152,15 +2152,15 @@ window.specials = {
         atk: function(p) { return p.defenseDown ? 1.5 : 1; },
         type: "condition"
     },
-    1472: {//CHANGE THIS IF THIS ISN'T SABO
-        atk: function(p) { return !p.unit.class.has('Free Spirit') ? 1 : window.specials[1472].multiplier; },
+    1492: {//CHANGE THIS IF THIS ISN'T SABO
+        atk: function(p) { return !p.unit.class.has('Free Spirit') ? 1 : window.specials[1492].multiplier; },
         type: "class",
         onActivation: function(p) {
-            var n = (window.specials[1472].multiplier == 1.5 ? 1 : window.specials[1472].multiplier == 1.75 ? 2 : 0);
-            window.specials[1472].multiplier = [1.5, 1.75, 2][n];
+            var n = (window.specials[1492].multiplier == 1.5 ? 1 : window.specials[1492].multiplier == 1.75 ? 2 : 0);
+            window.specials[1492].multiplier = [1.5, 1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 1.75, 2][n] + 'x ATK multiplier. To switch to the ' + [1.75, 2, 1.5][n] + 'x multiplier, disable and re-enable this special',
-                name: '1464warning'
+                name: '1492warning'
             });
         }
     },
