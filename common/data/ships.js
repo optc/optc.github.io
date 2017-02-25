@@ -219,6 +219,7 @@ window.ships = [
     { // 17
         name: '2nd Anniversary Thousand Sunny',
         thumb: 'ship_0018_c1.png',
+        //description: 'Boosts ATK by 1.5x. At the start of the adventure, all specials start at MAX charge.',
         description: 'Boosts ATK by 1.2x.',
         atk: function(p) { return 1.2; },
     }, 
@@ -264,12 +265,10 @@ window.ships = [
     { // 21
         name: 'Burning Whitebeard Ship',
         thumb: 'ship_0022_c.png',
-        description: 'Boosts ATK by 1.5x and HP by 1.4x. Special: Cuts the current HP of each enemy by 20% (cooldown: 17 turns).',
-        atk: function(p) {
-            return 1.5;
-        },
+        //description: 'Boosts ATK by 1.5x and HP by 1.4x, reduces HP by 7% at the end of the turn. Special: Cuts the current HP of each enemy by 20% (cooldown: 18 turns).',
+        description: 'Boosts HP by 1.3x.',
         hp: function(p) {
-            return 1.4;
+            return 1.3;
         },
     },
     
