@@ -6369,12 +6369,12 @@ window.details = {
     },
     1241: {//Fortnight Koala
         captain: "Boosts chain multiplier by 1.5x. Recovers 1x character's RCV in HP at the end of each turn",
-        special: "Deals 11x character's ATK in [STR] damage to one enemy. For 1 turn every attacking character gets 15x character's ATK as additional typeless bonus damage if you hit a Good/Great/Perfect",
+        special: "Deals 11x character's ATK in [STR] damage to one enemy. For 1 turn every attacking character gets 15x character's ATK as additional typeless bonus damage if you hit no lower than Good",
         specialName: "Fishman Karate, Midair Upwards Kick",
     },
     1242: {//Fortnight Koala
         captain: "Boosts chain multiplier by 2x. Recovers 2x character's RCV in HP at the end of each turn",
-        special: "Deals 11x character's ATK in [STR] damage to one enemy. For 1 turn every attacking character gets 15x character's ATK as additional typeless bonus damage if you hit a Good/Great/Perfect",
+        special: "Deals 11x character's ATK in [STR] damage to one enemy. For 1 turn every attacking character gets 15x character's ATK as additional typeless bonus damage if you hit no lower than Good",
         specialName: "Fishman Karate, Midair Upwards Kick",
     },
     1243: {// Fortnight Hack

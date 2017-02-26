@@ -657,9 +657,9 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 if (enabledSpecials[y].hasOwnProperty('staticMult')){
                     var slot = enabledSpecials[y].sourceSlot;
                     var baseDamage = getStatOfUnit(team[slot],'atk');
-                    var atkCandies = team[slot].candies.atk * 2;
+                    //var atkCandies = team[slot].candies.atk * 0;
                     var mult = enabledSpecials[y].staticMult(params);
-                    var staticDamage = Math.ceil((baseDamage+atkCandies)*mult*conditionalMultiplier);
+                    var staticDamage = Math.ceil((baseDamage)*mult*conditionalMultiplier);
                     if((hitModifier == 'Great')||(hitModifier == 'Good')||(hitModifier == 'Perfect')){
                         resultDamage += staticDamage;
                     } 
