@@ -1602,6 +1602,16 @@ window.specials = {
     1234: {//Tashigi
         affinity: function(p){ return p.unit.class.has("Slasher") || p.unit.class.has("Cerebral") ? 1.5 : 1; }
     },
+    1237: {
+        //TODO
+        hit: function(n) { return n > 30 ? 2 : 1; },
+        type: "condition"
+    },
+    1238: {
+        //TODO
+        hit: function(n) { return n > 30 ? 2 : 1; },
+        type: "condition"
+    },
     1239: {
         turnedOn: false,
         onActivation: function(p) {

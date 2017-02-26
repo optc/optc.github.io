@@ -485,7 +485,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                     chainModifier = Math.min(mapEffect.chainModifier(params[n]), chainModifier);
                 var chainMultiplier = getChainMultiplier(special.chain(params[n]), modifiers.slice(0,n), chainModifier);
                 //Add flat Multiplier Bonuses if they exist
-                if(addition>0.0)
+                if(addition>0.0 && chainMultiplier != 1.0)
                     chainMultiplier = chainMultiplier + addition;
                 if (mapEffect.hasOwnProperty('chainLimiter'))
                     chainMultiplier = Math.min(mapEffect.chainLimiter(params[n]), chainMultiplier);
