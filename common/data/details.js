@@ -8005,7 +8005,7 @@ window.details = {
     },
     1474: {//King Neptune
         captain: "Not Translated",
-        special: "Locks all orbs for 1 turn. Cuts the current HP of one enemy by 20% and if HP is above 50%, deals 40x character's ATK in typeless damage to all enemies",
+        special: "Locks all orbs for 1 turn. Cuts the current HP of one enemy by 20% and if HP is above 50%, deals 140x character's ATK in typeless damage to all enemies",
         specialNotes: "The HP cut looks to be of the highest HP enemy, not confirmed yet.",
         sailor: "Not Translated",
         specialName: "King Neptune Special",
@@ -8013,7 +8013,7 @@ window.details = {
     1475: {//King Neptune
         captain: "Boosts ATK of all characters by 2.25x and EXP gained by 1.5x",
         captainNotes: "EXP boost does not take effect if he becomes your capatin in the middle of the adventure.",
-         special: "Locks all orbs for 1 turn. Cuts the current HP of one enemy by 20% and if HP is above 50%, deals 40x character's ATK in typeless damage to all enemies",
+         special: "Locks all orbs for 1 turn. Cuts the current HP of one enemy by 20% and if HP is above 50%, deals 140x character's ATK in typeless damage to all enemies",
         specialNotes: "The HP cut looks to be of the highest HP enemy, not confirmed yet.",
         sailor: "Not Translated",
         specialName: "King Neptune Special",
