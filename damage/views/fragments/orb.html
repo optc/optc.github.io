@@ -1,7 +1,7 @@
 <div class="unitOrb {{glow()}}">
 
     <i class="fa"
-        ng-show="tdata.team[slot].orb != 'g' && tdata.team[slot].orb != 'str'"
+        ng-show="tdata.team[slot].orb != 'g' && tdata.team[slot].orb != 'str' && tdata.team[slot].orb != 'rainbow'"
         ng-class="{ 'fa-caret-up': tdata.team[slot].orb == 2, 'fa-caret-down': tdata.team[slot].orb == 0.5 }">
     </i>
 
@@ -11,6 +11,10 @@
 
     <i class="str-orb" ng-show="tdata.team[slot].orb == 'str'">
         S
+    </i>
+    
+    <i class="rainbow-orb" ng-show="tdata.team[slot].orb == 'rainbow'">
+        R
     </i>
 
 </div>

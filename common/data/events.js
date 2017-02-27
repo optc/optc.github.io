@@ -149,4 +149,24 @@ window.events = {
                 $scope.notify({ text: 'Disabling [STR] orbs support.' });
         }
     },
+/*    1472: {//Add if needed for Shirahoshi
+        onInsertion: function($scope) {
+            if (++$scope.options.rainbowOrbsEnabled == 1)
+                $scope.notify({ text: 'Enabling [RAINBOW] orbs support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.rainbowOrbsEnabled === 0)
+                $scope.notify({ text: 'Disabling [RAINBOW] orbs support.' });
+        }
+    },
+    1473: {
+        onInsertion: function($scope) {
+            if (++$scope.options.rainbowOrbsEnabled == 1)
+                $scope.notify({ text: 'Enabling [RAINBOW] orbs support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.rainbowOrbsEnabled === 0)
+                $scope.notify({ text: 'Disabling [RAINBOW] orbs support.' });
+        }
+    },*/
 };

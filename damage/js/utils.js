@@ -101,7 +101,7 @@ window.CrunchUtils.getOrbMultiplier = function(orb, type, baseMultiplier, booste
         if (orb == 0.5 && type == 'DEX') return boostedMultiplier;
     }
     if (orb == 1.0 || orb == 'str') return baseMultiplier;
-    if (orb == 2.0 || orb == 'g') return boostedMultiplier;
+    if (orb == 2.0 || orb == 'g' || orb == 'rainbow') return boostedMultiplier;
     if (orb == 0.5) return 1 / boostedMultiplier;
     return 1;
 };

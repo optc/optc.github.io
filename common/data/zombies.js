@@ -323,4 +323,12 @@ window.zombies = {
         type: 'healer',
         amount: 120
     },
+    1472: { // Shirahoshi
+        type: 'healer',
+        multiplier: 5
+    },
+    1473: { // Shirahoshi
+        type: 'healer',
+        multiplier: 5
+    },
 };
