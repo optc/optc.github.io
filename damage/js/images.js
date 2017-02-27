@@ -100,7 +100,7 @@ app.controller('ImageGeneratorCtrl', function($scope, $filter, $timeout) {
                     } else if (orb == 'g') {
                         type(context, { text: 'S', style: 'bold 20px "Open Sans"',
                             x: baseX + 13, y: baseY + 28, color: 'white', stroke: 'black', strokeWidth: 2 });
-                    } else if (orb == 's'{
+                    } else if (orb == 's'){
                         type(context, { text: 'S', style: 'bold 20px "Open Sans"',
                             x: baseX + 13, y: baseY + 28, color: 'white', stroke: 'black', strokeWidth: 2 });
                     } else{
