@@ -4179,6 +4179,27 @@ window.captains = {
     1473: {
         atk: function(p) { return p.slot == p.sourceSlot ? 1.5 : 2.25; }  
     },
+    1474: {
+        atk: function(p) { return 1.5; }  
+    },
+    1475: {
+        atk: function(p) { return 2.25; }  
+    },
+    1476: {
+        atk: function(p) { return p.unit.class.has("Striker") ? 2 : 1; },
+    },
+    1477: {
+        atk: function(p) { return p.unit.class.has("Striker") ? 2.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Powerhouse") ? 1.25 : 1; },
+    },
+    1478: {
+        hit: function(n) {
+            return n > 40 ? 3.5 :
+                n > 30 ? 2.75 :
+                n > 22 ? 2.5 :
+                n > 11 ? 1.5 : 1;
+        }
+    },
     1492: {//CHANGE THIS IF THIS ISN'T SABO
         atk: function(p) { return p.unit.class.has("Free Spirit") ? 2.75 : 1; },
         hp: function(p) { return 1.2; },
