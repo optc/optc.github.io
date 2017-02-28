@@ -2168,6 +2168,50 @@ window.specials = {
         atk: function(p) { return p.defenseDown ? 1.5 : 1; },
         type: "condition"
     },
+    1476: {
+        atk: function(p) {
+            return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 1.75 : 1;
+        },
+        type: "class"
+    },
+    1477: {
+        atk: function(p) {
+            return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 1.75 : 1;
+        },
+        type: "class"
+    },
+    1478: {
+        atk: function(p) { return p.unit.type == "INT" || p.unit.type == "QCK" ? 2 : 1; },
+        type: "type"
+    },
+    1479: {
+        atk: function(p) { return p.unit.type == "INT" || p.unit.type == "QCK" ? 2 : 1; },
+        type: "type"
+    },
+    1480: {
+        atk: function(p) { return window.specials[1480].multiplier; },
+        type: "class",
+        onActivation: function(p) {
+            var n = (window.specials[1480].multiplier == 1.5 ? 1 : 0);
+            window.specials[1480].multiplier = [1.25, 1.75][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.25, 1.75][n] + 'x ATK multiplier. To switch to the ' + [1.75, 1.25][n] + 'x multiplier, disable and re-enable this special',
+                name: '1480warning'
+            });
+        },
+    },
+    1481: {
+        atk: function(p) { return window.specials[1481].multiplier; },
+        type: "class",
+        onActivation: function(p) {
+            var n = (window.specials[1481].multiplier == 1.5 ? 1 : 0);
+            window.specials[1481].multiplier = [1.25, 1.75][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.25, 1.75][n] + 'x ATK multiplier. To switch to the ' + [1.75, 1.25][n] + 'x multiplier, disable and re-enable this special',
+                name: '1481warning'
+            });
+        },
+    },
     1492: {//CHANGE THIS IF THIS ISN'T SABO
         atk: function(p) { return !p.unit.class.has('Free Spirit') ? 1 : window.specials[1492].multiplier; },
         type: "class",

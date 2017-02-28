@@ -7990,16 +7990,34 @@ window.details = {
         specialName: "Deep Claw Stab",
     },
     1472: {//Shirahoshi
-        captain: "Boosts ATK of all characters by 2.25x, but boosts her OWN attack by ???x, recovers 5x character's RCV in HP at the end of each turn and if you don't attack with her, reduces damage received by 10% for that turn.",
-        special: "Changes all orbs (including [BLOCK] orbs) into [RAINBOW] orbs, recovers 100x character's RCV in HP.",
-        specialNotes: "Rainbow orbs are the benefittial form of [BLOCK] orbs. They can not be shuffled or swapped by you or your opponent. They count as benefittial orbs to any character. We do NOT know how this interacts with Sakazuki or Black Clad Ace captain abilities.",
+        captain: "Boosts ATK of all characters by 2.25x, but boosts her OWN attack by 1.125x, recovers 5x character's RCV in HP at the end of each turn and if you don't attack with her, reduces damage received by 10% for that turn.",
+        special: [
+            {
+                "description": "Changes adjacent orbs (including [BLOCK] orbs) into [RAINBOW] orbs, recovers 9x character's RCV in HP.",
+                "cooldown": [ 13, null ],
+            },
+            {
+                "description": "Changes all orbs (including [BLOCK] orbs) into [RAINBOW] orbs, recovers 100x character's RCV in HP.",
+                "cooldown": [ 22, null ],
+            },
+        ],
+        specialNotes: "Rainbow orbs are the benefittial form of [BLOCK] orbs. They can not be shuffled or swapped by you or your opponent. They count as benefittial orbs to any character. They do not count as STR orbs for Sakazuki but do act like Matching orbs for Black Clad Ace or Fujitora captain abilities.",
         sailor: "Changes all orbs into [RAINBOW] orbs at the start of the fight.",
         specialName: "Tears of Courage",
     },
     1473: {//Shirahoshi
-        captain: "Boosts ATK of all characters by 2.25x, but boosts her OWN attack by ???x, recovers 5x character's RCV in HP at the end of each turn and if you don't attack with her, reduces damage received by 10% for that turn.",
-        special: "Changes all orbs (including [BLOCK] orbs) into [RAINBOW] orbs, recovers 100x character's RCV in HP.",
-        specialNotes: "Rainbow orbs are the benefittial form of [BLOCK] orbs. They can not be shuffled or swapped by you or your opponent. They count as benefittial orbs to any character. We do NOT know how this interacts with Sakazuki or Black Clad Ace captain abilities.",
+        captain: "Boosts ATK of all characters by 2.25x, but boosts her OWN attack by 1.125x, recovers 5x character's RCV in HP at the end of each turn and if you don't attack with her, reduces damage received by 10% for that turn.",
+        special: [
+            {
+                "description": "Changes adjacent orbs (including [BLOCK] orbs) into [RAINBOW] orbs, recovers 9x character's RCV in HP.",
+                "cooldown": [ 13, null ],
+            },
+            {
+                "description": "Changes all orbs (including [BLOCK] orbs) into [RAINBOW] orbs, recovers 100x character's RCV in HP.",
+                "cooldown": [ 22, null ],
+            },
+        ],
+        specialNotes: "Rainbow orbs are the benefittial form of [BLOCK] orbs. They can not be shuffled or swapped by you or your opponent. They count as benefittial orbs to any character. They do not count as STR orbs for Sakazuki but do act like Matching orbs for Black Clad Ace or Fujitora captain abilities.",
         sailor: "Changes all orbs into [RAINBOW] orbs at the start of the fight.",
         specialName: "Tears of Courage",
     },
