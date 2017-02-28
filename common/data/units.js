@@ -1473,7 +1473,7 @@ window.units = [
     [ "Princess Shirahoshi", "PSY", "Striker", 5, 30, 4, 3, 70, 1066998, 433, 131, 60, 1296, 620, 286, null ],
     [ "Princess Shirahoshi, Evolved", "PSY", "Striker", 6, 55, 4, 5, 99, 5000000, 1238, 558, 233, 2650, 1202, 560, null ],
     [ "King Neptune", "STR", [ "Powerhouse", "Free Spirit" ], 4, 15, null, 3, 50, 392109, null, null, null, null, null, null, null ],
-    [ "King Neptune, Evolved", "STR", [ "Powerhouse", "Free Spirit" ], 5, 30, null, 4, 99, 4000000, null, null, null, null, null, null, null ],
+    [ "King Neptune, Evolved", "STR", [ "Powerhouse", "Free Spirit" ], 5, 30, 4, 4, 99, 4000000, null, null, null, 2604, 1450, 229, null ],
     [ "Fukaboshi", "PSY", [ "Powerhouse", "Striker" ], 4, 15, 6, 3, 50, 392109, 202, 91, 33, null, null, null, null, null ],
     [ "Fukaboshi, Evolved", "PSY", [ "Powerhouse", "Striker" ], 5, 30, 7, 4, 99, 4000000, null, null, null, 2554, 1206, 323, null ],
     [ "Caribou", "QCK", [ "Driven", "Slasher" ], 4, 15, 6, 3, 50, 392109, 144, 144, 22, 1042, 651, 149, null ],
