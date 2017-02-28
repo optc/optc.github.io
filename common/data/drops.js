@@ -1106,7 +1106,7 @@ window.drops = {
             name: "Mountaintop Banquet! Enter the Generals!",
             thumb: 897,
             condition: 'Only STR/DEX/QCK/PSY/INT orbs will appear',
-            "All Difficulties": [ 897, 898, 899, -899, -754, -702, -701, -669, -528, -466, -449, -464, -1177 ]
+            "All Difficulties": [ 897, 898, 899, -899, -754, -702, -701, -669, -1492, -528, -466, -449, -464, -1177 ]
         },
 
         {
@@ -1244,7 +1244,7 @@ window.drops = {
             name: "Gather! Whitebeard Alliance",
             thumb: 1254,
             condition: "Driven Characters have their cooldowns reduced by 10 turns at the start of the fight",
-            "All Difficulties": [ 1254, 1255, 1256, -669, -1077, -1079, -967, -972, -974, -750, -701, -500 ]
+            "All Difficulties": [ 1254, 1255, 1256, -669, -1492, -1077, -1079, -967, -972, -974, -750, -701, -500 ]
         },
         
         {
@@ -1596,7 +1596,7 @@ window.drops = {
             "Characters": [ 67, 69, 262, 264, 298 ],
             "Boosters and Evolvers": [ 113, 192, 350, 266, 83, 118 ],
             "Global": [ -416, -459, -530, -217, -004, -1387, -12, -221, -1389, -77, -210, -253, -259, -310, -312, -361, -363, -414, -453, -645, -647, -752, -756, -937, -939, -991, -520, -1115, -524, -1119, -558, -1208, -1245, -25, -202, -208, -206, -502, -787, -789, -739 ],
-            "Japan": [ -416, -459, -530, -669, -578, -1121 ]
+            "Japan": [ -416, -459, -530, -669, -1492, -578, -1121 ]
         },
         
         {
@@ -1641,10 +1641,12 @@ var bonuses = [
     { type: 'stamina' , x: 6 , y: 5  },
     { type: 'stamina' , x: 6 , y: 12 },
     { type: 'stamina' , x: 6 , y: 19 },
+    { type: 'stamina' , x: 6 , y: 26 },
     { type: 'drop'    , x: 6 , y: 1  },
     { type: 'drop'    , x: 6 , y: 8  },
     { type: 'drop'    , x: 6 , y: 15 },
     { type: 'drop'    , x: 6 , y: 22 },
+    { type: 'drop'    , x: 6 , y: 29 },
     { type: 'beli'    , x: 6 , y: 3  },
     { type: 'beli'    , x: 1 , y: 4  },
     { type: 'beli'    , x: 6 , y: 10 },
@@ -1656,5 +1658,6 @@ var bonuses = [
     { type: 'exp'     , x: 6 , y: 6  },
     { type: 'exp'     , x: 6 , y: 9, stop: 2 },
     { type: 'exp'     , x: 6 , y: 13 },
-    { type: 'exp'     , x: 6 , y: 20 }
+    { type: 'exp'     , x: 6 , y: 20 },
+    { type: 'exp'     , x: 6 , y: 27 }
 ];

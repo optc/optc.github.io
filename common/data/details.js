@@ -8023,14 +8023,14 @@ window.details = {
     },
     1474: {//King Neptune
         captain: "Boosts ATK of all characters by 1.5x and EXP gained by 1.5x",
-        special: "Locks all orbs for 1 turn. Cuts the current HP of one enemy with the highest current HP by 20% if their HP is above 50%, and if all enemies HP is less than 50%, deals 140x character's ATK in typeless damage to all enemies",
+        special: "Locks all orbs for 1 turn. If the HP of the enemy with the highest HP percentage is above 50%, cuts the current HP of all enemies by 20%, otherwise, deals 140x character's ATK in typeless damage to all enemies.",
         sailor: "Makes [INT], [PSY], and [TND] orbs \"beneficial\" for this unit",
         specialName: "King Neptune Special",
     },
     1475: {//King Neptune
         captain: "Boosts ATK of all characters by 2.25x and EXP gained by 1.5x",
         captainNotes: "EXP boost does not take effect if he becomes your capatin in the middle of the adventure.",
-        special: "Locks all orbs for 1 turn. Cuts the current HP of one enemy with the highest current HP by 20% if their HP is above 50%, and if all enemies HP is less than 50%, deals 140x character's ATK in typeless damage to all enemies",
+        special: "Locks all orbs for 1 turn. If the HP of the enemy with the highest HP percentage is above 50%, cuts the current HP of all enemies by 20%, otherwise, deals 140x character's ATK in typeless damage to all enemies.",
         sailor: "Makes [INT], [PSY], and [TND] orbs \"beneficial\" for this unit",
         specialName: "King Neptune Special",
     },
@@ -8137,15 +8137,15 @@ window.details = {
     },
     1492: {//6+ Sabo CHANGE THIS IF THIS ISN'T SABO
         captain: "Boosts HP and RCV of all characters by ???x, boosts ATK of Free Spirit characters by 2.75x",
-        captainNotes: "THIS IS ALL A PLACEHOLDER",
+        captainNotes: "HP and RCV boost are not known yet, but are assumed to be for anyone and is a 1.2x boost for both in the calculator.",
         special: [
             {
                 "description": "Boosts ATK of Free Spirit characters by 1.5x for 1 turn. If during that turn you score 5 Perfect hits, boosts ATK of Free Spirit characters by 2x in the following turn.",
-                "cooldown": [ null, null ],
+                "cooldown": [ 18, 12 ],
             },
             {
                 "description": "Boosts ATK of Free Spirit characters by 1.75x for 1 turn. If during that turn you score 4 Perfect hits, boosts ATK of Free Spirit characters by 2x in the following turn.",
-                "cooldown": [ 20, 14 ],
+                "cooldown": [ 23, 17 ],
             },
         ],
         specialName: "Burning Dragon Claw Fist",
