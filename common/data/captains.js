@@ -4128,7 +4128,7 @@ window.captains = {
     },
     1460: {
         hitAtk: function(p) {
-            return p.modifiers.slice(0, p.chainPosition).subcontains(["Good", "Good", "Great", "Perfect"]) ? 2 : 1;
+            return p.modifiers.slice(0, p.chainPosition).subcontains(["Good", "Good", "Great", "Perfect"]) ? 2.14 : 1;
         },
         hitModifiers: ["Good", "Good", "Great", "Perfect", "Perfect", "Perfect"]
     },
@@ -4241,6 +4241,30 @@ window.captains = {
         },
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
         hp: function(p) { return 1.25; },
+    },
+    1486: {
+        atk: function(p) { return !p.unit.class.has("Fighter") ? 1 : (p.orb == 2.0 ? 2.5 : 1); },
+    },
+    1487: {
+        atk: function(p) { return !p.unit.class.has("Fighter") ? 1 : (p.orb == 2.0 ? 3 : 1); },
+    },
+    1488: {
+        atk: function(p) { return p.unit.class.has("Driven") ? 1.5 : 1; },
+    },
+    1489: {
+        atk: function(p) { return p.unit.class.has("Driven") ? 2 : 1; },
+    },
+    1490: {
+        hitAtk: function(p) {
+            return p.modifiers.slice(0, p.chainPosition).subcontains(["Good", "Good", "Great"]) ? 1.75 : 1;
+        },
+        hitModifiers: ["Good", "Good", "Great", "Perfect", "Perfect", "Perfect"]
+    },
+    1491: {
+        hitAtk: function(p) {
+            return p.modifiers.slice(0, p.chainPosition).subcontains(["Good", "Good", "Great"]) ? 2 : 1;
+        },
+        hitModifiers: ["Good", "Good", "Great", "Perfect", "Perfect", "Perfect"]
     },
     1492: {//CHANGE THIS IF THIS ISN'T SABO
         atk: function(p) { return p.unit.class.has("Free Spirit") ? 2.75 : 1; },

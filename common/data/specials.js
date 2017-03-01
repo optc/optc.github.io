@@ -2188,7 +2188,7 @@ window.specials = {
         atk: function(p) { return p.unit.type == "INT" || p.unit.type == "QCK" ? 2 : 1; },
         type: "type"
     },
-    1480: {
+    1482: {
         atk: function(p) { return window.specials[1480].multiplier; },
         type: "class",
         onActivation: function(p) {
@@ -2200,7 +2200,7 @@ window.specials = {
             });
         },
     },
-    1481: {
+    1483: {
         atk: function(p) { return window.specials[1481].multiplier; },
         type: "class",
         onActivation: function(p) {
@@ -2211,6 +2211,18 @@ window.specials = {
                 name: '1481warning'
             });
         },
+    },
+    1486: {
+        orb: function(p) { return (p.unit.class.has("Fighter")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, 1, 2) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, 1, 1); }	
+    },
+    1487: {
+        orb: function(p) { return (p.unit.class.has("Fighter")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, 1, 2) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, 1, 1); }	
+    },
+    1490: {
+        def: function(p) { return 0.5; }
+    },
+    1491: {
+        def: function(p) { return 0.5; }
     },
     1492: {//CHANGE THIS IF THIS ISN'T SABO
         atk: function(p) { return !p.unit.class.has('Free Spirit') ? 1 : window.specials[1492].multiplier; },
