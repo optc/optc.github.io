@@ -1507,10 +1507,10 @@ window.units = [
     [ "Hody Jones, Awakened", "STR", [ "Powerhouse", "Shooter" ], 4, 30, 6, 3, 99, 3000000, 1014, 494, 29, 2741, 1294, 104, 1 ],
     [ "White Day Sanji", "QCK", [ "Fighter", "Powerhouse" ], 4, 12, 4, 2, 50, 392109, 153, 90, 23, 1030, 489, 122, null ],
     [ "White Day Sanji, Evolved", "QCK", [ "Fighter", "Powerhouse" ], 5, 20, 6, 3, 99, 3000000, 949, 402, 90, 2200, 1130, 247, null ],
-    [ "Haruta, Whitebeard 12th Div. Commander", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Speed Jil, Whitebeard 14th Div. Commander ", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Atmos, Whitebeard 13th Div. Commander", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Kingdew, Whitebeard 11th Div. Commander", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Haruta, Whitebeard 12th Div. Commander", "INT", [ "Cerebral", "Slasher" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Speed Jil, Whitebeard 14th Div. Commander ", "INT", [ "Driven", "Striker" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Atmos, Whitebeard 13th Div. Commander", "PSY", [ "Powerhouse", "Slasher" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Kingdew, Whitebeard 11th Div. Commander", "STR", [ "Powerhouse", "Fighter" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     ];
     
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
