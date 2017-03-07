@@ -2170,13 +2170,13 @@ window.specials = {
     },
     1476: {
         atk: function(p) {
-            return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 1.75 : 1;
+            return p.unit.class.has("Striker") || p.unit.class.has("Powerhouse") ? 1.75 : 1;
         },
         type: "class"
     },
     1477: {
         atk: function(p) {
-            return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 1.75 : 1;
+            return p.unit.class.has("Striker") || p.unit.class.has("Powerhouse") ? 1.75 : 1;
         },
         type: "class"
     },
