@@ -6001,12 +6001,12 @@ window.details = {
         sailor: "Boosts ATK of [QCK] characters by 40"
     },
     1191: {
-        captain: "Boosts ATK of all characters by 2x and their HP by 1.25x. If you defeat an enemy, increases ATK boost slighty. Stacks up to 8 times to a maximum of 3.5x If you did not defeat an enemy, lose all ATK boost stacks.",
+        captain: "Boosts ATK of all characters by 2x and their HP by 1.2x. If you defeat an enemy, increases ATK boost slighty. Stacks up to 8 times to a maximum of 3.5x If you did not defeat an enemy, lose all ATK boost stacks.",
         special: "Increases duration of any Class/Type boosting buffs and Orb Amplification buffs by 1 turn",
         specialName: "Ice Age",
     },
     1192: {
-        captain: "Boosts ATK of all characters by 2x and their HP by 1.25x. If you defeat an enemy, increases ATK boost slighty. Stacks up to 8 times to a maximum of 3.5x If you did not defeat an enemy, lose all ATK boost stacks.",
+        captain: "Boosts ATK of all characters by 2x and their HP by 1.2x. If you defeat an enemy, increases ATK boost slighty. Stacks up to 8 times to a maximum of 3.5x If you did not defeat an enemy, lose all ATK boost stacks.",
         special: "Increases duration of any Class/Type boosting buffs and Orb Amplification buffs by 1 turn",
         specialName: "Ice Age",
     },
@@ -8161,7 +8161,7 @@ window.details = {
                 "cooldown": [ 23, 17 ],
             },
         ],
-        specialName: "Burning Dragon Claw Fist",
+        specialName: "Reborn - Fire",
     },
     1493: {//STR Fishman Outlaw
         captain: "Boosts ATK of [STR] characters by 1.5x",
@@ -8196,12 +8196,12 @@ window.details = {
         specialName: "Captain Slot Change - [STR]",
     },
     1499: {//QCK Fishman Guard
-        captain: "Boosts ATK, HP and RCV of [QCK] characters by 1.5x",
+        captain: "Boosts ATK, HP and RCV of [QCK] characters by 1.2x",
         special: "Changes Captain's [BLOCK] orbs into Matching orbs",
         specialName: "Captain [BLOCK] Slot Change - Matching",
     },
     1500: {//DEX Fishman Guard
-        captain: "Boosts ATK, HP and RCV of [DEX] characters by 1.5x",
+        captain: "Boosts ATK, HP and RCV of [DEX] characters by 1.2x",
         special: "Recovers 2000 HP",
         specialName: "First Aid",
     },
@@ -8222,7 +8222,7 @@ window.details = {
         specialName: "Absurd Invitation",
     },
     1504: {//Vander Decken IX
-        captain: "Boosts ATK of Driven characters by 2x. After scoring 3 Perfects in a row, boosts ATK of Striker characters by 2.4x instead.",
+        captain: "Boosts ATK of Driven characters by 2x. After scoring 3 Perfects in a row, boosts ATK of Driven characters by 2.4x instead.",
         special: "Changes the orbs in the middle row into [EMPTY] orbs and deals 20x character's ATK as [DEX] damage to all enemies at the end of the turn for 2 turns",
         specialName: "Inexcapable Pursuit",
     },
@@ -8259,13 +8259,13 @@ window.details = {
     },
     1510: {//Speed Jiru
         captain: "Boosts ATK of Driven and Striker characters by 2x",
-        special: "Deals 15,000 fixed damage to one enemy",
+        special: "Deals 12,500 fixed damage to one enemy",
         specialName: "Genocide Jil Special",
         sailor: "When HP is above 70% at the start of the turn, boosts ATK of Striker characters by 20",
     },
     1511: {//Atmos
         captain: "Boosts ATK of PSY characters by 2x",
-        special: "Deals 15,000 fixed damage to one enemy",
+        special: "Reduces Despair duration by 3 turns, boosts own ATK by 1.5x for 1 turn",
         specialName: "Atmos Special",
         sailor: "Boosts ATK of Powerhouse characters by 20 if your captain is a Powerhouse character",
     },
@@ -8274,5 +8274,15 @@ window.details = {
         special: "Removes poison, boosts ATK of Powerhouse characters by 1.5x for 1 turn if HP is below 30% when the special is activated",
         specialName: "Kingdew Special",
         sailor: "Makes [RCV] orbs \"beneficial\" for this unit if your captain is a Powerhouse character",
+    },
+    1513: {//Anniversary Sanji
+        captain: "Boosts ATK of Fighter characters by 1.75x and RCV of Powerhouse characters by 1.2x",
+        special: "Randomizes all orbs, including [BLOCK] orbs, reduces Special Cooldown of 1 character by 1 turn",
+        specialName: "Sanji Special",
+    },
+    1514: {//Anniversary Sanji
+        captain: "Boosts ATK of Fighter characters by 2.5x and RCV of Powerhouse characters by 1.2x",
+        special: "Randomizes all orbs, including [BLOCK] orbs, reduces Special Cooldown of 1 character by 1 turn",
+        specialName: "Sanji Special",
     },
 };

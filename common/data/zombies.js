@@ -331,4 +331,8 @@ window.zombies = {
         type: 'healer',
         multiplier: 5
     },
+    1508: { // Tea Time Sanji
+        type: 'healer',
+        multiplier: 2
+    },
 };

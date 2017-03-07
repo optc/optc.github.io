@@ -1507,10 +1507,12 @@ window.units = [
     [ "Hody Jones, Awakened", "STR", [ "Powerhouse", "Shooter" ], 4, 30, 6, 3, 99, 3000000, 1014, 494, 29, 2741, 1294, 104, 1 ],
     [ "White Day Sanji", "QCK", [ "Fighter", "Powerhouse" ], 4, 12, 4, 2, 50, 392109, 153, 90, 23, 1030, 489, 122, null ],
     [ "White Day Sanji, Evolved", "QCK", [ "Fighter", "Powerhouse" ], 5, 20, 6, 3, 99, 3000000, 949, 402, 90, 2200, 1130, 247, null ],
-    [ "Haruta, Whitebeard 12th Div. Commander", "INT", [ "Cerebral", "Slasher" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Speed Jil, Whitebeard 14th Div. Commander ", "INT", [ "Driven", "Striker" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Atmos, Whitebeard 13th Div. Commander", "PSY", [ "Powerhouse", "Slasher" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Kingdew, Whitebeard 11th Div. Commander", "STR", [ "Powerhouse", "Fighter" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Haruta, Whitebeard 12th Div. Commander", "INT", [ "Cerebral", "Slasher" ], 4, 25, 6, 3, 99, 3000000, 40, 49, 34, null, null, null, null ],
+    [ "Speed Jil, Whitebeard 14th Div. Commander ", "INT", [ "Driven", "Striker" ], 4, 25, null, 3, 99, 3000000, null, null, null, null, null, null, null ],
+    [ "Atmos, Whitebeard 13th Div. Commander", "PSY", [ "Powerhouse", "Slasher" ], 4, 25, null, 3, 99, 3000000, 51, 35, 35, null, null, null, null ],
+    [ "Kingdew, Whitebeard 11th Div. Commander", "STR", [ "Powerhouse", "Fighter" ], 4, 25, null, 3, 99, 3000000, null, null, null, null, null, null, null ],
+    [ "Anniversary Sanji", "DEX", [ "Fighter", "Powerhouse" ], 4, 13, null, 2, null, null, null, null, null, null, null, null, null ],
+    [ "Anniversary Sanji, Evolved", "DEX", [ "Fighter", "Powerhouse" ], 5, 20, 7, 4, 99, null, null, null, null, 1858, 1157, 332, null ],
     ];
     
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],

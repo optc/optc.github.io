@@ -2236,4 +2236,44 @@ window.specials = {
             });
         }
     },
+    1497: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 1.5 : 1; },
+        type: "type"
+    },
+    1501: {
+        atk: function(p) { return 1.3; },
+        type: "type"
+    },
+    1505: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 2.25 : 1; },
+        type: "type"
+    },
+    1506: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 2.25 : 1; },
+        type: "type"
+    },
+    1507: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? 1.75 : 1; },
+        type: "class"
+    },
+    1508: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? 1.75 : 1; },
+        type: "class"
+    },
+    1511: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 1.5 : 1; },
+        type: "type"
+    },
+    1512: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? window.specials[1512].multiplier : 1; },
+        type: "class",
+        onActivation: function(p) {
+            var n = (p.percHP <= 30 ? 1.5 : 1);
+            window.specials[1512].multiplier = n;
+            p.scope.notify({
+                text: 'HP ' + (n == 1.5 ? 'below' : 'above') + ' 30%, using the ' + n + 'x multiplier.',
+                name: '1512warning'
+            });
+        }
+    },
 };

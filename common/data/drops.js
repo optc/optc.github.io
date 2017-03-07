@@ -605,6 +605,27 @@ window.drops = {
             "09": [ 1392 ],
         },
         
+        {
+            name: "Fishman Island",
+            shortName: "Fishman Island",
+            thumb: 1506,
+            completion: '5x Rainbow Gems',
+            "01": [ 1501, 1502 ],
+            "02": [ 1502, 340 ],
+            "03": [  ],
+            "04": [  ],
+            "05": [ 1503 ],
+            "06": [  ],
+            "07": [  ],
+            "08": [  ],
+            "09": [  ],
+            "10": [  ],
+            "11": [  ],
+            "12": [  ],
+            "13": [ 1504 ],
+            "14": [ 1505 ],
+        },
+        
     ],
 
     'Weekly Island': [
@@ -1322,6 +1343,13 @@ window.drops = {
             "All Difficulties": [ 1468, 1470, 1471, -1268, -1322, -1228, -906, -914, -310, -1061, -1470 ]
         },
         
+        {
+            name: "Exit! Whitebeard Pirates",
+            thumb: 1509,
+            condition: "You can only bring PSY units",
+            "All Difficulties": [ 1509, 1510, 1511, 1512, -1001, -1316, -1280, -314, -908, -16, -1446, -1370, -1368, -816 ],
+        },
+        
     ],
 
             
@@ -1479,6 +1507,7 @@ window.drops = {
         
         {
             name: 'Clash!! Sabo',
+            global: true,
             thumb: 1047,
             Ultimate: [ 1046 ],
             Master: [ 1046 ],
@@ -1556,10 +1585,12 @@ window.drops = {
         },
         
         {
-            name: 'Valentines Day Characters',
+            name: 'Valentines Day and White Day Characters',
             thumb: 1463,
             "Luffy": [ 1462, 29, 563, 1059, 345, 192, 113, 108, 115, 116, 117, 1180, 266, 94, 83 ],
             "Chopper": [ 1464, 1155, 333, 334, 728, 1061, 83, 94, 115, 116, 117, 266, 1180, 109, 114, 193, 346 ],
+            "Sanji": [ 1507, 52, 207, 892, 343, 190, 111, 106, 115, 116, 117, 1180, 266, 94, 83 ],
+            "Brook": [  ],
         },
         
         {

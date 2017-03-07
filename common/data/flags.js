@@ -1015,6 +1015,8 @@ window.flags = {
     1039: { global: 1 },
     1044: { rr: 1, rro: 1, global: 1 },
     1045: { rr: 1, rro: 1, global: 1 },
+    1046: { global: 1 },
+    1047: { global: 1 },
     1048: { global: 1 },
     1049: { global: 1 },
     1050: { global: 1 },
@@ -1302,4 +1304,6 @@ window.flags = {
     1483: { rr: 1, rro: 1 },
     1484: { shop: 1 },
     1485: { shop: 1 },
+    1513: { rr: 1, rro: 1, lrr: 1 },
+    1514: { rr: 1, rro: 1, lrr: 1 },
 };
