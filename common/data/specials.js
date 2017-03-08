@@ -1756,6 +1756,12 @@ window.specials = {
         atk: function(p) { return p.unit.class.has("Shooter") ? 1.5 : 1; },
         type: "class"
     },
+    1295: {
+        def: function(p) { return 0; }
+    },
+    1296: {
+        def: function(p) { return 0; }
+    },
     1297: {
         affinity: function(p){ return p.unit.type == "STR" ? 1.75 : 1; }
     },
@@ -2167,6 +2173,12 @@ window.specials = {
     1460: {
         atk: function(p) { return p.defenseDown ? 1.5 : 1; },
         type: "condition"
+    },
+    1466: {
+        def: function(p) { return 0; }
+    },
+    1467: {
+        def: function(p) { return 0; }
     },
     1476: {
         atk: function(p) {

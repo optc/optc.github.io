@@ -7440,7 +7440,7 @@ window.details = {
         specialNotes: "#{orb : 1.75x}",
     },
     1390: {//Buggy Legend
-        captain: "Boosts ATK of characters with cost 40 or less by 1.5x and reduces the HP and ATK of characters with cost 41 and greater by 0.5x. Gurantees duplicating a drop upon completion of the island.",
+        captain: "Boosts ATK of characters with cost 40 or less by 1.5x and boosts the HP and ATK of characters with cost 41 or greater by 0.5x. Gurantees duplicating a drop upon completion of the island.",
         captainNotes: "Does not work if he was not your captain upon starting the island. Stacks with other addional drop captains, giving you two chances of getting an extra drop.",
         special: "Randomizes all orbs. Boosts ATK of characters with cost 40 or less by 1.75x for 2 turns",
         specialName: "Chop-Chop Clown Car",
@@ -7942,41 +7942,41 @@ window.details = {
         special: "Deals 11x character's ATK in [QCK] damage to one enemy, boosts ATK of [QCK] characters by 1.5x for 1 turn",
         specialName: "Demoltion: Ice Crush",
     },
-    1462: {//Valentines Day Luffy
+    1462: {//White Day Luffy
         captain: "Boosts chain multiplier by 2x",
         special: "Reduces crew's current HP by 50%, cuts the current HP of each enemy by 20%, and makes [PSY] and [STR] orbs \"beneficial\" to Fighter characters",
         sailor: "Reduces Paralysis for 2 turns for himself",
         specialName: "Gum-Gum Gigant Axe - Sweets",
     },
-    1463: {//Valentines Day Luffy
+    1463: {//White Day Luffy
         captain: "Boosts chain multiplier by 2.5x",
         special: "Reduces crew's current HP by 50%, cuts the current HP of each enemy by 20%, and makes [PSY] and [STR] orbs \"beneficial\" to Fighter characters",
         sailor: "Reduces Paralysis for 2 turns for himself",
         specialName: "Gum-Gum Gigant Axe - Sweets",
     },
-    1464: {//Valentines Day Chopper
+    1464: {//White Day Chopper
         captain: "Protects from defeat as long as HP is above ???%",
         captainNotes: "#{zombie}",
         special: "Recovers 6x character's RCV in HP and reduces Paralysis duration by 2 turns",
         sailor: "Boosts amount healed from [RCV] orbs by 100 each",
         specialName: "Devoted Healing - \"Instant Recovery\"",
     },
-    1465: {//Valentines Day Chopper
+    1465: {//White Day Chopper
         captain: "Boosts ATK and RCV of all characters by 1.25x, protects from defeat as long as HP is above ???%",
         captainNotes: "#{zombie}",
         special: "Recovers 6x character's RCV in HP and reduces Paralysis duration by 2 turns",
         sailor: "Boosts amount healed from [RCV] orbs by 100 each",
         specialName: "Devoted Healing - \"Instant Recovery\"",
     },
-    1466: {//Secret Cavendish
+    1466: {//White Day Cavendish
         captain: "Boosts ATK of [QCK] and [PSY] characters by 2x",
         special: "Reduces the defense of all enemies by 100% for 1 turn. changes own orb into [PSY] and friend captain's orb into [STR]",
-        specialName: "Cavendish Special",
+        specialName: "Rosy Pleasure",
     },
-    1467: {//Secret Cavendish
+    1467: {//White Day Cavendish
         captain: "Boosts ATK of [QCK] and [PSY] characters by 2.25x and their RCV by 1.3x",
         special: "Reduces the defense of all enemies by 100% for 1 turn. changes own orb into [PSY] and friend captain's orb into [STR]",
-        specialName: "Cavendish Special",
+        specialName: "Rosy Pleasure",
     },
     1468: {//Fortnight Sentomaru 
         captain: "Boosts ATK of [STR] characters by 1.75x and the HP of Powerhouse characters by 1.2x",
