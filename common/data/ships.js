@@ -287,7 +287,7 @@ window.ships = [
     { //23
         name: 'Polar Tang',
         thumb: 'ship_0024_c.png',
-        description: 'Boosts ATK of Slashers and Free Spirit characters by 1.5x and their HP by 1.25x. Special: Heals for 10k when low HP (cooldown MAX: 18 turns)',
+        description: 'Boosts ATK of Slashers and Free Spirit characters by 1.5x and their HP by 1.25x. Makes Perfects easier to Hit. Special: Heals for 10k when under 20% HP. (cooldown MAX: 18 turns)',
         atk: function(p) {
             return !(p.unit.class.has('Slasher') || p.unit.class.has('Free Spirit')) ? 1 : [ 1.3, 1.3, 1.3, 1.3, 1.3, 1.3, 1.4, 1.4, 1.4, 1.5 ][p.boatLevel - 1];
         },

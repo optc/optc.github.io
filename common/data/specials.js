@@ -1992,7 +1992,7 @@ window.specials = {
             window.specials[1403].turnedOn = true;
             window.specials[1403].multiplier = [3.16, 4][n];
             p.scope.notify({
-                text: 'Only affects damage is Luffy is your captain, and each Luffy only boosts his own Captain damage. Using the ' + [10, 16][n] + 'x Captain boost. To switch to the ' + [10, 16][n] + 'x Captain boost, disable and re-enable this special',
+                text: 'Only affects damage if Luffy is your captain, and each Luffy only boosts his own Captain damage. Using the ' + [10, 16][n] + 'x Captain boost. To switch to the ' + [10, 16][n] + 'x Captain boost, disable and re-enable this special',
                 name: '1403warning'
             });
         },
@@ -2007,7 +2007,7 @@ window.specials = {
             window.specials[1404].turnedOn = true;
             window.specials[1404].multiplier = [3.16, 4][n];
             p.scope.notify({
-                text: 'Only affects damage is Luffy is your captain, and each Luffy only boosts his own Captain damage. Toggle to change between effective captain boosts. Using the ' + [10, 16][n] + 'x Captain boost. To switch to the ' + [10, 16][n] + 'x Captain boost, disable and re-enable this special',
+                text: 'Only affects damage if Luffy is your captain, and each Luffy only boosts his own Captain damage. Toggle to change between effective captain boosts. Using the ' + [10, 16][n] + 'x Captain boost. To switch to the ' + [10, 16][n] + 'x Captain boost, disable and re-enable this special',
                 name: '1404warning'
             });
         },
