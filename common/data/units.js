@@ -1513,6 +1513,8 @@ window.units = [
     [ "Kingdew, Whitebeard 11th Div. Commander", "STR", [ "Powerhouse", "Fighter" ], 4, 25, 6, 3, 99, 3000000, 45, 60, 26, 2119, 1311, 160, 1 ],
     [ "Anniversary Sanji", "DEX", [ "Fighter", "Powerhouse" ], 4, 13, null, 2, null, null, null, null, null, null, null, null, null ],
     [ "Anniversary Sanji, Evolved", "DEX", [ "Fighter", "Powerhouse" ], 5, 20, 7, 4, 99, null, null, null, null, 1858, 1157, 332, null ],
+    [ "Break Time Brook", "STR", [ "Slasher", "Free Spirit" ], 4, 12, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Brook's Tea Party", "STR", [ "Slasher", "Free Spirit" ], 5, 20, null, null, null, null, null, null, null, null, null, null, null ],
     ];
     
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],

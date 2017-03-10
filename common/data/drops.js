@@ -716,7 +716,7 @@ window.drops = {
             thumb: 39,
             global: true,
             condition: "None",
-            Expert: [ 36, 37, 38, 99, 109, 114, -4 ],
+            Expert: [ 36, 37, 38, 99, 109, 114, -4, -1387 ],
             Elite: [ 36, 37, 38, 99, 109, 114, -3 ]
         },
 
@@ -725,7 +725,7 @@ window.drops = {
             thumb: 30,
             global: true,
             condition: "None",
-            Expert: [ 28, 29, 31, 40, 84, 95, 110, 117, -30, -21, -8 ],
+            Expert: [ 28, 29, 31, 40, 84, 95, 110, 117, -30, -21, -8, -1388 ],
             Elite: [ 28, 29, 31, 40, 95, 105, 110, -21, -7 ]
         },
 
@@ -734,7 +734,7 @@ window.drops = {
             thumb: 46,
             global: true,
             condition: "None",
-            Expert: [ 41, 42, 43, 45, -16 ],
+            Expert: [ 41, 42, 43, 45, -16, -1446 ],
             Elite: [ 41, 42, 43, 45, 96, 106, 111, -15 ]
         },
 
@@ -743,7 +743,7 @@ window.drops = {
             thumb: 66,
             global: true,
             condition: "None",
-            Expert: [ 61, 62, 63, 65, 89, 95, 105, 110, -12, -66 ],
+            Expert: [ 61, 62, 63, 65, 89, 95, 105, 110, -12, -66, -1389 ],
             Elite: [ 61, 62, 63, 65, 95, 105, 110, -11 ]
         },
 
@@ -858,7 +858,7 @@ window.drops = {
             condition: 'You can only get STR, QCK, INT and Food Orbs',
             challenge: 'Total number of hits over 50,000',
             challengeData: [['3 Times','1x Green Elder'],['12 Times','1x RCV Cotton Candy'],['25 Times','3x Rainbow Gems']],
-            "All Difficulties": [ 391, 393, 394, -394, -393, -329, -316, -47, -34, -4 ]
+            "All Difficulties": [ 391, 393, 394, -394, -393, -329, -316, -47, -34, -4, -1387 ]
         },
 
         {
@@ -866,7 +866,7 @@ window.drops = {
             thumb: 405,
             global: true,
             condition: 'You can only get QCK, DEX, PSY and Food Orbs',
-            "All Difficulties": [ 404, 406, 407, -407, -406, -333, -312, -208, -26, -20 ]
+            "All Difficulties": [ 404, 406, 407, -407, -406, -333, -312, -208, -26, -20, -1447 ]
         },
 
         {
@@ -874,7 +874,7 @@ window.drops = {
             thumb: 420,
             global: true,
             condition: "None",
-            "All Difficulties": [ 36, 37, 47, 48, 49, 50, 51, 59, 63, 211, 233, 420, 421, 422, -422, -332, -308, -225, -206, -204, -8 ]
+            "All Difficulties": [ 36, 37, 47, 48, 49, 50, 51, 59, 63, 211, 233, 420, 421, 422, -422, -332, -308, -225, -206, -204, -8, -1388 ]
         },
 
         {
@@ -934,7 +934,7 @@ window.drops = {
             condition: '30: Non-Shooter, Evolver, or Booster class characters are weakend; 15: Fighter and Slasher class characters are weakened',
             challenge: 'Cumulative Damage dealt to enemies in a single run',
             challengeData: [['600,000 Damage','1x Yellow Elder'],['2,000,000 Damage','1x HP Cotton Candy, 1x Rainbow Gem'],['5,000,000 Damage','1x Matching Orb Forbidden Tome, 2x Rainbow Gems']],
-            "All Difficulties": [ 537, 539, 540, -539, -428, -416, -365, -257, -59 ]
+            "All Difficulties": [ 537, 539, 540, -539, -428, -416, -365, -257, -59, -1445 ]
         },
 
         {
@@ -1054,7 +1054,7 @@ window.drops = {
             global: true,
             condition: "None",
             "Japan": [ 761, 762, 763, 764, 765, -610, -588, -565, -556, -426, -408, -261, -217, -1210, -1413 ],
-            "Global": [ 761, 762, 763, 764, 765, -426, -408, -332, -308, -292, -261, -217, -8, -1413 ]
+            "Global": [ 761, 762, 763, 764, 765, -426, -408, -332, -308, -292, -261, -217, -8, -1413, -1388 ]
         },
 
         {
@@ -1082,8 +1082,8 @@ window.drops = {
             thumb: 808,
             global: true,
             condition: 'You can only bring Slasher and Cerebral units. (No Evolution/Booster)',
-            "Japan": [ 807, 809, 811, -811, -645, -641, -631, -502, -11, -12, -9 ],
-            "Global": [ 807, 809, 811, -811, -760, -675, -631, -502, -11, -12, -9 ],
+            "Japan": [ 807, 809, 811, -811, -645, -641, -631, -502, -11, -12, -9, -1389 ],
+            "Global": [ 807, 809, 811, -811, -760, -675, -631, -502, -11, -12, -9, -1389 ],
         },
 
         {
@@ -1104,7 +1104,8 @@ window.drops = {
             condition: 'You can only bring Shooter and Driven units. (No Evo/Boosters)',
             challenge: 'Cumulative Damage dealt to enemies in a single run',
             challengeData: [['400,000 Damage','1x QCK Elder Turtle'],['1,400,000 Damage','1x ATK Cotton Candy, 1x Rainbow Gem'],['4,000,000 Damage','2x Rainbow Gems, 1x Despair Resistance Forbidden Tome']],
-            "All Difficulties": [ 328, 330, 331, 333, 851, 853, 854, -854, -649, -643, -614, -463, -457, -327, -22 ]
+            "Japan": [ 328, 330, 331, 333, 851, 853, 854, -854, -649, -643, -614, -463, -457, -327, -22, -1448 ],
+            "Global": [ 328, 330, 331, 333, 851, 853, 854, -854, -649, -754, -614, -463, -457, -327, -22, -1448 ]
         },
 
         {
@@ -1120,7 +1121,7 @@ window.drops = {
             name: "Riverside Banquet! Enter the Crazy Ones!",
             thumb: 885,
             condition: 'Highly increased chance of TND, Bomb, and G orbs',
-            "All Difficulties": [ 885, 886, 887, -887, -704, -703, -677, -675, -504, -453, -416 ]
+            "All Difficulties": [ 885, 886, 887, -887, -704, -703, -677, -675, -504, -453, -416, -1445 ]
         },
 
         {
@@ -1286,7 +1287,7 @@ window.drops = {
             name: "Tontatta Kingdom Island Part 1: Leo",
             thumb: 1328,
             condition: "Slasher characters are Silenced for 99 turns and have their ATK reduced by a variable amount. (75% on 30 stamina)",
-            "All Difficulties": [ 1327, 1329, 1330, -1085, -1127, -1131, -1058, -758, -760, -735, -4, -508 ]
+            "All Difficulties": [ 1327, 1329, 1330, -1085, -1127, -1131, -1058, -758, -760, -735, -4, -508, -1387 ]
         },
         
         {
@@ -1299,7 +1300,7 @@ window.drops = {
         {
             name: "Big Mom Pirates!",
             thumb: 1357,
-            "All Difficulties": [ 1356, 1358, -1123, -1184, -1182, -1152, -1157, -8, -840, -736, -610 ]
+            "All Difficulties": [ 1356, 1358, -1123, -1184, -1182, -1152, -1157, -8, -840, -736, -610, -1388 ]
         },
         
         {
@@ -1312,7 +1313,7 @@ window.drops = {
             name: "Shambles! Tashigi and Smoker?!?",
             thumb: 1397,
             condition: "Your captain will be switched with your middle right character when you encounter Law.",
-            "All Difficulties": [ 1396, 1398, -1192, -1232, -1238, -844, -838, -1159, -1389, -12, -737, -257 ]
+            "All Difficulties": [ 1396, 1398, -1192, -1232, -1238, -844, -838, -1159, -1389, -12, -737, -257, -1389 ]
         },
         
         {
@@ -1502,7 +1503,7 @@ window.drops = {
             name: 'Clash!? Impostor Straw Hat Pirates',
             showManual: true,
             thumb: 989,
-            Ultimate: [ 985, 986, 987, 988, -989, -4, -8, -11, -12, -15, -16, -1446, -556, -528, -520, -554, -558, -20, -1447, -217, -709, -1115, -1177, -1175, -1210, -1208 ]
+            Ultimate: [ 985, 986, 987, 988, -989, -4, -8, -11, -12, -15, -16, -1446, -556, -528, -520, -554, -558, -20, -1447, -217, -709, -1115, -1177, -1175, -1210, -1208, -1387, -1388, -1389 ]
         },
         
         {
@@ -1566,7 +1567,7 @@ window.drops = {
             thumb: 893,
             challenge:'Total number of hits above 50,000',
             challengeData: [['6 Times','1x Forbidden Tome + 1x Red Elder'],['14 Times','1x Forbidden Tome, 1x RCV Cotton Candy, 1x Rainbow Gem'],['32 Times','1x Bind Resistance Forbidden Tome, 2x Rainbow Gems']],
-            "All Difficulties": [ -367, -316, -314, -312, -308, -259, -257, -255, -253, -251, -221, -218, -217, -210, -75, -30, -16, -1446, -15, -8 ]
+            "All Difficulties": [ -367, -316, -314, -312, -308, -259, -257, -255, -253, -251, -221, -218, -217, -210, -75, -30, -16, -1446, -15, -8, -1388 ]
         },
 
         {
@@ -1588,9 +1589,9 @@ window.drops = {
             name: 'Valentines Day and White Day Characters',
             thumb: 1463,
             "Luffy": [ 1462, 29, 563, 1059, 345, 192, 113, 108, 115, 116, 117, 1180, 266, 94, 83 ],
-            "Chopper": [ 1464, 1155, 333, 334, 728, 1061, 83, 94, 115, 116, 117, 266, 1180, 109, 114, 193, 346 ],
+            "Chopper": [ 1464, 1155, 333, 728, 334, 1061, 346, 193, 109, 114, 115, 116, 117, 1180, 266, 94, 83 ],
             "Sanji": [ 1507, 52, 207, 892, 343, 190, 111, 106, 115, 116, 117, 1180, 266, 94, 83 ],
-            "Brook": [  ],
+            "Brook": [ 1515, 342, 189, 110, 105, 115, 116, 117, 1180, 266, 94, 83 ],
         },
         
         {
@@ -1626,8 +1627,8 @@ window.drops = {
             condition: "10, 20, 30, 35 stamina difficulty. 30 and 35 Stamina has a chance of dropping the Universal Skill Book.",
             "Characters": [ 67, 69, 262, 264, 298 ],
             "Boosters and Evolvers": [ 113, 192, 350, 266, 83, 118 ],
-            "Global": [ -416, -459, -530, -217, -004, -1387, -12, -221, -1389, -77, -210, -253, -259, -310, -312, -361, -363, -414, -453, -645, -647, -752, -756, -937, -939, -991, -520, -1115, -524, -1119, -558, -1208, -1245, -25, -202, -208, -206, -502, -787, -789, -739 ],
-            "Japan": [ -416, -459, -530, -669, -1492, -578, -1121 ]
+            "Global": [ -416, -459, -530, -217, -004, -1387, -12, -221, -1389, -77, -210, -253, -259, -310, -312, -361, -363, -414, -453, -645, -647, -752, -756, -937, -939, -991, -520, -1115, -524, -1119, -558, -1208, -1245, -25, -202, -208, -206, -502, -787, -789, -739, -1445 ],
+            "Japan": [ -416, -459, -530, -669, -1492, -578, -1121, -1445 ]
         },
         
         {
