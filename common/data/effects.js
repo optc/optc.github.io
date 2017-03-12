@@ -2,7 +2,7 @@ window.effects = {
 
     // always use unique IDs, and don't ever change an ID once you've set it
     // IDs must always be greater than 0
-    // last ID used: 41
+    // last ID used: 42
     // Use p.type instead of p.unit.type here
 
     'Baroque Works (pre-v4.0)': {
@@ -299,7 +299,7 @@ window.effects = {
         description: 'Used by Christmas Law in Saga Coliseum',
         thumb: 856,
         id: 35,
-        orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 10/15 : 1); }
+        orb: function(p) { return p.orb == 2.0 ? 1.25 : (p.orb == 0.5 ? 20/25 : 1); }
     },
     
     '700k Damage Treshold Barrier': {
