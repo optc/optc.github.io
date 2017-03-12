@@ -260,7 +260,7 @@ window.effects = {
         description: 'Reduces Chain By Half',
         thumb: 1047,
         id: 30,
-        chainModifier: function(p) { return 0.5; }
+        chainModifier: function(p) { return 0.5 ; }
     },
     
     'Pirate Ship Competition! \"Dead End\" Opens!': {

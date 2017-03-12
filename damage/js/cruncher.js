@@ -483,7 +483,13 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 },1);
                 //Computing Chain Modifier from map effects
                 if (mapEffect.hasOwnProperty('chainModifier'))
+                    //chain modifier WITH chain boosting captain
+                    if(cptsWith.chainModifiers.length>0){
+                    chainModifier = Math.min(mapEffect.chainModifier(params[n])*chainModifier, chainModifier);
+                    }else{
+                    //chain modifier without chain boosting captain
                     chainModifier = Math.min(mapEffect.chainModifier(params[n]), chainModifier);
+                    }
                 var chainMultiplier = getChainMultiplier(special.chain(params[n]), modifiers.slice(0,n), chainModifier);
                 //Add flat Multiplier Bonuses if they exist
                 if(addition>0.0 && chainMultiplier != 1.0)
