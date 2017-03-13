@@ -243,6 +243,10 @@ window.zombies = {
         type: 'healer',
         multiplier: 3
     },
+    1157: {// Story Hannyabal
+        type: 'zombie',
+        threshold: 0.5
+    },
     1195: {//Colo Ganfor
         type: 'healer',
         multiplier: 2
@@ -322,6 +326,14 @@ window.zombies = {
     1456: { // Colo Don Chinjao
         type: 'healer',
         amount: 120
+    },
+    1465: { // White Day Chopper
+        type: 'zombie',
+        threshold: 0.5
+    },
+    1466: { // White Day Chopper
+        type: 'zombie',
+        threshold: 0.5
     },
     1472: { // Shirahoshi
         type: 'healer',

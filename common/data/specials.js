@@ -2174,6 +2174,10 @@ window.specials = {
         atk: function(p) { return p.defenseDown ? 1.5 : 1; },
         type: "condition"
     },
+    1461: {
+        atk: function(p) { return p.unit.type == "QCK" ? 1.5 : 1; },
+        type: "type"
+    },
     1466: {
         def: function(p) { return 0; }
     },
@@ -2223,6 +2227,14 @@ window.specials = {
                 name: '1481warning'
             });
         },
+    },
+    1484: {
+        chain: function(p) { return 2.5; },
+        chainLimiter: function(p) { return p.chainPosition > 0 ? 2.5 : 1.0; }
+    },
+    1485: {
+        chain: function(p) { return 2.5; },
+        chainLimiter: function(p) { return p.chainPosition > 0 ? 2.5 : 1.0; }
     },
     1486: {
         orb: function(p) { return (p.unit.class.has("Fighter")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, 1, 2) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, 1, 1); }	

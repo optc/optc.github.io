@@ -5775,7 +5775,7 @@ window.details = {
         specialNotes: "#{zombie}",
     },
     1157: {
-        captain: "Boosts ATK of Driven and Striker characters by 1.75x if HP is above 50% at the start of the turn",
+        captain: "Boosts ATK of Driven and Striker characters by 1.75x and protects from defeat as long as HP is above 50% at the start of the turn",
         special: "Removes poison. Protects from defeat as long as HP is above 50% for 1 turn",
         specialName: "Abyss Road",
         specialNotes: "#{zombie}",
@@ -7955,14 +7955,14 @@ window.details = {
         specialName: "Gum-Gum Gigant Axe - Sweets",
     },
     1464: {//White Day Chopper
-        captain: "Protects from defeat as long as HP is above ???%",
+        captain: "Protects from defeat as long as HP is above 50%",
         captainNotes: "#{zombie}",
         special: "Recovers 6x character's RCV in HP and reduces Paralysis duration by 2 turns",
         sailor: "Boosts amount healed from [RCV] orbs by 100 each",
         specialName: "Devoted Healing - \"Instant Recovery\"",
     },
     1465: {//White Day Chopper
-        captain: "Boosts ATK and RCV of all characters by 1.25x, protects from defeat as long as HP is above ???%",
+        captain: "Boosts ATK and RCV of all characters by 1.25x, protects from defeat as long as HP is above 50%",
         captainNotes: "#{zombie}",
         special: "Recovers 6x character's RCV in HP and reduces Paralysis duration by 2 turns",
         sailor: "Boosts amount healed from [RCV] orbs by 100 each",
@@ -8007,11 +8007,11 @@ window.details = {
         special: [
             {
                 "description": "Changes adjacent orbs (including [BLOCK] orbs) into [RAINBOW] orbs, recovers 9x character's RCV in HP.",
-                "cooldown": [ 13, null ],
+                "cooldown": [ 13, 9 ],
             },
             {
                 "description": "Changes all orbs (including [BLOCK] orbs) into [RAINBOW] orbs, recovers 100x character's RCV in HP.",
-                "cooldown": [ 22, null ],
+                "cooldown": [ 22, 18 ],
             },
         ],
         specialNotes: "Rainbow orbs are the benefittial form of [BLOCK] orbs. They can not be shuffled or swapped by you or your opponent. They count as benefittial orbs to any character. They do not count as STR orbs for Sakazuki but do act like Matching orbs for Black Clad Ace or Fujitora captain abilities.",
@@ -8023,11 +8023,11 @@ window.details = {
         special: [
             {
                 "description": "Changes adjacent orbs (including [BLOCK] orbs) into [RAINBOW] orbs, recovers 9x character's RCV in HP.",
-                "cooldown": [ 13, null ],
+                "cooldown": [ 13, 9 ],
             },
             {
                 "description": "Changes all orbs (including [BLOCK] orbs) into [RAINBOW] orbs, recovers 100x character's RCV in HP.",
-                "cooldown": [ 22, null ],
+                "cooldown": [ 22, 18 ],
             },
         ],
         specialNotes: "Rainbow orbs are the benefittial form of [BLOCK] orbs. They can not be shuffled or swapped by you or your opponent. They count as benefittial orbs to any character. They do not count as STR orbs for Sakazuki but do act like Matching orbs for Black Clad Ace or Fujitora captain abilities.",
