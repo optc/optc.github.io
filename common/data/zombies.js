@@ -343,7 +343,11 @@ window.zombies = {
         type: 'healer',
         multiplier: 5
     },
-    1508: { // Tea Time Sanji
+    1508: { // White Day Sanji
+        type: 'healer',
+        multiplier: 2
+    },
+    1516: { // White Day Brook
         type: 'healer',
         multiplier: 2
     },

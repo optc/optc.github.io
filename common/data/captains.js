@@ -4352,4 +4352,10 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Fighter") ? 2.5 : 1; },
         rcv: function(p) { return p.unit.class.has("Powerhouse") ? 1.2 : 1; },
     },
+    1515: {
+        atk: function(p) { return p.unit.type == "STR" || p.unit.type == "QCK" ? 1 : 1; },
+    },
+    1516: {
+        atk: function(p) { return p.unit.type == "STR" || p.unit.type == "QCK" ? 2 : 1; },
+    },
 };

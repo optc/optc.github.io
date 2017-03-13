@@ -1513,4 +1513,6 @@ window.families = [
     "Kingdew",
     "Sanji",
     "Sanji",
+    "Brook",
+    "Brook",
 ];

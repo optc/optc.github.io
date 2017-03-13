@@ -8285,4 +8285,16 @@ window.details = {
         special: "Randomizes all orbs, including [BLOCK] orbs, reduces Special Cooldown of 1 character by 1 turn",
         specialName: "Sanji Special",
     },
+    1515: {//White Day Brook
+        captain: "Boosts ATK of [STR] and [QCK] characters by ???x",
+        special: "Cuts the current HP of each enemy by 10% and makes [RCV] orbs \"beneficial\" for all characters for 1 turn",
+        specialName: "Brook Special",
+        sailor: "Makes [RCV] orbs \"beneficial\" for this unit",
+    },
+    1516: {//White Day Brook
+        captain: "Boosts ATK of [STR] and [QCK] characters by 2x, recovers 2x character's RCV in HP at the end of each turn",
+        special: "Cuts the current HP of each enemy by 10% and makes [RCV] orbs \"beneficial\" for all characters for 1 turn",
+        specialName: "Brook Special",
+        sailor: "Makes [RCV] orbs \"beneficial\" for this unit",
+    },
 };
