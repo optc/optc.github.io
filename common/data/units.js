@@ -1490,7 +1490,7 @@ window.units = [
     [ "Don Krieg, East Blue Supreme Ruler", "STR", [ "Driven", "Shooter" ], 4, 26, 8, 3, 99, 3000000, 1200, 476, 30, 2707, 1225, 106, 1 ],
     [ "Mr. 5, Bomb Human", "QCK", "Shooter", 3, 10, 6, 2, 35, 136167, 101, 56, 21, 808, 401, 74, 1 ],
     [ "Mr. 5, Baroque Works Officer Agent", "QCK", "Shooter", 4, 20, 6, 3, 70, 1066998, 733, 325, 44, 1618, 818, 198, 1 ],
-    [ "6+ Sabo", "PSY", [ "Fighter", "Free Spirit" ], 6, 65, 4, 5, 99, 5000000, 1534, 777, 277, 3234, 1534, 452, null ],
+    [ "Sabo, True Power of the Mera Mera no Mi", "PSY", [ "Fighter", "Free Spirit" ], 6, 65, 4, 5, 99, 5000000, 1534, 777, 277, 3234, 1534, 452, 1 ],
     [ "Rough Fishman Outlaw", "STR", [ "Powerhouse", "Striker" ], 3, 12, 6, 1, 60, 449516, 73, 42, 13, 1173, 749, 143, 1 ],
     [ "Fast-paced Fishman Outlaw", "QCK", [ "Powerhouse", "Striker" ], 3, 12, 6, 1, 60, 449516, 71, 37, 16, 1167, 701, 169, 1 ],
     [ "Skilled Fishman Outlaw", "DEX", [ "Powerhouse", "Striker" ], 3, 12, 6, 1, 60, 449516, 67, 40, 15, 1143, 737, 157, 1 ],
