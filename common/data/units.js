@@ -1515,6 +1515,8 @@ window.units = [
     [ "Anniversary Sanji, Evolved", "DEX", [ "Fighter", "Powerhouse" ], 5, 20, 7, 4, 99, null, null, null, null, 1858, 1157, 332, null ],
     [ "Break Time Brook", "STR", [ "Slasher", "Free Spirit" ], 4, 12, 6, 2, 50, 392109, 124, 84, 30, null, null, null, null ],
     [ "Brook's Tea Party", "STR", [ "Slasher", "Free Spirit" ], 5, 20, 4, 3, 99, 3000000, 912, 393, 106, 2059, 1122, 247, null ],
+    [ "Raid Bellamy", "QCK", [ "Fighter", "Driven" ], 4, 30, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Raid Bellamy, Evolved", "QCK", [ "Fighter", "Driven" ], 5, 50, null, null, null, null, null, null, null, null, null, null, null ],
     ];
     
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],

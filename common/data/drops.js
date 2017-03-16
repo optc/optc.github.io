@@ -1551,6 +1551,12 @@ window.drops = {
             Master: [ 1431, 215, 799 ],
             Ultimate: [ 1431, 215, 799 ],
         },
+        {
+            name: 'Clash!! Bellamy',
+            thumb: 1518,
+            Master: [ 1517 ],
+            Expert: [ 1517 ],
+        },
 
     ],
 

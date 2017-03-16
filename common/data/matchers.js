@@ -129,6 +129,24 @@ window.matchers = [
         target: 'captain',
         matcher: /deals.+end of each turn/i
     },
+    
+    {
+        name: 'Beli Boosters',
+        target: 'captain',
+        matcher: /boosts amount of beli received/i
+    },
+    
+    {
+        name: 'EXP Boosters',
+        target: 'captain',
+        matcher: /boosts.+EXP/i
+    },
+    
+    {
+        name: 'Drop Doublers',
+        target: 'captain',
+        matcher: /duplicating a drop/i
+    },
 
     /* * * * * Specials * * * * */
 
