@@ -8298,13 +8298,13 @@ window.details = {
         sailor: "Makes [RCV] orbs \"beneficial\" for this unit",
     },
     1517: {//Raid Bellamy
-        captain: "Not Translated",
-        special: "Cuts the current HP of each enemy by 10%, makes [PSY] and [INT] orbs \"beneficial\" for all characters for 1 turn and amplifies the effect of orbs by ???x for 1 turn",
-        specialName: "Bellamy Special",
+        captain: "Boosts ATK of Driven characters by 2x",
+        special: "Cuts the current HP of each enemy by 10%, makes [PSY] and [INT] orbs \"beneficial\" for all characters for 1 turn and amplifies the effect of orbs by 1.75x for 1 turn",
+        specialName: "Spring Hopper - Bullet",
     },
     1518: {//Raid Bellamy
         captain: "Boosts ATK of Driven characters by 2.5x",
-        special: "Cuts the current HP of each enemy by 10%, makes [PSY] and [INT] orbs \"beneficial\" for all characters for 1 turn and amplifies the effect of orbs by ???x for 1 turn",
-        specialName: "Bellamy Special",
+        special: "Cuts the current HP of each enemy by 10%, makes [PSY] and [INT] orbs \"beneficial\" for all characters for 1 turn and amplifies the effect of orbs by 1.75x for 1 turn",
+        specialName: "Spring Hopper - Bullet",
     },
 };

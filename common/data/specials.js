@@ -2336,4 +2336,10 @@ window.specials = {
             });
         }
     },
+    1517: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, 1, 1.75); }
+    },
+    1518: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, 1, 1.75); }
+    },
 };

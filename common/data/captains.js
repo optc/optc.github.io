@@ -4358,4 +4358,10 @@ window.captains = {
     1516: {
         atk: function(p) { return p.unit.type == "STR" || p.unit.type == "QCK" ? 2 : 1; },
     },
+    1517: {
+        atk: function(p) { return p.unit.class.has("Driven") ? 2 : 1; },
+    },
+    1518: {
+        atk: function(p) { return p.unit.class.has("Driven") ? 2.5 : 1; },
+    },
 };

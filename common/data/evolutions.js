@@ -2329,10 +2329,22 @@ window.evolutions = {
     },
     1515: {
         evolution: 1516,
-        evolvers: [  ]
+        evolvers: [ 116, 117, 78, 84, 95 ]
     },
     1517: {
         evolution: 1518,
+        evolvers: [ 118, 79, 85, 94, 96 ]
+    },
+    1519: {
+        evolution: 1520,
+        evolvers: [  ]
+    },
+    1523: {
+        evolution: 1524,
+        evolvers: [  ]
+    },
+    1526: {
+        evolution: 1527,
         evolvers: [  ]
     },
 };
