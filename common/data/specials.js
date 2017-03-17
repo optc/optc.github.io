@@ -1703,6 +1703,24 @@ window.specials = {
         type: "condition",
         warning: "Selected special (%name%) assumes that the enemy has a defense buff active."
     },
+    1259: {
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[1259].turnedOn = true;
+        },
+        onDeactivation: function(p) {
+            window.specials[1259].turnedOn = false;
+        }
+    },
+    1260: {
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[1260].turnedOn = true;
+        },
+        onDeactivation: function(p) {
+            window.specials[1260].turnedOn = false;
+        }
+    },
     1261: {//Young Senor Pink
         affinity: function(p){ return p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 1.5 : 1; }
     },
@@ -1807,6 +1825,24 @@ window.specials = {
         atk: function(p) { return 1.5; },
         type: "condition",
         warning: "Selected special (%name%) assumes that the enemy has been delayed."
+    },
+    1323: {
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[1323].turnedOn = true;
+        },
+        onDeactivation: function(p) {
+            window.specials[1323].turnedOn = false;
+        }
+    },
+    1324: {
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[1324].turnedOn = true;
+        },
+        onDeactivation: function(p) {
+            window.specials[1324].turnedOn = false;
+        }
     },
     1329: {
         affinity: function(p){ return p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? 1.25 : 1; }

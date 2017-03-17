@@ -178,8 +178,12 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             var ship = getShipBonus('atk',false,x.unit,n), againstType = type;
             var multipliers = [ ];
             if (orb == 'g') orb = 1.5;
-            if (orb == 0.5 && x.unit.type == 'DEX' && (window.specials[1221].turnedOn || window.specials[1222].turnedOn)) orb = 2;
-            if (orb == 'str') orb = (window.specials[1221].turnedOn || window.specials[1222].turnedOn) ? 2 : 1;
+            if (orb == 0.5 && x.unit.type == 'DEX' && (window.specials[1221].turnedOn || window.specials[1222].turnedOn 
+                                 || (window.specials[1259].turnedOn && x.unit.class.has("Driven")) || (window.specials[1260].turnedOn && x.unit.class.has("Driven")) 
+                                 || (window.specials[1323].turnedOn && (x.unit.class.has("Driven") || x.unit.class.has("Slasher")))||(window.specials[1324].turnedOn && (x.unit.class.has("Driven") || x.unit.class.has("Slasher"))))) orb = 2;
+            if (orb == 'str') orb = (window.specials[1221].turnedOn || window.specials[1222].turnedOn 
+                                 || (window.specials[1259].turnedOn && x.unit.class.has("Driven")) || (window.specials[1260].turnedOn && x.unit.class.has("Driven")) 
+                                 || (window.specials[1323].turnedOn && (x.unit.class.has("Driven") || x.unit.class.has("Slasher")))|| (window.specials[1324].turnedOn && (x.unit.class.has("Driven") || x.unit.class.has("Slasher")))) ? 2 : 1;
             if (orb == 'rainbow') orb = 2;
             atk += getShipBonus('atk',true,x.unit,n);
             multipliers.push([ orb, 'orb' ]); // orb multiplier (fixed)
@@ -465,6 +469,9 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
 
     var applyChainAndBonusMultipliers = function(damage,modifiers) {
         var currentMax = -1, currentResult = null, addition = 0.0;
+        if(shipBonus.bonus.name=="Doflamingo Ship - Special ACTIVATED"){
+            addition = 0.2
+        }
 
         //get the highest Chain Addition if it exists
         chainAddition.forEach(function(special){
@@ -693,14 +700,17 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if (data.orb) enabledSpecials.push({ orb: data.orb, permanent: true, sourceSlot: -1 });
             if (data.chainModifier) mapEffect.chainModifier = data.chainModifier;
             if (data.chainLimiter) mapEffect.chainLimiter = data.chainLimiter;
-            if (data.comboShield) mapEffect.comboShield = data.comboShield;
-            if (data.comboType) mapEffect.comboType = data.comboType;
+            if ($scope.data.comboShield) mapEffect.comboShield = $scope.data.comboShield;
+            if ($scope.data.comboType) mapEffect.comboType = $scope.data.comboType;
             if (data.damage) mapEffect.damage = data.damage;
             if (data.barrierThreshold) {
                 mapEffect.barrierThreshold = data.barrierThreshold;
                 mapEffect.barrierReduction = data.barrierReduction;
             }
         }
+        if ($scope.data.comboShield) mapEffect.comboShield = $scope.data.comboShield;
+        if ($scope.data.comboType) mapEffect.comboType = $scope.data.comboType;
+        
         // team
         team = $scope.data.team.map(function(x,n) {
             if (!$scope.tdata.team[n] || $scope.tdata.team[n].removed)
@@ -866,6 +876,27 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         }
         if (shipBonus.bonus && shipBonus.bonus.heal)
             healAmount += shipBonus.bonus.heal({ boatLevel: shipBonus.level, classCount: classCounter() });
+        console.log($scope.data.healLevel);
+        switch($scope.data.healLevel){
+            case "0":
+                break;
+            case "1":
+                healAmount += 100;
+                break;
+            case "2":
+                healAmount += 200;
+                break;
+            case "3":
+                healAmount += 300;
+                break;
+            case "4":
+                healAmount += 500;
+                break;
+            case "5":
+                healAmount += 1000;
+                break;
+            
+        }
         // get heal per turn
         if (healAmount > 0) numbers.healPerTurn = healAmount;
         else return; // nothing to do if there's no healer
