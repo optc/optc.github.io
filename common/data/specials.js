@@ -2241,26 +2241,26 @@ window.specials = {
         type: "type"
     },
     1482: {
-        atk: function(p) { return window.specials[1480].multiplier; },
+        atk: function(p) { return window.specials[1482].multiplier; },
         type: "class",
         onActivation: function(p) {
-            var n = (window.specials[1480].multiplier == 1.5 ? 1 : 0);
-            window.specials[1480].multiplier = [1.25, 1.75][n];
+            var n = (window.specials[1482].multiplier == 1.25 ? 1 : 0);
+            window.specials[1482].multiplier = [1.25, 1.75][n];
             p.scope.notify({
                 text: 'Using the ' + [1.25, 1.75][n] + 'x ATK multiplier. To switch to the ' + [1.75, 1.25][n] + 'x multiplier, disable and re-enable this special',
-                name: '1480warning'
+                name: '1482warning'
             });
         },
     },
     1483: {
-        atk: function(p) { return window.specials[1481].multiplier; },
+        atk: function(p) { return window.specials[1483].multiplier; },
         type: "class",
         onActivation: function(p) {
-            var n = (window.specials[1481].multiplier == 1.5 ? 1 : 0);
-            window.specials[1481].multiplier = [1.25, 1.75][n];
+            var n = (window.specials[1483].multiplier == 1.25 ? 1 : 0);
+            window.specials[1483].multiplier = [1.25, 1.75][n];
             p.scope.notify({
                 text: 'Using the ' + [1.25, 1.75][n] + 'x ATK multiplier. To switch to the ' + [1.75, 1.25][n] + 'x multiplier, disable and re-enable this special',
-                name: '1481warning'
+                name: '1483warning'
             });
         },
     },
@@ -2341,5 +2341,60 @@ window.specials = {
     },
     1518: {
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, 1, 1.75); }
+    },
+    1522: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 1.75 : 1; },
+        type: "type",
+    },
+    1525: {
+        atk: function(p) { return 1.3; },
+        type: "condition",
+        warning: "Selected special (%name%) assumes that the enemy has been delayed."
+    },
+    1526: {
+        atk: function(p) { return p.slot < 2 ? window.specials[1526].multiplier : 1; },
+        type: "class",
+        onActivation: function(p) {
+            var n = (window.specials[1526].multiplier == 1.5 ? 1 : 0);
+            window.specials[1526].multiplier = [1.5, 1.75][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.5, 1.75][n] + 'x ATK multiplier. To switch to the ' + [1.75, 1.5][n] + 'x multiplier, disable and re-enable this special',
+                name: '1526warning'
+            });
+        },
+    },
+    1527: {
+        atk: function(p) { return p.slot < 2 ? window.specials[1527].multiplier : 1; },
+        type: "class",
+        onActivation: function(p) {
+            var n = (window.specials[1527].multiplier == 1.5 ? 1 : 0);
+            window.specials[1527].multiplier = [1.5, 1.75][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.5, 1.75][n] + 'x ATK multiplier. To switch to the ' + [1.75, 1.5][n] + 'x multiplier, disable and re-enable this special',
+                name: '1527warning'
+            });
+        },
+    },
+    1529: {
+        orb: function(p) { return (p.unit.class.has("Slasher")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, 1, window.specials[1529].multiplier) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, 1, 1); },
+        onActivation: function(p) {
+            var n = (p.percHP >= 99 ? 2.25 : 2);
+            window.specials[1529].multiplier = n;
+            p.scope.notify({
+                text: 'HP ' + (n == 2.25 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
+                name: '1529warning'
+            });
+        }
+    },
+    1530: {
+        orb: function(p) { return (p.unit.class.has("Slasher")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, 1, window.specials[1530].multiplier) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, 1, 1); },
+        onActivation: function(p) {
+            var n = (p.percHP >= 99 ? 2.25 : 2);
+            window.specials[1530].multiplier = n;
+            p.scope.notify({
+                text: 'HP ' + (n == 2.25 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
+                name: '1530warning'
+            });
+        }
     },
 };

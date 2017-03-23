@@ -4364,4 +4364,47 @@ window.captains = {
     1518: {
         atk: function(p) { return p.unit.class.has("Driven") ? 2.5 : 1; },
     },
+    1519: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; },
+    },
+    1520: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? 2 : 1; },
+    },
+    1521: {
+        atk: function(p) { 
+            return p.unit.class.has("Slasher") && p.unit.type == "QCK" ? 1.44 :
+                p.unit.class.has("Slasher") || p.unit.type == "QCK" ? 1.2 :
+                1;
+        }
+    },
+    1522: {
+        atk: function(p) { return p.unit.type == "DEX" ? 1.75 : 1; },
+        hp: function(p) { return p.unit.type == "DEX" ? 1.2 : 1; }
+    },
+    1523: {
+        atk: function(p) { return p.unit.type == "PSY" ? 1.75 : 1; },
+    },
+    1524: {
+        atk: function(p) { return p.unit.type == "PSY" ? 2.25 : 1; },
+    },
+    1525: {
+        atk: function(p) {
+            return p.unit.class.has("Slasher") ? Math.max(1.0, 3.25 - 0.1 * p.turnCounter) : 1;
+        }
+    },
+    1526: {
+        atk: function(p) { return p.unit.type == "PSY" ? 1.75 : 1; },
+    },
+    1527: {
+        atk: function(p) { return p.unit.type == "PSY" ? 2 : 1; },
+    },
+    1528: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 2.25 : 1; },
+    },
+    1529: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 3 : 1.5; }  
+    },
+    1530: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 3.5 : 1.75; }  
+    },
 };

@@ -4606,13 +4606,13 @@ window.details = {
     975:{
         captain: "Reduces damage received by 10%",
         specialName: "A Threat That Puts Adults to Shame",
-        special: "Boosts the ATK of Striker and Driven characters by 1.3x for 1 turn. Protects from defeat as long as HP is above 50% for 1 turn",
+        special: "Boosts ATK of Striker and Driven characters by 1.3x for 1 turn. Protects from defeat as long as HP is above 50% for 1 turn",
         specialNotes: "#{zombie}"
     },
     976:{
         captain: "Boosts ATK of Driven characters by 2x. Reduces damage received by 10%",
         specialName: "A Threat That Puts Adults to Shame",
-        special: "Boosts the ATK of Striker and Driven characters by 1.3x for 1 turn. Protects from defeat as long as HP is above 50% for 1 turn",
+        special: "Boosts ATK of Striker and Driven characters by 1.3x for 1 turn. Protects from defeat as long as HP is above 50% for 1 turn",
         specialNotes: "#{zombie}"
     },
     977:{
@@ -6424,7 +6424,7 @@ window.details = {
         captainNotes: "1x Powerhouse: .5x RCV | 2x Powerhouse: .75x RCV | 3x Powerhouse: 1x RCV | 4x Powerhouse: 1.5x RCV | 5x Powerhouse: 2x RCV | 6x Powerhouse: 2.5x RCV",
         special: [
             {
-                "description": "Randomizes all orbs, and boosts the ATK of Powerhouse characters by 1.5x for 1 turn",
+                "description": "Randomizes all orbs, and boosts ATK of Powerhouse characters by 1.5x for 1 turn",
                 "cooldown": [ 21, 6 ],
             },
             {
@@ -6439,7 +6439,7 @@ window.details = {
         captainNotes: "1x Powerhouse: .5x RCV | 2x Powerhouse: .75x RCV | 3x Powerhouse: 1x RCV | 4x Powerhouse: 1.5x RCV | 5x Powerhouse: 2x RCV | 6x Powerhouse: 2.5x RCV",
         special: [
             {
-                "description": "Randomizes all orbs, and boosts the ATK of Powerhouse characters by 1.5x for 1 turn",
+                "description": "Randomizes all orbs, and boosts ATK of Powerhouse characters by 1.5x for 1 turn",
                 "cooldown": [ 21, 6 ],
             },
             {
@@ -6551,23 +6551,23 @@ window.details = {
     },
     1265: {//Kimono Ace
         captain: "Boosts ATK of Shooter characters by 2x",
-        special: "Recovers 3,000 HP and boosts the ATK of Free Spirit characters by 1.75x for 1 turn",
+        special: "Recovers 3,000 HP and boosts ATK of Free Spirit characters by 1.75x for 1 turn",
         specialName: "Looking to the Full Moon",
     },
     1266: {//Kimono Ace Evo
         captain: "Boosts ATK of Shooter characters by 2.5x",
-        special: "Recovers 3,000 HP and boosts the ATK of Free Spirit characters by 1.75x for 1 turn",
+        special: "Recovers 3,000 HP and boosts ATK of Free Spirit characters by 1.75x for 1 turn",
         specialName: "Looking to the Full Moon",
     },
     1267: {//Legend Blackbeard
-        captain: "Boosts the ATK of all characters by 2.75x and their HP by 1.5x if you have a Striker, Shooter, Fighter, and Slasher on your crew. Attacks will ignore defensive barriers and buffs.",
+        captain: "Boosts ATK of all characters by 2.75x and their HP by 1.5x if you have a Striker, Shooter, Fighter, and Slasher on your crew. Attacks will ignore defensive barriers and buffs.",
         captainNotes: "Attacks are still affected by DEF value. DEF boost buffs (Blue shield) still reduce your damage, but Damage Negating (Yellow shield) and % Damage Reduction (Rainbow shield) are ignored). Multiple class characters count as a character of each class. Enemy attacks will go through YOUR defensive buffs.",
         special: "Cuts the current HP of each enemy by 30%. If Blackbeard is a captain, this ability will ignore damage negating abilities and barriers",
         specialNotes: "If Blackbeard is not a captain, the effect works exactly like Whitebeard special and is affected by barriers.",
         specialName: "World Shaking Impact",
     },
     1268: {//Legend Blackbeard
-        captain: "Boosts the ATK of all characters by 2.75x and their HP by 1.5x if you have a Striker, Shooter, Fighter, and Slasher on your crew. Attacks will ignore defensive barriers and buffs.",
+        captain: "Boosts ATK of all characters by 2.75x and their HP by 1.5x if you have a Striker, Shooter, Fighter, and Slasher on your crew. Attacks will ignore defensive barriers and buffs.",
         captainNotes: "Attacks are still affected by DEF value. DEF boost buffs (Blue shield) still reduce your damage, but Damage Negating (Yellow shield) and % Damage Reduction (Rainbow shield) are ignored). Multiple class characters count as a character of each class. Enemy attacks will go through YOUR defensive buffs.",
         special: "Cuts the current HP of each enemy by 30%. If Blackbeard is a captain, this ability will ignore damage negating abilities and barriers",
         specialNotes: "If Blackbeard is not a captain, the effect works exactly like Whitebeard special and is affected by barriers.",
@@ -6659,7 +6659,7 @@ window.details = {
     },
     1282: {//Marineford Sengoku
         captain: "Boosts ATK of Cerebral characters by 2.5x",
-        special: "Reduces cooldown of all specials by 1 turn. Boosts the ATK of all characters by 1.2x and amplifies the effect of orbs by 1.2x for 1 turn",
+        special: "Reduces cooldown of all specials by 1 turn. Boosts ATK of all characters by 1.2x and amplifies the effect of orbs by 1.2x for 1 turn",
         specialName: "Encircling Wall around Marineford Bay",
     },
     1283: {//Marineford Akainu
@@ -6922,13 +6922,13 @@ window.details = {
         specialName: "A Decree of the Veteran",
     },
     1321: {//Momonga
-        captain: "Boosts the ATK of Cerebral and Slasher characters by 2.25x and reduces damage received by 10% if there's a [STR], [DEX], [QCK], [INT], and [PSY] character on your crew.",
+        captain: "Boosts ATK of Cerebral and Slasher characters by 2.25x and reduces damage received by 10% if there's a [STR], [DEX], [QCK], [INT], and [PSY] character on your crew.",
         special: "Deals 15x character's ATK as [DEX] damage to all enemies. Boosts ATK against delayed enemies by 1.5x for 2 turns",
         specialName: "Front Line Dissection",
         sailor: "Boosts ATK of Slasher and Cerebral characters by 75 if your captain is a Cerebral character",
     },
     1322: {//Momonga
-        captain: "Boosts the ATK of Cerebral and Slasher characters by 2.5x and reduces damage received by 10% if there's a [STR], [DEX], [QCK], [INT], and [PSY] character on your crew.",
+        captain: "Boosts ATK of Cerebral and Slasher characters by 2.5x and reduces damage received by 10% if there's a [STR], [DEX], [QCK], [INT], and [PSY] character on your crew.",
         special: "Deals 15x character's ATK as [DEX] damage to all enemies. Boosts ATK against delayed enemies by 1.5x for 2 turns",
         specialName: "Front Line Dissection",
         sailor: "Boosts ATK of Slasher and Cerebral characters by 75 if your captain is a Cerebral character",
@@ -7459,7 +7459,7 @@ window.details = {
     },
     1393: {//Demaro Black
         captain: "Boosts ATK of characters with cost 30 or less by 2x",
-        special: "Boosts the ATK of all characters by 1.1x, slightly boosts chances of getting matching orbs and amplifies the effect of orbs by 1.1x for 7 turns",
+        special: "Boosts ATK of all characters by 1.1x, slightly boosts chances of getting matching orbs and amplifies the effect of orbs by 1.1x for 7 turns",
         specialName: "Three Forked Tongue",
     },
     1394: {//Kimono Baby 5
@@ -8306,5 +8306,88 @@ window.details = {
         captain: "Boosts ATK of Driven characters by 2.5x",
         special: "Cuts the current HP of each enemy by 10%, makes [PSY] and [INT] orbs \"beneficial\" for all characters for 1 turn and amplifies the effect of orbs by 1.75x for 1 turn",
         specialName: "Spring Hopper - Bullet",
+    },
+    1519: {//Dadan
+        captain: "Reduces cooldown of all specials by 1 turns at the start of the fight. Boosts ATK of Slasher characters by 1.5x",
+        special: "Cuts the current HP of one enemy by 10%, if HP is full at the time the special was activated, changes top row orbs into matching orbs",
+        specialName: "Break by the Fireplace",
+    },
+    1520: {//Dadan
+        captain: "Reduces cooldown of all specials by 1 turns at the start of the fight. Boosts ATK of Slasher characters by 2x",
+        special: "Cuts the current HP of one enemy by 10%, if HP is full at the time the special was activated, changes top row orbs into matching orbs",
+        specialName: "Break by the Fireplace",
+    },
+    1521: {//Dogra
+        captain: "Boosts ATK of [QCK] and Slasher characters by 1.2x",
+        captainNotes: "The bonus is cumulative. [QCK] Slasher characters get a 1.44x bonus.",
+        special: "Reduces Despair duration by 1 turn, recovers 1000 HP at the end of each turn for 2 turns",
+        specialName: "Affectionate Circumstances",
+    },
+    1522: {//Ace
+        captain: "Boosts ATK of [DEX] characters by 1.75x and their HP by 1.2x",
+        special: "Removes blindness, boosts own ATK by 1.75x for 1 turn",
+        specialName: "Demon's Temper",
+    },
+    1523: {//Spring Chopper
+        captain: "Boosts ATK of [PSY] characters by 1.75x and recovers 1,000 HP at end of each turn",
+        special: "Changes top row orbs into matching orbs, changes any other [BLOCK] or Badly Matching orbs into [G] orbs",
+        specialName: "The Life Risked for the 'Sakura' Miracle",
+    },
+    1524: {//Spring Chopper
+        captain: "Boosts ATK of [PSY] characters by 2.25x and recovers 1,224 HP at end of each turn",
+        special: "Changes top row orbs into matching orbs, changes any other [BLOCK] or Badly Matching orbs into [G] orbs",
+        specialName: "The Life Risked for the 'Sakura' Miracle",
+    },
+    1525: {//Sulieman
+        captain: "Boosts ATK of Slashers characters by 3.25x, reduces his own ATK multiplier by ???x at the end of each turn",
+        special: "Deals 3 hits of random typeless damage to random enemies, delays all enemies for 1 turn, boosts ATK against delayed enemies by 1.3x for 2 turns",
+        specialNotes: "#{randomHits : 10}",
+        specialName: "Sorrowful Execution",
+    },
+    1526: {//Arlong
+        captain: "Boosts ATK of [INT] characters by 1.75x",
+        special: [
+            {
+                "description": "Reduces Special Cooldown of your top row by 1 turn, boosts ATK of the characters in the top row by 1.5x for 1 turn",
+                "cooldown": [ 16, 7 ],
+            },
+            {
+                "description": "Reduces Special Cooldown of your top row by 1 turn, boosts ATK of the characters in the top row by 1.75x for 1 turn",
+                "cooldown": [ 21, 12 ],
+            },
+        ],
+        specialName: "Arlong Special",
+    },
+    1527: {//Arlong
+        captain: "Reduces cooldown of all specials by 1 turns at the start of the fight. Boosts ATK of [INT] characters by 2x",
+        special: [
+            {
+                "description": "Reduces Special Cooldown of your top row by 1 turn, boosts ATK of the characters in the top row by 1.5x for 1 turn",
+                "cooldown": [ 16, 7 ],
+            },
+            {
+                "description": "Reduces Special Cooldown of your top row by 1 turn, boosts ATK of the characters in the top row by 1.75x for 1 turn",
+                "cooldown": [ 21, 12 ],
+            },
+        ],
+        specialName: "Arlong Special",
+    },
+    1528: {//Blenheim
+        captain: "Boosts ATK of Powerhouse characters by 2.25x",
+        special: "Reduces Despair duration by 2 turns,  makes STR, DEX, and QCK orbs \"beneficial\" to Powerhouse characters for 1 turn if HP is below 30% at the start of the turn",
+        sailor: "Makes [TND] orbs \"beneficial\" for this unit",
+        specialName: "Blenheim Special",
+    },
+    1529: {//Cavendish
+        captain: "Boosts ATK of all characters by 1.5x, but boosts his OWN attack by 3x",
+        special: "For Slasher characters, if HP is above ???% at the time the special was activated, amplifies the effects of orbs by 2.25x for 1 turn, 2x otherwise",
+        sailor: "Reduces ATK of all characters by .5x if your captain is [STR] or [QCK]",
+        specialName: "Cavendish Special",
+    },
+    1530: {//Cavendish
+        captain: "Boosts ATK of all characters by 1.75x, but boosts his OWN attack by 3.5x",
+        special: "For Slasher characters, if HP is above ???% at the time the special was activated, amplifies the effects of orbs by 2.25x for 1 turn, 2x otherwise",
+        sailor: "Reduces ATK of all characters by .5x if your captain is [STR] or [QCK]",
+        specialName: "Cavendish Special",
     },
 };

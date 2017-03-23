@@ -2325,7 +2325,7 @@ window.evolutions = {
     },
     1513: {
         evolution: 1514,
-        evolvers: [  ]
+        evolvers: [ 116, 117, 84, 85, 86 ]
     },
     1515: {
         evolution: 1516,
@@ -2337,7 +2337,7 @@ window.evolutions = {
     },
     1519: {
         evolution: 1520,
-        evolvers: [  ]
+        evolvers: [ 117, 81, 81, 98, 103 ]
     },
     1523: {
         evolution: 1524,
@@ -2345,6 +2345,10 @@ window.evolutions = {
     },
     1526: {
         evolution: 1527,
+        evolvers: [  ]
+    },
+    1529: {
+        evolution: 1530,
         evolvers: [  ]
     },
 };

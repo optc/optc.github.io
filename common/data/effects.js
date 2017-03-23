@@ -398,10 +398,17 @@ window.effects = {
         atk: function(p) { return 1.2; }
     },
     
+    'Invastion Cavendish Sailor - Temp until I get sailor abilities': {
+        description: 'Reduces ATK of all characters by 0.5x. Simulates Cavendish Sailor Ability.',
+        thumb: 1530,
+        id: 42,
+        atk: function(p) { return 0.5; }
+    },
+    
     '20-Hit Hit Barrier': {
         description: 'You will only do damage once the combo meter reaches 20 hits',
         thumb: null,
-        id: 42,
+        id: 43,
         comboShield: 20
     },
 

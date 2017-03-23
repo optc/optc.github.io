@@ -351,4 +351,12 @@ window.zombies = {
         type: 'healer',
         multiplier: 2
     },
+    1523: { // Spring Chopper
+        type: 'healer',
+        amount: 1000
+    },
+    1524: { // Spring Chopper
+        type: 'healer',
+        amount: 1224
+    },
 };
