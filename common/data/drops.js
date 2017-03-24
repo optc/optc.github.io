@@ -1313,7 +1313,7 @@ window.drops = {
             name: "Shambles! Tashigi and Smoker?!?",
             thumb: 1397,
             condition: "Your captain will be switched with your middle right character when you encounter Law.",
-            "All Difficulties": [ 1396, 1398, -1192, -1232, -1238, -844, -838, -1159, -1389, -12, -737, -257, -1389 ]
+            "All Difficulties": [ 1396, 1398, -1192, -1232, -1238, -844, -838, -1159, -1389, -12, -737, -257 ]
         },
         
         {

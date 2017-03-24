@@ -1523,7 +1523,7 @@ window.cooldowns = [
     [ 16, 8 ],
     [ 11, 11 ],
     [ 11, 11 ],
-    null,
+    [ 30, 16 ],
     null,//Coliseum Arlong
     null,//Coliseum Arlong
     [ 21, 12 ],
