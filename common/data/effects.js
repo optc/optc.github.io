@@ -272,40 +272,17 @@ window.effects = {
         
     },
     
-    '3-hit Good Barrier': {
-        description: 'You need to hit 3 Goods before you do any Damage',
-        thumb: null,
-        id: 32,
-        comboShield: 3,
-        comboType: 'Good'
-    },
-    
-    '3-hit Great Barrier': {
-        description: 'You need to hit 3 Greats before you do any Damage',
-        thumb: null,
-        id: 33,
-        comboShield: 3,
-        comboType: 'Great'
-    },
-    
-    '10-Hit Hit Barrier': {
-        description: 'You will only do damage once the combo meter reaches 10 hits',
-        thumb: null,
-        id: 34,
-        comboShield: 10
-    },
-    
     '1.25x Orb Boost': {
         description: 'Used by Christmas Law in Saga Coliseum',
         thumb: 856,
-        id: 35,
+        id: 32,
         orb: function(p) { return p.orb == 2.0 ? 1.25 : (p.orb == 0.5 ? 20/25 : 1); }
     },
     
     '700k Damage Treshold Barrier': {
         description: 'Used by Saga. You cannot do more that 700k damage in one hit',
         thumb: 1089,
-        id: 36,
+        id: 33,
         barrierThreshold: 700000,
         barrierReduction: 0.99
     },
@@ -314,7 +291,7 @@ window.effects = {
         //OLD description: 'Boosts ATK of Driven and Powerhouse characters by 2x, other classes get .5x ATK. Boosts HP of Slasher and Fighter characters by 2x, other classes get .5x HP.',
         description: 'Boosts ATK of Driven characters by 2x and boosts HP for Powerhouse characters by 2x.',
         thumb: 1095,
-        id: 37,
+        id: 34,
         atk: function(p) { 
 /*                            var boost1 = 1.0, boost2 = 1.0, boost3 = 1.0, boost4 = 1.0, boost5 = 1.0;
                             if(p.class.has('Driven')) { boost1 = 2.0}
@@ -346,7 +323,7 @@ window.effects = {
     'Coliseum Tashigi': {
         description: '25 hit barrier and 2x chain limit',
         thumb: 783,
-        id: 38,
+        id: 35,
         comboShield: 25,
         chainLimiter: function() { return 2.0; }
     },
@@ -354,7 +331,7 @@ window.effects = {
     'Robin and Nami\'s Secret Undercover Investigation': {
         description: 'Boosts ATK of Cerebral and Free Spirit characters by 2x, other classes get .5x ATK. Boosts HP of Striker and Shooter characters by 2x, other classes get .5x HP.',
         thumb: 1112,
-        id: 39,
+        id: 36,
         atk: function(p) { 
                             var boost1 = 1.0, boost2 = 1.0, boost3 = 1.0, boost4 = 1.0, boost5 = 1.0;
                             if(p.class.has('Cerebral')) { boost1 = 2.0}
@@ -385,7 +362,7 @@ window.effects = {
     'Gild Tesoro - 40 Stamina': {
         description: 'Boosts the Orbs and ATK of all characters by 1.1x',
         thumb: 1162,
-        id: 40,
+        id: 37,
         orb: function(p) { return p.orb == 2.0 ? 1.1 : (p.orb == 0.5 ? 10/11 : 1); },
         atk: function(p) { return 1.1; }
     },
@@ -393,7 +370,7 @@ window.effects = {
     'Gild Tesoro - 60 Stamina': {
         description: 'Boosts the Orbs and ATK of all characters by 1.2x',
         thumb: 1163,
-        id: 41,
+        id: 38,
         orb: function(p) { return p.orb == 2.0 ? 1.2 : (p.orb == 0.5 ? 5/6 : 1); },
         atk: function(p) { return 1.2; }
     },
@@ -401,15 +378,8 @@ window.effects = {
     'Invastion Cavendish Sailor - Temp until I get sailor abilities': {
         description: 'Reduces ATK of all characters by 0.5x. Simulates Cavendish Sailor Ability.',
         thumb: 1530,
-        id: 42,
+        id: 39,
         atk: function(p) { return 0.5; }
-    },
-    
-    '20-Hit Hit Barrier': {
-        description: 'You will only do damage once the combo meter reaches 20 hits',
-        thumb: null,
-        id: 43,
-        comboShield: 20
     },
 
 };

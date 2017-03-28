@@ -2378,10 +2378,10 @@ window.specials = {
     1529: {
         orb: function(p) { return (p.unit.class.has("Slasher")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, 1, window.specials[1529].multiplier) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, 1, 1); },
         onActivation: function(p) {
-            var n = (p.percHP >= 99 ? 2.25 : 2);
+            var n = (p.percHP >= 50 ? 2.25 : 2);
             window.specials[1529].multiplier = n;
             p.scope.notify({
-                text: 'HP ' + (n == 2.25 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
+                text: 'HP ' + (n == 2.25 ? 'above' : 'below') + ' 50%, using the ' + n + 'x multiplier.',
                 name: '1529warning'
             });
         }
@@ -2389,10 +2389,10 @@ window.specials = {
     1530: {
         orb: function(p) { return (p.unit.class.has("Slasher")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, 1, window.specials[1530].multiplier) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, 1, 1); },
         onActivation: function(p) {
-            var n = (p.percHP >= 99 ? 2.25 : 2);
+            var n = (p.percHP >= 50 ? 2.25 : 2);
             window.specials[1530].multiplier = n;
             p.scope.notify({
-                text: 'HP ' + (n == 2.25 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
+                text: 'HP ' + (n == 2.25 ? 'above' : 'below') + ' 50%, using the ' + n + 'x multiplier.',
                 name: '1530warning'
             });
         }

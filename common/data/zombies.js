@@ -235,6 +235,14 @@ window.zombies = {
         type: 'healer',
         multiplier: 2
     },
+    1078: {//Mansherry
+        type: 'healer',
+        multiplier: 3
+    },
+    1079: {//Mansherry
+        type: 'healer',
+        multiplier: 4
+    },
     1133: {
         type: 'healer',
         multiplier: 2
