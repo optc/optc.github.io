@@ -8390,74 +8390,74 @@ window.details = {
         sailor: "Reduces ATK of all characters by .5x if your captain is [STR] or [QCK]",
         specialName: "Blue Bird Sword",
     },
-    1530: {//Legend Usopp
+    1531: {//Legend Usopp
         captain: "Boosts ATK of all characters by 1.5x if HP is below 50% or by 1.75x if HP is below 30% at the start of the turn. Makes [STR], [DEX], [QCK], [PSY], [INT], [RCV], and [TND] orbs \"beneficial\" to all characters.",
         special: "Delays all enemies for 5 turns, adds .3x to Chain multiplier for 4 turns",
         sailor: "Completely resists Blindness",
         specialName: "Legend Usopp Special",
     },
-    1530: {//Legend Usopp
+    1532: {//Legend Usopp
         captain: "Boosts ATK of all characters by 1.5x if HP is below 50% or by 1.75x if HP is below 30% at the start of the turn. Makes [STR], [DEX], [QCK], [PSY], [INT], [RCV], and [TND] orbs \"beneficial\" to all characters.",
         special: "Delays all enemies for 5 turns, adds .3x to Chain multiplier for 4 turns",
         sailor: "Completely resists Blindness",
         specialName: "Legend Usopp Special",
     },
-    1530: {//Rayleigh
+    1533: {//Rayleigh
         captain: "Not Translated",
         special: "Changes all orbs, including [BLOCK] orbs, to [QCK] orbs",
         sailor: "Makes [STR], [INT], and [DEX] orbs \"beneficial\" for this unit",
         specialName: "Rayleigh Special",
     },
-    1530: {//Rayleigh
+    1534: {//Rayleigh
         captain: "Boosts ATK of [QCK] characters by 2.5x and their HP by 1.2x at the start of the chain, by 3x after the 4th Perfect.",
         special: "Changes all orbs, including [BLOCK] orbs, to [QCK] orbs",
         sailor: "Makes [STR], [INT], and [DEX] orbs \"beneficial\" for this unit",
         specialName: "Rayleigh Special",
     },
-    1530: {//Duval
+    1535: {//Duval
         captain: "Not Translated",
         special: "Reduces damage received by 50% for 1 turn, boosts ATK of PSY characters by 1.75x for 1 turn",
         sailor: "Makes [INT] orbs \"beneficial\" for [PSY] characters",
         specialName: "Duval Special",
     },
-    1530: {//Duval
+    1536: {//Duval
         captain: "Reduces cooldown of [PSY] specials by 3 turns at the start of the fight, boosts ATK of [PSY] characters by 3x if they have matching orbs",
         special: "Reduces damage received by 50% for 1 turn, boosts ATK of PSY characters by 1.75x for 1 turn",
         sailor: "Makes [INT] orbs \"beneficial\" for [PSY] characters",
         specialName: "Duval Special",
     },
-    1530: {//Heracles'n
+    1537: {//Heracles'n
         captain: "Not Translated",
         special: "Cuts the current HP of each enemy by 20%, changes right column orbs into Matching orbs for Shooter and Striker characters",
         sailor: "Boosts HP of STR characters by 150",
         specialName: "Heracles'n Special",
     },
-    1530: {//Heracles'n
+    1538: {//Heracles'n
         captain: "Boosts ATK of [STR] characters by 2.5x and their HP by 1.2x",
         special: "Cuts the current HP of each enemy by 20%, changes right column orbs into Matching orbs for Shooter and Striker characters",
         sailor: "Boosts HP of STR characters by 150",
         specialName: "Heracles'n Special",
     },
-    1530: {//Perona
+    1539: {//Perona
         captain: "Not Translated",
         special: "Reduces damage received by 90% for 1 turn, reduces the defense of all enemies by ??% for 1 turn, reduces enemy's Threshold Damage Reduction and Percent Damage Reduction by 2 turns",
         sailor: "Boosts ATK of INT characters by 50",
         specialName: "Perona Special",
     },
-    1530: {//Perona
+    1540: {//Perona
         captain: "Boosts ATK of characters with cost 30 or less by 2.25x and their RCV by 1.5x",
         special: "Reduces damage received by 90% for 1 turn, reduces the defense of all enemies by ??% for 1 turn, reduces enemy's Threshold Damage Reduction and Percent Damage Reduction by 2 turns",
         sailor: "Boosts ATK of INT characters by 50",
         specialName: "Perona Special",
     },
-    1530: {//Elizabeth
+    1541: {//Elizabeth
         captain: "Not Translated",
         special: "recovers 100x character's RCV in HP, adds .5x to Chain multiplier, and reduces the defense of all enemies by 100% for 1 turn",
         sailor: "Restores her own special by 2 turns when it is rewinded",
         sailorNotes: "Some enemies can increase your cooldown by 1/2 Turns, this Sailor Ability decreases that by 1 Turn",
         specialName: "Elizabeth Special",
     },
-    1530: {//Elizabeth
+    1542: {//Elizabeth
         captain: "Boosts RCV and HP by ???x, boosts ATK by 2.5x following a chain of [STR] > [DEX] > [QCK] attacks no lower than Good",
         special: "recovers 100x character's RCV in HP, adds .5x to Chain multiplier, and reduces the defense of all enemies by 100% for 1 turn",
         sailor: "Restores her own special by 2 turns when it is rewinded",
