@@ -4407,4 +4407,48 @@ window.captains = {
     1530: {
         atk: function(p) { return p.slot == p.sourceSlot ? 3.5 : 1.75; }  
     },
+    1531: {
+        atk: function(p) { return p.percHP <= 30.0 ? 1.75 : p.percHP <= 50.0 ? 1.5 : 1; }
+    },
+    1532: {
+        atk: function(p) { return p.percHP <= 30.0 ? 1.75 : p.percHP <= 50.0 ? 1.5 : 1; }
+    },
+    1533: {
+        hitAtk: function(p) {
+            return !p.unit.type == "QCK" ? 1 : p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect"]) ? 2.5 : 2;
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
+        hp: function(p) { return p.unit.type == "QCK" ? 1.2 : 1; }
+    },
+    1534: {
+        hitAtk: function(p) {
+            return !p.unit.type == "QCK" ? 1 : p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect"]) ? 3 : 2.5;
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
+        hp: function(p) { return p.unit.type == "QCK" ? 1.2 : 1; }
+    },
+    
+    1536: {
+        atk: function(p) { return !p.unit.type == "PSY" ? 1 : p.slot == p.sourceSlot ? 3 : 1; }
+    },
+    1537: {
+        atk: function(p) { return p.unit.type == "STR" ? 2 : 1; },
+        hp: function(p) { return p.unit.type == "STR" ? 1.2 : 1; }
+    },
+    1538: {
+        atk: function(p) { return p.unit.type == "STR" ? 2.5 : 1; },
+        hp: function(p) { return p.unit.type == "STR" ? 1.25 : 1; }
+    },
+    1539: {
+        atk: function(p) { return p.unit.cost <= 20 ? 1.5 : 1; },
+        rcv: function(p) { return p.unit.cost <= 20 ? 1.5 : 1; }
+    },
+    1540: {
+        atk: function(p) { return p.unit.cost <= 30 ? 2.25 : 1; },
+        rcv: function(p) { return p.unit.cost <= 30 ? 1.5 : 1; }
+    },
+    
+    1543: {
+        atk: function(p) { return !(p.unit.class.has("Shooter")) ? 1 : p.percHP <= 30.0 ? 1.75 : p.percHP <= 50.0 ? 1.5 : 1; }
+    },
 };

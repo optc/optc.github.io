@@ -1529,8 +1529,8 @@ window.units = [
     [ "Blenheim, Whitebeard 9th Div. Commander", "PSY", [ "Powerhosue", "Slasher" ], 4, 26, 6, 3, 99, 3000000, 168, 98, 29, 1959, 1246, 248, 1 ],
     [ "Cavendish, Beautiful Pirates Captain", "QCK", [ "Slasher", "Free Spirit" ], 4, 30, 6, 2, 70, 1778330, 1072, 535, 131, 1588, 801, 249, 1 ],
     [ "Cavendish of Hakuba, Beautiful Pirates Captain", "QCK", [ "Slasher", "Free Spirit" ], 5, 50, 5, 3, 99, 5000000, 1500, 737, 202, 2487, 1477, 361, 1 ],
-    [ "Usoland", "DEX", "Shooter", 5, 30, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "God Usopp", "DEX", "Shooter", 6, 55, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Usoland", "DEX", "Shooter", 5, 30, 4, 3, 70, 1066998, 466, 139, 51, 1551, 637, 220, null ],
+    [ "God Usopp", "DEX", "Shooter", 6, 55, 4, 5, 99, 5000000, 1493, 566, 162, 3141, 1291, 441, null ],
     [ "Rayleigh", "QCK", [ "Slasher", "Cerebral" ], 4, 15, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Rayleigh, Straw Hat Pirates Accomplice", "QCK", [ "Slasher", "Cerebral" ], 5, 30, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Duval", "PSY", [ "Slasher", "Free Spirit" ], 4, 15, null, null, null, null, null, null, null, null, null, null, null ],
@@ -1541,6 +1541,7 @@ window.units = [
     [ "Perona, Straw Hat Pirates Accomplice", "INT", [ "Shooter", "Driven" ], 5, 30, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Elizabeth", "DEX", [ "Fighter", "Free Spirit" ], 4, 15, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Elizabeth, Straw Hat Pirates Accomplice", "DEX", [ "Fighter", "Free Spirit" ], 5, 30, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Captain Usopp", "DEX", "Shooter", 6, 55, 4, 5, 99, 5000000, 1556, 577, 179, 3410, 1341, 481, null ],
     ];
     
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],

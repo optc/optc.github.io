@@ -8149,7 +8149,7 @@ window.details = {
         specialName: "Explosion Blocking Escape",
     },
     1492: {//6+ Sabo
-        captain: "Boosts HP and RCV of all characters by ???x, boosts ATK of Free Spirit characters by 2.75x",
+        captain: "Boosts HP and RCV of all characters by 1.2x, boosts ATK of Free Spirit characters by 2.75x",
         captainNotes: "HP and RCV boost are not known yet, but are assumed to be for anyone and is a 1.2x boost for both in the calculator.",
         special: [
             {
@@ -8392,18 +8392,44 @@ window.details = {
     },
     1531: {//Legend Usopp
         captain: "Boosts ATK of all characters by 1.5x if HP is below 50% or by 1.75x if HP is below 30% at the start of the turn. Makes [STR], [DEX], [QCK], [PSY], [INT], [RCV], and [TND] orbs \"beneficial\" to all characters.",
-        special: "Delays all enemies for 5 turns, adds .3x to Chain multiplier for 4 turns",
+        special: [
+            {
+                "description": "Delays all enemies for 3 turns",
+                "cooldown": [ 13, 10 ],
+            },
+            {
+                "description": "Delays all enemies for 4 turns, adds 0.2x to Chain multiplier for 4 turns",
+                "cooldown": [ 19, 16 ],
+            },
+            {
+                "description": "Delays all enemies for 5 turns, adds 0.3x to Chain multiplier for 4 turns",
+                "cooldown": [ 24, 21 ],
+            },
+        ],
         sailor: "Completely resists Blindness",
-        specialName: "Legend Usopp Special",
+        specialName: "Long-Range Attack: Bagworm",
     },
     1532: {//Legend Usopp
         captain: "Boosts ATK of all characters by 1.5x if HP is below 50% or by 1.75x if HP is below 30% at the start of the turn. Makes [STR], [DEX], [QCK], [PSY], [INT], [RCV], and [TND] orbs \"beneficial\" to all characters.",
-        special: "Delays all enemies for 5 turns, adds .3x to Chain multiplier for 4 turns",
+        special: [
+            {
+                "description": "Delays all enemies for 3 turns",
+                "cooldown": [ 13, 10 ],
+            },
+            {
+                "description": "Delays all enemies for 4 turns, adds 0.2x to Chain multiplier for 4 turns",
+                "cooldown": [ 19, 16 ],
+            },
+            {
+                "description": "Delays all enemies for 5 turns, adds 0.3x to Chain multiplier for 4 turns",
+                "cooldown": [ 24, 21 ],
+            },
+        ],
         sailor: "Completely resists Blindness",
-        specialName: "Legend Usopp Special",
+        specialName: "Long-Range Attack: Bagworm",
     },
     1533: {//Rayleigh
-        captain: "Not Translated",
+        captain: "Boosts ATK of [QCK] characters by 2x and their HP by 1.2x at the start of the chain, by 2.5x after the 4th Perfect.",
         special: "Changes all orbs, including [BLOCK] orbs, to [QCK] orbs",
         sailor: "Makes [STR], [INT], and [DEX] orbs \"beneficial\" for this unit",
         specialName: "Rayleigh Special",
@@ -8427,19 +8453,19 @@ window.details = {
         specialName: "Duval Special",
     },
     1537: {//Heracles'n
-        captain: "Not Translated",
+        captain: "Boosts ATK of [STR] characters by 2x and their HP by 1.2x",
         special: "Cuts the current HP of each enemy by 20%, changes right column orbs into Matching orbs for Shooter and Striker characters",
         sailor: "Boosts HP of STR characters by 150",
         specialName: "Heracles'n Special",
     },
     1538: {//Heracles'n
-        captain: "Boosts ATK of [STR] characters by 2.5x and their HP by 1.2x",
+        captain: "Boosts ATK of [STR] characters by 2.5x and their HP by 1.25x",
         special: "Cuts the current HP of each enemy by 20%, changes right column orbs into Matching orbs for Shooter and Striker characters",
         sailor: "Boosts HP of STR characters by 150",
         specialName: "Heracles'n Special",
     },
     1539: {//Perona
-        captain: "Not Translated",
+        captain: "Boosts ATK and RCV of characters with cost 20 or less by 1.5x",
         special: "Reduces damage received by 90% for 1 turn, reduces the defense of all enemies by ??% for 1 turn, reduces enemy's Threshold Damage Reduction and Percent Damage Reduction by 2 turns",
         sailor: "Boosts ATK of INT characters by 50",
         specialName: "Perona Special",
@@ -8463,5 +8489,11 @@ window.details = {
         sailor: "Restores her own special by 2 turns when it is rewinded",
         sailorNotes: "Some enemies can increase your cooldown by 1/2 Turns, this Sailor Ability decreases that by 1 Turn",
         specialName: "Elizabeth Special",
+    },
+    1543: {//6+ Usopp
+        captain: "Boosts ATK of Shooter characters by 1.5x if HP is below 50% or by 1.75x if HP is below 30% at the start of the turn. Makes [STR], [DEX], [QCK], [PSY], [INT], [RCV], and [TND] orbs \"beneficial\" to Shooter characters.",
+        special: "Cuts the current HP of each enemy by 10%. If enemies have Delay Prevention, ignores it and Delays all enemies for 1 turn. Otherwise, Delays all enemies for 3 turns",
+        sailor: "Completely resists Blindness",
+        specialName: "Green Star, Impact Wolf",
     },
 };

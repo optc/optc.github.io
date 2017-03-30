@@ -1529,4 +1529,7 @@ window.aliases = {
     1528: ['ブレンハイム 白ひげ海賊団９番隊隊長', '', 'Coliseum Blenheim'],
     1529: ['キャベンディッシュ 美しき海賊団船長', '', 'Invasion Cavendish'],
     1530: ['白馬のキャベンディッシュ 美しき海賊団船長', '', 'Invasion Cavendish'],
+    1531: ['', '', 'God Usopp'],
+    1532: ['', '', 'God Usopp'],
+    1543: ['', '', 'God Usopp'],
 };

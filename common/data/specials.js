@@ -2028,7 +2028,7 @@ window.specials = {
             window.specials[1403].turnedOn = true;
             window.specials[1403].multiplier = [3.16, 4][n];
             p.scope.notify({
-                text: 'Only affects damage if Luffy is your captain, and each Luffy only boosts his own Captain damage. Using the ' + [10, 16][n] + 'x Captain boost. To switch to the ' + [10, 16][n] + 'x Captain boost, disable and re-enable this special',
+                text: 'Only affects damage if Luffy is your captain, and each Luffy only boosts his own Captain damage. Toggle to change between effective captain boosts. Using the ' + [10, 16][n] + 'x Captain boost. To switch to the ' + [16, 10][n] + 'x Captain boost, disable and re-enable this special. NOTE: STAGE 1 SPECIAL IS ONLY USED IF YOU HAVE TWO LUFFYS, AND ARE TESTING DAMAGE AS IF YOU ONLY ACTIVATED ONE LUFFY SPECIAL.',
                 name: '1403warning'
             });
         },
@@ -2043,7 +2043,7 @@ window.specials = {
             window.specials[1404].turnedOn = true;
             window.specials[1404].multiplier = [3.16, 4][n];
             p.scope.notify({
-                text: 'Only affects damage if Luffy is your captain, and each Luffy only boosts his own Captain damage. Toggle to change between effective captain boosts. Using the ' + [10, 16][n] + 'x Captain boost. To switch to the ' + [10, 16][n] + 'x Captain boost, disable and re-enable this special',
+                text: 'Only affects damage if Luffy is your captain, and each Luffy only boosts his own Captain damage. Toggle to change between effective captain boosts. Using the ' + [10, 16][n] + 'x Captain boost. To switch to the ' + [16, 10][n] + 'x Captain boost, disable and re-enable this special. NOTE: STAGE 1 SPECIAL IS ONLY USED IF YOU HAVE TWO LUFFYS, AND ARE TESTING DAMAGE AS IF YOU ONLY ACTIVATED ONE LUFFY SPECIAL.',
                 name: '1404warning'
             });
         },
@@ -2394,6 +2394,28 @@ window.specials = {
             p.scope.notify({
                 text: 'HP ' + (n == 2.25 ? 'above' : 'below') + ' 50%, using the ' + n + 'x multiplier.',
                 name: '1530warning'
+            });
+        }
+    },
+    1531: {
+        chainAddition: function(p) {return window.specials[1531].multiplier;},
+        onActivation: function(p) {
+            var n = (window.specials[1531].multiplier == 0.2 ? 1 : 0);
+            window.specials[1531].multiplier = [0.2, 0.3][n];
+            p.scope.notify({
+                text: 'Using the ' + [0.2, 0.3][n] + 'x chain addition. To switch to the ' + [0.3, 0.2][n] + 'x chain addition, disable and re-enable this special',
+                name: '1531warning'
+            });
+        }
+    },
+    1532: {
+        chainAddition: function(p) {return window.specials[1532].multiplier;},
+        onActivation: function(p) {
+            var n = (window.specials[1532].multiplier == 0.2 ? 1 : 0);
+            window.specials[1532].multiplier = [0.2, 0.3][n];
+            p.scope.notify({
+                text: 'Using the ' + [0.2, 0.3][n] + 'x chain addition. To switch to the ' + [0.3, 0.2][n] + 'x chain addition, disable and re-enable this special',
+                name: '1532warning'
             });
         }
     },
