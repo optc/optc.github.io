@@ -8491,7 +8491,8 @@ window.details = {
         specialName: "Elizabeth Special",
     },
     1543: {//6+ Usopp
-        captain: "Boosts ATK of Shooter characters by 1.5x if HP is below 50% or by 1.75x if HP is below 30% at the start of the turn. Makes [STR], [DEX], [QCK], [PSY], [INT], [RCV], and [TND] orbs \"beneficial\" to Shooter characters.",
+        captain: "Boosts ATK of Shooter characters by 1.5x if HP is below 50% or by 1.75x if HP is below 30% at the start of the turn. Makes [STR], [DEX], [QCK], [PSY], [INT], [RCV], and [TND] orbs \"beneficial\" to Shooter characters. At the beginning of each Stage, increases the Attack Timer of all enemies by 1 turn",
+        captainNotes: "The Attack Timer increase is NOT a delay, so the enemies will still be delayed. Attack Timer increase ignores Debuff Prevention barriers",
         special: "Cuts the current HP of each enemy by 10%. If enemies have Delay Prevention, ignores it and Delays all enemies for 1 turn. Otherwise, Delays all enemies for 3 turns",
         sailor: "Completely resists Blindness",
         specialName: "Green Star, Impact Wolf",
