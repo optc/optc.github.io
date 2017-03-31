@@ -2419,4 +2419,25 @@ window.specials = {
             });
         }
     },
+    1534: {
+        atk: function(p) { return p.unit.type == "PSY" ? 1.75 : 1; },
+        type: "type"
+    },
+    1535: {
+        atk: function(p) { return p.unit.type == "PSY" ? 1.75 : 1; },
+        type: "type"
+    },
+    1539: {
+        def: function(p) { return 0.1; }
+    },
+    1540: {
+        def: function(p) { return 0.1; }
+    },
+    1541: {
+        chainAddition: function(p) {return 0.5;}
+    },
+    1542: {
+        chainAddition: function(p){ return 0.5;}
+    },
+    
 };

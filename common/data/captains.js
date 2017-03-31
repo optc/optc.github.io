@@ -4086,6 +4086,9 @@ window.captains = {
     1447: {
         atk: function(p) { return p.unit.class.has("Powerhouse") ? 2.5 : 1; },
     },
+    1448: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? 2.5 : 1; },
+    },
     1449: {
         atk: function(p) { return p.unit.class.has("Cerebral") ? 1.5 : 1; },
     },
@@ -4447,7 +4450,38 @@ window.captains = {
         atk: function(p) { return p.unit.cost <= 30 ? 2.25 : 1; },
         rcv: function(p) { return p.unit.cost <= 30 ? 1.5 : 1; }
     },
-    
+    1541: {
+        damageSorter: function(d) { return CrunchUtils.okamaSort(d, ['STR', 'DEX', 'QCK']); },
+        hitAtk: function(p) {
+            return CrunchUtils.okamaCheck(p.damage.slice(0, p.chainPosition), p.modifiers, [{
+                type: 'STR',
+                minModifier: 'Good'
+            }, {
+                type: 'DEX',
+                minModifier: 'Good'
+            }, {
+                type: 'QCK',
+                minModifier: 'Good'
+            }]) ? 2 : 1;
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
+    },
+    1542: {
+        damageSorter: function(d) { return CrunchUtils.okamaSort(d, ['STR', 'DEX', 'QCK']); },
+        hitAtk: function(p) {
+            return CrunchUtils.okamaCheck(p.damage.slice(0, p.chainPosition), p.modifiers, [{
+                type: 'STR',
+                minModifier: 'Good'
+            }, {
+                type: 'DEX',
+                minModifier: 'Good'
+            }, {
+                type: 'QCK',
+                minModifier: 'Good'
+            }]) ? 2.5 : 1;
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
+    },
     1543: {
         atk: function(p) { return !(p.unit.class.has("Shooter")) ? 1 : p.percHP <= 30.0 ? 1.75 : p.percHP <= 50.0 ? 1.5 : 1; }
     },

@@ -8399,7 +8399,7 @@ window.details = {
             },
             {
                 "description": "Delays all enemies for 4 turns, adds 0.2x to Chain multiplier for 4 turns",
-                "cooldown": [ 19, 16 ],
+                "cooldown": [ 18, 15 ],
             },
             {
                 "description": "Delays all enemies for 5 turns, adds 0.3x to Chain multiplier for 4 turns",
@@ -8418,7 +8418,7 @@ window.details = {
             },
             {
                 "description": "Delays all enemies for 4 turns, adds 0.2x to Chain multiplier for 4 turns",
-                "cooldown": [ 19, 16 ],
+                "cooldown": [ 18, 15 ],
             },
             {
                 "description": "Delays all enemies for 5 turns, adds 0.3x to Chain multiplier for 4 turns",
@@ -8466,18 +8466,18 @@ window.details = {
     },
     1539: {//Perona
         captain: "Boosts ATK and RCV of characters with cost 20 or less by 1.5x",
-        special: "Reduces damage received by 90% for 1 turn, reduces the defense of all enemies by ??% for 1 turn, reduces enemy's Threshold Damage Reduction and Percent Damage Reduction by 2 turns",
+        special: "Reduces damage received by 90% for 1 turn, reduces the defense of all enemies by 90% for 1 turn, reduces enemy's Threshold Damage Reduction and Percent Damage Reduction duration by 2 turns",
         sailor: "Boosts ATK of INT characters by 50",
         specialName: "Perona Special",
     },
     1540: {//Perona
         captain: "Boosts ATK of characters with cost 30 or less by 2.25x and their RCV by 1.5x",
-        special: "Reduces damage received by 90% for 1 turn, reduces the defense of all enemies by ??% for 1 turn, reduces enemy's Threshold Damage Reduction and Percent Damage Reduction by 2 turns",
+        special: "Reduces damage received by 90% for 1 turn, reduces the defense of all enemies by 90% for 1 turn, reduces enemy's Threshold Damage Reduction and Percent Damage Reduction duration by 2 turns",
         sailor: "Boosts ATK of INT characters by 50",
         specialName: "Perona Special",
     },
     1541: {//Elizabeth
-        captain: "Not Translated",
+        captain: "Boosts ATK by 2x following a chain of [STR] > [DEX] > [QCK] attacks no lower than Good",
         special: "Recovers 13x character's RCV in HP, adds .5x to Chain multiplier, and reduces the defense of all enemies by 100% for 1 turn",
         sailor: "Restores her own special by 2 turns when it is rewinded",
         sailorNotes: "Some enemies can increase your cooldown by 1/2 Turns, this Sailor Ability decreases that by 1 Turn",
@@ -8492,7 +8492,7 @@ window.details = {
     },
     1543: {//6+ Usopp
         captain: "Boosts ATK of Shooter characters by 1.5x if HP is below 50% or by 1.75x if HP is below 30% at the start of the turn. Makes [STR], [DEX], [QCK], [PSY], [INT], [RCV], and [TND] orbs \"beneficial\" to Shooter characters. At the beginning of each Stage, increases the Attack Timer of all enemies by 1 turn",
-        captainNotes: "The Attack Timer increase is NOT a delay, so the enemies will still be delayed. Attack Timer increase ignores Debuff Prevention barriers",
+        captainNotes: "The Attack Timer increase is NOT a delay, so the enemies can still be delayed. Attack Timer increase ignores Debuff Prevention barriers",
         special: "Cuts the current HP of each enemy by 10%. If enemies have Delay Prevention, ignores it and Delays all enemies for 1 turn. Otherwise, Delays all enemies for 3 turns",
         sailor: "Completely resists Blindness",
         specialName: "Green Star, Impact Wolf",
