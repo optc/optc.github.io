@@ -309,7 +309,7 @@ window.ships = [
         description: 'Boosts ATK by 1.2x',
         atk: function(p) {
             return 1.2;
-        },
+        }
     },
     { // 25
         name: 'Thousand Sunny: Coated',
@@ -350,10 +350,10 @@ window.ships = [
         thumb: null,
         description: 'Boosts ATK of [DEX] and [INT] characters by 1.5x and their HP by 1.25x',
         atk: function(p) {
-            return p.unit.type == "DEX" || p.unit.type == "INT" ? [ 1.2, 1.25, 1.25, 1.3, 1.35, 1.35, 1.4, 1.4, 1.45, 1.5 ][p.boatlevel - 1] : 1;
+            return p.unit.type == "DEX" || p.unit.type == "INT" ? [ 1.2, 1.25, 1.25, 1.3, 1.35, 1.35, 1.4, 1.4, 1.45, 1.5 ][p.boatLevel - 1] : 1;
         },
         hp: function(p) {
-            return p.unit.type == "DEX" || p.unit.type == "INT" ? [ 1.1, 1.1, 1.15, 1.15, 1.15, 1.2, 1.2, 1.25, 1.25, 1.25 ][p.boatlevel - 1] : 1;
+            return p.unit.type == "DEX" || p.unit.type == "INT" ? [ 1.1, 1.1, 1.15, 1.15, 1.15, 1.2, 1.2, 1.25, 1.25, 1.25 ][p.boatLevel - 1] : 1;
         },
     },
     
