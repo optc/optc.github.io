@@ -1354,8 +1354,14 @@ window.drops = {
         {
             name: "Dadan Family! Encounter with the Mountain Bandits",
             thumb: 1520,
-            //condition: "You can only bring PSY units",
             "All Difficulties": [ 1519, 1521, 1522, -1314, -1366, -1364, -912, -937, -316, -1281, -891, -22, -1448 ],
+        },
+        
+        {
+            name: "Soul King! Farewell Tour Concert",
+            thumb: null,
+            //condition: "You can only bring PSY units",
+            "All Difficulties": [ -1035, -1410, -1406, -939, -943, -312, -1279, -1282, -1447, -20 ],
         },
         
     ],

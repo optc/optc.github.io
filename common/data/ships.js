@@ -322,7 +322,7 @@ window.ships = [
     { // 26
         name: 'Kizaru\'s Cannonball',
         thumb: null,
-        description: 'Boosts ATK of Shooter characters by 1.55x and their HP by 1.2x, reduces cooldown of all specials by 1 turn at the start of the fight. Special: Cuts the current HP of each enemy by 7% (cooldown: 15 turns).',
+        description: 'Boosts ATK of Shooter characters by 1.55x and their HP by 1.2x, reduces cooldown of Shooter characters specials by 2 turns at the start of the fight. Special: Cuts the current HP of each enemy by 7% (cooldown: 15 turns).',
         atk: function(p) {
             return !(p.unit.class.has('Shooter')) ? 1 : [ 1.2, 1.2, 1.3, 1.3, 1.3, 1.4, 1.4, 1.4, 1.4, 1.55 ][p.boatLevel - 1];
         },
@@ -354,6 +354,18 @@ window.ships = [
         },
         hp: function(p) {
             return p.unit.type == "DEX" || p.unit.type == "INT" ? [ 1.1, 1.1, 1.15, 1.15, 1.15, 1.2, 1.2, 1.25, 1.25, 1.25 ][p.boatlevel - 1] : 1;
+        },
+    },
+    
+    { //29
+        name: "Karasumaru Ship",
+        thumb: null,
+        description: 'Boosts ATK and HP of Shooter Only characters by 2x and boosts the ATK of all other characters by 1.5x and their HP by 1.02x. Special: Delays all enemies for 2 turns (cooldown: 12 turns).',
+        atk: function(p) {
+            return !(p.unit.class.has('Slasher') || p.unit.class.has('Striker') || p.unit.class.has('Fighter') || p.unit.class.has('Free Spirit') || p.unit.class.has('Cerebral') || p.unit.class.has('Powerhouse') || p.unit.class.has('Driven')) ? 2 : 1.5;
+        },
+        hp: function(p) {
+            return !(p.unit.class.has('Slasher') || p.unit.class.has('Striker') || p.unit.class.has('Fighter') || p.unit.class.has('Free Spirit') || p.unit.class.has('Cerebral') || p.unit.class.has('Powerhouse') || p.unit.class.has('Driven')) ? 2 : 1.02;
         },
     },
 
