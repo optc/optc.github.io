@@ -1526,7 +1526,7 @@ window.units = [
     [ "Suleiman the Beheader, Battle of Dias Class-A War Criminal", "QCK", [ "Slasher", "Cerebral" ], 5, 40, 6, 3, 99, 4000000, 174, 147, 47, 2087, 1347, 247, 1 ],
     [ "Arlong, Arlong Pirates Captain", "INT", [ "Striker", "Shooter" ], 3, 16, 4, 2, 50, 392109, 173, 153, 23, 935, 853, 75, 1 ],
     [ "Arlong the Saw, Arlong Pirates Captain", "INT", [ "Striker", "Shooter" ], 4, 26, 4, 3, 99, 3000000, 853, 735, 55, 2053, 1479, 153, 1 ],
-    [ "Blenheim, Whitebeard 9th Div. Commander", "PSY", [ "Powerhosue", "Slasher" ], 4, 26, 6, 3, 99, 3000000, 168, 98, 29, 1959, 1246, 248, 1 ],
+    [ "Blenheim, Whitebeard 9th Div. Commander", "PSY", [ "Powerhouse", "Slasher" ], 4, 26, 6, 3, 99, 3000000, 168, 98, 29, 1959, 1246, 248, 1 ],
     [ "Cavendish, Beautiful Pirates Captain", "QCK", [ "Slasher", "Free Spirit" ], 4, 30, 6, 2, 70, 1778330, 1072, 535, 131, 1588, 801, 249, 1 ],
     [ "Cavendish of Hakuba, Beautiful Pirates Captain", "QCK", [ "Slasher", "Free Spirit" ], 5, 50, 5, 3, 99, 5000000, 1500, 737, 202, 2487, 1477, 361, 1 ],
     [ "Usoland", "DEX", "Shooter", 5, 30, 4, 3, 70, 1066998, 466, 139, 51, 1551, 637, 220, 1 ],
