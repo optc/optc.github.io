@@ -8499,12 +8499,12 @@ window.details = {
     },
     1546: {//Soul King Brook
         captain: "Boosts ATK of [QCK] characters by 1.5x and boosts HP of Free Spirit characters by 1.2x",
-        special: "Boosts ATK of Slasher characters by 1.75x and makes Badly Matching and [BLOCK] orbs not reduce damage for 1 turn",
+        special: "Boosts ATK of Free Spirit characters by 1.5x and makes Badly Matching and [BLOCK] orbs not reduce damage for 1 turn",
         specialName: "Dawn of A Big Star",
     },
     1547: {//Soul King Brook
         captain: "Boosts ATK of [QCK] characters by 2x and boosts HP of Free Spirit characters by 1.3x",
-        special: "Boosts ATK of Slasher characters by 1.75x and makes Badly Matching and [BLOCK] orbs not reduce damage for 1 turn",
+        special: "Boosts ATK of Free Spirit characters by 1.5x and makes Badly Matching and [BLOCK] orbs not reduce damage for 1 turn",
         specialName: "Dawn of A Big Star",
     },
     1548: {//Soul King Managers
