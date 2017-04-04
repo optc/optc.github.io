@@ -2439,5 +2439,16 @@ window.specials = {
     1542: {
         chainAddition: function(p){ return 0.5;}
     },
+    1546: {
+        atk: function(p) { return p.unit.class.has("Free Spirit") ? 1.5 : 1; },
+        type: "class"
+    },
+    1547: {
+        atk: function(p) { return p.unit.class.has("Free Spirit") ? 1.5 : 1; },
+        type: "class"
+    },
+    1548: {
+        chainAddition: function(p){ return 0.2;}
+    },
     
 };

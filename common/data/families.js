@@ -1348,7 +1348,7 @@ window.families = [
     "Torino Kingdom Monsters",
     "Humandrills",
     "Haredas",
-    "Theives of Tehna Gehna Kingdom",
+    "Thieves of Tehna Gehna Kingdom",
     "Tequila Wolf Guard",
     "Emporio Ivankov",
     "Silvers Rayleigh",
@@ -1542,4 +1542,9 @@ window.families = [
     "Elizabeth",
     "Elizabeth",
     "Usopp"
+    null,
+    null,
+    "Brook",
+    "Brook",
+    "Thieves of Tehna Gehna Kingdom",
 ];

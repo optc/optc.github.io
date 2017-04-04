@@ -1359,9 +1359,9 @@ window.drops = {
         
         {
             name: "Soul King! Farewell Tour Concert",
-            thumb: null,
+            thumb: 1547,
             //condition: "You can only bring PSY units",
-            "All Difficulties": [ -1035, -1410, -1406, -939, -943, -312, -1279, -1282, -1447, -20 ],
+            "All Difficulties": [ 1546, 1548, -1035, -1410, -1406, -939, -943, -312, -1279, -1282, -1447, -20 ],
         },
         
     ],

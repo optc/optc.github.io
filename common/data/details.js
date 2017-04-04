@@ -7440,13 +7440,13 @@ window.details = {
         specialNotes: "#{orb : 1.75x}",
     },
     1390: {//Buggy Legend
-        captain: "Boosts ATK of characters with cost 40 or less by 1.5x and boosts the HP and ATK of characters with cost 41 or greater by 0.5x. Gurantees duplicating a drop upon completion of the island.",
+        captain: "Boosts ATK of characters with cost 40 or less by 1.5x and boosts the HP and ATK of characters with cost 41 or greater by 0.5x. Guarantees duplicating a drop upon completion of the island.",
         captainNotes: "Does not work if he was not your captain upon starting the island. Stacks with other addional drop captains, giving you two chances of getting an extra drop.",
         special: "Randomizes all orbs. Boosts ATK of characters with cost 40 or less by 1.75x for 2 turns",
         specialName: "Chop-Chop Clown Car",
     },
     1391: {//Buggy Legend
-        captain: "Boosts ATK of characters with cost 40 or less by 1.5x and reduces the HP and ATK of characters with cost 41 and greater by 0.5x. Gurantees duplicating a drop upon completion of the island.",
+        captain: "Boosts ATK of characters with cost 40 or less by 1.5x and reduces the HP and ATK of characters with cost 41 and greater by 0.5x. Guarantees duplicating a drop upon completion of the island.",
         captainNotes: "Does not work if he was not your captain upon starting the island. Stacks with other addional drop captains, giving you two chances of getting an extra drop.",
         special: "Randomizes all orbs. Boosts ATK of characters with cost 40 or less by 1.75x for 2 turns",
         specialName: "Chop-Chop Clown Car",
@@ -8468,13 +8468,13 @@ window.details = {
         captain: "Boosts ATK and RCV of characters with cost 20 or less by 1.5x",
         special: "Reduces damage received by 90% for 1 turn, reduces the defense of all enemies by 90% for 1 turn, reduces enemy's Threshold Damage Reduction and Percent Damage Reduction duration by 2 turns",
         sailor: "Boosts ATK of INT characters by 50",
-        specialName: "Negative Hollow: You're all Rotten Imbeciles",
+        specialName: "Negative Hollow: You're All Rotten Imbeciles",
     },
     1540: {//Perona
         captain: "Boosts ATK of characters with cost 30 or less by 2.25x and their RCV by 1.5x",
         special: "Reduces damage received by 90% for 1 turn, reduces the defense of all enemies by 90% for 1 turn, reduces enemy's Threshold Damage Reduction and Percent Damage Reduction duration by 2 turns",
         sailor: "Boosts ATK of INT characters by 50",
-        specialName: "Negative Hollow: You're all Rotten Imbeciles",
+        specialName: "Negative Hollow: You're All Rotten Imbeciles",
     },
     1541: {//Elizabeth
         captain: "Boosts ATK by 2x following a chain of [STR] > [DEX] > [QCK] attacks no lower than Good",
@@ -8496,5 +8496,20 @@ window.details = {
         special: "Cuts the current HP of each enemy by 10%. If enemies have Delay Prevention, ignores it and Delays all enemies for 1 turn. Otherwise, Delays all enemies for 3 turns",
         sailor: "Completely resists Blindness",
         specialName: "Green Star, Impact Wolf",
+    },
+    1546: {//Soul King Brook
+        captain: "Boosts ATK of [QCK] characters by 1.5x and boosts HP of Free Spirit characters by 1.2x",
+        special: "Boosts ATK of Slasher characters by 1.75x and makes Badly Matching and [BLOCK] orbs not reduce damage for 1 turn",
+        specialName: "Dawn of A Big Star",
+    },
+    1547: {//Soul King Brook
+        captain: "Boosts ATK of [QCK] characters by 2x and boosts HP of Free Spirit characters by 1.3x",
+        special: "Boosts ATK of Slasher characters by 1.75x and makes Badly Matching and [BLOCK] orbs not reduce damage for 1 turn",
+        specialName: "Dawn of A Big Star",
+    },
+    1548: {//Soul King Managers
+        captain: "Boosts ATK of Driven characters by 1.5x",
+        special: "Delays all enemies for 1 turn. Adds .2x to Chain multiplier for 1 turn",
+        specialName: "Former Thief's Box Office",
     },
 };

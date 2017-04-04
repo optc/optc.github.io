@@ -1348,7 +1348,7 @@ window.units = [
     [ "Torino Kingdom Monsters", "PSY", [ "Fighter", "Powerhouse" ], 3, 13, 4, 1, 70, 1066998, 109, 66, 12, 1487, 706, 127, 1],
     [ "Humandrills", "STR", [ "Slasher", "Powerhouse" ], 3, 13, 6, 1, 70, 1066998, 133, 112, 0, 1600, 1020, 0, 1],
     [ "Haredas", "PSY", [ "Cerebral", "Shooter" ], 3, 13, 4, 1, 70, 1066998, 21, 40, 32, 377, 505, 394, 1],
-    [ "Theives of Tehna Gehna Kingdom", "QCK", [ "Driven", "Slasher" ], 3, 13, 5, 1, 70, 1066998, 98, 71, 29, 1377, 709, 181, 1],
+    [ "Thieves of Tehna Gehna Kingdom", "QCK", [ "Driven", "Slasher" ], 3, 13, 5, 1, 70, 1066998, 98, 71, 29, 1377, 709, 181, 1],
     [ "Tequila Wolf Guard", "INT", "Shooter", 3, 9, 7, 1, 70, 1066998, 51, 38, 21, 1103, 505, 193, 1],
     [ "Ivankov, New Kama King", "DEX", [ "Fighter", "Free Spirit" ], 4, 20, 8, 3, 99, 3000000, 123, 95, 41, 2034, 935, 299, 1],
     [ "Rayleigh, Crew of the Pirate King", "QCK", [ "Fighter", "Cerebral" ], 4, 30, 6, 3, 99, 3000000, 201, 189, 75, 2037, 1264, 294, 1],
@@ -1542,6 +1542,11 @@ window.units = [
     [ "Elizabeth, Straw Hat Pirates Companion", "DEX", [ "Fighter", "Free Spirit" ], 4, 15, 6, 3, 50, 392109, 77, 55, 33, 888, 444, 222, 1 ],
     [ "Elizabeth, Straw Hat Pirates Accomplice", "DEX", [ "Fighter", "Free Spirit" ], 5, 30, 8, 4, 99, 4000000, 821, 380, 157, 2681, 810, 381, 1 ],
     [ "Captain Usopp, Usopp's Great Manly Adventure ~Chapter II~", "DEX", "Shooter", 6, 55, 4, 5, 99, 5000000, 1556, 577, 179, 3410, 1341, 481, 1 ],
+    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Soul King", "QCK", [ "Slasher", "Free Spirit" ], 3, 13, 6, 2, 50, 392109, 100, 43, 38, 1094, 434, 182, 1 ],
+    [ "'Soul King' Brook the Pirate", "QCK", [ "Slasher", "Free Spirit" ], 4, 20, 8, 4, 99, 3000000, 1043, 434, 143, 2043, 1043, 304, 1 ],
+    [ "Long Arm Tribe of Tehna Gehna Kingdom, 'Soul King' Managers", "STR", [ "Shooter", "Driven" ], 3, 13, 6, 2, 70, 1066998, 52, 31, 40, 962, 775, 226, 1 ],
     ];
     
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],

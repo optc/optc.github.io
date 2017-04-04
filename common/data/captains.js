@@ -667,7 +667,7 @@ window.captains = {
         rcv: function(p) { return p.unit.type == "INT" ? 1.5 : 1; }
     },
     424: {
-        atk: function(p) { return 1.5; }
+        atk: function(p) { return p.percHP >= 70.0 ? 1.5 : 1; }
     },
     425: {
         atk: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; },
@@ -4484,5 +4484,16 @@ window.captains = {
     },
     1543: {
         atk: function(p) { return !(p.unit.class.has("Shooter")) ? 1 : p.percHP <= 30.0 ? 1.75 : p.percHP <= 50.0 ? 1.5 : 1; }
+    },
+    1546: {
+        atk: function(p) { return p.unit.type == "QCK" ? 1.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Free Spirit") ? 1.2 : 1; }
+    },
+    1547: {
+        atk: function(p) { return p.unit.type == "QCK" ? 2 : 1; },
+        hp: function(p) { return p.unit.class.has("Free Spirit") ? 1.3 : 1; }
+    },
+    1548: {
+        atk: function(p) { return p.unit.class.has("Driven") ? 1.5 : 1; }
     },
 };
