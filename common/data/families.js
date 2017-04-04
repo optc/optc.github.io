@@ -1541,7 +1541,7 @@ window.families = [
     "Perona",
     "Elizabeth",
     "Elizabeth",
-    "Usopp"
+    "Usopp",
     null,
     null,
     "Brook",
