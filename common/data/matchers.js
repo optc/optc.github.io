@@ -430,7 +430,7 @@ window.matchers = [
     {
         name: '"Beneficial" Orb Enablers',
         target: 'special',
-        matcher: /Makes.+ orbs "beneficial"/i
+        matcher: /"beneficial/i
     },
     
     /* * * * * Sailor * * * * */
