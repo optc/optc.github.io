@@ -1229,6 +1229,7 @@ window.drops = {
         {
             name: "Behind the Scenes Intelligency Agency, CP9",
             thumb: 1137,
+            global: true,
             condition: "Only [STR], [QCK], [DEX], [INT], and [PSY] orbs appear",
             "All Difficulties": [ 1136, 1137, 1138, 1139, -935, -643, -673, -894, -943, -995, -615, -705, -704 ]
         },
@@ -1244,6 +1245,7 @@ window.drops = {
         {
             name: "Rumbar Pirates!",
             thumb: 1203,
+            global: true,
             condition: "'Musical' units get their stats boosted by 1.5x (Dancers, Singers, Playing an instrument, etc)",
             "All Difficulties": [ 1202, 1204, 1206, -1001, -997, -558, -1208, -677, -896, -631, -954, -1206, -617, -1027 ]
         },
@@ -1251,6 +1253,7 @@ window.drops = {
         {
             name: "World Pirates!",
             thumb: 1215,
+            global: true,
             condition: "Total Crew Cost must be lower than 180 (Including friend captain)",
             "All Difficulties": [ 1215, 1216, 1217, 1218, -1025, -1029, -1033, -671, -956, -964, -633, -504, -1218 ]
         },
@@ -1515,6 +1518,7 @@ window.drops = {
         {
             name: 'Clash!? Impostor Straw Hat Pirates',
             showManual: true,
+            global: true,
             thumb: 989,
             Ultimate: [ 985, 986, 987, 988, -989, -4, -8, -11, -12, -15, -16, -1446, -556, -528, -520, -554, -558, -20, -1447, -217, -709, -1115, -1177, -1175, -1210, -1208, -1387, -1388, -1389 ]
         },
