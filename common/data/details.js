@@ -2802,13 +2802,13 @@ window.details = {
         special: "Deals 20x character's ATK in STR damage to all enemies, boosts chances of getting [STR] orbs for 3 turns",
         specialName: "Vanguard Breaker",
         captain: "Boosts ATK of Shooter characters by 2.5x if HP is below 30% at the start of the turn",
-        sailor: "Boosts ATK of STR characters by 30"
+        sailor: "Boosts HP of STR characters by 30"
     },
     647: {
         special: "Deals 20x character's ATK in STR damage to all enemies, boosts chances of getting [STR] orbs for 3 turns",
         specialName: "Vanguard Breaker",
         captain: "Boosts ATK of Shooter characters by 2.75x if HP is below 30% at the start of the turn",
-        sailor: "Boosts ATK of STR characters by 30"
+        sailor: "Boosts HP of STR characters by 30"
     },
     648: {
         special: "Recovers 100x character's RCV in HP, amplifies the effect of orbs by 1.5x for 2 turns",
@@ -8453,13 +8453,13 @@ window.details = {
         specialName: "Prideful Memories",
     },
     1537: {//Heracles'n
-        captain: "Boosts ATK of [STR] characters by 2x and their HP by 1.2x",
+        captain: "Boosts ATK of [STR] characters by 2x and boosts HP of Shooters and Strikers by 1.2x",
         special: "Cuts the current HP of each enemy by 20%, changes right column orbs into Matching orbs for Shooter and Striker characters",
         sailor: "Boosts HP of STR characters by 150",
         specialName: "Greenstone Threat",
     },
     1538: {//Heracles'n
-        captain: "Boosts ATK of [STR] characters by 2.5x and their HP by 1.25x",
+        captain: "Boosts ATK of [STR] characters by 2.5x and boosts HP of Shooters and Strikers by 1.25x",
         special: "Cuts the current HP of each enemy by 20%, changes right column orbs into Matching orbs for Shooter and Striker characters",
         sailor: "Boosts HP of STR characters by 150",
         specialName: "Greenstone Threat",

@@ -279,6 +279,14 @@ window.zombies = {
         type: 'healer',
         multiplier: 2.5
     },
+    1269: {//Laffitte
+        type: 'healer',
+        multiplier: 3
+    },
+    1270: {//Laffitte
+        type: 'healer',
+        multiplier: 3
+    },
     1305: {//Halloween Sugar
         type: 'healer',
         amount: 500

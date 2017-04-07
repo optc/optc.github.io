@@ -146,17 +146,10 @@ window.effects = {
         chainLimiter: function() { return 2.0; }
     },
 
-    'Hit barrier (11 hits)': {
-        description: 'Nullifies the first 11 hits in the chain',
-        thumb: 794,
-        id: 15, // don't change this
-        comboShield: 11
-    },
-
     'Nightmare Luffy, 2nd stage': {
         description: 'Limits chain multiplier to 2.0x, nullifies the first 11 hits in the chain',
         thumb: 795,
-        id: 16, // don't change this
+        id: 15, // don't change this
         comboShield: 11,
         chainLimiter: function() { return 2.0; }
     },
@@ -164,63 +157,63 @@ window.effects = {
     'Attack reduction (50%)': {
         description: 'ATK of all units reduced by 50%',
         thumb: 546,
-        id: 17, // don't change this
+        id: 16, // don't change this
         atk: function(p) { return 0.5; }
     },
 
     'Attack reduction (70%)': {
         description: 'ATK of all units reduced by 70%',
         thumb: 765,
-        id: 18, // don't change this
+        id: 17, // don't change this
         atk: function(p) { return 0.3; }
     },
 
     'Kuma': {
         description: 'Damage of STR and DEX characters nullified',
         thumb: 836,
-        id: 19,  // don't change this
+        id: 18,  // don't change this
         atk: function(p) { return p.type == 'STR' || p.type == 'DEX' ? 0 : 1; }
     },
 
     'Shu (Expert)': {
         description: 'Attack of Slasher units reduced by 50%',
         thumb: 773,
-        id: 20, // don't change this
+        id: 19, // don't change this
         atk: function(p) { return p.class.has("Slasher") ? 0.5 : 1; }
     },
 
     'Shu (Master)': {
         description: 'Attack of Slasher units reduced by 70%',
         thumb: 773,
-        id: 21, // don't change this
+        id: 20, // don't change this
         atk: function(p) { return p.class.has("Slasher") ? 0.3 : 1; }
     },
 
     'Attack reduction (20%)': {
         description: 'ATK of all units reduced by 20%',
         thumb: 567,
-        id: 22, // don't change this
+        id: 21, // don't change this
         atk: function(p) { return 0.8; }
     },
 
     'Hit barrier (26 hits)': {
         description: 'Nullifies the first 26 hits in the chain',
         thumb: 375,
-        id: 23, // don't change this
+        id: 22, // don't change this
         comboShield: 26
     },
 
     'There\'s the G!': {
         description: 'Activates [G] orb support even when Lao-G is not in the team',
         thumb: 880,
-        id: 24, // don't change this
+        id: 23, // don't change this
         gOrbsEnabled: true
     },
     
     'Coliseum Franky': {
         description: 'Activates [G] orb Support, boosts Orbs by 1.5x',
         thumb: 560,
-        id: 25, // don't change this
+        id: 24, // don't change this
         orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 10/15 : 1); },
         gOrbsEnabled: true
     },
@@ -228,30 +221,14 @@ window.effects = {
     'Coliseum Killer': {
         description: 'ATK of all units reduced by 95%',
         thumb: 1043,
-        id: 26, // don't change this
+        id: 25, // don't change this
         atk: function(p) { return 0.05; }
-    },
-    
-    'Coliseum Kid': {
-        description: 'Perfect hit barrier (2 hits)',
-        thumb: 966,
-        id: 27,
-        comboShield: 2,
-        comboType: 'Perfect'
-    },
-    
-    'Coliseum Fukuro': {
-        description: 'Perfect hit barrier (3 hits)',
-        thumb: 758,
-        id: 28,
-        comboShield: 3,
-        comboType: 'Perfect'
     },
     
     'Coliseum Cricket': {
         description: 'Fixed threshold barrier (200,000)',
         thumb: 428,
-        id: 29,
+        id: 26,
         barrierThreshold: 200000,
         barrierReduction: 0.99
     },
@@ -259,14 +236,14 @@ window.effects = {
     'Sabo Raid Boss': {
         description: 'Reduces Chain By Half',
         thumb: 1047,
-        id: 30,
+        id: 27,
         chainModifier: function(p) { return 0.5 ; }
     },
     
     'Pirate Ship Competition! \"Dead End\" Opens!': {
         description: 'STR/DEX/QCK ATK 1.6x. INT/PSY HP 2x',
         thumb: 1072,
-        id: 31,
+        id: 28,
         atk: function(p) { return (p.type == "STR" || p.type == "DEX" || p.type == "QCK") ? 1.6 : 1; },
         hp: function(p) { return (p.type == "STR" || p.type == "DEX" || p.type == "QCK") ? 1 : 2.0; }
         
@@ -275,14 +252,14 @@ window.effects = {
     '1.25x Orb Boost': {
         description: 'Used by Christmas Law in Saga Coliseum',
         thumb: 856,
-        id: 32,
+        id: 29,
         orb: function(p) { return p.orb == 2.0 ? 1.25 : (p.orb == 0.5 ? 20/25 : 1); }
     },
     
     '700k Damage Treshold Barrier': {
         description: 'Used by Saga. You cannot do more that 700k damage in one hit',
         thumb: 1089,
-        id: 33,
+        id: 30,
         barrierThreshold: 700000,
         barrierReduction: 0.99
     },
@@ -291,7 +268,7 @@ window.effects = {
         //OLD description: 'Boosts ATK of Driven and Powerhouse characters by 2x, other classes get .5x ATK. Boosts HP of Slasher and Fighter characters by 2x, other classes get .5x HP.',
         description: 'Boosts ATK of Driven characters by 2x and boosts HP for Powerhouse characters by 2x.',
         thumb: 1095,
-        id: 34,
+        id: 31,
         atk: function(p) { 
 /*                            var boost1 = 1.0, boost2 = 1.0, boost3 = 1.0, boost4 = 1.0, boost5 = 1.0;
                             if(p.class.has('Driven')) { boost1 = 2.0}
@@ -323,7 +300,7 @@ window.effects = {
     'Coliseum Tashigi': {
         description: '25 hit barrier and 2x chain limit',
         thumb: 783,
-        id: 35,
+        id: 32,
         comboShield: 25,
         chainLimiter: function() { return 2.0; }
     },
@@ -331,7 +308,7 @@ window.effects = {
     'Robin and Nami\'s Secret Undercover Investigation': {
         description: 'Boosts ATK of Cerebral and Free Spirit characters by 2x, other classes get .5x ATK. Boosts HP of Striker and Shooter characters by 2x, other classes get .5x HP.',
         thumb: 1112,
-        id: 36,
+        id: 33,
         atk: function(p) { 
                             var boost1 = 1.0, boost2 = 1.0, boost3 = 1.0, boost4 = 1.0, boost5 = 1.0;
                             if(p.class.has('Cerebral')) { boost1 = 2.0}
@@ -362,7 +339,7 @@ window.effects = {
     'Gild Tesoro - 40 Stamina': {
         description: 'Boosts the Orbs and ATK of all characters by 1.1x',
         thumb: 1162,
-        id: 37,
+        id: 34,
         orb: function(p) { return p.orb == 2.0 ? 1.1 : (p.orb == 0.5 ? 10/11 : 1); },
         atk: function(p) { return 1.1; }
     },
@@ -370,16 +347,8 @@ window.effects = {
     'Gild Tesoro - 60 Stamina': {
         description: 'Boosts the Orbs and ATK of all characters by 1.2x',
         thumb: 1163,
-        id: 38,
+        id: 35,
         orb: function(p) { return p.orb == 2.0 ? 1.2 : (p.orb == 0.5 ? 5/6 : 1); },
         atk: function(p) { return 1.2; }
     },
-    
-    'Invastion Cavendish Sailor - Temp until I get sailor abilities': {
-        description: 'Reduces ATK of all characters by 0.5x. Simulates Cavendish Sailor Ability.',
-        thumb: 1530,
-        id: 39,
-        atk: function(p) { return 0.5; }
-    },
-
 };

@@ -335,6 +335,9 @@ window.specials = {
         atk: function(p) { return p.unit.type == "QCK" ? 1.5 : 1; },
         type: "type"
     },
+    583: {
+        rcvStatic: function(p) { return p.unit.class.has("Shooter") ? 300: 0; },
+    },
     589: {
         atk: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; },
         type: "class"
@@ -1743,6 +1746,24 @@ window.specials = {
         atk: function(p) { return p.unit.class.has("Free Spirit") ? 1.75 : 1; },
         type: "class"
     },
+    1269: {
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[1269].turnedOn = true;
+        },
+        onDeactivation: function(p) {
+            window.specials[1269].turnedOn = false;
+        }
+    },
+    1270: {
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[1270].turnedOn = true;
+        },
+        onDeactivation: function(p) {
+            window.specials[1270].turnedOn = false;
+        }
+    },
     1271: {
         orb: function(p) { return p.unit.class.has("Shooter") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, 1, 1.75) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, 1, 1); }	
     },
@@ -2440,10 +2461,24 @@ window.specials = {
         chainAddition: function(p){ return 0.5;}
     },
     1546: {
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[1546].turnedOn = true;
+        },
+        onDeactivation: function(p) {
+            window.specials[1546].turnedOn = false;
+        },
         atk: function(p) { return p.unit.class.has("Free Spirit") ? 1.5 : 1; },
         type: "class"
     },
     1547: {
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[1547].turnedOn = true;
+        },
+        onDeactivation: function(p) {
+            window.specials[1547].turnedOn = false;
+        },
         atk: function(p) { return p.unit.class.has("Free Spirit") ? 1.5 : 1; },
         type: "class"
     },

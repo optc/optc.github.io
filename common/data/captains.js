@@ -4436,11 +4436,11 @@ window.captains = {
     },
     1537: {
         atk: function(p) { return p.unit.type == "STR" ? 2 : 1; },
-        hp: function(p) { return p.unit.type == "STR" ? 1.2 : 1; }
+        hp: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Shooter") ? 1.2 : 1; }
     },
     1538: {
         atk: function(p) { return p.unit.type == "STR" ? 2.5 : 1; },
-        hp: function(p) { return p.unit.type == "STR" ? 1.25 : 1; }
+        hp: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Shooter") ? 1.25 : 1; }
     },
     1539: {
         atk: function(p) { return p.unit.cost <= 20 ? 1.5 : 1; },

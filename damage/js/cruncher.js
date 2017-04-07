@@ -102,7 +102,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             result[type] = crunchForType(type);
         });
         result.team = getTeamDetails();
-        var hpMax = 0, rcvTotal = 0;
+        var hpMax = 0, rcvTotal = 0, bonusrcv = 0;
         team.forEach(function(x,n) {
             if (n > 5 || x.unit === null) return;
             // hp
@@ -117,8 +117,13 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             rcv *= getShipBonus('rcv',false,x.unit,n);
             rcv *= getEffectBonus('rcv',x.unit);
             rcvTotal += Math.floor(applyCaptainEffectsAndSpecialsToRCV(n,rcv));
+            
+            bonusrcv = applyAddRCVSpecialsToRCV(n,0);
+            
         });
+        
         result.rcv = Math.max(0,rcvTotal);
+        result.rcv += bonusrcv
         var cost = team.slice(1,6).reduce(function(prev,next) { return prev + (!next.unit ? 0 : next.unit.cost); },0);
         result.cost = { cost: cost, level: Math.max(1,Math.floor(cost / 2) * 2 - 18) };
         $scope.numbers = jQuery.extend($scope.numbers, result);
@@ -184,6 +189,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if (orb == 'str') orb = (window.specials[1221].turnedOn || window.specials[1222].turnedOn 
                                  || (window.specials[1259].turnedOn && x.unit.class.has("Driven")) || (window.specials[1260].turnedOn && x.unit.class.has("Driven")) 
                                  || (window.specials[1323].turnedOn && (x.unit.class.has("Driven") || x.unit.class.has("Slasher")))|| (window.specials[1324].turnedOn && (x.unit.class.has("Driven") || x.unit.class.has("Slasher")))) ? 2 : 1;
+            //if (orb == 0.5) orb = (window.specials[1269].turnedOn || window.specials[1270].turnedOn || window.specials[1546].turnedOn || window.specials[1547].turnedOn) ? 1 : .5;
             if (orb == 'rainbow') orb = 2;
             atk += getShipBonus('atk',true,x.unit,n);
             multipliers.push([ orb, 'orb' ]); // orb multiplier (fixed)
@@ -440,6 +446,10 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
     var applyCaptainEffectsToHP = function(slotNumber,hp) {
         var params = getParameters(slotNumber);
         for (var i=0;i<enabledEffects.length;++i) {
+            if (enabledEffects[i].hasOwnProperty('hpStatic'))
+                hp += enabledEffects[i].hpStatic(params);
+        }
+        for (var i=0;i<enabledEffects.length;++i) {
             if (enabledEffects[i].hasOwnProperty('hp'))
                 hp *= enabledEffects[i].hp(params);
         }
@@ -449,9 +459,13 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
     var applyCaptainEffectsAndSpecialsToRCV = function(slotNumber,rcv) {
         var params = getParameters(slotNumber);
         // static rcv
-        for (var j=0;j<enabledSpecials.length;++j) {
-            if (enabledSpecials[j].hasOwnProperty('rcvStatic'))
-                rcv += enabledSpecials[j].rcvStatic(params);
+        for (var h=0;h<enabledSpecials.length;++h) {
+            if (enabledSpecials[h].hasOwnProperty('rcvStatic'))
+                rcv += enabledSpecials[h].rcvStatic(params);
+        }
+        for (var j=0;j<enabledEffects.length;++j) {
+            if (enabledEffects[j].hasOwnProperty('rcvStatic'))
+                rcv += enabledEffects[j].rcvStatic(params);
         }
         // non-static rcv
         for (var i=0;i<enabledEffects.length;++i) {
@@ -465,6 +479,16 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 maximum = Math.max(maximum,rcv * enabledSpecials[k].rcv(params));
         }
         return maximum;
+    };
+    var applyAddRCVSpecialsToRCV = function(slotNumber, bonusrcv) {
+        var params = getParameters(slotNumber);
+        // sailor ability rcv
+        for (var l=0;l<enabledEffects.length;++l) {
+            if (enabledEffects[l].hasOwnProperty('rcvAdded'))
+                bonusrcv += enabledEffects[l].rcvAdded(params);
+        }
+        var final = bonusrcv;
+        return final;
     };
 
     var applyChainAndBonusMultipliers = function(damage,modifiers) {
@@ -738,8 +762,20 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         // check if defense is down (required by some captain effects)
         computeActualDefense();
         isDefenseDown = enabledSpecials.some(function(x) { return x !== null && x.hasOwnProperty('def'); });
-        // captain effect array
+        
         enabledEffects = [ ];
+        
+        for (var i=2;i<6;i++) {
+            if (team[i].unit === null) continue;
+            var id = team[i].unit.number + 1;
+            if (!window.sailors.hasOwnProperty(id)) continue;
+            var effect = jQuery.extend({ },window.sailors[id]);
+            effect.sourceSlot = i;
+            enabledEffects.push(effect);
+        }
+        
+        // captain effect array
+        
         for (var i=0;i<2;++i) {
             if (team[i].unit === null) continue;
             var id = team[i].unit.number + 1;
@@ -821,7 +857,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             }
         return colors;
     };
-
+    
     var getParameters = function(slotNumber, chainPosition) {
         return {
             unit: team[slotNumber].unit,
@@ -836,7 +872,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             turnCounter: $scope.tdata.turnCounter.value,
             chainPosition: chainPosition,
             classCount: classCounter(),
-            colorCount: colorCounter()
+            colorCount: colorCounter(),
+            captain: team[1].unit
         };
     };
 
@@ -876,7 +913,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         }
         if (shipBonus.bonus && shipBonus.bonus.heal)
             healAmount += shipBonus.bonus.heal({ boatLevel: shipBonus.level, classCount: classCounter() });
-        console.log($scope.data.healLevel);
+        //console.log($scope.data.healLevel);
         switch($scope.data.healLevel){
             case "0":
                 break;
