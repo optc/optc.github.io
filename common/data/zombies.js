@@ -375,4 +375,8 @@ window.zombies = {
         type: 'healer',
         amount: 1224
     },
+    1555: { // Coliseum Ryuma
+        type: 'healer',
+        multiplier: 2
+    },
 };

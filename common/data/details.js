@@ -5987,7 +5987,7 @@ window.details = {
     1189: {
         captain: "Boosts ATK of [QCK] characters by 2.25x, makes [DEX] orbs \"beneficial\" to [QCK] characters",
         captainNotes: "\"Beneficial\" orbs grant the same ATK boost as matching orbs.",
-        special: "Reduces enemy Barrier timers by 1 turn",
+        special: "Reduces enemy Barrier duration by 1 turn",
         specialNotes: "Does not affect DEF Boost or % Damage reduction buffs. Reduces timers for Barriers such as Perfect/Great/Good Barriers, Combo Hit Barriers and Orb Hit Barriers",
         specialName: "Break Bullet",
         sailor: "Boosts ATK of [QCK] characters by 40"
@@ -5995,7 +5995,7 @@ window.details = {
     1190: {
         captain: "Boosts ATK of [QCK] characters by 2.25x, makes [DEX] orbs \"beneficial\" to [QCK] characters",
         captainNotes: "\"Beneficial\" orbs grant the same ATK boost as matching orbs.",
-        special: "Reduces enemy Barrier timers by 1 turn",
+        special: "Reduces enemy Barrier duration by 1 turn",
         specialNotes: "Does not affect DEF Boost or % Damage reduction buffs. Reduces timers for Barriers such as Perfect/Great/Good Barriers, Combo Hit Barriers and Orb Hit Barriers",
         specialName: "Break Bullet",
         sailor: "Boosts ATK of [QCK] characters by 40"
@@ -7367,13 +7367,13 @@ window.details = {
     1377: {//Marguerite
         captain: "Boosts ATK and RCV of Slasher and Shooter characters by 1.3x",
         special: "Recovers 18x character's RCV in HP. Reduces damage received by 50% for 1 turn",
-        sailor: "Boosts amount healed from [RCV] orbs by 150 each",
+        sailor: "Boosts amount healed from [RCV] orbs by 125 each",
         specialName: "Sincere Devotion",
     },
     1378: {//Marguerite
         captain: "Boosts ATK and RCV of Slasher and Shooter characters by 1.75x",
         special: "Recovers 18x character's RCV in HP. Reduces damage received by 50% for 1 turn",
-        sailor: "Boosts amount healed from [RCV] orbs by 150 each",
+        sailor: "Boosts amount healed from [RCV] orbs by 125 each",
         specialName: "Sincere Devotion",
     },
     1379: {//Shanks
@@ -7636,12 +7636,12 @@ window.details = {
     },
     1415: {//Fortnight Sengoku
         captain: "Boost ATK of characters with cost 30 or less by 1.5x",
-        special: "Reduces Special Cooldown of all characters by 1 turn and boosts ATK of characters with cost 30 or less by 1.5x for 1 turn",
+        special: "Reduces Special Cooldown of all characters with cost 30 or less by 1 turn and boosts ATK of characters with cost 30 or less by 1.5x for 1 turn",
         specialName: "Unshakeable Resolution of the Wise Master",
     },
     1416: {//Fortnight Sengoku
         captain: "Boost ATK of characters with cost 30 or less by 2.25x and their HP by 1.2x",
-        special: "Reduces Special Cooldown of all characters by 1 turn and boosts ATK of characters with cost 30 or less by 1.5x for 1 turn",
+        special: "Reduces Special Cooldown of all characters with cost 30 or less by 1 turn and boosts ATK of characters with cost 30 or less by 1.5x for 1 turn",
         specialName: "Unshakeable Resolution of the Wise Master",
     },
     1417: {//Ronse
@@ -8332,14 +8332,16 @@ window.details = {
         captain: "Boosts ATK of [PSY] characters by 1.75x and recovers 1,000 HP at end of each turn",
         special: "Changes top row orbs into matching orbs, changes any other [BLOCK] or Badly Matching orbs into [G] orbs",
         specialName: "The Life Risked for the 'Sakura' Miracle",
+        sailor: "Boosts amount healed from [RCV] orbs by 124 each",
     },
     1524: {//Spring Chopper
         captain: "Boosts ATK of [PSY] characters by 2.25x and recovers 1,224 HP at end of each turn",
         special: "Changes top row orbs into matching orbs, changes any other [BLOCK] or Badly Matching orbs into [G] orbs",
         specialName: "The Life Risked for the 'Sakura' Miracle",
+        sailor: "Boosts amount healed from [RCV] orbs by 124 each",
     },
     1525: {//Sulieman
-        captain: "Boosts ATK of Slashers characters by 3.25x, reduces his own ATK multiplier by ???x at the end of each turn",
+        captain: "Boosts ATK of Slashers characters by 3.25x, reduces his own ATK multiplier by 0.0625x at the end of each turn until it is 2x",
         special: "Deals 3 hits of random typeless damage to random enemies, delays all enemies for 1 turn, boosts ATK against delayed enemies by 1.3x for 2 turns",
         specialNotes: "#{randomHits : 10}",
         specialName: "Sorrowful Execution",
@@ -8441,13 +8443,13 @@ window.details = {
         specialName: "The Teacher's Final Ordeal",
     },
     1535: {//Duval
-        captain: "Not Translated",
+        captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of [PSY] characters by 2.5x if they have matching orbs",
         special: "Reduces damage received by 50% for 1 turn, boosts ATK of PSY characters by 1.75x for 1 turn",
         sailor: "Makes [INT] orbs \"beneficial\" for [PSY] characters",
         specialName: "Prideful Memories",
     },
     1536: {//Duval
-        captain: "Reduces cooldown of [PSY] specials by 3 turns at the start of the fight, boosts ATK of [PSY] characters by 3x if they have matching orbs",
+        captain: "Reduces cooldown of all specials by 3 turns at the start of the fight, boosts ATK of [PSY] characters by 3x if they have matching orbs",
         special: "Reduces damage received by 50% for 1 turn, boosts ATK of PSY characters by 1.75x for 1 turn",
         sailor: "Makes [INT] orbs \"beneficial\" for [PSY] characters",
         specialName: "Prideful Memories",
@@ -8484,7 +8486,7 @@ window.details = {
         specialName: "Soft and Gentle Fluffy Kisses",
     },
     1542: {//Elizabeth
-        captain: "Boosts RCV and HP by ???x, boosts ATK by 2.5x following a chain of [STR] > [DEX] > [QCK] attacks no lower than Good",
+        captain: "Boosts RCV and HP by 1.2x, boosts ATK by 2.5x following a chain of [STR] > [DEX] > [QCK] attacks no lower than Good",
         special: "Recovers 13x character's RCV in HP, adds .5x to Chain multiplier, and reduces the defense of all enemies by 100% for 1 turn",
         sailor: "Restores her own special by 2 turns when it is rewinded",
         sailorNotes: "Some enemies can increase your cooldown by 1/2 Turns, this Sailor Ability decreases that by 1 Turn",
@@ -8511,5 +8513,25 @@ window.details = {
         captain: "Boosts ATK of Driven characters by 1.5x",
         special: "Delays all enemies for 1 turn. Adds .2x to Chain multiplier for 1 turn",
         specialName: "Former Thief's Box Office",
+    },
+    1552: {//Coliseum Hajrudin
+        captain: "Boosts ATK of characters with ??? cost by ????x",
+        special: "Deals 300,000 Fixed damage to one enemy, boosts ATK of characters with 40 cost by 1.75x, reduces enemy Barrier duration by 1 turn",
+        specialName: "Thunder Giant",
+    },
+    1553: {//Coliseum Hajrudin
+        captain: "Boosts ATK of characters with 40 cost by 2.75x",
+        special: "Deals 300,000 Fixed damage to one enemy, boosts ATK of characters with 40 cost by 1.75x, reduces enemy Barrier duration by 1 turn",
+        specialName: "Thunder Giant",
+    },
+    1554: {//Coliseum Ryuma
+        captain: "Boosts ATK of [DEX] characters by 2x",
+        special: "Boosts ATK of [DEX] characters and amplifies the effect of orbs for [DEX] characters by 1.35x for 1 turn",
+        specialName: "Ryuma Special",
+    },
+    1555: {//Coliseum Ryuma
+        captain: "Boosts ATK of [DEX] characters by 2.25x, recovers 2x character's RCV in HP at the end of each turn",
+        special: "Boosts ATK of [DEX] characters and amplifies the effect of orbs for [DEX] characters by 1.35x for 1 turn",
+        specialName: "Ryuma Special",
     },
 };

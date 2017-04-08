@@ -191,10 +191,10 @@ window.sailors = {
         hpStatic: function(p) { return 50; },
     },
     1377: {
-        rcvAdded: function(p) { return 150; },
+        rcvAdded: function(p) { return 125; },
     },
     1378: {
-        rcvAdded: function(p) { return 150; },
+        rcvAdded: function(p) { return 125; },
     },
     1405: {
         atkStatic: function(p) { return p.percHP <= 30.0 && p.unit.class.has("Shooter") ? 100 : 0; },
@@ -245,6 +245,12 @@ window.sailors = {
     },
     1511: {
         atkStatic: function(p) { return p.captain != null ? p.captain.class.has("Powerhouse") ? p.unit.class.has("Powerhouse") ? 20 : 0 : 0 : 0; },
+    },
+    1523: {
+        rcvAdded: function(p) { return 124; },
+    },
+    1524: {
+        rcvAdded: function(p) { return 124; },
     },
     1529: {
         atk: function(p) { return p.captain != null ? p.captain.type == "STR" || p.captain.type == "QCK" ? .5 : 1 : 1; },

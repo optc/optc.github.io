@@ -4392,7 +4392,7 @@ window.captains = {
     },
     1525: {
         atk: function(p) {
-            return p.unit.class.has("Slasher") ? Math.max(1.0, 3.25 - 0.1 * p.turnCounter) : 1;
+            return p.unit.class.has("Slasher") ? Math.max(2.0, 3.25 - 0.0625 * p.turnCounter) : 1;
         }
     },
     1526: {
@@ -4430,7 +4430,9 @@ window.captains = {
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
         hp: function(p) { return p.unit.type == "QCK" ? 1.2 : 1; }
     },
-    
+    1535: {
+        atk: function(p) { return !p.unit.type == "PSY" ? 1 : p.slot == p.sourceSlot ? 2.5 : 1; }
+    },
     1536: {
         atk: function(p) { return !p.unit.type == "PSY" ? 1 : p.slot == p.sourceSlot ? 3 : 1; }
     },
@@ -4480,6 +4482,8 @@ window.captains = {
                 minModifier: 'Good'
             }]) ? 2.5 : 1;
         },
+        rcv: function(p) { return 1.2; },
+        hp: function(p) { return 1.2; },
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
     },
     1543: {
@@ -4495,5 +4499,17 @@ window.captains = {
     },
     1548: {
         atk: function(p) { return p.unit.class.has("Driven") ? 1.5 : 1; }
+    },
+    1552: {
+        atk: function(p) { return p.unit.cost == 40 ? 1 : 1; },
+    },
+    1553: {
+        atk: function(p) { return p.unit.cost == 40 ? 2.75 : 1; },
+    },
+    1554: {
+        atk: function(p) { return p.unit.type == "DEX" ? 2 : 1; },
+    },
+    1555: {
+        atk: function(p) { return p.unit.type == "DEX" ? 2.25 : 1; },
     },
 };
