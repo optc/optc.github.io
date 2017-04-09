@@ -95,10 +95,25 @@ window.CrunchUtils.typeSort = function(array, typeMultiplier, types) {
     return result;
 };
 
-window.CrunchUtils.getOrbMultiplier = function(orb, type, baseMultiplier, boostedMultiplier) {
+window.CrunchUtils.getOrbMultiplier = function(orb, type, uclass, baseMultiplier, boostedMultiplier) {
     if(window.specials[1221].turnedOn || window.specials[1222].turnedOn){
         if (orb == 'str') return boostedMultiplier;
         if (orb == 0.5 && type == 'DEX') return boostedMultiplier;
+    }
+    if(window.specials[1323].turnedOn || window.specials[1324].turnedOn){
+        if(uclass.has("Driven") || uclass.has("Slasher")){
+            if (orb == 'str') return boostedMultiplier;
+            if (orb == 0.5 && type == 'DEX') return boostedMultiplier;
+        }
+    }
+    if(window.specials[1259].turnedOn || window.specials[1260].turnedOn){
+        if(uclass.has("Driven")){
+            if (orb == 'str') return boostedMultiplier;
+            if (orb == 0.5 && type == 'DEX') return boostedMultiplier;
+        }
+    }
+    if(window.specials[1269].turnedOn || window.specials[1270].turnedOn || window.specials[1546].turnedOn || window.specials[1547].turnedOn){
+        if (orb == 0.5) return baseMultiplier;
     }
     if (orb == 1.0 || orb == 'str') return baseMultiplier;
     if (orb == 2.0 || orb == 'g' || orb == 'rainbow') return boostedMultiplier;
