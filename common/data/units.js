@@ -1541,7 +1541,7 @@ window.units = [
     [ "Perona, Straw Hat Pirates Accomplice", "INT", [ "Shooter", "Driven" ], 5, 30, 4, 4, 99, 4000000, 885, 416, 167, 1969, 1001, 481, 1 ],
     [ "Elizabeth, Straw Hat Pirates Companion", "DEX", [ "Fighter", "Free Spirit" ], 4, 15, 6, 3, 50, 392109, 77, 55, 33, 888, 444, 222, 1 ],
     [ "Elizabeth, Straw Hat Pirates Accomplice", "DEX", [ "Fighter", "Free Spirit" ], 5, 30, 8, 4, 99, 4000000, 821, 380, 157, 2681, 810, 381, 1 ],
-    [ "Captain Usopp, Usopp's Great Manly Adventure ~Chapter II~", "DEX", "Shooter", 6, 55, 4, 5, 99, 5000000, 1556, 577, 179, 3410, 1341, 481, 1 ],
+    [ "Captain Usopp, Usopp's Great Manly Adventure ~Chapter II~", "DEX", "Shooter", 6, 65, 4, 5, 99, 5000000, 1556, 577, 179, 3410, 1341, 481, 1 ],
     [ "Koala, Cherry Blossom Meeting", "INT", [ "Fighter", "Free Spirit" ], 4, 13, null, null, 50, 392109, null, null, null, null, null, null, null ],
     [ "Koala, Cherry Blossom Mouth", "INT", [ "Fighter", "Free Spirit" ], 5, 20, null, 4, 99, 3000000, null, null, null, 1701, 1205, 358, null ],
     [ "Soul King", "QCK", [ "Slasher", "Free Spirit" ], 3, 13, 6, 2, 50, 392109, 100, 43, 38, 1094, 434, 182, 1 ],
