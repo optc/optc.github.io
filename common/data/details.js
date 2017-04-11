@@ -4677,7 +4677,7 @@ window.details = {
     984: {
         captain: "Boosts ATK of Striker characters by 2.25x",
         specialName: "Shrouds and Rattling Knot",
-        special: "Delays all enemies for 1 turn, Locks all orbs for 1 turn"
+        special: "Delays all enemies for 1 turn and locks all orbs for 1 turn"
     },
     985:{
       captainNotes: "Acts as a Daimyo Turtle and thus gives 15k EXP"  
@@ -8499,6 +8499,16 @@ window.details = {
         sailor: "Completely resists Blindness",
         specialName: "Green Star, Impact Wolf",
     },
+    1544: {//Sakura Koala
+        captain: "Boosts ATK of Fighter characters by 1.75x and heals for .3x her RCV at the end of the turn each time you hit a Perfect",
+        special: "Changes Captain orb into matching and boosts ATK of Fighter characters by 1.5x for 1 turn",
+        specialName: "Sakura Koala Special",
+    },
+    1545: {//Sakura Koala
+        captain: "Boosts ATK of Fighter characters by 2.25x and heals for .5x her RCV at the end of the turn each time you hit a Perfect",
+        special: "Changes Captain orb into matching and boosts ATK of Fighter characters by 1.5x for 1 turn",
+        specialName: "Sakura Koala Special",
+    },
     1546: {//Soul King Brook
         captain: "Boosts ATK of [QCK] characters by 1.5x and boosts HP of Free Spirit characters by 1.2x",
         special: "Boosts ATK of Free Spirit characters by 1.5x and makes Badly Matching and [BLOCK] orbs not reduce damage for 1 turn",
@@ -8513,6 +8523,21 @@ window.details = {
         captain: "Boosts ATK of Driven characters by 1.5x",
         special: "Delays all enemies for 1 turn. Adds .2x to Chain multiplier for 1 turn",
         specialName: "Former Thief's Box Office",
+    },
+    1549: {//5+ Robin
+        captain: "Boosts ATK of [PSY] characters by 2.25x and recovers 3x character's RCV in HP at the end of each turn",
+        special: "Reduces Bind and Despair duration by 3 turns, and reduces Special Cooldown of all characters by 1 turn",
+        specialName: "Mil Fluer: Campo de Flores",
+    },
+    1550: {//5+ Franky
+        captain: "Boosts ATK of [INT] characters by 2.5x, reduces damage received by 10%",
+        special: "Deals 35x character's ATK in [INT] damage to all enemies. Changes [TND] and [RCV] orbs on Shooter and Free Spirit characters into Matching Orbs.",
+        specialName: "Franky's Rocket Launcher",
+    },
+    1551: {//5+ Brook
+        captain: "Boosts ATK of Free Spirit characters by 2.5x and recovers 430 HP at end of each turn",
+        special: "Delays all enemies for 1 turn and locks all orbs for 1 turn",
+        specialName: "Song of Scratches: Blizzard Slash",
     },
     1552: {//Coliseum Hajrudin
         captain: "Boosts ATK of characters with ??? cost by ????x",

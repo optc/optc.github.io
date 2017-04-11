@@ -2440,11 +2440,11 @@ window.specials = {
             });
         }
     },
-    1534: {
+    1535: {
         atk: function(p) { return p.unit.type == "PSY" ? 1.75 : 1; },
         type: "type"
     },
-    1535: {
+    1536: {
         atk: function(p) { return p.unit.type == "PSY" ? 1.75 : 1; },
         type: "type"
     },
