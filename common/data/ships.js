@@ -321,7 +321,7 @@ window.ships = [
     },
     { // 26
         name: 'Kizaru\'s Cannonball',
-        thumb: null,
+        thumb: 'ship_0027_c.png',
         description: 'Boosts ATK of Shooter characters by 1.55x and their HP by 1.2x, reduces cooldown of Shooter characters specials by 2 turns at the start of the fight. Special: Cuts the current HP of each enemy by 7% (cooldown: 15 turns).',
         atk: function(p) {
             return !(p.unit.class.has('Shooter')) ? 1 : [ 1.2, 1.2, 1.3, 1.3, 1.3, 1.4, 1.4, 1.4, 1.4, 1.55 ][p.boatLevel - 1];
@@ -333,21 +333,21 @@ window.ships = [
     
     { // 27
         name: 'Going Luffy SENPAI!',
-        thumb: null,
-        description: 'Boosts ATK of Striker characters by 1.5x and their HP by 1.2x. Special: Reduces any damage received above 10,000 HP by large amount (cooldown: 17 turns).',
+        thumb: 'ship_0028_c.png',
+        description: 'Boosts ATK of Striker characters by 1.5x and their HP by 1.2x if there are 6 Striker characters in your crew. Special: Reduces any damage received above 10,000 HP by 97% (cooldown: 17 turns).',
         atk: function(p) {
-            return !p.unit.class.has('Striker') ? 1 :
+            return !(p.classCount.Striker == 6) ? 1 : !p.unit.class.has('Striker') ? 1 :
                 [ 1.1, 1.2, 1.2, 1.2, 1.2, 1.3, 1.3, 1.4, 1.4, 1.5 ][p.boatLevel - 1];
         },
         hp: function(p) {
-            return !p.unit.class.has('Striker') ? 1 :
+            return !(p.classCount.Striker == 6) ? 1 : !p.unit.class.has('Striker') ? 1 :
                 [ 1.1, 1.1, 1.1, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2 ][p.boatLevel - 1];
         }
     },
     
     { //28
         name: "Thriller Bark",
-        thumb: null,
+        thumb: 'ship_0029_c.png',
         description: 'Boosts ATK of [DEX] and [INT] characters by 1.5x and their HP by 1.25x',
         atk: function(p) {
             return p.unit.type == "DEX" || p.unit.type == "INT" ? [ 1.2, 1.25, 1.25, 1.3, 1.35, 1.35, 1.4, 1.4, 1.45, 1.5 ][p.boatLevel - 1] : 1;
@@ -359,7 +359,7 @@ window.ships = [
     
     { //29
         name: "Karasumaru Ship",
-        thumb: null,
+        thumb: 'ship_0030_c.png',
         description: 'Boosts ATK and HP of Shooter Only characters by 2x and boosts the ATK of all other characters by 1.5x and their HP by 1.02x. Special: Delays all enemies for 2 turns (cooldown: 12 turns).',
         atk: function(p) {
             return !(p.unit.class.has('Slasher') || p.unit.class.has('Striker') || p.unit.class.has('Fighter') || p.unit.class.has('Free Spirit') || p.unit.class.has('Cerebral') || p.unit.class.has('Powerhouse') || p.unit.class.has('Driven')) ? 2 : 1.5;
