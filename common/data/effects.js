@@ -351,4 +351,21 @@ window.effects = {
         orb: function(p) { return p.orb == 2.0 ? 1.2 : (p.orb == 0.5 ? 5/6 : 1); },
         atk: function(p) { return 1.2; }
     },
+    
+    'World Pirates - Boa Stage 1': {
+        description: 'Boosts the ATK of characters with 40 cost or less by 1.5x',
+        thumb: 865,
+        id: 36,
+        atk: function(p) { return p.cost <= 40 ? 1.5 : 1; }
+    },
+   /* 
+    'World Pirates - Boa Secret Stage': {
+        description: 'Locks the chain multiplier at 2.5x',
+        thumb: 1218,
+        id: 37,
+        atk: function(p) { return p.cost <= 40 ? 1.5 : 1; },
+        chain: function(p) { return 2.5; },
+        chainLimiter: function(p) { return p.chainPosition > 0 ? 2.5 : 1.0; }
+    },*/
+    
 };

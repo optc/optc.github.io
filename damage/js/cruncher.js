@@ -189,7 +189,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if (orb == 'str') orb = (window.specials[1221].turnedOn || window.specials[1222].turnedOn 
                                  || (window.specials[1259].turnedOn && x.unit.class.has("Driven")) || (window.specials[1260].turnedOn && x.unit.class.has("Driven")) 
                                  || (window.specials[1323].turnedOn && (x.unit.class.has("Driven") || x.unit.class.has("Slasher")))|| (window.specials[1324].turnedOn && (x.unit.class.has("Driven") || x.unit.class.has("Slasher")))) ? 2 : 1;
-            if (orb == 0.5) orb = (window.specials[1269].turnedOn || window.specials[1270].turnedOn || window.specials[1546].turnedOn || window.specials[1547].turnedOn) ? 1 : .5;
+            if (orb == 0.5) orb = (window.specials[1269].turnedOn || window.specials[1270].turnedOn || window.specials[1546].turnedOn || window.specials[1547].turnedOn || window.specials[1557].turnedOn) ? 1 : .5;
             if (orb == 'rainbow') orb = 2;
             atk += getShipBonus('atk',true,x.unit,n);
             multipliers.push([ orb, 'orb' ]); // orb multiplier (fixed)
@@ -734,7 +734,6 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         }
         if ($scope.data.comboShield) mapEffect.comboShield = $scope.data.comboShield;
         if ($scope.data.comboType) mapEffect.comboType = $scope.data.comboType;
-        
         // team
         team = $scope.data.team.map(function(x,n) {
             if (!$scope.tdata.team[n] || $scope.tdata.team[n].removed)
@@ -754,7 +753,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                     enabledSpecials.push(jQuery.extend({ sourceSlot: n },specials[id]));
             }
             // activate turn counter if necessary
-            if (n < 2 && (id == 794 || id == 795 || id == 1124 || id == 1125 || id == 1191 || id == 1192 || id == 1219 || id == 1220 || id == 1288 || id == 1289 || id == 1361 || id == 1362 || id == 1525))
+            if (n < 2 && (id == 794 || id == 795 || id == 1124 || id == 1125 || id == 1191 || id == 1192 || id == 1219 || id == 1220 || id == 1288 || id == 1289 || id == 1361 || id == 1362 || id == 1525 || id == 1557 || id == 1558 || id == 1559 || id == 1560 || id == 1561 || id == 1562))
                 $scope.tdata.turnCounter.enabled = true;
         });
         if (conflictWarning) 
@@ -913,7 +912,6 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         }
         if (shipBonus.bonus && shipBonus.bonus.heal)
             healAmount += shipBonus.bonus.heal({ boatLevel: shipBonus.level, classCount: classCounter() });
-        //console.log($scope.data.healLevel);
         switch($scope.data.healLevel){
             case "0":
                 break;

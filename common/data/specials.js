@@ -1477,10 +1477,10 @@ window.specials = {
         atk: function(p) { return p.unit.type == "STR" ? window.specials[1168].multiplier : 1; },
         type: "class",
         onActivation: function(p) {
-            var n = (p.percHP <= 30 ? 1.75 : 1.1);
+            var n = (p.percHP <= 10 ? 1.75 : p.percHP <= 30 ? 1.5 : p.percHP <= 50 ? 1.25 : 1.1);
             window.specials[1168].multiplier = n;
             p.scope.notify({
-                text: 'HP ' + (n == 1.75 ? 'below' : 'above') + ' 30%, using the ' + n + 'x multiplier.',
+                text: 'HP ' + (n == 1.75 ? 'below' : 'above') + ' ' + (n == 1.75 ? '10%' : n == 1.5 ? '10%' : n == 1.25 ? '30%' : '50%') + ', using the ' + n + 'x multiplier.',
                 name: '1168warning'
             });
         }
@@ -1489,11 +1489,11 @@ window.specials = {
         atk: function(p) { return p.unit.type == "STR" ? window.specials[1169].multiplier : 1; },
         type: "class",
         onActivation: function(p) {
-            var n = (p.percHP <= 30 ? 1.75 : 1.1);
+            var n = (p.percHP <= 10 ? 1.75 : p.percHP <= 30 ? 1.5 : p.percHP <= 50 ? 1.25 : 1.1);
             window.specials[1169].multiplier = n;
             p.scope.notify({
-                text: 'HP ' + (n == 1.75 ? 'below' : 'above') + ' 30%, using the ' + n + 'x multiplier.',
-                name: '1169warning'
+                text: 'HP ' + (n == 1.75 ? 'below' : 'above') + ' ' + (n == 1.75 ? '10%' : n == 1.5 ? '10%' : n == 1.25 ? '30%' : '50%') + ', using the ' + n + 'x multiplier.',
+                name: '1168warning'
             });
         }
     },
@@ -2499,5 +2499,27 @@ window.specials = {
         atk: function(p) { return p.unit.type == "DEX" ? 1.35 : 1; },
         orb: function(p) { return p.unit.type == "DEX" ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.35) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1); },
     },
-    
+    1556: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 2 : 1; },
+        type: "type",
+        warning: "Selected special (%name%) assumes that the enemy has over 3,000,000 HP."
+    },
+    1557: {
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[1557].turnedOn = true;
+        },
+        onDeactivation: function(p) {
+            window.specials[1557].turnedOn = false;
+        },
+        type: "class"
+    },
+    1561: {
+        atk: function(p) { return p.unit.class.has("Striker") ? 1.5 : 1; },
+        type: "class"
+    },
+    1562: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 1.75 : 1; },
+        type: "class"
+    },
 };

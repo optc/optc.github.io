@@ -5796,13 +5796,13 @@ window.details = {
         captain: "Boosts ATK and RCV of Free Spirit characters by 1.5x",
         special: "Reduces Bind, Despair, and Silence duration by 3 turns, and recovers 2,000 HP",
         specialNotes: "Silence will refer to effects that prevent you from activating Special Abilities",
-        specialName: "Summer Koala Special"
+        specialName: "Open Sun"
     },
     1161: {
         captain: "Boosts ATK of Free Spirit characters by 2x and their RCV by 1.5x",
         special: "Reduces Bind, Despair, and Silence duration by 3 turns, and recovers 2,000 HP",
         specialNotes: "Silence will refer to effects that prevent you from activating Special Abilities",
-        specialName: "Summer Koala Special"
+        specialName: "Open Sun"
     },
     1162: {//Tesoro
         captain: "Boosts ATK of [PSY] characters by 1.75x and boosts amount of Beli received by 1.5x",
@@ -5840,14 +5840,14 @@ window.details = {
     1168: {//Dice
         captain: "Boosts ATK of [STR] characters by 2x if HP is below 30% at the start of the turn",
         special: "Boosts ATK of [STR] characters by a variable factor for 1 turn",
-        specialNotes: "The exact multiplier used is chosen based on the crew's current HP at the time the special is activated: above 30% HP, the multiplier used is 1.1x; below 30% HP, it's 1.75x.",
+        specialNotes: "The exact multiplier used is chosen based on the crew's current HP at the time the special is activated<br>HP > 50%: 1.1x<br>50% > HP > 30%: 1.25x<br>30% > HP > 10%: 1.5x<br>HP < 10%: 1.75x",
         specialName: "Trump Card Dealer",
     },
     1169: {//Dice Evolved
         captain: "Boosts ATK of [STR] characters proportionally to the crew's current HP",
         captainNotes: "#{captainProportional : lower : 1 + 1.5 * (1 - (remaining HP) / (total HP)) : 1 : 2.5}",
         special: "Boosts ATK of [STR] characters by a variable factor for 1 turn",
-        specialNotes: "The exact multiplier used is chosen based on the crew's current HP at the time the special is activated: above 30% HP, the multiplier used is 1.1x; below 30% HP, it's 1.75x.",
+        specialNotes: "The exact multiplier used is chosen based on the crew's current HP at the time the special is activated<br>HP > 50%: 1.1x<br>50% > HP > 30%: 1.25x<br>30% > HP > 10%: 1.5x<br>HP < 10%: 1.75x",
         specialName: "Trump Card Dealer",
     },
     1170: {//Tanaka
@@ -6749,12 +6749,12 @@ window.details = {
     1295: {//Halloween Kalifa
         captain: "Boosts ATK and RCV of [STR] characters by 1.5x",
         special: "Reduces duration of Paralysis by 3 turns, removes poison, and reduces the defense of all enemies by 100% for 1 turn",
-        specialName: "Halloween Kalifa Special",
+        specialName: "Mysterious Hour of the Dark Night",
     },
     1296: {//Halloween Kalifa
         captain: "Boosts ATK of [STR] characters by 2x and their RCV by 1.5x",
         special: "Reduces duration of Paralysis by 3 turns, removes poison, and reduces the defense of all enemies by 100% for 1 turn",
-        specialName: "Halloween Kalifa Special",
+        specialName: "Mysterious Hour of the Dark Night",
     },
     1297: {//Akainu
         captain: "Boosts ATK by 2.5x following a chain of [STR] > [STR] > [STR] attacks no lower than Good",
@@ -7392,13 +7392,13 @@ window.details = {
         captain: "Boosts ATK and RCV of Slasher and Cerebral characters by 1.2x",
         special: "Reduces Silence duration by 1 turn, and recovers 12,240 HP",
         specialNotes: "Silence will refer to effects that prevent you from activating Special Abilities",
-        specialName: "Tashigi Special",
+        specialName: "Strawberry Smile",
     },
     1382: {//Christmas Tashigi
         captain: "Boosts ATK and RCV of Slasher and Cerebral characters by 1.75x",
         special: "Reduces Silence duration by 1 turn, and recovers 12,240 HP",
         specialNotes: "Silence will refer to effects that prevent you from activating Special Abilities",
-        specialName: "Tashigi Special",
+        specialName: "Strawberry Smile",
     },
     1383: {//Soldier-San
         captain: "Boosts ATK of Striker characters by 2x. Increases damage received by 1.5x",
@@ -7657,22 +7657,22 @@ window.details = {
     1419: {//Kimono Lucci
         captain: "Boosts ATK of Powerhouse characters by 2x, reduce damage received by 10%",
         special: "Recovers 5,000 HP and boosts ATK against enemies with reduced defense by 1.5x for 1 turns",
-        specialName: "Lucci Special",
+        specialName: "Demonic Style",
     },
     1420: {//Kimono Lucci
         captain: "Boosts ATK of Powerhouse characters by 2.5x, reduce damage received by 10%",
         special: "Recovers 5,000 HP and boosts ATK against enemies with reduced defense by 1.5x for 1 turns",
-        specialName: "Lucci Special",
+        specialName: "Demonic Style",
     },
     1421: {//Coliseum Diamante
         captain: "Boosts ATK of Driven characters by 2x",
         special: "Deals large [INT] damage to all enemies. If HP is full at the time the special was activated, boosts ATK of Driven characters by 2x for 1 turn, 1.5x otherwise",
-        specialName: "Diamante Special",
+        specialName: "Half Moon Glaive",
     },
     1422: {//Coliseum Diamante
         captain: "Boosts ATK of Driven characters by 2.25x and boosts HP of Striker and Slasher characters by 1.5x",
         special: "Deals large [INT] damage to all enemies. If HP is full at the time the special was activated, boosts ATK of Driven characters by 2x for 1 turn, 1.5x otherwise",
-        specialName: "Diamante Special",
+        specialName: "Half Moon Glaive",
     },
     1423: {//Coliseum T-Bone
         captain: "Boosts ATK of the whole crew by 1.75x and recovers 918 HP at end of each turn,",
@@ -8038,41 +8038,41 @@ window.details = {
         captain: "Boosts ATK of all characters by 1.5x and EXP gained by 1.5x",
         special: "Locks all orbs for 1 turn. If the HP of the enemy with the highest HP percentage is above 50%, cuts the current HP of all enemies by 20%, otherwise, deals 140x character's ATK in typeless damage to all enemies.",
         sailor: "Makes [INT], [PSY], and [TND] orbs \"beneficial\" for this unit",
-        specialName: "King Neptune Special",
+        specialName: "Merman Gujutsu - Ultramarine",
     },
     1475: {//King Neptune
         captain: "Boosts ATK of all characters by 2.25x and EXP gained by 1.5x",
         captainNotes: "EXP boost does not take effect if he becomes your capatin in the middle of the adventure.",
         special: "Locks all orbs for 1 turn. If the HP of the enemy with the highest HP percentage is above 50%, cuts the current HP of all enemies by 20%, otherwise, deals 140x character's ATK in typeless damage to all enemies.",
         sailor: "Makes [INT], [PSY], and [TND] orbs \"beneficial\" for this unit",
-        specialName: "King Neptune Special",
+        specialName: "Merman Gujutsu - Ultramarine",
     },
     1476: {//Fukaboshi
         captain: "Boosts ATK of Striker characters by 2x",
         special: "Delays all enemies by 1 turn, and boosts ATK of Striker and Powerhouse characters by 1.75x for 1 turn",
         sailor: "Boosts HP, RCV and ATK of all characters by 50",
-        specialName: "Fukaboshi Special",
+        specialName: "Merman Gujutsu - Spear of the Ages",
     },
     1477: {//Fukaboshi
         captain: "Boosts ATK of Striker characters by 2.5x and boosts HP of Powerhouse characters by 1.25x",
         captainNotes: "This effect does stack for characters that have both classes, so Striker/Powerhouse characters will have 2.5x ATK and 1.25x HP",
         special: "Delays all enemies by 1 turn, and boosts ATK of Striker and Powerhouse characters by 1.75x for 1 turn",
         sailor: "Boosts HP, RCV and ATK of all characters by 50",
-        specialName: "Fukaboshi Special",
+        specialName: "Merman Gujutsu - Spear of the Ages",
     },
     1478: {//Caribou
         captain: "Boosts ATK of all characters by 1.5x after the 11th hit in the chain, by 1.75x after the 22nd hit, by 2x after the 33th hit, by 3x after the 44th hit",
         special: "Deals 15 hits of 12x character's ATK in typeless damage to random enemies and boosts ATK of [QCK] and [INT] characters by 2x for 1 turn",
         specialNotes: "#{randomHits : 15}",
         sailor: "Completely resists Paralysis on this character",
-        specialName: "Caribou Special",
+        specialName: "Swamp-Swamp Gatling Gun",
     },
     1479: {//Caribou
         captain: "Boosts ATK of all characters by 1.75x after the 11th hit in the chain, by 2.5x after the 22nd hit, by 2.75x after the 33th hit, by 3.5x after the 44th hit",
         special: "Deals 15 hits of 12x character's ATK in typeless damage to random enemies and boosts ATK of [QCK] and [INT] characters by 2x for 1 turn",
         specialNotes: "#{randomHits : 15}",
         sailor: "Completely resists Paralysis on this character",
-        specialName: "Caribou Special",
+        specialName: "Swamp-Swamp Gatling Gun",
     },
     1480: {//Vander Decken IX
         captain: "Boosts ATK by 2.5x after scoring 2 Perfects in a row",
@@ -8080,7 +8080,7 @@ window.details = {
         specialNotes: "Damage that ignores damage negating abilities and barriers is similar to 6* Blackbeard's special when he is captain<br>Silence will refer to effects that prevent you from activating Special Abilities",
         sailor: "Restores his own special by 1 turn when it is rewinded and reduces Silence for 3 turns for himself",
         sailorNotes: "Some enemies can increase your cooldown by 1/2 Turns, this Sailor Ability decreases that by 1 Turn",
-        specialName: "Vander Decken IX Special",
+        specialName: "Stalking Rose Axe",
     },
     1481: {//Vander Decken IX
         captain: "Boosts ATK by 2.5x after the 2nd Perfect and by 3.5x after the 5th Perfect.",
@@ -8088,21 +8088,21 @@ window.details = {
         specialNotes: "Damage that ignores damage negating abilities and barriers is similar to 6* Blackbeard's special when he is captain<br>Silence will refer to effects that prevent you from activating Special Abilities",
         sailor: "Restores his own special by 1 turn when it is rewinded and reduces Silence for 3 turns for himself",
         sailorNotes: "Some enemies can increase your cooldown by 1/2 Turns, this Sailor Ability decreases that by 1 Turn",
-        specialName: "Vander Decken IX Special",
+        specialName: "Stalking Rose Axe",
     },
     1482: {//Madame Shyarly
         captain: "Boosts ATK of INT characters by 2x and their RCV by 1.2x",
         special: "Randomizes all orbs not her own, switches orbs between slots twice, and if enemies have a barrier at the time the special was activated, boosts ATK of all characters by 1.75x, 1.25x otherwise.",
         specialNotes: "This is a new form of Conditional Boost. The boost does not act like a Monet or Dalmatian boost, but is only activated if conditions are met and does not stack with other Class boosts.",
         sailor: "[INT] characters will deal an extra 1.1x to non [PSY] enemies",
-        specialName: "Madame Shyarly Special",
+        specialName: "Foretold Catastrophe",
     },
     1483: {//Madame Shyarly
         captain: "Boosts ATK of INT characters by 2.5x and their RCV by 1.2x",
         special: "Randomizes all orbs not her own, switches orbs between slots twice, and if enemies have a barrier at the time the special was activated, boosts ATK of all characters by 1.75x, 1.25x otherwise.",
         specialNotes: "This is a new form of Conditional Boost. The boost does not act like a Monet or Dalmatian boost, but is only activated if conditions are met and does not stack with other Class boosts.",
         sailor: "[INT] characters will deal an extra 1.1x to non [PSY] enemies",
-        specialName: "Madame Shyarly Special",
+        specialName: "Foretold Catastrophe",
     },
     1484: {//Wild Sanji
         captain: "Boosts ATK by 2.5x after scoring 3 Perfects in a row",
@@ -8253,48 +8253,48 @@ window.details = {
     1509: {//Haruta
         captain: "Reduces cooldown of Slasher and Cerebral specials by 1 turn at the start of the fight. Boosts ATK of [INT] characters by 2x.",
         special: "Deals 12x character's ATK in INT damage to one enemy and reduces damage received from PSY enemies by 80%.",
-        specialName: "Haruta Special",
+        specialName: "Honorable Blade",
         sailor: "Reduces Silence duration against this unit by 2 turns",
         sailorNotes: "Silence will refer to effects that prevent you from activating Special Abilities",
     },
     1510: {//Speed Jiru
         captain: "Boosts ATK of Driven and Striker characters by 2x",
         special: "Deals 12,500 fixed damage to one enemy",
-        specialName: "Genocide Jil Special",
+        specialName: "Acceleration Lance",
         sailor: "When HP is above 70% at the start of the turn, boosts ATK of Striker characters by 20",
     },
     1511: {//Atmos
         captain: "Boosts ATK of PSY characters by 2x",
         special: "Reduces Despair duration by 3 turns, boosts own ATK by 1.5x for 1 turn",
-        specialName: "Atmos Special",
+        specialName: "Buffalo Roar",
         sailor: "Boosts ATK of Powerhouse characters by 20 if your captain is a Powerhouse character",
     },
     1512: {//Kingdew
         captain: "Boosts ATK of Fighter and Powerhouse characters by 2x",
         special: "Removes poison, boosts ATK of Powerhouse characters by 1.5x for 1 turn if HP is below 30% when the special is activated",
-        specialName: "Kingdew Special",
+        specialName: "Enlightened Spirit",
         sailor: "Makes [RCV] orbs \"beneficial\" for this unit if your captain is a Powerhouse character",
     },
     1513: {//Anniversary Sanji
         captain: "Boosts ATK of Fighter characters by 1.75x and RCV of Powerhouse characters by 1.2x",
         special: "Randomizes all orbs, including [BLOCK] orbs, reduces Special Cooldown of 1 character by 1 turn",
-        specialName: "Sanji Special",
+        specialName: "Unfamiliar Escort",
     },
     1514: {//Anniversary Sanji
         captain: "Boosts ATK of Fighter characters by 2.5x and RCV of Powerhouse characters by 1.2x",
         special: "Randomizes all orbs, including [BLOCK] orbs, reduces Special Cooldown of 1 character by 1 turn",
-        specialName: "Sanji Special",
+        specialName: "Unfamiliar Escort",
     },
     1515: {//White Day Brook
         captain: "Boosts ATK of [STR] and [QCK] characters by 1.5x",
         special: "Cuts the current HP of each enemy by 10% and makes [RCV] orbs \"beneficial\" for all characters for 1 turn",
-        specialName: "Brook Special",
+        specialName: "Three-Verse Humming: Arrow-Notch Slash - Hail",
         sailor: "Makes [RCV] orbs \"beneficial\" for this unit",
     },
     1516: {//White Day Brook
         captain: "Boosts ATK of [STR] and [QCK] characters by 2x, recovers 2x character's RCV in HP at the end of each turn",
         special: "Cuts the current HP of each enemy by 10% and makes [RCV] orbs \"beneficial\" for all characters for 1 turn",
-        specialName: "Brook Special",
+        specialName: "Three-Verse Humming: Arrow-Notch Slash - Hail",
         sailor: "Makes [RCV] orbs \"beneficial\" for this unit",
     },
     1517: {//Raid Bellamy
@@ -8343,7 +8343,7 @@ window.details = {
     1525: {//Sulieman
         captain: "Boosts ATK of Slashers characters by 3.25x, reduces his own ATK multiplier by 0.0625x at the end of each turn until it is 2x",
         special: "Deals 3 hits of random typeless damage to random enemies, delays all enemies for 1 turn, boosts ATK against delayed enemies by 1.3x for 2 turns",
-        specialNotes: "#{randomHits : 10}",
+        specialNotes: "#{randomHits : 3}",
         specialName: "Sorrowful Execution",
     },
     1526: {//Arlong
@@ -8540,7 +8540,7 @@ window.details = {
         specialName: "Song of Scratches: Blizzard Slash",
     },
     1552: {//Coliseum Hajrudin
-        captain: "Boosts ATK of characters with ??? cost by ????x",
+        captain: "Boosts ATK of characters with 40 cost by 2.5x",
         special: "Deals 300,000 Fixed damage to one enemy, boosts ATK of characters with 40 cost by 1.75x, reduces enemy Barrier duration by 1 turn",
         specialName: "Thunder Giant",
     },
@@ -8552,11 +8552,46 @@ window.details = {
     1554: {//Coliseum Ryuma
         captain: "Boosts ATK of [DEX] characters by 2x",
         special: "Boosts ATK of [DEX] characters and amplifies the effect of orbs for [DEX] characters by 1.35x for 1 turn",
-        specialName: "Ryuma Special",
+        specialName: "Pure Body and Soul",
     },
     1555: {//Coliseum Ryuma
         captain: "Boosts ATK of [DEX] characters by 2.25x, recovers 2x character's RCV in HP at the end of each turn",
         special: "Boosts ATK of [DEX] characters and amplifies the effect of orbs for [DEX] characters by 1.35x for 1 turn",
-        specialName: "Ryuma Special",
+        specialName: "Pure Body and Soul",
+    },
+    1556: {//Wadatsumi
+        captain: "Boosts HP of STR characters by 2x",
+        special: "If the HP of the enemy with the highest HP percentage is above 3,000,000 HP, boosts own ATK by 2x for 1 turn",
+        specialName: "Sailboat Sinking Fist",
+    },
+    1557: {//Zeo
+        captain: "Boosts ATK of Strikers characters by 3x, reduces own ATK multiplier by 0.1x at the end of each turn, reduces crew's current HP by 10% at the end of each turn",
+        special: "Makes Badly Matching and [BLOCK] orbs not reduce damage for 2 turns",
+        specialName: "Super Sole Headbutt",
+    },
+    1558: {//Ikaros
+        captain: "Boosts ATK of Shooters characters by 3x, reduces own ATK multiplier by 0.1x at the end of each turn, reduces crew's current HP by 10% at the end of each turn",
+        special: "Cuts the current HP of each enemy by 15%",
+        specialName: "Stamping Press",
+    },
+    1559: {//Hyouzou
+        captain: "Boosts ATK of Slashers characters by 3x, reduces own ATK multiplier by 0.1x at the end of each turn, reduces crew's current HP by 10% at the end of each turn",
+        special: "Reduces crew's HP by 50%, deals 55x ATK in Typeless damage to all enemies",
+        specialName: "Disorderly Drunken Frenzy Killing",
+    },
+    1560: {//Daruma
+        captain: "Boosts ATK of Fighters characters by 3x, reduces own ATK multiplier by 0.1x at the end of each turn, reduces crew's current HP by 10% at the end of each turn",
+        special: "Empties all slots including those with [BLOCK] orbs",
+        specialName: "Daruma Drop",
+    },
+    1561: {//Dosun
+        captain: "Boosts ATK of [INT] characters by 3x, reduces own ATK multiplier by 0.1x at the end of each turn, reduces crew's current HP by 10% at the end of each turn",
+        special: "Boosts ATK of Striker characters by 1.5x for 1 turn, deals 25x character's ATK in [INT] damage to one enemy",
+        specialName: "Explosive Nail Hammer",
+    },
+    1562: {//Hody Jones
+        captain: "Boosts ATK of Powerhouse characters by 3.5x, reduces own ATK multiplier by 0.1x at the end of each turn until it is 1.5x, reduces crew's current HP by 10% at the end of each turn",
+        special: "Deals 60x character's ATK in [QCK] damage to one enemy, increases damage received by 2x for 2 turns, boosts ATK of Powerhouse characters by 1.75x for 1 turn",
+        specialName: "Drugs From Heaven",
     },
 };

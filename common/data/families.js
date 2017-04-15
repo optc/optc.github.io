@@ -1554,4 +1554,11 @@ window.families = [
     "Hajrudin",
     "Ryuuma",
     "Ryuuma",
+    "Wadatsumi",
+    "Zeo",
+    "Icaros Much",
+    "Hyouzou",
+    "Daruma",
+    "Dosun",
+    "Hody Jones",
 ];

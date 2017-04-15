@@ -4527,4 +4527,37 @@ window.captains = {
     1555: {
         atk: function(p) { return p.unit.type == "DEX" ? 2.25 : 1; },
     },
+    1556: {
+        hp: function(p) { return p.unit.type == "STR" ? 2 : 1; },
+    },
+    1557: {
+        atk: function(p) {
+            return p.unit.class.has("Striker") ? Math.max(1.0, 3.0 - 0.1 * p.turnCounter) : 1;
+        }
+    },
+    1558: {
+        atk: function(p) {
+            return p.unit.class.has("Shooter") ? Math.max(1.0, 3.0 - 0.1 * p.turnCounter) : 1;
+        }
+    },
+    1559: {
+        atk: function(p) {
+            return p.unit.class.has("Slasher") ? Math.max(1.0, 3.0 - 0.1 * p.turnCounter) : 1;
+        }
+    },
+    1560: {
+        atk: function(p) {
+            return p.unit.class.has("Fighter") ? Math.max(1.0, 3.0 - 0.1 * p.turnCounter) : 1;
+        }
+    },
+    1561: {
+        atk: function(p) {
+            return p.unit.type == "INT" ? Math.max(1.0, 3.0 - 0.1 * p.turnCounter) : 1;
+        }
+    },
+    1562: {
+        atk: function(p) {
+            return p.unit.class.has("Powerhouse") ? Math.max(1.5, 3.5 - 0.1 * p.turnCounter) : 1;
+        }
+    },
 };
