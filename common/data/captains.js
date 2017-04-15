@@ -4516,7 +4516,7 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Free Spirit") ? 2.5 : 1; }
     },
     1552: {
-        atk: function(p) { return p.unit.cost == 40 ? 1 : 1; },
+        atk: function(p) { return p.unit.cost == 40 ? 2.5 : 1; },
     },
     1553: {
         atk: function(p) { return p.unit.cost == 40 ? 2.75 : 1; },

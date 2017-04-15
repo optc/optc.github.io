@@ -2487,9 +2487,11 @@ window.specials = {
     },
     1552: {
         atk: function(p) { return p.unit.cost == 40 ? 1.75 : 1; },
+        type: "class"
     },
     1553: {
         atk: function(p) { return p.unit.cost == 40 ? 1.75 : 1; },
+        type: "class"
     },
     1554: {
         atk: function(p) { return p.unit.type == "DEX" ? 1.35 : 1; },
