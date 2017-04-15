@@ -661,7 +661,7 @@ window.drops = {
         {
             name: "King Neptune's Execution Site - Noah's Ark",
             shortName: "Fishman Island 2",
-            thumb: 1506,
+            thumb: 1562,
             completion: '10x Rainbow Gems',
             gamewith: 54695,
             "01": [  ],
