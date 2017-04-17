@@ -353,10 +353,10 @@ window.effects = {
     },
     
     'World Pirates - Boa Stage 1': {
-        description: 'Boosts the ATK of characters with 40 cost or less by 1.5x',
+        description: 'Boosts the ATK of characters with 30 cost or less by 1.5x',
         thumb: 865,
         id: 36,
-        atk: function(p) { return p.cost <= 40 ? 1.5 : 1; }
+        atk: function(p) { return p.cost <= 30 ? 1.5 : 1; }
     },
    /* 
     'World Pirates - Boa Secret Stage': {

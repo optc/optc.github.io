@@ -1561,6 +1561,10 @@ window.units = [
     [ "Daruma", "QCK", [ "Powerhouse", "Fighter" ], 3, 15, 4, 2, 70, 1066998, 70, 83, 24, 1039, 1191, 173, 1 ],
     [ "Dosun", "INT", [ "Powerhouse", "Striker" ], 3, 15, 4, 2, 70, 1066998, 101, 77, 18, 1465, 1092, 133, 1 ],
     [ "Hody Jones, Rampage", "QCK", [ "Powerhouse", "Shooter" ], 5, 30, 4, 4, 99, 4000000, 1115, 660, 0, 3115, 1395, -150, 1 ],
+    [ "Fortnight Elizabello", "STR", [ "Fighter", "Powerhouse" ], 3, 13, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Fortnight Elizabello, Evolved", "STR", [ "Fighter", "Powerhouse" ], 4, 20, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Fortnight Dagama", "DEX", [ "Driven", "Cerebral" ], 3, 13, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Fortnight Dagama, Evolved", "DEX", [ "Driven", "Cerebral" ], 4, 20, null, null, null, null, null, null, null, null, null, null, null ],
     ];
     
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],

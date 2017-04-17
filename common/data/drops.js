@@ -1424,9 +1424,9 @@ window.drops = {
         
         {
             name: "Prodence Kingdom",
-            thumb: null,
+            thumb: 1564,
             //condition: "You can only bring PSY units",
-            "All Difficulties": [ -1362, -1408, -1414, -941, -991, -308, -1283, -892, -1549, -709 ],
+            "All Difficulties": [ 1563, 1565, -1362, -1408, -1412, -941, -991, -308, -1283, -892, -1549, -709 ],
         },
         
     ],

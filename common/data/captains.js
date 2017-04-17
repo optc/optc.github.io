@@ -4560,4 +4560,20 @@ window.captains = {
             return p.unit.class.has("Powerhouse") ? Math.max(1.5, 3.5 - 0.1 * p.turnCounter) : 1;
         }
     },
+    1563: {
+        damageSorter: function(d) { return CrunchUtils.classSort(d, 4, [ "Fighter", "Powerhouse" ]); },
+        hitAtk: function(p) {
+            if (!p.unit.class.has("Fighter") && !p.unit.class.has("Powerhouse")) return 1;
+            return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 2.1875 : 1.75;
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
+    },
+    1564: {
+        damageSorter: function(d) { return CrunchUtils.classSort(d, 4, [ "Fighter", "Powerhouse" ]); },
+        hitAtk: function(p) {
+            if (!p.unit.class.has("Fighter") && !p.unit.class.has("Powerhouse")) return 1;
+            return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 3 : 2;
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
+    },
 };
