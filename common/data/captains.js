@@ -4576,4 +4576,10 @@ window.captains = {
         },
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
     },
+    1565: {
+        atk: function(p) { return 1.75; }
+    },
+    1566: {
+        atk: function(p) { return 2; }
+    },
 };

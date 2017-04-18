@@ -8599,37 +8599,39 @@ window.details = {
         special: [
             {
                 "description": "Changes own orb into [STR], deals 10 hits of 3x chatacter's ATK in typeless damage to random enemies",
-                "cooldown": [ null, null ],
+                "cooldown": [ 17, 9 ],
             },
             {
                 "description": "Changes own orb into [STR], deals 10 hits of 15x chatacter's ATK in typeless damage to random enemies and adds .3x to Chain multiplier for 1 turn",
-                "cooldown": [ null, null ],
+                "cooldown": [ 24, 16 ],
             },
         ],
-        specialName: "Elizabello Special",
+        specialName: "Battle Royale Rush",
+        sailor: "Boosts own ATK by 350 if this character is the last in the chain to attack",
     },
     1564: {//Elizabello
         captain: "Boosts ATK of Fighter and Powerhouse characters by 2x at the start of the chain and by 3x after the 5th Perfect",
         special: [
             {
                 "description": "Changes own orb into [STR], deals 10 hits of 3x chatacter's ATK in typeless damage to random enemies",
-                "cooldown": [ null, null ],
+                "cooldown": [ 17, 9 ],
             },
             {
                 "description": "Changes own orb into [STR], deals 10 hits of 15x chatacter's ATK in typeless damage to random enemies and adds .3x to Chain multiplier for 1 turn",
-                "cooldown": [ null, null ],
+                "cooldown": [ 24, 16 ],
             },
         ],
-        specialName: "Elizabello Special",
+        specialName: "Battle Royale Rush",
+        sailor: "Boosts own ATK by 350 if this character is the last in the chain to attack",
     },
     1565: {//Dagama
-        captain: "Not Released",
-        special: "Not Released",
-        specialName: "Dagama Special",
+        captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of all characters by 1.75x",
+        special: "Reduces Special Cooldown of all characters by 1 turn and reduces crew's current HP by 10%",
+        specialName: "War of Mislead Order",
     },
     1566: {//Dagama
-        captain: "Not Released",
-        special: "Not Released",
-        specialName: "Dagama Special",
+        captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of all characters by 2x",
+        special: "Reduces Special Cooldown of all characters by 1 turn and reduces crew's current HP by 10%",
+        specialName: "War of Mislead Order",
     },
 };
