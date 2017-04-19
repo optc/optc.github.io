@@ -1472,7 +1472,7 @@ window.drops = {
             thumb: 1469,
             gamewith: 51926,
             condition: "You can only bring QCK units",
-            "All Difficulties": [ 1468, 1470, 1471, -1268, -1322, -1228, -906, -914, -310, -1061, -1470 ]
+            "All Difficulties": [ 1468, 1470, 1471, -1268, -1322, -1228, -906, -914, -310, -1061, -1470, -1320 ]
         },
         
         {
