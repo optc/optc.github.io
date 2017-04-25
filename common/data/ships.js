@@ -306,9 +306,9 @@ window.ships = [
     { // 24
         name: 'New Year\'s Big Top',
         thumb: 'ship_0025_c.png',
-        description: 'Boosts ATK by 1.2x',
+        description: 'Boosts ATK of characters with 20 cost or less by 1.2x',
         atk: function(p) {
-            return 1.2;
+            return p.unit.cost <= 20 ? 1.2 : 1;
         }
     },
     { // 25
@@ -360,13 +360,15 @@ window.ships = [
     { //29
         name: "Karasumaru Ship",
         thumb: 'ship_0030_c.png',
-        description: 'Boosts ATK and HP of Shooter Only characters by 2x and boosts the ATK of all other characters by 1.5x and their HP by 1.02x. Special: Delays all enemies for 2 turns (cooldown: 12 turns).',
-        atk: function(p) {
+        //description: 'Boosts ATK and HP of Shooter Only characters by 2x and boosts the ATK of all other characters by 1.5x and their HP by 1.02x. Special: Delays all enemies for 2 turns (cooldown: 12 turns).',
+        description: 'Boosts ATK and Shooter characters by 1.2x. Special: Delays all enemies for 1 turn (cooldown: 16 turns).',
+        /*atk: function(p) {
             return !(p.unit.class.has('Slasher') || p.unit.class.has('Striker') || p.unit.class.has('Fighter') || p.unit.class.has('Free Spirit') || p.unit.class.has('Cerebral') || p.unit.class.has('Powerhouse') || p.unit.class.has('Driven')) ? 2 : 1.5;
         },
         hp: function(p) {
             return !(p.unit.class.has('Slasher') || p.unit.class.has('Striker') || p.unit.class.has('Fighter') || p.unit.class.has('Free Spirit') || p.unit.class.has('Cerebral') || p.unit.class.has('Powerhouse') || p.unit.class.has('Driven')) ? 2 : 1.02;
-        },
+        },*/
+        atk: function(p) { return p.unit.class.has("Shooter") ? 1.2 : 1; },
     },
 
 ];

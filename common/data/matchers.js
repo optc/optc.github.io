@@ -93,6 +93,12 @@ window.matchers = [
         target: 'captain',
         matcher: /Boosts.+chain multiplier/i
     },
+    
+    {
+        name: 'Combo Boost Captains',
+        target: 'captain',
+        matcher: /Boosts.+hit in the chain/i
+    },
 
     {
         name: 'Cooldown reducers',
@@ -133,7 +139,7 @@ window.matchers = [
     {
         name: 'Beli Boosters',
         target: 'captain',
-        matcher: /boosts amount of beli received/i
+        matcher: /boosts.+Beli/i
     },
     
     {
@@ -196,6 +202,12 @@ window.matchers = [
         name: 'Color Affinity boosters',
         target: 'special',
         matcher: /Boosts the Color Affinity/i
+    },
+    
+    {
+        name: 'Combo Boost Specials',
+        target: 'special',
+        matcher: /Boost.+hit in the chain/i
     },
     
     {
@@ -265,11 +277,11 @@ window.matchers = [
         matcher: /(Empties|Changes.+into.+\[EMPTY\])/i
     },
 
-    {
+    /*{
         name: 'Slot fillers',
         target: 'special',
         matcher: /(Fills\b|\[EMPTY\] orbs into|Changes.+\[EMPTY\].+into)/i
-    },
+    },*/
 
     {
         name: 'Delayers',

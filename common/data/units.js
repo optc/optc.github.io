@@ -1561,10 +1561,13 @@ window.units = [
     [ "Daruma", "QCK", [ "Powerhouse", "Fighter" ], 3, 15, 4, 2, 70, 1066998, 70, 83, 24, 1039, 1191, 173, 1 ],
     [ "Dosun", "INT", [ "Powerhouse", "Striker" ], 3, 15, 4, 2, 70, 1066998, 101, 77, 18, 1465, 1092, 133, 1 ],
     [ "Hody Jones, Rampage", "QCK", [ "Powerhouse", "Shooter" ], 5, 30, 4, 4, 99, 4000000, 1115, 660, 0, 3115, 1395, -150, 1 ],
-    [ "Fortnight Elizabello", "STR", [ "Fighter", "Powerhouse" ], 3, 13, 6, 2, 50, 392109, 91, 48, 19, null, null, null, null ],
-    [ "Fortnight Elizabello, Evolved", "STR", [ "Fighter", "Powerhouse" ], 4, 20, 4, 4, 99, 3000000, 931, 495, 90, 2151, 1200, 192, null ],
-    [ "Fortnight Dagama", "DEX", [ "Driven", "Cerebral" ], 3, 13, 4, 2, 50, 392109, null, null, null, 1012, 511, 160, null ],
-    [ "Fortnight Dagama, Evolved", "DEX", [ "Driven", "Cerebral" ], 4, 20, 6, 4, 99, 3000000, 912, 451, 99, null, null, null, null ],
+    [ "'The Fighting King' Elizabello II", "STR", [ "Fighter", "Powerhouse" ], 3, 13, 6, 2, 50, 392109, 91, 48, 19, 1021, 602, 99, 1 ],
+    [ "'The Fighting King' Elizabello II, Prodence Kingdom", "STR", [ "Fighter", "Powerhouse" ], 4, 20, 4, 4, 99, 3000000, 931, 495, 90, 2151, 1200, 192, 1 ],
+    [ "Tactician Dagama", "DEX", [ "Driven", "Cerebral" ], 3, 13, 4, 2, 50, 392109, 101, 45, 70, 1012, 511, 160, 1 ],
+    [ "Tactician Dagama, Prodence Kingdom", "DEX", [ "Driven", "Cerebral" ], 4, 20, 6, 4, 99, 3000000, 912, 451, 99, 2022, 1011, 276, 1 ],
+    [ "Boa Hancock, Maiden Warrior", "QCK", [ "Free Spirit", "Fighter" ], 4, 10, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Boa Hancock, A Glimpse of a Princess", "QCK", [ "Free Spirit", "Fighter" ], 5, 18, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Trafalgar Law, Straw Hat • Heart Pirates Alliance", "INT", [ "Free Spirit", "Striker" ], 4, 15, 4, 4, 99, null, 197, 109, 15, 2017, 1230, 245, null ],
     ];
     
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
