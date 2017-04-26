@@ -2415,4 +2415,24 @@ window.evolutions = {
         evolution: 1568,
         evolvers: [  ]
     },
+    1570: {
+        evolution: 1571,
+        evolvers: [  ]
+    },
+    1572: {
+        evolution: 1573,
+        evolvers: [  ]
+    },
+    1574: {
+        evolution: 1575,
+        evolvers: [  ]
+    },
+    1576: {
+        evolution: 1577,
+        evolvers: [  ]
+    },
+    1578: {
+        evolution: 1579,
+        evolvers: [  ]
+    },
 };

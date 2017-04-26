@@ -2530,4 +2530,25 @@ window.specials = {
     1568: {
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5); }
     },
+    1570: {
+        staticMult: function(p) { return 80; }
+    },
+    1571: {
+        staticMult: function(p) { return 80; }
+    },
+    1572: {
+        atk: function(p) { return p.unit.class.has("Cerebral") ? 1.75 : 1; },
+        type: "class"
+    },
+    1573: {
+        atk: function(p) { return p.unit.class.has("Cerebral") ? 1.75 : 1; },
+        type: "class"
+    },
+    1578: {
+        chainAddition: function(p) { return 0.5; }
+    },
+    1579: {
+        chainAddition: function(p) { return 0.5; }
+    },
+    
 };

@@ -1568,6 +1568,16 @@ window.units = [
     [ "Boa Hancock, Maiden Warrior", "QCK", [ "Free Spirit", "Fighter" ], 4, 10, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Boa Hancock, A Glimpse of a Princess", "QCK", [ "Free Spirit", "Fighter" ], 5, 18, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Trafalgar Law, Straw Hat • Heart Pirates Alliance", "INT", [ "Free Spirit", "Striker" ], 4, 15, 4, 4, 99, null, 197, 109, 15, 2017, 1230, 245, null ],
+    [ "Duke Inuarashi, Kozuki Family Retainer", "STR", [ "Slasher", "Cerebral" ], 5, 30, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Duke Inuarashi, Ruler of Day", "STR", [ "Slasher", "Cerebral" ], 6, 55, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Wanda, Mink Tribe", "QCK", [ "Slasher", "Cerebral" ], 4, 15, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Wanda, Inuarashi Musketeer Squad", "QCK", [ "Slasher", "Cerebral" ], 5, 30, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Sicilian, Mink Tribe", "INT", [ "Slasher", "Cerebral" ], 4, 15, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "'Full Power' Sicilian, Inuarashi Musketeer Squad Captain", "INT", [ "Slasher", "Cerebral" ], 5, 30, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Kinemon, Wano Country Samurai", "DEX", [ "Slasher", "Free Spirit" ], 4, 15, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "'Firefox' Kinemon, Kozuki Family Retainer", "DEX", [ "Slasher", "Free Spirit" ], 5, 30, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Momonosuke", "PSY", [ "Striker", "Free Spirit" ], 4, 15, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Kozuki Momonosuke, Kozuki Family Heir", "PSY", [ "Striker", "Free Spirit" ], 5, 30, null, null, null, null, null, null, null, null, null, null, null ],
     ];
     
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
