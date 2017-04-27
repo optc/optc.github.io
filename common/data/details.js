@@ -8661,13 +8661,13 @@ window.details = {
     },
     1572: {//Wanda
         captain: "Boosts ATK of Cerebral characters by 2x, and their RCV by 1.2x",
-        special: "Randomizes all orbs, including [BLOCK] orbs, boosts ATK of Cerebral characters by 1.75x for 3 turns",
+        special: "Changes all orbs, including [BLOCK] orbs into [STR], [DEX], [QCK], [INT], or [PSY] orbs, boosts ATK of Cerebral characters by 1.75x for 3 turns",
         sailor: "Reduces Paralysis duration by 1 turn",
         specialName: "Wanda Special",
     },
     1573: {//Wanda
         captain: "Boosts ATK of Cerebral characters by 2.5x, and their RCV by 1.2x",
-        special: "Randomizes all orbs, including [BLOCK] orbs, boosts ATK of Cerebral characters by 1.75x for 3 turns",
+        special: "Changes all orbs, including [BLOCK] orbs into [STR], [DEX], [QCK], [INT], or [PSY] orbs, boosts ATK of Cerebral characters by 1.75x for 3 turns",
         sailor: "Reduces Paralysis duration by 1 turn",
         specialName: "Wanda Special",
     },
