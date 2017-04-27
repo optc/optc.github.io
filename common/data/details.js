@@ -8678,7 +8678,7 @@ window.details = {
         specialName: "Sicilian Special",
     },
     1575: {//Sicilian
-        captain: "Boosts ATK of [INT] characters by 2.5x and their HP by 1.2x",
+        captain: "Boosts ATK of [INT] characters by 2.5x and their HP by 1.25x",
         special: "Delays all enemies for 1 turn, deals ???x character's ATK [INT] damage to all enemies, and changes [STR], [DEX], [QCK], [INT], or [PSY] orbs on Cerebral characters into Matching orbs.",
         sailor: "When HP is below ???% at the start of the turn, boosts ATK of all characters by 200",
         specialName: "Sicilian Special",
@@ -8691,7 +8691,7 @@ window.details = {
         specialName: "Kin'emon Special",
     },
     1577: {//Kin'emon
-        captain: "Boosts ATK by 3.5x following a chain of Good > Great > Perfect hits, recovers 3x character's RCV in HP at the end of each turn",
+        captain: "Recovers 3x character's RCV in HP at the end of each turn. Boosts ATK by 3.5x following a chain of Good > Great > Perfect hits",
         special: "Deals typeless damage to all enemies, and changes all orbs on all characters into Kinemon's orb.",
         specialNotes: "Upon activating the special, all orbs will be changed to the orb Kinemon has. Synergy with [Rainbow] and [BLOCK] orbs has not been confirmed",
         sailor: "Makes [STR] and [QCK] orbs \"beneficial\" for this unit",
@@ -8700,13 +8700,13 @@ window.details = {
     1578: {//Momonosuke
         captain: "Protects from defeat as long as HP is above ???%",
         special: "Switches orbs between slots once, and adds .5x to Chain multiplier for 1 turn",
-        sailor: "Makes [STR], [QCK], [INT], and [DEX] orbs \"beneficial\" for this unit",
+        sailor: "Makes [STR], [QCK], [DEX], and [INT] orbs \"beneficial\" for this unit",
         specialName: "Momonosuke Special",
     },
     1579: {//Momonosuke
-        captain: "Boosts ATK, HP and RCV of all characters by 1.35x, protects from defeat as long as HP is above 30%",
+        captain: "Boosts ATK, HP and RCV of all characters by 1.25x, protects from defeat as long as HP is above 30%",
         special: "Switches orbs between slots once, and adds .5x to Chain multiplier for 1 turn",
-        sailor: "Makes [STR], [QCK], [INT], and [DEX] orbs \"beneficial\" for this unit",
+        sailor: "Makes [STR], [QCK], [DEX], and [INT] orbs \"beneficial\" for this unit",
         specialName: "Momonosuke Special",
     },
 };
