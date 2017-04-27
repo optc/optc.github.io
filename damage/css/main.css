@@ -1044,6 +1044,7 @@ body > .popover .popover-content {
 .popover-data .TND   { background: peru; }
 .popover-data .BLOCK { background: darkslateblue; }
 .popover-data .BOMB  { background: maroon; }
+.popover-data .RAINBOW { background: magenta; }
 .popover-data .G     { background: orange; }
 
 .block-icon:before, .tnd-icon:before {

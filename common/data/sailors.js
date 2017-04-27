@@ -270,11 +270,11 @@ window.sailors = {
     1540: {
         atkStatic: function(p) { return p.unit.type == "INT" ? 50 : 0; },
     },
-    1574: {
-        atkStatic: function(p) { return p.percHP <= 10.0 ? 200 : 0; },
+    1574: {//not working
+        atkStatic: function(p) { return p.percHP <= 10.0 && p.slot == p.sourceSlot ? 200 : 0; },
     },
-    1575: {
-        atkStatic: function(p) { return p.percHP <= 10.0 ? 200 : 0; },
+    1575: {//not working
+        atkStatic: function(p) { return p.percHP <= 10.0 && p.slot == p.sourceSlot ? 200 : 0; },
     },
     
 };
