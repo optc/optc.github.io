@@ -4614,7 +4614,7 @@ window.captains = {
     },
     1575: {
         atk: function(p) { return p.unit.type == "INT" ? 2.5 : 1; },
-        hp: function(p) { return p.unit.type == "INT" ? 1.2 : 1; }
+        hp: function(p) { return p.unit.type == "INT" ? 1.25 : 1; }
     },
     1576: {
         hitAtk: function(p) {
