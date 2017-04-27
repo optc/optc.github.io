@@ -4602,24 +4602,23 @@ window.captains = {
         chainModifier: function(p) { return  p.percHP <= 30.0 ? 1.5 : 1; }
     },
     1572: {
-        atk: function(p) { return p.unit.class.has("Cerebral") ? 1 : 1; },
-        rcv: function(p) { return p.unit.class.has("Cerebral") ? 1 : 1; }
+        atk: function(p) { return p.unit.class.has("Cerebral") ? 2 : 1; },
+        rcv: function(p) { return p.unit.class.has("Cerebral") ? 1.2 : 1; }
     },
     1573: {
         atk: function(p) { return p.unit.class.has("Cerebral") ? 2.5 : 1; },
         rcv: function(p) { return p.unit.class.has("Cerebral") ? 1.2 : 1; }
     },
     1574: {
-        atk: function(p) { return p.unit.type == "INT" ? 1 : 1; },
-        rcv: function(p) { return p.unit.type == "INT" ? 1 : 1; }
+        atk: function(p) { return p.unit.type == "INT" ? 2.25 : 1; },
     },
     1575: {
         atk: function(p) { return p.unit.type == "INT" ? 2.5 : 1; },
-        rcv: function(p) { return p.unit.type == "INT" ? 1.2 : 1; }
+        hp: function(p) { return p.unit.type == "INT" ? 1.2 : 1; }
     },
     1576: {
         hitAtk: function(p) {
-            return p.modifiers.slice(0, p.chainPosition).subcontains(["Good", "Great", "Perfect"]) ? 1 : 1;
+            return p.modifiers.slice(0, p.chainPosition).subcontains(["Good", "Great", "Perfect"]) ? 2.5 : 1;
         },
         hitModifiers: ["Good", "Great", "Perfect", "Perfect", "Perfect", "Perfect"]
     },
@@ -4628,11 +4627,6 @@ window.captains = {
             return p.modifiers.slice(0, p.chainPosition).subcontains(["Good", "Great", "Perfect"]) ? 3.5 : 1;
         },
         hitModifiers: ["Good", "Great", "Perfect", "Perfect", "Perfect", "Perfect"]
-    },
-    1579: {
-        atk: function(p) { return 1; },
-        rcv: function(p) { return 1; },
-        hp: function(p) { return 1; },
     },
     1579: {
         atk: function(p) { return 1.3; },

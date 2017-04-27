@@ -468,7 +468,25 @@ window.matchers = [
     {
         name: '"Beneficial" Orb sailors',
         target: 'sailor',
-        matcher: /Makes (\[STR\]|\[DEX\]|\[QCK\]|\[PSY\]|\[INT\]|\[RCV\]|\[TND\]) orbs "beneficial"/i
+        matcher: /"beneficial/i
+    },
+    
+    {
+        name: 'Paralysis reducers',
+        target: 'sailor',
+        matcher: /(reduces|removes).+Paralysis/i 
+    },
+
+    {
+        name: 'Blindness removers',
+        target: 'sailor',
+        matcher: /(reduces|removes|resists).+blindness/i
+    },
+    
+    {
+        name: 'Silence reducers',
+        target: 'sailor',
+        matcher: /(reduces|removes|resists).+silence/i
     },
 
 ];

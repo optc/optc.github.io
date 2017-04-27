@@ -196,6 +196,8 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
                 !CharUtils.isClassBooster('captain', id, filters.classCaptain)) return false;
         if ($rootScope.filters.custom[MATCHER_IDS['special.ClassBoostingSpecials']] && filters.classSpecial &&
                 !CharUtils.isClassBooster('special', id, filters.classSpecial)) return false;
+        if ($rootScope.filters.custom[MATCHER_IDS['sailor.ClassBoostingSailors']] && filters.classSailor &&
+                !CharUtils.isClassBooster('sailor', id, filters.classSailor)) return false;
         return true;
     };
 

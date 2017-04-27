@@ -1515,6 +1515,7 @@ window.drops = {
             name: 'Clash!! Mihawk',
             thumb: 227,
             global: true,
+            gamewith: 4142,
             Master: [ 86, 112, 118, 226 ],
             Expert: [ 97, 112, 226 ]
         },
@@ -1523,6 +1524,7 @@ window.drops = {
             name: 'Clash!! Chopper\'s Rampage',
             thumb: 249,
             global: true,
+            gamewith: 5210,
             Master: [ 84, 110, 118, 248 ],
             Expert: [ 84, 110, 248 ]
         },
@@ -1531,6 +1533,7 @@ window.drops = {
             name: 'Clash!! Vice-Admiral Garp',
             thumb: 306,
             global: true,
+            gamewith: 5905,
             Master: [ 113, 118, 262, 264, 305 ],
         },
 
@@ -1538,6 +1541,7 @@ window.drops = {
             name: 'Clash!! Black Arm Zephyr',
             thumb: 353,
             global: true,
+            gamewith: 7293,
             Master: [ 88, 114, 118, 352, 354 ],
             Expert: [ 99, 114, 117, 352, 354 ]
         },
@@ -1546,6 +1550,7 @@ window.drops = {
             name: 'Clash!! Ivankov',
             thumb: 390,
             global: true,
+            gamewith: 8285,
             Master: [ 85, 111, 118, 389 ],
             Expert: [ 85, 96, 111, 389 ]
         },
@@ -1554,6 +1559,7 @@ window.drops = {
             name: 'Clash!! Doflamingo',
             thumb: 418,
             global: true,
+            gamewith: 9037,
             Ultimate: [ 86, 112, 118, 302, 417 ],
             Master: [ 86, 97, 112, 417 ]
         },
@@ -1562,6 +1568,7 @@ window.drops = {
             name: 'Clash!! Blackbeard',
             thumb: 447,
             global: true,
+            gamewith: 11051,
             Master: [ 84, 110, 118, 300, 446 ],
             Expert: [ 84, 110, 446 ]
         },
@@ -1571,6 +1578,7 @@ window.drops = {
             thumb: 518,
             showManual: true,
             global: true,
+            gamewith: 12014,
             'Ultimate': [ 517, -15, -16, -1446, -223 ]
         },
 
@@ -1578,6 +1586,7 @@ window.drops = {
             name: 'Clash!! Heracles\'n',
             thumb: 516,
             global: true,
+            gamewith: 11958,
             Master: [ 87, 97, 113, 117, 118, 294, 295, 303, 429, 515 ],
             Expert: [ 87, 98, 113, 117, 293, 295, 429, 379, 515 ]
         },
@@ -1586,6 +1595,7 @@ window.drops = {
             name: 'Clash!! Aokiji',
             thumb: 575,
             global: true,
+            gamewith: 12792,
             Ultimate: [ 88, 114, 118, 304, 574 ],
             Master: [ 114, 118, 574 ]
         },
@@ -1594,6 +1604,7 @@ window.drops = {
             name: 'Clash!! Eneru',
             thumb: 603,
             global: true,
+            gamewith: 13682,
             Ultimate: [ 85, 111, 118, 301, 602 ],
             Master: [ 85, 111, 118, 602 ] ,
             Expert: [ 111, 118, 602 ]
@@ -1603,6 +1614,7 @@ window.drops = {
             name: 'Clash!! Duval',
             thumb: 654,
             global: true,
+            gamewith: 14747,
             Master: [ 112, 118, 302, 652 ],
             Expert: [ 86, 97, 112, 652 ]
         },
@@ -1611,6 +1623,7 @@ window.drops = {
             name: 'Clash!! Buster Call',
             thumb: 771,
             global: true,
+            gamewith: 17344,
             Master: [ 110, 111, 112, 113, 114, 770, 771, 772, 773, 774, 775 ],
             Expert: [ 110, 111, 112, 113, 114, 770, 771, 772, 773, 774, 775 ]
         },
@@ -1618,6 +1631,7 @@ window.drops = {
         {
             name: 'Clash!! Nightmare Luffy',
             thumb: 795,
+            gamewith: 18565,
             Master: [ 794 ],
             Expert: [ 794 ]
         },
@@ -1626,6 +1640,7 @@ window.drops = {
             name: 'Clash!! Tyrant Kuma',
             thumb: 836,
             global: true,
+            gamewith: 19424,
             Ultimate: [ 835 ],
             Master: [ 835 ]
         },
@@ -1634,6 +1649,7 @@ window.drops = {
             name: 'Clash!! Pirate Empress Hancock',
             thumb: 865,
             global: true,
+            gamewith: 21345,
             Ultimate: [ 864 ],
             Master: [ 864 ],
             Expert: [ 864 ]
@@ -1642,6 +1658,7 @@ window.drops = {
         {
             name: 'Clash!! Pica',
             thumb: 932,
+            gamewith: 23507,
             Master: [ 932 ],
             Expert: [ 932 ]
         },
@@ -1650,6 +1667,7 @@ window.drops = {
             name: 'Clash!! Kizaru',
             thumb: 978,
             global: true,
+            gamewith: 25109,
             Ultimate: [ 977 ],
             Master: [ 977 ]
         },
@@ -1658,6 +1676,7 @@ window.drops = {
             name: 'Clash!? Impostor Straw Hat Pirates',
             showManual: true,
             global: true,
+            gamewith: 26803,
             thumb: 989,
             Ultimate: [ 985, 986, 987, 988, -989, -4, -8, -11, -12, -15, -16, -1446, -556, -528, -520, -554, -558, -20, -1447, -217, -709, -1115, -1177, -1175, -1210, -1208, -1387, -1388, -1389 ]
         },
@@ -1665,6 +1684,7 @@ window.drops = {
         {
             name: 'Clash!! Sabo',
             global: true,
+            gamewith: 29788,
             thumb: 1047,
             Ultimate: [ 1046 ],
             Master: [ 1046 ],
@@ -1675,6 +1695,7 @@ window.drops = {
             name: 'Clash!! Shiki',
             thumb: 1108,
             global: true,
+            gamewith: 33648,
             Ultimate: [ 1107 ],
             Master: [ 1107 ],
             Expert: [ 1107 ]
@@ -1684,6 +1705,7 @@ window.drops = {
             name: 'Clash!! Gild Tesoro',
             thumb: 1163, 
             global: true,
+            gamewith: 35950,
             Master: [ 1162, 1164 ],
             Ultimate: [ 1162, 1164, 1180 ]
         },
@@ -1692,24 +1714,28 @@ window.drops = {
             name: 'Clash!! Akainu',
             thumb: 1298,
             global: true,
+            gamewith: 41277,
             Ultimate: [ 1297 ]
         },
         {
             name: 'Clash!! Warden Magellan',
             thumb: 1374,
             condition: "Take 7% MAX Health in Environmental Damage",
+            gamewith: 45906,
             Master: [ 1373 ],
             Expert: [ 1373 ],
         },
         {
             name: 'Clash!! Shogun Franky',
             thumb: 1432,
+            gamewith: 50030,
             Master: [ 1431, 215, 799 ],
             Ultimate: [ 1431, 215, 799 ],
         },
         {
             name: 'Clash!! Bellamy',
             thumb: 1518,
+            gamewith: '%20%2053151',
             Master: [ 1517 ],
             Expert: [ 1517 ],
         },
@@ -1768,6 +1794,7 @@ window.drops = {
             name: 'Coliseum',
             thumb: 779,
             global: true,
+            gamewith: 17473,
             Exhibition: [ 776, 778, 803, 832, 834, 859, 861, 883, 902, 904, 925, 927, 952, 984, 1017, 1019, 1197, 1221, 1252, 1253, 1293, 1311, 1339, 1340, 1377, 1402, 1423, 1424, 1457, 1459, 1488, 1490, 1526, 1528, 1552 ],
             Underground: [ 776, 778, 803, 832, 834, 859, 861, 883, 902, 904, 925, 927, 952, 984, 1017, 1019, 1197, 1221, 1252, 1253, 1293, 1311, 1339, 1340, 1377, 1402, 1423, 1424, 1457, 1459, 1488, 1490, 1526, 1528, 1552 ],
             Chaos: [ 776, 778, 780, 803, 805, 830, 832, 834, 859, 861, 881, 883, 900, 902, 923, 925, 950, 982, 984, 1017, 1015, 1040, 1042, 1086, 1088, 1090, 1101, 1103, 1105, 1140, 1142, 1144, 1195, 1219, 1221, 1250, 1252, 1291, 1293, 1309, 1311, 1337, 1339, 1340, 1375, 1377, 1400, 1402, 1421, 1423, 1455, 1457, 1486, 1488, 1525, 1526, 1528, 1552, 1554 ]

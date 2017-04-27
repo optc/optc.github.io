@@ -271,10 +271,10 @@ window.sailors = {
         atkStatic: function(p) { return p.unit.type == "INT" ? 50 : 0; },
     },
     1574: {
-        atkStatic: function(p) { return p.percHP <= 30.0 ? 200 : 0; },
+        atkStatic: function(p) { return p.percHP <= 10.0 ? 200 : 0; },
     },
     1575: {
-        atkStatic: function(p) { return p.percHP <= 30.0 ? 200 : 0; },
+        atkStatic: function(p) { return p.percHP <= 10.0 ? 200 : 0; },
     },
     
 };
