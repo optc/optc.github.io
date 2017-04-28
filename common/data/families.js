@@ -1578,4 +1578,11 @@ window.families = [
     "Kinemon",
     "Momonosuke",
     "Momonosuke",
+    "Trafalgar Law",
+    "Trafalgar Law",
+    "Monet",
+    "Orlumbus",
+    "Orlumbus",
+    "Helmeppo",
+    "Helmeppo",
 ];

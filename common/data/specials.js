@@ -2524,6 +2524,12 @@ window.specials = {
         atk: function(p) { return p.unit.class.has("Powerhouse") ? 1.75 : 1; },
         type: "class"
     },
+    1563: {
+        chainAddition: function(p) { return 0.3; }
+    },
+    1564: {
+        chainAddition: function(p) { return 0.3; }
+    },
     1567: {
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5); }
     },
@@ -2549,6 +2555,49 @@ window.specials = {
     },
     1579: {
         chainAddition: function(p) { return 0.5; }
+    },
+    1580: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1); }
+    },
+    1581: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1); }
+    },
+    1582: {
+        atk: function(p) { return p.unit.class.has("Cerebral") ? 1.5 : 1; },
+        rcv: function(p) { return p.unit.class.has("Cerebral") ? 1.5 : 1; },
+        type: "class"
+    },
+    1583:{
+        orb: function(p) { return (p.unit.class.has("Striker")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[1583].multiplier) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[1583].multiplier); },
+        onActivation: function(p) {
+            var n = (window.specials[1583].multiplier == 1.5 ? 1 : 0);
+            window.specials[1583].multiplier = [1.5, 2][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.5, 2][n] + 'x Orb boost. To switch to the ' + [2, 1.5][n] + 'x Orb boost, disable and re-enable this special',
+                name: '1583warning'
+            });
+        },
+    },
+    1584:{
+        orb: function(p) { return (p.unit.class.has("Striker")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[1584].multiplier) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[1584].multiplier); },
+        onActivation: function(p) {
+            var n = (window.specials[1584].multiplier == 1.5 ? 1 : 0);
+            window.specials[1584].multiplier = [1.5, 2][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.5, 2][n] + 'x Orb boost. To switch to the ' + [2, 1.5][n] + 'x Orb boost, disable and re-enable this special',
+                name: '1584warning'
+            });
+        },
+    },
+    1585: {
+        atk: function(p) { return (p.percHP*p.maxHP/100 > 5000 && (p.unit.class.has("Slasher") || p.unit.class.has("Driven"))) ? 1.75 : 1; },
+        rcv: function(p) { return (p.percHP*p.maxHP/100 > 5000 && (p.unit.class.has("Slasher") || p.unit.class.has("Driven"))) ? 1.5 : 1; },
+        type: "class"
+    },
+    1586: {
+        atk: function(p) { return (p.percHP*p.maxHP/100 > 5000 && (p.unit.class.has("Slasher") || p.unit.class.has("Driven"))) ? 1.75 : 1; },
+        rcv: function(p) { return (p.percHP*p.maxHP/100 > 5000 && (p.unit.class.has("Slasher") || p.unit.class.has("Driven"))) ? 1.5 : 1; },
+        type: "class"
     },
     
 };

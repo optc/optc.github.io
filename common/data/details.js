@@ -6857,15 +6857,15 @@ window.details = {
         captain: "Boosts ATK by 2x after the 2nd Perfect and by 3x after the 5th Perfect.",
         special: [
             {
-                "description": "If HP is below 3,000, reduces No Healing debuff by 1 turn. Recovers 3x character's RCV in HP",
+                "description": "If HP is below 3,000 when the special is activated, reduces No Healing debuff by 1 turn. Recovers 3x character's RCV in HP",
                 "cooldown": [ 15, 9 ],
             },
             {
-                "description": "If HP is below 3,000, reduces No Healing debuff by 3 turns. Recovers 6x character's RCV in HP",
+                "description": "If HP is below 3,000 when the special is activated, reduces No Healing debuff by 3 turns. Recovers 6x character's RCV in HP",
                 "cooldown": [ 20, 14 ],
             },
             {
-                "description": "If HP is below 3,000, removes No Healing debuff. Recovers 13x character's RCV in HP",
+                "description": "If HP is below 3,000 when the special is activated, removes No Healing debuff. Recovers 13x character's RCV in HP",
                 "cooldown": [ 24, 18 ],
             },
         ],
@@ -6877,15 +6877,15 @@ window.details = {
         captain: "Boosts ATK by 2.5x after the 2nd Perfect and by 3.5x after the 5th Perfect.",
         special: [
             {
-                "description": "If HP is below 3,000, reduces No Healing debuff by 1 turn. Recovers 3x character's RCV in HP",
+                "description": "If HP is below 3,000 when the special is activated, reduces No Healing debuff by 1 turn. Recovers 3x character's RCV in HP",
                 "cooldown": [ 15, 9 ],
             },
             {
-                "description": "If HP is below 3,000, reduces No Healing debuff by 3 turns. Recovers 6x character's RCV in HP",
+                "description": "If HP is below 3,000 when the special is activated, reduces No Healing debuff by 3 turns. Recovers 6x character's RCV in HP",
                 "cooldown": [ 20, 14 ],
             },
             {
-                "description": "If HP is below 3,000, removes No Healing debuff. Recovers 13x character's RCV in HP",
+                "description": "If HP is below 3,000 when the special is activated, removes No Healing debuff. Recovers 13x character's RCV in HP",
                 "cooldown": [ 24, 18 ],
             },
         ],
@@ -7729,7 +7729,7 @@ window.details = {
         specialName: "General Cannon",
     },
     1433: {//Hody Jones
-        captain: "Reduces cooldown of Powerhouse specials by 1 turns at the start of the fight, reduces crew's current HP by 10% at the end of each turn, and boosts ATK of Powerhouse characters 3x if there are 6 Powerhouse characters in your crew and HP of Powerhouse characters by up to 2x depending on how many Powerhouse characters are in your crew.",
+        captain: "Reduces cooldown of Powerhouse specials by 1 turns at the start of the fight, reduces crew's current HP by 10% at the end of each turn, and boosts ATK of Powerhouse characters by 3x if there are 6 Powerhouse characters in your crew and HP of Powerhouse characters by up to 2x depending on how many Powerhouse characters are in your crew.",
         captainNotes: "Hody's HP boost is dependent on how many Powerhouse characters are in your crew. With 6 Powerhouse characters, the boost is 2x, with 5 the boost is 1.5x, with 4 the boost is 1.4x, with 3 the boost is 1.3x, with 2 the boost is 1.2x, and with 1 the boost is 1.1x.",
         special: [
             {
@@ -7744,7 +7744,7 @@ window.details = {
         specialName: "Water Bullets",
     },
     1434: {//Hody Jones
-        captain: "Reduces cooldown of Powerhouse specials by 1 turns at the start of the fight, reduces crew's current HP by 10% at the end of each turn, and boosts ATK of Powerhouse characters 3x if there are 6 Powerhouse characters in your crew and HP of Powerhouse characters by up to 2x depending on how many Powerhouse characters are in your crew.",
+        captain: "Reduces cooldown of Powerhouse specials by 1 turns at the start of the fight, reduces crew's current HP by 10% at the end of each turn, and boosts ATK of Powerhouse characters by 3x if there are 6 Powerhouse characters in your crew and HP of Powerhouse characters by up to 2x depending on how many Powerhouse characters are in your crew.",
         captainNotes: "Hody's HP boost is dependent on how many Powerhouse characters are in your crew. With 6 Powerhouse characters, the boost is 2x, with 5 the boost is 1.5x, with 4 the boost is 1.4x, with 3 the boost is 1.3x, with 2 the boost is 1.2x, and with 1 the boost is 1.1x.",
         special: [
             {
@@ -8647,7 +8647,7 @@ window.details = {
     1569: {//Anniversary Law
         captain: "Boosts ATK of all characters by 2.25x and boosts EXP and amount of Beli recieved by 1.2x",
         special: "Randomizes all orbs, including [BLOCK] orbs and switches orbs between slots three times",
-        specialName: "Law Special",
+        specialName: "ROOM Shambles・Junction",
     },
     1570: {//Inuarashi
         captain: "Boosts ATK of Cerebral characters by 2.75x and chain by 1.5x if HP is below 30% at the start of the turn, boosts ATK of Cerebral characters by 2.5x otherwise",
@@ -8662,13 +8662,13 @@ window.details = {
     1572: {//Wanda
         captain: "Boosts ATK of Cerebral characters by 2x, and their RCV by 1.2x",
         special: "Changes all orbs, including [BLOCK] orbs into [STR], [DEX], [QCK], [INT], or [PSY] orbs, boosts ATK of Cerebral characters by 1.75x for 3 turns",
-        sailor: "Reduces Paralysis duration by 1 turn",
+        sailor: "Reduces Paralysis duration by 1 turn for herself",
         specialName: "Wanda Special",
     },
     1573: {//Wanda
         captain: "Boosts ATK of Cerebral characters by 2.5x, and their RCV by 1.2x",
         special: "Changes all orbs, including [BLOCK] orbs into [STR], [DEX], [QCK], [INT], or [PSY] orbs, boosts ATK of Cerebral characters by 1.75x for 3 turns",
-        sailor: "Reduces Paralysis duration by 1 turn",
+        sailor: "Reduces Paralysis duration by 1 turn for herself",
         specialName: "Wanda Special",
     },
     1574: {//Sicilian
@@ -8708,5 +8708,40 @@ window.details = {
         special: "Switches orbs between slots once, and adds .5x to Chain multiplier for 1 turn",
         sailor: "Makes [STR], [QCK], [DEX], and [INT] orbs \"beneficial\" for this unit",
         specialName: "Momonosuke Special",
+    },
+    1580: {//Fortnight Law
+        captain: "Not Released",
+        special: "Changes orbs in right column to [DEX], [PSY], [INT] from top to bottom, switches orbs between slots twice, amplifies the effect of orbs by ???x for 1 turn",
+        specialName: "Law Special",
+    },
+    1581: {//Fortnight Law
+        captain: "Boosts ATK of Free Spirit characters by 2x and boosts RCV of DEX characters by 1.5x",
+        special: "Changes orbs in right column to [DEX], [PSY], [INT] from top to bottom, switches orbs between slots twice, amplifies the effect of orbs by ???x for 1 turn",
+        specialName: "Law Special",
+    },
+    1582: {//Fortnight Monet
+        captain: "Boosts ATK and RCV of Cerebral characters by 1.2x",
+        special: "Recovers 10x character's RCV in HP. Boosts ATK and RCV of Cerebral characters by 1.5x for 1 turn",
+        specialName: "Monet Special",
+    },
+    1583: {//Coliseum Orlumbus
+        captain: "Not Released",
+        special: "Locks all orbs for 1 turn. If there are 4 enemies on the stage, amplifies the effect of orbs for Striker characters by 2x for 1 turn, amplifies the effect of orbs for Fighter characters by 1.5x for 1 turn otherwise",
+        specialName: "Orlumbus Special",
+    },
+    1584: {//Coliseum Orlumbus
+        captain: "Boosts ATK of Striker characters by 3x (or 2.7x) if HP is below ??% at the start of the turn, by 2.5x otherwise",
+        special: "Locks all orbs for 1 turn. If there are 4 enemies on the stage, amplifies the effect of orbs for Striker characters by 2x for 1 turn, amplifies the effect of orbs for Fighter characters by 1.5x for 1 turn otherwise",
+        specialName: "Orlumbus Special",
+    },
+    1585: {//Coliseum Helmeppo
+        captain: "Not Released",
+        special: "If HP is below 5,000 when the special is activated, boosts ATK of Driven and Slasher characters by 1.75x for 1 turn and recovers 10x character's RCV in HP",
+        specialName: "Helmeppo Special",
+    },
+    1586: {//Coliseum Helmeppo
+        captain: "Boosts ATK of Slasher and Driven characters by 2x and their RCV by 1.5x",
+        special: "If HP is below 5,000 when the special is activated, boosts ATK of Driven and Slasher characters by 1.75x for 1 turn and recovers 10x character's RCV in HP",
+        specialName: "Helmeppo Special",
     },
 };

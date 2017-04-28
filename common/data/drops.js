@@ -662,7 +662,7 @@ window.drops = {
             name: "King Neptune's Execution Site - Noah's Ark",
             shortName: "Fishman Island 2",
             thumb: 1562,
-            completion: '10x Rainbow Gems',
+            completion: '5x Rainbow Gems',
             gamewith: 54695,
             "01": [  ],
             "02": [  ],
@@ -1502,8 +1502,16 @@ window.drops = {
             name: "Prodence Kingdom",
             thumb: 1564,
             gamewith: 55145,
-            //condition: "You can only bring PSY units",
+            condition: "Elizabello will kill you with one punch",
             "All Difficulties": [ 1563, 1565, -1362, -1408, -1412, -941, -991, -308, -1283, -892, -1549, -709 ],
+        },
+        
+        {
+            name: "Punk Hazard",
+            thumb: 1581,
+            gamewith: null,
+            //condition: "Elizabello will kill you with one punch",
+            "All Difficulties": [ 1580, 1582, -1391, -1444, -1436, -1551, -896, -910, -357, -995, -890, -1342 ],
         },
         
     ],

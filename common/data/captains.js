@@ -4633,4 +4633,30 @@ window.captains = {
         rcv: function(p) { return 1.3; },
         hp: function(p) { return 1.3; },
     },
+    1580: {
+        atk: function(p) { return p.unit.class.has("Free Spirit") ? 1 : 1; },
+        rcv: function(p) { return p.unit.type == "DEX" ? 1 : 1; },
+    },
+    1581: {
+        atk: function(p) { return p.unit.class.has("Free Spirit") ? 2 : 1; },
+        rcv: function(p) { return p.unit.type == "DEX" ? 1.5 : 1; },
+    },
+    1582: {
+        atk: function(p) { return p.unit.class.has("Cerebral") ? 1.2 : 1; },
+        rcv: function(p) { return p.unit.class.has("Cerebral") ? 1.2 : 1; },
+    },
+    1583: {
+        atk: function(p) { return !(p.unit.class.has("Striker")) ? 1 : p.percHP <= 30.0 ? 1 : 1; }
+    },
+    1584: {
+        atk: function(p) { return !(p.unit.class.has("Striker")) ? 1 : p.percHP <= 30.0 ? 3 : 2.5; }
+    },
+    1585: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Driven") ? 1 : 1; },
+        rcv: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Driven") ? 1 : 1; },
+    },
+    1586: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Driven") ? 2 : 1; },
+        rcv: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Driven") ? 1.5 : 1; },
+    },
 };
