@@ -8726,12 +8726,12 @@ window.details = {
     },
     1583: {//Coliseum Orlumbus
         captain: "Not Released",
-        special: "Locks all orbs for 1 turn. If there are 4 enemies on the stage, amplifies the effect of orbs for Striker characters by 2x for 1 turn, amplifies the effect of orbs for Fighter characters by 1.5x for 1 turn otherwise",
+        special: "Locks all orbs for 1 turn. If there are 4 enemies on the stage, amplifies the effect of orbs for Striker characters by 2x for 1 turn, amplifies the effect of orbs for Striker characters by 1.5x for 1 turn otherwise",
         specialName: "Orlumbus Special",
     },
     1584: {//Coliseum Orlumbus
         captain: "Boosts ATK of Striker characters by 3x (or 2.7x) if HP is below ??% at the start of the turn, by 2.5x otherwise",
-        special: "Locks all orbs for 1 turn. If there are 4 enemies on the stage, amplifies the effect of orbs for Striker characters by 2x for 1 turn, amplifies the effect of orbs for Fighter characters by 1.5x for 1 turn otherwise",
+        special: "Locks all orbs for 1 turn. If there are 4 enemies on the stage, amplifies the effect of orbs for Striker characters by 2x for 1 turn, amplifies the effect of orbs for Striker characters by 1.5x for 1 turn otherwise",
         specialName: "Orlumbus Special",
     },
     1585: {//Coliseum Helmeppo
