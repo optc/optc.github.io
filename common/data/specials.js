@@ -2551,10 +2551,26 @@ window.specials = {
         type: "class"
     },
     1578: {
-        chainAddition: function(p) { return 0.5; }
+        chainAddition: function(p) {return window.specials[1578].multiplier;},
+        onActivation: function(p) {
+            var n = (window.specials[1578].multiplier == 0.2 ? 1 : window.specials[1578].multiplier == 0.3 ? 2 : 0);
+            window.specials[1578].multiplier = [0.2, 0.3, 0.5][n];
+            p.scope.notify({
+                text: 'Using the ' + [0.2, 0.3, 0.5][n] + 'x chain addition. To switch to the ' + [0.3, 0.5, 0.2][n] + 'x chain addition, disable and re-enable this special',
+                name: '1578warning'
+            });
+        }
     },
     1579: {
-        chainAddition: function(p) { return 0.5; }
+        chainAddition: function(p) {return window.specials[1579].multiplier;},
+        onActivation: function(p) {
+            var n = (window.specials[1579].multiplier == 0.2 ? 1 : window.specials[1579].multiplier == 0.3 ? 2 : 0);
+            window.specials[1579].multiplier = [0.2, 0.3, 0.5][n];
+            p.scope.notify({
+                text: 'Using the ' + [0.2, 0.3, 0.5][n] + 'x chain addition. To switch to the ' + [0.3, 0.5, 0.2][n] + 'x chain addition, disable and re-enable this special',
+                name: '1579warning'
+            });
+        }
     },
     1580: {
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1); }

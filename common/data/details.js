@@ -7226,15 +7226,15 @@ window.details = {
         captain: "Boosts ATK and RCV of Cerebral characters by 1.5x",
         special: [
             {
-                "description": "Reduces duration of Paralysis and Silence by 1 turn. Delays all enemies for 1 turn",
+                "description": "Reduces Paralysis and Silence duration by 1 turn. Delays all enemies for 1 turn",
                 "cooldown": [ 13, 8 ],
             },
             {
-                "description": "Reduces duration of Paralysis and Silence by 2 turns. Delays all enemies for 1 turn",
+                "description": "Reduces Paralysis and Silence duration by 2 turns. Delays all enemies for 1 turn",
                 "cooldown": [ 15, 10 ],
             },
             {
-                "description": "Reduces duration of Paralysis and Silence by 5 turns. Delays all enemies for 2 turns",
+                "description": "Reduces Paralysis and Silence duration by 5 turns. Delays all enemies for 2 turns",
                 "cooldown": [ 18, 13 ],
             },
         ],
@@ -7247,15 +7247,15 @@ window.details = {
         captain: "Boosts RCV of Cerebral characters by 1.5x and their ATK by 2.75x if they have a matching orb, by 1.5x otherwise",
         special: [
             {
-                "description": "Reduces duration of Paralysis and Silence by 1 turn. Delays all enemies for 1 turn",
+                "description": "Reduces Paralysis and Silence duration by 1 turn. Delays all enemies for 1 turn",
                 "cooldown": [ 13, 8 ],
             },
             {
-                "description": "Reduces duration of Paralysis and Silence by 2 turns. Delays all enemies for 1 turn",
+                "description": "Reduces Paralysis and Silence duration by 2 turns. Delays all enemies for 1 turn",
                 "cooldown": [ 15, 10 ],
             },
             {
-                "description": "Reduces duration of Paralysis and Silence by 5 turns. Delays all enemies for 2 turns",
+                "description": "Reduces Paralysis and Silence duration by 5 turns. Delays all enemies for 2 turns",
                 "cooldown": [ 18, 13 ],
             },
         ],
@@ -8699,13 +8699,39 @@ window.details = {
     },
     1578: {//Momonosuke
         captain: "Protects from defeat as long as HP is above ???%",
-        special: "Switches orbs between slots once, and adds .5x to Chain multiplier for 1 turn",
+        special: [
+            {
+                "description": "Adds .2x to Chain multiplier for 1 turn",
+                "cooldown": [ 8, null ],
+            },
+            {
+                "description": "Switches orbs between slots once, and adds .3x to Chain multiplier for 1 turn",
+                "cooldown": [ 11, null ],
+            },
+            {
+                "description": "Switches orbs between slots once, and adds .5x to Chain multiplier for 1 turn",
+                "cooldown": [ 14, null ],
+            },
+        ],
         sailor: "Makes [STR], [QCK], [DEX], and [INT] orbs \"beneficial\" for this unit",
         specialName: "Momonosuke Special",
     },
     1579: {//Momonosuke
         captain: "Boosts ATK, HP and RCV of all characters by 1.25x, protects from defeat as long as HP is above 30%",
-        special: "Switches orbs between slots once, and adds .5x to Chain multiplier for 1 turn",
+        special: [
+            {
+                "description": "Adds .2x to Chain multiplier for 1 turn",
+                "cooldown": [ 8, null ],
+            },
+            {
+                "description": "Switches orbs between slots once, and adds .3x to Chain multiplier for 1 turn",
+                "cooldown": [ 11, null ],
+            },
+            {
+                "description": "Switches orbs between slots once, and adds .5x to Chain multiplier for 1 turn",
+                "cooldown": [ 14, null ],
+            },
+        ],
         sailor: "Makes [STR], [QCK], [DEX], and [INT] orbs \"beneficial\" for this unit",
         specialName: "Momonosuke Special",
     },
@@ -8726,12 +8752,12 @@ window.details = {
     },
     1583: {//Coliseum Orlumbus
         captain: "Not Released",
-        special: "Locks all orbs for 1 turn. If there are 4 enemies on the stage, amplifies the effect of orbs for Striker characters by 2x for 1 turn, amplifies the effect of orbs for Striker characters by 1.5x for 1 turn otherwise",
+        special: "Locks all orbs for 1 turn. If there are 4 enemies or more on the stage, amplifies the effect of orbs for Striker characters by 2x for 1 turn, otherwise amplifies the effect of orbs for Striker characters by 1.5x for 1 turn",
         specialName: "Orlumbus Special",
     },
     1584: {//Coliseum Orlumbus
         captain: "Boosts ATK of Striker characters by 3x (or 2.7x) if HP is below ??% at the start of the turn, by 2.5x otherwise",
-        special: "Locks all orbs for 1 turn. If there are 4 enemies on the stage, amplifies the effect of orbs for Striker characters by 2x for 1 turn, amplifies the effect of orbs for Striker characters by 1.5x for 1 turn otherwise",
+        special: "Locks all orbs for 1 turn. If there are 4 enemies or more on the stage, amplifies the effect of orbs for Striker characters by 2x for 1 turn, otherwise amplifies the effect of orbs for Striker characters by 1.5x for 1 turn",
         specialName: "Orlumbus Special",
     },
     1585: {//Coliseum Helmeppo
