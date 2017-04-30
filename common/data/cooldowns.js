@@ -1565,8 +1565,8 @@ window.cooldowns = [
     null,//Fortnight Elizabello
     [ 15, 9 ],
     [ 15, 9 ],
-    null,
-    null,
+    [ 13, 13 ],
+    [ 13, 13 ],
     [ 11, 11 ],
     19,
     19,

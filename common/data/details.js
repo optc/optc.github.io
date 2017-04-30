@@ -8502,12 +8502,12 @@ window.details = {
     1544: {//Sakura Koala
         captain: "Boosts ATK of Fighter characters by 1.75x and heals for .3x her RCV at the end of the turn each time you hit a Perfect",
         special: "Changes Captain orb into matching and boosts ATK of Fighter characters by 1.5x for 1 turn",
-        specialName: "Sakura Koala Special",
+        specialName: "Bean Paste under the Petal Snow",
     },
     1545: {//Sakura Koala
         captain: "Boosts ATK of Fighter characters by 2.25x and heals for .5x her RCV at the end of the turn each time you hit a Perfect",
         special: "Changes Captain orb into matching and boosts ATK of Fighter characters by 1.5x for 1 turn",
-        specialName: "Sakura Koala Special",
+        specialName: "Bean Paste under the Petal Snow",
     },
     1546: {//Soul King Brook
         captain: "Boosts ATK of [QCK] characters by 1.5x and boosts HP of Free Spirit characters by 1.2x",
