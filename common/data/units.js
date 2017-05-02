@@ -1282,7 +1282,7 @@ window.units = [
     [ "Garp, Navy HQ Vice Admiral", "STR", [ "Fighter", "Powerhouse" ], 4, 30, 5, 3, 99, 3000000, 171, 64, 62, 2094, 1002, 266, 1 ],
     [ "Sengoku Navy HQ Fleet Admiral", "INT", [ "Cerebral", "Fighter" ], 4, 30, 5, 3, 99, 3000000, 213, 96, 95, 1942, 972, 304, 1 ],
     [ "Akainu Navy HQ Admiral", "INT", [ "Driven", "Fighter" ], 4, 30, 5, 3, 99, 3000000, 133, 100, 0, 2000, 1381, 0, 1 ],
-    [ "Monkey D. Luffy, Wild Pirate", "PSY", [ "Striker", "Powerhouse" ], 4, 15, 6, 3, 50, 392109, 226, 154, 51, 1104, 602, 143, 1 ],
+    [ "Monkey D. Luffy, Wild Pirate", "PSY", [ "Striker", "Powerhouse" ], 4, 15, 6, 4, 50, 392109, 226, 154, 51, 1104, 602, 143, 1 ],
     [ "Monkey D. Luffy, Pioneer Of Land", "PSY", [ "Striker", "Powerhouse" ], 5, 30, 4, 3, 99, 4000000, 1002, 501, 88, 2491, 1325, 261, 1 ],
     [ "Baby 5, Girl of Spider Miles", "PSY", [ "Fighter", "Shooter" ], 3, 9, 5, 1, 50, 392109, 19, 29, 35, 399, 204, 194, 1 ],
     [ "Baby 5, Member of Donquixote Family", "PSY", [ "Striker", "Shooter" ], 4, 15, 4, 3, 99, 3000000, 274, 158, 146, 784, 579, 372, 1 ],
