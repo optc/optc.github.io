@@ -8651,12 +8651,12 @@ window.details = {
     },
     1570: {//Inuarashi
         captain: "Boosts ATK of Cerebral characters by 2.75x and chain by 1.5x if HP is below 30% at the start of the turn, boosts ATK of Cerebral characters by 2.5x otherwise",
-        special: "Reduces crew's current HP by 80%, deals ???x character's ATK in STR damage to one enemy. For 1 turn, every attacking character gets 80x character's ATK as additional typeless bonus damage if you hit no lower than Good",
+        special: "Reduces crew's current HP by 80%, deals 60x character's ATK in STR damage to one enemy. For 1 turn, every attacking character gets 80x character's ATK as additional typeless bonus damage if you hit no lower than Good",
         specialName: "King Sword Shine",
     },
     1571: {//Inuarashi
         captain: "Boosts ATK of Cerebral characters by 2.75x and chain by 1.5x if HP is below 30% at the start of the turn, boosts ATK of Cerebral characters by 2.5x otherwise",
-        special: "Reduces crew's current HP by 80%, deals ???x character's ATK in STR damage to one enemy. For 1 turn, every attacking character gets 80x character's ATK as additional typeless bonus damage if you hit no lower than Good",
+        special: "Reduces crew's current HP by 80%, deals 60x character's ATK in STR damage to one enemy. For 1 turn, every attacking character gets 80x character's ATK as additional typeless bonus damage if you hit no lower than Good",
         specialName: "King Sword Shine",
     },
     1572: {//Wanda
