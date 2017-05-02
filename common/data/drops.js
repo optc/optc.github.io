@@ -1509,7 +1509,7 @@ window.drops = {
         {
             name: "Punk Hazard",
             thumb: 1581,
-            gamewith: null,
+            gamewith: 56038,
             //condition: "Elizabello will kill you with one punch",
             "All Difficulties": [ 1580, 1582, -1391, -1444, -1436, -1551, -896, -910, -357, -995, -890, -1342 ],
         },
