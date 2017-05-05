@@ -169,10 +169,10 @@ window.sailors = {
         hpStatic: function(p) { return 75; },
     },
     1321: {
-        atkStatic: function(p) { return p.captain != null ? p.captain.class.has("Cerebral") ? p.unit.class.has("Slasher") || p.unit.class.has("Cerebral") ? 100 : 0 : 0 : 0; },
+        atkStatic: function(p) { return p.captain != null ? p.captain.class.has("Cerebral") ? p.unit.class.has("Slasher") || p.unit.class.has("Cerebral") ? 75 : 0 : 0 : 0; },
     },
     1322: {
-        atkStatic: function(p) { return p.captain != null ? p.captain.class.has("Cerebral") ? p.unit.class.has("Slasher") || p.unit.class.has("Cerebral") ? 100 : 0 : 0 : 0; },
+        atkStatic: function(p) { return p.captain != null ? p.captain.class.has("Cerebral") ? p.unit.class.has("Slasher") || p.unit.class.has("Cerebral") ? 75 : 0 : 0 : 0; },
     },
     1363: {
         hpStatic: function(p) { return p.unit.type == "PSY" ? 100 : 0; },
