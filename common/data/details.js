@@ -8780,6 +8780,7 @@ window.details = {
                 "cooldown": [ 18, 13 ],
             },
         ],
+        sailor: "Completely resists Paralysis on this character",
         specialName: "King Kong Gun",
     },
     1588: {//Legend Sanji
