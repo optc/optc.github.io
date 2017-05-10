@@ -2615,5 +2615,28 @@ window.specials = {
         rcv: function(p) { return (p.percHP*p.maxHP/100 > 5000 && (p.unit.class.has("Slasher") || p.unit.class.has("Driven"))) ? 1.5 : 1; },
         type: "class"
     },
-    
+    1587: {
+        onActivation: function(p) {
+            var n = (window.specials[1587].multiplier == 3.16 ? 1 : 0);
+            window.specials[1587].turnedOn = true;
+            window.specials[1587].multiplier = [3.16, 4][n];
+            p.scope.notify({
+                text: 'Only affects damage if Luffy is your captain, and each Luffy only boosts his own Captain damage. Toggle to change between effective captain boosts. Using the ' + [10, 16][n] + 'x Captain boost. To switch to the ' + [16, 10][n] + 'x Captain boost, disable and re-enable this special. NOTE: STAGE 1 SPECIAL IS ONLY USED IF YOU HAVE TWO LUFFYS, AND ARE TESTING DAMAGE AS IF YOU ONLY ACTIVATED ONE LUFFY SPECIAL.',
+                name: '1587warning'
+            });
+        },
+        onDeactivation: function(p) {
+            window.specials[1587].turnedOn = false;
+        }
+    },
+    1588: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 2 : 1; },
+        type: "type",
+        warning: "CANNOT CALCULATE SANJI JUMP, SPECIAL IS SELF TYPE BOOST",
+    },  
+    1589: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 2 : 1; },
+        type: "type",
+        warning: "CANNOT CALCULATE SANJI JUMP, SPECIAL IS SELF TYPE BOOST",
+    },
 };

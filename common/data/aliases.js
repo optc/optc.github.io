@@ -1585,4 +1585,7 @@ window.aliases = {
     1584: ['', '', 'Coliseum Orlumbus'],
     1585: ['', '', 'Coliseum Helmeppo'],
     1586: ['', '', 'Coliseum Helmeppo'],
+    1587: ['', '', 'Gear 4 Luffy'],
+    1588: ['', '', ''],
+    1589: ['', '', ''],
 };

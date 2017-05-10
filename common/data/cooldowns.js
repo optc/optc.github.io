@@ -1585,4 +1585,7 @@ window.cooldowns = [
     [ 29, 15 ],
     [ 20, 11 ],
     [ 20, 11 ],
+    null,//Gear 4 Luffy
+    19,
+    19,
 ];

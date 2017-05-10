@@ -8770,4 +8770,32 @@ window.details = {
         special: "If HP is below 5,000 when the special is activated, boosts ATK of Driven and Slasher characters by 1.75x for 1 turn and recovers 10x character's RCV in HP",
         specialName: "Helmeppo Special",
     },
+    1587: {//Gear 4 Luffy
+        captain: "Boosts ATK of Slasher and Driven characters by 2x and their RCV by 1.5x",
+        special: [
+            {
+                "description": "Boosts ATK of Free Spirit characters by 1.5x for 1 turn. If during that turn you score 5 Perfect hits, boosts ATK of Free Spirit characters by 2x in the following turn.",
+                "cooldown": [ 18, 12 ],
+            },
+            {
+                "description": "Boosts ATK of Free Spirit characters by 1.75x for 1 turn. If during that turn you score 4 Perfect hits, boosts ATK of Free Spirit characters by 2x in the following turn.",
+                "cooldown": [ 23, 17 ],
+            },
+        ],
+        specialName: "King Kong Gun",
+    },
+    1588: {//Legend Sanji
+        captain: "Boosts ATK of all characters by 2.5x and their HP by 1.3x <br> <b>Action:</b> Sanji Flies into the air for 1 turn, preventing all debuffs to himself. (Including Bind, Despair, and Silence) Next turn, boosts own by an additional 2.5x",
+        captainNotes: "Action does not stack with second Sanji. Even while Flying, will still boost all characters by 2.5x",
+        special: "Deals 100,000 fixed damage to all enemies. Changes [BLOCK], [TND], adjacent orbs, and own orb into Matching orbs. Boosts own attack by 2x for 1 turn",
+        sailor: "Makes [RCV] orbs \"beneficial\" for all characters",
+        specialName: "Hell Memories",
+    },
+    1589: {//Legend Sanji
+        captain: "Boosts ATK of all characters by 2.5x and their HP by 1.3x <br> <b>Action:</b> Sanji Flies into the air for 1 turn, preventing all debuffs to himself. (Including Bind, Despair, and Silence) Next turn, boosts attack of all characters by an additional 2.5x",
+        captainNotes: "Action does not stack with second Sanji. Even while Flying, will still boost all characters by 2.5x",
+        special: "Deals 100,000 fixed damage to all enemies. Changes [BLOCK], [TND], adjacent orbs, and own orb into Matching orbs. Boosts own attack by 2x for 1 turn",
+        sailor: "Makes [RCV] orbs \"beneficial\" for all characters",
+        specialName: "Hell Memories",
+    },
 };

@@ -1077,7 +1077,7 @@ window.units = [
     [ "Leo", "QCK", [ "Striker", "Free Spirit" ], 4, 18, 5, 3, 70, 1066998, 131, 142, 54, 979, 700, 222, 1 ],
     [ "Leo, Tontatta Corps Leader", "QCK", [ "Striker", "Free Spirit" ], 5, 30, 4, 4, 99, 4000000, 918, 637, 177, 1934, 1351, 371, 1 ],
     [ "Mansherry", "PSY", "Striker", 4, 18, 6, 3, 70, 1066998, 100, 94, 86, 717, 416, 307, 1 ],
-    [ "Mansherry, Princess of the Tontatta Tribe", "PSY", [ "Striker", "Free Spirit" ], 5, 30, 4, 4, 99, 4000000, 642, 371, 260, 1510, 642, 557, 1 ],
+    [ "Mansherry, Princess of the Tontatta Tribe", "PSY", [ "Striker", "Free Spirit" ], 5, 28, 4, 4, 99, 4000000, 642, 371, 260, 1510, 642, 557, 1 ],
     [ "Kyros", "DEX", [ "Slasher", "Powerhouse" ], 4, 18, 4, 3, 70, 1066998, 192, 152, 43, 1106, 713, 189, 1 ],
     [ "Kyros, Former Captain of the Riku Royal Army", "DEX", [ "Slasher", "Powerhouse" ], 5, 30, 4, 4, 99, 4000000, 1042, 657, 143, 2377, 1373, 290, 1 ],
     [ "Don Sai", "STR", [ "Striker", "Fighter" ], 4, 18, 4, 3, 70, 1066998, 130, 130, 31, 1300, 673, 130, 1 ],
@@ -1585,6 +1585,9 @@ window.units = [
     [ "Massacre Ruler Orlumbus, Yonta Maria Grand Fleet Admiral", "PSY", [ "Striker", "Fighter" ], 5, 40, 6, 3, 99, 4000000, 1354, 544, 67, 3012, 1243, 200, null ],
     [ "Coliseum Helmeppo", "QCK", [ "Slasher", "Driven" ], 3, 16, 6, 1, 50, 392109, 124, 77, 23, 905, 492, 136, null ],
     [ "Brave Compannion Helmeppo, Navy HQ Chief Petty Officer", "QCK", [ "Slasher", "Driven" ], 4, 26, null, 3, 99, 3000000, null, null, null, 1971, 1016, 322, null ],
+    [ "Monkey D Luffy, Gear 4th Boundman", "PSY", [ "Fighter", "Free Spirit" ], 6, 65, 4, 5, 99, 5000000, 1402, 777, 177, 3380, 1600, 400, null ],
+    [ "Sanji, Vinsmoke Family's 3rd Son", "INT", [ "Fighter", "Powerhouse" ], 5, 30, 4, 3, 99, 1066998, 369, 222, 31, 1323, 784, 200, null ],
+    [ "Black Leg Sanji", "INT", [ "Fighter", "Powerhouse" ], 6, 55, 6, 5, 99, 5000000, 1251, 726, 147, 3233, 1506, 354, null ],
     ];
     
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
