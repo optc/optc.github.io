@@ -4685,7 +4685,7 @@ window.captains = {
     },
     1593: {
         atk: function(p){ 
-            return p.unit.class.has("Fighter") ? ((!window.specials[1587].turnedOn || (window.specials[1587].multiplier == null)) ? 2.5 : window.specials[1587].multiplier) : 1;
+            return p.unit.class.has("Fighter") ? ((!window.specials[1593].turnedOn || (window.specials[1593].multiplier == null)) ? 2.5 : window.specials[1593].multiplier) : 1;
         },
     },
 };
