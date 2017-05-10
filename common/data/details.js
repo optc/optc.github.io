@@ -8784,14 +8784,14 @@ window.details = {
     },
     1588: {//Legend Sanji
         captain: "Boosts ATK of all characters by 2.5x and their HP by 1.3x <br> <b>Action:</b> Sanji Flies into the air for 1 turn, preventing all debuffs to himself. (Including Bind, Despair, and Silence) Next turn, boosts own ATK by an additional 2.5x",
-        captainNotes: "Action does not stack with second Sanji. Even while Flying, will still boost all characters by 2.5x. Jumping is not a type boost, and will stack with other boosts",
+        captainNotes: "Multiple Sanjis can Jump at the same time. Even while Flying, will still boost all characters by 2.5x. Jumping is not a type boost, and will stack with other boosts",
         special: "Deals 100,000 fixed damage to all enemies. Changes [BLOCK], [TND], adjacent orbs, and own orb into Matching orbs. Boosts own attack by 2x for 1 turn",
         sailor: "Makes [RCV] orbs \"beneficial\" for all characters",
         specialName: "Hell Memories",
     },
     1589: {//Legend Sanji
         captain: "Boosts ATK of all characters by 2.5x and their HP by 1.3x <br> <b>Action:</b> Sanji Flies into the air for 1 turn, preventing all debuffs to himself. (Including Bind, Despair, and Silence) Next turn, boosts own ATK by an additional 2.5x",
-        captainNotes: "Action does not stack with second Sanji. Even while Flying, will still boost all characters by 2.5x. Jumping is not a type boost, and will stack with other boosts",
+        captainNotes: "Multiple Sanjis can Jump at the same time. Even while Flying, will still boost all characters by 2.5x. Jumping is not a type boost, and will stack with other boosts",
         special: "Deals 100,000 fixed damage to all enemies. Changes [BLOCK], [TND], adjacent orbs, and own orb into Matching orbs. Boosts own attack by 2x for 1 turn",
         sailor: "Makes [RCV] orbs \"beneficial\" for all characters",
         specialName: "Hell Memories",
