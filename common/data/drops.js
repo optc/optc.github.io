@@ -1852,7 +1852,7 @@ window.drops = {
             name: 'Invasion! Red Hair Shanks',
             thumb: 1380,
             condition: "Has a chance of appearing at the end of ANY Raid boss. You MUST use the same team that you just used to complete the raid boss to fight Shanks.",
-            "All Difficulties": [ 1379 ]
+            "All Difficulties": [ 1379, 952, 776 ]
         },
         
         {

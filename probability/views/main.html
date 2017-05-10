@@ -35,7 +35,10 @@
 			<div id="calculation-area">
 				
 				<div class="small-container">
-                    <label><input type="checkbox" ng-model="specialEvent" ng-change="changeBaseValues()">Special x2 Event </label>
+                    <form skillevent="">
+                        <input type="checkbox" name="event" value = 2 ng-model="specialEvent" ng-change="changeBaseValues()">Special x2 Event
+                        <input type="checkbox" name="event" value = 3 ng-model="special3Event" ng-change="changeBaseValues()">Special x3 Event 
+                    </form>
                     &nbsp; &nbsp;
                     <label><input type="checkbox" ng-model="jpnVersion" ng-change="changeBaseValues()">Japanese Version</label>
                     <p></p>
