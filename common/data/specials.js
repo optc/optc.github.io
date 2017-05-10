@@ -2630,13 +2630,27 @@ window.specials = {
         }
     },
     1588: {
-        atk: function(p) { return p.slot == p.sourceSlot ? 2 : 1; },
-        type: "type",
-        warning: "CANNOT CALCULATE SANJI JUMP, SPECIAL IS SELF TYPE BOOST",
+        atk: function(p) { return p.slot == p.sourceSlot ? window.specials[1588].multiplier : 1; },
+        type: "class",
+        onActivation: function(p) {
+            var n = (window.specials[1588].multiplier == 2 ? 1 : 0);
+            window.specials[1588].multiplier = [2, 5][n];
+            p.scope.notify({
+                text: 'Using the ' + [2, 5][n] + 'x ATK multiplier. To switch to the ' + [5, 2][n] + 'x multiplier, disable and re-enable this special. (5x Attack boost assumes that Sanji Jumped, and used his special on the following turn. Jumping + Type Boost does NOT work yet.)',
+                name: '1588warning'
+            });
+        },
     },  
     1589: {
-        atk: function(p) { return p.slot == p.sourceSlot ? 2 : 1; },
-        type: "type",
-        warning: "CANNOT CALCULATE SANJI JUMP, SPECIAL IS SELF TYPE BOOST",
+        atk: function(p) { return p.slot == p.sourceSlot ? window.specials[1589].multiplier : 1; },
+        type: "class",
+        onActivation: function(p) {
+            var n = (window.specials[1589].multiplier == 2 ? 1 : 0);
+            window.specials[1589].multiplier = [2, 5][n];
+            p.scope.notify({
+                text: 'Using the ' + [2, 5][n] + 'x ATK multiplier. To switch to the ' + [5, 2][n] + 'x multiplier, disable and re-enable this special. (5x Attack boost assumes that Sanji Jumped, and used his special on the following turn. Jumping + Type Boost does NOT work yet.)',
+                name: '1589warning'
+            });
+        },
     },
 };
