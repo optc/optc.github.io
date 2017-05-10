@@ -1585,7 +1585,11 @@ window.aliases = {
     1584: ['', '', 'Coliseum Orlumbus'],
     1585: ['', '', 'Coliseum Helmeppo'],
     1586: ['', '', 'Coliseum Helmeppo'],
-    1587: ['', '', 'Gear 4 Luffy'],
     1588: ['', '', ''],
     1589: ['', '', ''],
+    1591: ['', '', 'Anniversary Shanks'],
+    1592: ['', '', 'Anniversary Shanks'],
+    1593: ['', '', 'Anniversary Boa'],
+    1594: ['', '', 'Anniversary Boa'],
+    1593: ['', '', 'Gear 4 Luffy', 'Mega Luffy'],
 };

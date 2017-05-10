@@ -8768,7 +8768,41 @@ window.details = {
         special: "If HP is below 5,000 when the special is activated, boosts ATK of Driven and Slasher characters by 1.75x for 1 turn and recovers 10x character's RCV in HP",
         specialName: "Helmeppo Special",
     },
-    1587: {//Gear 4 Luffy
+    1587: {//Legend Sanji
+        captain: "Boosts ATK of all characters by 2.5x and their HP by 1.3x <br> <b>Action:</b> Sanji Flies into the air for 1 turn, preventing all debuffs to himself. (Including Bind, Despair, and Silence) Next turn, boosts own ATK by an additional 2.5x",
+        captainNotes: "Multiple Sanjis can Jump at the same time. Even while Flying, will still boost all characters by 2.5x. Jumping is not a type boost, and will stack with other boosts",
+        special: "Deals 100,000 fixed damage to all enemies. Changes [BLOCK], [TND], adjacent orbs, and own orb into Matching orbs. Boosts own attack by 2x for 1 turn",
+        sailor: "Makes [RCV] orbs \"beneficial\" for all characters",
+        specialName: "Hell Memories",
+    },
+    1588: {//Legend Sanji
+        captain: "Boosts ATK of all characters by 2.5x and their HP by 1.3x <br> <b>Action:</b> Sanji Flies into the air for 1 turn, preventing all debuffs to himself. (Including Bind, Despair, and Silence) Next turn, boosts own ATK by an additional 2.5x",
+        captainNotes: "Multiple Sanjis can Jump at the same time. Even while Flying, will still boost all characters by 2.5x. Jumping is not a type boost, and will stack with other boosts",
+        special: "Deals 100,000 fixed damage to all enemies. Changes [BLOCK], [TND], adjacent orbs, and own orb into Matching orbs. Boosts own attack by 2x for 1 turn",
+        sailor: "Makes [RCV] orbs \"beneficial\" for all characters",
+        specialName: "Hell Memories",
+    },
+    1589: {//Anniversary Shanks
+        captain: "Boosts Chain Multiplier by 3x",
+        special: "Recover 50% of crew's MAX HP, changes bottom row orbs into matching orbs",
+        specialName: "Sharing a Cup Filled with Emotions",
+    },
+    1590: {//Anniversary Shanks
+        captain: "Boosts Chain Multiplier by 3.5x, Boosts HP and RCV of all characters by 1.2x",
+        special: "Recover 50% of crew's MAX HP, changes bottom row orbs into matching orbs",
+        specialName: "Sharing a Cup Filled with Emotions",
+    },	
+    1591: {//Anniversary Boa
+        captain: "Boosts ATK and RCV of Fighter and Free Spirit characters by 1.5x",
+        special: "Recovers 3,000 HP and boosts ATK of Free Spirit and Fighter characters by 1.75x for 1 turn",
+        specialName: "Immoral Gaze",
+    },
+    1592: {//Anniversary Boa
+        captain: "Boosts ATK of Fighter and Free Spirit characters by 2.25x and their RCV by 1.75x",
+        special: "Recovers 3,000 HP and boosts ATK of Free Spirit and Fighter characters by 1.75x for 1 turn",
+        specialName: "Immoral Gaze",
+    },
+    1593: {//Gear 4 Luffy
         captain: "Boosts ATK of Fighter characters by 2.5x. If you use \"King Kong Gun\" THIS LUFFY boosts ATK of Fighter characters by 4x instead for 3 turns and reduces damage taken by 56% for 3 turns.",
         special: [
             {
@@ -8782,19 +8816,5 @@ window.details = {
         ],
         sailor: "Completely resists Paralysis on this character",
         specialName: "King Kong Gun",
-    },
-    1588: {//Legend Sanji
-        captain: "Boosts ATK of all characters by 2.5x and their HP by 1.3x <br> <b>Action:</b> Sanji Flies into the air for 1 turn, preventing all debuffs to himself. (Including Bind, Despair, and Silence) Next turn, boosts own ATK by an additional 2.5x",
-        captainNotes: "Multiple Sanjis can Jump at the same time. Even while Flying, will still boost all characters by 2.5x. Jumping is not a type boost, and will stack with other boosts",
-        special: "Deals 100,000 fixed damage to all enemies. Changes [BLOCK], [TND], adjacent orbs, and own orb into Matching orbs. Boosts own attack by 2x for 1 turn",
-        sailor: "Makes [RCV] orbs \"beneficial\" for all characters",
-        specialName: "Hell Memories",
-    },
-    1589: {//Legend Sanji
-        captain: "Boosts ATK of all characters by 2.5x and their HP by 1.3x <br> <b>Action:</b> Sanji Flies into the air for 1 turn, preventing all debuffs to himself. (Including Bind, Despair, and Silence) Next turn, boosts own ATK by an additional 2.5x",
-        captainNotes: "Multiple Sanjis can Jump at the same time. Even while Flying, will still boost all characters by 2.5x. Jumping is not a type boost, and will stack with other boosts",
-        special: "Deals 100,000 fixed damage to all enemies. Changes [BLOCK], [TND], adjacent orbs, and own orb into Matching orbs. Boosts own attack by 2x for 1 turn",
-        sailor: "Makes [RCV] orbs \"beneficial\" for all characters",
-        specialName: "Hell Memories",
     },
 };

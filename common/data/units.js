@@ -1585,9 +1585,13 @@ window.units = [
     [ "Massacre Ruler Orlumbus, Yonta Maria Grand Fleet Admiral", "PSY", [ "Striker", "Fighter" ], 5, 40, 6, 3, 99, 4000000, 1354, 544, 67, 3012, 1243, 200, null ],
     [ "Coliseum Helmeppo", "QCK", [ "Slasher", "Driven" ], 3, 16, 6, 1, 50, 392109, 124, 77, 23, 905, 492, 136, null ],
     [ "Brave Compannion Helmeppo, Navy HQ Chief Petty Officer", "QCK", [ "Slasher", "Driven" ], 4, 26, null, 3, 99, 3000000, null, null, null, 1971, 1016, 322, null ],
-    [ "Monkey D Luffy, Gear 4th Boundman", "PSY", [ "Fighter", "Free Spirit" ], 6, 65, 4, 5, 99, 5000000, 1402, 777, 177, 3380, 1600, 400, null ],
     [ "Sanji, Vinsmoke Family's 3rd Son", "INT", [ "Fighter", "Powerhouse" ], 5, 30, 4, 3, 99, 1066998, 369, 222, 31, 1323, 784, 200, null ],
     [ "Black Leg Sanji", "INT", [ "Fighter", "Powerhouse" ], 6, 55, 6, 5, 99, 5000000, 1251, 726, 147, 3233, 1506, 354, null ],
+    [ "Shanks, Celebrate the Long Cruise", "QCK", [ "Cerebral", "Slasher" ], 4, 15, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Red Hair Shanks, Celebrate the Long Cruise", "QCK", [ "Cerebral", "Slasher" ], 5, 30, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Boa Hancock, Celebrate the Long Cruise", "INT", [ "Fighter", "Free Spirit" ], 4, 15, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "'Empress' Boa Hancock, Celebrate the Long Cruise", "INT", [ "Fighter", "Free Spirit" ], 5, 30, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Monkey D Luffy, Gear 4th Boundman", "PSY", [ "Fighter", "Free Spirit" ], 6, 65, 4, 5, 99, 5000000, 1402, 777, 177, 3380, 1600, 400, null ],
     ];
     
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
