@@ -18,6 +18,8 @@
     <span class="filter-header">Rarity filters</span>
     <span ng-repeat="(n,stars) in [ 1, 2, 3, 4, 5, 6 ]" class="filter stars width-4 stars-{{stars}}"
         ng-click="onStarsClick($event,stars)" ng-class="{ active: filters.stars.indexOf(stars) > -1 }"></span>
+    <span ng-repeat="(n,stars) in [ 5, 6 ]" class="filter stars width-4 stars-{{stars}}+"
+        ng-click="onStarsClick($event,stars)" ng-class="{ active: filters.stars.indexOf(stars) > -1 }"></span>
 </div>
 
 <div class="filter-container expandable" id="cost-container"
