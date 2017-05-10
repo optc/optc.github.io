@@ -4431,10 +4431,10 @@ window.captains = {
         hp: function(p) { return p.unit.type == "QCK" ? 1.2 : 1; }
     },
     1535: {
-        atk: function(p) { return !p.unit.type == "PSY" ? 1 : p.slot == p.sourceSlot ? 2.5 : 1; }
+        atk: function(p) { return !p.unit.type == "PSY" ? 1 : (p.orb == 2.0 ? 2.5 : 1); }
     },
     1536: {
-        atk: function(p) { return !p.unit.type == "PSY" ? 1 : p.slot == p.sourceSlot ? 3 : 1; }
+        atk: function(p) { return !p.unit.type == "PSY" ? 1 : (p.orb == 2.0 ? 3 : 1); }
     },
     1537: {
         atk: function(p) { return p.unit.type == "STR" ? 2 : 1; },
