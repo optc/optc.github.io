@@ -7544,7 +7544,7 @@ window.details = {
         special: [
             {
                 "description": "Deals 25x character's ATK in [QCK] damage to one enemy, and makes [QCK], [DEX], and [PSY] orbs \"beneficial\" to Fighter and Free Spirit characters for 1 turn",
-                "cooldown": [ 14, 9 ],
+                "cooldown": [ 13, 8 ],
             },
             {
                 "description": "Deals 60x character's ATK in [QCK] damage to one enemy, and makes [QCK], [DEX], and [PSY] orbs \"beneficial\" for 3 turns",
@@ -7559,7 +7559,7 @@ window.details = {
         special: [
             {
                 "description": "Deals 25x character's ATK in [QCK] damage to one enemy, and makes [QCK], [DEX], and [PSY] orbs \"beneficial\" to Fighter and Free Spirit characters for 1 turn",
-                "cooldown": [ 14, 9 ],
+                "cooldown": [ 13, 8 ],
             },
             {
                 "description": "Deals 60x character's ATK in [QCK] damage to one enemy, and makes [QCK], [DEX], and [PSY] orbs \"beneficial\" for 3 turns",
@@ -8769,15 +8769,15 @@ window.details = {
         specialName: "Helmeppo Special",
     },
     1587: {//Gear 4 Luffy
-        captain: "Boosts ATK of Slasher and Driven characters by 2x and their RCV by 1.5x",
+        captain: "Boosts ATK of Fighter characters by 2.5x. If you use \"King Kong Gun\" THIS LUFFY boosts ATK of Fighter characters by 4x instead for 3 turns and reduces damage taken by 56% for 3 turns.",
         special: [
             {
-                "description": "Boosts ATK of Free Spirit characters by 1.5x for 1 turn. If during that turn you score 5 Perfect hits, boosts ATK of Free Spirit characters by 2x in the following turn.",
-                "cooldown": [ 18, 12 ],
+                "description": "Does something we aren't sure about yet",
+                "cooldown": [ 13, 8 ],
             },
             {
-                "description": "Boosts ATK of Free Spirit characters by 1.75x for 1 turn. If during that turn you score 4 Perfect hits, boosts ATK of Free Spirit characters by 2x in the following turn.",
-                "cooldown": [ 23, 17 ],
+                "description": "Deals 200x character's ATK in typeless damage to one enemy, and makes [STR], [DEX], [PSY], [INT], [TND], and [RCV] orbs \"beneficial\" for Fighter and Free Spirit characters for 3 turns. After 3 turns, Binds and Despairs himself for ?? turns.",
+                "cooldown": [ 18, 13 ],
             },
         ],
         specialName: "King Kong Gun",
