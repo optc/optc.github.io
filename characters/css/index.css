@@ -162,29 +162,34 @@ input[type="text"] {
 .stars:before, .stars:after {
     font-weight: bold;
     font-family: icomoon;
-    font-size: 11px;
+    font-size: 13px;
 }
 
 .filter.stars:not(.active):not(:hover):before {
     color: #cccccc !important;
 }
 
-.stars-1:before { color: #40a3da; content: '\e900'; }
-.stars-1:after  { color: #cccccc; content: '\e900\e900\e900\e900\e900'; }
+.stars-1:before { color: #40a3da; content: '\2605'; }
+.stars-1:after  { color: #cccccc; content: '\2605\2605\2605\2605\2605'; }
 
-.stars-2:before { color: #acc523; content: '\e900\e900'; }
-.stars-2:after  { color: #cccccc; content: '\e900\e900\e900\e900'; }
+.stars-2:before { color: #acc523; content: '\2605\2605'; }
+.stars-2:after  { color: #cccccc; content: '\2605\2605\2605\2605'; }
 
-.stars-3:before { color: #f7c118; content: '\e900\e900\e900'; }
-.stars-3:after  { color: #cccccc; content: '\e900\e900\e900'; }
+.stars-3:before { color: #f7c118; content: '\2605\2605\2605'; }
+.stars-3:after  { color: #cccccc; content: '\2605\2605\2605'; }
 
-.stars-4:before { color: #f28e00; content: '\e900\e900\e900\e900'; }
-.stars-4:after  { color: #cccccc; content: '\e900\e900'; }
+.stars-4:before { color: #f28e00; content: '\2605\2605\2605\2605'; }
+.stars-4:after  { color: #cccccc; content: '\2605\2605'; }
 
-.stars-5:before { color: #ff0000; content: '\e900\e900\e900\e900\e900'; }
-.stars-5:after  { color: #cccccc; content: '\e900'; }
+.stars-5:before { color: #ff0000; content: '\2605\2605\2605\2605\2605'; }
+.stars-5:after  { color: #cccccc; content: '\2605'; }
 
-.stars-6:before { color: #9932cc; content: '\e900\e900\e900\e900\e900\e900'; }
+*[class~="stars-5+"]:before { color: #ff1493; content: '\2605\2605\2605\2605\2605\002B'; }
+
+.stars-6:before { color: #9932cc; content: '\2605\2605\2605\2605\2605\2605'; }
+
+*[class~="stars-6+"]:before { color: #990000; content: '\2605\2605\2605\2605\2605\2605\002B'; }
+
 
 .block-icon:before, .tnd-icon:before {
     font-style: normal;
