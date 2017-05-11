@@ -8806,7 +8806,7 @@ window.details = {
         captain: "Boosts ATK of Fighter characters by 2.5x. If you use \"King Kong Gun\" THIS LUFFY boosts ATK of Fighter characters by 4x instead for 3 turns and reduces damage taken by 56% for 3 turns.",
         special: [
             {
-                "description": "Does something we aren't sure about yet",
+                "description": "Deals 100x character's ATK in typeless damage to one enemy, and makes [STR], [DEX], [PSY], [INT], [TND], and [RCV] orbs \"beneficial\" for Fighter and Free Spirit characters for 1 turn.  After 3 turns, Binds and Despairs himself for ?? turns.",
                 "cooldown": [ 13, 8 ],
             },
             {
