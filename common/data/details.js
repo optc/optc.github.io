@@ -8634,12 +8634,12 @@ window.details = {
     },
     1567: {//Kid Boa
         captain: "Boosts ATK and RCV of [QCK] characters by 1.5x",
-        special: "Recovers 13x character's RCV in HP, amplifies the effect of orbs by ???x for 3 turns",
+        special: "Recovers 13x character's RCV in HP, amplifies the effect of orbs by 1.5x for 3 turns",
         specialName: "Boa Special",
     },
     1568: {//Kid Boa
         captain: "Boosts ATK and RCV of [QCK] characters by 2x",
-        special: "Recovers 13x character's RCV in HP, amplifies the effect of orbs by ???x for 3 turns",
+        special: "Recovers 13x character's RCV in HP, amplifies the effect of orbs by 1.5x for 3 turns",
         specialName: "Boa Special",
     },
     1569: {//Anniversary Law
@@ -8816,5 +8816,15 @@ window.details = {
         ],
         sailor: "Completely resists Paralysis on this character",
         specialName: "King Kong Gun",
+    },
+    1594: {//Raid Fuji
+        captain: "Cuts the current HP of each enemy by 10% at the end of each turn",
+        special: "Deals 50x character's ATK in [PSY] damage to all enemies that will ignore damage negating abilities and barriers, changes adjacent orbs into Matching Orbs, amplifies the effect of orbs for Powerhouse characters by 2x for 1 turn",
+        specialName: "Gravity Blade: Fierce Tiger",
+    },
+    1595: {//Raid Fuji
+        captain: "Boosts ATK of Powerhouse characters by 2.25x, and their HP by 1.2x, cuts the current HP of each enemy by 10% at the end of each turn",
+        special: "Deals 50x character's ATK in [PSY] damage to all enemies that will ignore damage negating abilities and barriers, changes adjacent orbs into Matching Orbs, amplifies the effect of orbs for Powerhouse characters by 2x for 1 turn",
+        specialName: "Gravity Blade: Fierce Tiger",
     },
 };

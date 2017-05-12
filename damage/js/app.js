@@ -50,6 +50,10 @@ var SharedRootCtrl = function($scope, $rootScope, $timeout) {
         turnCounter: {
             enabled: false,
             value: 0
+        },
+        captainAction: {
+            enabled: false,
+            value: [$scope.captainAction1, $scope.captainAction2]
         }
 
     };

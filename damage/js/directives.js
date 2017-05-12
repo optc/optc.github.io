@@ -484,7 +484,7 @@ directives.turnCounter = function() {
         }
     };
 };
-
+    
 directives.levelLabel = function($timeout) {
     return {
         restrict: 'E',
