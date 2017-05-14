@@ -1255,8 +1255,8 @@ window.aliases = {
     1254: ['大渦蜘蛛スクアード 白ひげ海賊団傘下','',''],
     1255: ['絆のディカルバン兄弟 白ひげ海賊団傘下','',''],
     1256: ['“氷の魔女”ホワイティベイ 白ひげ海賊団傘下','',''],
-    1257: ['エドワード・ニューゲート 海賊王のライバル','','Edward Newgate','Young Whitebeard'],
-    1258: ['エドワード・ニューゲート 大海賊“白ひげ”','','Edward Newgate','Young Whitebeard'],
+    1257: ['エドワード・ニューゲート 海賊王のライバル','', 'Edward Newgate', 'Young Whitebeard', 'YWB'],
+    1258: ['エドワード・ニューゲート 大海賊“白ひげ”','', 'Edward Newgate', 'Young Whitebeard', 'YWB'],
     1259: ['ドンキホーテ・ドフラミンゴ “北の海”の海賊','','Young Doffy','Donquixote Doflamingo'],
     1260: ['ドンキホーテ・ドフラミンゴ “北の海”の闇','','Young Doffy','Donquixote Doflamingo'],
     1261: ['セニョール・ピンク “北の海”の海賊','','Senor Pink', 'Young Senior Pink'],
@@ -1591,5 +1591,5 @@ window.aliases = {
     1590: ['', '', 'Anniversary Shanks'],
     1591: ['', '', 'Anniversary Boa'],
     1592: ['', '', 'Anniversary Boa'],
-    1593: ['', '', 'Gear 4 Luffy', 'Mega Luffy'],
+    1593: ['', '', 'Gear 4 Luffy', 'G4', 'Mega Luffy'],
 };

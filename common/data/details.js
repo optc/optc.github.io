@@ -3431,8 +3431,8 @@ window.details = {
     },
     767: {
         special: {
-            "japan": "Changes the orbs in the top row into [DEX] orbs, removes blindness",
-            "global": "Changes the orbs in the top row into [DEX] orbs, reduces Despair duration by 1 turn"
+            "japan": "Changes top row orbs into [DEX] orbs, removes blindness",
+            "global": "Changes top row orbs into [DEX] orbs, reduces Despair duration by 1 turn"
         },
         specialName: "Ojos Fleur: Thriller",
         captain: "Boosts ATK and RCV of DEX characters by 1.5x"
@@ -8671,26 +8671,26 @@ window.details = {
     },
     1574: {//Sicilian
         captain: "Boosts ATK of [INT] characters by 2.25x",
-        special: "Delays all enemies for 1 turn, deals ???x character's ATK [INT] damage to all enemies, and changes [STR], [DEX], [QCK], [INT], or [PSY] orbs on Cerebral characters into Matching orbs.",
+        special: "Delays all enemies for 1 turn, deals 25x character's ATK [INT] damage to all enemies, and changes [STR], [DEX], [QCK], [INT], or [PSY] orbs on Cerebral characters into Matching orbs.",
         sailor: "When HP is below ???% at the start of the turn, boosts own ATK by 200",
         specialName: "Dash - Dive - Destroy",
     },
     1575: {//Sicilian
         captain: "Boosts ATK of [INT] characters by 2.5x and their HP by 1.25x",
-        special: "Delays all enemies for 1 turn, deals ???x character's ATK [INT] damage to all enemies, and changes [STR], [DEX], [QCK], [INT], or [PSY] orbs on Cerebral characters into Matching orbs.",
+        special: "Delays all enemies for 1 turn, deals 25x character's ATK [INT] damage to all enemies, and changes [STR], [DEX], [QCK], [INT], or [PSY] orbs on Cerebral characters into Matching orbs.",
         sailor: "When HP is below ???% at the start of the turn, boosts own ATK by 200",
         specialName: "Dash - Dive - Destroy",
     },
     1576: {//Kin'emon
         captain: "Boosts ATK by 2.5x following a chain of Good > Great > Perfect hits",
-        special: "Deals typeless damage to all enemies, and changes all orbs on all characters into Kinemon's orb.",
+        special: "Deals 60x character's ATK in typeless damage to all enemies, and changes all orbs on all characters into Kinemon's orb.",
         specialNotes: "Upon activating the special, all orbs will be changed to the orb Kinemon has, including [RAINBOW] and [BLOCK] orbs. Will not override [BLOCK] orbs, but WILL remove Orb Rejection if kinemon has an orb. (The effect that Ambush Quest Cavendish has)",
         sailor: "Makes [STR] and [QCK] orbs \"beneficial\" for this unit",
         specialName: "Flaming Flash",
     },
     1577: {//Kin'emon
         captain: "Recovers 3x character's RCV in HP at the end of each turn. Boosts ATK by 3.5x following a chain of Good > Great > Perfect hits",
-        special: "Deals typeless damage to all enemies, and changes all orbs on all characters into Kinemon's orb.",
+        special: "Deals 60x character's ATK in typeless damage to all enemies, and changes all orbs on all characters into Kinemon's orb.",
         specialNotes: "Upon activating the special, all orbs will be changed to the orb Kinemon has, including [RAINBOW] and [BLOCK] orbs. Will not override [BLOCK] orbs, but WILL remove Orb Rejection if kinemon has an orb. (The effect that Ambush Quest Cavendish has)",
         sailor: "Makes [STR] and [QCK] orbs \"beneficial\" for this unit",
         specialName: "Flaming Flash",
@@ -8806,11 +8806,11 @@ window.details = {
         captain: "Boosts ATK of Fighter characters by 2.5x. If you use \"King Kong Gun\" THIS LUFFY boosts ATK of Fighter characters by 4x instead for 3 turns and reduces damage taken by 56% for 3 turns.",
         special: [
             {
-                "description": "Deals 100x character's ATK in typeless damage to one enemy, and makes [STR], [DEX], [PSY], [INT], [TND], and [RCV] orbs \"beneficial\" for Fighter and Free Spirit characters for 1 turn.  After 3 turns, Binds and Despairs himself for ?? turns.",
+                "description": "Deals 100x character's ATK in typeless damage to one enemy, and makes [STR], [DEX], [PSY], [INT], [TND], and [RCV] orbs \"beneficial\" for Fighter and Free Spirit characters for 1 turn.  After 3 turns, Binds and Despairs himself for 7 turns.",
                 "cooldown": [ 13, 8 ],
             },
             {
-                "description": "Deals 200x character's ATK in typeless damage to one enemy, and makes [STR], [DEX], [PSY], [INT], [TND], and [RCV] orbs \"beneficial\" for Fighter and Free Spirit characters for 3 turns. After 3 turns, Binds and Despairs himself for ?? turns.",
+                "description": "Deals 200x character's ATK in typeless damage to one enemy, and makes [STR], [DEX], [PSY], [INT], [TND], and [RCV] orbs \"beneficial\" for Fighter and Free Spirit characters for 3 turns. After 3 turns, Binds and Despairs himself for 7 turns.",
                 "cooldown": [ 18, 13 ],
             },
         ],

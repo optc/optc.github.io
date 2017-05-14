@@ -2455,10 +2455,20 @@ window.specials = {
         def: function(p) { return 0.1; }
     },
     1541: {
-        chainAddition: function(p) {return 0.5;}
+        chainAddition: function(p) { return 0.5; },
+        def: function(p) { return 0; }
     },
     1542: {
-        chainAddition: function(p){ return 0.5;}
+        chainAddition: function(p){ return 0.5; },
+        def: function(p) { return 0; }
+    },
+    1544: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; },
+        type: "class"
+    },
+    1545: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; },
+        type: "class"
     },
     1546: {
         turnedOn: false,
@@ -2514,7 +2524,6 @@ window.specials = {
         onDeactivation: function(p) {
             window.specials[1557].turnedOn = false;
         },
-        type: "class"
     },
     1561: {
         atk: function(p) { return p.unit.class.has("Striker") ? 1.5 : 1; },
