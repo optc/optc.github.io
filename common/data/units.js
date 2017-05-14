@@ -1565,7 +1565,7 @@ window.units = [
     [ "'The Fighting King' Elizabello II, Prodence Kingdom", "STR", [ "Fighter", "Powerhouse" ], 4, 20, 4, 4, 99, 3000000, 931, 495, 90, 2151, 1200, 192, 1 ],
     [ "Tactician Dagama", "DEX", [ "Driven", "Cerebral" ], 3, 13, 4, 2, 50, 392109, 101, 45, 70, 1012, 511, 160, 1 ],
     [ "Tactician Dagama, Prodence Kingdom", "DEX", [ "Driven", "Cerebral" ], 4, 20, 6, 4, 99, 3000000, 912, 451, 99, 2022, 1011, 276, 1 ],
-    [ "Boa Hancock, Maiden Warrior", "QCK", [ "Free Spirit", "Fighter" ], 4, 10, 5, null, 35, 90778, null, null, null, 603, 304, 289, null ],
+    [ "Boa Hancock, Maiden Warrior", "QCK", [ "Free Spirit", "Fighter" ], 4, 10, 5, 3, 35, 90778, 92, 33, 83, 603, 304, 289, null ],
     [ "Boa Hancock, A Glimpse of a Princess", "QCK", [ "Free Spirit", "Fighter" ], 5, 18, 4, 5, 70, 1066998, 534, 255, 249, 1030, 603, 436, null ],
     [ "Trafalgar Law, Straw Hat • Heart Pirates Alliance", "INT", [ "Free Spirit", "Striker" ], 4, 15, 4, 4, 99, 2000000, 197, 109, 15, 2017, 1230, 245, 1 ],
     [ "Inuarashi", "STR", [ "Slasher", "Cerebral" ], 5, 30, 6, 3, 70, 1066998, 357, 247, 34, 1291, 829, 210, 1 ],

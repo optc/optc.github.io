@@ -8700,15 +8700,15 @@ window.details = {
         special: [
             {
                 "description": "Adds .2x to Chain multiplier for 1 turn",
-                "cooldown": [ 8, null ],
+                "cooldown": [ 8, 3 ],
             },
             {
                 "description": "Switches orbs between slots once, and adds .3x to Chain multiplier for 1 turn",
-                "cooldown": [ 11, null ],
+                "cooldown": [ 11, 6 ],
             },
             {
                 "description": "Switches orbs between slots once, and adds .5x to Chain multiplier for 1 turn",
-                "cooldown": [ 14, null ],
+                "cooldown": [ 14, 9 ],
             },
         ],
         sailor: "Makes [STR], [QCK], [DEX], and [INT] orbs \"beneficial\" for this unit",
@@ -8719,15 +8719,15 @@ window.details = {
         special: [
             {
                 "description": "Adds .2x to Chain multiplier for 1 turn",
-                "cooldown": [ 8, null ],
+                "cooldown": [ 8, 3 ],
             },
             {
                 "description": "Switches orbs between slots once, and adds .3x to Chain multiplier for 1 turn",
-                "cooldown": [ 11, null ],
+                "cooldown": [ 11, 6 ],
             },
             {
                 "description": "Switches orbs between slots once, and adds .5x to Chain multiplier for 1 turn",
-                "cooldown": [ 14, null ],
+                "cooldown": [ 14, 9 ],
             },
         ],
         sailor: "Makes [STR], [QCK], [DEX], and [INT] orbs \"beneficial\" for this unit",
