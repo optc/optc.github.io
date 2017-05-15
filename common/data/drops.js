@@ -1376,6 +1376,7 @@ window.drops = {
         {
             name: "Revolutionary Armed Forces!",
             thumb: 1242,
+            global: true,
             gamewith: 37425,
             condition: "Free Spirit Characters have their cooldowns reduced by 10 turns at the start of the fight",
             "All Difficulties": [ 1241, 1243, -1035, -965, -1031, -1081, -754, -966, -502, -707, -955 ]
@@ -1384,6 +1385,7 @@ window.drops = {
         {
             name: "Gather! Whitebeard Alliance",
             thumb: 1254,
+            global: true,
             gamewith: 38336,
             condition: "Driven Characters have their cooldowns reduced by 10 turns at the start of the fight",
             "All Difficulties": [ 1254, 1255, 1256, -669, -1492, -1077, -1079, -967, -972, -974, -750, -701, -500 ]
@@ -1499,7 +1501,7 @@ window.drops = {
         },
         
         {
-            name: "Prodence Kingdom",
+            name: "Prodence Kingdom!",
             thumb: 1564,
             gamewith: 55145,
             condition: "Elizabello will kill you with one punch",
@@ -1507,11 +1509,18 @@ window.drops = {
         },
         
         {
-            name: "Punk Hazard",
+            name: "Punk Hazard!",
             thumb: 1581,
             gamewith: 56038,
-            //condition: "Elizabello will kill you with one punch",
             "All Difficulties": [ 1580, 1582, -1391, -1444, -1436, -1551, -896, -910, -357, -995, -890, -1342 ],
+        },
+        
+        {
+            name: "Fishman Island! The Royal Family!",
+            thumb: 1581,
+            gamewith: null,
+            //condition: "Elizabello will kill you with one punch",
+            "All Difficulties": [ 1596, 1598, 1599, -1045, -359, -999, -1033, -1550, -739, -1438, -1440, -893, -1343 ],
         },
         
     ],
@@ -1666,6 +1675,7 @@ window.drops = {
         {
             name: 'Clash!! Pica',
             thumb: 932,
+            global: true,
             gamewith: 23507,
             Master: [ 932 ],
             Expert: [ 932 ]
@@ -1754,7 +1764,7 @@ window.drops = {
         {
             name: 'Clash!! Fujitora',
             thumb: 1595,
-            gamewith: null,
+            gamewith: 56946,
             Ultimate: [ 1594 ],
             Master: [ 1594 ],
             Expert: [ 1594 ]
@@ -1856,20 +1866,25 @@ window.drops = {
         {
             name: 'Invasion! Young Whitebeard',
             thumb: 1258,
-            condition: "Has a chance of appearing at the end of ANY Friday Raid boss. You MUST use the same team that you just used to complete the raid boss to fight Young Whitebeard.",
+            global: true,
+            gamewith: 38237,
+            condition: "Has a chance of appearing at the end of ANY Raid boss when available. You MUST use the same team that you just used to complete the raid boss to fight Young Whitebeard.",
             "All Difficulties": [ 1257 ]
         },
         
         {
             name: 'Invasion! Red Hair Shanks',
             thumb: 1380,
-            condition: "Has a chance of appearing at the end of ANY Raid boss. You MUST use the same team that you just used to complete the raid boss to fight Shanks.",
+            global: true,
+            gamewith: 46369,
+            condition: "Has a chance of appearing at the end of ANY Raid boss when available. You MUST use the same team that you just used to complete the raid boss to fight Shanks.",
             "All Difficulties": [ 1379, 952, 776 ]
         },
         
         {
             name: 'Invasion! Cavendish',
             thumb: 1530,
+            gamewith: 53621,
             condition: "Has a chance of appearing at the end of ANY Chaos Coliseum boss. You MUST use the same team that you just used to complete the Coliseum boss to fight Cavendish.",
             "All Difficulties": [ 1529 ]
         },
@@ -1892,11 +1907,11 @@ window.drops = {
             "Trafalgar Law": [ 300, 100, 84, 95, 78, 89, 347, -964, -1045, -219, -308, -675, -991, -1077, -504, -1159, -212, -892 ],
             "Black Clad Ace": [ 302, 102, 86, 97, 80, 91, 349, -562, -310, -359, -941, -560, -1212, -1406, -789, -966, -432, -565, -566 ],
             "Cavendish": [ 303, 103, 87, 98, 81, 92, 350, -963, -1123, -217, -914, -1029, -1127, -1408, -202, -464, -1227, -705 ],
-            "Blackbeard": [  ],
-            "Crocodile": [  ],
-            "Log Luffy": [  ],
-            "Corazon": [  ],
-            "Kuzan": [  ],
+            "Blackbeard": [ -1268, -75, -733, -1033, -1082, -1230, -1278, -569, -1061, -52, -335 ],
+            "Crocodile": [ -720, -410, -908, -1208, -558, -1234, -1366, -544, -731, -236, -814, -1224 ],
+            "Log Luffy": [ -1121, -1075, -1131, -1133, -1115, -520, -1177, -528, -1387, -4, -816, -426, -542, -563 ],
+            "Corazon": [ -1001, -451, -878, -1079, -1183, -1316, -1446, -16, -223, -327, -628, -614 ],
+            "Kuzan": [ -1192, -255, -365, -449, -1210, -556, -1370, -200, -384, -1060, -428, -703 ],
             "Issho": [  ],
             "Dracule Mihawk": [  ],
             "Sabo": [  ],

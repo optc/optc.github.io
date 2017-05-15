@@ -1594,4 +1594,8 @@ window.families = [
     "Monkey D. Luffy",
     "Fujitora",
     "Fujitora",
+    "Princess Shirahoshi",
+    "Princess Shirahoshi",
+    "Ryuboshi",
+    "Manboshi",
 ];
