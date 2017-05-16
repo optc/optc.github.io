@@ -8672,13 +8672,13 @@ window.details = {
     1574: {//Sicilian
         captain: "Boosts ATK of [INT] characters by 2.25x",
         special: "Delays all enemies for 1 turn, deals 25x character's ATK [INT] damage to all enemies, and changes [STR], [DEX], [QCK], [INT], or [PSY] orbs on Cerebral characters into Matching orbs.",
-        sailor: "When HP is below ???% at the start of the turn, boosts own ATK by 200",
+        sailor: "When HP is below 30% at the start of the turn, boosts own ATK by 200",
         specialName: "Dash - Dive - Destroy",
     },
     1575: {//Sicilian
         captain: "Boosts ATK of [INT] characters by 2.5x and their HP by 1.25x",
         special: "Delays all enemies for 1 turn, deals 25x character's ATK [INT] damage to all enemies, and changes [STR], [DEX], [QCK], [INT], or [PSY] orbs on Cerebral characters into Matching orbs.",
-        sailor: "When HP is below ???% at the start of the turn, boosts own ATK by 200",
+        sailor: "When HP is below 30% at the start of the turn, boosts own ATK by 200",
         specialName: "Dash - Dive - Destroy",
     },
     1576: {//Kin'emon
