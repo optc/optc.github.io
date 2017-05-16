@@ -4706,4 +4706,7 @@ window.captains = {
     1599: {
         atk: function(p) { return p.unit.class.has("Powerhouse") ? 1.75 : 1; }
     },
+    1600: {
+        atk: function(p) { return p.unit.type == "INT" || p.unit.type == "PSY" ? 2.5 : 1; },
+    },
 };
