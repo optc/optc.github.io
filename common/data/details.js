@@ -8842,14 +8842,9 @@ window.details = {
         special: "Boosts ATK of all characters by 1.2x and recovers 5x character's RCV in HP at the end of each turn for 3 turns",
         specialName: "Ryuboshi Special",
     },
-    1599: {//Manboshi
+    1598: {//Manboshi
         captain: "Boosts ATK of Powerhouse characters by 1.75x",
         special: "Reduces the defense of all enemies by 50% for 1 turn. Changes own orb into [QCK]",
         specialName: "Manboshi Special",
-    },
-    1600: {//3rd Anniversary Luffy
-        captain: "Boosts ATK of [PSY] and [INT] characters by 2.5x",
-        special: "Deals 20x character's ATK in [PSY] damage to one enmy, locks orbs for 1 turn, and boosts the effect of orbs on [PSY] and [INT] characters by 1.75x for 1 turn",
-        specialName: "Right Leg Armament: Gum-Gum Battle Axe",
     },
 };

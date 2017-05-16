@@ -1594,11 +1594,10 @@ window.units = [
     [ "Monkey D Luffy, Gear 4th - Boundman", "PSY", [ "Fighter", "Free Spirit" ], "6+", 65, 4, 5, 99, 5000000, 1402, 777, 177, 3380, 1600, 400, 1 ],
     [ "Fujitora, Navy HQ Greatest Military Power", "PSY", [ "Powerhouse", "Slasher" ], 4, 30, 6, 2, 70, 1066998, 303, 165, 29, 1344, 700, 144, 1 ],
     [ "Gravity Blade Fujitora, Navy HQ Greatest Military Power", "PSY", [ "Powerhouse", "Slasher" ], 5, 50, 4, 3, 99, 5000000, 1268, 634, 109, 2825, 1420, 254, 1 ],
-    [ "Shirahoshi", "INT", "Striker", 3, 13, 6, 2, 50, 392109, 62, 45, 35, 690, 360, 215, null ],
-    [ "Shirahoshi, Evolved", "INT", "Striker", 4, 20, 4, 3, 99, null, 620, 330, 200, 1536, 858, 408, null ],
-    [ "Ryuboshi", "STR", [ "Powerhouse", "Slasher" ], 3, 15, 6, 1, 70, null, 123, 87, 29, 1362, 699, 180, null ],
-    [ "Manboshi", "QCK", [ "Powerhouse", "Slasher" ], 3, 15, 6, 1, 70, null, 79, 90, 40, 864, 768, 240, null ],
-    [ "Monkey D Luffy, Straw Hat, Heart Pirates Alliance", "PSY", [ "Fighter", "Free Spirit" ], 4, 15, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Shirahoshi", "INT", "Striker", 3, 13, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Shirahoshi, Evolved", "INT", "Striker", 4, 20, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Ryuboshi", "STR", [ "Powerhouse", "Slasher" ], 3, 15, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Manboshi", "QCK", [ "Powerhouse", "Slasher" ], 3, 15, null, null, null, null, null, null, null, null, null, null, null ],
     ];
     
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
