@@ -6140,7 +6140,7 @@ window.details = {
     1216: { //sebastian
         captain: "Boosts ATK of Powerhouse characters by 2x and reduces damage received based on current HP by up to 20%",
         captainNotes: "The lower the HP, the larger the damage reduction. At 50% HP you take 10% reduced damage",
-        special: "Reduces damage received by 50% for 1 turn, and changes own orb to [QCK]",
+        special: "Reduces damage received by 50% for 1 turn, and changes own orb into [QCK]",
         specialName: "Camouflage Air",
     },
     1217: { //nightin
@@ -7968,12 +7968,12 @@ window.details = {
     },
     1466: {//White Day Cavendish
         captain: "Boosts ATK of [QCK] and [PSY] characters by 2x",
-        special: "Reduces the defense of all enemies by 100% for 1 turn. changes own orb into [PSY] and friend captain's orb into [STR]",
+        special: "Reduces the defense of all enemies by 100% for 1 turn and changes own orb into [PSY] and friend captain's orb into [STR]",
         specialName: "Rosy Pleasure",
     },
     1467: {//White Day Cavendish
         captain: "Boosts ATK of [QCK] and [PSY] characters by 2.25x and their RCV by 1.3x",
-        special: "Reduces the defense of all enemies by 100% for 1 turn. changes own orb into [PSY] and friend captain's orb into [STR]",
+        special: "Reduces the defense of all enemies by 100% for 1 turn and changes own orb into [PSY] and friend captain's orb into [STR]",
         specialName: "Rosy Pleasure",
     },
     1468: {//Fortnight Sentomaru 
@@ -8826,5 +8826,25 @@ window.details = {
         captain: "Boosts ATK of Powerhouse characters by 2.25x, and their HP by 1.2x, cuts the current HP of each enemy by 10% at the end of each turn",
         special: "Deals 50x character's ATK in [PSY] damage to all enemies that will ignore damage negating abilities and barriers, changes adjacent orbs into Matching Orbs, amplifies the effect of orbs for Powerhouse characters by 2x for 1 turn",
         specialName: "Gravity Blade: Fierce Tiger",
+    },
+    1596: {//Shirahoshi
+        captain: "Boosts ATK and RCV of [INT] characters by 1.5x",
+        special: "Reduces Bind, Despair and Paralysis duration by 2 turns, reduces damage received by 70% for 1 turn",
+        specialName: "Shirahoshi Special",
+    },
+    1597: {//Shirahoshi
+        captain: "Boosts ATK and RCV of [INT] characters by 1.75x",
+        special: "Reduces Bind, Despair and Paralysis duration by 2 turns, reduces damage received by 70% for 1 turn",
+        specialName: "Shirahoshi Special",
+    },
+    1598: {//Ryuboshi
+        captain: "Boosts HP of Powerhouse characters by 1.5x",
+        special: "Boosts ATK of all characters by 1.2x and recovers 5x character's RCV in HP at the end of each turn for 3 turns",
+        specialName: "Ryuboshi Special",
+    },
+    1598: {//Manboshi
+        captain: "Boosts ATK of Powerhouse characters by 1.75x",
+        special: "Reduces the defense of all enemies by 50% for 1 turn. Changes own orb into [QCK]",
+        specialName: "Manboshi Special",
     },
 };

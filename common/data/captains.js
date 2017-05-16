@@ -4692,4 +4692,18 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Powerhouse") ? 2.25 : 1; },
         hp: function(p) { return p.unit.class.has("Powerhouse") ? 1.5 : 1; }
     },
+    1596: {
+        atk: function(p) { return p.unit.type == "INT" ? 1.5 : 1; },
+        rcv: function(p) { return p.unit.type == "INT" ? 1.5 : 1; }
+    },
+    1597: {
+        atk: function(p) { return p.unit.type == "INT" ? 1.75 : 1; },
+        rcv: function(p) { return p.unit.type == "INT" ? 1.75 : 1; }
+    },
+    1598: {
+        hp: function(p) { return p.unit.class.has("Powerhouse") ? 1.5 : 1; }
+    },
+    1599: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 1.75 : 1; }
+    },
 };
