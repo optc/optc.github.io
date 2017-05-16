@@ -2680,4 +2680,7 @@ window.specials = {
     1595: {
         orb: function(p) { return (p.unit.class.has("Powerhouse")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1); }	
     },
+    1598: {
+        atk: function(p) { return 1.2 },
+    },
 };
