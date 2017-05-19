@@ -7618,7 +7618,7 @@ window.details = {
     1412: {//Timeskip Chopper Again
         captain: "Boosts ATK of Powerhouse characters by 2.75x, reduces crew's RCV to 0",
         special: "Reduce enemies Damage Reduction and Increased Defense duration by 3 turns and deals 60x character's ATK in typeless damage to all enemies",
-        specialNotes: "This does not affect threshold damage reduction. Damage Reduction is the rainbow shield buff enemies have, and Increased Defense is the blue shiled buff enemies have",
+        specialNotes: "This does not affect threshold damage reduction. Damage Reduction is the rainbow shield buff enemies have, and Increased Defense is the blue shield buff enemies have",
         specialName: "Carving Hoof Palm: Coconut",
         sailor: "If Chopper has a [STR] orb and you hit a Perfect with him, keep his [STR] orb for the next turn",
     },
@@ -7947,7 +7947,7 @@ window.details = {
         specialName: "Gum-Gum Gigant Axe - Sweets",
     },
     1463: {//White Day Luffy
-        captain: "Boosts chain multiplier by 2.5x",
+        captain: "Boosts chain multiplier by 2.5x, recovers 1.5x character's RCV in HP at the end of each turn",
         special: "Reduces crew's current HP by 50%, cuts the current HP of each enemy by 20%, and makes [PSY] and [STR] orbs \"beneficial\" to Fighter characters for 1 turn",
         sailor: "Reduces Paralysis for 2 turns for himself",
         specialName: "Gum-Gum Gigant Axe - Sweets",
@@ -8635,12 +8635,12 @@ window.details = {
     1567: {//Kid Boa
         captain: "Boosts ATK and RCV of [QCK] characters by 1.5x",
         special: "Recovers 13x character's RCV in HP, amplifies the effect of orbs by 1.5x for 3 turns",
-        specialName: "Boa Special",
+        specialName: "The Princess' Principle",
     },
     1568: {//Kid Boa
         captain: "Boosts ATK and RCV of [QCK] characters by 2x",
         special: "Recovers 13x character's RCV in HP, amplifies the effect of orbs by 1.5x for 3 turns",
-        specialName: "Boa Special",
+        specialName: "The Princess' Principle",
     },
     1569: {//Anniversary Law
         captain: "Boosts ATK of all characters by 2.25x and boosts EXP and amount of Beli recieved by 1.2x",
@@ -8830,26 +8830,43 @@ window.details = {
     1596: {//Shirahoshi
         captain: "Boosts ATK and RCV of [INT] characters by 1.5x",
         special: "Reduces Bind, Despair and Paralysis duration by 2 turns, reduces damage received by 70% for 1 turn",
-        specialName: "Shirahoshi Special",
+        specialName: "Great Dinner Buffet",
     },
     1597: {//Shirahoshi
         captain: "Boosts ATK and RCV of [INT] characters by 1.75x",
         special: "Reduces Bind, Despair and Paralysis duration by 2 turns, reduces damage received by 70% for 1 turn",
-        specialName: "Shirahoshi Special",
+        specialName: "Great Dinner Buffet",
     },
     1598: {//Ryuboshi
         captain: "Boosts HP of Powerhouse characters by 1.5x",
         special: "Boosts ATK of all characters by 1.2x and recovers 5x character's RCV in HP at the end of each turn for 3 turns",
-        specialName: "Ryuboshi Special",
+        specialName: "Musical Scale",
     },
     1599: {//Manboshi
         captain: "Boosts ATK of Powerhouse characters by 1.75x",
         special: "Reduces the defense of all enemies by 50% for 1 turn. Changes own orb into [QCK]",
-        specialName: "Manboshi Special",
+        specialName: "Happy Dance",
     },
     1600: {//3rd Anniversary Luffy
         captain: "Boosts ATK of [PSY] and [INT] characters by 2.5x",
         special: "Deals 20x character's ATK in [PSY] damage to one enemy, locks orbs for 1 turn, and boosts the effect of orbs on [PSY] and [INT] characters by 1.75x for 1 turn",
         specialName: "Right Leg Armament: Gum-Gum Battle Axe",
+    },
+    1601: {//Power Creep Shiryu
+        captain: "Boosts ATK of Slasher characters by ???x at the start of the chain, by ???x after the 3rd Perfect",
+        special: "Instantly defeats all enemies with HP equal to or below 75x character's ATK, removes poison and reduces damage received by 50% for 3 turns,",
+        specialName: "Shiryu Special",
+        sailor: "Boosts own ATK by 100 if this character is the last in the chain to attack",
+    },
+    1602: {//Power Creep Shiryu
+        captain: "Boosts ATK of Slasher characters by 2x at the start of the chain, by 3x after the 3rd Perfect",
+        special: "Instantly defeats all enemies with HP equal to or below 75x character's ATK, removes poison and reduces damage received by 50% for 3 turns,",
+        specialName: "Shiryu Special",
+        sailor: "Boosts own ATK by 100 if this character is the last in the chain to attack",
+    },
+    1603: {//McGuy
+        captain: "Boosts ATK of [STR] characters by 2.25x and their RCV by 1.25x",
+        special: "Delays all enemies for 2 turns",
+        specialName: "All Hail Lightning God McGuy Special",
     },
 };

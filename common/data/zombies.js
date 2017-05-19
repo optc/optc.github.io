@@ -343,6 +343,10 @@ window.zombies = {
         type: 'healer',
         amount: 120
     },
+    1463: { // White Day Luffy
+        type: 'healer',
+        multiplier: 1.5
+    },
     1465: { // White Day Chopper
         type: 'zombie',
         threshold: 0.5
