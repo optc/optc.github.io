@@ -1598,6 +1598,7 @@ window.families = [
     "Princess Shirahoshi",
     "Ryuboshi",
     "Manboshi",
+    "Monkey D. Luffy",
     "Shiliew",
     "Shiliew",
     "McGuy",
