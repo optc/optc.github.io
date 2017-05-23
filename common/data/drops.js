@@ -1783,6 +1783,12 @@ window.drops = {
         },
 
         {
+            name: 'Ace Training Ground',
+            thumb: 1605,
+            "All Difficulties": [ 1604 ],
+        },
+
+        {
             name: 'Battle Royal! Oars',
             thumb: 893,
             global: true,

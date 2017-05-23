@@ -403,4 +403,8 @@ window.zombies = {
         type: 'zombie',
         threshold: 0.3
     },
+    1605: { // Training Forest Ace
+        type: 'healer',
+        amount: 500
+    },
 };

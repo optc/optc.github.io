@@ -1599,9 +1599,11 @@ window.units = [
     [ "Ryuboshi", "STR", [ "Powerhouse", "Slasher" ], 3, 15, 6, 1, 70, 1066998, 123, 87, 29, 1362, 699, 180, 1 ],
     [ "Manboshi", "QCK", [ "Powerhouse", "Slasher" ], 3, 15, 6, 1, 70, 1066998, 79, 90, 40, 864, 768, 240, 1 ],
     [ "Monkey D Luffy, Straw Hat • Heart Pirates Alliance", "PSY", [ "Fighter", "Free Spirit" ], 4, 15, 4, 4, 99, 2000000, 209, 113, 12, 2105, 1244, 224, 1 ],
-    [ "Coliseum Shiryu", "INT", [ "Slasher", "Driven" ], 4, 25, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Shiryu of the Rain", "INT", [ "Slasher", "Driven" ], 5, 40, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "'Lightning God' McGuy, Subordinates of the Whitebeard Pirates", "STR", [ "Slasher", "Cerebral" ], 4, 26, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Shiryu, Blackbeard Pirates", "INT", [ "Slasher", "Driven" ], 4, 25, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Shiryu of the Rain, Blackbeard Pirates", "INT", [ "Slasher", "Driven" ], 5, 40, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Thunder Lord McGuy", "STR", [ "Slasher", "Cerebral" ], 4, 26, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Portgas D. Ace, Luffy's 'Brother'", "STR", [ "Free Spirit", "Shooter" ], 3, 8, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Portgas D. Ace, Whitebeard's 'Son'", "STR", [ "Free Spirit", "Shooter" ], 4, 15, null, null, null, null, null, null, null, null, null, null, null ],
     ];
     
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],

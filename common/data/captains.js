@@ -4729,4 +4729,10 @@ window.captains = {
         atk: function(p) { return p.unit.type == "STR" ? 2.25 : 1; },
         rcv: function(p) { return p.unit.type == "STR" ? 1.25 : 1; }
     },
+    1604: {
+        atk: function(p) { return p.unit.type == "STR" ? 1.5 : 1; },
+    },
+    1605: {
+        atk: function(p) { return p.unit.type == "STR" ? 2 : 1; },
+    },
 };
