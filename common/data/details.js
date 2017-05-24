@@ -8853,7 +8853,7 @@ window.details = {
         specialName: "Right Leg Armament: Gum-Gum Battle Axe",
     },
     1601: {//Power Creep Shiryu
-        captain: "Boosts ATK of Slasher characters by ???x at the start of the chain, by ???x after the 3rd Perfect",
+        captain: "Boosts ATK of Slasher characters by 2x",
         special: "Instantly defeats all enemies with HP equal to or below 75x character's ATK, removes poison and reduces damage received by 50% for 3 turns,",
         specialName: "Blood Stained 'Iron Wall'",
         sailor: "Boosts own ATK by 100 if this character is the last in the chain to attack",
