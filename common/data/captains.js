@@ -3716,12 +3716,12 @@ window.captains = {
         hp: function(p) { return p.unit.cost <= 30 ? 1.2 : 1; }
     },
     1361: {
-        atk: function(p) { return p.unit.class.has("Slasher") ? p.classCount.Slasher>=5 ? Math.max(2.5, 2.5 + .5 * Math.min(p.turnCounter,1)) : 1 : 1; },
+        atk: function(p) { return p.unit.class.has("Slasher") ? p.classCount.Slasher>=5 ? Math.max(2.5, 2.5 + .5 * Math.min(p.turnCounter,1)) : 1 : Math.max(1, 1 + .2 * Math.min(p.turnCounter,1)); },
         hp: function(p) { return p.unit.class.has("Slasher") ?
             p.classCount.Slasher>=5 ? 1.5 : 1 : 1; },
     },
     1362: {
-        atk: function(p) { return p.unit.class.has("Slasher") ? p.classCount.Slasher>=5 ? Math.max(2.5, 2.5 + .5 * Math.min(p.turnCounter,1)) : 1 : 1; },
+        atk: function(p) { return p.unit.class.has("Slasher") ? p.classCount.Slasher>=5 ? Math.max(2.5, 2.5 + .5 * Math.min(p.turnCounter,1)) : 1 : Math.max(1, 1 + .2 * Math.min(p.turnCounter,1)); },
         hp: function(p) { return p.unit.class.has("Slasher") ?
             p.classCount.Slasher>=5 ? 1.5 : 1 : 1; },
     },
