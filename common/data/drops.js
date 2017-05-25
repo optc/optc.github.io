@@ -1506,7 +1506,7 @@ window.drops = {
             thumb: 1564,
             gamewith: 55145,
             condition: "Elizabello will kill you with one punch",
-            "All Difficulties": [ 1563, 1565, -1362, -1408, -1412, -941, -991, -308, -1283, -892, -1549, -709, -1549 ],
+            "All Difficulties": [ 1563, 1565, -1362, -1408, -1412, -941, -991, -308, -1283, -892, -1549, -709 ],
         },
         
         {
@@ -1518,10 +1518,9 @@ window.drops = {
         
         {
             name: "Fishman Island! The Royal Family!",
-            thumb: 1581,
-            gamewith: null,
-            //condition: "Elizabello will kill you with one punch",
-            "All Difficulties": [ 1596, 1598, 1599, -1045, -359, -999, -1033, -1550, -739, -1550, -1438, -1440, -893, -1343 ],
+            thumb: 1597,
+            gamewith: 57039,
+            "All Difficulties": [ 1596, 1598, 1599, -1045, -359, -999, -1033, -1550, -739, -1438, -1440, -893, -1343 ],
         },
         
     ],
