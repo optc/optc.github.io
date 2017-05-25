@@ -7836,7 +7836,7 @@ window.details = {
         specialName: "Green Star: Platanus Shuriken",
     },
     1447: {//Sanji 5+
-        captain: "Boosts Powerhouse characters ATK by 2.5x and reduces damage take by 10%.",
+        captain: "Boosts ATK of Powerhouse characters by 2.5x and reduces damage take by 10%.",
         special: [
             {
                 "description": "Deals 5,000 fixed damage to all enemies and boosts own ATK by 1.2x for 1 turn.",
