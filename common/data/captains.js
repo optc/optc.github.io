@@ -3885,13 +3885,13 @@ window.captains = {
     },
     1403: {
         atk: function(p){ 
-            return p.unit.class.has("Free Spirit") ? ((!window.specials[1403].turnedOn || (window.specials[1403].multiplier == null)) ? 2.5 : window.specials[1403].multiplier) : 1; 
+            return p.unit.class.has("Free Spirit") ? p.actions[p.sourceSlot] ? 4 : 2.5 : 1;
             
         },
     },
     1404: {
         atk: function(p){ 
-            return p.unit.class.has("Free Spirit") ? ((!window.specials[1404].turnedOn || (window.specials[1404].multiplier == null)) ? 2.5 : window.specials[1404].multiplier) : 1;
+            return p.unit.class.has("Free Spirit") ? p.actions[p.sourceSlot] ? 4 : 2.5 : 1;
         },
     },
     1405: {
@@ -4660,11 +4660,11 @@ window.captains = {
         rcv: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Driven") ? 1.5 : 1; },
     },
     1587: {
-        atk: function(p) { return 2.5 },
+        atk: function(p) { return (p.slot == p.sourceSlot && p.actions[p.sourceSlot]) ? 6.25 : 2.5; },
         hp: function(p) { return 1.3 },
     },
     1588: {
-        atk: function(p) { return 2.5 },
+        atk: function(p) { return (p.slot == p.sourceSlot && p.actions[p.sourceSlot]) ? 6.25 : 2.5; },
         hp: function(p) { return 1.3 },
     },
     1589: {
@@ -4685,7 +4685,7 @@ window.captains = {
     },
     1593: {
         atk: function(p){ 
-            return p.unit.class.has("Fighter") ? ((!window.specials[1593].turnedOn || (window.specials[1593].multiplier == null)) ? 2.5 : window.specials[1593].multiplier) : 1;
+            return p.unit.class.has("Fighter") ? p.actions[p.sourceSlot] ? 4 : 2.5 : 1;
         },
     },
     1595: {
@@ -4730,43 +4730,37 @@ window.captains = {
     1605: {
         atk: function(p) { return p.unit.type == "STR" ? 2 : 1; },
     },
-    1606: {
+    1609: {//Enel
+        hp: function(p) { return 0.8 },
         
     },
-    1607: {
-        
-    },
-    1608: {
-        
-    },
-    1609: {
-        
-    },
-    1610: {
+    1610: {//Enel
+        hp: function(p) { return 0.8 },
         
     },
     1611: {
-        atk: function(p) {return p.unit.class.has("Shooter") ? 2.5 : 1; },
+        atk: function(p) {return p.unit.class.has("Shooter") ? 1.75 : 1; },
+        hp: function(p) { return p.unit.class.has("Shooter") ? 1.2 : 1; },
     },
     1612: {
         atk: function(p) { return p.unit.class.has("Shooter") ? 2.5 : 1; },
-        hp: function(p) { return p.unit.class.has("Shooter") ?1.2 : 1; },
+        hp: function(p) { return p.unit.class.has("Shooter") ? 1.2 : 1; },
     },
     1613: {
-        atk: function(p) { return p.unit.class.has("Fighter") ? 2.5 : 1; },
+        atk: function(p) { return p.unit.class.has("Fighter") ? 2.25 : 1; },
     },
     1614: {
         atk: function(p) { return p.unit.class.has("Fighter") ? 2.5 : 1; },
-        hp: function(p) { return p.unit.class.has("Fighter") ? 1.2 : 1; },
+        hp: function(p) { return p.unit.class.has("Fighter") ? 1.25 : 1; },
     },
     1615: {
-        atk: function(p) { return p.unit.class.has("Striker") ? 2.5 : 1; },
+        atk: function(p) { return p.unit.class.has("Striker") ? 2 : 1; },
     },
     1616: {
         atk: function(p) { return p.unit.class.has("Striker") ? 2.5 : 1; },
     },
     1617: {
-        
+        atk: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "INT" ? 2 : 1; },
     },
     1618: {
         atk: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "INT" ? 2.5 : 1; },

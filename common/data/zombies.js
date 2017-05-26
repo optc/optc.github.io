@@ -407,4 +407,8 @@ window.zombies = {
         type: 'healer',
         amount: 500
     },
+    1616: { // Crocodile
+        type: 'healer',
+        multiplier: 1.5
+    },
 };

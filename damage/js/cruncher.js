@@ -716,7 +716,6 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         enabledSpecials = [ ];
         // deactivate turn counter (will be reactivated if necessary)
         $scope.tdata.turnCounter.enabled = false;
-        $scope.tdata.captainAction.enabled = false;
         // orb map effects
         mapEffect = { };
         if ($scope.data.effect) {
@@ -756,8 +755,6 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             // activate turn counter if necessary
             if (n < 2 && (id == 794 || id == 795 || id == 1124 || id == 1125 || id == 1191 || id == 1192 || id == 1219 || id == 1220 || id == 1288 || id == 1289 || id == 1361 || id == 1362 || id == 1525 || id == 1557 || id == 1558 || id == 1559 || id == 1560 || id == 1561 || id == 1562))
                 $scope.tdata.turnCounter.enabled = true;
-            if (n < 2 && (id == 1587 || id == 1588))
-                $scope.tdata.captainAction.enabled = true;
         });
         if (conflictWarning) 
             $scope.notify({ type: 'error', text: 'One or more specials you selected cannot be activated due to an active map effect.' });
@@ -861,7 +858,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
     };
     
     var getParameters = function(slotNumber, chainPosition) {
-        //console.log($scope.tdata.captainAction.value)
+        //console.log($scope.data.actionleft)
         return {
             unit: team[slotNumber].unit,
             orb: $scope.tdata.team[slotNumber].orb,
@@ -873,11 +870,11 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             scope: $scope,
             slot: slotNumber,
             turnCounter: $scope.tdata.turnCounter.value,
-            captainAction: $scope.tdata.captainAction.value,
             chainPosition: chainPosition,
             classCount: classCounter(),
             colorCount: colorCounter(),
-            captain: team[1].unit
+            captain: team[1].unit,
+            actions: [ $scope.data.actionleft, $scope.data.actionright ],
         };
     };
 

@@ -2043,36 +2043,6 @@ window.specials = {
             });
         },
     },
-    1403: {
-        onActivation: function(p) {
-            var n = (window.specials[1403].multiplier == 3.16 ? 1 : 0);
-            window.specials[1403].turnedOn = true;
-            window.specials[1403].multiplier = [3.16, 4][n];
-            p.scope.notify({
-                text: 'Only affects damage if Luffy is your captain, and each Luffy only boosts his own Captain damage. Toggle to change between effective captain boosts. Using the ' + [10, 16][n] + 'x Captain boost. To switch to the ' + [16, 10][n] + 'x Captain boost, disable and re-enable this special. NOTE: STAGE 1 SPECIAL IS ONLY USED IF YOU HAVE TWO LUFFYS, AND ARE TESTING DAMAGE AS IF YOU ONLY ACTIVATED ONE LUFFY SPECIAL.',
-                name: '1403warning'
-            });
-        },
-        onDeactivation: function(p) {
-            window.specials[1403].turnedOn = false;
-        }
-        
-    },
-    1404: {
-        onActivation: function(p) {
-            var n = (window.specials[1404].multiplier == 3.16 ? 1 : 0);
-            window.specials[1404].turnedOn = true;
-            window.specials[1404].multiplier = [3.16, 4][n];
-            p.scope.notify({
-                text: 'Only affects damage if Luffy is your captain, and each Luffy only boosts his own Captain damage. Toggle to change between effective captain boosts. Using the ' + [10, 16][n] + 'x Captain boost. To switch to the ' + [16, 10][n] + 'x Captain boost, disable and re-enable this special. NOTE: STAGE 1 SPECIAL IS ONLY USED IF YOU HAVE TWO LUFFYS, AND ARE TESTING DAMAGE AS IF YOU ONLY ACTIVATED ONE LUFFY SPECIAL.',
-                name: '1404warning'
-            });
-        },
-        onDeactivation: function(p) {
-            window.specials[1404].turnedOn = false;
-        }
-        
-    },
     1405: {
         atk: function(p) { return p.unit.class.has("Shooter") ? 1.75 : 1; },
         type: "class",
@@ -2625,28 +2595,12 @@ window.specials = {
         type: "class"
     },
     1587: {
-        atk: function(p) { return p.slot == p.sourceSlot ? window.specials[1587].multiplier : 1; },
-        type: "class",
-        onActivation: function(p) {
-            var n = (window.specials[1587].multiplier == 2 ? 1 : 0);
-            window.specials[1587].multiplier = [2, 5][n];
-            p.scope.notify({
-                text: 'Using the ' + [2, 5][n] + 'x ATK multiplier. To switch to the ' + [5, 2][n] + 'x multiplier, disable and re-enable this special. (5x Attack boost assumes that Sanji Jumped, and used his special on the following turn. Jumping + Type Boost does NOT work yet.)',
-                name: '1587warning'
-            });
-        },
+        atk: function(p) { return p.slot == p.sourceSlot ? 2 : 1; },
+        type: "type"
     },  
     1588: {
-        atk: function(p) { return p.slot == p.sourceSlot ? window.specials[1588].multiplier : 1; },
-        type: "class",
-        onActivation: function(p) {
-            var n = (window.specials[1588].multiplier == 2 ? 1 : 0);
-            window.specials[1588].multiplier = [2, 5][n];
-            p.scope.notify({
-                text: 'Using the ' + [2, 5][n] + 'x ATK multiplier. To switch to the ' + [5, 2][n] + 'x multiplier, disable and re-enable this special. (5x Attack boost assumes that Sanji Jumped, and used his special on the following turn. Jumping + Type Boost does NOT work yet.)',
-                name: '1588warning'
-            });
-        },
+        atk: function(p) { return p.slot == p.sourceSlot ? 2 : 1; },
+        type: "type"
     },
     1591: {
         atk: function(p) {
@@ -2660,20 +2614,6 @@ window.specials = {
         },
         type: "class"
     },
-    1593: {
-        onActivation: function(p) {
-            var n = (window.specials[1593].multiplier == 3.16 ? 1 : 0);
-            window.specials[1593].turnedOn = true;
-            window.specials[1593].multiplier = [3.16, 4][n];
-            p.scope.notify({
-                text: 'Only affects damage if Luffy is your captain, and each Luffy only boosts his own Captain damage. Toggle to change between effective captain boosts. Using the ' + [10, 16][n] + 'x Captain boost. To switch to the ' + [16, 10][n] + 'x Captain boost, disable and re-enable this special. NOTE: STAGE 1 SPECIAL IS ONLY USED IF YOU HAVE TWO LUFFYS, AND ARE TESTING DAMAGE AS IF YOU ONLY ACTIVATED ONE LUFFY SPECIAL.',
-                name: '1593warning'
-            });
-        },
-        onDeactivation: function(p) {
-            window.specials[1593].turnedOn = false;
-        }
-    },
     1594: {
         orb: function(p) { return (p.unit.class.has("Powerhouse")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1); }	
     },
@@ -2685,5 +2625,31 @@ window.specials = {
     },
     1600: {
         orb: function(p) { return (p.unit.type == "INT" || p.unit.type == "PSY") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1); },	
+    },
+    1613: {
+        def: function(p) { return 0.5 },
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1); }
+    },
+    1614: {
+        def: function(p) { return 0.5 },
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1); }
+    },
+    1615: {
+        atk: function(p) { return p.unit.class.has("Striker") ? 1.5 : 1; },
+        type: "class",
+        orb: function(p) { return p.unit.class.has("Striker") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1); }	
+    },
+    1616: {
+        atk: function(p) { return p.unit.class.has("Striker") ? 1.5 : 1; },
+        type: "class",
+        orb: function(p) { return p.unit.class.has("Striker") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1); }	
+    },
+    1617: {
+        atk: function(p) { return p.unit.type == "STR" || p.unit.type == "INT" || p.unit.type == "DEX" ? 1.75 : 1; },
+        type: "type"
+    },
+    1618: {
+        atk: function(p) { return p.unit.type == "STR" || p.unit.type == "INT" || p.unit.type == "DEX" ? 1.75 : 1; },
+        type: "type"
     },
 };

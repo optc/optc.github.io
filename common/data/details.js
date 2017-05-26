@@ -2749,14 +2749,14 @@ window.details = {
         specialName: "Bohemian Reverse Slash",
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of Slasher characters by 2x",
         sailor: "Restores his own special by 1 turn when it is rewinded",
-        sailorNotes: "Some enemies can increase your cooldown by 1/2 Turns, this Sailor Ability decreases that by 1 Turn"
+        sailorNotes: "Some enemies can increase your cooldown by 1/2 turns, this Sailor Ability decreases that by 1 turn"
     },
     639: {
         special: "Changes [PSY] and [INT] orbs into [QCK] orbs, reduces Bind duration by 1 turn",
         specialName: "Bohemian Reverse Slash",
         captain: "Reduces cooldown of all specials by 3 turns at the start of the fight, boosts ATK of Slasher characters by 2x",
         sailor: "Restores his own special by 1 turn when it is rewinded",
-        sailorNotes: "Some enemies can increase your cooldown by 1/2 Turns, this Sailor Ability decreases that by 1 Turn"
+        sailorNotes: "Some enemies can increase your cooldown by 1/2 turns, this Sailor Ability decreases that by 1 turn"
     },
     640: {
         special: "Changes own orb into [DEX], deals several times the character's ATK in DEX damage to one enemy",
@@ -4730,7 +4730,7 @@ window.details = {
         ],
         specialNotes: "#{stages}",
         sailor: "Restores her own special by 1 turn when it is rewinded",
-        sailorNotes: "Some enemies can increase your cooldown by 1/2 Turns, this Sailor Ability decreases that by 1 Turn"
+        sailorNotes: "Some enemies can increase your cooldown by 1/2 turns, this Sailor Ability decreases that by 1 turn"
     },
     995:{
         captain: "Boosts amount of Beli received by 3x",
@@ -4748,7 +4748,7 @@ window.details = {
         ],
         specialNotes: "#{stages}",
         sailor: "Restores her own special by 1 turn when it is rewinded",
-        sailorNotes: "Some enemies can increase your cooldown by 1/2 Turns, this Sailor Ability decreases that by 1 Turn"
+        sailorNotes: "Some enemies can increase your cooldown by 1/2 turns, this Sailor Ability decreases that by 1 turn"
     },
     996: {
         captain: "Boosts ATK of Powerhouse characters by 2x",
@@ -5949,7 +5949,7 @@ window.details = {
         ],
         specialName: "Extreme Speed - One Sword Style, Ten Slashes",
         sailor: "Restores his own special by 1 turn when it is rewinded",
-        sailorNotes: "Some enemies can increase your cooldown by 1/2 Turns, this Sailor Ability decreases that by 1 Turn"
+        sailorNotes: "Some enemies can increase your cooldown by 1/2 turns, this Sailor Ability decreases that by 1 turn"
     },
     1186: {
         captain: "Boosts ATK of Slasher and Cerebral characters by 1.75x. Gives chance of duplicating a drop upon completion of the island.",
@@ -5966,7 +5966,7 @@ window.details = {
         ],
         specialName: "Extreme Speed - One Sword Style, Ten Slashes",
         sailor: "Restores his own special by 1 turn when it is rewinded",
-        sailorNotes: "Some enemies can increase your cooldown by 1/2 Turns, this Sailor Ability decreases that by 1 Turn"
+        sailorNotes: "Some enemies can increase your cooldown by 1/2 turns, this Sailor Ability decreases that by 1 turn"
     },
     1187: {
         captain: "Boosts ATK of [STR] characters by 2.5x",
@@ -6451,7 +6451,7 @@ window.details = {
         captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of [INT] characters by 2x",
         special: "Changes adjacent orbs into [INT] orbs. Deals 20x character's ATK in [INT] damage to all enemies.",
         specialName: "Reversed Twin Blades - Surprise Thrust",
-        sailor: "Reduces own Silence by 1 Turn",
+        sailor: "Reduces own Silence by 1 turn",
         sailorNotes: "Silence will refer to effects that prevent you from activating Special Abilities",
     },
     1253: {// Coliseum Shura
@@ -6473,7 +6473,7 @@ window.details = {
     },
     1256: {//FN Whitey Bay
         captain: "Boosts ATK of Slasher and Driven characters by 2x and reduces their RCV by 90%",
-        special: "Shuffle non-matching orbs on Slasher and Driven characters, boosts Atk against enemies with increased defense by 1.3x for 1 turn",
+        special: "For Slasher and Driven characters, randomizes non-matching orbs, boosts Atk against enemies with increased defense by 1.3x for 1 turn",
         sailor: "Boosts ATK and RCV of Driven characters by 10",
         specialName: "Icebreaker Breakthrough Force",
     },
@@ -6673,7 +6673,7 @@ window.details = {
     },
     1285: {//Wild Luffy Evolved
         captain: "Boosts ATK of Striker characters by 1.5x and their HP by 1.25x. After scoring 3 Perfects in a row, boosts ATK of Striker characters by 3.375x instead.",
-        special: "Reduces Bind and Silence duration by 3 turns. Randomizes Non-Matching orbs. (Including [BLOCK] orb)",
+        special: "Reduces Bind and Silence duration by 3 turns. Randomizes non-matching orbs. (Including [BLOCK] orb)",
         sailor: "Reduces Silence duration against this character by 3 turns",
         specialName: "Wild Hunt",
     },
@@ -7310,14 +7310,14 @@ window.details = {
         captain: "Boosts ATK of Slasher and Powerhouse characters by 2x at the start of the chain, by 2.25x after the 3rd Perfect and by 2.5x after the 5th Perfect.",
         special: "Reduces Despair duration by 3 turns. Reduces Special Cooldown of Slasher and Powerhouse characters by 2 turns",
         sailor: "Restores his own special by 2 turns when it is rewinded",
-        sailorNotes: "Some enemies can increase your cooldown by 1/2 Turns, this Sailor Ability decreases that by 2 turns",
+        sailorNotes: "Some enemies can increase your cooldown by 1/2 turns, this Sailor Ability decreases that by 2 turns",
         specialName: "Wild Plan",
     },
     1372: {//Wild Zoro
         captain: "Boosts ATK of Slasher and Powerhouse characters by 2x at the start of the chain, by 2.5x after the 3rd Perfect and by 3x after the 5th Perfect.",
         special: "Reduces Despair duration by 3 turns. Reduces Special Cooldown of Slasher and Powerhouse characters by 2 turns",
         sailor: "Restores his own special by 2 turns when it is rewinded",
-        sailorNotes: "Some enemies can increase your cooldown by 1/2 Turns, this Sailor Ability decreases that by 2 turns",
+        sailorNotes: "Some enemies can increase your cooldown by 1/2 turns, this Sailor Ability decreases that by 2 turns",
         specialName: "Wild Plan",
     },
     1373: {//Magellan
@@ -7917,12 +7917,12 @@ window.details = {
     },
     1457: {//Coliseum Kuro
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of [QCK] and [INT] characters by 1.75x",
-        special: "Reduces Bind and Despair duration by 2 turns, changes own orb into [INT] and randomizes non-matching orbs for Slasher and Cerebral characters.",
+        special: "Reduces Bind and Despair duration by 2 turns, changes own orb into [INT] and for Slasher and Cerebral characters, randomizes non-matching orbs",
         specialName: "Pussyfoot Maneuver",
     },
     1458: {//Coliseum Kuro
         captain: "Reduces cooldown of all specials by 2 turn at the start of the fight, boosts ATK of [QCK] and [INT] characters by 2x",
-        special: "Reduces Bind and Despair duration by 2 turns, changes own orb into [INT] and randomizes non-matching orbs for Slasher and Cerebral characters.",
+        special: "Reduces Bind and Despair duration by 2 turns, changes own orb into [INT] and for Slasher and Cerebral characters, randomizes non-matching orbs",
         specialName: "Pussyfoot Maneuver",
     },
     1459: {//Coliseum Miss Valentine
@@ -8077,7 +8077,7 @@ window.details = {
         special: "Deals 200,000 fixed damage to one enemy that will ignore damage negating abilities and barriers, reduces Bind and Silence duration by 2 turns",
         specialNotes: "Damage that ignores damage negating abilities and barriers is similar to 6* Blackbeard's special when he is captain<br>Silence will refer to effects that prevent you from activating Special Abilities",
         sailor: "Restores his own special by 1 turn when it is rewinded and reduces Silence for 3 turns for himself",
-        sailorNotes: "Some enemies can increase your cooldown by 1/2 Turns, this Sailor Ability decreases that by 1 Turn",
+        sailorNotes: "Some enemies can increase your cooldown by 1/2 turns, this Sailor Ability decreases that by 1 turn",
         specialName: "Stalking Rose Axe",
     },
     1481: {//Vander Decken IX
@@ -8085,7 +8085,7 @@ window.details = {
         special: "Deals 200,000 fixed damage to one enemy that will ignore damage negating abilities and barriers, reduces Bind and Silence duration by 2 turns",
         specialNotes: "Damage that ignores damage negating abilities and barriers is similar to 6* Blackbeard's special when he is captain<br>Silence will refer to effects that prevent you from activating Special Abilities",
         sailor: "Restores his own special by 1 turn when it is rewinded and reduces Silence for 3 turns for himself",
-        sailorNotes: "Some enemies can increase your cooldown by 1/2 Turns, this Sailor Ability decreases that by 1 Turn",
+        sailorNotes: "Some enemies can increase your cooldown by 1/2 turns, this Sailor Ability decreases that by 1 turn",
         specialName: "Stalking Rose Axe",
     },
     1482: {//Madame Shyarly
@@ -8210,13 +8210,13 @@ window.details = {
     },
     1502: {//Coribou
         captain: "Reduces damage received from [PSY] and [INT] enemies by 30%",
-        special: "Randomizes non-matching orbs for Driven characters",
+        special: "For Driven characters, randomizes non-matching orbs",
         specialName: "Confession Burial",
     },
     1503: {//Hammond
         captain: "Boosts ATK of Powerhouse characters proportionally to the crew's current HP",
         captainNotes: "#{captainProportional : lower : ??? + ??? * (1 - (remaining HP) / (total HP)) : ??? : 2.25}",
-        special: "Randomizes non-matching orbs for Driven characters",
+        special: "For Driven characters, randomizes non-matching orbs",
         specialName: "Absurd Invitation",
     },
     1504: {//Vander Decken IX
@@ -8480,14 +8480,14 @@ window.details = {
         captain: "Boosts ATK by 2x following a chain of [STR] > [DEX] > [QCK] attacks no lower than Good",
         special: "Recovers 13x character's RCV in HP, adds .5x to Chain multiplier, and reduces the defense of all enemies by 100% for 1 turn",
         sailor: "Restores her own special by 2 turns when it is rewinded",
-        sailorNotes: "Some enemies can increase your cooldown by 1/2 Turns, this Sailor Ability decreases that by 1 Turn",
+        sailorNotes: "Some enemies can increase your cooldown by 1/2 turns, this Sailor Ability decreases that by 1 turn",
         specialName: "Soft and Gentle Fluffy Kisses",
     },
     1542: {//Elizabeth
         captain: "Boosts RCV and HP by 1.2x, boosts ATK by 2.5x following a chain of [STR] > [DEX] > [QCK] attacks no lower than Good",
         special: "Recovers 13x character's RCV in HP, adds .5x to Chain multiplier, and reduces the defense of all enemies by 100% for 1 turn",
         sailor: "Restores her own special by 2 turns when it is rewinded",
-        sailorNotes: "Some enemies can increase your cooldown by 1/2 Turns, this Sailor Ability decreases that by 1 Turn",
+        sailorNotes: "Some enemies can increase your cooldown by 1/2 turns, this Sailor Ability decreases that by 1 turn",
         specialName: "Soft and Gentle Fluffy Kisses",
     },
     1543: {//6+ Usopp
@@ -8817,12 +8817,12 @@ window.details = {
         sailor: "Completely resists Paralysis on this character",
         specialName: "King Kong Gun",
     },
-    1594: {//Raid Fuji
+    1594: {//Raid Fujitora
         captain: "Cuts the current HP of each enemy by 10% at the end of each turn",
         special: "Deals 50x character's ATK in [PSY] damage to all enemies that will ignore damage negating abilities and barriers, changes adjacent orbs into Matching Orbs, amplifies the effect of orbs for Powerhouse characters by 2x for 1 turn",
         specialName: "Gravity Blade: Fierce Tiger",
     },
-    1595: {//Raid Fuji
+    1595: {//Raid Fujitora
         captain: "Boosts ATK of Powerhouse characters by 2.25x, and their HP by 1.2x, cuts the current HP of each enemy by 10% at the end of each turn",
         special: "Deals 50x character's ATK in [PSY] damage to all enemies that will ignore damage negating abilities and barriers, changes adjacent orbs into Matching Orbs, amplifies the effect of orbs for Powerhouse characters by 2x for 1 turn",
         specialName: "Gravity Blade: Fierce Tiger",
@@ -8880,70 +8880,74 @@ window.details = {
         specialName: "Fist of the Demon's Child 'Fire'",
     },
     1609: {//Legend Enel
-        captain: "",
-        special: "",
-        specialName: "",
+        captain: "Reduces HP of all characters by 20%, boosts chances of getting [RCV] orbs, makes [RCV] orbs \"beneficial\" to all characters, boosts ATK of all characters proportionally to the amount healed in the last turn.",
+        captainNotes: "The range of ATK boost is from 2x to 3.25x and is not confirmed on how it is calculated. It could be value based, or percentage based.",
+        special: "Deals typeless damage to all enemies equal to 10x how much excess healing done before the special is activated",
+        specialNotes: "The excess healing is counted from the last time the special is used and accumulates when you heal more than your maximum HP. For example, if you are at max HP, and you heal 1,000 HP, you will add 10k damage to the special. The amount of damage possible caps at 2,000,000 damage.",
+        specialName: "Enel Special",
     },
-    1610: {//Legend Enel Evolved
-        captain: "",
-        special: "",
-        specialName: "",
+    1610: {//Legend Enel
+        captain: "Reduces HP of all characters by 20%, boosts chances of getting [RCV] orbs, makes [RCV] orbs \"beneficial\" to all characters, boosts ATK of all characters proportionally to the amount healed in the last turn.",
+        captainNotes: "The range of ATK boost is from 2x to 3.25x and is not confirmed on how it is calculated. It could be value based, or percentage based.",
+        special: "Deals typeless damage to all enemies equal to 10x how much excess healing done before the special is activated",
+        specialNotes: "The excess healing is counted from the last time the special is used and accumulates when you heal more than your maximum HP. For example, if you are at max HP, and you heal 1,000 HP, you will add 10k damage to the special. The amount of damage possible caps at 2,000,000 damage.",
+        specialName: "Enel Special",
     },
-    1611: {//New Kuma
-        captain: "Boosts ATK of Shooter characters by 2.5x",
+    1611: {//Kuma
+        captain: "Boosts ATK of Shooter characters by 1.75x and their HP by 1.2x",
         special: "Reduces the duration of Bind and Despair by 7 turns.  Recovers 20% of crew's MAX HP, and has low chance to eliminate all enemies",
-        specialName: "",
+        specialName: "Kuma Special",
         sailor: "If Kuma has a [PSY] orb, and you hit a Perfect with him, keep his [PSY] orb for the next turn",
     },
-    1612: {//New Kuma
+    1612: {//Kuma
         captain: "Boosts ATK of Shooter characters by 2.5x and their HP by 1.2x",
         special: "Reduces the duration of Bind and Despair by 7 turns.  Recovers 20% of crew's MAX HP, and has low chance to eliminate all enemies",
-        specialName: "",
+        specialName: "Kuma Special",
         sailor: "If Kuma has a [PSY] orb, and you hit a Perfect with him, keep his [PSY] orb for the next turn",
     },
-    1613: {//New Lucci
-        captain: "Boosts ATK of Fighter characters by 2.5x",
+    1613: {//Rob Lucci
+        captain: "Boosts ATK of Fighter characters by 2.25x",
         special: "Cuts the current HP of each enemy by 10%, reduces the defense of all enemies by 50% and amplifies the effects of orbs by ??? amount for ??? turns",
         specialName: "",
         sailor: "Adds 2x character's ATK as bonus damage",
         sailorNotes: "Similar effect to Raid Sabo",
     },
-    1614: {//New Lucci
-        captain: "Boosts ATK of Fighter characters by 2.5x and their HP by 1.2x",
+    1614: {//Rob Lucci
+        captain: "Boosts ATK of Fighter characters by 2.5x and their HP by 1.25x",
         special: "Cuts the current HP of each enemy by 10%, reduces the defense of all enemies by 50% and amplifies the effects of orbs by ??? for ??? turns",
         specialName: "",
         sailor: "Restores his own special by 2 turns when it is rewinded",
-        sailorNotes: "Some enemies can increase your cooldown by 1/2 Turns, this Sailor Ability decreases that by 1 Turn",
+        sailorNotes: "Some enemies can increase your cooldown by 1/2 turns, this Sailor Ability decreases that by 2 turns",
     },
-    1615: {//New Crocodile
-        captain: "Boosts ATK of Strikers by 2.5x",
-        special: "Deals 20x character's ATK in [INT] damage to all enemies, reduces Striker cooldowns by 1 turn and boosts ATK and amplifies orbs of Strikers by ??? for ??? turns",
+    1615: {//Crocodile
+        captain: "Boosts ATK of Strikers by 2x",
+        special: "Deals 20x character's ATK in [INT] damage to all enemies, reduces Striker cooldowns by 1 turn and boosts ATK of Strikers and amplifies orbs of Strikers by 1.5x for 1 turns",
         specialName: "",
         sailor: "Restores his own special by 2 turns when it is rewinded",
-        sailorNotes: "Some enemies can increase your cooldown by 1/2 Turns, this Sailor Ability decreases that by 1 Turn",
+        sailorNotes: "Some enemies can increase your cooldown by 1/2 turns, this Sailor Ability decreases that by 2 turns",
     },
-    1616: {//New Crocodile
+    1616: {//Crocodile
         captain: "Boosts ATK of Strikers by 2.5x and recovers 1.5x character's RCV in HP at the end of each turn",
-        special: "Deals 20x character's ATK in [INT] damage to all enemies, reduces Striker cooldowns by 1 turn and boosts ATK and amplifies orbs of Strikers by ??? for ??? turns",
+        special: "Deals 20x character's ATK in [INT] damage to all enemies, reduces Striker cooldowns by 1 turn and boosts ATK of Strikers and amplifies orbs of Strikers by 1.5x for 1 turns",
         specialName: "",
         sailor: "Restores his own special by 2 turns when it is rewinded",
-        sailorNotes: "Some enemies can increase your cooldown by 1/2 Turns, this Sailor Ability decreases that by 1 Turn",
+        sailorNotes: "Some enemies can increase your cooldown by 1/2 turns, this Sailor Ability decreases that by 1 turn",
     },
-    1617: {//4* Moria
-        captain: "",
-        special: "",
-        specialName: "",
-        sailor: "",
+    1617: {//Moria
+        captain: "Boosts ATK of [STR], [INT], and [DEX] characters by 2x",
+        special: "For [STR], [INT] and [DEX] characters, randomizes all non-matching orbs and boosts ATK of [STR], [INT], [DEX] characters by 1.75x for 2 turns",
+        specialName: "Moria Special",
+        sailor: "When any other character uses a special, reduces own cooldown by 1 turn",
     },
-    1618: {//5* Moria
+    1618: {//Moria
         captain: "Boosts ATK of [STR], [INT], and [DEX] characters by 2.5x",
-        special: "Shuffles all orbs except matching [STR], [INT], [DEX] orbs and boosts ATK of [STR], [INT], [DEX] characters by 1.75x for ??? turns",
-        specialName: "",
-        sailor: "",
+        special: "For [STR], [INT] and [DEX] characters, randomizes all non-matching orbs and boosts ATK of [STR], [INT], [DEX] characters by 1.75x for 2 turns",
+        specialName: "Moria Special",
+        sailor: "When any other character uses a special, reduces own cooldown by 1 turn",
     },
-    1619: {//6+ Raybae
-        captain: "Boosts chain multiplier by 4xand crew's HP by 1.2x",
+    1619: {//6+ Raybae/Rayleigh
+        captain: "Boosts chain multiplier by 4x and boosts HP and RCV of all characters by 1.2x",
         special: "Reduces the duration of Bind, Despair, and Paralysis by 7 turns, delays all enemies for 1 turn, and makes Perfects easier to hit for 1 turn",
-        specialName: "",
+        specialName: "Netherworld Conqueror",
     },
 };

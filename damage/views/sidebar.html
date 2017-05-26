@@ -20,7 +20,7 @@
         
         <li>
             <div id="heal">
-                <i class="fa fa-circle-o-notch"></i>
+                <i class="fa fa-heart"></i>
                 Heal Socket Level: <input type="number" min="0" max="5" id="healLevel" to-int ng-model="data.healLevel"></input>
             </div>
         </li>
@@ -50,6 +50,13 @@
             <div id="candyContainer">
                 <i class="fa fa-sliders"></i>
                 <a>Cotton Candies</a>
+            </div>
+        </li>
+        
+        <li>
+            <div id="action">
+                <i class="fa fa-check-square"></i>
+                Captain Actions: <br><input type="checkbox" name="friend" value="left" ng-model="data.actionleft">Friend/Guest Captain<br><input type="checkbox" name="captain" value="right" ng-model="data.actionright">Captain 
             </div>
         </li>
 
