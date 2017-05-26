@@ -4772,8 +4772,8 @@ window.captains = {
         atk: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "INT" ? 2.5 : 1; },
     },
     1619: {
-        chainModifier: function(p) { return 4; }
+        chainModifier: function(p) { return 4; },
         hp: function(p) { return 1.2 },
         rcv: function(p) { return 1.2 },
-    }
+    },
 };
