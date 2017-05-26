@@ -495,5 +495,11 @@ window.matchers = [
         target: 'sailor',
         matcher: /(reduces|removes|resists).+silence/i
     },
+    
+    {
+        name: 'Special Rewind Restorers',
+        target: 'sailor',
+        matcher: /Restores (his|her) own special/i
+    },
 
 ];
