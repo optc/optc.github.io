@@ -8879,6 +8879,16 @@ window.details = {
         special: "Randomizes all non-matching orbs and deals 13x character's ATK in [STR] damage to all enemies",
         specialName: "Fist of the Demon's Child 'Fire'",
     },
+    1609: {//Legend Enel
+        captain: "",
+        special: "",
+        specialName: "",
+    },
+    1610: {//Legend Enel Evolved
+        captain: "",
+        special: "",
+        specialName: "",
+    },
     1611: {//New Kuma
         captain: "Boosts ATK of Shooter characters by 2.5x",
         special: "Reduces the duration of Bind and Despair by 7 turns.  Recovers 20% of crew's MAX HP, and has low chance to eliminate all enemies",
