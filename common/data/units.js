@@ -1608,7 +1608,7 @@ window.units = [
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Legend Enel", "QCK", [ "Shooter", "Striker" ], 5, 30, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Legend Enel Evolved", "QCK", [ "Shooter", "Striker" ], 6, 55, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Kami Enel, Clash of the Great Pirate Era [ __ ]", "QCK", [ "Shooter", "Striker" ], 6, 55, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Kuma", "PSY", [ "Shooter", "Cerebral" ], 4, 15, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Bartholomew Kuma, Clash of the Great Pirate Era [ __ ]", "PSY", [ "Shooter", "Cerebral" ], 5, 30, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Lucci", "DEX", [ "Fighter", "Slasher" ], 4, 15, null, null, null, null, null, null, null, null, null, null, null ],
