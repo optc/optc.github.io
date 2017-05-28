@@ -4156,13 +4156,13 @@ window.details = {
     900: {
         captain: "Boosts ATK of Shooter characters by 2x if HP is above 99% at the start of the turn",
         specialName: "Franky Destroy Gun",
-        special: "Deals 6 hits of 2,000 fixed damage to random enemies, randomly changes Badly Matching orbs on Shooter and Free Spirit characters into either [G] orbs or matching orbs",
+        special: "Deals 6 hits of 2,000 fixed damage to random enemies and for Shooter and Free Spirit characters, randomly changes Badly Matching orbs into [G] orbs or Matching orbs",
         specialNotes: "The orb shuffle only applies to Shooter and Free Spirit characters, other classes are unaffected. #{gOrbs}"
     },
     901: {
         captain: "Boosts ATK of Shooter characters by 2.75x if HP is above 99% at the start of the turn",
         specialName: "Franky Destroy Gun",
-        special: "Deals 6 hits of 2,000 fixed damage to random enemies, randomly changes Badly Matching orbs on Shooter and Free Spirit characters into either [G] orbs or matching orbs",
+        special: "Deals 6 hits of 2,000 fixed damage to random enemies and for Shooter and Free Spirit characters, randomly changes Badly Matching orbs into [G] orbs or Matching orbs",
         specialNotes: "The orb shuffle only applies to Shooter and Free Spirit characters, other classes are unaffected. #{gOrbs}"
     },
     902: {
@@ -4373,7 +4373,7 @@ window.details = {
         specialName: "Rock Domination Wall",
         special: [
             {
-                "description": "Changes [EMPTY] and Badly Matching orbs into Matching orbs for Driven and Powerhouse characters. Cuts the current HP of all enemies by 10%",
+                "description": "For Driven and Powerhouse characters, changes [EMPTY] and Badly Matching orbs into Matching orbs. Cuts the current HP of all enemies by 10%",
                 "cooldown": [ 25, 11 ]
             },
             {
@@ -4388,11 +4388,11 @@ window.details = {
         specialName: "Rock Domination Wall",
         special: [
             {
-                "description": "For Driven and Powerhouse characters, changes [EMPTY] and Bad orbs into Matching. Cuts the current HP of all enemies by 10%",
+                "description": "For Driven and Powerhouse characters, changes [EMPTY] and Badly Matching orbs into Matching orbs. Cuts the current HP of all enemies by 10%",
                 "cooldown": [ 25, 11 ]
             },
             {
-                "description": "For all characters, changes [EMPTY] and Bad orbs into Matching. Cuts the current HP of all enemies by 20%",
+                "description": "Changes [EMPTY] and Badly Matching orbs into Matching orbs. Cuts the current HP of all enemies by 20%",
                 "cooldown": [ 31, 17 ]
             }
         ],
@@ -4425,12 +4425,12 @@ window.details = {
     938: {
         captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of Cerebral characters by 1.5x",
         specialName: "Cyclone Burst",
-        special: "Reduces Bind duration for one character completely. For Striker and Cerebral characters, changes Bad orbs into matching"
+        special: "Reduces Bind duration for one character completely. For Striker and Cerebral characters, changes Badly Matching orbs into Matching orbs"
     },
     939: {
         captain: "Reduces cooldown of all specials by 3 turns at the start of the fight, boosts ATK of Cerebral characters by 2x",
         specialName: "Cyclone Burst",
-        special: "Reduces Bind duration for one character completely. For Striker and Cerebral characters, changes Bad orbs into matching"
+        special: "Reduces Bind duration for one character completely. For Striker and Cerebral characters, changes Badly Matching orbs into Matching orbs"
     },
     940: {
         captain: "Boosts ATK and HP of [DEX] characters by 1.5x",
@@ -4754,11 +4754,11 @@ window.details = {
         captain: "Boosts ATK of Powerhouse characters by 2x",
         special: [
             {
-                "description": "For Powerhouse characters, changes Bad orbs into matching orbs.",
+                "description": "For Powerhouse characters, changes Badly Matching orbs into Matching orbs.",
                 "cooldown": [ 11, 5 ]
             },
             {
-                "description": "For all characters, changes Bad orbs into matching orbs.",
+                "description": "For all characters, changes Badly Matching orbs into Matching orbs.",
                 "cooldown": [ 20, 14 ]
             }
         ],
@@ -4770,11 +4770,11 @@ window.details = {
         captainNotes: "\"Beneficial\" orbs grant the same ATK boost as matching orbs while retaining their original function.",
         special: [
             {
-                "description": "For Powerhouse characters, changes Bad orbs into matching orbs.",
+                "description": "For Powerhouse characters, changes Badly Matching orbs into Matching orbs.",
                 "cooldown": [ 11, 5 ]
             },
             {
-                "description": "For all characters, changes Bad orbs into matching orbs.",
+                "description": "For all characters, changes Badly Matching orbs into Matching orbs.",
                 "cooldown": [ 20, 14 ]
             }
         ],
@@ -5392,12 +5392,12 @@ window.details = {
     },
     1099: {
         captain: "Boosts ATK of Fighter characters by 2x",
-        special: "Changes Bad orbs into [EMPTY] orbs, amplifies the effect of orbs by 1.5x for 2 turns",
+        special: "Changes Badly Matching orbs into [EMPTY] orbs, amplifies the effect of orbs by 1.5x for 2 turns",
         specialName: "\"To the End of the Clouds\""
     },
     1100: {
         captain: "Boosts ATK of Fighter characters by 2.25x and their RCV by 1.2x",
-        special: "Changes Bad orbs into [EMPTY] orbs, amplifies the effect of orbs by 1.5x for 2 turns",
+        special: "Changes Badly Matching orbs into [EMPTY] orbs, amplifies the effect of orbs by 1.5x for 2 turns",
         specialName: "\"To the End of the Clouds\""
     },
     1101: {

@@ -394,9 +394,9 @@ directives.addTags = function($stateParams, $rootScope) {
                 // sailor effects
                 if (matcher.target.indexOf('sailor') === 0 && matcher.matcher.test(data[matcher.target]) && !(data[matcher.target] === undefined)) {
                     name = matcher.name;
-                    /*if (!/sailor$/.test(name)) name = name.replace(/ers$/,'ing').replace(/s$/,'') + ' sailor';
+                    if (!/sailor$/.test(name)) name = name.replace(/ers$/,'ing').replace(/s$/,'') + ' sailor';
                     else name = name.replace(/s$/,'');
-                    name = name.replace(/iing/,'ying');*/
+                    name = name.replace(/iing/,'ying');
                     element.append($('<span class="tag sailor">' + name + '</div>'));
                 }
                 // specials

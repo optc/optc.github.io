@@ -107,7 +107,7 @@
 <div class="filter-container">
     <span class="filter-header">Sailor filters</span>
     <span class="filter width-12 custom" ng-repeat="(n,filter) in filterData" ng-if="filter.target.indexOf('sailor') == 0"
-        ng-model="filters.custom[n]" ng-class="{ active: filters.custom[n] }" add-orb-options add-special-options
+        ng-model="filters.custom[n]" ng-class="{ active: filters.custom[n] }" add-special-options
         ng-click="filters.custom[n] = !filters.custom[n]">{{filter.name}}</span>
 </div>
 

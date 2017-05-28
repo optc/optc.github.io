@@ -1523,6 +1523,13 @@ window.drops = {
             "All Difficulties": [ 1596, 1598, 1599, -1045, -359, -999, -1033, -1550, -739, -1438, -1440, -893, -1343 ],
         },
         
+        {
+            name: "Blackbeard Pirates!",
+            thumb: null,
+            gamewith: null,
+            "All Difficulties": [ -1404, -1593, -1481, -1442, -1029, -361, -363, -997, -894, -1344 ],
+        },
+        
     ],
 
             

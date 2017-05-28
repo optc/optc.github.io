@@ -237,8 +237,8 @@ window.matchers = [
     {
         name: 'Negative to Positive Orb controllers',
         target: 'special',
-        matcher: /(Badly Matching orbs into Matching orbs)/i,
-        include: [ 900, 901, 996, 997, 933 ],
+        matcher: /(Badly Matching orbs into.+Matching orbs)/i,
+        //include: [ 900, 901, 996, 997, 933, 938, 939 ],
     },
 
     {
