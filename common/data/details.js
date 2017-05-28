@@ -8232,7 +8232,7 @@ window.details = {
     1504: {//Vander Decken IX
         captain: "Boosts ATK of Driven characters by 2x. After scoring 3 Perfects in a row, boosts ATK of Driven characters by 2.4x instead.",
         special: "Changes the orbs in the middle row into [EMPTY] orbs and deals 20x character's ATK as [DEX] damage to all enemies at the end of the turn for 2 turns",
-        specialName: "Inexcapable Pursuit",
+        specialName: "Inescapable Pursuit",
     },
     1505: {//Hody Jones
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of Powerhouse characters by 2.25x if HP is below ???% at the start of the turn",
