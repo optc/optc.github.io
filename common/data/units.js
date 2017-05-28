@@ -1426,7 +1426,7 @@ window.units = [
     [ "Don Sai, Happo Navy", "QCK", [ "Fighter", "Striker" ], 3, 13, 5, 1, 50, 392109, 105, 59, 19, 1205, 620, 106, 1],
     [ "Don Sai, Happo Navy's 13th Leader", "QCK", [ "Fighter", "Striker" ], 4, 20, 4, 3, 99, 3000000, 1123, 527, 57, 2192, 1301, 181, 1],
     [ "Boo, Happo Navy", "QCK", [ "Fighter", "Driven" ], 4, 15, 6, 3, 70, 1066998, 305, 159, 29, 1672, 1005, 111, 1],
-    [ "Jean Ango", "DEX", [ "Slasher, Shooter" ], 3, 12, 6, 2, 70, 1066998, 158, 173, 21, 1055, 1196, 73, 1 ],
+    [ "Jean Ango", "DEX", [ "Slasher" , "Shooter" ], 3, 12, 6, 2, 70, 1066998, 158, 173, 21, 1055, 1196, 73, 1 ],
     [ "Mansherry, February's Favorite", "DEX", [ "Striker", "Free Spirit" ], 4, 13, 6, 2, 50, 392109, 42, 24, 66, 890, 329, 261, 1 ],
     [ "Mansherry, March's Courage", "DEX", [ "Striker", "Free Spirit" ], 5, 20, 4, 4, 99, 3000000, 803, 251, 213, 1777, 656, 486, 1 ],
     [ "Shogun Franky", "PSY", [ "Free Spirit", "Powerhouse" ], 4, 30, 4, 2, 70, 1066998, 400, 165, 20, 1550, 736, 102, 1 ],
