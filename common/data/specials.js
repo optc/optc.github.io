@@ -2652,10 +2652,12 @@ window.specials = {
     1554: {
         atk: function(p) { return p.unit.type == "DEX" ? 1.35 : 1; },
         orb: function(p) { return p.unit.type == "DEX" ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.35) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1); },
+        type: "type",
     },
     1555: {
         atk: function(p) { return p.unit.type == "DEX" ? 1.35 : 1; },
         orb: function(p) { return p.unit.type == "DEX" ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.35) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1); },
+        type: "type",
     },
     1556: {
         atk: function(p) { return p.slot == p.sourceSlot ? 2 : 1; },
