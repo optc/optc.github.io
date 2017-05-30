@@ -389,5 +389,14 @@ window.ships = [
         description: 'Boosts ATK by 1.5x. Boosts EXP gained by 1.5x. Special: Reduces the defense of all enemies by 25% for 1 turn (cooldown: 16 turns).',
         atk: function(p) { return 1.5; },
     },
+    
+    
+    
+    { //31.2
+        name: "Flying Dutchman - Special ACTIVATED",
+        thumb: null,
+        description: 'Boosts ATK by 1.5x. Boosts EXP gained by 1.5x. ACTIVATED Special: Reduces the defense of all enemies by 25% for 1 turn (cooldown: 16 turns).',
+        atk: function(p) { return 1.5; },
+    },
 
 ];

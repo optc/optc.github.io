@@ -371,13 +371,17 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
     /* Computes the actual defense threshold of the enemy after the specials are factored in.
      * Defense-reducing specials do not stack with each other, so we just use the one that grants the lowest defense.
      */
-    var computeActualDefense = function() {
+    var computeActualDefense = function(shipName) {
         var baseDefense = parseInt($scope.data.defense, 10) || 0;
         currentDefense = baseDefense;
         enabledSpecials.forEach(function(x) {
             if (x === null || !x.hasOwnProperty('def')) return;
             currentDefense = Math.min(currentDefense,baseDefense * x.def());
         });
+        if(shipName=="Flying Dutchman - Special ACTIVATED"){
+            currentDefense = Math.min(currentDefense,baseDefense * .75);
+        }
+        
     };
 
     var getShipBonus = function(type,static,unit,slot) {
@@ -719,6 +723,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         enabledSpecials = [ ];
         // deactivate turn counter (will be reactivated if necessary)
         $scope.tdata.turnCounter.enabled = false;
+        // get ship bonus
+        shipBonus = jQuery.extend({ bonus: window.ships[$scope.data.ship[0]] },{ level: $scope.data.ship[1] });
         // orb map effects
         mapEffect = { };
         if ($scope.data.effect) {
@@ -762,8 +768,9 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         if (conflictWarning) 
             $scope.notify({ type: 'error', text: 'One or more specials you selected cannot be activated due to an active map effect.' });
         // check if defense is down (required by some captain effects)
-        computeActualDefense();
-        isDefenseDown = enabledSpecials.some(function(x) { return x !== null && x.hasOwnProperty('def'); });
+        computeActualDefense(shipBonus.bonus.name);
+        //console.log(enabledSpecials);
+        isDefenseDown = enabledSpecials.some(function(x) { return (x !== null && x.hasOwnProperty('def')) || (shipBonus.bonus.name == "Flying Dutchman - Special ACTIVATED"); });
         isDelayed = enabledSpecials.some(function(x) { return x !== null && x.hasOwnProperty('delay'); });
         
         enabledEffects = [ ];
@@ -807,8 +814,6 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         computeSpecialsCombinations();
         $scope.conflictingSpecials = (specialsCombinations.length > 1 || chainSpecials.length > 1 || chainAddition.length > 1 || affinityMultiplier.length > 1);
         $scope.conflictingMultipliers = ( staticMultiplier.length > 1 )
-        // get ship bonus
-        shipBonus = jQuery.extend({ bonus: window.ships[$scope.data.ship[0]] },{ level: $scope.data.ship[1] });
     };
     
     //Returns an Object with a counter of classes in the current Team
