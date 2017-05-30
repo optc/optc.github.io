@@ -2623,6 +2623,9 @@ window.specials = {
     1598: {
         atk: function(p) { return 1.2 },
     },
+    1599: {
+        def: function(p) { return 0.5 },
+    },
     1600: {
         orb: function(p) { return (p.unit.type == "INT" || p.unit.type == "PSY") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1); },	
     },
