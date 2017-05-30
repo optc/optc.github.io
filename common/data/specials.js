@@ -2614,6 +2614,19 @@ window.specials = {
         },
         type: "class"
     },
+    1593: {
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[1593].turnedOn = true;
+            p.scope.notify({
+                text: 'This does not activate G4 Captain boost, only the "beneficial" Orb Effect, to enable G4\' 4x boost, use the Captain Action checkboxes.',
+                name: '1593warning'
+            });
+        },
+        onDeactivation: function(p) {
+            window.specials[1593].turnedOn = false;
+        }
+    },
     1594: {
         orb: function(p) { return (p.unit.class.has("Powerhouse")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1); }	
     },
