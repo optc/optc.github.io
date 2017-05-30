@@ -1,4 +1,16 @@
 window.specials = {
+    13: {
+        delay: function(p) { return 1; },
+    },
+    14: {
+        delay: function(p) { return 1; },
+    },
+    15: {
+        delay: function(p) { return 1; },
+    },
+    16: {
+        delay: function(p) { return 1; },
+    },
     18: {
         def: function(p) { return 0.5; }
     },
@@ -19,6 +31,9 @@ window.specials = {
     },
     158: {
         def: function(p) { return 0.5; }
+    },
+    204: {
+        delay: function(p) { return 1; },
     },
     206: {
         def: function(p) { return 0.5; }
@@ -131,6 +146,12 @@ window.specials = {
         atk: function(p) { return 1.2; },
         type: "type"
     },
+    415: {
+        delay: function(p) { return 1; },
+    },
+    416: {
+        delay: function(p) { return 1; },
+    },
     417: {
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2); }
     },
@@ -186,6 +207,9 @@ window.specials = {
         atk: function(p) { return 1.5; },
         type: "type"
     },
+    460: {
+        delay: function(p) { return 1; },
+    },
     461: {
         atk: function(p) { return p.unit.class.has("Fighter") ? 1.25 : 1; },
         type: "class"
@@ -196,6 +220,9 @@ window.specials = {
     },
     465: {
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.25); }
+    },
+    466: {
+        delay: function(p) { return 1; },
     },
     468: {
         rcv: function(p) { return 1.5; }
@@ -226,6 +253,12 @@ window.specials = {
     492: {
         atk: function(p) { return p.unit.type == "DEX" ? 1.2 : 1; },
         type: "type"
+    },
+    499: {
+        delay: function(p) { return 1; },
+    },
+    500: {
+        delay: function(p) { return 1; },
     },
     505: {
         atk: function(p) { return p.unit.type == "QCK" ? 1.25 : 1; },
@@ -302,6 +335,12 @@ window.specials = {
     552: {
         def: function(p) { return 0; }
     },
+    555: {
+        delay: function(p) { return 1; },
+    },
+    556: {
+        delay: function(p) { return 1; },
+    },
     559: {
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5); }
     },
@@ -309,9 +348,11 @@ window.specials = {
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5); }
     },
     568: {
+        delay: function(p) { return 1; },
         def: function(p) { return 0.5; }
     },
     569: {
+        delay: function(p) { return 1; },
         def: function(p) { return 0.5; }
     },
     572: {
@@ -415,14 +456,12 @@ window.specials = {
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75); }
     },
     644: {
-        atk: function(p) { return 1.2; },
+        atk: function(p) { return p.delayed ? 1.2 : 1; },
         type: "condition",
-        warning: "Selected special (%name%) assumes that the enemy has been delayed."
     },
     645: {
-        atk: function(p) { return 1.2; },
+        atk: function(p) { return p.delayed ? 1.2 : 1; },
         type: "condition",
-        warning: "Selected special (%name%) assumes that the enemy has been delayed."
     },
     648: {
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5); }
@@ -443,9 +482,11 @@ window.specials = {
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.25); }
     },
     660: {
+        delay: function(p) { return 1; },
         def: function(p) { return 0.5; }
     },
     661: {
+        delay: function(p) { return 1; },
         def: function(p) { return 0.5; }
     },
     665: {
@@ -497,6 +538,9 @@ window.specials = {
         atk: function(p) { return p.unit.type == "DEX" ? 1.25 : 1; },
         rcv: function(p) { return p.unit.type == "DEX" ? 1.25 : 1; },
         type: "type"
+    },
+    686: {
+        delay: function(p) { return 1; },
     },
     687: {
         atk: function(p) { return p.unit.class.has("Free Spirit") ? 1.3 : 1; },
@@ -615,10 +659,12 @@ window.specials = {
         atk: function(p) { return p.unit.type == "PSY" ? 1.75 : 1; },
         type: "type"
     },
+    766: {
+        delay: function(p) { return 1; },
+    },
     770: {
-        atk: function(p) { return 1.3; },
+        atk: function(p) { return p.delayed ? 1.3 : 1;; },
         type: "condition",
-        warning: "Selected special (%name%) assumes that the enemy has been delayed."
     },
     771: {
         atk: function(p) { return p.unit.class.has("Cerebral") ? 1.75 : 1; },
@@ -648,6 +694,18 @@ window.specials = {
             });
         }
     },
+    782: {
+        delay: function(p) { return 1; },
+    },
+    783: {
+        delay: function(p) { return 1; },
+    },
+    786: {
+        delay: function(p) { return 1; },
+    },
+    787: {
+        delay: function(p) { return 1; },
+    },
     788: {
         atk: function(p) { return p.unit.class.has("Slasher") ? 1.75 : 1; },
         type: "class"
@@ -663,6 +721,12 @@ window.specials = {
     791: {
         atk: function(p) { return /STR|DEX|QCK/.test(p.unit.type) ? 1.2 : 1; },
         type: "type"
+    },
+    794: {
+        delay: function(p) { return 1; },
+    },
+    795: {
+        delay: function(p) { return 1; },
     },
     796: {
         atk: function(p) { return p.slot == p.sourceSlot ? 1.75 : 1; },
@@ -707,6 +771,7 @@ window.specials = {
         def: function(p) { return 0.2; }
     },
     813: {
+        delay: function(p) { return 1; },
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.25); }
     },
     822: {
@@ -718,6 +783,7 @@ window.specials = {
         type: "type"
     },
     826: {
+        delay: function(p) { return 1; },
         atk: function(p) { return 0.2; },
         type: "type"
     },
@@ -781,14 +847,14 @@ window.specials = {
         type: "type"
     },
     841: {
-        atk: function(p) { return 1.25; },
+        delay: function(p) { return 1; },
+        atk: function(p) { return p.delayed ? 1.25 : 1; },
         type: "condition",
-        warning: "Selected special (%name%) assumes that the enemy has been delayed."
     },
     842: {
-        atk: function(p) { return 1.25; },
+        delay: function(p) { return 1; },
+        atk: function(p) { return p.delayed ? 1.25 : 1; },
         type: "condition",
-        warning: "Selected special (%name%) assumes that the enemy has been delayed."
     },
     843: {
         atk: function(p) {
@@ -857,10 +923,12 @@ window.specials = {
         def: function(p) { return 0.5; }
     },
     864: {
+        delay: function(p) { return 1; },
         chain: function(p) { return 2.5; },
         chainLimiter: function(p) { return p.chainPosition > 0 ? 2.5 : 1.0; }
     },
     865: {
+        delay: function(p) { return 1; },
         chain: function(p) { return 2.5; },
         chainLimiter: function(p) { return p.chainPosition > 0 ? 2.5 : 1.0; }
     },
@@ -869,6 +937,9 @@ window.specials = {
             return p.unit.class.has("Slasher") || p.unit.class.has("Cerebral") ? 1.3 : 1;
         },
         type: "class"
+    },
+    867: {
+        delay: function(p) { return 1; },
     },
     869: {
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2.0); }
@@ -985,6 +1056,9 @@ window.specials = {
             });
         }
     },
+    904: {
+        delay: function(p) { return 1; },
+    },
     905: {
         atk: function(p) {
             if (!window.specials[905].stage) return p.slot == p.sourceSlot ? 1.5 : 1;
@@ -1016,6 +1090,12 @@ window.specials = {
                 name: '906warning'
             });
         }
+    },
+    907: {
+        delay: function(p) { return 1; },
+    },
+    908: {
+        delay: function(p) { return 1; },
     },
     909: {
         atk: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; },
@@ -1064,6 +1144,12 @@ window.specials = {
         atk: function(p) { return p.unit.class.has("Cerebral") ? 1.5 : 1; },
         rcv: function(p) { return p.unit.class.has("Cerebral") ? 1.5 : 1; },
         type: "class"
+    },
+    917: {
+        delay: function(p) { return 1; },
+    },
+    918: {
+        delay: function(p) { return 1; },
     },
     921: {
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5); }
@@ -1174,9 +1260,18 @@ window.specials = {
     978: {
         chainAddition: function(p){ return 0.5;}
     },
+    984: {
+        delay: function(p) { return 1; },
+    },
     981: {
         atk: function(p) { return p.slot == p.sourceSlot ? 1.75 : 1; },
         type: "type"
+    },
+    998: {
+        delay: function(p) { return 1; },
+    },
+    999: {
+        delay: function(p) { return 1; },
     },
     1005: {
         atk: function(p) { return p.slot == p.sourceSlot ? 1.75 : 1; },
@@ -1195,9 +1290,8 @@ window.specials = {
         type: "type"
     },
     1013: {
-        atk: function(p) { return 1.2; },
+        atk: function(p) { return p.delayed ? 1.2 : 1; },
         type: "condition",
-        warning: "Selected special (%name%) assumes that the enemy has been delayed."
     },
     1015: {
         atk: function(p) { return p.unit.type == "INT" ? 1.5 : 1; },
@@ -1315,6 +1409,12 @@ window.specials = {
         atk: function(p) { return p.unit.class.has("Powerhouse") ? 1.5 : 1},
         type: "class"
     },
+    1076: {
+        delay: function(p) { return 1; },
+    },
+    1077: {
+        delay: function(p) { return 1; },
+    },
     1080: {
         atk: function(p) { return p.slot == p.sourceSlot ? 2 : 1; },
         type: "type"
@@ -1384,9 +1484,11 @@ window.specials = {
         type: "type"
     },
     1105: {
+        delay: function(p) { return 1; },
         chainAddition: function(p){ return 0.2;}
     },
     1106: {
+        delay: function(p) { return 1; },
         chainAddition: function(p){ return 0.2;}
     },
     1107: {
@@ -1456,6 +1558,12 @@ window.specials = {
         atk: function(p) { return p.unit.class.has("Powerhouse") || p.unit.class.has("Fighter") ? 1.3 : 1},
         type: "class"
     },
+    1142: {
+        delay: function(p) { return 1; },
+    },
+    1143: {
+        delay: function(p) { return 1; },
+    },
     1153: {
         def: function(p) { return 0; },
         atk: function(p) { return p.unit.class.has("Powerhouse") ? 1.25 : 1},
@@ -1513,6 +1621,12 @@ window.specials = {
         atk: function(p) { return p.unit.class.has("Striker") ? 1.75 : 1; },
         type: "class"
     },
+    1209: {
+        delay: function(p) { return 1; },
+    },
+    1210: {
+        delay: function(p) { return 1; },
+    },
     1211: {
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5); }
     },
@@ -1569,6 +1683,9 @@ window.specials = {
             window.specials[1222].turnedOn = false;
         }
     },
+    1225: {
+        delay: function(p) { return 1; },
+    },
     1227: {
         atk: function(p) { return p.slot == p.sourceSlot ? 1.75 : 1; },
         type: "type"
@@ -1604,6 +1721,12 @@ window.specials = {
     },
     1234: {//Tashigi
         affinity: function(p){ return p.unit.class.has("Slasher") || p.unit.class.has("Cerebral") ? 1.5 : 1; }
+    },
+    1235: {
+        delay: function(p) { return 1; },
+    },
+    1236: {
+        delay: function(p) { return 1; },
     },
     1237: {
         //TODO
@@ -1824,9 +1947,11 @@ window.specials = {
         type: "class"
     },
     1317: {
+        delay: function(p) { return 1; },
         def: function(p) { return 0.2; }
     },
     1318: {
+        delay: function(p) { return 1; },
         def: function(p) { return 0.2; }
     },
     1319: {
@@ -1838,14 +1963,12 @@ window.specials = {
         type: "class"
     },
     1321: {
-        atk: function(p) { return 1.5; },
+        atk: function(p) { return p.delayed ? 1.5 : 1; },
         type: "condition",
-        warning: "Selected special (%name%) assumes that the enemy has been delayed."
     },
     1322: {
-        atk: function(p) { return 1.5; },
+        atk: function(p) { return p.delayed ? 1.2 : 1; },
         type: "condition",
-        warning: "Selected special (%name%) assumes that the enemy has been delayed."
     },
     1323: {
         turnedOn: false,
@@ -1889,6 +2012,12 @@ window.specials = {
             });
         }
     },
+    1340: {
+        delay: function(p) { return 1; },
+    },
+    1341: {
+        delay: function(p) { return 1; },
+    },
     1343: {
         atk: function(p) { return p.defenseDown ? 1.3 : 1; },
         type: "condition"
@@ -1907,6 +2036,7 @@ window.specials = {
         type: "class"
     },
     1351: {
+        delay: function(p) { return 1; },
         def: function(p) { return 0.5; }
     },
     1353: {
@@ -1919,9 +2049,11 @@ window.specials = {
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5); },
     },
     1358: {
+        delay: function(p) { return 1; },
         rcv: function(p){ return 1.75; }
     },
     1359: {
+        delay: function(p) { return 1; },
         rcv: function(p){ return 1.75; }
     },
     1361: {
@@ -1937,6 +2069,12 @@ window.specials = {
     },
     1364: {
         orb: function(p) { return p.unit.type == "PSY" ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1); },	
+    },
+    1365: {
+        delay: function(p) { return 1; },
+    },
+    1366: {
+        delay: function(p) { return 1; },
     },
     1367:{
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[1367].multiplier); },
@@ -1960,6 +2098,12 @@ window.specials = {
             });
         },
     },
+    1373: {
+        delay: function(p) { return 1; },
+    },
+    1374: {
+        delay: function(p) { return 1; },
+    },
     1375: {
         atk: function(p) { return p.slot == p.sourceSlot ? 1.5 : 1; },
         type: "type",
@@ -1975,6 +2119,9 @@ window.specials = {
     },
     1380: {
         orb: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1); }	
+    },
+    1387: {
+        delay: function(p) { return 1; },
     },
     1389: {
         orb: function(p) { return p.unit.type == "INT" ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1); },	
@@ -2005,9 +2152,11 @@ window.specials = {
         type: "class"
     },
     1396: {
+        delay: function(p) { return 1; },
         def: function(p) { return 0.2; }
     },
     1397: {
+        delay: function(p) { return 1; },
         def: function(p) { return 0.2; }
     },
     1400: {
@@ -2064,12 +2213,14 @@ window.specials = {
         type: "type"
     },
     1409: {
+        delay: function(p) { return 1; },
         atk: function(p) {
             return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 1.75 : 1;
         },
         type: "class"
     },
     1410: {
+        delay: function(p) { return 1; },
         atk: function(p) {
             return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 1.75 : 1;
         },
@@ -2132,17 +2283,21 @@ window.specials = {
         atk: function(p) { return 1.5; },
         type: "type"
     },
+    1435: {
+        delay: function(p) { return 1; },
+    },
+    1436: {
+        delay: function(p) { return 1; },
+    },
     1437: {
-        atk: function(p) { return 1.5; },
+        atk: function(p) { return p.delayed ? 1.5 : 1; },
         type: "condition",
         orb: function(p) { return p.unit.class.has("Powerhouse") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1); },
-        warning: "Selected special (%name%) assumes that the enemy has been delayed."
     },
     1438: {
-        atk: function(p) { return 1.5; },
+        atk: function(p) { return p.delayed ? 1.5 : 1; },
         type: "condition",
         orb: function(p) { return p.unit.class.has("Powerhouse") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1); },
-        warning: "Selected special (%name%) assumes that the enemy has been delayed."
     },
     1439: {
         atk: function(p) { return p.unit.class.has("Powerhouse") ? 1.75 : 1; },
@@ -2171,9 +2326,13 @@ window.specials = {
         orb: function(p) { return p.unit.class.has("Powerhouse") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1); },
     },
     1445: {
+        delay: function(p) { return 1; },
         atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "QCK" ? 1.75 : 1; },
         rcv: function(p) { return p.unit.type == "PSY" || p.unit.type == "QCK" ? 1.75 : 1; },
         type: "type"
+    },
+    1446: {
+        delay: function(p) { return 1; },
     },
     1447: {
         atk: function(p) { return p.slot == p.sourceSlot ? window.specials[1447].multiplier : 1; },
@@ -2211,13 +2370,21 @@ window.specials = {
     1467: {
         def: function(p) { return 0; }
     },
+    1468: {
+        delay: function(p) { return 1; },
+    },
+    1469: {
+        delay: function(p) { return 1; },
+    },
     1476: {
+        delay: function(p) { return 1; },
         atk: function(p) {
             return p.unit.class.has("Striker") || p.unit.class.has("Powerhouse") ? 1.75 : 1;
         },
         type: "class"
     },
     1477: {
+        delay: function(p) { return 1; },
         atk: function(p) {
             return p.unit.class.has("Striker") || p.unit.class.has("Powerhouse") ? 1.75 : 1;
         },
@@ -2338,9 +2505,9 @@ window.specials = {
         type: "type",
     },
     1525: {
-        atk: function(p) { return 1.3; },
+        delay: function(p) { return 1; },
+        atk: function(p) { return p.delayed ? 1.3 : 1; },
         type: "condition",
-        warning: "Selected special (%name%) assumes that the enemy has been delayed."
     },
     1526: {
         atk: function(p) { return p.slot < 2 ? window.specials[1526].multiplier : 1; },
@@ -2389,6 +2556,7 @@ window.specials = {
         }
     },
     1531: {
+        delay: function(p) { return 1; },
         chainAddition: function(p) {return window.specials[1531].multiplier;},
         onActivation: function(p) {
             var n = (window.specials[1531].multiplier == 0.2 ? 1 : 0);
@@ -2400,6 +2568,7 @@ window.specials = {
         }
     },
     1532: {
+        delay: function(p) { return 1; },
         chainAddition: function(p) {return window.specials[1532].multiplier;},
         onActivation: function(p) {
             var n = (window.specials[1532].multiplier == 0.2 ? 1 : 0);
@@ -2432,6 +2601,9 @@ window.specials = {
         chainAddition: function(p){ return 0.5; },
         def: function(p) { return 0; }
     },
+    1543: {
+        delay: function(p) { return 1; },
+    },
     1544: {
         atk: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; },
         type: "class"
@@ -2463,7 +2635,11 @@ window.specials = {
         type: "class"
     },
     1548: {
+        delay: function(p) { return 1; },
         chainAddition: function(p){ return 0.2;}
+    },
+    1551: {
+        delay: function(p) { return 1; },
     },
     1552: {
         atk: function(p) { return p.unit.cost == 40 ? 1.75 : 1; },
@@ -2528,6 +2704,12 @@ window.specials = {
     1573: {
         atk: function(p) { return p.unit.class.has("Cerebral") ? 1.75 : 1; },
         type: "class"
+    },
+    1574: {
+        delay: function(p) { return 1; },
+    },
+    1575: {
+        delay: function(p) { return 1; },
     },
     1578: {
         chainAddition: function(p) {return window.specials[1578].multiplier;},
@@ -2642,7 +2824,11 @@ window.specials = {
     1600: {
         orb: function(p) { return (p.unit.type == "INT" || p.unit.type == "PSY") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1); },	
     },
+    1603: {
+        delay: function(p) { return 1; },
+    },
     1606: {
+        delay: function(p) { return 1; },
         def: function(p) { return 0.5 },
     },
     1607: {
@@ -2673,5 +2859,8 @@ window.specials = {
     1618: {
         atk: function(p) { return p.unit.type == "STR" || p.unit.type == "INT" || p.unit.type == "DEX" ? 1.75 : 1; },
         type: "type"
+    },
+    1619: {
+        delay: function(p) { return 1; },
     },
 };

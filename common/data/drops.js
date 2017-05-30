@@ -1526,7 +1526,7 @@ window.drops = {
         {
             name: "Blackbeard Pirates!",
             thumb: 1606,
-            gamewith: null,
+            gamewith: 57820,
             "All Difficulties": [ 1606, 1607, 1608, -1404, -1593, -1481, -1442, -1029, -361, -363, -997, -894, -1344 ],
         },
         

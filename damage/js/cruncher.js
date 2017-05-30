@@ -58,6 +58,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
     var cptsWith = { };
     var currentDefense = 0;
     var isDefenseDown = false;
+    var isDelayed = false;
 
     var specialsCombinations = [ ], chainSpecials = [ ];
     var hitModifiers = [ ];
@@ -763,6 +764,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         // check if defense is down (required by some captain effects)
         computeActualDefense();
         isDefenseDown = enabledSpecials.some(function(x) { return x !== null && x.hasOwnProperty('def'); });
+        isDelayed = enabledSpecials.some(function(x) { return x !== null && x.hasOwnProperty('delay'); });
         
         enabledEffects = [ ];
         
@@ -867,6 +869,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             maxHP: $scope.numbers.hp,
             percHP: $scope.data.percHP,
             defenseDown: isDefenseDown,
+            delayed: isDelayed,
             data: team[slotNumber],
             tdata: $scope.tdata.team[slotNumber],
             scope: $scope,
