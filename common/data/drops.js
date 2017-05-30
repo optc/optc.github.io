@@ -1525,9 +1525,9 @@ window.drops = {
         
         {
             name: "Blackbeard Pirates!",
-            thumb: null,
+            thumb: 1606,
             gamewith: null,
-            "All Difficulties": [ -1404, -1593, -1481, -1442, -1029, -361, -363, -997, -894, -1344 ],
+            "All Difficulties": [ 1606, 1607, 1608, -1404, -1593, -1481, -1442, -1029, -361, -363, -997, -894, -1344 ],
         },
         
     ],
@@ -1923,7 +1923,7 @@ window.drops = {
             thumb: 1588,
             gamewith: 56742,
             showManual: true,
-            condition: "High chance of dropping 6* skillbooks. Only Evolvers and Booster characters will drop.",
+            condition: "High chance of dropping 6* skillbooks. Only Evolvers and Booster characters will drop posters.",
             "Black Clad Shanks": [ 301, 101, 96, 79, 90, 348, -530, -316, -910, -995, -1236, -1364, -465, -590, -967, -813, -888 ],
             "Donquixote Doflamingo": [ 304, 104, 88, 99, 82, 93, 351, -870, -312, -645, -838, -876, -880, -1190, -396, -586, -631, -567 ],
             "Trafalgar Law": [ 300, 100, 84, 95, 78, 89, 347, -964, -1045, -219, -308, -675, -991, -1077, -504, -1159, -212, -892 ],

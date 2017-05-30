@@ -106,6 +106,12 @@ window.CrunchUtils.getOrbMultiplier = function(orb, type, uclass, baseMultiplier
             if (orb == 0.5 && type == 'DEX') return boostedMultiplier;
         }
     }
+    if(window.specials[1593].turnedOn){
+        if(uclass.has("Fighter") || uclass.has("Free Spirit")){
+            if (orb == 'str') return boostedMultiplier;
+            if (orb == 0.5 && type == 'DEX') return boostedMultiplier;
+        }
+    }
     if(window.specials[1259].turnedOn || window.specials[1260].turnedOn){
         if(uclass.has("Driven")){
             if (orb == 'str') return boostedMultiplier;

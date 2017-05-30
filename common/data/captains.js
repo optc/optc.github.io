@@ -4741,11 +4741,11 @@ window.captains = {
         atk: function(p) { return p.unit.type == "INT" ? 1.5 : 1; },
         rcv: function(p) { return p.unit.type == "INT" ? 1.5 : 1; },
     },
-    1609: {//Enel
+    1609: {//Enel TO DO
         hp: function(p) { return 0.8 },
         
     },
-    1610: {//Enel
+    1610: {//Enel TO DO
         hp: function(p) { return 0.8 },
         
     },
