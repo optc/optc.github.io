@@ -8890,6 +8890,22 @@ window.details = {
         special: "Randomizes all non-matching orbs and deals 13x character's ATK in [STR] damage to all enemies",
         specialName: "Fist of the Demon's Child 'Fire'",
     },
+    1606: {//lafitte
+        captain: "Boosts ATK and RCV of [PSY] characters by 1.75x",
+        special: "Randomly shuffles non-matching orbs on Shooter characters, reduces enemies defense by 50% for 1 turn and delays all enemies for 1 turn",
+        specialName: "Lafitte Special",
+    },
+    1607: {//van augur
+        captain: "Boosts ATK of Shooters by 2x",
+        special: "Deals 10x character's ATK in [DEX] damage to one enemy, locks orbs for 1 turn, and boosts ATK of Shooter characters by 1.5x for 1 turn",
+        specialName: "Van Augur Special",
+    },
+    1608: {//doc q
+        captain: "Boosts ATK and RCV of [INT] characters by 1.5x",
+        special: "For each enemy, has an extremely small chance to instantly defeat that enemy.",
+        specialNotes: "Same as shriyu special but a lower chance",
+        specialName: "Doc Q Special",
+    },
     1609: {//Legend Enel
         captain: "Reduces HP of all characters by 20%, boosts chances of getting [RCV] orbs, makes [RCV] orbs \"beneficial\" to all characters, boosts ATK of all characters proportionally to the amount healed in the last turn.",
         captainNotes: "The range of ATK boost is from 2x to 3.25x and is not confirmed on how it is calculated. It could be value based, or percentage based.",

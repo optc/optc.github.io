@@ -4730,6 +4730,17 @@ window.captains = {
     1605: {
         atk: function(p) { return p.unit.type == "STR" ? 2 : 1; },
     },
+    1606: {//BB Pirates FN Lafitte
+        atk: function(p) { return p.unit.type == "PSY" ? 1.75 : 1; },
+        rcv: function(p) { return p.unit.type == "PSY" ? 1.75 : 1; },
+    },
+    1607: {//BB Pirates FN Van Augur
+        atk: function(p) { return p.unit.class.has("Shooter") ? 2 : 1; },
+    },
+    1608: {//BB Pirates FN Doc Q
+        atk: function(p) { return p.unit.type == "INT" ? 1.5 : 1; },
+        rcv: function(p) { return p.unit.type == "INT" ? 1.5 : 1; },
+    },
     1609: {//Enel
         hp: function(p) { return 0.8 },
         
