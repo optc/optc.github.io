@@ -663,7 +663,7 @@ window.specials = {
         delay: function(p) { return 1; },
     },
     770: {
-        atk: function(p) { return p.delayed ? 1.3 : 1;; },
+        atk: function(p) { return p.delayed ? 1.3 : 1; },
         type: "condition",
     },
     771: {
@@ -1967,7 +1967,7 @@ window.specials = {
         type: "condition",
     },
     1322: {
-        atk: function(p) { return p.delayed ? 1.2 : 1; },
+        atk: function(p) { return p.delayed ? 1.5 : 1; },
         type: "condition",
     },
     1323: {
