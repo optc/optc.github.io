@@ -380,5 +380,14 @@ window.ships = [
         description: 'Boosts ATK by 1.2x.',
         atk: function(p) { return 1.2; },
     },
+    
+    
+    
+    { //31
+        name: "Flying Dutchman",
+        thumb: null,
+        description: 'Boosts ATK by 1.5x. Boosts EXP gained by 1.5x.',
+        atk: function(p) { return 1.5; },
+    },
 
 ];
