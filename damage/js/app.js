@@ -51,6 +51,11 @@ var SharedRootCtrl = function($scope, $rootScope, $timeout) {
             enabled: false,
             value: 0
         },
+        
+        healCounter: {
+            enabled: false,
+            value: 0
+        },
 
     };
 

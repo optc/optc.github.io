@@ -4743,11 +4743,11 @@ window.captains = {
     },
     1609: {//Enel TO DO
         hp: function(p) { return 0.8 },
-        atk: function(p) { return p.actions[p.sourceSlot] ? 3.25 : 2; },
+        atk: function(p) { return Math.max(2.0, 2.0 + 0.000125 * p.healCounter); },
     },
     1610: {//Enel TO DO
         hp: function(p) { return 0.8 },
-        atk: function(p) { return p.actions[p.sourceSlot] ? 3.25 : 2; },
+        atk: function(p) { return Math.max(2.0, 2.0 + 0.000125 * p.healCounter); },
     },
     1611: {
         atk: function(p) {return p.unit.class.has("Shooter") ? 1.75 : 1; },

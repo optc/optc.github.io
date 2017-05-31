@@ -485,6 +485,43 @@ directives.turnCounter = function() {
     };
 };
     
+directives.healCounter = function() {
+    return {
+        retrict: 'E',
+        replace: true,
+        template: '<div id="heals"><div id="healSlider"></div>' +
+            '<div id="healLabel">{{currentHeals}} {{currentHeals == 1 ? "Health Point" : "Health Points"}} recovered in the last turn</div></div>',
+        link: function(scope, element, attrs) {
+
+            scope.currentHeals = 0;
+
+            var slider = element.find('#healSlider')[0];
+            var sliderSettings = {
+                start: [ scope.currentTurns ],
+                range: { min: [ 0 ], max: [ 10000 ] },
+                step: 10,
+                connect: 'lower'
+            };
+            
+            var createSlider = function() {
+                if (slider.noUiSlider) slider.noUiSlider.destroy();
+                noUiSlider.create(slider, sliderSettings);
+                slider.noUiSlider.on('change', function(_,__,value) { update('change', value); });
+                slider.noUiSlider.on('slide', function(_,__,value) { update('slide', value); });
+            };
+
+            var update = function(event,value) {
+                scope.currentHeals = parseInt(value, 10);
+                if (event == 'change') scope.tdata.healCounter.value = scope.currentHeals;
+                scope.$apply();
+            };
+
+            createSlider();
+
+        }
+    };
+};
+    
 directives.levelLabel = function($timeout) {
     return {
         restrict: 'E',
