@@ -8934,16 +8934,16 @@ window.details = {
     },
     1613: {//Rob Lucci
         captain: "Boosts ATK of Fighter characters by 2.25x",
-        special: "Cuts the current HP of each enemy by 10%, reduces the defense of all enemies by 50% and amplifies the effects of orbs by ??? amount for ??? turns",
+        special: "Cuts the current HP of each enemy by 10%, reduces the defense of all enemies by 50% and amplifies the effects of orbs by 1.75x for 1 turn",
         specialName: "4000 Power Level Technique: Tempest Kick",
-        sailor: "This character gets 2x character's ATK as additional typeless bonus damage if you hit no lower than Good",
+        sailor: "All characters gets 2x character's ATK as additional typeless bonus damage if you hit no lower than Good",
         sailorNotes: "Similar effect to Raid Sabo",
     },
     1614: {//Rob Lucci
         captain: "Boosts ATK of Fighter characters by 2.5x and their HP by 1.25x",
-        special: "Cuts the current HP of each enemy by 10%, reduces the defense of all enemies by 50% and amplifies the effects of orbs by ??? for ??? turns",
+        special: "Cuts the current HP of each enemy by 10%, reduces the defense of all enemies by 50% and amplifies the effects of orbs by 1.75x for 1 turn",
         specialName: "4000 Power Level Technique: Tempest Kick",
-        sailor: "This character gets 2x character's ATK as additional typeless bonus damage if you hit no lower than Good",
+        sailor: "All characters gets 2x character's ATK as additional typeless bonus damage if you hit no lower than Good",
         sailorNotes: "Similar effect to Raid Sabo",
     },
     1615: {//Crocodile
