@@ -371,6 +371,20 @@ window.ships = [
         atk: function(p) { return p.unit.class.has("Shooter") ? 1.2 : 1; },
     },
     
+    { //29.2
+        name: "Karasumaru Ship - Special ACTIVATED",
+        thumb: 'ship_0030_c.png',
+        //description: 'Boosts ATK and HP of Shooter Only characters by 2x and boosts the ATK of all other characters by 1.5x and their HP by 1.02x. Special: Delays all enemies for 2 turns (cooldown: 12 turns).',
+        description: 'Boosts ATK and Shooter characters by 1.2x. ACTIVATED Special: Delays all enemies for 1 turn (cooldown: 16 turns).',
+        /*atk: function(p) {
+            return !(p.unit.class.has('Slasher') || p.unit.class.has('Striker') || p.unit.class.has('Fighter') || p.unit.class.has('Free Spirit') || p.unit.class.has('Cerebral') || p.unit.class.has('Powerhouse') || p.unit.class.has('Driven')) ? 2 : 1.5;
+        },
+        hp: function(p) {
+            return !(p.unit.class.has('Slasher') || p.unit.class.has('Striker') || p.unit.class.has('Fighter') || p.unit.class.has('Free Spirit') || p.unit.class.has('Cerebral') || p.unit.class.has('Powerhouse') || p.unit.class.has('Driven')) ? 2 : 1.02;
+        },*/
+        atk: function(p) { return p.unit.class.has("Shooter") ? 1.2 : 1; },
+    },
+    
     
     
     { //30

@@ -771,7 +771,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         computeActualDefense(shipBonus.bonus.name);
         //console.log(enabledSpecials);
         isDefenseDown = enabledSpecials.some(function(x) { return (x !== null && x.hasOwnProperty('def')) || (shipBonus.bonus.name == "Flying Dutchman - Special ACTIVATED"); });
-        isDelayed = enabledSpecials.some(function(x) { return x !== null && x.hasOwnProperty('delay'); });
+        isDelayed = enabledSpecials.some(function(x) { return (x !== null && x.hasOwnProperty('delay')) || (shipBonus.bonus.name == "Karasumaru Ship - Special ACTIVATED"); });
         
         enabledEffects = [ ];
         
