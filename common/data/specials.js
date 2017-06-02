@@ -2865,4 +2865,10 @@ window.specials = {
     1619: {
         delay: function(p) { return 1; },
     },
+    1620: {
+        atk: function(p) { return p.unit.class.has("Striker") ? 2 : 1; },
+    },
+    1621: {
+        atk: function(p) { return p.unit.class.has("Striker") ? 2 : 1; },
+    },
 };

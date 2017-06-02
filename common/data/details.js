@@ -8765,7 +8765,7 @@ window.details = {
         specialName: "Admiral Hug",
     },
     1584: {//Coliseum Orlumbus
-        captain: "Boosts ATK of Striker characters by 3x if HP is below ??% at the start of the turn, by 2.5x otherwise",
+        captain: "Boosts ATK of Striker characters by 3x if HP is below 30% at the start of the turn, by 2.5x otherwise",
         special: "Locks all orbs for 1 turn. If there are 4 enemies or more on the stage, amplifies the effect of orbs for Striker characters by 2x for 1 turn, otherwise amplifies the effect of orbs for Striker characters by 1.5x for 1 turn",
         specialName: "Admiral Hug",
     },
@@ -8977,5 +8977,15 @@ window.details = {
         captainNotes: "Stats for Rayleigh are temporary and are estimates for use in the calculator",
         special: "Reduces the duration of Bind, Despair, and Paralysis by 7 turns, delays all enemies for 1 turn, and makes Perfects easier to hit for 1 turn",
         specialName: "Netherworld Conqueror",
+    },
+    1620: {//Log Kid
+        captain: "Boosts ATK of Strikers characters by 2.5x if HP is below 30% at the start of the turn",
+        special: "Reduces crew's current HP by 80%, boosts ATK of Striker characters by 2x for 1 turn",
+        specialName: "Double Steel Magnetic Arm",
+    },
+    1621: {//Log Kid
+        captain: "Boosts ATK of Striker characters by 3x if HP is below 30% at the start of the turn, by 2.5x otherwise",
+        special: "Reduces crew's current HP by 80%, boosts ATK of Striker characters by 2x for 1 turn",
+        specialName: "Double Steel Magnetic Arm",
     },
 };

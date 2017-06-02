@@ -427,8 +427,14 @@ directives.addLinks = function($stateParams) {
                 ul.append($('<li><a href="' + link + '" target="_blank">Official Guide (English)</a></li>'));
             }
             if (!incomplete) {
-                ul.append($('<li><a href="http://onepiece-treasurecruise.com/c-' + id + '" target="_blank">' +
+                if (id == 1478){
+                    ul.append($('<li><a href="http://onepiece-treasurecruise.com/カリブー-カリブー海賊団船長/" target="_blank">' +
                         'Official Guide (Japanese)</a></li>'));
+                }
+                else{
+                    ul.append($('<li><a href="http://onepiece-treasurecruise.com/c-' + id + '" target="_blank">' +
+                        'Official Guide (Japanese)</a></li>'));
+                }
             }
             if (gw[id-1] != null) {
                 ul.append($('<li><a href="http://xn--pck6bvfc.gamewith.jp/article/show/' + gw[id-1] + '" target="_blank">' +

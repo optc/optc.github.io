@@ -1618,6 +1618,8 @@ window.units = [
     [ "Gecko Moria, Endless Dreams of Arch Enemies", "STR", [ "Driven", "Slasher" ], 4, 15, 6, 3, 50, 392109, 190, 150, 0, 1390, 699, 0, 1 ],
     [ "Gecko Moria, Clash of the Great Pirate Era [The Strongest Crew]", "STR", [ "Driven", "Fighter" ], 5, 30, 4, 4, 99, 4000000, 1328, 620, 0, 3002, 1501, 0, 1 ],
     [ "'Dark King' Silvers Rayleigh, Right Hand of the Pirate King", "INT", [ "Slasher", "Fighter" ], "6+", 65, 4, 4, 99, 5000000, 1500, 800, 300, 3121, 1472, 515, null ],
+    [ "Eustass Kid, Wakes of an Endless Dream, Kid Pirates", "STR", [ "Striker", "Driven" ], 4, 20, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Eustass Kid, A Vow in the Great Age of Pirates - Pirate King", "STR", [ "Striker", "Driven" ], 5, 30, null, null, null, null, null, null, null, null, null, null, null ],
     ];
     
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],

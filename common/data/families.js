@@ -1618,4 +1618,6 @@ window.families = [
     "Gecko Moria",
     "Gecko Moria",
     "Silvers Rayleigh",
+    "Eustass Kid",
+    "Eustass Kid",
 ];
