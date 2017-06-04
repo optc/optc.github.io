@@ -2867,8 +2867,10 @@ window.specials = {
     },
     1620: {
         atk: function(p) { return p.unit.class.has("Striker") ? 2 : 1; },
+        type: "class",
     },
     1621: {
         atk: function(p) { return p.unit.class.has("Striker") ? 2 : 1; },
+        type: "class",
     },
 };
