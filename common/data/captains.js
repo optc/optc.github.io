@@ -4244,6 +4244,7 @@ window.captains = {
         },
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
         hp: function(p) { return 1.2; },
+        rcv: function(p) { return 1.2; },
     },
     1486: {
         atk: function(p) { return !p.unit.class.has("Fighter") ? 1 : (p.orb == 2.0 ? 2.5 : 1); },

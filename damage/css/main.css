@@ -473,6 +473,8 @@ body, html {
     height: 100%;
     transition: left .1s linear;
     margin-bottom: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 #menu.open {
