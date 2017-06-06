@@ -1629,7 +1629,7 @@ window.drops = {
             thumb: 603,
             global: true,
             gamewith: 13682,
-            condition: "Take 300 damage per character in Environmental Lightning Damage",
+            condition: "Take 300 damage per character in Environmental Lightning Damage every 3 turns",
             Ultimate: [ 85, 111, 118, 301, 602 ],
             Master: [ 85, 111, 118, 602 ] ,
             Expert: [ 111, 118, 602 ]
@@ -1657,7 +1657,7 @@ window.drops = {
             name: 'Clash!! Nightmare Luffy',
             thumb: 795,
             gamewith: 18565,
-            condition: "Take 10% MAX Health in Environmental Damage",
+            condition: "Take 10% current Health in Environmental Damage every 2 turns",
             Master: [ 794 ],
             Expert: [ 794 ]
         },
