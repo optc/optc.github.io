@@ -12,7 +12,7 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
     var table = null;
 
     var addImage = function(data, type, row, meta) {
-        return '<img class="slot small" data-original="' + Utils.getGlobalThumbnailUrl(row[0]) + '" onerror="this.onerror=null;this.data-original=\'' + Utils.getThumbnailUrl(row[0]) + '\';"> ' +
+        return '<img class="slot small" data-original="' + Utils.getGlobalThumbnailUrl(row[0]) + '" onerror="this.onerror=null;this.src=\'' + Utils.getThumbnailUrl(row[0]) + '\';"> ' +
             '<a ui-sref="main.search.view({ id: ' + parseInt(row[0],10) + '})">' + data + '</a>';
     };
 
