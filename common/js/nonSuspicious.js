@@ -53,7 +53,7 @@ window.onload = function() {
         unit.className = "slot small";
         unit.target = "_blank";
         unit.title = window.units[newUnits[i]-1][0];
-        unit.style = "background-image: url("+Utils.getThumbnailUrl(newUnits[i])+");";
+        unit.style = "background-image: url("+Utils.getGlobalThumbnailUrl(newUnits[i])+"), url("+Utils.getThumbnailUrl(newUnits[i])+");";
         
         document.getElementById("newUnits").appendChild(unit);
     }
