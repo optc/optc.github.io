@@ -30,7 +30,7 @@ directives.decorateSlot = function($rootScope) {
                     target.removeAttribute('title');
                 } else {
                     if (scope.uid != 1 || scope.flag || (scope.udata && scope.udata.name == 'Monkey D. Luffy'))
-                        target.style.backgroundImage = 'url(' + Utils.getThumbnailUrl(scope.uid) + ')';
+                        target.style.backgroundImage = 'url(' + Utils.getGlobalThumbnailUrl(scope.uid) + '), url(' + Utils.getThumbnailUrl(scope.uid) + ')';
                     else
                         target.style.backgroundImage = null;
                     if (attrs.decorateSlot.indexOf('notitle') == -1)
