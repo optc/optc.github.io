@@ -30,7 +30,7 @@ directives.decorateSlot = function($rootScope) {
                     target.removeAttribute('title');
                 } else {
                     if (scope.uid != 1 || scope.flag || (scope.udata && scope.udata.name == 'Monkey D. Luffy'))
-                        target.style.backgroundImage = 'url(' + Utils.getThumbnailUrl(scope.uid) + ')';
+                        target.style.backgroundImage = 'url(' + Utils.getGlobalThumbnailUrl(scope.uid) + '), url(' + Utils.getThumbnailUrl(scope.uid) + ')';
                     else
                         target.style.backgroundImage = null;
                     if (attrs.decorateSlot.indexOf('notitle') == -1)
@@ -282,7 +282,8 @@ directives.quickPick = function() {
                 },
                 template: function (value) {
                     var thumb = Utils.getThumbnailUrl(value + 1);
-                    return '<span><img class="quickpick-icon" src="' + thumb + '"> ' + window.units[value].name + '</span>';
+                    var thumb2 = Utils.getGlobalThumbnailUrl(value + 1);
+                    return '<span><img class="quickpick-icon" src="' + thumb2 + '" onerror="this.onerror=null;this.src=\'' + thumb + '\';"> ' + window.units[value].name + '</span>';
                 },
                 replace: function(value) {
                     return window.units[value].name;
