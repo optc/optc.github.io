@@ -280,6 +280,7 @@ directives.compare = function() {
                         }
                     },
                     display: function(id) {
+			    console.log(id);
                         return units[id].name;
                     }
                 }
