@@ -1,4 +1,4 @@
-﻿<nav id="menu" class="panel" role="navigation">
+<nav id="menu" class="panel" role="navigation">
 
     <ul>
 
@@ -17,6 +17,13 @@
                 <div id="ship-background"></div>
             </div>
         </li>
+        
+        <li>
+            <div id="heal">
+                <i class="fa fa-heart"></i>
+                Heal Socket Level: <input type="number" min="0" max="5" id="healLevel" to-int ng-model="data.healLevel"></input>
+            </div>
+        </li>
 
         <li>
             <div id="defenseContainer" title="Middle-click or CTRL-click for details" defense-on-click>
@@ -26,10 +33,30 @@
             </div>
         </li>
 
+        <li>
+            <div id="shieldContainer">
+                <i class="fa fa-shield"></i>
+                Barrier: <input min="0" style="color: black; width:40px" type="number" id="comboShield" to-int ng-model="data.comboShield">
+                                                                      <select style="color: black" id="comboType" ng-model="data.comboType">
+                                                                        <option value="" selected>Hits</option>
+                                                                        <option value="Good">Good</option>
+                                                                        <option value="Great">Great</option>
+                                                                        <option value="Perfect">Perfect</option>
+                                                                      </select> 
+            </div>
+        </li>
+
         <li ui-sref=".candy">
             <div id="candyContainer">
                 <i class="fa fa-sliders"></i>
                 <a>Cotton Candies</a>
+            </div>
+        </li>
+        
+        <li>
+            <div id="action">
+                <i class="fa fa-check-square"></i>
+                Captain Actions: <br><input type="checkbox" name="friend" value="left" ng-model="data.actionleft">Friend/Guest Captain<br><input type="checkbox" name="captain" value="right" ng-model="data.actionright">Captain 
             </div>
         </li>
 

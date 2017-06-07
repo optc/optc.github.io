@@ -93,6 +93,12 @@ window.matchers = [
         target: 'captain',
         matcher: /Boosts.+chain multiplier/i
     },
+    
+    {
+        name: 'Combo Boost Captains',
+        target: 'captain',
+        matcher: /Boosts.+hit in the chain/i
+    },
 
     {
         name: 'Cooldown reducers',
@@ -128,6 +134,24 @@ window.matchers = [
         name: 'End of Turn Damage Dealer',
         target: 'captain',
         matcher: /deals.+end of each turn/i
+    },
+    
+    {
+        name: 'Beli Boosters',
+        target: 'captain',
+        matcher: /boosts.+Beli/i
+    },
+    
+    {
+        name: 'EXP Boosters',
+        target: 'captain',
+        matcher: /boosts.+EXP/i
+    },
+    
+    {
+        name: 'Drop Doublers',
+        target: 'captain',
+        matcher: /duplicating a drop/i
     },
 
     /* * * * * Specials * * * * */
@@ -181,6 +205,12 @@ window.matchers = [
     },
     
     {
+        name: 'Combo Boost Specials',
+        target: 'special',
+        matcher: /Boost.+hit in the chain/i
+    },
+    
+    {
         name: 'RCV boosters',
         target: 'special',
         matcher: /Boosts RCV/i
@@ -189,7 +219,7 @@ window.matchers = [
     {
         name: 'Orb lockers',
         target: 'special',
-        matcher: /locks.+orbs/i
+        matcher: /locks.+orb/i
     },
 
     {
@@ -202,6 +232,13 @@ window.matchers = [
         name: 'Orb chance boosters',
         target: 'special',
         matcher: /boosts chances of getting.+orbs/i
+    },
+
+    {
+        name: 'Negative to Positive Orb controllers',
+        target: 'special',
+        matcher: /(Badly Matching orbs into.+Matching orbs)/i,
+        //include: [ 900, 901, 996, 997, 933, 938, 939 ],
     },
 
     {
@@ -238,7 +275,7 @@ window.matchers = [
         name: 'Orb matchers',
         target: 'special',
         matcher: /(Changes.+(orb|orbs))[^,]+Matching/i,
-        include: [ 1036, 1037 ]
+        include: [ 1036, 1037, 1445 ]
     },
 
     {
@@ -247,11 +284,11 @@ window.matchers = [
         matcher: /(Empties|Changes.+into.+\[EMPTY\])/i
     },
 
-    {
+    /*{
         name: 'Slot fillers',
         target: 'special',
         matcher: /(Fills\b|\[EMPTY\] orbs into|Changes.+\[EMPTY\].+into)/i
-    },
+    },*/
 
     {
         name: 'Delayers',
@@ -412,7 +449,7 @@ window.matchers = [
     {
         name: '"Beneficial" Orb Enablers',
         target: 'special',
-        matcher: /Makes.+ orbs "beneficial"/i
+        matcher: /"beneficial/i
     },
     
     /* * * * * Sailor * * * * */
@@ -438,7 +475,31 @@ window.matchers = [
     {
         name: '"Beneficial" Orb sailors',
         target: 'sailor',
-        matcher: /Makes (\[STR\]|\[DEX\]|\[QCK\]|\[PSY\]|\[INT\]|\[RCV\]|\[TND\]) orbs "beneficial"/i
+        matcher: /"beneficial/i
+    },
+    
+    {
+        name: 'Paralysis reducers',
+        target: 'sailor',
+        matcher: /(reduces|removes).+Paralysis/i 
+    },
+
+    {
+        name: 'Blindness removers',
+        target: 'sailor',
+        matcher: /(reduces|removes|resists).+blindness/i
+    },
+    
+    {
+        name: 'Silence reducers',
+        target: 'sailor',
+        matcher: /(reduces|removes|resists).+silence/i
+    },
+    
+    {
+        name: 'Special Rewind Restorers',
+        target: 'sailor',
+        matcher: /Restores (his|her) own special/i
     },
 
 ];

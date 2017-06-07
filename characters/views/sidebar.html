@@ -14,10 +14,13 @@
         ng-class="{ active: filters.classes.indexOf(class) > -1 }">{{class}}</span>
 </div>
 
+
 <div class="filter-container">
     <span class="filter-header">Rarity filters</span>
     <span ng-repeat="(n,stars) in [ 1, 2, 3, 4, 5, 6 ]" class="filter stars width-4 stars-{{stars}}"
         ng-click="onStarsClick($event,stars)" ng-class="{ active: filters.stars.indexOf(stars) > -1 }"></span>
+    <span ng-repeat="(n,stars) in [ 5, 6 ]" class="filter stars width-4 stars-{{stars}}+"
+        ng-click="onStarsClick($event,stars + '+')" ng-class="{ active: filters.stars.indexOf(stars + '+') > -1 }"></span>
 </div>
 
 <div class="filter-container expandable" id="cost-container"
@@ -33,7 +36,7 @@
     <span class="filter-header">Drop filters</span>
     <span ng-repeat="type in [ 'Farmable', 'Non-farmable' ]" class="filter width-6 drop" ng-model="filters.drop"
         ng-class="{ active: filters.drop == type }" ng-click="onFilterClick($event,type)">{{type}}</span>
-    <span ng-repeat="type in [ 'Global units', 'Japan units' ]" class="filter width-6 drop" ng-model="filters.server"
+    <span ng-repeat="type in [ 'Global units', 'Japan exclusives' ]" class="filter width-6 drop" ng-model="filters.server"
         ng-class="{ active: filters.server == type }" ng-click="onFilterClick($event,type)">{{type}}</span>
     <span ng-repeat="type in [ 'In RR pool', 'Not in RR pool' ]" class="filter width-6 drop" ng-model="filters.rr"
         ng-class="{ active: filters.rr == type }" ng-click="onFilterClick($event,type)">{{type}}</span>
@@ -104,7 +107,7 @@
 <div class="filter-container">
     <span class="filter-header">Sailor filters</span>
     <span class="filter width-12 custom" ng-repeat="(n,filter) in filterData" ng-if="filter.target.indexOf('sailor') == 0"
-        ng-model="filters.custom[n]" ng-class="{ active: filters.custom[n] }" add-orb-options add-special-options
+        ng-model="filters.custom[n]" ng-class="{ active: filters.custom[n] }" add-special-options
         ng-click="filters.custom[n] = !filters.custom[n]">{{filter.name}}</span>
 </div>
 

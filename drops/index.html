@@ -76,6 +76,12 @@
                         <td>Completion</td>
                         <td colspan="2">{{island.completion}} </td>
                     </tr>
+                    <tr ng-if="island.gamewith" hide-when-empty>
+                        <td>Gamewith</td>
+                        <td colspan="2">
+                            <a href = "https://トレクル.gamewith.jp/article/show/{{island.gamewith}}">Gamewith Page</a>
+                        </td>
+                    </tr>
                     <tr ng-if="island.condition" hide-when-empty>
                         <td>Condition</td>
                         <td colspan="2">{{island.condition}} </td>
@@ -92,7 +98,7 @@
                 </tbody>
                 <tbody>
                     <tr ng-repeat="(stage,data) in island"
-                        ng-if="stage != 'thumb' && stage != 'day' && stage != 'name' && stage != 'shortName' && stage != 'global' && stage != 'condition' && stage != 'challenge' && stage != 'completion' && stage != 'challengeData' && stage != 'showManual'">
+                        ng-if="stage != 'thumb' && stage != 'day' && stage != 'name' && stage != 'shortName' && stage != 'global' && stage != 'condition' && stage != 'challenge' && stage != 'completion' && stage != 'challengeData' && stage != 'showManual' && stage != 'gamewith'">
                         <td>
                             {{type == 'Story Island'&& stage!='Completion Units' ? 'Stage ' + stage : (stage.length < 2 ? 'Any' : stage)}}
                         </td>

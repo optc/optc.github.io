@@ -17,9 +17,12 @@ var notes = {
     specialProportional: "The exact multiplier used to compute the damage is proportional to the " +
         "crew's remaining HP and is higher the #1 the HP is. The multiplier is calculated as: #2.",
     stages: "The special can be used as soon as the first stage is reached.",
+    silence: "This is called 'Special Bind' in-game and refers to effects that prevent you from activating Special Abilities.",
+    rewind: "Some enemies can increase your cooldown by 1/2 turns, this Sailor Ability decreases that by #1 turn.",
+    ignoreBarrier: "Damage that ignores damage negating abilities and barriers is similar to 6* Law's special, but only for this character.",
     zombie: "The protection only works when attacked by one single enemy and will leave the team with at least 1 HP; " +
         "the effect will not work when attacked by multiples enemies at once.",
-    colorAffinity: "'Color Affinity' boosts color type advantages. For example, a STR unit normally deals 2x to a DEX unit and .5x to QCK. With this Color Affinity boost, it will deal (2*#1)x to DEX and (0.5*(#1-1))x to QCK."
+    colorAffinity: "'Color Affinity' boosts color type advantages. For example, a STR unit normally deals 2x to a DEX unit and .5x to QCK. With this Color Affinity boost, it will deal (2*#1)x to DEX and (0.5/#1)x to QCK."
 };
 
 /***********
@@ -78,6 +81,7 @@ filters.decorate = function() {
             .replace(/\[EMPTY\]/g,'<span class="badge EMPTY"><i class="fa fa-circle-o"></i> EMPTY</span>')
             .replace(/\[BLOCK\]/g,'<span class="badge BLOCK"><i class="block-icon"></i> BLOCK</span>')
             .replace(/\[BOMB\]/g,'<span class="badge BOMB"><i class="fa fa-bomb"></i> BOMB</span>')
+            .replace(/\[RAINBOW\]/g,'<span class="badge RAINBOW"></i> RAINBOW</span>')
             .replace(/\[G\]/g,'<span class="badge G">G</span>');
     };
 };

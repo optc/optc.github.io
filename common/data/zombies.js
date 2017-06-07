@@ -235,6 +235,14 @@ window.zombies = {
         type: 'healer',
         multiplier: 2
     },
+    1078: {//Mansherry
+        type: 'healer',
+        multiplier: 3
+    },
+    1079: {//Mansherry
+        type: 'healer',
+        multiplier: 4
+    },
     1133: {
         type: 'healer',
         multiplier: 2
@@ -242,6 +250,10 @@ window.zombies = {
     1141: {//Story Moira
         type: 'healer',
         multiplier: 3
+    },
+    1157: {// Story Hannyabal
+        type: 'zombie',
+        threshold: 0.5
     },
     1195: {//Colo Ganfor
         type: 'healer',
@@ -266,6 +278,14 @@ window.zombies = {
     1251: {//Colo Marco
         type: 'healer',
         multiplier: 2.5
+    },
+    1269: {//Laffitte
+        type: 'healer',
+        multiplier: 3
+    },
+    1270: {//Laffitte
+        type: 'healer',
+        multiplier: 3
     },
     1305: {//Halloween Sugar
         type: 'healer',
@@ -314,5 +334,81 @@ window.zombies = {
     1423: { // Colo T-Bone
         type: 'healer',
         amount: 918
+    },
+    1455: { // Colo Don Chinjao
+        type: 'healer',
+        amount: 120
+    },
+    1456: { // Colo Don Chinjao
+        type: 'healer',
+        amount: 120
+    },
+    1463: { // White Day Luffy
+        type: 'healer',
+        multiplier: 1.5
+    },
+    1465: { // White Day Chopper
+        type: 'zombie',
+        threshold: 0.5
+    },
+    1466: { // White Day Chopper
+        type: 'zombie',
+        threshold: 0.5
+    },
+    1472: { // Shirahoshi
+        type: 'healer',
+        multiplier: 5
+    },
+    1473: { // Shirahoshi
+        type: 'healer',
+        multiplier: 5
+    },
+    1508: { // White Day Sanji
+        type: 'healer',
+        multiplier: 2
+    },
+    1516: { // White Day Brook
+        type: 'healer',
+        multiplier: 2
+    },
+    1523: { // Spring Chopper
+        type: 'healer',
+        amount: 1000
+    },
+    1524: { // Spring Chopper
+        type: 'healer',
+        amount: 1224
+    },
+    1549: { // 5+ Robin
+        type: 'healer',
+        multiplier: 3
+    },
+    1551: { // 5+ Brook
+        type: 'healer',
+        amount: 430
+    },
+    1555: { // Coliseum Ryuma
+        type: 'healer',
+        multiplier: 2
+    },
+    1577: { // Kin'emon
+        type: 'healer',
+        multiplier: 3
+    },
+    1578: { // Momonosuke
+        type: 'zombie',
+        threshold: 0.3
+    },
+    1579: { // Momonosuke
+        type: 'zombie',
+        threshold: 0.3
+    },
+    1605: { // Training Forest Ace
+        type: 'healer',
+        amount: 500
+    },
+    1616: { // Crocodile
+        type: 'healer',
+        multiplier: 1.5
     },
 };

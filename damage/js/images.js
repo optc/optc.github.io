@@ -3,7 +3,7 @@
 var app = angular.module('optc');
 
 var BOX_COLORS = { STR: 'salmon', QCK: 'lightskyblue', DEX: 'lightgreen', PSY: 'gold', INT: 'orchid' };
-var ORB_COLORS = { STR: 'orangered', QCK: 'dodgerblue', DEX: 'lightgreen', PSY: 'gold', INT: 'orchid', G: 'orange', S: 'orangered'};
+var ORB_COLORS = { STR: 'orangered', QCK: 'dodgerblue', DEX: 'lightgreen', PSY: 'gold', INT: 'orchid', G: 'orange', S: 'orangered', RAINBOW: 'magenta'};
 
 var lock = new Image(), silence = new Image();
 lock.src = 'res/chain.png';
@@ -83,7 +83,7 @@ app.controller('ImageGeneratorCtrl', function($scope, $filter, $timeout) {
                 if (orb != 1.0) {
                     var gradient = context.createRadialGradient(baseX + 20, baseY + 21, 13, baseX + 22, baseY + 22, 35);
                     if (orb < 1) gradient.addColorStop(0.1, ORB_COLORS[Utils.getOppositeType(unit.type)]);
-                    else gradient.addColorStop(0.1, ORB_COLORS[orb == 'g' ? 'G' : orb == 'str' ? 'STR' : unit.type]);
+                    else gradient.addColorStop(0.1, ORB_COLORS[orb == 'g' ? 'G' : orb == 'str' ? 'STR' : orb == 'rainbow' ? 'RAINBOW' : unit.type]);
                     if (orb < 1) gradient.addColorStop(0.2, 'black');
                     else {
                         gradient.addColorStop(0.2, 'white');
@@ -93,15 +93,18 @@ app.controller('ImageGeneratorCtrl', function($scope, $filter, $timeout) {
                     gradient.addColorStop(1.0, 'transparent');
                     context.fillStyle = gradient;
                     context.fillRect(0, 0, canvas.width, canvas.height);
-                    if (orb != 'g' && orb != 'str') {
+                    if (orb != 'g' && orb != 'str' && orb != 'rainbow') {
                         var temp = (orb < 1 ? [ 'f0d7', baseX + 13, baseY + 31 ] : [ 'f0d8', baseX + 13, baseY + 28 ]);
                         awesome(context, { text: temp[0], style: '28px', color: 'white',
                             x: temp[1], y: temp[2], stroke: 'gray' });
                     } else if (orb == 'g') {
                         type(context, { text: 'S', style: 'bold 20px "Open Sans"',
                             x: baseX + 13, y: baseY + 28, color: 'white', stroke: 'black', strokeWidth: 2 });
-                    } else {
+                    } else if (orb == 's'){
                         type(context, { text: 'S', style: 'bold 20px "Open Sans"',
+                            x: baseX + 13, y: baseY + 28, color: 'white', stroke: 'black', strokeWidth: 2 });
+                    } else{
+                        type(context, { text: 'R', style: 'bold 20px "Open Sans"',
                             x: baseX + 13, y: baseY + 28, color: 'white', stroke: 'black', strokeWidth: 2 });
                     }
                 }
@@ -123,8 +126,8 @@ app.controller('ImageGeneratorCtrl', function($scope, $filter, $timeout) {
             };
             image.src = Utils.getGlobalThumbnailUrl(unit.number + 1);
             image.onerror = function(){
-		    image.src = Utils.getThumbnailUrl(unit.number + 1);
-	    }
+		          image.src = Utils.getThumbnailUrl(unit.number + 1);
+	          }
         });
     },true);
 
@@ -154,6 +157,14 @@ app.controller('ImageGeneratorCtrl', function($scope, $filter, $timeout) {
         awesome(context, { text: 'f162', x: baseX + 8, y: baseY + 20, align: 'center' });
         var turns = $scope.tdata.turnCounter.value;
         type(context, { text: turns + (turns == 1 ? ' turn' : ' turns') + ' elapsed', x: baseX + 25, y: baseY + 20 });
+        baseY += 25;
+    }
+
+    // heal counter
+    if ($scope.tdata.healCounter.enabled) {
+        awesome(context, { text: 'f162', x: baseX + 8, y: baseY + 20, align: 'center' });
+        var turns = $scope.tdata.healCounter.value;
+        type(context, { text: turns + (turns == 1 ? ' Health Point' : ' Health Points') + ' recovered in the last turn', x: baseX + 25, y: baseY + 20 });
         baseY += 25;
     }
 

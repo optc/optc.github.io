@@ -7,6 +7,7 @@ window.drops = {
             thumb: 28,
             global: true,
             completion: '5x Rainbow Gems',	
+            gamewith: 3417,
             "01": [ 119, 120 ],
             "02": [ 27, 115, 119, 120 ],
             "03": [ 28, 78, 79, 80, 119, 120 ]
@@ -16,7 +17,9 @@ window.drops = {
             name: "Alvida's Hideout",
             thumb: 29,
             global: true,
-            "Completion Units": [31, 105 ],
+            gamewith: 3418,
+            completion: 'Unlocks Extra Islands',
+            "Completion Units": [ 31, 105 ],
             "01": [ 121, 123, 127, 131, 136 ],
             "02": [ 78, 79, 80, 121, 122, 123, 126, 131, 132, 137, 138, 141 ],
             "03": [ 29, 115, 121, 122, 123, 126, 127, 128, 131, 132, 133, 136, 137, 138, 141, 171 ]
@@ -26,7 +29,8 @@ window.drops = {
             name: "Shells Town",
             thumb: 35,
             global: true,
-            completion: 'Ship: Navy Ship, Unlocks Extra Islands',
+            completion: 'Ship: Navy Ship',
+            gamewith: 3423,
             "Completion Units": [5, 80, 97, 116 ],
             "01": [ 81, 82, 179, 180, 181, 182 ],
             "02": [ 78, 79, 80, 179, 180, 181, 183 ],
@@ -44,6 +48,7 @@ window.drops = {
             thumb: 38,
             global: true,
             completion: '5x Rainbow Gems',
+            gamewith: 3422,
             "01": [ 115, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 134, 135, 174 ],
             "02": [ 78, 121, 126, 136, 142, 147, 170 ],
             "03": [ 40, 80, 123, 124, 128, 129, 130, 133, 134, 135, 138, 139, 140, 144, 149, 154, 158, 159, 171 ],
@@ -64,6 +69,7 @@ window.drops = {
             thumb: 45,
             global: true,
             completion: 'Ship: Merry Go - 5x Rainbow Gems',
+            gamewith: 3424,
             "Completion Units": [13],
             "01": [ 13, 78, 79, 80, 81, 82, 89, 90, 91, 95, 96, 97, 105, 106, 107, 115 ],
             "02": [ 108, 109, 163, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188 ],
@@ -85,6 +91,7 @@ window.drops = {
             thumb: 57,
             global: true,
             completion: 'Ship: Baratie - 5x Rainbow Gems',
+            gamewith: 3416,
             "Completion Units": [17],
             "01": [ 48, 131, 132, 133, 136, 137, 138, 140 ],
             "02": [ 49, 116, 117, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188 ],
@@ -108,6 +115,7 @@ window.drops = {
             thumb: 65,
             global: true,
             completion: '5x Rainbow Gems',
+            gamewith: 3408,
             "Completion Units": [9],
             "01": [ 89, 121, 126, 131, 136, 141, 142, 147, 152, 156, 157, 158, 159, 160, 162, 170, 173, 175, 178 ],
             "02": [ 90, 122, 127, 132, 137, 141, 143, 148, 153, 155, 157, 158, 159, 161, 162, 172, 174, 177 ],
@@ -131,6 +139,7 @@ window.drops = {
             thumb: 69,
             global: true,
             completion: '5x Rainbow Gems',
+            gamewith: 2807,
             "01": [ 174, 170, 171, 172, 84 ],
             "02": [ 29, 85 ],
             "03": [ 174, 173, 86 ],
@@ -150,6 +159,7 @@ window.drops = {
             thumb: 213,
             global: true,
             completion: '5x Rainbow Gems',
+            gamewith: 3753,
             "01": [ 215, 83, 95, 110 ],
             "02": [ 174, 96, 111, 83 ],
             "03": [ 173, 174, 97, 112, 83 ],
@@ -167,6 +177,7 @@ window.drops = {
             thumb: 201,
             global: true,
             completion: '5x Rainbow Gems',
+            gamewith: 4911,
             "01": [ 237, 238, 239, 110, 118 ],
             "02": [ 111, 118, 240 ],
             "03": [ 84, 118, 235 ],
@@ -189,6 +200,7 @@ window.drops = {
             thumb: 292,
             global: true,
             completion: '5x Rainbow Gems',
+            gamewith: 5419,
             "01": [ 289, 162, 141, 83, 116, 117 ],
             "02": [ 83, 85, 90, 293 ],
             "03": [ 83, 84, 89, 294 ],
@@ -211,6 +223,7 @@ window.drops = {
             thumb: 326,
             global: true,
             completion: '5x Rainbow Gems',
+            gamewith: 6658,
             "Completion Units": [21],
             "01": [ 328, 94, 117 ],
             "02": [ 84, 94, 116, 334 ],
@@ -235,6 +248,7 @@ window.drops = {
             thumb: 383,
             global: true,
             completion: '5x Rainbow Gems',
+            gamewith: 7578,
             "01": [ 116, 300, 301, 302, 303, 304, 378 ],
             "02": [ 69, 300, 301, 302, 303, 304 ],
             "03": [ 113, 114, 184, 185, 186, 300, 301, 302, 303, 304 ],
@@ -257,6 +271,7 @@ window.drops = {
             thumb: 384,
             global: true,
             completion: '10x Rainbow Gems',
+            gamewith: 8949,
             "01": [ 368, 237, 78, 83, 89 ],
             "02": [ 369, 239, 79, 90, 83 ],
             "03": [ 207, 80, 91, 83 ],
@@ -279,6 +294,7 @@ window.drops = {
             thumb: 430,
             global: true,
             completion: 'Ship: Merry Go Flying - 5x Rainbow Gems',
+            gamewith: 9879,
             "01": [ 215, 105, 106, 107, 108, 109, 115, 116, 381 ],
             "02": [ 171, 91, 97, 96 ],
             "03": [ 170, 426, 89, 95 ],
@@ -302,6 +318,7 @@ window.drops = {
             thumb: 467,
             global: true,
             completion: '5x Rainbow Gems',
+            gamewith: 11528,
             "01": [ 488, 487, 489, 493, 494, 116, 117 ],
             "02": [ 468, 469, 92, 93, 98, 99 ],
             "03": [ 468, 469, 303, 304 ],
@@ -325,6 +342,7 @@ window.drops = {
             thumb: 545,
             global: true,
             completion: '10x Rainbow Gems',
+            gamewith: 12130,
             "01": [ 94, 300, 541 ],
             "02": [ 94, 302, 464, 543 ],
             "03": [ 94, 303, 542 ],
@@ -344,6 +362,7 @@ window.drops = {
             thumb: 568,
             global: true,
             completion: '5x Rainbow Gems',
+            gamewith: 12773,
             "01": [ 368, 147, 152, 300 ],
             "02": [ 564, 158, 301 ],
             "03": [ 171, 144, 149, 302 ],
@@ -362,6 +381,7 @@ window.drops = {
             thumb: 632,
             global: true,
             completion: '5x Rainbow Gems',
+            gamewith: 14293,
             "01": [ 614, 87, 88, 266 ],
             "02": [ 84, 85, 86, 173, 174, 237, 238, 239, 266 ],
             "03": [ 110, 266, 615, 616, 617 ],
@@ -385,6 +405,7 @@ window.drops = {
             thumb: 706,
             global: true,
             completion: '5x Rainbow Gems',
+            gamewith: 15599,
             "Completion Units": [708],
             "01": [ 78, 79, 80, 81, 82, 185, 186, 188, 694 ],
             "02": [ 78, 79, 80, 81, 184, 185, 187, 692 ],
@@ -404,6 +425,7 @@ window.drops = {
             thumb: 737,
             global: true,
             completion: 'Ship: Thousand Sunny - 5x Rainbow Gems',
+            gamewith: 16618,
             "Completion Units": [739],
             "01": [ 110 ],
             "02": [ 111 ],
@@ -427,6 +449,7 @@ window.drops = {
             thumb: 816,
             global: true,
             completion: '5x Rainbow Gems',
+            gamewith: 19269,
             "01": [ 89, 90, 91, 387, 817, 818, 819, 820, 821 ],
             "02": [ 89, 90, 91, 92, 93, 812, 817, 818, 819, 820, 821 ],
             "03": [ 116, 817, 818, 819, 820, 821 ],
@@ -446,6 +469,7 @@ window.drops = {
             thumb: 894,
             global: true,
             completion: '5x Rainbow Gems',
+            gamewith: 22436,
             "Completion Units": [895],
             "01": [ 817, 818, 819, 888 ],
             "02": [ 393, 888, 889 ],
@@ -467,6 +491,7 @@ window.drops = {
             thumb: 974,
             global: true,
             completion: '5x Rainbow Gems',
+            gamewith: 24829,
             "01": [ 620, 111, 623, 113, 625, 114, 954, 955, 956 ],
             "02": [ ],
             "03": [ ],
@@ -489,6 +514,7 @@ window.drops = {
             thumb: 1056,
             global: true,
             completion: '5x Rainbow Gems',
+            gamewith: 30491,
             "01": [ 919, 301, 300 ],
             "02": [ 1059, 301, 303 ],
             "03": [ 1068, 1067, 302 ],
@@ -506,6 +532,7 @@ window.drops = {
             thumb: 1159,
             global: true,
             completion: '5x Rainbow Gems',
+            gamewith: 34745,
             "01": [ 931 ],
             "02": [ 540, 931 ],
             "03": [ 1153, 931 ],
@@ -525,11 +552,12 @@ window.drops = {
         },
         
         {
-            name: "Marineford",
+            name: "Marineford Bay",
             shortName: "Marineford",
             thumb: 1228,
             global: true,
             completion: '5x Rainbow Gems',
+            gamewith: 37190,
             "01": [  ],
             "02": [ 1223 ],
             "03": [  ],
@@ -548,11 +576,13 @@ window.drops = {
             name: "Marineford - Oris Plaza",
             shortName: "Oris Plaza",
             thumb: 1283,
+            global: true,
             completion: '10x Rainbow Gems',
+            gamewith: 38886,
             "01": [ 1279 ],
             "02": [  ],
             "03": [ 1280 ],
-            "04": [ 1228 ],
+            "04": [ 1228, 771, 770 ],
             "05": [  ],
             "06": [ 262 ],
             "07": [  ],
@@ -570,7 +600,9 @@ window.drops = {
             name: "3D2Y - Timeskip Training",
             shortName: "3D2Y",
             thumb: 1353,
+            global: true,
             completion: '5x Rainbow Gems',
+            gamewith: 45559,
             "01": [ 1342 ],
             "02": [ 1343 ],
             "03": [  ],
@@ -591,7 +623,8 @@ window.drops = {
             name: "Return to Sabaody Archipelago",
             shortName: "Straw Hat Return",
             thumb: 1393,
-            completion: '5x Rainbow Gems',
+            completion: 'Ship: Coated Thousand Sunny - 5x Rainbow Gems',
+            gamewith: 46976,
             "01": [  ],
             "02": [  ],
             "03": [ 1393 ],
@@ -601,6 +634,50 @@ window.drops = {
             "07": [  ],
             "08": [  ],
             "09": [ 1392 ],
+        },
+        
+        {
+            name: "Hard-Shell Tower - Dragon Imperial Palace",
+            shortName: "Fishman Island 1",
+            thumb: 1506,
+            completion: '5x Rainbow Gems',
+            gamewith: 52247,
+            "01": [ 1501, 1502 ],
+            "02": [ 1502, 340 ],
+            "03": [  ],
+            "04": [  ],
+            "05": [ 1503 ],
+            "06": [  ],
+            "07": [  ],
+            "08": [  ],
+            "09": [  ],
+            "10": [  ],
+            "11": [  ],
+            "12": [  ],
+            "13": [ 1504 ],
+            "14": [ 1505 ],
+        },
+        
+        {
+            name: "King Neptune's Execution Site - Noah's Ark",
+            shortName: "Fishman Island 2",
+            thumb: 1562,
+            completion: '5x Rainbow Gems',
+            gamewith: 54695,
+            "01": [  ],
+            "02": [  ],
+            "03": [  ],
+            "04": [ 1560 ],
+            "05": [ 1558, 1561 ],
+            "06": [  ],
+            "07": [  ],
+            "08": [  ],
+            "09": [ 1557 ],
+            "10": [ 1558, 1560 ],
+            "11": [ 1561 ],
+            "12": [ 1556 ],
+            "13": [ 1559 ],
+            "14": [ 1505 ],
         },
         
     ],
@@ -617,6 +694,7 @@ window.drops = {
         {
             name: 'Princess Turtle\'s Dragon Palace',
             thumb: 595,
+            global: true,
             ' ': [ 110, 111, 112, 113, 114, 189, 190, 191, 192, 193, 591, 592, 593, 594, 595 ]
         },
 
@@ -665,6 +743,7 @@ window.drops = {
             name: 'Scissor Cavern, Inner Cave',
             day: 4,
             thumb: 304,
+            global: true,
             ' ': [ 89, 90, 91, 92, 93, 95, 96, 97, 98, 99, 300, 301, 302, 303, 304 ]
         },
         
@@ -672,6 +751,7 @@ window.drops = {
             name: 'Scissor Cavern, Deepest Parts',
             day: 4,
             thumb: 1180,
+            global: true,
             ' ': [ 89, 90, 91, 92, 93, 95, 96, 97, 98, 99, 300, 301, 302, 303, 304, 1180 ]
         },
 
@@ -690,7 +770,8 @@ window.drops = {
             thumb: 39,
             global: true,
             condition: "None",
-            Expert: [ 36, 37, 38, 99, 109, 114, -4 ],
+            gamewith: 6600,
+            Expert: [ 36, 37, 38, 99, 109, 114, -4, -1387 ],
             Elite: [ 36, 37, 38, 99, 109, 114, -3 ]
         },
 
@@ -699,7 +780,8 @@ window.drops = {
             thumb: 30,
             global: true,
             condition: "None",
-            Expert: [ 28, 29, 31, 40, 84, 95, 110, 117, -30, -21, -8 ],
+            gamewith: 7457,
+            Expert: [ 28, 29, 31, 40, 84, 95, 110, 117, -30, -21, -8, -1388 ],
             Elite: [ 28, 29, 31, 40, 95, 105, 110, -21, -7 ]
         },
 
@@ -708,7 +790,8 @@ window.drops = {
             thumb: 46,
             global: true,
             condition: "None",
-            Expert: [ 41, 42, 43, 45, -16 ],
+            gamewith: 7784,
+            Expert: [ 41, 42, 43, 45, -16, -1446 ],
             Elite: [ 41, 42, 43, 45, 96, 106, 111, -15 ]
         },
 
@@ -717,7 +800,8 @@ window.drops = {
             thumb: 66,
             global: true,
             condition: "None",
-            Expert: [ 61, 62, 63, 65, 89, 95, 105, 110, -12, -66 ],
+            gamewith: 5852,
+            Expert: [ 61, 62, 63, 65, 89, 95, 105, 110, -12, -66, -1389 ],
             Elite: [ 61, 62, 63, 65, 95, 105, 110, -11 ]
         },
 
@@ -726,8 +810,9 @@ window.drops = {
             thumb: 58,
             global: true,
             condition: "None",
+            gamewith: 8111,
             Expert: [ 98, 99, 108, 109, 113, 114, 53, 55, 57, -58, -20 ],
-            Elite: [ 98, 99, 108, 109, 113, 114, 53, 55, 57, -58, -20, -19 ]
+            Elite: [ 98, 99, 108, 109, 113, 114, 53, 55, 57, -58, -20, -1447, -19 ]
         },
 
         {
@@ -735,7 +820,8 @@ window.drops = {
             thumb: 228,
             global: true,
             condition: "None",
-            "All Difficulties": [ 33, 35, 84, 95, 105, 107, 110, 112, -228, -34, -26, -25, -24, -23, -22 ]
+            gamewith: 22603,
+            "All Difficulties": [ 33, 35, 84, 95, 105, 107, 110, 112, -228, -34, -26, -25, -24, -23, -22, -1448 ]
         },
 
         {
@@ -743,6 +829,7 @@ window.drops = {
             thumb: 232,
             global: true,
             condition: "None",
+            gamewith: 5853,
             challenge: 'High Score calculated with Crew Cost, Turns Taken and Tap Accuracy',
             challengeData: [['150,000','1x Blue Elder'],['450,000','1x ATK Cotton Candy'],['750,000','3x Rainbow Gems']],
             Expert: [ 43, 49, 79, 85, 96, 106, 231, -230, -229, -221, -208, -62, -54 ],
@@ -754,6 +841,7 @@ window.drops = {
             thumb: 263,
             global: true,
             condition: "None",
+            gamewith: 5777,
             challenge:'Total number of hits above 50,000',
             challengeData: [['5 Times','1x Yellow Elder'],['15 Times','1x ATK Cotton Candy'],['25 Times','3x Rainbow Gems']],
             "All Difficulties": [ 31, 33, 262, 264, 87, 88, 98, 99, 113, -265, -263, -225, -210, -64, -56, -32 ]
@@ -764,6 +852,7 @@ window.drops = {
             thumb: 268,
             global: true,
             condition: "None",
+            gamewith: 6725,
             challenge: 'Cumulative Damage dealt to enemies in a single run',
             challengeData: [['600,000 Damage','1x Green Elder'],['1,400,000 Damage','1y Rainbow Gem & 1x HP Cotton Candy'],['3,000,000 Damage','2x Rainbow Gems, 1x Forbidden Tome']],
             "All Difficulties": [ 67, 69, 86, 97, 112, -219, -212, -206, -204, -73, -52, -50 ]
@@ -774,6 +863,7 @@ window.drops = {
             thumb: 297,
             global: true,
             condition: "None",
+            gamewith: 9181,
             Expert: [ 99, 88, 114, 296, 298, 299, -236, -234, -223, -217, -202, -200, -199 ],
             Elite: [ 99, 88, 114, 296, 298, 299, -236, -234, -223, -202, -200 ]
         },
@@ -782,6 +872,7 @@ window.drops = {
             name: 'Kalifa\'s Secret Assignment',
             thumb: 318,
             global: true,
+            gamewith: 6204,
             condition: 'You may only bring STR units into this island',
             "All Difficulties": [ 86, 97, 110, 112, 317, 319, -259, -253, -216, -215, -62, -56 ]
         },
@@ -790,6 +881,7 @@ window.drops = {
             name: 'Lucci\'s Artisan Spirit',
             thumb: 322,
             global: true,
+            gamewith: 5776,
             condition: 'You may only bring DEX units for 15 and 30 Stamina',
             "All Difficulties": [ 85, 96, 111, 112, 321, 323, 325, -251, -218, -75, -74, -54, -21 ]
         },
@@ -798,6 +890,7 @@ window.drops = {
             name: 'Franky - Pervert\'s Aesthetic!',
             thumb: 337,
             global: true,
+            gamewith: 22596,
             condition: 'You may only bring INT units for 15 and 30 Stamina',
             challenge: 'Total Damage dealt to enemies in one turn',
             challengeData: [['150,000 Damage','1x Yellow Elder'],['400,000 Damage','1x ATK Cotton Candy'],['800,000 Damage','3x Rainbow Gems']],
@@ -809,6 +902,7 @@ window.drops = {
             name: 'Deep Sea Kraken',
             thumb: 341,
             global: true,
+            gamewith: 26802,
             condition: 'You may only bring QCK units for 15 and 30 Stamina',
             challenge: 'High Score calculated with Crew Cost, Turns Taken and Tap Accuracy',
             challengeData: [['200,000 Points','1x Red Elder'],['400,000 Points','1x HP Cotton Candy'],['700,000 Points','3x Rainbow Gems']],
@@ -819,42 +913,47 @@ window.drops = {
             name: 'Dr. Hogback\'s Lab of the Dead',
             thumb: 386,
             global: true,
+            gamewith: 25982,
             condition: 'You may only bring PSY units for 15 and 30 Stamina',
             challenge: 'High Score calculated with Crew Cost, Turns Taken and Tap Accuracy',
             challengeData: [['10,000 Points','1x Black Elder'],['40,000 Points','1x Rainbow Gem, 1x ATK Cotton Candy'],['70,000 Points','2x Rainbow Gems, 1x Defence Boost Forbidden Tome']],
-            "All Difficulties": [ 385, 387, -388, -335, -314, -36, -16, -11 ]
+            "All Difficulties": [ 385, 387, -388, -335, -314, -36, -16, -1446, -11 ]
         },
 
         {
             name: 'Perona\'s Worden Garden',
             thumb: 392,
             global: true,
+            gamewith: 7767,
             condition: 'You can only get STR, QCK, INT and Food Orbs',
             challenge: 'Total number of hits over 50,000',
             challengeData: [['3 Times','1x Green Elder'],['12 Times','1x RCV Cotton Candy'],['25 Times','3x Rainbow Gems']],
-            "All Difficulties": [ 391, 393, 394, -394, -393, -329, -316, -47, -34, -4 ]
+            "All Difficulties": [ 391, 393, 394, -394, -393, -329, -316, -47, -34, -4, -1387 ]
         },
 
         {
             name: 'Perv-salom\'s Manly Adventure',
             thumb: 405,
             global: true,
+            gamewith: 6332,
             condition: 'You can only get QCK, DEX, PSY and Food Orbs',
-            "All Difficulties": [ 404, 406, 407, -407, -406, -333, -312, -208, -26, -20 ]
+            "All Difficulties": [ 404, 406, 407, -407, -406, -333, -312, -208, -26, -20, -1447 ]
         },
 
         {
             name: 'Rising Sun, Rising Fortunes',
             thumb: 420,
             global: true,
+            gamewith: null,
             condition: "None",
-            "All Difficulties": [ 36, 37, 47, 48, 49, 50, 51, 59, 63, 211, 233, 420, 421, 422, -422, -332, -308, -225, -206, -204, -8 ]
+            "All Difficulties": [ 36, 37, 47, 48, 49, 50, 51, 59, 63, 211, 233, 420, 421, 422, -422, -332, -308, -225, -206, -204, -8, -1388 ]
         },
 
         {
             name: 'Adrift!? Humming Brook',
             thumb: 424,
             global: true,
+            gamewith: 7161,
             condition: 'You can only get STR, DEX, INT and PSY Orbs',
             challenge: 'Cumulative Damage dealt to enemies in a single run',
             challengeData: [['500,000 Damage','1x Black Elder'],['1,500,000 Damage','1x ATK Cotton Candy'],['3,000,000 Damage','3x Rainbow Gems']],
@@ -865,6 +964,7 @@ window.drops = {
             name: 'Maiden in Love - First Sight',
             thumb: 436,
             global: true,
+            gamewith: 7785,
             challenge: 'Damage dealt in a single Round',
             challengeData: [['350,000','1x Black Elder'], ['900,000','1x HP Cotton Candy'], ['2,000,000','3x Rainbow Gems']],
             condition: 'Each non-Okama in your Team will take 60 Damage each turn',
@@ -875,6 +975,7 @@ window.drops = {
             name: 'Supersonic Duck Squadron!',
             thumb: 445,
             global: true,
+            gamewith: 7556,
             condition: 'Higher Chance of Food orbs',
             challenge: 'Cumulative Damage dealt to enemies in a single run',
             challengeData: [['450,000 Damage','1x Yellow Elder'],['1,250,000 Damage','1x RCV Cotton Candy'],['3,000,000 Damage','3x Rainbow Gems']],
@@ -885,6 +986,7 @@ window.drops = {
             name: 'Prison Break! Baroque Works',
             thumb: 462,
             global: true,
+            gamewith: 5924,
             condition: '30: Non-Fighter, Evolver, or Booster class characters are weakend; 15: Striker and Slasher class characters are weakened (Note: Multi-class characters such as Fighter / Powerhouse are not affected)',
             challenge: 'Damage dealt in a single Round',
             challengeData: [['???','1x ??? Elder'], ['???','1x ?? Cotton Candy'], ['???','3x Rainbow Gems']],
@@ -895,6 +997,7 @@ window.drops = {
             name: 'Crocodile: Life on the Inside',
             thumb: 510,
             global: true,
+            gamewith: 5784,
             condition: '30: Non-Striker, Evolver, or Booster class characters are weakend; 15: Fighter and Shooter class characters are weakened (Note: Multi-class characters such as Striker / Slasher are not affected)',
             challenge: 'Total Damage dealt to enemies in one turn',
             challengeData: [['120,000 Damage','1x Blue Elder'],['600,000 Damage','1x HP Cotton Candy, 1x Rainbow Gem'],['2,500,000 Damage','1x Cooldown Reduction Forbidden Tome, 2x Rainbow Gems']],
@@ -905,16 +1008,18 @@ window.drops = {
             name: 'Jailer Domino\' Special Guard',
             thumb: 538,
             global: true,
+            gamewith: 7565,
             condition: '30: Non-Shooter, Evolver, or Booster class characters are weakend; 15: Fighter and Slasher class characters are weakened',
             challenge: 'Cumulative Damage dealt to enemies in a single run',
             challengeData: [['600,000 Damage','1x Yellow Elder'],['2,000,000 Damage','1x HP Cotton Candy, 1x Rainbow Gem'],['5,000,000 Damage','1x Matching Orb Forbidden Tome, 2x Rainbow Gems']],
-            "All Difficulties": [ 537, 539, 540, -539, -428, -416, -365, -257, -59 ]
+            "All Difficulties": [ 537, 539, 540, -539, -428, -416, -365, -257, -59, -1445 ]
         },
 
         {
             name: 'Chief Jailer Sadie: Cruel and Unusual',
             thumb: 550,
             global: true,
+            gamewith: 6225,
             condition: '30: Non-Slasher, Evolver, or Booster class characters are weakend; 15: Striker and Shooter class characters are weakened',
             challenge: 'Cumulative Damage dealt to enemies in a single run',
             challengeData: [['600,000 Damage','1x Black Elder'],['2,000,000 Damage','1x ATK Cotton Candy, 1x Rainbow Gem'],['5,000,000 Damage','1x Defence Boost Forbidden Tome, 2x Rainbow Gems']],
@@ -925,6 +1030,7 @@ window.drops = {
             name: 'Brother Soul! Afro Luffy!',
             thumb: 571,
             global: true,
+            gamewith: 5857,
             challenge: 'Total number of hits over 50,000',
             challengeData: [['3 Times','1x Red Elder'],['12 Times','1x RCV Cotton Candy'],['34 Times','3x Rainbow Gems & 1x Forbidden Tome']],
             "All Difficulties": [ 570, 572, 573, -431, -429, -410, -333, -332, -327, -316, -75 ]
@@ -934,6 +1040,7 @@ window.drops = {
             name: 'Warriors of Shandia! Dreams of a Homeland!',
             thumb: 583,
             global: true,
+            gamewith: 25677,
             condition: 'All Units considered from the “Sea” will lose 20% to all stats',
             challenge: 'Total number of hits over 50,000',
             challengeData: [['4 Times','1x Black Elder'],['16 Times','1x ATK Cotton Candy'],['38 Times','3x Rainbow Gems']],
@@ -944,6 +1051,7 @@ window.drops = {
             name: 'Pirate Apprentices! Shanks and Buggy',
             thumb: 599,
             global: true,
+            gamewith: 6333,
             condition: 'You cannot use any two units that are the same',
             Expert: [ 598, 600, -504, -467, -463, -414, -372, -332, -310, -77 ],
             Elite: [ 598, 600, -467, -463, -414, -372, -332, -310, -77 ]
@@ -953,6 +1061,7 @@ window.drops = {
             name: 'Raging Cook! Red Leg Zeff',
             thumb: 607,
             global: true,
+            gamewith: 26093,
             condition: 'You cannot use any two units that are the same',
             "All Difficulties": [ 606, 608, 609, -502, -457, -449, -312, -52, -50 ]
         },
@@ -961,6 +1070,7 @@ window.drops = {
             name: 'Camie and Hachi\'s Takoyaki Shop!',
             thumb: 635,
             global: true,
+            gamewith: 9782,
             condition: 'No Units above the cost of 49 is allowed',
             challenge: 'Total number of hits over 50,000',
             challengeData: [['4 Times','1x Blue Elder'],['8 Times','1x Rainbow Gem, 1x HP Cotton Candy'],['22 Times','2x Rainbow Gems, 1x Orb Matching Forbidden Tome']],
@@ -971,6 +1081,7 @@ window.drops = {
             name: 'Shark Attack! Arlong Pirates',
             thumb: 656,
             global: true,
+            gamewith: 8739,
             condition: 'You can only get STR, QCK, DEX, PSY and INT orbs',
             "All Difficulties": [ 655, 657, 658, -658, -500, -465, -455, -453, -398, -357, -60 ]
         },
@@ -979,6 +1090,7 @@ window.drops = {
             name: 'Fight! Sand-Sand Band!!',
             thumb: 664,
             global: true,
+            gamewith: 5504,
             condition: 'Heatwave causes damage every 2 turns',
             "Japan": [ 663, 665, 667, -667, -522, -508, -506, -459, -378, -221, -73, -1117 ],
             "Global": [ 663, 665, 667, -667, -639, -508, -506, -459, -378, -221, -73 ]
@@ -988,6 +1100,7 @@ window.drops = {
             name: 'Led by the Light of Shandora! Calgara & Noland!',
             thumb: 688,
             global: true,
+            gamewith: 5352,
             condition: 'Bomb orbs appear',
             "Japan": [ 687, 689, -542, -524, -528, -429, -428, -402, -365, -218, -1119, -1177 ],
             "Global": [ 687, 689, -542, -645, -647, -429, -428, -402, -365, -218 ]
@@ -997,6 +1110,7 @@ window.drops = {
             name: "Sky Night Ganfor",
             thumb: 713,
             global: true,
+            gamewith: 5882,
             condition: '30: Non-Free Spirit, Evolver, or Booster class characters are weakend; 15: Striker and Shooter class characters are weakened',
             challenge: 'Cumulative Damage dealt to enemies in a single run',
             challengeData: [['600,000','1x Blue Elder'],['2,000,000','1x RCV Cotton Candy, 1x Rainbow Gem'],['5,000,000','1x Lock Resistance Forbidden Tome, 2x Rainbow Gems']],
@@ -1008,6 +1122,7 @@ window.drops = {
             name: "T-Bone's Absolute Justice",
             thumb: 724,
             global: true,
+            gamewith: 5451,
             condition: 'You can only bring INT, PSY and QCK units',
             "Japan": [ 721, 723, -590, -564, -563, -530, -526, -384, -361, -219, -1173 ],
             "Global": [ 721, 723, -590, -564, -563, -530, -641, -384, -361, -219 ]
@@ -1017,6 +1132,7 @@ window.drops = {
             name: "Explosive! Wanze's Ramen Kenpo!!",
             thumb: 743,
             global: true,
+            gamewith: 7031,
             condition: 'You can only bring STR, QCK and DEX units',
             "Japan": [ 740, 742, -560, -558, -586, -567, -566, -412, -225, -18, -1208, -1212 ],
             "Global": [ 740, 742, -671, -673, -586, -567, -566, -412, -225, -18 ]
@@ -1026,15 +1142,17 @@ window.drops = {
             name: "Twilight Party DEAD or TREAT!!",
             thumb: 761,
             global: true,
+            gamewith: 25120,
             condition: "None",
             "Japan": [ 761, 762, 763, 764, 765, -610, -588, -565, -556, -426, -408, -261, -217, -1210, -1413 ],
-            "Global": [ 761, 762, 763, 764, 765, -426, -408, -332, -308, -292, -261, -217, -8, -1413 ]
+            "Global": [ 761, 762, 763, 764, 765, -426, -408, -332, -308, -292, -261, -217, -8, -1413, -1388 ]
         },
 
         {
             name: "Midnight Party DEAD or TREAT!!",
             thumb: 766,
             global: true,
+            gamewith: 25101,
             condition: "None",
             "Japan": [ 762, 766, 767, 768, 769, -629, -611, -569, -554, -431, -410, -367, -223, -1175 ],
             "Global": [ 762, 766, 767, 768, 769, -431, -367, -291, -253, -251, -223, -212, -75 ]
@@ -1044,6 +1162,7 @@ window.drops = {
             name: "Evil Manager Breed's Marine Circus!",
             thumb: 797,
             global: true,
+            gamewith: 2191,
             condition: 'You can only bring Fighter and Powerhouse units',
             challenge: 'High Score calculated with Crew Cost, Turns Taken and Tap Accuracy',
             challengeData: [['100,000','1x Purple Elder'],['400,000','1x RCV Candy, 1x Rainbow Gem'],['750,000','1x Auto-Heal Skullbook, 2x Rainbow Gem']],
@@ -1055,15 +1174,17 @@ window.drops = {
             name: "Nami and Lola's Great Proposal Plan",
             thumb: 808,
             global: true,
+            gamewith: 19169,
             condition: 'You can only bring Slasher and Cerebral units. (No Evolution/Booster)',
-            "Japan": [ 807, 809, 811, -811, -645, -641, -631, -502, -11, -12, -9 ],
-            "Global": [ 807, 809, 811, -811, -760, -675, -631, -502, -11, -12, -9 ],
+            "Japan": [ 807, 809, 811, 17, 404, -811, -645, -641, -631, -502, -11, -12, -9, -1389 ],
+            "Global": [ 807, 809, 811, 17, 404, -811, -760, -675, -631, -502, -11, -12, -9, -1389 ],
         },
 
         {
             name: "Legendary Shipbuilding Company Tom's Workers",
             thumb: 848,
             global: true,
+            gamewith: 19832,
             condition: 'You can only bring Impact and Free Spirit units. (No Evo/Boosters)',
             challenge: 'Total Damage dealt to enemies in one turn',
             challengeData: [['100,000 Damage','1x DEX Elder Turtle'],['500,000 Damage','1x Rainbow Gem, 1x ATK Cotton Candy'],['2,000,000 Damage','2x Rainbow Gems, 1x Auto-Heal Forbidden Tome']],
@@ -1075,47 +1196,55 @@ window.drops = {
             name: "Wapol's Counterattack",
             thumb: 852,
             global: true,
+            gamewith: 20412,
             condition: 'You can only bring Shooter and Driven units. (No Evo/Boosters)',
             challenge: 'Cumulative Damage dealt to enemies in a single run',
             challengeData: [['400,000 Damage','1x QCK Elder Turtle'],['1,400,000 Damage','1x ATK Cotton Candy, 1x Rainbow Gem'],['4,000,000 Damage','2x Rainbow Gems, 1x Despair Resistance Forbidden Tome']],
-            "All Difficulties": [ 328, 330, 331, 333, 851, 853, 854, -854, -649, -643, -614, -463, -457, -327, -22 ]
+            "Japan": [ 328, 330, 331, 333, 851, 853, 854, -854, -649, -643, -614, -463, -457, -327, -22, -1448 ],
+            "Global": [ 328, 330, 331, 333, 851, 853, 854, -854, -649, -754, -614, -463, -457, -327, -22, -1448 ]
         },
 
         {
             name: "Lightning Speed! Strawhat Crew's Surprise Visit",
             thumb: 866,
+            gamewith: 21530,
             condition: "None",
             challenge:'Total number of hits above 50,000',
             challengeData: [['4 Times','1x INT Elder'],['9 Times','1x ATK Cotton Candy, 1x Rainbow Gem'],['22 Times','1x Despair Resistance Forbidden Tome, 2x Rainbow Gems']],
-            "All Difficulties": [ 41, 42, 53, 235, 395, 397, 419, 426, 427, 432, 563, 564, 866, 867, 868, -709, -673, -671, -633, -500, -467, -465, -451, -431 ]
+            "All Difficulties": [ 41, 42, 53, 235, 395, 397, 419, 426, 427, 432, 563, 564, 866, 867, 868, -709, -1549, -673, -671, -633, -500, -467, -465, -451, -431 ]
         },
 
         {
             name: "Riverside Banquet! Enter the Crazy Ones!",
             thumb: 885,
+            gamewith: 22421,
             condition: 'Highly increased chance of TND, Bomb, and G orbs',
-            "All Difficulties": [ 885, 886, 887, -887, -704, -703, -677, -675, -504, -453, -416 ]
+            "All Difficulties": [ 885, 886, 887, -887, -704, -703, -677, -675, -504, -453, -416, -1445 ]
         },
 
         {
             name: "Mountaintop Banquet! Enter the Generals!",
             thumb: 897,
+            gamewith: 23047,
             condition: 'Only STR/DEX/QCK/PSY/INT orbs will appear',
-            "All Difficulties": [ 897, 898, 899, -899, -754, -702, -701, -669, -528, -466, -449, -464, -1177 ]
+            "All Difficulties": [ 897, 898, 899, -899, -754, -702, -701, -669, -1492, -528, -466, -449, -464, -1177 ]
         },
 
         {
             name: "Men are Forbidden!? The Secret Flower Garden",
             thumb: 918,
             global: true,
+            gamewith: 23687,
             condition: 'You can only bring DEX units',
-            "All Difficulties": [ 917, 919, 920, -920, -791, -756, -720, -706, -705, -542, -541, -522, -1117 ]
+            "Japan": [ 917, 919, 920, -920, -791, -756, -720, -707, -705, -542, -541, -522, -1117 ],
+            "Global": [ 917, 919, 920, -920, -506, -756, -720, -707, -705, -542, -541, -522, -1117 ]
         },
         
         {
             name: "Hannyabal's Great Ambition",
             thumb: 929,
             global: true,
+            gamewith: 24198,
             condition: 'You can only bring STR units',
             "All Difficulties": [ 928, 930, 931, -752, -758, -520, -729, -733, -787, -930, -544, -506, -1115 ]
         },
@@ -1124,6 +1253,7 @@ window.drops = {
             name: "Encounter! Whitebeard Pirates",
             thumb: 946,
             global: true,
+            gamewith: 25000,
             condition: "You can only bring PSY units",
             "Japan": [ 946, 947, 948, 949, -718, -750, -760, -526, -793, -735, -546, -738, -1173 ],
             "Global": [ 946, 947, 948, 949, -718, -524, -1119, -528, -1177, -526, -793, -735, -546, -738, -1173 ]
@@ -1133,6 +1263,7 @@ window.drops = {
             name: "Clash! Whitebeard Pirates",
             thumb: 979,
             global: true,
+            gamewith: 25750,
             condition: "You can only bring INT units",
             challenge: 'High Score calculated with Crew Cost, Turns Taken and Tap Accuracy',
             challengeData: [['150,000','1x Blue Elder'],['420,000','1x HP Cotton Candy, 1x Rainbow Gem'],['700,000','2x Rainbow Gems, 1x Orb Forbidden Tome']],
@@ -1144,6 +1275,8 @@ window.drops = {
             name: "Let's Find Our Captain! Heart Pirates!",
             condition: "You can only bring QCK units",
             thumb: 1003,
+            global: true,
+            gamewith: 26908,
             "All Difficulties": [ 1002, 1004, 1005, -748, -844, -558, -846, -737, -1006, -785, -564, -1208 ]
         },
         
@@ -1152,13 +1285,16 @@ window.drops = {
             thumb: 1011,
             condition: "None",
             global: true,
-            "Global": [ 1010, 1012, 1013, 1014, -1014, -530, -840, -671, -880, -739, -812, -565 ],
-            "Japan": [ 1010, 1012, 1013, 1014, -1014, -530, -840, -560, -880, -739, -812, -565, -1212 ]
+            gamewith: 27631,
+            "Global": [ 1010, 1012, 1013, 1014, -1014, -530, -840, -671, -880, -739, -1550, -812, -565 ],
+            "Japan": [ 1010, 1012, 1013, 1014, -1014, -530, -840, -560, -880, -739, -1550, -812, -565, -1212 ]
         },
         
         {
             name: "Temptation!? The Queen of Kamabakka Queendom!",
             thumb: 1037,
+            global: true,
+            gamewith: 29442,
             condition: "Only DEX/RCV/TND orbs will appear",
             "All Dificulties": [ 1036, 1038, -874, -876, -878, -554, -813, -814, -566, -1175 ]
         },
@@ -1166,6 +1302,8 @@ window.drops = {
         {
             name: "The One Who Seeks the Truth of History: Archaeologist Nico Olvia",
             thumb: 1049,
+            global: true,
+            gamewith: 29912,
             condition: "Only TND/RCV/INT orbs will appear",
             "All Difficulties": [ 1048, 1050, 1052, -556, -567, -586, -614, -816, -870, -872, -908, -1210 ]
         },
@@ -1174,6 +1312,7 @@ window.drops = {
             name: "Pirate Ship Competition! \"Dead End\" Opens!",
             thumb: 1072,
             global: true,
+            gamewith: 30767,
             //OLD condition: "STR/DEX/QCK units get their ATK boosted by 1.6x and their HP reduced by 90%. INT/PSY units get their ATK reduced by 80% and their HP boosted by 2.0x",
             condition: "STR/DEX/QCK units get their ATK boosted by 1.6x. INT/PSY units get their HP boosted by 2.0x",
             "All Difficulties": [ 1069, 1071, 1073, -562, -906, -914, -645, -890, -587, -629, -888, -1070]
@@ -1183,6 +1322,7 @@ window.drops = {
             name: "Dr. Indigo & Scarlet!",
             thumb: 1095,
             global: true,
+            gamewith: 33039,
             //OLD condition: "Boosts ATK of Driven and Powerhouse characters by 2x, other classes get .5x ATK. Boosts HP of Slasher and Fighter characters by 2x, other classes get .5x HP. (This STACKS for characters with multiple classes)",
             condition: "Boosts ATK of Driven characters by 2x and boosts HP for Powerhouse characters by 2x.",
             "All Difficulties": [ 1094, 1096, 1098, -649, -910, -647, -891, -590, -611, -893, -1098, -912]
@@ -1192,6 +1332,7 @@ window.drops = {
             name: "Robin and Nami's Secret Undercover Investigation",
             thumb: 1112,
             global: true,
+            gamewith: 33849,
             condition: "Boosts ATK of Cerebral and Free Spirit characters by 2x, other classes get .5x ATK. Boosts HP of Striker and Shooter characters by 2x, other classes get .5x HP. (This STACKS for characters with multiple classes)",
             "All Difficulties": [ 1109, 1111, 1113, -23, -628, -639, -641, -892, -937, -939, -941 ]
         },
@@ -1199,6 +1340,8 @@ window.drops = {
         {
             name: "Behind the Scenes Intelligency Agency, CP9",
             thumb: 1137,
+            global: true,
+            gamewith: 34515,
             condition: "Only [STR], [QCK], [DEX], [INT], and [PSY] orbs appear",
             "All Difficulties": [ 1136, 1137, 1138, 1139, -935, -643, -673, -894, -943, -995, -615, -705, -704 ]
         },
@@ -1207,6 +1350,7 @@ window.drops = {
             name: "Welcome To The Gran Tesoro!",
             thumb: 1167,
             global: true,
+            gamewith: 35095,
             condition: "None",
             "All Difficulties": [ 1166, 1168, 1170, -578, -999, -991, -993, -675, -508, -616, -703, -1121 ]
         },
@@ -1214,13 +1358,17 @@ window.drops = {
         {
             name: "Rumbar Pirates!",
             thumb: 1203,
+            global: true,
+            gamewith: 35905,
             condition: "'Musical' units get their stats boosted by 1.5x (Dancers, Singers, Playing an instrument, etc)",
-            "All Difficulties": [ 1202, 1204, 1206, -1001, -997, -1207, -677, -896, -631, -954, -1206, -617, -1027 ]
+            "All Difficulties": [ 1202, 1204, 1206, -1001, -997, -558, -1208, -677, -896, -1551, -631, -954, -1206, -617, -1027 ]
         },
         
         {
             name: "World Pirates!",
             thumb: 1215,
+            global: true,
+            gamewith: 36738,
             condition: "Total Crew Cost must be lower than 180 (Including friend captain)",
             "All Difficulties": [ 1215, 1216, 1217, 1218, -1025, -1029, -1033, -671, -956, -964, -633, -504, -1218 ]
         },
@@ -1228,6 +1376,8 @@ window.drops = {
         {
             name: "Revolutionary Armed Forces!",
             thumb: 1242,
+            global: true,
+            gamewith: 37425,
             condition: "Free Spirit Characters have their cooldowns reduced by 10 turns at the start of the fight",
             "All Difficulties": [ 1241, 1243, -1035, -965, -1031, -1081, -754, -966, -502, -707, -955 ]
         },
@@ -1235,13 +1385,17 @@ window.drops = {
         {
             name: "Gather! Whitebeard Alliance",
             thumb: 1254,
+            global: true,
+            gamewith: 38336,
             condition: "Driven Characters have their cooldowns reduced by 10 turns at the start of the fight",
-            "All Difficulties": [ 1254, 1255, 1256, -669, -1077, -1079, -967, -972, -974, -750, -701, -500 ]
+            "All Difficulties": [ 1254, 1255, 1256, -669, -1492, -1077, -1079, -967, -972, -974, -750, -701, -500 ]
         },
         
         {
             name: "Young Donquixote Pirates - Baby 5 And Buffalo",
             thumb: 1287,
+            global: true,
+            gamewith: 39522,
             condition: "Child-like characters get their ATK and HP boosted by 3.5x, RCV by 1.5x, and cooldowns reduced by 7 turns at the start of the fight",
             "All Difficulties": [ 1286, 1288, 1290, -963, -1045, -251, -760, -1083, -1129, -506, -1062, -702 ]
         },
@@ -1249,6 +1403,7 @@ window.drops = {
         {
             name: "Jailbreak Battle! Mr. 3 and Buggy",
             thumb: 1304,
+            gamewith: 41928,
             condition: "Shooter and Fighter characters are Silenced for 99 turns and have their ATK reduced by a variable amount. (75% on 30 stamina)",
             "All Difficulties": [ 1301, 1303, 1152, 1151, 551, 539, -718, -752, -1125, -1133, -15, -203, -733, -1056, -1060 ]
         },
@@ -1256,13 +1411,15 @@ window.drops = {
         {
             name: "Tontatta Kingdom Island Part 1: Leo",
             thumb: 1328,
+            gamewith: 44164,
             condition: "Slasher characters are Silenced for 99 turns and have their ATK reduced by a variable amount. (75% on 30 stamina)",
-            "All Difficulties": [ 1327, 1329, 1330, -1085, -1127, -1131, -1058, -758, -760, -735, -4, -508 ]
+            "All Difficulties": [ 1327, 1329, 1330, -1085, -1127, -1131, -1058, -758, -760, -735, -4, -508, -1387 ]
         },
         
         {
             name: "Tontatta Kingdom Island Part 2: Mansherry",
             thumb: 1332,
+            gamewith: 44747,
             condition: "Striker characters are Silenced for 99 turns and have their ATK reduced by a variable amount. (70% on 30 stamina)",
             "All Difficulties": [ 1331, 1333, 1334, -720, -1186, -1190, -756, -1188, -1151, -1153, -738 ]
         },
@@ -1270,18 +1427,21 @@ window.drops = {
         {
             name: "Big Mom Pirates!",
             thumb: 1357,
-            "All Difficulties": [ 1356, 1358, -1123, -1184, -1182, -1152, -1157, -8, -840, -736, -610 ]
+            gamewith: 45801,
+            "All Difficulties": [ 1356, 1358, -1123, -1184, -1182, -1152, -1157, -8, -840, -736, -610, -1388 ]
         },
         
         {
             name: "Soldier-san's Training!",
             thumb: 1384,
-            "All Difficulties": [ 1383, 1385, -748, -1234, -1075, -1230, -1155, -1154, -846, -842, -739 ]
+            gamewith: 46658,
+            "All Difficulties": [ 1383, 1385, -748, -1234, -1075, -1230, -1155, -1154, -846, -842, -739, -1550 ]
         },
         
         {
             name: "Shambles! Tashigi and Smoker?!?",
             thumb: 1397,
+            gamewith: 47247,
             condition: "Your captain will be switched with your middle right character when you encounter Law.",
             "All Difficulties": [ 1396, 1398, -1192, -1232, -1238, -844, -838, -1159, -1389, -12, -737, -257 ]
         },
@@ -1289,22 +1449,85 @@ window.drops = {
         {
             name: "Marines! Sengoku the Fleet Admiral!",
             thumb: 1416,
+            gamewith: 48079,
             condition: "You can only bring INT units",
             "All Difficulties": [ 1415, 1417, 1418, -1418, -870, -1276, -1274, -1236, -874, -253, -1223, -813 ]
         },
         
         {
-            name: "Happo Navy! The 13th Leader Appears!",
+            name: "Chinjao Family! The 13th Leader Appears!",
             thumb: 1426,
+            gamewith: 49862,
             condition: "You can only bring DEX units",
             "All Difficulties": [ 1425, 1427, 1428, -1240, -1272, -1270, -1227, -1224, -872, -878, -255, -812 ]
         },
         
         {
-            name: "Protect Violet-Chan!!",
-            thumb: null,
-            //condition: "You can only bring DEX units",
-            "All Difficulties": [ -935, -1278, -1378, -1324, -880, -876, -259, -1226, -814 ]
+            name: "Fugitive of Love and Passion!!",
+            thumb: 1450,
+            gamewith: 50895,
+            condition: "You can only bring STR units",
+            "All Difficulties": [ 1449, 1451, -935, -1278, -1318, -1324, -880, -876, -259, -1226, -814 ]
+        },
+        
+        {
+            name: "Gatekeeper of the New World! Stop the Rookies!",
+            thumb: 1469,
+            gamewith: 51926,
+            condition: "You can only bring QCK units",
+            "All Difficulties": [ 1468, 1470, 1471, -1268, -1322, -1228, -906, -914, -310, -1061, -1470, -1320 ]
+        },
+        
+        {
+            name: "Exit! Whitebeard Pirates",
+            thumb: 1509,
+            gamewith: 52629,
+            condition: "You can only bring PSY units",
+            "All Difficulties": [ 1509, 1510, 1511, 1512, -1001, -1316, -1280, -314, -908, -16, -1446, -1370, -1368, -816 ],
+        },
+        
+        {
+            name: "Dadan Family! Encounter with the Mountain Bandits",
+            thumb: 1520,
+            gamewith: 53569,
+            "All Difficulties": [ 1519, 1521, 1522, -1314, -1366, -1364, -912, -937, -316, -1281, -891, -22, -1448 ],
+        },
+        
+        {
+            name: "Soul King! Farewell Tour Concert",
+            thumb: 1547,
+            gamewith: 54302,
+            condition: "Strawhat Pirates get ATK, HP, and RCV boosted by 1.5x and reduces cooldown of specials by 9 turns at the start of the fight",
+            "All Difficulties": [ 1546, 1548, -1035, -1410, -1406, -939, -943, -312, -1279, -1282, -1447, -20 ],
+        },
+        
+        {
+            name: "Prodence Kingdom!",
+            thumb: 1564,
+            gamewith: 55145,
+            condition: "Elizabello will kill you with one punch",
+            "All Difficulties": [ 1563, 1565, -1362, -1408, -1412, -941, -991, -308, -1283, -892, -1549, -709 ],
+        },
+        
+        {
+            name: "Punk Hazard!",
+            thumb: 1581,
+            gamewith: 56038,
+            "All Difficulties": [ 1580, 1582, -1391, -1444, -1436, -1551, -896, -910, -357, -995, -890, -1342 ],
+        },
+        
+        {
+            name: "Fishman Island! The Royal Family!",
+            thumb: 1597,
+            gamewith: 57039,
+            "All Difficulties": [ 1596, 1598, 1599, -1045, -359, -999, -1033, -1550, -739, -1438, -1440, -893, -1343 ],
+        },
+        
+        {
+            name: "Blackbeard Pirates!",
+            thumb: 1606,
+            gamewith: 57820,
+            "All Difficulties": [ 1606, 1607, 1608, -1404, -1593, -1481, -1442, -1029, -361, -363, -997, -894, -1344 ],
         },
         
     ],
@@ -1316,6 +1539,7 @@ window.drops = {
             name: 'Clash!! Mihawk',
             thumb: 227,
             global: true,
+            gamewith: 4142,
             Master: [ 86, 112, 118, 226 ],
             Expert: [ 97, 112, 226 ]
         },
@@ -1324,6 +1548,7 @@ window.drops = {
             name: 'Clash!! Chopper\'s Rampage',
             thumb: 249,
             global: true,
+            gamewith: 5210,
             Master: [ 84, 110, 118, 248 ],
             Expert: [ 84, 110, 248 ]
         },
@@ -1332,6 +1557,7 @@ window.drops = {
             name: 'Clash!! Vice-Admiral Garp',
             thumb: 306,
             global: true,
+            gamewith: 5905,
             Master: [ 113, 118, 262, 264, 305 ],
         },
 
@@ -1339,6 +1565,7 @@ window.drops = {
             name: 'Clash!! Black Arm Zephyr',
             thumb: 353,
             global: true,
+            gamewith: 7293,
             Master: [ 88, 114, 118, 352, 354 ],
             Expert: [ 99, 114, 117, 352, 354 ]
         },
@@ -1347,6 +1574,7 @@ window.drops = {
             name: 'Clash!! Ivankov',
             thumb: 390,
             global: true,
+            gamewith: 8285,
             Master: [ 85, 111, 118, 389 ],
             Expert: [ 85, 96, 111, 389 ]
         },
@@ -1355,6 +1583,7 @@ window.drops = {
             name: 'Clash!! Doflamingo',
             thumb: 418,
             global: true,
+            gamewith: 9037,
             Ultimate: [ 86, 112, 118, 302, 417 ],
             Master: [ 86, 97, 112, 417 ]
         },
@@ -1363,6 +1592,7 @@ window.drops = {
             name: 'Clash!! Blackbeard',
             thumb: 447,
             global: true,
+            gamewith: 11051,
             Master: [ 84, 110, 118, 300, 446 ],
             Expert: [ 84, 110, 446 ]
         },
@@ -1372,13 +1602,15 @@ window.drops = {
             thumb: 518,
             showManual: true,
             global: true,
-            'Ultimate': [ 517, -15, -16, -223 ]
+            gamewith: 12014,
+            'Ultimate': [ 517, -15, -16, -1446, -223 ]
         },
 
         {
             name: 'Clash!! Heracles\'n',
             thumb: 516,
             global: true,
+            gamewith: 11958,
             Master: [ 87, 97, 113, 117, 118, 294, 295, 303, 429, 515 ],
             Expert: [ 87, 98, 113, 117, 293, 295, 429, 379, 515 ]
         },
@@ -1387,6 +1619,7 @@ window.drops = {
             name: 'Clash!! Aokiji',
             thumb: 575,
             global: true,
+            gamewith: 12792,
             Ultimate: [ 88, 114, 118, 304, 574 ],
             Master: [ 114, 118, 574 ]
         },
@@ -1395,6 +1628,8 @@ window.drops = {
             name: 'Clash!! Eneru',
             thumb: 603,
             global: true,
+            gamewith: 13682,
+            condition: "Take 300 damage per character in Environmental Lightning Damage every 3 turns",
             Ultimate: [ 85, 111, 118, 301, 602 ],
             Master: [ 85, 111, 118, 602 ] ,
             Expert: [ 111, 118, 602 ]
@@ -1404,6 +1639,7 @@ window.drops = {
             name: 'Clash!! Duval',
             thumb: 654,
             global: true,
+            gamewith: 14747,
             Master: [ 112, 118, 302, 652 ],
             Expert: [ 86, 97, 112, 652 ]
         },
@@ -1412,6 +1648,7 @@ window.drops = {
             name: 'Clash!! Buster Call',
             thumb: 771,
             global: true,
+            gamewith: 17344,
             Master: [ 110, 111, 112, 113, 114, 770, 771, 772, 773, 774, 775 ],
             Expert: [ 110, 111, 112, 113, 114, 770, 771, 772, 773, 774, 775 ]
         },
@@ -1419,6 +1656,8 @@ window.drops = {
         {
             name: 'Clash!! Nightmare Luffy',
             thumb: 795,
+            gamewith: 18565,
+            condition: "Take 10% current Health in Environmental Damage every 2 turns",
             Master: [ 794 ],
             Expert: [ 794 ]
         },
@@ -1427,6 +1666,7 @@ window.drops = {
             name: 'Clash!! Tyrant Kuma',
             thumb: 836,
             global: true,
+            gamewith: 19424,
             Ultimate: [ 835 ],
             Master: [ 835 ]
         },
@@ -1435,6 +1675,7 @@ window.drops = {
             name: 'Clash!! Pirate Empress Hancock',
             thumb: 865,
             global: true,
+            gamewith: 21345,
             Ultimate: [ 864 ],
             Master: [ 864 ],
             Expert: [ 864 ]
@@ -1443,6 +1684,8 @@ window.drops = {
         {
             name: 'Clash!! Pica',
             thumb: 932,
+            global: true,
+            gamewith: 23507,
             Master: [ 932 ],
             Expert: [ 932 ]
         },
@@ -1450,6 +1693,8 @@ window.drops = {
         {
             name: 'Clash!! Kizaru',
             thumb: 978,
+            global: true,
+            gamewith: 25109,
             Ultimate: [ 977 ],
             Master: [ 977 ]
         },
@@ -1457,12 +1702,16 @@ window.drops = {
         {
             name: 'Clash!? Impostor Straw Hat Pirates',
             showManual: true,
+            global: true,
+            gamewith: 26803,
             thumb: 989,
-            Ultimate: [ 985, 986, 987, 988, -989, -4, -8, -11, -12, -15, -16, -556, -528, -520, -554, -558, -20, -217, -709, -1115, -1177, -1175, -1210, -1208 ]
+            Ultimate: [ 985, 986, 987, 988, -989, -4, -8, -11, -12, -15, -16, -1446, -556, -528, -520, -554, -558, -20, -1447, -217, -709, -1549, -1115, -1177, -1175, -1210, -1208, -1387, -1388, -1389 ]
         },
         
         {
             name: 'Clash!! Sabo',
+            global: true,
+            gamewith: 29788,
             thumb: 1047,
             Ultimate: [ 1046 ],
             Master: [ 1046 ],
@@ -1473,6 +1722,7 @@ window.drops = {
             name: 'Clash!! Shiki',
             thumb: 1108,
             global: true,
+            gamewith: 33648,
             Ultimate: [ 1107 ],
             Master: [ 1107 ],
             Expert: [ 1107 ]
@@ -1482,6 +1732,7 @@ window.drops = {
             name: 'Clash!! Gild Tesoro',
             thumb: 1163, 
             global: true,
+            gamewith: 35950,
             Master: [ 1162, 1164 ],
             Ultimate: [ 1162, 1164, 1180 ]
         },
@@ -1489,20 +1740,43 @@ window.drops = {
         {
             name: 'Clash!! Akainu',
             thumb: 1298,
+            global: true,
+            gamewith: 41277,
             Ultimate: [ 1297 ]
         },
+        
         {
             name: 'Clash!! Warden Magellan',
             thumb: 1374,
             condition: "Take 7% MAX Health in Environmental Damage",
+            gamewith: 45906,
             Master: [ 1373 ],
             Expert: [ 1373 ],
         },
+        
         {
             name: 'Clash!! Shogun Franky',
             thumb: 1432,
+            gamewith: 50030,
             Master: [ 1431, 215, 799 ],
             Ultimate: [ 1431, 215, 799 ],
+        },
+        
+        {
+            name: 'Clash!! Bellamy',
+            thumb: 1518,
+            gamewith: '%20%2053151',
+            Master: [ 1517 ],
+            Expert: [ 1517 ],
+        },
+        
+        {
+            name: 'Clash!! Fujitora',
+            thumb: 1595,
+            gamewith: 56946,
+            Ultimate: [ 1594 ],
+            Master: [ 1594 ],
+            Expert: [ 1594 ]
         },
 
     ],
@@ -1512,21 +1786,30 @@ window.drops = {
         {
             name: 'Chopper\'s Sweet Special Adventure',
             thumb: 247,
+            global: true,
             '': [ 247 ]
+        },
+
+        {
+            name: 'Ace Training Ground',
+            thumb: 1605,
+            "All Difficulties": [ 1604 ],
         },
 
         {
             name: 'Battle Royal! Oars',
             thumb: 893,
+            global: true,
             challenge:'Total number of hits above 50,000',
             challengeData: [['6 Times','1x Forbidden Tome + 1x Red Elder'],['14 Times','1x Forbidden Tome, 1x RCV Cotton Candy, 1x Rainbow Gem'],['32 Times','1x Bind Resistance Forbidden Tome, 2x Rainbow Gems']],
-            "All Difficulties": [ -367, -316, -314, -312, -308, -259, -257, -255, -253, -251, -221, -218, -217, -210, -75, -30, -16, -15, -8 ]
+            "All Difficulties": [ -367, -316, -314, -312, -308, -259, -257, -255, -253, -251, -221, -218, -217, -210, -75, -30, -16, -1446, -15, -8, -1388 ]
         },
 
         {
             name: 'Girls of Summer Paradise',
             thumb: 683,
             global: true,
+            gamewith: 15440,
             challenge: 'Total number of hits over 30,000',
             challengeData: [['Japan Rewards', ''],['10 Times','#686 Vivi\'s Breather Unit'],['35 Times','1x HP Cotton Candy'],['72 Times','3x Rainbow Gems'], ['Global Rewards', ''],['10 Times','1x Bind Resistance Forbidden Tome, 1x Despair Resistance Forbidden Tome, 1x Auto-Heal Forbidden Tome, 1x Rainbow Gem'],['35 Times','1x Red Elder Turtle, 1x Blue Elder Turtle, 1x Green Elder Turtle, 1x Yellow Elder Turtle, 1x Black Elder Turtle, 2x Rainbow Gems'],['72 Times','5x Rainbow Gems']],
             "All Difficulties": [ 659, 680, 682, 684, 1200, 1198 ]
@@ -1539,60 +1822,142 @@ window.drops = {
         },
         
         {
+            name: 'Valentines Day and White Day Characters',
+            thumb: 1463,
+            gamewith: 51651,
+            "Luffy": [ 1462, 29, 563, 1059, 345, 192, 113, 108, 115, 116, 117, 1180, 266, 94, 83 ],
+            "Chopper": [ 1464, 1155, 333, 728, 334, 1061, 346, 193, 109, 114, 115, 116, 117, 1180, 266, 94, 83 ],
+            "Sanji": [ 1507, 52, 207, 892, 343, 190, 111, 106, 115, 116, 117, 1180, 266, 94, 83 ],
+            "Brook": [ 1515, 954, 614, 379, 730, 342, 189, 110, 105, 115, 116, 117, 1180, 266, 94, 83 ],
+        },
+        
+        {
             name: '2nd Anniversary Celebration! Duel! Ace',
             thumb: 1023,
             "All Difficulties": [ 1023 ]
+        },
+        
+        {
+            name: '3nd Anniversary Celebration! Duel! Luffy',
+            thumb: 1600,
+            "30 Stamina": [ 1600 ]
         },
 
         {
             name: 'Coliseum',
             thumb: 779,
-            Exhibition: [ 776, 778, 803, 832, 834, 859, 861, 883, 902, 904, 925, 927, 952, 984, 1017, 1019, 1197, 1221, 1252, 1253, 1293, 1311, 1339, 1340, 1377, 1402, 1423, 1424 ],
-            Underground: [ 776, 778, 803, 832, 834, 859, 861, 883, 902, 904, 925, 927, 952, 984, 1017, 1019, 1197, 1221, 1252, 1253, 1293, 1311, 1339, 1340, 1377, 1402, 1423, 1424 ],
-            Chaos: [ 776, 778, 780, 803, 805, 830, 832, 834, 859, 861, 881, 883, 900, 902, 923, 925, 950, 982, 984, 1017, 1015, 1040, 1042, 1086, 1088, 1090, 1101, 1103, 1105, 1140, 1142, 1144, 1195, 1219, 1221, 1250, 1252, 1291, 1293, 1309, 1311, 1337, 1339, 1340, 1375, 1377, 1400, 1402, 1421, 1423 ]
+            global: true,
+            gamewith: 17473,
+            Exhibition: [ 776, 778, 803, 832, 834, 859, 861, 883, 902, 904, 925, 927, 952, 984, 1017, 1019, 1197, 1221, 1252, 1253, 1293, 1311, 1339, 1340, 1377, 1402, 1423, 1424, 1457, 1459, 1488, 1490, 1526, 1528, 1552, 1585, 1603 ],
+            Underground: [ 776, 778, 803, 832, 834, 859, 861, 883, 902, 904, 925, 927, 952, 984, 1017, 1019, 1197, 1221, 1252, 1253, 1293, 1311, 1339, 1340, 1377, 1402, 1423, 1424, 1457, 1459, 1488, 1490, 1526, 1528, 1552, 1585, 1603 ],
+            Chaos: [ 776, 778, 780, 803, 805, 830, 832, 834, 859, 861, 881, 883, 900, 902, 923, 925, 950, 982, 984, 1017, 1015, 1040, 1042, 1086, 1088, 1090, 1101, 1103, 1105, 1140, 1142, 1144, 1195, 1219, 1221, 1250, 1252, 1291, 1293, 1309, 1311, 1337, 1339, 1340, 1375, 1377, 1400, 1402, 1421, 1423, 1455, 1457, 1486, 1488, 1525, 1526, 1528, 1552, 1554, 1583, 1585, 1601, 1603 ]
         },
         
         {
             name: 'Rescue Ace Event - Akainu',
             thumb: 1283,
+            global: true,
             condition: "10, 20, 30, 35 stamina difficulty. 30 and 35 Stamina has a chance of dropping the Universal Skill Book.",
+            "Characters": [ 927, 296, 299, 773, 774, 1224 ],
+            "Boosters and Evolvers": [ 351, 193, 114, 266, 83, 118 ],
+            "Global": [ -261, -1413, -562, -720, -8, -1388, -219, -75, -255, -314, -316, -357, -410, -408, -449, -451, -455, -641, -643, -754, -760, -840, -880, -906, -910, -999, -554, -1175, -528, -1177, -560, -1212, -1245, -218, -22, -1448, -24, -204, -384, -504, -508, -785, -789 ],
             "Japan": [ -261, -562, -720, -748, -935, -1413 ]
         },
         
         {
             name: 'Rescue Ace Event - Aokiji',
             thumb: 1280,
+            global: true,
             condition: "10, 20, 30, 35 stamina difficulty. 30 and 35 Stamina has a chance of dropping the Universal Skill Book.",
-            "Japan": [ -416, -459, -530, -669, -578, -1121 ]
+            "Characters": [ 67, 69, 262, 264, 298 ],
+            "Boosters and Evolvers": [ 113, 192, 350, 266, 83, 118 ],
+            "Global": [ -416, -459, -530, -217, -004, -1387, -12, -221, -1389, -77, -210, -253, -259, -310, -312, -361, -363, -414, -453, -645, -647, -752, -756, -937, -939, -991, -520, -1115, -524, -1119, -558, -1208, -1245, -25, -202, -208, -206, -502, -787, -789, -739, -1550, -1445 ],
+            "Japan": [ -416, -459, -530, -669, -1492, -578, -1121, -1445 ]
         },
         
         {
             name: 'Rescue Ace Event - Kizaru',
             thumb: 1228,
+            global: true,
             condition: "10, 20, 30, 35 stamina difficulty. 30 and 35 Stamina has a chance of dropping the Universal Skill Book.",
+            "Characters": [ 968, 969, 970, 971, 972, 231, 775, 1223, 49, 43 ],
+            "Boosters and Evolvers": [ 112, 191, 349, 266, 83, 118 ],
+            "Global": [ -367, -649, -718, -16, -1446, -20, -1447, -73, -251, -257, -308, -359, -365, -412, -457, -639, -750, -758, -912, -914, -941, -993, -522, -1117, -526, -1173, -556, -1210, -1245, -223, -15, -23, -25, -200, -225, -546, -500, -506, -569, -791, -793 ],
             "Japan": [ -367, -649, -718, -870, -1001 ]
         },
         
         {
             name: 'Invasion! Young Whitebeard',
             thumb: 1258,
-            condition: "Has a chance of appearing at the end of ANY Raid boss. You MUST use the same team that you just used to complete the raid boss to fight Young Whitebeard.",
+            global: true,
+            gamewith: 38237,
+            condition: "Has a chance of appearing at the end of ANY Raid boss when available. You MUST use the same team that you just used to complete the raid boss to fight Young Whitebeard.",
             "All Difficulties": [ 1257 ]
         },
         
         {
             name: 'Invasion! Red Hair Shanks',
             thumb: 1380,
-            condition: "Has a chance of appearing at the end of ANY Chaos Coliseum boss. You MUST use the same team that you just used to complete the Coliseum boss to fight Shanks.",
-            "All Difficulties": [ 1379 ]
+            global: true,
+            gamewith: 46369,
+            condition: "Has a chance of appearing at the end of ANY Raid boss when available. You MUST use the same team that you just used to complete the raid boss to fight Shanks.",
+            "All Difficulties": [ 1379, 952, 776 ]
+        },
+        
+        {
+            name: 'Invasion! Cavendish',
+            thumb: 1530,
+            gamewith: 53621,
+            condition: "Has a chance of appearing at the end of ANY Chaos Coliseum boss. You MUST use the same team that you just used to complete the Coliseum boss to fight Cavendish.",
+            "All Difficulties": [ 1529 ]
         },
         
         {
             name: 'The Flashback Before the Reunion! Fight all your Enemies!',
-            thumb: null,
-            condition: "The fight gets more difficult every time you complete it until it gets to 40 stamina.",
-            "Final Stage": [ 37, 38, 53, 55, 43, 36, 45, 57, 65, 203, 205, 383, 395, 397, 399, 401, 464, 465, 541, 545, 630, 632, 728, 730, 815, 889, 893, 973, 1055, 1057, 1158, 1156, 1227, 1228, 1280, 1283, 1353],
+            thumb: 1353,
+            condition: "The fight gets more difficult every time you complete it until it gets to 40 stamina. You an only beat the first 7 stages once, but you can challenge the 8th stage multiple times and it has randomly selected stages.",
+            "1st Stage": [ 27, 29, 35, 36, 37, 38, 43, 35, 53, 55, 57, 61, 62, 63, 65 ],
+            "2nd Stage": [ 71, 211, 233, 235, 199, 201, 203, 205, 395, 397, 207, 399, 401, 383 ],
+            "3rd Stage": [ 430, 432, 463, 467, 542, 464, 465, 541, 545 ],
+            "4th Stage": [ 630, 632, 706, 728, 730, 732, 734, 738 ],
+            "5th Stage": [ 813, 891, 892, 889, 893, 815, 425, 387 ],
+            "6th Stage": [ 963, 966, 967, 973, 1059, 1055, 1057, 1156, 1158 ],
+            "7th Stage": [ 1224, 1223, 1225, 1226, 1227, 1282, 1281, 1280, 1228, 1283 ],
+            "8th Stage": [ 37, 38, 53, 55, 43, 36, 45, 57, 65, 203, 205, 383, 395, 397, 399, 401, 464, 465, 541, 545, 630, 632, 728, 730, 815, 889, 893, 973, 1055, 1057, 1158, 1156, 1227, 1228, 1280, 1283, 1353 ],
             "Evolvers and Boosters": [ 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 115, 116, 117, 118, 266, 300, 301, 302, 303, 304, 1180, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 189, 190, 191, 192, 193, 342, 343, 344, 345, 346, 347, 348, 349, 350, 351 ]
+        },
+        
+        {
+            name: 'Challenge the Enemy! Sugofest Exclusive Character Skillbooks!',
+            thumb: 1588,
+            gamewith: 56742,
+            showManual: true,
+            condition: "High chance of dropping 6* skillbooks. Only Evolvers and Booster characters will drop posters.",
+            "Black Clad Shanks": [ 301, 101, 96, 79, 90, 348, -530, -316, -910, -995, -1236, -1364, -465, -590, -967, -813, -888 ],
+            "Donquixote Doflamingo": [ 304, 104, 88, 99, 82, 93, 351, -870, -312, -645, -838, -876, -880, -1190, -396, -586, -631, -567 ],
+            "Trafalgar Law": [ 300, 100, 84, 95, 78, 89, 347, -964, -1045, -219, -308, -675, -991, -1077, -504, -1159, -212, -892 ],
+            "Black Clad Ace": [ 302, 102, 86, 97, 80, 91, 349, -562, -310, -359, -941, -560, -1212, -1406, -789, -966, -432, -565, -566 ],
+            "Cavendish": [ 303, 103, 87, 98, 81, 92, 350, -963, -1123, -217, -914, -1029, -1127, -1408, -202, -464, -1227, -705 ],
+            "Blackbeard": [ 304, 104, 88, 99, 82, 93, 351, -1268, -75, -733, -1033, -1082, -1230, -1278, -569, -1061, -52, -335 ],
+            "Crocodile": [ 302, 102, 86, 97, 80, 91, 349, -720, -410, -908, -1208, -558, -1234, -1366, -544, -731, -236, -814, -1224 ],
+            "Log Luffy": [ 300, 100, 84, 95, 78, 89, 347, -1121, -578, -1075, -1131, -1133, -1115, -520, -1177, -528, -1387, -4, -816, -426, -542, -563 ],
+            "Corazon": [ 303, 103, 87, 98, 81, 92, 350, -1001, -451, -878, -1079, -1183, -1316, -1446, -16, -223, -327, -628, -614 ],
+            "Kuzan": [ 301, 101, 96, 79, 90, 348, -1192, -255, -365, -449, -1210, -556, -1370, -200, -384, -1060, -428, -703 ],
+            "Issho": [ 301, 101, 96, 79, 90, 348, -1085, -965, -414, -457, -999, -1270, -218, -15, -785, -1228, -467 ],
+            "Dracule Mihawk": [ 303, 103, 87, 98, 81, 92, 350, -718, -639, -846, -906, -1129, -1238, -1322, -463, -729, -791, -215 ],
+            "Sabo": [ 304, 104, 88, 99, 82, 93, 351, -669, -874, -937, -1027, -1119, -524, -1318, -216, -332, -502, -737, -1062 ],
+            "Rayleigh": [ 300, 100, 84, 95, 78, 89, 347, -367, -210, -894, -997, -1389, -12, -1412, -208, -431, -544, -954, -1151 ],
+            "Jinbei": [ 302, 102, 86, 97, 80, 91, 349, -935, -408, -641, -671, -673, -1187, -1274, -1368, -333, -704, -956 ],
+            "Sakazuki": [ 303, 103, 87, 98, 81, 92, 350, -1314, -73, -259, -412, -455, -647, -1324, -292, -329, -1283, -955 ],
+            "Rob Lucci": [ 300, 100, 84, 95, 78, 89, 347, -748, -314, -756, -912, -1238, -1447, -20, -633, -787, -731, -427, -1279 ],
+            "Sengoku": [ 304, 104, 88, 99, 82, 93, 351, -459, -453, -1117, -522, -1186, -1175, -554, -1549, -709, -400, -500, -974, -1152, -1153 ],
+            "Whitebeard": [ 302, 102, 86, 97, 80, 91, 349, -261, -1413, -361, -363, -752, -872, -939, -204, -1280, -564, -701, -1154 ],
+            "Marco": [ 301, 101, 96, 79, 90, 348, -649, -251, -750, -842, -993, -1173, -508, -631, -378, -891, -1226 ],
+            "Zoro": [ 301, 101, 96, 79, 90, 348, -1362, -844, -1081, -1125, -1410, -546, -1282, -234, -812, -47 ],
+            "Boa Hancock": [ 303, 103, 87, 98, 81, 92, 350, -416, -1445, -253, -677, -1320, -1448, -22, -402, -506, -588, -893, -1157, -702 ],
+            "Bartolomeo": [ 304, 104, 88, 99, 82, 93, 351, -1035, -221, -357, -643, -840, -1025, -1029, -225, -541, -733, -1056 ],
+            "Borsalino": [ 302, 102, 86, 97, 80, 91, 349, -1240, -77, -257, -760, -943, -1272, -1551, -896, -398, -793, -1058, -59 ],
+            "Captain Buggy": [ 300, 100, 84, 95, 78, 89, 347, -1391, -1031, -1232, -1276, -1550, -739, -214, -707, -735, -890, -1318, -290 ],
         },
 
    ]
@@ -1604,20 +1969,24 @@ var bonuses = [
     { type: 'stamina' , x: 6 , y: 5  },
     { type: 'stamina' , x: 6 , y: 12 },
     { type: 'stamina' , x: 6 , y: 19 },
+    { type: 'stamina' , x: 6 , y: 26 },
     { type: 'drop'    , x: 6 , y: 1  },
     { type: 'drop'    , x: 6 , y: 8  },
     { type: 'drop'    , x: 6 , y: 15 },
     { type: 'drop'    , x: 6 , y: 22 },
+    { type: 'drop'    , x: 6 , y: 29 },
     { type: 'beli'    , x: 6 , y: 3  },
     { type: 'beli'    , x: 1 , y: 4  },
     { type: 'beli'    , x: 6 , y: 10 },
     { type: 'beli'    , x: 6 , y: 17 },
     { type: 'beli'    , x: 6 , y: 24 },
+    { type: 'beli'    , x: 6 , y: 31 },
     { type: 'exp'     , x: 2 , y: 2  },
     { type: 'exp'     , x: 6 , y: 2  },
     { type: 'exp'     , x: 5 , y: 5, stop: 5 },
     { type: 'exp'     , x: 6 , y: 6  },
     { type: 'exp'     , x: 6 , y: 9, stop: 2 },
     { type: 'exp'     , x: 6 , y: 13 },
-    { type: 'exp'     , x: 6 , y: 20 }
+    { type: 'exp'     , x: 6 , y: 20 },
+    { type: 'exp'     , x: 6 , y: 27 }
 ];

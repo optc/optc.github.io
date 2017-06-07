@@ -50,7 +50,12 @@ var SharedRootCtrl = function($scope, $rootScope, $timeout) {
         turnCounter: {
             enabled: false,
             value: 0
-        }
+        },
+        
+        healCounter: {
+            enabled: false,
+            value: 0
+        },
 
     };
 
@@ -62,6 +67,7 @@ var SharedRootCtrl = function($scope, $rootScope, $timeout) {
     $rootScope.options = {
         gOrbsEnabled: 0,
         strOrbsEnabled: 0,
+        rainbowOrbsEnabled: 0,
         slidersEnabled: true,
         sidebarVisible: false,
         transientMode: false,
@@ -81,7 +87,7 @@ var SharedRootCtrl = function($scope, $rootScope, $timeout) {
         // reset slot
         if (!onlyTransitional)
             $scope.data.team[n] = { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 } };
-        $scope.tdata.team[n] = { orb: 1, g: false, str: false, special: false, lock: 0, silence: 0, removed: 0 };
+        $scope.tdata.team[n] = { orb: 1, g: false, str: false, rainbow: false, special: false, lock: 0, silence: 0, removed: 0 };
     };
 
     // to be invoked every time a new unit is set in a slot so the insertion events can be triggered
@@ -146,6 +152,35 @@ var SharedRootCtrl = function($scope, $rootScope, $timeout) {
         if ($rootScope.data.effect) {
             var effect = window.effects[$rootScope.data.effect];
             if (effect && effect.strOrbsEnabled) return true;
+        }
+        return false;
+    };
+    
+    /* * * * * [RAINBOW] orb control * * * * */
+
+    var resetRainbowOrbs = function() {
+        for (var i=0;i<6;++i) {
+            if ($scope.tdata.team[i].orb == 'rainbow')
+                $scope.tdata.team[i].orb = 1;
+        }
+    };
+
+    // reset rainbow slots automatically
+    $scope.$watch('options.gOrbsEnabled',function() {
+        if (!$rootScope.areGOrbsEnabled())
+            resetRainbowOrbs();
+    });
+
+    $scope.$watch('data.effect',function() {
+        if (!$rootScope.areRainbowOrbsEnabled())
+            resetRainbowOrbs();
+    });
+
+    $rootScope.areRainbowOrbsEnabled = function() {
+        if ($rootScope.options.rainbowOrbsEnabled > 0) return true;
+        if ($rootScope.data.effect) {
+            var effect = window.effects[$rootScope.data.effect];
+            if (effect && effect.rainbowOrbsEnabled) return true;
         }
         return false;
     };

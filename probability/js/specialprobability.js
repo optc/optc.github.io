@@ -11,6 +11,10 @@ onmessage = function(e) {
 	if (e.data.special_event == true) {
 		probability *= 2;
 	}
+    // if special event selected probability is trippled
+	else if (e.data.special_3event == true) {
+		probability *= 3;
+	}
     
 	
 	var prob = 0;

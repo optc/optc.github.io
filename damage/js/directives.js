@@ -485,7 +485,44 @@ directives.turnCounter = function() {
         }
     };
 };
+    
+directives.healCounter = function() {
+    return {
+        retrict: 'E',
+        replace: true,
+        template: '<div id="heals"><div id="healSlider"></div>' +
+            '<div id="healLabel">{{currentHeals}} {{currentHeals == 1 ? "Health Point" : "Health Points"}} recovered in the last turn</div></div>',
+        link: function(scope, element, attrs) {
 
+            scope.currentHeals = 0;
+
+            var slider = element.find('#healSlider')[0];
+            var sliderSettings = {
+                start: [ scope.currentTurns ],
+                range: { min: [ 0 ], max: [ 10000 ] },
+                step: 10,
+                connect: 'lower'
+            };
+            
+            var createSlider = function() {
+                if (slider.noUiSlider) slider.noUiSlider.destroy();
+                noUiSlider.create(slider, sliderSettings);
+                slider.noUiSlider.on('change', function(_,__,value) { update('change', value); });
+                slider.noUiSlider.on('slide', function(_,__,value) { update('slide', value); });
+            };
+
+            var update = function(event,value) {
+                scope.currentHeals = parseInt(value, 10);
+                if (event == 'change') scope.tdata.healCounter.value = scope.currentHeals;
+                scope.$apply();
+            };
+
+            createSlider();
+
+        }
+    };
+};
+    
 directives.levelLabel = function($timeout) {
     return {
         restrict: 'E',
@@ -573,7 +610,7 @@ directives.levelSlider = function($timeout) {
 };
 
 directives.unitOrb = function($rootScope) {
-    var ORBS = [ 0.5, 1, 2, 'g', 'str' ];
+    var ORBS = [ 0.5, 1, 2, 'g', 'str' ];//add rainbow if needed
     return {
         restrict: 'E',
         replace: true,
@@ -586,6 +623,7 @@ directives.unitOrb = function($rootScope) {
                 if (unit.orb == 2) return scope.data.team[scope.slot].unit.type;
                 if (unit.orb == 'g') return 'G';
                 if (unit.orb == 'str') return 'S';
+                if (unit.orb == 'rainbow') return 'R';
                 return Utils.getOppositeType(scope.data.team[scope.slot].unit.type) + ' opposite';
             };
             var onShortPress = function(e) {
@@ -603,13 +641,13 @@ directives.unitOrb = function($rootScope) {
                     e.preventDefault();
                     e.stopPropagation();
                     return false;
-                }
+                }//IF I need to add Rainbow orbs, I need to rethink that
             };
             var onLongPress = function(e) {
 							var unit = scope.data.team[scope.slot], tunit = scope.tdata.team[scope.slot];
 							var n = ORBS.indexOf(tunit.orb);
 							if(unit.unit.type == "STR" || unit.unit.type == "DEX")
-								tunit.orb = ORBS[(n + 1) % ($rootScope.areGOrbsEnabled() || $rootScope.areSTROrbsEnabled() ? ORBS.length - 1 : ORBS.length - 2)];
+								tunit.orb = ORBS[(n + 1) % ($rootScope.areGOrbsEnabled() ? ORBS.length - 1 : ORBS.length - 2)];
 							else
 								tunit.orb = ORBS[(n + ((!$rootScope.areGOrbsEnabled() && $rootScope.areSTROrbsEnabled() && n == ORBS.length - 3) ? 2 : 1)) % ($rootScope.areGOrbsEnabled() ? ($rootScope.areSTROrbsEnabled() ? ORBS.length : ORBS.length - 1) : ($rootScope.areSTROrbsEnabled() ? ORBS.length : ORBS.length - 2))];
 							scope.glow();

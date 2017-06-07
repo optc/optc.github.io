@@ -331,18 +331,22 @@ body, html {
  * BUTTONS & HP BAR *
  ********************/
 
-#hpSlider, #turnSlider {
+#hpSlider, #turnSlider, #healSlider {
     width: 350px;
     height: 12px;
     display: inline-block;
 }
 
-#turnSlider {
+#turnSlider, #healSlider {
     width: 300px;
 }
 
 #turns > .noUi-connect {
     background: orchid;
+}
+
+#heals > .noUi-connect {
+    background: green;
 }
 
 .noUi-handle {
@@ -473,6 +477,8 @@ body, html {
     height: 100%;
     transition: left .1s linear;
     margin-bottom: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 #menu.open {
@@ -1044,6 +1050,7 @@ body > .popover .popover-content {
 .popover-data .TND   { background: peru; }
 .popover-data .BLOCK { background: darkslateblue; }
 .popover-data .BOMB  { background: maroon; }
+.popover-data .RAINBOW { background: magenta; }
 .popover-data .G     { background: orange; }
 
 .block-icon:before, .tnd-icon:before {
