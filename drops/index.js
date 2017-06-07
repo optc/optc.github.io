@@ -50,8 +50,9 @@ app.directive('decorateSlot',function() {
         scope: { uid: '=', big: '@', delay: '@' },
         link: function(scope, element, attrs) {
             var url = scope.big ? Utils.getBigThumbnailUrl(scope.uid) : Utils.getThumbnailUrl(scope.uid);
+            var url2 = scope.big ? Utils.getBigThumbnailUrl(scope.uid) : Utils.getGlobalThumbnailUrl(scope.uid);
             if (scope.delay) element[0].setAttribute('data',url);
-            else element[0].style.backgroundImage = 'url(' + url + ')';
+            else element[0].style.backgroundImage = 'url(' + url2 + '), url(' + url + ')';
         }
     };
 });
