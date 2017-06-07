@@ -269,7 +269,7 @@ directives.compare = function() {
                             if (Number.isInteger(id)){
                                 var name = units[id].name, url = Utils.getThumbnailUrl(id+1), url2 = Utils.getGlobalThumbnailUrl(id+1);
                                 if (name.length > 63) name = name.slice(0,60) + '...';
-                                var thumb = '<div class="slot small" style="background-image: url(' + url2 + '), url(' + url + ')"></div>';
+                                var thumb = '<div class="slot small" style="background-image: url(' + url2 + '), url(' + url + ');"></div>';
                                 return '<div><div class="suggestion-container">' + thumb + '<span>' + name + '</span></div></div>';
                             }
                             else{
