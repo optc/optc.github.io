@@ -283,7 +283,7 @@ directives.quickPick = function() {
                 template: function (value) {
                     var thumb = Utils.getThumbnailUrl(value + 1);
                     var thumb2 = Utils.getGlobalThumbnailUrl(value + 1);
-                    return '<span><img class="quickpick-icon" src="' + thumb2 + '" onerror="this.onerror=null;this.data-original=\'' + thumb + '\';"> ' + window.units[value].name + '</span>';
+                    return '<span><img class="quickpick-icon" src="' + thumb2 + '" onerror="this.onerror=null;this.src=\'' + thumb + '\';"> ' + window.units[value].name + '</span>';
                 },
                 replace: function(value) {
                     return window.units[value].name;
