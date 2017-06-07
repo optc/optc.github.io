@@ -10,50 +10,50 @@ var app = angular.module('optc');
  **************/
 
 directives.characterTable = function($rootScope, $timeout, $compile, $storage) {
-    return {
-        restrict: 'E',
-        replace: true,
-        template: '<table id="mainTable" class="table table-striped-column panel panel-default"></table>',
-        link: function(scope, element, attrs) {
-            var table = element.dataTable({
-                iDisplayLength: $storage.get('unitsPerPage', 10),
-                stateSave: true,
-                data: scope.table.data,
-                columns: scope.table.columns,
-                rowCallback: function(row, data, index) {
-                    if (!row || row.hasAttribute('loaded')) return;
-                    var $row = $(row);
-                    if (!$row) return;
-                    // lazy thumbnails
-                    $row.find('[data-original]').each(function(n,x) {
-                        x.setAttribute('src',x.getAttribute('data-original'));
-                        x.removeAttribute('data-original');
-                    });
-                    // character log checkbox
-                    var id = data[data.length - 1] + 1;
-                    var checkbox = $('<label><input type="checkbox" ng-change="checkLog(' + id + ')" ng-model="characterLog[' + id + ']"></input></label>');
-                    $(row.cells[10 + scope.table.additional]).append(checkbox);
-                    // cosmetic fixes
-                    $(row.cells[2]).addClass('cell-' + row.cells[2].textContent);
-                    var n = row.cells.length - 2 - scope.table.additional;
-                    $(row.cells[n]).addClass('stars stars-' + row.cells[n].textContent);
-                    row.cells[n].textContent = '';
-                    // compile
-                    $compile($(row).contents())($rootScope);
-                    if (window.units[id - 1].preview) $(row).addClass('preview');
-                    else if (window.units[id - 1].incomplete) $(row).addClass('incomplete');
-                    row.setAttribute('loaded','true');
-                },
-                headerCallback : function(header) {
-                    if (header.hasAttribute('loaded')) return;
-                    header.cells[header.cells.length - 1].setAttribute('title', 'Character Log');
-                    header.setAttribute('loaded',true);
-                }
-            });
-            scope.table.refresh = function() {
-                $rootScope.$emit('table.refresh');
-                $timeout(function() { element.fnDraw(); });
-            };
+	return {
+		restrict: 'E',
+		replace: true,
+		template: '<table id="mainTable" class="table table-striped-column panel panel-default"></table>',
+		link: function(scope, element, attrs) {
+			var table = element.dataTable({
+				iDisplayLength: $storage.get('unitsPerPage', 10),
+				stateSave: true,
+				data: scope.table.data,
+				columns: scope.table.columns,
+				rowCallback: function(row, data, index) {
+					if (!row || row.hasAttribute('loaded')) return;
+					var $row = $(row);
+					if (!$row) return;
+					// lazy thumbnails
+					$row.find('[data-original]').each(function(n,x) {
+						x.setAttribute('src',x.getAttribute('data-original'));
+						x.removeAttribute('data-original');
+					});
+					// character log checkbox
+					var id = data[data.length - 1] + 1;
+					var checkbox = $('<label><input type="checkbox" ng-change="checkLog(' + id + ')" ng-model="characterLog[' + id + ']"></input></label>');
+					$(row.cells[10 + scope.table.additional]).append(checkbox);
+					// cosmetic fixes
+					$(row.cells[2]).addClass('cell-' + row.cells[2].textContent);
+					var n = row.cells.length - 2 - scope.table.additional;
+					$(row.cells[n]).addClass('stars stars-' + row.cells[n].textContent);
+					row.cells[n].textContent = '';
+					// compile
+					$compile($(row).contents())($rootScope);
+					if (window.units[id - 1].preview) $(row).addClass('preview');
+					else if (window.units[id - 1].incomplete) $(row).addClass('incomplete');
+					row.setAttribute('loaded','true');
+				},
+				headerCallback : function(header) {
+					if (header.hasAttribute('loaded')) return;
+					header.cells[header.cells.length - 1].setAttribute('title', 'Character Log');
+					header.setAttribute('loaded',true);
+				}
+			});
+			scope.table.refresh = function() {
+				$rootScope.$emit('table.refresh');
+				$timeout(function() { element.fnDraw(); });
+			};
             // report link
             var link = $('<span class="help-link">Want to report or request something? Use <a>this form</a>.</span>');
             link.find('a').attr('href', 'https://discord.gg/MRhRrbF');
@@ -95,7 +95,7 @@ directives.decorateSlot = function() {
             if (scope.big)
                 element[0].style.backgroundImage = 'url(' + Utils.getBigThumbnailUrl(scope.uid) + ')';
             else
-                element[0].style.backgroundImage = 'url(' + Utils.getThumbnailUrl(scope.uid) + ')';
+                element[0].style.backgroundImage = 'url(' + Utils.getGlobalThumbnailUrl(scope.uid) + '), url(' + Utils.getThumbnailUrl(scope.uid) + ')';
         }
     };
 };
@@ -267,9 +267,11 @@ directives.compare = function() {
                     templates: {
                         suggestion: function(id) {
                             if (Number.isInteger(id)){
-                                var name = units[id].name, url = Utils.getThumbnailUrl(id+1);
+                              
+                                var name = units[id].name, url = Utils.getThumbnailUrl(id+1), url2 = Utils.getGlobalThumbnailUrl(id+1);
                                 if (name.length > 63) name = name.slice(0,60) + '...';
-                                var thumb = '<div class="slot small" style="background-image: url(' + url + ')"></div>';
+                                var thumb = '<div class="slot small" style="background-image: url(' + url2 + '), url(' + url + ')"></div>';
+                              
                                 return '<div><div class="suggestion-container">' + thumb + '<span>' + name + '</span></div></div>';
                             }
                             else{
@@ -280,6 +282,7 @@ directives.compare = function() {
                         }
                     },
                     display: function(id) {
+			    console.log(id);
                         return units[id].name;
                     }
                 }
@@ -452,7 +455,7 @@ directives.costSlider = function($timeout) {
         link: function(scope, element, attrs) {
             element.ionRangeSlider({
                 grid: true,
-                type: 'double',
+		    type: 'double',
                 min: scope.filters.cost[0],
                 max: scope.filters.cost[1],
                 from: scope.filters.cost[0],

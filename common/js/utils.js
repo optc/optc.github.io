@@ -74,6 +74,11 @@
         return 'http://onepiece-treasurecruise.com/wp-content/uploads/sites/2/f' + id + '.png';
     };
 
+    utils.getGlobalThumbnailUrl = function (n) {
+        var id = ('0000' + n).slice(-4).replace(/(057[54])/, '0$1'); // missing aokiji image
+        return 'http://onepiece-treasurecruise.com/wp-content/uploads/sites/2/f' + id + '.png';
+    };
+
     utils.getThumbnailUrl = function (n) {
         switch (id){
             case id == 'skullLuffy':
@@ -122,6 +127,7 @@
         if (n === null || n === undefined || (window.units && window.units[n - 1].incomplete))
             return 'https://onepiece-treasurecruise.com/wp-content/themes/onepiece-treasurecruise/images/noimage.png';
         var id = ('0000' + n).slice(-4).replace(/(057[54])/, '0$1'); // missing aokiji image
+      
         return 'https://onepiece-treasurecruise.com/wp-content/uploads/f' + id + '.png';
     };
 
