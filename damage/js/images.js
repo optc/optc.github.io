@@ -124,7 +124,10 @@ app.controller('ImageGeneratorCtrl', function($scope, $filter, $timeout) {
                         x: baseX + 7, y: baseY + 103, color: 'gold', stroke: 'black', strokeWidth: 3 });
                 }
             };
-            image.src = Utils.getThumbnailUrl(unit.number + 1);
+            image.src = Utils.getGlobalThumbnailUrl(unit.number + 1);
+            image.onerror = function(){
+		    image.src = Utils.getThumbnailUrl(unit.number + 1);
+	    };
         });
     },true);
 
