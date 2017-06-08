@@ -1620,6 +1620,8 @@ window.aliases = {
     1619: ['', '', 'Mega Rayleigh', '6+ Rayleigh'],
     1620: ['', '', 'Log Kid'],
     1621: ['', '', 'Log Kid'],
+    1622: ['', '', 'INT Doffy'],
+    1623: ['', '', 'INT Doffy'],
 };
 
 //  xxxx: ['', '', ''],

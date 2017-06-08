@@ -8988,4 +8988,16 @@ window.details = {
         special: "Reduces crew's current HP by 80%, boosts ATK of Striker characters by 2x for 1 turn",
         specialName: "Double Steel Magnetic Arm",
     },
+    1622: {
+        special: "Switches orbs between slots twice, amplifies the effect of orbs by 2x for 1 turn",
+        specialNotes: "#{orb : 2x}",
+        specialName: "INT Doflamingo Special",
+        captain: "Boosts ATK of Slasher characters by 2x"
+    },
+    1623: {
+        special: "Switches orbs between slots twice, amplifies the effect of orbs by 2x for 1 turn",
+        specialNotes: "#{orb : 2x}",
+        specialName: "INT Doflamingo Special",
+        captain: "Boosts ATK and HP of Slasher characters by 2x"
+    },
 };

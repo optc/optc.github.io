@@ -1604,7 +1604,7 @@ window.units = [
     [ "Thunder Lord McGuy", "STR", [ "Slasher", "Cerebral" ], 4, 26, 6, 3, 99, 3000000, 151, 90, 98, 1760, 1190, 257, 1 ],
     [ "Portgas D. Ace, Luffy's 'Brother'", "STR", [ "Free Spirit", "Shooter" ], 3, 8, 5, 2, 50, 261406, 50, 30, 10, 950, 500, 150, 1 ],
     [ "Portgas D. Ace, Whitebeard's 'Son'", "STR", [ "Free Spirit", "Shooter" ], 4, 15, 4, 3, 99, 2000000, 880, 410, 110, 1850, 1090, 260, 1 ],
-    [ "Lafitte, Blackbeard Pirates", "PSY", [ "Shooter", "Cerebral" ], 4, 25, 7, 4, 99, 3000000, 93, 49, 29, 2044, 949, 323, 1 ],
+    [ "Laffitte, Blackbeard Pirates", "PSY", [ "Shooter", "Cerebral" ], 4, 25, 7, 4, 99, 3000000, 93, 49, 29, 2044, 949, 323, 1 ],
     [ "Van Augur, BlackBeard Pirates", "DEX", [ "Shooter", "Driven" ], 4, 25, 5, 4, 99, 3000000, 87, 55, 22, 2006, 1050, 280, 1 ],
     [ "Doc Q, BlackBeard Pirates", "INT", [ "Free Spirit", "Shooter" ], 4, 25, 4, 4, 99, 3000000, 51, 59, 31, 1502, 1138, 340, 1 ],
     [ "Kami Enel, Endless Dreams of Arch Enemies", "QCK", [ "Shooter", "Striker" ], 5, 30, 4, 3, 70, 1066998, 350, 219, 56, 1256, 756, 236, 1 ],
@@ -1620,6 +1620,8 @@ window.units = [
     [ "'Dark King' Silvers Rayleigh, Right Hand of the Pirate King", "INT", [ "Slasher", "Fighter" ], "6+", 65, 4, 4, 99, 5000000, 1500, 800, 300, 3121, 1472, 515, null ],
     [ "Eustass Kid, Wakes of an Endless Dream, Kid Pirates", "STR", [ "Striker", "Driven" ], 4, 20, 4, 3, 70, null, null, null, null, 1424, 690, 151, null ],
     [ "Eustass Kid, A Vow in the Great Age of Pirates - Pirate King", "STR", [ "Striker", "Driven" ], 5, 30, 5, 4, 99, 4000000, 1339, 620, 109, 2795, 1324, 287, null ],
+    [ "Donquixote Doflamingo [INT]", "INT", [ "Slasher", "Driven" ], 4, 30, 4, 2, 70, 1066998, 184, 191, 31, 1030, 794, 149, null ],
+    [ "Donquixote Doflamingo, Warlord of the Sea [INT]", "INT", [ "Slasher", "Driven" ], 5, 50, 5, 3, 99, 4000000, 889, 726, 121, null, null, null, null ],
     ];
     
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],

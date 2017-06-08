@@ -1620,4 +1620,6 @@ window.families = [
     "Silvers Rayleigh",
     "Eustass Kid",
     "Eustass Kid",
+    "Donquixote Doflamingo",
+    "Donquixote Doflamingo",
 ];

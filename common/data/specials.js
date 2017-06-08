@@ -2873,4 +2873,10 @@ window.specials = {
         atk: function(p) { return p.unit.class.has("Striker") ? 2 : 1; },
         type: "class",
     },
+    1622: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2); }
+    },
+    1623: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2); }
+    },
 };
