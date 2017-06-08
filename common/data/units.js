@@ -1621,7 +1621,7 @@ window.units = [
     [ "Eustass Kid, Wakes of an Endless Dream, Kid Pirates", "STR", [ "Striker", "Driven" ], 4, 20, 4, 3, 70, null, null, null, null, 1424, 690, 151, null ],
     [ "Eustass Kid, A Vow in the Great Age of Pirates - Pirate King", "STR", [ "Striker", "Driven" ], 5, 30, 5, 4, 99, 4000000, 1339, 620, 109, 2795, 1324, 287, null ],
     [ "Donquixote Doflamingo [INT]", "INT", [ "Slasher", "Driven" ], 4, 30, 4, 2, 70, 1066998, 184, 191, 31, 1030, 794, 149, null ],
-    [ "Donquixote Doflamingo, Warlord of the Sea [INT]", "INT", [ "Slasher", "Driven" ], 5, 50, 5, 3, 99, 4000000, 889, 726, 121, null, null, null, null ],
+    [ "Donquixote Doflamingo, Warlord of the Sea [INT]", "INT", [ "Slasher", "Driven" ], 5, 50, 5, 3, 99, 4000000, 889, 726, 121, 2287, 1510, 262, null ],
     ];
     
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
