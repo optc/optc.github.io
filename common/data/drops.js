@@ -1592,7 +1592,7 @@ window.drops = {
             name: 'Clash Reborn!! Doflamingo',
             thumb: 1623,
             global: true,
-            condition: "3 different Master versions and 1 Ultimate version with different conditions. Master: Cerebral Only, Fighter Only, and Striker Only. Ultimate: Striker/Cerebral/Fighter Only",
+            condition: "1 Master version and 3 different Ultimate versions with different conditions. Master: Striker/Cerebral/Fighter Only. Ultimate: Cerebral Only, Fighter Only, and Striker Only",
             gamewith: 58437,
             Ultimate: [ 1622 ],
             Master: [ 1622 ]
