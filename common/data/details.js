@@ -1508,12 +1508,12 @@ window.details = {
         captain: "Boosts RCV of PSY characters by 1.5x"
     },
     389: {
-        special: "Changes own orb into [QCK] and every other orb into either [RCV], [STR], [DEX] or [QCK] orbs",
+        special: "Randomly changes all orbs into either [RCV], [STR], [DEX] or [QCK] orbs and changes own orb into [QCK]",
         specialName: "Hell Wink",
         captain: "Boosts ATK by 2.25x following a chain of DEX > INT > QCK attacks no lower than Good"
     },
     390: {
-        special: "Changes own orb into [QCK] and every other orb into either [RCV], [STR], [DEX] or [QCK] orbs",
+        special: "Randomly changes all orbs into either [RCV], [STR], [DEX] or [QCK] orbs and changes own orb into [QCK]",
         specialName: "Hell Wink",
         captain: "Boosts ATK by 2.75x following a chain of DEX > INT > QCK attacks no lower than Good"
     },
@@ -1602,11 +1602,11 @@ window.details = {
         specialNotes: "#{fixed}"
     },
     407: {
-        special: "Randomizes all orbs, deals 7x character's ATK in DEX damage to all enemies",
+        special: "Randomizes all orbs, deals 7x character's ATK in [DEX] damage to all enemies",
         specialName: "Zombie-Style 36-Pound Phoenix"
     },
     408: {
-        special: "Changes own orb into [INT] and randomizes every other orb, deals 15x character's ATK in INT damage to all enemies",
+        special: "Randomizes all orbs and changes own orb into [INT], deals 15x character's ATK in [INT] damage to all enemies",
         specialName: "Ground Death",
         captain: "Reduces damage received by 20%, boosts ATK of Slasher characters by 2x"
     },
@@ -1874,12 +1874,12 @@ window.details = {
         captain: "Reduces damage received by 10%"
     },
     461: {
-        special: "Changes own orb into [DEX] and randomizes every other orb, boosts ATK of Fighter characters by 1.25x for 2 turns",
+        special: "Randomizes all orbs and changes own orb into [DEX], boosts ATK of Fighter characters by 1.25x for 2 turns",
         specialName: "Escape Dance: White Swan Arabesque",
         captain: "Boosts ATK of Fighter characters by 2x"
     },
     462: {
-        special: "Changes own orb into [DEX] and randomizes every other orb, boosts ATK of Fighter characters by 1.25x for 2 turns",
+        special: "Randomizes all orbs and changes own orb into [DEX], boosts ATK of Fighter characters by 1.25x for 2 turns",
         specialName: "Escape Dance: White Swan Arabesque",
         captain: "Boosts ATK of Fighter characters by 2x"
     },
@@ -3833,12 +3833,12 @@ window.details = {
     845: {
         captain: "Boosts ATK of all characters by 1.5x after the 11th hit in the chain, by 2.5x after the 22nd hit",
         specialName: "Gust: Matasaburo",
-        special: "Changes own orb into [QCK], randomizes every other orb"
+        special: "Randomizes all orbs and changes own orb into [QCK]"
     },
     846: {
         captain: "Boosts ATK of all characters by 1.5x after the 11th hit in the chain, by 2.5x after the 22nd hit, by 2.75x after the 30th hit, by 3.5x after the 40th hit",
         specialName: "Gust: Matasaburo",
-        special: "Changes own orb into [QCK], randomizes every other orb"
+        special: "Randomizes all orbs and changes own orb into [QCK]"
     },
     847: {
         captain: "Boosts ATK of all characters by 1.5x if HP is below 30% at the start of the turn",
@@ -4047,13 +4047,13 @@ window.details = {
     879: {
         captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of Fighter characters by 1.75x",
         specialName: "Battle Preservation Fist: Manki Kayaku",
-        special: "Changes all orbs including [BLOCK] orbs into [G] orbs, deals random typeless damage to all enemies",
+        special: "Randomly changes all orbs including [BLOCK] orbs into [G] orbs, deals random typeless damage to all enemies",
         specialNotes: "#{gOrbs}"
     },
     880: {
         captain: "Reduces cooldown of all specials by 3 turns at the start of the fight, boosts ATK of Fighter characters by 2x",
         specialName: "Battle Preservation Fist: Manki Kayaku",
-        special: "Changes all orbs including [BLOCK] orbs into [G] orbs, deals random typeless damage to all enemies",
+        special: "Randomly changes all orbs including [BLOCK] orbs into [G] orbs, deals random typeless damage to all enemies",
         specialNotes: "#{gOrbs}"
     },
     881: {
@@ -4140,7 +4140,7 @@ window.details = {
     897: {
         captain: "Boosts ATK of Cerebral and Driven characters by 2x",
         specialName: "Ground Death: Thirst",
-        special: "Changes own orb into [STR], randomizes all other orbs, cuts the current HP of all enemies by 10%"
+        special: "Cuts the current HP of all enemies by 10%, randomizes all orbs and changes own orb into [STR]"
     },
     898: {
         captain: "Boosts ATK and HP of Striker and Cerebral characters by 1.5x",
@@ -4652,7 +4652,7 @@ window.details = {
     980: {
         captain: "Boosts ATK of [DEX] and [STR] characters by 1.75x and their RCV by 1.2x",
         specialName: "Hidden King Mallet",
-        special: "Changes own orb into [DEX] and randomizes every other orb"
+        special: "Randomizes all orbs and changes own orb into [DEX]"
     },
     981: {
         captain: "Boosts ATK of Fighter and Powerhouse characters by 2x and sharply reduces their RCV",
@@ -7927,12 +7927,12 @@ window.details = {
     },
     1457: {//Coliseum Kuro
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of [QCK] and [INT] characters by 1.75x",
-        special: "Reduces Bind and Despair duration by 2 turns, changes own orb into [INT] and for Slasher and Cerebral characters, randomizes non-matching orbs",
+        special: "Reduces Bind and Despair duration by 2 turns, for Slasher and Cerebral characters, randomizes non-matching orbs and changes own orb into [INT]",
         specialName: "Pussyfoot Maneuver",
     },
     1458: {//Coliseum Kuro
         captain: "Reduces cooldown of all specials by 2 turn at the start of the fight, boosts ATK of [QCK] and [INT] characters by 2x",
-        special: "Reduces Bind and Despair duration by 2 turns, changes own orb into [INT] and for Slasher and Cerebral characters, randomizes non-matching orbs",
+        special: "Reduces Bind and Despair duration by 2 turns, for Slasher and Cerebral characters, randomizes non-matching orbs and changes own orb into [INT]",
         specialName: "Pussyfoot Maneuver",
     },
     1459: {//Coliseum Miss Valentine
@@ -8670,13 +8670,13 @@ window.details = {
     },
     1572: {//Wanda
         captain: "Boosts ATK of Cerebral characters by 2x, and their RCV by 1.2x",
-        special: "Changes all orbs, including [BLOCK] orbs into [STR], [DEX], [QCK], [INT], or [PSY] orbs, boosts ATK of Cerebral characters by 1.75x for 3 turns",
+        special: "Randomly changes all orbs, including [BLOCK] orbs into [STR], [DEX], [QCK], [INT], or [PSY] orbs, boosts ATK of Cerebral characters by 1.75x for 3 turns",
         sailor: "Reduces Paralysis duration by 1 turn",
         specialName: "Ruler's Aide Flight",
     },
     1573: {//Wanda
         captain: "Boosts ATK of Cerebral characters by 2.5x, and their RCV by 1.2x",
-        special: "Changes all orbs, including [BLOCK] orbs into [STR], [DEX], [QCK], [INT], or [PSY] orbs, boosts ATK of Cerebral characters by 1.75x for 3 turns",
+        special: "Randomly changes all orbs, including [BLOCK] orbs into [STR], [DEX], [QCK], [INT], or [PSY] orbs, boosts ATK of Cerebral characters by 1.75x for 3 turns",
         sailor: "Reduces Paralysis duration by 1 turn",
         specialName: "Ruler's Aide Flight",
     },
@@ -9040,12 +9040,12 @@ window.details = {
     },
     1629: {//Ikaros Much
         captain: "Boosts ATK and HP of Striker characters by 1.5x",
-        special: "Changes own orb into [INT] and randomizes every other orb, including [BLOCK] orbs",
+        special: "Randomly changes all orbs, including [BLOCK] orbs, into [STR], [DEX], [QCK], [INT], or [PSY] orbs and changes own orb into [INT]",
         specialName: "The Spear that Penetrated the Undersea Mountain",
     },
     1630: {//Ikaros Much
         captain: "Boosts ATK of Striker characters by 2x and their HP by 1.5x",
-        special: "Changes own orb into [INT] and randomizes every other orb, including [BLOCK] orbs",
+        special: "Randomly changes all orbs, including [BLOCK] orbs, into [STR], [DEX], [QCK], [INT], or [PSY] orbs and changes own orb into [INT]",
         specialName: "The Spear that Penetrated the Undersea Mountain",
     },
 };
