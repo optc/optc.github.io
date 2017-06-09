@@ -620,8 +620,9 @@ window.drops = {
         },
         
         {
-            name: "Return to Sabaody Archipelago",
+            name: "Sabaody Archipelago - Redux",
             shortName: "Straw Hat Return",
+            global: true,
             thumb: 1393,
             completion: 'Ship: Coated Thousand Sunny - 5x Rainbow Gems',
             gamewith: 46976,
@@ -1403,6 +1404,7 @@ window.drops = {
         {
             name: "Jailbreak Battle! Mr. 3 and Buggy",
             thumb: 1304,
+            global: true,
             gamewith: 41928,
             condition: "Shooter and Fighter characters are Silenced for 99 turns and have their ATK reduced by a variable amount. (75% on 30 stamina)",
             "All Difficulties": [ 1301, 1303, 1152, 1151, 551, 539, -718, -752, -1125, -1133, -15, -203, -733, -1056, -1060 ]
@@ -1666,6 +1668,7 @@ window.drops = {
         {
             name: 'Clash!! Nightmare Luffy',
             thumb: 795,
+            global: true,
             gamewith: 18565,
             condition: "Take 10% current Health in Environmental Damage every 2 turns",
             Master: [ 794 ],
@@ -1858,9 +1861,9 @@ window.drops = {
             thumb: 779,
             global: true,
             gamewith: 17473,
-            Exhibition: [ 776, 778, 803, 832, 834, 859, 861, 883, 902, 904, 925, 927, 952, 984, 1017, 1019, 1197, 1221, 1252, 1253, 1293, 1311, 1339, 1340, 1377, 1402, 1423, 1424, 1457, 1459, 1488, 1490, 1526, 1528, 1552, 1585, 1603 ],
-            Underground: [ 776, 778, 803, 832, 834, 859, 861, 883, 902, 904, 925, 927, 952, 984, 1017, 1019, 1197, 1221, 1252, 1253, 1293, 1311, 1339, 1340, 1377, 1402, 1423, 1424, 1457, 1459, 1488, 1490, 1526, 1528, 1552, 1585, 1603 ],
-            Chaos: [ 776, 778, 780, 803, 805, 830, 832, 834, 859, 861, 881, 883, 900, 902, 923, 925, 950, 982, 984, 1017, 1015, 1040, 1042, 1086, 1088, 1090, 1101, 1103, 1105, 1140, 1142, 1144, 1195, 1219, 1221, 1250, 1252, 1291, 1293, 1309, 1311, 1337, 1339, 1340, 1375, 1377, 1400, 1402, 1421, 1423, 1455, 1457, 1486, 1488, 1525, 1526, 1528, 1552, 1554, 1583, 1585, 1601, 1603 ]
+            Exhibition: [ 776, 778, 803, 832, 834, 859, 861, 883, 902, 904, 925, 927, 952, 984, 1017, 1019, 1197, 1221, 1252, 1253, 1293, 1311, 1339, 1340, 1377, 1402, 1423, 1424, 1457, 1459, 1488, 1490, 1526, 1528, 1552, 1585, 1603, 1629 ],
+            Underground: [ 776, 778, 803, 832, 834, 859, 861, 883, 902, 904, 925, 927, 952, 984, 1017, 1019, 1197, 1221, 1252, 1253, 1293, 1311, 1339, 1340, 1377, 1402, 1423, 1424, 1457, 1459, 1488, 1490, 1526, 1528, 1552, 1585, 1603, 1629 ],
+            Chaos: [ 776, 778, 780, 803, 805, 830, 832, 834, 859, 861, 881, 883, 900, 902, 923, 925, 950, 982, 984, 1017, 1015, 1040, 1042, 1086, 1088, 1090, 1101, 1103, 1105, 1140, 1142, 1144, 1195, 1219, 1221, 1250, 1252, 1291, 1293, 1309, 1311, 1337, 1339, 1340, 1375, 1377, 1400, 1402, 1421, 1423, 1455, 1457, 1486, 1488, 1525, 1526, 1528, 1552, 1554, 1583, 1585, 1601, 1603, 1627, 1629 ]
         },
         
         {
@@ -1925,6 +1928,7 @@ window.drops = {
         {
             name: 'The Flashback Before the Reunion! Fight all your Enemies!',
             thumb: 1353,
+            global: true,
             condition: "The fight gets more difficult every time you complete it until it gets to 40 stamina. You an only beat the first 7 stages once, but you can challenge the 8th stage multiple times and it has randomly selected stages.",
             "1st Stage": [ 27, 29, 35, 36, 37, 38, 43, 35, 53, 55, 57, 61, 62, 63, 65 ],
             "2nd Stage": [ 71, 211, 233, 235, 199, 201, 203, 205, 395, 397, 207, 399, 401, 383 ],

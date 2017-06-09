@@ -1622,4 +1622,11 @@ window.cooldowns = [
     [ 17, 13 ],
     [ 23, 14 ],
     [ 23, 14 ],
+    null,
+    null,
+    null,
+    null,//Mach Vise
+    null,//Mach Vise
+    15,
+    15,
 ];

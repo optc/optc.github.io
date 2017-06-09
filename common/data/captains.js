@@ -4795,4 +4795,19 @@ window.captains = {
         hp: function(p) { return p.unit.class.has("Slasher") ? 2 : 1; },
         atk: function(p) { return p.unit.class.has("Slasher") ? 2 : 1; }
     },
+    1627: {
+        atk: function(p) { return p.unit.class.has("Free Spirit") ? 2 : 1; }
+    },
+    1628: {
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Free Spirit") ? 2.25 : 1; },
+        rcv: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Free Spirit") ? 1.5 : 1; },
+    },
+    1629: {
+        hp: function(p) { return p.unit.class.has("Striker") ? 1.5 : 1; },
+        atk: function(p) { return p.unit.class.has("Striker") ? 1.5 : 1; }
+    },
+    1630: {
+        hp: function(p) { return p.unit.class.has("Striker") ? 1.5 : 1; },
+        atk: function(p) { return p.unit.class.has("Striker") ? 2 : 1; }
+    },
 };

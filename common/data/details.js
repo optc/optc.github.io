@@ -8988,16 +8988,64 @@ window.details = {
         special: "Reduces crew's current HP by 80%, boosts ATK of Striker characters by 2x for 1 turn",
         specialName: "Double Steel Magnetic Arm",
     },
-    1622: {
+    1622: {//Reborn Doffy
         special: "Switches orbs between slots twice, amplifies the effect of orbs by 2x for 1 turn",
         specialNotes: "#{orb : 2x}",
         specialName: "INT Doflamingo Special",
         captain: "Boosts ATK of Slasher characters by 2x"
     },
-    1623: {
+    1623: {//Reborn Doffy
         special: "Switches orbs between slots twice, amplifies the effect of orbs by 2x for 1 turn",
         specialNotes: "#{orb : 2x}",
         specialName: "INT Doflamingo Special",
         captain: "Boosts ATK and HP of Slasher characters by 2x"
+    },
+    1627: {//Mach Vise
+        captain: "Boosts ATK Free Spirit characters by 2x",
+        special: [
+            {
+                "description": "Reduces Chain Multiplier Lock duration by 1 turn and boosts the Color Affinity of Striker characters by ???x for 1 turn",
+                "cooldown": [ 23, null ]
+            },
+            {
+                "description": "Reduces Chain Multiplier Lock duration by 3 turns and boosts the Color Affinity of Striker characters by ???x for 1 turn",
+                "cooldown": [ 27, null ]
+            },
+            {
+                "description": "Reduces Chain Multiplier Lock duration by 5 turns and boosts the Color Affinity of Striker characters by ???x for 1 turn",
+                "cooldown": [ 31, null ]
+            },
+        ],
+        specialNotes: "#{stages}",
+        specialName: "Thousand Ton Destruction",
+    },
+    1628: {//Mach Vise
+        captain: "Boosts ATK Free Spirit and Striker characters by 2.25x and their RCV by 1.5x",
+        special: [
+            {
+                "description": "Reduces Chain Multiplier Lock duration by 1 turn and boosts the Color Affinity of Striker characters by ???x for 1 turn",
+                "cooldown": [ 23, null ]
+            },
+            {
+                "description": "Reduces Chain Multiplier Lock duration by 3 turns and boosts the Color Affinity of Striker characters by ???x for 1 turn",
+                "cooldown": [ 27, null ]
+            },
+            {
+                "description": "Reduces Chain Multiplier Lock duration by 5 turns and boosts the Color Affinity of Striker characters by ???x for 1 turn",
+                "cooldown": [ 31, null ]
+            },
+        ],
+        specialNotes: "#{stages}",
+        specialName: "Thousand Ton Destruction",
+    },
+    1629: {//Ikaros Much
+        captain: "Boosts ATK and HP of Striker characters by 1.5x",
+        special: "Changes own orb into [INT] and randomizes every other orb, including [BLOCK] orbs",
+        specialName: "The Spear that Penetrated the Undersea Mountain",
+    },
+    1630: {//Ikaros Much
+        captain: "Boosts ATK of Striker characters by 2x and their HP by 1.5x",
+        special: "Changes own orb into [INT] and randomizes every other orb, including [BLOCK] orbs",
+        specialName: "The Spear that Penetrated the Undersea Mountain",
     },
 };
