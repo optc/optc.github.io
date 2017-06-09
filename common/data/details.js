@@ -8795,12 +8795,12 @@ window.details = {
     },
     1589: {//Anniversary Shanks
         captain: "Boosts Chain Multiplier by 3x",
-        special: "Recover 50% of crew's MAX HP, changes bottom row orbs into matching orbs",
+        special: "Recovers 50% of crew's MAX HP, changes bottom row orbs into matching orbs",
         specialName: "Sharing a Cup Filled with Emotions",
     },
     1590: {//Anniversary Shanks
         captain: "Boosts Chain Multiplier by 3.5x, Boosts HP and RCV of all characters by 1.2x",
-        special: "Recover 50% of crew's MAX HP, changes bottom row orbs into matching orbs",
+        special: "Recovers 50% of crew's MAX HP, changes bottom row orbs into matching orbs",
         specialName: "Sharing a Cup Filled with Emotions",
     },	
     1591: {//Anniversary Boa
