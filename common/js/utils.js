@@ -122,7 +122,7 @@
                 return 'https://onepiece-treasurecruise.com/wp-content/uploads/green_skull2_f.png';
                 break;
             case id == 'skullINT':
-                return 'https://onepiece-treasurecruise.com/wp-content/uploads/black_skull2_f.png';
+                return 'https://onepiece-treasurecruise.com/wp-content/uploads/black_skull_f.png';
                 break;
         }
         if (n === null || n === undefined || (window.units && window.units[n - 1].incomplete))
