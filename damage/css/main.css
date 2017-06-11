@@ -472,7 +472,7 @@ body, html {
 #menu {
     position: fixed;
     top: 0px;
-    left: -17.9em;
+    left: -18.9em;
     width: 18.9em;
     height: 100%;
     transition: left .1s linear;
