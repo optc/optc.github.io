@@ -472,8 +472,8 @@ body, html {
 #menu {
     position: fixed;
     top: 0px;
-    left: -18.9em;
-    width: 18.9em;
+    left: -20.9em;
+    width: 20.9em;
     height: 100%;
     transition: left .1s linear;
     margin-bottom: 0;
@@ -566,7 +566,7 @@ li.disabled {
 }
 
 .special > div, #profileContainer {
-    width: 249px;
+    width: 270px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;

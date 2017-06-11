@@ -276,5 +276,11 @@ window.sailors = {
     1575: {//not working
         atkStatic: function(p) { return p.percHP <= 30.0 && p.slot == p.sourceSlot ? 200 : 0; },
     },
+    1613: {//not working
+        staticMult: function(p) { return 2; }
+    },
+    1614: {//not working
+        staticMult: function(p) { return 2; }
+    },
     
 };

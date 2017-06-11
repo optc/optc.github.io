@@ -1532,6 +1532,13 @@ window.drops = {
             "All Difficulties": [ 1606, 1607, 1608, -1404, -1593, -1481, -1442, -1029, -361, -363, -997, -894, -1344 ],
         },
         
+        {
+            name: "New Fishman Pirates!",
+            thumb: 1624,
+            gamewith: null,
+            "All Difficulties": [ 1624, 1625, 1626, -1434, -1477, -1475, -410, -365, -993, -1031, -954, -1347 ],
+        },
+        
     ],
 
             
@@ -1593,7 +1600,6 @@ window.drops = {
         {
             name: 'Clash Reborn!! Doflamingo',
             thumb: 1623,
-            global: true,
             condition: "1 Master version and 3 different Ultimate versions with different conditions. Master: Striker/Cerebral/Fighter Only. Ultimate: Cerebral Only, Fighter Only, and Striker Only",
             gamewith: 58437,
             Ultimate: [ 1622 ],
