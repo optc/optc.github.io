@@ -72,10 +72,10 @@
             return 'https://onepiece-treasurecruise.com/wp-content/themes/onepiece-treasurecruise/images/noimage.png';
         var id = ('0000' + n).slice(-4).replace(/(057[54])/, '0$1');
         if (id == 530){
-            return 'https://onepiece-treasurecruise.com/wp-content/uploads/sites/2/f' + 529 + '.png';
+            return 'https://onepiece-treasurecruise.com/wp-content/uploads/sites/2/f0529.png';
         }
         else if (id == 529){
-            return 'https://onepiece-treasurecruise.com/wp-content/uploads/sites/2/f' + 530 + '.png';
+            return 'https://onepiece-treasurecruise.com/wp-content/uploads/sites/2/f0530.png';
         }
         return 'https://onepiece-treasurecruise.com/wp-content/uploads/sites/2/f' + id + '.png';
     };
