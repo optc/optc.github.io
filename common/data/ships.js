@@ -334,7 +334,7 @@ window.ships = [
     { // 27
         name: 'Going Luffy SENPAI!',
         thumb: 'ship_0028_c.png',
-        description: 'Boosts ATK of Striker characters by 1.5x and their HP by 1.2x if there are 6 Striker characters in your crew. Special: Reduces any damage received above 10,000 HP by 97% (cooldown: 17 turns).',
+        description: 'Boosts ATK of Striker characters by 1.5x and their HP by 1.2x if there are 6 Striker characters in your crew. Reduces special cooldown of Striker characters by 1 at the start of the adventure.  Special: Reduces any damage received above 10,000 HP by 97% (cooldown: 17 turns).',
         atk: function(p) {
             return !(p.classCount.Striker == 6) ? 1 : !p.unit.class.has('Striker') ? 1 :
                 [ 1.1, 1.2, 1.2, 1.2, 1.2, 1.3, 1.3, 1.4, 1.4, 1.5 ][p.boatLevel - 1];
