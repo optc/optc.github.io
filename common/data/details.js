@@ -8226,7 +8226,7 @@ window.details = {
     1503: {//Hammond
         captain: "Boosts ATK of Powerhouse characters proportionally to the crew's current HP",
         captainNotes: "#{captainProportional : lower : ??? + ??? * (1 - (remaining HP) / (total HP)) : ??? : 2.25}",
-        special: "For Driven characters, randomizes non-matching orbs",
+        special: "Changes own orb into [QCK] and changes adjacent orbs into [EMPTY] orbs",
         specialName: "Absurd Invitation",
     },
     1504: {//Vander Decken IX
@@ -8235,12 +8235,12 @@ window.details = {
         specialName: "Inescapable Pursuit",
     },
     1505: {//Hody Jones
-        captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of Powerhouse characters by 2.25x if HP is below ???% at the start of the turn",
+        captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of Powerhouse characters by 2.25x if HP is below 30% at the start of the turn",
         special: "Deals large [STR] damage to all enemies that will ignore damage negating abilities and barriers, makes Perfects harder to hit for 1 turn, reduces crew's current HP by 90%, boosts own ATK by 2.25x for 1 turn.",
         specialName: "Shark Arrows",
     },
     1506: {//Hody Jones
-        captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of Powerhouse characters by 2.5x if HP is below ???% at the start of the turn, 2.25x otherwise",
+        captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of Powerhouse characters by 2.5x if HP is below 30% at the start of the turn, 2.25x otherwise",
         special: "Deals large [STR] damage to all enemies that will ignore damage negating abilities and barriers, makes Perfects harder to hit for 1 turn, reduces crew's current HP by 90%, boosts own ATK by 2.25x for 1 turn.",
         specialName: "Shark Arrows",
     },
@@ -8991,13 +8991,13 @@ window.details = {
     1622: {//Reborn Doffy
         special: "Switches orbs between slots twice, amplifies the effect of orbs by 2x for 1 turn",
         specialNotes: "#{orb : 2x}",
-        specialName: "INT Doflamingo Special",
+        specialName: "Overheat [Reformed]",
         captain: "Boosts ATK of Slasher characters by 2x"
     },
     1623: {//Reborn Doffy
         special: "Switches orbs between slots twice, amplifies the effect of orbs by 2x for 1 turn",
         specialNotes: "#{orb : 2x}",
-        specialName: "INT Doflamingo Special",
+        specialName: "Overheat [Reformed]",
         captain: "Boosts ATK and HP of Slasher characters by 2x"
     },
     1627: {//Mach Vise
