@@ -5609,7 +5609,7 @@ window.details = {
                 "cooldown": [ 26, 20 ]
             },
         ],
-        specialNotes: "For each turn AFTER Elizabello's special reaches stage 3, damage is boosted by 23.75x per turn for an additional 20 turns, for a max damage of 500x character's ATK to all enemies.",
+        specialNotes: "For each turn AFTER Elizabello's special reaches stage 3, damage is boosted by 23.75x per turn for an additional 20 turns, for a max damage of 500x character's ATK to all enemies.<br>#{stages}",
         specialName: "King Punch"
     },
     1131: {
@@ -5628,7 +5628,7 @@ window.details = {
                 "cooldown": [ 26, 20 ]
             },
         ],
-        specialNotes: "For each turn AFTER Elizabello's special reaches stage 3, damage is boosted by 23.75x per turn for an additional 20 turns, for a max damage of 500x character's ATK to all enemies.",
+        specialNotes: "For each turn AFTER Elizabello's special reaches stage 3, damage is boosted by 23.75x per turn for an additional 20 turns, for a max damage of 500x character's ATK to all enemies.<br>#{stages}",
         specialName: "King Punch"
     },
     1132: {
@@ -5947,6 +5947,7 @@ window.details = {
                 "cooldown": [ 17, 12 ],
             }
         ],
+        specialNotes : "#{stages}",
         specialName: "Extreme Speed - One Sword Style, Ten Slashes",
         sailor: "Restores his own special by 1 turn when it is rewinded",
         sailorNotes: "#{rewind : 1}",
@@ -5964,6 +5965,7 @@ window.details = {
                 "cooldown": [ 17, 12 ],
             }
         ],
+        specialNotes : "#{stages}",
         specialName: "Extreme Speed - One Sword Style, Ten Slashes",
         sailor: "Restores his own special by 1 turn when it is rewinded",
         sailorNotes: "#{rewind : 1}",
@@ -6172,7 +6174,8 @@ window.details = {
                 "description": "Deals 25x character's ATK in [INT] damage to one enemy. Reduces crew's current HP by 50%. Boosts ATK of Shooter characters by 2x for 1 turn",
                 "cooldown": [ 34, 18 ],
             },
-        ],        
+        ],
+        specialNotes: "#{stages}",
         specialName: "More More, 10 Times \"Iron Hammer\"",
     },
     1220: {//Byrnndi World Coliseum
@@ -6190,7 +6193,8 @@ window.details = {
                 "description": "Deals 25x character's ATK in [INT] damage to one enemy. Reduces crew's current HP by 50%. Boosts ATK of Shooter characters by 2x for 1 turn",
                 "cooldown": [ 34, 18 ],
             },
-        ],        
+        ],
+        specialNotes: "#{stages}",
         specialName: "More More, 10 Times \"Iron Hammer\"",
     },
     1221: {//Coliseum Oars Jr
@@ -6251,6 +6255,7 @@ window.details = {
                 "cooldown": [ 22, 15 ], 
             },
         ],
+        specialNotes: "#{stages}",
         sailor: "Cannot be Blown Away (Such as Raid Boss Kuma)",
         specialName: "Leg-Locked Heave-Ho",
     },
@@ -6270,6 +6275,7 @@ window.details = {
                 "cooldown": [ 22, 15 ], 
             },
         ],
+        specialNotes: "#{stages}",
         sailor: "Cannot be Blown Away (Such as Raid Boss Kuma)",
         specialName: "Leg-Locked Heave-Ho",
     },
@@ -6348,7 +6354,7 @@ window.details = {
                 "cooldown": [ 20, 17 ], 
             },
         ],    
-        specialNotes: "#{randomHits : 10}",
+        specialNotes: "#{randomHits : 10}<br>#{stages}",
     },
     1240: {//6* Kizaru
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of all characters by 2x, and boosts RCV of all characters by 1.3x. If you use \"Yasakani no Magatama\" boosts ATK of all characters by 3x instead.",
@@ -6367,7 +6373,7 @@ window.details = {
                 "cooldown": [ 20, 17 ],
             },
         ],    
-        specialNotes: "#{randomHits : 10}",
+        specialNotes: "#{randomHits : 10}<br>#{stages}",
     },
     1241: {//Fortnight Koala
         captain: "Boosts chain multiplier by 1.5x. Recovers 1x character's RCV in HP at the end of each turn",
@@ -6433,7 +6439,8 @@ window.details = {
                 "description": "Randomizes non-matching orbs, and boosts ATK of Powerhouse characters by 1.5x for 1 turn",
                 "cooldown": [ 24, 9 ],
             },
-        ], 
+        ],
+        specialNotes: "#{stages}",
         specialName: "Burning Vanguard",
     },
     1251: {// Coliseum Marco
@@ -6448,7 +6455,8 @@ window.details = {
                 "description": "Randomizes non-matching orbs, and boosts ATK of Powerhouse characters by 1.5x for 1 turn",
                 "cooldown": [ 24, 9 ],
             },
-        ], 
+        ],
+        specialNotes: "#{stages}",
         specialName: "Burning Vanguard",
     },
     1252: {// Coliseum Doma
@@ -6496,7 +6504,8 @@ window.details = {
                 "description": "Cuts the current HP of each enemy by 40%",
                 "cooldown": [ 36, 24 ],
             },
-        ], 
+        ],
+        specialNotes: "#{stages}",
         specialName: "Earth Shattering Fist",
     },
     1258: {//Young Whitebeard Evolved
@@ -6515,6 +6524,7 @@ window.details = {
                 "cooldown": [ 36, 24 ],
             },
         ],
+        specialNotes: "#{stages}",
         specialName: "Earth Shattering Fist",
     },
     1259: {//Young Doflamingo
@@ -6734,7 +6744,7 @@ window.details = {
                 "cooldown": [ 26, 16 ],
             },
         ],
-        specialNotes: "The exact multiplier used is chosen based on the crew's current HP at the time the special is activated: above 50% HP, the multiplier used is 50%; between 50% and 10%, it's 80%; below 10% HP, it's 100%.",
+        specialNotes: "The exact multiplier used is chosen based on the crew's current HP at the time the special is activated: above 50% HP, the multiplier used is 50%; between 50% and 10%, it's 80%; below 10% HP, it's 100%.<br>#{stages}",
         specialName: "Snake Dance",
     },
     1294: {//Coliseum Sandersonia
@@ -6749,7 +6759,7 @@ window.details = {
                 "cooldown": [ 26, 16 ],
             },
         ],
-        specialNotes: "The exact multiplier used is chosen based on the crew's current HP at the time the special is activated: above 50% HP, the multiplier used is 50%; between 50% and 10%, it's 80%; below 10% HP, it's 100%.",
+        specialNotes: "The exact multiplier used is chosen based on the crew's current HP at the time the special is activated: above 50% HP, the multiplier used is 50%; between 50% and 10%, it's 80%; below 10% HP, it's 100%.<br>#{stages}",
         specialName: "Snake Dance",
     },
     1295: {//Halloween Kalifa
@@ -6875,7 +6885,7 @@ window.details = {
                 "cooldown": [ 24, 18 ],
             },
         ],
-        specialNotes: "No Healing debuff completely stops healing abilities. This is the debuff used in Akainu raid",
+        specialNotes: "No Healing debuff completely stops healing abilities. This is the debuff used in Akainu raid<br>#{stages}",
         sailor: "Reduces duration of Blindness by 5 turns",
         specialName: "Echoing Cry of the Soul",
     },
@@ -6895,7 +6905,7 @@ window.details = {
                 "cooldown": [ 24, 18 ],
             },
         ],
-        specialNotes: "No Healing debuff completely stops healing abilities. This is the debuff used in Akainu raid",
+        specialNotes: "No Healing debuff completely stops healing abilities. This is the debuff used in Akainu raid<br>#{stages}",
         sailor: "Reduces duration of Blindness by 5 turns",
         specialName: "Echoing Cry of the Soul",
     },
@@ -6977,6 +6987,7 @@ window.details = {
                 "cooldown": [ 19, 12 ],
             }
         ],
+        specialNotes: "#{stages}",
         specialName: "Tail Hammer",
     },
     1328: {//Fornight Leo
@@ -6991,6 +7002,7 @@ window.details = {
                 "cooldown": [ 19, 12 ],
             }
         ],
+        specialNotes: "#{stages}",
         specialName: "Tail Hammer",
     },
     1329: {//Wicca
@@ -7011,7 +7023,7 @@ window.details = {
             },
         ],
         specialName: "The Work of Fairies",
-        specialNotes: "#{colorAffinity : 1.25}",
+        specialNotes: "#{colorAffinity : 1.25}<br>#{stages}",
     },
     1330: {//Gancho
         captain: "Boosts ATK of Striker characters by 1.5x and recovers 2x character's RCV in HP at the end of each turn",
@@ -7030,6 +7042,7 @@ window.details = {
                 "cooldown": [ 24, 17 ],
             },
         ],
+        specialNotes: "#{stages}",
         specialName: "Tears of Healing",
     },
     1332: {//Mansherry
@@ -7044,6 +7057,7 @@ window.details = {
                 "cooldown": [ 24, 17 ],
             },
         ],
+        specialNotes: "#{stages}",
         specialName: "Tears of Healing",
     },
     1333: {//Kabu
@@ -7094,6 +7108,7 @@ window.details = {
                 "cooldown": [ 25, 15 ],
             },
         ],
+        specialNotes: "#{stages}",
         specialName: "Flight Power Strengthening - Jump Point",
     },
     1340: {//Gedatsu
@@ -7246,7 +7261,7 @@ window.details = {
         ],
         sailorNotes: "#{silence}",
         sailor: "Completely resists Silence on this character",
-        specialNotes: "#{silence}",
+        specialNotes: "#{silence}<br>#{stages}",
         specialName: "Black Ball - Thundercloud Rod",
     },
     1366: {//Timeskip Nami
@@ -7265,7 +7280,7 @@ window.details = {
                 "cooldown": [ 18, 13 ],
             },
         ],
-        sailorNotes: "#{silence}",
+        sailorNotes: "#{silence}<br>#{stages}",
         sailor: "Completely resists Silence on this character",
         specialNotes: "#{silence}",
         specialName: "Black Ball - Thundercloud Rod",
@@ -7282,7 +7297,7 @@ window.details = {
                 "cooldown": [ 20, 15 ],
             },
         ],
-        specialNotes: "#{orb : 1.75x}",
+        specialNotes: "#{orb : 1.75x}<br>#{stages}",
         sailor: "Boosts HP, RCV, and ATK of all characters by 50",
         specialName: "Sky Walk",
     },
@@ -7298,7 +7313,7 @@ window.details = {
                 "cooldown": [ 20, 15 ],
             },
         ],
-        specialNotes: "#{orb : 1.75x}",
+        specialNotes: "#{orb : 1.75x}<br>#{stages}",
         sailor: "Boosts HP, RCV, and ATK of all characters by 50",
         specialName: "Sky Walk",
     },
@@ -7341,7 +7356,7 @@ window.details = {
             },
         ],
         specialName: "Poison Dragon",
-        specialNotes: "Toxic starts at 0.5x character's attack and increases by 3x at the end of every turn until 1,500,000 damage per turn.",
+        specialNotes: "Toxic starts at 0.5x character's attack and increases by 3x at the end of every turn until 1,500,000 damage per turn.<br>#{stages}",
     },
     1374: {//Magellan
         captain: "Boosts ATK of INT characters by 2.25x and their HP by 1.5x, deals 5 times the damage received in the previous turn in [INT] damage to all enemies at the end of each turn",
@@ -7356,7 +7371,7 @@ window.details = {
             },
         ],
         specialName: "Poison Dragon",
-        specialNotes: "Toxic starts at 0.5x character's attack and increases by 3x at the end of every turn until 1,500,000 damage per turn.",
+        specialNotes: "Toxic starts at 0.5x character's attack and increases by 3x at the end of every turn until 1,500,000 damage per turn.<br>#{stages}",
     },
     1375: {//Dellinger
         captain: "Boosts ATK of Powerhouse characters by 2.5x, reduces crew's HP by 50%, Increases damage received by 2x",
@@ -7516,7 +7531,7 @@ window.details = {
             },
         ],
         specialName: "Stonewall Punk",
-        specialNotes: "#{colorAffinity : 1.75}",
+        specialNotes: "#{colorAffinity : 1.75}<br>#{stages}",
     },
     1401: {//Colo Gladius
         captain: "Boosts ATK of Shooter characters by 1.75x and boosts ATK of Driven characters by 1.5x",
@@ -7532,7 +7547,7 @@ window.details = {
             },
         ],
         specialName: "Stonewall Punk",
-        specialNotes: "#{colorAffinity : 1.75}",
+        specialNotes: "#{colorAffinity : 1.75}<br>#{stages}",
     },
     1402: {//Colo Dalton
         captain: "Boosts ATK of [PSY] and [QCK] characters by 2x",
@@ -7546,6 +7561,7 @@ window.details = {
                 "cooldown": [ 18, 8 ],
             },
         ],
+        specialNotes: "#{stages}",
         specialName: "Offense Battle Axe",
     },
     1403: {//Timeskip Luffy
@@ -7561,6 +7577,7 @@ window.details = {
                 "cooldown": [ 18, 13 ],
             },
         ],
+        specialNotes: "#{stages}",
         specialName: "Gomu Gomu no Red Hawk",
     },
     1404: {//Timeskip Luffy
@@ -7576,6 +7593,7 @@ window.details = {
                 "cooldown": [ 18, 13 ],
             },
         ],
+        specialNotes: "#{stages}",
         specialName: "Gomu Gomu no Red Hawk",
     },
     1405: {//Timeskip Usopp
@@ -7741,14 +7759,15 @@ window.details = {
         captainNotes: "Hody's HP boost is dependent on how many Powerhouse characters are in your crew. With 6 Powerhouse characters, the boost is 2x, with 5 the boost is 1.5x, with 4 the boost is 1.4x, with 3 the boost is 1.3x, with 2 the boost is 1.2x, and with 1 the boost is 1.1x.",
         special: [
             {
-                "description": "Deals 10x character's ATK in [INT] damage to one enemy, reduces Special Cooldown of Powerhouse characters by 1 turn, reduces damage received by 60% for 1 turn",
+                "description": "Deals 10x character's ATK in [INT] damage to one enemy that will ignore damage negating abilities and barriers, reduces Special Cooldown of Powerhouse characters by 1 turn, reduces damage received by 60% for 1 turn",
                 "cooldown": [ 12, 7 ],
             },
             {
-                "description": "Deals 60x character's ATK in [INT] damage to one enemy, reduces Special Cooldown of Powerhouse characters by 2 turns, reduces damage received by 90% for 1 turn",
+                "description": "Deals 60x character's ATK in [INT] damage to one enemy that will ignore damage negating abilities and barriers, reduces Special Cooldown of Powerhouse characters by 2 turns, reduces damage received by 90% for 1 turn",
                 "cooldown": [ 22, 17 ],
             },
         ],
+        specialNotes: "#{ignoreBarrier}<br>#{stages}",
         specialName: "Water Bullets",
     },
     1434: {//Hody Jones
@@ -7756,14 +7775,15 @@ window.details = {
         captainNotes: "Hody's HP boost is dependent on how many Powerhouse characters are in your crew. With 6 Powerhouse characters, the boost is 2x, with 5 the boost is 1.5x, with 4 the boost is 1.4x, with 3 the boost is 1.3x, with 2 the boost is 1.2x, and with 1 the boost is 1.1x.",
         special: [
             {
-                "description": "Deals 10x character's ATK in [INT] damage to one enemy, reduces Special Cooldown of Powerhouse characters by 1 turn, reduces damage received by 60% for 1 turn",
+                "description": "Deals 10x character's ATK in [INT] damage to one enemy that will ignore damage negating abilities and barriers, reduces Special Cooldown of Powerhouse characters by 1 turn, reduces damage received by 60% for 1 turn",
                 "cooldown": [ 12, 7 ],
             },
             {
-                "description": "Deals 60x character's ATK in [INT] damage to one enemy, reduces Special Cooldown of Powerhouse characters by 2 turns, reduces damage received by 90% for 1 turn",
+                "description": "Deals 60x character's ATK in [INT] damage to one enemy that will ignore damage negating abilities and barriers, reduces Special Cooldown of Powerhouse characters by 2 turns, reduces damage received by 90% for 1 turn",
                 "cooldown": [ 22, 17 ],
             },
         ],
+        specialNotes: "#{ignoreBarrier}<br>#{stages}",
         specialName: "Water Bullets",
     },
     1435: {//Hyouzou
@@ -7857,6 +7877,7 @@ window.details = {
                 "cooldown": [ 20, 15 ],
             },
         ],
+        specialNotes: "#{stages}",
         specialName: "Grill Shot",
     },
     1448: {//Chopper 5+
@@ -7909,6 +7930,7 @@ window.details = {
                 "cooldown": [ 30, 15 ],
             },
         ],
+        specialNotes: "#{stages}",
         specialName: "Legend told to the Grandchild",
     },
     1456: {//Coliseum Don Chinjao
@@ -7923,6 +7945,7 @@ window.details = {
                 "cooldown": [ 30, 15 ],
             },
         ],
+        specialNotes: "#{stages}",
         specialName: "Legend told to the Grandchild",
     },
     1457: {//Coliseum Kuro
@@ -8022,7 +8045,7 @@ window.details = {
                 "cooldown": [ 22, 18 ],
             },
         ],
-        specialNotes: "Rainbow orbs are the benefittial form of [BLOCK] orbs. They can not be shuffled or swapped by you or your opponent. They count as benefittial orbs to any character. They do not count as STR orbs for Sakazuki but do act like Matching orbs for Black Clad Ace or Fujitora captain abilities.",
+        specialNotes: "Rainbow orbs are the benefittial form of [BLOCK] orbs. They can not be shuffled or swapped by you or your opponent. They count as benefittial orbs to any character. They do not count as STR orbs for Sakazuki but do act like Matching orbs for Black Clad Ace or Fujitora captain abilities.<br>#{stages}",
         sailor: "Changes all orbs into [RAINBOW] orbs at the start of the fight.",
         specialName: "Tears of Courage",
     },
@@ -8038,7 +8061,7 @@ window.details = {
                 "cooldown": [ 22, 18 ],
             },
         ],
-        specialNotes: "Rainbow orbs are the benefittial form of [BLOCK] orbs. They can not be shuffled or swapped by you or your opponent. They count as benefittial orbs to any character. They do not count as STR orbs for Sakazuki but do act like Matching orbs for Black Clad Ace or Fujitora captain abilities.",
+        specialNotes: "Rainbow orbs are the benefittial form of [BLOCK] orbs. They can not be shuffled or swapped by you or your opponent. They count as benefittial orbs to any character. They do not count as STR orbs for Sakazuki but do act like Matching orbs for Black Clad Ace or Fujitora captain abilities.<br>#{stages}",
         sailor: "Changes all orbs into [RAINBOW] orbs at the start of the fight.",
         specialName: "Tears of Courage",
     },
@@ -8169,6 +8192,7 @@ window.details = {
                 "cooldown": [ 23, 17 ],
             },
         ],
+        specialNotes: "#{stages}",
         specialName: "Reborn - Fire",
     },
     1493: {//STR Fishman Outlaw
@@ -8366,6 +8390,7 @@ window.details = {
                 "cooldown": [ 21, 12 ],
             },
         ],
+        specialNotes: "#{stages}",
         specialName: "Just 'Water Play'",
     },
     1527: {//Arlong
@@ -8380,6 +8405,7 @@ window.details = {
                 "cooldown": [ 21, 12 ],
             },
         ],
+        specialNotes: "#{stages}",
         specialName: "Just 'Water Play'",
     },
     1528: {//Blenheim
@@ -8416,6 +8442,7 @@ window.details = {
                 "cooldown": [ 24, 21 ],
             },
         ],
+        specialNotes: "#{stages}",
         sailor: "Completely resists Blindness",
         specialName: "Long-Range Attack: Bagworm",
     },
@@ -8435,6 +8462,7 @@ window.details = {
                 "cooldown": [ 24, 21 ],
             },
         ],
+        specialNotes: "#{stages}",
         sailor: "Completely resists Blindness",
         specialName: "Long-Range Attack: Bagworm",
     },
@@ -8615,6 +8643,7 @@ window.details = {
                 "cooldown": [ 24, 16 ],
             },
         ],
+        specialNotes: "#{stages}",
         specialName: "Battle Royale Rush",
         sailor: "Boosts own ATK by 350 if this character is the last in the chain to attack",
     },
@@ -8630,6 +8659,7 @@ window.details = {
                 "cooldown": [ 24, 16 ],
             },
         ],
+        specialNotes: "#{stages}",
         specialName: "Battle Royale Rush",
         sailor: "Boosts own ATK by 350 if this character is the last in the chain to attack",
     },
@@ -8722,6 +8752,7 @@ window.details = {
                 "cooldown": [ 14, 9 ],
             },
         ],
+        specialNotes: "#{stages}",
         sailor: "Makes [STR], [QCK], [DEX], and [INT] orbs \"beneficial\" for this unit",
         specialName: "Miraculous Flying Dragon",
     },
@@ -8741,6 +8772,7 @@ window.details = {
                 "cooldown": [ 14, 9 ],
             },
         ],
+        specialNotes: "#{stages}",
         sailor: "Makes [STR], [QCK], [DEX], and [INT] orbs \"beneficial\" for this unit",
         specialName: "Miraculous Flying Dragon",
     },
@@ -8825,6 +8857,7 @@ window.details = {
                 "cooldown": [ 18, 13 ],
             },
         ],
+        specialNotes: "#{stages}",
         sailor: "Completely resists Paralysis on this character",
         specialName: "King Kong Gun",
     },
