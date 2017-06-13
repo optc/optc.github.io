@@ -9017,7 +9017,7 @@ window.details = {
         specialName: "Double Steel Magnetic Arm",
     },
     1621: {//Log Kid
-        captain: "Boosts ATK of Striker characters by 3x if HP is below 30% at the start of the turn, by 2.5x otherwise",
+        captain: "Boosts ATK of Striker characters by 3x if HP is below 30% at the start of the turn, by 2.5x otherwise and boosts HP of Striker characters by 1.2x",
         special: "Reduces crew's current HP by 80%, boosts ATK of Striker characters by 2x for 1 turn",
         specialName: "Double Steel Magnetic Arm",
     },
