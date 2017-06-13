@@ -1622,9 +1622,9 @@ window.cooldowns = [
     [ 17, 13 ],
     [ 23, 14 ],
     [ 23, 14 ],
-    null,
-    null,
-    null,
+    [ 15, 9 ],
+    [ 15, 9 ],
+    [ 20, 14 ],
     null,//Mach Vise
     null,//Mach Vise
     15,
