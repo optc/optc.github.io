@@ -9033,6 +9033,21 @@ window.details = {
         specialName: "Overheat [Reformed]",
         captain: "Boosts ATK and HP of Slasher characters by 2x"
     },
+    1624: {//Hyouzou
+        captain: "Boosts ATK of Slasher characters by 1.5x and boosts HP of Powerhouse characters by 1.25x",
+        special: "Randomizes all orbs, cuts the current HP of all enemies by 10%, and poisons all enemies.",
+        specialName: "Flexible Six Swords",
+    },
+    1625: {//Daruma
+        captain: "Boosts ATK of Powerhouse and Fighter characters by 1.75x",
+        special: "Randomizes all orbs, including [BLOCK] orbs, and reduces damage received by 50% for 1 turn.",
+        specialName: "Arching Fangs",
+    },
+    1626: {//Dosun
+        captain: "Boosts ATK of Powerhouse characters by 2.5x following a chain of Good > Great > Perfect hits",
+        special: "Deals 20x character's ATK in [PSY] damage to one enemy, boosts ATK of [PSY] characters by 1.5x for 1 turn",
+        specialName: "The Calm Before The Storm",
+    },
     1627: {//Mach Vise
         captain: "Boosts ATK Free Spirit characters by 2x",
         special: [
