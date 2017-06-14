@@ -1627,6 +1627,6 @@ window.cooldowns = [
     [ 20, 14 ],
     null,//Mach Vise
     null,//Mach Vise
-    15,
-    15,
+    [ 15, 5 ],
+    [ 15, 5 ],
 ];

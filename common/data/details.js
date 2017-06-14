@@ -7923,7 +7923,7 @@ window.details = {
         special: [
             {
                 "description": "Cuts the current HP of one enemy by 20%, reduces damage received by 50% for 1 turn",
-                "cooldown": [ 20, 10 ],
+                "cooldown": [ 25, 10 ],
             },
             {
                 "description": "Cuts the current HP of one enemy by 25%, reduces damage received by 70% for 1 turn",
@@ -7938,7 +7938,7 @@ window.details = {
         special: [
             {
                 "description": "Cuts the current HP of one enemy by 20%, reduces damage received by 50% for 1 turn",
-                "cooldown": [ 20, 10 ],
+                "cooldown": [ 25, 10 ],
             },
             {
                 "description": "Cuts the current HP of one enemy by 25%, reduces damage received by 70% for 1 turn",
@@ -9052,16 +9052,16 @@ window.details = {
         captain: "Boosts ATK Free Spirit characters by 2x",
         special: [
             {
-                "description": "Reduces Chain Multiplier Lock duration by 1 turn and boosts the Color Affinity of Striker characters by ???x for 1 turn",
-                "cooldown": [ 23, null ]
+                "description": "Reduces Chain Multiplier Lock duration by 1 turn and boosts the Color Affinity of Striker characters by 1.25x for 1 turn",
+                "cooldown": [ 23, 9 ]
             },
             {
-                "description": "Reduces Chain Multiplier Lock duration by 3 turns and boosts the Color Affinity of Striker characters by ???x for 1 turn",
-                "cooldown": [ 27, null ]
+                "description": "Reduces Chain Multiplier Lock duration by 3 turns and boosts the Color Affinity of Striker characters by 1.5x for 1 turn",
+                "cooldown": [ 27, 13 ]
             },
             {
-                "description": "Reduces Chain Multiplier Lock duration by 5 turns and boosts the Color Affinity of Striker characters by ???x for 1 turn",
-                "cooldown": [ 31, null ]
+                "description": "Reduces Chain Multiplier Lock duration by 5 turns and boosts the Color Affinity of Striker characters by 1.75x for 1 turn",
+                "cooldown": [ 31, 17 ]
             },
         ],
         specialNotes: "#{stages}",
@@ -9071,16 +9071,16 @@ window.details = {
         captain: "Boosts ATK Free Spirit and Striker characters by 2.25x and their RCV by 1.5x",
         special: [
             {
-                "description": "Reduces Chain Multiplier Lock duration by 1 turn and boosts the Color Affinity of Striker characters by ???x for 1 turn",
-                "cooldown": [ 23, null ]
+                "description": "Reduces Chain Multiplier Lock duration by 1 turn and boosts the Color Affinity of Striker characters by 1.25x for 1 turn",
+                "cooldown": [ 23, 9 ]
             },
             {
-                "description": "Reduces Chain Multiplier Lock duration by 3 turns and boosts the Color Affinity of Striker characters by ???x for 1 turn",
-                "cooldown": [ 27, null ]
+                "description": "Reduces Chain Multiplier Lock duration by 3 turns and boosts the Color Affinity of Striker characters by 1.5x for 1 turn",
+                "cooldown": [ 27, 13 ]
             },
             {
-                "description": "Reduces Chain Multiplier Lock duration by 5 turns and boosts the Color Affinity of Striker characters by ???x for 1 turn",
-                "cooldown": [ 31, null ]
+                "description": "Reduces Chain Multiplier Lock duration by 5 turns and boosts the Color Affinity of Striker characters by 1.75x for 1 turn",
+                "cooldown": [ 31, 17 ]
             },
         ],
         specialNotes: "#{stages}",

@@ -1625,10 +1625,10 @@ window.units = [
     [ "Hyouzou, Fishman Pirates Bodyguard", "QCK", [ "Powerhouse", "Slasher" ], 4, 20, 6, 4, 99, 3000000, 85, 58, 27, 1980, 1088, 345, 1 ],
     [ "Daruma, Deep Sea Fishman Pirates", "STR", [ "Powerhouse", "Fighter" ], 4, 20, 4, 4, 99, 3000000, 48, 53, 24, 1405, 985, 320, 1 ],
     [ "Dosun, Deep Sea Fishman Pirates", "PSY", [ "Powerhouse", "Striker" ], 4, 20, 6, 4, 99, 3000000, 91, 60, 21, 2050, 1155, 274, 1 ],
-    [ "Mach Vise", "DEX", [ "Striker", "Free Spirit" ], 4, 25, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Mach Vise, Diamante Military Leader", "DEX", [ "Striker", "Free Spirit" ], 5, 40, 4, 4, 99, 4000000, null, null, null, 3110, 1198, 186, null ],
-    [ "Ikaros Much", "INT", [ "Striker", "Powerhouse" ], 3, 16, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Ikaros Much, The Rebellious Fishman Pirates", "INT", [ "Striker", "Powerhouse" ], 4, 26, 4, 3, 99, 3000000, null, null, null, 2230, 1142, 199, null ],
+    [ "Machvise, Super Weight Human", "DEX", [ "Striker", "Free Spirit" ], 4, 25, 4, 3, 70, 1066998, 140, 70, 16, 1540, 590, 98, null ],
+    [ "Mach Vise, Diamante Military Leader", "DEX", [ "Striker", "Free Spirit" ], 5, 40, 4, 4, 99, 4000000, 1310, 490, 77, 3110, 1198, 186, null ],
+    [ "Ikaros, Deep Sea Fishman Pirates", "INT", [ "Striker", "Powerhouse" ], 3, 16, 5, 2, 50, 392109, 93, 54, 24, 920, 446, 151, null ],
+    [ "Ikaros Much, The Rebellious Fishman Pirates", "INT", [ "Striker", "Powerhouse" ], 4, 26, 4, 3, 99, 3000000, 876, 409, 104, 2230, 1142, 199, null ],
     ];
     
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
