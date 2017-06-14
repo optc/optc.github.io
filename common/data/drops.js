@@ -1535,7 +1535,7 @@ window.drops = {
         {
             name: "New Fishman Pirates!",
             thumb: 1624,
-            gamewith: null,
+            gamewith: 59321,
             "All Difficulties": [ 1624, 1625, 1626, -1434, -1477, -1475, -410, -365, -993, -1031, -954, -1347 ],
         },
         

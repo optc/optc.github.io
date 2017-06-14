@@ -2879,6 +2879,10 @@ window.specials = {
     1623: {
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2); }
     },
+    1618: {
+        atk: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; },
+        type: "type"
+    },
     1627: {
         affinity: function(p){ return p.unit.class.has("Striker") ? window.specials[1627].multiplier : 1; },
         onActivation: function(p) {
