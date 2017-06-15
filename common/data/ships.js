@@ -389,7 +389,7 @@ window.ships = [
     
     { //30
         name: "3rd Anniversary Thousand Sunny",
-        thumb: null,
+        thumb: 'ship_0032_c.png',
         //description: 'Boosts ATK by 1.5x. At the start of the adventure, all specials start at MAX charge.',
         description: 'Boosts ATK by 1.2x.',
         atk: function(p) { return 1.2; },
@@ -399,7 +399,7 @@ window.ships = [
     
     { //31
         name: "Flying Dutchman",
-        thumb: null,
+        thumb: 'ship_0033_c.png',
         description: 'Boosts ATK by 1.5x. Boosts EXP gained by 1.5x. Special: Reduces the defense of all enemies by 25% for 1 turn (cooldown: 16 turns).',
         atk: function(p) { return [ 1.2, 1.2, 1.3, 1.3, 1.4, 1.4, 1.4, 1.4, 1.4, 1.5 ][p.boatLevel - 1]; },
     },
@@ -408,9 +408,23 @@ window.ships = [
     
     { //31.2
         name: "Flying Dutchman - Special ACTIVATED",
-        thumb: null,
+        thumb: 'ship_0033_c.png',
         description: 'Boosts ATK by 1.5x. Boosts EXP gained by 1.5x. ACTIVATED Special: Reduces the defense of all enemies by 25% for 1 turn (cooldown: 16 turns).',
         atk: function(p) { return [ 1.2, 1.2, 1.3, 1.3, 1.4, 1.4, 1.4, 1.4, 1.4, 1.5 ][p.boatLevel - 1]; },
+    },
+    
+    
+    
+    { //32
+        name: "Marshal D. Teach Pirate Ship",
+        thumb: null,
+        description: 'Boosts HP by 1.25x and reduces special cooldown of all characters by 1 at the start of the adventure. Boosts ATK by 1.55x if you have a Striker, Shooter, Fighter, and Slasher on your crew.',
+        atk: function(p) { 
+            return (p.classCount.Striker >= 1 && p.classCount.Fighter >= 1 && p.classCount.Shooter >= 1 && p.classCount.Slasher >= 1) ? [ 1.2, 1.2, 1.25, 1.3, 1.35, 1.4, 1.45, 1.5, 1.5, 1.55 ][p.boatLevel - 1] : 1;
+        },
+        hp: function(p) {
+            return [ 1.1, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.25 ][p.boatLevel - 1];
+        }
     },
 
 ];
