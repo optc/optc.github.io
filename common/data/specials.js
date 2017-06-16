@@ -2905,4 +2905,12 @@ window.specials = {
             });
         }
     },
+    1631: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 1.75 : 1; },
+        type: "class",
+    },
+    1632: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 1.75 : 1; },
+        type: "class",
+    },
 };

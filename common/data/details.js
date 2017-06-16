@@ -5691,12 +5691,12 @@ window.details = {
         special: "Randomly changes all orbs (including [BLOCK] orbs) into either [STR], [DEX], [QCK], [PSY], or [INT] orbs",
         specialName: "Lack of Pure Chi: Lion Finger Gun Sneak Attack"
     },
-    1140: {// Coliseum Moriah
+    1140: {// Coliseum Moria
         captain: "Boosts ATK of Driven characters by 2x",
         special: "Changes own orb into [DEX] and deals 300,000 Fixed damage to one enemy",
         specialName: "Horn Blade Shadow"
     },
-    1141: {// Coliseum Moriah
+    1141: {// Coliseum Moria
         captain: "Boosts ATK of Driven characters by 2.25x, recovers 3x character's RCV in HP at the end of each turn",
         special: "Changes own orb into [DEX] and deals 300,000 Fixed damage to one enemy",
         specialName: "Horn Blade Shadow"
@@ -9095,5 +9095,17 @@ window.details = {
         captain: "Boosts ATK of Striker characters by 2x and their HP by 1.5x",
         special: "Randomly changes all orbs, including [BLOCK] orbs, into [STR], [DEX], [QCK], [INT], or [PSY] orbs and changes own orb into [INT]",
         specialName: "The Spear that Penetrated the Undersea Mountain",
+    },
+    1631: {//Fisher Tiger
+        captain: "Boosts ATK of Powerhouse characters by 2.25x",
+        special: "Boosts ATK of Powerhouse characters by 1.75x for 3 turns",
+        specialName: "Rebellion against the \"Prohibition\" - Taboo",
+        sailor: "When any other Powerhouse character uses a special, reduces own cooldown by 1 turn",
+    },
+    1632: {//Fisher Tiger
+        captain: "Boosts ATK of Powerhouse characters by 2.75x",
+        special: "Boosts ATK of Powerhouse characters by 1.75x for 3 turns",
+        specialName: "Rebellion against the \"Prohibition\" - Taboo",
+        sailor: "When any other Powerhouse character uses a special, reduces own cooldown by 1 turn",
     },
 };
