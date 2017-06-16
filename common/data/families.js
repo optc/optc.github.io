@@ -1629,4 +1629,6 @@ window.families = [
     "Machvise",
     "Ikaros Much",
     "Ikaros Much",
+    "Fisher Tiger",
+    "Fisher Tiger",
 ];
