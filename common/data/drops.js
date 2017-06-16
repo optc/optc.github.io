@@ -1549,6 +1549,7 @@ window.drops = {
             thumb: 227,
             global: true,
             gamewith: 4142,
+            teamDatabase: 'raid_bosses/3',
             Master: [ 86, 112, 118, 226 ],
             Expert: [ 97, 112, 226 ]
         },
@@ -1558,6 +1559,7 @@ window.drops = {
             thumb: 249,
             global: true,
             gamewith: 5210,
+            teamDatabase: 'raid_bosses/4',
             Master: [ 84, 110, 118, 248 ],
             Expert: [ 84, 110, 248 ]
         },
@@ -1567,6 +1569,7 @@ window.drops = {
             thumb: 306,
             global: true,
             gamewith: 5905,
+            teamDatabase: 'raid_bosses/5',
             Master: [ 113, 118, 262, 264, 305 ],
         },
 
@@ -1575,6 +1578,7 @@ window.drops = {
             thumb: 353,
             global: true,
             gamewith: 7293,
+            teamDatabase: 'raid_bosses/27',
             Master: [ 88, 114, 118, 352, 354 ],
             Expert: [ 99, 114, 117, 352, 354 ]
         },
@@ -1584,6 +1588,7 @@ window.drops = {
             thumb: 390,
             global: true,
             gamewith: 8285,
+            teamDatabase: 'raid_bosses/6',
             Master: [ 85, 111, 118, 389 ],
             Expert: [ 85, 96, 111, 389 ]
         },
@@ -1593,6 +1598,7 @@ window.drops = {
             thumb: 418,
             global: true,
             gamewith: 9037,
+            teamDatabase: 'raid_bosses/7',
             Ultimate: [ 86, 112, 118, 302, 417 ],
             Master: [ 86, 97, 112, 417 ]
         },
@@ -1611,6 +1617,7 @@ window.drops = {
             thumb: 447,
             global: true,
             gamewith: 11051,
+            teamDatabase: 'raid_bosses/8',
             Master: [ 84, 110, 118, 300, 446 ],
             Expert: [ 84, 110, 446 ]
         },
@@ -1629,6 +1636,7 @@ window.drops = {
             thumb: 516,
             global: true,
             gamewith: 11958,
+            teamDatabase: 'raid_bosses/9',
             Master: [ 87, 97, 113, 117, 118, 294, 295, 303, 429, 515 ],
             Expert: [ 87, 98, 113, 117, 293, 295, 429, 379, 515 ]
         },
@@ -1638,6 +1646,7 @@ window.drops = {
             thumb: 575,
             global: true,
             gamewith: 12792,
+            teamDatabase: 'raid_bosses/10',
             Ultimate: [ 88, 114, 118, 304, 574 ],
             Master: [ 114, 118, 574 ]
         },
@@ -1647,6 +1656,7 @@ window.drops = {
             thumb: 603,
             global: true,
             gamewith: 13682,
+            teamDatabase: 'raid_bosses/11',
             condition: "Take 300 damage per character in Environmental Lightning Damage every 3 turns",
             Ultimate: [ 85, 111, 118, 301, 602 ],
             Master: [ 85, 111, 118, 602 ] ,
@@ -1658,6 +1668,7 @@ window.drops = {
             thumb: 654,
             global: true,
             gamewith: 14747,
+            teamDatabase: 'raid_bosses/12',
             Master: [ 112, 118, 302, 652 ],
             Expert: [ 86, 97, 112, 652 ]
         },
@@ -1667,6 +1678,7 @@ window.drops = {
             thumb: 771,
             global: true,
             gamewith: 17344,
+            teamDatabase: 'raid_bosses/13',
             Master: [ 110, 111, 112, 113, 114, 770, 771, 772, 773, 774, 775 ],
             Expert: [ 110, 111, 112, 113, 114, 770, 771, 772, 773, 774, 775 ]
         },
@@ -1676,6 +1688,7 @@ window.drops = {
             thumb: 795,
             global: true,
             gamewith: 18565,
+            teamDatabase: 'raid_bosses/28',
             condition: "Take 10% current Health in Environmental Damage every 2 turns",
             Master: [ 794 ],
             Expert: [ 794 ]
@@ -1686,6 +1699,7 @@ window.drops = {
             thumb: 836,
             global: true,
             gamewith: 19424,
+            teamDatabase: 'raid_bosses/14',
             Ultimate: [ 835 ],
             Master: [ 835 ]
         },
@@ -1695,6 +1709,7 @@ window.drops = {
             thumb: 865,
             global: true,
             gamewith: 21345,
+            teamDatabase: 'raid_bosses/15',
             Ultimate: [ 864 ],
             Master: [ 864 ],
             Expert: [ 864 ]
@@ -1705,6 +1720,7 @@ window.drops = {
             thumb: 932,
             global: true,
             gamewith: 23507,
+            teamDatabase: 'raid_bosses/24',
             Master: [ 932 ],
             Expert: [ 932 ]
         },
@@ -1714,6 +1730,7 @@ window.drops = {
             thumb: 978,
             global: true,
             gamewith: 25109,
+            teamDatabase: 'raid_bosses/16',
             Ultimate: [ 977 ],
             Master: [ 977 ]
         },
@@ -1731,6 +1748,7 @@ window.drops = {
             name: 'Clash!! Sabo',
             global: true,
             gamewith: 29788,
+            teamDatabase: 'raid_bosses/17',
             thumb: 1047,
             Ultimate: [ 1046 ],
             Master: [ 1046 ],
@@ -1742,6 +1760,7 @@ window.drops = {
             thumb: 1108,
             global: true,
             gamewith: 33648,
+            teamDatabase: 'raid_bosses/25',
             Ultimate: [ 1107 ],
             Master: [ 1107 ],
             Expert: [ 1107 ]
@@ -1752,6 +1771,7 @@ window.drops = {
             thumb: 1163, 
             global: true,
             gamewith: 35950,
+            teamDatabase: 'raid_bosses/26',
             Master: [ 1162, 1164 ],
             Ultimate: [ 1162, 1164, 1180 ]
         },
@@ -1761,6 +1781,7 @@ window.drops = {
             thumb: 1298,
             global: true,
             gamewith: 41277,
+            teamDatabase: 'raid_bosses/18',
             Ultimate: [ 1297 ]
         },
         
@@ -1867,6 +1888,7 @@ window.drops = {
             thumb: 779,
             global: true,
             gamewith: 17473,
+            teamDatabase: 'coliseums',
             Exhibition: [ 776, 778, 803, 832, 834, 859, 861, 883, 902, 904, 925, 927, 952, 984, 1017, 1019, 1103, 1105, 1197, 1221, 1252, 1253, 1293, 1311, 1339, 1340, 1377, 1402, 1423, 1424, 1457, 1459, 1488, 1490, 1526, 1528, 1552, 1585, 1603, 1629 ],
             Underground: [ 776, 778, 803, 832, 834, 859, 861, 883, 902, 904, 925, 927, 952, 984, 1017, 1019, 1103, 1105, 1197, 1221, 1252, 1253, 1293, 1311, 1339, 1340, 1377, 1402, 1423, 1424, 1457, 1459, 1488, 1490, 1526, 1528, 1552, 1585, 1603, 1629 ],
             Chaos: [ 776, 778, 780, 803, 805, 830, 832, 834, 859, 861, 881, 883, 900, 902, 923, 925, 950, 982, 984, 1017, 1015, 1040, 1042, 1086, 1088, 1090, 1101, 1103, 1105, 1140, 1142, 1144, 1195, 1219, 1221, 1250, 1252, 1291, 1293, 1309, 1311, 1337, 1339, 1340, 1375, 1377, 1400, 1402, 1421, 1423, 1455, 1457, 1486, 1488, 1525, 1526, 1528, 1552, 1554, 1583, 1585, 1601, 1603, 1627, 1629 ]
@@ -1978,6 +2000,111 @@ window.drops = {
             "Bartolomeo": [ 304, 104, 88, 99, 82, 93, 351, -1035, -221, -357, -643, -840, -1025, -1029, -225, -541, -733, -1056 ],
             "Borsalino": [ 302, 102, 86, 97, 80, 91, 349, -1240, -77, -257, -760, -943, -1272, -1551, -896, -398, -793, -1058, -59 ],
             "Captain Buggy": [ 300, 100, 84, 95, 78, 89, 347, -1391, -1031, -1232, -1276, -1550, -739, -214, -707, -735, -890, -1318, -290 ],
+        },
+
+   ],
+
+    'Training Forest': [
+
+        {
+            name: 'Forest of Training: Hawk',
+            thumb: 227,
+            gamewith: 2949,
+            teamDatabase: 'forests/1',
+            global: true,
+            completion: 'Ship: Coffin Boat',
+        },
+        
+        {
+            name: 'Forest of Training: Flame Fist',
+            thumb: 562,
+            gamewith: 15896,
+            teamDatabase: 'forests/2',
+            global: true,
+            completion: 'Ship: Striker',
+        },
+        
+        {
+            name: 'Forest of Training: Kami',
+            thumb: 603,
+            gamewith: 25369,
+            teamDatabase: 'forests/7',
+            global: true,
+            completion: 'Ship: Ark Maxim',
+        },
+        
+        {
+            name: 'Forest of Training: Sun',
+            thumb: 935,
+            gamewith: 32540,
+            teamDatabase: 'forests/9',
+            global: true,
+            completion: 'Ship: Sun Pirates Ship',
+        },
+        
+        {
+            name: 'Forest of Training: Beard',
+            thumb: 261,
+            gamewith: 11685,
+            teamDatabase: 'forests/6',
+            global: true,
+            completion: 'Ship: Moby Dick',
+        },
+        
+        {
+            name: 'Forest of Training: Pheasant',
+            thumb: 575,
+            gamewith: 15617,
+            teamDatabase: 'forests/11',
+            global: true,
+            completion: 'Ship: Aokiji\'s Bicycle',
+        },
+        
+        {
+            name: 'Forest of Training: Snake',
+            thumb: 416,
+            gamewith: 24312,
+            teamDatabase: 'forests/8',
+            global: true,
+            completion: 'Ship: Kuja Pirates Ship',
+        },
+        
+        {
+            name: 'Forest of Training: Red Hair',
+            thumb: 530,
+            gamewith: 27893,
+            teamDatabase: 'forests/10',
+            global: true,
+            completion: 'Ship: Red Force',
+        },
+        
+        {
+            name: 'Forest of Training: Heavenly Demon',
+            thumb: 870,
+            gamewith: 34319,
+            global: true,
+            completion: 'Ship: Doflamingo Pirates Ship',
+        },
+        
+        {
+            name: 'Forest of Training: ROOM',
+            thumb: 1045,
+            gamewith: 44527,
+            completion: 'Ship: Polar Tang',
+        },
+        
+        {
+            name: 'Forest of Training: Monkey',
+            thumb: 1240,
+            gamewith: 48115,
+            completion: 'Ship: Kizaru\'s Cannonball',
+        },
+        
+        {
+            name: 'Forest of Training: Darkness',
+            thumb: 1268,
+            gamewith: 59779,
+            completion: 'Ship: Blackbeard Pirates Ship',
         },
 
    ]

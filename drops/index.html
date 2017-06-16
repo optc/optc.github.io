@@ -77,9 +77,15 @@
                         <td colspan="2">{{island.completion}} </td>
                     </tr>
                     <tr ng-if="island.gamewith" hide-when-empty>
-                        <td>Gamewith</td>
+                        <td>Gamewith (Japanese)</td>
                         <td colspan="2">
                             <a href = "https://トレクル.gamewith.jp/article/show/{{island.gamewith}}">Gamewith Page</a>
+                        </td>
+                    </tr>
+                    <tr ng-if="island.teamDatabase" hide-when-empty>
+                        <td>Team Database</td>
+                        <td colspan="2">
+                            <a href = "http://slefty.herokuapp.com/{{island.teamDatabase}}">Team Database Page</a>
                         </td>
                     </tr>
                     <tr ng-if="island.condition" hide-when-empty>
@@ -134,7 +140,7 @@
                     ng-model="queryFilter" ng-model-options="{ debounce: 500 }" ng-change="changeQueryFilter()" id="search">
             </h1>
 
-            <div ng-repeat="type in [ 'Story Island', 'Weekly Island', 'Fortnight', 'Raid', 'Special' ]"
+            <div ng-repeat="type in [ 'Story Island', 'Weekly Island', 'Fortnight', 'Raid', 'Special', 'Training Forest' ]"
                 class="type collapsed" collapsable hidden-units="hiddenUnits" only-global="onlyGlobal"
                 target="type.html" type="type" data="data" query="query">
                 <h2>
