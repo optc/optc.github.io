@@ -321,9 +321,10 @@ app.directive('decorateSlot',function() {
             if (scope.uid && attrs.hasOwnProperty('addHref'))
                 element.attr('href','../characters/#/view/' + parseInt(scope.uid, 10));
             var url = Utils.getThumbnailUrl(scope.uid);
-            var url2 = Utils.getGlobalThumbnailUrl(scope.uid);
+            //var url2 = Utils.getGlobalThumbnailUrl(scope.uid);
             var div = $('<div class="amount"></div>');
-            element[0].style.backgroundImage = 'url(' + url2 + '), url(' + url + ')';
+            element[0].style.backgroundImage = 'url(' + url + ')';
+            //element[0].style.backgroundImage = 'url(' + url2 + '), url(' + url + ')';
             element.append(div);
             // updating
             var update = function() {

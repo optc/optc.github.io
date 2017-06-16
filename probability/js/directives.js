@@ -74,8 +74,9 @@ directives.decorateSlot = function() {
                 if (!uid) element[0].style.backgroundImage = null;
                 else {
                     var url = Utils.getThumbnailUrl(scope.uid);
-                    var url2 = Utils.getGlobalThumbnailUrl(scope.uid);
-                    element[0].style.backgroundImage = 'url(' + url2 + '), url(' + url + ')';
+                    element[0].style.backgroundImage = 'url(' + url + ')';
+                    //var url2 = Utils.getGlobalThumbnailUrl(scope.uid);
+                    //element[0].style.backgroundImage = 'url(' + url2 + '), url(' + url + ')';
                 }
             };
             scope.$watch('uid', update);

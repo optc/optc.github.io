@@ -10,7 +10,7 @@ var app = angular.module('optc');
  **************/
 
 directives.characterTable = function($rootScope, $timeout, $compile, $storage) {
-	return {
+    return {
 		restrict: 'E',
 		replace: true,
 		template: '<table id="mainTable" class="table table-striped-column panel panel-default"></table>',
@@ -95,7 +95,8 @@ directives.decorateSlot = function() {
             if (scope.big)
                 element[0].style.backgroundImage = 'url(' + Utils.getBigThumbnailUrl(scope.uid) + ')';
             else
-                element[0].style.backgroundImage = 'url(' + Utils.getGlobalThumbnailUrl(scope.uid) + '), url(' + Utils.getThumbnailUrl(scope.uid) + ')';
+                element[0].style.backgroundImage = 'url(' + Utils.getThumbnailUrl(scope.uid) + ')';
+                //element[0].style.backgroundImage = 'url(' + Utils.getGlobalThumbnailUrl(scope.uid) + '), url(' + Utils.getThumbnailUrl(scope.uid) + ')';
         }
     };
 };
@@ -267,11 +268,13 @@ directives.compare = function() {
                     templates: {
                         suggestion: function(id) {
                             if (Number.isInteger(id)){
-                              
-                                var name = units[id].name, url = Utils.getThumbnailUrl(id+1), url2 = Utils.getGlobalThumbnailUrl(id+1);
+                                
+                                var name = units[id].name, url = Utils.getThumbnailUrl(id+1);
+                                //var name = units[id].name, url = Utils.getThumbnailUrl(id+1), url2 = Utils.getGlobalThumbnailUrl(id+1);
                                 if (name.length > 63) name = name.slice(0,60) + '...';
-                                var thumb = '<div class="slot small" style="background-image: url(' + url2 + '), url(' + url + ')"></div>';
-                              
+                                var thumb = '<div class="slot small" style="background-image: url(' + url + ')"></div>';
+                                //var thumb = '<div class="slot small" style="background-image: url(' + url2 + '), url(' + url + ')"></div>';
+                                
                                 return '<div><div class="suggestion-container">' + thumb + '<span>' + name + '</span></div></div>';
                             }
                             else{
@@ -282,12 +285,11 @@ directives.compare = function() {
                         }
                     },
                     display: function(id) {
-			    console.log(id);
                         return units[id].name;
                     }
                 }
             );
-
+            
             target.bind('typeahead:select',function(e,suggestion) {
                 $(e.currentTarget).prop('disabled', true);
                 scope.compare = window.units[suggestion];
@@ -455,7 +457,7 @@ directives.costSlider = function($timeout) {
         link: function(scope, element, attrs) {
             element.ionRangeSlider({
                 grid: true,
-		    type: 'double',
+                type: 'double',
                 min: scope.filters.cost[0],
                 max: scope.filters.cost[1],
                 from: scope.filters.cost[0],
