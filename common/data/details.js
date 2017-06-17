@@ -3336,14 +3336,14 @@ window.details = {
     749: {
         special: "Deals random DEX damage to all enemies, randomizes all orbs",
         specialName: "Tempest Kick: Sky Slicer",
-        specialNotes: "The random damage is between 10,000 and 90,000",
+        specialNotes: "#{random : 10,000 : 90,000}",
         captain: "Boosts ATK of DEX characters by 1.5x, boosts damage of DEX specials by 1.5x",
         captainNotes: "#{noFixedPerc}"
     },
     750: {
         special: "Deals random DEX damage to all enemies, randomizes all orbs",
         specialName: "Tempest Kick: Sky Slicer",
-        specialNotes: "The random damage is between 10,000 and 90,000",
+        specialNotes: "#{random : 10,000 : 90,000}",
         captain: "Boosts ATK of DEX characters by 2x, boosts damage of DEX specials by 2x",
         captainNotes: "#{noFixedPerc}"
     },
@@ -4647,7 +4647,6 @@ window.details = {
         captain: "Boosts ATK of [PSY] and [DEX] characters by 1.75x and their RCV by 1.2x",
         specialName: "Flintlock Barrage",
         special: "Randomly changes all orbs into either [PSY] or [DEX] orbs, deals random PSY damage to all enemies",
-        specialNotes: "Random Damage is currently unknown"
     },
     980: {
         captain: "Boosts ATK of [DEX] and [STR] characters by 1.75x and their RCV by 1.2x",
@@ -5065,13 +5064,13 @@ window.details = {
         captain: "Boosts ATK of Free Spirit characters by 2.75x following a chain of Good > Great > Perfect hits",
         specialName: "Dragon Claw Fist: Dragon's Breath",
         special: "Deals random typeless damage to all enemies. For 2 turns every attacking character gets 55x character's ATK as additional typeless bonus damage if you hit no lower than Good",
-        specialNotes: "The Random Damage is between 10k and 30k <br> Extra Damage can only be boosted by conditional Boosters"
+        specialNotes: "#{random : 10,000 : 30,000} <br> Extra Damage can only be boosted by conditional Boosters"
     },
     1047: {
         captain: "Boosts ATK of Free Spirit characters by 3.5x following a chain of Good > Great > Perfect hits",
         specialName: "Dragon Claw Fist: Dragon's Breath",
         special: "Deals random typeless damage to all enemies. For 2 turns every attacking character gets 55x character's ATK as additional typeless bonus damage if you hit no lower than Good",
-        specialNotes: "The Random Damage is between 10k and 30k <br> Extra Damage can only be boosted by conditional Boosters"
+        specialNotes: "#{random : 10,000 : 30,000} <br> Extra Damage can only be boosted by conditional Boosters"
     },
     1048: {
         captain: "Boosts ATK and RCV of [PSY] characters by 1.2x",
@@ -6401,7 +6400,7 @@ window.details = {
     },
     1245: {// Event Luffy
         captain: "Boosts ATK of Fighter characters by 1.75x. If HP is below 10%, boosts ATK of Fighter characters by 3x instead.",
-        special: "Deals random [QCK] damage to all enemies, and boosts ATK of Fighter characters by 1.3x for 1 turn. If \"Light of a Firefly, Fire Daruma\" is used again in the same turn the special is activated in, boosts ATK of Fighter characters by 2x instead.",
+        special: "Deals random [QCK] damage to all enemies, and boosts ATK of Fighter characters by 1.3x for 1 turn. If \"Firefly Light, Fiery Doll\" is used again in the same turn the special is activated in, boosts ATK of Fighter characters by 2x instead.",
         specialName:"Gomu Gomu no Stamp Gatling",
         specialNotes: "Firefly Light, Fiery Doll is Event Ace's special ability.",
     },
@@ -6473,7 +6472,7 @@ window.details = {
     },
     1254: {//FN Squard
         captain: "Boosts ATK of Striker characters by 2.5x until the first hit other than Perfect. Reduce crew's current HP by 5% at the end of each turn.",
-        special: "Deals 10x his ATK to one enemy, reduces crews current HP by 30% and reduces enemies defense by a certain amount for one turn",
+        special: "Deals 10x character's ATK in fixed damage to one enemy, reduces crews current HP by 30% and reduces enemies defense by 80% for one turn",
         specialName: "Sword Attack Without Hesitation",
         sailor: "Reduces his own Numbness by 1 turn"
     },
@@ -7692,12 +7691,12 @@ window.details = {
     },
     1421: {//Coliseum Diamante
         captain: "Boosts ATK of Driven characters by 2x",
-        special: "Deals large [INT] damage to all enemies. If HP is full at the time the special was activated, boosts ATK of Driven characters by 2x for 1 turn, 1.5x otherwise",
+        special: "Deals 20x Character's ATK in [INT] damage to all enemies. If HP is full at the time the special was activated, boosts ATK of Driven characters by 2x for 1 turn, 1.5x otherwise",
         specialName: "Half Moon Glaive",
     },
     1422: {//Coliseum Diamante
         captain: "Boosts ATK of Driven characters by 2.25x and boosts HP of Striker and Slasher characters by 1.5x",
-        special: "Deals large [INT] damage to all enemies. If HP is full at the time the special was activated, boosts ATK of Driven characters by 2x for 1 turn, 1.5x otherwise",
+        special: "Deals 20x Character's ATK in [INT] damage to all enemies. If HP is full at the time the special was activated, boosts ATK of Driven characters by 2x for 1 turn, 1.5x otherwise",
         specialName: "Half Moon Glaive",
     },
     1423: {//Coliseum T-Bone
