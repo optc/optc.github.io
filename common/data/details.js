@@ -6613,14 +6613,14 @@ window.details = {
     1273: {//Jesus Burgess
         captain: "Boosts ATK of Fighter and Powerhouse characters by 1.5x and their HP by 1.2",
         captainNotes: "Boosts stack, so a Fighter/Powerhouse character gets 2.25x ATK and 1.44x HP",
-        special: "Deals large [STR] damage to all enemies. Boosts ATK of Fighter characters by 1.5x for 5 turns",
+        special: "Deals 20x character's ATK in [STR] damage to all enemies. Boosts ATK of Fighter characters by 1.5x for 5 turns",
         sailor: "Boosts HP of all characters by 75",
         specialName: "Champion of the Wild Roar",
     },
     1274: {//Jesus Burgess
         captain: "Boosts ATK of Fighter and Powerhouse characters by 1.6x and their HP by 1.2x",
         captainNotes: "Boosts stack, so a Fighter/Powerhouse character gets 2.56x ATK and 1.44x HP",
-        special: "Deals large [STR] damage to all enemies. Boosts ATK of Fighter characters by 1.5x for 5 turns",
+        special: "Deals 20x character's ATK in [STR] damage to all enemies. Boosts ATK of Fighter characters by 1.5x for 5 turns",
         sailor: "Boosts HP of all characters by 75",
         specialName: "Champion of the Wild Roar",
     },
@@ -7133,7 +7133,7 @@ window.details = {
     },
     1344: {//Bluejam
         captain: "Reduces crew's current HP by 50%. Boosts ATK of Driven characters by 2.25x.",
-        special: "Deals large [STR] damage to one enemy, and boosts ATK of Driven characters by 1.3x for 1 turn",
+        special: "Deals 20x character's ATK in [STR] damage to all enemies, and boosts ATK of Driven characters by 1.3x for 1 turn",
         specialName: "Bullet Purge",
     },
     1345: {//Jimbe
@@ -7230,14 +7230,14 @@ window.details = {
     },
     1363: {//Timeskip Franky
         captain: "Boosts ATK of [PSY] characters by 2x, reduces damage received by 10%",
-        special: "Deals random [PSY] damage to all enemies, amplifies the effect of orbs for [PSY] characters by 2x for 1 turn",
+        special: "Deals 25x character's ATK in [PSY] damage to all enemies, amplifies the effect of orbs for [PSY] characters by 2x for 1 turn",
         specialNotes: "#{orb : 2x}",
         sailor: "Boosts HP of [PSY] characters by 100",
         specialName: "Franky Fireball",
     },
     1364: {//Timeskip Franky
         captain: "Boosts ATK of [PSY] characters by 2.5x, reduces damage received by 10%",
-        special: "Deals random [PSY] damage to all enemies, amplifies the effect of orbs for [PSY] characters by 2x for 1 turn",
+        special: "Deals 25x character's ATK in [PSY] damage to all enemies, amplifies the effect of orbs for [PSY] characters by 2x for 1 turn",
         specialNotes: "#{orb : 2x}",
         sailor: "Boosts HP of [PSY] characters by 100",
         specialName: "Franky Fireball",
@@ -7521,11 +7521,11 @@ window.details = {
         captainNotes: "The bonus is cumulative. Shooter Driven characters get a 2.275x bonus.",
         special: [
             {
-                "description": "Deals [STR] damage to all enemies, reduces Bind and Despair duration by 1 turn and boosts the Color Affinity of Shooter characters by 1.5x for 1 turn",
+                "description": "Deals 13x character's ATK in [STR] damage to all enemies, reduces Bind and Despair duration by 1 turn and boosts the Color Affinity of Shooter characters by 1.5x for 1 turn",
                 "cooldown": [ 26, 11 ],
             },
             {
-                "description": "Deals large [STR] damage to all enemies, reduces Bind and Despair duration by 2 turns and boosts the Color Affinity of Shooter characters by 1.75x for 1 turn",
+                "description": "Deals 30x character's ATK in [STR] damage to all enemies, reduces Bind and Despair duration by 2 turns and boosts the Color Affinity of Shooter characters by 1.75x for 1 turn",
                 "cooldown": [ 33, 18 ],
             },
         ],
@@ -7537,11 +7537,11 @@ window.details = {
         captainNotes: "The bonus is cumulative. Shooter Driven characters get a 2.625x bonus.",
         special: [
             {
-                "description": "Deals [STR] damage to all enemies, reduces Bind and Despair duration by 1 turn and boosts the Color Affinity of Shooter characters by 1.5x for 1 turn",
+                "description": "Deals 13x character's ATK in [STR] damage to all enemies, reduces Bind and Despair duration by 1 turn and boosts the Color Affinity of Shooter characters by 1.5x for 1 turn",
                 "cooldown": [ 26, 11 ],
             },
             {
-                "description": "Deals large [STR] damage to all enemies, reduces Bind and Despair duration by 2 turns and boosts the Color Affinity of Shooter characters by 1.75x for 1 turn",
+                "description": "Deals 30x character's ATK in [STR] damage to all enemies, reduces Bind and Despair duration by 2 turns and boosts the Color Affinity of Shooter characters by 1.75x for 1 turn",
                 "cooldown": [ 33, 18 ],
             },
         ],
@@ -8148,13 +8148,13 @@ window.details = {
     },
     1486: {//Coliseum Ideo
         captain: "Boosts ATK of Fighter characters by 2.5x if they have a matching orb.",
-        special: "Increases damage received by 2x for 2 turns, deals random [DEX] damage to one enemy, amplifies the effect of orbs for Fighter characters by 2x for 1 turn",
+        special: "Increases damage received by 2x for 2 turns, deals 15x character's ATK in [DEX] damage to one enemy, amplifies the effect of orbs for Fighter characters by 2x for 1 turn",
         specialNotes: "#{orb : 2x}",
         specialName: "Destruction Cannon: Hidden Bullet",
     },
     1487: {//Coliseum Ideo
         captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of Fighter characters by 3x if they have a matching orb.",
-        special: "Increases damage received by 2x for 2 turns, deals random [DEX] damage to one enemy, amplifies the effect of orbs for Fighter characters by 2x for 1 turn",
+        special: "Increases damage received by 2x for 2 turns, deals 15x character's ATK in [DEX] damage to one enemy, amplifies the effect of orbs for Fighter characters by 2x for 1 turn",
         specialNotes: "#{orb : 2x}",
         specialName: "Destruction Cannon: Hidden Bullet",
     },
@@ -8374,7 +8374,7 @@ window.details = {
     1525: {//Sulieman
         captain: "Boosts ATK of Slasher characters by 3.25x, reduces his own ATK multiplier by 0.0625x at the end of each turn until it is 2x",
         special: "Deals 3 hits of random typeless damage to random enemies, delays all enemies for 1 turn, boosts ATK against delayed enemies by 1.3x for 2 turns",
-        specialNotes: "#{randomHits : 3}",
+        specialNotes: "#{randomHits : 3}<br>#{random : 50,000 : 150,000 : per hit}",
         specialName: "Sorrowful Execution",
     },
     1526: {//Arlong
