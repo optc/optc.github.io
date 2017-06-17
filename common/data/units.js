@@ -1629,8 +1629,8 @@ window.units = [
     [ "Mach Vise, Diamante Military Leader", "DEX", [ "Striker", "Free Spirit" ], 5, 40, 4, 4, 99, 4000000, 1310, 490, 77, 3110, 1198, 186, null ],
     [ "Ikaros, Deep Sea Fishman Pirates", "INT", [ "Striker", "Powerhouse" ], 3, 16, 5, 2, 50, 392109, 93, 54, 24, 920, 446, 151, null ],
     [ "Ikaros Much, The Rebellious Fishman Pirates", "INT", [ "Striker", "Powerhouse" ], 4, 26, 4, 3, 99, 3000000, 876, 409, 104, 2230, 1142, 199, null ],
-    [ "Fisher Tiger", "PSY", [ "Powerhouse", "Fighter" ], 4, 20, null, null, 70, 1066998, null, null, null, null, null, null, null ],
-    [ "Fisher Tiger, Captain of the Sun Pirates", "PSY", [ "Powerhouse", "Fighter" ], 5, 30, null, null, 99, 4000000, null, null, null, 2522, 1386, 313, null ],
+    [ "Fisher Tiger", "PSY", [ "Powerhouse", "Fighter" ], 4, 20, 5, 3, 70, 1066998, null, null, null, 1323, 707, 180, null ],
+    [ "Fisher Tiger, Captain of the Sun Pirates", "PSY", [ "Powerhouse", "Fighter" ], 5, 30, 4, 4, 99, 4000000, 1250, 630, 132, 2522, 1386, 313, null ],
     ];
     
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
