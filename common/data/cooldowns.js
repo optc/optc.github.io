@@ -1499,7 +1499,7 @@ window.cooldowns = [
     17,
     15,
     20,
-    15,
+    [ 15, 9 ],
     16,
     14,
     [ 19, 13 ],
@@ -1560,7 +1560,7 @@ window.cooldowns = [
     [ 19, 14 ],
     [ 11, 5 ],
     [ 23, 17 ],
-    15,
+    [ 15, 9 ],
     null,//Fortnight Elizabello
     null,//Fortnight Elizabello
     [ 15, 9 ],
