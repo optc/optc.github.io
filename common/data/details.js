@@ -2705,11 +2705,13 @@ window.details = {
     630: {
         special: "Randomly changes all orbs into either [QCK] or [DEX] orbs, deals random QCK damage to all enemies",
         specialName: "Tempest Kick: Slaughter",
+        specialNotes: "#{random : 5,000 : 15,000}",
         captain: "Boosts ATK of Slasher characters by 1.5x"
     },
     631: {
         special: "Randomly changes all orbs into either [QCK] or [DEX] orbs, deals random QCK damage to all enemies",
         specialName: "Tempest Kick: Slaughter",
+        specialNotes: "#{random : 5,000 : 15,000}",
         captain: "Boosts ATK of Slasher characters by 2x"
     },
     632: {
@@ -4048,13 +4050,13 @@ window.details = {
         captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of Fighter characters by 1.75x",
         specialName: "Battle Preservation Fist: Manki Kayaku",
         special: "Randomly changes all orbs including [BLOCK] orbs into [G] orbs, deals random typeless damage to all enemies",
-        specialNotes: "#{gOrbs}"
+        specialNotes: "#{gOrbs}<br>#{random : 5,000 : 100,000}"
     },
     880: {
         captain: "Reduces cooldown of all specials by 3 turns at the start of the fight, boosts ATK of Fighter characters by 2x",
         specialName: "Battle Preservation Fist: Manki Kayaku",
         special: "Randomly changes all orbs including [BLOCK] orbs into [G] orbs, deals random typeless damage to all enemies",
-        specialNotes: "#{gOrbs}"
+        specialNotes: "#{gOrbs}<br>#{random : 5,000 : 100,000}"
     },
     881: {
         captain: "Boosts ATK of Shooter and Free Spirit characters by 2x following a chain of Good > Great > Perfect hits",
@@ -4476,7 +4478,8 @@ window.details = {
     948: {
         captain: "Boosts ATK of Shooter characters by 1.5x and their RCV by 1.2x",
         specialName: "Twin Cannons",
-        special: "Randomly changes all orbs to either [STR] or [INT]. Deals random [STR] damage"
+        special: "Randomly changes all orbs to either [STR] or [INT]. Deals random [STR] damage",
+        specialNotes: "#{random : 7,000 : 18,000}",
     },
     949: {
         captain: "Boosts ATK of Slasher characters by 2x, recovers 2x character's RCV in HP at the end of each turn",
