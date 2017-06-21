@@ -1644,8 +1644,8 @@ window.units = [
     [ "Fodder #7", "STR", [ "Slasher", "Powerhouse" ], 3, 12, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Fodder #6", "QCK", [ "Slasher", "Powerhouse" ], 3, 12, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Fodder #8", "DEX", [ "Slasher", "Powerhouse" ], 3, 12, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Pica, Donquixote Pirates, Reformed", "STR", [ "Powerhouse", "Driven" ], 4, 30, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Pica, Donquixote Pirates, Reformed Evolved", "STR", [ "Powerhouse", "Driven" ], 5, 50, null, 3, 99, null, null, null, null, 4020, 1210, 5, null ],
+    [ "Pica [Reformed]", "STR", [ "Powerhouse", "Driven" ], 4, 30, 4, 2, 70, 1066998, null, null, null, null, null, null, null ],
+    [ "Pica, Donquixote Pirates [Reformed]", "STR", [ "Powerhouse", "Driven" ], 5, 50, 4, 3, 99, 5000000, null, null, null, 4020, 1210, 5, null ],
     ];
     
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],

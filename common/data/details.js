@@ -9121,23 +9121,23 @@ window.details = {
         specialName: "Yeti Cool Brothers Special",
     },
     1635: {//Brownbeard
-        captain: "Boosts OWN ATK by 1.5x and the ATK of cerebral characters by 2x",
+        captain: "Boosts OWN ATK by 1.5x and the ATK of Cerebral characters by 2x",
         special: "Cuts the HP of all enemies by 20% and binds himself for 5 turns",
         specialName: "Brownbeard Special",
     },
     1636: {//Caesar Clown
-        captain: "Boosts ATK of cerebral characters by 2x",
+        captain: "Boosts ATK of Cerebral characters by 2x",
         special: "For 3 turns, boosts ATK against poisoned and strongly poisoned enemies by 1.3x and changes [BOMB] orbs into matching orbs",
         specialName: "Gastanet",
     },
     1637: {//Caesar Clown Evolved
-        captain: "Boosts ATK of cerebral characters by 2.25x and reduces damage received by 15%",
+        captain: "Boosts ATK of Cerebral characters by 2.25x and reduces damage received by 15%",
         special: "For 3 turns, boosts ATK against poisoned and strongly poisoned enemies by 1.3x and changes [BOMB] orbs into matching orbs",
         specialName: "Gastanet",
     },
-    1646: {
+    1646: {//Reborn Pica
         captain: "Boosts ATK of Powerhouse characters by 1.5x, and their HP by 1.5x",
-        specialName: "Rock Domination Wall",
+        specialName: "Rock Domination Wall [Reformed]",
         special: [
             {
                 "description": "For Driven and Powerhouse characters, changes [EMPTY] and Badly Matching orbs into Matching orbs. Cuts the current HP of all enemies by 10%",
@@ -9150,9 +9150,9 @@ window.details = {
         ],
         specialNotes: "#{stages}"	
         },
-    1647: {
+    1647: {//Reborn Pica
         captain: "Boosts ATK of Powerhouse characters by 2.25x, and their HP by 1.5x",
-        specialName: "Rock Domination Wall",
+        specialName: "Rock Domination Wall [Reformed]",
         special: [
             {
                 "description": "For Driven and Powerhouse characters, changes [EMPTY] and Badly Matching orbs into Matching orbs. Cuts the current HP of all enemies by 10%",

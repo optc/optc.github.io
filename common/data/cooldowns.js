@@ -1631,4 +1631,19 @@ window.cooldowns = [
     [ 15, 5 ],
     [ 21, 17 ],
     [ 21, 17 ],
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,//Pica
+    null,//Pica
 ];
