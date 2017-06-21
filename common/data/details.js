@@ -9110,4 +9110,60 @@ window.details = {
         specialName: "Rebellion against the \"Prohibition\" - Taboo",
         sailor: "When any other Powerhouse character uses a special, reduces own cooldown by 1 turn",
     },
+    1633: {//Punk Hazard Dragon
+        captain: "Boosts ATK of [STR] characters by 1.75x and the HP of Powerhouse characters by 1.2x",
+        special: "Deals 15x character's ATK in [STR] damage to all enemies and amplifies the effect of orbs by 1.25x for 1 turn",
+        specialName: "Punk Hazard Dragon Special",
+    },
+    1634: {//Yeti Cool Brothers
+        captain: "Boosts HP of [INT] characters by 2x",
+        special: "Reduces damage received by 50% for 1 turn",
+        specialName: "Yeti Cool Brothers Special",
+    },
+    1635: {//Brownbeard
+        captain: "Boosts OWN ATK by 1.5x and the ATK of cerebral characters by 2x",
+        special: "Cuts the HP of all enemies by 20% and binds himself for 5 turns",
+        specialName: "Brownbeard Special",
+    },
+    1636: {//Caesar Clown
+        captain: "Boosts ATK of cerebral characters by 2x",
+        special: "For 3 turns, boosts ATK against poisoned and strongly poisoned enemies by 1.3x and changes [BOMB] orbs into matching orbs",
+        specialName: "Gastanet",
+    },
+    1637: {//Caesar Clown Evolved
+        captain: "Boosts ATK of cerebral characters by 2.25x and reduces damage received by 15%",
+        special: "For 3 turns, boosts ATK against poisoned and strongly poisoned enemies by 1.3x and changes [BOMB] orbs into matching orbs",
+        specialName: "Gastanet",
+    },
+    1646: {
+        captain: "Boosts ATK of Powerhouse characters by 1.5x, and their HP by 1.5x",
+        specialName: "Rock Domination Wall",
+        special: [
+            {
+                "description": "For Driven and Powerhouse characters, changes [EMPTY] and Badly Matching orbs into Matching orbs. Cuts the current HP of all enemies by 10%",
+                "cooldown": [ 20, 11 ]
+            },
+            {
+                "description": "Changes [EMPTY] and Badly Matching orbs into Matching orbs. Cuts the current HP of all enemies by 20%",
+                "cooldown": [ 26, 17 ]
+            }
+        ],
+        specialNotes: "#{stages}"	
+        },
+    1647: {
+        captain: "Boosts ATK of Powerhouse characters by 2.25x, and their HP by 1.5x",
+        specialName: "Rock Domination Wall",
+        special: [
+            {
+                "description": "For Driven and Powerhouse characters, changes [EMPTY] and Badly Matching orbs into Matching orbs. Cuts the current HP of all enemies by 10%",
+                "cooldown": [ 20, 11 ]
+            },
+            {
+                "description": "Changes [EMPTY] and Badly Matching orbs into Matching orbs. Cuts the current HP of all enemies by 20%",
+                "cooldown": [ 26, 17 ]
+            }
+        ],
+        specialNotes: "#{stages}"
+    },
+    
 };
