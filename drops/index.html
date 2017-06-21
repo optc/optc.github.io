@@ -104,7 +104,7 @@
                 </tbody>
                 <tbody>
                     <tr ng-repeat="(stage,data) in island"
-                        ng-if="stage != 'thumb' && stage != 'day' && stage != 'name' && stage != 'shortName' && stage != 'global' && stage != 'condition' && stage != 'challenge' && stage != 'completion' && stage != 'challengeData' && stage != 'showManual' && stage != 'gamewith'">
+                        ng-if="stage != 'thumb' && stage != 'day' && stage != 'name' && stage != 'shortName' && stage != 'global' && stage != 'condition' && stage != 'challenge' && stage != 'completion' && stage != 'challengeData' && stage != 'showManual' && stage != 'gamewith' && stage != 'teamDatabase'">
                         <td>
                             {{type == 'Story Island'&& stage!='Completion Units' ? 'Stage ' + stage : (stage.length < 2 ? 'Any' : stage)}}
                         </td>
