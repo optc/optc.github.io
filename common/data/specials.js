@@ -2926,4 +2926,22 @@ window.specials = {
         type: "condition",
         warning: "Selected special (%name%) assumes that the enemy has been poisoned or STRONGLY Poisoned."
     },
+    1640: {
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[1640].turnedOn = true;
+        },
+        onDeactivation: function(p) {
+            window.specials[1640].turnedOn = false;
+        }
+    },
+    1641: {
+        atk: function(p) { return 1.2; },
+        type: "condition",
+        warning: "Selected special (%name%) assumes that the enemy has been poisoned or STRONGLY Poisoned."
+    },
+    1643: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? 1.2 : 1; },
+        type: "class",
+    },
 };

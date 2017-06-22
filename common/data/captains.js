@@ -4847,6 +4847,17 @@ window.captains = {
     1637: {
         atk: function(p) { return p.unit.class.has("Cerebral") ? 2.25: 1; }
     },
+    1644: {
+        atk: function(p) { return p.unit.type == "QCK" ? 2 : 1; }
+    },
+    1645: {
+        atk: function(p) { 
+            return p.unit.class.has("Slasher") && p.unit.type == "DEX" ? 1.96 :
+                p.unit.class.has("Slasher") && !p.unit.type == "DEX" ? 1.3 :
+                !p.unit.class.has("Slasher") && p.unit.type == "DEX" ? 1.5 :
+                1;
+        }
+    },
     1646: {
         atk: function(p) { return p.unit.class.has("Powerhouse") ? 1.5 : 1; },
         hp: function(p) { return p.unit.class.has("Powerhouse") ? 1.5 : 1; }

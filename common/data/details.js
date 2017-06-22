@@ -1457,11 +1457,11 @@ window.details = {
         captain: "Boosts RCV of all characters by 1.5x"
     },
     379: {
-        special: "Removes poison",
+        special: "Removes Poison",
         specialName: "Dugong Kung Fu Fist of Healing"
     },
     380: {
-        special: "Removes poison",
+        special: "Removes Poison",
         specialName: "Dugong Kung Fu Fist of Healing",
         captain: "Boosts ATK and RCV of STR characters by 1.5x"
     },
@@ -1474,14 +1474,14 @@ window.details = {
         specialName: "Shield Crusher"
     },
     383: {
-        special: "Strongly poisons one enemy",
-        specialNotes: "Strong poison deals 5x character's ATK in fixed damage at the end of each turn",
+        special: "Strongly Poisons one enemy",
+        specialNotes: "Strong Poison deals 5x character's ATK in fixed damage at the end of each turn",
         specialName: "Poison Needle",
         captain: "Reduces damage received by 10%, boosts ATK of INT characters by 2x"
     },
     384: {
-        special: "Strongly poisons one enemy",
-        specialNotes: "Strong poison deals 5x character's ATK in fixed damage at the end of each turn",
+        special: "Strongly Poisons one enemy",
+        specialNotes: "Strong Poison deals 5x character's ATK in fixed damage at the end of each turn",
         specialName: "Poison Needle",
         captain: "Reduces damage received by 20%, boosts ATK of INT characters by 2x"
     },
@@ -1518,13 +1518,13 @@ window.details = {
         captain: "Boosts ATK by 2.75x following a chain of DEX > INT > QCK attacks no lower than Good"
     },
     391: {
-        special: "Reduces damage received by 90% for 1 turn, reduces the defense of all enemies by 80% for 1 turn, poisons enemies for 1,000 damage for a single turn",
+        special: "Reduces damage received by 90% for 1 turn, reduces the defense of all enemies by 80% for 1 turn, Poisons enemies for 1,000 damage for a single turn",
         specialName: "Negative Hollow",
         specialNotes: "Poison damage deals 1,000 damage exactly and will ignore enemy armor at the end of your turn",
         captain: "Boosts RCV of DEX characters by 1.5x"
     },
     392: {
-        special: "Reduces damage received by 90% for 1 turn, reduces the defense of all enemies by 80% for 1 turn, poisons enemies for 1,000 damage for a single turn",
+        special: "Reduces damage received by 90% for 1 turn, reduces the defense of all enemies by 80% for 1 turn, Poisons enemies for 1,000 damage for a single turn",
         specialName: "Negative Hollow",
         specialNotes: "Poison damage deals 1,000 damage exactly and will ignore enemy armor at the end of your turn",
         captain: "Boosts RCV of DEX characters by 2x"
@@ -1760,13 +1760,13 @@ window.details = {
         captain: "Boosts ATK by 2.25x following a chain of INT > PSY > QCK attacks no lower than Good"
     },
     437: {
-        special: "Recovers 3x character's RCV in HP, reduces damage received by 80% for 1 turn, poisons enemies for 1,000 for a single turn",
+        special: "Recovers 3x character's RCV in HP, reduces damage received by 80% for 1 turn, Poisons enemies for 1,000 for a single turn",
         specialName: "Negative Horo \"Sweet\"",
         specialNotes: "Poison damage deals 1,000 damage exactly and will ignore enemy armor at the end of your turn",
         captain: "Boosts RCV of [DEX] characters by 3x if HP is below 30% at the start of the turn"
     },
     438: {
-        special: "Recovers 3x character's RCV in HP, reduces damage received by 80% for 1 turn, poisons enemies for 1,000 for a single turn",
+        special: "Recovers 3x character's RCV in HP, reduces damage received by 80% for 1 turn, Poisons enemies for 1,000 for a single turn",
         specialName: "Negative Horo \"Sweet\"",
         specialNotes: "Poison damage deals 1,000 damage exactly and will ignore enemy armor at the end of your turn",
         captain: "Boosts RCV of [DEX] characters by 5x if HP is below 30% at the start of the turn"
@@ -2024,7 +2024,7 @@ window.details = {
         specialName: "Moderate Healing"
     },
     494: {
-        special: "Deals 3x character's ATK in INT damage to all enemies, poisons all enemies",
+        special: "Deals 3x character's ATK in INT damage to all enemies, Poisons all enemies",
         specialNotes: "#{poison}",
         specialName: "Poison Attack"
     },
@@ -2034,7 +2034,7 @@ window.details = {
         captain: "Recovers 500 HP at the end of each turn"
     },
     496: {
-        special: "Deals 3x character's ATK in INT damage to all enemies, poisons all enemies",
+        special: "Deals 3x character's ATK in INT damage to all enemies, Poisons all enemies",
         specialNotes: "#{poison}",
         specialName: "Poison Attack",
         captain: "Boosts ATK of Shooter characters by 1.5x"
@@ -2210,13 +2210,13 @@ window.details = {
         sailor: "Boosts RCV of PSY characters by 15"
     },
     527: {
-        special: "Removes poison, recovers 15x character's RCV in HP",
+        special: "Removes Poison, recovers 15x character's RCV in HP",
         specialName: "Devoted Healing - \"I'm Glad You are Safe\"",
         captain: "Boosts ATK and RCV of DEX characters by 1.5x",
         sailor: "When HP is below 30% at the start of the turn, boosts own RCV by 50"
     },
     528: {
-        special: "Removes poison, recovers 15x character's RCV in HP",
+        special: "Removes Poison, recovers 15x character's RCV in HP",
         specialName: "Devoted Healing - \"I'm Glad You are Safe\"",
         captain: "Boosts ATK and RCV of DEX characters by 2x",
         sailor: "When HP is below 30% at the start of the turn, boosts own RCV by 50"
@@ -2528,12 +2528,12 @@ window.details = {
         captain: "Boosts HP and RCV of PSY characters by 1.5x"
     },
     587: {
-        special: "Removes poison, reduces Bind and Despair duration by 2 turns",
+        special: "Removes Poison, reduces Bind and Despair duration by 2 turns",
         specialName: "Merciful Painkiller",
         captain: "Recovers 3x character's RCV in HP at the end of each turn"
     },
     588: {
-        special: "Removes poison, reduces Bind and Despair duration by 2 turns",
+        special: "Removes Poison, reduces Bind and Despair duration by 2 turns",
         specialName: "Merciful Painkiller",
         captain: "Recovers 5x character's RCV in HP at the end of each turn"
     },
@@ -2954,12 +2954,12 @@ window.details = {
         captain: "Reduces cooldown of all specials by 3 turns at the start of the fight, boosts ATK of Fighter characters by 2x"
     },
     674: {
-        special: "Removes poison, reduces damage received by 50% for 2 turns, recovers 13x character's RCV in HP at the end of each turn for 2 turns",
+        special: "Removes Poison, reduces damage received by 50% for 2 turns, recovers 13x character's RCV in HP at the end of each turn for 2 turns",
         specialName: "Emporio Healing Hormone",
         captain: "Boosts ATK of Free Spirit characters by 2x"
     },
     675: {
-        special: "Removes poison, reduces damage received by 50% for 2 turns, recovers 13x character's RCV in HP at the end of each turn for 2 turns",
+        special: "Removes Poison, reduces damage received by 50% for 2 turns, recovers 13x character's RCV in HP at the end of each turn for 2 turns",
         specialName: "Emporio Healing Hormone",
         captain: "Boosts ATK of Free Spirit characters by 2.5x"
     },
@@ -3445,7 +3445,7 @@ window.details = {
         captain: "Boosts ATK of PSY characters by 2x"
     },
     769: {
-        special: "Recovers 4,343 HP, poisons all enemies",
+        special: "Recovers 4,343 HP, Poisons all enemies",
         specialNotes: "#{poison}",
         specialName: "Lullaby Parry: Horror",
         captain: "Boosts ATK and RCV of INT characters by 1.5x"
@@ -3596,7 +3596,7 @@ window.details = {
         captain: "Boosts ATK of Cerebral and Powerhouse characters by 2x"
     },
     798: {
-        special: "Removes poison, following the activation of the special, if every unit scores a Perfect hit, boosts ATK of Fighter characters by 1.75x in the following turn",
+        special: "Removes Poison, following the activation of the special, if every unit scores a Perfect hit, boosts ATK of Fighter characters by 1.75x in the following turn",
         specialName: "Dugong Secret! Fist of the Black Fin",
         captain: "Boosts ATK by 2.5x after scoring 3 Perfects in a row"
     },
@@ -3738,17 +3738,17 @@ window.details = {
     827: {
         captain: "Boosts ATK and HP of QCK characters by 1.5x",
         specialName: "Poison of the Ancient Knight",
-        special: "Boosts ATK against poisoned enemies by 1.05x for 999 turns"
+        special: "Boosts ATK against Poisoned and Strongly Poisoned enemies by 1.05x for 999 turns"
     },
     828: {
         specialName: "Surprise Stab",
-        special: "Deals 3x character's ATK in [PSY] damage to one enemy, Boosts ATK of Slasher and Driven characters by 1.75x for 1 turns if used below 20% HP",
+        special: "Deals 3x character's ATK in [PSY] damage to one enemy, Boosts ATK of Slasher and Driven characters by 1.75x for 1 turn if used below 20% HP",
         captain: "Protects from defeat as long as HP is above 50%",
         captainNotes: "#{zombie}" 
     },
     829: {
         specialName: "Surprise Stab",
-        special: "Deals 3x character's ATK in [PSY] damage to one enemy, Boosts ATK of Slasher and Driven characters by 1.75x for 1 turns if used below 20% HP",
+        special: "Deals 3x character's ATK in [PSY] damage to one enemy, Boosts ATK of Slasher and Driven characters by 1.75x for 1 turn if used below 20% HP",
         captain: "Protects from defeat as long as HP is above 30%",
         captainNotes: "#{zombie}" 
     },
@@ -4353,12 +4353,12 @@ window.details = {
     },
     928: {
         captain: "Boosts ATK of Driven characters by 1.75x while above 30% HP and boosts ATK of Striker characters by 1.75x while below 30% HP",
-        special: "Deals 7x his ATK in [DEX] damage to all enemies, and boosts ATK against Poisoned enemies by 1.3x for 3 turns",
+        special: "Deals 7x his ATK in [DEX] damage to all enemies, and boosts ATK against Poisoned and Strongly Poisoned enemies by 1.3x for 3 turns",
         specialName: "Hell Wisdom Rush"
     },
     929: {
         captain: "Boosts ATK of Driven characters by 2.25x while above 30% HP and boosts ATK of Striker characters by 2.25x while below 30% HP",
-        special: "Deals 7x his ATK in [DEX] damage to all enemies, and boosts ATK against Poisoned enemies by 1.3x for 3 turns",
+        special: "Deals 7x his ATK in [DEX] damage to all enemies, and boosts ATK against Poisoned and Strongly Poisoned enemies by 1.3x for 3 turns",
         specialName: "Hell Wisdom Rush"
     },
     930: {
@@ -4784,7 +4784,7 @@ window.details = {
         specialNotes: "#{stages}"
     },
     998: {
-        captain: "Boosts ATK of Driven characters by 2x and reduces cooldown of all specials by 1 turns at the start of the fight",
+        captain: "Boosts ATK of Driven characters by 2x and reduces cooldown of all specials by 1 turn at the start of the fight",
         specialName: "Hira Release: Death Enjambre",
         special: "Delays all enemies for 2 turns, deals 50x character's ATK as typeless damage to all enemies at the end of the turn for 5 turns"
     },
@@ -4865,7 +4865,7 @@ window.details = {
     },
     1013: {
         specialName: "Binding Iron Chain",
-        special: "Boosts ATK against delayed enemies by 1.2x for 1 turns"
+        special: "Boosts ATK against delayed enemies by 1.2x for 1 turn"
     },
     1014: {
         special: "Binds himself for 1 turn and makes Perfects easier to hit for 2 turns",
@@ -5122,14 +5122,14 @@ window.details = {
         specialName: "Snake Press"
     },
     1057: {
-        special: "Strongly poisons one enemy",
-        specialNotes: "Strong poison deals 5x character's ATK in fixed damage at the end of each turn",
+        special: "Strongly Poisons one enemy",
+        specialNotes: "Strong Poison deals 5x character's ATK in fixed damage at the end of each turn",
         specialName: "Deadly Poisonous Corrosive Liquid"
     },
     1058: {
         captain: "Boosts ATK of Powerhouse characters by 2x and their HP by 1.25x",
-        special: "Strongly poisons one enemy",
-        specialNotes: "Strong poison deals 5x character's ATK in fixed damage at the end of each turn",
+        special: "Strongly Poisons one enemy",
+        specialNotes: "Strong Poison deals 5x character's ATK in fixed damage at the end of each turn",
         specialName: "Deadly Poisonous Corrosive Liquid"
     },
     1059: {
@@ -5738,7 +5738,7 @@ window.details = {
         special: "Reduces Paralysis by 1 turn"
     },
     1149:{
-        special: "Deals 3x character's ATK in INT damage to all enemies, poisons all enemies",
+        special: "Deals 3x character's ATK in INT damage to all enemies, Poisons all enemies",
         specialNotes: "#{poison}",
         specialName: "Poison Attack",
     },
@@ -5770,26 +5770,26 @@ window.details = {
     },
     1156: {
         captain: "Boosts ATK of Driven characters by 1.2x if HP is above 50% at the start of the turn",
-        special: "Removes poison. Protects from defeat as long as HP is above 50% for 1 turn",
+        special: "Removes Poison. Protects from defeat as long as HP is above 50% for 1 turn",
         specialName: "Abyss Road",
         specialNotes: "#{zombie}",
     },
     1157: {
         captain: "Boosts ATK of Driven and Striker characters by 1.75x and protects from defeat as long as HP is above 50% at the start of the turn",
-        special: "Removes poison. Protects from defeat as long as HP is above 50% for 1 turn",
+        special: "Removes Poison. Protects from defeat as long as HP is above 50% for 1 turn",
         specialName: "Abyss Road",
         specialNotes: "#{zombie}",
     },
     1158: {
         captain: "Boosts ATK of Shooter, Striker, and Powerhouse characters by 1.75x",
-        special: "Cuts the current HP of all enemies by 20%. Strongly poisons one enemy, and poisons all other enemies.",
-        specialNotes: "Strong poison deals 5x character's ATK in fixed damage at the end of each turn. Regular poison deals .5x character's ATK in fixed damage at the end of each turn.",
+        special: "Cuts the current HP of all enemies by 20%. Strongly Poisons one enemy, and Poisons all other enemies.",
+        specialNotes: "Strong Poison deals 5x character's ATK in fixed damage at the end of each turn. Regular Poison deals .5x character's ATK in fixed damage at the end of each turn.",
         specialName: "Poison Puffer Fish"
     },
     1159: {
         captain: "Boosts ATK of Shooter, Striker, and Powerhouse characters by 2.25x",
-        special: "Cuts the current HP of all enemies by 20%. Strongly poisons one enemy, and poisons all other enemies.",
-        specialNotes: "Strong poison deals 5x character's ATK in fixed damage at the end of each turn. Regular poison deals .5x character's ATK in fixed damage at the end of each turn.",
+        special: "Cuts the current HP of all enemies by 20%. Strongly Poisons one enemy, and Poisons all other enemies.",
+        specialNotes: "Strong Poison deals 5x character's ATK in fixed damage at the end of each turn. Regular Poison deals .5x character's ATK in fixed damage at the end of each turn.",
         specialName: "Poison Puffer Fish"
     },
     1160: {
@@ -5887,13 +5887,13 @@ window.details = {
         sailor: "Boosts ATK of Slasher characters by 20"
     },
     1176: {
-        special: "Removes poison, recovers 15x character's RCV in HP",
+        special: "Removes Poison, recovers 15x character's RCV in HP",
         specialName: "Devoted Healing - \"I'm Glad You are Safe\"",
         captain: "Boosts ATK and RCV of DEX characters by 1.5x",
         sailor: "When HP is below 30% at the start of the turn, boosts own RCV by 50"
     },
     1177: {
-        special: "Removes poison, recovers 15x character's RCV in HP",
+        special: "Removes Poison, recovers 15x character's RCV in HP",
         specialName: "Devoted Healing - \"I'm Glad You are Safe\"",
         captain: "Boosts ATK and RCV of DEX characters by 2x",
         sailor: "When HP is below 30% at the start of the turn, boosts own RCV by 50"
@@ -6766,12 +6766,12 @@ window.details = {
     },
     1295: {//Halloween Kalifa
         captain: "Boosts ATK and RCV of [STR] characters by 1.5x",
-        special: "Reduces duration of Paralysis by 3 turns, removes poison, and reduces the defense of all enemies by 100% for 1 turn",
+        special: "Reduces duration of Paralysis by 3 turns, removes Poison, and reduces the defense of all enemies by 100% for 1 turn",
         specialName: "Mysterious Hour of the Dark Night",
     },
     1296: {//Halloween Kalifa
         captain: "Boosts ATK of [STR] characters by 2x and their RCV by 1.5x",
-        special: "Reduces duration of Paralysis by 3 turns, removes poison, and reduces the defense of all enemies by 100% for 1 turn",
+        special: "Reduces duration of Paralysis by 3 turns, removes Poison, and reduces the defense of all enemies by 100% for 1 turn",
         specialName: "Mysterious Hour of the Dark Night",
     },
     1297: {//Akainu
@@ -7401,13 +7401,13 @@ window.details = {
     },
     1379: {//Shanks
         captain: "Boosts chances of getting Matching orbs, boosts ATK of Cerebral characters by 2x",
-        special: "Reduces Paralysis duration by 3 turns. For Cerebral and Free Spirit characters, amplifies the effects of orbs by 2x for 1 turn. Makes [RCV] and [TND] orbs \"beneficial\" to Cerebral and Free Spirit characters for 1 turns.",
+        special: "Reduces Paralysis duration by 3 turns. For Cerebral and Free Spirit characters, amplifies the effects of orbs by 2x for 1 turn. Makes [RCV] and [TND] orbs \"beneficial\" to Cerebral and Free Spirit characters for 1 turn.",
         specialName: "A Decision Made over Sake",
         specialNotes: "#{orb : 2x}",
     },
     1380: {//Shanks
         captain: "Boosts chances of getting Matching orbs, boosts ATK of Cerebral characters by 2.5x",
-        special: "Reduces Paralysis duration by 3 turns. For Cerebral and Free Spirit characters, amplifies the effects of orbs by 2x for 1 turn. Makes [RCV] and [TND] orbs \"beneficial\" to Cerebral and Free Spirit characters for 1 turns.",
+        special: "Reduces Paralysis duration by 3 turns. For Cerebral and Free Spirit characters, amplifies the effects of orbs by 2x for 1 turn. Makes [RCV] and [TND] orbs \"beneficial\" to Cerebral and Free Spirit characters for 1 turn.",
         specialName: "A Decision Made over Sake",
         specialNotes: "#{orb : 2x}",
     },
@@ -7684,12 +7684,12 @@ window.details = {
     },
     1419: {//Kimono Lucci
         captain: "Boosts ATK of Powerhouse characters by 2x, reduce damage received by 10%",
-        special: "Recovers 5,000 HP and boosts ATK against enemies with reduced defense by 1.5x for 1 turns",
+        special: "Recovers 5,000 HP and boosts ATK against enemies with reduced defense by 1.5x for 1 turn",
         specialName: "Demonic Style",
     },
     1420: {//Kimono Lucci
         captain: "Boosts ATK of Powerhouse characters by 2.5x, reduce damage received by 10%",
-        special: "Recovers 5,000 HP and boosts ATK against enemies with reduced defense by 1.5x for 1 turns",
+        special: "Recovers 5,000 HP and boosts ATK against enemies with reduced defense by 1.5x for 1 turn",
         specialName: "Demonic Style",
     },
     1421: {//Coliseum Diamante
@@ -7757,7 +7757,7 @@ window.details = {
         specialName: "General Cannon",
     },
     1433: {//Hody Jones
-        captain: "Reduces cooldown of Powerhouse specials by 1 turns at the start of the fight, reduces crew's current HP by 10% at the end of each turn, and boosts ATK of Powerhouse characters by 3x if there are 6 Powerhouse characters in your crew and HP of Powerhouse characters by up to 2x depending on how many Powerhouse characters are in your crew.",
+        captain: "Reduces cooldown of Powerhouse specials by 1 turn at the start of the fight, reduces crew's current HP by 10% at the end of each turn, and boosts ATK of Powerhouse characters by 3x if there are 6 Powerhouse characters in your crew and HP of Powerhouse characters by up to 2x depending on how many Powerhouse characters are in your crew.",
         captainNotes: "Hody's HP boost is dependent on how many Powerhouse characters are in your crew. With 6 Powerhouse characters, the boost is 2x, with 5 the boost is 1.5x, with 4 the boost is 1.4x, with 3 the boost is 1.3x, with 2 the boost is 1.2x, and with 1 the boost is 1.1x.",
         special: [
             {
@@ -7773,7 +7773,7 @@ window.details = {
         specialName: "Water Bullets",
     },
     1434: {//Hody Jones
-        captain: "Reduces cooldown of Powerhouse specials by 1 turns at the start of the fight, reduces crew's current HP by 10% at the end of each turn, and boosts ATK of Powerhouse characters by 3x if there are 6 Powerhouse characters in your crew and HP of Powerhouse characters by up to 2x depending on how many Powerhouse characters are in your crew.",
+        captain: "Reduces cooldown of Powerhouse specials by 1 turn at the start of the fight, reduces crew's current HP by 10% at the end of each turn, and boosts ATK of Powerhouse characters by 3x if there are 6 Powerhouse characters in your crew and HP of Powerhouse characters by up to 2x depending on how many Powerhouse characters are in your crew.",
         captainNotes: "Hody's HP boost is dependent on how many Powerhouse characters are in your crew. With 6 Powerhouse characters, the boost is 2x, with 5 the boost is 1.5x, with 4 the boost is 1.4x, with 3 the boost is 1.3x, with 2 the boost is 1.2x, and with 1 the boost is 1.1x.",
         special: [
             {
@@ -8163,12 +8163,12 @@ window.details = {
     },
     1488: {//Coliseum Don Krieg
         captain: "Boosts ATK of Driven characters by 1.5x, reduces damage received by 20%",
-        special: "Deals 20x character's ATK in STR damage to one enemy and removes any Orb Change Up and Orb Change Down Buffs",
+        special: "Deals 20x character's ATK in STR damage to one enemy and removes any Orb Rate Up and Orb Rate Down Buffs",
         specialName: "Great Battle Spear",
     },
     1489: {//Coliseum Don Krieg
         captain: "Boosts ATK of Driven characters by 2x, reduces damage received by 20%",
-        special: "Deals 20x character's ATK in STR damage to one enemy and removes any Orb Change Up and Orb Change Down Buffs",
+        special: "Deals 20x character's ATK in STR damage to one enemy and removes any Orb Rate Up and Orb Rate Down Buffs",
         specialName: "Great Battle Spear",
     },
     1490: {//Coliseum Mr. 5
@@ -8240,7 +8240,7 @@ window.details = {
         specialName: "First Aid",
     },
     1501: {//Caribou
-        captain: "Reduces cooldown of all specials by 1 turns at the start of the fight, boosts ATK of characters with cost 15 or less by 2x",
+        captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of characters with cost 15 or less by 2x",
         special: "Reduces crew's current HP by 50%, boosts ATK of all characters by 1.3x for 1 turn",
         specialName: "Conviction of God's Will",
     },
@@ -8305,7 +8305,7 @@ window.details = {
     },
     1512: {//Kingdew
         captain: "Boosts ATK of Fighter and Powerhouse characters by 2x",
-        special: "Removes poison, boosts ATK of Powerhouse characters by 1.5x for 1 turn if HP is below 30% when the special is activated",
+        special: "Removes Poison, boosts ATK of Powerhouse characters by 1.5x for 1 turn if HP is below 30% when the special is activated",
         specialName: "Enlightened Spirit",
         sailor: "Makes [RCV] orbs \"beneficial\" for this unit if your captain is a Powerhouse character",
     },
@@ -8342,12 +8342,12 @@ window.details = {
         specialName: "Spring Hopper - Bullet",
     },
     1519: {//Dadan
-        captain: "Reduces cooldown of all specials by 1 turns at the start of the fight. Boosts ATK of Slasher characters by 1.5x",
+        captain: "Reduces cooldown of all specials by 1 turn at the start of the fight. Boosts ATK of Slasher characters by 1.5x",
         special: "Cuts the current HP of one enemy by 10%, if HP is full at the time the special was activated, changes top row orbs into matching orbs",
         specialName: "Break by the Fireplace",
     },
     1520: {//Dadan
-        captain: "Reduces cooldown of all specials by 1 turns at the start of the fight. Boosts ATK of Slasher characters by 2x",
+        captain: "Reduces cooldown of all specials by 1 turn at the start of the fight. Boosts ATK of Slasher characters by 2x",
         special: "Cuts the current HP of one enemy by 10%, if HP is full at the time the special was activated, changes top row orbs into matching orbs",
         specialName: "Break by the Fireplace",
     },
@@ -8396,7 +8396,7 @@ window.details = {
         specialName: "Just 'Water Play'",
     },
     1527: {//Arlong
-        captain: "Reduces cooldown of all specials by 1 turns at the start of the fight. Boosts ATK of [INT] characters by 2x",
+        captain: "Reduces cooldown of all specials by 1 turn at the start of the fight. Boosts ATK of [INT] characters by 2x",
         special: [
             {
                 "description": "Reduces Special Cooldown of your top row by 1 turn, boosts ATK of the characters in the top row by 1.5x for 1 turn",
@@ -8900,13 +8900,13 @@ window.details = {
     },
     1601: {//Power Creep Shiryu
         captain: "Boosts ATK of Slasher characters by 2x",
-        special: "Instantly defeats all enemies with HP equal to or below 75x character's ATK, removes poison and reduces damage received by 50% for 3 turns,",
+        special: "Instantly defeats all enemies with HP equal to or below 75x character's ATK, removes Poison and reduces damage received by 50% for 3 turns,",
         specialName: "Blood Stained 'Iron Wall'",
         sailor: "Boosts own ATK by 100 if this character is the last in the chain to attack",
     },
     1602: {//Power Creep Shiryu
         captain: "Boosts ATK of Slasher characters by 2x at the start of the chain, by 3x after the 3rd Perfect",
-        special: "Instantly defeats all enemies with HP equal to or below 75x character's ATK, removes poison and reduces damage received by 50% for 3 turns,",
+        special: "Instantly defeats all enemies with HP equal to or below 75x character's ATK, removes Poison and reduces damage received by 50% for 3 turns,",
         specialName: "Blood Stained 'Iron Wall'",
         sailor: "Boosts own ATK by 100 if this character is the last in the chain to attack",
     },
@@ -8983,14 +8983,14 @@ window.details = {
     },
     1615: {//Crocodile
         captain: "Boosts ATK of Strikers by 2x",
-        special: "Deals 20x character's ATK in [INT] damage to all enemies, reduces Striker cooldowns by 1 turn and boosts ATK of Strikers and amplifies orbs of Strikers by 1.5x for 1 turns",
+        special: "Deals 20x character's ATK in [INT] damage to all enemies, reduces Striker cooldowns by 1 turn and boosts ATK of Strikers and amplifies orbs of Strikers by 1.5x for 1 turn",
         specialName: "Desert Spada",
         sailor: "Restores his own special by 2 turns when it is rewinded",
         sailorNotes: "#{rewind : 2}",
     },
     1616: {//Crocodile
         captain: "Boosts ATK of Strikers by 2.5x and recovers 1.5x character's RCV in HP at the end of each turn",
-        special: "Deals 20x character's ATK in [INT] damage to all enemies, reduces Striker cooldowns by 1 turn and boosts ATK of Strikers and amplifies orbs of Strikers by 1.5x for 1 turns",
+        special: "Deals 20x character's ATK in [INT] damage to all enemies, reduces Striker cooldowns by 1 turn and boosts ATK of Strikers and amplifies orbs of Strikers by 1.5x for 1 turn",
         specialName: "Desert Spada",
         sailor: "Restores his own special by 2 turns when it is rewinded",
         sailorNotes: "#{rewind : 2}",
@@ -9037,7 +9037,7 @@ window.details = {
     },
     1624: {//Hyouzou
         captain: "Boosts ATK of Slasher characters by 1.5x and boosts HP of Powerhouse characters by 1.25x",
-        special: "Randomizes all orbs, cuts the current HP of all enemies by 10%, and poisons all enemies.",
+        special: "Randomizes all orbs, cuts the current HP of all enemies by 10%, and Poisons all enemies.",
         specialName: "Flexible Six Swords",
     },
     1625: {//Daruma
@@ -9113,12 +9113,12 @@ window.details = {
     1633: {//Punk Hazard Dragon
         captain: "Boosts ATK of [STR] characters by 1.75x and the HP of Powerhouse characters by 1.2x",
         special: "Deals 15x character's ATK in [STR] damage to all enemies and amplifies the effect of orbs by 1.25x for 1 turn",
-        specialName: "Punk Hazard Dragon Special",
+        specialName: "Flame Breath",
     },
-    1634: {//Yeti Cool Brothers
+    1634: {//Rock and Scotch
         captain: "Boosts HP of [INT] characters by 2x",
         special: "Reduces damage received by 50% for 1 turn",
-        specialName: "Yeti Cool Brothers Special",
+        specialName: "COOL Ambush",
     },
     1635: {//Brownbeard
         captain: "Boosts OWN ATK by 1.5x and the ATK of Cerebral characters by 2x",
@@ -9127,13 +9127,51 @@ window.details = {
     },
     1636: {//Caesar Clown
         captain: "Boosts ATK of Cerebral characters by 2x",
-        special: "For 3 turns, boosts ATK against poisoned and strongly poisoned enemies by 1.3x and changes [BOMB] orbs into matching orbs",
+        special: "Boosts ATK against Poisoned and Strongly Poisoned enemies by 1.3x for 3 turns and changes [BOMB] orbs into matching orbs",
         specialName: "Gastanet",
     },
     1637: {//Caesar Clown Evolved
         captain: "Boosts ATK of Cerebral characters by 2.25x and reduces damage received by 15%",
-        special: "For 3 turns, boosts ATK against poisoned and strongly poisoned enemies by 1.3x and changes [BOMB] orbs into matching orbs",
+        special: "Boosts ATK against Poisoned and Strongly Poisoned enemies by 1.3x for 3 turns and changes [BOMB] orbs into matching orbs",
         specialName: "Gastanet",
+    },
+    1638: {//STR Gas Mask Fodder
+        special: "Boosts chances of getting [RCV] orbs",
+        specialName: "Meat for Meat",
+    },
+    1639: {//QCK Gas Mask Fodder
+        special: "Reduces Paralysis duration by 1 turn",
+        specialName: "Shock Recovery: Light",
+    },
+    1640: {//DEX Gas Mask Fodder
+        special: "For 1 turn, makes STR orb \"beneficial\" for Shooter characters",
+        specialName: "Shooter Beneficial Slot: STR",
+    },
+    1641: {//INT Gas Mask Fodder
+        special: "Boosts ATK against Poisoned and Strongly Poisoned enemies by 1.2x for 1 turn",
+        specialName: "Rising Damage: Poison",
+    },
+    1642: {//PSY Gas Mask Fodder
+        special: "Deals 3x character's ATK in typeless damage to all enemies, Poisons all enemies",
+        specialNotes: "#{poison}",
+        specialName: "Poison Attack",
+    },
+    1643: {//STR Centaur Fodder
+        captain: "Reduces cooldown of Slasher specials by 2 turns",
+        special: "Boosts ATK of Slasher characters for 1 turn",
+        specialName: "Attack Boost: Slasher",
+    },
+    1644: {//QCK Centaur Fodder
+        captain: "Boosts ATK of [QCK] characters by 2x, reduces crew's current HP by ???% at the end of each turn",
+        special: "Reduces Paralysis duration by 1 turn",
+        specialName: "Special Seal Recovery: Light",
+    },
+    1645: {//DEX Centaur Fodder
+        captain: "Boosts ATK of [DEX] characters by 1.5x and Slasher characters by 1.3x",
+        captainNotes: "The bonus is cumulative. [DEX] Slasher characters get a 1.95x bonus.",
+        special: "Deals 5 hits of random typeless damage to random enemies",
+        specialNotes: "#{randomHits : 5}",
+        specialName: "Random Light Blows",
     },
     1646: {//Reborn Pica
         captain: "Boosts ATK of Powerhouse characters by 1.5x, and their HP by 1.5x",

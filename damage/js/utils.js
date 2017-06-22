@@ -118,6 +118,12 @@ window.CrunchUtils.getOrbMultiplier = function(orb, type, uclass, baseMultiplier
             if (orb == 0.5 && type == 'DEX') return boostedMultiplier;
         }
     }
+    if(window.specials[1640].turnedOn){
+        if(uclass.has("Shooter")){
+            if (orb == 'str') return boostedMultiplier;
+            if (orb == 0.5 && type == 'DEX') return boostedMultiplier;
+        }
+    }
     if(window.specials[1269].turnedOn || window.specials[1270].turnedOn || window.specials[1546].turnedOn || window.specials[1547].turnedOn || window.specials[1557].turnedOn){
         if (orb == 0.5) return baseMultiplier;
     }

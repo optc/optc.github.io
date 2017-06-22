@@ -681,6 +681,29 @@ window.drops = {
             "14": [ 1505 ],
         },
         
+        {
+            name: "Punk Hazard Burning Lands - Laboratory",
+            shortName: "Punk Hazard 1",
+            thumb: 1637,
+            completion: '5x Rainbow Gems',
+            gamewith: 60126,
+            "01": [ 1633 ],
+            "02": [  ],
+            "03": [  ],
+            "04": [  ],
+            "05": [  ],
+            "06": [  ],
+            "07": [ 1635 ],
+            "08": [  ],
+            "09": [  ],
+            "10": [  ],
+            "11": [  ],
+            "12": [ 1634 ],
+            "13": [ 1634 ],
+            "14": [  ],
+            "15": [ 1636 ],
+        },
+        
     ],
 
     'Weekly Island': [
@@ -1723,6 +1746,15 @@ window.drops = {
             teamDatabase: 'raid_bosses/24',
             Master: [ 932 ],
             Expert: [ 932 ]
+        },
+        
+        {
+            name: 'Clash Reformed!! Pica',
+            thumb: 1647,
+            gamewith: 60095,
+            condition: "1 Expert version and 3 different Master versions with different conditions. Master: Powerhouse/Driven/Slasher Only. Ultimate: Powerhouse Only, Driven Only, and Slasher Only",
+            Master: [ 1646 ],
+            Expert: [ 1646 ]
         },
         
         {
