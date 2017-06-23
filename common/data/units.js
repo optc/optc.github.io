@@ -1644,8 +1644,8 @@ window.units = [
     [ "Strong Leg Centaur, Punk Hazard Patrol Troop Corps", "STR", [ "Slasher", "Powerhouse" ], 3, 12, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Nimble-footed Centaur, Punk Hazard Patrol Troop Corps", "QCK", [ "Slasher", "Powerhouse" ], 3, 12, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Skilled Footwork Centaur, Punk Hazard Patrol Troop Corps", "DEX", [ "Slasher", "Powerhouse" ], 3, 12, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Pica [Reformed]", "STR", [ "Powerhouse", "Driven" ], 4, 30, 4, 2, 70, 1066998, null, null, null, null, null, null, null ],
-    [ "Pica, Donquixote Pirates [Reformed]", "STR", [ "Powerhouse", "Driven" ], 5, 50, 4, 3, 99, 5000000, null, null, null, 4020, 1210, 5, null ],
+    [ "Pica [Reformed]", "STR", [ "Powerhouse", "Driven" ], 4, 30, 4, 2, 70, 1066998, 270, 129, 1, null, null, null, null ],
+    [ "Pica, Donquixote Pirates [Reformed]", "STR", [ "Powerhouse", "Driven" ], 5, 50, 4, 3, 99, 5000000, 1630, 582, 1, 4020, 1210, 5, null ],
     ];
     
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
