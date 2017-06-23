@@ -925,12 +925,18 @@ window.specials = {
     864: {
         delay: function(p) { return 1; },
         chain: function(p) { return 2.5; },
-        chainLimiter: function(p) { return p.chainPosition > 0 ? 2.5 : 1.0; }
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 2.5 : 1;
+        }
     },
     865: {
         delay: function(p) { return 1; },
         chain: function(p) { return 2.5; },
-        chainLimiter: function(p) { return p.chainPosition > 0 ? 2.5 : 1.0; }
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 2.5 : 1;
+        }
     },
     866: {
         atk: function(p) {
@@ -1385,7 +1391,10 @@ window.specials = {
     },
     1061: {
         chain: function(p) { return 2; },
-        chainLimiter: function(p) { return p.chainPosition > 0 ? 2 : 1.0; }
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 2 : 1;
+        }
     },
     1063: {
         atk: function(p) { return p.unit.class.has("Shooter") ? 1.3 : 1},
@@ -1607,11 +1616,17 @@ window.specials = {
     },
     1193: {
         chain: function(p) { return 2.5; },
-        chainLimiter: function(p) { return p.chainPosition > 0 ? 2.5 : 1.0; }
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 2.5 : 1;
+        }
     },
     1194: {
         chain: function(p) { return 2.5; },
-        chainLimiter: function(p) { return p.chainPosition > 0 ? 2.5 : 1.0; }
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 2.5 : 1;
+        }
     },
     1195: {
         atk: function(p) { return p.unit.class.has("Striker") ? 1.75 : 1; },
@@ -2309,11 +2324,17 @@ window.specials = {
     },
     1441: {
         chain: function(p) { return 2.5; },
-        chainLimiter: function(p) { return p.chainPosition > 0 ? 2.5 : 1.0; }
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 2.5 : 1;
+        }
     },
     1442: {
         chain: function(p) { return 2.5; },
-        chainLimiter: function(p) { return p.chainPosition > 0 ? 2.5 : 1.0; }
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 2.5 : 1;
+        }
     },
     1443: {
         atk: function(p) { return p.unit.class.has("Powerhouse") ? 1.5 : 1; },
@@ -2424,11 +2445,17 @@ window.specials = {
     },
     1484: {
         chain: function(p) { return 2.5; },
-        chainLimiter: function(p) { return p.chainPosition > 0 ? 2.5 : 1.0; }
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 2.5 : 1;
+        }
     },
     1485: {
         chain: function(p) { return 2.5; },
-        chainLimiter: function(p) { return p.chainPosition > 0 ? 2.5 : 1.0; }
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 2.5 : 1;
+        }
     },
     1486: {
         orb: function(p) { return (p.unit.class.has("Fighter")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1); }	
@@ -2943,5 +2970,51 @@ window.specials = {
     1643: {
         atk: function(p) { return p.unit.class.has("Slasher") ? 1.2 : 1; },
         type: "class",
+    },
+    1651: {
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[1651].turnedOn = true;
+        },
+        onDeactivation: function(p) {
+            window.specials[1651].turnedOn = false;
+        }
+    },
+    1652: {
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[1652].turnedOn = true;
+        },
+        onDeactivation: function(p) {
+            window.specials[1652].turnedOn = false;
+        }
+    },
+    1653: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75); }
+    },
+    1654: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75); }
+    },
+    1655: {
+        atk: function(p) { return p.unit.type == "QCK" ? 2 : 1; },
+        type: "type"
+    },
+    1656: {
+        atk: function(p) { return p.unit.type == "QCK" ? 2 : 1; },
+        type: "type"
+    },
+    1657: {
+        chain: function(p) { return p.captain.class.has("Striker") ? 2.75 : 1; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 2.75 : 1;
+        }
+    },
+    1658: {
+        chain: function(p) { return p.captain.class.has("Striker") ? 2.75 : 1; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 2.75 : 1;
+        }
     },
 };

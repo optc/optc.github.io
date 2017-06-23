@@ -890,6 +890,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             colorCount: colorCounter(),
             captain: team[1].unit,
             actions: [ $scope.data.actionleft, $scope.data.actionright ],
+            hitcombo: hitModifiers,
         };
     };
 
