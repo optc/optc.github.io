@@ -8809,12 +8809,12 @@ window.details = {
     1585: {//Coliseum Helmeppo
         captain: "Boosts ATK and RCV of Slasher and Driven characters by 1.5x",
         special: "If HP is below 5,000 when the special is activated, boosts ATK of Driven and Slasher characters by 1.75x for 1 turn and recovers 10x character's RCV in HP",
-        specialName: "Helmeppo Special",
+        specialName: "Firey Morale",
     },
     1586: {//Coliseum Helmeppo
         captain: "Boosts ATK of Slasher and Driven characters by 2x and their RCV by 1.5x",
         special: "If HP is below 5,000 when the special is activated, boosts ATK of Driven and Slasher characters by 1.75x for 1 turn and recovers 10x character's RCV in HP",
-        specialName: "Helmeppo Special",
+        specialName: "Firey Morale",
     },
     1587: {//Legend Sanji
         captain: "Boosts ATK of all characters by 2.5x and their HP by 1.3x <br> <b>Action:</b> Sanji Flies into the air for 1 turn, preventing all debuffs to himself. (Including Bind, Despair, and Silence) Next turn, boosts own ATK by an additional 2.5x",
@@ -9126,7 +9126,7 @@ window.details = {
     1635: {//Brownbeard
         captain: "Boosts OWN ATK by 1.5x and the ATK of Cerebral characters by 2x",
         special: "Cuts the HP of all enemies by 20% and binds himself for 5 turns",
-        specialName: "Brownbeard Special",
+        specialName: "Crocodile Thrust",
     },
     1636: {//Caesar Clown
         captain: "Boosts ATK of Cerebral characters by 2x",
