@@ -6863,13 +6863,13 @@ window.details = {
         specialName: "King Cobra Machetes",
     },
     1313: {//Akainu
-        captain: "Boosts ATK by 2.25x. If they have a [STR] orb, boosts ATK by an additional 1.75x. Boosts chances of getting [STR] orbs",
+        captain: "Boosts ATK by 2.25x. If any character has a [STR] orb, boosts ATK by an additional 1.75x. Boosts chances of getting [STR] orbs",
         captainNotes: "If a character has a [STR] orb, regardless of type, they will have a 3.9375x ATK boost",
         special: "Deals 125x character's ATK typeless damage to all enemies and randomizes non-[STR] orbs. Boosts ATK of characters with cost 50 or higher by 1.75x for 2 turns",
         specialName: "Meteor Volcano",
     },
     1314: {//Akainu
-        captain: "Boosts ATK by 2.25x. If they have a [STR] orb, boosts ATK by an additional 1.75x. Boosts chances of getting [STR] orbs",
+        captain: "Boosts ATK by 2.25x. If any character has a [STR] orb, boosts ATK by an additional 1.75x. Boosts chances of getting [STR] orbs",
         captainNotes: "If a character has a [STR] orb, regardless of type, they will have a 3.9375x ATK boost",
         special: "Deals 125x character's ATK typeless damage to all enemies and randomizes non-[STR] orbs. Boosts ATK of characters with cost 50 or higher by 1.75x for 2 turns",
         specialName: "Meteor Volcano",
@@ -8415,7 +8415,7 @@ window.details = {
     },
     1528: {//Blenheim
         captain: "Boosts ATK of Powerhouse characters by 2.25x",
-        special: "Reduces Despair duration by 2 turns,  makes STR, DEX, and QCK orbs \"beneficial\" to Powerhouse characters for 1 turn if HP is below 30% at the start of the turn",
+        special: "Reduces Despair duration by 2 turns, makes STR, DEX, and QCK orbs \"beneficial\" to Powerhouse characters for 1 turn if HP is below 30% at the start of the turn",
         sailor: "Makes [TND] orbs \"beneficial\" for this unit",
         specialName: "Australian Army Aid Blade",
     },
@@ -9206,5 +9206,66 @@ window.details = {
         ],
         specialNotes: "#{stages}"
     },
-    
+    1651: {//Nekomamushi
+        captain: "Boosts HP of Striker characters by 1.25x and boosts ATK by 3.75x if they have a [STR], [QCK], [DEX], [INT], [PSY] or [RAINBOW] orb",
+        special: "Deals large [PSY] damage to one enemy and and makes [STR], [DEX], [QCK], [PSY] and [INT] orbs \"beneficial\" for Striker characters for 1 turn",
+        specialName: "King of the Dawn",
+    },
+    1652: {//Nekomamushi
+        captain: "Boosts HP of Striker characters by 1.25x and boosts ATK by 3.75x if they have a [STR], [QCK], [DEX], [INT], [PSY] or [RAINBOW] orb",
+        special: "Deals large [PSY] damage to one enemy and and makes [STR], [DEX], [QCK], [PSY] and [INT] orbs \"beneficial\" for Striker characters for 1 turn",
+        specialName: "King of the Dawn",
+    },
+    1653: {//Pedro
+        captain: "Reduces cooldown of all specials by ??? turns at the start of the fight, boosts ATK of [INT] characters by ???x",
+        special: "Reduces crew's HP to 1, deals 7x the amount of HP subtracted in typeless damage to all enemies, amplifies the effect of orbs by 1.75x for 1 turn",
+        sailor: "Makes INT orbs \"beneficial\" for Slasher and Cerebral characters",
+        specialName: "Charge Drive",
+    },
+    1654: {//Pedro
+        captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of [INT] characters by 2.5x",
+        special: "Reduces crew's HP to 1, deals 7x the amount of HP subtracted in typeless damage to all enemies, amplifies the effect of orbs by 1.75x for 1 turn",
+        sailor: "Makes INT orbs \"beneficial\" for Slasher and Cerebral characters",
+        specialName: "Charge Drive",
+    },
+    1655: {//Carrot
+        captain: "Boosts ATK of [QCK] characters by ???x and their RCV by ???x",
+        special: "Boosts ATK of QCK characters by 2x for 1 turn",
+        sailor: "Boosts ATK and RCV of [QCK] characters by 75",
+        specialName: "Electric Fist",
+    },
+    1656: {//Carrot
+        captain: "Boosts ATK of [QCK] characters by 2.25x and their RCV by 1.5x",
+        special: "Boosts ATK of QCK characters by 2x for 1 turn",
+        sailor: "Boosts ATK and RCV of [QCK] characters by 75",
+        specialName: "Electric Fist",
+    },
+    1657: {//Kanjuro
+        captain: "Boosts ATK of Striker and Free Spirit characters by ???x",
+        special: "Reduces the duration of Bind, Despair by 5 turns and locks the chain multiplier at 2.5x for 1 turn if your Captain is a Striker character",
+        sailor: "Makes [DEX] orbs \"beneficial\" for Striker characters if your Captain is a Striker character",
+        specialName: "Summon Dragon",
+    },
+    1658: {//Kanjuro
+        captain: "Boosts ATK of Striker and Free Spirit characters by 2.5x",
+        special: "Reduces the duration of Bind, Despair by 5 turns and locks the chain multiplier at 2.5x for 1 turn if your Captain is a Striker character",
+        sailor: "Makes [DEX] orbs \"beneficial\" for Striker characters if your Captain is a Striker character",
+        specialName: "Summon Dragon",
+    },
+    1659: {//Raizo
+        captain: "Boosts ATK of Shooter characters by ???x and makes [TND] and [RCV] orbs \"beneficial\" to ??? characters",
+        special: "Reduces Paralysis and Silence duration by 3 turns, switches orbs between slots 3 times",
+        sailorNotes: "#{silence}",
+        sailor: "Completely resists Silence on this character",
+        specialNotes: "#{silence}",
+        specialName: "Ninja Arts - Bunshin no Jutsu",
+    },
+    1660: {//Raizo
+        captain: "Boosts ATK of Shooter characters by 2.5x and makes [TND] and [RCV] orbs \"beneficial\" to ??? characters",
+        special: "Reduces Paralysis and Silence duration by 3 turns, switches orbs between slots 3 times",
+        sailorNotes: "#{silence}",
+        sailor: "Completely resists Silence on this character",
+        specialNotes: "#{silence}",
+        specialName: "Ninja Arts - Bunshin no Jutsu",
+    },
 };

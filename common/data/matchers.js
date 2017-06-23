@@ -379,6 +379,12 @@ window.matchers = [
         target: 'special',
         matcher: /(reduces|removes).+silence.+duration/i
     },
+    
+    {
+        name: 'Paralysis reducers',
+        target: 'special',
+        matcher: /(reduces|removes).+Paralysis/i 
+    },
 
     {
         name: 'Block orb removers',
@@ -426,12 +432,6 @@ window.matchers = [
         name: 'Special cooldown reducer',
         target: 'special',
         matcher: /reduces special cooldown/i
-    },
-    
-    {
-        name: 'Paralysis reducers',
-        target: 'special',
-        matcher: /(reduces|removes).+Paralysis/i 
     },
     
     {
