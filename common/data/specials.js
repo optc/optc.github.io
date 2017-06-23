@@ -2006,6 +2006,15 @@ window.specials = {
     1329: {
         affinity: function(p){ return p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? 1.25 : 1; }
     },
+    1330: {
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[1330].turnedOn = true;
+        },
+        onDeactivation: function(p) {
+            window.specials[1330].turnedOn = false;
+        }
+    },
     1335: {
         chainAddition: function(p){ return 0.5; }
     },
