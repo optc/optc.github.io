@@ -202,8 +202,10 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             //Captain Meat orbs because Nekomamushi
             if (orb =='meat'){
                 for (temp = 0; temp < 2; temp++){
-                    if (team[temp].unit.name.includes("Kami Enel")){
-                        orb = 2;
+                    if (team[temp].unit != null){
+                        if (team[temp].unit.name.includes("Kami Enel") || team[temp].unit.name.includes("God Usopp") || team[temp].unit.name.includes("Usoland")){
+                            orb = 2;
+                        }
                     }
                 }
             }
