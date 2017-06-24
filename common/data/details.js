@@ -2996,11 +2996,11 @@ window.details = {
         captain: "Boosts ATK and RCV of Striker characters by 1.5x"
     },
     682: {
-        special: "Recovers 2,561 HP, reduces damage received by 50% for 2 turns",
+        special: "Recovers a random amount of HP, reduces damage received by 50% for 2 turns",
         specialName: "Transcendental Serenity Healing"
     },
     683: {
-        special: "Recovers 2,561 HP, reduces damage received by 50% for 2 turns",
+        special: "Recovers a random amount of HP, reduces damage received by 50% for 2 turns",
         specialName: "Transcendental Serenity Healing",
         captain: "Boosts ATK and RCV of Fighter characters by 1.5x"
     },
@@ -9166,7 +9166,8 @@ window.details = {
     },
     1644: {//QCK Centaur Fodder
         captain: "Boosts ATK of [QCK] characters by 2x, reduces crew's current HP by ???% at the end of each turn",
-        special: "Reduces Paralysis duration by 1 turn",
+        special: "Reduces Silence duration by 1 turn",
+        specialNotes: "#{silence}",
         specialName: "Special Seal Recovery: Light",
     },
     1645: {//DEX Centaur Fodder
@@ -9208,13 +9209,13 @@ window.details = {
     },
     1651: {//Nekomamushi
         captain: "Boosts HP of Striker characters by 1.25x and boosts ATK by 3.75x if they have a [STR], [QCK], [DEX], [INT], [PSY] or [RAINBOW] orb",
-        special: "Deals large [PSY] damage to one enemy and and makes [STR], [DEX], [QCK], [PSY] and [INT] orbs \"beneficial\" for Striker characters for 1 turn",
-        specialName: "King of the Dawn",
+        special: "Deals 60x character's ATK in [PSY] damage to one enemy and and makes [STR], [DEX], [QCK], [PSY] and [INT] orbs \"beneficial\" for Striker characters for 1 turn",
+        specialName: "Daybreak Ruler's Spear",
     },
     1652: {//Nekomamushi
         captain: "Boosts HP of Striker characters by 1.25x and boosts ATK by 3.75x if they have a [STR], [QCK], [DEX], [INT], [PSY] or [RAINBOW] orb",
-        special: "Deals large [PSY] damage to one enemy and and makes [STR], [DEX], [QCK], [PSY] and [INT] orbs \"beneficial\" for Striker characters for 1 turn",
-        specialName: "King of the Dawn",
+        special: "Deals 60x character's ATK in [PSY] damage to one enemy and and makes [STR], [DEX], [QCK], [PSY] and [INT] orbs \"beneficial\" for Striker characters for 1 turn",
+        specialName: "Daybreak Ruler's Spear",
     },
     1653: {//Pedro
         captain: "Reduces cooldown of all specials by ??? turns at the start of the fight, boosts ATK of [INT] characters by ???x",

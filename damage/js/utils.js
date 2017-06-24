@@ -95,7 +95,7 @@ window.CrunchUtils.typeSort = function(array, typeMultiplier, types) {
     return result;
 };
 
-window.CrunchUtils.getOrbMultiplier = function(orb, type, uclass, baseMultiplier, boostedMultiplier) {
+window.CrunchUtils.getOrbMultiplier = function(orb, type, uclass, baseMultiplier, boostedMultiplier, captains) {
     if(window.specials[1221].turnedOn || window.specials[1222].turnedOn){
         if (orb == 'str') return boostedMultiplier;
         if (orb == 0.5 && type == 'DEX') return boostedMultiplier;
@@ -130,10 +130,38 @@ window.CrunchUtils.getOrbMultiplier = function(orb, type, uclass, baseMultiplier
             if (orb == 0.5 && type == 'DEX') return boostedMultiplier;
         }
     }
+    if(window.specials[1515].turnedOn || window.specials[1516].turnedOn){
+        if (orb == 'meat') return boostedMultiplier;
+    }
+    if(window.specials[1593].turnedOn){
+        if(uclass.has("Fighter")){
+            if (orb == 'meat') return boostedMultiplier;
+        }
+    }
+    if(window.specials[1181].turnedOn || window.specials[1182].turnedOn){
+        if(uclass.has("Slasher")){
+            if (orb == 'meat') return boostedMultiplier;
+        }
+    }
+    if(window.specials[1379].turnedOn || window.specials[1380].turnedOn){
+        if(uclass.has("Cerebral") || uclass.has("Free Spirit")){
+            if (orb == 'meat') return boostedMultiplier;
+        }
+    }
     if(window.specials[1269].turnedOn || window.specials[1270].turnedOn || window.specials[1330].turnedOn || window.specials[1546].turnedOn || window.specials[1547].turnedOn || window.specials[1557].turnedOn){
         if (orb == 0.5) return baseMultiplier;
     }
-    if (orb == 1.0 || orb == 'str') return baseMultiplier;
+    for(temp = 0; temp < 2; temp++){
+        if(captains[temp] != null){
+            if(captains[temp].name.includes('Kami Enel')){
+                if (orb == 'meat'){
+                    console.log('test');
+                    return boostedMultiplier;
+                }
+            }
+        }
+    }
+    if (orb == 1.0 || orb == 'str' || orb == 'meat') return baseMultiplier;
     if (orb == 2.0 || orb == 'g' || orb == 'rainbow') return boostedMultiplier;
     if (orb == 0.5) return 1 / boostedMultiplier;
     return 1;

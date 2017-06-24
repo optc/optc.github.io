@@ -1650,7 +1650,7 @@ window.units = [
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Nekomamushi", "PSY", [ "Striker", "Powerhouse" ], 5, 30, null, 3, 70, 1066998, null, null, null, null, null, null, null ],
-    [ "'King of the Night' Nekomamushi", "PSY", [ "Striker", "Powerhouse" ], 6, 55, 4, 5, 99, 5000000, null, null, null, 3404, 1451, 352, null ],
+    [ "'King of the Night' Nekomamushi", "PSY", [ "Striker", "Powerhouse" ], 6, 55, 4, 5, 99, 5000000, 1, 1, 1, 3404, 1451, 352, null ],
     [ "Pedro", "INT", [ "Slasher", "Cerebral" ], 4, 15, null, 3, 50, 392109, null, null, null, null, null, null, null ],
     [ "Pedro of the Treetops", "INT", [ "Slasher", "Cerebral" ], 5, 30, 4, 4, 99, 4000000, 1, 1, 1, 2009, 1438, 325, null ],
     [ "Carrot", "QCK", [ "Fighter", "Free Spirit" ], 4, 15, null, 3, 50, 392109, null, null, null, null, null, null, null ],
@@ -1658,7 +1658,7 @@ window.units = [
     [ "Kanjuro, Wano Country Samurai", "DEX", [ "Striker", "Free Spirit" ], 4, 15, null, 3, 50, 392109, null, null, null, null, null, null, null ],
     [ "Evening Shower Kanjuro, Wano Country Samurai", "DEX", [ "Striker", "Free Spirit" ], 5, 30, 4, 4, 99, 4000000, 1, 1, 1, 2306, 1301, 329, null ],
     [ "Raizo, Wano Country Ninja", "STR", [ "Shooter", "Free Spirit" ], 4, 15, null, 3, 50, 392109, null, null, null, null, null, null, null ],
-    [ "Raizo of the Mist, Wano Country Ninja", "STR", [ "Shooter", "Free Spirit" ], 5, 30, 8, 4, 99, 4000000, 1, 1, 1, 2353, 1363, 290, null ],
+    [ "Raizo of the Mist", "STR", [ "Shooter", "Free Spirit" ], 5, 30, 8, 4, 99, 4000000, 1, 1, 1, 2353, 1363, 290, null ],
     ];
     
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],

@@ -68,6 +68,7 @@ var SharedRootCtrl = function($scope, $rootScope, $timeout) {
         gOrbsEnabled: 0,
         strOrbsEnabled: 0,
         rainbowOrbsEnabled: 0,
+        meatOrbsEnabled: 0,
         slidersEnabled: true,
         sidebarVisible: false,
         transientMode: false,
@@ -166,8 +167,8 @@ var SharedRootCtrl = function($scope, $rootScope, $timeout) {
     };
 
     // reset rainbow slots automatically
-    $scope.$watch('options.gOrbsEnabled',function() {
-        if (!$rootScope.areGOrbsEnabled())
+    $scope.$watch('options.rainbowOrbsEnabled',function() {
+        if (!$rootScope.areRainbowOrbsEnabled())
             resetRainbowOrbs();
     });
 
@@ -181,6 +182,35 @@ var SharedRootCtrl = function($scope, $rootScope, $timeout) {
         if ($rootScope.data.effect) {
             var effect = window.effects[$rootScope.data.effect];
             if (effect && effect.rainbowOrbsEnabled) return true;
+        }
+        return false;
+    };
+    
+    /* * * * * [MEAT] orb control * * * * */
+
+    var resetMeatOrbs = function() {
+        for (var i=0;i<6;++i) {
+            if ($scope.tdata.team[i].orb == 'meat')
+                $scope.tdata.team[i].orb = 1;
+        }
+    };
+
+    // reset meat slots automatically
+    $scope.$watch('options.meatOrbsEnabled',function() {
+        if (!$rootScope.areMeatOrbsEnabled())
+            resetMeatOrbs();
+    });
+
+    $scope.$watch('data.effect',function() {
+        if (!$rootScope.areMeatOrbsEnabled())
+            resetMeatOrbs();
+    });
+
+    $rootScope.areMeatOrbsEnabled = function() {
+        if ($rootScope.options.meatOrbsEnabled > 0) return true;
+        if ($rootScope.data.effect) {
+            var effect = window.effects[$rootScope.data.effect];
+            if (effect && effect.meatOrbsEnabled) return true;
         }
         return false;
     };

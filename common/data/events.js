@@ -149,7 +149,7 @@ window.events = {
                 $scope.notify({ text: 'Disabling [STR] orbs support.' });
         }
     },
-/*    1472: {//Add if needed for Shirahoshi
+    1472: {
         onInsertion: function($scope) {
             if (++$scope.options.rainbowOrbsEnabled == 1)
                 $scope.notify({ text: 'Enabling [RAINBOW] orbs support.' });
@@ -168,5 +168,65 @@ window.events = {
             if (--$scope.options.rainbowOrbsEnabled === 0)
                 $scope.notify({ text: 'Disabling [RAINBOW] orbs support.' });
         }
-    },*/
+    },
+    1531: {
+        onInsertion: function($scope) {
+            if (++$scope.options.meatOrbsEnabled == 1)
+                $scope.notify({ text: 'Enabling [MEAT] orbs support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.meatOrbsEnabled === 0)
+                $scope.notify({ text: 'Disabling [MEAT] orbs support.' });
+        }
+    },
+    1532: {
+        onInsertion: function($scope) {
+            if (++$scope.options.meatOrbsEnabled == 1)
+                $scope.notify({ text: 'Enabling [MEAT] orbs support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.meatOrbsEnabled === 0)
+                $scope.notify({ text: 'Disabling [MEAT] orbs support.' });
+        }
+    },
+    1609: {
+        onInsertion: function($scope) {
+            if (++$scope.options.meatOrbsEnabled == 1)
+                $scope.notify({ text: 'Enabling [MEAT] orbs support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.meatOrbsEnabled === 0)
+                $scope.notify({ text: 'Disabling [MEAT] orbs support.' });
+        }
+    },
+    1610: {
+        onInsertion: function($scope) {
+            if (++$scope.options.meatOrbsEnabled == 1)
+                $scope.notify({ text: 'Enabling [MEAT] orbs support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.meatOrbsEnabled === 0)
+                $scope.notify({ text: 'Disabling [MEAT] orbs support.' });
+        }
+    },
+    1651: {
+        onInsertion: function($scope) {
+            if (++$scope.options.meatOrbsEnabled == 1)
+                $scope.notify({ text: 'Enabling [MEAT] orbs support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.meatOrbsEnabled === 0)
+                $scope.notify({ text: 'Disabling [MEAT] orbs support.' });
+        }
+    },
+    1652: {
+        onInsertion: function($scope) {
+            if (++$scope.options.meatOrbsEnabled == 1)
+                $scope.notify({ text: 'Enabling [MEAT] orbs support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.meatOrbsEnabled === 0)
+                $scope.notify({ text: 'Disabling [MEAT] orbs support.' });
+        }
+    },
 };

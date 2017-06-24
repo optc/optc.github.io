@@ -56,10 +56,16 @@
     background-image: radial-gradient(9px 3px, circle cover, oldlace, orangered, rgb(50,50,50));
 }
 
-.unitOrb.Rainbow {
-    background-image: -webkit-radial-gradient(9px 3px, circle cover, oldlace, magenta, rgb(50,50,50));
-    background-image: -moz-radial-gradient(9px 3px, circle cover, oldlace, magenta, rgb(50,50,50));
-    background-image: radial-gradient(9px 3px, circle cover, oldlace, magenta, rgb(50,50,50));
+.unitOrb.R {
+    background-image: -webkit-radial-gradient(9px 3px, circle cover, oldlace, pink, magenta);
+    background-image: -moz-radial-gradient(9px 3px, circle cover, oldlace, pink, magenta);
+    background-image: radial-gradient(9px 3px, circle cover, oldlace, pink, magenta);
+}
+
+.unitOrb.M {
+    background-image: -webkit-radial-gradient(9px 3px, circle cover, oldlace, darkgoldenrod, saddlebrown);
+    background-image: -moz-radial-gradient(9px 3px, circle cover, oldlace, darkgoldenrod, saddlebrown);
+    background-image: radial-gradient(9px 3px, circle cover, oldlace, darkgoldenrod, saddlebrown);
 }
 
 .unitOrb .fa {
@@ -104,6 +110,17 @@
     top: 1px;
 }
 
+.meat-orb {
+    color: white;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 18px;
+    margin-right: 2px;
+    text-shadow: 0 0 5px black;
+    position: relative;
+    top: 1px;
+}
+
 /***********************
  *     ORB GLOWING     *
  ***********************/
@@ -114,8 +131,8 @@
 .unitOrb.PSY { animation: glowOrange .5s linear infinite alternate; }
 .unitOrb.INT { animation: glowPurple .5s linear infinite alternate; }
 .unitOrb.G { animation: glowG .5s linear infinite alternate; }
-.unitOrb.S { animation: glowG .5s linear infinite alternate; }
-.unitOrb.Rainbow { animation: glowG .5s linear infinite alternate; }
+.unitOrb.S { animation: glowS .5s linear infinite alternate; }
+.unitOrb.R { animation: glowR .5s linear infinite alternate; }
 .unitOrb.opposite { animation: glowBlack .5s linear infinite alternate; }
 
 @keyframes glowRed {
@@ -158,7 +175,7 @@
     to { box-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px white, 0 0 20px red, 0 0 35px red, 0 0 40px red, 0 0 50px red, 0 0 75px red; }
 }
 
-@keyframes glowRainbow {
-    from { box-shadow 0 0 10px white, 0 0 20px white, 0 0 30px white, 0 0 40px red, 0 0 70px red, 0 0 80px red, 0 0 100px red, 0 0 150px red; }
-    to { box-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px white, 0 0 20px red, 0 0 35px red, 0 0 40px red, 0 0 50px red, 0 0 75px red; }
+@keyframes glowR {
+    from { box-shadow 0 0 10px white, 0 0 20px white, 0 0 30px white, 0 0 40px magenta, 0 0 70px magenta, 0 0 80px magenta, 0 0 100px magenta, 0 0 150px magenta; }
+    to { box-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px white, 0 0 20px magenta, 0 0 35px magenta, 0 0 40px magenta, 0 0 50px magenta, 0 0 75px magenta; }
 }

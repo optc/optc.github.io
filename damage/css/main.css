@@ -1046,7 +1046,7 @@ body > .popover .popover-content {
 .popover-data .DEX   { background: lightgreen; }
 .popover-data .PSY   { background: gold; }
 .popover-data .INT   { background: orchid; }
-.popover-data .RCV   { background: sandybrown; }
+.popover-data .RCV   { background: darkgoldenrod; }
 .popover-data .TND   { background: peru; }
 .popover-data .BLOCK { background: darkslateblue; }
 .popover-data .BOMB  { background: maroon; }
