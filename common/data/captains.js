@@ -4867,11 +4867,11 @@ window.captains = {
         hp: function(p) { return p.unit.class.has("Powerhouse") ? 1.5 : 1; }
     },
     1651: {
-        atk: function(p) { return p.unit.class.has("Striker") ? (p.orb == 'meat') ? 1 : 3.75 : 1; },
+        atk: function(p) { return p.unit.class.has("Striker") ? (p.orb == 'meat' || p.orb == 'g') ? 1 : 3.75 : 1; },
         hp: function(p) { return p.unit.class.has("Striker") ? 1.25 : 1; }
     },
     1652: {
-        atk: function(p) { return p.unit.class.has("Striker") ? (p.orb == 'meat') ? 1 : 3.75 : 1; },
+        atk: function(p) { return p.unit.class.has("Striker") ? (p.orb == 'meat' || p.orb == 'g') ? 1 : 3.75 : 1; },
         hp: function(p) { return p.unit.class.has("Striker") ? 1.25 : 1; }
     },
     1653: {
