@@ -3542,13 +3542,13 @@ window.captains = {
     },
     1313: {
         atk: function(p) {
-            return p.unit.type == "STR" ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain]) == 2) ? 3.9375 : 2.25) : (p.unit.type == "DEX" ? (p.orb == 0.5 ? 3.9375 : 2.25) : (p.orb == 'str' ? 3.9375 : 2.25));
+            return p.unit.type == "STR" ? ((p.orb == 2) ? 3.9375 : 2.25) : (p.unit.type == "DEX" ? (p.orb == 0.5 ? 3.9375 : 2.25) : (p.orb == 'str' ? 3.9375 : 2.25));
             $scope.notify({ text: p.orb });
         },
     },
     1314: {
         atk: function(p) {
-            return p.unit.type == "STR" ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain]) == 2) ? 3.9375 : 2.25) : (p.unit.type == "DEX" ? (p.orb == 0.5 ? 3.9375 : 2.25) : (p.orb == 'str' ? 3.9375 : 2.25));
+            return p.unit.type == "STR" ? ((p.orb == 2) ? 3.9375 : 2.25) : (p.unit.type == "DEX" ? (p.orb == 0.5 ? 3.9375 : 2.25) : (p.orb == 'str' ? 3.9375 : 2.25));
         },
     },
     1315: {
@@ -4867,11 +4867,11 @@ window.captains = {
         hp: function(p) { return p.unit.class.has("Powerhouse") ? 1.5 : 1; }
     },
     1651: {
-        atk: function(p) { return p.unit.class.has("Striker") ? 3.75 : 1; },
+        atk: function(p) { return p.unit.class.has("Striker") ? (p.orb == 'meat') ? 1 : 3.75 : 1; },
         hp: function(p) { return p.unit.class.has("Striker") ? 1.25 : 1; }
     },
     1652: {
-        atk: function(p) { return p.unit.class.has("Striker") ? (p.orb != 'meat') ? 3.75 : 1 : 1; },
+        atk: function(p) { return p.unit.class.has("Striker") ? (p.orb == 'meat') ? 1 : 3.75 : 1; },
         hp: function(p) { return p.unit.class.has("Striker") ? 1.25 : 1; }
     },
     1653: {
