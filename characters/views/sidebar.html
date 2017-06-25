@@ -46,6 +46,10 @@
 
 <div class="filter-container conditional" ng-show="filters.drop == 'Farmable'">
     <span class="filter-header">Farmable filters</span>
+    <span class="filter width-6 drop" ng-class="{ active: filters.farmable.story }"
+        ng-model="filters.farmable.story" ng-click="onDropFilterClick($event,true)">Story-only</span><!--
+ --><span class="filter width-6 exc" ng-class="{ active: filters.farmable.story === false }"
+        ng-model="filters.farmable.story" ng-click="onDropFilterClick($event,false)">Hide story-only</span>
     <span class="filter width-6 drop" ng-class="{ active: filters.farmable.fortnight }"
         ng-model="filters.farmable.fortnight" ng-click="onDropFilterClick($event,true)">Fortnight-only</span><!--
  --><span class="filter width-6 exc" ng-class="{ active: filters.farmable.fortnight === false }"

@@ -1902,6 +1902,12 @@ window.drops = {
             "Sanji": [ 1507, 52, 207, 892, 343, 190, 111, 106, 115, 116, 117, 1180, 266, 94, 83 ],
             "Brook": [ 1515, 954, 614, 379, 730, 342, 189, 110, 105, 115, 116, 117, 1180, 266, 94, 83 ],
         },
+
+        {
+            name: 'Straw Hat Pirates!',
+            thumb: 1387,
+            "All Difficulties": [ 2, 5, 9, 13, 17, 21, 708, 629, 895 ],
+        },
         
         {
             name: '2nd Anniversary Celebration! Duel! Ace',
