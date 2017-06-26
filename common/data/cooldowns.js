@@ -992,10 +992,10 @@ window.cooldowns = [
     [ 15, 9 ],
     [ 20, 15 ],
     [ 20, 15 ],
-    null, //Violet
-    null, //Violet
-    null, //Dellinger 
-    null, //Dellinger 
+    [ 20, 14 ], //Violet
+    [ 20, 14 ], //Violet
+    [ 20, 14 ], //Dellinger 
+    [ 20, 14 ], //Dellinger 
     [ 23, 17 ],
     [ 23, 17 ],
     [ 23, 17 ],
@@ -1042,8 +1042,8 @@ window.cooldowns = [
     [ 29, 18 ],
     [ 18, 8 ],
     [ 18, 8 ],
-    null,
-    null,
+    [ 25, 20 ],//Law
+    [ 25, 20 ],//Law
     [ 30, 14 ],
     [ 30, 14 ],
     [ 22, 15 ],
@@ -1128,10 +1128,10 @@ window.cooldowns = [
     [ 20, 14 ],
     [ 20, 15 ],
     [ 20, 15 ],
-    null,//Elizabello
-    null,//Elizabello
-    null,//Ideo
-    null,//Ideo
+    [ 26, 20 ],//Elizabello
+    [ 26, 20 ],//Elizabello
+    [ 23, 17 ],//Ideo
+    [ 23, 17 ],//Ideo
     [ 6, 6 ],
     [ 6, 6 ],
     [ 16, 12],
@@ -1183,8 +1183,8 @@ window.cooldowns = [
     [ 19, 13 ],
     [ 23, 17 ],
     [ 23, 17 ],
-    null,// Haruta
-    null,// Haruta
+    [ 17, 12 ],// Haruta
+    [ 17, 12 ],// Haruta
     [ 23, 16 ],
     [ 23, 16 ],
     [ 11, 5 ],
@@ -1217,13 +1217,13 @@ window.cooldowns = [
     [ 17, 10 ],
     [ 17, 11 ],
     [ 25, 14 ],
-    null, //byrnndi world
-    null,//byrnndi world
+    [ 34, 18 ],//byrnndi world
+    [ 34, 18 ],//byrnndi world
     [ 29, 16 ],
     [ 29, 16 ],
     [ 20, 10 ],
     [ 15, 9 ],
-    16,
+    [ 16, 10 ],
     [ 17, 10 ],
     [ 23, 16 ],
     [ 22, 15 ],
@@ -1237,8 +1237,8 @@ window.cooldowns = [
     [ 20, 13 ],
     [ 22, 14 ],
     [ 22, 14 ],
-    null,//Kizaru
-    null,//Kizaru
+    [ 20, 17 ],//Kizaru
+    [ 20, 17 ],//Kizaru
     [ 19, 11 ],
     [ 19, 11 ],
     [ 20, 15 ],
@@ -1248,15 +1248,15 @@ window.cooldowns = [
     [ 17, 17 ],
     [ 13, 13 ],
     [ 13, 13 ],
-    null,//Colo Marco
-    null,//Colo Marco
+    [ 24, 9 ],//Colo Marco
+    [ 24, 9 ],//Colo Marco
     [ 24, 14 ],
     [ 14, 6 ],
     [ 21, 14 ],
     [ 19, 12 ],
     [ 18, 12 ],
-    null,//Young Whitebeard
-    null,//Young Whitebeard
+    [ 36, 24 ],//Young Whitebeard
+    [ 36, 24 ],//Young Whitebeard
     [ 17, 15 ],
     [ 17, 15 ],
     [ 12, 10 ],
@@ -1291,8 +1291,8 @@ window.cooldowns = [
     [ 20, 10 ],
     [ 29, 17 ],
     [ 29, 17 ],
-    null,//Coliseumn Sandersonia
-    null,//Coliseumn Sandersonia
+    [ 26, 16 ],//Coliseumn Sandersonia
+    [ 26, 16 ],//Coliseumn Sandersonia
     [ 16, 16 ],
     [ 16, 16 ],
     [ 32, 17 ],
@@ -1313,8 +1313,8 @@ window.cooldowns = [
     [ 25, 15 ],
     [ 25, 18 ],
     [ 25, 18 ],
-    null,//Coby
-    null,//Coby
+    [ 28, 18 ],//Coby
+    [ 28, 18 ],//Coby
     [ 22, 17 ],
     [ 22, 17 ],
     [ 21, 17 ],
@@ -1325,19 +1325,19 @@ window.cooldowns = [
     [ 15, 9 ],
     [ 13, 6 ],
     [ 13, 6 ],
-    null,//Leo
-    null,//Leo
-    null,//Wicca
+    [ 19, 12 ],//Leo
+    [ 19, 12 ],//Leo
+    [ 16, 10 ],//Wicca
     [ 20, 12 ],
-    null,//Mansherry
-    null,//Mansherry
+    [ 24, 17 ],//Mansherry
+    [ 24, 17 ],//Mansherry
     [ 20, 12 ],
     [ 19, 12 ],
     [ 6, 6 ],
     [ 6, 6 ],
     [ 27, 15 ],
     [ 27, 15 ],
-    null,//Jump Point Chopper
+    [ 25, 15 ],//Jump Point Chopper
     [ 23, 13 ],
     [ 23, 13 ],
     [ 15, 9 ],
@@ -1349,7 +1349,7 @@ window.cooldowns = [
     [ 17, 10 ],
     13,
     [ 14, 8 ],
-    20,
+    [ 20, 13 ],
     [ 15, 9 ],
     [ 16, 12 ],
     [ 14, 14 ],
@@ -1363,16 +1363,16 @@ window.cooldowns = [
     [ 20, 16 ],
     [ 21, 15 ],
     [ 21, 15 ],
-    null,//New World Nami
-    null,//New World Nami
-    null,//New World Sanji
-    null,//New World Sanji
+    [ 18, 13 ],//New World Nami
+    [ 18, 13 ],//New World Nami
+    [ 20, 15 ],//New World Sanji
+    [ 20, 15 ],//New World Sanji
     [ 12, 6 ],
     [ 12, 6 ],
     [ 15, 15 ],
     [ 15, 15 ],
-    null,//Magellan
-    null,//Magellan
+    [ 31, 16 ],//Magellan
+    [ 31, 16 ],//Magellan
     [ 26, 12 ],
     [ 26, 12 ],
     [ 26, 14 ],
@@ -1398,11 +1398,11 @@ window.cooldowns = [
     [ 21, 14 ],
     [ 19, 14 ],
     [ 19, 14 ],
-    null,//Colo Gladius
-    null,//Colo Gladius
-    null,//Colo Dalton
-    null,//New World Luffy
-    null,//New World Luffy
+    [ 33, 18 ],//Colo Gladius
+    [ 33, 18 ],//Colo Gladius
+    [ 18, 8 ],//Colo Dalton
+    [ 18, 13 ],//New World Luffy
+    [ 18, 13 ],//New World Luffy
     [ 20, 14 ],
     [ 20, 14 ],
     [ 22, 16 ],
@@ -1431,8 +1431,8 @@ window.cooldowns = [
     [ 14, 14 ],
     [ 33, 17 ],
     [ 33, 17 ],
-    null,//Hody Jones
-    null,//Hody Jones
+    [ 22, 17 ],//Hody Jones
+    [ 22, 17 ],//Hody Jones
     [ 21, 15 ],
     [ 21, 15 ],
     [ 21, 15 ],
@@ -1445,7 +1445,7 @@ window.cooldowns = [
     [ 20, 15 ],
     [ 17, 13 ],
     [ 17, 12 ],
-    null,//5+ Sanji
+    [ 20, 15 ],//5+ Sanji
     [ 20, 12 ],
     [ 22, 14 ],
     [ 22, 14 ],
@@ -1453,8 +1453,8 @@ window.cooldowns = [
     [ 20, 13 ],
     [ 12, 12 ],
     [ 12, 12 ],
-    null,//Colo Don Chinjao
-    null,//Colo Don Chinjao
+    [ 30, 15 ],//Colo Don Chinjao
+    [ 30, 15 ],//Colo Don Chinjao
     [ 18, 7 ],
     [ 18, 7 ],
     [ 22, 11 ],
@@ -1470,8 +1470,8 @@ window.cooldowns = [
     [ 18, 11 ],
     [ 14, 5 ],
     [ 17, 10 ],
-    null,//Shirahoshi
-    null,//Shirahoshi
+    [ 22, 18 ],//Shirahoshi
+    [ 22, 18 ],//Shirahoshi
     [ 21, 15 ],
     [ 21, 15 ],
     [ 16, 10 ],
@@ -1490,11 +1490,11 @@ window.cooldowns = [
     [ 20, 10 ],
     [ 20, 11 ],
     [ 20, 11 ],
-    null,//6+ Sabo
+    [ 23, 17 ],//6+ Sabo
     22,
     19,
     19,
-    18,
+    [ 18, 10 ],
     16,
     17,
     15,
@@ -1524,13 +1524,13 @@ window.cooldowns = [
     [ 11, 11 ],
     [ 11, 11 ],
     [ 30, 16 ],
-    null,//Coliseum Arlong
-    null,//Coliseum Arlong
+    [ 21, 12 ],//Coliseum Arlong
+    [ 21, 12 ],//Coliseum Arlong
     [ 21, 12 ],
     [ 28, 15 ],
     [ 28, 15 ],
-    null,//Legend Usopp
-    null,//Legend Usopp
+    [ 24, 21 ],//Legend Usopp
+    [ 24, 21 ],//Legend Usopp
     [ 17, 11 ],
     [ 17, 11 ],
     [ 19, 14 ],
@@ -1561,8 +1561,8 @@ window.cooldowns = [
     [ 11, 5 ],
     [ 23, 17 ],
     [ 15, 9 ],
-    null,//Fortnight Elizabello
-    null,//Fortnight Elizabello
+    [ 24, 16 ],//Fortnight Elizabello
+    [ 24, 16 ],//Fortnight Elizabello
     [ 15, 9 ],
     [ 15, 9 ],
     [ 13, 13 ],
@@ -1576,8 +1576,8 @@ window.cooldowns = [
     [ 19, 14 ],
     [ 19, 13 ],
     [ 19, 13 ],
-    null,
-    null,
+    [ 14, 9 ],//Momonosuke
+    [ 14, 9 ],//Momonosuke
     [ 20, 13 ],
     [ 20, 13 ],
     [ 22, 15 ],
@@ -1591,7 +1591,7 @@ window.cooldowns = [
     [ 17, 17 ],
     [ 11, 11 ],
     [ 11, 11 ],
-    null,//Gear 4 Luffy
+    [ 18, 13 ],//Gear 4 Luffy
     [ 29, 14 ],
     [ 29, 14 ],
     [ 20, 15 ],
@@ -1625,8 +1625,8 @@ window.cooldowns = [
     [ 15, 9 ],
     [ 20, 14 ],
     [ 15, 9 ],
-    null,//Mach Vise
-    null,//Mach Vise
+    [ 31, 17 ],//Mach Vise
+    [ 31, 17 ],//Mach Vise
     [ 15, 5 ],
     [ 15, 5 ],
     [ 21, 17 ],
@@ -1644,8 +1644,8 @@ window.cooldowns = [
     19,
     19,
     22,
-    null,//Pica
-    null,//Pica
+    [ 26, 17 ],//Pica
+    [ 26, 17 ],//Pica
     20,
     20,
     15,

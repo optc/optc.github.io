@@ -8209,13 +8209,13 @@ window.details = {
     1494: {//QCK Fishman Outlaw
         captain: "Boosts ATK of [QCK] characters by 1.5x",
         special: "Locks captain's orb for 1 turn",
-        specialName: "Captain Slot Light Hold",
+        specialName: "Captain Slot Hold: Light",
     },
     1495: {//DEX Fishman Outlaw
         captain: "Boosts ATK of [DEX] characters by 1.5x",
         special: "Reduces Silence duration by 1 turn",
         specialNotes: "#{silence}",
-        specialName: "Special Bind Light Recovery",
+        specialName: "Special Seal Recovery: Light",
     },
     1496: {//INT Fishman Outlaw
         captain: "Boosts ATK of Powerhouse characters by 1.5x",
