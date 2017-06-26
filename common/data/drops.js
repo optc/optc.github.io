@@ -1562,6 +1562,14 @@ window.drops = {
             "All Difficulties": [ 1624, 1625, 1626, -1434, -1477, -1475, -410, -365, -993, -1031, -954, -1347 ],
         },
         
+        {
+            name: "The Two Artists! Giolla and Brook!",
+            thumb: 1649,
+            gamewith: null,
+            condition: "You must have at least one character of each type on your team: STR, DEX, QCK, PSY, and INT.",
+            "All Difficulties": [ 1648, 1650, -1473, -1483, -412, -414, -1075, -1027, -1348, -956 ],
+        },
+        
     ],
 
             

@@ -3059,6 +3059,9 @@ window.specials = {
         atk: function(p) { return p.unit.class.has("Slasher") ? 1.2 : 1; },
         type: "class",
     },
+    1650: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain]); }
+    },
     1651: {
         turnedOn: false,
         onActivation: function(p) {

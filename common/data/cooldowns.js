@@ -1636,7 +1636,7 @@ window.cooldowns = [
     19,
     17,
     17,
-    15,
+    [ 15, 9 ],
     15,
     16,
     22,
@@ -1646,9 +1646,9 @@ window.cooldowns = [
     22,
     null,//Pica
     null,//Pica
-    null,
-    null,
-    null,
+    20,
+    20,
+    15,
     16,
     16,
     18,

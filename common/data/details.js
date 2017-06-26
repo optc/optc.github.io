@@ -7451,7 +7451,7 @@ window.details = {
         specialName: "Mother's Promise",
     },
     1387: {//Luffy 5+
-        captain: "Boosts ATK of all characters by 2.25x and their HP by 1.25x. Boosts ATK by an additional 1.25x after scoring 4 Perfects in a row",
+        captain: "Boosts ATK of all characters by 2.25x and their HP by 1.25x. Boosts ATK by 2.8125x after scoring 4 Perfects in a row",
         captainNotes: "After 4 Perfects, your captain boost is 2.8125x",
         special: "Deals 40x character's ATK in [STR] damage to all enemies, and delays all enemies for 1 turn",
         specialName: "Gum Gum: Elephant Gun",
@@ -9206,6 +9206,21 @@ window.details = {
             }
         ],
         specialNotes: "#{stages}"
+    },
+    1648: {//Giolla
+        captain: "Boosts ATK of all characters by 1.2x. Boosts ATK by 2.4x after scoring 4 Perfects in a row",
+        special: "Reduces damage received by 90% for 1 turn and randomly changes all orbs, including [BLOCK] orbs, into either [STR], [DEX] or [QCK] orbs",
+        specialName: "Giolla Special",
+    },
+    1649: {//Giolla
+        captain: "Boosts ATK of all characters by 1.2x. Boosts ATK by 3x after scoring 4 Perfects in a row",
+        special: "Reduces damage received by 90% for 1 turn and randomly changes all orbs, including [BLOCK] orbs, into either [STR], [DEX] or [QCK] orbs",
+        specialName: "Giolla Special",
+    },
+    1650: {//Brook x5
+        captain: "Boosts RCV of [DEX] characters by 1.5x and boosts ATK by 3x if they have a matching orb, by 1.5x otherwise.",
+        special: "Changes [BLOCK], [TND], [EMPTY], and [BOMB] orbs into [DEX] orbs and amplifies the effect of orbs by 1.5x for 1 turns",
+        specialName: "Brook Special",
     },
     1651: {//Nekomamushi
         captain: "Boosts HP of Striker characters by 1.25x and boosts ATK by 3.75x if they have a [STR], [QCK], [DEX], [INT], [PSY] or [RAINBOW] orb",
