@@ -4915,4 +4915,16 @@ window.captains = {
     1660: {
         atk: function(p) { return p.unit.class.has("Shooter") ? 2.5 : 1; }
     },
+    1664: {
+        atk: function(p) { return p.unit.class.has("Shooter") ? 2.5 : 1; }
+    },
+    1665: {
+        damageSorter: function(d) { return CrunchUtils.classSort(d, 3, [ "Shooter" ]); },
+        hitAtk: function(p) {
+            if (!p.unit.class.has("Shooter")) return 1;
+            return p.modifiers.slice(0, p.chainPosition)
+                .subcontains(["Perfect", "Perfect", "Perfect"]) ? 3.25 : 1;
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
+    },
 };
