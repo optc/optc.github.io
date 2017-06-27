@@ -36,8 +36,7 @@ app.controller('MainCtrl',function($scope, $rootScope, $state, $stateParams, $ti
     $controller('DismissalCtrl');
     
     $scope.getRandChar = function(){
-        var range = $rootScope.table.data.length;
-        //var range = 1665;
+        var range = $rootScope.table.data[$rootScope.table.data.length - 1][11] + 1;
         return Math.floor(Math.random() * range);
     };
 
