@@ -9286,12 +9286,12 @@ window.details = {
     },
     1664: {//STR Aokiji
         captain: "Boosts ATK of Shooter characters by 2.5x",
-        special: "Locks all orbs for 1 turn. If during that turn, you hit 2 PERFECTS and your Captain is a Shooter, boosts ATK of Shooter characters by 2x for 1 turn",
+        special: "Locks all orbs for 1 turn. If during that turn, you hit 2 PERFECTS and your Captain is a Shooter, boosts ATK of Shooter characters by 2x for 1 turn in the following turn.",
         specialName: "Ice Saber",
     },
     1665: {//STR Aokiji
         captain: "Boosts ATK of Shooter characters by 2.5x and boosts ATK of Shooters by 3.25x after scoring 3 PERFECTS in a row",
-        special: "Locks all orbs for 1 turn. If during that turn, you hit 2 PERFECTS and your Captain is a Shooter, boosts ATK of Shooter characters by 2x for 1 turn",
+        special: "Locks all orbs for 1 turn. If during that turn, you hit 2 PERFECTS and your Captain is a Shooter, boosts ATK of Shooter characters by 2x for 1 turn in the following turn.",
         specialName: "Ice Saber",
     },
 };

@@ -1663,7 +1663,7 @@ window.units = [
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Aokiji", "STR", [ "Shooter", "Slasher" ], 4, 20, null, 3, 70, 1066998, null, null, null, null, null, null, null ],
-    [ "Aokiji, \"One-on-One Fight\" Winner", "STR", [ "Shooter", "Striker" ], 5, 30, null, 4, 99, 4000000, null, null, null, null, null, null, null ],
+    [ "Aokiji, \"One-on-One Fight\" Winner", "STR", [ "Shooter", "Striker" ], 5, 30, null, 4, 99, 4000000, null, null, null, 2364, 1406, 336, null ],
     ];
     
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
