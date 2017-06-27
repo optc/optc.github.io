@@ -4923,7 +4923,7 @@ window.captains = {
         hitAtk: function(p) {
             if (!p.unit.class.has("Shooter")) return 1;
             return p.modifiers.slice(0, p.chainPosition)
-                .subcontains(["Perfect", "Perfect", "Perfect"]) ? 3.25 : 1;
+                .subcontains(["Perfect", "Perfect", "Perfect"]) ? 3.25 : 2.5;
         },
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
     },

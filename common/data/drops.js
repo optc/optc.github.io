@@ -1436,6 +1436,7 @@ window.drops = {
         {
             name: "Tontatta Kingdom Island Part 1: Leo",
             thumb: 1328,
+            global: true,
             gamewith: 44164,
             condition: "Slasher characters are Silenced for 99 turns and have their ATK reduced by a variable amount. (75% on 30 stamina)",
             "All Difficulties": [ 1327, 1329, 1330, -1085, -1127, -1131, -1058, -758, -760, -735, -4, -508, -1387 ]
@@ -1444,6 +1445,7 @@ window.drops = {
         {
             name: "Tontatta Kingdom Island Part 2: Mansherry",
             thumb: 1332,
+            global: true,
             gamewith: 44747,
             condition: "Striker characters are Silenced for 99 turns and have their ATK reduced by a variable amount. (70% on 30 stamina)",
             "All Difficulties": [ 1331, 1333, 1334, -720, -1186, -1190, -756, -1188, -1151, -1153, -738 ]
@@ -1565,7 +1567,7 @@ window.drops = {
         {
             name: "The Two Artists! Giolla and Brook!",
             thumb: 1649,
-            gamewith: null,
+            gamewith: 60685,
             condition: "You must have at least one character of each type on your team: STR, DEX, QCK, PSY, and INT.",
             "All Difficulties": [ 1648, 1650, -1473, -1483, -412, -414, -1075, -1027, -1348, -956 ],
         },

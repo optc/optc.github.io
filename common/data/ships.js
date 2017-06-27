@@ -417,7 +417,7 @@ window.ships = [
     
     { //32
         name: "Marshal D. Teach Pirate Ship",
-        thumb: null,
+        thumb: 'ship_0034_c.png',
         description: 'Boosts HP by 1.25x and reduces special cooldown of all characters by 1 at the start of the adventure. Boosts ATK by 1.55x if you have a Striker, Shooter, Fighter, and Slasher on your crew.',
         atk: function(p) { 
             return (p.classCount.Striker >= 1 && p.classCount.Fighter >= 1 && p.classCount.Shooter >= 1 && p.classCount.Slasher >= 1) ? [ 1.2, 1.2, 1.25, 1.3, 1.35, 1.4, 1.45, 1.5, 1.5, 1.55 ][p.boatLevel - 1] : 1;

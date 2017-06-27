@@ -758,6 +758,14 @@ tr.preview td:nth-child(2) > a:after {
     text-decoration: underline;
 }
 
+.clickable, #random-button {
+    cursor: pointer !important;
+}
+
+#random-button:hover {
+    text-decoration: underline;
+}
+
 .arrow {
     font-size: 1.5em;
     bottom: 10px;
