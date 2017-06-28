@@ -1661,7 +1661,7 @@ window.aliases = {
     1660: ['', '', ''],
     1661: ['', '', ''],
     1662: ['', '', ''],
-    1663: ['', '', ''],
+    1663: ['', '', 'Mega Rob Lucci', 'Mega Lucci', 'Super Rob Lucci', 'Super Lucci'],
     1664: ['', '', 'Secret Aokiji'],
     1665: ['', '', 'Secret Aokiji'],
     1666: ['', '', ''],

@@ -9284,6 +9284,39 @@ window.details = {
         specialNotes: "#{silence}",
         specialName: "Ninja Arts - Bunshin no Jutsu",
     },
+    1661: {//Corazon
+        captain: "Boosts ATK of [STR], [QCK], and [DEX] characters by 2x and recovers 300 HP at end of each turn",
+        special: [
+            {
+                "description": "Locks the chain multiplier at ???x for 1 turn and reduces Special Cooldown of Cerebral and Free Spirit characters by ? turns.",
+                "cooldown": [ null, null ]
+            },
+            {
+                "description": "Locks the chain multiplier at 2.5x for 1 turn and reduces Special Cooldown of Cerebral and Free Spirit characters by 1 turn.",
+                "cooldown": [ 10, 10 ]
+            }
+        ],
+        specialName: "The Sun under the Rain",
+    },
+    1662: {//Corazon
+        captain: "Boosts ATK of [STR], [QCK], and [DEX] characters by ???x and recovers ??? HP at end of each turn",
+        special: [
+            {
+                "description": "Locks the chain multiplier at ???x for 1 turn and reduces Special Cooldown of Cerebral and Free Spirit characters by ? turns.",
+                "cooldown": [ null, null ]
+            },
+            {
+                "description": "Locks the chain multiplier at 2.5x for 1 turn and reduces Special Cooldown of Cerebral and Free Spirit characters by 1 turn.",
+                "cooldown": [ 10, 10 ]
+            }
+        ],
+        specialName: "The Sun under the Rain",
+    },
+    1663: {//6+ Rob Lucci
+        special: "Deals 75x character's ATK in typeless damage to one enemy, greatly boosts chances of getting matching orbs for 3 turns",
+        specialName: "Rokushiki Mystery Rokuougan",
+        captain: "Boosts ATK of Powerhouse characters by 3.5x if they have a matching orb, by 2.5x otherwise, reduces crew's RCV to 0"
+    },
     1664: {//STR Aokiji
         captain: "Boosts ATK of Shooter characters by 2.5x",
         special: "Locks all orbs for 1 turn. If during that turn, you hit 2 PERFECTS and your Captain is a Shooter, boosts ATK of Shooter characters by 2x for 1 turn in the following turn.",
