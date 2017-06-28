@@ -9233,7 +9233,7 @@ window.details = {
         specialName: "Daybreak Ruler's Spear",
     },
     1653: {//Pedro
-        captain: "Reduces cooldown of all specials by ??? turns at the start of the fight, boosts ATK of [INT] characters by ???x",
+        captain: "Boosts ATK of [INT] characters by 2x",
         special: "Reduces crew's HP to 1, deals 7x the amount of HP subtracted in typeless damage to all enemies, amplifies the effect of orbs by 1.75x for 1 turn",
         sailor: "Makes INT orbs \"beneficial\" for Slasher and Cerebral characters",
         specialName: "Charge Drive",
@@ -9245,7 +9245,7 @@ window.details = {
         specialName: "Charge Drive",
     },
     1655: {//Carrot
-        captain: "Boosts ATK of [QCK] characters by ???x and their RCV by ???x",
+        captain: "Boosts ATK and RCV of [QCK] characters by 1.5x",
         special: "Boosts ATK of QCK characters by 2x for 1 turn",
         sailor: "Boosts ATK and RCV of [QCK] characters by 75",
         specialName: "Electric Fist",
@@ -9257,19 +9257,19 @@ window.details = {
         specialName: "Electric Fist",
     },
     1657: {//Kanjuro
-        captain: "Boosts ATK of Striker and Free Spirit characters by ???x",
-        special: "Reduces the duration of Bind, Despair by 5 turns and locks the chain multiplier at 2.75x for 1 turn if your Captain is a Striker character",
+        captain: "Boosts ATK of Striker and Free Spirit characters by 2x",
+        special: "Reduces the duration of Bind and Despair by 5 turns and locks the chain multiplier at 2.75x for 1 turn if your Captain is a Striker character",
         sailor: "Makes [DEX] orbs \"beneficial\" for Striker characters if your Captain is a Striker character",
         specialName: "Summon Dragon",
     },
     1658: {//Kanjuro
         captain: "Boosts ATK of Striker and Free Spirit characters by 2.5x",
-        special: "Reduces the duration of Bind, Despair by 5 turns and locks the chain multiplier at 2.75x for 1 turn if your Captain is a Striker character",
+        special: "Reduces the duration of Bind and Despair by 5 turns and locks the chain multiplier at 2.75x for 1 turn if your Captain is a Striker character",
         sailor: "Makes [DEX] orbs \"beneficial\" for Striker characters if your Captain is a Striker character",
         specialName: "Summon Dragon",
     },
     1659: {//Raizo
-        captain: "Boosts ATK of Shooter characters by ???x and makes [TND] and [RCV] orbs \"beneficial\" to ??? characters",
+        captain: "Boosts ATK of Shooter characters by 2x",
         special: "Reduces Paralysis and Silence duration by 3 turns, switches orbs between slots 3 times",
         sailorNotes: "#{silence}",
         sailor: "Completely resists Silence on this character",
@@ -9277,7 +9277,7 @@ window.details = {
         specialName: "Ninja Arts - Bunshin no Jutsu",
     },
     1660: {//Raizo
-        captain: "Boosts ATK of Shooter characters by 2.5x and makes [TND] and [RCV] orbs \"beneficial\" to ??? characters",
+        captain: "Boosts ATK of Shooter characters by 2.5x and makes [TND] and [RCV] orbs \"beneficial\" to Shooter characters",
         special: "Reduces Paralysis and Silence duration by 3 turns, switches orbs between slots 3 times",
         sailorNotes: "#{silence}",
         sailor: "Completely resists Silence on this character",
