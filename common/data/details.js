@@ -9299,7 +9299,7 @@ window.details = {
         specialName: "The Sun under the Rain",
     },
     1662: {//Corazon
-        captain: "Boosts ATK of [STR], [QCK], and [DEX] characters by ???x and recovers ??? HP at end of each turn",
+        captain: "Boosts ATK of [STR], [QCK], and [DEX] characters by 2.5x and recovers 500 HP at end of each turn",
         special: [
             {
                 "description": "Locks the chain multiplier at ???x for 1 turn and reduces Special Cooldown of Cerebral and Free Spirit characters by ? turns.",
@@ -9326,5 +9326,33 @@ window.details = {
         captain: "Boosts ATK of Shooter characters by 2.5x and boosts ATK of Shooters by 3.25x after scoring 3 PERFECTS in a row",
         special: "Locks all orbs for 1 turn. If during that turn, you hit 2 PERFECTS and your Captain is a Shooter, boosts ATK of Shooter characters by 2x for 1 turn in the following turn.",
         specialName: "Ice Saber",
+    },
+    1750: {//Korea Law
+        captain: "Boosts ATK of Striker characters by 3x and heals for .5x his RCV at the end of the turn each time you hit a Perfect",
+        special: [
+            {
+                "description": "Deals 50,000 fixed damage to one enemy, and for Striker characters, amplifies the effect of orbs by 1.75x for 1 turn",
+                "cooldown": [ 15, 10 ]
+            },
+            {
+                "description": "Deals 300,000 fixed damage to one enemy, and for Striker characters, amplifies the effect of orbs by 2.25x for 1 turn",
+                "cooldown": [ 20, 15 ]
+            }
+        ],
+        specialName: "Injection Shot",
+    },
+    1751: {//Korea Law
+        captain: "Boosts ATK of Striker characters by 3x and heals for .5x his RCV at the end of the turn each time you hit a Perfect",
+        special: [
+            {
+                "description": "Deals 50,000 fixed damage to one enemy, and for Striker characters, amplifies the effect of orbs by 1.75x for 1 turn",
+                "cooldown": [ 15, 10 ]
+            },
+            {
+                "description": "Deals 300,000 fixed damage to one enemy, and for Striker characters, amplifies the effect of orbs by 2.25x for 1 turn",
+                "cooldown": [ 20, 15 ]
+            }
+        ],
+        specialName: "Injection Shot",
     },
 };
