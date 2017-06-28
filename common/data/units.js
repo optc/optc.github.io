@@ -1661,7 +1661,7 @@ window.units = [
     [ "Raizo of the Mist", "STR", [ "Shooter", "Free Spirit" ], 5, 30, 8, 4, 99, 4000000, 1, 1, 1, 2353, 1363, 290, null ],
     [ "Corazon, Wish to Remove the Rain", "QCK", [ "Free Spirit", "Cerebral" ], 4, 15, 6, 3, 50, 392109, 225, 111, 60, null, null, null, null ],
     [ "Corazon, Evolved", "QCK", [ "Free Spirit", "Cerebral" ], 5, 30, null, 4, 99, 4000000, null, null, null, null, null, null, null ],
-    [ "6+ Lucci", "STR", [ "Powerhouse", "Fighter" ], '6+', 65, 4, 4, 99, 5000000, 1704, 790, 230, 3500, 1500, 400, null ],
+    [ "6+ Lucci", "STR", [ "Powerhouse", "Fighter" ], '6+', 65, 4, 4, 99, 5000000, 1704, 790, 230, 3480, 1570, 390, null ],
     [ "Aokiji", "STR", [ "Shooter", "Slasher" ], 4, 20, null, 3, 70, 1066998, null, null, null, null, null, null, null ],
     [ "Aokiji, \"One-on-One Fight\" Winner", "STR", [ "Shooter", "Striker" ], 5, 30, null, 4, 99, 4000000, null, null, null, 2364, 1406, 336, null ],
     ];
