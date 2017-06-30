@@ -4937,6 +4937,10 @@ window.captains = {
         },
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
     },
+    1667: {
+        atk: function(p) { return !(p.unit.class.has("Striker")) ? 1 : p.percHP <= 30.0 ? 2.75 : 2.25; },
+        hp: function(p) { return p.unit.class.has("Slasher") ? 1.2 : 1; }
+    },
     1750: {
         atk: function(p) { return p.unit.class.has("Striker") ? 3 : 1; }
     },

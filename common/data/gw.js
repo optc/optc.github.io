@@ -1649,8 +1649,8 @@ window.gw=[
     60688,
     60688,
     60689,
-    null,//Nekomamushi
-    null,//Nekomamushi
+    60679,
+    60679,
     60676,
     60676,
     60677,
