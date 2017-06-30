@@ -9328,7 +9328,7 @@ window.details = {
         specialName: "Ice Saber",
     },
     1666: {//Kyros
-        captain: "Not Translated",
+        captain: "Boosts Striker characters ATK by 2x",
         special: "Changes adjacent orbs into Matching Orbs and if HP is above 70%, amplifies the effect of orbs for Striker and Powerhouse characters by 1.5x for 1 turn",
         specialName: "Kyros Special",
     },
