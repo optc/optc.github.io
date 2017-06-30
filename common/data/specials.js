@@ -2301,9 +2301,9 @@ window.specials = {
     1421: {
         atk: function(p) {
             if(p.percHP == 100.0){
-                return p.unit.class.has("Driven") ? 1.75 : 1;
+                return p.unit.class.has("Driven") ? 2 : 1;
             }else{
-                return p.unit.class.has("Driven") ? 1.75 : 1;
+                return p.unit.class.has("Driven") ? 1.5 : 1;
             }
         },
         type: "class"
@@ -3115,6 +3115,12 @@ window.specials = {
     1665: {
         atk: function(p) { return p.captain.class.has("Shooter") ? p.unit.class.has("Shooter") ? 2 : 1 : 1; },
         type: "class",
+    },
+    1594: {
+        orb: function(p) { return ((p.unit.class.has("Powerhouse") || p.unit.class.has("Striker")) && (p.percHP > 70)) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain]) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain]); }	
+    },
+    1595: {
+        orb: function(p) { return ((p.unit.class.has("Powerhouse") || p.unit.class.has("Striker")) && (p.percHP > 70)) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain]) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain]); }	
     },
     1750:{
         orb: function(p) { return (p.unit.class.has("Striker")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[1750].multiplier, [p.friendCaptain, p.captain]) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain]); },
