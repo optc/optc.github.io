@@ -3116,10 +3116,10 @@ window.specials = {
         atk: function(p) { return p.captain.class.has("Shooter") ? p.unit.class.has("Shooter") ? 2 : 1 : 1; },
         type: "class",
     },
-    1594: {
+    1666: {
         orb: function(p) { return ((p.unit.class.has("Powerhouse") || p.unit.class.has("Striker")) && (p.percHP > 70)) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain]) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain]); }	
     },
-    1595: {
+    1667: {
         orb: function(p) { return ((p.unit.class.has("Powerhouse") || p.unit.class.has("Striker")) && (p.percHP > 70)) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain]) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain]); }	
     },
     1750:{

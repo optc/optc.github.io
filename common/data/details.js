@@ -6319,14 +6319,14 @@ window.details = {
     1235: {//Maynard
         captain: "Boosts ATK of [PSY] characters by 1.75x, deals 3x character's ATK to all enemies at the end of each turn",
         special: "Deals several times the character's ATK in [PSY] damage to one enemy. Delays all enemies for 1 turn",
-        specialNotes: "#{specialProportional : higher : ??? * (remaining HP) / (total HP) }",
+        specialNotes: "#{specialProportional : higher : 10x + (25x * (remaining HP) / (total HP)) }",
         specialName: "Sword of Silence",
         sailor: "Reduces duration of Blindness for 3 turns",
     },
     1236: {//Maynard
         captain: "Boosts ATK of [PSY] characters by 2x, deals 5x character's ATK to all enemies at the end of each turn",
         special: "Deals several times the character's ATK in [PSY] damage to one enemy. Delays all enemies for 1 turn",
-        specialNotes: "#{specialProportional : higher : ??? * (remaining HP) / (total HP) }",
+        specialNotes: "#{specialProportional : higher : 10x + (25x * (remaining HP) / (total HP)) }",
         specialName: "Sword of Silence",
         sailor: "Reduces duration of Blindness for 3 turns",
     },
@@ -9226,12 +9226,12 @@ window.details = {
     },
     1651: {//Nekomamushi
         captain: "Boosts HP of Striker characters by 1.25x and boosts ATK by 3.75x if they have a [STR], [QCK], [DEX], [INT], [PSY] or [RAINBOW] orb",
-        special: "Deals 60x character's ATK in [PSY] damage to one enemy and and makes [STR], [DEX], [QCK], [PSY] and [INT] orbs \"beneficial\" for Striker characters for 1 turn",
+        special: "Deals 60x character's ATK in [PSY] damage to one enemy and makes [STR], [DEX], [QCK], [PSY] and [INT] orbs \"beneficial\" for Striker characters for 1 turn",
         specialName: "Daybreak Ruler's Spear",
     },
     1652: {//Nekomamushi
         captain: "Boosts HP of Striker characters by 1.25x and boosts ATK by 3.75x if they have a [STR], [QCK], [DEX], [INT], [PSY] or [RAINBOW] orb",
-        special: "Deals 60x character's ATK in [PSY] damage to one enemy and and makes [STR], [DEX], [QCK], [PSY] and [INT] orbs \"beneficial\" for Striker characters for 1 turn",
+        special: "Deals 60x character's ATK in [PSY] damage to one enemy and makes [STR], [DEX], [QCK], [PSY] and [INT] orbs \"beneficial\" for Striker characters for 1 turn",
         specialName: "Daybreak Ruler's Spear",
     },
     1653: {//Pedro
