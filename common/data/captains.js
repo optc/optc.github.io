@@ -4916,10 +4916,10 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Shooter") ? 2.5 : 1; }
     },
     1661: {
-        atk: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 2 : 1; },
+        atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 2 : 1; },
     },
     1662: {
-        atk: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 1 : 1; },
+        atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 1 : 1; },
     },
     1663: {
         atk: function(p) { return !p.unit.class.has("Powerhouse") ? 1 : (((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain]) == 2) && (p.orb != 'g')) ? 3.5 : 2.5); },

@@ -23,7 +23,8 @@ var notes = {
     ignoreBarrier: "Damage that ignores damage negating abilities and barriers is similar to 6* Law's special, but only for this character.",
     zombie: "The protection only works when attacked by one single enemy and will leave the team with at least 1 HP; " +
         "the effect will not work when attacked by multiples enemies at once.",
-    colorAffinity: "'Color Affinity' boosts color type advantages. For example, a STR unit normally deals 2x to a DEX unit and .5x to QCK. With this Color Affinity boost, it will deal (2*#1)x to DEX and (0.5/#1)x to QCK."
+    colorAffinity: "'Color Affinity' boosts color type advantages. For example, a STR unit normally deals 2x to a DEX unit and .5x to QCK. With this Color Affinity boost, it will deal (2*#1)x to DEX and (0.5/#1)x to QCK.",
+    instantKill: "The chance for this character to instantly kill any enemy is #1. The kills can not be reset by exiting the game, but can change by passing the turn or killing an enemy.",
 };
 
 /***********

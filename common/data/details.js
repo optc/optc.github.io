@@ -6633,7 +6633,7 @@ window.details = {
     1275: {//Shiliew
         captain: "Boosts ATK and HP of Slasher characters by 1.5x",
         special: "For each enemy, has a small chance to instantly defeat that enemy.",
-        specialNotes: "About 25% chance of killing ANY character. Cannot be reset by exiting, but can try for different kills by continuing attack.",
+        specialNotes: "#{instantKill : 25%}",
         sailor: "Completely resists Silence on this character",
         sailorNotes: "#{silence}",
         specialName: "Handling Hell",
@@ -6641,7 +6641,7 @@ window.details = {
     1276: {//Shiliew
         captain: "Boosts ATK and HP of Slasher characters by 2x",
         special: "For each enemy, has a small chance to instantly defeat that enemy.",
-        specialNotes: "About 25% chance of killing ANY character. Cannot be reset by exiting, but can try for different kills by continuing attack.",
+        specialNotes: "#{instantKill : 25%}",
         sailor: "Completely resists Silence on this character",
         sailorNotes: "#{silence}",
         specialName: "Handling Hell",
@@ -8941,7 +8941,7 @@ window.details = {
     1608: {//Doc Q
         captain: "Boosts ATK and RCV of [INT] characters by 1.5x",
         special: "For each enemy, has an extremely small chance to instantly defeat that enemy.",
-        specialNotes: "Same as Rare Recruit Shriyu special but a lower chance",
+        specialNotes: "#{instantKill : <1%}",
         specialName: "Vile Fruit",
     },
     1609: {//Legend Enel
@@ -8961,12 +8961,14 @@ window.details = {
     1611: {//Kuma
         captain: "Boosts ATK of Shooter characters by 1.75x and their HP by 1.2x",
         special: "Reduces the duration of Bind and Despair by 7 turns.  Recovers 20% of crew's MAX HP, and has low chance to eliminate all enemies",
+        specialNotes: "#{instantKill : 10%}",
         specialName: "Paw Paw Fruit: Scatter and Fly Away",
         sailor: "If Kuma has a [PSY] orb, and you hit a Perfect with him, keep his [PSY] orb for the next turn",
     },
     1612: {//Kuma
         captain: "Boosts ATK of Shooter characters by 2.5x and their HP by 1.2x",
         special: "Reduces the duration of Bind and Despair by 7 turns.  Recovers 20% of crew's MAX HP, and has low chance to eliminate all enemies",
+        specialNotes: "#{instantKill : 10%}",
         specialName: "Paw Paw Fruit: Scatter and Fly Away",
         sailor: "If Kuma has a [PSY] orb, and you hit a Perfect with him, keep his [PSY] orb for the next turn",
     },
@@ -9285,7 +9287,7 @@ window.details = {
         specialName: "Ninja Arts - Bunshin no Jutsu",
     },
     1661: {//Corazon
-        captain: "Boosts ATK of [STR], [QCK], and [DEX] characters by 2x and recovers 300 HP at end of each turn",
+        captain: "Boosts ATK of [PSY], [QCK], and [DEX] characters by 2x and recovers 300 HP at end of each turn",
         special: [
             {
                 "description": "Reduces Special Cooldown of Cerebral and Free Spirit characters by 1 turn.",
@@ -9299,7 +9301,7 @@ window.details = {
         specialName: "The Sun under the Rain",
     },
     1662: {//Corazon
-        captain: "Boosts ATK of [STR], [QCK], and [DEX] characters by 2.5x and recovers 500 HP at end of each turn",
+        captain: "Boosts ATK of [PSY], [QCK], and [DEX] characters by 2.5x and recovers 500 HP at end of each turn",
         special: [
             {
                 "description": "Reduces Special Cooldown of Cerebral and Free Spirit characters by 1 turn.",
