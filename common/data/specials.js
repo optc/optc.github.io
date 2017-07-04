@@ -2400,7 +2400,7 @@ window.specials = {
         atk: function(p) { return p.slot == p.sourceSlot ? window.specials[1447].multiplier : 1; },
         type: "class",
         onActivation: function(p) {
-            var n = (window.specials[1447].multiplier == 1.5 ? 1 : 0);
+            var n = (window.specials[1447].multiplier == 1.2 ? 1 : 0);
             window.specials[1447].multiplier = [1.2, 1.5][n];
             p.scope.notify({
                 text: 'Using the ' + [1.2, 1.5][n] + 'x ATK multiplier. To switch to the ' + [1.5, 1.2][n] + 'x multiplier, disable and re-enable this special',

@@ -8898,7 +8898,7 @@ window.details = {
     },
     1600: {//3rd Anniversary Luffy
         captain: "Boosts ATK of [PSY] and [INT] characters by 2.5x",
-        special: "Deals 20x character's ATK in [PSY] damage to one enemy, locks orbs for 1 turn, and boosts the effect of orbs on [PSY] and [INT] characters by 1.75x for 1 turn",
+        special: "Deals 20x character's ATK in [PSY] damage to one enemy, locks orbs for 1 turn, and amplifies the effect of orbs on [PSY] and [INT] characters by 1.75x for 1 turn",
         specialName: "Right Leg Armament: Gum-Gum Battle Axe",
     },
     1601: {//Power Creep Shiryu
