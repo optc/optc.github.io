@@ -282,11 +282,11 @@ window.sailors = {
     1614: {//not working
         staticMult: function(p) { return 2; }
     },
-    1654: {
+    1655: {
         atkStatic: function(p) { return p.unit.type == "QCK" ? 75 : 0; },
         rcvStatic: function(p) { return p.unit.type == "QCK" ? 75 : 0; },
     },
-    1655: {
+    1656: {
         atkStatic: function(p) { return p.unit.type == "QCK" ? 75 : 0; },
         rcvStatic: function(p) { return p.unit.type == "QCK" ? 75 : 0; },
     },

@@ -9014,7 +9014,6 @@ window.details = {
     },
     1619: {//6+ Raybae/Rayleigh
         captain: "Boosts chain multiplier by 4x and boosts HP and RCV of all characters by 1.2x",
-        captainNotes: "Stats for Rayleigh are temporary and are estimates for use in the calculator",
         special: "Reduces Bind, Despair, and Paralysis duration by 7 turns, delays all enemies for 1 turn, and makes Perfects easier to hit for 1 turn",
         specialName: "Netherworld Conqueror",
     },

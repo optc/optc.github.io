@@ -934,12 +934,20 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         // compute data
         var healAmount = 0, zombieThreshold = 0, tankReducer = null;
         for (var i=0;i<2;++i) {
+            rcvtemp = 0;
             if (!team[i].unit) continue;
             var id = team[i].unit.number + 1, zombie = window.zombies[id];
             if (!zombie) continue;
             if (zombie.type == 'healer') {
-                if (zombie.hasOwnProperty('amount')) healAmount += zombie.amount;
-                else healAmount += Math.floor(data.team[i].rcv * zombie.multiplier);
+                if (zombie.hasOwnProperty('amount')) 
+                    healAmount += zombie.amount;
+                else{
+                    enabledEffects.forEach(function(x) {
+                    if (x.hasOwnProperty('rcvStatic'))
+                        rcvtemp += x.rcvStatic(getParameters(i));
+                    });
+                    healAmount += Math.floor((data.team[i].rcv + rcvtemp) * zombie.multiplier);
+                }
             } else if (zombie.type == 'reducer')
                 tankReducer = [ zombie.multiplier, zombie.threshold ];
             else if (zombie.type == 'zombie')
