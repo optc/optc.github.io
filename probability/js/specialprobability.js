@@ -2,7 +2,7 @@ onmessage = function(e) {
 
 	var copies = parseInt(e.data.copies);
 	var skillups = parseInt(e.data.skillups);
-	
+
 	var probability = 0.125;
     if (e.data.jpn_server == true) {
 		probability = .2;
@@ -15,33 +15,33 @@ onmessage = function(e) {
 	else if (e.data.special_3event == true) {
 		probability *= 3;
 	}
-    
-	
+
+
 	var prob = 0;
 	var result = 0;
-	
+
 	var socketProgress = 0;
 	var data = null;
-	
-	for (var i = skillups; i < copies; i++) {
+
+	for (var i = skillups; i <= copies; i++) {
 		result = binomial(copies, i, probability);
 		prob += result;
-		
+
 		socketProgress = Math.round(i / copies * 100);
-         
-		data = 
+
+		data =
 		{
 			finished: false,
 			progress: socketProgress
-			
+
 		};
 		postMessage(data);
-		
+
 	}
-	
+
     if (isNaN(prob) || !isFinite(prob))
         prob = 0.999;
-	data = 
+	data =
 	{
 		finished: true,
 		result: prob,
