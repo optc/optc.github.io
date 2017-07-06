@@ -4941,6 +4941,13 @@ window.captains = {
         atk: function(p) { return !(p.unit.class.has("Striker")) ? 1 : p.percHP <= 30.0 ? 2.75 : 2.25; },
         hp: function(p) { return p.unit.class.has("Slasher") ? 1.2 : 1; }
     },
+    1668: {
+        atk: function(p) { return p.unit.class.has("Striker") ? 2 : 1; }
+    },
+    1669: {
+        atk: function(p) { return p.unit.class.has("Striker") ? 2 : 1; },
+        hp: function(p) { return p.unit.class.has("Striker") ? 2 : 1; }
+    },
     1750: {
         atk: function(p) { return p.unit.class.has("Striker") ? 3 : 1; }
     },

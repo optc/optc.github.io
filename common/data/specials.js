@@ -3122,6 +3122,14 @@ window.specials = {
     1667: {
         orb: function(p) { return ((p.unit.class.has("Powerhouse") || p.unit.class.has("Striker")) && (p.percHP > 70)) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain]) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain]); }	
     },
+    1668: {
+        atk: function(p) { return p.unit.class.has("Striker") ? 1.75 : 1; },
+        type: "class"
+    },
+    1669: {
+        atk: function(p) { return p.unit.class.has("Striker") ? 1.75 : 1; },
+        type: "class"
+    },
     1750:{
         orb: function(p) { return (p.unit.class.has("Striker")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[1750].multiplier, [p.friendCaptain, p.captain]) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain]); },
         onActivation: function(p) {

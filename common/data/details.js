@@ -9338,6 +9338,16 @@ window.details = {
         special: "Changes adjacent orbs into Matching Orbs and if HP is above 70%, amplifies the effect of orbs for Striker and Powerhouse characters by 1.5x for 1 turn",
         specialName: "Kyros Special",
     },
+    1668: {
+        special: "Boosts ATK of Striker characters by 1.75x for 2 turns, locks all orbs for 2 turns",
+        specialName: "Ice Block - Pheasant Beak [Reformed]",
+        captain: "Boosts ATK of Striker characters by 2x"
+    },
+    1669: {
+        special: "Boosts ATK of Striker characters by 1.75x for 2 turns, locks all orbs for 2 turns",
+        specialName: "Ice Block - Pheasant Beak [Reformed]",
+        captain: "Boosts ATK and HP of Striker characters by 2x"
+    },
     1750: {//Korea Law
         captain: "Boosts ATK of Striker characters by 3x and heals for .5x his RCV at the end of the turn each time you hit a Perfect",
         special: [

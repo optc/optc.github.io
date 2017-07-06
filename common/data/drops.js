@@ -1685,6 +1685,14 @@ window.drops = {
         },
 
         {
+            name: 'Clash Reformed!! Aokiji',
+            thumb: 1669,
+            gamewith: 61262,
+            Ultimate: [ 86, 112, 118, 302, 1668 ],
+            Master: [ 112, 118, 1668 ]
+        },
+
+        {
             name: 'Clash!! Eneru',
             thumb: 603,
             global: true,
