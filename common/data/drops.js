@@ -1639,7 +1639,7 @@ window.drops = {
         {
             name: 'Clash Reformed!! Doflamingo',
             thumb: 1623,
-            condition: "1 Master version and 3 different Ultimate versions with different conditions. Master: Striker/Cerebral/Fighter Only. Ultimate: Cerebral Only, Fighter Only, and Striker Only",
+            condition: "1 Master version and 3 different Ultimate versions with different conditions. Master: Striker/Cerebral/Fighter Only. Ultimate: Striker Only, Cerebral Only, and Fighter Only",
             gamewith: 58437,
             Ultimate: [ 1622 ],
             Master: [ 1622 ]
@@ -1687,6 +1687,7 @@ window.drops = {
         {
             name: 'Clash Reformed!! Aokiji',
             thumb: 1669,
+            condition: "1 Master version and 3 different Ultimate versions with different conditions. Master: Free Spirit/Shooter/Striker Only. Ultimate: Free Spirit Only, Shooter Only, and Striker Only",
             gamewith: 61262,
             Ultimate: [ 86, 112, 118, 302, 1668 ],
             Master: [ 112, 118, 1668 ]
