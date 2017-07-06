@@ -2376,13 +2376,13 @@ window.details = {
         special: "Boosts chances of getting [INT] orbs for 3 turns",
         specialName: "Ochenta Fleur - Cuatro Manus Shock",
         captain: "Boosts ATK and RCV of INT characters by 1.5x",
-        sailor: "Reduces duration of Blindness by 3 turns"
+        sailor: "Reduces Blindness duration by 3 turns"
     },
     558: {
         special: "Boosts chances of getting [INT] orbs for 3 turns",
         specialName: "Ochenta Fleur - Cuatro Manus Shock",
         captain: "Boosts ATK and RCV of INT characters by 2x",
-        sailor: "Reduces duration of Blindness by 3 turns"
+        sailor: "Reduces Blindness duration by 3 turns"
     },
     559: {
         special: "Changes own orb into [STR], amplifies the effect of orbs by 1.5x for 2 turns",
@@ -6096,13 +6096,13 @@ window.details = {
         special: "Boosts chances of getting [INT] orbs for 3 turns",
         specialName: "Ochenta Fleur - Cuatro Manus Shock",
         captain: "Boosts ATK and RCV of INT characters by 1.5x",
-        sailor: "Reduces duration of Blindness by 3 turn"
+        sailor: "Reduces Blindness duration by 3 turn"
     },
     1208: {
         special: "Boosts chances of getting [INT] orbs for 3 turns",
         specialName: "Ochenta Fleur - Cuatro Manus Shock",
         captain: "Boosts ATK and RCV of INT characters by 2x",
-        sailor: "Reduces duration of Blindness by 3 turn"
+        sailor: "Reduces Blindness duration by 3 turn"
     },
     1209: {
         special: "Delays all enemies for 3 turns, cuts the current HP of each enemy by 10%",
@@ -6321,14 +6321,14 @@ window.details = {
         special: "Deals several times the character's ATK in [PSY] damage to one enemy. Delays all enemies for 1 turn",
         specialNotes: "#{specialProportional : higher : 10x + (25x * (remaining HP) / (total HP)) }",
         specialName: "Sword of Silence",
-        sailor: "Reduces duration of Blindness for 3 turns",
+        sailor: "Reduces Blindness duration for 3 turns",
     },
     1236: {//Maynard
         captain: "Boosts ATK of [PSY] characters by 2x, deals 5x character's ATK to all enemies at the end of each turn",
         special: "Deals several times the character's ATK in [PSY] damage to one enemy. Delays all enemies for 1 turn",
         specialNotes: "#{specialProportional : higher : 10x + (25x * (remaining HP) / (total HP)) }",
         specialName: "Sword of Silence",
-        sailor: "Reduces duration of Blindness for 3 turns",
+        sailor: "Reduces Blindness duration for 3 turns",
     },
     1237: {//Bastille
         captain: "Boosts ATK of all characters by 2x after the 15th hit in the chain",
@@ -6607,13 +6607,13 @@ window.details = {
     1271: {//Van Augur
         captain: "Boosts ATK of Shooter characters by 2x",
         special: "Changes orbs in the top row into Matching orbs. For Shooter characters, amplifies the effect of orbs by 1.75x for 1 turn",
-        sailor: "Reduces duration of Blindness by 5 turns",
+        sailor: "Reduces Blindness duration by 5 turns",
         specialName: "Other Side of Fate",
     },
     1272: {//Van Augur
         captain: "Reduces cooldown of Shooter specials by 1 turn at the start of the fight. Boosts ATK of Shooter characters by 2.5x.",
         special: "Changes orbs in the top row into Matching orbs. For Shooter characters, amplifies the effect of orbs by 1.75x for 1 turn",
-        sailor: "Reduces duration of Blindness by 5 turns",
+        sailor: "Reduces Blindness duration by 5 turns",
         specialName: "Other Side of Fate",
     },
     1273: {//Jesus Burgess
@@ -6769,12 +6769,12 @@ window.details = {
     },
     1295: {//Halloween Kalifa
         captain: "Boosts ATK and RCV of [STR] characters by 1.5x",
-        special: "Reduces duration of Paralysis by 3 turns, removes Poison, and reduces the defense of all enemies by 100% for 1 turn",
+        special: "Reduces Paralysis duration by 3 turns, removes Poison, and reduces the defense of all enemies by 100% for 1 turn",
         specialName: "Mysterious Hour of the Dark Night",
     },
     1296: {//Halloween Kalifa
         captain: "Boosts ATK of [STR] characters by 2x and their RCV by 1.5x",
-        special: "Reduces duration of Paralysis by 3 turns, removes Poison, and reduces the defense of all enemies by 100% for 1 turn",
+        special: "Reduces Paralysis duration by 3 turns, removes Poison, and reduces the defense of all enemies by 100% for 1 turn",
         specialName: "Mysterious Hour of the Dark Night",
     },
     1297: {//Akainu
@@ -6891,7 +6891,7 @@ window.details = {
             },
         ],
         specialNotes: "No Healing debuff completely stops healing abilities. This is the debuff used in Akainu raid<br>#{stages}",
-        sailor: "Reduces duration of Blindness by 5 turns",
+        sailor: "Reduces Blindness duration by 5 turns",
         specialName: "Echoing Cry of the Soul",
     },
     1316: {//Coby
@@ -6911,7 +6911,7 @@ window.details = {
             },
         ],
         specialNotes: "No Healing debuff completely stops healing abilities. This is the debuff used in Akainu raid<br>#{stages}",
-        sailor: "Reduces duration of Blindness by 5 turns",
+        sailor: "Reduces Blindness duration by 5 turns",
         specialName: "Echoing Cry of the Soul",
     },
     1317: {//Garp
@@ -6932,14 +6932,14 @@ window.details = {
         captain: "Heals for 1x her RCV at the end of the turn each time you hit a Good. Heals for .1x her RCV at the end of the turn each time you hit a Perfect",
         special: "Deals 10 hits of random [QCK] damage to random enemies. Boosts ATK of all characters by 1.5x for 1 turn",
         specialNotes: "#{randomHits : 10}<br>#{random : ??? : ??? : for each hit}",
-        sailor: "Reduces duration of Paralysis by 1 turn",
+        sailor: "Reduces Paralysis duration by 1 turn",
         specialName: "A Decree of the Veteran",
     },
     1320: {//Lady Tsuru
         captain: "Heals for 1.5x her RCV at the end of the turn each time you hit a Good. Heals for .1x her RCV at the end of the turn each time you hit a Perfect",
         special: "Deals 10 hits of random [QCK] damage to random enemies. Boosts ATK of all characters by 1.5x for 1 turn",
         specialNotes: "#{randomHits : 10}<br>#{random : ??? : ??? : for each hit}",
-        sailor: "Reduces duration of Paralysis by 1 turn",
+        sailor: "Reduces Paralysis duration by 1 turn",
         specialName: "A Decree of the Veteran",
     },
     1321: {//Momonga
@@ -7101,15 +7101,15 @@ window.details = {
         captain: "Boosts ATK of [DEX] characters by 2.25x",
         special: [
             {
-                "description": "Reduces duration of Paralysis by 1 turn. Adds .2x to Chain multiplier for 1 turn",
+                "description": "Reduces Paralysis duration by 1 turn. Adds .2x to Chain multiplier for 1 turn",
                 "cooldown": [ 18, 8 ],
             },
             {
-                "description": "Reduces duration of Paralysis by 2 turn. Adds .3x to Chain multiplier for 1 turn",
+                "description": "Reduces Paralysis duration by 2 turn. Adds .3x to Chain multiplier for 1 turn",
                 "cooldown": [ 23, 13 ],
             },
             {
-                "description": "Reduces duration of Paralysis by 2 turn. Adds .5x to Chain multiplier for 1 turn",
+                "description": "Reduces Paralysis duration by 2 turn. Adds .5x to Chain multiplier for 1 turn",
                 "cooldown": [ 25, 15 ],
             },
         ],
@@ -7619,13 +7619,13 @@ window.details = {
         captain: "Boosts ATK of [DEX] and [PSY] characters by 1.75x an their RCV by 1.25x",
         special: "Reduces Despair duration by 3 turns and boosts ATK of [DEX] and [PSY] characters by 2x for 1 turn",
         specialName: "Mil Fleur: Gigantesco Mano Stomp",
-        sailor: "Reduces duration of Blindness by 3 turns",
+        sailor: "Reduces Blindness duration by 3 turns",
     },
     1408: {//Timeskip Robin
         captain: "Boosts ATK of [DEX] and [PSY] characters by 2.25x an their RCV by 1.5x",
         special: "Reduces Despair duration by 3 turns and boosts ATK of [DEX] and [PSY] characters by 2x for 1 turn",
         specialName: "Mil Fleur: Gigantesco Mano Stomp",
-        sailor: "Reduces duration of Blindness by 3 turns",
+        sailor: "Reduces Blindness duration by 3 turns",
     },
     1409: {//Timeskip Brook
         captain: "Protects from defeat as long as HP is above 50%",
