@@ -1667,7 +1667,7 @@ window.units = [
     [ "Coliseum Kyros", "QCK", [ "Powerhouse", "Striker" ], 4, 25, 4, 3, 70, 1066998, 245, 178, 34, 1320, 701, 177, null ],
     [ "Coliseum Kyros, Evolved", "QCK", [ "Powerhouse", "Striker" ], 5, 40, 4, 5, 99, 4000000, 1220, 670, 157, 2710, 1390, 225, null ],
     [ "Aokiji [Reformed]", "DEX", [ "Striker", "Free Spirit" ], 4, 30, 4, 2, 70, 1066998, 239, 157, 34, 1150, 710, 161, null ],
-    [ "Aokiji [Reformed], Ice Man", "DEX", [ "Striker", "Free Spirit" ], 5, 50, 4, 3, 99, 5000000, 1099, 640, 126, null, null, null, null ],
+    [ "Aokiji [Reformed], Ice Man", "DEX", [ "Striker", "Free Spirit" ], 5, 50, 4, 3, 99, 5000000, 1099, 640, 126, 2500, 1430, 254, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],

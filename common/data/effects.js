@@ -358,14 +358,12 @@ window.effects = {
         id: 36,
         atk: function(p) { return p.cost <= 30 ? 1.5 : 1; }
     },
-   /* 
-    'World Pirates - Boa Secret Stage': {
-        description: 'Locks the chain multiplier at 2.5x',
-        thumb: 1218,
+    
+    'Aokiji Reformed - Striker Raid Boss': {
+        description: 'Reduces Chain By 10%',
+        thumb: 1668,
         id: 37,
-        atk: function(p) { return p.cost <= 40 ? 1.5 : 1; },
-        chain: function(p) { return 2.5; },
-        chainLimiter: function(p) { return p.chainPosition > 0 ? 2.5 : 1.0; }
-    },*/
+        chainModifier: function(p) { return 0.1 ; }
+    },
     
 };
