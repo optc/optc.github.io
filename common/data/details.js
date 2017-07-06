@@ -9259,13 +9259,13 @@ window.details = {
     },
     1657: {//Kanjuro
         captain: "Boosts ATK of Striker and Free Spirit characters by 2x",
-        special: "Reduces the duration of Bind and Despair by 5 turns and locks the chain multiplier at 2.75x for 1 turn if your Captain is a Striker character",
+        special: "Reduces Bind and Despair duration by 5 turns and locks the chain multiplier at 2.75x for 1 turn if your Captain is a Striker character",
         sailor: "Makes [DEX] orbs \"beneficial\" for Striker characters if your Captain is a Striker character",
         specialName: "Summon Dragon",
     },
     1658: {//Kanjuro
         captain: "Boosts ATK of Striker and Free Spirit characters by 2.5x",
-        special: "Reduces the duration of Bind and Despair by 5 turns and locks the chain multiplier at 2.75x for 1 turn if your Captain is a Striker character",
+        special: "Reduces Bind and Despair duration by 5 turns and locks the chain multiplier at 2.75x for 1 turn if your Captain is a Striker character",
         sailor: "Makes [DEX] orbs \"beneficial\" for Striker characters if your Captain is a Striker character",
         specialName: "Summon Dragon",
     },
