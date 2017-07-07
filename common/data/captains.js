@@ -4948,6 +4948,17 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Striker") ? 2 : 1; },
         hp: function(p) { return p.unit.class.has("Striker") ? 2 : 1; }
     },
+    1670: {
+        atk: function(p) { return p.unit.type == "DEX" ? 1.75 : 1; },
+        rcv: function(p) { return p.unit.type == "DEX" ? 1.2 : 1; }
+    },
+    1671: {
+        rcv: function(p) { return p.unit.class.has("Free Spirit") ? 1.5 : 1; }
+    },
+    1672: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 1.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Powerhouse") ? 1.5 : 1; }
+    },
     1750: {
         atk: function(p) { return p.unit.class.has("Striker") ? 3 : 1; }
     },

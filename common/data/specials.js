@@ -3130,6 +3130,12 @@ window.specials = {
         atk: function(p) { return p.unit.class.has("Striker") ? 1.75 : 1; },
         type: "class"
     },
+    1670: {
+        delay: function(p) { return 1; },
+    },
+    1671: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain]); }
+    },
     1750:{
         orb: function(p) { return (p.unit.class.has("Striker")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[1750].multiplier, [p.friendCaptain, p.captain]) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain]); },
         onActivation: function(p) {

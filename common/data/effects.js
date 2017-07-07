@@ -359,7 +359,7 @@ window.effects = {
         atk: function(p) { return p.cost <= 30 ? 1.5 : 1; }
     },
     
-    'Aokiji Reformed - Striker Raid Boss': {
+    'Aokiji Neo - Striker Raid Boss': {
         description: 'Reduces Chain By 10%',
         thumb: 1668,
         id: 37,

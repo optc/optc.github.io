@@ -914,12 +914,12 @@ window.details = {
         captain: "Boosts ATK of STR characters by 3x and reduces their HP by 60%"
     },
     250: {
-        special: "Recovers all HP",
+        special: "Recovers all missing HP",
         specialName: "Blue Flame Rebirth",
         captain: "Boosts ATK of PSY characters by 3x if HP is above 99% at the start of the turn"
     },
     251: {
-        special: "Recovers all HP",
+        special: "Recovers all missing HP",
         specialName: "Blue Flame Rebirth",
         captain: "Boosts ATK of PSY characters by 3x if HP is above 99% at the start of the turn"
     },
@@ -9030,13 +9030,13 @@ window.details = {
     1622: {//Reborn Doffy
         special: "Switches orbs between slots twice, amplifies the effect of orbs by 2x for 1 turn",
         specialNotes: "#{orb : 2x}",
-        specialName: "Overheat [Reformed]",
+        specialName: "Overheat [Neo]",
         captain: "Boosts ATK of Slasher characters by 2x"
     },
     1623: {//Reborn Doffy
         special: "Switches orbs between slots twice, amplifies the effect of orbs by 2x for 1 turn",
         specialNotes: "#{orb : 2x}",
-        specialName: "Overheat [Reformed]",
+        specialName: "Overheat [Neo]",
         captain: "Boosts ATK and HP of Slasher characters by 2x"
     },
     1624: {//Hyouzou
@@ -9180,7 +9180,7 @@ window.details = {
     },
     1646: {//Reborn Pica
         captain: "Boosts ATK of Powerhouse characters by 1.5x, and their HP by 1.5x",
-        specialName: "Rock Domination Wall [Reformed]",
+        specialName: "Rock Domination Wall [Neo]",
         special: [
             {
                 "description": "For Driven and Powerhouse characters, changes [EMPTY] and Badly Matching orbs into Matching orbs. Cuts the current HP of all enemies by 10%",
@@ -9195,7 +9195,7 @@ window.details = {
         },
     1647: {//Reborn Pica
         captain: "Boosts ATK of Powerhouse characters by 2.25x, and their HP by 1.5x",
-        specialName: "Rock Domination Wall [Reformed]",
+        specialName: "Rock Domination Wall [Neo]",
         special: [
             {
                 "description": "For Driven and Powerhouse characters, changes [EMPTY] and Badly Matching orbs into Matching orbs. Cuts the current HP of all enemies by 10%",
@@ -9338,15 +9338,30 @@ window.details = {
         special: "Changes adjacent orbs into Matching Orbs and if HP is above 70%, amplifies the effect of orbs for Striker and Powerhouse characters by 1.5x for 1 turn",
         specialName: "Kyros Special",
     },
-    1668: {
+    1668: {//Reborn Aokiji
         special: "Boosts ATK of Striker characters by 1.75x for 2 turns, locks all orbs for 2 turns",
-        specialName: "Ice Block - Pheasant Beak [Reformed]",
+        specialName: "Ice Block - Pheasant Beak [Neo]",
         captain: "Boosts ATK of Striker characters by 2x"
     },
-    1669: {
+    1669: {//Reborn Aokiji
         special: "Boosts ATK of Striker characters by 1.75x for 2 turns, locks all orbs for 2 turns",
-        specialName: "Ice Block - Pheasant Beak [Reformed]",
+        specialName: "Ice Block - Pheasant Beak [Neo]",
         captain: "Boosts ATK and HP of Striker characters by 2x"
+    },
+    1670: {//Shyarly
+        captain: "Boosts ATK of [DEX] characters by 1.75x and their RCV by 1.2x",
+        special: "Randomizes all non-matching orbs, switches orbs between slots two times, and delays all enemies for 1 turn",
+        specialName: "Shyarly Special",
+    },
+    1671: {//Camie
+        captain: "Boosts RCV of Free Spirit characters by 1.5x",
+        special: "Recovers 15% of crew's MAX HP and amplifies the effect of orbs by 1.5x for 1 turn",
+        specialName: "Camie Special",
+    },
+    1671: {//Pappagu
+        captain: "Boosts ATK and HP of Powerhouse characters by 1.5x",
+        special: "Binds himself for 2 turns and reduces Despair and Silence duration by 3 turns",
+        specialName: "Pappagu Special",
     },
     1750: {//Korea Law
         captain: "Boosts ATK of Striker characters by 3x and heals for .5x his RCV at the end of the turn each time you hit a Perfect",
