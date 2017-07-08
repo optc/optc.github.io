@@ -4326,15 +4326,13 @@ window.details = {
         special: "Recovers 5000 HP and amplifies the effect of orbs by 1.5x for 2 turns"
     },
     923: {
-        captain: "Boosts ATK of Driven characters by 2x or by 2.5x",
-        captainNotes: "#{captainFixed : 2x : HP<30% : 2.5x}",
+        captain: "Boosts ATK of Driven Characters by 2.5x if HP is below 30% at the start of the turn, 2x otherwise",
         specialName: "Repel: Weapons Reflect",
         special: "Empties all slots, deals [STR] damage based on number of [STR] slots emptied to all enemies",
         specialNotes: "The exact multiplier used is chosen based on the number of [STR] orbs consumed: 0 orbs - 3.5x ATK; 1 orb - 7x ATK; 2 orbs - 14x ATK; 3 orbs - 21x ATK; 4 orbs - 35x ATK; 5 orbs - 91x ATK; 6 orbs - 140x ATK."
     },
     924: {
-        captain: "Boosts ATK of Driven characters by 2x or by 2.75x",
-        captainNotes: "#{captainFixed : 2x : HP<30% : 2.75x}",
+        captain: "Boosts ATK of Driven Characters by 2.75x if HP is below 30% at the start of the turn, 2x otherwise",
         specialName: "Repel: Weapons Reflect",
         special: "Empties all slots, deals [STR] damage based on number of [STR] slots emptied to all enemies",
         specialNotes: "The exact multiplier used is chosen based on the number of [STR] orbs consumed: 0 orbs - 3.5x ATK; 1 orb - 7x ATK; 2 orbs - 14x ATK; 3 orbs - 21x ATK; 4 orbs - 35x ATK; 5 orbs - 91x ATK; 6 orbs - 140x ATK."
@@ -9329,12 +9327,12 @@ window.details = {
         specialName: "Ice Saber",
     },
     1666: {//Kyros
-        captain: "Boosts Striker characters ATK by 2x",
+        captain: "Boosts ATK of Striker characters by 2x",
         special: "Changes adjacent orbs into Matching Orbs and if HP is above 70%, amplifies the effect of orbs for Striker and Powerhouse characters by 1.5x for 1 turn",
         specialName: "Kyros Special",
     },
     1667: {//Kyros
-        captain: "Boosts HP of Striker characters by 1.2x and boosts Striker characters ATK by 2.75x if HP is below 30% at the start of the turn, 2.25x otherwise",
+        captain: "Boosts HP of Striker characters by 1.2x and boosts ATK of Striker characters by 2.75x if HP is below 30% at the start of the turn, 2.25x otherwise",
         special: "Changes adjacent orbs into Matching Orbs and if HP is above 70%, amplifies the effect of orbs for Striker and Powerhouse characters by 1.5x for 1 turn",
         specialName: "Kyros Special",
     },
