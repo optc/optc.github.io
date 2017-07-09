@@ -1571,7 +1571,7 @@ window.drops = {
             thumb: 1649,
             gamewith: 60685,
             condition: 'You must have at least one character of each type on your team: STR, DEX, QCK, PSY, and INT.',
-            'All Difficulties': [ 1648, 1650, -1473, -1483, -412, -414, -1075, -1027, -1348, -956 ],
+            'All Difficulties': [ 1648, 1650, -1473, -1483, -412, -414, -1075, -1027, -1479, -1348, -956 ],
         },
         
         {
