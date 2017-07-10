@@ -4959,6 +4959,12 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Powerhouse") ? 1.5 : 1; },
         hp: function(p) { return p.unit.class.has("Powerhouse") ? 1.5 : 1; }
     },
+    1673: {
+        atk: function(p) { return 1.75; }
+    },
+    1674: {
+        atk: function(p) { return 2.25; }
+    },
     1750: {
         atk: function(p) { return p.unit.class.has("Striker") ? 3 : 1; }
     },

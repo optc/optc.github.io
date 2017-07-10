@@ -9356,10 +9356,26 @@ window.details = {
         special: "Recovers 15% of crew's MAX HP and amplifies the effect of orbs by 1.5x for 1 turn",
         specialName: "Camie Special",
     },
-    1671: {//Pappagu
+    1672: {//Pappagu
         captain: "Boosts ATK and HP of Powerhouse characters by 1.5x",
         special: "Binds himself for 2 turns and reduces Despair and Silence duration by 3 turns",
         specialName: "Pappagu Special",
+    },
+    1673: {//Swinsuit Perona
+        captain: "Boosts ATK of all characters by 1.75x and boosts EXP gained by 1.2x",
+        special: "Reduces damage received by 70% for 1 turn, reduces the defense of all enemies by ??% for 1 turn and reduces Silence duration by 2 turns.",
+        specialNotes: "#{silence}",
+        sailor: "Completely resists Silence on this character",
+        sailorNotes: "#{silence}",
+        specialName: "Romantic Princess",
+    },
+    1674: {//Swinsuit Perona
+        captain: "Boosts ATK of all characters by 2.25x and boosts EXP gained by 1.5x",
+        special: "Reduces damage received by 70% for 1 turn, reduces the defense of all enemies by ??% for 1 turn and reduces Silence duration by 2 turns.",
+        specialNotes: "#{silence}",
+        sailor: "Completely resists Silence on this character",
+        sailorNotes: "#{silence}",
+        specialName: "Romantic Princess",
     },
     1750: {//Korea Law
         captain: "Boosts ATK of Striker characters by 3x and heals for .5x his RCV at the end of the turn each time you hit a Perfect",
