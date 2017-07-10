@@ -208,6 +208,29 @@ directives.addOrbOptions = function($timeout, $compile, MATCHER_IDS) {
         }
     };
 };
+    
+directives.addDebuffOptions = function($timeout, $compile, MATCHER_IDS) {
+    var TARGET = MATCHER_IDS['special.DebuffReducingSpecials'];
+    return {
+        restrict: 'A',
+        link: function(scope, element, attrs) {
+            if (scope.n !== TARGET) return;
+            var filter = $('<div id="debuff" ng-class="{ enabled: filters.custom[' + TARGET + '] }"></div>');
+            var debuffs = [ 'Bind', 'Despair', 'Silence', 'Paralysis', 'Blindness', 'Poison', 'Anti-Healing', 'Chain Limit' ];
+            debuffs.forEach(function(x,n) {
+                var template = '<span class="filter debuff %c" ng-class="{ active: filters.debuffs == \'%s\' }" ' +
+                    'ng-click="onDebuffClick($event,\'%s\')">%s</span>';
+                filter.append($(template.replace(/%s/g,x).replace(/%c/,'width-6')));
+            });
+            element.after(filter);
+            $compile(filter)(scope);
+            scope.onDebuffClick = function(e,type) {
+                console.log(scope.filters.debuffs);
+                scope.filters.debuffs = (scope.filters.debuffs == type ? null : type);
+            };
+        }
+    };
+};
 
 directives.goBack = function($state) {
 	return {

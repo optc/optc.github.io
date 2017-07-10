@@ -202,7 +202,7 @@ CharUtils.getStatOfUnit = function(unit, stat, level) {
  * Caching *
  ***********/
 
-var orbControllerCache = { }, regexCache = { }, classCache = { captain: { }, special: { } };
+var orbControllerCache = { }, regexCache = { }, classCache = { captain: { }, special: { }, sailor: { } };
 
 CharUtils.getOrbControllerData = function(id) {
     if (orbControllerCache.hasOwnProperty(id) || !window.details[id] || !window.details[id].special)

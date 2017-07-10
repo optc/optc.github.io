@@ -361,6 +361,12 @@ window.matchers = [
         target: 'special',
         matcher: /Reduces (any )?damage received.+100%/i
     },
+    
+    /*{
+        name: 'Debuff Reducing Specials',
+        target: 'special',
+        matcher: /(reduces|removes) [^,]+(Bind|Despair|Silence|Paralysis|Blindness|Poison|No Healing|Chain Limit).+duration/i
+    },*/
 
     {
         name: 'Bind reducers',
@@ -470,6 +476,24 @@ window.matchers = [
         name: 'Class-boosting sailors',
         target: 'sailor',
         matcher: /Boosts (ATK|HP|RCV|ATK and HP|ATK and RCV|HP and RCV|ATK, HP and RCV) of[^,]+(Slasher|Striker|Fighter|Shooter|Free Spirit|Cerebral|Powerhouse|Driven)/i
+    },
+    
+    {
+        name: 'ATK boosting sailors',
+        target: 'sailor',
+        matcher: /Boosts ATK/i
+    },
+
+    {
+        name: 'HP boosting sailors',
+        target: 'sailor',
+        matcher: /Boosts (HP|ATK and HP|ATK, HP)|Boosts.+and their HP/i
+    },
+
+    {
+        name: 'RCV boosting sailors',
+        target: 'sailor',
+        matcher: /Boosts (RCV|ATK and RCV|HP and RCV|ATK, HP and RCV)|Boosts.+and their RCV/i
     },
     
     {
