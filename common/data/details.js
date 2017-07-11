@@ -5255,7 +5255,7 @@ window.details = {
         captain: "Recovers 3x character's RCV in HP at the end of each turn",
         special: [
             {
-                "description": "Recovers 6x character's RCV in HP. Removes Paralysis",
+                "description": "Recovers 6x character's RCV in HP. Reduces Paralysis duration by 3 turns",
                 "cooldown": [ 14, 8 ]
             },
             {
@@ -5274,7 +5274,7 @@ window.details = {
         captain: "Recovers 4x character's RCV in HP at the end of each turn",
         special: [
             {
-                "description": "Recovers 6x character's RCV in HP. Removes Paralysis",
+                "description": "Recovers 6x character's RCV in HP. Reduces Paralysis duration by 3 turns",
                 "cooldown": [ 14, 8 ]
             },
             {
@@ -7037,7 +7037,7 @@ window.details = {
         captain: "Recovers 2x character's RCV in HP at the end of each turn",
         special: [
             {
-                "description": "Reduces Bind duration for one character by 3 turns. Recovers 7x character's RCV in HP.",
+                "description": "Reduces Bind duration for one character by 4 turns. Recovers 7x character's RCV in HP.",
                 "cooldown": [ 18, 11 ],
             },
             {
@@ -7052,7 +7052,7 @@ window.details = {
         captain: "Recovers 3x character's RCV in HP at the end of each turn",
         special: [
             {
-                "description": "Reduces Bind duration for one character by 3 turns. Recovers 7x character's RCV in HP.",
+                "description": "Reduces Bind duration for one character by 4 turns. Recovers 7x character's RCV in HP.",
                 "cooldown": [ 18, 11 ],
             },
             {
@@ -9329,12 +9329,12 @@ window.details = {
     1666: {//Kyros
         captain: "Boosts ATK of Striker characters by 2x",
         special: "Changes adjacent orbs into Matching Orbs and if HP is above 70%, amplifies the effect of orbs for Striker and Powerhouse characters by 1.5x for 1 turn",
-        specialName: "Kyros Special",
+        specialName: "Trueno Bastardo",
     },
     1667: {//Kyros
         captain: "Boosts HP of Striker characters by 1.2x and boosts ATK of Striker characters by 2.75x if HP is below 30% at the start of the turn, 2.25x otherwise",
         special: "Changes adjacent orbs into Matching Orbs and if HP is above 70%, amplifies the effect of orbs for Striker and Powerhouse characters by 1.5x for 1 turn",
-        specialName: "Kyros Special",
+        specialName: "Trueno Bastardo",
     },
     1668: {//Reborn Aokiji
         special: "Boosts ATK of Striker characters by 1.75x for 2 turns, locks all orbs for 2 turns",
@@ -9349,17 +9349,17 @@ window.details = {
     1670: {//Shyarly
         captain: "Boosts ATK of [DEX] characters by 1.75x and their RCV by 1.2x",
         special: "Randomizes all non-matching orbs, switches orbs between slots two times, and delays all enemies for 1 turn",
-        specialName: "Shyarly Special",
+        specialName: "A Warning to the Fool",
     },
     1671: {//Camie
         captain: "Boosts RCV of Free Spirit characters by 1.5x",
         special: "Recovers 15% of crew's MAX HP and amplifies the effect of orbs by 1.5x for 1 turn",
-        specialName: "Camie Special",
+        specialName: "Cheerfulness that Shines in the Deep Sea",
     },
     1672: {//Pappagu
         captain: "Boosts ATK and HP of Powerhouse characters by 1.5x",
         special: "Binds himself for 2 turns and reduces Despair and Silence duration by 3 turns",
-        specialName: "Pappagu Special",
+        specialName: "A Starfish Reaching for His Beliefs",
     },
     1673: {//Swinsuit Perona
         captain: "Boosts ATK of all characters by 1.75x and boosts EXP gained by 1.2x",
