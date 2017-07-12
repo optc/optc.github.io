@@ -1962,39 +1962,6 @@ window.drops = {
         },
         
         {
-            name: 'Rescue Ace Event - Akainu',
-            thumb: 1283,
-            global: true,
-            condition: '10, 20, 30, 35 stamina difficulty. 30 and 35 Stamina has a chance of dropping the Universal Skill Book.',
-            'Characters': [ 927, 296, 299, 773, 774, 1224 ],
-            'Boosters and Evolvers': [ 351, 193, 114, 266, 83, 118 ],
-            'Global': [ -261, -1413, -562, -720, -8, -1388, -219, -75, -255, -314, -316, -357, -410, -408, -449, -451, -455, -641, -643, -754, -760, -840, -880, -906, -910, -999, -554, -1175, -528, -1177, -560, -1212, -1245, -218, -22, -1448, -24, -204, -384, -504, -508, -785, -789 ],
-            'Japan': [ -261, -562, -720, -748, -935, -1413 ]
-        },
-        
-        {
-            name: 'Rescue Ace Event - Aokiji',
-            thumb: 1280,
-            global: true,
-            condition: '10, 20, 30, 35 stamina difficulty. 30 and 35 Stamina has a chance of dropping the Universal Skill Book.',
-            'Characters': [ 67, 69, 262, 264, 298 ],
-            'Boosters and Evolvers': [ 113, 192, 350, 266, 83, 118 ],
-            'Global': [ -416, -459, -530, -217, -004, -1387, -12, -221, -1389, -77, -210, -253, -259, -310, -312, -361, -363, -414, -453, -645, -647, -752, -756, -937, -939, -991, -520, -1115, -524, -1119, -558, -1208, -1245, -25, -202, -208, -206, -502, -787, -789, -739, -1550, -1445 ],
-            'Japan': [ -416, -459, -530, -669, -1492, -578, -1121, -1445 ]
-        },
-        
-        {
-            name: 'Rescue Ace Event - Kizaru',
-            thumb: 1228,
-            global: true,
-            condition: '10, 20, 30, 35 stamina difficulty. 30 and 35 Stamina has a chance of dropping the Universal Skill Book.',
-            'Characters': [ 968, 969, 970, 971, 972, 231, 775, 1223, 49, 43 ],
-            'Boosters and Evolvers': [ 112, 191, 349, 266, 83, 118 ],
-            'Global': [ -367, -649, -718, -16, -1446, -20, -1447, -73, -251, -257, -308, -359, -365, -412, -457, -639, -750, -758, -912, -914, -941, -993, -522, -1117, -526, -1173, -556, -1210, -1245, -223, -15, -23, -25, -200, -225, -546, -500, -506, -569, -791, -793 ],
-            'Japan': [ -367, -649, -718, -870, -1001 ]
-        },
-        
-        {
             name: 'Invasion! Young Whitebeard',
             thumb: 1258,
             global: true,
@@ -2018,6 +1985,47 @@ window.drops = {
             gamewith: 53621,
             condition: 'Has a chance of appearing at the end of ANY Chaos Coliseum boss. You MUST use the same team that you just used to complete the Coliseum boss to fight Cavendish.',
             'All Difficulties': [ 1529 ]
+        },
+        
+        {
+            name: 'Rescue Ace Event - Akainu',
+            thumb: 1283,
+            global: true,
+            condition: '10, 20, 30, 35 stamina difficulty. 30 and 35 Stamina has a chance of dropping the Almighty Book.',
+            'Characters': [ 927, 296, 299, 773, 774, 1224 ],
+            'Boosters and Evolvers': [ 351, 193, 114, 266, 83, 118 ],
+            'Global': [ -261, -1413, -562, -720, -8, -1388, -219, -75, -255, -314, -316, -357, -410, -408, -449, -451, -455, -641, -643, -754, -760, -840, -880, -906, -910, -999, -554, -1175, -528, -1177, -560, -1212, -1245, -218, -22, -1448, -24, -204, -384, -504, -508, -785, -789 ],
+            'Japan': [ -261, -562, -720, -748, -935, -1413 ]
+        },
+        
+        {
+            name: 'Rescue Ace Event - Aokiji',
+            thumb: 1280,
+            global: true,
+            condition: '10, 20, 30, 35 stamina difficulty. 30 and 35 Stamina has a chance of dropping the Almighty Book.',
+            'Characters': [ 67, 69, 262, 264, 298 ],
+            'Boosters and Evolvers': [ 113, 192, 350, 266, 83, 118 ],
+            'Global': [ -416, -459, -530, -217, -004, -1387, -12, -221, -1389, -77, -210, -253, -259, -310, -312, -361, -363, -414, -453, -645, -647, -752, -756, -937, -939, -991, -520, -1115, -524, -1119, -558, -1208, -1245, -25, -202, -208, -206, -502, -787, -789, -739, -1550, -1445 ],
+            'Japan': [ -416, -459, -530, -669, -1492, -578, -1121, -1445 ]
+        },
+        
+        {
+            name: 'Rescue Ace Event - Kizaru',
+            thumb: 1228,
+            global: true,
+            condition: '10, 20, 30, 35 stamina difficulty. 30 and 35 Stamina has a chance of dropping the Almighty Book.',
+            'Characters': [ 968, 969, 970, 971, 972, 231, 775, 1223, 49, 43 ],
+            'Boosters and Evolvers': [ 112, 191, 349, 266, 83, 118 ],
+            'Global': [ -367, -649, -718, -16, -1446, -20, -1447, -73, -251, -257, -308, -359, -365, -412, -457, -639, -750, -758, -912, -914, -941, -993, -522, -1117, -526, -1173, -556, -1210, -1245, -223, -15, -23, -25, -200, -225, -546, -500, -506, -569, -791, -793 ],
+            'Japan': [ -367, -649, -718, -870, -1001 ]
+        },
+        
+        {
+            name: 'The Three Admirals',
+            thumb: 1314,
+            condition: 'Chance of dropping the Almighty Book.',
+            'All Bosses': [ -1621, -1632, -1665 ],
+            'Chopperman Mission': [ 1675 ],
         },
         
         {

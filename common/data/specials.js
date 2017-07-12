@@ -3142,6 +3142,20 @@ window.specials = {
     1674: {
         def: function(p) { return 0.3; }
     },
+    1675: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Driven") ? 1.5 : 1},
+        type: "class"
+    },
+    1676: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Driven") ? 1.5 : 1},
+        type: "class"
+    },
+    1677: {
+        affinity: function(p){ return p.unit.class.has("Slasher") ? 1.5 : 1; }
+    },
+    1678: {
+        affinity: function(p){ return p.unit.class.has("Slasher") ? 1.5 : 1; }
+    },
     1750:{
         orb: function(p) { return (p.unit.class.has("Striker")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[1750].multiplier, [p.friendCaptain, p.captain]) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain]); },
         onActivation: function(p) {

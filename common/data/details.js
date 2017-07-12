@@ -7568,7 +7568,7 @@ window.details = {
         specialName: "Offense Battle Axe",
     },
     1403: {//Timeskip Luffy
-        captain: "Boosts ATK of Free Spirit characters by 2.5x, reduce damage received by 15%. If you use \"Gomu Gomu no Red Hawk\" THIS LUFFY boosts ATK of Free Spirit characters by 4x instead for 3 turns.",
+        captain: "Boosts ATK of Free Spirit characters by 2.5x and reduce damage received by 15%. If you use \"Gomu Gomu no Red Hawk\" THIS LUFFY boosts ATK of Free Spirit characters by 4x instead for 3 turns.",
         captainNotes: "Using Luffy's special will change his own captain boost to 4x. If both Luffy's specials are used, the total ATK boost will be 16x",
         special: [
             {
@@ -7584,7 +7584,7 @@ window.details = {
         specialName: "Gomu Gomu no Red Hawk",
     },
     1404: {//Timeskip Luffy
-        captain: "Boosts ATK of Free Spirit characters by 2.5x, reduce damage received by 15%. If you use \"Gomu Gomu no Red Hawk\" THIS LUFFY boosts ATK of Free Spirit characters by 4x instead for 3 turns.",
+        captain: "Boosts ATK of Free Spirit characters by 2.5x and reduce damage received by 15%. If you use \"Gomu Gomu no Red Hawk\" THIS LUFFY boosts ATK of Free Spirit characters by 4x instead for 3 turns.",
         captainNotes: "Using Luffy's special will change his own captain boost to 4x. If both Luffy's specials are used, the total ATK boost will be 16x",
         special: [
             {
@@ -8420,13 +8420,13 @@ window.details = {
     1529: {//Cavendish
         captain: "Boosts ATK of all characters by 1.5x, but boosts his OWN attack by 3x",
         special: "For Slasher characters, if HP is above 50% at the time the special was activated, amplifies the effects of orbs by 2.25x for 1 turn, 2x otherwise",
-        sailor: "Reduces ATK of all characters by .5x if your captain is [STR] or [QCK]",
+        sailor: "Reduces ATK of all characters by .5x if your captain is a [STR] or [QCK] character",
         specialName: "Blue Bird Sword",
     },
     1530: {//Cavendish
         captain: "Boosts ATK of all characters by 1.75x, but boosts his OWN attack by 3.5x",
         special: "For Slasher characters, if HP is above 50% at the time the special was activated, amplifies the effects of orbs by 2.25x for 1 turn, 2x otherwise",
-        sailor: "Reduces ATK of all characters by .5x if your captain is [STR] or [QCK]",
+        sailor: "Reduces ATK of all characters by .5x if your captain is a [STR] or [QCK] character",
         specialName: "Blue Bird Sword",
     },
     1531: {//Legend Usopp
@@ -9257,13 +9257,13 @@ window.details = {
     },
     1657: {//Kanjuro
         captain: "Boosts ATK of Striker and Free Spirit characters by 2x",
-        special: "Reduces Bind and Despair duration by 5 turns and locks the chain multiplier at 2.75x for 1 turn if your Captain is a Striker character",
+        special: "Reduces Bind and Despair duration by 5 turns. If your Captain is a Striker character, locks the chain multiplier at 2.75x for 1 turn",
         sailor: "Makes [DEX] orbs \"beneficial\" for Striker characters if your Captain is a Striker character",
         specialName: "Summon Dragon",
     },
     1658: {//Kanjuro
         captain: "Boosts ATK of Striker and Free Spirit characters by 2.5x",
-        special: "Reduces Bind and Despair duration by 5 turns and locks the chain multiplier at 2.75x for 1 turn if your Captain is a Striker character",
+        special: "Reduces Bind and Despair duration by 5 turns. If your Captain is a Striker character, locks the chain multiplier at 2.75x for 1 turn",
         sailor: "Makes [DEX] orbs \"beneficial\" for Striker characters if your Captain is a Striker character",
         specialName: "Summon Dragon",
     },
@@ -9376,6 +9376,28 @@ window.details = {
         sailor: "Completely resists Silence on this character",
         sailorNotes: "#{silence}",
         specialName: "Romantic Princess",
+    },
+    1675: {//Kimono Zoro
+        captain: "Boosts chain multiplier by 2x",
+        special: "Boosts ATK of Slasher and Driven characters by 1.5x for 1 turn. If your Captain is a Slasher or Driven character, reduces Paralysis and Despair duration by 2 turns",
+        sailor: "Reduces Blindness duration by 1 turn",
+        specialName: "Great Swordsman Under the Umbrella",
+    },
+    1676: {//Kimono Zoro
+        captain: "Boosts chain multiplier by 3.25 and reduce damage received by 10%",
+        special: "Boosts ATK of Slasher and Driven characters by 1.5x for 1 turn. If your Captain is a Slasher or Driven character, reduces Paralysis and Despair duration by 2 turns",
+        sailor: "Reduces Blindness duration by 1 turn",
+        specialName: "Great Swordsman Under the Umbrella",
+    },
+    1677: {//Log Law
+        captain: "Boosts ATK of Slasher characters by 2.5x",
+        special: "Boosts the Color Affinity of Slasher by 1.5x for 1 turn, changes middle row orbs into matching orbs and switches orbs between slots three times",
+        specialName: "ROOM: Kikoku",
+    },
+    1678: {//Log Law
+        captain: "Boosts ATK of Slasher characters by 2.5x at the start of the chain, by 3.25x after the 3rd Perfect",
+        special: "Boosts the Color Affinity of Slasher by 1.5x for 1 turn, changes middle row orbs into matching orbs and switches orbs between slots three times",
+        specialName: "ROOM: Kikoku",
     },
     1750: {//Korea Law
         captain: "Boosts ATK of Striker characters by 3x and heals for .5x his RCV at the end of the turn each time you hit a Perfect",
