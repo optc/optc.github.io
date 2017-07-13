@@ -1669,7 +1669,7 @@ window.units = [
     [ "Aokiji [Neo]", "DEX", [ "Striker", "Free Spirit" ], 4, 30, 4, 2, 70, 1066998, 239, 157, 34, 1150, 710, 161, null ],
     [ "Aokiji [Neo], Ice Man", "DEX", [ "Striker", "Free Spirit" ], 5, 50, 4, 3, 99, 5000000, 1099, 640, 126, 2500, 1430, 254, null ],
     [ "Madame Shyarly, Mermaid Cafe Manager", "DEX", [ "Cerebral", "Fighter" ], 4, 20, 6, 3, 99, null, 154, 105, 29, null, null, null, null ],
-    [ "Camie, Mermaid Cafe", "QCK", [ "Free Spirit", "Fighter" ], 4, 20, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Camie, Mermaid Cafe", "QCK", [ "Free Spirit", "Fighter" ], 4, 20, 4, 3, 99, null, 122, 52, 38, null, null, null, null ],
     [ "Pappagu, \"Criminal Brand Company\" President and Super Famous Celebrity Fashion Desginer", "PSY", [ "Fighter", "Powerhouse" ], 3, 13, 8, 3, 70, 1066998, 108, 41, 21, 920, 855, 180, null ],
     [ "Perona, Dark Beach Princess", "QCK", [ "Shooter", "Driven" ], 4, 15, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Perona, Audacious Swimsuit Princess", "QCK", [ "Shooter", "Driven" ], 5, 30, null, null, null, null, null, null, null, null, null, null, null ],
