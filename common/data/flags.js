@@ -1450,6 +1450,10 @@ window.flags = {
     1665: { rr: 1, rro: 1, lrr: 1 },
     1673: { rr: 1, rro: 1, lrr: 1 },
     1674: { rr: 1, rro: 1, lrr: 1 },
+    1675: { special: 1 },
+    1676: { special: 1 },
+    1677: { rr: 1, rro: 1, lrr: 1 },
+    1678: { rr: 1, rro: 1, lrr: 1 },
     1750: { rr: 1, rro: 1 },
     1751: { rr: 1, rro: 1 },
 };
