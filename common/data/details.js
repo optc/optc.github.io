@@ -9379,13 +9379,13 @@ window.details = {
     },
     1675: {//Kimono Zoro
         captain: "Boosts chain multiplier by 2x",
-        special: "Boosts ATK of Slasher and Driven characters by 1.5x for 1 turn. If your Captain is a Slasher or Driven character, reduces Paralysis and Despair duration by 2 turns",
+        special: "Boosts ATK of Slasher and Driven characters by 1.5x for 1 turn. If your Captain is a Slasher or Driven character, changes adjacent orbs into matching orbs and reduces Paralysis and Despair duration by 2 turns",
         sailor: "Reduces Blindness duration by 1 turn",
         specialName: "Great Swordsman Under the Umbrella",
     },
     1676: {//Kimono Zoro
         captain: "Boosts chain multiplier by 3.25 and reduce damage received by 10%",
-        special: "Boosts ATK of Slasher and Driven characters by 1.5x for 1 turn. If your Captain is a Slasher or Driven character, reduces Paralysis and Despair duration by 2 turns",
+        special: "Boosts ATK of Slasher and Driven characters by 1.5x for 1 turn. If your Captain is a Slasher or Driven character, changes adjacent orbs into matching orbs and reduces Paralysis and Despair duration by 2 turns",
         sailor: "Reduces Blindness duration by 1 turn",
         specialName: "Great Swordsman Under the Umbrella",
     },
