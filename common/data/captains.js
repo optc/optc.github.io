@@ -4982,6 +4982,12 @@ window.captains = {
     1676: {
         chainModifier: function(p) { return 3.25; }
     },
+    1679: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? 2 : 1; }
+    },
+    1680: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? 2.5 : 1; }
+    },
     1750: {
         atk: function(p) { return p.unit.class.has("Striker") ? 3 : 1; }
     },

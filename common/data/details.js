@@ -9399,6 +9399,16 @@ window.details = {
         special: "Boosts the Color Affinity of Slasher by 1.5x for 1 turn, changes middle row orbs into matching orbs and switches orbs between slots three times",
         specialName: "ROOM: Kikoku",
     },
+    1679: {
+        special: "Cuts the current HP of each enemy by 30%",
+        specialName: "Black Blade Ship Cutter [Neo]",
+        captain: "Boosts ATK of Slasher characters by 2x"
+    },
+    1680: {
+        special: "Cuts the current HP of each enemy by 30%",
+        specialName: "Black Blade Ship Cutter [Neo]",
+        captain: "Boosts ATK of Slasher characters by 2.5x"
+    },
     1750: {//Korea Law
         captain: "Boosts ATK of Striker characters by 3x and heals for .5x his RCV at the end of the turn each time you hit a Perfect",
         special: [

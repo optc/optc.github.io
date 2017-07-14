@@ -1596,6 +1596,15 @@ window.drops = {
             Master: [ 86, 112, 118, 226 ],
             Expert: [ 97, 112, 226 ]
         },
+        
+        {
+            name: 'Clash Neo!! Mihawk',
+            thumb: 1680,
+            global: true,
+            gamewith: null,
+            Master: [ 85, 111, 118, 1679 ],
+            Expert: [ 96, 111, 1679 ]
+        },
 
         {
             name: 'Clash!! Chopper\'s Rampage',
