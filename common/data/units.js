@@ -1673,7 +1673,7 @@ window.units = [
     [ "Pappagu, \"Criminal Brand Company\" President and Super Famous Celebrity Fashion Desginer", "PSY", [ "Fighter", "Powerhouse" ], 3, 13, 8, 3, 70, 1066998, 108, 41, 21, 920, 855, 180, 1 ],
     [ "Perona, Dark Beach Princess", "QCK", [ "Shooter", "Driven" ], 4, 15, 4, 3, null, null, 194, 110, 63, null, null, null, null ],
     [ "Perona, Audacious Swimsuit Princess", "QCK", [ "Shooter", "Driven" ], 5, 30, 4, 4, 99, 4000000, 873, 110, 63, 1904, 1003, 436, null ],
-    [ "Roronoa Zoro, Young Swordsman", "PSY", [ "Slasher", "Driven" ], 4, 15, 6, 2, 50, 392109, 152, 104, 24, null, null, null, null ],
+    [ "Roronoa Zoro, Young Swordsman", "PSY", [ "Slasher", "Driven" ], 4, 15, 6, 2, 50, 392109, 152, 104, 24, 1008, 604, 131, null ],
     [ "Roronoa Zoro, Rain Soaked Samurai", "PSY", [ "Slasher", "Driven" ], 5, 30, 4, 3, 99, 4000000, 931, 536, 85, 2094, 1193, 257, null ],
     [ "Trafalgar Law, Wakes of an Endless Dream, Heart Pirates", "INT", [ "Slasher", "Free Spirit" ], 4, 20, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Trafalgar Law, A Vow in the Great Age of Pirates - Free Spirit", "INT", [ "Slasher", "Free Spirit" ], 5, 30, null, null, null, null, null, null, null, null, null, null, null ],
