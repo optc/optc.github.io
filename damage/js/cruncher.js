@@ -203,7 +203,10 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if (orb =='meat'){
                 for (temp = 0; temp < 2; temp++){
                     if (team[temp].unit != null){
-                        if (team[temp].unit.name.includes("Kami Enel") || team[temp].unit.name.includes("God Usopp") || team[temp].unit.name.includes("Usoland")){
+                        /*if (team[temp].unit.name.includes("Kami Enel") || team[temp].unit.name.includes("God Usopp") || team[temp].unit.name.includes("Usoland")){
+                            orb = 2;
+                        }*/
+                        if (team[temp].unit.number == 1610 || team[temp].unit.number == 1609 || team[temp].unit.number == 1532 || team[temp].unit.number == 1531){
                             orb = 2;
                         }
                     }
