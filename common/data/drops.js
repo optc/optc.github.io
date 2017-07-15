@@ -2032,6 +2032,7 @@ window.drops = {
         {
             name: 'The Three Admirals',
             thumb: 1314,
+            gamewith: 61665,
             condition: 'Chance of dropping the Almighty Book.',
             'All Bosses': [ -1621, -1632, -1665 ],
             'Chopperman Mission': [ 1675 ],
