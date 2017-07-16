@@ -9363,7 +9363,7 @@ window.details = {
     },
     1673: {//Swinsuit Perona
         captain: "Boosts ATK of all characters by 1.75x and boosts EXP gained by 1.2x",
-        special: "Reduces damage received by 70% for 1 turn, reduces the defense of all enemies by ??% for 1 turn and reduces Silence duration by 2 turns.",
+        special: "Reduces damage received by 70% for 1 turn, reduces the defense of all enemies by 90% for 1 turn and reduces Silence duration by 2 turns.",
         specialNotes: "#{silence}",
         sailor: "Completely resists Silence on this character",
         sailorNotes: "#{silence}",
@@ -9371,7 +9371,7 @@ window.details = {
     },
     1674: {//Swinsuit Perona
         captain: "Boosts ATK of all characters by 2.25x and boosts EXP gained by 1.5x",
-        special: "Reduces damage received by 70% for 1 turn, reduces the defense of all enemies by ??% for 1 turn and reduces Silence duration by 2 turns.",
+        special: "Reduces damage received by 70% for 1 turn, reduces the defense of all enemies by 90% for 1 turn and reduces Silence duration by 2 turns.",
         specialNotes: "#{silence}",
         sailor: "Completely resists Silence on this character",
         sailorNotes: "#{silence}",

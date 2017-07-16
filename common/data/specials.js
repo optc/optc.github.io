@@ -3137,10 +3137,10 @@ window.specials = {
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain]); }
     },
     1673: {
-        def: function(p) { return 0.3; }
+        def: function(p) { return 0.1; }
     },
     1674: {
-        def: function(p) { return 0.3; }
+        def: function(p) { return 0.1; }
     },
     1675: {
         atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Driven") ? 1.5 : 1},
