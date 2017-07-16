@@ -4101,6 +4101,13 @@ window.captains = {
     1452: {
         atk: function(p) { return p.unit.type != "DEX" ? 1 : (((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain]) == 2) && (p.orb != 'g')) ? 2.5 : 2); }
     },
+    1453: {
+        atk: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 1.5 : 1; },
+    },
+    1454: {
+        atk: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 1.75 : 1; },
+        rcv: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 1.5 : 1; },
+    },
     1455: {
         damageSorter: function(d) { return CrunchUtils.classSort(d, 2.5, [ "Powerhouse" ]); },
         hitAtk: function(p) {

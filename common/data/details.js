@@ -7910,7 +7910,7 @@ window.details = {
         specialName: "Diable Jambe: Love Shot",
     },
     1453: {//Valentines Margeurite
-        captain: "Not Translated",
+        captain: "Boosts ATK of [STR], [DEX] and [QCK] characters by 1.5x",
         special: "Changes all orbs depending on the current HP",
         specialNotes: "<br> HP>70%: Top row to [QCK], middle row to [STR] <br> HP<30%: Top row to [RCV], middle row to [QCK], bottom row to [STR]",
         specialName: "Doki Doki Heart",
