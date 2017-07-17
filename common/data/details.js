@@ -7910,7 +7910,7 @@ window.details = {
         specialName: "Diable Jambe: Love Shot",
     },
     1453: {//Valentines Margeurite
-        captain: "Not Translated",
+        captain: "Boosts ATK of [STR], [DEX] and [QCK] characters by 1.5x",
         special: "Changes all orbs depending on the current HP",
         specialNotes: "<br> HP>70%: Top row to [QCK], middle row to [STR] <br> HP<30%: Top row to [RCV], middle row to [QCK], bottom row to [STR]",
         specialName: "Doki Doki Heart",
@@ -9363,7 +9363,7 @@ window.details = {
     },
     1673: {//Swinsuit Perona
         captain: "Boosts ATK of all characters by 1.75x and boosts EXP gained by 1.2x",
-        special: "Reduces damage received by 70% for 1 turn, reduces the defense of all enemies by ??% for 1 turn and reduces Silence duration by 2 turns.",
+        special: "Reduces damage received by 70% for 1 turn, reduces the defense of all enemies by 90% for 1 turn and reduces Silence duration by 2 turns.",
         specialNotes: "#{silence}",
         sailor: "Completely resists Silence on this character",
         sailorNotes: "#{silence}",
@@ -9371,7 +9371,7 @@ window.details = {
     },
     1674: {//Swinsuit Perona
         captain: "Boosts ATK of all characters by 2.25x and boosts EXP gained by 1.5x",
-        special: "Reduces damage received by 70% for 1 turn, reduces the defense of all enemies by ??% for 1 turn and reduces Silence duration by 2 turns.",
+        special: "Reduces damage received by 70% for 1 turn, reduces the defense of all enemies by 90% for 1 turn and reduces Silence duration by 2 turns.",
         specialNotes: "#{silence}",
         sailor: "Completely resists Silence on this character",
         sailorNotes: "#{silence}",
@@ -9379,13 +9379,13 @@ window.details = {
     },
     1675: {//Kimono Zoro
         captain: "Boosts chain multiplier by 2x",
-        special: "Boosts ATK of Slasher and Driven characters by 1.5x for 1 turn. If your Captain is a Slasher or Driven character, reduces Paralysis and Despair duration by 2 turns",
+        special: "Boosts ATK of Slasher and Driven characters by 1.5x for 1 turn. If your Captain is a Slasher or Driven character, changes adjacent orbs into matching orbs and reduces Paralysis and Despair duration by 2 turns",
         sailor: "Reduces Blindness duration by 1 turn",
         specialName: "Great Swordsman Under the Umbrella",
     },
     1676: {//Kimono Zoro
         captain: "Boosts chain multiplier by 3.25 and reduce damage received by 10%",
-        special: "Boosts ATK of Slasher and Driven characters by 1.5x for 1 turn. If your Captain is a Slasher or Driven character, reduces Paralysis and Despair duration by 2 turns",
+        special: "Boosts ATK of Slasher and Driven characters by 1.5x for 1 turn. If your Captain is a Slasher or Driven character, changes adjacent orbs into matching orbs and reduces Paralysis and Despair duration by 2 turns",
         sailor: "Reduces Blindness duration by 1 turn",
         specialName: "Great Swordsman Under the Umbrella",
     },
@@ -9398,6 +9398,16 @@ window.details = {
         captain: "Boosts ATK of Slasher characters by 2.5x at the start of the chain, by 3.25x after the 3rd Perfect",
         special: "Boosts the Color Affinity of Slasher by 1.5x for 1 turn, changes middle row orbs into matching orbs and switches orbs between slots three times",
         specialName: "ROOM: Kikoku",
+    },
+    1679: {
+        special: "Cuts the current HP of each enemy by 30%",
+        specialName: "Black Blade Ship Cutter [Neo]",
+        captain: "Boosts ATK of Slasher characters by 2x"
+    },
+    1680: {
+        special: "Cuts the current HP of each enemy by 30%",
+        specialName: "Black Blade Ship Cutter [Neo]",
+        captain: "Boosts ATK of Slasher characters by 2.5x"
     },
     1750: {//Korea Law
         captain: "Boosts ATK of Striker characters by 3x and heals for .5x his RCV at the end of the turn each time you hit a Perfect",
