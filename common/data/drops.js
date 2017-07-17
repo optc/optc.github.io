@@ -643,6 +643,7 @@ window.drops = {
             name: 'Deep-Sea Aphotic Zone to Ryugu Palace',
             shortName: 'Fishman Island 1',
             thumb: 1506,
+            global: true,
             completion: '5x Rainbow Gems',
             gamewith: 52247,
             '01': [ 1501, 1502 ],
@@ -1456,6 +1457,7 @@ window.drops = {
         {
             name: 'Gather the Candy!',
             thumb: 1357,
+            global: true,
             gamewith: 45801,
             'All Difficulties': [ 1356, 1358, -1123, -1184, -1182, -1152, -1157, -8, -840, -736, -610, -1388 ]
         },
