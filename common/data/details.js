@@ -7223,13 +7223,13 @@ window.details = {
     1361: {//6* Zoro
         captain: "If you have 5 or more Slashers in your crew, boosts ATK of Slasher characters by 2.5x and their HP by 1.5x. If you defeated an enemy last turn, boosts ATK of Slasher characters by 3x instead and boosts ATK of all other characters by 1.2x",
         captainNotes: "You only need to kill at least 1 character in the last turn to gain his 3x ATK boost. If a character dies and revives, you will retain the 3x ATK boost",
-        special: "Deals 60x character's ATK as typeless damage to all enemies. If Zoro is your Captain, boosts ATK of Slasher characters by 2x for 1 turn. If he is a Sailor, boosts ATK of Slasher characters by 1.75x for 1 turn instead",
+        special: "Deals 60x character's ATK as typeless damage to all enemies. If Zoro is your Captain or Friend/Guest Captain, boosts ATK of Slasher characters by 2x for 1 turn. If he is a Sailor, boosts ATK of Slasher characters by 1.75x for 1 turn instead",
         specialName: "Three Blade Style Secret Skill: Crossroad of Six Paths",
     },
     1362: {//6* Zoro
         captain: "If you have 5 or more Slashers in your crew, boosts ATK of Slasher characters by 2.5x and their HP by 1.5x. If you defeated an enemy last turn, boosts ATK of Slasher characters by 3x instead and boosts ATK of all other characters by 1.2x",
         captainNotes: "You only need to kill at least 1 character in the last turn to gain his 3x ATK boost. If a character dies and revives, you will retain the 3x ATK boost",
-        special: "Deals 60x character's ATK as typeless damage to all enemies. If Zoro is your Captain, boosts ATK of Slasher characters by 2x for 1 turn. If he is a Sailor, boosts ATK of Slasher characters by 1.75x for 1 turn instead",
+        special: "Deals 60x character's ATK as typeless damage to all enemies. If Zoro is your Captain or Friend/Guest Captain, boosts ATK of Slasher characters by 2x for 1 turn. If he is a Sailor, boosts ATK of Slasher characters by 1.75x for 1 turn instead",
         specialName: "Three Blade Style Secret Skill: Crossroad of Six Paths",
     },
     1363: {//Timeskip Franky
@@ -9399,15 +9399,71 @@ window.details = {
         special: "Boosts the Color Affinity of Slasher by 1.5x for 1 turn, changes middle row orbs into matching orbs and switches orbs between slots three times",
         specialName: "ROOM: Kikoku",
     },
-    1679: {
+    1679: {//Kai Mihawk
         special: "Cuts the current HP of each enemy by 30%",
         specialName: "Black Blade Ship Cutter [Neo]",
         captain: "Boosts ATK of Slasher characters by 2x"
     },
-    1680: {
+    1680: {//Kai Mihawk
         special: "Cuts the current HP of each enemy by 30%",
         specialName: "Black Blade Ship Cutter [Neo]",
         captain: "Boosts ATK of Slasher characters by 2.5x"
+    },
+    1681: {//20th Anni Luffy
+        captain: "Boosts ATK of characters with cost 30 or less by 2.5x",
+        special: "Cuts the current HP of each enemy by 20%, if Luffy is your Captain or Friend/Guest Captain, changes left column into Matching orbs, otherwise, adds .5x to Chain multiplier for 1 turn.",
+        specialName: "Luffy Special",
+        sailor: "Boosts HP and ATK of all characters by 56",
+    },
+    1682: {//20th Anni Luffy
+        captain: "Boosts HP of characters with cost 30 or less by 1.3x and boosts ATK of characters with cost 30 or less by 2.5x at the start of the chain, 3.5x after the 3rd Perfect",
+        special: "Cuts the current HP of each enemy by 20%, if Luffy is your Captain or Friend/Guest Captain, changes left column into Matching orbs, otherwise, adds .5x to Chain multiplier for 1 turn.",
+        specialName: "Luffy Special",
+        sailor: "Boosts HP and ATK of all characters by 56",
+    },
+    1683: {//20th Anni Robin
+        captain: "Boosts ATK of Cerebral characters by 2x, and their RCV by 1.3x",
+        special: "Binds self for 1 turn, empties all slots with [BLOCK] orbs, deals several times the character's ATK in typeless damage to one enemy and boosts ATK against enemies with reduced defense by 1.5x for 2 turns",
+        specialName: "Robin Special",
+        specialNotes: "The exact multiplier used is chosen based on the number of [BLOCK] orbs consumed: 0 orbs - Unknown; 1 orb - ???x ATK; 2 orbs - ???x ATK; 3 orbs - ???x ATK; 4 orbs - ???x ATK; 5 orbs - ???x ATK; 6 orbs - ???x ATK.",
+        sailor: "Makes [TND] orbs \"beneficial\" for all characters if your Captain is a Fighter character",
+    },
+    1684: {//20th Anni Robin
+        captain: "Boosts ATK of Cerebral characters by 2.5x, and their RCV by 1.3x",
+        special: "Binds self for 1 turn, empties all slots with [BLOCK] orbs, deals several times the character's ATK in typeless damage to one enemy and boosts ATK against enemies with reduced defense by 1.5x for 2 turns",
+        specialName: "Robin Special",
+        specialNotes: "The exact multiplier used is chosen based on the number of [BLOCK] orbs consumed: 0 orbs - Unknown; 1 orb - ???x ATK; 2 orbs - ???x ATK; 3 orbs - ???x ATK; 4 orbs - ???x ATK; 5 orbs - ???x ATK; 6 orbs - ???x ATK.",
+        sailor: "Makes [TND] orbs \"beneficial\" for all characters if your Captain is a Fighter character",
+    },
+    1685: {//20th Anni Usopp
+        captain: "Boosts ATK of Shooter characters by 2.75x following a chain of Good > Great > Perfect hits",
+        special: "Changes [EMPTY] orbs into Matching orbs, changes Badly Matching orbs into [RCV] orbs and delays all enemies for 1 turn",
+        specialName: "Usopp Special",
+        sailor: "Reduces Silence duration on this character by 4 turns",
+        sailorNotes: "#{silence}",
+    },
+    1686: {//20th Anni Usopp
+        captain: "Boosts ATK of Shooter characters by 3.25x following a chain of Good > Great > Perfect hits",
+        special: "Changes [EMPTY] orbs into Matching orbs, changes Badly Matching orbs into [RCV] orbs and delays all enemies for 1 turn",
+        specialName: "Usopp Special",
+        sailor: "Reduces Silence duration on this character by 4 turns",
+        sailorNotes: "#{silence}",
+    },
+    1687: {//20th Anni Franky
+        captain: "Boosts ATK of Fighter characters by 2x and reduce damage received by 10%",
+        special: "Changes own orb into [DEX], deals 15 hits of random typeless damage to random enemies, and reduces the defense of all enemies by 100% for 2 turns",
+        specialNotes: "#{randomHits : 15}<br>#{random : ??? : ??? : for each hit}",
+        specialName: "Franky Special",
+        sailor: "Restores his own special by 3 turns when it is rewinded",
+        sailorNotes: "#{rewind : 3}",
+    },
+    1688: {//20th Anni Franky
+        captain: "Boosts ATK of Fighter characters by 2.5x and reduce damage received by 15%",
+        special: "Changes own orb into [DEX], deals 15 hits of random typeless damage to random enemies, and reduces the defense of all enemies by 100% for 2 turns",
+        specialNotes: "#{randomHits : 15}<br>#{random : ??? : ??? : for each hit}",
+        specialName: "Franky Special",
+        sailor: "Restores his own special by 3 turns when it is rewinded",
+        sailorNotes: "#{rewind : 3}",
     },
     1750: {//Korea Law
         captain: "Boosts ATK of Striker characters by 3x and heals for .5x his RCV at the end of the turn each time you hit a Perfect",
