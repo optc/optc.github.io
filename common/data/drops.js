@@ -1584,6 +1584,14 @@ window.drops = {
             'All Difficulties': [ 1670, 1671, 1672, -1085, -451, -457, -1081, -1353, -1540, -1345, -955, -1350 ],
         },
         
+        {
+            name: 'Kid Pirates!',
+            thumb: 1690,
+            gamewith: null,
+            condition: 'Only [INT] and [PSY] orbs appear',
+            'All Difficulties': [ 1689, 1691, 1692, -1532, -1543, -449, -453, -1079, -1538, -967, -1346, -1349 ],
+        },
+        
     ],
 
             
@@ -2087,6 +2095,23 @@ window.drops = {
             'Bartolomeo': [ 304, 104, 88, 99, 82, 93, 351, -1035, -221, -357, -643, -840, -1025, -1029, -225, -541, -733, -1056 ],
             'Borsalino': [ 302, 102, 86, 97, 80, 91, 349, -1240, -77, -257, -760, -943, -1272, -1551, -896, -398, -793, -1058, -59 ],
             'Captain Buggy': [ 300, 100, 84, 95, 78, 89, 347, -1391, -1031, -1232, -1276, -1550, -739, -214, -707, -735, -890, -1318, -290 ],
+        },
+        
+        {
+            name: '20th Anniversary! Nico Robin!',
+            thumb: 1684,
+            gamewith: 62383,
+            showManual: true,
+            condition: 'No characters will drop posters.',
+            'All Difficulties': [ -1121, -578, -1404, -1593, -217, -210, -908, -937, -941, -943, -1115, -520, -1208, -558, -1210, -556, -1212, -560, -1364, -1408, -1387, -4, -1446, -16, -1549, -709, -1550, -739, -223, -15, -629, -209 ],
+        },
+        
+        {
+            name: '20th Anniversary! Straw Hats!',
+            thumb: 1686,
+            gamewith: 62386,
+            condition: 'Gain gems by completeing the missions. Once you complete a mission, it will no longer be available and the next difficulty will be available. Total of 46 gems possible. Only Booster characters will drop posters.',
+            'All Difficulties': [ 591, 592, 593, 594, 595, 189, 190, 191, 192, 193 ],
         },
 
    ],

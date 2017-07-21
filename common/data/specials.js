@@ -3170,6 +3170,48 @@ window.specials = {
     1678: {
         affinity: function(p){ return p.unit.class.has("Slasher") ? 1.5 : 1; }
     },
+    1681: {
+        chainAddition: function(p){ return p.sourceSlot < 2 ? 0 : 0.5; },
+    },
+    1682: {
+        chainAddition: function(p){ return p.sourceSlot < 2 ? 0 : 0.5; },
+    },
+    1683: {
+        atk: function(p) { return p.defenseDown ? 1.5 : 1; },
+        type: "condition"
+    },
+    1684: {
+        atk: function(p) { return p.defenseDown ? 1.5 : 1; },
+        type: "condition"
+    },
+    1685: {
+        delay: function(p) { return 1; },
+    },
+    1686: {
+        delay: function(p) { return 1; },
+    },
+    1687: {
+        def: function(p) { return 0; }
+    },
+    1688: {
+        def: function(p) { return 0; }
+    },
+    1689: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 2 : 1; },
+        type: "type"
+    },
+    1690: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 2 : 1; },
+        type: "type"
+    },
+    1691: {
+        atk: function(p) { return p.defenseDown ? 1.3 : 1; },
+        type: "condition"
+    },
+    1692: {
+        chainAddition: function(p){ return 0.3; },
+        def: function(p) { return 0.5; }
+    },
     1750:{
         orb: function(p) { return (p.unit.class.has("Striker")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[1750].multiplier, [p.friendCaptain, p.captain]) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain]); },
         onActivation: function(p) {

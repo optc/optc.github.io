@@ -1,9 +1,9 @@
 window.captains = {
     2: {
-        atk: function(p) { return p.unit.type == "STR" ? 1.5 : 1; }
+        atk: function(p) { return 1.5; }
     },
     3: {
-        atk: function(p) { return p.unit.type == "STR" ? 1.5 : 1; }
+        atk: function(p) { return 1.5; }
     },
     4: {
         atk: function(p) { return p.unit.type == "STR" ? 2 : 1.5; }
@@ -4972,10 +4972,16 @@ window.captains = {
     1674: {
         atk: function(p) { return 2.25; }
     },
-    1601: {
+    1675: {
+        chainModifier: function(p) { return 2; }
+    },
+    1676: {
+        chainModifier: function(p) { return 3.25; }
+    },
+    1677: {
         atk: function(p) { return p.unit.class.has("Slasher") ? 2.5 : 1; }
     },
-    1602: {
+    1678: {
         damageSorter: function(d) { return CrunchUtils.classSort(d, 3.25, [ "Slasher" ]); },
         hitAtk: function(p) {
             if (!p.unit.class.has("Slasher")) return 1;
@@ -4983,17 +4989,89 @@ window.captains = {
         },
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
     },
-    1675: {
-        chainModifier: function(p) { return 2; }
-    },
-    1676: {
-        chainModifier: function(p) { return 3.25; }
-    },
     1679: {
         atk: function(p) { return p.unit.class.has("Slasher") ? 2 : 1; }
     },
     1680: {
         atk: function(p) { return p.unit.class.has("Slasher") ? 2.5 : 1; }
+    },
+    1681: {
+        atk: function(p) { return p.unit.cost <= 30 ? 2.5 : 1; }
+    },
+    1682: {
+        damageSorter: function(d) { return CrunchUtils.lowCostSort(d, 3.5, 30); },
+        hitAtk: function(p) {
+            if (!(p.unit.cost <= 30)) return 1;
+            return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? 3.5 : 2.5;
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
+        hp: function(p) { return p.unit.cost <= 30 ? 1.3 : 1; }
+    },
+    1683: {
+        atk: function(p) { return p.unit.class.has("Cerebral") ? 2 : 1; },
+        rcv: function(p) { return p.unit.class.has("Cerebral") ? 1.3 : 1; }
+    },
+    1684: {
+        atk: function(p) { return p.unit.class.has("Cerebral") ? 2.5 : 1; },
+        rcv: function(p) { return p.unit.class.has("Cerebral") ? 1.3 : 1; }
+    },
+    1685: {
+        damageSorter: function(d) { return CrunchUtils.classSort(d, 2.75, [ "Shooter" ]); },
+        hitAtk: function(p) {
+            return !p.unit.class.has("Shooter") ? 1 : p.modifiers.slice(0, p.chainPosition).subcontains(["Good", "Great", "Perfect"]) ? 2.75 : 1;
+        },
+        hitModifiers: ["Good", "Great", "Perfect", "Perfect", "Perfect", "Perfect"]
+    },
+    1686: {
+        damageSorter: function(d) { return CrunchUtils.classSort(d, 3.25, [ "Shooter" ]); },
+        hitAtk: function(p) {
+            return !p.unit.class.has("Shooter") ? 1 : p.modifiers.slice(0, p.chainPosition).subcontains(["Good", "Great", "Perfect"]) ? 3.25 : 1;
+        },
+        hitModifiers: ["Good", "Great", "Perfect", "Perfect", "Perfect", "Perfect"]
+    },
+    1687: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? 2 : 1; },
+    },
+    1688: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? 2.5 : 1; },
+    },
+    1689: {
+        damageSorter: function(d) { return CrunchUtils.okamaSort(d, ['STR', 'DEX', 'INT']); },
+        hitAtk: function(p) {
+            return CrunchUtils.okamaCheck(p.damage.slice(0, p.chainPosition), p.modifiers, [{
+                type: 'STR',
+                minModifier: 'Good'
+            }, {
+                type: 'DEX',
+                minModifier: 'Good'
+            }, {
+                type: 'INT',
+                minModifier: 'Good'
+            }]) ? 2.25 : 1.5;
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
+    },
+    1690: {
+        damageSorter: function(d) { return CrunchUtils.okamaSort(d, ['STR', 'DEX', 'INT']); },
+        hitAtk: function(p) {
+            return CrunchUtils.okamaCheck(p.damage.slice(0, p.chainPosition), p.modifiers, [{
+                type: 'STR',
+                minModifier: 'Good'
+            }, {
+                type: 'DEX',
+                minModifier: 'Good'
+            }, {
+                type: 'INT',
+                minModifier: 'Good'
+            }]) ? 3 : 2;
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
+    },
+    1691: {
+        atk: function(p) { return p.unit.class.has("Shooter") ? 1.75 : 1; }
+    },
+    1692: {
+        hp: function(p) { return p.unit.class.has("Driven") ? 1.5 : 1; }
     },
     1750: {
         atk: function(p) { return p.unit.class.has("Striker") ? 3 : 1; }

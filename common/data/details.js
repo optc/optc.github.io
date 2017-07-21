@@ -6,12 +6,12 @@ window.details = {
     2: {
         special: "Deals 7x character's ATK in STR damage to one enemy",
         specialName: "Gum-Gum Pistol",
-        captain: "Boosts ATK of STR characters by 1.5x"
+        captain: "Boosts ATK of all characters by 1.5x"
     },
     3: {
         special: "Deals 15x character's ATK in STR damage to one enemy",
         specialName: "Gum-Gum Bazooka",
-        captain: "Boosts ATK of STR characters by 1.5x"
+        captain: "Boosts ATK of all characters by 1.5x"
     },
     4: {
         captain: "Boosts ATK of STR characters by 2x, and ATK of all others by 1.5x",
@@ -6711,13 +6711,13 @@ window.details = {
     1288: {//Kid Law
         captain: "Boosts ATK of Driven characters by 2.5x, reduces crew's current HP by 10% at the end of each turn, reduces his own ATK multiplier by 0.1x at the end of each turn",
         captainNotes: "His ATK multiplier will be 2.5x on the first turn, 2.4x on the second, 2.3x on the third and so on. The reduction stops once the multiplier is 1.0x. The multiplier affects all Driven characters. You will not die to the HP reduction",
-        special: "Reduces cooldown of Driven specials by 1 turn. If during that turn every unit scores a Perfect hit, reduces cooldown of Driven specials by 1 turn.",
+        special: "Reduces Special Cooldown of Driven specials by 1 turn. If during that turn every unit scores a Perfect hit, reduces Special Cooldown of Driven specials by 1 turn.",
         specialName: "Outcome of Sparta",
     },
     1289: {//Kid Law
         captain: "Boosts ATK of Driven characters by 2.75x, reduces crew's current HP by 10% at the end of each turn, reduces his own ATK multiplier by 0.1x at the end of each turn",
         captainNotes: "His ATK multiplier will be 2.75x on the first turn, 2.65x on the second, 2.55x on the third and so on. The reduction stops once the multiplier is 1.0x. The multiplier affects all Driven characters. You will not die to the HP reduction",
-        special: "Reduces cooldown of Driven specials by 1 turn. If during that turn every unit scores a Perfect hit, reduces cooldown of Driven specials by 1 turn.",
+        special: "Reduces Special Cooldown of Driven specials by 1 turn. If during that turn every unit scores a Perfect hit, reduces Special Cooldown of Driven specials by 1 turn.",
         specialName: "Outcome of Sparta",
     },
     1290: {//Kid Buffalo
@@ -9464,6 +9464,26 @@ window.details = {
         specialName: "Franky Special",
         sailor: "Restores his own special by 3 turns when it is rewinded",
         sailorNotes: "#{rewind : 3}",
+    },
+    1689: {//Fortnight Kid
+        captain: "Boosts ATK of all characters by 1.5x at the start of the chain, by 2.25x following a chain of STR > DEX > INT attacks no lower than Good",
+        special: "Cuts the current HP of one enemy by 20% and and boosts own ATK by 2x for 1 turn",
+        specialName: "Kid Special",
+    },
+    1690: {//Fortnight Kid
+        captain: "Boosts ATK of all characters by 2x at the start of the chain, by 3x following a chain of STR > DEX > INT attacks no lower than Good",
+        special: "Cuts the current HP of one enemy by 20% and and boosts own ATK by 2x for 1 turn",
+        specialName: "Kid Special",
+    },
+    1691: {//Heat
+        captain: "Boosts ATK of Shooter characters by 1.75x",
+        special: "Boosts ATK against enemies with reduced defense by 1.3x for 1 turn, changes the captain's [STR], [DEX], [QCK], [INT], or [PSY] orbs into Matching orbs.",
+        specialName: "Heat Special",
+    },
+    1692: {//Wire
+        captain: "Boosts HP of Driven characters by 1.5x",
+        special: "Adds .3x to Chain multiplier, and reduces the defense of all enemies by 50% for 1 turn",
+        specialName: "Wire Special",
     },
     1750: {//Korea Law
         captain: "Boosts ATK of Striker characters by 3x and heals for .5x his RCV at the end of the turn each time you hit a Perfect",
