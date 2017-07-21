@@ -2585,15 +2585,15 @@ window.evolutions = {
     },
     1675: {
         evolution: 1676,
-        evolvers: [  ]
+        evolvers: [ 81, 81, 87, 92, 98 ]
     },
     1677: {
         evolution: 1678,
-        evolvers: [  ]
+        evolvers: [ 118, 88, 99, 304, 104 ]
     },
     1679: {
         evolution: 1680,
-        evolvers: [  ]
+        evolvers: [ 118, 83, 85, 85, 101 ]
     },
     1681: {
         evolution: 1682,
