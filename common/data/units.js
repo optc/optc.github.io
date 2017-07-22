@@ -1681,7 +1681,7 @@ window.units = [
     [ "Hawk Eyes Mihawk [Neo]", "QCK", [ "Slasher", "Free Spirit" ], 5, 50, 4, 2, 99, 5000000, 1934, 778, 13, 3794, 1280, 24, 1 ],
     [ "Monkey D. Luffy, Celebrate 20th Anniversary Cruise", "STR", [ "Fighter", "Free Spirit" ], 4, 15, 6, 3, 50, 392109, 654, 420, 39, 1206, 719, 175, null ],
     [ "Monkey D. Luffy, 20th Anniversary Memorial Treasure", "STR", [ "Fighter", "Free Spirit" ], 5, 30, 8, 5, 99, 4000000, 1033, 587, 113, 2440, 1406, 279, null ],
-    [ "Nico Robin, Celebrate 20th Anniversary Cruise", "QCK", [ "Fighter", "Cerebral" ], 4, 15, 5, 3, 50, 392109, 601, 335, 66, null, null, null, null ],
+    [ "Nico Robin, Celebrate 20th Anniversary Cruise", "QCK", [ "Fighter", "Cerebral" ], 4, 15, 5, 3, 50, 392109, 601, 335, 66, 1043, 604, 257, null ],
     [ "Nico Robin, 20th Anniversary Memorial Treasure", "QCK", [ "Fighter", "Cerebral" ], 5, 30, 4, 5, 99, 4000000, 878, 478, 189, 2126, 1200, 404, null ],
     [ "Usopp, Celebrate 20th Anniversary Cruise", "INT", "Shooter", 4, 15, 6, 3, 50, 392109, 707, 324, 49, 1313, 587, 209, null ],
     [ "Usopp, 20th Anniversary Memorial Treasure", "INT", "Shooter", 5, 30, 4, 5, 99, 4000000, 1146, 432, 148, 2550, 1184, 336, null ],
