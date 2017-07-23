@@ -3131,10 +3131,26 @@ window.specials = {
         type: "class",
     },
     1666: {
-        orb: function(p) { return (p.unit.class.has("Powerhouse") || p.unit.class.has("Striker")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain]) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain]); }	
+        orb: function(p) { return (p.unit.class.has("Powerhouse") || p.unit.class.has("Striker")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[1666].multiplier, [p.friendCaptain, p.captain]) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain]); },
+        onActivation: function(p) {
+            var n = (p.percHP <= 70 ? 1 : 1.5);
+            window.specials[1666].multiplier = n;
+            p.scope.notify({
+                text: 'HP ' + (n == 1.5 ? 'above' : 'below') + ' 70%, using the ' + n + 'x orb boost.',
+                name: '1666warning'
+            });
+        }
     },
     1667: {
-        orb: function(p) { return (p.unit.class.has("Powerhouse") || p.unit.class.has("Striker")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain]) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain]); }	
+        orb: function(p) { return (p.unit.class.has("Powerhouse") || p.unit.class.has("Striker")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[1667].multiplier, [p.friendCaptain, p.captain]) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain]); },
+        onActivation: function(p) {
+            var n = (p.percHP <= 70 ? 1 : 1.5);
+            window.specials[1667].multiplier = n;
+            p.scope.notify({
+                text: 'HP ' + (n == 1.5 ? 'above' : 'below') + ' 70%, using the ' + n + 'x orb boost.',
+                name: '1667warning'
+            });
+        }
     },
     1668: {
         atk: function(p) { return p.unit.class.has("Striker") ? 1.75 : 1; },
@@ -3171,10 +3187,22 @@ window.specials = {
         affinity: function(p){ return p.unit.class.has("Slasher") ? 1.5 : 1; }
     },
     1681: {
-        chainAddition: function(p){ return p.sourceSlot < 2 ? 0 : 0.5; },
+        chainAddition: function(p) { return 0.5; },
+        onActivation: function(p) {
+            p.scope.notify({
+                text: 'Chain Addition only works when Luffy is a sailor.',
+                name: '1681warning'
+            });
+        }
     },
     1682: {
-        chainAddition: function(p){ return p.sourceSlot < 2 ? 0 : 0.5; },
+        chainAddition: function(p) { return 0.5; },
+        onActivation: function(p) {
+            p.scope.notify({
+                text: 'Chain Addition only works when Luffy is a sailor.',
+                name: '1682warning'
+            });
+        }
     },
     1683: {
         atk: function(p) { return p.defenseDown ? 1.5 : 1; },
