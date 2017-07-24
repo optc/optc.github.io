@@ -6357,7 +6357,7 @@ window.details = {
                 "cooldown": [ 20, 17 ], 
             },
         ],    
-        specialNotes: "#{randomHits : 10}<br>#{stages}",
+        specialNotes: "#{randomHits : 10}<br>#{random : 1,000 : 3,000 : for each hit on Stage 1}<br>#{random : 3,000 : 6,000 : for each hit on Stage 2}<br>#{random : 10,000 : 16,000 : for each hit on Stage 3}<br>#{stages}",
     },
     1240: {//6* Kizaru
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of all characters by 2x, and boosts RCV of all characters by 1.3x. If you use \"Yasakani no Magatama\" boosts ATK of all characters by 3x instead.",
@@ -6376,7 +6376,7 @@ window.details = {
                 "cooldown": [ 20, 17 ],
             },
         ],    
-        specialNotes: "#{randomHits : 10}<br>#{stages}",
+        specialNotes: "#{randomHits : 10}<br>#{random : 1,000 : 3,000 : for each hit on Stage 1}<br>#{random : 3,000 : 6,000 : for each hit on Stage 2}<br>#{random : 10,000 : 16,000 : for each hit on Stage 3}<br>#{stages}",
     },
     1241: {//Fortnight Koala
         captain: "Boosts chain multiplier by 1.5x. Recovers 1x character's RCV in HP at the end of each turn",
@@ -6929,14 +6929,14 @@ window.details = {
     1319: {//Lady Tsuru
         captain: "Heals for 1x her RCV at the end of the turn each time you hit a Good. Heals for .1x her RCV at the end of the turn each time you hit a Perfect",
         special: "Deals 10 hits of random [QCK] damage to random enemies. Boosts ATK of all characters by 1.5x for 1 turn",
-        specialNotes: "#{randomHits : 10}<br>#{random : ??? : ??? : for each hit}",
+        specialNotes: "#{randomHits : 10}<br>#{random : 1,000 : 32,000 : for each hit}",
         sailor: "Reduces Paralysis duration by 1 turn",
         specialName: "A Decree of the Veteran",
     },
     1320: {//Lady Tsuru
         captain: "Heals for 1.5x her RCV at the end of the turn each time you hit a Good. Heals for .1x her RCV at the end of the turn each time you hit a Perfect",
         special: "Deals 10 hits of random [QCK] damage to random enemies. Boosts ATK of all characters by 1.5x for 1 turn",
-        specialNotes: "#{randomHits : 10}<br>#{random : ??? : ??? : for each hit}",
+        specialNotes: "#{randomHits : 10}<br>#{random : 1,000 : 32,000 : for each hit}",
         sailor: "Reduces Paralysis duration by 1 turn",
         specialName: "A Decree of the Veteran",
     },
