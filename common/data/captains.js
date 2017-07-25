@@ -5073,6 +5073,18 @@ window.captains = {
     1692: {
         hp: function(p) { return p.unit.class.has("Driven") ? 1.5 : 1; }
     },
+    1693: {
+        atk: function(p) { return p.unit.type == "PSY" ? 2 : 1; },
+    },
+    1694: {
+        atk: function(p) { return p.unit.type == "PSY" ? 2.75 : 1; },
+    },
+    1695: {
+        atk: function(p) { return p.unit.class.has("Striker") ? 2 : 1; }
+    },
+    1696: {
+        atk: function(p) { return p.unit.class.has("Striker") ? 2.5 : 1; }
+    },
     1750: {
         atk: function(p) { return p.unit.class.has("Striker") ? 3 : 1; }
     },

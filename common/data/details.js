@@ -5551,15 +5551,15 @@ window.details = {
     1122: {
         captain: "Boosts ATK of [STR], [DEX], and [QCK] characters by 2.5x, but boosts his OWN attack by 4x",
         captainNotes: "Cavendish only boosts Friend or Sub Cavendish by 2.5x for a total of 10x boost with two Cavendish captains",
-        special: "Removes all positive buffs on Your team. Deals 15x the character's ATK as Typeless damage to all enemies. Boosts Cavendish's ATK by 2.25x for 2 turns, amplifies the effect of Cavendish's orb by 1.5x for 2 turns, locks his orb for 2 turns, and changes own orb to [QCK].",
-        specialNotes: "Boosted ATK and Orb Effectivess only works for the Cavendish who uses his Special.",
+        special: "Removes all positive buffs on Your team. Deals 15x the character's ATK as Typeless damage to all enemies. Boosts own ATK by 2.25x for 2 turns, amplifies the effect of own orb by 1.5x for 2 turns, locks his orb for 2 turns, and changes own orb to [QCK].",
+        specialNotes: "Boosted ATK and Orb Effectivess only works for the character who uses their own Special.",
         specialName: "Slicing Winds of Rommel"
     },
     1123: {
         captain: "Boosts ATK of [STR], [DEX], and [QCK] characters by 2.5x, but boosts his OWN attack by 4x",
         captainNotes: "Cavendish only boosts Friend or Sub Cavendish by 2.5x for a total of 10x boost with two Cavendish captains",
-        special: "Removes all positive buffs on Your team. Deals 15x the character's ATK as Typeless damage to all enemies. Boosts Cavendish's ATK by 2.25x for 2 turns, amplifies the effect of Cavendish's orb by 1.5x for 2 turns, locks his orb for 2 turns, and changes own orb to [QCK].",
-        specialNotes: "Boosted ATK and Orb Effectivess only works for the Cavendish who uses his Special.",
+        special: "Removes all positive buffs on Your team. Deals 15x the character's ATK as Typeless damage to all enemies. Boosts own ATK by 2.25x for 2 turns, amplifies the effect of own orb by 1.5x for 2 turns, locks his orb for 2 turns, and changes own orb to [QCK].",
+        specialNotes: "Boosted ATK and Orb Effectivess only works for the character who uses their own Special.",
         specialName: "Slicing Winds of Rommel"
     },
     1124: {
@@ -8864,12 +8864,12 @@ window.details = {
         sailor: "Completely resists Paralysis on this character",
         specialName: "King Kong Gun",
     },
-    1594: {//Raid Fujitora
+    1594: {//Fujitora
         captain: "Cuts the current HP of each enemy by 10% at the end of each turn",
         special: "Deals 50x character's ATK in [PSY] damage to all enemies that will ignore damage negating abilities and barriers, changes adjacent orbs into Matching Orbs, amplifies the effect of orbs for Powerhouse characters by 2x for 1 turn",
         specialName: "Gravity Blade: Fierce Tiger",
     },
-    1595: {//Raid Fujitora
+    1595: {//Fujitora
         captain: "Boosts ATK of Powerhouse characters by 2.25x, and their HP by 1.2x, cuts the current HP of each enemy by 10% at the end of each turn",
         special: "Deals 50x character's ATK in [PSY] damage to all enemies that will ignore damage negating abilities and barriers, changes adjacent orbs into Matching Orbs, amplifies the effect of orbs for Powerhouse characters by 2x for 1 turn",
         specialName: "Gravity Blade: Fierce Tiger",
@@ -9412,40 +9412,40 @@ window.details = {
     1681: {//20th Anni Luffy
         captain: "Boosts ATK of characters with cost 30 or less by 2.5x",
         special: "Cuts the current HP of each enemy by 20%, if Luffy is your Captain or Friend/Guest Captain, changes left column into Matching orbs, otherwise, adds .5x to Chain multiplier for 1 turn.",
-        specialName: "Luffy Special",
+        specialName: "Gomu Gomu no Tako Stamp",
         sailor: "Boosts HP and ATK of all characters by 56",
     },
     1682: {//20th Anni Luffy
         captain: "Boosts HP of characters with cost 30 or less by 1.3x and boosts ATK of characters with cost 30 or less by 2.5x at the start of the chain, 3.5x after the 3rd Perfect",
         special: "Cuts the current HP of each enemy by 20%, if Luffy is your Captain or Friend/Guest Captain, changes left column into Matching orbs, otherwise, adds .5x to Chain multiplier for 1 turn.",
-        specialName: "Luffy Special",
+        specialName: "Gomu Gomu no Tako Stamp",
         sailor: "Boosts HP and ATK of all characters by 56",
     },
     1683: {//20th Anni Robin
         captain: "Boosts ATK of Cerebral characters by 2x, and their RCV by 1.3x",
         special: "Binds self for 1 turn, empties all slots with [BLOCK] orbs, deals several times the character's ATK in typeless damage to one enemy and boosts ATK against enemies with reduced defense by 1.5x for 2 turns",
-        specialName: "Robin Special",
+        specialName: "Mil Fleur: Gigantesco Mano",
         specialNotes: "The exact multiplier used is chosen based on the number of [BLOCK] orbs consumed: 0 orbs - Unknown; 1 orb - ???x ATK; 2 orbs - ???x ATK; 3 orbs - ???x ATK; 4 orbs - ???x ATK; 5 orbs - ???x ATK; 6 orbs - ???x ATK.",
         sailor: "Makes [TND] orbs \"beneficial\" for all characters if your Captain is a Fighter character",
     },
     1684: {//20th Anni Robin
         captain: "Boosts ATK of Cerebral characters by 2.5x, and their RCV by 1.3x",
         special: "Binds self for 1 turn, empties all slots with [BLOCK] orbs, deals several times the character's ATK in typeless damage to one enemy and boosts ATK against enemies with reduced defense by 1.5x for 2 turns",
-        specialName: "Robin Special",
+        specialName: "Mil Fleur: Gigantesco Mano",
         specialNotes: "The exact multiplier used is chosen based on the number of [BLOCK] orbs consumed: 0 orbs - Unknown; 1 orb - ???x ATK; 2 orbs - ???x ATK; 3 orbs - ???x ATK; 4 orbs - ???x ATK; 5 orbs - ???x ATK; 6 orbs - ???x ATK.",
         sailor: "Makes [TND] orbs \"beneficial\" for all characters if your Captain is a Fighter character",
     },
     1685: {//20th Anni Usopp
         captain: "Boosts ATK of Shooter characters by 2.75x following a chain of Good > Great > Perfect hits",
         special: "Changes [EMPTY] orbs into Matching orbs, changes Badly Matching orbs into [RCV] orbs and delays all enemies for 1 turn",
-        specialName: "Usopp Special",
+        specialName: "Green Star: Bamboo Javelin-Grove",
         sailor: "Reduces Silence duration on this character by 4 turns",
         sailorNotes: "#{silence}",
     },
     1686: {//20th Anni Usopp
         captain: "Boosts ATK of Shooter characters by 3.25x following a chain of Good > Great > Perfect hits",
         special: "Changes [EMPTY] orbs into Matching orbs, changes Badly Matching orbs into [RCV] orbs and delays all enemies for 1 turn",
-        specialName: "Usopp Special",
+        specialName: "Green Star: Bamboo Javelin-Grove",
         sailor: "Reduces Silence duration on this character by 4 turns",
         sailorNotes: "#{silence}",
     },
@@ -9453,7 +9453,7 @@ window.details = {
         captain: "Boosts ATK of Fighter characters by 2x and reduce damage received by 10%",
         special: "Changes own orb into [DEX], deals 15 hits of random typeless damage to random enemies, and reduces the defense of all enemies by 100% for 2 turns",
         specialNotes: "#{randomHits : 15}<br>#{random : ??? : ??? : for each hit}",
-        specialName: "Franky Special",
+        specialName: "Franky Iron BOXING",
         sailor: "Restores his own special by 3 turns when it is rewinded",
         sailorNotes: "#{rewind : 3}",
     },
@@ -9461,29 +9461,51 @@ window.details = {
         captain: "Boosts ATK of Fighter characters by 2.5x and reduce damage received by 15%",
         special: "Changes own orb into [DEX], deals 15 hits of random typeless damage to random enemies, and reduces the defense of all enemies by 100% for 2 turns",
         specialNotes: "#{randomHits : 15}<br>#{random : ??? : ??? : for each hit}",
-        specialName: "Franky Special",
+        specialName: "Franky Iron BOXING",
         sailor: "Restores his own special by 3 turns when it is rewinded",
         sailorNotes: "#{rewind : 3}",
     },
     1689: {//Fortnight Kid
         captain: "Boosts ATK of all characters by 1.5x at the start of the chain, by 2.25x following a chain of STR > DEX > INT attacks no lower than Good",
         special: "Cuts the current HP of one enemy by 20% and and boosts own ATK by 2x for 1 turn",
-        specialName: "Kid Special",
+        specialName: "Iron Giant Palm Slam",
     },
     1690: {//Fortnight Kid
         captain: "Boosts ATK of all characters by 2x at the start of the chain, by 3x following a chain of STR > DEX > INT attacks no lower than Good",
         special: "Cuts the current HP of one enemy by 20% and and boosts own ATK by 2x for 1 turn",
-        specialName: "Kid Special",
+        specialName: "Iron Giant Palm Slam",
     },
     1691: {//Heat
         captain: "Boosts ATK of Shooter characters by 1.75x",
         special: "Boosts ATK against enemies with reduced defense by 1.3x for 1 turn, changes the captain's [STR], [DEX], [QCK], [INT], or [PSY] orbs into Matching orbs.",
-        specialName: "Heat Special",
+        specialName: "Aim and Burn",
     },
     1692: {//Wire
         captain: "Boosts HP of Driven characters by 1.5x",
         special: "Adds .3x to Chain multiplier, and reduces the defense of all enemies by 50% for 1 turn",
-        specialName: "Wire Special",
+        specialName: "Three Wind Tunnels",
+    },
+    1693: {//Inuarashi
+        captain: "Boosts ATK of [PSY] characters by 2x",
+        special: "Reduces crew's current HP by 50%, deals 50000 Fixed damage to one enemies, boosts own ATK by 1.75x for 1 turn, amplifies the effect of own orb by 1.75x for 1 turn and changes own orb to [PSY].",
+        specialNotes: "Boosted ATK and Orb Effectivess only works for the character who uses their own Special.",
+        specialName: "Inuarashi Special",
+    },
+    1694: {//Inuarashi
+        captain: "Boosts ATK of [PSY] characters by 2.75x",
+        special: "Reduces crew's current HP by 50%, deals 50000 Fixed damage to one enemies, boosts own ATK by 1.75x for 1 turn, amplifies the effect of own orb by 1.75x for 1 turn and changes own orb to [PSY].",
+        specialNotes: "Boosted ATK and Orb Effectivess only works for the character who uses their own Special.",
+        specialName: "Inuarashi Special",
+    },
+    1695: {//Vergo
+        captain: "Boosts ATK of Striker characters by 2x",
+        special: "Deals 50x character's ATK in [DEX] damage to all enemies, amplifies the effect of orbs for Striker characters by 1.75x for 1 turn and reduces damage received by 50% for 1 turn",
+        specialName: "Vergo Special",
+    },
+    1696: {//Vergo
+        captain: "Boosts ATK of Striker characters by 2.5x and reduces damage received by 10%",
+        special: "Deals 50x character's ATK in [DEX] damage to all enemies, amplifies the effect of orbs for Striker characters by 1.75x for 1 turn and reduces damage received by 50% for 1 turn",
+        specialName: "Vergo Special",
     },
     1750: {//Korea Law
         captain: "Boosts ATK of Striker characters by 3x and heals for .5x his RCV at the end of the turn each time you hit a Perfect",
