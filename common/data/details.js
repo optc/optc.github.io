@@ -9488,13 +9488,13 @@ window.details = {
         captain: "Boosts ATK of [PSY] characters by 2x",
         special: "Reduces crew's current HP by 50%, deals 50000 Fixed damage to one enemy, boosts own ATK by 1.75x for 1 turn, amplifies the effect of own orb by 1.75x for 1 turn and changes own orb to [PSY].",
         specialNotes: "Boosted ATK and Orb Effectivess only works for the character who uses their own Special.",
-        specialName: "Inuarashi Special",
+        specialName: "King's Lightning Burial",
     },
     1694: {//Inuarashi
         captain: "Boosts ATK of [PSY] characters by 2.75x",
         special: "Reduces crew's current HP by 50%, deals 50000 Fixed damage to one enemy, boosts own ATK by 1.75x for 1 turn, amplifies the effect of own orb by 1.75x for 1 turn and changes own orb to [PSY].",
         specialNotes: "Boosted ATK and Orb Effectivess only works for the character who uses their own Special.",
-        specialName: "Inuarashi Special",
+        specialName: "King's Lightning Burial",
     },
     1695: {//Vergo
         captain: "Boosts ATK of Striker characters by 2x",
@@ -9510,25 +9510,25 @@ window.details = {
         captain: "Boosts ATK of all characters by 2.25x and their HP by 1.5x if there's a [STR], [DEX], [QCK], [PSY], and [INT] character in your crew. Cuts the current HP of each enemy by 15% at the end of each turn",
         special: "Inflicts Toxic to all enemies, recovers 13x character's RCV in HP at the end of each turn for 3 turns",
         specialNotes: "Toxic starts at 0.5x character's attack and increases by 50x at the end of every turn until 2,000,000 damage per turn.",
-        specialName: "Magellan Special",
+        specialName: "Venom Cloud",
     },
     1698: {//Magellan
         captain: "Boosts ATK of all characters by 2.25x and their HP by 1.5x if there's a [STR], [DEX], [QCK], [PSY], and [INT] character in your crew. Cuts the current HP of each enemy by 15% at the end of each turn",
         special: "Inflicts Toxic to all enemies, recovers 13x character's RCV in HP at the end of each turn for 3 turns",
         specialNotes: "Toxic starts at 0.5x character's attack and increases by 50x at the end of every turn until 2,000,000 damage per turn.",
-        specialName: "Magellan Special",
+        specialName: "Venom Cloud",
     },
     1699: {//Jinbe
         captain: "Boosts ATK of Fighter characters by 2x, and their HP by 1.2x",
         special: "Adds .3x to Chain multiplier for 2 turns, reduces Chain Multiplier Limit duration by 3 turns",
-        specialName: "Jinbe Special",
+        specialName: "Gentle Ultrasound Wave",
         specialNotes: "This is most likely the effect that prevents your chain from exceeding a certain value.",
         sailor: "Boosts ATK of Fighter characters by 75",
     },
     1700: {//Jinbe
         captain: "Boosts ATK of Fighter characters by 2.5x, and their HP by 1.3x",
         special: "Adds .3x to Chain multiplier for 2 turns, reduces Chain Multiplier Limit duration by 3 turns",
-        specialName: "Jinbe Special",
+        specialName: "Gentle Ultrasound Wave",
         specialNotes: "This is most likely the effect that prevents your chain from exceeding a certain value.",
         sailor: "Boosts ATK of Fighter characters by 75",
     },
@@ -9548,7 +9548,7 @@ window.details = {
                 "cooldown": [ 15, null ]
             }
         ],
-        specialName: "Ivankov Special",
+        specialName: "Hair Removal Fist",
         specialNotes: "#{stages}",
         sailor: "Completely resists Paralysis on this character",
     },
@@ -9568,32 +9568,32 @@ window.details = {
                 "cooldown": [ 15, null ]
             }
         ],
-        specialName: "Ivankov Special",
+        specialName: "Hair Removal Fist",
         specialNotes: "#{stages}",
         sailor: "Completely resists Paralysis on this character",
     },
     1703: {//Hannyabal
         captain: "Boosts ATK of [INT] characters by 2x",
         special: "Reduces damage received by 50% for 2 turns and boosts ATK against enemies inflixed with Toxic by 1.75x for 2 turns",
-        specialName: "Hannyabal Special",
+        specialName: "Inferno Hell Wheel",
         sailor: "Makes [STR], [QCK], [DEX], [PSY] and [INT] orbs \"beneficial\" for this unit if your Captain is a Striker character",
     },
     1704: {//Hannyabal
         captain: "Boosts ATK of [INT] characters by 2.5x, recovers ???x character's RCV in HP at the end of each turn",
         special: "Reduces damage received by 50% for 2 turns and boosts ATK against enemies inflixed with Toxic by 1.75x for 2 turns",
-        specialName: "Hannyabal Special",
+        specialName: "Inferno Hell Wheel",
         sailor: "Makes [STR], [QCK], [DEX], [PSY] and [INT] orbs \"beneficial\" for this unit if your Captain is a Striker character",
     },
     1705: {//Bon Clay
         captain: "Boosts ATK of [STR] characters by 2x",
         special: "Removes all positive buffs on your team. If the special is activated with more than ??% health remaining, protects from defeat for 1 turn",
-        specialName: "Bon Clay Special",
+        specialName: "A Speech Left in Hell",
         sailor: "Boosts HP, RCV, and ATK of all characters by 50",
     },
     1706: {//Bon Clay
         captain: "Boosts ATK of [STR] characters by 2.5x. Boosts ATK of [STR] characters by 3.125x after scoring 3 Perfects in a row",
         special: "Removes all positive buffs on your team. If the special is activated with more than ??% health remaining, protects from defeat for 1 turn",
-        specialName: "Bon Clay Special",
+        specialName: "A Speech Left in Hell",
         sailor: "Boosts HP, RCV, and ATK of all characters by 50",
     },
     1708: {//Summer Nami
