@@ -9507,19 +9507,19 @@ window.details = {
         specialName: "Vergo Special",
     },
     1697: {//Magellan
-        captain: "Boosts ATK of all characters by 2.25x and their HP by 1.5x if there's a [STR], [DEX], [QCK], [PSY], and [INT] character in your crew, and a Fighter, Slasher, Shooter, Striker, Driven, Free Spirit, Cerebral and Powerhouse character in your crew. Cuts the current HP of each enemy by 15% at the end of each turn",
+        captain: "Boosts ATK of all characters by 2.25x and their HP by 1.5x if there's a [STR], [DEX], [QCK], [PSY], and [INT] character in your crew. Cuts the current HP of each enemy by 15% at the end of each turn",
         special: "Inflicts Toxic to all enemies, recovers 13x character's RCV in HP at the end of each turn for 3 turns",
         specialNotes: "Toxic starts at 0.5x character's attack and increases by 50x at the end of every turn until 2,000,000 damage per turn.",
         specialName: "Magellan Special",
     },
     1698: {//Magellan
-        captain: "Boosts ATK of all characters by 2.25x and their HP by 1.5x if there's a [STR], [DEX], [QCK], [PSY], and [INT] character in your crew, and a Fighter, Slasher, Shooter, Striker, Driven, Free Spirit, Cerebral and Powerhouse character in your crew. Cuts the current HP of each enemy by 15% at the end of each turn",
+        captain: "Boosts ATK of all characters by 2.25x and their HP by 1.5x if there's a [STR], [DEX], [QCK], [PSY], and [INT] character in your crew. Cuts the current HP of each enemy by 15% at the end of each turn",
         special: "Inflicts Toxic to all enemies, recovers 13x character's RCV in HP at the end of each turn for 3 turns",
         specialNotes: "Toxic starts at 0.5x character's attack and increases by 50x at the end of every turn until 2,000,000 damage per turn.",
         specialName: "Magellan Special",
     },
     1699: {//Jinbe
-        captain: "Boosts ATK of Fighter characters by ???x, and their HP by ???x",
+        captain: "Boosts ATK of Fighter characters by 2x, and their HP by 1.2x",
         special: "Adds .3x to Chain multiplier for 2 turns, reduces Chain Multiplier Limit duration by 3 turns",
         specialName: "Jinbe Special",
         specialNotes: "This is most likely the effect that prevents your chain from exceeding a certain value.",
@@ -9533,19 +9533,19 @@ window.details = {
         sailor: "Boosts ATK of Fighter characters by 75",
     },
     1701: {//Ivankov
-        captain: "Boosts ATK of Free Spirit characters by ???x, recovers ???x character's RCV in HP at the end of each turn",
+        captain: "Boosts ATK of Free Spirit characters by 2x of [STR] characters",
         special: [
             {
                 "description": "Randomizes all orbs",
-                "cooldown": [ null, null ]
+                "cooldown": [ 9, null ]
             },
             {
                 "description": "Changes [BLOCK] orbs into Matching orbs",
-                "cooldown": [ null, null ]
+                "cooldown": [ 12, null ]
             },
             {
                 "description": "Changes [BLOCK] and Badly Matching orbs into Matching orbs",
-                "cooldown": [ null, null ]
+                "cooldown": [ 15, null ]
             }
         ],
         specialName: "Ivankov Special",
@@ -9557,15 +9557,15 @@ window.details = {
         special: [
             {
                 "description": "Randomizes all orbs",
-                "cooldown": [ null, null ]
+                "cooldown": [ 9, null ]
             },
             {
                 "description": "Changes [BLOCK] orbs into Matching orbs",
-                "cooldown": [ null, null ]
+                "cooldown": [ 12, null ]
             },
             {
                 "description": "Changes [BLOCK] and Badly Matching orbs into Matching orbs",
-                "cooldown": [ null, null ]
+                "cooldown": [ 15, null ]
             }
         ],
         specialName: "Ivankov Special",
@@ -9573,28 +9573,40 @@ window.details = {
         sailor: "Completely resists Paralysis on this character",
     },
     1703: {//Hannyabal
-        captain: "Boosts ATK of [INT] characters by ???x, recovers ???x character's RCV in HP at the end of each turn",
-        special: "Reduces damage received by 50% for 2 turns and boosts ATK against Poisoned and Strongly Poisoned enemies by 1.75x for 2 turns",
+        captain: "Boosts ATK of [INT] characters by 2x",
+        special: "Reduces damage received by 50% for 2 turns and boosts ATK against enemies inflixed with Toxic by 1.75x for 2 turns",
         specialName: "Hannyabal Special",
         sailor: "Makes [STR], [QCK], [DEX], [PSY] and [INT] orbs \"beneficial\" for this unit if your Captain is a Striker character",
     },
     1704: {//Hannyabal
         captain: "Boosts ATK of [INT] characters by 2.5x, recovers ???x character's RCV in HP at the end of each turn",
-        special: "Reduces damage received by 50% for 2 turns and boosts ATK against Poisoned and Strongly Poisoned enemies by 1.75x for 2 turns",
+        special: "Reduces damage received by 50% for 2 turns and boosts ATK against enemies inflixed with Toxic by 1.75x for 2 turns",
         specialName: "Hannyabal Special",
         sailor: "Makes [STR], [QCK], [DEX], [PSY] and [INT] orbs \"beneficial\" for this unit if your Captain is a Striker character",
     },
     1705: {//Bon Clay
-        captain: "Boosts ATK of all characters by ???x. Boosts ATK by ???x after scoring 3 Perfects in a row",
+        captain: "Boosts ATK of [STR] characters by 2x",
         special: "Removes all positive buffs on your team. If the special is activated with more than ??% health remaining, protects from defeat for 1 turn",
         specialName: "Bon Clay Special",
         sailor: "Boosts HP, RCV, and ATK of all characters by 50",
     },
     1706: {//Bon Clay
-        captain: "Boosts ATK of all characters by 2.5x. Boosts ATK by 3.125x after scoring 3 Perfects in a row",
+        captain: "Boosts ATK of [STR] characters by 2.5x. Boosts ATK of [STR] characters by 3.125x after scoring 3 Perfects in a row",
         special: "Removes all positive buffs on your team. If the special is activated with more than ??% health remaining, protects from defeat for 1 turn",
         specialName: "Bon Clay Special",
         sailor: "Boosts HP, RCV, and ATK of all characters by 50",
+    },
+    1708: {//Summer Nami
+        captain: "Recovers 3x character's RCV in HP at the end of each turn",
+        special: "Reduces Special Cooldown of Striker and Cerebral characters by 1 turn, reduces Paralysis duration by 2 turns, and randomizes all non-matching orbs",
+        specialName: "Summer Nami Special",
+        sailor: "Makes [TND] orbs \"beneficial\" for this unit",
+    },
+    1709: {//Summer Nami
+        captain: "Boosts ATK of all characters by 1.5x, recovers 4x character's RCV in HP at the end of each turn",
+        special: "Reduces Special Cooldown of Striker and Cerebral characters by 1 turn, reduces Paralysis duration by 2 turns, and randomizes all non-matching orbs",
+        specialName: "Summer Nami Special",
+        sailor: "Makes [TND] orbs \"beneficial\" for this unit",
     },
     1750: {//Korea Law
         captain: "Boosts ATK of Striker characters by 3x and heals for .5x his RCV at the end of the turn each time you hit a Perfect",
