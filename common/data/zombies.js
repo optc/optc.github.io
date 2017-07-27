@@ -419,4 +419,12 @@ window.zombies = {
         type: 'healer',
         amount: 300
     },
+    1702: { // Ivankov
+        type: 'healer',
+        multiplier: 2
+    },
+    1704: { // Hannyabal
+        type: 'healer',
+        multiplier: 2
+    },
 };

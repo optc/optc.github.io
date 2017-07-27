@@ -9055,15 +9055,15 @@ window.details = {
         captain: "Boosts ATK Free Spirit characters by 2x",
         special: [
             {
-                "description": "Reduces Chain Multiplier Lock duration by 1 turn and boosts the Color Affinity of Striker characters by 1.25x for 1 turn",
+                "description": "Reduces Chain Multiplier Limit duration by 1 turn and boosts the Color Affinity of Striker characters by 1.25x for 1 turn",
                 "cooldown": [ 23, 9 ]
             },
             {
-                "description": "Reduces Chain Multiplier Lock duration by 3 turns and boosts the Color Affinity of Striker characters by 1.5x for 1 turn",
+                "description": "Reduces Chain Multiplier Limit duration by 3 turns and boosts the Color Affinity of Striker characters by 1.5x for 1 turn",
                 "cooldown": [ 27, 13 ]
             },
             {
-                "description": "Reduces Chain Multiplier Lock duration by 5 turns and boosts the Color Affinity of Striker characters by 1.75x for 1 turn",
+                "description": "Reduces Chain Multiplier Limit duration by 5 turns and boosts the Color Affinity of Striker characters by 1.75x for 1 turn",
                 "cooldown": [ 31, 17 ]
             },
         ],
@@ -9074,15 +9074,15 @@ window.details = {
         captain: "Boosts ATK Free Spirit and Striker characters by 2.25x and their RCV by 1.5x",
         special: [
             {
-                "description": "Reduces Chain Multiplier Lock duration by 1 turn and boosts the Color Affinity of Striker characters by 1.25x for 1 turn",
+                "description": "Reduces Chain Multiplier Limit duration by 1 turn and boosts the Color Affinity of Striker characters by 1.25x for 1 turn",
                 "cooldown": [ 23, 9 ]
             },
             {
-                "description": "Reduces Chain Multiplier Lock duration by 3 turns and boosts the Color Affinity of Striker characters by 1.5x for 1 turn",
+                "description": "Reduces Chain Multiplier Limit duration by 3 turns and boosts the Color Affinity of Striker characters by 1.5x for 1 turn",
                 "cooldown": [ 27, 13 ]
             },
             {
-                "description": "Reduces Chain Multiplier Lock duration by 5 turns and boosts the Color Affinity of Striker characters by 1.75x for 1 turn",
+                "description": "Reduces Chain Multiplier Limit duration by 5 turns and boosts the Color Affinity of Striker characters by 1.75x for 1 turn",
                 "cooldown": [ 31, 17 ]
             },
         ],
@@ -9520,14 +9520,14 @@ window.details = {
     },
     1699: {//Jinbe
         captain: "Boosts ATK of Fighter characters by 2x, and their HP by 1.2x",
-        special: "Adds .3x to Chain multiplier for 2 turns, reduces Chain Multiplier Limit duration by 3 turns",
+        special: "Adds .3x to Chain multiplier for 2 turns, reduces Chain Multiplier Limit and Chain Coeffiecient Reduction duration by 3 turns",
         specialName: "Gentle Ultrasound Wave",
         specialNotes: "This is most likely the effect that prevents your chain from exceeding a certain value.",
         sailor: "Boosts ATK of Fighter characters by 75",
     },
     1700: {//Jinbe
         captain: "Boosts ATK of Fighter characters by 2.5x, and their HP by 1.3x",
-        special: "Adds .3x to Chain multiplier for 2 turns, reduces Chain Multiplier Limit duration by 3 turns",
+        special: "Adds .3x to Chain multiplier for 2 turns, reduces Chain Multiplier Limit and Chain Coeffiecient Reduction duration by 3 turns",
         specialName: "Gentle Ultrasound Wave",
         specialNotes: "This is most likely the effect that prevents your chain from exceeding a certain value.",
         sailor: "Boosts ATK of Fighter characters by 75",
@@ -9553,7 +9553,7 @@ window.details = {
         sailor: "Completely resists Paralysis on this character",
     },
     1702: {//Ivankov
-        captain: "Boosts ATK of Free Spirit characters by 2.5x, recovers ???x character's RCV in HP at the end of each turn",
+        captain: "Boosts ATK of Free Spirit characters by 2.5x, recovers 2x character's RCV in HP at the end of each turn",
         special: [
             {
                 "description": "Randomizes all orbs",
@@ -9579,7 +9579,7 @@ window.details = {
         sailor: "Makes [STR], [QCK], [DEX], [PSY] and [INT] orbs \"beneficial\" for this unit if your Captain is a Striker character",
     },
     1704: {//Hannyabal
-        captain: "Boosts ATK of [INT] characters by 2.5x, recovers ???x character's RCV in HP at the end of each turn",
+        captain: "Boosts ATK of [INT] characters by 2.5x, recovers 2x character's RCV in HP at the end of each turn",
         special: "Reduces damage received by 50% for 2 turns and boosts ATK against enemies inflixed with Toxic by 1.75x for 2 turns",
         specialName: "Inferno Hell Wheel",
         sailor: "Makes [STR], [QCK], [DEX], [PSY] and [INT] orbs \"beneficial\" for this unit if your Captain is a Striker character",
