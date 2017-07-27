@@ -9509,13 +9509,13 @@ window.details = {
     1697: {//Magellan
         captain: "Boosts ATK of all characters by 2.25x and their HP by 1.5x if there's a [STR], [DEX], [QCK], [PSY], and [INT] character in your crew. Cuts the current HP of each enemy by 15% at the end of each turn",
         special: "Inflicts Toxic to all enemies, recovers 13x character's RCV in HP at the end of each turn for 3 turns",
-        specialNotes: "Toxic starts at 0.5x character's attack and increases by 50x at the end of every turn until 2,000,000 damage per turn.",
+        specialNotes: "Toxic starts at 50x character's attack and increases by 3x at the end of every turn until 2,000,000 damage per turn.",
         specialName: "Venom Cloud",
     },
     1698: {//Magellan
         captain: "Boosts ATK of all characters by 2.25x and their HP by 1.5x if there's a [STR], [DEX], [QCK], [PSY], and [INT] character in your crew. Cuts the current HP of each enemy by 15% at the end of each turn",
         special: "Inflicts Toxic to all enemies, recovers 13x character's RCV in HP at the end of each turn for 3 turns",
-        specialNotes: "Toxic starts at 0.5x character's attack and increases by 50x at the end of every turn until 2,000,000 damage per turn.",
+        specialNotes: "Toxic starts at 50x character's attack and increases by 3x at the end of every turn until 2,000,000 damage per turn.",
         specialName: "Venom Cloud",
     },
     1699: {//Jinbe
