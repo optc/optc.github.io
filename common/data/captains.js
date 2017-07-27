@@ -5085,6 +5085,49 @@ window.captains = {
     1696: {
         atk: function(p) { return p.unit.class.has("Striker") ? 2.5 : 1; }
     },
+    1697: {
+        atk: function(p) { if(p.colorCount.INT>=1 && p.colorCount.PSY>=1 && p.colorCount.STR>=1 && p.colorCount.DEX>=1 && p.colorCount.QCK>=1) 
+                return 2.25;
+            else
+                return 1; 
+               },
+    },
+    1698: {
+        atk: function(p) { if(p.colorCount.INT>=1 && p.colorCount.PSY>=1 && p.colorCount.STR>=1 && p.colorCount.DEX>=1 && p.colorCount.QCK>=1) 
+                return 2.25;
+            else
+                return 1; 
+               },
+    },
+    1699: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? 2 : 1; },
+        hp: function(p) { return p.unit.class.has("Fighter") ? 1.2 : 1; }
+    },
+    1700: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? 2.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Fighter") ? 1.3 : 1; }
+    },
+    1701: {
+        atk: function(p) { return p.unit.class.has("Free Spirit") ? 2 : 1; },
+    },
+    1702: {
+        atk: function(p) { return p.unit.class.has("Free Spirit") ? 2.5 : 1; },
+    },
+    1703: {
+        atk: function(p) { return p.unit.type == "INT" ? 2 : 1; },
+    },
+    1704: {
+        atk: function(p) { return p.unit.type == "INT" ? 2.5 : 1; },
+    },
+    1705: {
+        atk: function(p) { return p.unit.type == "STR" ? 2 : 1; },
+    },
+    1706: {
+        hitAtk: function(p) {
+            return !p.unit.type == "STR" ? 1 : p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? 3.125 : 2.5;
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
+    },
     1750: {
         atk: function(p) { return p.unit.class.has("Striker") ? 3 : 1; }
     },

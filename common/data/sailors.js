@@ -298,4 +298,20 @@ window.sailors = {
         atkStatic: function(p) { return 56; },
         hpStatic: function(p) { return 56; },
     },
+    1699: {
+        atkStatic: function(p) { return p.unit.class.has("Fighter") ? 75 : 0; },
+    },
+    1700: {
+        atkStatic: function(p) { return p.unit.class.has("Fighter") ? 75 : 0; },
+    },
+    1705: {
+        atkStatic: function(p) { return 50; },
+        rcvStatic: function(p) { return 50; },
+        hpStatic: function(p) { return 50; },
+    },
+    1706: {
+        atkStatic: function(p) { return 50; },
+        rcvStatic: function(p) { return 50; },
+        hpStatic: function(p) { return 50; },
+    },
 };

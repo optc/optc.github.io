@@ -2623,6 +2623,30 @@ window.evolutions = {
         evolution: 1696,
         evolvers: [  ]
     },
+    1697: {
+        evolution: 1698,
+        evolvers: [  ]
+    },
+    1699: {
+        evolution: 1700,
+        evolvers: [  ]
+    },
+    1701: {
+        evolution: 1702,
+        evolvers: [  ]
+    },
+    1703: {
+        evolution: 1704,
+        evolvers: [  ]
+    },
+    1705: {
+        evolution: 1706,
+        evolvers: [  ]
+    },
+    1708: {
+        evolution: 1709,
+        evolvers: [  ]
+    },
     1750: {
         evolution: 1751,
         evolvers: [  ]
