@@ -790,7 +790,7 @@ window.specials = {
     827: {
         atk: function(p) { return 1.05; },
         type: "condition",
-        warning: "Selected special (%name%) assumes that the enemy has been poisoned."
+        warning: "Selected special (%name%) assumes that the enemy has been poisoned or STRONGLY Poisoned."
     },
     828: {
         atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Driven") ? window.specials[828].multiplier : 1; },
@@ -1180,12 +1180,12 @@ window.specials = {
     928: {
         atk: function(p) { return 1.3; },
         type: "condition",
-        warning: "Selected special (%name%) assumes that the enemy has been poisoned."
+        warning: "Selected special (%name%) assumes that the enemy has been poisoned or STRONGLY Poisoned."
     },
     929: {
         atk: function(p) { return 1.3; },
         type: "condition",
-        warning: "Selected special (%name%) assumes that the enemy has been poisoned."
+        warning: "Selected special (%name%) assumes that the enemy has been poisoned or STRONGLY Poisoned."
     },
     940: {
         atk: function(p) { return p.unit.type == "DEX" ? 1.75 : 1; },
@@ -3255,6 +3255,22 @@ window.specials = {
     },
     1696: {
         orb: function(p) { return (p.unit.class.has("Striker")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain]) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain]); }	
+    },
+    1699: {
+        chainAddition: function(p) { return 0.3; }
+    },
+    1700: {
+        chainAddition: function(p) { return 0.3; }
+    },
+    1703: {
+        atk: function(p) { return 1.75; },
+        type: "condition",
+        warning: "Selected special (%name%) assumes that the enemy has been inflicted with Toxin."
+    },
+    1704: {
+        atk: function(p) { return 1.75; },
+        type: "condition",
+        warning: "Selected special (%name%) assumes that the enemy has been inflicted with Toxin."
     },
     1750:{
         orb: function(p) { return (p.unit.class.has("Striker")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[1750].multiplier, [p.friendCaptain, p.captain]) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain]); },

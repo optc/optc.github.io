@@ -9533,7 +9533,7 @@ window.details = {
         sailor: "Boosts ATK of Fighter characters by 75",
     },
     1701: {//Ivankov
-        captain: "Boosts ATK of Free Spirit characters by 2x of [STR] characters",
+        captain: "Boosts ATK of Free Spirit characters by 2x",
         special: [
             {
                 "description": "Randomizes all orbs",

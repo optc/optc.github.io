@@ -1696,7 +1696,7 @@ window.units = [
     [ "Raid Vergo", "DEX", [ "Fighter", "Striker" ], 4, 30, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Raid Vergo, Evolved", "DEX", [ "Fighter", "Striker" ], 5, 50, 5, 2, 99, 5000000, null, null, null, 2265, 1402, 245, null ],
     [ "Magellan, Prison Ruler", "DEX", [ "Striker", "Shooter" ], 5, 30, null, 3, 70, 1066998, null, null, null, null, null, null, null ],
-    [ "Magellan, Hell's Ruler", "DEX", [ "Striker", "Shooter" ], 6, 50, 5, 5, 99, 5000000, null, null, null, 3527, 1499, 291, null ],
+    [ "Magellan, Hell's Ruler", "DEX", [ "Striker", "Shooter" ], 6, 50, 5, 5, 99, 5000000, 1, 1, 1, 3527, 1499, 291, null ],
     [ "Jimbe, 'Eternal Hell' Prisoner", "PSY", [ "Fighter", "Powerhouse" ], 4, 15, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Jimbe, Hell's Warlord of the Sea", "PSY", [ "Fighter", "Powerhouse" ], 5, 30, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Emporio Ivankov, 'Newkama Land' Prisoner", "QCK", [ "Free Spirit", "Cerebral" ], 4, 15, null, null, null, null, null, null, null, null, null, null, null ],
