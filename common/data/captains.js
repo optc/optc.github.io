@@ -5091,10 +5091,20 @@ window.captains = {
             else
                 return 1; 
                },
+        hp: function(p) { if(p.colorCount.INT>=1 && p.colorCount.PSY>=1 && p.colorCount.STR>=1 && p.colorCount.DEX>=1 && p.colorCount.QCK>=1) 
+                return 1.5;
+            else
+                return 1; 
+               },
     },
     1698: {
         atk: function(p) { if(p.colorCount.INT>=1 && p.colorCount.PSY>=1 && p.colorCount.STR>=1 && p.colorCount.DEX>=1 && p.colorCount.QCK>=1) 
                 return 2.25;
+            else
+                return 1; 
+               },
+        hp: function(p) { if(p.colorCount.INT>=1 && p.colorCount.PSY>=1 && p.colorCount.STR>=1 && p.colorCount.DEX>=1 && p.colorCount.QCK>=1) 
+                return 1.5;
             else
                 return 1; 
                },
@@ -5127,6 +5137,20 @@ window.captains = {
             return !p.unit.type == "STR" ? 1 : p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? 3.125 : 2.5;
         },
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
+    },
+    1707: {
+        atk: function(p) { return p.unit.type == "PSY" ? 2.75 : 1; },
+        hp: function(p) { return p.unit.type == "PSY" ? 1.3 : 1; },
+    },
+    1709: {
+        atk: function(p) { return 1.5; },
+    },
+    1712: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? 2.5 : 1; }
+    },
+    1713: {
+        atk: function(p) { return !p.unit.class.has("Fighter") ? 1 : (((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain]) == 2) && (p.orb != 'g')) ? 3 : 1.5); },
+        hp: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; }
     },
     1750: {
         atk: function(p) { return p.unit.class.has("Striker") ? 3 : 1; }

@@ -9596,6 +9596,12 @@ window.details = {
         specialName: "A Speech Left in Hell",
         sailor: "Boosts HP, RCV, and ATK of all characters by 50",
     },
+    1707: {//Shanks 6+
+        captain: "Boosts ATK of [PSY] characters by 2.75x and their HP by 1.3x. Boosts chances of getting [PSY] orbs proportionally to the crew's current HP.",
+        captainNotes: "At 1 HP, the rate of [PSY] orbs is ???% and at full HP, the rate of [PSY] orbs is ???%",
+        special: "Deals 75x character's ATK in typeless damage to one enemy, reduces the defense of all enemies by 100% for 1 turns and changes all orbs to [PSY] orbs",
+        specialName: "Arm to Break the Clouds",
+    },
     1708: {//Summer Nami
         captain: "Recovers 3x character's RCV in HP at the end of each turn",
         special: "Reduces Special Cooldown of Striker and Cerebral characters by 1 turn, reduces Paralysis duration by 2 turns, and randomizes all non-matching orbs",
@@ -9607,6 +9613,16 @@ window.details = {
         special: "Reduces Special Cooldown of Striker and Cerebral characters by 1 turn, reduces Paralysis duration by 2 turns, and randomizes all non-matching orbs",
         specialName: "Summer Nami Special",
         sailor: "Makes [TND] orbs \"beneficial\" for this unit",
+    },
+    1712: {//Secret Jinbe
+        captain: "Boosts ATK of Fighter characters by 2.5x",
+        special: "If your Captain is a Fighter character, changes adjacent orbs into matching orbs and locks the chain multiplier at 2.5x for 1 turn",
+        specialName: "Passive Agressive Boss"
+    },
+    1713: {//Secret Jinbe
+        captain: "Boosts HP of Fighter characters by 1.4x and boosts ATK by 2.75x if they have a matching orb, by 2.5x otherwise.",
+        special: "If your Captain is a Fighter character, changes adjacent orbs into matching orbs and locks the chain multiplier at 2.5x for 1 turn",
+        specialName: "Passive Agressive Boss"
     },
     1750: {//Korea Law
         captain: "Boosts ATK of Striker characters by 3x and heals for .5x his RCV at the end of the turn each time you hit a Perfect",
