@@ -5145,10 +5145,10 @@ window.captains = {
     1709: {
         atk: function(p) { return 1.5; },
     },
-    1712: {
+    1720: {
         atk: function(p) { return p.unit.class.has("Fighter") ? 2.5 : 1; }
     },
-    1713: {
+    1721: {
         atk: function(p) { return !p.unit.class.has("Fighter") ? 1 : (((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain]) == 2) && (p.orb != 'g')) ? 3 : 1.5); },
         hp: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; }
     },

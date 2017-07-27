@@ -3275,14 +3275,14 @@ window.specials = {
     1707: {
         def: function(p) { return 0; }
     },
-    1712: {
+    1720: {
         chain: function(p) { return p.captain.class.has("Fighter") ? 2.5 : 1; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
             return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 2.75 : 1;
         }
     },
-    1713: {
+    1721: {
         chain: function(p) { return p.captain.class.has("Fighter") ? 2.5 : 1; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]

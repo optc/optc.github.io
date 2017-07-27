@@ -1587,7 +1587,7 @@ window.drops = {
         {
             name: 'Kid Pirates!',
             thumb: 1690,
-            gamewith: null,
+            gamewith: 62883,
             condition: 'Only [INT] and [PSY] orbs appear',
             'All Difficulties': [ 1689, 1691, 1692, -1532, -1543, -449, -453, -1079, -1538, -967, -1346, -1349 ],
         },
