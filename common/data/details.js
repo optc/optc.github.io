@@ -9498,12 +9498,12 @@ window.details = {
     },
     1695: {//Vergo
         captain: "Boosts ATK of Striker characters by 2x",
-        special: "Deals 50x character's ATK in [DEX] damage to all enemies, amplifies the effect of orbs for Striker characters by 1.75x for 1 turn and reduces damage received by 50% for 1 turn",
+        special: "Deals 50x character's ATK in [DEX] damage to one enemy, amplifies the effect of orbs for Striker characters by 1.75x for 1 turn and reduces damage received by 50% for 1 turn",
         specialName: "Vergo Special",
     },
     1696: {//Vergo
         captain: "Boosts ATK of Striker characters by 2.5x and reduces damage received by 10%",
-        special: "Deals 50x character's ATK in [DEX] damage to all enemies, amplifies the effect of orbs for Striker characters by 1.75x for 1 turn and reduces damage received by 50% for 1 turn",
+        special: "Deals 50x character's ATK in [DEX] damage to one enemy, amplifies the effect of orbs for Striker characters by 1.75x for 1 turn and reduces damage received by 50% for 1 turn",
         specialName: "Vergo Special",
     },
     1697: {//Magellan

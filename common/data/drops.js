@@ -1902,7 +1902,7 @@ window.drops = {
         {
             name: 'Clash!! Vergo',
             thumb: 1696,
-            gamewith: null,
+            gamewith: 63217,
             Master: [ 1695 ],
             Expert: [ 1695 ]
         },
