@@ -1485,7 +1485,7 @@ window.units = [
     [ "Sanji, Wild Pirates", "STR", [ "Slasher", "Powerhouse" ], 4, 15, 6, 3, 50, 392109, 242, 133, 49, 1225, 573, 138, 1 ],
     [ "Sanji, Pioneer Of Land", "STR", [ "Slasher", "Powerhouse" ], 5, 30, 4, 4, 99, 4000000, 1141, 494, 84, 2625, 1289, 250, 1 ],
     [ "Ideo, XXX Rank Boxer", "DEX", [ "Shooter", "Fighter" ], 4, 25, 6, 2, 70, 1066998, 505, 350, 41, 1158, 717, 166, 1 ],
-    [ "Destruction Cannon Ideo, XXX Rank Boxer", "DEX", [ "Shooter", "Fighter" ], 5, 40, 4, 3, 99, 4000000, 1087, 640, 119, 2099, 1339, 302, 1 ],
+    [ "Destruction Cannon Ideo, XXX Rank Boxer", "DEX", [ "Shooter", "Fighter" ], 5, 40, 4, 3, 99, 4000000, 1087, 640, 119, 2099, 1399, 302, 1 ],
     [ "Don Krieg, Krieg Pirates Fleet Admiral", "STR", [ "Driven", "Shooter" ], 3, 16, 7, 2, 50, 392109, 177, 106, 14, 1271, 540, 55, 1 ],
     [ "Don Krieg, East Blue Supreme Ruler", "STR", [ "Driven", "Shooter" ], 4, 26, 8, 3, 99, 3000000, 1200, 476, 30, 2707, 1225, 106, 1 ],
     [ "Mr. 5, Bomb Human", "QCK", "Shooter", 3, 10, 6, 2, 35, 136167, 101, 56, 21, 808, 401, 74, 1 ],
