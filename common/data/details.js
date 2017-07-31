@@ -9574,13 +9574,13 @@ window.details = {
     },
     1703: {//Hannyabal
         captain: "Boosts ATK of [INT] characters by 2x",
-        special: "Reduces damage received by 50% for 2 turns and boosts ATK against enemies inflixed with Toxic by 1.75x for 2 turns",
+        special: "Reduces damage received by 50% for 2 turns and boosts ATK against enemies inflicted with Toxic by 1.75x for 2 turns",
         specialName: "Inferno Hell Wheel",
         sailor: "Makes [STR], [QCK], [DEX], [PSY] and [INT] orbs \"beneficial\" for this unit if your Captain is a Striker character",
     },
     1704: {//Hannyabal
         captain: "Boosts ATK of [INT] characters by 2.5x, recovers 2x character's RCV in HP at the end of each turn",
-        special: "Reduces damage received by 50% for 2 turns and boosts ATK against enemies inflixed with Toxic by 1.75x for 2 turns",
+        special: "Reduces damage received by 50% for 2 turns and boosts ATK against enemies inflicted with Toxic by 1.75x for 2 turns",
         specialName: "Inferno Hell Wheel",
         sailor: "Makes [STR], [QCK], [DEX], [PSY] and [INT] orbs \"beneficial\" for this unit if your Captain is a Striker character",
     },

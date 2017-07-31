@@ -2640,7 +2640,7 @@ window.specials = {
     1528: {
         turnedOn: false,
         onActivation: function(p) {
-            if(p.percHP > 30){
+            if(p.percHP < 30){
                 window.specials[1528].turnedOn = true;
             }
         },
