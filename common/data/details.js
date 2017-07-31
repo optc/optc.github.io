@@ -9605,13 +9605,13 @@ window.details = {
     1708: {//Summer Nami
         captain: "Recovers 3x character's RCV in HP at the end of each turn",
         special: "Reduces Special Cooldown of Striker and Cerebral characters by 1 turn, reduces Paralysis duration by 2 turns, and randomizes all non-matching orbs",
-        specialName: "Summer Nami Special",
+        specialName: "Cat Burglar's Eye Contact",
         sailor: "Makes [TND] orbs \"beneficial\" for this unit",
     },
     1709: {//Summer Nami
         captain: "Boosts ATK of all characters by 1.5x, recovers 4x character's RCV in HP at the end of each turn",
         special: "Reduces Special Cooldown of Striker and Cerebral characters by 1 turn, reduces Paralysis duration by 2 turns, and randomizes all non-matching orbs",
-        specialName: "Summer Nami Special",
+        specialName: "Cat Burglar's Eye Contact",
         sailor: "Makes [TND] orbs \"beneficial\" for this unit",
     },
     1720: {//Secret Jinbe
