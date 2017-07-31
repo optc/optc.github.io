@@ -159,6 +159,12 @@ window.CrunchUtils.getOrbMultiplier = function(orb, type, uclass, baseMultiplier
             if (orb == 0.5 && type == 'DEX') return boostedMultiplier;
         }
     }
+    if(window.specials[1528].turnedOn){
+        if(uclass.has("Powerhouse")){
+            if (orb == 'str') return boostedMultiplier;
+            if (orb == 0.5 && type == 'DEX') return boostedMultiplier;
+        }
+    }
     if(window.specials[1515].turnedOn || window.specials[1516].turnedOn){
         if (orb == 'meat') return boostedMultiplier;
     }
