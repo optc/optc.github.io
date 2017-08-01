@@ -9600,7 +9600,7 @@ window.details = {
         captain: "Boosts ATK of [PSY] characters by 2.75x and their HP by 1.3x. Boosts chances of getting [PSY] orbs proportionally to the crew's current HP.",
         captainNotes: "At 1 HP, the rate of [PSY] orbs is ???% and at full HP, the rate of [PSY] orbs is ???%",
         special: "Deals 75x character's ATK in typeless damage to one enemy, reduces the defense of all enemies by 100% for 1 turns and changes all orbs to [PSY] orbs",
-        spe4Name: "One-Armed Man that Splits the Heavens",
+        specialName: "One-Armed Man that Splits the Heavens",
     },
     1708: {//Summer Nami
         captain: "Recovers 3x character's RCV in HP at the end of each turn",
