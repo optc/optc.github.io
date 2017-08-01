@@ -5145,6 +5145,14 @@ window.captains = {
     1709: {
         atk: function(p) { return 1.5; },
     },
+    1710: {
+        atk: function(p) { return !p.unit.class.has("Cerebral") ? 1 : (((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain]) == 2) && (p.orb != 'g')) ? 3 : 1.5); },
+        rcv: function(p) { return p.unit.class.has("Cerebral") ? 1.2 : 1; }
+    },
+    1711: {
+        atk: function(p) { return !p.unit.class.has("Cerebral") ? 1 : (((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain]) == 2) && (p.orb != 'g')) ? 3 : 1.5); },
+        rcv: function(p) { return p.unit.class.has("Cerebral") ? 1.2 : 1; }
+    },
     1720: {
         atk: function(p) { return p.unit.class.has("Fighter") ? 2.5 : 1; }
     },

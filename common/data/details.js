@@ -9614,6 +9614,18 @@ window.details = {
         specialName: "Cat Burglar's Eye Contact",
         sailor: "Makes [TND] orbs \"beneficial\" for this unit",
     },
+    1710: {//Summer Robin
+        captain: "Boosts ATK and RCV of Cerebral characters by 1.2x",
+        special: "Amplifies the effect of orbs for Cerebral characters by 1.75x for 1 turn and reduces damage received by 30% for 2 turns",
+        specialName: "Nico Robin Special",
+        sailor: "Reduces Blindness duration by 2 turns",
+    },
+    1711: {//Summer Robin
+        captain: "Boosts RCV of Cerebral characters by 1.2x and boosts ATK by 3x if they have a matching orb, by 1.5x otherwise.",
+        special: "Amplifies the effect of orbs for Cerebral characters by 1.75x for 1 turn and reduces damage received by 30% for 2 turns",
+        specialName: "Nico Robin Special",
+        sailor: "Reduces Blindness duration by 2 turns",
+    },
     1720: {//Secret Jinbe
         captain: "Boosts ATK of Fighter characters by 2.5x",
         special: "If your Captain is a Fighter character, changes adjacent orbs into matching orbs and locks the chain multiplier at 2.5x for 1 turn",
