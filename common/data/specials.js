@@ -1024,12 +1024,28 @@ window.specials = {
         }
     },
     885: {
-        atk: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; },
-        type: "class"
+        atk: function(p) { return p.unit.class.has('Fighter') ? window.specials[885].multiplier : 1; },
+        type: "class",
+        onActivation: function(p) {
+            var n = (p.percHP <= 30 ? 1.5 : 1);
+            window.specials[885].multiplier = n;
+            p.scope.notify({
+                text: 'Using the ' + n + 'x ATK boost.',
+                name: '885warning'
+            });
+        }
     },
     886: {
-        atk: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; },
-        type: "class"
+        atk: function(p) { return p.unit.class.has('Slasher') ? window.specials[886].multiplier : 1; },
+        type: "class",
+        onActivation: function(p) {
+            var n = (p.percHP <= 30 ? 1.5 : 1);
+            window.specials[886].multiplier = n;
+            p.scope.notify({
+                text: 'Using the ' + n + 'x ATK boost.',
+                name: '886warning'
+            });
+        }
     },
     887: {
         def: function(p) { return 0.2; }
