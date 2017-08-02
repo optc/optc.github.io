@@ -1592,6 +1592,14 @@ window.drops = {
             'All Difficulties': [ 1689, 1691, 1692, -1532, -1543, -449, -453, -1079, -1538, -967, -1346, -1349 ],
         },
         
+        {
+            name: 'Royal Neptune Family!',
+            thumb: 1723,
+            gamewith: null,
+            condition: 'Strikers and Powerhouse characters get a boost',
+            'All Difficulties': [ 1722, 1724, -1123, -455, -1077, -560, -1212, -1536, -1577, -1579, -966, -1352 ],
+        },
+        
     ],
 
             

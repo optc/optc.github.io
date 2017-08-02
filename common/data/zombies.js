@@ -427,4 +427,12 @@ window.zombies = {
         type: 'healer',
         multiplier: 2
     },
+    1708: { // Nami
+        type: 'healer',
+        multiplier: 3
+    },
+    1709: { // Nami
+        type: 'healer',
+        multiplier: 4
+    },
 };

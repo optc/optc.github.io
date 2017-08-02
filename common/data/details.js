@@ -4350,7 +4350,7 @@ window.details = {
     927: {
         captain: "Boosts ATK and HP of Driven characters by 1.5x",
         specialName: "Unwavering Hammer of Justice",
-        special: "Take 1.5x Additional damage; Boosts ATK of Slasher and Driven characters by 1.2x for 3 turns"
+        special: "Increases damage received by 1.5x and boosts ATK of Slasher and Driven characters by 1.2x for 3 turns"
     },
     928: {
         captain: "Boosts ATK of Driven characters by 1.75x while above 30% HP and boosts ATK of Striker characters by 1.75x while below 30% HP",
@@ -5067,13 +5067,13 @@ window.details = {
     1046: {
         captain: "Boosts ATK of Free Spirit characters by 2.75x following a chain of Good > Great > Perfect hits",
         specialName: "Dragon Claw Fist: Dragon's Breath",
-        special: "Deals random typeless damage to all enemies. For 2 turns every attacking character gets 55x character's ATK as additional typeless bonus damage if you hit no lower than Good",
+        special: "Deals random typeless damage to all enemies. Adds 55x character's ATK as Additional Typeless Damage for 2 turns",
         specialNotes: "#{random : 10,000 : 30,000} <br> Extra Damage can only be boosted by conditional Boosters"
     },
     1047: {
         captain: "Boosts ATK of Free Spirit characters by 3.5x following a chain of Good > Great > Perfect hits",
         specialName: "Dragon Claw Fist: Dragon's Breath",
-        special: "Deals random typeless damage to all enemies. For 2 turns every attacking character gets 55x character's ATK as additional typeless bonus damage if you hit no lower than Good",
+        special: "Deals random typeless damage to all enemies. Adds 55x character's ATK as Additional Typeless Damage for 2 turns",
         specialNotes: "#{random : 10,000 : 30,000} <br> Extra Damage can only be boosted by conditional Boosters"
     },
     1048: {
@@ -6380,12 +6380,14 @@ window.details = {
     },
     1241: {//Fortnight Koala
         captain: "Boosts chain multiplier by 1.5x. Recovers 1x character's RCV in HP at the end of each turn",
-        special: "Deals 11x character's ATK in [STR] damage to one enemy. For 1 turn every attacking character gets 15x character's ATK as additional typeless bonus damage if you hit no lower than Good",
+        special: "Deals 11x character's ATK in [STR] damage to one enemy. Adds 15x character's ATK as Additional Typeless Damage for 1 turn",
+        specialNotes: "#{additionalDamage : 15x}",
         specialName: "Fishman Karate, Midair Upwards Kick",
     },
     1242: {//Fortnight Koala
         captain: "Boosts chain multiplier by 2x. Recovers 2x character's RCV in HP at the end of each turn",
-        special: "Deals 11x character's ATK in [STR] damage to one enemy. For 1 turn every attacking character gets 15x character's ATK as additional typeless bonus damage if you hit no lower than Good",
+        special: "Deals 11x character's ATK in [STR] damage to one enemy. Adds 15x character's ATK as Additional Typeless Damage for 1 turn",
+        specialNotes: "#{additionalDamage : 15x}",
         specialName: "Fishman Karate, Midair Upwards Kick",
     },
     1243: {// Fortnight Hack
@@ -6861,13 +6863,13 @@ window.details = {
         specialName: "King Cobra Machetes",
     },
     1313: {//Akainu
-        captain: "Boosts ATK by 2.25x. If any character has a [STR] orb, boosts ATK by an additional 1.75x. Boosts chances of getting [STR] orbs",
+        captain: "Boosts ATK by 2.25x. If any character has a [STR] orb, boosts ATK by 3.9375x instead. Boosts chances of getting [STR] orbs",
         captainNotes: "If a character has a [STR] orb, regardless of type, they will have a 3.9375x ATK boost",
         special: "Deals 125x character's ATK typeless damage to all enemies and randomizes non-[STR] orbs. Boosts ATK of characters with cost 50 or higher by 1.75x for 2 turns",
         specialName: "Meteor Volcano",
     },
     1314: {//Akainu
-        captain: "Boosts ATK by 2.25x. If any character has a [STR] orb, boosts ATK by an additional 1.75x. Boosts chances of getting [STR] orbs",
+        captain: "Boosts ATK by 2.25x. If any character has a [STR] orb, boosts ATK by 3.9375x instead. Boosts chances of getting [STR] orbs",
         captainNotes: "If a character has a [STR] orb, regardless of type, they will have a 3.9375x ATK boost",
         special: "Deals 125x character's ATK typeless damage to all enemies and randomizes non-[STR] orbs. Boosts ATK of characters with cost 50 or higher by 1.75x for 2 turns",
         specialName: "Meteor Volcano",
@@ -8692,12 +8694,14 @@ window.details = {
     },
     1570: {//Inuarashi
         captain: "Boosts ATK of Cerebral characters by 2.75x and chain by 1.5x if HP is below 30% at the start of the turn, boosts ATK of Cerebral characters by 2.5x otherwise",
-        special: "Reduces crew's current HP by 80%, deals 60x character's ATK in STR damage to one enemy. For 1 turn, every attacking character gets 80x character's ATK as additional typeless bonus damage if you hit no lower than Good",
+        special: "Reduces crew's current HP by 80%, deals 60x character's ATK in STR damage to one enemy. Adds 80x character's ATK as Additional Typeless Damage for 1 turn",
+        specialNotes: "#{additionalDamage : 80x}",
         specialName: "King Sword Shine",
     },
     1571: {//Inuarashi
         captain: "Boosts ATK of Cerebral characters by 2.75x and chain by 1.5x if HP is below 30% at the start of the turn, boosts ATK of Cerebral characters by 2.5x otherwise",
-        special: "Reduces crew's current HP by 80%, deals 60x character's ATK in STR damage to one enemy. For 1 turn, every attacking character gets 80x character's ATK as additional typeless bonus damage if you hit no lower than Good",
+        special: "Reduces crew's current HP by 80%, deals 60x character's ATK in STR damage to one enemy. Adds 80x character's ATK as Additional Typeless Damage for 1 turn",
+        specialNotes: "#{additionalDamage : 80x}",
         specialName: "King Sword Shine",
     },
     1572: {//Wanda
@@ -8814,15 +8818,15 @@ window.details = {
         specialName: "Firey Morale",
     },
     1587: {//Legend Sanji
-        captain: "Boosts ATK of all characters by 2.5x and their HP by 1.3x <br> <b>Action:</b> Sanji Flies into the air for 1 turn, preventing all debuffs to himself. (Including Bind, Despair, and Silence) Next turn, boosts own ATK by an additional 2.5x",
-        captainNotes: "Multiple Sanjis can Jump at the same time. Even while Flying, will still boost all characters by 2.5x. Jumping is not a type boost, and will stack with other boosts",
+        captain: "Boosts ATK of all characters by 2.5x and their HP by 1.3x <br> <b>Action:</b> Sanji Flies into the air for 1 turn, preventing all debuffs to himself. (Including, but not limited to, Bind, Despair, and Silence) Next turn, boosts own ATK by 6.25x instead",
+        captainNotes: "Multiple Sanjis can Sky Walk at the same time. Even while Sky Walking, will still boost all characters by 2.5x. Sky Walk is not a type boost, and will stack with other boosts",
         special: "Deals 100,000 fixed damage to all enemies. Changes [BLOCK], [TND], adjacent orbs, and own orb into Matching orbs. Boosts own attack by 2x for 1 turn",
         sailor: "Makes [RCV] orbs \"beneficial\" for all characters",
         specialName: "Hell Memories",
     },
     1588: {//Legend Sanji
-        captain: "Boosts ATK of all characters by 2.5x and their HP by 1.3x <br> <b>Action:</b> Sanji Flies into the air for 1 turn, preventing all debuffs to himself. (Including Bind, Despair, and Silence) Next turn, boosts own ATK by an additional 2.5x",
-        captainNotes: "Multiple Sanjis can Jump at the same time. Even while Flying, will still boost all characters by 2.5x. Jumping is not a type boost, and will stack with other boosts",
+        captain: "Boosts ATK of all characters by 2.5x and their HP by 1.3x <br> <b>Action:</b> Sanji Flies into the air for 1 turn, preventing all debuffs to himself. (Including, but not limited to, Bind, Despair, and Silence) Next turn, boosts own ATK by 6.25x instead",
+        captainNotes: "Multiple Sanjis can Sky Walk at the same time. Even while Sky Walking, will still boost all characters by 2.5x. Sky Walk is not a type boost, and will stack with other boosts",
         special: "Deals 100,000 fixed damage to all enemies. Changes [BLOCK], [TND], adjacent orbs, and own orb into Matching orbs. Boosts own attack by 2x for 1 turn",
         sailor: "Makes [RCV] orbs \"beneficial\" for all characters",
         specialName: "Hell Memories",
@@ -8973,15 +8977,15 @@ window.details = {
         captain: "Boosts ATK of Fighter characters by 2.25x",
         special: "Cuts the current HP of each enemy by 10%, reduces the defense of all enemies by 50% and amplifies the effects of orbs by 1.75x for 1 turn",
         specialName: "4000 Power Level Technique: Tempest Kick",
-        sailor: "All characters gets 2x character's ATK as additional typeless bonus damage if you hit no lower than Good",
-        sailorNotes: "Similar effect to Raid Sabo",
+        sailor: "Adds 22x character's ATK as Additional Typeless Damage",
+        sailorNotes: "#{additionalDamage : 2x}",
     },
     1614: {//Rob Lucci
         captain: "Boosts ATK of Fighter characters by 2.5x and their HP by 1.25x",
         special: "Cuts the current HP of each enemy by 10%, reduces the defense of all enemies by 50% and amplifies the effects of orbs by 1.75x for 1 turn",
         specialName: "4000 Power Level Technique: Tempest Kick",
-        sailor: "All characters gets 2x character's ATK as additional typeless bonus damage if you hit no lower than Good",
-        sailorNotes: "Similar effect to Raid Sabo",
+        sailor: "Adds 22x character's ATK as Additional Typeless Damage",
+        sailorNotes: "#{additionalDamage : 2x}",
     },
     1615: {//Crocodile
         captain: "Boosts ATK of Strikers by 2x",
@@ -9635,6 +9639,28 @@ window.details = {
         captain: "Boosts HP of Fighter characters by 1.4x and boosts ATK by 2.75x if they have a matching orb, by 2.5x otherwise.",
         special: "If your Captain is a Fighter character, changes adjacent orbs into matching orbs and locks the chain multiplier at 2.5x for 1 turn",
         specialName: "Passive Agressive Boss"
+    },
+    1722: {//Neptune
+        captain: "Boosts ATK of Striker characters by ???x and their RCV by ???x.",
+        special: "Boosts ATK of Striker characters by 1.5x for 1 turn and Changes own orb into [PSY] if HP is below ???% when the special is activated and deals 20,000 Fixed damage to one enemy.",
+        specialName: "Neptune Special"
+    },
+    1723: {//Neptune
+        captain: "Boosts ATK of Striker characters by 2x and their RCV by 1.2x.",
+        special: "Boosts ATK of Striker characters by 1.5x for 1 turn and Changes own orb into [PSY] if HP is below ???% when the special is activated and deals 20,000 Fixed damage to one enemy.",
+        specialName: "Neptune Special"
+    },
+    1724: {//Fukaboshi
+        captain: "Maybe? boosts chances Powerhouse characters of getting Matching orbs, boosts ATK of Powerhouse characters by ???x",
+        special: "Reduces crew's current HP by 50%, adds 25x character's ATK as Additional Typeless Damage for 1 turn",
+        specialNotes: "#{additionalDamage : 25x}",
+        specialName: "Fukaboshi Special"
+    },
+    1725: {//Fukaboshi
+        captain: "Slightly boosts chances Powerhouse characters of getting Matching orbs, boosts ATK of Powerhouse characters by 1.5x",
+        special: "Reduces crew's current HP by 50%, adds 25x character's ATK as Additional Typeless Damage for 1 turn",
+        specialNotes: "#{additionalDamage : 25x}",
+        specialName: "Fukaboshi Special"
     },
     1750: {//Korea Law
         captain: "Boosts ATK of Striker characters by 3x and heals for .5x his RCV at the end of the turn each time you hit a Perfect",
