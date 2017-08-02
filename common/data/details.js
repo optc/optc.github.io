@@ -9641,7 +9641,7 @@ window.details = {
         specialName: "Passive Agressive Boss"
     },
     1722: {//Neptune
-        captain: "Boosts ATK of Striker characters by ???x and their RCV by ???x.",
+        captain: "Boosts ATK of Striker characters by 2x.",
         special: "Boosts ATK of Striker characters by 1.5x for 1 turn and Changes own orb into [PSY] if HP is below ???% when the special is activated and deals 20,000 Fixed damage to one enemy.",
         specialName: "Neptune Special"
     },
@@ -9651,7 +9651,7 @@ window.details = {
         specialName: "Neptune Special"
     },
     1724: {//Fukaboshi
-        captain: "Maybe? boosts chances Powerhouse characters of getting Matching orbs, boosts ATK of Powerhouse characters by ???x",
+        captain: "Boosts ATK of Powerhouse characters by 1.5x",
         special: "Reduces crew's current HP by 50%, adds 25x character's ATK as Additional Typeless Damage for 1 turn",
         specialNotes: "#{additionalDamage : 25x}",
         specialName: "Fukaboshi Special"

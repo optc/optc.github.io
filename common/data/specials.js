@@ -677,7 +677,7 @@ window.specials = {
             var n = (p.percHP <= 20 ? 2 : (p.percHP <= 50 ? 1.75 : 1.5));
             window.specials[780].multiplier = n;
             p.scope.notify({
-                text: 'Using the ' + n + 'x multiplier.',
+                text: 'Using the ' + n + 'x Self Attack boost.',
                 name: '780warning'
             });
         }
@@ -689,7 +689,7 @@ window.specials = {
             var n = (p.percHP <= 20 ? 2 : (p.percHP <= 50 ? 1.75 : 1.5));
             window.specials[781].multiplier = n;
             p.scope.notify({
-                text: 'Using the ' + n + 'x multiplier.',
+                text: 'Using the ' + n + 'x Self Attack boost.',
                 name: '781warning'
             });
         }
@@ -1320,25 +1320,25 @@ window.specials = {
         type: "class"
     },
     1024: {
-        orb: function(p) {
-            if(p.percHP >= 70.0){
-                return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.25, [p.friendCaptain, p.captain]);
-            }else if(p.percHP >= 30.0){
-                return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain]);
-            }else{
-                return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain]);
-            }
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[1024].multiplier, [p.friendCaptain, p.captain]); },
+        onActivation: function(p) {
+            var n = (p.percHP >= 70 ? 1.25 : p.percHP >= 30 ? 1.5 : 1.75);
+            window.specials[1024].multiplier = n;
+            p.scope.notify({
+                text: 'HP ' + (n == 1.75 ? 'below 30%' : n == 1.5 ? 'between 70% and 30%' : 'above 70%') + ', using the ' + n + 'x Orb boost.',
+                name: '1024warning'
+            });
         }
     },
     1025: {
-        orb: function(p) {
-            if(p.percHP >= 70.0){
-                return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.25, [p.friendCaptain, p.captain]);
-            }else if(p.percHP >= 30.0){
-                return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain]);
-            }else{
-                return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain]);
-            }
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[1025].multiplier, [p.friendCaptain, p.captain]); },
+        onActivation: function(p) {
+            var n = (p.percHP >= 70 ? 1.25 : p.percHP >= 30 ? 1.5 : 1.75);
+            window.specials[1025].multiplier = n;
+            p.scope.notify({
+                text: 'HP ' + (n == 1.75 ? 'below 30%' : n == 1.5 ? 'between 70% and 30%' : 'above 70%') + ', using the ' + n + 'x Orb boost.',
+                name: '1025warning'
+            });
         }
     },
     1028: {
@@ -1360,12 +1360,28 @@ window.specials = {
         type: "type"
     },
     1040: {
-        atk: function(p) { return p.percHP < 30.0 ? 1.5 : 1; },
-        type: "type"
+        atk: function(p) { return window.specials[1040].multiplier; },
+        type: "type",
+        onActivation: function(p) {
+            var n = (p.percHP <= 30 ? 1.5 : 1);
+            window.specials[1040].multiplier = n;
+            p.scope.notify({
+                text: 'Using the ' + n + 'x ATK boost.',
+                name: '1040warning'
+            });
+        }
     },
     1041: {
-        atk: function(p) { return p.percHP < 30.0 ? 1.5 : 1; },
-        type: "type"
+        atk: function(p) { return window.specials[1041].multiplier; },
+        type: "type",
+        onActivation: function(p) {
+            var n = (p.percHP <= 30 ? 1.5 : 1);
+            window.specials[1041].multiplier = n;
+            p.scope.notify({
+                text: 'Using the ' + n + 'x ATK boost.',
+                name: '1041warning'
+            });
+        }
     },
     1046: {
         staticMult: function(p) { return 55; }
@@ -1433,28 +1449,28 @@ window.specials = {
         type: "type"
     },
     1082: {
-        atk: function(p) {
-            if(p.percHP >= 70.0){
-                return p.unit.class.has("Striker") || p.unit.class.has("Fighter") ? 1.2 : 1;
-            }else if(p.percHP >= 30.0){
-                return p.unit.class.has("Striker") || p.unit.class.has("Fighter") ? 1.5 : 1;
-            }else{
-                return p.unit.class.has("Striker") || p.unit.class.has("Fighter") ? 1.75 : 1;
-            }
-        },
-        type: "class"
+        atk: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Fighter")) ? window.specials[1082].multiplier : 1; },
+        type: "class",
+        onActivation: function(p) {
+            var n = (p.percHP >= 70 ? 1.2 : p.percHP >= 30 ? 1.5 : 1.75);
+            window.specials[1082].multiplier = n;
+            p.scope.notify({
+                text: 'HP ' + (n == 1.75 ? 'below 30%' : n == 1.5 ? 'between 70% and 30%' : 'above 70%') + ', using the ' + n + 'x Attack boost.',
+                name: '1082warning'
+            });
+        }
     },
     1083: {
-        atk: function(p) {
-            if(p.percHP >= 70.0){
-                return p.unit.class.has("Striker") || p.unit.class.has("Fighter") ? 1.2 : 1;
-            }else if(p.percHP >= 30.0){
-                return p.unit.class.has("Striker") || p.unit.class.has("Fighter") ? 1.5 : 1;
-            }else{
-                return p.unit.class.has("Striker") || p.unit.class.has("Fighter") ? 1.75 : 1;
-            }
-        },
-        type: "class"
+        atk: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Fighter")) ? window.specials[1083].multiplier : 1; },
+        type: "class",
+        onActivation: function(p) {
+            var n = (p.percHP >= 70 ? 1.2 : p.percHP >= 30 ? 1.5 : 1.75);
+            window.specials[1083].multiplier = n;
+            p.scope.notify({
+                text: 'HP ' + (n == 1.75 ? 'below 30%' : n == 1.5 ? 'between 70% and 30%' : 'above 70%') + ', using the ' + n + 'x Attack boost.',
+                name: '1083warning'
+            });
+        }
     },
     1086: {
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain]); }
@@ -3187,19 +3203,23 @@ window.specials = {
         affinity: function(p){ return p.unit.class.has("Slasher") ? 1.5 : 1; }
     },
     1681: {
-        chainAddition: function(p) { return 0.5; },
+        chainAddition: function(p) { return window.specials[1681].multiplier; },
         onActivation: function(p) {
+            var n = (p.slot > 1 ? 0.5 : 0);
+            window.specials[1681].multiplier = n;
             p.scope.notify({
-                text: 'Chain Addition only works when Luffy is a sailor.',
+                text: 'Luffy is ' + (n == 0.5 ? 'not captain' : 'captain') + ', using the ' + n + ' Chain Addition.',
                 name: '1681warning'
             });
         }
     },
     1682: {
-        chainAddition: function(p) { return 0.5; },
+        chainAddition: function(p) { return window.specials[1682].multiplier; },
         onActivation: function(p) {
+            var n = (p.slot > 1 ? 0.5 : 0);
+            window.specials[1682].multiplier = n;
             p.scope.notify({
-                text: 'Chain Addition only works when Luffy is a sailor.',
+                text: 'Luffy is ' + (n == 0.5 ? 'not captain' : 'captain') + ', using the ' + n + ' Chain Addition.',
                 name: '1682warning'
             });
         }
@@ -3294,6 +3314,36 @@ window.specials = {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
             return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 2.75 : 1;
         }
+    },
+    1722: {
+        atk: function(p) { return p.unit.class.has("Striker") ? window.specials[1722].multiplier : 1; },
+        type: "type",
+        onActivation: function(p) {
+            var n = (p.percHP <= 30 ? 1.5 : 1);
+            window.specials[1722].multiplier = n;
+            p.scope.notify({
+                text: 'Using the ' + n + 'x multiplier.',
+                name: '1722warning'
+            });
+        }
+    },
+    1723: {
+        atk: function(p) { return p.unit.class.has("Striker") ? window.specials[1723].multiplier : 1; },
+        type: "type",
+        onActivation: function(p) {
+            var n = (p.percHP <= 30 ? 1.5 : 1);
+            window.specials[1723].multiplier = n;
+            p.scope.notify({
+                text: 'Using the ' + n + 'x multiplier.',
+                name: '1723warning'
+            });
+        }
+    },
+    1724: {
+        staticMult: function(p) { return 25; }
+    },
+    1725: {
+        staticMult: function(p) { return 25; }
     },
     1750:{
         orb: function(p) { return (p.unit.class.has("Striker")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[1750].multiplier, [p.friendCaptain, p.captain]) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain]); },
