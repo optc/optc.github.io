@@ -1808,7 +1808,7 @@ window.drops = {
             name: 'Clash Neo!! Pica',
             thumb: 1647,
             gamewith: 60095,
-            condition: '1 Expert version and 3 different Master versions with different conditions. Master: Powerhouse/Driven/Slasher Only. Ultimate: Powerhouse Only, Driven Only, and Slasher Only',
+            condition: '1 Expert version and 3 different Master versions with different conditions. Expert: Powerhouse/Driven/Slasher Only. Master: Powerhouse Only, Driven Only, and Slasher Only',
             Master: [ 1646 ],
             Expert: [ 1646 ]
         },
@@ -1841,6 +1841,16 @@ window.drops = {
             Ultimate: [ 1046 ],
             Master: [ 1046 ],
             Expert: [ 1046 ]
+        },
+        
+        {
+            name: 'Clash Neo!! Sabo',
+            gamewith: null,
+            thumb: 1727,
+            condition: '1 Expert version, 1 Master version, and 3 different Ultimate versions with different conditions. Expert/Master: Shooter/Fighter/Cerebral Only. Can only complete 10 times each. Ultimate: Shooter Only, Fighter Only, and Cerebral Only',
+            Ultimate: [ 1726 ],
+            Master: [ 1726 ],
+            Expert: [ 1726 ]
         },
         
         {

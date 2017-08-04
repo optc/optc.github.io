@@ -3361,6 +3361,12 @@ window.specials = {
     1725: {
         staticMult: function(p) { return 25; }
     },
+    1726: {
+        staticMult: function(p) { return 55; }
+    },
+    1727: {
+        staticMult: function(p) { return 55; }
+    },
     1750:{
         orb: function(p) { return (p.unit.class.has("Striker")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[1750].multiplier, [p.friendCaptain, p.captain]) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain]); },
         onActivation: function(p) {

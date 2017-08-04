@@ -5173,6 +5173,20 @@ window.captains = {
     1725: {
         atk: function(p) { return p.unit.class.has("Powerhouse") ? 1.5 : 1; }
     },
+    1726: {
+        damageSorter: function(d) { return CrunchUtils.classSort(d, 2.75, [ "Free Spirit" ]); },
+        hitAtk: function(p) {
+            return !p.unit.class.has("Free Spirit") ? 1 : p.modifiers.slice(0, p.chainPosition).subcontains(["Good", "Great", "Perfect"]) ? 2.75 : 1;
+        },
+        hitModifiers: ["Good", "Great", "Perfect", "Perfect", "Perfect", "Perfect"]
+    },
+    1727: {
+        damageSorter: function(d) { return CrunchUtils.classSort(d, 3.5, [ "Free Spirit" ]); },
+        hitAtk: function(p) {
+            return !p.unit.class.has("Free Spirit") ? 1 : p.modifiers.slice(0, p.chainPosition).subcontains(["Good", "Great", "Perfect"]) ? 3.5 : 1;
+        },
+        hitModifiers: ["Good", "Great", "Perfect", "Perfect", "Perfect", "Perfect"]
+    },
     1750: {
         atk: function(p) { return p.unit.class.has("Striker") ? 3 : 1; }
     },

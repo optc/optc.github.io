@@ -9662,6 +9662,18 @@ window.details = {
         specialNotes: "#{additionalDamage : 25x}",
         specialName: "Fukaboshi Special"
     },
+    1726: {
+        captain: "Boosts ATK of Free Spirit characters by 2.75x following a chain of Good > Great > Perfect hits",
+        specialName: "Dragon Claw Fist: Dragon's Breath [Neo]",
+        special: "Deals random typeless damage to all enemies. Adds 55x character's ATK as Additional Typeless Damage for 2 turns",
+        specialNotes: "#{random : 10,000 : 30,000} <br> Extra Damage can only be boosted by conditional Boosters"
+    },
+    1727: {
+        captain: "Boosts ATK of Free Spirit characters by 3.5x following a chain of Good > Great > Perfect hits",
+        specialName: "Dragon Claw Fist: Dragon's Breath [Neo]",
+        special: "Deals random typeless damage to all enemies. Adds 55x character's ATK as Additional Typeless Damage for 2 turns",
+        specialNotes: "#{random : 10,000 : 30,000} <br> Extra Damage can only be boosted by conditional Boosters"
+    },
     1750: {//Korea Law
         captain: "Boosts ATK of Striker characters by 3x and heals for .5x his RCV at the end of the turn each time you hit a Perfect",
         special: [
