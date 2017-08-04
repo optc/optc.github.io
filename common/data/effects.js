@@ -365,5 +365,12 @@ window.effects = {
         id: 37,
         chainModifier: function(p) { return 0.1 ; }
     },
+
+    'Doflamingo Neo - Fighter Raid Boss': {
+        description: 'Reduces Damage taken by 30%',
+        thumb: 1623,
+        id: 38, // don't change this
+        atk: function(p) { return .7 ; },
+    },
     
 };
