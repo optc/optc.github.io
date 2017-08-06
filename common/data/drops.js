@@ -1463,8 +1463,9 @@ window.drops = {
         },
         
         {
-            name: 'Become Strong to be Happy!',
+            name: 'Fight for your Happiness!',
             thumb: 1384,
+            global: true,
             gamewith: 46658,
             'All Difficulties': [ 1383, 1385, -748, -1234, -1075, -1230, -1155, -1154, -846, -842, -739, -1550 ]
         },
