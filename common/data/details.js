@@ -9621,13 +9621,13 @@ window.details = {
     1710: {//Summer Robin
         captain: "Boosts ATK and RCV of Cerebral characters by 1.2x",
         special: "Amplifies the effect of orbs for Cerebral characters by 1.75x for 1 turn and reduces damage received by 30% for 2 turns",
-        specialName: "Nico Robin Special",
+        specialName: "Beautiful Maturity",
         sailor: "Reduces Blindness duration by 2 turns",
     },
     1711: {//Summer Robin
         captain: "Boosts RCV of Cerebral characters by 1.2x and boosts ATK by 3x if they have a matching orb, by 1.5x otherwise.",
         special: "Amplifies the effect of orbs for Cerebral characters by 1.75x for 1 turn and reduces damage received by 30% for 2 turns",
-        specialName: "Nico Robin Special",
+        specialName: "Beautiful Maturity",
         sailor: "Reduces Blindness duration by 2 turns",
     },
     1720: {//Secret Jinbe
@@ -9662,13 +9662,13 @@ window.details = {
         specialNotes: "#{additionalDamage : 25x}",
         specialName: "Fukaboshi Special"
     },
-    1726: {
+    1726: {//Sabo
         captain: "Boosts ATK of Free Spirit characters by 2.75x following a chain of Good > Great > Perfect hits",
         specialName: "Dragon Claw Fist: Dragon's Breath [Neo]",
         special: "Deals random typeless damage to all enemies. Adds 55x character's ATK as Additional Typeless Damage for 2 turns",
         specialNotes: "#{random : 10,000 : 30,000} <br> Extra Damage can only be boosted by conditional Boosters"
     },
-    1727: {
+    1727: {//Sabo
         captain: "Boosts ATK of Free Spirit characters by 3.5x following a chain of Good > Great > Perfect hits",
         specialName: "Dragon Claw Fist: Dragon's Breath [Neo]",
         special: "Deals random typeless damage to all enemies. Adds 55x character's ATK as Additional Typeless Damage for 2 turns",
