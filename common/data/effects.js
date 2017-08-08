@@ -372,5 +372,19 @@ window.effects = {
         id: 38, // don't change this
         atk: function(p) { return .7 ; },
     },
+
+    'Doflamingo Neo [GLOBAL] - Fighter Raid Boss': {
+        description: 'Reduces Damage taken by 50%',
+        thumb: 1623,
+        id: 39, // don't change this
+        atk: function(p) { return .5 ; },
+    },
+
+    'Doflamingo Neo [GLOBAL] - Striker Raid Boss': {
+        description: 'Limit Chain to 1.75x.',
+        thumb: 1623,
+        id: 40, // don't change this
+        chainLimiter: function() { return 1.75; }
+    },
     
 };
