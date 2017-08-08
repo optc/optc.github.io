@@ -9643,24 +9643,24 @@ window.details = {
     1722: {//Neptune
         captain: "Boosts ATK of Striker characters by 2x.",
         special: "Boosts ATK of Striker characters by 1.5x for 1 turn and Changes own orb into [PSY] if HP is below ???% when the special is activated and deals 20,000 Fixed damage to one enemy.",
-        specialName: "Neptune Special"
+        specialName: "Sea God's Strike"
     },
     1723: {//Neptune
         captain: "Boosts ATK of Striker characters by 2x and their RCV by 1.2x.",
         special: "Boosts ATK of Striker characters by 1.5x for 1 turn and Changes own orb into [PSY] if HP is below ???% when the special is activated and deals 20,000 Fixed damage to one enemy.",
-        specialName: "Neptune Special"
+        specialName: "Sea God's Strike"
     },
     1724: {//Fukaboshi
         captain: "Boosts ATK of Powerhouse characters by 1.5x",
         special: "Reduces crew's current HP by 50%, adds 25x character's ATK as Additional Typeless Damage for 1 turn",
         specialNotes: "#{additionalDamage : 25x}",
-        specialName: "Fukaboshi Special"
+        specialName: "Sun's Hope"
     },
     1725: {//Fukaboshi
         captain: "Slightly boosts chances Powerhouse characters of getting Matching orbs, boosts ATK of Powerhouse characters by 1.5x",
         special: "Reduces crew's current HP by 50%, adds 25x character's ATK as Additional Typeless Damage for 1 turn",
         specialNotes: "#{additionalDamage : 25x}",
-        specialName: "Fukaboshi Special"
+        specialName: "Sun's Hope"
     },
     1726: {//Sabo
         captain: "Boosts ATK of Free Spirit characters by 2.75x following a chain of Good > Great > Perfect hits",
