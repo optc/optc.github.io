@@ -381,10 +381,10 @@ window.effects = {
     },
 
     'Doflamingo Neo [GLOBAL] - Striker Raid Boss': {
-        description: 'Limit Chain to 1.75x.',
+        description: 'Halves Chain Multiplier.',
         thumb: 1623,
         id: 40, // don't change this
-        chainLimiter: function() { return 1.75; }
+        chainModifier: function(p) { return 0.5 ; }
     },
     
 };
