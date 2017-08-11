@@ -360,7 +360,7 @@ window.effects = {
     },
     
     'Aokiji Neo - Striker Raid Boss': {
-        description: 'Reduces Chain By 10%',
+        description: 'Reduces Chain By 90%',
         thumb: 1668,
         id: 37,
         chainModifier: function(p) { return 0.1 ; }
@@ -384,6 +384,15 @@ window.effects = {
         description: 'Halves Chain Multiplier.',
         thumb: 1623,
         id: 40, // don't change this
+        chainModifier: function(p) { return 0.5 ; }
+    },
+    
+    'Sabo Neo - Fighter Raid Boss': {
+        description: 'Boosts the Orbs all characters by 1.2x, ATK by 1.3x and Reduces Chain by Half.',
+        thumb: 1727,
+        id: 41,
+        orb: function(p) { return p.orb == 2.0 ? 1.2 : (p.orb == 0.5 ? 5/6 : 1); },
+        atk: function(p) { return 1.3; },
         chainModifier: function(p) { return 0.5 ; }
     },
     

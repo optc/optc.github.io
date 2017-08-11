@@ -9674,6 +9674,32 @@ window.details = {
         special: "Deals random typeless damage to all enemies. Adds 55x character's ATK as Additional Typeless Damage for 2 turns",
         specialNotes: "#{random : 10,000 : 30,000} <br> Extra Damage can only be boosted by conditional Boosters"
     },
+    1728: {//Tashigi
+        captain: "Boosts ATK of [STR], [DEX], and [QCK] characters by 2x",
+        special: "Randomly changes all orbs, includiong [BLOCK] orbs, into either [STR], [DEX] or [QCK] orbs, remove enemies' ATK Up Buffs, and recovers 2,000 HP",
+        sailor: "Boosts HP, RCV, and ATK of [STR], [DEX], and [QCK] characters by 30",
+        specialName: "Destructive Water Splash",
+    },
+    1729: {//Tashigi
+        captain: "Boosts ATK of [STR], [DEX], and [QCK] characters by 2.25x and their HP by 1.25x. Recovers 3x character's RCV in HP at the end of each turn",
+        special: "Randomly changes all orbs, includiong [BLOCK] orbs, into either [STR], [DEX] or [QCK] orbs, remove enemies' ATK Up Buffs, and recovers 2,000 HP",
+        sailor: "Boosts HP, RCV, and ATK of [STR], [DEX], and [QCK] characters by 30",
+        specialName: "Destructive Water Splash",
+    },
+    1731: {//Vivi
+        captain: "Boosts ATK of all characters by 2x",
+        special: "Reduces Special Cooldown of all characters by 2 turns, reduces Paralysis duration by 3 turns, reduces damage received by 60% for 2 turns",
+        sailor: "Restores her own special by 3 turns when it is rewinded",
+        sailorNotes: "#{rewind : 3}",
+        specialName: "Shining Brightly Upon the Oasis",
+    },
+    1730: {//Vivi
+        captain: "Boosts ATK of all characters by 2x, boosts amount of Beli received by 2.5x",
+        special: "Reduces Special Cooldown of all characters by 2 turns, reduces Paralysis duration by 3 turns, reduces damage received by 60% for 2 turns",
+        sailor: "Restores her own special by 3 turns when it is rewinded",
+        sailorNotes: "#{rewind : 3}",
+        specialName: "Shining Brightly Upon the Oasis",
+    },
     1750: {//Korea Law
         captain: "Boosts ATK of Striker characters by 3x and heals for .5x his RCV at the end of the turn each time you hit a Perfect",
         special: [
