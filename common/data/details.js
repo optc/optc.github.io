@@ -9630,6 +9630,17 @@ window.details = {
         specialName: "Charmed by a Lovely Adult",
         sailor: "Reduces Blindness duration by 2 turns",
     },
+    1712: {//Akainu
+        captain: "Boosts ATK of Driven characters by 2.5x.",
+        special: "Deals 50x character's ATK as typeless damage to all enemies. Amplifies the effect of orbs for Driven characters by 2x for 1 turn.",
+        specialName: "Blazing Hound Crimson Lotus",
+    },
+    1713: {//Akainu
+        captain: "Boosts ATK of Driven characters by 2.5x. If you defeat an enemy last turn, increases ATK boost slighty. Stacks up to 3 times to a maximum of 3.25x.",
+        captainNotes: "If a character dies and revives, it counts as killing a character. If you did not defeat an enemy, lose all ATK boost stacks.",
+        special: "Deals 50x character's ATK as typeless damage to all enemies. Amplifies the effect of orbs for Driven characters by 2x for 1 turn.",
+        specialName: "Blazing Hound Crimson Lotus",
+    },
     1720: {//Secret Jinbe
         captain: "Boosts ATK of Fighter characters by 2.5x",
         special: "If your Captain is a Fighter character, changes adjacent orbs into matching orbs and locks the chain multiplier at 2.5x for 1 turn",
