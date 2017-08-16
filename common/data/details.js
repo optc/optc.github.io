@@ -9686,14 +9686,14 @@ window.details = {
         sailor: "Boosts HP, RCV, and ATK of [STR], [DEX], and [QCK] characters by 30",
         specialName: "Destructive Water Splash",
     },
-    1731: {//Vivi
+    1730: {//Vivi
         captain: "Boosts ATK of all characters by 2x",
         special: "Reduces Special Cooldown of all characters by 2 turns, reduces Paralysis duration by 3 turns, reduces damage received by 60% for 2 turns",
         sailor: "Restores her own special by 3 turns when it is rewinded",
         sailorNotes: "#{rewind : 3}",
         specialName: "Shining Brightly Upon the Oasis",
     },
-    1730: {//Vivi
+    1731: {//Vivi
         captain: "Boosts ATK of all characters by 2x, boosts amount of Beli received by 2.5x",
         special: "Reduces Special Cooldown of all characters by 2 turns, reduces Paralysis duration by 3 turns, reduces damage received by 60% for 2 turns",
         sailor: "Restores her own special by 3 turns when it is rewinded",
