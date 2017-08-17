@@ -9771,13 +9771,13 @@ window.details = {
     },
     1752: {//20th Anni Zoro
         captain: "Boosts ATK of characters with cost 30 or less by 2.5x",
-        special: "Boosts ATK of characters with 30 cost or less by 1.75x for 1 turn. If Zoro is a Capain or Friend/Guest Captain, then if during that turn you score 4 Perfect hits, boosts ATK of characters by 2x in the following turn.",
+        special: "Deals 60x character's ATK in [INT] damage to one enemy. Boosts ATK of characters with 30 cost or less by 1.75x for 1 turn. If Zoro is a Capain or Friend/Guest Captain, then if during that turn you score 4 Perfect hits, boosts ATK of characters by 2x in the following turn.",
         sailor: "Boosts ATK of Slasher characters by 50",
         specialName: "Zoro Special",
     },
     1753: {//20th Anni Zoro
         captain: "Boosts HP of characters with cost 30 or less by 1.3x and boosts ATK of characters with cost 30 or less by 2.5x at the start of the chain, 3.5x after the 3rd Perfect",
-        special: "Boosts ATK of characters with 30 cost or less by 1.75x for 1 turn. If Zoro is a Capain or Friend/Guest Captain, then if during that turn you score 4 Perfect hits, boosts ATK of characters by 2x in the following turn.",
+        special: "Deals 60x character's ATK in [INT] damage to one enemy. Boosts ATK of characters with 30 cost or less by 1.75x for 1 turn. If Zoro is a Capain or Friend/Guest Captain, then if during that turn you score 4 Perfect hits, boosts ATK of characters by 2x in the following turn.",
         sailor: "Boosts ATK of Slasher characters by 50",
         specialName: "Zoro Special",
     },
