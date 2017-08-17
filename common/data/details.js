@@ -9824,7 +9824,7 @@ window.details = {
         sailorNotes: "#{silence}<br>#{rewind : 2}",
         specialName: "Chopper Special",
     },
-    1760: {//20th Anni Chopper
+    1761: {//20th Anni Chopper
         captain: "Boosts ATK of [DEX] and [INT] characters by 2.5x",
         special: "Changes the orbs in the left column into [INT], [RCV] and [DEX], the orbs in the right column into [INT], [PSY] and [DEX]",
         sailor: "Restores his own special by 2 turns when it is rewinded and reduces Silence duration on this character by 2 turns",

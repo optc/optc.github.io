@@ -3373,6 +3373,32 @@ window.specials = {
     1727: {
         staticMult: function(p) { return 55; }
     },
+    1736: {
+        delay: function(p) { return 1; },
+    },
+    1737: {
+        delay: function(p) { return 1; },
+    },
+    1746: {
+        delay: function(p) { return 1; },
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[1746].turnedOn = true;
+        },
+        onDeactivation: function(p) {
+            window.specials[1746].turnedOn = false;
+        }
+    },
+    1747: {
+        delay: function(p) { return 1; },
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[1747].turnedOn = true;
+        },
+        onDeactivation: function(p) {
+            window.specials[1747].turnedOn = false;
+        }
+    },
     1750:{
         orb: function(p) { return (p.unit.class.has("Striker")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[1750].multiplier, [p.friendCaptain, p.captain]) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain]); },
         onActivation: function(p) {
@@ -3394,5 +3420,41 @@ window.specials = {
                 name: '1584warning'
             });
         },
+    },
+    1752: {
+        atk: function(p) { return !(p.unit.cost <= 30) ? 1 : window.specials[1752].multiplier; },
+        type: "class",
+        onActivation: function(p) {
+            var n = (window.specials[1752].multiplier == 1.75 ? 1 : 0);
+            window.specials[1752].multiplier = [1.75, 2][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.75, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
+                name: '1752warning'
+            });
+        }
+    },
+    1753: {
+        atk: function(p) { return !(p.unit.cost <= 30) ? 1 : window.specials[1753].multiplier; },
+        type: "class",
+        onActivation: function(p) {
+            var n = (window.specials[1753].multiplier == 1.75 ? 1 : 0);
+            window.specials[1753].multiplier = [1.75, 2][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.75, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
+                name: '1753warning'
+            });
+        }
+    },
+    1754: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain]); }
+    },
+    1755: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain]); }
+    },
+    1758: {
+        delay: function(p) { return 1; },
+    },
+    1759: {
+        delay: function(p) { return 1; },
     },
 };

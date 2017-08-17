@@ -435,4 +435,32 @@ window.zombies = {
         type: 'healer',
         multiplier: 4
     },
+    1728: { // Tashigi
+        type: 'healer',
+        multiplier: 2
+    },
+    1729: { // Tashigi
+        type: 'healer',
+        multiplier: 3
+    },
+    1735: { // Sugar
+        type: 'healer',
+        multiplier: 3
+    },
+    1746: { // Boa
+        type: 'healer',
+        amount: 1000
+    },
+    1747: { // Boa
+        type: 'healer',
+        amount: 1000
+    },
+    1756: { // Nami
+        type: 'healer',
+        multiplier: 2
+    },
+    1757: { // Nami
+        type: 'healer',
+        multiplier: 5
+    },
 };

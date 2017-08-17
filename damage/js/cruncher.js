@@ -192,11 +192,12 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if (orb == 0.5 && x.unit.type == 'DEX' && x.unit.class.has("Fighter")) orb = (window.specials[1593].turnedOn || window.specials[1463]. turnedOn || window.specials[1462]. turnedOn) ? 2 : 0.5;
             if (orb == 0.5 && x.unit.type == 'DEX' && x.unit.class.has("Powerhouse")) orb = (window.specials[1528].turnedOn) ? 2 : 0.5;
             if (orb == 0.5 && x.unit.type == 'DEX' && x.unit.class.has("Free Spirit")) orb = (window.specials[1593].turnedOn) ? 2 : 0.5;
-            if (orb == 0.5 && x.unit.type == 'DEX' && x.unit.class.has("Shooter")) orb = (window.specials[1640].turnedOn) ? 2 : 0.5;
+            if (orb == 0.5 && x.unit.type == 'DEX' && x.unit.class.has("Shooter")) orb = (window.specials[1640].turnedOn || window.specials[1746].turnedOn || window.specials[1747].turnedOn) ? 2 : 0.5;
             if (orb == 0.5 && x.unit.type == 'DEX' && x.unit.class.has("Striker")) orb = (window.specials[1651].turnedOn || window.specials[1652].turnedOn) ? 2 : 0.5;
             if (orb == 'str') orb = (window.specials[1221].turnedOn || window.specials[1222].turnedOn 
                                  || (window.specials[1259].turnedOn && x.unit.class.has("Driven")) || (window.specials[1260].turnedOn && x.unit.class.has("Driven")) 
-                                 || (window.specials[1323].turnedOn && (x.unit.class.has("Driven") || x.unit.class.has("Slasher")))|| (window.specials[1324].turnedOn && (x.unit.class.has("Driven") || x.unit.class.has("Slasher"))) || (window.specials[1528].turnedOn && x.unit.class.has("Powerhouse")) || (window.specials[1593].turnedOn && (x.unit.class.has("Fighter") || x.unit.class.has("Free Spirit")) || (window.specials[1640].turnedOn && x.unit.class.has("Shooter")) || ((window.specials[1651].turnedOn || window.specials[1652].turnedOn) && x.unit.class.has("Striker")))) ? 2 : 1;
+                                 || (window.specials[1323].turnedOn && (x.unit.class.has("Driven") || x.unit.class.has("Slasher"))) || (window.specials[1324].turnedOn && (x.unit.class.has("Driven") || x.unit.class.has("Slasher"))) || (window.specials[1528].turnedOn && x.unit.class.has("Powerhouse")) || (window.specials[1593].turnedOn && (x.unit.class.has("Fighter") || x.unit.class.has("Free Spirit"))) || (window.specials[1640].turnedOn && x.unit.class.has("Shooter")) || ((window.specials[1651].turnedOn || window.specials[1652].turnedOn) && x.unit.class.has("Striker")) || ((window.specials[1746].turnedOn || window.specials[1747].turnedOn) && x.unit.class.has("Shooter"))) ? 2 : 1;
+            
             if (orb == 0.5) orb = (window.specials[1269].turnedOn || window.specials[1270].turnedOn || window.specials[1330].turnedOn || window.specials[1546].turnedOn || window.specials[1547].turnedOn || window.specials[1557].turnedOn) ? 1 : .5;
             
             //Captain Meat orbs because Nekomamushi

@@ -324,4 +324,20 @@ window.sailors = {
         rcvStatic: function(p) { return 50; },
         hpStatic: function(p) { return 50; },
     },
+    1752: {
+        atkStatic: function(p) { return p.unit.class.has("Slasher") ? 20 : 0; },
+    },
+    1753: {
+        atkStatic: function(p) { return p.unit.class.has("Slasher") ? 20 : 0; },
+    },
+    1754: {
+        atkStatic: function(p) { return 40; },
+        rcvStatic: function(p) { return 40; },
+        hpStatic: function(p) { return 40; },
+    },
+    1755: {
+        atkStatic: function(p) { return 40; },
+        rcvStatic: function(p) { return 40; },
+        hpStatic: function(p) { return 40; },
+    },
 };
