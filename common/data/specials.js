@@ -2331,24 +2331,28 @@ window.specials = {
         type: "condition"
     },
     1421: {
-        atk: function(p) {
-            if(p.percHP == 100.0){
-                return p.unit.class.has("Driven") ? 2 : 1;
-            }else{
-                return p.unit.class.has("Driven") ? 1.5 : 1;
-            }
-        },
-        type: "class"
+        atk: function(p) { return p.unit.class.has("Driven") ? window.specials[1421].multiplier : 1; },
+        type: "class",
+        onActivation: function(p) {
+            var n = (p.percHP == 100 ? 2 : 1.5);
+            window.specials[1421].multiplier = n;
+            p.scope.notify({
+                text: 'HP ' + (n == 2 ? 'equal to' : 'below') + ' 100%, using the ' + n + 'x multiplier.',
+                name: '1421warning'
+            });
+        }
     },
     1422: {
-        atk: function(p) {
-            if(p.percHP == 100.0){
-                return p.unit.class.has("Driven") ? 2 : 1;
-            }else{
-                return p.unit.class.has("Driven") ? 1.5 : 1;
-            }
-        },
-        type: "class"
+        atk: function(p) { return p.unit.class.has("Driven") ? window.specials[1422].multiplier : 1; },
+        type: "class",
+        onActivation: function(p) {
+            var n = (p.percHP == 100 ? 2 : 1.5);
+            window.specials[1422].multiplier = n;
+            p.scope.notify({
+                text: 'HP ' + (n == 2 ? 'equal to' : 'below') + ' 100%, using the ' + n + 'x multiplier.',
+                name: '1422warning'
+            });
+        }
     },
     1425: {
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain]); },
@@ -3322,6 +3326,22 @@ window.specials = {
     },
     1713: {
         orb: function(p) { return (p.unit.class.has("Driven")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain]) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain]); }	
+    },
+    1716: {
+        atk: function(p) { return p.unit.class.has("Driven") ? window.specials[1716].multiplier : 1; },
+        type: "class",
+        onActivation: function(p) {
+            var n = (p.percHP <= 30 ? 1.75 : 1);
+            window.specials[1716].multiplier = n;
+            p.scope.notify({
+                text: 'HP ' + (n == 1.75 ? 'below' : 'above') + ' 30%, using the ' + n + 'x multiplier.',
+                name: '1716warning'
+            });
+        }
+    },
+    1718: {
+        atk: function(p) { return p.unit.class.has("Driven") ? 1.25 : 1},
+        type: "class"
     },
     1720: {
         chain: function(p) { return p.captain.class.has("Fighter") ? 2.5 : 1; },
