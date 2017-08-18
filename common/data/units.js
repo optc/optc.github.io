@@ -1724,7 +1724,7 @@ window.units = [
     [ "Sea God Neptune, King of Ryugu Kingdom", "PSY", [ "Striker", "Cerebral" ], 4, 20, 4, 3, 99, 3000000, 598, 445, 175, 1737, 1011, 324, 1 ],
     [ "Fukaboshi, Neptune Family Three Brothers - The First Son", "QCK", [ "Striker", "Powerhouse" ], 3, 13, 6, 2, 50, 392019, 166, 52, 44, 655, 588, 164, 1 ],
     [ "Fukaboshi, Top Three of the Royal Army", "QCK", [ "Striker", "Powerhouse" ], 4, 20, 6, 3, 99, 3000000, 617, 512, 155, 2015, 1201, 238, 1 ],
-    [ "Sabo [Neo], Dragon Claw", "PSY", [ "Fighter", "Free Spirit" ], 4, 30, 5, 3, 70, 1066998, 238, 135, 37, null, null, null, null ],
+    [ "Sabo [Neo], Dragon Claw", "PSY", [ "Fighter", "Free Spirit" ], 4, 30, 5, 3, 70, 1066998, 238, 135, 37, 1305, 676, 190, null ],
     [ "Sabo [Neo], Revolutionary Army Chief of Staff", "PSY", [ "Fighter", "Free Spirit" ], 5, 50, 4, 4, 99, 5000000, 1235, 595, 147, 2494, 1305, 345, null ],
     [ "Tashigi, Beach Captain", "STR", [ "Slasher", "Cerebral" ], 4, 12, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Tashigi, Holiday Captain-chan", "STR", [ "Slasher", "Cerebral" ], 5, 20, 4, 3, 99, null, null, null, null, 1770, 1090, 357, null ],
