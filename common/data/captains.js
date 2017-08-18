@@ -5159,6 +5159,28 @@ window.captains = {
     1713: {
         atk: function(p) { return p.unit.class.has("Driven") ? Math.min(3.25, 2.5 + 0.25 * p.turnCounter) : 1; }
     },
+    1714: {
+        atk: function(p) { return p.unit.type == "INT" ? 2 : 1; },
+    },
+    1715: {
+        atk: function(p) { return !p.unit.class.has("Striker") ? 1 : (((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain]) == 2) && (p.orb != 'g')) ? 2.5 : 2); },
+    },
+    1716: {
+        atk: function(p) {
+            return p.unit.class.has("Driven") ? Math.min(3, 1.2 + 0.1 * p.turnCounter) : 1;
+        }
+    },
+    1718: {
+        damageSorter: function(d) { return CrunchUtils.classSort(d, 2.5, [ "Driven" ]); },
+        hitAtk: function(p) {
+            if (!p.unit.class.has("Driven")) return 1;
+            return p.modifiers.slice(0, p.chainPosition).count("Perfect") == p.chainPosition ? 2.5 : 1;
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
+    },
+    1719: {
+        atk: function(p) { return p.unit.type != "PSY" ? 1 : (((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain]) == 2) && (p.orb != 'g')) ? 2 : 1); }
+    },
     1720: {
         atk: function(p) { return p.unit.class.has("Fighter") ? 2.5 : 1; }
     },
