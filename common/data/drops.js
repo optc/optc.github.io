@@ -2002,7 +2002,7 @@ window.drops = {
         },
         
         {
-            name: '3nd Anniversary Celebration! Duel! Luffy',
+            name: '3rd Anniversary Celebration! Duel! Luffy',
             thumb: 1600,
             '30 Stamina': [ 1600 ]
         },
