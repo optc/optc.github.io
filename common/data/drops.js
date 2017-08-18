@@ -1467,12 +1467,14 @@ window.drops = {
             thumb: 1384,
             global: true,
             gamewith: 46658,
+            condition: 'Limited amount of turns to complete the mission.',
             'All Difficulties': [ 1383, 1385, -748, -1234, -1075, -1230, -1155, -1154, -846, -842, -739, -1550 ]
         },
         
         {
             name: 'Shambles! Tashigi and Smoker?!?',
             thumb: 1397,
+            global: true,
             gamewith: 47247,
             condition: 'Your captain will be switched with your middle right character when you encounter Law.',
             'All Difficulties': [ 1396, 1398, -1192, -1232, -1238, -844, -838, -1159, -1389, -12, -737, -257 ]
@@ -1597,8 +1599,16 @@ window.drops = {
             name: 'Royal Neptune Family!',
             thumb: 1723,
             gamewith: 64138,
-            condition: 'Strikers and Powerhouse characters get a boost',
+            condition: 'Strikers and Powerhouse characters get a boost (1.5x ATK boost on 30 stamina)',
             'All Difficulties': [ 1722, 1724, -1123, -455, -1077, -560, -1212, -1536, -1577, -1579, -966, -1352 ],
+        },
+        
+        {
+            name: 'Underground Trade Port! Escape!',
+            thumb: 1735,
+            gamewith: null,
+            condition: 'Limited amount of turns to complete the mission.',
+            'All Difficulties': [ 1734, 1736, -1571, -1573, -1654, -641, -1182, -1188, -1210, -556, -964, -1354 ]
         },
         
     ],
