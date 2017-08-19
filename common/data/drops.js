@@ -1653,7 +1653,7 @@ window.drops = {
             name: 'Clash Neo!! Mihawk',
             thumb: 1680,
             global: true,
-            gamewith: null,
+            gamewith: 62444,
             Master: [ 85, 111, 118, 1679 ],
             Expert: [ 96, 111, 1679 ]
         },
@@ -1879,7 +1879,7 @@ window.drops = {
         
         {
             name: 'Clash Neo!! Sabo',
-            gamewith: null,
+            gamewith: 64230,
             thumb: 1727,
             condition: '1 Expert version, 1 Master version, and 3 different Ultimate versions with different conditions. Expert/Master: Shooter/Fighter/Cerebral Only. Can only complete 10 times each. Ultimate: Shooter Only, Fighter Only, and Cerebral Only',
             Ultimate: [ 1726 ],
@@ -2046,7 +2046,7 @@ window.drops = {
             thumb: 1258,
             global: true,
             gamewith: 38237,
-            condition: 'Has a chance of appearing at the end of ANY Raid boss when available. You MUST use the same team that you just used to complete the raid boss to fight Young Whitebeard.',
+            condition: 'Has a chance of appearing at the end of ANY Raid boss when available. You MUST use the same team that you just used to complete the raid boss to fight Young Whitebeard. Can drop a Super Evolution Skull.',
             'All Difficulties': [ 1257 ]
         },
         
@@ -2055,7 +2055,7 @@ window.drops = {
             thumb: 1380,
             global: true,
             gamewith: 46369,
-            condition: 'Has a chance of appearing at the end of ANY Raid boss when available. You MUST use the same team that you just used to complete the raid boss to fight Shanks.',
+            condition: 'Has a chance of appearing at the end of ANY Raid boss when available. You MUST use the same team that you just used to complete the raid boss to fight Shanks. Can drop a Super Evolution Skull.',
             'All Difficulties': [ 1379, 952, 776 ]
         },
         
@@ -2063,7 +2063,7 @@ window.drops = {
             name: 'Invasion! Cavendish',
             thumb: 1530,
             gamewith: 53621,
-            condition: 'Has a chance of appearing at the end of ANY Chaos Coliseum boss. You MUST use the same team that you just used to complete the Coliseum boss to fight Cavendish.',
+            condition: 'Has a chance of appearing at the end of ANY Chaos Coliseum boss. You MUST use the same team that you just used to complete the Coliseum boss to fight Cavendish. Can drop a Super Evolution Skull.',
             'All Difficulties': [ 1529 ]
         },
         
@@ -2093,7 +2093,7 @@ window.drops = {
             name: 'Rescue Ace Event - Kizaru',
             thumb: 1228,
             global: true,
-            condition: '10, 20, 30, 35 stamina difficulty. 30 and 35 Stamina has a chance of dropping the Almighty Book.',
+            condition: '10, 20, 30, 35 stamina difficulty. 30 and 35 Stamina has a chance of dropping the Silver Almighty Book.',
             'Characters': [ 968, 969, 970, 971, 972, 231, 775, 1223, 49, 43 ],
             'Boosters and Evolvers': [ 112, 191, 349, 266, 83, 118 ],
             'Global': [ -367, -649, -718, -16, -1446, -20, -1447, -73, -251, -257, -308, -359, -365, -412, -457, -639, -750, -758, -912, -914, -941, -993, -522, -1117, -526, -1173, -556, -1210, -1245, -223, -15, -23, -25, -200, -225, -546, -500, -506, -569, -791, -793 ],
@@ -2101,12 +2101,21 @@ window.drops = {
         },
         
         {
-            name: 'The Three Admirals',
+            name: 'Big Battle! The Three Admirals',
             thumb: 1314,
             gamewith: 61665,
-            condition: 'Chance of dropping the Almighty Book.',
+            condition: 'Chance of dropping the Silver Almighty Book.',
             'All Bosses': [ -1621, -1632, -1665 ],
             'Chopperman Mission': [ 1675 ],
+        },
+        
+        {
+            name: 'Big Battle! Straw Hat Pirates',
+            thumb: 1404,
+            gamewith: 65078,
+            condition: 'Chance of dropping the Silver Almighty Book.',
+            'All Bosses': [ -1621, -1632, -1665, -1678, -1721 ],
+            'Chopperman Missions': [ 1728 ],
         },
         
         {
