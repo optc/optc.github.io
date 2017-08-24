@@ -443,6 +443,10 @@ window.zombies = {
         type: 'healer',
         multiplier: 3
     },
+    1734: { // Sugar
+        type: 'healer',
+        multiplier: 3
+    },
     1735: { // Sugar
         type: 'healer',
         multiplier: 3

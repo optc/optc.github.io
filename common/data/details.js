@@ -9743,24 +9743,34 @@ window.details = {
         specialName: "Shining Brightly Upon the Oasis",
     },
     1734: {//Sugar
-        captain: "Boosts ATK of Cerebral and Fighter characters by ???x and recovers ?x character's RCV in HP at the end of each turn",
+        captain: "Boosts ATK of Cerebral and Fighter characters by 1.5x and recovers 3x character's RCV in HP at the end of each turn",
         special: "Changes bottom right orb to [STR] and bottom left orb to [INT]. Switches orbs between slots twice.",
-        specialName: "Sugar Special",
+        specialName: "Toy's Close Combat",
     },
     1735: {//Sugar
         captain: "Boosts ATK of Cerebral and Fighter characters by 1.75x and recovers 3x character's RCV in HP at the end of each turn",
         special: "Changes bottom right orb to [STR] and bottom left orb to [INT]. Switches orbs between slots twice.",
-        specialName: "Sugar Special",
+        specialName: "Toy's Close Combat",
     },
     1736: {//Trebol
-        captain: "Boosts ATK of INT characters by ???x and their HP by ???x. Reduces damage received by ???%",
+        captain: "Boosts ATK of INT characters by 2.25x. Reduces damage received by 10%",
         special: "Delays all enemies for 1 turn and deals 20x character's ATK as [INT] damage to all enemies at the end of the turn for 2 turns",
-        specialName: "Trebol Special",
+        specialName: "Sticky Sticky Burning Explosion",
     },
     1737: {//Trebol
         captain: "Boosts ATK of INT characters by 2.25x and their HP by 1.2x. Reduces damage received by 10%",
         special: "Delays all enemies for 1 turn and deals 20x character's ATK as [INT] damage to all enemies at the end of the turn for 2 turns",
-        specialName: "Trebol Special",
+        specialName: "Sticky Sticky Burning Explosion",
+    },
+    1738: {//Raid Bellamy
+        captain: "Boosts ATK of Driven characters by 2x",
+        special: "Cuts the current HP of one enemy by 10%, makes [PSY] and [INT] orbs \"beneficial\" for 1 turn and amplifies the effect of orbs by 1.75x for 1 turn",
+        specialName: "Spring Hopper - Bullet [Neo]",
+    },
+    1739: {//Raid Bellamy
+        captain: "Boosts ATK of Driven characters by 2.5x",
+        special: "Cuts the current HP of one enemy by 10%, makes [PSY] and [INT] orbs \"beneficial\" for 1 turn and amplifies the effect of orbs by 1.75x for 1 turn",
+        specialName: "Spring Hopper - Bullet [Neo]",
     },
     1746: {//Korea Boa
         captain: "Boosts ATK of Shooter characters by a variable factor between 2.5x and 3.25x based on the timing of the attack of the previous unit in the chain and recovers 1,000 HP at end of each turn",

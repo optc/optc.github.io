@@ -5228,6 +5228,25 @@ window.captains = {
     1731: {
         atk: function(p) { return 2; },
     },
+    1734: {
+        atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Cerebral") ? 1.5 : 1; },
+    },
+    1735: {
+        atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Cerebral") ? 1.75 : 1; },
+    },
+    1736: {
+        atk: function(p) { return p.unit.type == "INT" ? 2.25 : 1; },
+    },
+    1737: {
+        atk: function(p) { return p.unit.type == "INT" ? 2.25 : 1; },
+        hp: function(p) { return p.unit.type == "INT" ? 1.2 : 1; },
+    },
+    1738: {
+        atk: function(p) { return p.unit.class.has("Driven") ? 2 : 1; },
+    },
+    1739: {
+        atk: function(p) { return p.unit.class.has("Driven") ? 2.5 : 1; },
+    },
     1746: {
         damageSorter: function(d) { return CrunchUtils.classSort(d, 3.25, [ "Shooter" ]); },
         hitAtk: function(p) {

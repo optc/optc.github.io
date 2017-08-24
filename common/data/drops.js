@@ -1943,6 +1943,15 @@ window.drops = {
         },
         
         {
+            name: 'Clash!! Bellamy',
+            thumb: 1738,
+            gamewith: 66087,
+            condition: '1 Expert version and 3 Master versions with different conditions. Expert: Driven/Free Spirit/Striker Only. Can only complete 10 times each. Master: Driven Only, Free Spirit Only, and Striker Only',
+            Master: [ 1738 ],
+            Expert: [ 1738 ],
+        },
+        
+        {
             name: 'Clash!! Fujitora',
             thumb: 1595,
             gamewith: 56946,

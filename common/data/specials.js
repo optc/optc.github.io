@@ -3399,6 +3399,12 @@ window.specials = {
     1737: {
         delay: function(p) { return 1; },
     },
+    1738: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain]); }
+    },
+    1739: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain]); }
+    },
     1746: {
         delay: function(p) { return 1; },
         turnedOn: false,
