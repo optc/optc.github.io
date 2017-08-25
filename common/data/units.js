@@ -1306,7 +1306,7 @@ window.units = [
     [ "Little Succubus Sugar", "DEX", [ "Cerebral", "Slasher" ], 4, 12, 6, 1, 50, 392109, 70, 32, 50, 912, 409, 250, 1 ],
     [ "Little Succubus Sugar, Halloween Night - Masquerade", "DEX", [ "Cerebral", "Slasher" ], 5, 20, 4, 3, 99, 3000000, 844, 358, 209, 1768, 843, 407, 1 ],
     [ "Bartolomeo, Full Moon Wolf", "QCK", [ "Driven", "Fighter" ], 4, 13, 5, 2, 50, 392109, 106, 99, 33, 1171, 557, 158, 1 ],
-    [ "Bartolomeo, Full Moon Wolf Halloween Night - Masquerade", "QCK", [ "Driven", "Fighter" ], 5, 20, 4, 4, 99, 3000000, 1109, 472, 109, 2149, 1242, 247, 1 ],
+    [ "Bartolomeo, Full Moon Wolf Halloween Night - Masquerade", "QCK", [ "Driven", "Striker" ], 5, 20, 4, 4, 99, 3000000, 1109, 472, 109, 2149, 1242, 247, 1 ],
     [ "Kinemon", "STR", [ "Slasher", "Free Spirit" ], 4, 25, 6, 4, 70, 1066998, 609, 399, 62, 1142, 779, 177, 1 ],
     [ "Foxfire Kinemon", "STR", [ "Slasher", "Free Spirit" ], 5, 40, 4, 5, 99, 4000000, 1095, 708, 131, 2075, 1433, 321, 1 ],
     [ "Boa Marigold, Kuja Warrior", "INT", [ "Slasher", "Powerhouse" ], 3, 16, 5, 2, 50, 392109, 245, 116, 24, 1209, 462, 99, 1 ],
