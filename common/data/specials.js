@@ -3393,6 +3393,14 @@ window.specials = {
     1727: {
         staticMult: function(p) { return 55; }
     },
+    1732: {
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Powerhouse") ? 1.75 : 1},
+        type: "class"
+    },
+    1733: {
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Powerhouse") ? 1.75 : 1},
+        type: "class"
+    },
     1736: {
         delay: function(p) { return 1; },
     },
@@ -3405,24 +3413,48 @@ window.specials = {
     1739: {
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain]); }
     },
-    1746: {
+    1740: {
+        def: function(p) { return .2; },
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Powerhouse") ? 1.75 : 1},
+        type: "class"
+    },
+    1741: {
+        def: function(p) { return .2; },
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Powerhouse") ? 1.75 : 1},
+        type: "class"
+    },
+    1742: {
+        atk: function(p) { return p.defenseDown ? 1.75 : 1; },
+        type: "condition"
+    },
+    1743: {
+        atk: function(p) { return p.defenseDown ? 1.75 : 1; },
+        type: "condition"
+    },
+    1744: {
+        orb: function(p) { return (p.unit.class.has("Shooter")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain]) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain]); }	
+    },
+    1745: {
+        orb: function(p) { return (p.unit.class.has("Shooter")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain]) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain]); }	
+    },
+    1748: {
         delay: function(p) { return 1; },
         turnedOn: false,
         onActivation: function(p) {
-            window.specials[1746].turnedOn = true;
+            window.specials[1748].turnedOn = true;
         },
         onDeactivation: function(p) {
-            window.specials[1746].turnedOn = false;
+            window.specials[1748].turnedOn = false;
         }
     },
-    1747: {
+    1749: {
         delay: function(p) { return 1; },
         turnedOn: false,
         onActivation: function(p) {
-            window.specials[1747].turnedOn = true;
+            window.specials[1749].turnedOn = true;
         },
         onDeactivation: function(p) {
-            window.specials[1747].turnedOn = false;
+            window.specials[1749].turnedOn = false;
         }
     },
     1750:{
@@ -3482,5 +3514,12 @@ window.specials = {
     },
     1759: {
         delay: function(p) { return 1; },
+    },
+    1764: {
+        chain: function(p) { return 2.5; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 2.5 : 1;
+        }
     },
 };

@@ -5228,6 +5228,14 @@ window.captains = {
     1731: {
         atk: function(p) { return 2; },
     },
+    1732: {
+        atk: function(p) { return p.unit.type == "STR" ? 2 : 1; },
+        hp: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Powerhouse") ? 1.1 : 1; },
+    },
+    1733: {
+        atk: function(p) { return p.unit.type == "STR" ? 2.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Powerhouse") ? 1.25 : 1; },
+    },
     1734: {
         atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Cerebral") ? 1.5 : 1; },
     },
@@ -5247,7 +5255,37 @@ window.captains = {
     1739: {
         atk: function(p) { return p.unit.class.has("Driven") ? 2.5 : 1; },
     },
+    1740: {
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Powerhouse") ? 2 : 1; },
+        hp: function(p) { return p.unit.type == "DEX" ? 1.1 : 1; },
+    },
+    1741: {
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Powerhouse") ? 2.5 : 1; },
+        hp: function(p) { return p.unit.type == "DEX" ? 1.3 : 1; },
+    },
+    1742: {
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Powerhouse") ? 2 : 1; },
+        hp: function(p) { return p.unit.type == "STR" ? 1.1 : 1; },
+    },
+    1743: {
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Powerhouse") ? 2.5 : 1; },
+        hp: function(p) { return p.unit.type == "STR" ? 1.3 : 1; },
+    },
+    1744: {
+        atk: function(p) { return p.unit.class.has("Shooter") ? 2 : 1; },
+    },
+    1745: {
+        atk: function(p) { return p.unit.class.has("Shooter") ? 2 : 1; },
+    },
     1746: {
+        atk: function(p) { return p.unit.type == "QCK" ? 1.5 : 1; },
+        hp: function(p) { return p.unit.type == "QCK" ? 1.5 : 1; }
+    },
+    1747: {
+        atk: function(p) { return p.unit.type == "QCK" ? 2 : 1; },
+        hp: function(p) { return p.unit.type == "QCK" ? 2 : 1; }
+    },
+    1748: {
         damageSorter: function(d) { return CrunchUtils.classSort(d, 3.25, [ "Shooter" ]); },
         hitAtk: function(p) {
             if (!p.unit.class.has('Shooter')) return 1;
@@ -5256,7 +5294,7 @@ window.captains = {
         },
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
     },
-    1747: {
+    1749: {
         damageSorter: function(d) { return CrunchUtils.classSort(d, 3.25, [ "Shooter" ]); },
         hitAtk: function(p) {
             if (!p.unit.class.has('Shooter')) return 1;
@@ -5303,5 +5341,11 @@ window.captains = {
     },
     1761: {
         atk: function(p) { return p.unit.type == "DEX" || p.unit.type == "INT" ? 2.5 : 1; },
+    },
+    1764: {
+        atk: function(p) {
+            return Math.min(3.5, 2.25 + 0.25 * p.turnCounter);
+        },
+        hp: function(p) { return 1.25; }
     },
 };
