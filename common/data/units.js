@@ -1712,7 +1712,7 @@ window.units = [
     [ "Nico Robin, Cultural Symbol", "PSY", [ "Fighter", "Cerebral" ], 5, 20, 4, 3, 99, 3000000, 851, 366, 133, 1949, 1007, 355, 1 ],
     [ "Akainu, Summit War Coverfire", "DEX", [ "Powerhouse", "Driven" ], 4, 20, 5, 3, 70, 1066998, 138, 150, 23, 1255, 760, 143, 1 ],
     [ "Akainu, Summit War Hellfire", "DEX", [ "Powerhouse", "Driven" ], 5, 30, 4, 4, 99, 4000000, 1187, 724, 99, 2506, 1505, 251, 1 ],
-    [ "Monet, Piercing Ice and Snow", "INT", [ "Free Spirit", "Cerebral" ], 4, 20, 4, 2, 70, 1066998, 131, 103, 67, 1830, 719, 220, 1 ],
+    [ "Monet, Incarnation of Ice and Snow", "INT", [ "Free Spirit", "Cerebral" ], 4, 20, 4, 2, 70, 1066998, 131, 103, 67, 1830, 719, 220, 1 ],
     [ "Vergo, G-5 Navy Base Commander", "QCK", [ "Striker", "Fighter" ], 4, 20, 6, 3, 99, 3000000, 275, 203, 75, 1650, 1219, 300, 1 ],
     [ "Caesar Clown, Shinokuni Ruler", "STR", [ "Driven", "Fighter" ], 5, 30, 4, 4, 99, 4000000, 1097, 717, 130, 2194, 1435, 260, 1 ],
     [ "Vegapunk's Dragon (Small)", "QCK", [ "Shooter", "Driven" ], 3, 15, 4, 2, 70, 1066998, 238, 125, 45, 1429, 750, 152, 1 ],
