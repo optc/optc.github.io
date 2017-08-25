@@ -9503,12 +9503,12 @@ window.details = {
     1695: {//Vergo
         captain: "Boosts ATK of Striker characters by 2x",
         special: "Deals 50x character's ATK in [DEX] damage to one enemy, amplifies the effect of orbs for Striker characters by 1.75x for 1 turn and reduces damage received by 50% for 1 turn",
-        specialName: "Vergo Special",
+        specialName: "The Darkest Demon",
     },
     1696: {//Vergo
         captain: "Boosts ATK of Striker characters by 2.5x and reduces damage received by 10%",
         special: "Deals 50x character's ATK in [DEX] damage to one enemy, amplifies the effect of orbs for Striker characters by 1.75x for 1 turn and reduces damage received by 50% for 1 turn",
-        specialName: "Vergo Special",
+        specialName: "The Darkest Demon",
     },
     1697: {//Magellan
         captain: "Boosts ATK of all characters by 2.25x and their HP by 1.5x if there's a [STR], [DEX], [QCK], [PSY], and [INT] character in your crew. Cuts the current HP of each enemy by 15% at the end of each turn",
@@ -9644,12 +9644,12 @@ window.details = {
     1714: {//Monet
         captain: "Boosts ATK of INT characters by 2x. Recovers 2x character's RCV in HP at the end of each turn",
         special: "Deals 10x character's ATK in [INT] damage to all enemies. Randomly changes all orbs into either [TND], [BOMB] or [RCV] orbs.",
-        specialName: "Monet Special",
+        specialName: "Devouring Blizzard",
     },
     1715: {//Vergo
         captain: "Boosts ATK of Striker characters by 2.5x if they have a matching orb, by 2x otherwise",
         special: "Changes own orb into [QCK], locks all orbs for 1 turn",
-        specialName: "Vergo Special",
+        specialName: "Sealed Mouth Exterminator",
     },
     1716: {//Caesar
         captain: "Reduces HP of all characters by 50%, boosts ATK of Driven characters by 1.2x, increases his own ATK multiplier by 0.1x at the end of each turn until it reaches 3x",
@@ -9659,18 +9659,18 @@ window.details = {
     1717: {//Vegapunk Dragon
         captain: "Reduces cooldown of Shooter specials by 2 turns at the start of the fight",
         special: "Deals 3x character's ATK in [QCK] damage to all enemies",
-        specialName: "Vegapunk Dragon Special",
+        specialName: "High Maneuverable Fireball Blast",
     },
     1718: {//Buffalo
         captain: "Boosts ATK of Driven characters by 2.5x until the first hit other than Perfect",
         special: "Boosts ATK of Driven characters by 1.25x for 5 turns",
-        specialName: "Buffalo Special",
+        specialName: "Rolling Rotation",
     },
     1719: {//Baby 5
         captain: "Boosts ATK of [PSY] characters by 2x if they have matching orbs, makes INT orbs \"beneficial\" to PSY characters",
         captainNotes: "#{beneficial}",
         special: "Changes adjacent orbs into [G] orbs",
-        specialName: "Baby 5 Special",
+        specialName: "Phantasmagoric \"Weapon-Morphosis\"",
     },
     1720: {//Secret Jinbe
         captain: "Boosts ATK of Fighter characters by 2.5x",
