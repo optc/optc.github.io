@@ -9838,13 +9838,13 @@ window.details = {
         sailor: "If Bepo has a [QCK] orb and you hit a Perfect with him, keep his [QCK] orb for the next turn",
         specialName: "Bear Rush Out",
     },
-    1748: {//Boa
-        captain: "Boosts ATK of Shooter characters by a variable factor between 2.5x and 3.25x based on the timing of the attack of the previous unit in the chain and recovers 1,000 HP at end of each turn",
+    1748: {//Boa Hancock
+        captain: "Boosts ATK of Shooter characters by a variable factor between 2.5x and 3.25x based on the timing of the attack of the previous unit in the chain and recovers 1,000 HP at end of each turn. Grealy reduces chances of getting TND/RCV orbs",
         special: "Deals 6 hits of 20,000 fixed damage to random enemies, delays all enemies for 1 turn and makes [STR], [DEX], [QCK], [PSY] and [INT] orbs \"beneficial\" for Shooter characters for 2 turns",
         specialName: "Pistol Kisses",
     },
-    1749: {//Boa
-        captain: "Boosts ATK of Shooter characters by a variable factor between 2.5x and 3.25x based on the timing of the attack of the previous unit in the chain and recovers 1,000 HP at end of each turn",
+    1749: {//Boa Hancock
+        captain: "Boosts ATK of Shooter characters by a variable factor between 2.5x and 3.25x based on the timing of the attack of the previous unit in the chain and recovers 1,000 HP at end of each turn. Grealy reduces chances of getting TND/RCV orbs",
         special: "Deals 6 hits of 20,000 fixed damage to random enemies, delays all enemies for 1 turn and makes [STR], [DEX], [QCK], [PSY] and [INT] orbs \"beneficial\" for Shooter characters for 2 turns",
         specialName: "Pistol Kisses",
     },
@@ -9940,7 +9940,7 @@ window.details = {
         sailorNotes: "#{silence}<br>#{rewind : 2}",
         specialName: "Intelligent Monster",
     },
-    1764: {
+    1764: {//6+ Aokiji
         captain: "Boosts ATK of all characters by 2.25x and their HP by 1.25x. If you defeat an enemy, increases ATK boost slighty. Stacks up to 5 times to a maximum of 3.5x.",
         captainNotes: "If a character dies and revives, it counts as killing a character. If you did not defeat an enemy, lose all ATK boost stacks.",
         special: "Increases duration of any Class/Type boosting buffs and Orb Amplification buffs by 1 turn, locks the chain multiplier at 2.5x for 1 turn and deals 100000 fixed damage to all enemies that will ignore damage negating abilities and barriers.",
