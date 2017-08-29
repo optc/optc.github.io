@@ -2697,7 +2697,7 @@ window.evolutions = {
     },
     1738: {
         evolution: 1739,
-        evolvers: [  ]
+        evolvers: [ 118, 78, 84, 94, 95 ]
     },
     1740: {
         evolution: 1741,
@@ -2725,22 +2725,30 @@ window.evolutions = {
     },
     1752: {
         evolution: 1753,
-        evolvers: [  ]
+        evolvers: [ 82, 88, 93, 99, 104 ]
     },
     1754: {
         evolution: 1755,
-        evolvers: [  ]
+        evolvers: [ 81, 87, 92, 98, 103 ]
     },
     1756: {
         evolution: 1757,
-        evolvers: [  ]
+        evolvers: [ 78, 84, 89, 95, 100 ]
     },
     1758: {
         evolution: 1759,
-        evolvers: [  ]
+        evolvers: [ 79, 85, 90, 96, 101 ]
     },
     1760: {
         evolution: 1761,
+        evolvers: [ 80, 86, 91, 97, 102 ]
+    },
+    1192: {
+        evolution: 1764,
+        evolvers: [  ]
+    },
+    1769: {
+        evolution: 1770,
         evolvers: [  ]
     },
 };

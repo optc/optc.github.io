@@ -1762,5 +1762,10 @@ window.cooldowns = [
     [ 13, 9 ],
     null,
     null,
-    [ 19, 13 ]
+    [ 19, 13 ],
+    null,
+    null,
+    null,
+    [ 13, 9 ]
+    [ 13, 9 ]
 ];

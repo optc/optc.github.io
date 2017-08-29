@@ -2970,6 +2970,7 @@ window.specials = {
     },
     1598: {
         atk: function(p) { return 1.2 },
+        type: "class",
     },
     1599: {
         def: function(p) { return 0.5 },
@@ -2986,6 +2987,7 @@ window.specials = {
     },
     1607: {
         atk: function(p) { return (p.unit.class.has("Shooter")) ? 1.5 : 1; },
+        type: "class",
     },
     1613: {
         def: function(p) { return 0.5 },
@@ -3521,5 +3523,13 @@ window.specials = {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
             return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 2.5 : 1;
         }
+    },
+    1769: {
+        atk: function(p) { return (p.delayed && p.captain.class.has("Cerebral")) ? 1.5 : 1; },
+        type: "condition",
+    },
+    1770: {
+        atk: function(p) { return (p.delayed && p.captain.class.has("Cerebral")) ? 1.5 : 1; },
+        type: "condition",
     },
 };
