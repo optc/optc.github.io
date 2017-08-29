@@ -1768,7 +1768,7 @@ window.units = [
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Ben Beckman, Red Hair Pirates", "INT", [ "Cerebral", "Striker" ], 4, 20, null, 3, 70, 1066998, null, null, null, null, null, null, null ],
-    [ "Ben Beckman, 'Four Emperors' Red Hair's Right Hand Man", "INT", [ "Cerebral", "Striker" ], 5, 30, 4, 4, 99, 4000000, null, null, null, 2295, 367, 1384, null ],
+    [ "Ben Beckman, 'Four Emperors' Red Hair's Right Hand Man", "INT", [ "Cerebral", "Striker" ], 5, 30, 4, 4, 99, 4000000, null, null, null, 2295, 1384, 367, null ],
     ];
     
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
