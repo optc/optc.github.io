@@ -16,7 +16,9 @@ window.details = {
     4: {
         captain: "Boosts ATK of STR characters by 2x, and ATK of all others by 1.5x",
         special: "Deals 25x character's ATK in STR damage to one enemy",
-        specialName: "Gum-Gum Twin Jet Pistol"
+        specialName: "Gum-Gum Twin Jet Pistol",
+        limit: "This unit has a Limit Break skill tree",
+        limitNotes: "This will be updated soon"
     },
     5: {
         special: "Deals 7x character's ATK in DEX damage to one enemy",
@@ -812,7 +814,9 @@ window.details = {
     227: {
         special: "Cuts the current HP of each enemy by 30%",
         specialName: "Black Blade Ship Cutter",
-        captain: "Boosts ATK of Slasher characters by 2.5x"
+        captain: "Boosts ATK of Slasher characters by 2.5x",
+        limit: "This unit has a Limit Break skill tree",
+        limitNotes: "This will be updated soon"
     },
     228: {
         special: "Reduces Bind duration by 2 turns",
@@ -953,7 +957,9 @@ window.details = {
     257: {
         special: "Changes [STR] and [QCK] orbs into [DEX] orbs",
         specialName: "Beautiful Dual Flintlocks",
-        captain: "Boosts ATK and RCV of DEX characters by 2x"
+        captain: "Boosts ATK and RCV of DEX characters by 2x",
+        limit: "This unit has a Limit Break skill tree",
+        limitNotes: "This will be updated soon"
     },
     258: {
         special: "Changes [DEX] and [QCK] orbs into [STR] orbs",
@@ -1327,7 +1333,9 @@ window.details = {
     353: {
         special: "Boosts ATK of Shooter characters by 1.75x for 2 turns",
         specialName: "Smash Buster",
-        captain: "Boosts ATK of Shooter characters by 2.5x"
+        captain: "Boosts ATK of Shooter characters by 2.5x",
+        limit: "This unit has a Limit Break skill tree",
+        limitNotes: "This will be updated soon"
     },
     354: {
         special: "Reduces Bind and Despair duration by 3 turns",
@@ -1359,7 +1367,9 @@ window.details = {
         special: "Changes [TND] and [RCV] orbs into [DEX] orbs, deals random DEX damage to all enemies",
         specialName: "Scratch Body",
         specialNotes: "#{random : 5,000 : 20,000}",
-        captain: "Boosts ATK of DEX characters by 3x if HP is above 99% at the start of the turn"
+        captain: "Boosts ATK of DEX characters by 3x if HP is above 99% at the start of the turn",
+        limit: "This unit has a Limit Break skill tree",
+        limitNotes: "This will be updated soon"
     },
     360: {
         special: "Deals 10x character's ATK in INT damage to all enemies, protects from defeat as long as HP is above 50% for 1 turn",
@@ -1798,7 +1808,9 @@ window.details = {
     447: {
         special: "Deals 10 times the damage received in the previous turn in typeless damage to all enemies",
         specialName: "Black Hole",
-        captain: "Increases damage received by 2x, boosts ATK of STR characters by 2.5x and their HP by 2.25x"
+        captain: "Increases damage received by 2x, boosts ATK of STR characters by 2.5x and their HP by 2.25x",
+        limit: "This unit has a Limit Break skill tree",
+        limitNotes: "This will be updated soon"
     },
     448: {
         special: "Boosts chances of getting [QCK] orbs for 3 turns",
@@ -2370,7 +2382,9 @@ window.details = {
         special: "Delays all enemies for 3 turns, cuts the current HP of each enemy by 10%",
         specialName: "Heavenly Dragon Star",
         captain: "Boosts ATK of Shooter characters by 2x and their RCV by 1.5x",
-        sailor: "Boosts RCV of Shooter characters by 10"
+        sailor: "Boosts RCV of Shooter characters by 10",
+        limit: "This unit has a Limit Break skill tree",
+        limitNotes: "This will be updated soon"
     },
     557: {
         special: "Boosts chances of getting [INT] orbs for 3 turns",
@@ -3843,7 +3857,9 @@ window.details = {
     846: {
         captain: "Boosts ATK of all characters by 1.5x after the 11th hit in the chain, by 2.5x after the 22nd hit, by 2.75x after the 30th hit, by 3.5x after the 40th hit",
         specialName: "Gust: Matasaburo",
-        special: "Randomizes all orbs and changes own orb into [QCK]"
+        special: "Randomizes all orbs and changes own orb into [QCK]",
+        limit: "This unit has a Limit Break skill tree",
+        limitNotes: "This will be updated soon"
     },
     847: {
         captain: "Boosts ATK of all characters by 1.5x if HP is below 30% at the start of the turn",
@@ -4645,7 +4661,9 @@ window.details = {
                 "cooldown": [ 25, 11 ]
             }
         ],
-        specialNotes: "#{stages}"
+        specialNotes: "#{stages}",
+        limit: "This unit has a Limit Break skill tree",
+        limitNotes: "This will be updated soon"
     },
     979: {
         captain: "Boosts ATK of [PSY] and [DEX] characters by 1.75x and their RCV by 1.2x",
@@ -4715,7 +4733,9 @@ window.details = {
     993: {
         captain: "Boosts ATK of [QCK] characters by 2.5x",
         special: "Cuts the current HP of each enemy by 20% and changes own orb into [QCK]",
-        specialName: "Punc Rock Fest"
+        specialName: "Punc Rock Fest",
+        limit: "This unit has a Limit Break skill tree",
+        limitNotes: "This will be updated soon"
     },
     994: {
         captain: "Boosts amount of Beli received by 2x",
@@ -4934,7 +4954,9 @@ window.details = {
         captainNotes: "A character with both classes will get both boosts",
         special: "Amplifies the effect of orbs for 2 turns, the exact multiplier changes depending on the current HP at the time the special was activated. ",
         specialNotes: "Below 30% -> 1.75x orb boost, between 30% and 70% -> 1.5x, above 70% -> 1.25x",
-        specialName: "Eight-Impact Fist! Blow of Resentment"
+        specialName: "Eight-Impact Fist! Blow of Resentment",
+        limit: "This unit has a Limit Break skill tree",
+        limitNotes: "This will be updated soon"
     },
     1026: {
         captain: "Boosts ATK and RCV of Fighter characters by 1.5x",
@@ -4976,7 +4998,9 @@ window.details = {
     1033: {
         captain: "Boosts ATK of Striker and Slasher characters by 2.25x and reduces cooldown of Slasher and Striker characters by 2 turns at the start of the fight",
         special: "Reduces Special Cooldown of Slasher and Striker specials by 1 turn. For Slasher and Striker characters, changes Badly Matching orbs into [RCV] orbs.",
-        specialName: "Surprise Pincer Attack"
+        specialName: "Surprise Pincer Attack",
+        limit: "This unit has a Limit Break skill tree",
+        limitNotes: "This will be updated soon"
     },
     1034: {
         captain: "Boosts ATK of Striker characters by a variable amount depending on how many Strikers are on your team. If you don't attack with Bartolomeo, reduces damage received by 30% for that turn.",
@@ -5249,7 +5273,9 @@ window.details = {
             }
         ],
         specialNotes: "#{stages}",
-        specialName: "Haute Couture: Patchwork"
+        specialName: "Haute Couture: Patchwork",
+        limit: "This unit has a Limit Break skill tree",
+        limitNotes: "This will be updated soon"
     },
     1078: {
         captain: "Recovers 3x character's RCV in HP at the end of each turn",
@@ -5309,7 +5335,9 @@ window.details = {
         captain: "Boosts ATK of Striker and Fighter characters by 1.5x at the start of the chain, and by 3x after the 3rd Perfect",
         special: "Deals 20x ATK in [STR] damage to all enemies. For 2 turns, boosts ATK of Striker and Fighter characters by a variable amount depending on the current HP at the time the special was activated.",
         specialNotes: "Below 30% -> 1.75 boost, between 30% and 70% -> 1.5, above 70% -> 1.2",
-        specialName: "Drill Dragon: Drill Nail"
+        specialName: "Drill Dragon: Drill Nail",
+        limit: "This unit has a Limit Break skill tree",
+        limitNotes: "This will be updated soon"
     },
     1084: {
         captain: "Boosts HP of Driven characters by 1.5x and boosts ATK by 3x if they have a matching orb, by 1.5x otherwise. Makes [TND] and [RCV] orbs \"beneficial\" to Driven characters",
@@ -5321,7 +5349,9 @@ window.details = {
         captain: "Boosts HP of Driven characters by 1.5x and boosts ATK by 3x if they have a matching orb, by 1.5x otherwise. Makes [TND] and [RCV] orbs \"beneficial\" to Driven characters",
         special: "Cuts the current HP of each enemy by 20%. At the end of the turn, cuts the current HP of each enemy by 20% for 3 turns",
         specialNotes: "Does not stack with other 'end of turn damage' abilities",
-        specialName: "Gravito: Heavens Fall"
+        specialName: "Gravito: Heavens Fall",
+        limit: "This unit has a Limit Break skill tree",
+        limitNotes: "This will be updated soon"
     },
     1086: {
         captain: "Boosts ATK and RCV of Driven characters by 1.5x",
@@ -6114,7 +6144,9 @@ window.details = {
         special: "Delays all enemies for 3 turns, cuts the current HP of each enemy by 10%",
         specialName: "Heavenly Dragon Star",
         captain: "Boosts ATK of Shooter characters by 2x and their RCV by 1.5x",
-        sailor: "Boosts RCV of Shooter characters by 10"
+        sailor: "Boosts RCV of Shooter characters by 10",
+        limit: "This unit has a Limit Break skill tree",
+        limitNotes: "This will be updated soon"
     },
     1211: {
         special: "Changes own orb into [STR], amplifies the effect of orbs by 1.5x for 2 turns",
@@ -6203,6 +6235,8 @@ window.details = {
         ],
         specialNotes: "#{stages}",
         specialName: "More More, 10 Times \"Iron Hammer\"",
+        limit: "This unit has a Limit Break skill tree",
+        limitNotes: "This will be updated soon"
     },
     1221: {//Coliseum Oars Jr
         captain: "Boosts ATK of Slasher characters by 1.75x and the HP of Powerhouse characters by 1.2x",
@@ -6619,6 +6653,8 @@ window.details = {
         special: "Changes orbs in the top row into Matching orbs. For Shooter characters, amplifies the effect of orbs by 1.75x for 1 turn",
         sailor: "Reduces Blindness duration by 5 turns",
         specialName: "Other Side of Fate",
+        limit: "This unit has a Limit Break skill tree",
+        limitNotes: "This will be updated soon"
     },
     1273: {//Jesus Burgess
         captain: "Boosts ATK of Fighter and Powerhouse characters by 1.5x and their HP by 1.2",
@@ -6877,6 +6913,8 @@ window.details = {
         captainNotes: "If a character has a [STR] orb, regardless of type, they will have a 3.9375x ATK boost",
         special: "Deals 125x character's ATK typeless damage to all enemies and randomizes non-[STR] orbs. Boosts ATK of characters with cost 50 or higher by 1.75x for 2 turns",
         specialName: "Meteor Volcano",
+        limit: "This unit has a Limit Break skill tree",
+        limitNotes: "This will be updated soon"
     },
     1315: {//Coby
         captain: "Boosts ATK by 2x after the 2nd Perfect and by 3x after the 5th Perfect.",
@@ -6945,6 +6983,8 @@ window.details = {
         specialNotes: "#{randomHits : 10}<br>#{random : 1,000 : 32,000 : for each hit}",
         sailor: "Reduces Paralysis duration by 1 turn",
         specialName: "A Decree of the Veteran",
+        limit: "This unit has a Limit Break skill tree",
+        limitNotes: "This will be updated soon"
     },
     1321: {//Momonga
         captain: "Boosts ATK of Cerebral and Slasher characters by 2.25x and reduces damage received by 10% if there's a [STR], [DEX], [QCK], [INT], and [PSY] character on your crew.",
@@ -7458,6 +7498,8 @@ window.details = {
         captain: "Boosts ATK of all characters by 2.25x and their HP by 1.25x. Boosts ATK by 2.8125x after scoring 4 Perfects in a row",
         special: "Deals 40x character's ATK in [STR] damage to all enemies, and delays all enemies for 1 turn",
         specialName: "Gum Gum: Elephant Gun",
+        limit: "This unit has a Limit Break skill tree",
+        limitNotes: "This will be updated soon"
     },
     1388: {//Zoro 5+
         captain: "Boosts ATK of [DEX] characters by 2.5x",
@@ -7556,6 +7598,8 @@ window.details = {
         ],
         specialName: "Stonewall Punk",
         specialNotes: "#{colorAffinity : 1.75}<br>#{stages}",
+        limit: "This unit has a Limit Break skill tree",
+        limitNotes: "This will be updated soon"
     },
     1402: {//Colo Dalton
         captain: "Boosts ATK of [PSY] and [QCK] characters by 2x",
@@ -8112,6 +8156,8 @@ window.details = {
         specialNotes: "#{randomHits : 15}",
         sailor: "Completely resists Paralysis on this character",
         specialName: "Swamp-Swamp Gatling Gun",
+        limit: "This unit has a Limit Break skill tree",
+        limitNotes: "This will be updated soon"
     },
     1480: {//Vander Decken IX
         captain: "Boosts ATK by 2.5x after scoring 2 Perfects in a row",
@@ -8473,6 +8519,8 @@ window.details = {
         specialNotes: "#{stages}",
         sailor: "Completely resists Blindness",
         specialName: "Long-Range Attack: Bagworm",
+        limit: "This unit has a Limit Break skill tree",
+        limitNotes: "This will be updated soon"
     },
     1533: {//Rayleigh
         captain: "Boosts ATK of [QCK] characters by 2x and their HP by 1.2x at the start of the chain, by 2.5x after the 4th Perfect.",
@@ -8542,6 +8590,8 @@ window.details = {
         special: "Cuts the current HP of each enemy by 10%. If enemies have Delay Prevention, ignores it and Delays all enemies for 1 turn. Otherwise, Delays all enemies for 3 turns",
         sailor: "Completely resists Blindness",
         specialName: "Green Star, Impact Wolf",
+        limit: "This unit has a Limit Break skill tree",
+        limitNotes: "This will be updated soon"
     },
     1544: {//Sakura Koala
         captain: "Boosts ATK of Fighter characters by 1.75x and heals for .3x her RCV at the end of the turn each time you hit a Perfect",
@@ -9033,6 +9083,8 @@ window.details = {
         captain: "Boosts ATK of Striker characters by 3x if HP is below 30% at the start of the turn, by 2.5x otherwise and boosts HP of Striker characters by 1.2x",
         special: "Reduces crew's current HP by 80%, boosts ATK of Striker characters by 2x for 1 turn",
         specialName: "Double Steel Magnetic Arm",
+        limit: "This unit has a Limit Break skill tree",
+        limitNotes: "This will be updated soon"
     },
     1622: {//Reborn Doffy
         special: "Switches orbs between slots twice, amplifies the effect of orbs by 2x for 1 turn",
@@ -9120,6 +9172,8 @@ window.details = {
         special: "Boosts ATK of Powerhouse characters by 1.75x for 3 turns",
         specialName: "Rebellion against the \"Prohibition\" - Taboo",
         sailor: "When any other Powerhouse character uses a special, reduces own cooldown by 1 turn",
+        limit: "This unit has a Limit Break skill tree",
+        limitNotes: "This will be updated soon"
     },
     1633: {//Punk Hazard Dragon
         captain: "Boosts ATK of [STR] characters by 1.75x and the HP of Powerhouse characters by 1.2x",
@@ -9334,6 +9388,8 @@ window.details = {
         captain: "Boosts ATK of Shooter characters by 2.5x and boosts ATK of Shooters by 3.25x after scoring 3 PERFECTS in a row",
         special: "Locks all orbs for 1 turn. If during that turn, you hit 2 PERFECTS and your Captain is a Shooter, boosts ATK of Shooter characters by 2x for 1 turn in the following turn.",
         specialName: "Ice Saber",
+        limit: "This unit has a Limit Break skill tree",
+        limitNotes: "This will be updated soon"
     },
     1666: {//Kyros
         captain: "Boosts ATK of Striker characters by 2x",
@@ -9407,6 +9463,8 @@ window.details = {
         captain: "Boosts ATK of Slasher characters by 2.5x at the start of the chain, by 3.25x after the 3rd Perfect",
         special: "Boosts the Color Affinity of Slasher by 1.5x for 1 turn, changes middle row orbs into matching orbs and switches orbs between slots three times",
         specialName: "ROOM: Kikoku",
+        limit: "This unit has a Limit Break skill tree",
+        limitNotes: "This will be updated soon"
     },
     1679: {//Kai Mihawk
         special: "Cuts the current HP of each enemy by 30%",
@@ -9527,6 +9585,8 @@ window.details = {
         special: "Inflicts Toxic to all enemies, recovers 13x character's RCV in HP at the end of each turn for 3 turns",
         specialNotes: "Toxic starts at 50x character's attack and increases by 2x at the end of every turn until 2,000,000 damage per turn.",
         specialName: "Venom Cloud",
+        limit: "This unit has a Limit Break skill tree",
+        limitNotes: "This will be updated soon"
     },
     1699: {//Jinbe
         captain: "Boosts ATK of Fighter characters by 2x, and their HP by 1.2x",
@@ -9541,6 +9601,8 @@ window.details = {
         specialName: "Gentle Ultrasound Wave",
         specialNotes: "This is most likely the effect that prevents your chain from exceeding a certain value.",
         sailor: "Boosts ATK of Fighter characters by 75",
+        limit: "This unit has a Limit Break skill tree",
+        limitNotes: "This will be updated soon"
     },
     1701: {//Ivankov
         captain: "Boosts ATK of Free Spirit characters by 2x",
@@ -9581,6 +9643,8 @@ window.details = {
         specialName: "Hair Removal Fist",
         specialNotes: "#{stages}",
         sailor: "Completely resists Paralysis on this character",
+        limit: "This unit has a Limit Break skill tree",
+        limitNotes: "This will be updated soon"
     },
     1703: {//Hannyabal
         captain: "Boosts ATK of [INT] characters by 2x",
@@ -9593,6 +9657,8 @@ window.details = {
         special: "Reduces damage received by 50% for 2 turns and boosts ATK against enemies inflicted with Toxic by 1.75x for 2 turns",
         specialName: "Inferno Hell Wheel",
         sailor: "Makes [STR], [QCK], [DEX], [PSY] and [INT] orbs \"beneficial\" for this unit if your Captain is a Striker character",
+        limit: "This unit has a Limit Break skill tree",
+        limitNotes: "This will be updated soon"
     },
     1705: {//Bon Clay
         captain: "Boosts ATK of [STR] characters by 2x",
@@ -9605,6 +9671,8 @@ window.details = {
         special: "Removes all positive buffs on your team. If the special is activated with more than ??% health remaining, protects from defeat for 1 turn",
         specialName: "A Speech Left in Hell",
         sailor: "Boosts HP, RCV, and ATK of all characters by 50",
+        limit: "This unit has a Limit Break skill tree",
+        limitNotes: "This will be updated soon"
     },
     1707: {//Shanks 6+
         captain: "Boosts ATK of [PSY] characters by 2.75x and their HP by 1.3x. Boosts chances of getting [PSY] orbs proportionally to the crew's current HP.",
@@ -9646,6 +9714,8 @@ window.details = {
         captainNotes: "If a character dies and revives, it counts as killing a character. If you did not defeat an enemy, lose all ATK boost stacks.",
         special: "Deals 50x character's ATK as typeless damage to all enemies. Amplifies the effect of orbs for Driven characters by 2x for 1 turn.",
         specialName: "Blazing Hound Crimson Lotus",
+        limit: "This unit has a Limit Break skill tree",
+        limitNotes: "This will be updated soon"
     },
     1714: {//Monet
         captain: "Boosts ATK of INT characters by 2x. Recovers 2x character's RCV in HP at the end of each turn",
@@ -9686,7 +9756,9 @@ window.details = {
     1721: {//Secret Jinbe
         captain: "Boosts HP of Fighter characters by 1.4x and boosts ATK by 2.75x if they have a matching orb, by 2.5x otherwise.",
         special: "If your Captain is a Fighter character, changes adjacent orbs into matching orbs and locks the chain multiplier at 2.5x for 1 turn",
-        specialName: "Passive Agressive Boss"
+        specialName: "Passive Agressive Boss",
+        limit: "This unit has a Limit Break skill tree",
+        limitNotes: "This will be updated soon"
     },
     1722: {//Neptune
         captain: "Boosts ATK of Striker characters by 2x.",
@@ -9801,6 +9873,8 @@ window.details = {
         special: "Changes all orbs to [DEX] orbs, reduces the defense of all enemies by ???% for 2 turns, and boosts ATK of Striker and Powerhouse characters by 1.75x for 2 turns",
         sailor: "Makes [STR] orbs \"beneficial\" for this unit",
         specialName: "Snake Hair Possession: Eight-Headed Serpent",
+        limit: "This unit has a Limit Break skill tree",
+        limitNotes: "This will be updated soon"
     },
     1742: {//Marigold
         captain: "Boosts ATK of Striker and Powerhouse characters by 2x and boosts HP of [STR] characters by 1.1x",
@@ -9813,6 +9887,8 @@ window.details = {
         special: "Changes [QCK] and [DEX] orbs into Matching orbs, boosts ATK against enemies with reduced defense by 1.75x for 2 turns and reduces damage received by 60% for 1 turn",
         sailor: "Makes [DEX] orbs \"beneficial\" for this unit",
         specialName: "Snake Hair Possession: Salamander",
+        limit: "This unit has a Limit Break skill tree",
+        limitNotes: "This will be updated soon"
     },
     1744: {//Marguerite
         captain: "Boosts ATK of Shooter characters by 2x",
@@ -9825,6 +9901,8 @@ window.details = {
         special: "Cuts the current HP of one enemy by 7% and amplifies the effect of orbs for Shooter characters by 1.75x for 3 turns",
         sailor: "Boosts ATK, HP and RCV of Shooter characters by 30",
         specialName: "Defender's Spade-Shaped Arrow",
+        limit: "This unit has a Limit Break skill tree",
+        limitNotes: "This will be updated soon"
     },
     1746: {//Bepo
         captain: "Boosts ATK and HP of QCK characters by 1.5x",
@@ -9837,6 +9915,8 @@ window.details = {
         special: "Cuts the current HP of one enemy by 15% and reduces enemy's Threshold Damage Reduction duration by 5 turns",
         sailor: "If Bepo has a [QCK] orb and you hit a Perfect with him, keep his [QCK] orb for the next turn",
         specialName: "Bear Rush Out",
+        limit: "This unit has a Limit Break skill tree",
+        limitNotes: "This will be updated soon"
     },
     1748: {//Boa Hancock
         captain: "Boosts ATK of Shooter characters by a variable factor between 2.5x and 3.25x based on the timing of the attack of the previous unit in the chain and recovers 1,000 HP at end of each turn. Grealy reduces chances of getting [TND] / [RCV] orbs",
@@ -9847,6 +9927,8 @@ window.details = {
         captain: "Boosts ATK of Shooter characters by a variable factor between 2.5x and 3.25x based on the timing of the attack of the previous unit in the chain and recovers 1,000 HP at end of each turn. Grealy reduces chances of getting [TND] / [RCV] orbs",
         special: "Deals 6 hits of 20,000 fixed damage to random enemies, delays all enemies for 1 turn and makes [STR], [DEX], [QCK], [PSY] and [INT] orbs \"beneficial\" for Shooter characters for 2 turns",
         specialName: "Pistol Kisses",
+        limit: "This unit has a Limit Break skill tree",
+        limitNotes: "This will be updated soon"
     },
     1750: {//Korea Law
         captain: "Boosts ATK of Striker characters by 3x and heals for .5x his RCV at the end of the turn each time you hit a Perfect",
@@ -9956,5 +10038,7 @@ window.details = {
         captain: "Boosts ATK of Cerebral characters by 2.5x and their HP by 1.2x at the start of the chain, and boosts ATK of Cerebral characters by 3.25x following a chain of Good > Great > Perfect hits",
         special: "Delays all enemies for 1 turn. If your caprain is a Cerebral Character, boosts ATK against delayed enemies by 1.5x for 1 turn and changes adjacent orbs into Matching Orbs",
         specialName: "Restraining Gunpoint",
+        limit: "This unit has a Limit Break skill tree",
+        limitNotes: "This will be updated soon"
     },
 };

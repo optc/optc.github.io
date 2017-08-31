@@ -525,5 +525,13 @@ window.matchers = [
         target: 'sailor',
         matcher: /Restores (his|her) own special/i
     },
+    
+    /* * * * * Limit Break * * * * */
+    
+    {
+        name: 'Has Limit Break',
+        target: 'limit',
+        matcher: /\S/i
+    },
 
 ];

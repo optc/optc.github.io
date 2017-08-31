@@ -115,6 +115,13 @@
         ng-click="filters.custom[n] = !filters.custom[n]">{{filter.name}}</span>
 </div>
 
+<div class="filter-container">
+    <span class="filter-header">Limit Break filters</span>
+    <span class="filter width-12 custom" ng-repeat="(n,filter) in filterData" ng-if="filter.target.indexOf('limit') == 0"
+        ng-model="filters.custom[n]" ng-class="{ active: filters.custom[n] }"
+        ng-click="filters.custom[n] = !filters.custom[n]">{{filter.name}}</span>
+</div>
+
 <div class="filter-container" ng-if="showLogFilters">
     <span class="filter-header">Character Log filters</span>
     <span class="filter width-12 custom" ng-model="filters.noLog" ng-class="{ active: filters.noLog }"

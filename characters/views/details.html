@@ -196,6 +196,21 @@
                                         <span class="notes" ng-if="details.specialNotes" ng-bind-html="details.specialNotes | notes | decorate"></span>
                                     </td>
                                 </tr>
+                                <tr>
+                                    <td>Limit Break</td>
+                                    <td>
+                                        <!-- same limit break (differences across versions) -->
+                                        <div ng-if="!isLimitHybrid" ng-bind-html="details.limit | decorate"></div>
+                                        <!-- different sailor abilities -->
+                                        <div ng-if="isLimitHybrid">
+                                            <span class="badge badge-japan">Japan</span>
+                                            <div ng-bind-html="details.limit.japan | decorate"></div>
+                                            <span class="badge badge-global">Global</span>
+                                            <div ng-bind-html="details.limit.global | decorate"></div>
+                                        </div>
+                                        <span class="notes" ng-if="details.limitNotes" ng-bind-html="details.limitNotes | notes | decorate"></span>
+                                    </td>
+                                </tr>
                                 <tr ng-if="cooldown && !isSpecialStaged">
                                     <td>Cooldown</td>
                                     <td>
