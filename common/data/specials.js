@@ -3397,10 +3397,12 @@ window.specials = {
     },
     1732: {
         atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Powerhouse") ? 1.75 : 1},
+        warning: "Selected special (%name%) assumes that the enemy has Delay Protection.",
         type: "class"
     },
     1733: {
         atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Powerhouse") ? 1.75 : 1},
+        warning: "Selected special (%name%) assumes that the enemy has Delay Protection.",
         type: "class"
     },
     1736: {
