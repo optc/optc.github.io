@@ -1769,6 +1769,8 @@ window.aliases = {
     1768: ['', '', ''],
     1769: ['', '', 'Secret Benn Beckman', 'Secret Ben Beckman'],
     1770: ['', '', 'Secret Benn Beckman', 'Secret Ben Beckman'],
+    1771: ['', '', 'Neo Bartholomew Kuma', 'Neo Kuma'],
+    1772: ['', '', 'Neo Bartholomew Kuma', 'Neo Kuma'],
 };
 
 //  xxxx: ['JPN', 'FR', 'Other'],

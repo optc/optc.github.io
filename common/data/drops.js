@@ -1820,6 +1820,15 @@ window.drops = {
         },
 
         {
+            name: 'Clash Neo!! Tyrant Kuma',
+            thumb: 1772,
+            gamewith: null,
+            condition: '1 Master version and 3 Ultimate versions with different conditions. Master: Shooter/Slasher/Cerebral Only. Can only complete 10 times each. Ultimate: Shooter Only, Slasher Only, and Cerebral Only',
+            Ultimate: [ 1771 ],
+            Master: [ 1771 ]
+        },
+
+        {
             name: 'Clash!! Pirate Empress Hancock',
             thumb: 865,
             global: true,

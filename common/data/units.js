@@ -1769,6 +1769,8 @@ window.units = [
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Ben Beckman, Red Hair Pirates", "INT", [ "Cerebral", "Striker" ], 4, 20, null, 3, 70, 1066998, null, null, null, null, null, null, null ],
     [ "Ben Beckman, 'Four Emperors' Red Hair's Right Hand Man", "INT", [ "Cerebral", "Striker" ], 5, 30, 4, 4, 99, 4000000, null, null, null, 2295, 1384, 367, null ],
+    [ "Tyrant Bartholomew Kuma [Neo]", "INT", [ "Cerebral", "Powerhouse" ], 4, 30, 4, 2, 70, 1066998, null, null, null, null, null, null, null ],
+    [ "Tyrant Bartholomew Kuma [Neo], Government Human Weapon", "INT", [ "Cerebral", "Powerhouse" ], 5, 50, 7, 3, 99, 5000000, null, null, null, 3070, 1445, 90, null ],
     ];
     
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],

@@ -5376,4 +5376,12 @@ window.captains = {
         hitModifiers: ["Good", "Great", "Perfect", "Perfect", "Perfect", "Perfect"],
         hp: function(p) { return p.unit.class.has("Cerebral") ? 1.2 : 1; }
     },
+    1771: {
+        atk: function(p) { return p.unit.class.has("Cerebral") ? 2 : 1; },
+        hp: function(p) { return p.unit.class.has("Cerebral") ? 2 : 1; }
+    },
+    1772: {
+        atk: function(p) { return p.unit.class.has("Cerebral") ? 2 : 1; },
+        hp: function(p) { return p.unit.class.has("Cerebral") ? 2 : 1; }
+    },
 };

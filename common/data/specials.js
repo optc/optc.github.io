@@ -3534,4 +3534,10 @@ window.specials = {
         atk: function(p) { return (p.delayed && p.captain.class.has("Cerebral")) ? 1.5 : 1; },
         type: "condition",
     },
+    1771: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain]); }
+    },
+    1772: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain]); }
+    },
 };

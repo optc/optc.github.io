@@ -1769,4 +1769,6 @@ window.families = [
     null,
     "Ben Beckman",
     "Ben Beckman",
+    "Bartholomew Kuma",
+    "Bartholomew Kuma",
 ];

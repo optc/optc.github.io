@@ -10038,4 +10038,16 @@ window.details = {
         limit: "This unit has a Limit Break skill tree",
         limitNotes: "This will be updated soon"
     },
+    1771: {
+        captain: "Boosts ATK and HP of Cerebral characters by 2x",
+        specialName: "Thrust Pad Cannon [Neo]",
+        special: "Changes [RCV], [TND], [EMPTY], [BLOCK] and [BOMB] orbs into Matching orbs, amplifies the effect of orbs by 1.75x for 1 turn",
+        specialNotes: "#{orb : 1.75x}"
+    },
+    1772: {
+        captain: "Boosts ATK and HP of Cerebral characters by 2x, deals 5 times the damage received in the previous turn in STR damage to all enemies at the end of each turn",
+        specialName: "Thrust Pad Cannon [Neo]",
+        special: "Changes [RCV], [TND], [EMPTY], [BLOCK] and [BOMB] orbs into Matching orbs, amplifies the effect of orbs by 1.75x for 1 turn",
+        specialNotes: "#{orb : 1.75x}"
+    },
 };
