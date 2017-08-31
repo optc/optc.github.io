@@ -1804,29 +1804,29 @@ window.specials = {
         type: "condition"
     },
     1239: {
-        turnedOn: false,
+        turnedOn: [ false, false ],
         onActivation: function(p) {
-            window.specials[1239].turnedOn = true;
+            window.specials[1239].turnedOn[p.slot] = true;
             p.scope.notify({
                 text: 'Only affects damage if Kizaru is your captain',
                 name: '1239warning'
             });
         },
         onDeactivation: function(p) {
-            window.specials[1239].turnedOn = false;
+            window.specials[1239].turnedOn[p.slot] = false;
         }
     },
     1240: {
-        turnedOn: false,
+        turnedOn: [ false, false ],
         onActivation: function(p) {
-            window.specials[1240].turnedOn = true;
+            window.specials[1240].turnedOn[p.slot] = true;
             p.scope.notify({
                 text: 'Only affects damage if Kizaru is your captain',
                 name: '1240warning'
             });
         },
         onDeactivation: function(p) {
-            window.specials[1240].turnedOn = false;
+            window.specials[1240].turnedOn[p.slot] = false;
         }
     },
     1241: {

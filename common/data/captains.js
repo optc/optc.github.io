@@ -3219,12 +3219,24 @@ window.captains = {
     },
     1239: {
         atk: function(p){ 
-            return window.specials[1239].turnedOn || window.specials[1240].turnedOn ? 3 : 2; },
+            var specialEnabled = false;
+            for(var i=0;i<2;i++)
+            {
+                if(window.specials[1239].turnedOn[i]==true){specialEnabled = true;}
+                if(window.specials[1240].turnedOn[i]==true){specialEnabled = true;}
+            }
+            return specialEnabled ? 3 : 2; },
         rcv: function(p) { return 1.3 }
     },
     1240: {
         atk: function(p){ 
-            return window.specials[1239].turnedOn || window.specials[1240].turnedOn ? 3 : 2; },
+            var specialEnabled = false;
+            for(var i=0;i<2;i++)
+            {
+                if(window.specials[1239].turnedOn[i]==true){specialEnabled = true;}
+                if(window.specials[1240].turnedOn[i]==true){specialEnabled = true;}
+            }
+            return specialEnabled ? 3 : 2; },
         rcv: function(p) { return 1.3 }
     },
     1241: {
