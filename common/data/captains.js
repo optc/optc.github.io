@@ -4065,6 +4065,9 @@ window.captains = {
     1441: {
         atk: function(p) { return p.unit.type == "INT" ? 1.5 : 1; },
     },
+    1442: {
+        atk: function(p) { return p.unit.type == "INT" ? 2.25 : 1; },
+    },
     1443: {
         damageSorter: function(d) { return CrunchUtils.classSort(d, 2.75, [ "Powerhouse" ]); },
         hitAtk: function(p) {

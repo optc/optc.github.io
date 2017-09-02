@@ -9659,13 +9659,13 @@ window.details = {
     },
     1705: {//Bon Clay
         captain: "Boosts ATK of [STR] characters by 2x",
-        special: "Removes all positive buffs on your team. If the special is activated with more than ??% health remaining, protects from defeat for 1 turn",
+        special: "Removes all positive buffs on your team. If the special is activated with more than 50% health remaining, protects from defeat for 1 turn",
         specialName: "A Speech Left in Hell",
         sailor: "Boosts HP, RCV, and ATK of all characters by 50",
     },
     1706: {//Bon Clay
         captain: "Boosts ATK of [STR] characters by 2.5x at the start of the chain, and boosts ATK of [STR] characters by 3.125x after scoring 3 Perfects in a row",
-        special: "Removes all positive buffs on your team. If the special is activated with more than ??% health remaining, protects from defeat for 1 turn",
+        special: "Removes all positive buffs on your team. If the special is activated with more than 50% health remaining, protects from defeat for 1 turn",
         specialName: "A Speech Left in Hell",
         sailor: "Boosts HP, RCV, and ATK of all characters by 50",
         limit: "This unit has a Limit Break skill tree",
@@ -9819,13 +9819,13 @@ window.details = {
     },
     1732: {//Nekomamushi
         captain: "Boosts ATK of [STR] characters by 2x, boosts HP of Striker and Powerhouse characters by 1.1x",
-        special: "Deals 50x character's ATK in typeless damage to all enemies that will ignore damage negating abilities and barriers. If enemies have debuff protection at the time the special was activated, boosts ATK of Striker and Powerhouse characters by 1.75x for 1 turn and changes all orbs, including [BLOCK] orbs, into Matching orbs",
+        special: "Deals 50x character's ATK in typeless damage to one enemy that will ignore damage negating abilities and barriers. If enemies have debuff protection at the time the special was activated, boosts ATK of Striker and Powerhouse characters by 1.75x for 1 turn and changes all orbs, including [BLOCK] orbs, into Matching orbs",
         specialNotes: "#{ignoreBarrier}",
         specialName: "Nekomamushi Special",
     },
     1733: {//Nekomamushi
         captain: "Boosts ATK of [STR] characters by 2.5x, boosts HP of Striker and Powerhouse characters by 1.25x",
-        special: "Deals 50x character's ATK in typeless damage to all enemies that will ignore damage negating abilities and barriers. If enemies have debuff protection at the time the special was activated, boosts ATK of Striker and Powerhouse characters by 1.75x for 1 turn and changes all orbs, including [BLOCK] orbs, into Matching orbs",
+        special: "Deals 50x character's ATK in typeless damage to one enemy that will ignore damage negating abilities and barriers. If enemies have debuff protection at the time the special was activated, boosts ATK of Striker and Powerhouse characters by 1.75x for 1 turn and changes all orbs, including [BLOCK] orbs, into Matching orbs",
         specialNotes: "#{ignoreBarrier}",
         specialName: "Nekomamushi Special",
     },
@@ -9916,12 +9916,12 @@ window.details = {
         limitNotes: "This will be updated soon"
     },
     1748: {//Boa Hancock
-        captain: "Boosts ATK of Shooter characters by a variable factor between 2.5x and 3.25x based on the timing of the attack of the previous unit in the chain and recovers 1,000 HP at end of each turn. Grealy reduces chances of getting [TND] / [RCV] orbs",
+        captain: "Boosts ATK of Shooter characters by a variable factor between 2.5x and 3.25x based on the timing of the attack of the previous unit in the chain and recovers 1,000 HP at end of each turn. Greatly reduces chances of getting [TND] / [RCV] orbs",
         special: "Deals 6 hits of 20,000 fixed damage to random enemies, delays all enemies for 1 turn and makes [STR], [DEX], [QCK], [PSY] and [INT] orbs \"beneficial\" for Shooter characters for 2 turns",
         specialName: "Pistol Kisses",
     },
     1749: {//Boa Hancock
-        captain: "Boosts ATK of Shooter characters by a variable factor between 2.5x and 3.25x based on the timing of the attack of the previous unit in the chain and recovers 1,000 HP at end of each turn. Grealy reduces chances of getting [TND] / [RCV] orbs",
+        captain: "Boosts ATK of Shooter characters by a variable factor between 2.5x and 3.25x based on the timing of the attack of the previous unit in the chain and recovers 1,000 HP at end of each turn. Greatly reduces chances of getting [TND] / [RCV] orbs",
         special: "Deals 6 hits of 20,000 fixed damage to random enemies, delays all enemies for 1 turn and makes [STR], [DEX], [QCK], [PSY] and [INT] orbs \"beneficial\" for Shooter characters for 2 turns",
         specialName: "Pistol Kisses",
         limit: "This unit has a Limit Break skill tree",
@@ -10045,7 +10045,7 @@ window.details = {
         specialNotes: "#{orb : 1.75x}"
     },
     1772: {
-        captain: "Boosts ATK and HP of Cerebral characters by 2x, deals 5 times the damage received in the previous turn in STR damage to all enemies at the end of each turn",
+        captain: "Boosts ATK and HP of Cerebral characters by 2x, deals 5 times the damage received in the previous turn in [INT] damage to all enemies at the end of each turn",
         specialName: "Thrust Pad Cannon [Neo]",
         special: "Changes [RCV], [TND], [EMPTY], [BLOCK] and [BOMB] orbs into Matching orbs, amplifies the effect of orbs by 1.75x for 1 turn",
         specialNotes: "#{orb : 1.75x}"
