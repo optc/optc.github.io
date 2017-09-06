@@ -9278,7 +9278,7 @@ window.details = {
     },
     1650: {//Brook x5
         captain: "Boosts RCV of [DEX] characters by 1.5x and boosts ATK by 3x if they have a matching orb, by 1.5x otherwise.",
-        special: "Changes [BLOCK], [TND], [EMPTY], and [BOMB] orbs into [DEX] orbs and amplifies the effect of orbs by 1.5x for 1 turns",
+        special: "Changes [BLOCK], [TND], [EMPTY], and [BOMB] orbs into [DEX] orbs and amplifies the effect of orbs by 1.5x for 1 turn",
         specialName: "Eyes Blinded by True Beauty",
     },
     1651: {//Nekomamushi
@@ -9674,7 +9674,7 @@ window.details = {
     1707: {//Shanks 6+
         captain: "Boosts ATK of [PSY] characters by 2.75x and their HP by 1.3x. Boosts chances of getting [PSY] orbs proportionally to the crew's current HP.",
         captainNotes: "At 1 HP, the rate of [PSY] orbs is ???% and at full HP, the rate of [PSY] orbs is ???%",
-        special: "Deals 75x character's ATK in typeless damage to one enemy, reduces the defense of all enemies by 100% for 1 turns and changes all orbs to [PSY] orbs",
+        special: "Deals 75x character's ATK in typeless damage to one enemy, reduces the defense of all enemies by 100% for 1 turn and changes all orbs to [PSY] orbs",
         specialName: "One-Armed Man that Splits the Heavens",
     },
     1708: {//Summer Nami
@@ -9901,29 +9901,29 @@ window.details = {
         limit: "This unit has a Limit Break skill tree",
         limitNotes: "This will be updated soon"
     },
-    1746: {//Bepo
+    1746: {//Boa Hancock
+        captain: "Boosts ATK of Shooter characters by a variable factor between 2.5x and 3.25x based on the timing of the attack of the previous unit in the chain and recovers 1,000 HP at end of each turn. Greatly reduces chances of getting [TND] / [RCV] orbs",
+        special: "Deals 6 hits of 20,000 fixed damage to random enemies, delays all enemies for 1 turn and makes [STR], [DEX], [QCK], [PSY] and [INT] orbs \"beneficial\" for Shooter characters for 2 turns",
+        specialName: "Pistol Kisses",
+    },
+    1747: {//Boa Hancock
+        captain: "Boosts ATK of Shooter characters by a variable factor between 2.5x and 3.25x based on the timing of the attack of the previous unit in the chain and recovers 1,000 HP at end of each turn. Greatly reduces chances of getting [TND] / [RCV] orbs",
+        special: "Deals 6 hits of 20,000 fixed damage to random enemies, delays all enemies for 1 turn and makes [STR], [DEX], [QCK], [PSY] and [INT] orbs \"beneficial\" for Shooter characters for 2 turns",
+        specialName: "Pistol Kisses",
+        limit: "This unit has a Limit Break skill tree",
+        limitNotes: "This will be updated soon"
+    },
+    1748: {//Bepo
         captain: "Boosts ATK and HP of QCK characters by 1.5x",
         special: "Cuts the current HP of one enemy by 15% and reduces enemy's Threshold Damage Reduction duration by 5 turns",
         sailor: "If Bepo has a [QCK] orb and you hit a Perfect with him, keep his [QCK] orb for the next turn",
         specialName: "Bear Rush Out",
     },
-    1747: {//Bepo
+    1749: {//Bepo
         captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK and HP of QCK characters by 2x",
         special: "Cuts the current HP of one enemy by 15% and reduces enemy's Threshold Damage Reduction duration by 5 turns",
         sailor: "If Bepo has a [QCK] orb and you hit a Perfect with him, keep his [QCK] orb for the next turn",
         specialName: "Bear Rush Out",
-        limit: "This unit has a Limit Break skill tree",
-        limitNotes: "This will be updated soon"
-    },
-    1748: {//Boa Hancock
-        captain: "Boosts ATK of Shooter characters by a variable factor between 2.5x and 3.25x based on the timing of the attack of the previous unit in the chain and recovers 1,000 HP at end of each turn. Greatly reduces chances of getting [TND] / [RCV] orbs",
-        special: "Deals 6 hits of 20,000 fixed damage to random enemies, delays all enemies for 1 turn and makes [STR], [DEX], [QCK], [PSY] and [INT] orbs \"beneficial\" for Shooter characters for 2 turns",
-        specialName: "Pistol Kisses",
-    },
-    1749: {//Boa Hancock
-        captain: "Boosts ATK of Shooter characters by a variable factor between 2.5x and 3.25x based on the timing of the attack of the previous unit in the chain and recovers 1,000 HP at end of each turn. Greatly reduces chances of getting [TND] / [RCV] orbs",
-        special: "Deals 6 hits of 20,000 fixed damage to random enemies, delays all enemies for 1 turn and makes [STR], [DEX], [QCK], [PSY] and [INT] orbs \"beneficial\" for Shooter characters for 2 turns",
-        specialName: "Pistol Kisses",
         limit: "This unit has a Limit Break skill tree",
         limitNotes: "This will be updated soon"
     },
@@ -10026,8 +10026,28 @@ window.details = {
         specialNotes: "#{ignoreBarrier}",
         specialName: "Determined Man's Ice Attack",
     },
+    1765: {//Blue Gilly
+        captain: "Boosts ATK of Fighter characters by 1.5x",
+        special: "Deals 10 hits of 5x character's ATK in typeless damage to random enemies, reduces the defense of all enemies by 50% for 1 turn, randomizes non-matching orbs, including [BLOCK] orbs",
+        specialName: "Jao Kun Do Consecutive Thrusting Kick",
+    },
+    1766: {//Blue Gilly
+        captain: "Boosts chain multiplier by 1.5x and boosts ATK of Fighter characters by 1.5x",
+        special: "Deals 10 hits of 5x character's ATK in typeless damage to random enemies, reduces the defense of all enemies by 50% for 1 turn, randomizes non-matching orbs, including [BLOCK] orbs",
+        specialName: "Jao Kun Do Consecutive Thrusting Kick",
+    },
+    1767: {//Funk Bros
+        captain: "Boosts ATK of Fighter characters by 1.75x",
+        special: "Delays all enemies for 1 turn, following the activation of the special, if every unit scores a Great hit, boosts ATK of Fighter characters by 1.5x in the following turn",
+        specialName: "Prideless Surprise Attack",
+    },
+    1768: {//Abdullah and Jeet
+        captain: "Boosts ATK of Striker and Slasher characters by 1.5x",
+        special: "At the end of the turn, cuts the current HP of each enemy by 10% for 2 turns",
+        specialName: "Nasty Final Blow",
+    },
     1769: {//Ben Beckman
-        captain: "Boosts ATK of Cerebral characters by ???x",
+        captain: "Boosts ATK of Cerebral characters by 2.5x",
         special: "Delays all enemies for 1 turn. If your captain is a Cerebral Character, boosts ATK against delayed enemies by 1.5x for 1 turn and changes adjacent orbs into Matching Orbs",
         specialName: "Restraining Gunpoint",
     },
@@ -10038,13 +10058,13 @@ window.details = {
         limit: "This unit has a Limit Break skill tree",
         limitNotes: "This will be updated soon"
     },
-    1771: {
+    1771: {//Kuma
         captain: "Boosts ATK and HP of Cerebral characters by 2x",
         specialName: "Thrust Pad Cannon [Neo]",
         special: "Changes [RCV], [TND], [EMPTY], [BLOCK] and [BOMB] orbs into Matching orbs, amplifies the effect of orbs by 1.75x for 1 turn",
         specialNotes: "#{orb : 1.75x}"
     },
-    1772: {
+    1772: {//Kuma
         captain: "Boosts ATK and HP of Cerebral characters by 2x, deals 5 times the damage received in the previous turn in [INT] damage to all enemies at the end of each turn",
         specialName: "Thrust Pad Cannon [Neo]",
         special: "Changes [RCV], [TND], [EMPTY], [BLOCK] and [BOMB] orbs into Matching orbs, amplifies the effect of orbs by 1.75x for 1 turn",

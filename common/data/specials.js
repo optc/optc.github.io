@@ -3441,24 +3441,24 @@ window.specials = {
     1745: {
         orb: function(p) { return (p.unit.class.has("Shooter")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain]) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain]); }	
     },
-    1748: {
+    1746: {
         delay: function(p) { return 1; },
         turnedOn: false,
         onActivation: function(p) {
-            window.specials[1748].turnedOn = true;
+            window.specials[1746].turnedOn = true;
         },
         onDeactivation: function(p) {
-            window.specials[1748].turnedOn = false;
+            window.specials[1746].turnedOn = false;
         }
     },
-    1749: {
+    1747: {
         delay: function(p) { return 1; },
         turnedOn: false,
         onActivation: function(p) {
-            window.specials[1749].turnedOn = true;
+            window.specials[1747].turnedOn = true;
         },
         onDeactivation: function(p) {
-            window.specials[1749].turnedOn = false;
+            window.specials[1747].turnedOn = false;
         }
     },
     1750:{
@@ -3525,6 +3525,16 @@ window.specials = {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
             return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 2.5 : 1;
         }
+    },
+    1765: {
+        def: function(p) { return .5; },
+    },
+    1766: {
+        def: function(p) { return .5; },
+    },
+    1767: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1},
+        type: "class"
     },
     1769: {
         atk: function(p) { return (p.delayed && p.captain.class.has("Cerebral")) ? 1.5 : 1; },
