@@ -8794,7 +8794,7 @@ window.details = {
         specialName: "Flaming Flash",
     },
     1578: {//Momonosuke
-        captain: "Protects from defeat as long as HP is above ???%",
+        captain: "Protects from defeat as long as HP is above 50%",
         special: [
             {
                 "description": "Adds .2x to Chain multiplier for 1 turn",
@@ -8814,7 +8814,7 @@ window.details = {
         specialName: "Miraculous Flying Dragon",
     },
     1579: {//Momonosuke
-        captain: "Boosts ATK, HP and RCV of all characters by 1.25x, protects from defeat as long as HP is above 30%",
+        captain: "Boosts ATK, HP and RCV of all characters by 1.25x, protects from defeat as long as HP is above 50%",
         special: [
             {
                 "description": "Adds .2x to Chain multiplier for 1 turn",
