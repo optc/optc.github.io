@@ -3537,10 +3537,12 @@ window.specials = {
         type: "class"
     },
     1769: {
+        delay: function(p) { return 1; },
         atk: function(p) { return (p.delayed && p.captain.class.has("Cerebral")) ? 1.5 : 1; },
         type: "condition",
     },
     1770: {
+        delay: function(p) { return 1; },
         atk: function(p) { return (p.delayed && p.captain.class.has("Cerebral")) ? 1.5 : 1; },
         type: "condition",
     },
