@@ -2271,11 +2271,12 @@ window.specials = {
     },
     1402: {
         atk: function(p) { return p.unit.type == "PSY" ? window.specials[1402].multiplier : 1; },
+        type: "type",
         onActivation: function(p) {
             var n = (window.specials[1402].multiplier == 1.3 ? 1 : 0);
             window.specials[1402].multiplier = [1.3, 1.5][n];
             p.scope.notify({
-                text: 'Using the ' + [1.3, 1.5][n] + 'x Affinity boost. To switch to the ' + [1.5, 1.3][n] + 'x Affinity boost, disable and re-enable this special',
+                text: 'Using the ' + [1.3, 1.5][n] + 'x Type boost. To switch to the ' + [1.5, 1.3][n] + 'x Type boost, disable and re-enable this special',
                 name: '1402warning'
             });
         },
