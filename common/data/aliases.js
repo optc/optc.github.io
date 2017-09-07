@@ -1601,7 +1601,7 @@ window.aliases = {
     1600: ['モンキー・D・ルフィ 麦わらの一味・ハートの海賊団海賊同盟', '', 'Anniversary Luffy'],
     1601: ['シリュウ 黒ひげ海賊団', '', 'Coliseum Shiryu'],
     1602: ['雨のシリュウ 黒ひげ海賊団', '', 'Coliseum Shiryu'],
-    1603: ['雷卿マクガイ', '', 'Coliseum McGuy'],
+    1603: ['雷卿マクガイ', '', 'Coliseum McGuy', 'Lightning McGuy'],
     1604: ['ポートガス・D・エース ルフィの“兄”', '', '0 Stamina Ace'],
     1605: ['ポートガス・D・エース 白ひげの“息子”', '', '0 Stamina Ace'],
     1606: ['ラフィット 黒ひげ海賊団', '', 'La Feet'],
