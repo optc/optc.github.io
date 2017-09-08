@@ -5357,6 +5357,26 @@ window.captains = {
     1761: {
         atk: function(p) { return p.unit.type == "DEX" || p.unit.type == "INT" ? 2.5 : 1; },
     },
+    1762: {
+        damageSorter: function(d) { return CrunchUtils.classSort(d, 4.026275, [ "Powerhouse" ]); },
+        hitAtk: function(p) {
+            if (!p.unit.class.has("Powerhouse")) return 1;
+            return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 4.026275 : p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect"]) ? 3.66025 : p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? 3.3275 : p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect"]) ? 3.025 : p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect"]) ? 2.75 : 2.5;
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
+        hp: function(p) { return p.unit.class.has("Powerhouse") ? 1.2 : 1; },
+        rcv: function(p) { return 0.5; },
+    },
+    1763: {
+        damageSorter: function(d) { return CrunchUtils.classSort(d, 4.026275, [ "Powerhouse" ]); },
+        hitAtk: function(p) {
+            if (!p.unit.class.has("Powerhouse")) return 1;
+            return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 4.026275 : p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect"]) ? 3.66025 : p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? 3.3275 : p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect"]) ? 3.025 : p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect"]) ? 2.75 : 2.5;
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
+        hp: function(p) { return p.unit.class.has("Powerhouse") ? 1.2 : 1; },
+        rcv: function(p) { return 0.5; },
+    },
     1764: {
         atk: function(p) {
             return Math.min(3.5, 2.25 + 0.25 * p.turnCounter);

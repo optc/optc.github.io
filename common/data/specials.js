@@ -3520,6 +3520,12 @@ window.specials = {
     1759: {
         delay: function(p) { return 1; },
     },
+    1762: {
+        def: function(p) { return .2; },
+    },
+    1763: {
+        def: function(p) { return .2; },
+    },
     1764: {
         chain: function(p) { return 2.5; },
         chainLimiter: function(p) {
