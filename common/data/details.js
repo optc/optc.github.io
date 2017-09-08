@@ -10023,12 +10023,12 @@ window.details = {
     },
     1762: {//Rob Lucci
         captain: "Boosts ATK of Powerhouse characters by 2.5x and their HP by 1.2x at the start of the chain. Reduces RCV of all characters by 50%.<br>Boosts ATK of Powerhouse characters by 2.75x after the 1st Perfect in a row, by 3.025x after the 2nd Perfect in a row, by 3.3275x after the 3rd Perfect in a row, by 3.66025x after the 4th Perfect in a row, and by 4.026275x after the 5th Perfect in a row.",
-        special: "Reduces the defense of all enemies by ???% for 2 turns, deals ???x character's ATK in typeless damage to all enemies and changes all orbs on Powerhouse characters into Matching orbs.",
+        special: "Reduces the defense of all enemies by ???% for 2 turns, deals ???x character's ATK in typeless damage to all enemies and changes all orbs on Powerhouse characters into Matching orbs, recover 20% of crew's MAX HP.",
         specialName: "Flying Finger Gun: Fire Sting",
     },
     1763: {//Rob Lucci
         captain: "Boosts ATK of Powerhouse characters by 2.5x and their HP by 1.2x at the start of the chain. Reduces RCV of all characters by 50%.<br>Boosts ATK of Powerhouse characters by 2.75x after the 1st Perfect in a row, by 3.025x after the 2nd Perfect in a row, by 3.3275x after the 3rd Perfect in a row, by 3.66025x after the 4th Perfect in a row, and by 4.026275x after the 5th Perfect in a row.",
-        special: "Reduces the defense of all enemies by ???% for 2 turns, deals ???x character's ATK in typeless damage to all enemies and changes all orbs on Powerhouse characters into Matching orbs.",
+        special: "Reduces the defense of all enemies by ???% for 2 turns, deals ???x character's ATK in typeless damage to all enemies and changes all orbs on Powerhouse characters into Matching orbs, recover 20% of crew's MAX HP.",
         specialName: "Flying Finger Gun: Fire Sting",
     },
     1764: {//6+ Aokiji
