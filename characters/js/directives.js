@@ -254,6 +254,7 @@ directives.evolution = function($state, $stateParams) {
         templateUrl: 'views/evolution.html',
         link: function(scope, element, attrs) {
             scope.goToState = function(id) {
+                if (!Number.isInteger(id)) return;
                 if (id == parseInt($stateParams.id,10)) return;
                 var previous = $stateParams.previous.concat([ $stateParams.id ]);
                 $state.go('main.search.view',{ id: id, previous: previous });
