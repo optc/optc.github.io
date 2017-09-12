@@ -1637,9 +1637,17 @@ window.drops = {
         
         {
             name: 'Battle Royale!',
-            thumb: 1776,
+            thumb: 1766,
             gamewith: 67118,
             'All Difficulties': [ 1765, 1767, 1768, -1192, -1764, -520, -1115, -1184, -1190, -554, -1175, -1612, -1614, -1353, -1393 ]
+        },
+        
+        {
+            name: 'Wano Samurai!',
+            thumb: 1774,
+            condition: 'Shooter and Free Spirit characters get a boost (???x ATK boost on 30 stamina)',
+            gamewith: null,
+            'All Difficulties': [ 1773, 1775, -963, -1588, -451, -1186, -528, -1177, -1208, -558, -1616, -1618, -1392 ]
         },
         
     ],

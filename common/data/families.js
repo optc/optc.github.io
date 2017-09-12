@@ -1771,4 +1771,8 @@ window.families = [
     "Ben Beckman",
     "Bartholomew Kuma",
     "Bartholomew Kuma",
+    "Kinemon",
+    "Kinemon",
+    "Momonosuke",
+    "Momonosuke",
 ];

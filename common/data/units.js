@@ -1771,6 +1771,10 @@ window.units = [
     [ "Ben Beckman, 'Four Emperors' Red Hair's Right Hand Man", "INT", [ "Cerebral", "Striker" ], 5, 30, 4, 4, 99, 4000000, 1126, 672, 136, 2295, 1384, 367, 1 ],
     [ "Tyrant Bartholomew Kuma [Neo]", "INT", [ "Cerebral", "Powerhouse" ], 4, 30, 4, 2, 70, 1066998, 258, 171, 90, 1189, 629, 190, null ],
     [ "Tyrant Bartholomew Kuma [Neo], Government Human Weapon", "INT", [ "Cerebral", "Powerhouse" ], 5, 50, 7, 4, 99, 5000000, 1147, 578, 190, 3070, 1445, 90, null ],
+    [ "Kinemon", "INT", [ "Free Spirit", "Slasher" ], 3, 13, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Kinemon, Evolved", "INT", [ "Free Spirit", "Slasher" ], 4, 20, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Momonosuke", "QCK", [ "Free Spirit", "Striker" ], 3, 9, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Momonosuke, Evolved", "QCK", [ "Free Spirit", "Striker" ], 4, 15, null, null, null, null, null, null, null, null, null, null, null ],
     ];
     
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],

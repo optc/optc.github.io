@@ -10082,4 +10082,22 @@ window.details = {
         special: "Changes [RCV], [TND], [EMPTY], [BLOCK] and [BOMB] orbs into Matching orbs, amplifies the effect of orbs by 1.75x for 1 turn",
         specialNotes: "#{orb : 1.75x}"
     },
+    1773: {//Kinemon
+        captain: "Not Released",
+        special: "Deals 20x character's ATK in ??? damage to one enemy, boosts chances of getting matching orbs for Free Spirit characters for 1 turn",
+        sailor: "Boosts ATK of Free Spirit characters by 25"
+    },
+    1774: {//Kinemon
+        captain: "Boosts ATK of Free Spirit characters by 2.25x and their HP by 1.25x",
+        special: "Deals 20x character's ATK in ??? damage to one enemy, boosts chances of getting matching orbs for Free Spirit characters for 1 turn",
+        sailor: "Boosts ATK of Free Spirit characters by 25"
+    },
+    1775: {//Momonosuke
+        captain: "Not Released",
+        special: "Reduces damage received by 50% for 1 turn and switches orbs between slots twice",
+    },
+    1776: {//Momonosuke
+        captain: "Boosts ATK and RCV of QCK characters by 1.75x, boosts chances of getting [QCK] orbs",
+        special: "Reduces damage received by 50% for 1 turn and switches orbs between slots twice",
+    },
 };
