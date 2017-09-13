@@ -10122,11 +10122,11 @@ window.details = {
         special: [
             {
                 "description": "Changes own orb into [DEX]. Reduces Special Cooldown of Shooter and Fighter specials by 1 turn",
-                "cooldown": [ 19, 5 ]
+                "cooldown": [ 14, 5 ]
             },
             {
                 "description": "Changes own orb into [DEX]. Reduces Special Cooldown of Shooter and Fighter specials by 1 turn. Adds .5x to Chain multiplier for 2 turns",
-                "cooldown": [ 25, 11 ]
+                "cooldown": [ 20, 11 ]
             }
         ],
         specialNotes: "#{stages}"
@@ -10137,11 +10137,11 @@ window.details = {
         special: [
             {
                 "description": "Changes own orb into [DEX]. Reduces Special Cooldown of Shooter and Fighter specials by 1 turn",
-                "cooldown": [ 19, 5 ]
+                "cooldown": [ 14, 5 ]
             },
             {
                 "description": "Changes own orb into [DEX]. Reduces Special Cooldown of Shooter and Fighter specials by 1 turn. Adds .5x to Chain multiplier for 2 turns",
-                "cooldown": [ 25, 11 ]
+                "cooldown": [ 20, 11 ]
             }
         ],
         specialNotes: "#{stages}",
