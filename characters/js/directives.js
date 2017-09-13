@@ -457,11 +457,11 @@ directives.addLinks = function($stateParams) {
             }
             if (!incomplete) {
                 if (id == 1478){
-                    ul.append($('<li><a href="http://onepiece-treasurecruise.com/カリブー-カリブー海賊団船長/" target="_blank">' +
+                    ul.append($('<li><a href="http://onepiece-treasurecruise.com/blog/カリブー-カリブー海賊団船長/" target="_blank">' +
                         'Official Guide (Japanese)</a></li>'));
                 }
                 else{
-                    ul.append($('<li><a href="http://onepiece-treasurecruise.com/c-' + id + '" target="_blank">' +
+                    ul.append($('<li><a href="http://onepiece-treasurecruise.com/blog/c-' + id + '" target="_blank">' +
                         'Official Guide (Japanese)</a></li>'));
                 }
             }

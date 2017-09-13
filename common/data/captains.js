@@ -5415,4 +5415,23 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Cerebral") ? 2 : 1; },
         hp: function(p) { return p.unit.class.has("Cerebral") ? 2 : 1; }
     },
+    1774: {
+        atk: function(p) { return p.unit.class.has("Free Spirit") ? 2.25 : 1; },
+        hp: function(p) { return p.unit.class.has("Free Spirit") ? 1.25 : 1; }
+    },
+    1776: {
+        atk: function(p) { return p.unit.type == "QCK" ? 1.75 : 1; },
+        rcv: function(p) { return p.unit.type == "QCK" ? 1.75 : 1; }
+    },
+    1778: {
+        atk: function(p) { return p.unit.class.has("Free Spirit") ? 2.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Free Spirit") ? 1.2 : 1; }
+    },
+    1779: {
+        atk: function(p) { return p.unit.class.has("Shooter") ? 2 : 1; }
+    },
+    1780: {
+        atk: function(p) { return p.unit.class.has("Shooter") ? 2.25 : 1; },
+        hp: function(p) { return p.unit.class.has("Shooter") ? 1.5 : 1; }
+    },
 };

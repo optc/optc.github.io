@@ -340,4 +340,10 @@ window.sailors = {
         rcvStatic: function(p) { return 40; },
         hpStatic: function(p) { return 40; },
     },
+    1773: {
+        atkStatic: function(p) { return p.unit.class.has("Free Spirit") ? 25 : 0; },
+    },
+    1774: {
+        atkStatic: function(p) { return p.unit.class.has("Free Spirit") ? 25 : 0; },
+    },
 };

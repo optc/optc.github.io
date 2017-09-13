@@ -1775,4 +1775,8 @@ window.families = [
     "Kinemon",
     "Momonosuke",
     "Momonosuke",
+    "Kizaru",
+    "Kizaru",
+    "Kizaru",
+    "Kizaru",
 ];

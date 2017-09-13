@@ -1775,6 +1775,10 @@ window.aliases = {
     1774: ['', '', 'Kin\'emon'],
     1775: ['', '', ''],
     1776: ['', '', ''],
+    1777: ['', '', 'Secret Kizaru', 'Secret Borsalino'],
+    1778: ['', '', 'Secret Kizaru', 'Secret Borsalino'],
+    1779: ['', '', 'Neo Kizaru', 'Neo Borsalino', 'Kai Kizaru', 'Kai Borsalino'],
+    1780: ['', '', 'Neo Kizaru', 'Neo Borsalino', 'Kai Kizaru', 'Kai Borsalino'],
 };
 
 //  xxxx: ['JPN', 'FR', 'Other'],

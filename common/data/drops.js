@@ -1884,6 +1884,15 @@ window.drops = {
         },
         
         {
+            name: 'Clash Neo!! Kizaru',
+            thumb: 1780,
+            gamewith: null,
+            condition: '1 Master version and 3 Ultimate versions with different conditions. Master: Free Spirit/Striker/Powerhouse Only. Can only complete 10 times each. Ultimate: Free Spirit Only, Striker Only, and Powerhouse Only',
+            Ultimate: [ 1779 ],
+            Master: [ 1779 ]
+        },
+        
+        {
             name: 'Clash!? Impostor Straw Hat Pirates',
             showManual: true,
             global: true,

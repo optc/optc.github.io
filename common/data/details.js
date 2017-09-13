@@ -10104,4 +10104,46 @@ window.details = {
         captain: "Boosts ATK and RCV of QCK characters by 1.75x, boosts chances of getting [QCK] orbs",
         special: "Reduces damage received by 50% for 1 turn and switches orbs between slots twice",
     },
+    1777:{
+        captain: "Not Translated",
+        special: "Deals 50x character's ATK in typeless damage to one enemy that will ignore damage negating abilities and barriers, changes [BLOCK], [STR], and [INT] orbs into Matching orbs for Free Spirit characters and adds .2x to Chain multiplier for 3 turns",
+        specialName: "Devil Destroyer's Light Arrow",
+        specialNotes: "#{beneficial}<br>#{ignoreBarrier}"
+    },
+    1778:{
+        captain: "Boosts ATK of Free Spirit characters by 2.5x, and their HP by 1.2x. Recovers 1.5x character's RCV in HP at the end of each turn",
+        special: "Deals 50x character's ATK in typeless damage to one enemy that will ignore damage negating abilities and barriers, changes [BLOCK], [STR], and [INT] orbs into Matching orbs for Free Spirit characters and adds .2x to Chain multiplier for 3 turns",
+        specialName: "Devil Destroyer's Light Arrow",
+        specialNotes: "#{beneficial}<br>#{ignoreBarrier}"
+    },
+    1779:{
+        captain: "Boosts ATK of Shooter characters by 2x",
+        specialName: "Yata no Kagami (Sacred Mirror) Neo",
+        special: [
+            {
+                "description": "Changes own orb into [DEX]. Reduces Special Cooldown of Shooter and Fighter specials by 1 turn",
+                "cooldown": [ 19, 5 ]
+            },
+            {
+                "description": "Changes own orb into [DEX]. Reduces Special Cooldown of Shooter and Fighter specials by 1 turn. Adds .5x to Chain multiplier for 2 turns",
+                "cooldown": [ 25, 11 ]
+            }
+        ],
+        specialNotes: "#{stages}"
+    },
+    1780:{
+        captain: "Reduces cooldown of Shooter specials by 2 turns at the start of the fight, boosts ATK of Shooter characters by 2.25x and boosts HP of Shooter characters by 1.5x",
+        specialName: "Yata no Kagami (Sacred Mirror) Neo",
+        special: [
+            {
+                "description": "Changes own orb into [DEX]. Reduces Special Cooldown of Shooter and Fighter specials by 1 turn",
+                "cooldown": [ 19, 5 ]
+            },
+            {
+                "description": "Changes own orb into [DEX]. Reduces Special Cooldown of Shooter and Fighter specials by 1 turn. Adds .5x to Chain multiplier for 2 turns",
+                "cooldown": [ 25, 11 ]
+            }
+        ],
+        specialNotes: "#{stages}",
+    },
 };

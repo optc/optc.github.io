@@ -3559,4 +3559,16 @@ window.specials = {
     1772: {
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain]); }
     },
+    1777: {
+        chainAddition: function(p){ return 0.2;}
+    },
+    1778: {
+        chainAddition: function(p){ return 0.2;}
+    },
+    1779: {
+        chainAddition: function(p) {return 0.5;}
+    },
+    1780: {
+        chainAddition: function(p){ return 0.5;}
+    },
 };
