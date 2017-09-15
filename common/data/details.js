@@ -6072,12 +6072,12 @@ window.details = {
     },
     1198: {
         captain: "Boosts ATK and RCV of Free Spirit characters by 1.5x",
-        special: "Empties all slots with [RCV] orbs, recover 20% of crew's MAX HP",
+        special: "Empties all slots with [RCV] orbs, recovers 20% of crew's MAX HP",
         specialName: "Appetite Or Sex Appeal - Has it Switched Yet!?",
     },
     1199: {
         captain: "Boosts ATK and RCV of Free Spirit characters by 1.5x",
-        special: "Empties all slots with [RCV] orbs, recover 20% of crew's MAX HP",
+        special: "Empties all slots with [RCV] orbs, recovers 20% of crew's MAX HP",
         specialName: "Appetite Or Sex Appeal - Has it Switched Yet!?",
     },
     1200: {
