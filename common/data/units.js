@@ -1776,7 +1776,7 @@ window.units = [
     [ "Momonosuke", "QCK", [ "Free Spirit", "Striker" ], 3, 9, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Momonosuke, Evolved", "QCK", [ "Free Spirit", "Striker" ], 4, 15, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Kizaru", "QCK", [ "Free Spirit", "Shooter" ], 4, 20, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Kizaru, A Visit from the Holy Land", "QCK", [ "Free Spirit", "Shooter" ], 5, 30, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Kizaru, A Visit from the Holy Land", "QCK", [ "Free Spirit", "Shooter" ], 5, 30, 7, 4, 99, 4000000, 1, 1, 1, 2613, 1342, 315, null ],
     [ "Kizaru [Neo]", "DEX", [ "Fighter", "Shooter" ], 4, 30, 4, null, 70, 1066998, null, null, null, null, null, null, null ],
     [ "Kizaru [Neo], Light Human", "DEX", [ "Fighter", "Shooter" ], 5, 50, 5, 4, 99, 5000000, 1, 1, 1, 2486, 1415, 279, null ],
     ];
