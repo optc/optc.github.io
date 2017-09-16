@@ -614,7 +614,7 @@ window.drops = {
             '07': [ 1347, 'skullChopper' ],
             '08': [ 1348, 'skullZoro' ],
             '09': [ 1349, 'skullNami' ],
-            '10': [  ],
+            '10': [ 'skullFranky' ],
             '11': [ 1350, 'skullBrook' ],
             '12': [ 1351, 'skullRobin' ],
             '13': [ 1352, 'skullSanji' ],
