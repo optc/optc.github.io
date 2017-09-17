@@ -2721,7 +2721,7 @@ window.evolutions = {
     },
     1750: {
         evolution: 1751,
-        evolvers: [  ]
+        evolvers: [ 118, 85, 266, 301, 267 ]
     },
     1752: {
         evolution: 1753,
@@ -2745,7 +2745,7 @@ window.evolutions = {
     },
     1762: {
         evolution: 1763,
-        evolvers: [  ]
+        evolvers: [ 118, 79, 1180, 301, 267 ]
     },
     1192: {
         evolution: 1764,

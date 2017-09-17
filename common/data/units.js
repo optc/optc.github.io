@@ -1400,7 +1400,7 @@ window.units = [
     [ "Smoker Shambles, Autumn Rain", "QCK", [ "Slasher", "Cerebral" ], 4, 19, 4, 3, 99, 3000000, 706, 416, 160, 1606, 910, 361, 1 ],
     [ "Gladius, Pop-Pop Man", "STR", [ "Driven", "Shooter" ], 4, 25, 7, 2, 70, 1066998, 186, 168, 39, 1088, 786, 98, 1 ],
     [ "Gladius, Pica Military Executive", "STR", [ "Driven", "Shooter" ], 5, 40, 4, 3, 99, 4000000, 986, 698, 86, 2188, 1419, 208, 1 ],
-    [ "Coliseum Dalton", "PSY", [ "Slasher", "Cerebral" ], 4, 20, 6, 2, 70, 1778330, 160, 106, 19, 1061, 961, 235, 1 ],
+    [ "Dalton, Drum Island Civilian Escort Team Leader", "PSY", [ "Slasher", "Cerebral" ], 4, 20, 6, 2, 70, 1778330, 160, 106, 19, 1061, 961, 235, 1 ],
     [ "Monkey D. Luffy, Gathering of the Straw Hats", "QCK", [ "Fighter", "Free Spirit" ], 5, 30, 4, 3, 70, 1066998, 313, 300, 70, 1422, 840, 210, 1 ],
     [ "Monkey D. Luffy, Reunion of the Straw Hat Pirates", "QCK", [ "Fighter", "Free Spirit" ], 6, 55, 4, 5, 99, 5000000, 1369, 762, 168, 3080, 1550, 390, 1 ],
     [ "Usopp, Gathering of the Straw Hats", "PSY", "Shooter", 4, 15, 4, 3, 50, 392109, 255, 99, 31, 1201, 481, 182, 1 ],

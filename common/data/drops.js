@@ -1630,7 +1630,7 @@ window.drops = {
         {
             name: 'Underground Trade Port! Escape!',
             thumb: 1735,
-            gamewith: null,
+            gamewith: 66021,
             condition: 'Limited amount of turns to complete the mission.',
             'All Difficulties': [ 1734, 1736, -1571, -1573, -1654, -641, -1182, -1188, -1210, -556, -964, -1354 ]
         },
@@ -1837,7 +1837,7 @@ window.drops = {
         {
             name: 'Clash Neo!! Tyrant Kuma',
             thumb: 1772,
-            gamewith: null,
+            gamewith: 67120,
             condition: '1 Master version and 3 Ultimate versions with different conditions. Master: Shooter/Slasher/Cerebral Only. Can only complete 10 times each. Ultimate: Shooter Only, Slasher Only, and Cerebral Only',
             Ultimate: [ 1771 ],
             Master: [ 1771 ]
@@ -2021,7 +2021,7 @@ window.drops = {
         },
 
         {
-            name: 'Battle Royal! Oars',
+            name: 'Battle Royale! Oars',
             thumb: 893,
             global: true,
             challenge:'Total number of hits above 50,000',
@@ -2145,7 +2145,7 @@ window.drops = {
         },
         
         {
-            name: 'Big Battle! The Three Admirals',
+            name: 'Battle Royale! The Three Admirals',
             thumb: 1314,
             gamewith: 61665,
             condition: 'Chance of dropping the Silver Almighty Book.',
@@ -2154,12 +2154,20 @@ window.drops = {
         },
         
         {
-            name: 'Big Battle! Straw Hat Pirates',
+            name: 'Battle Royale! Straw Hat Pirates',
             thumb: 1404,
             gamewith: 65078,
             condition: 'Chance of dropping the Silver Almighty Book.',
             'All Bosses': [ -1621, -1632, -1665, -1678, -1721 ],
             'Chopperman Missions': [ 1728 ],
+        },
+        
+        {
+            name: 'Battle Royale! Doflamingo Family',
+            thumb: 870,
+            gamewith: 68282,
+            condition: 'Chance of dropping the Silver Almighty Book, Guidence Fragments and Guidence Crystals.',
+            'All Bosses': [ -1621, -1632, -1665, -1678, -1713, -1721, -1770 ],
         },
         
         {
