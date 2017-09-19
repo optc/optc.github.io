@@ -130,7 +130,7 @@
         if ((window.units && window.units[n - 1].incomplete)){
             switch (window.units[n - 1].type){
                 case 'STR':
-                    return 'https://onepiece-treasurecruise.com/wp-content/themes/onepiece-treasurecruise/images/noimage.png';
+                    return '../res/blank_str.png';
                     break;
                 case 'DEX':
                     return '../res/blank_dex.png';
