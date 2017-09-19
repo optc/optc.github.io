@@ -11936,17 +11936,17 @@ window.details = {
         specialNotes: "#{orb : 1.75x}"
     },
     1773: {//Kinemon
-        captain: "Not Released",
-        special: "Deals 20x character's ATK in ??? damage to one enemy, boosts chances of getting matching orbs for Free Spirit characters for 1 turn",
+        captain: "Boosts ATK of Free Spirit characters by 2x and their HP by 1.2x and reduces damage received by 10%",
+        special: "Deals 20x character's ATK in [INT] damage to one enemy, amplifies the effect of orbs for Free Spirit characters by 1.5x for 1 turn",
         sailor: "Boosts base ATK of Free Spirit characters by 25"
     },
     1774: {//Kinemon
-        captain: "Boosts ATK of Free Spirit characters by 2.25x and their HP by 1.25x",
-        special: "Deals 20x character's ATK in ??? damage to one enemy, boosts chances of getting matching orbs for Free Spirit characters for 1 turn",
+        captain: "Boosts ATK of Free Spirit characters by 2.25x and their HP by 1.25x and reduces damage received by 15%",
+        special: "Deals 20x character's ATK in [INT] damage to one enemy, amplifies the effect of orbs for Free Spirit characters by 1.75x for 1 turn",
         sailor: "Boosts base ATK of Free Spirit characters by 25"
     },
     1775: {//Momonosuke
-        captain: "Not Released",
+        captain: "Boosts ATK and RCV of QCK characters by 1.5x, and slightly boosts chances of getting [QCK] orbs",
         special: "Reduces damage received by 50% for 1 turn and switches orbs between slots twice",
     },
     1776: {//Momonosuke
