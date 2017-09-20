@@ -11998,7 +11998,7 @@ window.details = {
         specialNotes: "#{stages}",
     },
     1791:{//Lucy Luffy
-        captain: "Not Translated",
+        captain: "Boosts ATK of [STR], [DEX] and [QCK] characters by 2.5x after scoring 3 Perfects in a row",
         special: "Cuts the current HP of one enemy by 20% that will ignore damage negating abilities and barriers. Changes the orbs in the top row into [STR] orbs, changes the orbs in the middle row into [QCK] orbs, changes the orbs in the bottom row into [DEX] orbs and amplifies the effect of orbs by 1.75x for 1 turn",
         specialNotes: "#{ignorebarriers}",
         sailor: "If you captain is a [STR] character, boosts this character's attack against [STR] characters by 1.5x",
