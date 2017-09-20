@@ -3577,4 +3577,56 @@ window.specials = {
     1780: {
         chainAddition: function(p){ return 0.5;}
     },
+    1793: {
+        atk: function(p) { return !(p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? 1 : window.specials[1793].multiplier; },
+        type: "class",
+        onActivation: function(p) {
+            var n = (window.specials[1793].multiplier == 1.75 ? 1 : 0);
+            window.specials[1793].multiplier = [1.75, 2][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.75, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
+                name: '1793warning'
+            });
+        }
+    },
+    1794: {
+        atk: function(p) { return !(p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? 1 : window.specials[1794].multiplier; },
+        type: "class",
+        onActivation: function(p) {
+            var n = (window.specials[1794].multiplier == 1.75 ? 1 : 0);
+            window.specials[1794].multiplier = [1.75, 2][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.75, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
+                name: '1794warning'
+            });
+        }
+    },
+    1795: {
+        delay: function(p) { return 1; },
+    },
+    1796: {
+        delay: function(p) { return 1; },
+    },
+    1797: {
+        atk: function(p) { return p.delayed ? 1.5 : 1; },
+        type: "condition",
+    },
+    1798: {
+        atk: function(p) { return p.delayed ? 1.5 : 1; },
+        type: "condition",
+    },
+    1799: {
+        atk: function(p) { return p.defenseDown ? 1.75 : 1; },
+        type: "condition"
+    },
+    1800: {
+        atk: function(p) { return p.defenseDown ? 1.75 : 1; },
+        type: "condition"
+    },
+    1801: {
+        def: function(p) { return 0.1; }
+    },
+    1802: {
+        def: function(p) { return 0.1; }
+    },
 };

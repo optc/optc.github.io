@@ -1792,7 +1792,7 @@ window.units = [
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Lucy", "STR", [ "Striker", "Fighter" ], 5, 30, null, null, 70, 1066998, null, null, null, null, null, null, null ],
-    [ "Lucy, Evolved", "STR", [ "Striker", "Fighter" ], 6, 55, 4, 5, 99, 5000000, 1306, 720, 194, null, null, null, null ],
+    [ "Lucy, Evolved", "STR", [ "Striker", "Fighter" ], 6, 55, 4, 5, 99, 5000000, 1306, 720, 194, 3000, 1500, 500, null ],
     [ "Diamante", "QCK", [ "Driven", "Slasher" ], 4, 15, null, null, 50, 392109, null, null, null, null, null, null, null ],
     [ "Diamante, Evolved", "QCK", [ "Driven", "Slasher" ], 5, 30, null, null, 99, 4000000, null, null, null, null, null, null, null ],
     [ "Jesus Burgess", "DEX", [ "Fighter", "Driven" ], 4, 15, null, null, 50, 392109, null, null, null, null, null, null, null ],
