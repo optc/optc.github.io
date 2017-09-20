@@ -11953,21 +11953,21 @@ window.details = {
         captain: "Boosts ATK and RCV of QCK characters by 1.75x, boosts chances of getting [QCK] orbs",
         special: "Reduces damage received by 50% for 1 turn and switches orbs between slots twice",
     },
-    1777:{
+    1777:{//Kizaru
         captain: "Not Translated",
         special: "Deals 50x character's ATK in typeless damage to one enemy that will ignore damage negating abilities and barriers, changes [BLOCK], [STR], and [INT] orbs into Matching orbs for Free Spirit characters and adds .2x to Chain multiplier for 3 turns",
         specialName: "Devil Destroyer's Light Arrow",
-        specialNotes: "#{beneficial}<br>#{ignoreBarrier}"
+        specialNotes: "#{ignoreBarrier}"
     },
-    1778:{
+    1778:{//Kizaru
         captain: "Boosts ATK of Free Spirit characters by 2.5x, and their HP by 1.2x. Recovers 1.5x character's RCV in HP at the end of each turn",
         special: "Deals 50x character's ATK in typeless damage to one enemy that will ignore damage negating abilities and barriers, changes [BLOCK], [STR], and [INT] orbs into Matching orbs for Free Spirit characters and adds .2x to Chain multiplier for 3 turns",
         specialName: "Devil Destroyer's Light Arrow",
-        specialNotes: "#{beneficial}<br>#{ignoreBarrier}",
+        specialNotes: "#{ignoreBarrier}",
         limit: "This unit has a Limit Break skill tree",
         limitNotes: "This will be updated soon"
     },
-    1779:{
+    1779:{//Kizaru
         captain: "Boosts ATK of Shooter characters by 2x",
         specialName: "Yata no Kagami (Sacred Mirror) Neo",
         special: [
@@ -11982,7 +11982,7 @@ window.details = {
         ],
         specialNotes: "#{stages}"
     },
-    1780:{
+    1780:{//Kizaru
         captain: "Reduces cooldown of Shooter specials by 2 turns at the start of the fight, boosts ATK of Shooter characters by 2.25x and boosts HP of Shooter characters by 1.5x",
         specialName: "Yata no Kagami (Sacred Mirror) Neo",
         special: [
@@ -11996,5 +11996,65 @@ window.details = {
             }
         ],
         specialNotes: "#{stages}",
+    },
+    1793:{//Lucy Sabo
+        captain: "If there is a [STR], [DEX] and [QCK] character in your crew, boosts ATK of [STR], [DEX] and [QCK] characters by 2.75x and their HP by 1.3x. If there are no [PSY] or [INT] characters on your crew, boosts ATK by 3.7125x instead. Lowers chances of getting [STR] orbs, makes [DEX] and [QCK] orbs \"beneficial\" to some characters",
+        captainNotes: "#{beneficial}",
+        special: "Boosts ATK of [STR], [DEX] and [QCK] characters by 1.75x for 1 turn. If during that turn you score 4 Perfect hits, boosts ATK of [STR], [DEX] and [QCK] characters by 2x in the following turn.",
+        specialName: "Sabo Special",
+    },
+    1794:{//Lucy Sabo
+        captain: "If there is a [STR], [DEX] and [QCK] character in your crew, boosts ATK of [STR], [DEX] and [QCK] characters by 2.75x and their HP by 1.3x. If there are no [PSY] or [INT] characters on your crew, boosts ATK by 3.7125x instead. Lowers chances of getting [STR] orbs, makes [DEX] and [QCK] orbs \"beneficial\" to some characters",
+        captainNotes: "#{beneficial}",
+        special: "Boosts ATK of [STR], [DEX] and [QCK] characters by 1.75x for 1 turn. If during that turn you score 4 Perfect hits, boosts ATK of [STR], [DEX] and [QCK] characters by 2x in the following turn.",
+        specialName: "Sabo Special",
+    },
+    1795:{//Diamante
+        captain: "Boosts ATK of Slasher and Driven characters by 2x",
+        special: "Delays all enemies for 2 turns, reduce enemies Damage Reduction and Increased Defense duration by 3 turns and changes right column into Matching orbs",
+        sailor: "Boosts this character's attack against [STR] characters by 1.1x",
+        specialName: "Diamante Special",
+    },
+    1796:{//Diamante
+        captain: "Boosts ATK of Slasher and Driven characters by ???x",
+        special: "Delays all enemies for 2 turns, reduce enemies Damage Reduction and Increased Defense duration by 3 turns and changes right column into Matching orbs",
+        sailor: "Boosts this character's attack against [STR] characters by 1.1x",
+        specialName: "Diamante Special",
+    },
+    1797:{//Jesus Burgess
+        captain: "Boosts ATK of Fighter characters by 2.25x",
+        special: "Cuts the current HP of each enemy by 20% and boosts ATK against delayed enemies by 1.5x for 2 turns.",
+        sailor: "Boosts base ATK and HP of [STR], [DEX], and [QCK] characters by 75",
+        specialName: "Jesus Burgess Special",
+    },
+    1798:{//Jesus Burgess
+        captain: "Boosts ATK of Fighter characters by ???x",
+        special: "Cuts the current HP of each enemy by 20% and boosts ATK against delayed enemies by 1.5x for 2 turns.",
+        sailor: "Boosts base ATK and HP of [STR], [DEX], and [QCK] characters by 75",
+        specialName: "Jesus Burgess Special",
+    },
+    1799:{//Cavendish
+        captain: "Boosts ATK of [STR], [DEX] and [QCK] characters by 2.25x",
+        special: "Changes [BLOCK] orbs into Matching orbs, locks all orbs for 1 turn, boosts ATK against enemies with reduced defense by 1.75x for 1 turn",
+        sailor: "Makes [INT] and [PSY] orbs \"beneficial\" for this unit",
+        specialName: "Cavendish Special",
+    },
+    1800:{//Cavendish
+        captain: "Boosts ATK of [STR], [DEX] and [QCK] characters by ???x",
+        special: "Changes [BLOCK] orbs into Matching orbs, locks all orbs for 1 turn, boosts ATK against enemies with reduced defense by 1.75x for 1 turn",
+        sailor: "Makes [INT] and [PSY] orbs \"beneficial\" for this unit",
+        specialName: "Cavendish Special",
+    },
+    1801:{//Bartolomeo
+        captain: "Boosts ATK of [STR], [DEX] and [QCK] characters by 2x and if you don't attack with Bartolomeo, reduces damage received by 10% for that turn.",
+        special: "Deal 3x character's ATk in [QCK] damage to all enemies, reduces damage received by 90% for 1 turn and reduces the defense of all enemies by ???% for 2 turns",
+        sailor: "Reduces Paralysis for 3 turns for himself",
+        specialName: "Bartolomeo Special",
+    },
+    1802:{//Bartolomeo
+        captain: "Boosts ATK of [STR], [DEX] and [QCK] characters by ???x and if you don't attack with Bartolomeo, reduces damage received by ???% for that turn.",
+        special: "Deal 3x character's ATk in [QCK] damage to all enemies, reduces damage received by 90% for 1 turn and reduces the defense of all enemies by ???% for 2 turns",
+        sailor: "Reduces Paralysis for 3 turns for himself",
+        specialName: "Bartolomeo Special",
     },
 };
