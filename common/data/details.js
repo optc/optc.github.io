@@ -12000,16 +12000,16 @@ window.details = {
     1791:{//Lucy Luffy
         captain: "Boosts ATK of [STR], [DEX] and [QCK] characters by 2.5x after scoring 3 Perfects in a row",
         special: "Cuts the current HP of one enemy by 20% that will ignore damage negating abilities and barriers. Changes the orbs in the top row into [STR] orbs, changes the orbs in the middle row into [QCK] orbs, changes the orbs in the bottom row into [DEX] orbs and amplifies the effect of orbs by 1.75x for 1 turn",
-        specialNotes: "#{ignorebarriers}",
+        specialNotes: "#{ignoreBarrier}",
         sailor: "If you captain is a [STR] character, boosts this character's attack against [STR] characters by 1.5x",
-        specialName: "Dragon's Claw: Reverse Wave Motion",
+        specialName: "Luffy Special",
     },
     1792:{//Lucy Luffy
         captain: "Boosts RCV of [STR], [DEX] and [QCK] characters by 1.2x and boosts ATK of [STR], [DEX] and [QCK] characters by 3.25x after scoring 3 Perfects in a row",
         special: "Cuts the current HP of one enemy by 20% that will ignore damage negating abilities and barriers. Changes the orbs in the top row into [STR] orbs, changes the orbs in the middle row into [QCK] orbs, changes the orbs in the bottom row into [DEX] orbs and amplifies the effect of orbs by 1.75x for 1 turn",
-        specialNotes: "#{ignorebarriers}",
+        specialNotes: "#{ignoreBarrier}",
         sailor: "If you captain is a [STR] character, boosts this character's attack against [STR] characters by 1.5x",
-        specialName: "Dragon's Claw: Reverse Wave Motion",
+        specialName: "Luffy Special",
     },
     1793:{//Lucy Sabo
         captain: "If there is a [STR], [DEX] and [QCK] character in your crew, boosts ATK of [STR], [DEX] and [QCK] characters by 2.75x and their HP by 1.3x. If there are no [PSY] or [INT] characters on your crew, boosts ATK by 3.7125x instead. Lowers chances of getting [STR] orbs, makes [DEX] and [QCK] orbs \"beneficial\" to some characters",
