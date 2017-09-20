@@ -11997,6 +11997,20 @@ window.details = {
         ],
         specialNotes: "#{stages}",
     },
+    1791:{//Lucy Luffy
+        captain: "Not Translated",
+        special: "Cuts the current HP of one enemy by 20% that will ignore damage negating abilities and barriers. Changes the orbs in the top row into [STR] orbs, changes the orbs in the middle row into [QCK] orbs, changes the orbs in the bottom row into [DEX] orbs and amplifies the effect of orbs by 1.75x for 1 turn",
+        specialNotes: "#{ignorebarriers}",
+        sailor: "If you captain is a [STR] character, boosts this character's attack against [STR] characters by 1.5x",
+        specialName: "Dragon's Claw: Reverse Wave Motion",
+    },
+    1792:{//Lucy Luffy
+        captain: "Boosts RCV of [STR], [DEX] and [QCK] characters by 1.2x and boosts ATK of [STR], [DEX] and [QCK] characters by 3.25x after scoring 3 Perfects in a row",
+        special: "Cuts the current HP of one enemy by 20% that will ignore damage negating abilities and barriers. Changes the orbs in the top row into [STR] orbs, changes the orbs in the middle row into [QCK] orbs, changes the orbs in the bottom row into [DEX] orbs and amplifies the effect of orbs by 1.75x for 1 turn",
+        specialNotes: "#{ignorebarriers}",
+        sailor: "If you captain is a [STR] character, boosts this character's attack against [STR] characters by 1.5x",
+        specialName: "Dragon's Claw: Reverse Wave Motion",
+    },
     1793:{//Lucy Sabo
         captain: "If there is a [STR], [DEX] and [QCK] character in your crew, boosts ATK of [STR], [DEX] and [QCK] characters by 2.75x and their HP by 1.3x. If there are no [PSY] or [INT] characters on your crew, boosts ATK by 3.7125x instead. Lowers chances of getting [STR] orbs, makes [DEX] and [QCK] orbs \"beneficial\" to some characters",
         captainNotes: "#{beneficial}",
@@ -12016,20 +12030,48 @@ window.details = {
         specialName: "Snake Sword",
     },
     1796:{//Diamante
-        captain: "Boosts ATK of Slasher and Driven characters by ???x",
+        captain: "Boosts ATK of Slasher and Driven characters by 2.5x",
         special: "Delays all enemies for 2 turns, reduce enemies Damage Reduction and Increased Defense duration by 3 turns and changes right column into Matching orbs",
         sailor: "Boosts this character's attack against [STR] characters by 1.1x",
         specialName: "Snake Sword",
     },
     1797:{//Jesus Burgess
         captain: "Boosts ATK of Fighter characters by 2.25x",
-        special: "Cuts the current HP of each enemy by 20% and boosts ATK against delayed enemies by 1.5x for 2 turns.",
+        special: [
+            {
+                "description": "Cuts the current HP of each enemy by 10%",
+                "cooldown": [ 15, null ]
+            },
+            {
+                "description": "Cuts the current HP of each enemy by 20%",
+                "cooldown": [ 18, null ]
+            },
+            {
+                "description": "Cuts the current HP of each enemy by 20% and boosts ATK against delayed enemies by 1.5x for 2 turns.",
+                "cooldown": [ 21, null ]
+            }
+        ],
+        specialNotes: "#{stages}",
         sailor: "Boosts base ATK and HP of [STR], [DEX], and [QCK] characters by 75",
         specialName: "Shockwave Elbow",
     },
     1798:{//Jesus Burgess
-        captain: "Boosts ATK of Fighter characters by ???x",
-        special: "Cuts the current HP of each enemy by 20% and boosts ATK against delayed enemies by 1.5x for 2 turns.",
+        captain: "Boosts ATK of Fighter characters by 2.5x, boosts HP of Powerhouse and Driven characters by 1.25x",
+        special: [
+            {
+                "description": "Cuts the current HP of each enemy by 10%",
+                "cooldown": [ 15, null ]
+            },
+            {
+                "description": "Cuts the current HP of each enemy by 20%",
+                "cooldown": [ 18, null ]
+            },
+            {
+                "description": "Cuts the current HP of each enemy by 20% and boosts ATK against delayed enemies by 1.5x for 2 turns.",
+                "cooldown": [ 21, null ]
+            }
+        ],
+        specialNotes: "#{stages}",
         sailor: "Boosts base ATK and HP of [STR], [DEX], and [QCK] characters by 75",
         specialName: "Shockwave Elbow",
     },
@@ -12040,21 +12082,21 @@ window.details = {
         specialName: "Beautiful Sword: Round Table",
     },
     1800:{//Cavendish
-        captain: "Boosts ATK of [STR], [DEX] and [QCK] characters by ???x",
+        captain: "Boosts ATK of [STR], [DEX] and [QCK] characters by 2.5x and their RCV by 1.2x",
         special: "Changes [BLOCK] orbs into Matching orbs, locks all orbs for 1 turn, boosts ATK against enemies with reduced defense by 1.75x for 1 turn",
         sailor: "Makes [INT] and [PSY] orbs \"beneficial\" for this unit",
         specialName: "Beautiful Sword: Round Table",
     },
     1801:{//Bartolomeo
         captain: "Boosts ATK of [STR], [DEX] and [QCK] characters by 2x and if you don't attack with Bartolomeo, reduces damage received by 10% for that turn.",
-        special: "Deal 3x character's ATk in [QCK] damage to all enemies, reduces damage received by 90% for 1 turn and reduces the defense of all enemies by ???% for 2 turns",
-        sailor: "Reduces Paralysis for 3 turns for himself",
+        special: "Deal 30x character's ATk in [QCK] damage to all enemies, reduces damage received by 90% for 1 turn and reduces the defense of all enemies by ???% for 2 turns",
+        sailor: "Reduces Paralysis for 3 turns for himself?",
         specialName: "Barrier Bulls",
     },
     1802:{//Bartolomeo
-        captain: "Boosts ATK of [STR], [DEX] and [QCK] characters by ???x and if you don't attack with Bartolomeo, reduces damage received by ???% for that turn.",
-        special: "Deal 3x character's ATk in [QCK] damage to all enemies, reduces damage received by 90% for 1 turn and reduces the defense of all enemies by ???% for 2 turns",
-        sailor: "Reduces Paralysis for 3 turns for himself",
+        captain: "Boosts ATK of [STR], [DEX] and [QCK] characters by 2.5x and if you don't attack with Bartolomeo, reduces damage received by 15 for that turn.",
+        special: "Deal 30x character's ATk in [QCK] damage to all enemies, reduces damage received by 90% for 1 turn and reduces the defense of all enemies by ???% for 2 turns",
+        sailor: "Reduces Paralysis for 3 turns for himself?",
         specialName: "Barrier Bulls",
     },
 };

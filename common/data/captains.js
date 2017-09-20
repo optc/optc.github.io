@@ -3660,7 +3660,7 @@ window.captains = {
         atk: function(p) { return p.unit.type == "QCK" ? 1.5 : 1; }
     },
     1341: {
-        damageSorter: function(d) { return CrunchUtils.typeSort(d, 2.625, "QCK"); }, 
+        damageSorter: function(d) { return CrunchUtils.typeSort(d, 2.625, ["QCK"]); }, 
         hitAtk: function(p) {
             if (!(p.unit.type == "QCK")) return 1;
             return p.modifiers.slice(0, p.chainPosition).subcontains(["Below Good", "Below Good", "Below Good"]) ? 2.625 : 1.75;
@@ -4158,7 +4158,7 @@ window.captains = {
         hitModifiers: ["Good", "Good", "Great", "Perfect", "Perfect", "Perfect"]
     },
     1461: {
-        damageSorter: function(d) { return CrunchUtils.typeSort(d, 2.6, "QCK"); }, 
+        damageSorter: function(d) { return CrunchUtils.typeSort(d, 2.6, ["QCK"]); }, 
         hitAtk: function(p) {
             if (!(p.unit.type == "QCK")) return 1;
             return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? 2.6 : 2;
@@ -4440,6 +4440,7 @@ window.captains = {
         atk: function(p) { return p.percHP <= 30.0 ? 1.75 : p.percHP <= 50.0 ? 1.5 : 1; }
     },
     1533: {
+        damageSorter: function(d) { return CrunchUtils.typeSort(d, 2.5, ["QCK"]); }, 
         hitAtk: function(p) {
             return !p.unit.type == "QCK" ? 1 : p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect"]) ? 2.5 : 2;
         },
@@ -4447,6 +4448,7 @@ window.captains = {
         hp: function(p) { return p.unit.type == "QCK" ? 1.2 : 1; }
     },
     1534: {
+        damageSorter: function(d) { return CrunchUtils.typeSort(d, 2.5, ["QCK"]); }, 
         hitAtk: function(p) {
             return !p.unit.type == "QCK" ? 1 : p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect"]) ? 3 : 2.5;
         },
@@ -5148,6 +5150,7 @@ window.captains = {
         atk: function(p) { return p.unit.type == "STR" ? 2 : 1; },
     },
     1706: {
+        damageSorter: function(d) { return CrunchUtils.typeSort(d, 2.625, ["STR"]); }, 
         hitAtk: function(p) {
             return !p.unit.type == "STR" ? 1 : p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? 3.125 : 2.5;
         },
@@ -5442,6 +5445,13 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Shooter") ? 2.25 : 1; },
         hp: function(p) { return p.unit.class.has("Shooter") ? 1.5 : 1; }
     },
+    1792: {
+        damageSorter: function(d) { return CrunchUtils.typeSort(d, 3.25, [ "QCK", "STR", "DEX" ]); }, 
+        hitAtk: function(p) {
+            return !(p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? 1 : p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? 3.25 : 1;
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
+    },
     1793: {
         atk: function(p) { 
             if(p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK"){
@@ -5486,24 +5496,26 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Driven") ? 2 : 1; },
     },
     1796: {
-        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Driven") ? 1 : 1; },
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Driven") ? 2.5 : 1; },
     },
     1797: {
         atk: function(p) { return p.unit.class.has("Fighter") ? 2.25 : 1; }
     },
     1798: {
-        atk: function(p) { return p.unit.class.has("Fighter") ? 1 : 1; }
+        atk: function(p) { return p.unit.class.has("Fighter") ? 2.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Powerhouse") || p.unit.class.has("Driven") ? 1.25 : 1; },
     },
     1799: {
         atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? 2.25 : 1; }
     },
     1800: {
-        atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? 1 : 1; }
+        atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? 2.5 : 1; },
+        rcv: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? 1.2 : 1; }
     },
     1801: {
         atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? 2 : 1; }
     },
     1802: {
-        atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? 1 : 1; }
+        atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? 2.5 : 1; }
     },
 };

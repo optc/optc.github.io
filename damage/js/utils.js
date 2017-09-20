@@ -98,7 +98,7 @@ window.CrunchUtils.lowCostSort = function(array, costMultiplier, cost) {
 window.CrunchUtils.typeSort = function(array, typeMultiplier, types) {
     var result = [ ];
     function isUnitAMatch(unit) {
-        if (unit.type == types) {
+        if (types.includes(unit.type)) {
             return true;
         }
         else {
