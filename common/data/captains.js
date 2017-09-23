@@ -5525,4 +5525,7 @@ window.captains = {
     1802: {
         atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? 2.5 : 1; }
     },
+    1813: {
+        atk: function(p) { return 2.25; }
+    },
 };

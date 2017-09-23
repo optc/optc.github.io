@@ -3635,4 +3635,8 @@ window.specials = {
     1802: {
         def: function(p) { return 0.1; }
     },
+    1813: {
+        atk: function(p) { return p.slot == 1 ? 1.5 : 1; },
+        type: "class"
+    },
 };

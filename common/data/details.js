@@ -12002,14 +12002,14 @@ window.details = {
         special: "Cuts the current HP of one enemy by 20% that will ignore damage negating abilities and barriers. Changes the orbs in the top row into [STR] orbs, changes the orbs in the middle row into [QCK] orbs, changes the orbs in the bottom row into [DEX] orbs and amplifies the effect of orbs by 1.75x for 1 turn",
         specialNotes: "#{ignoreBarrier}",
         sailor: "If you captain is a [STR] character, boosts this character's attack against [STR] characters by 1.5x",
-        specialName: "Luffy Special",
+        specialName: "Gomu Gomu no Hawk Rifle",
     },
     1792:{//Lucy Luffy
         captain: "Boosts RCV of [STR], [DEX] and [QCK] characters by 1.2x and boosts ATK of [STR], [DEX] and [QCK] characters by 3.25x after scoring 3 Perfects in a row",
         special: "Cuts the current HP of one enemy by 20% that will ignore damage negating abilities and barriers. Changes the orbs in the top row into [STR] orbs, changes the orbs in the middle row into [QCK] orbs, changes the orbs in the bottom row into [DEX] orbs and amplifies the effect of orbs by 1.75x for 1 turn",
         specialNotes: "#{ignoreBarrier}",
         sailor: "If you captain is a [STR] character, boosts this character's attack against [STR] characters by 1.5x",
-        specialName: "Luffy Special",
+        specialName: "Gomu Gomu no Hawk Rifle",
     },
     1793:{//Lucy Sabo
         captain: "If there is a [STR], [DEX] and [QCK] character in your crew, boosts ATK of [STR], [DEX] and [QCK] characters by 2.75x and their HP by 1.3x. If there are no [PSY] or [INT] characters on your crew, boosts ATK by 3.7125x instead. Lowers chances of getting [STR] orbs, makes [DEX] and [QCK] orbs \"beneficial\" to some characters",
@@ -12098,5 +12098,10 @@ window.details = {
         special: "Deal 30x character's ATk in [QCK] damage to all enemies, reduces damage received by 90% for 1 turn and reduces the defense of all enemies by ???% for 2 turns",
         sailor: "Reduces Paralysis for 3 turns for himself?",
         specialName: "Barrier Bulls",
+    },
+    1813: {//Koala
+        captain: "Boosts ATK of all characters by 2.25x and boosts EXP and amount of Beli recieved by 1.2x",
+        special: "Changes Captain's orb into Matching and boosts ATK of your Captain by 1.5x for 1 turn",
+        specialName: "Revolutionary Soldier's Anger",
     },
 };
