@@ -891,7 +891,6 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
     };
     
     var getParameters = function(slotNumber, chainPosition) {
-        //console.log($scope.data.actionleft)
         return {
             unit: team[slotNumber].unit,
             orb: $scope.tdata.team[slotNumber].orb,

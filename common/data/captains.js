@@ -231,7 +231,7 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Slasher") ? 2 : 1; }
     },
     227: {
-        atk: function(p) { return p.unit.class.has("Slasher") ? 2.5 : 1; }
+        atk: function(p) { return p.unit.class.has("Slasher") ? 2.5 : 1; },
     },
     228: {
         hp: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; }
