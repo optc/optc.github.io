@@ -395,5 +395,12 @@ window.effects = {
         atk: function(p) { return 1.3; },
         chainModifier: function(p) { return 0.5 ; }
     },
+
+    'Kyros Colisuem - Chain multiplier limiter (1.5x)': {
+        description: 'Limits chain multiplier to 1.5x',
+        thumb: 1667,
+        id: 42, // don't change this
+        chainLimiter: function() { return 1.5; }
+    },
     
 };
