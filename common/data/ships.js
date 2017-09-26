@@ -418,12 +418,26 @@ window.ships = [
     { //32
         name: "Marshal D. Teach Pirate Ship",
         thumb: 'ship_0034_c.png',
-        description: 'Boosts HP by 1.25x and reduces special cooldown of all characters by 1 at the start of the adventure. Boosts ATK by 1.55x if you have a Striker, Shooter, Fighter, and Slasher on your crew.',
+        description: 'Boosts HP by 1.25x and reduces special cooldown of all characters by 1 at the start of the adventure. Boosts ATK by 1.55x if you have a Striker, Shooter, Fighter, and Slasher character on your crew.',
         atk: function(p) { 
             return (p.classCount.Striker >= 1 && p.classCount.Fighter >= 1 && p.classCount.Shooter >= 1 && p.classCount.Slasher >= 1) ? [ 1.2, 1.2, 1.25, 1.3, 1.35, 1.4, 1.45, 1.5, 1.5, 1.55 ][p.boatLevel - 1] : 1;
         },
         hp: function(p) {
             return [ 1.1, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.25 ][p.boatLevel - 1];
+        }
+    },
+    
+    
+    
+    { //33
+        name: "Revolutionary Black Crow",
+        thumb: null,
+        description: 'Boosts HP by 1.2x and reduces special cooldown of all characters by 1 at the start of the adventure. Boosts ATK of [STR], [DEX] and [QCK] characters by 1.55x if you have a [STR], [DEX] and [QCK] character on your crew.',
+        atk: function(p) { 
+            return (p.colorCount.STR>=1 && p.colorCount.DEX>=1 && p.colorCount.QCK>=1) ? [ 1.2, 1.2, 1.25, 1.3, 1.35, 1.4, 1.45, 1.5, 1.5, 1.55 ][p.boatLevel - 1] : 1;
+        },
+        hp: function(p) {
+            return [ 1.1, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2 ][p.boatLevel - 1];
         }
     },
 

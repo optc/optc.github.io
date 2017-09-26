@@ -12089,13 +12089,13 @@ window.details = {
     },
     1801:{//Bartolomeo
         captain: "Boosts ATK of [STR], [DEX] and [QCK] characters by 2x and if you don't attack with Bartolomeo, reduces damage received by 10% for that turn.",
-        special: "Deal 30x character's ATk in [QCK] damage to all enemies, reduces damage received by 90% for 1 turn and reduces the defense of all enemies by ???% for 2 turns",
+        special: "Deal 30x character's ATK in [QCK] damage to all enemies, reduces damage received by 90% for 1 turn and reduces the defense of all enemies by ???% for 2 turns",
         sailor: "Reduces Paralysis for 3 turns for himself?",
         specialName: "Barrier Bulls",
     },
     1802:{//Bartolomeo
         captain: "Boosts ATK of [STR], [DEX] and [QCK] characters by 2.5x and if you don't attack with Bartolomeo, reduces damage received by 15% for that turn.",
-        special: "Deal 30x character's ATk in [QCK] damage to all enemies, reduces damage received by 90% for 1 turn and reduces the defense of all enemies by ???% for 2 turns",
+        special: "Deal 30x character's ATK in [QCK] damage to all enemies, reduces damage received by 90% for 1 turn and reduces the defense of all enemies by ???% for 2 turns",
         sailor: "Reduces Paralysis for 3 turns for himself?",
         specialName: "Barrier Bulls",
     },
@@ -12103,5 +12103,20 @@ window.details = {
         captain: "Boosts ATK of all characters by 2.25x and boosts EXP and amount of Beli recieved by 1.2x",
         special: "Changes Captain's orb into Matching and boosts ATK of your Captain by 1.5x for 1 turn",
         specialName: "Revolutionary Soldier's Anger",
+    },
+    1814: {//Raid Sanji
+        captain: "Boosts ATK of Powerhouse characters by 2.5x until the first hit other than Perfect and recovers 100 HP at end of each turn",
+        specialName: "Sanji Special",
+        special: "Deal 150x character's ATK in typeless damage to one enemy, boosts ATK of Powerhouse characters by 2x for 1 turn",
+    },
+    1815: {//Raid Sanji
+        captain: "Boosts ATK of Powerhouse characters by 2.75x until the first hit other than Perfect and recovers 300 HP at end of each turn",
+        specialName: "Sanji Special",
+        special: "Deal 150x character's ATK in typeless damage to one enemy, boosts ATK of Powerhouse characters by 2x for 1 turn",
+    },
+    1816: {// Ace 6+
+        special: "Reduces crew's current HP by 40%, deals 15x the amount of HP subtracted in typeless damage to all enemies, boosts ATK of Shooter characters by 2x for 1 turn",
+        specialName: "Great Flame Commandment: Flame Emperor • Flame Wheel",
+        captain: "Boosts HP of Shooter characters by 1.5x and boosts ATK by 3.25x if they have a matching orb, by 2.25x otherwise"
     },
 };

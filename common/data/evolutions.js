@@ -2803,4 +2803,12 @@ window.evolutions = {
         evolution: 1802,
         evolvers: [  ]
     },
+    1814: {
+        evolution: 1815,
+        evolvers: [  ]
+    },
+    562: {
+        evolution: 1816,
+        evolvers: [ 'skullDEX', 118, 86, 302, 267 ]
+    },
 };
