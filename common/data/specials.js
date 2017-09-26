@@ -3639,4 +3639,16 @@ window.specials = {
         atk: function(p) { return p.slot == 1 ? 1.5 : 1; },
         type: "class"
     },
+    1814: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 2 : 1; },
+        type: "class"
+    },
+    1815: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 2 : 1; },
+        type: "class"
+    },
+    1816: {
+        atk: function(p) { return p.unit.class.has("Shooter") ? 2 : 1; },
+        type: "class"
+    },
 };
