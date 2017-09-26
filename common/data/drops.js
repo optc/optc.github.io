@@ -1437,7 +1437,7 @@ window.drops = {
             thumb: 1254,
             global: true,
             gamewith: 38336,
-            condition: 'You can only bring STR units and Driven Characters have their cooldowns reduced by 10 turns at the start of the fight',
+            condition: 'Driven Characters have their cooldowns reduced by 10 turns at the start of the fight',
             'All Difficulties': [ 1254, 1255, 1256, -669, -1492, -1077, -1079, -967, -972, -974, -750, -701, -500 ]
         },
         
@@ -2003,6 +2003,15 @@ window.drops = {
             gamewith: 63217,
             Master: [ 1695 ],
             Expert: [ 1695 ]
+        },
+        
+        {
+            name: 'Clash!! Vinsmoke Sanji',
+            thumb: 1815,
+            gamewith: null,
+            Ultimate: [ 1814 ],
+            Master: [ 1814 ],
+            Expert: [ 1814 ]
         },
 
     ],
