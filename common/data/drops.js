@@ -711,7 +711,7 @@ window.drops = {
             name: 'Punk Hazard Ice Lands - First Floor Room R',
             shortName: 'Punk Hazard 2',
             thumb: 1716,
-            completion: '10x Rainbow Gems',
+            completion: '5x Rainbow Gems',
             gamewith: 65822,
             '01': [ 1636 ],
             '02': [  ],
