@@ -275,7 +275,7 @@ window.matchers = [
         name: 'Orb matchers',
         target: 'special',
         matcher: /(Changes.+(orb|orbs))[^,]+Matching/i,
-        include: [ 1036, 1037, 1445 ]
+        include: [ 1036, 1037, 1445, 1369, 1370 ]
     },
 
     {
