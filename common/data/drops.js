@@ -2004,6 +2004,15 @@ window.drops = {
             Master: [ 1695 ],
             Expert: [ 1695 ]
         },
+        
+        {
+            name: 'Clash!! Vinsmoke Sanji',
+            thumb: 1815,
+            gamewith: null,
+            Ultimate: [ 1814 ],
+            Master: [ 1814 ],
+            Expert: [ 1814 ]
+        },
 
     ],
 
