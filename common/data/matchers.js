@@ -338,7 +338,7 @@ window.matchers = [
         matcher: /Reduces.+defense/i
     },
 
-    {
+    /*{
         name: 'Meat producers',
         target: 'special',
         matcher: /into( either)?[\s,\[\]A-Zor]+\[RCV\]/
@@ -348,7 +348,7 @@ window.matchers = [
         name: 'Meat converters',
         target: 'special',
         matcher: /\[RCV\].+into/i
-    },
+    },*/
 
     {
         name: 'Damage reducers',
