@@ -1458,7 +1458,7 @@ window.units = [
     [ "Klahadore the Butler", "INT", [ "Slasher", "Cerebral" ], 3, 16, 6, 2, 50, 392109, 109, 109, 30, 892, 557, 187, 1 ],
     [ "Pirate Kuro of a Hundred Plans", "INT", [ "Slasher", "Cerebral" ], 4, 26, 10, 3, 99, 3000000, 805, 489, 131, 1664, 1299, 310, 1 ],
     [ "Miss Valentine, Kilo Human", "STR", [ "Fighter", "Free Spirit" ], 3, 10, 5, 2, 35, 136167, 92, 49, 26, 755, 390, 148, 1 ],
-    [ "Miss Valentine, Baroque Works Officer Agent", "STR", [ "Fighter", "Free Spirit" ], 4, 20, 4, 3, 70, 1778330, 687, 319, 90, 1402, 774, 250, 1 ],
+    [ "Miss Valentine, Baroque Works Officer Agent", "STR", [ "Fighter", "Free Spirit" ], 4, 20, 4, 3, 70, 1066998, 687, 319, 90, 1402, 774, 250, 1 ],
     [ "Zoro's Winter Training", "QCK", [ "Slasher", "Driven" ], 4, 20, 6, 3, 99, 2000000, 111, 49, 22, 2303, 919, 244, 1 ],
     [ "Break Time Luffy", "PSY", [ "Fighter", "Free Spirit" ], 4, 12, 4, 2, 50, 392109, 132, 94, 26, 968, 505, 146, 1 ],
     [ "Luffy's Tea Party", "PSY", [ "Fighter", "Free Spirit" ], 5, 20, 8, 3, 99, 3000000, 881, 409, 98, 2051, 1138, 276, 1 ],

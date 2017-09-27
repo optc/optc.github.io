@@ -612,7 +612,6 @@ directives.levelSlider = function($timeout) {
 };
 
 directives.unitOrb = function($rootScope) {
-    //var ORBS = [ 0.5, 1, 2, 'g', 'rainbow', 'meat', 'str' ];//STR has to go last for simplicity, but will change if 6+ Shanks makes a turn in the same direction
     var ORBS = [ 0.5, 1, 2 ];
     return {
         restrict: 'E',
@@ -866,7 +865,7 @@ directives.candySlider = function($compile, $timeout) {
             };
             var updateMax = function(data) {
                 var used = Object.keys(data).reduce(function(prev,next) { return prev + (next == scope.type ? 0 : data[next]); },0);
-                input.trigger('configure',{ max: Math.min(100,200 - used) });
+                input.trigger('configure',{ max: Math.min(500,2000 - used) });
                 currentValue = data[scope.type];
                 input.val(currentValue).trigger('change');
                 scope.actualBonus = currentValue * { hp: 5, atk: 2, rcv: 1 }[scope.type];

@@ -474,12 +474,16 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
     var applyCaptainEffectsToHP = function(slotNumber,hp) {
         var params = getParameters(slotNumber);
         for (var i=0;i<enabledEffects.length;++i) {
-            if (enabledEffects[i].hasOwnProperty('hpStatic'))
+            if (enabledEffects[i].hasOwnProperty('hpStatic')){
+                params["sourceSlot"] = enabledEffects[i].sourceSlot;
                 hp += enabledEffects[i].hpStatic(params);
+            }
         }
         for (var i=0;i<enabledEffects.length;++i) {
-            if (enabledEffects[i].hasOwnProperty('hp'))
+            if (enabledEffects[i].hasOwnProperty('hp')){
+                params["sourceSlot"] = enabledEffects[i].sourceSlot; 
                 hp *= enabledEffects[i].hp(params);
+            }
         }
         return hp;
     };

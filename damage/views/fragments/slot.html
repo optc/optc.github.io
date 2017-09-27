@@ -11,6 +11,7 @@
         ng-if="slot > 1">Click to add</span>
 
     <level-label ng-if="data.team[slot].unit">Lv. {{ data.team[slot].level }}</level-label>
+    <limit-level-label ng-if="data.team[slot].unit">Lv. {{ data.team[slot].limitLevel }}</limit-level-label>
 
     <div class="unitContainer" ng-show="data.team[slot].unit" draggable="slot" stop-propagation removable>
         <div class="unitPortrait" decorate-slot="notitle" uid="data.team[slot].unit.number + 1" udata="numbers.team[slot]"></div>
@@ -22,6 +23,8 @@
     </div>
 
     <level-slider></level-slider>
+    <limit-level-slider></limit-level-slider>
+    
 
     <div class="ribbon-container" ng-if="slot < 2">
         <div class="corner-ribbon orange" ng-if="slot < 1">Friend</div>
