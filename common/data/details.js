@@ -12036,6 +12036,8 @@ window.details = {
         specialNotes: "#{ignoreBarrier}",
         sailor: "If you captain is a [STR] character, boosts this character's attack against [STR] characters by 1.5x",
         specialName: "Gomu Gomu no Hawk Rifle",
+        limit: "This unit has a Limit Break skill tree",
+        limitNotes: "This will be updated soon"
     },
     1793:{//Lucy Sabo
         captain: "If there is a [STR], [DEX] and [QCK] character in your crew, boosts ATK of [STR], [DEX] and [QCK] characters by 2.75x and their HP by 1.3x, and lowers chances of getting [STR] orbs, makes [DEX] and [QCK] orbs \"beneficial\" to some characters. If there are no [PSY] and [INT] characters on your crew, boosts ATK by 3.7125x instead.",
@@ -12048,6 +12050,8 @@ window.details = {
         captainNotes: "#{beneficial}",
         special: "Boosts ATK of [STR], [DEX] and [QCK] characters by 1.75x for 1 turn. If during that turn you score 4 Perfect hits, boosts ATK of [STR], [DEX] and [QCK] characters by 2x in the following turn.",
         specialName: "Dragon's Claw: Reverse Wave Motion",
+        limit: "This unit has a Limit Break skill tree",
+        limitNotes: "This will be updated soon"
     },
     1795:{//Diamante
         captain: "Boosts ATK of Slasher and Driven characters by 2x",
@@ -12060,6 +12064,8 @@ window.details = {
         special: "Delays all enemies for 2 turns, reduce enemies Damage Reduction and Increased Defense duration by 3 turns and changes right column into Matching orbs",
         sailor: "Boosts this character's attack against [STR] characters by 1.1x",
         specialName: "Snake Sword",
+        limit: "This unit has a Limit Break skill tree",
+        limitNotes: "This will be updated soon"
     },
     1797:{//Jesus Burgess
         captain: "Boosts ATK of Fighter characters by 2.25x",
@@ -12100,6 +12106,8 @@ window.details = {
         specialNotes: "#{stages}",
         sailor: "Boosts base ATK and HP of [STR], [DEX], and [QCK] characters by 75",
         specialName: "Shockwave Elbow",
+        limit: "This unit has a Limit Break skill tree",
+        limitNotes: "This will be updated soon"
     },
     1799:{//Cavendish
         captain: "Boosts ATK of [STR], [DEX] and [QCK] characters by 2.25x",
@@ -12112,6 +12120,8 @@ window.details = {
         special: "Changes [BLOCK] orbs into Matching orbs, locks all orbs for 1 turn, boosts ATK against enemies with reduced defense by 1.75x for 1 turn",
         sailor: "Makes [INT] and [PSY] orbs \"beneficial\" for this unit",
         specialName: "Beautiful Sword: Round Table",
+        limit: "This unit has a Limit Break skill tree",
+        limitNotes: "This will be updated soon"
     },
     1801:{//Bartolomeo
         captain: "Boosts ATK of [STR], [DEX] and [QCK] characters by 2x and if you don't attack with Bartolomeo, reduces damage received by 10% for that turn.",
@@ -12124,6 +12134,8 @@ window.details = {
         special: "Deal 30x character's ATK in [QCK] damage to all enemies, reduces damage received by 90% for 1 turn and reduces the defense of all enemies by ???% for 2 turns",
         sailor: "Reduces Paralysis for 3 turns for himself?",
         specialName: "Barrier Bulls",
+        limit: "This unit has a Limit Break skill tree",
+        limitNotes: "This will be updated soon"
     },
     1813: {//Koala
         captain: "Boosts ATK of all characters by 2.25x and boosts EXP and amount of Beli recieved by 1.2x",
@@ -12139,6 +12151,8 @@ window.details = {
         captain: "Boosts ATK of Powerhouse characters by 2.75x until the first hit other than Perfect and recovers 300 HP at end of each turn",
         specialName: "Sanji Special",
         special: "Deal 150x character's ATK in typeless damage to one enemy, boosts ATK of Powerhouse characters by 2x for 1 turn",
+        limit: "This unit has a Limit Break skill tree",
+        limitNotes: "This will be updated soon"
     },
     1816: {// Ace 6+
         special: "Reduces crew's current HP by 40%, deals 15x the amount of HP subtracted in typeless damage to all enemies, boosts ATK of Shooter characters by 2x for 1 turn",
