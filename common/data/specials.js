@@ -3577,6 +3577,19 @@ window.specials = {
     1780: {
         chainAddition: function(p){ return 0.5;}
     },
+    1782: {
+        delay: function(p) { return 1; },
+    },
+    1783: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain]); }
+    },
+    1784: {
+        atk: function(p) { return 1.5; },
+        type: "type"
+    },
+    1785: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.25, [p.friendCaptain, p.captain]); }
+    },
     1791: {
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain]); }
     },

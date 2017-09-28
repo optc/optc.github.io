@@ -11997,6 +11997,32 @@ window.details = {
         ],
         specialNotes: "#{stages}",
     },
+    1781: {//Fighting Fish
+        captain: "Boosts ATK of Powerhouse characters by 1.75x. Makes [TND] and [RCV] orbs \"beneficial\" to Powerhouse characters",
+        special: "Boosts ATK of ??? characters by 1.3x for 1 turn, changes own orb into STR and deals 5x character's ATK in [STR] damage to all enemies",
+        specialName: "Fish Special",
+    },
+    1782: {//Chinjao
+        captain: "Boosts ATK of [QCK] characters by 2.25x, boosts damage of QCK specials by 1.75x",
+        captainNotes: "#{noFixedPerc}",
+        special: "Delays all enemies for 2 turns, deals 25x character's ATK in STR damage to all enemies",
+        specialName: "Chinjao Special",
+    },
+    1783: {//Hajrudin
+        captain: "Boosts ATK and HP of Powerhouse characters by 1.5x",
+        special: "Locks all orbs for 1 turn. If during that turn you score 4 Perfect hits, amplifies the effect of orbs by 1.5x for 1 turn.",
+        specialName: "Chinjao Special",
+    },
+    1784: {//Fujitora
+        captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of characters with fewer than 4 stars by 2.5x",
+        special: "Deals random [INT] damage to all enemies, reduces Special Cooldown of all characters by 1 turn and boosts ATK of all characters by 1.5x for 1 turn",
+        specialName: "Fujitora Special",
+    },
+    1785: {//Spartan
+        captain: "Recovers 3x character's RCV in HP at the end of each turn",
+        special: "Recovers 3000 HP and amplifies the effect of orbs by 1.25x for 1 turn",
+        specialName: "Spartan Special",
+    },
     1791:{//Lucy Luffy
         captain: "Boosts ATK of [STR], [DEX] and [QCK] characters by 2.5x after scoring 3 Perfects in a row",
         special: "Cuts the current HP of one enemy by 20% that will ignore damage negating abilities and barriers. Changes the orbs in the top row into [STR] orbs, changes the orbs in the middle row into [QCK] orbs, changes the orbs in the bottom row into [DEX] orbs and amplifies the effect of orbs by 1.75x for 1 turn",
@@ -12012,13 +12038,13 @@ window.details = {
         specialName: "Gomu Gomu no Hawk Rifle",
     },
     1793:{//Lucy Sabo
-        captain: "If there is a [STR], [DEX] and [QCK] character in your crew, boosts ATK of [STR], [DEX] and [QCK] characters by 2.75x and their HP by 1.3x. If there are no [PSY] or [INT] characters on your crew, boosts ATK by 3.7125x instead. Lowers chances of getting [STR] orbs, makes [DEX] and [QCK] orbs \"beneficial\" to some characters",
+        captain: "If there is a [STR], [DEX] and [QCK] character in your crew, boosts ATK of [STR], [DEX] and [QCK] characters by 2.75x and their HP by 1.3x, and lowers chances of getting [STR] orbs, makes [DEX] and [QCK] orbs \"beneficial\" to some characters. If there are no [PSY] and [INT] characters on your crew, boosts ATK by 3.7125x instead.",
         captainNotes: "#{beneficial}",
         special: "Boosts ATK of [STR], [DEX] and [QCK] characters by 1.75x for 1 turn. If during that turn you score 4 Perfect hits, boosts ATK of [STR], [DEX] and [QCK] characters by 2x in the following turn.",
         specialName: "Dragon's Claw: Reverse Wave Motion",
     },
     1794:{//Lucy Sabo
-        captain: "If there is a [STR], [DEX] and [QCK] character in your crew, boosts ATK of [STR], [DEX] and [QCK] characters by 2.75x and their HP by 1.3x. If there are no [PSY] or [INT] characters on your crew, boosts ATK by 3.7125x instead. Lowers chances of getting [STR] orbs, makes [DEX] and [QCK] orbs \"beneficial\" to some characters",
+        captain: "If there is a [STR], [DEX] and [QCK] character in your crew, boosts ATK of [STR], [DEX] and [QCK] characters by 2.75x and their HP by 1.3x, and lowers chances of getting [STR] orbs, makes [DEX] and [QCK] orbs \"beneficial\" to some characters. If there are no [PSY] and [INT] characters on your crew, boosts ATK by 3.7125x instead.",
         captainNotes: "#{beneficial}",
         special: "Boosts ATK of [STR], [DEX] and [QCK] characters by 1.75x for 1 turn. If during that turn you score 4 Perfect hits, boosts ATK of [STR], [DEX] and [QCK] characters by 2x in the following turn.",
         specialName: "Dragon's Claw: Reverse Wave Motion",

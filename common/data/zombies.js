@@ -475,4 +475,8 @@ window.zombies = {
         type: 'healer',
         multiplier: 1.5
     },
+    1785: { // Spartan
+        type: 'healer',
+        multiplier: 3
+    },
 };

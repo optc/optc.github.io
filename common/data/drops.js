@@ -729,6 +729,26 @@ window.drops = {
             '14': [ 1636 ],
         },
         
+        {
+            name: 'Dressrosa - Harbor Town Acacia Colosseum',
+            shortName: 'Dressrosa 1',
+            thumb: 1782,
+            completion: '5x Rainbow Gems',
+            gamewith: 70405,
+            '01': [  ],
+            '02': [ 1785 ],
+            '03': [  ],
+            '04': [ 1781 ],
+            '05': [ 1782 ],
+            '06': [ 1648 ],
+            '07': [  ],
+            '08': [ 1784 ],
+            '09': [ 1783 ],
+            '10': [  ],
+            '11': [ 1648 ],
+            '12': [ 1782 ],
+        },
+        
     ],
 
     'Weekly Island': [

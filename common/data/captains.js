@@ -5444,6 +5444,19 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Shooter") ? 2.25 : 1; },
         hp: function(p) { return p.unit.class.has("Shooter") ? 1.5 : 1; }
     },
+    1781: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 1.75 : 1; }
+    },
+    1782: {
+        atk: function(p) { return p.unit.type == "2.25" ? 1.75 : 1; },
+    },
+    1783: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 1.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Powerhouse") ? 1.5 : 1; }
+    },
+    1784: {
+        atk: function(p) { return p.unit.stars <= 4 ? 2.5 : 1; }
+    },
     1791: {
         damageSorter: function(d) { return CrunchUtils.typeSort(d, 2.5, [ "QCK", "STR", "DEX" ]); }, 
         hitAtk: function(p) {
@@ -5485,6 +5498,8 @@ window.captains = {
                     return 3.7125;
                 else if(p.colorCount.STR>=1 && p.colorCount.DEX>=1 && p.colorCount.QCK>=1)
                     return 2.75;
+                else if((p.colorCount.INT>=1 && p.colorCount.PSY==0) || (p.colorCount.INT==0 && p.colorCount.PSY>=1))
+                    return 1.35;
                 else
                     return 1; 
                 }
