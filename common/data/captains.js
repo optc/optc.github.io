@@ -5474,10 +5474,12 @@ window.captains = {
     1793: {
         atk: function(p) { 
             if(p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK"){
-                if(p.colorCount.INT==0 && p.colorCount.PSY==0 && p.colorCount.STR>=1 && p.colorCount.DEX>=1 && p.colorCount.QCK>=1) 
+                if((p.colorCount.INT>=0 && p.colorCount.PSY==0 && p.colorCount.STR>=1 && p.colorCount.DEX>=1 && p.colorCount.QCK>=1)  || (p.colorCount.INT==0 && p.colorCount.PSY>=0 && p.colorCount.STR>=1 && p.colorCount.DEX>=1 && p.colorCount.QCK>=1))
                     return 3.7125;
                 else if(p.colorCount.STR>=1 && p.colorCount.DEX>=1 && p.colorCount.QCK>=1)
                     return 2.75;
+                else if((p.colorCount.INT>=1 && p.colorCount.PSY==0) || (p.colorCount.INT==0 && p.colorCount.PSY>=1))
+                    return 1.35;
                 else
                     return 1; 
                 }
@@ -5494,7 +5496,7 @@ window.captains = {
     1794: {
         atk: function(p) { 
             if(p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK"){
-                if(p.colorCount.INT==0 && p.colorCount.PSY==0 && p.colorCount.STR>=1 && p.colorCount.DEX>=1 && p.colorCount.QCK>=1) 
+                if((p.colorCount.INT>=0 && p.colorCount.PSY==0 && p.colorCount.STR>=1 && p.colorCount.DEX>=1 && p.colorCount.QCK>=1)  || (p.colorCount.INT==0 && p.colorCount.PSY>=0 && p.colorCount.STR>=1 && p.colorCount.DEX>=1 && p.colorCount.QCK>=1))
                     return 3.7125;
                 else if(p.colorCount.STR>=1 && p.colorCount.DEX>=1 && p.colorCount.QCK>=1)
                     return 2.75;
