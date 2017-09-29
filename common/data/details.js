@@ -12075,13 +12075,13 @@ window.details = {
     },
     1795:{//Diamante
         captain: "Boosts ATK of Slasher and Driven characters by 2x",
-        special: "Delays all enemies for 2 turns, reduce enemies Damage Reduction and Increased Defense duration by 3 turns and changes right column into Matching orbs",
+        special: "Delays all enemies for 2 turns, reduce enemies Damage Reduction and Increased Defense duration by 3 turns and changes right column [STR], [DEX], [QCK], [PSY] and [INT] orbs into Matching orbs",
         sailor: "Boosts this character's attack against [STR] characters by 1.1x",
         specialName: "Snake Sword",
     },
     1796:{//Diamante
         captain: "Boosts ATK of Slasher and Driven characters by 2.5x",
-        special: "Delays all enemies for 2 turns, reduce enemies Damage Reduction and Increased Defense duration by 3 turns and changes right column into Matching orbs",
+        special: "Delays all enemies for 2 turns, reduce enemies Damage Reduction and Increased Defense duration by 3 turns and changes right column [STR], [DEX], [QCK], [PSY] and [INT] orbs into Matching orbs",
         sailor: "Boosts this character's attack against [STR] characters by 1.1x",
         specialName: "Snake Sword",
         limit: "This unit has a Limit Break skill tree",
@@ -12092,15 +12092,15 @@ window.details = {
         special: [
             {
                 "description": "Cuts the current HP of each enemy by 10%",
-                "cooldown": [ 15, null ]
+                "cooldown": [ 15, 9 ]
             },
             {
                 "description": "Cuts the current HP of each enemy by 20%",
-                "cooldown": [ 18, null ]
+                "cooldown": [ 18, 12 ]
             },
             {
                 "description": "Cuts the current HP of each enemy by 20% and boosts ATK against delayed enemies by 1.5x for 2 turns.",
-                "cooldown": [ 21, null ]
+                "cooldown": [ 21, 15 ]
             }
         ],
         specialNotes: "#{stages}",
@@ -12112,15 +12112,15 @@ window.details = {
         special: [
             {
                 "description": "Cuts the current HP of each enemy by 10%",
-                "cooldown": [ 15, null ]
+                "cooldown": [ 15, 9 ]
             },
             {
                 "description": "Cuts the current HP of each enemy by 20%",
-                "cooldown": [ 18, null ]
+                "cooldown": [ 18, 12 ]
             },
             {
                 "description": "Cuts the current HP of each enemy by 20% and boosts ATK against delayed enemies by 1.5x for 2 turns.",
-                "cooldown": [ 21, null ]
+                "cooldown": [ 21, 15 ]
             }
         ],
         specialNotes: "#{stages}",
@@ -12159,13 +12159,13 @@ window.details = {
     },
     1809: {//Wanda
         captain: "Boosts ATK by 2.25x after scoring 2 Perfects in a row",
-        special: "Reduces Bind and Paralysis duration by 2 turns. If your Captain is a Striker character, makes Perfects easier to hit for 1 turn",
+        special: "Reduces Bind and Paralysis duration by 2 turns. If your Captain is a Slasher character, makes Perfects easier to hit for 1 turn",
         sailor: "Reduces Paralysis for 1 turn for herself",
         specialName: "Wanda Special",
     },
     1810: {//Wanda
         captain: "Boosts chances of getting Matching orbs, boosts ATK by 2.25x after scoring 2 Perfects in a row",
-        special: "Reduces Bind and Paralysis duration by 2 turns. If your Captain is a Striker character, makes Perfects easier to hit for 1 turn",
+        special: "Reduces Bind and Paralysis duration by 2 turns. If your Captain is a Slasher character, makes Perfects easier to hit for 1 turn",
         sailor: "Reduces Paralysis for 1 turn for herself",
         specialName: "Wanda Special",
     },
