@@ -11964,8 +11964,45 @@ window.details = {
         special: "Deals 50x character's ATK in typeless damage to one enemy that will ignore damage negating abilities and barriers, changes [BLOCK], [STR], and [INT] orbs into Matching orbs for Free Spirit characters and adds .2x to Chain multiplier for 3 turns",
         specialName: "Devil Destroyer's Light Arrow",
         specialNotes: "#{ignoreBarrier}",
-        limit: "This unit has a Limit Break skill tree",
-        limitNotes: "This will be updated soon"
+        limit: [
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Aquire Potential 1: Critical Hit" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base RCV by 30" },
+            { "description": "Aquire Sailor Ability 1: Makes [DEX] orbs \"beneficial\" for this unit" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Aquire 1 additional Socket slot" },
+            { "description": "Boosts base HP by 60" },
+            { "description": "Boosts base ATK by 40" },
+            { "description": "Aquire Sailor Ability 2: Boosts base ATK, HP and RCV of Shooter and Free Spirit characters by 50" },
+            { "description": "Aquire Potential 2: Slot Bind Self-reduction" },
+        ],
+        potential: [
+            {
+                "Name": "Critical Hit",
+                "description": [ 
+                    "Level 1: If you hit a perfect with this character, there is a 10% chance to deal 3% of this character's attack in extra damage",
+                    "Level 2: If you hit a perfect with this character, there is a 10% chance to deal 5% of this character's attack in extra damage",
+                    "Level 3: If you hit a perfect with this character, there is a 15% chance to deal 5% of this character's attack in extra damage",
+                    "Level 4: If you hit a perfect with this character, there is a 20% chance to deal 5% of this character's attack in extra damage",
+                    "Level 5: If you hit a perfect with this character, there is a 20% chance to deal 10% of this character's attack in extra damage"
+                ]
+            },
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [ 
+                    "Level 1: Reduces Slot Bind duration by 1 turn on this character",
+                    "Level 2: Reduces Slot Bind duration by 2 turns on this character",
+                    "Level 3: Reduces Slot Bind duration by 3 turns on this character",
+                    "Level 4: Reduces Slot Bind duration by 4 turns on this character",
+                    "Level 5: Reduces Slot Bind duration by 5 turns on this character"
+                ]
+            },
+        ]
     },
     1779:{//Kizaru
         captain: "Boosts ATK of Shooter characters by 2x",
@@ -12023,23 +12060,23 @@ window.details = {
         special: "Recovers 3000 HP and amplifies the effect of orbs by 1.25x for 1 turn",
         specialName: "Spartan Special",
     },
-    1786: {
+    1786: {//Dressrosa Fodder
         special: "Makes [QCK] orbs \"beneficial\" to Shooter characters for 1 turn",
         specialName: "Shooter Beneficial Slot: [QCK]"
     },
-    1787: {
+    1787: {//Dressrosa Fodder
         special: "Reduces crew's current HP by 50%, deals 5x the amount of HP subtracted in typeless damage to one enemy",
         specialName: "Risky Attack"
     },
-    1788: {
+    1788: {//Dressrosa Fodder
         special: "Boosts ATK of Shooter characters by 1.2x for 1 turn",
         specialName: "Attack Boost: Shooter"
     },
-    1789: {
+    1789: {//Dressrosa Fodder
         special: "Boosts chances of getting [RCV] orbs for 2 turns",
         specialName: "Meat for Meat",
     },
-    1790: {
+    1790: {//Dressrosa Fodder
         special: "Recovers 3x character's RCV in HP at the end of each turn for 3 turns",
         specialName: "Auto Light Recovery"
     },
@@ -12056,8 +12093,46 @@ window.details = {
         specialNotes: "#{ignoreBarrier}",
         sailor: "If you captain is a [STR] character, boosts this character's attack against [STR] characters by 1.5x",
         specialName: "Gomu Gomu no Hawk Rifle",
-        limit: "This unit has a Limit Break skill tree",
-        limitNotes: "This will be updated soon"
+        limit: [
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Aquire Potential 1: Critical Hit" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Aquire Sailor Ability 1: " },
+            { "description": "Boosts base HP by 60" },
+            { "description": "Boosts base RCV by 30" },
+            { "description": "Boosts base ATK by 50" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Aquire Potential 2: Enrage" },
+        ],
+        potential: [
+            {
+                "Name": "Critical Hit",
+                "description": [ 
+                    "Level 1: If you hit a perfect with this character, there is a 20% chance to deal 3% of this character's attack in extra damage",
+                    "Level 2: If you hit a perfect with this character, there is a 30% chance to deal 3% of this character's attack in extra damage",
+                    "Level 3: If you hit a perfect with this character, there is a 30% chance to deal 3% of this character's attack in extra damage",
+                    "Level 4: If you hit a perfect with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
+                    "Level 5: If you hit a perfect with this character, there is a 50% chance to deal 7% of this character's attack in extra damage"
+                ]
+            },
+            {
+                "Name": "Enrage",
+                "description": [ 
+                    "Level 1: Boosts base ATK by 30",
+                    "Level 2: Boosts base ATK by 60",
+                    "Level 3: Boosts base ATK by 90",
+                    "Level 4: Boosts base ATK by 120",
+                    "Level 5: Boosts base ATK by 150"
+                ]
+            },
+        ],
+        potentialNotes: "Enrage is activated when your crew took damage from your enemies in the previous turn"
     },
     1793:{//Lucy Sabo
         captain: "If there is a [STR], [DEX] and [QCK] character in your crew, boosts ATK of [STR], [DEX] and [QCK] characters by 2.75x and their HP by 1.3x, and lowers chances of getting [STR] orbs, makes [DEX] and [QCK] orbs \"beneficial\" to [STR], [DEX] and [QCK] characters. If there are no [PSY] and [INT] characters on your crew, boosts ATK by 3.7125x instead.",
@@ -12070,8 +12145,71 @@ window.details = {
         captainNotes: "#{beneficial}",
         special: "Boosts ATK of [STR], [DEX] and [QCK] characters by 1.75x for 1 turn. If during that turn you score 4 Perfect hits, boosts ATK of [STR], [DEX] and [QCK] characters by 2x in the following turn.",
         specialName: "Dragon's Claw: Reverse Wave Motion",
-        limit: "This unit has a Limit Break skill tree",
-        limitNotes: "This will be updated soon"
+        limit: [
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base RCV by 5" },
+            { "description": "Aquire Potential 1: Critical Hit" },
+            { "description": "Boosts base RCV by 5" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Aquire Sailor Ability 1: Restores his own special by 2 turns when it is rewinded" },
+            { "description": "Boosts base HP by 35" },
+            { "description": "Boosts base HP by 45" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base ATK by 15" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base RCV by 15" },
+            { "description": "Aquire Potential 2: Enrage" },
+            { "description": "Boosts base ATK by 25" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base HP by 60" },
+            { "description": "Boosts base HP by 75" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base ATK by 35" },
+            { "description": "Boosts base HP by 85" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base RCV by 25" },
+            { "description": "Boosts base RCV by 30" },
+            { "description": "Boosts base ATK by 35" },
+            { "description": "Aquire Sailor Ability 2: Boosts base ATK, HP and RCV of [STR], [DEX], and [QCK] characters by 50" },
+            { "description": "Boosts base HP by 100" },
+            { "description": "Boosts base ATK by 40" },
+            { "description": "Aquire Potential 3: Slot Bind Self-reduction" },
+        ],
+        potential: [
+            {
+                "Name": "Critical Hit",
+                "description": [ 
+                    "Level 1: If you hit a perfect with this character, there is a 20% chance to deal 3% of this character's attack in extra damage",
+                    "Level 2: If you hit a perfect with this character, there is a 30% chance to deal 5% of this character's attack in extra damage",
+                    "Level 3: If you hit a perfect with this character, there is a 30% chance to deal 5% of this character's attack in extra damage",
+                    "Level 4: If you hit a perfect with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
+                    "Level 5: If you hit a perfect with this character, there is a 50% chance to deal 10% of this character's attack in extra damage"
+                ]
+            },
+            {
+                "Name": "Enrage",
+                "description": [ 
+                    "Level 1: Boosts base ATK by 60",
+                    "Level 2: Boosts base ATK by 90",
+                    "Level 3: Boosts base ATK by 120",
+                    "Level 4: Boosts base ATK by 150",
+                    "Level 5: Boosts base ATK by 200"
+                ]
+            },
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [ 
+                    "Level 1: Reduces Slot Bind duration by 3 turn on this character",
+                    "Level 2: Reduces Slot Bind duration by 5 turns on this character",
+                    "Level 3: Reduces Slot Bind duration by 7 turns on this character",
+                    "Level 4: Reduces Slot Bind duration by 10 turns on this character",
+                    "Level 5: Reduces Slot Bind completely on this character"
+                ]
+            },
+        ],
+        potentialNotes: "Enrage is activated when your crew took damage from your enemies in the previous turn"
     },
     1795:{//Diamante
         captain: "Boosts ATK of Slasher and Driven characters by 2x",
@@ -12084,8 +12222,45 @@ window.details = {
         special: "Delays all enemies for 2 turns, reduce enemies Damage Reduction and Increased Defense duration by 3 turns and changes right column [STR], [DEX], [QCK], [PSY] and [INT] orbs into Matching orbs",
         sailor: "Boosts this character's attack against [STR] characters by 1.1x",
         specialName: "Snake Sword",
-        limit: "This unit has a Limit Break skill tree",
-        limitNotes: "This will be updated soon"
+        limit: [
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Aquire Potential 1: Barrier Penetration" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Aquire Sailor Ability 1: Reduces Silence duration on this character by 3 turns" },
+            { "description": "Boosts base RCV by 30" },
+            { "description": "Boosts base ATK by 40" },
+            { "description": "Boosts base HP by 90" },
+            { "description": "Aquire 1 additional Socket slot" },
+            { "description": "Aquire Potential 2: Slot Bind Self-reduction" },
+        ],
+        potential: [
+            {
+                "Name": "Barrier Penetration",
+                "description": [ 
+                    "Level 1: This character's attack will ignore barriers if HP is above 99%",
+                    "Level 2: This character's attack will ignore barriers if HP is above 99%",
+                    "Level 3: This character's attack will ignore barriers if HP is above 99%",
+                    "Level 4: This character's attack will ignore barriers if HP is above 80%",
+                    "Level 5: This character's attack will ignore barriers if HP is above 50%"
+                ]
+            },
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [ 
+                    "Level 1: Reduces Slot Bind duration by 1 turn on this character",
+                    "Level 2: Reduces Slot Bind duration by 2 turns on this character",
+                    "Level 3: Reduces Slot Bind duration by 3 turns on this character",
+                    "Level 4: Reduces Slot Bind duration by 5 turns on this character",
+                    "Level 5: Reduces Slot Bind duration by 10 turns on this character"
+                ]
+            },
+        ]
     },
     1797:{//Jesus Burgess
         captain: "Boosts ATK of Fighter characters by 2.25x",
@@ -12126,8 +12301,46 @@ window.details = {
         specialNotes: "#{stages}",
         sailor: "Boosts base ATK and HP of [STR], [DEX], and [QCK] characters by 75",
         specialName: "Shockwave Elbow",
-        limit: "This unit has a Limit Break skill tree",
-        limitNotes: "This will be updated soon"
+        limit: [
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Aquire Potential 1: Critical Hit" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base HP by 10" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base ATK by 50" },
+            { "description": "Aquire Sailor Ability 1: Reduces Silence duration on this character by 3 turns" },
+            { "description": "Boosts base HP by 60" },
+            { "description": "Boosts base RCV by 30" },
+            { "description": "Boosts base HP by 90" },
+            { "description": "Aquire 1 additional Socket slot" },
+            { "description": "Aquire Potential 2: Enrage" },
+        ],
+        potential: [
+            {
+                "Name": "Critical Hit",
+                "description": [ 
+                    "Level 1: If you hit a perfect with this character, there is a 10% chance to deal 3% of this character's attack in extra damage",
+                    "Level 2: If you hit a perfect with this character, there is a 10% chance to deal 5% of this character's attack in extra damage",
+                    "Level 3: If you hit a perfect with this character, there is a 15% chance to deal 5% of this character's attack in extra damage",
+                    "Level 4: If you hit a perfect with this character, there is a 20% chance to deal 5% of this character's attack in extra damage",
+                    "Level 5: If you hit a perfect with this character, there is a 40% chance to deal 7% of this character's attack in extra damage"
+                ]
+            },
+            {
+                "Name": "Enrage",
+                "description": [ 
+                    "Level 1: Boosts base ATK by 30",
+                    "Level 2: Boosts base ATK by 50",
+                    "Level 3: Boosts base ATK by 70",
+                    "Level 4: Boosts base ATK by 100",
+                    "Level 5: Boosts base ATK by 150"
+                ]
+            },
+        ],
+        potentialNotes: "Enrage is activated when your crew took damage from your enemies in the previous turn"
     },
     1799:{//Cavendish
         captain: "Boosts ATK of [STR], [DEX] and [QCK] characters by 2.25x",
@@ -12140,8 +12353,45 @@ window.details = {
         special: "Changes [BLOCK] orbs into Matching orbs, locks all orbs for 1 turn, boosts ATK against enemies with reduced defense by 1.75x for 2 turns",
         sailor: "Makes [INT] and [PSY] orbs \"beneficial\" for this unit",
         specialName: "Beautiful Sword: Round Table",
-        limit: "This unit has a Limit Break skill tree",
-        limitNotes: "This will be updated soon"
+        limit: [
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base RCV by 30" },
+            { "description": "Aquire Potential 1: Reduce No Healing duration" },
+            { "description": "Boosts base HP by 20" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base ATK by 40" },
+            { "description": "Aquire Sailor Ability 1: Boosts base ATK, HP and RCV of [STR], [DEX], and [QCK] characters by 50" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base HP by 60" },
+            { "description": "Boosts base ATK by 50" },
+            { "description": "Aquire 1 additional Socket slot" },
+            { "description": "Aquire Potential 2: Slot Bind Self-reduction" },
+        ],
+        potential: [
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [ 
+                    "Level 1: Reduces No Healing duration by 1 turn",
+                    "Level 2: Reduces No Healing duration by 1 turn",
+                    "Level 3: Reduces No Healing duration by 1 turn",
+                    "Level 4: Reduces No Healing duration by 2 turns",
+                    "Level 5: Reduces No Healing duration by 3 turns"
+                ]
+            },
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [ 
+                    "Level 1: Reduces Slot Bind duration by 1 turn on this character",
+                    "Level 2: Reduces Slot Bind duration by 2 turns on this character",
+                    "Level 3: Reduces Slot Bind duration by 3 turns on this character",
+                    "Level 4: Reduces Slot Bind duration by 5 turns on this character",
+                    "Level 5: Reduces Slot Bind duration by 10 turns on this character"
+                ]
+            },
+        ]
     },
     1801:{//Bartolomeo
         captain: "Boosts ATK of [STR], [DEX] and [QCK] characters by 2x and if you don't attack with Bartolomeo, reduces damage received by 10% for that turn.",
@@ -12154,8 +12404,45 @@ window.details = {
         special: "Deal 30x character's ATK in [QCK] damage to all enemies, reduces damage received by 90% for 1 turn and reduces the defense of all enemies by ???% for 2 turns",
         sailor: "Reduces Paralysis for 3 turns for himself?",
         specialName: "Barrier Bulls",
-        limit: "This unit has a Limit Break skill tree",
-        limitNotes: "This will be updated soon"
+        limit: [
+            { "description": "Boosts base HP by 10" },
+            { "description": "Boosts base HP by 15" },
+            { "description": "Boosts base HP by 20" },
+            { "description": "Aquire Potential 1: Reduce No Healing duration" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base ATK by 40" },
+            { "description": "Aquire Sailor Ability 1: Boosts base ATK, HP and RCV of [STR], [DEX], and [QCK] characters by 50" },
+            { "description": "Boosts base HP by 60" },
+            { "description": "Boosts base RCV by 60" },
+            { "description": "Boosts base ATK by 50" },
+            { "description": "Aquire 1 additional Socket slot" },
+            { "description": "Aquire Potential 2: Slot Bind Self-reduction" },
+        ],
+        potential: [
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [ 
+                    "Level 1: Reduces No Healing duration by 1 turn",
+                    "Level 2: Reduces No Healing duration by 1 turn",
+                    "Level 3: Reduces No Healing duration by 1 turn",
+                    "Level 4: Reduces No Healing duration by 2 turns",
+                    "Level 5: Reduces No Healing duration by 3 turns"
+                ]
+            },
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [ 
+                    "Level 1: Reduces Slot Bind duration by 1 turn on this character",
+                    "Level 2: Reduces Slot Bind duration by 2 turns on this character",
+                    "Level 3: Reduces Slot Bind duration by 3 turns on this character",
+                    "Level 4: Reduces Slot Bind duration by 5 turns on this character",
+                    "Level 5: Reduces Slot Bind duration by 10 turns on this character"
+                ]
+            },
+        ]
     },
     1809: {//Wanda
         captain: "Boosts ATK by 2.25x after scoring 2 Perfects in a row",

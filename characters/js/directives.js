@@ -436,6 +436,14 @@ directives.addTags = function($stateParams, $rootScope) {
                     name = name.replace(/iing/,'ying');
                     element.append($('<span class="tag special">' + name + '</div>'));
                 }
+                // limit
+                if (matcher.target.indexOf('limit') === 0 && matcher.matcher.test(data[matcher.target])) {
+                    name = matcher.name;
+                    if (!/limit$/.test(name)) name = name.replace(/ers$/,'ing').replace(/s$/,'') + ' limit';
+                    else name = name.replace(/s$/,'');
+                    name = name.replace(/iing/,'ying');
+                    element.append($('<span class="tag limit">' + name + '</div>'));
+                }
             });
         }
     };
