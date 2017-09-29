@@ -8827,12 +8827,12 @@ window.details = {
     },
     1451: {//Moustache Sanji
         captain: "Boosts ATK of [DEX] characters by 2.25x if they have a matching orb, by 1.5x otherwise. Slightly boosts chances of getting [DEX] orbs",
-        special: "Deals 15x character's ATK in DEX damage to one enemy, and boosts chances of getting DEX orbs for 1 turn",
+        special: "Deals 15x character's ATK in DEX damage to one enemy, and boosts chances of getting DEX orbs for 2 turns",
         specialName: "Diable Jambe: Love Shot",
     },
     1452: {//Moustache Sanji
         captain: "Boosts ATK of [DEX] characters by 2.5x if they have a matching orb, by 2x otherwise. Slightly boosts chances of getting [DEX] orbs",
-        special: "Deals 15x character's ATK in DEX damage to one enemy, and boosts chances of getting DEX orbs for 1 turn",
+        special: "Deals 15x character's ATK in DEX damage to one enemy, and boosts chances of getting DEX orbs for 2 turns",
         specialName: "Diable Jambe: Love Shot",
     },
     1453: {//Valentines Margeurite
@@ -10312,7 +10312,7 @@ window.details = {
         specialName: "Gastanet",
     },
     1638: {//STR Gas Mask Fodder
-        special: "Boosts chances of getting [RCV] orbs",
+        special: "Boosts chances of getting [RCV] orbs for 2 turns",
         specialName: "Meat for Meat",
     },
     1639: {//QCK Gas Mask Fodder
@@ -12005,13 +12005,13 @@ window.details = {
     1782: {//Chinjao
         captain: "Boosts ATK of [QCK] characters by 2.25x, boosts damage of QCK specials by 1.75x",
         captainNotes: "#{noFixedPerc}",
-        special: "Delays all enemies for 2 turns, deals 25x character's ATK in STR damage to all enemies",
+        special: "Delays all enemies for 2 turns, deals 25x character's ATK in [QCK] damage to all enemies",
         specialName: "Chinjao Special",
     },
     1783: {//Hajrudin
         captain: "Boosts ATK and HP of Powerhouse characters by 1.5x",
         special: "Locks all orbs for 1 turn. If during that turn you score 4 Perfect hits, amplifies the effect of orbs by 1.5x for 1 turn.",
-        specialName: "Chinjao Special",
+        specialName: "Hajrudin Special",
     },
     1784: {//Fujitora
         captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of characters with fewer than 4 stars by 2.5x",
@@ -12022,6 +12022,26 @@ window.details = {
         captain: "Recovers 3x character's RCV in HP at the end of each turn",
         special: "Recovers 3000 HP and amplifies the effect of orbs by 1.25x for 1 turn",
         specialName: "Spartan Special",
+    },
+    1786: {
+        special: "Makes [QCK] orbs \"beneficial\" to Shooter characters for 1 turn",
+        specialName: "Shooter Beneficial Slot: [QCK]"
+    },
+    1787: {
+        special: "Reduces crew's current HP by 50%, deals 5x the amount of HP subtracted in typeless damage to one enemy",
+        specialName: "Risky Attack"
+    },
+    1788: {
+        special: "Boosts ATK of Shooter characters by 1.2x for 1 turn",
+        specialName: "Attack Boost: Shooter"
+    },
+    1789: {
+        special: "Boosts chances of getting [RCV] orbs for 2 turns",
+        specialName: "Meat for Meat",
+    },
+    1790: {
+        special: "Recovers 3x character's RCV in HP at the end of each turn for 3 turns",
+        specialName: "Auto Light Recovery"
     },
     1791:{//Lucy Luffy
         captain: "Boosts ATK of [STR], [DEX] and [QCK] characters by 2.5x after scoring 3 Perfects in a row",
@@ -12040,13 +12060,13 @@ window.details = {
         limitNotes: "This will be updated soon"
     },
     1793:{//Lucy Sabo
-        captain: "If there is a [STR], [DEX] and [QCK] character in your crew, boosts ATK of [STR], [DEX] and [QCK] characters by 2.75x and their HP by 1.3x, and lowers chances of getting [STR] orbs, makes [DEX] and [QCK] orbs \"beneficial\" to some characters. If there are no [PSY] and [INT] characters on your crew, boosts ATK by 3.7125x instead.",
+        captain: "If there is a [STR], [DEX] and [QCK] character in your crew, boosts ATK of [STR], [DEX] and [QCK] characters by 2.75x and their HP by 1.3x, and lowers chances of getting [STR] orbs, makes [DEX] and [QCK] orbs \"beneficial\" to [STR], [DEX] and [QCK] characters. If there are no [PSY] and [INT] characters on your crew, boosts ATK by 3.7125x instead.",
         captainNotes: "#{beneficial}",
         special: "Boosts ATK of [STR], [DEX] and [QCK] characters by 1.75x for 1 turn. If during that turn you score 4 Perfect hits, boosts ATK of [STR], [DEX] and [QCK] characters by 2x in the following turn.",
         specialName: "Dragon's Claw: Reverse Wave Motion",
     },
     1794:{//Lucy Sabo
-        captain: "If there is a [STR], [DEX] and [QCK] character in your crew, boosts ATK of [STR], [DEX] and [QCK] characters by 2.75x and their HP by 1.3x, and lowers chances of getting [STR] orbs, makes [DEX] and [QCK] orbs \"beneficial\" to some characters. If there are no [PSY] and [INT] characters on your crew, boosts ATK by 3.7125x instead.",
+        captain: "If there is a [STR], [DEX] and [QCK] character in your crew, boosts ATK of [STR], [DEX] and [QCK] characters by 2.75x and their HP by 1.3x, and lowers chances of getting [STR] orbs, makes [DEX] and [QCK] orbs \"beneficial\" to [STR], [DEX] and [QCK] characters. If there are no [PSY] and [INT] characters on your crew, boosts ATK by 3.7125x instead.",
         captainNotes: "#{beneficial}",
         special: "Boosts ATK of [STR], [DEX] and [QCK] characters by 1.75x for 1 turn. If during that turn you score 4 Perfect hits, boosts ATK of [STR], [DEX] and [QCK] characters by 2x in the following turn.",
         specialName: "Dragon's Claw: Reverse Wave Motion",
@@ -12111,13 +12131,13 @@ window.details = {
     },
     1799:{//Cavendish
         captain: "Boosts ATK of [STR], [DEX] and [QCK] characters by 2.25x",
-        special: "Changes [BLOCK] orbs into Matching orbs, locks all orbs for 1 turn, boosts ATK against enemies with reduced defense by 1.75x for 1 turn",
+        special: "Changes [BLOCK] orbs into Matching orbs, locks all orbs for 1 turn, boosts ATK against enemies with reduced defense by 1.75x for 2 turns",
         sailor: "Makes [INT] and [PSY] orbs \"beneficial\" for this unit",
         specialName: "Beautiful Sword: Round Table",
     },
     1800:{//Cavendish
         captain: "Boosts ATK of [STR], [DEX] and [QCK] characters by 2.5x and their RCV by 1.2x",
-        special: "Changes [BLOCK] orbs into Matching orbs, locks all orbs for 1 turn, boosts ATK against enemies with reduced defense by 1.75x for 1 turn",
+        special: "Changes [BLOCK] orbs into Matching orbs, locks all orbs for 1 turn, boosts ATK against enemies with reduced defense by 1.75x for 2 turns",
         sailor: "Makes [INT] and [PSY] orbs \"beneficial\" for this unit",
         specialName: "Beautiful Sword: Round Table",
         limit: "This unit has a Limit Break skill tree",
@@ -12136,6 +12156,28 @@ window.details = {
         specialName: "Barrier Bulls",
         limit: "This unit has a Limit Break skill tree",
         limitNotes: "This will be updated soon"
+    },
+    1809: {//Wanda
+        captain: "Boosts ATK by 2.25x after scoring 2 Perfects in a row",
+        special: "Reduces Bind and Paralysis duration by 2 turns. If your Captain is a Striker character, makes Perfects easier to hit for 1 turn",
+        sailor: "Reduces Paralysis for 1 turn for herself",
+        specialName: "Wanda Special",
+    },
+    1810: {//Wanda
+        captain: "Boosts chances of getting Matching orbs, boosts ATK by 2.25x after scoring 2 Perfects in a row",
+        special: "Reduces Bind and Paralysis duration by 2 turns. If your Captain is a Striker character, makes Perfects easier to hit for 1 turn",
+        sailor: "Reduces Paralysis for 1 turn for herself",
+        specialName: "Wanda Special",
+    },
+    1811: {//Carrot
+        captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of Fighter characters by 2x",
+        special: "Reduces Special Cooldown of your top row by 2 turns, boosts ATK of Fighter characters by 1.5x for 1 turn",
+        specialName: "Carrot Special",
+    },
+    1812: {//Carrot
+        captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of Fighter characters by 2x",
+        special: "Reduces Special Cooldown of your top row by 2 turns, boosts ATK of Fighter characters by 1.5x for 1 turn",
+        specialName: "Carrot Special",
     },
     1813: {//Koala
         captain: "Boosts ATK of all characters by 2.25x and boosts EXP and amount of Beli recieved by 1.2x",

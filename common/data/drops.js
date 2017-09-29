@@ -1670,6 +1670,14 @@ window.drops = {
             'All Difficulties': [ 1773, 1775, -963, -1588, -451, -1186, -528, -1177, -1208, -558, -1616, -1618, -1392 ]
         },
         
+        {
+            name: 'Zou Royal Guard!',
+            thumb: 1812,
+            condition: 'Powerhouse Characters will be weakened',
+            gamewith: null,
+            'All Difficulties': [ 1811, 1809, -1240, -1575, -1658, -1232, -1238, -1117, -522, -1119, -524, -1504, -1503 ]
+        },
+        
     ],
 
             
