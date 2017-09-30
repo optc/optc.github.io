@@ -12135,14 +12135,14 @@ window.details = {
         potentialNotes: "Enrage is activated when your crew took damage from your enemies in the previous turn"
     },
     1793:{//Lucy Sabo
-        captain: "If there is a [STR], [DEX] and [QCK] character in your crew, boosts ATK of [STR], [DEX] and [QCK] characters by 2.75x and their HP by 1.3x, and lowers chances of getting [STR] orbs, makes [DEX] and [QCK] orbs \"beneficial\" to [STR], [DEX] and [QCK] characters. If there are not both [PSY] and [INT] characters on your crew, boosts ATK by 3.7125x instead.",
-        captainNotes: "Sabo boosts ATK by 3.7125x if you have [STR], [DEX] and [QCK] type characters, and either [PSY] or [INT] or neither type, but not both [PSY] and [INT] characters<br>#{beneficial}",
+        captain: "If there is a [STR], [DEX] and [QCK] character in your crew, boosts ATK of [STR], [DEX] and [QCK] characters by 2.75x and their HP by 1.3x, lowers chances of getting [STR] orbs and makes [DEX] and [QCK] orbs \"beneficial\" to [STR], [DEX] and [QCK] characters. If there are not [PSY] or [INT] characters on your crew, boosts ATK by 3.7125x instead.",
+        captainNotes: "Sabo boosts ATK by 3.7125x if you have [STR], [DEX] and [QCK] type characters, and no [PSY] or [INT] characters at all.<br>#{beneficial}",
         special: "Boosts ATK of [STR], [DEX] and [QCK] characters by 1.75x for 1 turn. If during that turn you score 4 Perfect hits, boosts ATK of [STR], [DEX] and [QCK] characters by 2x in the following turn.",
         specialName: "Dragon's Claw: Reverse Wave Motion",
     },
     1794:{//Lucy Sabo
-        captain: "If there is a [STR], [DEX] and [QCK] character in your crew, boosts ATK of [STR], [DEX] and [QCK] characters by 2.75x and their HP by 1.3x, and lowers chances of getting [STR] orbs, makes [DEX] and [QCK] orbs \"beneficial\" to [STR], [DEX] and [QCK] characters. If there are not both [PSY] and [INT] characters on your crew, boosts ATK by 3.7125x instead.",
-        captainNotes: "Sabo boosts ATK by 3.7125x if you have [STR], [DEX] and [QCK] type characters, and either [PSY] or [INT] or neither type, but not both [PSY] and [INT] characters<br>#{beneficial}",
+        captain: "If there is a [STR], [DEX] and [QCK] character in your crew, boosts ATK of [STR], [DEX] and [QCK] characters by 2.75x and their HP by 1.3x, lowers chances of getting [STR] orbs and makes [DEX] and [QCK] orbs \"beneficial\" to [STR], [DEX] and [QCK] characters. If there are not [PSY] or [INT] characters on your crew, boosts ATK by 3.7125x instead.",
+        captainNotes: "Sabo boosts ATK by 3.7125x if you have [STR], [DEX] and [QCK] type characters, and no [PSY] or [INT] characters at all.<br>#{beneficial}",
         special: "Boosts ATK of [STR], [DEX] and [QCK] characters by 1.75x for 1 turn. If during that turn you score 4 Perfect hits, boosts ATK of [STR], [DEX] and [QCK] characters by 2x in the following turn.",
         specialName: "Dragon's Claw: Reverse Wave Motion",
         limit: [
