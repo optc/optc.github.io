@@ -1812,8 +1812,8 @@ window.units = [
     [ "Carrot", "DEX", [ "Fighter", "Slasher" ], 3, 13, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Carrot, Evolved", "DEX", [ "Fighter", "Slasher" ], 4, 20, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Koala, Revolutionary Army's Secret Task Force", "PSY", [ "Fighter", "Free Spirit" ], 4, 15, 4, 4, 99, null, 238, 82, 18, 2422, 1012, 249, null ],
-    [ "Vinsmoke Sanji", "STR", [ "Powerhouse", "Fighter" ], 4, 30, null, null, 70, 1066998, null, null, null, null, null, null, null ],
-    [ "Vinsmoke Sanji, Evolved", "STR", [ "Powerhouse", "Fighter" ], 5, 50, 4, 3, 99, 5000000, 1, 1, 1, 2267, 1468, 346, null ],
+    [ "Vinsmoke Sanji", "STR", [ "Powerhouse", "Fighter" ], 4, 30, 4, 2, 70, 1066998, 225, 176, 37, 1194, 749, 198, null ],
+    [ "Vinsmoke Sanji, Germa Kingdom", "STR", [ "Powerhouse", "Fighter" ], 5, 50, 4, 3, 99, 5000000, 1, 1, 1, 2267, 1468, 346, null ],
     [ "Portgas D. Ace, The Sun that will Destroy the Darkness", "DEX", [ "Shooter", "Free Spirit" ], '6+', 65, 4, 5, 99, 5000000, 1911, 711, 215, 3922, 1466, 358, null ],
     ];
     
