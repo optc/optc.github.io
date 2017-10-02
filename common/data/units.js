@@ -1203,7 +1203,7 @@ window.units = [
     [ "Yorki", "PSY", [ "Slasher", "Free Spirit" ], 3, 12, 6, 1, 50, 392109, 102, 91, 36, 902, 584, 201, 1 ],
     [ "Calico Yorki", "PSY", [ "Slasher", "Free Spirit" ], 4, 20, 4, 3, 99, 3000000, 840, 516, 170, 1583, 1153, 315, 1 ],
     [ "Rumbar Pirates Brook", "QCK", [ "Slasher", "Free Spirit" ], 3, 12, 5, 1, 50, 392109, 139, 80, 31, 1006, 528, 184, 1 ],
-    [ "Rumbar Pirates Musician and Swordman Brook", "QCK", [ "Slasher", "Free Spirit" ], 4, 20, 4, 2, 99, 3000000, 942, 466, 139, 1894, 984, 299, 1 ],
+    [ "Rumbar Pirates Musical Swordsman Brook", "QCK", [ "Slasher", "Free Spirit" ], 4, 20, 4, 2, 99, 3000000, 942, 466, 139, 1894, 984, 299, 1 ],
     [ "Rumbar Pirates Laboon", "STR", "Fighter", 3, 9, 6, 1, 50, 392109, 155, 55, 23, 1302, 570, 151, 1 ],
     [ "Nico Robin, Dream Chaser", "INT", [ "Fighter", "Cerebral" ], 4, 17, 4, 3, 70, 1066998, 213, 96, 45, 1147, 626, 216, 1 ],
     [ "Nico Robin, A Pirate Who Lives By Her Code", "INT", [ "Fighter", "Cerebral" ], 5, 27, 4, 4, 99, 4000000, 1098, 551, 180, 2076, 1099, 400, 1 ],
@@ -1811,10 +1811,10 @@ window.units = [
     [ "Wanda, Evolved", "PSY", [ "Slasher", "Free Spirit" ], 4, 20, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Carrot", "DEX", [ "Fighter", "Slasher" ], 3, 13, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Carrot, Evolved", "DEX", [ "Fighter", "Slasher" ], 4, 20, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Koala, Revolutionary Army's Secret Task Force", "PSY", [ "Fighter", "Free Spirit" ], 4, 15, 4, 4, 99, null, 238, 82, 18, 2422, 1012, 249, null ],
-    [ "Vinsmoke Sanji", "STR", [ "Powerhouse", "Fighter" ], 4, 30, 4, 2, 70, 1066998, 225, 176, 37, 1194, 749, 198, null ],
-    [ "Vinsmoke Sanji, Germa Kingdom", "STR", [ "Powerhouse", "Fighter" ], 5, 50, 4, 3, 99, 5000000, 1, 1, 1, 2267, 1468, 346, null ],
-    [ "Portgas D. Ace, The Sun that will Destroy the Darkness", "DEX", [ "Shooter", "Free Spirit" ], '6+', 65, 4, 5, 99, 5000000, 1911, 711, 215, 3922, 1466, 358, null ],
+    [ "Koala, Revolutionary Army's Secret Task Force", "PSY", [ "Fighter", "Free Spirit" ], 4, 15, 4, 4, 99, 2000000, 238, 82, 18, 2422, 1012, 249, 1 ],
+    [ "Vinsmoke Sanji", "STR", [ "Powerhouse", "Fighter" ], 4, 30, 4, 2, 70, 1066998, 225, 176, 37, 1194, 749, 198, 1 ],
+    [ "Vinsmoke Sanji, Germa Kingdom", "STR", [ "Powerhouse", "Fighter" ], 5, 50, 4, 3, 99, 5000000, 1099, 677, 157, 2267, 1468, 346, 1 ],
+    [ "Portgas D. Ace, The Sun that will Destroy the Darkness", "DEX", [ "Shooter", "Free Spirit" ], '6+', 65, 4, 5, 99, 5000000, 1911, 711, 215, 3922, 1466, 358, 1 ],
     ];
     
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
