@@ -1696,7 +1696,7 @@ window.units = [
     [ "Demon Bamboo Vergo", "DEX", [ "Fighter", "Striker" ], 4, 30, 4, 1, 70, 1066998, 280, 158, 34, 1253, 697, 152, 1 ],
     [ "Demon Bamboo Vergo, Donquiote Family Senior Executive", "DEX", [ "Fighter", "Striker" ], 5, 50, 5, 2, 99, 5000000, 1016, 626, 108, 2265, 1402, 245, 1 ],
     [ "Magellan, Prison Ruler", "DEX", [ "Striker", "Shooter" ], 5, 30, 6, 3, 70, 1066998, 480, 220, 24, 1552, 755, 145, 1 ],
-    [ "Magellan, Hell's Ruler", "DEX", [ "Striker", "Shooter" ], 6, 50, 5, 5, 99, 5000000, 1470, 700, 99, 3527, 1499, 291, 1 ],
+    [ "Magellan, Hell's Ruler", "DEX", [ "Striker", "Shooter" ], 6, 55, 5, 5, 99, 5000000, 1470, 700, 99, 3527, 1499, 291, 1 ],
     [ "Jinbe, 'Eternal Hell' Prisoner", "PSY", [ "Fighter", "Powerhouse" ], 4, 15, 6, 3, 50, 392109, 156, 137, 30, 1120, 674, 196, 1 ],
     [ "Jinbe, Hell's Warlord of the Sea", "PSY", [ "Fighter", "Powerhouse" ], 5, 30, 4, 4, 99, 4000000, 1056, 620, 132, 2188, 1392, 320, 1 ],
     [ "Emporio Ivankov, 'Newkama Land' Prisoner", "QCK", [ "Free Spirit", "Cerebral" ], 4, 15, 6, 3, 50, 392109, 166, 110, 37, 1200, 634, 208, 1 ],
