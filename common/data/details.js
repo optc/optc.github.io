@@ -12462,7 +12462,7 @@ window.details = {
         specialName: "Carrot Special",
     },
     1812: {//Carrot
-        captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of Fighter characters by 2x",
+        captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of Fighter characters by 2.25x",
         special: "Reduces Special Cooldown of your top row by 2 turns, boosts ATK of Fighter characters by 1.5x for 1 turn",
         specialName: "Carrot Special",
     },
@@ -12525,5 +12525,49 @@ window.details = {
         special: "Reduces crew's current HP by 40%, deals 15x the amount of HP subtracted in typeless damage to all enemies, boosts ATK of Shooter characters by 2x for 1 turn",
         specialName: "Great Flame Commandment: Flame Emperor • Flame Wheel",
         captain: "Boosts HP of Shooter characters by 1.5x and boosts ATK by 3.25x if they have a matching orb, by 2.25x otherwise"
+    },
+    1817: {// Riku
+        captain: "Boosts ATK of all characters by ???x and their HP by ???x, boosts ATK by ???x after scoring 3 Greats in a row",
+        special: "Cuts the current HP of one enemy by 7%, boosts ATK of the characters in the bottom and middle row by 1.2x for 1 turn",
+        specialName: "Riku Special",
+        sailor: "Restores his own special by 1 turn when it is rewinded",
+        sailorNotes: "#{rewind : 1}",
+    },
+    1818: {// Riku
+        captain: "Boosts ATK of all characters by 1.5x and their HP by 1.2x, boosts ATK by 2.5x after scoring 3 Greats in a row",
+        special: "Cuts the current HP of one enemy by 7%, boosts ATK of the characters in the bottom and middle row by 1.2x for 1 turn",
+        specialName: "Riku Special",
+        sailor: "Restores his own special by 1 turn when it is rewinded",
+        sailorNotes: "#{rewind : 1}",
+    },
+    1821: {//Sanji
+        captain: "Boosts ATK of all characters by 1.5x. Recovers 1x character's RCV in HP at the end of each turn",
+        special: [
+            {
+                "description": "Recovers 4x character's RCV in HP, reduces damage received by 50% for 1 turn. Randomly changes all orbs, including [BLOCK] orbs, into either [STR], [DEX], [QCK] or [RCV] orbs.",
+                "cooldown": [ 8, 8 ]
+            },
+            {
+                "description": "Recovers 10x character's RCV in HP, reduces damage received by 50% for 1 turn. Randomly changes all orbs, including [BLOCK] orbs, into either [STR], [DEX], [QCK] or [RCV] orbs.",
+                "cooldown": [ 14, 14 ]
+            },
+        ],
+        specialName: "Sanji Special",
+        sailor: "Makes [RCV] orbs \"beneficial\" for this unit",
+    },
+    1822: {//Sanji
+        captain: "Boosts ATK of all characters by 2x. Recovers 2x character's RCV in HP at the end of each turn",
+        special: [
+            {
+                "description": "Recovers 4x character's RCV in HP, reduces damage received by 50% for 1 turn. Randomly changes all orbs, including [BLOCK] orbs, into either [STR], [DEX], [QCK] or [RCV] orbs.",
+                "cooldown": [ 8, 8 ]
+            },
+            {
+                "description": "Recovers 10x character's RCV in HP, reduces damage received by 50% for 1 turn. Randomly changes all orbs, including [BLOCK] orbs, into either [STR], [DEX], [QCK] or [RCV] orbs.",
+                "cooldown": [ 14, 14 ]
+            },
+        ],
+        specialName: "Sanji Special",
+        sailor: "Makes [RCV] orbs \"beneficial\" for this unit",
     },
 };

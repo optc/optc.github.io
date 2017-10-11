@@ -1623,4 +1623,6 @@ window.flags = {
     1802: { rr: 1, rro: 1 },
     1813: { special: 1 },
     1816: { rr: 1, rro: 1 },
+    1821: { shop: 1 },
+    1822: { shop: 1 },
 };

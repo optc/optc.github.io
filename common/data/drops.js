@@ -1674,8 +1674,16 @@ window.drops = {
             name: 'Zou Royal Guard!',
             thumb: 1812,
             condition: 'Powerhouse Characters will be weakened',
-            gamewith: null,
+            gamewith: 71416,
             'All Difficulties': [ 1811, 1809, -1240, -1575, -1658, -1232, -1238, -1117, -522, -1119, -524, -1504, -1503 ]
+        },
+        
+        {
+            name: 'Dressrosa Royal Family!',
+            thumb: 1818,
+            condition: '',
+            gamewith: null,
+            'All Difficulties': [ 1817, 1819, 1820 ]
         },
         
     ],

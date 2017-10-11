@@ -479,4 +479,12 @@ window.zombies = {
         type: 'healer',
         multiplier: 3
     },
+    1821: { // Sanji
+        type: 'healer',
+        multiplier: 1
+    },
+    1822: { // Sanji
+        type: 'healer',
+        multiplier: 2
+    },
 };

@@ -3648,6 +3648,14 @@ window.specials = {
     1802: {
         def: function(p) { return 0.1; }
     },
+    1811: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; },
+        type: "class"
+    },
+    1812: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; },
+        type: "class"
+    },
     1813: {
         atk: function(p) { return p.slot == 1 ? 1.5 : 1; },
         type: "class"
@@ -3662,6 +3670,14 @@ window.specials = {
     },
     1816: {
         atk: function(p) { return p.unit.class.has("Shooter") ? 2 : 1; },
+        type: "class"
+    },
+    1817: {
+        atk: function(p) { return p.slot > 1 ? 1.2 : 1; },
+        type: "class"
+    },
+    1818: {
+        atk: function(p) { return p.slot > 1 ? 1.2 : 1; },
         type: "class"
     },
 };
