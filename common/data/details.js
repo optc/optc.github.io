@@ -11366,13 +11366,13 @@ window.details = {
     },
     1740: {//Sandersonia
         captain: "Boosts ATK of Striker and Powerhouse characters by 2x and boosts HP of [DEX] characters by 1.1x",
-        special: "Changes all orbs to [DEX] orbs, reduces the defense of all enemies by ???% for 2 turns, and boosts ATK of Striker and Powerhouse characters by 1.75x for 2 turns",
+        special: "Changes all orbs to [DEX] orbs, reduces the defense of all enemies by 80% for 2 turns, and boosts ATK of Striker and Powerhouse characters by 1.75x for 2 turns",
         sailor: "Makes [STR] orbs \"beneficial\" for this unit",
         specialName: "Snake Hair Possession: Eight-Headed Serpent",
     },
     1741: {//Sandersonia
         captain: "Boosts ATK of Striker and Powerhouse characters by 2.5x and boosts HP of [DEX] characters by 1.3x",
-        special: "Changes all orbs to [DEX] orbs, reduces the defense of all enemies by ???% for 2 turns, and boosts ATK of Striker and Powerhouse characters by 1.75x for 2 turns",
+        special: "Changes all orbs to [DEX] orbs, reduces the defense of all enemies by 80% for 2 turns, and boosts ATK of Striker and Powerhouse characters by 1.75x for 2 turns",
         sailor: "Makes [STR] orbs \"beneficial\" for this unit",
         specialName: "Snake Hair Possession: Eight-Headed Serpent",
         limit: [
