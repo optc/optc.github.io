@@ -1806,7 +1806,7 @@ window.units = [
     [ "Buggy the Clown, The Chop-Chop Man Who Can't be Sliced by a Sword", "QCK", [ "Shooter", "Driven" ], 4, 12, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Captain Buggy, The Chop-Chop Man Who Can't be Sliced by a Sword", "QCK", [ "Shooter", "Driven" ], 5, 20, 4, 4, 99, null, null, null, null, 2143, 1000, 304, null ],
     [ "Hawk Eyes Mihawk", "STR", "Slasher", 4, 30, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Hawk Eyes Mihawk, The Man Standing on Top of the World as the Strongest Swordsman", "STR", "Slasher", 5, 60, 4, 5, 99, null, null, null, null, 3460, 1628, 266, null ],
+    [ "Hawk Eyes Mihawk, The Man Standing on Top of the World as the Strongest Swordsman", "STR", "Slasher", 5, 60, 4, 1, 99, null, null, null, null, 2530, 1403, 186, null ],
     [ "Wanda, Mokomo Dukedom", "PSY", [ "Slasher", "Free Spirit" ], 3, 13, 6, 2, 50, 392109, 184, 106, 24, 740, 530, 150, 1 ],
     [ "Kingsbird Wanda, Mokomo Dukedom", "PSY", [ "Slasher", "Free Spirit" ], 4, 20, 4, 3, 99, 3000000, 714, 501, 137, 2042, 1139, 230, 1 ],
     [ "Carrot, Mokomo Dukedom", "DEX", [ "Fighter", "Slasher" ], 3, 13, 6, 2, 50, 392109, 104, 130, 6, 726, 768, 73, 1 ],
@@ -1825,4 +1825,4 @@ window.units = [
     
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
 // or [ "Name", "Type", "Class1", null, null, null, null, null, null, null, null, null, null, null, null, null ],
-// [ "Name", "Type", [ "Class1", "Class2" ], Stars, Cost, Combo, sockets, maxLVL, EXPToMax, lvl1HP, lvl1ATK, lvl1RCV, MAXHP, MAXATK, MAXRCV, Growth Rate ],
+// [ "Name", "Type", [ "Class1", "Class2" ], Stars, Cost, Combo, Sockets, maxLVL, EXPToMax, lvl1HP, lvl1ATK, lvl1RCV, MAXHP, MAXATK, MAXRCV, Growth Rate ],
