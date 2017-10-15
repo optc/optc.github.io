@@ -225,7 +225,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         // apply static multipliers and static bonuses
         for (var i=0;i<enabledEffects.length;++i) {
             if (enabledEffects[i].hasOwnProperty('atkStatic'))
-                result = applyCaptainEffectsToDamage(result,enabledEffects[i].atkStatic,null,true);
+                result = applyCaptainEffectsToDamage(result,enabledEffects[i].atkStatic,null,true,enabledEffects[i].sourceSlot);
             if (enabledEffects[i].hasOwnProperty('atk'))
                 result = applyCaptainEffectsToDamage(result,enabledEffects[i].atk,null,false,enabledEffects[i].sourceSlot);
         }
@@ -492,12 +492,16 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         var params = getParameters(slotNumber);
         // static rcv
         for (var h=0;h<enabledSpecials.length;++h) {
-            if (enabledSpecials[h].hasOwnProperty('rcvStatic'))
+            if (enabledSpecials[h].hasOwnProperty('rcvStatic')){
+                params["sourceSlot"] = enabledEffects[h].sourceSlot;
                 rcv += enabledSpecials[h].rcvStatic(params);
+            }
         }
         for (var j=0;j<enabledEffects.length;++j) {
-            if (enabledEffects[j].hasOwnProperty('rcvStatic'))
+            if (enabledEffects[j].hasOwnProperty('rcvStatic')){
+                params["sourceSlot"] = enabledEffects[j].sourceSlot;
                 rcv += enabledEffects[j].rcvStatic(params);
+            }
         }
         // non-static rcv
         for (var i=0;i<enabledEffects.length;++i) {
