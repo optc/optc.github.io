@@ -4758,7 +4758,8 @@ window.details = {
     939: {
         captain: "Reduces cooldown of all specials by 3 turns at the start of the fight, boosts ATK of Cerebral characters by 2x",
         specialName: "Cyclone Burst",
-        special: "Reduces Bind duration for one character completely. For Striker and Cerebral characters, changes Badly Matching orbs into Matching orbs"
+        special: "Reduces Bind duration for one character completely. For Striker and Cerebral characters, changes Badly Matching orbs into Matching orbs",
+        limit: "This character has a limit break path",
     },
     940: {
         captain: "Boosts ATK and HP of [DEX] characters by 1.5x",
@@ -8152,7 +8153,6 @@ window.details = {
         sailor: "Completely resists Silence on this character",
         specialNotes: "#{silence}",
         specialName: "Black Ball - Thundercloud Rod",
-        limit: "This character has a limit break path",
     },
     1367: {//Timeskip Sanji
         captain: "Boosts ATK of [STR] characters by 2x",
