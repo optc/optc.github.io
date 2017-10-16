@@ -12651,4 +12651,43 @@ window.details = {
         specialName: "Sanji Special",
         sailor: "Makes [RCV] orbs \"beneficial\" for this unit",
     },
+    1823: {//World
+        captain: "Not Translated",
+        special: [
+            {
+                "description": "Deals 100,000 fixed damage to one enemy and removes ATK down debuff from your team",
+                "cooldown": [ 14, 10 ]
+            },
+            {
+                "description": "Deals 300,000 fixed damage to one enemy and removes ATK down debuff from your team",
+                "cooldown": [ 18, 14 ]
+            },
+            {
+                "description": "Deals 500,000 fixed damage to one enemy, removes ATK down debuff from your team and reduces enemy Barrier duration by 1 turn",
+                "cooldown": [ 22, 18 ]
+            }
+        ],
+        specialNotes:"#{stages}",
+        specialName: "More More: Hundredfold Artillery Cannon",
+    },
+    1824: {//World
+        captain: "Boosts ATK of Shooter characters by 2.2x at the start of the chain.<br>Boosts ATK of Shooter characters by 2.42x after the 1st Perfect in a row, by 2.662x after the 2nd Perfect in a row, by 2.9282x after the 3rd Perfect in a row, by 3.22102x after the 4th Perfect in a row, and by 3.543122x after the 5th Perfect in a row.",
+        special: [
+            {
+                "description": "Deals 100,000 fixed damage to one enemy and removes ATK down debuff from your team",
+                "cooldown": [ 14, 10 ]
+            },
+            {
+                "description": "Deals 300,000 fixed damage to one enemy and removes ATK down debuff from your team",
+                "cooldown": [ 18, 14 ]
+            },
+            {
+                "description": "Deals 500,000 fixed damage to one enemy, removes ATK down debuff from your team and reduces enemy Barrier duration by 1 turn",
+                "cooldown": [ 22, 18 ]
+            }
+        ],
+        specialNotes:"#{stages}",
+        specialName: "More More: Hundredfold Artillery Cannon",
+        limit: "This character has a limit break path",
+    },
 };
