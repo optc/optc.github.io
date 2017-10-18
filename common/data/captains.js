@@ -5609,6 +5609,12 @@ window.captains = {
         atk: function(p) { return !p.unit.class.has("Shooter") ? 1 : (((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain]) == 2) && (p.orb != 'g')) ? 3.25 : 2.25); },
         hp: function(p) { return p.unit.class.has("Shooter") ? 1.5 : 1; }
     },
+    1817: {
+        hitAtk: function(p) {
+            return p.modifiers.slice(0, p.chainPosition).subcontains(["Great", "Great", "Great"]) ? 2 : 1;
+        },
+        hitModifiers: ["Great", "Great", "Great", "Perfect", "Perfect", "Perfect"],
+    },
     1818: {
         hitAtk: function(p) {
             return p.modifiers.slice(0, p.chainPosition).subcontains(["Great", "Great", "Great"]) ? 2.5 : 1.5;
