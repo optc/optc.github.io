@@ -8153,7 +8153,6 @@ window.details = {
         sailor: "Completely resists Silence on this character",
         specialNotes: "#{silence}",
         specialName: "Black Ball - Thundercloud Rod",
-        limit: "This character has a limit break path",
     },
     1367: {//Timeskip Sanji
         captain: "Boosts ATK of [STR] characters by 2x",
@@ -12650,18 +12649,28 @@ window.details = {
         captain: "Boosts HP of Shooter characters by 1.5x and boosts ATK by 3.25x if they have a matching orb, by 2.25x otherwise"
     },
     1817: {// Riku
-        captain: "Boosts ATK of all characters by ???x and their HP by ???x, boosts ATK by ???x after scoring 3 Greats in a row",
+        captain: "Boosts ATK by 2x after scoring 3 Greats in a row",
         special: "Cuts the current HP of one enemy by 7%, boosts ATK of the characters in the bottom and middle row by 1.2x for 1 turn",
-        specialName: "Riku Special",
+        specialName: "Divine Sword",
         sailor: "Restores his own special by 1 turn when it is rewinded",
         sailorNotes: "#{rewind : 1}",
     },
     1818: {// Riku
         captain: "Boosts ATK of all characters by 1.5x and their HP by 1.2x, boosts ATK by 2.5x after scoring 3 Greats in a row",
         special: "Cuts the current HP of one enemy by 7%, boosts ATK of the characters in the bottom and middle row by 1.2x for 1 turn",
-        specialName: "Riku Special",
+        specialName: "Divine Sword",
         sailor: "Restores his own special by 1 turn when it is rewinded",
         sailorNotes: "#{rewind : 1}",
+    },
+    1819: {//Tank
+        captain: "Boosts ATK of Powerhouse and Stiker characters by 1.75x",
+        special: "Boosts own ATK by 1.75x for 1 turn",
+        specialName: "Shameful Hidden Activity",
+    },
+    1820: {//Scarlet
+        captain: "Boosts HP and RCV of [PSY] characters by 1.5x",
+        special: "Locks all orbs for 1 turn and recovers 5x character's RCV in HP.",
+        specialName: "Frontier Love",
     },
     1821: {//Sanji
         captain: "Boosts ATK of all characters by 1.5x. Recovers 1x character's RCV in HP at the end of each turn",
@@ -12739,17 +12748,9 @@ window.details = {
         specialName: "Great Eruption [Neo]",
     },
     1826: {//Akainu
-        captain: "Boosts ATK by 2.5x following a chain of [INT] > [INT] > [INT] attacks no lower than Good",
+        captain: "Boosts ATK by 3x following a chain of [INT] > [INT] > [INT] attacks no lower than Good",
         special: "Deals 50x character's ATK in [INT] damage to all enemies. Changes orbs for [INT] characters into [INT] orbs. Boosts the Color Affinity of [INT] characters by 1.75x for 1 turn",
         specialNotes: "#{colorAffinity : 1.75}",
         specialName: "Great Eruption [Neo]",
-    },
-    1827: {//Sicilian Colo
-        captain: "2,5x Atk for INT characters, 3x if your HP is under 30%",
-        special: "Reduce crew HP by 50%, 2x Atk boost for INT characters and randomize non-matching orbs (block included)",
-    },
-    1828: {//Sicilian Colo
-        captain: "2,5x Atk for INT characters, 3x if your HP is under 30%",
-        special: "Reduce crew HP by 50%, 2x Atk boost for INT characters and randomize non-matching orbs (block included)",
     },
 };
