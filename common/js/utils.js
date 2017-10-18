@@ -144,6 +144,9 @@
                 case 'INT':
                     return '../res/blank_int.png';
                     break;
+                default:
+                    return 'https://onepiece-treasurecruise.com/wp-content/themes/onepiece-treasurecruise/images/noimage.png';
+                    break;
                 
             }
         }
