@@ -5663,7 +5663,7 @@ window.captains = {
             }, {
                 type: 'INT',
                 minModifier: 'Good'
-            }]) ? 3 : 1;
+            }]) ? 2.5 : 1;
         },
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
     },
