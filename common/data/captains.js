@@ -5558,15 +5558,26 @@ window.captains = {
     },
     1807: {
         atk: function(p){ 
-            return p.unit.class.has("Slasher") ? p.actions[p.sourceSlot] ? 3.5 : 2.5 : 1;
+            var specialEnabled = false;
+            for(var i=0;i<2;i++)
+            {
+                if(window.specials[1807].turnedOn[i]==true){specialEnabled = true;}
+                if(window.specials[1808].turnedOn[i]==true){specialEnabled = true;}
+            }
+            return p.unit.class.has("Slasher") ? specialEnabled ? 1.35 : 1 : 1; 
         },
-        hp: function(p) { return p.unit.class.has("Slasher") ? 1.25 : 1; },
     },
     1808: {
         atk: function(p){ 
-            return p.unit.class.has("Slasher") ? p.actions[p.sourceSlot] ? 3.5 : 2.5 : 1;
+            var specialEnabled = false;
+            for(var i=0;i<2;i++)
+            {
+                if(window.specials[1807].turnedOn[i]==true){specialEnabled = true;}
+                if(window.specials[1808].turnedOn[i]==true){specialEnabled = true;}
+            }
+            return p.unit.class.has("Slasher") ? specialEnabled ? 1.62 : 1.2: 1; 
         },
-        hp: function(p) { return p.unit.class.has("Slasher") ? 1.25 : 1; },
+        hp: function(p) { return 1.1 }
     },
     1809: {
         hitAtk: function(p) {
