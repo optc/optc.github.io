@@ -1679,11 +1679,10 @@ window.drops = {
         },
         
         {
-            name: 'Dressrosa Royal Family!',
+            name: 'Crisis of the 800 Year Old Kingdom!',
             thumb: 1818,
-            condition: '',
-            gamewith: null,
-            'All Difficulties': [ 1817, 1819, 1820 ]
+            gamewith: 72655,
+            'All Difficulties': [ 1817, 1819, 1820, -1610, -1656, -1660, -1230, -1236, -1173, -526, -643, -1506, -964 ]
         },
         
     ],
