@@ -1988,6 +1988,13 @@ window.drops = {
         },
         
         {
+            name: 'Clash Neo!! Akainu',
+            thumb: 1826,
+            condition: '3 different Ultimate versions with different conditions. Ultimate: Shooter Only, Striker Only, and Slasher Only',
+            Ultimate: [ 1825 ]
+        },
+        
+        {
             name: 'Clash!! Warden Magellan',
             thumb: 1374,
             global: true,
