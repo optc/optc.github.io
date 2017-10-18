@@ -1817,8 +1817,8 @@ window.cooldowns = [
     [ 20, 15 ],
     20,
     20,
-    null,
-    null,
+    16,
+    18,
     [ 14, 14 ],
     [ 14, 14 ],
     [ 22, 18 ],//Limited World
