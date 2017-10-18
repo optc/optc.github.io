@@ -4758,7 +4758,8 @@ window.details = {
     939: {
         captain: "Reduces cooldown of all specials by 3 turns at the start of the fight, boosts ATK of Cerebral characters by 2x",
         specialName: "Cyclone Burst",
-        special: "Reduces Bind duration for one character completely. For Striker and Cerebral characters, changes Badly Matching orbs into Matching orbs"
+        special: "Reduces Bind duration for one character completely. For Striker and Cerebral characters, changes Badly Matching orbs into Matching orbs",
+        limit: "This character has a limit break path",
     },
     940: {
         captain: "Boosts ATK and HP of [DEX] characters by 1.5x",
@@ -8152,7 +8153,6 @@ window.details = {
         sailor: "Completely resists Silence on this character",
         specialNotes: "#{silence}",
         specialName: "Black Ball - Thundercloud Rod",
-        limit: "This character has a limit break path",
     },
     1367: {//Timeskip Sanji
         captain: "Boosts ATK of [STR] characters by 2x",
@@ -12650,5 +12650,44 @@ window.details = {
         ],
         specialName: "Sanji Special",
         sailor: "Makes [RCV] orbs \"beneficial\" for this unit",
+    },
+    1823: {//World
+        captain: "Not Translated",
+        special: [
+            {
+                "description": "Deals 100,000 fixed damage to one enemy and removes ATK down debuff from your team",
+                "cooldown": [ 14, 10 ]
+            },
+            {
+                "description": "Deals 300,000 fixed damage to one enemy and removes ATK down debuff from your team",
+                "cooldown": [ 18, 14 ]
+            },
+            {
+                "description": "Deals 500,000 fixed damage to one enemy, removes ATK down debuff from your team and reduces enemy Barrier duration by 1 turn",
+                "cooldown": [ 22, 18 ]
+            }
+        ],
+        specialNotes:"#{stages}",
+        specialName: "More More: Hundredfold Artillery Cannon",
+    },
+    1824: {//World
+        captain: "Boosts ATK of Shooter characters by 2.2x at the start of the chain.<br>Boosts ATK of Shooter characters by 2.42x after the 1st Perfect in a row, by 2.662x after the 2nd Perfect in a row, by 2.9282x after the 3rd Perfect in a row, by 3.22102x after the 4th Perfect in a row, and by 3.543122x after the 5th Perfect in a row.",
+        special: [
+            {
+                "description": "Deals 100,000 fixed damage to one enemy and removes ATK down debuff from your team",
+                "cooldown": [ 14, 10 ]
+            },
+            {
+                "description": "Deals 300,000 fixed damage to one enemy and removes ATK down debuff from your team",
+                "cooldown": [ 18, 14 ]
+            },
+            {
+                "description": "Deals 500,000 fixed damage to one enemy, removes ATK down debuff from your team and reduces enemy Barrier duration by 1 turn",
+                "cooldown": [ 22, 18 ]
+            }
+        ],
+        specialNotes:"#{stages}",
+        specialName: "More More: Hundredfold Artillery Cannon",
+        limit: "This character has a limit break path",
     },
 };

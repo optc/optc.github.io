@@ -442,7 +442,9 @@ directives.addTags = function($stateParams, $rootScope) {
                     if (!/limit$/.test(name)) name = name.replace(/ers$/,'ing').replace(/s$/,'') + ' limit';
                     else name = name.replace(/s$/,'');
                     name = name.replace(/iing/,'ying');
-                    element.append($('<span class="tag limit">' + name + '</div>'));
+                    if (name.contains("Has Limit Break limit")){
+                        element.append($('<span class="tag limit">' + name + '</div>'));
+                    }
                 }
             });
         }
