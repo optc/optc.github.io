@@ -1821,8 +1821,11 @@ window.cooldowns = [
     18,
     [ 14, 14 ],
     [ 14, 14 ],
-    [ 22, 18 ],
-    [ 22, 18 ],
-    [ 25, 16 ],
-    [ 25, 16 ],
+    [ 22, 18 ],//Limited World
+    [ 22, 18 ],//Limited World
+    [ 25, 16 ],//Akainu Kai
+    [ 25, 16 ],//Akainu Kai
+    [ 25, 10 ],//Sicilian Coli
+    [ 25, 10 ],//Sicilian Coli
+    null,
 ];
