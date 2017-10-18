@@ -5541,6 +5541,21 @@ window.captains = {
     1802: {
         atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? 2.5 : 1; }
     },
+    1803: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? 2 : 1; },
+    },
+    1804: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? 2.25 : 1; },
+        hp: function(p) { return p.unit.class.has("Slasher") ? 1.3 : 1; },
+    },
+    1805: {
+        atk: function(p) { return p.unit.cost <= 30 ? 1.5 : 1; },
+        hp: function(p) { return p.unit.cost <= 30 ? 1.2 : 1; },
+    },
+    1806: {
+        atk: function(p) { return p.unit.cost <= 30 ? 2.25 : 1; },
+        hp: function(p) { return p.unit.cost <= 30 ? 1.2 : 1; },
+    },
     1809: {
         hitAtk: function(p) {
             return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect"]) ? 2.25 : 1;
