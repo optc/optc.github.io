@@ -3722,6 +3722,9 @@ window.specials = {
         atk: function(p) { return p.slot == p.sourceSlot ? 1.75 : 1; },
         type: "type"
     },
+    1825: {
+        affinity: function(p){ return p.unit.type == "INT" ? 1.75 : 1; }
+    },
     1826: {
         affinity: function(p){ return p.unit.type == "INT" ? 1.75 : 1; }
     },
