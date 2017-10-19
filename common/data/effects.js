@@ -402,5 +402,29 @@ window.effects = {
         id: 42, // don't change this
         chainLimiter: function() { return 1.5; }
     },
+
+    'Treasure Map [Mihawk Season]': {
+        description: 'Boost stats of Buggy & Zoro 2.5x',
+        thumb: 1808,
+        id: 43, // don't change this
+        atk: function(p) {
+            var id = p.number + 1,
+                matching = ((id > 1803 && id < 1806) ||
+                    [ 1804, 1806 ].indexOf(id) != -1);
+            return !matching ? 1 : 2.5;
+        },
+        hp: function(p) {
+            var id = p.number + 1,
+                matching = ((id > 1803 && id < 1806) ||
+                    [ 1804, 1806 ].indexOf(id) != -1);
+            return !matching ? 1 : 2.5;
+        },
+        rcv: function(p) {
+            var id = p.number + 1,
+                matching = ((id > 1803 && id < 1806) ||
+                    [ 1804, 1806 ].indexOf(id) != -1);
+            return !matching ? 1 : 2.5;
+        },
+	},
     
 };
