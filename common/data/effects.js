@@ -433,19 +433,19 @@ window.effects = {
         id: 44, // don't change this
         atk: function(p) {
             var id = p.number + 1,
-                matching = ((id > 1742 && id < 1745) ||
+                matching = ((id > 1740 && id < 1745) ||
                     [ 1795, 1796, 1539, 1540, 1823, 1844, 1277, 1278 ].indexOf(id) != -1);
             return !matching ? 1 : 1.75;
         },
         hp: function(p) {
             var id = p.number + 1,
-                matching = ((id > 1742 && id < 1745) ||
+                matching = ((id > 1740 && id < 1745) ||
                     [ 1795, 1796, 1539, 1540, 1823, 1844, 1277, 1278 ].indexOf(id) != -1);
             return !matching ? 1 : 1.75;
         },
         rcv: function(p) {
             var id = p.number + 1,
-                matching = ((id > 1742 && id < 1745) ||
+                matching = ((id > 1740 && id < 1745) ||
                     [ 1795, 1796, 1539, 1540, 1823, 1844, 1277, 1278 ].indexOf(id) != -1);
             return !matching ? 1 : 1.75;
         },
