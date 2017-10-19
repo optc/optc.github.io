@@ -427,7 +427,7 @@ window.effects = {
         },
 	},
 	
-	'Akainu Neo - Slasher Raid Boost': {
+	'Akainu Neo': {
         description: 'Certain units boosted',
         thumb: 1826,
         id: 44, // don't change this
