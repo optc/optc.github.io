@@ -5700,4 +5700,10 @@ window.captains = {
     1828: {
         atk: function(p) { return !(p.unit.type == "INT") ? 1 : p.percHP <= 30.0 ? 3 : 2.5; }
     },
+    2000: {
+        atk: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Slasher") ? 2 : 1; },
+    },
+    2001: {
+        atk: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Slasher") ? 2.5 : 1; },
+    },
 };

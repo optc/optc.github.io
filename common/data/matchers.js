@@ -321,6 +321,12 @@ window.matchers = [
     },
 
     {
+        name: 'Typeless damage dealers',
+        target: 'special',
+        matcher: /Deals.+typeless damage/i
+    },
+
+    {
         name: 'Health cutters',
         target: 'special',
         matcher: /Cuts.+current HP.+enem/i

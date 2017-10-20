@@ -1829,6 +1829,8 @@ window.aliases = {
     1828: ['', '', ''],
     1829: ['', '', ''],
     1830: ['', '', ''],
+    2000: ['', '', 'Global Rayleigh', 'Raidleigh'],
+    2001: ['', '', 'Global Rayleigh', 'Raidleigh'],
 };
 
 //  xxxx: ['JPN', 'FR', 'Other'],
