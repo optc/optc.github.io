@@ -11438,7 +11438,7 @@ window.details = {
             { "description": "Boosts base RCV by 30" },
             { "description": "Boosts base HP by 70" },
             { "description": "Boosts base ATK by 30" },
-            { "description": "Aquire Sailor Ability 1: Boosts this character's attack against [STR] characters by 2x" },
+            { "description": "Aquire Sailor Ability 1: Boosts this character's attack against [QCK] characters by 2x" },
             { "description": "Boosts base ATK by 40" },
             { "description": "Boosts base HP by 90" },
             { "description": "Aquire 1 additional Socket slot" },
