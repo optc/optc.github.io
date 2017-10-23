@@ -5700,6 +5700,58 @@ window.captains = {
     1828: {
         atk: function(p) { return !(p.unit.type == "INT") ? 1 : p.percHP <= 30.0 ? 3 : 2.5; }
     },
+    1831: {
+        atk: function(p) { 
+            if(p.colorCount.INT>=1 && p.colorCount.PSY>=1 && p.colorCount.STR>=1 && p.colorCount.DEX>=1 && p.colorCount.QCK>=1){
+                return ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain]) == 2) && (p.orb != 'g')) ? 3.9 : 2.25;
+            }
+            else
+                return 1; 
+        },
+        hp: function(p) { return 1.25; }
+    },
+    1832: {
+        atk: function(p) { 
+            if(p.colorCount.INT>=1 && p.colorCount.PSY>=1 && p.colorCount.STR>=1 && p.colorCount.DEX>=1 && p.colorCount.QCK>=1){
+                return ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain]) == 2) && (p.orb != 'g')) ? 3.9 : 2.25;
+            }
+            else
+                return 1; 
+        },
+        hp: function(p) { return 1.25; }
+    },
+    1833: {
+        atk: function(p) { 
+            return p.unit.class.has("Powerhouse") && p.unit.type == "INT" ? 2.1 :
+                !p.unit.class.has("Powerhouse") && p.unit.type == "INT" ? 1.75 :
+                p.unit.class.has("Powerhouse") && !p.unit.type == "INT" ? 1.2 :
+                1;
+        }
+    },
+    1835: {
+        atk: function(p) { 
+            return p.unit.class.has("Powerhouse") && p.unit.type == "STR" ? 2.1 :
+                !p.unit.class.has("Powerhouse") && p.unit.type == "STR" ? 1.75 :
+                p.unit.class.has("Powerhouse") && !p.unit.type == "STR" ? 1.2 :
+                1;
+        }
+    },
+    1837: {
+        atk: function(p) { 
+            return p.unit.class.has("Powerhouse") && p.unit.type == "QCK" ? 2.1 :
+                !p.unit.class.has("Powerhouse") && p.unit.type == "QCK" ? 1.75 :
+                p.unit.class.has("Powerhouse") && !p.unit.type == "QCK" ? 1.2 :
+                1;
+        }
+    },
+    1839: {
+        atk: function(p) { 
+            return p.unit.class.has("Powerhouse") && p.unit.type == "DEX" ? 2.1 :
+                !p.unit.class.has("Powerhouse") && p.unit.type == "DEX" ? 1.75 :
+                p.unit.class.has("Powerhouse") && !p.unit.type == "DEX" ? 1.2 :
+                1;
+        }
+    },
     2000: {
         atk: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Slasher") ? 2 : 1; },
     },
