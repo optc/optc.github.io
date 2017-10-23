@@ -445,7 +445,7 @@ window.aliases = {
     444: ['カルー','', 'Carue', 'Karue' ],
     445: ['カルー隊長と超カルガモ部隊','', 'Captain Karue and the Supersonic Duck Squadron', 'Captain Carue and the Supersonic Duck Squadron' ],
     446: ['マーシャル・Ｄ・ティーチ','', 'Raid Blackbeard', 'BB'],
-    447: ['黒ひげ','', 'Raid Blackbeard', 'BB', 'Teach'],
+    447: ['黒ひげ','', 'Raid Blackbeard', 'BB', 'Teach', 'Marshall D. Teach'],
     448: ['サッチ',''],
     449: ['双剣のサッチ',''],
     450: ['ナミュール','', 'Namur' ],
