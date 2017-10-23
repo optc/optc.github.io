@@ -9,7 +9,7 @@ window.specials = {
         delay: function(p) { return 1; },
     },
     16: {
-        delay: function(p) { return 1; },
+        delay: function(p) { return 2; },
     },
     18: {
         def: function(p) { return 0.5; }
@@ -456,11 +456,11 @@ window.specials = {
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain]); }
     },
     644: {
-        atk: function(p) { return p.delayed ? 1.2 : 1; },
+        atk: function(p) { return p.delayed > 0 ? 1.2 : 1; },
         type: "condition",
     },
     645: {
-        atk: function(p) { return p.delayed ? 1.2 : 1; },
+        atk: function(p) { return p.delayed > 0 ? 1.2 : 1; },
         type: "condition",
     },
     648: {
@@ -663,7 +663,7 @@ window.specials = {
         delay: function(p) { return 1; },
     },
     770: {
-        atk: function(p) { return p.delayed ? 1.3 : 1; },
+        atk: function(p) { return p.delayed > 0 ? 1.3 : 1; },
         type: "condition",
     },
     771: {
@@ -848,12 +848,12 @@ window.specials = {
     },
     841: {
         delay: function(p) { return 1; },
-        atk: function(p) { return p.delayed ? 1.25 : 1; },
+        atk: function(p) { return p.delayed > 0 ? 1.25 : 1; },
         type: "condition",
     },
     842: {
         delay: function(p) { return 1; },
-        atk: function(p) { return p.delayed ? 1.25 : 1; },
+        atk: function(p) { return p.delayed > 0 ? 1.25 : 1; },
         type: "condition",
     },
     843: {
@@ -1312,7 +1312,7 @@ window.specials = {
         type: "type"
     },
     1013: {
-        atk: function(p) { return p.delayed ? 1.2 : 1; },
+        atk: function(p) { return p.delayed > 0 ? 1.2 : 1; },
         type: "condition",
     },
     1015: {
@@ -2028,11 +2028,11 @@ window.specials = {
         type: "class"
     },
     1321: {
-        atk: function(p) { return p.delayed ? 1.5 : 1; },
+        atk: function(p) { return p.delayed > 0 ? 1.5 : 1; },
         type: "condition",
     },
     1322: {
-        atk: function(p) { return p.delayed ? 1.5 : 1; },
+        atk: function(p) { return p.delayed > 0 ? 1.5 : 1; },
         type: "condition",
     },
     1323: {
@@ -2383,12 +2383,12 @@ window.specials = {
         delay: function(p) { return 1; },
     },
     1437: {
-        atk: function(p) { return p.delayed ? 1.5 : 1; },
+        atk: function(p) { return p.delayed > 0 ? 1.5 : 1; },
         type: "condition",
         orb: function(p) { return p.unit.class.has("Powerhouse") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain]) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain]); },
     },
     1438: {
-        atk: function(p) { return p.delayed ? 1.5 : 1; },
+        atk: function(p) { return p.delayed > 0 ? 1.5 : 1; },
         type: "condition",
         orb: function(p) { return p.unit.class.has("Powerhouse") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain]) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain]); },
     },
@@ -2647,7 +2647,7 @@ window.specials = {
     },
     1525: {
         delay: function(p) { return 1; },
-        atk: function(p) { return p.delayed ? 1.3 : 1; },
+        atk: function(p) { return p.delayed > 0 ? 1.3 : 1; },
         type: "condition",
     },
     1526: {
@@ -3545,12 +3545,12 @@ window.specials = {
     },
     1769: {
         delay: function(p) { return 1; },
-        atk: function(p) { return (p.delayed && p.captain.class.has("Cerebral")) ? 1.5 : 1; },
+        atk: function(p) { return (p.delayed > 0 && p.captain.class.has("Cerebral")) ? 1.5 : 1; },
         type: "condition",
     },
     1770: {
         delay: function(p) { return 1; },
-        atk: function(p) { return (p.delayed && p.captain.class.has("Cerebral")) ? 1.5 : 1; },
+        atk: function(p) { return (p.delayed > 0 && p.captain.class.has("Cerebral")) ? 1.5 : 1; },
         type: "condition",
     },
     1771: {
@@ -3627,11 +3627,11 @@ window.specials = {
         delay: function(p) { return 1; },
     },
     1797: {
-        atk: function(p) { return p.delayed ? 1.5 : 1; },
+        atk: function(p) { return p.delayed > 0 ? 1.5 : 1; },
         type: "condition",
     },
     1798: {
-        atk: function(p) { return p.delayed ? 1.5 : 1; },
+        atk: function(p) { return p.delayed > 0 ? 1.5 : 1; },
         type: "condition",
     },
     1799: {
@@ -3741,6 +3741,40 @@ window.specials = {
     },
     1832: {
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain]); }
+    },
+    1835: {
+        chain: function(p) { return (p.captain.type == "STR" || p.captain.type == "PSY") ? 2.5 : 1; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 2.5 : 1;
+        },
+        delay: function(p) { return p.captain.class.has("Powerhouse") ? 1 : 0; },
+    },
+    1836: {
+        chain: function(p) { return (p.captain.type == "STR" || p.captain.type == "PSY") ? 2.5 : 1; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 2.5 : 1;
+        },
+        delay: function(p) { return p.captain.class.has("Powerhouse") ? 1 : 0; },
+    },
+    1837: {
+        atk: function(p) { return (p.captain.type == "QCK" || p.captain.type == "PSY") ? 1.75 : 1; },
+        type: "class",
+    },
+    1838: {
+        atk: function(p) { return (p.captain.type == "QCK" || p.captain.type == "PSY") ? 1.75 : 1; },
+        type: "class",
+    },
+    1839: {
+        atk: function(p) { return (p.delayed > 0 && (p.captain.type == "DEX" || p.captain.type == "PSY")) ? 1.75 : 1; },
+        type: "condition",
+        staticMult: function(p) { return p.captain.class.has("Powerhouse") ? 40 : 0; }
+    },
+    1840: {
+        atk: function(p) { return (p.delayed > 0 && (p.captain.type == "DEX" || p.captain.type == "PSY")) ? 1.75 : 1; },
+        type: "condition",
+        staticMult: function(p) { return p.captain.class.has("Powerhouse") ? 40 : 0; }
     },
     2000: {
         atk: function(p) { return 1.75; },
