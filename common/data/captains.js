@@ -5700,6 +5700,12 @@ window.captains = {
     1828: {
         atk: function(p) { return !(p.unit.type == "INT") ? 1 : p.percHP <= 30.0 ? 3 : 2.5; }
     },
+    1829: {
+        atk: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Driven") ? 2 : 1; },
+    },
+    1830: {
+        atk: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Driven") ? 2.5 : 1; },
+    },
     1831: {
         atk: function(p) { 
             if(p.colorCount.INT>=1 && p.colorCount.PSY>=1 && p.colorCount.STR>=1 && p.colorCount.DEX>=1 && p.colorCount.QCK>=1){
