@@ -1884,7 +1884,7 @@ window.specials = {
         type: "class"
     },
     1254: {
-        def: function(p) { return 0.5; } //TODO: get correct value
+        def: function(p) { return 0.2; }
     },
     1255: {
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain]); }
@@ -3735,5 +3735,13 @@ window.specials = {
     1828: {
         atk: function(p) { return p.unit.type == "INT" ? 2 : 1; },
         type: "type"
+    },
+    2000: {
+        atk: function(p) { return 1.75; },
+        type: "class"
+    },
+    2001: {
+        atk: function(p) { return 1.75; },
+        type: "class"
     },
 };

@@ -1990,8 +1990,10 @@ window.drops = {
         {
             name: 'Clash Neo!! Akainu',
             thumb: 1826,
-            condition: '3 different Ultimate versions with different conditions. Ultimate: Shooter Only, Striker Only, and Slasher Only',
-            Ultimate: [ 1825 ]
+            gamewith: 73951,
+            condition: '1 Master version and 3 different Ultimate versions with different conditions. Master: Shooter/Striker/Slaher Only. Ultimate: Shooter Only, Striker Only, and Slasher Only',
+            Ultimate: [ 1825 ],
+            Master: [ 1825 ],
         },
         
         {
@@ -2050,10 +2052,18 @@ window.drops = {
         {
             name: 'Clash!! Vinsmoke Sanji',
             thumb: 1815,
-            gamewith: null,
+            gamewith: 70374,
             Ultimate: [ 1814 ],
             Master: [ 1814 ],
             Expert: [ 1814 ]
+        },
+        
+        {
+            name: 'Clash!! Rayleigh',
+            thumb: 2001,
+            gamewith: null,
+            Ultimate: [ 2000 ],
+            Master: [ 2000 ]
         },
 
     ],

@@ -487,4 +487,8 @@ window.zombies = {
         type: 'healer',
         multiplier: 2
     },
+    2001: { // Rayleigh CHANGE THIS WHEN YOU CHANGE RAYLEIGH
+        type: 'healer',
+        multiplier: 2
+    },
 };
