@@ -12776,7 +12776,7 @@ window.details = {
         limit: "This character has a limit break path",
     },
     1833: {//Reiju
-        captain: "Boosts ATK of [INT] characters by 1.75x and Powerhouse characters by 1.2x and the RCV of Powerhouse by 1.1x",
+        captain: "Boosts ATK of [INT] characters by 1.75x and Powerhouse characters by 1.2x and the RCV of Powerhouse characters by 1.1x",
         captainNotes: "Attack boost stacks, so an [INT] Powerhouse unit has 2.1x ATK",
         special: "If your captain is [INT] or [PSY], recovers 7,000 HP, removes poison, and reduces the duration of paralysis, despair, and silence by 3 turns.  If the captain is a Powerhouse character, reduces damage recieved by 70% for 2 turns ",
         specialName: "Dangerous Healing",
@@ -12784,8 +12784,8 @@ window.details = {
         sailorNotes: "#{beneficial}",
     },
     1834: {//Reiju
-        captain: "Boosts ATK of [INT] characters by ???x and Powerhouse characters by ???x and the RCV of Powerhouse by ???x",
-        captainNotes: "Attack boost stacks, so an [INT] Powerhouse unit has ???x ATK",
+        captain: "Boosts ATK of [INT] characters by 2.25x and Powerhouse characters by 1.3x and the RCV of Powerhouse characters by 1.2x",
+        captainNotes: "Attack boost stacks, so an [INT] Powerhouse unit has 2.925x ATK",
         special: "If your captain is [INT] or [PSY], recovers 7,000 HP, removes poison, and reduces the duration of paralysis, despair, and silence by 3 turns.  If the captain is a Powerhouse character, reduces damage recieved by 70% for 2 turns ",
         specialName: "Dangerous Healing",
         sailor: "Makes [PSY] orbs \"beneficial\" for this unit",
@@ -12793,7 +12793,7 @@ window.details = {
         limit: "This character has a limit break path",
     },
     1835: {//Ichiji
-        captain: "Boosts ATK of [STR] by 1.75x, Powerhouse by 1.2x, and the HP of Powerhouse by 1.2x",
+        captain: "Boosts ATK of [STR] characters by 1.75x, boosts ATK of Powerhouse characters by 1.2x, and the HP of Powerhouse characters by 1.2x",
         captainNotes: "Attack boost stacks, so an [STR] Powerhouse unit has 2.1x ATK",
         special: "If your captain is [STR] or[PSY] character, locks chain multiplier at 2.5x for 2 turns. If your Captain is a Powerhouse character, delays all enemies for 2 turns",
         specialName: "Majestic Impact",
@@ -12801,8 +12801,8 @@ window.details = {
         sailorNotes: "#{beneficial}",
     },
     1836: {//Ichiji
-        captain: "Boosts ATK of [STR] by ???x, Powerhouse by ???x, and the HP of Powerhouse by ???x",
-        captainNotes: "Attack boost stacks, so an [STR] Powerhouse unit has ???x ATK",
+        captain: "Boosts ATK of [STR] characters by 2.25x, boosts ATK of Powerhouse characters by 1.3x, and the HP of Powerhouse characters by 1.2x",
+        captainNotes: "Attack boost stacks, so an [STR] Powerhouse unit has 2.925x ATK",
         special: "If your captain is [STR] or[PSY] character, locks chain multiplier at 2.5x for 2 turns. If your Captain is a Powerhouse character, delays all enemies for 2 turns",
         specialName: "Majestic Impact",
         sailor: "Makes [PSY] orbs \"beneficial\" for this unit",
@@ -12810,7 +12810,7 @@ window.details = {
         limit: "This character has a limit break path",
     },
     1837: {//Niji
-        captain: "Boosts ATK of [QCK] by 1.75x, Powerhouse by 1.2x, and the HP of Powerhouse by 1.2x",
+        captain: "Boosts ATK of [QCK] characters by 1.75x, boosts ATK of Powerhouse characters by 1.2x, and the HP of Powerhouse characters by 1.2x",
         captainNotes: "Attack boost stacks, so an [QCK] Powerhouse unit has 2.1x ATK",
         special: "If your captain is a [QCK] or [PSY] character, boosts ATK of all characters by 1.75x for 2 turns. If your captain is a Powerhouse character, locks all orbs for 1 turn",
         specialName: "Blitz Needle",
@@ -12818,8 +12818,8 @@ window.details = {
         sailorNotes: "#{beneficial}",
     },
     1838: {//Niji
-        captain: "Boosts ATK of [QCK] by ???x, Powerhouse by ???x, and the HP of Powerhouse by ???x",
-        captainNotes: "Attack boost stacks, so an [QCK] Powerhouse unit has ???x ATK",
+        captain: "Boosts ATK of [QCK] characters by 2.25x, boosts ATK of Powerhouse characters by 1.3x, and the HP of Powerhouse characters by 1.2x",
+        captainNotes: "Attack boost stacks, so an [QCK] Powerhouse unit has 2.925x ATK",
         special: "If your captain is a [QCK] or [PSY] character, boosts ATK of all characters by 1.75x for 2 turns. If your captain is a Powerhouse character, locks all orbs for 1 turn",
         specialName: "Blitz Needle",
         sailor: "Makes [PSY] orbs \"beneficial\" for this unit",
@@ -12827,7 +12827,7 @@ window.details = {
         limit: "This character has a limit break path",
     },
     1839: {//Yonji
-        captain: "Boosts ATK of [DEX] by 1.75x, Powerhouse by 1.2x, and the HP of Powerhouse by 1.2x",
+        captain: "Boosts ATK of [DEX] characters by 1.75x, boosts ATK of Powerhouse characters by 1.2x, and the HP of Powerhouse characters by 1.2x",
         captainNotes: "Attack boost stacks, so an [DEX] Powerhouse unit has 2.1x ATK",
         special: "If your captain is [DEX] or [PSY] character, boosts ATK against delayed enemies by 1.75x for 1 turn. If your captain is a Powerhouse character, adds 40x characters ATK as additional typeless damage for 2 turns",
         specialName: "Burst End Kick",
@@ -12836,8 +12836,8 @@ window.details = {
         sailorNotes: "#{beneficial}",
     },
     1840: {//Yonji
-        captain: "Boosts ATK of [DEX] by ???x, Powerhouse by ???x, and the HP of Powerhouse by ???x",
-        captainNotes: "Attack boost stacks, so an [DEX] Powerhouse unit has ???x ATK",
+        captain: "Boosts ATK of [DEX] characters by 2.25x, boosts ATK of Powerhouse characters by 1.3x, and the HP of Powerhouse characters by 1.2x",
+        captainNotes: "Attack boost stacks, so an [DEX] Powerhouse unit has 2.925x ATK",
         special: "If your captain is [DEX] or [PSY] character, boosts ATK against delayed enemies by 1.75x for 1 turn. If your captain is a Powerhouse character, adds 40x characters ATK as additional typeless damage for 2 turns",
         specialName: "Burst End Kick",
         specialNotes: "Extra Damage can only be boosted by conditional Boosters.",

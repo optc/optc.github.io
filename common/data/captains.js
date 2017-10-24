@@ -5732,7 +5732,17 @@ window.captains = {
                 !p.unit.class.has("Powerhouse") && p.unit.type == "INT" ? 1.75 :
                 p.unit.class.has("Powerhouse") && !p.unit.type == "INT" ? 1.2 :
                 1;
-        }
+        },
+        rcv: function(p) { return p.unit.class.has("Powerhouse") ? 1.1 : 1; },
+    },
+    1834: {
+        atk: function(p) { 
+            return p.unit.class.has("Powerhouse") && p.unit.type == "INT" ? 2.925 :
+                !p.unit.class.has("Powerhouse") && p.unit.type == "INT" ? 2.25 :
+                p.unit.class.has("Powerhouse") && !p.unit.type == "INT" ? 1.3 :
+                1;
+        },
+        rcv: function(p) { return p.unit.class.has("Powerhouse") ? 1.2 : 1; },
     },
     1835: {
         atk: function(p) { 
@@ -5740,7 +5750,17 @@ window.captains = {
                 !p.unit.class.has("Powerhouse") && p.unit.type == "STR" ? 1.75 :
                 p.unit.class.has("Powerhouse") && !p.unit.type == "STR" ? 1.2 :
                 1;
-        }
+        },
+        hp: function(p) { return p.unit.class.has("Powerhouse") ? 1.2 : 1; },
+    },
+    1836: {
+        atk: function(p) { 
+            return p.unit.class.has("Powerhouse") && p.unit.type == "STR" ? 2.925 :
+                !p.unit.class.has("Powerhouse") && p.unit.type == "STR" ? 2.25 :
+                p.unit.class.has("Powerhouse") && !p.unit.type == "STR" ? 1.3 :
+                1;
+        },
+        hp: function(p) { return p.unit.class.has("Powerhouse") ? 1.2 : 1; },
     },
     1837: {
         atk: function(p) { 
@@ -5748,7 +5768,17 @@ window.captains = {
                 !p.unit.class.has("Powerhouse") && p.unit.type == "QCK" ? 1.75 :
                 p.unit.class.has("Powerhouse") && !p.unit.type == "QCK" ? 1.2 :
                 1;
-        }
+        },
+        hp: function(p) { return p.unit.class.has("Powerhouse") ? 1.2 : 1; },
+    },
+    1838: {
+        atk: function(p) { 
+            return p.unit.class.has("Powerhouse") && p.unit.type == "QCK" ? 2.925 :
+                !p.unit.class.has("Powerhouse") && p.unit.type == "QCK" ? 2.25 :
+                p.unit.class.has("Powerhouse") && !p.unit.type == "QCK" ? 1.3 :
+                1;
+        },
+        hp: function(p) { return p.unit.class.has("Powerhouse") ? 1.2 : 1; },
     },
     1839: {
         atk: function(p) { 
@@ -5756,7 +5786,17 @@ window.captains = {
                 !p.unit.class.has("Powerhouse") && p.unit.type == "DEX" ? 1.75 :
                 p.unit.class.has("Powerhouse") && !p.unit.type == "DEX" ? 1.2 :
                 1;
-        }
+        },
+        hp: function(p) { return p.unit.class.has("Powerhouse") ? 1.2 : 1; },
+    },
+    1840: {
+        atk: function(p) { 
+            return p.unit.class.has("Powerhouse") && p.unit.type == "DEX" ? 2.925 :
+                !p.unit.class.has("Powerhouse") && p.unit.type == "DEX" ? 2.25 :
+                p.unit.class.has("Powerhouse") && !p.unit.type == "DEX" ? 1.3 :
+                1;
+        },
+        hp: function(p) { return p.unit.class.has("Powerhouse") ? 1.2 : 1; },
     },
     2000: {
         atk: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Slasher") ? 2 : 1; },
