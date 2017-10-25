@@ -5815,6 +5815,17 @@ window.captains = {
         },
         hp: function(p) { return p.unit.class.has("Powerhouse") ? 1.2 : 1; },
     },
+    1847: {
+        atk: function(p) {  
+    
+            if(p.unit.cost <= 29){
+                return 3.25;
+            }else if(p.unit.cost == 54){
+                return 3;
+            }
+        },
+        hp: function(p) { p.unit.cost <= 29 ? 1.2 : 1; },
+    },
     2000: {
         atk: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Slasher") ? 2 : 1; },
     },
