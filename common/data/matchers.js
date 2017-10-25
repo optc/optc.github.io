@@ -435,6 +435,30 @@ window.matchers = [
     },
 
     {
+        name: 'Crew positive buff remover',
+        target: 'special',
+        matcher: /removes.+positive buffs/i 
+    },
+
+    {
+        name: 'End of Turn buff remover',
+        target: 'special',
+        matcher: /removes.+End of Turn/i 
+    },
+
+    {
+        name: 'Enrage buff remover',
+        target: 'special',
+        matcher: /removes.+Enrage/i 
+    },
+
+    {
+        name: 'Enemy ATK buff remover',
+        target: 'special',
+        matcher: /(removes|reduces).+ATK up/i 
+    },
+
+    {
         name: 'Zombies',
         target: 'special',
         matcher: /Protects from defeat/i
