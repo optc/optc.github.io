@@ -5575,9 +5575,26 @@ window.captains = {
                 if(window.specials[1807].turnedOn[i]==true){specialEnabled = true;}
                 if(window.specials[1808].turnedOn[i]==true){specialEnabled = true;}
             }
-            return p.unit.class.has("Slasher") ? specialEnabled ? 1.62 : 1.2: 1; 
+            if(p.unit.class.has("Slasher")){
+                if(p.actions[p.sourceSlot]){
+                    if (specialEnabled){
+                        return 3.5;
+                    } else {
+                        return 2.5;
+                    }
+                } else {
+                    if (specialEnabled){
+                        return 1.62;
+                    } else {
+                        return 1.2;
+                    }
+                }
+            }else{
+                return 1;
+            }
+            // return p.unit.class.has("Slasher") ? specialEnabled ? 1.62 : 1.2 : 1; 
         },
-        hp: function(p) { return 1.1 }
+        hp: function(p) { return p.actions[p.sourceSlot] ? 1.3 : 1.1 }
     },
     1809: {
         hitAtk: function(p) {
