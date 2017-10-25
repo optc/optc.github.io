@@ -8587,14 +8587,14 @@ window.details = {
     },
     1411: {//Timeskip Chopper Again
         captain: "Boosts ATK of Powerhouse characters by 2.25x, reduces crew's RCV to 0",
-        special: "Reduce enemies Damage Reduction and Increased Defense duration by 3 turns and deals 60x character's ATK in typeless damage to all enemies",
+        special: "Reduces enemies Percent Damage Reduction and Increased Defense duration by 3 turns and deals 60x character's ATK in typeless damage to all enemies",
         specialNotes: "This does not affect threshold damage reduction. Damage Reduction is the rainbow shield buff enemies have, and Increased Defense is the blue shiled buff enemies have",
         specialName: "Carving Hoof Palm: Coconut",
         sailor: "If Chopper has a [STR] orb and you hit a Perfect with him, keep his [STR] orb for the next turn",
     },
     1412: {//Timeskip Chopper Again
         captain: "Boosts ATK of Powerhouse characters by 2.75x, reduces crew's RCV to 0",
-        special: "Reduce enemies Damage Reduction and Increased Defense duration by 3 turns and deals 60x character's ATK in typeless damage to all enemies",
+        special: "Reduces enemies Percent Damage Reduction and Increased Defense duration by 3 turns and deals 60x character's ATK in typeless damage to all enemies",
         specialNotes: "This does not affect threshold damage reduction. Damage Reduction is the rainbow shield buff enemies have, and Increased Defense is the blue shield buff enemies have",
         specialName: "Carving Hoof Palm: Coconut",
         sailor: "If Chopper has a [STR] orb and you hit a Perfect with him, keep his [STR] orb for the next turn",
@@ -12241,13 +12241,13 @@ window.details = {
     },
     1795:{//Diamante
         captain: "Boosts ATK of Slasher and Driven characters by 2x",
-        special: "Delays all enemies for 2 turns, reduce enemies Damage Reduction and Increased Defense duration by 3 turns and changes right column [STR], [DEX], [QCK], [PSY] and [INT] orbs into Matching orbs",
+        special: "Delays all enemies for 2 turns, reduces enemies Percent Damage Reduction and Increased Defense duration by 3 turns and changes right column [STR], [DEX], [QCK], [PSY] and [INT] orbs into Matching orbs",
         sailor: "Boosts this character's attack against [STR] characters by 1.1x",
         specialName: "Snake Sword",
     },
     1796:{//Diamante
         captain: "Boosts ATK of Slasher and Driven characters by 2.5x",
-        special: "Delays all enemies for 2 turns, reduce enemies Damage Reduction and Increased Defense duration by 3 turns and changes right column [STR], [DEX], [QCK], [PSY] and [INT] orbs into Matching orbs",
+        special: "Delays all enemies for 2 turns, reduces enemies Percent Damage Reduction and Increased Defense duration by 3 turns and changes right column [STR], [DEX], [QCK], [PSY] and [INT] orbs into Matching orbs",
         sailor: "Boosts this character's attack against [STR] characters by 1.1x",
         specialName: "Snake Sword",
         limit: [

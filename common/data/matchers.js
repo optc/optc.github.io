@@ -441,13 +441,13 @@ window.matchers = [
     },
 
     {
-        name: 'End of Turn buff remover',
+        name: 'Enemy End of Turn buff remover',
         target: 'special',
         matcher: /removes.+End of Turn/i 
     },
 
     {
-        name: 'Enrage buff remover',
+        name: 'Enemy Enrage buff remover',
         target: 'special',
         matcher: /removes.+Enrage/i 
     },
@@ -456,6 +456,24 @@ window.matchers = [
         name: 'Enemy ATK buff remover',
         target: 'special',
         matcher: /(removes|reduces).+ATK up/i 
+    },
+
+    {
+        name: 'Enemy Threshold Damage Reduction remover',
+        target: 'special',
+        matcher: /(removes|reduces).+Threshold Damage Reduction/i 
+    },
+
+    {
+        name: 'Enemy Percent Damage Reduction remover',
+        target: 'special',
+        matcher: /(removes|reduces).+Percent Damage Reduction/i 
+    },
+
+    {
+        name: 'Enemy Increased Defense remover',
+        target: 'special',
+        matcher: /(removes|reduces).+Increased Defense/i 
     },
 
     {
