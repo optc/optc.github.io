@@ -1845,7 +1845,7 @@ window.units = [
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Sengoku the Garbo", "INT", [ "Fighter", "Cerebral" ], "6+", 54, 4, 5, 99, 5000000, 1998, 729, 194, 3696, 1458, 398, null ],
+    [ "Sengoku the Buddha", "INT", [ "Fighter", "Cerebral" ], "6+", 54, 4, 5, 99, 5000000, 1998, 729, 194, 3696, 1458, 398, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
