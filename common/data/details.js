@@ -12845,6 +12845,10 @@ window.details = {
         sailorNotes: "#{beneficial}",
         limit: "This character has a limit break path",
     },
+    1847: {//Goku+
+        captain: "Reduce CD by 2 at the start of the adventure, boost ATK of characters that are 29 cost or lower by 3.25x, HP 1.2x, boost ATK of characters with cost 54 by 3x",
+        special: "Do random large INT Damage to all enemies, for 1 turn boost ATK by 1.5x, change orbs of Characters that are 29 cost or lower to matching orbs",
+    },
     2000: {//Rayleigh
         captain: "Boosts ATK of Slasher and Cerebral characters by 2x",
         special: "Randomizes all non-matching orbs, boosts ATK of all characters by 1.75x for 1 turn",
