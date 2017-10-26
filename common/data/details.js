@@ -12753,6 +12753,14 @@ window.details = {
         specialNotes: "#{colorAffinity : 1.75}",
         specialName: "Great Eruption [Neo]",
     },
+    1827: {//Sicilian Colo
+        captain: "2,5x Atk for INT characters, 3x if your HP is under 30%",
+        special: "Reduce crew HP by 50%, 2x Atk boost for INT characters and randomize non-matching orbs (block included)",
+    },
+    1828: {//Sicilian Colo
+        captain: "2,5x Atk for INT characters, 3x if your HP is under 30%",
+        special: "Reduce crew HP by 50%, 2x Atk boost for INT characters and randomize non-matching orbs (block included)",
+    },
     1829: {//Raid Caesar
         captain: "Boosts ATK of Cerebral and Driven characters by 2x",
         special: "Deals 45x character's ATK in typeless damage to all enemies, amplifies the effect of orbs by 1.75x for Cerebral and Driven characters for 2 turns, and poisons all enemies",
