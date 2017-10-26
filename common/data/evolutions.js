@@ -2837,7 +2837,7 @@ window.evolutions = {
     },
     1821: {
         evolution: 1822,
-        evolvers: [  ]
+        evolvers: [ 78, 84, 89, 95, 100 ]
     },
     1823: {
         evolution: 1824,
@@ -2849,7 +2849,7 @@ window.evolutions = {
     },
     1827: {
         evolution: 1828,
-        evolvers: [  ],
+        evolvers: [  118, 99, 1180, 304, 104 ]
     },
     1829: {
         evolution: 1830,
@@ -2877,6 +2877,6 @@ window.evolutions = {
     },
     2000: {
         evolution: 2001,
-        evolvers: [  ]
+        evolvers: [ 118, 84, 266, 300, 100 ]
     },
 };
