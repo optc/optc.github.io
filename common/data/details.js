@@ -8171,7 +8171,7 @@ window.details = {
         specialName: "Sky Walk",
     },
     1368: {//Timeskip Sanji
-        captain: "Boosts ATK of [STR] characters by 2.5x, by 3x if HP is below 30% at the start of the turn",
+        captain: "Boosts ATK of [STR] characters by 3x if HP is below 30% at the start of the turn, by 2.5x otherwise",
         special: [
             {
                 "description": "Reduces damage received by 50% and amplifies the effect of orbs by 1.5x for 1 turn.",
@@ -11316,7 +11316,7 @@ window.details = {
         specialName: "Shining Brightly Upon the Oasis",
     },
     1731: {//Vivi
-        captain: "Boosts ATK of all characters by 2x, boosts amount of Beli received by 2.5x",
+        captain: "Boosts amount of Beli received by 2.5x and boosts ATK of all characters by 2x",
         special: "Reduces Special Cooldown of all characters by 2 turns, reduces Paralysis duration by 3 turns, reduces damage received by 60% for 2 turns",
         sailor: "Restores her own special by 3 turns when it is rewinded",
         sailorNotes: "#{rewind : 3}",
@@ -11326,13 +11326,13 @@ window.details = {
         captain: "Boosts ATK of [STR] characters by 2x, boosts HP of Striker and Powerhouse characters by 1.1x",
         special: "Deals 50x character's ATK in typeless damage to one enemy that will ignore damage negating abilities and barriers. If enemies have debuff protection at the time the special was activated, boosts ATK of Striker and Powerhouse characters by 1.75x for 1 turn and changes all orbs, including [BLOCK] orbs, into Matching orbs",
         specialNotes: "#{ignoreBarrier}",
-        specialName: "Nekomamushi Special",
+        specialName: "Battle Guardian",
     },
     1733: {//Nekomamushi
         captain: "Boosts ATK of [STR] characters by 2.5x, boosts HP of Striker and Powerhouse characters by 1.25x",
         special: "Deals 50x character's ATK in typeless damage to one enemy that will ignore damage negating abilities and barriers. If enemies have debuff protection at the time the special was activated, boosts ATK of Striker and Powerhouse characters by 1.75x for 1 turn and changes all orbs, including [BLOCK] orbs, into Matching orbs",
         specialNotes: "#{ignoreBarrier}",
-        specialName: "Nekomamushi Special",
+        specialName: "Battle Guardian",
     },
     1734: {//Sugar
         captain: "Boosts ATK of Cerebral and Fighter characters by 1.5x and recovers 3x character's RCV in HP at the end of each turn",
@@ -12739,7 +12739,6 @@ window.details = {
         ],
         specialNotes:"#{stages}",
         specialName: "More More: Hundredfold Artillery Cannon",
-        limit: "This character has a limit break path",
     },
     1825: {//Akainu
         captain: "Boosts ATK by 2.5x following a chain of [INT] > [INT] > [INT] attacks no lower than Good",
@@ -12754,12 +12753,53 @@ window.details = {
         specialName: "Great Eruption [Neo]",
     },
     1827: {//Sicilian Colo
-        captain: "2,5x Atk for INT characters, 3x if your HP is under 30%",
-        special: "Reduce crew HP by 50%, 2x Atk boost for INT characters and randomize non-matching orbs (block included)",
+        captain: "Boosts ATK of [INT] characters by 2x",
+        special: "Reduce crew's current HP by 50%, Boosts ATK of [INT] characters by 2x for 1 turn and randomize non-matching orbs, including [BLOCK] orbs",
+        specialName: "Explosive Spirit",
     },
     1828: {//Sicilian Colo
-        captain: "2,5x Atk for INT characters, 3x if your HP is under 30%",
-        special: "Reduce crew HP by 50%, 2x Atk boost for INT characters and randomize non-matching orbs (block included)",
+        captain: "Boosts ATK of [INT] characters by 3x if HP is below 30% at the start of the turn, by 2.5x otherwise",
+        special: "Reduce crew's current HP by 50%, Boosts ATK of [INT] characters by 2x for 1 turn and randomize non-matching orbs, including [BLOCK] orbs",
+        specialName: "Explosive Spirit",
+        limit: [
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Aquire Sailor Ability 1: Boosts base ATK of Slasher characters by 40" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Aquire Potential 1: [PSY] Damage Reduction" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base RCV by 30" },
+            { "description": "Boosts base ATK by 25" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Aquire Potential 2: Critical Hit" },
+        ],
+        potential: [
+            {
+                "Name": "[PSY] Damage Reduction",
+                "description": [ 
+                    "Level 1: Reduces Damage recieved from [PSY] enemies by 1%",
+                    "Level 2: Reduces Damage recieved from [PSY] enemies by 2%",
+                    "Level 3: Reduces Damage recieved from [PSY] enemies by 3%",
+                    "Level 4: Reduces Damage recieved from [PSY] enemies by 4%",
+                    "Level 5: Reduces Damage recieved from [PSY] enemies by 5%"
+                ]
+            },
+            {
+                "Name": "Critical Hit",
+                "description": [ 
+                    "Level 1: If you hit a perfect with this character, there is a 10% chance to deal 3% of this character's attack in extra damage",
+                    "Level 2: If you hit a perfect with this character, there is a 10% chance to deal 5% of this character's attack in extra damage",
+                    "Level 3: If you hit a perfect with this character, there is a 15% chance to deal 5% of this character's attack in extra damage",
+                    "Level 4: If you hit a perfect with this character, there is a 20% chance to deal 5% of this character's attack in extra damage",
+                    "Level 5: If you hit a perfect with this character, there is a 20% chance to deal 10% of this character's attack in extra damage"
+                ]
+            },
+        ]
     },
     1829: {//Raid Caesar
         captain: "Boosts ATK of Cerebral and Driven characters by 2x",
