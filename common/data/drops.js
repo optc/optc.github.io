@@ -1280,7 +1280,8 @@ window.drops = {
             condition: 'None',
             challenge:'Total number of hits above 50,000',
             challengeData: [['4 Times','1x INT Elder'],['9 Times','1x ATK Cotton Candy, 1x Rainbow Gem'],['22 Times','1x Despair Resistance Forbidden Tome, 2x Rainbow Gems']],
-            'All Difficulties': [ 41, 42, 53, 235, 395, 397, 419, 426, 427, 432, 563, 564, 866, 867, 868, -709, -1549, -673, -671, -633, -500, -467, -465, -451, -431 ]
+            'Japan': [ 41, 42, 53, 235, 395, 397, 419, 426, 427, 432, 563, 564, 866, 867, 868, -709, -1549, -673, -671, -633, -500, -467, -465, -451, -431 ],
+            'Global': [ 41, 42, 53, 235, 395, 397, 419, 426, 427, 432, 563, 564, 866, 867, 868, -451, -558, -1208, -560, -1212, -465, -500, -633, -709, -1549, -467 ]
         },
 
         {
