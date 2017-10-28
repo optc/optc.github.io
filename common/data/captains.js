@@ -5822,9 +5822,11 @@ window.captains = {
                 return 3.25;
             }else if(p.unit.cost == 54){
                 return 3;
+            }else{
+                return 1;
             }
         },
-        hp: function(p) { p.unit.cost <= 29 ? 1.2 : 1; },
+        hp: function(p) { return p.unit.cost <= 29 ? 1.2 : 1; },
     },
     2000: {
         atk: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Slasher") ? 2 : 1; },
