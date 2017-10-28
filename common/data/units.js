@@ -1774,7 +1774,7 @@ window.units = [
     [ "'Samurai' Kinemon", "INT", [ "Free Spirit", "Slasher" ], 3, 13, 6, 2, 50, 392109, 184, 106, 24, 990, 621, 78, 1 ],
     [ "'Samurai' Foxfire Kinemon", "INT", [ "Free Spirit", "Slasher" ], 4, 20, 4, 3, 99, 3000000, 890, 560, 65, 2058, 1245, 192, 1 ],
     [ "'Samurai' Momonosuke", "QCK", [ "Free Spirit", "Striker" ], 3, 9, 5, 2, 35, 136167, 54, 45, 6, 622, 427, 80, 1 ],
-    [ "'Dragon' Momonosuke, Evolved", "QCK", [ "Free Spirit", "Striker" ], 4, 15, 4, 3, 70, 1066998, 646, 259, 80, 1596, 747, 160, 1 ],
+    [ "'Dragon' Momonosuke", "QCK", [ "Free Spirit", "Striker" ], 4, 15, 4, 3, 70, 1066998, 646, 259, 80, 1596, 747, 160, 1 ],
     [ "Kizaru, Emissary of the Holy Land", "QCK", [ "Free Spirit", "Shooter" ], 4, 20, 5, 3, 70, 1066998, 160, 114, 38, 1292, 700, 177, 1 ],
     [ "Kizaru, A Visit from the Holy Land", "QCK", [ "Free Spirit", "Shooter" ], 5, 30, 7, 4, 99, 4000000, 1230, 1342, 315, 2613, 1342, 315, 1 ],
     [ "Kizaru [Neo]", "DEX", [ "Fighter", "Shooter" ], 4, 30, 4, 2, 70, 1066998, 217, 171, 37, 1221, 746, 162, 1 ],
