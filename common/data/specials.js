@@ -3782,6 +3782,14 @@ window.specials = {
         type: "condition",
         staticMult: function(p) { return p.captain.class.has("Powerhouse") ? 40 : 0; }
     },
+    1841: {
+        atk: function(p) { return p.unit.class.has("Driven") ? 1.5 : 1; },
+        type: "class"
+    },
+    1842: {
+        atk: function(p) { return p.unit.class.has("Driven") ? 1.5 : 1; },
+        type: "class"
+    },
     1847: {
         atk: function(p) { return 1.5; },
         type: "type"

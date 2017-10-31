@@ -12893,9 +12893,30 @@ window.details = {
         sailorNotes: "#{beneficial}",
         limit: "This character has a limit break path",
     },
+    1841: {//Caribou
+        captain: "Boosts ATK of Driven characters by 1.5x, deals 2x character's ATK in [DEX] damage to all enemies at the end of each turn",
+        special: "Boosts ATK of Driven characters by 1.5x for 1 turn, reduces enemy's Threshold Damage Reduction by 2 turns and ATK Up duration by 3 turns",
+        specialName: "Fathomless Infinite Hell",
+    },
+    1842: {//Caribou
+        captain: "Boosts ATK of Driven characters by 1.5x, deals 4x character's ATK in [DEX] damage to all enemies at the end of each turn",
+        special: "Boosts ATK of Driven characters by 1.5x for 1 turn, reduces enemy's Threshold Damage Reduction by 2 turns and ATK Up duration by 3 turns",
+        specialName: "Fathomless Infinite Hell",
+    },
+    1843: {//Coribou
+        captain: "Boosts ATK of Driven and Striker characters by 1.5x",
+        special: "Removes blindness and recovers 4x character's RCV in HP",
+        specialName: "Frantic Funeral",
+    },
+    1844: {//Coribou
+        captain: "Boosts ATK of Driven and Striker characters by 1.75x",
+        special: "Removes blindness and recovers 4x character's RCV in HP",
+        specialName: "Frantic Funeral",
+    },
     1847: {//Goku+
-        captain: "Reduce CD by 2 at the start of the adventure, boost ATK of characters that are 29 cost or lower by 3.25x, HP 1.2x, boost ATK of characters with cost 54 by 3x",
-        special: "Do random large INT Damage to all enemies, for 1 turn boost ATK by 1.5x, change orbs of Characters that are 29 cost or lower to matching orbs",
+        captain: "Reduce CD by 2 at the start of the adventure, boost ATK of characters that are 29 cost or lower by 3.25x, and their HP by 1.2x, boost ATK of characters with cost 54 by 3x",
+        special: "Deals random large INT Damage to all enemies, boost ATK of all characters by 1.5x for 1 turn, changes orbs to matching orbs for chatacters that are 29 cost or lower",
+        specialName: "Requiem Shockwave",
     },
     2000: {//Rayleigh
         captain: "Boosts ATK of Slasher and Cerebral characters by 2x",

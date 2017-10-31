@@ -1686,6 +1686,14 @@ window.drops = {
             'All Difficulties': [ 1817, 1819, 1820, -1610, -1656, -1660, -1230, -1236, -1173, -526, -643, -1506, -964 ]
         },
         
+        {
+            name: 'Caribou Pirates!',
+            thumb: 1842,
+            gamewith: null,
+            condition: '[STR] orbs will not appear naturally',
+            'All Difficulties': [ 1841, 1843, -1268, -639, -645, -1234, -1270, -1700, -1704, -1501, -1502 ]
+        },
+        
     ],
 
             
@@ -2025,7 +2033,7 @@ window.drops = {
         },
         
         {
-            name: 'Clash!! Bellamy',
+            name: 'Clash Neo!! Bellamy',
             thumb: 1738,
             gamewith: 66087,
             condition: '1 Expert version and 3 Master versions with different conditions. Expert: Driven/Free Spirit/Striker Only. Can only complete 10 times each. Master: Driven Only, Free Spirit Only, and Striker Only',
@@ -2057,6 +2065,15 @@ window.drops = {
             Ultimate: [ 1814 ],
             Master: [ 1814 ],
             Expert: [ 1814 ]
+        },
+        
+        {
+            name: 'Clash!! Caesar',
+            thumb: 1830,
+            gamewith: null,
+            condition: 'Take 10% MAX Health in Environmental Damage every 2 turns',
+            Master: [ 1829 ],
+            Expert: [ 1829 ]
         },
         
         {
