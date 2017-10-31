@@ -5827,6 +5827,12 @@ window.captains = {
     1844: {
         atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Striker") ? 1.75 : 1; },
     },
+    1845: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? 2.5 : 1; },
+    },
+    1846: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? 2.75 : 1; },
+    },
     1847: {
         atk: function(p) {  
     

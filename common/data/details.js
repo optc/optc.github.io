@@ -12913,6 +12913,16 @@ window.details = {
         special: "Removes blindness and recovers 4x character's RCV in HP",
         specialName: "Frantic Funeral",
     },
+    1845: {//Garp
+        captain: "Boosts ATK of Fighter characters by 2.5x and reduce damage received by 5%",
+        special: "Reduces the defense of all enemies by 100% for 1 turn. If the targeted enemy has less than 25% HP, instantly defeats them, otherwise, cuts the current HP of one enemy by 30%",
+        specialName: "Garp Special",
+    },
+    1846: {//Garp
+        captain: "Boosts ATK of Fighter characters by 2.75x and reduce damage received by 15%",
+        special: "Reduces the defense of all enemies by 100% for 1 turn. If the targeted enemy has less than 25% HP, instantly defeats them, otherwise, cuts the current HP of one enemy by 30%",
+        specialName: "Garp Special",
+    },
     1847: {//Goku+
         captain: "Reduce CD by 2 at the start of the adventure, boost ATK of characters that are 29 cost or lower by 3.25x, and their HP by 1.2x, boost ATK of characters with cost 54 by 3x",
         special: "Deals random large INT Damage to all enemies, boost ATK of all characters by 1.5x for 1 turn, changes orbs to matching orbs for chatacters that are 29 cost or lower",

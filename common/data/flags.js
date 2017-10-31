@@ -1653,6 +1653,7 @@ window.flags = {
     1822: { shop: 1 },
     1823: { rr: 1, rro: 1, lrr: 1 },
     1824: { rr: 1, rro: 1, lrr: 1 },
+    1847: { rr: 1, rro: 1 },
     2000: { global: 1 },
     2001: { global: 1 },
 };

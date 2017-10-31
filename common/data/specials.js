@@ -3790,6 +3790,12 @@ window.specials = {
         atk: function(p) { return p.unit.class.has("Driven") ? 1.5 : 1; },
         type: "class"
     },
+    1845: {
+        def: function(p) { return 0; }
+    },
+    1846: {
+        def: function(p) { return 0; }
+    },
     1847: {
         atk: function(p) { return 1.5; },
         type: "type"

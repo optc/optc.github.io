@@ -109,8 +109,9 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             // hp
             var hp = getStatOfUnit(x,'hp');
             hp += getShipBonus('hp',true,x.unit,n);
-            hp *= getShipBonus('hp',false,x.unit,n);
+            hp = applyStaticEffectsToHP(n,hp);
             hp *= getEffectBonus('hp',x.unit);
+            hp *= getShipBonus('hp',false,x.unit,n);
             hpMax += Math.floor(applyCaptainEffectsToHP(n,hp));
             // rcv
             var rcv = getStatOfUnit(x,'rcv');
@@ -473,16 +474,27 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
 
     var applyCaptainEffectsToHP = function(slotNumber,hp) {
         var params = getParameters(slotNumber);
-        for (var i=0;i<enabledEffects.length;++i) {
+        /*for (var i=0;i<enabledEffects.length;++i) {
             if (enabledEffects[i].hasOwnProperty('hpStatic')){
                 params["sourceSlot"] = enabledEffects[i].sourceSlot;
                 hp += enabledEffects[i].hpStatic(params);
             }
-        }
+        }*/
         for (var i=0;i<enabledEffects.length;++i) {
             if (enabledEffects[i].hasOwnProperty('hp')){
                 params["sourceSlot"] = enabledEffects[i].sourceSlot; 
                 hp *= enabledEffects[i].hp(params);
+            }
+        }
+        return hp;
+    };
+
+    var applyStaticEffectsToHP = function(slotNumber,hp) {
+        var params = getParameters(slotNumber);
+        for (var i=0;i<enabledEffects.length;++i) {
+            if (enabledEffects[i].hasOwnProperty('hpStatic')){
+                params["sourceSlot"] = enabledEffects[i].sourceSlot;
+                hp += enabledEffects[i].hpStatic(params);
             }
         }
         return hp;
