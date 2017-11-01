@@ -2865,27 +2865,31 @@ window.evolutions = {
     },
     1835: {
         evolution: 1836,
-        evolvers: [  ],
+        evolvers: [ 83, 94, 95, 300, 100 ],
     },
     1837: {
         evolution: 1838,
-        evolvers: [  ],
+        evolvers: [ 118, 85, 96, 301, 101 ],
     },
     1839: {
         evolution: 1840,
-        evolvers: [  ],
+        evolvers: [ 86, 266, 97, 302, 102 ],
     },
     1841: {
         evolution: 1842,
-        evolvers: [  ],
+        evolvers: [ 117, 80, 86, 97, 102 ],
     },
     1843: {
         evolution: 1844,
-        evolvers: [  ],
+        evolvers: [ 117, 78, 84, 95, 100 ],
     },
     1845: {
         evolution: 1846,
-        evolvers: [  ],
+        evolvers: [ 118, 84, 266, 95, 267 ],
+    },
+    459: {
+        evolution: 1847,
+        evolvers: [ 'skullINT', 118, 88, 304, 267 ],
     },
     2000: {
         evolution: 2001,
