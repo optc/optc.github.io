@@ -10,12 +10,12 @@ var directives = { };
  *****************/
 
 directives.autoFocus = function($timeout) {
-	return {
-		restrict: 'A',
-		link: function(scope, element, attrs) {
-			$timeout(function(){ element[0].focus(); });
-		}
-	};
+    return {
+        restrict: 'A',
+        link: function(scope, element, attrs) {
+            $timeout(function(){ element[0].focus(); });
+        }
+    };
 };
 
 directives.decorateSlot = function($rootScope) {
@@ -256,8 +256,8 @@ directives.floatingHeader = function($timeout) {
 };
 
 directives.goBack = function($state) {
-	return {
-		restrict: 'A',
+    return {
+        restrict: 'A',
         link: function(scope, element, attrs) {
             element.click(function(e) {
                 if (!e.target || e.target.className.indexOf('inner-container') == -1) return;
@@ -268,8 +268,8 @@ directives.goBack = function($state) {
 };
 
 directives.quickPick = function() {
-	return {
-		restrict: 'A',
+    return {
+        restrict: 'A',
         link: function(scope, element, attrs) {
             var fuse = new Fuse(window.units, { keys: [ 'name' ], id: 'number', threshold: 0.3, distance: 200 });
             element.textcomplete([{
@@ -349,6 +349,8 @@ directives.slot = function() {
         scope: true,
         link: function(scope, element, attrs) {
             scope.slot = element.index();
+            var id = scope.data.team[scope.slot].unit.number + 1;
+            scope.sailors = window.sailors[id] ? JSON.parse(JSON.stringify(window.sailors[id])) : null;  
             scope.onDrop = function(i, j) {
                 var temp = scope.data.team[i];
                 scope.data.team[i] = scope.data.team[j];
@@ -802,6 +804,21 @@ directives.unitCandies = function() {
                 scope.text = (total > 0 ? '+' + total : '');
             };
             scope.$watch('data.team[slot].candies',update,true);
+        }
+    };
+};
+
+directives.unitSailor = function() {
+    return {
+        restrict: 'E',
+        replace: true,
+        scope: true,
+        template: '<div class="unitSailor" ng-show="hasSailor"><i class="fa fa-anchor"></div>',
+        link: function(scope, element, attrs) {
+            scope.hasSailor = false;
+            scope.$watch('data.team[slot].unit',function(unit) {
+                scope.hasSailor = unit && window.sailors.hasOwnProperty(unit.number+1);
+            });
         }
     };
 };
