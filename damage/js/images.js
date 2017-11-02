@@ -124,7 +124,12 @@ app.controller('ImageGeneratorCtrl', function($scope, $filter, $timeout) {
                 var total = data.candies.hp + data.candies.atk + data.candies.rcv;
                 if (total > 0) {
                     type(context, { text: '+' + total, style: 'bold 14px "Open Sans"',
-                        x: baseX + 7, y: baseY + 103, color: 'gold', stroke: 'black', strokeWidth: 3 });
+                        x: baseX + 40, y: baseY + 18, color: 'gold', stroke: 'black', strokeWidth: 3 });
+                }
+                
+                if (n >= 2 && window.sailors.hasOwnProperty(unit.number +1)) {
+                    awesome(context, { text: 'f13d', 
+                        x: baseX + 3, y: baseY + 105, color: 'gold', stroke: 'black', strokeWidth: 3 });
                 }
             };
             image.src = Utils.getThumbnailUrl(unit.number + 1);
