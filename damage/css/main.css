@@ -1,12 +1,12 @@
 @font-face {
-	font-family: 'icomoon';
-	src:url('../../res/icomoon.eot?xewvs9');
-	src:url('../../res/icomoon.eot?xewvs9#iefix') format('embedded-opentype'),
-		url('../../res/icomoon.ttf?xewvs9') format('truetype'),
-		url('../../res/icomoon.woff?xewvs9') format('woff'),
-		url('../../res/icomoon.svg?xewvs9#icomoon') format('svg');
-	font-weight: normal;
-	font-style: normal;
+    font-family: 'icomoon';
+    src:url('../../res/icomoon.eot?xewvs9');
+    src:url('../../res/icomoon.eot?xewvs9#iefix') format('embedded-opentype'),
+        url('../../res/icomoon.ttf?xewvs9') format('truetype'),
+        url('../../res/icomoon.woff?xewvs9') format('woff'),
+        url('../../res/icomoon.svg?xewvs9#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
 /***************
