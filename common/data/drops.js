@@ -1689,7 +1689,7 @@ window.drops = {
         {
             name: 'Caribou Pirates!',
             thumb: 1842,
-            gamewith: null,
+            gamewith: 75879,
             condition: '[STR] orbs will not appear naturally',
             'All Difficulties': [ 1841, 1843, -1268, -639, -645, -1234, -1270, -1700, -1704, -1501, -1502 ]
         },
@@ -2202,7 +2202,7 @@ window.drops = {
         {
             name: 'Invasion! Garp',
             thumb: 1846,
-            gamewith: null,
+            gamewith: 75260,
             condition: 'Has a chance of appearing at the end of ANY Chaos Coliseum boss. You MUST use the same team that you just used to complete the Coliseum boss to fight Garp.',
             'All Difficulties': [ 1845, 'skullSTR', 'skullDEX', 'skullQCK', 'skullPSY', 'skullINT' ]
         },
