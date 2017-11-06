@@ -506,19 +506,19 @@ window.effects = {
         atk: function(p) {
             var id = p.number + 1,
                 matching = ((id > 1848 && id < 1851) ||
-                    [  ].indexOf(id) != -1);
+                    [ 1851 ].indexOf(id) != -1);
             return !matching ? 1 : 2.5;
         },
         hp: function(p) {
             var id = p.number + 1,
                 matching = ((id > 1848 && id < 1851) ||
-                    [ ].indexOf(id) != -1);
+                    [ 1851 ].indexOf(id) != -1);
             return !matching ? 1 : 2.5;
         },
         rcv: function(p) {
             var id = p.number + 1,
                 matching = ((id > 1848 && id < 1851) ||
-                    [ ].indexOf(id) != -1);
+                    [ 1851 ].indexOf(id) != -1);
             return !matching ? 1 : 2.5;
         },
     },
