@@ -498,5 +498,29 @@ window.effects = {
             return !matching ? 1 : 1.25;
         },    
     },
+
+    'Treasure Map [Whitebeard Season]': {
+        description: 'Boost stats of Akainu & Squard 2.5x',
+        thumb: 1853,
+        id: 47, // don't change this
+        atk: function(p) {
+            var id = p.number + 1,
+                matching = ((id > 1848 && id < 1851) ||
+                    [ 1851 ].indexOf(id) != -1);
+            return !matching ? 1 : 2.5;
+        },
+        hp: function(p) {
+            var id = p.number + 1,
+                matching = ((id > 1848 && id < 1851) ||
+                    [ 1851 ].indexOf(id) != -1);
+            return !matching ? 1 : 2.5;
+        },
+        rcv: function(p) {
+            var id = p.number + 1,
+                matching = ((id > 1848 && id < 1851) ||
+                    [ 1851 ].indexOf(id) != -1);
+            return !matching ? 1 : 2.5;
+        },
+    },
     
 };
