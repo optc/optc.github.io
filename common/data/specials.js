@@ -3801,10 +3801,10 @@ window.specials = {
         type: "type"
     },
     1850: {
-        chainAddition: function(p) {return 0.5;}
+        chainAddition: function(p) { return 0.5; }
     },
     1851: {
-        chainAddition: function(p) {return 0.5;}
+        chainAddition: function(p) { return 0.5; }
     },
     2000: {
         atk: function(p) { return 1.75; },

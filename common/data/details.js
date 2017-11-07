@@ -117,7 +117,8 @@ window.details = {
     16: {
         special: "Delays all enemies for 3 turns, deals 15x character's ATK in PSY damage to all enemies",
         specialName: "Fire Bird Star",
-        captain: "Boosts ATK and HP of PSY characters by 1.5x"
+        captain: "Boosts ATK and HP of PSY characters by 1.5x",
+        limit: "This character has a limit break path",
     },
     17: {
         special: "Recovers 10x character's RCV in HP",
@@ -992,7 +993,8 @@ window.details = {
         special: "Deals random STR damage to one enemy",
         specialName: "Rampage",
         specialNotes: "#{random : 2,000 : 200,000}",
-        captain: "Boosts ATK of STR characters by 3x and reduces their HP by 60%"
+        captain: "Boosts ATK of STR characters by 3x and reduces their HP by 60%",
+        limit: "This character has a limit break path",
     },
     250: {
         special: "Recovers all missing HP",
@@ -1002,7 +1004,8 @@ window.details = {
     251: {
         special: "Recovers all missing HP",
         specialName: "Blue Flame Rebirth",
-        captain: "Boosts ATK of PSY characters by 3x if HP is above 99% at the start of the turn"
+        captain: "Boosts ATK of PSY characters by 3x if HP is above 99% at the start of the turn",
+        limit: "This character has a limit break path",
     },
     252: {
         special: "Reduces damage received from DEX enemies by 100% for 1 turn",
@@ -1012,7 +1015,8 @@ window.details = {
     253: {
         special: "Reduces damage received from DEX enemies by 100% for 1 turn",
         specialName: "Brilliant Punk",
-        captain: "Boosts ATK and HP of QCK characters by 2x"
+        captain: "Boosts ATK and HP of QCK characters by 2x",
+        limit: "This character has a limit break path",
     },
     254: {
         special: "Deals 5,000 fixed damage to all enemies",
@@ -1267,7 +1271,8 @@ window.details = {
     306: {
         special: "Randomly changes all orbs into either [PSY] or [RCV] orbs",
         specialName: "Meteor Fist Shower",
-        captain: "Boosts ATK and HP of PSY characters by 2x"
+        captain: "Boosts ATK and HP of PSY characters by 2x",
+        limit: "This character has a limit break path",
     },
     307: {
         special: "Randomly changes all orbs other than [DEX] into either [DEX], [RCV] or [TND] orbs",
@@ -1325,7 +1330,8 @@ window.details = {
         special: "Changes [PSY] and [INT] orbs into [STR] orbs, empties slots with [DEX] and [QCK] orbs",
         specialName: "Aye Aye, Captain!",
         captain: "Boosts ATK, HP and RCV of Fighter characters by 1.5x",
-        sailor: "Reduces Paralysis for 2 turns for himself"
+        sailor: "Reduces Paralysis for 2 turns for himself",
+        limit: "This character has a limit break path",
     },
     317: {
         special: "Randomly changes all orbs into either [DEX] or [STR] orbs, deals random DEX damage to all enemies",
@@ -2110,8 +2116,8 @@ window.details = {
         special: "Deals random PSY damage to all enemies, boosts ATK of all characters by 1.5x for 1 turn",
         specialName: "Zen Shockwave",
         specialNotes: "#{random : 30,000 : 150,000}",
-        captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of characters with cost 20 or less by 3x as well as himself",
-        captainNotes: "His captain ability only affects his evolved form, his base form will NOT receive the boost. All evolved Sengoku characters in the team are included in the bonus."
+        captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of characters with cost 20 or less or 54 cost exactly by 3x",
+        captainNotes: "His captain ability also affects his evolved forms, his base form will NOT receive the boost. All evolved and plus evolved Sengoku characters in the team are included in the bonus."
     },
     460: {
         special: "Recovers 33 HP after the end of each turn for 999 turns, delays all enemies for 1 turn",
@@ -3619,7 +3625,8 @@ window.details = {
     748: {
         special: "Deals 35x character's ATK in STR damage to one enemy, boosts chances of getting matching orbs for 3 turns",
         specialName: "Rokuougan",
-        captain: "Boosts ATK of Powerhouse characters by 3x if they have a matching orb, by 2.5x otherwise, reduces crew's RCV to 0"
+        captain: "Boosts ATK of Powerhouse characters by 3x if they have a matching orb, by 2.5x otherwise, reduces crew's RCV to 0",
+        limit: "This character has a limit break path",
     },
     749: {
         special: "Deals random DEX damage to all enemies, randomizes all orbs",
@@ -3633,7 +3640,8 @@ window.details = {
         specialName: "Tempest Kick: Sky Slicer",
         specialNotes: "#{random : 10,000 : 90,000}",
         captain: "Boosts ATK of DEX characters by 2x, boosts damage of DEX specials by 2x",
-        captainNotes: "#{noFixedPerc}"
+        captainNotes: "#{noFixedPerc}",
+        limit: "This character has a limit break path",
     },
     751: {
         special: "Reduces damage received in the next turn by 50% if the special is activated with more than 50% health remaining, by 80% if activated with less than 50% but more than 10% health remaining, by 100% if activated with less than 10% health remaining",
@@ -3655,7 +3663,8 @@ window.details = {
         special: "Deals 15x character's ATK in QCK damage to one enemy, amplifies the effect of orbs by 1.75x for 1 turn",
         specialNotes: "#{orb : 1.75x}",
         specialName: "Moonlight Ten Finger Pistol",
-        captain: "Boosts ATK of Powerhouse characters by 2.5x"
+        captain: "Boosts ATK of Powerhouse characters by 2.5x",
+        limit: "This character has a limit break path",
     },
     755: {
         special: "Reduces damage received by 50% for 1 turn, boosts ATK of Powerhouse characters by 1.75x for 1 turn",
@@ -3665,7 +3674,8 @@ window.details = {
     756: {
         special: "Reduces damage received by 50% for 1 turn, boosts ATK of Powerhouse characters by 1.75x for 1 turn",
         specialName: "Tekkai - Rin",
-        captain: "Boosts ATK of INT characters by 2x, reduces damage received from PSY enemies by 30%"
+        captain: "Boosts ATK of INT characters by 2x, reduces damage received from PSY enemies by 30%",
+        limit: "This character has a limit break path",
     },
     757: {
         special: "Changes [DEX] and [QCK] orbs into [PSY] orbs",
@@ -3685,7 +3695,8 @@ window.details = {
     760: {
         special: "Switches orbs between slots 3 times, locks all orbs for 1 turn",
         specialName: "Life Return: Shishi Finger Pistol",
-        captain: "Boosts ATK of STR characters by 3x if HP is below 30% at the start of the turn"
+        captain: "Boosts ATK of STR characters by 3x if HP is below 30% at the start of the turn",
+        limit: "This character has a limit break path",
     },
     761: {
         special: "Deals 15x character's ATK in DEX damage to one enemy, boosts ATK of all characters by 1.2x for 1 turn",
@@ -3800,7 +3811,8 @@ window.details = {
         special: "Boosts own ATK by a variable factor for 1 turn",
         specialNotes: "The exact multiplier used is chosen based on the crew's current HP at the time the special is activated: above 50% HP, the multiplier used is 1.5x; between 20% HP and 50% HP, it's 1.75x; below 20% HP, it's 2x.",
         specialName: "Precept Deification",
-        captain: "Boosts ATK of all characters by 2.5x if HP is below 30% at the start of the turn"
+        captain: "Boosts ATK of all characters by 2.5x if HP is below 30% at the start of the turn",
+        limit: "This character has a limit break path",
     },
     782: {
         special: "Delays all enemies for 1 turn, recovers a small random amount of HP",
@@ -4724,7 +4736,8 @@ window.details = {
                 "cooldown": [ 31, 17 ]
             }
         ],
-        specialNotes: "#{stages}"
+        specialNotes: "#{stages}",
+        limit: "This character has a limit break path",
     },
     934: {
         captain: "Boosts ATK of Fighter characters by 2x, and their HP by 1.5x. If HP is above 70% or below 30%, boosts ATK of Fighter characters by 2.75 instead",
@@ -5186,7 +5199,8 @@ window.details = {
             }
         ],
         specialName: "Decapitation High Heel",
-        specialNotes: "#{stages}"
+        specialNotes: "#{stages}",
+        limit: "This character has a limit break path",
     },
     998: {
         captain: "Boosts ATK of Driven characters by 2x and reduces cooldown of all specials by 1 turn at the start of the fight",
@@ -5824,7 +5838,8 @@ window.details = {
     1081: {
         captain: "Boosts ATK of characters with cost 30 or less by 2.5x",
         special: "Deals [DEX] damage to one enemy, changes own orb to [DEX] and boosts own ATK by 2x for 1 turn",
-        specialName: "Trueno Bastardo"
+        specialName: "Trueno Bastardo",
+        limit: "This character has a limit break path",
     },
     1082: {
         captain: "Boosts ATK of Striker and Fighter characters by 1.2x",
@@ -7181,6 +7196,7 @@ window.details = {
         ],
         specialNotes: "#{stages}",
         specialName: "Burning Vanguard",
+        limit: "This character has a limit break path",
     },
     1252: {// Coliseum Doma
         captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of [INT] characters by 2x",
@@ -8734,6 +8750,7 @@ window.details = {
         ],
         specialNotes: "#{ignoreBarrier}<br>#{stages}",
         specialName: "Water Bullets",
+        limit: "This character has a limit break path",
     },
     1435: {//Hyouzou
         captain: "Boosts ATK of Slasher characters by 2x and HP of Powerhouse characters by 1.2x",
@@ -8748,6 +8765,7 @@ window.details = {
         specialName: "Staggering Slash",
         specialNotes: "Decreases timing window to hit a Perfect. (Animation remains the same)",
         sailor: "Boosts base ATK of all characters by 150 if there are 6 Powerhouse characters in your crew",
+        limit: "This character has a limit break path",
     },
     1437: {//Ikaros Much
         captain: "Boosts ATK of Powerhouse and Striker characters by 1.3x",
@@ -8778,6 +8796,7 @@ window.details = {
         specialName: "Fire Daruma Cutter",
         sailor: "Completely resists Silence on this character",
         sailorNotes: "#{silence}",
+        limit: "This character has a limit break path",
     },
     1441: {//Zeo
         captain: "Boosts ATK of [INT] characters by 1.5x, and reduces damage received by 10%",
@@ -8792,6 +8811,7 @@ window.details = {
         specialNotes: "Increases timing window to hit a Perfect. (Animation remains the same)",
         specialName: "Flail Hidden From God",
         sailor: "Completely resists Blindness if your Captain is a Powerhouse character",
+        limit: "This character has a limit break path",
     },
     1443: {//Dosun
         captain: "Boosts ATK of Powerhouse characters by 2.75x following a chain of Good > Great > Perfect hits",
@@ -8804,6 +8824,7 @@ window.details = {
         special: "Changes [RCV], [TND], [EMPTY], [BLOCK] and [BOMB] orbs into [STR], [QCK], [DEX], [PSY] or [INT] orbs, boosts ATK of Powerhouse characters by 1.5x and amplifies the effect of orbs by 1.5x for 1 turn",
         specialName: "Papara Hammer",
         sailor: "Boost HP of all characters by 150 and also ATK of all characters by 50 if there are 6 Powerhouse characters in your crew",
+        limit: "This character has a limit break path",
     },
     1445: {//Boa Hancock+
         captain: "Boosts ATK of [QCK] and [PSY] characters proportionally to the crew's current HP. If HP is below 50%, Boosts RCV of [QCK] and [PSY] units by 1.5x.",
@@ -8815,6 +8836,7 @@ window.details = {
         captain: "Boosts ATK of Shooter characters by 2x and RCV of Shooter characters by 1.25x.",
         special: "Deals random PSY damage to all enemies and delays enemies by 3 turns.",
         specialName: "Green Star: Platanus Shuriken",
+        limit: "This character has a limit break path",
     },
     1447: {//Sanji 5+
         captain: "Boosts ATK of Powerhouse characters by 2.5x and reduces damage take by 10%.",
@@ -9704,6 +9726,7 @@ window.details = {
         captain: "Boosts ATK of characters with 40 cost by 2.75x",
         special: "Deals 300,000 Fixed damage to one enemy, boosts ATK of characters with 40 cost by 1.75x, reduces enemy Barrier duration by 1 turn",
         specialName: "Thunder Giant",
+        limit: "This character has a limit break path",
     },
     1554: {//Coliseum Ryuma
         captain: "Boosts ATK of [DEX] characters by 2x",
@@ -10515,7 +10538,8 @@ window.details = {
     1663: {//6+ Rob Lucci
         special: "Deals 75x character's ATK in typeless damage to one enemy, greatly boosts chances of getting matching orbs for 3 turns",
         specialName: "Six Powers Supreme: Six King Gun",
-        captain: "Boosts ATK of Powerhouse characters by 3.5x if they have a matching orb, by 2.5x otherwise, reduces crew's RCV to 0"
+        captain: "Boosts ATK of Powerhouse characters by 3.5x if they have a matching orb, by 2.5x otherwise, reduces crew's RCV to 0",
+        limit: "This character has a limit break path",
     },
     1664: {//STR Aokiji
         captain: "Boosts ATK of Shooter characters by 2.5x",
@@ -12739,6 +12763,7 @@ window.details = {
         ],
         specialNotes:"#{stages}",
         specialName: "More More: Hundredfold Artillery Cannon",
+        limit: "This character has a limit break path",
     },
     1825: {//Akainu
         captain: "Boosts ATK by 2.5x following a chain of [INT] > [INT] > [INT] attacks no lower than Good",
@@ -12923,8 +12948,9 @@ window.details = {
         special: "Reduces the defense of all enemies by 100% for 1 turn. If the targeted enemy has less than 25% HP, instantly defeats them, otherwise, cuts the current HP of one enemy by 30%",
         specialName: "Garp Special",
     },
-    1847: {//Goku+
+    1847: {//Sengoku+
         captain: "Reduce CD by 2 at the start of the adventure, boost ATK of characters that are 29 cost or lower by 3.25x, and their HP by 1.2x, boost ATK of characters with cost 54 by 3x",
+        captainNotes: "His captain ability also affects his evolved forms, his base form will NOT receive the boost. All evolved and plus evolved Sengoku characters in the team are included in the bonus.",
         special: "Deals random large INT Damage to all enemies, boost ATK of all characters by 1.5x for 1 turn, changes orbs to matching orbs for chatacters that are 29 cost or lower",
         specialName: "Requiem Shockwave",
     },
