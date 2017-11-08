@@ -12982,6 +12982,17 @@ window.details = {
         sailor: "Makes [PSY] and [INT] orbs \"beneficial\" for this unit",
         sailorNotes: "#{beneficial}",
     },
+    1852: {//Whitebeard
+        captain: "Not Translated",
+        special: "Changes own orb into [INT], deals 100x character's ATK in typeless damage to all enemies that will ignore damage negating abilities and barriers. If enemies have All Debuff Protection or Delay Debuff Protection at the time the special was activated, amplifies the effect of orbs by 2x for 1 turn. If enemies have a barrier at the time the special was activated, boosts own ATK by 2.25x",
+        specialName: "Whitebeard Special",
+    },
+    1853: {//Whitebeard
+        captain: "Boosts ATK of all characters proportionally to the crew's current HP and their HP by 1.2x",
+        captainNotes: "#{captainProportional : lower : 1 + 1.25 * (1 - (remaining HP) / (total HP)) : 1 : 2.25}",
+        special: "Changes own orb into [INT], deals 100x character's ATK in typeless damage to all enemies that will ignore damage negating abilities and barriers. If enemies have All Debuff Protection or Delay Debuff Protection at the time the special was activated, amplifies the effect of orbs by 2x for 1 turn. If enemies have a barrier at the time the special was activated, boosts own ATK by 2.25x",
+        specialName: "Whitebeard Special",
+    },
     2000: {//Rayleigh
         captain: "Boosts ATK of Slasher and Cerebral characters by 2x",
         special: "Randomizes all non-matching orbs, boosts ATK of all characters by 1.75x for 1 turn",

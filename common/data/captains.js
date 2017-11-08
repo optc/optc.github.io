@@ -5860,6 +5860,12 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Driven") ? 2.25 : 1; },
         hp: function(p) { return p.unit.class.has("Driven") ? 1.3 : 1; },
     },
+    1853: {
+        atk: function(p) {
+            return (1 + 1.25 * ((100 - p.percHP) / 100));
+        },
+        hp: function(p) { return 1.2; },
+    },
     2000: {
         atk: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Slasher") ? 2 : 1; },
     },
