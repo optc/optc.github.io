@@ -11348,13 +11348,13 @@ window.details = {
     },
     1732: {//Nekomamushi
         captain: "Boosts ATK of [STR] characters by 2x, boosts HP of Striker and Powerhouse characters by 1.1x",
-        special: "Deals 50x character's ATK in typeless damage to one enemy that will ignore damage negating abilities and barriers. If enemies have debuff protection at the time the special was activated, boosts ATK of Striker and Powerhouse characters by 1.75x for 1 turn and changes all orbs, including [BLOCK] orbs, into Matching orbs",
+        special: "Deals 50x character's ATK in typeless damage to one enemy that will ignore damage negating abilities and barriers. If enemies have All Debuff Protection or Delay Debuff Protection at the time the special was activated, boosts ATK of Striker and Powerhouse characters by 1.75x for 1 turn and changes all orbs, including [BLOCK] orbs, into Matching orbs",
         specialNotes: "#{ignoreBarrier}",
         specialName: "Battle Guardian",
     },
     1733: {//Nekomamushi
         captain: "Boosts ATK of [STR] characters by 2.5x, boosts HP of Striker and Powerhouse characters by 1.25x",
-        special: "Deals 50x character's ATK in typeless damage to one enemy that will ignore damage negating abilities and barriers. If enemies have debuff protection at the time the special was activated, boosts ATK of Striker and Powerhouse characters by 1.75x for 1 turn and changes all orbs, including [BLOCK] orbs, into Matching orbs",
+        special: "Deals 50x character's ATK in typeless damage to one enemy that will ignore damage negating abilities and barriers. If enemies have All Debuff Protection or Delay Debuff Protection at the time the special was activated, boosts ATK of Striker and Powerhouse characters by 1.75x for 1 turn and changes all orbs, including [BLOCK] orbs, into Matching orbs",
         specialNotes: "#{ignoreBarrier}",
         specialName: "Battle Guardian",
     },
