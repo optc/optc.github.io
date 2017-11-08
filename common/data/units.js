@@ -1842,7 +1842,7 @@ window.units = [
     [ "Caribou", "DEX", [ "Driven", "Striker" ], 3, 13, 4, 2, 50, 392109, 296, 392, 0, 740, 980, 0, 1 ],
     [ "Caribou, Evolved", "DEX", [ "Driven", "Shooter" ], 4, 20, 6, 3, 99, 3000000, 723, 921, -300, 1598, 1402, -300, 1 ],
     [ "Coribou", "STR", [ "Driven", "Striker" ], 3, 13, 6, 2, 50, 392109, 130, 102, 26, 534, 489, 198, 1 ],
-    [ "Coribou, Evolved", "STR", [ "Driven", "Striker" ], 4, 20, 4, 3, 99, 3000000, 520, 430, 178, null, null, null, 1 ],
+    [ "Coribou, Evolved", "STR", [ "Driven", "Striker" ], 4, 20, 4, 3, 99, 3000000, 520, 430, 178, 1806, 879, 356, 1 ],
     [ "Garp, Hero of the Marines", "STR", [ "Fighter", "Free Spirit" ], 4, 30, 4, 2, 70, 1778330, 1015, 494, 0, 1852, 688, 5, 1 ],
     [ "Garp the Fist, Hero of the Marines", "STR", [ "Fighter", "Free Spirit" ], 5, 50, 4, 3, 99, 5000000, 1773, 611, 3, 3750, 1550, 10, 1 ],
     [ "Sengoku the Buddha, Marine Fleet Admiral", "INT", [ "Fighter", "Cerebral" ], "6+", 54, 4, 5, 99, 5000000, 1998, 729, 194, 3696, 1458, 398, 1 ],
@@ -1998,8 +1998,8 @@ window.units = [
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Silvers Rayleigh, First Mate of the Roger Pirates", "STR", [ "Slasher", "Cerebral" ], 4, 30, 6, 1, 70, 1066998, 224, 151, 40, 1258, 714, 194, null ],
-    [ "Dark King Rayleigh, First Mate of the Roger Pirates", "STR", [ "Slasher", "Cerebral" ], 5, 50, 5, 3, 99, 5000000, 1190, 650, 143, 2510, 1315, 353, null ],
+    [ "Silvers Rayleigh, First Mate of the Roger Pirates", "STR", [ "Slasher", "Cerebral" ], 4, 30, 6, 1, 70, 1066998, 224, 151, 40, 1258, 714, 194, 1 ],
+    [ "Dark King Rayleigh, First Mate of the Roger Pirates", "STR", [ "Slasher", "Cerebral" ], 5, 50, 5, 3, 99, 5000000, 1190, 650, 143, 2510, 1315, 353, 1 ],
     ];
     
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
