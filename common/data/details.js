@@ -12993,6 +12993,15 @@ window.details = {
         special: "Changes own orb into [INT], deals 100x character's ATK in typeless damage to all enemies that will ignore damage negating abilities and barriers. If enemies have All Debuff Protection or Delay Debuff Protection at the time the special was activated, amplifies the effect of orbs by 2x for 1 turn. If enemies have a barrier at the time the special was activated, boosts own ATK by 2.25x",
         specialName: "Whitebeard Special",
     },
+    1857: {//Apoo FN
+        captain: "Boosts ATK of Free Spirit characters by 2x at the start of the chain, by 2.5x after the 3rd Perfect in a row and by 3x after the 5th Perfect in a row",
+        special: "For 1 turn boost orbs and ATK by 1.5x for Free Spirit Characters",
+    },
+    1859: {//Limited RR Leo
+        captain: "Boosts ATK of Striker Characters by 2.5x, HP 1.2x, boost ATK by an additional 1.3x after hitting 3 consecutive PERFECT (effectively becoming 3.25x)",
+        special: "Reduce 3 turns of paralysis, randomize non-matching orbs (including BLOCK orbs), adds 65x character's ATK as additional typeless damage on top of the tap timing bonus for 1 turns, when the captain is a Striker Character reduces enemies Percent Damage Reduction (damage threshold cut excluded) duration by 3 turns",
+        sailor: "If he has a INT orb and you hit a Perfect with him, keep his INT orb for the next turn",
+    },
     2000: {//Rayleigh
         captain: "Boosts ATK of Slasher and Cerebral characters by 2x",
         special: "Randomizes all non-matching orbs, boosts ATK of all characters by 1.75x for 1 turn",
