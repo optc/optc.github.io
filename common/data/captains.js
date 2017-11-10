@@ -5866,6 +5866,14 @@ window.captains = {
         },
         hp: function(p) { return 1.2; },
     },
+    1859: {
+        hitAtk: function(p) {
+            if (!(p.unit.class.has("Striker"))) return 1;
+            return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? 3.25 : 2.5;
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
+        hp: function(p) { return p.unit.class.has("Striker") ? 1.2 : 1; }
+    },
     2000: {
         atk: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Slasher") ? 2 : 1; },
     },
