@@ -3806,6 +3806,9 @@ window.specials = {
     1851: {
         chainAddition: function(p) { return 0.5; }
     },
+    1859: {
+        staticMult: function(p) { return 65; }
+    },
     2000: {
         atk: function(p) { return 1.75; },
         type: "class"
