@@ -3806,6 +3806,25 @@ window.specials = {
     1851: {
         chainAddition: function(p) { return 0.5; }
     },
+    1854: {
+        atk: function(p) { return p.unit.class.has("Free Spirit") ? 1.5 : 1; },
+        type: "class",
+        orb: function(p) { return p.unit.class.has("Free Spirit") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain]) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain]); }	
+    },
+    1855: {
+        atk: function(p) { return p.unit.class.has("Free Spirit") ? 1.5 : 1; },
+        type: "class",
+        orb: function(p) { return p.unit.class.has("Free Spirit") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain]) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain]); }	
+    },
+    1856: {
+        affinity: function(p){ return p.unit.class.has("Powerhouse") ? 1.25 : 1; }
+    },
+    1857: {
+        affinity: function(p){ return p.unit.class.has("Powerhouse") ? 1.25 : 1; }
+    },
+    1858: {
+        staticMult: function(p) { return 65; }
+    },
     1859: {
         staticMult: function(p) { return 65; }
     },

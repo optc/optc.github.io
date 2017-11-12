@@ -192,7 +192,7 @@ app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, 
         $('#compare').prop('disabled', false);
     };
     $scope.getPrevious = function() { return $stateParams.previous.concat($scope.id); };
-    $scope.isCaptainHybrid = ($scope.details && $scope.details.captain && $scope.details.captain.global);
+    $scope.isCaptainHybrid = ($scope.details && $scope.details.captain && ($scope.details.captain.global || $scope.details.captain.base));
     $scope.isSailorHybrid = ($scope.details && $scope.details.sailor && $scope.details.sailor.global);
     $scope.isSpecialHybrid = ($scope.details && $scope.details.special && $scope.details.special.global);
     $scope.isSpecialStaged = ($scope.details && $scope.details.special && $scope.details.special.constructor == Array);

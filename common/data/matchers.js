@@ -553,7 +553,7 @@ window.matchers = [
     {
         name: 'Paralysis reducers',
         target: 'sailor',
-        matcher: /(reduces|removes).+Paralysis/i 
+        matcher: /(reduces|removes|resists).+Paralysis/i 
     },
 
     {
@@ -616,6 +616,12 @@ window.matchers = [
         name: 'Pinch Healing Potential Ability',
         target: 'limit',
         matcher: /Pinch Healing/i
+    },
+    
+    {
+        name: 'Damage Reduction Potential Ability',
+        target: 'limit',
+        matcher: /Damage Reduction/i
     },
 
 ];

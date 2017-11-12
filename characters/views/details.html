@@ -149,10 +149,24 @@
                                         <div ng-if="!isCaptainHybrid" ng-bind-html="details.captain | decorate"></div>
                                         <!-- different captain abilities -->
                                         <div ng-if="isCaptainHybrid">
-                                            <span class="badge badge-japan">Japan</span>
-                                            <div ng-bind-html="details.captain.japan | decorate"></div>
-                                            <span class="badge badge-global">Global</span>
-                                            <div ng-bind-html="details.captain.global | decorate"></div>
+                                            <span class="badge badge-japan" ng-show="details.captain.japan">Japan</span>
+                                            <div  ng-show="details.captain.japan" ng-bind-html="details.limit.japan | decorate"></div>
+                                            <span class="badge badge-global" ng-show="details.captain.global">Global</span>
+                                            <div  ng-show="details.captain.global" ng-bind-html="details.limit.global | decorate"></div>
+                                            <span class="badge badge-base" ng-show="details.captain.base">Base Captain Ability</span>
+                                            <div ng-show="details.captain.base" ng-bind-html="details.captain.base | decorate"></div>
+                                            <span class="badge badge-level1" ng-show="details.captain.level1">Limit Break Level 1 Captain Ability</span>
+                                            <div ng-show="details.captain.level1" ng-bind-html="details.captain.level1 | decorate"></div>
+                                            <span class="badge badge-level2" ng-show="details.captain.level2">Limit Break Level 2 Captain Ability</span>
+                                            <div ng-show="details.captain.level2" ng-bind-html="details.captain.level2 | decorate"></div>
+                                            <span class="badge badge-level3" ng-show="details.captain.level3">Limit Break Level 3 Captain Ability</span>
+                                            <div ng-show="details.captain.level3" ng-bind-html="details.captain.level3 | decorate"></div>
+                                            <span class="badge badge-level4" ng-show="details.captain.level4">Limit Break Level 4 Captain Ability</span>
+                                            <div ng-show="details.captain.level4" ng-bind-html="details.captain.level4 | decorate"></div>
+                                            <span class="badge badge-level5" ng-show="details.captain.level5">Limit Break Level 5 Captain Ability</span>
+                                            <div ng-show="details.captain.level5" ng-bind-html="details.captain.level5 | decorate"></div>
+                                            <span class="badge badge-level6" ng-show="details.captain.level6">Limit Break Level 6 Captain Ability</span>
+                                            <div ng-show="details.captain.level6" ng-bind-html="details.captain.level6 | decorate"></div>
                                         </div>
                                         <span class="notes" ng-if="details.captainNotes" ng-bind-html="details.captainNotes | notes | decorate"></span>
                                     </td>

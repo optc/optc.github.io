@@ -462,16 +462,16 @@ directives.addLinks = function($stateParams) {
             var incomplete = units[id - 1].incomplete;
             var ul = $('<ul></ul>');
             if (!incomplete && window.flags[id] && window.flags[id].global) {
-                var link = 'http://onepiece-treasurecruise.com/en/' + (id == '5' ? 'roronoa-zoro' : 'c-' + id);
+                var link = 'http://onepiece-treasurecruise.com/en/' + (id == '5' ? 'roronoa-zoro' : id == 1254 ? 'maelstrom-spider-squard-whitebeard-pirates-family' : 'c-' + id);
                 ul.append($('<li><a href="' + link + '" target="_blank">Official Guide (English)</a></li>'));
             }
             if (!incomplete) {
                 if (id == 1478){
-                    ul.append($('<li><a href="http://onepiece-treasurecruise.com/blog/カリブー-カリブー海賊団船長/" target="_blank">' +
+                    ul.append($('<li><a href="http://onepiece-treasurecruise.com/カリブー-カリブー海賊団船長/" target="_blank">' +
                         'Official Guide (Japanese)</a></li>'));
                 }
                 else{
-                    ul.append($('<li><a href="http://onepiece-treasurecruise.com/blog/c-' + id + '" target="_blank">' +
+                    ul.append($('<li><a href="http://onepiece-treasurecruise.com/c-' + id + '" target="_blank">' +
                         'Official Guide (Japanese)</a></li>'));
                 }
             }

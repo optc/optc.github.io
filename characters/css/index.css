@@ -152,12 +152,37 @@ input[type="text"] {
     margin-right: 5px;
 }
 
-.badge-japan + div, .badge-global + div {
+.badge-base {
+    float: left;
+    position: relative;
+    top: 2px;
+    width: 125px;
+    text-align: center;
+    margin-right: 5px;
+}
+
+.badge-level1, .badge-level2, .badge-level3, .badge-level4, .badge-level5, .badge-level6 {
+    float: left;
+    position: relative;
+    top: 2px;
+    width: 200px;
+    text-align: center;
+    margin-right: 5px;
+}
+
+.badge-japan + div, .badge-global + div, .badge-base + div, .badge-level1 + div, .badge-level2 + div, .badge-level3 + div, .badge-level4 + div, .badge-level5 + div, .badge-level6 + div {
     margin-bottom: 2px;
 }
 
 .badge-japan { background: mediumvioletred; }
 .badge-global { background: rebeccapurple; }
+.badge-base { background: darkred; }
+.badge-level1 { background: crimson; }
+.badge-level2 { background: crimson; }
+.badge-level3 { background: crimson; }
+.badge-level4 { background: crimson; }
+.badge-level5 { background: crimson; }
+.badge-level6 { background: crimson; }
 
 .stars:before, .stars:after {
     font-weight: bold;
