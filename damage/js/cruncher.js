@@ -371,7 +371,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             --mapEffect.shieldLeft;
         }
         // apply hit bonus
-        if (bonusDamageBase > 0 && mapEffect.shieldLeft == 0 && mapEffect.comboType) {
+        if (bonusDamageBase > 0 && mapEffect.shieldLeft == 0) {
             if (lastHit > 1) result.result += Math.ceil(lastAtk * 0.9 * bonusDamageBase);
             else result.result += Math.max(0,Math.ceil(lastAtk * (0.9 * bonusDamageBase + 1 / unit.combo)) - currentDefense);
         }
