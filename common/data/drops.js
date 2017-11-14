@@ -1703,6 +1703,13 @@ window.drops = {
             'All Difficulties': [ 1841, 1843, -1268, -639, -645, -1234, -1270, -1700, -1704, -1501, -1502 ]
         },
         
+        {
+            name: 'Supernova! Worst Generation!',
+            thumb: 1855,
+            gamewith: null,
+            'All Difficulties': [ 1854, 1856, -1652, -1272, -1278, -1620, -1702, -1558 ]
+        },
+        
     ],
 
             
