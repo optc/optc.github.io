@@ -1854,7 +1854,7 @@ window.units = [
     [ "Adventure Mode Whitebeard, Evolved", "INT", [ "Powerhouse", "Striker" ], 5, 60, 4, 1, 99, 5000000, 920, 320, 69, 3064, 1390, 203, null ],
     [ "Scracthmen Apoo, Supernova", "STR", [ "Free Spirit", "Shooter" ], 3, 13, 3, 6, 50, 130703, 141, 69, 27, 1134, 622, 109, null ],
     [ "'Roar of the Sea' Scracthmen Apoo, Supernova", "STR", [ "Free Spirit", "Slasher" ], 4, 20, 4, 4, 99, null, null, null, null, 2136, 1211, 221, null ],
-    [ "X Drake, Supernova", "PSY", [ "Powerhouse", "Cerebral" ], 3, 13, 3, 6, 50, 130703, 199, 112, 10, null, null, null, null ],
+    [ "X Drake, Supernova", "PSY", [ "Powerhouse", "Cerebral" ], 3, 13, 3, 6, 50, 130703, 199, 112, 10, 1674, 611, 50, null ],
     [ "'Red Flag' X Drake, Supernova", "PSY", [ "Powerhouse", "Cerebral" ], 4, 20, 5, 4, 99, null, 1472, 567, 30, 2978, 1267, 50, null ],
     [ "Leo", "INT", [ "Striker", "Powerhouse" ], 4, 20, null, null, 70, 1066998, null, null, null, null, null, null, null ],
     [ "Warrior Leo, Courageous Dwarf", "INT", [ "Striker", "Powerhouse" ], 5, 30, 4, 5, 99, 4000000, 1, 1, 1, 2233, 1422, 354, null ],
