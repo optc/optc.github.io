@@ -455,11 +455,11 @@ window.zombies = {
         type: 'healer',
         multiplier: 3
     },
-    1748: { // Boa
+    1746: { // Boa
         type: 'healer',
         amount: 1000
     },
-    1749: { // Boa
+    1747: { // Boa
         type: 'healer',
         amount: 1000
     },
