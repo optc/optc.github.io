@@ -526,7 +526,7 @@ window.effects = {
     'Coloseum Kinemon Neo': {
         description: 'Certain units boosted',
         thumb: 1863,
-        id: 68, // don't change this
+        id: 48, // don't change this
         atk: function(p) {
             var id = p.number + 1,
                 matching = ((id > 1858 && id < 1859) ||
@@ -550,7 +550,7 @@ window.effects = {
     'Kizaru Neo [GLOBAL] - Free Spirit': {
         description: 'Chain multiplier reduced.',
         thumb: 1780,
-        id: 69,
+        id: 49,
         //orb: function(p) { return p.orb === 2.0 ? 1.2 : (p.orb === 0.5 ? 5/6 : 1); },
         atk: function(p) {
             var id = p.number + 1,
@@ -564,7 +564,7 @@ window.effects = {
     'Kizaru Neo [GLOBAL] - Striker': {
         description: 'Chain multiplier halved.',
         thumb: 1780,
-        id: 70,
+        id: 50,
         //orb: function(p) { return p.orb === 2.0 ? 1.2 : (p.orb === 0.5 ? 5/6 : 1); },
         atk: function(p) {
             var id = p.number + 1,
@@ -578,7 +578,7 @@ window.effects = {
     'Kizaru Neo [GLOBAL] - Powerhouse': {
         description: 'Chain multiplier locked at 1.1x.',
         thumb: 1780,
-        id: 71,
+        id: 51,
         //orb: function(p) { return p.orb === 2.0 ? 1.2 : (p.orb === 0.5 ? 5/6 : 1); },
         atk: function(p) {
             var id = p.number + 1,
@@ -586,7 +586,7 @@ window.effects = {
                     [ 1441, 1442, 1701, 1702, 1659, 1660, 1631, 1632, 1699, 1700, 1748, 1749 ].indexOf(id) !== -1);
             return !matching ? 1 : 1.75;
         },
-        chainLimiter: function() { return 2.0; } //Chain locked at 2x
+        chainLimiter: function() { return 1.1; } //Chain locked at 1.1x
     }
     
 };
