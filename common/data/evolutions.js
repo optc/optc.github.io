@@ -2891,6 +2891,14 @@ window.evolutions = {
         evolution: 1847,
         evolvers: [ 'skullINT', 118, 88, 304, 267 ],
     },
+    1848: {
+        evolution: 1849,
+        evolvers: [ 117, 78, 89, 95, 100 ],
+    },
+    1850: {
+        evolution: 1851,
+        evolvers: [ 117, 80, 91, 97, 102 ],
+    },
     1852: {
         evolution: 1853,
         evolvers: [ 115, 116, 117, 118, 104 ],
@@ -2902,6 +2910,18 @@ window.evolutions = {
     1856: {
         evolution: 1857,
         evolvers: [ 81, 87, 92, 98, 103 ],
+    },
+    1858: {
+        evolution: 1859,
+        evolvers: [  ],
+    },
+    1860: {
+        evolution: 1861,
+        evolvers: [  ],
+    },
+    1862: {
+        evolution: 1863,
+        evolvers: [  ],
     },
     2000: {
         evolution: 2001,

@@ -13853,28 +13853,53 @@ window.details = {
         special: "Reduce 3 turns of paralysis, randomize non-matching orbs, including [BLOCK] orbs, Adds 65x character's ATK as Additional Typeless Damage for 1 turn, when the captain is a Striker Character reduces enemies Percent Damage Reduction duration by 3 turns",
         sailor: "If Leo has an [INT] orb and you hit a Perfect with him, keep his [INT] orb for the next turn",
     },
-    1861: {//Coloseum Raizo
-        captain: "Reduce CD by 2 at the start of the adventure, Shooter Type Characters ATK 2.5x",
+    1860: {//Coloseum Raizo
+        captain: "Not Translated",
         special: [
             {
-                "description": "3x Character ATK in QCK damage to all enemies, change RCV and TND orbs of Shooter Type Characters to matching orbs",
+                "description": "Deals 3x character's ATK in QCK damage to all enemies, changes [TND] and [RCV] orbs on Shooter characters into Matching Orbs,",
                 "cooldown": [ 19, 4 ]
             },
             {
-                "description": "7x Character ATK in QCK damage to all enemies, change RCV and TND orbs of Shooter Type Characters to matching orbs, if the captain is a Shooter Type Character boost ATK against delayed enemies by 1.35x for 1 turn",
+                "description": "Deals 7x character's ATK in QCK damage to all enemies, changes [TND] and [RCV] orbs on Shooter characters into Matching Orbs. If your captain is a Shooter Character, boosts ATK against delayed enemies by 1.35x for 1 turn",
                 "cooldown": [ 24, 9 ]
             },
             {
-                "description": "11x Character ATK in QCK damage to all enemies, change RCV and TND orbs of Shooter Type Characters to matching orbs, if the captain is a Shooter Type Character boost ATK against delayed enemies by 1.75x for 1 turn",
+                "description": "Deals 11x character's ATK in QCK damage to all enemies, changes [TND] and [RCV] orbs on Shooter characters into Matching Orbs. If your captain is a Shooter Character, boosts ATK against delayed enemies by 1.75x for 1 turn",
                 "cooldown": [ 30, 15 ]
             }
         ],
-        specialNotes: "#{stages}"
+        specialNotes: "#{stages}",
+        specialName: "Raizo Special",
+    },
+    1861: {//Coloseum Raizo
+        captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of Shooter characters by 2.5x",
+        special: [
+            {
+                "description": "Deals 3x character's ATK in QCK damage to all enemies, changes [TND] and [RCV] orbs on Shooter characters into Matching Orbs,",
+                "cooldown": [ 19, 4 ]
+            },
+            {
+                "description": "Deals 7x character's ATK in QCK damage to all enemies, changes [TND] and [RCV] orbs on Shooter characters into Matching Orbs. If your captain is a Shooter Character, boosts ATK against delayed enemies by 1.35x for 1 turn",
+                "cooldown": [ 24, 9 ]
+            },
+            {
+                "description": "Deals 11x character's ATK in QCK damage to all enemies, changes [TND] and [RCV] orbs on Shooter characters into Matching Orbs. If your captain is a Shooter Character, boosts ATK against delayed enemies by 1.75x for 1 turn",
+                "cooldown": [ 30, 15 ]
+            }
+        ],
+        specialNotes: "#{stages}",
+        specialName: "Raizo Special",
+    },
+    1862: {//Neo Coliseum Kinemon
+        captain: "Boosts ATK of Free Spirit characters by 2x, recovers 1x character's RCV in HP at the end of each turn",
+        special: "Reduces Special Cooldown of Slasher and Free Spirit characters by 1 turn and changes adjacent orbs into Matching Orbs",
+        specialName: "Poof [Neo]",
     },
     1863: {//Neo Coliseum Kinemon
         captain: "Boosts ATK of Free Spirit characters by 2.5x, recovers 2x character's RCV in HP at the end of each turn",
         special: "Reduces Special Cooldown of Slasher and Free Spirit characters by 1 turn and changes adjacent orbs into Matching Orbs",
-        specialName: "Poof [NEO]",
+        specialName: "Poof [Neo]",
     },
     2000: {//Rayleigh
         captain: "Boosts ATK of Slasher and Cerebral characters by 2x",
