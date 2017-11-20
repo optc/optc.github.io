@@ -1858,7 +1858,6 @@ window.units = [
     [ "'Red Flag' X Drake, Supernova", "PSY", [ "Powerhouse", "Cerebral" ], 4, 20, 5, 4, 99, null, 1472, 567, 30, 2978, 1267, 50, null ],
     [ "Leo", "INT", [ "Striker", "Powerhouse" ], 4, 20, null, null, 70, 1066998, null, null, null, null, null, null, null ],
     [ "Warrior Leo, Courageous Dwarf", "INT", [ "Striker", "Powerhouse" ], 5, 30, 4, 5, 99, 4000000, 1, 1, 1, 2233, 1422, 354, null ],
-    [ "Warrior Leo, Courageous Dwarf", "INT", [ "Striker", "Powerhouse" ], 5, 30, 4, 5, 99, 4000000, 1, 1, 1, 2233, 1422, 354, null ],
     [ "Raizo Colo", "QCK", [ "Shooter", "Free Spirit" ], 4, 25, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Raizo Colo Evolved", "QCK", [ "Shooter", "Free Spirit" ], 5, 40, 4, 5, 99, 4000000, 1, 1, 1, 2322, 1519, 372, null ],
     [ "Kinemon Neo Colo", "PSY", [ "Slasher", "Free Spirit" ], 4, 25, null, null, null, null, null, null, null, null, null, null, null ],
