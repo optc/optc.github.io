@@ -1252,7 +1252,7 @@ window.units = [
     [ "Whitebeard Pirates Marco, Revival of Flame", "QCK", [ "Fighter", "Powerhouse" ], 5, 40, 4, 3, 99, 4000000, 1309, 620, 142, 2370, 1236, 335, 1 ],
     [ "'Bohemian Knight' Doma, Subordinates of the Whitebeard Pirates", "INT", "Slasher", 4, 30, 6, 3, 99, 3000000, 201, 102, 21, 2001, 1201, 251, 1 ],
     [ "'Sky Rider' Shura", "DEX", "Striker", 4, 20, 4, 2, 70, 1778330, 254, 240, 48, 1092, 1029, 179, 1 ],
-    [ "Maelstrom Spider Squardo, Subordinates of the Whitebeard Pirates", "QCK", [ "Striker", "Slasher" ], 4, 25, 6, 3, 99, 3000000, 96, 69, -48, 2096, 1246, 96, 1 ],
+    [ "Maelstrom Spider Squard, Subordinates of the Whitebeard Pirates", "QCK", [ "Striker", "Slasher" ], 4, 25, 6, 3, 99, 3000000, 96, 69, -48, 2096, 1246, 96, 1 ],
     [ "Decalvan Brothers, Subordinates of the Whitebeard Pirates", "PSY", "Fighter", 4, 25, 8, 3, 99, 3000000, 122, 52, 22, 2525, 1122, 152, 1 ],
     [ "'Ice Witch' Whitey Bay, Subordinates of the Whitebeard Pirates", "DEX", [ "Slasher", "Driven" ], 4, 25, 6, 3, 99, 3000000, 81, 31, 31, 1931, 913, 301, 1 ],
     [ "Edward Newgate, Rival of the Pirate King", "PSY", [ "Powerhouse", "Striker" ], 4, 30, 4, 2, 70, 1778330, 1116, 587, 51, 1744, 894, 103, 1 ],
