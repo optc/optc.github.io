@@ -5898,6 +5898,12 @@ window.captains = {
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
         hp: function(p) { return p.unit.class.has("Striker") ? 1.2 : 1; }
     },
+    1861: {
+        atk: function(p) { return p.unit.class.has("Shooter") ? 2.5 : 1; },
+    },
+    1863: {
+        atk: function(p) { return p.unit.class.has("Free Spirit") ? 2.5 : 1; },
+    },
     2000: {
         atk: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Slasher") ? 2 : 1; },
     },
