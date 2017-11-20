@@ -3828,6 +3828,10 @@ window.specials = {
     1859: {
         staticMult: function(p) { return 65; }
     },
+    1861: {
+        atk: function(p) { return (p.delayed > 0 && (p.captain.class.has("Shooter"))) ? 1.75 : 1; },
+        type: "condition",
+    },
     2000: {
         atk: function(p) { return 1.75; },
         type: "class"
