@@ -3863,6 +3863,18 @@ window.specials = {
             });
         }
     },
+    1865: {//Urouge FN
+        atk: function(p) { return p.unit.class.has("Striker") ? window.specials[1865].multiplier : 1; },
+        type: "class",
+        onActivation: function(p) {
+            var n = (window.specials[1865].multiplier === 1.5 ? 1 : 0);
+            window.specials[1865].multiplier = [1.5, 1.75][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.5, 1.75][n] + 'x ATK multiplier. To switch to the ' + [1.75, 1.5][n] + 'x multiplier, disable and re-enable this special',
+                name: '1865warning'
+            });
+        }
+    },
     2000: {
         atk: function(p) { return 1.75; },
         type: "class"

@@ -5901,6 +5901,13 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Cerebral") ? 2 : 1; },
         chainModifier: function(p) { return p.unit.class.has("Cerebral") ? 2 : 1; }
     },
+    1865: {
+        atk: function(p) { return p.unit.class.has("Striker") ? 1.75 : 1; },
+    },
+    1867: {
+        atk: function(p) { return p.unit.class.has("Cerebral") ? 2 : 1; },
+        chainModifier: function(p) { return p.unit.class.has("Cerebral") ? 2 : 1; }
+    },
     2000: {
         atk: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Slasher") ? 2 : 1; }
     },

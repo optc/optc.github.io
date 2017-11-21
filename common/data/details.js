@@ -13987,6 +13987,17 @@ window.details = {
         special: "Cut HP of all enemies by 10%, for 3 turns cut HP of all enemies by 10%, reduce incoming damage by 40%",
         specialName: "Fortune-Telling from the Shadow of Death"
     },
+    1865: {//Urouge FN
+        captain: "Striker Characters ATK 1.75x, protects from defeat as long as HP is above a certain percent",
+        captainNotes: "PERFECT hits don't count, it has to GREAT hits",
+        special: "Recover 5000 HP, for 1 turn boost ATK by 1.5x for Striker Characters, if you hit 4 or more GREAT this turn boost ATK by 1.75x for Striker Characters the next turn",
+        specialName: "Culling the Criminals from this Earthly World"
+    },
+    1867: {//Hawkins FN
+        captain: "Cerebral Characters ATK 2x, boost chain multiplier by 1.5x",
+        special: "Cut HP of all enemies by 10%, for 3 turns cut HP of all enemies by 10%, reduce incoming damage by 40%",
+        specialName: "Fortune-Telling from the Shadow of Death"
+    },
     2000: {//Rayleigh
         captain: "Boosts ATK of Slasher and Cerebral characters by 2x",
         special: "Randomizes all non-matching orbs, boosts ATK of all characters by 1.75x for 1 turn",
