@@ -13833,6 +13833,7 @@ window.details = {
         captainNotes: "#{captainProportional : lower : 1 + 1.25 (1.35, 1.45, 1.55, 1.65, 1.75, & 2.25 respectively) * (1 - (remaining HP) / (total HP)) : 1 : 2.25(2.35, 2.45, 2.55, 2.65, 2.75, & 3.25 respectively)}",
         special: "Changes own orb into [INT], deals 100x character's ATK in typeless damage to all enemies that will ignore damage negating abilities and barriers. If enemies have All Debuff Protection or Delay Debuff Protection at the time the special was activated, amplifies the effect of orbs by 2x for 1 turn. If enemies have a barrier at the time the special was activated, boosts own ATK by 2.25x",
         specialName: "Whitebeard Special",
+        sailor: "Limit Broken: +100HP +50ATK to all characters",
         limit: [
             { "description": "Aquire 1 additional Socket slot" },
             { "description": "Boosts base ATK by 10" },
@@ -13987,16 +13988,34 @@ window.details = {
         special: "Cut HP of all enemies by 10%, for 3 turns cut HP of all enemies by 10%, reduce incoming damage by 40%",
         specialName: "Fortune-Telling from the Shadow of Death"
     },
-    1865: {//Urouge FN
-        captain: "Striker Characters ATK 1.75x, protects from defeat as long as HP is above a certain percent",
-        captainNotes: "PERFECT hits don't count, it has to GREAT hits",
-        special: "Recover 5000 HP, for 1 turn boost ATK by 1.5x for Striker Characters, if you hit 4 or more GREAT this turn boost ATK by 1.75x for Striker Characters the next turn",
-        specialName: "Culling the Criminals from this Earthly World"
+    1869: {//Fujitora V2
+        captain: "Increases damage taken slightly, boosts slashers attack by 3.25x and hp by 1.2x, boosts slashers attack by a further 1.3x following a chain of good, great, perfect. Total boost: 4.225x",
+        special: "Deal 20x characters damage in typeless damage to random enemies 10 times, if this character is your captain, change all orbs to matching, delay all enemies by one turn",
+        limit: "This character has a limit break path"
     },
-    1867: {//Hawkins FN
-        captain: "Cerebral Characters ATK 2x, boost chain multiplier by 1.5x",
-        special: "Cut HP of all enemies by 10%, for 3 turns cut HP of all enemies by 10%, reduce incoming damage by 40%",
-        specialName: "Fortune-Telling from the Shadow of Death"
+    1871: {//Bellamy RR
+        captain: "2.25x driven ATK",
+        sailor: "1.1x damage to INT enemies",
+        special: "Remove 50% hp of team, deal 10x the amount removed to one enemy in typeless damage, remove three turns of threshold/attack up/defence up on one enemy, changes own slot to psy",
+        limit: "This character has a limit break path"
+    },
+    1873: {//Kyros RR
+        captain: "2.25x striker/slasher attack damage",
+        sailor: "2x attack addition on tap",
+        special: "30x attack damage in str damage to one enemy, recover two turns of despair/chain, boosts slashers attack by 1.75x for 3 turns",
+        limit: "This character has a limit break path"
+    },
+    1875: {//Violet RR
+        captain: "2.5x Belis",
+        sailor: "Avoid special seal",
+        special: "Change meat/block/empty/tandem to matching orbs, removes two turns of paralyze/special seal, adds 0.5x to chain multiplier for one turn",
+        limit: "This character has a limit break path"
+    },
+    1877: {//Rebecca RR
+        captain: "2x slashers attack and 10% damage reduction",
+        sailor: "Treat str orbs as matching",
+        special: "50000 fixed damage to one enemy, recover 5 turns of chain lock/cap, change neighbouring orbs to matching",
+        limit: "This character has a limit break path"
     },
     2000: {//Rayleigh
         captain: "Boosts ATK of Slasher and Cerebral characters by 2x",
