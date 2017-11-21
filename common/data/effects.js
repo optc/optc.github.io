@@ -545,6 +545,7 @@ window.effects = {
                     [ 1720, 1621, 1631, 1632, 1777, 1778, 1833, 1834, 871, 872, 1695, 1696, 1791, 1792, 1431, 1432 ].indexOf(id) !== -1);
             return !matching ? 1 : 1.75;
         }
+    },
     
     'Kizaru Neo [GLOBAL] - Free Spirit': {
         description: 'Chain multiplier reduced.',
