@@ -5901,12 +5901,22 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Cerebral") ? 2 : 1; },
         chainModifier: function(p) { return p.unit.class.has("Cerebral") ? 2 : 1; }
     },
-    1865: {
-        atk: function(p) { return p.unit.class.has("Striker") ? 1.75 : 1; },
+    1869: {
+        hitAtk: function(p) {
+            if (!(p.unit.class.has("Slasher"))) return 1;
+            return p.modifiers.slice(0, p.chainPosition).subcontains(["Good", "Great", "Perfect"]) ? 4.225 : 3.25;
+        },
+        hitModifiers: ["Good", "Great", "Perfect", "Perfect", "Perfect", "Perfect"],
+        hp: function(p) { return p.unit.class.has("Slasher") ? 1.2 : 1; }
     },
-    1867: {
-        atk: function(p) { return p.unit.class.has("Cerebral") ? 2 : 1; },
-        chainModifier: function(p) { return p.unit.class.has("Cerebral") ? 2 : 1; }
+    1871: {
+        atk: function(p) { return p.unit.class.has("Driven") ? 2.25 : 1; }
+    },
+    1873: {
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Slasher") ? 2.25 : 1; }
+    },
+    1877: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? 2 : 1; }
     },
     2000: {
         atk: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Slasher") ? 2 : 1; }
