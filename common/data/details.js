@@ -13820,12 +13820,83 @@ window.details = {
         special: "Changes own orb into [INT], deals 100x character's ATK in typeless damage to all enemies that will ignore damage negating abilities and barriers. If enemies have All Debuff Protection or Delay Debuff Protection at the time the special was activated, amplifies the effect of orbs by 2x for 1 turn. If enemies have a barrier at the time the special was activated, boosts own ATK by 2.25x",
         specialName: "Whitebeard Special"
     },
-    1853: {//Treasure Map WB
-        captain: "Boosts ATK of all characters proportionally to the crew's current HP, boost HP of all characters by 1.35x",
-        captainNotes: "#{captainProportional : lower : 1 + 2.25 * (1 - (remaining HP) / (total HP)) : 1 : 3.25}",
+    1853: {//Whitebeard
+        captain: {
+            "base": "Boosts ATK of all characters proportionally to the crew's current HP and their HP by 1.2x",
+            "level1": "Boosts ATK of all characters proportionally to the crew's current HP and their HP by 1.2x",
+            "level2": "Boosts ATK of all characters proportionally to the crew's current HP and their HP by 1.2x",
+            "level3": "Boosts ATK of all characters proportionally to the crew's current HP and their HP by 1.2x",
+            "level4": "Boosts ATK of all characters proportionally to the crew's current HP and their HP by 1.2x",
+            "level5": "Boosts ATK of all characters proportionally to the crew's current HP and their HP by 1.35x",
+            "level6": "Boosts ATK of all characters proportionally to the crew's current HP and their HP by 1.35x"
+        },
+        captainNotes: "#{captainProportional : lower : 1 + 1.25 (1.35, 1.45, 1.55, 1.65, 1.75, & 2.25 respectively) * (1 - (remaining HP) / (total HP)) : 1 : 2.25(2.35, 2.45, 2.55, 2.65, 2.75, & 3.25 respectively)}",
         special: "Changes own orb into [INT], deals 100x character's ATK in typeless damage to all enemies that will ignore damage negating abilities and barriers. If enemies have All Debuff Protection or Delay Debuff Protection at the time the special was activated, amplifies the effect of orbs by 2x for 1 turn. If enemies have a barrier at the time the special was activated, boosts own ATK by 2.25x",
         specialName: "Whitebeard Special",
-        sailor: "Limit Broken: +100HP +50ATK to all characters"
+        limit: [
+            { "description": "Aquire 1 additional Socket slot" },
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base RCV by 5" },
+            { "description": "Aquire Potential 1: [PSY] Damage Reduction" },
+            { "description": "Aquire new Captain Ability: Boosts ATK of all characters proportionally to the crew's current HP and their HP by 1.2x" },
+            { "description": "Aquire Sailor Ability 1: Boosts base HP of all characters by 100" },
+            { "description": "Boosts base ATK by 15" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Aquire new Captain Ability: Boosts ATK of all characters proportionally to the crew's current HP and their HP by 1.2x" },
+            { "description": "Aquire 1 additional Socket slot" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base RCV by 15" },
+            { "description": "Aquire new Captain Ability: Boosts ATK of all characters proportionally to the crew's current HP and their HP by 1.2x" },
+            { "description": "Reduce base Special Cooldown by 2 turns" },
+            { "description": "Boosts base ATK by 25" },
+            { "description": "Boosts base HP by 60" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Reduce base Special Cooldown by 3 turns" },
+            { "description": "Aquire 1 additional Socket slot" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base HP by 65" },
+            { "description": "Reduce base Special Cooldown by 4 turns" },
+            { "description": "Aquire new Captain Ability: Boosts ATK of all characters proportionally to the crew's current HP and their HP by 1.2x" },
+            { "description": "Boosts base ATK by 35" },
+            { "description": "Boosts base HP by 70" },
+            { "description": "Aquire Sailor Ability 2: Boosts base ATK of all characters by 50" },
+            { "description": "Boosts base ATK by 35" },
+            { "description": "Boosts base HP by 85" },
+            { "description": "Boosts base RCV by 30" },
+            { "description": "Reduce base Special Cooldown by 5 turns" },
+            { "description": "Aquire 1 additional Socket slot" },
+            { "description": "Aquire new Captain Ability: Boosts ATK of all characters proportionally to the crew's current HP and their HP by 1.35x" },
+            { "description": "Boosts base ATK by 40" },
+            { "description": "Boosts base HP by 100" },
+            { "description": "Aquire new Captain Ability: Boosts ATK of all characters proportionally to the crew's current HP and their HP by 1.35x" },
+            { "description": "Aquire Potential 2: Enrage" }
+        ],
+        potential: [
+            {
+                "Name": "[PSY] Damage Reduction",
+                "description": [ 
+                    "Level 1: Reduces Damage recieved from [PSY] enemies by 1%",
+                    "Level 2: Reduces Damage recieved from [PSY] enemies by 2%",
+                    "Level 3: Reduces Damage recieved from [PSY] enemies by 3%",
+                    "Level 4: Reduces Damage recieved from [PSY] enemies by 4%",
+                    "Level 5: Reduces Damage recieved from [PSY] enemies by 5%"
+                ]
+            },
+            {
+                "Name": "Enrage",
+                "description": [ 
+                    "Level 1: Boosts base ATK by 30",
+                    "Level 2: Boosts base ATK by 60",
+                    "Level 3: Boosts base ATK by 90",
+                    "Level 4: Boosts base ATK by 120",
+                    "Level 5: Boosts base ATK by 200"
+                ]
+            }
+        ]
     },
     1854: {//Apoo
         captain: "Boosts ATK of Free Spirit characters by 2x",
