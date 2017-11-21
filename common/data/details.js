@@ -13815,13 +13815,13 @@ window.details = {
     1852: {//Whitebeard
         captain: "Not Translated",
         special: "Changes own orb into [INT], deals 100x character's ATK in typeless damage to all enemies that will ignore damage negating abilities and barriers. If enemies have All Debuff Protection or Delay Debuff Protection at the time the special was activated, amplifies the effect of orbs by 2x for 1 turn. If enemies have a barrier at the time the special was activated, boosts own ATK by 2.25x",
-        specialName: "Whitebeard Special",
+        specialName: "The Epicenter of the Halberd",
     },
     1853: {//Whitebeard
         captain: "Boosts ATK of all characters proportionally to the crew's current HP and their HP by 1.2x",
         captainNotes: "#{captainProportional : lower : 1 + 1.25 * (1 - (remaining HP) / (total HP)) : 1 : 2.25}",
         special: "Changes own orb into [INT], deals 100x character's ATK in typeless damage to all enemies that will ignore damage negating abilities and barriers. If enemies have All Debuff Protection or Delay Debuff Protection at the time the special was activated, amplifies the effect of orbs by 2x for 1 turn. If enemies have a barrier at the time the special was activated, boosts own ATK by 2.25x",
-        specialName: "Whitebeard Special",
+        specialName: "The Epicenter of the Halberd",
     },
     1854: {//Apoo
         captain: "Boosts ATK of Free Spirit characters by 2x",
@@ -13870,7 +13870,7 @@ window.details = {
             }
         ],
         specialNotes: "#{stages}",
-        specialName: "Raizo Special",
+        specialName: "Flower Shuriken",
     },
     1861: {//Coloseum Raizo
         captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of Shooter characters by 2.5x",
@@ -13889,7 +13889,8 @@ window.details = {
             }
         ],
         specialNotes: "#{stages}",
-        specialName: "Raizo Special",
+        specialName: "Flower Shuriken",
+        limit: "This unit has a limit break path"
     },
     1862: {//Neo Coliseum Kinemon
         captain: "Boosts ATK of Free Spirit characters by 2x, recovers 1x character's RCV in HP at the end of each turn",
@@ -13901,16 +13902,99 @@ window.details = {
         special: "Reduces Special Cooldown of Slasher and Free Spirit characters by 1 turn and changes adjacent orbs into Matching Orbs",
         specialName: "Poof [Neo]",
     },
-    1865: {//Urouge FN
-        captain: "Striker Characters ATK 1.75x, protects from defeat as long as HP is above a certain percent",
-        captainNotes: "PERFECT hits don't count, it has to GREAT hits",
-        special: "Recover 5000 HP, for 1 turn boost ATK by 1.5x for Striker Characters, if you hit 4 or more GREAT this turn boost ATK by 1.75x for Striker Characters the next turn",
+    1864: {//Urouge FN
+        captain: "Not Translated",
+        specialNotes: "PERFECT hits don't count, it has to GREAT hits",
+        special: "Recovers 5,000 HP, boosts ATK of Striker characters by 1.5x for 1 turn. If during that turn you score 4 Great hits, boosts ATK of Striker characters by 1.75x in the following turn.",
         specialName: "Culling the Criminals from this Earthly World"
     },
-    1867: {//Hawkins FN
-        captain: "Cerebral Characters ATK 2x, boost chain multiplier by 1.5x",
-        special: "Cut HP of all enemies by 10%, for 3 turns cut HP of all enemies by 10%, reduce incoming damage by 40%",
+    1865: {//Urouge FN
+        captain: "Boosts ATK of Striker characters by 1.75x, protects from defeat as long as HP is above a certain percent",
+        specialNotes: "PERFECT hits don't count, it has to GREAT hits",
+        special: "Recovers 5,000 HP, boosts ATK of Striker characters by 1.5x for 1 turn. If during that turn you score 4 Great hits, boosts ATK of Striker characters by 1.75x in the following turn.",
+        specialName: "Culling the Criminals from this Earthly World"
+    },
+    1866: {//Hawkins FN
+        captain: "Not Translated",
+        special: "Cuts the current HP of each enemy by 10%. At the end of the turn, cuts the current HP of each enemy by 10% for 3 turns. Reduces damage received by 40% for 3 turns.",
         specialName: "Fortune-Telling from the Shadow of Death"
+    },
+    1867: {//Hawkins FN
+        captain: "Boosts ATK of Cerebral characters by 2x, boosts chain multiplier by 1.5x",
+        special: "Cuts the current HP of each enemy by 10%. At the end of the turn, cuts the current HP of each enemy by 10% for 3 turns. Reduces damage received by 40% for 3 turns.",
+        specialName: "Fortune-Telling from the Shadow of Death"
+    },
+    1868: {//Fujitora
+        captain: "Increases damage received by ???x, Boosts ATK of Slasher characters by 3.25x at the start of the chain and their HP by 1.2x, and boosts ATK of Slasher characters by 4.225x after scoring 3 Perfects in a row",
+        special: "Deals 10 hits of 20x character's ATK in typeless damage to random enemies, if this character is your Captain or Friend/Guest Captain, Changes all orbs on Slasher characters into Matching orbs and delays all enemies for 1 turn.",
+        specialName: "The Rain of War's End"
+    },
+    1869: {//Fujitora
+        captain: "Increases damage received by ???x, Boosts ATK of Slasher characters by 3.25x at the start of the chain and their HP by 1.2x, and boosts ATK of Slasher characters by 4.225x after scoring 3 Perfects in a row",
+        special: "Deals 10 hits of 20x character's ATK in typeless damage to random enemies, if this character is your Captain or Friend/Guest Captain, Changes all orbs on Slasher characters into Matching orbs and delays all enemies for 1 turn.",
+        specialName: "The Rain of War's End",
+        limit: "This unit has a limit break path"
+    },
+    1868: {//Fujitora
+        captain: "Increases damage received by ???x, Boosts ATK of Slasher characters by 3.25x at the start of the chain and their HP by 1.2x, and boosts ATK of Slasher characters by 4.225x after scoring 3 Perfects in a row",
+        special: "Deals 10 hits of 20x character's ATK in typeless damage to random enemies, if this character is your Captain or Friend/Guest Captain, Changes all orbs on Slasher characters into Matching orbs and delays all enemies for 1 turn.",
+        specialName: "The Rain of War's End"
+    },
+    1869: {//Bellamy
+        captain: "Boosts ATK of Slasher characters by 2.25x",
+        special: "Reduces crew's current HP by 50%, deals 10x the amount of HP subtracted in typeless damage to one enemy, reduces enemy's Threshold Damage Reduction, Increased Defense and ATK UP duration by 3 turns and changes own orb into [PSY]",
+        specialName: "Spring Death Knock",
+        sailor: "Boosts this character's attack against [INT] characters by 1.1x"
+    },
+    1870: {//Bellamy
+        captain: "Not Translated",
+        special: "Reduces crew's current HP by 50%, deals 10x the amount of HP subtracted in typeless damage to one enemy, reduces enemy's Threshold Damage Reduction, Increased Defense and ATK UP duration by 3 turns and changes own orb into [PSY]",
+        specialName: "Spring Death Knock",
+        sailor: "Boosts this character's attack against [INT] characters by 1.1x",
+        limit: "This unit has a limit break path"
+    },
+    1871: {//Kyros
+        captain: "Boosts ATK of Slasher and Striker characters by 2.25x",
+        special: "Deals 30x character's ATK in [STR] damage to one enemy, reduces Bind and Despair duration by 2 turns and boosts ATK of Slasher characters by 1.75x for 3 turns",
+        specialName: "The Forefront Reclaiming His Country",
+        sailor: "Adds 2x character's ATK as Additional Typeless Damage",
+        sailorNotes: "#{additionalDamage : 2x}",
+    },
+    1872: {//Kyros
+        captain: "Not Translated",
+        special: "Deals 30x character's ATK in [STR] damage to one enemy, reduces Bind and Despair duration by 2 turns and boosts ATK of Slasher characters by 1.75x for 3 turns",
+        specialName: "The Forefront Reclaiming His Country",
+        sailor: "Adds 2x character's ATK as Additional Typeless Damage",
+        sailorNotes: "#{additionalDamage : 2x}",
+        limit: "This unit has a limit break path"
+    },
+    1873: {//Violet
+        captain: "Boosts amount of Beli received by 2.5x",
+        special: "Changes [RCV], [TND], [EMPTY] and [BLOCK] orbs into Matching orbs, reduces Palysis and Silence duration by 2 turns and adds .5x to Chain multiplier for 1 turn",
+        specialName: "Violent Interrogation of Passion",
+        sailor: "Completely resists Silence on this character",
+        sailorNotes: "#{silence}",
+    },
+    1874: {//Violet
+        captain: "Not Translated",
+        special: "Changes [RCV], [TND], [EMPTY] and [BLOCK] orbs into Matching orbs, reduces Palysis and Silence duration by 2 turns and adds .5x to Chain multiplier for 1 turn",
+        specialName: "Violent Interrogation of Passion",
+        sailor: "Completely resists Silence on this character",
+        sailorNotes: "#{silence}",
+        limit: "This unit has a limit break path"
+    },
+    1875: {//Rebecca
+        captain: "Boosts ATK of Slasher characters by 2x and reduces damage received by 10%",
+        special: "Deals 50,000 fixed damage to one enemy, reduces Chain Multiplier Limit duration by 5 turns and changes adjacent orbs into matching orbs",
+        specialName: "Strike of Determination",
+        sailor: "Makes [STR] orbs \"beneficial\" for this unit"
+    },
+    1876: {//Rebecca
+        captain: "Boosts ATK of Slasher characters by 2x and reduces damage received by 10%",
+        special: "Deals 50,000 fixed damage to one enemy, reduces Chain Multiplier Limit duration by 5 turns and changes adjacent orbs into matching orbs",
+        specialName: "Strike of Determination",
+        sailor: "Makes [STR] orbs \"beneficial\" for this unit",
+        limit: "This unit has a limit break path"
     },
     2000: {//Rayleigh
         captain: "Boosts ATK of Slasher and Cerebral characters by 2x",

@@ -1267,13 +1267,11 @@ window.specials = {
         }
     },
     975: {
-        atk: function(p) { return p.unit.class.has("Driven") ? 1.3 : 1; },
-        atk: function(p) { return p.unit.class.has("Striker") ? 1.3 : 1; },
+        atk: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Striker")) ? 1.3 : 1; },
         type: "class"
     },
     976: {
-        atk: function(p) { return p.unit.class.has("Driven") ? 1.3 : 1; },
-        atk: function(p) { return p.unit.class.has("Striker") ? 1.3 : 1; },
+        atk: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Striker")) ? 1.3 : 1; },
         type: "class"
     },
     977: {
@@ -3832,7 +3830,19 @@ window.specials = {
         atk: function(p) { return (p.delayed > 0 && (p.captain.class.has("Shooter"))) ? 1.75 : 1; },
         type: "condition",
     },
-    1865: {//Urouge FN
+    1864: {
+        atk: function(p) { return p.unit.class.has("Striker") ? window.specials[1864].multiplier : 1; },
+        type: "class",
+        onActivation: function(p) {
+            var n = (window.specials[1864].multiplier === 1.5 ? 1 : 0);
+            window.specials[1864].multiplier = [1.5, 1.75][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.5, 1.75][n] + 'x ATK multiplier. To switch to the ' + [1.75, 1.5][n] + 'x multiplier, disable and re-enable this special',
+                name: '1864warning'
+            });
+        }
+    },
+    1865: {
         atk: function(p) { return p.unit.class.has("Striker") ? window.specials[1865].multiplier : 1; },
         type: "class",
         onActivation: function(p) {
@@ -3843,6 +3853,26 @@ window.specials = {
                 name: '1865warning'
             });
         }
+    },
+    1868: {
+        delay: function(p) { return 1; },
+    },
+    1869: {
+        delay: function(p) { return 1; },
+    },
+    1871: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? 1.75 : 1; },
+        type: "class"
+    },
+    1872: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? 1.75 : 1; },
+        type: "class"
+    },
+    1873: {
+        chainAddition: function(p){ return 0.5; }
+    },
+    1874: {
+        chainAddition: function(p){ return 0.5; }
     },
     2000: {
         atk: function(p) { return 1.75; },
