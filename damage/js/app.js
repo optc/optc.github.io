@@ -9,7 +9,7 @@ var app = angular.module('optc', [ 'ui.router', 'ui.bootstrap', 'ngSanitize', 'n
 var SharedRootCtrl = function($scope, $rootScope, $timeout) {
 
     $rootScope.data = {
-
+        //setting default values
         team: [
             { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 } },
             { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 } },
@@ -20,8 +20,8 @@ var SharedRootCtrl = function($scope, $rootScope, $timeout) {
         ],
 
         percHP: 100.0,
-
-        ship: [ 1, 5 ],
+        
+        ship: [ 1, 10 ],
 
         defense: 0,
 
@@ -50,7 +50,12 @@ var SharedRootCtrl = function($scope, $rootScope, $timeout) {
         turnCounter: {
             enabled: false,
             value: 0
-        }
+        },
+        
+        healCounter: {
+            enabled: false,
+            value: 0
+        },
 
     };
 
@@ -61,6 +66,9 @@ var SharedRootCtrl = function($scope, $rootScope, $timeout) {
 
     $rootScope.options = {
         gOrbsEnabled: 0,
+        strOrbsEnabled: 0,
+        rainbowOrbsEnabled: 0,
+        meatOrbsEnabled: 0,
         slidersEnabled: true,
         sidebarVisible: false,
         transientMode: false,
@@ -80,7 +88,7 @@ var SharedRootCtrl = function($scope, $rootScope, $timeout) {
         // reset slot
         if (!onlyTransitional)
             $scope.data.team[n] = { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 } };
-        $scope.tdata.team[n] = { orb: 1, g: false, special: false, lock: 0, silence: 0, removed: 0 };
+        $scope.tdata.team[n] = { orb: 1, g: false, str: false, rainbow: false, special: false, lock: 0, silence: 0, removed: 0 };
     };
 
     // to be invoked every time a new unit is set in a slot so the insertion events can be triggered
@@ -116,6 +124,93 @@ var SharedRootCtrl = function($scope, $rootScope, $timeout) {
         if ($rootScope.data.effect) {
             var effect = window.effects[$rootScope.data.effect];
             if (effect && effect.gOrbsEnabled) return true;
+        }
+        return false;
+    };
+
+    /* * * * * [STR] orb control * * * * */
+
+    var resetSTROrbs = function() {
+        for (var i=0;i<6;++i) {
+            if ($scope.tdata.team[i].orb == 'str')
+                $scope.tdata.team[i].orb = 1;
+        }
+    };
+
+    // reset STR slots automatically
+    $scope.$watch('options.strOrbsEnabled',function() {
+        if (!$rootScope.areSTROrbsEnabled())
+            resetSTROrbs();
+    });
+
+    $scope.$watch('data.effect',function() {
+        if (!$rootScope.areSTROrbsEnabled())
+            resetSTROrbs();
+    });
+
+    $rootScope.areSTROrbsEnabled = function() {
+        if ($rootScope.options.strOrbsEnabled > 0) return true;
+        if ($rootScope.data.effect) {
+            var effect = window.effects[$rootScope.data.effect];
+            if (effect && effect.strOrbsEnabled) return true;
+        }
+        return false;
+    };
+    
+    /* * * * * [RAINBOW] orb control * * * * */
+
+    var resetRainbowOrbs = function() {
+        for (var i=0;i<6;++i) {
+            if ($scope.tdata.team[i].orb == 'rainbow')
+                $scope.tdata.team[i].orb = 1;
+        }
+    };
+
+    // reset rainbow slots automatically
+    $scope.$watch('options.rainbowOrbsEnabled',function() {
+        if (!$rootScope.areRainbowOrbsEnabled())
+            resetRainbowOrbs();
+    });
+
+    $scope.$watch('data.effect',function() {
+        if (!$rootScope.areRainbowOrbsEnabled())
+            resetRainbowOrbs();
+    });
+
+    $rootScope.areRainbowOrbsEnabled = function() {
+        if ($rootScope.options.rainbowOrbsEnabled > 0) return true;
+        if ($rootScope.data.effect) {
+            var effect = window.effects[$rootScope.data.effect];
+            if (effect && effect.rainbowOrbsEnabled) return true;
+        }
+        return false;
+    };
+    
+    /* * * * * [MEAT] orb control * * * * */
+
+    var resetMeatOrbs = function() {
+        for (var i=0;i<6;++i) {
+            if ($scope.tdata.team[i].orb == 'meat')
+                $scope.tdata.team[i].orb = 1;
+        }
+    };
+
+    // reset meat slots automatically
+    $scope.$watch('options.meatOrbsEnabled',function() {
+        if (!$rootScope.areMeatOrbsEnabled())
+            resetMeatOrbs();
+    });
+
+    $scope.$watch('data.effect',function() {
+        if (!$rootScope.areMeatOrbsEnabled())
+            resetMeatOrbs();
+    });
+
+    $rootScope.areMeatOrbsEnabled = function() {
+        if ($rootScope.options.meatOrbsEnabled > 0) return true;
+        if ($rootScope.data.effect) {
+            var effect = window.effects[$rootScope.data.effect];
+            if (effect && effect.meatOrbsEnabled) return true;
         }
         return false;
     };

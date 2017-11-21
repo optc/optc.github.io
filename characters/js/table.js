@@ -13,6 +13,7 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
 
     var addImage = function(data, type, row, meta) {
         return '<img class="slot small" data-original="' + Utils.getThumbnailUrl(row[0]) + '"> ' +
+            //return '<img class="slot small" data-original="' + Utils.getGlobalThumbnailUrl(row[0]) + '" onerror="this.onerror=null;this.src=\'' + Utils.getThumbnailUrl(row[0]) + '\';"> ' +
             '<a ui-sref="main.search.view({ id: ' + parseInt(row[0],10) + '})">' + data + '</a>';
     };
 
@@ -53,7 +54,8 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
         additionalColumns.forEach(function(x) {
             var title = x
                 .replace(/Minimum cooldown/,'Min CD')
-                .replace(/Initial cooldown/,'Max CD');
+                .replace(/Initial cooldown/,'Max CD')
+                .replace(/MAX EXP/,'MAX EXP');
             result.splice(result.length-1, 0, { title: title, type: 'num-string' });
         });
         return result;
@@ -67,6 +69,8 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
         if (!tableData.parameters) return true;
         var id = parseInt(data[0],10), unit = window.units[id - 1];
         var flags = window.flags[unit.number + 1] || { };
+        var farmableSocket = CharUtils.hasFarmableSocket(unit.number);
+        
         /* * * * * Query filters * * * * */
         // filter by matchers
         for (var matcher in tableData.parameters.matchers) {
@@ -139,6 +143,9 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
                     // special
                     if (filters.nonFarmable.special && !flags.special) return false;
                     if (filters.nonFarmable.special === false && flags.special) return false;
+                    // rayleigh shop
+                    if (filters.nonFarmable.shop && !flags.shop) return false;
+                    if (filters.nonFarmable.shop === false && flags.shop) return false;
                 }
             }
         }
@@ -148,7 +155,7 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
         if (filters.noFodder && Utils.isFodder(unit)) return false;
         if (filters.noFortnights && flags.fnonly) return false;
         if (filters.noRaids && flags.raid) return false;
-        if (filters.noSpecials && (flags.lrr || flags.promo || flags.special)) return false;
+        if (filters.noSpecials && (flags.lrr || flags.promo || flags.special || flags.shop )) return false;
         // filter by server
         if (filters.server) {
             if (filters.server == 'Global units' && !flags.global) return false;
@@ -156,6 +163,8 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
         }
         // filter by rr pool
         if ((filters.rr === 'Not in RR pool' && flags.rr) || (filters.rr === 'In RR pool' && !flags.rr)) return false;
+        //filter by farmable Sockets
+        if ((filters.socket === 'No Farmable Sockets' && farmableSocket) || (filters.socket === 'Farmable Sockets' && !farmableSocket)) return false;
         // filter by active matchers
         if (filters.custom.length > 0 && !window.details.hasOwnProperty(id)) return false;
         for (var i=0;i<filters.custom.length;++i) {
@@ -183,11 +192,13 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
             }
             if (mismatch) return false;
         }
-        // filter by class-filters
+        // filter by class-filters  
         if ($rootScope.filters.custom[MATCHER_IDS['captain.ClassBoostingCaptains']] && filters.classCaptain &&
                 !CharUtils.isClassBooster('captain', id, filters.classCaptain)) return false;
         if ($rootScope.filters.custom[MATCHER_IDS['special.ClassBoostingSpecials']] && filters.classSpecial &&
                 !CharUtils.isClassBooster('special', id, filters.classSpecial)) return false;
+        if ($rootScope.filters.custom[MATCHER_IDS['sailor.ClassBoostingSailors']] && filters.classSailor &&
+                !CharUtils.isClassBooster('sailor', id, filters.classSailor)) return false;
         return true;
     };
 
@@ -236,6 +247,7 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
             else if (c == 'ATK/cost') temp = Math.round(x.maxATK / x.cost * 100) / 100;
             else if (c == 'HP/cost') temp = Math.round(x.maxHP / x.cost * 100) / 100;
             else if (c == 'CMB') temp = x.combo;
+            else if (c == 'MAX EXP') temp = x.maxEXP;
             else if (c == 'Minimum cooldown' || c == 'Initial cooldown') { 
                 var d = cooldowns[x.number];
                 if (!d) temp = 'N/A';
@@ -266,7 +278,7 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
 
     $timeout(function() {
         jQuery.fn.dataTable.ext.search.push(tableFilter);
-        var types = { story: 'Story Island', fortnight: 'Fortnight', raid: 'Raid', colosseum: 'Colosseum' };
+        var types = { story: 'Story Island', fortnight: 'Fortnight', raid: 'Raid', Coliseum: 'Coliseum' };
         $rootScope.$watch('table',function(table) {
             tableData = table;
             if (table.parameters && table.parameters.filters && table.parameters.filters.farmable) {

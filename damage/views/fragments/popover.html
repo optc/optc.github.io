@@ -53,6 +53,15 @@
                     <span class="notes" ng-if="details.captainNotes" ng-bind-html="details.captainNotes | notes | decorate"></span>
                 </td>
             </tr>
+            <tr class="header" ng-if="slot > 1">
+                <td colspan="5">Sailor Ability</td>
+            </tr>
+            <tr ng-if="slot > 1">
+                <td colspan="5">
+                    <div ng-bind-html="details.sailor | decorate"></div>
+                    <span class="notes" ng-if="details.sailorNotes" ng-bind-html="details.sailorNotes | notes | decorate"></span>
+                </td>
+            </tr>
             <tr class="header">
                 <td colspan="5">Special</td>
             </tr>

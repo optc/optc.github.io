@@ -1,12 +1,12 @@
 @font-face {
-	font-family: 'icomoon';
-	src:url('../../res/icomoon.eot?xewvs9');
-	src:url('../../res/icomoon.eot?xewvs9#iefix') format('embedded-opentype'),
-		url('../../res/icomoon.ttf?xewvs9') format('truetype'),
-		url('../../res/icomoon.woff?xewvs9') format('woff'),
-		url('../../res/icomoon.svg?xewvs9#icomoon') format('svg');
-	font-weight: normal;
-	font-style: normal;
+    font-family: 'icomoon';
+    src:url('../../res/icomoon.eot?xewvs9');
+    src:url('../../res/icomoon.eot?xewvs9#iefix') format('embedded-opentype'),
+        url('../../res/icomoon.ttf?xewvs9') format('truetype'),
+        url('../../res/icomoon.woff?xewvs9') format('woff'),
+        url('../../res/icomoon.svg?xewvs9#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
 /***************
@@ -100,6 +100,16 @@ body, html {
     animation-duration: 0.5s !important;
     -webkit-animation-duration: 0.5s !important;
 }
+
+#instructions {
+    padding-left:10px
+}
+
+#instructions > ul {
+    list-style-type: none;
+    margin-left: 15px;
+}
+
 
 /******************
  * MAIN UNIT PANE *
@@ -321,18 +331,22 @@ body, html {
  * BUTTONS & HP BAR *
  ********************/
 
-#hpSlider, #turnSlider {
+#hpSlider, #turnSlider, #healSlider {
     width: 350px;
     height: 12px;
     display: inline-block;
 }
 
-#turnSlider {
+#turnSlider, #healSlider {
     width: 300px;
 }
 
 #turns > .noUi-connect {
     background: orchid;
+}
+
+#heals > .noUi-connect {
+    background: green;
 }
 
 .noUi-handle {
@@ -458,11 +472,13 @@ body, html {
 #menu {
     position: fixed;
     top: 0px;
-    left: -17.9em;
-    width: 17.9em;
+    left: -20.9em;
+    width: 20.9em;
     height: 100%;
     transition: left .1s linear;
     margin-bottom: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 #menu.open {
@@ -550,7 +566,7 @@ li.disabled {
 }
 
 .special > div, #profileContainer {
-    width: 249px;
+    width: 270px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -928,14 +944,31 @@ nav > li > div {
 
 .unitCandies {
     position: absolute;
-    bottom: 2px;
-    left: 7px;
+    top: 5px;
+    right: 40px;
     z-index: 4;
     font-weight: bold;
     color: gold;
     pointer-events: none;
     text-shadow: 0 0 black, 0 2px black, 2px 0 black, 2px 2px black, 0 -2px black, -2px 0 black, -2px -2px black,
                  0 0 black, 0 1px black, 1px 0 black, 1px 1px black, 0 -1px black, -1px 0 black, -1px -1px black;
+}
+
+.unitSailor {
+    position: absolute;
+    width: 19px;
+    height: 21px;
+    bottom: -1px;
+    z-index: 4;
+    font-size: 9pt;
+    color: powderblue;
+    border: 2px solid gold;
+    border-left: 1px solid black;
+    border-radius: 4px;
+    background-color: SteelBlue;
+    pointer-events: none;
+    text-shadow: 2px 0 0 #003366, -2px 0 0 #003366, 0 2px 0 #003366, 0 -2px 0 #003366, 1px 1px #003366, -1px -1px 0 #003366, 1px -1px 0 #003366, -1px 1px 0 #003366;
+    box-shadow: inset 0px 0px 1px blue, 0px 0px 1px blue;
 }
 
 .unitAbilities {
@@ -1030,10 +1063,11 @@ body > .popover .popover-content {
 .popover-data .DEX   { background: lightgreen; }
 .popover-data .PSY   { background: gold; }
 .popover-data .INT   { background: orchid; }
-.popover-data .RCV   { background: sandybrown; }
+.popover-data .RCV   { background: darkgoldenrod; }
 .popover-data .TND   { background: peru; }
 .popover-data .BLOCK { background: darkslateblue; }
 .popover-data .BOMB  { background: maroon; }
+.popover-data .RAINBOW { background: magenta; }
 .popover-data .G     { background: orange; }
 
 .block-icon:before, .tnd-icon:before {
@@ -1143,3 +1177,4 @@ body > .popover .popover-content {
     }
 
 }
+

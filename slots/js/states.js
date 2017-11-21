@@ -76,6 +76,14 @@ angular.module('optc').config(function($stateProvider, $urlRouterProvider) {
                     controller: 'ImageGeneratorCtrl'
                 }
             }
+        })
+        .state('main.copy',{
+            views:{
+                'popup@':{
+                    templateUrl: 'views/popup/copy.html',
+                    controller: 'CopyCtrl'
+                }
+            }
         });
 
 });

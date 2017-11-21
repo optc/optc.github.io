@@ -71,6 +71,10 @@ app.controller('ImageGeneratorCtrl', function($scope, $filter, $timeout) {
         };
 
         image.src = Utils.getThumbnailUrl(data.uid);
+        //image.src = Utils.getGlobalThumbnailUrl(data.uid);
+        //image.onerror = function(){
+        //    image.src = Utils.getThumbnailUrl(data.uid);
+        //}
 
     });
 

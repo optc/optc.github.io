@@ -7,6 +7,7 @@
  **************/
 
 var ImportCtrl = function($scope, $rootScope, $state, $stateParams) {
+    history.replaceState(null, null, '#/');
 
     var checkInt = function(n, min, max) {
         var temp = parseInt(n, 10);
@@ -41,7 +42,7 @@ var ImportCtrl = function($scope, $rootScope, $state, $stateParams) {
                 rcv = parseInt(matches[5],10) || 0;
             if (id < 1 || id > window.units.length || window.units[id - 1].length === 0) break;
             if (level < 1 || level > window.units[id - 1].maxLevel) break;
-            if (atk > 100 || hp > 100 || rcv > 100 || (atk + hp + rcv) > 200) break;
+            if (atk > 200 || hp > 200 || rcv > 200 || (atk + hp + rcv) > 500) break;
             team.push({ id: id, level: level, candies: { atk: atk, hp: hp, rcv: rcv }});
         }
     }
@@ -115,7 +116,7 @@ var ImportCtrl = function($scope, $rootScope, $state, $stateParams) {
                 .slice(-6).split('').map(function(x) { return parseInt(x, 10); });
             temp.forEach(function(x,n) {
                 var unit = $scope.tdata.team[n];
-                if (type == 'O') unit.orb = (x == 1 ? 2 : (x == 2 ? 0.5 : (x == 3 ? 'g' : 1)));
+                if (type == 'O') unit.orb = (x == 1 ? 2 : (x == 2 ? 0.5 : (x == 3 ? 'g' : (x == 4 ? 'str' : (x == 5 ? 'rainbow' : 1)))));
                 else if (type == 'L') unit.lock = x;
                 else if (type == 'G') unit.silence = x;
                 else if (type == 'R') unit.removed = x;
@@ -125,7 +126,7 @@ var ImportCtrl = function($scope, $rootScope, $state, $stateParams) {
                 .slice(-6).split('').map(function(x) { return parseInt(x, 10); });
             temp.forEach(function(x,n) {
                 var unit = $scope.tdata.team[n];
-                unit.orb = (x == 1 ? 2 : (x == 2 ? 0.5 : (x == 3 ? 'g' : 1)));
+                unit.orb = (x == 1 ? 2 : (x == 2 ? 0.5 : (x == 3 ? 'g' : (x == 4 ? 'str' : (x == 5 ? 'rainbow' : 1)))));
                 if (unit.orb == 'g' && !$rootScope.areGOrbsEnabled()) unit.orb = 1;
             });
         } else if (type == 'S') {
@@ -186,11 +187,11 @@ var ExportCtrl = function($scope) {
         result = '#/transfer/D' + tokens.join(',') + 'C';
 
         // others
-        
         result += data.ship[0] + ',' + data.ship[1] + 'B';
-        result += (data.defense && data.defense.constructor == Number ? data.defense : 0) + 'D';
+        result += (data.defense && data.defense.constructor == Number ? data.defense : parseInt(data.defense)) + 'D';
+        //result += (data.defense != 0 ) + 'D';
         result += ($scope.data.effect ? window.effects[$scope.data.effect].id : 0) + 'E';
-        result += parseInt(team.map(function(x) { return ({ '2': 1, '0.5': 2, 'g': 3, '1': 0 }['' + x.orb] || 0); }).join(''),4) + 'Q';
+        result += parseInt(team.map(function(x) { return ({ '2': 1, '0.5': 2, 'g': 3, 'str': 4, 'rainbow': 5, '1': 0 }['' + x.orb] || 0); }).join(''),4) + 'Q';
         result += parseInt(team.map(function(x) { return x.lock; }).join(''),3) + 'L';
         result += parseInt(team.map(function(x) { return x.silence; }).join(''),3) + 'G';
         result += parseInt(team.map(function(x) { return x.removed; }).join(''),3) + 'R';

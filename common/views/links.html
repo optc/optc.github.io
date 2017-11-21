@@ -5,13 +5,27 @@
     </div>
 
     <div class="icons">
+        
+        <div class="rotater" id="link-home" title="Home">
+            <a class="btn btn-icon" href="/">
+                <i class="fa fa-home"></i>
+            </a>
+            <a class="tip">Front Page</a>
+        </div>
 
         <div class="rotater" id="link-report" title="Bug report">
             <a class="btn btn-icon" target="_blank"
-                    href="https://docs.google.com/forms/d/1jSlwN0Ruyc5bFfxdXlwihqfLdCiELX7HQTabXoCV7hU/viewform?usp=send_form">
+                    href="https://discord.gg/MRhRrbF">
                 <i class="fa fa-flag"></i>
             </a>
             <a class="tip">Bug report</a>
+        </div>
+        
+        <div class="rotater" id="link-prob" title="Probability" ng-if="exclude != 'prob'">
+            <a class="btn btn-icon" href="../probability">
+                <i class="fa fa-arrow-up"></i>
+            </a>
+            <a class="tip">Probabilities</a>
         </div>
 
         <div class="rotater" id="link-drops" title="Drop table" ng-if="exclude != 'drops'">
@@ -47,6 +61,20 @@
                 <i class="fa fa-dot-circle-o"></i>
             </a>
             <a class="tip">Ability Slot Planner</a>
+        </div>
+        
+        <div class="rotater" id="link-turtles" title="Turtle Times" ng-if="exclude != 'turtles'">
+            <a class="btn btn-icon" target="_blank" href="../turtles">
+                <i class="fa fa-clock-o"></i>
+            </a>
+            <a class="tip">Turtle Times</a>
+        </div>
+        
+        <div class="rotater" id="link-es" title="Spanish DB" ng-if="exclude != 'turtles'">
+            <a class="btn btn-icon" target="_blank" href="https://optces.github.io/">
+                <i class="fa fa-database"></i>
+            </a>
+            <a class="tip top">Spanish DB</a>
         </div>
 
     </div>

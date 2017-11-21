@@ -9,15 +9,18 @@
 
 <div class="filter-container">
     <span class="filter-header">Class filters</span>
-    <span ng-repeat="(n,class) in [ 'Fighter', 'Shooter', 'Slasher', 'Striker', 'Freedom', 'Knowledge', 'Tough', 'Ambition' ]"
+    <span ng-repeat="(n,class) in [ 'Fighter', 'Shooter', 'Slasher', 'Striker', 'Free Spirit', 'Cerebral', 'Powerhouse', 'Driven', 'Evolver', 'Booster' ]"
         class="filter width-6 class" ng-click="onClassClick($event,class)"
         ng-class="{ active: filters.classes.indexOf(class) > -1 }">{{class}}</span>
 </div>
+
 
 <div class="filter-container">
     <span class="filter-header">Rarity filters</span>
     <span ng-repeat="(n,stars) in [ 1, 2, 3, 4, 5, 6 ]" class="filter stars width-4 stars-{{stars}}"
         ng-click="onStarsClick($event,stars)" ng-class="{ active: filters.stars.indexOf(stars) > -1 }"></span>
+    <span ng-repeat="(n,stars) in [ 5, 6 ]" class="filter stars width-4 stars-{{stars}}+"
+        ng-click="onStarsClick($event,stars + '+')" ng-class="{ active: filters.stars.indexOf(stars + '+') > -1 }"></span>
 </div>
 
 <div class="filter-container expandable" id="cost-container"
@@ -33,14 +36,20 @@
     <span class="filter-header">Drop filters</span>
     <span ng-repeat="type in [ 'Farmable', 'Non-farmable' ]" class="filter width-6 drop" ng-model="filters.drop"
         ng-class="{ active: filters.drop == type }" ng-click="onFilterClick($event,type)">{{type}}</span>
-    <span ng-repeat="type in [ 'Global units', 'Japan units' ]" class="filter width-6 drop" ng-model="filters.server"
+    <span ng-repeat="type in [ 'Global units', 'Japan exclusives' ]" class="filter width-6 drop" ng-model="filters.server"
         ng-class="{ active: filters.server == type }" ng-click="onFilterClick($event,type)">{{type}}</span>
     <span ng-repeat="type in [ 'In RR pool', 'Not in RR pool' ]" class="filter width-6 drop" ng-model="filters.rr"
         ng-class="{ active: filters.rr == type }" ng-click="onFilterClick($event,type)">{{type}}</span>
+    <span ng-repeat="type in [ 'Farmable Sockets', 'No Farmable Sockets' ]" class="filter width-6 drop" ng-model="filters.socket"
+        ng-class="{ active: filters.socket == type }" ng-click="onFilterClick($event,type)">{{type}}</span>
 </div>
 
 <div class="filter-container conditional" ng-show="filters.drop == 'Farmable'">
     <span class="filter-header">Farmable filters</span>
+    <span class="filter width-6 drop" ng-class="{ active: filters.farmable.story }"
+        ng-model="filters.farmable.story" ng-click="onDropFilterClick($event,true)">Story-only</span><!--
+ --><span class="filter width-6 exc" ng-class="{ active: filters.farmable.story === false }"
+        ng-model="filters.farmable.story" ng-click="onDropFilterClick($event,false)">Hide story-only</span>
     <span class="filter width-6 drop" ng-class="{ active: filters.farmable.fortnight }"
         ng-model="filters.farmable.fortnight" ng-click="onDropFilterClick($event,true)">Fortnight-only</span><!--
  --><span class="filter width-6 exc" ng-class="{ active: filters.farmable.fortnight === false }"
@@ -49,10 +58,10 @@
         ng-model="filters.farmable.raid" ng-click="onDropFilterClick($event,true)">Raid-only</span><!--
  --><span class="filter width-6 exc"  ng-class="{ active: filters.farmable.raid === false }"
         ng-model="filters.farmable.raid" ng-click="onDropFilterClick($event,false)">Hide raid-only</span>
-    <span class="filter width-6 drop" ng-class="{ active: filters.farmable.colosseum }"
-        ng-model="filters.farmable.colosseum" ng-click="onDropFilterClick($event,true)">Colosseum-only</span><!--
- --><span class="filter width-6 exc"  ng-class="{ active: filters.farmable.colosseum === false }"
-        ng-model="filters.farmable.colosseum" ng-click="onDropFilterClick($event,false)">Hide Clssm-only</span>
+    <span class="filter width-6 drop" ng-class="{ active: filters.farmable.Coliseum }"
+        ng-model="filters.farmable.Coliseum" ng-click="onDropFilterClick($event,true)">Coliseum-only</span><!--
+ --><span class="filter width-6 exc"  ng-class="{ active: filters.farmable.Coliseum === false }"
+        ng-model="filters.farmable.Coliseum" ng-click="onDropFilterClick($event,false)">Hide Clssm-only</span>
 </div>
 
 <div class="filter-container conditional" ng-show="filters.drop == 'Non-farmable'">
@@ -69,6 +78,10 @@
         ng-model="filters.nonFarmable.special" ng-click="onDropFilterClick($event,true)">Special-only</span><!--
  --><span class="filter width-6 drop" ng-class="{ active: filters.nonFarmable.special === false }"
         ng-model="filters.nonFarmable.special" ng-click="onDropFilterClick($event,false)">Hide special-only</span>
+    <span class="filter width-6 drop" ng-class="{ active: filters.nonFarmable.shop }"
+        ng-model="filters.nonFarmable.shop" ng-click="onDropFilterClick($event,true)">Ray Shop Unit</span><!--
+ --><span class="filter width-6 drop" ng-class="{ active: filters.nonFarmable.shop === false }"
+        ng-model="filters.nonFarmable.shop" ng-click="onDropFilterClick($event,false)">Hide Ray Shop Unit</span>
 </div>
 
 <div class="filter-container">
@@ -92,6 +105,20 @@
     <span class="filter-header">Special filters</span>
     <span class="filter width-12 custom" ng-repeat="(n,filter) in filterData" ng-if="filter.target.indexOf('special') == 0"
         ng-model="filters.custom[n]" ng-class="{ active: filters.custom[n] }" add-orb-options add-special-options
+        ng-click="filters.custom[n] = !filters.custom[n]">{{filter.name}}</span>
+</div>
+
+<div class="filter-container">
+    <span class="filter-header">Sailor ability filters</span>
+    <span class="filter width-12 custom" ng-repeat="(n,filter) in filterData" ng-if="filter.target.indexOf('sailor') == 0"
+        ng-model="filters.custom[n]" ng-class="{ active: filters.custom[n] }" add-sailor-options
+        ng-click="filters.custom[n] = !filters.custom[n]">{{filter.name}}</span>
+</div>
+
+<div class="filter-container">
+    <span class="filter-header">Limit Break filters</span>
+    <span class="filter width-12 custom" ng-repeat="(n,filter) in filterData" ng-if="filter.target.indexOf('limit') == 0"
+        ng-model="filters.custom[n]" ng-class="{ active: filters.custom[n] }"
         ng-click="filters.custom[n] = !filters.custom[n]">{{filter.name}}</span>
 </div>
 

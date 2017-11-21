@@ -3,7 +3,7 @@
 var app = angular.module('optc');
 
 var BOX_COLORS = { STR: 'salmon', QCK: 'lightskyblue', DEX: 'lightgreen', PSY: 'gold', INT: 'orchid' };
-var ORB_COLORS = { STR: 'orangered', QCK: 'dodgerblue', DEX: 'lightgreen', PSY: 'gold', INT: 'orchid', G: 'orange' };
+var ORB_COLORS = { STR: 'orangered', QCK: 'dodgerblue', DEX: 'lightgreen', PSY: 'gold', INT: 'orchid', G: 'orange', S: 'orangered', RAINBOW: 'pink', MEAT: 'darkgoldenrod'};
 
 var lock = new Image(), silence = new Image();
 lock.src = 'res/chain.png';
@@ -39,12 +39,21 @@ app.controller('ImageGeneratorCtrl', function($scope, $filter, $timeout) {
             var percHP = $filter('number')(Math.round($scope.data.percHP * 100) / 100);
             var rcv = $filter('number')($scope.numbers.rcv);
             var cost = $filter('number')($scope.numbers.cost.cost);
+			var healPerTurn = $filter('number')($scope.numbers.healPerTurn);
+			//HP
             awesome(context, { text: 'f21e', x: baseX + 8, y: baseY, align: 'center' });
             type(context, { text: currentHP + ' HP (' + percHP + '%)', x: baseX + 25, y: baseY });
-            awesome(context, { text: 'f0f5', x: baseX + 8, y: baseY + 25, align: 'center' });
+            //RCV
+			awesome(context, { text: 'f0f5', x: baseX + 8, y: baseY + 25, align: 'center' });
             type(context, { text: rcv + ' RCV', x: baseX + 25, y: baseY + 25 });
-            awesome(context, { text: 'f039', x: baseX + 8, y: baseY + 50, align: 'center' });
+            //Cost
+			awesome(context, { text: 'f039', x: baseX + 8, y: baseY + 50, align: 'center' });
             type(context, { text: cost + ' cost', x: baseX + 25, y: baseY + 50 });
+			//Heal per Turn
+			if(healPerTurn){
+			awesome(context, { text: 'f0fa', x: baseX + 8, y: baseY + 75, align: 'center' });
+            type(context, { text: healPerTurn + ' Heal per turn', x: baseX + 25, y: baseY + 75 });
+			}
         }
     },true);
 
@@ -74,7 +83,7 @@ app.controller('ImageGeneratorCtrl', function($scope, $filter, $timeout) {
                 if (orb != 1.0) {
                     var gradient = context.createRadialGradient(baseX + 20, baseY + 21, 13, baseX + 22, baseY + 22, 35);
                     if (orb < 1) gradient.addColorStop(0.1, ORB_COLORS[Utils.getOppositeType(unit.type)]);
-                    else gradient.addColorStop(0.1, ORB_COLORS[orb == 'g' ? 'G' : unit.type]);
+                    else gradient.addColorStop(0.1, ORB_COLORS[orb == 'g' ? 'G' : orb == 'str' ? 'STR' : orb == 'rainbow' ? 'RAINBOW' : orb == 'meat' ? 'MEAT' : unit.type]);
                     if (orb < 1) gradient.addColorStop(0.2, 'black');
                     else {
                         gradient.addColorStop(0.2, 'white');
@@ -84,12 +93,21 @@ app.controller('ImageGeneratorCtrl', function($scope, $filter, $timeout) {
                     gradient.addColorStop(1.0, 'transparent');
                     context.fillStyle = gradient;
                     context.fillRect(0, 0, canvas.width, canvas.height);
-                    if (orb != 'g') {
+                    if (orb != 'g' && orb != 'str' && orb != 'rainbow' && orb != 'meat') {
                         var temp = (orb < 1 ? [ 'f0d7', baseX + 13, baseY + 31 ] : [ 'f0d8', baseX + 13, baseY + 28 ]);
                         awesome(context, { text: temp[0], style: '28px', color: 'white',
                             x: temp[1], y: temp[2], stroke: 'gray' });
-                    } else {
+                    } else if (orb == 'g') {
                         type(context, { text: 'G', style: 'bold 20px "Open Sans"',
+                            x: baseX + 13, y: baseY + 28, color: 'white', stroke: 'black', strokeWidth: 2 });
+                    } else if (orb == 'str'){
+                        type(context, { text: 'S', style: 'bold 20px "Open Sans"',
+                            x: baseX + 13, y: baseY + 28, color: 'white', stroke: 'black', strokeWidth: 2 });
+                    } else if (orb == 'rainbow'){
+                        type(context, { text: 'R', style: 'bold 20px "Open Sans"',
+                            x: baseX + 13, y: baseY + 28, color: 'white', stroke: 'black', strokeWidth: 2 });
+                    } else{
+                        type(context, { text: 'M', style: 'bold 20px "Open Sans"',
                             x: baseX + 13, y: baseY + 28, color: 'white', stroke: 'black', strokeWidth: 2 });
                     }
                 }
@@ -106,15 +124,26 @@ app.controller('ImageGeneratorCtrl', function($scope, $filter, $timeout) {
                 var total = data.candies.hp + data.candies.atk + data.candies.rcv;
                 if (total > 0) {
                     type(context, { text: '+' + total, style: 'bold 14px "Open Sans"',
-                        x: baseX + 7, y: baseY + 103, color: 'gold', stroke: 'black', strokeWidth: 3 });
+                        x: baseX + 40, y: baseY + 18, color: 'gold', stroke: 'black', strokeWidth: 3 });
+                }
+                
+                if (n >= 2 && window.sailors.hasOwnProperty(unit.number +1)) {
+                    awesome(context, { text: 'f13d', 
+                        x: baseX + 3, y: baseY + 105, color: 'gold', stroke: 'black', strokeWidth: 3 });
                 }
             };
             image.src = Utils.getThumbnailUrl(unit.number + 1);
+            //image.src = Utils.getGlobalThumbnailUrl(unit.number + 1);
+            //image.onerror = function(){
+            //    image.src = Utils.getThumbnailUrl(unit.number + 1);
+            //}
         });
     },true);
 
     baseX = 10; baseY = 85;
 
+	if($scope.numbers.healPerTurn) baseY +=25;
+	
     if ($scope.data.effect) {
         awesome(context, { text: 'f02d', x: baseX + 8, y: baseY + 20, align: 'center', color: 'darkorchid' });
         type(context, { text: $scope.data.effect, x: baseX + 25, y: baseY + 20, maxWidth: 155, truncate: true, color: 'darkorchid' });
@@ -137,6 +166,14 @@ app.controller('ImageGeneratorCtrl', function($scope, $filter, $timeout) {
         awesome(context, { text: 'f162', x: baseX + 8, y: baseY + 20, align: 'center' });
         var turns = $scope.tdata.turnCounter.value;
         type(context, { text: turns + (turns == 1 ? ' turn' : ' turns') + ' elapsed', x: baseX + 25, y: baseY + 20 });
+        baseY += 25;
+    }
+
+    // heal counter
+    if ($scope.tdata.healCounter.enabled) {
+        awesome(context, { text: 'f162', x: baseX + 8, y: baseY + 20, align: 'center' });
+        var turns = $scope.tdata.healCounter.value;
+        type(context, { text: turns + (turns == 1 ? ' Health Point' : ' Health Points') + ' recovered in the last turn', x: baseX + 25, y: baseY + 20 });
         baseY += 25;
     }
 

@@ -131,3 +131,10 @@ a:hover { color: #53dccd; }
 .pagination > li:hover > a {
     color: white;
 }
+
+@media (max-width: 1024px) {
+    #rightContainer {
+      background:   #404040;
+    }
+    
+}
