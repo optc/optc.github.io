@@ -13833,7 +13833,6 @@ window.details = {
         captainNotes: "#{captainProportional : lower : 1 + 1.25 (1.35, 1.45, 1.55, 1.65, 1.75, & 2.25 respectively) * (1 - (remaining HP) / (total HP)) : 1 : 2.25(2.35, 2.45, 2.55, 2.65, 2.75, & 3.25 respectively)}",
         special: "Changes own orb into [INT], deals 100x character's ATK in typeless damage to all enemies that will ignore damage negating abilities and barriers. If enemies have All Debuff Protection or Delay Debuff Protection at the time the special was activated, amplifies the effect of orbs by 2x for 1 turn. If enemies have a barrier at the time the special was activated, boosts own ATK by 2.25x",
         specialName: "Whitebeard Special",
-        sailor: "Limit Broken: +100HP +50ATK to all characters",
         limit: [
             { "description": "Aquire 1 additional Socket slot" },
             { "description": "Boosts base ATK by 10" },
