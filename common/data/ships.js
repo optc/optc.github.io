@@ -12,7 +12,7 @@ window.ships = [
                                       1.3 ;
         },
         rcvStatic: function(p) {
-            return p.slot !== 1 ? 0 :
+            return p.slot != 1 ? 0 :
                 [ 30, 40, 50, 60, 70, 80, 90, 100, 110, 120 ][p.boatLevel - 1];
         }
     },
@@ -22,7 +22,7 @@ window.ships = [
         thumb: 'ship_0002_c.png',
         description: 'Boosts ATK by 1.5x, boosts captain\'s HP by 300 units',
         hpStatic: function(p) {
-            return p.slot !== 1 ? 0 :
+            return p.slot != 1 ? 0 :
                 [ 100, 130, 150, 170, 190, 210, 230, 250, 270, 300 ][p.boatLevel - 1];
         },
         atk: function(p) {
@@ -52,7 +52,7 @@ window.ships = [
         thumb: 'ship_0004_c.png',
         description: 'Boosts captain\'s HP by 2000 units',
         hpStatic: function(p) {
-            return p.slot !== 1 ? 0 :
+            return p.slot != 1 ? 0 :
                 [ 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300, 2000 ][p.boatLevel - 1];
         }
     },
@@ -70,7 +70,7 @@ window.ships = [
                 [ 1.1, 1.1, 1.2, 1.2, 1.3, 1.3, 1.3, 1.4, 1.4, 1.5 ][p.boatLevel - 1];
         },
         rcvStatic: function(p) {
-            return p.slot !== 1 ? 0 : -700;
+            return p.slot != 1 ? 0 : -700;
         }
     },
 
@@ -125,10 +125,10 @@ window.ships = [
         thumb: 'ship_0010_c1.png',
         description: 'Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of QCK characters by 1.4x and their HP by 1.3x',
         atk: function(p) {
-            return p.unit.type !== 'QCK' ? 1 : [ 1.1, 1.1, 1.15, 1.2, 1.2, 1.2, 1.25, 1.3, 1.3, 1.4 ][p.boatLevel - 1];
+            return p.unit.type != 'QCK' ? 1 : [ 1.1, 1.1, 1.15, 1.2, 1.2, 1.2, 1.25, 1.3, 1.3, 1.4 ][p.boatLevel - 1];
         },
         hp: function(p) {
-            return p.unit.type !== 'QCK' ? 1 : [ 1, 1.1, 1.1, 1.1, 1.15, 1.2, 1.2, 1.2, 1.3, 1.3 ][p.boatLevel - 1];
+            return p.unit.type != 'QCK' ? 1 : [ 1, 1.1, 1.1, 1.1, 1.15, 1.2, 1.2, 1.2, 1.3, 1.3 ][p.boatLevel - 1];
         }
     },
 
@@ -197,10 +197,10 @@ window.ships = [
         thumb: 'ship_0016_c1.png',
         description: 'Boosts ATK of QCK and PSY characters by 1.5x and their HP by 1.2x. Special: Deals 56560 fixed Damage to all enemies (cooldown: 17 Turns)',
         atk: function(p) {
-            return p.unit.type === "PSY" || p.unit.type === "QCK" ? [ 1.2, 1.2, 1.2, 1.2, 1.2, 1.3, 1.3, 1.3, 1.4, 1.5 ][p.boatLevel - 1] : 1;
+            return p.unit.type == "PSY" || p.unit.type == "QCK" ? [ 1.2, 1.2, 1.2, 1.2, 1.2, 1.3, 1.3, 1.3, 1.4, 1.5 ][p.boatLevel - 1] : 1;
         },
         hp: function(p) {
-            return p.unit.type === "PSY" || p.unit.type === "QCK" ? [ 1, 1, 1, 1, 1, 1.1, 1.1, 1.1, 1.1, 1.2 ][p.boatLevel - 1] : 1;
+            return p.unit.type == "PSY" || p.unit.type == "QCK" ? [ 1, 1, 1, 1, 1, 1.1, 1.1, 1.1, 1.1, 1.2 ][p.boatLevel - 1] : 1;
         }
     },
     
@@ -221,7 +221,7 @@ window.ships = [
         thumb: 'ship_0018_c1.png',
         //description: 'Boosts ATK by 1.5x. At the start of the adventure, all specials start at MAX charge.',
         description: 'Boosts ATK by 1.2x.',
-        atk: function(p) { return 1.2; }
+        atk: function(p) { return 1.2; },
     }, 
     
     { // 18
@@ -230,11 +230,11 @@ window.ships = [
         description: 'Boosts ATK and HP of Fighter characters depending on the number of Fighters on the team. Sharply reduces ATK and HP of non-Fighter units.',
         atk: function(p) {
             return !p.unit.class.has('Fighter') ? .05 :
-                [ p.classCount.Fighter === 1 ? 1 : p.classCount.Fighter === 2 ? 1.01 : p.classCount.Fighter === 3 ? 1.02 : p.classCount.Fighter === 4 ? 1.03 : p.classCount.Fighter === 5 ? 1.04 : p.classCount.Fighter === 6 ? 1.05 : 0, p.classCount.Fighter === 1 ? 1 : p.classCount.Fighter === 2 ? 1.02 : p.classCount.Fighter === 3 ? 1.03 : p.classCount.Fighter === 4 ? 1.04 : p.classCount.Fighter === 5 ? 1.05 : p.classCount.Fighter === 6 ? 1.1 : 0, p.classCount.Fighter === 1 ? 1 : p.classCount.Fighter === 2 ? 1.02 : p.classCount.Fighter === 3 ? 1.03 : p.classCount.Fighter === 4 ? 1.05 : p.classCount.Fighter === 5 ? 1.1 : p.classCount.Fighter === 6 ? 1.15 : 0, p.classCount.Fighter === 1 ? 1 : p.classCount.Fighter === 2 ? 1.02 : p.classCount.Fighter === 3 ? 1.05 : p.classCount.Fighter === 4 ? 1.1 : p.classCount.Fighter === 5 ? 1.15 : p.classCount.Fighter === 6 ? 1.2 : 0, p.classCount.Fighter === 1 ? 1 : p.classCount.Fighter === 2 ? 1.05 : p.classCount.Fighter === 3 ? 1.1 : p.classCount.Fighter === 4 ? 1.15 : p.classCount.Fighter === 5 ? 1.2 : p.classCount.Fighter === 6 ? 1.25 : 0, p.classCount.Fighter === 1 ? 1 : p.classCount.Fighter === 2 ? 1.05 : p.classCount.Fighter === 3 ? 1.1 : p.classCount.Fighter === 4 ? 1.15 : p.classCount.Fighter === 5 ? 1.2 : p.classCount.Fighter === 6 ? 1.3 : 0, p.classCount.Fighter === 1 ? 1 : p.classCount.Fighter === 2 ? 1.1 : p.classCount.Fighter === 3 ? 1.15 : p.classCount.Fighter === 4 ? 1.2 : p.classCount.Fighter === 5 ? 1.25 : p.classCount.Fighter === 6 ? 1.35 : 0, p.classCount.Fighter === 1 ? 1 : p.classCount.Fighter === 2 ? 1.1 : p.classCount.Fighter === 3 ? 1.15 : p.classCount.Fighter === 4 ? 1.2 : p.classCount.Fighter === 5 ? 1.3 : p.classCount.Fighter === 6 ? 1.4 : 0, p.classCount.Fighter === 1 ? 1 : p.classCount.Fighter === 2 ? 1.1 : p.classCount.Fighter === 3 ? 1.15 : p.classCount.Fighter === 4 ? 1.2 : p.classCount.Fighter === 5 ? 1.3 : p.classCount.Fighter === 6 ? 1.45 : 0, p.classCount.Fighter === 1 ? 1 : p.classCount.Fighter === 2 ? 1.1 : p.classCount.Fighter === 3 ? 1.2 : p.classCount.Fighter === 4 ? 1.3 : p.classCount.Fighter === 5 ? 1.4 : p.classCount.Fighter === 6 ? 1.5 : 0][p.boatLevel - 1];
+                [ p.classCount.Fighter == 1 ? 1 : p.classCount.Fighter == 2 ? 1.01 : p.classCount.Fighter == 3 ? 1.02 : p.classCount.Fighter == 4 ? 1.03 : p.classCount.Fighter == 5 ? 1.04 : p.classCount.Fighter == 6 ? 1.05 : 0, p.classCount.Fighter == 1 ? 1 : p.classCount.Fighter == 2 ? 1.02 : p.classCount.Fighter == 3 ? 1.03 : p.classCount.Fighter == 4 ? 1.04 : p.classCount.Fighter == 5 ? 1.05 : p.classCount.Fighter == 6 ? 1.1 : 0, p.classCount.Fighter == 1 ? 1 : p.classCount.Fighter == 2 ? 1.02 : p.classCount.Fighter == 3 ? 1.03 : p.classCount.Fighter == 4 ? 1.05 : p.classCount.Fighter == 5 ? 1.1 : p.classCount.Fighter == 6 ? 1.15 : 0, p.classCount.Fighter == 1 ? 1 : p.classCount.Fighter == 2 ? 1.02 : p.classCount.Fighter == 3 ? 1.05 : p.classCount.Fighter == 4 ? 1.1 : p.classCount.Fighter == 5 ? 1.15 : p.classCount.Fighter == 6 ? 1.2 : 0, p.classCount.Fighter == 1 ? 1 : p.classCount.Fighter == 2 ? 1.05 : p.classCount.Fighter == 3 ? 1.1 : p.classCount.Fighter == 4 ? 1.15 : p.classCount.Fighter == 5 ? 1.2 : p.classCount.Fighter == 6 ? 1.25 : 0, p.classCount.Fighter == 1 ? 1 : p.classCount.Fighter == 2 ? 1.05 : p.classCount.Fighter == 3 ? 1.1 : p.classCount.Fighter == 4 ? 1.15 : p.classCount.Fighter == 5 ? 1.2 : p.classCount.Fighter == 6 ? 1.3 : 0, p.classCount.Fighter == 1 ? 1 : p.classCount.Fighter == 2 ? 1.1 : p.classCount.Fighter == 3 ? 1.15 : p.classCount.Fighter == 4 ? 1.2 : p.classCount.Fighter == 5 ? 1.25 : p.classCount.Fighter == 6 ? 1.35 : 0, p.classCount.Fighter == 1 ? 1 : p.classCount.Fighter == 2 ? 1.1 : p.classCount.Fighter == 3 ? 1.15 : p.classCount.Fighter == 4 ? 1.2 : p.classCount.Fighter == 5 ? 1.3 : p.classCount.Fighter == 6 ? 1.4 : 0, p.classCount.Fighter == 1 ? 1 : p.classCount.Fighter == 2 ? 1.1 : p.classCount.Fighter == 3 ? 1.15 : p.classCount.Fighter == 4 ? 1.2 : p.classCount.Fighter == 5 ? 1.3 : p.classCount.Fighter == 6 ? 1.45 : 0, p.classCount.Fighter == 1 ? 1 : p.classCount.Fighter == 2 ? 1.1 : p.classCount.Fighter == 3 ? 1.2 : p.classCount.Fighter == 4 ? 1.3 : p.classCount.Fighter == 5 ? 1.4 : p.classCount.Fighter == 6 ? 1.5 : 0][p.boatLevel - 1];
         },
         hp: function(p) {
             return !p.unit.class.has('Fighter') ? .05 :
-                [ p.classCount.Fighter === 1 ? 1 : p.classCount.Fighter === 2 ? 1.01 : p.classCount.Fighter === 3 ? 1.02 : p.classCount.Fighter === 4 ? 1.03 : p.classCount.Fighter === 5 ? 1.04 : p.classCount.Fighter === 6 ? 1.05 : 0, p.classCount.Fighter === 1 ? 1 : p.classCount.Fighter === 2 ? 1.02 : p.classCount.Fighter === 3 ? 1.03 : p.classCount.Fighter === 4 ? 1.04 : p.classCount.Fighter === 5 ? 1.05 : p.classCount.Fighter === 6 ? 1.1 : 0, p.classCount.Fighter === 1 ? 1 : p.classCount.Fighter === 2 ? 1.02 : p.classCount.Fighter === 3 ? 1.03 : p.classCount.Fighter === 4 ? 1.05 : p.classCount.Fighter === 5 ? 1.1 : p.classCount.Fighter === 6 ? 1.15 : 0, p.classCount.Fighter === 1 ? 1 : p.classCount.Fighter === 2 ? 1.02 : p.classCount.Fighter === 3 ? 1.05 : p.classCount.Fighter === 4 ? 1.1 : p.classCount.Fighter === 5 ? 1.15 : p.classCount.Fighter === 6 ? 1.2 : 0, p.classCount.Fighter === 1 ? 1 : p.classCount.Fighter === 2 ? 1.05 : p.classCount.Fighter === 3 ? 1.1 : p.classCount.Fighter === 4 ? 1.15 : p.classCount.Fighter === 5 ? 1.2 : p.classCount.Fighter === 6 ? 1.25 : 0, p.classCount.Fighter === 1 ? 1 : p.classCount.Fighter === 2 ? 1.05 : p.classCount.Fighter === 3 ? 1.1 : p.classCount.Fighter === 4 ? 1.15 : p.classCount.Fighter === 5 ? 1.2 : p.classCount.Fighter === 6 ? 1.3 : 0, p.classCount.Fighter === 1 ? 1 : p.classCount.Fighter === 2 ? 1.1 : p.classCount.Fighter === 3 ? 1.15 : p.classCount.Fighter === 4 ? 1.2 : p.classCount.Fighter === 5 ? 1.25 : p.classCount.Fighter === 6 ? 1.35 : 0, p.classCount.Fighter === 1 ? 1 : p.classCount.Fighter === 2 ? 1.1 : p.classCount.Fighter === 3 ? 1.15 : p.classCount.Fighter === 4 ? 1.2 : p.classCount.Fighter === 5 ? 1.3 : p.classCount.Fighter === 6 ? 1.4 : 0, p.classCount.Fighter === 1 ? 1 : p.classCount.Fighter === 2 ? 1.1 : p.classCount.Fighter === 3 ? 1.15 : p.classCount.Fighter === 4 ? 1.2 : p.classCount.Fighter === 5 ? 1.3 : p.classCount.Fighter === 6 ? 1.45 : 0, p.classCount.Fighter === 1 ? 1 : p.classCount.Fighter === 2 ? 1.1 : p.classCount.Fighter === 3 ? 1.2 : p.classCount.Fighter === 4 ? 1.3 : p.classCount.Fighter === 5 ? 1.4 : p.classCount.Fighter === 6 ? 1.5 : 0][p.boatLevel - 1];
+                [ p.classCount.Fighter == 1 ? 1 : p.classCount.Fighter == 2 ? 1.01 : p.classCount.Fighter == 3 ? 1.02 : p.classCount.Fighter == 4 ? 1.03 : p.classCount.Fighter == 5 ? 1.04 : p.classCount.Fighter == 6 ? 1.05 : 0, p.classCount.Fighter == 1 ? 1 : p.classCount.Fighter == 2 ? 1.02 : p.classCount.Fighter == 3 ? 1.03 : p.classCount.Fighter == 4 ? 1.04 : p.classCount.Fighter == 5 ? 1.05 : p.classCount.Fighter == 6 ? 1.1 : 0, p.classCount.Fighter == 1 ? 1 : p.classCount.Fighter == 2 ? 1.02 : p.classCount.Fighter == 3 ? 1.03 : p.classCount.Fighter == 4 ? 1.05 : p.classCount.Fighter == 5 ? 1.1 : p.classCount.Fighter == 6 ? 1.15 : 0, p.classCount.Fighter == 1 ? 1 : p.classCount.Fighter == 2 ? 1.02 : p.classCount.Fighter == 3 ? 1.05 : p.classCount.Fighter == 4 ? 1.1 : p.classCount.Fighter == 5 ? 1.15 : p.classCount.Fighter == 6 ? 1.2 : 0, p.classCount.Fighter == 1 ? 1 : p.classCount.Fighter == 2 ? 1.05 : p.classCount.Fighter == 3 ? 1.1 : p.classCount.Fighter == 4 ? 1.15 : p.classCount.Fighter == 5 ? 1.2 : p.classCount.Fighter == 6 ? 1.25 : 0, p.classCount.Fighter == 1 ? 1 : p.classCount.Fighter == 2 ? 1.05 : p.classCount.Fighter == 3 ? 1.1 : p.classCount.Fighter == 4 ? 1.15 : p.classCount.Fighter == 5 ? 1.2 : p.classCount.Fighter == 6 ? 1.3 : 0, p.classCount.Fighter == 1 ? 1 : p.classCount.Fighter == 2 ? 1.1 : p.classCount.Fighter == 3 ? 1.15 : p.classCount.Fighter == 4 ? 1.2 : p.classCount.Fighter == 5 ? 1.25 : p.classCount.Fighter == 6 ? 1.35 : 0, p.classCount.Fighter == 1 ? 1 : p.classCount.Fighter == 2 ? 1.1 : p.classCount.Fighter == 3 ? 1.15 : p.classCount.Fighter == 4 ? 1.2 : p.classCount.Fighter == 5 ? 1.3 : p.classCount.Fighter == 6 ? 1.4 : 0, p.classCount.Fighter == 1 ? 1 : p.classCount.Fighter == 2 ? 1.1 : p.classCount.Fighter == 3 ? 1.15 : p.classCount.Fighter == 4 ? 1.2 : p.classCount.Fighter == 5 ? 1.3 : p.classCount.Fighter == 6 ? 1.45 : 0, p.classCount.Fighter == 1 ? 1 : p.classCount.Fighter == 2 ? 1.1 : p.classCount.Fighter == 3 ? 1.2 : p.classCount.Fighter == 4 ? 1.3 : p.classCount.Fighter == 5 ? 1.4 : p.classCount.Fighter == 6 ? 1.5 : 0][p.boatLevel - 1];
         }
     },
     
@@ -242,16 +242,16 @@ window.ships = [
         name: "Doflamingo Ship",
         thumb: 'ship_0020_c.png',
         description: 'Boosts ATK of Driven Characters by 1.5x and their HP by 1.35x. Makes Perfects easier to Hit for Driven characters. Special: Adds 0.2 to Chain  (cooldown MAX: 15 Turns)',
-        atk: function(p) { return !p.unit.class.has('Driven') ? 1 : [ 1.2, 1.2, 1.3, 1.3, 1.3, 1.3, 1.4, 1.4, 1.4, 1.5][p.boatLevel - 1]; },
-        hp: function(p) { return !p.unit.class.has('Driven') ? 1 : [ 1.1, 1.1, 1.1, 1.15, 1.2, 1.2, 1.2, 1.2, 1.2, 1.35][p.boatLevel - 1]; }
+        atk: function(p) { return !p.unit.class.has('Driven') ? 1 : [ 1.2, 1.2, 1.3, 1.3, 1.3, 1.3, 1.4, 1.4, 1.4, 1.5][p.boatLevel - 1]},
+        hp: function(p) { return !p.unit.class.has('Driven') ? 1 : [ 1.1, 1.1, 1.1, 1.15, 1.2, 1.2, 1.2, 1.2, 1.2, 1.35][p.boatLevel - 1]}
     },
     
     { // 19.2
         name: "Doflamingo Ship - Special ACTIVATED",
         thumb: 'ship_0020_c.png',
         description: 'Boosts ATK of Driven Characters by 1.5x and their HP by 1.35x. Makes Perfects easier to Hit for Driven characters. ACTIVATED Special: Adds 0.2 to Chain  (cooldown MAX: 15 Turns)',
-        atk: function(p) { return !p.unit.class.has('Driven') ? 1 : [ 1.2, 1.2, 1.3, 1.3, 1.3, 1.3, 1.4, 1.4, 1.4, 1.5][p.boatLevel - 1]; },
-        hp: function(p) { return !p.unit.class.has('Driven') ? 1 : [ 1.1, 1.1, 1.1, 1.15, 1.2, 1.2, 1.2, 1.2, 1.2, 1.35][p.boatLevel - 1]; }
+        atk: function(p) { return !p.unit.class.has('Driven') ? 1 : [ 1.2, 1.2, 1.3, 1.3, 1.3, 1.3, 1.4, 1.4, 1.4, 1.5][p.boatLevel - 1]},
+        hp: function(p) { return !p.unit.class.has('Driven') ? 1 : [ 1.1, 1.1, 1.1, 1.15, 1.2, 1.2, 1.2, 1.2, 1.2, 1.35][p.boatLevel - 1]}
     },
     
     { // 20
@@ -265,8 +265,8 @@ window.ships = [
             return p.unit.class.has('Powerhouse') ? 1 : 0.01;
         },
         heal: function(p) {
-            return p.classCount.Powerhouse === 1 ? 1 : p.classCount.Powerhouse === 2 ? 10 : p.classCount.Powerhouse === 3 ? 20 : p.classCount.Powerhouse === 4 ? 30 : p.classCount.Powerhouse === 5 ? 100 : p.classCount.Powerhouse === 6 ? 900 : 0;  
-        }
+            return p.classCount.Powerhouse == 1 ? 1 : p.classCount.Powerhouse == 2 ? 10 : p.classCount.Powerhouse == 3 ? 20 : p.classCount.Powerhouse == 4 ? 30 : p.classCount.Powerhouse == 5 ? 100 : p.classCount.Powerhouse == 6 ? 900 : 0;  
+        },
         
     },
     
@@ -277,7 +277,7 @@ window.ships = [
         description: 'Boosts HP by 1.3x.',
         hp: function(p) {
             return 1.3;
-        }
+        },
     },
     
     { // 22
@@ -285,11 +285,11 @@ window.ships = [
         thumb: 'ship_0023_c.png',
         description: 'Boosts ATK of [STR] and [PSY] characters by 1.5x, and their HP by 1.25x',
         atk: function(p) {
-            return p.unit.type === "PSY" || p.unit.type === "STR" ? [ 1.2, 1.25, 1.25, 1.3, 1.35, 1.35, 1.4, 1.4, 1.45, 1.5 ][p.boatLevel - 1] : 1;
+            return p.unit.type == "PSY" || p.unit.type == "STR" ? [ 1.2, 1.25, 1.25, 1.3, 1.35, 1.35, 1.4, 1.4, 1.45, 1.5 ][p.boatLevel - 1] : 1;
         },
         hp: function(p) {
-            return p.unit.type === "PSY" || p.unit.type === "STR" ? [ 1.1, 1.1, 1.15, 1.15, 1.15, 1.2, 1.2, 1.25, 1.25, 1.25 ][p.boatLevel - 1] : 1;
-        }
+            return p.unit.type == "PSY" || p.unit.type == "STR" ? [ 1.1, 1.1, 1.15, 1.15, 1.15, 1.2, 1.2, 1.25, 1.25, 1.25 ][p.boatLevel - 1] : 1;
+        },
     },
     
     { //23
@@ -301,7 +301,7 @@ window.ships = [
         },
         hp: function(p) {
             return !(p.unit.class.has('Slasher') || p.unit.class.has('Free Spirit')) ? 1 : [ 1.1, 1.1, 1.1, 1.1, 1.2, 1.2, 1.2, 1.2, 1.25, 1.25 ][p.boatLevel - 1];
-        }
+        },
     },
     { // 24
         name: 'New Year\'s Big Top',
@@ -336,11 +336,11 @@ window.ships = [
         thumb: 'ship_0028_c.png',
         description: 'Boosts ATK of Striker characters by 1.5x and their HP by 1.2x if there are 6 Striker characters in your crew. Reduces special cooldown of Striker characters by 1 at the start of the adventure.  Special: Reduces any damage received above 10,000 HP by 97% (cooldown: 17 turns).',
         atk: function(p) {
-            return !(p.classCount.Striker === 6) ? 1 : !p.unit.class.has('Striker') ? 1 :
+            return !(p.classCount.Striker == 6) ? 1 : !p.unit.class.has('Striker') ? 1 :
                 [ 1.1, 1.2, 1.2, 1.2, 1.2, 1.3, 1.3, 1.4, 1.4, 1.5 ][p.boatLevel - 1];
         },
         hp: function(p) {
-            return !(p.classCount.Striker === 6) ? 1 : !p.unit.class.has('Striker') ? 1 :
+            return !(p.classCount.Striker == 6) ? 1 : !p.unit.class.has('Striker') ? 1 :
                 [ 1.1, 1.1, 1.1, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2 ][p.boatLevel - 1];
         }
     },
@@ -350,11 +350,11 @@ window.ships = [
         thumb: 'ship_0029_c.png',
         description: 'Boosts ATK of [DEX] and [INT] characters by 1.5x and their HP by 1.25x',
         atk: function(p) {
-            return p.unit.type === "DEX" || p.unit.type === "INT" ? [ 1.2, 1.25, 1.25, 1.3, 1.35, 1.35, 1.4, 1.4, 1.45, 1.5 ][p.boatLevel - 1] : 1;
+            return p.unit.type == "DEX" || p.unit.type == "INT" ? [ 1.2, 1.25, 1.25, 1.3, 1.35, 1.35, 1.4, 1.4, 1.45, 1.5 ][p.boatLevel - 1] : 1;
         },
         hp: function(p) {
-            return p.unit.type === "DEX" || p.unit.type === "INT" ? [ 1.1, 1.1, 1.15, 1.15, 1.15, 1.2, 1.2, 1.25, 1.25, 1.25 ][p.boatLevel - 1] : 1;
-        }
+            return p.unit.type == "DEX" || p.unit.type == "INT" ? [ 1.1, 1.1, 1.15, 1.15, 1.15, 1.2, 1.2, 1.25, 1.25, 1.25 ][p.boatLevel - 1] : 1;
+        },
     },
     
     { //29
@@ -368,7 +368,7 @@ window.ships = [
         hp: function(p) {
             return !(p.unit.class.has('Slasher') || p.unit.class.has('Striker') || p.unit.class.has('Fighter') || p.unit.class.has('Free Spirit') || p.unit.class.has('Cerebral') || p.unit.class.has('Powerhouse') || p.unit.class.has('Driven')) ? 2 : 1.02;
         },*/
-        atk: function(p) { return p.unit.class.has("Shooter") ? 1.2 : 1; }
+        atk: function(p) { return p.unit.class.has("Shooter") ? 1.2 : 1; },
     },
     
     { //29.2
@@ -382,7 +382,7 @@ window.ships = [
         hp: function(p) {
             return !(p.unit.class.has('Slasher') || p.unit.class.has('Striker') || p.unit.class.has('Fighter') || p.unit.class.has('Free Spirit') || p.unit.class.has('Cerebral') || p.unit.class.has('Powerhouse') || p.unit.class.has('Driven')) ? 2 : 1.02;
         },*/
-        atk: function(p) { return p.unit.class.has("Shooter") ? 1.2 : 1; }
+        atk: function(p) { return p.unit.class.has("Shooter") ? 1.2 : 1; },
     },
     
     
@@ -392,7 +392,7 @@ window.ships = [
         thumb: 'ship_0032_c.png',
         //description: 'Boosts ATK by 1.5x. At the start of the adventure, all specials start at MAX charge.',
         description: 'Boosts ATK by 1.2x.',
-        atk: function(p) { return 1.2; }
+        atk: function(p) { return 1.2; },
     },
     
     
@@ -401,7 +401,7 @@ window.ships = [
         name: "Flying Dutchman",
         thumb: 'ship_0033_c.png',
         description: 'Boosts ATK by 1.5x. Boosts EXP gained by 1.5x. Special: Reduces the defense of all enemies by 25% for 1 turn (cooldown: 16 turns).',
-        atk: function(p) { return [ 1.2, 1.2, 1.3, 1.3, 1.4, 1.4, 1.4, 1.4, 1.4, 1.5 ][p.boatLevel - 1]; }
+        atk: function(p) { return [ 1.2, 1.2, 1.3, 1.3, 1.4, 1.4, 1.4, 1.4, 1.4, 1.5 ][p.boatLevel - 1]; },
     },
     
     
@@ -410,7 +410,7 @@ window.ships = [
         name: "Flying Dutchman - Special ACTIVATED",
         thumb: 'ship_0033_c.png',
         description: 'Boosts ATK by 1.5x. Boosts EXP gained by 1.5x. ACTIVATED Special: Reduces the defense of all enemies by 25% for 1 turn (cooldown: 16 turns).',
-        atk: function(p) { return [ 1.2, 1.2, 1.3, 1.3, 1.4, 1.4, 1.4, 1.4, 1.4, 1.5 ][p.boatLevel - 1]; }
+        atk: function(p) { return [ 1.2, 1.2, 1.3, 1.3, 1.4, 1.4, 1.4, 1.4, 1.4, 1.5 ][p.boatLevel - 1]; },
     },
     
     
@@ -444,7 +444,7 @@ window.ships = [
     
     
     { //34
-        name: "Zunisha",
+        name: "Zunisha", //Levels are placeholders, specific boost of each one is unkown 
         thumb: null,
         description: 'Boost ATK of Powerhouse and Cerebral units by 1.55x and their HP by 1.25x, makes Perfects easier to hit, and makes TND and Meat orbs beneficial to Powerhouse and Cerebral units.',
         atk: function(p) {
@@ -452,7 +452,7 @@ window.ships = [
         },
         hp: function(p) {
             return !(p.unit.class.has('Powerhouse') || p.unit.class.has('Cerebral')) ? 1 : [ 1.25, 1.25, 1.25, 1.25, 1.25, 1.25, 1.25, 1.25, 1.25, 1.25 ][p.boatLevel - 1];
-        }
-    }
+        },
+    },
 
 ];
