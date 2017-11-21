@@ -555,7 +555,7 @@ window.effects = {
         atk: function(p) {
             var id = p.number + 1,
                 matching = ((id > 1777 && id < 1778) ||
-                    [ 1441, 1442, 1701, 1702, 1659, 1660, 1631, 1632, 1699, 1700, 1748, 1749 ].indexOf(id) !== -1);
+                    [ 1441, 1442, 1701, 1702, 1659, 1660, 1631, 1632, 1699, 1700, 1748, 1749, 1615, 1616 ].indexOf(id) !== -1);
             return !matching ? 1 : 1.75;
         },
         chainModifier: function(p) { return 0.5 ; }//Chain by half
@@ -569,24 +569,23 @@ window.effects = {
         atk: function(p) {
             var id = p.number + 1,
                 matching = ((id > 1777 && id < 1778) ||
-                    [ 1441, 1442, 1701, 1702, 1659, 1660, 1631, 1632, 1699, 1700, 1748, 1749 ].indexOf(id) !== -1);
+                    [ 1441, 1442, 1701, 1702, 1659, 1660, 1631, 1632, 1699, 1700, 1748, 1749, 1615, 1616 ].indexOf(id) !== -1);
             return !matching ? 1 : 1.75;
         },
         chainModifier: function(p) { return 0.5 ; }//Chain by half
     },
     
     'Kizaru Neo [GLOBAL] - Powerhouse': {
-        description: 'Chain multiplier locked at 1.1x.',
+        description: 'Chain multiplier locked at 1.1x after revive.',
         thumb: 1780,
         id: 51,
         //orb: function(p) { return p.orb === 2.0 ? 1.2 : (p.orb === 0.5 ? 5/6 : 1); },
         atk: function(p) {
             var id = p.number + 1,
                 matching = ((id > 1777 && id < 1778) ||
-                    [ 1441, 1442, 1701, 1702, 1659, 1660, 1631, 1632, 1699, 1700, 1748, 1749 ].indexOf(id) !== -1);
+                    [ 1441, 1442, 1701, 1702, 1659, 1660, 1631, 1632, 1699, 1700, 1748, 1749, 1615, 1616 ].indexOf(id) !== -1);
             return !matching ? 1 : 1.75;
         },
         chainLimiter: function() { return 1.1; } //Chain locked at 1.1x
     }
-    
 };
