@@ -13930,13 +13930,13 @@ window.details = {
         specialName: "The Rain of War's End"
     },
     1869: {//Fujitora
-        captain: "Increases damage received by ???x, Boosts ATK of Slasher characters by 3.25x at the start of the chain and their HP by 1.2x, and boosts ATK of Slasher characters by 4.225x after scoring 3 Perfects in a row",
+        captain: "Increases damage received by ???x, Boosts ATK of Slasher characters by 3.25x at the start of the chain and their HP by 1.2x, and boosts ATK of Slasher characters by 4.225x following a chain of Good > Great > Perfect hits",
         special: "Deals 10 hits of 20x character's ATK in typeless damage to random enemies, if this character is your Captain or Friend/Guest Captain, Changes all orbs on Slasher characters into Matching orbs and delays all enemies for 1 turn.",
         specialName: "The Rain of War's End",
         limit: "This unit has a limit break path"
     },
     1868: {//Fujitora
-        captain: "Increases damage received by ???x, Boosts ATK of Slasher characters by 3.25x at the start of the chain and their HP by 1.2x, and boosts ATK of Slasher characters by 4.225x after scoring 3 Perfects in a row",
+        captain: "Increases damage received by ???x, Boosts ATK of Slasher characters by 3.25x at the start of the chain and their HP by 1.2x, and boosts ATK of Slasher characters by 4.225x following a chain of Good > Great > Perfect hits",
         special: "Deals 10 hits of 20x character's ATK in typeless damage to random enemies, if this character is your Captain or Friend/Guest Captain, Changes all orbs on Slasher characters into Matching orbs and delays all enemies for 1 turn.",
         specialName: "The Rain of War's End"
     },
