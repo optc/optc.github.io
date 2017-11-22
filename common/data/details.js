@@ -13925,42 +13925,37 @@ window.details = {
         specialName: "Fortune-Telling from the Shadow of Death"
     },
     1868: {//Fujitora
-        captain: "Increases damage received by ???x, Boosts ATK of Slasher characters by 3.25x at the start of the chain and their HP by 1.2x, and boosts ATK of Slasher characters by 4.225x after scoring 3 Perfects in a row",
-        special: "Deals 10 hits of 20x character's ATK in typeless damage to random enemies, if this character is your Captain or Friend/Guest Captain, Changes all orbs on Slasher characters into Matching orbs and delays all enemies for 1 turn.",
-        specialName: "The Rain of War's End"
-    },
-    1869: {//Fujitora
         captain: "Increases damage received by ???x, Boosts ATK of Slasher characters by 3.25x at the start of the chain and their HP by 1.2x, and boosts ATK of Slasher characters by 4.225x following a chain of Good > Great > Perfect hits",
         special: "Deals 10 hits of 20x character's ATK in typeless damage to random enemies, if this character is your Captain or Friend/Guest Captain, Changes all orbs on Slasher characters into Matching orbs and delays all enemies for 1 turn.",
         specialName: "The Rain of War's End",
         limit: "This unit has a limit break path"
     },
-    1870: {//Fujitora
+    1869: {//Fujitora
         captain: "Increases damage received by ???x, Boosts ATK of Slasher characters by 3.25x at the start of the chain and their HP by 1.2x, and boosts ATK of Slasher characters by 4.225x following a chain of Good > Great > Perfect hits",
         special: "Deals 10 hits of 20x character's ATK in typeless damage to random enemies, if this character is your Captain or Friend/Guest Captain, Changes all orbs on Slasher characters into Matching orbs and delays all enemies for 1 turn.",
         specialName: "The Rain of War's End"
     },
-    1871: {//Bellamy
+    1870: {//Bellamy
         captain: "Boosts ATK of Slasher characters by 2.25x",
         special: "Reduces crew's current HP by 50%, deals 10x the amount of HP subtracted in typeless damage to one enemy, reduces enemy's Threshold Damage Reduction, Increased Defense and ATK UP duration by 3 turns and changes own orb into [PSY]",
         specialName: "Spring Death Knock",
         sailor: "Boosts this character's attack against [INT] characters by 1.1x"
     },
-    1872: {//Bellamy
+    1871: {//Bellamy
         captain: "Not Translated",
         special: "Reduces crew's current HP by 50%, deals 10x the amount of HP subtracted in typeless damage to one enemy, reduces enemy's Threshold Damage Reduction, Increased Defense and ATK UP duration by 3 turns and changes own orb into [PSY]",
         specialName: "Spring Death Knock",
         sailor: "Boosts this character's attack against [INT] characters by 1.1x",
         limit: "This unit has a limit break path"
     },
-    1873: {//Kyros
+    1872: {//Kyros
         captain: "Boosts ATK of Slasher and Striker characters by 2.25x",
         special: "Deals 30x character's ATK in [STR] damage to one enemy, reduces Bind and Despair duration by 2 turns and boosts ATK of Slasher characters by 1.75x for 3 turns",
         specialName: "The Forefront Reclaiming His Country",
         sailor: "Adds 2x character's ATK as Additional Typeless Damage",
         sailorNotes: "#{additionalDamage : 2x}",
     },
-    1874: {//Kyros
+    1873: {//Kyros
         captain: "Not Translated",
         special: "Deals 30x character's ATK in [STR] damage to one enemy, reduces Bind and Despair duration by 2 turns and boosts ATK of Slasher characters by 1.75x for 3 turns",
         specialName: "The Forefront Reclaiming His Country",
@@ -13968,14 +13963,14 @@ window.details = {
         sailorNotes: "#{additionalDamage : 2x}",
         limit: "This unit has a limit break path"
     },
-    1875: {//Violet
+    1874: {//Violet
         captain: "Boosts amount of Beli received by 2.5x",
         special: "Changes [RCV], [TND], [EMPTY] and [BLOCK] orbs into Matching orbs, reduces Palysis and Silence duration by 2 turns and adds .5x to Chain multiplier for 1 turn",
         specialName: "Violent Interrogation of Passion",
         sailor: "Completely resists Silence on this character",
         sailorNotes: "#{silence}",
     },
-    1876: {//Violet
+    1875: {//Violet
         captain: "Not Translated",
         special: "Changes [RCV], [TND], [EMPTY] and [BLOCK] orbs into Matching orbs, reduces Palysis and Silence duration by 2 turns and adds .5x to Chain multiplier for 1 turn",
         specialName: "Violent Interrogation of Passion",
@@ -13983,13 +13978,13 @@ window.details = {
         sailorNotes: "#{silence}",
         limit: "This unit has a limit break path"
     },
-    1877: {//Rebecca
+    1876: {//Rebecca
         captain: "Boosts ATK of Slasher characters by 2x and reduces damage received by 10%",
         special: "Deals 50,000 fixed damage to one enemy, reduces Chain Multiplier Limit duration by 5 turns and changes adjacent orbs into matching orbs",
         specialName: "Strike of Determination",
         sailor: "Makes [STR] orbs \"beneficial\" for this unit"
     },
-    1878: {//Rebecca
+    1877: {//Rebecca
         captain: "Boosts ATK of Slasher characters by 2x and reduces damage received by 10%",
         special: "Deals 50,000 fixed damage to one enemy, reduces Chain Multiplier Limit duration by 5 turns and changes adjacent orbs into matching orbs",
         specialName: "Strike of Determination",
