@@ -443,13 +443,13 @@ window.matchers = [
     {
         name: 'Enemy End of Turn buff remover',
         target: 'special',
-        matcher: /removes.+End of Turn/i 
+        matcher: /(removes|reduces).+End of Turn/i 
     },
 
     {
         name: 'Enemy Enrage buff remover',
         target: 'special',
-        matcher: /removes.+Enrage/i 
+        matcher: /(removes|reduces).+Enrage/i 
     },
 
     {
@@ -462,6 +462,12 @@ window.matchers = [
         name: 'Enemy Threshold Damage Reduction remover',
         target: 'special',
         matcher: /(removes|reduces).+Threshold Damage Reduction/i 
+    },
+
+    {
+        name: 'Enemy Resilience remover',
+        target: 'special',
+        matcher: /(removes|reduces).+Resilience/i 
     },
 
     {

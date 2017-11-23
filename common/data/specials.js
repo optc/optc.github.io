@@ -3874,6 +3874,32 @@ window.specials = {
     1874: {
         chainAddition: function(p){ return 0.5; }
     },
+    1878: {
+        turnedOn: [ false, false ],
+        onActivation: function(p) {
+            window.specials[1878].turnedOn[p.slot] = true;
+            p.scope.notify({
+                text: 'Only affects damage if Bartolomeo is your captain',
+                name: '1878warning'
+            });
+        },
+        onDeactivation: function(p) {
+            window.specials[1878].turnedOn[p.slot] = false;
+        }
+    },
+    1879: {
+        turnedOn: [ false, false ],
+        onActivation: function(p) {
+            window.specials[1879].turnedOn[p.slot] = true;
+            p.scope.notify({
+                text: 'Only affects damage if Bartolomeo is your captain',
+                name: '1879warning'
+            });
+        },
+        onDeactivation: function(p) {
+            window.specials[1879].turnedOn[p.slot] = false;
+        }
+    },
     2000: {
         atk: function(p) { return 1.75; },
         type: "class"

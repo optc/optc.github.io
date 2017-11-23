@@ -9363,7 +9363,7 @@ window.details = {
         specialName: "General Cannon",
     },
     1433: {//Hody Jones
-        captain: "Reduces cooldown of Powerhouse specials by 1 turn at the start of the fight, reduces crew's current HP by 10% at the end of each turn, and boosts ATK of Powerhouse characters by 3x if there are 6 Powerhouse characters in your crew and boosts HP of Powerhouse characters by up to 2x depending on how many Powerhouse characters are in your crew.",
+        captain: "Reduces cooldown of Powerhouse specials by 1 turn at the start of the fight, reduces crew's current HP by 10% at the end of each turn, boosts ATK of Powerhouse characters by 3x if there are 6 Powerhouse characters in your crew and boosts HP of Powerhouse characters by up to 2x depending on how many Powerhouse characters are in your crew.",
         captainNotes: "Hody's HP boost is dependent on how many Powerhouse characters are in your crew. With 6 Powerhouse characters, the boost is 2x, with 5 the boost is 1.5x, with 4 the boost is 1.4x, with 3 the boost is 1.3x, with 2 the boost is 1.2x, and with 1 the boost is 1.1x.",
         special: [
             {
@@ -9379,7 +9379,7 @@ window.details = {
         specialName: "Water Bullets",
     },
     1434: {//Hody Jones
-        captain: "Reduces cooldown of Powerhouse specials by 1 turn at the start of the fight, reduces crew's current HP by 10% at the end of each turn, and boosts ATK of Powerhouse characters by 3x if there are 6 Powerhouse characters in your crew and boosts HP of Powerhouse characters by up to 2x depending on how many Powerhouse characters are in your crew.",
+        captain: "Reduces cooldown of Powerhouse specials by 1 turn at the start of the fight, reduces crew's current HP by 10% at the end of each turn, boosts ATK of Powerhouse characters by 3x if there are 6 Powerhouse characters in your crew and boosts HP of Powerhouse characters by up to 2x depending on how many Powerhouse characters are in your crew.",
         captainNotes: "Hody's HP boost is dependent on how many Powerhouse characters are in your crew. With 6 Powerhouse characters, the boost is 2x, with 5 the boost is 1.5x, with 4 the boost is 1.4x, with 3 the boost is 1.3x, with 2 the boost is 1.2x, and with 1 the boost is 1.1x.",
         special: [
             {
@@ -12363,12 +12363,14 @@ window.details = {
         ]
     },
     1746: {//Boa Hancock
-        captain: "Boosts ATK of Shooter characters by a variable factor between 2.5x and 3.25x based on the timing of the attack of the previous unit in the chain and recovers 1,000 HP at end of each turn. Greatly reduces chances of getting [TND] / [RCV] orbs",
+        captain: "Boosts ATK of Shooter characters by a variable factor between 2.5x and 3.25x based on the timing of the attack of the previous unit in the chain and recovers 1,000 HP at end of each turn. Greatly reduces chances of getting [TND] and [RCV] orbs",
+        captainNotes: "A hit below Good or a Miss will boost the ATK of the next unit by 2.5x, a Good hit by 2.75x, a Great hit by 3x and a Perfect hit by 3.25x. This bonus is applied only to Shooter characters.",
         special: "Deals 6 hits of 20,000 fixed damage to random enemies, delays all enemies for 1 turn and makes [STR], [DEX], [QCK], [PSY] and [INT] orbs \"beneficial\" for Shooter characters for 2 turns",
         specialName: "Pistol Kisses",
     },
     1747: {//Boa Hancock
-        captain: "Boosts ATK of Shooter characters by a variable factor between 2.5x and 3.25x based on the timing of the attack of the previous unit in the chain and recovers 1,000 HP at end of each turn. Greatly reduces chances of getting [TND] / [RCV] orbs",
+        captain: "Boosts ATK of Shooter characters by a variable factor between 2.5x and 3.25x based on the timing of the attack of the previous unit in the chain and recovers 1,000 HP at end of each turn. Greatly reduces chances of getting [TND] and [RCV] orbs",
+        captainNotes: "A hit below Good or a Miss will boost the ATK of the next unit by 2.5x, a Good hit by 2.75x, a Great hit by 3x and a Perfect hit by 3.25x. This bonus is applied only to Shooter characters.",
         special: "Deals 6 hits of 20,000 fixed damage to random enemies, delays all enemies for 1 turn and makes [STR], [DEX], [QCK], [PSY] and [INT] orbs \"beneficial\" for Shooter characters for 2 turns",
         specialName: "Pistol Kisses",
         limit: [
@@ -13990,6 +13992,66 @@ window.details = {
         specialName: "Strike of Determination",
         sailor: "Makes [STR] orbs \"beneficial\" for this unit",
         limit: "This unit has a limit break path"
+    },
+    1878: {//Bartolomeo
+        captain: "Boosts ATK of all characters by 1.5x and reduces damage received by 10%. If you use \"Barrier Crash\" boosts ATK of all characters by 2.25x instead.",
+        specialName: "Barrier Crash",
+        special: [
+            {
+                "description": "Reduces any damage received above 5,000 HP by ??% for 1 turn, recovers 20% of crew's MAX HP, reduces enemies' ATK Up and Enrage Buffs by 5 turns.",
+                "cooldown": [ 28, null ],
+            },
+            {
+                "description": "Reduces any damage received above 3,000 HP by ??% for 1 turn, recovers 50% of crew's MAX HP, reduces enemies' ATK Up, Enrage, End of Turn Damage/Percent Cut, and Resilience Buffs by 5 turns.",
+                "cooldown": [ 33, null ],
+            },
+        ],
+    },
+    1879: {//Bartolomeo
+        captain: "Boosts ATK of all characters by 2.25x and their HP by 1.35x and reduces damage received by 10%. If you use \"Barrier Crash\" boosts ATK of all characters by 2.75x instead.",
+        specialName: "Barrier Crash",
+        special: [
+            {
+                "description": "Reduces any damage received above 5,000 HP by ??% for 1 turn, recovers 20% of crew's MAX HP, reduces enemies' ATK Up and Enrage Buffs by 5 turns.",
+                "cooldown": [ 28, null ],
+            },
+            {
+                "description": "Reduces any damage received above 3,000 HP by ??% for 1 turn, recovers 50% of crew's MAX HP, reduces enemies' ATK Up, Enrage, End of Turn Damage/Percent Cut, and Resilience Buffs by 5 turns.",
+                "cooldown": [ 33, null ],
+            },
+        ],
+    },
+    1880: {//Hody Jones 6+
+        captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, reduces crew's current HP by ??% at the end of each turn, boosts ATK of Powerhouse characters by 3.25x if there are 6 Powerhouse characters in your crew and boosts HP of Powerhouse characters by up to 2x depending on how many Powerhouse characters are in your crew.",
+        captainNotes: "Hody's HP boost is dependent on how many Powerhouse characters are in your crew. With 6 Powerhouse characters, the boost is 2x, with 5 the boost is 1.5x, with 4 the boost is 1.4x, with 3 the boost is 1.3x, with 2 the boost is 1.2x, and with 1 the boost is 1.1x. [BASED ON 6*]",
+        special: [
+            {
+                "description": "Deals ??x character's ATK in [INT] damage to one enemy that will ignore damage negating abilities and barriers, reduces Special Cooldown of Powerhouse characters by 1 turn, reduces damage received by 60% for 1 turn",
+                "cooldown": [ 12, 7 ],
+            },
+            {
+                "description": "Deals ??x character's ATK in [INT] damage to one enemy that will ignore damage negating abilities and barriers, reduces Special Cooldown of Powerhouse characters by 2 turns, reduces damage received by 90% for 1 turn",
+                "cooldown": [ 21, 16 ],
+            },
+        ],
+        specialNotes: "#{ignoreBarrier}<br>#{stages}",
+        specialName: "Swarm of Sharks",
+    },
+    1881: {//Mihawk 6+
+        captain: "Boosts ATK of Slasher characters by a variable factor between 1.5x and 3.5x based on the timing of the attack of the previous unit in the chain",
+        captainNotes: "A hit below Good or a Miss will boost the ATK of the next unit by 1.5x, a Good hit by ???x, a Great hit by ???x and a Perfect hit by 3.5x. This bonus is applied only to Slasher characters.",
+        special: [
+            {
+                "description": "Deals 30% of the damage dealt in the previous turn as typeless damage to all enemies",
+                "cooldown": [ 18, 12 ]
+            },
+            {
+                "description": "Deals 60% of the damage dealt in the previous turn as typeless damage to all enemies",
+                "cooldown": [ 24, 18 ]
+            }
+        ],
+        specialNotes: "The special only includes the damage inflicted through normal attacks.<br>#{stages}",
+        specialName: "Flash of [Yoru]"
     },
     2000: {//Rayleigh
         captain: "Boosts ATK of Slasher and Cerebral characters by 2x",

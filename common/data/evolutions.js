@@ -2857,11 +2857,11 @@ window.evolutions = {
     },
     1831: {
         evolution: 1832,
-        evolvers: [  ],
+        evolvers: [ 118, 103, 98, 303, 267 ],
     },
     1833: {
         evolution: 1834,
-        evolvers: [  ],
+        evolvers: [ 88, 99, 1180, 304, 104 ],
     },
     1835: {
         evolution: 1836,
@@ -2913,7 +2913,7 @@ window.evolutions = {
     },
     1858: {
         evolution: 1859,
-        evolvers: [  ],
+        evolvers: [ 118, 88, 99, 304, 104 ],
     },
     1860: {
         evolution: 1861,
@@ -2939,17 +2939,29 @@ window.evolutions = {
         evolution: 1871,
         evolvers: [  ],
     },
-    1873: {
-        evolution: 1874,
+    1872: {
+        evolution: 1873,
         evolvers: [  ],
     },
-    1875: {
-        evolution: 1876,
+    1874: {
+        evolution: 1875,
         evolvers: [  ],
     },
-    1877: {
-        evolution: 1878,
+    1876: {
+        evolution: 1877,
         evolvers: [  ],
+    },
+    1878: {
+        evolution: 1879,
+        evolvers: [  ],
+    },
+    1434: {
+        evolution: 1880,
+        evolvers: [ 'skullINT', 118, 88, 303, 267 ],
+    },
+    718: {
+        evolution: 1881,
+        evolvers: [ 'skullINT', 118, 88, 303, 267 ],
     },
     2000: {
         evolution: 2001,

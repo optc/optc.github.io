@@ -5928,6 +5928,42 @@ window.captains = {
     1877: {
         atk: function(p) { return p.unit.class.has("Slasher") ? 2 : 1; }
     },
+    1878: {
+        atk: function(p){ 
+            var specialEnabled = false;
+            for(var i=0;i<2;i++)
+            {
+                if(window.specials[1878].turnedOn[i]==true){specialEnabled = true;}
+                if(window.specials[1879].turnedOn[i]==true){specialEnabled = true;}
+            }
+            return specialEnabled ? 1.5 : 2.25; },
+    },
+    1879: {
+        atk: function(p){ 
+            var specialEnabled = false;
+            for(var i=0;i<2;i++)
+            {
+                if(window.specials[1878].turnedOn[i]==true){specialEnabled = true;}
+                if(window.specials[1879].turnedOn[i]==true){specialEnabled = true;}
+            }
+            return specialEnabled ? 2.75 : 2.25; },
+        hp: function(p) { return 1.35 }
+    },
+    1880: {
+        atk: function(p) { 
+            return p.unit.class.has("Powerhouse") ? p.classCount.Powerhouse==6 ? 3.25 : 1 : 1; },
+        hp: function(p) { 
+            return p.unit.class.has("Powerhouse") ? p.classCount.Powerhouse==6 ? 2 : p.classCount.Powerhouse==5 ? 1.5 : p.classCount.Powerhouse==4 ? 1.4 : p.classCount.Powerhouse==3 ? 1.3 : p.classCount.Powerhouse==2 ? 1.2 : p.classCount.Powerhouse==1 ? 1.1 : 1 : 1; },
+    },
+    1881: {
+        damageSorter: function(d) { return CrunchUtils.classSort(d, 3.25, [ "Slasher" ]); },
+        hitAtk: function(p) {
+            if (!p.unit.class.has('Slasher')) return 1;
+            var prev = p.modifiers.slice(p.chainPosition - 1, p.chainPosition)[0];
+            return p.chainPosition === 0 ? 1.5 : (prev == 'Good' ? 2.25 : (prev == 'Great' ? 2.5 : (prev == 'Perfect' ? 3.25 : 2)));
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
+    },
     2000: {
         atk: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Slasher") ? 2 : 1; },
     },

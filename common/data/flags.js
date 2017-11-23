@@ -1694,6 +1694,8 @@ window.flags = {
     1875: { rr: 1, rro: 1 },
     1876: { rr: 1, rro: 1 },
     1877: { rr: 1, rro: 1 },
+    1880: { rr: 1, rro: 1 },
+    1881: { rr: 1, rro: 1 },
     2000: { global: 1 },
     2001: { global: 1 },
 };
