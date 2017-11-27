@@ -5862,9 +5862,19 @@ window.captains = {
     },
     1853: {
         atk: function(p) {
-            return (1 + 1.25 * ((100 - p.percHP) / 100));
+            if(p.actions[p.sourceSlot]){
+                return (1 + 2.25 * ((100 - p.percHP) / 100));
+            }
+            else
+                return (1 + 1.25 * ((100 - p.percHP) / 100));
         },
-        hp: function(p) { return 1.2; },
+        hp: function(p) { 
+            if(p.actions[p.sourceSlot]){
+                return 1.35;
+            }
+            else
+                return 1.2;
+        },
     },
     1854: {
         atk: function(p) { return p.unit.class.has("Free Spirit") ? 2 : 1; },
@@ -5960,7 +5970,7 @@ window.captains = {
         hitAtk: function(p) {
             if (!p.unit.class.has('Slasher')) return 1;
             var prev = p.modifiers.slice(p.chainPosition - 1, p.chainPosition)[0];
-            return p.chainPosition === 0 ? 1.5 : (prev == 'Good' ? 2.25 : (prev == 'Great' ? 2.5 : (prev == 'Perfect' ? 3.25 : 2)));
+            return p.chainPosition === 0 ? 1.5 : (prev == 'Good' ? 2 : (prev == 'Great' ? 2.75 : (prev == 'Perfect' ? 3.25 : 2)));
         },
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
     },
