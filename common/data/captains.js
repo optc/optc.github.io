@@ -5860,6 +5860,14 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Driven") ? 2.25 : 1; },
         hp: function(p) { return p.unit.class.has("Driven") ? 1.3 : 1; },
     },
+    1852: {
+        atk: function(p) {
+                return (1 + 1 * ((100 - p.percHP) / 100));
+        },
+        hp: function(p) { 
+                return 1.2;
+        },
+    },
     1853: {
         atk: function(p) {
             if(p.actions[p.sourceSlot]){

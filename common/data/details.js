@@ -13339,8 +13339,8 @@ window.details = {
         specialName: "Deceiving the World with the Most Evil Show",
     },
     1807: {//Mihawk
-        captain: "Not Translated",
-        special: "Deals 100x character's ATK in typeless damage to all enemies, if your Captain is a Slasher character, locks the chain multiplier at 2.75x for 1 turn and  amplifies the effects of orbs for Slasher characters by 2x for 1 turn",
+        captain: "If you use \"Black Blade • The Ultimate Sword\" boosts ATK of Slasher characters by 1.35x for 1 turn",
+        special: "Deals 100x character's ATK in typeless damage to all enemies, if your Captain is a Slasher character, amplifies the effects of orbs for Slasher characters by 2x for 1 turn and locks the chain multiplier at 2.75x for 1 turn",
         specialName: "Black Blade • The Ultimate Sword",
     },
     1808: {//Mihawk
@@ -13353,7 +13353,7 @@ window.details = {
             "level5": "Boosts ATK of Slasher characters by 2x and their HP by 1.3x. If you use \"Black Blade • The Ultimate Sword\" boosts ATK of Slasher characters by 2.7x instead for 1 turn.",
             "level6": "Boosts ATK of Slasher characters by 2.5x and their HP by 1.3x. If you use \"Black Blade • The Ultimate Sword\" boosts ATK of Slasher characters by 3.5x instead for 1 turn.",
         },
-        special: "Deals 100x character's ATK in typeless damage to all enemies, if your Captain is a Slasher character, locks the chain multiplier at 2.75x for 1 turn and  amplifies the effects of orbs for Slasher characters by 2x for 1 turn",
+        special: "Deals 100x character's ATK in typeless damage to all enemies, if your Captain is a Slasher character, amplifies the effects of orbs for Slasher characters by 2x for 1 turn and locks the chain multiplier at 2.75x for 1 turn",
         specialName: "Black Blade • The Ultimate Sword",
         limit: [
             { "description": "Aquire 1 additional Socket slot" },
@@ -13815,7 +13815,8 @@ window.details = {
         sailorNotes: "#{beneficial}",
     },
     1852: {//Whitebeard
-        captain: "Not Translated",
+        captain: "Boosts ATK of all characters proportionally to the crew's current HP and their HP by 1.2x",
+        captainNotes: "#{captainProportional : lower : 1 + 1 * (1 - (remaining HP) / (total HP)) : 1 : 2}",
         special: "Changes own orb into [INT], deals 100x character's ATK in typeless damage to all enemies that will ignore damage negating abilities and barriers. If enemies have All Debuff Protection or Delay Debuff Protection at the time the special was activated, amplifies the effect of orbs by 2x for 1 turn. If enemies have a barrier at the time the special was activated, boosts own ATK by 2.25x",
         specialName: "The Epicenter of the Halberd",
     },
