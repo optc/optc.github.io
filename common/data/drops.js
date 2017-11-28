@@ -1638,7 +1638,7 @@ window.drops = {
             thumb: 1670,
             gamewith: 61622,
             condition: 'Total Crew Cost must be lower than 180 (Including friend captain)',
-            'All Difficulties': [ 1670, 1671, 1672, -1085, -451, -457, -1081, -1353, -1540, -1345, -955, -1350 ],
+            'All Difficulties': [ 1670, 1671, 1672, -1085, -451, -457, -1081, -1534, -1540, -1345, -955, -1350 ],
         },
         
         {
