@@ -3804,6 +3804,18 @@ window.specials = {
     1851: {
         chainAddition: function(p) { return 0.5; }
     },
+    1852: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 2.25 : 1; },
+        type: "type",
+        warning: "Selected special (%name%) assumes that the enemy has Delay Protection AND a Barrier active.",
+        orb: function(p) { return 2; }
+    },
+    1853: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 2.25 : 1; },
+        type: "type",
+        warning: "Selected special (%name%) assumes that the enemy has Delay Protection AND a Barrier active.",
+        orb: function(p) { return 2; }
+    },
     1854: {
         atk: function(p) { return p.unit.class.has("Free Spirit") ? 1.5 : 1; },
         type: "class",
