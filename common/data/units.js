@@ -1867,7 +1867,7 @@ window.units = [
     [ "Basil Hawkins, Supernova", "QCK", [ "Slasher", "Cerebral" ], 3, 13, null, null, null, null, null, null, null, null, null, null, null ],
     [ "\"The Magician\" Basil Hawkins, Supernova ", "QCK", [ "Striker", "Cerebral" ], 4, 20, 7, 4, 99, null, 1, 1, 1, 2078, 1079, 287, null ],
     [ "Fujitora, The New Admiral from the World Military Draft", "INT", [ "Slasher", "Powerhouse" ], 5, 30, null, 3, null, null, null, null, null, null, null, null, null ],
-    [ "Issho, Next Generation Navy HQ Greatest Military Power", "INT", [ "Slasher", "Powerhouse" ], 6, 55, null, 5, 99, 5000000, 1, 1, 1, 3222, 1576, 344, null ],
+    [ "Issho, Next Generation Navy HQ Greatest Military Power", "INT", [ "Slasher", "Powerhouse" ], 6, 55, 4, 5, 99, 5000000, 1, 1, 1, 3222, 1576, 344, null ],
     [ "Bellamy the Hyena, Corrida Colosseum B Block's Bullet", "PSY", [ "Fighter", "Fighter" ], 4, 15, null, 3, null, null, null, null, null, null, null, null, null ],
     [ "Bellamy the Hyena, Dressrosa Current King's Assassin", "PSY", [ "Fighter", "Fighter" ], 5, 30, null, 5, 99, 4000000, 1, 1, 1, 3020, 1408, 292, null ],
     [ "Kyros, True Hero of the Corrida Colosseum", "STR", [ "Slasher", "Striker" ], 4, 15, null, 3, null, null, null, null, null, null, null, null, null ],
