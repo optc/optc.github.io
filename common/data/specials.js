@@ -3808,13 +3808,13 @@ window.specials = {
         atk: function(p) { return p.slot == p.sourceSlot ? 2.25 : 1; },
         type: "type",
         warning: "Selected special (%name%) assumes that the enemy has Delay Protection AND a Barrier active.",
-        orb: function(p) { return 2; }
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain]); }
     },
     1853: {
         atk: function(p) { return p.slot == p.sourceSlot ? 2.25 : 1; },
         type: "type",
         warning: "Selected special (%name%) assumes that the enemy has Delay Protection AND a Barrier active.",
-        orb: function(p) { return 2; }
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain]); }
     },
     1854: {
         atk: function(p) { return p.unit.class.has("Free Spirit") ? 1.5 : 1; },

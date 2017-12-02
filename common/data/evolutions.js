@@ -2917,43 +2917,43 @@ window.evolutions = {
     },
     1860: {
         evolution: 1861,
-        evolvers: [  ],
+        evolvers: [ 118, 96, 1180, 301, 101 ],
     },
     1862: {
         evolution: 1863,
-        evolvers: [  ],
+        evolvers: [ 118, 98, 98, 303, 267 ],
     },
     1864: {
         evolution: 1865,
-        evolvers: [  ],
+        evolvers: [ 80, 86, 91, 97, 102 ],
     },
     1866: {
         evolution: 1867,
-        evolvers: [  ],
+        evolvers: [ 79, 85, 90, 96, 101 ],
     },
     1868: {
         evolution: 1869,
-        evolvers: [  ],
+        evolvers: [ 118, 266, 94, 99, 267 ],
     },
     1870: {
         evolution: 1871,
-        evolvers: [  ],
+        evolvers: [ 117, 87, 98, 303, 103 ],
     },
     1872: {
         evolution: 1873,
-        evolvers: [  ],
+        evolvers: [ 84, 95, 1180, 300, 100 ],
     },
     1874: {
         evolution: 1875,
-        evolvers: [  ],
+        evolvers: [ 85, 266, 96, 301, 101 ],
     },
     1876: {
         evolution: 1877,
-        evolvers: [  ],
+        evolvers: [ 86, 94, 97, 302, 102 ],
     },
     1878: {
         evolution: 1879,
-        evolvers: [  ],
+        evolvers: [ 118, 98, 1180, 303, 103 ],
     },
     1434: {
         evolution: 1880,
