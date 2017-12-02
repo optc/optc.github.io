@@ -15543,13 +15543,13 @@ window.details = {
         potentialNotes: "Enrage is activated when your crew took damage from your enemies in the previous turn"
     },
     1870: {//Bellamy
-        captain: "Boosts ATK of Slasher characters by 2.25x",
+        captain: "Boosts ATK of Driven characters by 2.25x",
         special: "Reduces crew's current HP by 50%, deals 10x the amount of HP subtracted in typeless damage to one enemy, reduces enemy's Threshold Damage Reduction, Increased Defense and ATK UP duration by 3 turns and changes own orb into [PSY]",
         specialName: "Spring Death Knock",
         sailor: "Boosts this character's attack against [INT] characters by 1.1x"
     },
     1871: {//Bellamy
-        captain: "Boosts ATK of Slasher characters by 2.75x",
+        captain: "Boosts ATK of Driven characters by 2.75x",
         special: "Reduces crew's current HP by 50%, deals 10x the amount of HP subtracted in typeless damage to one enemy, reduces enemy's Threshold Damage Reduction, Increased Defense and ATK UP duration by 3 turns and changes own orb into [PSY]",
         specialName: "Spring Death Knock",
         sailor: "Boosts this character's attack against [INT] characters by 1.1x",
