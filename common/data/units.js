@@ -1878,7 +1878,7 @@ window.units = [
     [ "Rebecca, Dressrosa Former Royal Family's Future", "DEX", [ "Slasher", "Striker" ], 5, 30, 4, 5, 99, 4000000, 974, 520, 154, 2051, 1203, 403, 1 ],
     [ "Bartolomeo, \"Barto Club\" Pirates Captain", "PSY", [ "Striker", "Driven" ], 4, 30, 5, 2, 70, 1066998, 444, 255, 41, 1475, 701, 156, 1 ],
     [ "Bartolomeo the Cannibal, Barto Club Pirates Captain", "PSY", [ "Striker", "Driven" ], 5, 50, 4, 3, 99, 4000000, 1388, 631, 133, 3170, 1359, 220, 1 ],
-    [ "Hody Jones, False Crusader Rampaging Recklessly", "INT", [ "Powerhouse", "Shooter" ], '6+', 65, 4, 5, 99, 5000000, 2122, 1587, 226, 4526, 1587, 226, 1 ],
+    [ "Hody Jones, False Crusader Rampaging Recklessly", "INT", [ "Powerhouse", "Shooter" ], '6+', 65, 4, 5, 99, 5000000, 2122, 742, 41, 4526, 1587, 226, 1 ],
     [ "Hawk Eyes Mihawk, The Black Blade [Yoru]", "INT", "Slasher", '6+', 65, 6, 4, 99, 5000000, 1922, 814, 31, 4200, 1590, 120, 1 ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
