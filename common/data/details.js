@@ -15949,12 +15949,12 @@ window.details = {
     },
     1882: {//Rayleigh V2
         captain: "Boosts ATK of all characters by 3.5x and boosts chances of getting Matching orbs if HP is below 30% at the start of the turn, 2.5x otherwise and boosts the HP and RCV of all characters by 1.25x",
-        special: "Deals 200,000 fixed damage to all enemies that will ignore damage negating abilities and barriers, locks the chain multiplier at 2.5x for 1 turn and amplifies the effect of orbs by 1.75x for 1 turn",
+        special: "Deals 200,000 fixed damage to all enemies that will ignore damage negating abilities and barriers, locks the chain multiplier at 3x for 1 turn, amplifies the effect of orbs by 1.75x for 1 turn and Changes [RCV], [TND], [EMPTY] and [BLOCK] orbs into Matching orbs",
         specialName: "Signaling the Beginning of a Bright Future",
     },
     1883: {//Rayleigh V2
         captain: "Boosts ATK of all characters by 3.5x and boosts chances of getting Matching orbs if HP is below 30% at the start of the turn, 2.5x otherwise and boosts the HP and RCV of all characters by 1.25x",
-        special: "Deals 200,000 fixed damage to all enemies that will ignore damage negating abilities and barriers, locks the chain multiplier at 2.5x for 1 turn and amplifies the effect of orbs by 1.75x for 1 turn",
+        special: "Deals 200,000 fixed damage to all enemies that will ignore damage negating abilities and barriers, locks the chain multiplier at 3x for 1 turn, amplifies the effect of orbs by 1.75x for 1 turn and Changes [RCV], [TND], [EMPTY] and [BLOCK] orbs into Matching orbs",
         specialName: "Signaling the Beginning of a Bright Future",
         limit: "This character has a limit break path and will be updated soon (ish)"
     },
