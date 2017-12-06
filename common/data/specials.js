@@ -3872,18 +3872,18 @@ window.specials = {
     1869: {
         delay: function(p) { return 1; },
     },
-    1871: {
-        atk: function(p) { return p.unit.class.has("Slasher") ? 1.75 : 1; },
-        type: "class"
-    },
     1872: {
         atk: function(p) { return p.unit.class.has("Slasher") ? 1.75 : 1; },
         type: "class"
     },
     1873: {
-        chainAddition: function(p){ return 0.5; }
+        atk: function(p) { return p.unit.class.has("Slasher") ? 1.75 : 1; },
+        type: "class"
     },
     1874: {
+        chainAddition: function(p){ return 0.5; }
+    },
+    1875: {
         chainAddition: function(p){ return 0.5; }
     },
     1878: {
