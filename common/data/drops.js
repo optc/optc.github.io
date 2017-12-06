@@ -2208,7 +2208,7 @@ window.drops = {
         {
             name: 'Adventure Mode',
             thumb: 1808,
-            Adventure: [ 1807, 1852 ]
+            Adventure: [ 1807, 1852, 1888 ]
         },
         
         {

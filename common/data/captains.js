@@ -6003,6 +6003,87 @@ window.captains = {
         },
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
     },
+    1882: {
+        atk: function(p) { return p.percHP <= 10.0 ? 3.5 : 2.5; },
+        hp: function(p) { return 1.2; },
+        rcv: function(p) { return 1.2; },
+    },
+    1883: {
+        atk: function(p) { return p.percHP <= 10.0 ? 3.5 : 2.5; },
+        hp: function(p) { return 1.2; },
+        rcv: function(p) { return 1.2; },
+    },
+    1884: {
+        atk: function(p) { return p.unit.class.has("Cerebral") ? 1.75 : 1; },
+        hp: function(p) { return p.unit.class.has("Cerebral") ? 1.1 : 1; },
+    },
+    1885: {
+        atk: function(p) { return p.unit.class.has("Cerebral") ? 2.25 : 1; },
+        hp: function(p) { return p.unit.class.has("Cerebral") ? 1.2 : 1; },
+    },
+    1886: {
+        atk: function(p) { return p.unit.class.has("Driven") ? 1.75 : 1; },
+        hp: function(p) { return p.unit.class.has("Driven") ? 1.1 : 1; },
+    },
+    1887: {
+        atk: function(p) { return p.unit.class.has("Driven") ? 2.25 : 1; },
+        hp: function(p) { return p.unit.class.has("Driven") ? 1.2 : 1; },
+    },
+    1889: {
+        hitAtk: function(p) {
+            return p.unit.class.has("Driven") ? (CrunchUtils.okamaCheck(p.damage.slice(0, p.chainPosition), p.modifiers, [{
+                type: 'STR',
+                minModifier: 'Good'
+            }, {
+                type: 'STR',
+                minModifier: 'Good'
+            }, {
+                type: 'STR',
+                minModifier: 'Good'
+            }]) || 
+            CrunchUtils.okamaCheck(p.damage.slice(0, p.chainPosition), p.modifiers, [{
+                type: 'QCK',
+                minModifier: 'Good'
+            }, {
+                type: 'QCK',
+                minModifier: 'Good'
+            }, {
+                type: 'QCK',
+                minModifier: 'Good'
+            }]) || 
+            CrunchUtils.okamaCheck(p.damage.slice(0, p.chainPosition), p.modifiers, [{
+                type: 'DEX',
+                minModifier: 'Good'
+            }, {
+                type: 'DEX',
+                minModifier: 'Good'
+            }, {
+                type: 'DEX',
+                minModifier: 'Good'
+            }]) || 
+            CrunchUtils.okamaCheck(p.damage.slice(0, p.chainPosition), p.modifiers, [{
+                type: 'PSY',
+                minModifier: 'Good'
+            }, {
+                type: 'PSY',
+                minModifier: 'Good'
+            }, {
+                type: 'PSY',
+                minModifier: 'Good'
+            }]) || 
+            CrunchUtils.okamaCheck(p.damage.slice(0, p.chainPosition), p.modifiers, [{
+                type: 'INT',
+                minModifier: 'Good'
+            }, {
+                type: 'INT',
+                minModifier: 'Good'
+            }, {
+                type: 'INT',
+                minModifier: 'Good'
+            }])) ? 3.75 : 2.5 : 1;
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
+    },
     2000: {
         atk: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Slasher") ? 2 : 1; },
     },

@@ -11141,7 +11141,7 @@ window.details = {
     1521: {//Dogra
         captain: "Boosts ATK of [QCK] and Slasher characters by 1.2x",
         captainNotes: "The bonus is cumulative. [QCK] Slasher characters get a 1.44x bonus.",
-        special: "Reduces Despair duration by 1 turn, recovers 1000 HP at the end of each turn for 2 turns",
+        special: "Reduces Despair duration by 1 turn, recovers 1,000 HP at the end of each turn for 2 turns",
         specialName: "Affectionate Circumstances",
     },
     1522: {//Ace
@@ -13898,7 +13898,7 @@ window.details = {
     1764: {//6+ Aokiji
         captain: "Boosts ATK of all characters by 2.25x and their HP by 1.25x. If you defeat an enemy, increases ATK boost slighty. Stacks up to 5 times to a maximum of 3.5x.",
         captainNotes: "If a character dies and revives, it counts as killing a character. If you did not defeat an enemy, lose all ATK boost stacks.",
-        special: "Increases duration of any Class/Type boosting buffs and Orb Amplification buffs by 1 turn, locks the chain multiplier at 2.5x for 1 turn and deals 100000 fixed damage to all enemies that will ignore damage negating abilities and barriers.",
+        special: "Increases duration of any Class/Type boosting buffs and Orb Amplification buffs by 1 turn, locks the chain multiplier at 2.5x for 1 turn and deals 100,000 fixed damage to all enemies that will ignore damage negating abilities and barriers.",
         specialNotes: "#{ignoreBarrier}",
         specialName: "Determined Man's Ice Attack",
     },
@@ -15772,11 +15772,11 @@ window.details = {
         special: [
             {
                 "description": "Reduces any damage received above 5,000 HP by 97% for 1 turn, recovers 20% of crew's MAX HP, reduces enemies' ATK Up and Enrage Buffs by 5 turns.",
-                "cooldown": [ 28, null ],
+                "cooldown": [ 28, 13 ],
             },
             {
                 "description": "Reduces any damage received above 3,000 HP by 97% for 1 turn, recovers 50% of crew's MAX HP, reduces enemies' ATK Up, Enrage, End of Turn Damage/Percent Cut, and Resilience Buffs by 5 turns.",
-                "cooldown": [ 33, null ],
+                "cooldown": [ 33, 18 ],
             },
         ],
         limit: [
@@ -15946,6 +15946,56 @@ window.details = {
             { "description": "Boosts base ATK by 60" },
             { "description": "Aquire Potential 3: " },
         ],
+    },
+    1882: {//Rayleigh V2
+        captain: "Boosts ATK of all characters by 3.5x and boosts chances of getting Matching orbs if HP is below 30% at the start of the turn, 2.5x otherwise and boosts the HP and RCV of all characters by 1.25x",
+        special: "Deals 200,000 fixed damage to all enemies that will ignore damage negating abilities and barriers, locks the chain multiplier at 2.5x for 1 turn and amplifies the effect of orbs by 1.75x for 1 turn",
+        specialName: "Signaling the Beginning of a Bright Future",
+    },
+    1883: {//Rayleigh V2
+        captain: "Boosts ATK of all characters by 3.5x and boosts chances of getting Matching orbs if HP is below 30% at the start of the turn, 2.5x otherwise and boosts the HP and RCV of all characters by 1.25x",
+        special: "Deals 200,000 fixed damage to all enemies that will ignore damage negating abilities and barriers, locks the chain multiplier at 2.5x for 1 turn and amplifies the effect of orbs by 1.75x for 1 turn",
+        specialName: "Signaling the Beginning of a Bright Future",
+        limit: "This character has a limit break path and will be updated soon (ish)"
+    },
+    1884: {//Robin
+        captain: "Boosts ATK of Cerebral characters by 1.75x and their HP by 1.1x",
+        special: "Reduces Paralysis duration by 2 turns, Changes [EMPTY] orbs into Matching orbs and delays all enemies for 1 turn",
+        specialName: "Blooming Flower Spear",
+    },
+    1885: {//Robin
+        captain: "Boosts ATK of Cerebral characters by 2.25x and their HP by 1.2x",
+        special: "Reduces Paralysis duration by 2 turns, Changes [EMPTY] orbs into Matching orbs and delays all enemies for 1 turn",
+        specialName: "Blooming Flower Spear",
+    },
+    1886: {//Gladius
+        captain: "Boosts ATK of Driven characters by 1.75x and their HP by 1.1x",
+        special: "Reduces crew's current HP by 80%, Empties all slots with [BOMB] orbs, deals severe typeless damage based on number of [BOMB] slots emptied to all enemies and boosts ATK against delayed enemies by 1.5x for 2 turns",
+        specialName: "Fashion Pop",
+    },
+    1887: {//Gladius
+        captain: "Boosts ATK of Driven characters by 2.25x and their HP by 1.2x",
+        special: "Reduces crew's current HP by 80%, Empties all slots with [BOMB] orbs, deals severe typeless damage based on number of [BOMB] slots emptied to all enemies and boosts ATK against delayed enemies by 1.5x for 2 turns",
+        specialName: "Fashion Pop",
+    },
+    1888: {//Cavendish
+        captain: "Not Translated",
+        special: "Removes all positive buffs on your team, recovers 1,224 HP, changes Badly Matching orbs into Matching orbs. Boosts ATK of Driven characters by 1.75x for 1 turn and amplifies the effect of orbs by 1.75x for Driven characters for 1 turn",
+        specialName: "A Star Descending from the Twinkling Night Sky",
+    },
+    1889: {//Cavendish
+        captain: {
+            "base": "Boosts ATK of Driven characters by 1.5x, recovers 1.5x character's RCV in HP at the end of each turn. Boosts ATK  of Driven characters by 1.8x following a chain of same type attacks no lower than Good",
+            "level1": "Not Translated",
+            "level2": "Not Translated",
+            "level3": "Not Translated",
+            "level4": "Not Translated",
+            "level5": "Not Translated",
+            "level6": "Boosts ATK of Driven characters by 2.5x, recovers 2 character's RCV in HP at the end of each turn. Boosts ATK  of Driven characters by 3.75x following a chain of same type attacks no lower than Good",
+        },
+        special: "Removes all positive buffs on your team, recovers 1,224 HP, changes Badly Matching orbs into Matching orbs. Boosts ATK of Driven characters by 1.75x for 1 turn and amplifies the effect of orbs by 1.75x for Driven characters for 1 turn",
+        specialName: "A Star Descending from the Twinkling Night Sky",
+        limit: "This character has a limit break path and will be updated soon (ish)"
     },
     2000: {//Rayleigh
         captain: "Boosts ATK of Slasher and Cerebral characters by 2x",

@@ -3912,6 +3912,46 @@ window.specials = {
             window.specials[1879].turnedOn[p.slot] = false;
         }
     },
+    1882: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain]); },
+        chain: function(p) { return 3; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 3 : 1;
+        }
+    },
+    1883: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain]); },
+        chain: function(p) { return 3; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 3 : 1;
+        }
+    },
+    1884: {
+        delay: function(p) { return 1; },
+    },
+    1885: {
+        delay: function(p) { return 1; },
+    },
+    1886: {
+        atk: function(p) { return p.delayed > 0 ? 1.5 : 1; },
+        type: "condition",
+    },
+    1887: {
+        atk: function(p) { return p.delayed > 0 ? 1.5 : 1; },
+        type: "condition",
+    },
+    1888: {
+        atk: function(p) { return p.unit.class.has("Driven") ? 1.75 : 1; },
+        type: "class",
+        orb: function(p) { return p.unit.class.has("Driven") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain]) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain]); }	
+    },
+    1889: {
+        atk: function(p) { return p.unit.class.has("Driven") ? 1.75 : 1; },
+        type: "class",
+        orb: function(p) { return p.unit.class.has("Driven") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain]) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain]); }	
+    },
     2000: {
         atk: function(p) { return 1.75; },
         type: "class"
