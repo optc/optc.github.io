@@ -477,7 +477,7 @@ window.matchers = [
     },
 
     {
-        name: 'Enemy Increased Defense remover',
+        name: 'Enemy Increased Defense removers',
         target: 'special',
         matcher: /(removes|reduces).+Increased Defense/i 
     },
@@ -489,7 +489,7 @@ window.matchers = [
     },
     
     {
-        name: 'Special cooldown reducer',
+        name: 'Special cooldown reducers',
         target: 'special',
         matcher: /reduces special cooldown/i
     },
@@ -504,6 +504,18 @@ window.matchers = [
         name: 'Chain Lockers',
         target: 'special',
         matcher: /Locks the chain multiplier/i 
+    },
+    
+    {
+        name: 'Chain Multiplier Limit Removers',
+        target: 'special',
+        matcher: /(removes|reduces).+Chain Multiplier Limit/i 
+    },
+    
+    {
+        name: 'Chain Coefficient Reduction Removers',
+        target: 'special',
+        matcher: /(removes|reduces).+Chain Coefficient Reduction/i 
     },
     
     {
