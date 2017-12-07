@@ -15948,13 +15948,13 @@ window.details = {
         ],
     },
     1882: {//Rayleigh V2
-        captain: "Reduces cooldown of all specials by 1 turn at the start of the fight. Boosts ATK of all characters by 3.5x and boosts chances of getting Matching orbs if HP is below 30% at the start of the turn, 2.5x otherwise and boosts the HP and RCV of all characters by 1.25x",
-        special: "Deals 200,000 fixed damage to all enemies that will ignore damage negating abilities and barriers, locks the chain multiplier at 3x for 1 turn, amplifies the effect of orbs by 1.75x for 1 turn and if  HP is below 30% at the time the special is activated, reduces damage received by 95% for 1 turn and changes [RCV], [TND], [EMPTY] and [BLOCK] orbs into Matching orbs",
+        captain: "Reduces cooldown of all specials by 1 turn at the start of the fight. Boosts ATK of all characters by 3.5x and boosts chances of getting Matching orbs if HP is below ??% at the start of the turn, 2.5x otherwise and boosts the HP and RCV of all characters by 1.25x",
+        special: "Deals 200,000 fixed damage to all enemies that will ignore damage negating abilities and barriers, locks the chain multiplier at 3x for 1 turn, amplifies the effect of orbs by 1.75x for 1 turn and if HP is below 30% at the time the special is activated, reduces damage received by 95% for 1 turn and changes [RCV], [TND], [EMPTY] and [BLOCK] orbs into Matching orbs",
         specialName: "Signaling the Beginning of a Bright Future",
     },
     1883: {//Rayleigh V2
-        captain: "Reduces cooldown of all specials by 1 turn at the start of the fight. Boosts ATK of all characters by 3.5x and boosts chances of getting Matching orbs if HP is below 30% at the start of the turn, 2.5x otherwise and boosts the HP and RCV of all characters by 1.25x",
-        special: "Deals 200,000 fixed damage to all enemies that will ignore damage negating abilities and barriers, locks the chain multiplier at 3x for 1 turn, amplifies the effect of orbs by 1.75x for 1 turn and if  HP is below 30% at the time the special is activated, reduces damage received by 95% for 1 turn and changes [RCV], [TND], [EMPTY] and [BLOCK] orbs into Matching orbs",
+        captain: "Reduces cooldown of all specials by 1 turn at the start of the fight. Boosts ATK of all characters by 3.5x and boosts chances of getting Matching orbs if HP is below ??% at the start of the turn, 2.5x otherwise and boosts the HP and RCV of all characters by 1.25x",
+        special: "Deals 200,000 fixed damage to all enemies that will ignore damage negating abilities and barriers, locks the chain multiplier at 3x for 1 turn, amplifies the effect of orbs by 1.75x for 1 turn and if HP is below 30% at the time the special is activated, reduces damage received by 95% for 1 turn and changes [RCV], [TND], [EMPTY] and [BLOCK] orbs into Matching orbs",
         specialName: "Signaling the Beginning of a Bright Future",
         limit: "This character has a limit break path and will be updated soon (ish)"
     },
