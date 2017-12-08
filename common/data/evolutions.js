@@ -2965,15 +2965,15 @@ window.evolutions = {
     },
     1882: {
         evolution: 1883,
-        evolvers: [  ]
+        evolvers: [ 118, 80, 1180, 302, 267 ]
     },
     1884: {
         evolution: 1885,
-        evolvers: [  ]
+        evolvers: [ 117, 82, 93, 99, 104 ]
     },
     1886: {
         evolution: 1887,
-        evolvers: [  ]
+        evolvers: [ 117, 79, 90, 96, 101 ]
     },
     1888: {
         evolution: 1889,
