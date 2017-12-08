@@ -341,7 +341,7 @@ window.matchers = [
     {
         name: 'Defense reducers',
         target: 'special',
-        matcher: /Reduces.+defense/i
+        matcher: /Reduces the defense/i
     },
 
     /*{

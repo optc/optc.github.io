@@ -8517,7 +8517,7 @@ window.details = {
     },
     1254: {//FN Squard
         captain: "Boosts ATK of Striker characters by 2.5x until the first hit other than Perfect. Reduce crew's current HP by 5% at the end of each turn.",
-        special: "Deals 10x character's ATK in fixed damage to one enemy, reduces crews current HP by 30% and reduces enemies defense by 80% for one turn",
+        special: "Deals 10x character's ATK in fixed damage to one enemy, reduces crews current HP by 30% and reduces the defense of all enemies by 80% for one turn",
         specialName: "Sword Attack Without Hesitation",
         sailor: "Reduces his own Numbness by 1 turn"
     },
@@ -11925,7 +11925,7 @@ window.details = {
     },
     1606: {//Lafitte
         captain: "Boosts ATK and RCV of [PSY] characters by 1.75x",
-        special: "Randomly shuffles non-matching orbs on Shooter characters, reduces enemies defense by 50% for 1 turn and delays all enemies for 1 turn",
+        special: "Randomly shuffles non-matching orbs on Shooter characters, reduces the defense of all enemies by 50% for 1 turn and delays all enemies for 1 turn",
         specialName: "Deprivation of Self-Consciousness",
     },
     1607: {//Van augur
