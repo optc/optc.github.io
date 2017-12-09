@@ -178,10 +178,16 @@
                                         <div ng-if="!isSailorHybrid" ng-bind-html="details.sailor | decorate"></div>
                                         <!-- different sailor abilities -->
                                         <div ng-if="isSailorHybrid">
-                                            <span class="badge badge-japan">Japan</span>
-                                            <div ng-bind-html="details.sailor.japan | decorate"></div>
-                                            <span class="badge badge-global">Global</span>
-                                            <div ng-bind-html="details.sailor.global | decorate"></div>
+                                            <span class="badge badge-japan" ng-show="details.sailor.japan">Japan</span>
+                                            <div ng-show="details.sailor.japan" ng-bind-html="details.sailor.japan | decorate"></div>
+                                            <span class="badge badge-global" ng-show="details.sailor.global">Global</span>
+                                            <div ng-show="details.sailor.global" ng-bind-html="details.sailor.global | decorate"></div>
+                                            <span class="badge badge-sbase" ng-show="details.sailor.base">Sailor Ability</span>
+                                            <div ng-show="details.sailor.base" ng-bind-html="details.sailor.base | decorate"></div>
+                                            <span class="badge badge-slevel1" ng-show="details.sailor.level1">Limit Break Sailor Ability 1</span>
+                                            <div ng-show="details.sailor.level1" ng-bind-html="details.sailor.level1 | decorate"></div>
+                                            <span class="badge badge-slevel2" ng-show="details.sailor.level2">Limit Break Sailor Ability 2</span>
+                                            <div ng-show="details.sailor.level2" ng-bind-html="details.sailor.level2 | decorate"></div>
                                         </div>
                                         <span class="notes" ng-if="details.sailorNotes" ng-bind-html="details.sailorNotes | notes | decorate"></span>
                                     </td>

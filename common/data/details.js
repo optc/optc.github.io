@@ -16,6 +16,11 @@ window.details = {
     4: {
         captain: "Boosts ATK of STR characters by 2x, and ATK of all others by 1.5x",
         special: "Deals 25x character's ATK in STR damage to one enemy",
+        sailor: {
+            "base": "None",
+            "level1": "Boosts own base ATK by 100 if this character is the last in the chain to attack",
+            "level2": "Makes [QCK] orbs \"beneficial\" for this unit"
+        },
         specialName: "Gum-Gum Twin Jet Pistol",
         limit: [
             { "description": "Reduce base Special Cooldown by 1 turn" },
@@ -10481,6 +10486,11 @@ window.details = {
         captain: "Boosts ATK of all characters by 2.25x and their HP by 1.25x, boosts ATK by 2.8125x after scoring 4 Perfects in a row",
         special: "Deals 40x character's ATK in [STR] damage to all enemies, and delays all enemies for 1 turn",
         specialName: "Gum Gum: Elephant Gun",
+        sailor: {
+            "base": "None",
+            "level1": "Boosts own base ATK by 100 if this character is the last in the chain to attack",
+            "level2": "Makes [QCK] orbs \"beneficial\" for this unit"
+        },
         limit: [
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base ATK by 30" },
@@ -15742,7 +15752,7 @@ window.details = {
         sailor: "Makes [RCV] orbs \"beneficial\" for this unit",
     },
     1823: {//World
-        captain: "Not Translated",
+        captain: "Boosts ATK of Shooter characters by 1.5x at the start of the chain.<br>Boosts ATK of Shooter characters by 1.65x after the 1st Perfect in a row, by 1.815x after the 2nd Perfect in a row, by 1.9965x after the 3rd Perfect in a row, by 2.19615x after the 4th Perfect in a row, and by 2.415765x after the 5th Perfect in a row.",
         special: [
             {
                 "description": "Deals 100,000 fixed damage to one enemy and removes ATK down debuff from your team",
@@ -15778,7 +15788,46 @@ window.details = {
         ],
         specialNotes:"#{stages}",
         specialName: "More More: Hundredfold Artillery Cannon",
-        limit: "This character has a limit break path",
+        limit: [
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Aquire Potential 1: Enrage" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base RCV by 30" },
+            { "description": "Boosts base HP by 70" },
+            { "description": "Aquire Sailor Ability 1: Boosts base HP of Shooter characters by 150" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base HP by 80" },
+            { "description": "Aquire 1 additional Socket slot" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base ATK by 50" },
+            { "description": "Aquire Sailor Ability 2: Boosts base ATK of Shooter characters by 75" },
+            { "description": "Aquire Potential 2: Barrier Penetration" },
+        ],
+        potential: [
+            {
+                "Name": "Enrage",
+                "description": [ 
+                    "Level 1: Boosts base ATK by 20",
+                    "Level 2: Boosts base ATK by 40",
+                    "Level 3: Boosts base ATK by 60",
+                    "Level 4: Boosts base ATK by 80",
+                    "Level 5: Boosts base ATK by 120"
+                ]
+            },
+            {
+                "Name": "Barrier Penetration",
+                "description": [ 
+                    "Level 1: This character's attack will ignore barriers if HP is above ??%",
+                    "Level 2: This character's attack will ignore barriers if HP is above ??%",
+                    "Level 3: This character's attack will ignore barriers if HP is above ??%",
+                    "Level 4: This character's attack will ignore barriers if HP is above ??%",
+                    "Level 5: This character's attack will ignore barriers if HP is above ??%"
+                ]
+            },
+        ],
+        potentialNotes: "Enrage is activated when your crew took damage from your enemies in the previous turn"
     },
     1825: {//Akainu
         captain: "Boosts ATK by 2.5x following a chain of [INT] > [INT] > [INT] attacks no lower than Good",

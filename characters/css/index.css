@@ -161,6 +161,15 @@ input[type="text"] {
     margin-right: 5px;
 }
 
+.badge-sbase {
+    float: left;
+    position: relative;
+    top: 2px;
+    width: 80px;
+    text-align: center;
+    margin-right: 5px;
+}
+
 .badge-level1, .badge-level2, .badge-level3, .badge-level4, .badge-level5, .badge-level6 {
     float: left;
     position: relative;
@@ -170,19 +179,31 @@ input[type="text"] {
     margin-right: 5px;
 }
 
-.badge-japan + div, .badge-global + div, .badge-base + div, .badge-level1 + div, .badge-level2 + div, .badge-level3 + div, .badge-level4 + div, .badge-level5 + div, .badge-level6 + div {
+.badge-slevel1, .badge-slevel2 {
+    float: left;
+    position: relative;
+    top: 2px;
+    width: 150px;
+    text-align: center;
+    margin-right: 5px;
+}
+
+.badge-japan + div, .badge-global + div, .badge-base + div, .badge-level1 + div, .badge-level2 + div, .badge-level3 + div, .badge-level4 + div, .badge-level5 + div, .badge-level6 + div, .badge-sbase + div, .badge-slevel1 + div, .badge-slevel2 + div {
     margin-bottom: 2px;
 }
 
 .badge-japan { background: mediumvioletred; }
 .badge-global { background: rebeccapurple; }
-.badge-base { background: darkred; }
-.badge-level1 { background: crimson; }
-.badge-level2 { background: crimson; }
-.badge-level3 { background: crimson; }
-.badge-level4 { background: crimson; }
-.badge-level5 { background: crimson; }
-.badge-level6 { background: crimson; }
+.badge-base { background: rgb(255,150,150); }
+.badge-level1 { background: rgb(255,130,130); }
+.badge-level2 { background: rgb(255,110,110); }
+.badge-level3 { background: rgb(255,90,90); }
+.badge-level4 { background: rgb(255,70,70); }
+.badge-level5 { background: rgb(255,50,50); }
+.badge-level6 { background: rgb(255,30,30); }
+.badge-sbase { background: darkred; }
+.badge-slevel1 { background: red; }
+.badge-slevel2 { background: red; }
 
 .stars:before, .stars:after {
     font-weight: bold;

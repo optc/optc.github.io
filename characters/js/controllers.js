@@ -193,7 +193,7 @@ app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, 
     };
     $scope.getPrevious = function() { return $stateParams.previous.concat($scope.id); };
     $scope.isCaptainHybrid = ($scope.details && $scope.details.captain && ($scope.details.captain.global || $scope.details.captain.base));
-    $scope.isSailorHybrid = ($scope.details && $scope.details.sailor && $scope.details.sailor.global);
+    $scope.isSailorHybrid = ($scope.details && $scope.details.sailor && ($scope.details.sailor.global || $scope.details.sailor.base));
     $scope.isSpecialHybrid = ($scope.details && $scope.details.special && $scope.details.special.global);
     $scope.isSpecialStaged = ($scope.details && $scope.details.special && $scope.details.special.constructor == Array);
     $scope.isLimitStaged = ($scope.details && $scope.details.limit && $scope.details.limit.constructor == Array);
