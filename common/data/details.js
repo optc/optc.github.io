@@ -6062,7 +6062,45 @@ window.details = {
         captain: "Reduces cooldown of all specials by 3 turns at the start of the fight, boosts ATK of Cerebral characters by 2x",
         specialName: "Cyclone Burst",
         special: "Reduces Bind duration for one character completely. For Striker and Cerebral characters, changes Badly Matching orbs into Matching orbs",
-        limit: "This character has a limit break path",
+        limit: [
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base RCV by 30" },
+            { "description": "Aquire Potential 1: [PSY] Damage Reduction" },
+            { "description": "Aquire new Captain Ability: Reduces cooldown of all specials by 3 turns at the start of the fight, boosts ATK of Cerebral characters by 2.25x" },
+            { "description": "Reduce base Special Cooldown by 2 turns" },
+            { "description": "Boosts base HP by 60" },
+            { "description": "Aquire Sailor Ability 1: Makes [RCV] orbs \"beneficial\" for Cerebral and Striker characters" },
+            { "description": "Boosts base ATK by 50" },
+            { "description": "Reduce base Special Cooldown by 3 turns" },
+            { "description": "Boosts base HP by 80" },
+            { "description": "Aquire Sailor Ability 2: Boosts base ATK, HP and RCV of Cerebral and Striker characters by 50" },
+            { "description": "Boosts base ATK by 60" },
+            { "description": "Aquire 1 additional Socket slot" },
+            { "description": "Aquire Potential 2: [INT] Damage Reduction" },
+        ],
+        potential: [
+            {
+                "Name": "[PSY] Damage Reduction",
+                "description": [ 
+                    "Level 1: Reduce damage taken from [PSY] characters by 1%",
+                    "Level 2: Reduce damage taken from [PSY] characters by 2%",
+                    "Level 3: Reduce damage taken from [PSY] characters by 3%",
+                    "Level 4: Reduce damage taken from [PSY] characters by 4%",
+                    "Level 5: Reduce damage taken from [PSY] characters by 5%"
+                ]
+            },
+            {
+                "Name": "[INT] Damage Reduction",
+                "description": [ 
+                    "Level 1: Reduce damage taken from [INT] characters by 1%",
+                    "Level 2: Reduce damage taken from [INT] characters by 2%",
+                    "Level 3: Reduce damage taken from [INT] characters by 3%",
+                    "Level 4: Reduce damage taken from [INT] characters by 4%",
+                    "Level 5: Reduce damage taken from [INT] characters by 5%"
+                ]
+            },
+        ]
     },
     940: {
         captain: "Boosts ATK and HP of [DEX] characters by 1.5x",
@@ -15755,15 +15793,15 @@ window.details = {
         captain: "Boosts ATK of Shooter characters by 1.5x at the start of the chain.<br>Boosts ATK of Shooter characters by 1.65x after the 1st Perfect in a row, by 1.815x after the 2nd Perfect in a row, by 1.9965x after the 3rd Perfect in a row, by 2.19615x after the 4th Perfect in a row, and by 2.415765x after the 5th Perfect in a row.",
         special: [
             {
-                "description": "Deals 100,000 fixed damage to one enemy and removes ATK down debuff from your team",
+                "description": "Deals 100,000 fixed damage to one enemy and removes ATK DOWN debuff from your team",
                 "cooldown": [ 14, 10 ]
             },
             {
-                "description": "Deals 300,000 fixed damage to one enemy and removes ATK down debuff from your team",
+                "description": "Deals 300,000 fixed damage to one enemy and removes ATK DOWN debuff from your team",
                 "cooldown": [ 18, 14 ]
             },
             {
-                "description": "Deals 500,000 fixed damage to one enemy, removes ATK down debuff from your team and reduces enemy Barrier duration by 1 turn",
+                "description": "Deals 500,000 fixed damage to one enemy, removes ATK DOWN debuff from your team and reduces enemy Barrier duration by 1 turn",
                 "cooldown": [ 22, 18 ]
             }
         ],
@@ -17152,6 +17190,27 @@ window.details = {
         special: "Removes all positive buffs on your team, recovers 1,224 HP, changes Badly Matching orbs into Matching orbs. Boosts ATK of Driven characters by 1.75x for 1 turn and amplifies the effect of orbs by 1.75x for Driven characters for 1 turn",
         specialName: "A Star Descending from the Twinkling Night Sky",
         limit: "This character has a limit break path and will be updated soon (ish)"
+    },
+    1890: {//Perona
+        captain: "Not Translated",
+        special: "Reduces damage received by 50% for 3 turns, reduces crew's ATK DOWN debuff duration by 2 turns and recovers 2,000 HP at the end of the turn for 3 turns",
+        specialName: "Perona Special",
+    },
+    1891: {//Perona
+        captain: "Boosts ATK of Shooter characters by 2.25x and their HP by 1.2x. Reduce damage received by 10%",
+        special: "Reduces damage received by 50% for 3 turns, reduces crew's ATK DOWN debuff duration by 2 turns and recovers 2,000 HP at the end of the turn for 3 turns",
+        specialName: "Perona Special",
+    },
+    1892: {//Mihawk
+        captain: "Not Translated",
+        special: "Reduces crew's current HP by 80%, deals 6x the amount of HP subtracted in typeless damage to all enemies. Delays all enemies for 1 turn",
+        specialName: "Mihawk Special",
+    },
+    1893: {//Mihawk
+        captain: "Boosts ATK of Slasher and Cerebral characters by 1.75x",
+        captainnotes: "Not confirmed if the boosts stack to boost Slasher and Cerebral characters by 3.0625x",
+        special: "Reduces crew's current HP by 80%, deals 6x the amount of HP subtracted in typeless damage to all enemies. Delays all enemies for 1 turn",
+        specialName: "Mihawk Special",
     },
     2000: {//Rayleigh
         captain: "Boosts ATK of Slasher and Cerebral characters by 2x",

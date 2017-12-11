@@ -1717,6 +1717,14 @@ window.drops = {
             'All Difficulties': [ 1864, 1866, -1698, -1632, -1706, -1556, -1274, -1276 ]
         },
         
+        {
+            name: 'Kuraigana Island! Mihawk and Perona!',
+            thumb: 1891,
+            gamewith: null,
+            condition: 'Take heavy damage at the start of the island',
+            'All Difficulties': [ 1890, 1892, -1314, -1316, -1322, -1741, -1743, -1559 ]
+        },
+        
     ],
 
             

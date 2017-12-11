@@ -435,6 +435,12 @@ window.matchers = [
     },
 
     {
+        name: 'Crew ATK DOWN remover',
+        target: 'special',
+        matcher: /(removes|reduces).+ATK DOWN/i 
+    },
+
+    {
         name: 'Crew positive buff remover',
         target: 'special',
         matcher: /removes.+positive buffs/i 
@@ -453,9 +459,9 @@ window.matchers = [
     },
 
     {
-        name: 'Enemy ATK buff remover',
+        name: 'Enemy ATK UP buff remover',
         target: 'special',
-        matcher: /(removes|reduces).+ATK up/i 
+        matcher: /(removes|reduces).+ATK UP/i 
     },
 
     {
