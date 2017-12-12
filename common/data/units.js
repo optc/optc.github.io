@@ -1895,7 +1895,7 @@ window.units = [
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Enel, The Only God of Skypiea", "STR", [ "Shooter", "Driven" ], 4, 25, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Kami Enel, The Only God of Skypiea", "STR", [ "Shooter", "Driven" ], 5, 40, 4, 5, 99, 4000000, null, null, null, 2321, 1484, 302, null ],
+    [ "Kami Enel, The Only God of Skypiea", "STR", [ "Shooter", "Driven" ], 5, 40, 4, 5, 99, 4000000, 1, 1, 1, 2321, 1484, 302, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],

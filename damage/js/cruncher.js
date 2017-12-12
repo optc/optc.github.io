@@ -547,8 +547,9 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
 
         //get the highest Chain Addition if it exists
         chainAddition.forEach(function(special){
-                    if(addition<special.chainAddition())
-                        addition = special.chainAddition();
+                var params = getParameters(special.sourceSlot);
+                    if(addition<special.chainAddition(params))
+                        addition = special.chainAddition(params);
                 });
         
         chainSpecials.forEach(function(special) {
@@ -707,7 +708,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if (data.hasOwnProperty('chain'))
                 chainSpecials.push({ sourceSlot: data.sourceSlot, chain: data.chain, chainLimiter: data.chainLimiter || function() { return Infinity; } });
             if (data.hasOwnProperty('chainAddition'))
-                chainAddition.push({chainAddition: data.chainAddition || function(){ return 0.0; } });
+                chainAddition.push({ sourceSlot: data.sourceSlot, chainAddition: data.chainAddition || function(){ return 0.0; } });
             if (data.hasOwnProperty('staticMult'))
                 staticMultiplier.push({staticMultiplier: "Yes" });
             if (data.hasOwnProperty('affinity'))

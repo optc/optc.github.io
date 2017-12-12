@@ -3958,6 +3958,12 @@ window.specials = {
     1893: {
         delay: function(p) { return 1; },
     },
+    1896: {
+        chainAddition: function(p) { return p.captain.class.has("Driven") ? .7 : 0; }
+    },
+    1897: {
+        chainAddition: function(p) { return p.captain.class.has("Driven") ? .7 : 0; }
+    },
     2000: {
         atk: function(p) { return 1.75; },
         type: "class"
