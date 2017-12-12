@@ -17193,24 +17193,88 @@ window.details = {
     },
     1890: {//Perona
         captain: "Not Translated",
-        special: "Reduces damage received by 50% for 3 turns, reduces crew's ATK DOWN debuff duration by 2 turns and recovers 2,000 HP at the end of the turn for 3 turns",
-        specialName: "Perona Special",
+        special: "Reduces damage received by 50% for 2 turns, makes Badly Matching and [BLOCK] orbs not reduce damage for 2 turns and recovers 2,000 HP at the end of the turn for 3 turns",
+        specialName: "Gothic Angel",
+        sailor: "Boosts base RCV of Shooter characters by 50"
     },
     1891: {//Perona
         captain: "Boosts ATK of Shooter characters by 2.25x and their HP by 1.2x. Reduce damage received by 10%",
-        special: "Reduces damage received by 50% for 3 turns, reduces crew's ATK DOWN debuff duration by 2 turns and recovers 2,000 HP at the end of the turn for 3 turns",
-        specialName: "Perona Special",
+        special: "Reduces damage received by 50% for 2 turns, makes Badly Matching and [BLOCK] orbs not reduce damage for 2 turns and recovers 2,000 HP at the end of the turn for 3 turns",
+        specialName: "Gothic Angel",
+        sailor: "Boosts base RCV of Shooter characters by 50"
     },
     1892: {//Mihawk
         captain: "Not Translated",
-        special: "Reduces crew's current HP by 80%, deals 6x the amount of HP subtracted in typeless damage to all enemies. Delays all enemies for 1 turn",
-        specialName: "Mihawk Special",
+        special: [
+            {
+                "description": "Reduces crew's current HP by 50%, deals 2x the amount of HP subtracted in typeless damage to all enemies.",
+                "cooldown": [ 15, 10 ],
+            },
+            {
+                "description": "Reduces crew's current HP by 50%, deals 2x the amount of HP subtracted in typeless damage to all enemies. Delays all enemies for 1 turn",
+                "cooldown": [ 19, 14 ],
+            },
+            {
+                "description": "Reduces crew's current HP by 80%, deals 6x the amount of HP subtracted in typeless damage to all enemies. Delays all enemies for 1 turn",
+                "cooldown": [ 23, 18 ],
+            },
+        ],
+        specialName: "A Test Against the Black Blade",
+        specialNotes: "#{stages}",
+        sailor: "When HP is below ??% at the start of the turn, boosts own ATK by 1.25x"
     },
     1893: {//Mihawk
         captain: "Boosts ATK of Slasher and Cerebral characters by 1.75x",
         captainnotes: "Not confirmed if the boosts stack to boost Slasher and Cerebral characters by 3.0625x",
-        special: "Reduces crew's current HP by 80%, deals 6x the amount of HP subtracted in typeless damage to all enemies. Delays all enemies for 1 turn",
-        specialName: "Mihawk Special",
+        special: [
+            {
+                "description": "Reduces crew's current HP by 50%, deals 2x the amount of HP subtracted in typeless damage to all enemies.",
+                "cooldown": [ 15, 10 ],
+            },
+            {
+                "description": "Reduces crew's current HP by 50%, deals 2x the amount of HP subtracted in typeless damage to all enemies. Delays all enemies for 1 turn",
+                "cooldown": [ 19, 14 ],
+            },
+            {
+                "description": "Reduces crew's current HP by 80%, deals 6x the amount of HP subtracted in typeless damage to all enemies. Delays all enemies for 1 turn",
+                "cooldown": [ 23, 18 ],
+            },
+        ],
+        specialName: "A Test Against the Black Blade",
+        specialNotes: "#{stages}",
+        sailor: "When HP is below ??% at the start of the turn, boosts own ATK by 1.25x"
+    },
+    1896: {//Enel
+        captain: "Not Translated",
+        special: [
+            {
+                "description": "Changes own orb into [STR], reduces crew's ATK DOWN, Chain Multiplier Limit and Paralysis duration by 2 turns. If your Captain is a Driven character, adds .3x to Chain multiplier for 1 turn",
+                "cooldown": [ null, null ],
+            },
+            {
+                "description": "Changes own orb into [STR], reduces crew's ATK DOWN, Chain Multiplier Limit and Paralysis duration by 5 turns. If your Captain is a Driven character, adds .7x to Chain multiplier for 1 turn",
+                "cooldown": [ 28, 14 ],
+            },
+        ],
+        specialName: "30,000,000 Volt: Hino",
+        specialNotes: "#{stages}",
+    },
+    1897: {//Enel
+        captain: "Boosts ATK of Driven characters proportionally to the crew's current HP, by 2.75x at max, and their RCV by 1.3x",
+        //captainNotes: "#{captainProportional : lower : 1.5 + 1.25 * (1 - (remaining HP) / (total HP)) : 1.5 : 2.75}", Change when we know if he's lower or higher HP
+        special: [
+            {
+                "description": "Changes own orb into [STR], reduces crew's ATK DOWN, Chain Multiplier Limit and Paralysis duration by 2 turns. If your Captain is a Driven character, adds .3x to Chain multiplier for 1 turn",
+                "cooldown": [ null, null ],
+            },
+            {
+                "description": "Changes own orb into [STR], reduces crew's ATK DOWN, Chain Multiplier Limit and Paralysis duration by 5 turns. If your Captain is a Driven character, adds .7x to Chain multiplier for 1 turn",
+                "cooldown": [ 28, 14 ],
+            },
+        ],
+        specialName: "30,000,000 Volt: Hino",
+        specialNotes: "#{stages}",
+        limit: "This character has a limit break path",
     },
     2000: {//Rayleigh
         captain: "Boosts ATK of Slasher and Cerebral characters by 2x",
