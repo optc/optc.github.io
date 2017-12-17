@@ -3958,6 +3958,30 @@ window.specials = {
     1893: {
         delay: function(p) { return 1; },
     },
+    1894: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? window.specials[1894].multiplier : 1; },
+        type: "type",
+        onActivation: function(p) {
+            var n = (p.percHP <= 50 ? 2 : 1);
+            window.specials[1894].multiplier = n;
+            p.scope.notify({
+                text: 'Using the ' + n + 'x ATK boost.',
+                name: '1894warning'
+            });
+        }
+    },
+    1895: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? window.specials[1895].multiplier : 1; },
+        type: "type",
+        onActivation: function(p) {
+            var n = (p.percHP <= 50 ? 2 : 1);
+            window.specials[1895].multiplier = n;
+            p.scope.notify({
+                text: 'Using the ' + n + 'x ATK boost.',
+                name: '1895warning'
+            });
+        }
+    },
     1896: {
         chainAddition: function(p) { return p.captain.class.has("Driven") ? .7 : 0; }
     },

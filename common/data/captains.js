@@ -6088,6 +6088,18 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Shooter") ? 2.25 : 1; },
         hp: function(p) { return p.unit.class.has("Shooter") ? 1.2 : 1; },
     },
+    1895: {
+        atk: function(p) { return !p.unit.class.has("Fighter") ? 1 : p.percHP <= 50.0 ? 3.0375 : 2.25; },
+        hp: function(p) { return p.unit.class.has("Fighter") ? 1.25 : 1; },
+    },
+    1898: {
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Slasher") ? 2 : 1;},
+        rcv: function(p) { return 0; }
+    },
+    1899: {
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Slasher") ? (((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain]) == 2) && (p.orb != 'g')) ? 2.75 : 2) : 1;},
+        rcv: function(p) { return 0; }
+    },
     2000: {
         atk: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Slasher") ? 2 : 1; },
     },

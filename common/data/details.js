@@ -17244,6 +17244,16 @@ window.details = {
         specialNotes: "#{stages}",
         sailor: "When HP is below ??% at the start of the turn, boosts own ATK by 1.25x"
     },
+    1894: {//Urouge
+        captain: "Not Translated",
+        special: "If HP is below 50% at the time the special is activated, deal 75x character's ATK in [QCK] damage to one enemy, boosts ATK of Fighter characters by 2x for 1 turn",
+        specialName: "The Collapsing Arhat",
+    },
+    1895: {//Urouge
+        captain: "Boosts ATK of Fighter characters by 3.0375x if HP is below 50% at the start of the turn, 2.25x otherwise and boosts the HP of Fighter characters by 1.25x",
+        special: "If HP is below 50% at the time the special is activated, deal 75x character's ATK in [QCK] damage to one enemy, boosts ATK of Fighter characters by 2x for 1 turn",
+        specialName: "The Collapsing Arhat",
+    },
     1896: {//Enel
         captain: "Not Translated",
         special: [
@@ -17275,6 +17285,16 @@ window.details = {
         specialName: "30,000,000 Volt: Hino",
         specialNotes: "#{stages}",
         limit: "This character has a limit break path",
+    },
+    1898: {
+        captain: "Boosts ATK of Striker and Slasher characters by 2x, reduces crew's RCV to 0.",
+        special: "Changes [STR], [DEX] and [QCK] orbs on Striker and Slasher characters into matching orbs, cuts the current HP of one enemy by 8%",
+        specialName: "Hitting Size [Neo]"
+    },
+    1899: {
+        captain: "Boosts ATK of Striker and Slasher characters by 2.75x if they have a matching Orb, by 2x otherwise, reduces crew's RCV to 0.",
+        special: "Changes [STR], [DEX] and [QCK] orbs on Striker and Slasher characters into matching orbs, cuts the current HP of one enemy by 8%",
+        specialName: "Hitting Size [Neo]",
     },
     2000: {//Rayleigh
         captain: "Boosts ATK of Slasher and Cerebral characters by 2x",
