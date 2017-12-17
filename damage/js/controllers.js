@@ -268,7 +268,8 @@ controllers.PopoverCtrl = function($scope) {
     if (!$scope.details || !$scope.details.special) return;
     if ($scope.details.special.japan)
         $scope.details.special = $scope.details.special.japan;
-    if ($scope.details.captain.level6){
+    if ($scope.details.captain){
+        if ($scope.details.captain.level6){
         $scope.details.captain = $scope.details.captain.level6;
     }
     else if ($scope.details.captain.level5){
@@ -288,6 +289,7 @@ controllers.PopoverCtrl = function($scope) {
     }
     else if ($scope.details.captain.base){
         $scope.details.captain = $scope.details.captain.base;
+    }
     }
     if ($scope.details.special.constructor == Array) {
         var lastStage = $scope.details.special.slice(-1)[0];
