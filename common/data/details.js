@@ -17221,7 +17221,7 @@ window.details = {
         ],
         specialName: "A Test Against the Black Blade",
         specialNotes: "#{stages}",
-        sailor: "When HP is below ??% at the start of the turn, boosts own ATK by 1.25x"
+        sailor: "When HP is below 50% at the start of the turn, boosts own base ATK by 1.25x"
     },
     1893: {//Mihawk
         captain: "Boosts ATK of Slasher and Cerebral characters by 1.75x",
@@ -17242,7 +17242,7 @@ window.details = {
         ],
         specialName: "A Test Against the Black Blade",
         specialNotes: "#{stages}",
-        sailor: "When HP is below ??% at the start of the turn, boosts own ATK by 1.25x"
+        sailor: "When HP is below 50% at the start of the turn, boosts own base ATK by 1.25x"
     },
     1894: {//Urouge
         captain: "Not Translated",
