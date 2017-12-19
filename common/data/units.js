@@ -1889,7 +1889,7 @@ window.units = [
     [ "Cavendish", "PSY", [ "Driven", "Slasher" ], 4, 30, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Cavendish, White Christmas Knight", "PSY", [ "Driven", "Slasher" ], 5, 60, 4, 1, 99, 5000000, 1, 1, 1, 2448, 1391, 302, null ],
     [ "Perona, Shikkearu Kingdom Site", "STR", [ "Shooter", "Driven" ], 3, 13, null, null, 50, null, null, null, null, null, null, null, null ],
-    [ "\"Ghost Princess\" Perona, Shikkearu Kingdom Site", "STR", [ "Shooter", "Driven" ], 4, 20, null, null, 99, null, null, null, null, null, null, null, null ],
+    [ "\"Ghost Princess\" Perona, Shikkearu Kingdom Site", "STR", [ "Shooter", "Driven" ], 4, 20, 4, 4, 99, null, null, null, null, 1820, 890, 401, null ],
     [ "Mihawk, Shikkearu Kingdom Site", "PSY", [ "Slasher", "Cerebral" ], 3, 13, null, null, 50, null, null, null, null, null, null, null, null ],
     [ "Hawk Eyes Mihawk, Shikkearu Kingdom Site", "PSY", [ "Slasher", "Cerebral" ], 4, 20, null, null, 99, null, null, null, null, null, null, null, null ],
     [ "Urouge, The Supernova from the Sky", "QCK", [ "Fighter", "Powerhouse" ], 4, 20, null, null, 70, 1066998, null, null, null, null, null, null, null ],
