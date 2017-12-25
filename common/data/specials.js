@@ -3575,6 +3575,10 @@ window.specials = {
     1780: {
         chainAddition: function(p){ return 0.5;}
     },
+    1781: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 1.3 : 1; },
+        type: "type"
+    },
     1782: {
         delay: function(p) { return 1; },
     },
@@ -3987,6 +3991,10 @@ window.specials = {
     },
     1897: {
         chainAddition: function(p) { return p.captain.class.has("Driven") ? .7 : 0; }
+    },
+    1900: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 1.5 : 1; },
+        type: "type"
     },
     2000: {
         atk: function(p) { return 1.75; },

@@ -1718,9 +1718,9 @@ window.drops = {
         },
         
         {
-            name: 'Kuraigana Island! Mihawk and Perona!',
+            name: 'Perona\'s Strange Communal Life!',
             thumb: 1891,
-            gamewith: null,
+            gamewith: 84032,
             condition: 'Take heavy damage at the start of the island',
             'All Difficulties': [ 1890, 1892, -1314, -1316, -1322, -1741, -1743, -1559 ]
         },

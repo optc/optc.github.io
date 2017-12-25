@@ -444,14 +444,25 @@ window.ships = [
     
     
     { //34
-        name: "Zunisha", //Levels are placeholders, specific boost of each one is unkown 
-        thumb: null,
+        name: "Zunisha",
+        thumb: 'ship_0036_c.png',
         description: 'Boost ATK of Powerhouse and Cerebral units by 1.55x and their HP by 1.25x, makes Perfects easier to hit, and makes TND and Meat orbs beneficial to Powerhouse and Cerebral units.',
         atk: function(p) {
-            return !(p.unit.class.has('Powerhouse') || p.unit.class.has('Cerebral')) ? 1 : [ 1.55, 1.55, 1.55, 1.55, 1.55, 1.55, 1.55, 1.55, 1.55, 1.55 ][p.boatLevel - 1];
+            return !(p.unit.class.has('Powerhouse') || p.unit.class.has('Cerebral')) ? 1 : [ 1.1, 1.1, 1.2, 1.2, 1.3, 1.3, 1.3, 1.4, 1.5, 1.55 ][p.boatLevel - 1];
         },
         hp: function(p) {
-            return !(p.unit.class.has('Powerhouse') || p.unit.class.has('Cerebral')) ? 1 : [ 1.25, 1.25, 1.25, 1.25, 1.25, 1.25, 1.25, 1.25, 1.25, 1.25 ][p.boatLevel - 1];
+            return !(p.unit.class.has('Powerhouse') || p.unit.class.has('Cerebral')) ? 1 : [ 1, 1, 1.1, 1.1, 1.1, 1.1, 1.2, 1.2, 1.2, 1.25 ][p.boatLevel - 1];
+        },
+    },
+    
+    
+    
+    { //35
+        name: "Laboon",
+        thumb: null,
+        description: 'Boosts ATK of all units by 1.5x. At the start of the adventure, all specials start at MAX charge.',
+        atk: function(p) {
+            return 1.5;
         },
     },
 

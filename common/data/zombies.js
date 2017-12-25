@@ -491,6 +491,14 @@ window.zombies = {
         type: 'healer',
         amount: 200
     },
+    1888: { // Cavendish
+        type: 'healer',
+        multiplier: 0.5
+    },
+    1889: { // Cavendish
+        type: 'healer',
+        multiplier: 2
+    },
     2001: { // Rayleigh CHANGE THIS WHEN YOU CHANGE RAYLEIGH
         type: 'healer',
         multiplier: 2

@@ -6029,7 +6029,8 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Driven") ? 2.25 : 1; },
         hp: function(p) { return p.unit.class.has("Driven") ? 1.2 : 1; },
     },
-    1889: {
+    1888: {
+        damageSorter: function(d) { return CrunchUtils.okamaSort(d, ['PSY', 'PSY', 'PSY']); },
         hitAtk: function(p) {
             return p.unit.class.has("Driven") ? (CrunchUtils.okamaCheck(p.damage.slice(0, p.chainPosition), p.modifiers, [{
                 type: 'STR',
@@ -6080,7 +6081,117 @@ window.captains = {
             }, {
                 type: 'INT',
                 minModifier: 'Good'
-            }])) ? 3.75 : 2.5 : 1;
+            }])) ? 1.32 : 1.2 : 1;
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
+    },
+    1889: {
+        damageSorter: function(d) { return CrunchUtils.okamaSort(d, ['PSY', 'PSY', 'PSY']); },
+        hitAtk: function(p) {
+            if(p.actions[p.sourceSlot]){
+                return p.unit.class.has("Driven") ? (CrunchUtils.okamaCheck(p.damage.slice(0, p.chainPosition), p.modifiers, [{
+                    type: 'STR',
+                    minModifier: 'Good'
+                }, {
+                    type: 'STR',
+                    minModifier: 'Good'
+                }, {
+                    type: 'STR',
+                    minModifier: 'Good'
+                }]) || 
+                CrunchUtils.okamaCheck(p.damage.slice(0, p.chainPosition), p.modifiers, [{
+                    type: 'QCK',
+                    minModifier: 'Good'
+                }, {
+                    type: 'QCK',
+                    minModifier: 'Good'
+                }, {
+                    type: 'QCK',
+                    minModifier: 'Good'
+                }]) || 
+                CrunchUtils.okamaCheck(p.damage.slice(0, p.chainPosition), p.modifiers, [{
+                    type: 'DEX',
+                    minModifier: 'Good'
+                }, {
+                    type: 'DEX',
+                    minModifier: 'Good'
+                }, {
+                    type: 'DEX',
+                    minModifier: 'Good'
+                }]) || 
+                CrunchUtils.okamaCheck(p.damage.slice(0, p.chainPosition), p.modifiers, [{
+                    type: 'PSY',
+                    minModifier: 'Good'
+                }, {
+                    type: 'PSY',
+                    minModifier: 'Good'
+                }, {
+                    type: 'PSY',
+                    minModifier: 'Good'
+                }]) || 
+                CrunchUtils.okamaCheck(p.damage.slice(0, p.chainPosition), p.modifiers, [{
+                    type: 'INT',
+                    minModifier: 'Good'
+                }, {
+                    type: 'INT',
+                    minModifier: 'Good'
+                }, {
+                    type: 'INT',
+                    minModifier: 'Good'
+                }])) ? 3.75 : 2.5 : 1;
+            }
+            else{
+                return p.unit.class.has("Driven") ? (CrunchUtils.okamaCheck(p.damage.slice(0, p.chainPosition), p.modifiers, [{
+                    type: 'STR',
+                    minModifier: 'Good'
+                }, {
+                    type: 'STR',
+                    minModifier: 'Good'
+                }, {
+                    type: 'STR',
+                    minModifier: 'Good'
+                }]) || 
+                CrunchUtils.okamaCheck(p.damage.slice(0, p.chainPosition), p.modifiers, [{
+                    type: 'QCK',
+                    minModifier: 'Good'
+                }, {
+                    type: 'QCK',
+                    minModifier: 'Good'
+                }, {
+                    type: 'QCK',
+                    minModifier: 'Good'
+                }]) || 
+                CrunchUtils.okamaCheck(p.damage.slice(0, p.chainPosition), p.modifiers, [{
+                    type: 'DEX',
+                    minModifier: 'Good'
+                }, {
+                    type: 'DEX',
+                    minModifier: 'Good'
+                }, {
+                    type: 'DEX',
+                    minModifier: 'Good'
+                }]) || 
+                CrunchUtils.okamaCheck(p.damage.slice(0, p.chainPosition), p.modifiers, [{
+                    type: 'PSY',
+                    minModifier: 'Good'
+                }, {
+                    type: 'PSY',
+                    minModifier: 'Good'
+                }, {
+                    type: 'PSY',
+                    minModifier: 'Good'
+                }]) || 
+                CrunchUtils.okamaCheck(p.damage.slice(0, p.chainPosition), p.modifiers, [{
+                    type: 'INT',
+                    minModifier: 'Good'
+                }, {
+                    type: 'INT',
+                    minModifier: 'Good'
+                }, {
+                    type: 'INT',
+                    minModifier: 'Good'
+                }])) ? 1.8 : 1.5 : 1;
+            }
         },
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
     },
@@ -6099,6 +6210,9 @@ window.captains = {
     1899: {
         atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Slasher") ? (((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain]) == 2) && (p.orb != 'g')) ? 2.75 : 2) : 1;},
         rcv: function(p) { return 0; }
+    },
+    1900: {
+        atk: function(p) { return 2.25; }
     },
     2000: {
         atk: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Slasher") ? 2 : 1; },

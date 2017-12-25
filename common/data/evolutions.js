@@ -2977,23 +2977,23 @@ window.evolutions = {
     },
     1888: {
         evolution: 1889,
-        evolvers: [  ]
+        evolvers: [ 115, 116, 117, 118, 103 ]
     },
     1890: {
         evolution: 1891,
-        evolvers: [  ]
+        evolvers: [ 78, 84, 89, 95, 100 ]
     },
     1892: {
         evolution: 1893,
-        evolvers: [  ]
+        evolvers: [ 81, 87, 82, 98, 103 ]
     },
     1894: {
         evolution: 1895,
-        evolvers: [  ]
+        evolvers: [ 118, 85, 96, 301, 101 ]
     },
     1896: {
         evolution: 1897,
-        evolvers: [  ]
+        evolvers: [ 118, 95, 1180, 300, 100 ]
     },
     1898: {
         evolution: 1899,

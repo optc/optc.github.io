@@ -607,7 +607,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         // if there are no specials available, just apply the non-static captain effects and return the result
         if (specialsCombinations.length === 0) {
             for (var i=0;i<cptsWith.hitModifiers.length;++i)
-                result = applyCaptainEffectsToDamage(result,cptsWith.hitModifiers[i].hitAtk,hitModifiers);
+                result = applyCaptainEffectsToDamage(result,cptsWith.hitModifiers[i].hitAtk,hitModifiers,false,cptsWith.hitModifiers[i].sourceSlot);
             return result;
         }
         // for each special combination
@@ -814,7 +814,6 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             $scope.notify({ type: 'error', text: 'One or more specials you selected cannot be activated due to an active map effect.' });
         // check if defense is down (required by some captain effects)
         computeActualDefense(shipBonus.bonus.name);
-        //console.log(enabledSpecials);
         isDefenseDown = enabledSpecials.some(function(x) { return (x !== null && x.hasOwnProperty('def')) || (shipBonus.bonus.name == "Flying Dutchman - Special ACTIVATED"); });
         isDelayed = enabledSpecials.some(function(x) { return (x !== null && x.hasOwnProperty('delay')) || (shipBonus.bonus.name == "Karasumaru Ship - Special ACTIVATED"); });
         
