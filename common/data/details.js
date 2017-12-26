@@ -17534,7 +17534,7 @@ window.details = {
         specialName: "Santoryu Ogi: Ichidai Sanzen Daisen Sekai",
     },
     1922:{//6+ Law
-        captain: "Boosts ATK of Cerebral characters by 3x and heals for 0.5x his RCV at the end of the turn each time you hit a PERFECT",
+        captain: "Boosts ATK of Cerebral characters by 3x, HP by 1.25x, and heals for 0.5x his RCV at the end of the turn each time you hit a PERFECT",
         special: "Reduces enemy Barrier duration by 1 turn, deals 200,000 fixed damage to one enemy and amplifies the effect of orbs for Cerebral characters by 2.25x for 1 turn",
         specialName: "Radio Knife",
         limit: [
