@@ -16747,14 +16747,14 @@ window.details = {
     },
     1874: {//Violet
         captain: "Boosts amount of Beli received by 2.5x",
-        special: "Changes [RCV], [TND], [EMPTY] and [BLOCK] orbs into Matching orbs, reduces Palysis and Silence duration by 2 turns and adds .5x to Chain multiplier for 1 turn",
+        special: "Changes [RCV], [TND], [EMPTY] and [BLOCK] orbs into Matching orbs, reduces Paralysis and Silence duration by 2 turns and adds .5x to Chain multiplier for 1 turn",
         specialName: "Violent Interrogation of Passion",
         sailor: "Completely resists Silence on this character",
         sailorNotes: "#{silence}",
     },
     1875: {//Violet
         captain: "Boosts ATK of all characters by 1.5x. Boosts amount of Beli received by 2.5x",
-        special: "Changes [RCV], [TND], [EMPTY] and [BLOCK] orbs into Matching orbs, reduces Palysis and Silence duration by 2 turns and adds .5x to Chain multiplier for 1 turn",
+        special: "Changes [RCV], [TND], [EMPTY] and [BLOCK] orbs into Matching orbs, reduces Paralysis and Silence duration by 2 turns and adds .5x to Chain multiplier for 1 turn",
         specialName: "Violent Interrogation of Passion",
         sailor: "Completely resists Silence on this character",
         sailorNotes: "#{silence}",
