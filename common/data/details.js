@@ -17439,7 +17439,87 @@ window.details = {
     1900: {//EXP Zoro
         captain: "Boosts ATK of all characters by 2.25x and boosts EXP and amount of Beli recieved by 1.2x",
         special: "Changes own orb into [QCK], boosts own ATK by 1.5x for 1 turn, deals 15x character's ATK in [QCK] damage to one enemy",
-        specialName: "Zoro Special",
+        specialName: "One Sword Style: Baki",
+    },
+    1901:{//Dressrosa Pica
+        captain: "",
+        special: "",
+        specialName: "The Toughest Trump Card",
+    },
+    1902:{//Dressrosa Pica
+        captain: "",
+        special: "",
+        specialName: "The Toughest Trump Card",
+    },
+    1903:{//Dressrosa Senor Pink
+        captain: "",
+        special: "",
+        specialName: "Diaper Bomb",
+    },
+    1904:{//Dressrosa Senor Pink
+        captain: "",
+        special: "",
+        specialName: "Diaper Bomb",
+    },
+    1905:{//Dressrosa Sugar
+        captain: "",
+        special: "",
+        specialName: "March of the Decapitating Dolls",
+    },
+    1906:{//Dressrosa Sugar
+        captain: "",
+        special: "",
+        specialName: "March of the Decapitating Dolls",
+    },
+    1907:{//Dressrosa Trebol
+        captain: "",
+        special: "",
+        specialName: "Beta Betton Meteora",
+    },
+    1908:{//Dressrosa Trebol
+        captain: "",
+        special: "",
+        specialName: "Beta Betton Meteora",
+    },
+    1909:{//V2 Doflamingo
+        captain: "",
+        special: "",
+        specialName: "Flap Thread",
+    },
+    1910:{//V2 Doflamingo
+        captain: "",
+        special: "",
+        specialName: "Flap Thread",
+    },
+    1911:{//Kimono Urouge
+        captain: "",
+        special: "",
+        specialName: "Prayers of Paradise",
+    },
+    1912:{//Kimono Urouge
+        captain: "",
+        special: "",
+        specialName: "Prayers of Paradise",
+    },
+    1913:{//Kimono Vivi
+        captain: "",
+        special: "",
+        specialName: "Blossoming a New Year Celebration",
+    },
+    1914:{//Kimono Vivi
+        captain: "",
+        special: "",
+        specialName: "Blossoming a New Year Celebration",
+    },
+    1921:{//6+ Zoro
+        captain: "Triples the ATK of Slasher characters and boosts their HP by 1.5x",
+        special: "Deals 120x character's ATK in typeless damage to all enemies.  If Zoro is your captain or friend captain, boosts the ATK of slashers by 2x.  If he is a crew member, locks the chain multiplier at 2.5x.  Boosts Slasher character's ATK by 1.75x",
+        specialName: "Santoryu Ogi: Ichidai Sanzen Daisen Sekai",
+    },
+    1922:{//6+ Law
+        captain: "Boosts ATK of Cerebral characters by 3x and heals for 0.5x his RCV at the end of the turn each time you hit a PERFECT",
+        special: "Deals 300,000 fixed damage to one enemy and amplifies the effect of orbs for Cerebral characters by 2.25x for 1 turn",
+        specialName: " Radio Knife",
     },
     2000: {//Rayleigh
         captain: "Boosts ATK of Slasher and Cerebral characters by 2x",
