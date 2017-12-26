@@ -6214,6 +6214,13 @@ window.captains = {
     1900: {
         atk: function(p) { return 2.25; }
     },
+    1921: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? 3 : 1; },
+        hp: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; },
+    },
+    1922: {
+        atk: function(p) { return p.unit.class.has("Cerebral") ? 3 : 1; },
+    },
     2000: {
         atk: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Slasher") ? 2 : 1; },
     },
