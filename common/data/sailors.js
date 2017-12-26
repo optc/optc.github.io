@@ -354,4 +354,22 @@ window.sailors = {
         atkStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 75 : 0; },
         hpStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 75 : 0; },
     },
+    1890: {
+        rcvStatic: function(p) { return p.unit.class.has("Shooter") ? 50 : 0; },
+    },
+    1891: {
+        rcvStatic: function(p) { return p.unit.class.has("Shooter") ? 50 : 0; },
+    },
+    1892: {
+        atk: function(p) { return p.percHP <= 50.0 && p.slot == p.sourceSlot ? 1.25 : 1; },
+    },
+    1893: {
+        atk: function(p) { return p.percHP <= 50.0 && p.slot == p.sourceSlot ? 1.25 : 1; },
+    },
+    1907: {
+        atkStatic: function(p) { return p.slot <= 1 ? 100 : 0; },
+    },
+    1908: {
+        atkStatic: function(p) { return p.slot <= 1 ? 100 : 0; },
+    },
 };

@@ -10394,13 +10394,13 @@ window.details = {
     },
     1369: {//Timeskip Chopper
         captain: "Boosts ATK of [QCK] characters by 1.5x and their HP and RCV by 1.2x",
-        special: "Changes [DEX] and [RCV] on [QCK] characters into [QCK], cuts the current HP of one enemy by 15%",
+        special: "Changes [DEX] and [RCV] orbs on [QCK] characters into [QCK] orbs, cuts the current HP of one enemy by 15%",
         sailor: "Makes [STR] orbs \"beneficial\" for this unit",
         specialName: "Kakuho: Elf",
     },
     1370: {//Timeskip Chopper
         captain: "Boosts ATK of [QCK] characters by 2x and their HP and RCV by 1.2x",
-        special: "Changes [DEX] and [RCV] on [QCK] characters into [QCK], cuts the current HP of one enemy by 15%",
+        special: "Changes [DEX] and [RCV] orbs on [QCK] characters into [QCK] orbs, cuts the current HP of one enemy by 15%",
         sailor: "Makes [STR] orbs \"beneficial\" for this unit",
         specialName: "Kakuho: Elf",
     },
@@ -14726,11 +14726,11 @@ window.details = {
         captain: "Boosts ATK of Striker characters by 3x and heals for .5x his RCV at the end of the turn each time you hit a Perfect",
         special: [
             {
-                "description": "Deals 50,000 fixed damage to one enemy, and for Striker characters, amplifies the effect of orbs by 1.75x for 1 turn",
+                "description": "Deals 50,000 fixed damage to one enemy, and amplifies the effect of orbs for Striker characters by 1.75x for 1 turn",
                 "cooldown": [ 15, 10 ]
             },
             {
-                "description": "Deals 300,000 fixed damage to one enemy, and for Striker characters, amplifies the effect of orbs by 2.25x for 1 turn",
+                "description": "Deals 300,000 fixed damage to one enemy, and amplifies the effect of orbs for Striker characters by 2.25x for 1 turn",
                 "cooldown": [ 20, 15 ]
             }
         ],
@@ -16747,14 +16747,14 @@ window.details = {
     },
     1874: {//Violet
         captain: "Boosts amount of Beli received by 2.5x",
-        special: "Changes [RCV], [TND], [EMPTY] and [BLOCK] orbs into Matching orbs, reduces Palysis and Silence duration by 2 turns and adds .5x to Chain multiplier for 1 turn",
+        special: "Changes [RCV], [TND], [EMPTY] and [BLOCK] orbs into Matching orbs, reduces Paralysis and Silence duration by 2 turns and adds .5x to Chain multiplier for 1 turn",
         specialName: "Violent Interrogation of Passion",
         sailor: "Completely resists Silence on this character",
         sailorNotes: "#{silence}",
     },
     1875: {//Violet
         captain: "Boosts ATK of all characters by 1.5x. Boosts amount of Beli received by 2.5x",
-        special: "Changes [RCV], [TND], [EMPTY] and [BLOCK] orbs into Matching orbs, reduces Palysis and Silence duration by 2 turns and adds .5x to Chain multiplier for 1 turn",
+        special: "Changes [RCV], [TND], [EMPTY] and [BLOCK] orbs into Matching orbs, reduces Paralysis and Silence duration by 2 turns and adds .5x to Chain multiplier for 1 turn",
         specialName: "Violent Interrogation of Passion",
         sailor: "Completely resists Silence on this character",
         sailorNotes: "#{silence}",
@@ -17441,85 +17441,166 @@ window.details = {
         special: "Changes own orb into [QCK], boosts own ATK by 1.5x for 1 turn, deals 15x character's ATK in [QCK] damage to one enemy",
         specialName: "One Sword Style: Baki",
     },
-    1901:{//Dressrosa Pica
-        captain: "",
-        special: "",
+    1901:{//Pica
+        captain: "Boosts ATK of Driven characters by 1.2x and their HP by 1.75x",
+        special: "Cuts the current HP of one enemy by 20%, reduces Bind and Despair duration by 4 turns, changes all orbs including [BLOCK] orbs on Driven characters into [G] orbs",
         specialName: "The Toughest Trump Card",
+        sailor: "Cannot be Blown Away",
     },
-    1902:{//Dressrosa Pica
-        captain: "",
-        special: "",
+    1902:{//Pica
+        captain: "Boosts ATK of Driven characters by 1.75x and their HP by 2.25x",
+        special: "Cuts the current HP of one enemy by 20%, reduces Bind and Despair duration by 4 turns, changes all orbs including [BLOCK] orbs on Driven characters into [G] orbs",
         specialName: "The Toughest Trump Card",
+        sailor: "Cannot be Blown Away",
+        limit: "This character has a limit break tree"
     },
-    1903:{//Dressrosa Senor Pink
-        captain: "",
-        special: "",
+    1903:{//Senor Pink
+        captain: "Boosts ATK of Free Spirit characters by 2.25x",
+        special: "Reduces enemy Barrier duration by 1 turn, Reduces enemies Damage Nullification duration by 1 turn and deals 30x character's ATK in [QCK] damage to all enemies",
         specialName: "Diaper Bomb",
+        sailor: "Makes [DEX] orbs \"beneficial\" for this unit",
     },
-    1904:{//Dressrosa Senor Pink
-        captain: "",
-        special: "",
+    1904:{//Senor Pink
+        captain: "Boosts ATK of Free Spirit characters by 2.75x",
+        special: "Reduces enemy Barrier duration by 1 turn, Reduces enemies Damage Nullification duration by 1 turn and deals 30x character's ATK in [QCK] damage to all enemies",
         specialName: "Diaper Bomb",
+        sailor: "Makes [DEX] orbs \"beneficial\" for this unit",
+        limit: "This character has a limit break tree"
     },
-    1905:{//Dressrosa Sugar
-        captain: "",
-        special: "",
+    1905:{//Sugar
+        captain: "Boosts ATK of Driven and Cerebral characters by 2x",
+        special: "Changes [RCV], [TND] and [G] orbs into Matching orbs and  amplifies the effect of orbs for Driven characters by 1.75x for 3 turns",
         specialName: "March of the Decapitating Dolls",
+        sailor: "Reduces Paralysis duration by 1 turn",
     },
-    1906:{//Dressrosa Sugar
-        captain: "",
-        special: "",
+    1906:{//Sugar
+        captain: "Boosts ATK of Driven and Cerebral characters by 2.25x and their RCV by 1.5x",
+        special: "Changes [RCV], [TND] and [G] orbs into Matching orbs and  amplifies the effect of orbs for Driven characters by 1.75x for 3 turns",
         specialName: "March of the Decapitating Dolls",
+        sailor: "Reduces Paralysis duration by 1 turn",
+        limit: "This character has a limit break tree"
     },
-    1907:{//Dressrosa Trebol
-        captain: "",
-        special: "",
+    1907:{//Trebol
+        captain: "Boosts ATK of Driven characters by 3x, reduces crew's current HP by ??% at the end of each turn, reduces his own ATK multiplier by ???x at the end of each turn",
+        captainNotes: "His ATK multiplier will be 3x on the first turn, 2.?x on the second, 2.?x on the third and so on. The reduction stops once the multiplier is ???x. The multiplier affects all Driven characters. You will not die to the HP reduction",
+        special: "Reduces enemies Threshold Damage Reduction, Percent Damage Reduction and Increased Defense duration by 4 turns. If there are 6 Driven characters in your crew, Boosts ATK of Driven characters by 2x for 1 turn.",
         specialName: "Beta Betton Meteora",
+        sailor: "Boosts base ATK of the characters in the top row by 100",
     },
-    1908:{//Dressrosa Trebol
-        captain: "",
-        special: "",
+    1908:{//Trebol
+        captain: "Boosts ATK of Driven characters by 3.5x, reduces crew's current HP by ??% at the end of each turn, reduces his own ATK multiplier by ???x at the end of each turn",
+        captainNotes: "His ATK multiplier will be 3.5x on the first turn, 3.?x on the second, 3.?x on the third and so on. The reduction stops once the multiplier is ???x. The multiplier affects all Driven characters. You will not die to the HP reduction",
+        special: "Reduces enemies Threshold Damage Reduction, Percent Damage Reduction and Increased Defense duration by 4 turns. If there are 6 Driven characters in your crew, Boosts ATK of Driven characters by 2x for 1 turn.",
         specialName: "Beta Betton Meteora",
+        sailor: "Boosts base ATK of the characters in the top row by 100",
+        limit: "This character has a limit break tree"
     },
     1909:{//V2 Doflamingo
-        captain: "",
-        special: "",
+        captain: "If there are 6 Driven characters in your crew, boosts ATK of Driven characters by 3.9x if they have a matching orb, by 3.25x otherwise and their HP by 1.2x. Lowers chances of getting STR orbs and makes DEX and QCK orbs \"beneficial\" to ??? characters",
+        special: "Deals 200% of the damage dealt in Overkill Damage in the previous turn as typeless damage to all enemies.",
+        specialNotes: "Overkill Damage is damage dealt over the enemy's current HP with normal attacks that killed them. For example, dealing 2,100,000 damage to an enemy with 1,000,000 HP will count as 1,100,000 Overkill Damage. This stacks for each enemy killed in the previous turn.",
         specialName: "Flap Thread",
     },
     1910:{//V2 Doflamingo
-        captain: "",
-        special: "",
+        captain: "If there are 6 Driven characters in your crew, boosts ATK of Driven characters by 3.9x if they have a matching orb, by 3.25x otherwise and their HP by 1.2x. Lowers chances of getting STR orbs and makes DEX and QCK orbs \"beneficial\" to ??? characters",
+        special: "Deals 200% of the damage dealt in Overkill Damage in the previous turn as typeless damage to all enemies.",
+        specialNotes: "Overkill Damage is damage dealt over the enemy's current HP with normal attacks that killed them. For example, dealing 2,100,000 damage to an enemy with 1,000,000 HP will count as 1,100,000 Overkill Damage. This stacks for each enemy killed in the previous turn.",
         specialName: "Flap Thread",
+        limit: "This character has a limit break tree"
     },
     1911:{//Kimono Urouge
-        captain: "",
-        special: "",
+        captain: "Boosts ATK of Striker and Powerhouse characters by 1.5x. Boosts EXP gained by 1.25x",
+        special: "Changes [RCV], [TND], [G], [BLOCK] and [BOMB] orbs into Matching orbs, recovers 7,600 HP and reduces damage received by 76% for 1 turn",
         specialName: "Prayers of Paradise",
     },
     1912:{//Kimono Urouge
-        captain: "",
-        special: "",
+        captain: "Boosts ATK of Striker and Powerhouse characters by 1.75x and their HP by 1.5x. Boosts EXP gained by 1.5x",
+        special: "Changes [RCV], [TND], [G], [BLOCK] and [BOMB] orbs into Matching orbs, recovers 7,600 HP and reduces damage received by 76% for 1 turn",
         specialName: "Prayers of Paradise",
     },
     1913:{//Kimono Vivi
-        captain: "",
-        special: "",
+        captain: "Boosts ATK of Free Spirit and Cerebral characters by 1.5x. Boosts Beli gained by 1.5x",
+        special: "Randomizes all non-matching orbs, recovers 2,018 HP and amplifies the effects of orbs for Cerebral and Free Spirit characters by 1.75x for 1 turn",
         specialName: "Blossoming a New Year Celebration",
     },
     1914:{//Kimono Vivi
-        captain: "",
-        special: "",
+        captain: "Boosts ATK of Free Spirit and Cerebral characters by 1.75x and their HP by 1.5x. Boosts Beli gained by 2.5x",
+        special: "Randomizes all non-matching orbs, recovers 2,018 HP and amplifies the effects of orbs for Cerebral and Free Spirit characters by 1.75x for 1 turn",
         specialName: "Blossoming a New Year Celebration",
     },
     1921:{//6+ Zoro
-        captain: "Triples the ATK of Slasher characters and boosts their HP by 1.5x",
-        special: "Deals 120x character's ATK in typeless damage to all enemies.  If Zoro is your captain or friend captain, boosts the ATK of slashers by 2x.  If he is a crew member, locks the chain multiplier at 2.5x.  Boosts Slasher character's ATK by 1.75x",
+        captain: "Boosts ATK of Slasher characters by 3x and their HP by 1.5x",
+        special: "Deals 120x character's ATK as typeless damage to all enemies. If Zoro is your Captain or Friend/Guest Captain, boosts ATK of Slasher characters by 2x for 1 turn. If he is a Sailor, boosts ATK of Slasher characters by 1.75x for 1 turn and locks the chain multiplier at 2.5x for 1 turn instead",
         specialName: "Santoryu Ogi: Ichidai Sanzen Daisen Sekai",
     },
     1922:{//6+ Law
         captain: "Boosts ATK of Cerebral characters by 3x and heals for 0.5x his RCV at the end of the turn each time you hit a PERFECT",
-        special: "Deals 300,000 fixed damage to one enemy and amplifies the effect of orbs for Cerebral characters by 2.25x for 1 turn",
-        specialName: " Radio Knife",
+        special: "Reduces enemy Barrier duration by 1 turn, deals 200,000 fixed damage to one enemy and amplifies the effect of orbs for Cerebral characters by 2.25x for 1 turn",
+        specialName: "Radio Knife",
+        limit: [
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Aquire Potential 1: Pinch Healing" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Aquire Sailor Ability 1: Boosts base ATK of Striker characters by 50" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Aquire Potential 2: Reduce No Healing Duration" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base ATK by 40" },
+            { "description": "Boosts base ATK by 50" },
+            { "description": "Boosts base HP by 70" },
+            { "description": "Boosts base HP by 70" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base RCV by 30" },
+            { "description": "Aquire Sailor Ability 2: Makes [RCV] and [TND] orbs \"beneficial\" for this unit" },
+            { "description": "Boosts base HP by 90" },
+            { "description": "Aquire Potential 3: Barrier Penetration" },
+        ],
+        potential: [
+            {
+                "Name": "Pinch Healing",
+                "description": [ 
+                    "Level 1: If HP is below 10% at the start of the turn, heals for 2x this character's RCV at the end of the turn each time you hit a Perfect",
+                    "Level 2: If HP is below 15% at the start of the turn, heals for 2x this character's RCV at the end of the turn each time you hit a Perfect",
+                    "Level 3: If HP is below 20% at the start of the turn, heals for 2x this character's RCV at the end of the turn each time you hit a Perfect",
+                    "Level 4: If HP is below 30% at the start of the turn, heals for 2x this character's RCV at the end of the turn each time you hit a Perfect",
+                    "Level 5: If HP is below 50% at the start of the turn, heals for 2x this character's RCV at the end of the turn each time you hit a Perfect"
+                ]
+            },
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [ 
+                    "Level 1: Reduces No Healing duration by 1 turn",
+                    "Level 2: Reduces No Healing duration by 1 turn",
+                    "Level 3: Reduces No Healing duration by 2 turns",
+                    "Level 4: Reduces No Healing duration by 2 turns",
+                    "Level 5: Reduces No Healing duration by 3 turns"
+                ]
+            },
+            {
+                "Name": "Barrier Penetration",
+                "description": [ 
+                    "Level 1: This character's attack will ignore barriers if HP is above 99%",
+                    "Level 2: This character's attack will ignore barriers if HP is above 80%",
+                    "Level 3: This character's attack will ignore barriers if HP is above 70%",
+                    "Level 4: This character's attack will ignore barriers if HP is above 50%",
+                    "Level 5: This character's attack will ignore barriers"
+                ]
+            },
+        ]
     },
     2000: {//Rayleigh
         captain: "Boosts ATK of Slasher and Cerebral characters by 2x",

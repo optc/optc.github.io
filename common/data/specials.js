@@ -3996,6 +3996,26 @@ window.specials = {
         atk: function(p) { return p.slot == p.sourceSlot ? 1.5 : 1; },
         type: "type"
     },
+    1905: {
+        orb: function(p) { return (p.unit.class.has("Driven")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain]) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain]); }	
+    },
+    1906: {
+        orb: function(p) { return (p.unit.class.has("Driven")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain]) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain]); }	
+    },
+    1907: {
+        atk: function(p) { return p.classCount.Driven == 6 ? p.unit.class.has("Driven") ? 1.75 : 1 : 1; },
+        type: "class",
+    },
+    1908: {
+        atk: function(p) { return p.classCount.Driven == 6 ? p.unit.class.has("Driven") ? 1.75 : 1 : 1; },
+        type: "class",
+    },
+    1913: {
+        orb: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain]) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain]); }	
+    },
+    1914: {
+        orb: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain]) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain]); }	
+    },
     2000: {
         atk: function(p) { return 1.75; },
         type: "class"

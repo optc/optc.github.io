@@ -42,7 +42,7 @@ var ImportCtrl = function($scope, $rootScope, $state, $stateParams) {
                 rcv = parseInt(matches[5],10) || 0;
             if (id < 1 || id > window.units.length || window.units[id - 1].length === 0) break;
             if (level < 1 || level > window.units[id - 1].maxLevel) break;
-            if (atk > 200 || hp > 200 || rcv > 200 || (atk + hp + rcv) > 500) break;
+            if (atk > 500 || hp > 500 || rcv > 500 || (atk + hp + rcv) > 1500) break;
             team.push({ id: id, level: level, candies: { atk: atk, hp: hp, rcv: rcv }});
         }
     }
