@@ -1920,7 +1920,7 @@ window.units = [
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Pirate Hunter Zoro, The Strawhat Pirates Reborn", "DEX", [ "Slasher", "Driven" ], '6+', 65, 4, 5, 99, null, 1682, 782, 159, 3922, 1555, 328, null ],
-    [ "Trafalgar Law, The Clan of \"D\"", "QCK", [ "Cerebral", "Striker" ], '6+', 65, 5, 5, 99, null, 1610, 809, 162, null, null, null, null ],
+    [ "Trafalgar Law, The Clan of \"D\"", "QCK", [ "Cerebral", "Striker" ], '6+', 65, 5, 5, 99, null, 1610, 809, 162, 2000, 2000, 1000, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
