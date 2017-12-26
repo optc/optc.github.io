@@ -17469,13 +17469,13 @@ window.details = {
     },
     1905:{//Sugar
         captain: "Boosts ATK of Driven and Cerebral characters by 2x",
-        special: "Changes [RCV], [TND] and [G] orbs into Matching orbs and  amplifies the effect of orbs for Driven characters by 1.75x for 3 turns",
+        special: "Changes [RCV], [TND] and [G] orbs into Matching orbs and amplifies the effect of orbs for Driven characters by 1.75x for 3 turns. Locks orbs for 1 turn.",
         specialName: "March of the Decapitating Dolls",
         sailor: "Reduces Paralysis duration by 1 turn",
     },
     1906:{//Sugar
         captain: "Boosts ATK of Driven and Cerebral characters by 2.25x and their RCV by 1.5x",
-        special: "Changes [RCV], [TND] and [G] orbs into Matching orbs and  amplifies the effect of orbs for Driven characters by 1.75x for 3 turns",
+        special: "Changes [RCV], [TND] and [G] orbs into Matching orbs and amplifies the effect of orbs for Driven characters by 1.75x for 3 turns. Locks orbs for 1 turn.",
         specialName: "March of the Decapitating Dolls",
         sailor: "Reduces Paralysis duration by 1 turn",
         limit: "This character has a limit break tree"
@@ -17496,13 +17496,13 @@ window.details = {
         limit: "This character has a limit break tree"
     },
     1909:{//V2 Doflamingo
-        captain: "If there are 6 Driven characters in your crew, boosts ATK of Driven characters by 3.9x if they have a matching orb, by 3.25x otherwise and their HP by 1.2x. Lowers chances of getting STR orbs and makes DEX and QCK orbs \"beneficial\" to ??? characters",
+        captain: "If there are 6 Driven characters in your crew, boosts ATK of Driven characters by 3.9x if they have a matching orb, by 3.25x otherwise and their HP by 1.2x. Lowers chances of getting STR orbs and makes DEX and QCK orbs \"beneficial\" to Driven characters",
         special: "Deals 200% of the damage dealt in Overkill Damage in the previous turn as typeless damage to all enemies.",
         specialNotes: "Overkill Damage is damage dealt over the enemy's current HP with normal attacks that killed them. For example, dealing 2,100,000 damage to an enemy with 1,000,000 HP will count as 1,100,000 Overkill Damage. This stacks for each enemy killed in the previous turn.",
         specialName: "Flap Thread",
     },
     1910:{//V2 Doflamingo
-        captain: "If there are 6 Driven characters in your crew, boosts ATK of Driven characters by 3.9x if they have a matching orb, by 3.25x otherwise and their HP by 1.2x. Lowers chances of getting STR orbs and makes DEX and QCK orbs \"beneficial\" to ??? characters",
+        captain: "If there are 6 Driven characters in your crew, boosts ATK of Driven characters by 3.9x if they have a matching orb, by 3.25x otherwise and their HP by 1.2x. Lowers chances of getting STR orbs and makes DEX and QCK orbs \"beneficial\" to Driven characters",
         special: "Deals 200% of the damage dealt in Overkill Damage in the previous turn as typeless damage to all enemies.",
         specialNotes: "Overkill Damage is damage dealt over the enemy's current HP with normal attacks that killed them. For example, dealing 2,100,000 damage to an enemy with 1,000,000 HP will count as 1,100,000 Overkill Damage. This stacks for each enemy killed in the previous turn.",
         specialName: "Flap Thread",
@@ -17535,7 +17535,7 @@ window.details = {
     },
     1922:{//6+ Law
         captain: "Boosts ATK of Cerebral characters by 3x, HP by 1.25x, and heals for 0.5x his RCV at the end of the turn each time you hit a PERFECT",
-        special: "Reduces enemy Barrier duration by 1 turn, deals 200,000 fixed damage to one enemy and amplifies the effect of orbs for Cerebral characters by 2.25x for 1 turn",
+        special: "Reduces enemy Barrier duration by 1 turn, deals 200,000 fixed damage to all enemies and amplifies the effect of orbs for Cerebral characters by 2.25x for 1 turn",
         specialName: "Radio Knife",
         limit: [
             { "description": "Boosts base ATK by 10" },
