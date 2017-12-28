@@ -1750,6 +1750,8 @@ window.flags = {
     1914: { rr: 1, rro: 1, lrr: 1 },
     1921: { rr: 1, rro: 1 },
     1922: { rr: 1, rro: 1 },
-    2000: { global: 1 },
-    2001: { global: 1 },
+    1923: { global: 1 },
+    1924: { global: 1 },
+    1925: { rr: 1, rro: 1, lrr: 1 },
+    1926: { rr: 1, rro: 1, lrr: 1 },
 };

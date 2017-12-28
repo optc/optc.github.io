@@ -3027,6 +3027,18 @@ window.evolutions = {
         evolution: 1914,
         evolvers: [  ]
     },
+    1915: {
+        evolution: 1916,
+        evolvers: [  ]
+    },
+    1917: {
+        evolution: 1918,
+        evolvers: [  ]
+    },
+    1919: {
+        evolution: 1920,
+        evolvers: [  ]
+    },
     1362: {
         evolution: 1921,
         evolvers: [ 'skullDEX', 118, 86, 302, 267 ]
@@ -3035,8 +3047,12 @@ window.evolutions = {
         evolution: 1922,
         evolvers: [  ]
     },
-    2000: {
-        evolution: 2001,
+    1923: {
+        evolution: 1924,
         evolvers: [ 118, 84, 266, 300, 100 ]
+    },
+    1925: {
+        evolution: 1926,
+        evolvers: [  ]
     },
 };

@@ -2252,7 +2252,7 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Slasher") ? 2 : 1; }
     },
     950: {
-        damageSorter: function(d) { return CrunchUtils.classSort(d, 2.5, [ "Free Spirit" ]); },
+        damageSorter: function(d) { return CrunchUtils.classSort(d, 2.5, [ "Free Spirit", "Fighter" ]); },
         hitAtk: function(p) {
             if (!p.unit.class.has("Fighter") && !p.unit.class.has("Free Spirit")) return 1;
             return p.modifiers.slice(0, p.chainPosition)
@@ -2261,7 +2261,7 @@ window.captains = {
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
     },
     951: {
-        damageSorter: function(d) { return CrunchUtils.classSort(d, 2.75, [ "Free Spirit" ]); },
+        damageSorter: function(d) { return CrunchUtils.classSort(d, 2.75, [ "Free Spirit", "Fighter" ]); },
         hitAtk: function(p) {
             if (!p.unit.class.has("Fighter") && !p.unit.class.has("Free Spirit")) return 1;
             return p.modifiers.slice(0, p.chainPosition)
@@ -6223,10 +6223,10 @@ window.captains = {
         hp: function(p) { return p.unit.class.has("Driven") ? 2.25 : 1; },
     },
     1903: {
-        atk: function(p) { return p.unit.class.has("Dree Spirit") ? 2.25 : 1; },
+        atk: function(p) { return p.unit.class.has("Free Spirit") ? 2.25 : 1; },
     },
     1904: {
-        atk: function(p) { return p.unit.class.has("Dree Spirit") ? 2.75 : 1; },
+        atk: function(p) { return p.unit.class.has("Free Spirit") ? 2.75 : 1; },
     },
     1905: {
         atk: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Driven") ? 2 : 1; },
@@ -6291,6 +6291,28 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral") ? 1.75 : 1; },
         rcv: function(p) { return p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral") ? 1.5 : 1; },
     },
+    1915: {
+        damageSorter: function(d) { return CrunchUtils.classSort(d, 2, [ "Free Spirit", "Powerhouse" ]); },
+        hitAtk: function(p) {
+            if (!p.unit.class.has("Powerhouse") && !p.unit.class.has("Free Spirit")) return 1;
+            return p.modifiers.slice(0, p.chainPosition)
+                .subcontains(["Perfect", "Perfect", "Perfect"]) ? 2 : 1;
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
+    },
+    1916: {
+        damageSorter: function(d) { return CrunchUtils.classSort(d, 4, [ "Free Spirit", "Powerhouse" ]); },
+        hitAtk: function(p) {
+            if (!p.unit.class.has("Powerhouse") && !p.unit.class.has("Free Spirit")) return 1;
+            return p.modifiers.slice(0, p.chainPosition)
+                .subcontains(["Perfect", "Perfect", "Perfect", "Perfect"]) ? 4 : p.modifiers.slice(0, p.chainPosition)
+                .subcontains(["Perfect", "Perfect"]) ? 2 : 1;
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
+    },
+    1918: {
+        atk: function(p) { return p.unit.type == "STR" ? 2.25 : 1; },
+    },
     1921: {
         atk: function(p) { return p.unit.class.has("Slasher") ? 3 : 1; },
         hp: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; },
@@ -6299,10 +6321,13 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Cerebral") ? 3 : 1; },
         hp: function(p) { return p.unit.class.has("Cerebral") ? 1.25 : 1; },
     },
-    2000: {
+    1923: {
         atk: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Slasher") ? 2 : 1; },
     },
-    2001: {
+    1924: {
         atk: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Slasher") ? 2.5 : 1; },
+    },
+    1926: {
+        atk: function(p) { return p.unit.class.has("Driven") ? 2.5 : 1; },
     },
 };

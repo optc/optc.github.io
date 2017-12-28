@@ -4003,11 +4003,11 @@ window.specials = {
         orb: function(p) { return (p.unit.class.has("Driven")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain]) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain]); }	
     },
     1907: {
-        atk: function(p) { return p.classCount.Driven == 6 ? p.unit.class.has("Driven") ? 1.75 : 1 : 1; },
+        atk: function(p) { return p.classCount.Driven == 6 ? p.unit.class.has("Driven") ? 2 : 1 : 1; },
         type: "class",
     },
     1908: {
-        atk: function(p) { return p.classCount.Driven == 6 ? p.unit.class.has("Driven") ? 1.75 : 1 : 1; },
+        atk: function(p) { return p.classCount.Driven == 6 ? p.unit.class.has("Driven") ? 2 : 1 : 1; },
         type: "class",
     },
     1913: {
@@ -4016,25 +4016,52 @@ window.specials = {
     1914: {
         orb: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain]) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain]); }	
     },
+    1915: {
+        affinity: function(p){ return 1.75; }
+    },
+    1916: {
+        affinity: function(p){ return 1.75; }
+    },
+    1917: {
+        atk: function(p) { return p.unit.type == "STR" ? 1.75 : 1; },
+        type: "type"
+    },
+    1918: {
+        atk: function(p) { return p.unit.type == "STR" ? 1.75 : 1; },
+        type: "type"
+    },
     1921: {
         atk: function(p) { return !p.unit.class.has('Slasher') ? 1 : p.sourceSlot < 2 ? 2 : 1.75 ; },
         type: "class",
-        /*             ~~~NEED TO ADD SOURCESLOT TO CHAIN
-        chain: function(p) { return (true) ? 2.5 : 1; },
+        chain: function(p) { return p.sourceSlot > 1 ? 2.5 : 1; },
         chainLimiter: function(p) {
-            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 2.5 : 1;
-        },*/
+            if (p.sourceSlot > 1){
+                var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+                return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 2.5 : 1;
+            }
+            else{
+                var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+                return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
+            }
+        },
     },
     1922: {
         orb: function(p) { return p.unit.class.has("Cerebral") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2.25, [p.friendCaptain, p.captain]) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain]); }
     },
-    2000: {
+    1923: {
         atk: function(p) { return 1.75; },
         type: "class"
     },
-    2001: {
+    1924: {
         atk: function(p) { return 1.75; },
         type: "class"
+    },
+    1925: {
+        atk: function(p) { return p.unit.class.has("Driven") ? 1.75 : 1; },
+        type: "class",
+    },
+    1926: {
+        atk: function(p) { return p.unit.class.has("Driven") ? 1.75 : 1; },
+        type: "class",
     },
 };

@@ -499,7 +499,15 @@ window.zombies = {
         type: 'healer',
         multiplier: 2
     },
-    2001: { // Rayleigh CHANGE THIS WHEN YOU CHANGE RAYLEIGH
+    1920: { // Sanji
+        type: 'healer',
+        multiplier: 3
+    },
+    1924: { // Rayleigh
+        type: 'healer',
+        multiplier: 2
+    },
+    1926: { // Coby
         type: 'healer',
         multiplier: 2
     },

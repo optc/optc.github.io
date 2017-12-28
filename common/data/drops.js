@@ -1725,6 +1725,13 @@ window.drops = {
             'All Difficulties': [ 1890, 1892, -1314, -1316, -1322, -1741, -1743, -1559 ]
         },
         
+        {
+            name: 'Escape from Germa 66!',
+            thumb: 1918,
+            gamewith: null,
+            'All Difficulties': [ 1917, 1919 ]
+        },
+        
     ],
 
             
@@ -2120,10 +2127,10 @@ window.drops = {
         {
             name: 'Clash!! Rayleigh',
             global: true,
-            thumb: 2001,
+            thumb: 1924,
             gamewith: null,
-            Ultimate: [ 2000 ],
-            Master: [ 2000 ]
+            Ultimate: [ 1923 ],
+            Master: [ 1923 ]
         },
 
     ],

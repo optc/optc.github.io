@@ -225,7 +225,7 @@ directives.addDebuffOptions = function($timeout, $compile, MATCHER_IDS) {
             element.after(filter);
             $compile(filter)(scope);
             scope.onDebuffClick = function(e,type) {
-                console.log(scope.filters.debuffs);
+                //console.log(scope.filters.debuffs);
                 scope.filters.debuffs = (scope.filters.debuffs == type ? null : type);
             };
         }

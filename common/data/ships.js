@@ -465,5 +465,16 @@ window.ships = [
             return 1.5;
         },
     },
+    
+    
+    
+    { //36
+        name: "Sexy Foxy",
+        thumb: null,
+        description: 'Boosts ATK of all units by 1.5x. Boosts EXP gained by 1.2x and Beli gained by 2x.',
+        atk: function(p) {
+            return 1.5;
+        },
+    },
 
 ];

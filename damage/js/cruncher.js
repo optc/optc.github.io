@@ -555,7 +555,10 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         chainSpecials.forEach(function(special) {
             var multipliersUsed = [ ], currentHits = 0, overall = 0;
             var i, params = [ ];
-            for (var j=0;j<damage.length;++j) params.push(getParameters(damage[j].position, j));
+            for (var j=0;j<damage.length;++j){ 
+                params.push(getParameters(damage[j].position, j));
+                params[j].sourceSlot = special.sourceSlot;
+            }
             var result = damage.map(function(x,n) {
                 // calculate chain multiplier
                 var chainModifier = cptsWith.chainModifiers.reduce(function(prev,next) {
