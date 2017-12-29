@@ -4064,4 +4064,12 @@ window.specials = {
         atk: function(p) { return p.unit.class.has("Driven") ? 1.75 : 1; },
         type: "class",
     },
+    1929: {
+        atk: function(p) { return p.unit.type == "DEX" ? 2 : 1; },
+        type: "type"
+    },
+    1930: {
+        atk: function(p) { return p.unit.type == "DEX" ? 2 : 1; },
+        type: "type"
+    },
 };

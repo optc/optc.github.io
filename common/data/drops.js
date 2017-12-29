@@ -1869,10 +1869,20 @@ window.drops = {
             global: true,
             gamewith: 13682,
             teamDatabase: 'raid_bosses/11',
-            condition: 'Take 300 damage per character in Environmental Lightning Damage every 3 turns',
+            condition: 'Take 300 damage per character in Environmental Lightning Damage every 3 turns. Luffy is immune to lightning damage.',
             Ultimate: [ 85, 111, 118, 301, 602 ],
             Master: [ 85, 111, 118, 602 ] ,
             Expert: [ 111, 118, 602 ]
+        },
+
+        {
+            name: 'Clash Neo!! Eneru',
+            thumb: 1930,
+            gamewith: null,
+            condition: 'Take 300 damage per character in Environmental Lightning Damage every 3 turns. Luffy is immune to lightning damage.',
+            Ultimate: [ 85, 111, 118, 301, 1929 ],
+            Master: [ 85, 111, 118, 1929 ] ,
+            Expert: [ 111, 118, 1929 ]
         },
 
         {

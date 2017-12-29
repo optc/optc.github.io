@@ -6330,4 +6330,10 @@ window.captains = {
     1926: {
         atk: function(p) { return p.unit.class.has("Driven") ? 2.5 : 1; },
     },
+    1929: {
+        atk: function(p) { return p.unit.type == "DEX" ? 2 : 1; }
+    },
+    1930: {
+        atk: function(p) { return p.unit.type == "DEX" ? 2.25 : 1; }
+    },
 };
