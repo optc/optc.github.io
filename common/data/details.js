@@ -17706,4 +17706,18 @@ window.details = {
         special: "Reduces Bind duration for one character completely, locks all orbs for 1 turn and boosts ATK of Driven characters by 1.75x for 3 turns",
         specialName: "Unshameful Fist of Justice",
     },
+    1929: {
+        special: "Reduces crew's current HP by 90%, deals 20,000 fixed damage to all enemies, boosts ATK of DEX characters by 2x for 1 turn",
+        specialName: "200,000,000 Volt Amaru [Neo]",
+        specialNotes: "#{fixed}",
+        captain: "Boosts ATK of DEX characters by 2x",
+        captainNotes: "This information is based on Raid Enel [602] and may differ than actual details and will be updated once information is recieved."
+    },
+    1930: {
+        special: "Reduces crew's current HP by 90%, deals 20,000 fixed damage to all enemies, boosts ATK of DEX characters by 2x for 1 turn",
+        specialName: "200,000,000 Volt Amaru [Neo]",
+        specialNotes: "#{fixed}",
+        captain: "Boosts ATK of DEX characters by 2.25x, recovers 5x character's RCV in HP at the end of each turn",
+        captainNotes: "This information is based on Raid Enel [603] and may differ than actual details and will be updated once information is recieved."
+    },
 };

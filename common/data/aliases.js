@@ -1923,6 +1923,12 @@ window.aliases = {
     1922: ['', '', 'Super Law', 'Mega Law'],
     1923: ['', '', 'Global Rayleigh', 'Raidleigh'],
     1924: ['', '', 'Global Rayleigh', 'Raidleigh'],
+    1925: ['', '', ''],
+    1926: ['', '', ''],
+    1927: ['', '', ''],
+    1928: ['', '', ''],
+    1929: ['', '', 'Neo Enel', 'Neo Eneru'],
+    1930: ['', '', 'Neo Enel', 'Neo Eneru'],
 };
 
 //  xxxx: ['JPN', 'FR', 'Other'],
