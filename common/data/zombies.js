@@ -491,6 +491,10 @@ window.zombies = {
         type: 'healer',
         amount: 200
     },
+    1865: { // Urouge
+        type: 'zombie',
+        threshold: 0.5
+    },
     1888: { // Cavendish
         type: 'healer',
         multiplier: 0.5

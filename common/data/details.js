@@ -6135,7 +6135,7 @@ window.details = {
     946: {
         specialName: "Lock-on Iron Ball",
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of Striker characters by 1.75x",
-        special: "Change Friend Captain and changes own orb into [INT]"
+        special: "Change Friend Captain orb and changes own orb into [INT]"
     },
     947: {
         captain: "Boosts ATK of [INT] characters by 1.5x, Boosts damage of [INT] specials by 1.5x",
@@ -10394,13 +10394,13 @@ window.details = {
     },
     1369: {//Timeskip Chopper
         captain: "Boosts ATK of [QCK] characters by 1.5x and their HP and RCV by 1.2x",
-        special: "Changes [DEX] and [RCV] orbs on [QCK] characters into [QCK] orbs, cuts the current HP of one enemy by 15%",
+        special: "Changes [DEX] and [RCV] orbs into [QCK] orbs on [QCK] characters, cuts the current HP of one enemy by 15%",
         sailor: "Makes [STR] orbs \"beneficial\" for this unit",
         specialName: "Kakuho: Elf",
     },
     1370: {//Timeskip Chopper
         captain: "Boosts ATK of [QCK] characters by 2x and their HP and RCV by 1.2x",
-        special: "Changes [DEX] and [RCV] orbs on [QCK] characters into [QCK] orbs, cuts the current HP of one enemy by 15%",
+        special: "Changes [DEX] and [RCV] orbs into [QCK] orbs on [QCK] characters, cuts the current HP of one enemy by 15%",
         sailor: "Makes [STR] orbs \"beneficial\" for this unit",
         specialName: "Kakuho: Elf",
     },
@@ -15061,7 +15061,7 @@ window.details = {
         special: "Reduces damage received by 50% for 1 turn and switches orbs between slots twice",
     },
     1777:{//Kizaru
-        captain: "Not Translated",
+        captain: "Boosts ATK of Free Spirit characters by 2.5x",
         special: "Deals 50x character's ATK in typeless damage to one enemy that will ignore damage negating abilities and barriers, changes [BLOCK], [STR], and [INT] orbs into Matching orbs for Free Spirit characters and adds .2x to Chain multiplier for 3 turns",
         specialName: "Devil Destroyer's Light Arrow",
         specialNotes: "#{ignoreBarrier}"
@@ -16456,7 +16456,7 @@ window.details = {
         sailor: "If this character has an [INT] orb and you hit a Perfect with him, keep his [INT] orb for the next turn",
     },
     1860: {//Coloseum Raizo
-        captain: "Not Translated",
+        captain: "Boosts ATK of Shooter characters by 2x",
         special: [
             {
                 "description": "Deals 3x character's ATK in QCK damage to all enemies, changes [TND] and [RCV] orbs on Shooter characters into Matching Orbs,",
@@ -16543,19 +16543,19 @@ window.details = {
         specialName: "Poof [Neo]",
     },
     1864: {//Urouge FN
-        captain: "Not Translated",
+        captain: "Protects from defeat as long as HP is above 50%",
         specialNotes: "PERFECT hits don't count, it has to GREAT hits",
         special: "Recovers 5,000 HP, boosts ATK of Striker characters by 1.5x for 1 turn. If during that turn you score 4 Great hits, boosts ATK of Striker characters by 1.75x in the following turn.",
         specialName: "Culling the Criminals from this Earthly World"
     },
     1865: {//Urouge FN
-        captain: "Boosts ATK of Striker characters by 1.75x, protects from defeat as long as HP is above a certain percent",
+        captain: "Boosts ATK of Striker characters by 1.75x, protects from defeat as long as HP is above 50%",
         specialNotes: "PERFECT hits don't count, it has to GREAT hits",
         special: "Recovers 5,000 HP, boosts ATK of Striker characters by 1.5x for 1 turn. If during that turn you score 4 Great hits, boosts ATK of Striker characters by 1.75x in the following turn.",
         specialName: "Culling the Criminals from this Earthly World"
     },
     1866: {//Hawkins FN
-        captain: "Not Translated",
+        captain: "Boosts ATK of Cerebral characters by 2x",
         special: "Cuts the current HP of each enemy by 10%. At the end of the turn, cuts the current HP of each enemy by 10% for 3 turns. Reduces damage received by 40% for 3 turns.",
         specialName: "Fortune-Telling from the Shadow of Death"
     },
@@ -17255,7 +17255,7 @@ window.details = {
         ],
     },
     1890: {//Perona
-        captain: "Not Translated",
+        captain: "Boosts ATK of Shooter characters by 2x and their HP by 1.2x",
         special: "Reduces damage received by 50% for 2 turns, makes Badly Matching and [BLOCK] orbs not reduce damage for 2 turns and recovers 2,000 HP at the end of the turn for 3 turns",
         specialName: "Gothic Angel",
         sailor: "Boosts base RCV of Shooter characters by 50"
@@ -17267,7 +17267,7 @@ window.details = {
         sailor: "Boosts base RCV of Shooter characters by 50"
     },
     1892: {//Mihawk
-        captain: "Not Translated",
+        captain: "Boosts ATK of Slasher and Cerebral characters by 1.5x",
         special: [
             {
                 "description": "Reduces crew's current HP by 50%, deals 2x the amount of HP subtracted in typeless damage to all enemies.",
@@ -17288,7 +17288,6 @@ window.details = {
     },
     1893: {//Mihawk
         captain: "Boosts ATK of Slasher and Cerebral characters by 1.75x",
-        captainnotes: "Not confirmed if the boosts stack to boost Slasher and Cerebral characters by 3.0625x",
         special: [
             {
                 "description": "Reduces crew's current HP by 50%, deals 2x the amount of HP subtracted in typeless damage to all enemies.",
@@ -17308,7 +17307,7 @@ window.details = {
         sailor: "When HP is below 50% at the start of the turn, boosts own base ATK by 1.25x"
     },
     1894: {//Urouge
-        captain: "Not Translated",
+        captain: "Boosts ATK of Fighter characters by 2x and their HP by 1.2x",
         special: "If HP is below 50% at the time the special is activated, deal 75x character's ATK in [QCK] damage to one enemy, boosts ATK of Fighter characters by 2x for 1 turn",
         specialName: "The Collapsing Arhat",
     },
@@ -17357,7 +17356,8 @@ window.details = {
         ]
     },
     1896: {//Enel
-        captain: "Not Translated",
+        captain: "Boosts ATK of Driven characters proportionally to the crew's current HP, by 2.25x at max",
+        captainNotes: "#{captainProportional : higher : 1.25 + 1 * ((remaining HP) / (total HP)) : 1.25 : 2.25}",
         special: [
             {
                 "description": "Changes own orb into [STR], reduces crew's ATK DOWN, Chain Multiplier Limit and Paralysis duration by 2 turns. If your Captain is a Driven character, adds .3x to Chain multiplier for 1 turn",
@@ -17373,7 +17373,7 @@ window.details = {
     },
     1897: {//Enel
         captain: "Boosts ATK of Driven characters proportionally to the crew's current HP, by 2.75x at max, and their RCV by 1.3x",
-        //captainNotes: "#{captainProportional : lower : 1.5 + 1.25 * (1 - (remaining HP) / (total HP)) : 1.5 : 2.75}", Change when we know if he's lower or higher HP
+        captainNotes: "#{captainProportional : higher : 1.5 + 1.25 * ((remaining HP) / (total HP)) : 1.5 : 2.75}",
         special: [
             {
                 "description": "Changes own orb into [STR], reduces crew's ATK DOWN, Chain Multiplier Limit and Paralysis duration by 2 turns. If your Captain is a Driven character, adds .3x to Chain multiplier for 1 turn",
@@ -17483,14 +17483,14 @@ window.details = {
     1907:{//Trebol
         captain: "Boosts ATK of Driven characters by 3x, reduces crew's current HP by ??% at the end of each turn, reduces his own ATK multiplier by ???x at the end of each turn",
         captainNotes: "His ATK multiplier will be 3x on the first turn, 2.?x on the second, 2.?x on the third and so on. The reduction stops once the multiplier is ???x. The multiplier affects all Driven characters. You will not die to the HP reduction",
-        special: "Reduces enemies Threshold Damage Reduction, Percent Damage Reduction and Increased Defense duration by 4 turns. If there are 6 Driven characters in your crew, Boosts ATK of Driven characters by 2x for 1 turn.",
+        special: "Reduces enemies Threshold Damage Reduction, Percent Damage Reduction and Increased Defense duration by 4 turns. If there are 6 Driven characters in your crew, Boosts ATK of Driven characters by 2x for 1 turn and reduces Special Cooldown of your top row by 1 turn.",
         specialName: "Beta Betton Meteora",
         sailor: "Boosts base ATK of the characters in the top row by 100",
     },
     1908:{//Trebol
         captain: "Boosts ATK of Driven characters by 3.5x, reduces crew's current HP by ??% at the end of each turn, reduces his own ATK multiplier by ???x at the end of each turn",
         captainNotes: "His ATK multiplier will be 3.5x on the first turn, 3.?x on the second, 3.?x on the third and so on. The reduction stops once the multiplier is ???x. The multiplier affects all Driven characters. You will not die to the HP reduction",
-        special: "Reduces enemies Threshold Damage Reduction, Percent Damage Reduction and Increased Defense duration by 4 turns. If there are 6 Driven characters in your crew, Boosts ATK of Driven characters by 2x for 1 turn.",
+        special: "Reduces enemies Threshold Damage Reduction, Percent Damage Reduction and Increased Defense duration by 4 turns. If there are 6 Driven characters in your crew, Boosts ATK of Driven characters by 2x for 1 turn and reduces Special Cooldown of your top row by 1 turn.",
         specialName: "Beta Betton Meteora",
         sailor: "Boosts base ATK of the characters in the top row by 100",
         limit: "This character has a limit break tree"
@@ -17706,14 +17706,14 @@ window.details = {
         special: "Reduces Bind duration for one character completely, locks all orbs for 1 turn and boosts ATK of Driven characters by 1.75x for 3 turns",
         specialName: "Unshameful Fist of Justice",
     },
-    1929: {
+    1929: {//Enel Neo
         special: "Reduces crew's current HP by 90%, deals 20,000 fixed damage to all enemies, boosts ATK of DEX characters by 2x for 1 turn",
         specialName: "200,000,000 Volt Amaru [Neo]",
         specialNotes: "#{fixed}",
         captain: "Boosts ATK of DEX characters by 2x",
         captainNotes: "This information is based on Raid Enel [602] and may differ than actual details and will be updated once information is recieved."
     },
-    1930: {
+    1930: {//Enel Neo
         special: "Reduces crew's current HP by 90%, deals 20,000 fixed damage to all enemies, boosts ATK of DEX characters by 2x for 1 turn",
         specialName: "200,000,000 Volt Amaru [Neo]",
         specialNotes: "#{fixed}",

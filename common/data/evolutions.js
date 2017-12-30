@@ -3001,7 +3001,7 @@ window.evolutions = {
     },
     1901: {
         evolution: 1902,
-        evolvers: [  ]
+        evolvers: [ 99, 99, 1180, 304, 304 ]
     },
     1903: {
         evolution: 1904,

@@ -470,6 +470,10 @@ directives.addLinks = function($stateParams) {
                     ul.append($('<li><a href="http://onepiece-treasurecruise.com/カリブー-カリブー海賊団船長/" target="_blank">' +
                         'Official Guide (Japanese)</a></li>'));
                 }
+                else if (id == 1892){
+                    ul.append($('<li><a href="http://onepiece-treasurecruise.com/ジュラキュール・ミホーク-シッケアール王国　跡/" target="_blank">' +
+                        'Official Guide (Japanese)</a></li>'));
+                }
                 else{
                     ul.append($('<li><a href="http://onepiece-treasurecruise.com/c-' + id + '" target="_blank">' +
                         'Official Guide (Japanese)</a></li>'));
