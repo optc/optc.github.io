@@ -6013,12 +6013,12 @@ window.captains = {
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
     },
     1882: {
-        atk: function(p) { return p.percHP <= 10.0 ? 3.5 : 2.5; },
+        atk: function(p) { return p.percHP <= 30.0 ? 3.5 : 2.5; },
         hp: function(p) { return 1.2; },
         rcv: function(p) { return 1.2; },
     },
     1883: {
-        atk: function(p) { return p.percHP <= 10.0 ? 3.5 : 2.5; },
+        atk: function(p) { return p.percHP <= 30.0 ? 3.5 : 2.5; },
         hp: function(p) { return 1.2; },
         rcv: function(p) { return 1.2; },
     },
