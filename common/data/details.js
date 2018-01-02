@@ -17611,7 +17611,7 @@ window.details = {
         ]
     },
     1917: {//Reiju
-        captain: "Not Translated",
+        captain: "Boosts ATK of STR characters by 2x and reduces damage received by 10%",
         special: "Reduces Bind duration by 2 turns, boosts ATK of [STR] characters by 1.75x for 1 turn",
         specialName: "Brute Force Rescue",
         sailor: "Makes [PSY] orbs \"beneficial\" for this unit",
