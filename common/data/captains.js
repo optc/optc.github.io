@@ -2001,8 +2001,8 @@ window.captains = {
         rcv: function(p) { return p.unit.type == "DEX" ? 1.5 : 1; }
     },
     891: {
-        atk: function(p) { return p.unit.class.has("Powerhouse") ? 1.5 : 1; },
-        hp: function(p) { return p.unit.class.has("Powerhouse") ? 1.5 : 1; }
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 1.75 : 1; },
+        hp: function(p) { return p.unit.class.has("Powerhouse") ? 1.75 : 1; }
     },
     892: {
         chainModifier: function(p) { return 2; }
@@ -6204,7 +6204,7 @@ window.captains = {
         },
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
     },
-    1891: {
+    1890: {
         atk: function(p) { return p.unit.class.has("Shooter") ? 2 : 1; },
         hp: function(p) { return p.unit.class.has("Shooter") ? 1.2 : 1; },
     },

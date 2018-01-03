@@ -5700,7 +5700,7 @@ window.details = {
         special: "Changes [STR] orbs into [DEX] orbs, deals 10x character's ATK in DEX damage to all enemies"
     },
     891: {
-        captain: "Boosts ATK and RCV of Powerhouse characters by 1.75x",
+        captain: "Boosts ATK and HP of Powerhouse characters by 1.75x",
         specialName: "Resurrection of the Dead",
         special: "Reduces damage received by 50% for 1 turn, boosts ATK of Powerhouse characters by 1.25x for 1 turn"
         },
