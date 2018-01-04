@@ -5017,7 +5017,7 @@ window.captains = {
     1682: {
         damageSorter: function(d) { return CrunchUtils.lowCostSort(d, 3.5, 30); },
         hitAtk: function(p) {
-            if (!(p.unit.cost <= 30)) return 1;
+            if (!(p.unit.cost <= 30)) return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? 1.4 : 1;
             return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? 3.5 : 2.5;
         },
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
@@ -5332,7 +5332,7 @@ window.captains = {
     1753: {
         damageSorter: function(d) { return CrunchUtils.lowCostSort(d, 3.5, 30); },
         hitAtk: function(p) {
-            if (!(p.unit.cost <= 30)) return 1;
+            if (!(p.unit.cost <= 30)) return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? 1.4 : 1;
             return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? 3.5 : 2.5;
         },
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],

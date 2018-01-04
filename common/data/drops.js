@@ -1662,7 +1662,7 @@ window.drops = {
             thumb: 1735,
             gamewith: 66021,
             condition: 'Limited amount of turns to complete the mission.',
-            'All Difficulties': [ 1734, 1736, -1571, -1573, -1654, -641, -1182, -1188, -1210, -556, -964, -1354 ]
+            'All Difficulties': [ 1734, 1736, -1571, -1573, -1654, -641, -1182, -1188, -1210, -556, -964, -1351 ]
         },
         
         {
@@ -1726,10 +1726,10 @@ window.drops = {
         },
         
         {
-            name: 'Escape from Germa 66!',
+            name: 'Final Thought to my Brother Sanji!',
             thumb: 1918,
-            gamewith: null,
-            'All Difficulties': [ 1917, 1919 ]
+            gamewith: 85780,
+            'All Difficulties': [ 1917, 1919, -1922, -1751, -1745, -1665, -1320, -1370, -1560 ]
         },
         
     ],
@@ -1879,7 +1879,7 @@ window.drops = {
             name: 'Clash Neo!! Eneru',
             thumb: 1930,
             gamewith: null,
-            condition: 'Take 300 damage per character in Environmental Lightning Damage every 3 turns. Luffy is immune to lightning damage.',
+            condition: 'Take 300 damage per character in Environmental Lightning Damage every 3 turns. Luffy is immune to lightning damage. 1 Expert version, 1 Master version, and 3 different Ultimate versions with different conditions. Expert/Master: Driven/Powerhouse/Cerebral Only. Can only complete 10 times each. Ultimate: Driven Only, Powerhouse Only, and Cerebral Only',
             Ultimate: [ 85, 111, 118, 301, 1929 ],
             Master: [ 85, 111, 118, 1929 ] ,
             Expert: [ 111, 118, 1929 ]
@@ -2138,7 +2138,7 @@ window.drops = {
             name: 'Clash!! Rayleigh',
             global: true,
             thumb: 1924,
-            gamewith: null,
+            gamewith: 85580,
             Ultimate: [ 1923 ],
             Master: [ 1923 ]
         },
@@ -2184,6 +2184,13 @@ window.drops = {
             thumb: 1889,
             gamewith: 83086,
             'Raging Sea': [ 1888 ]
+        },
+
+        {
+            name: 'Luffy: Gear 4th',
+            thumb: 1916,
+            gamewith: 85567,
+            'Raging Sea': [ 1915 ]
         },
         
     ],
