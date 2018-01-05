@@ -11697,7 +11697,7 @@ window.details = {
             { "description": "Aquire Sailor Ability 1: Boosts amount healed from [RCV] orbs by 150 each" },
             { "description": "Boosts base ATK by 60" },
             { "description": "Boosts base ATK by 70" },
-            { "description": "Aquire Potential 3: Pinch Healing" },
+            { "description": "Aquire Potential 3: Reduce No Healing duration" },
         ],
         potential: [
             {

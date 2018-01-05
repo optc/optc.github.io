@@ -515,4 +515,8 @@ window.zombies = {
         type: 'healer',
         multiplier: 2
     },
+    1930: { // Enel
+        type: 'healer',
+        multiplier: 5
+    },
 };

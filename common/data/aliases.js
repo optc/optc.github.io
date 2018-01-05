@@ -1927,8 +1927,8 @@ window.aliases = {
     1926: ['', '', ''],
     1927: ['', '', ''],
     1928: ['', '', ''],
-    1929: ['', '', 'Neo Enel', 'Neo Eneru'],
-    1930: ['', '', 'Neo Enel', 'Neo Eneru'],
+    1929: ['', '', 'Neo Enel', 'Neo Eneru', 'Kai Enel', 'Kai Eneru'],
+    1930: ['', '', 'Neo Enel', 'Neo Eneru', 'Kai Enel', 'Kai Eneru'],
 };
 
 //  xxxx: ['JPN', 'FR', 'Other'],
