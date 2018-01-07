@@ -1278,6 +1278,7 @@ window.drops = {
         {
             name: 'Lightning Speed! Strawhat Crew\'s Surprise Visit',
             thumb: 866,
+			global: true,
             gamewith: 21530,
             condition: 'None',
             challenge:'Total number of hits above 50,000',
@@ -1298,6 +1299,7 @@ window.drops = {
         {
             name: 'Mountaintop Banquet! Enter the Generals!',
             thumb: 897,
+			global: true,
             gamewith: 23047,
             condition: 'Only STR/DEX/QCK/PSY/INT orbs will appear',
             'All Difficulties': [ 897, 898, 899, -899, -754, -702, -701, -669, -1492, -528, -466, -449, -464, -1177 ]
@@ -1600,6 +1602,7 @@ window.drops = {
         {
             name: 'The Mysterious Warlord!',
             thumb: 1581,
+			global: true,
             gamewith: 56038,
             'All Difficulties': [ 1580, 1582, -1391, -1444, -1436, -1551, -896, -910, -357, -995, -890, -1342 ],
         },
@@ -1607,6 +1610,7 @@ window.drops = {
         {
             name: 'Targeted Mermaid Princess!',
             thumb: 1597,
+			global: true,
             gamewith: 57039,
             'All Difficulties': [ 1596, 1598, 1599, -1045, -359, -999, -1033, -1550, -739, -1438, -1440, -893, -1343 ],
         },
@@ -1614,6 +1618,7 @@ window.drops = {
         {
             name: 'The Dark Path of the Blackbeard Pirates!',
             thumb: 1606,
+			global: true,
             gamewith: 57820,
             'All Difficulties': [ 1606, 1607, 1608, -1404, -1593, -1481, -1442, -1029, -361, -363, -997, -894, -1344 ],
         },
@@ -1808,6 +1813,7 @@ window.drops = {
         {
             name: 'Clash Neo!! Doflamingo',
             thumb: 1623,
+			global: true,
             condition: '1 Master version and 3 different Ultimate versions with different conditions. Master: Striker/Cerebral/Fighter Only. Ultimate: Striker Only, Cerebral Only, and Fighter Only',
             gamewith: 58437,
             Ultimate: [ 1622 ],
@@ -1978,6 +1984,7 @@ window.drops = {
         {
             name: 'Clash Neo!! Kizaru',
             thumb: 1780,
+			global: true,
             gamewith: 68681,
             condition: '1 Master version and 3 Ultimate versions with different conditions. Master: Free Spirit/Striker/Powerhouse Only. Can only complete 10 times each. Ultimate: Free Spirit Only, Striker Only, and Powerhouse Only',
             Ultimate: [ 1779 ],
@@ -2084,6 +2091,7 @@ window.drops = {
         {
             name: 'Clash Neo!! Bellamy',
             thumb: 1738,
+			global: true,
             gamewith: 66087,
             condition: '1 Expert version and 3 Master versions with different conditions. Expert: Driven/Free Spirit/Striker Only. Can only complete 10 times each. Master: Driven Only, Free Spirit Only, and Striker Only',
             Master: [ 1738 ],
@@ -2093,6 +2101,7 @@ window.drops = {
         {
             name: 'Clash!! Fujitora',
             thumb: 1595,
+			global: true,
             gamewith: 56946,
             Ultimate: [ 1594 ],
             Master: [ 1594 ],
@@ -2102,6 +2111,7 @@ window.drops = {
         {
             name: 'Clash!! Vergo',
             thumb: 1696,
+			global: true,
             gamewith: 63217,
             Master: [ 1695 ],
             Expert: [ 1695 ]
@@ -2546,6 +2556,7 @@ window.drops = {
             name: 'Forest of Training: Monkey',
             thumb: 1240,
             gamewith: 48115,
+			global: true,
             completion: 'Ship: Kizaru\'s Cannonball',
         },
         
