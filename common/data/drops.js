@@ -1626,6 +1626,7 @@ window.drops = {
         {
             name: 'The Time of Revenge has Come! New Fishman Pirates!',
             thumb: 1624,
+			global: true,
             gamewith: 59321,
             'All Difficulties': [ 1624, 1625, 1626, -1434, -1477, -1475, -410, -365, -993, -1031, -954, -1347 ],
         },
@@ -2359,6 +2360,7 @@ window.drops = {
         {
             name: 'Battle Blitz! Straw Hat Pirates',
             thumb: 1404,
+			global: true,
             gamewith: 65078,
             condition: 'Chance of dropping the Silver Almighty Book.',
             'All Bosses': [ -1621, -1632, -1665, -1678, -1721 ],
