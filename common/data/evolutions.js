@@ -2997,7 +2997,7 @@ window.evolutions = {
     },
     1898: {
         evolution: 1899,
-        evolvers: [  ]
+        evolvers: [ 118, 85, 96, 301, 101 ]
     },
     1901: {
         evolution: 1902,
@@ -3009,7 +3009,7 @@ window.evolutions = {
     },
     1905: {
         evolution: 1906,
-        evolvers: [  ]
+        evolvers: [ 103, 103, 267, 303, 303 ]
     },
     1907: {
         evolution: 1908,
@@ -3017,27 +3017,27 @@ window.evolutions = {
     },
     1909: {
         evolution: 1910,
-        evolvers: [  ]
+        evolvers: [ 118, 102, 97, 102, 267 ]
     },
     1911: {
         evolution: 1912,
-        evolvers: [  ]
+        evolvers: [ 88, 99, 104, 304, 1180 ]
     },
     1913: {
         evolution: 1914,
-        evolvers: [  ]
+        evolvers: [ 118, 86, 97, 302, 102 ]
     },
     1915: {
         evolution: 1916,
-        evolvers: [  ]
+        evolvers: [ 115, 116, 117, 118, 101 ]
     },
     1917: {
         evolution: 1918,
-        evolvers: [  ]
+        evolvers: [ 117, 78, 84, 95, 100 ]
     },
     1919: {
         evolution: 1920,
-        evolvers: [  ]
+        evolvers: [ 117, 82, 88, 99, 104 ]
     },
     1362: {
         evolution: 1921,
@@ -3045,7 +3045,7 @@ window.evolutions = {
     },
     1751: {
         evolution: 1922,
-        evolvers: [  ]
+        evolvers: [ 'skullQCK', 'skullQCK', 96, 301, 267 ]
     },
     1923: {
         evolution: 1924,
@@ -3053,10 +3053,10 @@ window.evolutions = {
     },
     1925: {
         evolution: 1926,
-        evolvers: [  ]
+        evolvers: [ 118, 88, 99, 304, 304 ]
     },
     1929: {
         evolution: 1930,
-        evolvers: [  ]
+        evolvers: [ 118, 266, 97, 102, 302 ]
     },
 };

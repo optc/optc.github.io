@@ -103,11 +103,11 @@ window.details = {
             {
                 "Name": "[QCK] Damage Reduction",
                 "description": [ 
-                    "Level 1: Reduce damage taken from [QCK] characters by ?%",
-                    "Level 2: Reduce damage taken from [QCK] characters by ?%",
-                    "Level 3: Reduce damage taken from [QCK] characters by ?%",
-                    "Level 4: Reduce damage taken from [QCK] characters by ?%",
-                    "Level 5: Reduce damage taken from [QCK] characters by ?%"
+                    "Level 1: Reduce damage taken from [QCK] characters by 1%",
+                    "Level 2: Reduce damage taken from [QCK] characters by 2%",
+                    "Level 3: Reduce damage taken from [QCK] characters by 3%",
+                    "Level 4: Reduce damage taken from [QCK] characters by 4%",
+                    "Level 5: Reduce damage taken from [QCK] characters by 5%"
                 ]
             },
             {
@@ -117,7 +117,7 @@ window.details = {
                     "Level 2: If you hit a perfect with this character, there is a ??% chance to deal ?% of this character's attack in extra damage",
                     "Level 3: If you hit a perfect with this character, there is a ??% chance to deal ?% of this character's attack in extra damage",
                     "Level 4: If you hit a perfect with this character, there is a ??% chance to deal ?% of this character's attack in extra damage",
-                    "Level 5: If you hit a perfect with this character, there is a ??% chance to deal ?% of this character's attack in extra damage"
+                    "Level 5: If you hit a perfect with this character, there is a 40% chance to deal 7% of this character's attack in extra damage"
                 ]
             },
         ]
@@ -243,10 +243,10 @@ window.details = {
                 "Name": "[STR] Damage Reduction",
                 "description": [ 
                     "Level 1: Reduce damage taken from [STR] characters by 1%",
-                    "Level 2: Reduce damage taken from [STR] characters by ?%",
-                    "Level 3: Reduce damage taken from [STR] characters by ?%",
-                    "Level 4: Reduce damage taken from [STR] characters by ?%",
-                    "Level 5: Reduce damage taken from [STR] characters by ?%"
+                    "Level 2: Reduce damage taken from [STR] characters by 2%",
+                    "Level 3: Reduce damage taken from [STR] characters by 3%",
+                    "Level 4: Reduce damage taken from [STR] characters by 4%",
+                    "Level 5: Reduce damage taken from [STR] characters by 5%"
                 ]
             },
             {
@@ -1046,20 +1046,20 @@ window.details = {
                 "Name": "[INT] Damage Reduction",
                 "description": [ 
                     "Level 1: Reduce damage taken from [INT] characters by 1%",
-                    "Level 2: Reduce damage taken from [INT] characters by ?%",
-                    "Level 3: Reduce damage taken from [INT] characters by ?%",
-                    "Level 4: Reduce damage taken from [INT] characters by ?%",
-                    "Level 5: Reduce damage taken from [INT] characters by ?%"
+                    "Level 2: Reduce damage taken from [INT] characters by 2%",
+                    "Level 3: Reduce damage taken from [INT] characters by 3%",
+                    "Level 4: Reduce damage taken from [INT] characters by 4%",
+                    "Level 5: Reduce damage taken from [INT] characters by 5%"
                 ]
             },
             {
                 "Name": "[PSY] Damage Reduction",
                 "description": [ 
                     "Level 1: Reduce damage taken from [PSY] characters by 1%",
-                    "Level 2: Reduce damage taken from [PSY] characters by ?%",
-                    "Level 3: Reduce damage taken from [PSY] characters by ?%",
-                    "Level 4: Reduce damage taken from [PSY] characters by ?%",
-                    "Level 5: Reduce damage taken from [PSY] characters by ?%"
+                    "Level 2: Reduce damage taken from [PSY] characters by 2%",
+                    "Level 3: Reduce damage taken from [PSY] characters by 3%",
+                    "Level 4: Reduce damage taken from [PSY] characters by 4%",
+                    "Level 5: Reduce damage taken from [PSY] characters by 5%"
                 ]
             },
         ]
@@ -1303,20 +1303,20 @@ window.details = {
                 "Name": "[INT] Damage Reduction",
                 "description": [ 
                     "Level 1: Reduce damage taken from [INT] characters by 1%",
-                    "Level 2: Reduce damage taken from [INT] characters by ?%",
-                    "Level 3: Reduce damage taken from [INT] characters by ?%",
-                    "Level 4: Reduce damage taken from [INT] characters by ?%",
-                    "Level 5: Reduce damage taken from [INT] characters by ?%"
+                    "Level 2: Reduce damage taken from [INT] characters by 2%",
+                    "Level 3: Reduce damage taken from [INT] characters by 3%",
+                    "Level 4: Reduce damage taken from [INT] characters by 4%",
+                    "Level 5: Reduce damage taken from [INT] characters by 5%"
                 ]
             },
             {
                 "Name": "[PSY] Damage Reduction",
                 "description": [ 
                     "Level 1: Reduce damage taken from [PSY] characters by 1%",
-                    "Level 2: Reduce damage taken from [PSY] characters by ?%",
-                    "Level 3: Reduce damage taken from [PSY] characters by ?%",
-                    "Level 4: Reduce damage taken from [PSY] characters by ?%",
-                    "Level 5: Reduce damage taken from [PSY] characters by ?%"
+                    "Level 2: Reduce damage taken from [PSY] characters by 2%",
+                    "Level 3: Reduce damage taken from [PSY] characters by 3%",
+                    "Level 4: Reduce damage taken from [PSY] characters by 4%",
+                    "Level 5: Reduce damage taken from [PSY] characters by 5%"
                 ]
             },
         ]
@@ -1352,10 +1352,10 @@ window.details = {
                 "Name": "[STR] Damage Reduction",
                 "description": [ 
                     "Level 1: Reduce damage taken from [STR] characters by 1%",
-                    "Level 2: Reduce damage taken from [STR] characters by ?%",
-                    "Level 3: Reduce damage taken from [STR] characters by ?%",
-                    "Level 4: Reduce damage taken from [STR] characters by ?%",
-                    "Level 5: Reduce damage taken from [STR] characters by ?%"
+                    "Level 2: Reduce damage taken from [STR] characters by 2%",
+                    "Level 3: Reduce damage taken from [STR] characters by 3%",
+                    "Level 4: Reduce damage taken from [STR] characters by 4%",
+                    "Level 5: Reduce damage taken from [STR] characters by 5%"
                 ]
             },
             {
@@ -1365,7 +1365,7 @@ window.details = {
                     "Level 2: Boosts base ATK by ??",
                     "Level 3: Boosts base ATK by ??",
                     "Level 4: Boosts base ATK by ??",
-                    "Level 5: Boosts base ATK by ??"
+                    "Level 5: Boosts base ATK by 100"
                 ]
             },
         ],
@@ -1404,10 +1404,10 @@ window.details = {
                 "Name": "[PSY] Damage Reduction",
                 "description": [ 
                     "Level 1: Reduce damage taken from [PSY] characters by 1%",
-                    "Level 2: Reduce damage taken from [PSY] characters by ?%",
-                    "Level 3: Reduce damage taken from [PSY] characters by ?%",
-                    "Level 4: Reduce damage taken from [PSY] characters by ?%",
-                    "Level 5: Reduce damage taken from [PSY] characters by ?%"
+                    "Level 2: Reduce damage taken from [PSY] characters by 2%",
+                    "Level 3: Reduce damage taken from [PSY] characters by 3%",
+                    "Level 4: Reduce damage taken from [PSY] characters by 4%",
+                    "Level 5: Reduce damage taken from [PSY] characters by 5%"
                 ]
             },
             {
@@ -1417,7 +1417,7 @@ window.details = {
                     "Level 2: If you hit a perfect with this character, there is a ??% chance to deal ?% of this character's attack in extra damage",
                     "Level 3: If you hit a perfect with this character, there is a ??% chance to deal ?% of this character's attack in extra damage",
                     "Level 4: If you hit a perfect with this character, there is a ??% chance to deal ?% of this character's attack in extra damage",
-                    "Level 5: If you hit a perfect with this character, there is a ??% chance to deal ?% of this character's attack in extra damage"
+                    "Level 5: If you hit a perfect with this character, there is a 80% chance to deal 7% of this character's attack in extra damage"
                 ]
             },
         ]
@@ -1502,21 +1502,21 @@ window.details = {
             {
                 "Name": "[QCK] Damage Reduction",
                 "description": [ 
-                    "Level 1: Reduce damage taken from [QCK] characters by ?%",
-                    "Level 2: Reduce damage taken from [QCK] characters by ?%",
-                    "Level 3: Reduce damage taken from [QCK] characters by ?%",
-                    "Level 4: Reduce damage taken from [QCK] characters by ?%",
-                    "Level 5: Reduce damage taken from [QCK] characters by ?%"
+                    "Level 1: Reduce damage taken from [QCK] characters by 1%",
+                    "Level 2: Reduce damage taken from [QCK] characters by 2%",
+                    "Level 3: Reduce damage taken from [QCK] characters by 3%",
+                    "Level 4: Reduce damage taken from [QCK] characters by 4%",
+                    "Level 5: Reduce damage taken from [QCK] characters by 5%"
                 ]
             },
             {
                 "Name": "[DEX] Damage Reduction",
                 "description": [ 
-                    "Level 1: Reduce damage taken from [DEX] characters by ?%",
-                    "Level 2: Reduce damage taken from [DEX] characters by ?%",
-                    "Level 3: Reduce damage taken from [DEX] characters by ?%",
-                    "Level 4: Reduce damage taken from [DEX] characters by ?%",
-                    "Level 5: Reduce damage taken from [DEX] characters by ?%"
+                    "Level 1: Reduce damage taken from [DEX] characters by 1%",
+                    "Level 2: Reduce damage taken from [DEX] characters by 2%",
+                    "Level 3: Reduce damage taken from [DEX] characters by 3%",
+                    "Level 4: Reduce damage taken from [DEX] characters by 4%",
+                    "Level 5: Reduce damage taken from [DEX] characters by 5%"
                 ]
             },
         ]
@@ -1580,7 +1580,7 @@ window.details = {
                     "Level 2: If you hit a perfect with this character, there is a ??% chance to deal ?% of this character's attack in extra damage",
                     "Level 3: If you hit a perfect with this character, there is a ??% chance to deal ?% of this character's attack in extra damage",
                     "Level 4: If you hit a perfect with this character, there is a ??% chance to deal ?% of this character's attack in extra damage",
-                    "Level 5: If you hit a perfect with this character, there is a ??% chance to deal ?% of this character's attack in extra damage"
+                    "Level 5: If you hit a perfect with this character, there is a 50% chance to deal 10% of this character's attack in extra damage"
                 ]
             },
             {
@@ -1590,7 +1590,7 @@ window.details = {
                     "Level 2: Boosts base ATK by ??",
                     "Level 3: Boosts base ATK by ??",
                     "Level 4: Boosts base ATK by ??",
-                    "Level 5: Boosts base ATK by ??"
+                    "Level 5: Boosts base ATK by 200"
                 ]
             },
         ],
@@ -1887,20 +1887,20 @@ window.details = {
                 "Name": "[STR] Damage Reduction",
                 "description": [ 
                     "Level 1: Reduce damage taken from [STR] characters by 1%",
-                    "Level 2: Reduce damage taken from [STR] characters by ?%",
-                    "Level 3: Reduce damage taken from [STR] characters by ?%",
-                    "Level 4: Reduce damage taken from [STR] characters by ?%",
-                    "Level 5: Reduce damage taken from [STR] characters by ?%"
+                    "Level 2: Reduce damage taken from [STR] characters by 2%",
+                    "Level 3: Reduce damage taken from [STR] characters by 3%",
+                    "Level 4: Reduce damage taken from [STR] characters by 4%",
+                    "Level 5: Reduce damage taken from [STR] characters by 5%"
                 ]
             },
             {
                 "Name": "[PSY] Damage Reduction",
                 "description": [ 
                     "Level 1: Reduce damage taken from [PSY] characters by 1%",
-                    "Level 2: Reduce damage taken from [PSY] characters by ?%",
-                    "Level 3: Reduce damage taken from [PSY] characters by ?%",
-                    "Level 4: Reduce damage taken from [PSY] characters by ?%",
-                    "Level 5: Reduce damage taken from [PSY] characters by ?%"
+                    "Level 2: Reduce damage taken from [PSY] characters by 2%",
+                    "Level 3: Reduce damage taken from [PSY] characters by 3%",
+                    "Level 4: Reduce damage taken from [PSY] characters by 4%",
+                    "Level 5: Reduce damage taken from [PSY] characters by 5%"
                 ]
             },
         ]
@@ -1950,10 +1950,10 @@ window.details = {
                 "Name": "[INT] Damage Reduction",
                 "description": [ 
                     "Level 1: Reduce damage taken from [INT] characters by 1%",
-                    "Level 2: Reduce damage taken from [INT] characters by ?%",
-                    "Level 3: Reduce damage taken from [INT] characters by ?%",
-                    "Level 4: Reduce damage taken from [INT] characters by ?%",
-                    "Level 5: Reduce damage taken from [INT] characters by ?%"
+                    "Level 2: Reduce damage taken from [INT] characters by 2%",
+                    "Level 3: Reduce damage taken from [INT] characters by 3%",
+                    "Level 4: Reduce damage taken from [INT] characters by 4%",
+                    "Level 5: Reduce damage taken from [INT] characters by 5%"
                 ]
             },
             {
@@ -1963,7 +1963,7 @@ window.details = {
                     "Level 2: Boosts base ATK by ??",
                     "Level 3: Boosts base ATK by ??",
                     "Level 4: Boosts base ATK by ??",
-                    "Level 5: Boosts base ATK by ??"
+                    "Level 5: Boosts base ATK by 150"
                 ]
             },
         ],
@@ -2002,10 +2002,10 @@ window.details = {
                 "Name": "[DEX] Damage Reduction",
                 "description": [ 
                     "Level 1: Reduce damage taken from [DEX] characters by 1%",
-                    "Level 2: Reduce damage taken from [DEX] characters by ?%",
-                    "Level 3: Reduce damage taken from [DEX] characters by ?%",
-                    "Level 4: Reduce damage taken from [DEX] characters by ?%",
-                    "Level 5: Reduce damage taken from [DEX] characters by ?%"
+                    "Level 2: Reduce damage taken from [DEX] characters by 2%",
+                    "Level 3: Reduce damage taken from [DEX] characters by 3%",
+                    "Level 4: Reduce damage taken from [DEX] characters by 4%",
+                    "Level 5: Reduce damage taken from [DEX] characters by 5%"
                 ]
             },
             {
@@ -2015,7 +2015,7 @@ window.details = {
                     "Level 2: Reduces No Healing duration by ? turn",
                     "Level 3: Reduces No Healing duration by ? turn",
                     "Level 4: Reduces No Healing duration by ? turns",
-                    "Level 5: Reduces No Healing duration by ? turns"
+                    "Level 5: Reduces No Healing duration by 3 turns"
                 ]
             },
         ]
@@ -2225,11 +2225,11 @@ window.details = {
             {
                 "Name": "[DEX] Damage Reduction",
                 "description": [ 
-                    "Level 1: Reduce damage taken from [DEX] characters by ?%",
-                    "Level 2: Reduce damage taken from [DEX] characters by ?%",
-                    "Level 3: Reduce damage taken from [DEX] characters by ?%",
-                    "Level 4: Reduce damage taken from [DEX] characters by ?%",
-                    "Level 5: Reduce damage taken from [DEX] characters by ?%"
+                    "Level 1: Reduce damage taken from [DEX] characters by 1%",
+                    "Level 2: Reduce damage taken from [DEX] characters by 2%",
+                    "Level 3: Reduce damage taken from [DEX] characters by 3%",
+                    "Level 4: Reduce damage taken from [DEX] characters by 4%",
+                    "Level 5: Reduce damage taken from [DEX] characters by 5%"
                 ]
             },
             {
@@ -2239,7 +2239,7 @@ window.details = {
                     "Level 2: Boosts base ATK by ??",
                     "Level 3: Boosts base ATK by ??",
                     "Level 4: Boosts base ATK by ??",
-                    "Level 5: Boosts base ATK by ??"
+                    "Level 5: Boosts base ATK by 150"
                 ]
             },
         ],
@@ -3244,10 +3244,10 @@ window.details = {
                 "Name": "[INT] Damage Reduction",
                 "description": [ 
                     "Level 1: Reduce damage taken from [INT] characters by 1%",
-                    "Level 2: Reduce damage taken from [INT] characters by ?%",
-                    "Level 3: Reduce damage taken from [INT] characters by ?%",
-                    "Level 4: Reduce damage taken from [INT] characters by ?%",
-                    "Level 5: Reduce damage taken from [INT] characters by ?%"
+                    "Level 2: Reduce damage taken from [INT] characters by 2%",
+                    "Level 3: Reduce damage taken from [INT] characters by 3%",
+                    "Level 4: Reduce damage taken from [INT] characters by 4%",
+                    "Level 5: Reduce damage taken from [INT] characters by 5%"
                 ]
             },
             {
@@ -3257,7 +3257,7 @@ window.details = {
                     "Level 2: If you hit a perfect with this character, there is a ??% chance to deal ?% of this character's attack in extra damage",
                     "Level 3: If you hit a perfect with this character, there is a ??% chance to deal ?% of this character's attack in extra damage",
                     "Level 4: If you hit a perfect with this character, there is a ??% chance to deal ?% of this character's attack in extra damage",
-                    "Level 5: If you hit a perfect with this character, there is a ??% chance to deal ?% of this character's attack in extra damage"
+                    "Level 5: If you hit a perfect with this character, there is a 80% chance to deal 7% of this character's attack in extra damage"
                 ]
             },
         ]
@@ -3446,7 +3446,7 @@ window.details = {
                     "Level 2: If you hit a perfect with this character, there is a ??% chance to deal ?% of this character's attack in extra damage",
                     "Level 3: If you hit a perfect with this character, there is a ??% chance to deal ?% of this character's attack in extra damage",
                     "Level 4: If you hit a perfect with this character, there is a ??% chance to deal ?% of this character's attack in extra damage",
-                    "Level 5: If you hit a perfect with this character, there is a ??% chance to deal ?% of this character's attack in extra damage"
+                    "Level 5: If you hit a perfect with this character, there is a 80% chance to deal 7% of this character's attack in extra damage"
                 ]
             },
         ],
@@ -4647,7 +4647,71 @@ window.details = {
         special: "Deals 35x character's ATK in STR damage to one enemy, boosts chances of getting matching orbs for 3 turns",
         specialName: "Rokuougan",
         captain: "Boosts ATK of Powerhouse characters by 3x if they have a matching orb, by 2.5x otherwise, reduces crew's RCV to 0",
-        limit: "This character has a limit break path",
+        limit: [
+            { "description": "Boosts base ATK by 5" },
+            { "description": "Boosts base ATK by 5" },
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Aquire Potential 1: [DEX] Damage Reduction" },
+            { "description": "Boosts base HP by 20" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Aquire Sailor Ability 1: Boosts base ATK, HP and RCV of Powerhouse characters by 30" },
+            { "description": "Boosts base RCV by 5" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base RCV by 15" },
+            { "description": "Boosts base ATK by 15" },
+            { "description": "Boosts base ATK by 15" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Aquire Potential 2: Enrage" },
+            { "description": "Boosts base HP by 45" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base HP by 60" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base RCV by 25" },
+            { "description": "Boosts base RCV by 30" },
+            { "description": "Boosts base ATK by 25" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base ATK by 35" },
+            { "description": "Boosts base HP by 70" },
+            { "description": "Boosts base HP by 80" },
+            { "description": "Aquire Sailor Ability 2: Makes [RCV] and [TND] orbs \"beneficial\" for Powerhouse characters" },
+            { "description": "Boosts base HP by 90" },
+            { "description": "Boosts base ATK by 50" },
+            { "description": "Aquire Potential 3: Reduce No Healing duration" },
+        ],
+        potential: [
+            {
+                "Name": "[DEX] Damage Reduction",
+                "description": [ 
+                    "Level 1: Reduce damage taken from [DEX] characters by 1%",
+                    "Level 2: Reduce damage taken from [DEX] characters by ?%",
+                    "Level 3: Reduce damage taken from [DEX] characters by ?%",
+                    "Level 4: Reduce damage taken from [DEX] characters by ?%",
+                    "Level 5: Reduce damage taken from [DEX] characters by 5%"
+                ]
+            },
+            {
+                "Name": "Enrage",
+                "description": [ 
+                    "Level 1: Boosts base ATK by 30",
+                    "Level 2: Boosts base ATK by ??",
+                    "Level 3: Boosts base ATK by ??",
+                    "Level 4: Boosts base ATK by ??",
+                    "Level 5: Boosts base ATK by 150"
+                ]
+            },
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [ 
+                    "Level 1: Reduces No Healing duration by 1 turn",
+                    "Level 2: Reduces No Healing duration by ? turns",
+                    "Level 3: Reduces No Healing duration by ? turns",
+                    "Level 4: Reduces No Healing duration by ? turns",
+                    "Level 5: Reduces No Healing duration by 7 turns"
+                ]
+            },
+        ],
+        potentialNotes: "Enrage is activated when your crew took damage from your enemies in the previous turn"
     },
     749: {
         special: "Deals random DEX damage to all enemies, randomizes all orbs",
@@ -9908,14 +9972,14 @@ window.details = {
     },
     1317: {//Garp
         captain: "Boosts ATK of [STR] and [PSY] characters by 2x",
-        special: "Deals 30x character's ATK in fixed damage to all enemies that will ignore damage negating abilities and barriers. Delays all enemies for 1 turn. Reduces the defense of all enemies by 80% for 1 turn.",
+        special: "Deals 30x character's ATK in fixed [STR] damage to all enemies that will ignore damage negating abilities and barriers. Delays all enemies for 1 turn. Reduces the defense of all enemies by 80% for 1 turn.",
         specialNotes: "#{ignoreBarrier}",
         sailor: "Boosts base HP of all characters by 75",
         specialName: "Super Large Iron Ball",
     },
     1318: {//Garp
         captain: "Boosts ATK of [STR] and [PSY] characters by 2.5x",
-        special: "Deals 30x character's ATK in fixed damage to all enemies that will ignore damage negating abilities and barriers. Delays all enemies for 1 turn. Reduces the defense of all enemies by 80% for 1 turn.",
+        special: "Deals 30x character's ATK in fixed [STR] damage to all enemies that will ignore damage negating abilities and barriers. Delays all enemies for 1 turn. Reduces the defense of all enemies by 80% for 1 turn.",
         specialNotes: "#{ignoreBarrier}",
         sailor: "Boosts base HP of all characters by 75",
         specialName: "Super Large Iron Ball",
@@ -10941,7 +11005,7 @@ window.details = {
                     "Level 2: If you hit a perfect with this character, there is a ??% chance to deal ?% of this character's attack in extra damage",
                     "Level 3: If you hit a perfect with this character, there is a ??% chance to deal ?% of this character's attack in extra damage",
                     "Level 4: If you hit a perfect with this character, there is a ??% chance to deal ?% of this character's attack in extra damage",
-                    "Level 5: If you hit a perfect with this character, there is a ??% chance to deal ?% of this character's attack in extra damage"
+                    "Level 5: If you hit a perfect with this character, there is a 50% chance to deal 10% of this character's attack in extra damage"
                 ]
             },
             {
@@ -10951,7 +11015,7 @@ window.details = {
                     "Level 2: Boosts base ATK by ??",
                     "Level 3: Boosts base ATK by ??",
                     "Level 4: Boosts base ATK by ??",
-                    "Level 5: Boosts base ATK by ??"
+                    "Level 5: Boosts base ATK by 200"
                 ]
             },
         ],
@@ -16299,12 +16363,12 @@ window.details = {
     1845: {//Garp
         captain: "Boosts ATK of Fighter characters by 2.5x and reduce damage received by 5%",
         special: "Reduces the defense of all enemies by 100% for 1 turn. If the targeted enemy has less than 25% HP, instantly defeats them, otherwise, cuts the current HP of one enemy by 30%",
-        specialName: "Garp Special",
+        specialName: "Crushing Armament Fist",
     },
     1846: {//Garp
         captain: "Boosts ATK of Fighter characters by 2.75x and reduce damage received by 15%",
         special: "Reduces the defense of all enemies by 100% for 1 turn. If the targeted enemy has less than 25% HP, instantly defeats them, otherwise, cuts the current HP of one enemy by 30%",
-        specialName: "Garp Special",
+        specialName: "Crushing Armament Fist",
     },
     1847: {//Sengoku+
         captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boost ATK of characters that are 29 cost or lower by 3.25x, and their HP by 1.2x, boost ATK of characters with cost 54 by 3x",
@@ -17452,7 +17516,45 @@ window.details = {
         special: "Cuts the current HP of one enemy by 20%, reduces Bind and Despair duration by 4 turns, changes all orbs including [BLOCK] orbs on Driven characters into [G] orbs",
         specialName: "The Toughest Trump Card",
         sailor: "Cannot be Blown Away",
-        limit: "This character has a limit break tree"
+        limit: [
+            { "description": "Boosts base HP by 5" },
+            { "description": "Boosts base HP by 10" },
+            { "description": "Boosts base HP by 20" },
+            { "description": "Aquire Potential 1: [PSY] Damage Reduction" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base RCV by 30" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Aquire 1 additional Socket slot" },
+            { "description": "Boosts base ATK by 40" },
+            { "description": "Boosts base HP by 60" },
+            { "description": "Boosts base HP by 65" },
+            { "description": "Aquire Sailor Ability 1: Makes [INT] orbs \"beneficial\" for Driven characters" },
+            { "description": "Aquire Potential 2: Slot Bind Self-reduction" },
+        ],
+        potential: [
+            {
+                "Name": "[PSY] Damage Reduction",
+                "description": [ 
+                    "Level 1: Reduce damage taken from [PSY] characters by 1%",
+                    "Level 2: Reduce damage taken from [PSY] characters by 2%",
+                    "Level 3: Reduce damage taken from [PSY] characters by 3%",
+                    "Level 4: Reduce damage taken from [PSY] characters by 4%",
+                    "Level 5: Reduce damage taken from [PSY] characters by 5%"
+                ]
+            },
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [ 
+                    "Level 1: Reduces Slot Bind duration by 1 turn on this character",
+                    "Level 2: Reduces Slot Bind duration by 2 turns on this character",
+                    "Level 3: Reduces Slot Bind duration by 3 turns on this character",
+                    "Level 4: Reduces Slot Bind duration by 5 turns on this character",
+                    "Level 5: Reduces Slot Bind duration by 8 turns on this character"
+                ]
+            },
+        ]
     },
     1903:{//Senor Pink
         captain: "Boosts ATK of Free Spirit characters by 2.25x",
@@ -17465,7 +17567,45 @@ window.details = {
         special: "Reduces enemy Barrier duration by 1 turn, Reduces enemies Damage Nullification duration by 1 turn and deals 30x character's ATK in [QCK] damage to all enemies",
         specialName: "Diaper Bomb",
         sailor: "Makes [DEX] orbs \"beneficial\" for this unit",
-        limit: "This character has a limit break tree"
+        limit: [
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base ATK by 40" },
+            { "description": "Aquire Potential 1: [STR] Damage Reduction" },
+            { "description": "Boosts base HP by 10" },
+            { "description": "Boosts base HP by 20" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base HP by 80" },
+            { "description": "Aquire 1 additional Socket slot" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base RCV by 30" },
+            { "description": "Aquire Sailor Ability 1: Boosts base ATK, HP and RCV of Free Spirit characters by 50" },
+            { "description": "Aquire Potential 2: Pinch Healing" },
+        ],
+        potential: [
+            {
+                "Name": "[STR] Damage Reduction",
+                "description": [ 
+                    "Level 1: Reduce damage taken from [STR] characters by 1%",
+                    "Level 2: Reduce damage taken from [STR] characters by 2%",
+                    "Level 3: Reduce damage taken from [STR] characters by 3%",
+                    "Level 4: Reduce damage taken from [STR] characters by 4%",
+                    "Level 5: Reduce damage taken from [STR] characters by 5%"
+                ]
+            },
+            {
+                "Name": "Pinch Healing",
+                "description": [ 
+                    "Level 1: If HP is below 5% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect",
+                    "Level 2: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect",
+                    "Level 3: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect",
+                    "Level 4: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect",
+                    "Level 5: If HP is below 40% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a Perfect"
+                ]
+            },
+        ]
     },
     1905:{//Sugar
         captain: "Boosts ATK of Driven and Cerebral characters by 2x",
@@ -17478,7 +17618,45 @@ window.details = {
         special: "Changes [RCV], [TND] and [G] orbs into Matching orbs and amplifies the effect of orbs for Driven characters by 1.75x for 3 turns. Locks orbs for 1 turn.",
         specialName: "March of the Decapitating Dolls",
         sailor: "Reduces Paralysis duration by 1 turn",
-        limit: "This character has a limit break tree"
+        limit: [
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base RCV by 15" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Aquire Potential 1: [INT] Damage Reduction" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base RCV by 25" },
+            { "description": "Boosts base HP by 20" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base HP by 60" },
+            { "description": "Aquire 1 additional Socket slot" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base ATK by 40" },
+            { "description": "Boosts base HP by 60" },
+            { "description": "Aquire Sailor Ability 1: Makes [RCV] orbs \"beneficial\" for Driven characters" },
+            { "description": "Aquire Potential 2: Slot Bind Self-reduction" },
+        ],
+        potential: [
+            {
+                "Name": "[INT] Damage Reduction",
+                "description": [ 
+                    "Level 1: Reduce damage taken from [INT] characters by 1%",
+                    "Level 2: Reduce damage taken from [INT] characters by 2%",
+                    "Level 3: Reduce damage taken from [INT] characters by 3%",
+                    "Level 4: Reduce damage taken from [INT] characters by 4%",
+                    "Level 5: Reduce damage taken from [INT] characters by 5%"
+                ]
+            },
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [ 
+                    "Level 1: Reduces Slot Bind duration by 1 turn on this character",
+                    "Level 2: Reduces Slot Bind duration by 2 turns on this character",
+                    "Level 3: Reduces Slot Bind duration by 3 turns on this character",
+                    "Level 4: Reduces Slot Bind duration by 5 turns on this character",
+                    "Level 5: Reduces Slot Bind duration by 8 turns on this character"
+                ]
+            },
+        ]
     },
     1907:{//Trebol
         captain: "Boosts ATK of Driven characters by 3x, reduces crew's current HP by ??% at the end of each turn, reduces his own ATK multiplier by ???x at the end of each turn",
@@ -17493,7 +17671,45 @@ window.details = {
         special: "Reduces enemies Threshold Damage Reduction, Percent Damage Reduction and Increased Defense duration by 4 turns. If there are 6 Driven characters in your crew, Boosts ATK of Driven characters by 2x for 1 turn and reduces Special Cooldown of your top row by 1 turn.",
         specialName: "Beta Betton Meteora",
         sailor: "Boosts base ATK of the characters in the top row by 100",
-        limit: "This character has a limit break tree"
+        limit: [
+            { "description": "Boosts base HP by 20" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base HP by 60" },
+            { "description": "Aquire Potential 1: Critical Hit" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base RCV by 30" },
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Aquire 1 additional Socket slot" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base HP by 80" },
+            { "description": "Boosts base ATK by 50" },
+            { "description": "Aquire Sailor Ability 1: Makes [TND] orbs \"beneficial\" for Driven characters" },
+            { "description": "Aquire Potential 2: Slot Bind Self-reduction" },
+        ],
+        potential: [
+            {
+                "Name": "Critical Hit",
+                "description": [ 
+                    "Level 1: If you hit a perfect with this character, there is a 10% chance to deal 3% of this character's attack in extra damage",
+                    "Level 2: If you hit a perfect with this character, there is a ??% chance to deal ?% of this character's attack in extra damage",
+                    "Level 3: If you hit a perfect with this character, there is a ??% chance to deal ?% of this character's attack in extra damage",
+                    "Level 4: If you hit a perfect with this character, there is a ??% chance to deal ?% of this character's attack in extra damage",
+                    "Level 5: If you hit a perfect with this character, there is a 40% chance to deal 7% of this character's attack in extra damage"
+                ]
+            },
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [ 
+                    "Level 1: Reduces Slot Bind duration by 1 turn on this character",
+                    "Level 2: Reduces Slot Bind duration by 2 turns on this character",
+                    "Level 3: Reduces Slot Bind duration by 3 turns on this character",
+                    "Level 4: Reduces Slot Bind duration by 5 turns on this character",
+                    "Level 5: Reduces Slot Bind duration by 8 turns on this character"
+                ]
+            },
+        ]
     },
     1909:{//V2 Doflamingo
         captain: "If there are 6 Driven characters in your crew, boosts ATK of Driven characters by 3.9x if they have a matching orb, by 3.25x otherwise and their HP by 1.2x. Lowers chances of getting STR orbs and makes DEX and QCK orbs \"beneficial\" to Driven characters",
@@ -17506,7 +17722,70 @@ window.details = {
         special: "Deals 200% of the damage dealt in Overkill Damage in the previous turn as typeless damage to all enemies.",
         specialNotes: "Overkill Damage is damage dealt over the enemy's current HP with normal attacks that killed them. For example, dealing 2,100,000 damage to an enemy with 1,000,000 HP will count as 1,100,000 Overkill Damage. This stacks for each enemy killed in the previous turn. If the enemy dies by End-Of-Turn damage, your Overkill Damage dealt last turn will be 0.",
         specialName: "Flap Thread",
-        limit: "This character has a limit break tree"
+        limit: [
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Boosts base ATK by 15" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Aquire Potential 1: [QCK] Damage Reduction" },
+            { "description": "Boosts base RCV by 5" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base RCV by 15" },
+            { "description": "Aquire Sailor Ability 1: Makes [QCK] orbs \"beneficial\" for this unit" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base RCV by 25" },
+            { "description": "Boosts base RCV by 30" },
+            { "description": "Boosts base RCV by 35" },
+            { "description": "Boosts base RCV by 40" },
+            { "description": "Boosts base RCV by 50" },
+            { "description": "Boosts base HP by 20" },
+            { "description": "Aquire Potential 2: Reduce No Healing duration" },
+            { "description": "Boosts base HP by 25" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base HP by 35" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base HP by 45" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base HP by 55" },
+            { "description": "Boosts base HP by 60" },
+            { "description": "Boosts base HP by 65" },
+            { "description": "Boosts base HP by 75" },
+            { "description": "Boosts base ATK by 55" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Aquire Sailor Ability 2: Makes [DEX] orbs \"beneficial\" for Driven characters" },
+            { "description": "Aquire Potential 3: Slot Bind Self-reduction" },
+        ],
+        potential: [
+            {
+                "Name": "[QCK] Damage Reduction",
+                "description": [ 
+                    "Level 1: Reduce damage taken from [QCK] characters by 1%",
+                    "Level 2: Reduce damage taken from [QCK] characters by 2%",
+                    "Level 3: Reduce damage taken from [QCK] characters by 3%",
+                    "Level 4: Reduce damage taken from [QCK] characters by 4%",
+                    "Level 5: Reduce damage taken from [QCK] characters by 5%"
+                ]
+            },
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [ 
+                    "Level 1: Reduces No Healing duration by 1 turn",
+                    "Level 2: Reduces No Healing duration by 2 turn",
+                    "Level 3: Reduces No Healing duration by 3 turns",
+                    "Level 4: Reduces No Healing duration by 4 turns",
+                    "Level 5: Reduces No Healing duration by 5 turns"
+                ]
+            },
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [ 
+                    "Level 1: Reduces Slot Bind duration by 3 turn on this character",
+                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 5: Reduces Slot Bind duration by 10 turns on this character"
+                ]
+            },
+        ]
     },
     1911:{//Kimono Urouge
         captain: "Boosts ATK of Striker and Powerhouse characters by 1.5x. Boosts EXP gained by 1.25x",

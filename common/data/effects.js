@@ -523,41 +523,31 @@ window.effects = {
         },
     },
     
-    'Coloseum Kinemon Neo': {
-        description: 'Certain units boosted',
-        thumb: 1863,
+    'Blitz Battle! Straw Hat Pirates': {
+        description: 'Lot of units boosted',
+        thumb: 1404,
         id: 48, // don't change this
         atk: function(p) {
-            var id = p.number + 1,
-                matching = ((id > 1858 && id < 1859) ||
-                    [ 1720, 1621, 1631, 1632, 1777, 1778, 1833, 1834, 871, 872, 1695, 1696, 1791, 1792, 1431, 1432 ].indexOf(id) !== -1);
-            return !matching ? 1 : 1.75;
+            var character = window.families[p.number];
+            matching = ["Akainu", "Eneru", "Cavendish", "Fujitora", "Hody Jones", "Dracule Mihawk", "Rob Lucci", "Sengoku", "Magellan", "Blackbeard", "Donquixote Doflamingo", "Aokiji", "Kizaru", "Crocodile", "Boa Hancock", "Buggy", "Nefertari Vivi", "Emporio Ivankov", "Gecko Moria", "Bartholomew Kuma", "Vander Decken IX", "Caribou", "Hyouzou", "Don Chinjao", "Hajrudin", "Hannyabal", "Bentham", "Kinemon", "Duval", "Elizabeth", "Monkey D. Garp", "Smoker", "Tashigi", "Coby", "Momonga", "Sentomaru", "Monet", "Caesar Clown", "Kaku", "Blueno", "Jabra", "Kumadori"].indexOf(character) != -1;
+            return !matching ? 1 : 1.5;
         },
         hp: function(p) {
-            var id = p.number + 1,
-                matching = ((id > 1858 && id < 1859) ||
-                    [ 1720, 1621, 1631, 1632, 1777, 1778, 1833, 1834, 871, 872, 1695, 1696, 1791, 1792, 1431, 1432 ].indexOf(id) !== -1);
-            return !matching ? 1 : 1.75;
-        },
+            var character = window.families[p.number];
+            matching = ["Akainu", "Eneru", "Cavendish", "Fujitora", "Hody Jones", "Dracule Mihawk", "Rob Lucci", "Sengoku", "Magellan", "Blackbeard", "Donquixote Doflamingo", "Aokiji", "Kizaru", "Crocodile", "Boa Hancock", "Buggy", "Nefertari Vivi", "Emporio Ivankov", "Gecko Moria", "Bartholomew Kuma", "Vander Decken IX", "Caribou", "Hyouzou", "Don Chinjao", "Hajrudin", "Hannyabal", "Bentham", "Kinemon", "Duval", "Elizabeth", "Monkey D. Garp", "Smoker", "Tashigi", "Coby", "Momonga", "Sentomaru", "Monet", "Caesar Clown", "Kaku", "Blueno", "Jabra", "Kumadori"].indexOf(character) != -1;
+            return !matching ? 1 : 1.5;
+        },  
         rcv: function(p) {
-            var id = p.number + 1,
-                matching = ((id > 1858 && id < 1859) ||
-                    [ 1720, 1621, 1631, 1632, 1777, 1778, 1833, 1834, 871, 872, 1695, 1696, 1791, 1792, 1431, 1432 ].indexOf(id) !== -1);
-            return !matching ? 1 : 1.75;
-        }
+            var character = window.families[p.number];
+            matching = ["Akainu", "Eneru", "Cavendish", "Fujitora", "Hody Jones", "Dracule Mihawk", "Rob Lucci", "Sengoku", "Magellan", "Blackbeard", "Donquixote Doflamingo", "Aokiji", "Kizaru", "Crocodile", "Boa Hancock", "Buggy", "Nefertari Vivi", "Emporio Ivankov", "Gecko Moria", "Bartholomew Kuma", "Vander Decken IX", "Caribou", "Hyouzou", "Don Chinjao", "Hajrudin", "Hannyabal", "Bentham", "Kinemon", "Duval", "Elizabeth", "Monkey D. Garp", "Smoker", "Tashigi", "Coby", "Momonga", "Sentomaru", "Monet", "Caesar Clown", "Kaku", "Blueno", "Jabra", "Kumadori"].indexOf(character) != -1;
+            return !matching ? 1 : 1.5;
+        },  
     },
     
-    'Kizaru Neo [GLOBAL] - Free Spirit': {
+    'Kizaru Neo [GLOBAL] - Free Spirit/Striker': {
         description: 'Chain multiplier reduced.',
         thumb: 1780,
         id: 49,
-        //orb: function(p) { return p.orb === 2.0 ? 1.2 : (p.orb === 0.5 ? 5/6 : 1); },
-        atk: function(p) {
-            var id = p.number + 1,
-                matching = ((id > 1777 && id < 1778) ||
-                    [ 1441, 1442, 1701, 1702, 1659, 1660, 1631, 1632, 1699, 1700, 1748, 1749, 1615, 1616 ].indexOf(id) !== -1);
-            return !matching ? 1 : 1.75;
-        },
         chainModifier: function(p) { return 0.5 ; }//Chain by half
     },
     
@@ -565,13 +555,6 @@ window.effects = {
         description: 'Chain multiplier halved.',
         thumb: 1780,
         id: 50,
-        //orb: function(p) { return p.orb === 2.0 ? 1.2 : (p.orb === 0.5 ? 5/6 : 1); },
-        atk: function(p) {
-            var id = p.number + 1,
-                matching = ((id > 1777 && id < 1778) ||
-                    [ 1441, 1442, 1701, 1702, 1659, 1660, 1631, 1632, 1699, 1700, 1748, 1749, 1615, 1616 ].indexOf(id) !== -1);
-            return !matching ? 1 : 1.75;
-        },
         chainModifier: function(p) { return 0.5 ; }//Chain by half
     },
     
@@ -579,13 +562,6 @@ window.effects = {
         description: 'Chain multiplier locked at 1.1x after revive.',
         thumb: 1780,
         id: 51,
-        //orb: function(p) { return p.orb === 2.0 ? 1.2 : (p.orb === 0.5 ? 5/6 : 1); },
-        atk: function(p) {
-            var id = p.number + 1,
-                matching = ((id > 1777 && id < 1778) ||
-                    [ 1441, 1442, 1701, 1702, 1659, 1660, 1631, 1632, 1699, 1700, 1748, 1749, 1615, 1616 ].indexOf(id) !== -1);
-            return !matching ? 1 : 1.75;
-        },
         chainLimiter: function() { return 1.1; } //Chain locked at 1.1x
     },
     
@@ -594,19 +570,26 @@ window.effects = {
         thumb: 1753,
         id: 52,
         atk: function(p) {
-            var id = p.number + 1,
-                matching = ([ 5, 6, 7, 8, 218, 219, 421, 553, 554, 579, 580, 766, 905, 906, 1174, 1175, 1361, 1362, 1371, 1372, 1388, 1461, 1675, 1676, 1752, 1753, 1803, 1804, 1, 2, 3, 4, 216, 217, 420, 519, 520, 547, 548, 570, 571, 577, 578, 659, 727, 761, 794, 795, 936, 937, 1009, 1022, 1114, 1115, 1120, 1121, 1245, 1284, 1285, 1360, 1387, 1403, 1404, 1462, 1463, 1593, 1600, 1681, 1682, 1791, 1792, 9, 10, 11, 12, 220, 221, 422, 523, 524, 535, 536, 576, 650, 651, 662, 680, 681, 764, 807, 808, 863, 938, 939, 1109, 1110, 1118, 1119, 1365, 1366, 1389, 1708, 1709, 1756, 1757, 13, 14, 15, 16, 222, 223, 517, 518, 555, 556, 572, 660, 661, 762, 867, 940, 941, 1209, 1210, 1405, 1406, 1446, 1531, 1532, 1543, 1685, 1686, 17, 18, 19, 20, 224, 225, 419, 435, 436, 521, 522, 604, 605, 768, 911, 912, 1116, 1117, 1367, 1368, 1414, 1447, 1451, 1452, 1484, 1485, 1507, 1508, 1513, 1514, 1587, 1588, 1754, 1755, 1814, 1815, 1821, 1822, 21, 22, 23, 24, 25, 26, 247, 248, 249, 527, 528, 573, 596, 597, 765, 854, 868, 909, 910, 1014, 1113, 1176, 1177, 1339, 1369, 1370, 1411, 1412, 1448, 1464, 1465, 1523, 1524, 1760, 1761, 209, 210, 514, 531, 532, 557, 558, 678, 679, 682, 683, 708, 709, 767, 866, 907, 908, 915, 916, 1052, 1111, 1112, 1207, 1208, 1407, 1408, 1549, 1683, 1684, 1710, 1711, 1884, 1885, 336, 337, 559, 560, 629, 710, 711, 739, 763, 849, 900, 901, 942, 943, 1211, 1212, 1363, 1364, 1431, 1432, 1550, 1687, 1688, 423, 424, 525, 526, 533, 534, 612, 613, 769, 895, 896, 913, 914, 1172, 1173, 1204, 1205, 1409, 1410, 1515, 1516, 1546, 1547, 1551, 1650, 1758, 1759 ].indexOf(id) !== -1);
+            var character = window.families[p.number];
+            matching = ["Monkey D. Luffy", "Roronoa Zoro", "Usopp", "Sanji", "Nami", "Tony Tony Chopper", "Franky", "Nico Robin", "Brook"].indexOf(character) != -1;
             return !matching ? 1 : 1.75;
         },
         hp: function(p) {
-            var id = p.number + 1,
-                matching = ([ 5, 6, 7, 8, 218, 219, 421, 553, 554, 579, 580, 766, 905, 906, 1174, 1175, 1361, 1362, 1371, 1372, 1388, 1461, 1675, 1676, 1752, 1753, 1803, 1804, 1, 2, 3, 4, 216, 217, 420, 519, 520, 547, 548, 570, 571, 577, 578, 659, 727, 761, 794, 795, 936, 937, 1009, 1022, 1114, 1115, 1120, 1121, 1245, 1284, 1285, 1360, 1387, 1403, 1404, 1462, 1463, 1593, 1600, 1681, 1682, 1791, 1792, 9, 10, 11, 12, 220, 221, 422, 523, 524, 535, 536, 576, 650, 651, 662, 680, 681, 764, 807, 808, 863, 938, 939, 1109, 1110, 1118, 1119, 1365, 1366, 1389, 1708, 1709, 1756, 1757, 13, 14, 15, 16, 222, 223, 517, 518, 555, 556, 572, 660, 661, 762, 867, 940, 941, 1209, 1210, 1405, 1406, 1446, 1531, 1532, 1543, 1685, 1686, 17, 18, 19, 20, 224, 225, 419, 435, 436, 521, 522, 604, 605, 768, 911, 912, 1116, 1117, 1367, 1368, 1414, 1447, 1451, 1452, 1484, 1485, 1507, 1508, 1513, 1514, 1587, 1588, 1754, 1755, 1814, 1815, 1821, 1822, 21, 22, 23, 24, 25, 26, 247, 248, 249, 527, 528, 573, 596, 597, 765, 854, 868, 909, 910, 1014, 1113, 1176, 1177, 1339, 1369, 1370, 1411, 1412, 1448, 1464, 1465, 1523, 1524, 1760, 1761, 209, 210, 514, 531, 532, 557, 558, 678, 679, 682, 683, 708, 709, 767, 866, 907, 908, 915, 916, 1052, 1111, 1112, 1207, 1208, 1407, 1408, 1549, 1683, 1684, 1710, 1711, 1884, 1885, 336, 337, 559, 560, 629, 710, 711, 739, 763, 849, 900, 901, 942, 943, 1211, 1212, 1363, 1364, 1431, 1432, 1550, 1687, 1688, 423, 424, 525, 526, 533, 534, 612, 613, 769, 895, 896, 913, 914, 1172, 1173, 1204, 1205, 1409, 1410, 1515, 1516, 1546, 1547, 1551, 1650, 1758, 1759 ].indexOf(id) !== -1);
+            var character = window.families[p.number];
+            matching = ["Monkey D. Luffy", "Roronoa Zoro", "Usopp", "Sanji", "Nami", "Tony Tony Chopper", "Franky", "Nico Robin", "Brook"].indexOf(character) != -1;
             return !matching ? 1 : 1.75;
         },
         rcv: function(p) {
-            var id = p.number + 1,
-                matching = ([ 5, 6, 7, 8, 218, 219, 421, 553, 554, 579, 580, 766, 905, 906, 1174, 1175, 1361, 1362, 1371, 1372, 1388, 1461, 1675, 1676, 1752, 1753, 1803, 1804, 1, 2, 3, 4, 216, 217, 420, 519, 520, 547, 548, 570, 571, 577, 578, 659, 727, 761, 794, 795, 936, 937, 1009, 1022, 1114, 1115, 1120, 1121, 1245, 1284, 1285, 1360, 1387, 1403, 1404, 1462, 1463, 1593, 1600, 1681, 1682, 1791, 1792, 9, 10, 11, 12, 220, 221, 422, 523, 524, 535, 536, 576, 650, 651, 662, 680, 681, 764, 807, 808, 863, 938, 939, 1109, 1110, 1118, 1119, 1365, 1366, 1389, 1708, 1709, 1756, 1757, 13, 14, 15, 16, 222, 223, 517, 518, 555, 556, 572, 660, 661, 762, 867, 940, 941, 1209, 1210, 1405, 1406, 1446, 1531, 1532, 1543, 1685, 1686, 17, 18, 19, 20, 224, 225, 419, 435, 436, 521, 522, 604, 605, 768, 911, 912, 1116, 1117, 1367, 1368, 1414, 1447, 1451, 1452, 1484, 1485, 1507, 1508, 1513, 1514, 1587, 1588, 1754, 1755, 1814, 1815, 1821, 1822, 21, 22, 23, 24, 25, 26, 247, 248, 249, 527, 528, 573, 596, 597, 765, 854, 868, 909, 910, 1014, 1113, 1176, 1177, 1339, 1369, 1370, 1411, 1412, 1448, 1464, 1465, 1523, 1524, 1760, 1761, 209, 210, 514, 531, 532, 557, 558, 678, 679, 682, 683, 708, 709, 767, 866, 907, 908, 915, 916, 1052, 1111, 1112, 1207, 1208, 1407, 1408, 1549, 1683, 1684, 1710, 1711, 1884, 1885, 336, 337, 559, 560, 629, 710, 711, 739, 763, 849, 900, 901, 942, 943, 1211, 1212, 1363, 1364, 1431, 1432, 1550, 1687, 1688, 423, 424, 525, 526, 533, 534, 612, 613, 769, 895, 896, 913, 914, 1172, 1173, 1204, 1205, 1409, 1410, 1515, 1516, 1546, 1547, 1551, 1650, 1758, 1759 ].indexOf(id) !== -1);
+            var character = window.families[p.number];
+            matching = ["Monkey D. Luffy", "Roronoa Zoro", "Usopp", "Sanji", "Nami", "Tony Tony Chopper", "Franky", "Nico Robin", "Brook"].indexOf(character) != -1;
             return !matching ? 1 : 1.5;
         },
-    }
+    },
+    
+    'Rainbow Orbs': {
+        description: 'Activates [RAINBOW] orb support even when Shirahoshi is not in the team',
+        thumb: 1472,
+        id: 53, // don't change this
+        rainbowOrbsEnabled: true
+    },
 };
