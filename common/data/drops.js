@@ -1733,10 +1733,17 @@ window.drops = {
         },
         
         {
-            name: 'Final Thought to my Brother Sanji!',
+            name: 'Final Thoughts to my Brother Sanji!',
             thumb: 1918,
             gamewith: 85780,
             'All Difficulties': [ 1917, 1919, -1922, -1751, -1745, -1665, -1320, -1370, -1560 ]
+        },
+        
+        {
+            name: 'Gorgon Sisters Escape from Mariejois!',
+            thumb: 1933,
+            gamewith: null,
+            'All Difficulties': [ 1931, 1932, 1933 ]
         },
         
     ],

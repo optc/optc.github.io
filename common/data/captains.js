@@ -6370,4 +6370,18 @@ window.captains = {
     1930: {
         atk: function(p) { return p.unit.type == "DEX" ? 2.25 : 1; }
     },
+    1931: {
+        atk: function(p) { return p.unit.class.has("Free Spirit") ? 1.75 : 1; },
+    },
+    1932: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? 1.75 : 1; },
+    },
+    1933: {
+        atk: function(p) {
+            return p.unit.class.has("Fighter") && p.unit.class.has("Free Spirit") ? 2.625 :
+                p.unit.class.has("Fighter") && !p.unit.class.has("Free Spirit") ? 1.75 :
+                !p.unit.class.has("Fighter") && p.unit.class.has("Free Spirit") ? 1.5 :
+                1;
+        }
+    },
 };

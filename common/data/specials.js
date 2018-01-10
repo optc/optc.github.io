@@ -4072,4 +4072,57 @@ window.specials = {
         atk: function(p) { return p.unit.type == "DEX" ? 2 : 1; },
         type: "type"
     },
+    1931: {
+        chainAddition: function(p) { return 0.25; },
+        atk: function(p) { return !p.unit.class.has('Fighter') ? 1 : window.specials[1931].multiplier; },
+        type: "class",
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[1931].turnedOn = true;
+            var n = (window.specials[1933].turnedOn ? 1 : 0);
+            window.specials[1931].multiplier = [1.5, 1.75][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.5, 1.75][n] + 'x ATK multiplier. To switch to the ' + [1.75, 1.5][n] + 'x multiplier, Switch the order of the specials needed.',
+                name: '1931warning'
+            });
+        },
+        onDeactivation: function(p) {
+            window.specials[1931].turnedOn = false;
+        },
+    },
+    1932: {
+        orb: function(p) { return (p.unit.class.has("Fighter")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain]) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain]); },
+        atk: function(p) { return !p.unit.class.has('Fighter') ? 1 : window.specials[1932].multiplier; },
+        type: "class",
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[1932].turnedOn = true;
+            var n = (window.specials[1931].turnedOn ? 1 : 0);
+            window.specials[1932].multiplier = [1.5, 1.75][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.5, 1.75][n] + 'x ATK multiplier. To switch to the ' + [1.75, 1.5][n] + 'x multiplier, Switch the order of the specials needed.',
+                name: '1932warning'
+            });
+        },
+        onDeactivation: function(p) {
+            window.specials[1932].turnedOn = false;
+        },
+    },
+    1933: {
+        atk: function(p) { return !p.unit.class.has('Fighter') ? 1 : window.specials[1933].multiplier; },
+        type: "class",
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[1933].turnedOn = true;
+            var n = (window.specials[1932].turnedOn ? 1 : 0);
+            window.specials[1933].multiplier = [1.5, 1.75][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.5, 1.75][n] + 'x ATK multiplier. To switch to the ' + [1.75, 1.5][n] + 'x multiplier, Switch the order of the specials needed.',
+                name: '1933warning'
+            });
+        },
+        onDeactivation: function(p) {
+            window.specials[1933].turnedOn = false;
+        },
+    },
 };

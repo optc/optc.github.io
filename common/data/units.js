@@ -1929,6 +1929,9 @@ window.units = [
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Eneru [Neo], 200,000,000 Volt Amaru", "DEX", [ "Striker", "Driven" ], 4, 30, 6, null, 70, 1066998, null, null, null, null, null, null, null ],
     [ "Eneru, Lightning Incarnate [Neo], 200,000,000 Volt Amaru", "DEX", [ "Striker", "Driven" ], 5, 50, 5, 5, 99, 5000000, 1294, 664, 95, 2530, 1465, 241, 1 ],
+    [ "Boa Sandersonia", "QCK", [ "Fighter", "Free Spirit" ], 4, 20, 5, 4, 99, 1000000, 1, 1, 1, 1530, 1125, 320, null ],
+    [ "Boa Marigold", "PSY", [ "Fighter", "Free Spirit" ], 4, 20, 5, 4, 99, 1000000, 1, 1, 1, 2020, 1123, 239, null ],
+    [ "Boa Hancock", "DEX", [ "Fighter", "Free Spirit" ], 4, 20, 4, 4, 99, 1000000, 1, 1, 1, 2530, 805, 260, null ],
     ];
     
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],

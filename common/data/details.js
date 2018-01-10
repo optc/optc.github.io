@@ -11678,13 +11678,11 @@ window.details = {
     },
     1468: {//Fortnight Sentomaru 
         captain: "Boosts ATK of [STR] characters by 1.75x and the HP of Powerhouse characters by 1.2x",
-        captainNotes: "Captain ability stacks, so a [STR] Powerhouse character benefits from both parts",
         special: "Delays all enemies for 1 turn. Changes own orb into Matching orb",
         specialName: "Warning of the New World",
     },
     1469: {//Fortnight Sentomaru Evolved
         captain: "Boosts ATK of [STR] characters by 2x and the HP of Powerhouse characters by 1.25x",
-        captainNotes: "Captain ability stacks, so a [STR] Powerhouse character benefits from both parts",
         special: "Delays all enemies for 1 turn. Changes own orb into Matching orb",
         specialName: "Warning of the New World",
     },
@@ -16919,11 +16917,11 @@ window.details = {
         special: [
             {
                 "description": "Reduces any damage received above 5,000 HP by 97% for 2 turn, recovers 20% of crew's MAX HP, reduces enemies' ATK Up and Enrage Buffs by 5 turns.",
-                "cooldown": [ 28, null ],
+                "cooldown": [ 28, 13 ],
             },
             {
                 "description": "Reduces any damage received above 3,000 HP by 97% for 2 turn, recovers 50% of crew's MAX HP, reduces enemies' ATK Up, Enrage, End of Turn Damage/Percent Cut, and Resilience Buffs by 5 turns.",
-                "cooldown": [ 33, null ],
+                "cooldown": [ 33, 18 ],
             },
         ],
     },
@@ -18020,5 +18018,27 @@ window.details = {
         specialNotes: "#{fixed}",
         captain: "Boosts ATK of DEX characters by 2.25x, recovers 5x character's RCV in HP at the end of each turn",
         captainNotes: "This information is based on Raid Enel [603] and may differ than actual details and will be updated once information is recieved."
+    },
+    1931: {//Sandersonia
+        captain: "Boosts ATK of Free Spirit characters by 1.75x",
+        special: "Adds .25x to Chain multiplier for 1 turn and boosts ATK of Fighter characters by 1.5x for 1 turn. If \"Celestial Creature Trio\" is used again in the same turn the special is activated in, boosts ATK of Fighter characters by 1.75x instead.",
+        specialNotes: "This special is boosted if you use Boa Hancock's [1933] special in the same turn",
+        specialName: "Celestial Creature Trio",
+        sailor: "Boosts own base ATK by 100 if this character is the 2nd in the chain to attack",
+    },
+    1932: {//Marigold
+        captain: "Boosts ATK of Fighter characters by 1.75x",
+        special: "Amplifies the effect of orbs for Fighter characters by ??x for 1 turn and boosts ATK of Fighter characters by 1.5x for 1 turn. If \"Celestial Creature Trio\" is used again in the same turn the special is activated in, boosts ATK of Fighter characters by 1.75x instead.",
+        specialNotes: "This special is boosted if you use Boa Sandersonia's [1931] special in the same turn",
+        specialName: "Celestial Creature Trio",
+        sailor: "Boosts own base ATK by 100 if this character is the 3rd in the chain to attack",
+    },
+    1933: {//Hancock
+        captain: "Boosts ATK of Fighter characters by 1.75x and boosts ATK of Free Spirit characters by 1.5x",
+        captainNotes: "Attack boost stacks, so a Free Spirit Fighter unit has 2.625x ATK",
+        special: "Makes [DEX] orb \"beneficial\" for Fighter characters for 1 turn and boosts ATK of Fighter characters by 1.5x for 1 turn. If \"Celestial Creature Trio\" is used again in the same turn the special is activated in, boosts ATK of Fighter characters by 1.75x instead.",
+        specialNotes: "This special is boosted if you use Boa Marigold's [1932] special in the same turn",
+        specialName: "Celestial Creature Trio",
+        sailor: "Boosts own base ATK by 100 if this character is the 1st in the chain to attack",
     },
 };
