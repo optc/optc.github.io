@@ -3005,7 +3005,7 @@ window.evolutions = {
     },
     1903: {
         evolution: 1904,
-        evolvers: [  ]
+        evolvers: [ 85, 85, 266, 301, 301 ]
     },
     1905: {
         evolution: 1906,
@@ -3013,7 +3013,7 @@ window.evolutions = {
     },
     1907: {
         evolution: 1908,
-        evolvers: [  ]
+        evolvers: [ 78, 78, 83, 300, 300 ]
     },
     1909: {
         evolution: 1910,
