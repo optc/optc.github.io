@@ -1901,8 +1901,8 @@ window.units = [
     [ "Roronoa Zoro, Dressrosa's Breath of Liberation", "QCK", [ "Slasher", "Driven" ], 4, 15, 5, 4, 99, 2000000, null, null, null, 2346, 1371, 142, null ],
     [ "Pica, Dressrosa's Current King Family", "INT", [ "Driven", "Powerhouse" ], 4, 15, 6, 3, 50, 392109, null, null, null, 2668, 230, 32, null ],
     [ "Pica, Donquixote Family Elite Executive", "INT", [ "Driven", "Powerhouse" ], 5, 30, 4, 4, 99, 4000000, 2310, 168, 9, 4328, 1250, 62, null ],
-    [ "Senor Pink, Dressrosa's Current King Family", "QCK", [ "Free Spirit", "Fighter" ], 4, 15, null, null, 50, 392109, null, null, null, null, null, null, null ],
-    [ "Senor Pink, Donquixote Family, The Gatekeeper of the Underground World", "QCK", [ "Free Spirit", "Shooter" ], 5, 30, 4, 4, 99, 4000000, 1076, 428, 128, 2972, 1319, 265, null ],
+    [ "Señor Pink, Dressrosa's Current King Family", "QCK", [ "Free Spirit", "Fighter" ], 4, 15, null, null, 50, 392109, null, null, null, null, null, null, null ],
+    [ "Señor Pink, Donquixote Family, The Gatekeeper of the Underground World", "QCK", [ "Free Spirit", "Shooter" ], 5, 30, 4, 4, 99, 4000000, 1076, 428, 128, 2972, 1319, 265, null ],
     [ "Sugar, Dressrosa's Current King Family", "PSY", [ "Driven", "Cerebral" ], 4, 15, null, null, 50, 392109, null, null, null, null, null, null, null ],
     [ "Sugar, Donquixote Family, The Most Important Person", "PSY", [ "Driven", "Cerebral" ], 5, 30, 5, 4, 99, 4000000, 1, 1, 1, 1972, 1120, 498, null ],
     [ "Trebol, Dressrosa's Current King Family", "STR", [ "Driven", "Shooter" ], 4, 15, null, null, 50, 392109, null, null, null, null, null, null, null ],
@@ -1928,7 +1928,7 @@ window.units = [
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Eneru [Neo], 200,000,000 Volt Amaru", "DEX", [ "Striker", "Driven" ], 4, 30, 6, null, 70, 1066998, null, null, null, null, null, null, null ],
-    [ "Eneru, Lightning Incarnate [Neo], 200,000,000 Volt Amaru", "DEX", [ "Striker", "Driven" ], 5, 55, 5, null, 99, 5000000, null, null, null, null, null, null, null ],
+    [ "Eneru, Lightning Incarnate [Neo], 200,000,000 Volt Amaru", "DEX", [ "Striker", "Driven" ], 5, 50, 5, 5, 99, 5000000, null, null, null, 2530, 1465, 241, null ],
     ];
     
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],

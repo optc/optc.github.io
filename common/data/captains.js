@@ -2001,8 +2001,8 @@ window.captains = {
         rcv: function(p) { return p.unit.type == "DEX" ? 1.5 : 1; }
     },
     891: {
-        atk: function(p) { return p.unit.class.has("Powerhouse") ? 1.5 : 1; },
-        hp: function(p) { return p.unit.class.has("Powerhouse") ? 1.5 : 1; }
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 1.75 : 1; },
+        hp: function(p) { return p.unit.class.has("Powerhouse") ? 1.75 : 1; }
     },
     892: {
         chainModifier: function(p) { return 2; }
@@ -5017,7 +5017,7 @@ window.captains = {
     1682: {
         damageSorter: function(d) { return CrunchUtils.lowCostSort(d, 3.5, 30); },
         hitAtk: function(p) {
-            if (!(p.unit.cost <= 30)) return 1;
+            if (!(p.unit.cost <= 30)) return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? 1.4 : 1;
             return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? 3.5 : 2.5;
         },
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
@@ -5332,7 +5332,7 @@ window.captains = {
     1753: {
         damageSorter: function(d) { return CrunchUtils.lowCostSort(d, 3.5, 30); },
         hitAtk: function(p) {
-            if (!(p.unit.cost <= 30)) return 1;
+            if (!(p.unit.cost <= 30)) return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? 1.4 : 1;
             return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? 3.5 : 2.5;
         },
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
@@ -6013,12 +6013,12 @@ window.captains = {
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
     },
     1882: {
-        atk: function(p) { return p.percHP <= 10.0 ? 3.5 : 2.5; },
+        atk: function(p) { return p.percHP <= 30.0 ? 3.5 : 2.5; },
         hp: function(p) { return 1.2; },
         rcv: function(p) { return 1.2; },
     },
     1883: {
-        atk: function(p) { return p.percHP <= 10.0 ? 3.5 : 2.5; },
+        atk: function(p) { return p.percHP <= 30.0 ? 3.5 : 2.5; },
         hp: function(p) { return 1.2; },
         rcv: function(p) { return 1.2; },
     },
@@ -6204,7 +6204,7 @@ window.captains = {
         },
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
     },
-    1891: {
+    1890: {
         atk: function(p) { return p.unit.class.has("Shooter") ? 2 : 1; },
         hp: function(p) { return p.unit.class.has("Shooter") ? 1.2 : 1; },
     },

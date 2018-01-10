@@ -1901,8 +1901,8 @@ window.aliases = {
     1900: ['', '', ''],
     1901: ['', '', ''],
     1902: ['', '', ''],
-    1903: ['', '', ''],
-    1904: ['', '', ''],
+    1903: ['', '', 'Senor Pink', 'Senoir Pink'],
+    1904: ['', '', 'Senor Pink', 'Senoir Pink'],
     1905: ['', '', ''],
     1906: ['', '', ''],
     1907: ['', '', ''],
@@ -1927,8 +1927,8 @@ window.aliases = {
     1926: ['', '', ''],
     1927: ['', '', ''],
     1928: ['', '', ''],
-    1929: ['', '', 'Neo Enel', 'Neo Eneru'],
-    1930: ['', '', 'Neo Enel', 'Neo Eneru'],
+    1929: ['', '', 'Neo Enel', 'Neo Eneru', 'Kai Enel', 'Kai Eneru'],
+    1930: ['', '', 'Neo Enel', 'Neo Eneru', 'Kai Enel', 'Kai Eneru'],
 };
 
 //  xxxx: ['JPN', 'FR', 'Other'],
