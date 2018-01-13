@@ -16282,7 +16282,7 @@ window.details = {
     1839: {//Yonji
         captain: "Boosts ATK of [DEX] characters by 1.75x, boosts ATK of Powerhouse characters by 1.2x, and the HP of Powerhouse characters by 1.2x",
         captainNotes: "Attack boost stacks, so an [DEX] Powerhouse unit has 2.1x ATK",
-        special: "If your captain is a [DEX] or [PSY] character, boosts ATK against delayed enemies by 1.75x for 1 turn. If your captain is a Powerhouse character, adds 40x characters ATK as additional typeless damage for 2 turns",
+        special: "If your captain is a [DEX] or [PSY] character, boosts ATK against delayed enemies by 1.75x for 1 turn. If your captain is a Powerhouse character, adds 40x characters ATK as additional typeless damage for 1 turn",
         specialName: "Burst End Kick",
         specialNotes: "Extra Damage can only be boosted by conditional Boosters.",
         sailor: "Makes [PSY] orbs \"beneficial\" for this unit",
@@ -16291,7 +16291,7 @@ window.details = {
     1840: {//Yonji
         captain: "Boosts ATK of [DEX] characters by 2.25x, boosts ATK of Powerhouse characters by 1.3x, and the HP of Powerhouse characters by 1.2x",
         captainNotes: "Attack boost stacks, so an [DEX] Powerhouse unit has 2.925x ATK",
-        special: "If your captain is a [DEX] or [PSY] character, boosts ATK against delayed enemies by 1.75x for 1 turn. If your captain is a Powerhouse character, adds 40x characters ATK as additional typeless damage for 2 turns",
+        special: "If your captain is a [DEX] or [PSY] character, boosts ATK against delayed enemies by 1.75x for 1 turn. If your captain is a Powerhouse character, adds 40x characters ATK as additional typeless damage for 1 turn",
         specialName: "Burst End Kick",
         specialNotes: "Extra Damage can only be boosted by conditional Boosters.",
         sailor: "Makes [PSY] orbs \"beneficial\" for this unit",
