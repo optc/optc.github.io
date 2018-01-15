@@ -213,13 +213,13 @@ window.matchers = [
     {
         name: 'RCV boosters',
         target: 'special',
-        matcher: /Boosts RCV/i
+        matcher: /Boosts.+RCV/i
     },
 
     {
         name: 'Orb lockers',
         target: 'special',
-        matcher: /locks.+orb/i
+        matcher: /locks (orbs|all orbs|orb|own orb)/i
     },
 
     {
@@ -274,8 +274,8 @@ window.matchers = [
     {
         name: 'Orb matchers',
         target: 'special',
-        matcher: /(Changes.+(orb|orbs))[^,]+Matching/i,
-        include: [ 1036, 1037, 1445, 1369, 1370 ]
+        matcher: /(Changes.+(orb|orbs|orbs,))[^,]+Matching/i,
+        include: [ 1036, 1037 ]
     },
 
     {
