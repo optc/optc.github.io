@@ -373,7 +373,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         // apply hit bonus
         if (bonusDamageBase > 0 && mapEffect.shieldLeft == 0) {
             if (lastHit > 1) result.result += Math.ceil(lastAtk * 0.9 * bonusDamageBase);
-            else result.result += Math.max(0,Math.ceil(lastAtk * (0.9 * bonusDamageBase + 1 / unit.combo)) - currentDefense);
+            else result.result += Math.max(0,Math.ceil(lastAtk * (0.9 * bonusDamageBase + 1 / unit.combo)) - currentDefense - 1);
         }
         
         //Apply Static Bonus Damage From Specials
