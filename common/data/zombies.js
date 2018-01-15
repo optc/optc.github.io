@@ -503,6 +503,10 @@ window.zombies = {
         type: 'healer',
         multiplier: 2
     },
+    1919: { // Sanji
+        type: 'healer',
+        multiplier: 1.5
+    },
     1920: { // Sanji
         type: 'healer',
         multiplier: 3
