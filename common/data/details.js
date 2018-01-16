@@ -18567,7 +18567,7 @@ window.details = {
     },
     1932: {//Marigold
         captain: "Boosts ATK of Fighter characters by 1.75x",
-        special: "Amplifies the effect of orbs for Fighter characters by ??x for 1 turn and boosts ATK of Fighter characters by 1.5x for 1 turn. If \"The Trio Crawling Away from the Heavens: The Second Daughter\" is used again in the same turn the special is activated in, boosts ATK of Fighter characters by 1.75x instead.",
+        special: "Amplifies the effect of orbs for Fighter characters by 1.25x for 1 turn and boosts ATK of Fighter characters by 1.5x for 1 turn. If \"The Trio Crawling Away from the Heavens: The Second Daughter\" is used again in the same turn the special is activated in, boosts ATK of Fighter characters by 1.75x instead.",
         specialNotes: "This special is boosted if you use Boa Sandersonia's [1931] special in the same turn",
         specialName: "The Trio Crawling Away from the Heavens: The Third Daughter",
         sailor: "Boosts own base ATK by 100 if this character is the 3rd in the chain to attack",
