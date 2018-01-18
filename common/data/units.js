@@ -1943,7 +1943,7 @@ window.units = [
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Colisseum Pedro", "PSY", [ "Cerebral", "Shooter" ], 4, 25, null, null, 70, 1066998, null, null, null, null, null, null, null ],
-    [ "Colisseum Pedro, Evolved", "PSY", [ "Cerebral", "Shooter" ], 5, 40, 4, null, 99, 4000000, 1, 1, 1, 2000, 1400, 300, null ],
+    [ "Colisseum Pedro, Evolved", "PSY", [ "Cerebral", "Shooter" ], 5, 40, 4, 4, 99, 4000000, 1, 1, 1, 2316, 1414, 179, null ],
     ];
     
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
