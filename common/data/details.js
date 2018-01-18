@@ -18582,14 +18582,14 @@ window.details = {
     },
     1944: {//Pedro
         captain: "Boosts ATK of Cerebral characters by ???x",
-        special: "Reduces crew's current HP by ??%, deals 100x character's ATK in typeless damage to all enemies that will ignore damage negating abilities and barriers, boosts the Color Affinity of Cerebral characters by 1.75x for 2 turns",
+        special: "Reduces crew's current HP by 95%, deals 50x character's ATK in typeless damage to all enemies that will ignore damage negating abilities and barriers, boosts the Color Affinity of Cerebral characters by 1.75x for 2 turns",
         specialNotes: "#{ignoreBarrier}",
         specialName: "Pedro Special",
     },
     1945: {//Pedro
         captain: "Boosts ATK of Cerebral characters by 2.5x and makes [PSY] and [INT] orbs \"beneficial\" to Cerebral characters",
         captainNotes: "These stats are placeholders so Pedro works in the calculator",
-        special: "Reduces crew's current HP by ??%, deals 100x character's ATK in typeless damage to all enemies that will ignore damage negating abilities and barriers, boosts the Color Affinity of Cerebral characters by 1.75x for 2 turns",
+        special: "Reduces crew's current HP by 95%, deals 50x character's ATK in typeless damage to all enemies that will ignore damage negating abilities and barriers, boosts the Color Affinity of Cerebral characters by 1.75x for 2 turns",
         specialNotes: "#{ignoreBarrier}",
         specialName: "Pedro Special",
         limit: "This character probably has a limit break",
