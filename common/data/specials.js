@@ -4125,4 +4125,10 @@ window.specials = {
             window.specials[1933].turnedOn = false;
         },
     },
+    1944: {
+        affinity: function(p){ return p.unit.class.has("Cerebral") ? 1.75 : 1; }
+    },
+    1945: {
+        affinity: function(p){ return p.unit.class.has("Cerebral") ? 1.75 : 1; }
+    },
 };

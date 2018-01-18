@@ -14920,14 +14920,14 @@ window.details = {
     },
     1732: {//Nekomamushi
         captain: "Boosts ATK of [STR] characters by 2x, boosts HP of Striker and Powerhouse characters by 1.1x",
-        special: "Deals 50x character's ATK in typeless damage to one enemy that will ignore damage negating abilities and barriers. If enemies have All Debuff Protection or Delay Debuff Protection at the time the special was activated, boosts ATK of Striker and Powerhouse characters by 1.75x for 1 turn and changes all orbs, including [BLOCK] orbs, into Matching orbs",
-        specialNotes: "#{ignoreBarrier}",
+        special: "Deals 50x character's ATK in fixed typeless damage to one enemy that will ignore damage negating abilities and barriers. If enemies have All Debuff Protection or Delay Debuff Protection at the time the special was activated, boosts ATK of Striker and Powerhouse characters by 1.75x for 1 turn and changes all orbs, including [BLOCK] orbs, into Matching orbs",
+        specialNotes: "#{ignoreBarrier}<br\>#{fixed}",
         specialName: "Battle Guardian",
     },
     1733: {//Nekomamushi
         captain: "Boosts ATK of [STR] characters by 2.5x, boosts HP of Striker and Powerhouse characters by 1.25x",
-        special: "Deals 50x character's ATK in typeless damage to one enemy that will ignore damage negating abilities and barriers. If enemies have All Debuff Protection or Delay Debuff Protection at the time the special was activated, boosts ATK of Striker and Powerhouse characters by 1.75x for 1 turn and changes all orbs, including [BLOCK] orbs, into Matching orbs",
-        specialNotes: "#{ignoreBarrier}",
+        special: "Deals 50x character's ATK in fixed typeless damage to one enemy that will ignore damage negating abilities and barriers. If enemies have All Debuff Protection or Delay Debuff Protection at the time the special was activated, boosts ATK of Striker and Powerhouse characters by 1.75x for 1 turn and changes all orbs, including [BLOCK] orbs, into Matching orbs",
+        specialNotes: "#{ignoreBarrier}<br\>#{fixed}",
         specialName: "Battle Guardian",
     },
     1734: {//Sugar
@@ -18574,9 +18574,24 @@ window.details = {
     },
     1933: {//Hancock
         captain: "Boosts ATK of Fighter characters by 1.75x and boosts ATK of Free Spirit characters by 1.5x",
+        captainNotes: "The bonus is cumulative. Fighter + Free Spirit characters get a 2.625x bonus.",
         special: "Makes [DEX] orb \"beneficial\" for Fighter characters for 1 turn and boosts ATK of Fighter characters by 1.5x for 1 turn. If \"The Trio Crawling Away from the Heavens: The Third Daughter\" is used again in the same turn the special is activated in, boosts ATK of Fighter characters by 1.75x instead.",
         specialNotes: "This special is boosted if you use Boa Marigold's [1932] special in the same turn",
         specialName: "The Trio Crawling Away from the Heavens: The Eldest Daughter",
         sailor: "Boosts own base ATK by 100 if this character is the 1st in the chain to attack",
+    },
+    1944: {//Pedro
+        captain: "Boosts ATK of Cerebral characters by ???x",
+        special: "Reduces crew's current HP by ??%, deals 100x character's ATK in typeless damage to all enemies that will ignore damage negating abilities and barriers, boosts the Color Affinity of Cerebral characters by 1.75x for 2 turns",
+        specialNotes: "#{ignoreBarrier}",
+        specialName: "Pedro Special",
+    },
+    1945: {//Pedro
+        captain: "Boosts ATK of Cerebral characters by 2.5x and makes [PSY] and [INT] orbs \"beneficial\" to Cerebral characters",
+        captainNotes: "These stats are placeholders so Pedro works in the calculator",
+        special: "Reduces crew's current HP by ??%, deals 100x character's ATK in typeless damage to all enemies that will ignore damage negating abilities and barriers, boosts the Color Affinity of Cerebral characters by 1.75x for 2 turns",
+        specialNotes: "#{ignoreBarrier}",
+        specialName: "Pedro Special",
+        limit: "This character probably has a limit break",
     },
 };

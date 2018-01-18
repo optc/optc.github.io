@@ -6382,4 +6382,10 @@ window.captains = {
                 1;
         }
     },
+    1944: {
+        atk: function(p) { return p.unit.class.has("Cerebral") ? 1 : 1; },
+    },
+    1945: {
+        atk: function(p) { return p.unit.class.has("Cerebral") ? 2.5 : 1; },
+    },
 };

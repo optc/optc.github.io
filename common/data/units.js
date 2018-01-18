@@ -1932,6 +1932,18 @@ window.units = [
     [ "Boa Sandersonia", "QCK", [ "Fighter", "Free Spirit" ], 4, 20, 5, 4, 99, 1000000, 1, 1, 1, 1530, 1125, 320, null ],
     [ "Boa Marigold", "PSY", [ "Fighter", "Free Spirit" ], 4, 20, 5, 4, 99, 1000000, 1, 1, 1, 2020, 1123, 239, null ],
     [ "Boa Hancock", "DEX", [ "Fighter", "Free Spirit" ], 4, 20, 4, 4, 99, 1000000, 1, 1, 1, 2530, 805, 260, null ],
+    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Colisseum Pedro", "PSY", [ "Cerebral", "Shooter" ], 4, 25, null, null, 70, 1066998, null, null, null, null, null, null, null ],
+    [ "Colisseum Pedro, Evolved", "PSY", [ "Cerebral", "Shooter" ], 5, 40, 4, null, 99, 4000000, 1, 1, 1, 2000, 1400, 300, null ],
     ];
     
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
