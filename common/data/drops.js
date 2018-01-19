@@ -2212,6 +2212,13 @@ window.drops = {
             gamewith: 85567,
             'Raging Sea': [ 1915 ]
         },
+
+        {
+            name: 'Fire Fist Ace',
+            thumb: 1941,
+            gamewith: null,
+            'Raging Sea': [ 1940 ]
+        },
         
     ],
 

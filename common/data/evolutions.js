@@ -3059,4 +3059,24 @@ window.evolutions = {
         evolution: 1930,
         evolvers: [ 118, 266, 97, 102, 302 ]
     },
+    1934: {
+        evolution: 1935,
+        evolvers: [  ]
+    },
+    1936: {
+        evolution: 1937,
+        evolvers: [  ]
+    },
+    1938: {
+        evolution: 1939,
+        evolvers: [  ]
+    },
+    1940: {
+        evolution: 1941,
+        evolvers: [  ]
+    },
+    1944: {
+        evolution: 1945,
+        evolvers: [  ]
+    },
 };

@@ -167,6 +167,12 @@ window.matchers = [
         target: 'special',
         matcher: /Boosts (ATK|HP|RCV|ATK and HP|ATK and RCV|HP and RCV|ATK, HP and RCV) of[^,]+(Slasher|Striker|Fighter|Shooter|Free Spirit|Cerebral|Powerhouse|Driven)/i
     },
+    
+    {
+        name: 'Multiple Stage specials',
+        target: 'special',
+        matcher: /description/i
+    },
 
     {
         name: '1.5x ATK specials',

@@ -6382,6 +6382,14 @@ window.captains = {
                 1;
         }
     },
+    1934: {
+        atk: function(p) { return p.frankyCheck.Primary == 6 ? p.actions[p.sourceSlot] ? (4 * [ 1.25, 1, .5, .75 ][['Fighter', 'Slasher', 'Striker', 'Shooter'].indexOf(p.frankyClass[p.slot])]) : 3 : 1; },
+        hp: function(p) { return p.frankyCheck.Primary == 6 ? 1.3 : 1; },
+    },
+    1935: {
+        atk: function(p) { return p.frankyCheck.Primary == 6 ? p.actions[p.sourceSlot] ? (4 * [ 1.25, 1, .5, .75 ][['Fighter', 'Slasher', 'Striker', 'Shooter'].indexOf(p.frankyClass[p.slot])]) : 3 : 1; },
+        hp: function(p) { return p.frankyCheck.Primary == 6 ? 1.3 : 1; },
+    },
     1944: {
         atk: function(p) { return p.unit.class.has("Cerebral") ? 1 : 1; },
     },

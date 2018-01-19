@@ -4125,6 +4125,40 @@ window.specials = {
             window.specials[1933].turnedOn = false;
         },
     },
+    1934: {
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Shooter") || p.unit.class.has("Slasher") || p.unit.class.has("Fighter") ? 2 : 1},
+        type: "class"
+    },
+    1935: {
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Shooter") || p.unit.class.has("Slasher") || p.unit.class.has("Fighter") ? 2 : 1},
+        type: "class"
+    },
+    1940: {
+        turnedOn: false,
+        onActivation: function(p) {
+            if(p.captain.class.has("Free Spirit")){
+                window.specials[1940].turnedOn = true;
+            }
+        },
+        onDeactivation: function(p) {
+            window.specials[1940].turnedOn = false;
+        },
+        atk: function(p) { return p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.type == "PSY" ? 1.75 : 1; },
+        type: "type"
+    },
+    1941: {
+        turnedOn: false,
+        onActivation: function(p) {
+            if(p.captain.class.has("Free Spirit")){
+                window.specials[1941].turnedOn = true;
+            }
+        },
+        onDeactivation: function(p) {
+            window.specials[1941].turnedOn = false;
+        },
+        atk: function(p) { return p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.type == "PSY" ? 1.75 : 1; },
+        type: "type"
+    },
     1944: {
         affinity: function(p){ return p.unit.class.has("Cerebral") ? 1.75 : 1; }
     },

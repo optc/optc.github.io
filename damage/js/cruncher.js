@@ -187,7 +187,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             var ship = getShipBonus('atk',false,x.unit,n), againstType = type;
             var multipliers = [ ];
             if (orb == 'g') orb = 1.5;
-            if (orb == 0.5 && x.unit.type == 'DEX') orb = (window.specials[1221].turnedOn || window.specials[1222].turnedOn) ? 2 : 0.5;
+            if (orb == 0.5 && x.unit.type == 'DEX') orb = (window.specials[1221].turnedOn || window.specials[1222].turnedOn || window.specials[1940].turnedOn || window.specials[1941].turnedOn) ? 2 : 0.5;
             if (orb == 0.5 && x.unit.type == 'DEX' && x.unit.class.has("Driven")) orb = (window.specials[1259].turnedOn || window.specials[1260].turnedOn || window.specials[1323].turnedOn || window.specials[1324].turnedOn) ? 2 : 0.5;
             if (orb == 0.5 && x.unit.type == 'DEX' && x.unit.class.has("Slasher")) orb = (window.specials[1323].turnedOn || window.specials[1324].turnedOn) ? 2 : 0.5;
             if (orb == 0.5 && x.unit.type == 'DEX' && x.unit.class.has("Fighter")) orb = (window.specials[1593].turnedOn || window.specials[1463]. turnedOn || window.specials[1462]. turnedOn) ? 2 : 0.5;
@@ -195,7 +195,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if (orb == 0.5 && x.unit.type == 'DEX' && x.unit.class.has("Free Spirit")) orb = (window.specials[1593].turnedOn) ? 2 : 0.5;
             if (orb == 0.5 && x.unit.type == 'DEX' && x.unit.class.has("Shooter")) orb = (window.specials[1640].turnedOn || window.specials[1746].turnedOn || window.specials[1747].turnedOn) ? 2 : 0.5;
             if (orb == 0.5 && x.unit.type == 'DEX' && x.unit.class.has("Striker")) orb = (window.specials[1651].turnedOn || window.specials[1652].turnedOn) ? 2 : 0.5;
-            if (orb == 'str') orb = (window.specials[1221].turnedOn || window.specials[1222].turnedOn 
+            if (orb == 'str') orb = (window.specials[1221].turnedOn || window.specials[1222].turnedOn || window.specials[1940].turnedOn || window.specials[1941].turnedOn 
                                  || (window.specials[1259].turnedOn && x.unit.class.has("Driven")) || (window.specials[1260].turnedOn && x.unit.class.has("Driven")) 
                                  || (window.specials[1323].turnedOn && (x.unit.class.has("Driven") || x.unit.class.has("Slasher"))) || (window.specials[1324].turnedOn && (x.unit.class.has("Driven") || x.unit.class.has("Slasher"))) || (window.specials[1528].turnedOn && x.unit.class.has("Powerhouse")) || (window.specials[1593].turnedOn && (x.unit.class.has("Fighter") || x.unit.class.has("Free Spirit"))) || (window.specials[1640].turnedOn && x.unit.class.has("Shooter")) || ((window.specials[1651].turnedOn || window.specials[1652].turnedOn) && x.unit.class.has("Striker")) || ((window.specials[1746].turnedOn || window.specials[1747].turnedOn) && x.unit.class.has("Shooter"))) ? 2 : 1;
             
@@ -864,7 +864,6 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
     };
     
     //Returns an Object with a counter of classes in the current Team
-    //Used for Bartolomeos Captain ability so far
     var classCounter = function() {
         var classes = {};
         var classArray = ['Fighter', 'Slasher', 'FreeSpirit', 'Powerhouse', 'Shooter', 'Striker', 'Cerebral', 'Driven'];
@@ -892,6 +891,61 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                     }
                     else{
                         classes[team[z].unit.class]++;
+                    }
+                }
+            }
+        }
+        return classes;
+    };
+    
+    var frankyCheck = function() {
+        var classes = {};
+        var classTypes = ['Primary', 'Secondary'];
+        //var classArray = ['Fighter', 'Slasher', 'FreeSpirit', 'Powerhouse', 'Shooter', 'Striker', 'Cerebral', 'Driven'];
+        for (var i = 0, j = classTypes.length; i < j; i++) {
+            classes[classTypes[i]] = 0;
+        }
+        for(var z=0;z<team.length;z++){
+            if(team[z].unit){
+                if(team[z].unit.class.length==2){
+                    if(['Fighter', 'Slasher', 'Shooter', 'Striker'].includes(team[z].unit.class[0]) || ['Fighter', 'Slasher', 'Shooter', 'Striker'].includes(team[z].unit.class[1])){
+                        classes['Primary']++;
+                    }
+                    if(['Free Spirit', 'Powerhouse', 'Cerebral', 'Driven'].includes(team[z].unit.class[0]) || ['Free Spirit', 'Powerhouse', 'Cerebral', 'Driven'].includes(team[z].unit.class[1])){
+                        classes['Secondary']++;
+                    }
+                }
+                else{
+                    if(['Fighter', 'Slasher', 'Shooter', 'Striker'].includes(team[z].unit.class)){
+                        classes['Primary']++;
+                    }
+                    if(['Free Spirit', 'Powerhouse', 'Cerebral', 'Driven'].includes(team[z].unit.class)){
+                        classes['Secondary']++;
+                    }
+                }
+            }
+        }
+        return classes;
+    };
+    
+    var frankyClass = function() {
+        var classes = {};
+        for (var i = 0, j = team.length; i < j; i++) {
+            //classes[i] = '';
+        }
+        for(var z=0;z<team.length;z++){
+            if(team[z].unit){
+                if(team[z].unit.class.length==2){
+                    if(['Fighter', 'Slasher', 'Shooter', 'Striker'].includes(team[z].unit.class[0])){
+                        classes[z] = team[z].unit.class[0];
+                    }
+                    else if(['Fighter', 'Slasher', 'Shooter', 'Striker'].includes(team[z].unit.class[1])){
+                        classes[z] = team[z].unit.class[1];
+                    }
+                }
+                else{
+                    if(['Fighter', 'Slasher', 'Shooter', 'Striker'].includes(team[z].unit.class)){
+                        classes[z] = team[z].unit.class;
                     }
                 }
             }
@@ -930,6 +984,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             chainPosition: chainPosition,
             classCount: classCounter(),
             colorCount: colorCounter(),
+            frankyCheck: frankyCheck(),
+            frankyClass: frankyClass(),
             captain: team[1].unit,
             friendCaptain: team[0].unit,
             actions: [ $scope.data.actionleft, $scope.data.actionright ],
