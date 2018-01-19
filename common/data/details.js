@@ -9745,7 +9745,7 @@ window.details = {
             { "description": "Boosts base RCV by 10" },
             { "description": "Boosts base ATK by 15" },
             { "description": "Boosts base HP by 30" },
-            { "description": "Aquire Sailor Ability 1: Boosts this character's attack against [DEX] characters by 2x" },
+            { "description": "Aquire Sailor Ability 1: Boosts this character's attack against [STR] characters by 2x" },
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base HP by 40" },
             { "description": "Boosts base RCV by 20" },
