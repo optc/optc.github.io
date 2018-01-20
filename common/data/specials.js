@@ -4133,6 +4133,30 @@ window.specials = {
         atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Shooter") || p.unit.class.has("Slasher") || p.unit.class.has("Fighter") ? 2 : 1},
         type: "class"
     },
+    1936: {
+        staticMult: function(p) { return 15; }
+    },
+    1937: {
+        staticMult: function(p) { return 15; }
+    },
+    1938: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain]); },
+        onActivation: function(p) {
+            p.scope.notify({
+                text: 'Assuming there are more than 4 enemies on the stage',
+                name: '1938warning'
+            });
+        },
+    },
+    1939: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain]); },
+        onActivation: function(p) {
+            p.scope.notify({
+                text: 'Assuming there are more than 4 enemies on the stage',
+                name: '1938warning'
+            });
+        },
+    },
     1940: {
         turnedOn: false,
         onActivation: function(p) {

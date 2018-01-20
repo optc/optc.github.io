@@ -6095,9 +6095,9 @@ window.captains = {
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
     },
     1889: {
-        damageSorter: function(d) { return CrunchUtils.okamaSort(d, ['PSY', 'PSY', 'PSY']); },
+        //damageSorter: function(d) { return CrunchUtils.okamaSort(d, ['PSY', 'PSY', 'PSY']); },
         hitAtk: function(p) {
-            if(p.actions[p.sourceSlot]){
+            if(p.actions[p.sourceSlot] || p.actions[p.sourceSlot] == undefined){//Hotfix for Cavendish special negating captain actions for cavendish only
                 return p.unit.class.has("Driven") ? (CrunchUtils.okamaCheck(p.damage.slice(0, p.chainPosition), p.modifiers, [{
                     type: 'STR',
                     minModifier: 'Good'
@@ -6389,6 +6389,14 @@ window.captains = {
     1935: {
         atk: function(p) { return p.frankyCheck.Primary == 6 ? p.actions[p.sourceSlot] ? (4 * [ 1.25, 1, .5, .75 ][['Fighter', 'Slasher', 'Striker', 'Shooter'].indexOf(p.frankyClass[p.slot])]) : 3 : 1; },
         hp: function(p) { return p.frankyCheck.Primary == 6 ? 1.3 : 1; },
+    },
+    1937: {
+        atk: function(p) { return p.unit.type == "INT" ? 1.75 : 1; },
+        hp: function(p) { return p.unit.type == "INT" ? 1.5 : 1; },
+    },
+    1939: {
+        atk: function(p) { return p.unit.type == "DEX" ? 1.75 : 1; },
+        hp: function(p) { return p.unit.type == "DEX" ? 1.5 : 1; },
     },
     1944: {
         atk: function(p) { return p.unit.class.has("Cerebral") ? 1 : 1; },
