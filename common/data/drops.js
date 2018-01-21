@@ -670,13 +670,13 @@ window.drops = {
             completion: '5x Rainbow Gems',
             gamewith: 54695,
             '01': [  ],
-            '02': [  ],
+            '02': [ 1505 ],
             '03': [  ],
             '04': [ 1560 ],
             '05': [ 1558, 1561 ],
-            '06': [  ],
-            '07': [  ],
-            '08': [  ],
+            '06': [ 1504 ],
+            '07': [ 1505 ],
+            '08': [ 1503 ],
             '09': [ 1557 ],
             '10': [ 1558, 1560 ],
             '11': [ 1561 ],
@@ -705,7 +705,7 @@ window.drops = {
             '11': [  ],
             '12': [ 1634 ],
             '13': [ 1634 ],
-            '14': [  ],
+            '14': [ 1396, 1398 ],
             '15': [ 1636 ],
         },
         
@@ -713,6 +713,7 @@ window.drops = {
             name: 'Punk Hazard Ice Lands - First Floor Room R',
             shortName: 'Punk Hazard 2',
             thumb: 1716,
+            global: true,
             completion: '5x Rainbow Gems',
             gamewith: 65822,
             '01': [ 1636 ],
@@ -746,7 +747,7 @@ window.drops = {
             '07': [  ],
             '08': [ 1784 ],
             '09': [ 1783 ],
-            '10': [  ],
+            '10': [ 1428 ],
             '11': [ 1648 ],
             '12': [ 1782 ],
         },
@@ -1278,7 +1279,7 @@ window.drops = {
         {
             name: 'Lightning Speed! Strawhat Crew\'s Surprise Visit',
             thumb: 866,
-			global: true,
+            global: true,
             gamewith: 21530,
             condition: 'None',
             challenge:'Total number of hits above 50,000',
@@ -1299,7 +1300,7 @@ window.drops = {
         {
             name: 'Mountaintop Banquet! Enter the Generals!',
             thumb: 897,
-			global: true,
+            global: true,
             gamewith: 23047,
             condition: 'Only STR/DEX/QCK/PSY/INT orbs will appear',
             'All Difficulties': [ 897, 898, 899, -899, -754, -702, -701, -669, -1492, -528, -466, -449, -464, -1177 ]
@@ -1602,7 +1603,7 @@ window.drops = {
         {
             name: 'The Mysterious Warlord!',
             thumb: 1581,
-			global: true,
+            global: true,
             gamewith: 56038,
             'All Difficulties': [ 1580, 1582, -1391, -1444, -1436, -1551, -896, -910, -357, -995, -890, -1342 ],
         },
@@ -1610,7 +1611,7 @@ window.drops = {
         {
             name: 'Targeted Mermaid Princess!',
             thumb: 1597,
-			global: true,
+            global: true,
             gamewith: 57039,
             'Japan': [ 1596, 1598, 1599, -1045, -359, -999, -1033, -1550, -739, -1438, -1440, -893, -1343 ],
             'Global': [ 1596, 1598, 1599, -1045, -1751, -1922, -359, -999, -1033, -1550, -739, -1438, -1440, -893, -1343 ],
@@ -1619,7 +1620,7 @@ window.drops = {
         {
             name: 'The Dark Path of the Blackbeard Pirates!',
             thumb: 1606,
-			global: true,
+            global: true,
             gamewith: 57820,
             'All Difficulties': [ 1606, 1607, 1608, -1404, -1593, -1481, -1442, -1029, -361, -363, -997, -894, -1344 ],
         },
@@ -1627,7 +1628,7 @@ window.drops = {
         {
             name: 'The Time of Revenge has Come! New Fishman Pirates!',
             thumb: 1624,
-			global: true,
+            global: true,
             gamewith: 59321,
             'All Difficulties': [ 1624, 1625, 1626, -1434, -1880, -1477, -1475, -410, -365, -993, -1031, -954, -1347 ],
         },
@@ -1635,6 +1636,7 @@ window.drops = {
         {
             name: 'Seeking The Best Art! Giolla and Brook!',
             thumb: 1649,
+            global: true,
             gamewith: 60685,
             condition: 'You must have at least one character of each type on your team: STR, DEX, QCK, PSY, and INT.',
             'All Difficulties': [ 1648, 1650, -1473, -1483, -412, -414, -1075, -1027, -1479, -1348, -956 ],
@@ -1823,7 +1825,7 @@ window.drops = {
         {
             name: 'Clash Neo!! Doflamingo',
             thumb: 1623,
-			global: true,
+            global: true,
             condition: '1 Master version and 3 different Ultimate versions with different conditions. Master: Striker/Cerebral/Fighter Only. Ultimate: Striker Only, Cerebral Only, and Fighter Only',
             gamewith: 58437,
             Ultimate: [ 1622 ],
@@ -1894,7 +1896,7 @@ window.drops = {
         {
             name: 'Clash Neo!! Eneru',
             thumb: 1930,
-            gamewith: null,
+            gamewith: 86020,
             condition: 'Take 300 damage per character in Environmental Lightning Damage every 3 turns. Luffy is immune to lightning damage. 1 Expert version, 1 Master version, and 3 different Ultimate versions with different conditions. Expert/Master: Driven/Powerhouse/Cerebral Only. Can only complete 10 times each. Ultimate: Driven Only, Powerhouse Only, and Cerebral Only',
             Ultimate: [ 85, 111, 118, 301, 1929 ],
             Master: [ 85, 111, 118, 1929 ] ,
@@ -1994,7 +1996,7 @@ window.drops = {
         {
             name: 'Clash Neo!! Kizaru',
             thumb: 1780,
-			global: true,
+            global: true,
             gamewith: 68681,
             condition: '1 Master version and 3 Ultimate versions with different conditions. Master: Free Spirit/Striker/Powerhouse Only. Can only complete 10 times each. Ultimate: Free Spirit Only, Striker Only, and Powerhouse Only',
             Ultimate: [ 1779 ],
@@ -2101,7 +2103,7 @@ window.drops = {
         {
             name: 'Clash Neo!! Bellamy',
             thumb: 1738,
-			global: true,
+            global: true,
             gamewith: 66087,
             condition: '1 Expert version and 3 Master versions with different conditions. Expert: Driven/Free Spirit/Striker Only. Can only complete 10 times each. Master: Driven Only, Free Spirit Only, and Striker Only',
             Master: [ 1738 ],
@@ -2111,7 +2113,7 @@ window.drops = {
         {
             name: 'Clash!! Fujitora',
             thumb: 1595,
-			global: true,
+            global: true,
             gamewith: 56946,
             Ultimate: [ 1594 ],
             Master: [ 1594 ],
@@ -2121,7 +2123,7 @@ window.drops = {
         {
             name: 'Clash!! Vergo',
             thumb: 1696,
-			global: true,
+            global: true,
             gamewith: 63217,
             Master: [ 1695 ],
             Expert: [ 1695 ]
@@ -2156,8 +2158,8 @@ window.drops = {
         
         {
             name: 'Clash!! Rayleigh',
-            global: true,
             thumb: 1924,
+            global: true,
             gamewith: 85580,
             Ultimate: [ 1923 ],
             Master: [ 1923 ]
@@ -2376,7 +2378,7 @@ window.drops = {
         {
             name: 'Battle Blitz! Straw Hat Pirates',
             thumb: 1404,
-			global: true,
+            global: true,
             gamewith: 65078,
             condition: 'Chance of dropping the Silver Almighty Book.',
             'All Bosses': [ -1621, -1632, -1665, -1678, -1721 ],

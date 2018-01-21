@@ -10759,9 +10759,9 @@ window.details = {
                 "cooldown": [ 18, 13 ],
             },
         ],
-        sailorNotes: "#{silence}<br>#{stages}",
+        specialNotes: "#{silence}<br>#{stages}",
         sailor: "Completely resists Silence on this character",
-        specialNotes: "#{silence}",
+        sailorNotes: "#{silence}",
         specialName: "Black Ball - Thundercloud Rod",
     },
     1367: {//Timeskip Sanji
