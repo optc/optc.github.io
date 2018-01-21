@@ -125,9 +125,15 @@ window.CrunchUtils.typeSort = function(array, typeMultiplier, types) {
 };
 
 window.CrunchUtils.getOrbMultiplier = function(orb, type, uclass, baseMultiplier, boostedMultiplier, captains) {
-    if(window.specials[1221].turnedOn || window.specials[1222].turnedOn || window.specials[1940].turnedOn || window.specials[1941].turnedOn){
+    if(window.specials[1221].turnedOn || window.specials[1222].turnedOn){
         if (orb == 'str') return boostedMultiplier;
         if (orb == 0.5 && type == 'DEX') return boostedMultiplier;
+    }
+    if(window.specials[1940].turnedOn || window.specials[1941].turnedOn){
+        if(type == 'STR' || type == 'PSY' || type == 'QCK'){
+            if (orb == 'str') return boostedMultiplier;
+            if (orb == 0.5 && type == 'DEX') return boostedMultiplier;
+        }
     }
     if(window.specials[1323].turnedOn || window.specials[1324].turnedOn){
         if(uclass.has("Driven") || uclass.has("Slasher")){

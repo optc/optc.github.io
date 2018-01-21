@@ -18619,7 +18619,7 @@ window.details = {
     },
     1941: {//Ace
         captain: {
-            "base": "If there is a [STR], [QCK] and [PSY] character in your crew, boosts ATK of [STR], [QCK] and [PSY] characters by 2x and their HP by 1.1x",
+            "base": "If there is a [STR], [QCK] and [PSY] character in your crew, boosts ATK of [STR], [QCK] and [PSY] characters by 2x and their HP and RCV by 1.1x",
             "level1": "Not Translated",
             "level2": "Not Translated",
             "level3": "Not Translated",
@@ -18634,7 +18634,7 @@ window.details = {
             { "description": "Boosts base ATK by 10" },
             { "description": "Boosts base HP by 30" },
             { "description": "Boosts base RCV by 5" },
-            { "description": "Aquire Potential 1: " },
+            { "description": "Aquire Potential 1: [DEX] Damage Reduction" },
             { "description": "Aquire new Captain Ability: " },
             { "description": "Aquire Sailor Ability 1: " },
             { "description": "Boosts base ATK by 15" },
@@ -18669,7 +18669,7 @@ window.details = {
             { "description": "Boosts base ATK by 40" },
             { "description": "Boosts base HP by 100" },
             { "description": "Aquire new Captain Ability: " },
-            { "description": "Aquire Potential 2: " },
+            { "description": "Aquire Potential 2: Slot Bind Self-reduction" },
         ],
     },
     1944: {//Pedro

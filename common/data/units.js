@@ -1939,7 +1939,7 @@ window.units = [
     [ "Thatch", "DEX", [ "Slasher", "Cerebral" ], 4, 12, null, null, 50, 392109, null, null, null, null, null, null, null ],
     [ "Twin-Blade Thatch, The Soul Mourned by the Flames", "DEX", [ "Slasher", "Cerebral" ], 5, 20, 5, 4, 99, 4000000, null, null, null, 2276, 1211, 241, null ],
     [ "Treamsure Mode Ace", "STR", [ "Free Spirit", "Fighter" ], 4, 30, null, 1, 50, 130703, null, null, null, null, null, null, null ],
-    [ "Fire Fist Ace, Spiritual Flames", "STR", [ "Free Spirit", "Fighter" ], 5, 60, null, 1, 99, 5000000, null, null, null, null, null, null, null ],
+    [ "Fire Fist Ace, Spiritual Flames", "STR", [ "Free Spirit", "Fighter" ], 5, 60, 4, 1, 99, 5000000, 1, 1, 1, 2951, 1372, 205, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Pedro, Mokomo Dukedom", "PSY", [ "Cerebral", "Shooter" ], 4, 25, null, null, 70, 1066998, null, null, null, null, null, null, null ],

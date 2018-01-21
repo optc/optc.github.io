@@ -6401,8 +6401,8 @@ window.captains = {
     1941: {
         atk: function(p) {
             if(p.actions[p.sourceSlot]){
-                if(p.unit.type == "STR" || p.unit.type == "PSY" || p.unit.type == "QCK"){
-                    if(p.colorCount.STR>=1 && p.colorCount.PSY>=1 && p.colorCount.QCK>=1)
+                if(p.colorCount.STR>=1 && p.colorCount.PSY>=1 && p.colorCount.QCK>=1){
+                    if(p.unit.type == "STR" || p.unit.type == "PSY" || p.unit.type == "QCK")
                         return (p.unit.type == "STR" ? ((p.orb == 2) ? 3.44 : 2.75) : (p.orb == 'str') ? 3.44 : 2.75);
                     else
                         return 1; 
@@ -6446,16 +6446,21 @@ window.captains = {
         },
         rcv: function(p) {
             if(p.actions[p.sourceSlot]){
-                if(p.unit.type == "STR" || p.unit.type == "PSY" || p.unit.type == "QCK"){
-                    if(p.colorCount.STR>=1 && p.colorCount.PSY>=1 && p.colorCount.QCK>=1)
+                if(p.colorCount.STR>=1 && p.colorCount.PSY>=1 && p.colorCount.QCK>=1){
+                    if(p.unit.type == "STR" || p.unit.type == "PSY" || p.unit.type == "QCK")
                         return 1.2;
                     else
                         return 1; 
-                    }
+                }
+            }
+            else if(p.colorCount.STR>=1 && p.colorCount.PSY>=1 && p.colorCount.QCK>=1){
+                if(p.unit.type == "STR" || p.unit.type == "PSY" || p.unit.type == "QCK")
+                    return 1.1;
                 else
-                    return 1;
-                        }
-            else return 1;
+                    return 1; 
+            }
+            else
+                return 1;
         },
     },
     1944: {

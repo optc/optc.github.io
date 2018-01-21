@@ -187,7 +187,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             var ship = getShipBonus('atk',false,x.unit,n), againstType = type;
             var multipliers = [ ];
             if (orb == 'g') orb = 1.5;
-            if (orb == 0.5 && x.unit.type == 'DEX') orb = (window.specials[1221].turnedOn || window.specials[1222].turnedOn || window.specials[1940].turnedOn || window.specials[1941].turnedOn) ? 2 : 0.5;
+            if (orb == 0.5 && x.unit.type == 'DEX') orb = (window.specials[1221].turnedOn || window.specials[1222].turnedOn) ? 2 : 0.5;
             if (orb == 0.5 && x.unit.type == 'DEX' && x.unit.class.has("Driven")) orb = (window.specials[1259].turnedOn || window.specials[1260].turnedOn || window.specials[1323].turnedOn || window.specials[1324].turnedOn) ? 2 : 0.5;
             if (orb == 0.5 && x.unit.type == 'DEX' && x.unit.class.has("Slasher")) orb = (window.specials[1323].turnedOn || window.specials[1324].turnedOn) ? 2 : 0.5;
             if (orb == 0.5 && x.unit.type == 'DEX' && x.unit.class.has("Fighter")) orb = (window.specials[1593].turnedOn || window.specials[1463]. turnedOn || window.specials[1462]. turnedOn) ? 2 : 0.5;
@@ -195,12 +195,15 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if (orb == 0.5 && x.unit.type == 'DEX' && x.unit.class.has("Free Spirit")) orb = (window.specials[1593].turnedOn) ? 2 : 0.5;
             if (orb == 0.5 && x.unit.type == 'DEX' && x.unit.class.has("Shooter")) orb = (window.specials[1640].turnedOn || window.specials[1746].turnedOn || window.specials[1747].turnedOn) ? 2 : 0.5;
             if (orb == 0.5 && x.unit.type == 'DEX' && x.unit.class.has("Striker")) orb = (window.specials[1651].turnedOn || window.specials[1652].turnedOn) ? 2 : 0.5;
-            if (orb == 'str') orb = (window.specials[1221].turnedOn || window.specials[1222].turnedOn || window.specials[1940].turnedOn || window.specials[1941].turnedOn 
-                                 || (window.specials[1259].turnedOn && x.unit.class.has("Driven")) || (window.specials[1260].turnedOn && x.unit.class.has("Driven")) 
-                                 || (window.specials[1323].turnedOn && (x.unit.class.has("Driven") || x.unit.class.has("Slasher"))) || (window.specials[1324].turnedOn && (x.unit.class.has("Driven")
-                                 || x.unit.class.has("Slasher"))) || (window.specials[1528].turnedOn && x.unit.class.has("Powerhouse")) || (window.specials[1593].turnedOn && (x.unit.class.has("Fighter")
-                                 || x.unit.class.has("Free Spirit"))) || (window.specials[1640].turnedOn && x.unit.class.has("Shooter")) || ((window.specials[1651].turnedOn || window.specials[1652].turnedOn) && x.unit.class.has("Striker"))
-                                 || ((window.specials[1746].turnedOn|| window.specials[1747].turnedOn) && x.unit.class.has("Shooter"))|| ((window.specials[1940].turnedOn|| window.specials[1941].turnedOn) && x.unit.class.has("Free Spirit"))) ? 2 : 1;
+            if (orb == 'str') orb = (window.specials[1221].turnedOn || window.specials[1222].turnedOn 
+                                     || ((window.specials[1259].turnedOn || window.specials[1260].turnedOn) && x.unit.class.has("Driven"))
+                                     || ((window.specials[1323].turnedOn || window.specials[1324].turnedOn) && (x.unit.class.has("Driven") || x.unit.class.has("Slasher")))
+                                     || (window.specials[1528].turnedOn && x.unit.class.has("Powerhouse"))
+                                     || (window.specials[1593].turnedOn && (x.unit.class.has("Fighter") || x.unit.class.has("Free Spirit")))
+                                     || (window.specials[1640].turnedOn && x.unit.class.has("Shooter"))
+                                     || ((window.specials[1651].turnedOn || window.specials[1652].turnedOn) && x.unit.class.has("Striker"))
+                                     || ((window.specials[1746].turnedOn|| window.specials[1747].turnedOn) && x.unit.class.has("Shooter"))
+                                     || ((window.specials[1940].turnedOn|| window.specials[1941].turnedOn) && (x.unit.type == "STR" || x.unit.type == "QCK" || x.unit.type == "PSY"))) ? 2 : 1;
             
             if (orb == 0.5) orb = (window.specials[1269].turnedOn || window.specials[1270].turnedOn || window.specials[1330].turnedOn || window.specials[1546].turnedOn || window.specials[1547].turnedOn || window.specials[1557].turnedOn) ? 1 : .5;
             
@@ -447,7 +450,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         //Calculate the new Affinity mult
         if(affinityMult != 1){
             if(typeMult == 2) typeMult *= affinityMult;
-            if(typeMult == 0.5) typeMult *= (affinityMult-1);
+            if(typeMult == 0.5) typeMult /= affinityMult;
         }
         
         return typeMult;
@@ -520,8 +523,10 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         }
         // non-static rcv
         for (var i=0;i<enabledEffects.length;++i) {
-            if (enabledEffects[i].hasOwnProperty('rcv'))
+            if (enabledEffects[i].hasOwnProperty('rcv')){
+                params["sourceSlot"] = enabledEffects[i].sourceSlot;
                 rcv *= enabledEffects[i].rcv(params);
+            }
         }
         // maximum non-static rcv
         var maximum = rcv;
