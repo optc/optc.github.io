@@ -6398,72 +6398,12 @@ window.captains = {
         atk: function(p) { return p.unit.type == "DEX" ? 1.75 : 1; },
         hp: function(p) { return p.unit.type == "DEX" ? 1.5 : 1; },
     },
-    1940: {
-        atk: function(p) {
-            if(p.actions[p.sourceSlot]){
-                if(p.unit.type == "STR" || p.unit.type == "PSY" || p.unit.type == "QCK"){
-                    if(p.colorCount.INT==0 && p.colorCount.DEX==0 && p.colorCount.STR>=1 && p.colorCount.PSY>=1 && p.colorCount.QCK>=1)
-                        return ((p.orb == 'str') ? 3.44 : 2.75);
-                    else
-                        return 1; 
-                    }
-                else
-                    return 1;
-                        }
-            else {
-                if(p.unit.type == "STR" || p.unit.type == "PSY" || p.unit.type == "QCK"){
-                    if(p.colorCount.INT==0 && p.colorCount.DEX==0 && p.colorCount.STR>=1 && p.colorCount.PSY>=1 && p.colorCount.QCK>=1)
-                        return 2;
-                    else
-                        return 1;
-                    }
-                else
-                    return 1;
-            }
-            $scope.notify({ text: p.orb });
-        },
-        hp: function(p) {
-            if(p.actions[p.sourceSlot]){
-                if(p.unit.type == "STR" || p.unit.type == "PSY" || p.unit.type == "QCK"){
-                    if(p.colorCount.INT==0 && p.colorCount.DEX==0 && p.colorCount.STR>=1 && p.colorCount.PSY>=1 && p.colorCount.QCK>=1)
-                        return 1.2;
-                    else
-                        return 1; 
-                    }
-                else
-                    return 1;
-                        }
-            else {
-                if(p.unit.type == "STR" || p.unit.type == "PSY" || p.unit.type == "QCK"){
-                    if(p.colorCount.INT==0 && p.colorCount.DEX==0 && p.colorCount.STR>=1 && p.colorCount.PSY>=1 && p.colorCount.QCK>=1)
-                        return 1.1;
-                    else
-                        return 1;
-                    }
-                else
-                    return 1;
-            }
-        },
-        rcv: function(p) {
-            if(p.actions[p.sourceSlot]){
-                if(p.unit.type == "STR" || p.unit.type == "PSY" || p.unit.type == "QCK"){
-                    if(p.colorCount.INT==0 && p.colorCount.DEX==0 && p.colorCount.STR>=1 && p.colorCount.PSY>=1 && p.colorCount.QCK>=1)
-                        return 1.2;
-                    else
-                        return 1; 
-                    }
-                else
-                    return 1;
-                        }
-            else return 1;
-        },
-    },
     1941: {
         atk: function(p) {
             if(p.actions[p.sourceSlot]){
                 if(p.unit.type == "STR" || p.unit.type == "PSY" || p.unit.type == "QCK"){
-                    if(p.colorCount.INT==0 && p.colorCount.DEX==0 && p.colorCount.STR>=1 && p.colorCount.PSY>=1 && p.colorCount.QCK>=1)
-                        return ((p.orb == 'str') ? 3.44 : 2.75);
+                    if(p.colorCount.STR>=1 && p.colorCount.PSY>=1 && p.colorCount.QCK>=1)
+                        return (p.unit.type == "STR" ? ((p.orb == 2) ? 3.44 : 2.75) : (p.orb == 'str') ? 3.44 : 2.75);
                     else
                         return 1; 
                     }
@@ -6472,7 +6412,7 @@ window.captains = {
                         }
             else {
                 if(p.unit.type == "STR" || p.unit.type == "PSY" || p.unit.type == "QCK"){
-                    if(p.colorCount.INT==0 && p.colorCount.DEX==0 && p.colorCount.STR>=1 && p.colorCount.PSY>=1 && p.colorCount.QCK>=1)
+                    if(p.colorCount.STR>=1 && p.colorCount.PSY>=1 && p.colorCount.QCK>=1)
                         return 2;
                     else
                         return 1;
@@ -6485,7 +6425,7 @@ window.captains = {
         hp: function(p) {
             if(p.actions[p.sourceSlot]){
                 if(p.unit.type == "STR" || p.unit.type == "PSY" || p.unit.type == "QCK"){
-                    if(p.colorCount.INT==0 && p.colorCount.DEX==0 && p.colorCount.STR>=1 && p.colorCount.PSY>=1 && p.colorCount.QCK>=1)
+                    if(p.colorCount.STR>=1 && p.colorCount.PSY>=1 && p.colorCount.QCK>=1)
                         return 1.2;
                     else
                         return 1; 
@@ -6495,7 +6435,7 @@ window.captains = {
                         }
             else {
                 if(p.unit.type == "STR" || p.unit.type == "PSY" || p.unit.type == "QCK"){
-                    if(p.colorCount.INT==0 && p.colorCount.DEX==0 && p.colorCount.STR>=1 && p.colorCount.PSY>=1 && p.colorCount.QCK>=1)
+                    if(p.colorCount.STR>=1 && p.colorCount.PSY>=1 && p.colorCount.QCK>=1)
                         return 1.1;
                     else
                         return 1;
@@ -6507,7 +6447,7 @@ window.captains = {
         rcv: function(p) {
             if(p.actions[p.sourceSlot]){
                 if(p.unit.type == "STR" || p.unit.type == "PSY" || p.unit.type == "QCK"){
-                    if(p.colorCount.INT==0 && p.colorCount.DEX==0 && p.colorCount.STR>=1 && p.colorCount.PSY>=1 && p.colorCount.QCK>=1)
+                    if(p.colorCount.STR>=1 && p.colorCount.PSY>=1 && p.colorCount.QCK>=1)
                         return 1.2;
                     else
                         return 1; 
