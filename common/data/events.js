@@ -249,4 +249,24 @@ window.events = {
                 $scope.notify({ text: 'Disabling [MEAT] orbs support.' });
         }
     },
+    1940: {
+        onInsertion: function($scope) {
+            if (++$scope.options.strOrbsEnabled == 1)
+                $scope.notify({ text: 'Enabling [STR] orbs support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.strOrbsEnabled === 0)
+                $scope.notify({ text: 'Disabling [STR] orbs support.' });
+        }
+    },
+    1941: {
+        onInsertion: function($scope) {
+            if (++$scope.options.strOrbsEnabled == 1)
+                $scope.notify({ text: 'Enabling [STR] orbs support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.strOrbsEnabled === 0)
+                $scope.notify({ text: 'Disabling [STR] orbs support.' });
+        }
+    },
 };
