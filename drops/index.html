@@ -82,10 +82,10 @@
                             <a href = "https://トレクル.gamewith.jp/article/show/{{island.gamewith}}" target="_blank">Gamewith Page</a>
                         </td>
                     </tr>
-                    <tr ng-if="island.teamDatabase" hide-when-empty>
-                        <td>Team Database</td>
+                    <tr ng-if="island.slefty" hide-when-empty>
+                        <td>Slefty's Team Database</td>
                         <td colspan="2">
-                            <a href = "http://slefty.herokuapp.com/{{island.teamDatabase}}" target="_blank">Team Database Page</a>
+                            <a href = "http://slefty.herokuapp.com/{{island.slefty}}" target="_blank">Slefty's Team Database Page</a>
                         </td>
                     </tr>
                     <tr ng-if="island.nakama" hide-when-empty>
@@ -110,7 +110,7 @@
                 </tbody>
                 <tbody>
                     <tr ng-repeat="(stage,data) in island"
-                        ng-if="stage != 'thumb' && stage != 'day' && stage != 'name' && stage != 'shortName' && stage != 'global' && stage != 'condition' && stage != 'challenge' && stage != 'completion' && stage != 'challengeData' && stage != 'showManual' && stage != 'gamewith' && stage != 'teamDatabase' && stage != 'nakama'">
+                        ng-if="stage != 'thumb' && stage != 'day' && stage != 'name' && stage != 'shortName' && stage != 'global' && stage != 'condition' && stage != 'challenge' && stage != 'completion' && stage != 'challengeData' && stage != 'showManual' && stage != 'gamewith' && stage != 'slefty' && stage != 'nakama'">
                         <td>
                             {{type == 'Story Island'&& stage!='Completion Units' ? 'Stage ' + stage : (stage.length < 2 ? 'Any' : stage)}}
                         </td>
