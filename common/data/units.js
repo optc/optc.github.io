@@ -1933,7 +1933,7 @@ window.units = [
     [ "Boa Marigold, Fugitive Slave", "PSY", [ "Fighter", "Free Spirit" ], 4, 20, 5, 4, 99, 1000000, 219, 345, 20, 2020, 1123, 239, 1 ],
     [ "Boa Hancock, Fugitive Slave", "DEX", [ "Fighter", "Free Spirit" ], 4, 20, 4, 4, 99, 1000000, 210, 210, 25, 2530, 805, 260, 1 ],
     [ "Franky", "QCK", [ "Shooter", "Free Spirit" ], 5, 30, null, null, 70, 1066998, null, null, null, null, null, null, null ],
-    [ "Franky, Future Country's Super Weapon", "QCK", [ "Shooter", "Free Spirit" ], 6, 5, 4, 5, 99, 5000000, 1, 1, 1, 4378, 1616, 138, null ],
+    [ "Franky, Future Country's Super Weapon", "QCK", [ "Shooter", "Free Spirit" ], 6, 55, 4, 5, 99, 5000000, 1, 1, 1, 4378, 1616, 138, null ],
     [ "Blackbeard", "INT", [ "Driven", "Fighter" ], 4, 12, null, null, 50, 392109, null, null, null, null, null, null, null ],
     [ "Blackbeard, The Darkness that Challenges the Sun", "INT", [ "Driven", "Striker" ], 5, 20, 4, 4, 99, 4000000, null, null, null, 2211, 1189, 288, null ],
     [ "Thatch", "DEX", [ "Slasher", "Cerebral" ], 4, 12, null, null, 50, 392109, null, null, null, null, null, null, null ],
