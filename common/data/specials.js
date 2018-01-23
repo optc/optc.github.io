@@ -3842,6 +3842,10 @@ window.specials = {
     1859: {
         staticMult: function(p) { return 65; }
     },
+    1860: {
+        atk: function(p) { return (p.delayed > 0 && (p.captain.class.has("Shooter"))) ? 1.75 : 1; },
+        type: "condition",
+    },
     1861: {
         atk: function(p) { return (p.delayed > 0 && (p.captain.class.has("Shooter"))) ? 1.75 : 1; },
         type: "condition",
@@ -4183,10 +4187,46 @@ window.specials = {
         atk: function(p) { return p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.type == "PSY" ? 1.75 : 1; },
         type: "type"
     },
+    1942: {
+        atk: function(p) { return (p.delayed > 0 && (p.captain.class.has("Free Spirit"))) ? 1.75 : 1; },
+        type: "condition",
+    },
+    1943: {
+        atk: function(p) { return (p.delayed > 0 && (p.captain.class.has("Free Spirit"))) ? 1.75 : 1; },
+        type: "condition",
+    },
     1944: {
         affinity: function(p){ return p.unit.class.has("Cerebral") ? 1.75 : 1; }
     },
     1945: {
         affinity: function(p){ return p.unit.class.has("Cerebral") ? 1.75 : 1; }
+    },
+    1960: {
+        turnedOn: [ false, false ],
+        onActivation: function(p) {
+            window.specials[1960].turnedOn[p.slot] = true;
+            p.scope.notify({
+                text: 'Only affects damage if Sanji is your captain',
+                name: '1960warning'
+            });
+        },
+        onDeactivation: function(p) {
+            window.specials[1960].turnedOn[p.slot] = false;
+        },
+        delay: function(p) { return 1; }
+    },
+    1961: {
+        turnedOn: [ false, false ],
+        onActivation: function(p) {
+            window.specials[1961].turnedOn[p.slot] = true;
+            p.scope.notify({
+                text: 'Only affects damage if Sanji is your captain',
+                name: '1961warning'
+            });
+        },
+        onDeactivation: function(p) {
+            window.specials[1961].turnedOn[p.slot] = false;
+        },
+        delay: function(p) { return 1; }
     },
 };

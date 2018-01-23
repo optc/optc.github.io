@@ -18672,6 +18672,40 @@ window.details = {
             { "description": "Aquire Potential 2: Slot Bind Self-reduction" },
         ],
     },
+    1942: {//Senor Pink
+        captain: "Boosts ATK of Free Spirit characters by ???x and recovers ???x character's RCV in HP at the end of each turn",
+        special: "Changes own orb into [STR], reduces Chain Multiplier Limit and Chain Coefficient Reduction by 3 turns. If your captain is a Free Spirit Character, boosts ATK against delayed enemies by 1.75x for 1 turn",
+        specialName: "Manly Synchronized Swimming",
+    },
+    1943: {//Senor Pink
+        captain: "Boosts ATK of Free Spirit characters by 2.5x and recovers 1.5x character's RCV in HP at the end of each turn",
+        special: "Changes own orb into [STR], reduces Chain Multiplier Limit and Chain Coefficient Reduction by 3 turns. If your captain is a Free Spirit Character, boosts ATK against delayed enemies by 1.75x for 1 turn",
+        specialName: "Manly Synchronized Swimming",
+        limit: "This character has a limit break",
+        potential: [
+            {
+                "Name": "[DEX] Damage Reduction",
+                "description": [ 
+                    "Level 1: Reduce damage taken from [DEX] characters by 1%",
+                    "Level 2: Reduce damage taken from [DEX] characters by ?%",
+                    "Level 3: Reduce damage taken from [DEX] characters by ?%",
+                    "Level 4: Reduce damage taken from [DEX] characters by ?%",
+                    "Level 5: Reduce damage taken from [DEX] characters by ?%"
+                ]
+            },              
+                
+            {
+                "Name": "Pinch Healing",
+                "description": [ 
+                    "Level 1: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character",
+                    "Level 2: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character",
+                    "Level 3: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character",
+                    "Level 4: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character",
+                    "Level 5: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character"
+                ]
+            },
+        ]
+    },
     1944: {//Pedro
         captain: "Boosts ATK of Cerebral characters by ???x",
         special: "Reduces crew's current HP by 95%, deals 50x character's ATK in typeless damage to all enemies that will ignore damage negating abilities and barriers, boosts the Color Affinity of Cerebral characters by 1.75x for 2 turns",
@@ -18685,5 +18719,19 @@ window.details = {
         specialNotes: "#{ignoreBarrier}",
         specialName: "Pedro Special",
         limit: "This character probably has a limit break",
+    },
+    1960: {//Sanji
+        captain: "Boosts ATK of [PSY] and Fighter characters by ???x and their HP by ???x. If you use \"A Broad Smile of Life and Death\" this turn, boosts their ATK by ???x instead.",
+        special: "Changes [RCV], [BLOCK] and [BOMB] orbs into Matching orbs, reduces Special Cooldown of Powerhouse and Fighter specials by 1 turn, and delays all enemies by 1 turn",
+        specialName: "A Broad Smile of Life and Death",
+        sailor: "Restores his own special by 3 turns when it is rewinded",
+        sailorNotes: "#{rewind : 3}",
+    },
+    1961: {//Sanji
+        captain: "Boosts ATK of [PSY] and Fighter characters by 2.25x and their HP by 1.2x. If you use \"A Broad Smile of Life and Death\" this turn, boosts their ATK by 2.925x instead.",
+        special: "Changes [RCV], [BLOCK] and [BOMB] orbs into Matching orbs, reduces Special Cooldown of Powerhouse and Fighter specials by 1 turn, and delays all enemies by 1 turn",
+        specialName: "A Broad Smile of Life and Death",
+        sailor: "Restores his own special by 3 turns when it is rewinded",
+        sailorNotes: "#{rewind : 3}",
     },
 };

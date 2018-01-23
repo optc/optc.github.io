@@ -6463,10 +6463,27 @@ window.captains = {
                 return 1;
         },
     },
+    1942: {
+        atk: function(p) { return p.unit.class.has("Free Spirit") ? 1 : 1; },
+    },
+    1943: {
+        atk: function(p) { return p.unit.class.has("Free Spirit") ? 2.5 : 1; },
+    },
     1944: {
         atk: function(p) { return p.unit.class.has("Cerebral") ? 1 : 1; },
     },
     1945: {
         atk: function(p) { return p.unit.class.has("Cerebral") ? 2.5 : 1; },
+    },
+    1961: {
+        atk: function(p){ 
+            var specialEnabled = false;
+            for(var i=0;i<2;i++)
+            {
+                if(window.specials[1960].turnedOn[i]==true){specialEnabled = true;}
+                if(window.specials[1961].turnedOn[i]==true){specialEnabled = true;}
+            }
+            return (p.unit.type == "PSY" || p.unit.class.has("Fighter")) ? specialEnabled ? 2.925 : 2.25 : 1; },
+        hp: function(p) { return (p.unit.type == "PSY" || p.unit.class.has("Fighter")) ? 1.2 : 1 }
     },
 };
