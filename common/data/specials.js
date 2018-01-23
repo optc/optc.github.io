@@ -4203,7 +4203,7 @@ window.specials = {
     },
     1960: {
         turnedOn: [ false, false ],
-        onActivation: function(p) {
+        onActivation: function(p) {//REMOVE THIS LATER WHEN PUDDING? COMES
             window.specials[1960].turnedOn[p.slot] = true;
             p.scope.notify({
                 text: 'Only affects damage if Sanji is your captain',
@@ -4217,7 +4217,7 @@ window.specials = {
     },
     1961: {
         turnedOn: [ false, false ],
-        onActivation: function(p) {
+        onActivation: function(p) {//REMOVE THIS LATER WHEN PUDDING? COMES
             window.specials[1961].turnedOn[p.slot] = true;
             p.scope.notify({
                 text: 'Only affects damage if Sanji is your captain',

@@ -6480,8 +6480,8 @@ window.captains = {
             var specialEnabled = false;
             for(var i=0;i<2;i++)
             {
-                if(window.specials[1960].turnedOn[i]==true){specialEnabled = true;}
-                if(window.specials[1961].turnedOn[i]==true){specialEnabled = true;}
+                if(window.specials[1960].turnedOn[i]==true){specialEnabled = true;}//CHANGE THIS LATER WHEN PUDDING? COMES
+                if(window.specials[1961].turnedOn[i]==true){specialEnabled = true;}//CHANGE THIS LATER WHEN PUDDING? COMES
             }
             return (p.unit.type == "PSY" || p.unit.class.has("Fighter")) ? specialEnabled ? 2.925 : 2.25 : 1; },
         hp: function(p) { return (p.unit.type == "PSY" || p.unit.class.has("Fighter")) ? 1.2 : 1 }
