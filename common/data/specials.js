@@ -4068,6 +4068,15 @@ window.specials = {
         atk: function(p) { return p.unit.class.has("Driven") ? 1.75 : 1; },
         type: "class",
     },
+    1927: {
+        atk: function(p) { return p.unit.class.has("Cerebral") ? 2 : 1; },
+        type: "type"
+    },
+    1928: {
+        atk: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Driven")) ? 1.5 : 1; },
+        type: "class",
+        orb: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Driven")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain]) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain]); }	
+    },
     1929: {
         atk: function(p) { return p.unit.type == "DEX" ? 2 : 1; },
         type: "type"

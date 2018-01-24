@@ -1847,10 +1847,10 @@ window.drops = {
         },
         
         {
-            name: 'Gorgon Sisters Escape from Mariejois!',
+            name: 'Binding and Bonds!',
             thumb: 1933,
             nakama: 2112095,
-            gamewith: null,
+            gamewith: 86343,
             condition: 'Take 7% current Health in Environmental Damage every 2 turns',
             'All Difficulties': [ 1931, 1932, 1933, -1747, -1318, -1324, -1798, -1749, -1561 ]
         },

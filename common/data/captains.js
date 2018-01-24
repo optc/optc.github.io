@@ -6364,6 +6364,14 @@ window.captains = {
     1926: {
         atk: function(p) { return p.unit.class.has("Driven") ? 2.5 : 1; },
     },
+    1927: {
+        atk: function(p) {
+            return p.unit.class.has("Cerebral") ? 2 + 1.5 * ((100 - p.percHP) / 100) : 1;
+        }
+    },
+    1928: {
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? 3 : 1; },
+    },
     1929: {
         atk: function(p) { return p.unit.type == "DEX" ? 2 : 1; }
     },
