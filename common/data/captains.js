@@ -6378,7 +6378,9 @@ window.captains = {
     },
     1933: {
         atk: function(p) {
-            return p.unit.class.has("Fighter") ? 1.75 : p.unit.class.has("Free Spirit") ? 1.5 :
+            return p.unit.class.has("Fighter") && p.unit.class.has("Free Spirit") ? 2.625 :
+                p.unit.class.has("Fighter") && !p.unit.class.has("Free Spirit") ? 1.75 :
+                !p.unit.class.has("Fighter") && p.unit.class.has("Free Spirit") ? 1.5 :
                 1;
         }
     },
