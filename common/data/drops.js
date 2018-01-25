@@ -1737,6 +1737,7 @@ window.drops = {
         {
             name: 'Open the Cafe!',
             thumb: 1670,
+            global: true,
             nakama: 2038800,
             gamewith: 61622,
             condition: 'Total Crew Cost must be lower than 180 (Including friend captain)',
