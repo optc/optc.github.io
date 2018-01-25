@@ -1737,6 +1737,7 @@ window.drops = {
         {
             name: 'Open the Cafe!',
             thumb: 1670,
+            global: true,
             nakama: 2038800,
             gamewith: 61622,
             condition: 'Total Crew Cost must be lower than 180 (Including friend captain)',
@@ -2779,7 +2780,7 @@ window.drops = {
             thumb: 1240,
             nakama: 7078912,
             gamewith: 48115,
-			global: true,
+            global: true,
             completion: 'Ship: Kizaru\'s Cannonball',
         },
         
