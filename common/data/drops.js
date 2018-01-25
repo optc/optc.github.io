@@ -2767,7 +2767,7 @@ window.drops = {
             thumb: 1240,
             nakama: 7078912,
             gamewith: 48115,
-			global: true,
+            global: true,
             completion: 'Ship: Kizaru\'s Cannonball',
         },
         
