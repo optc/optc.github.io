@@ -6485,6 +6485,13 @@ window.captains = {
     1945: {
         atk: function(p) { return p.unit.class.has("Cerebral") ? 2.5 : 1; },
     },
+    1947: {
+        atk: function(p) { return p.unit.type == "INT" ? 2 : 1; }
+    },
+    1949: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 2.25 : 1; },
+        hp: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; },
+    },
     1961: {
         atk: function(p){ 
             var specialEnabled = false;

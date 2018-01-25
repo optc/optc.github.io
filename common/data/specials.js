@@ -4210,6 +4210,12 @@ window.specials = {
     1945: {
         affinity: function(p){ return p.unit.class.has("Cerebral") ? 1.75 : 1; }
     },
+    1946: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain]); },
+    },
+    1947: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain]); },
+    },
     1960: {
         turnedOn: [ false, false ],
         onActivation: function(p) {//REMOVE THIS LATER WHEN PUDDING? COMES

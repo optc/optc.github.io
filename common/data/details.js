@@ -18797,6 +18797,28 @@ window.details = {
         specialName: "Pedro Special",
         limit: "This character probably has a limit break",
     },
+    1946: {//Vander Decken
+        captain: "Boosts ATK of [INT] characters by ?x. Recovers ?x character's RCV in HP at the end of each turn.",
+        special: "Locks orbs for 1 turn, amplifies the effect of orbs by 1.5x for 1 turn and deals several times character's ATK in Typeless damage to one enemy",
+        specialNotes: "#{specialProportional : higher : ??? * ( (remaining HP) / (total HP) )}",
+        specialName: "Shooting at the Heart",
+    },
+    1947: {//Vander Decken
+        captain: "Boosts ATK of [INT] characters by 2x. Recovers 2x character's RCV in HP at the end of each turn.",
+        special: "Locks orbs for 1 turn, amplifies the effect of orbs by 1.5x for 1 turn and deals several times character's ATK in Typeless damage to one enemy",
+        specialNotes: "#{specialProportional : higher : ??? * ( (remaining HP) / (total HP) )}",
+        specialName: "Shooting at the Heart",
+    },
+    1948: {//Wadatsumi
+        captain: "Boosts ATK of Powerhouse characters by ???x, boosts HP of Fighter characters by ???x",
+        special: "Increases damage received by 2x for 2 turns and reduces Special Cooldown of Fighter and Powerhouse characters by 2 turns",
+        specialName: "Expanding Superpower",
+    },
+    1949: {//Wadatsumi
+        captain: "Boosts ATK of Powerhouse characters by 2.25x, boosts HP of Fighter characters by 1.5x",
+        special: "Increases damage received by 2x for 2 turns and reduces Special Cooldown of Fighter and Powerhouse characters by 2 turns",
+        specialName: "Expanding Superpower",
+    },
     1960: {//Sanji
         captain: "Boosts ATK of [PSY] and Fighter characters by ???x and their HP by ???x. If you use \"Tears of Attraction\" this turn, boosts their ATK by ???x instead.",
         captainNotes: "\"Tears of Attraction\" is a new unit's Special we don't have info on yet, but you can use this Sanji's special to activate his ability for now. This will be changed in the future.",
