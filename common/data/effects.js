@@ -589,4 +589,43 @@ window.effects = {
         id: 53, // don't change this
         rainbowOrbsEnabled: true
     },
+    
+    'Blitz Battle! Doflamingo Family': {
+        description: 'Lot of units boosted',
+        thumb: 870,
+        id: 54, // don't change this
+        atk: function(p) {
+            var character = window.families[p.number];
+            var boost = 1;
+            matching = [ "Monkey D. Luffy", "Roronoa Zoro", "Franky", "Nico Robin", "Usopp", "Trafalgar Law", "Bartolomeo", "Cavendish", "Rob Lucci", "Sabo", "Boa Sandersonia", "Boa Marigold", "Boa Hancock", "Marguerite", "Leo", "Don Sai", "Don Chinjao", "Ideo", "Blue Gilly", "Suleiman", "Mansherry", "Ricky", "Kyros", "Funk Brothers", "Hajrudin", "Abdullah and Jeet", "Orlumbus", "Elizabello", "Bepo", ].indexOf(character) != -1;
+            if (p.class.has("Slasher")) boost *= 1.5;
+            if (p.class.has("Powerhouse")) boost *= 1.5;
+            if (p.class.has("Striker")) boost *= 1.5;
+            if (p.class.has("Shooter")) boost *= 1.5;
+            if (matching) boost *= 1.5;
+            return boost;
+        },
+        hp: function(p) {
+            var character = window.families[p.number];
+            var boost = 1;
+            matching = [ "Monkey D. Luffy", "Roronoa Zoro", "Franky", "Nico Robin", "Usopp", "Trafalgar Law", "Bartolomeo", "Cavendish", "Rob Lucci", "Sabo", "Boa Sandersonia", "Boa Marigold", "Boa Hancock", "Marguerite", "Leo", "Don Sai", "Don Chinjao", "Ideo", "Blue Gilly", "Suleiman", "Mansherry", "Ricky", "Kyros", "Funk Brothers", "Hajrudin", "Abdullah and Jeet", "Orlumbus", "Elizabello", "Bepo", ].indexOf(character) != -1;
+            if (p.class.has("Slasher")) boost *= 1.5;
+            if (p.class.has("Powerhouse")) boost *= 1.5;
+            if (p.class.has("Striker")) boost *= 1.5;
+            if (p.class.has("Shooter")) boost *= 1.5;
+            if (matching) boost *= 1.5;
+            return boost;
+        },  
+        rcv: function(p) {
+            var character = window.families[p.number];
+            var boost = 1;
+            matching = [ "Monkey D. Luffy", "Roronoa Zoro", "Franky", "Nico Robin", "Usopp", "Trafalgar Law", "Bartolomeo", "Cavendish", "Rob Lucci", "Sabo", "Boa Sandersonia", "Boa Marigold", "Boa Hancock", "Marguerite", "Leo", "Don Sai", "Don Chinjao", "Ideo", "Blue Gilly", "Suleiman", "Mansherry", "Ricky", "Kyros", "Funk Brothers", "Hajrudin", "Abdullah and Jeet", "Orlumbus", "Elizabello", "Bepo", ].indexOf(character) != -1;
+            if (p.class.has("Slasher")) boost *= 1.5;
+            if (p.class.has("Powerhouse")) boost *= 1.5;
+            if (p.class.has("Striker")) boost *= 1.5;
+            if (p.class.has("Shooter")) boost *= 1.5;
+            if (matching) boost *= 1.5;
+            return boost;
+        }, 
+    },
 };
