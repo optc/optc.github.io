@@ -915,7 +915,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         }
         for(var z=0;z<team.length;z++){
             if(team[z].unit){
-                if(team[z].unit.class.length==2){
+                if(team[z].unit.class.length == 2){
                     if(['Fighter', 'Slasher', 'Shooter', 'Striker'].includes(team[z].unit.class[0]) || ['Fighter', 'Slasher', 'Shooter', 'Striker'].includes(team[z].unit.class[1])){
                         classes['Primary']++;
                     }
