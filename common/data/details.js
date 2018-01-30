@@ -18845,13 +18845,13 @@ window.details = {
     },
     1954: {//Nami
         captain: "Boosts ATK of Cerebral Characters by 2x",
-        special: "Cuts the current HP of all enemies by 10% and changes own orb into [RCV]. Boosts ATK of Cerebral characters by 1.75x for 1 turn. If during that turn you score 4 Perfect hits, boosts ATK of Cerebral characters by 2.25x in the following turn.",
+        special: "Cuts the current HP of all enemies by 10% and changes own orb into [RCV]. Boosts ATK of Cerebral characters by 1.75x for 1 turn. If during that turn you score 5 Perfect hits, boosts ATK of Cerebral characters by 2.25x in the following turn.",
         specialName: "Thunder Trap",
         sailor: "If this character has a [RCV] orb and you hit a Perfect with her, keep her [RCV] orb for the next turn",
     },
     1955: {//Nami
         captain: "Boosts ATK of Cerebral Characters by 3x if they have a matching orb, by 2x otherwise",
-        special: "Cuts the current HP of all enemies by 10% and changes own orb into [RCV]. Boosts ATK of Cerebral characters by 1.75x for 1 turn. If during that turn you score 4 Perfect hits, boosts ATK of Cerebral characters by 2.25x in the following turn.",
+        special: "Cuts the current HP of all enemies by 10% and changes own orb into [RCV]. Boosts ATK of Cerebral characters by 1.75x for 1 turn. If during that turn you score 5 Perfect hits, boosts ATK of Cerebral characters by 2.25x in the following turn.",
         specialName: "Thunder Trap",
         sailor: "If this character has a [RCV] orb and you hit a Perfect with her, keep her [RCV] orb for the next turn",
         limit: "This character has a limit break path",
