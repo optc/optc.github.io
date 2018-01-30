@@ -6492,6 +6492,37 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Powerhouse") ? 2.25 : 1; },
         hp: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; },
     },
+    1950: {
+        atk: function(p) { return p.unit.class.has("Cerebral") ? 3.25 : 1; },
+        rcv: function(p) { return p.unit.class.has("Cerebral") ? 1.5 : 1; },
+    },
+    1951: {
+        atk: function(p) { return p.unit.class.has("Cerebral") ? 3.25 : 1; },
+        rcv: function(p) { return p.unit.class.has("Cerebral") ? 1.5 : 1; },
+    },
+    1952: {
+        atk: function(p) { return p.unit.type == "INT" ? 2.5 : 1; }
+    },
+    1953: {
+        atk: function(p) { return p.unit.type == "INT" ? 2.75 : 1; }
+    },
+    1954: {
+        atk: function(p) { return p.unit.class.has("Cerebral") ? 2 : 1; },
+    },
+    1955: {
+        atk: function(p) { return !p.unit.class.has("Cerebral") ? 1 : (((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain]) == 2) && (p.orb != 'g')) ? 3 : 2); },
+    },
+    1956: {
+        atk: function(p) { return p.unit.type == "STR" ? 2 : 1; },
+        rcv: function(p) { return p.unit.type == "STR" ? 1.2 : 1; }
+    },
+    1957: {
+        atk: function(p) { return p.unit.type == "STR" ? 2.5 : 1; },
+        rcv: function(p) { return p.unit.type == "STR" ? 1.25 : 1; }
+    },
+    1959: {
+        atk: function(p) { return 2.25; }
+    },
     1961: {
         atk: function(p){ 
             var specialEnabled = false;

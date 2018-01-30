@@ -2563,7 +2563,7 @@ window.specials = {
     1491: {
         def: function(p) { return 0.5; }
     },
-    1492: {//CHANGE THIS IF THIS ISN'T SABO
+    1492: {
         atk: function(p) { return !p.unit.class.has('Free Spirit') ? 1 : window.specials[1492].multiplier; },
         type: "class",
         onActivation: function(p) {
@@ -3991,10 +3991,26 @@ window.specials = {
         }
     },
     1896: {
-        chainAddition: function(p) { return p.captain.class.has("Driven") ? .7 : 0; }
+        chainAddition: function(p) { return p.captain.class.has("Driven") ? window.specials[1896].multiplier : 0; },
+        onActivation: function(p) {
+            var n = (window.specials[1896].multiplier == .3 ? 1 : 0);
+            window.specials[1896].multiplier = [.3, .7][n];
+            p.scope.notify({
+                text: 'Using the ' + [.3, .7][n] + 'x chain boost multiplier. To switch to the ' + [.7, .3][n] + 'x multiplier, disable and re-enable this special',
+                name: '1896warning'
+            });
+        },
     },
     1897: {
-        chainAddition: function(p) { return p.captain.class.has("Driven") ? .7 : 0; }
+        chainAddition: function(p) { return p.captain.class.has("Driven") ? window.specials[1897].multiplier : 0; },
+        onActivation: function(p) {
+            var n = (window.specials[1897].multiplier == .3 ? 1 : 0);
+            window.specials[1897].multiplier = [.3, .7][n];
+            p.scope.notify({
+                text: 'Using the ' + [.3, .7][n] + 'x chain boost multiplier. To switch to the ' + [.7, .3][n] + 'x multiplier, disable and re-enable this special',
+                name: '1897warning'
+            });
+        },
     },
     1900: {
         atk: function(p) { return p.slot == p.sourceSlot ? 1.5 : 1; },
@@ -4215,6 +4231,50 @@ window.specials = {
     },
     1947: {
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain]); },
+    },
+    1952: {
+        chainAddition: function(p) { return p.captain.class.has("Cerebral") ? .7 : 0; }
+    },
+    1953: {
+        chainAddition: function(p) { return p.captain.class.has("Cerebral") ? .7 : 0; }
+    },
+    1954: {
+        atk: function(p) { return !p.unit.class.has('Cerebral') ? 1 : window.specials[1954].multiplier; },
+        type: "class",
+        onActivation: function(p) {
+            var n = (window.specials[1954].multiplier == 1.75 ? 1 : 0);
+            window.specials[1954].multiplier = [1.75, 2.25][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.75, 2.25][n] + 'x ATK multiplier. To switch to the ' + [2.25, 1.75][n] + 'x multiplier, disable and re-enable this special',
+                name: '1954warning'
+            });
+        }
+    },
+    1955: {
+        atk: function(p) { return !p.unit.class.has('Cerebral') ? 1 : window.specials[1955].multiplier; },
+        type: "class",
+        onActivation: function(p) {
+            var n = (window.specials[1955].multiplier == 1.75 ? 1 : 0);
+            window.specials[1955].multiplier = [1.75, 2.25][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.75, 2.25][n] + 'x ATK multiplier. To switch to the ' + [2.25, 1.75][n] + 'x multiplier, disable and re-enable this special',
+                name: '1955warning'
+            });
+        }
+    },
+    1956: {
+        chain: function(p) { return 2.75; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 2.75 : 1;
+        }
+    },
+    1957: {
+        chain: function(p) { return 2.75; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 2.75 : 1;
+        }
     },
     1960: {
         turnedOn: [ false, false ],
