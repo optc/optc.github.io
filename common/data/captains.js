@@ -6400,13 +6400,51 @@ window.captains = {
         atk: function(p) { return p.frankyCheck.Primary == 6 ? p.actions[p.sourceSlot] ? (4 * [ 1.25, 1, .5, .75 ][['Fighter', 'Slasher', 'Striker', 'Shooter'].indexOf(p.frankyClass[p.slot])]) : 3 : 1; },
         hp: function(p) { return p.frankyCheck.Primary == 6 ? 1.3 : 1; },
     },
+    1936: {
+        atk: function(p) { return p.unit.type == "INT" ? 1.75 : 1; },
+    },
     1937: {
         atk: function(p) { return p.unit.type == "INT" ? 1.75 : 1; },
         hp: function(p) { return p.unit.type == "INT" ? 1.5 : 1; },
     },
+    1938: {
+        atk: function(p) { return p.unit.type == "DEX" ? 1.75 : 1; },
+    },
     1939: {
         atk: function(p) { return p.unit.type == "DEX" ? 1.75 : 1; },
         hp: function(p) { return p.unit.type == "DEX" ? 1.5 : 1; },
+    },
+    1940: {
+        atk: function(p) { 
+            if(p.unit.type == "STR" || p.unit.type == "PSY" || p.unit.type == "QCK"){
+                if(p.colorCount.STR>=1 && p.colorCount.PSY>=1 && p.colorCount.QCK>=1)
+                    return 2;
+                else
+                    return 1;
+                }
+            else
+                return 1;
+        },
+        hp: function(p) { 
+            if(p.unit.type == "STR" || p.unit.type == "PSY" || p.unit.type == "QCK"){
+                if(p.colorCount.STR>=1 && p.colorCount.PSY>=1 && p.colorCount.QCK>=1)
+                    return 1.05;
+                else
+                    return 1;
+                }
+            else
+                return 1;
+        },
+        rcv: function(p) { 
+            if(p.unit.type == "STR" || p.unit.type == "PSY" || p.unit.type == "QCK"){
+                if(p.colorCount.STR>=1 && p.colorCount.PSY>=1 && p.colorCount.QCK>=1)
+                    return 1.05;
+                else
+                    return 1;
+                }
+            else
+                return 1;
+        },
     },
     1941: {
         atk: function(p) {
@@ -6485,8 +6523,11 @@ window.captains = {
     1945: {
         atk: function(p) { return p.unit.class.has("Cerebral") ? 2.5 : 1; },
     },
+    1946: {
+        atk: function(p) { return 1.75; }
+    },
     1947: {
-        atk: function(p) { return p.unit.type == "INT" ? 2 : 1; }
+        atk: function(p) { return 2; }
     },
     1949: {
         atk: function(p) { return p.unit.class.has("Powerhouse") ? 2.25 : 1; },
@@ -6528,10 +6569,21 @@ window.captains = {
             var specialEnabled = false;
             for(var i=0;i<2;i++)
             {
-                if(window.specials[1960].turnedOn[i]==true){specialEnabled = true;}//CHANGE THIS LATER WHEN PUDDING? COMES
-                if(window.specials[1961].turnedOn[i]==true){specialEnabled = true;}//CHANGE THIS LATER WHEN PUDDING? COMES
+                if(window.specials[1962].turnedOn[i]==true){specialEnabled = true;}
+                if(window.specials[1963].turnedOn[i]==true){specialEnabled = true;}
             }
             return (p.unit.type == "PSY" || p.unit.class.has("Fighter")) ? specialEnabled ? 2.925 : 2.25 : 1; },
         hp: function(p) { return (p.unit.type == "PSY" || p.unit.class.has("Fighter")) ? 1.2 : 1 }
+    },
+    1963: {
+        atk: function(p){ 
+            var specialEnabled = false;
+            for(var i=0;i<2;i++)
+            {
+                if(window.specials[1960].turnedOn[i]==true){specialEnabled = true;}
+                if(window.specials[1961].turnedOn[i]==true){specialEnabled = true;}
+            }
+            return (p.unit.type == "INT" || p.unit.class.has("Fighter")) ? specialEnabled ? 2.925 : 2.25 : 1; },
+        hp: function(p) { return (p.unit.type == "INT" || p.unit.class.has("Fighter")) ? 1.2 : 1 }
     },
 };

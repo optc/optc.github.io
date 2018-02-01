@@ -4278,10 +4278,10 @@ window.specials = {
     },
     1960: {
         turnedOn: [ false, false ],
-        onActivation: function(p) {//REMOVE THIS LATER WHEN PUDDING? COMES
+        onActivation: function(p) {
             window.specials[1960].turnedOn[p.slot] = true;
             p.scope.notify({
-                text: 'Only affects damage if Sanji is your captain',
+                text: 'Only affects Captain Ability if Pudding is your captain',
                 name: '1960warning'
             });
         },
@@ -4292,10 +4292,10 @@ window.specials = {
     },
     1961: {
         turnedOn: [ false, false ],
-        onActivation: function(p) {//REMOVE THIS LATER WHEN PUDDING? COMES
+        onActivation: function(p) {
             window.specials[1961].turnedOn[p.slot] = true;
             p.scope.notify({
-                text: 'Only affects damage if Sanji is your captain',
+                text: 'Only affects Captain Ability if Pudding is your captain',
                 name: '1961warning'
             });
         },
@@ -4303,5 +4303,41 @@ window.specials = {
             window.specials[1961].turnedOn[p.slot] = false;
         },
         delay: function(p) { return 1; }
+    },
+    1962: {
+        turnedOn: [ false, false ],
+        onActivation: function(p) {
+            window.specials[1962].turnedOn[p.slot] = true;
+            p.scope.notify({
+                text: 'Only affects Captain Ability if Sanji is your captain',
+                name: '1962warning'
+            });
+        },
+        onDeactivation: function(p) {
+            window.specials[1962].turnedOn[p.slot] = false;
+        },
+        chain: function(p) { return 2.5; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 2.5 : 1;
+        }
+    },
+    1963: {
+        turnedOn: [ false, false ],
+        onActivation: function(p) {
+            window.specials[1963].turnedOn[p.slot] = true;
+            p.scope.notify({
+                text: 'Only affects Captain Ability if Sanji is your captain',
+                name: '1963warning'
+            });
+        },
+        onDeactivation: function(p) {
+            window.specials[1963].turnedOn[p.slot] = false;
+        },
+        chain: function(p) { return 2.5; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 2.5 : 1;
+        }
     },
 };

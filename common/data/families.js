@@ -1960,4 +1960,6 @@ window.families = [
     "Princess Shirahoshi",
     "Sanji",
     "Sanji",
+    "Charlotte Pudding",
+    "Charlotte Pudding",
 ];
