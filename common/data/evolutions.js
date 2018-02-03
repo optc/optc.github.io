@@ -3055,10 +3055,6 @@ window.evolutions = {
         evolution: 1926,
         evolvers: [ 118, 88, 99, 304, 304 ]
     },
-    1929: {
-        evolution: 1930,
-        evolvers: [ 118, 266, 97, 102, 302 ]
-    },
     720: {
         evolution: 1927,
         evolvers: [ 'skullSTR', 118, 84, 300, 267 ]
@@ -3067,17 +3063,21 @@ window.evolutions = {
         evolution: 1928,
         evolvers: [ 'skullQCK', 118, 85, 301, 267 ]
     },
+    1929: {
+        evolution: 1930,
+        evolvers: [ 118, 266, 97, 102, 302 ]
+    },
     1934: {
         evolution: 1935,
-        evolvers: [  ]
+        evolvers: [ 118, 97, 94, 301, 267 ]
     },
     1936: {
         evolution: 1937,
-        evolvers: [  ]
+        evolvers: [ 117, 82, 93, 99, 104 ]
     },
     1938: {
         evolution: 1939,
-        evolvers: [  ]
+        evolvers: [ 117, 80, 91, 97, 102 ]
     },
     1940: {
         evolution: 1941,
@@ -3085,15 +3085,15 @@ window.evolutions = {
     },
     1942: {
         evolution: 1943,
-        evolvers: [  ]
+        evolvers: [ 118, 98, 1180, 303, 103 ]
     },
     1944: {
         evolution: 1945,
-        evolvers: [  ]
+        evolvers: [ 82, 88, 93, 99, 104 ]
     },
     1946: {
         evolution: 1947,
-        evolvers: [  ]
+        evolvers: [ 81, 87, 92, 98, 103 ]
     },
     1948: {
         evolution: 1949,
