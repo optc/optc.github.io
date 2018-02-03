@@ -6271,12 +6271,12 @@ window.captains = {
     },
     1907: {
         atk: function(p) {
-            return p.unit.class.has("Driven") ? Math.max(1.0, 3.0 - 0.1 * p.turnCounter) : 1;
+            return p.unit.class.has("Driven") ? Math.max(1.0, 3.0 * (Math.pow(0.96,p.turnCounter))) : 1;
         }
     },
     1908: {
         atk: function(p) {
-            return p.unit.class.has("Driven") ? Math.max(1.0, 3.5 - 0.1 * p.turnCounter) : 1;
+            return p.unit.class.has("Driven") ? Math.max(1.0, 3.5 * (Math.pow(0.96,p.turnCounter))) : 1;
         }
     },
     1909: {
@@ -6512,7 +6512,7 @@ window.captains = {
         },
     },
     1942: {
-        atk: function(p) { return p.unit.class.has("Free Spirit") ? 1 : 1; },
+        atk: function(p) { return p.unit.class.has("Free Spirit") ? 2 : 1; },
     },
     1943: {
         atk: function(p) { return p.unit.class.has("Free Spirit") ? 2.5 : 1; },
@@ -6564,6 +6564,9 @@ window.captains = {
     1959: {
         atk: function(p) { return 2.25; }
     },
+    1960: {
+        atk: function(p) { return (p.unit.type == "PSY" || p.unit.class.has("Fighter")) ? 2 : 1; },
+    },
     1961: {
         atk: function(p){ 
             var specialEnabled = false;
@@ -6574,6 +6577,9 @@ window.captains = {
             }
             return (p.unit.type == "PSY" || p.unit.class.has("Fighter")) ? specialEnabled ? 2.925 : 2.25 : 1; },
         hp: function(p) { return (p.unit.type == "PSY" || p.unit.class.has("Fighter")) ? 1.2 : 1 }
+    },
+    1962: {
+        atk: function(p) { return (p.unit.type == "INT" || p.unit.class.has("Fighter")) ? 2 : 1; },
     },
     1963: {
         atk: function(p){ 

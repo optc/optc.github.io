@@ -3065,7 +3065,7 @@ window.evolutions = {
     },
     1929: {
         evolution: 1930,
-        evolvers: [ 118, 266, 97, 102, 302 ]
+        evolvers: [ 118, 266, 97, 302, 102 ]
     },
     1934: {
         evolution: 1935,
@@ -3081,47 +3081,47 @@ window.evolutions = {
     },
     1940: {
         evolution: 1941,
-        evolvers: [  ]
+        evolvers: [ 115, 116, 117, 118, 100 ]
     },
     1942: {
         evolution: 1943,
-        evolvers: [ 118, 98, 1180, 303, 103 ]
+        evolvers: [ 118, 89, 94, 300, 100 ]
     },
     1944: {
         evolution: 1945,
-        evolvers: [ 82, 88, 93, 99, 104 ]
+        evolvers: [ 118, 98, 1180, 303, 103 ]
     },
     1946: {
         evolution: 1947,
-        evolvers: [ 81, 87, 92, 98, 103 ]
+        evolvers: [ 82, 88, 93, 99, 104 ]
     },
     1948: {
         evolution: 1949,
-        evolvers: [  ]
+        evolvers: [ 81, 87, 92, 98, 103 ]
     },
     1950: {
         evolution: 1951,
-        evolvers: [  ]
+        evolvers: [ 118, 87, 266, 303, 267 ]
     },
     1952: {
         evolution: 1953,
-        evolvers: [  ]
+        evolvers: [ 83, 94, 99, 304, 104 ]
     },
     1954: {
         evolution: 1955,
-        evolvers: [  ]
+        evolvers: [ 118, 79, 1180, 301, 101 ]
     },
     1956: {
         evolution: 1957,
-        evolvers: [  ]
+        evolvers: [ 266, 78, 94, 300, 100 ]
     },
     1958: {
         evolution: 1959,
-        evolvers: [  ]
+        evolvers: [ 1180, 91, 97, 302, 102 ]
     },
     1960: {
         evolution: 1961,
-        evolvers: [  ]
+        evolvers: [ 116, 117, 81, 87, 98 ]
     },
     1962: {
         evolution: 1963,
