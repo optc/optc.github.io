@@ -17730,7 +17730,7 @@ window.details = {
         captain: "Boosts ATK of Driven characters by 2.25x and their HP by 1.2x",
         special: "Reduces crew's current HP by 80%, Empties all slots with [BOMB] orbs, deals severe typeless damage based on number of [BOMB] slots emptied to all enemies and boosts ATK against delayed enemies by 1.5x for 2 turns",
         specialName: "Fashion Pop",
-        specialNotes: "The exact multiplier used is chosen based on the number of [BLOCK] orbs consumed: 0 orbs - 10x ATK; 1 orb - 20x ATK; 2 orbs - 40x ATK; 3 orbs - 80x ATK; 4 orbs - 150x ATK; 5 orbs - 250x ATK; 6 orbs - 400x ATK."
+        specialNotes: "The exact multiplier used is chosen based on the number of [BOMB] orbs consumed: 0 orbs - 10x ATK; 1 orb - 20x ATK; 2 orbs - 40x ATK; 3 orbs - 80x ATK; 4 orbs - 150x ATK; 5 orbs - 250x ATK; 6 orbs - 400x ATK."
     },
     1888: {//Cavendish
         captain: "Boosts ATK of Driven characters by 1.2x, recovers 0.5x character's RCV in HP at the end of each turn. Boosts ATK of Driven characters by 1.32x following a chain of same type attacks no lower than Good",
@@ -18894,7 +18894,7 @@ window.details = {
             { "description": "Boosts base ATK by 75" },
             { "description": "Boosts base HP by 100" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
-            { "description": "Aquire Sailor Ability 2: Makes [INT] orbs \"beneficial\" for Cerebral characters" },
+            { "description": "Aquire Sailor Ability 2: Makes [PSY] orbs \"beneficial\" for Cerebral characters" },
             { "description": "Aquire Potential 2: Enrage" },
         ],
         potential: [
