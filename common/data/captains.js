@@ -6592,4 +6592,27 @@ window.captains = {
             return (p.unit.type == "INT" || p.unit.class.has("Fighter")) ? specialEnabled ? 2.925 : 2.25 : 1; },
         hp: function(p) { return (p.unit.type == "INT" || p.unit.class.has("Fighter")) ? 1.2 : 1 }
     },
+    1964: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") && p.percHP >= 99.0 ? 1 : 1; }//CHANGE THIS
+    },
+    1965: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") && p.percHP >= 99.0 ? 2.75 : 1; }
+    },
+    1966: {
+        atk: function(p) { return p.unit.class.has("Cerebral") ? 2.25 : 1; },
+    },
+    1969: {
+        hp: function(p) { return p.unit.type == "DEX" ? 1 : 1; },//CHANGE THIS
+        rcv: function(p) { return p.unit.type == "DEX" ? 1 : 1; }//CHANGE THIS
+    },
+    1970: {
+        hp: function(p) { return p.unit.type == "DEX" ? 2 : 1; },
+        rcv: function(p) { return p.unit.type == "DEX" ? 1.5 : 1; }
+    },
+    1972: {
+        atk: function(p) { return !(p.unit.class.has("Cerebral")) ? 1 : p.actions[p.sourceSlot] ? 2.25 : 1.5; },
+        hp: function(p) { return !(p.unit.class.has("Cerebral")) ? 1 : p.actions[p.sourceSlot] ? 1.2 : 1.05; },
+        rcv: function(p) { return !(p.unit.class.has("Cerebral")) ? 1 : p.actions[p.sourceSlot] ? 1.2 : 1.05; },
+        chainModifier: function(p) { return (p.percHP <= 30.0 || p.percHP >= 70.0) ? p.actions[p.sourceSlot] ? 1.5 : 1.5 : 1; }//Technically broken but no one cares about non-limit break stats
+    },
 };

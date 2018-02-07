@@ -2352,21 +2352,21 @@ window.drops = {
     'Treasure Map': [
 
         {
-            name: 'Mihawk',
+            name: 'Dracule Mihawk',
             thumb: 1808,
             gamewith: 72766,
             'Raging Sea': [ 1807 ]
         },
 
         {
-            name: 'Whitebeard',
+            name: 'Edward Newgate',
             thumb: 1853,
             gamewith: 79614,
             'Raging Sea': [ 1852 ]
         },
 
         {
-            name: 'Cavendish',
+            name: 'White Knight Cavendish',
             thumb: 1889,
             gamewith: 83086,
             'Raging Sea': [ 1888 ]
@@ -2382,8 +2382,15 @@ window.drops = {
         {
             name: 'Fire Fist Ace',
             thumb: 1941,
-            gamewith: null,
+            gamewith: 87389,
             'Raging Sea': [ 1940 ]
+        },
+
+        {
+            name: 'Fire Fist Sabo',
+            thumb: 1972,
+            gamewith: null,
+            'Raging Sea': [ 1971 ]
         },
         
     ],

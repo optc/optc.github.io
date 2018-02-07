@@ -548,6 +548,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
     };
 
     var applyChainAndBonusMultipliers = function(damage,modifiers) {
+        
         var currentMax = -1, currentResult = null, addition = 0.0;
         if(shipBonus.bonus.name=="Doflamingo Ship - Special ACTIVATED"){
             addition = 0.2
@@ -570,6 +571,9 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             var result = damage.map(function(x,n) {
                 // calculate chain multiplier
                 var chainModifier = cptsWith.chainModifiers.reduce(function(prev,next) {
+                    //var params = getParameters(x.position, n);
+                    //params["sourceSlot"] = enabledEffects[x].sourceSlot;
+                    //console.log(cptsWith.chainModifiers);
                     return prev * next.chainModifier(getParameters(x.position, n));
                 },1);
                 //Computing Chain Modifier from map effects

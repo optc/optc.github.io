@@ -1800,4 +1800,8 @@ window.flags = {
     1957: { rr: 1, rro: 1 },
     1958: { rr: 1, rro: 1 },
     1959: { rr: 1, rro: 1 },
+    1967: { rr: 1, rro: 1, lrr: 1 },
+    1968: { rr: 1, rro: 1, lrr: 1 },
+    1969: { rr: 1, rro: 1, lrr: 1 },
+    1970: { rr: 1, rro: 1, lrr: 1 },
 };
