@@ -402,14 +402,17 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
     var computeActualDefense = function(shipName) {
         var baseDefense = parseInt($scope.data.defense, 10) || 0;
         currentDefense = baseDefense;
+        var defreduced = false;
         enabledSpecials.forEach(function(x) {
             if (x === null || !x.hasOwnProperty('def')) return;
-            currentDefense = Math.min(currentDefense,baseDefense * x.def());
+            currentDefense = Math.min(currentDefense,baseDefense * x.def(getParameters(x.sourceSlot)));
+            if (x.def(getParameters(x.sourceSlot)) < 1) defreduced = true;
         });
         if(shipName=="Flying Dutchman - Special ACTIVATED"){
             currentDefense = Math.min(currentDefense,baseDefense * .75);
+            defreduced = true;
         }
-        
+        return defreduced;
     };
 
     var getShipBonus = function(type,static,unit,slot) {
@@ -828,8 +831,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         if (conflictWarning) 
             $scope.notify({ type: 'error', text: 'One or more specials you selected cannot be activated due to an active map effect.' });
         // check if defense is down (required by some captain effects)
-        computeActualDefense(shipBonus.bonus.name);
-        isDefenseDown = enabledSpecials.some(function(x) { return (x !== null && x.hasOwnProperty('def')) || (shipBonus.bonus.name == "Flying Dutchman - Special ACTIVATED"); });
+        isDefenseDown = computeActualDefense(shipBonus.bonus.name);
+        //isDefenseDown = enabledSpecials.some(function(x) { return (x !== null && x.hasOwnProperty('def')) || (shipBonus.bonus.name == "Flying Dutchman - Special ACTIVATED"); });
         isDelayed = enabledSpecials.some(function(x) { return (x !== null && x.hasOwnProperty('delay')) || (shipBonus.bonus.name == "Karasumaru Ship - Special ACTIVATED"); });
         
         enabledEffects = [ ];

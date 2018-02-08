@@ -4340,6 +4340,16 @@ window.specials = {
             return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 2.5 : 1;
         }
     },
+    1964: {
+        delay: function(p) { return 1; },
+    },
+    1965: {
+        delay: function(p) { return 1; },
+    },
+    1966: {
+        atk: function(p) { return p.delayed > 0 ? 1.5 : 1; },
+        type: "condition",
+    },
     1967:{
         orb: function(p) { return (p.unit.class.has("Shooter") || p.unit.class.has("Cerebral")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[1967].multiplier, [p.friendCaptain, p.captain]) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain]); },
         onActivation: function(p) {
@@ -4361,5 +4371,15 @@ window.specials = {
                 name: '1968warning'
             });
         },
+    },
+    1971: {
+        atk: function(p) { return (p.captain.class.has("Cerebral") && p.defenseDown) ? 1.75 : 1; },
+        type: "condition",
+        def: function(p) { return p.captain.class.has("Cerebral") ? .2 : 1; }
+    },
+    1972: {
+        atk: function(p) { return (p.captain.class.has("Cerebral") && p.defenseDown) ? 1.75 : 1; },
+        type: "condition",
+        def: function(p) { return p.captain.class.has("Cerebral") ? .2 : 1; }
     },
 };
