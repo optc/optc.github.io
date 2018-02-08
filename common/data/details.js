@@ -19320,39 +19320,39 @@ window.details = {
     1964: {//Oars
         captain: "Boosts ATK of Powerhouse characters by ???x if HP is above ??% at the start of the turn",
         special: "Deals ??x character's ATK in Typeless damage to all enemies, delays all enemies for 1 turn and changes adjacent orbs into [RCV] orbs",
-        specialName: "Oars Special",
+        specialName: "Gomu Gomu no Butt Stomp",
     },
     1965: {//Oars
         captain: "Boosts ATK of Powerhouse characters by 2.75x if HP is above ??% at the start of the turn",
         special: "Deals ??x character's ATK in Typeless damage to all enemies, delays all enemies for 1 turn and changes adjacent orbs into [RCV] orbs",
-        specialName: "Oars Special",
+        specialName: "Gomu Gomu no Butt Stomp",
     },
     1966: {//Hogback
         captain: "Boosts ATK of Cerebral characters by 2.25x and boosts chances of getting [RCV] orbs",
         special: "Boosts ATK against delayed enemies by 1.5x for 1 turn",
-        specialName: "Hogback Special",
+        specialName: "Affirmative Miracle",
     },
     1967: {//Boa Hancock
         captain: "Boosts amount of Beli received by ?x",
         special: "Changes [BLOCK], [STR], [DEX], [QCK], [INT], and [PSY] orbs on Cerebral characters into Matching orbs. If you are on a Treasure Map, amplifies the effects of orbs for Cerebral and Shooter characters depending on your Treasure Map Level for 1 turn",
-        specialName: "Boa Special",
+        specialName: "An Important Confession from the Snake Princess",
         specialNotes: "Level 1-10: 1.75x orb boost<br\>Level 11-20: 2x orb boost<br\>Level 21+: 2.25x orb boost",
     },
     1968: {//Boa Hancock
         captain: "Boosts amount of Beli received by 3x",
         special: "Changes [BLOCK], [STR], [DEX], [QCK], [INT], and [PSY] orbs on Cerebral characters into Matching orbs. If you are on a Treasure Map, amplifies the effects of orbs for Cerebral and Shooter characters depending on your Treasure Map Level for 1 turn",
-        specialName: "Boa Special",
+        specialName: "An Important Confession from the Snake Princess",
         specialNotes: "Level 1-10: 1.75x orb boost<br\>Level 11-20: 2x orb boost<br\>Level 21+: 2.25x orb boost",
     },
     1969: {//Miss Valentine
         captain: "Boosts HP of [DEX] characters by ???x and their RCV by ???x.",
         special: "Reduces Paralysis and Despair duration by 3 turns. Cuts the current HP of all enemies by 10%",
-        specialName: "Valentine Special",
+        specialName: "10,000 Kilo Guillotine - Cake Slice",
     },
     1970: {//Miss Valentine
         captain: "Boosts HP of [DEX] characters by 2x and their RCV by 1.5x.",
         special: "Reduces Paralysis and Despair duration by 3 turns. Cuts the current HP of all enemies by 10%",
-        specialName: "Valentine Special",
+        specialName: "10,000 Kilo Guillotine - Cake Slice",
     },
     1971: {//Sabo
         captain: "Not Translated",
