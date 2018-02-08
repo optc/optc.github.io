@@ -19346,12 +19346,12 @@ window.details = {
     },
     1969: {//Miss Valentine
         captain: "Boosts HP of [DEX] characters by ???x and their RCV by ???x.",
-        special: "Reduces Paralysis and Despair duration by 5 turns. Cuts the current HP of all enemies by 10%",
+        special: "Reduces Paralysis and Despair duration by 3 turns. Cuts the current HP of all enemies by 10%",
         specialName: "Valentine Special",
     },
     1970: {//Miss Valentine
         captain: "Boosts HP of [DEX] characters by 2x and their RCV by 1.5x.",
-        special: "Reduces Paralysis and Despair duration by 5 turns. Cuts the current HP of all enemies by 10%",
+        special: "Reduces Paralysis and Despair duration by 3 turns. Cuts the current HP of all enemies by 10%",
         specialName: "Valentine Special",
     },
     1971: {//Sabo

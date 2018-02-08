@@ -628,4 +628,11 @@ window.effects = {
             return boost;
         }, 
     },
+
+    'Orb amplification (1.75x)': {
+        description: 'Orb effects amplified by 1.75x',
+        thumb: 1961,
+        id: 55, // don't change this
+        orb: function(p) { return p.orb == 2.0 ? 1.75 : (p.orb == 0.5 ? 4/7 : 1); }
+    },
 };

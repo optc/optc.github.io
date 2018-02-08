@@ -2325,6 +2325,7 @@ window.drops = {
         {
             name: 'Clash!! Señor Pink',
             thumb: 1943,
+            gamewith: 88927,
             Master: [ 1942 ],
             Expert: [ 1942 ]
         },
