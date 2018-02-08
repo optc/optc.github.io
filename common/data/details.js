@@ -1973,7 +1973,7 @@ window.details = {
             { "description": "Boosts base RCV by 25" },
             { "description": "Aquire Potential 1: [INT] Damage Reduction" },
             { "description": "Reduce base Special Cooldown by 3 turns" },
-            { "description": "Aquire new Captain Ability: Boosts ATK of all Striker characters proportionally to the crew's current HP and their HP by 1.5x" },
+            { "description": "Aquire new Captain Ability: Boosts ATK of all Striker characters proportionally to the crew's current HP, by 3x at 1 HP and their HP by 1.5x" },
             { "description": "Reduce base Special Cooldown by 3 turns" },
             { "description": "Boosts base HP by 70" },
             { "description": "Aquire Sailor Ability 1: Boosts base ATK, HP and RCV of Striker characters by 30" },
