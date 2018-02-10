@@ -4714,7 +4714,7 @@ window.captains = {
     },
     1595: {
         atk: function(p) { return p.unit.class.has("Powerhouse") ? 2.25 : 1; },
-        hp: function(p) { return p.unit.class.has("Powerhouse") ? 1.5 : 1; }
+        hp: function(p) { return p.unit.class.has("Powerhouse") ? 1.2 : 1; }
     },
     1596: {
         atk: function(p) { return p.unit.type == "INT" ? 1.5 : 1; },

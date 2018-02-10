@@ -19334,13 +19334,13 @@ window.details = {
     },
     1967: {//Boa Hancock
         captain: "Boosts amount of Beli received by ?x",
-        special: "Changes [BLOCK], [STR], [DEX], [QCK], [INT], and [PSY] orbs on Cerebral characters into Matching orbs. If you are on a Treasure Map, amplifies the effects of orbs for Cerebral and Shooter characters depending on your Treasure Map Level for 1 turn",
+        special: "Changes [BLOCK], [STR], [DEX], [QCK], [INT], and [PSY] orbs on Shooter and Cerebral characters into Matching orbs. If you are on a Treasure Map, amplifies the effects of orbs for Cerebral and Shooter characters depending on your Treasure Map Level for 1 turn",
         specialName: "An Important Confession from the Snake Princess",
         specialNotes: "Level 1-10: 1.75x orb boost<br\>Level 11-20: 2x orb boost<br\>Level 21+: 2.25x orb boost",
     },
     1968: {//Boa Hancock
         captain: "Boosts amount of Beli received by 3x",
-        special: "Changes [BLOCK], [STR], [DEX], [QCK], [INT], and [PSY] orbs on Cerebral characters into Matching orbs. If you are on a Treasure Map, amplifies the effects of orbs for Cerebral and Shooter characters depending on your Treasure Map Level for 1 turn",
+        special: "Changes [BLOCK], [STR], [DEX], [QCK], [INT], and [PSY] orbs on Shooter and Cerebral characters into Matching orbs. If you are on a Treasure Map, amplifies the effects of orbs for Cerebral and Shooter characters depending on your Treasure Map Level for 1 turn",
         specialName: "An Important Confession from the Snake Princess",
         specialNotes: "Level 1-10: 1.75x orb boost<br\>Level 11-20: 2x orb boost<br\>Level 21+: 2.25x orb boost",
     },
