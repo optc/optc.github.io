@@ -8020,12 +8020,12 @@ window.details = {
     },
     1090: {
         captain: "Boosts ATK of all characters by 2x if HP is below 30% at the start of the turn",
-        special: "Deals 25x ATK in [PSY] damage to one enemy. If HP < 30% then changes adjacent orbs into matching orbs",
+        special: "Deals 25x ATK in [PSY] damage to one enemy. If HP is less than 30% then changes adjacent orbs into matching orbs",
         specialName: "Double Edge of Revolt"
     },
     1091: {
         captain: "Boosts ATK of all characters by 2.5x if HP is below 30% at the start of the turn",
-        special: "Deals 25x ATK in [PSY] damage to one enemy. If HP < 30% then changes adjacent orbs into matching orbs",
+        special: "Deals 25x ATK in [PSY] damage to one enemy. If HP is less than 30% then changes adjacent orbs into matching orbs",
         specialName: "Double Edge of Revolt"
     },
     1092: {
@@ -10031,7 +10031,7 @@ window.details = {
     },
     1279: {//John Giant
         captain: "Boosts ATK and HP of Slasher characters by 1.5x",
-        special: "Reduces damage received in the next turn by 50% if the special is activated with less than 50% health remaining",
+        special: "Reduces damage received in the next turn by 50% if HP is less than 50%",
         specialName: "Manifesto to the Weak",
     },
     1280: {//Marineford Aokiji
@@ -10314,15 +10314,15 @@ window.details = {
         captain: "Boosts ATK of all characters by 2x after the 2nd Perfect in a row and by 3x after the 5th Perfect in a row.",
         special: [
             {
-                "description": "If HP is below 3,000 when the special is activated, reduces No Healing debuff by 1 turn. Recovers 3x character's RCV in HP",
+                "description": "If HP is below 3,000, reduces No Healing debuff by 1 turn. Recovers 3x character's RCV in HP",
                 "cooldown": [ 15, 9 ],
             },
             {
-                "description": "If HP is below 3,000 when the special is activated, reduces No Healing debuff by 3 turns. Recovers 6x character's RCV in HP",
+                "description": "If HP is below 3,000, reduces No Healing debuff by 3 turns. Recovers 6x character's RCV in HP",
                 "cooldown": [ 20, 14 ],
             },
             {
-                "description": "If HP is below 3,000 when the special is activated, removes No Healing debuff. Recovers 13x character's RCV in HP",
+                "description": "If HP is below 3,000, removes No Healing debuff. Recovers 13x character's RCV in HP",
                 "cooldown": [ 24, 18 ],
             },
         ],
@@ -10334,15 +10334,15 @@ window.details = {
         captain: "Boosts ATK of all characters by 2.5x after the 2nd Perfect in a row and by 3.5x after the 5th Perfect in a row.",
         special: [
             {
-                "description": "If HP is below 3,000 when the special is activated, reduces No Healing debuff by 1 turn. Recovers 3x character's RCV in HP",
+                "description": "If HP is below 3,000, reduces No Healing debuff by 1 turn. Recovers 3x character's RCV in HP",
                 "cooldown": [ 15, 9 ],
             },
             {
-                "description": "If HP is below 3,000 when the special is activated, reduces No Healing debuff by 3 turns. Recovers 6x character's RCV in HP",
+                "description": "If HP is below 3,000, reduces No Healing debuff by 3 turns. Recovers 6x character's RCV in HP",
                 "cooldown": [ 20, 14 ],
             },
             {
-                "description": "If HP is below 3,000 when the special is activated, removes No Healing debuff. Recovers 13x character's RCV in HP",
+                "description": "If HP is below 3,000, removes No Healing debuff. Recovers 13x character's RCV in HP",
                 "cooldown": [ 24, 18 ],
             },
         ],
@@ -12568,7 +12568,7 @@ window.details = {
     },
     1512: {//Kingdew
         captain: "Boosts ATK of Fighter and Powerhouse characters by 2x",
-        special: "Removes Poison, boosts ATK of Powerhouse characters by 1.5x for 1 turn if HP is below 30% when the special is activated",
+        special: "Removes Poison, boosts ATK of Powerhouse characters by 1.5x for 1 turn if HP is below 30%",
         specialName: "Enlightened Spirit",
         sailor: "Makes [RCV] orbs \"beneficial\" for this unit if your captain is a Powerhouse character",
     },
@@ -13316,12 +13316,12 @@ window.details = {
     },
     1585: {//Coliseum Helmeppo
         captain: "Boosts ATK and RCV of Slasher and Driven characters by 1.5x",
-        special: "If HP is below 5,000 when the special is activated, boosts ATK of Driven and Slasher characters by 1.75x for 1 turn and recovers 10x character's RCV in HP",
+        special: "If HP is below 5,000, boosts ATK of Driven and Slasher characters by 1.75x for 1 turn and recovers 10x character's RCV in HP",
         specialName: "Firey Morale",
     },
     1586: {//Coliseum Helmeppo
         captain: "Boosts ATK of Slasher and Driven characters by 2x and their RCV by 1.5x",
-        special: "If HP is below 5,000 when the special is activated, boosts ATK of Driven and Slasher characters by 1.75x for 1 turn and recovers 10x character's RCV in HP",
+        special: "If HP is below 5,000, boosts ATK of Driven and Slasher characters by 1.75x for 1 turn and recovers 10x character's RCV in HP",
         specialName: "Firey Morale",
     },
     1587: {//Legend Sanji
@@ -19436,5 +19436,17 @@ window.details = {
             },
         ],
         potentialNotes: "Enrage is activated when your crew took damage from your enemies in the previous turn"
+    },
+    1975: {
+        captain: "Boosts ATK of all characters by 2x if HP is below 30% at the start of the turn",
+        special: "Deals 25x? ATK in [QCK] damage to one enemy. If HP above ??% then changes [RCV], [TND], [EMPTY], [BOMB] and [BLOCK] orbs into matching orbs and if HP below ?% then changes adjacent orbs into matching orbs",
+        specialName: "Double Edge of Revolt [Neo]",
+        sailor: "When HP is below ??% at the start of the turn, boosts base ATK of all characters by 40",
+    },
+    1976: {
+        captain: "Boosts ATK of all characters by 2.5x if HP is below 30% at the start of the turn",
+        special: "Deals 25x? ATK in [QCK] damage to one enemy. If HP above ??% then changes [RCV], [TND], [EMPTY], [BOMB] and [BLOCK] orbs into matching orbs and if HP below ?% then changes adjacent orbs into matching orbs",
+        specialName: "Double Edge of Revolt [Neo]",
+        sailor: "When HP is below ??% at the start of the turn, boosts base ATK of all characters by 40",
     },
 };

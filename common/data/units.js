@@ -1960,7 +1960,7 @@ window.units = [
     [ "Shirahoshi, You're My Valentine", "DEX", [ "Cerebral", "Free Spirit" ], 5, 30, 5, 4, 99, 4000000, 1024, 422, 162, 2108, 1154, 409, 1 ],
     [ "Sanji, Brimming Bridegroom", "PSY", [ "Powerhouse", "Fighter" ], 4, 12, 4, 3, 50, 261406, 184, 109, 41, 1142, 542, 102, 1 ],
     [ "Sanji, A Deadly Plan to Separate the Couple", "PSY", [ "Powerhouse", "Fighter" ], 5, 20, 4, 5, 99, 3000000, 928, 472, 82, 2146, 1324, 201, 1 ],
-    [ "Bride Pudding", "INT", [ "Cerebral", "Fighter" ], 4, 12, null, 3, 50, 261406, null, null, null, null, null, null, null ],
+    [ "Pudding, Deceiving Bride", "INT", [ "Cerebral", "Fighter" ], 4, 12, null, 3, 50, 261406, null, null, null, null, null, null, null ],
     [ "Pudding, A Deadly Plan to Separate the Couple", "INT", [ "Cerebral", "Fighter" ], 5, 20, 5, 5, 99, 3000000, 1, 1, 1, 1972, 1111, 301, null ],
     [ "Oars", "QCK", [ "Driven", "Powerhouse" ], 3, 12, null, null, 50, 130703, null, null, null, null, null, null, null ],
     [ "The Devil Oars, Resurrected Legend", "QCK", [ "Driven", "Powerhouse" ], 4, 20, 4, 4, 99, 1000000, null, null, null, 2975, 1454, 0, null ],
@@ -1969,8 +1969,12 @@ window.units = [
     [ "Boa Hancock, You're My Valentine", "STR", [ "Shooter", "Cerebral" ], 5, 20, 4, 4, 99, 4000000, 1, 1, 1, 1960, 1257, 416, null ],
     [ "Miss Valentine, Be My Valentine", "DEX", [ "Free Spirit", "Cerebral" ], 4, 12, null, 3, 50, 392109, null, null, null, null, null, null, null ],
     [ "Miss Valentine, You're My Valentine", "DEX", [ "Free Spirit", "Cerebral" ], 5, 20, 4, 4, 99, 4000000, 1, 1, 1, 2014, 1039, 424, null ],
-    [ "Sabo", "DEX", [ "Cerebral", "Fighter" ], 4, 30, null, 1, 50, 130703, null, null, null, null, null, null, null ],
+    [ "Sabo, Bitter Elegance", "DEX", [ "Cerebral", "Fighter" ], 4, 30, null, 1, 50, 130703, null, null, null, null, null, null, null ],
     [ "Sabo, Sweet Dignity", "DEX", [ "Cerebral", "Fighter" ], 5, 60, 4, 1, 99, 5000000, 1, 1, 1, 2140, 1340, 349, null ],
+    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "X Drake [Neo], Captain of the Drake Pirates", "QCK", [ "Cerebral", "Slasher" ], 4, 25, 5, null, 70, 1066998, null, null, null, null, null, null, null ],
+    [ "\"Red Flag\" X Drake [Neo], Captain of the Drake Pirates", "QCK", [ "Cerebral", "Powerhouse" ], 5, 40, 4, 4, 99, 4000000, null, null, null, 2607, 1235, 297, null ],
     ];
     
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
