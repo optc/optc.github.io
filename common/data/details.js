@@ -18982,13 +18982,13 @@ window.details = {
     1946: {//Vander Decken
         captain: "Boosts ATK of all characters by 1.75x.",
         special: "Locks orbs for 1 turn, amplifies the effect of orbs by 1.5x for 1 turn and deals several times character's ATK in Typeless damage to one enemy",
-        specialNotes: "#{specialProportional : higher : ??? * ( (remaining HP) / (total HP) )}",
+        specialNotes: "#{specialProportional : higher : 85 * ( (remaining HP) / (total HP) )}",
         specialName: "Shooting at the Heart",
     },
     1947: {//Vander Decken
         captain: "Boosts ATK of all characters by 2x. Recovers 2x character's RCV in HP at the end of each turn.",
         special: "Locks orbs for 1 turn, amplifies the effect of orbs by 1.5x for 1 turn and deals several times character's ATK in Typeless damage to one enemy",
-        specialNotes: "#{specialProportional : higher : ??? * ( (remaining HP) / (total HP) )}",
+        specialNotes: "#{specialProportional : higher : 85 * ( (remaining HP) / (total HP) )}",
         specialName: "Shooting at the Heart",
     },
     1948: {//Wadatsumi
