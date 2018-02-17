@@ -18982,13 +18982,13 @@ window.details = {
     1946: {//Vander Decken
         captain: "Boosts ATK of all characters by 1.75x.",
         special: "Locks orbs for 1 turn, amplifies the effect of orbs by 1.5x for 1 turn and deals several times character's ATK in Typeless damage to one enemy",
-        specialNotes: "#{specialProportional : higher : ??? * ( (remaining HP) / (total HP) )}",
+        specialNotes: "#{specialProportional : higher : 85 * ( (remaining HP) / (total HP) )}",
         specialName: "Shooting at the Heart",
     },
     1947: {//Vander Decken
         captain: "Boosts ATK of all characters by 2x. Recovers 2x character's RCV in HP at the end of each turn.",
         special: "Locks orbs for 1 turn, amplifies the effect of orbs by 1.5x for 1 turn and deals several times character's ATK in Typeless damage to one enemy",
-        specialNotes: "#{specialProportional : higher : ??? * ( (remaining HP) / (total HP) )}",
+        specialNotes: "#{specialProportional : higher : 85 * ( (remaining HP) / (total HP) )}",
         specialName: "Shooting at the Heart",
     },
     1948: {//Wadatsumi
@@ -19445,12 +19445,12 @@ window.details = {
                 "cooldown": [ 14, 9 ],
             },
             {
-                "description": "Cuts the current HP of one enemy by 50% and changes [TND], [EMPTY] and Badly Matching orbs into Matching orbs and if your Captain is a Cerebral character, reduces Paralysis duration by 5 turns",
+                "description": "Cuts the current HP of one enemy by 15% and changes [TND], [EMPTY] and Badly Matching orbs into Matching orbs and if your Captain is a Cerebral character, reduces Paralysis duration by 5 turns",
                 "cooldown": [ 17, 12 ],
             },
             {
                 "description": "Cuts the current HP of one enemy by 20% and changes [TND], [EMPTY] and Badly Matching orbs into Matching orbs and if your Captain is a Cerebral character, reduces Paralysis duration completely",
-                "cooldown": [ 15, 20 ],
+                "cooldown": [ 20, 15 ],
             },
         ],
         specialName: "Raging Strike",
@@ -19465,12 +19465,12 @@ window.details = {
                 "cooldown": [ 14, 9 ],
             },
             {
-                "description": "Cuts the current HP of one enemy by 50% and changes [TND], [EMPTY] and Badly Matching orbs into Matching orbs and if your Captain is a Cerebral character, reduces Paralysis duration by 5 turns",
+                "description": "Cuts the current HP of one enemy by 15% and changes [TND], [EMPTY] and Badly Matching orbs into Matching orbs and if your Captain is a Cerebral character, reduces Paralysis duration by 5 turns",
                 "cooldown": [ 17, 12 ],
             },
             {
                 "description": "Cuts the current HP of one enemy by 20% and changes [TND], [EMPTY] and Badly Matching orbs into Matching orbs and if your Captain is a Cerebral character, reduces Paralysis duration completely",
-                "cooldown": [ 15, 20 ],
+                "cooldown": [ 20, 15 ],
             },
         ],
         specialName: "Raging Strike",
