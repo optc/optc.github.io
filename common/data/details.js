@@ -19437,6 +19437,45 @@ window.details = {
         ],
         potentialNotes: "Enrage is activated when your crew took damage from your enemies in the previous turn"
     },
+    1973: {//Hawkins
+        captain: "Not Translated",
+        special: [
+            {
+                "description": "Cuts the current HP of one enemy by ??% and changes ??? orbs into Matching orbs and if your Captain is a Cerebral character, reduces Paralysis duration by ? turns",
+                "cooldown": [ null, null ],
+            },
+            {
+                "description": "Cuts the current HP of one enemy by ??% and changes ??? orbs into Matching orbs and if your Captain is a Cerebral character, reduces Paralysis duration by ? turns",
+                "cooldown": [ null, null ],
+            },
+            {
+                "description": "Cuts the current HP of one enemy by 20% and changes [TND], [EMPTY] and Badly Matching orbs into Matching orbs and if your Captain is a Cerebral character, reduces Paralysis duration completely",
+                "cooldown": [ null, null ],
+            },
+        ],
+        specialName: "Raging Strike",
+        specialNotes: "#{stages}"
+    },
+    1974: {//Hawkins
+        captain: "Boosts ATK of Cerebral Characters by 3.25x if they have a matching orb, by 2.5x otherwise and makes [STR] orbs \"beneficial\" to Cerebral characters",
+        special: [
+            {
+                "description": "Cuts the current HP of one enemy by ??% and changes ??? orbs into Matching orbs and if your Captain is a Cerebral character, reduces Paralysis duration by ? turns",
+                "cooldown": [ null, null ],
+            },
+            {
+                "description": "Cuts the current HP of one enemy by ??% and changes ??? orbs into Matching orbs and if your Captain is a Cerebral character, reduces Paralysis duration by ? turns",
+                "cooldown": [ null, null ],
+            },
+            {
+                "description": "Cuts the current HP of one enemy by 20% and changes [TND], [EMPTY] and Badly Matching orbs into Matching orbs and if your Captain is a Cerebral character, reduces Paralysis duration completely",
+                "cooldown": [ null, null ],
+            },
+        ],
+        specialName: "Raging Strike",
+        specialNotes: "#{stages}",
+        limit: "This character has a Limit Break Tree"
+    },
     1975: {
         captain: "Boosts ATK of all characters by 2x if HP is below 30% at the start of the turn",
         special: "Deals 25x? ATK in [QCK] damage to one enemy. If HP above ??% then changes [RCV], [TND], [EMPTY], [BOMB] and [BLOCK] orbs into matching orbs and if HP below ?% then changes adjacent orbs into matching orbs",

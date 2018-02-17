@@ -6615,6 +6615,9 @@ window.captains = {
         rcv: function(p) { return !(p.unit.class.has("Cerebral")) ? 1 : p.actions[p.sourceSlot] ? 1.2 : 1.05; },
         chainModifier: function(p) { return (p.percHP <= 30.0 || p.percHP >= 70.0) ? p.actions[p.sourceSlot] ? 1.5 : 1.5 : 1; }//Technically broken but no one cares about non-limit break stats
     },
+    1974: {
+        atk: function(p) { return !p.unit.class.has("Cerebral") ? 1 : (((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain]) == 2) && (p.orb != 'g')) ? 3.25 : 2.5); },
+    },
     1975: {
         atk: function(p) { return p.percHP <= 30.0 ? 2 : 1; }
     },

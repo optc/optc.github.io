@@ -1971,8 +1971,8 @@ window.units = [
     [ "Miss Valentine, You're My Valentine", "DEX", [ "Free Spirit", "Cerebral" ], 5, 20, 4, 4, 99, 4000000, 1, 1, 1, 2014, 1039, 424, null ],
     [ "Sabo, Bitter Elegance", "DEX", [ "Cerebral", "Fighter" ], 4, 30, null, 1, 50, 130703, null, null, null, null, null, null, null ],
     [ "Sabo, Sweet Dignity", "DEX", [ "Cerebral", "Fighter" ], 5, 60, 4, 1, 99, 5000000, 1, 1, 1, 2140, 1340, 349, null ],
-    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Basil Hawkins, Tranquil Fortune Teller", "STR", [ "Cerebral", "Striker" ], 4, 20, null, null, 70, 1066998, null, null, null, null, null, null, null ],
+    [ "\"The Magician\" Basil Hawkins, Cursed Executioner", "STR", [ "Cerebral", "Striker" ], 5, 30, null, null, 99, 4000000, null, null, null, null, null, null, null ],
     [ "X Drake [Neo], Captain of the Drake Pirates", "QCK", [ "Cerebral", "Slasher" ], 4, 25, 5, null, 70, 1066998, null, null, null, null, null, null, null ],
     [ "\"Red Flag\" X Drake [Neo], Captain of the Drake Pirates", "QCK", [ "Cerebral", "Powerhouse" ], 5, 40, 4, 4, 99, 4000000, null, null, null, 2607, 1235, 297, null ],
     ];
