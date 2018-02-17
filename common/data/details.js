@@ -61,7 +61,7 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "Enrage is activated when your crew took damage from your enemies in the previous turn"
+        potentialNotes: "#{enrage}"
     },
     5: {
         special: "Deals 7x character's ATK in DEX damage to one enemy",
@@ -1052,7 +1052,7 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "Enrage is activated when your crew took damage from your enemies in the previous turn"
+        potentialNotes: "#{enrage}"
     },
     220: {
         special: "Changes [PSY] orbs into [INT] orbs",
@@ -1309,7 +1309,7 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "Enrage is activated when your crew took damage from your enemies in the previous turn"
+        potentialNotes: "#{enrage}"
     },
     250: {
         special: "Recovers all missing HP",
@@ -1408,7 +1408,7 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "Enrage is activated when your crew took damage from your enemies in the previous turn"
+        potentialNotes: "#{enrage}"
     },
     254: {
         special: "Deals 5,000 fixed damage to all enemies",
@@ -1633,7 +1633,7 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "Enrage is activated when your crew took damage from your enemies in the previous turn"
+        potentialNotes: "#{enrage}"
     },
     262: {
         captain: "Recovers 2x character's RCV in HP at the end of each turn"
@@ -1844,7 +1844,7 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "Enrage is activated when your crew took damage from your enemies in the previous turn"
+        potentialNotes: "#{enrage}"
     },
     307: {
         special: "Randomly changes all orbs other than [DEX] into either [DEX], [RCV] or [TND] orbs",
@@ -2006,7 +2006,7 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "Enrage is activated when your crew took damage from your enemies in the previous turn"
+        potentialNotes: "#{enrage}"
     },
     315: {
         special: "Changes [PSY] and [INT] orbs into [STR] orbs, empties slots with [DEX] and [QCK] orbs",
@@ -2224,7 +2224,7 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "Enrage is activated when your crew took damage from your enemies in the previous turn"
+        potentialNotes: "#{enrage}"
     },
     354: {
         special: "Reduces Bind and Despair duration by 3 turns",
@@ -2282,7 +2282,7 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "Enrage is activated when your crew took damage from your enemies in the previous turn"
+        potentialNotes: "#{enrage}"
     },
     358: {
         special: "Changes [TND] and [RCV] orbs into [DEX] orbs, deals random DEX damage to all enemies",
@@ -3489,7 +3489,7 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "Enrage is activated when your crew took damage from your enemies in the previous turn"
+        potentialNotes: "#{enrage}"
     },
     555: {
         special: "Delays all enemies for 3 turns, cuts the current HP of each enemy by 10%",
@@ -4750,7 +4750,7 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "Enrage is activated when your crew took damage from your enemies in the previous turn"
+        potentialNotes: "#{enrage}"
     },
     749: {
         special: "Deals random DEX damage to all enemies, randomizes all orbs",
@@ -5127,7 +5127,7 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "Enrage is activated when your crew took damage from your enemies in the previous turn"
+        potentialNotes: "#{enrage}"
     },
     782: {
         special: "Delays all enemies for 1 turn, recovers a small random amount of HP",
@@ -5504,7 +5504,7 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "Enrage is activated when your crew took damage from your enemies in the previous turn"
+        potentialNotes: "#{enrage}"
     },
     841: {
         captain: "Recovers 3x character's RCV in HP at the end of each turn, deals 3x character's ATK in PSY damage to all enemies at the end of each turn",
@@ -5805,7 +5805,7 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "Enrage is activated when your crew took damage from your enemies in the previous turn"
+        potentialNotes: "#{enrage}"
     },
     877: {
         captain: "Boosts amount of Beli received by 2x",
@@ -6071,7 +6071,7 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "Enrage is activated when your crew took damage from your enemies in the previous turn"
+        potentialNotes: "#{enrage}"
     },
     907: {
         specialName: "Cien Fleur: Big Tree",
@@ -6288,7 +6288,7 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "Enrage is activated when your crew took damage from your enemies in the previous turn"
+        potentialNotes: "#{enrage}"
     },
     934: {
         captain: "Boosts ATK of Fighter characters by 2x, and their HP by 1.5x. If HP is above 70% or below 30%, boosts ATK of Fighter characters by 2.75 instead",
@@ -7136,7 +7136,7 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "Enrage is activated when your crew took damage from your enemies in the previous turn"
+        potentialNotes: "#{enrage}"
     },
     1026: {
         captain: "Boosts ATK and RCV of Fighter characters by 1.5x",
@@ -7194,7 +7194,7 @@ window.details = {
             { "description": "Aquire 1 additional Socket slot" },
             { "description": "Boosts base HP by 60" },
             { "description": "Aquire Sailor Ability 2: Restores his own special by 1 turn when it is rewinded" },
-            { "description": "Aquire Potential #: Critical Hit" },
+            { "description": "Aquire Potential 2: Critical Hit" },
         ],
         potential: [
             {
@@ -7218,7 +7218,7 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "Enrage is activated when your crew took damage from your enemies in the previous turn"
+        potentialNotes: "#{enrage}"
     },
     1034: {
         captain: "Boosts ATK of Striker characters by a variable amount depending on how many Strikers are on your team. If you don't attack with Bartolomeo, reduces damage received by 30% for that turn.",
@@ -7297,7 +7297,7 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "Enrage is activated when your crew took damage from your enemies in the previous turn"
+        potentialNotes: "#{enrage}"
     },
     1036: {
         captain: "Boosts ATK of Free Spirit characters by 2x after scoring 3 Perfects in a row",
@@ -7864,7 +7864,7 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "Enrage is activated when your crew took damage from your enemies in the previous turn"
+        potentialNotes: "#{enrage}"
     },
     1082: {
         captain: "Boosts ATK of Striker and Fighter characters by 1.2x",
@@ -7916,7 +7916,7 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "Enrage is activated when your crew took damage from your enemies in the previous turn"
+        potentialNotes: "#{enrage}"
     },
     1084: {
         captain: "Boosts HP of Driven characters by 1.5x and boosts ATK by 3x if they have a matching orb, by 1.5x otherwise. Makes [TND] and [RCV] orbs \"beneficial\" to Driven characters",
@@ -7993,7 +7993,7 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "Enrage is activated when your crew took damage from your enemies in the previous turn"
+        potentialNotes: "#{enrage}"
     },
     1086: {
         captain: "Boosts ATK and RCV of Driven characters by 1.5x",
@@ -8181,7 +8181,7 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "Enrage is activated when your crew took damage from your enemies in the previous turn"
+        potentialNotes: "#{enrage}"
     },
     1109: {
         captain: "Boosts amount of Beli received by 1.5x",
@@ -8324,7 +8324,7 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "Enrage is activated when your crew took damage from your enemies in the previous turn"
+        potentialNotes: "#{enrage}"
     },
     1126: {
         captain: "Boosts ATK and HP of [DEX] characters by 1.5x",
@@ -8755,7 +8755,7 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "Enrage is activated when your crew took damage from your enemies in the previous turn"
+        potentialNotes: "#{enrage}"
     },
     1176: {
         special: "Removes Poison, recovers 15x character's RCV in HP",
@@ -8881,7 +8881,7 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "Enrage is activated when your crew took damage from your enemies in the previous turn"
+        potentialNotes: "#{enrage}"
     },
     1187: {
         captain: "Boosts ATK of [STR] characters by 2.5x",
@@ -9269,7 +9269,7 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "Enrage is activated when your crew took damage from your enemies in the previous turn"
+        potentialNotes: "#{enrage}"
     },
     1221: {//Coliseum Oars Jr
         captain: "Boosts ATK of Slasher characters by 1.75x and the HP of Powerhouse characters by 1.2x",
@@ -9841,7 +9841,7 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "Enrage is activated when your crew took damage from your enemies in the previous turn"
+        potentialNotes: "#{enrage}"
     },
     1269: {//Laffitte
         captain: "Recovers 3x character's RCV in HP at the end of each turn. Deals 3x character's ATK in [DEX] damage to all enemies at the end of each turn.",
@@ -10027,7 +10027,7 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "Enrage is activated when your crew took damage from your enemies in the previous turn"
+        potentialNotes: "#{enrage}"
     },
     1279: {//John Giant
         captain: "Boosts ATK and HP of Slasher characters by 1.5x",
@@ -10308,7 +10308,7 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "Enrage is activated when your crew took damage from your enemies in the previous turn"
+        potentialNotes: "#{enrage}"
     },
     1315: {//Coby
         captain: "Boosts ATK of all characters by 2x after the 2nd Perfect in a row and by 3x after the 5th Perfect in a row.",
@@ -11012,7 +11012,7 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "Enrage is activated when your crew took damage from your enemies in the previous turn"
+        potentialNotes: "#{enrage}"
     },
     1388: {//Zoro 5+
         captain: "Boosts ATK of [DEX] characters by 2.5x",
@@ -11228,7 +11228,7 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "Enrage is activated when your crew took damage from your enemies in the previous turn"
+        potentialNotes: "#{enrage}"
     },
     1402: {//Colo Dalton
         captain: "Boosts ATK of [PSY] and [QCK] characters by 2x",
@@ -11438,7 +11438,7 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "Enrage is activated when your crew took damage from your enemies in the previous turn"
+        potentialNotes: "#{enrage}"
     },
     1414: {//Shop Sanji
         captain: "Boosts ATK of Powerhouse characters by 2.5x",
@@ -11523,7 +11523,7 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "Enrage is activated when your crew took damage from your enemies in the previous turn"
+        potentialNotes: "#{enrage}"
     },
     1423: {//Coliseum T-Bone
         captain: "Boosts ATK of the whole crew by 1.75x and recovers 918 HP at end of each turn,",
@@ -11848,7 +11848,7 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "Enrage is activated when your crew took damage from your enemies in the previous turn"
+        potentialNotes: "#{enrage}"
     },
     1443: {//Dosun
         captain: "Boosts ATK of Powerhouse characters by 2.75x following a chain of Good > Great > Perfect hits",
@@ -11900,7 +11900,7 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "Enrage is activated when your crew took damage from your enemies in the previous turn"
+        potentialNotes: "#{enrage}"
     },
     1445: {//Boa Hancock+
         captain: "Boosts ATK of [QCK] and [PSY] characters proportionally to the crew's current HP. If HP is below 50%, Boosts RCV of [QCK] and [PSY] characters by 1.5x.",
@@ -12185,7 +12185,7 @@ window.details = {
                 "cooldown": [ 22, 18 ],
             },
         ],
-        specialNotes: "Rainbow orbs are the beneficial form of [BLOCK] orbs. They can not be shuffled or swapped by you or your opponent. They count as benefittial orbs to any character. They do not count as STR orbs for Sakazuki but do act like Matching orbs for Black Clad Ace or Fujitora captain abilities.<br>#{stages}",
+        specialNotes: "Rainbow orbs are the beneficial form of [BLOCK] orbs. They can not be shuffled or swapped by you or your opponent. They count as beneficial orbs to any character. They do not count as STR orbs for Sakazuki but do act like Matching orbs for Black Clad Ace or Fujitora captain abilities.<br>#{stages}",
         sailor: "Changes all orbs into [RAINBOW] orbs at the start of the fight.",
         specialName: "Tears of Courage",
         limit: [
@@ -12370,7 +12370,7 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "Enrage is activated when your crew took damage from your enemies in the previous turn"
+        potentialNotes: "#{enrage}"
     },
     1480: {//Vander Decken IX
         captain: "Boosts ATK by 2.5x after scoring 2 Perfects in a row",
@@ -13056,7 +13056,7 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "Enrage is activated when your crew took damage from your enemies in the previous turn"
+        potentialNotes: "#{enrage}"
     },
     1554: {//Coliseum Ryuma
         captain: "Boosts ATK of [DEX] characters by 2x",
@@ -13583,11 +13583,11 @@ window.details = {
             { "description": "Boosts base RCV by 10" },
             { "description": "Boosts base RCV by 20" },
             { "description": "Boosts base RCV by 30" },
-            { "description": "Aquire Sailor Ability #: Boosts base ATK of Striker characters by 75" },
+            { "description": "Aquire Sailor Ability 1: Boosts base ATK of Striker characters by 75" },
             { "description": "Boosts base HP by 30" },
             { "description": "Boosts base HP by 40" },
             { "description": "Boosts base HP by 50" },
-            { "description": "Aquire Sailor Ability #: Boosts base HP of Driven characters by 75" },
+            { "description": "Aquire Sailor Ability 2: Boosts base HP of Driven characters by 75" },
             { "description": "Boosts base HP by 60" },
             { "description": "Aquire 1 additional Socket slot" },
             { "description": "Aquire Potential 2: Slot Bind Self-reduction" },
@@ -13614,7 +13614,7 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "Enrage is activated when your crew took damage from your enemies in the previous turn"
+        potentialNotes: "#{enrage}"
     },
     1622: {//Reborn Doffy
         special: "Switches orbs between slots twice, amplifies the effect of orbs by 2x for 1 turn",
@@ -13741,7 +13741,7 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "Enrage is activated when your crew took damage from your enemies in the previous turn"
+        potentialNotes: "#{enrage}"
     },
     1633: {//Punk Hazard Dragon
         captain: "Boosts ATK of [STR] characters by 1.75x and the HP of Powerhouse characters by 1.2x",
@@ -14113,7 +14113,7 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "Enrage is activated when your crew took damage from your enemies in the previous turn"
+        potentialNotes: "#{enrage}"
     },
     1664: {//STR Aokiji
         captain: "Boosts ATK of Shooter characters by 2.5x",
@@ -14551,7 +14551,7 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "Enrage is activated when your crew took damage from your enemies in the previous turn"
+        potentialNotes: "#{enrage}"
     },
     1701: {//Ivankov
         captain: "Boosts ATK of Free Spirit characters by 2x",
@@ -14682,7 +14682,7 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "Enrage is activated when your crew took damage from your enemies in the previous turn"
+        potentialNotes: "#{enrage}"
     },
     1705: {//Bon Clay
         captain: "Boosts ATK of [STR] characters by 2x",
@@ -14734,7 +14734,7 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "Enrage is activated when your crew took damage from your enemies in the previous turn"
+        potentialNotes: "#{enrage}"
     },
     1707: {//Shanks 6+
         captain: "Boosts ATK of [PSY] characters by 2.75x and their HP by 1.3x. Boosts chances of getting [PSY] orbs proportionally to the crew's current HP.",
@@ -14815,7 +14815,7 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "Enrage is activated when your crew took damage from your enemies in the previous turn"
+        potentialNotes: "#{enrage}"
     },
     1714: {//Monet
         captain: "Boosts ATK of INT characters by 2x. Recovers 2x character's RCV in HP at the end of each turn",
@@ -14896,7 +14896,7 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "Enrage is activated when your crew took damage from your enemies in the previous turn"
+        potentialNotes: "#{enrage}"
     },
     1722: {//Neptune
         captain: "Boosts ATK of Striker characters by 2x.",
@@ -15050,7 +15050,7 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "Enrage is activated when your crew took damage from your enemies in the previous turn"
+        potentialNotes: "#{enrage}"
     },
     1742: {//Marigold
         captain: "Boosts ATK of Striker and Powerhouse characters by 2x and boosts HP of [STR] characters by 1.1x",
@@ -15102,7 +15102,7 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "Enrage is activated when your crew took damage from your enemies in the previous turn"
+        potentialNotes: "#{enrage}"
     },
     1744: {//Marguerite
         captain: "Boosts ATK of Shooter characters by 2x",
@@ -15252,7 +15252,7 @@ window.details = {
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base HP by 30" },
             { "description": "Boosts base ATK by 50" },
-            { "description": "Aquire Sailor Ability #: Makes [DEX] orbs \"beneficial\" for this unit" },
+            { "description": "Aquire Sailor Ability 1: Makes [DEX] orbs \"beneficial\" for this unit" },
             { "description": "Boosts base RCV by 30" },
             { "description": "Boosts base HP by 60" },
             { "description": "Boosts base HP by 90" },
@@ -15511,7 +15511,7 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "Enrage is activated when your crew took damage from your enemies in the previous turn"
+        potentialNotes: "#{enrage}"
     },
     1764: {//6+ Aokiji
         captain: "Boosts ATK of all characters by 2.25x and their HP by 1.25x. If you defeat an enemy, increases ATK boost slighty. Stacks up to 5 times to a maximum of 3.5x.",
@@ -15588,7 +15588,7 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "Enrage is activated when your crew took damage from your enemies in the previous turn"
+        potentialNotes: "#{enrage}"
     },
     1771: {//Kuma
         captain: "Boosts ATK and HP of Cerebral characters by 2x",
@@ -15799,7 +15799,7 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "Enrage is activated when your crew took damage from your enemies in the previous turn"
+        potentialNotes: "#{enrage}"
     },
     1793:{//Lucy Sabo
         captain: "If there is a [STR], [DEX] and [QCK] character in your crew, boosts ATK of [STR], [DEX] and [QCK] characters by 2.75x and their HP by 1.3x, lowers chances of getting [STR] orbs and makes [DEX] and [QCK] orbs \"beneficial\" to [STR], [DEX] and [QCK] characters. If there are not [PSY] or [INT] characters on your crew, boosts ATK by 3.7125x instead.",
@@ -15876,7 +15876,7 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "Enrage is activated when your crew took damage from your enemies in the previous turn"
+        potentialNotes: "#{enrage}"
     },
     1795:{//Diamante
         captain: "Boosts ATK of Slasher and Driven characters by 2x",
@@ -16007,7 +16007,7 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "Enrage is activated when your crew took damage from your enemies in the previous turn"
+        potentialNotes: "#{enrage}"
     },
     1799:{//Cavendish
         captain: "Boosts ATK of [STR], [DEX] and [QCK] characters by 2.25x",
@@ -16288,7 +16288,7 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "Enrage is activated when your crew took damage from your enemies in the previous turn"
+        potentialNotes: "#{enrage}"
     },
     1816: {// Ace 6+
         special: "Reduces crew's current HP by 40%, deals 15x the amount of HP subtracted in typeless damage to all enemies, boosts ATK of Shooter characters by 2x for 1 turn",
@@ -16425,7 +16425,7 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "Enrage is activated when your crew took damage from your enemies in the previous turn"
+        potentialNotes: "#{enrage}"
     },
     1825: {//Akainu
         captain: "Boosts ATK by 2.5x following a chain of [INT] > [INT] > [INT] attacks no lower than Good",
@@ -16720,7 +16720,7 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "Enrage is activated when your crew took damage from your enemies in the previous turn"
+        potentialNotes: "#{enrage}"
     },
     1837: {//Niji
         captain: "Boosts ATK of [QCK] characters by 1.75x, boosts ATK of Powerhouse characters by 1.2x, and the HP of Powerhouse characters by 1.2x",
@@ -16983,7 +16983,7 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "Enrage is activated when your crew took damage from your enemies in the previous turn"
+        potentialNotes: "#{enrage}"
     },
     1854: {//Apoo
         captain: "Boosts ATK of Free Spirit characters by 2x",
@@ -17053,7 +17053,7 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "Enrage is activated when your crew took damage from your enemies in the previous turn"
+        potentialNotes: "#{enrage}"
     },
     1860: {//Coloseum Raizo
         captain: "Boosts ATK of Shooter characters by 2x",
@@ -17237,7 +17237,7 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "Enrage is activated when your crew took damage from your enemies in the previous turn"
+        potentialNotes: "#{enrage}"
     },
     1870: {//Bellamy
         captain: "Boosts ATK of Driven characters by 2.25x",
@@ -17289,7 +17289,7 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "Enrage is activated when your crew took damage from your enemies in the previous turn"
+        potentialNotes: "#{enrage}"
     },
     1872: {//Kyros
         captain: "Boosts ATK of Slasher and Striker characters by 2.25x",
@@ -17343,7 +17343,7 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "Enrage is activated when your crew took damage from your enemies in the previous turn"
+        potentialNotes: "#{enrage}"
     },
     1874: {//Violet
         captain: "Boosts amount of Beli received by 2.5x",
@@ -17764,7 +17764,7 @@ window.details = {
         captain: "Boosts ATK of Driven characters by 1.75x and their HP by 1.1x",
         special: "Reduces crew's current HP by 80%, Empties all slots with [BOMB] orbs, deals severe typeless damage based on number of [BOMB] slots emptied to all enemies and boosts ATK against delayed enemies by 1.5x for 2 turns",
         specialName: "Fashion Pop",
-        specialNotes: "The exact multiplier used is chosen based on the number of [BLOCK] orbs consumed: 0 orbs - 10x ATK; 1 orb - 20x ATK; 2 orbs - 40x ATK; 3 orbs - 80x ATK; 4 orbs - 150x ATK; 5 orbs - 250x ATK; 6 orbs - 400x ATK."
+        specialNotes: "The exact multiplier used is chosen based on the number of [BOMB] orbs consumed: 0 orbs - 10x ATK; 1 orb - 20x ATK; 2 orbs - 40x ATK; 3 orbs - 80x ATK; 4 orbs - 150x ATK; 5 orbs - 250x ATK; 6 orbs - 400x ATK."
     },
     1887: {//Gladius
         captain: "Boosts ATK of Driven characters by 2.25x and their HP by 1.2x",
@@ -18659,7 +18659,7 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "Enrage is activated when your crew took damage from your enemies in the previous turn"
+        potentialNotes: "#{enrage}"
     },
     1929: {//Enel Neo
         special: "Reduces crew's current HP by 90%, deals 20,000 fixed damage to all enemies, boosts ATK of DEX characters by 2x for 1 turn",
@@ -18977,7 +18977,7 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "Enrage is activated when your crew took damage from your enemies in the previous turn"
+        potentialNotes: "#{enrage}"
     },
     1946: {//Vander Decken
         captain: "Boosts ATK of all characters by 1.75x.",
@@ -19074,7 +19074,7 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "Enrage is activated when your crew took damage from your enemies in the previous turn"
+        potentialNotes: "#{enrage}"
     },
     1952: {//Koala
         captain: "Boosts ATK of [INT] characters by 2.5x",
@@ -19177,7 +19177,7 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "Enrage is activated when your crew took damage from your enemies in the previous turn"
+        potentialNotes: "#{enrage}"
     },
     1956: {//Carrot
         captain: "Boosts ATK of [STR] characters by 2x and their RCV by 1.2x",
@@ -19282,7 +19282,7 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "Enrage is activated when your crew took damage from your enemies in the previous turn"
+        potentialNotes: "#{enrage}"
     },
     1960: {//Sanji
         captain: "Boosts ATK of [PSY] and Fighter characters by 2x",
@@ -19293,7 +19293,7 @@ window.details = {
     },
     1961: {//Sanji
         captain: "Boosts ATK of [PSY] and Fighter characters by 2.25x and their HP by 1.2x. If you use \"Tears of Attraction\" this turn, boosts their ATK by 2.925x instead.",
-        captainNotes: "This effect is boosted if you use Charlotte Pudding's [1932/1963] special in the same turn",
+        captainNotes: "This effect is boosted if you use Charlotte Pudding's [1962/1963] special in the same turn",
         special: "Changes [RCV], [TND] and [BOMB] orbs into Matching orbs, reduces Special Cooldown of Powerhouse and Fighter specials by 1 turn, and delays all enemies by 1 turn",
         specialName: "A Broad Smile of Life and Death",
         sailor: "Restores his own special by 3 turns when it is rewinded",
@@ -19318,7 +19318,7 @@ window.details = {
         sailorNotes: "#{silence}",
     },
     1964: {//Oars
-        captain: "Boosts ATK of Powerhouse characters by ???x if HP is above ??% at the start of the turn",
+        captain: "Boosts ATK of Powerhouse characters by 2.5x if HP is above ??% at the start of the turn",
         special: "Deals ??x character's ATK in Typeless damage to all enemies, delays all enemies for 1 turn and changes adjacent orbs into [RCV] orbs",
         specialName: "Gomu Gomu no Butt Stomp",
     },
@@ -19355,7 +19355,7 @@ window.details = {
         specialName: "10,000 Kilo Guillotine - Cake Slice",
     },
     1971: {//Sabo
-        captain: "Not Translated",
+        captain: "Boosts ATK of Cerebral characters by 1.5x and their HP and RCV by 1.05x and boosts chain by 1.2x if HP is above 70% or below 30% at the start of the turn",
         special: "If your Captain is a Cerebral character, changes [STR], [DEX], [QCK], [INT], and [PSY] orbs on Cerebral characters into Matching orbs, reduces the defense of all enemies by 100% and boosts ATK against enemies with reduced defense by 1.75x for 1 turn",
         specialName: "Blissful Selection",
     },
@@ -19435,54 +19435,56 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "Enrage is activated when your crew took damage from your enemies in the previous turn"
+        potentialNotes: "#{enrage}"
     },
     1973: {//Hawkins
         captain: "Not Translated",
         special: [
             {
-                "description": "Cuts the current HP of one enemy by ??% and changes ??? orbs into Matching orbs and if your Captain is a Cerebral character, reduces Paralysis duration by ? turns",
-                "cooldown": [ null, null ],
+                "description": "Cuts the current HP of one enemy by 10% and changes [TND], [EMPTY] and Badly Matching orbs into Matching orbs and if your Captain is a Cerebral character, reduces Paralysis duration by 2 turns",
+                "cooldown": [ 14, 9 ],
             },
             {
-                "description": "Cuts the current HP of one enemy by ??% and changes ??? orbs into Matching orbs and if your Captain is a Cerebral character, reduces Paralysis duration by ? turns",
-                "cooldown": [ null, null ],
+                "description": "Cuts the current HP of one enemy by 50% and changes [TND], [EMPTY] and Badly Matching orbs into Matching orbs and if your Captain is a Cerebral character, reduces Paralysis duration by 5 turns",
+                "cooldown": [ 17, 12 ],
             },
             {
                 "description": "Cuts the current HP of one enemy by 20% and changes [TND], [EMPTY] and Badly Matching orbs into Matching orbs and if your Captain is a Cerebral character, reduces Paralysis duration completely",
-                "cooldown": [ null, null ],
+                "cooldown": [ 15, 20 ],
             },
         ],
         specialName: "Raging Strike",
-        specialNotes: "#{stages}"
+        specialNotes: "#{stages}",
+        sailor: "Boosts base ATK of Cerebral characters by 75",
     },
     1974: {//Hawkins
         captain: "Boosts ATK of Cerebral Characters by 3.25x if they have a matching orb, by 2.5x otherwise and makes [STR] orbs \"beneficial\" to Cerebral characters",
         special: [
             {
-                "description": "Cuts the current HP of one enemy by ??% and changes ??? orbs into Matching orbs and if your Captain is a Cerebral character, reduces Paralysis duration by ? turns",
-                "cooldown": [ null, null ],
+                "description": "Cuts the current HP of one enemy by 10% and changes [TND], [EMPTY] and Badly Matching orbs into Matching orbs and if your Captain is a Cerebral character, reduces Paralysis duration by 2 turns",
+                "cooldown": [ 14, 9 ],
             },
             {
-                "description": "Cuts the current HP of one enemy by ??% and changes ??? orbs into Matching orbs and if your Captain is a Cerebral character, reduces Paralysis duration by ? turns",
-                "cooldown": [ null, null ],
+                "description": "Cuts the current HP of one enemy by 50% and changes [TND], [EMPTY] and Badly Matching orbs into Matching orbs and if your Captain is a Cerebral character, reduces Paralysis duration by 5 turns",
+                "cooldown": [ 17, 12 ],
             },
             {
                 "description": "Cuts the current HP of one enemy by 20% and changes [TND], [EMPTY] and Badly Matching orbs into Matching orbs and if your Captain is a Cerebral character, reduces Paralysis duration completely",
-                "cooldown": [ null, null ],
+                "cooldown": [ 15, 20 ],
             },
         ],
         specialName: "Raging Strike",
         specialNotes: "#{stages}",
+        sailor: "Boosts base ATK of Cerebral characters by 75",
         limit: "This character has a Limit Break Tree"
     },
-    1975: {
+    1975: {//X Drake
         captain: "Boosts ATK of all characters by 2x if HP is below 30% at the start of the turn",
         special: "Deals 25x? ATK in [QCK] damage to one enemy. If HP above ??% then changes [RCV], [TND], [EMPTY], [BOMB] and [BLOCK] orbs into matching orbs and if HP below ?% then changes adjacent orbs into matching orbs",
         specialName: "Double Edge of Revolt [Neo]",
         sailor: "When HP is below ??% at the start of the turn, boosts base ATK of all characters by 40",
     },
-    1976: {
+    1976: {//X Drake
         captain: "Boosts ATK of all characters by 2.5x if HP is below 30% at the start of the turn",
         special: "Deals 25x? ATK in [QCK] damage to one enemy. If HP above ??% then changes [RCV], [TND], [EMPTY], [BOMB] and [BLOCK] orbs into matching orbs and if HP below ?% then changes adjacent orbs into matching orbs",
         specialName: "Double Edge of Revolt [Neo]",
