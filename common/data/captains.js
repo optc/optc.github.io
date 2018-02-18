@@ -6323,7 +6323,7 @@ window.captains = {
     },
     1914: {
         atk: function(p) { return p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral") ? 1.75 : 1; },
-        rcv: function(p) { return p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral") ? 1.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral") ? 1.5 : 1; },
     },
     1915: {
         damageSorter: function(d) { return CrunchUtils.classSort(d, 2, [ "Free Spirit", "Powerhouse" ]); },
