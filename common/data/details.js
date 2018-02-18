@@ -19,7 +19,7 @@ window.details = {
         sailor: {
             "base": "None",
             "level1": "Boosts own base ATK by 100 if this character is the last in the chain to attack",
-            "level2": "Makes [QCK] orbs \"beneficial\" for this unit"
+            "level2": "Makes [QCK] orbs \"beneficial\" for this unit",
         },
         sailorNotes: "#{beneficial}",
         specialName: "Gum-Gum Twin Jet Pistol",
@@ -62,7 +62,7 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "#{enrage}"
+        potentialNotes: "#{enrage}",
     },
     5: {
         special: "Deals 7x character's ATK in DEX damage to one enemy",
@@ -83,6 +83,11 @@ window.details = {
         special: "Deals 15x character's ATK in DEX damage to all enemies",
         specialName: "Ashura Ichibugin",
         captain: "Boosts ATK and HP of DEX characters by 2x",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base HP by 30" },
             { "description": "Boosts base RCV by 10" },
@@ -142,6 +147,11 @@ window.details = {
         special: "Deals 15x character's ATK in INT damage to all enemies",
         specialName: "Thunderbolt Tempo",
         captain: "Boosts ATK and HP of INT characters by 1.5x",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base ATK by 10" },
             { "description": "Boosts base RCV by 10" },
@@ -201,6 +211,11 @@ window.details = {
         special: "Delays all enemies for 3 turns, deals 15x character's ATK in PSY damage to all enemies",
         specialName: "Fire Bird Star",
         captain: "Boosts ATK and HP of PSY characters by 1.5x",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base RCV by 10" },
             { "description": "Boosts base RCV by 20" },
@@ -261,6 +276,11 @@ window.details = {
         specialName: "Diable Jambe",
         specialNotes: "#{fixed}",
         captain: "Boosts ATK and HP of QCK characters by 1.5x",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base HP by 30" },
             { "description": "Boosts base RCV by 10" },
@@ -571,7 +591,15 @@ window.details = {
     77: {
         special: "Deals 15x character's ATK in PSY damage to all enemies",
         specialName: "Conqueror's Haki",
-        captain: "Boosts ATK of PSY characters by 2.5x",
+        captain: {
+            "base": "Boosts ATK of PSY characters by 2.5x",
+            "level1": "Boosts ATK of [PSY] characters by 2.75x and their RCV by 1.2x",
+        },
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Reduce base Special Cooldown by 2 turns" },
             { "description": "Boosts base ATK by 100" },
@@ -1013,7 +1041,15 @@ window.details = {
     219: {
         special: "Deals 25x character's ATK in DEX damage to one enemy",
         specialName: "Lion's Song",
-        captain: "Reduces damage received by 80% if HP is above 99% at the start of the turn",
+        captain: {
+            "base": "Reduces damage received by 80% if HP is above 99% at the start of the turn",
+            "level1": "Boosts ATK of all characters by 1.5x and reduces damage received by 80% if HP is above 99% at the start of the turn",
+        },
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Reduce base Special Cooldown by 2 turns" },
             { "description": "Reduce base Special Cooldown by 2 turns" },
@@ -1028,7 +1064,7 @@ window.details = {
             { "description": "Reduce base Special Cooldown by 4 turns" },
             { "description": "Boosts base ATK by 200" },
             { "description": "Acquire new Captain Ability: Boosts ATK of all characters by 1.5x and reduces damage received by 80% if HP is above 99% at the start of the turn" },
-            { "description": "Acquire Sailor Ability 2: 	Makes [STR] orbs \"beneficial\" for Slasher and Driven characters" },
+            { "description": "Acquire Sailor Ability 2: Makes [STR] orbs \"beneficial\" for Slasher and Driven characters" },
             { "description": "Acquire Potential 2: Critical Hit" },
         ],
         potential: [
@@ -1063,7 +1099,15 @@ window.details = {
     221: {
         special: "Changes [PSY] orbs into [INT] orbs",
         specialName: "Happiness Punch",
-        captain: "Boosts ATK of INT characters by 2.5x",
+        captain: {
+            "base": "Boosts ATK of INT characters by 2.5x",
+            "level1": "Boosts ATK of [INT] characters by 2.5x and their RCV by 1.2x",
+        },
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base HP by 40" },
@@ -1132,7 +1176,15 @@ window.details = {
     227: {
         special: "Cuts the current HP of each enemy by 30%",
         specialName: "Black Blade Ship Cutter",
-        captain: "Boosts ATK of Slasher characters by 2.5x",
+        captain: {
+            "base": "Boosts ATK of Slasher characters by 2.5x",
+            "level1": "Boosts ATK of Slasher characters by 2.5x and their HP by 1.3x",
+        },
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base RCV by 10" },
@@ -1271,6 +1323,11 @@ window.details = {
         specialName: "Rampage",
         specialNotes: "#{random : 2,000 : 200,000}",
         captain: "Boosts ATK of STR characters by 3x and reduces their HP by 60%",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base ATK by 40" },
@@ -1321,6 +1378,11 @@ window.details = {
         special: "Recovers all missing HP",
         specialName: "Blue Flame Rebirth",
         captain: "Boosts ATK of PSY characters by 3x if HP is above 99% at the start of the turn",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base RCV by 5" },
@@ -1370,6 +1432,11 @@ window.details = {
         special: "Reduces damage received from DEX enemies by 100% for 1 turn",
         specialName: "Brilliant Punk",
         captain: "Boosts ATK and HP of QCK characters by 2x",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base ATK by 10" },
             { "description": "Boosts base RCV by 30" },
@@ -1422,6 +1489,11 @@ window.details = {
         specialName: "Rose Rondo",
         specialNotes: "#{fixed}",
         captain: "Boosts ATK and HP of INT characters by 2x",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base HP by 40" },
@@ -1470,7 +1542,15 @@ window.details = {
     257: {
         special: "Changes [STR] and [QCK] orbs into [DEX] orbs",
         specialName: "Beautiful Dual Flintlocks",
-        captain: "Boosts ATK and RCV of DEX characters by 2x",
+        captain: {
+            "base": "Boosts ATK and RCV of DEX characters by 2x",
+            "level1": "Boosts ATK and RCV of DEX characters by 2x and boosts ATK of Shooter characters by 1.2x",
+        },
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base ATK by 30" },
@@ -1521,6 +1601,11 @@ window.details = {
         special: "Changes [DEX] and [QCK] orbs into [STR] orbs",
         specialName: "Pocket Mallet",
         captain: "Boosts ATK and RCV of STR characters by 2x",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base RCV by 20" },
             { "description": "Boosts base HP by 40" },
@@ -1570,6 +1655,11 @@ window.details = {
         special: "Cuts the current HP of each enemy by 30%",
         specialName: "Seaquake",
         captain: "Boosts ATK of all characters by 3x if HP is below 30% at the start of the turn",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base ATK by 5" },
             { "description": "Boosts base HP by 5" },
@@ -1806,6 +1896,11 @@ window.details = {
         special: "Randomly changes all orbs into either [PSY] or [RCV] orbs",
         specialName: "Meteor Fist Shower",
         captain: "Boosts ATK and HP of PSY characters by 2x",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base ATK by 40" },
@@ -1856,6 +1951,11 @@ window.details = {
         special: "Randomly changes all orbs other than [DEX] into either [DEX], [RCV] or [TND] orbs",
         specialName: "ROOM – Chambres",
         captain: "Boosts ATK of DEX characters by 2.5x",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base RCV by 10" },
             { "description": "Boosts base RCV by 20" },
@@ -1904,7 +2004,16 @@ window.details = {
     310: {
         special: "Cuts the current HP of each enemy by 10%, reduces the defense of all enemies by 50% for 3 turns",
         specialName: "Demon Face",
-        captain: "Reduces RCV of all characters by 90%, reduces damage received by 40%",
+        captain: {
+            "base": "Reduces RCV of all characters by 90%, reduces damage received by 40%",
+            "level1": "Boosts ATK of all characters by 1.25x and reduces damage received by 40%",
+            "level2": "Boosts ATK of Powerhouse and Free Spirit characters by 2x after scoring 2 Perfects in a row and reduce damage received by 4%",
+        },
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base ATK by 40" },
             { "description": "Boosts base HP by 50" },
@@ -1967,7 +2076,15 @@ window.details = {
     314: {
         special: "Boosts ATK of Striker characters by 1.5x for 1 turn, deals 25x character's ATK in PSY damage to one enemy",
         specialName: "Karmic Punishment",
-        captain: "Boosts ATK of Striker characters by 2x and their HP by 1.5x",
+        captain: {
+            "base": "Boosts ATK of Striker characters by 2x and their HP by 1.5x",
+            "level1": "Boosts ATK of all Striker characters proportionally to the crew's current HP, by 3x at 1 HP and their HP by 1.5x",
+        },
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base ATK by 40" },
             { "description": "Boosts base HP by 60" },
@@ -2020,6 +2137,11 @@ window.details = {
         specialName: "Aye Aye, Captain!",
         captain: "Boosts ATK, HP and RCV of Fighter characters by 1.5x",
         sailor: "Reduces Paralysis for 2 turns for himself",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base HP by 30" },
             { "description": "Boosts base RCV by 30" },
@@ -2185,7 +2307,15 @@ window.details = {
     353: {
         special: "Boosts ATK of Shooter characters by 1.75x for 2 turns",
         specialName: "Smash Buster",
-        captain: "Boosts ATK of Shooter characters by 2.5x",
+        captain: {
+            "base": "Boosts ATK of Shooter characters by 2.5x",
+            "level1": "Boosts ATK of Shooter characters by 2.5x and their HP by 1.2x and recovers 300 HP at end of each turn",
+        },
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base ATK by 10" },
             { "description": "Acquire 1 additional Socket slot" },
@@ -2243,7 +2373,15 @@ window.details = {
     357: {
         special: "Changes own orb into [STR], deals 9x character's ATK in STR damage to all enemies",
         specialName: "Steel Magnetic Arm",
-        captain: "Boosts ATK of Striker characters by 2.5x",
+        captain: {
+            "base": "Boosts ATK of Striker characters by 2.5x",
+            "level1": "Boosts ATK of Striker characters by 2.5x and reduces damage received by 7%",
+        },
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base ATK by 30" },
@@ -2295,7 +2433,15 @@ window.details = {
         special: "Changes [TND] and [RCV] orbs into [DEX] orbs, deals random DEX damage to all enemies",
         specialName: "Scratch Body",
         specialNotes: "#{random : 5,000 : 20,000}",
-        captain: "Boosts ATK of DEX characters by 3x if HP is above 99% at the start of the turn",
+        captain: {
+            "base": "Boosts ATK of DEX characters by 3x if HP is above 99% at the start of the turn",
+            "level1": "Boosts ATK of [DEX] characters by 3x if HP is above 99% at the start of the turn, 2x otherwise",
+        },
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base ATK by 50" },
@@ -2639,6 +2785,11 @@ window.details = {
         specialNotes: "#{orb : 2x}",
         specialName: "Overheat",
         captain: "Boosts ATK and HP of Slasher characters by 2x",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base HP by 20" },
             { "description": "Boosts base HP by 30" },
@@ -2813,6 +2964,11 @@ window.details = {
         special: "Deals 10 times the damage received in the previous turn in typeless damage to all enemies",
         specialName: "Black Hole",
         captain: "Increases damage received by 2x, boosts ATK of STR characters by 2.5x and their HP by 2.25x",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base RCV by 10" },
             { "description": "Boosts base HP by 10" },
@@ -3266,6 +3422,11 @@ window.details = {
         specialName: "Three-Verse Humming: Arrow-Notch Slash",
         captain: "Boosts ATK of PSY characters by 2x, reduces damage received from INT enemies by 30%",
         sailor: "Boosts base RCV of PSY characters by 15",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base ATK by 50" },
@@ -3453,8 +3614,16 @@ window.details = {
         special: "Changes adjacent orbs into [DEX], deals 1,000 fixed damage to all enemies",
         specialName: "Ashura Ugui",
         specialNotes: "#{fixed}",
-        captain: "Boosts ATK of DEX characters by 3x if HP is below 30% at the start of the turn",
+        captain: {
+            "base": "Boosts ATK of DEX characters by 3x if HP is below 30% at the start of the turn",
+            "level1": "Boosts ATK of [DEX] characters by 3x if HP is below 30% at the start of the turn, by 2x otherwise",
+        },
         sailor: "Boosts base ATK of Slasher characters by 20",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base RCV by 50" },
@@ -3507,6 +3676,11 @@ window.details = {
         specialName: "Heavenly Dragon Star",
         captain: "Boosts ATK of Shooter characters by 2x and their RCV by 1.5x",
         sailor: "Boosts base RCV of Shooter characters by 10",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base RCV by 20" },
@@ -3645,6 +3819,11 @@ window.details = {
         special: "Boosts ATK of Striker characters by 1.75x for 2 turns, locks all orbs for 2 turns",
         specialName: "Ice Block - Pheasant Beak",
         captain: "Boosts ATK and HP of Striker characters by 2x",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base HP by 20" },
@@ -3803,6 +3982,11 @@ window.details = {
         specialName: "200,000,000 Volt Amaru",
         specialNotes: "#{fixed}",
         captain: "Boosts ATK of QCK characters by 2.25x, recovers 5x character's RCV in HP at the end of each turn",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base ATK by 10" },
             { "description": "Boosts base ATK by 20" },
@@ -4041,6 +4225,11 @@ window.details = {
         specialName: "Raging Greatsword",
         captain: "Boosts ATK of PSY characters by 3x if HP is below 30% at the start of the turn",
         sailor: "Recovers 2 turns of Paralysis on self",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base RCV by 25" },
             { "description": "Boosts base HP by 40" },
@@ -4469,6 +4658,11 @@ window.details = {
         specialName: "Black Sword - Lightning Slash",
         captain: "Boosts ATK of Slasher characters by a variable factor between 2x and 2.75x based on the timing of the attack of the previous unit in the chain",
         captainNotes: "A hit below Good or a Miss will boost the ATK of the next unit by 2x, a Good hit by 2.25x, a Great hit by 2.5x and a Perfect hit by 2.75x. This bonus is applied only to Slasher characters.",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base HP by 5" },
             { "description": "Boosts base HP by 10" },
@@ -4692,6 +4886,11 @@ window.details = {
         special: "Deals 35x character's ATK in STR damage to one enemy, boosts chances of getting matching orbs for 3 turns",
         specialName: "Rokuougan",
         captain: "Boosts ATK of Powerhouse characters by 3x if they have a matching orb, by 2.5x otherwise, reduces crew's RCV to 0",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base ATK by 5" },
             { "description": "Boosts base ATK by 5" },
@@ -4769,8 +4968,16 @@ window.details = {
         special: "Deals random DEX damage to all enemies, randomizes all orbs",
         specialName: "Tempest Kick: Sky Slicer",
         specialNotes: "#{random : 10,000 : 90,000}",
-        captain: "Boosts ATK of DEX characters by 2x, boosts damage of DEX specials by 2x",
+        captain: {
+            "base": "Boosts ATK of DEX characters by 2x, boosts damage of DEX specials by 2x",
+            "level1": "Boosts ATK of [DEX] characters by 2.25x and their HP by 1.25x and boosts damage of [DEX] specials by 2x",
+        },
         captainNotes: "#{noFixedPerc}",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base ATK by 50" },
             { "description": "Boosts base HP by 100" },
@@ -4832,6 +5039,11 @@ window.details = {
         specialNotes: "#{orb : 1.75x}",
         specialName: "Moonlight Ten Finger Pistol",
         captain: "Boosts ATK of Powerhouse characters by 2.5x",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base HP by 30" },
@@ -4881,6 +5093,11 @@ window.details = {
         special: "Reduces damage received by 50% for 1 turn, boosts ATK of Powerhouse characters by 1.75x for 1 turn",
         specialName: "Tekkai - Rin",
         captain: "Boosts ATK of INT characters by 2x, reduces damage received from PSY enemies by 30%",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base HP by 10" },
             { "description": "Boosts base HP by 20" },
@@ -4940,6 +5157,11 @@ window.details = {
         special: "Switches orbs between slots 3 times, locks all orbs for 1 turn",
         specialName: "Life Return: Shishi Finger Pistol",
         captain: "Boosts ATK of STR characters by 3x if HP is below 30% at the start of the turn",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base RCV by 10" },
             { "description": "Boosts base ATK by 30" },
@@ -5094,6 +5316,11 @@ window.details = {
         specialNotes: "The exact multiplier used is chosen based on the crew's current HP at the time the special is activated: above 50% HP, the multiplier used is 1.5x; between 20% HP and 50% HP, it's 1.75x; below 20% HP, it's 2x.",
         specialName: "Precept Deification",
         captain: "Boosts ATK of all characters by 2.5x if HP is below 30% at the start of the turn",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base RCV by 10" },
             { "description": "Boosts base RCV by 20" },
@@ -5422,6 +5649,11 @@ window.details = {
         captain: "Boosts ATK of Driven characters by 2.5x",
         specialName: "Gas Robe",
         special: "Poisons all enemies, boosts ATK of Driven characters by 1.75x for 2 turns",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base RCV by 10" },
@@ -5468,9 +5700,17 @@ window.details = {
         special: "Changes own orb into [INT], boosts own ATK by 2x for 1 turn, deals 15x character's ATK in INT damage to one enemy"
     },
     840: {
-        captain: "Boosts ATK of Striker characters by 2.5x",
+        captain: {
+            "base": "Boosts ATK of Striker characters by 2.5x",
+            "level1": "Boosts ATK of Striker characters by 2.5x and reduces damage received by 7%",
+        },
         specialName: "Demon Bamboo",
         special: "Changes own orb into [INT], boosts own ATK by 2x for 1 turn, deals 15x character's ATK in INT damage to one enemy",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base HP by 30" },
             { "description": "Boosts base HP by 40" },
@@ -5541,6 +5781,11 @@ window.details = {
         captain: "Boosts ATK of all characters by 1.5x after the 11th hit in the chain, by 2.5x after the 22nd hit, by 2.75x after the 30th hit, by 3.5x after the 40th hit",
         specialName: "Gust: Matasaburo",
         special: "Randomizes all orbs and changes own orb into [QCK]",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base HP by 10" },
             { "description": "Boosts base HP by 20" },
@@ -5772,6 +6017,11 @@ window.details = {
         captainNotes: "#{beneficial}",
         specialName: "Beto Launcher",
         special: "Changes the captain's orb into a matching orb, locks all orbs for 1 turn, deals 13x character's ATK in INT damage to all enemies",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base HP by 30" },
             { "description": "Acquire Sailor Ability 1: Boosts base ATK, HP and RCV of Driven characters by 30" },
@@ -5836,6 +6086,11 @@ window.details = {
         specialName: "Battle Preservation Fist: Manki Kayaku",
         special: "Randomly changes all orbs including [BLOCK] orbs into [G] orbs, deals random typeless damage to all enemies",
         specialNotes: "#{gOrbs}<br>#{random : 5,000 : 100,000}",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base RCV by 10" },
             { "description": "Boosts base RCV by 10" },
@@ -6021,7 +6276,10 @@ window.details = {
         specialNotes: "#{stages}"
     },
     906: {
-        captain: "Boosts ATK of Slasher characters by 2.75x if HP is below 30% at the start of the turn",
+        captain: {
+            "base": "Boosts ATK of Slasher characters by 2.75x if HP is below 30% at the start of the turn",
+            "level1": "Boosts ATK of Slasher characters by 3x if HP is below 30% at the start of the turn",
+        },
         specialName: "Two Gorilla Cut",
         special: [
             {
@@ -6037,6 +6295,11 @@ window.details = {
                 "cooldown": [ 24, 18 ]
             }
         ],
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         specialNotes: "#{stages}",
         limit: [
             { "description": "Reduce base Special Cooldown by 1 turn" },
@@ -6254,6 +6517,11 @@ window.details = {
                 "cooldown": [ 31, 17 ]
             }
         ],
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         specialNotes: "#{stages}",
         limit: [
             { "description": "Boosts base HP by 5" },
@@ -6326,9 +6594,17 @@ window.details = {
         special: "Reduces Bind duration for one character completely. For Striker and Cerebral characters, changes Badly Matching orbs into Matching orbs"
     },
     939: {
-        captain: "Reduces cooldown of all specials by 3 turns at the start of the fight, boosts ATK of Cerebral characters by 2x",
+        captain: {
+            "base": "Reduces cooldown of all specials by 3 turns at the start of the fight, boosts ATK of Cerebral characters by 2x",
+            "level1": "Reduces cooldown of all specials by 3 turns at the start of the fight, boosts ATK of Cerebral characters by 2.25x",
+        },
         specialName: "Cyclone Burst",
         special: "Reduces Bind duration for one character completely. For Striker and Cerebral characters, changes Badly Matching orbs into Matching orbs",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base HP by 40" },
             { "description": "Boosts base RCV by 20" },
@@ -6567,7 +6843,10 @@ window.details = {
         specialNotes: "#{stages}"
     },
     978:{
-        captain: "Reduces cooldown of Shooter specials by 2 turns at the start of the fight, boosts ATK of Shooter characters by 2.25x and boosts HP of Shooter characters by 1.5x",
+        captain: {
+            "base": "Reduces cooldown of Shooter specials by 2 turns at the start of the fight, boosts ATK of Shooter characters by 2.25x and boosts HP of Shooter characters by 1.5x",
+            "level1": "Reduces cooldown of Shooter specials by 3 turns at the start of the fight, boosts ATK of Shooter characters by 2.35x and boosts HP of Shooter characters by 1.5x",
+        },
         specialName: "Yata no Kagami (Sacred Mirror)",
         special: [
             {
@@ -6580,6 +6859,11 @@ window.details = {
             }
         ],
         specialNotes: "#{stages}",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base RCV by 10" },
             { "description": "Boosts base RCV by 10" },
@@ -6647,6 +6931,11 @@ window.details = {
         captainNotes: "#{beneficial}",
         specialName: "Flower Sword Straight Cut",
         special: "Deals 25x character's ATK in [QCK] damage to one enemy, changes bottom row orbs into matching orbs",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base ATK by 20" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
@@ -6725,9 +7014,17 @@ window.details = {
         specialName: "Punc Rock Fest"
     },
     993: {
-        captain: "Boosts ATK of [QCK] characters by 2.5x",
+        captain: {
+            "base": "Boosts ATK of [QCK] characters by 2.5x",
+            "level1": "Boosts ATK of [QCK] characters by 2.75x",
+        },
         special: "Cuts the current HP of each enemy by 20% and changes own orb into [QCK]",
         specialName: "Punc Rock Fest",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base RCV by 10" },
             { "description": "Boosts base HP by 60" },
@@ -6834,6 +7131,11 @@ window.details = {
         ],
         specialName: "Decapitation High Heel",
         specialNotes: "#{stages}",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base ATK by 10" },
             { "description": "Boosts base ATK by 20" },
@@ -6883,6 +7185,11 @@ window.details = {
         captain: "Boosts ATK of Driven characters by 2.25x and reduces cooldown of all specials by 2 turns at the start of the fight",
         specialName: "Hira Release: Death Enjambre",
         special: "Delays all enemies for 2 turns, deals 50x character's ATK as typeless damage to all enemies at the end of the turn for 5 turns",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base ATK by 40" },
             { "description": "Boosts base HP by 20" },
@@ -7023,6 +7330,11 @@ window.details = {
         special: "Changes own orb into [PSY]. Deals several times the character's ATK in [PSY] damage to one enemy. Boosts ATK of Slasher characters by 1.5x for 1 turn",
         specialName: "Ravaging Cutlass Dance",
         specialNotes: "#{specialProportional : lower : 75 * ( 1 - (remaining HP) / (total HP) )}",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base ATK by 30" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
@@ -7098,11 +7410,19 @@ window.details = {
         specialName: "Eight-Impact Fist! Blow of Resentment"
     },
     1025: {
-        captain: "Boosts ATK of Powerhouse characters by 2x and boosts the HP of Striker characters by 2x",
+        captain: {
+            "base": "Boosts ATK of Powerhouse characters by 2x and boosts the HP of Striker characters by 2x",
+            "level1": "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of Powerhouse characters by 2.25x and boosts the HP of Striker characters by 2x",
+        },
         captainNotes: "A character with both classes will get both boosts",
         special: "Amplifies the effect of orbs for 2 turns, the exact multiplier changes depending on the current HP at the time the special was activated. ",
         specialNotes: "Below 30% -> 1.75x orb boost, between 30% and 70% -> 1.5x, above 70% -> 1.25x",
         specialName: "Eight-Impact Fist! Blow of Resentment",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base HP by 50" },
             { "description": "Boosts base RCV by 30" },
@@ -7185,6 +7505,11 @@ window.details = {
         captain: "Boosts ATK of Striker and Slasher characters by 2.25x and reduces cooldown of Slasher and Striker characters by 2 turns at the start of the fight",
         special: "Reduces Special Cooldown of Slasher and Striker specials by 1 turn. For Slasher and Striker characters, changes Badly Matching orbs into [RCV] orbs.",
         specialName: "Surprise Pincer Attack",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base HP by 40" },
@@ -7239,6 +7564,11 @@ window.details = {
         special: "Protects from defeat for 1 turn, and deals several times character's ATK in Typeless damage to one enemy",
         specialNotes: "#{specialProportional : lower : 150 * ( 1 - (remaining HP) / (total HP) )} <br> #{zombie}",
         specialName: "Bari Bari No Pistol",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base ATK by 10" },
             { "description": "Boosts base HP by 30" },
@@ -7346,6 +7676,11 @@ window.details = {
         captain: "Boosts ATK of Striker and Slasher characters by 2.75x if they have a matching Orb, by 2x otherwise, reduces crew's RCV to 0.",
         special: "Changes [STR] and [QCK] orbs on Striker and Slasher characters into matching orbs, cuts the current HP of one enemy by 7%",
         specialName: "Hitting Size",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base RCV by 10" },
             { "description": "Boosts base RCV by 20" },
@@ -7415,6 +7750,11 @@ window.details = {
             }
         ],
         specialNotes: "#{stages}",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base RCV by 5" },
             { "description": "Boosts base RCV by 10" },
@@ -7636,6 +7976,11 @@ window.details = {
         captain: "Boosts ATK and HP of [INT] characters by 2x",
         special: "Changes [QCK] and [PSY] orbs into [INT] orbs.",
         specialName: "Tenacious Sword of Destruction",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base HP by 40" },
             { "description": "Boosts base RCV by 30" },
@@ -7692,7 +8037,10 @@ window.details = {
         specialName: "Haute Couture: Patchwork"
     },
     1077:{
-        captain: "Boosts ATK of Striker and Free Spirit characters by 2.25x and their RCV by 1.5x",
+        captain: {
+            "base": "Boosts ATK of Striker and Free Spirit characters by 2.25x and their RCV by 1.5x",
+            "level1": "Boosts ATK of Striker and Free Spirit characters by 2.45x and their RCV by 1.5x",
+        },
         special: [
             {
                 "description": "Delays all enemies for 1 turn. Locks all orbs for 1 turn. Cuts the current HP of all enemies by 10%",
@@ -7705,6 +8053,11 @@ window.details = {
         ],
         specialNotes: "#{stages}",
         specialName: "Haute Couture: Patchwork",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base RCV by 20" },
             { "description": "Boosts base HP by 30" },
@@ -7762,7 +8115,7 @@ window.details = {
             },
         ],
         specialNotes: "#{stages}",
-        specialName: "Chiyupopo"
+        specialName: "Heal Popo"
     },
     1079: {
         captain: "Recovers 4x character's RCV in HP at the end of each turn",
@@ -7781,7 +8134,12 @@ window.details = {
             },
         ],
         specialNotes: "#{stages}",
-        specialName: "Chiyupopo",
+        specialName: "Heal Popo",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base HP by 40" },
@@ -7831,6 +8189,11 @@ window.details = {
         captain: "Boosts ATK of characters with cost 30 or less by 2.5x",
         special: "Deals [DEX] damage to one enemy, changes own orb to [DEX] and boosts own ATK by 2x for 1 turn",
         specialName: "Trueno Bastardo",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base RCV by 20" },
             { "description": "Boosts base ATK by 20" },
@@ -7883,6 +8246,11 @@ window.details = {
         special: "Deals 20x ATK in [STR] damage to all enemies. For 2 turns, boosts ATK of Striker and Fighter characters by a variable amount depending on the current HP at the time the special was activated.",
         specialNotes: "Below 30% -> 1.75 boost, between 30% and 70% -> 1.5, above 70% -> 1.2",
         specialName: "Drill Dragon: Drill Nail",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base RCV by 10" },
             { "description": "Boosts base RCV by 20" },
@@ -7937,6 +8305,11 @@ window.details = {
         special: "Cuts the current HP of each enemy by 20%. At the end of the turn, cuts the current HP of each enemy by 20% for 3 turns",
         specialNotes: "Does not stack with other 'end of turn damage' abilities",
         specialName: "Gravito: Heavens Fall",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base HP by 25" },
             { "description": "Boosts base HP by 25" },
@@ -8150,6 +8523,11 @@ window.details = {
         captain: "Boosts ATK and HP of Driven characters by 2x",
         special: "Deals 30x the character's ATK as Typeless damage to all enemies. Changes [BLOCK], [G], and [BOMB] orbs into Matching orbs for Driven characters. Boosts ATK of Driven characters by 1.75x for 1 turn.",
         specialName: "Lion's Threat: Imperial Earth Bind",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base ATK by 30" },
@@ -8274,14 +8652,14 @@ window.details = {
         captain: "Boosts ATK of [STR], [DEX], and [QCK] characters by 2.5x, but boosts his OWN attack by 4x",
         captainNotes: "Cavendish only boosts Friend or Sub Cavendish by 2.5x for a total of 10x boost with two Cavendish captains",
         special: "Removes all positive buffs on your team. Deals 15x the character's ATK as Typeless damage to all enemies. Boosts own ATK by 2.25x for 2 turns, amplifies the effect of own orb by 1.5x for 2 turns, locks own orb for 2 turns, and changes own orb to [QCK].",
-        specialNotes: "Boosted ATK and Orb Effectivess only works for the character who uses their own Special.",
+        specialNotes: "Boosted ATK and Orb effectiveness only works for the character who uses their own Special.",
         specialName: "Slicing Winds of Rommel"
     },
     1123: {
         captain: "Boosts ATK of [STR], [DEX], and [QCK] characters by 2.5x, but boosts his OWN attack by 4x",
         captainNotes: "Cavendish only boosts Friend or Sub Cavendish by 2.5x for a total of 10x boost with two Cavendish captains",
         special: "Removes all positive buffs on your team. Deals 15x the character's ATK as Typeless damage to all enemies. Boosts own ATK by 2.25x for 2 turns, amplifies the effect of own orb by 1.5x for 2 turns, locks own orb for 2 turns, and changes own orb to [QCK].",
-        specialNotes: "Boosted ATK and Orb Effectivess only works for the character who uses their own Special.",
+        specialNotes: "Boosted ATK and Orb effectiveness only works for the character who uses their own Special.",
         specialName: "Slicing Winds of Rommel"
     },
     1124: {
@@ -8295,6 +8673,11 @@ window.details = {
         captainNotes: "His ATK multiplier will be 3.5x on the first turn, 3.4x on the second, 3.3x on the third and so on. The reduction stops once the multiplier is 1.0x. The multiplier affects all Slasher characters.",
         special: "Deals 13x character's ATK in [PSY] damage to all enemies, changes own orb and captain's orb into Matching orbs.",
         specialName: "Idle Execution",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base ATK by 10" },
             { "description": "Boosts base ATK by 15" },
@@ -8357,6 +8740,11 @@ window.details = {
         captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of all characters by 2x",
         special: "Reduces Paralysis and Despair duration by 5 turns. Cuts the current HP of one enemy by 10%",
         specialName: "Tactician's Savage Cut",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base ATK by 40" },
@@ -8673,6 +9061,11 @@ window.details = {
         specialName: "Three-Verse Humming: Arrow-Notch Slash",
         captain: "Boosts ATK of PSY characters by 2x, reduces damage received from INT enemies by 30%",
         sailor: "Boosts base RCV of PSY characters by 15",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base ATK by 50" },
@@ -8724,7 +9117,10 @@ window.details = {
         special: "Changes adjacent orbs into [DEX], deals 1,000 fixed damage to all enemies",
         specialName: "Ashura Ugui",
         specialNotes: "#{fixed}",
-        captain: "Boosts ATK of DEX characters by 3x if HP is below 30% at the start of the turn",
+        captain: {
+            "base": "Boosts ATK of DEX characters by 3x if HP is below 30% at the start of the turn",
+            "level1": "Boosts ATK of [DEX] characters by 3x if HP is below 30% at the start of the turn, by 2x otherwise",
+        },
         sailor: "Boosts base ATK of Slasher characters by 20",
         limit: [
             { "description": "Reduce base Special Cooldown by 1 turn" },
@@ -8855,6 +9251,11 @@ window.details = {
         specialNotes : "#{stages}",
         specialName: "Extreme Speed - One Sword Style, Ten Slashes",
         sailor: "Restores his own special by 1 turn when it is rewinded",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         sailorNotes: "#{rewind : 1}",
         limit: [
             { "description": "Boosts base RCV by 10" },
@@ -8926,6 +9327,11 @@ window.details = {
         specialNotes: "Does not affect DEF Boost or % Damage reduction buffs. Reduces timers for Barriers such as Perfect/Great/Good Barriers, Combo Hit Barriers and Orb Hit Barriers",
         specialName: "Break Bullet",
         sailor: "Boosts base ATK of [QCK] characters by 40",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base RCV by 10" },
             { "description": "Boosts base RCV by 20" },
@@ -8997,6 +9403,11 @@ window.details = {
         captain: "Boosts ATK of Striker characters by 2x. Recovers 5x character's RCV in HP at the end of each turn",
         special: "Reduces crew's current HP by 60%, deals 8x the amount of HP subtracted in typeless damage to all enemies. Boosts ATK of Striker characters by 1.75x for 1 turn",
         specialName: "Split Air Hole",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base RCV by 10" },
             { "description": "Boosts base RCV by 10" },
@@ -9117,6 +9528,11 @@ window.details = {
         specialName: "Heavenly Dragon Star",
         captain: "Boosts ATK of Shooter characters by 2x and their RCV by 1.5x",
         sailor: "Boosts base RCV of Shooter characters by 10",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base RCV by 20" },
@@ -9244,6 +9660,11 @@ window.details = {
         ],
         specialNotes: "#{stages}",
         specialName: "More More, 10 Times \"Iron Hammer\"",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base HP by 10" },
             { "description": "Boosts base HP by 20" },
@@ -9382,6 +9803,11 @@ window.details = {
         specialNotes: "This is the same type of ability as raid boss Shiki's swap. You cannot use it if another effect swaps your captain. (Such as if Shiki swaps first)",
         specialName: "Armed - White Launcher",
         sailor: "Boosts base ATK of Striker characters by 50",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base HP by 30" },
             { "description": "Boosts base HP by 40" },
@@ -9460,10 +9886,18 @@ window.details = {
         sailorNotes: "#{beneficial}",
     },
     1238: {//Bastille
-        captain: "Boosts ATK of all characters by 2x after the 15th hit in the chain and by 3x after the 30th hit",
+        captain: {
+            "base": "Boosts ATK of all characters by 2x after the 15th hit in the chain and by 3x after the 30th hit",
+            "level1": "Boosts HP of all characters by 1.25x. Boosts ATK of all characters by 2x after the 12th hit in the chain and by 3x after the 28th hit",
+        },
         special: "Deals 20x character's ATK in [STR] damage to all enemies. Boosts ATK of all characters by 2x after 30th hit in the chain for 1 turn.",
         specialName: "Shark Cutter - Flash",
         sailor: "Makes [QCK] orbs \"beneficial\" for this unit",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         sailorNotes: "#{beneficial}",
         limit: [
             { "description": "Boosts base ATK by 20" },
@@ -9628,6 +10062,11 @@ window.details = {
         ],
         specialNotes: "#{stages}",
         specialName: "Burning Vanguard",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base RCV by 10" },
             { "description": "Boosts base RCV by 20" },
@@ -9793,6 +10232,11 @@ window.details = {
         special: "Cuts the current HP of each enemy by 30%. If Blackbeard is a captain, this ability will ignore damage negating abilities and barriers",
         specialNotes: "If Blackbeard is not a captain, the effect works exactly like Whitebeard special and is affected by barriers.",
         specialName: "World Shaking Impact",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base ATK by 10" },
             { "description": "Boosts base HP by 20" },
@@ -9872,6 +10316,11 @@ window.details = {
         specialNotes: "Ex. A STR character with a QCK orb will still deal regular damage",
         sailor: "Boosts base ATK of all characters by 100 if your captain is a Driven character",
         specialName: "Horrifying Suggestion",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base HP by 10" },
             { "description": "Boosts base RCV by 10" },
@@ -9922,6 +10371,11 @@ window.details = {
         captain: "Reduces cooldown of Shooter specials by 1 turn at the start of the fight. Boosts ATK of Shooter characters by 2.5x.",
         special: "Changes orbs in the top row into Matching orbs. For Shooter characters, amplifies the effect of orbs by 1.75x for 1 turn",
         sailor: "Reduces Blindness duration by 5 turns",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         specialName: "Other Side of Fate",
         limit: [
             { "description": "Boosts base ATK by 20" },
@@ -10003,6 +10457,11 @@ window.details = {
         captain: "Reduces RCV of all characters by 99%. Boosts ATK of Slasher and Striker characters by 2.75x if HP is above 99% at the start of the turn",
         special: "Reduces crew's current HP by 10%. Changes [BLOCK], [TND], and [RCV] orbs on Slasher and Striker characters into Matching Orbs.",
         sailor: "Boosts amount healed from [RCV] orbs by 150 each",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         specialName: "Reaping of Desperate Lives",
         limit: [
             { "description": "Boosts base ATK by 20" },
@@ -10260,6 +10719,11 @@ window.details = {
         captainNotes: "If a character has a [STR] orb, regardless of type, they will have a 3.9375x ATK boost",
         special: "Deals 125x character's ATK typeless damage to all enemies and randomizes non-[STR] orbs. Boosts ATK of characters with cost 50 or higher by 1.75x for 2 turns",
         specialName: "Meteor Volcano",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base ATK by 20" },
@@ -10388,10 +10852,18 @@ window.details = {
         specialName: "A Decree of the Veteran",
     },
     1320: {//Lady Tsuru
-        captain: "Heals for 1.5x her RCV at the end of the turn each time you hit a Good. Heals for .1x her RCV at the end of the turn each time you hit a Perfect",
+        captain: {
+            "base": "Heals for 1.5x her RCV at the end of the turn each time you hit a Good. Heals for .1x her RCV at the end of the turn each time you hit a Perfect",
+            "level1": "Boosts ATK of all characters by 1.2x, heals for 1.5x her RCV at the end of the turn each time you hit a Good. Heals for .3x her RCV at the end of the turn each time you hit a Perfect",
+        },
         special: "Deals 10 hits of random [QCK] damage to random enemies. Boosts ATK of all characters by 1.5x for 1 turn",
         specialNotes: "#{randomHits : 10}<br>#{random : 1,000 : 32,000 : for each hit}",
         sailor: "Reduces Paralysis duration by 1 turn",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         specialName: "A Decree of the Veteran",
         limit: [
             { "description": "Boosts base RCV by 10" },
@@ -10587,6 +11059,11 @@ window.details = {
         captain: "Boosts ATK of Striker and Free Spirit characters by 2.25x, reduces damage received by 10%",
         special: "Changes [RCV], [TND], [EMPTY], [G] and [BOMB] orbs into Badly Matching orbs and [STR], [QCK], [DEX], [PSY] and [INT] orbs into Matching orbs for Free Spirit and Striker characters.",
         specialName: "Brushman's Brush",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base HP by 20" },
             { "description": "Boosts base HP by 30" },
@@ -10913,13 +11390,13 @@ window.details = {
     1375: {//Dellinger
         captain: "Boosts ATK of Powerhouse characters by 2.5x, reduces crew's HP by 50%, Increases damage received by 2x",
         special: "Deals 20x character's ATK in [QCK] damage to one enemy, Boosts Dellinger's ATK by 1.5x for 1 turn, amplifies the effect of Dellinger's orb by 1.5x for 1 turn, and changes own orb to [QCK].",
-        specialNotes: "Boosted ATK and Orb Effectivess only works for the Dellinger who uses his Special.",
+        specialNotes: "Boosted ATK and Orb effectiveness only works for the Dellinger who uses his Special.",
         specialName: "Deadly Fangs of Rage",
     },
     1376: {//Dellinger
         captain: "Boosts ATK of Powerhouse characters by 2.75x, reduces crew's HP by 20%, Increases damage received by 2x",
         special: "Deals 20x character's ATK in [QCK] damage to one enemy, Boosts Dellinger's ATK by 1.5x for 1 turn, amplifies the effect of Dellinger's orb by 1.5x for 1 turn, and changes own orb to [QCK].",
-        specialNotes: "Boosted ATK and Orb Effectivess only works for the Dellinger who uses his Special.",
+        specialNotes: "Boosted ATK and Orb effectiveness only works for the Dellinger who uses his Special.",
         specialName: "Deadly Fangs of Rage",
     },
     1377: {//Marguerite
@@ -11037,6 +11514,11 @@ window.details = {
         captain: "Boosts ATK of [DEX] characters by 2.5x",
         special: "Cuts the current HP of each enemy by 10%. Reduces special cooldown of [DEX] specials by 1 turn.",
         specialName: "Ittoriyu: Unfortunate Port Bird",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base HP by 30" },
             { "description": "Boosts base RCV by 10" },
@@ -11082,6 +11564,11 @@ window.details = {
         special: "Deals 20x character's ATK in [INT] damage to all enemies. Amplifies the effect of orbs for [INT] characters by 1.75x for 1 turn",
         specialName: "Weather Egg: Thunder Breed Tempo",
         specialNotes: "#{orb : 1.75x}",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base ATK by 10" },
             { "description": "Boosts base RCV by 10" },
@@ -11208,6 +11695,11 @@ window.details = {
         ],
         specialName: "Stonewall Punk",
         specialNotes: "#{colorAffinity : 1.75}<br>#{stages}",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base HP by 10" },
             { "description": "Boosts base RCV by 10" },
@@ -11335,6 +11827,11 @@ window.details = {
         special: "Delays all enemies by 1 turn, and boosts ATK of Slasher and Free Spirit characters by 1.75x for 1 turn",
         specialName: "Soul's Murder Soul: Soul Solid",
         sailor: "Completely resists Paralysis on this character",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base HP by 10" },
             { "description": "Boosts base RCV by 10" },
@@ -11393,6 +11890,11 @@ window.details = {
         captain: "Boosts ATK of all characters by 3x if HP is below 30% at the start of the turn, 1.75x otherwise and boosts the HP of all characters by 1.2x",
         special: "Cuts the current HP of each enemy by 30%, reduces special cooldown of all non-Captain specials by 1 turn, and randomizes non-matching orbs including [BLOCK] orbs.",
         specialName: "Emperor's Pride",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base ATK by 5" },
             { "description": "Boosts base HP by 5" },
@@ -11420,7 +11922,7 @@ window.details = {
             { "description": "Boosts base HP by 80" },
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base RCV by 40" },
-            { "description": "Acquire Sailor Ability 2: 	Completely resists Paralysis on this character" },
+            { "description": "Acquire Sailor Ability 2: Completely resists Paralysis on this character" },
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base ATK by 50" },
             { "description": "Acquire Potential 3: Enrage" },
@@ -11503,6 +12005,11 @@ window.details = {
         captain: "Boosts ATK of Driven characters by 2.25x and boosts HP of Striker and Slasher characters by 1.5x",
         special: "Deals 20x Character's ATK in [INT] damage to all enemies. If HP is full at the time the special was activated, boosts ATK of Driven characters by 2x for 1 turn, 1.5x otherwise",
         specialName: "Half Moon Glaive",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base RCV by 20" },
@@ -11628,6 +12135,11 @@ window.details = {
         ],
         specialNotes: "#{ignoreBarrier}<br>#{stages}",
         specialName: "Water Bullets",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base ATK by 5" },
             { "description": "Boosts base ATK by 5" },
@@ -11706,6 +12218,11 @@ window.details = {
         specialName: "Staggering Slash",
         specialNotes: "Decreases timing window to hit a Perfect. (Animation remains the same)",
         sailor: "Boosts base ATK of all characters by 150 if there are 6 Powerhouse characters in your crew",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base RCV by 10" },
             { "description": "Boosts base ATK by 20" },
@@ -11776,6 +12293,11 @@ window.details = {
         specialNotes: "#{silence}",
         specialName: "Fire Daruma Cutter",
         sailor: "Completely resists Silence on this character",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         sailorNotes: "#{silence}",
         limit: [
             { "description": "Boosts base ATK by 20" },
@@ -11830,6 +12352,11 @@ window.details = {
         specialNotes: "Increases timing window to hit a Perfect. (Animation remains the same)",
         specialName: "Flail Hidden From God",
         sailor: "Completely resists Blindness if your Captain is a Powerhouse character",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base ATK by 10" },
             { "description": "Boosts base HP by 20" },
@@ -11882,6 +12409,11 @@ window.details = {
         special: "Changes [RCV], [TND], [EMPTY], [BLOCK] and [BOMB] orbs into [STR], [QCK], [DEX], [PSY] or [INT] orbs, boosts ATK of Powerhouse characters by 1.5x and amplifies the effect of orbs by 1.5x for 1 turn",
         specialName: "Papara Hammer",
         sailor: "Boost HP of all characters by 150 and also ATK of all characters by 50 if there are 6 Powerhouse characters in your crew",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base ATK by 10" },
             { "description": "Boosts base ATK by 20" },
@@ -11933,6 +12465,11 @@ window.details = {
         captain: "Boosts ATK of Shooter characters by 2x and RCV of Shooter characters by 1.25x.",
         special: "Deals random PSY damage to all enemies and delays enemies by 3 turns.",
         specialName: "Green Star: Platanus Shuriken",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base RCV by 10" },
             { "description": "Boosts base RCV by 20" },
@@ -11987,6 +12524,11 @@ window.details = {
         ],
         specialNotes: "#{stages}",
         specialName: "Grill Shot",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base HP by 30" },
             { "description": "Boosts base RCV by 10" },
@@ -12212,6 +12754,11 @@ window.details = {
         ],
         specialNotes: "Rainbow orbs are the beneficial form of [BLOCK] orbs. They can not be shuffled or swapped by you or your opponent. They count as beneficial orbs to any character. They do not count as STR orbs for Sakazuki but do act like Matching orbs for Black Clad Ace or Fujitora captain abilities.<br>#{stages}",
         sailor: "Changes all orbs into [RAINBOW] orbs at the start of the fight.",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         specialName: "Tears of Courage",
         limit: [
             { "description": "Boosts base RCV by 5" },
@@ -12304,6 +12851,11 @@ window.details = {
         captainNotes: "This effect does stack for characters that have both classes, so Striker/Powerhouse characters will have 2.5x ATK and 1.25x HP",
         special: "Delays all enemies by 1 turn, and boosts ATK of Striker and Powerhouse characters by 1.75x for 1 turn",
         sailor: "Boosts base HP, RCV and ATK of all characters by 50",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         specialName: "Merman Gujutsu - Spear of the Ages",
         limit: [
             { "description": "Boosts base HP by 20" },
@@ -12357,6 +12909,11 @@ window.details = {
         special: "Deals 15 hits of 12x character's ATK in typeless damage to random enemies and boosts ATK of [QCK] and [INT] characters by 2x for 1 turn",
         specialNotes: "#{randomHits : 15}",
         sailor: "Completely resists Paralysis on this character",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         specialName: "Swamp-Swamp Gatling Gun",
         limit: [
             { "description": "Boosts base ATK by 20" },
@@ -12767,6 +13324,11 @@ window.details = {
         ],
         specialNotes: "#{stages}",
         sailor: "Completely resists Blindness",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         specialName: "Long-Range Attack: Bagworm",
         limit: [
             { "description": "Boosts base ATK by 15" },
@@ -12883,6 +13445,11 @@ window.details = {
         captain: "Boosts ATK of characters with cost 30 or less by 2.25x and their RCV by 1.5x",
         special: "Reduces damage received by 90% for 1 turn, reduces the defense of all enemies by 90% for 1 turn, reduces enemy's Threshold Damage Reduction and Percent Damage Reduction duration by 2 turns",
         sailor: "Boosts base ATK of INT characters by 50",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         specialName: "Negative Hollow: You're All Rotten Imbeciles",
         limit: [
             { "description": "Boosts base ATK by 20" },
@@ -12943,6 +13510,11 @@ window.details = {
         captainNotes: "The Attack Timer increase is NOT a delay, so the enemies can still be delayed. Attack Timer increase ignores Debuff Prevention barriers.<br>#{beneficial}",
         special: "Cuts the current HP of each enemy by 10%. If enemies have Delay Prevention, ignores it and Delays all enemies for 1 turn. Otherwise, Delays all enemies for 3 turns",
         sailor: "Completely resists Blindness",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         specialName: "Green Star, Impact Wolf",
         limit: [
             { "description": "Boosts base ATK by 15" },
@@ -13059,6 +13631,11 @@ window.details = {
         captain: "Boosts ATK of characters with 40 cost by 2.75x",
         special: "Deals 300,000 Fixed damage to one enemy, boosts ATK of characters with 40 cost by 1.75x, reduces enemy Barrier duration by 1 turn",
         specialName: "Thunder Giant",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base ATK by 10" },
             { "description": "Boosts base ATK by 30" },
@@ -13198,7 +13775,7 @@ window.details = {
         specialName: "The Princess' Principle",
     },
     1569: {//Anniversary Law
-        captain: "Boosts ATK of all characters by 2.25x and boosts EXP and amount of Beli recieved by 1.2x",
+        captain: "Boosts ATK of all characters by 2.25x and boosts EXP and amount of Beli received by 1.2x",
         special: "Randomizes all non-matching orbs, including [BLOCK] orbs and switches orbs between slots three times",
         specialName: "ROOM Shambles・Junction",
     },
@@ -13320,6 +13897,11 @@ window.details = {
         captain: "Boosts ATK of Striker characters by 3x if HP is below 30% at the start of the turn, by 2.5x otherwise",
         special: "Locks all orbs for 1 turn. If there are 4 enemies or more on the stage, amplifies the effect of orbs for Striker characters by 2x for 1 turn, otherwise amplifies the effect of orbs for Striker characters by 1.5x for 1 turn",
         specialName: "Admiral Hug",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base HP by 20" },
             { "description": "Boosts base HP by 30" },
@@ -13556,6 +14138,11 @@ window.details = {
         special: "Deals 20x character's ATK in [INT] damage to all enemies, reduces Special Cooldown of Striker characters by 1 turn and boosts ATK of Striker characters and amplifies orbs of Striker characters by 1.5x for 1 turn",
         specialName: "Desert Spada",
         sailor: "Restores his own special by 2 turns when it is rewinded",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         sailorNotes: "#{rewind : 2}",
         limit: [
             { "description": "Boosts base HP by 20" },
@@ -13623,6 +14210,11 @@ window.details = {
         captain: "Boosts ATK of Striker characters by 3x if HP is below 30% at the start of the turn, by 2.5x otherwise and boosts HP of Striker characters by 1.2x",
         special: "Reduces crew's current HP by 80%, boosts ATK of Striker characters by 2x for 1 turn",
         specialName: "Double Steel Magnetic Arm",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base ATK by 30" },
@@ -13750,6 +14342,11 @@ window.details = {
         special: "Boosts ATK of Powerhouse characters by 1.75x for 3 turns",
         specialName: "Rebellion against the \"Prohibition\" - Taboo",
         sailor: "When any other Powerhouse character uses a special, reduces own cooldown by 1 turn",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base HP by 30" },
             { "description": "Boosts base ATK by 10" },
@@ -13912,6 +14509,11 @@ window.details = {
         special: "Deals 60x character's ATK in [PSY] damage to one enemy and makes [STR], [DEX], [QCK], [PSY] and [INT] orbs \"beneficial\" for Striker characters for 1 turn",
         specialNotes: "#{beneficial}",
         specialName: "Daybreak Ruler's Spear",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base RCV by 5" },
             { "description": "Boosts base RCV by 5" },
@@ -13988,6 +14590,11 @@ window.details = {
         captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of [INT] characters by 2.5x",
         special: "Reduces crew's HP to 1, deals 7x the amount of HP subtracted in typeless damage to all enemies, amplifies the effect of orbs by 1.75x for 1 turn",
         sailor: "Makes INT orbs \"beneficial\" for Slasher and Cerebral characters",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         sailorNotes: "#{beneficial}",
         specialName: "Charge Drive",
         limit: [
@@ -14105,6 +14712,11 @@ window.details = {
         special: "Deals 75x character's ATK in typeless damage to one enemy, greatly boosts chances of getting matching orbs for 3 turns",
         specialName: "Six Powers Supreme: Six King Gun",
         captain: "Boosts ATK of Powerhouse characters by 3.5x if they have a matching orb, by 2.5x otherwise, reduces crew's RCV to 0",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base ATK by 5" },
             { "description": "Boosts base ATK by 5" },
@@ -14180,6 +14792,11 @@ window.details = {
         captain: "Boosts ATK of Shooter characters by 2.5x and boosts ATK of Shooters by 3.25x after scoring 3 PERFECTS in a row",
         special: "Locks all orbs for 1 turn. If during that turn, you hit 2 PERFECTS and your Captain is a Shooter character, boosts ATK of Shooter characters by 2x for 1 turn in the following turn.",
         specialName: "Ice Saber",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base HP by 20" },
             { "description": "Boosts base HP by 30" },
@@ -14292,6 +14909,11 @@ window.details = {
         captain: "Boosts ATK of Slasher characters by 2.5x at the start of the chain, by 3.25x after the 3rd Perfect in a row",
         special: "Boosts the Color Affinity of Slasher by 1.5x for 1 turn, changes middle row orbs into matching orbs and switches orbs between slots three times",
         specialName: "ROOM: Kikoku",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base RCV by 10" },
@@ -14423,13 +15045,13 @@ window.details = {
     1693: {//Inuarashi
         captain: "Boosts ATK of [PSY] characters by 2x",
         special: "Reduces crew's current HP by 50%, deals 50000 Fixed damage to one enemy, boosts own ATK by 1.75x for 1 turn, amplifies the effect of own orb by 1.75x for 1 turn and changes own orb to [PSY].",
-        specialNotes: "Boosted ATK and Orb Effectivess only works for the character who uses their own Special.",
+        specialNotes: "Boosted ATK and Orb effectiveness only works for the character who uses their own Special.",
         specialName: "King's Lightning Burial",
     },
     1694: {//Inuarashi
         captain: "Boosts ATK of [PSY] characters by 2.75x",
         special: "Reduces crew's current HP by 50%, deals 50000 Fixed damage to one enemy, boosts own ATK by 1.75x for 1 turn, amplifies the effect of own orb by 1.75x for 1 turn and changes own orb to [PSY].",
-        specialNotes: "Boosted ATK and Orb Effectivess only works for the character who uses their own Special.",
+        specialNotes: "Boosted ATK and Orb effectiveness only works for the character who uses their own Special.",
         specialName: "King's Lightning Burial",
     },
     1695: {//Vergo
@@ -14441,6 +15063,11 @@ window.details = {
         captain: "Boosts ATK of Striker characters by 2.5x and reduces damage received by 10%",
         special: "Deals 50x character's ATK in [DEX] damage to one enemy, amplifies the effect of orbs for Striker characters by 1.75x for 1 turn and reduces damage received by 50% for 1 turn",
         specialName: "The Darkest Demon",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base HP by 20" },
@@ -14492,6 +15119,11 @@ window.details = {
         special: "Inflicts Toxic to all enemies, recovers 13x character's RCV in HP at the end of each turn for 3 turns",
         specialNotes: "Toxic starts at 50x character's attack and increases by 2x at the end of every turn until 2,000,000 damage per turn.",
         specialName: "Venom Cloud",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base ATK by 15" },
             { "description": "Boosts base HP by 20" },
@@ -14570,6 +15202,11 @@ window.details = {
         specialName: "Gentle Ultrasound Wave",
         specialNotes: "This is most likely the effect that prevents your chain from exceeding a certain value.",
         sailor: "Boosts base ATK of Fighter characters by 75",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base ATK by 25" },
             { "description": "Boosts base HP by 50" },
@@ -14650,6 +15287,11 @@ window.details = {
         specialName: "Hair Removal Fist",
         specialNotes: "#{stages}",
         sailor: "Completely resists Paralysis on this character",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base RCV by 10" },
             { "description": "Boosts base HP by 50" },
@@ -14702,6 +15344,11 @@ window.details = {
         special: "Reduces damage received by 50% for 2 turns and boosts ATK against enemies inflicted with Toxic by 1.75x for 2 turns",
         specialName: "Inferno Hell Wheel",
         sailor: "Makes [STR], [QCK], [DEX], [PSY] and [INT] orbs \"beneficial\" for this unit if your Captain is a Striker character",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         sailorNotes: "#{beneficial}",
         limit: [
             { "description": "Boosts base HP by 20" },
@@ -14755,6 +15402,11 @@ window.details = {
         special: "Removes all positive buffs on your team. If the special is activated with more than 50% health remaining, protects from defeat for 1 turn",
         specialName: "A Speech Left in Hell",
         sailor: "Boosts base ATK, HP and RCV of all characters by 50",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base ATK by 15" },
             { "description": "Boosts base RCV by 15" },
@@ -14838,6 +15490,11 @@ window.details = {
         captainNotes: "If a character dies and revives, it counts as killing a character. If you did not defeat an enemy, lose all ATK boost stacks.",
         special: "Deals 50x character's ATK as typeless damage to all enemies. Amplifies the effect of orbs for Driven characters by 2x for 1 turn.",
         specialName: "Blazing Hound Crimson Lotus",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base ATK by 10" },
             { "description": "Boosts base ATK by 10" },
@@ -14919,6 +15576,11 @@ window.details = {
         captain: "Boosts HP of Fighter characters by 1.4x and boosts ATK by 2.75x if they have a matching orb, by 2.5x otherwise.",
         special: "If your Captain is a Fighter character, changes adjacent orbs into matching orbs and locks the chain multiplier at 2.5x for 1 turn",
         specialName: "Passive Agressive Boss",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base HP by 20" },
             { "description": "Boosts base HP by 30" },
@@ -15075,6 +15737,11 @@ window.details = {
         captain: "Boosts ATK of Striker and Powerhouse characters by 2.5x and boosts HP of [DEX] characters by 1.3x",
         special: "Changes all orbs to [DEX] orbs, reduces the defense of all enemies by 80% for 2 turns, and boosts ATK of Striker and Powerhouse characters by 1.75x for 2 turns",
         sailor: "Makes [STR] orbs \"beneficial\" for this unit",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         sailorNotes: "#{beneficial}",
         specialName: "Snake Hair Possession: Eight-Headed Serpent",
         limit: [
@@ -15129,6 +15796,11 @@ window.details = {
         captain: "Boosts ATK of Striker and Powerhouse characters by 2.5x and boosts HP of [STR] characters by 1.3x",
         special: "Changes [QCK] and [DEX] orbs into Matching orbs, boosts ATK against enemies with reduced defense by 1.75x for 2 turns and reduces damage received by 60% for 1 turn",
         sailor: "Makes [DEX] orbs \"beneficial\" for this unit",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         sailorNotes: "#{beneficial}",
         specialName: "Snake Hair Possession: Salamander",
         limit: [
@@ -15182,6 +15854,11 @@ window.details = {
         captain: "Boosts ATK of Shooter characters by 2x and recovers 2x character's RCV in HP at the end of each turn",
         special: "Cuts the current HP of one enemy by 7% and amplifies the effect of orbs for Shooter characters by 1.75x for 3 turns",
         sailor: "Boosts base ATK, HP and RCV of Shooter characters by 30",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         specialName: "Defender's Spade-Shaped Arrow",
         limit: [
             { "description": "Boosts base RCV by 10" },
@@ -15236,6 +15913,11 @@ window.details = {
         special: "Deals 6 hits of 20,000 fixed damage to random enemies, delays all enemies for 1 turn and makes [STR], [DEX], [QCK], [PSY] and [INT] orbs \"beneficial\" for Shooter characters for 2 turns",
         specialNotes: "#{beneficial}",
         specialName: "Pistol Kisses",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base RCV by 10" },
             { "description": "Boosts base HP by 30" },
@@ -15311,6 +15993,11 @@ window.details = {
         captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK and HP of QCK characters by 2x",
         special: "Cuts the current HP of one enemy by 15% and reduces enemy's Threshold Damage Reduction duration by 5 turns",
         sailor: "If this character has a [QCK] orb and you hit a Perfect with him, keep his [QCK] orb for the next turn",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         specialName: "Bear Rush Out",
         limit: [
             { "description": "Boosts base HP by 20" },
@@ -15381,6 +16068,11 @@ window.details = {
         ],
         specialNotes:"#{stages}",
         specialName: "Injection Shot",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base ATK by 10" },
             { "description": "Boosts base ATK by 20" },
@@ -15521,6 +16213,11 @@ window.details = {
         captain: "Boosts ATK of Powerhouse characters by 2.5x and their HP by 1.2x at the start of the chain. Reduces RCV of all characters by 50%.<br>Boosts ATK of Powerhouse characters by 2.75x after the 1st Perfect in a row, by 3.025x after the 2nd Perfect in a row, by 3.3275x after the 3rd Perfect in a row, by 3.66025x after the 4th Perfect in a row, and by 4.026275x after the 5th Perfect in a row.",
         special: "Reduces the defense of all enemies by 80% for 2 turns, deals 50x character's ATK in typeless damage to all enemies and changes all orbs on Powerhouse characters into Matching orbs, recover 20% of crew's MAX HP.",
         specialName: "Flying Finger Gun: Fire Sting",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base ATK by 10" },
             { "description": "Boosts base ATK by 20" },
@@ -15623,6 +16320,11 @@ window.details = {
         captain: "Boosts ATK of Cerebral characters by 2.5x and their HP by 1.2x at the start of the chain, and boosts ATK of Cerebral characters by 3.25x following a chain of Good > Great > Perfect hits",
         special: "Delays all enemies for 1 turn. If your captain is a Cerebral Character, boosts ATK against delayed enemies by 1.5x for 1 turn and changes adjacent orbs into Matching Orbs",
         specialName: "Restraining Gunpoint",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base RCV by 10" },
             { "description": "Boosts base HP by 30" },
@@ -15705,6 +16407,11 @@ window.details = {
         special: "Deals 50x character's ATK in typeless damage to one enemy that will ignore damage negating abilities and barriers, changes [BLOCK], [STR], and [INT] orbs into Matching orbs for Free Spirit characters and adds .2x to Chain multiplier for 3 turns",
         specialName: "Devil Destroyer's Light Arrow",
         specialNotes: "#{ignoreBarrier}",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base RCV by 10" },
             { "description": "Boosts base HP by 30" },
@@ -15835,6 +16542,11 @@ window.details = {
         special: "Cuts the current HP of one enemy by 20% that will ignore damage negating abilities and barriers. Changes the orbs in the top row into [STR] orbs, changes the orbs in the middle row into [QCK] orbs, changes the orbs in the bottom row into [DEX] orbs and amplifies the effect of orbs by 1.75x for 1 turn",
         specialNotes: "#{ignoreBarrier}",
         sailor: "If your captain is a [STR] character, boosts this character's attack against [STR] characters by 1.5x",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         specialName: "Gomu Gomu no Hawk Rifle",
         limit: [
             { "description": "Boosts base ATK by 10" },
@@ -15888,6 +16600,11 @@ window.details = {
         captainNotes: "Sabo boosts ATK by 3.7125x if you have [STR], [DEX] and [QCK] type characters, and no [PSY] or [INT] characters at all.<br>#{beneficial}",
         special: "Boosts ATK of [STR], [DEX] and [QCK] characters by 1.75x for 1 turn. If during that turn you score 4 Perfect hits, boosts ATK of [STR], [DEX] and [QCK] characters by 2x in the following turn.",
         specialName: "Dragon's Claw: Reverse Wave Motion",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base ATK by 10" },
             { "description": "Boosts base HP by 30" },
@@ -15964,6 +16681,11 @@ window.details = {
         captain: "Boosts ATK of Slasher and Driven characters by 2.5x",
         special: "Delays all enemies for 2 turns, reduces enemies Percent Damage Reduction and Increased Defense duration by 3 turns and changes right column [STR], [DEX], [QCK], [PSY] and [INT] orbs into Matching orbs",
         sailor: "Boosts this character's attack against [STR] characters by 1.1x",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         specialName: "Snake Sword",
         limit: [
             { "description": "Boosts base ATK by 10" },
@@ -16043,6 +16765,11 @@ window.details = {
         ],
         specialNotes: "#{stages}",
         sailor: "Boosts base ATK and HP of [STR], [DEX], and [QCK] characters by 75",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         specialName: "Shockwave Elbow",
         limit: [
             { "description": "Boosts base ATK by 20" },
@@ -16096,6 +16823,11 @@ window.details = {
         captain: "Boosts ATK of [STR], [DEX] and [QCK] characters by 2.5x and their RCV by 1.2x",
         special: "Changes [BLOCK] orbs into Matching orbs, locks all orbs for 1 turn, boosts ATK against enemies with reduced defense by 1.75x for 2 turns",
         sailor: "Makes [INT] and [PSY] orbs \"beneficial\" for this unit",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         sailorNotes: "#{beneficial}",
         specialName: "Beautiful Sword: Round Table",
         limit: [
@@ -16148,6 +16880,11 @@ window.details = {
         captain: "Boosts ATK of [STR], [DEX] and [QCK] characters by 2.5x and if you don't attack with Bartolomeo, reduces damage received by 15% for that turn.",
         special: "Deal 30x character's ATK in [QCK] damage to all enemies, reduces damage received by 90% for 1 turn and reduces the defense of all enemies by 80% for 2 turns",
         sailor: "Reduces Paralysis duration for 3 turns for himself",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         specialName: "Barrier Bulls",
         limit: [
             { "description": "Boosts base HP by 10" },
@@ -16226,24 +16963,29 @@ window.details = {
         },
         special: "Deals 100x character's ATK in typeless damage to all enemies, if your Captain is a Slasher character, amplifies the effects of orbs for Slasher characters by 2x for 1 turn and locks the chain multiplier at 2.75x for 1 turn",
         specialName: "Black Blade • The Ultimate Sword",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base ATK by 10" },
             { "description": "Boosts base HP by 30" },
             { "description": "Boosts base RCV by 5" },
             { "description": "Acquire Potential 1: Critical Hit" },
-            { "description": "Acquire new Captain Ability: Boosts ATK of Slasher characters by 1.35x and their HP by 1.1x. If you use \"Black Blade • The Ultimate Sword\" boosts ATK of Slasher characters by 1.8225x instead for 1 turn." },
+            { "description": "Acquire new Captain Ability 1: Boosts ATK of Slasher characters by 1.35x and their HP by 1.1x. If you use \"Black Blade • The Ultimate Sword\" boosts ATK of Slasher characters by 1.8225x instead for 1 turn." },
             { "description": "Acquire Sailor Ability 1: Boosts base ATK of Slasher characters by 50" },
             { "description": "Boosts base ATK by 15" },
             { "description": "Boosts base HP by 40" },
             { "description": "Boosts base RCV by 10" },
-            { "description": "Acquire new Captain Ability: Boosts ATK of Slasher characters by 1.6x and their HP by 1.1x. If you use \"Black Blade • The Ultimate Sword\" boosts ATK of Slasher characters by 2.16x instead for 1 turn." },
+            { "description": "Acquire new Captain Ability 2: Boosts ATK of Slasher characters by 1.6x and their HP by 1.1x. If you use \"Black Blade • The Ultimate Sword\" boosts ATK of Slasher characters by 2.16x instead for 1 turn." },
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base HP by 50" },
             { "description": "Boosts base RCV by 15" },
-            { "description": "Acquire new Captain Ability: Boosts ATK of Slasher characters by 1.8x and their HP by 1.2x. If you use \"Black Blade • The Ultimate Sword\" boosts ATK of Slasher characters by 2.43x instead for 1 turn." },
+            { "description": "Acquire new Captain Ability 3: Boosts ATK of Slasher characters by 1.8x and their HP by 1.2x. If you use \"Black Blade • The Ultimate Sword\" boosts ATK of Slasher characters by 2.43x instead for 1 turn." },
             { "description": "Reduce base Special Cooldown by 2 turns" },
             { "description": "Boosts base ATK by 25" },
             { "description": "Boosts base HP by 60" },
@@ -16253,7 +16995,7 @@ window.details = {
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base HP by 65" },
             { "description": "Reduce base Special Cooldown by 4 turns" },
-            { "description": "Acquire new Captain Ability: Boosts ATK of Slasher characters by 2x and their HP by 1.2x. If you use \"Black Blade • The Ultimate Sword\" boosts ATK of Slasher characters by 2.7x instead for 1 turn." },
+            { "description": "Acquire new Captain Ability 4: Boosts ATK of Slasher characters by 2x and their HP by 1.2x. If you use \"Black Blade • The Ultimate Sword\" boosts ATK of Slasher characters by 2.7x instead for 1 turn." },
             { "description": "Boosts base ATK by 35" },
             { "description": "Boosts base HP by 70" },
             { "description": "Acquire Sailor Ability 2: Makes [QCK] orbs \"beneficial\" for this unit" },
@@ -16262,10 +17004,10 @@ window.details = {
             { "description": "Boosts base RCV by 30" },
             { "description": "Reduce base Special Cooldown by 5 turns" },
             { "description": "Acquire 1 additional Socket slot" },
-            { "description": "Acquire new Captain Ability: Boosts ATK of Slasher characters by 2x and their HP by 1.3x. If you use \"Black Blade • The Ultimate Sword\" boosts ATK of Slasher characters by 2.7x instead for 1 turn." },
+            { "description": "Acquire new Captain Ability 5: Boosts ATK of Slasher characters by 2x and their HP by 1.3x. If you use \"Black Blade • The Ultimate Sword\" boosts ATK of Slasher characters by 2.7x instead for 1 turn." },
             { "description": "Boosts base ATK by 50" },
             { "description": "Boosts base HP by 80" },
-            { "description": "Acquire new Captain Ability: Boosts ATK of Slasher characters by 2.5x and their HP by 1.3x. If you use \"Black Blade • The Ultimate Sword\" boosts ATK of Slasher characters by 3.5x instead for 1 turn." },
+            { "description": "Acquire new Captain Ability 6: Boosts ATK of Slasher characters by 2.5x and their HP by 1.3x. If you use \"Black Blade • The Ultimate Sword\" boosts ATK of Slasher characters by 3.5x instead for 1 turn." },
             { "description": "Acquire Potential 2: Slot Bind Self-reduction" },
         ],
         potential: [
@@ -16314,7 +17056,7 @@ window.details = {
         specialName: "Rabbit Mink's Air Step",
     },
     1813: {//Koala
-        captain: "Boosts ATK of all characters by 2.25x and boosts EXP and amount of Beli recieved by 1.2x",
+        captain: "Boosts ATK of all characters by 2.25x and boosts EXP and amount of Beli received by 1.2x",
         special: "Changes Captain's orb into Matching and boosts ATK of your Captain by 1.5x for 1 turn",
         specialName: "Revolutionary Soldier's Anger",
     },
@@ -16327,6 +17069,11 @@ window.details = {
         captain: "Boosts ATK of Powerhouse characters by 2.75x until the first hit other than Perfect and recovers 300 HP at end of each turn",
         specialName: "Joue Shoot",
         special: "Deal 150x character's ATK in typeless damage to one enemy, boosts ATK of Powerhouse characters by 2x for 1 turn",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base HP by 20" },
             { "description": "Boosts base HP by 30" },
@@ -16466,6 +17213,11 @@ window.details = {
         ],
         specialNotes:"#{stages}",
         specialName: "More More: Hundredfold Artillery Cannon",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base ATK by 30" },
@@ -16528,6 +17280,11 @@ window.details = {
         captain: "Boosts ATK of [INT] characters by 3x if HP is below 30% at the start of the turn, by 2.5x otherwise",
         special: "Reduce crew's current HP by 50%, Boosts ATK of [INT] characters by 2x for 1 turn and randomize non-matching orbs, including [BLOCK] orbs",
         specialName: "Explosive Spirit",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base HP by 30" },
             { "description": "Boosts base RCV by 10" },
@@ -16549,11 +17306,11 @@ window.details = {
             {
                 "Name": "[PSY] Damage Reduction",
                 "description": [ 
-                    "Level 1: Reduces Damage recieved from [PSY] enemies by 1%",
-                    "Level 2: Reduces Damage recieved from [PSY] enemies by 2%",
-                    "Level 3: Reduces Damage recieved from [PSY] enemies by 3%",
-                    "Level 4: Reduces Damage recieved from [PSY] enemies by 4%",
-                    "Level 5: Reduces Damage recieved from [PSY] enemies by 5%"
+                    "Level 1: Reduces Damage received from [PSY] enemies by 1%",
+                    "Level 2: Reduces Damage received from [PSY] enemies by 2%",
+                    "Level 3: Reduces Damage received from [PSY] enemies by 3%",
+                    "Level 4: Reduces Damage received from [PSY] enemies by 4%",
+                    "Level 5: Reduces Damage received from [PSY] enemies by 5%"
                 ]
             },
             {
@@ -16571,12 +17328,17 @@ window.details = {
     1829: {//Raid Caesar
         captain: "Boosts ATK of Cerebral and Driven characters by 2x",
         special: "Deals 45x character's ATK in typeless damage to all enemies, amplifies the effect of orbs by 1.75x for Cerebral and Driven characters for 2 turns, and poisons all enemies",
-        spcialName: "Flammable Type: Miok GAS",
+        specialName: "Flammable Type: Miok GAS",
     },
     1830: {//Raid Caesar
         captain: "Boosts ATK of Cerebral and Driven characters by 2.5x",
         special: "Deals 45x character's ATK in typeless damage to all enemies, amplifies the effect of orbs by 1.75x for Cerebral and Driven characters for 2 turns, and poisons all enemies",
-        spcialName:"Flammable Type: Miok GAS",
+        specialName:"Flammable Type: Miok GAS",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base ATK by 10" },
             { "description": "Boosts base ATK by 20" },
@@ -16618,14 +17380,19 @@ window.details = {
         ]
     },
     1831: {//6* Judge
-        captain: "Increase the rate of PSY orbs, reduces damage recieved by 15%, boosts the HP of all characters by 1.25x and if there is a [STR], [DEX], [QCK], [PSY], and [INT] characters in your crew, boosts ATK of all characters by 3.9375x if they have a matching orb, by 2.25x otherwise",
+        captain: "Increase the rate of PSY orbs, reduces damage received by 15%, boosts the HP of all characters by 1.25x and if there is a [STR], [DEX], [QCK], [PSY], and [INT] characters in your crew, boosts ATK of all characters by 3.9375x if they have a matching orb, by 2.25x otherwise",
         special: "Reduces bind duration by 7 turns and amplifies the effect of orbs by 2x for 1 turn.  If this character is the captain or the friend captain, slightly boosts the rate of [PSY] orbs and randomly shuffles all orbs including [BLOCK] orbs",
         specialName: "Dengi Crack",
     },
     1832: {//6* Judge
-        captain: "Increase the rate of PSY orbs, reduces damage recieved by 15%, boosts the HP of all characters by 1.25x and if there is a [STR], [DEX], [QCK], [PSY], and [INT] characters in your crew, boosts ATK of all characters by 3.9375x if they have a matching orb, by 2.25x otherwise",
+        captain: "Increase the rate of PSY orbs, reduces damage received by 15%, boosts the HP of all characters by 1.25x and if there is a [STR], [DEX], [QCK], [PSY], and [INT] characters in your crew, boosts ATK of all characters by 3.9375x if they have a matching orb, by 2.25x otherwise",
         special: "Reduces bind duration by 7 turns and amplifies the effect of orbs by 2x for 1 turn.  If this character is the captain or the friend captain, slightly boosts the rate of [PSY] orbs and randomly shuffles all orbs including [BLOCK] orbs",
         specialName: "Dengi Crack",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base ATK by 5" },
             { "description": "Boosts base HP by 5" },
@@ -16705,6 +17472,11 @@ window.details = {
         special: "If your captain is [INT] or [PSY], recovers 7,000 HP, removes poison, and reduces the duration of paralysis, despair, and silence by 3 turns.  If the captain is a Powerhouse character, reduces damage received by 70% for 2 turns ",
         specialName: "Dangerous Healing",
         sailor: "Makes [PSY] orbs \"beneficial\" for this unit",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         sailorNotes: "#{beneficial}",
         limit: [
             { "description": "Boosts base RCV by 10" },
@@ -16760,6 +17532,11 @@ window.details = {
         special: "If your captain is [STR] or[PSY] character, locks the chain multiplier at 2.5x for 2 turns. If your Captain is a Powerhouse character, delays all enemies for 2 turns",
         specialName: "Majestic Impact",
         sailor: "Makes [PSY] orbs \"beneficial\" for this unit",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         sailorNotes: "#{beneficial}",
         limit: [
             { "description": "Boosts base ATK by 20" },
@@ -16816,6 +17593,11 @@ window.details = {
         special: "If your captain is a [QCK] or [PSY] character, boosts ATK of all characters by 1.75x for 2 turns. If your captain is a Powerhouse character, locks all orbs for 1 turn",
         specialName: "Blitz Needle",
         sailor: "Makes [PSY] orbs \"beneficial\" for this unit",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         sailorNotes: "#{beneficial}",
         limit: [
             { "description": "Boosts base HP by 35" },
@@ -16873,6 +17655,11 @@ window.details = {
         specialName: "Burst End Kick",
         specialNotes: "Extra Damage can only be boosted by conditional Boosters.",
         sailor: "Makes [PSY] orbs \"beneficial\" for this unit",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         sailorNotes: "#{beneficial}",
         limit: [
             { "description": "Boosts base RCV by 10" },
@@ -16999,24 +17786,29 @@ window.details = {
         captainNotes: "#{captainProportional : lower : 1 + 1.25 * (1 - (remaining HP) / (total HP)) : 1 : 2.25}",
         special: "Changes own orb into [INT], deals 100x character's ATK in typeless damage to all enemies that will ignore damage negating abilities and barriers. If enemies have All Debuff Protection or Delay Debuff Protection at the time the special was activated, amplifies the effect of orbs by 2x for 1 turn. If enemies have a barrier at the time the special was activated, boosts own ATK by 2.25x",
         specialName: "The Epicenter of the Halberd",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base ATK by 10" },
             { "description": "Boosts base HP by 30" },
             { "description": "Boosts base RCV by 5" },
             { "description": "Acquire Potential 1: [PSY] Damage Reduction" },
-            { "description": "Acquire new Captain Ability: Boosts ATK of all characters proportionally to the crew's current HP, by 2.35x at max, and their HP by 1.2x" },
+            { "description": "Acquire new Captain Ability 1: Boosts ATK of all characters proportionally to the crew's current HP, by 2.35x at max, and their HP by 1.2x" },
             { "description": "Acquire Sailor Ability 1: Boosts base HP of all characters by 100" },
             { "description": "Boosts base ATK by 15" },
             { "description": "Boosts base HP by 40" },
             { "description": "Boosts base RCV by 10" },
-            { "description": "Acquire new Captain Ability: Boosts ATK of all characters proportionally to the crew's current HP, by 2.45x at max, and their HP by 1.2x" },
+            { "description": "Acquire new Captain Ability 2: Boosts ATK of all characters proportionally to the crew's current HP, by 2.45x at max, and their HP by 1.2x" },
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base HP by 50" },
             { "description": "Boosts base RCV by 15" },
-            { "description": "Acquire new Captain Ability: Boosts ATK of all characters proportionally to the crew's current HP, by 2.55x at max, and their HP by 1.2x" },
+            { "description": "Acquire new Captain Ability 3: Boosts ATK of all characters proportionally to the crew's current HP, by 2.55x at max, and their HP by 1.2x" },
             { "description": "Reduce base Special Cooldown by 2 turns" },
             { "description": "Boosts base ATK by 25" },
             { "description": "Boosts base HP by 60" },
@@ -17026,7 +17818,7 @@ window.details = {
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base HP by 65" },
             { "description": "Reduce base Special Cooldown by 4 turns" },
-            { "description": "Acquire new Captain Ability: Boosts ATK of all characters proportionally to the crew's current HP, by 2.65x at max, and their HP by 1.2x" },
+            { "description": "Acquire new Captain Ability 4: Boosts ATK of all characters proportionally to the crew's current HP, by 2.65x at max, and their HP by 1.2x" },
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base HP by 70" },
             { "description": "Acquire Sailor Ability 2: Boosts base ATK of all characters by 50" },
@@ -17035,10 +17827,10 @@ window.details = {
             { "description": "Boosts base RCV by 30" },
             { "description": "Reduce base Special Cooldown by 5 turns" },
             { "description": "Acquire 1 additional Socket slot" },
-            { "description": "Acquire new Captain Ability: Boosts ATK of all characters proportionally to the crew's current HP, by 2.75x at max, and their HP by 1.35x" },
+            { "description": "Acquire new Captain Ability 5: Boosts ATK of all characters proportionally to the crew's current HP, by 2.75x at max, and their HP by 1.35x" },
             { "description": "Boosts base ATK by 40" },
             { "description": "Boosts base HP by 100" },
-            { "description": "Acquire new Captain Ability: Boosts ATK of all characters proportionally to the crew's current HP, by 3.25x at max, and their HP by 1.35x" },
+            { "description": "Acquire new Captain Ability 6: Boosts ATK of all characters proportionally to the crew's current HP, by 3.25x at max, and their HP by 1.35x" },
             { "description": "Acquire Potential 2: Enrage" },
         ],
         potential: [
@@ -17094,6 +17886,11 @@ window.details = {
         captain: "Boosts ATK of Striker characters by 2.5x and their HP by 1.2x at the start of the chain. Boosts ATK of Striker characters by 3.25x after scoring 3 Perfects in a row.",
         special: "Reduce 3 turns of paralysis, randomize non-matching orbs, including [BLOCK] orbs, Adds 65x character's ATK as Additional Typeless Damage for 1 turn, when the captain is a Striker Character reduces enemies Percent Damage Reduction duration by 3 turns",
         sailor: "If this character has an [INT] orb and you hit a Perfect with him, keep his [INT] orb for the next turn",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base ATK by 10" },
             { "description": "Boosts base ATK by 20" },
@@ -17172,6 +17969,11 @@ window.details = {
         ],
         specialNotes: "#{stages}",
         specialName: "Flower Shuriken",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base RCV by 5" },
             { "description": "Boosts base RCV by 10" },
@@ -17253,6 +18055,11 @@ window.details = {
         captain: "Increases damage received by 1.2x, Boosts ATK of Slasher characters by 3.25x at the start of the chain and their HP by 1.2x, and boosts ATK of Slasher characters by 4.225x following a chain of Good > Great > Perfect hits",
         special: "Deals 10 hits of 20x character's ATK in typeless damage to random enemies, if this character is your Captain or Friend/Guest Captain, Changes all orbs on Slasher characters into Matching orbs and delays all enemies for 1 turn.",
         specialName: "The Rain of War's End",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base HP by 10" },
             { "description": "Boosts base HP by 15" },
@@ -17330,6 +18137,11 @@ window.details = {
         special: "Reduces crew's current HP by 50%, deals 10x the amount of HP subtracted in typeless damage to one enemy, reduces enemy's Threshold Damage Reduction, Increased Defense and ATK UP duration by 3 turns and changes own orb into [PSY]",
         specialName: "Spring Death Knock",
         sailor: "Boosts this character's attack against [INT] characters by 1.1x",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base ATK by 10" },
             { "description": "Boosts base ATK by 15" },
@@ -17383,6 +18195,11 @@ window.details = {
         special: "Deals 30x character's ATK in [STR] damage to one enemy, reduces Bind and Despair duration by 2 turns and boosts ATK of Slasher characters by 1.75x for 3 turns",
         specialName: "The Forefront Reclaiming His Country",
         sailor: "Adds 2x character's ATK as Additional Typeless Damage",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         sailorNotes: "#{additionalDamage : 2x}",
         limit: [
             { "description": "Boosts base HP by 20" },
@@ -17437,6 +18254,11 @@ window.details = {
         special: "Changes [RCV], [TND], [EMPTY] and [BLOCK] orbs into Matching orbs, reduces Paralysis and Silence duration by 2 turns and adds .5x to Chain multiplier for 1 turn",
         specialName: "Violent Interrogation of Passion",
         sailor: "Completely resists Silence on this character",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         sailorNotes: "#{silence}",
         limit: [
             { "description": "Boosts base RCV by 10" },
@@ -17490,6 +18312,11 @@ window.details = {
         special: "Deals 50,000 fixed damage to one enemy, reduces Chain Multiplier Limit and Chain Coefficient Reduction duration by 5 turns and changes adjacent orbs into matching orbs",
         specialName: "Strike of Determination",
         sailor: "Makes [STR] orbs \"beneficial\" for this unit",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         sailorNotes: "#{beneficial}",
         limit: [
             { "description": "Boosts base RCV by 10" },
@@ -17558,6 +18385,11 @@ window.details = {
                 "cooldown": [ 33, 18 ],
             },
         ],
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base HP by 10" },
             { "description": "Boosts base HP by 20" },
@@ -17613,6 +18445,11 @@ window.details = {
         ],
         specialNotes: "#{ignoreBarrier}<br>#{stages}",
         specialName: "Swarm of Sharks",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base ATK by 5" },
             { "description": "Boosts base ATK by 5" },
@@ -17693,6 +18530,11 @@ window.details = {
         ],
         specialNotes: "The special only includes the damage inflicted through normal attacks. If the enemy dies by End-Of-Turn damage, your inflicted Damage dealt last turn will be 0.<br>#{stages}",
         specialName: "Flash of [Yoru]",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base HP by 5" },
             { "description": "Boosts base HP by 10" },
@@ -17768,6 +18610,11 @@ window.details = {
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight. Boosts ATK of all characters by 3.5x and boosts chances of getting Matching orbs if HP is below 30% at the start of the turn, 2.5x otherwise and boosts the HP and RCV of all characters by 1.25x",
         special: "Deals 200,000 fixed damage to one enemy that will ignore damage negating abilities and barriers, locks the chain multiplier at 3x for 1 turn, amplifies the effect of orbs by 1.75x for 1 turn and if HP is below 30% at the time the special is activated, reduces damage received by 95% for 1 turn and changes [RCV], [TND], [EMPTY] and [BLOCK] orbs into Matching orbs",
         specialName: "Signaling the Beginning of a Bright Future",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base RCV by 5" },
             { "description": "Boosts base HP by 20" },
@@ -17872,24 +18719,29 @@ window.details = {
         },
         special: "Removes all positive buffs on your team, recovers 1,224 HP, changes Badly Matching orbs into Matching orbs. Boosts ATK of Driven characters by 1.75x for 1 turn and amplifies the effect of orbs by 1.75x for Driven characters for 1 turn",
         specialName: "A Star Descending from the Twinkling Night Sky",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base ATK by 10" },
             { "description": "Boosts base HP by 30" },
             { "description": "Boosts base RCV by 5" },
             { "description": "Acquire Potential 1: [INT] Damage Reduction" },
-            { "description": "Acquire new Captain Ability: Boosts ATK of Driven characters by 1.5x, recovers 1.6x character's RCV in HP at the end of each turn. Boosts ATK of Driven characters by 1.95x following a chain of same type attacks no lower than Good" },
+            { "description": "Acquire new Captain Ability 1: Boosts ATK of Driven characters by 1.5x, recovers 1.6x character's RCV in HP at the end of each turn. Boosts ATK of Driven characters by 1.95x following a chain of same type attacks no lower than Good" },
             { "description": "Acquire Sailor Ability 1: Boosts base ATK, HP and RCV of Driven characters by 50" },
             { "description": "Boosts base ATK by 15" },
             { "description": "Boosts base HP by 40" },
             { "description": "Boosts base RCV by 10" },
-            { "description": "Acquire new Captain Ability: Boosts ATK of Driven characters by 1.5x, recovers 1.7x character's RCV in HP at the end of each turn. Boosts ATK of Driven characters by 2.1x following a chain of same type attacks no lower than Good" },
+            { "description": "Acquire new Captain Ability 2: Boosts ATK of Driven characters by 1.5x, recovers 1.7x character's RCV in HP at the end of each turn. Boosts ATK of Driven characters by 2.1x following a chain of same type attacks no lower than Good" },
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base HP by 50" },
             { "description": "Boosts base RCV by 15" },
-            { "description": "Acquire new Captain Ability: Boosts ATK of Driven characters by 1.5x, recovers 1.8x character's RCV in HP at the end of each turn. Boosts ATK of Driven characters by 2.25x following a chain of same type attacks no lower than Good" },
+            { "description": "Acquire new Captain Ability 3: Boosts ATK of Driven characters by 1.5x, recovers 1.8x character's RCV in HP at the end of each turn. Boosts ATK of Driven characters by 2.25x following a chain of same type attacks no lower than Good" },
             { "description": "Reduce base Special Cooldown by 2 turns" },
             { "description": "Boosts base ATK by 25" },
             { "description": "Boosts base HP by 60" },
@@ -17899,7 +18751,7 @@ window.details = {
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base HP by 65" },
             { "description": "Reduce base Special Cooldown by 4 turns" },
-            { "description": "Acquire new Captain Ability: Boosts ATK of Driven characters by 1.75x, recovers 1.9x character's RCV in HP at the end of each turn. Boosts ATK of Driven characters by 2.625x following a chain of same type attacks no lower than Good" },
+            { "description": "Acquire new Captain Ability 4: Boosts ATK of Driven characters by 1.75x, recovers 1.9x character's RCV in HP at the end of each turn. Boosts ATK of Driven characters by 2.625x following a chain of same type attacks no lower than Good" },
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base HP by 70" },
             { "description": "Acquire Sailor Ability 2: Makes [PSY] orbs \"beneficial\" for Driven characters" },
@@ -17908,10 +18760,10 @@ window.details = {
             { "description": "Boosts base RCV by 30" },
             { "description": "Reduce base Special Cooldown by 5 turns" },
             { "description": "Acquire 1 additional Socket slot" },
-            { "description": "Acquire new Captain Ability: Boosts ATK of Driven characters by 2x, recovers 2x character's RCV in HP at the end of each turn. Boosts ATK of Driven characters by 3x following a chain of same type attacks no lower than Good" },
+            { "description": "Acquire new Captain Ability 5: Boosts ATK of Driven characters by 2x, recovers 2x character's RCV in HP at the end of each turn. Boosts ATK of Driven characters by 3x following a chain of same type attacks no lower than Good" },
             { "description": "Boosts base ATK by 40" },
             { "description": "Boosts base HP by 100" },
-            { "description": "Acquire new Captain Ability: Boosts ATK of Driven characters by 2.5x, recovers 2 character's RCV in HP at the end of each turn. Boosts ATK of Driven characters by 3.75x following a chain of same type attacks no lower than Good" },
+            { "description": "Acquire new Captain Ability 6: Boosts ATK of Driven characters by 2.5x, recovers 2 character's RCV in HP at the end of each turn. Boosts ATK of Driven characters by 3.75x following a chain of same type attacks no lower than Good" },
             { "description": "Acquire Potential 2: Pinch Healing" },
         ],
         potential: [
@@ -17998,6 +18850,11 @@ window.details = {
         captain: "Boosts ATK of Fighter characters by 3.0375x if HP is below 50% at the start of the turn, 2.25x otherwise and boosts the HP of Fighter characters by 1.25x",
         special: "If HP is below 50% at the time the special is activated, deal 75x character's ATK in [QCK] damage to one enemy, boosts ATK of Fighter characters by 2x for 1 turn",
         specialName: "The Collapsing Arhat",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base HP by 30" },
             { "description": "Boosts base RCV by 10" },
@@ -18069,6 +18926,11 @@ window.details = {
         ],
         specialName: "30,000,000 Volt: Hino",
         specialNotes: "#{stages}",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base HP by 30" },
             { "description": "Boosts base RCV by 10" },
@@ -18120,7 +18982,7 @@ window.details = {
         specialName: "Hitting Size [Neo]",
     },
     1900: {//EXP Zoro
-        captain: "Boosts ATK of all characters by 2.25x and boosts EXP and amount of Beli recieved by 1.2x",
+        captain: "Boosts ATK of all characters by 2.25x and boosts EXP and amount of Beli received by 1.2x",
         special: "Changes own orb into [QCK], boosts own ATK by 1.5x for 1 turn, deals 15x character's ATK in [QCK] damage to one enemy",
         specialName: "One Sword Style: Baki",
     },
@@ -18137,6 +18999,11 @@ window.details = {
         specialNotes: "#{gOrbs}",
         specialName: "The Toughest Trump Card",
         sailor: "Cannot be Blown Away",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base HP by 5" },
             { "description": "Boosts base HP by 10" },
@@ -18189,6 +19056,11 @@ window.details = {
         special: "Reduces enemy Barrier duration by 1 turn, Reduces enemies Damage Nullification duration by 1 turn and deals 30x character's ATK in [QCK] damage to all enemies",
         specialName: "Diaper Bomb",
         sailor: "Makes [DEX] orbs \"beneficial\" for this unit",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         sailorNotes: "#{beneficial}",
         limit: [
             { "description": "Boosts base ATK by 30" },
@@ -18241,6 +19113,11 @@ window.details = {
         special: "Changes [RCV], [TND] and [G] orbs into Matching orbs and amplifies the effect of orbs for Driven characters by 1.75x for 3 turns. Locks orbs for 1 turn.",
         specialName: "March of the Decapitating Dolls",
         sailor: "Reduces Paralysis duration by 1 turn",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base RCV by 10" },
             { "description": "Boosts base RCV by 15" },
@@ -18294,6 +19171,11 @@ window.details = {
         special: "Reduces enemies Threshold Damage Reduction, Percent Damage Reduction and Increased Defense duration by 4 turns. If there are 6 Driven characters in your crew, Boosts ATK of Driven characters by 2x for 1 turn and reduces Special Cooldown of your top row by 1 turn.",
         specialName: "Beta Betton Meteora",
         sailor: "Boosts base ATK of the characters in the top row by 100",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base HP by 20" },
             { "description": "Boosts base HP by 40" },
@@ -18347,6 +19229,11 @@ window.details = {
         special: "Deals 200% of the damage dealt in Overkill Damage in the previous turn as typeless damage to all enemies.",
         specialNotes: "Overkill Damage is damage dealt over the enemy's current HP with normal attacks that killed them. For example, dealing 2,100,000 damage to an enemy with 1,000,000 HP will count as 1,100,000 Overkill Damage. This stacks for each enemy killed in the previous turn. If the enemy dies by End-Of-Turn damage, your Overkill Damage dealt last turn will be 0.",
         specialName: "Flap Thread",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base ATK by 10" },
             { "description": "Boosts base ATK by 15" },
@@ -18449,24 +19336,29 @@ window.details = {
         },
         special: "Randomizes all orbs, including [BLOCK] orbs, changes own orb into [QCK], deals 300x character's ATK in typeless damage to one enemy and boosts the Color Affinity of all characters by 1.75x for 1 turns",
         specialName: "Gomu Gomu no Leo Bazooka",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base ATK by 10" },
             { "description": "Boosts base HP by 30" },
             { "description": "Boosts base RCV by 5" },
             { "description": "Acquire Potential 1: [STR] Damage Reduction" },
-            { "description": "Acquire new Captain Ability: " },
-            { "description": "Acquire Sailor Ability 1: Boost base stats of Free Spriti characters by 30" },
+            { "description": "Acquire new Captain Ability 1: Boosts ATK of Powerhouse and Free Spirit characters by 2x after scoring 2 Perfects in a row and reduce damage received by 2%" },
+            { "description": "Acquire Sailor Ability 1: Boost base stats of Free Spirit characters by 30" },
             { "description": "Boosts base ATK by 15" },
             { "description": "Boosts base HP by 40" },
             { "description": "Boosts base RCV by 10" },
-            { "description": "Acquire new Captain Ability: " },
+            { "description": "Acquire new Captain Ability 2: Boosts ATK of Powerhouse and Free Spirit characters by 2x after scoring 2 Perfects in a row and reduce damage received by 4%" },
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base HP by 50" },
             { "description": "Boosts base RCV by 15" },
-            { "description": "Acquire new Captain Ability: " },
+            { "description": "Acquire new Captain Ability 3: Boosts ATK of Powerhouse and Free Spirit characters by 2x after scoring 2 Perfects in a row, boosts by 3x after scoring 4 Perfects in a row and reduce damage received by 4%" },
             { "description": "Reduce base Special Cooldown by 2 turns" },
             { "description": "Boosts base ATK by 25" },
             { "description": "Boosts base HP by 60" },
@@ -18476,7 +19368,7 @@ window.details = {
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base HP by 65" },
             { "description": "Reduce base Special Cooldown by 4 turns" },
-            { "description": "Acquire new Captain Ability: " },
+            { "description": "Acquire new Captain Ability 4: Boosts ATK of Powerhouse and Free Spirit characters by 2x after scoring 2 Perfects in a row, boosts by 3.25x after scoring 4 Perfects in a row and reduce damage received by 4%" },
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base HP by 70" },
             { "description": "Acquire Sailor Ability 2: Boost base stats of Powerhouse characters by 30" },
@@ -18485,10 +19377,10 @@ window.details = {
             { "description": "Boosts base RCV by 30" },
             { "description": "Reduce base Special Cooldown by 5 turns" },
             { "description": "Acquire 1 additional Socket slot" },
-            { "description": "Acquire new Captain Ability: " },
+            { "description": "Acquire new Captain Ability 5: Boosts ATK of Powerhouse and Free Spirit characters by 2x after scoring 2 Perfects in a row, boosts by 3.5x after scoring 4 Perfects in a row and reduce damage received by 4%" },
             { "description": "Boosts base ATK by 40" },
             { "description": "Boosts base HP by 100" },
-            { "description": "Acquire new Captain Ability: Boosts ATK of Powerhouse and Free Spirit characters by 2x after scoring 2 Perfects in a row, boosts by 4x and reduce damage received by 4% after scoring 4 Perfects in a row" },
+            { "description": "Acquire new Captain Ability 6: Boosts ATK of Powerhouse and Free Spirit characters by 2x after scoring 2 Perfects in a row, boosts by 4x and reduce damage received by 4% after scoring 4 Perfects in a row" },
             { "description": "Acquire Potential 2: Enrage" },
         ],
         potential: [
@@ -18548,6 +19440,11 @@ window.details = {
         captain: "Boosts ATK of Cerebral characters by 3x, HP by 1.25x, and heals for 0.5x his RCV at the end of the turn each time you hit a PERFECT",
         special: "Reduces enemy Barrier duration by 1 turn, deals 200,000 fixed damage to all enemies and amplifies the effect of orbs for Cerebral characters by 2.25x for 1 turn",
         specialName: "Radio Knife",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base ATK by 10" },
             { "description": "Boosts base ATK by 20" },
@@ -18632,6 +19529,11 @@ window.details = {
         captain: "Boosts ATK of Driven characters by 2.5x, recovers 2x character's RCV in HP at the end of each turn and reduce damage received by 7%",
         special: "Reduces Bind duration for one character completely, locks all orbs for 1 turn and boosts ATK of Driven characters by 1.75x for 3 turns",
         specialName: "Unshameful Fist of Justice",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base RCV by 10" },
             { "description": "Boosts base RCV by 10" },
@@ -18683,6 +19585,11 @@ window.details = {
         special: "Protects from defeat for 1 turn and boosts ATK of Striker and Driven characters and amplifies orbs of Striker and Driven characters by 1.5x for 1 turn",
         specialNotes: "#{zombie}",
         specialName: "An Oath of One's Life and Soul",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base ATK by 10" },
             { "description": "Boosts base HP by 30" },
@@ -18754,14 +19661,14 @@ window.details = {
         specialName: "200,000,000 Volt Amaru [Neo]",
         specialNotes: "#{fixed}",
         captain: "Boosts ATK of DEX characters by 2x",
-        captainNotes: "This information is based on Raid Enel [602] and may differ than actual details and will be updated once information is recieved."
+        captainNotes: "This information is based on Raid Enel [602] and may differ than actual details and will be updated once information is received."
     },
     1930: {//Enel Neo
         special: "Reduces crew's current HP by 90%, deals 20,000 fixed damage to all enemies, boosts ATK of DEX characters by 2x for 1 turn",
         specialName: "200,000,000 Volt Amaru [Neo]",
         specialNotes: "#{fixed}",
         captain: "Boosts ATK of DEX characters by 2.25x, recovers 5x character's RCV in HP at the end of each turn",
-        captainNotes: "This information is based on Raid Enel [603] and may differ than actual details and will be updated once information is recieved."
+        captainNotes: "This information is based on Raid Enel [603] and may differ than actual details and will be updated once information is received."
     },
     1931: {//Sandersonia
         captain: "Boosts ATK of Free Spirit characters by 1.75x",
@@ -18796,6 +19703,11 @@ window.details = {
         captainNotes: "All characters on your crew must have one of the 4 classes listed, but you do not need one of each. Franky Captain Action lasts one turn and can be reactivated after a 4 turn cooldown. Only 1 Franky Captain Action can be activated at once. <br\> During transformation:<br\>If you attack with a Fighter character, deal 1.25x damage to targeted enemy<br\>If you attack with a Slasher character, deal full damage to targeted enemy, but partial damage (??%) to all enemies in the same row<br\>If you attack with a Striker character, deal 0.5x damage to all enemies on the stage<br\>If you attack with a Shooter character, deal .75x damage to targeted enemy but deal 0.3x damage to all other enemies on the stage",
         special: "Cuts the current HP of all enemies by 10%, randomizes all non-matching orbs, including [BLOCK] orbs, and boosts ATK of Fighter, Slasher, Shooter and Striker characters by 2x for 1 turn",
         specialName: "Franky Cannon",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base ATK by 2" },
             { "description": "Boosts base ATK by 2" },
@@ -18902,24 +19814,29 @@ window.details = {
         special: "Changes all orbs, including [BLOCK] orbs, to [STR] orbs, boosts ATK of [STR], [QCK], [PSY] characters by 1.75x for 1 turn, makes [STR] orbs \"beneficial\" for [STR], [QCK] and [PSY] characters if your Captain is a Free Spirit character",
         specialNotes: "#{beneficial}",
         specialName: "Sacred Flames: Unknown Fire",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base ATK by 10" },
             { "description": "Boosts base HP by 30" },
             { "description": "Boosts base RCV by 5" },
             { "description": "Acquire Potential 1: [DEX] Damage Reduction" },
-            { "description": "Acquire new Captain Ability: " },
+            { "description": "Acquire new Captain Ability 1: " },
             { "description": "Acquire Sailor Ability 1: Boosts base ATK, HP and RCV of Free Spirit characters by 30" },
             { "description": "Boosts base ATK by 15" },
             { "description": "Boosts base HP by 40" },
             { "description": "Boosts base RCV by 10" },
-            { "description": "Acquire new Captain Ability: " },
+            { "description": "Acquire new Captain Ability 2: " },
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base HP by 50" },
             { "description": "Boosts base RCV by 15" },
-            { "description": "Acquire new Captain Ability: " },
+            { "description": "Acquire new Captain Ability 3: " },
             { "description": "Reduce base Special Cooldown by 2 turns" },
             { "description": "Boosts base ATK by 25" },
             { "description": "Boosts base HP by 60" },
@@ -18929,7 +19846,7 @@ window.details = {
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base HP by 55" },
             { "description": "Reduce base Special Cooldown by 4 turns" },
-            { "description": "Acquire new Captain Ability: " },
+            { "description": "Acquire new Captain Ability 4: " },
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base HP by 50" },
             { "description": "Acquire Sailor Ability 2: Makes [PSY] orbs \"beneficial\" for this unit" },
@@ -18938,10 +19855,10 @@ window.details = {
             { "description": "Boosts base RCV by 50" },
             { "description": "Reduce base Special Cooldown by 5 turns" },
             { "description": "Acquire 1 additional Socket slot" },
-            { "description": "Acquire new Captain Ability: " },
+            { "description": "Acquire new Captain Ability 5: " },
             { "description": "Boosts base ATK by 60" },
             { "description": "Boosts base HP by 60" },
-            { "description": "Acquire new Captain Ability: " },
+            { "description": "Acquire new Captain Ability 6: If there is a [STR], [QCK] and [PSY] character in your crew, boosts ATK of [STR], [QCK] and [PSY] characters by 3.44x if they have a [STR] orb, by 2.75x otherwise and their HP and RCV by 1.2x" },
             { "description": "Acquire Potential 2: Slot Bind Self-reduction" },
         ],
         potential: [
@@ -18976,6 +19893,11 @@ window.details = {
         captain: "Boosts ATK of Free Spirit characters by 2.5x and recovers 1.5x character's RCV in HP at the end of each turn",
         special: "Changes own orb into [STR], reduces Chain Multiplier Limit and Chain Coefficient Reduction by 3 turns. If your captain is a Free Spirit Character, boosts ATK against delayed enemies by 1.75x for 1 turn",
         specialName: "Manly Synchronized Swimming",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base RCV by 10" },
             { "description": "Boosts base RCV by 15" },
@@ -19028,6 +19950,11 @@ window.details = {
         special: "Reduces crew's current HP by 95%, deals 50x character's ATK in typeless damage to all enemies that will ignore damage negating abilities and barriers, boosts the Color Affinity of Cerebral characters by 1.75x for 2 turns",
         specialNotes: "#{ignoreBarrier}",
         specialName: "Explosive Reply",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base RCV by 10" },
             { "description": "Boosts base RCV by 20" },
@@ -19102,6 +20029,11 @@ window.details = {
         captainNotes: "#{beneficial}",
         special: "Reduces damage received by 100% for 1 turn. If your Captain is a Cerebral character, changes adjacent orbs into [RCV] orbs",
         specialName: "Moth Orchid",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base ATK by 10" },
             { "description": "Boosts base ATK by 10" },
@@ -19179,6 +20111,11 @@ window.details = {
         special: "Reduces Bind and Despair duration by 3 turns and changes own orb into [RCV]. If your Captain is a Cerebral character, adds .7x to Chain multiplier for 1 turn and changes bottom row orbs into matching orbs",
         specialName: "Vigorous Straight Fist",
         sailor: "If this character has a [RCV] orb and you hit a Perfect with her, keep her [RCV] orb for the next turn",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base HP by 10" },
             { "description": "Boosts base HP by 20" },
@@ -19230,6 +20167,11 @@ window.details = {
         special: "Cuts the current HP of all enemies by 10% and changes own orb into [RCV]. Boosts ATK of Cerebral characters by 1.75x for 1 turn. If during that turn you score 5 Perfect hits, boosts ATK of Cerebral characters by 2.25x in the following turn.",
         specialName: "Thunder Trap",
         sailor: "If this character has a [RCV] orb and you hit a Perfect with her, keep her [RCV] orb for the next turn",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base HP by 20" },
@@ -19283,6 +20225,11 @@ window.details = {
         special: "Reduces Chain Multiplier Limit and Chain Coefficient Reduction duration by 3 turns and locks the chain multiplier at 2.75x for 1 turn",
         specialName: "Hopping Crash",
         sailor: "Makes [RCV] orbs \"beneficial\" for all characters",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         sailorNotes: "#{beneficial}",
         limit: [
             { "description": "Boosts base RCV by 20" },
@@ -19336,6 +20283,11 @@ window.details = {
         special: "Reduces Paralysis and Silence  and ATK DOWN duration by 5 turns, recovers 7,000 HP at the end of the turn for 3 turns and changes orbs in the top row into Matching orbs",
         specialName: "An Important Confession from the Mermaid Princess",
         sailor: "Completely resists Silence on this character",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         sailorNotes: "#{silence}",
         limit: [
             { "description": "Boosts base ATK by 10" },
@@ -19465,24 +20417,29 @@ window.details = {
         },
         special: "If your Captain is a Cerebral character, changes [STR], [DEX], [QCK], [INT], and [PSY] orbs on Cerebral characters into Matching orbs, reduces the defense of all enemies by 100% and boosts ATK against enemies with reduced defense by 1.75x for 1 turn",
         specialName: "Blissful Selection",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 1 turn when it is rewinded",
+            "level2": "Boosts base ATK of [DEX] characters by 40",
+        },
         limit: [
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base ATK by 10" },
             { "description": "Boosts base HP by 30" },
             { "description": "Boosts base RCV by 5" },
             { "description": "Acquire Potential 1: Reduce No Healing duration" },
-            { "description": "Acquire new Captain Ability: " },
+            { "description": "Acquire new Captain Ability 1: " },
             { "description": "Acquire Sailor Ability 1: Boosts base ATK, HP and RCV of Cerebral characters by 30" },
             { "description": "Boosts base ATK by 15" },
             { "description": "Boosts base HP by 40" },
             { "description": "Boosts base RCV by 10" },
-            { "description": "Acquire new Captain Ability: " },
+            { "description": "Acquire new Captain Ability 2: " },
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base HP by 50" },
             { "description": "Boosts base RCV by 15" },
-            { "description": "Acquire new Captain Ability: " },
+            { "description": "Acquire new Captain Ability 3: " },
             { "description": "Reduce base Special Cooldown by 2 turns" },
             { "description": "Boosts base ATK by 25" },
             { "description": "Boosts base HP by 60" },
@@ -19492,7 +20449,7 @@ window.details = {
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base HP by 55" },
             { "description": "Reduce base Special Cooldown by 4 turns" },
-            { "description": "Acquire new Captain Ability: " },
+            { "description": "Acquire new Captain Ability 4: " },
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base HP by 50" },
             { "description": "Acquire Sailor Ability 2: Makes [DEX] orbs \"beneficial\" for Cerebral characters unit" },
@@ -19501,10 +20458,10 @@ window.details = {
             { "description": "Boosts base RCV by 50" },
             { "description": "Reduce base Special Cooldown by 5 turns" },
             { "description": "Acquire 1 additional Socket slot" },
-            { "description": "Acquire new Captain Ability: " },
+            { "description": "Acquire new Captain Ability 5: " },
             { "description": "Boosts base ATK by 60" },
             { "description": "Boosts base HP by 60" },
-            { "description": "Acquire new Captain Ability: " },
+            { "description": "Acquire new Captain Ability 6: Boosts ATK of Cerebral characters by 2.25x and their HP and RCV by 1.2x and boosts chain by 1.5x if HP is above 70% or below 30% at the start of the turn" },
             { "description": "Acquire Potential 2: Enrage" },
         ],
         potential: [
