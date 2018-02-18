@@ -1963,7 +1963,7 @@ window.units = [
     [ "Pudding, Deceiving Bride", "INT", [ "Cerebral", "Fighter" ], 4, 12, null, 3, 50, 261406, null, null, null, null, null, null, null ],
     [ "Pudding, A Deadly Plan to Separate the Couple", "INT", [ "Cerebral", "Fighter" ], 5, 20, 5, 5, 99, 3000000, 1, 1, 1, 1972, 1111, 301, null ],
     [ "Oars", "QCK", [ "Driven", "Powerhouse" ], 3, 12, null, null, 50, 130703, null, null, null, null, null, null, null ],
-    [ "The Devil Oars, Resurrected Legend", "QCK", [ "Driven", "Powerhouse" ], 4, 20, 4, 4, 99, 1000000, null, null, null, 2975, 1454, 0, null ],
+    [ "The Devil Oars, Resurrected Legend", "QCK", [ "Driven", "Powerhouse" ], 4, 20, 4, 4, 99, 1000000, 1690, 825, 0, 2975, 1454, 0, 1 ],
     [ "Doctor Hogback, Artist of Deadly Dolls", "PSY", [ "Driven", "Cerebral" ], 4, 20, 4, 4, 99, 1000000, null, null, null, 2160, 954, 302, null ],
     [ "Boa Hancock, Be My Valentine", "STR", [ "Shooter", "Cerebral" ], 4, 12, 4, 3, 50, 392109, null, null, null, null, null, null, null ],
     [ "Boa Hancock, You're My Valentine", "STR", [ "Shooter", "Cerebral" ], 5, 20, 4, 4, 99, 4000000, 1, 1, 1, 1960, 1257, 416, null ],
