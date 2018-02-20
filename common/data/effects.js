@@ -609,10 +609,10 @@ window.effects = {
             var character = window.families[p.number];
             var boost = 1;
             matching = [ "Monkey D. Luffy", "Roronoa Zoro", "Franky", "Nico Robin", "Usopp", "Trafalgar Law", "Bartolomeo", "Cavendish", "Rob Lucci", "Sabo", "Boa Sandersonia", "Boa Marigold", "Boa Hancock", "Marguerite", "Leo", "Don Sai", "Don Chinjao", "Ideo", "Blue Gilly", "Suleiman", "Mansherry", "Ricky", "Kyros", "Funk Brothers", "Hajrudin", "Abdullah and Jeet", "Orlumbus", "Elizabello", "Bepo", ].indexOf(character) != -1;
-            if (p.class.has("Slasher")) boost *= 1.5;
+            /*if (p.class.has("Slasher")) boost *= 1.5;
             if (p.class.has("Powerhouse")) boost *= 1.5;
             if (p.class.has("Striker")) boost *= 1.5;
-            if (p.class.has("Shooter")) boost *= 1.5;
+            if (p.class.has("Shooter")) boost *= 1.5;*/
             if (matching) boost *= 1.5;
             return boost;
         },  
@@ -620,10 +620,10 @@ window.effects = {
             var character = window.families[p.number];
             var boost = 1;
             matching = [ "Monkey D. Luffy", "Roronoa Zoro", "Franky", "Nico Robin", "Usopp", "Trafalgar Law", "Bartolomeo", "Cavendish", "Rob Lucci", "Sabo", "Boa Sandersonia", "Boa Marigold", "Boa Hancock", "Marguerite", "Leo", "Don Sai", "Don Chinjao", "Ideo", "Blue Gilly", "Suleiman", "Mansherry", "Ricky", "Kyros", "Funk Brothers", "Hajrudin", "Abdullah and Jeet", "Orlumbus", "Elizabello", "Bepo", ].indexOf(character) != -1;
-            if (p.class.has("Slasher")) boost *= 1.5;
+            /*if (p.class.has("Slasher")) boost *= 1.5;
             if (p.class.has("Powerhouse")) boost *= 1.5;
             if (p.class.has("Striker")) boost *= 1.5;
-            if (p.class.has("Shooter")) boost *= 1.5;
+            if (p.class.has("Shooter")) boost *= 1.5;*/
             if (matching) boost *= 1.5;
             return boost;
         }, 
