@@ -1973,8 +1973,8 @@ window.units = [
     [ "Sabo, Sweet Dignity", "DEX", [ "Cerebral", "Fighter" ], 5, 60, 4, 1, 99, 5000000, 771, 274, 109, 2140, 1340, 349, null ],
     [ "Basil Hawkins, Tranquil Fortune Teller", "STR", [ "Cerebral", "Striker" ], 4, 20, null, null, 70, 1066998, null, null, null, null, null, null, null ],
     [ "\"The Magician\" Basil Hawkins, Cursed Executioner", "STR", [ "Cerebral", "Striker" ], 5, 30, 5, 4, 99, 4000000, null, null, null, 2518, 1450, 297, null ],
-    [ "X Drake [Neo], Captain of the Drake Pirates", "QCK", [ "Cerebral", "Slasher" ], 4, 25, 5, null, 70, 1066998, null, null, null, null, null, null, null ],
-    [ "\"Red Flag\" X Drake [Neo], Captain of the Drake Pirates", "QCK", [ "Cerebral", "Powerhouse" ], 5, 40, 4, 4, 99, 4000000, null, null, null, 2607, 1235, 297, null ],
+    [ "X Drake [Neo], Captain of the Drake Pirates", "QCK", [ "Cerebral", "Slasher" ], 4, 25, 5, 3, 70, 1066998, 549, 221, 51, 1357, 694, 178, null ],
+    [ "\"Red Flag\" X Drake [Neo], Captain of the Drake Pirates", "QCK", [ "Cerebral", "Powerhouse" ], 5, 40, 4, 4, 99, 4000000, 1301, 632, 129, 2607, 1235, 297, null ],
     ];
     
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],

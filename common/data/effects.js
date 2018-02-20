@@ -214,7 +214,7 @@ window.effects = {
         description: 'Activates [G] orb Support, boosts Orbs by 1.5x',
         thumb: 560,
         id: 24, // don't change this
-        orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 10/15 : 1); },
+        orb: function(p) { return (p.orb == 2.0 || p.orb == 'g') ? 1.5 : (p.orb == 0.5 ? 10/15 : 1); },
         gOrbsEnabled: true
     },
 
@@ -603,7 +603,7 @@ window.effects = {
             if (p.class.has("Striker")) boost *= 1.5;
             if (p.class.has("Shooter")) boost *= 1.5;
             if (matching) boost *= 1.5;
-            return boost;
+            return matching ? boost : 1;
         },
         hp: function(p) {
             var character = window.families[p.number];
