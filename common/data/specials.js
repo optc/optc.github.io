@@ -3329,6 +3329,7 @@ window.specials = {
         orb: function(p) { return (p.unit.class.has("Driven")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain]) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain]); }	
     },
     1716: {
+        delay: function(p) { return 1; },
         atk: function(p) { return p.unit.class.has("Driven") ? window.specials[1716].multiplier : 1; },
         type: "class",
         onActivation: function(p) {

@@ -1975,6 +1975,12 @@ window.units = [
     [ "\"The Magician\" Basil Hawkins, Cursed Executioner", "STR", [ "Cerebral", "Striker" ], 5, 30, 5, 4, 99, 4000000, null, null, null, 2518, 1450, 297, null ],
     [ "X Drake [Neo], Captain of the Drake Pirates", "QCK", [ "Cerebral", "Slasher" ], 4, 25, 5, 3, 70, 1066998, 549, 221, 51, 1357, 694, 178, null ],
     [ "\"Red Flag\" X Drake [Neo], Captain of the Drake Pirates", "QCK", [ "Cerebral", "Powerhouse" ], 5, 40, 4, 4, 99, 4000000, 1301, 632, 129, 2607, 1235, 297, null ],
+    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Capone Bege, Supernova", "STR", [ "Shooter", "Free Spirit" ], 3, 13, null, null, 50, 130703, null, null, null, null, null, null, null ],
+    [ "Capone \"Gang\" Bege, Supernova", "STR", [ "Shooter", "Free Spirit" ], 4, 20, 7, 4, 99, 1000000, null, null, null, 2055, 1192, 246, null ],
+    [ "Jewelry Bonney, Supernova", "QCK", [ "Fighter", "Free Spirit" ], 3, 13, null, null, 50, 130703, null, null, null, null, null, null, null ],
+    [ "\"Big Eater\" Jewelry Bonney, Supernova", "QCK", [ "Fighter", "Free Spirit" ], 4, 20, 6, 4, 99, 1000000, null, null, null, 2295, 734, 329, null ],
     ];
     
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],

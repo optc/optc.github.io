@@ -19490,7 +19490,7 @@ window.details = {
                 "cooldown": [ 14, 9 ],
             },
             {
-                "description": "Cuts the current HP of one enemy by 50% and changes [TND], [EMPTY] and Badly Matching orbs into Matching orbs and if your Captain is a Cerebral character, reduces Paralysis duration by 5 turns",
+                "description": "Cuts the current HP of one enemy by 15% and changes [TND], [EMPTY] and Badly Matching orbs into Matching orbs and if your Captain is a Cerebral character, reduces Paralysis duration by 5 turns",
                 "cooldown": [ 17, 12 ],
             },
             {
@@ -19510,7 +19510,7 @@ window.details = {
                 "cooldown": [ 14, 9 ],
             },
             {
-                "description": "Cuts the current HP of one enemy by 50% and changes [TND], [EMPTY] and Badly Matching orbs into Matching orbs and if your Captain is a Cerebral character, reduces Paralysis duration by 5 turns",
+                "description": "Cuts the current HP of one enemy by 15% and changes [TND], [EMPTY] and Badly Matching orbs into Matching orbs and if your Captain is a Cerebral character, reduces Paralysis duration by 5 turns",
                 "cooldown": [ 17, 12 ],
             },
             {
@@ -19534,5 +19534,25 @@ window.details = {
         special: "Deals 25x? ATK in [QCK] damage to one enemy. If HP above ??% then changes [RCV], [TND], [EMPTY], [BOMB] and [BLOCK] orbs into matching orbs and if HP below ?% then changes adjacent orbs into matching orbs",
         specialName: "Double Edge of Revolt [Neo]",
         sailor: "When HP is below ??% at the start of the turn, boosts base ATK of all characters by 40",
+    },
+    1979: {//Capone
+        captain: "Not Translated",
+        special: "Reduces Special Cooldown of Shooter specials by 1 turn and changes orbs in the top row into Matching orbs",
+        specialName: "Angry Threatening Command",
+    },
+    1980: {//Capone
+        captain: "Boosts HP of Shooter characters by 1.2x and boosts ATK by 2.5x if they have a matching orb, by 2x otherwise",
+        special: "Reduces Special Cooldown of Shooter specials by 1 turn and changes orbs in the top row into Matching orbs",
+        specialName: "Angry Threatening Command",
+    },
+    1981: {//Bonney
+        captain: "Not Translated",
+        special: "Changes [RCV] orbs into matching orbs and recovers ??? HP at the end of the turn for 2 turns",
+        specialName: "Glutonous Meal",
+    },
+    1982: {//Bonney
+        captain: "Boosts RCV of Fighter characters by 1.2x and boosts ATK of Fighter characters by 2.25x if HP is above ??% at the start of the turn, by 2x otherwise",
+        special: "Changes [RCV] orbs into matching orbs and recovers ??? HP at the end of the turn for 2 turns",
+        specialName: "Glutonous Meal",
     },
 };
