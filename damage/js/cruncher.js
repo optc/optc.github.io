@@ -817,8 +817,15 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if (!team[n].unit || n > 5) return;
             var id = team[n].unit.number + 1;
             if (x.special && specials.hasOwnProperty(id)) {
-                if (specials[id].hasOwnProperty('orb') && enabledSpecials[0] && enabledSpecials[0].permanent)
+                if (specials[id].hasOwnProperty('orb') && enabledSpecials[0] && enabledSpecials[0].permanent){
                     conflictWarning = true;
+                    var disabledSpecial = {}
+                    for (var i in specials[id]){
+                        if(i != 'orb')
+                            disabledSpecial[i] = specials[id][i];
+                    }
+                    enabledSpecials.push(jQuery.extend({ sourceSlot: n },disabledSpecial));
+                }
                 else
                     enabledSpecials.push(jQuery.extend({ sourceSlot: n },specials[id]));
             }
