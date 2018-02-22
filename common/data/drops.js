@@ -1872,6 +1872,14 @@ window.drops = {
             'All Difficulties': [ 1964, 1966, -1764, -1368, -1802, -1713, -1840, -1557 ]
         },
         
+        {
+            name: 'Supernova! Capone and Bonney!',
+            thumb: 1982,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 1979, 1981, -1921, -1362, -1366, -1770, -1834, -1836, -1633 ]
+        },
+        
     ],
 
             
