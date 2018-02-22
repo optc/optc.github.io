@@ -330,7 +330,8 @@ window.details = {
     22: {
         special: "Deals 15x character's ATK in PSY damage to one enemy",
         specialName: "Heavy Gong",
-        captain: "Boosts RCV of PSY characters by 1.5x"
+        captain: "Boosts RCV of PSY characters by 1.5x",
+        limit: "This character has a Limit Break Tree"
     },
     23: {
         special: "Changes adjacent orbs into [RCV] orbs",
@@ -572,7 +573,8 @@ window.details = {
     73: {
         special: "Randomizes all orbs",
         specialName: "Charge! Supersonic Duck Squadron!",
-        captain: "Recovers 5x character's RCV in HP at the end of each turn"
+        captain: "Recovers 5x character's RCV in HP at the end of each turn",
+        limit: "This character has a Limit Break Tree"
     },
     74: {
         special: "Deals 25x character's ATK in QCK damage to one enemy",
@@ -582,7 +584,8 @@ window.details = {
     75: {
         special: "Deals 15x character's ATK in QCK to all enemies",
         specialName: "Flame Mirror",
-        captain: "Boosts ATK of QCK characters by 2.5x"
+        captain: "Boosts ATK of QCK characters by 2.5x",
+        limit: "This character has a Limit Break Tree"
     },
     76: {
         special: "Deals 15x character's ATK in PSY damage to all enemies",
@@ -995,7 +998,8 @@ window.details = {
     210: {
         special: "Boosts ATK of INT characters by 2x for 1 turn",
         specialName: "Cien Fleur",
-        captain: "Boosts RCV of INT characters by 2x"
+        captain: "Boosts RCV of INT characters by 2x",
+        limit: "This character has a Limit Break Tree"
     },
     211: {
         captain: "Boosts ATK of Striker characters by 1.2x"
@@ -1031,7 +1035,8 @@ window.details = {
     217: {
         special: "Deals 15x character's ATK in STR damage to all enemies",
         specialName: "Gum-Gum Giant Rifle",
-        captain: "Boosts ATK by 3.5x after scoring 3 Perfects in a row"
+        captain: "Boosts ATK by 3.5x after scoring 3 Perfects in a row",
+        limit: "This character has a Limit Break Tree"
     },
     218: {
         special: "Reduces damage received from STR enemies by 100% for 1 turn",
@@ -2069,7 +2074,8 @@ window.details = {
         specialName: "Massacre Soldier",
         specialNotes: "#{fixed}",
         captain: "Boosts ATK by 3.5x after scoring 3 hits below Good in a row",
-        sailor: "When HP is below 30% at the start of the turn, boosts ATK of Cerebral characters by 50"
+        sailor: "When HP is below 30% at the start of the turn, boosts ATK of Cerebral characters by 50",
+        limit: "This character has a Limit Break Tree"
     },
     313: {
         special: "Boosts ATK of Striker characters by 1.5x for 1 turn, deals 25x character's ATK in PSY damage to one enemy",
@@ -2636,7 +2642,8 @@ window.details = {
     390: {
         special: "Randomly changes all orbs into either [RCV], [STR], [DEX] or [QCK] orbs and changes own orb into [QCK]",
         specialName: "Hell Wink",
-        captain: "Boosts ATK by 2.75x following a chain of DEX > INT > QCK attacks no lower than Good"
+        captain: "Boosts ATK by 2.75x following a chain of DEX > INT > QCK attacks no lower than Good",
+        limit: "This character has a Limit Break Tree"
     },
     391: {
         special: "Reduces damage received by 90% for 1 turn, reduces the defense of all enemies by 80% for 1 turn, Poisons enemies for 1,000 damage for a single turn",
@@ -2771,7 +2778,8 @@ window.details = {
     416: {
         special: "Recovers 15x character's RCV in HP, delays all enemies for 1 turn",
         specialName: "Love-Love Mellow",
-        captain: "Boosts ATK of QCK and PSY characters by 2.75x and their RCV by 1.5x if HP is above 70% at the start of the turn"
+        captain: "Boosts ATK of QCK and PSY characters by 2.75x and their RCV by 1.5x if HP is above 70% at the start of the turn",
+        limit: "This character has a Limit Break Tree"
     },
     417: {
         special: "Switches orbs between slots twice, amplifies the effect of orbs by 2x for 1 turn",
@@ -3015,7 +3023,8 @@ window.details = {
     449: {
         special: "Boosts chances of getting [QCK] orbs for 3 turns",
         specialName: "Pirate King's Sword",
-        captain: "Boosts ATK of QCK characters by 3x if HP is above 99% at the start of the turn"
+        captain: "Boosts ATK of QCK characters by 3x if HP is above 99% at the start of the turn",
+        limit: "This character has a Limit Break Tree"
     },
     450: {
         special: "Boosts ATK of Fighter characters by 1.5x for 1 turn, deals 25x character's ATK in DEX damage to one enemy",
@@ -3377,7 +3386,8 @@ window.details = {
         special: "Reduces crew's current HP by 99%, deals 25x character's ATK in fixed damage to all enemies, boosts ATK of STR characters by 2x for 1 turn",
         specialName: "Gum-Gum Gigant Thor Axe",
         specialNotes: "#{fixed}",
-        captain: "Boosts ATK of STR characters by 2.5x"
+        captain: "Boosts ATK of STR characters by 2.5x",
+        limit: "This character has a Limit Break Tree"
     },
     521: {
         special: "Deals several times the character's ATK in INT damage to all enemies",
@@ -3408,6 +3418,7 @@ window.details = {
         captain: "Boosts ATK of Striker characters by 2x and their RCV by 1.5x",
         sailor: "Makes [DEX] orbs \"beneficial\" for this unit",
         sailorNotes: "#{beneficial}",
+        limit: "This character has a Limit Break Tree"
     },
     525: {
         special: "Deals random PSY damage to all enemies, randomizes all orbs",
@@ -3723,7 +3734,8 @@ window.details = {
         special: "Boosts chances of getting [INT] orbs for 3 turns",
         specialName: "Ochenta Fleur - Cuatro Manus Shock",
         captain: "Boosts ATK and RCV of INT characters by 2x",
-        sailor: "Reduces Blindness duration by 3 turns"
+        sailor: "Reduces Blindness duration by 3 turns",
+        limit: "This character has a Limit Break Tree"
     },
     559: {
         special: "Changes own orb into [STR], amplifies the effect of orbs by 1.5x for 2 turns",
@@ -4402,7 +4414,8 @@ window.details = {
         special: "Boosts ATK of Free Spirit characters by 1.5x for 1 turn. If during that turn every unit scores a Perfect hit, boosts ATK of Free Spirit characters by 2x in the following turn.",
         specialName: "Dragon's Claw",
         captain: "Boosts HP and RCV of all characters by 1.2x, boosts ATK of Free Spirit characters proportionally to the crew's current HP",
-        captainNotes: "#{captainProportional : higher : 2 + 0.75 * (remaining HP) / (total HP) : 2.75 : 2}"
+        captainNotes: "#{captainProportional : higher : 2 + 0.75 * (remaining HP) / (total HP) : 2.75 : 2}",
+        limit: "This character has a Limit Break Tree"
     },
     670: {
         special: "Boosts ATK of Fighter characters by 1.75x for 1 turn",
@@ -4596,7 +4609,8 @@ window.details = {
     709: {
         special: "Reduces Bind and Despair duration by 3 turns",
         specialName: "Cien Fleur - Wing",
-        captain: "Boosts ATK and RCV of PSY characters by 1.5x"
+        captain: "Boosts ATK and RCV of PSY characters by 1.5x",
+        limit: "This character has a Limit Break Tree"
     },
     710: {
         special: "Empties all slots with [BLOCK] orbs, boosts ATK of Shooter characters by 1.25x for 3 turns, deals 15x character's ATK in PSY damage to all enemies",
@@ -4728,7 +4742,8 @@ window.details = {
         special: "Boosts ATK of Cerebral characters by 2x if HP is below 30% when the special is activated, otherwise boosts ATK of Cerebral characters by 1.5x, deals 20x character's ATK in DEX damage to all enemies",
         specialName: "Sables: Pesado",
         captain: "Boosts ATK of Cerebral characters proportionally to the crew's current HP",
-        captainNotes: "#{captainProportional : lower : 1.5 + 1.75 * (1 - (remaining HP) / (total HP)) : 1.5 : 3.25}"
+        captainNotes: "#{captainProportional : lower : 1.5 + 1.75 * (1 - (remaining HP) / (total HP)) : 1.5 : 3.25}",
+        limit: "This character has a Limit Break Tree"
     },
     721: {
         special: "Randomizes all orbs, including [BLOCK] orbs",
@@ -5016,7 +5031,8 @@ window.details = {
     752: {
         special: "Reduces damage received in the next turn by 50% if the special is activated with more than 50% health remaining, by 80% if activated with less than 50% but more than 10% health remaining, by 100% if activated with less than 10% health remaining",
         specialName: "Sheep Cloud Tidal Wave",
-        captain: "Boosts ATK of Cerebral characters by 2.25x and their RCV by 1.5x"
+        captain: "Boosts ATK of Cerebral characters by 2.25x and their RCV by 1.5x",
+        limit: "This character has a Limit Break Tree"
     },
     753: {
         special: "Deals 15x character's ATK in QCK damage to one enemy, amplifies the effect of orbs by 1.75x for 1 turn",
@@ -5600,7 +5616,8 @@ window.details = {
     831: {
         captain: "Boosts ATK of Cerebral and Striker characters by 2x, deals 5 times the damage received in the previous turn in DEX damage to all enemies at the end of each turn",
         specialName: "Karma Conviction",
-        special: "Changes the orbs in the top row into [STR] orbs, changes the orbs in the middle row into [DEX] orbs, changes the orbs in the bottom row into [QCK] orbs"
+        special: "Changes the orbs in the top row into [STR] orbs, changes the orbs in the middle row into [DEX] orbs, changes the orbs in the bottom row into [QCK] orbs",
+        limit: "This character has a Limit Break Tree"
     },
     832: {
         captain: "Boosts ATK of Free Spirit characters proportionally to the crew's current HP, reduces crew's current HP by 10% at the end of each turn",
@@ -5629,7 +5646,8 @@ window.details = {
         captain: "Boosts ATK and HP of Cerebral characters by 2x, deals 5 times the damage received in the previous turn in STR damage to all enemies at the end of each turn",
         specialName: "Thrust Pad Cannon",
         special: "Changes [RCV], [TND], [EMPTY], [BLOCK] and [BOMB] orbs into Matching orbs, amplifies the effect of orbs by 1.75x for 1 turn",
-        specialNotes: "#{orb : 1.75x}"
+        specialNotes: "#{orb : 1.75x}",
+        limit: "This character has a Limit Break Tree"
     },
     837: {
         captain: "Boosts ATK of Driven characters by 2x",
@@ -5751,7 +5769,8 @@ window.details = {
     842: {
         captain: "Recovers 5x character's RCV in HP at the end of each turn, deals 5x character's ATK in PSY damage to all enemies at the end of each turn",
         specialName: "Snow Rabbit",
-        special: "Delays all enemies for 1 turn, boosts ATK against delayed enemies by 1.25x for 2 turns"
+        special: "Delays all enemies for 1 turn, boosts ATK against delayed enemies by 1.25x for 2 turns",
+        limit: "This character has a Limit Break Tree"
     },
     843: {
         captain: "Boosts ATK of Slasher, Striker and Shooter characters by 1.5x",
@@ -6343,7 +6362,8 @@ window.details = {
     908: {
         specialName: "Cien Fleur: Big Tree",
         special: "Delays all enemies for 1 turn, locks all orbs for 1 turn, deals 5,000 fixed damage to all enemies, reduces crew's HP to 1",
-        captain: "Boosts ATK of Cerebral characters by 2.5x and their RCV by 1.75x if HP is below 30% at the start of the turn"
+        captain: "Boosts ATK of Cerebral characters by 2.5x and their RCV by 1.75x if HP is below 30% at the start of the turn",
+        limit: "This character has a Limit Break Tree"
     },
     909: {
         captain: "Boosts ATK and RCV of PSY characters by 1.5x",
@@ -6578,7 +6598,8 @@ window.details = {
         captain: "Boosts Chain Multiplier by 3.5x and boosts HP by 1.25x",
         specialName: "Gum-Gum Giant Jet Shell",
         special: "Deals 20x ATK as [QCK] damage, and makes Perfects easier to hit for 3 turns",
-        specialNotes: "Increases timing window to hit a Perfect. (Animation remains the same)"
+        specialNotes: "Increases timing window to hit a Perfect. (Animation remains the same)",
+        limit: "This character has a Limit Break Tree"
     },
     938: {
         captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of Cerebral characters by 1.5x",
@@ -6656,7 +6677,8 @@ window.details = {
     943: {
         captain: "Boosts ATK of [STR] characters by 2.25x and their HP by 1.75x",
         specialName: "Future Country's Big Incident: The Nightmare of Baldimore",
-        special: "Reduces damage received from [QCK] enemies by 100% for 1 turn"
+        special: "Reduces damage received from [QCK] enemies by 100% for 1 turn",
+        limit: "This character has a Limit Break Tree"
     },
     944: {
         captain: "Boosts ATK and RCV of Driven characters by 1.2x",
@@ -6701,7 +6723,8 @@ window.details = {
         captain: "Boosts ATK of Fighter and Free Spirit characters by 2.75x after scoring 3 Perfects in a row",
         specialName: "Flame Commandment: Fire Pillar",
         special: "Reduces Special Cooldown of Fighter and Free Spirit characters by 1 turn. Reduces damage received by 50% for 1 turn.",
-        specialNotes: "Reducing Special Cooldown works as if you took an extra turn"
+        specialNotes: "Reducing Special Cooldown works as if you took an extra turn",
+        limit: "This character has a Limit Break Tree"
     },
     952: {
         captain: "Boosts ATK and HP of Shooter and Striker characters by 1.2x",
@@ -6999,7 +7022,8 @@ window.details = {
     991: {
         captain: "Boosts ATK of Free Spirit characters by 2.75x if HP is above 99% at the start of the turn",
         specialName: "10,000 Ton Vise of Hell",
-        special: "Changes [RCV] orbs into matching orbs"
+        special: "Changes [RCV] orbs into matching orbs",
+        limit: "This character has a Limit Break Tree"
     },
     992: {
         captain: "Boosts ATK of [QCK] characters by 2x",
@@ -7092,6 +7116,7 @@ window.details = {
         specialNotes: "Status includes Enemy Attack, Defense, Combo Hits, Current / Total HP, Attack Interval, 'Specials based on turns', and 'Effect after Death'<br>#{stages}",
         sailor: "Restores her own special by 1 turn when it is rewinded",
         sailorNotes: "#{rewind : 1}",
+        limit: "This character has a Limit Break Tree"
     },
     996: {
         captain: "Boosts ATK of Powerhouse characters by 2x",
@@ -8398,7 +8423,8 @@ window.details = {
     1091: {
         captain: "Boosts ATK of all characters by 2.5x if HP is below 30% at the start of the turn",
         special: "Deals 25x ATK in [PSY] damage to one enemy. If HP is less than 30% then changes adjacent orbs into matching orbs",
-        specialName: "Double Edge of Revolt"
+        specialName: "Double Edge of Revolt",
+        limit: "This character has a Limit Break Tree"
     },
     1092: {
         captain: "Boosts RCV of all characters depending on the current Health.",
@@ -8594,7 +8620,8 @@ window.details = {
         special: "Reduces crew's current HP by 99%, deals 25x character's ATK in fixed damage to all enemies, boosts ATK of STR characters by 2x for 1 turn",
         specialName: "Gum-Gum Gigant Axe",
         specialNotes: "#{fixed}",
-        captain: "Boosts ATK of STR characters by 2.5x"
+        captain: "Boosts ATK of STR characters by 2.5x",
+        limit: "This character has a Limit Break Tree"
     },
     1116: {
         special: "Deals several times the character's ATK in INT damage to all enemies",
@@ -8625,6 +8652,7 @@ window.details = {
         captain: "Boosts ATK of Striker characters by 2x and their RCV by 1.5x",
         sailor: "Makes [DEX] orbs \"beneficial\" for this unit",
         sailorNotes: "#{beneficial}",
+        limit: "This character has a Limit Break Tree"
     },
     1120: {
         special: "Deals random typeless damage to all enemies, changes own orb into [STR]",
@@ -9503,7 +9531,8 @@ window.details = {
         special: "Boosts chances of getting [INT] orbs for 3 turns",
         specialName: "Ochenta Fleur - Cuatro Manus Shock",
         captain: "Boosts ATK and RCV of INT characters by 2x",
-        sailor: "Reduces Blindness duration by 3 turn"
+        sailor: "Reduces Blindness duration by 3 turn",
+        limit: "This character has a Limit Break Tree"
     },
     1209: {
         special: "Delays all enemies for 3 turns, cuts the current HP of each enemy by 10%",
@@ -10888,6 +10917,7 @@ window.details = {
         special: "Deals 15x character's ATK as [DEX] damage to all enemies. Boosts ATK against delayed enemies by 1.5x for 2 turns",
         specialName: "Front Line Dissection",
         sailor: "Boosts base ATK of Slasher and Cerebral characters by 75 if your captain is a Cerebral character",
+        limit: "This character has a Limit Break Tree"
     },
     1323: {//Onigumo
         captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of Slasher and Driven characters by 1.3x",
@@ -12073,6 +12103,7 @@ window.details = {
         captain: "Boosts ATK of all characters by 2.5x if there's a [STR], [DEX], [QCK], [PSY], and [INT] character in your crew, and boosts their HP by 1.5x if there's a Fighter, Slasher, Shooter, Driven, Free Spirit, and Powerhouse character in your crew",
         special: "Deals 100x character's ATK in typeless damage to all enemies, removes enemies' ATK Up, Enrage, End of Turn Damage/Percent Cut, and End of Turn Heal Buffs, and boosts ATK of all characters by 1.5x for 1 turn",
         specialName: "General Cannon",
+        limit: "This character has a Limit Break Tree"
     },
     1433: {//Hody Jones
         captain: "Reduces cooldown of Powerhouse specials by 1 turn at the start of the fight, reduces crew's current HP by 10% at the end of each turn, boosts ATK of Powerhouse characters by 3x if there are 6 Powerhouse characters in your crew and boosts HP of Powerhouse characters by up to 2x depending on how many Powerhouse characters are in your crew.",
@@ -12423,7 +12454,8 @@ window.details = {
         captain: "Boosts ATK of [QCK] and [PSY] characters proportionally to the crew's current HP. If HP is below 50%, Boosts RCV of [QCK] and [PSY] characters by 1.5x.",
         special: "Boosts ATK and RCV of [QCK] and [PSY] characters by 1.75x for 1 turn, and delays all enemies for 1 turn. Changes your Captain orb to [RCV]. If HP is above 50%, changes left column orbs into Matching orbs.",
         specialName: "Perfume Femur",
-        captainNotes: "#{captainProportional : higher : 2.25 + 0.5 * (remaining HP) / (total HP) : 2.75 : 2.25}"
+        captainNotes: "#{captainProportional : higher : 2.25 + 0.5 * (remaining HP) / (total HP) : 2.75 : 2.25}",
+        limit: "This character has a Limit Break Tree"
     },
     1446: {//Sogeking 5+
         captain: "Boosts ATK of Shooter characters by 2x and RCV of Shooter characters by 1.25x.",
@@ -12538,6 +12570,7 @@ window.details = {
         special: "Deals PSY damage according to HP. For Fighter characters, Changes [BLOCK] orbs into matching orbs.",
         specialNotes: "The exact damage is proportional to the crew's remaining HP and is higher the higher the HP is. The formula used is ???? * (current HP) / (total HP)",
         specialName: "Weight Gain: Heavy Gong",
+        limit: "This character has a Limit Break Tree"
     },
     1449: {//Violet
         captain: "Boosts ATK of Cerebral characters by 1.5x. Heals for .3x character's RCV at the end of the turn each time you hit a Great.",
@@ -13003,6 +13036,7 @@ window.details = {
         ],
         specialNotes: "#{stages}",
         specialName: "Reborn - Fire",
+        limit: "This character has a Limit Break Tree"
     },
     1493: {//STR Fishman Outlaw
         captain: "Boosts ATK of [STR] characters by 1.5x",
@@ -13366,6 +13400,7 @@ window.details = {
         sailor: "Makes [STR], [INT], and [DEX] orbs \"beneficial\" for this unit",
         sailorNotes: "#{beneficial}",
         specialName: "The Teacher's Final Ordeal",
+        limit: "This character has a Limit Break Tree"
     },
     1535: {//Duval
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of [PSY] characters by 2.5x if they have matching orbs",
@@ -13380,6 +13415,7 @@ window.details = {
         sailor: "Makes [INT] orbs \"beneficial\" for [PSY] characters",
         sailorNotes: "#{beneficial}",
         specialName: "Prideful Memories",
+        limit: "This character has a Limit Break Tree"
     },
     1537: {//Heracles'n
         captain: "Boosts ATK of [STR] characters by 2x and boosts HP of Shooter and Striker characters by 1.2x",
@@ -13460,6 +13496,7 @@ window.details = {
         sailor: "Restores her own special by 2 turns when it is rewinded",
         sailorNotes: "#{rewind : 1}",
         specialName: "Soft and Gentle Fluffy Kisses",
+        limit: "This character has a Limit Break Tree"
     },
     1543: {//6+ Usopp
         captain: "Boosts ATK of Shooter characters by 1.5x if HP is below 50% or by 1.75x if HP is below 30% at the start of the turn. Makes [STR], [DEX], [QCK], [PSY], [INT], [RCV], and [TND] orbs \"beneficial\" to Shooter characters. At the beginning of each Stage, increases the Attack Timer of all enemies by 1 turn",
@@ -13565,6 +13602,7 @@ window.details = {
         special: "Reduces Bind, Despair and Silence duration by 3 turns, and reduces Special Cooldown of all characters by 1 turn",
         specialName: "Mil Fluer: Campo de Flores",
         specialNotes: "#{silence}",
+        limit: "This character has a Limit Break Tree"
     },
     1550: {//5+ Franky
         captain: "Boosts ATK of [INT] characters by 2.5x, reduces damage received by 10%",
@@ -13743,6 +13781,7 @@ window.details = {
         special: "Reduces crew's current HP by 80%, deals 60x character's ATK in STR damage to one enemy. Adds 80x character's ATK as Additional Typeless Damage for 1 turn",
         specialNotes: "#{additionalDamage : 80x}",
         specialName: "King Sword Shine",
+        limit: "This character has a Limit Break Tree"
     },
     1572: {//Wanda
         captain: "Boosts ATK of Cerebral characters by 2x, and their RCV by 1.2x",
@@ -13755,6 +13794,7 @@ window.details = {
         special: "Randomly changes all orbs, including [BLOCK] orbs into [STR], [DEX], [QCK], [INT], or [PSY] orbs, boosts ATK of Cerebral characters by 1.75x for 3 turns",
         sailor: "Reduces Paralysis duration by 1 turn",
         specialName: "Ruler's Aide Flight",
+        limit: "This character has a Limit Break Tree"
     },
     1574: {//Sicilian
         captain: "Boosts ATK of [INT] characters by 2.25x",
@@ -13767,6 +13807,7 @@ window.details = {
         special: "Delays all enemies for 1 turn, deals 25x character's ATK [INT] damage to all enemies, and changes [STR], [DEX], [QCK], [INT], and [PSY] orbs on Cerebral characters into Matching orbs.",
         sailor: "When HP is below 30% at the start of the turn, boosts own base ATK by 200",
         specialName: "Dash - Dive - Destroy",
+        limit: "This character has a Limit Break Tree"
     },
     1576: {//Kin'emon
         captain: "Boosts ATK by 2.5x following a chain of Good > Great > Perfect hits",
@@ -13783,6 +13824,7 @@ window.details = {
         sailor: "Makes [STR] and [QCK] orbs \"beneficial\" for this unit",
         sailorNotes: "#{beneficial}",
         specialName: "Flaming Flash",
+        limit: "This character has a Limit Break Tree"
     },
     1578: {//Momonosuke
         captain: "Protects from defeat as long as HP is above 50%",
@@ -13825,6 +13867,7 @@ window.details = {
         sailor: "Makes [STR], [QCK], [DEX], and [INT] orbs \"beneficial\" for this unit",
         sailorNotes: "#{beneficial}",
         specialName: "Miraculous Flying Dragon",
+        limit: "This character has a Limit Break Tree"
     },
     1580: {//Fortnight Law
         captain: "Boosts ATK of Free Spirit characters by 1.5x and boosts RCV of DEX characters by 1.2x",
@@ -14271,6 +14314,7 @@ window.details = {
         ],
         specialNotes: "#{stages}",
         specialName: "Thousand Ton Destruction",
+        limit: "This character has a Limit Break Tree"
     },
     1629: {//Ikaros Much
         captain: "Boosts ATK and HP of Striker characters by 1.5x",
@@ -19488,7 +19532,8 @@ window.details = {
         special: "Cuts the current HP of each enemy by 20% and boosts ATK of Cerebral characters by 2x",
         specialName: "Desert Girasole",
         captain: "Boosts ATK of Cerebral characters proportionally to the crew's current HP, by 3.5x at max",
-        captainNotes: "#{captainProportional : lower : 2 + 1.5 * (1 - (remaining HP) / (total HP)) : 2 : 3.5}"
+        captainNotes: "#{captainProportional : lower : 2 + 1.5 * (1 - (remaining HP) / (total HP)) : 2 : 3.5}",
+        limit: "This character has a Limit Break Tree"
     },
     1928: {//Bartolomeo
         captain: "Boosts ATK of Striker and Driven characters by 3x. If you don't attack with Bartolomeo, reduces damage received by 30% for that turn.",
@@ -20478,5 +20523,25 @@ window.details = {
         special: "Deals 25x? ATK in [QCK] damage to one enemy. If HP above ??% then changes [RCV], [TND], [EMPTY], [BOMB] and [BLOCK] orbs into matching orbs and if HP below ?% then changes adjacent orbs into matching orbs",
         specialName: "Double Edge of Revolt [Neo]",
         sailor: "When HP is below 30% at the start of the turn, boosts base ATK of all characters by 40",
+    },
+    1979: {//Capone
+        captain: "Not Translated",
+        special: "Reduces Special Cooldown of Shooter specials by 1 turn and changes orbs in the top row into Matching orbs",
+        specialName: "Angry Threatening Command",
+    },
+    1980: {//Capone
+        captain: "Boosts HP of Shooter characters by 1.2x and boosts ATK by 2.5x if they have a matching orb, by 2x otherwise",
+        special: "Reduces Special Cooldown of Shooter specials by 1 turn and changes orbs in the top row into Matching orbs",
+        specialName: "Angry Threatening Command",
+    },
+    1981: {//Bonney
+        captain: "Not Translated",
+        special: "Changes [RCV] orbs into matching orbs and recovers ??? HP at the end of the turn for 2 turns",
+        specialName: "Glutonous Meal",
+    },
+    1982: {//Bonney
+        captain: "Boosts RCV of Fighter characters by 1.2x and boosts ATK of Fighter characters by 2.25x if HP is above ??% at the start of the turn, by 2x otherwise",
+        special: "Changes [RCV] orbs into matching orbs and recovers ??? HP at the end of the turn for 2 turns",
+        specialName: "Glutonous Meal",
     },
 };
