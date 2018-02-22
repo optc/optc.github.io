@@ -6624,4 +6624,26 @@ window.captains = {
     1976: {
         atk: function(p) { return p.percHP <= 30.0 ? 2.5 : 1; }
     },
+    1978: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 2.5 : 1; },
+    },
+    1987: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? 2.5 : 1; },
+        rcv: function(p) { return p.unit.class.has("Fighter") ? 1.3 : 1; },
+    },
+    1989: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? 2.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; },
+    },
+    1991: {
+        damageSorter: function(d) { return CrunchUtils.classSort(d, 2.75, [ "Free Spirit" ]); },
+        hitAtk: function(p) {
+            if (!p.unit.class.has("Free Spirit")) return 1;
+            return p.modifiers.slice(0, p.chainPosition).count("Perfect") == p.chainPosition ? 2.75 : 1;
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
+    },
+    1993: {
+        atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? 2.5 : 1; },
+    },
 };
