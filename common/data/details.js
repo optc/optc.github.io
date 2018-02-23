@@ -19586,6 +19586,7 @@ window.details = {
             "combined": "Boosts HP of Free Spirit characters by 1.2x and boosts ATK by 4.25x if they have a matching orb, by 3x otherwise and reduce damage received by 20%"
         },
         special: "Deals 75x character's ATK in typeless damage to all enemies, changes [STR], [DEX], [QCK], [INT], and [PSY] orbs on Free Spirit characters into Matching orbs, amplifies the effect of orbs by 2x for 1 turn and becomes Luffy & Ace for 3 turns",
+        specialNotes: "Change Action: When Change is activated, this character removes all Despair, Paralysis, and Slot Bind on themselves and changes their own orb, including [BLOCK] orbs, into a Matching orb",
         specialName: "Brotherly Bond",
         sailor: {
             "character1": "Makes [QCK] orbs \"beneficial\" for Free Spirit characters",
@@ -19600,6 +19601,7 @@ window.details = {
             "combined": "Boosts HP of Free Spirit characters by 1.2x and boosts ATK by 4.25x if they have a matching orb, by 3x otherwise and reduce damage received by 20%"
         },
         special: "Deals 75x character's ATK in typeless damage to all enemies, changes [STR], [DEX], [QCK], [INT], and [PSY] orbs on Free Spirit characters into Matching orbs, amplifies the effect of orbs by 2x for 1 turn and becomes Luffy & Ace for 3 turns",
+        specialNotes: "Change Action: When Change is activated, this character removes all Despair, Paralysis, and Slot Bind on themselves and changes their own orb, including [BLOCK] orbs, into a Matching orb",
         specialName: "Brotherly Bond",
         sailor: {
             "character1": "Makes [QCK] orbs \"beneficial\" for Free Spirit characters",
