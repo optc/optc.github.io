@@ -372,4 +372,22 @@ window.sailors = {
     1908: {
         atkStatic: function(p) { return p.slot <= 1 ? 100 : 0; },
     },
+    1973: {
+        atkStatic: function(p) { return p.unit.class.has("Cerebral") ? 75 : 0; },
+    },
+    1974: {
+        atkStatic: function(p) { return p.unit.class.has("Cerebral") ? 75 : 0; },
+    },
+    1975: {
+        atkStatic: function(p) { return p.percHP <= 30.0 ? 40 : 0; },
+    },
+    1976: {
+        atkStatic: function(p) { return p.percHP <= 30.0 ? 40 : 0; },
+    },
+    1992: {
+        atkStatic: function(p) { return p.unit.class.has("Free Spirit") ? 50 : 0; },
+    },
+    1993: {
+        atkStatic: function(p) { return p.unit.class.has("Free Spirit") ? 50 : 0; },
+    },
 };

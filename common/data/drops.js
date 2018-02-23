@@ -686,7 +686,7 @@ window.drops = {
         },
         
         {
-            name: 'Punk Hazard Burning Lands - Laboratory',
+            name: 'Punk Hazard - Burning Lands to Laboratory',
             shortName: 'Punk Hazard 1',
             thumb: 1637,
             global: true,
@@ -710,7 +710,7 @@ window.drops = {
         },
         
         {
-            name: 'Punk Hazard Ice Lands - First Floor Room R',
+            name: 'Punk Hazard - Ice Lands to First Floor Room R',
             shortName: 'Punk Hazard 2',
             thumb: 1716,
             global: true,
@@ -733,7 +733,7 @@ window.drops = {
         },
         
         {
-            name: 'Dressrosa - Harbor Town Acacia Colosseum',
+            name: 'Dressrosa - Port Town Acacia to Colosseum',
             shortName: 'Dressrosa 1',
             thumb: 1782,
             completion: '5x Rainbow Gems',
@@ -1735,8 +1735,9 @@ window.drops = {
         },
         
         {
-            name: 'Open the Cafe!',
+            name: 'Dead-On Prophecy?! Madam Sharley',
             thumb: 1670,
+            global: true,
             nakama: 2038800,
             gamewith: 61622,
             condition: 'Total Crew Cost must be lower than 180 (Including friend captain)',
@@ -1744,12 +1745,12 @@ window.drops = {
         },
         
         {
-            name: 'Kid Pirates!',
+            name: 'Brutal Fiend! Eustass Kid',
             thumb: 1690,
             nakama: 2035243,
             gamewith: 62883,
             condition: 'Only [INT] and [PSY] orbs appear',
-            'All Difficulties': [ 1689, 1691, 1692, -1532, -1543, -449, -453, -1079, -1538, -967, -1346, -1349 ],
+            'All Difficulties': [ 1689, 1691, 1692, -1532, -1543, -1542, -449, -453, -1079, -1538, -967, -1346, -1349 ],
         },
         
         {
@@ -1853,6 +1854,30 @@ window.drops = {
             gamewith: 86343,
             condition: 'Take 7% current Health in Environmental Damage every 2 turns',
             'All Difficulties': [ 1931, 1932, 1933, -1747, -1318, -1324, -1798, -1749, -1561 ]
+        },
+        
+        {
+            name: 'My Ideal Type!',
+            thumb: 1947,
+            nakama: null,
+            gamewith: 88584,
+            'All Difficulties': [ 1946, 1948, -1763, -1796, -1800, -1364, -1678, -1562 ]
+        },
+        
+        {
+            name: 'Devil Oars, Day of the Second Coming',
+            thumb: 1965,
+            nakama: null,
+            gamewith: 91449,
+            'All Difficulties': [ 1964, 1966, -1764, -1368, -1802, -1713, -1840, -1557 ]
+        },
+        
+        {
+            name: 'Supernova! Capone and Bonney!',
+            thumb: 1982,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 1979, 1981, -1921, -1362, -1366, -1770, -1834, -1836, -1633 ]
         },
         
     ],
@@ -2276,6 +2301,7 @@ window.drops = {
         {
             name: 'Clash!! Vinsmoke Sanji',
             thumb: 1815,
+            global: true,
             nakama: 4063867,
             gamewith: 70374,
             Ultimate: [ 1814 ],
@@ -2316,6 +2342,7 @@ window.drops = {
         {
             name: 'Clash!! Señor Pink',
             thumb: 1943,
+            gamewith: 88927,
             Master: [ 1942 ],
             Expert: [ 1942 ]
         },
@@ -2332,9 +2359,9 @@ window.drops = {
             gamewith: 17473,
             slefty: 'coliseums',
             Exhibition: [ 776, 778, 803, 832, 834, 859, 861, 883, 902, 904, 925, 927, 952, 984, 1017, 1019, 1103, 1105, 1195, 1197, 1221, 1252, 1253, 1293, 1311, 1339, 1340, 1377, 1402, 1423, 1424, 1457, 1459, 1488, 1490, 1526, 1528, 1552, 1585, 1603, 1629, 1860 ],
-            Underground: [ 776, 778, 803, 832, 834, 859, 861, 883, 902, 904, 925, 927, 952, 984, 1017, 1019, 1103, 1105, 1195, 1197, 1221, 1252, 1253, 1293, 1311, 1339, 1340, 1377, 1402, 1423, 1424, 1457, 1459, 1488, 1490, 1526, 1528, 1552, 1585, 1603, 1629, 1860 ],
+            Underground: [ 776, 778, 803, 832, 834, 859, 861, 883, 902, 904, 925, 927, 952, 984, 1017, 1019, 1103, 1105, 1195, 1197, 1221, 1252, 1253, 1293, 1311, 1339, 1340, 1377, 1402, 1423, 1424, 1457, 1459, 1488, 1490, 1526, 1528, 1552, 1585, 1603, 1629, 1791, 1860, 1896 ],
             Chaos: [ 776, 778, 780, 803, 805, 830, 832, 834, 859, 861, 881, 883, 900, 902, 923, 925, 950, 982, 984, 1017, 1015, 1040, 1042, 1086, 1088, 1090, 1101, 1103, 1105, 1140, 1142, 1144, 1195, 1219, 1221, 1250, 1252, 1291, 1293, 1309, 1311, 1337, 1339, 1340, 1375, 1377, 1400, 1421, 1423, 1455, 1457, 1486, 1488, 1525, 1526, 1528, 1552, 1554, 1583, 1585, 1601, 1603, 1627, 1629, 1666, 1693, 1732, 1791, 1827, 1860, 1896, 1944 ],
-            Neo: [ 1862, 1898 ]
+            Neo: [ 1862, 1898, 1975 ]
         },
         
     ],
@@ -2343,21 +2370,21 @@ window.drops = {
     'Treasure Map': [
 
         {
-            name: 'Mihawk',
+            name: 'Dracule Mihawk',
             thumb: 1808,
             gamewith: 72766,
             'Raging Sea': [ 1807 ]
         },
 
         {
-            name: 'Whitebeard',
+            name: 'Edward Newgate',
             thumb: 1853,
             gamewith: 79614,
             'Raging Sea': [ 1852 ]
         },
 
         {
-            name: 'Cavendish',
+            name: 'White Knight Cavendish',
             thumb: 1889,
             gamewith: 83086,
             'Raging Sea': [ 1888 ]
@@ -2373,8 +2400,15 @@ window.drops = {
         {
             name: 'Fire Fist Ace',
             thumb: 1941,
-            gamewith: null,
+            gamewith: 87389,
             'Raging Sea': [ 1940 ]
+        },
+
+        {
+            name: 'Fire Fist Sabo',
+            thumb: 1972,
+            gamewith: null,
+            'Raging Sea': [ 1971 ]
         },
         
     ],
@@ -2426,7 +2460,7 @@ window.drops = {
         },
         
         {
-            name: 'Valentines Day and White Day Characters',
+            name: 'White Day Characters',
             thumb: 1463,
             gamewith: 51651,
             'Luffy': [ 1462, 29, 563, 1059, 345, 192, 113, 108, 115, 116, 117, 1180, 266, 94, 83 ],
@@ -2436,9 +2470,11 @@ window.drops = {
         },
         
         {
-            name: 'Wedding Sanji',
+            name: 'Sweet Heart Memory',
             thumb: 1961,
-            'Sanji': [ 1960 ],
+            gamewith: 88896,
+            'Sanji': [ 1960, 83, 94, 226, 1180, 81, 87, 92, 98, 113 ],
+            'Pudding': [ 1962, 83, 94, 226, 1180, 82, 88, 93, 99, 114 ],
         },
 
         {
@@ -2460,8 +2496,11 @@ window.drops = {
         {
             name: '3rd Anniversary Celebration! Duel! Luffy',
             thumb: 1600,
+            global: true,
             nakama: 6117639,
-            '30 Stamina': [ 1600 ]
+            condition: '40 Stamina drops all Final Forbidden Tomes',
+            '30 Stamina': [ 1600, 189, 190, 191, 192, 193, 118, 110, 111, 112, 113, 114, 117, 116, 115 ],
+            '40 Stamina': [ 189, 190, 191, 192, 193, 118, 110, 111, 112, 113, 114, 117, 116, 115 ],
         },
         
         {
@@ -2588,7 +2627,7 @@ window.drops = {
         },
         
         {
-            name: 'Challenge the Enemy! Sugofest Exclusive Character Skillbooks!',
+            name: 'Champion Challenge!',
             thumb: 1588,
             gamewith: 56742,
             showManual: true,
@@ -2617,7 +2656,7 @@ window.drops = {
             'Boa Hancock': [ 303, 103, 87, 98, 81, 92, 350, -416, -1445, -253, -677, -1320, -1448, -22, -402, -506, -588, -893, -1157, -702 ],
             'Bartolomeo': [ 304, 104, 88, 99, 82, 93, 351, -1035, -221, -357, -643, -840, -1025, -1029, -225, -541, -733, -1056 ],
             'Borsalino': [ 302, 102, 86, 97, 80, 91, 349, -1240, -77, -257, -760, -943, -1272, -1551, -896, -398, -793, -1058, -59 ],
-            'Captain Buggy': [ 300, 100, 84, 95, 78, 89, 347, -1391, -1031, -1232, -1276, -1550, -739, -214, -707, -735, -890, -1318, -290 ],
+            'Captain Buggy': [ 300, 100, 84, 95, 78, 89, 347, -1391, -1031, -1232, -1276, -1550, -739, -214, -707, -735, -890, -1281, -290 ],
         },
         
         {
@@ -2779,7 +2818,7 @@ window.drops = {
             thumb: 1240,
             nakama: 7078912,
             gamewith: 48115,
-			global: true,
+            global: true,
             completion: 'Ship: Kizaru\'s Cannonball',
         },
         

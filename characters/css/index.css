@@ -188,7 +188,25 @@ input[type="text"] {
     margin-right: 5px;
 }
 
-.badge-japan + div, .badge-global + div, .badge-base + div, .badge-level1 + div, .badge-level2 + div, .badge-level3 + div, .badge-level4 + div, .badge-level5 + div, .badge-level6 + div, .badge-sbase + div, .badge-slevel1 + div, .badge-slevel2 + div {
+.badge-character1, .badge-character2 {
+    float: left;
+    position: relative;
+    top: 2px;
+    width: 150px;
+    text-align: center;
+    margin-right: 5px;
+}
+
+.badge-combined {
+    float: left;
+    position: relative;
+    top: 2px;
+    width: 175px;
+    text-align: center;
+    margin-right: 5px;
+}
+
+.badge-japan + div, .badge-global + div, .badge-base + div, .badge-level1 + div, .badge-level2 + div, .badge-level3 + div, .badge-level4 + div, .badge-level5 + div, .badge-level6 + div, .badge-sbase + div, .badge-slevel1 + div, .badge-slevel2 + div, .badge-character1 + div, .badge-character2 + div,.badge-combined + div {
     margin-bottom: 2px;
 }
 
@@ -201,6 +219,9 @@ input[type="text"] {
 .badge-level4 { background: rgb(255,70,70); }
 .badge-level5 { background: rgb(255,50,50); }
 .badge-level6 { background: rgb(255,30,30); }
+.badge-character1 { background: rebeccapurple; }
+.badge-character2 { background: rebeccapurple; }
+.badge-combined { background: mediumvioletred; }
 .badge-sbase { background: darkred; }
 .badge-slevel1 { background: red; }
 .badge-slevel2 { background: red; }

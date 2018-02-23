@@ -431,7 +431,7 @@ window.matchers = [
     {
         name: 'Poisoners',
         target: 'special',
-        matcher: /poisons/i
+        matcher: /(poisons|Inflicts Toxic)/i
     },
 
     {

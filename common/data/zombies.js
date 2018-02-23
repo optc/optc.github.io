@@ -523,8 +523,16 @@ window.zombies = {
         type: 'healer',
         multiplier: 5
     },
-    1930: { // Senor Pink
+    1943: { // Senor Pink
         type: 'healer',
         multiplier: 1.5
+    },
+    1947: { // Vander Decken
+        type: 'healer',
+        multiplier: 2
+    },
+    1987: { // Marco
+        type: 'healer',
+        multiplier: 3
     },
 };

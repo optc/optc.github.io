@@ -269,27 +269,30 @@ controllers.PopoverCtrl = function($scope) {
     if ($scope.details.special.japan)
         $scope.details.special = $scope.details.special.japan;
     if ($scope.details.captain){
-        if ($scope.details.captain.level6){
-        $scope.details.captain = $scope.details.captain.level6;
-    }
-    else if ($scope.details.captain.level5){
-        $scope.details.captain = $scope.details.captain.level5;
-    }
-    else if ($scope.details.captain.level4){
-        $scope.details.captain = $scope.details.captain.level4;
-    }
-    else if ($scope.details.captain.level3){
-        $scope.details.captain = $scope.details.captain.level3;
-    }
-    else if ($scope.details.captain.level2){
-        $scope.details.captain = $scope.details.captain.level2;
-    }
-    else if ($scope.details.captain.level1){
-        $scope.details.captain = $scope.details.captain.level1;
-    }
-    else if ($scope.details.captain.base){
-        $scope.details.captain = $scope.details.captain.base;
-    }
+        if ($scope.details.captain.combined){
+            $scope.details.captain = $scope.details.captain.combined;
+        }
+        else if ($scope.details.captain.level6){
+            $scope.details.captain = $scope.details.captain.level6;
+        }
+        else if ($scope.details.captain.level5){
+            $scope.details.captain = $scope.details.captain.level5;
+        }
+        else if ($scope.details.captain.level4){
+            $scope.details.captain = $scope.details.captain.level4;
+        }
+        else if ($scope.details.captain.level3){
+            $scope.details.captain = $scope.details.captain.level3;
+        }
+        else if ($scope.details.captain.level2){
+            $scope.details.captain = $scope.details.captain.level2;
+        }
+        else if ($scope.details.captain.level1){
+            $scope.details.captain = $scope.details.captain.level1;
+        }
+        else if ($scope.details.captain.base){
+            $scope.details.captain = $scope.details.captain.base;
+        }
     }
     if ($scope.details.special.constructor == Array) {
         var lastStage = $scope.details.special.slice(-1)[0];

@@ -402,14 +402,17 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
     var computeActualDefense = function(shipName) {
         var baseDefense = parseInt($scope.data.defense, 10) || 0;
         currentDefense = baseDefense;
+        var defreduced = false;
         enabledSpecials.forEach(function(x) {
             if (x === null || !x.hasOwnProperty('def')) return;
-            currentDefense = Math.min(currentDefense,baseDefense * x.def());
+            currentDefense = Math.min(currentDefense,baseDefense * x.def(getParameters(x.sourceSlot)));
+            if (x.def(getParameters(x.sourceSlot)) < 1) defreduced = true;
         });
         if(shipName=="Flying Dutchman - Special ACTIVATED"){
             currentDefense = Math.min(currentDefense,baseDefense * .75);
+            defreduced = true;
         }
-        
+        return defreduced;
     };
 
     var getShipBonus = function(type,static,unit,slot) {
@@ -548,6 +551,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
     };
 
     var applyChainAndBonusMultipliers = function(damage,modifiers) {
+        
         var currentMax = -1, currentResult = null, addition = 0.0;
         if(shipBonus.bonus.name=="Doflamingo Ship - Special ACTIVATED"){
             addition = 0.2
@@ -570,6 +574,9 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             var result = damage.map(function(x,n) {
                 // calculate chain multiplier
                 var chainModifier = cptsWith.chainModifiers.reduce(function(prev,next) {
+                    //var params = getParameters(x.position, n);
+                    //params["sourceSlot"] = enabledEffects[x].sourceSlot;
+                    //console.log(cptsWith.chainModifiers);
                     return prev * next.chainModifier(getParameters(x.position, n));
                 },1);
                 //Computing Chain Modifier from map effects
@@ -810,8 +817,15 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if (!team[n].unit || n > 5) return;
             var id = team[n].unit.number + 1;
             if (x.special && specials.hasOwnProperty(id)) {
-                if (specials[id].hasOwnProperty('orb') && enabledSpecials[0] && enabledSpecials[0].permanent)
+                if (specials[id].hasOwnProperty('orb') && enabledSpecials[0] && enabledSpecials[0].permanent){
                     conflictWarning = true;
+                    var disabledSpecial = {}
+                    for (var i in specials[id]){
+                        if(i != 'orb')
+                            disabledSpecial[i] = specials[id][i];
+                    }
+                    enabledSpecials.push(jQuery.extend({ sourceSlot: n },disabledSpecial));
+                }
                 else
                     enabledSpecials.push(jQuery.extend({ sourceSlot: n },specials[id]));
             }
@@ -824,8 +838,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         if (conflictWarning) 
             $scope.notify({ type: 'error', text: 'One or more specials you selected cannot be activated due to an active map effect.' });
         // check if defense is down (required by some captain effects)
-        computeActualDefense(shipBonus.bonus.name);
-        isDefenseDown = enabledSpecials.some(function(x) { return (x !== null && x.hasOwnProperty('def')) || (shipBonus.bonus.name == "Flying Dutchman - Special ACTIVATED"); });
+        isDefenseDown = computeActualDefense(shipBonus.bonus.name);
+        //isDefenseDown = enabledSpecials.some(function(x) { return (x !== null && x.hasOwnProperty('def')) || (shipBonus.bonus.name == "Flying Dutchman - Special ACTIVATED"); });
         isDelayed = enabledSpecials.some(function(x) { return (x !== null && x.hasOwnProperty('delay')) || (shipBonus.bonus.name == "Karasumaru Ship - Special ACTIVATED"); });
         
         enabledEffects = [ ];
@@ -915,7 +929,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         }
         for(var z=0;z<team.length;z++){
             if(team[z].unit){
-                if(team[z].unit.class.length==2){
+                if(team[z].unit.class.length == 2){
                     if(['Fighter', 'Slasher', 'Shooter', 'Striker'].includes(team[z].unit.class[0]) || ['Fighter', 'Slasher', 'Shooter', 'Striker'].includes(team[z].unit.class[1])){
                         classes['Primary']++;
                     }

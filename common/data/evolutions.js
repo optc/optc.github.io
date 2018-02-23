@@ -3055,10 +3055,6 @@ window.evolutions = {
         evolution: 1926,
         evolvers: [ 118, 88, 99, 304, 304 ]
     },
-    1929: {
-        evolution: 1930,
-        evolvers: [ 118, 266, 97, 102, 302 ]
-    },
     720: {
         evolution: 1927,
         evolvers: [ 'skullSTR', 118, 84, 300, 267 ]
@@ -3067,32 +3063,124 @@ window.evolutions = {
         evolution: 1928,
         evolvers: [ 'skullQCK', 118, 85, 301, 267 ]
     },
+    1929: {
+        evolution: 1930,
+        evolvers: [ 118, 266, 97, 302, 102 ]
+    },
     1934: {
         evolution: 1935,
-        evolvers: [  ]
+        evolvers: [ 118, 79, 94, 301, 267 ]
     },
     1936: {
         evolution: 1937,
-        evolvers: [  ]
+        evolvers: [ 117, 82, 93, 99, 104 ]
     },
     1938: {
         evolution: 1939,
-        evolvers: [  ]
+        evolvers: [ 117, 80, 91, 97, 102 ]
     },
     1940: {
         evolution: 1941,
-        evolvers: [  ]
+        evolvers: [ 115, 116, 117, 118, 100 ]
     },
     1942: {
         evolution: 1943,
-        evolvers: [  ]
+        evolvers: [ 118, 89, 94, 300, 100 ]
     },
     1944: {
         evolution: 1945,
-        evolvers: [  ]
+        evolvers: [ 118, 98, 1180, 303, 103 ]
+    },
+    1946: {
+        evolution: 1947,
+        evolvers: [ 82, 88, 93, 99, 104 ]
+    },
+    1948: {
+        evolution: 1949,
+        evolvers: [ 81, 87, 92, 98, 103 ]
+    },
+    1950: {
+        evolution: 1951,
+        evolvers: [ 118, 87, 266, 303, 267 ]
+    },
+    1952: {
+        evolution: 1953,
+        evolvers: [ 83, 94, 99, 304, 104 ]
+    },
+    1954: {
+        evolution: 1955,
+        evolvers: [ 118, 79, 1180, 301, 101 ]
+    },
+    1956: {
+        evolution: 1957,
+        evolvers: [ 266, 78, 94, 300, 100 ]
+    },
+    1958: {
+        evolution: 1959,
+        evolvers: [ 1180, 91, 97, 302, 102 ]
     },
     1960: {
         evolution: 1961,
+        evolvers: [ 116, 117, 81, 87, 98 ]
+    },
+    1962: {
+        evolution: 1963,
+        evolvers: [ 116, 117, 82, 88, 99 ]
+    },
+    1964: {
+        evolution: 1965,
+        evolvers: [ 79, 85, 90, 96, 101 ]
+    },
+    1967: {
+        evolution: 1968,
+        evolvers: [ 117, 78, 89, 95, 100 ]
+    },
+    1969: {
+        evolution: 1970,
+        evolvers: [ 117, 80, 91, 97, 102 ]
+    },
+    1971: {
+        evolution: 1972,
+        evolvers: [ 115, 116, 117, 118, 102 ]
+    },
+    1973: {
+        evolution: 1974,
+        evolvers: [  ]
+    },
+    1975: {
+        evolution: 1976,
+        evolvers: [ 118, 83, 85, 301, 101 ]
+    },
+    1977: {
+        evolution: 1978,
+        evolvers: [  ]
+    },
+    1979: {
+        evolution: 1980,
+        evolvers: [  ]
+    },
+    1981: {
+        evolution: 1982,
+        evolvers: [  ]
+    },
+    1984: {
+        evolution: 1985,
+        evolvers: [  ]
+    },
+    1986: {
+        evolution: 1987,
+        evolvers: [  ]
+    },
+    1988: {
+        evolution: 1989,
+        evolvers: [  ]
+    },
+    1990: {
+        evolution: 1991,
+        evolvers: [  ]
+    },
+    1992: {
+        evolution: 1993,
         evolvers: [  ]
     },
 };

@@ -214,7 +214,7 @@ window.effects = {
         description: 'Activates [G] orb Support, boosts Orbs by 1.5x',
         thumb: 560,
         id: 24, // don't change this
-        orb: function(p) { return p.orb == 2.0 ? 1.5 : (p.orb == 0.5 ? 10/15 : 1); },
+        orb: function(p) { return (p.orb == 2.0 || p.orb == 'g') ? 1.5 : (p.orb == 0.5 ? 10/15 : 1); },
         gOrbsEnabled: true
     },
 
@@ -588,5 +588,51 @@ window.effects = {
         thumb: 1472,
         id: 53, // don't change this
         rainbowOrbsEnabled: true
+    },
+    
+    'Blitz Battle! Doflamingo Family': {
+        description: 'Lot of units boosted',
+        thumb: 870,
+        id: 54, // don't change this
+        atk: function(p) {
+            var character = window.families[p.number];
+            var boost = 1;
+            matching = [ "Monkey D. Luffy", "Roronoa Zoro", "Franky", "Nico Robin", "Usopp", "Trafalgar Law", "Bartolomeo", "Cavendish", "Rob Lucci", "Sabo", "Boa Sandersonia", "Boa Marigold", "Boa Hancock", "Marguerite", "Leo", "Don Sai", "Don Chinjao", "Ideo", "Blue Gilly", "Suleiman", "Mansherry", "Ricky", "Kyros", "Funk Brothers", "Hajrudin", "Abdullah and Jeet", "Orlumbus", "Elizabello", "Bepo", ].indexOf(character) != -1;
+            if (p.class.has("Slasher")) boost *= 1.5;
+            if (p.class.has("Powerhouse")) boost *= 1.5;
+            if (p.class.has("Striker")) boost *= 1.5;
+            if (p.class.has("Shooter")) boost *= 1.5;
+            if (matching) boost *= 1.5;
+            return matching ? boost : 1;
+        },
+        hp: function(p) {
+            var character = window.families[p.number];
+            var boost = 1;
+            matching = [ "Monkey D. Luffy", "Roronoa Zoro", "Franky", "Nico Robin", "Usopp", "Trafalgar Law", "Bartolomeo", "Cavendish", "Rob Lucci", "Sabo", "Boa Sandersonia", "Boa Marigold", "Boa Hancock", "Marguerite", "Leo", "Don Sai", "Don Chinjao", "Ideo", "Blue Gilly", "Suleiman", "Mansherry", "Ricky", "Kyros", "Funk Brothers", "Hajrudin", "Abdullah and Jeet", "Orlumbus", "Elizabello", "Bepo", ].indexOf(character) != -1;
+            /*if (p.class.has("Slasher")) boost *= 1.5;
+            if (p.class.has("Powerhouse")) boost *= 1.5;
+            if (p.class.has("Striker")) boost *= 1.5;
+            if (p.class.has("Shooter")) boost *= 1.5;*/
+            if (matching) boost *= 1.5;
+            return boost;
+        },  
+        rcv: function(p) {
+            var character = window.families[p.number];
+            var boost = 1;
+            matching = [ "Monkey D. Luffy", "Roronoa Zoro", "Franky", "Nico Robin", "Usopp", "Trafalgar Law", "Bartolomeo", "Cavendish", "Rob Lucci", "Sabo", "Boa Sandersonia", "Boa Marigold", "Boa Hancock", "Marguerite", "Leo", "Don Sai", "Don Chinjao", "Ideo", "Blue Gilly", "Suleiman", "Mansherry", "Ricky", "Kyros", "Funk Brothers", "Hajrudin", "Abdullah and Jeet", "Orlumbus", "Elizabello", "Bepo", ].indexOf(character) != -1;
+            /*if (p.class.has("Slasher")) boost *= 1.5;
+            if (p.class.has("Powerhouse")) boost *= 1.5;
+            if (p.class.has("Striker")) boost *= 1.5;
+            if (p.class.has("Shooter")) boost *= 1.5;*/
+            if (matching) boost *= 1.5;
+            return boost;
+        }, 
+    },
+
+    'Orb amplification (1.75x)': {
+        description: 'Orb effects amplified by 1.75x',
+        thumb: 1961,
+        id: 55, // don't change this
+        orb: function(p) { return p.orb == 2.0 ? 1.75 : (p.orb == 0.5 ? 4/7 : 1); }
     },
 };
