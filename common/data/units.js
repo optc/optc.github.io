@@ -1992,6 +1992,14 @@ window.units = [
     [ "Garp the Fist, A Hero in Distress", "QCK", [ "Free Spirit", "Fighter" ], 5, 30, 4, null, null, null, null, null, null, null, null, null, null ],
     [ "Coby", "QCK", [ "Free Spirit", "Fighter" ], 4, 15, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Navy HQ Petty Officer Coby, Determined to Fight Back", "QCK", [ "Free Spirit", "Fighter" ], 5, 30, 4, null, null, null, null, null, null, null, null, null, null ],
+    [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Trafalgar Law, Ex-Warlord of the Sea", "PSY", [ "Slasher", "Free Spirit" ], "6*+", 65, 4, 5, 99, null, 1402, 753, 291, 3110, 1529, 482, null ],
     ];
     
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
