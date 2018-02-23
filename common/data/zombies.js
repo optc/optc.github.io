@@ -531,4 +531,8 @@ window.zombies = {
         type: 'healer',
         multiplier: 2
     },
+    1987: { // Marco
+        type: 'healer',
+        multiplier: 3
+    },
 };

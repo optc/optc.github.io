@@ -384,4 +384,10 @@ window.sailors = {
     1976: {
         atkStatic: function(p) { return p.percHP <= 30.0 ? 40 : 0; },
     },
+    1992: {
+        atkStatic: function(p) { return p.unit.class.has("Free Spirit") ? 50 : 0; },
+    },
+    1993: {
+        atkStatic: function(p) { return p.unit.class.has("Free Spirit") ? 50 : 0; },
+    },
 };

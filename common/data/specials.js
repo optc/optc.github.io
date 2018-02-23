@@ -4383,4 +4383,66 @@ window.specials = {
         type: "condition",
         def: function(p) { return p.captain.class.has("Cerebral") ? .2 : 1; }
     },
+    1986: {
+        chainAddition: function(p) { return p.colorCount.STR >= 3 ? window.specials[1986].multiplier : 0; },
+        onActivation: function(p) {
+            var n = (window.specials[1986].multiplier == .5 ? 1 : 0);
+            window.specials[1986].multiplier = [.5, .75][n];
+            p.scope.notify({
+                text: 'Using the ' + [.5, .75][n] + 'x chain boost multiplier. To switch to the ' + [.75, .5][n] + 'x multiplier, disable and re-enable this special',
+                name: '1986warning'
+            });
+        },
+    },
+    1987: {
+        chainAddition: function(p) { return p.colorCount.STR >= 3 ? window.specials[1987].multiplier : 0; },
+        onActivation: function(p) {
+            var n = (window.specials[1987].multiplier == .5 ? 1 : 0);
+            window.specials[1987].multiplier = [.5, .75][n];
+            p.scope.notify({
+                text: 'Using the ' + [.5, .75][n] + 'x chain boost multiplier. To switch to the ' + [.75, .5][n] + 'x multiplier, disable and re-enable this special',
+                name: '1987warning'
+            });
+        },
+    },
+    1988: {
+        atk: function(p) { return (p.delayed > 0 && (p.captain.class.has("Shooter"))) ? 1.75 : 1; },
+        type: "condition",
+    },
+    1989: {
+        atk: function(p) { return (p.delayed > 0 && (p.captain.class.has("Shooter"))) ? 1.75 : 1; },
+        type: "condition",
+    },
+    1990: {
+        delay: function(p) { return 1; },
+        staticMult: function(p) { return (p.captain.type == "STR" || p.captain.type == "STR") ? 55 : 1; }
+    },
+    1991: {
+        delay: function(p) { return 1; },
+        staticMult: function(p) { return (p.captain.type == "STR" || p.captain.type == "STR") ? 55 : 1; }
+    },
+    1992: {
+        atk: function(p) { return !p.unit.class.has('Free Spirit') ? 1 : p.colorCount.QCK >= 3 ? window.specials[1992].multiplier : 1; },
+        type: "class",
+        onActivation: function(p) {
+            var n = (window.specials[1992].multiplier == 1.75 ? 1 : 0);
+            window.specials[1992].multiplier = [1.75, 2][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.75, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
+                name: '1992warning'
+            });
+        }
+    },
+    1993: {
+        atk: function(p) { return !p.unit.class.has('Free Spirit') ? 1 : p.colorCount.QCK >= 3 ? window.specials[1993].multiplier : 1; },
+        type: "class",
+        onActivation: function(p) {
+            var n = (window.specials[1993].multiplier == 1.75 ? 1 : 0);
+            window.specials[1993].multiplier = [1.75, 2][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.75, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
+                name: '1993warning'
+            });
+        }
+    },
 };
