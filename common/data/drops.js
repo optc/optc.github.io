@@ -1747,6 +1747,7 @@ window.drops = {
         {
             name: 'Brutal Fiend! Eustass Kid',
             thumb: 1690,
+            global: true,
             nakama: 2035243,
             gamewith: 62883,
             condition: 'Only [INT] and [PSY] orbs appear',
@@ -1756,6 +1757,7 @@ window.drops = {
         {
             name: 'Royal Neptune Family!',
             thumb: 1723,
+            global: true,
             nakama: 2063760,
             gamewith: 64138,
             condition: 'Strikers and Powerhouse characters get a boost (1.5x ATK boost on 30 stamina)',
@@ -2603,6 +2605,7 @@ window.drops = {
         {
             name: 'Battle Blitz! Doflamingo Family',
             thumb: 870,
+            global: true,
             nakama: 6093262,
             gamewith: 68282,
             condition: 'Chance of dropping the Silver Almighty Book, Guidence Fragments and Guidence Crystals.',
