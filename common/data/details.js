@@ -19577,6 +19577,7 @@ window.details = {
             "combined": "Boosts ATK of [INT] and [PSY] characters by 2.75x, reduce damage received by 7%, recovers 1,000 HP at end of each turn and makes [TND], [INT] and [PSY] orbs \"beneficial\" to [INT] and [PSY] characters"
         },
         special: "Deals 5,000 fixed damage to one enemy, changes own orb into a Matching orb, reduces damage received by 50% for 1 turn, boosts ATK of [PSY] and [INT] characters by 1.5x for 1 turn and becomes Smoker & Tashigi for 2 turns",
+        specialNotes: "Change Action: Recovers 2x character's Rcv each time you switch characters"
         specialName: "White Slash",
         sailor: {
             "character1": "Boosts base ATK of [INT] and [PSY] characters by 50",
