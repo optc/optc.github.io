@@ -19539,7 +19539,7 @@ window.details = {
             "base": "Boosts base ATK of Cerebral characters by 75",
             "level1": "Tap Timing bonus + 2x atk damage", //confirm
         },
-        limit: "This character has a Limit Break Tree"
+        limit: "This character has a Limit Break Tree",
         potential: [
             {
                 "Name": "Reduce No Healing duration",
