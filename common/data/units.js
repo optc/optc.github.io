@@ -1909,7 +1909,7 @@ window.units = [
     [ "Trebol, Donquixote Family, Guardian of the Special Executive", "STR", [ "Driven", "Shooter" ], 5, 30, 6, 4, 99, 4000000, 792, 408, 182, 2312, 1382, 354, 1 ],
     [ "Donquixote Doflamingo, The Current King of Dressrosa", "DEX", [ "Driven", "Cerebral" ], 5, 30, 4, 3, 70, 1066998, 714, 201, 19, 1670, 851, 178, 1 ],
     [ "\"Heavenly Demon\" Doflamingo, Ruler of the Bird Cage", "DEX", [ "Driven", "Cerebral" ], 6, 55, 7, 5, 99, 5000000, 1428, 780, 152, 3460, 1624, 282, 1 ],
-    [ "Urouge, Crushing the Worldly Desires", "INT", [ "Striker", "Powerhouse" ], 4, 15, 5, 3, 50, 261406, 654, 265, 39, 1250, 600, 138, 1 ],
+    [ "Urouge, Crushing the Worldly Desires", "INT", [ "Striker", "Powerhouse" ], 4, 15, 5, 3, 50, 392109, 654, 265, 39, 1250, 600, 138, 1 ],
     [ "Urouge, 108 Devotions", "INT", [ "Striker", "Powerhouse" ], 5, 30, 4, 4, 99, 4000000, 1149, 502, 94, 2600, 1350, 294, 1 ],
     [ "Nefertari Vivi, Dressed in a Lovely Kimino", "DEX", [ "Free Spirit", "Cerebral" ], 4, 15, 5, 3, 50, 392109, 501, 238, 74, 1036, 546, 211, 1 ],
     [ "Nefertari Vivi, An Elegant Appearance", "DEX", [ "Free Spirit", "Cerebral" ], 5, 30, 4, 4, 99, 4000000, 934, 448, 157, 2018, 1092, 490, 1 ],
