@@ -407,7 +407,8 @@ window.matchers = [
     {
         name: 'Block orb removers',
         target: 'special',
-        matcher: /(empties.+with \[BLOCK\]|changes.+\[BLOCK\].+into|including.+\[BLOCK\])/i
+        matcher: /(empties.+with \[BLOCK\]|changes.+\[BLOCK\].+into|including.+\[BLOCK\])/i,
+        include: [ 1383, 1384 ]
     },
 
     {
