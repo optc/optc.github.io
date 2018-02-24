@@ -19711,7 +19711,7 @@ window.details = {
             "level1": "When HP is below 10% at the start of the turn, boosts base RCV of Slasher and Free Spirit characters by 300",
             "level2": "Makes [INT], [RCV] and [TND] orbs \"beneficial\" for this unit"
         },
-        special: "For 1 turn; damaging and HP cutting specials bypass enemy defensive buffs and barriers, deals large PSY damage to one enemy, lower cooldowns of all characters by 1 turn",
+        special: "For 1 turn; damaging and HP cutting specials bypass enemy defensive buffs and barriers, deals 100x his atk in PSY damage to one enemy, lower cooldowns of all characters by 1 turn",
         limit: [
             { "description": "Boosts base RCV by 5" },
             { "description": "Boosts base RCV by 10" },
