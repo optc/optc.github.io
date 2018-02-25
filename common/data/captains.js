@@ -6596,7 +6596,7 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Powerhouse") && p.percHP >= 99.0 ? 1 : 1; }//CHANGE THIS
     },
     1965: {
-        atk: function(p) { return p.unit.class.has("Powerhouse") && p.percHP >= 99.0 ? 2.75 : 1; }
+        atk: function(p) { return p.unit.class.has("Powerhouse") && p.percHP >= 70.0 ? 2.75 : 1; }
     },
     1966: {
         atk: function(p) { return p.unit.class.has("Cerebral") ? 2.25 : 1; },
@@ -6645,5 +6645,13 @@ window.captains = {
     },
     1993: {
         atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? 2.5 : 1; },
+    },
+    2001: {
+        damageSorter: function(d) { return CrunchUtils.classSort(d, 4, [ "Slasher", "Free Spirit" ]); },
+        hitAtk: function(p) {
+            if (!p.unit.class.has("Slasher") && !p.unit.class.has("Free Spirit")) return 1;
+            return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 4 : p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? 3.5 : 2.5;
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
     },
 };
