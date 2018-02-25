@@ -3183,4 +3183,8 @@ window.evolutions = {
         evolution: 1993,
         evolvers: [  ]
     },
+    1045: {
+        evolution: 2001,
+        evolvers: [ 'skullPSY', 118, 87, 303, 267 ]
+    },
 };
