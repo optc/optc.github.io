@@ -6596,7 +6596,7 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Powerhouse") && p.percHP >= 99.0 ? 1 : 1; }//CHANGE THIS
     },
     1965: {
-        atk: function(p) { return p.unit.class.has("Powerhouse") && p.percHP >= 99.0 ? 2.75 : 1; }
+        atk: function(p) { return p.unit.class.has("Powerhouse") && p.percHP >= 70.0 ? 2.75 : 1; }
     },
     1966: {
         atk: function(p) { return p.unit.class.has("Cerebral") ? 2.25 : 1; },

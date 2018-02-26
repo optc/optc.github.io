@@ -27,7 +27,7 @@ var notes = {
     instantKill: "The chance for this character to instantly kill any enemy is #1. The kills can not be reset by exiting the game, but can change by passing the turn or killing an enemy on that stage.",
     additionalDamage: "Every attacking character gains additional damage if they land a hit no less than Good.",
     beneficial: "\"Beneficial\" orbs grant the same ATK boost as matching orbs and activate any Captain Abilities that are enabled by matching orbs.",
-    enrage: "Enrage is activated when your crew took damage from your enemies in the previous turn",
+    enrage: "Enrage is activated when your crew took damage from your enemies or map effects in the previous turn or if you reduced your own HP in the same turn",
 };
 
 /***********
