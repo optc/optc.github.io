@@ -22534,12 +22534,12 @@ window.details = {
     },
     2024: {//Dofla Raid v2
         captain: "Boosts ATK of Driven and Cerebral characters by 2.5x when HP is 50% or below, 1.5x otherwise",
-        special: "Changes crew's slots randomly (including [BLOCK] slots) unless slots are matching, locks crew's slots for 1 turn, and if Captain is a Cerebral or Driven class, extends duration of crew's ATK and slot effect boost by 2 turns",
+        special: "Randomizes all non-matching orbs, including [BLOCK] slots and locks all orbs for 1 turn. If Captain is a Cerebral or Driven character, increases duration of any Class/Type boosting buffs and Orb Amplification buffs by 2 turns",
         specialName: "Athlete",
     },
     2025: {//Dofla Raid v2
         captain: "Boosts ATK of Driven and Cerebral characters by 3x when HP is 50% or below, 1.5x otherwise",
-        special: "Changes crew's slots randomly (including [BLOCK] slots) unless slots are matching, locks crew's slots for 1 turn, and if Captain is a Cerebral or Driven class, extends duration of crew's ATK and slot effect boost by 2 turns",
+        special: "Randomizes all non-matching orbs, including [BLOCK] slots and locks all orbs for 1 turn. If Captain is a Cerebral or Driven character, increases duration of any Class/Type boosting buffs and Orb Amplification buffs by 2 turns",
         specialName: "Athlete",
     },
 };

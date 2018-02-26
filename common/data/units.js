@@ -2022,8 +2022,8 @@ window.units = [
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Donquixote Doflamingo, Country's Future Hanging by a Thread ", "INT", [ "Driven", "Cerebral" ], 4, 30, 6, 2, 70, null, 239, 193, 39, 1167, 794, 191, null ],
-    [ "Donquixote Doflamingo, Plot to Destroy the World", "INT", [ "Driven", "Cerebral" ], 5, 50, 4, 3, 99, null, 1243, 701, 137, 2319, 1515, 333, null ],
+    [ "Donquixote Doflamingo, Country's Future Hanging by a Thread ", "INT", [ "Driven", "Cerebral" ], 4, 30, 6, 2, 70, 1066998, 239, 193, 39, 1167, 794, 191, null ],
+    [ "Donquixote Doflamingo, Plot to Destroy the World", "INT", [ "Driven", "Cerebral" ], 5, 50, 4, 3, 99, 5000000, 1243, 701, 137, 2319, 1515, 333, null ],
     ];
     
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
