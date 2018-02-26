@@ -6655,9 +6655,9 @@ window.captains = {
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
     },
     2024: {
-        atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Cerebral") && p.percHP <= 50.0 ? 2.5 : 1.5; }
+        atk: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Cerebral")) && p.percHP <= 50.0 ? 2.5 : 1.5; }
     },
     2025: {
-        atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Cerebral") && p.percHP <= 50.0 ? 3 : 1.5; }
+        atk: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Cerebral")) && p.percHP <= 50.0 ? 3 : 1.5; }
     },
 };
