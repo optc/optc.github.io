@@ -8830,11 +8830,11 @@ window.details = {
         specialName: "Gamma Knife",
         special: [
             {
-                "description": "Makes Damage and Health Cutting Specials of Slasher and Free Spirit characters bypass all defensive Buffs, deals 20x character's ATK in fixed PSY damage to one enemy.",
+                "description": "Makes Damage and Health Cutting Specials of Slasher and Free Spirit characters bypass all defensive Buffs, deals 20x character's ATK in [PSY] fixed damage to one enemy.",
                 "cooldown": [ 18, 13 ]
             },
             {
-                "description": "Makes Damage and Health Cutting Specials of all characters bypass all defensive Buffs, deals 50x character's ATK in fixed PSY damage to one enemy.",
+                "description": "Makes Damage and Health Cutting Specials of all characters bypass all defensive Buffs, deals 50x character's ATK in [PSY] fixed damage to one enemy.",
                 "cooldown": [ 25, 20 ]
             }
         ],
@@ -8850,11 +8850,11 @@ window.details = {
         },
         special: [
             {
-                "description": "Makes Damage and Health Cutting Specials of Slasher and Free Spirit characters bypass all defensive Buffs, deals 20x character's ATK in fixed PSY damage to one enemy.",
+                "description": "Makes Damage and Health Cutting Specials of Slasher and Free Spirit characters bypass all defensive Buffs, deals 20x character's ATK in [PSY] fixed damage to one enemy.",
                 "cooldown": [ 18, 13 ]
             },
             {
-                "description": "Makes Damage and Health Cutting Specials of all characters bypass all defensive Buffs, deals 50x character's ATK in fixed PSY damage to one enemy.",
+                "description": "Makes Damage and Health Cutting Specials of all characters bypass all defensive Buffs, deals 50x character's ATK in [PSY] fixed damage to one enemy.",
                 "cooldown": [ 25, 20 ]
             }
         ],
@@ -12034,14 +12034,14 @@ window.details = {
     },
     1317: {//Garp
         captain: "Boosts ATK of [STR] and [PSY] characters by 2x",
-        special: "Deals 30x character's ATK in fixed [STR] damage to all enemies that will ignore damage negating abilities and barriers. Delays all enemies for 1 turn. Reduces the defense of all enemies by 80% for 1 turn.",
+        special: "Deals 30x character's ATK in [STR] fixed damage to all enemies that will ignore damage negating abilities and barriers. Delays all enemies for 1 turn. Reduces the defense of all enemies by 80% for 1 turn.",
         specialNotes: "#{ignoreBarrier}",
         sailor: "Boosts base HP of all characters by 75",
         specialName: "Super Large Iron Ball",
     },
     1318: {//Garp
         captain: "Boosts ATK of [STR] and [PSY] characters by 2.5x",
-        special: "Deals 30x character's ATK in fixed [STR] damage to all enemies that will ignore damage negating abilities and barriers. Delays all enemies for 1 turn. Reduces the defense of all enemies by 80% for 1 turn.",
+        special: "Deals 30x character's ATK in [STR] fixed damage to all enemies that will ignore damage negating abilities and barriers. Delays all enemies for 1 turn. Reduces the defense of all enemies by 80% for 1 turn.",
         specialNotes: "#{ignoreBarrier}",
         sailor: "Boosts base HP of all characters by 75",
         specialName: "Super Large Iron Ball",
