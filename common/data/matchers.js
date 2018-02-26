@@ -303,6 +303,12 @@ window.matchers = [
     },
     
     {
+        name: 'Damage dealer',
+        target: 'special',
+        matcher: /deals.+to/i
+    },
+    
+    {
         name: 'Single-target damage dealer',
         target: 'special',
         matcher: /deals.+to one enemy/i
@@ -330,6 +336,12 @@ window.matchers = [
         name: 'Typeless damage dealers',
         target: 'special',
         matcher: /Deals.+typeless damage/i
+    },
+    
+    {
+        name: 'Buff Ignoring Damage dealer',
+        target: 'special',
+        matcher: /deals.+ignore damage negating abilities and barriers/i
     },
 
     {
@@ -493,6 +505,12 @@ window.matchers = [
         name: 'Enemy Increased Defense removers',
         target: 'special',
         matcher: /(removes|reduces).+Increased Defense/i 
+    },
+
+    {
+        name: 'Enemy Barrier removers',
+        target: 'special',
+        matcher: /(removes|reduces).+enemy Barrier/i 
     },
 
     {
