@@ -2001,7 +2001,7 @@ window.units = [
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Trafalgar Law, Ex-Warlord of the Sea", "PSY", [ "Slasher", "Free Spirit" ], "6+", 65, 4, 5, 99, 5000000, 1402, 753, 291, 3110, 1529, 482, null ],
     [ "Señor Pink, Donquixote Family Fighter Group", "QCK", [ "Fighter", "Free Spirit" ], 4, 20, 4, 2, 99, null, null, null, null, 2378, 1112, 225, null ],
-    [ "Doflamingo", "STR", [ "Slasher", "Driven" ], 4, 20, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Donquiote Doflamingo, Doflamingo Family Boss", "STR", [ "Slasher", "Driven" ], 4, 18, 4, null, null, null, null, null, null, null, null, null, null ],
     [ "Heavenly Demon Doflamingo, Doflamingo Family Boss", "STR", [ "Slasher", "Driven" ], 5, 30, 4, 2, 99, null, null, null, null, 2953, 1476, 216, null ],
     [ "Sugar, Donquixote Family Special Ability Team", "PSY", [ "Free Spirit", "Slasher" ], 4, 20, 4, 2, 99, null, null, null, null, 2353, 1079, 239, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],

@@ -22301,13 +22301,13 @@ window.details = {
     },
     1975: {//X Drake
         captain: "Boosts ATK of all characters by 2x if HP is below 30% at the start of the turn",
-        special: "Deals 25x? ATK in [QCK] damage to one enemy. If HP above ??% then changes [RCV], [TND], [EMPTY], [BOMB] and [BLOCK] orbs into matching orbs and if HP below ?% then changes adjacent orbs into matching orbs",
+        special: "Deals 50x ATK in [QCK] damage to one enemy, changes own orb into [QCK] and locks all orbs for 1 turn. If HP above 70% then changes [RCV], [TND], [EMPTY], [BOMB] and [BLOCK] orbs into matching orbs and if HP below 30% then changes adjacent orbs into matching orbs",
         specialName: "Double Edge of Revolt [Neo]",
         sailor: "When HP is below 30% at the start of the turn, boosts base ATK of all characters by 40",
     },
     1976: {//X Drake
         captain: "Boosts ATK of all characters by 2.5x if HP is below 30% at the start of the turn",
-        special: "Deals 25x? ATK in [QCK] damage to one enemy. If HP above ??% then changes [RCV], [TND], [EMPTY], [BOMB] and [BLOCK] orbs into matching orbs and if HP below ?% then changes adjacent orbs into matching orbs",
+        special: "Deals 50x ATK in [QCK] damage to one enemy, changes own orb into [QCK] and locks all orbs for 1 turn. If HP above 70% then changes [RCV], [TND], [EMPTY], [BOMB] and [BLOCK] orbs into matching orbs and if HP below 30% then changes adjacent orbs into matching orbs",
         specialName: "Double Edge of Revolt [Neo]",
         sailor: "When HP is below 30% at the start of the turn, boosts base ATK of all characters by 40",
     },
@@ -22335,12 +22335,12 @@ window.details = {
     },
     1981: {//Bonney
         captain: "Boosts ATK of Fighter characters by 1.75x",
-        special: "Changes [RCV] orbs into matching orbs and recovers ??? HP at the end of the turn for 2 turns",
+        special: "Changes [RCV] orbs into matching orbs and recovers 15x character's RCV in HP at the end of the turn for 2 turns",
         specialName: "Glutonous Meal",
     },
     1982: {//Bonney
         captain: "Boosts RCV of Fighter characters by 1.2x and boosts ATK of Fighter characters by 2.25x if HP is above ??% at the start of the turn, by 2x otherwise",
-        special: "Changes [RCV] orbs into matching orbs and recovers ??? HP at the end of the turn for 2 turns",
+        special: "Changes [RCV] orbs into matching orbs and recovers 15x character's RCV in HP at the end of the turn for 2 turns",
         specialName: "Glutonous Meal",
     },
     1983: {//Smoker&Tashigi
@@ -22483,7 +22483,7 @@ window.details = {
         sailor: "Boosts base ATK of Free Spirit characters by 50",
         limit: "This character has a Limit Break Tree"
     },
-    2001: {//V1 Law 6+
+    2001: {//6+ PSY Law
         captain: "Boosts Slasher and Free Spirit character's ATK by 2.5x, by 3.5x after 3 consecutive PERFECTs, by 4x after 5 consecutive PERFECTs. Recover 1,000 HP at the end of each turn",
         specialName: "Sterben",
         sailor: {
@@ -22558,27 +22558,26 @@ window.details = {
             },
         ]
     },
-    2002: {//Story Pink
-        captain: "Reduces cooldown of all character by 2 and boost crew attack by 2.5x, but increases damage receive by 1.2x",
-        special: "Reduces Bind, Despair and Paralysis by 3 turns and deals typeless damage to all enemies",
-        specialNotes: "#{specialProportional : lower : ? * ( 1 - (remaining HP) / (total HP) )}",
+    2002: {//Story Senor Pink
+        captain: "Increases damage received by 1.2x. Reduces cooldown of all specials by 2 turns at the start of the fight and boosts ATK of all characters by 2.5x.",
+        special: "Reduces Bind, Despair and Paralysis duration by 3 turns and deals several times character's ATK in Typeless damage to all enemies",
+        specialNotes: "#{specialProportional : lower : ??? * ( 1 - (remaining HP) / (total HP) )}",
         specialName: "The Man Standing Tall",
     },
     2003: {//Story Doflamingo
-        captain: "Boost ATK of Slasher by 2.25x and HP by 1.5x. If you use \"Tamaito\" THIS DOFLAMINGO boosts ATK of Slasher characters by 2.75x instead for 3 turns",
-        captainNotes: "Using Doflamingo's special will change his own captain boost to 2.75x. If both Doflamingo's specials are used, the total ATK boost will be 7.5625x",
-        special: "Deals 30x character's ATK in typeless damage to all enemies, changes own slot to matching and for 1 turn boost his own ATK by 2x",
-        specialName: "Tamaito",
+        captain: "Not Translated",
+        special: "Changes own orb into [STR], boosts own ATK by 2x for 1 turn and deals 30x character's ATK in Typeless damage to all enemies",
+        specialName: "Bullet Thread",
     },
     2004: {//Story Doflamingo
-        captain: "Boost ATK of Slasher by 2.25x and HP by 1.5x. If you use \"Tamaito\" THIS DOFLAMINGO boosts ATK of Slasher characters by 2.75x instead for 3 turns",
+        captain: "Boosts ATK of Slasher characters by 2.25x and reduce damage received by 15%. If you use \"Bullet Thread\" THIS DOFLAMINGO boosts ATK of Slasher characters by 2.75x instead for 3 turns",
         captainNotes: "Using Doflamingo's special will change his own captain boost to 2.75x. If both Doflamingo's specials are used, the total ATK boost will be 7.5625x",
-        special: "Deals 30x character's ATK in typeless damage to all enemies, changes own slot to matching and for 1 turn boost his own ATK by 2x",
-        specialName: "Tamaito",
+        special: "Changes own orb into [STR], boosts own ATK by 2x for 1 turn and deals 30x character's ATK in Typeless damage to all enemies",
+        specialName: "Bullet Thread",
     },
     2005: {//Story Sugar
-        captain: "Boosts ATK of [PSY] characters by 2.25x, Slasher HP by 1.2x and Freedom character RCV by 1.2x",
-        special: "Deals 40x character's ATK in [PSY] damage to all enemies and increases the appearance of [PSY] slots for 3 turns",
+        captain: "Boosts ATK of [PSY] characters by 2.25x, boosts HP of Slasher characters by 1.2x and boosts RCV of Free Spirit characters by 1.2x",
+        special: "Deals 40x character's ATK in [PSY] damage to all enemies, boosts chances of getting [PSY] orbs for 3 turns",
         specialName: "Little Black Bears",
     },
     2024: {//Doflamingo Raid v2
