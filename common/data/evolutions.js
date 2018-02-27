@@ -3157,11 +3157,11 @@ window.evolutions = {
     },
     1979: {
         evolution: 1980,
-        evolvers: [  ]
+        evolvers: [ 78, 84, 89, 95, 100 ]
     },
     1981: {
         evolution: 1982,
-        evolvers: [  ]
+        evolvers: [ 79, 85, 90, 96, 101 ]
     },
     1984: {
         evolution: 1985,
@@ -3186,5 +3186,9 @@ window.evolutions = {
     1045: {
         evolution: 2001,
         evolvers: [ 'skullPSY', 118, 87, 303, 267 ]
+    },
+    2024: {
+        evolution: 2025,
+        evolvers: [ 118, 267, 88, 304, 83 ]
     },
 };

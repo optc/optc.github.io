@@ -1860,10 +1860,10 @@ window.drops = {
         },
         
         {
-            name: 'Supernova! Capone and Bonney!',
+            name: 'Supernova! Bonney and Capone!',
             thumb: 1982,
             nakama: null,
-            gamewith: null,
+            gamewith: 93423,
             'All Difficulties': [ 1979, 1981, -1921, -1362, -1366, -1770, -1834, -1836, -1633 ]
         },
         
@@ -2332,6 +2332,15 @@ window.drops = {
             gamewith: 88927,
             Master: [ 1942 ],
             Expert: [ 1942 ]
+        },
+        
+        {
+            name: 'Clash!! Heavenly Demon Doflamingo',
+            thumb: 2025,
+            global: true,
+            gamewith: null,
+            Master: [ 2024 ],
+            Expert: [ 2024 ]
         },
 
     ],
