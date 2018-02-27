@@ -19,9 +19,8 @@ window.details = {
         sailor: {
             "base": "None",
             "level1": "Boosts own base ATK by 100 if this character is the last in the chain to attack",
-            "level2": "Makes [QCK] orbs \"beneficial\" for this unit",
+            "level2": "Makes [QCK] orbs \"beneficial\" for this unit"
         },
-        sailorNotes: "#{beneficial}",
         specialName: "Gum-Gum Twin Jet Pistol",
         limit: [
             { "description": "Reduce base Special Cooldown by 1 turn" },
@@ -62,7 +61,7 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "#{enrage}",
+        potentialNotes: "#{enrage}"
     },
     5: {
         special: "Deals 7x character's ATK in DEX damage to one enemy",
@@ -86,7 +85,7 @@ window.details = {
         sailor: {
             "base": "None",
             "level1": "Restores his own special by 1 turn when it is rewinded",
-            "level2": "Boosts base ATK of [DEX] characters by 40",
+            "level2": "Boosts base ATK of [DEX] characters by 40"
         },
         limit: [
             { "description": "Boosts base HP by 30" },
@@ -150,9 +149,8 @@ window.details = {
         sailor: {
             "base": "None",
             "level1": "Makes [RCV] orbs \"beneficial\" for [INT] characters",
-            "level2": "Boosts base ATK, HP and RCV of [INT] characters by 50",
+            "level2": "Boosts base ATK, HP and RCV of [INT] characters by 50"
         },
-        sailorNotes: "#{beneficial}",
         limit: [
             { "description": "Boosts base ATK by 10" },
             { "description": "Boosts base RCV by 10" },
@@ -230,7 +228,7 @@ window.details = {
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base HP by 60" },
             { "description": "Boosts base HP by 80" },
-            { "description": "Acquire Sailor Ability: Boosts base ATK, HP and RCV of Shooter characters by 20" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK, HP and RCV of Shooter characters by 20" },
             { "description": "Acquire Potential 2: Barrier Penetration" },
         ],
         potential: [
@@ -281,7 +279,6 @@ window.details = {
             "level1": "Makes RCV orbs \"beneficial\" for all characters",
             "level2": "Boosts base ATK, HP and RCV of all characters by 40",
         },
-        sailorNotes: "#{beneficial}",
         limit: [
             { "description": "Boosts base HP by 30" },
             { "description": "Boosts base RCV by 10" },
@@ -340,18 +337,18 @@ window.details = {
             { "description": "Boosts base RCV by 20" },
             { "description": "Boosts base HP by 40" },
             { "description": "Boosts base RCV by 30" },
-            { "description": "Aquire Potential 1: [INT] Damage Reduction" },
+            { "description": "Acquire Potential 1: [INT] Damage Reduction" },
             { "description": "Boosts base HP by 60" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base ATK by 50" },
-            { "description": "Aquire Sailor Ability 1: Makes [TND] orbs \"beneficial\" for this unit" },
+            { "description": "Acquire Sailor Ability 1: Makes [TND] orbs \"beneficial\" for this unit" },
             { "description": "Boosts base HP by 100" },
-            { "description": "Aquire 1 additional Socket slot" },
+            { "description": "Acquire 1 additional Socket slot" },
             { "description": "Reduce base Special Cooldown by 2 turns" },
             { "description": "Boosts base ATK by 50" },
-            { "description": "Aquire 1 additional Socket slot" },
-            { "description": "Aquire Sailor Ability 1: Boosts base ATK, HP and RCV of all characters by 30" },
-            { "description": "Aquire Potential 2: Pinch Healing" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK, HP and RCV of all characters by 30" },
+            { "description": "Acquire Potential 2: Pinch Healing" },
         ],
         potential: [
             {
@@ -626,18 +623,18 @@ window.details = {
             { "description": "Boosts base ATK by 50" },
             { "description": "Boosts base ATK by 50" },
             { "description": "Boosts base ATK by 50" },
-            { "description": "Aquire Potential 1: [INT] Damage Reduction" },
+            { "description": "Acquire Potential 1: [INT] Damage Reduction" },
             { "description": "Boosts base HP by 100" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base HP by 100" },
-            { "description": "Aquire Sailor Ability 1: Reduces Paralysis duration by 1 turn" },
+            { "description": "Acquire Sailor Ability 1: Reduces Paralysis duration by 1 turn" },
             { "description": "Boosts base HP by 100" },
-            { "description": "Aquire 1 additional Socket slot" },
+            { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base HP by 200" },
             { "description": "Boosts base ATK by 80" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
-            { "description": "Aquire Sailor Ability 2: Makes [INT] orbs \"beneficial\" for this unit" },
-            { "description": "Aquire Potential 2: [PSY] Damage Reduction" },
+            { "description": "Acquire Sailor Ability 2: Makes [INT] orbs \"beneficial\" for this unit" },
+            { "description": "Acquire Potential 2: [PSY] Damage Reduction" },
         ],
         potential: [
             {
@@ -683,18 +680,18 @@ window.details = {
             { "description": "Boosts base ATK by 100" },
             { "description": "Boosts base RCV by 20" },
             { "description": "Boosts base RCV by 20" },
-            { "description": "Aquire Potential 1: [STR] Damage Reduction" },
+            { "description": "Acquire Potential 1: [STR] Damage Reduction" },
             { "description": "Boosts base HP by 100" },
             { "description": "Reduce base Special Cooldown by 4 turns" },
             { "description": "Boosts base ATK by 100" },
-            { "description": "Aquire Sailor Ability 1: Boosts base ATK of [QCK] characters by 50" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK of [QCK] characters by 50" },
             { "description": "Reduce base Special Cooldown by 5 turns" },
-            { "description": "Aquire 1 additional Socket slot" },
+            { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base HP by 100" },
-            { "description": "Aquire new Captain Ability: Boosts ATK of QCK characters by 2.5x and their HP by 1.5x" },
+            { "description": "Acquire new Captain Ability: Boosts ATK of QCK characters by 2.5x and their HP by 1.5x" },
             { "description": "Reduce base Special Cooldown by 5 turns" },
-            { "description": "Aquire Sailor Ability 2: Makes [DEX] orbs \"beneficial\" for [QCK] characters" },
-            { "description": "Aquire Potential 2: Pinch Healing" },
+            { "description": "Acquire Sailor Ability 2: Makes [DEX] orbs \"beneficial\" for [QCK] characters" },
+            { "description": "Acquire Potential 2: Pinch Healing" },
         ],
         potential: [
             {
@@ -727,6 +724,7 @@ window.details = {
     77: {
         special: "Deals 15x character's ATK in PSY damage to all enemies",
         specialName: "Conqueror's Haki",
+        captain: "Boosts ATK of PSY characters by 2.5x",
         captain: {
             "base": "Boosts ATK of PSY characters by 2.5x",
             "level1": "Boosts ATK of [PSY] characters by 2.75x and their RCV by 1.2x",
@@ -749,7 +747,7 @@ window.details = {
             { "description": "Reduce base Special Cooldown by 3 turns" },
             { "description": "Acquire new Captain Ability: Boosts ATK of [PSY] characters by 2.75x and their RCV by 1.2x" },
             { "description": "Boosts base HP by 400" },
-            { "description": "Acquire Sailor Ability: Boosts base ATK, HP and RCV of [PSY] characters by 75" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK, HP and RCV of [PSY] characters by 75" },
             { "description": "Acquire Potential 2: Critical Hit" },
         ],
         potential: [
@@ -1140,18 +1138,18 @@ window.details = {
             { "description": "Boosts base RCV by 10" },
             { "description": "Boosts base RCV by 20" },
             { "description": "Boosts base RCV by 30" },
-            { "description": "Aquire Potential 1: Slot Bind Self-reduction" },
+            { "description": "Acquire Potential 1: Slot Bind Self-reduction" },
             { "description": "Boosts base HP by 40" },
             { "description": "Boosts base ATK by 25" },
             { "description": "Boosts base HP by 60" },
-            { "description": "Aquire Sailor Ability 1: Makes [PSY] orbs \"beneficial\" for this unit" },
+            { "description": "Acquire Sailor Ability 1: Makes [PSY] orbs \"beneficial\" for this unit" },
             { "description": "Boosts base ATK by 35" },
-            { "description": "Aquire 1 additional Socket slot" },
+            { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base HP by 100" },
             { "description": "Boosts base ATK by 70" },
-            { "description": "Aquire 1 additional Socket slot" },
-            { "description": "Aquire Sailor Ability 2: When HP is below ??% at the start of the turn, boosts own base ATK by 250" },
-            { "description": "Aquire Potential 2: Enrage" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Acquire Sailor Ability 2: When HP is below ??% at the start of the turn, boosts own base ATK by 250" },
+            { "description": "Acquire Potential 2: Enrage" },
         ],
         potential: [
             {
@@ -1221,18 +1219,18 @@ window.details = {
             { "description": "Boosts base RCV by 10" },
             { "description": "Reduce base Special Cooldown by 4 turns" },
             { "description": "Boosts base RCV by 20" },
-            { "description": "Aquire Potential 1: Critical Hit" },
+            { "description": "Acquire Potential 1: Critical Hit" },
             { "description": "Boosts base RCV by 30" },
             { "description": "Reduce base Special Cooldown by 5 turns" },
             { "description": "Boosts base RCV by 40" },
-            { "description": "Aquire Sailor Ability 1: Makes [RCV] and [TND] orbs \"beneficial\" for this unit" },
+            { "description": "Acquire Sailor Ability 1: Makes [RCV] and [TND] orbs \"beneficial\" for this unit" },
             { "description": "Boosts base RCV by 50" },
-            { "description": "Aquire 1 additional Socket slot" },
-            { "description": "Aquire 1 additional Socket slot" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base RCV by 60" },
             { "description": "Reduce base Special Cooldown by 5 turns" },
-            { "description": "Aquire Sailor Ability 1: Boosts own base ATK by 200 if this character is the last in the chain to attack" },
-            { "description": "Aquire Potential 2: Pinch Healing" },
+            { "description": "Acquire Sailor Ability 1: Boosts own base ATK by 200 if this character is the last in the chain to attack" },
+            { "description": "Acquire Potential 2: Pinch Healing" },
         ],
         potential: [
             {
@@ -1265,6 +1263,7 @@ window.details = {
     219: {
         special: "Deals 25x character's ATK in DEX damage to one enemy",
         specialName: "Lion's Song",
+        captain: "Reduces damage received by 80% if HP is above 99% at the start of the turn",
         captain: {
             "base": "Reduces damage received by 80% if HP is above 99% at the start of the turn",
             "level1": "Boosts ATK of all characters by 1.5x and reduces damage received by 80% if HP is above 99% at the start of the turn",
@@ -1274,7 +1273,6 @@ window.details = {
             "level1": "Boosts base ATK, HP and RCV of Slasher and Driven characters by 50",
             "level2": "Makes [STR] orbs \"beneficial\" for Slasher and Driven characters",
         },
-        sailorNotes: "#{beneficial}",
         limit: [
             { "description": "Reduce base Special Cooldown by 2 turns" },
             { "description": "Reduce base Special Cooldown by 2 turns" },
@@ -1289,7 +1287,7 @@ window.details = {
             { "description": "Reduce base Special Cooldown by 4 turns" },
             { "description": "Boosts base ATK by 200" },
             { "description": "Acquire new Captain Ability: Boosts ATK of all characters by 1.5x and reduces damage received by 80% if HP is above 99% at the start of the turn" },
-            { "description": "Acquire Sailor Ability 2: Makes [STR] orbs \"beneficial\" for Slasher and Driven characters" },
+            { "description": "Acquire Sailor Ability 2: 	Makes [STR] orbs \"beneficial\" for Slasher and Driven characters" },
             { "description": "Acquire Potential 2: Critical Hit" },
         ],
         potential: [
@@ -1333,7 +1331,6 @@ window.details = {
             "level1": "Boosts base ATK, HP and RCV of [INT] characters by 30",
             "level2": "Makes [TND] orbs \"beneficial\" for [INT] characters",
         },
-        sailorNotes: "#{beneficial}",
         limit: [
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base HP by 40" },
@@ -1410,7 +1407,6 @@ window.details = {
             "base": "None",
             "level1": "Makes [RCV] and [TND] orbs \"beneficial\" for this unit",
         },
-        sailorNotes: "#{beneficial}",
         limit: [
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base RCV by 10" },
@@ -1420,7 +1416,7 @@ window.details = {
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base ATK by 40" },
-            { "description": "Acquire Sailor Ability: Makes [RCV] and [TND] orbs \"beneficial\" for this unit" },
+            { "description": "Acquire Sailor Ability 1: Makes [RCV] and [TND] orbs \"beneficial\" for this unit" },
             { "description": "Boosts base HP by 40" },
             { "description": "Boosts base RCV by 20" },
             { "description": "Boosts base RCV by 30" },
@@ -1567,7 +1563,7 @@ window.details = {
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Reduce base Special Cooldown by 3 turns" },
             { "description": "Boosts base ATK by 70" },
-            { "description": "Acquire Sailor Ability: Boosts base ATK of all characters by 50" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK of all characters by 50" },
             { "description": "Acquire Potential 2: Critical Hit" },
         ],
         potential: [
@@ -1621,7 +1617,7 @@ window.details = {
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base ATK by 50" },
             { "description": "Boosts base ATK by 70" },
-            { "description": "Acquire Sailor Ability: Reduces Paralysis duration for 5 turns for himself" },
+            { "description": "Acquire Sailor Ability 1: Reduces Paralysis duration for 5 turns for himself" },
             { "description": "Acquire Potential 2: [PSY] Damage Reduction" },
         ],
         potential: [
@@ -1830,7 +1826,6 @@ window.details = {
             "level1": "Makes [PSY] orbs \"beneficial\" for this unit",
             "level2": "Makes [INT] orbs \"beneficial\" for this unit",
         },
-        sailorNotes: "#{beneficial}",
         limit: [
             { "description": "Boosts base RCV by 20" },
             { "description": "Boosts base HP by 40" },
@@ -2126,7 +2121,6 @@ window.details = {
             "level1": "Makes [RCV] orbs \"beneficial\" for this unit",
             "level2": "Boosts base ATK of [PSY] characters by 65",
         },
-        sailorNotes: "#{beneficial}",
         limit: [
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base ATK by 40" },
@@ -2182,7 +2176,6 @@ window.details = {
             "level1": "Makes [RCV] orbs \"beneficial\" for [DEX] characters",
             "level2": "Makes [TND] orbs \"beneficial\" for [DEX] characters",
         },
-        sailorNotes: "#{beneficial}",
         limit: [
             { "description": "Boosts base RCV by 10" },
             { "description": "Boosts base RCV by 20" },
@@ -2238,7 +2231,6 @@ window.details = {
         sailor: {
             "base": "None",
             "level1": "Makes [PSY] orbs \"beneficial\" for this unit",
-        sailorNotes: "#{beneficial}",
         },
         limit: [
             { "description": "Boosts base ATK by 40" },
@@ -2249,7 +2241,7 @@ window.details = {
             { "description": "Acquire new Captain Ability: Boosts ATK of all characters by 1.25x and reduces damage received by 40%" },
             { "description": "Reduce base Special Cooldown by 3 turns" },
             { "description": "Boosts base HP by 60" },
-            { "description": "Acquire Sailor Ability: Makes [PSY] orbs \"beneficial\" for this unit" },
+            { "description": "Acquire Sailor Ability 1: Makes [PSY] orbs \"beneficial\" for this unit" },
             { "description": "Boosts base ATK by 60" },
             { "description": "Boosts base RCV by 30" },
             { "description": "Reduce base Special Cooldown by 3 turns" },
@@ -2294,24 +2286,24 @@ window.details = {
         captain: "Boosts ATK by 3.5x after scoring 3 hits below Good in a row",
         sailor: {
             "base": "When HP is below 30% at the start of the turn, boosts ATK of Cerebral characters by 50",
-            "level1": "Aquire Sailor Ability 1: When HP is below ??% at the start of the turn, boosts own base ATK by 200",
+            "level1": "Acquire Sailor Ability 1: When HP is below ??% at the start of the turn, boosts own base ATK by 200",
         },
         limit: [
             { "description": "Boosts base ATK by 40" },
             { "description": "Boosts base RCV by 10" },
             { "description": "Boosts base RCV by 20" },
-            { "description": "Aquire Potential 1: Enrage" },
+            { "description": "Acquire Potential 1: Enrage" },
             { "description": "Boosts base ATK by 60" },
             { "description": "Reduce base Special Cooldown by 2 turns" },
             { "description": "Boosts base RCV by 30" },
             { "description": "Reduce base Special Cooldown by 3 turns" },
             { "description": "Boosts base HP by 100" },
-            { "description": "Aquire 1 additional Socket slot" },
+            { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base HP by 100" },
             { "description": "Reduce base Special Cooldown by 5 turns" },
-            { "description": "Aquire Sailor Ability 1: When HP is below ??% at the start of the turn, boosts own base ATK by 200" },
+            { "description": "Acquire Sailor Ability 1: When HP is below ??% at the start of the turn, boosts own base ATK by 200" },
             { "description": "Reduce base Special Cooldown by 6 turns" },
-            { "description": "Aquire Potential 2: Cooldown Reduction" },
+            { "description": "Acquire Potential 2: Cooldown Reduction" },
         ],
         potential: [
             {
@@ -2362,7 +2354,7 @@ window.details = {
             { "description": "Acquire new Captain Ability: Boosts ATK of all Striker characters proportionally to the crew's current HP, by 3x at 1 HP and their HP by 1.5x" },
             { "description": "Reduce base Special Cooldown by 3 turns" },
             { "description": "Boosts base HP by 70" },
-            { "description": "Acquire Sailor Ability: Boosts base ATK, HP and RCV of Striker characters by 30" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK, HP and RCV of Striker characters by 30" },
             { "description": "Boosts base ATK by 60" },
             { "description": "Boosts base RCV by 25" },
             { "description": "Reduce base Special Cooldown by 3 turns" },
@@ -2408,7 +2400,6 @@ window.details = {
             "base": "Reduces Paralysis for 2 turns for himself",
             "level1": "Makes [QCK] orbs \"beneficial\" for this unit",
         },
-        sailorNotes: "#{beneficial}",
         limit: [
             { "description": "Boosts base HP by 30" },
             { "description": "Boosts base RCV by 30" },
@@ -2423,7 +2414,7 @@ window.details = {
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Reduce base Special Cooldown by 2 turns" },
             { "description": "Boosts base HP by 70" },
-            { "description": "Acquire Sailor Ability: Makes [QCK] orbs \"beneficial\" for this unit" },
+            { "description": "Acquire Sailor Ability 1: Makes [QCK] orbs \"beneficial\" for this unit" },
             { "description": "Acquire Potential 2: Reduce No Healing duration" },
         ],
         potential: [
@@ -2592,7 +2583,7 @@ window.details = {
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base HP by 30" },
             { "description": "Boosts base ATK by 30" },
-            { "description": "Acquire Sailor Ability: Boosts base ATK, HP and RCV of Shooter characters by 20" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK, HP and RCV of Shooter characters by 20" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base RCV by 40" },
             { "description": "Acquire new Captain Ability: Boosts ATK of Shooter characters by 2.5x and their HP by 1.2x and recovers 300 HP at end of each turn" },
@@ -2656,7 +2647,7 @@ window.details = {
             { "description": "Acquire new Captain Ability: Boosts ATK of Striker characters by 2.5x and reduces damage received by 7%" },
             { "description": "Boosts base HP by 50" },
             { "description": "Boosts base RCV by 20" },
-            { "description": "Acquire Sailor Ability: Boosts base ATK of Striker characters by 75" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK of Striker characters by 75" },
             { "description": "Boosts base RCV by 30" },
             { "description": "Boosts base RCV by 50" },
             { "description": "Boosts base HP by 60" },
@@ -2912,18 +2903,18 @@ window.details = {
             { "description": "Boosts base RCV by 20" },
             { "description": "Boosts base RCV by 30" },
             { "description": "Boosts base HP by 60" },
-            { "description": "Aquire Potential 1: Pinch Healing" },
+            { "description": "Acquire Potential 1: Pinch Healing" },
             { "description": "Boosts base ATK by 40" },
             { "description": "Boosts base HP by 80" },
             { "description": "Boosts base ATK by 40" },
-            { "description": "Aquire Sailor Ability 1: Makes [STR], [DEX] and [RCV] orbs \"beneficial\" for this unit" },
+            { "description": "Acquire Sailor Ability 1: Makes [STR], [DEX] and [RCV] orbs \"beneficial\" for this unit" },
             { "description": "Boosts base ATK by 40" },
-            { "description": "Aquire 1 additional Socket slot" },
+            { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base ATK by 40" },
             { "description": "Boosts base ATK by 40" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
-            { "description": "Aquire Sailor Ability 2: When any other character uses a special, reduces own cooldown by 1 turn" },
-            { "description": "Aquire Potential 2: Cooldown Reduction" },
+            { "description": "Acquire Sailor Ability 2: When any other character uses a special, reduces own cooldown by 1 turn" },
+            { "description": "Acquire Potential 2: Cooldown Reduction" },
         ],
         potential: [
             {
@@ -3091,18 +3082,18 @@ window.details = {
             { "description": "Boosts base ATK by 10" },
             { "description": "Boosts base ATK by 10" },
             { "description": "Boosts base ATK by 10" },
-            { "description": "Aquire Potential 1: [STR] Damage Reduction" },
+            { "description": "Acquire Potential 1: [STR] Damage Reduction" },
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base ATK by 20" },
-            { "description": "Aquire Sailor Ability 1: Boosts base ATK, HP and RCV of [QCK] and [PSY] characters by 30" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK, HP and RCV of [QCK] and [PSY] characters by 30" },
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base ATK by 20" },
-            { "description": "Aquire Potential 2: [INT] Damage Reduction" },
+            { "description": "Acquire Potential 2: [INT] Damage Reduction" },
             { "description": "Boosts base HP by 30" },
             { "description": "Boosts base HP by 40" },
             { "description": "Boosts base HP by 50" },
@@ -3114,10 +3105,10 @@ window.details = {
             { "description": "Boosts base HP by 90" },
             { "description": "Boosts base RCV by 10" },
             { "description": "Boosts base RCV by 20" },
-            { "description": "Aquire Sailor Ability 2: Boosts base ATK of [QCK] and [PSY] characters by 75" },
+            { "description": "Acquire Sailor Ability 2: Boosts base ATK of [QCK] and [PSY] characters by 75" },
             { "description": "Boosts base RCV by 20" },
             { "description": "Boosts base RCV by 20" },
-            { "description": "Aquire Potential 3: Cooldown Reduction" },
+            { "description": "Acquire Potential 3: Cooldown Reduction" },
         ],
         potential: [
             {
@@ -3354,7 +3345,7 @@ window.details = {
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base RCV by 15" },
             { "description": "Boosts base HP by 30" },
-            { "description": "Acquire Sailor Ability: Boosts base HP of [STR] characters by 120" },
+            { "description": "Acquire Sailor Ability 1: Boosts base HP of [STR] characters by 120" },
             { "description": "Boosts base RCV by 20" },
             { "description": "Boosts base HP by 60" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
@@ -3404,18 +3395,18 @@ window.details = {
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base RCV by 10" },
             { "description": "Boosts base RCV by 20" },
-            { "description": "Aquire Potential 1: Slot Bind Self-reduction" },
+            { "description": "Acquire Potential 1: Slot Bind Self-reduction" },
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base HP by 30" },
             { "description": "Boosts base ATK by 50" },
-            { "description": "Aquire Sailor Ability 1: Boosts base ATK, HP and RCV of all characters by 20" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK, HP and RCV of all characters by 20" },
             { "description": "Boosts base RCV by 20" },
-            { "description": "Aquire 1 additional Socket slot" },
+            { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base RCV by 30" },
             { "description": "Boosts base ATK by 60" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
-            { "description": "Aquire Sailor Ability 2: Makes [DEX] orbs \"beneficial\" for this unit" },
-            { "description": "Aquire Potential 2: Cooldown Reduction" },
+            { "description": "Acquire Sailor Ability 2: Makes [DEX] orbs \"beneficial\" for this unit" },
+            { "description": "Acquire Potential 2: Cooldown Reduction" },
         ],
         potential: [
             {
@@ -3478,15 +3469,13 @@ window.details = {
         special: "Randomly changes the orbs in the middle row into either [STR] or [DEX] orbs, the orbs in the lower row into either [PSY] or [INT] orbs, switches orbs between slots once",
         specialName: "Double Cannon",
         captain: "Boosts ATK of Shooter characters by 2x and their RCV by 1.5x",
-        sailor: "Makes [PSY] orbs \"beneficial\" for this unit",
-        sailorNotes: "#{beneficial}",
+        sailor: "Makes [PSY] orbs \"beneficial\" for this unit"
     },
     457: {
         special: "Randomly changes the orbs in the middle row into either [STR] or [DEX] orbs, the orbs in the lower row into either [PSY] or [INT] orbs, switches orbs between slots once",
         specialName: "Double Cannon",
         captain: "Boosts ATK of Shooter characters by 2x and their RCV by 1.5x",
-        sailor: "Makes [PSY] orbs \"beneficial\" for this unit",
-        sailorNotes: "#{beneficial}",
+        sailor: "Makes [PSY] orbs \"beneficial\" for this unit"
     },
     458: {
         special: "Deals random PSY damage to all enemies, boosts ATK of all characters by 1.5x for 1 turn",
@@ -3810,18 +3799,18 @@ window.details = {
             { "description": "Boosts base ATK by 40" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base RCV by 30" },
-            { "description": "Aquire Potential 1: [DEX] Damage Reduction" },
+            { "description": "Acquire Potential 1: [DEX] Damage Reduction" },
             { "description": "Boosts base HP by 50" },
             { "description": "Reduce base Special Cooldown by 2 turns" },
             { "description": "Boosts base HP by 75" },
-            { "description": "Aquire Sailor Ability 1: Boosts base ATK and HP of [STR] characters by 35" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK and HP of [STR] characters by 35" },
             { "description": "Boosts base HP by 100" },
-            { "description": "Aquire 1 additional Socket slot" },
+            { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base ATK by 40" },
             { "description": "Boosts base ATK by 40" },
             { "description": "Reduce base Special Cooldown by 3 turns" },
-            { "description": "Aquire Sailor Ability 2: Makes [TND] and [RCV] orbs \"beneficial\" for [STR] characters" },
-            { "description": "Aquire Potential 2: Pinch Healing" },
+            { "description": "Acquire Sailor Ability 2: Makes [TND] and [RCV] orbs \"beneficial\" for [STR] characters" },
+            { "description": "Acquire Potential 2: Pinch Healing" },
         ],
         potential: [
             {
@@ -3865,8 +3854,7 @@ window.details = {
         specialName: "Billy's Electrical Discharge",
         specialNotes: "#{zombie}",
         captain: "Boosts ATK and RCV of Striker characters by 1.5x",
-        sailor: "Makes [DEX] orbs \"beneficial\" for this unit",
-        sailorNotes: "#{beneficial}",
+        sailor: "Makes [DEX] orbs \"beneficial\" for this unit"
     },
     524: {
         special: "Randomizes all orbs, protects from defeat as long as HP is above 50% for 1 turn",
@@ -3874,7 +3862,6 @@ window.details = {
         specialNotes: "#{zombie}",
         captain: "Boosts ATK of Striker characters by 2x and their RCV by 1.5x",
         sailor: "Makes [DEX] orbs \"beneficial\" for this unit",
-        sailorNotes: "#{beneficial}",
         limit: "This character has a Limit Break Tree"
     },
     525: {
@@ -3905,7 +3892,7 @@ window.details = {
             { "description": "Boosts base HP by 100" },
             { "description": "Reduce base Special Cooldown by 3 turns" },
             { "description": "Boosts base ATK by 100" },
-            { "description": "Acquire Sailor Ability: If this character has a [PSY] orb and you hit a Perfect with him, keep his [PSY] orb for the next turn" },
+            { "description": "Acquire Sailor Ability 1: If this character has a [PSY] orb and you hit a Perfect with him, keep his [PSY] orb for the next turn" },
             { "description": "Acquire Potential 2: Critical Hit" },
         ],
         potential: [
@@ -4100,7 +4087,7 @@ window.details = {
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Acquire new Captain Ability: Boosts ATK of [DEX] characters by 3x if HP is below 30% at the start of the turn, by 2x otherwise" },
             { "description": "Reduce base Special Cooldown by 2 turns" },
-            { "description": "Acquire Sailor Ability: When any other character uses a special, reduces own cooldown by 1 turn" },
+            { "description": "Acquire Sailor Ability 1: When any other character uses a special, reduces own cooldown by 1 turn" },
             { "description": "Acquire Potential 2: Critical Hit" },
         ],
         potential: [
@@ -4155,7 +4142,7 @@ window.details = {
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base RCV by 30" },
             { "description": "Boosts base HP by 120" },
-            { "description": "Acquire Sailor Ability: Boosts base ATK of Shooter characters by 50" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK of Shooter characters by 50" },
             { "description": "Acquire Potential 2: Reduce No Healing duration" },
         ],
         potential: [
@@ -4199,18 +4186,18 @@ window.details = {
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base RCV by 10" },
             { "description": "Boosts base RCV by 20" },
-            { "description": "Aquire Potential 1: [PSY] Damage Reduction" },
+            { "description": "Acquire Potential 1: [PSY] Damage Reduction" },
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base ATK by 30" },
-            { "description": "Aquire Sailor Ability 1: Makes [PSY] orbs \"beneficial\" for this unit" },
+            { "description": "Acquire Sailor Ability 1: Makes [PSY] orbs \"beneficial\" for this unit" },
             { "description": "Boosts base RCV by 20" },
-            { "description": "Aquire 1 additional Socket slot" },
+            { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base RCV by 30" },
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base ATK by 30" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
-            { "description": "Aquire Potential 2: Cooldown Reduction" },
+            { "description": "Acquire Potential 2: Cooldown Reduction" },
         ],
         potential: [
             {
@@ -4337,7 +4324,7 @@ window.details = {
             { "description": "Boosts base HP by 30" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base HP by 60" },
-            { "description": "Acquire Sailor Ability: Boosts base ATK, HP and RCV of Striker characters by 50" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK, HP and RCV of Striker characters by 50" },
             { "description": "Boosts base HP by 70" },
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Acquire Potential 2: [PSY] Damage Reduction" },
@@ -4738,7 +4725,7 @@ window.details = {
             { "description": "Boosts base HP by 40" },
             { "description": "Reduce base Special Cooldown by 2 turns" },
             { "description": "Boosts base HP by 60" },
-            { "description": "Acquire Sailor Ability: Reduces Blindness duration by 2 turns" },
+            { "description": "Acquire Sailor Ability 1: Reduces Blindness duration by 2 turns" },
             { "description": "Boosts base ATK by 60" },
             { "description": "Boosts base RCV by 40" },
             { "description": "Reduce base Special Cooldown by 2 turns" },
@@ -4922,18 +4909,18 @@ window.details = {
             { "description": "Boosts base RCV by 5" },
             { "description": "Boosts base RCV by 5" },
             { "description": "Boosts base RCV by 5" },
-            { "description": "Aquire Potential 1: Slot Bind Self-reduction" },
+            { "description": "Acquire Potential 1: Slot Bind Self-reduction" },
             { "description": "Boosts base HP by 25" },
             { "description": "Boosts base HP by 25" },
             { "description": "Boosts base HP by 25" },
-            { "description": "Aquire Sailor Ability 1: Boosts base ATK, HP and RCV of Free Spirit characters by 50" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK, HP and RCV of Free Spirit characters by 50" },
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base RCV by 10" },
             { "description": "Boosts base ATK by " },
             { "description": "Boosts base RCV by 10" },
-            { "description": "Aquire Potential 2: [INT] Damage Reduction" },
+            { "description": "Acquire Potential 2: [INT] Damage Reduction" },
             { "description": "Boosts base RCV by 20" },
             { "description": "Boosts base RCV by 30" },
             { "description": "Boosts base HP by 30" },
@@ -4945,10 +4932,10 @@ window.details = {
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base HP by 80" },
             { "description": "Boosts base HP by 90" },
-            { "description": "Aquire Sailor Ability 2: Makes INT orbs \"beneficial\" for Free Spirit characters" },
+            { "description": "Acquire Sailor Ability 2: Makes INT orbs \"beneficial\" for Free Spirit characters" },
             { "description": "Boosts base ATK by 50" },
             { "description": "Boosts base ATK by 60" },
-            { "description": "Aquire Potential 3: Pinch Healing" },
+            { "description": "Acquire Potential 3: Pinch Healing" },
         ],
         potential: [
             {
@@ -5185,18 +5172,18 @@ window.details = {
             { "description": "Boosts base HP by 30" },
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base ATK by 30" },
-            { "description": "Aquire Potential 1: [INT] Damage Reduction" },
+            { "description": "Acquire Potential 1: [INT] Damage Reduction" },
             { "description": "Boosts base HP by 50" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base ATK by 40" },
-            { "description": "Aquire Sailor Ability 1: Reduces Paralysis duration for 3 turns for herself" },
+            { "description": "Acquire Sailor Ability 1: Reduces Paralysis duration for 3 turns for herself" },
             { "description": "Boosts base HP by 90" },
-            { "description": "Aquire 1 additional Socket slot" },
+            { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base RCV by 30" },
             { "description": "Boosts base ATK by 40" },
             { "description": "Reduce base Special Cooldown by 2 turns" },
-            { "description": "Aquire Sailor Ability 2: Reduces Silence duration on this character by 3 turns" },
-            { "description": "Aquire Potential 2: Enrage" },
+            { "description": "Acquire Sailor Ability 2: Reduces Silence duration on this character by 3 turns" },
+            { "description": "Acquire Potential 2: Enrage" },
         ],
         potential: [
             {
@@ -5339,8 +5326,7 @@ window.details = {
                     "Level 5: If you hit a perfect with this character, there is a 90% chance to deal 10% of this character's attack in extra damage"
                 ]
             },
-        ],
-        potentialNotes: "#{enrage}",
+        ]
     },
     719: {
         special: "Boosts ATK of Cerebral characters by 2x if HP is below 30% when the special is activated, otherwise boosts ATK of Cerebral characters by 1.5x, deals 20x character's ATK in DEX damage to all enemies",
@@ -5362,33 +5348,33 @@ window.details = {
             { "description": "Boosts base ATK by 5" },
             { "description": "Boosts base ATK by 10" },
             { "description": "Boosts base ATK by 15" },
-            { "description": "Aquire Potential 1: [QCK] Damage Reduction" },
+            { "description": "Acquire Potential 1: [QCK] Damage Reduction" },
             { "description": "Boosts base RCV by 5" },
             { "description": "Boosts base RCV by 5" },
             { "description": "Boosts base RCV by 10" },
-            { "description": "Aquire Sailor Ability 1: Boosts base ATK of Cerebral characters by 50" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK of Cerebral characters by 50" },
             { "description": "Boosts base HP by 20" },
             { "description": "Boosts base HP by 30" },
             { "description": "Boosts base HP by 40" },
             { "description": "Boosts base ATK by 15" },
             { "description": "Boosts base RCV by 20" },
             { "description": "Boosts base HP by 50" },
-            { "description": "Aquire Potential 2: Critical Hit" },
+            { "description": "Acquire Potential 2: Critical Hit" },
             { "description": "Boosts base HP by 60" },
             { "description": "Boosts base HP by 70" },
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base ATK by 30" },
-            { "description": "Aquire 1 additional Socket slot" },
+            { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base HP by 75" },
             { "description": "Boosts base RCV by 30" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base ATK by 50" },
             { "description": "Boosts base RCV by 30" },
             { "description": "Boosts base HP by 75" },
-            { "description": "Aquire Sailor Ability 2: Makes DEX orbs \"beneficial\" for Cerebral characters" },
+            { "description": "Acquire Sailor Ability 2: Makes DEX orbs \"beneficial\" for Cerebral characters" },
             { "description": "Boosts base HP by 80" },
             { "description": "Boosts base ATK by 55" },
-            { "description": "Aquire Potential 3: Enrage" },
+            { "description": "Acquire Potential 3: Enrage" },
         ],
         potential: [
             {
@@ -5574,7 +5560,6 @@ window.details = {
             "level1": "Boosts base ATK, HP and RCV of Powerhouse characters by 30",
             "level2": "Makes [RCV] and [TND] orbs \"beneficial\" for Powerhouse characters",
         },
-        sailorNotes: "#{beneficial}",
         limit: [
             { "description": "Boosts base ATK by 5" },
             { "description": "Boosts base ATK by 5" },
@@ -5720,18 +5705,18 @@ window.details = {
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base HP by 40" },
             { "description": "Boosts base RCV by 20" },
-            { "description": "Aquire Potential 1: Slot Bind Self-reduction" },
+            { "description": "Acquire Potential 1: Slot Bind Self-reduction" },
             { "description": "Boosts base ATK by 40" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base HP by 70" },
-            { "description": "Aquire Sailor Ability 1: Reduces Blindness duration by 3 turns" },
+            { "description": "Acquire Sailor Ability 1: Reduces Blindness duration by 3 turns" },
             { "description": "Boosts base RCV by 20" },
-            { "description": "Aquire 1 additional Socket slot" },
+            { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base HP by 90" },
             { "description": "Boosts base ATK by 50" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
-            { "description": "Aquire Sailor Ability 2: Restores her own special by 2 turns when it is rewinded" },
-            { "description": "Aquire Potential 2: Enrage" },
+            { "description": "Acquire Sailor Ability 2: Restores her own special by 2 turns when it is rewinded" },
+            { "description": "Acquire Potential 2: Enrage" },
         ],
         potential: [
             {
@@ -5773,7 +5758,6 @@ window.details = {
             "level1": "Restores his own special by 1 turn when it is rewinded",
             "level2": "Makes [RCV] and [TND] orbs \"beneficial\" for this unit",
         },
-        sailorNotes: "#{beneficial}",
         limit: [
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base HP by 30" },
@@ -5828,7 +5812,6 @@ window.details = {
             "level1": "Makes [STR] orbs \"beneficial\" for this unit",
             "level2": "Boosts base HP of Powerhouse characters by 150",
         },
-        sailorNotes: "#{beneficial}",
         limit: [
             { "description": "Boosts base HP by 10" },
             { "description": "Boosts base HP by 20" },
@@ -5893,7 +5876,6 @@ window.details = {
             "level1": "Makes [PSY] orbs \"beneficial\" for this unit",
             "level2": "Makes [QCK] orbs \"beneficial\" for this unit",
         },
-        sailorNotes: "#{beneficial}",
         limit: [
             { "description": "Boosts base RCV by 10" },
             { "description": "Boosts base ATK by 30" },
@@ -6066,7 +6048,7 @@ window.details = {
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base ATK by 40" },
             { "description": "Boosts base ATK by 50" },
-            { "description": "Acquire Sailor Ability: Reduces Paralysis duration for 3 turns for himself" },
+            { "description": "Acquire Sailor Ability 1: Reduces Paralysis duration for 3 turns for himself" },
             { "description": "Acquire Potential 2: Enrage" },
         ],
         potential: [
@@ -6349,18 +6331,18 @@ window.details = {
             { "description": "Boosts base ATK by 50" },
             { "description": "Boosts base HP by 50" },
             { "description": "Boosts base HP by 80" },
-            { "description": "Aquire Potential 1: Slot Bind Self-reduction" },
+            { "description": "Acquire Potential 1: Slot Bind Self-reduction" },
             { "description": "Boosts base RCV by 20" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base RCV by 30" },
-            { "description": "Aquire Sailor Ability #: Makes [QCK] orbs \"beneficial\" for this unit" },
+            { "description": "Acquire Sailor Ability #: Makes [QCK] orbs \"beneficial\" for this unit" },
             { "description": "Boosts base HP by 90" },
-            { "description": "Aquire 1 additional Socket slot" },
+            { "description": "Acquire 1 additional Socket slot" },
             { "description": "Reduce base Special Cooldown by 2 turns" },
             { "description": "Boosts base ATK by 50" },
             { "description": "Reduce base Special Cooldown by 2 turns" },
-            { "description": "Aquire Sailor Ability #: Makes [STR] orbs \"beneficial\" for this unit" },
-            { "description": "Aquire Potential 2: Enrage" },
+            { "description": "Acquire Sailor Ability #: Makes [STR] orbs \"beneficial\" for this unit" },
+            { "description": "Acquire Potential 2: Enrage" },
         ],
         potential: [
             {
@@ -6423,18 +6405,18 @@ window.details = {
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base HP by 40" },
-            { "description": "Aquire Potential 1: [DEX] Damage Reduction" },
+            { "description": "Acquire Potential 1: [DEX] Damage Reduction" },
             { "description": "Boosts base ATK by 40" },
             { "description": "Boosts base HP by 50" },
             { "description": "Boosts base HP by 60" },
-            { "description": "Aquire Sailor Ability 1: If HP is above 99% at the start of the turn, boosts own base ATK by 50" },
+            { "description": "Acquire Sailor Ability 1: If HP is above 99% at the start of the turn, boosts own base ATK by 50" },
             { "description": "Boosts base RCV by 20" },
-            { "description": "Aquire 1 additional Socket slot" },
+            { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base RCV by 30" },
             { "description": "Boosts base HP by 70" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
-            { "description": "Aquire Sailor Ability 2: When HP is below ??% at the start of the turn, boosts own base ATK by 75" },
-            { "description": "Aquire Potential 2: Enrage" },
+            { "description": "Acquire Sailor Ability 2: When HP is below ??% at the start of the turn, boosts own base ATK by 75" },
+            { "description": "Acquire Potential 2: Enrage" },
         ],
         potential: [
             {
@@ -6540,7 +6522,7 @@ window.details = {
             { "description": "Acquire new Captain Ability: Boosts ATK of Striker characters by 2.5x and reduces damage received by 7%" },
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base HP by 50" },
-            { "description": "Acquire Sailor Ability: If this character has a [INT] orb and you hit a Perfect with him, keep his [INT] orb for the next turn" },
+            { "description": "Acquire Sailor Ability 1: If this character has a [INT] orb and you hit a Perfect with him, keep his [INT] orb for the next turn" },
             { "description": "Boosts base HP by 60" },
             { "description": "Boosts base RCV by 40" },
             { "description": "Reduce base Special Cooldown by 2 turns" },
@@ -6590,18 +6572,18 @@ window.details = {
             { "description": "Boosts base ATK by 10" },
             { "description": "Boosts base HP by 20" },
             { "description": "Boosts base HP by 40" },
-            { "description": "Aquire Potential 1: [INT] Damage Reduction" },
+            { "description": "Acquire Potential 1: [INT] Damage Reduction" },
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base HP by 60" },
             { "description": "Boosts base ATK by 50" },
-            { "description": "Aquire Sailor Ability 1: Boosts base RCV of all characters by 10" },
+            { "description": "Acquire Sailor Ability 1: Boosts base RCV of all characters by 10" },
             { "description": "Boosts base RCV by 20" },
-            { "description": "Aquire 1 additional Socket slot" },
+            { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base HP by 80" },
             { "description": "Boosts base ATK by 70" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
-            { "description": "Aquire Sailor Ability 2: Makes RCV and [TND] orbs \"beneficial\" for this unit" },
-            { "description": "Aquire Potential 2: Pinch Healing" },
+            { "description": "Acquire Sailor Ability 2: Makes RCV and [TND] orbs \"beneficial\" for this unit" },
+            { "description": "Acquire Potential 2: Pinch Healing" },
         ],
         potential: [
             {
@@ -6878,7 +6860,7 @@ window.details = {
     },
     876: {
         captain: "Boosts ATK of Cerebral and Driven characters by 2.25x, makes [TND] and [RCV] orbs \"beneficial\" to Cerebral and Driven characters",
-        captainNotes: "#{beneficial}",
+        captainNotes: "\"Beneficial\" orbs grant the same ATK boost as matching orbs while retaining their original function.",
         specialName: "Beto Launcher",
         special: "Changes the captain's orb into a matching orb, locks all orbs for 1 turn, deals 13x character's ATK in INT damage to all enemies",
         sailor: {
@@ -6955,7 +6937,6 @@ window.details = {
             "level1": "Makes [RCV] and [TND] orbs \"beneficial\" for this unit",
             "level2": "If HP is above 99% at the start of the turn, boosts ATK of Driven characters by 50",
         },
-        sailorNotes: "#{beneficial}",
         limit: [
             { "description": "Boosts base RCV by 10" },
             { "description": "Boosts base RCV by 10" },
@@ -7141,6 +7122,7 @@ window.details = {
         specialNotes: "#{stages}"
     },
     906: {
+        captain: "Boosts ATK of Slasher characters by 2.75x if HP is below 30% at the start of the turn",
         captain: {
             "base": "Boosts ATK of Slasher characters by 2.75x if HP is below 30% at the start of the turn",
             "level1": "Boosts ATK of Slasher characters by 3x if HP is below 30% at the start of the turn",
@@ -7166,7 +7148,6 @@ window.details = {
             "level1": "If this character has a [STR] orb and you hit a Perfect with him, keep his [STR] orb for the next turn",
             "level2": "Makes [DEX] orbs \"beneficial\" for this unit",
         },
-        sailorNotes: "#{beneficial}",
         limit: [
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base ATK by 50" },
@@ -7226,18 +7207,18 @@ window.details = {
             { "description": "Boosts base ATK by 1" },
             { "description": "Boosts base HP by 20" },
             { "description": "Boosts base HP by 40" },
-            { "description": "Aquire Potential 2: [INT] Damage Reduction" },
+            { "description": "Acquire Potential 2: [INT] Damage Reduction" },
             { "description": "Boosts base RCV by 30" },
             { "description": "Boosts base ATK by 40" },
             { "description": "Boosts base ATK by 40" },
-            { "description": "Aquire Sailor Ability 1: When HP is below ??% at the start of the turn, boosts base ATK of Cerebral characters by 40" },
+            { "description": "Acquire Sailor Ability 1: When HP is below ??% at the start of the turn, boosts base ATK of Cerebral characters by 40" },
             { "description": "Boosts base HP by 50" },
-            { "description": "Aquire 1 additional Socket slot" },
+            { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base ATK by 40" },
             { "description": "Boosts base ATK by 50" },
             { "description": "Boosts base HP by 50" },
-            { "description": "Aquire Sailor Ability 2: Makes RCV and [PSY] orbs \"beneficial\" for this unit" },
-            { "description": "Aquire Potential 2: Cooldown Reduction" },
+            { "description": "Acquire Sailor Ability 2: Makes RCV and [PSY] orbs \"beneficial\" for this unit" },
+            { "description": "Acquire Potential 2: Cooldown Reduction" },
         ],
         potential: [
             {
@@ -7427,10 +7408,6 @@ window.details = {
                 "cooldown": [ 31, 17 ]
             }
         ],
-        sailor: {
-            "base": "None",
-            "level1": "Boosts base ATK of Powerhouse and Driven characters by 30",
-        },
         specialNotes: "#{stages}",
         sailor: {
             "base": "None",
@@ -7450,7 +7427,7 @@ window.details = {
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base HP by 70" },
             { "description": "Boosts base HP by 90" },
-            { "description": "Acquire Sailor Ability: Boosts base ATK of Powerhouse and Driven characters by 30" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK of Powerhouse and Driven characters by 30" },
             { "description": "Acquire Potential 2: Reduce No Healing duration" },
         ],
         potential: [
@@ -7509,18 +7486,18 @@ window.details = {
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base RCV by 20" },
             { "description": "Boosts base HP by 40" },
-            { "description": "Aquire Potential 1: [STR] Damage Reduction" },
+            { "description": "Acquire Potential 1: [STR] Damage Reduction" },
             { "description": "Boosts base ATK by 30" },
             { "description": "Reduce base Special Cooldown by 2 turns" },
             { "description": "Boosts base HP by 70" },
-            { "description": "Aquire Sailor Ability 1: Boosts base ATK, HP and RCV of all characters by 30" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK, HP and RCV of all characters by 30" },
             { "description": "Boosts base RCV by 30" },
-            { "description": "Aquire 1 additional Socket slot" },
+            { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base HP by 90" },
             { "description": "Boosts base ATK by 50" },
             { "description": "Reduce base Special Cooldown by 3 turns" },
-            { "description": "Aquire Sailor Ability 2: Completely resists Paralysis on this character" },
-            { "description": "Aquire Potential 2: Pinch Healing" },
+            { "description": "Acquire Sailor Ability 2: Completely resists Paralysis on this character" },
+            { "description": "Acquire Potential 2: Pinch Healing" },
         ],
         potential: [
             {
@@ -7562,7 +7539,6 @@ window.details = {
             "level1": "Makes [RCV] orbs \"beneficial\" for Cerebral and Striker characters",
             "level2": "Boosts base ATK, HP and RCV of Cerebral and Striker characters by 50",
         },
-        sailorNotes: "#{beneficial}",
         limit: [
             { "description": "Boosts base HP by 40" },
             { "description": "Boosts base RCV by 20" },
@@ -7631,18 +7607,18 @@ window.details = {
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base RCV by 10" },
             { "description": "Boosts base RCV by 20" },
-            { "description": "Aquire Potential 1: [DEX] Damage Reduction" },
+            { "description": "Acquire Potential 1: [DEX] Damage Reduction" },
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base HP by 40" },
             { "description": "Boosts base ATK by 50" },
-            { "description": "Aquire Sailor Ability 1: Makes [TND] orbs \"beneficial\" for this unit" },
+            { "description": "Acquire Sailor Ability 1: Makes [TND] orbs \"beneficial\" for this unit" },
             { "description": "Boosts base RCV by 20" },
-            { "description": "Aquire 1 additional Socket slot" },
+            { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base RCV by 30" },
             { "description": "Boosts base ATK by 60" },
             { "description": "Boosts base HP by 40" },
-            { "description": "Aquire Sailor Ability 2: Completely resists Paralysis on this character" },
-            { "description": "Aquire Potential 2: Pinch Healing" },
+            { "description": "Acquire Sailor Ability 2: Completely resists Paralysis on this character" },
+            { "description": "Acquire Potential 2: Pinch Healing" },
         ],
         potential: [
             {
@@ -7720,18 +7696,18 @@ window.details = {
             { "description": "Boosts base ATK by 10" },
             { "description": "Boosts base ATK by 15" },
             { "description": "Boosts base ATK by 20" },
-            { "description": "Aquire Potential 1: [INT] Damage Reduction" },
+            { "description": "Acquire Potential 1: [INT] Damage Reduction" },
             { "description": "Boosts base ATK by 25" },
             { "description": "Boosts base ATK by 25" },
             { "description": "Boosts base ATK by 25" },
-            { "description": "Aquire Sailor Ability 1: Boosts base ATK of Free Spirit and Fighter characters by 100" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK of Free Spirit and Fighter characters by 100" },
             { "description": "Boosts base ATK by 35" },
-            { "description": "Aquire 1 additional Socket slot" },
+            { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base RCV by 35" },
             { "description": "Boosts base ATK by 35" },
             { "description": "Boosts base ATK by 45" },
-            { "description": "Aquire Sailor Ability 2: Makes PSY orbs \"beneficial\" for Free Spirit and Fighter characters" },
-            { "description": "Aquire Potential 2: Pinch Healing" },
+            { "description": "Acquire Sailor Ability 2: Makes PSY orbs \"beneficial\" for Free Spirit and Fighter characters" },
+            { "description": "Acquire Potential 2: Pinch Healing" },
         ],
         potential: [
             {
@@ -7917,7 +7893,7 @@ window.details = {
             { "description": "Boosts base HP by 20" },
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base RCV by 20" },
-            { "description": "Acquire Sailor Ability: Boosts ATK, HP and RCV of Shooter characters by 20" },
+            { "description": "Acquire Sailor Ability 1: Boosts ATK, HP and RCV of Shooter characters by 20" },
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base HP by 30" },
             { "description": "Boosts base RCV by 20" },
@@ -7973,7 +7949,7 @@ window.details = {
     },
     983: {
         captain: "Boosts ATK of Slasher characters by 2.25x, makes [RCV] and [TND] orbs \"beneficial\" to Slasher characters",
-        captainNotes: "#{beneficial}",
+        captainNotes: "\"Beneficial\" orbs grant the same ATK boost as matching orbs.",
         specialName: "Flower Sword Straight Cut",
         special: "Deals 25x character's ATK in [QCK] damage to one enemy, changes bottom row orbs into matching orbs",
         sailor: {
@@ -7981,7 +7957,6 @@ window.details = {
             "level1": "Boosts base ATK of Slasher characters by 60",
             "level2": "Makes [DEX] orbs \"beneficial\" for this unit",
         },
-        sailorNotes: "#{beneficial}",
         limit: [
             { "description": "Boosts base ATK by 20" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
@@ -8058,7 +8033,6 @@ window.details = {
             "level1": "Makes [TND] orbs \"beneficial\" for this unit",
             "level2": "Boosts own base ATK by 200 if this character is the last in the chain to attack",
         },
-        sailorNotes: "#{beneficial}",
         limit: [
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base HP by 30" },
@@ -8197,18 +8171,18 @@ window.details = {
             { "description": "Boosts base ATK by 10" },
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base ATK by 30" },
-            { "description": "Aquire Potential 1: Reduce No Healing duration" },
+            { "description": "Acquire Potential 1: Reduce No Healing duration" },
             { "description": "Boosts base ATK by 40" },
             { "description": "Boosts base HP by 80" },
             { "description": "Boosts base ATK by 50" },
             { "description": "Boosts base ATK by 50" },
             { "description": "Boosts base ATK by 50" },
-            { "description": "Aquire 1 additional Socket slot" },
+            { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base ATK by 70" },
             { "description": "Boosts base ATK by 80" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
-            { "description": "Aquire Sailor Ability 1: Reduces Silence duration against this unit by 2 turns" },
-            { "description": "Aquire Potential 2: Cooldown Reduction" },
+            { "description": "Acquire Sailor Ability 1: Reduces Silence duration against this unit by 2 turns" },
+            { "description": "Acquire Potential 2: Cooldown Reduction" },
         ],
         potential: [
             {
@@ -8250,7 +8224,7 @@ window.details = {
     },
     997: {
         captain: "Boosts ATK of Powerhouse characters by 2.25x, makes [TND] and [RCV] orbs \"beneficial\" to Powerhouse characters",
-        captainNotes: "#{beneficial}",
+        captainNotes: "\"Beneficial\" orbs grant the same ATK boost as matching orbs while retaining their original function.",
         special: [
             {
                 "description": "For Powerhouse characters, changes Badly Matching orbs into Matching orbs.",
@@ -8268,7 +8242,6 @@ window.details = {
             "level1": "Makes [TND] orbs \"beneficial\" for Powerhouse characters",
             "level2": "Makes [RCV] orbs \"beneficial\" for Powerhouse characters",
         },
-        sailorNotes: "#{beneficial}",
         limit: [
             { "description": "Boosts base ATK by 10" },
             { "description": "Boosts base ATK by 20" },
@@ -8322,7 +8295,6 @@ window.details = {
             "base": "None",
             "level1": "Makes [RCV] and [TND] orbs \"beneficial\" for this unit",
         },
-        sailorNotes: "#{beneficial}",
         limit: [
             { "description": "Boosts base ATK by 40" },
             { "description": "Boosts base HP by 20" },
@@ -8331,7 +8303,7 @@ window.details = {
             { "description": "Boosts base HP by 50" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base ATK by 40" },
-            { "description": "Acquire Sailor Ability: Makes [RCV] and [TND] orbs \"beneficial\" for this unit" },
+            { "description": "Acquire Sailor Ability 1: Makes [RCV] and [TND] orbs \"beneficial\" for this unit" },
             { "description": "Boosts base HP by 50" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base HP by 50" },
@@ -8563,7 +8535,7 @@ window.details = {
             { "description": "Boosts base RCV by 40" },
             { "description": "Boosts base RCV by 40" },
             { "description": "Boosts base ATK by 50" },
-            { "description": "Acquire Sailor Ability: Boosts ATK and HP of Powerhouse and Striker characters by 50" },
+            { "description": "Acquire Sailor Ability 1: Boosts ATK and HP of Powerhouse and Striker characters by 50" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Acquire new Captain Ability: Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of Powerhouse characters by 2.25x and boosts the HP of Striker characters by 2x" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
@@ -8858,11 +8830,11 @@ window.details = {
         specialName: "Gamma Knife",
         special: [
             {
-                "description": "Makes Damage and Health Cutting Specials of Slasher and Free Spirit characters bypass all defensive Buffs, deals 20x character's ATK in fixed PSY damage to one enemy.",
+                "description": "Makes Damage and Health Cutting Specials of Slasher and Free Spirit characters bypass all defensive Buffs, deals 20x character's ATK in [PSY] fixed damage to one enemy.",
                 "cooldown": [ 18, 13 ]
             },
             {
-                "description": "Makes Damage and Health Cutting Specials of all characters bypass all defensive Buffs, deals 50x character's ATK in fixed PSY damage to one enemy.",
+                "description": "Makes Damage and Health Cutting Specials of all characters bypass all defensive Buffs, deals 50x character's ATK in [PSY] fixed damage to one enemy.",
                 "cooldown": [ 25, 20 ]
             }
         ],
@@ -8878,19 +8850,15 @@ window.details = {
         },
         special: [
             {
-                "description": "Makes Damage and Health Cutting Specials of Slasher and Free Spirit characters bypass all defensive Buffs, deals 20x character's ATK in fixed PSY damage to one enemy.",
+                "description": "Makes Damage and Health Cutting Specials of Slasher and Free Spirit characters bypass all defensive Buffs, deals 20x character's ATK in [PSY] fixed damage to one enemy.",
                 "cooldown": [ 18, 13 ]
             },
             {
-                "description": "Makes Damage and Health Cutting Specials of all characters bypass all defensive Buffs, deals 50x character's ATK in fixed PSY damage to one enemy.",
+                "description": "Makes Damage and Health Cutting Specials of all characters bypass all defensive Buffs, deals 50x character's ATK in [PSY] fixed damage to one enemy.",
                 "cooldown": [ 25, 20 ]
             }
         ],
         specialNotes: "#{stages}",
-        sailor: {
-            "base": "None",
-            "level1": "When HP is below 10% at the start of the turn, boosts base RCV of Slasher and Free Spirit characters by 300",
-        },
         limit: [
             { "description": "Boosts base RCV by 5" },
             { "description": "Boosts base RCV by 10" },
@@ -8912,13 +8880,13 @@ window.details = {
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base RCV by 30" },
             { "description": "Boosts base RCV by 35" },
-            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base ATK by 25" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base ATK by 50" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base HP by 85" },
-            { "description": "Aquire Sailor Ability 2: Makes [INT], [RCV] and [TND] orbs \"beneficial\" for this unit" },
+            { "description": "Acquire Sailor Ability 2: Makes [INT], [RCV] and [TND] orbs \"beneficial\" for this unit" },
             { "description": "Boosts base HP by 95" },
             { "description": "Boosts base ATK by 60" },
             { "description": "Acquire Potential 3: Critical Hit" },
@@ -9128,7 +9096,7 @@ window.details = {
             { "description": "Boosts base ATK by 35" },
             { "description": "Reduce base Special Cooldown by 3 turns" },
             { "description": "Boosts base HP by 70" },
-            { "description": "Acquire Sailor Ability: Boosts base ATK, HP and RCV of [INT] characters by 50" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK, HP and RCV of [INT] characters by 50" },
             { "description": "Boosts base ATK by 45" },
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Acquire Potential 2: [PSY] Damage Reduction" },
@@ -9250,7 +9218,7 @@ window.details = {
             },
         ],
         specialNotes: "#{stages}",
-        specialName: "Heal Popo"
+        specialName: "Chiyupopo"
     },
     1079: {
         captain: "Recovers 4x character's RCV in HP at the end of each turn",
@@ -9386,7 +9354,6 @@ window.details = {
             "level1": "Restores his own special by 2 turns when it is rewinded",
             "level2": "Makes [QCK] orbs \"beneficial\" for this unit",
         },
-        sailorNotes: "#{beneficial}",
         limit: [
             { "description": "Boosts base RCV by 10" },
             { "description": "Boosts base RCV by 20" },
@@ -9430,14 +9397,12 @@ window.details = {
     },
     1084: {
         captain: "Boosts HP of Driven characters by 1.5x and boosts ATK by 3x if they have a matching orb, by 1.5x otherwise. Makes [TND] and [RCV] orbs \"beneficial\" to Driven characters",
-        captainNotes: "#{beneficial}",
         special: "Cuts the current HP of each enemy by 20%. At the end of the turn, cuts the current HP of each enemy by 20% for 3 turns",
         specialNotes: "Does not stack with other 'end of turn damage' abilities",
         specialName: "Gravito: Heavens Fall"
     },
     1085: {
         captain: "Boosts HP of Driven characters by 1.5x and boosts ATK by 3x if they have a matching orb, by 1.5x otherwise. Makes [TND] and [RCV] orbs \"beneficial\" to Driven characters",
-        captainNotes: "#{beneficial}",
         special: "Cuts the current HP of each enemy by 20%. At the end of the turn, cuts the current HP of each enemy by 20% for 3 turns",
         specialNotes: "Does not stack with other 'end of turn damage' abilities",
         specialName: "Gravito: Heavens Fall",
@@ -9553,18 +9518,18 @@ window.details = {
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base HP by 70" },
             { "description": "Boosts base ATK by 20" },
-            { "description": "Aquire Potential 1: Critical Hit" },
+            { "description": "Acquire Potential 1: Critical Hit" },
             { "description": "Boosts base ATK by 30" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base HP by 100" },
-            { "description": "Aquire Sailor Ability 1: When HP is below ??% at the start of the turn, boosts own base ATK by 50" },
+            { "description": "Acquire Sailor Ability 1: When HP is below ??% at the start of the turn, boosts own base ATK by 50" },
             { "description": "Boosts base RCV by 40" },
-            { "description": "Aquire 1 additional Socket slot" },
+            { "description": "Acquire 1 additional Socket slot" },
             { "description": "Reduce base Special Cooldown by 2 turns" },
             { "description": "Boosts base ATK by 80" },
             { "description": "Reduce base Special Cooldown by 2 turns" },
-            { "description": "Aquire Sailor Ability 2: Makes [INT] orbs \"beneficial\" for this unit" },
-            { "description": "Aquire Potential 2: Enrage" },
+            { "description": "Acquire Sailor Ability 2: Makes [INT] orbs \"beneficial\" for this unit" },
+            { "description": "Acquire Potential 2: Enrage" },
         ],
         potential: [
             {
@@ -9722,7 +9687,7 @@ window.details = {
             { "description": "Boosts base HP by 60" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base HP by 80" },
-            { "description": "Acquire Sailor Ability: Boosts base ATK of Driven characters by 50" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK of Driven characters by 50" },
             { "description": "Acquire Potential 2: Slot Bind Self-reduction" },
         ],
         potential: [
@@ -9794,18 +9759,18 @@ window.details = {
             { "description": "Boosts base ATK by 40" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base RCV by 30" },
-            { "description": "Aquire Potential 1: [DEX] Damage Reduction" },
+            { "description": "Acquire Potential 1: [DEX] Damage Reduction" },
             { "description": "Boosts base HP by 50" },
             { "description": "Reduce base Special Cooldown by 2 turns" },
             { "description": "Boosts base HP by 75" },
-            { "description": "Aquire Sailor Ability 1: Boosts base ATK and HP of [STR] characters by 35" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK and HP of [STR] characters by 35" },
             { "description": "Boosts base HP by 100" },
-            { "description": "Aquire 1 additional Socket slot" },
+            { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base ATK by 40" },
             { "description": "Boosts base ATK by 40" },
             { "description": "Reduce base Special Cooldown by 3 turns" },
-            { "description": "Aquire Sailor Ability 2: Makes [TND] and [RCV] orbs \"beneficial\" for [STR] characters" },
-            { "description": "Aquire Potential 2: Pinch Healing" },
+            { "description": "Acquire Sailor Ability 2: Makes [TND] and [RCV] orbs \"beneficial\" for [STR] characters" },
+            { "description": "Acquire Potential 2: Pinch Healing" },
         ],
         potential: [
             {
@@ -9849,8 +9814,7 @@ window.details = {
         specialName: "10,000-Carat Smile",
         specialNotes: "#{zombie}",
         captain: "Boosts ATK and RCV of Striker characters by 1.5x",
-        sailor: "Makes [DEX] orbs \"beneficial\" for this unit",
-        sailorNotes: "#{beneficial}",
+        sailor: "Makes [DEX] orbs \"beneficial\" for this unit"
     },
     1119: {
         special: "Randomizes all orbs, protects from defeat as long as HP is above 50% for 1 turn",
@@ -9858,7 +9822,6 @@ window.details = {
         specialNotes: "#{zombie}",
         captain: "Boosts ATK of Striker characters by 2x and their RCV by 1.5x",
         sailor: "Makes [DEX] orbs \"beneficial\" for this unit",
-        sailorNotes: "#{beneficial}",
         limit: "This character has a Limit Break Tree"
     },
     1120: {
@@ -9876,15 +9839,15 @@ window.details = {
     1122: {
         captain: "Boosts ATK of [STR], [DEX] and [QCK] characters by 2.5x, but boosts his OWN attack by 4x",
         captainNotes: "Cavendish only boosts Friend or Sub Cavendish by 2.5x for a total of 10x boost with two Cavendish captains",
-        special: "Removes all positive buffs on your team. Deals 15x the character's ATK as Typeless damage to all enemies. Boosts own ATK by 2.25x for 2 turns, amplifies the effect of own orb by 1.5x for 2 turns, locks own orb for 2 turns, and changes own orb to [QCK].",
-        specialNotes: "Boosted ATK and Orb effectiveness only works for the character who uses their own Special.",
+        special: "Removes all positive buffs on your team. Deals 15x the character's ATK as Typeless damage to all enemies. Boosts own ATK by 2.25x for 2 turns, amplifies the effect of own orb by 1.5x for 2 turns, locks own orb for 2 turns and changes own orb to [QCK].",
+        specialNotes: "Boosted ATK and Orb Effectivess only works for the character who uses their own Special.",
         specialName: "Slicing Winds of Rommel"
     },
     1123: {
         captain: "Boosts ATK of [STR], [DEX] and [QCK] characters by 2.5x, but boosts his OWN attack by 4x",
         captainNotes: "Cavendish only boosts Friend or Sub Cavendish by 2.5x for a total of 10x boost with two Cavendish captains",
-        special: "Removes all positive buffs on your team. Deals 15x the character's ATK as Typeless damage to all enemies. Boosts own ATK by 2.25x for 2 turns, amplifies the effect of own orb by 1.5x for 2 turns, locks own orb for 2 turns, and changes own orb to [QCK].",
-        specialNotes: "Boosted ATK and Orb effectiveness only works for the character who uses their own Special.",
+        special: "Removes all positive buffs on your team. Deals 15x the character's ATK as Typeless damage to all enemies. Boosts own ATK by 2.25x for 2 turns, amplifies the effect of own orb by 1.5x for 2 turns, locks own orb for 2 turns and changes own orb to [QCK].",
+        specialNotes: "Boosted ATK and Orb Effectivess only works for the character who uses their own Special.",
         specialName: "Slicing Winds of Rommel"
     },
     1124: {
@@ -9903,7 +9866,6 @@ window.details = {
             "level1": "Boosts base ATK of Slasher characters by 60",
             "level2": "Makes [PSY] orbs \"beneficial\" for Slasher characters",
         },
-        sailorNotes: "#{beneficial}",
         limit: [
             { "description": "Boosts base ATK by 10" },
             { "description": "Boosts base ATK by 15" },
@@ -10304,7 +10266,7 @@ window.details = {
             { "description": "Boosts base HP by 100" },
             { "description": "Reduce base Special Cooldown by 3 turns" },
             { "description": "Boosts base ATK by 100" },
-            { "description": "Acquire Sailor Ability: If this character has a [PSY] orb and you hit a Perfect with him, keep his [PSY] orb for the next turn" },
+            { "description": "Acquire Sailor Ability 1: If this character has a [PSY] orb and you hit a Perfect with him, keep his [PSY] orb for the next turn" },
             { "description": "Acquire Potential 2: Critical Hit" },
         ],
         potential: [
@@ -10363,7 +10325,7 @@ window.details = {
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Acquire new Captain Ability: Boosts ATK of [DEX] characters by 3x if HP is below 30% at the start of the turn, by 2x otherwise" },
             { "description": "Reduce base Special Cooldown by 2 turns" },
-            { "description": "Acquire Sailor Ability: When any other character uses a special, reduces own cooldown by 1 turn" },
+            { "description": "Acquire Sailor Ability 1: When any other character uses a special, reduces own cooldown by 1 turn" },
             { "description": "Acquire Potential 2: Critical Hit" },
         ],
         potential: [
@@ -10417,18 +10379,14 @@ window.details = {
     1181: { //Blenheim
         captain: "Boosts ATK of [DEX] characters by 2.5x",
         special: "Deals 15x character's ATK in [DEX] damage to all enemies. Makes [RCV] and [TND] orbs \"beneficial\" to Slasher characters for 3 turns",
-        specialNotes: "#{beneficial}",
         specialName: "Anger of the Ki Sword",
-        sailor: "Makes [STR] orbs \"beneficial\" for this unit",
-        sailorNotes: "#{beneficial}",
+        sailor: "Makes [STR] orbs \"beneficial\" for this unit"
     },
     1182: { //Blenheim
         captain: "Boosts ATK of [DEX] characters by 2.5x",
         special: "Deals 15x character's ATK in [DEX] damage to all enemies. Makes [RCV] and [TND] orbs \"beneficial\" to Slasher characters for 3 turns",
-        specialNotes: "#{beneficial}",
         specialName: "Anger of the Ki Sword",
-        sailor: "Makes [STR] orbs \"beneficial\" for this unit",
-        sailorNotes: "#{beneficial}",
+        sailor: "Makes [STR] orbs \"beneficial\" for this unit"
     },
     1183: {
         captain: "Boosts ATK of [PSY] characters by 2.5x",
@@ -10496,7 +10454,7 @@ window.details = {
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base ATK by 40" },
             { "description": "Boosts base ATK by 50" },
-            { "description": "Acquire Sailor Ability: If this character has an [INT] orb and you hit a Perfect with him, keep his [INT] orb for the next turn" },
+            { "description": "Acquire Sailor Ability 1: If this character has an [INT] orb and you hit a Perfect with him, keep his [INT] orb for the next turn" },
             { "description": "Acquire Potential 2: Critical Hit" },
         ],
         potential: [
@@ -10539,7 +10497,7 @@ window.details = {
     },
     1189: {
         captain: "Boosts ATK of [QCK] characters by 2.25x, makes [DEX] orbs \"beneficial\" to [QCK] characters",
-        captainNotes: "#{beneficial}",
+        captainNotes: "\"Beneficial\" orbs grant the same ATK boost as matching orbs.",
         special: "Reduces enemy Barrier duration by 1 turn",
         specialNotes: "Does not affect DEF Boost or % Damage reduction buffs. Reduces timers for Barriers such as Perfect/Great/Good Barriers, Combo Hit Barriers and Orb Hit Barriers",
         specialName: "Break Bullet",
@@ -10547,7 +10505,7 @@ window.details = {
     },
     1190: {
         captain: "Boosts ATK of [QCK] characters by 2.25x, makes [DEX] orbs \"beneficial\" to [QCK] characters",
-        captainNotes: "#{beneficial}",
+        captainNotes: "\"Beneficial\" orbs grant the same ATK boost as matching orbs.",
         special: "Reduces enemy Barrier duration by 1 turn",
         specialNotes: "Does not affect DEF Boost or % Damage reduction buffs. Reduces timers for Barriers such as Perfect/Great/Good Barriers, Combo Hit Barriers and Orb Hit Barriers",
         specialName: "Break Bullet",
@@ -10555,7 +10513,6 @@ window.details = {
             "base": "Boosts base ATK of [QCK] characters by 40",
             "level1": "Makes [DEX] orbs \"beneficial\" for this unit",
         },
-        sailorNotes: "#{beneficial}",
         limit: [
             { "description": "Boosts base RCV by 10" },
             { "description": "Boosts base RCV by 20" },
@@ -10563,7 +10520,7 @@ window.details = {
             { "description": "Acquire Potential 1: [QCK] Damage Reduction" },
             { "description": "Boosts base ATK by 10" },
             { "description": "Boosts base ATK by 15" },
-            { "description": "Acquire Sailor Ability: Makes [DEX] orbs \"beneficial\" for this unit" },
+            { "description": "Acquire Sailor Ability 1: Makes [DEX] orbs \"beneficial\" for this unit" },
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base ATK by 25" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
@@ -10643,7 +10600,7 @@ window.details = {
             { "description": "Boosts base HP by 60" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base HP by 80" },
-            { "description": "Acquire Sailor Ability: Boosts base ATK, HP and RCV of Striker characters by 25" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK, HP and RCV of Striker characters by 25" },
             { "description": "Boosts base ATK by 40" },
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Acquire Potential 2: Pinch Healing" },
@@ -10746,18 +10703,18 @@ window.details = {
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base RCV by 10" },
             { "description": "Boosts base RCV by 20" },
-            { "description": "Aquire Potential 1: [PSY] Damage Reduction" },
+            { "description": "Acquire Potential 1: [PSY] Damage Reduction" },
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base ATK by 30" },
-            { "description": "Aquire Sailor Ability 1: Makes [PSY] orbs \"beneficial\" for this unit" },
+            { "description": "Acquire Sailor Ability 1: Makes [PSY] orbs \"beneficial\" for this unit" },
             { "description": "Boosts base RCV by 20" },
-            { "description": "Aquire 1 additional Socket slot" },
+            { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base RCV by 30" },
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base ATK by 30" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
-            { "description": "Aquire Potential 2: Cooldown Reduction" },
+            { "description": "Acquire Potential 2: Cooldown Reduction" },
         ],
         potential: [
             {
@@ -10810,7 +10767,7 @@ window.details = {
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base RCV by 30" },
             { "description": "Boosts base HP by 120" },
-            { "description": "Acquire Sailor Ability: Boosts base ATK of Shooter characters by 50" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK of Shooter characters by 50" },
             { "description": "Acquire Potential 2: Reduce No Healing duration" },
         ],
         potential: [
@@ -10854,13 +10811,13 @@ window.details = {
         captain: "Boosts ATK of Slasher characters by 1.5x, the HP of Striker characters by 1.2x and the RCV of Shooter characters by 1.2x",
         specialName: "Exciting Transfiguration",
         special: "Recovers 10x character's RCV in HP. For 4 turns, makes [BOMB] orbs \"beneficial\"",
-        specialNotes: "#{beneficial}",
+        specialNotes: "\"Beneficial\" orbs grant the same ATK boost as matching orbs while retaining their original function."
     },
     1214: {
         captain: "Boosts ATK of Slasher characters by 2x, the HP of Striker characters by 1.25x and the RCV of Shooter characters by 1.25x",
         specialName: "Exciting Transfiguration",
         special: "Recovers 10x character's RCV in HP. For 4 turns, makes [BOMB] orbs \"beneficial\"",
-        specialNotes: "#{beneficial}",
+        specialNotes: "\"Beneficial\" orbs grant the same ATK boost as matching orbs while retaining their original function."
     },
     1215: {//Gairam
         captain: "Boosts ATK by 2.5x following a chain of [QCK] > [PSY] > [DEX] attacks no lower than Good",
@@ -10941,7 +10898,7 @@ window.details = {
             { "description": "Boosts base HP by 60" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Acquire 1 additional Socket slot" },
-            { "description": "Acquire Sailor Ability: Boosts own base ATK by 100 if this character is the last in the chain to attack" },
+            { "description": "Acquire Sailor Ability 1: Boosts own base ATK by 100 if this character is the last in the chain to attack" },
             { "description": "Acquire Potential 2: Barrier Penetration" },
         ],
         potential: [
@@ -10971,13 +10928,13 @@ window.details = {
     1221: {//Coliseum Oars Jr
         captain: "Boosts ATK of Slasher characters by 1.75x and the HP of Powerhouse characters by 1.2x",
         special: "Deals 25x character's ATK in [STR] damage to one enemy. For 1 turn, makes [STR] orb \"beneficial\" for all characters",
-        specialNotes: "#{beneficial}",
+        specialNotes: "\"Beneficial\" orbs grant the same ATK boost as matching orbs.",
         specialName: "Blood of the Devil Warrior",
     },
     1222: {//Coliseum Oars Jr
         captain: "Boosts ATK of Slasher characters by 2x and the HP of Powerhouse characters by 1.75x",
         special: "Deals 25x character's ATK in [STR] damage to one enemy. For 1 turn, makes [STR] orb \"beneficial\" for all characters",
-        specialNotes: "#{beneficial}",
+        specialNotes: "\"Beneficial\" orbs grant the same ATK boost as matching orbs.",
         specialName: "Blood of the Devil Warrior",
     },
     1223: { // Story Bastille
@@ -11068,7 +11025,6 @@ window.details = {
             "base": "Boosts base ATK of Striker characters by 50",
             "level1": "Makes STR orbs \"beneficial\" for this unit",
         },
-        sailorNotes: "#{beneficial}",
         limit: [
             { "description": "Boosts base HP by 30" },
             { "description": "Boosts base HP by 40" },
@@ -11081,7 +11037,7 @@ window.details = {
             { "description": "Boosts base HP by 70" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base ATK by 35" },
-            { "description": "Acquire Sailor Ability: Makes STR orbs \"beneficial\" for this unit" },
+            { "description": "Acquire Sailor Ability 1: Makes STR orbs \"beneficial\" for this unit" },
             { "description": "Boosts base ATK by 45" },
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Acquire Potential 2: [QCK] Damage Reduction" },
@@ -11143,21 +11099,16 @@ window.details = {
         captain: "Boosts ATK of all characters by 2x after the 15th hit in the chain",
         special: "Deals 20x character's ATK in [STR] damage to all enemies. Boosts ATK of all characters by 2x after 30th hit in the chain for 1 turn.",
         specialName: "Shark Cutter - Flash",
-        sailor: "Makes [QCK] orbs \"beneficial\" for this unit",
-        sailorNotes: "#{beneficial}",
+        sailor: "Makes [QCK] orbs \"beneficial\" for this unit"
     },
     1238: {//Bastille
-        captain: {
-            "base": "Boosts ATK of all characters by 2x after the 15th hit in the chain and by 3x after the 30th hit",
-            "level1": "Boosts HP of all characters by 1.25x. Boosts ATK of all characters by 2x after the 12th hit in the chain and by 3x after the 28th hit",
-        },
+        captain: "Boosts ATK of all characters by 2x after the 15th hit in the chain and by 3x after the 30th hit",
         special: "Deals 20x character's ATK in [STR] damage to all enemies. Boosts ATK of all characters by 2x after 30th hit in the chain for 1 turn.",
         specialName: "Shark Cutter - Flash",
         sailor: {
             "base": "Makes [QCK] orbs \"beneficial\" for this unit",
             "level1": "Boosts base ATK, HP and RCV of all characters by 50",
         },
-        sailorNotes: "#{beneficial}",
         limit: [
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base HP by 50" },
@@ -11172,7 +11123,7 @@ window.details = {
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Acquire new Captain Ability: Boosts HP of all characters by 1.25x. Boosts ATK of all characters by 2x after the 12th hit in the chain and by 3x after the 28th hit" },
             { "description": "Boosts base ATK by 50" },
-            { "description": "Acquire Sailor Ability: Boosts base ATK, HP and RCV of all characters by 50" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK, HP and RCV of all characters by 50" },
             { "description": "Acquire Potential 2: Critical Hit" },
         ],
         potential: [
@@ -11339,7 +11290,7 @@ window.details = {
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base ATK by 40" },
             { "description": "Boosts base ATK by 50" },
-            { "description": "Acquire Sailor Ability: Reduces Paralysis duration for 3 turns for himself" },
+            { "description": "Acquire Sailor Ability 1: Reduces Paralysis duration for 3 turns for himself" },
             { "description": "Acquire Potential 2: Reduce No Healing duration" },
         ],
         potential: [
@@ -11436,13 +11387,13 @@ window.details = {
     1259: {//Young Doflamingo
         captain: "Boosts ATK of Driven characters by 2.5x",
         special: "Deals 25x character's ATK in typeless damage to all enemies. For 3 turns, makes [STR], [DEX], [QCK], [PSY] and [INT] orbs \"beneficial\" for Driven characters",
-        specialNotes: "#{beneficial}",
+        specialNotes: "\"Beneficial\" orbs grant the same ATK boost as matching orbs while retaining their original function.",
         specialName: "Five Color Strings (Goshikito)",
     },
     1260: {//Young Doflamingo
         captain: "Reduces cooldown of Driven specials by 1 turn at the start of the fight. Boosts ATK of Driven characters by 2.5x",
         special: "Deals 25x character's ATK in typeless damage to all enemies. For 3 turns, makes [STR], [DEX], [QCK], [PSY] and [INT] orbs \"beneficial\" for Driven characters",
-        specialNotes: "#{beneficial}",
+        specialNotes: "\"Beneficial\" orbs grant the same ATK boost as matching orbs while retaining their original function.",
         specialName: "Five Color Strings (Goshikito)",
     },
     1261: {//Young Senor Pink
@@ -11572,11 +11523,11 @@ window.details = {
         captain: "Recovers 3x character's RCV in HP at the end of each turn. Deals 7x character's ATK in [DEX] damage to all enemies at the end of each turn.",
         special: "Reduces Bind and Despair duration by 2 turns. Makes Badly Matching and [BLOCK] orbs not reduce damage for 4 turns",
         specialNotes: "Ex. A STR character with a QCK orb will still deal regular damage",
-        specialName: "Horrifying Suggestion",
         sailor: {
             "base": "Boosts base ATK of all characters by 100 if your captain is a Driven character",
             "level1": "Reduces Blindness duration by 3 turns",
         },
+        specialName: "Horrifying Suggestion",
         limit: [
             { "description": "Boosts base HP by 10" },
             { "description": "Boosts base RCV by 10" },
@@ -11591,7 +11542,7 @@ window.details = {
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base RCV by 50" },
             { "description": "Boosts base HP by 50" },
-            { "description": "Acquire Sailor Ability: Reduces Blindness duration by 3 turns" },
+            { "description": "Acquire Sailor Ability 1: Reduces Blindness duration by 3 turns" },
             { "description": "Acquire Potential 2: Slot Bind Self-reduction" },
         ],
         potential: [
@@ -11644,7 +11595,7 @@ window.details = {
             { "description": "Boosts base HP by 90" },
             { "description": "Boosts base RCV by 30" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
-            { "description": "Acquire Sailor Ability: Boosts base ATK of Shooter characters by 60" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK of Shooter characters by 60" },
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Acquire Potential 2: Barrier Penetration" },
         ],
@@ -11724,7 +11675,7 @@ window.details = {
             { "description": "Boosts base HP by 40" },
             { "description": "Boosts base HP by 50" },
             { "description": "Boosts base ATK by 30" },
-            { "description": "Acquire Sailor Ability: Boosts base ATK and HP of Striker characters by 50" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK and HP of Striker characters by 50" },
             { "description": "Boosts base ATK by 35" },
             { "description": "Boosts base RCV by 30" },
             { "description": "Boosts base RCV by 30" },
@@ -11986,7 +11937,7 @@ window.details = {
             { "description": "Boosts base HP by 40" },
             { "description": "Boosts base HP by 40" },
             { "description": "Boosts base HP by 40" },
-            { "description": "Acquire Sailor Ability: Boosts this character's attack against [QCK] characters by 2x" },
+            { "description": "Acquire Sailor Ability 1: Boosts this character's attack against [QCK] characters by 2x" },
             { "description": "Boosts base HP by 50" },
             { "description": "Boosts base HP by 50" },
             { "description": "Boosts base HP by 50" },
@@ -12083,14 +12034,14 @@ window.details = {
     },
     1317: {//Garp
         captain: "Boosts ATK of [STR] and [PSY] characters by 2x",
-        special: "Deals 30x character's ATK in fixed [STR] damage to all enemies that will ignore damage negating abilities and barriers. Delays all enemies for 1 turn. Reduces the defense of all enemies by 80% for 1 turn.",
+        special: "Deals 30x character's ATK in [STR] fixed damage to all enemies that will ignore damage negating abilities and barriers. Delays all enemies for 1 turn. Reduces the defense of all enemies by 80% for 1 turn.",
         specialNotes: "#{ignoreBarrier}",
         sailor: "Boosts base HP of all characters by 75",
         specialName: "Super Large Iron Ball",
     },
     1318: {//Garp
         captain: "Boosts ATK of [STR] and [PSY] characters by 2.5x",
-        special: "Deals 30x character's ATK in fixed [STR] damage to all enemies that will ignore damage negating abilities and barriers. Delays all enemies for 1 turn. Reduces the defense of all enemies by 80% for 1 turn.",
+        special: "Deals 30x character's ATK in [STR] fixed damage to all enemies that will ignore damage negating abilities and barriers. Delays all enemies for 1 turn. Reduces the defense of all enemies by 80% for 1 turn.",
         specialNotes: "#{ignoreBarrier}",
         sailor: "Boosts base HP of all characters by 75",
         specialName: "Super Large Iron Ball",
@@ -12125,7 +12076,7 @@ window.details = {
             { "description": "Boosts base RCV by 10" },
             { "description": "Boosts base HP by 80" },
             { "description": "Boosts base ATK by 60" },
-            { "description": "Acquire Sailor Ability: Reduces Blindness duration by 3 turn" },
+            { "description": "Acquire Sailor Ability 1: Reduces Blindness duration by 3 turn" },
             { "description": "Acquire new Captain Ability: Boosts ATK of all characters by 1.2x, heals for 1.5x her RCV at the end of the turn each time you hit a Good. Heals for .3x her RCV at the end of the turn each time you hit a Perfect" },
             { "description": "Reduce base Special Cooldown by 2 turns" },
             { "description": "Acquire 1 additional Socket slot" },
@@ -12170,16 +12121,16 @@ window.details = {
     1323: {//Onigumo
         captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of Slasher and Driven characters by 1.3x",
         captainNotes: "The bonus is cumulative. Slasher + Driven characters get a 1.69x bonus.",
-        special: "Randomize [RCV], [TND] and [BLOCK] orbs. Makes [STR], [DEX], and [QCK] orbs \"beneficial\" to Driven and Slasher characters for 2 turns",
-        specialNotes: "#{beneficial}",
+        special: "Randomize [RCV], [TND] and [BLOCK] orbs. Makes [STR], [DEX] and [QCK] orbs \"beneficial\" to Driven and Slasher characters for 2 turns",
+        specialNotes: "\"Beneficial\" orbs grant the same ATK boost as matching orbs while retaining their original function.",
         specialName: "Onigumo of Dismantling Swordsmanship",
         sailor: "Reduces Paralysis for 5 turns for himself"
     },
     1324: {//Onigumo
         captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of Slasher and Driven characters by 1.6x",
         captainNotes: "The bonus is cumulative. Slasher + Driven characters get a 2.56x bonus.",
-        special: "Randomize [RCV], [TND] and [BLOCK] orbs. Makes [STR], [DEX], and [QCK] orbs \"beneficial\" to Driven and Slasher characters for 2 turns",
-        specialNotes: "#{beneficial}",
+        special: "Randomize [RCV], [TND] and [BLOCK] orbs. Makes [STR], [DEX] and [QCK] orbs \"beneficial\" to Driven and Slasher characters for 2 turns",
+        specialNotes: "\"Beneficial\" orbs grant the same ATK boost as matching orbs while retaining their original function.",
         specialName: "Onigumo of Dismantling Swordsmanship",
         sailor: "Reduces Paralysis for 5 turns for himself"
     },
@@ -12325,7 +12276,7 @@ window.details = {
             { "description": "Boosts base ATK by 30" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base ATK by 40" },
-            { "description": "Acquire Sailor Ability: Restores his own special by 2 turns when it is rewinded" },
+            { "description": "Acquire Sailor Ability 1: Restores his own special by 2 turns when it is rewinded" },
             { "description": "Boosts base HP by 60" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Acquire Potential 2: Slot Bind Self-reduction" },
@@ -12582,14 +12533,12 @@ window.details = {
         captain: "Boosts ATK of [QCK] characters by 1.5x and their HP and RCV by 1.2x",
         special: "Changes [DEX] and [RCV] orbs into Matching orbs on [QCK] characters, cuts the current HP of one enemy by 15%",
         sailor: "Makes [STR] orbs \"beneficial\" for this unit",
-        sailorNotes: "#{beneficial}",
         specialName: "Kakuho: Elf",
     },
     1370: {//Timeskip Chopper
         captain: "Boosts ATK of [QCK] characters by 2x and their HP and RCV by 1.2x",
         special: "Changes [DEX] and [RCV] orbs into Matching orbs on [QCK] characters, cuts the current HP of one enemy by 15%",
         sailor: "Makes [STR] orbs \"beneficial\" for this unit",
-        sailorNotes: "#{beneficial}",
         specialName: "Kakuho: Elf",
     },
     1371: {//Wild Zoro
@@ -12638,14 +12587,14 @@ window.details = {
     },
     1375: {//Dellinger
         captain: "Boosts ATK of Powerhouse characters by 2.5x, reduces crew's HP by 50%, Increases damage received by 2x",
-        special: "Deals 20x character's ATK in [QCK] damage to one enemy, Boosts Dellinger's ATK by 1.5x for 1 turn, amplifies the effect of Dellinger's orb by 1.5x for 1 turn, and changes own orb to [QCK].",
-        specialNotes: "Boosted ATK and Orb effectiveness only works for the Dellinger who uses his Special.",
+        special: "Deals 20x character's ATK in [QCK] damage to one enemy, Boosts Dellinger's ATK by 1.5x for 1 turn, amplifies the effect of Dellinger's orb by 1.5x for 1 turn and changes own orb to [QCK].",
+        specialNotes: "Boosted ATK and Orb Effectivess only works for the Dellinger who uses his Special.",
         specialName: "Deadly Fangs of Rage",
     },
     1376: {//Dellinger
         captain: "Boosts ATK of Powerhouse characters by 2.75x, reduces crew's HP by 20%, Increases damage received by 2x",
-        special: "Deals 20x character's ATK in [QCK] damage to one enemy, Boosts Dellinger's ATK by 1.5x for 1 turn, amplifies the effect of Dellinger's orb by 1.5x for 1 turn, and changes own orb to [QCK].",
-        specialNotes: "Boosted ATK and Orb effectiveness only works for the Dellinger who uses his Special.",
+        special: "Deals 20x character's ATK in [QCK] damage to one enemy, Boosts Dellinger's ATK by 1.5x for 1 turn, amplifies the effect of Dellinger's orb by 1.5x for 1 turn and changes own orb to [QCK].",
+        specialNotes: "Boosted ATK and Orb Effectivess only works for the Dellinger who uses his Special.",
         specialName: "Deadly Fangs of Rage",
     },
     1377: {//Marguerite
@@ -12664,13 +12613,13 @@ window.details = {
         captain: "Boosts chances of getting Matching orbs, boosts ATK of Cerebral characters by 2x",
         special: "Reduces Paralysis duration by 3 turns. For Cerebral and Free Spirit characters, amplifies the effects of orbs by 2x for 1 turn. Makes [RCV] and [TND] orbs \"beneficial\" to Cerebral and Free Spirit characters for 1 turn.",
         specialName: "A Decision Made over Sake",
-        specialNotes: "#{orb : 2x}<br>#{beneficial}",
+        specialNotes: "#{orb : 2x}",
     },
     1380: {//Shanks
         captain: "Boosts chances of getting Matching orbs, boosts ATK of Cerebral characters by 2.5x",
         special: "Reduces Paralysis duration by 3 turns. For Cerebral and Free Spirit characters, amplifies the effects of orbs by 2x for 1 turn. Makes [RCV] and [TND] orbs \"beneficial\" to Cerebral and Free Spirit characters for 1 turn.",
         specialName: "A Decision Made over Sake",
-        specialNotes: "#{orb : 2x}<br>#{beneficial}",
+        specialNotes: "#{orb : 2x}",
     },
     1381: {//Christmas Tashigi
         captain: "Boosts ATK and RCV of Slasher and Cerebral characters by 1.2x",
@@ -12717,7 +12666,6 @@ window.details = {
             "level1": "Boosts own base ATK by 100 if this character is the last in the chain to attack",
             "level2": "Makes [QCK] orbs \"beneficial\" for this unit"
         },
-        sailorNotes: "#{beneficial}",
         limit: [
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base ATK by 30" },
@@ -12766,7 +12714,7 @@ window.details = {
         sailor: {
             "base": "None",
             "level1": "Restores his own special by 1 turn when it is rewinded",
-            "level2": "Boosts base ATK of [DEX] characters by 40",
+            "level2": "Boosts base ATK of [DEX] characters by 40"
         },
         limit: [
             { "description": "Boosts base HP by 30" },
@@ -12816,9 +12764,8 @@ window.details = {
         sailor: {
             "base": "None",
             "level1": "Makes [RCV] orbs \"beneficial\" for [INT] characters",
-            "level2": "Boosts base ATK, HP and RCV of [INT] characters by 50",
+            "level2": "Boosts base ATK, HP and RCV of [INT] characters by 50"
         },
-        sailorNotes: "#{beneficial}",
         limit: [
             { "description": "Boosts base ATK by 10" },
             { "description": "Boosts base RCV by 10" },
@@ -12959,7 +12906,7 @@ window.details = {
             { "description": "Boosts base RCV by 30" },
             { "description": "Boosts base HP by 40" },
             { "description": "Boosts base RCV by 40" },
-            { "description": "Acquire Sailor Ability: Reduces Silence duration against this unit by 2 turns" },
+            { "description": "Acquire Sailor Ability 1: Reduces Silence duration against this unit by 2 turns" },
             { "description": "Boosts base HP by 50" },
             { "description": "Boosts base HP by 70" },
             { "description": "Acquire 1 additional Socket slot" },
@@ -13018,7 +12965,7 @@ window.details = {
                 "cooldown": [ 18, 13 ],
             },
         ],
-        specialNotes: "#{stages}<br>#{beneficial}",
+        specialNotes: "#{stages}",
         specialName: "Gomu Gomu no Red Hawk",
     },
     1404: {//Timeskip Luffy
@@ -13034,7 +12981,7 @@ window.details = {
                 "cooldown": [ 18, 13 ],
             },
         ],
-        specialNotes: "#{stages}<br>#{beneficial}",
+        specialNotes: "#{stages}",
         specialName: "Gomu Gomu no Red Hawk",
     },
     1405: {//Timeskip Usopp
@@ -13093,7 +13040,7 @@ window.details = {
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base RCV by 50" },
             { "description": "Boosts base HP by 50" },
-            { "description": "Acquire Sailor Ability: Reduces Paralysis duration by 1 turn" },
+            { "description": "Acquire Sailor Ability 1: Reduces Paralysis duration by 1 turn" },
             { "description": "Acquire Potential 2: Critical Hit" },
         ],
         potential: [
@@ -13140,7 +13087,7 @@ window.details = {
         sailor: {
             "base": "None",
             "level1": "Boosts base ATK of Striker and Powerhouse characters by 60",
-            "level2": "Completely resists Paralysis on this character",
+            "level1": "Completely resists Paralysis on this character",
         },
         limit: [
             { "description": "Boosts base ATK by 5" },
@@ -13255,9 +13202,8 @@ window.details = {
         sailor: {
             "base": "None",
             "level1": "Makes [RCV] and [TND] orbs \"beneficial\" for this unit",
-            "level2": "If HP is above 99% at the start of the turn, boosts base ATK of all characters by 50",
+            "level1": "If HP is above 99% at the start of the turn, boosts base ATK of all characters by 50",
         },
-        sailorNotes: "#{beneficial}",
         limit: [
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base RCV by 20" },
@@ -13274,7 +13220,6 @@ window.details = {
             { "description": "Boosts base HP by 60" },
             { "description": "Acquire Sailor Ability 2: If HP is above 99% at the start of the turn, boosts base ATK of all characters by 50" },
             { "description": "Acquire Potential 2: Slot Bind Self-reduction" },
->>>>>>> refs/remotes/origin/master
         ],
         potential: [
             {
@@ -13361,18 +13306,18 @@ window.details = {
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base HP by 40" },
             { "description": "Boosts base RCV by 10" },
-            { "description": "Aquire Potential 1: Pinch Healing" },
+            { "description": "Acquire Potential 1: Pinch Healing" },
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base HP by 60" },
             { "description": "Boosts base ATK by 20" },
-            { "description": "Aquire Sailor Ability 1: Boosts base ATK, HP and RCV of all characters by 30" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK, HP and RCV of all characters by 30" },
             { "description": "Boosts base HP by 120" },
-            { "description": "Aquire 1 additional Socket slot" },
+            { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base RCV by 30" },
             { "description": "Boosts base ATK by 40" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
-            { "description": "Aquire Sailor Ability 2: When any other character uses a special, reduces own cooldown by 1 turn" },
-            { "description": "Aquire Potential 2: Slot Bind Self-reduction" },
+            { "description": "Acquire Sailor Ability 2: When any other character uses a special, reduces own cooldown by 1 turn" },
+            { "description": "Acquire Potential 2: Slot Bind Self-reduction" },
         ],
         potential: [
             {
@@ -13431,7 +13376,7 @@ window.details = {
         sailor: {
             "base": "None",
             "level1": "Boosts base ATK and HP of Powerhouse characters by 60",
-            "level2": "Restores his own special by 2 turns when it is rewinded",
+            "level1": "Restores his own special by 2 turns when it is rewinded",
         },
         limit: [
             { "description": "Boosts base ATK by 5" },
@@ -13528,7 +13473,7 @@ window.details = {
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base HP by 60" },
             { "description": "Boosts base ATK by 40" },
-            { "description": "Acquire Sailor Ability: Reduces Paralysis duration for 3 turns for himself" },
+            { "description": "Acquire Sailor Ability 1: Reduces Paralysis duration for 3 turns for himself" },
             { "description": "Acquire Potential 2: Reduce No Healing duration" },
         ],
         potential: [
@@ -13560,7 +13505,6 @@ window.details = {
         special: "Reduce crew's current HP by 50%, amplifies the effect of orbs for Powerhouse characters by 1.75x and boosts ATK against delayed enemies by 1.5x for 1 turn",
         specialName: "Squid Spear",
         sailor: "Makes [STR], [QCK], [DEX] and [INT] orbs \"beneficial\" for this unit if there are 6 Powerhouse characters in your crew",
-        sailorlNotes: "#{beneficial}",
     },
     1438: {//Ikaros Much
         captain: "Boosts ATK of Powerhouse and Striker characters by 1.6x",
@@ -13568,7 +13512,6 @@ window.details = {
         special: "Reduce crew's current HP by 50%, amplifies the effect of orbs for Powerhouse characters by 1.75x and boosts ATK against delayed enemies by 1.5x for 1 turn",
         specialName: "Squid Spear",
         sailor: "Makes [STR], [QCK], [DEX] and [INT] orbs \"beneficial\" for this unit if there are 6 Powerhouse characters in your crew",
-        sailorNotes: "#{beneficial}",
     },
     1439: {//Daruma
         captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of Powerhouse and Fighter characters by 1.2x",
@@ -13602,7 +13545,7 @@ window.details = {
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base RCV by 30" },
             { "description": "Boosts base RCV by 40" },
-            { "description": "Acquire Sailor Ability: Boosts base ATK, HP and RCV of Powerhouse characters by 20" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK, HP and RCV of Powerhouse characters by 20" },
             { "description": "Acquire Potential 2: Reduce No Healing duration" },
         ],
         potential: [
@@ -13644,7 +13587,6 @@ window.details = {
             "base": "Completely resists Blindness if your Captain is a Powerhouse character",
             "level1": "Makes [TND] orbs \"beneficial\" for Powerhouse characters",
         },
-        sailorNotes: "#{beneficial}",
         limit: [
             { "description": "Boosts base ATK by 10" },
             { "description": "Boosts base HP by 20" },
@@ -13659,7 +13601,7 @@ window.details = {
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base HP by 50" },
             { "description": "Boosts base ATK by 50" },
-            { "description": "Acquire Sailor Ability: Makes [TND] orbs \"beneficial\" for Powerhouse characters" },
+            { "description": "Acquire Sailor Ability 1: Makes [TND] orbs \"beneficial\" for Powerhouse characters" },
             { "description": "Acquire Potential 2: Reduce No Healing duration" },
         ],
         potential: [
@@ -13700,7 +13642,6 @@ window.details = {
             "base": "Boost HP of all characters by 150 and also ATK of all characters by 50 if there are 6 Powerhouse characters in your crew",
             "level1": "Makes [QCK] orbs \"beneficial\" for this unit",
         },
-        sailorNotes: "#{beneficial}",
         limit: [
             { "description": "Boosts base ATK by 10" },
             { "description": "Boosts base ATK by 20" },
@@ -13715,7 +13656,7 @@ window.details = {
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base HP by 90" },
             { "description": "Boosts base ATK by 50" },
-            { "description": "Acquire Sailor Ability: Makes [QCK] orbs \"beneficial\" for this unit" },
+            { "description": "Acquire Sailor Ability 1: Makes [QCK] orbs \"beneficial\" for this unit" },
             { "description": "Acquire Potential 2: Reduce No Healing duration" },
         ],
         potential: [
@@ -13756,18 +13697,18 @@ window.details = {
             { "description": "Boosts base ATK by 10" },
             { "description": "Boosts base ATK by 10" },
             { "description": "Boosts base ATK by 10" },
-            { "description": "Aquire Potential 1: [STR] Damage Reduction" },
+            { "description": "Acquire Potential 1: [STR] Damage Reduction" },
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base ATK by 20" },
-            { "description": "Aquire Sailor Ability 1: Boosts base ATK, HP and RCV of [QCK] and [PSY] characters by 30" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK, HP and RCV of [QCK] and [PSY] characters by 30" },
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base ATK by 20" },
-            { "description": "Aquire Potential 2: [INT] Damage Reduction" },
+            { "description": "Acquire Potential 2: [INT] Damage Reduction" },
             { "description": "Boosts base HP by 30" },
             { "description": "Boosts base HP by 40" },
             { "description": "Boosts base HP by 50" },
@@ -13779,10 +13720,10 @@ window.details = {
             { "description": "Boosts base HP by 90" },
             { "description": "Boosts base RCV by 10" },
             { "description": "Boosts base RCV by 20" },
-            { "description": "Aquire Sailor Ability 2: Boosts base ATK of [QCK] and [PSY] characters by 75" },
+            { "description": "Acquire Sailor Ability 2: Boosts base ATK of [QCK] and [PSY] characters by 75" },
             { "description": "Boosts base RCV by 20" },
             { "description": "Boosts base RCV by 20" },
-            { "description": "Aquire Potential 3: Cooldown Reduction" },
+            { "description": "Acquire Potential 3: Cooldown Reduction" },
         ],
         potential: [
             {
@@ -13839,7 +13780,7 @@ window.details = {
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base HP by 60" },
             { "description": "Boosts base HP by 80" },
-            { "description": "Acquire Sailor Ability: Boosts base ATK, HP and RCV of Shooter characters by 20" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK, HP and RCV of Shooter characters by 20" },
             { "description": "Acquire Potential 2: Barrier Penetration" },
         ],
         potential: [
@@ -13881,10 +13822,9 @@ window.details = {
         specialName: "Grill Shot",
         sailor: {
             "base": "None",
-            "level1": "Makes [RCV] orbs \"beneficial\" for all characters",
+            "level1": "Makes RCV orbs \"beneficial\" for all characters",
             "level2": "Boosts base ATK, HP and RCV of all characters by 40",
         },
-        sailorNotes: "#{beneficial}",
         limit: [
             { "description": "Boosts base HP by 30" },
             { "description": "Boosts base RCV by 10" },
@@ -13894,7 +13834,7 @@ window.details = {
             { "description": "Boosts base RCV by 20" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base ATK by 60" },
-            { "description": "Acquire Sailor Ability 1: Makes [RCV] orbs \"beneficial\" for all characters" },
+            { "description": "Acquire Sailor Ability 1: Makes RCV orbs \"beneficial\" for all characters" },
             { "description": "Boosts base RCV by 20" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base RCV by 30" },
@@ -14007,13 +13947,11 @@ window.details = {
     1459: {//Coliseum Miss Valentine
         captain: "Boosts ATK by 1.75x following a chain of Good > Good > Great > Perfect hits",
         special: "Binds self for 2 turns, makes [BOMB] orbs \"beneficial\" and boosts ATK against enemies with reduced defense by 1.5x for 1 turn.",
-        specialNotes: "#{beneficial}",
         specialName: "Crescendo Stone",
     },
     1460: {//Coliseum Miss Valentine
         captain: "Boosts ATK by 2.14x following a chain of Good > Good > Great > Perfect hits",
         special: "Binds self for 2 turns, makes [BOMB] orbs \"beneficial\" and boosts ATK against enemies with reduced defense by 1.5x for 1 turn.",
-        speciialNotes: "#{beneficial}",
         specialName: "Crescendo Stone",
     },
     1461: {//Snow Zoro
@@ -14024,14 +13962,12 @@ window.details = {
     1462: {//White Day Luffy
         captain: "Boosts chain multiplier by 2x",
         special: "Reduces crew's current HP by 50%, cuts the current HP of each enemy by 20% and makes [PSY] and [STR] orbs \"beneficial\" to Fighter characters for 1 turn",
-        specialNotes: "#{beneficial}",
         sailor: "Reduces Paralysis for 2 turns for himself",
         specialName: "Gum-Gum Gigant Axe - Sweets",
     },
     1463: {//White Day Luffy
         captain: "Boosts chain multiplier by 2.5x, recovers 1.5x character's RCV in HP at the end of each turn",
         special: "Reduces crew's current HP by 50%, cuts the current HP of each enemy by 20% and makes [PSY] and [STR] orbs \"beneficial\" to Fighter characters for 1 turn",
-        specialNotes: "#{beneficial}",
         sailor: "Reduces Paralysis for 2 turns for himself",
         specialName: "Gum-Gum Gigant Axe - Sweets",
     },
@@ -14142,7 +14078,7 @@ window.details = {
             { "description": "Boosts base HP by 65" },
             { "description": "Boosts base HP by 70" },
             { "description": "Boosts base ATK by 30" },
-            { "description": "Acquire Sailor Ability: Boosts amount healed from [RCV] orbs by 150 each" },
+            { "description": "Acquire Sailor Ability 1: Boosts amount healed from [RCV] orbs by 150 each" },
             { "description": "Boosts base ATK by 60" },
             { "description": "Boosts base ATK by 70" },
             { "description": "Acquire Potential 3: Reduce No Healing duration" },
@@ -14184,7 +14120,6 @@ window.details = {
         captain: "Boosts ATK of all characters by 1.5x and EXP gained by 1.5x",
         special: "Locks all orbs for 1 turn. If the HP of the enemy with the highest HP is above 50%, cuts the current HP of all enemies by 20%, otherwise, deals 140x character's ATK in typeless damage to all enemies.",
         sailor: "Makes [INT], [PSY] and [TND] orbs \"beneficial\" for this unit",
-        sailorNotes: "#{beneficial}",
         specialName: "Merman Gujutsu - Ultramarine",
     },
     1475: {//King Neptune
@@ -14192,7 +14127,6 @@ window.details = {
         captainNotes: "EXP boost does not take effect if he becomes your capatin in the middle of the adventure.",
         special: "Locks all orbs for 1 turn. If the HP of the enemy with the highest HP is above 50%, cuts the current HP of all enemies by 20%, otherwise, deals 140x character's ATK in typeless damage to all enemies.",
         sailor: "Makes [INT], [PSY] and [TND] orbs \"beneficial\" for this unit",
-        sailorNotes: "#{beneficial}",
         specialName: "Merman Gujutsu - Ultramarine",
     },
     1476: {//Fukaboshi
@@ -14209,7 +14143,6 @@ window.details = {
             "base": "Boosts base HP, RCV and ATK of all characters by 50",
             "level1": "Makes [QCK] orbs \"beneficial\" for this unit",
         },
-        sailorNotes: "#{beneficial}",
         specialName: "Merman Gujutsu - Spear of the Ages",
         limit: [
             { "description": "Boosts base HP by 20" },
@@ -14223,7 +14156,7 @@ window.details = {
             { "description": "Boosts base HP by 50" },
             { "description": "Boosts base HP by 60" },
             { "description": "Boosts base RCV by 30" },
-            { "description": "Acquire Sailor Ability: Makes [QCK] orbs \"beneficial\" for this unit" },
+            { "description": "Acquire Sailor Ability 1: Makes [QCK] orbs \"beneficial\" for this unit" },
             { "description": "Boosts base ATK by 50" },
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Acquire Potential 2: [INT] Damage Reduction" },
@@ -14266,7 +14199,6 @@ window.details = {
             "base": "Completely resists Paralysis on this character",
             "level1": "Makes [RCV] and [TND] orbs \"beneficial\" for this unit",
         },
-        sailorNotes: "#{beneficial}",
         specialName: "Swamp-Swamp Gatling Gun",
         limit: [
             { "description": "Boosts base ATK by 20" },
@@ -14276,7 +14208,7 @@ window.details = {
             { "description": "Boosts base RCV by 20" },
             { "description": "Boosts base HP by 50" },
             { "description": "Boosts base ATK by 30" },
-            { "description": "Acquire Sailor Ability: Makes [RCV] and [TND] orbs \"beneficial\" for this unit" },
+            { "description": "Acquire Sailor Ability 1: Makes [RCV] and [TND] orbs \"beneficial\" for this unit" },
             { "description": "Boosts base HP by 70" },
             { "description": "Boosts base HP by 90" },
             { "description": "Boosts base RCV by 40" },
@@ -14405,18 +14337,18 @@ window.details = {
             { "description": "Boosts base RCV by 5" },
             { "description": "Boosts base RCV by 5" },
             { "description": "Boosts base RCV by 5" },
-            { "description": "Aquire Potential 1: Slot Bind Self-reduction" },
+            { "description": "Acquire Potential 1: Slot Bind Self-reduction" },
             { "description": "Boosts base HP by 25" },
             { "description": "Boosts base HP by 25" },
             { "description": "Boosts base HP by 25" },
-            { "description": "Aquire Sailor Ability 1: Boosts base ATK, HP and RCV of Free Spirit characters by 50" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK, HP and RCV of Free Spirit characters by 50" },
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base RCV by 10" },
             { "description": "Boosts base ATK by " },
             { "description": "Boosts base RCV by 10" },
-            { "description": "Aquire Potential 2: [INT] Damage Reduction" },
+            { "description": "Acquire Potential 2: [INT] Damage Reduction" },
             { "description": "Boosts base RCV by 20" },
             { "description": "Boosts base RCV by 30" },
             { "description": "Boosts base HP by 30" },
@@ -14428,10 +14360,10 @@ window.details = {
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base HP by 80" },
             { "description": "Boosts base HP by 90" },
-            { "description": "Aquire Sailor Ability 2: Makes INT orbs \"beneficial\" for Free Spirit characters" },
+            { "description": "Acquire Sailor Ability 2: Makes INT orbs \"beneficial\" for Free Spirit characters" },
             { "description": "Boosts base ATK by 50" },
             { "description": "Boosts base ATK by 60" },
-            { "description": "Aquire Potential 3: Pinch Healing" },
+            { "description": "Acquire Potential 3: Pinch Healing" },
         ],
         potential: [
             {
@@ -14577,7 +14509,6 @@ window.details = {
         special: "Removes Poison, boosts ATK of Powerhouse characters by 1.5x for 1 turn if HP is below 30%",
         specialName: "Enlightened Spirit",
         sailor: "Makes [RCV] orbs \"beneficial\" for this unit if your captain is a Powerhouse character",
-        sailorNotes: "#{beneficial}",
     },
     1513: {//Anniversary Sanji
         captain: "Boosts ATK of Fighter characters by 1.75x and RCV of Powerhouse characters by 1.2x",
@@ -14592,29 +14523,23 @@ window.details = {
     1515: {//White Day Brook
         captain: "Boosts ATK of [STR] and [QCK] characters by 1.5x",
         special: "Cuts the current HP of each enemy by 10% and makes [RCV] orbs \"beneficial\" for all characters for 1 turn",
-        specialNotes: "#{beneficial}",
         specialName: "Three-Verse Humming: Arrow-Notch Slash - Hail",
         sailor: "Makes [RCV] orbs \"beneficial\" for this unit",
-        sailorNotes: "#{beneficial}",
     },
     1516: {//White Day Brook
         captain: "Boosts ATK of [STR] and [QCK] characters by 2x, recovers 2x character's RCV in HP at the end of each turn",
         special: "Cuts the current HP of each enemy by 10% and makes [RCV] orbs \"beneficial\" for all characters for 1 turn",
-        specialNotes: "#{beneficial}",
         specialName: "Three-Verse Humming: Arrow-Notch Slash - Hail",
         sailor: "Makes [RCV] orbs \"beneficial\" for this unit",
-        sailorNotes: "#{beneficial}",
     },
     1517: {//Raid Bellamy
         captain: "Boosts ATK of Driven characters by 2x",
         special: "Cuts the current HP of one enemy by 10%, makes [PSY] and [INT] orbs \"beneficial\" for 1 turn and amplifies the effect of orbs by 1.75x for 1 turn",
-        specialNotes: "#{beneficial}",
         specialName: "Spring Hopper - Bullet",
     },
     1518: {//Raid Bellamy
         captain: "Boosts ATK of Driven characters by 2.5x",
         special: "Cuts the current HP of one enemy by 10%, makes [PSY] and [INT] orbs \"beneficial\" for 1 turn and amplifies the effect of orbs by 1.75x for 1 turn",
-        speicalNotes: "#{beneficial}",
         specialName: "Spring Hopper - Bullet",
     },
     1519: {//Dadan
@@ -14689,9 +14614,7 @@ window.details = {
     1528: {//Blenheim
         captain: "Boosts ATK of Powerhouse characters by 2.25x",
         special: "Reduces Despair duration by 2 turns, makes STR, DEX and QCK orbs \"beneficial\" to Powerhouse characters for 1 turn if HP is below 30% at the start of the turn",
-        specialNotes: "#{beneficial}",
         sailor: "Makes [TND] orbs \"beneficial\" for this unit",
-        sailorNotes: "#{beneficial}",
         specialName: "Australian Army Aid Blade",
     },
     1529: {//Cavendish
@@ -14708,7 +14631,6 @@ window.details = {
     },
     1531: {//Legend Usopp
         captain: "Boosts ATK of all characters by 1.5x if HP is below 50% or by 1.75x if HP is below 30% at the start of the turn. Makes [STR], [DEX], [QCK], [PSY], [INT], [RCV] and [TND] orbs \"beneficial\" to all characters.",
-        captainNotes: "#{beneficial}",
         special: [
             {
                 "description": "Delays all enemies for 3 turns",
@@ -14729,7 +14651,6 @@ window.details = {
     },
     1532: {//Legend Usopp
         captain: "Boosts ATK of all characters by 1.5x if HP is below 50% or by 1.75x if HP is below 30% at the start of the turn. Makes [STR], [DEX], [QCK], [PSY], [INT], [RCV] and [TND] orbs \"beneficial\" to all characters.",
-        captainNotes: "#{beneficial}",
         special: [
             {
                 "description": "Delays all enemies for 3 turns",
@@ -14758,7 +14679,7 @@ window.details = {
             { "description": "Boosts base RCV by 10" },
             { "description": "Boosts base HP by 30" },
             { "description": "Boosts base ATK by 15" },
-            { "description": "Acquire Sailor Ability: Boosts base HP of Shooter characters by 100" },
+            { "description": "Acquire Sailor Ability 1: Boosts base HP of Shooter characters by 100" },
             { "description": "Boosts base ATK by 15" },
             { "description": "Boosts base HP by 30" },
             { "description": "Boosts base RCV by 10" },
@@ -14819,7 +14740,6 @@ window.details = {
         captain: "Boosts ATK of [QCK] characters by 2x and their HP by 1.2x at the start of the chain, by 2.5x after the 4th Perfect in a row.",
         special: "Changes all orbs, including [BLOCK] orbs, to [QCK] orbs",
         sailor: "Makes [STR], [INT] and [DEX] orbs \"beneficial\" for this unit",
-        sailorNotes: "#{beneficial}",
         specialName: "The Teacher's Final Ordeal",
     },
     1534: {//Rayleigh
@@ -14830,23 +14750,22 @@ window.details = {
             "base": "Makes [STR], [INT] and [DEX] orbs \"beneficial\" for this unit",
             "level1": "Boosts base ATK, HP and RCV of all characters by 30",
         },
-        sailorNotes: "#{beneficial}",
         limit: [
             { "description": "Boosts base RCV by 10" },
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base RCV by 20" },
-            { "description": "Aquire Potential 1: Slot Bind Self-reduction" },
+            { "description": "Acquire Potential 1: Slot Bind Self-reduction" },
             { "description": "Boosts base ATK by 40" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base HP by 50" },
             { "description": "Boosts base RCV by 30" },
             { "description": "Boosts base HP by 70" },
-            { "description": "Aquire 1 additional Socket slot" },
+            { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base HP by 80" },
             { "description": "Boosts base ATK by 60" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
-            { "description": "Aquire Sailor Ability 1: Boosts base ATK, HP and RCV of all characters by 30" },
-            { "description": "Aquire Potential 2: Enrage" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK, HP and RCV of all characters by 30" },
+            { "description": "Acquire Potential 2: Enrage" },
         ],
         potential: [
             {
@@ -14876,7 +14795,6 @@ window.details = {
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of [PSY] characters by 2.5x if they have matching orbs",
         special: "Reduces damage received by 50% for 1 turn, boosts ATK of PSY characters by 1.75x for 1 turn",
         sailor: "Makes [INT] orbs \"beneficial\" for [PSY] characters",
-        sailorNotes: "#{beneficial}",
         specialName: "Prideful Memories",
     },
     1536: {//Duval
@@ -14887,23 +14805,22 @@ window.details = {
             "base": "Makes [INT] orbs \"beneficial\" for [PSY] characters",
             "level1": "Boosts base ATK and HP of [PSY] characters by 50",
         },
-        sailorNotes: "#{beneficial}",
         limit: [
             { "description": "Boosts base ATK by 10" },
             { "description": "Boosts base HP by 50" },
             { "description": "Boosts base ATK by 10" },
-            { "description": "Aquire Potential 1: [INT] Damage Reduction" },
+            { "description": "Acquire Potential 1: [INT] Damage Reduction" },
             { "description": "Boosts base ATK by 10" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base ATK by 10" },
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base ATK by 40" },
-            { "description": "Aquire 1 additional Socket slot" },
+            { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base RCV by 30" },
             { "description": "Boosts base ATK by 50" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
-            { "description": "Aquire Sailor Ability 1: Boosts base ATK and HP of [PSY] characters by 50" },
-            { "description": "Aquire Potential 2: Pinch Healing" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK and HP of [PSY] characters by 50" },
+            { "description": "Acquire Potential 2: Pinch Healing" },
         ],
         potential: [
             {
@@ -14968,7 +14885,7 @@ window.details = {
             { "description": "Boosts base HP by 30" },
             { "description": "Boosts base ATK by 50" },
             { "description": "Boosts base HP by 50" },
-            { "description": "Acquire Sailor Ability: Boosts base HP of Driven characters by 50" },
+            { "description": "Acquire Sailor Ability 1: Boosts base HP of Driven characters by 50" },
             { "description": "Acquire Potential 2: Slot Bind Self-reduction" },
         ],
         potential: [
@@ -15014,18 +14931,18 @@ window.details = {
             { "description": "Boosts base ATK by 10" },
             { "description": "Boosts base HP by 20" },
             { "description": "Boosts base HP by 30" },
-            { "description": "Aquire Potential 1: Critical Hit" },
+            { "description": "Acquire Potential 1: Critical Hit" },
             { "description": "Boosts base ATK by 20" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base ATK by 40" },
             { "description": "Boosts base RCV by 30" },
-            { "description": "Aquire 1 additional Socket slot" },
+            { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base HP by 100" },
             { "description": "Boosts base ATK by 50" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
-            { "description": "Aquire Sailor Ability 1: Boosts base HP of all characters by 100" },
-            { "description": "Aquire Potential 2: Pinch Healing" },
+            { "description": "Acquire Sailor Ability 1: Boosts base HP of all characters by 100" },
+            { "description": "Acquire Potential 2: Pinch Healing" },
         ],
         potential: [
             {
@@ -15051,8 +14968,8 @@ window.details = {
         ]
     },
     1543: {//6+ Usopp
-        captain: "Boosts ATK of Shooter characters by 1.5x if HP is below 50% or by 1.75x if HP is below 30% at the start of the turn. Makes [STR], [DEX], [QCK], [PSY], [INT], [RCV], and [TND] orbs \"beneficial\" to Shooter characters. At the beginning of each Stage, increases the Attack Timer of all enemies by 1 turn",
-        captainNotes: "The Attack Timer increase is NOT a delay, so the enemies can still be delayed. Attack Timer increase ignores Debuff Prevention barriers.<br>#{beneficial}",
+        captain: "Boosts ATK of Shooter characters by 1.5x if HP is below 50% or by 1.75x if HP is below 30% at the start of the turn. Makes [STR], [DEX], [QCK], [PSY], [INT], [RCV] and [TND] orbs \"beneficial\" to Shooter characters. At the beginning of each Stage, increases the Attack Timer of all enemies by 1 turn",
+        captainNotes: "The Attack Timer increase is NOT a delay, so the enemies can still be delayed. Attack Timer increase ignores Debuff Prevention barriers",
         special: "Cuts the current HP of each enemy by 10%. If enemies have Delay Prevention, ignores it and Delays all enemies for 1 turn. Otherwise, Delays all enemies for 3 turns",
         sailor: {
             "base": "Completely resists Blindness",
@@ -15067,7 +14984,7 @@ window.details = {
             { "description": "Boosts base RCV by 10" },
             { "description": "Boosts base HP by 30" },
             { "description": "Boosts base ATK by 15" },
-            { "description": "Acquire Sailor Ability: Boosts base HP of Shooter characters by 100" },
+            { "description": "Acquire Sailor Ability 1: Boosts base HP of Shooter characters by 100" },
             { "description": "Boosts base ATK by 15" },
             { "description": "Boosts base HP by 30" },
             { "description": "Boosts base RCV by 10" },
@@ -15163,18 +15080,18 @@ window.details = {
             { "description": "Boosts base HP by 30" },
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base ATK by 30" },
-            { "description": "Aquire Potential 1: [INT] Damage Reduction" },
+            { "description": "Acquire Potential 1: [INT] Damage Reduction" },
             { "description": "Boosts base HP by 50" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base ATK by 40" },
-            { "description": "Aquire Sailor Ability 1: Reduces Paralysis duration for 3 turns for herself" },
+            { "description": "Acquire Sailor Ability 1: Reduces Paralysis duration for 3 turns for herself" },
             { "description": "Boosts base HP by 90" },
-            { "description": "Aquire 1 additional Socket slot" },
+            { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base RCV by 30" },
             { "description": "Boosts base ATK by 40" },
             { "description": "Reduce base Special Cooldown by 2 turns" },
-            { "description": "Aquire Sailor Ability 2: Reduces Silence duration on this character by 3 turns" },
-            { "description": "Aquire Potential 2: Enrage" },
+            { "description": "Acquire Sailor Ability 2: Reduces Silence duration on this character by 3 turns" },
+            { "description": "Acquire Potential 2: Enrage" },
         ],
         potential: [
             {
@@ -15237,7 +15154,7 @@ window.details = {
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base ATK by 60" },
-            { "description": "Acquire Sailor Ability: Boosts base HP of all characters by 100" },
+            { "description": "Acquire Sailor Ability 1: Boosts base HP of all characters by 100" },
             { "description": "Acquire Potential 2: Enrage" },
         ],
         potential: [
@@ -15386,18 +15303,18 @@ window.details = {
             { "description": "Boosts base HP by 15" },
             { "description": "Boosts base ATK by 10" },
             { "description": "Boosts base HP by 25" },
-            { "description": "Aquire Potential 1: [DEX] Damage Reduction" },
+            { "description": "Acquire Potential 1: [DEX] Damage Reduction" },
             { "description": "Boosts base RCV by 5" },
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base RCV by 10" },
-            { "description": "Aquire Sailor Ability 1: Boosts base HP of Cerebral characters by 200" },
+            { "description": "Acquire Sailor Ability 1: Boosts base HP of Cerebral characters by 200" },
             { "description": "Boosts base HP by 30" },
             { "description": "Boosts base ATK by 25" },
             { "description": "Boosts base HP by 35" },
             { "description": "Boosts base RCV by 10" },
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base RCV by 15" },
-            { "description": "Aquire Potential 2: Critical Hit" },
+            { "description": "Acquire Potential 2: Critical Hit" },
             { "description": "Boosts base HP by 40" },
             { "description": "Boosts base ATK by 35" },
             { "description": "Boosts base HP by 50" },
@@ -15409,10 +15326,10 @@ window.details = {
             { "description": "Boosts base HP by 70" },
             { "description": "Boosts base RCV by 25" },
             { "description": "Boosts base ATK by 45" },
-            { "description": "Aquire Sailor Ability 2: Boosts own base ATK by 200 if this character is the last in the chain to attack" },
+            { "description": "Acquire Sailor Ability 2: Boosts own base ATK by 200 if this character is the last in the chain to attack" },
             { "description": "Boosts base HP by 80" },
             { "description": "Boosts base HP by 90" },
-            { "description": "Aquire Potential 3: Enrage" },
+            { "description": "Acquire Potential 3: Enrage" },
         ],
         potential: [
             {
@@ -15466,18 +15383,18 @@ window.details = {
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base RCV by 10" },
             { "description": "Boosts base RCV by 20" },
-            { "description": "Aquire Potential 1: [STR] Damage Reduction" },
+            { "description": "Acquire Potential 1: [STR] Damage Reduction" },
             { "description": "Boosts base ATK by 30" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base ATK by 50" },
             { "description": "Boosts base HP by 50" },
             { "description": "Boosts base RCV by 20" },
-            { "description": "Aquire 1 additional Socket slot" },
+            { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base RCV by 30" },
             { "description": "Boosts base ATK by 60" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
-            { "description": "Aquire Sailor Ability 1: Boosts base ATK, HP and RCV of Cerebral characters by 40" },
-            { "description": "Aquire Potential 2: Enrage" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK, HP and RCV of Cerebral characters by 40" },
+            { "description": "Acquire Potential 2: Enrage" },
         ],
         potential: [
             {
@@ -15521,18 +15438,18 @@ window.details = {
             { "description": "Boosts base HP by 20" },
             { "description": "Boosts base HP by 40" },
             { "description": "Boosts base HP by 50" },
-            { "description": "Aquire Potential 1: Slot Bind Self-reduction" },
+            { "description": "Acquire Potential 1: Slot Bind Self-reduction" },
             { "description": "Boosts base ATK by 20" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base ATK by 30" },
-            { "description": "Aquire Sailor Ability 1: Reduces Paralysis duration by 1 turn" },
+            { "description": "Acquire Sailor Ability 1: Reduces Paralysis duration by 1 turn" },
             { "description": "Boosts base ATK by 40" },
-            { "description": "Aquire 1 additional Socket slot" },
+            { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base HP by 50" },
             { "description": "Boosts base ATK by 60" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base HP by 50" },
-            { "description": "Aquire Potential 2: Enrage" },
+            { "description": "Acquire Potential 2: Enrage" },
         ],
         potential: [
             {
@@ -15563,7 +15480,6 @@ window.details = {
         special: "Deals 60x character's ATK in typeless damage to all enemies and changes all orbs on all characters into Kinemon's orb.",
         specialNotes: "Upon activating the special, all orbs will be changed to the orb Kinemon has, including [RAINBOW] and [BLOCK] orbs. This will not override other [BLOCK] orbs.",
         sailor: "Makes [STR] and [QCK] orbs \"beneficial\" for this unit",
-        sailorNotes: "#{beneficial}",
         specialName: "Flaming Flash",
     },
     1577: {//Kin'emon
@@ -15575,23 +15491,22 @@ window.details = {
             "base": "Makes [STR] and [QCK] orbs \"beneficial\" for this unit",
             "level1": "Makes [RCV] and [TND] orbs \"beneficial\" for this unit",
         },
-        sailorNotes: "#{beneficial}",
         limit: [
             { "description": "Boosts base HP by 30" },
             { "description": "Boosts base HP by 40" },
             { "description": "Boosts base HP by 50" },
-            { "description": "Aquire Potential 1: Slot Bind Self-reduction" },
+            { "description": "Acquire Potential 1: Slot Bind Self-reduction" },
             { "description": "Boosts base ATK by 20" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base HP by 60" },
             { "description": "Boosts base RCV by 20" },
-            { "description": "Aquire 1 additional Socket slot" },
+            { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base RCV by 30" },
             { "description": "Boosts base ATK by 50" },
             { "description": "Reduce base Special Cooldown by 2 turns" },
-            { "description": "Aquire Sailor Ability 1: Makes [RCV] and [TND] orbs \"beneficial\" for this unit" },
-            { "description": "Aquire Potential 2: Pinch Healing" },
+            { "description": "Acquire Sailor Ability 1: Makes [RCV] and [TND] orbs \"beneficial\" for this unit" },
+            { "description": "Acquire Potential 2: Pinch Healing" },
         ],
         potential: [
             {
@@ -15634,7 +15549,6 @@ window.details = {
         ],
         specialNotes: "#{stages}",
         sailor: "Makes [STR], [QCK], [DEX] and [INT] orbs \"beneficial\" for this unit",
-        sailorNotes: "#{beneficial}",
         specialName: "Miraculous Flying Dragon",
     },
     1579: {//Momonosuke
@@ -15658,24 +15572,23 @@ window.details = {
         sailor: {
             "base": "Makes [STR], [QCK], [DEX] and [INT] orbs \"beneficial\" for this unit",
             "level1": "Reduces Silence duration by 1 turn",
-        sailorNotes: "#{beneficial}",
         },
         limit: [
             { "description": "Boosts base ATK by 10" },
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base ATK by 30" },
-            { "description": "Aquire Potential 1: [INT] Damage Reduction" },
+            { "description": "Acquire Potential 1: [INT] Damage Reduction" },
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base HP by 50" },
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base ATK by 40" },
             { "description": "Boosts base HP by 100" },
-            { "description": "Aquire 1 additional Socket slot" },
+            { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base ATK by 40" },
             { "description": "Boosts base ATK by 60" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
-            { "description": "Aquire Sailor Ability 1: Reduces Silence duration by 1 turn" },
-            { "description": "Aquire Potential 2: Pinch Healing" },
+            { "description": "Acquire Sailor Ability 1: Reduces Silence duration by 1 turn" },
+            { "description": "Acquire Potential 2: Pinch Healing" },
         ],
         potential: [
             {
@@ -15728,7 +15641,6 @@ window.details = {
             "base": "None",
             "level1": "Makes [TND] orbs \"beneficial\" for this unit",
         },
-        sailorNotes: "#{beneficial}",
         limit: [
             { "description": "Boosts base HP by 20" },
             { "description": "Boosts base HP by 30" },
@@ -15741,7 +15653,7 @@ window.details = {
             { "description": "Boosts base ATK by 30" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base ATK by 40" },
-            { "description": "Acquire Sailor Ability: Makes [TND] orbs \"beneficial\" for this unit" },
+            { "description": "Acquire Sailor Ability 1: Makes [TND] orbs \"beneficial\" for this unit" },
             { "description": "Boosts base HP by 60" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Acquire Potential 2: Critical Hit" },
@@ -15784,7 +15696,6 @@ window.details = {
         captainNotes: "Sanji Captain Action lasts for 2 turns and can be reactivated after no cooldown. Even while Sky Walking, will still boost all characters by 2.5x. Sky Walk is not a type boost and will stack with other boosts",
         special: "Deals 100,000 fixed damage to all enemies. Changes [BLOCK], [TND], adjacent orbs and own orb into Matching orbs. Boosts own attack by 2x for 1 turn",
         sailor: "Makes [RCV] orbs \"beneficial\" for all characters",
-        sailorNotes: "#{beneficial}",
         specialName: "Hell Memories",
     },
     1588: {//Legend Sanji
@@ -15792,7 +15703,6 @@ window.details = {
         captainNotes: "Sanji Captain Action lasts for 2 turns and can be reactivated after no cooldown. Even while Sky Walking, will still boost all characters by 2.5x. Sky Walk is not a type boost and will stack with other boosts",
         special: "Deals 100,000 fixed damage to all enemies. Changes [BLOCK], [TND], adjacent orbs and own orb into Matching orbs. Boosts own attack by 2x for 1 turn",
         sailor: "Makes [RCV] orbs \"beneficial\" for all characters",
-        sailorNotes: "#{beneficial}",
         specialName: "Hell Memories",
     },
     1589: {//Anniversary Shanks
@@ -15827,7 +15737,7 @@ window.details = {
                 "cooldown": [ 18, 13 ],
             },
         ],
-        specialNotes: "#{stages}<br>#{beneficial}",
+        specialNotes: "#{stages}",
         sailor: "Completely resists Paralysis on this character",
         specialName: "King Kong Gun",
     },
@@ -15913,14 +15823,14 @@ window.details = {
     },
     1609: {//Legend Enel
         captain: "Reduces HP of all characters by 20%, boosts chances of getting [RCV] orbs, makes [RCV] orbs \"beneficial\" to all characters, boosts ATK of all characters proportionally to the amount healed in the last turn.",
-        captainNotes: "The range of ATK boost is from 2x to 3.25x. The exact boost is calculated as 2 + <HP recovered in the previous turn> * 0.000125 and maxes at 10k HP healed. This ignores your max HP, so it doesn't stop counting if you over-heal.<br>#{beneficial}",
+        captainNotes: "The range of ATK boost is from 2x to 3.25x. The exact boost is calculated as 2 + <HP recovered in the previous turn> * 0.000125 and maxes at 10k HP healed. This ignores your max HP, so it doesn't stop counting if you over-heal.",
         special: "Deals typeless damage to all enemies equal to 10x how much excess healing done before the special is activated.",
         specialNotes: "The excess healing is counted from the last time the special is used and accumulates when you heal more than your maximum HP. For example, if you are at max HP and you heal 1,000 HP, you will add 10k damage to the special. The amount of damage possible caps at 2,000,000 damage.",
         specialName: "Heavy Thunder",
     },
     1610: {//Legend Enel
         captain: "Reduces HP of all characters by 20%, boosts chances of getting [RCV] orbs, makes [RCV] orbs \"beneficial\" to all characters, boosts ATK of all characters proportionally to the amount healed in the last turn.",
-        captainNotes: "The range of ATK boost is from 2x to 3.25x. The exact boost is calculated as 2 + <HP recovered in the previous turn> * 0.000125 and maxes at 10k HP healed. This ignores your max HP, so it doesn't stop counting if you over-heal.<br>#{beneficial}",
+        captainNotes: "The range of ATK boost is from 2x to 3.25x. The exact boost is calculated as 2 + <HP recovered in the previous turn> * 0.000125 and maxes at 10k HP healed. This ignores your max HP, so it doesn't stop counting if you over-heal.",
         special: "Deals typeless damage to all enemies equal to 10x how much excess healing done before the special is activated.",
         specialNotes: "The excess healing is counted from the last time the special is used and accumulates when you heal more than your maximum HP. For example, if you are at max HP and you heal 1,000 HP, you will add 10k damage to the special. The amount of damage possible caps at 2,000,000 damage.",
         specialName: "Heavy Thunder",
@@ -15981,7 +15891,7 @@ window.details = {
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base HP by 60" },
             { "description": "Boosts base RCV by 40" },
-            { "description": "Acquire Sailor Ability: Reduces Silence duration against this character by 3 turns" },
+            { "description": "Acquire Sailor Ability 1: Reduces Silence duration against this character by 3 turns" },
             { "description": "Boosts base ATK by 45" },
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Acquire Potential 2: [PSY] Damage Reduction" },
@@ -16154,18 +16064,18 @@ window.details = {
             { "description": "Boosts base RCV by 10" },
             { "description": "Boosts base RCV by 10" },
             { "description": "Boosts base RCV by 10" },
-            { "description": "Aquire Potential 1: [QCK] Damage Reduction" },
+            { "description": "Acquire Potential 1: [QCK] Damage Reduction" },
             { "description": "Boosts base ATK by 10" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base ATK by 40" },
-            { "description": "Aquire Sailor Ability 1: Boosts base ATK of Striker characters by 35" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK of Striker characters by 35" },
             { "description": "Boosts base RCV by 20" },
-            { "description": "Aquire 1 additional Socket slot" },
+            { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base RCV by 10" },
             { "description": "Boosts base ATK by 80" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
-            { "description": "Aquire Sailor Ability 2: Makes [STR] orbs \"beneficial\" for this unit" },
-            { "description": "Aquire Potential 2: Slot Bind Self-reduction" },
+            { "description": "Acquire Sailor Ability 2: Makes [STR] orbs \"beneficial\" for this unit" },
+            { "description": "Acquire Potential 2: Slot Bind Self-reduction" },
         ],
         potential: [
             {
@@ -16225,7 +16135,7 @@ window.details = {
             { "description": "Boosts base HP by 40" },
             { "description": "Boosts base RCV by 30" },
             { "description": "Boosts base ATK by 20" },
-            { "description": "Acquire Sailor Ability: Boosts base ATK of Powerhouse characters by 50" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK of Powerhouse characters by 50" },
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base HP by 60" },
             { "description": "Acquire 1 additional Socket slot" },
@@ -16290,7 +16200,6 @@ window.details = {
     },
     1640: {//DEX Gas Mask Fodder
         special: "For 1 turn, makes STR orb \"beneficial\" for Shooter characters",
-        specialNotes: "#{beneficial}",
         specialName: "Shooter Beneficial Slot: STR",
     },
     1641: {//INT Gas Mask Fodder
@@ -16368,20 +16277,17 @@ window.details = {
     1651: {//Nekomamushi
         captain: "Boosts HP of Striker characters by 1.25x and boosts ATK by 3.75x if they have a [STR], [QCK], [DEX], [INT], [PSY] or [RAINBOW] orb",
         special: "Deals 60x character's ATK in [PSY] damage to one enemy and makes [STR], [DEX], [QCK], [PSY] and [INT] orbs \"beneficial\" for Striker characters for 1 turn",
-        specialNotes: "#{beneficial}",
         specialName: "Daybreak Ruler's Spear",
     },
     1652: {//Nekomamushi
         captain: "Boosts HP of Striker characters by 1.25x and boosts ATK by 3.75x if they have a [STR], [QCK], [DEX], [INT], [PSY] or [RAINBOW] orb",
         special: "Deals 60x character's ATK in [PSY] damage to one enemy and makes [STR], [DEX], [QCK], [PSY] and [INT] orbs \"beneficial\" for Striker characters for 1 turn",
-        specialNotes: "#{beneficial}",
         specialName: "Daybreak Ruler's Spear",
         sailor: {
             "base": "None",
             "level1": "Boosts base ATK, HP and RCV of Striker characters by 70",
             "level2": "Makes [INT] orbs \"beneficial\" for this unit",
         },
-        sailorNotes: "#{beneficial}",
         limit: [
             { "description": "Boosts base RCV by 5" },
             { "description": "Boosts base RCV by 5" },
@@ -16450,18 +16356,16 @@ window.details = {
     1653: {//Pedro
         captain: "Boosts ATK of [INT] characters by 2x",
         special: "Reduces crew's HP to 1, deals 7x the amount of HP subtracted in typeless damage to all enemies, amplifies the effect of orbs by 1.75x for 1 turn",
-        sailor: "Makes [INT] orbs \"beneficial\" for Slasher and Cerebral characters",
-        sailorNotes: "#{beneficial}"
+        sailor: "Makes INT orbs \"beneficial\" for Slasher and Cerebral characters",
         specialName: "Charge Drive",
     },
     1654: {//Pedro
         captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of [INT] characters by 2.5x",
         special: "Reduces crew's HP to 1, deals 7x the amount of HP subtracted in typeless damage to all enemies, amplifies the effect of orbs by 1.75x for 1 turn",
         sailor: {
-            "base": "Makes [INT] orbs \"beneficial\" for Slasher and Cerebral characters",
+            "base": "Makes INT orbs \"beneficial\" for Slasher and Cerebral characters",
             "level1": "If this character has an [INT] orb and you hit a Perfect with him, keep his [INT] orb for the next turn",
         },
-        sailorNotes: "#{beneficial}",
         specialName: "Charge Drive",
         limit: [
             { "description": "Boosts base ATK by 10" },
@@ -16477,7 +16381,7 @@ window.details = {
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base ATK by 45" },
             { "description": "Boosts base HP by 60" },
-            { "description": "Acquire Sailor Ability: If this character has an [INT] orb and you hit a Perfect with him, keep his [INT] orb for the next turn" },
+            { "description": "Acquire Sailor Ability 1: If this character has an [INT] orb and you hit a Perfect with him, keep his [INT] orb for the next turn" },
             { "description": "Acquire Potential 2: Critical Hit" },
         ],
         potential: [
@@ -16519,14 +16423,12 @@ window.details = {
         captain: "Boosts ATK of Striker and Free Spirit characters by 2x",
         special: "Reduces Bind and Despair duration by 5 turns. If your Captain is a Striker character, locks the chain multiplier at 2.75x for 1 turn",
         sailor: "Makes [DEX] orbs \"beneficial\" for Striker characters if your Captain is a Striker character",
-        sailorNotes: "#{beneficial}",
         specialName: "Summon Dragon",
     },
     1658: {//Kanjuro
         captain: "Boosts ATK of Striker and Free Spirit characters by 2.5x",
         special: "Reduces Bind and Despair duration by 5 turns. If your Captain is a Striker character, locks the chain multiplier at 2.75x for 1 turn",
         sailor: "Makes [DEX] orbs \"beneficial\" for Striker characters if your Captain is a Striker character",
-        sailorNotes: "#{beneficial}",
         specialName: "Summon Dragon",
     },
     1659: {//Raizo
@@ -16539,7 +16441,6 @@ window.details = {
     },
     1660: {//Raizo
         captain: "Boosts ATK of Shooter characters by 2.5x and makes [TND] and [RCV] orbs \"beneficial\" to Shooter characters",
-        captainNotes: "#{beneficial}",
         special: "Reduces Paralysis and Silence duration by 3 turns, switches orbs between slots 3 times",
         sailorNotes: "#{silence}",
         sailor: "Completely resists Silence on this character",
@@ -16583,7 +16484,6 @@ window.details = {
             "level1": "Boosts base ATK, HP and RCV of Powerhouse characters by 30",
             "level2": "Makes [RCV] and [TND] orbs \"beneficial\" for Powerhouse characters",
         },
-        sailorNotes: "#{beneficial}",
         limit: [
             { "description": "Boosts base ATK by 5" },
             { "description": "Boosts base ATK by 5" },
@@ -16849,7 +16749,6 @@ window.details = {
         specialName: "Mil Fleur: Gigantesco Mano",
         specialNotes: "The exact multiplier used is chosen based on the number of [BLOCK] orbs consumed: 0 orbs - Unknown; 1 orb - 36x ATK; 2 orbs - 60x ATK; 3 orbs - 105x ATK; 4 orbs - 195x ATK; 5 orbs - 300x ATK; 6 orbs - 450x ATK.",
         sailor: "Makes [TND] orbs \"beneficial\" for all characters if your Captain is a Fighter character",
-        sailorNotes: "#{beneficial}",
     },
     1684: {//20th Anni Robin
         captain: "Boosts ATK of Cerebral characters by 2.5x and their RCV by 1.3x",
@@ -16857,7 +16756,6 @@ window.details = {
         specialName: "Mil Fleur: Gigantesco Mano",
         specialNotes: "The exact multiplier used is chosen based on the number of [BLOCK] orbs consumed: 0 orbs - Unknown; 1 orb - 36x ATK; 2 orbs - 60x ATK; 3 orbs - 105x ATK; 4 orbs - 195x ATK; 5 orbs - 300x ATK; 6 orbs - 450x ATK.",
         sailor: "Makes [TND] orbs \"beneficial\" for all characters if your Captain is a Fighter character",
-        sailorNotes: "#{beneficial}",
     },
     1685: {//20th Anni Usopp
         captain: "Boosts ATK of Shooter characters by 2.75x following a chain of Good > Great > Perfect hits",
@@ -16912,13 +16810,13 @@ window.details = {
     1693: {//Inuarashi
         captain: "Boosts ATK of [PSY] characters by 2x",
         special: "Reduces crew's current HP by 50%, deals 50000 Fixed damage to one enemy, boosts own ATK by 1.75x for 1 turn, amplifies the effect of own orb by 1.75x for 1 turn and changes own orb to [PSY].",
-        specialNotes: "Boosted ATK and Orb effectiveness only works for the character who uses their own Special.",
+        specialNotes: "Boosted ATK and Orb Effectivess only works for the character who uses their own Special.",
         specialName: "King's Lightning Burial",
     },
     1694: {//Inuarashi
         captain: "Boosts ATK of [PSY] characters by 2.75x",
         special: "Reduces crew's current HP by 50%, deals 50000 Fixed damage to one enemy, boosts own ATK by 1.75x for 1 turn, amplifies the effect of own orb by 1.75x for 1 turn and changes own orb to [PSY].",
-        specialNotes: "Boosted ATK and Orb effectiveness only works for the character who uses their own Special.",
+        specialNotes: "Boosted ATK and Orb Effectivess only works for the character who uses their own Special.",
         specialName: "King's Lightning Burial",
     },
     1695: {//Vergo
@@ -16946,7 +16844,7 @@ window.details = {
             { "description": "Boosts base HP by 30" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base HP by 60" },
-            { "description": "Acquire Sailor Ability: Boosts base ATK, HP and RCV of Striker characters by 25" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK, HP and RCV of Striker characters by 25" },
             { "description": "Boosts base HP by 70" },
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Acquire Potential 2: [QCK] Damage Reduction" },
@@ -16997,7 +16895,7 @@ window.details = {
             { "description": "Boosts base RCV by 10" },
             { "description": "Boosts base HP by 30" },
             { "description": "Boosts base ATK by 15" },
-            { "description": "Acquire Sailor Ability: Cannot be blown away" },
+            { "description": "Acquire Sailor Ability 1: Cannot be blown away" },
             { "description": "Boosts base ATK by 15" },
             { "description": "Boosts base HP by 30" },
             { "description": "Boosts base RCV by 10" },
@@ -17064,7 +16962,6 @@ window.details = {
         captain: "Boosts ATK of Fighter characters by 2.5x and their HP by 1.3x",
         special: "Adds .3x to Chain multiplier for 2 turns, reduces Chain Multiplier Limit and Chain Coefficient Reduction duration by 3 turns",
         specialName: "Gentle Ultrasound Wave",
-        specialNotes: "This is most likely the effect that prevents your chain from exceeding a certain value.",
         sailor: {
             "base": "Boosts base ATK of Fighter characters by 75",
             "level1": "Boost HP of all characters by 40 if your Captain is a Fighter character",
@@ -17082,7 +16979,7 @@ window.details = {
             { "description": "Boosts base HP by 70" },
             { "description": "Boosts base RCV by 20" },
             { "description": "Acquire 1 additional Socket slot" },
-            { "description": "Acquire Sailor Ability: Boost HP of all characters by 40 if your Captain is a Fighter character" },
+            { "description": "Acquire Sailor Ability 1: Boost HP of all characters by 40 if your Captain is a Fighter character" },
             { "description": "Boosts base HP by 90" },
             { "description": "Acquire Potential 2: Enrage" },
         ],
@@ -17166,7 +17063,7 @@ window.details = {
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base ATK by 50" },
-            { "description": "Acquire Sailor Ability: When any other Free Spirit character uses a special, reduces own cooldown by 1 turn" },
+            { "description": "Acquire Sailor Ability 1: When any other Free Spirit character uses a special, reduces own cooldown by 1 turn" },
             { "description": "Acquire Potential 2: Reduce No Healing duration" },
         ],
         potential: [
@@ -17197,7 +17094,6 @@ window.details = {
         special: "Reduces damage received by 50% for 2 turns and boosts ATK against enemies inflicted with Toxic by 1.75x for 2 turns",
         specialName: "Inferno Hell Wheel",
         sailor: "Makes [STR], [QCK], [DEX], [PSY] and [INT] orbs \"beneficial\" for this unit if your Captain is a Striker character",
-        sailorNotes: "#{beneficial}",
     },
     1704: {//Hannyabal
         captain: "Boosts ATK of [INT] characters by 2.5x, recovers 2x character's RCV in HP at the end of each turn",
@@ -17207,7 +17103,6 @@ window.details = {
             "base": "Makes [STR], [QCK], [DEX], [PSY] and [INT] orbs \"beneficial\" for this unit if your Captain is a Striker character",
             "level1": "Makes [RCV] and [TND] orbs \"beneficial\" for this unit if your Captain is a Driven character",
         },
-        sailorNotes: "#{beneficial}",
         limit: [
             { "description": "Boosts base HP by 20" },
             { "description": "Boosts base HP by 30" },
@@ -17220,7 +17115,7 @@ window.details = {
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base RCV by 20" },
             { "description": "Boosts base ATK by 30" },
-            { "description": "Acquire Sailor Ability: Makes [RCV] and [TND] orbs \"beneficial\" for this unit if your Captain is a Driven character" },
+            { "description": "Acquire Sailor Ability 1: Makes [RCV] and [TND] orbs \"beneficial\" for this unit if your Captain is a Driven character" },
             { "description": "Boosts base HP by 200" },
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Acquire Potential 2: Enrage" },
@@ -17276,7 +17171,7 @@ window.details = {
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base HP by 130" },
             { "description": "Boosts base ATK by 50" },
-            { "description": "Acquire Sailor Ability: Restores his own special by 2 turns when it is rewinded" },
+            { "description": "Acquire Sailor Ability 1: Restores his own special by 2 turns when it is rewinded" },
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Acquire Potential 2: Enrage" },
         ],
@@ -17315,14 +17210,12 @@ window.details = {
         special: "Reduces Special Cooldown of Striker and Cerebral characters by 1 turn, reduces Paralysis duration by 2 turns and randomizes all non-matching orbs",
         specialName: "Cat Burglar's Eye Contact",
         sailor: "Makes [TND] orbs \"beneficial\" for this unit",
-        sailorNotes: "#{beneficial}",
     },
     1709: {//Summer Nami
         captain: "Boosts ATK of all characters by 1.5x, recovers 4x character's RCV in HP at the end of each turn",
         special: "Reduces Special Cooldown of Striker and Cerebral characters by 1 turn, reduces Paralysis duration by 2 turns and randomizes all non-matching orbs",
         specialName: "Cat Burglar's Eye Contact",
         sailor: "Makes [TND] orbs \"beneficial\" for this unit",
-        sailorNotes: "#{beneficial}",
     },
     1710: {//Summer Robin
         captain: "Boosts ATK and RCV of Cerebral characters by 1.2x",
@@ -17351,7 +17244,6 @@ window.details = {
             "level1": "Makes [STR] orbs \"beneficial\" for this unit",
             "level2": "Makes [INT] orbs \"beneficial\" for Driven characters",
         },
-        sailorNotes: "#{beneficial}",
         limit: [
             { "description": "Boosts base ATK by 10" },
             { "description": "Boosts base ATK by 10" },
@@ -17437,7 +17329,6 @@ window.details = {
             "base": "None",
             "level1": "Makes [STR] and [DEX] orbs \"beneficial\" for this unit",
         },
-        sailorNotes: "#{beneficial}",
         limit: [
             { "description": "Boosts base HP by 20" },
             { "description": "Boosts base HP by 30" },
@@ -17452,7 +17343,7 @@ window.details = {
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base HP by 80" },
             { "description": "Boosts base RCV by 30" },
-            { "description": "Acquire Sailor Ability: Makes [STR] and [DEX] orbs \"beneficial\" for this unit" },
+            { "description": "Acquire Sailor Ability 1: Makes [STR] and [DEX] orbs \"beneficial\" for this unit" },
             { "description": "Acquire Potential 2: Slot Bind Self-reduction" },
         ],
         potential: [
@@ -17574,20 +17465,17 @@ window.details = {
     1738: {//Raid Bellamy
         captain: "Boosts ATK of Driven characters by 2x",
         special: "Cuts the current HP of one enemy by 10%, makes [PSY] and [INT] orbs \"beneficial\" for 1 turn and amplifies the effect of orbs by 1.75x for 1 turn",
-        specialNotes: "#{beneficial}",
         specialName: "Spring Hopper - Bullet [Neo]",
     },
     1739: {//Raid Bellamy
         captain: "Boosts ATK of Driven characters by 2.5x",
         special: "Cuts the current HP of one enemy by 10%, makes [PSY] and [INT] orbs \"beneficial\" for 1 turn and amplifies the effect of orbs by 1.75x for 1 turn",
-        specialNotes: "#{beneficial}",
         specialName: "Spring Hopper - Bullet [Neo]",
     },
     1740: {//Sandersonia
         captain: "Boosts ATK of Striker and Powerhouse characters by 2x and boosts HP of [DEX] characters by 1.1x",
         special: "Changes all orbs to [DEX] orbs, reduces the defense of all enemies by 80% for 2 turns and boosts ATK of Striker and Powerhouse characters by 1.75x for 2 turns",
         sailor: "Makes [STR] orbs \"beneficial\" for this unit",
-        sailorNotes: "#{beneficial}",
         specialName: "Snake Hair Possession: Eight-Headed Serpent",
     },
     1741: {//Sandersonia
@@ -17597,7 +17485,6 @@ window.details = {
             "base": "Makes [STR] orbs \"beneficial\" for this unit",
             "level1": "Boosts this character's attack against [STR] characters by 2x",
         },
-        sailorNotes: "#{beneficial}",
         specialName: "Snake Hair Possession: Eight-Headed Serpent",
         limit: [
             { "description": "Boosts base ATK by 20" },
@@ -17610,7 +17497,7 @@ window.details = {
             { "description": "Boosts base RCV by 30" },
             { "description": "Boosts base HP by 70" },
             { "description": "Boosts base ATK by 30" },
-            { "description": "Acquire Sailor Ability: Boosts this character's attack against [STR] characters by 2x" },
+            { "description": "Acquire Sailor Ability 1: Boosts this character's attack against [STR] characters by 2x" },
             { "description": "Boosts base ATK by 40" },
             { "description": "Boosts base HP by 90" },
             { "description": "Acquire 1 additional Socket slot" },
@@ -17644,7 +17531,6 @@ window.details = {
         captain: "Boosts ATK of Striker and Powerhouse characters by 2x and boosts HP of [STR] characters by 1.1x",
         special: "Changes [QCK] and [DEX] orbs into Matching orbs, boosts ATK against enemies with reduced defense by 1.75x for 2 turns and reduces damage received by 60% for 1 turn",
         sailor: "Makes [DEX] orbs \"beneficial\" for this unit",
-        sailorNotes: "#{beneficial}",
         specialName: "Snake Hair Possession: Salamander",
     },
     1743: {//Marigold
@@ -17654,7 +17540,6 @@ window.details = {
             "base": "Makes [DEX] orbs \"beneficial\" for this unit",
             "level1": "Boosts this character's attack against [QCK] characters by 2x",
         },
-        sailorNotes: "#{beneficial}",
         specialName: "Snake Hair Possession: Salamander",
         limit: [
             { "description": "Boosts base ATK by 20" },
@@ -17667,7 +17552,7 @@ window.details = {
             { "description": "Boosts base RCV by 30" },
             { "description": "Boosts base HP by 70" },
             { "description": "Boosts base ATK by 30" },
-            { "description": "Acquire Sailor Ability: Boosts this character's attack against [QCK] characters by 2x" },
+            { "description": "Acquire Sailor Ability 1: Boosts this character's attack against [QCK] characters by 2x" },
             { "description": "Boosts base ATK by 40" },
             { "description": "Boosts base HP by 90" },
             { "description": "Acquire 1 additional Socket slot" },
@@ -17722,7 +17607,7 @@ window.details = {
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base ATK by 50" },
-            { "description": "Acquire Sailor Ability: Reduces Blindness duration by 3 turns" },
+            { "description": "Acquire Sailor Ability 1: Reduces Blindness duration by 3 turns" },
             { "description": "Boosts base HP by 70" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Acquire 1 additional Socket slot" },
@@ -17755,20 +17640,17 @@ window.details = {
         captain: "Boosts ATK of Shooter characters by a variable factor between 2.5x and 3.25x based on the timing of the attack of the previous unit in the chain and recovers 1,000 HP at end of each turn. Greatly reduces chances of getting [TND] and [RCV] orbs",
         captainNotes: "A hit below Good or a Miss will boost the ATK of the next unit by 2.5x, a Good hit by 2.75x, a Great hit by 3x and a Perfect hit by 3.25x. This bonus is applied only to Shooter characters.",
         special: "Deals 6 hits of 20,000 fixed damage to random enemies, delays all enemies for 1 turn and makes [STR], [DEX], [QCK], [PSY] and [INT] orbs \"beneficial\" for Shooter characters for 2 turns",
-        specialNotes: "#{beneficial}",
         specialName: "Pistol Kisses",
     },
     1747: {//Boa Hancock
         captain: "Boosts ATK of Shooter characters by a variable factor between 2.5x and 3.25x based on the timing of the attack of the previous unit in the chain and recovers 1,000 HP at end of each turn. Greatly reduces chances of getting [TND] and [RCV] orbs",
         captainNotes: "A hit below Good or a Miss will boost the ATK of the next unit by 2.5x, a Good hit by 2.75x, a Great hit by 3x and a Perfect hit by 3.25x. This bonus is applied only to Shooter characters.",
         special: "Deals 6 hits of 20,000 fixed damage to random enemies, delays all enemies for 1 turn and makes [STR], [DEX], [QCK], [PSY] and [INT] orbs \"beneficial\" for Shooter characters for 2 turns",
-        specialNotes: "#{beneficial}",
         specialName: "Pistol Kisses",
         sailor: {
             "base": "None",
             "level1": "Makes [STR], [QCK], [DEX], [PSY] and [INT] orbs \"beneficial\" for this unit if your Captain is a Free Spirit character",
         },
-        sailorNotes: "#{beneficial}",
         limit: [
             { "description": "Boosts base RCV by 10" },
             { "description": "Boosts base HP by 30" },
@@ -17780,7 +17662,7 @@ window.details = {
             { "description": "Boosts base RCV by 10" },
             { "description": "Boosts base HP by 50" },
             { "description": "Boosts base ATK by 20" },
-            { "description": "Acquire Sailor Ability: Makes [STR], [QCK], [DEX], [PSY] and [INT] orbs \"beneficial\" for this unit if your Captain is a Free Spirit character" },
+            { "description": "Acquire Sailor Ability 1: Makes [STR], [QCK], [DEX], [PSY] and [INT] orbs \"beneficial\" for this unit if your Captain is a Free Spirit character" },
             { "description": "Boosts base RCV by 15" },
             { "description": "Boosts base HP by 50" },
             { "description": "Boosts base ATK by 25" },
@@ -17847,7 +17729,6 @@ window.details = {
             "base": "If this character has a [QCK] orb and you hit a Perfect with him, keep his [QCK] orb for the next turn",
             "level1": "Makes [DEX] orbs \"beneficial\" for this unit",
         },
-        sailorNotes: "#{beneficial}",
         specialName: "Bear Rush Out",
         limit: [
             { "description": "Boosts base HP by 20" },
@@ -17859,7 +17740,7 @@ window.details = {
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base HP by 30" },
             { "description": "Boosts base ATK by 50" },
-            { "description": "Acquire Sailor Ability: Makes [DEX] orbs \"beneficial\" for this unit" },
+            { "description": "Acquire Sailor Ability 1: Makes [DEX] orbs \"beneficial\" for this unit" },
             { "description": "Boosts base RCV by 30" },
             { "description": "Boosts base HP by 60" },
             { "description": "Boosts base HP by 90" },
@@ -17923,7 +17804,6 @@ window.details = {
             "level1": "Boosts base ATK of Striker characters by 50",
             "level2": "Makes [RCV] and [TND] orbs \"beneficial\" for this unit",
         },
-        sailorNotes: "#{beneficial}",
         limit: [
             { "description": "Boosts base ATK by 10" },
             { "description": "Boosts base ATK by 20" },
@@ -18017,28 +17897,24 @@ window.details = {
         captain: "Recovers 2x character's RCV in HP at the end of each turn",
         special: "Reduces damage received by 80% for 1 turn, reduces enemy's Threshold Damage Reduction and ATK UP duration by 3 turns",
         sailor: "Makes [DEX] orbs \"beneficial\" for this unit",
-        sailorNotes: "#{beneficial}",
         specialName: "Gust Sword",
     },
     1757: {//20th Anni Nami
         captain: "Recovers 5x character's RCV in HP at the end of each turn",
         special: "Reduces damage received by 80% for 1 turn, reduces enemy's Threshold Damage Reduction and ATK UP duration by 3 turns",
         sailor: "Makes [DEX] orbs \"beneficial\" for this unit",
-        sailorNotes: "#{beneficial}",
         specialName: "Gust Sword",
     },
     1758: {//20th Anni Brook
         captain: "Boosts ATK of Free Spirit characters by 2x and their HP by 1.1x",
         special: "Delays all enemies for 1 turn, reduces Paralysis, Bind and Despair duration by 1 turn.",
         sailor: "Makes [RCV] orbs \"beneficial\" for this unit",
-        sailorNotes: "#{beneficial}",
         specialName: "Party Music: Quinte Tierce Fantasia",
     },
     1759: {//20th Anni Brook
         captain: "Boosts ATK of Free Spirit characters by 2.5x and their HP by 1.2x",
         special: "Delays all enemies for 1 turn, reduces Paralysis, Bind and Despair duration by 1 turn.",
         sailor: "Makes [RCV] orbs \"beneficial\" for this unit",
-        sailorNotes: "#{beneficial}",
         specialName: "Party Music: Quinte Tierce Fantasia",
     },
     1760: {//20th Anni Chopper
@@ -18069,7 +17945,6 @@ window.details = {
             "level1": "Boosts base ATK of Powerhouse characters by 50",
             "level2": "Makes [RCV] and [TND] orbs \"beneficial\" for Powerhouse characters",
         },
-        sailorNotes: "#{beneficial}",
         limit: [
             { "description": "Boosts base ATK by 10" },
             { "description": "Boosts base ATK by 20" },
@@ -18264,7 +18139,6 @@ window.details = {
             "level1": "Makes [DEX] orbs \"beneficial\" for this unit",
             "level2": "Boosts base ATK, HP and RCV of Shooter and Free Spirit characters by 50",
         },
-        sailorNotes: "#{beneficial}",
         limit: [
             { "description": "Boosts base RCV by 10" },
             { "description": "Boosts base HP by 30" },
@@ -18337,7 +18211,6 @@ window.details = {
     },
     1781: {//Fighting Fish
         captain: "Boosts ATK of Powerhouse characters by 1.75x. Makes [TND] and [RCV] orbs \"beneficial\" to Powerhouse characters",
-        captainNotes: "#{beneficial}",
         special: "Boosts own ATK by 1.3x for 1 turn, changes own orb into STR and deals 5x character's ATK in [STR] damage to all enemies",
         specialName: "Piercing Twin Horns",
     },
@@ -18364,7 +18237,6 @@ window.details = {
     },
     1786: {//Dressrosa Fodder
         special: "Makes [QCK] orbs \"beneficial\" to Shooter characters for 1 turn",
-        specialNotes: "#{beneficial}",
         specialName: "Shooter Beneficial Slot: [QCK]"
     },
     1787: {//Dressrosa Fodder
@@ -18409,7 +18281,7 @@ window.details = {
             { "description": "Boosts base HP by 50" },
             { "description": "Boosts base RCV by 10" },
             { "description": "Boosts base RCV by 20" },
-            { "description": "Acquire Sailor Ability: Boosts base ATK and HP of DEX and QCK characters by 75 if your Captain is a [STR] character" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK and HP of DEX and QCK characters by 75 if your Captain is a [STR] character" },
             { "description": "Boosts base HP by 60" },
             { "description": "Boosts base RCV by 30" },
             { "description": "Boosts base ATK by 50" },
@@ -18451,11 +18323,6 @@ window.details = {
         captainNotes: "Sabo boosts ATK by 3.7125x if you have [STR], [DEX] and [QCK] type characters and no [PSY] or [INT] characters at all.<br>#{beneficial}",
         special: "Boosts ATK of [STR], [DEX] and [QCK] characters by 1.75x for 1 turn. If during that turn you score 4 Perfect hits, boosts ATK of [STR], [DEX] and [QCK] characters by 2x in the following turn.",
         specialName: "Dragon's Claw: Reverse Wave Motion",
-        sailor: {
-            "base": "None",
-            "level1": "Restores his own special by 2 turns when it is rewinded",
-            "level2": "Boosts base ATK, HP and RCV of [STR], [DEX], and [QCK] characters by 50",
-        },
         limit: [
             { "description": "Boosts base ATK by 10" },
             { "description": "Boosts base HP by 30" },
@@ -18546,7 +18413,7 @@ window.details = {
             { "description": "Boosts base HP by 30" },
             { "description": "Boosts base HP by 40" },
             { "description": "Boosts base HP by 50" },
-            { "description": "Acquire Sailor Ability: Reduces Silence duration on this character by 3 turns" },
+            { "description": "Acquire Sailor Ability 1: Reduces Silence duration on this character by 3 turns" },
             { "description": "Boosts base RCV by 30" },
             { "description": "Boosts base ATK by 40" },
             { "description": "Boosts base HP by 90" },
@@ -18628,7 +18495,7 @@ window.details = {
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base HP by 30" },
             { "description": "Boosts base ATK by 50" },
-            { "description": "Acquire Sailor Ability: Reduces Silence duration on this character by 3 turns" },
+            { "description": "Acquire Sailor Ability 1: Reduces Silence duration on this character by 3 turns" },
             { "description": "Boosts base HP by 60" },
             { "description": "Boosts base RCV by 30" },
             { "description": "Boosts base HP by 90" },
@@ -18663,7 +18530,6 @@ window.details = {
         captain: "Boosts ATK of [STR], [DEX] and [QCK] characters by 2.25x",
         special: "Changes [BLOCK] orbs into Matching orbs, locks all orbs for 1 turn, boosts ATK against enemies with reduced defense by 1.75x for 2 turns",
         sailor: "Makes [INT] and [PSY] orbs \"beneficial\" for this unit",
-        sailorNotes: "#{beneficial}",
         specialName: "Beautiful Sword: Round Table",
     },
     1800:{//Cavendish
@@ -18673,7 +18539,6 @@ window.details = {
             "base": "Makes [INT] and [PSY] orbs \"beneficial\" for this unit",
             "level1": "Boosts base ATK, HP and RCV of [STR], [DEX] and [QCK] characters by 50",
         },
-        sailorNotes: "#{beneficial}",
         specialName: "Beautiful Sword: Round Table",
         limit: [
             { "description": "Boosts base RCV by 10" },
@@ -18685,7 +18550,7 @@ window.details = {
             { "description": "Boosts base HP by 40" },
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base ATK by 40" },
-            { "description": "Acquire Sailor Ability: Boosts base ATK, HP and RCV of [STR], [DEX] and [QCK] characters by 50" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK, HP and RCV of [STR], [DEX] and [QCK] characters by 50" },
             { "description": "Boosts base HP by 50" },
             { "description": "Boosts base HP by 60" },
             { "description": "Boosts base ATK by 50" },
@@ -18739,7 +18604,7 @@ window.details = {
             { "description": "Boosts base HP by 50" },
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base ATK by 40" },
-            { "description": "Acquire Sailor Ability: Boosts base ATK, HP and RCV of [STR], [DEX] and [QCK] characters by 50" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK, HP and RCV of [STR], [DEX] and [QCK] characters by 50" },
             { "description": "Boosts base HP by 60" },
             { "description": "Boosts base RCV by 60" },
             { "description": "Boosts base ATK by 50" },
@@ -18811,25 +18676,24 @@ window.details = {
             "level1": "Boosts base ATK of Slasher characters by 50",
             "level2": "Makes [QCK] orbs \"beneficial\" for this unit",
         },
-        sailorNotes: "#{beneficial}",
         limit: [
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base ATK by 10" },
             { "description": "Boosts base HP by 30" },
             { "description": "Boosts base RCV by 5" },
             { "description": "Acquire Potential 1: Critical Hit" },
-            { "description": "Acquire new Captain Ability 1: Boosts ATK of Slasher characters by 1.35x and their HP by 1.1x. If you use \"Black Blade • The Ultimate Sword\" boosts ATK of Slasher characters by 1.8225x instead for 1 turn." },
+            { "description": "Acquire new Captain Ability: Boosts ATK of Slasher characters by 1.35x and their HP by 1.1x. If you use \"Black Blade • The Ultimate Sword\" boosts ATK of Slasher characters by 1.8225x instead for 1 turn." },
             { "description": "Acquire Sailor Ability 1: Boosts base ATK of Slasher characters by 50" },
             { "description": "Boosts base ATK by 15" },
             { "description": "Boosts base HP by 40" },
             { "description": "Boosts base RCV by 10" },
-            { "description": "Acquire new Captain Ability 2: Boosts ATK of Slasher characters by 1.6x and their HP by 1.1x. If you use \"Black Blade • The Ultimate Sword\" boosts ATK of Slasher characters by 2.16x instead for 1 turn." },
+            { "description": "Acquire new Captain Ability: Boosts ATK of Slasher characters by 1.6x and their HP by 1.1x. If you use \"Black Blade • The Ultimate Sword\" boosts ATK of Slasher characters by 2.16x instead for 1 turn." },
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base HP by 50" },
             { "description": "Boosts base RCV by 15" },
-            { "description": "Acquire new Captain Ability 3: Boosts ATK of Slasher characters by 1.8x and their HP by 1.2x. If you use \"Black Blade • The Ultimate Sword\" boosts ATK of Slasher characters by 2.43x instead for 1 turn." },
+            { "description": "Acquire new Captain Ability: Boosts ATK of Slasher characters by 1.8x and their HP by 1.2x. If you use \"Black Blade • The Ultimate Sword\" boosts ATK of Slasher characters by 2.43x instead for 1 turn." },
             { "description": "Reduce base Special Cooldown by 2 turns" },
             { "description": "Boosts base ATK by 25" },
             { "description": "Boosts base HP by 60" },
@@ -18839,7 +18703,7 @@ window.details = {
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base HP by 65" },
             { "description": "Reduce base Special Cooldown by 4 turns" },
-            { "description": "Acquire new Captain Ability 4: Boosts ATK of Slasher characters by 2x and their HP by 1.2x. If you use \"Black Blade • The Ultimate Sword\" boosts ATK of Slasher characters by 2.7x instead for 1 turn." },
+            { "description": "Acquire new Captain Ability: Boosts ATK of Slasher characters by 2x and their HP by 1.2x. If you use \"Black Blade • The Ultimate Sword\" boosts ATK of Slasher characters by 2.7x instead for 1 turn." },
             { "description": "Boosts base ATK by 35" },
             { "description": "Boosts base HP by 70" },
             { "description": "Acquire Sailor Ability 2: Makes [QCK] orbs \"beneficial\" for this unit" },
@@ -18848,10 +18712,10 @@ window.details = {
             { "description": "Boosts base RCV by 30" },
             { "description": "Reduce base Special Cooldown by 5 turns" },
             { "description": "Acquire 1 additional Socket slot" },
-            { "description": "Acquire new Captain Ability 5: Boosts ATK of Slasher characters by 2x and their HP by 1.3x. If you use \"Black Blade • The Ultimate Sword\" boosts ATK of Slasher characters by 2.7x instead for 1 turn." },
+            { "description": "Acquire new Captain Ability: Boosts ATK of Slasher characters by 2x and their HP by 1.3x. If you use \"Black Blade • The Ultimate Sword\" boosts ATK of Slasher characters by 2.7x instead for 1 turn." },
             { "description": "Boosts base ATK by 50" },
             { "description": "Boosts base HP by 80" },
-            { "description": "Acquire new Captain Ability 6: Boosts ATK of Slasher characters by 2.5x and their HP by 1.3x. If you use \"Black Blade • The Ultimate Sword\" boosts ATK of Slasher characters by 3.5x instead for 1 turn." },
+            { "description": "Acquire new Captain Ability: Boosts ATK of Slasher characters by 2.5x and their HP by 1.3x. If you use \"Black Blade • The Ultimate Sword\" boosts ATK of Slasher characters by 3.5x instead for 1 turn." },
             { "description": "Acquire Potential 2: Slot Bind Self-reduction" },
         ],
         potential: [
@@ -18917,7 +18781,6 @@ window.details = {
             "base": "None",
             "level1": "Makes [RCV] orbs \"beneficial\" for all characters",
         },
-        sailorNotes: "#{beneficial}",
         limit: [
             { "description": "Boosts base HP by 20" },
             { "description": "Boosts base HP by 30" },
@@ -18932,7 +18795,7 @@ window.details = {
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base HP by 50" },
             { "description": "Boosts base ATK by 40" },
-            { "description": "Acquire Sailor Ability: Makes [RCV] orbs \"beneficial\" for all characters" },
+            { "description": "Acquire Sailor Ability 1: Makes [RCV] orbs \"beneficial\" for all characters" },
             { "description": "Acquire Potential 2: Slot Bind Self-reduction" },
         ],
         potential: [
@@ -19002,7 +18865,6 @@ window.details = {
         ],
         specialName: "Sanji Special",
         sailor: "Makes [RCV] orbs \"beneficial\" for this unit",
-        sailorNotes: "#{beneficial}",
     },
     1822: {//Sanji
         captain: "Boosts ATK of all characters by 2x. Recovers 2x character's RCV in HP at the end of each turn",
@@ -19018,7 +18880,6 @@ window.details = {
         ],
         specialName: "Sanji Special",
         sailor: "Makes [RCV] orbs \"beneficial\" for this unit",
-        sailorNotes: "#{beneficial}",
     },
     1823: {//World
         captain: "Boosts ATK of Shooter characters by 1.5x at the start of the chain.<br>Boosts ATK of Shooter characters by 1.65x after the 1st Perfect in a row, by 1.815x after the 2nd Perfect in a row, by 1.9965x after the 3rd Perfect in a row, by 2.19615x after the 4th Perfect in a row and by 2.415765x after the 5th Perfect in a row.",
@@ -19131,7 +18992,7 @@ window.details = {
         limit: [
             { "description": "Boosts base HP by 30" },
             { "description": "Boosts base RCV by 10" },
-            { "description": "Acquire Sailor Ability: Boosts base ATK of Slasher characters by 40" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK of Slasher characters by 40" },
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base HP by 40" },
             { "description": "Boosts base RCV by 20" },
@@ -19193,7 +19054,7 @@ window.details = {
             { "description": "Boosts base HP by 80" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base ATK by 35" },
-            { "description": "Acquire Sailor Ability: Boosts base ATK of Cerebral and Driven characters by 50" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK of Cerebral and Driven characters by 50" },
             { "description": "Boosts base ATK by 55" },
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Acquire Potential 2: [PSY] Damage Reduction" },
@@ -19222,12 +19083,12 @@ window.details = {
         ]
     },
     1831: {//6* Judge
-        captain: "Increase the rate of PSY orbs, reduces damage received by 15%, boosts the HP of all characters by 1.25x and if there is a [STR], [DEX], [QCK], [PSY], and [INT] characters in your crew, boosts ATK of all characters by 3.9375x if they have a matching orb, by 2.25x otherwise",
+        captain: "Increase the rate of PSY orbs, reduces damage received by 15%, boosts the HP of all characters by 1.25x and if there is a [STR], [DEX], [QCK], [PSY] and [INT] characters in your crew, boosts ATK of all characters by 3.9375x if they have a matching orb, by 2.25x otherwise",
         special: "Reduces bind duration by 7 turns and amplifies the effect of orbs by 2x for 1 turn.  If this character is the captain or the friend captain, slightly boosts the rate of [PSY] orbs and randomly shuffles all orbs including [BLOCK] orbs",
         specialName: "Dengi Crack",
     },
     1832: {//6* Judge
-        captain: "Increase the rate of PSY orbs, reduces damage received by 15%, boosts the HP of all characters by 1.25x and if there is a [STR], [DEX], [QCK], [PSY], and [INT] characters in your crew, boosts ATK of all characters by 3.9375x if they have a matching orb, by 2.25x otherwise",
+        captain: "Increase the rate of PSY orbs, reduces damage received by 15%, boosts the HP of all characters by 1.25x and if there is a [STR], [DEX], [QCK], [PSY] and [INT] characters in your crew, boosts ATK of all characters by 3.9375x if they have a matching orb, by 2.25x otherwise",
         special: "Reduces bind duration by 7 turns and amplifies the effect of orbs by 2x for 1 turn.  If this character is the captain or the friend captain, slightly boosts the rate of [PSY] orbs and randomly shuffles all orbs including [BLOCK] orbs",
         specialName: "Dengi Crack",
         sailor: {
@@ -19332,7 +19193,7 @@ window.details = {
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base ATK by 40" },
             { "description": "Boosts base HP by 50" },
-            { "description": "Acquire Sailor Ability: Reduces Silence duration on this character by 3 turns" },
+            { "description": "Acquire Sailor Ability 1: Reduces Silence duration on this character by 3 turns" },
             { "description": "Acquire Potential 2: Slot Bind Self-reduction" },
         ],
         potential: [
@@ -19390,7 +19251,7 @@ window.details = {
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base HP by 60" },
             { "description": "Boosts base ATK by 60" },
-            { "description": "Acquire Sailor Ability: Boosts base ATK of all characters by 50" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK of all characters by 50" },
             { "description": "Acquire Potential 2: Slot Bind Self-reduction" },
         ],
         potential: [
@@ -19449,7 +19310,7 @@ window.details = {
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base ATK by 40" },
             { "description": "Boosts base HP by 90" },
-            { "description": "Acquire Sailor Ability: Boosts base ATK, HP and RCV of all characters by 20" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK, HP and RCV of all characters by 20" },
             { "description": "Acquire Potential 2: Slot Bind Self-reduction" },
         ],
         potential: [
@@ -19509,7 +19370,7 @@ window.details = {
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base ATK by 50" },
             { "description": "Boosts base HP by 70" },
-            { "description": "Acquire Sailor Ability: Boosts base HP of all characters by 100" },
+            { "description": "Acquire Sailor Ability 1: Boosts base HP of all characters by 100" },
             { "description": "Acquire Potential 2: Slot Bind Self-reduction" },
         ],
         potential: [
@@ -19631,18 +19492,18 @@ window.details = {
             { "description": "Boosts base HP by 30" },
             { "description": "Boosts base RCV by 5" },
             { "description": "Acquire Potential 1: [PSY] Damage Reduction" },
-            { "description": "Acquire new Captain Ability 1: Boosts ATK of all characters proportionally to the crew's current HP, by 2.35x at max, and their HP by 1.2x" },
+            { "description": "Acquire new Captain Ability: Boosts ATK of all characters proportionally to the crew's current HP, by 2.35x at max and their HP by 1.2x" },
             { "description": "Acquire Sailor Ability 1: Boosts base HP of all characters by 100" },
             { "description": "Boosts base ATK by 15" },
             { "description": "Boosts base HP by 40" },
             { "description": "Boosts base RCV by 10" },
-            { "description": "Acquire new Captain Ability 2: Boosts ATK of all characters proportionally to the crew's current HP, by 2.45x at max, and their HP by 1.2x" },
+            { "description": "Acquire new Captain Ability: Boosts ATK of all characters proportionally to the crew's current HP, by 2.45x at max and their HP by 1.2x" },
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base HP by 50" },
             { "description": "Boosts base RCV by 15" },
-            { "description": "Acquire new Captain Ability 3: Boosts ATK of all characters proportionally to the crew's current HP, by 2.55x at max, and their HP by 1.2x" },
+            { "description": "Acquire new Captain Ability: Boosts ATK of all characters proportionally to the crew's current HP, by 2.55x at max and their HP by 1.2x" },
             { "description": "Reduce base Special Cooldown by 2 turns" },
             { "description": "Boosts base ATK by 25" },
             { "description": "Boosts base HP by 60" },
@@ -19652,7 +19513,7 @@ window.details = {
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base HP by 65" },
             { "description": "Reduce base Special Cooldown by 4 turns" },
-            { "description": "Acquire new Captain Ability 4: Boosts ATK of all characters proportionally to the crew's current HP, by 2.65x at max, and their HP by 1.2x" },
+            { "description": "Acquire new Captain Ability: Boosts ATK of all characters proportionally to the crew's current HP, by 2.65x at max and their HP by 1.2x" },
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base HP by 70" },
             { "description": "Acquire Sailor Ability 2: Boosts base ATK of all characters by 50" },
@@ -19661,10 +19522,10 @@ window.details = {
             { "description": "Boosts base RCV by 30" },
             { "description": "Reduce base Special Cooldown by 5 turns" },
             { "description": "Acquire 1 additional Socket slot" },
-            { "description": "Acquire new Captain Ability 5: Boosts ATK of all characters proportionally to the crew's current HP, by 2.75x at max, and their HP by 1.35x" },
+            { "description": "Acquire new Captain Ability: Boosts ATK of all characters proportionally to the crew's current HP, by 2.75x at max and their HP by 1.35x" },
             { "description": "Boosts base ATK by 40" },
             { "description": "Boosts base HP by 100" },
-            { "description": "Acquire new Captain Ability 6: Boosts ATK of all characters proportionally to the crew's current HP, by 3.25x at max, and their HP by 1.35x" },
+            { "description": "Acquire new Captain Ability: Boosts ATK of all characters proportionally to the crew's current HP, by 3.25x at max and their HP by 1.35x" },
             { "description": "Acquire Potential 2: Enrage" },
         ],
         potential: [
@@ -19723,7 +19584,6 @@ window.details = {
             "base": "If this character has an [INT] orb and you hit a Perfect with him, keep his [INT] orb for the next turn",
             "level1": "Makes [PSY] orbs \"beneficial\" for this unit",
         },
-        sailorNotes: "#{beneficial}",
         limit: [
             { "description": "Boosts base ATK by 10" },
             { "description": "Boosts base ATK by 20" },
@@ -19738,7 +19598,7 @@ window.details = {
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base HP by 60" },
             { "description": "Boosts base ATK by 40" },
-            { "description": "Acquire Sailor Ability: Makes [PSY] orbs \"beneficial\" for this unit" },
+            { "description": "Acquire Sailor Ability 1: Makes [PSY] orbs \"beneficial\" for this unit" },
             { "description": "Acquire Potential 2: Slot Bind Self-reduction" },
         ],
         potential: [
@@ -19893,10 +19753,6 @@ window.details = {
             "level1": "Boosts base ATK, HP and RCV of Slasher characters by 40",
             "level2": "Makes [STR], [QCK], [DEX] and [PSY] orbs \"beneficial\" for this unit if your Captain is a Slasher character",
         },
-<<<<<<< HEAD
-        sailorNotes: "#{beneficial}",
-=======
->>>>>>> refs/remotes/origin/master
         limit: [
             { "description": "Boosts base HP by 10" },
             { "description": "Boosts base HP by 15" },
@@ -19991,7 +19847,7 @@ window.details = {
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base RCV by 30" },
             { "description": "Boosts base HP by 70" },
-            { "description": "Acquire Sailor Ability: If this character has a [PSY] orb and you hit a Perfect with him, keep his [PSY] orb for the next turn" },
+            { "description": "Acquire Sailor Ability 1: If this character has a [PSY] orb and you hit a Perfect with him, keep his [PSY] orb for the next turn" },
             { "description": "Acquire Potential 2: Slot Bind Self-reduction" },
         ],
         potential: [
@@ -20048,7 +19904,7 @@ window.details = {
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base HP by 65" },
             { "description": "Boosts base ATK by 50" },
-            { "description": "Acquire Sailor Ability: Boosts base ATK and HP of Slasher characters by 50" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK and HP of Slasher characters by 50" },
             { "description": "Acquire Potential 2: Critical Hit" },
         ],
         potential: [
@@ -20105,7 +19961,7 @@ window.details = {
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base HP by 60" },
             { "description": "Boosts base ATK by 50" },
-            { "description": "Acquire Sailor Ability: Reduces Paralysis duration for 1 turn for herself" },
+            { "description": "Acquire Sailor Ability 1: Reduces Paralysis duration for 1 turn for herself" },
             { "description": "Acquire Potential 2: Critical Hit" },
         ],
         potential: [
@@ -20136,7 +19992,6 @@ window.details = {
         special: "Deals 50,000 fixed damage to one enemy, reduces Chain Multiplier Limit and Chain Coefficient Reduction duration by 5 turns and changes adjacent orbs into matching orbs",
         specialName: "Strike of Determination",
         sailor: "Makes [STR] orbs \"beneficial\" for this unit"
-        sailorNotes: "#{beneficial}",
     },
     1877: {//Rebecca
         captain: "Boosts ATK of Striker characters by 2.25x and reduces damage received by 15%",
@@ -20146,10 +20001,6 @@ window.details = {
             "base": "Makes [STR] orbs \"beneficial\" for this unit",
             "level1": "Boosts base ATK, HP and RCV of Striker and Slasher characters by 50",
         },
-<<<<<<< HEAD
-        sailorNotes: "#{beneficial}",
-=======
->>>>>>> refs/remotes/origin/master
         limit: [
             { "description": "Boosts base RCV by 10" },
             { "description": "Boosts base RCV by 20" },
@@ -20164,7 +20015,7 @@ window.details = {
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base HP by 60" },
             { "description": "Boosts base ATK by 50" },
-            { "description": "Acquire Sailor Ability: Boosts base ATK, HP and RCV of Striker and Slasher characters by 50" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK, HP and RCV of Striker and Slasher characters by 50" },
             { "description": "Acquire Potential 2: Critical Hit" },
         ],
         potential: [
@@ -20235,7 +20086,7 @@ window.details = {
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base ATK by 40" },
             { "description": "Boosts base ATK by 50" },
-            { "description": "Acquire Sailor Ability : Boosts base HP of all characters by 150" },
+            { "description": "Acquire Sailor Ability 1: Boosts base HP of all characters by 150" },
             { "description": "Acquire Potential 2: [INT] Damage Reduction" },
         ],
         potential: [
@@ -20429,8 +20280,7 @@ window.details = {
                     "Level 5: If you hit a perfect with this character, there is a 90% chance to deal 10% of this character's attack in extra damage"
                 ]
             },
-        ],
-        potentialNotes: "#{enrage}",
+        ]
     },
     1882: {//Rayleigh V2
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight. Boosts ATK of all characters by 3.5x and boosts chances of getting Matching orbs if HP is below 30% at the start of the turn, 2.5x otherwise and boosts the HP and RCV of all characters by 1.25x",
@@ -20446,10 +20296,6 @@ window.details = {
             "level1": "Boosts ATK, HP and RCV of all characters by 50",
             "level2": "Makes [STR] and [QCK] orbs \"beneficial\" for this unit",
         },
-<<<<<<< HEAD
-        sailorNotes: "#{beneficial}",
-=======
->>>>>>> refs/remotes/origin/master
         limit: [
             { "description": "Boosts base RCV by 5" },
             { "description": "Boosts base HP by 20" },
@@ -20559,28 +20405,24 @@ window.details = {
             "level1": "Boosts base ATK, HP and RCV of Driven characters by 50",
             "level2": "Makes [PSY] orbs \"beneficial\" for Driven characters",
         },
-<<<<<<< HEAD
-        sailorNotes: "#{beneficial}",
-=======
->>>>>>> refs/remotes/origin/master
         limit: [
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base ATK by 10" },
             { "description": "Boosts base HP by 30" },
             { "description": "Boosts base RCV by 5" },
             { "description": "Acquire Potential 1: [INT] Damage Reduction" },
-            { "description": "Acquire new Captain Ability 1: Boosts ATK of Driven characters by 1.5x, recovers 1.6x character's RCV in HP at the end of each turn. Boosts ATK of Driven characters by 1.95x following a chain of same type attacks no lower than Good" },
+            { "description": "Acquire new Captain Ability: Boosts ATK of Driven characters by 1.5x, recovers 1.6x character's RCV in HP at the end of each turn. Boosts ATK of Driven characters by 1.95x following a chain of same type attacks no lower than Good" },
             { "description": "Acquire Sailor Ability 1: Boosts base ATK, HP and RCV of Driven characters by 50" },
             { "description": "Boosts base ATK by 15" },
             { "description": "Boosts base HP by 40" },
             { "description": "Boosts base RCV by 10" },
-            { "description": "Acquire new Captain Ability 2: Boosts ATK of Driven characters by 1.5x, recovers 1.7x character's RCV in HP at the end of each turn. Boosts ATK of Driven characters by 2.1x following a chain of same type attacks no lower than Good" },
+            { "description": "Acquire new Captain Ability: Boosts ATK of Driven characters by 1.5x, recovers 1.7x character's RCV in HP at the end of each turn. Boosts ATK of Driven characters by 2.1x following a chain of same type attacks no lower than Good" },
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base HP by 50" },
             { "description": "Boosts base RCV by 15" },
-            { "description": "Acquire new Captain Ability 3: Boosts ATK of Driven characters by 1.5x, recovers 1.8x character's RCV in HP at the end of each turn. Boosts ATK of Driven characters by 2.25x following a chain of same type attacks no lower than Good" },
+            { "description": "Acquire new Captain Ability: Boosts ATK of Driven characters by 1.5x, recovers 1.8x character's RCV in HP at the end of each turn. Boosts ATK of Driven characters by 2.25x following a chain of same type attacks no lower than Good" },
             { "description": "Reduce base Special Cooldown by 2 turns" },
             { "description": "Boosts base ATK by 25" },
             { "description": "Boosts base HP by 60" },
@@ -20590,7 +20432,7 @@ window.details = {
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base HP by 65" },
             { "description": "Reduce base Special Cooldown by 4 turns" },
-            { "description": "Acquire new Captain Ability 4: Boosts ATK of Driven characters by 1.75x, recovers 1.9x character's RCV in HP at the end of each turn. Boosts ATK of Driven characters by 2.625x following a chain of same type attacks no lower than Good" },
+            { "description": "Acquire new Captain Ability: Boosts ATK of Driven characters by 1.75x, recovers 1.9x character's RCV in HP at the end of each turn. Boosts ATK of Driven characters by 2.625x following a chain of same type attacks no lower than Good" },
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base HP by 70" },
             { "description": "Acquire Sailor Ability 2: Makes [PSY] orbs \"beneficial\" for Driven characters" },
@@ -20599,10 +20441,10 @@ window.details = {
             { "description": "Boosts base RCV by 30" },
             { "description": "Reduce base Special Cooldown by 5 turns" },
             { "description": "Acquire 1 additional Socket slot" },
-            { "description": "Acquire new Captain Ability 5: Boosts ATK of Driven characters by 2x, recovers 2x character's RCV in HP at the end of each turn. Boosts ATK of Driven characters by 3x following a chain of same type attacks no lower than Good" },
+            { "description": "Acquire new Captain Ability: Boosts ATK of Driven characters by 2x, recovers 2x character's RCV in HP at the end of each turn. Boosts ATK of Driven characters by 3x following a chain of same type attacks no lower than Good" },
             { "description": "Boosts base ATK by 40" },
             { "description": "Boosts base HP by 100" },
-            { "description": "Acquire new Captain Ability 6: Boosts ATK of Driven characters by 2.5x, recovers 2 character's RCV in HP at the end of each turn. Boosts ATK of Driven characters by 3.75x following a chain of same type attacks no lower than Good" },
+            { "description": "Acquire new Captain Ability: Boosts ATK of Driven characters by 2.5x, recovers 2 character's RCV in HP at the end of each turn. Boosts ATK of Driven characters by 3.75x following a chain of same type attacks no lower than Good" },
             { "description": "Acquire Potential 2: Pinch Healing" },
         ],
         potential: [
@@ -20841,10 +20683,6 @@ window.details = {
             "base": "Cannot be Blown Away",
             "level1": "Makes [INT] orbs \"beneficial\" for Driven characters",
         },
-<<<<<<< HEAD
-        sailorNotes: "#{beneficial}",
-=======
->>>>>>> refs/remotes/origin/master
         limit: [
             { "description": "Boosts base HP by 5" },
             { "description": "Boosts base HP by 10" },
@@ -20859,7 +20697,7 @@ window.details = {
             { "description": "Boosts base ATK by 40" },
             { "description": "Boosts base HP by 60" },
             { "description": "Boosts base HP by 65" },
-            { "description": "Acquire Sailor Ability: Makes [INT] orbs \"beneficial\" for Driven characters" },
+            { "description": "Acquire Sailor Ability 1: Makes [INT] orbs \"beneficial\" for Driven characters" },
             { "description": "Acquire Potential 2: Slot Bind Self-reduction" },
         ],
         potential: [
@@ -20890,7 +20728,6 @@ window.details = {
         special: "Reduces enemy Barrier duration by 1 turn, Reduces enemies Damage Nullification duration by 1 turn and deals 30x character's ATK in [QCK] damage to all enemies",
         specialName: "Diaper Bomb",
         sailor: "Makes [DEX] orbs \"beneficial\" for this unit",
-        sailorNotes: "#{beneficial}",
     },
     1904:{//Senor Pink
         captain: "Boosts ATK of Free Spirit characters by 2.75x",
@@ -20900,10 +20737,6 @@ window.details = {
             "base": "Makes [DEX] orbs \"beneficial\" for this unit",
             "level1": "Boosts base ATK, HP and RCV of Free Spirit characters by 50",
         },
-<<<<<<< HEAD
-        sailorNotes: "#{beneficial}",
-=======
->>>>>>> refs/remotes/origin/master
         limit: [
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base ATK by 30" },
@@ -20918,7 +20751,7 @@ window.details = {
             { "description": "Boosts base RCV by 10" },
             { "description": "Boosts base RCV by 20" },
             { "description": "Boosts base RCV by 30" },
-            { "description": "Acquire Sailor Ability: Boosts base ATK, HP and RCV of Free Spirit characters by 50" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK, HP and RCV of Free Spirit characters by 50" },
             { "description": "Acquire Potential 2: Pinch Healing" },
         ],
         potential: [
@@ -20958,10 +20791,6 @@ window.details = {
             "base": "Reduces Paralysis duration by 1 turn",
             "level1": "Makes [RCV] orbs \"beneficial\" for Driven characters",
         },
-<<<<<<< HEAD
-        sailorNotes: "#{beneficial}",
-=======
->>>>>>> refs/remotes/origin/master
         limit: [
             { "description": "Boosts base RCV by 10" },
             { "description": "Boosts base RCV by 15" },
@@ -20976,7 +20805,7 @@ window.details = {
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base ATK by 40" },
             { "description": "Boosts base HP by 60" },
-            { "description": "Acquire Sailor Ability: Makes [RCV] orbs \"beneficial\" for Driven characters" },
+            { "description": "Acquire Sailor Ability 1: Makes [RCV] orbs \"beneficial\" for Driven characters" },
             { "description": "Acquire Potential 2: Slot Bind Self-reduction" },
         ],
         potential: [
@@ -21018,10 +20847,6 @@ window.details = {
             "base": "Boosts base ATK of the characters in the top row by 100",
             "level1": "Makes [TND] orbs \"beneficial\" for Driven characters",
         },
-<<<<<<< HEAD
-        sailorNotes: "#{beneficial}",
-=======
->>>>>>> refs/remotes/origin/master
         limit: [
             { "description": "Boosts base HP by 20" },
             { "description": "Boosts base HP by 40" },
@@ -21064,14 +20889,12 @@ window.details = {
     },
     1909:{//V2 Doflamingo
         captain: "If there are 6 Driven characters in your crew, boosts ATK of Driven characters by 3.9x if they have a matching orb, by 3.25x otherwise and their HP by 1.2x. Lowers chances of getting STR orbs and makes DEX and QCK orbs \"beneficial\" to Driven characters",
-        captainNotes: "#{beneficial}",
         special: "Deals 200% of the damage dealt in Overkill Damage in the previous turn as typeless damage to all enemies.",
         specialNotes: "Overkill Damage is damage dealt over the enemy's current HP with normal attacks that killed them. For example, dealing 2,100,000 damage to an enemy with 1,000,000 HP will count as 1,100,000 Overkill Damage. This stacks for each enemy killed in the previous turn. If the enemy dies by End-Of-Turn damage, your Overkill Damage dealt last turn will be 0.",
         specialName: "Flap Thread",
     },
     1910:{//V2 Doflamingo
         captain: "If there are 6 Driven characters in your crew, boosts ATK of Driven characters by 3.9x if they have a matching orb, by 3.25x otherwise and their HP by 1.2x. Lowers chances of getting STR orbs and makes DEX and QCK orbs \"beneficial\" to Driven characters",
-        captainNotes: "#{beneficial}",
         special: "Deals 200% of the damage dealt in Overkill Damage in the previous turn as typeless damage to all enemies.",
         specialNotes: "Overkill Damage is damage dealt over the enemy's current HP with normal attacks that killed them. For example, dealing 2,100,000 damage to an enemy with 1,000,000 HP will count as 1,100,000 Overkill Damage. This stacks for each enemy killed in the previous turn. If the enemy dies by End-Of-Turn damage, your Overkill Damage dealt last turn will be 0.",
         specialName: "Flap Thread",
@@ -21080,10 +20903,6 @@ window.details = {
             "level1": "Makes [QCK] orbs \"beneficial\" for this unit",
             "level2": "Makes [DEX] orbs \"beneficial\" for Driven characters",
         },
-<<<<<<< HEAD
-        sailorNotes: "#{beneficial}",
-=======
->>>>>>> refs/remotes/origin/master
         limit: [
             { "description": "Boosts base ATK by 10" },
             { "description": "Boosts base ATK by 15" },
@@ -21188,47 +21007,27 @@ window.details = {
         specialName: "Gomu Gomu no Leo Bazooka",
         sailor: {
             "base": "None",
-<<<<<<< HEAD
-            "level1": "Boost base stats of Free Spirit characters by 30",
-            "level2": "Boost base stats of Powerhouse characters by 30",
-=======
             "level1": "Boosts base ATK, HP and RCV of Free Spirit characters by 30",
             "level2": "Boosts base ATK, HP and RCV of Powerhouse characters by 30",
->>>>>>> refs/remotes/origin/master
         },
         limit: [
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base ATK by 10" },
             { "description": "Boosts base HP by 30" },
             { "description": "Boosts base RCV by 5" },
-<<<<<<< HEAD
             { "description": "Acquire Potential 1: [STR] Damage Reduction" },
-            { "description": "Acquire new Captain Ability 1: Boosts ATK of Powerhouse and Free Spirit characters by 2x after scoring 2 Perfects in a row and reduce damage received by 2%" },
-            { "description": "Acquire Sailor Ability 1: Boost base stats of Free Spirit characters by 30" },
+            { "description": "Acquire new Captain Ability: Boosts ATK of Powerhouse and Free Spirit characters by 2x after scoring 2 Perfects in a row and reduce damage received by 2%" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK, HP and RCV of Free Spirit characters by 30" },
             { "description": "Boosts base ATK by 15" },
             { "description": "Boosts base HP by 40" },
             { "description": "Boosts base RCV by 10" },
-            { "description": "Acquire new Captain Ability 2: Boosts ATK of Powerhouse and Free Spirit characters by 2x after scoring 2 Perfects in a row and reduce damage received by 4%" },
+            { "description": "Acquire new Captain Ability: Boosts ATK of Powerhouse and Free Spirit characters by 2x after scoring 2 Perfects in a row and reduce damage received by 4%" },
             { "description": "Acquire 1 additional Socket slot" },
-=======
-            { "description": "Aquire Potential 1: [STR] Damage Reduction" },
-            { "description": "Aquire new Captain Ability: Boosts ATK of Powerhouse and Free Spirit characters by 2x after scoring 2 Perfects in a row and reduce damage received by 2%" },
-            { "description": "Aquire Sailor Ability 1: Boosts base ATK, HP and RCV of Free Spirit characters by 30" },
-            { "description": "Boosts base ATK by 15" },
-            { "description": "Boosts base HP by 40" },
-            { "description": "Boosts base RCV by 10" },
-            { "description": "Aquire new Captain Ability: Boosts ATK of Powerhouse and Free Spirit characters by 2x after scoring 2 Perfects in a row and reduce damage received by 4%" },
-            { "description": "Aquire 1 additional Socket slot" },
->>>>>>> refs/remotes/origin/master
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base HP by 50" },
             { "description": "Boosts base RCV by 15" },
-<<<<<<< HEAD
-            { "description": "Acquire new Captain Ability 3: Boosts ATK of Powerhouse and Free Spirit characters by 2x after scoring 2 Perfects in a row, boosts by 3x after scoring 4 Perfects in a row and reduce damage received by 4%" },
-=======
-            { "description": "Aquire new Captain Ability: Boosts ATK of Powerhouse and Free Spirit characters by 2x after scoring 2 Perfects in a row, boosts by 3x after scoring 4 Perfects in a row and reduce damage received by 4%" },
->>>>>>> refs/remotes/origin/master
+            { "description": "Acquire new Captain Ability: Boosts ATK of Powerhouse and Free Spirit characters by 2x after scoring 2 Perfects in a row, boosts by 3x after scoring 4 Perfects in a row and reduce damage received by 4%" },
             { "description": "Reduce base Special Cooldown by 2 turns" },
             { "description": "Boosts base ATK by 25" },
             { "description": "Boosts base HP by 60" },
@@ -21238,31 +21037,19 @@ window.details = {
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base HP by 65" },
             { "description": "Reduce base Special Cooldown by 4 turns" },
-<<<<<<< HEAD
-            { "description": "Acquire new Captain Ability 4: Boosts ATK of Powerhouse and Free Spirit characters by 2x after scoring 2 Perfects in a row, boosts by 3.25x after scoring 4 Perfects in a row and reduce damage received by 4%" },
+            { "description": "Acquire new Captain Ability: Boosts ATK of Powerhouse and Free Spirit characters by 2x after scoring 2 Perfects in a row, boosts by 3.25x after scoring 4 Perfects in a row and reduce damage received by 4%" },
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base HP by 70" },
-            { "description": "Acquire Sailor Ability 2: Boost base stats of Powerhouse characters by 30" },
-=======
-            { "description": "Aquire new Captain Ability: Boosts ATK of Powerhouse and Free Spirit characters by 2x after scoring 2 Perfects in a row, boosts by 3.25x after scoring 4 Perfects in a row and reduce damage received by 4%" },
-            { "description": "Boosts base ATK by 30" },
-            { "description": "Boosts base HP by 70" },
-            { "description": "Aquire Sailor Ability 2: Boosts base ATK, HP and RCV of Powerhouse characters by 30" },
->>>>>>> refs/remotes/origin/master
+            { "description": "Acquire Sailor Ability 2: Boosts base ATK, HP and RCV of Powerhouse characters by 30" },
             { "description": "Boosts base ATK by 35" },
             { "description": "Boosts base HP by 85" },
             { "description": "Boosts base RCV by 30" },
             { "description": "Reduce base Special Cooldown by 5 turns" },
-<<<<<<< HEAD
             { "description": "Acquire 1 additional Socket slot" },
-            { "description": "Acquire new Captain Ability 5: Boosts ATK of Powerhouse and Free Spirit characters by 2x after scoring 2 Perfects in a row, boosts by 3.5x after scoring 4 Perfects in a row and reduce damage received by 4%" },
-=======
-            { "description": "Aquire 1 additional Socket slot" },
-            { "description": "Aquire new Captain Ability: Boosts ATK of Powerhouse and Free Spirit characters by 2x after scoring 2 Perfects in a row, boosts by 3.5x after scoring 4 Perfects in a row and reduce damage received by 4%" },
->>>>>>> refs/remotes/origin/master
+            { "description": "Acquire new Captain Ability: Boosts ATK of Powerhouse and Free Spirit characters by 2x after scoring 2 Perfects in a row, boosts by 3.5x after scoring 4 Perfects in a row and reduce damage received by 4%" },
             { "description": "Boosts base ATK by 40" },
             { "description": "Boosts base HP by 100" },
-            { "description": "Acquire new Captain Ability 6: Boosts ATK of Powerhouse and Free Spirit characters by 2x after scoring 2 Perfects in a row, boosts by 4x and reduce damage received by 4% after scoring 4 Perfects in a row" },
+            { "description": "Acquire new Captain Ability: Boosts ATK of Powerhouse and Free Spirit characters by 2x after scoring 2 Perfects in a row, boosts by 4x and reduce damage received by 4% after scoring 4 Perfects in a row" },
             { "description": "Acquire Potential 2: Enrage" },
         ],
         potential: [
@@ -21286,8 +21073,7 @@ window.details = {
                     "Level 5: Boosts base ATK by 150"
                 ]
             },
-        ],
-        potentialNotes: "#{enrage}",
+        ]
     },
     1917: {//Reiju
         captain: "Boosts ATK of STR characters by 2x and reduces damage received by 10%",
@@ -21325,14 +21111,8 @@ window.details = {
         sailor: {
             "base": "None",
             "level1": "Boosts base ATK of Striker characters by 50",
-<<<<<<< HEAD
-            "level2": " Makes [RCV] and [TND] orbs \"beneficial\" for this unit",
-        },
-        sailorNotes: "#{beneficial}",
-=======
             "level2": "Makes [RCV] and [TND] orbs \"beneficial\" for this unit",
         },
->>>>>>> refs/remotes/origin/master
         limit: [
             { "description": "Boosts base ATK by 10" },
             { "description": "Boosts base ATK by 20" },
@@ -21420,14 +21200,8 @@ window.details = {
         sailor: {
             "base": "None",
             "level1": "Boosts base HP of Driven characters by 75",
-<<<<<<< HEAD
-            "level2": "Makes [PSY] orbs \"beneficial\" for Driven characters",
-        },
-        sailorNotes: "#{beneficial}",
-=======
             "level2": "Makes PSY orbs \"beneficial\" for Driven characters",
         },
->>>>>>> refs/remotes/origin/master
         limit: [
             { "description": "Boosts base RCV by 10" },
             { "description": "Boosts base RCV by 10" },
@@ -21442,7 +21216,7 @@ window.details = {
             { "description": "Boosts base HP by 80" },
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base ATK by 50" },
-            { "description": "Acquire Sailor Ability 2: Makes [PSY] orbs \"beneficial\" for Driven characters" },
+            { "description": "Acquire Sailor Ability 2: Makes PSY orbs \"beneficial\" for Driven characters" },
             { "description": "Acquire Potential 2: Slot Bind Self-reduction" },
         ],
         potential: [
@@ -21482,33 +21256,33 @@ window.details = {
             { "description": "Boosts base ATK by 5" },
             { "description": "Boosts base ATK by 10" },
             { "description": "Boosts base ATK by 15" },
-            { "description": "Aquire Potential 1: [QCK] Damage Reduction" },
+            { "description": "Acquire Potential 1: [QCK] Damage Reduction" },
             { "description": "Boosts base RCV by 5" },
             { "description": "Boosts base RCV by 5" },
             { "description": "Boosts base RCV by 10" },
-            { "description": "Aquire Sailor Ability 1: Boosts base ATK of Cerebral characters by 50" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK of Cerebral characters by 50" },
             { "description": "Boosts base HP by 20" },
             { "description": "Boosts base HP by 30" },
             { "description": "Boosts base HP by 40" },
             { "description": "Boosts base ATK by 15" },
             { "description": "Boosts base RCV by 20" },
             { "description": "Boosts base HP by 50" },
-            { "description": "Aquire Potential 2: Critical Hit" },
+            { "description": "Acquire Potential 2: Critical Hit" },
             { "description": "Boosts base HP by 60" },
             { "description": "Boosts base HP by 70" },
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base ATK by 30" },
-            { "description": "Aquire 1 additional Socket slot" },
+            { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base HP by 75" },
             { "description": "Boosts base RCV by 30" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base ATK by 50" },
             { "description": "Boosts base RCV by 30" },
             { "description": "Boosts base HP by 75" },
-            { "description": "Aquire Sailor Ability 2: Makes DEX orbs \"beneficial\" for Cerebral characters" },
+            { "description": "Acquire Sailor Ability 2: Makes DEX orbs \"beneficial\" for Cerebral characters" },
             { "description": "Boosts base HP by 80" },
             { "description": "Boosts base ATK by 55" },
-            { "description": "Aquire Potential 3: Enrage" },
+            { "description": "Acquire Potential 3: Enrage" },
         ],
         potential: [
             {
@@ -21625,20 +21399,12 @@ window.details = {
         specialName: "200,000,000 Volt Amaru [Neo]",
         specialNotes: "#{fixed}",
         captain: "Boosts ATK of DEX characters by 2x",
-<<<<<<< HEAD
-        captainNotes: "This information is based on Raid Enel [602] and may differ than actual details and will be updated once information is received."
-=======
->>>>>>> refs/remotes/origin/master
     },
     1930: {//Enel Neo
         special: "Reduces crew's current HP by 90%, deals 20,000 fixed damage to all enemies, boosts ATK of DEX characters by 2x for 1 turn",
         specialName: "200,000,000 Volt Amaru [Neo]",
         specialNotes: "#{fixed}",
         captain: "Boosts ATK of DEX characters by 2.25x, recovers 5x character's RCV in HP at the end of each turn",
-<<<<<<< HEAD
-        captainNotes: "This information is based on Raid Enel [603] and may differ than actual details and will be updated once information is received."
-=======
->>>>>>> refs/remotes/origin/master
     },
     1931: {//Sandersonia
         captain: "Boosts ATK of Free Spirit characters by 1.75x",
@@ -21658,7 +21424,7 @@ window.details = {
         captain: "Boosts ATK of Fighter characters by 1.75x and boosts ATK of Free Spirit characters by 1.5x",
         captainNotes: "The bonus is cumulative. Fighter + Free Spirit characters get a 2.625x bonus.",
         special: "Makes [DEX] orb \"beneficial\" for Fighter characters for 1 turn and boosts ATK of Fighter characters by 1.5x for 1 turn. If \"The Trio Crawling Away from the Heavens: The Third Daughter\" is used again in the same turn the special is activated in, boosts ATK of Fighter characters by 1.75x instead.",
-        specialNotes: "This special is boosted if you use Boa Marigold's [1932] special in the same turn.<br>#{beneficial}",
+        specialNotes: "This special is boosted if you use Boa Marigold's [1932] special in the same turn",
         specialName: "The Trio Crawling Away from the Heavens: The Eldest Daughter",
         sailor: "Boosts own base ATK by 100 if this character is the 1st in the chain to attack",
     },
@@ -21675,16 +21441,9 @@ window.details = {
         specialName: "Franky Cannon",
         sailor: {
             "base": "None",
-<<<<<<< HEAD
-            "level1": "Boosts base ATK, HP and RCV of Shooter, Slasher, Fighter, and Striker characters by 50",
-            "level2": "Makes [QCK] orbs \"beneficial\" for Shooter, Slasher, Fighter, and Striker characters",
-        },
-        sailorNotes: "#{beneficial}",
-=======
             "level1": "Boosts base ATK, HP and RCV of Shooter, Slasher, Fighter and Striker characters by 50",
             "level2": "Makes [QCK] orbs \"beneficial\" for Shooter, Slasher, Fighter and Striker characters",
         },
->>>>>>> refs/remotes/origin/master
         limit: [
             { "description": "Boosts base ATK by 2" },
             { "description": "Boosts base ATK by 2" },
@@ -21693,11 +21452,7 @@ window.details = {
             { "description": "Boosts base HP by 38" },
             { "description": "Boosts base HP by 38" },
             { "description": "Boosts base HP by 38" },
-<<<<<<< HEAD
-            { "description": "Acquire Sailor Ability 1: Boosts base ATK, HP and RCV of Shooter, Slasher, Fighter, and Striker characters by 50" },
-=======
-            { "description": "Aquire Sailor Ability 1: Boosts base ATK, HP and RCV of Shooter, Slasher, Fighter and Striker characters by 50" },
->>>>>>> refs/remotes/origin/master
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK, HP and RCV of Shooter, Slasher, Fighter and Striker characters by 50" },
             { "description": "Boosts base RCV by 1" },
             { "description": "Boosts base RCV by 1" },
             { "description": "Boosts base RCV by 38" },
@@ -21716,11 +21471,7 @@ window.details = {
             { "description": "Boosts base ATK by 38" },
             { "description": "Boosts base RCV by 38" },
             { "description": "Boosts base HP by 38" },
-<<<<<<< HEAD
-            { "description": "Acquire Sailor Ability 2: Makes [QCK] orbs \"beneficial\" for Shooter, Slasher, Fighter, and Striker characters" },
-=======
-            { "description": "Aquire Sailor Ability 2: Makes [QCK] orbs \"beneficial\" for Shooter, Slasher, Fighter and Striker characters" },
->>>>>>> refs/remotes/origin/master
+            { "description": "Acquire Sailor Ability 2: Makes [QCK] orbs \"beneficial\" for Shooter, Slasher, Fighter and Striker characters" },
             { "description": "Boosts base ATK by 38" },
             { "description": "Boosts base HP by 38" },
             { "description": "Acquire Potential 3: Barrier Penetration" },
@@ -21783,7 +21534,6 @@ window.details = {
     1940: {//Ace
         captain: "If there is a [STR], [QCK] and [PSY] character in your crew, boosts ATK of [STR], [QCK] and [PSY] characters by 1.75x and their HP and RCV by 1.05x",
         special: "Changes all orbs, including [BLOCK] orbs, to [STR] orbs, boosts ATK of [STR], [QCK] and [PSY] characters by 1.75x for 1 turn, makes [STR] orbs \"beneficial\" for [STR], [QCK] and [PSY] characters if your Captain is a Free Spirit character",
-        specialNotes: "#{beneficial}",
         specialName: "Sacred Flames: Unknown Fire",
     },
     1941: {//Ace
@@ -21797,35 +21547,30 @@ window.details = {
             "level6": "If there is a [STR], [QCK] and [PSY] character in your crew, boosts ATK of [STR], [QCK] and [PSY] characters by 3.44x if they have a [STR] orb, by 2.75x otherwise and their HP and RCV by 1.2x",
         },
         special: "Changes all orbs, including [BLOCK] orbs, to [STR] orbs, boosts ATK of [STR], [QCK], [PSY] characters by 1.75x for 1 turn, makes [STR] orbs \"beneficial\" for [STR], [QCK] and [PSY] characters if your Captain is a Free Spirit character",
-        specialNotes: "#{beneficial}",
         specialName: "Sacred Flames: Unknown Fire",
         sailor: {
             "base": "None",
             "level1": "Boosts base ATK, HP and RCV of Free Spirit characters by 30",
             "level2": "Makes [PSY] orbs \"beneficial\" for this unit",
         },
-<<<<<<< HEAD
-        sailorNotes: "#{beneficial}",
-=======
->>>>>>> refs/remotes/origin/master
         limit: [
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base ATK by 10" },
             { "description": "Boosts base HP by 30" },
             { "description": "Boosts base RCV by 5" },
             { "description": "Acquire Potential 1: [DEX] Damage Reduction" },
-            { "description": "Acquire new Captain Ability 1: " },
+            { "description": "Acquire new Captain Ability: " },
             { "description": "Acquire Sailor Ability 1: Boosts base ATK, HP and RCV of Free Spirit characters by 30" },
             { "description": "Boosts base ATK by 15" },
             { "description": "Boosts base HP by 40" },
             { "description": "Boosts base RCV by 10" },
-            { "description": "Acquire new Captain Ability 2: " },
+            { "description": "Acquire new Captain Ability: " },
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base HP by 50" },
             { "description": "Boosts base RCV by 15" },
-            { "description": "Acquire new Captain Ability 3: " },
+            { "description": "Acquire new Captain Ability: " },
             { "description": "Reduce base Special Cooldown by 2 turns" },
             { "description": "Boosts base ATK by 25" },
             { "description": "Boosts base HP by 60" },
@@ -21835,7 +21580,7 @@ window.details = {
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base HP by 55" },
             { "description": "Reduce base Special Cooldown by 4 turns" },
-            { "description": "Acquire new Captain Ability 4: " },
+            { "description": "Acquire new Captain Ability: " },
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base HP by 50" },
             { "description": "Acquire Sailor Ability 2: Makes [PSY] orbs \"beneficial\" for this unit" },
@@ -21844,10 +21589,10 @@ window.details = {
             { "description": "Boosts base RCV by 50" },
             { "description": "Reduce base Special Cooldown by 5 turns" },
             { "description": "Acquire 1 additional Socket slot" },
-            { "description": "Acquire new Captain Ability 5: " },
+            { "description": "Acquire new Captain Ability: " },
             { "description": "Boosts base ATK by 60" },
             { "description": "Boosts base HP by 60" },
-            { "description": "Acquire new Captain Ability 6: If there is a [STR], [QCK] and [PSY] character in your crew, boosts ATK of [STR], [QCK] and [PSY] characters by 3.44x if they have a [STR] orb, by 2.75x otherwise and their HP and RCV by 1.2x" },
+            { "description": "Acquire new Captain Ability: " },
             { "description": "Acquire Potential 2: Slot Bind Self-reduction" },
         ],
         potential: [
@@ -21935,7 +21680,7 @@ window.details = {
     },
     1945: {//Pedro
         captain: "Boosts ATK of Cerebral characters by 2.5x and makes [PSY] and [INT] orbs \"beneficial\" to Cerebral characters",
-        captainNotes: "These stats are placeholders so Pedro works in the calculator.<br>#{beneficial}",
+        captainNotes: "These stats are placeholders so Pedro works in the calculator",
         special: "Reduces crew's current HP by 95%, deals 50x character's ATK in typeless damage to all enemies that will ignore damage negating abilities and barriers, boosts the Color Affinity of Cerebral characters by 1.75x for 2 turns",
         specialNotes: "#{ignoreBarrier}",
         specialName: "Explosive Reply",
@@ -21944,10 +21689,6 @@ window.details = {
             "level1": "Boosts base ATK of Cerebral characters by 35",
             "level2": "Makes [PSY] orbs \"beneficial\" for Cerebral characters",
         },
-<<<<<<< HEAD
-        sailorNotes: "#{beneficial}",
-=======
->>>>>>> refs/remotes/origin/master
         limit: [
             { "description": "Boosts base RCV by 10" },
             { "description": "Boosts base RCV by 20" },
@@ -21992,13 +21733,13 @@ window.details = {
     1946: {//Vander Decken
         captain: "Boosts ATK of all characters by 1.75x.",
         special: "Locks orbs for 1 turn, amplifies the effect of orbs by 1.5x for 1 turn and deals several times character's ATK in Typeless damage to one enemy",
-        specialNotes: "#{specialProportional : higher : ??? * ( (remaining HP) / (total HP) )}",
+        specialNotes: "#{specialProportional : higher : 85 * ( (remaining HP) / (total HP) )}",
         specialName: "Shooting at the Heart",
     },
     1947: {//Vander Decken
         captain: "Boosts ATK of all characters by 2x. Recovers 2x character's RCV in HP at the end of each turn.",
         special: "Locks orbs for 1 turn, amplifies the effect of orbs by 1.5x for 1 turn and deals several times character's ATK in Typeless damage to one enemy",
-        specialNotes: "#{specialProportional : higher : ??? * ( (remaining HP) / (total HP) )}",
+        specialNotes: "#{specialProportional : higher : 85 * ( (remaining HP) / (total HP) )}",
         specialName: "Shooting at the Heart",
     },
     1948: {//Wadatsumi
@@ -22012,22 +21753,12 @@ window.details = {
         specialName: "Expanding Superpower",
     },
     1950:{//Robin
-<<<<<<< HEAD
-        captain: "Boosts ATK of Cerebral characters by 3.25x, and their RCV by 1.5x, makes [RCV] orbs \"beneficial\" to Cerebral characters and reduce damage received by 20%",
-        captainNotes: "#{beneficial}",
-=======
         captain: "Boosts ATK of Cerebral characters by 3.25x and their RCV by 1.5x, makes [RCV] orbs \"beneficial\" to Cerebral characters and reduce damage received by 20%",
->>>>>>> refs/remotes/origin/master
         special: "Reduces damage received by 100% for 1 turn. If your Captain is a Cerebral character, changes adjacent orbs into [RCV] orbs",
         specialName: "Moth Orchid",
     },
     1951:{//Robin
-<<<<<<< HEAD
-        captain: "Boosts ATK of Cerebral characters by 3.25x, and their RCV by 1.5x, makes [RCV] orbs \"beneficial\" to Cerebral characters and reduce damage received by 20%",
-        captainNotes: "#{beneficial}",
-=======
         captain: "Boosts ATK of Cerebral characters by 3.25x and their RCV by 1.5x, makes [RCV] orbs \"beneficial\" to Cerebral characters and reduce damage received by 20%",
->>>>>>> refs/remotes/origin/master
         special: "Reduces damage received by 100% for 1 turn. If your Captain is a Cerebral character, changes adjacent orbs into [RCV] orbs",
         specialName: "Moth Orchid",
         sailor: {
@@ -22035,10 +21766,6 @@ window.details = {
             "level1": "Boosts base ATK and HP of Cerebral characters by 50",
             "level2": "Makes [PSY], [RCV] and [TND] orbs \"beneficial\" for Cerebral characters",
         },
-<<<<<<< HEAD
-        sailorNotes: "#{beneficial}",
-=======
->>>>>>> refs/remotes/origin/master
         limit: [
             { "description": "Boosts base ATK by 10" },
             { "description": "Boosts base ATK by 10" },
@@ -22127,7 +21854,7 @@ window.details = {
             { "description": "Boosts base HP by 40" },
             { "description": "Boosts base RCV by 10" },
             { "description": "Boosts base RCV by 20" },
-            { "description": "Acquire Sailor Ability: Boosts base ATK, HP and RCV of Fighter and Cerebral characters by 35" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK, HP and RCV of Fighter and Cerebral characters by 35" },
             { "description": "Boosts base HP by 50" },
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base HP by 70" },
@@ -22173,10 +21900,6 @@ window.details = {
             "base": "If this character has a [RCV] orb and you hit a Perfect with her, keep her [RCV] orb for the next turn",
             "level1": "Makes [QCK] orbs \"beneficial\" for Cerebral characters",
         },
-<<<<<<< HEAD
-        sailorNotes: "#{beneficial}",
-=======
->>>>>>> refs/remotes/origin/master
         limit: [
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base HP by 20" },
@@ -22190,7 +21913,7 @@ window.details = {
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base HP by 80" },
             { "description": "Boosts base ATK by 40" },
-            { "description": "Acquire Sailor Ability: Makes [QCK] orbs \"beneficial\" for Cerebral characters" },
+            { "description": "Acquire Sailor Ability 1: Makes [QCK] orbs \"beneficial\" for Cerebral characters" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Acquire Potential 2: Enrage" },
         ],
@@ -22223,7 +21946,6 @@ window.details = {
         special: "Reduces Chain Multiplier Limit and Chain Coefficient Reduction duration by 3 turns and locks the chain multiplier at 2.75x for 1 turn",
         specialName: "Hopping Crash",
         sailor: "Makes [RCV] orbs \"beneficial\" for all characters",
-        sailorNotes: "#{beneficial}",
     },
     1957: {//Carrot
         captain: "Boosts ATK of [STR] characters by 2.5x and their RCV by 1.25x",
@@ -22233,10 +21955,6 @@ window.details = {
             "base": "Makes [RCV] orbs \"beneficial\" for all characters",
             "level1": "Adds 2.5x character's ATK as Additional Typeless Damage",
         },
-<<<<<<< HEAD
-        sailorNotes: "#{beneficial}",
-=======
->>>>>>> refs/remotes/origin/master
         limit: [
             { "description": "Boosts base RCV by 20" },
             { "description": "Boosts base HP by 10" },
@@ -22245,7 +21963,7 @@ window.details = {
             { "description": "Boosts base HP by 40" },
             { "description": "Boosts base HP by 50" },
             { "description": "Boosts base HP by 50" },
-            { "description": "Acquire Sailor Ability: Adds 2.5x character's ATK as Additional Typeless Damage" },
+            { "description": "Acquire Sailor Ability 1: Adds 2.5x character's ATK as Additional Typeless Damage" },
             { "description": "Boosts base ATK by 30" },
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base RCV by 30" },
@@ -22301,7 +22019,7 @@ window.details = {
             { "description": "Boosts base HP by 20" },
             { "description": "Boosts base HP by 40" },
             { "description": "Boosts base HP by 60" },
-            { "description": "Acquire Sailor Ability: Changes all orbs into [RCV] orbs at the start of the fight" },
+            { "description": "Acquire Sailor Ability 1: Changes all orbs into [RCV] orbs at the start of the fight" },
             { "description": "Boosts base ATK by 40" },
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base RCV by 30" },
@@ -22435,18 +22153,18 @@ window.details = {
             { "description": "Boosts base HP by 30" },
             { "description": "Boosts base RCV by 5" },
             { "description": "Acquire Potential 1: Reduce No Healing duration" },
-            { "description": "Acquire new Captain Ability 1: " },
+            { "description": "Acquire new Captain Ability: " },
             { "description": "Acquire Sailor Ability 1: Boosts base ATK, HP and RCV of Cerebral characters by 30" },
             { "description": "Boosts base ATK by 15" },
             { "description": "Boosts base HP by 40" },
             { "description": "Boosts base RCV by 10" },
-            { "description": "Acquire new Captain Ability 2: " },
+            { "description": "Acquire new Captain Ability: " },
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base HP by 50" },
             { "description": "Boosts base RCV by 15" },
-            { "description": "Acquire new Captain Ability 3: " },
+            { "description": "Acquire new Captain Ability: " },
             { "description": "Reduce base Special Cooldown by 2 turns" },
             { "description": "Boosts base ATK by 25" },
             { "description": "Boosts base HP by 60" },
@@ -22456,7 +22174,7 @@ window.details = {
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base HP by 55" },
             { "description": "Reduce base Special Cooldown by 4 turns" },
-            { "description": "Acquire new Captain Ability 4: " },
+            { "description": "Acquire new Captain Ability: " },
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base HP by 50" },
             { "description": "Acquire Sailor Ability 2: Makes [DEX] orbs \"beneficial\" for Cerebral characters unit" },
@@ -22465,10 +22183,10 @@ window.details = {
             { "description": "Boosts base RCV by 50" },
             { "description": "Reduce base Special Cooldown by 5 turns" },
             { "description": "Acquire 1 additional Socket slot" },
-            { "description": "Acquire new Captain Ability 5: " },
+            { "description": "Acquire new Captain Ability: " },
             { "description": "Boosts base ATK by 60" },
             { "description": "Boosts base HP by 60" },
-            { "description": "Acquire new Captain Ability 6: Boosts ATK of Cerebral characters by 2.25x and their HP and RCV by 1.2x and boosts chain by 1.5x if HP is above 70% or below 30% at the start of the turn" },
+            { "description": "Acquire new Captain Ability: " },
             { "description": "Acquire Potential 2: Enrage" },
         ],
         potential: [
@@ -22517,7 +22235,7 @@ window.details = {
         sailor: "Boosts base ATK of Cerebral characters by 75",
     },
     1974: {//Hawkins
-        captain: "Boosts ATK of Cerebral Characters by 3.25x if they have a matching orb, by 2.5x otherwise and makes [STR] orbs \"beneficial\" to Cerebral characters",
+        captain: "Boosts ATK of Cerebral characters by 3.25x if they have a matching orb, by 2.5x otherwise and makes [STR] orbs \"beneficial\" to Cerebral characters",
         captainNotes: "#{beneficial}",
         special: [
             {
@@ -22539,26 +22257,43 @@ window.details = {
             "base": "Boosts base ATK of Cerebral characters by 75",
             "level1": "Adds 2x character's ATK as Additional Typeless Damage",
         },
-        limit: "This character has a Limit Break Tree",
+        limit: [
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base HP by 10" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Acquire Potential 1: Reduce No Healing duration" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Acquire Sailor Ability: Adds 2x character's ATK as Additional Typeless Damage" },
+            { "description": "Boosts base HP by 60" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Boosts base HP by 80" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base ATK by 40" },
+            { "description": "Acquire Potential 2: Enrage" },
+
+        ],
         potential: [
             {
                 "Name": "Reduce No Healing duration",
                 "description": [ 
                     "Level 1: Reduces No Healing duration by 1 turn",
-                    "Level 2: Reduces No Healing duration by ? turn",
-                    "Level 3: Reduces No Healing duration by ? turns",
-                    "Level 4: Reduces No Healing duration by ? turns",
-                    "Level 5: Reduces No Healing duration by ? turns"
+                    "Level 2: Reduces No Healing duration by 2 turn",
+                    "Level 3: Reduces No Healing duration by 3 turns",
+                    "Level 4: Reduces No Healing duration by 4 turns",
+                    "Level 5: Reduces No Healing duration by 5 turns"
                 ]
             },
             {
                 "Name": "Enrage",
                 "description": [ 
                     "Level 1: Boosts base ATK by 20",
-                    "Level 2: Boosts base ATK by ??",
-                    "Level 3: Boosts base ATK by ??",
-                    "Level 4: Boosts base ATK by ??",
-                    "Level 5: Boosts base ATK by ??"
+                    "Level 2: Boosts base ATK by 40",
+                    "Level 3: Boosts base ATK by 60",
+                    "Level 4: Boosts base ATK by 80",
+                    "Level 5: Boosts base ATK by 120"
                 ]
             },
         ],
@@ -22579,15 +22314,17 @@ window.details = {
     1977: {//Rayleigh
         captain: "Not Translated",
         special: "Cuts the current HP of one enemy by 20%, reduces Bind and Silence duration by 3 turns, boosts chances of getting [DEX], [PSY] and [INT] orbs for 3 turns and makes [DEX], [PSY] and [INT] orbs \"beneficial\" to Free Spirit characters for 3 turns",
+        specialNotes: "#{beneficial}",
         specialName: "Unabated Surge",
     },
     1978: {//Rayleigh
         captain: "Boosts chances of getting Matching orbs, boosts ATK of Free Spirit and Slasher characters by 2.5x",
         special: "Cuts the current HP of one enemy by 20%, reduces Bind and Silence duration by 3 turns, boosts chances of getting [DEX], [PSY] and [INT] orbs for 3 turns and makes [DEX], [PSY] and [INT] orbs \"beneficial\" to Free Spirit characters for 3 turns",
+        specialNotes: "#{beneficial}",
         specialName: "Unabated Surge",
     },
     1979: {//Capone
-        captain: "Not Translated",
+        captain: "Boosts ATK of Shooter characters by 1.75x",
         special: "Reduces Special Cooldown of Shooter specials by 1 turn and changes orbs in the top row into Matching orbs",
         specialName: "Angry Threatening Command",
     },
@@ -22597,7 +22334,7 @@ window.details = {
         specialName: "Angry Threatening Command",
     },
     1981: {//Bonney
-        captain: "Not Translated",
+        captain: "Boosts ATK of Fighter characters by 1.75x",
         special: "Changes [RCV] orbs into matching orbs and recovers ??? HP at the end of the turn for 2 turns",
         specialName: "Glutonous Meal",
     },
@@ -22635,6 +22372,7 @@ window.details = {
             "character2": "Makes [STR] orbs \"beneficial\" for Free Spirit characters",
             "combined": "None"
         },
+        sailorNotes: "#{beneficial}",
     },
     1985: {//Luffy&Ace
         captain: {
@@ -22650,6 +22388,7 @@ window.details = {
             "character2": "Makes [STR] orbs \"beneficial\" for Free Spirit characters",
             "combined": "None"
         },
+        sailorNotes: "#{beneficial}",
         limit: "This character has a Limit Break Tree"
     },
     1986: {//Marco
@@ -22666,6 +22405,7 @@ window.details = {
         ],
         specialName: "Establishing an Oath of Immortality",
         sailor: "Makes [TND] and [RCV] orbs \"beneficial\" for Free Spirit characters",
+        sailorNotes: "#{beneficial}",
     },
     1987: {//Marco
         captain: "Boosts ATK of Fighter characters by 2.5x and their RCV by 1.3x. Recovers 3x character's RCV in HP at the end of each turn.",
@@ -22681,6 +22421,7 @@ window.details = {
         ],
         specialName: "Establishing an Oath of Immortality",
         sailor: "Makes [TND] and [RCV] orbs \"beneficial\" for Free Spirit characters",
+        sailorNotes: "#{beneficial}",
         limit: "This character has a Limit Break Tree"
     },
     1988: {//Oars
@@ -22701,12 +22442,14 @@ window.details = {
         special: "Delays all enemies for 2 turns. If your Captain is a [STR] or [QCK] character, adds 55x character's ATK as Additional Typeless Damage for 1 turn",
         specialName: "An Outcry of Bitterness",
         sailor: "Makes [STR] orbs \"beneficial\" for Free Spirit characters",
+        sailorNotes: "#{beneficial}",
     },
     1991: {//Garp
         captain: "Boosts ATK of Free Spirit characters by 2.75x until the first hit other than Perfect",
         special: "Delays all enemies for 2 turns. If your Captain is a [STR] or [QCK] character, adds 55x character's ATK as Additional Typeless Damage for 1 turn",
         specialName: "An Outcry of Bitterness",
         sailor: "Makes [STR] orbs \"beneficial\" for Free Spirit characters",
+        sailorNotes: "#{beneficial}",
         limit: "This character has a Limit Break Tree"
     },
     1992: {//Coby
@@ -22740,7 +22483,7 @@ window.details = {
         sailor: "Boosts base ATK of Free Spirit characters by 50",
         limit: "This character has a Limit Break Tree"
     },
-    2001: {
+    2001: {//V1 Law 6+
         captain: "Boosts Slasher and Free Spirit character's ATK by 2.5x, by 3.5x after 3 consecutive PERFECTs, by 4x after 5 consecutive PERFECTs. Recover 1,000 HP at the end of each turn",
         specialName: "Sterben",
         sailor: {
@@ -22748,38 +22491,39 @@ window.details = {
             "level1": "When HP is below 10% at the start of the turn, boosts base RCV of Slasher and Free Spirit characters by 300",
             "level2": "Makes [INT], [RCV] and [TND] orbs \"beneficial\" for this unit"
         },
+        sailorNotes: "#{beneficial}",
         special: "Makes Damage and Health Cutting Specials of all characters bypass all defensive Buffs, deals 100x character's ATK in [PSY] damage to one enemy, reduces Special Cooldown of all characters by 1 turn",
         limit: [
             { "description": "Boosts base RCV by 5" },
             { "description": "Boosts base RCV by 10" },
             { "description": "Boosts base ATK by 10" },
-            { "description": "Aquire Potential 1: [INT] Damage Reduction" },
+            { "description": "Acquire Potential 1: [INT] Damage Reduction" },
             { "description": "Boosts base RCV by 10" },
             { "description": "Boosts base RCV by 15" },
             { "description": "Boosts base ATK by 15" },
-            { "description": "Aquire Sailor Ability 1: When HP is below 10% at the start of the turn, boosts base RCV of Slasher and Free Spirit characters by 300" },
+            { "description": "Acquire Sailor Ability 1: When HP is below 10% at the start of the turn, boosts base RCV of Slasher and Free Spirit characters by 300" },
             { "description": "Boosts base RCV by 15" },
             { "description": "Boosts base RCV by 20" },
             { "description": "Boosts base ATK by 20" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base HP by 45" },
             { "description": "Boosts base HP by 55" },
-            { "description": "Aquire Potential 2: Barrier Penetration" },
+            { "description": "Acquire Potential 2: Barrier Penetration" },
             { "description": "Boosts base HP by 65" },
             { "description": "Boosts base HP by 75" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base RCV by 30" },
             { "description": "Boosts base RCV by 35" },
-            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base ATK by 25" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base ATK by 50" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base HP by 85" },
-            { "description": "Aquire Sailor Ability 2: Makes [INT], [RCV] and [TND] orbs \"beneficial\" for this unit" },
+            { "description": "Acquire Sailor Ability 2: Makes [INT], [RCV] and [TND] orbs \"beneficial\" for this unit" },
             { "description": "Boosts base HP by 95" },
             { "description": "Boosts base ATK by 60" },
-            { "description": "Aquire Potential 3: Critical Hit" },
+            { "description": "Acquire Potential 3: Critical Hit" },
         ],
         potential: [
             {
@@ -22813,5 +22557,15 @@ window.details = {
                 ]
             },
         ]
+    },
+    2024: {//Dofla Raid v2
+        captain: "Boosts ATK of Driven and Cerebral characters by 2.5x when HP is 50% or below, 1.5x otherwise",
+        special: "Randomizes all non-matching orbs, including [BLOCK] slots and locks all orbs for 1 turn. If Captain is a Cerebral or Driven character, increases duration of any Class/Type boosting buffs and Orb Amplification buffs by 2 turns",
+        specialName: "Athlete",
+    },
+    2025: {//Dofla Raid v2
+        captain: "Boosts ATK of Driven and Cerebral characters by 3x when HP is 50% or below, 1.5x otherwise",
+        special: "Randomizes all non-matching orbs, including [BLOCK] slots and locks all orbs for 1 turn. If Captain is a Cerebral or Driven character, increases duration of any Class/Type boosting buffs and Orb Amplification buffs by 2 turns",
+        specialName: "Athlete",
     },
 };
