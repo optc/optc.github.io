@@ -22558,12 +22558,35 @@ window.details = {
             },
         ]
     },
-    2024: {//Dofla Raid v2
+    2002: {//Story Pink
+        captain: "Reduces cooldown of all character by 2 and boost crew attack by 2.5x, but increases damage receive by 1.2x",
+        special: "Reduces Bind, Despair and Paralysis by 3 turns and deals typeless damage to all enemies",
+        specialNotes: "#{specialProportional : lower : ? * ( 1 - (remaining HP) / (total HP) )}",
+        specialName: "The Man Standing Tall",
+    },
+    2003: {//Story Doflamingo
+        captain: "Boost ATK of Slasher by 2.25x and HP by 1.5x. If you use \"Tamaito\" THIS DOFLAMINGO boosts ATK of Slasher characters by 2.75x instead for 3 turns",
+        captainNotes: "Using Doflamingo's special will change his own captain boost to 2.75x. If both Doflamingo's specials are used, the total ATK boost will be 7.5625x",
+        special: "Deals 30x character's ATK in typeless damage to all enemies, changes own slot to matching and for 1 turn boost his own ATK by 2x",
+        specialName: "Tamaito",
+    },
+    2004: {//Story Doflamingo
+        captain: "Boost ATK of Slasher by 2.25x and HP by 1.5x. If you use \"Tamaito\" THIS DOFLAMINGO boosts ATK of Slasher characters by 2.75x instead for 3 turns",
+        captainNotes: "Using Doflamingo's special will change his own captain boost to 2.75x. If both Doflamingo's specials are used, the total ATK boost will be 7.5625x",
+        special: "Deals 30x character's ATK in typeless damage to all enemies, changes own slot to matching and for 1 turn boost his own ATK by 2x",
+        specialName: "Tamaito",
+    },
+    2005: {//Story Sugar
+        captain: "Boosts ATK of [PSY] characters by 2.25x, Slasher HP by 1.2x and Freedom character RCV by 1.2x",
+        special: "Deals 40x character's ATK in [PSY] damage to all enemies and increases the appearance of [PSY] slots for 3 turns",
+        specialName: "Little Black Bears",
+    },
+    2024: {//Doflamingo Raid v2
         captain: "Boosts ATK of Driven and Cerebral characters by 2.5x when HP is 50% or below, 1.5x otherwise",
         special: "Randomizes all non-matching orbs, including [BLOCK] slots and locks all orbs for 1 turn. If Captain is a Cerebral or Driven character, increases duration of any Class/Type boosting buffs and Orb Amplification buffs by 2 turns",
         specialName: "Athlete",
     },
-    2025: {//Dofla Raid v2
+    2025: {//Doflamingo Raid v2
         captain: "Boosts ATK of Driven and Cerebral characters by 3x when HP is 50% or below, 1.5x otherwise",
         special: "Randomizes all non-matching orbs, including [BLOCK] slots and locks all orbs for 1 turn. If Captain is a Cerebral or Driven character, increases duration of any Class/Type boosting buffs and Orb Amplification buffs by 2 turns",
         specialName: "Athlete",
