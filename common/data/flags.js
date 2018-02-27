@@ -1831,4 +1831,5 @@ window.flags = {
     1970: { rr: 1, rro: 1, lrr: 1 },
     1973: { rr: 1, rro: 1, lrr: 1 },
     1974: { rr: 1, rro: 1, lrr: 1 },
+    1983: { special: 1 },
 };

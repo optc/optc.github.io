@@ -22284,13 +22284,13 @@ window.details = {
     },
     1975: {//X Drake
         captain: "Boosts ATK of all characters by 2x if HP is below 30% at the start of the turn",
-        special: "Deals 25x? ATK in [QCK] damage to one enemy. If HP above ??% then changes [RCV], [TND], [EMPTY], [BOMB] and [BLOCK] orbs into matching orbs and if HP below ?% then changes adjacent orbs into matching orbs",
+        special: "Deals 50x ATK in [QCK] damage to one enemy, changes own orb into [QCK] and locks all orbs for 1 turn. If HP above 70% then changes [RCV], [TND], [EMPTY], [BOMB] and [BLOCK] orbs into matching orbs and if HP below 30% then changes adjacent orbs into matching orbs",
         specialName: "Double Edge of Revolt [Neo]",
         sailor: "When HP is below 30% at the start of the turn, boosts base ATK of all characters by 40",
     },
     1976: {//X Drake
         captain: "Boosts ATK of all characters by 2.5x if HP is below 30% at the start of the turn",
-        special: "Deals 25x? ATK in [QCK] damage to one enemy. If HP above ??% then changes [RCV], [TND], [EMPTY], [BOMB] and [BLOCK] orbs into matching orbs and if HP below ?% then changes adjacent orbs into matching orbs",
+        special: "Deals 50x ATK in [QCK] damage to one enemy, changes own orb into [QCK] and locks all orbs for 1 turn. If HP above 70% then changes [RCV], [TND], [EMPTY], [BOMB] and [BLOCK] orbs into matching orbs and if HP below 30% then changes adjacent orbs into matching orbs",
         specialName: "Double Edge of Revolt [Neo]",
         sailor: "When HP is below 30% at the start of the turn, boosts base ATK of all characters by 40",
     },
@@ -22458,7 +22458,7 @@ window.details = {
         sailor: "Boosts base ATK of Free Spirit characters by 50",
         limit: "This character has a Limit Break Tree"
     },
-    2001: {
+    2001: {//6+ PSY Law
         captain: "Boosts Slasher and Free Spirit character's ATK by 2.5x, by 3.5x after 3 consecutive PERFECTs, by 4x after 5 consecutive PERFECTs. Recover 1,000 HP at the end of each turn",
         specialName: "Sterben",
         sailor: {
@@ -22532,12 +22532,34 @@ window.details = {
             },
         ]
     },
-    2024: {//Dofla Raid v2
+    2002: {//Senor Pink
+        captain: "Increases damage received by 1.2x. Reduces cooldown of all specials by 2 turns at the start of the fight and boosts ATK of all characters by 2.5x.",
+        special: "Reduces Bind, Despair and Paralysis duration by 3 turns and deals several times character's ATK in Typeless damage to all enemies",
+        specialNotes: "#{specialProportional : lower : ??? * ( 1 - (remaining HP) / (total HP) )}",
+        specialName: "The Man Standing Tall",
+    },
+    2003: {//Doflamingo
+        captain: "Not Translated",
+        special: "Changes own orb into [STR], boosts own ATK by 2x for 1 turn and deals 30x character's ATK in Typeless damage to all enemies",
+        specialName: "Bullet Thread",
+    },
+    2004: {//Doflamingo
+        captain: "Boosts ATK of Slasher characters by 2.25x and reduce damage received by 15%. If you use \"Bullet Thread\" THIS DOFLAMINGO boosts ATK of Slasher characters by 2.75x instead for 3 turns",
+        captainNotes: "Using Doflamingo's special will change his own captain boost to 2.75x. If both Luffy's specials are used, the total ATK boost will be 7.5625x",
+        special: "Changes own orb into [STR], boosts own ATK by 2x for 1 turn and deals 30x character's ATK in Typeless damage to all enemies",
+        specialName: "Bullet Thread",
+    },
+    2005: {//Sugar
+        captain: "Boosts ATK of [PSY] characters by 2.25x, boosts HP of Slasher characters by 1.2x and boosts RCV of Free Spirit characters by 1.2x",
+        special: "Deals 40x character's ATK in [PSY] damage to all enemies, boosts chances of getting [PSY] orbs for 3 turns",
+        specialName: "Little Black Bears",
+    },
+    2024: {//Doflamingo Raid v2
         captain: "Boosts ATK of Driven and Cerebral characters by 2.5x when HP is 50% or below, 1.5x otherwise",
         special: "Randomizes all non-matching orbs, including [BLOCK] slots and locks all orbs for 1 turn. If Captain is a Cerebral or Driven character, increases duration of any Class/Type boosting buffs and Orb Amplification buffs by 2 turns",
         specialName: "Athlete",
     },
-    2025: {//Dofla Raid v2
+    2025: {//Doflamingo Raid v2
         captain: "Boosts ATK of Driven and Cerebral characters by 3x when HP is 50% or below, 1.5x otherwise",
         special: "Randomizes all non-matching orbs, including [BLOCK] slots and locks all orbs for 1 turn. If Captain is a Cerebral or Driven character, increases duration of any Class/Type boosting buffs and Orb Amplification buffs by 2 turns",
         specialName: "Athlete",
