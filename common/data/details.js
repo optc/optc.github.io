@@ -8525,7 +8525,7 @@ window.details = {
         specialName: "Eight-Impact Fist! Blow of Resentment",
         sailor: {
             "base": "None",
-            "level1": "Boosts ATK and HP of Powerhouse and Striker characters by 50",
+            "level1": "Boosts base ATK and HP of Powerhouse and Striker characters by 50",
         },
         limit: [
             { "description": "Boosts base HP by 50" },
@@ -8535,7 +8535,7 @@ window.details = {
             { "description": "Boosts base RCV by 40" },
             { "description": "Boosts base RCV by 40" },
             { "description": "Boosts base ATK by 50" },
-            { "description": "Acquire Sailor Ability 1: Boosts ATK and HP of Powerhouse and Striker characters by 50" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK and HP of Powerhouse and Striker characters by 50" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Acquire new Captain Ability: Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of Powerhouse characters by 2.25x and boosts the HP of Striker characters by 2x" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
@@ -17943,7 +17943,7 @@ window.details = {
         sailor: {
             "base": "None",
             "level1": "Boosts base ATK of Powerhouse characters by 50",
-            "level2": "Makes [RCV] and [TND] orbs \"beneficial\" for Powerhouse characters",
+            "level2": "Completely resists Paralysis on this character",
         },
         limit: [
             { "description": "Boosts base ATK by 10" },
@@ -17973,7 +17973,7 @@ window.details = {
             { "description": "Boosts base HP by 70" },
             { "description": "Boosts base RCV by 20" },
             { "description": "Boosts base RCV by 30" },
-            { "description": "Acquire Sailor Ability 2: Makes [RCV] and [TND] orbs \"beneficial\" for Powerhouse characters" },
+            { "description": "Acquire Sailor Ability 2: Completely resists Paralysis on this character" },
             { "description": "Boosts base HP by 90" },
             { "description": "Acquire Potential 3: Slot Bind Self-reduction" },
         ],
