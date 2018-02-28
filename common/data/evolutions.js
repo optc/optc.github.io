@@ -3153,7 +3153,7 @@ window.evolutions = {
     },
     1977: {
         evolution: 1978,
-        evolvers: [  ]
+        evolvers: [ 118, 97, 1180, 302, 102 ]
     },
     1979: {
         evolution: 1980,
@@ -3169,11 +3169,11 @@ window.evolutions = {
     },
     1986: {
         evolution: 1987,
-        evolvers: [  ]
+        evolvers: [ 83, 94, 95, 300, 100 ]
     },
     1988: {
         evolution: 1989,
-        evolvers: [  ]
+        evolvers: [ 118, 87, 1180, 303, 103 ]
     },
     1990: {
         evolution: 1991,
@@ -3181,7 +3181,7 @@ window.evolutions = {
     },
     1992: {
         evolution: 1993,
-        evolvers: [  ]
+        evolvers: [ 1180, 90, 96, 301, 101 ]
     },
     1045: {
         evolution: 2001,
@@ -3189,7 +3189,7 @@ window.evolutions = {
     },
     2003: {
         evolution: 2004,
-        evolvers: [  ]
+        evolvers: [ 118, 89, 95, 95, 300 ]
     },
     2024: {
         evolution: 2025,
