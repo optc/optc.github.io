@@ -22151,16 +22151,16 @@ window.details = {
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base HP by 50" },
-            { "description": "Boosts base RCV by 15" },
+            { "description": "Boosts base RCV by 20" },
             { "description": "Aquire new Captain Ability: " },
             { "description": "Reduce base Special Cooldown by 2 turns" },
             { "description": "Boosts base ATK by 25" },
-            { "description": "Boosts base HP by 60" },
-            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base RCV by 30" },
             { "description": "Reduce base Special Cooldown by 3 turns" },
             { "description": "Aquire 1 additional Socket slot" },
             { "description": "Boosts base ATK by 30" },
-            { "description": "Boosts base HP by 55" },
+            { "description": "Boosts base HP by 50" },
             { "description": "Reduce base Special Cooldown by 4 turns" },
             { "description": "Aquire new Captain Ability: " },
             { "description": "Boosts base ATK by 30" },
@@ -22172,7 +22172,7 @@ window.details = {
             { "description": "Reduce base Special Cooldown by 5 turns" },
             { "description": "Aquire 1 additional Socket slot" },
             { "description": "Aquire new Captain Ability: " },
-            { "description": "Boosts base ATK by 60" },
+            { "description": "Boosts base ATK by 50" },
             { "description": "Boosts base HP by 60" },
             { "description": "Aquire new Captain Ability: " },
             { "description": "Aquire Potential 2: Enrage" },
@@ -22245,26 +22245,42 @@ window.details = {
             "base": "Boosts base ATK of Cerebral characters by 75",
             "level1": "Adds 2x character's ATK as Additional Typeless Damage",
         },
-        limit: "This character has a Limit Break Tree",
+        limit: [
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base HP by 10" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Aquire Potential 1: Reduce No Healing duration" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Aquire Sailor Ability 1: Adds 2x character's ATK as Additional Typeless Damage" },
+            { "description": "Boosts base HP by 60" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Aquire 1 additional Socket slot" },
+            { "description": "Boosts base HP by 80" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base ATK by 40" },
+            { "description": "Aquire Potential 2: Enrage" },
+        ],
         potential: [
             {
                 "Name": "Reduce No Healing duration",
                 "description": [ 
                     "Level 1: Reduces No Healing duration by 1 turn",
-                    "Level 2: Reduces No Healing duration by ? turn",
-                    "Level 3: Reduces No Healing duration by ? turns",
-                    "Level 4: Reduces No Healing duration by ? turns",
-                    "Level 5: Reduces No Healing duration by ? turns"
+                    "Level 2: Reduces No Healing duration by 2 turn",
+                    "Level 3: Reduces No Healing duration by 3 turns",
+                    "Level 4: Reduces No Healing duration by 4 turns",
+                    "Level 5: Reduces No Healing duration by 5 turns"
                 ]
             },
             {
                 "Name": "Enrage",
                 "description": [ 
                     "Level 1: Boosts base ATK by 20",
-                    "Level 2: Boosts base ATK by ??",
-                    "Level 3: Boosts base ATK by ??",
-                    "Level 4: Boosts base ATK by ??",
-                    "Level 5: Boosts base ATK by ??"
+                    "Level 2: Boosts base ATK by 40",
+                    "Level 3: Boosts base ATK by 60",
+                    "Level 4: Boosts base ATK by 80",
+                    "Level 5: Boosts base ATK by 120"
                 ]
             },
         ],
@@ -22286,14 +22302,18 @@ window.details = {
         captain: "Not Translated",
         special: "Cuts the current HP of one enemy by 20%, reduces Bind and Silence duration by 3 turns, boosts chances of getting [DEX], [PSY] and [INT] orbs for 3 turns and makes [DEX], [PSY] and [INT] orbs \"beneficial\" to Free Spirit characters for 3 turns",
         specialName: "Unabated Surge",
+        sailor: "Reduces Silence duration on this character by 3 turns",
+        sailorNotes: "#{silence}",
     },
     1978: {//Rayleigh
         captain: "Boosts chances of getting Matching orbs, boosts ATK of Free Spirit and Slasher characters by 2.5x",
         special: "Cuts the current HP of one enemy by 20%, reduces Bind and Silence duration by 3 turns, boosts chances of getting [DEX], [PSY] and [INT] orbs for 3 turns and makes [DEX], [PSY] and [INT] orbs \"beneficial\" to Free Spirit characters for 3 turns",
         specialName: "Unabated Surge",
+        sailor: "Reduces Silence duration on this character by 3 turns",
+        sailorNotes: "#{silence}",
     },
     1979: {//Capone
-        captain: "Not Translated",
+        captain: "Boosts ATK of Shooter characters by 1.75x",
         special: "Reduces Special Cooldown of Shooter specials by 1 turn and changes orbs in the top row into Matching orbs",
         specialName: "Angry Threatening Command",
     },
@@ -22303,7 +22323,7 @@ window.details = {
         specialName: "Angry Threatening Command",
     },
     1981: {//Bonney
-        captain: "Not Translated",
+        captain: "Boosts ATK of Fighter characters by 1.75x",
         special: "Changes [RCV] orbs into matching orbs and recovers 15x character's RCV in HP at the end of the turn for 2 turns",
         specialName: "Glutonous Meal",
     },
@@ -22420,11 +22440,11 @@ window.details = {
         special: [
             {
                 "description": "Deals 30x character's ATK in QCK damage to one enemy and randomly changes all orbs, including [BLOCK] orbs, into either [STR], [DEX], [QCK], [PSY] or [INT] orbs. If your crew has 3 or more QCK characters, boosts ATK of Free Spirit characters by 1.75x for 1 turn",
-                "cooldown": [ null, null ],
+                "cooldown": [ 16, 10 ],
             },
             {
                 "description": "Deals 50x character's ATK in QCK damage to one enemy and randomly changes all orbs, including [BLOCK] orbs, into either [STR], [DEX], [QCK], [PSY] or [INT] orbs. If your crew has 3 or more QCK characters, boosts ATK of Free Spirit characters by 2x for 1 turn",
-                "cooldown": [ null, null ],
+                "cooldown": [ 19, 13 ],
             },
         ],
         specialName: "Determined Counterattack",
@@ -22435,11 +22455,11 @@ window.details = {
         special: [
             {
                 "description": "Deals 30x character's ATK in QCK damage to one enemy and randomly changes all orbs, including [BLOCK] orbs, into either [STR], [DEX], [QCK], [PSY] or [INT] orbs. If your crew has 3 or more QCK characters, boosts ATK of Free Spirit characters by 1.75x for 1 turn",
-                "cooldown": [ null, null ],
+                "cooldown": [ 16, 10 ],
             },
             {
                 "description": "Deals 50x character's ATK in QCK damage to one enemy and randomly changes all orbs, including [BLOCK] orbs, into either [STR], [DEX], [QCK], [PSY] or [INT] orbs. If your crew has 3 or more QCK characters, boosts ATK of Free Spirit characters by 2x for 1 turn",
-                "cooldown": [ null, null ],
+                "cooldown": [ 19, 13 ],
             },
         ],
         specialName: "Determined Counterattack",
