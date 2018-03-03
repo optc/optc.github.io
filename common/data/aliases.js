@@ -1879,7 +1879,7 @@ window.aliases = {
     1878: ['バルトロメオ 海賊団「バルトクラブ」船長', '', 'Raid Bartolomeo'],
     1879: ['人食いのバルトロメオ 海賊団「バルトクラブ」船長', '', 'Raid Bartolomeo'],
     1880: ['ホーディ・ジョーンズ 暴走する偽りの聖戦士', '', 'Mega Hody Jones', 'Super Hody Jones'],
-    1881: ['鷹の目のミホーク 黒刀「夜」', '', 'Mega Mihawk', 'Super Mihawk', 'Mega IntMihawk', 'Super IntMihawk'],
+    1881: ['鷹の目のミホーク 黒刀「夜」', '', 'Mega Mihawk', 'Super Mihawk', 'Mega IntMihawk', 'Super IntMihawk', 'Mega IntHawk', 'Super IntHawk'],
     1882: ['シルバーズ・レイリー 時代を見守る老兵', '', 'V2 Rayleigh'],
     1883: ['冥王レイリー 時代を見守る老兵', '', 'V2 Rayleigh'],
     1884: ['ニコ・ロビン 革命の加担者', '', ''],

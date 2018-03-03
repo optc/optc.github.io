@@ -6654,6 +6654,12 @@ window.captains = {
         },
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
     },
+    2004: {
+        atk: function(p){ 
+            return p.unit.class.has("Slasher") ? p.actions[p.sourceSlot] ? 2.75 : 2.25 : 1;
+        },
+        hp: function(p){ return p.unit.class.has("Slasher") ? 1.5 : 1; },
+    },
     2024: {
         atk: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Cerebral")) && p.percHP <= 50.0 ? 2.5 : 1.5; }
     },

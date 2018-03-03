@@ -22383,30 +22383,31 @@ window.details = {
         special: [
             {
                 "description": "Reduces Bind and Chain Coefficient Reduction and ATK DOWN duration by 3 turns, reduces damage received by 50% for 1 turn. If your crew has 3 or more [STR] characters, adds .5x to Chain multiplier for 1 turn",
-                "cooldown": [ null, null ],
+                "cooldown": [ 16, 10 ],
             },
             {
                 "description": "Reduces Bind and Chain Coefficient Reduction and ATK DOWN duration by 5 turns, reduces damage received by 90% for 1 turn. If your crew has 3 or more [STR] characters, adds .75x to Chain multiplier for 1 turn",
-                "cooldown": [ null, null ],
+                "cooldown": [ 20, 14 ],
             },
         ],
         specialName: "Establishing an Oath of Immortality",
-        sailor: "Makes [TND] and [RCV] orbs \"beneficial\" for Free Spirit characters",
+        sailor: "Boosts amount healed from [RCV] orbs by 150 each",
     },
     1987: {//Marco
         captain: "Boosts ATK of Fighter characters by 2.5x and their RCV by 1.3x. Recovers 3x character's RCV in HP at the end of each turn.",
         special: [
             {
                 "description": "Reduces Bind and Chain Coefficient Reduction and ATK DOWN duration by 3 turns, reduces damage received by 50% for 1 turn. If your crew has 3 or more [STR] characters, adds .5x to Chain multiplier for 1 turn",
-                "cooldown": [ null, null ],
+                "cooldown": [ 16, 10 ],
             },
             {
                 "description": "Reduces Bind and Chain Coefficient Reduction and ATK DOWN duration by 5 turns, reduces damage received by 90% for 1 turn. If your crew has 3 or more [STR] characters, adds .75x to Chain multiplier for 1 turn",
-                "cooldown": [ null, null ],
+                "cooldown": [ 20, 14 ],
             },
         ],
         specialName: "Establishing an Oath of Immortality",
-        sailor: "Makes [TND] and [RCV] orbs \"beneficial\" for Free Spirit characters",
+        sailor: "Boosts amount healed from [RCV] orbs by 150 each",
+        //sailor: "Makes [TND] and [RCV] orbs \"beneficial\" for Free Spirit characters",
         limit: "This character has a Limit Break Tree"
     },
     1988: {//Oars
@@ -22552,7 +22553,7 @@ window.details = {
         specialName: "Bullet Thread",
     },
     2004: {//Doflamingo
-        captain: "Boosts ATK of Slasher characters by 2.25x and reduce damage received by 15%. If you use \"Bullet Thread\" THIS DOFLAMINGO boosts ATK of Slasher characters by 2.75x instead for 3 turns",
+        captain: "Boosts ATK of Slasher characters by 2.25x and their HP by 1.5x. If you use \"Bullet Thread\" THIS DOFLAMINGO boosts ATK of Slasher characters by 2.75x instead for 3 turns",
         captainNotes: "Using Doflamingo's special will change his own captain boost to 2.75x. If both Doflamingo's specials are used, the total ATK boost will be 7.5625x",
         special: "Changes own orb into [STR], boosts own ATK by 2x for 1 turn and deals 30x character's ATK in Typeless damage to all enemies",
         specialName: "Bullet Thread",
