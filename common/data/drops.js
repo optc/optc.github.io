@@ -787,6 +787,25 @@ window.drops = {
             '12': [ 1782 ],
         },
         
+        {
+            name: 'Dressrosa - Colosseum Dormatory and the Executive Tower',
+            shortName: 'Dressrosa 2',
+            thumb: 2004,
+            gamewith: 93492,
+            '01': [ 1648 ],
+            '02': [ 2003 ],
+            '03': [  ],
+            '04': [ 2003 ],
+            '05': [ 1784 ],
+            '06': [ 2002 ],
+            '07': [  ],
+            '08': [ 2002, 1627 ],
+            '09': [  ],
+            '10': [ 2005 ],
+            '11': [  ],
+            '12': [ 2005 ],
+        },
+        
     ],
 
     'Weekly Island': [
@@ -2453,6 +2472,13 @@ window.drops = {
 			nakama: 8197200,
             gamewith: null,
             'Raging Sea': [ 1971 ]
+        },
+
+        {
+            name: 'Fire Fist Sabo',
+            thumb: 2000,
+            gamewith: null,
+            'Raging Sea': [ 1998, 1999 ]
         },
         
     ],

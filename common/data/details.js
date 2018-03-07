@@ -22510,6 +22510,32 @@ window.details = {
         sailor: "Boosts base ATK of Free Spirit characters by 50",
         limit: "This character has a Limit Break Tree"
     },
+    1998: {//Sanji
+        captain: "Not Translated",
+        special: "Deals 30x character's ATK in Typeless damage to one? enemy that will ignore damage negating abilities and barriers, amplifies the effect of orbs on [PSY] and [DEX] characters by 2.25x for 1 turn and becomes Sanji & Zoro for 1 turn (not confirmed for unevolved)",
+        specialName: "Sanji/Zoro Special",
+    },
+    1999: {//Zoro
+        captain: "Not Translated",
+        special: "Deals 30x character's ATK in Typeless damage to one? enemy that will ignore damage negating abilities and barriers, amplifies the effect of orbs on [PSY] and [DEX] characters by 2.25x for 1 turn and becomes Sanji & Zoro for 1 turn (not confirmed for unevolved)",
+        specialName: "Sanji/Zoro Special",
+    },
+    2000: {//Sanji & Zoro
+        captain: {
+            "base": "Not Translated",
+            "level1": "Not Translated",
+            "level2": "Not Translated",
+            "level3": "Not Translated",
+            "level4": "Not Translated",
+            "level5": "Not Translated",
+            "character1": "Reduces cooldown of all specials by 2 turns at the start of the fight. Boosts ATK of [PSY] characters by 2.75x and boosts ATK of [DEX] characters by 2x",
+            "character2": "Reduces cooldown of all specials by 2 turns at the start of the fight. Boosts ATK of [DEX] characters by 2.75x and boosts ATK of [PSY] characters by 2x",
+            "combined": "Boosts ATK of [DEX] and [PSY] characters by 3.75x and makes [PSY] and [DEX] orbs \"beneficial\" to [PSY] and [DEX] characters"
+        },
+        special: "Deals 30x character's ATK in Typeless damage to one? enemy that will ignore damage negating abilities and barriers, amplifies the effect of orbs on [PSY] and [DEX] characters by 2.25x for 1 turn and becomes Sanji & Zoro for 1 turn (not confirmed for unevolved)",
+        specialName: "Sanji/Zoro Special",
+        limit: "This character has a limit break tree"
+    },
     2001: {//6+ PSY Law
         captain: "Boosts Slasher and Free Spirit character's ATK by 2.5x, by 3.5x after 3 consecutive PERFECTs, by 4x after 5 consecutive PERFECTs. Recover 1,000 HP at the end of each turn",
         specialName: "Sterben",
@@ -22605,6 +22631,34 @@ window.details = {
         captain: "Boosts ATK of [PSY] characters by 2.25x, boosts HP of Slasher characters by 1.2x and boosts RCV of Free Spirit characters by 1.2x",
         special: "Deals 40x character's ATK in [PSY] damage to all enemies, boosts chances of getting [PSY] orbs for 3 turns",
         specialName: "Little Black Bears",
+    },
+    2006: {//Shanks
+        captain: "If your crew has 4 or more characters of the same Type, boosts ATK of Dominant Type characters by 3.5x, boosts ATK of all characters by 2.75x otherwise and boosts HP of all characters by 1.35?x.",
+        special: "If your crew has 4 or more characters of the same Type, adds .9x to Chain multiplier for 1 turn and boosts ATK of the Dominant Type characters by 2.25x and changes all orbs, including [BLOCK] orbs, to Dominant Type orbs",
+        special: "If your crew has 4 or more characters of the same Type, boosts base ATK of the Dominant Type by 125",
+        specialName: "Shanks Special",
+    },
+    2007: {//Kuma
+        captain: "Not Translated",
+        special: "Cuts the current HP of each enemy by 10%, reduces Special Cooldown of your top row by 2 turns and boosts the Color Affinity of [STR] and [INT] characters depending on your Treasure Map Level for 1 turn",
+        specialName: "Kuma Special",
+        specialNotes: "Level 1-10: 1.5x affinity boost<br\>Level 11-20: 1.75x affinity boost<br\>Level 21+: 2x affinity boost",
+    },
+    2008: {//Kuma
+        captain: "Boosts ATK of [STR] and [INT] characters by 1.5x and their HP by 1.2x",
+        special: "Cuts the current HP of each enemy by 10%, reduces Special Cooldown of your top row by 2 turns and boosts the Color Affinity of [STR] and [INT] characters depending on your Treasure Map Level for 1 turn",
+        specialName: "Kuma Special",
+        specialNotes: "Level 1-10: 1.5x affinity boost<br\>Level 11-20: 1.75x affinity boost<br\>Level 21+: 2x affinity boost",
+    },
+    2009: {//Monet
+        captain: "Not Translated",
+        special: "Deals 50,000 fixed damage to one enemy and reduces Silence and enemy's Threshold Damage Reduction duration by 3 turns",
+        specialName: "Monet Special",
+    },
+    2010: {//Monet
+        captain: "Boosts ATK of Free Spirit characters by 1.5x and their RCV by 1.2x",
+        special: "Deals 50,000 fixed damage to one enemy and reduces Silence and enemy's Threshold Damage Reduction duration by 3 turns",
+        specialName: "Monet Special",
     },
     2024: {//Doflamingo Raid v2
         captain: "Boosts ATK of Driven and Cerebral characters by 2.5x when HP is 50% or below, 1.5x otherwise",
