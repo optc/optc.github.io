@@ -964,7 +964,7 @@ window.drops = {
             nakama: 2022800,
             condition: 'None',
             gamewith: 22603,
-			condition: 'Helmeppo does not drop in Rookie difficulty',
+            condition: 'Helmeppo does not drop in Rookie difficulty',
             'All Difficulties': [ 33, 35, -228, -34, -26, -25, -24, -23, -22, -1448 ]
         },
 
@@ -975,7 +975,7 @@ window.drops = {
             nakama: 2023200,
             condition: 'None',
             gamewith: 5853,
-			condition: 'Iron Fist Fullbody does not drop in Rookie difficulty',
+            condition: 'Iron Fist Fullbody does not drop in Rookie difficulty',
             challenge: 'High Score calculated with Crew Cost, Turns Taken and Tap Accuracy',
             challengeData: [['150,000','1x Blue Elder'],['450,000','1x ATK Cotton Candy'],['750,000','3x Rainbow Gems']],
             'All Difficulties': [ 43, 49, 231, -221, -208, -44, -229, -54, -62, -230 ]
@@ -988,7 +988,7 @@ window.drops = {
             nakama: 2026300,
             condition: 'None',
             gamewith: 5777,
-			condition: 'Training Coby does not drop in Rookie difficulty',
+            condition: 'Training Coby does not drop in Rookie difficulty',
             challenge:'Total number of hits above 50,000',
             challengeData: [['5 Times','1x Yellow Elder'],['15 Times','1x ATK Cotton Candy'],['25 Times','3x Rainbow Gems']],
             'All Difficulties': [ 262, 264, -210, -64, -225, -263, -265, -32, -56 ]
@@ -1209,7 +1209,7 @@ window.drops = {
             condition: 'All Units considered from the “Sea” will lose 20% to all stats',
             challenge: 'Total number of hits over 50,000',
             challengeData: [['4 Times','1x Black Elder'],['16 Times','1x ATK Cotton Candy'],['38 Times','3x Rainbow Gems']],
-            'All Difficulties': [ 581, 582, 583, 584, -584, -544, -466, -412, -371, -335, -314, -291 ]
+            'All Difficulties': [ 581, 582, 583, 584, -314, -412, -291, -544, -335, -376, -466, -584 ]
         },
 
         {
@@ -1705,8 +1705,8 @@ window.drops = {
             global: true,
             nakama: 2150900,
             gamewith: 52629,
-            condition: 'You can only bring PSY units',
-            'All Difficulties': [ 1509, 1510, 1511, 1512, -1001, -1316, -1280, -314, -908, -16, -1446, -1370, -1368, -816 ],
+            condition: 'You can only bring PSY units in Elite and Expert difficulty',
+            'All Difficulties': [ 1509, 1510, 1511, 1512, -1001, -314, -908, -1316, -1368, -1370, -1446, -816, -1280, -16 ],
         },
         
         {
