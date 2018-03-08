@@ -6660,6 +6660,14 @@ window.captains = {
         },
         hp: function(p){ return p.unit.class.has("Slasher") ? 1.5 : 1; },
     },
+    2006: {
+        atk: function(p){ return (p.colorCount.STR>=4 || p.colorCount.DEX>=4 || p.colorCount.QCK>=4 || p.colorCount.PSY>=4 || p.colorCount.INT>=4) ? 3.5 : 2.75; },
+        hp: function(p){ return 1.35; },
+    },
+    2007: {
+        atk: function(p){ return (p.colorCount.STR>=4 || p.colorCount.DEX>=4 || p.colorCount.QCK>=4 || p.colorCount.PSY>=4 || p.colorCount.INT>=4) ? 3.5 : 2.75; },
+        hp: function(p){ return 1.35; },
+    },
     2024: {
         atk: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Cerebral")) && p.percHP <= 50.0 ? 2.5 : 1.5; }
     },
