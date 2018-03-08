@@ -788,7 +788,7 @@ window.drops = {
         },
         
         {
-            name: 'Dressrosa - Coliseum Lodging to Control Tower',
+            name: 'Dressrosa - Coliseum Lodging to Executive Tower',
             shortName: 'Dressrosa 2',
             thumb: 2004,
             nakama: null,
@@ -1922,7 +1922,7 @@ window.drops = {
             thumb: 1965,
             nakama: 2196500,
             gamewith: 91449,
-            'All Difficulties': [ 1964, 1966, -1764, -1368, -1802, -1713, -1840, -1557 ]
+            'All Difficulties': [ 1964, 1966, -1794, -1368, -1802, -1713, -1840, -1557 ]
         },
         
         {
@@ -2478,6 +2478,13 @@ window.drops = {
 			nakama: 8197200,
             gamewith: null,
             'Raging Sea': [ 1971 ]
+        },
+
+        {
+            name: 'Fire Fist Sabo',
+            thumb: 2000,
+            gamewith: null,
+            'Raging Sea': [ 1998, 1999 ]
         },
         
     ],
