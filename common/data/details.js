@@ -22533,6 +22533,7 @@ window.details = {
             "combined": "Boosts ATK of [DEX] and [PSY] characters by 3.75x and makes [PSY] and [DEX] orbs \"beneficial\" to [PSY] and [DEX] characters"
         },
         special: "Deals 30x character's ATK in Typeless damage to one? enemy that will ignore damage negating abilities and barriers, amplifies the effect of orbs on [PSY] and [DEX] characters by 2.25x for 1 turn and becomes Sanji & Zoro for 1 turn (not confirmed for unevolved)",
+        specialNotes: "Change Action: When Change is activated, randomizes all non-matching orbs on [PSY] and [DEX] characters and adds .5x to Chain multiplier for 1 turn",
         specialName: "Sanji/Zoro Special",
         limit: "This character has a limit break tree"
     },
