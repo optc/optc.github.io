@@ -22634,13 +22634,13 @@ window.details = {
         specialName: "Little Black Bears",
     },
     2006: {//Shanks
-        captain: "If your crew has 4 or more characters of the same Type, boosts ATK of Dominant Type characters by 3.5x, boosts ATK of all characters by 2.75x otherwise and boosts HP of all characters by 1.35?x.",
+        captain: "If your crew has 4 or more characters of the same Type, boosts ATK all characters by 3.5x, by 2.75x otherwise and boosts HP of all characters by 1.35?x.",
         special: "If your crew has 4 or more characters of the same Type, adds .9x to Chain multiplier for 1 turn and boosts ATK of the Dominant Type characters by 2.25x and changes all orbs, including [BLOCK] orbs, to Dominant Type orbs",
         sailor: "If your crew has 4 or more characters of the same Type, boosts base ATK of the Dominant Type by 125",
         specialName: "Shanks Special",
     },
     2007: {//Shanks
-        captain: "If your crew has 4 or more characters of the same Type, boosts ATK of Dominant Type characters by 3.5x, boosts ATK of all characters by 2.75x otherwise and boosts HP of all characters by 1.35?x.",
+        captain: "If your crew has 4 or more characters of the same Type, boosts ATK all characters by 3.5x, by 2.75x otherwise and boosts HP of all characters by 1.35?x.",
         special: "If your crew has 4 or more characters of the same Type, adds .9x to Chain multiplier for 1 turn and boosts ATK of the Dominant Type characters by 2.25x and changes all orbs, including [BLOCK] orbs, to Dominant Type orbs",
         sailor: "If your crew has 4 or more characters of the same Type, boosts base ATK of the Dominant Type by 125",
         specialName: "Shanks Special",
