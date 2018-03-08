@@ -22635,27 +22635,33 @@ window.details = {
     2006: {//Shanks
         captain: "If your crew has 4 or more characters of the same Type, boosts ATK of Dominant Type characters by 3.5x, boosts ATK of all characters by 2.75x otherwise and boosts HP of all characters by 1.35?x.",
         special: "If your crew has 4 or more characters of the same Type, adds .9x to Chain multiplier for 1 turn and boosts ATK of the Dominant Type characters by 2.25x and changes all orbs, including [BLOCK] orbs, to Dominant Type orbs",
-        special: "If your crew has 4 or more characters of the same Type, boosts base ATK of the Dominant Type by 125",
+        sailor: "If your crew has 4 or more characters of the same Type, boosts base ATK of the Dominant Type by 125",
         specialName: "Shanks Special",
     },
-    2007: {//Kuma
+    2007: {//Shanks
+        captain: "If your crew has 4 or more characters of the same Type, boosts ATK of Dominant Type characters by 3.5x, boosts ATK of all characters by 2.75x otherwise and boosts HP of all characters by 1.35?x.",
+        special: "If your crew has 4 or more characters of the same Type, adds .9x to Chain multiplier for 1 turn and boosts ATK of the Dominant Type characters by 2.25x and changes all orbs, including [BLOCK] orbs, to Dominant Type orbs",
+        sailor: "If your crew has 4 or more characters of the same Type, boosts base ATK of the Dominant Type by 125",
+        specialName: "Shanks Special",
+    },
+    2008: {//Kuma
         captain: "Not Translated",
         special: "Cuts the current HP of each enemy by 10%, reduces Special Cooldown of your top row by 2 turns and boosts the Color Affinity of [STR] and [INT] characters depending on your Treasure Map Level for 1 turn",
         specialName: "Kuma Special",
         specialNotes: "Level 1-10: 1.5x affinity boost<br\>Level 11-20: 1.75x affinity boost<br\>Level 21+: 2x affinity boost",
     },
-    2008: {//Kuma
+    2009: {//Kuma
         captain: "Boosts ATK of [STR] and [INT] characters by 1.5x and their HP by 1.2x",
         special: "Cuts the current HP of each enemy by 10%, reduces Special Cooldown of your top row by 2 turns and boosts the Color Affinity of [STR] and [INT] characters depending on your Treasure Map Level for 1 turn",
         specialName: "Kuma Special",
         specialNotes: "Level 1-10: 1.5x affinity boost<br\>Level 11-20: 1.75x affinity boost<br\>Level 21+: 2x affinity boost",
     },
-    2009: {//Monet
+    2010: {//Monet
         captain: "Not Translated",
         special: "Deals 50,000 fixed damage to one enemy and reduces Silence and enemy's Threshold Damage Reduction duration by 3 turns",
         specialName: "Monet Special",
     },
-    2010: {//Monet
+    2011: {//Monet
         captain: "Boosts ATK of Free Spirit characters by 1.5x and their RCV by 1.2x",
         special: "Deals 50,000 fixed damage to one enemy and reduces Silence and enemy's Threshold Damage Reduction duration by 3 turns",
         specialName: "Monet Special",
