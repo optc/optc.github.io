@@ -17937,13 +17937,13 @@ window.details = {
         specialName: "Gust Sword",
     },
     1758: {//20th Anni Brook
-        captain: "Boosts ATK of Free Spirit characters by 2x and their HP by 1.1x",
+        captain: "Boosts ATK of Free Spirit characters by 2x and their RCV by 1.1x",
         special: "Delays all enemies for 1 turn, reduces Paralysis, Bind and Despair duration by 1 turn.",
         sailor: "Makes [RCV] orbs \"beneficial\" for this unit",
         specialName: "Party Music: Quinte Tierce Fantasia",
     },
     1759: {//20th Anni Brook
-        captain: "Boosts ATK of Free Spirit characters by 2.5x and their HP by 1.2x",
+        captain: "Boosts ATK of Free Spirit characters by 2.5x and their RCV by 1.2x",
         special: "Delays all enemies for 1 turn, reduces Paralysis, Bind and Despair duration by 1 turn.",
         sailor: "Makes [RCV] orbs \"beneficial\" for this unit",
         specialName: "Party Music: Quinte Tierce Fantasia",

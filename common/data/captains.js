@@ -5347,11 +5347,11 @@ window.captains = {
     },
     1758: {
         atk: function(p) { return p.unit.class.has("Free Spirit") ? 2 : 1; },
-        hp: function(p) { return p.unit.class.has("Free Spirit") ? 1.1 : 1; },
+        rcv: function(p) { return p.unit.class.has("Free Spirit") ? 1.1 : 1; },
     },
     1759: {
         atk: function(p) { return p.unit.class.has("Free Spirit") ? 2.5 : 1; },
-        hp: function(p) { return p.unit.class.has("Free Spirit") ? 1.2 : 1; },
+        rcv: function(p) { return p.unit.class.has("Free Spirit") ? 1.2 : 1; },
     },
     1760: {
         atk: function(p) { return p.unit.type == "DEX" || p.unit.type == "INT" ? 2 : 1; },
