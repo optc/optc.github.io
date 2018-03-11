@@ -4228,10 +4228,10 @@ window.specials = {
         affinity: function(p){ return p.unit.class.has("Cerebral") ? 1.75 : 1; }
     },
     1946: {
-        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain]); },
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain]); },
     },
     1947: {
-        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain]); },
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain]); },
     },
     1952: {
         chainAddition: function(p) { return p.captain.class.has("Cerebral") ? .7 : 0; }
@@ -4383,6 +4383,16 @@ window.specials = {
         type: "condition",
         def: function(p) { return p.captain.class.has("Cerebral") ? .2 : 1; }
     },
+    1983: {
+        atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 1.5 : 1; },
+        type: "type"
+    },
+    1984: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain]); },
+    },
+    1985: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain]); },
+    },
     1986: {
         chainAddition: function(p) { return window.specials[1986].multiplier; },
         onActivation: function(p) {
@@ -4458,6 +4468,14 @@ window.specials = {
                 name: '1993warning'
             });
         }
+    },
+    2003: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 2 : 1; },
+        type: "type"
+    },
+    2004: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 2 : 1; },
+        type: "type"
     },
     2006: {
         atk: function(p) { return (p.colorCount.STR>=4 && p.unit.type == "STR") ? 2.25 : (p.colorCount.DEX>=4 && p.unit.type == "DEX") ? 2.25 : (p.colorCount.QCK>=4 && p.unit.type == "QCK") ? 2.25 : (p.colorCount.PSY>=4 && p.unit.type == "PSY") ? 2.25 : (p.colorCount.INT>=4 && p.unit.type == "INT") ? 2.25 : 1; },

@@ -14149,13 +14149,14 @@ window.details = {
     },
     1474: {//King Neptune
         captain: "Boosts ATK of all characters by 1.5x and EXP gained by 1.5x",
+        captainNotes: "EXP boost does not take effect if he becomes your captain in the middle of the adventure.",
         special: "Locks all orbs for 1 turn. If the HP of the enemy with the highest HP is above 50%, cuts the current HP of all enemies by 20%, otherwise, deals 140x character's ATK in typeless damage to all enemies.",
         sailor: "Makes [INT], [PSY] and [TND] orbs \"beneficial\" for this unit",
         specialName: "Merman Gujutsu - Ultramarine",
     },
     1475: {//King Neptune
         captain: "Boosts ATK of all characters by 2.25x and EXP gained by 1.5x",
-        captainNotes: "EXP boost does not take effect if he becomes your capatin in the middle of the adventure.",
+        captainNotes: "EXP boost does not take effect if he becomes your captain in the middle of the adventure.",
         special: "Locks all orbs for 1 turn. If the HP of the enemy with the highest HP is above 50%, cuts the current HP of all enemies by 20%, otherwise, deals 140x character's ATK in typeless damage to all enemies.",
         sailor: "Makes [INT], [PSY] and [TND] orbs \"beneficial\" for this unit",
         specialName: "Merman Gujutsu - Ultramarine",
@@ -22133,14 +22134,14 @@ window.details = {
     },
     1967: {//Boa Hancock
         captain: "Boosts amount of Beli received by 2x",
-        captainNotes: "Does not work if she was not your captain upon starting the island.",
+        captainNotes: "Beli boost does not take effect if she becomes your captain in the middle of the adventure.",
         special: "Changes [BLOCK], [STR], [DEX], [QCK], [INT] and [PSY] orbs on Shooter and Cerebral characters into Matching orbs. If you are on a Treasure Map, amplifies the effects of orbs for Cerebral and Shooter characters depending on your Treasure Map Level for 1 turn",
         specialName: "An Important Confession from the Snake Princess",
         specialNotes: "Level 1-10: 1.75x orb boost<br\>Level 11-20: 2x orb boost<br\>Level 21+: 2.25x orb boost",
     },
     1968: {//Boa Hancock
         captain: "Boosts amount of Beli received by 3x",
-        captainNotes: "Does not work if she was not your captain upon starting the island.",
+        captainNotes: "Beli boost does not take effect if she becomes your captain in the middle of the adventure.",
         special: "Changes [BLOCK], [STR], [DEX], [QCK], [INT] and [PSY] orbs on Shooter and Cerebral characters into Matching orbs. If you are on a Treasure Map, amplifies the effects of orbs for Cerebral and Shooter characters depending on your Treasure Map Level for 1 turn",
         specialName: "An Important Confession from the Snake Princess",
         specialNotes: "Level 1-10: 1.75x orb boost<br\>Level 11-20: 2x orb boost<br\>Level 21+: 2.25x orb boost",
@@ -22724,17 +22725,20 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "#{enrage}"
     },
     1998: {//Sanji
-        captain: "Not Translated",
-        special: "Deals 30x character's ATK in Typeless damage to one? enemy that will ignore damage negating abilities and barriers, amplifies the effect of orbs on [PSY] and [DEX] characters by 2.25x for 1 turn and becomes Sanji & Zoro for 1 turn (not confirmed for unevolved)",
-        specialName: "Sanji/Zoro Special",
+        captain: "Reduces cooldown of [DEX] and [PSY] characters by 2 turns at the start of the fight. Boosts ATK of [DEX] characters by 2x and boosts ATK of [PSY] characters by 2.75x",
+        special: "Deals 30x character's ATK in Typeless damage to one enemy that will ignore damage negating abilities and barriers, amplifies the effect of orbs on [PSY] and [DEX] characters by 2.25x for 1 turn and becomes Sanji & Zoro for 1 turn",
+        specialNotes: "#{ignoreBarrier}",
+        specialName: "Armée de L'Air Power Shoot",
+        sailor: "Boosts base ATK of [PSY] characters by 30",{
     },
     1999: {//Zoro
-        captain: "Not Translated",
-        special: "Deals 30x character's ATK in Typeless damage to one? enemy that will ignore damage negating abilities and barriers, amplifies the effect of orbs on [PSY] and [DEX] characters by 2.25x for 1 turn and becomes Sanji & Zoro for 1 turn (not confirmed for unevolved)",
-        specialName: "Sanji/Zoro Special",
+        captain: "Reduces cooldown of [DEX] and [PSY] characters by 2 turns at the start of the fight. Boosts ATK of [DEX] characters by 2.75x and boosts ATK of [PSY] characters by 2x",
+        special: "Deals 30x character's ATK in Typeless damage to one enemy that will ignore damage negating abilities and barriers, amplifies the effect of orbs on [PSY] and [DEX] characters by 2.25x for 1 turn and becomes Sanji & Zoro for 1 turn",
+        specialNotes: "#{ignoreBarrier}",
+        specialName: "Armée de L'Air Power Shoot",
+        sailor: "Boosts base ATK of [DEX] characters by 30",
     },
     2000: {//Sanji & Zoro
         captain: {
@@ -22748,9 +22752,15 @@ window.details = {
             "character2": "Reduces cooldown of all specials by 2 turns at the start of the fight. Boosts ATK of [DEX] characters by 2.75x and boosts ATK of [PSY] characters by 2x",
             "combined": "Boosts ATK of [DEX] and [PSY] characters by 3.75x and makes [PSY] and [DEX] orbs \"beneficial\" to [PSY] and [DEX] characters"
         },
-        special: "Deals 30x character's ATK in Typeless damage to one? enemy that will ignore damage negating abilities and barriers, amplifies the effect of orbs on [PSY] and [DEX] characters by 2.25x for 1 turn and becomes Sanji & Zoro for 1 turn (not confirmed for unevolved)",
+        captainNotes: "#{beneficial}",
+        special: "Deals 30x character's ATK in Typeless damage to one enemy that will ignore damage negating abilities and barriers, amplifies the effect of orbs on [PSY] and [DEX] characters by 2.25x for 1 turn and becomes Sanji & Zoro for 1 turn",
         specialNotes: "Change Action: When Change is activated, randomizes all non-matching orbs on [PSY] and [DEX] characters and adds .5x to Chain multiplier for 1 turn",
-        specialName: "Sanji/Zoro Special",
+        specialName: "Armée de L'Air Power Shoot",
+        sailor: {
+        "base": "Boosts base HP, ATK and RCV of [DEX] and [PSY] characters by 50",
+        "level1": "Makes [TND] orbs \"beneficial\" for [DEX] and [PSY] characters",
+        },
+        sailorNotes: "#{beneficial}",
         limit: "This character has a limit break tree"
     },
     2001: {//6+ PSY Law
@@ -22854,35 +22864,40 @@ window.details = {
         captain: "If your crew has 4 or more characters of the same Type, boosts ATK all characters by 3.5x, by 2.75x otherwise and boosts HP of all characters by 1.35?x.",
         special: "Adds .9x to Chain multiplier for 1 turn. If your crew has 4 or more characters of the same Type, boosts ATK of the Dominant Type characters by 2.25x and changes all orbs, including [BLOCK] orbs, to Dominant Type orbs",
         sailor: "If your crew has 4 or more characters of the same Type, boosts base ATK of the Dominant Type by 125",
-        specialName: "Shanks Special",
+        specialName: "Closing Declaration",
     },
     2007: {//V2 Shanks
-        captain: "If your crew has 4 or more characters of the same Type, boosts ATK all characters by 3.5x, by 2.75x otherwise and boosts HP of all characters by 1.35?x.",
+        captain: "If your crew has 4 or more characters of the same Type, boosts ATK all characters by 3.5x, by 2.75x otherwise and boosts HP of all characters by 1.35x.",
         special: "Adds .9x to Chain multiplier for 1 turn. If your crew has 4 or more characters of the same Type, boosts ATK of the Dominant Type characters by 2.25x and changes all orbs, including [BLOCK] orbs, to Dominant Type orbs",
-        sailor: "If your crew has 4 or more characters of the same Type, boosts base ATK of the Dominant Type by 125",
-        specialName: "Shanks Special",
+        sailor: {
+        "base": "If your crew has 4 or more characters of the same Type, boosts base ATK of the Dominant Type by 125",
+        "level1": "Makes [PSY] orbs \"beneficial\" for for this unit",
+        },
+        sailorNotes: "#{beneficial}",
+        specialName: "Closing Declaration",
+        limit: "This character has a Limit Break Tree",
     },
     2008: {//Kuma
-        captain: "Not Translated",
+        captain: "Boosts ATK of [STR] and [INT] characters by 1.2x",
         special: "Cuts the current HP of each enemy by 10%, reduces Special Cooldown of your top row by 2 turns and boosts the Color Affinity of [STR] and [INT] characters depending on your Treasure Map Level for 1 turn",
-        specialName: "Kuma Special",
+        specialName: "Proof of a Human Weapon",
         specialNotes: "Level 1-10: 1.5x affinity boost<br\>Level 11-20: 1.75x affinity boost<br\>Level 21+: 2x affinity boost",
     },
     2009: {//Kuma
         captain: "Boosts ATK of [STR] and [INT] characters by 1.5x and their HP by 1.2x",
         special: "Cuts the current HP of each enemy by 10%, reduces Special Cooldown of your top row by 2 turns and boosts the Color Affinity of [STR] and [INT] characters depending on your Treasure Map Level for 1 turn",
-        specialName: "Kuma Special",
+        specialName: "Proof of a Human Weapon",
         specialNotes: "Level 1-10: 1.5x affinity boost<br\>Level 11-20: 1.75x affinity boost<br\>Level 21+: 2x affinity boost",
     },
     2010: {//Monet
-        captain: "Not Translated",
+        captain: "Boosts ATK of Free Spirit characters by 1.2x",
         special: "Deals 50,000 fixed damage to one enemy and reduces Bind and enemy's Threshold Damage Reduction duration by 3 turns",
-        specialName: "Monet Special",
+        specialName: "Fangs of Crushing Ice",
     },
     2011: {//Monet
         captain: "Boosts ATK of Free Spirit characters by 1.5x and their RCV by 1.2x",
         special: "Deals 50,000 fixed damage to one enemy and reduces Bind and enemy's Threshold Damage Reduction duration by 3 turns",
-        specialName: "Monet Special",
+        specialName: "Fangs of Crushing Ice",
     },
     2024: {//Doflamingo Raid v2
         captain: "Boosts ATK of Driven and Cerebral characters by 2.5x when HP is 50% or below, 1.5x otherwise",

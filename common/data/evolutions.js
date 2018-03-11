@@ -3183,14 +3183,6 @@ window.evolutions = {
         evolution: 1993,
         evolvers: [ 1180, 90, 96, 301, 101 ]
     },
-    1045: {
-        evolution: 2001,
-        evolvers: [ 'skullPSY', 118, 87, 303, 267 ]
-    },
-    2003: {
-        evolution: 2004,
-        evolvers: [ 118, 89, 95, 95, 300 ]
-    },
     1998: {
         evolution: 2000,
         evolvers: [  ]
@@ -3198,6 +3190,14 @@ window.evolutions = {
     1999: {
         evolution: 2000,
         evolvers: [  ]
+    },
+    1045: {
+        evolution: 2001,
+        evolvers: [ 'skullPSY', 118, 87, 303, 267 ]
+    },
+    2003: {
+        evolution: 2004,
+        evolvers: [ 118, 89, 95, 95, 300 ]
     },
     2006: {
         evolution: 2007,
