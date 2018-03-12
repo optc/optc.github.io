@@ -788,9 +788,11 @@ window.drops = {
         },
         
         {
-            name: 'Dressrosa - Colosseum Dormatory and the Executive Tower',
+            name: 'Dressrosa - Coliseum Lodging to Executive Tower',
             shortName: 'Dressrosa 2',
             thumb: 2004,
+            nakama: null,
+            completion: '5x Rainbow Gems',
             gamewith: 93492,
             '01': [ 1648 ],
             '02': [ 2003 ],
@@ -908,8 +910,8 @@ window.drops = {
             nakama: 2003900,
             condition: 'None',
             gamewith: 6600,
-            Expert: [ 36, 37, 38, 99, 109, 114, -4, -1387 ],
-            Elite: [ 36, 37, 38, 99, 109, 114, -3 ]
+            condition: 'Cabaji does not drop in Rookie difficulty',			
+            'All Difficulties': [ 36, 37, 38, -4, -3, -2, -1387 ]
         },
 
         {
@@ -919,8 +921,7 @@ window.drops = {
             nakama: 2003000,
             condition: 'None',
             gamewith: 7457,
-            Expert: [ 28, 29, 31, 40, 84, 95, 110, 117, -30, -21, -8, -1388 ],
-            Elite: [ 28, 29, 31, 40, 95, 105, 110, -21, -7 ]
+            'All Difficulties': [ 28, 29, 31, 40, -8, -6, -30, -5, -21, -1388 ]
         },
 
         {
@@ -930,8 +931,8 @@ window.drops = {
             nakama: 2004600,
             condition: 'None',
             gamewith: 7784,
-            Expert: [ 41, 42, 43, 45, -16, -1446 ],
-            Elite: [ 41, 42, 43, 45, 96, 106, 111, -15 ]
+            condition: 'Siam and Butchie does not drop in Rookie difficulty',			
+            'All Difficulties': [ 41, 42, 43, 45, -16, -14, -15, -13, -1446 ]
         },
 
         {
@@ -941,8 +942,8 @@ window.drops = {
             nakama: 2006600,
             condition: 'None',
             gamewith: 5852,
-            Expert: [ 61, 62, 63, 65, 89, 95, 105, 110, -12, -66, -1389 ],
-            Elite: [ 61, 62, 63, 65, 95, 105, 110, -11 ]
+            condition: 'Choo and Kuroobi does not drop in Rookie difficulty',
+            'All Difficulties': [ 61, 62, 63, 65, -12, -10, -11, -66, -9, -1389 ]
         },
 
         {
@@ -952,8 +953,8 @@ window.drops = {
             nakama: 2005800,
             condition: 'None',
             gamewith: 8111,
-            Expert: [ 98, 99, 108, 109, 113, 114, 53, 55, 57, -58, -20 ],
-            Elite: [ 98, 99, 108, 109, 113, 114, 53, 55, 57, -58, -20, -1447, -19 ]
+            condition: 'Gin does not drop in Rookie difficulty',
+            'All Difficulties': [ 53, 55, 57, -20, -18, -19, -58, -17, -1447 ]
         },
 
         {
@@ -963,7 +964,8 @@ window.drops = {
             nakama: 2022800,
             condition: 'None',
             gamewith: 22603,
-            'All Difficulties': [ 33, 35, 84, 95, 105, 107, 110, 112, -228, -34, -26, -25, -24, -23, -22, -1448 ]
+            condition: 'Helmeppo does not drop in Rookie difficulty',
+            'All Difficulties': [ 33, 35, -228, -34, -26, -25, -24, -23, -22, -1448 ]
         },
 
         {
@@ -973,10 +975,10 @@ window.drops = {
             nakama: 2023200,
             condition: 'None',
             gamewith: 5853,
+            condition: 'Iron Fist Fullbody does not drop in Rookie difficulty',
             challenge: 'High Score calculated with Crew Cost, Turns Taken and Tap Accuracy',
             challengeData: [['150,000','1x Blue Elder'],['450,000','1x ATK Cotton Candy'],['750,000','3x Rainbow Gems']],
-            Expert: [ 43, 49, 79, 85, 96, 106, 231, -230, -229, -221, -208, -62, -54 ],
-            Elite: [ 43, 49, 96, 111, 117, 231, -230, -229, -221, -208 ]
+            'All Difficulties': [ 43, 49, 231, -221, -208, -44, -229, -54, -62, -230 ]
         },
 
         {
@@ -986,9 +988,10 @@ window.drops = {
             nakama: 2026300,
             condition: 'None',
             gamewith: 5777,
+            condition: 'Training Coby does not drop in Rookie difficulty',
             challenge:'Total number of hits above 50,000',
             challengeData: [['5 Times','1x Yellow Elder'],['15 Times','1x ATK Cotton Candy'],['25 Times','3x Rainbow Gems']],
-            'All Difficulties': [ 31, 33, 262, 264, 87, 88, 98, 99, 113, -265, -263, -225, -210, -64, -56, -32 ]
+            'All Difficulties': [ 262, 264, -210, -64, -225, -263, -265, -32, -56 ]
         },
 
         {
@@ -1000,7 +1003,7 @@ window.drops = {
             gamewith: 6725,
             challenge: 'Cumulative Damage dealt to enemies in a single run',
             challengeData: [['600,000 Damage','1x Green Elder'],['1,400,000 Damage','1y Rainbow Gem & 1x HP Cotton Candy'],['3,000,000 Damage','2x Rainbow Gems, 1x Forbidden Tome']],
-            'All Difficulties': [ 67, 69, 86, 97, 112, -219, -212, -206, -204, -73, -52, -50 ]
+            'All Difficulties': [ 67, 69, -73, -219, -204, -206, -52, -212, -50 ]
         },
 
         {
@@ -1010,8 +1013,8 @@ window.drops = {
             nakama: 2029700,
             condition: 'None',
             gamewith: 9181,
-            Expert: [ 99, 88, 114, 296, 298, 299, -236, -234, -223, -217, -202, -200, -199 ],
-            Elite: [ 99, 88, 114, 296, 298, 299, -236, -234, -223, -202, -200 ]
+            condition: 'Momonga does not drop in Rookie difficulty',
+            'All Difficulties': [ 296, 298, 299, -217, -223, -200, -202, -199, -234, -236 ]
         },
 
         {
@@ -1072,15 +1075,15 @@ window.drops = {
         },
 
         {
-            name: 'Perona\'s Worden Garden',
+            name: 'Perona\'s Wonder Garden',
             thumb: 392,
             global: true,
             nakama: 2039200,
             gamewith: 7767,
-            condition: 'You can only get STR, QCK, INT and Food Orbs',
+            condition: 'Only [STR], [QCK], [INT] and [RCV] orbs appear. Kumacy does not drop in Rookie difficulty',
             challenge: 'Total number of hits over 50,000',
             challengeData: [['3 Times','1x Green Elder'],['12 Times','1x RCV Cotton Candy'],['25 Times','3x Rainbow Gems']],
-            'All Difficulties': [ 391, 393, 394, -394, -393, -329, -316, -47, -34, -4, -1387 ]
+            'All Difficulties': [ 391, 393, 394, -4, -316, -329, -34, -393, -394, -47, -1387 ]
         },
 
         {
@@ -1089,7 +1092,7 @@ window.drops = {
             global: true,
             nakama: 2040500,
             gamewith: 6332,
-            condition: 'You can only get QCK, DEX, PSY and Food Orbs',
+            condition: 'Only [QCK], [DEX], [PSY] and [RCV] orbs appear',
             'All Difficulties': [ 404, 406, 407, -407, -406, -333, -312, -208, -26, -20, -1447 ]
         },
 
@@ -1099,7 +1102,6 @@ window.drops = {
             global: true,
             nakama: 2042000,
             gamewith: 7161,
-            condition: 'None',
             'All Difficulties': [ 36, 37, 47, 48, 49, 50, 51, 59, 63, 211, 233, 420, 421, 422, -422, -332, -308, -225, -206, -204, -8, -1388 ]
         },
 
@@ -1109,7 +1111,7 @@ window.drops = {
             global: true,
             nakama: 2042400,
             gamewith: 5383,
-            condition: 'You can only get STR, DEX, INT and PSY Orbs',
+            condition: 'Only [STR], [DEX], [INT] and [PSY] orbs appear',
             challenge: 'Cumulative Damage dealt to enemies in a single run',
             challengeData: [['500,000 Damage','1x Black Elder'],['1,500,000 Damage','1x ATK Cotton Candy'],['3,000,000 Damage','3x Rainbow Gems']],
             'All Difficulties': [ 423, 425, -425, -327, -310, -223, -219, -214, -202 ]
@@ -1121,9 +1123,9 @@ window.drops = {
             global: true,
             nakama: 2043600,
             gamewith: 7785,
+            condition: 'Each non-Okama in your Team will take 60 Damage each turn',
             challenge: 'Damage dealt in a single Round',
             challengeData: [['350,000','1x Black Elder'], ['900,000','1x HP Cotton Candy'], ['2,000,000','3x Rainbow Gems']],
-            condition: 'Each non-Okama in your Team will take 60 Damage each turn',
             'All Difficulties': [ 433, 434, 435, -384, -372, -371, -359, -217, -210, -19 ]
         },
 
@@ -1207,7 +1209,7 @@ window.drops = {
             condition: 'All Units considered from the “Sea” will lose 20% to all stats',
             challenge: 'Total number of hits over 50,000',
             challengeData: [['4 Times','1x Black Elder'],['16 Times','1x ATK Cotton Candy'],['38 Times','3x Rainbow Gems']],
-            'All Difficulties': [ 581, 582, 583, 584, -584, -544, -466, -412, -371, -335, -314, -291 ]
+            'All Difficulties': [ 581, 582, 583, 584, -314, -412, -291, -544, -335, -376, -466, -584 ]
         },
 
         {
@@ -1216,9 +1218,8 @@ window.drops = {
             global: true,
             nakama: 2059900,
             gamewith: 6333,
-            condition: 'You cannot use any two units that are the same',
-            Expert: [ 598, 600, -504, -467, -463, -414, -372, -332, -310, -77 ],
-            Elite: [ 598, 600, -467, -463, -414, -372, -332, -310, -77 ]
+            condition: 'You cannot use any two units that are the same in Elite and Expert difficulty',
+            'All Difficulties': [ 598, 600, -77, -310, -414, -332, -463, -504, -377, -467 ]
         },
 
         {
@@ -1249,7 +1250,7 @@ window.drops = {
             global: true,
             nakama: 2065600,
             gamewith: 8739,
-            condition: 'You can only get STR, QCK, DEX, PSY and INT orbs',
+            condition: 'Only [STR], [QCK], [DEX], [PSY] and [INT] orbs appear',
             'All Difficulties': [ 655, 657, 658, -658, -500, -465, -455, -453, -398, -357, -60 ]
         },
 
@@ -1316,9 +1317,8 @@ window.drops = {
             global: true,
             nakama: 2076100,
             gamewith: 25120,
-            condition: 'None',
             'Japan': [ 761, 762, 763, 764, 765, -610, -588, -565, -556, -426, -408, -261, -217, -1210, -1413 ],
-            'Global': [ 761, 762, 763, 764, 765, -426, -408, -332, -308, -292, -261, -217, -8, -1413, -1388 ]
+            'Global': [ 406, 761, 762, 763, 764, 765, -261, -217, -8, -308, -408, -292, -332, -426, -1388, -1413 ]
         },
 
         {
@@ -1327,9 +1327,8 @@ window.drops = {
             global: true,
             nakama: 2076600,
             gamewith: 25101,
-            condition: 'None',
             'Japan': [ 762, 766, 767, 768, 769, -629, -611, -569, -554, -431, -410, -367, -1619, -223, -1175 ],
-            'Global': [ 762, 766, 767, 768, 769, -431, -367, -1619, -291, -253, -251, -223, -212, -75 ]
+            'Global': [ 762, 766, 767, 768, 769, -367, -75, -251, -253, -223, -291, -431, -212, -1619 ]
         },
 
         {
@@ -1388,7 +1387,6 @@ window.drops = {
             global: true,
             nakama: 2086600,
             gamewith: 21530,
-            condition: 'None',
             challenge:'Total number of hits above 50,000',
             challengeData: [['4 Times','1x INT Elder'],['9 Times','1x ATK Cotton Candy, 1x Rainbow Gem'],['22 Times','1x Despair Resistance Forbidden Tome, 2x Rainbow Gems']],
             'Japan': [ 41, 42, 53, 235, 395, 397, 419, 426, 427, 432, 563, 564, 866, 867, 868, -709, -1549, -673, -671, -633, -500, -467, -465, -451, -431 ],
@@ -1401,7 +1399,7 @@ window.drops = {
             global: true,
             nakama: 2088500,
             gamewith: 22421,
-            condition: 'Highly increased chance of TND, Bomb, and G orbs',
+            condition: 'Highly increased chance of [TND], [Bomb], and [G] orbs',
             'All Difficulties': [ 885, 886, 887, -887, -704, -703, -677, -675, -504, -453, -416, -1445 ]
         },
 
@@ -1411,7 +1409,7 @@ window.drops = {
             global: true,
             nakama: 2089700,
             gamewith: 23047,
-            condition: 'Only STR/DEX/QCK/PSY/INT orbs will appear',
+            condition: 'Only [STR], [DEX], [QCK], [PSY] and [INT] orbs appear',
             'All Difficulties': [ 897, 898, 899, -899, -754, -702, -701, -669, -1492, -528, -466, -449, -464, -1177 ]
         },
 
@@ -1462,18 +1460,18 @@ window.drops = {
         
         {
             name: 'Let\'s Find Our Captain! Heart Pirates!',
-            condition: 'You can only bring QCK units',
             thumb: 1003,
             global: true,
             nakama: 2100300,
             gamewith: 26908,
-            'All Difficulties': [ 1002, 1004, 1005, -748, -1663, -844, -558, -846, -737, -1006, -785, -564, -1208 ]
+            condition: 'You can only bring QCK units in Elite and Expert difficulty',
+            'Japan': [ 1002, 1004, 1005, -748, -1663, -844, -558, -846, -737, -1006, -785, -564, -1208 ]
+            'Global': [ 1002, 1004, 1005, -748, -844, -846, -1208, -785, -737, -1006, -564, -1663 ]
         },
         
         {
             name: 'Butler and Strange Animal Island',
             thumb: 1011,
-            condition: 'None',
             global: true,
             nakama: 2101100,
             gamewith: 27631,
@@ -1487,7 +1485,7 @@ window.drops = {
             global: true,
             nakama: 2103700,
             gamewith: 29442,
-            condition: 'Only DEX/RCV/TND orbs will appear',
+            condition: 'Only [DEX], [RCV] and [TND] orbs appear',
             'All Dificulties': [ 1036, 1038, -874, -876, -878, -554, -813, -814, -566, -1175 ]
         },
         
@@ -1497,7 +1495,7 @@ window.drops = {
             global: true,
             nakama: 2104900,
             gamewith: 29912,
-            condition: 'Only TND/RCV/INT orbs will appear',
+            condition: 'Only [TND], [RCV] and [INT] orbs appear',
             'All Difficulties': [ 1048, 1050, 1052, -556, -567, -586, -614, -816, -870, -872, -908, -1210 ]
         },
         
@@ -1549,7 +1547,6 @@ window.drops = {
             global: true,
             nakama: 2116700,
             gamewith: 35095,
-            condition: 'None',
             'All Difficulties': [ 1166, 1168, 1170, -578, -999, -991, -993, -675, -508, -616, -703, -1121 ]
         },
         
@@ -1620,7 +1617,7 @@ window.drops = {
             nakama: 2132800,
             gamewith: 44164,
             condition: 'Slasher characters are Silenced for 99 turns and have their ATK reduced by a variable amount. (75% on 30 stamina)',
-            'All Difficulties': [ 1327, 1329, 1330, -1085, -1127, -1131, -1058, -758, -760, -735, -4, -508, -1387 ]
+            'All Difficulties': [ 1327, 1329, 1330, -1085, -4, -758, -760, -1127, -1131, -508, -735, -1058, -1387 ]
         },
         
         {
@@ -1708,8 +1705,8 @@ window.drops = {
             global: true,
             nakama: 2150900,
             gamewith: 52629,
-            condition: 'You can only bring PSY units',
-            'All Difficulties': [ 1509, 1510, 1511, 1512, -1001, -1316, -1280, -314, -908, -16, -1446, -1370, -1368, -816 ],
+            condition: 'You can only bring PSY units in Elite and Expert difficulty',
+            'All Difficulties': [ 1509, 1510, 1511, 1512, -1001, -314, -908, -1316, -1368, -1370, -1446, -816, -1280, -16 ],
         },
         
         {
@@ -1747,7 +1744,7 @@ window.drops = {
             global: true,
             nakama: 2158100,
             gamewith: 56038,
-            'All Difficulties': [ 1580, 1582, -1391, -1444, -1436, -1551, -896, -910, -357, -995, -890, -1342 ],
+            'All Difficulties': [ 1580, 1582, -1391, -357, -910, -995, -896, -1436, -1444, -890, -1342, -1551 ],
         },
         
         {
@@ -1805,7 +1802,7 @@ window.drops = {
             nakama: 2169000,
             gamewith: 62883,
             condition: 'Only [INT] and [PSY] orbs appear',
-            'All Difficulties': [ 1689, 1691, 1692, -1532, -1543, -1542, -449, -453, -1079, -1538, -967, -1346, -1349 ],
+            'All Difficulties': [ 1689, 1691, 1692, -1543, -449, -453, -1079, -1538, -1542, -967, -1346, -1349, -1532 ],
         },
         
         {
@@ -1929,7 +1926,7 @@ window.drops = {
         },
         
         {
-            name: 'Supernova! Capone and Bonney!',
+            name: 'Supernova! Bonney and Capone!',
             thumb: 1982,
             nakama: 2198200,
             gamewith: 93457,
@@ -2403,6 +2400,15 @@ window.drops = {
             Master: [ 1942 ],
             Expert: [ 1942 ]
         },
+        
+        {
+            name: 'Clash!! Heavenly Demon Doflamingo',
+            thumb: 2025,
+            global: true,
+            gamewith: null,
+            Master: [ 2024 ],
+            Expert: [ 2024 ]
+        },
 
     ],
 
@@ -2681,7 +2687,9 @@ window.drops = {
             nakama: 6087000,
             gamewith: 68282,
             condition: 'Chance of dropping the Silver Almighty Book, Guidence Fragments and Guidence Crystals.',
-            'All Bosses': [ -1621, -1632, -1665, -1678, -1713, -1721, -1770 ],
+            'Japan': [ -1621, -1632, -1665, -1678, -1713, -1721, -1770 ],
+            'Global': [ -1621, -1632, -1665, -1713, -1721 ],
+            'Chopperman Missions': [ 1023, 1600 ],
         },
         
         {
@@ -2704,6 +2712,7 @@ window.drops = {
         {
             name: 'Champion Challenge!',
             thumb: 1588,
+            global: true,
             nakama: 6158800,
             gamewith: 56742,
             showManual: true,

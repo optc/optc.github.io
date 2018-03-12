@@ -3153,7 +3153,7 @@ window.evolutions = {
     },
     1977: {
         evolution: 1978,
-        evolvers: [  ]
+        evolvers: [ 118, 97, 1180, 302, 102 ]
     },
     1979: {
         evolution: 1980,
@@ -3165,23 +3165,23 @@ window.evolutions = {
     },
     1984: {
         evolution: 1985,
-        evolvers: [  ]
+        evolvers: [ 83, 94, 95, 300, 100 ]
     },
     1986: {
         evolution: 1987,
-        evolvers: [  ]
+        evolvers: [ 83, 94, 95, 300, 100 ]
     },
     1988: {
         evolution: 1989,
-        evolvers: [  ]
+        evolvers: [ 118, 81, 1180, 303, 103 ]
     },
     1990: {
         evolution: 1991,
-        evolvers: [  ]
+        evolvers: [ 266, 79, 94, 301, 101 ]
     },
     1992: {
         evolution: 1993,
-        evolvers: [  ]
+        evolvers: [ 1180, 90, 96, 301, 101 ]
     },
     1998: {
         evolution: 2000,
@@ -3191,20 +3191,28 @@ window.evolutions = {
         evolution: 2000,
         evolvers: [  ]
     },
+    1045: {
+        evolution: 2001,
+        evolvers: [ 'skullPSY', 118, 87, 303, 267 ]
+    },
+    2003: {
+        evolution: 2004,
+        evolvers: [ 118, 89, 95, 95, 300 ]
+    },
     2006: {
         evolution: 2007,
-        evolvers: [  ]
+        evolvers: [ 118, 88, 266, 99, 267 ]
     },
     2008: {
         evolution: 2009,
-        evolvers: [  ]
+        evolvers: [ 117, 82, 93, 99, 104 ]
     },
     2010: {
         evolution: 2011,
-        evolvers: [  ]
+        evolvers: [ 117, 82, 93, 304, 104 ]
     },
     2024: {
         evolution: 2025,
-        evolvers: [  ]
+        evolvers: [ 118, 267, 88, 304, 83 ]
     },
 };
