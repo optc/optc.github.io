@@ -3183,6 +3183,14 @@ window.evolutions = {
         evolution: 1993,
         evolvers: [ 1180, 90, 96, 301, 101 ]
     },
+    1994: {
+        evolution: 1995,
+        evolvers: [  ]
+    },
+    1996: {
+        evolution: 1997,
+        evolvers: [  ]
+    },
     1998: {
         evolution: 2000,
         evolvers: [  ]

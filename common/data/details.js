@@ -22726,6 +22726,26 @@ window.details = {
             },
         ],
     },
+    1994: {//Marco
+        captain: "Not Translated",
+        special: "Changes adjacent orbs into [RCV] orbs, reduces Paralysis and Despair duration by 2 turns and reduces damage received by 40% for 1 turn",
+        specialName: "Marco Special",
+    },
+    1995: {//Marco
+        captain: "Boosts ATK of Fighter characters by 2.25x and reduce damage received by 5%",
+        special: "Changes adjacent orbs into [RCV] orbs, reduces Paralysis and Despair duration by 2 turns and reduces damage received by 40% for 1 turn",
+        specialName: "Marco Special",
+    },
+    1996: {//Vista
+        captain: "Not Translated",
+        special: "Deals 15x character's ATK in [STR] damage to all enemies, randomizes own non-matching orb, including [BLOCK] orbs, and delays all enemies for 1 turn",
+        specialName: "Vista Special",
+    },
+    1997: {//Vista
+        captain: "Reduces cooldown of Shooter specials by 2 turns at the start of the fight, boosts ATK of Slasher characters by 2.475x after scoring 3 Greats in a row, by 2.25x otherwise.",
+        special: "Deals 15x character's ATK in [STR] damage to all enemies, randomizes own non-matching orb, including [BLOCK] orbs, and delays all enemies for 1 turn",
+        specialName: "Vista Special",
+    },
     1998: {//Sanji
         captain: "Reduces cooldown of [DEX] and [PSY] characters by 2 turns at the start of the fight. Boosts ATK of [DEX] characters by 2x and boosts ATK of [PSY] characters by 2.75x",
         special: "Deals 30x character's ATK in Typeless damage to one enemy that will ignore damage negating abilities and barriers, amplifies the effect of orbs on [PSY] and [DEX] characters by 2.25x for 1 turn and becomes Sanji & Zoro for 1 turn",
