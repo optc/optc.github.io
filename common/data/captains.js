@@ -6610,10 +6610,10 @@ window.captains = {
         rcv: function(p) { return p.unit.type == "DEX" ? 1.5 : 1; }
     },
     1971: {
-        atk: function(p) { return !(p.unit.class.has("Cerebral")) ? 1 : p.actions[p.sourceSlot] ? 1.3 : 1; },
-        hp: function(p) { return !(p.unit.class.has("Cerebral")) ? 1 : p.actions[p.sourceSlot] ? 1.05 : 1; },
-        rcv: function(p) { return !(p.unit.class.has("Cerebral")) ? 1 : p.actions[p.sourceSlot] ? 1.05 : 1; },
-        chainModifier: function(p) { return (p.percHP <= 30.0 || p.percHP >= 70.0) ? p.actions[p.sourceSlot] ? 1 : 1 : 1; }//Technically broken but no one cares about non-limit break stats
+        atk: function(p) { return !(p.unit.class.has("Cerebral")) ? 1 : 1.3; },
+        hp: function(p) { return !(p.unit.class.has("Cerebral")) ? 1 : 1.05; },
+        rcv: function(p) { return !(p.unit.class.has("Cerebral")) ? 1 : 1.05; },
+        chainModifier: function(p) { return (p.percHP <= 30.0 || p.percHP >= 70.0) ? 1.1 : 1; }
     },
     1972: {
         atk: function(p) { return !(p.unit.class.has("Cerebral")) ? 1 : p.actions[p.sourceSlot] ? 2.25 : 1.5; },
