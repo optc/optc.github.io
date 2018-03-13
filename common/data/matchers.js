@@ -51,6 +51,36 @@ window.matchers = [
     },
 
     {
+        name: '1.25x ATK captains',
+        target: 'captain',
+        matcher: /Boosts (their )?ATK.+by 1.25x/i
+    },
+
+    {
+        name: '1.5x ATK captains',
+        target: 'captain',
+        matcher: /Boosts (their )?ATK.+by 1.5x/i
+    },
+
+    {
+        name: '1.75x ATK captains',
+        target: 'captain',
+        matcher: /Boosts (their )?ATK.+by 1.75x/i
+    },
+
+    {
+        name: '2x ATK captains',
+        target: 'captain',
+        matcher: /Boosts (their )?ATK.+by 2x/i
+    },
+
+    {
+        name: '2.25x ATK captains',
+        target: 'captain',
+        matcher: /Boosts (their )?ATK.+by 2.25x/i
+    },
+
+    {
         name: '2.5x ATK captains',
         target: 'captain',
         matcher: /Boosts (their )?ATK.+by 2.5x/i
@@ -67,6 +97,36 @@ window.matchers = [
         name: '3x ATK captains',
         target: 'captain',
         matcher: /Boosts (their )?ATK.+by 3x/i
+    },
+
+    {
+        name: '3.25x ATK captains',
+        target: 'captain',
+        matcher: /Boosts (their )?ATK.+by 3.25x/i
+    },
+
+    {
+        name: '3.5x ATK captains',
+        target: 'captain',
+        matcher: /Boosts (their )?ATK.+by 3.5x/i
+    },
+
+    {
+        name: '3.75x ATK captains',
+        target: 'captain',
+        matcher: /Boosts (their )?ATK.+by 3.75x/i
+    },
+
+    {
+        name: '4x ATK captains',
+        target: 'captain',
+        matcher: /Boosts (their )?ATK.+by 4x/i
+    },
+
+    {
+        name: '4.25x ATK captains',
+        target: 'captain',
+        matcher: /Boosts (their )?ATK.+by 4.25x/i
     },
 
     {
@@ -103,7 +163,7 @@ window.matchers = [
     {
         name: 'Cooldown reducers',
         target: 'captain',
-        matcher: /reduces.+cooldown/i
+        matcher: /Reduces cooldown.+by/i
     },
 
     {
@@ -173,7 +233,13 @@ window.matchers = [
         target: 'special',
         matcher: /description/i
     },
-
+    
+    {
+        name: '1.25x ATK specials',
+        target: 'special',
+        matcher: /Boosts ATK.+by 1.25x/i
+    },
+    
     {
         name: '1.5x ATK specials',
         target: 'special',
@@ -190,6 +256,12 @@ window.matchers = [
         name: '2x ATK specials',
         target: 'special',
         matcher: /Boosts ATK.+by 2x/i
+    },
+    
+    {
+        name: '2.25x ATK specials',
+        target: 'special',
+        matcher: /Boosts ATK.+by 2.25x/i
     },
 
     {
@@ -339,9 +411,9 @@ window.matchers = [
     },
     
     {
-        name: 'Buff Ignoring Damage dealer',
+        name: 'Ignoring defense damage dealer',
         target: 'special',
-        matcher: /deals.+ignore damage negating abilities and barriers/i
+        matcher: /Deals.+ignore damage negating abilities and barriers/i
     },
 
     {

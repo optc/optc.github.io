@@ -237,7 +237,7 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
      * Table configuration *
      ***********************/
 
-    var data = window.units.filter(function(x) { return x.name; }).map(function(x,n) {
+    var data = window.units.filter(function(x) { return x.name && !x.name.includes("Limit Break") && !x.name.includes("Dual Unit"); }).map(function(x,n) {
         var result = [
             ('000' + (x.number+1)).slice(-padding),
             x.name,

@@ -787,6 +787,27 @@ window.drops = {
             '12': [ 1782 ],
         },
         
+        {
+            name: 'Dressrosa - Coliseum Lodging to Executive Tower',
+            shortName: 'Dressrosa 2',
+            thumb: 2004,
+            nakama: null,
+            completion: '5x Rainbow Gems',
+            gamewith: 93492,
+            '01': [ 1648 ],
+            '02': [ 2003 ],
+            '03': [  ],
+            '04': [ 2003 ],
+            '05': [ 1784 ],
+            '06': [ 2002 ],
+            '07': [  ],
+            '08': [ 2002, 1627 ],
+            '09': [  ],
+            '10': [ 2005 ],
+            '11': [  ],
+            '12': [ 2005 ],
+        },
+        
     ],
 
     'Weekly Island': [
@@ -943,7 +964,7 @@ window.drops = {
             nakama: 2022800,
             condition: 'None',
             gamewith: 22603,
-			condition: 'Helmeppo does not drop in Rookie difficulty',
+            condition: 'Helmeppo does not drop in Rookie difficulty',
             'All Difficulties': [ 33, 35, -228, -34, -26, -25, -24, -23, -22, -1448 ]
         },
 
@@ -954,7 +975,7 @@ window.drops = {
             nakama: 2023200,
             condition: 'None',
             gamewith: 5853,
-			condition: 'Iron Fist Fullbody does not drop in Rookie difficulty',
+            condition: 'Iron Fist Fullbody does not drop in Rookie difficulty',
             challenge: 'High Score calculated with Crew Cost, Turns Taken and Tap Accuracy',
             challengeData: [['150,000','1x Blue Elder'],['450,000','1x ATK Cotton Candy'],['750,000','3x Rainbow Gems']],
             'All Difficulties': [ 43, 49, 231, -221, -208, -44, -229, -54, -62, -230 ]
@@ -967,7 +988,7 @@ window.drops = {
             nakama: 2026300,
             condition: 'None',
             gamewith: 5777,
-			condition: 'Training Coby does not drop in Rookie difficulty',
+            condition: 'Training Coby does not drop in Rookie difficulty',
             challenge:'Total number of hits above 50,000',
             challengeData: [['5 Times','1x Yellow Elder'],['15 Times','1x ATK Cotton Candy'],['25 Times','3x Rainbow Gems']],
             'All Difficulties': [ 262, 264, -210, -64, -225, -263, -265, -32, -56 ]
@@ -1188,7 +1209,7 @@ window.drops = {
             condition: 'All Units considered from the “Sea” will lose 20% to all stats',
             challenge: 'Total number of hits over 50,000',
             challengeData: [['4 Times','1x Black Elder'],['16 Times','1x ATK Cotton Candy'],['38 Times','3x Rainbow Gems']],
-            'All Difficulties': [ 581, 582, 583, 584, -584, -544, -466, -412, -371, -335, -314, -291 ]
+            'All Difficulties': [ 581, 582, 583, 584, -314, -412, -291, -544, -335, -376, -466, -584 ]
         },
 
         {
@@ -1444,7 +1465,7 @@ window.drops = {
             nakama: 2100300,
             gamewith: 26908,
             condition: 'You can only bring QCK units in Elite and Expert difficulty',
-            'Japan': [ 1002, 1004, 1005, -748, -1663, -844, -558, -846, -737, -1006, -785, -564, -1208 ]
+            'Japan': [ 1002, 1004, 1005, -748, -1663, -844, -558, -846, -737, -1006, -785, -564, -1208 ],
             'Global': [ 1002, 1004, 1005, -748, -844, -846, -1208, -785, -737, -1006, -564, -1663 ]
         },
         
@@ -1684,8 +1705,8 @@ window.drops = {
             global: true,
             nakama: 2150900,
             gamewith: 52629,
-            condition: 'You can only bring PSY units',
-            'All Difficulties': [ 1509, 1510, 1511, 1512, -1001, -1316, -1280, -314, -908, -16, -1446, -1370, -1368, -816 ],
+            condition: 'You can only bring PSY units in Elite and Expert difficulty',
+            'All Difficulties': [ 1509, 1510, 1511, 1512, -1001, -314, -908, -1316, -1368, -1370, -1446, -816, -1280, -16 ],
         },
         
         {
@@ -1901,15 +1922,23 @@ window.drops = {
             thumb: 1965,
             nakama: 2196500,
             gamewith: 91449,
-            'All Difficulties': [ 1964, 1966, -1764, -1368, -1802, -1713, -1840, -1557 ]
+            'All Difficulties': [ 1964, 1966, -1794, -1368, -1802, -1713, -1840, -1557 ]
         },
         
         {
             name: 'Supernova! Bonney and Capone!',
             thumb: 1982,
             nakama: 2198200,
-            gamewith: 93423,
+            gamewith: 93457,
             'All Difficulties': [ 1979, 1981, -1921, -1362, -1366, -1770, -1834, -1836, -1633 ]
+        },
+        
+        {
+            name: 'Whitebeard Pirates Commanders! Marco and Vista!',
+            thumb: 1997,
+            nakama: null,
+            gamewith: 94921,
+            'All Difficulties': [ 1994, 1996, -1832, -1408, -1721, -1871, -1838, -1634 ]
         },
         
     ],
@@ -2381,6 +2410,14 @@ window.drops = {
         },
         
         {
+            name: 'Clash!! Rob Lucci',
+            thumb: 2015,
+            gamewith: null,
+            Master: [ 2014 ],
+            Expert: [ 2015 ]
+        },
+        
+        {
             name: 'Clash!! Heavenly Demon Doflamingo',
             thumb: 2025,
             global: true,
@@ -2401,8 +2438,8 @@ window.drops = {
             gamewith: 17473,
             slefty: 'coliseums',
             Exhibition: [ 776, 778, 803, 832, 834, 859, 861, 883, 902, 904, 925, 927, 952, 984, 1017, 1019, 1103, 1105, 1195, 1197, 1221, 1252, 1253, 1293, 1311, 1339, 1340, 1377, 1402, 1423, 1424, 1457, 1459, 1488, 1490, 1526, 1528, 1552, 1585, 1603, 1629, 1860 ],
-            Underground: [ 776, 778, 803, 832, 834, 859, 861, 883, 902, 904, 925, 927, 952, 984, 1017, 1019, 1103, 1105, 1195, 1197, 1221, 1252, 1253, 1293, 1311, 1339, 1340, 1377, 1402, 1423, 1424, 1457, 1459, 1488, 1490, 1526, 1528, 1552, 1585, 1603, 1629, 1791, 1860, 1896 ],
-            Chaos: [ 776, 778, 780, 803, 805, 830, 832, 834, 859, 861, 881, 883, 900, 902, 923, 925, 950, 982, 984, 1017, 1015, 1040, 1042, 1086, 1088, 1090, 1101, 1103, 1105, 1140, 1142, 1144, 1195, 1219, 1221, 1250, 1252, 1291, 1293, 1309, 1311, 1337, 1339, 1340, 1375, 1377, 1400, 1421, 1423, 1455, 1457, 1486, 1488, 1525, 1526, 1528, 1552, 1554, 1583, 1585, 1601, 1603, 1627, 1629, 1666, 1693, 1732, 1791, 1827, 1860, 1896, 1944 ],
+            Underground: [ 776, 778, 803, 832, 834, 859, 861, 883, 902, 904, 925, 927, 952, 984, 1017, 1019, 1103, 1105, 1195, 1197, 1221, 1252, 1253, 1293, 1311, 1339, 1340, 1377, 1402, 1423, 1424, 1457, 1459, 1488, 1490, 1526, 1528, 1552, 1585, 1603, 1629, 1791, 1860, 1896, 1977 ],
+            Chaos: [ 776, 778, 780, 803, 805, 830, 832, 834, 859, 861, 881, 883, 900, 902, 923, 925, 950, 982, 984, 1017, 1015, 1040, 1042, 1086, 1088, 1090, 1101, 1103, 1105, 1140, 1142, 1144, 1195, 1219, 1221, 1250, 1252, 1291, 1293, 1309, 1311, 1337, 1339, 1340, 1375, 1377, 1400, 1421, 1423, 1455, 1457, 1486, 1488, 1525, 1526, 1528, 1552, 1554, 1583, 1585, 1601, 1603, 1627, 1629, 1666, 1693, 1732, 1791, 1827, 1860, 1896, 1944, 1977 ],
             Neo: [ 1862, 1898, 1975 ]
         },
         
@@ -2457,6 +2494,14 @@ window.drops = {
 			nakama: 8197200,
             gamewith: null,
             'Raging Sea': [ 1971 ]
+        },
+
+        {
+            name: 'Sanji and Zoro',
+            thumb: 2000,
+			nakama: null,
+            gamewith: 94667,
+            'Raging Sea': [ 1998, 1999 ]
         },
         
     ],
@@ -2525,8 +2570,8 @@ window.drops = {
             thumb: 1961,
             nakama: 6196100,
             gamewith: 88896,
-            'Sanji': [ 1960, 83, 94, 226, 1180, 81, 87, 92, 98, 113 ],
-            'Pudding': [ 1962, 83, 94, 226, 1180, 82, 88, 93, 99, 114 ],
+            'Sanji': [ 1960, 83, 94, 266, 1180, 81, 87, 92, 98, 113 ],
+            'Pudding': [ 1962, 83, 94, 266, 1180, 82, 88, 93, 99, 114 ],
         },
 
         {
