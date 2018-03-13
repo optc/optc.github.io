@@ -233,13 +233,7 @@ window.matchers = [
         target: 'special',
         matcher: /description/i
     },
-    
-    {
-        name: '1.25x ATK specials',
-        target: 'special',
-        matcher: /Boosts ATK.+by 1.25x/i
-    },
-    
+
     {
         name: '1.5x ATK specials',
         target: 'special',
@@ -256,12 +250,6 @@ window.matchers = [
         name: '2x ATK specials',
         target: 'special',
         matcher: /Boosts ATK.+by 2x/i
-    },
-    
-    {
-        name: '2.25x ATK specials',
-        target: 'special',
-        matcher: /Boosts ATK.+by 2.25x/i
     },
 
     {
@@ -411,9 +399,9 @@ window.matchers = [
     },
     
     {
-        name: 'Ignoring defense damage dealer',
+        name: 'Buff Ignoring Damage dealer',
         target: 'special',
-        matcher: /Deals.+ignore damage negating abilities and barriers/i
+        matcher: /deals.+ignore damage negating abilities and barriers/i
     },
 
     {

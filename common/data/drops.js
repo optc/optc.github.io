@@ -1465,7 +1465,7 @@ window.drops = {
             nakama: 2100300,
             gamewith: 26908,
             condition: 'You can only bring QCK units in Elite and Expert difficulty',
-            'Japan': [ 1002, 1004, 1005, -748, -1663, -844, -558, -846, -737, -1006, -785, -564, -1208 ],
+            'Japan': [ 1002, 1004, 1005, -748, -1663, -844, -558, -846, -737, -1006, -785, -564, -1208 ]
             'Global': [ 1002, 1004, 1005, -748, -844, -846, -1208, -785, -737, -1006, -564, -1663 ]
         },
         
@@ -1931,14 +1931,6 @@ window.drops = {
             nakama: 2198200,
             gamewith: 93457,
             'All Difficulties': [ 1979, 1981, -1921, -1362, -1366, -1770, -1834, -1836, -1633 ]
-        },
-        
-        {
-            name: 'Whitebeard Pirates Commanders! Marco and Vista!',
-            thumb: 1997,
-            nakama: null,
-            gamewith: 94921,
-            'All Difficulties': [ 1994, 1996, -1832, -1408, -1721, -1871, -1838, -1634 ]
         },
         
     ],
@@ -2410,14 +2402,6 @@ window.drops = {
         },
         
         {
-            name: 'Clash!! Rob Lucci',
-            thumb: 2015,
-            gamewith: null,
-            Master: [ 2014 ],
-            Expert: [ 2015 ]
-        },
-        
-        {
             name: 'Clash!! Heavenly Demon Doflamingo',
             thumb: 2025,
             global: true,
@@ -2497,10 +2481,9 @@ window.drops = {
         },
 
         {
-            name: 'Sanji and Zoro',
+            name: 'Fire Fist Sabo',
             thumb: 2000,
-			nakama: null,
-            gamewith: 94667,
+            gamewith: null,
             'Raging Sea': [ 1998, 1999 ]
         },
         

@@ -388,7 +388,7 @@ window.effects = {
     },
     
     'Sabo Neo - Fighter Raid Boss': {
-        description: 'Boosts Orbs of all characters by 1.2x, ATK by 1.3x and Reduces Chain by Half.',
+        description: 'Boosts the Orbs all characters by 1.2x, ATK by 1.3x and Reduces Chain by Half.',
         thumb: 1727,
         id: 41,
         orb: function(p) { return p.orb == 2.0 ? 1.2 : (p.orb == 0.5 ? 5/6 : 1); },
