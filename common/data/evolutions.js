@@ -3183,13 +3183,21 @@ window.evolutions = {
         evolution: 1993,
         evolvers: [ 1180, 90, 96, 301, 101 ]
     },
+    1994: {
+        evolution: 1995,
+        evolvers: [ 80, 86, 91, 97, 102 ]
+    },
+    1996: {
+        evolution: 1997,
+        evolvers: [ 78, 84, 89, 95, 100 ]
+    },
     1998: {
         evolution: 2000,
-        evolvers: [  ]
+        evolvers: [ 115, 116, 117, 118, 1999 ]
     },
     1999: {
         evolution: 2000,
-        evolvers: [  ]
+        evolvers: [ 115, 116, 117, 118, 1998 ]
     },
     1045: {
         evolution: 2001,
@@ -3210,6 +3218,10 @@ window.evolutions = {
     2010: {
         evolution: 2011,
         evolvers: [ 117, 82, 93, 304, 104 ]
+    },
+    2014: {
+        evolution: 2015,
+        evolvers: [  ]
     },
     2024: {
         evolution: 2025,
