@@ -6693,7 +6693,7 @@ window.captains = {
     1994: {
         atk: function(p) { return p.unit.class.has("Fighter") ? 1.75 : 1; },
     },
-    1995 {
+    1995: {
         atk: function(p) { return p.unit.class.has("Fighter") ? 2.25 : 1; },
     },
     1996: {
@@ -6759,11 +6759,11 @@ window.captains = {
         rcv: function(p) { return p.unit.class.has("Free Spirit") ? 1.2: 1; },
     },
     2014: {
-        atk: function(p) { return p.unit.class.has("Fighter") ? Math.max(2.5, 2.5 + .5 * Math.min(p.turnCounter,1)) : 1 : Math.max(1, 1 + .2 * Math.min(p.turnCounter,1)); },
-        rcv: function(p) { return 0; }
+        //atk: function(p) { return p.unit.class.has("Fighter") ? Math.max(2.5, 2.5 + .5 * Math.min(p.turnCounter,1)) : Math.max(1, 1 + .2 * Math.min(p.turnCounter,1)); },
+        //rcv: function(p) { return 0; }
     },
     2015: {
-        atk: function(p) { return p.unit.class.has("Fighter") ? Math.max(2.5, 2.5 + .5 * Math.min(p.turnCounter,1)) : 1 : Math.max(1, 1 + .2 * Math.min(p.turnCounter,1)); },
+        atk: function(p) { return p.unit.class.has("Fighter") ? Math.max(2.5, 2.5 + .5 * Math.min(p.turnCounter,1)) : Math.max(1, 1 + .2 * Math.min(p.turnCounter,1)); },
         rcv: function(p) { return 0; }
     },
     2024: {
