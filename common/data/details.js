@@ -22882,8 +22882,8 @@ window.details = {
         captain: "If your crew has 4 or more characters of the same Type, boosts ATK all characters by 3.5x, by 2.75x otherwise and boosts HP of all characters by 1.35x.",
         special: "Adds .9x to Chain multiplier for 1 turn. If your crew has 4 or more characters of the same Type, boosts ATK of the Dominant Type characters by 2.25x and changes all orbs, including [BLOCK] orbs, to Dominant Type orbs",
         sailor: {
-        "base": "If your crew has 4 or more characters of the same Type, boosts base ATK of the Dominant Type by 125",
-        "level1": "Makes [PSY] orbs \"beneficial\" for for this unit",
+            "base": "If your crew has 4 or more characters of the same Type, boosts base ATK of the Dominant Type by 125",
+            "level1": "Makes [PSY] orbs \"beneficial\" for for this unit",
         },
         sailorNotes: "#{beneficial}",
         specialName: "Closing Declaration",
@@ -22910,6 +22910,42 @@ window.details = {
         captain: "Boosts ATK of Free Spirit characters by 1.5x and their RCV by 1.2x",
         special: "Deals 50,000 fixed damage to one enemy and reduces Bind and enemy's Threshold Damage Reduction duration by 3 turns",
         specialName: "Fangs of Crushing Ice",
+    },
+    2014: {//Rob Lucci
+        captain: "Boosts ATK of Powerhouse characters by 2.5x, reduces crew's RCV to 0. If you defeated an enemy last turn, boosts ATK of Fighter characters by 3x instead and boosts ATK of all other characters by 1.2x",
+        special: "Deal 100x character's ATK in [INT] damage to one enemy, and if there is 1 enemy on the stage, boosts ATK against delayed enemies by 1.75x for 1 turn",
+        specialName: "Ultimate Radius: Rokuogun",
+    },
+    2015: {//Rob Lucci
+        captain: "Boosts ATK of Powerhouse characters by 2.5x, reduces crew's RCV to 0. If you defeated an enemy last turn, boosts ATK of Fighter characters by 3x instead and boosts ATK of all other characters by 1.2x",
+        special: "Deal 100x character's ATK in [INT] damage to one enemy, and if there is 1 enemy on the stage, boosts ATK against delayed enemies by 1.75x for 1 turn",
+        specialName: "Ultimate Radius: Rokuogun",
+        sailor: {
+            "base": "None",
+            "level1": "Boosts base ATK of Fighter characters by 100",
+        },
+        potential: [
+            {
+                "Name": "[INT] Damage Reduction",
+                "description": [ 
+                    "Level 1: Reduce damage taken from [INT] characters by 1%",
+                    "Level 2: Reduce damage taken from [INT] characters by 2%",
+                    "Level 3: Reduce damage taken from [INT] characters by 3%",
+                    "Level 4: Reduce damage taken from [INT] characters by 4%",
+                    "Level 5: Reduce damage taken from [INT] characters by 5%"
+                ]
+            },
+            {
+                "Name": "Barrier Penetration",
+                "description": [ 
+                    "Level 1: This character's attack will ignore barriers if HP is above ??%",
+                    "Level 2: This character's attack will ignore barriers if HP is above ??%",
+                    "Level 3: This character's attack will ignore barriers if HP is above ??%",
+                    "Level 4: This character's attack will ignore barriers if HP is above ??%",
+                    "Level 5: This character's attack will ignore barriers"
+                ]
+            },
+        ]
     },
     2024: {//Doflamingo Raid v2
         captain: "Boosts ATK of Driven and Cerebral characters by 2.5x when HP is 50% or below, 1.5x otherwise",
