@@ -2012,8 +2012,8 @@ window.units = [
     [ "Monet, A Snow Woman to Challenge a \"Fierce Beast\"", "INT", [ "Free Spirit", "Fighter" ], 5, 20, 4, 4, 99, 2000000, 984, 586, 192, 1682, 1082, 385, 1 ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Rob Lucci, The Beast that Honors \"Dark Justice\"", "INT", [ "Fighter", "Powerhouse" ], 4, 30, null, null, null, null, null, null, null, null, null, null, null 
-    [ "Rob Lucci, The Weapon that Displays \"Dark Justice\"", "INT", [ "Fighter", "Powerhouse" ], 5, 50, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Rob Lucci, The Beast that Honors \"Dark Justice\"", "INT", [ "Fighter", "Powerhouse" ], 4, 30, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Rob Lucci, The Weapon that Displays \"Dark Justice\"", "INT", [ "Fighter", "Powerhouse" ], 5, 50, 7, 3, 99, 5000000, 1, 1, 1, 2535, 1429, 301, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
@@ -5002,8 +5002,7 @@ window.units = [
     [ "[Dual Unit] Monkey D. Luffy, Pirates Rising", "QCK", [ "Free Spirit", "Fighter" ], 6, 55, 4, 5, 99, 5000000, 1439, 721, 203, 3205, 1472, 386, null ],
     [ "[Dual Unit] Portgas D. Ace, Reunion at War", "STR", [ "Free Spirit", "Shooter" ], 5, 30, 5, 3, 70, 1066998, 254, 303, 64, null, null, null, null ],
     [ "[Dual Unit] Portgas D. Ace, Pirates Rising", "STR", [ "Free Spirit", "Shooter" ], 6, 55, 4, 5, 99, 5000000, 1327, 824, 194, 2920, 1587, 372, null ],
-    ];
-    
+];
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
 // or [ "Name", "Type", "Class1", null, null, null, null, null, null, null, null, null, null, null, null, null ],
 // [ "Name", "Type", [ "Class1", "Class2" ], Stars, Cost, Combo, Sockets, maxLVL, EXPToMax, lvl1HP, lvl1ATK, lvl1RCV, MAXHP, MAXATK, MAXRCV, Growth Rate ],
