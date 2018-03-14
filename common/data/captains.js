@@ -6707,12 +6707,6 @@ window.captains = {
         },
         hitModifiers: ["Great", "Great", "Great", "Perfect", "Perfect", "Perfect"]
     },
-    1998: {
-        atk: function(p) { return p.unit.type == "DEX" ? 2 : p.unit.type == "PSY" ? 2.75 : 1; },
-    },
-    1999: {
-        atk: function(p) { return p.unit.type == "DEX" ? 2.75 : p.unit.type == "PSY" ? 2 : 1; },
-    },
     2000: {
         atk: function(p) { return p.unit.type == "DEX" || p.unit.type == "PSY" ? 3.75 : 1; },
     },
@@ -6763,6 +6757,10 @@ window.captains = {
     2011: {
         atk: function(p) { return p.unit.class.has("Free Spirit") ? 1.5: 1; },
         rcv: function(p) { return p.unit.class.has("Free Spirit") ? 1.2: 1; },
+    },
+    2014: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? Math.max(2.5, 2.5 + .5 * Math.min(p.turnCounter,1)) : 1 : Math.max(1, 1 + .2 * Math.min(p.turnCounter,1)); },
+        rcv: function(p) { return 0; }
     },
     2015: {
         atk: function(p) { return p.unit.class.has("Fighter") ? Math.max(2.5, 2.5 + .5 * Math.min(p.turnCounter,1)) : 1 : Math.max(1, 1 + .2 * Math.min(p.turnCounter,1)); },

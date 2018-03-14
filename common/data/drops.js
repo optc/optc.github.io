@@ -1597,7 +1597,7 @@ window.drops = {
             nakama: 2128700,
             gamewith: 39522,
             condition: 'Child-like characters get their ATK and HP boosted by 3.5x, RCV by 1.5x, and cooldowns reduced by 7 turns at the start of the fight',
-            'Japan': [ 1286, 1288, 1290, -963, -1045, -251, -760, -1083, -1129, -506, -1062, -702 ],
+            'All Difficulties': [ 1286, 1288, 1290, -963, -1045, -251, -760, -1083, -1129, -506, -1062, -702 ],
         },
         
         {
@@ -1818,6 +1818,7 @@ window.drops = {
         {
             name: 'Underground Trade Port! Escape!',
             thumb: 1735,
+            global: true,
             nakama: 2173500,
             gamewith: 66021,
             condition: 'Limited amount of turns to complete the mission.',
@@ -2311,6 +2312,7 @@ window.drops = {
         {
             name: 'Clash!! Shogun Franky',
             thumb: 1432,
+            global: true,
             nakama: 4143200,
             gamewith: 50030,
             Master: [ 1431, 215, 799 ],
@@ -2451,6 +2453,7 @@ window.drops = {
         {
             name: 'Dracule Mihawk',
             thumb: 1808,
+            global: true,
 			nakama: 8180800,
             gamewith: 72766,
             'Raging Sea': [ 1807 ]
