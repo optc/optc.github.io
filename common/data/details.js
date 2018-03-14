@@ -22626,7 +22626,7 @@ window.details = {
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base HP by 80" },
             { "description": "Boosts base ATK by 40" },
-            { "description": "Acquire Sailor Ability: Boosts base ATK of Slasher and Powerhouse characters by 75" },
+            { "description": "Acquire Sailor Ability: Boosts base ATK of Free Spirit characters by 75" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Acquire Potential 2: Pinch Healing" },
         ],
@@ -22699,7 +22699,7 @@ window.details = {
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base HP by 80" },
             { "description": "Boosts base ATK by 40" },
-            { "description": "Acquire Sailor Ability: Boosts base ATK of Slasher and Powerhouse characters by 75" },
+            { "description": "Acquire Sailor Ability: Makes [QCK] orbs \"beneficial\" for Free Spirit characters" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Acquire Potential 2: Pinch Healing" },
         ],
@@ -22747,18 +22747,8 @@ window.details = {
         specialName: "Vista Special",
     },
     1998: {//Sanji
-        captain: "Reduces cooldown of [DEX] and [PSY] characters by 2 turns at the start of the fight. Boosts ATK of [DEX] characters by 2x and boosts ATK of [PSY] characters by 2.75x",
-        special: "Deals 30x character's ATK in Typeless damage to one enemy that will ignore damage negating abilities and barriers, amplifies the effect of orbs on [PSY] and [DEX] characters by 2.25x for 1 turn and becomes Sanji & Zoro for 1 turn",
-        specialNotes: "#{ignoreBarrier}",
-        specialName: "Armée de L'Air Power Shoot",
-        sailor: "Boosts base ATK of [PSY] characters by 30",
     },
     1999: {//Zoro
-        captain: "Reduces cooldown of [DEX] and [PSY] characters by 2 turns at the start of the fight. Boosts ATK of [DEX] characters by 2.75x and boosts ATK of [PSY] characters by 2x",
-        special: "Deals 30x character's ATK in Typeless damage to one enemy that will ignore damage negating abilities and barriers, amplifies the effect of orbs on [PSY] and [DEX] characters by 2.25x for 1 turn and becomes Sanji & Zoro for 1 turn",
-        specialNotes: "#{ignoreBarrier}",
-        specialName: "Armée de L'Air Power Shoot",
-        sailor: "Boosts base ATK of [DEX] characters by 30",
     },
     2000: {//Sanji & Zoro
         captain: {
@@ -22771,14 +22761,16 @@ window.details = {
             "character1": "Reduces cooldown of all specials by 2 turns at the start of the fight. Boosts ATK of [PSY] characters by 2.75x and boosts ATK of [DEX] characters by 2x",
             "character2": "Reduces cooldown of all specials by 2 turns at the start of the fight. Boosts ATK of [DEX] characters by 2.75x and boosts ATK of [PSY] characters by 2x",
             "combined": "Boosts ATK of [DEX] and [PSY] characters by 3.75x and makes [PSY] and [DEX] orbs \"beneficial\" to [PSY] and [DEX] characters"
-        },
+        },  
         captainNotes: "#{beneficial}",
         special: "Deals 30x character's ATK in Typeless damage to one enemy that will ignore damage negating abilities and barriers, amplifies the effect of orbs on [PSY] and [DEX] characters by 2.25x for 1 turn and becomes Sanji & Zoro for 1 turn",
         specialNotes: "Change Action: When Change is activated, randomizes all non-matching orbs on [PSY] and [DEX] characters and adds .5x to Chain multiplier for 1 turn",
         specialName: "Armée de L'Air Power Shoot",
         sailor: {
-        "base": "Boosts base HP, ATK and RCV of [DEX] and [PSY] characters by 50",
-        "level1": "Makes [TND] orbs \"beneficial\" for [DEX] and [PSY] characters",
+            "character1": "Boosts base ATK of [PSY] characters by 30",
+            "character2": "Boosts base ATK of [DEX] characters by 30",
+            "combined": "Boosts base HP, ATK and RCV of [DEX] and [PSY] characters by 50",
+            "level1": "Makes [TND] orbs \"beneficial\" for [DEX] and [PSY] characters",
         },
         sailorNotes: "#{beneficial}",
         limit: "This character has a limit break tree"
