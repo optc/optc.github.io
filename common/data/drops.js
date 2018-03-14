@@ -2454,7 +2454,7 @@ window.drops = {
             name: 'Dracule Mihawk',
             thumb: 1808,
             global: true,
-			nakama: 8180800,
+            nakama: 8180800,
             gamewith: 72766,
             'Raging Sea': [ 1807 ]
         },
@@ -2502,7 +2502,7 @@ window.drops = {
         {
             name: 'Sanji and Zoro',
             thumb: 2000,
-			nakama: null,
+            nakama: null,
             gamewith: 94667,
             'Raging Sea': [ 1998, 1999 ]
         },
