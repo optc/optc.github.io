@@ -9,7 +9,7 @@ window.specials = {
         delay: function(p) { return 1; },
     },
     16: {
-        delay: function(p) { return 2; },
+        delay: function(p) { return 1; },
     },
     18: {
         def: function(p) { return 0.5; }
@@ -4469,6 +4469,15 @@ window.specials = {
             });
         }
     },
+    1996: {
+        delay: function(p) { return 1; },
+    },
+    1997: {
+        delay: function(p) { return 1; },
+    },
+    2000: {
+        orb: function(p) { return p.unit.type == "DEX" || p.unit.type == "PSY" ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, 1, 2.25, [p.friendCaptain, p.captain]) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, 1, 1, [p.friendCaptain, p.captain]); }
+    },
     2003: {
         atk: function(p) { return p.slot == p.sourceSlot ? 2 : 1; },
         type: "type"
@@ -4508,6 +4517,16 @@ window.specials = {
                 name: '2009warning'
             });
         }
+    },
+    2014: {
+        delay: function(p) { return 1; },
+        atk: function(p) { return p.delayed > 0 ? 1.75 : 1; },
+        type: "condition",
+    },
+    2015: {
+        delay: function(p) { return 1; },
+        atk: function(p) { return p.delayed > 0 ? 1.75 : 1; },
+        type: "condition",
     },
     5000: {
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain]); }

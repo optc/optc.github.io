@@ -6616,10 +6616,10 @@ window.captains = {
         chainModifier: function(p) { return (p.percHP <= 30.0 || p.percHP >= 70.0) ? 1.1 : 1; }
     },
     1972: {
-        atk: function(p) { return !(p.unit.class.has("Cerebral")) ? 1 : p.actions[p.sourceSlot] ? 2.25 : 1.5; },
-        hp: function(p) { return !(p.unit.class.has("Cerebral")) ? 1 : p.actions[p.sourceSlot] ? 1.2 : 1.05; },
-        rcv: function(p) { return !(p.unit.class.has("Cerebral")) ? 1 : p.actions[p.sourceSlot] ? 1.2 : 1.05; },
-        chainModifier: function(p) { return (p.percHP <= 30.0 || p.percHP >= 70.0) ? p.actions[p.sourceSlot] ? 1.5 : 1.5 : 1; }//Technically broken but no one cares about non-limit break stats
+        atk: function(p) { return !(p.unit.class.has("Cerebral")) ? 1 : 2.25; },
+        hp: function(p) { return !(p.unit.class.has("Cerebral")) ? 1 : 1.2; },
+        rcv: function(p) { return !(p.unit.class.has("Cerebral")) ? 1 : 1.2; },
+        chainModifier: function(p) { return (p.percHP <= 30.0 || p.percHP >= 70.0) ? 1.5 : 1; }
     },
     1973: {
         atk: function(p) { return p.unit.class.has("Cerebral") ? 2.5 : 1; },
@@ -6690,6 +6690,23 @@ window.captains = {
     1993: {
         atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? 2.5 : 1; },
     },
+    1994: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? 1.75 : 1; },
+    },
+    1995 {
+        atk: function(p) { return p.unit.class.has("Fighter") ? 2.25 : 1; },
+    },
+    1996: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? 1.75 : 1; },
+    },
+    1997: {
+        damageSorter: function(d) { return CrunchUtils.classSort(d, 2.475, [ "Slasher" ]); },
+        hitAtk: function(p) {
+            if (!p.unit.class.has("Slasher")) return 1;
+            return p.modifiers.slice(0, p.chainPosition).subcontains(["Great", "Great", "Great"]) ? 2.475 : 2.25;
+        },
+        hitModifiers: ["Great", "Great", "Great", "Perfect", "Perfect", "Perfect"]
+    },
     2000: {
         atk: function(p) { return p.unit.type == "DEX" || p.unit.type == "PSY" ? 3.75 : 1; },
     },
@@ -6726,6 +6743,28 @@ window.captains = {
     2007: {
         atk: function(p){ return (p.colorCount.STR>=4 || p.colorCount.DEX>=4 || p.colorCount.QCK>=4 || p.colorCount.PSY>=4 || p.colorCount.INT>=4) ? 3.5 : 2.75; },
         hp: function(p){ return 1.35; },
+    },
+    2008: {
+        atk: function(p) { return p.unit.type == "STR" || p.unit.type == "INT" ? 1.2 : 1; },
+    },
+    2009: {
+        atk: function(p) { return p.unit.type == "STR" || p.unit.type == "INT" ? 1.5 : 1; },
+        hp: function(p) { return p.unit.type == "STR" || p.unit.type == "INT" ? 1.2 : 1; },
+    },
+    2010: {
+        atk: function(p) { return p.unit.class.has("Free Spirit") ? 1.2: 1; },
+    },
+    2011: {
+        atk: function(p) { return p.unit.class.has("Free Spirit") ? 1.5: 1; },
+        rcv: function(p) { return p.unit.class.has("Free Spirit") ? 1.2: 1; },
+    },
+    2014: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? Math.max(2.5, 2.5 + .5 * Math.min(p.turnCounter,1)) : 1 : Math.max(1, 1 + .2 * Math.min(p.turnCounter,1)); },
+        rcv: function(p) { return 0; }
+    },
+    2015: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? Math.max(2.5, 2.5 + .5 * Math.min(p.turnCounter,1)) : 1 : Math.max(1, 1 + .2 * Math.min(p.turnCounter,1)); },
+        rcv: function(p) { return 0; }
     },
     2024: {
         atk: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Cerebral")) && p.percHP <= 50.0 ? 2.5 : 1.5; }

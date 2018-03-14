@@ -398,4 +398,10 @@ window.sailors = {
         atkStatic: function(p) { return (p.colorCount.STR>=4 && p.unit.type == "STR") ? 125 : (p.colorCount.DEX>=4 && p.unit.type == "DEX") ? 125 : (p.colorCount.QCK>=4 && p.unit.type == "QCK") ? 125 : (p.colorCount.PSY>=4 && p.unit.type == "PSY") ? 125 : (p.colorCount.INT>=4 && p.unit.type == "INT") ? 125 : 0; },
         type: "type",
     },
+    2014: {
+        atkStatic: function(p) { return p.unit.class.has("Fighter") ? 100 : 0; },
+    },
+    2015: {
+        atkStatic: function(p) { return p.unit.class.has("Fighter") ? 100 : 0; },
+    },
 };
