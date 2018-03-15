@@ -2416,7 +2416,7 @@ window.drops = {
             thumb: 2015,
             gamewith: null,
             Master: [ 2014 ],
-            Expert: [ 2015 ]
+            Expert: [ 2014 ]
         },
         
         {
