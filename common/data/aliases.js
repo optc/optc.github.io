@@ -2022,8 +2022,8 @@ window.aliases = {
     2021: ['', '', ''],
     2022: ['', '', ''],
     2023: ['', '', ''],
-    2024: ['', '', 'V2 Raid Doffy', 'V2 Raid Doflamingo'],
-    2025: ['', '', 'V2 Raid Doffy', 'V2 Raid Doflamingo'],
+    2200: ['', '', 'V2 Raid Doffy', 'V2 Raid Doflamingo'],
+    2201: ['', '', 'V2 Raid Doffy', 'V2 Raid Doflamingo'],
 };
 
 //  xxxx: ['JPN', 'FR', 'Other'],
