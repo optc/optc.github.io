@@ -7714,7 +7714,7 @@ window.details = {
         specialNotes: "Reducing Special Cooldown works as if you took an extra turn",
         sailor: {
             "base": "None",
-            "level1": "Boosts base ATK of Free Spirit and Fighter characters by 100",
+            "level1": "Boosts base HP of Free Spirit and Fighter characters by 100",
             "level2": "Makes PSY orbs \"beneficial\" for Free Spirit and Fighter characters",
         },
         sailorNotes: "#{beneficial}",
@@ -7726,7 +7726,7 @@ window.details = {
             { "description": "Boosts base ATK by 25" },
             { "description": "Boosts base ATK by 25" },
             { "description": "Boosts base ATK by 25" },
-            { "description": "Acquire Sailor Ability 1: Boosts base ATK of Free Spirit and Fighter characters by 100" },
+            { "description": "Acquire Sailor Ability 1: Boosts base HP of Free Spirit and Fighter characters by 100" },
             { "description": "Boosts base ATK by 35" },
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base RCV by 35" },
