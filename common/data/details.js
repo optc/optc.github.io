@@ -22930,7 +22930,7 @@ window.details = {
         specialName: "Fast Revolving Strike",
     },
     1997: {//FN Vista
-        captain: "Reduces cooldown of Shooter specials by 2 turns at the start of the fight, boosts ATK of Slasher characters by 2.475x after scoring 3 Greats in a row, by 2.25x otherwise.",
+        captain: "Reduces cooldown of Slasher specials by 2 turns at the start of the fight, boosts ATK of Slasher characters by 2.475x after scoring 3 Greats in a row, by 2.25x otherwise.",
         special: "Deals 15x character's ATK in [STR] damage to all enemies, randomizes own non-matching orb, including [BLOCK] orbs, and delays all enemies for 1 turn",
         specialName: "Fast Revolving Strike",
     },
