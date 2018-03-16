@@ -1173,10 +1173,10 @@ window.details = {
                 "Name": "Enrage",
                 "description": [ 
                     "Level 1: Boosts base ATK by 50",
-                    "Level 2: Boosts base ATK by ??",
-                    "Level 3: Boosts base ATK by ??",
-                    "Level 4: Boosts base ATK by ??",
-                    "Level 5: Boosts base ATK by ??"
+                    "Level 2: Boosts base ATK by 75",
+                    "Level 3: Boosts base ATK by 100",
+                    "Level 4: Boosts base ATK by 150",
+                    "Level 5: Boosts base ATK by 200"
                 ]
             },
         ],
@@ -2325,10 +2325,10 @@ window.details = {
                 "Name": "Enrage",
                 "description": [ 
                     "Level 1: Boosts base ATK by 50",
-                    "Level 2: Boosts base ATK by ??",
-                    "Level 3: Boosts base ATK by ??",
-                    "Level 4: Boosts base ATK by ??",
-                    "Level 5: Boosts base ATK by ??"
+                    "Level 2: Boosts base ATK by 75",
+                    "Level 3: Boosts base ATK by 100",
+                    "Level 4: Boosts base ATK by 150",
+                    "Level 5: Boosts base ATK by 200"
                 ]
             },
             {
@@ -5225,10 +5225,10 @@ window.details = {
                 "Name": "Enrage",
                 "description": [ 
                     "Level 1: Boosts base ATK by 50",
-                    "Level 2: Boosts base ATK by ??",
-                    "Level 3: Boosts base ATK by ??",
-                    "Level 4: Boosts base ATK by ??",
-                    "Level 5: Boosts base ATK by ??"
+                    "Level 2: Boosts base ATK by 75",
+                    "Level 3: Boosts base ATK by 100",
+                    "Level 4: Boosts base ATK by 150",
+                    "Level 5: Boosts base ATK by 200"
                 ]
             },
         ],
@@ -5760,10 +5760,10 @@ window.details = {
                 "Name": "Enrage",
                 "description": [ 
                     "Level 1: Boosts base ATK by 50",
-                    "Level 2: Boosts base ATK by ??",
-                    "Level 3: Boosts base ATK by ??",
-                    "Level 4: Boosts base ATK by ??",
-                    "Level 5: Boosts base ATK by ??"
+                    "Level 2: Boosts base ATK by 75",
+                    "Level 3: Boosts base ATK by 100",
+                    "Level 4: Boosts base ATK by 150",
+                    "Level 5: Boosts base ATK by 200"
                 ]
             },
         ],
@@ -6390,10 +6390,10 @@ window.details = {
                 "Name": "Enrage",
                 "description": [ 
                     "Level 1: Boosts base ATK by 50",
-                    "Level 2: Boosts base ATK by ??",
-                    "Level 3: Boosts base ATK by ??",
-                    "Level 4: Boosts base ATK by ??",
-                    "Level 5: Boosts base ATK by ??"
+                    "Level 2: Boosts base ATK by 75",
+                    "Level 3: Boosts base ATK by 100",
+                    "Level 4: Boosts base ATK by 150",
+                    "Level 5: Boosts base ATK by 200"
                 ]
             },
         ],
@@ -6464,10 +6464,10 @@ window.details = {
                 "Name": "Enrage",
                 "description": [ 
                     "Level 1: Boosts base ATK by 50",
-                    "Level 2: Boosts base ATK by ??",
-                    "Level 3: Boosts base ATK by ??",
-                    "Level 4: Boosts base ATK by ??",
-                    "Level 5: Boosts base ATK by ??"
+                    "Level 2: Boosts base ATK by 75",
+                    "Level 3: Boosts base ATK by 100",
+                    "Level 4: Boosts base ATK by 150",
+                    "Level 5: Boosts base ATK by 200"
                 ]
             },
         ],
@@ -7714,7 +7714,7 @@ window.details = {
         specialNotes: "Reducing Special Cooldown works as if you took an extra turn",
         sailor: {
             "base": "None",
-            "level1": "Boosts base ATK of Free Spirit and Fighter characters by 100",
+            "level1": "Boosts base HP of Free Spirit and Fighter characters by 100",
             "level2": "Makes PSY orbs \"beneficial\" for Free Spirit and Fighter characters",
         },
         sailorNotes: "#{beneficial}",
@@ -7726,7 +7726,7 @@ window.details = {
             { "description": "Boosts base ATK by 25" },
             { "description": "Boosts base ATK by 25" },
             { "description": "Boosts base ATK by 25" },
-            { "description": "Acquire Sailor Ability 1: Boosts base ATK of Free Spirit and Fighter characters by 100" },
+            { "description": "Acquire Sailor Ability 1: Boosts base HP of Free Spirit and Fighter characters by 100" },
             { "description": "Boosts base ATK by 35" },
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base RCV by 35" },
@@ -7750,10 +7750,10 @@ window.details = {
                 "Name": "Pinch Healing",
                 "description": [ 
                     "Level 1: If HP is below 20% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 2: If HP is below ??% at the start of the turn, heals for ??x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 3: If HP is below ??% at the start of the turn, heals for ??x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 4: If HP is below ??% at the start of the turn, heals for ??x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 5: If HP is below ??% at the start of the turn, heals for ??x this character's RCV at the end of the turn each time you hit a Perfect with this character"
+                    "Level 2: If HP is below 25% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character",
+                    "Level 3: If HP is below 30% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character",
+                    "Level 4: If HP is below 40% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character",
+                    "Level 5: If HP is below 40% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a Perfect with this character"
                 ]
             },
         ]
@@ -9581,10 +9581,10 @@ window.details = {
                 "Name": "Enrage",
                 "description": [ 
                     "Level 1: Boosts base ATK by 50",
-                    "Level 2: Boosts base ATK by ??",
-                    "Level 3: Boosts base ATK by ??",
-                    "Level 4: Boosts base ATK by ??",
-                    "Level 5: Boosts base ATK by ??"
+                    "Level 2: Boosts base ATK by 75",
+                    "Level 3: Boosts base ATK by 100",
+                    "Level 4: Boosts base ATK by 150",
+                    "Level 5: Boosts base ATK by 200"
                 ]
             },
         ],
@@ -14910,10 +14910,10 @@ window.details = {
                 "Name": "Enrage",
                 "description": [ 
                     "Level 1: Boosts base ATK by 50",
-                    "Level 2: Boosts base ATK by ??",
-                    "Level 3: Boosts base ATK by ??",
-                    "Level 4: Boosts base ATK by ??",
-                    "Level 5: Boosts base ATK by ??"
+                    "Level 2: Boosts base ATK by 75",
+                    "Level 3: Boosts base ATK by 100",
+                    "Level 4: Boosts base ATK by 150",
+                    "Level 5: Boosts base ATK by 200"
                 ]
             },
         ],
@@ -15240,10 +15240,10 @@ window.details = {
                 "Name": "Enrage",
                 "description": [ 
                     "Level 1: Boosts base ATK by 50",
-                    "Level 2: Boosts base ATK by ??",
-                    "Level 3: Boosts base ATK by ??",
-                    "Level 4: Boosts base ATK by ??",
-                    "Level 5: Boosts base ATK by ??"
+                    "Level 2: Boosts base ATK by 75",
+                    "Level 3: Boosts base ATK by 100",
+                    "Level 4: Boosts base ATK by 150",
+                    "Level 5: Boosts base ATK by 200"
                 ]
             },
         ],
@@ -15544,10 +15544,10 @@ window.details = {
                 "Name": "Enrage",
                 "description": [ 
                     "Level 1: Boosts base ATK by 50",
-                    "Level 2: Boosts base ATK by ??",
-                    "Level 3: Boosts base ATK by ??",
-                    "Level 4: Boosts base ATK by ??",
-                    "Level 5: Boosts base ATK by ??"
+                    "Level 2: Boosts base ATK by 75",
+                    "Level 3: Boosts base ATK by 100",
+                    "Level 4: Boosts base ATK by 150",
+                    "Level 5: Boosts base ATK by 200"
                 ]
             },
         ],
@@ -15599,10 +15599,10 @@ window.details = {
                 "Name": "Enrage",
                 "description": [ 
                     "Level 1: Boosts base ATK by 50",
-                    "Level 2: Boosts base ATK by ??",
-                    "Level 3: Boosts base ATK by ??",
-                    "Level 4: Boosts base ATK by ??",
-                    "Level 5: Boosts base ATK by ??"
+                    "Level 2: Boosts base ATK by 75",
+                    "Level 3: Boosts base ATK by 100",
+                    "Level 4: Boosts base ATK by 150",
+                    "Level 5: Boosts base ATK by 200"
                 ]
             },
         ],
@@ -23157,6 +23157,41 @@ window.details = {
         special: "Deals 50,000 fixed damage to one enemy and reduces Bind and enemy's Threshold Damage Reduction duration by 3 turns",
         specialName: "Fangs of Crushing Ice",
     },
+    2012: {//Bonney
+        captain: "Not Translated",
+        special: [
+            {
+                "description": "Reduces Bind and Paralysis duration by 3 turns and changes [BLOCK] and [BOMB] orbs into [RCV] orbs. If your captain is a Free Spirit Character, reduces RCV DOWN and Blindness duration by 5 turns",
+                "cooldown": [ null, null ],
+            },
+            {
+                "description": "Reduces Bind and Paralysis duration by 10 turns, recovers 20% of crew's MAX HP, and changes [BLOCK] and [BOMB] orbs into [RCV] orbs. If your captain is a Free Spirit Character, reduces RCV DOWN, Silence, and Blindness duration by 5 turns",
+                "cooldown": [ null, null ],
+            },
+        ],
+        specialnotes: "#{silence}",
+        specialName: "A Small Dine and Dash",
+        sailor: "Reduces Silence duration on this character by 3 turns",
+        sailorNotes: "#{silence}",
+    },
+    2013: {//Bonney
+        captain: "Boosts ATK of Free Sprit characters by 3.25x if they have a [RCV] orb, by 2.25x otherwise, boosts chances of getting [RCV] orbs, makes [RCV] orbs \"beneficial\" to Free Spirit characters and reduces RCV of all characters by ??%",
+        special: [
+            {
+                "description": "Reduces Bind and Paralysis duration by 3 turns and changes [BLOCK] and [BOMB] orbs into [RCV] orbs. If your captain is a Free Spirit Character, reduces RCV DOWN and Blindness duration by 5 turns",
+                "cooldown": [ null, null ],
+            },
+            {
+                "description": "Reduces Bind and Paralysis duration by 10 turns, recovers 20% of crew's MAX HP, and changes [BLOCK] and [BOMB] orbs into [RCV] orbs. If your captain is a Free Spirit Character, reduces RCV DOWN, Silence, and Blindness duration by 5 turns",
+                "cooldown": [ null, null ],
+            },
+        ],
+        specialnotes: "#{silence}",
+        specialName: "A Small Dine and Dash",
+        sailor: "Reduces Silence duration on this character by 3 turns",
+        sailorNotes: "#{silence}",
+        limit: "This character has a limit break."
+    },
     2014: {//Raid Lucci
         captain: "Boosts ATK of Fighter characters by 2.5x and set crew's RCV to 0. If you defeated an enemy in the last turn, boosts ATK of Fighter characters by 3x instead and boosts ATK of all other characters by 1.2x",
         special: "Deals 100x character's ATK in INT damage to one enemy and if there is only one enemy on the stage, delays that enemy for 1 turn and boosts ATK against delayed enemies by 1.75x for 1 turn",
@@ -23192,6 +23227,16 @@ window.details = {
                 ]
             },
         ]
+    },
+    2016: {//Coliseum Diamante
+        //captain: "Boosts ATK of Driven characters by 2x",
+        special: "Deals 20x Character's ATK in [PSY] damage to all enemies and changes [BLOCK] orbs into Matching orbs. If HP is above 50% at the time the special is activated, boosts ATK of Driven characters by 2x for 1 turn, 1.5x otherwise",
+        specialName: "Half Moon Glaive [Neo]",
+    },
+    2017: {//Coliseum Diamante
+        //captain: "Boosts ATK of Driven characters by 2.25x and boosts HP of Striker and Slasher characters by 1.5x",
+        special: "Deals 20x Character's ATK in [PSY] damage to all enemies and changes [BLOCK] orbs into Matching orbs. If HP is above 50% at the time the special is activated, boosts ATK of Driven characters by 2x for 1 turn, 1.5x otherwise",
+        specialName: "Half Moon Glaive [Neo]",
     },
     2200: {//Doflamingo Raid v2
         captain: "Boosts ATK of Driven and Cerebral characters by 2.5x when HP is 50% or below, 1.5x otherwise",
