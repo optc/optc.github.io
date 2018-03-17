@@ -23158,15 +23158,18 @@ window.details = {
         specialName: "Fangs of Crushing Ice",
     },
     2012: {//Bonney
+    2012: {//Limted Bonney
         captain: "Not Translated",
         special: [
             {
                 "description": "Reduces Bind and Paralysis duration by 3 turns and changes [BLOCK] and [BOMB] orbs into [RCV] orbs. If your captain is a Free Spirit Character, reduces RCV DOWN and Blindness duration by 5 turns",
                 "cooldown": [ null, null ],
+                "cooldown": [ 11, 6 ],
             },
             {
                 "description": "Reduces Bind and Paralysis duration by 10 turns, recovers 20% of crew's MAX HP, and changes [BLOCK] and [BOMB] orbs into [RCV] orbs. If your captain is a Free Spirit Character, reduces RCV DOWN, Silence, and Blindness duration by 5 turns",
                 "cooldown": [ null, null ],
+                "cooldown": [ 18, 13 ],
             },
         ],
         specialnotes: "#{silence}",
@@ -23175,15 +23178,18 @@ window.details = {
         sailorNotes: "#{silence}",
     },
     2013: {//Bonney
+    2013: {//Limted Bonney
         captain: "Boosts ATK of Free Sprit characters by 3.25x if they have a [RCV] orb, by 2.25x otherwise, boosts chances of getting [RCV] orbs, makes [RCV] orbs \"beneficial\" to Free Spirit characters and reduces RCV of all characters by ??%",
         special: [
             {
                 "description": "Reduces Bind and Paralysis duration by 3 turns and changes [BLOCK] and [BOMB] orbs into [RCV] orbs. If your captain is a Free Spirit Character, reduces RCV DOWN and Blindness duration by 5 turns",
                 "cooldown": [ null, null ],
+                "cooldown": [ 11, 6 ],
             },
             {
                 "description": "Reduces Bind and Paralysis duration by 10 turns, recovers 20% of crew's MAX HP, and changes [BLOCK] and [BOMB] orbs into [RCV] orbs. If your captain is a Free Spirit Character, reduces RCV DOWN, Silence, and Blindness duration by 5 turns",
                 "cooldown": [ null, null ],
+                "cooldown": [ 18, 13 ],
             },
         ],
         specialnotes: "#{silence}",

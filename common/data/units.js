@@ -2011,7 +2011,7 @@ window.units = [
     [ "Monet, A Woman Aiming at the Weak ", "INT", [ "Free Spirit", "Fighter" ], 4, 12, 4, 3, 50, 261406, 185, 62, 37, 1064, 643, 201, 1 ],
     [ "Monet, A Snow Woman to Challenge a \"Fierce Beast\"", "INT", [ "Free Spirit", "Fighter" ], 5, 20, 4, 4, 99, 2000000, 984, 586, 192, 1682, 1082, 385, 1 ],
     [ "Secret Bonney", "STR", [ "Free Spirit", "Fighter" ], 4, 20, null, null, 70, 1066998, null, null, null, null, null, null, null ],
-    [ "Secret Bonney, Evolved", "STR", [ "Free Spirit", "Fighter" ], 5, 30, null, null, 99, 4000000, null, null, null, null, null, null, null ],
+    [ "\"Big Eater\" Jewelry Bonney, Captured Supernova", "STR", [ "Free Spirit", "Fighter" ], 5, 30, 4, 5, 99, 4000000, 837, 642, 184, 2410, 1333, 354, null ],
     [ "Rob Lucci, The Beast that Honors \"Dark Justice\"", "INT", [ "Fighter", "Powerhouse" ], 4, 30, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Rob Lucci, The Weapon that Displays \"Dark Justice\"", "INT", [ "Fighter", "Powerhouse" ], 5, 50, 7, 3, 99, 5000000, 1, 1, 1, 2535, 1429, 301, null ],
     [ "Diamante, Ripple-Ripple Man [Neo]", "PSY", [ "Driven", "Striker" ], 4, 25, 5, null, 70, 1066998, null, null, null, null, null, null, null ],
