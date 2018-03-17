@@ -3219,12 +3219,20 @@ window.evolutions = {
         evolution: 2011,
         evolvers: [ 117, 82, 93, 304, 104 ]
     },
+    2012: {
+        evolution: 2013,
+        evolvers: [  ]
+    },
     2014: {
         evolution: 2015,
         evolvers: [  ]
     },
-    2024: {
-        evolution: 2025,
+    2016: {
+        evolution: 2017,
+        evolvers: [  ]
+    },
+    2200: {
+        evolution: 2201,
         evolvers: [ 118, 267, 88, 304, 83 ]
     },
 };

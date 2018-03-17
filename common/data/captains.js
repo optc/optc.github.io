@@ -6693,7 +6693,7 @@ window.captains = {
     1994: {
         atk: function(p) { return p.unit.class.has("Fighter") ? 1.75 : 1; },
     },
-    1995 {
+    1995: {
         atk: function(p) { return p.unit.class.has("Fighter") ? 2.25 : 1; },
     },
     1996: {
@@ -6706,12 +6706,6 @@ window.captains = {
             return p.modifiers.slice(0, p.chainPosition).subcontains(["Great", "Great", "Great"]) ? 2.475 : 2.25;
         },
         hitModifiers: ["Great", "Great", "Great", "Perfect", "Perfect", "Perfect"]
-    },
-    1998: {
-        atk: function(p) { return p.unit.type == "DEX" ? 2 : p.unit.type == "PSY" ? 2.75 : 1; },
-    },
-    1999: {
-        atk: function(p) { return p.unit.type == "DEX" ? 2.75 : p.unit.type == "PSY" ? 2 : 1; },
     },
     2000: {
         atk: function(p) { return p.unit.type == "DEX" || p.unit.type == "PSY" ? 3.75 : 1; },
@@ -6764,38 +6758,100 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Free Spirit") ? 1.5: 1; },
         rcv: function(p) { return p.unit.class.has("Free Spirit") ? 1.2: 1; },
     },
+    2014: {
+        //atk: function(p) { return p.unit.class.has("Fighter") ? Math.max(2.5, 2.5 + .5 * Math.min(p.turnCounter,1)) : Math.max(1, 1 + .2 * Math.min(p.turnCounter,1)); },
+        //rcv: function(p) { return 0; }
+    },
     2015: {
-        atk: function(p) { return p.unit.class.has("Fighter") ? Math.max(2.5, 2.5 + .5 * Math.min(p.turnCounter,1)) : 1 : Math.max(1, 1 + .2 * Math.min(p.turnCounter,1)); },
+        atk: function(p) { return p.unit.class.has("Fighter") ? Math.max(2.5, 2.5 + .5 * Math.min(p.turnCounter,1)) : Math.max(1, 1 + .2 * Math.min(p.turnCounter,1)); },
         rcv: function(p) { return 0; }
     },
-    2024: {
+    2200: {
         atk: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Cerebral")) && p.percHP <= 50.0 ? 2.5 : 1.5; }
     },
-    2025: {
+    2201: {
         atk: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Cerebral")) && p.percHP <= 50.0 ? 3 : 1.5; }
     },
     5000: {
-        atk: function(p){ 
-            return p.unit.class.has("Free Spirit") ? p.actions[p.sourceSlot] ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain]) == 2) && (p.orb != 'g')) ? 4.25 : 3 : 3 : 1;
-        },
-        hp: function(p) { return p.unit.class.has("Free Spirit") ? 1.2 : 1; },
+        atk: function(p){ return p.unit.type == "PSY" || p.unit.type == "INT" ? 2.5 : 1; },
     },
     5001: {
-        atk: function(p){ 
-            return p.unit.class.has("Free Spirit") ? p.actions[p.sourceSlot] ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain]) == 2) && (p.orb != 'g')) ? 4.25 : 3 : 3 : 1;
-        },
-        hp: function(p) { return p.unit.class.has("Free Spirit") ? 1.2 : 1; },
+        atk: function(p){ return p.unit.type == "PSY" || p.unit.type == "INT" ? 2.5 : 1; },
     },
     5002: {
+        atk: function(p){ return p.unit.type == "PSY" || p.unit.type == "INT" ? 2.5 : 1; },
+    },
+    5003: {
+        atk: function(p){ return p.unit.type == "PSY" || p.unit.type == "INT" ? 2.5 : 1; },
+    },
+    5004: {
+        atk: function(p){ return p.unit.class.has("Free Spirit") ? 3 : 1; },
+        hp: function(p) { return p.unit.class.has("Free Spirit") ? 1.2 : 1; },
+    },
+    5005: {
+        atk: function(p){ return p.unit.class.has("Free Spirit") ? 3 : 1; },
+        hp: function(p) { return p.unit.class.has("Free Spirit") ? 1.2 : 1; },
+    },
+    5006: {
         atk: function(p){ 
-            return p.unit.class.has("Free Spirit") ? p.actions[p.sourceSlot] ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain]) == 2) && (p.orb != 'g')) ? 4.25 : 3 : ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain]) == 2) && (p.orb != 'g')) ? 3.5 : 2.25 : 1;
+            return p.unit.class.has("Free Spirit") ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain]) == 2) && (p.orb != 'g')) ? 3.5 : 2.25 : 1;
         },
         hp: function(p) { return p.unit.class.has("Free Spirit") ? 1.2 : 1; },
     },
-    5003: {
+    5007: {
         atk: function(p){ 
-            return p.unit.class.has("Free Spirit") ? p.actions[p.sourceSlot] ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain]) == 2) && (p.orb != 'g')) ? 4.25 : 3 : ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain]) == 2) && (p.orb != 'g')) ? 3.5 : 2.25 : 1;
+            return p.unit.class.has("Free Spirit") ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain]) == 2) && (p.orb != 'g')) ? 3.5 : 2.25 : 1;
         },
         hp: function(p) { return p.unit.class.has("Free Spirit") ? 1.2 : 1; },
+    },
+    5008: {
+        atk: function(p){ 
+            return p.unit.class.has("Free Spirit") ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain]) == 2) && (p.orb != 'g')) ? 3.5 : 2.25 : 1;
+        },
+        hp: function(p) { return p.unit.class.has("Free Spirit") ? 1.2 : 1; },
+    },
+    5009: {
+        atk: function(p){ 
+            return p.unit.class.has("Free Spirit") ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain]) == 2) && (p.orb != 'g')) ? 4.25 : 3 : 1;
+        },
+        hp: function(p) { return p.unit.class.has("Free Spirit") ? 1.2 : 1; },
+    },
+    5010: {
+        atk: function(p){ 
+            return p.unit.class.has("Free Spirit") ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain]) == 2) && (p.orb != 'g')) ? 4.25 : 3 : 1;
+        },
+        hp: function(p) { return p.unit.class.has("Free Spirit") ? 1.2 : 1; },
+    },
+    5011: {
+        atk: function(p){ 
+            return p.unit.class.has("Free Spirit") ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain]) == 2) && (p.orb != 'g')) ? 4.25 : 3 : 1;
+        },
+        hp: function(p) { return p.unit.class.has("Free Spirit") ? 1.2 : 1; },
+    },
+    5012: {
+        atk: function(p){ 
+            return p.unit.class.has("Free Spirit") ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain]) == 2) && (p.orb != 'g')) ? 4.25 : 3 : 1;
+        },
+        hp: function(p) { return p.unit.class.has("Free Spirit") ? 1.2 : 1; },
+    },
+    5013: {
+        atk: function(p){ 
+            return p.unit.type == "PSY" ? 2.75 : p.unit.type == "DEX" ? 2 : 1;
+        },
+    },
+    5014: {
+        atk: function(p){ 
+            return p.unit.type == "DEX" ? 2.75 : p.unit.type == "PSY" ? 2 : 1;
+        },
+    },
+    5015: {
+        atk: function(p){ 
+            return (p.unit.type == "DEX" || p.unit.type == "PSY") ? 3.75 : 1;
+        },
+    },
+    5016: {
+        atk: function(p){ 
+            return (p.unit.type == "DEX" || p.unit.type == "PSY") ? 3.75 : 1;
+        },
     },
 };
