@@ -22930,7 +22930,7 @@ window.details = {
         specialName: "Fast Revolving Strike",
     },
     1997: {//FN Vista
-        captain: "Reduces cooldown of Slasher specials by 2 turns at the start of the fight, boosts ATK of Slasher characters by 2.475x after scoring 3 Greats in a row, by 2.25x otherwise.",
+        captain: "Reduces cooldown of Slasher specials by 1 turn at the start of the fight, boosts ATK of Slasher characters by 2.475x after scoring 3 Greats in a row, by 2.25x otherwise.",
         special: "Deals 15x character's ATK in [STR] damage to all enemies, randomizes own non-matching orb, including [BLOCK] orbs, and delays all enemies for 1 turn",
         specialName: "Fast Revolving Strike",
     },
@@ -23165,7 +23165,7 @@ window.details = {
                 "cooldown": [ 11, 6 ],
             },
             {
-                "description": "Reduces Bind and Paralysis duration by 10 turns, recovers 20% of crew's MAX HP, and changes [BLOCK] and [BOMB] orbs into [RCV] orbs. If your captain is a Free Spirit Character, reduces RCV DOWN, Silence, and Blindness duration by 5 turns",
+                "description": "Reduces Bind and Paralysis duration by 10 turns, recovers 50x character's RCV in HP, and changes [BLOCK] and [BOMB] orbs into [RCV] orbs. If your captain is a Free Spirit Character, reduces RCV DOWN, Silence, and Blindness duration by 5 turns",
                 "cooldown": [ 18, 13 ],
             },
         ],
@@ -23182,7 +23182,7 @@ window.details = {
                 "cooldown": [ 11, 6 ],
             },
             {
-                "description": "Reduces Bind and Paralysis duration by 10 turns, recovers 20% of crew's MAX HP, and changes [BLOCK] and [BOMB] orbs into [RCV] orbs. If your captain is a Free Spirit Character, reduces RCV DOWN, Silence, and Blindness duration by 5 turns",
+                "description": "Reduces Bind and Paralysis duration by 10 turns, recovers 50x character's RCV in HP, and changes [BLOCK] and [BOMB] orbs into [RCV] orbs. If your captain is a Free Spirit Character, reduces RCV DOWN, Silence, and Blindness duration by 5 turns",
                 "cooldown": [ 18, 13 ],
             },
         ],
@@ -23193,7 +23193,7 @@ window.details = {
         limit: "This character has a limit break."
     },
     2014: {//Raid Lucci
-        captain: "Boosts ATK of Fighter characters by 2.5x and set crew's RCV to 0. If you defeated an enemy in the last turn, boosts ATK of Fighter characters by 3x instead and boosts ATK of all other characters by 1.2x",
+        captain: "Not Translated",
         special: "Deals 100x character's ATK in INT damage to one enemy and if there is only one enemy on the stage, delays that enemy for 1 turn and boosts ATK against delayed enemies by 1.75x for 1 turn",
         specialName: "Sai Dai Rin: Rokuogan (Ultimate Radius: Rokuogan)",
         sailor: "Boosts base ATK of Fighter characters by 100",
