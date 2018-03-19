@@ -6770,6 +6770,19 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Fighter") ? Math.max(2.5, 2.5 + .5 * Math.min(p.turnCounter,1)) : Math.max(1, 1 + .2 * Math.min(p.turnCounter,1)); },
         rcv: function(p) { return 0; }
     },
+    2019: {
+        damageSorter: function(d) { return CrunchUtils.classSort(d, 2.475, [ "Free Spirit" ]); },
+        hitAtk: function(p) {
+            if (!p.unit.class.has("Free Spirit")) return 1;
+            return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? 2.6 : 2;
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
+        hp: function(p) { return p.unit.class.has("Free Spirit") ? 1.2: 1; },
+    },
+    2021: {
+        atk: function(p) { return (p.unit.type == "PSY" || p.unit.type == "INT") ? (((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain]) == 2) && (p.orb != 'g')) ? 2.5 : 1.75) : 1; },
+        rcv: function(p){ return p.unit.type == "PSY" || p.unit.type == "INT" ? 1.2 : 1; },
+    },
     2200: {
         atk: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Cerebral")) && p.percHP <= 50.0 ? 2.5 : 1.5; }
     },

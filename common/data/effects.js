@@ -635,4 +635,11 @@ window.effects = {
         id: 55, // don't change this
         orb: function(p) { return p.orb == 2.0 ? 1.75 : (p.orb == 0.5 ? 4/7 : 1); }
     },
+
+    '0.5x Chain Boost - Zoro Sanji Change Action': {
+        description: 'Chain Boosted by 0.5x',
+        thumb: 2000,
+        id: 56, // don't change this
+        chainAddition: function(p) { return 0.5 }
+    },
 };
