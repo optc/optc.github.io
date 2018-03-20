@@ -2017,7 +2017,7 @@ window.aliases = {
     2016: ['', '', 'Neo Diamante', 'Kai Diamante'],
     2017: ['', '', 'Neo Diamante', 'Kai Diamante'],
     2018: ['', '', 'FN Shanks'],
-    2019: ['赤髪のシャンクス　麦わら帽子の海賊　', '', 'FN Shanks'],
+    2019: ['赤髪のシャンクス　麦わら帽子の海賊', '', 'FN Shanks'],
     2020: ['', '', 'FN Makino'],
     2021: ['マキノ　酒場の店主', '', 'FN Makino'],
     2022: ['', '', ''],

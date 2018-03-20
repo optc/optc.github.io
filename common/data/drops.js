@@ -1942,6 +1942,12 @@ window.drops = {
             'All Difficulties': [ 1994, 1996, -1832, -1408, -1721, -1871, -1838, -1634 ]
         },
         
+        {
+            name: 'Makino\'s Bar! Shanks and Makino!',
+            thumb: 2021,
+            'All Difficulties': [ 2018, 2020, -1404, -1593, -1410, -1778, -1873, -1877, -1635 ]
+        },
+        
     ],
 
             

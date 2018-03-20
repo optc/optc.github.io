@@ -6778,7 +6778,7 @@ window.captains = {
         damageSorter: function(d) { return CrunchUtils.classSort(d, 2.475, [ "Free Spirit" ]); },
         hitAtk: function(p) {
             if (!p.unit.class.has("Free Spirit")) return 1;
-            return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? 2.6 : 1;
+            return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? 2.6 : 2;
         },
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
         hp: function(p) { return p.unit.class.has("Free Spirit") ? 1.2 : 1; },

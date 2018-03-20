@@ -559,10 +559,15 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
 
         //get the highest Chain Addition if it exists
         chainAddition.forEach(function(special){
-                var params = getParameters(special.sourceSlot);
-                    if(addition<special.chainAddition(params))
-                        addition = special.chainAddition(params);
-                });
+            var params = getParameters(special.sourceSlot);
+            if(addition<special.chainAddition(params)){
+                addition = special.chainAddition(params);
+            }
+        });
+        
+        if ($scope.data.effect == '0.5x Chain Boost - Zoro Sanji Change Action'){
+            addition = 0.5;
+        }
         
         chainSpecials.forEach(function(special) {
             var multipliersUsed = [ ], currentHits = 0, overall = 0;
