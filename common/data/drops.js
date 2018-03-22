@@ -2422,6 +2422,7 @@ window.drops = {
             name: 'Clash!! Rob Lucci',
             thumb: 2015,
             nakama: 4201500,
+            gamewith: 95424,
             Ultimate: [ 2014 ],
             Master: [ 2014 ],
             Expert: [ 2014 ]
