@@ -4535,7 +4535,7 @@ window.specials = {
             var n = (p.percHP >= 50 ? 2 : 1.5);
             window.specials[2016].multiplier = n;
             p.scope.notify({
-                text: 'HP ' + (n == 2 ? 'equal to' : 'above') + ' 50%, using the ' + n + 'x multiplier.',
+                text: 'HP ' + (n == 2 ? 'above' : 'below') + ' 50%, using the ' + n + 'x multiplier.',
                 name: '2016warning'
             });
         }
@@ -4547,7 +4547,7 @@ window.specials = {
             var n = (p.percHP >= 50 ? 2 : 1.5);
             window.specials[2017].multiplier = n;
             p.scope.notify({
-                text: 'HP ' + (n == 2 ? 'equal to' : 'above') + ' 50%, using the ' + n + 'x multiplier.',
+                text: 'HP ' + (n == 2 ? 'above' : 'below') + ' 50%, using the ' + n + 'x multiplier.',
                 name: '2017warning'
             });
         }
