@@ -11377,7 +11377,7 @@ window.details = {
         specialName: "Angry Instigator",
     },
     1254: {//FN Squard
-        captain: "Boosts ATK of Striker characters by 2.5x until the first hit other than Perfect. Reduce crew's current HP by 5% at the end of each turn.",
+        captain: "Boosts ATK of Striker characters by 2.5x until the first hit other than Perfect. Reduces crew's current HP by 5% at the end of each turn.",
         special: "Deals 10x character's ATK in fixed damage to one enemy, reduces crews current HP by 30% and reduces the defense of all enemies by 80% for one turn",
         specialName: "Sword Attack Without Hesitation",
         sailor: "Reduces his own Numbness by 1 turn"
@@ -13556,7 +13556,7 @@ window.details = {
     1437: {//Ikaros Much
         captain: "Boosts ATK of Powerhouse and Striker characters by 1.3x",
         captainNotes: "The bonus is cumulative. Powerhouse + Striker characters get a 1.69x bonus.",
-        special: "Reduce crew's current HP by 50%, amplifies the effect of orbs for Powerhouse characters by 1.75x and boosts ATK against delayed enemies by 1.5x for 1 turn",
+        special: "Reduces crew's current HP by 50%, amplifies the effect of orbs for Powerhouse characters by 1.75x and boosts ATK against delayed enemies by 1.5x for 1 turn",
         specialName: "Squid Spear",
         sailor: "Makes [STR], [QCK], [DEX] and [INT] orbs \"beneficial\" for this unit if there are 6 Powerhouse characters in your crew",
         sailorNotes: "#{beneficial}",
@@ -13564,7 +13564,7 @@ window.details = {
     1438: {//Ikaros Much
         captain: "Boosts ATK of Powerhouse and Striker characters by 1.6x",
         captainNotes: "The bonus is cumulative. Powerhouse + Striker characters get a 2.56x bonus.",
-        special: "Reduce crew's current HP by 50%, amplifies the effect of orbs for Powerhouse characters by 1.75x and boosts ATK against delayed enemies by 1.5x for 1 turn",
+        special: "Reduces crew's current HP by 50%, amplifies the effect of orbs for Powerhouse characters by 1.75x and boosts ATK against delayed enemies by 1.5x for 1 turn",
         specialName: "Squid Spear",
         sailor: "Makes [STR], [QCK], [DEX] and [INT] orbs \"beneficial\" for this unit if there are 6 Powerhouse characters in your crew",
         sailorNotes: "#{beneficial}",
@@ -19161,12 +19161,12 @@ window.details = {
     },
     1827: {//Sicilian Colo
         captain: "Boosts ATK of [INT] characters by 2x",
-        special: "Reduce crew's current HP by 50%, Boosts ATK of [INT] characters by 2x for 1 turn and randomize non-matching orbs, including [BLOCK] orbs",
+        special: "Reduces crew's current HP by 50%, Boosts ATK of [INT] characters by 2x for 1 turn and randomize non-matching orbs, including [BLOCK] orbs",
         specialName: "Explosive Spirit",
     },
     1828: {//Sicilian Colo
         captain: "Boosts ATK of [INT] characters by 3x if HP is below 30% at the start of the turn, by 2.5x otherwise",
-        special: "Reduce crew's current HP by 50%, Boosts ATK of [INT] characters by 2x for 1 turn and randomize non-matching orbs, including [BLOCK] orbs",
+        special: "Reduces crew's current HP by 50%, Boosts ATK of [INT] characters by 2x for 1 turn and randomize non-matching orbs, including [BLOCK] orbs",
         specialName: "Explosive Spirit",
         sailor: {
             "base": "None",
@@ -23289,12 +23289,12 @@ window.details = {
         ]
     },
     2016: {//Coliseum Diamante
-        //captain: "Boosts ATK of Driven characters by 2x",
+        captain: "Boosts ATK of Driven characters by 2x",
         special: "Deals 20x Character's ATK in [PSY] damage to all enemies and changes [BLOCK] orbs into Matching orbs. If HP is above 50% at the time the special is activated, boosts ATK of Driven characters by 2x for 1 turn, 1.5x otherwise",
         specialName: "Half Moon Glaive [Neo]",
     },
     2017: {//Coliseum Diamante
-        //captain: "Boosts ATK of Driven characters by 2.25x and boosts HP of Striker and Slasher characters by 1.5x",
+        captain: "Boosts ATK of Driven characters by 2.25x and boosts HP of Striker and Slasher characters by 1.5x",
         special: "Deals 20x Character's ATK in [PSY] damage to all enemies and changes [BLOCK] orbs into Matching orbs. If HP is above 50% at the time the special is activated, boosts ATK of Driven characters by 2x for 1 turn, 1.5x otherwise",
         specialName: "Half Moon Glaive [Neo]",
     },

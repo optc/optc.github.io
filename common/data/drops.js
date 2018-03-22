@@ -2421,17 +2421,18 @@ window.drops = {
             name: 'Clash!! Rob Lucci',
             thumb: 2015,
             gamewith: 95424,
+            Ultimate: [ 2014 ],
             Master: [ 2014 ],
             Expert: [ 2014 ]
         },
         
         {
             name: 'Clash!! Heavenly Demon Doflamingo',
-            thumb: 2025,
+            thumb: 2201,
             global: true,
             gamewith: null,
-            Master: [ 2024 ],
-            Expert: [ 2024 ]
+            Master: [ 2200 ],
+            Expert: [ 2200 ]
         },
 
     ],

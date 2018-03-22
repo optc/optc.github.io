@@ -6774,6 +6774,13 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Fighter") ? Math.max(2.5, 2.5 + .5 * Math.min(p.turnCounter,1)) : Math.max(1, 1 + .2 * Math.min(p.turnCounter,1)); },
         rcv: function(p) { return 0; }
     },
+    2016: {
+        atk: function(p) { return p.unit.class.has("Driven") ? 2 : 1; },
+    },
+    2017: {
+        atk: function(p) { return p.unit.class.has("Driven") ? 2.25 : 1; },
+        hp: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 1.5 : 1; },
+    },
     2019: {
         damageSorter: function(d) { return CrunchUtils.classSort(d, 2.475, [ "Free Spirit" ]); },
         hitAtk: function(p) {

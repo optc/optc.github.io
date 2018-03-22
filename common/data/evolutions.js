@@ -3229,7 +3229,7 @@ window.evolutions = {
     },
     2016: {
         evolution: 2017,
-        evolvers: [  ]
+        evolvers: [ 118, 94, 98, 303, 103 ]
     },
     2018: {
         evolution: 2019,

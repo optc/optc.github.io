@@ -1865,4 +1865,6 @@ window.flags = {
     2011: { rr: 1, rro: 1, lrr: 1 },
     2012: { rr: 1, rro: 1, lrr: 1 },
     2013: { rr: 1, rro: 1, lrr: 1 },
+    2200: { global: 1 },
+    2201: { global: 1 },
 };
