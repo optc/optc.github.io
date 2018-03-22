@@ -791,7 +791,7 @@ window.drops = {
             name: 'Dressrosa - Coliseum Lodging to Executive Tower',
             shortName: 'Dressrosa 2',
             thumb: 2004,
-            nakama: null,
+            nakama: 1200400,
             completion: '5x Rainbow Gems',
             gamewith: 93492,
             '01': [ 1648 ],
@@ -1937,7 +1937,7 @@ window.drops = {
         {
             name: 'Whitebeard Pirates Commanders! Marco and Vista!',
             thumb: 1997,
-            nakama: null,
+            nakama: 2199700,
             gamewith: 94921,
             'All Difficulties': [ 1994, 1996, -1832, -1408, -1721, -1871, -1838, -1634 ]
         },
@@ -1945,6 +1945,7 @@ window.drops = {
         {
             name: 'Partys Bar! Shanks and Makino!',
             thumb: 2021,
+            nakama: 2202100,
             'All Difficulties': [ 2018, 2020, -1404, -1593, -1410, -1778, -1873, -1877, -1635 ]
         },
         
@@ -2420,7 +2421,7 @@ window.drops = {
         {
             name: 'Clash!! Rob Lucci',
             thumb: 2015,
-            gamewith: 95424,
+            nakama: 4201500,
             Ultimate: [ 2014 ],
             Master: [ 2014 ],
             Expert: [ 2014 ]
@@ -2430,6 +2431,7 @@ window.drops = {
             name: 'Clash!! Heavenly Demon Doflamingo',
             thumb: 2201,
             global: true,
+            nakama: 4220100,
             gamewith: null,
             Master: [ 2200 ],
             Expert: [ 2200 ]
