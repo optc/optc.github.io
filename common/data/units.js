@@ -2015,7 +2015,7 @@ window.units = [
     [ "Rob Lucci, The Beast that Honors \"Dark Justice\"", "INT", [ "Fighter", "Powerhouse" ], 4, 30, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Rob Lucci, The Weapon that Displays \"Dark Justice\"", "INT", [ "Fighter", "Powerhouse" ], 5, 50, 7, 3, 99, 5000000, 1, 1, 1, 2535, 1429, 301, null ],
     [ "Diamante, Ripple-Ripple Man [Neo]", "PSY", [ "Driven", "Striker" ], 4, 25, 5, null, 70, 1066998, null, null, null, null, null, null, null ],
-    [ "Diamante, Donquiote Family Executive [Neo]", "PSY", [ "Driven", "Slasher" ], 5, 40, 4, null, 99, 4000000, null, null, null, null, null, null, null ],
+    [ "Diamante, Donquiote Family Executive [Neo]", "PSY", [ "Driven", "Slasher" ], 5, 40, 4, 4, 99, 4000000, null, null, null, null, null, null, null ],
     [ "Shanks", "DEX", [ "Free Spirit", "Slasher" ], 3, 13, null, null, 50, 130703, null, null, null, null, null, null, null ],
     [ "Shanks, Evolved", "DEX", [ "Free Spirit", "Slasher" ], 4, 20, 4, 4, 99, 1000000, null, null, null, 2154, 1218, 185, null ],
     [ "Makino", "PSY", [ "Cerebral", "Fighter" ], 3, 13, null, null, 50, 130703, null, null, null, null, null, null, null ],
