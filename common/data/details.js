@@ -20133,7 +20133,7 @@ window.details = {
         specialName: "Violent Interrogation of Passion",
         sailor: {
             "base": "Completely resists Silence on this character",
-            "level1": "Reduces Paralysis duration for 1 turn for herself",
+            "level1": "Reduces Paralysis duration for 1 turn",
         },
         sailorNotes: "#{silence}",
         limit: [
@@ -20150,7 +20150,7 @@ window.details = {
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base HP by 60" },
             { "description": "Boosts base ATK by 50" },
-            { "description": "Acquire Sailor Ability 1: Reduces Paralysis duration for 1 turn for herself" },
+            { "description": "Acquire Sailor Ability 1: Reduces Paralysis duration for 1 turn" },
             { "description": "Acquire Potential 2: Critical Hit" },
         ],
         potential: [
