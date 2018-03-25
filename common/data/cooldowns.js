@@ -994,8 +994,8 @@ window.cooldowns = [
     [ 20, 15 ],
     [ 20, 14 ], //Violet
     [ 20, 14 ], //Violet
-    [ 20, 14 ], //Dellinger 
-    [ 20, 14 ], //Dellinger 
+    [ 20, 14 ], //Dellinger
+    [ 20, 14 ], //Dellinger
     [ 23, 17 ],
     [ 23, 17 ],
     [ 23, 17 ],

@@ -4528,6 +4528,33 @@ window.specials = {
         atk: function(p) { return p.delayed > 0 ? 1.75 : 1; },
         type: "condition",
     },
+    2016: {
+        atk: function(p) { return p.unit.class.has("Driven") ? window.specials[2016].multiplier : 1; },
+        type: "class",
+        onActivation: function(p) {
+            var n = (p.percHP >= 50 ? 2 : 1.5);
+            window.specials[2016].multiplier = n;
+            p.scope.notify({
+                text: 'HP ' + (n == 2 ? 'above' : 'below') + ' 50%, using the ' + n + 'x multiplier.',
+                name: '2016warning'
+            });
+        }
+    },
+    2017: {
+        atk: function(p) { return p.unit.class.has("Driven") ? window.specials[2017].multiplier : 1; },
+        type: "class",
+        onActivation: function(p) {
+            var n = (p.percHP >= 50 ? 2 : 1.5);
+            window.specials[2017].multiplier = n;
+            p.scope.notify({
+                text: 'HP ' + (n == 2 ? 'above' : 'below') + ' 50%, using the ' + n + 'x multiplier.',
+                name: '2017warning'
+            });
+        }
+    },
+    2020: {
+        orb: function(p) { return p.unit.type == "DEX" || p.unit.type == "PSY" ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, 1, 2.25, [p.friendCaptain, p.captain]) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, 1, 1, [p.friendCaptain, p.captain]); }
+    },
     5000: {
         atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 1.5 : 1; },
     },

@@ -2024,6 +2024,4 @@ window.gw=[
     null,
     null,
     null,
-    null,
-    null,
 ];
