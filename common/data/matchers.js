@@ -411,6 +411,12 @@ window.matchers = [
     },
     
     {
+        name: 'Additional Typeless Damage dealer',
+        target: 'special',
+        matcher: /Additional Typeless Damage/i
+    },
+    
+    {
         name: 'Ignoring defense damage dealer',
         target: 'special',
         matcher: /Deals.+ignore damage negating abilities and barriers/i
