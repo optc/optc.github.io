@@ -2649,6 +2649,7 @@ window.drops = {
         {
             name: 'Invasion! Garp',
             thumb: 1846,
+            global: true,
             nakama: 6184600,
             gamewith: 75260,
             condition: 'Has a chance of appearing at the end of ANY Chaos Coliseum boss. You MUST use the same team that you just used to complete the Coliseum boss to fight Garp.',

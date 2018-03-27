@@ -6800,6 +6800,37 @@ window.captains = {
         atk: function(p) { return (p.unit.type == "PSY" || p.unit.type == "INT") ? (((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain]) == 2) && (p.orb != 'g')) ? 2.5 : 1.75) : 1; },
         rcv: function(p){ return p.unit.type == "PSY" || p.unit.type == "INT" ? 1.2 : 1; },
     },
+    2023: {
+        atk: function(p){ return p.unit.type == "STR" || p.unit.type == "INT" ? 3.25 : 1; },
+    },
+    2025: {
+        damageSorter: function(d) { return CrunchUtils.okamaSort(d, ['PSY', 'PSY', 'QCK']); },
+        hitAtk: function(p) {
+            return CrunchUtils.okamaCheck(p.damage.slice(0, p.chainPosition), p.modifiers, [{
+                type: 'PSY',
+                minModifier: 'Good'
+            }, {
+                type: 'PSY',
+                minModifier: 'Good'
+            }, {
+                type: 'QCK',
+                minModifier: 'Good'
+            }]) ? 4.0625 : 3.25 : 1;
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
+        hp: function(p){ return p.unit.type == "PSY" || p.unit.type == "QCK" ? 1.35 : 1; },
+    },
+    2027: {
+        atk: function(p){ return p.unit.type == "QCK" || p.unit.type == "PSY" ? 2.25 : 1; },
+        rcv: function(p){ return p.unit.type == "QCK" || p.unit.type == "PSY" ? 1.2 : 1; },
+    },
+    2029: {
+        atk: function(p){ return p.unit.type == "QCK" || p.unit.type == "PSY" ? 2.5 : 1; },
+        hp: function(p){ return p.unit.type == "QCK" || p.unit.type == "PSY" ? 1.2 : 1; },
+    },
+    2031: {
+        atk: function(p){ return p.unit.type == "STR" || p.unit.type == "INT" ? 2.5 : 1; },
+    },
     2200: {
         atk: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Cerebral")) && p.percHP <= 50.0 ? 2.5 : 1.5; }
     },
