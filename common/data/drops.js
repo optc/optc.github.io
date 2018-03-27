@@ -1948,6 +1948,7 @@ window.drops = {
             name: 'Makino\'s Bar! Shanks and Makino!',
             thumb: 2021,
             nakama: 2202100,
+            gamewith: 96636,
             'All Difficulties': [ 2018, 2020, -1404, -1593, -1410, -1778, -1873, -1877, -1635 ]
         },
         

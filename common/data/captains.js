@@ -6781,14 +6781,20 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Driven") ? 2.25 : 1; },
         hp: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 1.5 : 1; },
     },
+    2018: {
+        atk: function(p) { return p.unit.class.has("Free Spirit") ? 1.75 : 1; },
+    },
     2019: {
-        damageSorter: function(d) { return CrunchUtils.classSort(d, 2.475, [ "Free Spirit" ]); },
+        damageSorter: function(d) { return CrunchUtils.classSort(d, 2.6, [ "Free Spirit" ]); },
         hitAtk: function(p) {
             if (!p.unit.class.has("Free Spirit")) return 1;
             return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? 2.6 : 2;
         },
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
         hp: function(p) { return p.unit.class.has("Free Spirit") ? 1.2 : 1; },
+    },
+    2020: {
+        atk: function(p){ return p.unit.type == "PSY" || p.unit.type == "INT" ? 1.5 : 1; },
     },
     2021: {
         atk: function(p) { return (p.unit.type == "PSY" || p.unit.type == "INT") ? (((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain]) == 2) && (p.orb != 'g')) ? 2.5 : 1.75) : 1; },

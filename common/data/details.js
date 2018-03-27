@@ -23362,17 +23362,17 @@ window.details = {
         specialName: "Half Moon Glaive [Neo]",
     },
     2018: {//FN Shanks
-        captain: "Not Yet Translated",
+        captain: "Boosts ATK of Free Spirit characters by 1.75x",
         special: "Reduces Bind and Despair duration by 2 turns, if the captain is a Free Spirit Character changes [BLOCK] orbs into matching orbs",
-        specialName: "Entrusting Treasure",
+        specialName: "Treasured Trust",
     },
     2019: {//FN Shanks
         captain: "Boosts ATK of Free Spirit characters by 2x and their HP by 1.2x at the start of the chain, by 2.6x after the 3rd Perfect in a row",
         special: "Reduces Bind and Despair duration by 2 turns. If your Captain is a Free Spirit character, changes [BLOCK] orbs into Matching orbs",
-        specialName: "Entrusting Treasure",
+        specialName: "Treasure Trust",
     },
     2020: {//Makino
-        captain: "Not Yet Translated",
+        captain: "Boosts ATK of [PSY] and [INT] characters by 1.5x",
         special: "Changes the orbs in the top row into [INT] orbs, changes the orbs in the middle row into [RCV] orbs, changes the orbs in the bottom row into [PSY] orbs and amplifies the effect of orbs by 1.5x for 1 turn",
         specialName: "Taste of \"Treasure Payment\"",
     },
