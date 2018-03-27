@@ -23415,6 +23415,7 @@ window.details = {
         special: "Delays all enemies for 1 turn and if your Captain is a [QCK] or [PSY] character, boosts the Color Affinity of [QCK] and [PSY] characters by 2x for 1 turn",
         specialNotes: "#{colorAffinity : 2}",
         specialName: "Kimino Sleeve Cage: Lock",
+        limit: "Not Yet Translated",
     },
     2028: {//Sengoku
         captain: "Not Yet Translated",
@@ -23427,6 +23428,7 @@ window.details = {
         special: "Reduces Despair and ATK down duration by 4 turns and if your crew has 4 or more of [QCK] or [PSY] characters, amplifies the effects of orbs of the Dominant Type by 2x and makes RCV and Tandem orbs \"beneficial\" for the Dominant Type for 1 turn",
         specialNotes: "#{beneficial}",
         specialName: "Instant Suppression",
+        limit: "Not Yet Translated",
     },
     2030: {//Brannew
         captain: "Not Yet Translated",
@@ -23439,6 +23441,7 @@ window.details = {
         special: "Reduces enemy's Percent Damage Reduction and Threshold Damage Reduction duration by 4 turns and makes [QCK], [PSY], RCV and Tandem orbs \"beneficial\" for [STR] and [INT] characters for 3 turns",
         specialNotes: "#{beneficial}",
         specialName: "Reporting on a Bizarre Incident",
+        limit: "Not Yet Translated",
     },
     2200: {//Doflamingo Raid v2
         captain: "Boosts ATK of Driven and Cerebral characters by 2.5x when HP is 50% or below, 1.5x otherwise",
