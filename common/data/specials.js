@@ -4572,11 +4572,13 @@ window.specials = {
     },
     2026: {
         delay: function(p) { return 1; },
-        affinity: function(p){ return p.unit.type == "QCK" || p.unit.type == "PSY" ? 2 : 1; }
+        affinity: function(p) { return (p.captain.type == "QCK" || p.captain.type == "PSY") ? 2 : 1; },
+        type: "type",
     },
     2027: {
         delay: function(p) { return 1; },
-        affinity: function(p){ return p.unit.type == "QCK" || p.unit.type == "PSY" ? 2 : 1; }
+        affinity: function(p) { return (p.captain.type == "QCK" || p.captain.type == "PSY") ? 2 : 1; },
+        type: "type",
     },
     2028: {
         orb: function(p) { return (p.colorCount.QCK>=4 && p.unit.type == "QCK") : (p.colorCount.PSY>=4 && p.unit.type == "PSY") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, 1, 2, [p.friendCaptain, p.captain]) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, 1, 1, [p.friendCaptain, p.captain]); },
