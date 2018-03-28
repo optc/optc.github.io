@@ -210,6 +210,11 @@ window.CrunchUtils.getOrbMultiplier = function(orb, type, uclass, baseMultiplier
                     return boostedMultiplier;
                 }
             }
+            if([2022, 2023].includes(captains[temp].number)){
+                if (orb == 'str'){
+                    return boostedMultiplier;
+                }
+            }
         }
     }
     if (orb == 1.0 || orb == 'str' || orb == 'meat') return baseMultiplier;

@@ -1998,7 +1998,7 @@ window.aliases = {
     1997: ['花剣のビスタ 白ひげの“息子”', '', 'FN Visa'],
     1998: ['麦わらの一味の双璧 サンジ', '', 'TM Sanji'],
     1999: ['麦わらの一味の双璧 ロロンア・ソロ', '', 'TM Zoro'],
-    2000: ['麦わらの一味の双璧 サンジ&ソロ', '', 'Sanji&Zoro', 'Sanji and Zoro'],
+    2000: ['麦わらの一味の双璧 サンジ&ソロ', '', 'Sanji&Zoro', 'Sanji and Zoro', 'Sanji Zoro', 'SanjiZoro', 'Zoro&Sanji', 'Zoro and Sanji', 'Zoro Sanji', 'ZoroSanji'],
     2001: ['トラファルガー・ロー 元王下七武海', '', 'Super Law', 'Mega Law', 'V1 Law'],
     2002: ['セニョール・ピンク ドンキホーテファミリー　格闘集団', '', 'Story Senor Pink'],
     2003: ['ドンキホーテ・ドフラミンゴ ドフラミンゴファミリー　ボス', '', 'Story Doflamingo'],

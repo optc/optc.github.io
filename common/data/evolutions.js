@@ -3259,6 +3259,26 @@ window.evolutions = {
         evolution: 2031,
         evolvers: [ ]
     },
+    2022: {
+        evolution: 2023,
+        evolvers: [  ]
+    },
+    2024: {
+        evolution: 2025,
+        evolvers: [  ]
+    },
+    2026: {
+        evolution: 2027,
+        evolvers: [  ]
+    },
+    2028: {
+        evolution: 2029,
+        evolvers: [  ]
+    },
+    2030: {
+        evolution: 2031,
+        evolvers: [  ]
+    },
     2200: {
         evolution: 2201,
         evolvers: [ 118, 267, 88, 304, 83 ]

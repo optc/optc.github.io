@@ -2120,12 +2120,12 @@ window.details = {
         captain: "Boosts ATK of DEX characters by 2x"
     },
     305: {
-        special: "Randomly changes all orbs into either [PSY] or [RCV] orbs",
+        special: "Randomizes all orbs into either [PSY] or [RCV] orbs",
         specialName: "Meteor Fist Shower",
         captain: "Boosts ATK and HP of PSY characters by 1.5x"
     },
     306: {
-        special: "Randomly changes all orbs into either [PSY] or [RCV] orbs",
+        special: "Randomizes all orbs into either [PSY] or [RCV] orbs",
         specialName: "Meteor Fist Shower",
         captain: "Boosts ATK and HP of PSY characters by 2x",
         sailor: {
@@ -2176,12 +2176,12 @@ window.details = {
         potentialNotes: "#{enrage}"
     },
     307: {
-        special: "Randomly changes all orbs other than [DEX] into either [DEX], [RCV] or [TND] orbs",
+        special: "Randomizes all orbs other than [DEX] into either [DEX], [RCV] or [TND] orbs",
         specialName: "ROOM – Chambres",
         captain: "Boosts ATK of DEX characters by 2.5x"
     },
     308: {
-        special: "Randomly changes all orbs other than [DEX] into either [DEX], [RCV] or [TND] orbs",
+        special: "Randomizes all orbs other than [DEX] into either [DEX], [RCV] or [TND] orbs",
         specialName: "ROOM – Chambres",
         captain: "Boosts ATK of DEX characters by 2.5x",
         sailor: {
@@ -2457,13 +2457,13 @@ window.details = {
         ]
     },
     317: {
-        special: "Randomly changes all orbs into either [DEX] or [STR] orbs, deals random DEX damage to all enemies",
+        special: "Randomizes all orbs into either [DEX] or [STR] orbs, deals random DEX damage to all enemies",
         specialName: "Beautiful Secretary's Job",
         specialNotes: "#{random : 1 : 15,000}",
         captain: "Recovers 500 HP at end of each turn, reduces damage received by 10%"
     },
     318: {
-        special: "Randomly changes all orbs into either [DEX] or [STR] orbs, deals random DEX damage to all enemies",
+        special: "Randomizes all orbs into either [DEX] or [STR] orbs, deals random DEX damage to all enemies",
         specialName: "Beautiful Secretary's Job",
         specialNotes: "#{random : 1 : 15,000}",
         captain: "Recovers 1,000 HP at end of each turn, reduces damage received by 15%"
@@ -2562,13 +2562,13 @@ window.details = {
         specialName: "Straight Square Hair"
     },
     340: {
-        special: "Randomly changes all orbs into either [STR] or [QCK] orbs, deals random STR damage to all enemies",
+        special: "Randomizes all orbs into either [STR] or [QCK] orbs, deals random STR damage to all enemies",
         specialName: "Kraken Tentacle Crush",
         specialNotes: "#{random : 1 : 15,000}",
         captain: "Boosts ATK of Striker characters by 2x"
     },
     341: {
-        special: "Randomly changes all orbs into either [STR] or [QCK] orbs, deals random STR damage to all enemies",
+        special: "Randomizes all orbs into either [STR] or [QCK] orbs, deals random STR damage to all enemies",
         specialName: "Kraken Tentacle Crush",
         specialNotes: "#{random : 1 : 15,000}",
         captain: "Boosts ATK of Striker characters by 2x"
@@ -2890,24 +2890,24 @@ window.details = {
         captain: "Boosts ATK of INT characters by 2x"
     },
     387: {
-        special: "Randomly changes all orbs into either [PSY] or [INT] orbs, deals random PSY damage to all enemies",
+        special: "Randomizes all orbs into either [PSY] or [INT] orbs, deals random PSY damage to all enemies",
         specialName: "Square Plate Sword",
         specialNotes: "#{random : 1 : 10,000}",
         captain: "Boosts RCV of PSY characters by 1.5x"
     },
     388: {
-        special: "Randomly changes all orbs into either [PSY] or [INT] orbs, deals random PSY damage to all enemies",
+        special: "Randomizes all orbs into either [PSY] or [INT] orbs, deals random PSY damage to all enemies",
         specialName: "Square Plate Sword",
         specialNotes: "#{random : 1 : 10,000}",
         captain: "Boosts RCV of PSY characters by 1.5x"
     },
     389: {
-        special: "Randomly changes all orbs into either [RCV], [STR], [DEX] or [QCK] orbs and changes own orb into [QCK]",
+        special: "Randomizes all orbs into either [RCV], [STR], [DEX] or [QCK] orbs and changes own orb into [QCK]",
         specialName: "Hell Wink",
         captain: "Boosts ATK by 2.25x following a chain of DEX > INT > QCK attacks no lower than Good"
     },
     390: {
-        special: "Randomly changes all orbs into either [RCV], [STR], [DEX] or [QCK] orbs and changes own orb into [QCK]",
+        special: "Randomizes all orbs into either [RCV], [STR], [DEX] or [QCK] orbs and changes own orb into [QCK]",
         specialName: "Hell Wink",
         captain: "Boosts ATK by 2.75x following a chain of DEX > INT > QCK attacks no lower than Good",
         sailor: {
@@ -3302,12 +3302,12 @@ window.details = {
         captain: "Boosts ATK by 2x following a chain of PSY > INT > INT attacks no lower than Good"
     },
     435: {
-        special: "Randomly changes [RCV], [STR] and [DEX] orbs into either [STR] or [QCK] orbs",
+        special: "Randomizes [RCV], [STR] and [DEX] orbs into either [STR] or [QCK] orbs",
         specialName: "Maiden's Bloom",
         captain: "Boosts ATK by 2x following a chain of INT > PSY > QCK attacks no lower than Good"
     },
     436: {
-        special: "Randomly changes [RCV], [STR] and [DEX] orbs into either [STR] or [QCK] orbs",
+        special: "Randomizes [RCV], [STR] and [DEX] orbs into either [STR] or [QCK] orbs",
         specialName: "Maiden's Bloom",
         captain: "Boosts ATK by 2.25x following a chain of INT > PSY > QCK attacks no lower than Good"
     },
@@ -3337,7 +3337,7 @@ window.details = {
         captain: "Boosts ATK of Evolver and Booster characters by 2x if HP is above 50% at the start of the turn"
     },
     445: {
-        special: "Randomly changes all orbs into either [STR], [DEX], [QCK], [PSY] or [INT] orbs, switches orbs between slots 3 times",
+        special: "Randomizes all orbs into either [STR], [DEX], [QCK], [PSY] or [INT] orbs, switches orbs between slots 3 times",
         specialName: "Support Incoming! Supersonic Duck Squadron!",
         captain: "Boosts ATK of Evolver and Booster characters by 2.5x if HP is above 50% at the start of the turn"
     },
@@ -3484,14 +3484,14 @@ window.details = {
         captainNotes: "#{noFixedPerc}"
     },
     456: {
-        special: "Randomly changes the orbs in the middle row into either [STR] or [DEX] orbs, the orbs in the lower row into either [PSY] or [INT] orbs, switches orbs between slots once",
+        special: "Randomizes the orbs in the middle row into either [STR] or [DEX] orbs, the orbs in the lower row into either [PSY] or [INT] orbs, switches orbs between slots once",
         specialName: "Double Cannon",
         captain: "Boosts ATK of Shooter characters by 2x and their RCV by 1.5x",
         sailor: "Makes [PSY] orbs \"beneficial\" for this unit",
         sailorNotes: "#{beneficial}",
     },
     457: {
-        special: "Randomly changes the orbs in the middle row into either [STR] or [DEX] orbs, the orbs in the lower row into either [PSY] or [INT] orbs, switches orbs between slots once",
+        special: "Randomizes the orbs in the middle row into either [STR] or [DEX] orbs, the orbs in the lower row into either [PSY] or [INT] orbs, switches orbs between slots once",
         specialName: "Double Cannon",
         captain: "Boosts ATK of Shooter characters by 2x and their RCV by 1.5x",
         sailor: "Makes [PSY] orbs \"beneficial\" for this unit",
@@ -4394,12 +4394,12 @@ window.details = {
         captain: "Boosts ATK by 4x following a chain of Good > Great > Perfect hits"
     },
     579: {
-        special: "Randomly changes [BLOCK] orbs into either [QCK] or [DEX] orbs, deals 15x character's ATK in QCK damage to all enemies",
+        special: "Randomizes [BLOCK] orbs into either [QCK] or [DEX] orbs, deals 15x character's ATK in QCK damage to all enemies",
         specialName: "Dragon Twister",
         captain: "Boosts ATK of QCK and DEX characters by 1.5x"
     },
     580: {
-        special: "Randomly changes [BLOCK] orbs into either [QCK] or [DEX] orbs, deals 15x character's ATK in QCK damage to all enemies",
+        special: "Randomizes [BLOCK] orbs into either [QCK] or [DEX] orbs, deals 15x character's ATK in QCK damage to all enemies",
         specialName: "Dragon Twister",
         captain: "Boosts ATK of QCK and DEX characters by 2x"
     },
@@ -4653,25 +4653,25 @@ window.details = {
         captain: "Boosts ATK of characters with 3 or fewer stars by 2x"
     },
     630: {
-        special: "Randomly changes all orbs into either [QCK] or [DEX] orbs, deals random QCK damage to all enemies",
+        special: "Randomizes all orbs into either [QCK] or [DEX] orbs, deals random QCK damage to all enemies",
         specialName: "Tempest Kick: Slaughter",
         specialNotes: "#{random : 5,000 : 15,000}",
         captain: "Boosts ATK of Slasher characters by 1.5x"
     },
     631: {
-        special: "Randomly changes all orbs into either [QCK] or [DEX] orbs, deals random QCK damage to all enemies",
+        special: "Randomizes all orbs into either [QCK] or [DEX] orbs, deals random QCK damage to all enemies",
         specialName: "Tempest Kick: Slaughter",
         specialNotes: "#{random : 5,000 : 15,000}",
         captain: "Boosts ATK of Slasher characters by 2x"
     },
     632: {
-        special: "Randomly changes all orbs into either [STR], [PSY] or [INT] orbs, deals random STR damage to all enemies, reduces the defense of all enemies by 50% for 2 turns",
+        special: "Randomizes all orbs into either [STR], [PSY] or [INT] orbs, deals random STR damage to all enemies, reduces the defense of all enemies by 50% for 2 turns",
         specialName: "Finger Pistol: Yellow Lotus",
         captain: "Boosts ATK of Fighter characters by 1.5x",
         specialNotes: "#{random : 2,000 : 20,000}"
     },
     633: {
-        special: "Randomly changes all orbs into either [STR], [PSY] or [INT] orbs, deals random STR damage to all enemies, reduces the defense of all enemies by 50% for 2 turns",
+        special: "Randomizes all orbs into either [STR], [PSY] or [INT] orbs, deals random STR damage to all enemies, reduces the defense of all enemies by 50% for 2 turns",
         specialName: "Finger Pistol: Yellow Lotus",
         captain: "Boosts ATK of Fighter characters by 2x",
         specialNotes: "#{random : 2,000 : 20,000}"
@@ -4856,12 +4856,12 @@ window.details = {
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of STR characters by 2x"
     },
     657: {
-        special: "Randomly changes [INT] and [PSY] orbs into either [STR] or [EMPTY] orbs",
+        special: "Randomizes [INT] and [PSY] orbs into either [STR] or [EMPTY] orbs",
         specialName: "Forearm Sledge",
         captain: "Boosts ATK of Fighter characters by 1.5x"
     },
     658: {
-        special: "Randomly changes all orbs into either [INT] or [PSY] orbs",
+        special: "Randomizes all orbs into either [INT] or [PSY] orbs",
         specialName: "Lipowertzer",
         captain: "Boosts ATK of Shooter characters by 1.5x"
     },
@@ -5165,7 +5165,7 @@ window.details = {
         specialName: "Companion's Guilt"
     },
     705: {
-        special: "Randomly changes [PSY], [INT], [TND], [RCV] and [EMPTY] orbs into [STR], [DEX] or [QCK] orbs",
+        special: "Randomizes [PSY], [INT], [TND], [RCV] and [EMPTY] orbs into [STR], [DEX] or [QCK] orbs",
         specialName: "Guilty Verdict - \"Slow Death Penalty\"",
         captain: "Boosts ATK and HP of STR characters, DEX characters and QCK characters by 1.25x"
     },
@@ -6017,7 +6017,7 @@ window.details = {
         captain: "Reduces damage received by 20%"
     },
     774: {
-        special: "Randomly changes [TND], [RCV], [EMPTY], [BLOCK] and [BOMB] orbs into either [STR], [DEX], [QCK], [PSY] or [INT] orbs, switches orbs between slots 3 times",
+        special: "Randomizes [TND], [RCV], [EMPTY], [BLOCK] and [BOMB] orbs into either [STR], [DEX], [QCK], [PSY] or [INT] orbs, switches orbs between slots 3 times",
         specialName: "Berry-Berry Fruit",
         captain: "Boosts ATK of Free Spirit characters by 2x"
     },
@@ -6154,11 +6154,11 @@ window.details = {
         captain: "Boosts ATK, HP and RCV of STR, DEX and QCK characters by 1.25x"
     },
     792: {
-        special: "Randomly changes all orbs into either [STR], [QCK], [DEX], [PSY] or [INT] orbs, switches orbs between slots twice, locks all orbs for 1 turn",
+        special: "Randomizes all orbs into either [STR], [QCK], [DEX], [PSY] or [INT] orbs, switches orbs between slots twice, locks all orbs for 1 turn",
         specialName: "The Entushiasm to Keep Skilled Workers in Line"
     },
     793: {
-        special: "Randomly changes all orbs into either [STR], [QCK], [DEX], [PSY] or [INT] orbs, switches orbs between slots twice, locks all orbs for 1 turn",
+        special: "Randomizes all orbs into either [STR], [QCK], [DEX], [PSY] or [INT] orbs, switches orbs between slots twice, locks all orbs for 1 turn",
         specialName: "The Entushiasm to Keep Skilled Workers in Line",
         captain: "Boosts ATK and RCV of Cerebral characters by 1.5x"
     },
@@ -6196,16 +6196,16 @@ window.details = {
         specialName: "Sea Animal Healing"
     },
     800: {
-        special: "Randomly changes all orbs into either [STR], [DEX] or [QCK] orbs",
+        special: "Randomizes all orbs into either [STR], [DEX] or [QCK] orbs",
         specialName: "Octopus Tentacle Blow"
     },
     801: {
-        special: "Randomly changes [STR], [QCK], [DEX], [INT], [BOMB] and [BLOCK] orbs into either [STR], [QCK], [DEX], [PSY] or [INT] orbs, changes [TND] and [RCV] orbs into [PSY] orbs",
+        special: "Randomizes [STR], [QCK], [DEX], [INT], [BOMB] and [BLOCK] orbs into either [STR], [QCK], [DEX], [PSY] or [INT] orbs, changes [TND] and [RCV] orbs into [PSY] orbs",
         specialName: "Clone-Clone Montage",
         captain: "Boosts ATK of PSY characters by 2x"
     },
     802: {
-        special: "Randomly changes [STR], [QCK], [DEX], [INT], [BOMB] and [BLOCK] orbs into either [STR], [QCK], [DEX], [PSY] or [INT] orbs, changes [TND] and [RCV] orbs into [PSY] orbs",
+        special: "Randomizes [STR], [QCK], [DEX], [INT], [BOMB] and [BLOCK] orbs into either [STR], [QCK], [DEX], [PSY] or [INT] orbs, changes [TND] and [RCV] orbs into [PSY] orbs",
         specialName: "Clone-Clone Montage",
         captain: "Boosts ATK of PSY characters by 2.5x"
     },
@@ -6944,13 +6944,13 @@ window.details = {
     879: {
         captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of Fighter characters by 1.75x",
         specialName: "Battle Preservation Fist: Manki Kayaku",
-        special: "Randomly changes all orbs including [BLOCK] orbs into [G] orbs, deals random typeless damage to all enemies",
+        special: "Randomizes all orbs including [BLOCK] orbs into [G] orbs, deals random typeless damage to all enemies",
         specialNotes: "#{gOrbs}<br>#{random : 5,000 : 100,000}"
     },
     880: {
         captain: "Reduces cooldown of all specials by 3 turns at the start of the fight, boosts ATK of Fighter characters by 2x",
         specialName: "Battle Preservation Fist: Manki Kayaku",
-        special: "Randomly changes all orbs including [BLOCK] orbs into [G] orbs, deals random typeless damage to all enemies",
+        special: "Randomizes all orbs including [BLOCK] orbs into [G] orbs, deals random typeless damage to all enemies",
         specialNotes: "#{gOrbs}<br>#{random : 5,000 : 100,000}",
         sailor: {
             "base": "None",
@@ -7098,13 +7098,13 @@ window.details = {
     900: {
         captain: "Boosts ATK of Shooter characters by 2x if HP is above 99% at the start of the turn",
         specialName: "Franky Destroy Gun",
-        special: "Deals 6 hits of 2,000 fixed damage to random enemies and for Shooter and Free Spirit characters, randomly changes Badly Matching orbs into [G] orbs or Matching orbs",
+        special: "Deals 6 hits of 2,000 fixed damage to random enemies and for Shooter and Free Spirit characters, randomizes Badly Matching orbs into [G] orbs or Matching orbs",
         specialNotes: "The orb shuffle only applies to Shooter and Free Spirit characters, other classes are unaffected. #{gOrbs}"
     },
     901: {
         captain: "Boosts ATK of Shooter characters by 2.75x if HP is above 99% at the start of the turn",
         specialName: "Franky Destroy Gun",
-        special: "Deals 6 hits of 2,000 fixed damage to random enemies and for Shooter and Free Spirit characters, randomly changes Badly Matching orbs into [G] orbs or Matching orbs",
+        special: "Deals 6 hits of 2,000 fixed damage to random enemies and for Shooter and Free Spirit characters, randomizes Badly Matching orbs into [G] orbs or Matching orbs",
         specialNotes: "The orb shuffle only applies to Shooter and Free Spirit characters, other classes are unaffected. #{gOrbs}"
     },
     902: {
@@ -7310,12 +7310,12 @@ window.details = {
     913: {
         captain: "Boosts ATK of QCK characters by 2.5x if they have a matching orb",
         specialName: "Black Magic Summoning: Advent of the Demon Lord Satan",
-        special: "Seals himself for 1 turn, changes [BLOCK] orbs into matching orbs, randomly changes Badly Matching orbs into either [STR], [QCK], [DEX], [PSY] or [INT] orbs"
+        special: "Seals himself for 1 turn, changes [BLOCK] orbs into matching orbs, randomizes Badly Matching orbs into either [STR], [QCK], [DEX], [PSY] or [INT] orbs"
     },
     914: {
         captain: "Boosts ATK of QCK characters by 3x if they have a matching orb, by 1.2x otherwise",
         specialName: "Black Magic Summoning: Advent of the Demon Lord Satan",
-        special: "Seals himself for 1 turn, changes [BLOCK] orbs into matching orbs, randomly changes Badly Matching orbs into either [STR], [QCK], [DEX], [PSY] or [INT] orbs"
+        special: "Seals himself for 1 turn, changes [BLOCK] orbs into matching orbs, randomizes Badly Matching orbs into either [STR], [QCK], [DEX], [PSY] or [INT] orbs"
     },
     915: {
         captain: "Boosts ATK and RCV of Cerebral characters by 1.2x",
@@ -7692,7 +7692,7 @@ window.details = {
     948: {
         captain: "Boosts ATK of Shooter characters by 1.5x and their RCV by 1.2x",
         specialName: "Twin Cannons",
-        special: "Randomly changes all orbs to either [STR] or [INT]. Deals random [STR] damage",
+        special: "Randomizes all orbs to either [STR] or [INT]. Deals random [STR] damage",
         specialNotes: "#{random : 7,000 : 18,000}",
     },
     949: {
@@ -7797,7 +7797,7 @@ window.details = {
     },
     960:{
         specialName: "Slot Color Shuffle",
-        special: "Randomly changes all orbs into either [STR], [DEX], [QCK], [PSY] or [INT] orbs"
+        special: "Randomizes all orbs into either [STR], [DEX], [QCK], [PSY] or [INT] orbs"
     },
     961:{
         specialName: "Slot Power Light",
@@ -7954,7 +7954,7 @@ window.details = {
     979: {
         captain: "Boosts ATK of [PSY] and [DEX] characters by 1.75x and their RCV by 1.2x",
         specialName: "Flintlock Barrage",
-        special: "Randomly changes all orbs into either [PSY] or [DEX] orbs, deals random PSY damage to all enemies",
+        special: "Randomizes all orbs into either [PSY] or [DEX] orbs, deals random PSY damage to all enemies",
     },
     980: {
         captain: "Boosts ATK of [DEX] and [STR] characters by 1.75x and their RCV by 1.2x",
@@ -10107,7 +10107,7 @@ window.details = {
     },
     1139: {
         captain: "Boosts ATK and RCV of Striker characters by 1.5x",
-        special: "Randomly changes all orbs, including [BLOCK] orbs, into either [STR], [DEX], [QCK], [PSY], or [INT] orbs",
+        special: "Randomizes all orbs, including [BLOCK] orbs, into either [STR], [DEX], [QCK], [PSY], or [INT] orbs",
         specialName: "Lack of Pure Chi: Lion Finger Gun Sneak Attack"
     },
     1140: {// Coliseum Moria
@@ -13977,12 +13977,12 @@ window.details = {
     },
     1449: {//Violet
         captain: "Boosts ATK of Cerebral characters by 1.5x. Heals for .3x character's RCV at the end of the turn each time you hit a Great.",
-        special: "Reduces the defense of all enemies by 50% for 1 turn and if HP is below 50%, randomly changes all orbs to either [RCV] or [TND] orbs",
+        special: "Reduces the defense of all enemies by 50% for 1 turn and if HP is below 50%, randomizes all orbs to either [RCV] or [TND] orbs",
         specialName: "Clairvoyance",
     },
     1450: {//Violet
         captain: "Boosts ATK of Cerebral characters by 1.75x. Heals for .5x character's RCV at the end of the turn each time you hit a Great.",
-        special: "Reduces the defense of all enemies by 50% for 1 turn and if HP is below 50%, randomly changes all orbs to either [RCV] or [TND] orbs",
+        special: "Reduces the defense of all enemies by 50% for 1 turn and if HP is below 50%, randomizes all orbs to either [RCV] or [TND] orbs",
         specialName: "Clairvoyance",
     },
     1451: {//Moustache Sanji
@@ -15500,13 +15500,13 @@ window.details = {
     },
     1572: {//Wanda
         captain: "Boosts ATK of Cerebral characters by 2x and their RCV by 1.2x",
-        special: "Randomly changes all orbs, including [BLOCK] orbs into [STR], [DEX], [QCK], [INT], or [PSY] orbs, boosts ATK of Cerebral characters by 1.75x for 3 turns",
+        special: "Randomizes all orbs, including [BLOCK] orbs into [STR], [DEX], [QCK], [INT], or [PSY] orbs, boosts ATK of Cerebral characters by 1.75x for 3 turns",
         sailor: "Reduces Paralysis duration by 1 turn",
         specialName: "Ruler's Aide Flight",
     },
     1573: {//Wanda
         captain: "Boosts ATK of Cerebral characters by 2.5x and their RCV by 1.2x",
-        special: "Randomly changes all orbs, including [BLOCK] orbs into [STR], [DEX], [QCK], [INT], or [PSY] orbs, boosts ATK of Cerebral characters by 1.75x for 3 turns",
+        special: "Randomizes all orbs, including [BLOCK] orbs into [STR], [DEX], [QCK], [INT], or [PSY] orbs, boosts ATK of Cerebral characters by 1.75x for 3 turns",
         specialName: "Ruler's Aide Flight",
         sailor: {
             "base": "Reduces Paralysis duration by 1 turn",
@@ -16243,12 +16243,12 @@ window.details = {
     },
     1629: {//Ikaros Much
         captain: "Boosts ATK and HP of Striker characters by 1.5x",
-        special: "Randomly changes all orbs, including [BLOCK] orbs, into [STR], [DEX], [QCK], [INT], or [PSY] orbs and changes own orb into [INT]",
+        special: "Randomizes all orbs, including [BLOCK] orbs, into [STR], [DEX], [QCK], [INT], or [PSY] orbs and changes own orb into [INT]",
         specialName: "The Spear that Penetrated the Undersea Mountain",
     },
     1630: {//Ikaros Much
         captain: "Boosts ATK of Striker characters by 2x and their HP by 1.5x",
-        special: "Randomly changes all orbs, including [BLOCK] orbs, into [STR], [DEX], [QCK], [INT], or [PSY] orbs and changes own orb into [INT]",
+        special: "Randomizes all orbs, including [BLOCK] orbs, into [STR], [DEX], [QCK], [INT], or [PSY] orbs and changes own orb into [INT]",
         specialName: "The Spear that Penetrated the Undersea Mountain",
     },
     1631: {//Fisher Tiger
@@ -16403,12 +16403,12 @@ window.details = {
     },
     1648: {//Giolla
         captain: "Boosts ATK of all characters by 1.2x. Boosts ATK by 2.4x after scoring 4 Perfects in a row",
-        special: "Reduces damage received by 90% for 1 turn and randomly changes all orbs, including [BLOCK] orbs, into either [STR], [DEX] or [QCK] orbs",
+        special: "Reduces damage received by 90% for 1 turn and randomizes all orbs, including [BLOCK] orbs, into either [STR], [DEX] or [QCK] orbs",
         specialName: "Sprouting with Beautiful Passion",
     },
     1649: {//Giolla
         captain: "Boosts ATK of all characters by 1.2x. Boosts ATK by 3x after scoring 4 Perfects in a row",
-        special: "Reduces damage received by 90% for 1 turn and randomly changes all orbs, including [BLOCK] orbs, into either [STR], [DEX] or [QCK] orbs",
+        special: "Reduces damage received by 90% for 1 turn and randomizes all orbs, including [BLOCK] orbs, into either [STR], [DEX] or [QCK] orbs",
         specialName: "Sprouting with Beautiful Passion",
     },
     1650: {//Brook x5
@@ -17445,7 +17445,7 @@ window.details = {
     },
     1714: {//Monet
         captain: "Boosts ATK of INT characters by 2x. Recovers 2x character's RCV in HP at the end of each turn",
-        special: "Deals 10x character's ATK in [INT] damage to all enemies. Randomly changes all orbs into either [TND], [BOMB] or [RCV] orbs.",
+        special: "Deals 10x character's ATK in [INT] damage to all enemies. Randomizes all orbs into either [TND], [BOMB] or [RCV] orbs.",
         specialName: "Devouring Blizzard",
     },
     1715: {//Vergo
@@ -17565,13 +17565,13 @@ window.details = {
     },
     1728: {//Tashigi
         captain: "Boosts ATK of [STR], [DEX] and [QCK] characters by 2x",
-        special: "Randomly changes all orbs, includiong [BLOCK] orbs, into either [STR], [DEX] or [QCK] orbs, removes enemies' ATK Up Buffs and recovers 2,000 HP",
+        special: "Randomizes all orbs, includiong [BLOCK] orbs, into either [STR], [DEX] or [QCK] orbs, removes enemies' ATK Up Buffs and recovers 2,000 HP",
         sailor: "Boosts base ATK, HP and RCV of [STR], [DEX] and [QCK] characters by 30",
         specialName: "Destructive Water Splash",
     },
     1729: {//Tashigi
         captain: "Boosts ATK of [STR], [DEX] and [QCK] characters by 2.25x and their HP by 1.25x. Recovers 3x character's RCV in HP at the end of each turn",
-        special: "Randomly changes all orbs, includiong [BLOCK] orbs, into either [STR], [DEX] or [QCK] orbs, removes enemies' ATK Up Buffs and recovers 2,000 HP",
+        special: "Randomizes all orbs, includiong [BLOCK] orbs, into either [STR], [DEX] or [QCK] orbs, removes enemies' ATK Up Buffs and recovers 2,000 HP",
         sailor: "Boosts base ATK, HP and RCV of [STR], [DEX] and [QCK] characters by 30",
         specialName: "Destructive Water Splash",
     },
@@ -19036,11 +19036,11 @@ window.details = {
         captain: "Boosts ATK of all characters by 1.5x. Recovers 1x character's RCV in HP at the end of each turn",
         special: [
             {
-                "description": "Recovers 4x character's RCV in HP, reduces damage received by 50% for 1 turn. Randomly changes all orbs, including [BLOCK] orbs, into either [STR], [DEX], [QCK] or [RCV] orbs.",
+                "description": "Recovers 4x character's RCV in HP, reduces damage received by 50% for 1 turn. Randomizes all orbs, including [BLOCK] orbs, into either [STR], [DEX], [QCK] or [RCV] orbs.",
                 "cooldown": [ 8, 8 ]
             },
             {
-                "description": "Recovers 10x character's RCV in HP, reduces damage received by 50% for 1 turn. Randomly changes all orbs, including [BLOCK] orbs, into either [STR], [DEX], [QCK] or [RCV] orbs.",
+                "description": "Recovers 10x character's RCV in HP, reduces damage received by 50% for 1 turn. Randomizes all orbs, including [BLOCK] orbs, into either [STR], [DEX], [QCK] or [RCV] orbs.",
                 "cooldown": [ 14, 14 ]
             },
         ],
@@ -19052,11 +19052,11 @@ window.details = {
         captain: "Boosts ATK of all characters by 2x. Recovers 2x character's RCV in HP at the end of each turn",
         special: [
             {
-                "description": "Recovers 4x character's RCV in HP, reduces damage received by 50% for 1 turn. Randomly changes all orbs, including [BLOCK] orbs, into either [STR], [DEX], [QCK] or [RCV] orbs.",
+                "description": "Recovers 4x character's RCV in HP, reduces damage received by 50% for 1 turn. Randomizes all orbs, including [BLOCK] orbs, into either [STR], [DEX], [QCK] or [RCV] orbs.",
                 "cooldown": [ 8, 8 ]
             },
             {
-                "description": "Recovers 10x character's RCV in HP, reduces damage received by 50% for 1 turn. Randomly changes all orbs, including [BLOCK] orbs, into either [STR], [DEX], [QCK] or [RCV] orbs.",
+                "description": "Recovers 10x character's RCV in HP, reduces damage received by 50% for 1 turn. Randomizes all orbs, including [BLOCK] orbs, into either [STR], [DEX], [QCK] or [RCV] orbs.",
                 "cooldown": [ 14, 14 ]
             },
         ],
@@ -22845,11 +22845,11 @@ window.details = {
         captain: "Boosts ATK of Free Spirit and Fighter characters by 2.25x and reduce damage received by 10%",
         special: [
             {
-                "description": "Deals 30x character's ATK in QCK damage to one enemy and randomly changes all orbs, including [BLOCK] orbs, into either [STR], [DEX], [QCK], [PSY] or [INT] orbs. If your crew has 3 or more QCK characters, boosts ATK of Free Spirit characters by 1.75x for 1 turn",
+                "description": "Deals 30x character's ATK in QCK damage to one enemy and randomizes all orbs, including [BLOCK] orbs, into either [STR], [DEX], [QCK], [PSY] or [INT] orbs. If your crew has 3 or more QCK characters, boosts ATK of Free Spirit characters by 1.75x for 1 turn",
                 "cooldown": [ 16, 10 ],
             },
             {
-                "description": "Deals 50x character's ATK in QCK damage to one enemy and randomly changes all orbs, including [BLOCK] orbs, into either [STR], [DEX], [QCK], [PSY] or [INT] orbs. If your crew has 3 or more QCK characters, boosts ATK of Free Spirit characters by 2x for 1 turn",
+                "description": "Deals 50x character's ATK in QCK damage to one enemy and randomizes all orbs, including [BLOCK] orbs, into either [STR], [DEX], [QCK], [PSY] or [INT] orbs. If your crew has 3 or more QCK characters, boosts ATK of Free Spirit characters by 2x for 1 turn",
                 "cooldown": [ 19, 13 ],
             },
         ],
@@ -22860,11 +22860,11 @@ window.details = {
         captain: "Boosts ATK of Free Spirit and Fighter characters by 2.5x and reduce damage received by 15%",
         special: [
             {
-                "description": "Deals 30x character's ATK in QCK damage to one enemy and randomly changes all orbs, including [BLOCK] orbs, into either [STR], [DEX], [QCK], [PSY] or [INT] orbs. If your crew has 3 or more QCK characters, boosts ATK of Free Spirit characters by 1.75x for 1 turn",
+                "description": "Deals 30x character's ATK in QCK damage to one enemy and randomizes all orbs, including [BLOCK] orbs, into either [STR], [DEX], [QCK], [PSY] or [INT] orbs. If your crew has 3 or more QCK characters, boosts ATK of Free Spirit characters by 1.75x for 1 turn",
                 "cooldown": [ 16, 10 ],
             },
             {
-                "description": "Deals 50x character's ATK in QCK damage to one enemy and randomly changes all orbs, including [BLOCK] orbs, into either [STR], [DEX], [QCK], [PSY] or [INT] orbs. If your crew has 3 or more QCK characters, boosts ATK of Free Spirit characters by 2x for 1 turn",
+                "description": "Deals 50x character's ATK in QCK damage to one enemy and randomizes all orbs, including [BLOCK] orbs, into either [STR], [DEX], [QCK], [PSY] or [INT] orbs. If your crew has 3 or more QCK characters, boosts ATK of Free Spirit characters by 2x for 1 turn",
                 "cooldown": [ 19, 13 ],
             },
         ],
@@ -23128,7 +23128,7 @@ window.details = {
         special: "Adds .9x to Chain multiplier for 1 turn. If your crew has 4 or more characters of the same Type, boosts ATK of the Dominant Type characters by 2.25x and changes all orbs, including [BLOCK] orbs, to Dominant Type orbs",
         sailor: {
             "base": "If your crew has 4 or more characters of the same Type, boosts base ATK of the Dominant Type by 125",
-            "level1": "Makes [PSY] orbs \"beneficial\" for this unit",
+            "level1": "Makes [PSY] orbs \"beneficial\" all characters",
         },
         sailorNotes: "#{beneficial}",
         specialName: "Closing Declaration",
@@ -23159,7 +23159,7 @@ window.details = {
             { "description": "Boosts base RCV by 20" },
             { "description": "Boosts base HP by 75" },
             { "description": "Boosts base HP by 105" },
-            { "description": "Acquire Sailor Ability 1: Makes [PSY] orbs \"beneficial\" for this unit" },
+            { "description": "Acquire Sailor Ability 1: Makes [PSY] orbs \"beneficial\" all characters" },
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base ATK by 50" },
             { "description": "Acquire Potential 3: Critical Hit" },
@@ -23381,64 +23381,67 @@ window.details = {
         special: "Changes the orbs in the top row into [INT] orbs, changes the orbs in the middle row into [RCV] orbs, changes the orbs in the bottom row into [PSY] orbs and amplifies the effect of orbs by 1.5x for 1 turn",
         specialName: "Taste of \"Treasure Payment\"",
     },
-    2022: {//V2 Akainu
-        captain: "Not Yet Translated",
-        special: "Changes all orbs, including [Block] orbs, into [STR] and [INT] orbs and amplifies the effects of orbs for [STR] and [INT] characters by 2.25x for 1 turn",
+    2022: {//Akainu V2
+        captain: "Boosts ATK of [STR] and [INT] characters by 3.25x and makes [STR] and [INT] orbs \"beneficial\" to [STR] and [INT] characters. Deals up to 500x character's ATK in Typeless damage to one enemy at the end of each turn depending on how many Perfects scored that turn.",
+        captainNotes: "End of turn damage is based on how many Perfects you hit this turn: 0 Perfects - ?x ATK; 1 Perfect - ?x ATK; 2 Perfects - ?x ATK; 3 Perfects - ?x ATK; 4 Perfects - ?x ATK; 5 Perfects - ?x ATK; 6 Perfects - 500x ATK<br>#{beneficial}",
+        special: "Randomizes all orbs, including [BLOCK] orbs, into either [STR] or [INT] orbs and amplifies the effect of orbs on [STR] and [INT] characters by 2.25x for 1 turn",
         specialName: "The Natural Disaster's Final Attack: Scorched Earth",
     },
-    2023: {//V2 Akainu
-        captain: "Boosts ATK of [STR] and [INT] characters by 3.25x and makes [STR] and [INT] orbs \"beneficial\" those characters. Based on the number of Perfect hits, deals 500x of the max character's ATK, in typeless damage at the end turn",
-        captainNotes: "The exact multiplier used is chosen based on the number of Perfect hits: 1 hit will deal ??x, 2 hits will deal ??x, 3 hits will deal ??x, 4 hits will deal ??x, 5 hits will deal ??x, 6 hits will deal 500x.<br>#{beneficial}",
-        special: "Changes all orbs, including [Block] orbs, into [STR] and [INT] orbs and amplifies the effects of orbs for [STR] and [INT] characters by 2.25x for 1 turn",
+    2023: {//Akainu V2
+        captain: "Boosts ATK of [STR] and [INT] characters by 3.25x and makes [STR] and [INT] orbs \"beneficial\" to [STR] and [INT] characters. Deals up to 500x character's ATK in Typeless damage to one enemy at the end of each turn depending on how many Perfects scored that turn.",
+        captainNotes: "End of turn damage is based on how many Perfects you hit this turn: 0 Perfects - ?x ATK; 1 Perfect - ?x ATK; 2 Perfects - ?x ATK; 3 Perfects - ?x ATK; 4 Perfects - ?x ATK; 5 Perfects - ?x ATK; 6 Perfects - 500x ATK<br>#{beneficial}",
+        special: "Randomizes all orbs, including [BLOCK] orbs, into either [STR] or [INT] orbs and amplifies the effect of orbs on [STR] and [INT] characters by 2.25x for 1 turn",
         specialName: "The Natural Disaster's Final Attack: Scorched Earth",
         limit: "Not Yet Translated",
     },
-    2024: {//V2 Aokiji
-        captain: "Not Yet Translated",
-        special: "Changes all orbs, including [Block] orbs, into [PSY] and [QCK] orbs and amplifies the effects of orbs for [PSY] and [QCK] characters by 2.25x for 1 turn",
+    2024: {//Aokiji V2
+        captain: "Boosts ATK of [QCK] and [PSY] characters by 3.25x and their HP by 1.35x at the start of the chain and makes [QCK] and [PSY] orbs \"beneficial\" to [QCK] and [PSY] characters. Boosts ATK of [QCK] and [PSY] characters by 4.0625x following a chain of [PSY] > [PSY] > [QCK] attacks no lower than Good",
+        captainNotes: "#{beneficial}",
+        special: "Randomly changes all orbs, including [BLOCK] orbs, into either [QCK] or [PSY] orbs and boosts ATK of [QCK] and [PSY] characters by 2.25x for 1 turn",
         specialName: "The Natural Disaster's Final Attack: Frozen Sea",
     },
-    2025: {//V2 Aokiji
-        captain: "Boosts ATK of [PSY] and [QCK] characters by 4.0625x following a chain of [PSY] > [PSY] > [QCK] attacks no lower than Good, otherwise 3.25x and their HP by 1.35x.",
-        special: "Changes all orbs, including [Block] orbs, into [PSY] and [QCK] orbs and amplifies the effects of orbs for [PSY] and [QCK] characters by 2.25x for 1 turn",
+    2025: {//Aokiji V2
+        captain: "Boosts ATK of [QCK] and [PSY] characters by 3.25x and their HP by 1.35x at the start of the chain and makes [QCK] and [PSY] orbs \"beneficial\" to [QCK] and [PSY] characters. Boosts ATK of [QCK] and [PSY] characters by 4.0625x following a chain of [PSY] > [PSY] > [QCK] attacks no lower than Good",
+        captainNotes: "#{beneficial}",
+        special: "Randomly changes all orbs, including [BLOCK] orbs, into either [QCK] or [PSY] orbs and boosts ATK of [QCK] and [PSY] characters by 2.25x for 1 turn",
         specialName: "The Natural Disaster's Final Attack: Frozen Sea",
         limit: "Not Yet Translated",
     },
     2026: {//Hina
-        captain: "Not Yet Translated",
-        special: "Delays all enemies for 1 turn and if your Captain is a [QCK] or [PSY] character, boosts the Color Affinity of [QCK] and [PSY] characters by 2x for 1 turn",
+        captain: "Not Translated",
+        special: "Delays all enemies for 1 turn. If your Captain is a [QCK] or [PSY] character, boosts the Color Affinity of [QCK] and [PSY] by 2x for 1 turn",
         specialNotes: "#{colorAffinity : 2}",
         specialName: "Kimino Sleeve Cage: Lock",
     },
     2027: {//Hina
         captain: "Boosts ATK of [QCK] and [PSY] characters by 2.25x and their RCV by 1.2x",
-        special: "Delays all enemies for 1 turn and if your Captain is a [QCK] or [PSY] character, boosts the Color Affinity of [QCK] and [PSY] characters by 2x for 1 turn",
+        special: "Delays all enemies for 1 turn. If your Captain is a [QCK] or [PSY] character, boosts the Color Affinity of [QCK] and [PSY] by 2x for 1 turn",
         specialNotes: "#{colorAffinity : 2}",
         specialName: "Kimino Sleeve Cage: Lock",
         limit: "Not Yet Translated",
     },
     2028: {//Sengoku
-        captain: "Not Yet Translated",
-        special: "Reduces Despair and ATK down duration by 4 turns and if your crew has 4 or more of [QCK] or [PSY] characters, amplifies the effects of orbs of the Dominant Type by 2x and makes RCV and Tandem orbs \"beneficial\" for the Dominant Type for 1 turn",
+        captain: "Not Translated",
+        special: "Reduces Despair and ATK DOWN duration by 4 turns. If your crew has 4 or more [QCK] or [PSY] characters, amplifies the effect of orbs by 2x for 1 turn and makes [RCV] and [TND] orb \"beneficial\" for all characters for 1 turn",
         specialNotes: "#{beneficial}",
         specialName: "Instant Suppression",
     },
     2029: {//Sengoku
-        captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of [QCK] and [PSY] characters by 2.5x and their HP by 1.2x",
-        special: "Reduces Despair and ATK down duration by 4 turns and if your crew has 4 or more of [QCK] or [PSY] characters, amplifies the effects of orbs of the Dominant Type by 2x and makes RCV and Tandem orbs \"beneficial\" for the Dominant Type for 1 turn",
+        captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, Boosts ATK of [QCK] and [PSY] characters by 2.5x and their HP by 1.2x",
+        special: "Reduces Despair and ATK DOWN duration by 4 turns. If your crew has 4 or more [QCK] or [PSY] characters, amplifies the effect of orbs by 2x for 1 turn and makes [RCV] and [TND] orb \"beneficial\" for all characters for 1 turn",
         specialNotes: "#{beneficial}",
         specialName: "Instant Suppression",
         limit: "Not Yet Translated",
     },
     2030: {//Brannew
-        captain: "Not Yet Translated",
-        special: "Reduces enemy's Percent Damage Reduction and Threshold Damage Reduction duration by 4 turns and makes [QCK], [PSY], RCV and Tandem orbs \"beneficial\" for [STR] and [INT] characters for 3 turns",
+        captain: "Not Translated",
+        special: "Reduces enemy's Threshold Damage Reduction and Percent Damage Reduction duration by 4 turns and makes [QCK], [PSY], [RCV] and [TND] orbs \"beneficial\" to [STR] and [INT] characters for 3 turns",
         specialNotes: "#{beneficial}",
         specialName: "Reporting on a Bizarre Incident",
     },
     2031: {//Brannew
         captain: "Boosts ATK of [STR] and [INT] characters by 2.5x and reduces damage received by 7%",
-        special: "Reduces enemy's Percent Damage Reduction and Threshold Damage Reduction duration by 4 turns and makes [QCK], [PSY], RCV and Tandem orbs \"beneficial\" for [STR] and [INT] characters for 3 turns",
+        special: "Reduces enemy's Threshold Damage Reduction and Percent Damage Reduction duration by 4 turns and makes [QCK], [PSY], [RCV] and [TND] orbs \"beneficial\" to [STR] and [INT] characters for 3 turns",
         specialNotes: "#{beneficial}",
         specialName: "Reporting on a Bizarre Incident",
         limit: "Not Yet Translated",
