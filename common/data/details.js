@@ -23433,6 +23433,44 @@ window.details = {
         special: "Reduces enemy's Threshold Damage Reduction and Percent Damage Reduction duration by 4 turns and makes [QCK], [PSY], [RCV] and [TND] orbs \"beneficial\" to [STR] and [INT] characters for 3 turns",
         specialName: "Reporting on a Bizzare Incident",
     },
+    2034: {//Kizaru 6+
+        captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of all characters by 2x and boosts RCV of all characters by 1.35x. If you use \"Yasakani no Magatama: Divine Light\" boosts ATK of all characters by 3.5x instead.",
+        specialName: "Yasakani no Magatama: Divine Light",
+        special: [
+            {
+                "description": "For Shooter and Slasher characters, randomizes all non-matching orbs. Recovers 6x character's RCV in HP. Deals 20 hits of random typeless damage to random enemies.",
+                "cooldown": [ 9, 6 ],
+            },
+            {
+                "description": "Changes all orbs on Shooter and Slasher characters into Matching orbs. Recovers 15x character's RCV in HP. Deals 20 hits of large random typeless damage to random enemies.",
+                "cooldown": [ 15, 12 ],
+            },
+        ],
+        specialNotes: "#{randomHits : 20}<br>#{random : ??? : ??? : for each hit on Stage 1}<br>#{random : ??? : ??? : for each hit on Stage 2}<br>#{stages}",
+    },
+    2035: {//Buggy 6+
+        captain: "Boosts ATK of characters with cost 40 or less by 1.75x and reduces the HP and ATK of characters with cost 41 and greater by 0.5x. Guarantees duplicating a drop upon completion of the island.",
+        captainNotes: "Does not work if he was not your captain upon starting the island. Stacks with other addional drop captains, giving you two chances of getting an extra drop.",
+        special: "Boosts ATK of characters with cost 40 or less by 2x for 2 turns",
+        specialName: "The Greatest Villian's Bluff",
+    },
+    2036: {//Jesus Burgess
+        captain: "Not Translated",
+        special: "Cuts the current HP of each enemy by 20% and boosts ATK of Fighter characters by 1.75x for a variable amount of turns",
+        specialNotes: "Fighter ATK buff duration is equal to the amount of enemies on the stage at the time the special was activated",
+        specialName: "The Greatest Villian's Bluff",
+    },
+    2037: {//Jesus Burgess
+        captain: "Boosts ATK of Fighter characters by 2.5x at the start of the chain, by 3.75x after scoring 4 Perfects in a row.",
+        special: "Cuts the current HP of each enemy by 20% and boosts ATK of Fighter characters by 1.75x for a variable amount of turns",
+        specialNotes: "Fighter ATK buff duration is equal to the amount of enemies on the stage at the time the special was activated",
+        sailor: {
+            "base": "None",
+            "level1": "Boosts base ATK of Fighter characters by 50",
+            "level1": "Makes [INT] orbs \"beneficial\" for Fighter characters",
+        },
+        specialName: "The Greatest Villian's Bluff",
+    },
     2200: {//Doflamingo Raid v2
         captain: "Boosts ATK of Driven and Cerebral characters by 2.5x when HP is 50% or below, 1.5x otherwise",
         special: "Randomizes all non-matching orbs, including [BLOCK] slots and locks all orbs for 1 turn. If Captain is a Cerebral or Driven character, increases duration of any Class/Type boosting buffs and Orb Amplification buffs by 2 turns",

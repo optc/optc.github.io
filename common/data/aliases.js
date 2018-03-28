@@ -2031,8 +2031,11 @@ window.aliases = {
     2030: ['', '', ''],
     2031: ['', '', ''],
     2033: ['', '', ''],
-    2034: ['', '', ''],
-    2035: ['', '', ''],
+    2034: ['', '', 'Kizaru', 'Super Kizaru', 'Mega Kizaru'],
+    2035: ['', '', 'Baggy', 'Super Buggy', 'Mega Buggy'],
+    2036: ['', '', 'Jesus Burgers'],
+    2037: ['', '', 'Jesus Burgers'],
+    2038: ['', '', ''],
     2200: ['', '', 'V2 Raid Doffy', 'V2 Raid Doflamingo'],
     2201: ['', '', 'V2 Raid Doffy', 'V2 Raid Doflamingo'],
 };

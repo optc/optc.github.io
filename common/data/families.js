@@ -2030,4 +2030,10 @@ window.families = [
     "Sengoku",
     "Brannew",
     "Brannew",
+    null,
+    null,
+    "Kizaru",
+    "Buggy",
+    "Jesus Burgess",
+    "Jesus Burgess",
 ];
