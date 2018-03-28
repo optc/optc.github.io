@@ -23395,12 +23395,12 @@ window.details = {
     },
     2024: {//Aokiji V2
         captain: "Boosts ATK of [QCK] and [PSY] characters by 3.25x and their HP by 1.35x at the start of the chain and makes [QCK] and [PSY] orbs \"beneficial\" to [QCK] and [PSY] characters. Boosts ATK of [QCK] and [PSY] characters by 4.0625x following a chain of [PSY] > [PSY] > [QCK] attacks no lower than Good",
-        special: "Randomly changes all orbs, including [BLOCK] orbs, into either [QCK] or [PSY] orbs and amplifies the effect of orbs on [QCK] and [PSY] characters by 2.25x for 1 turn",
+        special: "Randomly changes all orbs, including [BLOCK] orbs, into either [QCK] or [PSY] orbs and boosts ATK of [QCK] and [PSY] characters by 2.25x for 1 turn",
         specialName: "The Natural Disaster's Final Attack: Frozen Sea",
     },
     2025: {//Aokiji V2
         captain: "Boosts ATK of [QCK] and [PSY] characters by 3.25x and their HP by 1.35x at the start of the chain and makes [QCK] and [PSY] orbs \"beneficial\" to [QCK] and [PSY] characters. Boosts ATK of [QCK] and [PSY] characters by 4.0625x following a chain of [PSY] > [PSY] > [QCK] attacks no lower than Good",
-        special: "Randomly changes all orbs, including [BLOCK] orbs, into either [QCK] or [PSY] orbs and amplifies the effect of orbs on [QCK] and [PSY] characters by 2.25x for 1 turn",
+        special: "Randomly changes all orbs, including [BLOCK] orbs, into either [QCK] or [PSY] orbs and boosts ATK of [QCK] and [PSY] characters by 2.25x for 1 turn",
         specialName: "The Natural Disaster's Final Attack: Frozen Sea",
     },
     2026: {//Hina
