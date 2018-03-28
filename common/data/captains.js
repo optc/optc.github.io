@@ -6849,6 +6849,20 @@ window.captains = {
     2031: {
         atk: function(p) { return p.unit.type == "STR" || p.unit.type == "INT" ? 2.5 : 1; },
     },
+    2034: {
+        atk: function(p){
+            var specialEnabled = false;
+            for(var i=0;i<2;i++)
+            {
+                if(window.specials[2034].turnedOn[i]==true){specialEnabled = true;}
+            }
+            return specialEnabled ? 3.5 : 2; },
+        rcv: function(p) { return 1.35 }
+    },
+    2035: {
+        atk: function(p) { return p.unit.cost <= 40 ? 1.75 : 0.5; },
+        hp: function(p) { return p.unit.cost <= 40 ? 1 : 0.5; }
+    },
     2200: {
         atk: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Cerebral")) && p.percHP <= 50.0 ? 2.5 : 1.5; }
     },

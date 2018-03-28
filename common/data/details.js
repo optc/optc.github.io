@@ -10244,13 +10244,13 @@ window.details = {
     },
     1166: {//Baccarat
         captain: "Gives chance of duplicating a drop upon completion of the island.",
-        captainNotes: "Does not work if she was not your captain upon starting the island. Stacks with other addional drop captains, giving you two chances of getting an extra drop.",
+        captainNotes: "Does not work if she was not your captain upon starting the island. Stacks with other additional drop captains, giving you two chances of getting an extra drop.",
         special: "Boosts chance of matching orbs and reduces the ATK of enemies for 1 turn",
         specialName: "Lucky-Lucky Fruit",
     },
     1167: {//Baccarat Evolved
         captain: "Boosts ATK of all characters by 1.2x. Gives chance of duplicating a drop upon completion of the island.",
-        captainNotes: "Does not work if she was not your captain upon starting the island. Stacks with other addional drop captains, giving you two chances of getting an extra drop.",
+        captainNotes: "Does not work if she was not your captain upon starting the island. Stacks with other additional drop captains, giving you two chances of getting an extra drop.",
         special: "Boosts chance of matching orbs and reduces the ATK of enemies for 1 turn",
         specialName: "Lucky-Lucky Fruit",
     },
@@ -10447,7 +10447,7 @@ window.details = {
     },
     1185: {
         captain: "Boosts ATK of Slasher and Cerebral characters by 1.75x. Gives chance of duplicating a drop upon completion of the island.",
-        captainNotes: "Does not work if he was not your captain upon starting the island. Stacks with other addional drop captains, giving you two chances of getting an extra drop.",
+        captainNotes: "Does not work if he was not your captain upon starting the island. Stacks with other additional drop captains, giving you two chances of getting an extra drop.",
         special: [
             {
                 "description": "Deals 4x character's ATK in [INT] damage to all enemies. Changes own orb into [INT].",
@@ -10465,7 +10465,7 @@ window.details = {
     },
     1186: {
         captain: "Boosts ATK of Slasher and Cerebral characters by 1.75x. Gives chance of duplicating a drop upon completion of the island.",
-        captainNotes: "Does not work if he was not your captain upon starting the island. Stacks with other addional drop captains, giving you two chances of getting an extra drop.",
+        captainNotes: "Does not work if he was not your captain upon starting the island. Stacks with other additional drop captains, giving you two chances of getting an extra drop.",
         special: [
             {
                 "description": "Deals 4x character's ATK in [INT] damage to all enemies. Changes own orb into [INT].",
@@ -11221,7 +11221,7 @@ window.details = {
         specialName: "Yasakani no Magatama",
         special: [
             {
-                "description": "For Shooter and Slasher characters,randomizes all non-matching orbs. Deals 10 hits of small random typeless damage to random enemies.",
+                "description": "For Shooter and Slasher characters, randomizes all non-matching orbs. Deals 10 hits of small random typeless damage to random enemies.",
                 "cooldown": [ 6, 3 ],
             },
             {
@@ -12224,7 +12224,7 @@ window.details = {
     },
     1329: {//Wicca
         captain: "Reduces cooldown of Fighter and Free Spirit specials by 1 turn at the start of the fight. Gives chance of duplicating a drop upon completion of the island.",
-        captainNotes: "Does not work if she was not your captain upon starting the island. Stacks with other addional drop captains, giving you two chances of getting an extra drop.",
+        captainNotes: "Does not work if she was not your captain upon starting the island. Stacks with other additional drop captains, giving you two chances of getting an extra drop.",
         special: [
             {
                 "description": "Deals 6 fixed damage to all enemies. Randomizes orbs of upper row characters",
@@ -12860,14 +12860,14 @@ window.details = {
         ]
     },
     1390: {//Buggy Legend
-        captain: "Boosts ATK of characters with cost 40 or less by 1.5x and boosts the HP and ATK of characters with cost 41 or greater by 0.5x. Guarantees duplicating a drop upon completion of the island.",
-        captainNotes: "Does not work if he was not your captain upon starting the island. Stacks with other addional drop captains, giving you two chances of getting an extra drop.",
+        captain: "Boosts ATK of characters with a cost of 40 or less by 1.5x and boosts the HP and ATK of characters with a cost of 41 or greater by 0.5x. Guarantees duplicating a drop upon completion of the island.",
+        captainNotes: "Does not work if he was not your captain upon starting the island. Stacks with other additional drop captains, giving you two chances of getting an extra drop.",
         special: "Randomizes all orbs. Boosts ATK of characters with cost 40 or less by 1.75x for 2 turns",
         specialName: "Chop-Chop Clown Car",
     },
     1391: {//Buggy Legend
-        captain: "Boosts ATK of characters with cost 40 or less by 1.5x and reduces the HP and ATK of characters with cost 41 and greater by 0.5x. Guarantees duplicating a drop upon completion of the island.",
-        captainNotes: "Does not work if he was not your captain upon starting the island. Stacks with other addional drop captains, giving you two chances of getting an extra drop.",
+        captain: "Boosts ATK of characters with a cost of 40 or less by 1.5x and reduces the HP and ATK of characters with a cost of 41 and greater by 0.5x. Guarantees duplicating a drop upon completion of the island.",
+        captainNotes: "Does not work if he was not your captain upon starting the island. Stacks with other additional drop captains, giving you two chances of getting an extra drop.",
         special: "Randomizes all orbs. Boosts ATK of characters with cost 40 or less by 1.75x for 2 turns",
         specialName: "Chop-Chop Clown Car",
     },
@@ -13328,7 +13328,7 @@ window.details = {
     },
     1428: {//Jean Ango
         captain: "Boosts amount of Beli received by 1.5x and gives chance of duplicating a drop upon completion of the island",
-        captainNotes: "Does not work if he was not your captain upon starting the island. Stacks with other addional drop captains, giving you two chances of getting an extra drop.",
+        captainNotes: "Does not work if he was not your captain upon starting the island. Stacks with other additional drop captains, giving you two chances of getting an extra drop.",
         special: "If the enemy is delayed at the time the special is activated, reduces Special Cooldown of all characters by 1 turn and boosts own attack by 1.75x for 1 turn",
         specialName: "Looting the Losers",
     },
@@ -18824,12 +18824,12 @@ window.details = {
         specialName: "To Become Stronger. Santoryu Ogi: Sanzen Sekai",
     },
     1805: {//Buggy
-        captain: "Boosts ATK of characters with cost 30 or less by 1.5x and their HP by 1.2x",
+        captain: "Boosts ATK of characters with a cost of 30 or less by 1.5x and their HP by 1.2x",
         special: "Reduces the defense of all enemies by 100% for 1 turn, reduces damage received from STR enemies by 80% for 1 turn, Amplifies the effect of orbs by 1.5x for 1 turn",
         specialName: "Deceiving the World with the Most Evil Show",
     },
     1806: {//Buggy
-        captain: "Boosts ATK of characters with cost 30 or less by 2.25x and their HP by 1.2x",
+        captain: "Boosts ATK of characters with a cost of 30 or less by 2.25x and their HP by 1.2x",
         special: "Reduces the defense of all enemies by 100% for 1 turn, reduces damage received from STR enemies by 80% for 1 turn, Amplifies the effect of orbs by 1.5x for 1 turn",
         specialName: "Deceiving the World with the Most Evil Show",
     },
@@ -23445,6 +23445,27 @@ window.details = {
         specialNotes: "#{beneficial}",
         specialName: "Reporting on a Bizarre Incident",
         limit: "Not Yet Translated",
+    },
+    2034: {//6+ Borsalino
+        captain: "Reduces cooldown of all specials by 2 turn at the start of the fight, Boosts ATK of all characters by 2x and RCV by 1.35x. If you use \"Yasakani no Magatama (Kamikou)\" THIS BORSALINO boosts ATK of all characters by 3.5x instead for ? turns ",
+        special: [
+            {
+                "description": "Changes all orbs (except [Block] orbs) on Shooter and Slasher characters into Matching orbs. Recovers 5x character's RCV in HP. Deals 10 hits of random typeless damage to random enemies.",
+                "cooldown": [ 11, 6 ],
+            },
+            {
+                "description": "Changes all orbs (except [Block] orbs) on Shooter and Slasher characters into Matching orbs. Recovers 15x character's RCV in HP. Deals 20 hits of random typeless damage to random enemies.",
+                "cooldown": [ 15, 12 ],
+            },
+        ],
+        specialNotes: "#{randomHits : 20}<br>#{random : 3,000 : 6,000 : for each hit on Stage 1}<br>#{random : 10,000 : 16,000 : for each hit on Stage 2}<br>#{stages}",
+        specalName: "Yasakani no Magatama (Kamikou)",
+    },
+    2035: {//6+ Buggy
+        captain: "Boosts ATK of characters with a cost of 40 or less by 1.75x and boosts the HP and ATK of characters with a cost of 41 or greater by 0.5x. Guarantees duplicating a drop upon completion of the island.",
+        captainNotes: "Does not work if he was not your captain upon starting the island. Stacks with other additional drop captains, giving you two chances of getting an extra drop.",
+        special: "Randomizes all orbs. Boosts ATK of characters with a cost of 40 or less by 2x for 2 turns",
+        specialName: "Extravaganza of the Great Rogue",
     },
     2200: {//Doflamingo Raid v2
         captain: "Boosts ATK of Driven and Cerebral characters by 2.5x when HP is 50% or below, 1.5x otherwise",

@@ -2030,6 +2030,10 @@ window.aliases = {
     2029: ['仏のセンゴク', '', 'Sengoku'],
     2030: ['', '', 'Brannew'],
     2031: ['ブランニュー 絶対正義とのせめぎ合い', '', 'Brannew'],
+    2032: ['', '', ''],
+    2033: ['', '', ''],
+    2034: ['ボルサリーノ 海軍本部最高戦力', '', 'Super Borsalino', 'Mega Borsalino', 'Borsalino V1', 'Super Kizaru', 'Kizaru'],
+    2035: ['千両道化のバギー', '', 'Super Buggy', 'Mega Buggy', 'Buggy V1', 'Buggy'],
     2200: ['', '', 'V2 Raid Doffy', 'V2 Raid Doflamingo'],
     2201: ['', '', 'V2 Raid Doffy', 'V2 Raid Doflamingo'],
 };

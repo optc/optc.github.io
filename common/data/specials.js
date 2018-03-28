@@ -4618,6 +4618,23 @@ window.specials = {
             }
         }
     },
+    2034: {
+        turnedOn: [ false, false ],
+        onActivation: function(p) {
+            window.specials[2034].turnedOn[p.slot] = true;
+            p.scope.notify({
+                text: 'Only affects damage if Kizaru is your captain',
+                name: '2034warning'
+            });
+        },
+        onDeactivation: function(p) {
+            window.specials[2034].turnedOn[p.slot] = false;
+        }
+    },
+    2035: {
+        atk: function(p) { return p.unit.cost <= 40 ? 2 : 1; },
+        type: "class"
+    },
     5000: {
         atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 1.5 : 1; },
     },
