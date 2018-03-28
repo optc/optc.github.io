@@ -4566,9 +4566,11 @@ window.specials = {
     },
     2024: {
         atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "QCK" ? 2.25 : 1; },
+        type: "type",
     },
     2025: {
         atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "QCK" ? 2.25 : 1; },
+        type: "type",
     },
     2026: {
         delay: function(p) { return 1; },
