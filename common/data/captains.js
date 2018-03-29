@@ -6854,7 +6854,7 @@ window.captains = {
             var specialEnabled = false;
             for(var i=0;i<2;i++)
             {
-                if(window.specials[2034].turnedOn[i]==true){specialEnabled = true;}
+                if(window.specials[2034].turnedOn[i]==true){ specialEnabled = true; }
             }
             return specialEnabled ? 3.5 : 2; },
         rcv: function(p) { return 1.35 }
@@ -6862,6 +6862,14 @@ window.captains = {
     2035: {
         atk: function(p) { return p.unit.cost <= 40 ? 1.75 : 0.5; },
         hp: function(p) { return p.unit.cost <= 40 ? 1 : 0.5; }
+    },
+    2037: {
+        damageSorter: function(d) { return CrunchUtils.classSort(d, 3.75, [ "Fighter" ]); },
+        hitAtk: function(p) {
+            if (!p.unit.class.has("Fighter")) return 1;
+            return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect"]) ? 3.75 : 2.5;
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
     },
     2200: {
         atk: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Cerebral")) && p.percHP <= 50.0 ? 2.5 : 1.5; }

@@ -6834,13 +6834,13 @@ window.details = {
     871: {
         captain: "Boosts ATK and RCV of QCK characters by 1.5x",
         specialName: "Hobby-Hobby Fruit",
-        special: "Removes all enemies with HP below 20%",
+        special: "Instantly defeats all enemies with current HP equal to or below 20% their MAX HP",
         specialNotes: "The special bypasses all known protective buffs. If the enemy can revive after being defeated, however, the special will only reduce the enemy's HP to 0 and trigger their revive effect."
     },
     872: {
         captain: "Boosts ATK and RCV of QCK characters by 2x",
         specialName: "Hobby-Hobby Fruit",
-        special: "Removes all enemies with HP below 20%",
+        special: "Instantly defeats all enemies with current HP less than or equal to 20% their MAX HP",
         specialNotes: "The special bypasses all known protective buffs. If the enemy can revive after being defeated, however, the special will only reduce the enemy's HP to 0 and trigger their revive effect."
     },
     873: {
@@ -19603,12 +19603,12 @@ window.details = {
     },
     1845: {//Garp
         captain: "Boosts ATK of Fighter characters by 2.5x and reduce damage received by 5%",
-        special: "Reduces the defense of all enemies by 100% for 1 turn. If the targeted enemy has less than 25% HP, instantly defeats them, otherwise, cuts the current HP of one enemy by 30%",
+        special: "Reduces the defense of all enemies by 100% for 1 turn. If the targeted enemy has less than or equal to than 25% of their MAX HP, instantly defeats them, otherwise, cuts the current HP of one enemy by 30%",
         specialName: "Crushing Armament Fist",
     },
     1846: {//Garp
         captain: "Boosts ATK of Fighter characters by 2.75x and reduce damage received by 15%",
-        special: "Reduces the defense of all enemies by 100% for 1 turn. If the targeted enemy has less than 25% HP, instantly defeats them, otherwise, cuts the current HP of one enemy by 30%",
+        special: "Reduces the defense of all enemies by 100% for 1 turn. If the targeted enemy has less than or equal to than 25% of their MAX HP, instantly defeats them, otherwise, cuts the current HP of one enemy by 30%",
         specialName: "Crushing Armament Fist",
     },
     1847: {//Sengoku+
@@ -23446,26 +23446,43 @@ window.details = {
         specialName: "Reporting on a Bizarre Incident",
         limit: "Not Yet Translated",
     },
-    2034: {//6+ Borsalino
-        captain: "Reduces cooldown of all specials by 2 turn at the start of the fight, Boosts ATK of all characters by 2x and RCV by 1.35x. If you use \"Yasakani no Magatama: Divine Light\" THIS BORSALINO boosts ATK of all characters by 3.5x instead for ? turns",
+    2034: {//Kizaru 6+
+        captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of all characters by 2x and boosts RCV of all characters by 1.35x. If you use \"Yasakani no Magatama: Divine Light\" boosts ATK of all characters by 3.5x instead.",
         special: [
             {
-                "description": "Changes all orbs (except [Block] orbs) on Slasher and Shooter characters into Matching orbs. Recovers 6x character's RCV in HP. Deals 20 hits of random typeless damage to random enemies.",
+                "description": "For Shooter and Slasher characters, randomizes all non-matching orbs. Recovers 6x character's RCV in HP. Deals 20 hits of random typeless damage to random enemies.",
                 "cooldown": [ 9, 6 ],
             },
             {
-                "description": "Changes all orbs (except [Block] orbs) on Slasher and Shooter characters into Matching orbs. Recovers 15x character's RCV in HP. Deals 20 hits of random typeless damage to random enemies.",
+                "description": "Changes all orbs on Shooter and Slasher characters into Matching orbs. Recovers 15x character's RCV in HP. Deals 20 hits of large random typeless damage to random enemies.",
                 "cooldown": [ 15, 12 ],
             },
         ],
-        specialNotes: "#{randomHits : 20}<br>#{stages}",
-        specalName: "Yasakani no Magatama: Divine Light",
+        specialNotes: "#{randomHits : 20}<br>#{random : ??? : ??? : for each hit on Stage 1}<br>#{random : ??? : ??? : for each hit on Stage 2}<br>#{stages}",
+        specialName: "Yasakani no Magatama: Divine Light",
     },
-    2035: {//6+ Buggy
-        captain: "Boosts ATK of characters with a cost of 40 or less by 1.75x and boosts the HP and ATK of characters with a cost of 41 or greater by 0.5x. Guarantees duplicating a drop upon completion of the island.",
+    2035: {//Buggy 6+
+        captain: "Boosts ATK of characters with cost 40 or less by 1.75x and reduces the HP and ATK of characters with cost 41 and greater by 0.5x. Guarantees duplicating a drop upon completion of the island.",
         captainNotes: "Does not work if he was not your captain upon starting the island. Stacks with other additional drop captains, giving you two chances of getting an extra drop.",
-        special: "Randomizes all orbs. Boosts ATK of characters with a cost of 40 or less by 2x for 2 turns",
-        specialName: "The Greatness Villian's Bluff",
+        special: "Boosts ATK of characters with cost 40 or less by 2x for 2 turns",
+        specialName: "The Greatest Villain's Bluff",
+    },
+    2036: {//Jesus Burgess
+        captain: "Not Translated",
+        special: "Cuts the current HP of each enemy by 20% and boosts ATK of Fighter characters by 1.75x for a variable amount of turns",
+        specialNotes: "Fighter ATK buff duration is equal to the amount of enemies on the stage at the time the special was activated",
+        specialName: "Galleon Lariat",
+    },
+    2037: {//Jesus Burgess
+        captain: "Boosts ATK of Fighter characters by 2.5x at the start of the chain, by 3.75x after scoring 4 Perfects in a row.",
+        special: "Cuts the current HP of each enemy by 20% and boosts ATK of Fighter characters by 1.75x for a variable amount of turns",
+        specialNotes: "Fighter ATK buff duration is equal to the amount of enemies on the stage at the time the special was activated",
+        /*sailor: {
+            "base": "None",
+            "level1": "Boosts base ATK of Fighter characters by 50",
+            "level2": "Makes [INT] orbs \"beneficial\" for Fighter characters",
+        },*/
+        specialName: "Galleon Lariat",
     },
     2200: {//Doflamingo Raid v2
         captain: "Boosts ATK of Driven and Cerebral characters by 2.5x when HP is 50% or below, 1.5x otherwise",

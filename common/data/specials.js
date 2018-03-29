@@ -4635,6 +4635,14 @@ window.specials = {
         atk: function(p) { return p.unit.cost <= 40 ? 2 : 1; },
         type: "class"
     },
+    2036: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? 1.75 : 1; },
+        type: "class",
+    },
+    2037: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? 1.75 : 1; },
+        type: "class",
+    },
     5000: {
         atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 1.5 : 1; },
     },
