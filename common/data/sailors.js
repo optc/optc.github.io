@@ -384,6 +384,21 @@ window.sailors = {
     1976: {
         atkStatic: function(p) { return p.percHP <= 30.0 ? 40 : 0; },
     },
+    1983: {
+        atkStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 75 : 0; },
+        hpStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 75 : 0; },
+        rcvStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 75 : 0; },
+    },
+    1984: {
+        atkStatic: function(p) { return p.unit.class.has("Free Spirit") ? 150 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Free Spirit") ? 150 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Free Spirit") ? 150 : 0; },
+    },
+    1985: {
+        atkStatic: function(p) { return p.unit.class.has("Free Spirit") ? 150 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Free Spirit") ? 150 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Free Spirit") ? 150 : 0; },
+    },
     1992: {
         atkStatic: function(p) { return p.unit.class.has("Free Spirit") ? 50 : 0; },
     },

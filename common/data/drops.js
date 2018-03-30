@@ -1838,6 +1838,7 @@ window.drops = {
         {
             name: 'Wano Samurai!',
             thumb: 1774,
+            global: true,
             nakama: 2177400,
             condition: 'Shooter and Free Spirit characters get a boost (1.2x ATK, HP and RCV boost on 30 stamina)',
             gamewith: 68608,
@@ -2301,6 +2302,7 @@ window.drops = {
         {
             name: 'Clash Neo!! Akainu',
             thumb: 1826,
+            global: true,
             nakama: 4182600,
             gamewith: 73951,
             condition: '1 Master version and 3 different Ultimate versions with different conditions. Master: Shooter/Striker/Slaher Only. Ultimate: Shooter Only, Striker Only, and Slasher Only',

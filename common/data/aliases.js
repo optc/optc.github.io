@@ -1982,8 +1982,8 @@ window.aliases = {
     1981: ['ジュエリー・ボニー', '', 'FN Bonney'],
     1982: ['超新星 大食らい ジュエリー・ボニー', '', 'FN Bonney'],
     1983: ['', '', 'Smoker&Tashigi'],
-    1984: ['戦火の再会', '', 'Luffy&Ace', 'Luffy and Ace'],
-    1985: ['海賊の高み', '', 'Luffy&Ace', 'Luffy and Ace'],
+    1984: ['ルフィ＆エース 戦火の再会', '', 'Luffy&Ace', 'Luffy and Ace'],
+    1985: ['ルフィ＆エース 海賊の高み', '', 'Luffy&Ace', 'Luffy and Ace'],
     1986: ['マルコ “意志”の守り手', '', 'Coliseum Marco'],
     1987: ['不死鳥マルコ “意志”の守り手', '', 'Coliseum Marco'],
     1988: ['リトルオーズJr. 突破口の先駆者', '', 'Coliseum Oars'],
@@ -2036,7 +2036,6 @@ window.aliases = {
     2035: ['千両道化のバギー', '', 'Super Buggy', 'Mega Buggy', 'Buggy', 'Baggy'],
     2036: ['', '', 'Jesus Burgers', 'Jesus Burgess'],
     2037: ['', '', 'Jesus Burgers', 'Mr. Store'],
-    2038: ['', '', ''],
     2200: ['', '', 'V2 Raid Doffy', 'V2 Raid Doflamingo'],
     2201: ['', '', 'V2 Raid Doffy', 'V2 Raid Doflamingo'],
 };
