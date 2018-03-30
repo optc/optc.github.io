@@ -23511,6 +23511,16 @@ window.details = {
         specialName: "Reporting on a Bizarre Incident",
         limit: "Not Yet Translated",
     },
+    2032: {//Raid Luffy
+        captian: "Not Yet Translated",
+        special: "Boosts ATK of all characters by 1.5x for 1 turn. If your captain is a [PSY] character, amplifies the effect of orbs by 1.5x, adds .3x to Chain multiplier, 20x character's ATK as Additional Typeless Damage, and reduces damage received by 40% for 1 turn",
+        specialName: "The Heavy Tank's Critical Breakthrough",
+    },
+    2033: {//Raid Luffy
+        captian: "Boosts ATK of [PSY] characters by 2.5x and their HP by 1.5x",
+        special: "Boosts ATK of all characters by 1.5x for 1 turn. If your captain is a [PSY] character, amplifies the effect of orbs by 1.5x, adds .3x to Chain multiplier, 20x character's ATK as Additional Typeless Damage, and reduces damage received by 40% for 1 turn",
+        specialName: "The Heavy Tank's Critical Breakthrough",
+    },
     2034: {//Kizaru 6+
         captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of all characters by 2x and boosts RCV of all characters by 1.35x. If you use \"Yasakani no Magatama: Divine Light\" boosts ATK of all characters by 3.5x instead.",
         special: [
