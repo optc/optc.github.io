@@ -2431,13 +2431,20 @@ window.drops = {
         },
         
         {
+            name: 'Clash!! Tankman Luffy',
+            thumb: 2033,
+            Master: [ 2022 ],
+            Expert: [ 2022 ]
+        },
+        
+        {
             name: 'Clash!! Heavenly Demon Doflamingo',
             thumb: 2201,
             global: true,
             nakama: 4220100,
             gamewith: null,
-            Master: [ 2200 ],
-            Expert: [ 2200 ]
+            Ultimate: [ 2200 ],
+            Master: [ 2200 ]
         },
 
     ],

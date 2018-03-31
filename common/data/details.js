@@ -23433,6 +23433,16 @@ window.details = {
         special: "Reduces enemy's Threshold Damage Reduction and Percent Damage Reduction duration by 4 turns and makes [QCK], [PSY], [RCV] and [TND] orbs \"beneficial\" to [STR] and [INT] characters for 3 turns",
         specialName: "Reporting on a Bizzare Incident",
     },
+    2032: {//Luffy Tankman
+        captain: "Not Translated",
+        special: "Boosts ATK of all characters by 1.5x for 1 turn. If your Captain is a [PSY] character, amplifies the effect of orbs by 1.5x for 1 turn, adds .3x to Chain multiplier for 1 turn, adds 20x character's ATK as Additional Typeless Damage for 1 turn and reduces damage received by 40% for 1 turn.",
+        specialName: "The Heavy Tank's Critical Breakthrough",
+    },
+    2033: {//Luffy Tankman
+        captain: "Boosts ATK of PSY characters by 2.5x and their HP by 1.5x",
+        special: "Boosts ATK of all characters by 1.5x for 1 turn. If your Captain is a [PSY] character, amplifies the effect of orbs by 1.5x for 1 turn, adds .3x to Chain multiplier for 1 turn, adds 20x character's ATK as Additional Typeless Damage for 1 turn and reduces damage received by 40% for 1 turn.",
+        specialName: "The Heavy Tank's Critical Breakthrough",
+    },
     2034: {//Kizaru 6+
         captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of all characters by 2x and boosts RCV of all characters by 1.35x. If you use \"Yasakani no Magatama: Divine Light\" boosts ATK of all characters by 3.5x instead.",
         specialName: "Yasakani no Magatama: Divine Light",

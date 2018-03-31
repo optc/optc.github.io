@@ -4618,6 +4618,36 @@ window.specials = {
             }
         }
     },
+    2032: {
+        atk: function(p) { return 1.5; },
+        type: "type",
+        orb: function(p) { return window.specials[2032].multiplier ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, window.specials[2032].multiplier, 1.5, [p.friendCaptain, p.captain]) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain]); },
+        chainAddition: function(p) { return window.specials[2032].multiplier ? .3 : 0; },
+        staticMult: function(p) { return window.specials[2032].multiplier ? 20 : 0; },
+        onActivation: function(p) {
+            if (p.captain.type == "PSY") {
+                window.specials[2032].multiplier = true;
+            }
+            else{
+                window.specials[2032].multiplier = false;
+            }
+        }
+    },
+    2033: {
+        atk: function(p) { return 1.5; },
+        type: "type",
+        orb: function(p) { return window.specials[2033].multiplier ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, window.specials[2033].multiplier, 1.5, [p.friendCaptain, p.captain]) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain]); },
+        chainAddition: function(p) { return window.specials[2033].multiplier ? .3 : 0; },
+        staticMult: function(p) { return window.specials[2033].multiplier ? 20 : 0; },
+        onActivation: function(p) {
+            if (p.captain.type == "PSY") {
+                window.specials[2033].multiplier = true;
+            }
+            else{
+                window.specials[2033].multiplier = false;
+            }
+        }
+    },
     2034: {
         turnedOn: [ false, false ],
         onActivation: function(p) {
