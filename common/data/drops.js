@@ -2438,7 +2438,7 @@ window.drops = {
             thumb: 2032,
             showManual: true,
             nakama: null,
-            gamewith: null,
+            gamewith: 97354,
             Ultimate: [ 2032, -2032 ],
             Veteran: [ 2032, -2032 ]
         },

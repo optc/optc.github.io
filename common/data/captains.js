@@ -6858,6 +6858,10 @@ window.captains = {
     2031: {
         atk: function(p) { return p.unit.type == "STR" || p.unit.type == "INT" ? 2.5 : 1; },
     },
+    2032 {
+        atk: function(p) { return p.unit.type == "PSY" ? 0.5 : 1; },
+        hp: function(p) { return p.unit.type == "PSY" ? 0.5 : 1; },
+    },
     2033: {
         atk: function(p) { return p.unit.type == "PSY" ? 2.5 : 1; },
         hp: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; },

@@ -3281,7 +3281,7 @@ window.evolutions = {
     },
     2032: {
         evolution: 2033,
-        evolvers: [  ]
+        evolvers: [ [ 115, 108, 108 ], [ 81, 108, 108 ], [ 92, 108, 108 ] ]
     },
     1240: {
         evolution: 2034,
@@ -3289,7 +3289,7 @@ window.evolutions = {
     },
     1391: {
         evolution: 2035,
-        evolvers: [  ]
+        evolvers: [ 'skullINT', 118, 88, 304, 267 ]
     },
     2036: {
         evolution: 2037,
