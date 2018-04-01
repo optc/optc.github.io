@@ -1760,7 +1760,7 @@ window.aliases = {
     1759: ['ブルック 20th Anniversary Memorial Treasure', '', '20th Anniversary Brook'],
     1760: ['トニートニー・チョッパー Celebrate 20th Anniversary Cruise', '', '20th Anniversary Chopper'],
     1761: ['トニートニー・チョッパー 20th Anniversary Memorial Treasure', '', '20th Anniversary Chopper'],
-    1762: ['ロブ・ルッチ 世界政府の怪物', '', 'Rob Lucci', 'Legend Rob Lucci', 'Legend Lucci', 'Blucci'],
+    1762: ['ロブ・ルッチ 世界政府の怪物', '', 'Rob Lucci', 'Legend Rob Lucci', 'Legend Lucci', 'Blucci', 'Log Lucci'],
     1763: ['ルッチ　獣人 世界政府の怪物', '', 'Rob Lucci', 'Legend Rob Lucci', 'Legend Lucci', 'Blucci', 'Log Lucci'],
     1764: ['クザン 元海軍本部最高戦力', '', 'Super Aokiji', 'Mega Aokiji', 'Super Kuzan', 'Mega Kuzan', 'Legend Aokiji', 'Legend Kuzan'],
     1765: ['足長族　ブルーギリー', '', ''],
