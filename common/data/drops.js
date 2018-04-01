@@ -2449,8 +2449,8 @@ window.drops = {
             global: true,
             nakama: 4220100,
             gamewith: null,
-            Master: [ 2200 ],
-            Expert: [ 2200 ]
+            Ultimate: [ 2200 ],
+            Master: [ 2200 ]
         },
 
     ],

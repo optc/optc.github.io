@@ -3241,15 +3241,15 @@ window.evolutions = {
     },
     2022: {
         evolution: 2023,
-        evolvers: [ ]
+        evolvers: [ 118, 118, 304, 304, 267 ]
     },
     2024: {
         evolution: 2025,
-        evolvers: [ ]
+        evolvers: [ 118, 118, 303, 303, 267 ]
     },
     2026: {
         evolution: 2027,
-        evolvers: [ ]
+        evolvers: [ 94, 81, 87, 303, 103 ]
     },
     2028: {
         evolution: 2029,
