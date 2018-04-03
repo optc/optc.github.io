@@ -701,8 +701,8 @@ window.matchers = [
         matcher: /Restores (his|her) own special/i
     },
     
-    }
-        name: 'Perfect Orb Keeper',
+    {
+        name: 'Matching Orb Keeper',
         target: 'sailor',
         matcher: /If this character has a +(STR|DEX|QCK|PSY|INT)\b.+hit a Perfect/i
     },
