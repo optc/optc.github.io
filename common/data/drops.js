@@ -1832,12 +1832,13 @@ window.drops = {
             nakama: 2176600,
             gamewith: 67118,
             'Japan': [ 1765, 1767, 1768, -1192, -1764, -520, -1115, -1184, -1190, -554, -1175, -1612, -1614, -1353, -1393 ],
-            'Global': [ 1765, 1767, 1768, -520, -554, -1192, -1763, -1764, -1614, -1612, -1115, -1190, -1184, -1175, -1393, -1353 ]
+            'Global': [ 1765, 1767, 1768, -1192, -1763, -1764, -1614, -1612, -1115, -1190, -1184, -1175, -1393, -1353 ]
         },
         
         {
             name: 'Wano Samurai!',
             thumb: 1774,
+            global: true,
             nakama: 2177400,
             condition: 'Shooter and Free Spirit characters get a boost (1.2x ATK, HP and RCV boost on 30 stamina)',
             gamewith: 68608,
@@ -1947,8 +1948,8 @@ window.drops = {
         {
             name: 'Makino\'s Bar! Shanks and Makino!',
             thumb: 2021,
-            gamewith: 96635,
             nakama: 2202100,
+            gamewith: 96636,
             'All Difficulties': [ 2018, 2020, -1404, -1593, -1410, -1778, -1873, -1877, -1635 ]
         },
         
@@ -2301,6 +2302,7 @@ window.drops = {
         {
             name: 'Clash Neo!! Akainu',
             thumb: 1826,
+            global: true,
             nakama: 4182600,
             gamewith: 73951,
             condition: '1 Master version and 3 different Ultimate versions with different conditions. Master: Shooter/Striker/Slaher Only. Ultimate: Shooter Only, Striker Only, and Slasher Only',
@@ -2430,12 +2432,15 @@ window.drops = {
             Master: [ 2014 ],
             Expert: [ 2014 ]
         },
-        
+
         {
-            name: 'Clash!! Tankman Luffy',
-            thumb: 2034,
-            Master: [ 2023 ],
-            Expert: [ 2023 ]
+            name: 'Clash!? Luffy',
+            thumb: 2033,
+            showManual: true,
+            nakama: null,
+            gamewith: 97354,
+            Ultimate: [ 2032, -2032 ],
+            Master: [ 2032, -2032 ]
         },
         
         {
@@ -2656,6 +2661,7 @@ window.drops = {
         {
             name: 'Invasion! Garp',
             thumb: 1846,
+            global: true,
             nakama: 6184600,
             gamewith: 75260,
             condition: 'Has a chance of appearing at the end of ANY Chaos Coliseum boss. You MUST use the same team that you just used to complete the Coliseum boss to fight Garp.',

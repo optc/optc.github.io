@@ -3233,35 +3233,35 @@ window.evolutions = {
     },
     2018: {
         evolution: 2019,
-        evolvers: [  ]
+        evolvers: [ 80, 86, 91, 97, 102 ]
     },
     2020: {
         evolution: 2021,
-        evolvers: [  ]
+        evolvers: [ 81, 87, 92, 98, 103 ]
     },
     2022: {
         evolution: 2023,
-        evolvers: [  ]
+        evolvers: [ 118, 118, 304, 304, 267 ]
     },
     2024: {
         evolution: 2025,
-        evolvers: [  ]
+        evolvers: [ 118, 118, 303, 303, 267 ]
     },
     2026: {
         evolution: 2027,
-        evolvers: [  ]
+        evolvers: [ 94, 81, 87, 303, 103 ]
     },
     2028: {
         evolution: 2029,
-        evolvers: [  ]
+        evolvers: [ 1180, 90, 96, 301, 101 ]
     },
     2030: {
         evolution: 2031,
-        evolvers: [  ]
+        evolvers: [ 83, 266, 99, 99, 104 ]
     },
     2032: {
         evolution: 2033,
-        evolvers: [  ]
+        evolvers: [ [ 115, 108, 108 ], [ 81, 108, 108 ], [ 92, 108, 108 ] ]
     },
     1240: {
         evolution: 2034,
@@ -3269,7 +3269,7 @@ window.evolutions = {
     },
     1391: {
         evolution: 2035,
-        evolvers: [  ]
+        evolvers: [ 'skullINT', 118, 88, 304, 267 ]
     },
     2036: {
         evolution: 2037,

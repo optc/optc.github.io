@@ -434,21 +434,21 @@ window.effects = {
         atk: function(p) {
             var id = p.number + 1,
                 matching = ((id > 1740 && id < 1745) ||
-                    [ 1795, 1796, 1539, 1540, 1823, 1844, 1277, 1278 ].indexOf(id) != -1);
+                    [ 1620, 1621, 1664, 1665, 1720, 1721, 1769, 1770, 1777, 1778, 1823, 1824 ].indexOf(id) != -1);
             return !matching ? 1 : 1.75;
         },
         hp: function(p) {
             var id = p.number + 1,
                 matching = ((id > 1740 && id < 1745) ||
-                    [ 1795, 1796, 1539, 1540, 1823, 1844, 1277, 1278 ].indexOf(id) != -1);
+                    [ 1620, 1621, 1664, 1665, 1720, 1721, 1769, 1770, 1777, 1778, 1823, 1824 ].indexOf(id) != -1);
             return !matching ? 1 : 1.75;
         },
         rcv: function(p) {
             var id = p.number + 1,
                 matching = ((id > 1740 && id < 1745) ||
-                    [ 1795, 1796, 1539, 1540, 1823, 1844, 1277, 1278 ].indexOf(id) != -1);
+                    [ 1620, 1621, 1664, 1665, 1720, 1721, 1769, 1770, 1777, 1778, 1823, 1824 ].indexOf(id) != -1);
             return !matching ? 1 : 1.75;
-        },
+        }, //1795, 1796, 1539, 1540, 1823, 1844, 1277, 1278 possible ones
 	},
     
     'Blitz Battle! The Three Admirals': {
@@ -641,5 +641,26 @@ window.effects = {
         thumb: 2000,
         id: 56, // don't change this
         chainAddition: function(p) { return 0.5 }
+    },
+    
+    'Encourage the Soul': {
+        description: 'Stats of Strawhats boosted, 1.5x ATK, 1.5x HP, 1.5x RCV and Cooldown reduced by 9 turns at the start of the island.',
+        thumb: 1547,
+        id: 57, // don't change this
+        atk: function(p) {
+            var character = window.families[p.number];
+            matching = ["Monkey D. Luffy", "Roronoa Zoro", "Usopp", "Sanji", "Nami", "Tony Tony Chopper", "Franky", "Nico Robin", "Brook"].indexOf(character) != -1;
+            return !matching ? 1 : 1.5;
+        },
+        hp: function(p) {
+            var character = window.families[p.number];
+            matching = ["Monkey D. Luffy", "Roronoa Zoro", "Usopp", "Sanji", "Nami", "Tony Tony Chopper", "Franky", "Nico Robin", "Brook"].indexOf(character) != -1;
+            return !matching ? 1 : 1.5;
+        },
+        rcv: function(p) {
+            var character = window.families[p.number];
+            matching = ["Monkey D. Luffy", "Roronoa Zoro", "Usopp", "Sanji", "Nami", "Tony Tony Chopper", "Franky", "Nico Robin", "Brook"].indexOf(character) != -1;
+            return !matching ? 1 : 1.5;
+        },
     },
 };

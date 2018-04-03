@@ -3023,7 +3023,7 @@ window.details = {
         special: "Deals several times the character's ATK in QCK damage to all enemies",
         specialNotes: "#{specialProportional : lower : 150 * ( 1 - (remaining HP) / (total HP) )}",
         specialName: "Backwater Sword Dance",
-        captain: "Reduces damage received by 50% if HP is low, boosts RCV of all characters by 3x if HP is low"
+        captain: "Reduces damage received by 50% and boosts RCV of all characters by 3x when HP is low"
     },
     404: {
         special: "Reduces damage received by 50% for 2 turns, boosts RCV of all characters by 2x for 2 turns",
@@ -3481,7 +3481,8 @@ window.details = {
         special: "Boosts ATK of STR characters by 1.5x for 1 turn, deals 15x character's ATK in STR damage to all enemies",
         specialName: "Manly Flaming Sword",
         captain: "Boosts ATK of STR characters by 2x, boosts damage of STR specials by 2x",
-        captainNotes: "#{noFixedPerc}"
+        captainNotes: "#{noFixedPerc}",
+        limit: "Not Translated",
     },
     456: {
         special: "Randomizes the orbs in the middle row into either [STR] or [DEX] orbs, the orbs in the lower row into either [PSY] or [INT] orbs, switches orbs between slots once",
@@ -3963,7 +3964,8 @@ window.details = {
         special: "Deals 35x character's ATK in PSY damage to all enemies, reduces the defense of all enemies by 100% for 2 turns",
         specialName: "Conqueror's Haki: Emperor",
         captain: "Boosts chances of getting [PSY] orbs, boosts ATK of PSY characters proportionally to the crew's current HP",
-        captainNotes: "#{captainProportional : higher : 2 + 0.75 * (remaining HP) / (total HP) : 2.75 : 2}"
+        captainNotes: "#{captainProportional : higher : 2 + 0.75 * (remaining HP) / (total HP) : 2.75 : 2}",
+        limit: "Not Translated",
     },
     531: {
         special: "Reduces damage received by 30% for 4 turns",
@@ -4814,7 +4816,8 @@ window.details = {
         special: "Recovers 100x character's RCV in HP, amplifies the effect of orbs by 1.5x for 2 turns",
         specialNotes: "#{orb : 1.5x}",
         specialName: "Blue Flame Kick",
-        captain: "Reduces damage received by 30% if HP is above 70% at the start of the turn, boosts ATK of QCK and PSY characters by 2.75x if HP is above 70% at the start the turn"
+        captain: "Reduces damage received by 30% if HP is above 70% at the start of the turn, boosts ATK of QCK and PSY characters by 2.75x if HP is above 70% at the start the turn",
+        limit: "Not Translated",
     },
     650: {
         special: "Deals 5,000 fixed damage to one enemy, amplifies the effect of orbs by 1.5x for 1 turn",
@@ -5531,7 +5534,8 @@ window.details = {
     739: {
         special: "Reduces Bind duration by 5 turns, randomizes all orbs",
         specialName: "Coup de Boo",
-        captain: "Boosts ATK of Free Spirit characters by 2x"
+        captain: "Boosts ATK of Free Spirit characters by 2x",
+        limit: "Not Translated",
     },
     740: {
         special: "Deals 10x character's ATK in QCK damage to all enemies, boosts ATK against enemies with increased defense by 1.3x for 2 turns",
@@ -6648,7 +6652,8 @@ window.details = {
     844: {
         captain: "Boosts ATK of Slasher, Striker and Shooter characters by 2x",
         specialName: "Arms-Morphosis: Missile Girl",
-        special: "Deals 15x character's ATK in STR damage to all enemies, boosts ATK of Shooter characters by 1.5x for 1 turn. If during that turn every unit scores a Perfect hit, boosts ATK of Shooter, Striker and Slasher characters by 1.5x in the following turn."
+        special: "Deals 15x character's ATK in STR damage to all enemies, boosts ATK of Shooter characters by 1.5x for 1 turn. If during that turn every unit scores a Perfect hit, boosts ATK of Shooter, Striker and Slasher characters by 1.5x in the following turn.",
+        limit: "Not Translated",
     },
     845: {
         captain: "Boosts ATK of all characters by 1.5x after the 11th hit in the chain, by 2.5x after the 22nd hit",
@@ -6871,7 +6876,8 @@ window.details = {
                 "cooldown": [ 19, 14 ]
             }
         ],
-        specialNotes: "#{orb: 1.5x or 1.75x} #{stages}"
+        specialNotes: "#{orb: 1.5x or 1.75x} #{stages}",
+        limit: "Not Translated",
     },
     875: {
         captain: "Boosts ATK of Cerebral and Driven characters by 2x",
@@ -7611,7 +7617,8 @@ window.details = {
     941: {
         captain: "Boosts ATK of [DEX] characters by 1.75x and their HP by 2.25x",
         specialName: "Sure Kill! Exploding Star!!",
-        special: "Deals 13x ATK as [DEX] damage to all enemies and boosts ATK of [DEX] characters by 1.75x for 1 turn"
+        special: "Deals 13x ATK as [DEX] damage to all enemies and boosts ATK of [DEX] characters by 1.75x for 1 turn",
+        limit: "Not Translated",
     },
     942: {
         captain: "Boosts ATK and HP of [STR] characters by 1.5x",
@@ -10231,6 +10238,7 @@ window.details = {
         captainNotes: "The two Boosts stack with each other so a PSY Driven or a PSY Cerebral Unit will be boosted by 2.625",
         special: "Deals large [PSY] damage to all enemies and if HP is above 50%, changes all orbs to [PSY] orbs",
         specialName: "Gold-Gold Fruit",
+        limit: "Not Translated",
     },
     1164: {//Carina
         captain: "Boosts RCV of all characters by 1.2x",
@@ -10244,13 +10252,13 @@ window.details = {
     },
     1166: {//Baccarat
         captain: "Gives chance of duplicating a drop upon completion of the island.",
-        captainNotes: "Does not work if she was not your captain upon starting the island. Stacks with other addional drop captains, giving you two chances of getting an extra drop.",
+        captainNotes: "Does not work if she was not your captain upon starting the island. Stacks with other additional drop captains, giving you two chances of getting an extra drop.",
         special: "Boosts chance of matching orbs and reduces the ATK of enemies for 1 turn",
         specialName: "Lucky-Lucky Fruit",
     },
     1167: {//Baccarat Evolved
         captain: "Boosts ATK of all characters by 1.2x. Gives chance of duplicating a drop upon completion of the island.",
-        captainNotes: "Does not work if she was not your captain upon starting the island. Stacks with other addional drop captains, giving you two chances of getting an extra drop.",
+        captainNotes: "Does not work if she was not your captain upon starting the island. Stacks with other additional drop captains, giving you two chances of getting an extra drop.",
         special: "Boosts chance of matching orbs and reduces the ATK of enemies for 1 turn",
         specialName: "Lucky-Lucky Fruit",
     },
@@ -10447,7 +10455,7 @@ window.details = {
     },
     1185: {
         captain: "Boosts ATK of Slasher and Cerebral characters by 1.75x. Gives chance of duplicating a drop upon completion of the island.",
-        captainNotes: "Does not work if he was not your captain upon starting the island. Stacks with other addional drop captains, giving you two chances of getting an extra drop.",
+        captainNotes: "Does not work if he was not your captain upon starting the island. Stacks with other additional drop captains, giving you two chances of getting an extra drop.",
         special: [
             {
                 "description": "Deals 4x character's ATK in [INT] damage to all enemies. Changes own orb into [INT].",
@@ -10465,7 +10473,7 @@ window.details = {
     },
     1186: {
         captain: "Boosts ATK of Slasher and Cerebral characters by 1.75x. Gives chance of duplicating a drop upon completion of the island.",
-        captainNotes: "Does not work if he was not your captain upon starting the island. Stacks with other addional drop captains, giving you two chances of getting an extra drop.",
+        captainNotes: "Does not work if he was not your captain upon starting the island. Stacks with other additional drop captains, giving you two chances of getting an extra drop.",
         special: [
             {
                 "description": "Deals 4x character's ATK in [INT] damage to all enemies. Changes own orb into [INT].",
@@ -10850,7 +10858,8 @@ window.details = {
         specialNotes: "#{orb : 1.5x}",
         specialName: "Roar! Zarley Davison",
         captain: "Boosts ATK of STR characters by 2.25x, deals 2x character's ATK in STR damage to all enemies at the end of each turn",
-        sailor: "Boosts base ATK of Shooter characters by 20"
+        sailor: "Boosts base ATK of Shooter characters by 20",
+        limit: "Not Translated",
     },
     1213: {
         captain: "Boosts ATK of Slasher characters by 1.5x, the HP of Striker characters by 1.2x and the RCV of Shooter characters by 1.2x",
@@ -11221,7 +11230,7 @@ window.details = {
         specialName: "Yasakani no Magatama",
         special: [
             {
-                "description": "For Shooter and Slasher characters,randomizes all non-matching orbs. Deals 10 hits of small random typeless damage to random enemies.",
+                "description": "For Shooter and Slasher characters, randomizes all non-matching orbs. Deals 10 hits of small random typeless damage to random enemies.",
                 "cooldown": [ 6, 3 ],
             },
             {
@@ -11885,6 +11894,7 @@ window.details = {
         special: "Deals 50x character's ATK in [STR] damage to all enemies. Changes orbs for [STR] characters into [STR] orbs. Boosts the Color Affinity of [STR] characters by 1.75x for 1 turn",
         specialNotes: "#{colorAffinity : 1.75}",
         specialName: "Great Eruption",
+        limit: "Not Translated",
     },
     1299: {//Halloween Rebecca
         captain: "Boosts ATK and RCV of [INT] characters by 1.2x",
@@ -12224,7 +12234,7 @@ window.details = {
     },
     1329: {//Wicca
         captain: "Reduces cooldown of Fighter and Free Spirit specials by 1 turn at the start of the fight. Gives chance of duplicating a drop upon completion of the island.",
-        captainNotes: "Does not work if she was not your captain upon starting the island. Stacks with other addional drop captains, giving you two chances of getting an extra drop.",
+        captainNotes: "Does not work if she was not your captain upon starting the island. Stacks with other additional drop captains, giving you two chances of getting an extra drop.",
         special: [
             {
                 "description": "Deals 6 fixed damage to all enemies. Randomizes orbs of upper row characters",
@@ -12503,6 +12513,7 @@ window.details = {
         specialNotes: "#{orb : 2x}",
         sailor: "Boosts base HP of [PSY] characters by 100",
         specialName: "Franky Fireball",
+        limit: "Not Translated",
     },
     1365: {//Timeskip Nami
         captain: "Boosts ATK and RCV of Cerebral characters by 1.5x",
@@ -12591,6 +12602,7 @@ window.details = {
         sailor: "Makes [STR] orbs \"beneficial\" for this unit",
         sailorNotes: "#{beneficial}",
         specialName: "Kakuho: Elf",
+        limit: "Not Translated",
     },
     1371: {//Wild Zoro
         captain: "Boosts ATK of Slasher and Powerhouse characters by 2x at the start of the chain, by 2.25x after the 2nd Perfect in a row and by 2.5x after the 4th Perfect in a row.",
@@ -12647,6 +12659,7 @@ window.details = {
         special: "Deals 20x character's ATK in [QCK] damage to one enemy, Boosts Dellinger's ATK by 1.5x for 1 turn, amplifies the effect of Dellinger's orb by 1.5x for 1 turn and changes own orb to [QCK].",
         specialNotes: "Boosted ATK and Orb Effectiveness only works for the Dellinger who uses his Special.",
         specialName: "Deadly Fangs of Rage",
+        limit: "Not Translated",
     },
     1377: {//Marguerite
         captain: "Boosts ATK and RCV of Slasher and Shooter characters by 1.3x",
@@ -12860,14 +12873,14 @@ window.details = {
         ]
     },
     1390: {//Buggy Legend
-        captain: "Boosts ATK of characters with cost 40 or less by 1.5x and boosts the HP and ATK of characters with cost 41 or greater by 0.5x. Guarantees duplicating a drop upon completion of the island.",
-        captainNotes: "Does not work if he was not your captain upon starting the island. Stacks with other addional drop captains, giving you two chances of getting an extra drop.",
+        captain: "Boosts ATK of characters with a cost of 40 or less by 1.5x and boosts the HP and ATK of characters with a cost of 41 or greater by 0.5x. Guarantees duplicating a drop upon completion of the island.",
+        captainNotes: "Does not work if he was not your captain upon starting the island. Stacks with other additional drop captains, giving you two chances of getting an extra drop.",
         special: "Randomizes all orbs. Boosts ATK of characters with cost 40 or less by 1.75x for 2 turns",
         specialName: "Chop-Chop Clown Car",
     },
     1391: {//Buggy Legend
-        captain: "Boosts ATK of characters with cost 40 or less by 1.5x and reduces the HP and ATK of characters with cost 41 and greater by 0.5x. Guarantees duplicating a drop upon completion of the island.",
-        captainNotes: "Does not work if he was not your captain upon starting the island. Stacks with other addional drop captains, giving you two chances of getting an extra drop.",
+        captain: "Boosts ATK of characters with a cost of 40 or less by 1.5x and reduces the HP and ATK of characters with a cost of 41 and greater by 0.5x. Guarantees duplicating a drop upon completion of the island.",
+        captainNotes: "Does not work if he was not your captain upon starting the island. Stacks with other additional drop captains, giving you two chances of getting an extra drop.",
         special: "Randomizes all orbs. Boosts ATK of characters with cost 40 or less by 1.75x for 2 turns",
         specialName: "Chop-Chop Clown Car",
     },
@@ -13062,6 +13075,7 @@ window.details = {
         special: "Reduces Despair duration by 3 turns and boosts ATK of [DEX] and [PSY] characters by 2x for 1 turn",
         specialName: "Mil Fleur: Gigantesco Mano Stomp",
         sailor: "Reduces Blindness duration by 3 turns",
+        limit: "Not Translated",
     },
     1409: {//Timeskip Brook
         captain: "Protects from defeat as long as HP is above 50%",
@@ -13132,6 +13146,7 @@ window.details = {
         specialNotes: "This does not affect threshold damage reduction. Damage Reduction is the rainbow shield buff enemies have and Increased Defense is the blue shield buff enemies have",
         specialName: "Carving Hoof Palm: Coconut",
         sailor: "If this character has a [STR] orb and you hit a Perfect with him, keep his [STR] orb for the next turn",
+        limit: "Not Translated",
     },
     1413: {//6+ Whitebeard
         captain: "Boosts ATK of all characters by 3x if HP is below 30% at the start of the turn, 1.75x otherwise and boosts the HP of all characters by 1.2x",
@@ -13328,7 +13343,7 @@ window.details = {
     },
     1428: {//Jean Ango
         captain: "Boosts amount of Beli received by 1.5x and gives chance of duplicating a drop upon completion of the island",
-        captainNotes: "Does not work if he was not your captain upon starting the island. Stacks with other addional drop captains, giving you two chances of getting an extra drop.",
+        captainNotes: "Does not work if he was not your captain upon starting the island. Stacks with other additional drop captains, giving you two chances of getting an extra drop.",
         special: "If the enemy is delayed at the time the special is activated, reduces Special Cooldown of all characters by 1 turn and boosts own attack by 1.75x for 1 turn",
         specialName: "Looting the Losers",
     },
@@ -15253,6 +15268,7 @@ window.details = {
         captain: "Boosts ATK of [INT] characters by 2.5x, reduces damage received by 10%",
         special: "Deals 35x character's ATK in [INT] damage to all enemies. Changes [TND] and [RCV] orbs on Shooter and Free Spirit characters into Matching Orbs.",
         specialName: "Franky's Rocket Launcher",
+        limit: "Not Translated",
     },
     1551: {//5+ Brook
         captain: "Boosts ATK of Free Spirit characters by 2.5x and recovers 430 HP at end of each turn",
@@ -15867,6 +15883,7 @@ window.details = {
     },
     1593: {//Gear 4 Luffy
         captain: "Boosts ATK of Fighter characters by 2.5x. If you use \"King Kong Gun\" THIS LUFFY boosts ATK of Fighter characters by 4x instead for 3 turns and reduces damage taken by 56% for 3 turns.",
+        captainNotes: "Using Luffy's special will change his own captain boost to 4x. If both Luffy's specials are used, the total ATK boost will be 16x",
         special: [
             {
                 "description": "Deals 100x character's ATK in typeless damage to one enemy and makes [STR], [DEX], [PSY], [INT], [TND] and [RCV] orbs \"beneficial\" for Fighter characters for 1 turn.  After 3 turns, Binds and Despairs himself for 7 turns.",
@@ -16070,6 +16087,7 @@ window.details = {
         special: "For [STR], [INT] and [DEX] characters, randomizes all non-matching orbs and boosts ATK of [STR], [INT], [DEX] characters by 1.75x for 2 turns",
         specialName: "Shadow Asgard: \"Baptism\" from the Royal Shichibukai",
         sailor: "When any other character uses a special, reduces own cooldown by 1 turn",
+        limit: "Not Translated",
     },
     1619: {//6+ Raybae/Rayleigh
         captain: "Boosts chain multiplier by 4x and boosts HP and RCV of all characters by 1.2x",
@@ -16565,6 +16583,7 @@ window.details = {
         special: "Boosts ATK of QCK characters by 2x for 1 turn",
         sailor: "Boosts base ATK and RCV of [QCK] characters by 75",
         specialName: "Electric Fist",
+        limit: "Not Translated",
     },
     1657: {//Kanjuro
         captain: "Boosts ATK of Striker and Free Spirit characters by 2x",
@@ -16971,6 +16990,7 @@ window.details = {
         special: "Reduces crew's current HP by 50%, deals 50000 Fixed damage to one enemy, boosts own ATK by 1.75x for 1 turn, amplifies the effect of own orb by 1.75x for 1 turn and changes own orb to [PSY].",
         specialNotes: "Boosted ATK and Orb Effectiveness only works for the character who uses their own Special.",
         specialName: "King's Lightning Burial",
+        limit: "Not Translated",
     },
     1695: {//Vergo
         captain: "Boosts ATK of Striker characters by 2x",
@@ -17359,6 +17379,7 @@ window.details = {
         captainNotes: "At 1 HP, the rate of [PSY] orbs is ???% and at full HP, the rate of [PSY] orbs is ???%",
         special: "Reduces the defense of all enemies by 100% for 1 turn, deals 75x character's ATK in typeless damage to one enemy and changes all orbs to [PSY] orbs",
         specialName: "One-Armed Man that Splits the Heavens",
+        limit: "Not Translated",
     },
     1708: {//Summer Nami
         captain: "Recovers 3x character's RCV in HP at the end of each turn",
@@ -18824,12 +18845,12 @@ window.details = {
         specialName: "To Become Stronger. Santoryu Ogi: Sanzen Sekai",
     },
     1805: {//Buggy
-        captain: "Boosts ATK of characters with cost 30 or less by 1.5x and their HP by 1.2x",
+        captain: "Boosts ATK of characters with a cost of 30 or less by 1.5x and their HP by 1.2x",
         special: "Reduces the defense of all enemies by 100% for 1 turn, reduces damage received from STR enemies by 80% for 1 turn, Amplifies the effect of orbs by 1.5x for 1 turn",
         specialName: "Deceiving the World with the Most Evil Show",
     },
     1806: {//Buggy
-        captain: "Boosts ATK of characters with cost 30 or less by 2.25x and their HP by 1.2x",
+        captain: "Boosts ATK of characters with a cost of 30 or less by 2.25x and their HP by 1.2x",
         special: "Reduces the defense of all enemies by 100% for 1 turn, reduces damage received from STR enemies by 80% for 1 turn, Amplifies the effect of orbs by 1.5x for 1 turn",
         specialName: "Deceiving the World with the Most Evil Show",
     },
@@ -21395,7 +21416,7 @@ window.details = {
         specialName: "Maelstrom at Sea",
     },
     1925: {//Coby
-        captain: "Not Translated",
+        captain: "Boosts ATK of Driven characters by 2.5x",
         special: "Reduces Bind duration for one character completely, locks all orbs for 1 turn and boosts ATK of Driven characters by 1.75x for 3 turns",
         specialName: "Unshameful Fist of Justice",
     },
@@ -21507,20 +21528,20 @@ window.details = {
                 "Name": "Critical Hit",
                 "description": [
                     "Level 1: If you hit a perfect with this character, there is a 10% chance to deal 3% of this character's attack in extra damage",
-                    "Level 2: If you hit a perfect with this character, there is a ??% chance to deal ?% of this character's attack in extra damage",
-                    "Level 3: If you hit a perfect with this character, there is a ??% chance to deal ?% of this character's attack in extra damage",
-                    "Level 4: If you hit a perfect with this character, there is a ??% chance to deal ?% of this character's attack in extra damage",
-                    "Level 5: If you hit a perfect with this character, there is a ??% chance to deal ?% of this character's attack in extra damage"
+                    "Level 2: If you hit a perfect with this character, there is a 20% chance to deal 5% of this character's attack in extra damage",
+                    "Level 3: If you hit a perfect with this character, there is a 30% chance to deal 5% of this character's attack in extra damage",
+                    "Level 4: If you hit a perfect with this character, there is a 40% chance to deal 5% of this character's attack in extra damage",
+                    "Level 5: If you hit a perfect with this character, there is a 50% chance to deal 7% of this character's attack in extra damage"
                 ]
             },
             {
                 "Name": "Enrage",
                 "description": [
-                    "Level 1: Boosts base ATK by 50",
-                    "Level 2: Boosts base ATK by ??",
-                    "Level 3: Boosts base ATK by ??",
-                    "Level 4: Boosts base ATK by ??",
-                    "Level 5: Boosts base ATK by ??"
+                    "Level 1: Boosts base ATK by 75",
+                    "Level 2: Boosts base ATK by 100",
+                    "Level 3: Boosts base ATK by 200",
+                    "Level 4: Boosts base ATK by 250",
+                    "Level 5: Boosts base ATK by 300"
                 ]
             },
         ],
@@ -22637,7 +22658,7 @@ window.details = {
         sailor: {
             "character1": "Makes [QCK] orbs \"beneficial\" for Free Spirit characters",
             "character2": "Makes [STR] orbs \"beneficial\" for Free Spirit characters",
-            "combined": "None"
+            "combined": "Boosts base ATK, HP and RCV of Free Spirit characters by 150"
         },
         sailorNotes: "#{beneficial}",
     },
@@ -22653,10 +22674,74 @@ window.details = {
         sailor: {
             "character1": "Makes [QCK] orbs \"beneficial\" for Free Spirit characters",
             "character2": "Makes [STR] orbs \"beneficial\" for Free Spirit characters",
-            "combined": "None"
+            "combined": "Boosts base ATK, HP and RCV of Free Spirit characters by 150",
+            "level1": "Makes [TND] and [RCV] orbs \"beneficial\" for Free Spirit characters"
         },
         sailorNotes: "#{beneficial}",
-        limit: "This character has a Limit Break Tree"
+        limit: [
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Acquire Potential 1: [STR] Damage Reduction" },
+            { "description": "Boosts base HP by 20" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base ATK by 25" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base HP by 25" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base HP by 45" },
+            { "description": "Acquire Potential 2: [DEX] Damage Reduction" },
+            { "description": "Boosts base HP by 45" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base HP by 20" },
+            { "description": "Boosts base ATK by 35" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base HP by 65" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base HP by 65" },
+            { "description": "Acquire Sailor Ability: Makes [TND] and [RCV] orbs \"beneficial\" for Free Spirit characters" },
+            { "description": "Boosts base HP by 85" },
+            { "description": "Boosts base ATK by 40" },
+            { "description": "Acquire Potential 3: Pinch Healing" },
+        ],
+        potential: [
+            {
+                "Name": "[STR] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [STR] characters by 1%",
+                    "Level 2: Reduce damage taken from [STR] characters by 2%",
+                    "Level 3: Reduce damage taken from [STR] characters by 3%",
+                    "Level 4: Reduce damage taken from [STR] characters by 5%",
+                    "Level 5: Reduce damage taken from [STR] characters by 7%"
+                ]
+            },
+            {
+                "Name": "[DEX] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [DEX] characters by 1%",
+                    "Level 2: Reduce damage taken from [DEX] characters by 2%",
+                    "Level 3: Reduce damage taken from [DEX] characters by 3%",
+                    "Level 4: Reduce damage taken from [DEX] characters by 5%",
+                    "Level 5: Reduce damage taken from [DEX] characters by 7%"
+                ]
+            },
+            {
+                "Name": "Pinch Healing",
+                "description": [
+                    "Level 1: If HP is below 10% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character",
+                    "Level 2: If HP is below 15% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character",
+                    "Level 3: If HP is below 20% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character",
+                    "Level 4: If HP is below 30% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
+                    "Level 5: If HP is below 50% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a Perfect with this character"
+                ]
+            },
+        ],
     },
     1986: {//Marco
         captain: "Boosts ATK of Fighter characters by 2.25x and their RCV by 1.2x. Recovers 2x character's RCV in HP at the end of each turn.",
@@ -22951,7 +23036,7 @@ window.details = {
         sailor: {
             "character1": "Boosts base ATK of [PSY] characters by 30",
             "character2": "Boosts base ATK of [DEX] characters by 30",
-            "combined": "Boosts base HP, ATK and RCV of [DEX] and [PSY] characters by 50",
+            "combined": "Boosts base ATK, HP and RCV of [DEX] and [PSY] characters by 50",
             "level1": "Makes [TND] orbs \"beneficial\" for [DEX] and [PSY] characters",
         },
         sailorNotes: "#{beneficial}",
@@ -23254,7 +23339,7 @@ window.details = {
         specialName: "A Small Dine and Dash",
         sailor: {
             "base": "Reduces Silence duration on this character by 3 turns",
-            "level1": "Makes [RCV] orbs \"beneficial\" for all? characters",
+            "level1": "Makes [RCV] orbs \"beneficial\" for all characters",
         },
         sailorNotes: "#{silence}<br>#{beneficial}",
         limit: [
@@ -23271,7 +23356,7 @@ window.details = {
             { "description": "Boosts base HP by 80" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base ATK by 50" },
-            { "description": "Acquire Sailor Ability: Makes [RCV] orbs \"beneficial\" for all? characters" },
+            { "description": "Acquire Sailor Ability: Makes [RCV] orbs \"beneficial\" for all characters" },
             { "description": "Acquire Potential 2: Pinch Healing" },
         ],
         potential: [
@@ -23362,17 +23447,17 @@ window.details = {
         specialName: "Half Moon Glaive [Neo]",
     },
     2018: {//FN Shanks
-        captain: "Not Yet Translated",
+        captain: "Boosts ATK of Free Spirit characters by 1.75x",
         special: "Reduces Bind and Despair duration by 2 turns, if the captain is a Free Spirit Character changes [BLOCK] orbs into matching orbs",
-        specialName: "Entrusting Treasure",
+        specialName: "Treasured Trust",
     },
     2019: {//FN Shanks
         captain: "Boosts ATK of Free Spirit characters by 2x and their HP by 1.2x at the start of the chain, by 2.6x after the 3rd Perfect in a row",
         special: "Reduces Bind and Despair duration by 2 turns. If your Captain is a Free Spirit character, changes [BLOCK] orbs into Matching orbs",
-        specialName: "Entrusting Treasure",
+        specialName: "Treasure Trust",
     },
     2020: {//Makino
-        captain: "Not Yet Translated",
+        captain: "Boosts ATK of [PSY] and [INT] characters by 1.5x",
         special: "Changes the orbs in the top row into [INT] orbs, changes the orbs in the middle row into [RCV] orbs, changes the orbs in the bottom row into [PSY] orbs and amplifies the effect of orbs by 1.5x for 1 turn",
         specialName: "Taste of \"Treasure Payment\"",
     },
@@ -23383,58 +23468,341 @@ window.details = {
     },
     2022: {//Akainu V2
         captain: "Boosts ATK of [STR] and [INT] characters by 3.25x and makes [STR] and [INT] orbs \"beneficial\" to [STR] and [INT] characters. Deals up to 500x character's ATK in Typeless damage to one enemy at the end of each turn depending on how many Perfects scored that turn.",
-        captainNotes: "End of turn damage is based on how many Perfects you hit this turn: 0 Perfects - 0x ATK; 1 Perfect - 5x ATK; 2 Perfects - 13x ATK; 3 Perfects - 32x ATK; 4 Perfects - 80x ATK; 5 Perfects - 200x ATK; 6 Perfects - 500x ATK",
+        captainNotes: "End of turn damage is based on how many Perfects you hit this turn: 0 Perfects - 0x ATK; 1 Perfect - 5x ATK; 2 Perfects - 13x ATK; 3 Perfects - 32x ATK; 4 Perfects - 80x ATK; 5 Perfects - 200x ATK; 6 Perfects - 500x ATK<br>#{beneficial}",
         special: "Randomizes all orbs, including [BLOCK] orbs, into either [STR] or [INT] orbs and amplifies the effect of orbs on [STR] and [INT] characters by 2.25x for 1 turn",
         specialName: "The Natural Disaster's Final Attack: Scorched Earth",
     },
     2023: {//Akainu V2
         captain: "Boosts ATK of [STR] and [INT] characters by 3.25x and makes [STR] and [INT] orbs \"beneficial\" to [STR] and [INT] characters. Deals up to 500x character's ATK in Typeless damage to one enemy at the end of each turn depending on how many Perfects scored that turn.",
-        captainNotes: "End of turn damage is based on how many Perfects you hit this turn: 0 Perfects - 0x ATK; 1 Perfect - 5x ATK; 2 Perfects - 13x ATK; 3 Perfects - 32x ATK; 4 Perfects - 80x ATK; 5 Perfects - 200x ATK; 6 Perfects - 500x ATK",
+        captainNotes: "End of turn damage is based on how many Perfects you hit this turn: 0 Perfects - 0x ATK; 1 Perfect - 5x ATK; 2 Perfects - 13x ATK; 3 Perfects - 32x ATK; 4 Perfects - 80x ATK; 5 Perfects - 200x ATK; 6 Perfects - 500x ATK<br>#{beneficial}",
         special: "Randomizes all orbs, including [BLOCK] orbs, into either [STR] or [INT] orbs and amplifies the effect of orbs on [STR] and [INT] characters by 2.25x for 1 turn",
         specialName: "The Natural Disaster's Final Attack: Scorched Earth",
+        sailor: {
+            "base": "None",
+            "level1": "Boosts base ATK and HP of [STR] and [INT] characters by 100",
+            "level2": "Makes [PSY] and [QCK] orbs \"beneficial\" for all characters",
+        },
+        sailorNotes: "#{beneficial}",
+        limit: [
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Acquire Potential 1: [PSY] Damage Reduction" },
+            { "description": "Boosts base ATK by 15" },
+            { "description": "Boosts base ATK by 15" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK and HP of [STR] and [INT] characters by 100" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base HP by 35" },
+            { "description": "Boosts base HP by 35" },
+            { "description": "Acquire Potential 2: Slot Bind Self-reduction" },
+            { "description": "Boosts base HP by 45" },
+            { "description": "Boosts base HP by 45" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base HP by 55" },
+            { "description": "Boosts base HP by 55" },
+            { "description": "Boosts base RCV by 15" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base HP by 70" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base RCV by 25" },
+            { "description": "Acquire Sailor Ability 2: Makes [PSY] and [QCK] orbs \"beneficial\" for all characters" },
+            { "description": "Boosts base HP by 80" },
+            { "description": "Boosts base ATK by 40" },
+            { "description": "Acquire Potential 3: Barrier Penetration" },
+        ],
+        potential: [
+            {
+                "Name": "[PSY] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [PSY] characters by 1%",
+                    "Level 2: Reduce damage taken from [PSY] characters by 2%",
+                    "Level 3: Reduce damage taken from [PSY] characters by 3%",
+                    "Level 4: Reduce damage taken from [PSY] characters by 5%",
+                    "Level 5: Reduce damage taken from [PSY] characters by 7%"
+                ]
+            },
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [
+                    "Level 1: Reduces Slot Bind duration by 1 turn on this character",
+                    "Level 2: Reduces Slot Bind duration by 3 turns on this character",
+                    "Level 3: Reduces Slot Bind duration by 5 turns on this character",
+                    "Level 4: Reduces Slot Bind duration by 7 turns on this character",
+                    "Level 5: Reduces Slot Bind duration by 10 turns on this character"
+                ]
+            },
+            {
+                "Name": "Barrier Penetration",
+                "description": [
+                    "Level 1: This character's attack will ignore barriers if HP is above 99%",
+                    "Level 2: This character's attack will ignore barriers if HP is above 90%",
+                    "Level 3: This character's attack will ignore barriers if HP is above 70%",
+                    "Level 4: This character's attack will ignore barriers if HP is above 50%",
+                    "Level 5: This character's attack will ignore barriers"
+                ]
+            },
+        ]
     },
     2024: {//Aokiji V2
         captain: "Boosts ATK of [QCK] and [PSY] characters by 3.25x and their HP by 1.35x at the start of the chain and makes [QCK] and [PSY] orbs \"beneficial\" to [QCK] and [PSY] characters. Boosts ATK of [QCK] and [PSY] characters by 4.0625x following a chain of [PSY] > [PSY] > [QCK] attacks no lower than Good",
+        captainNotes: "#{beneficial}",
         special: "Randomly changes all orbs, including [BLOCK] orbs, into either [QCK] or [PSY] orbs and boosts ATK of [QCK] and [PSY] characters by 2.25x for 1 turn",
         specialName: "The Natural Disaster's Final Attack: Frozen Sea",
     },
     2025: {//Aokiji V2
         captain: "Boosts ATK of [QCK] and [PSY] characters by 3.25x and their HP by 1.35x at the start of the chain and makes [QCK] and [PSY] orbs \"beneficial\" to [QCK] and [PSY] characters. Boosts ATK of [QCK] and [PSY] characters by 4.0625x following a chain of [PSY] > [PSY] > [QCK] attacks no lower than Good",
+        captainNotes: "#{beneficial}",
         special: "Randomly changes all orbs, including [BLOCK] orbs, into either [QCK] or [PSY] orbs and boosts ATK of [QCK] and [PSY] characters by 2.25x for 1 turn",
         specialName: "The Natural Disaster's Final Attack: Frozen Sea",
+        sailor: {
+            "base": "None",
+            "level1": "Boosts base HP and ATK of [QCK] and [PSY] characters by 100",
+            "level2": "Makes [STR] and [INT] orbs \"beneficial\" for all characters",
+        },
+        sailorNotes: "#{beneficial}",
+        limit: [
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Acquire Potential 1: [INT] Damage Reduction" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base RCV by 15" },
+            { "description": "Acquire Sailor Ability 1: Boosts base HP and ATK of [QCK] and [PSY] characters by 100" },
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base ATK by 15" },
+            { "description": "Boosts base ATK by 15" },
+            { "description": "Acquire Potential 2: Slot Bind Self-reduction" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base HP by 70" },
+            { "description": "Boosts base HP by 70" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base RCV by 15" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base ATK by 25" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base RCV by 30" },
+            { "description": "Acquire Sailor Ability 2: Makes [STR] and [INT] orbs \"beneficial\" for all characters" },
+            { "description": "Boosts base ATK by 35" },
+            { "description": "Boosts base HP by 100" },
+            { "description": "Acquire Potential 3: Barrier Penetration" },
+        ],
+        potential: [
+            {
+                "Name": "[INT] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [INT] characters by 1%",
+                    "Level 2: Reduce damage taken from [INT] characters by 2%",
+                    "Level 3: Reduce damage taken from [INT] characters by 3%",
+                    "Level 4: Reduce damage taken from [INT] characters by 5%",
+                    "Level 5: Reduce damage taken from [INT] characters by 7%"
+                ]
+            },
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [
+                    "Level 1: Reduces Slot Bind duration by 1 turn on this character",
+                    "Level 2: Reduces Slot Bind duration by 3 turns on this character",
+                    "Level 3: Reduces Slot Bind duration by 5 turns on this character",
+                    "Level 4: Reduces Slot Bind duration by 7 turns on this character",
+                    "Level 5: Reduces Slot Bind duration by 10 turns on this character"
+                ]
+            },
+            {
+                "Name": "Barrier Penetration",
+                "description": [
+                    "Level 1: This character's attack will ignore barriers if HP is above 99%",
+                    "Level 2: This character's attack will ignore barriers if HP is above 90%",
+                    "Level 3: This character's attack will ignore barriers if HP is above 70%",
+                    "Level 4: This character's attack will ignore barriers if HP is above 50%",
+                    "Level 5: This character's attack will ignore barriers"
+                ]
+            },
+        ]
     },
     2026: {//Hina
-        captain: "Not Translated",
+        captain: "Boosts ATK of [QCK] and [PSY] characters by 2x",
         special: "Delays all enemies for 1 turn. If your Captain is a [QCK] or [PSY] character, boosts the Color Affinity of [QCK] and [PSY] by 2x for 1 turn",
+        specialNotes: "#{colorAffinity : 2}",
         specialName: "Kimino Sleeve Cage: Lock",
+        sailor: "Boosts base ATK of [PSY] and [QCK] characters by 50",
     },
     2027: {//Hina
         captain: "Boosts ATK of [QCK] and [PSY] characters by 2.25x and their RCV by 1.2x",
         special: "Delays all enemies for 1 turn. If your Captain is a [QCK] or [PSY] character, boosts the Color Affinity of [QCK] and [PSY] by 2x for 1 turn",
+        specialNotes: "#{colorAffinity : 2}",
         specialName: "Kimino Sleeve Cage: Lock",
+        sailor: {
+            "base": "Boosts base ATK of [PSY] and [QCK] characters by 50",
+            "level1": "If this character has a [PSY] orb and you hit a Perfect with her, keep her [PSY] orb for the next turn",
+        },
+        limit: [
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base RCV by 30" },
+            { "description": "Acquire Potential 1: [INT] Damage Reduction" },
+            { "description": "Boosts base HP by 20" },
+            { "description": "Boosts base HP by 25" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Acquire Sailor Ability: If this character has a [PSY] orb and you hit a Perfect with her, keep her [PSY] orb for the next turn" },
+            { "description": "Boosts base HP by 45" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Boosts base ATK by 25" },
+            { "description": "Boosts base ATK by 35" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base ATK by 50" },
+            { "description": "Acquire Potential 2: Reduce No Healing duration" },
+        ],
+        potential: [
+            {
+                "Name": "[INT] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [INT] characters by 1%",
+                    "Level 2: Reduce damage taken from [INT] characters by 2%",
+                    "Level 3: Reduce damage taken from [INT] characters by 3%",
+                    "Level 4: Reduce damage taken from [INT] characters by 4%",
+                    "Level 5: Reduce damage taken from [INT] characters by 5%"
+                ]
+            },
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by 1 turn",
+                    "Level 2: Reduces No Healing duration by 2 turn",
+                    "Level 3: Reduces No Healing duration by 3 turns",
+                    "Level 4: Reduces No Healing duration by 5 turns",
+                    "Level 5: Reduces No Healing duration by 7 turns"
+                ]
+            },
+        ]
     },
     2028: {//Sengoku
-        captain: "Not Translated",
+        captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, Boosts ATK of [QCK] and [PSY] characters by 2x",
         special: "Reduces Despair and ATK DOWN duration by 4 turns. If your crew has 4 or more [QCK] or [PSY] characters, amplifies the effect of orbs by 2x for 1 turn and makes [RCV] and [TND] orb \"beneficial\" for all characters for 1 turn",
+        specialNotes: "#{beneficial}",
         specialName: "Instant Suppression",
+        sailor: "Makes [DEX] orbs \"beneficial\" for this character",
+        sailorNotes: "#{beneficial}",
     },
     2029: {//Sengoku
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, Boosts ATK of [QCK] and [PSY] characters by 2.5x and their HP by 1.2x",
         special: "Reduces Despair and ATK DOWN duration by 4 turns. If your crew has 4 or more [QCK] or [PSY] characters, amplifies the effect of orbs by 2x for 1 turn and makes [RCV] and [TND] orb \"beneficial\" for all characters for 1 turn",
+        specialNotes: "#{beneficial}",
         specialName: "Instant Suppression",
+        sailor: {
+            "base": "Makes [DEX] orbs \"beneficial\" for this character",
+            "level1": "Makes [QCK] orbs \"beneficial\" for [PSY] characters",
+        },
+        sailorNotes: "#{beneficial}",
+        limit: [
+            { "description": "Boosts base RCV by 15" },
+            { "description": "Boosts base HP by 20" },
+            { "description": "Boosts base HP by 20" },
+            { "description": "Acquire Potential 1: Critical Hit" },
+            { "description": "Boosts base RCV by 15" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base ATK by 40" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Acquire Sailor Ability: Makes [QCK] orbs \"beneficial\" for [PSY] characters" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base ATK by 50" },
+            { "description": "Boosts base ATK by 60" },
+            { "description": "Acquire Potential 2: Slot Bind Self-reduction" },
+        ],
+        potential: [
+            {
+                "Name": "Critical Hit",
+                "description": [
+                    "Level 1: If you hit a perfect with this character, there is a 20% chance to deal 3% of this character's attack in extra damage",
+                    "Level 2: If you hit a perfect with this character, there is a 25% chance to deal 4% of this character's attack in extra damage",
+                    "Level 3: If you hit a perfect with this character, there is a 30% chance to deal 5% of this character's attack in extra damage",
+                    "Level 4: If you hit a perfect with this character, there is a 35% chance to deal 6% of this character's attack in extra damage",
+                    "Level 5: If you hit a perfect with this character, there is a 40% chance to deal 7% of this character's attack in extra damage"
+                ]
+            },
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [
+                    "Level 1: Reduces Slot Bind duration by 1 turn on this character",
+                    "Level 2: Reduces Slot Bind duration by 2 turns on this character",
+                    "Level 3: Reduces Slot Bind duration by 3 turns on this character",
+                    "Level 4: Reduces Slot Bind duration by 5 turns on this character",
+                    "Level 5: Reduces Slot Bind duration by 7 turns on this character"
+                ]
+            },
+        ]
     },
     2030: {//Brannew
-        captain: "Not Translated",
+        captain: "Boosts ATK of [STR] and [INT] characters by 2x",
         special: "Reduces enemy's Threshold Damage Reduction and Percent Damage Reduction duration by 4 turns and makes [QCK], [PSY], [RCV] and [TND] orbs \"beneficial\" to [STR] and [INT] characters for 3 turns",
-        specialName: "Reporting on a Bizzare Incident",
+        specialNotes: "#{beneficial}",
+        specialName: "Reporting on a Bizarre Incident",
+        sailor: "Boosts base ATK, HP and RCV for [INT] characters by 50",
     },
     2031: {//Brannew
         captain: "Boosts ATK of [STR] and [INT] characters by 2.5x and reduces damage received by 7%",
         special: "Reduces enemy's Threshold Damage Reduction and Percent Damage Reduction duration by 4 turns and makes [QCK], [PSY], [RCV] and [TND] orbs \"beneficial\" to [STR] and [INT] characters for 3 turns",
-        specialName: "Reporting on a Bizzare Incident",
+        specialNotes: "#{beneficial}",
+        specialName: "Reporting on a Bizarre Incident",
+        sailor: {
+            "base": "Boosts base ATK, HP and RCV for [INT] characters by 50",
+            "level1": "Boosts base ATK of Slasher characters by 30",
+        },
+        limit: [
+            { "description": "Boosts base ATK by 25" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Acquire Potential 1: Enrage" },
+            { "description": "Boosts base ATK by 25" },
+            { "description": "Boosts base RCV by 15" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base RCV by 30" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base ATK by 40" },
+            { "description": "Acquire Sailor Ability: Boosts base ATK of Shooter characters by 30" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Acquire Potential 2: Critical Hit" },
+        ],
+        potential: [
+            {
+                "Name": "Enrage",
+                "description": [
+                    "Level 1: Boosts base ATK by 30",
+                    "Level 2: Boosts base ATK by 60",
+                    "Level 3: Boosts base ATK by 90",
+                    "Level 4: Boosts base ATK by 100",
+                    "Level 5: Boosts base ATK by 150"
+                ]
+            },
+            {
+                "Name": "Critical Hit",
+                "description": [
+                    "Level 1: If you hit a perfect with this character, there is a 30% chance to deal 4% of this character's attack in extra damage",
+                    "Level 2: If you hit a perfect with this character, there is a 40% chance to deal 5% of this character's attack in extra damage",
+                    "Level 3: If you hit a perfect with this character, there is a 50% chance to deal 6% of this character's attack in extra damage",
+                    "Level 4: If you hit a perfect with this character, there is a 60% chance to deal 7% of this character's attack in extra damage",
+                    "Level 5: If you hit a perfect with this character, there is a 70% chance to deal 8% of this character's attack in extra damage"
+                ]
+            },
+        ],
+        potentialNotes: "#{enrage}"
     },
     2032: {//Luffy Tankman
-        captain: "Not Translated",
+        captain: "Boosts ATK and HP of PSY characters by 0.5x",
         special: "Boosts ATK of all characters by 1.5x for 1 turn. If your Captain is a [PSY] character, amplifies the effect of orbs by 1.5x for 1 turn, adds .3x to Chain multiplier for 1 turn, adds 20x character's ATK as Additional Typeless Damage for 1 turn and reduces damage received by 40% for 1 turn.",
         specialName: "The Heavy Tank's Critical Breakthrough",
     },
@@ -23445,7 +23813,6 @@ window.details = {
     },
     2034: {//Kizaru 6+
         captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of all characters by 2x and boosts RCV of all characters by 1.35x. If you use \"Yasakani no Magatama: Divine Light\" boosts ATK of all characters by 3.5x instead.",
-        specialName: "Yasakani no Magatama: Divine Light",
         special: [
             {
                 "description": "For Shooter and Slasher characters, randomizes all non-matching orbs. Recovers 6x character's RCV in HP. Deals 20 hits of random typeless damage to random enemies.",
@@ -23457,29 +23824,30 @@ window.details = {
             },
         ],
         specialNotes: "#{randomHits : 20}<br>#{random : ??? : ??? : for each hit on Stage 1}<br>#{random : ??? : ??? : for each hit on Stage 2}<br>#{stages}",
+        specialName: "Yasakani no Magatama: Divine Light",
     },
     2035: {//Buggy 6+
         captain: "Boosts ATK of characters with cost 40 or less by 1.75x and reduces the HP and ATK of characters with cost 41 and greater by 0.5x. Guarantees duplicating a drop upon completion of the island.",
-        captainNotes: "Does not work if he was not your captain upon starting the island. Stacks with other addional drop captains, giving you two chances of getting an extra drop.",
+        captainNotes: "Does not work if he was not your captain upon starting the island. Stacks with other additional drop captains, giving you two chances of getting an extra drop.",
         special: "Boosts ATK of characters with cost 40 or less by 2x for 2 turns",
-        specialName: "The Greatest Villian's Bluff",
+        specialName: "The Greatest Villain's Bluff",
     },
     2036: {//Jesus Burgess
         captain: "Not Translated",
         special: "Cuts the current HP of each enemy by 20% and boosts ATK of Fighter characters by 1.75x for a variable amount of turns",
         specialNotes: "Fighter ATK buff duration is equal to the amount of enemies on the stage at the time the special was activated",
-        specialName: "The Greatest Villian's Bluff",
+        specialName: "Galleon Lariat",
     },
     2037: {//Jesus Burgess
         captain: "Boosts ATK of Fighter characters by 2.5x at the start of the chain, by 3.75x after scoring 4 Perfects in a row.",
         special: "Cuts the current HP of each enemy by 20% and boosts ATK of Fighter characters by 1.75x for a variable amount of turns",
         specialNotes: "Fighter ATK buff duration is equal to the amount of enemies on the stage at the time the special was activated",
-        sailor: {
+        /*sailor: {
             "base": "None",
             "level1": "Boosts base ATK of Fighter characters by 50",
-            "level1": "Makes [INT] orbs \"beneficial\" for Fighter characters",
-        },
-        specialName: "The Greatest Villian's Bluff",
+            "level2": "Makes [INT] orbs \"beneficial\" for Fighter characters",
+        },*/
+        specialName: "Galleon Lariat",
     },
     2200: {//Doflamingo Raid v2
         captain: "Boosts ATK of Driven and Cerebral characters by 2.5x when HP is 50% or below, 1.5x otherwise",
