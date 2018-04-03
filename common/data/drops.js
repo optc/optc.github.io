@@ -2435,12 +2435,12 @@ window.drops = {
 
         {
             name: 'Clash!? Luffy',
-            thumb: 2032,
+            thumb: 2033,
             showManual: true,
             nakama: null,
             gamewith: 97354,
             Ultimate: [ 2032, -2032 ],
-            Veteran: [ 2032, -2032 ]
+            Master: [ 2032, -2032 ]
         },
         
         {
