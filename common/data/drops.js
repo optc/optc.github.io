@@ -2433,9 +2433,9 @@ window.drops = {
         
         {
             name: 'Clash!! Tankman Luffy',
-            thumb: 2033,
-            Master: [ 2022 ],
-            Expert: [ 2022 ]
+            thumb: 2034,
+            Master: [ 2023 ],
+            Expert: [ 2023 ]
         },
         
         {
