@@ -3481,7 +3481,8 @@ window.details = {
         special: "Boosts ATK of STR characters by 1.5x for 1 turn, deals 15x character's ATK in STR damage to all enemies",
         specialName: "Manly Flaming Sword",
         captain: "Boosts ATK of STR characters by 2x, boosts damage of STR specials by 2x",
-        captainNotes: "#{noFixedPerc}"
+        captainNotes: "#{noFixedPerc}",
+        limit: "Not Translated",
     },
     456: {
         special: "Randomizes the orbs in the middle row into either [STR] or [DEX] orbs, the orbs in the lower row into either [PSY] or [INT] orbs, switches orbs between slots once",
@@ -3963,7 +3964,8 @@ window.details = {
         special: "Deals 35x character's ATK in PSY damage to all enemies, reduces the defense of all enemies by 100% for 2 turns",
         specialName: "Conqueror's Haki: Emperor",
         captain: "Boosts chances of getting [PSY] orbs, boosts ATK of PSY characters proportionally to the crew's current HP",
-        captainNotes: "#{captainProportional : higher : 2 + 0.75 * (remaining HP) / (total HP) : 2.75 : 2}"
+        captainNotes: "#{captainProportional : higher : 2 + 0.75 * (remaining HP) / (total HP) : 2.75 : 2}",
+        limit: "Not Translated",
     },
     531: {
         special: "Reduces damage received by 30% for 4 turns",
@@ -4814,7 +4816,8 @@ window.details = {
         special: "Recovers 100x character's RCV in HP, amplifies the effect of orbs by 1.5x for 2 turns",
         specialNotes: "#{orb : 1.5x}",
         specialName: "Blue Flame Kick",
-        captain: "Reduces damage received by 30% if HP is above 70% at the start of the turn, boosts ATK of QCK and PSY characters by 2.75x if HP is above 70% at the start the turn"
+        captain: "Reduces damage received by 30% if HP is above 70% at the start of the turn, boosts ATK of QCK and PSY characters by 2.75x if HP is above 70% at the start the turn",
+        limit: "Not Translated",
     },
     650: {
         special: "Deals 5,000 fixed damage to one enemy, amplifies the effect of orbs by 1.5x for 1 turn",
@@ -5531,7 +5534,8 @@ window.details = {
     739: {
         special: "Reduces Bind duration by 5 turns, randomizes all orbs",
         specialName: "Coup de Boo",
-        captain: "Boosts ATK of Free Spirit characters by 2x"
+        captain: "Boosts ATK of Free Spirit characters by 2x",
+        limit: "Not Translated",
     },
     740: {
         special: "Deals 10x character's ATK in QCK damage to all enemies, boosts ATK against enemies with increased defense by 1.3x for 2 turns",
@@ -6648,7 +6652,8 @@ window.details = {
     844: {
         captain: "Boosts ATK of Slasher, Striker and Shooter characters by 2x",
         specialName: "Arms-Morphosis: Missile Girl",
-        special: "Deals 15x character's ATK in STR damage to all enemies, boosts ATK of Shooter characters by 1.5x for 1 turn. If during that turn every unit scores a Perfect hit, boosts ATK of Shooter, Striker and Slasher characters by 1.5x in the following turn."
+        special: "Deals 15x character's ATK in STR damage to all enemies, boosts ATK of Shooter characters by 1.5x for 1 turn. If during that turn every unit scores a Perfect hit, boosts ATK of Shooter, Striker and Slasher characters by 1.5x in the following turn.",
+        limit: "Not Translated",
     },
     845: {
         captain: "Boosts ATK of all characters by 1.5x after the 11th hit in the chain, by 2.5x after the 22nd hit",
@@ -6871,7 +6876,8 @@ window.details = {
                 "cooldown": [ 19, 14 ]
             }
         ],
-        specialNotes: "#{orb: 1.5x or 1.75x} #{stages}"
+        specialNotes: "#{orb: 1.5x or 1.75x} #{stages}",
+        limit: "Not Translated",
     },
     875: {
         captain: "Boosts ATK of Cerebral and Driven characters by 2x",
@@ -7611,7 +7617,8 @@ window.details = {
     941: {
         captain: "Boosts ATK of [DEX] characters by 1.75x and their HP by 2.25x",
         specialName: "Sure Kill! Exploding Star!!",
-        special: "Deals 13x ATK as [DEX] damage to all enemies and boosts ATK of [DEX] characters by 1.75x for 1 turn"
+        special: "Deals 13x ATK as [DEX] damage to all enemies and boosts ATK of [DEX] characters by 1.75x for 1 turn",
+        limit: "Not Translated",
     },
     942: {
         captain: "Boosts ATK and HP of [STR] characters by 1.5x",
@@ -10231,6 +10238,7 @@ window.details = {
         captainNotes: "The two Boosts stack with each other so a PSY Driven or a PSY Cerebral Unit will be boosted by 2.625",
         special: "Deals large [PSY] damage to all enemies and if HP is above 50%, changes all orbs to [PSY] orbs",
         specialName: "Gold-Gold Fruit",
+        limit: "Not Translated",
     },
     1164: {//Carina
         captain: "Boosts RCV of all characters by 1.2x",
@@ -10850,7 +10858,8 @@ window.details = {
         specialNotes: "#{orb : 1.5x}",
         specialName: "Roar! Zarley Davison",
         captain: "Boosts ATK of STR characters by 2.25x, deals 2x character's ATK in STR damage to all enemies at the end of each turn",
-        sailor: "Boosts base ATK of Shooter characters by 20"
+        sailor: "Boosts base ATK of Shooter characters by 20",
+        limit: "Not Translated",
     },
     1213: {
         captain: "Boosts ATK of Slasher characters by 1.5x, the HP of Striker characters by 1.2x and the RCV of Shooter characters by 1.2x",
@@ -11885,6 +11894,7 @@ window.details = {
         special: "Deals 50x character's ATK in [STR] damage to all enemies. Changes orbs for [STR] characters into [STR] orbs. Boosts the Color Affinity of [STR] characters by 1.75x for 1 turn",
         specialNotes: "#{colorAffinity : 1.75}",
         specialName: "Great Eruption",
+        limit: "Not Translated",
     },
     1299: {//Halloween Rebecca
         captain: "Boosts ATK and RCV of [INT] characters by 1.2x",
@@ -12503,6 +12513,7 @@ window.details = {
         specialNotes: "#{orb : 2x}",
         sailor: "Boosts base HP of [PSY] characters by 100",
         specialName: "Franky Fireball",
+        limit: "Not Translated",
     },
     1365: {//Timeskip Nami
         captain: "Boosts ATK and RCV of Cerebral characters by 1.5x",
@@ -12591,6 +12602,7 @@ window.details = {
         sailor: "Makes [STR] orbs \"beneficial\" for this unit",
         sailorNotes: "#{beneficial}",
         specialName: "Kakuho: Elf",
+        limit: "Not Translated",
     },
     1371: {//Wild Zoro
         captain: "Boosts ATK of Slasher and Powerhouse characters by 2x at the start of the chain, by 2.25x after the 2nd Perfect in a row and by 2.5x after the 4th Perfect in a row.",
@@ -12647,6 +12659,7 @@ window.details = {
         special: "Deals 20x character's ATK in [QCK] damage to one enemy, Boosts Dellinger's ATK by 1.5x for 1 turn, amplifies the effect of Dellinger's orb by 1.5x for 1 turn and changes own orb to [QCK].",
         specialNotes: "Boosted ATK and Orb Effectiveness only works for the Dellinger who uses his Special.",
         specialName: "Deadly Fangs of Rage",
+        limit: "Not Translated",
     },
     1377: {//Marguerite
         captain: "Boosts ATK and RCV of Slasher and Shooter characters by 1.3x",
@@ -13062,6 +13075,7 @@ window.details = {
         special: "Reduces Despair duration by 3 turns and boosts ATK of [DEX] and [PSY] characters by 2x for 1 turn",
         specialName: "Mil Fleur: Gigantesco Mano Stomp",
         sailor: "Reduces Blindness duration by 3 turns",
+        limit: "Not Translated",
     },
     1409: {//Timeskip Brook
         captain: "Protects from defeat as long as HP is above 50%",
@@ -13132,6 +13146,7 @@ window.details = {
         specialNotes: "This does not affect threshold damage reduction. Damage Reduction is the rainbow shield buff enemies have and Increased Defense is the blue shield buff enemies have",
         specialName: "Carving Hoof Palm: Coconut",
         sailor: "If this character has a [STR] orb and you hit a Perfect with him, keep his [STR] orb for the next turn",
+        limit: "Not Translated",
     },
     1413: {//6+ Whitebeard
         captain: "Boosts ATK of all characters by 3x if HP is below 30% at the start of the turn, 1.75x otherwise and boosts the HP of all characters by 1.2x",
@@ -15253,6 +15268,7 @@ window.details = {
         captain: "Boosts ATK of [INT] characters by 2.5x, reduces damage received by 10%",
         special: "Deals 35x character's ATK in [INT] damage to all enemies. Changes [TND] and [RCV] orbs on Shooter and Free Spirit characters into Matching Orbs.",
         specialName: "Franky's Rocket Launcher",
+        limit: "Not Translated",
     },
     1551: {//5+ Brook
         captain: "Boosts ATK of Free Spirit characters by 2.5x and recovers 430 HP at end of each turn",
@@ -16071,6 +16087,7 @@ window.details = {
         special: "For [STR], [INT] and [DEX] characters, randomizes all non-matching orbs and boosts ATK of [STR], [INT], [DEX] characters by 1.75x for 2 turns",
         specialName: "Shadow Asgard: \"Baptism\" from the Royal Shichibukai",
         sailor: "When any other character uses a special, reduces own cooldown by 1 turn",
+        limit: "Not Translated",
     },
     1619: {//6+ Raybae/Rayleigh
         captain: "Boosts chain multiplier by 4x and boosts HP and RCV of all characters by 1.2x",
@@ -16566,6 +16583,7 @@ window.details = {
         special: "Boosts ATK of QCK characters by 2x for 1 turn",
         sailor: "Boosts base ATK and RCV of [QCK] characters by 75",
         specialName: "Electric Fist",
+        limit: "Not Translated",
     },
     1657: {//Kanjuro
         captain: "Boosts ATK of Striker and Free Spirit characters by 2x",
@@ -16972,6 +16990,7 @@ window.details = {
         special: "Reduces crew's current HP by 50%, deals 50000 Fixed damage to one enemy, boosts own ATK by 1.75x for 1 turn, amplifies the effect of own orb by 1.75x for 1 turn and changes own orb to [PSY].",
         specialNotes: "Boosted ATK and Orb Effectiveness only works for the character who uses their own Special.",
         specialName: "King's Lightning Burial",
+        limit: "Not Translated",
     },
     1695: {//Vergo
         captain: "Boosts ATK of Striker characters by 2x",
@@ -17360,6 +17379,7 @@ window.details = {
         captainNotes: "At 1 HP, the rate of [PSY] orbs is ???% and at full HP, the rate of [PSY] orbs is ???%",
         special: "Reduces the defense of all enemies by 100% for 1 turn, deals 75x character's ATK in typeless damage to one enemy and changes all orbs to [PSY] orbs",
         specialName: "One-Armed Man that Splits the Heavens",
+        limit: "Not Translated",
     },
     1708: {//Summer Nami
         captain: "Recovers 3x character's RCV in HP at the end of each turn",
@@ -21396,7 +21416,7 @@ window.details = {
         specialName: "Maelstrom at Sea",
     },
     1925: {//Coby
-        captain: "Not Translated",
+        captain: "Boosts ATK of Driven characters by 2.5x",
         special: "Reduces Bind duration for one character completely, locks all orbs for 1 turn and boosts ATK of Driven characters by 1.75x for 3 turns",
         specialName: "Unshameful Fist of Justice",
     },
