@@ -2033,7 +2033,7 @@ window.units = [
     [ "Monkey D. Luffy, Full Stomach", "PSY", [ "Fighter", "Powerhouse" ], 4, 30, 4, 1, 70, 1066998, 224, 159, 3, 2019, 799, 18, 1 ],
     [ "Monkey D. Luffy, Gear 4 - Tankman", "PSY", [ "Fighter", "Powerhouse" ], 5, 50, 6, 2, 99, 5000000, 1441, 741, 14, 3439, 1439, 39, 1 ],
     [ "Borsalino, Navy HQ Greatest Military Power", "PSY", [ "Slasher", "Shooter" ], "6+", 65, 7, 4, 99, 5000000, 1412, 782, 236, 2928, 1512, 508, 1 ],
-    [ "The Star Clown Buggy", "INT", [ "Driven", "Shooter" ], "6+", 40, 5, 4, 99, 5000000, 1281, 512, 225, 2710, 1201, 498, 1 ],
+    [ "The Star Clown Buggy", "INT", [ "Driven", "Shooter" ], "6+", 40, 4, 5, 99, 5000000, 1281, 512, 225, 2710, 1201, 498, 1 ],
     [ "Mr. Store", "INT", [ "Fighter", "Driven" ], 4, 25, null, null, 70, 1066998, null, null, null, null, null, null, null ],
     [ "Jesus Burgess, Blackbeard Pirates", "INT", [ "Fighter", "Driven" ], 5, 40, 4, null, 99, 4000000, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],

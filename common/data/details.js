@@ -23834,19 +23834,19 @@ window.details = {
     },
     2036: {//Jesus Burgess
         captain: "Not Translated",
-        special: "Cuts the current HP of each enemy by 20% and boosts ATK of Fighter characters by 1.75x for a variable amount of turns",
+        special: "Cuts the current HP of each enemy by 7% and boosts ATK of Fighter characters by 1.75x for a variable amount of turns",
         specialNotes: "Fighter ATK buff duration is equal to the amount of enemies on the stage at the time the special was activated",
         specialName: "Galleon Lariat",
     },
     2037: {//Jesus Burgess
         captain: "Boosts ATK of Fighter characters by 2.5x at the start of the chain, by 3.75x after scoring 4 Perfects in a row.",
-        special: "Cuts the current HP of each enemy by 20% and boosts ATK of Fighter characters by 1.75x for a variable amount of turns",
+        special: "Cuts the current HP of each enemy by 7% and boosts ATK of Fighter characters by 1.75x for a variable amount of turns",
         specialNotes: "Fighter ATK buff duration is equal to the amount of enemies on the stage at the time the special was activated",
-        /*sailor: {
+        sailor: {
             "base": "None",
             "level1": "Boosts base ATK of Fighter characters by 50",
             "level2": "Makes [INT] orbs \"beneficial\" for Fighter characters",
-        },*/
+        },
         specialName: "Galleon Lariat",
     },
     2200: {//Doflamingo Raid v2
