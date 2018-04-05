@@ -1953,6 +1953,14 @@ window.drops = {
             'All Difficulties': [ 2018, 2020, -1404, -1593, -1410, -1778, -1873, -1877, -1635 ]
         },
         
+        {
+            name: 'Red Hair Pirates!',
+            thumb: 2038,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 2038, 2039, 2040, -1869, -1406, -1824, -1875, -1904, -2040, -1225 ]
+        },
+        
     ],
 
             

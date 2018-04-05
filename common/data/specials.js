@@ -4597,7 +4597,7 @@ window.specials = {
         }
     },
     2028: {
-        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, window.specials[2028].multiplier, 2, [p.friendCaptain, p.captain]); },
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[2028].multiplier, [p.friendCaptain, p.captain]); },
         onActivation: function(p) {
             if (p.colorCount.QCK + p.colorCount.PSY >= 4) {
                 window.specials[2028].multiplier = 2;
@@ -4608,7 +4608,7 @@ window.specials = {
         }
     },
     2029: {
-        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, window.specials[2029].multiplier, 2, [p.friendCaptain, p.captain]); },
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[2029].multiplier, [p.friendCaptain, p.captain]); },
         onActivation: function(p) {
             if (p.colorCount.QCK + p.colorCount.PSY >= 4) {
                 window.specials[2029].multiplier = 2;
@@ -4671,6 +4671,21 @@ window.specials = {
     },
     2037: {
         atk: function(p) { return p.unit.class.has("Fighter") ? 1.75 : 1; },
+        type: "class",
+    },
+    2038: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[2038].multiplier, [p.friendCaptain, p.captain]); },
+        onActivation: function(p) {
+            if (p.colorCount.STR >= 4 || p.colorCount.DEX >= 4 || p.colorCount.QCK >= 4 || p.colorCount.PSY >= 4 || p.colorCount.INT >= 4) {
+                window.specials[2038].multiplier = 1.75;
+            }
+            else{
+                window.specials[2038].multiplier = 1;
+            }
+        }
+    },
+    2037: {
+        atk: function(p) { return p.unit.class.has("Cerebral") ? 1.75 : 1; },
         type: "class",
     },
     5000: {

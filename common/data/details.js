@@ -23849,6 +23849,21 @@ window.details = {
         },
         specialName: "Galleon Lariat",
     },
+    2038: {//Yasopp
+        captain: "Boosts ATK of Shooter characters by 2.25x and their HP by 1.2x",
+        special: "Deals 20x character's ATK in Typeless damage to ??? ememy(ies) that will ignore damage negating abilities and barriers. If your crew has 4 or more characters of the same Type, amplifies the effect of orbs by 1.75x for 1 turn.",
+        specialName: "Yasopp Special",
+    },
+    2039: {//Lucky Roux
+        captain: "Boosts ATK of Shooter characters by 1.75x and recovers 1x character's RCV in HP at the end of each turn",
+        special: "Recovers 3x character's RCV in HP after the end of each turn for 10 turns",
+        specialName: "Lucky Roux Special",
+    },
+    2040: {//Ben Beckman
+        captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of Cerebral characters by 1.5x",
+        special: "Boosts ATK of Cerebral characters by 1.5x for 1 turn and reduces Special Cooldown of all characters by 1 turn",
+        specialName: "Ben Beckman Special",
+    },
     2200: {//Doflamingo Raid v2
         captain: "Boosts ATK of Driven and Cerebral characters by 2.5x when HP is 50% or below, 1.5x otherwise",
         special: "Randomizes all non-matching orbs, including [BLOCK] slots and locks all orbs for 1 turn. If Captain is a Cerebral or Driven character, increases duration of any Class/Type boosting buffs and Orb Amplification buffs by 2 turns",
