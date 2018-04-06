@@ -2851,7 +2851,26 @@ window.drops = {
             condition: 'Zoro Drop is guranteed',
             'All Difficulties': [ 1900, -1921, -1362, -1388, -8, -906, -1175, -554, -218, -219 ],
         },
-
+        
+        {
+            name: "Vs Akainu",
+            thumb: 2023,
+            nakama: null,
+            gamwith: null,
+            showManual: true,
+            condition: "Chopperman Missions are available. 15 stamina earns 1 point for the team, 30 stamina earns 3 points, 50 stamina earns 8 points. Chance to drop Aokiji Manual, Almighty Manual, CC and LB materials",
+            'All Difficulties': [ -2025 ],
+        },
+        
+        {
+            name: "Vs Aokiji",
+            thumb: 2025,
+            nakama: null,
+            gamwith: null,
+            showManual: true,
+            condition: "Chopperman Missions are available. 15 stamina earns 1 point for the team, 30 stamina earns 3 points, 50 stamina earns 8 points. Chance to earn Akainu Manual, Almighty Manual, CC and LB materials",
+            'All Difficulties': [ -2023 ],
+        },
    ],
 
     'Training Forest': [
