@@ -2034,8 +2034,8 @@ window.aliases = {
     2033: ['モンキー・D・ルフィ ギア４　「タンクマン」', '', 'Tankman', 'Raid Tankman', 'Raid Luffy'],
     2034: ['ボルサリーノ 海軍本部最高戦力', '', 'Super Borsalino', 'Mega Borsalino', 'Borsalino V1', 'Super Kizaru', 'Kizaru', 'Mega Kizaru'],
     2035: ['千両道化のバギー', '', 'Super Buggy', 'Mega Buggy', 'Buggy', 'Baggy'],
-    2036: ['', '', 'Jesus Burgers', 'Jesus Burgess'],
-    2037: ['', '', 'Jesus Burgers', 'Mr. Store'],
+    2036: ['Mr.ストア', '', 'Jesus Burgers', 'Jesus Burgess', 'Mr. Store'],
+    2037: ['ジーザス・バージェス 黒ひげ海賊団', '', 'Jesus Burgers', 'Mr. Store'],
     2200: ['', '', 'V2 Raid Doffy', 'V2 Raid Doflamingo'],
     2201: ['', '', 'V2 Raid Doffy', 'V2 Raid Doflamingo'],
 };

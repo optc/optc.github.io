@@ -2576,8 +2576,8 @@ window.drops = {
         
         {
             name: 'Halloween Event Characters',
-            global: true,
             thumb: 1300,
+            global: true,
             nakama: 6130000,
             'All Difficulties': [ 1299, 1305, 1325 ],
         },
@@ -2585,8 +2585,10 @@ window.drops = {
         {
             name: 'White Day Characters',
             thumb: 1463,
+            global: true,
             nakama: 6146300,
             gamewith: 51651,
+            condition: 'Only Luffy and Chopper Islands are Global',
             'Luffy': [ 1462, 29, 563, 1059, 345, 192, 113, 108, 115, 116, 117, 1180, 266, 94, 83 ],
             'Chopper': [ 1464, 1155, 333, 728, 334, 1061, 346, 193, 109, 114, 115, 116, 117, 1180, 266, 94, 83 ],
             'Sanji': [ 1507, 52, 207, 892, 343, 190, 111, 106, 115, 116, 117, 1180, 266, 94, 83 ],
