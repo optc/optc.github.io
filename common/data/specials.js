@@ -4442,12 +4442,15 @@ window.specials = {
         staticMult: function(p) { return p.captain ? (p.captain.type == "STR" || p.captain.type == "QCK") ? 55 : 0 : 0; }
     },
     1992: {
-        atk: function(p) { return !p.unit.class.has('Free Spirit') ? 1 : window.specials[1992].multiplier; },
+        atk: function(p) { return p.unit.class.has('Free Spirit') ? window.specials[1992].multiplier : 1; },
         type: "class",
         onActivation: function(p) {
             var n = (window.specials[1992].multiplier == 1.75 ? 1 : 0);
             if (p.colorCount.QCK >= 3) {
                 window.specials[1992].multiplier = [1.75, 2][n];
+            }
+            else{
+                window.specials[1992].multiplier = 1;
             }
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
@@ -4456,17 +4459,21 @@ window.specials = {
         }
     },
     1993: {
-        atk: function(p) { return !p.unit.class.has('Free Spirit') ? 1 : window.specials[1993].multiplier; },
+        atk: function(p) { return p.unit.class.has('Free Spirit') ? window.specials[1993].multiplier : 1; },
         type: "class",
         onActivation: function(p) {
             var n = (window.specials[1993].multiplier == 1.75 ? 1 : 0);
             if (p.colorCount.QCK >= 3) {
                 window.specials[1993].multiplier = [1.75, 2][n];
             }
+            else{
+                window.specials[1993].multiplier = 1;
+            }
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
                 name: '1993warning'
             });
+            console.log(window.specials[1993].multiplier);
         }
     },
     1996: {
