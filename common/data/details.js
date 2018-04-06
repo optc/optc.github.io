@@ -1777,6 +1777,7 @@ window.details = {
             "base": "Boosts ATK and RCV of DEX characters by 2x",
             "level1": "Boosts ATK and RCV of DEX characters by 2x and boosts ATK of Shooter characters by 1.2x",
         },
+        captainNotes: "Boosts stack, so [DEX] and Shooter character's ATK will be boosted by 2.4x",
         sailor: {
             "base": "None",
             "level1": "Boosts base ATK, HP and RCV of [DEX] characters by 50",
@@ -1799,7 +1800,6 @@ window.details = {
             { "description": "Acquire Sailor Ability 2: Boosts base ATK of Shooter characters by 50" },
             { "description": "Acquire Potential 2: Reduce No Healing duration" },
         ],
-        limitnotes: "Captain boosts stack, so [DEX] and Shooter character's ATK will be boosted by 2.4x",
         potential: [
             {
                 "Name": "Critical Hit",
@@ -24871,6 +24871,67 @@ window.details = {
             },
         ],
         potentialNotes: "#{enrage}"
+    },
+    2038: {//Kimono Boa
+        captain: "Not Translated",
+        special: "Recovers 3960 HP, reduces enemies' End of turn Damage and ATK up by 7 turns, and reduces damage received by 80% for 1 turn",
+        specialName: "Glorious Scenery",
+    },
+    2039: {//Kimono Boa
+        captain: "Boosts ATK of [QCK] and Fighter characters by 1.75x",
+        captainNotes: "Boosts stack, so [QCK] Fighter character's ATK will be boosted by 3.0625x",
+        special: "Recovers 3960 HP, reduces enemies' End of turn Damage and ATK up by 7 turns, and reduces damage received by 80% for 1 turn",
+        specialName: "Glorious Scenery",
+        sailor: {
+            "base": "None",
+            "level1": "If your Captain is a [QCK] or a [PSY] character, makes [TND] orbs \"beneficial\" for all characters",
+            "level2": "Boosts base ATK, HP, and RCV of [QCK] and [PSY] characters by 40",
+        },
+        sailorNotes: "#{beneficial}",
+        limit: "Not Translated",
+    },
+    2040: {//Sakura Whitebeard
+        captain: "Not Translated",
+        special: "Changes [STR], [DEX], [QCK], [PSY] and [INT] orbs into [G]/[RCV] orbs and boosts own attack by 2.25x. If your captain is a Fighter character locks orbs for 1 turn.",
+        specialName: "The Gentle Breeze of the Feast",
+    },
+    2041: {//Sakura Whitebeard
+        captain: "Boosts ATK of Fighter and Powerhouse characters by 2.25x, and their HP and RCV by 1.25x ",
+        special: "Changes [STR], [DEX], [QCK], [PSY] and [INT] orbs into [G]/[RCV] orbs and boosts own attack by 2.25x. If your captain is a Fighter character locks orbs for 1 turn.",
+        specialName: "The Gentle Breeze of the Feast",
+        sailor: {
+            "base": "None",
+            "level1": "If your Captain is a Fighter character, makes [RCV] orbs \"beneficial\" for all characters",
+            "level2": "Boosts base ATK, HP, and RCV of Fighter characters by 40",
+        },
+        sailorNotes: "#{beneficial}",
+        limit: "Not Translated",
+    },
+    2042: {//Kizaru
+        captain: "Not Translated",
+        special: "Changes adjacent orbs to matching orbs and reduces Special Cooldown of the same type that you have more than 2 of on your team by 1 turn",
+        specialName: "The Afterglow of a Fight",
+    },
+    2043: {//Kizaru
+        captain: "Reduces cooldown of all specials by 1 turn at start of the fight, boosts ATK of Shooters and Free Spirit characters by 2.25x and their HP by 1.2x",
+        special: "Changes adjacent orbs to matching orbs and reduces Special Cooldown of the same type that you have more than 2 of on your team by 1 turn",
+        specialName: "The Afterglow of a Fight",
+    },
+    2044: {//Ben Beckman
+        captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of Cerebral characters by 1.5x",
+        special: "Boosts ATK of Cerebral characters by 1.5x for 1 turn and reduces Special Cooldown of Cerebral characters by 1 turn",
+        specialName: "Intense Gun Strike",
+    },
+    2045: {//Lucky Roux
+        captain: "Boosts ATK of Shooter characters by 1.75x and recovers 1x character's RCV in HP at the end of each turn",
+        special: "Recovers 3x character's RCV in HP after the end of each turn for 10 turns",
+        specialName: "Constantly Eating Meat",
+    },
+    2046: {//Yasopp
+        captain: "Boosts ATK of Shooter characters by 2.25x and their HP by 1.2x",
+        special: "Deals 20x character's ATK in Typeless damage to 1 enemy that will ignore damage negating abilities and barriers. If your crew has 4 or more characters of the same Type, amplifies the effect of orbs by 1.75x for 1 turn.",
+        specialNotes: "#{ignoreBarrier}",
+        specialName: "Exquisite Aim",
     },
     2200: {//Doflamingo Raid v2
         captain: "Boosts ATK of Driven and Cerebral characters by 2.5x when HP is 50% or below, 1.5x otherwise",

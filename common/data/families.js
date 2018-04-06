@@ -2036,4 +2036,13 @@ window.families = [
     "Buggy",
     "Jesus Burgess",
     "Jesus Burgess",
+    "Boa Hancock",
+    "Boa Hancock",
+    "Whitebeard",
+    "Whitebeard",
+    "Kizaru",
+    "Kizaru",
+    "Yasopp",
+    "Lucky Roo",
+    "Ben Beckman",
 ];

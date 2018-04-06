@@ -6890,6 +6890,28 @@ window.captains = {
         },
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
     },
+    2039: {
+        atk: function(p) { return (p.unit.type == "QCK" && (p.unit.class.has("Fighter"))) ? 3.0625 : (p.unit.type == "QCK" && !(p.unit.class.has("Fighter"))) ? 1.75 : (!(p.unit.type == "QCK") && (p.unit.class.has("Fighter"))) ? 1.75 : 1; }
+    },
+    2041: {
+        atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse")) ? 2.25 : 1; },
+        hp: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse")) ? 1.25 : 1; },
+        rcv: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse")) ? 1.25 : 1; },
+    },
+    2043: {
+        atk: function(p) { return (p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit")) ? 2.25 : 1; },
+        hp: function(p) { return (p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit")) ? 1.2 : 1; },
+    },
+    2044: {
+        atk: function(p) { return p.unit.class.has("Cerebral") ? 1.5 : 1; },
+    },
+    2045: {
+        atk: function(p) { return p.unit.class.has("Shooter") ? 1.75 : 1; },
+    },
+    2046: {
+        atk: function(p) { return p.unit.class.has("Shooter") ? 2.25 : 1; },
+        hp: function(p) { return p.unit.class.has("Shooter") ? 1.2 : 1; },
+    },
     2200: {
         atk: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Cerebral")) && p.percHP <= 50.0 ? 2.5 : 1.5; }
     },

@@ -4442,12 +4442,15 @@ window.specials = {
         staticMult: function(p) { return p.captain ? (p.captain.type == "STR" || p.captain.type == "QCK") ? 55 : 0 : 0; }
     },
     1992: {
-        atk: function(p) { return !p.unit.class.has('Free Spirit') ? 1 : window.specials[1992].multiplier; },
+        atk: function(p) { return p.unit.class.has('Free Spirit') ? window.specials[1992].multiplier : 1; },
         type: "class",
         onActivation: function(p) {
             var n = (window.specials[1992].multiplier == 1.75 ? 1 : 0);
             if (p.colorCount.QCK >= 3) {
                 window.specials[1992].multiplier = [1.75, 2][n];
+            }
+            else{
+                window.specials[1992].multiplier = 1;
             }
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
@@ -4456,17 +4459,21 @@ window.specials = {
         }
     },
     1993: {
-        atk: function(p) { return !p.unit.class.has('Free Spirit') ? 1 : window.specials[1993].multiplier; },
+        atk: function(p) { return p.unit.class.has('Free Spirit') ? window.specials[1993].multiplier : 1; },
         type: "class",
         onActivation: function(p) {
             var n = (window.specials[1993].multiplier == 1.75 ? 1 : 0);
             if (p.colorCount.QCK >= 3) {
                 window.specials[1993].multiplier = [1.75, 2][n];
             }
+            else{
+                window.specials[1993].multiplier = 1;
+            }
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
                 name: '1993warning'
             });
+            console.log(window.specials[1993].multiplier);
         }
     },
     1996: {
@@ -4597,7 +4604,7 @@ window.specials = {
         }
     },
     2028: {
-        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, window.specials[2028].multiplier, 2, [p.friendCaptain, p.captain]); },
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[2028].multiplier, [p.friendCaptain, p.captain]); },
         onActivation: function(p) {
             if (p.colorCount.QCK + p.colorCount.PSY >= 4) {
                 window.specials[2028].multiplier = 2;
@@ -4608,7 +4615,7 @@ window.specials = {
         }
     },
     2029: {
-        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, window.specials[2029].multiplier, 2, [p.friendCaptain, p.captain]); },
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[2029].multiplier, [p.friendCaptain, p.captain]); },
         onActivation: function(p) {
             if (p.colorCount.QCK + p.colorCount.PSY >= 4) {
                 window.specials[2029].multiplier = 2;
@@ -4672,6 +4679,29 @@ window.specials = {
     2037: {
         atk: function(p) { return p.unit.class.has("Fighter") ? 1.75 : 1; },
         type: "class",
+    },
+    2040: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 2.25 : 1; },
+        type: "type"
+    },
+    2041: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 2.25 : 1; },
+        type: "type"
+    },
+    2044: {
+        atk: function(p) { return p.unit.class.has("Cerebral") ? 1.5 : 1; },
+        type: "class",
+    },
+    2046: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[2046].multiplier, [p.friendCaptain, p.captain]); },
+        onActivation: function(p) {
+            if (p.colorCount.STR >= 4 || p.colorCount.DEX >= 4 || p.colorCount.QCK >= 4 || p.colorCount.PSY >= 4 || p.colorCount.INT >= 4) {
+                window.specials[2046].multiplier = 1.75;
+            }
+            else{
+                window.specials[2046].multiplier = 1;
+            }
+        }
     },
     5000: {
         atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 1.5 : 1; },
