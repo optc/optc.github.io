@@ -23849,20 +23849,71 @@ window.details = {
         },
         specialName: "Galleon Lariat",
     },
-    2038: {//Yasopp
-        captain: "Boosts ATK of Shooter characters by 2.25x and their HP by 1.2x",
-        special: "Deals 20x character's ATK in Typeless damage to ??? ememy(ies) that will ignore damage negating abilities and barriers. If your crew has 4 or more characters of the same Type, amplifies the effect of orbs by 1.75x for 1 turn.",
-        specialName: "Yasopp Special",
+    2038: {//Boa Hancock
+        captain: "Not Translated",
+        special: "Recovers 3,960 HP, reduces enemies' ATK Up and End of Turn Damage/Percent Cut Buff duration by 7 turns andeduces damage received by 80% for 1 turn.",
+        sailor: {
+            "base": "Makes [TND] orbs \"beneficial\" for all characters if your Captain is a [QCK] or [PSY] character",
+            "base2": "Boosts base ATK, HP and RCV of [QCK] and [PSY] characters by 40",
+        },
+        specialName: "Glorious Scenery",
     },
-    2039: {//Lucky Roux
+    2039: {//Boa Hancock
+        captain: "Boosts ATK of [QCK] and Free Spirit characters by 1.75x",
+        captainNotes: "The bonus is cumulative. [QCK] Free Spirit characters get a 3.0625x bonus.",
+        special: "Recovers 3,960 HP, reduces enemies' ATK Up and End of Turn Damage/Percent Cut Buff duration by 7 turns andeduces damage received by 80% for 1 turn.",
+        sailor: {
+            "base": "Makes [TND] orbs \"beneficial\" for all characters if your Captain is a [QCK] or [PSY] character",
+            "base2": "Boosts base ATK, HP and RCV of [QCK] and [PSY] characters by 40",
+        },
+        specialName: "Glorious Scenery",
+    },
+    2040: {//Whitebeard
+        captain: "Not Translated",
+        special: "Randomizes all orbs, into either [G] or [RCV] orbs and boosts own ATK by 2.25x. If your Captain is a Fighter character, locks orbs for 1 turn.",
+        sailor: {
+            "base": "Makes [RCV] orbs \"beneficial\" for all characters if your Captain is a Fighter character",
+            "base2": "Boosts base ATK, HP and RCV of Fighter characters by 40",
+        },
+        specialName: "The Gentle Breeze of the Feast",
+    },
+    2041: {//Whitebeard
+        captain: "Boosts ATK of Fighter and Powerhouse characters by 2.25x and their HP and RCV by 1.25x",
+        special: "Randomizes all orbs, into either [G] or [RCV] orbs and boosts own ATK by 2.25x. If your Captain is a Fighter character, locks orbs for 1 turn.",
+        sailor: {
+            "base": "Makes [RCV] orbs \"beneficial\" for all characters if your Captain is a Fighter character",
+            "base2": "Boosts base ATK, HP and RCV of Fighter characters by 40",
+        },
+        specialName: "The Gentle Breeze of the Feast",
+    },
+    2042: {//Kizaru
+        captain: "Not Translated",
+        special: "If your crew has 2 or more characters of the same Type, reduces Special Cooldown of characters of that Type by 1 turn and changes adjacent orbs into Matching Orbs",
+        specialNotes: "How the Cooldown Reduction works exactly is not tested.",
+        sailor: "Boosts base ATK, HP and RCV of all characters by 20",
+        specialName: "The Afterglow of a Fight",
+    },
+    2043: {//Kizaru
+        captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of Free Spirit and Shooter characters by 2.25x and their HP by 1.2x",
+        special: "If your crew has 2 or more characters of the same Type, reduces Special Cooldown of characters of that Type by 1 turn and changes adjacent orbs into Matching Orbs",
+        specialNotes: "How the Cooldown Reduction works exactly is not tested.",
+        sailor: "Boosts base ATK, HP and RCV of all characters by 20",
+        specialName: "The Afterglow of a Fight",
+    },
+    2044: {//Ben Beckman
+        captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of Cerebral characters by 1.5x",
+        special: "Boosts ATK of Cerebral characters by 1.5x for 1 turn and reduces Special Cooldown of Cerebral characters by 1 turn",
+        specialName: "Intense Gun Strike",
+    },
+    2045: {//Lucky Roux
         captain: "Boosts ATK of Shooter characters by 1.75x and recovers 1x character's RCV in HP at the end of each turn",
         special: "Recovers 3x character's RCV in HP after the end of each turn for 10 turns",
-        specialName: "Lucky Roux Special",
+        specialName: "Constantly Eating Meat",
     },
-    2040: {//Ben Beckman
-        captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of Cerebral characters by 1.5x",
-        special: "Boosts ATK of Cerebral characters by 1.5x for 1 turn and reduces Special Cooldown of all characters by 1 turn",
-        specialName: "Ben Beckman Special",
+    2046: {//Yasopp
+        captain: "Boosts ATK of Shooter characters by 2.25x and their HP by 1.2x",
+        special: "Deals 20x character's ATK in Typeless damage to one enemy that will ignore damage negating abilities and barriers. If your crew has 4 or more characters of the same Type, amplifies the effect of orbs by 1.75x for 1 turn.",
+        specialName: "Exquisite Aim",
     },
     2200: {//Doflamingo Raid v2
         captain: "Boosts ATK of Driven and Cerebral characters by 2.5x when HP is 50% or below, 1.5x otherwise",

@@ -4680,20 +4680,28 @@ window.specials = {
         atk: function(p) { return p.unit.class.has("Fighter") ? 1.75 : 1; },
         type: "class",
     },
-    2038: {
-        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[2038].multiplier, [p.friendCaptain, p.captain]); },
-        onActivation: function(p) {
-            if (p.colorCount.STR >= 4 || p.colorCount.DEX >= 4 || p.colorCount.QCK >= 4 || p.colorCount.PSY >= 4 || p.colorCount.INT >= 4) {
-                window.specials[2038].multiplier = 1.75;
-            }
-            else{
-                window.specials[2038].multiplier = 1;
-            }
-        }
+    2040: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 2.25 : 1; },
+        type: "type"
     },
-    2037: {
+    2041: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 2.25 : 1; },
+        type: "type"
+    },
+    2044: {
         atk: function(p) { return p.unit.class.has("Cerebral") ? 1.75 : 1; },
         type: "class",
+    },
+    2046: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[2046].multiplier, [p.friendCaptain, p.captain]); },
+        onActivation: function(p) {
+            if (p.colorCount.STR >= 4 || p.colorCount.DEX >= 4 || p.colorCount.QCK >= 4 || p.colorCount.PSY >= 4 || p.colorCount.INT >= 4) {
+                window.specials[2046].multiplier = 1.75;
+            }
+            else{
+                window.specials[2046].multiplier = 1;
+            }
+        }
     },
     5000: {
         atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 1.5 : 1; },

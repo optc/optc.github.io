@@ -1892,6 +1892,10 @@ window.flags = {
     2031: { rr: 1, rro: 1 },
     2034: { rr: 1, rro: 1 },
     2035: { rr: 1, rro: 1 },
+    2038: { rr: 1, rro: 1, lrr: 1 },
+    2039: { rr: 1, rro: 1, lrr: 1 },
+    2040: { rr: 1, rro: 1, lrr: 1 },
+    2041: { rr: 1, rro: 1, lrr: 1 },
     2200: { global: 1 },
     2201: { global: 1 },
 };
