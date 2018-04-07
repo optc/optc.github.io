@@ -2869,7 +2869,7 @@ window.drops = {
             nakama: null,
             gamwith: null,
             showManual: true,
-            condition: "Chopperman Missions are available. 15 stamina earns 1 point for the team, 30 stamina earns 3 points, 50 stamina earns 8 points. Chance to drop Aokiji Manual, Almighty Manual, CC and LB materials",
+            condition: "Chopperman Missions are available. 15 stamina earns 1 point for the team, 30 stamina earns 3 points, 50 stamina earns 8 points. Chance to earn a Aokiji Manual, Almighty Manual, CC, Guidance Fragments, Guidance Crystals, Guidance Jewel materials and Training Drinks",
             'All Difficulties': [ -2025 ],
         },
         
@@ -2879,7 +2879,7 @@ window.drops = {
             nakama: null,
             gamwith: null,
             showManual: true,
-            condition: "Chopperman Missions are available. 15 stamina earns 1 point for the team, 30 stamina earns 3 points, 50 stamina earns 8 points. Chance to earn Akainu Manual, Almighty Manual, CC and LB materials",
+            condition: "Chopperman Missions are available. 15 stamina earns 1 point for the team, 30 stamina earns 3 points, 50 stamina earns 8 points. Chance to earn a Akainu Manual, Almighty Manual, CC, Guidance Fragments, Guidance Crystals, Guidance Jewel materials and Training Drinks",
             'All Difficulties': [ -2023 ],
         },
    ],

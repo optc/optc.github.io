@@ -14196,7 +14196,7 @@ window.details = {
             "level1": "Boosts base ATK and HP of Powerhouse characters by 60",
             "level2": "Restores his own special by 2 turns when it is rewinded",
         },
-        sailorNotes: "#{rewind : 1}",
+        sailorNotes: "#{rewind : 2}",
         limit: [
             { "description": "Boosts base ATK by 5" },
             { "description": "Boosts base ATK by 5" },
