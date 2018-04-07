@@ -1958,7 +1958,7 @@ window.drops = {
             thumb: 2038,
             nakama: null,
             gamewith: null,
-            'All Difficulties': [ 2038, 2039, 2040, -1869, -1406, -1824, -1875, -1904, -2040, -1225 ]
+            'All Difficulties': [ 2044, 2045, 2046, -1869, -1406, -1824, -1875, -1904, -2044, -1225 ]
         },
         
     ],
@@ -2746,6 +2746,17 @@ window.drops = {
             'Japan': [ -1621, -1632, -1665, -1678, -1713, -1721, -1770 ],
             'Global': [ -1621, -1632, -1665, -1713, -1721 ],
             'Chopperman Missions': [ 1023, 1600 ],
+        },
+        
+        {
+            name: 'Battle Blitz! Akainu vs Aokiji',
+            thumb: 2023,
+            nakama: null,
+            gamewith: null,
+            //condition: 'Chance of dropping the Silver Almighty Book, Guidance Fragments and Guidance Crystals.',
+            //'Japan': [ -1621, -1632, -1665, -1678, -1713, -1721, -1770 ],
+            //'Global': [ -1621, -1632, -1665, -1713, -1721, -1770 ],
+            'Chopperman Missions': [ 2042 ],
         },
         
         {

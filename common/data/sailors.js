@@ -414,15 +414,45 @@ window.sailors = {
         type: "type",
     },
     2026: {
-        atkStatuc: function(p) { return p.unit.type == "PSY" || p.unit.type == "QCK" ? 50 : 0; },
+        atkStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "QCK" ? 50 : 0; },
     },
     2027: {
-        atkStatuc: function(p) { return p.unit.type == "PSY" || p.unit.type == "QCK" ? 50 : 0; },
+        atkStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "QCK" ? 50 : 0; },
     },
     2031: {
         atkStatic: function(p) { return p.unit.type == "INT"  ? 50 : 0; },
         hpStatic: function(p) { return p.unit.type == "INT"  ? 50 : 0; },
         rcvStatic: function(p) { return p.unit.type == "INT"  ? 50 : 0; },
+    },
+    2038: {
+        atkStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "QCK" ? 40 : 0; },
+        rcvStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "QCK" ? 40 : 0; },
+        hpStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "QCK" ? 40 : 0; },
+    },
+    2039: {
+        atkStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "QCK" ? 40 : 0; },
+        rcvStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "QCK" ? 40 : 0; },
+        hpStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "QCK" ? 40 : 0; },
+    },
+    2040: {
+        atkStatic: function(p) { return p.unit.class.has("Fighter") ? 40 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Fighter") ? 40 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Fighter") ? 40 : 0; },
+    },
+    2041: {
+        atkStatic: function(p) { return p.unit.class.has("Fighter") ? 40 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Fighter") ? 40 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Fighter") ? 40 : 0; },
+    },
+    2042: {
+        atkStatic: function(p) { return 20; },
+        rcvStatic: function(p) { return 20; },
+        hpStatic: function(p) { return 20; },
+    },
+    2043: {
+        atkStatic: function(p) { return 20; },
+        rcvStatic: function(p) { return 20; },
+        hpStatic: function(p) { return 20; },
     },
     5000: {
         atkStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 50 : 0; },

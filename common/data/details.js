@@ -24872,49 +24872,57 @@ window.details = {
         ],
         potentialNotes: "#{enrage}"
     },
-    2038: {//Kimono Boa
+    2038: {//Boa Hancock
         captain: "Not Translated",
-        special: "Recovers 3960 HP, reduces enemies' End of turn Damage and ATK up by 7 turns, and reduces damage received by 80% for 1 turn",
+        special: "Recovers 3,960 HP, reduces enemies' ATK Up and End of Turn Damage/Percent Cut Buff duration by 7 turns and reduces damage received by 80% for 1 turn.",
+        sailor: {
+            "base": "Makes [TND] orbs \"beneficial\" for all characters if your Captain is a [QCK] or [PSY] character",
+            "base2": "Boosts base ATK, HP and RCV of [QCK] and [PSY] characters by 40",
+        },
         specialName: "Glorious Scenery",
     },
-    2039: {//Kimono Boa
-        captain: "Boosts ATK of [QCK] and Fighter characters by 1.75x",
-        captainNotes: "Boosts stack, so [QCK] Fighter character's ATK will be boosted by 3.0625x",
-        special: "Recovers 3960 HP, reduces enemies' End of turn Damage and ATK up by 7 turns, and reduces damage received by 80% for 1 turn",
+    2039: {//Boa Hancock
+        captain: "Boosts ATK of [QCK] and Free Spirit characters by 1.75x",
+        captainNotes: "The bonus is cumulative. [QCK] Free Spirit characters get a 3.0625x bonus.",
+        special: "Recovers 3,960 HP, reduces enemies' ATK Up and End of Turn Damage/Percent Cut Buff duration by 7 turns and reduces damage received by 80% for 1 turn.",
+        sailor: {
+            "base": "Makes [TND] orbs \"beneficial\" for all characters if your Captain is a [QCK] or [PSY] character",
+            "base2": "Boosts base ATK, HP and RCV of [QCK] and [PSY] characters by 40",
+        },
+        sailorNotes: "#{beneficial}",
         specialName: "Glorious Scenery",
-        sailor: {
-            "base": "None",
-            "level1": "If your Captain is a [QCK] or a [PSY] character, makes [TND] orbs \"beneficial\" for all characters",
-            "level2": "Boosts base ATK, HP, and RCV of [QCK] and [PSY] characters by 40",
-        },
-        sailorNotes: "#{beneficial}",
-        limit: "Not Translated",
     },
-    2040: {//Sakura Whitebeard
+    2040: {//Whitebeard
         captain: "Not Translated",
-        special: "Changes [STR], [DEX], [QCK], [PSY] and [INT] orbs into [G]/[RCV] orbs and boosts own attack by 2.25x. If your captain is a Fighter character locks orbs for 1 turn.",
-        specialName: "The Gentle Breeze of the Feast",
-    },
-    2041: {//Sakura Whitebeard
-        captain: "Boosts ATK of Fighter and Powerhouse characters by 2.25x, and their HP and RCV by 1.25x ",
-        special: "Changes [STR], [DEX], [QCK], [PSY] and [INT] orbs into [G]/[RCV] orbs and boosts own attack by 2.25x. If your captain is a Fighter character locks orbs for 1 turn.",
-        specialName: "The Gentle Breeze of the Feast",
+        special: "Randomizes all orbs, into either [G] or [RCV] orbs and boosts own ATK by 2.25x. If your Captain is a Fighter character, locks orbs for 1 turn.",
         sailor: {
-            "base": "None",
-            "level1": "If your Captain is a Fighter character, makes [RCV] orbs \"beneficial\" for all characters",
-            "level2": "Boosts base ATK, HP, and RCV of Fighter characters by 40",
+            "base": "Makes [RCV] orbs \"beneficial\" for all characters if your Captain is a Fighter character",
+            "base2": "Boosts base ATK, HP and RCV of Fighter characters by 40",
         },
         sailorNotes: "#{beneficial}",
-        limit: "Not Translated",
+        specialName: "The Gentle Breeze of the Feast",
+    },
+    2041: {//Whitebeard
+        captain: "Boosts ATK of Fighter and Powerhouse characters by 2.25x and their HP and RCV by 1.25x",
+        special: "Randomizes all orbs, into either [G] or [RCV] orbs and boosts own ATK by 2.25x. If your Captain is a Fighter character, locks orbs for 1 turn.",
+        sailor: {
+            "base": "Makes [RCV] orbs \"beneficial\" for all characters if your Captain is a Fighter character",
+            "base2": "Boosts base ATK, HP and RCV of Fighter characters by 40",
+        },
+        specialName: "The Gentle Breeze of the Feast",
     },
     2042: {//Kizaru
         captain: "Not Translated",
-        special: "Changes adjacent orbs to matching orbs and reduces Special Cooldown of the same type that you have more than 2 of on your team by 1 turn",
+        special: "If your crew has 2 or more characters of the same Type, reduces Special Cooldown of characters of that Type by 1 turn and changes adjacent orbs into Matching Orbs",
+        specialNotes: "How the Cooldown Reduction works exactly is not tested.",
+        sailor: "Boosts base ATK, HP and RCV of all characters by 20",
         specialName: "The Afterglow of a Fight",
     },
     2043: {//Kizaru
-        captain: "Reduces cooldown of all specials by 1 turn at start of the fight, boosts ATK of Shooters and Free Spirit characters by 2.25x and their HP by 1.2x",
-        special: "Changes adjacent orbs to matching orbs and reduces Special Cooldown of the same type that you have more than 2 of on your team by 1 turn",
+        captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of Free Spirit and Shooter characters by 2.25x and their HP by 1.2x",
+        special: "If your crew has 2 or more characters of the same Type, reduces Special Cooldown of characters of that Type by 1 turn and changes adjacent orbs into Matching Orbs",
+        specialNotes: "How the Cooldown Reduction works exactly is not tested.",
+        sailor: "Boosts base ATK, HP and RCV of all characters by 20",
         specialName: "The Afterglow of a Fight",
     },
     2044: {//Ben Beckman
@@ -24929,8 +24937,7 @@ window.details = {
     },
     2046: {//Yasopp
         captain: "Boosts ATK of Shooter characters by 2.25x and their HP by 1.2x",
-        special: "Deals 20x character's ATK in Typeless damage to 1 enemy that will ignore damage negating abilities and barriers. If your crew has 4 or more characters of the same Type, amplifies the effect of orbs by 1.75x for 1 turn.",
-        specialNotes: "#{ignoreBarrier}",
+        special: "Deals 20x character's ATK in Typeless damage to one enemy that will ignore damage negating abilities and barriers. If your crew has 4 or more characters of the same Type, amplifies the effect of orbs by 1.75x for 1 turn.",
         specialName: "Exquisite Aim",
     },
     2200: {//Doflamingo Raid v2

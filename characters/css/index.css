@@ -170,6 +170,15 @@ input[type="text"] {
     margin-right: 5px;
 }
 
+.badge-sbase2 {
+    float: left;
+    position: relative;
+    top: 2px;
+    width: 87px;
+    text-align: center;
+    margin-right: 5px;
+}
+
 .badge-level1, .badge-level2, .badge-level3, .badge-level4, .badge-level5, .badge-level6 {
     float: left;
     position: relative;
@@ -223,6 +232,7 @@ input[type="text"] {
 .badge-character2 { background: rebeccapurple; }
 .badge-combined { background: mediumvioletred; }
 .badge-sbase { background: darkred; }
+.badge-sbase2 { background: darkred; }
 .badge-slevel1 { background: red; }
 .badge-slevel2 { background: red; }
 

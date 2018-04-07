@@ -4689,7 +4689,7 @@ window.specials = {
         type: "type"
     },
     2044: {
-        atk: function(p) { return p.unit.class.has("Cerebral") ? 1.5 : 1; },
+        atk: function(p) { return p.unit.class.has("Cerebral") ? 1.75 : 1; },
         type: "class",
     },
     2046: {
