@@ -6882,6 +6882,7 @@ window.captains = {
     },
     2036: {
         atk: function(p) { return (p.unit.class.has("Fighter")) ? 2.25 : 1 },
+    },
     2037: {
         damageSorter: function(d) { return CrunchUtils.classSort(d, 3.75, [ "Fighter" ]); },
         hitAtk: function(p) {
