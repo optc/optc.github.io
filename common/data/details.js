@@ -3482,7 +3482,7 @@ window.details = {
         specialName: "Manly Flaming Sword",
         captain: {
             "base": "Boosts ATK of [STR] characters by 2x, boosts damage of [STR] specials by 2x",
-            "level1": "Boosts ATK of [STR] characters by 2.25x and their HP by 1.2x. Boosts damage of [STR] specials by 2x",
+            "level1": "Boosts ATK of [STR] characters by 2.25x and their HP by 1.2x and boosts damage of [STR] specials by 2x",
         },
         captainNotes: "#{noFixedPerc}",
         sailor: {
@@ -3501,7 +3501,7 @@ window.details = {
             { "description": "Acquire Sailor Ability 1: When any other [STR] character uses a special, reduces own cooldown by 1 turn" },
             { "description": "Boosts base ATK by 50" },
             { "description": "Acquire 1 additional Socket slot" },
-            { "description": "Acquire new Captain Ability: Boosts ATK of [STR] characters by 2.25x and their HP by 1.2x. Boosts damage of [STR] specials by 2x" },
+            { "description": "Acquire new Captain Ability: Boosts ATK of [STR] characters by 2.25x and their HP by 1.2x and boosts damage of [STR] specials by 2x" },
             { "description": "Boosts base HP by 140" },
             { "description": "Reduce base Special Cooldown by 3 turns" },
             { "description": "Acquire Sailor Ability 2: Boosts base ATK of [STR] characters by 50" },
@@ -3509,23 +3509,23 @@ window.details = {
         ],
         potential: [
             {
-               "Name": "Enrage",
+                "Name": "Enrage",
                 "description": [
                     "Level 1: Boosts base ATK by 30",
-                    "Level 2: Boosts base ATK by ?",
-                    "Level 3: Boosts base ATK by ?",
-                    "Level 4: Boosts base ATK by ?",
-                    "Level 5: Boosts base ATK by ?"
+                    "Level 2: Boosts base ATK by ??",
+                    "Level 3: Boosts base ATK by ??",
+                    "Level 4: Boosts base ATK by ??",
+                    "Level 5: Boosts base ATK by ??"
                 ]
             },
             {
                 "Name": "Critical Hit",
                 "description": [
                     "Level 1: If you hit a perfect with this character, there is a 30% chance to deal 4% of this character's attack in extra damage",
-                    "Level 2: If you hit a perfect with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
-                    "Level 3: If you hit a perfect with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
-                    "Level 4: If you hit a perfect with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
-                    "Level 5: If you hit a perfect with this character, there is a ?% chance to deal ?% of this character's attack in extra damage"
+                    "Level 2: If you hit a perfect with this character, there is a ??% chance to deal ?% of this character's attack in extra damage",
+                    "Level 3: If you hit a perfect with this character, there is a ??% chance to deal ?% of this character's attack in extra damage",
+                    "Level 4: If you hit a perfect with this character, there is a ??% chance to deal ?% of this character's attack in extra damage",
+                    "Level 5: If you hit a perfect with this character, there is a ??% chance to deal ?% of this character's attack in extra damage"
                 ]
             },
         ],
@@ -4075,10 +4075,10 @@ window.details = {
                 "Name": "Critical Hit",
                 "description": [
                     "Level 1: If you hit a perfect with this character, there is a 40% chance to deal 4% of this character's attack in extra damage",
-                    "Level 2: If you hit a perfect with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
-                    "Level 3: If you hit a perfect with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
-                    "Level 4: If you hit a perfect with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
-                    "Level 5: If you hit a perfect with this character, there is a ?% chance to deal ?% of this character's attack in extra damage"
+                    "Level 2: If you hit a perfect with this character, there is a ??% chance to deal ?% of this character's attack in extra damage",
+                    "Level 3: If you hit a perfect with this character, there is a ??% chance to deal ?% of this character's attack in extra damage",
+                    "Level 4: If you hit a perfect with this character, there is a ??% chance to deal ?% of this character's attack in extra damage",
+                    "Level 5: If you hit a perfect with this character, there is a ??% chance to deal ?% of this character's attack in extra damage"
                 ]
             },
         ]
@@ -4402,20 +4402,20 @@ window.details = {
                 "Name": "[QCK] Damage Reduction",
                 "description": [
                     "Level 1: Reduce damage taken from [QCK] characters by 1%",
-                    "Level 2: Reduce damage taken from [QCK] characters by ?%",
-                    "Level 3: Reduce damage taken from [QCK] characters by ?%",
-                    "Level 4: Reduce damage taken from [QCK] characters by ?%",
-                    "Level 5: Reduce damage taken from [QCK] characters by ?%"
+                    "Level 2: Reduce damage taken from [QCK] characters by 2%",
+                    "Level 3: Reduce damage taken from [QCK] characters by 3%",
+                    "Level 4: Reduce damage taken from [QCK] characters by 4%",
+                    "Level 5: Reduce damage taken from [QCK] characters by 5%"
                 ]
             },
             {
                 "Name": "Barrier Penetration",
                 "description": [
                     "Level 1: This character's attack will ignore barriers if HP is above 99%",
-                    "Level 2: This character's attack will ignore barriers if HP is above ?%",
-                    "Level 3: This character's attack will ignore barriers if HP is above ?%",
-                    "Level 4: This character's attack will ignore barriers if HP is above ?%",
-                    "Level 5: This character's attack will ignore barriers if HP is above ?%"
+                    "Level 2: This character's attack will ignore barriers if HP is above ??%",
+                    "Level 3: This character's attack will ignore barriers if HP is above ??%",
+                    "Level 4: This character's attack will ignore barriers if HP is above ??%",
+                    "Level 5: This character's attack will ignore barriers if HP is above ??%"
                 ]
             },
         ]
@@ -4977,7 +4977,7 @@ window.details = {
         captain: "Reduces damage received by 30% if HP is above 70% at the start of the turn, boosts ATK of QCK and PSY characters by 2.75x if HP is above 70% at the start the turn",
         sailor: {
             "base": "None",
-            "level1": "Boost base ATK, HP, and RCV of [QCK] and [PSY] characters by 50",
+            "level1": "Boosts base ATK, HP, and RCV of [QCK] and [PSY] characters by 50",
             "level2": "Makes [QCK], [PSY], and [TND] orbs \"beneficial\" for [QCK] and [PSY] characters",
         },
         sailorNotes: "#{beneficial}",
@@ -4989,7 +4989,7 @@ window.details = {
             { "description": "Boosts base HP by 25" },
             { "description": "Boosts base HP by 30" },
             { "description": "Boosts base HP by 35" },
-            { "description": "Acquire Sailor Ability 1: Boost base ATK, HP, and RCV of [QCK] and [PSY] characters by 50" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK, HP, and RCV of [QCK] and [PSY] characters by 50" },
             { "description": "Boosts base ATK by 10" },
             { "description": "Boosts base ATK by 15" },
             { "description": "Boosts base ATK by 20" },
@@ -5008,7 +5008,7 @@ window.details = {
             { "description": "Boosts base RCV by 20" },
             { "description": "Boosts base HP by 70" },
             { "description": "Boosts base ATK by 45" },
-            { "description": "Acquire Sailor Ability 2: Makes [QCK], [PSY], and Tandem orbs \"beneficial\" for [QCK] and [PSY] characters" },
+            { "description": "Acquire Sailor Ability 2: Makes [QCK], [PSY] and [TND] orbs \"beneficial\" for [QCK] and [PSY] characters" },
             { "description": "Boosts base ATK by 50" },
             { "description": "Boosts base ATK by 55" },
             { "description": "Acquire Potential 3: Reduce No Healing duration" },
@@ -5790,10 +5790,10 @@ window.details = {
                 "Name": "[PSY] Damage Reduction",
                 "description": [
                     "Level 1: Reduce damage taken from [PSY] characters by 1%",
-                    "Level 2: Reduce damage taken from [PSY] characters by ?%",
-                    "Level 3: Reduce damage taken from [PSY] characters by ?%",
-                    "Level 4: Reduce damage taken from [PSY] characters by ?%",
-                    "Level 5: Reduce damage taken from [PSY] characters by ?%"
+                    "Level 2: Reduce damage taken from [PSY] characters by 2%",
+                    "Level 3: Reduce damage taken from [PSY] characters by 3%",
+                    "Level 4: Reduce damage taken from [PSY] characters by 4%",
+                    "Level 5: Reduce damage taken from [PSY] characters by 5%"
                 ]
             },
             {
@@ -6927,8 +6927,8 @@ window.details = {
         special: "Deals 15x character's ATK in STR damage to all enemies, boosts ATK of Shooter characters by 1.5x for 1 turn. If during that turn every unit scores a Perfect hit, boosts ATK of Shooter, Striker and Slasher characters by 1.5x in the following turn.",
         sailor: {
             "base": "None",
-            "level1": "Boosts base HP of Slasher, Striker, and Shooter characters by 100",
-            "level2": "Boosts base ATK of Slasher, Striker, and Shooter characters by 50",
+            "level1": "Boosts base HP of Shooter, Slasher and Striker characters by 100",
+            "level2": "Boosts base ATK of Shooter, Slasher and Striker characters by 50",
         },
         limit: [
             { "description": "Boosts base RCV by 20" },
@@ -6940,11 +6940,11 @@ window.details = {
             { "description": "Reduce base Special Cooldown by 2 turn" },
             { "description": "Boosts base HP by 90" },
             { "description": "Reduce base Special Cooldown by 2 turn" },
-            { "description": "Acquire Sailor Ability 1: Boosts base HP of Slasher, Striker, and Shooter characters by 100" },
+            { "description": "Acquire Sailor Ability 1: Boosts base HP of Shooter, Slasher and Striker characters by 100" },
             { "description": "Reduce base Special Cooldown by 2 turn" },
             { "description": "Boosts base ATK by 50" },
             { "description": "Reduce base Special Cooldown by 2 turn" },
-            { "description": "Acquire Sailor Ability 2: Boosts base ATK of Slasher, Striker, and Shooter characters by 50" },
+            { "description": "Acquire Sailor Ability 2: Boosts base ATK of Shooter, Slasher and Striker characters by 50" },
             { "description": "Acquire Potential 2: Barrier Penetration" },
         ],
         potential: [
@@ -6952,20 +6952,20 @@ window.details = {
                 "Name": "[QCK] Damage Reduction",
                 "description": [
                     "Level 1: Reduce damage taken from [QCK] characters by 1%",
-                    "Level 2: Reduce damage taken from [QCK] characters by ?%",
-                    "Level 3: Reduce damage taken from [QCK] characters by ?%",
-                    "Level 4: Reduce damage taken from [QCK] characters by ?%",
-                    "Level 5: Reduce damage taken from [QCK] characters by ?%"
+                    "Level 2: Reduce damage taken from [QCK] characters by 2%",
+                    "Level 3: Reduce damage taken from [QCK] characters by 3%",
+                    "Level 4: Reduce damage taken from [QCK] characters by 4%",
+                    "Level 5: Reduce damage taken from [QCK] characters by 5%"
                 ]
             },
             {
                 "Name": "Barrier Penetration",
                 "description": [
                     "Level 1: This character's attack will ignore barriers if HP is above 99%",
-                    "Level 2: This character's attack will ignore barriers if HP is above ?%",
-                    "Level 3: This character's attack will ignore barriers if HP is above ?%",
-                    "Level 4: This character's attack will ignore barriers if HP is above ?%",
-                    "Level 5: This character's attack will ignore barriers if HP is above ?%"
+                    "Level 2: This character's attack will ignore barriers if HP is above ??%",
+                    "Level 3: This character's attack will ignore barriers if HP is above ??%",
+                    "Level 4: This character's attack will ignore barriers if HP is above ??%",
+                    "Level 5: This character's attack will ignore barriers if HP is above ??%"
                 ]
             },
         ]
@@ -7194,8 +7194,8 @@ window.details = {
         specialNotes: "#{orb: 1.5x or 1.75x} #{stages}",
         sailor: {
             "base": "None",
-            "level1": "Reduces Paralysis on all characters by 1 turn",
-            "level2": "Makes [RCV] and [TND] orbs \"beneficial\" for himself",
+            "level1": "Reduces Paralysis duration on all characters by 1 turn",
+            "level2": "Makes [INT], [RCV] and [TND] orbs \"beneficial\" for this unit",
         },
         sailorNotes: "#{beneficial}",
         limit: [
@@ -7208,11 +7208,11 @@ window.details = {
             { "description": "Boosts base RCV by 20" },
             { "description": "Boosts base HP by 50" },
             { "description": "Boosts base RCV by 40" },
-            { "description": "Acquire Sailor Ability 1: Reduces Paralysis on all characters by 1 turn" },
+            { "description": "Acquire Sailor Ability 1: Reduces Paralysis duration on all characters by 1 turn" },
             { "description": "Boosts base ATK by 40" },
             { "description": "Boosts base ATK by 60" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
-            { "description": "Acquire Sailor Ability 2: Makes [RCV] and [TND] orbs \"beneficial\" for himself" },
+            { "description": "Acquire Sailor Ability 2: Makes [INT], [RCV] and [TND] orbs \"beneficial\" for this unit" },
             { "description": "Acquire Potential 2: Pinch Healing" },
         ],
         potential: [
@@ -7220,14 +7220,14 @@ window.details = {
                 "Name": "[INT] Damage Reduction",
                 "description": [
                     "Level 1: Reduce damage taken from [INT] characters by 1%",
-                    "Level 2: Reduce damage taken from [INT] characters by ?%",
-                    "Level 3: Reduce damage taken from [INT] characters by ?%",
-                    "Level 4: Reduce damage taken from [INT] characters by ?%",
-                    "Level 5: Reduce damage taken from [INT] characters by ?%"
+                    "Level 2: Reduce damage taken from [INT] characters by 2%",
+                    "Level 3: Reduce damage taken from [INT] characters by 3%",
+                    "Level 4: Reduce damage taken from [INT] characters by 4%",
+                    "Level 5: Reduce damage taken from [INT] characters by 5%"
                 ]
             },
             {
-               "Name": "Pinch Healing",
+                "Name": "Pinch Healing",
                 "description": [
                     "Level 1: If HP is below 5% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character",
                     "Level 2: If HP is below ?% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character",
@@ -7994,9 +7994,9 @@ window.details = {
             { "description": "Boosts base HP by 50" },
             { "description": "Boosts base ATK by 50" },
             { "description": "Acquire Sailor Ability 1: Boosts base ATK and HP of [DEX] characters by 50" },
-            { "description": "Reduce base Special Cooldown by 2 turn" },
+            { "description": "Reduce base Special Cooldown by 2 turns" },
             { "description": "Boosts base ATK by 70" },
-            { "description": "Reduce base Special Cooldown by 2 turn" },
+            { "description": "Reduce base Special Cooldown by 2 turns" },
             { "description": "Acquire Sailor Ability 2: Makes [STR] orbs \"beneficial\" for [DEX] characters" },
             { "description": "Acquire Potential 2: Barrier Penetration" },
         ],
@@ -8005,20 +8005,20 @@ window.details = {
                 "Name": "[QCK] Damage Reduction",
                 "description": [
                     "Level 1: Reduce damage taken from [QCK] characters by 1%",
-                    "Level 2: Reduce damage taken from [QCK] characters by ?%",
-                    "Level 3: Reduce damage taken from [QCK] characters by ?%",
-                    "Level 4: Reduce damage taken from [QCK] characters by ?%",
-                    "Level 5: Reduce damage taken from [QCK] characters by ?%"
+                    "Level 2: Reduce damage taken from [QCK] characters by 2%",
+                    "Level 3: Reduce damage taken from [QCK] characters by 3%",
+                    "Level 4: Reduce damage taken from [QCK] characters by 4%",
+                    "Level 5: Reduce damage taken from [QCK] characters by 5%"
                 ]
             },
             {
                 "Name": "Barrier Penetration",
                 "description": [
                     "Level 1: This character's attack will ignore barriers if HP is above 99%",
-                    "Level 2: This character's attack will ignore barriers if HP is above ?%",
-                    "Level 3: This character's attack will ignore barriers if HP is above ?%",
-                    "Level 4: This character's attack will ignore barriers if HP is above ?%",
-                    "Level 5: This character's attack will ignore barriers if HP is above ?%"
+                    "Level 2: This character's attack will ignore barriers if HP is above ??%",
+                    "Level 3: This character's attack will ignore barriers if HP is above ??%",
+                    "Level 4: This character's attack will ignore barriers if HP is above ??%",
+                    "Level 5: This character's attack will ignore barriers if HP is above ??%"
                 ]
             },
         ]
@@ -10637,7 +10637,7 @@ window.details = {
         special: "Deals large [PSY] damage to all enemies and if HP is above 50%, changes all orbs to [PSY] orbs",
         specialName: "Gold-Gold Fruit",
     },
-    1163: {//Tesoro Evolved
+    1163: {//Tesoro
         captain: "Boosts ATK of PSY characters by 1.75x. Also boosts ATK of Driven and Cerebral characters by 1.5x. Boosts amount of Beli received by 2x",
         captainNotes: "The two Boosts stack with each other so a PSY Driven or a PSY Cerebral Unit will be boosted by 2.625",
         special: "Deals large [PSY] damage to all enemies and if HP is above 50%, changes all orbs to [PSY] orbs",
@@ -10650,7 +10650,7 @@ window.details = {
         sailorNotes: "#{beneficial}",
         limit: [
             { "description": "Boosts base RCV by 10" },
-            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base RCV by 10" },
             { "description": "Boosts base RCV by 20" },
             { "description": "Acquire Potential 1: [INT] Damage Reduction" },
             { "description": "Boosts base HP by 20" },
@@ -10670,10 +10670,10 @@ window.details = {
                 "Name": "[INT] Damage Reduction",
                 "description": [
                     "Level 1: Reduce damage taken from [INT] characters by 1%",
-                    "Level 2: Reduce damage taken from [INT] characters by ?%",
-                    "Level 3: Reduce damage taken from [INT] characters by ?%",
-                    "Level 4: Reduce damage taken from [INT] characters by ?%",
-                    "Level 5: Reduce damage taken from [INT] characters by ?%"
+                    "Level 2: Reduce damage taken from [INT] characters by 2%",
+                    "Level 3: Reduce damage taken from [INT] characters by 3%",
+                    "Level 4: Reduce damage taken from [INT] characters by 4%",
+                    "Level 5: Reduce damage taken from [INT] characters by 5%"
                 ]
             },
             {
@@ -10693,7 +10693,7 @@ window.details = {
         special: "Boosts RCV by 1.5x for 1 turn and amplifies the effects of orbs by 1.5x for 1 turn",
         specialName: "Sexy Diva",
     },
-    1165: {//Carina Evolved
+    1165: {//Carina
         captain: "Boosts RCV of all characters by 1.5x",
         special: "Boosts RCV by 1.5x for 1 turn and amplifies the effects of orbs by 1.5x for 1 turn",
         specialName: "Sexy Diva",
@@ -11332,20 +11332,20 @@ window.details = {
                 "Name": "[QCK] Damage Reduction",
                 "description": [
                     "Level 1: Reduce damage taken from [QCK] characters by 1%",
-                    "Level 2: Reduce damage taken from [QCK] characters by ?%",
-                    "Level 3: Reduce damage taken from [QCK] characters by ?%",
-                    "Level 4: Reduce damage taken from [QCK] characters by ?%",
-                    "Level 5: Reduce damage taken from [QCK] characters by ?%"
+                    "Level 2: Reduce damage taken from [QCK] characters by 2%",
+                    "Level 3: Reduce damage taken from [QCK] characters by 3%",
+                    "Level 4: Reduce damage taken from [QCK] characters by 4%",
+                    "Level 5: Reduce damage taken from [QCK] characters by 5%"
                 ]
             },
             {
                 "Name": "Barrier Penetration",
                 "description": [
                     "Level 1: This character's attack will ignore barriers if HP is above 99%",
-                    "Level 2: This character's attack will ignore barriers if HP is above ?%",
-                    "Level 3: This character's attack will ignore barriers if HP is above ?%",
-                    "Level 4: This character's attack will ignore barriers if HP is above ?%",
-                    "Level 5: This character's attack will ignore barriers if HP is above ?%"
+                    "Level 2: This character's attack will ignore barriers if HP is above ??%",
+                    "Level 3: This character's attack will ignore barriers if HP is above ??%",
+                    "Level 4: This character's attack will ignore barriers if HP is above ??%",
+                    "Level 5: This character's attack will ignore barriers if HP is above ??%"
                 ]
             },
         ]
@@ -12384,8 +12384,9 @@ window.details = {
         specialNotes: "#{colorAffinity : 1.75}",
         specialName: "Great Eruption",
         sailor: {
-            "base": "Boosts base HP of [STR] characters by 100",
-            "level1": "Boosts base ATK of [STR] characters by 75",
+            "base": "None",
+            "level1": "Boosts base HP of [STR] characters by 100",
+            "level2": "Boosts base ATK of [STR] characters by 75",
         },
         limit: [
             { "description": "Boosts base ATK by 10" },
@@ -12397,10 +12398,10 @@ window.details = {
             { "description": "Boosts base ATK by 40" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base ATK by 50" },
-            { "description": "Acquire Sailor Ability: Boosts base HP of [STR] characters by 100" },
-            { "description": "Reduce base Special Cooldown by 2 turn" },
+            { "description": "Acquire Sailor Ability 1: Boosts base HP of [STR] characters by 100" },
+            { "description": "Reduce base Special Cooldown by 2 turns" },
             { "description": "Boosts base ATK by 50" },
-            { "description": "Reduce base Special Cooldown by 2 turn" },
+            { "description": "Reduce base Special Cooldown by 2 turns" },
             { "description": "Acquire Sailor Ability 2: Boosts base ATK of [STR] characters by 75" },
             { "description": "Acquire Potential 2: Slot Bind Self-reduction" },
         ],
@@ -12409,10 +12410,10 @@ window.details = {
                 "Name": "[DEX] Damage Reduction",
                 "description": [
                     "Level 1: Reduce damage taken from [DEX] characters by 1%",
-                    "Level 2: Reduce damage taken from [DEX] characters by ?%",
-                    "Level 3: Reduce damage taken from [DEX] characters by ?%",
-                    "Level 4: Reduce damage taken from [DEX] characters by ?%",
-                    "Level 5: Reduce damage taken from [DEX] characters by ?%"
+                    "Level 2: Reduce damage taken from [DEX] characters by 2%",
+                    "Level 3: Reduce damage taken from [DEX] characters by 3%",
+                    "Level 4: Reduce damage taken from [DEX] characters by 4%",
+                    "Level 5: Reduce damage taken from [DEX] characters by 5%"
                 ]
             },
             {
@@ -13070,20 +13071,20 @@ window.details = {
                 "Name": "[INT] Damage Reduction",
                 "description": [
                     "Level 1: Reduce damage taken from [INT] characters by 1%",
-                    "Level 2: Reduce damage taken from [INT] characters by ?%",
-                    "Level 3: Reduce damage taken from [INT] characters by ?%",
-                    "Level 4: Reduce damage taken from [INT] characters by ?%",
-                    "Level 5: Reduce damage taken from [INT] characters by ?%"
+                    "Level 2: Reduce damage taken from [INT] characters by 2%",
+                    "Level 3: Reduce damage taken from [INT] characters by 3%",
+                    "Level 4: Reduce damage taken from [INT] characters by 4%",
+                    "Level 5: Reduce damage taken from [INT] characters by 5%"
                 ]
             },
             {
                 "Name": "Barrier Penetration",
                 "description": [
                     "Level 1: This character's attack will ignore barriers if HP is above 99%",
-                    "Level 2: This character's attack will ignore barriers if HP is above ?%",
-                    "Level 3: This character's attack will ignore barriers if HP is above ?%",
-                    "Level 4: This character's attack will ignore barriers if HP is above ?%",
-                    "Level 5: This character's attack will ignore barriers if HP is above ?%"
+                    "Level 2: This character's attack will ignore barriers if HP is above ??%",
+                    "Level 3: This character's attack will ignore barriers if HP is above ??%",
+                    "Level 4: This character's attack will ignore barriers if HP is above ??%",
+                    "Level 5: This character's attack will ignore barriers if HP is above ??%"
                 ]
             },
         ]
@@ -13172,7 +13173,7 @@ window.details = {
     1370: {//Timeskip Chopper
         captain: {
             "base": "Boosts ATK of [QCK] characters by 2x and their HP and RCV by 1.2x",
-            "level1": "Boosts ATK of [QCK] characters by 2.5x, their RCV and HP by ?x",
+            "level1": "Boosts ATK of [QCK] characters by 2.5x and their HP and RCV by ?x",
         },
         special: "Changes [DEX] and [RCV] orbs into Matching orbs on [QCK] characters, cuts the current HP of one enemy by 15%",
         specialName: "Kakuho: Elf",
@@ -13194,7 +13195,7 @@ window.details = {
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base RCV by 30" },
             { "description": "Boosts base HP by 80" },
-            { "description": "Acquire new Captain Ability: Boosts ATK of [QCK] characters by 2.5x, their RCV and HP by ?x" },
+            { "description": "Acquire new Captain Ability: Boosts ATK of [QCK] characters by 2.5x and their HP and RCV by ?x" },
             { "description": "Boosts base ATK by 50" },
             { "description": "Acquire Potential 2: Reduce No Healing duration" },
         ],
@@ -13203,10 +13204,10 @@ window.details = {
                 "Name": "[STR] Damage Reduction",
                 "description": [
                     "Level 1: Reduce damage taken from [STR] characters by 1%",
-                    "Level 2: Reduce damage taken from [STR] characters by ?%",
-                    "Level 3: Reduce damage taken from [STR] characters by ?%",
-                    "Level 4: Reduce damage taken from [STR] characters by ?%",
-                    "Level 5: Reduce damage taken from [STR] characters by ?%"
+                    "Level 2: Reduce damage taken from [STR] characters by 2%",
+                    "Level 3: Reduce damage taken from [STR] characters by 3%",
+                    "Level 4: Reduce damage taken from [STR] characters by 4%",
+                    "Level 5: Reduce damage taken from [STR] characters by 5%"
                 ]
             },
             {
@@ -13278,7 +13279,7 @@ window.details = {
         specialName: "Deadly Fangs of Rage",
         sailor: {
             "base": "None",
-            "level1": "Makes [DEX] and [TND] orbs \"beneficial\" for himself",
+            "level1": "Makes [DEX] and [TND] orbs \"beneficial\" for this unit",
             "level2": "Boosts own base ATK by 75",
         },
         sailorNotes: "#{beneficial}",
@@ -13292,22 +13293,22 @@ window.details = {
             { "description": "Boosts base HP by 80" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base RCV by 30" },
-            { "description": "Acquire Sailor Ability 1: Makes [DEX] and [TND] orbs \"beneficial\" for himself" },
+            { "description": "Acquire Sailor Ability 1: Makes [DEX] and [TND] orbs \"beneficial\" for this unit" },
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base ATK by 60" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Acquire Sailor Ability 2: Boosts own base ATK by 75" },
-            { "description": "Acquire Potential 2: Pinch Healing" },
+            { "description": "Acquire Potential 2: Slot Bind Self-reduction" },
         ],
         potential: [
             {
                 "Name": "[STR] Damage Reduction",
                 "description": [
                     "Level 1: Reduce damage taken from [STR] characters by 1%",
-                    "Level 2: Reduce damage taken from [STR] characters by ?%",
-                    "Level 3: Reduce damage taken from [STR] characters by ?%",
-                    "Level 4: Reduce damage taken from [STR] characters by ?%",
-                    "Level 5: Reduce damage taken from [STR] characters by ?%"
+                    "Level 2: Reduce damage taken from [STR] characters by 2%",
+                    "Level 3: Reduce damage taken from [STR] characters by 3%",
+                    "Level 4: Reduce damage taken from [STR] characters by 4%",
+                    "Level 5: Reduce damage taken from [STR] characters by 5%"
                 ]
             },
             {
@@ -13738,14 +13739,12 @@ window.details = {
         specialName: "Mil Fleur: Gigantesco Mano Stomp",
         sailor: "Reduces Blindness duration by 3 turns",
         sailor: {
-            "base": "None",
-            "level1": "Makes [DEX] and [TND] orbs \"beneficial\" for himself",
-            "level2": "Boosts own base ATK by 75",
+            "base": "Reduces Blindness duration by 3 turns",
+            "level1": "When any other [DEX] or [PSY] character uses a special, reduces own cooldown by 2 turns",
         },
-        sailorNotes: "#{beneficial}",
         limit: [
             { "description": "Boosts base RCV by 20" },
-            { "description": "Boosts base RCV by 30" },
+            { "description": "Boosts base HP by 30" },
             { "description": "Boosts base ATK by 20" },
             { "description": "Acquire Potential 1: [QCK] Damage Reduction" },
             { "description": "Boosts base ATK by 30" },
@@ -13765,20 +13764,20 @@ window.details = {
                 "Name": "[QCK] Damage Reduction",
                 "description": [
                     "Level 1: Reduce damage taken from [QCK] characters by 1%",
-                    "Level 2: Reduce damage taken from [QCK] characters by ?%",
-                    "Level 3: Reduce damage taken from [QCK] characters by ?%",
-                    "Level 4: Reduce damage taken from [QCK] characters by ?%",
-                    "Level 5: Reduce damage taken from [QCK] characters by ?%"
+                    "Level 2: Reduce damage taken from [QCK] characters by 2%",
+                    "Level 3: Reduce damage taken from [QCK] characters by 3%",
+                    "Level 4: Reduce damage taken from [QCK] characters by 4%",
+                    "Level 5: Reduce damage taken from [QCK] characters by 5%"
                 ]
             },
             {
                 "Name": "Enrage",
                 "description": [
                     "Level 1: Boosts base ATK by 50",
-                    "Level 2: Boosts base ATK by ?",
-                    "Level 3: Boosts base ATK by ?",
-                    "Level 4: Boosts base ATK by ?",
-                    "Level 5: Boosts base ATK by ?"
+                    "Level 2: Boosts base ATK by ??",
+                    "Level 3: Boosts base ATK by ??",
+                    "Level 4: Boosts base ATK by ??",
+                    "Level 5: Boosts base ATK by ??"
                 ]
             },
         ],
@@ -13856,7 +13855,6 @@ window.details = {
             "base": "If this character has a [STR] orb and you hit a Perfect with him, keep his [STR] orb for the next turn",
             "level1": "When any other [STR] character uses a special, reduces own cooldown by 2 turns",
         },
-        sailorNotes: "#{beneficial}",
         limit: [
             { "description": "Boosts base RCV by 5" },
             { "description": "Boosts base RCV by 5" },
@@ -13879,10 +13877,10 @@ window.details = {
                 "Name": "[DEX] Damage Reduction",
                 "description": [
                     "Level 1: Reduce damage taken from [DEX] characters by 1%",
-                    "Level 2: Reduce damage taken from [DEX] characters by ?%",
-                    "Level 3: Reduce damage taken from [DEX] characters by ?%",
-                    "Level 4: Reduce damage taken from [DEX] characters by ?%",
-                    "Level 5: Reduce damage taken from [DEX] characters by ?%"
+                    "Level 2: Reduce damage taken from [DEX] characters by 2%",
+                    "Level 3: Reduce damage taken from [DEX] characters by 3%",
+                    "Level 4: Reduce damage taken from [DEX] characters by 4%",
+                    "Level 5: Reduce damage taken from [DEX] characters by 5%"
                 ]
             },
             {
@@ -13890,7 +13888,7 @@ window.details = {
                 "description": [
                     "Level 1: Reduces No Healing duration by 1 turn",
                     "Level 2: Reduces No Healing duration by ? turn",
-                    "Level 3: Reduces No Healing duration by ? turns",
+                    "Level 3: Reduces No Healing duration by ? turn",
                     "Level 4: Reduces No Healing duration by ? turns",
                     "Level 5: Reduces No Healing duration by ? turns"
                 ]
@@ -16883,7 +16881,7 @@ window.details = {
         specialName: "Shadow Asgard: \"Baptism\" from the Royal Shichibukai",
         sailor: {
             "base": "When any other character uses a special, reduces own cooldown by 1 turn",
-            "level1": "Makes [STR], [QCK], [DEX], [PSY] and [INT] orbs \"beneficial\" for himself",
+            "level1": "Makes [STR], [QCK], [DEX], [PSY] and [INT] orbs \"beneficial\" for this unit",
         },
         sailorNotes: "#{beneficial}",
         limit: [
@@ -16894,7 +16892,7 @@ window.details = {
             { "description": "Boosts base HP by 40" },
             { "description": "Boosts base RCV by 10" },
             { "description": "Boosts base RCV by 20" },
-            { "description": "Acquire Sailor Ability: Makes [STR], [QCK], [DEX], [PSY] and [INT] orbs \"beneficial\" for himself" },
+            { "description": "Acquire Sailor Ability: Makes [STR], [QCK], [DEX], [PSY] and [INT] orbs \"beneficial\" for this unit" },
             { "description": "Boosts base HP by 50" },
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base HP by 70" },
@@ -16908,10 +16906,10 @@ window.details = {
                 "Name": "[DEX] Damage Reduction",
                 "description": [
                     "Level 1: Reduce damage taken from [DEX] characters by 1%",
-                    "Level 2: Reduce damage taken from [DEX] characters by ?%",
-                    "Level 3: Reduce damage taken from [DEX] characters by ?%",
-                    "Level 4: Reduce damage taken from [DEX] characters by ?%",
-                    "Level 5: Reduce damage taken from [DEX] characters by ?%"
+                    "Level 2: Reduce damage taken from [DEX] characters by 2%",
+                    "Level 3: Reduce damage taken from [DEX] characters by 3%",
+                    "Level 4: Reduce damage taken from [DEX] characters by 4%",
+                    "Level 5: Reduce damage taken from [DEX] characters by 5%"
                 ]
             },
             {
@@ -17446,10 +17444,10 @@ window.details = {
                 "Name": "[STR] Damage Reduction",
                 "description": [
                     "Level 1: Reduce damage taken from [STR] characters by 1%",
-                    "Level 2: Reduce damage taken from [STR] characters by ?%",
-                    "Level 3: Reduce damage taken from [STR] characters by ?%",
-                    "Level 4: Reduce damage taken from [STR] characters by ?%",
-                    "Level 5: Reduce damage taken from [STR] characters by ?%"
+                    "Level 2: Reduce damage taken from [STR] characters by 2%",
+                    "Level 3: Reduce damage taken from [STR] characters by 3%",
+                    "Level 4: Reduce damage taken from [STR] characters by 4%",
+                    "Level 5: Reduce damage taken from [STR] characters by 5%"
                 ]
             },
             {
@@ -17871,8 +17869,8 @@ window.details = {
         specialName: "King's Lightning Burial",
         sailor: {
             "base": "None",
-            "level1": "When is HP is below ?%, boosts base ATK of Slasher characters by 50",
-            "level2": "When is HP is below ?%, boosts base ATK of Cerebral characters by 50",
+            "level1": "When HP is below ??% at the start of the turn, boosts ATK of Slasher characters by 50",
+            "level2": "When HP is below ??% at the start of the turn, boosts ATK of Cerebral characters by 50",
         },
         limit: [
             { "description": "Boosts base ATK by 10" },
@@ -17884,11 +17882,11 @@ window.details = {
             { "description": "Boosts base HP by 60" },
             { "description": "Boosts base RCV by 20" },
             { "description": "Boosts base ATK by 40" },
-            { "description": "Acquire Sailor Ability 1: When is HP is below ?%, boosts base ATK of Slasher characters by 50" },
+            { "description": "Acquire Sailor Ability 1: When HP is below ??% at the start of the turn, boosts ATK of Slasher characters by 50" },
             { "description": "Boosts base HP by 80" },
             { "description": "Boosts base ATK by 50" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
-            { "description": "Acquire Sailor Ability 2: When is HP is below ?%, boosts base ATK of Cerebral characters by 50" },
+            { "description": "Acquire Sailor Ability 2: When HP is below ??% at the start of the turn, boosts ATK of Cerebral characters by 50" },
             { "description": "Acquire Potential 2: Critcal Hit" },
         ],
         potential: [
@@ -17896,20 +17894,20 @@ window.details = {
                 "Name": "[INT] Damage Reduction",
                 "description": [
                     "Level 1: Reduce damage taken from [INT] characters by 1%",
-                    "Level 2: Reduce damage taken from [INT] characters by ?%",
-                    "Level 3: Reduce damage taken from [INT] characters by ?%",
-                    "Level 4: Reduce damage taken from [INT] characters by ?%",
-                    "Level 5: Reduce damage taken from [INT] characters by ?%"
+                    "Level 2: Reduce damage taken from [INT] characters by 2%",
+                    "Level 3: Reduce damage taken from [INT] characters by 3%",
+                    "Level 4: Reduce damage taken from [INT] characters by 4%",
+                    "Level 5: Reduce damage taken from [INT] characters by 5%"
                 ]
             },
             {
                 "Name": "Critical Hit",
                 "description": [
                     "Level 1: If you hit a perfect with this character, there is a 30% chance to deal 4% of this character's attack in extra damage",
-                    "Level 2: If you hit a perfect with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
-                    "Level 3: If you hit a perfect with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
-                    "Level 4: If you hit a perfect with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
-                    "Level 5: If you hit a perfect with this character, there is a ?% chance to deal ?% of this character's attack in extra damage"
+                    "Level 2: If you hit a perfect with this character, there is a ??% chance to deal ?% of this character's attack in extra damage",
+                    "Level 3: If you hit a perfect with this character, there is a ??% chance to deal ?% of this character's attack in extra damage",
+                    "Level 4: If you hit a perfect with this character, there is a ??% chance to deal ?% of this character's attack in extra damage",
+                    "Level 5: If you hit a perfect with this character, there is a ??% chance to deal ?% of this character's attack in extra damage"
                 ]
             },
         ]
@@ -18365,10 +18363,10 @@ window.details = {
                 "Name": "Critical Hit",
                 "description": [
                     "Level 1: If you hit a perfect with this character, there is a 40% chance to deal 4% of this character's attack in extra damage",
-                    "Level 2: If you hit a perfect with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
-                    "Level 3: If you hit a perfect with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
-                    "Level 4: If you hit a perfect with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
-                    "Level 5: If you hit a perfect with this character, there is a ?% chance to deal ?% of this character's attack in extra damage"
+                    "Level 2: If you hit a perfect with this character, there is a ??% chance to deal ?% of this character's attack in extra damage",
+                    "Level 3: If you hit a perfect with this character, there is a ??% chance to deal ?% of this character's attack in extra damage",
+                    "Level 4: If you hit a perfect with this character, there is a ??% chance to deal ?% of this character's attack in extra damage",
+                    "Level 5: If you hit a perfect with this character, there is a ??% chance to deal ?% of this character's attack in extra damage"
                 ]
             },
         ]
