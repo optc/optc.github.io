@@ -6880,6 +6880,8 @@ window.captains = {
         atk: function(p) { return p.unit.cost <= 40 ? 1.75 : 0.5; },
         hp: function(p) { return p.unit.cost <= 40 ? 1 : 0.5; }
     },
+    2036: {
+        atk: function(p) { return (p.unit.class.has("Fighter")) ? 2.25 : 1 },
     2037: {
         damageSorter: function(d) { return CrunchUtils.classSort(d, 3.75, [ "Fighter" ]); },
         hitAtk: function(p) {
@@ -6900,7 +6902,7 @@ window.captains = {
         hp: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? 1.2 : 1; },
         rcv: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? 1.2 : 1; },
     },
-    2041: {
+    2043: {
         atk: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 2.25 : 1; },
         hp: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 1.2 : 1; },
     },

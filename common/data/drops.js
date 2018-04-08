@@ -2584,8 +2584,8 @@ window.drops = {
         
         {
             name: 'Halloween Event Characters',
-            global: true,
             thumb: 1300,
+            global: true,
             nakama: 6130000,
             'All Difficulties': [ 1299, 1305, 1325 ],
         },
@@ -2593,8 +2593,10 @@ window.drops = {
         {
             name: 'White Day Characters',
             thumb: 1463,
+            global: true,
             nakama: 6146300,
             gamewith: 51651,
+            condition: 'Only Luffy and Chopper Islands are Global',
             'Luffy': [ 1462, 29, 563, 1059, 345, 192, 113, 108, 115, 116, 117, 1180, 266, 94, 83 ],
             'Chopper': [ 1464, 1155, 333, 728, 334, 1061, 346, 193, 109, 114, 115, 116, 117, 1180, 266, 94, 83 ],
             'Sanji': [ 1507, 52, 207, 892, 343, 190, 111, 106, 115, 116, 117, 1180, 266, 94, 83 ],
@@ -2751,9 +2753,9 @@ window.drops = {
             thumb: 2023,
             nakama: null,
             gamewith: null,
-            //condition: 'Chance of dropping the Silver Almighty Book, Guidence Fragments and Guidence Crystals.',
+            //condition: 'Chance of dropping the Silver Almighty Book, Guidance Fragments and Guidance Crystals.',
             //'Japan': [ -1621, -1632, -1665, -1678, -1713, -1721, -1770 ],
-            //'Global': [ -1621, -1632, -1665, -1713, -1721 ],
+            //'Global': [ -1621, -1632, -1665, -1713, -1721, -1770 ],
             'Chopperman Missions': [ 2042 ],
         },
         
@@ -2860,7 +2862,26 @@ window.drops = {
             condition: 'Zoro Drop is guranteed',
             'All Difficulties': [ 1900, -1921, -1362, -1388, -8, -906, -1175, -554, -218, -219 ],
         },
-
+        
+        {
+            name: "Vs Akainu",
+            thumb: 2023,
+            nakama: null,
+            gamwith: null,
+            showManual: true,
+            condition: "Chopperman Missions are available. 15 stamina earns 1 point for the team, 30 stamina earns 3 points, 50 stamina earns 8 points. Chance to earn a Aokiji Manual, Almighty Manual, CC, Guidance Fragments, Guidance Crystals, Guidance Jewel materials and Training Drinks",
+            'All Difficulties': [ -2025 ],
+        },
+        
+        {
+            name: "Vs Aokiji",
+            thumb: 2025,
+            nakama: null,
+            gamwith: null,
+            showManual: true,
+            condition: "Chopperman Missions are available. 15 stamina earns 1 point for the team, 30 stamina earns 3 points, 50 stamina earns 8 points. Chance to earn a Akainu Manual, Almighty Manual, CC, Guidance Fragments, Guidance Crystals, Guidance Jewel materials and Training Drinks",
+            'All Difficulties': [ -2023 ],
+        },
    ],
 
     'Training Forest': [

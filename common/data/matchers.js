@@ -704,7 +704,7 @@ window.matchers = [
     {
         name: 'Matching Orb Keeper',
         target: 'sailor',
-        matcher: /If this character has a +(STR|DEX|QCK|PSY|INT)\b.+hit a Perfect/i
+        matcher: /If this character has (a|an) +(STR|DEX|QCK|PSY|INT|RCV)\b orb.+hit a Perfect/i
     },
     
     /* * * * * Limit Break * * * * */
@@ -755,6 +755,12 @@ window.matchers = [
         name: 'Damage Reduction Potential Ability',
         target: 'limit',
         matcher: /Damage Reduction/i
+    },
+    
+    {
+        name: 'Cooldown Reduction Potential Ability',
+        target: 'limit',
+        matcher: /Cooldown Reduction/i
     },
 
 ];
