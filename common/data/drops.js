@@ -2862,6 +2862,16 @@ window.drops = {
             condition: 'Zoro Drop is guranteed',
             'All Difficulties': [ 1900, -1921, -1362, -1388, -8, -906, -1175, -554, -218, -219 ],
         },
+        
+        {
+            name: 'Prepare for Battle! Aokiji and Akainu!',
+            thumb: 1280,
+            nakama: null,
+            gamewith: 98232,
+            showManual: true,
+            'Aokiji': [ 298, 1225, 1226, 1280, 1281 ],
+            'Akainu': [ 1223, 1270, 1283, 1417, 1418 ],
+        },
    ],
 
     'Training Forest': [
