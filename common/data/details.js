@@ -4977,8 +4977,8 @@ window.details = {
         captain: "Reduces damage received by 30% if HP is above 70% at the start of the turn, boosts ATK of QCK and PSY characters by 2.75x if HP is above 70% at the start the turn",
         sailor: {
             "base": "None",
-            "level1": "Boosts base ATK, HP, and RCV of [QCK] and [PSY] characters by 50",
-            "level2": "Makes [QCK], [PSY], and [TND] orbs \"beneficial\" for [QCK] and [PSY] characters",
+            "level1": "Boosts base ATK, HP and RCV of [QCK] and [PSY] characters by 50",
+            "level2": "Makes [QCK], [PSY] and [TND] orbs \"beneficial\" for [QCK] and [PSY] characters",
         },
         sailorNotes: "#{beneficial}",
         limit: [
@@ -4989,7 +4989,7 @@ window.details = {
             { "description": "Boosts base HP by 25" },
             { "description": "Boosts base HP by 30" },
             { "description": "Boosts base HP by 35" },
-            { "description": "Acquire Sailor Ability 1: Boosts base ATK, HP, and RCV of [QCK] and [PSY] characters by 50" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK, HP and RCV of [QCK] and [PSY] characters by 50" },
             { "description": "Boosts base ATK by 10" },
             { "description": "Boosts base ATK by 15" },
             { "description": "Boosts base ATK by 20" },
@@ -5764,7 +5764,7 @@ window.details = {
         captain: "Boosts ATK of Free Spirit characters by 2x",
         sailor: {
             "base": "None",
-            "level1": "Boosts base ATK, HP, and RCV of all characters by 15",
+            "level1": "Boosts base ATK, HP and RCV of all characters by 15",
             "level2": "Makes [TND] orbs \"beneficial\" for all characters",
         },
         sailorNotes: "#{beneficial}",
@@ -5778,7 +5778,7 @@ window.details = {
             { "description": "Boosts base HP by 65" },
             { "description": "Boosts base HP by 80" },
             { "description": "Boosts base ATK by 20" },
-            { "description": "Acquire Sailor Ability 1: Boosts base ATK, HP, and RCV of all characters by 15" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK, HP and RCV of all characters by 15" },
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base ATK by 40" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
@@ -6937,13 +6937,13 @@ window.details = {
             { "description": "Acquire Potential 1: [QCK] Damage Reduction" },
             { "description": "Boosts base HP by 80" },
             { "description": "Boosts base ATK by 40" },
-            { "description": "Reduce base Special Cooldown by 2 turn" },
+            { "description": "Reduce base Special Cooldown by 2 turns" },
             { "description": "Boosts base HP by 90" },
-            { "description": "Reduce base Special Cooldown by 2 turn" },
+            { "description": "Reduce base Special Cooldown by 2 turns" },
             { "description": "Acquire Sailor Ability 1: Boosts base HP of Shooter, Slasher and Striker characters by 100" },
-            { "description": "Reduce base Special Cooldown by 2 turn" },
+            { "description": "Reduce base Special Cooldown by 2 turns" },
             { "description": "Boosts base ATK by 50" },
-            { "description": "Reduce base Special Cooldown by 2 turn" },
+            { "description": "Reduce base Special Cooldown by 2 turns" },
             { "description": "Acquire Sailor Ability 2: Boosts base ATK of Shooter, Slasher and Striker characters by 50" },
             { "description": "Acquire Potential 2: Barrier Penetration" },
         ],
@@ -7194,7 +7194,7 @@ window.details = {
         specialNotes: "#{orb: 1.5x or 1.75x} #{stages}",
         sailor: {
             "base": "None",
-            "level1": "Reduces Paralysis duration on all characters by 1 turn",
+            "level1": "Reduces Paralysis duration by 1 turn on all characters",
             "level2": "Makes [INT], [RCV] and [TND] orbs \"beneficial\" for this unit",
         },
         sailorNotes: "#{beneficial}",
@@ -7208,7 +7208,7 @@ window.details = {
             { "description": "Boosts base RCV by 20" },
             { "description": "Boosts base HP by 50" },
             { "description": "Boosts base RCV by 40" },
-            { "description": "Acquire Sailor Ability 1: Reduces Paralysis duration on all characters by 1 turn" },
+            { "description": "Acquire Sailor Ability 1: Reduces Paralysis duration by 1 turn on all characters" },
             { "description": "Boosts base ATK by 40" },
             { "description": "Boosts base ATK by 60" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
@@ -11189,7 +11189,7 @@ window.details = {
         special: "Boosts chances of getting [INT] orbs for 3 turns",
         specialName: "Ochenta Fleur - Cuatro Manus Shock",
         captain: "Boosts ATK and RCV of INT characters by 1.5x",
-        sailor: "Reduces Blindness duration by 3 turn"
+        sailor: "Reduces Blindness duration by 3 turns"
     },
     1208: {
         special: "Boosts chances of getting [INT] orbs for 3 turns",
@@ -12652,7 +12652,7 @@ window.details = {
         specialNotes: "#{randomHits : 10}<br>#{random : 1,000 : 32,000 : for each hit}",
         sailor: {
             "base": "Reduces Paralysis duration by 1 turn",
-            "level1": "Reduces Blindness duration by 3 turn",
+            "level1": "Reduces Blindness duration by 3 turns",
         },
         specialName: "A Decree of the Veteran",
         limit: [
@@ -12666,7 +12666,7 @@ window.details = {
             { "description": "Boosts base RCV by 10" },
             { "description": "Boosts base HP by 80" },
             { "description": "Boosts base ATK by 60" },
-            { "description": "Acquire Sailor Ability: Reduces Blindness duration by 3 turn" },
+            { "description": "Acquire Sailor Ability: Reduces Blindness duration by 3 turns" },
             { "description": "Acquire new Captain Ability: Boosts ATK of all characters by 1.2x, heals for 1.5x her RCV at the end of the turn each time you hit a Good. Heals for .3x her RCV at the end of the turn each time you hit a Perfect" },
             { "description": "Reduce base Special Cooldown by 2 turns" },
             { "description": "Acquire 1 additional Socket slot" },
@@ -13062,7 +13062,7 @@ window.details = {
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base HP by 60" },
             { "description": "Boosts base ATK by 50" },
-            { "description": "Reduce base Special Cooldown by 2 turn" },
+            { "description": "Reduce base Special Cooldown by 2 turns" },
             { "description": "Acquire Sailor Ability: Boosts base ATK of [PSY] characters by 70" },
             { "description": "Acquire Potential 2: Barrier Penetration" },
         ],
@@ -13756,7 +13756,7 @@ window.details = {
             { "description": "Boosts base RCV by 30" },
             { "description": "Boosts base HP by 60" },
             { "description": "Acquire Sailor Ability : When any other [DEX] or [PSY] character uses a special, reduces own cooldown by 2 turns" },
-            { "description": "Reduce base Special Cooldown by 2 turn" },
+            { "description": "Reduce base Special Cooldown by 2 turns" },
             { "description": "Acquire Potential 2: Enrage" },
         ],
         potential: [
@@ -14978,8 +14978,8 @@ window.details = {
                 "Name": "Reduce No Healing duration",
                 "description": [
                     "Level 1: Reduces No Healing duration by 1 turn",
-                    "Level 2: Reduces No Healing duration by 2 turn",
-                    "Level 3: Reduces No Healing duration by 3 turn",
+                    "Level 2: Reduces No Healing duration by 2 turns",
+                    "Level 3: Reduces No Healing duration by 3 turns",
                     "Level 4: Reduces No Healing duration by 5 turns",
                     "Level 5: Reduces No Healing duration by 10 turns"
                 ]
@@ -16019,7 +16019,7 @@ window.details = {
         specialName: "Franky's Rocket Launcher",
         sailor: {
             "base": "None",
-            "level1": "Boosts base ATK, HP, and RCV of all characters by 15",
+            "level1": "Boosts base ATK, HP and RCV of all characters by 15",
             "level2": "Makes [TND] orbs \"beneficial\" for all characters",
         },
         sailorNotes: "#{beneficial}",
@@ -16033,7 +16033,7 @@ window.details = {
             { "description": "Boosts base HP by 65" },
             { "description": "Boosts base HP by 80" },
             { "description": "Boosts base ATK by 20" },
-            { "description": "Acquire Sailor Ability 1: Boosts base ATK, HP, and RCV of all characters by 15" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK, HP and RCV of all characters by 15" },
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base ATK by 40" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
@@ -17887,7 +17887,7 @@ window.details = {
             { "description": "Boosts base ATK by 50" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Acquire Sailor Ability 2: When HP is below ??% at the start of the turn, boosts ATK of Cerebral characters by 50" },
-            { "description": "Acquire Potential 2: Critcal Hit" },
+            { "description": "Acquire Potential 2: Critical Hit" },
         ],
         potential: [
             {
@@ -21565,7 +21565,7 @@ window.details = {
                 "Name": "Reduce No Healing duration",
                 "description": [
                     "Level 1: Reduces No Healing duration by 1 turn",
-                    "Level 2: Reduces No Healing duration by 2 turn",
+                    "Level 2: Reduces No Healing duration by 2 turns",
                     "Level 3: Reduces No Healing duration by 3 turns",
                     "Level 4: Reduces No Healing duration by 5 turns",
                     "Level 5: Reduces No Healing duration by 10 turns"
@@ -22173,7 +22173,7 @@ window.details = {
                 "Name": "Reduce No Healing duration",
                 "description": [
                     "Level 1: Reduces No Healing duration by 1 turn",
-                    "Level 2: Reduces No Healing duration by 2 turn",
+                    "Level 2: Reduces No Healing duration by 2 turns",
                     "Level 3: Reduces No Healing duration by 3 turns",
                     "Level 4: Reduces No Healing duration by 4 turns",
                     "Level 5: Reduces No Healing duration by 5 turns"
@@ -22213,7 +22213,7 @@ window.details = {
     },
     1915: {//G4 Luffy
         captain: "Boosts ATK of Powerhouse and Free Spirit characters by 2x after scoring 3 Perfects in a row",
-        special: "Randomizes all orbs, including [BLOCK] orbs, changes own orb into [QCK], deals 300x character's ATK in typeless damage to one enemy and boosts the Color Affinity of all characters by 1.75x for 1 turns",
+        special: "Randomizes all orbs, including [BLOCK] orbs, changes own orb into [QCK], deals 300x character's ATK in typeless damage to one enemy and boosts the Color Affinity of all characters by 1.75x for 1 turn",
         specialName: "Gomu Gomu no Leo Bazooka",
     },
     1916: {//G4 Luffy
@@ -22226,7 +22226,7 @@ window.details = {
             "level5": "Boosts ATK of Powerhouse and Free Spirit characters by 2x after scoring 2 Perfects in a row, boosts by 3.5x after scoring 4 Perfects in a row and reduce damage received by 4%",
             "level6": "Boosts ATK of Powerhouse and Free Spirit characters by 2x after scoring 2 Perfects in a row, boosts by 4x after scoring 4 Perfects in a row and reduce damage received by 4%",
         },
-        special: "Randomizes all orbs, including [BLOCK] orbs, changes own orb into [QCK], deals 300x character's ATK in typeless damage to one enemy and boosts the Color Affinity of all characters by 1.75x for 1 turns",
+        special: "Randomizes all orbs, including [BLOCK] orbs, changes own orb into [QCK], deals 300x character's ATK in typeless damage to one enemy and boosts the Color Affinity of all characters by 1.75x for 1 turn",
         specialName: "Gomu Gomu no Leo Bazooka",
         sailor: {
             "base": "None",
@@ -22611,8 +22611,8 @@ window.details = {
                 "Name": "Reduce No Healing duration",
                 "description": [
                     "Level 1: Reduces No Healing duration by 1 turn",
-                    "Level 2: Reduces No Healing duration by 2 turn",
-                    "Level 3: Reduces No Healing duration by 3 turn",
+                    "Level 2: Reduces No Healing duration by 2 turns",
+                    "Level 3: Reduces No Healing duration by 3 turns",
                     "Level 4: Reduces No Healing duration by 4 turns",
                     "Level 5: Reduces No Healing duration by 5 turns"
                 ]
@@ -22718,8 +22718,8 @@ window.details = {
                 "Name": "Reduce No Healing duration",
                 "description": [
                     "Level 1: Reduces No Healing duration by 1 turn",
-                    "Level 2: Reduces No Healing duration by 2 turn",
-                    "Level 3: Reduces No Healing duration by 3 turn",
+                    "Level 2: Reduces No Healing duration by 2 turns",
+                    "Level 3: Reduces No Healing duration by 3 turns",
                     "Level 4: Reduces No Healing duration by 5 turns",
                     "Level 5: Reduces No Healing duration by 7 turns"
                 ]
@@ -23433,7 +23433,7 @@ window.details = {
                 "Name": "Reduce No Healing duration",
                 "description": [
                     "Level 1: Reduces No Healing duration by 1 turn",
-                    "Level 2: Reduces No Healing duration by 2 turn",
+                    "Level 2: Reduces No Healing duration by 2 turns",
                     "Level 3: Reduces No Healing duration by 3 turns",
                     "Level 4: Reduces No Healing duration by 4 turns",
                     "Level 5: Reduces No Healing duration by 5 turns"
@@ -23518,7 +23518,7 @@ window.details = {
                 "Name": "Reduce No Healing duration",
                 "description": [
                     "Level 1: Reduces No Healing duration by 1 turn",
-                    "Level 2: Reduces No Healing duration by 2 turn",
+                    "Level 2: Reduces No Healing duration by 2 turns",
                     "Level 3: Reduces No Healing duration by 3 turns",
                     "Level 4: Reduces No Healing duration by 4 turns",
                     "Level 5: Reduces No Healing duration by 5 turns"
@@ -23795,7 +23795,7 @@ window.details = {
                 "Name": "Reduce No Healing duration",
                 "description": [
                     "Level 1: Reduces No Healing duration by 1 turn",
-                    "Level 2: Reduces No Healing duration by 2 turn",
+                    "Level 2: Reduces No Healing duration by 2 turns",
                     "Level 3: Reduces No Healing duration by 3 turns",
                     "Level 4: Reduces No Healing duration by 5 turns",
                     "Level 5: Reduces No Healing duration by 7 turns"
@@ -24055,28 +24055,28 @@ window.details = {
             { "description": "Boosts base HP by 50" },
             { "description": "Boosts base RCV by 20" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
-            { "description": "Reduce base Special Cooldown by 2 turn" },
+            { "description": "Reduce base Special Cooldown by 2 turns" },
             { "description": "Boosts base ATK by 25" },
             { "description": "Boosts base HP by 50" },
             { "description": "Boosts base RCV by 30" },
-            { "description": "Reduce base Special Cooldown by 2 turn" },
+            { "description": "Reduce base Special Cooldown by 2 turns" },
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base HP by 50" },
-            { "description": "Reduce base Special Cooldown by 2 turn" },
-            { "description": "Reduce base Special Cooldown by 2 turn" },
+            { "description": "Reduce base Special Cooldown by 2 turns" },
+            { "description": "Reduce base Special Cooldown by 2 turns" },
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base HP by 50" },
             { "description": "Acquire Sailor Ability: Makes [TND] orbs \"beneficial\" for [DEX] and [PSY] characters" },
             { "description": "Boosts base ATK by 50" },
             { "description": "Boosts base HP by 50" },
             { "description": "Boosts base RCV by 50" },
-            { "description": "Reduce base Special Cooldown by 2 turn" },
+            { "description": "Reduce base Special Cooldown by 2 turns" },
             { "description": "Acquire 1 additional Socket slot" },
-            { "description": "Reduce base Special Cooldown by 2 turn" },
+            { "description": "Reduce base Special Cooldown by 2 turns" },
             { "description": "Boosts base ATK by 50" },
             { "description": "Boosts base HP by 60" },
-            { "description": "Reduce base Special Cooldown by 3 turn" },
+            { "description": "Reduce base Special Cooldown by 3 turns" },
             { "description": "Acquire Potential 2: Pinch Healing" },
         ],
         potential: [
@@ -24361,7 +24361,7 @@ window.details = {
                 "Name": "Reduce No Healing duration",
                 "description": [
                     "Level 1: Reduces No Healing duration by 1 turn",
-                    "Level 2: Reduces No Healing duration by 2 turn",
+                    "Level 2: Reduces No Healing duration by 2 turns",
                     "Level 3: Reduces No Healing duration by 3 turns",
                     "Level 4: Reduces No Healing duration by 4 turns",
                     "Level 5: Reduces No Healing duration by 5 turns"
@@ -24675,7 +24675,7 @@ window.details = {
                 "Name": "Reduce No Healing duration",
                 "description": [
                     "Level 1: Reduces No Healing duration by 1 turn",
-                    "Level 2: Reduces No Healing duration by 2 turn",
+                    "Level 2: Reduces No Healing duration by 2 turns",
                     "Level 3: Reduces No Healing duration by 3 turns",
                     "Level 4: Reduces No Healing duration by 5 turns",
                     "Level 5: Reduces No Healing duration by 7 turns"
@@ -24861,7 +24861,7 @@ window.details = {
                 "Name": "Reduce No Healing duration",
                 "description": [
                     "Level 1: Reduces No Healing duration by 1 turn",
-                    "Level 2: Reduces No Healing duration by 2 turn",
+                    "Level 2: Reduces No Healing duration by 2 turns",
                     "Level 3: Reduces No Healing duration by 3 turns",
                     "Level 4: Reduces No Healing duration by 5 turns",
                     "Level 5: Reduces No Healing duration by 7 turns"
