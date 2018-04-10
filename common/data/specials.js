@@ -4278,9 +4278,9 @@ window.specials = {
         }
     },
     1960: {
-        turnedOn: [ false, false ],
+        turnedOn: false,
         onActivation: function(p) {
-            window.specials[1960].turnedOn[p.slot] = true;
+            window.specials[1960].turnedOn = true;
             p.scope.notify({
                 text: 'Only affects Captain Ability if Pudding is your captain',
                 name: '1960warning'
@@ -4292,9 +4292,9 @@ window.specials = {
         delay: function(p) { return 1; }
     },
     1961: {
-        turnedOn: [ false, false ],
+        turnedOn: false,
         onActivation: function(p) {
-            window.specials[1961].turnedOn[p.slot] = true;
+            window.specials[1961].turnedOn = true;
             p.scope.notify({
                 text: 'Only affects Captain Ability if Pudding is your captain',
                 name: '1961warning'
@@ -4306,9 +4306,9 @@ window.specials = {
         delay: function(p) { return 1; }
     },
     1962: {
-        turnedOn: [ false, false ],
+        turnedOn: false,
         onActivation: function(p) {
-            window.specials[1962].turnedOn[p.slot] = true;
+            window.specials[1962].turnedOn = true;
             p.scope.notify({
                 text: 'Only affects Captain Ability if Sanji is your captain',
                 name: '1962warning'
@@ -4324,9 +4324,9 @@ window.specials = {
         }
     },
     1963: {
-        turnedOn: [ false, false ],
+        turnedOn: false,
         onActivation: function(p) {
-            window.specials[1963].turnedOn[p.slot] = true;
+            window.specials[1963].turnedOn = true;
             p.scope.notify({
                 text: 'Only affects Captain Ability if Sanji is your captain',
                 name: '1963warning'
@@ -4693,27 +4693,47 @@ window.specials = {
         type: "class",
     },
     2046: {
-        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[2046].multiplier, [p.friendCaptain, p.captain]); },
+        orb: function(p) { return p.unit.type == window.specials[2046].multiType ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[2046].multiplier, [p.friendCaptain, p.captain]) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain]); },
         onActivation: function(p) {
             if (p.colorCount.STR >= 4 || p.colorCount.DEX >= 4 || p.colorCount.QCK >= 4 || p.colorCount.PSY >= 4 || p.colorCount.INT >= 4) {
                 window.specials[2046].multiplier = 1.75;
+                if (p.colorCount.STR >= 4){
+                    window.specials[2046].multiType = "STR";
+                }
+                if (p.colorCount.QCK >= 4){
+                    window.specials[2046].multiType = "QCK";
+                }
+                if (p.colorCount.DEX >= 4){
+                    window.specials[2046].multiType = "DEX";
+                }
+                if (p.colorCount.PSY >= 4){
+                    window.specials[2046].multiType = "PSY";
+                }
+                if (p.colorCount.INT >= 4){
+                    window.specials[2046].multiType = "INT";
+                }
             }
             else{
                 window.specials[2046].multiplier = 1;
+                window.specials[2046].multiType = "null";
             }
         }
     },
     5000: {
         atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 1.5 : 1; },
+        type: "type",
     },
     5001: {
         atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 1.5 : 1; },
+        type: "type",
     },
     5002: {
         atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 1.5 : 1; },
+        type: "type",
     },
     5003: {
         atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 1.5 : 1; },
+        type: "type",
     },
     5004: {
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain]); }

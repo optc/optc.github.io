@@ -411,9 +411,9 @@ window.matchers = [
     },
     
     {
-        name: 'Additional Typeless Damage dealer',
+        name: 'Additional Damage dealer',
         target: 'special',
-        matcher: /Additional Typeless Damage/i
+        matcher: /Additional.+Damage/i
     },
     
     {
@@ -705,6 +705,12 @@ window.matchers = [
         name: 'Matching Orb Keeper',
         target: 'sailor',
         matcher: /If this character has (a|an) +(STR|DEX|QCK|PSY|INT|RCV)\b orb.+hit a Perfect/i
+    },
+    
+    {
+        name: 'Additional Damage dealer',
+        target: 'sailor',
+        matcher: /Additional.+Damage/i
     },
     
     /* * * * * Limit Break * * * * */
