@@ -1954,10 +1954,10 @@ window.drops = {
         },
         
         {
-            name: 'Red Hair Pirates!',
-            thumb: 2038,
+            name: 'Anchoring! Red Hair Pirates!',
+            thumb: 2044,
             nakama: null,
-            gamewith: null,
+            gamewith: 98267,
             'All Difficulties': [ 2044, 2045, 2046, -1869, -1406, -1824, -1875, -1904, -2044, -1225 ]
         },
         

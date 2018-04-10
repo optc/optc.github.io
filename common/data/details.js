@@ -24936,6 +24936,7 @@ window.details = {
     2046: {//Yasopp
         captain: "Boosts ATK of Shooter characters by 2.25x and their HP by 1.2x",
         special: "Deals 20x character's ATK in Typeless damage to one enemy that will ignore damage negating abilities and barriers. If your crew has 4 or more characters of the same Type, amplifies the effect of orbs for the Dominant Type by 1.75x for 1 turn.",
+        sailor: "If this character has a [STR] orb and you hit a Perfect with him, keep his [STR] orb for the next turn",
         specialName: "Exquisite Aim",
     },
     2200: {//Doflamingo Raid v2
