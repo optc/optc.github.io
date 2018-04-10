@@ -16803,14 +16803,14 @@ window.details = {
         captain: "Boosts ATK of Fighter characters by 2.25x",
         special: "Cuts the current HP of each enemy by 10%, reduces the defense of all enemies by 50% and amplifies the effects of orbs by 1.75x for 1 turn",
         specialName: "4000 Power Level Technique: Tempest Kick",
-        sailor: "Adds 3x character's ATK as Additional [DEX] Damage",
+        sailor: "Adds 2x character's ATK as Additional Typeless Damage",
         sailorNotes: "#{additionalDamage : 2x}",
     },
     1614: {//Rob Lucci
         captain: "Boosts ATK of Fighter characters by 2.5x and their HP by 1.25x",
         special: "Cuts the current HP of each enemy by 10%, reduces the defense of all enemies by 50% and amplifies the effects of orbs by 1.75x for 1 turn",
         specialName: "4000 Power Level Technique: Tempest Kick",
-        sailor: "Adds 3x character's ATK as Additional [DEX] Damage",
+        sailor: "Adds 2x character's ATK as Additional Typeless Damage",
         sailorNotes: "#{additionalDamage : 2x}",
     },
     1615: {//Crocodile
