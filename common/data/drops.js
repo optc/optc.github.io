@@ -2495,7 +2495,8 @@ window.drops = {
         {
             name: 'Edward Newgate',
             thumb: 1853,
-			nakama: 8185300,
+            global: true,
+            nakama: 8185300,
             gamewith: 79614,
             'Raging Sea': [ 1852 ]
         },
