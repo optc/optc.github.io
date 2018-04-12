@@ -24945,6 +24945,7 @@ window.details = {
         sailor: {
             "base": "Boosts own base ATK by 250 if this character is the last in the chain to attack",
         },
+        sailorNotes: "This could be a limit break locked ability."
     },
     2048: {//Koala
         captain: "Boosts ATK of Fighter characters by 3.25x if they have a matching orb, by 2x otherwise",
@@ -24953,6 +24954,7 @@ window.details = {
         sailor: {
             "base": "Boosts own base ATK by 250 if this character is the last in the chain to attack",
         },
+        sailorNotes: "This could be a limit break locked ability."
     },
     2200: {//Doflamingo Raid v2
         captain: "Boosts ATK of Driven and Cerebral characters by 2.5x when HP is 50% or below, 1.5x otherwise",
