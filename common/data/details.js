@@ -671,7 +671,7 @@ window.details = {
         captain: "Boosts ATK of QCK characters by 2x"
     },
     75: {
-        special: "Deals 15x character's ATK in QCK to all enemies",
+        special: "Deals 25x character's ATK in QCK damage to all enemies",
         specialName: "Flame Mirror",
         captain: {
             "base": "Boosts ATK of QCK characters by 2.5x",
@@ -7845,13 +7845,13 @@ window.details = {
     934: {
         captain: "Boosts ATK of Fighter characters by 2x and their HP by 1.5x. If HP is above 70% or below 30%, boosts ATK of Fighter characters by 2.75 instead",
         specialName: "Fishman Karate!! Shark Fist Tile Breaker",
-        special: "Makes Perfects harder to hit for 1 turn. Deals 20x character's ATK in [INT] damage to all enemies. Changes all Fighter Character orbs into Matching",
+        special: "Makes Perfects harder to hit for 1 turn. Deals 20x character's ATK in [INT] damage to all enemies. Changes all orbs on Fighter characters into Matching orbs",
         specialNotes: "Decreases timing window to hit a Perfect. (Animation remains the same)"
     },
     935: {
         captain: "Boosts ATK of Fighter characters by 2x and their HP by 1.5x. If HP is above 70% or below 30%, boosts ATK of Fighter characters by 2.75 instead",
         specialName: "Fishman Karate!! Shark Fist Tile Breaker",
-        special: "Makes Perfects harder to hit for 1 turn. Deals 20x character's ATK in [INT] damage to all enemies. Changes all Fighter Character orbs into matching",
+        special: "Makes Perfects harder to hit for 1 turn. Deals 20x character's ATK in [INT] damage to all enemies. Changes all orbs on Fighter characters into matching orbs",
         specialNotes: "Decreases timing window to hit a Perfect. (Animation remains the same)"
     },
     936: {
@@ -24937,6 +24937,16 @@ window.details = {
         captain: "Boosts ATK of Shooter characters by 2.25x and their HP by 1.2x",
         special: "Deals 20x character's ATK in Typeless damage to one enemy that will ignore damage negating abilities and barriers. If your crew has 4 or more characters of the same Type, amplifies the effect of orbs by 1.75x for 1 turn.",
         specialName: "Exquisite Aim",
+    },
+    2047: {//Koala
+        captain: "Not Translated",
+        special: "Deals 20x character's ATK in [QCK] damage to all enemies. If enemies have All Debuff Protection or Delay Debuff Protection at the time the special was activated, amplifies the effect of orbs by 2x for 1 turn and changes all orbs, including [BLOCK] orbs, on Fighter characters into Matching orbs",
+        specialName: "Koala Special",
+    },
+    2048: {//Koala
+        captain: "Boosts ATK of Fighter characters by 3.25x if they have a matching orb, by 2x otherwise",
+        special: "Deals 20x character's ATK in [QCK] damage to all enemies. If enemies have All Debuff Protection or Delay Debuff Protection at the time the special was activated, amplifies the effect of orbs by 2x for 1 turn and changes all orbs, including [BLOCK] orbs, on Fighter characters into Matching orbs",
+        specialName: "Koala Special",
     },
     2200: {//Doflamingo Raid v2
         captain: "Boosts ATK of Driven and Cerebral characters by 2.5x when HP is 50% or below, 1.5x otherwise",

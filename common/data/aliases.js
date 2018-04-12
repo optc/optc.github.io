@@ -2045,6 +2045,8 @@ window.aliases = {
     2044: ['','', 'Ben Beckman'],
     2045: ['','', 'Lucky Roux'],
     2046: ['','', 'Yasopp'],
+    2047: ['','', 'Limited Koala', 'Secret Koala'],
+    2048: ['','', 'Limited Koala', 'Secret Koala'],
     2200: ['', '', 'V2 Raid Doffy', 'V2 Raid Doflamingo'],
     2201: ['', '', 'V2 Raid Doffy', 'V2 Raid Doflamingo'],
 };
