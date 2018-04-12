@@ -24942,11 +24942,17 @@ window.details = {
         captain: "Not Translated",
         special: "Deals 20x character's ATK in [QCK] damage to all enemies. If enemies have All Debuff Protection or Delay Debuff Protection at the time the special was activated, amplifies the effect of orbs by 2x for 1 turn and changes all orbs, including [BLOCK] orbs, on Fighter characters into Matching orbs",
         specialName: "Koala Special",
+        sailor: {
+            "base": "Boosts own base ATK by 250 if this character is the last in the chain to attack",
+        },
     },
     2048: {//Koala
         captain: "Boosts ATK of Fighter characters by 3.25x if they have a matching orb, by 2x otherwise",
         special: "Deals 20x character's ATK in [QCK] damage to all enemies. If enemies have All Debuff Protection or Delay Debuff Protection at the time the special was activated, amplifies the effect of orbs by 2x for 1 turn and changes all orbs, including [BLOCK] orbs, on Fighter characters into Matching orbs",
         specialName: "Koala Special",
+        sailor: {
+            "base": "Boosts own base ATK by 250 if this character is the last in the chain to attack",
+        },
     },
     2200: {//Doflamingo Raid v2
         captain: "Boosts ATK of Driven and Cerebral characters by 2.5x when HP is 50% or below, 1.5x otherwise",
