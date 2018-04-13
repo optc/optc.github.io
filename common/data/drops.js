@@ -1848,6 +1848,7 @@ window.drops = {
         {
             name: 'Zou Royal Guard!',
             thumb: 1812,
+            global: true,
             nakama: 2181200,
             condition: 'Powerhouse Characters will be weakened',
             gamewith: 71416,
