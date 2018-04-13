@@ -4719,6 +4719,14 @@ window.specials = {
             }
         }
     },
+    2047: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain]); },
+        warning: "Selected special (%name%) assumes that the enemy has Delay Protection."
+    },
+    2048: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain]); },
+        warning: "Selected special (%name%) assumes that the enemy has Delay Protection."
+    },
     5000: {
         atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 1.5 : 1; },
         type: "type",
