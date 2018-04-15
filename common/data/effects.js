@@ -663,4 +663,25 @@ window.effects = {
             return !matching ? 1 : 1.5;
         },
     },
+    
+    '3 Ranking Missions - Ganfor, Mihawk and Blackbeard': {
+        description: 'Stats of certain characters boosted.',
+        thumb: 447,
+        id: 58, // don't change this
+        atk: function(p) {
+            var character = window.families[p.number];
+            matching = ["Koala", "Leo", "Elizabello", "Yasopp", "Curiel", "Hina", "Coby", "Monkey D. Garp", "Vinsmoke Reiju", "Nami", "Lucky Roo", "Kizaru"].indexOf(character) != -1;
+            return !matching ? 1 : 1.25;
+        },
+        hp: function(p) {
+            var character = window.families[p.number];
+            matching = ["Koala", "Leo", "Elizabello", "Yasopp", "Curiel", "Hina", "Coby", "Monkey D. Garp", "Vinsmoke Reiju", "Nami", "Lucky Roo", "Kizaru"].indexOf(character) != -1;
+            return !matching ? 1 : 1.25;
+        },
+        rcv: function(p) {
+            var character = window.families[p.number];
+            matching = ["Koala", "Leo", "Elizabello", "Yasopp", "Curiel", "Hina", "Coby", "Monkey D. Garp", "Vinsmoke Reiju", "Nami", "Lucky Roo", "Kizaru"].indexOf(character) != -1;
+            return !matching ? 1 : 1.25;
+        },
+    },
 };
