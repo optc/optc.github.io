@@ -20620,12 +20620,12 @@ window.details = {
     },
     1845: {//Garp
         captain: "Boosts ATK of Fighter characters by 2.5x and reduce damage received by 5%",
-        special: "Reduces the defense of all enemies by 100% for 1 turn. If the targeted enemy has less than or equal to than 25% of their MAX HP, instantly defeats them, otherwise, cuts the current HP of one enemy by 30%",
+        special: "Reduces the defense of all enemies by 100% for 1 turn. If the targeted enemy has less than or equal to 25% of their MAX HP, instantly defeats them, otherwise, cuts the current HP of one enemy by 30%",
         specialName: "Crushing Armament Fist",
     },
     1846: {//Garp
         captain: "Boosts ATK of Fighter characters by 2.75x and reduce damage received by 15%",
-        special: "Reduces the defense of all enemies by 100% for 1 turn. If the targeted enemy has less than or equal to than 25% of their MAX HP, instantly defeats them, otherwise, cuts the current HP of one enemy by 30%",
+        special: "Reduces the defense of all enemies by 100% for 1 turn. If the targeted enemy has less than or equal to 25% of their MAX HP, instantly defeats them, otherwise, cuts the current HP of one enemy by 30%",
         specialName: "Crushing Armament Fist",
     },
     1847: {//Sengoku+
