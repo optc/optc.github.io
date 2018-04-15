@@ -960,7 +960,7 @@ window.specials = {
             window.specials[873].multiplier = [1.5, 1.75][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 1.75][n] + 'x Orb boost. To switch to the ' + [1.75, 1.5][n] + 'x Orb boost, disable and re-enable this special',
-                name: '874warning'
+                name: '873warning'
             });
         }
     },
@@ -968,7 +968,7 @@ window.specials = {
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[874].multiplier, [p.friendCaptain, p.captain]); },
         onActivation: function(p) {
             var n = (window.specials[874].multiplier == 1.5 ? 1 : 0);
-            window.specials[873].multiplier = [1.5, 1.75][n];
+            window.specials[874].multiplier = [1.5, 1.75][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 1.75][n] + 'x Orb boost. To switch to the ' + [1.75, 1.5][n] + 'x Orb boost, disable and re-enable this special',
                 name: '874warning'
