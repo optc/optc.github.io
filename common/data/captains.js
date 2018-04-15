@@ -6912,6 +6912,9 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Shooter") ? 2.25 : 1; },
         hp: function(p) { return p.unit.class.has("Shooter") ? 1.2 : 1; },
     },
+    2047: {
+        atk: function(p) { return !p.unit.class.has("Fighter") ? 1 : (((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain]) == 2) && (p.orb != 'g')) ? 2.5 : 2); },
+    },
     2048: {
         atk: function(p) { return !p.unit.class.has("Fighter") ? 1 : (((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain]) == 2) && (p.orb != 'g')) ? 3.25 : 2); },
     },

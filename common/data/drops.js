@@ -1848,6 +1848,7 @@ window.drops = {
         {
             name: 'Zou Royal Guard!',
             thumb: 1812,
+            global: true,
             nakama: 2181200,
             condition: 'Powerhouse Characters will be weakened',
             gamewith: 71416,
@@ -1954,8 +1955,8 @@ window.drops = {
         },
         
         {
-            name: 'Red Hair Pirates!',
-            thumb: 2038,
+            name: 'Anchoring! Red Hair Pirates!',
+            thumb: 2044,
             nakama: null,
             gamewith: 98267,
             'All Difficulties': [ 2044, 2045, 2046, -1869, -1406, -1824, -1875, -1904, -2044, -1225 ]
@@ -2495,7 +2496,8 @@ window.drops = {
         {
             name: 'Edward Newgate',
             thumb: 1853,
-			nakama: 8185300,
+            global: true,
+            nakama: 8185300,
             gamewith: 79614,
             'Raging Sea': [ 1852 ]
         },

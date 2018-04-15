@@ -2042,9 +2042,9 @@ window.families = [
     "Whitebeard",
     "Kizaru",
     "Kizaru",
-    "Yasopp",
-    "Lucky Roo",
     "Ben Beckman",
+    "Lucky Roo",
+    "Yasopp",
     "Koala",
     "Koala",
 ];

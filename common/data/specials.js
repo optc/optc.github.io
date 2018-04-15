@@ -954,33 +954,25 @@ window.specials = {
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2.0, [p.friendCaptain, p.captain]); }
     },
     873: {
-        orb: function(p) {
-            if (window.specials[873].first) return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain]);
-            else return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain]);
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[873].multiplier, [p.friendCaptain, p.captain]); },
         },
-        type: "class",
         onActivation: function(p) {
-            window.specials[873].first = !window.specials[873].first;
+            var n = (window.specials[873].multiplier == 1.5 ? 1 : 0);
+            window.specials[873].multiplier = [1.5, 1.75][n];
             p.scope.notify({
-                text: (window.specials[873].first ?
-                    'Activating the first stage. To switch to the second stage, disable and re-enable this special' :
-                    'Activating the second stage. To switch to the first stage, disable and re-enable this special'),
-                name: '873warning'
+                text: 'Using the ' + [1.5, 1.75][n] + 'x Orb boost. To switch to the ' + [1.75, 1.5][n] + 'x Orb boost, disable and re-enable this special',
+                name: '874warning'
             });
         }
     },
     874: {
-        orb: function(p) {
-            if (window.specials[874].first) return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain]);
-            else return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain]);
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[874].multiplier, [p.friendCaptain, p.captain]); },
         },
-        type: "class",
         onActivation: function(p) {
-            window.specials[874].first = !window.specials[874].first;
+            var n = (window.specials[874].multiplier == 1.5 ? 1 : 0);
+            window.specials[873].multiplier = [1.5, 1.75][n];
             p.scope.notify({
-                text: (window.specials[874].first ?
-                    'Activating the first stage. To switch to the second stage, disable and re-enable this special' :
-                    'Activating the second stage. To switch to the first stage, disable and re-enable this special'),
+                text: 'Using the ' + [1.5, 1.75][n] + 'x Orb boost. To switch to the ' + [1.75, 1.5][n] + 'x Orb boost, disable and re-enable this special',
                 name: '874warning'
             });
         }
