@@ -24956,22 +24956,44 @@ window.details = {
         specialName: "Exquisite Aim",
     },
     2047: {//Koala
-        captain: "Not Translated",
+        captain: "Boosts ATK of Fighter characters by 2.5x if they have a matching orb, by 2x otherwise",
         special: "Deals 20x character's ATK in [QCK] damage to all enemies. If enemies have All Debuff Protection or Delay Debuff Protection at the time the special was activated, amplifies the effect of orbs by 2x for 1 turn and changes all orbs, including [BLOCK] orbs, on Fighter characters into Matching orbs",
-        specialName: "Koala Special",
-        sailor: {
-            "base": "Boosts own base ATK by 250 if this character is the last in the chain to attack",
-        },
-        sailorNotes: "This could be a limit break locked ability."
+        specialName: "Fishman Karate Mid-Air Roundhouse Kick",
+        sailor: "Boosts own base ATK by 250 if this character is the last in the chain to attack",
     },
     2048: {//Koala
         captain: "Boosts ATK of Fighter characters by 3.25x if they have a matching orb, by 2x otherwise",
         special: "Deals 20x character's ATK in [QCK] damage to all enemies. If enemies have All Debuff Protection or Delay Debuff Protection at the time the special was activated, amplifies the effect of orbs by 2x for 1 turn and changes all orbs, including [BLOCK] orbs, on Fighter characters into Matching orbs",
-        specialName: "Koala Special",
+        specialName: "Fishman Karate Mid-Air Roundhouse Kick",
         sailor: {
             "base": "Boosts own base ATK by 250 if this character is the last in the chain to attack",
+            "level1": "Makes [QCK] orbs \"beneficial\" for Fighter characters",
         },
-        sailorNotes: "This could be a limit break locked ability."
+        sailorNotes: "#{beneficial}", 
+        limit: "Not Translated",
+        potential: [
+            {
+               "Name": "Enrage",
+                "description": [
+                    "Level 1: Boosts base ATK by ?",
+                    "Level 2: Boosts base ATK by ?",
+                    "Level 3: Boosts base ATK by ?",
+                    "Level 4: Boosts base ATK by ?",
+                    "Level 5: Boosts base ATK by 200"
+                ]
+            },
+            {
+                "Name": "Critical Hit",
+                "description": [
+                    "Level 1: If you hit a perfect with this character, there is a 30% chance to deal ?% of this character's attack in extra damage",
+                    "Level 2: If you hit a perfect with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 3: If you hit a perfect with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 4: If you hit a perfect with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 5: If you hit a perfect with this character, there is a 70% chance to deal 8% of this character's attack in extra damage"
+                ]
+            },
+         ],
+        potentialNotes: "#{enrage}"
     },
     2200: {//Doflamingo Raid v2
         captain: "Boosts ATK of Driven and Cerebral characters by 2.5x when HP is 50% or below, 1.5x otherwise",

@@ -2045,7 +2045,7 @@ window.aliases = {
     2044: ['ベン・ベックマン 港村の海賊','', 'Ben Beckman'],
     2045: ['ラッキー・ルウ 港村の海賊','', 'Lucky Roux'],
     2046: ['ヤソップ 港村の海賊','', 'Yasopp'],
-    2047: ['','', 'Limited Koala', 'Secret Koala'],
+    2047: ['コアラ 闇を探る革命軍','', 'Limited Koala', 'Secret Koala'],
     2048: ['コアラ 闇を暴く革命軍','', 'Limited Koala', 'Secret Koala'],
     2200: ['', '', 'V2 Raid Doffy', 'V2 Raid Doflamingo'],
     2201: ['', '', 'V2 Raid Doffy', 'V2 Raid Doflamingo'],
