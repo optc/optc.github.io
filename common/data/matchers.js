@@ -704,7 +704,7 @@ window.matchers = [
     {
         name: 'Matching Orb Keeper',
         target: 'sailor',
-        matcher: /If this character has (a|an) +(STR|DEX|QCK|PSY|INT|RCV)\b orb.+Perfect/i
+        matcher: /If this character has.+(STR|DEX|QCK|PSY|INT|RCV).+Perfect/i
     },
     
     {
