@@ -24995,6 +24995,30 @@ window.details = {
          ],
         potentialNotes: "#{enrage}"
     },
+    2049: {//Ichiji
+        captain: "Boosts ATK of Fighter characters by 2.5x and reduces ??? characters RCV to 0",
+        special: "Deals 15x character's ATK in [INT] damage to ??? enemy(ies), changes captain's orb into a [PSY] orb and makes [PSY] orb \"beneficial\" for all characters for 1 turn.",
+        specialName: "Ichiji Special",
+        specialNotes: "#{beneficial}",
+        sailor: "Makes [PSY] orbs \"beneficial\" for this unit",
+        sailorNotes: "#{beneficial}",
+    },
+    2050: {//Niji
+        captain: "Boosts ATK of Fighter characters by 1.75x and their HP by 1.2x",
+        special: "Deals 15x character's ATK in [DEX] damage to ??? enemy(ies), changes the orbs in the middle row into [PSY] orbs and boosts ATK of characters with 15 cost or less by 1.75x for 1 turn.",
+        specialName: "Niji Special",
+        specialNotes: "#{beneficial}",
+        sailor: "Makes [PSY] orbs \"beneficial\" for this unit",
+        sailorNotes: "#{beneficial}",
+    },
+    2051: {//Yonji
+        captain: "Boosts ATK of Fighter characters by 1.75x and their HP by 1.2x",
+        special: "Deals 15x character's ATK in [QCK] damage to ??? enemy(ies), changes the orbs in the bottom row into [PSY] orbs and Amplifies the effect of orbs for characters with 15 cost or less by 1.75x for 1 turn.",
+        specialName: "Yonji Special",
+        specialNotes: "#{beneficial}",
+        sailor: "Makes [PSY] orbs \"beneficial\" for this unit",
+        sailorNotes: "#{beneficial}",
+    },
     2200: {//Doflamingo Raid v2
         captain: "Boosts ATK of Driven and Cerebral characters by 2.5x when HP is 50% or below, 1.5x otherwise",
         special: "Randomizes all non-matching orbs, including [BLOCK] slots and locks all orbs for 1 turn. If Captain is a Cerebral or Driven character, increases duration of any Class/Type boosting buffs and Orb Amplification buffs by 2 turns",

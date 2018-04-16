@@ -2047,4 +2047,7 @@ window.families = [
     "Yasopp",
     "Koala",
     "Koala",
+    "Vinsmoke Ichiji",
+    "Vinsmoke Niji",
+    "Vinsmoke Yonji",
 ];

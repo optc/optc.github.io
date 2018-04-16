@@ -1962,6 +1962,14 @@ window.drops = {
             'All Difficulties': [ 2044, 2045, 2046, -1869, -1406, -1824, -1875, -1904, -2044, -1225 ]
         },
         
+        {
+            name: 'Germa Family Force!',
+            thumb: 2050,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 2049, 2050, 2051, -1880, -1434, -1412, -1906, -1908, -1859, -1637 ]
+        },
+        
     ],
 
             
