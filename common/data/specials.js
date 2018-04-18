@@ -1265,10 +1265,10 @@ window.specials = {
         type: "class"
     },
     977: {
-        chainAddition: function(p) {return 0.5;}
+        chainAddition: function(p) { return 0.5; }
     },
     978: {
-        chainAddition: function(p){ return 0.5;}
+        chainAddition: function(p) { return 0.5; }
     },
     984: {
         delay: function(p) { return 1; },
@@ -4716,6 +4716,21 @@ window.specials = {
     2048: {
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain]); },
         warning: "Selected special (%name%) assumes that the enemy has Delay Protection."
+    },
+    2057: {
+        atk: function(p) { return p.unit.cost <= 15 ? 1.75 : 1; },
+        type: "class"
+    },
+    2058: {
+        orbs: function(p) { return p.unit.cost <= 15 ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain]) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain]); },
+    },
+    2071: {
+        def: function(p) { return 0.8; },//CHANGE THIS
+        chainAddition: function(p) { return 0.5; }
+    },
+    2072: {
+        def: function(p) { return 0.8; },//CHANGE THIS
+        chainAddition: function(p) { return 0.5; }
     },
     5000: {
         atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 1.5 : 1; },

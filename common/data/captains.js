@@ -6918,6 +6918,21 @@ window.captains = {
     2048: {
         atk: function(p) { return !p.unit.class.has("Fighter") ? 1 : (((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain]) == 2) && (p.orb != 'g')) ? 3.25 : 2); },
     },
+    2056: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? 2.5 : 1; },
+        rcv: function(p) { return p.unit.class.has("Fighter") ? 0 : 0; },//CHANGE THIS
+    },
+    2057: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? 1.75 : 1; },
+        hp: function(p) { return p.unit.class.has("Fighter") ? 1.2 : 1; },
+    },
+    2058: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? 1.25 : 1; },
+        hp: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; },
+    },
+    2065: {
+        atk: function(p) { return 2.25; },
+    },
     2200: {
         atk: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Cerebral")) && p.percHP <= 50.0 ? 2.5 : 1.5; }
     },
