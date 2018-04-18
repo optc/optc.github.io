@@ -25013,7 +25013,7 @@ window.details = {
     },
     2049: {//Ichiji
         captain: "Boosts ATK of Fighter characters by 2.5x and reduces ??? characters RCV to 0",
-        special: "Deals 15x character's ATK in [INT] damage to ??? enemy(ies), changes captain's orb into a [PSY] orb and makes [PSY] orb \"beneficial\" for all characters for 1 turn.",
+        special: "Deals 15x character's ATK in [INT] damage to one enemy, changes captain's orb into a [PSY] orb and makes [PSY] orb \"beneficial\" for all characters for 1 turn.",
         specialName: "Ichiji Special",
         specialNotes: "#{beneficial}",
         sailor: "Makes [PSY] orbs \"beneficial\" for this unit",
@@ -25021,7 +25021,7 @@ window.details = {
     },
     2050: {//Niji
         captain: "Boosts ATK of Fighter characters by 1.75x and their HP by 1.2x",
-        special: "Deals 15x character's ATK in [DEX] damage to ??? enemy(ies), changes the orbs in the middle row into [PSY] orbs and boosts ATK of characters with 15 cost or less by 1.75x for 1 turn.",
+        special: "Deals 15x character's ATK in [DEX] damage to one enemy, changes the orbs in the middle row into [PSY] orbs and boosts ATK of characters with 15 cost or less by 1.75x for 1 turn.",
         specialName: "Niji Special",
         specialNotes: "#{beneficial}",
         sailor: "Makes [PSY] orbs \"beneficial\" for this unit",
@@ -25029,7 +25029,7 @@ window.details = {
     },
     2051: {//Yonji
         captain: "Boosts ATK of Fighter characters by 1.75x and their HP by 1.2x",
-        special: "Deals 15x character's ATK in [QCK] damage to ??? enemy(ies), changes the orbs in the bottom row into [PSY] orbs and Amplifies the effect of orbs for characters with 15 cost or less by 1.75x for 1 turn.",
+        special: "Deals 15x character's ATK in [QCK] damage to one enemy, changes the orbs in the bottom row into [PSY] orbs and Amplifies the effect of orbs for characters with 15 cost or less by 1.75x for 1 turn.",
         specialName: "Yonji Special",
         specialNotes: "#{beneficial}",
         sailor: "Makes [PSY] orbs \"beneficial\" for this unit",
