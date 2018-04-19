@@ -1265,10 +1265,10 @@ window.specials = {
         type: "class"
     },
     977: {
-        chainAddition: function(p) {return 0.5;}
+        chainAddition: function(p) { return 0.5; }
     },
     978: {
-        chainAddition: function(p){ return 0.5;}
+        chainAddition: function(p) { return 0.5; }
     },
     984: {
         delay: function(p) { return 1; },
@@ -4716,6 +4716,51 @@ window.specials = {
     2048: {
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain]); },
         warning: "Selected special (%name%) assumes that the enemy has Delay Protection."
+    },
+    2057: {
+        atk: function(p) { return p.unit.cost <= 15 ? 1.75 : 1; },
+        type: "class"
+    },
+    2058: {
+        orbs: function(p) { return p.unit.cost <= 15 ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain]) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain]); },
+    },
+    2059: {
+        chain: function(p) { return window.specials[2059].multiplier; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[2059].multiplier : 1;
+        },
+        onActivation: function(p) {
+            var n = (window.specials[2059].multiplier == 2.5 ? 1 : window.specials[2059].multiplier == 2.75 ? 2 : 0);
+            window.specials[2059].multiplier = [2.5, 2.75, 3][n];
+            p.scope.notify({
+                text: 'Using the ' + [2.5, 2.75, 3][n] + 'x chain lock. To switch to the ' + [2.75, 3, 2.5][n] + 'x chain lock, disable and re-enable this special',
+                name: '2059warning'
+            });
+        }
+    },
+    2060: {
+        chain: function(p) { return window.specials[2060].multiplier; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[2060].multiplier : 1;
+        },
+        onActivation: function(p) {
+            var n = (window.specials[2060].multiplier == 2.5 ? 1 : window.specials[2060].multiplier == 2.75 ? 2 : 0);
+            window.specials[2060].multiplier = [2.5, 2.75, 3][n];
+            p.scope.notify({
+                text: 'Using the ' + [2.5, 2.75, 3][n] + 'x chain lock. To switch to the ' + [2.75, 3, 2.5][n] + 'x chain lock, disable and re-enable this special',
+                name: '2060warning'
+            });
+        }
+    },
+    2071: {
+        def: function(p) { return 0.8; },//CHANGE THIS
+        chainAddition: function(p) { return 0.5; }
+    },
+    2072: {
+        def: function(p) { return 0.8; },//CHANGE THIS
+        chainAddition: function(p) { return 0.5; }
     },
     5000: {
         atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 1.5 : 1; },

@@ -20681,7 +20681,7 @@ window.details = {
             "level5": "Boosts ATK of all characters proportionally to the crew's current HP, by 2.75x at max and their HP by 1.35x",
             "level6": "Boosts ATK of all characters proportionally to the crew's current HP, by 3.25x at max and their HP by 1.35x",
         },
-        captainNotes: "#{captainProportional : lower : 1 + 1.25 * (1 - (remaining HP) / (total HP)) : 1 : 2.25}",
+        captainNotes: "#{captainProportional : lower : 1 + 1.25 * (1 - (remaining HP) / (total HP)) : 1 : 3.25}",
         special: "Changes own orb into [INT], deals 100x character's ATK in typeless damage to all enemies that will ignore damage negating abilities and barriers. If enemies have All Debuff Protection or Delay Debuff Protection at the time the special was activated, amplifies the effect of orbs by 2x for 1 turn. If enemies have a barrier at the time the special was activated, boosts own ATK by 2.25x",
         specialNotes: "#{ignoreBarrier}",
         specialName: "The Epicenter of the Halberd",
@@ -25011,29 +25011,68 @@ window.details = {
          ],
         potentialNotes: "#{enrage}"
     },
-    2049: {//Ichiji
+    2056: {//Ichiji
         captain: "Boosts ATK of Fighter characters by 2.5x and reduces ??? characters RCV to 0",
         special: "Deals 15x character's ATK in [INT] damage to one enemy, changes captain's orb into a [PSY] orb and makes [PSY] orb \"beneficial\" for all characters for 1 turn.",
-        specialName: "Ichiji Special",
+        specialName: "Scornful Gang Up (First Son)",
         specialNotes: "#{beneficial}",
         sailor: "Makes [PSY] orbs \"beneficial\" for this unit",
         sailorNotes: "#{beneficial}",
     },
-    2050: {//Niji
+    2057: {//Niji
         captain: "Boosts ATK of Fighter characters by 1.75x and their HP by 1.2x",
         special: "Deals 15x character's ATK in [DEX] damage to one enemy, changes the orbs in the middle row into [PSY] orbs and boosts ATK of characters with 15 cost or less by 1.75x for 1 turn.",
-        specialName: "Niji Special",
+        specialName: "Scornful Gang Up (Second Son)",
         specialNotes: "#{beneficial}",
         sailor: "Makes [PSY] orbs \"beneficial\" for this unit",
         sailorNotes: "#{beneficial}",
     },
-    2051: {//Yonji
-        captain: "Boosts ATK of Fighter characters by 1.75x and their HP by 1.2x",
+    2058: {//Yonji
+        captain: "Boosts ATK of Fighter characters by 1.25x and their HP by 1.5x",
         special: "Deals 15x character's ATK in [QCK] damage to one enemy, changes the orbs in the bottom row into [PSY] orbs and Amplifies the effect of orbs for characters with 15 cost or less by 1.75x for 1 turn.",
-        specialName: "Yonji Special",
+        specialName: "Scornful Gang Up (Fourth Son)",
         specialNotes: "#{beneficial}",
         sailor: "Makes [PSY] orbs \"beneficial\" for this unit",
         sailorNotes: "#{beneficial}",
+    },
+    2059: {//Beckman
+        captain: "Not Translated",
+        special: "Reduces enemies Increased Defense duration by 3 turns, changes own orb into [STR] and locks the chain multiplier depending on your Treasure Map Level for 1 turn",
+        specialName: "Annihilation Tryout",
+        specialNotes: "Level 1-10: 2.5x chain lock<br\>Level 11-20: 2.75x chain lock<br\>Level 21+: 3x chain lock",
+    },
+    2060: {//Beckman
+        captain: "Boosts ATK of Cerebral characters by 1.5x and their HP by 1.2x",
+        special: "Reduces enemies Increased Defense duration by 3 turns, changes own orb into [STR] and locks the chain multiplier depending on your Treasure Map Level for 1 turn",
+        specialName: "Annihilation Tryout",
+        specialNotes: "Level 1-10: 2.5x chain lock<br\>Level 11-20: 2.75x chain lock<br\>Level 21+: 3x chain lock",
+    },
+    2061: {//Apoo
+        captain: "Not Translated",
+        special: "Reduces Chain Multiplier Limit and Chain Coefficient Reduction duration by 4 turns and reduces damage received from [DEX] enemies by 80%",
+        specialName: "Noise & Escape",
+    },
+    2062: {//Apoo
+        captain: "Boosts ATK of Free Spirit characters by 1.5x and their HP by 1.2x",
+        special: "Reduces Chain Multiplier Limit and Chain Coefficient Reduction duration by 4 turns and reduces damage received from [DEX] enemies by 80%",
+        specialName: "Noise & Escape",
+    },
+    2065: {//EXP Pudding
+        captain: "Boosts ATK of all characters by 2.25x and boosts EXP and amount of Beli received by 1.2x",
+        special: "Changes Badly Matching orbs into Matching orbs, randomizes non-matching orbs and recovers 2,000 HP",
+        specialName: "Complex Feelings",
+    },
+    2071: {//Anni Chopper
+        captain: "Recovers ?x character's RCV in HP at the end of each turn",
+        special: "Reduces the defense of all enemies by ??% for 1 turn, reduces enemy's Threshold Damage Reduction and Enrage duration by 5 turns, makes [INT], [PSY] and [DEX] orb \"beneficial\" for all characters for 1 turn and adds .5x to Chain multiplier for 1 turn.",
+        sailor: "Changes all orbs into [RCV] orbs at the start of the fight",
+        specialName: "A Man's Stratagem to Victory",
+    },
+    2072: {//Anni Chopper
+        captain: "Recovers 5x character's RCV in HP at the end of each turn",
+        special: "Reduces the defense of all enemies by ??% for 1 turn, reduces enemy's Threshold Damage Reduction and Enrage duration by 5 turns, makes [INT], [PSY] and [DEX] orb \"beneficial\" for all characters for 1 turn and adds .5x to Chain multiplier for 1 turn.",
+        sailor: "Changes all orbs into [RCV] orbs at the start of the fight",
+        specialName: "A Man's Stratagem to Victory",
     },
     2200: {//Doflamingo Raid v2
         captain: "Boosts ATK of Driven and Cerebral characters by 2.5x when HP is 50% or below, 1.5x otherwise",
