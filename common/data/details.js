@@ -25019,6 +25019,34 @@ window.details = {
         sailor: "Makes [PSY] orbs \"beneficial\" for this unit",
         sailorNotes: "#{beneficial}",
     },
+    2059: {//Beckman
+        captain: "Not Translated",
+        special: "Reduces enemies Increased Defense duration by 3 turns, changes own orb into [STR] and ocks the chain multiplier depending on your Treasure Map Level for 1 turn",
+        specialName: "Beckman Special",
+        specialNotes: "Level 1-10: 2.5x chain lock<br\>Level 11-20: 2.75x chain lock<br\>Level 21+: 3x chain lock",
+    },
+    2060: {//Beckman
+        captain: "Boosts ATK of Cerebral characters by 1.5x and their HP by 1.2x",
+        special: "Reduces enemies Increased Defense duration by 3 turns, changes own orb into [STR] and ocks the chain multiplier depending on your Treasure Map Level for 1 turn",
+        specialName: "Beckman Special",
+        specialNotes: "Level 1-10: 2.5x chain lock<br\>Level 11-20: 2.75x chain lock<br\>Level 21+: 3x chain lock",
+    },
+    2061: {//Apoo
+        captain: "Not Translated",
+        special: "Reduces Chain Multiplier Limit and Chain Coefficient Reduction duration by 4 turns and reduces damage received from [DEX] enemies by 80%",
+        specialName: "Apoo Special",
+    },
+    2062: {//Apoo
+        captain: "Boosts ATK of Free Spirit characters by 1.5x and their HP by 1.2x",
+        special: "Reduces Chain Multiplier Limit and Chain Coefficient Reduction duration by 4 turns and reduces damage received from [DEX] enemies by 80%",
+        specialName: "Apoo Special",
+    },
+    2009: {//Kuma
+        captain: "Boosts ATK of [STR] and [INT] characters by 1.5x and their HP by 1.2x",
+        special: "Cuts the current HP of each enemy by 10%, reduces Special Cooldown of your top row by 2 turns and boosts the Color Affinity of [STR] and [INT] characters depending on your Treasure Map Level for 1 turn",
+        specialName: "Proof of a Human Weapon",
+        specialNotes: "Level 1-10: 1.5x affinity boost<br\>Level 11-20: 1.75x affinity boost<br\>Level 21+: 2x affinity boost",
+    },
     2065: {//EXP Pudding
         captain: "Boosts ATK of all characters by 2.25x and boosts EXP and amount of Beli received by 1.2x",
         special: "Changes Badly Matching orbs into Matching orbs, randomizes non-matching orbs and recovers 2,000 HP",

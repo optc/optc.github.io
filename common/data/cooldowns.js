@@ -2047,4 +2047,28 @@ window.cooldowns = [
     [ 20, 14 ],
     [ 17, 13 ],
     [ 17, 13 ],
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,//Germa bros
+    null,//Germa bros
+    null,//Germa bros
+    [ 11, 11 ],
+    [ 11, 11 ],
+    [ 11, 11 ],
+    [ 11, 11 ],
+    null,
+    null,
+    null,
+    null,//Pudding
+    null,
+    null,
+    null,
+    null,
+    null,//Chopper
+    null,//Chopper
 ];
