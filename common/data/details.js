@@ -25021,25 +25021,25 @@ window.details = {
     },
     2059: {//Beckman
         captain: "Not Translated",
-        special: "Reduces enemies Increased Defense duration by 3 turns, changes own orb into [STR] and ocks the chain multiplier depending on your Treasure Map Level for 1 turn",
-        specialName: "Beckman Special",
+        special: "Reduces enemies Increased Defense duration by 3 turns, changes own orb into [STR], amplifies the effect of orbs by 1.5x for 1 turn and locks the chain multiplier depending on your Treasure Map Level for 1 turn",
+        specialName: "Trial of Annihilation",
         specialNotes: "Level 1-10: 2.5x chain lock<br\>Level 11-20: 2.75x chain lock<br\>Level 21+: 3x chain lock",
     },
     2060: {//Beckman
         captain: "Boosts ATK of Cerebral characters by 1.5x and their HP by 1.2x",
-        special: "Reduces enemies Increased Defense duration by 3 turns, changes own orb into [STR] and ocks the chain multiplier depending on your Treasure Map Level for 1 turn",
-        specialName: "Beckman Special",
+        special: "Reduces enemies Increased Defense duration by 3 turns, changes own orb into [STR], amplifies the effect of orbs by 1.5x for 1 turn and locks the chain multiplier depending on your Treasure Map Level for 1 turn",
+        specialName: "Trial of Annihilation",
         specialNotes: "Level 1-10: 2.5x chain lock<br\>Level 11-20: 2.75x chain lock<br\>Level 21+: 3x chain lock",
     },
     2061: {//Apoo
         captain: "Not Translated",
         special: "Reduces Chain Multiplier Limit and Chain Coefficient Reduction duration by 4 turns and reduces damage received from [DEX] enemies by 80%",
-        specialName: "Apoo Special",
+        specialName: "Noise & Escape",
     },
     2062: {//Apoo
         captain: "Boosts ATK of Free Spirit characters by 1.5x and their HP by 1.2x",
         special: "Reduces Chain Multiplier Limit and Chain Coefficient Reduction duration by 4 turns and reduces damage received from [DEX] enemies by 80%",
-        specialName: "Apoo Special",
+        specialName: "Noise & Escape",
     },
     2009: {//Kuma
         captain: "Boosts ATK of [STR] and [INT] characters by 1.5x and their HP by 1.2x",
