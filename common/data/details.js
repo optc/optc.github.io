@@ -25054,13 +25054,13 @@ window.details = {
     },
     2071: {//Anni Chopper
         captain: "Recovers ?x character's RCV in HP at the end of each turn",
-        special: "Reduces the defense of all enemies by ??% for 1 turn, reduces enemy's Threshold Damage Reduction and Enrage duration by 5 turns, makes [INT], [PSY] and [DEX] orb \"beneficial\" for all characters for 1 turn and adds .5x to Chain multiplier for 1 turn.",
+        special: "Reduces the defense of all enemies by ??% for 1 turn, reduces enemy's Threshold Damage Reduction and Enrage duration by 5 turns, makes [INT], [PSY] and [DEX] orb \"beneficial\" for all characters for 1 turn and adds .6x to Chain multiplier for 1 turn.",
         sailor: "Changes all orbs into [RCV] orbs at the start of the fight",
         specialName: "A Man's Stratagem to Victory",
     },
     2072: {//Anni Chopper
         captain: "Recovers 5x character's RCV in HP at the end of each turn",
-        special: "Reduces the defense of all enemies by ??% for 1 turn, reduces enemy's Threshold Damage Reduction and Enrage duration by 5 turns, makes [INT], [PSY] and [DEX] orb \"beneficial\" for all characters for 1 turn and adds .5x to Chain multiplier for 1 turn.",
+        special: "Reduces the defense of all enemies by ??% for 1 turn, reduces enemy's Threshold Damage Reduction and Enrage duration by 5 turns, makes [INT], [PSY] and [DEX] orb \"beneficial\" for all characters for 1 turn and adds .6x to Chain multiplier for 1 turn.",
         sailor: "Changes all orbs into [RCV] orbs at the start of the fight",
         specialName: "A Man's Stratagem to Victory",
     },

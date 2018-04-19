@@ -4758,11 +4758,11 @@ window.specials = {
     },
     2071: {
         def: function(p) { return 0.8; },//CHANGE THIS
-        chainAddition: function(p) { return 0.5; }
+        chainAddition: function(p) { return 0.6; }
     },
     2072: {
         def: function(p) { return 0.8; },//CHANGE THIS
-        chainAddition: function(p) { return 0.5; }
+        chainAddition: function(p) { return 0.6; }
     },
     5000: {
         atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 1.5 : 1; },
