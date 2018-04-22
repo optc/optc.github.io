@@ -462,7 +462,7 @@ directives.addLinks = function($stateParams) {
             var incomplete = units[id - 1].incomplete;
             var ul = $('<ul></ul>');
             if (!incomplete && window.flags[id] && window.flags[id].global) {
-                var link = 'http://onepiece-treasurecruise.com/en/' + (id == '5' ? 'roronoa-zoro' : id == 1254 ? 'maelstrom-spider-squard-whitebeard-pirates-family' : 'c-' + id);
+                var link = 'http://onepiece-treasurecruise.com/en/' + (id == '5' ? 'roronoa-zoro' : id == 1254 ? 'maelstrom-spider-squard-whitebeard-pirates-family' : id == '1923' ? 'c-5009' : id == '1924' ? 'c-5010' : id == '2200' ? 'c-5011' : id == '2201' ? 'c-5012' : 'c-' + id);//CHANGE THIS FOR DOFFY V2 IDS
                 ul.append($('<li><a href="' + link + '" target="_blank">Official Guide (English)</a></li>'));
             }
             if (!incomplete) {
