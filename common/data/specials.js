@@ -4717,6 +4717,14 @@ window.specials = {
         orb: function(p) { return p.unit.class.has("Fighter") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain]) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain]); },
         warning: "Selected special (%name%) assumes that the enemy has Delay Protection."
     },
+    2051: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? 1.75 : 1; },
+        type: "class",
+    },
+    2052: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? 1.75 : 1; },
+        type: "class",
+    },
     2057: {
         atk: function(p) { return p.unit.cost <= 15 ? 1.75 : 1; },
         type: "class"
