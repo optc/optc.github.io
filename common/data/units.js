@@ -2064,7 +2064,7 @@ window.units = [
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Charlotte Pudding", "PSY", [ "Shooter", "Striker" ], 4, 15, null, 4, 99, 2000000, null, null, null, null, null, null, null ],
+    [ "Charlotte Pudding", "PSY", [ "Shooter", "Striker" ], 4, 15, 5, 4, 99, 1000000, 201, 109, 18, 2018, 1110, 264, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],

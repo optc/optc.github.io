@@ -2064,7 +2064,7 @@ window.cooldowns = [
     null,
     null,
     null,
-    null,//Pudding
+    [ 9, 9 ],
     null,
     null,
     null,
