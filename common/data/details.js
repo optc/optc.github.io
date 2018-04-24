@@ -25012,12 +25012,12 @@ window.details = {
         potentialNotes: "#{enrage}"
     },
     2051: {//Pica
-        captain: "If you have 5 or more Fighter characters in your crew, boosts ATK of Fighter characters by 2x and Reduces damage received by 5%",
+        captain: "If you have 5 or more Fighter characters in your crew, boosts ATK of Fighter characters by 2x and reduces damage received by 5%",
         special: "Deals 35x character's ATK in QCK damage to one enemy, boosts ATK of Fighter characters by 1.75x for 2 turns. If Pica is your Captain or Friend/Guest Captain, Reduces damage received by 20% for 1 turn. If he is a Sailor, Increases damage received by 2x for 1 turn instead",
         specialName: "Bitestone",
     },
     2052: {//Pica
-        captain: "If you have 5 or more Fighter characters in your crew, boosts ATK of Fighter characters by 2.5x and Reduces damage received by 10%",
+        captain: "If you have 5 or more Fighter characters in your crew, boosts ATK of Fighter characters by 2.5x and their HP by 1.2, and reduces damage received by 10%",
         special: "Deals 35x character's ATK in QCK damage to one enemy, boosts ATK of Fighter characters by 1.75x for 2 turns. If Pica is your Captain or Friend/Guest Captain, Reduces damage received by 20% for 1 turn. If he is a Sailor, Increases damage received by 2x for 1 turn instead",
         specialName: "Bitestone",
     },
@@ -25037,7 +25037,7 @@ window.details = {
         specialName: "Cruel Suction",
     },
     2056: {//Ichiji
-        captain: "Boosts ATK of Fighter characters by 2.5x and reduces ??? characters RCV to 0",
+        captain: "Boosts ATK of Fighter characters by 2.5x and reduces their RCV to 0",
         special: "Deals 15x character's ATK in [INT] damage to one enemy, changes captain's orb into a [PSY] orb and makes [PSY] orb \"beneficial\" for all characters for 1 turn.",
         specialName: "Scornful Gang Up (First Son)",
         specialNotes: "#{beneficial}",
@@ -25048,7 +25048,6 @@ window.details = {
         captain: "Boosts ATK of Fighter characters by 1.75x and their HP by 1.2x",
         special: "Deals 15x character's ATK in [DEX] damage to one enemy, changes the orbs in the middle row into [PSY] orbs and boosts ATK of characters with 15 cost or less by 1.75x for 1 turn.",
         specialName: "Scornful Gang Up (Second Son)",
-        specialNotes: "#{beneficial}",
         sailor: "Makes [PSY] orbs \"beneficial\" for this unit",
         sailorNotes: "#{beneficial}",
     },
@@ -25056,7 +25055,6 @@ window.details = {
         captain: "Boosts ATK of Fighter characters by 1.25x and their HP by 1.5x",
         special: "Deals 15x character's ATK in [QCK] damage to one enemy, changes the orbs in the bottom row into [PSY] orbs and Amplifies the effect of orbs for characters with 15 cost or less by 1.75x for 1 turn.",
         specialName: "Scornful Gang Up (Fourth Son)",
-        specialNotes: "#{beneficial}",
         sailor: "Makes [PSY] orbs \"beneficial\" for this unit",
         sailorNotes: "#{beneficial}",
     },
@@ -25108,6 +25106,7 @@ window.details = {
     },
     2065: {//EXP Pudding
         captain: "Boosts ATK of all characters by 2.25x and boosts EXP and amount of Beli received by 1.2x",
+        captainNotes: "EXP and Beli boost does not take effect if she becomes your captain in the middle of the adventure.",
         special: "Changes Badly Matching orbs into Matching orbs, randomizes non-matching orbs and recovers 2,000 HP",
         specialName: "Complex Feelings",
     },

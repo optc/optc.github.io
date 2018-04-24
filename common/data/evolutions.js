@@ -3293,7 +3293,7 @@ window.evolutions = {
     },
     2051: {
         evolution: 2052,
-        evolvers: [  ]
+        evolvers: [ 117, 90, 96, 301, 101 ]
     },
     2059: {
         evolution: 2060,
