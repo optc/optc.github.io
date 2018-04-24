@@ -539,4 +539,8 @@ window.zombies = {
         type: 'healer',
         multiplier: 5
     },
+    2054: { // Headcracker
+        type: 'zombie',
+        threshold: 0.5//CHANGE THIS
+    },
 };

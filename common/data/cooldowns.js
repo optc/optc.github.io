@@ -2051,12 +2051,12 @@ window.cooldowns = [
     null,
     null,
     null,
-    null,
-    null,
-    null,
-    null,//Germa bros
-    null,//Germa bros
-    null,//Germa bros
+    18,
+    16,
+    18,
+    16,
+    18,
+    18,
     [ 11, 11 ],
     [ 11, 11 ],
     [ 11, 11 ],
@@ -2064,7 +2064,7 @@ window.cooldowns = [
     null,
     null,
     null,
-    null,//Pudding
+    [ 9, 9 ],
     null,
     null,
     null,

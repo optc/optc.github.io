@@ -1985,10 +1985,10 @@ window.drops = {
         },
         
         {
-            name: 'Germa Family Force!',
-            thumb: 2057,
+            name: 'Germa\'s Lineage Factor!',
+            thumb: 2056,
             nakama: null,
-            gamewith: null,
+            gamewith: 99699,
             'All Difficulties': [ 2056, 2057, 2058, -1880, -1434, -1412, -1906, -1908, -1859, -1637 ]
         },
         

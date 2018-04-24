@@ -13022,13 +13022,13 @@ window.details = {
         specialName: "Gum-Gum Twin Jet Pistol: Snowflake",
     },
     1361: {//6* Zoro
-        captain: "If you have 5 or more Slashers in your crew, boosts ATK of Slasher characters by 2.5x and their HP by 1.5x. If you defeated an enemy last turn, boosts ATK of Slasher characters by 3x instead and boosts ATK of all other characters by 1.2x",
+        captain: "If you have 5 or more Slashers characters in your crew, boosts ATK of Slasher characters by 2.5x and their HP by 1.5x. If you defeated an enemy last turn, boosts ATK of Slasher characters by 3x instead and boosts ATK of all other characters by 1.2x",
         captainNotes: "You only need to kill at least 1 character in the last turn to gain his 3x ATK boost. If a character dies and revives, you will retain the 3x ATK boost",
         special: "Deals 60x character's ATK as typeless damage to all enemies. If Zoro is your Captain or Friend/Guest Captain, boosts ATK of Slasher characters by 2x for 1 turn. If he is a Sailor, boosts ATK of Slasher characters by 1.75x for 1 turn instead",
         specialName: "Three Blade Style Secret Skill: Crossroad of Six Paths",
     },
     1362: {//6* Zoro
-        captain: "If you have 5 or more Slashers in your crew, boosts ATK of Slasher characters by 2.5x and their HP by 1.5x. If you defeated an enemy last turn, boosts ATK of Slasher characters by 3x instead and boosts ATK of all other characters by 1.2x",
+        captain: "If you have 5 or more Slashers characters in your crew, boosts ATK of Slasher characters by 2.5x and their HP by 1.5x. If you defeated an enemy last turn, boosts ATK of Slasher characters by 3x instead and boosts ATK of all other characters by 1.2x",
         captainNotes: "You only need to kill at least 1 character in the last turn to gain his 3x ATK boost. If a character dies and revives, you will retain the 3x ATK boost",
         special: "Deals 60x character's ATK as typeless damage to all enemies. If Zoro is your Captain or Friend/Guest Captain, boosts ATK of Slasher characters by 2x for 1 turn. If he is a Sailor, boosts ATK of Slasher characters by 1.75x for 1 turn instead",
         specialName: "Three Blade Style Secret Skill: Crossroad of Six Paths",
@@ -23381,7 +23381,7 @@ window.details = {
         sailor: {
             "base": "None",
             "level1": "Boosts base ATK, HP and RCV of Cerebral characters by 30",
-            "level2": "Makes [DEX] orbs \"beneficial\" for Cerebral characters unit",
+            "level2": "Makes [DEX] orbs \"beneficial\" for Cerebral characters",
         },
         sailorNotes: "#{beneficial}",
         limit: [
@@ -23416,7 +23416,7 @@ window.details = {
             { "description": "Acquire new Captain Ability: " },
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base HP by 50" },
-            { "description": "Acquire Sailor Ability 2: Makes [DEX] orbs \"beneficial\" for Cerebral characters unit" },
+            { "description": "Acquire Sailor Ability 2: Makes [DEX] orbs \"beneficial\" for Cerebral characters" },
             { "description": "Boosts base ATK by 50" },
             { "description": "Boosts base HP by 50" },
             { "description": "Boosts base RCV by 50" },
@@ -24969,7 +24969,7 @@ window.details = {
             "base": "Boosts own base ATK by 250 if this character is the last in the chain to attack",
             "level1": "Makes [QCK] orbs \"beneficial\" for Fighter characters",
         },
-        sailorNotes: "#{beneficial}", 
+        sailorNotes: "#{beneficial}",
         limit: [
             { "description": "Boosts base ATK by 10" },
             { "description": "Boosts base RCV by 20" },
@@ -24984,7 +24984,7 @@ window.details = {
             { "description": "Boosts base RCV by 40" },
             { "description": "Boosts base ATK by 40" },
             { "description": "Boosts base ATK by 50" },
-            { "description": "Acquire Sailor Ability: Makes [QCK] orbs \"beneficial\" for Fighter characters" },
+            { "description": "Acquire Sailor Ability 1: Makes [QCK] orbs \"beneficial\" for Fighter characters" },
             { "description": "Acquire Potential 2: Critical Hit" },
         ],
         potential: [
@@ -25010,6 +25010,31 @@ window.details = {
             },
          ],
         potentialNotes: "#{enrage}"
+    },
+    2051: {//Pica
+        captain: "If you have 5 or more Fighter characters in your crew, boosts ATK of Fighter characters by 2x and Reduces damage received by 5%",
+        special: "Deals 35x character's ATK in QCK damage to one enemy, boosts ATK of Fighter characters by 1.75x for 2 turns. If Pica is your Captain or Friend/Guest Captain, Reduces damage received by 20% for 1 turn. If he is a Sailor, Increases damage received by 2x for 1 turn instead",
+        specialName: "Bitestone",
+    },
+    2052: {//Pica
+        captain: "If you have 5 or more Fighter characters in your crew, boosts ATK of Fighter characters by 2.5x and Reduces damage received by 10%",
+        special: "Deals 35x character's ATK in QCK damage to one enemy, boosts ATK of Fighter characters by 1.75x for 2 turns. If Pica is your Captain or Friend/Guest Captain, Reduces damage received by 20% for 1 turn. If he is a Sailor, Increases damage received by 2x for 1 turn instead",
+        specialName: "Bitestone",
+    },
+    2053: {//Bastille
+        captain: "Boosts ATK of [INT] characters by 2.5x",
+        special: "Deals 75x character's ATK in [INT] damage to all enemies",
+        specialName: "Double Edge Long Blade Slash",
+    },
+    2054: {//Headcracker Doll
+        captain: "Boosts ATK of all characters by 1.75x, reduces crew's RCV to 0 and protects from defeat as long as HP is above ??%",
+        special: "If there are 3 enemies or more on the stage, deals 50,000 fixed damage to all enemies",
+        specialName: "Unrelentless Physical Work",
+    },
+    2055: {//Kyuin
+        captain: "Boosts ATK of Powerhouse and Striker characters by 2.25x",
+        special: "Cuts the current HP of each enemy by 10% and recovers 10% of crew's MAX HP.",
+        specialName: "Cruel Suction",
     },
     2056: {//Ichiji
         captain: "Boosts ATK of Fighter characters by 2.5x and reduces ??? characters RCV to 0",
@@ -25056,6 +25081,30 @@ window.details = {
         captain: "Boosts ATK of Free Spirit characters by 1.5x and their HP by 1.2x",
         special: "Reduces Chain Multiplier Limit and Chain Coefficient Reduction duration by 4 turns and reduces damage received from [DEX] enemies by 80%",
         specialName: "Noise & Escape",
+    },
+    2063: {//Kizaru
+        captain: "Not Translated",
+        special: "Cuts the current HP of one enemy by 20%, locks all orbs for 1 turn and boosts ATK of characters with the same Type as your Captain by 1.75x for 3 turns",
+        specialName: "Ama no Murakumo",
+    },
+    2064: {//Kizaru
+        captain: {
+            "base": "Boosts ATK of [DEX], [PSY] and [INT] characters by 1.5x",
+            "level1": "Not Translated",
+            "level2": "Not Translated",
+            "level3": "Not Translated",
+            "level4": "Not Translated",
+            "level5": "Not Translated",
+            "level6": "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of [DEX], [PSY] and [INT] characters by 2.5x and if there is a [DEX], [PSY] and [INT] character in your crew, boosts chain multiplier by 1.5x",
+        },
+        special: "Cuts the current HP of one enemy by 20%, locks all orbs for 1 turn and boosts ATK of characters with the same Type as your Captain by 1.75x for 3 turns",
+        specialName: "Ama no Murakumo",
+        sailor: {
+            "base": "None",
+            "level1": "Restores his own special by 3 turns when it is rewinded",
+            "level2": "Makes [DEX] orbs \"beneficial\" for all characters",
+        },
+        sailorNotes: "#{rewind : 1}<br/>#{beneficial}",
     },
     2065: {//EXP Pudding
         captain: "Boosts ATK of all characters by 2.25x and boosts EXP and amount of Beli received by 1.2x",

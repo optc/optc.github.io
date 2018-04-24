@@ -193,7 +193,7 @@ window.matchers = [
     {
         name: 'End of Turn Damage Dealer',
         target: 'captain',
-        matcher: /deals.+end of each turn/i
+        matcher: /(deals|cuts).+end of each turn/i
     },
     
     {
