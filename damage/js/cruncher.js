@@ -203,7 +203,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                                      || (window.specials[1640].turnedOn && x.unit.class.has("Shooter"))
                                      || ((window.specials[1651].turnedOn || window.specials[1652].turnedOn) && x.unit.class.has("Striker"))
                                      || ((window.specials[1746].turnedOn|| window.specials[1747].turnedOn) && x.unit.class.has("Shooter"))
-                                     || ((window.specials[1940].turnedOn|| window.specials[1941].turnedOn) && (x.unit.type == "STR" || x.unit.type == "QCK" || x.unit.type == "PSY"))) ? 2 : 1;
+                                     || ((window.specials[1940].turnedOn|| window.specials[1941].turnedOn) && (x.unit.type == "STR" || x.unit.type == "QCK" || x.unit.type == "PSY"))) ? 2 : 'str';
             
             if (orb == 0.5) orb = (window.specials[1269].turnedOn || window.specials[1270].turnedOn || window.specials[1330].turnedOn || window.specials[1546].turnedOn || window.specials[1547].turnedOn || window.specials[1557].turnedOn) ? 1 : .5;
             
@@ -220,8 +220,18 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                     }
                 }
             }
+            if (orb == 'str'){
+                for (temp = 0; temp < 2; temp++){
+                    if (team[temp].unit != null){
+                        if ([ 2022, 2023 ].includes(team[temp].unit.number)){
+                            orb = 2;
+                        }
+                    }
+                }
+            }
             if (orb == 'meat') orb = (window.specials[1515].turnedOn || window.specials[1516].turnedOn || (window.specials[1593].turnedOn && x.unit.class.has("Fighter")) || ((window.specials[1181].turnedOn || window.specials[1182].turnedOn) && x.unit.class.has("Slasher")) || ((window.specials[1380].turnedOn || window.specials[1379].turnedOn) && (x.unit.class.has("Cerebral") || x.unit.class.has("Free Spirit")))) ? 2 : 1;
             if (orb == 'rainbow') orb = 2;
+            if (orb == 'str') orb = 1;
             atk += getShipBonus('atk',true,x.unit,n);
             multipliers.push([ orb, 'orb' ]); // orb multiplier (fixed)
             multipliers.push([ getTypeMultiplierOfUnit(x.unit.type,type, x), 'type' ]); // type multiplier
@@ -559,10 +569,15 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
 
         //get the highest Chain Addition if it exists
         chainAddition.forEach(function(special){
-                var params = getParameters(special.sourceSlot);
-                    if(addition<special.chainAddition(params))
-                        addition = special.chainAddition(params);
-                });
+            var params = getParameters(special.sourceSlot);
+            if(addition<special.chainAddition(params)){
+                addition = special.chainAddition(params);
+            }
+        });
+        
+        if ($scope.data.effect == '0.5x Chain Boost - Zoro Sanji Change Action'){
+            addition = 0.5;
+        }
         
         chainSpecials.forEach(function(special) {
             var multipliersUsed = [ ], currentHits = 0, overall = 0;

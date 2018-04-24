@@ -133,7 +133,7 @@ input[type="text"] {
 .TND     { background: peru; }
 .BLOCK   { background: darkslateblue; }
 .BOMB    { background: maroon; }
-.RAINBOW { background: magenta; }
+.RAINBOW { background: linear-gradient(90deg,#fa8072,#ffd700,#90ee90,#87cefa, #da70d6); }
 .G       { background: orange; }
 .EMPTY   { background: #777; }
 
@@ -166,6 +166,15 @@ input[type="text"] {
     position: relative;
     top: 2px;
     width: 80px;
+    text-align: center;
+    margin-right: 5px;
+}
+
+.badge-sbase2 {
+    float: left;
+    position: relative;
+    top: 2px;
+    width: 87px;
     text-align: center;
     margin-right: 5px;
 }
@@ -223,6 +232,7 @@ input[type="text"] {
 .badge-character2 { background: rebeccapurple; }
 .badge-combined { background: mediumvioletred; }
 .badge-sbase { background: darkred; }
+.badge-sbase2 { background: darkred; }
 .badge-slevel1 { background: red; }
 .badge-slevel2 { background: red; }
 

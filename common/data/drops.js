@@ -770,6 +770,7 @@ window.drops = {
             name: 'Dressrosa - Port Town Acacia to Colosseum',
             shortName: 'Dressrosa 1',
             thumb: 1782,
+            global: true,
             nakama: 1178200,
             completion: '5x Rainbow Gems',
             gamewith: 70405,
@@ -791,7 +792,7 @@ window.drops = {
             name: 'Dressrosa - Coliseum Lodging to Executive Tower',
             shortName: 'Dressrosa 2',
             thumb: 2004,
-            nakama: null,
+            nakama: 1200400,
             completion: '5x Rainbow Gems',
             gamewith: 93492,
             '01': [ 1648 ],
@@ -806,6 +807,27 @@ window.drops = {
             '10': [ 2005 ],
             '11': [  ],
             '12': [ 2005 ],
+        },
+        
+        {
+            name: 'Dressrosa - Former King\'s Land to Royal Palace Top Floor',
+            shortName: 'Dressrosa 3',
+            thumb: 1784,
+            nakama: null,
+            completion: '5x Rainbow Gems',
+            gamewith: 99550,
+            '01': [ 1375, 1627, 2002 ],
+            '02': [ 2051 ],
+            '03': [ 2051 ],
+            '04': [  ],
+            '05': [ 2053 ],
+            '06': [  ],
+            '07': [ 1291, 1375, 1400, 1627, 1719 ],
+            '08': [ 2054 ],
+            '09': [ 2055 ],
+            '10': [ 1400, 2054 ],
+            '11': [ 1421 ],
+            '12': [ 1784 ],
         },
         
     ],
@@ -1828,14 +1850,17 @@ window.drops = {
         {
             name: 'Battle Royale!',
             thumb: 1766,
+            global: true,
             nakama: 2176600,
             gamewith: 67118,
-            'All Difficulties': [ 1765, 1767, 1768, -1192, -1764, -520, -1115, -1184, -1190, -554, -1175, -1612, -1614, -1353, -1393 ]
+            'Japan': [ 1765, 1767, 1768, -1192, -1764, -520, -1115, -1184, -1190, -554, -1175, -1612, -1614, -1353, -1393 ],
+            'Global': [ 1765, 1767, 1768, -520, -554, -1192, -1763, -1764, -1614, -1612, -1115, -1190, -1184, -1175, -1393, -1353 ]
         },
         
         {
             name: 'Wano Samurai!',
             thumb: 1774,
+            global: true,
             nakama: 2177400,
             condition: 'Shooter and Free Spirit characters get a boost (1.2x ATK, HP and RCV boost on 30 stamina)',
             gamewith: 68608,
@@ -1845,6 +1870,7 @@ window.drops = {
         {
             name: 'Zou Royal Guard!',
             thumb: 1812,
+            global: true,
             nakama: 2181200,
             condition: 'Powerhouse Characters will be weakened',
             gamewith: 71416,
@@ -1937,9 +1963,33 @@ window.drops = {
         {
             name: 'Whitebeard Pirates Commanders! Marco and Vista!',
             thumb: 1997,
-            nakama: null,
+            nakama: 2199700,
             gamewith: 94921,
             'All Difficulties': [ 1994, 1996, -1832, -1408, -1721, -1871, -1838, -1634 ]
+        },
+        
+        {
+            name: 'Makino\'s Bar! Shanks and Makino!',
+            thumb: 2021,
+            nakama: 2202100,
+            gamewith: 96636,
+            'All Difficulties': [ 2018, 2020, -1404, -1593, -1410, -1778, -1873, -1877, -1635 ]
+        },
+        
+        {
+            name: 'Anchoring! Red Hair Pirates!',
+            thumb: 2044,
+            nakama: null,
+            gamewith: 98267,
+            'All Difficulties': [ 2044, 2045, 2046, -1869, -1406, -1824, -1875, -1904, -2044, -1225 ]
+        },
+        
+        {
+            name: 'Germa\'s Lineage Factor!',
+            thumb: 2056,
+            nakama: null,
+            gamewith: 99699,
+            'All Difficulties': [ 2056, 2057, 2058, -1880, -1434, -1412, -1906, -1908, -1859, -1637 ]
         },
         
     ],
@@ -2291,6 +2341,7 @@ window.drops = {
         {
             name: 'Clash Neo!! Akainu',
             thumb: 1826,
+            global: true,
             nakama: 4182600,
             gamewith: 73951,
             condition: '1 Master version and 3 different Ultimate versions with different conditions. Master: Shooter/Striker/Slaher Only. Ultimate: Shooter Only, Striker Only, and Slasher Only',
@@ -2385,6 +2436,7 @@ window.drops = {
         {
             name: 'Clash!! Bartolomeo',
             thumb: 1879,
+            global: true,
             nakama: 4187900,
             gamewith: 81714,
             condition: 'You can only bring Fighter, Slasher or Striker units',
@@ -2414,18 +2466,31 @@ window.drops = {
         {
             name: 'Clash!! Rob Lucci',
             thumb: 2015,
-            gamewith: null,
+            nakama: 4201500,
+            gamewith: 95424,
+            Ultimate: [ 2014 ],
             Master: [ 2014 ],
             Expert: [ 2014 ]
+        },
+
+        {
+            name: 'Clash!? Luffy',
+            thumb: 2033,
+            showManual: true,
+            nakama: null,
+            gamewith: 97354,
+            Ultimate: [ 2032, -2032 ],
+            Master: [ 2032, -2032 ]
         },
         
         {
             name: 'Clash!! Heavenly Demon Doflamingo',
-            thumb: 2025,
+            thumb: 2201,
             global: true,
+            nakama: 4220100,
             gamewith: null,
-            Master: [ 2024 ],
-            Expert: [ 2024 ]
+            Ultimate: [ 2200 ],
+            Master: [ 2200 ]
         },
 
     ],
@@ -2441,7 +2506,7 @@ window.drops = {
             slefty: 'coliseums',
             Exhibition: [ 776, 778, 803, 832, 834, 859, 861, 883, 902, 904, 925, 927, 952, 984, 1017, 1019, 1103, 1105, 1195, 1197, 1221, 1252, 1253, 1293, 1311, 1339, 1340, 1377, 1402, 1423, 1424, 1457, 1459, 1488, 1490, 1526, 1528, 1552, 1585, 1603, 1629, 1860 ],
             Underground: [ 776, 778, 803, 832, 834, 859, 861, 883, 902, 904, 925, 927, 952, 984, 1017, 1019, 1103, 1105, 1195, 1197, 1221, 1252, 1253, 1293, 1311, 1339, 1340, 1377, 1402, 1423, 1424, 1457, 1459, 1488, 1490, 1526, 1528, 1552, 1585, 1603, 1629, 1791, 1860, 1896, 1977 ],
-            Chaos: [ 776, 778, 780, 803, 805, 830, 832, 834, 859, 861, 881, 883, 900, 902, 923, 925, 950, 982, 984, 1017, 1015, 1040, 1042, 1086, 1088, 1090, 1101, 1103, 1105, 1140, 1142, 1144, 1195, 1219, 1221, 1250, 1252, 1291, 1293, 1309, 1311, 1337, 1339, 1340, 1375, 1377, 1400, 1421, 1423, 1455, 1457, 1486, 1488, 1525, 1526, 1528, 1552, 1554, 1583, 1585, 1601, 1603, 1627, 1629, 1666, 1693, 1732, 1791, 1827, 1860, 1896, 1944, 1977 ],
+            Chaos: [ 776, 778, 780, 803, 805, 830, 832, 834, 859, 861, 881, 883, 900, 902, 923, 925, 950, 982, 984, 1017, 1015, 1040, 1042, 1086, 1088, 1090, 1101, 1103, 1105, 1140, 1142, 1144, 1195, 1219, 1221, 1250, 1252, 1291, 1293, 1309, 1311, 1337, 1339, 1340, 1375, 1377, 1400, 1421, 1423, 1455, 1457, 1486, 1488, 1525, 1526, 1528, 1552, 1554, 1583, 1585, 1601, 1603, 1627, 1629, 1666, 1693, 1732, 1791, 1827, 1860, 1896, 1944, 1977, 2036 ],
             Neo: [ 1862, 1898, 1975, 2016 ]
         },
         
@@ -2462,7 +2527,8 @@ window.drops = {
         {
             name: 'Edward Newgate',
             thumb: 1853,
-			nakama: 8185300,
+            global: true,
+            nakama: 8185300,
             gamewith: 79614,
             'Raging Sea': [ 1852 ]
         },
@@ -2551,15 +2617,16 @@ window.drops = {
         
         {
             name: 'Halloween Event Characters',
-            global: true,
             thumb: 1300,
+            global: true,
             nakama: 6130000,
             'All Difficulties': [ 1299, 1305, 1325 ],
         },
         
         {
-            name: 'White Day Characters',
+            name: 'Sweet Tea Time',
             thumb: 1463,
+            global: true,
             nakama: 6146300,
             gamewith: 51651,
             'Luffy': [ 1462, 29, 563, 1059, 345, 192, 113, 108, 115, 116, 117, 1180, 266, 94, 83 ],
@@ -2636,6 +2703,7 @@ window.drops = {
         {
             name: 'Invasion! Garp',
             thumb: 1846,
+            global: true,
             nakama: 6184600,
             gamewith: 75260,
             condition: 'Has a chance of appearing at the end of ANY Chaos Coliseum boss. You MUST use the same team that you just used to complete the Coliseum boss to fight Garp.',
@@ -2684,7 +2752,7 @@ window.drops = {
             global: true,
             nakama: 6131400,
             gamewith: 61665,
-            condition: 'Chance of dropping the Silver Almighty Book.',
+            condition: 'Chance of dropping the Silver Almighty Manual.',
             'All Bosses': [ -1621, -1632, -1665 ],
             'Chopperman Mission': [ 1675 ],
         },
@@ -2695,7 +2763,7 @@ window.drops = {
             global: true,
             nakama: 6140400,
             gamewith: 65078,
-            condition: 'Chance of dropping the Silver Almighty Book.',
+            condition: 'Chance of dropping the Silver Almighty Manual.',
             'All Bosses': [ -1621, -1632, -1665, -1678, -1721 ],
             'Chopperman Missions': [ 1728 ],
         },
@@ -2706,10 +2774,21 @@ window.drops = {
             global: true,
             nakama: 6087000,
             gamewith: 68282,
-            condition: 'Chance of dropping the Silver Almighty Book, Guidence Fragments and Guidence Crystals.',
+            condition: 'Chance of dropping the Silver Almighty Manual, Traning Potions, Guilding Fragments, Guilding Crystals and Guilding Jewels.',
             'Japan': [ -1621, -1632, -1665, -1678, -1713, -1721, -1770 ],
             'Global': [ -1621, -1632, -1665, -1713, -1721 ],
             'Chopperman Missions': [ 1023, 1600 ],
+        },
+        
+        {
+            name: 'Battle Blitz! Akainu vs Aokiji',
+            thumb: 2023,
+            nakama: null,
+            gamewith: null,
+            condition: 'Chance of dropping the Silver Almighty Manual, Traning Potions, Guilding Fragments, Guilding Crystals and Guilding Jewels.',
+            'Aokiji': [ -2023 ],
+            'Akainu' : [ -2025 ],
+            'Chopperman Missions': [ 2042 ],
         },
         
         {
@@ -2815,7 +2894,16 @@ window.drops = {
             condition: 'Zoro Drop is guranteed',
             'All Difficulties': [ 1900, -1921, -1362, -1388, -8, -906, -1175, -554, -218, -219 ],
         },
-
+        
+        {
+            name: 'Prepare for Battle! Aokiji and Akainu!',
+            thumb: 1280,
+            nakama: null,
+            gamewith: 98232,
+            showManual: true,
+            'Aokiji': [ 298, 1225, 1226, 1280, 1281 ],
+            'Akainu': [ 1223, 1270, 1283, 1417, 1418 ],
+        },
    ],
 
     'Training Forest': [

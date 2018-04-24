@@ -954,33 +954,23 @@ window.specials = {
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2.0, [p.friendCaptain, p.captain]); }
     },
     873: {
-        orb: function(p) {
-            if (window.specials[873].first) return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain]);
-            else return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain]);
-        },
-        type: "class",
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[873].multiplier, [p.friendCaptain, p.captain]); },
         onActivation: function(p) {
-            window.specials[873].first = !window.specials[873].first;
+            var n = (window.specials[873].multiplier == 1.5 ? 1 : 0);
+            window.specials[873].multiplier = [1.5, 1.75][n];
             p.scope.notify({
-                text: (window.specials[873].first ?
-                    'Activating the first stage. To switch to the second stage, disable and re-enable this special' :
-                    'Activating the second stage. To switch to the first stage, disable and re-enable this special'),
+                text: 'Using the ' + [1.5, 1.75][n] + 'x Orb boost. To switch to the ' + [1.75, 1.5][n] + 'x Orb boost, disable and re-enable this special',
                 name: '873warning'
             });
         }
     },
     874: {
-        orb: function(p) {
-            if (window.specials[874].first) return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain]);
-            else return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain]);
-        },
-        type: "class",
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[874].multiplier, [p.friendCaptain, p.captain]); },
         onActivation: function(p) {
-            window.specials[874].first = !window.specials[874].first;
+            var n = (window.specials[874].multiplier == 1.5 ? 1 : 0);
+            window.specials[874].multiplier = [1.5, 1.75][n];
             p.scope.notify({
-                text: (window.specials[874].first ?
-                    'Activating the first stage. To switch to the second stage, disable and re-enable this special' :
-                    'Activating the second stage. To switch to the first stage, disable and re-enable this special'),
+                text: 'Using the ' + [1.5, 1.75][n] + 'x Orb boost. To switch to the ' + [1.75, 1.5][n] + 'x Orb boost, disable and re-enable this special',
                 name: '874warning'
             });
         }
@@ -1275,10 +1265,10 @@ window.specials = {
         type: "class"
     },
     977: {
-        chainAddition: function(p) {return 0.5;}
+        chainAddition: function(p) { return 0.5; }
     },
     978: {
-        chainAddition: function(p){ return 0.5;}
+        chainAddition: function(p) { return 0.5; }
     },
     984: {
         delay: function(p) { return 1; },
@@ -4278,9 +4268,9 @@ window.specials = {
         }
     },
     1960: {
-        turnedOn: [ false, false ],
+        turnedOn: false,
         onActivation: function(p) {
-            window.specials[1960].turnedOn[p.slot] = true;
+            window.specials[1960].turnedOn = true;
             p.scope.notify({
                 text: 'Only affects Captain Ability if Pudding is your captain',
                 name: '1960warning'
@@ -4292,9 +4282,9 @@ window.specials = {
         delay: function(p) { return 1; }
     },
     1961: {
-        turnedOn: [ false, false ],
+        turnedOn: false,
         onActivation: function(p) {
-            window.specials[1961].turnedOn[p.slot] = true;
+            window.specials[1961].turnedOn = true;
             p.scope.notify({
                 text: 'Only affects Captain Ability if Pudding is your captain',
                 name: '1961warning'
@@ -4306,9 +4296,9 @@ window.specials = {
         delay: function(p) { return 1; }
     },
     1962: {
-        turnedOn: [ false, false ],
+        turnedOn: false,
         onActivation: function(p) {
-            window.specials[1962].turnedOn[p.slot] = true;
+            window.specials[1962].turnedOn = true;
             p.scope.notify({
                 text: 'Only affects Captain Ability if Sanji is your captain',
                 name: '1962warning'
@@ -4324,9 +4314,9 @@ window.specials = {
         }
     },
     1963: {
-        turnedOn: [ false, false ],
+        turnedOn: false,
         onActivation: function(p) {
-            window.specials[1963].turnedOn[p.slot] = true;
+            window.specials[1963].turnedOn = true;
             p.scope.notify({
                 text: 'Only affects Captain Ability if Sanji is your captain',
                 name: '1963warning'
@@ -4442,12 +4432,15 @@ window.specials = {
         staticMult: function(p) { return p.captain ? (p.captain.type == "STR" || p.captain.type == "QCK") ? 55 : 0 : 0; }
     },
     1992: {
-        atk: function(p) { return !p.unit.class.has('Free Spirit') ? 1 : window.specials[1992].multiplier; },
+        atk: function(p) { return p.unit.class.has('Free Spirit') ? window.specials[1992].multiplier : 1; },
         type: "class",
         onActivation: function(p) {
             var n = (window.specials[1992].multiplier == 1.75 ? 1 : 0);
             if (p.colorCount.QCK >= 3) {
                 window.specials[1992].multiplier = [1.75, 2][n];
+            }
+            else{
+                window.specials[1992].multiplier = 1;
             }
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
@@ -4456,17 +4449,21 @@ window.specials = {
         }
     },
     1993: {
-        atk: function(p) { return !p.unit.class.has('Free Spirit') ? 1 : window.specials[1993].multiplier; },
+        atk: function(p) { return p.unit.class.has('Free Spirit') ? window.specials[1993].multiplier : 1; },
         type: "class",
         onActivation: function(p) {
             var n = (window.specials[1993].multiplier == 1.75 ? 1 : 0);
             if (p.colorCount.QCK >= 3) {
                 window.specials[1993].multiplier = [1.75, 2][n];
             }
+            else{
+                window.specials[1993].multiplier = 1;
+            }
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
                 name: '1993warning'
             });
+            console.log(window.specials[1993].multiplier);
         }
     },
     1996: {
@@ -4528,17 +4525,268 @@ window.specials = {
         atk: function(p) { return p.delayed > 0 ? 1.75 : 1; },
         type: "condition",
     },
+    2016: {
+        atk: function(p) { return p.unit.class.has("Driven") ? window.specials[2016].multiplier : 1; },
+        type: "class",
+        onActivation: function(p) {
+            var n = (p.percHP >= 50 ? 2 : 1.5);
+            window.specials[2016].multiplier = n;
+            p.scope.notify({
+                text: 'HP ' + (n == 2 ? 'above' : 'below') + ' 50%, using the ' + n + 'x multiplier.',
+                name: '2016warning'
+            });
+        }
+    },
+    2017: {
+        atk: function(p) { return p.unit.class.has("Driven") ? window.specials[2017].multiplier : 1; },
+        type: "class",
+        onActivation: function(p) {
+            var n = (p.percHP >= 50 ? 2 : 1.5);
+            window.specials[2017].multiplier = n;
+            p.scope.notify({
+                text: 'HP ' + (n == 2 ? 'above' : 'below') + ' 50%, using the ' + n + 'x multiplier.',
+                name: '2017warning'
+            });
+        }
+    },
+    2020: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain]); },
+    },
+    2021: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain]); },
+    },
+    2022: {
+        orb: function(p) { return (p.unit.type == "STR" || p.unit.type == "INT") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2.25, [p.friendCaptain, p.captain]) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain]); },
+    },
+    2023: {
+        orb: function(p) { return (p.unit.type == "STR" || p.unit.type == "INT") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2.25, [p.friendCaptain, p.captain]) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain]); },
+    },
+    2024: {
+        atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "QCK" ? 2.25 : 1; },
+        type: "type",
+    },
+    2025: {
+        atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "QCK" ? 2.25 : 1; },
+        type: "type",
+    },
+    2026: {
+        delay: function(p) { return 1; },
+        affinity: function(p) { return !(p.unit.type == "QCK" || p.unit.type == "PSY") ? 1 : window.specials[2026].multiplier; },
+        onActivation: function(p) {
+            if (p.captain.type == "QCK" || p.captain.type == "PSY") {
+                window.specials[2026].multiplier = 2;
+            }
+            else{
+                window.specials[2026].multiplier = 1;
+            }
+        }
+    },
+    2027: {
+        delay: function(p) { return 1; },
+        affinity: function(p) { return !(p.unit.type == "QCK" || p.unit.type == "PSY") ? 1 : window.specials[2027].multiplier; },
+        onActivation: function(p) {
+            if (p.captain.type == "QCK" || p.captain.type == "PSY") {
+                window.specials[2027].multiplier = 2;
+            }
+            else{
+                window.specials[2027].multiplier = 1;
+            }
+        }
+    },
+    2028: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[2028].multiplier, [p.friendCaptain, p.captain]); },
+        onActivation: function(p) {
+            if (p.colorCount.QCK + p.colorCount.PSY >= 4) {
+                window.specials[2028].multiplier = 2;
+            }
+            else{
+                window.specials[2028].multiplier = 1;
+            }
+        }
+    },
+    2029: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[2029].multiplier, [p.friendCaptain, p.captain]); },
+        onActivation: function(p) {
+            if (p.colorCount.QCK + p.colorCount.PSY >= 4) {
+                window.specials[2029].multiplier = 2;
+            }
+            else{
+                window.specials[2029].multiplier = 1;
+            }
+        }
+    },
+    2032: {
+        atk: function(p) { return 1.5; },
+        type: "type",
+        orb: function(p) { return window.specials[2032].multiplier ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, window.specials[2032].multiplier, 1.5, [p.friendCaptain, p.captain]) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain]); },
+        chainAddition: function(p) { return window.specials[2032].multiplier ? .3 : 0; },
+        staticMult: function(p) { return window.specials[2032].multiplier ? 20 : 0; },
+        onActivation: function(p) {
+            if (p.captain.type == "PSY") {
+                window.specials[2032].multiplier = true;
+            }
+            else{
+                window.specials[2032].multiplier = false;
+            }
+        }
+    },
+    2033: {
+        atk: function(p) { return 1.5; },
+        type: "type",
+        orb: function(p) { return window.specials[2033].multiplier ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, window.specials[2033].multiplier, 1.5, [p.friendCaptain, p.captain]) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain]); },
+        chainAddition: function(p) { return window.specials[2033].multiplier ? .3 : 0; },
+        staticMult: function(p) { return window.specials[2033].multiplier ? 20 : 0; },
+        onActivation: function(p) {
+            if (p.captain.type == "PSY") {
+                window.specials[2033].multiplier = true;
+            }
+            else{
+                window.specials[2033].multiplier = false;
+            }
+        }
+    },
+    2034: {
+        turnedOn: [ false, false ],
+        onActivation: function(p) {
+            window.specials[2034].turnedOn[p.slot] = true;
+            p.scope.notify({
+                text: 'Only affects damage if Kizaru is your captain',
+                name: '2034warning'
+            });
+        },
+        onDeactivation: function(p) {
+            window.specials[2034].turnedOn[p.slot] = false;
+        }
+    },
+    2035: {
+        atk: function(p) { return p.unit.cost <= 40 ? 2 : 1; },
+        type: "class"
+    },
+    2036: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? 1.75 : 1; },
+        type: "class",
+    },
+    2037: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? 1.75 : 1; },
+        type: "class",
+    },
+    2040: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 2.25 : 1; },
+        type: "type"
+    },
+    2041: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 2.25 : 1; },
+        type: "type"
+    },
+    2044: {
+        atk: function(p) { return p.unit.class.has("Cerebral") ? 1.75 : 1; },
+        type: "class",
+    },
+    2046: {
+        orb: function(p) { return p.unit.type == window.specials[2046].multiType ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[2046].multiplier, [p.friendCaptain, p.captain]) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain]); },
+        onActivation: function(p) {
+            if (p.colorCount.STR >= 4 || p.colorCount.DEX >= 4 || p.colorCount.QCK >= 4 || p.colorCount.PSY >= 4 || p.colorCount.INT >= 4) {
+                window.specials[2046].multiplier = 1.75;
+                if (p.colorCount.STR >= 4){
+                    window.specials[2046].multiType = "STR";
+                }
+                if (p.colorCount.QCK >= 4){
+                    window.specials[2046].multiType = "QCK";
+                }
+                if (p.colorCount.DEX >= 4){
+                    window.specials[2046].multiType = "DEX";
+                }
+                if (p.colorCount.PSY >= 4){
+                    window.specials[2046].multiType = "PSY";
+                }
+                if (p.colorCount.INT >= 4){
+                    window.specials[2046].multiType = "INT";
+                }
+            }
+            else{
+                window.specials[2046].multiplier = 1;
+                window.specials[2046].multiType = "null";
+            }
+        }
+    },
+    2047: {
+        orb: function(p) { return p.unit.class.has("Fighter") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain]) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain]); },
+        warning: "Selected special (%name%) assumes that the enemy has Delay Protection."
+    },
+    2048: {
+        orb: function(p) { return p.unit.class.has("Fighter") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain]) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain]); },
+        warning: "Selected special (%name%) assumes that the enemy has Delay Protection."
+    },
+    2051: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? 1.75 : 1; },
+        type: "class",
+    },
+    2052: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? 1.75 : 1; },
+        type: "class",
+    },
+    2057: {
+        atk: function(p) { return p.unit.cost <= 15 ? 1.75 : 1; },
+        type: "class"
+    },
+    2058: {
+        orbs: function(p) { return p.unit.cost <= 15 ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain]) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain]); },
+    },
+    2059: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain]); },
+        chain: function(p) { return window.specials[2059].multiplier; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[2059].multiplier : 1;
+        },
+        onActivation: function(p) {
+            var n = (window.specials[2059].multiplier == 2.5 ? 1 : window.specials[2059].multiplier == 2.75 ? 2 : 0);
+            window.specials[2059].multiplier = [2.5, 2.75, 3][n];
+            p.scope.notify({
+                text: 'Using the ' + [2.5, 2.75, 3][n] + 'x chain lock. To switch to the ' + [2.75, 3, 2.5][n] + 'x chain lock, disable and re-enable this special',
+                name: '2059warning'
+            });
+        }
+    },
+    2060: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain]); },
+        chain: function(p) { return window.specials[2060].multiplier; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[2060].multiplier : 1;
+        },
+        onActivation: function(p) {
+            var n = (window.specials[2060].multiplier == 2.5 ? 1 : window.specials[2060].multiplier == 2.75 ? 2 : 0);
+            window.specials[2060].multiplier = [2.5, 2.75, 3][n];
+            p.scope.notify({
+                text: 'Using the ' + [2.5, 2.75, 3][n] + 'x chain lock. To switch to the ' + [2.75, 3, 2.5][n] + 'x chain lock, disable and re-enable this special',
+                name: '2060warning'
+            });
+        }
+    },
+    2071: {
+        def: function(p) { return 0.8; },//CHANGE THIS
+        chainAddition: function(p) { return 0.6; }
+    },
+    2072: {
+        def: function(p) { return 0.8; },//CHANGE THIS
+        chainAddition: function(p) { return 0.6; }
+    },
     5000: {
         atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 1.5 : 1; },
+        type: "type",
     },
     5001: {
         atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 1.5 : 1; },
+        type: "type",
     },
     5002: {
         atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 1.5 : 1; },
+        type: "type",
     },
     5003: {
         atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 1.5 : 1; },
+        type: "type",
     },
     5004: {
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain]); }

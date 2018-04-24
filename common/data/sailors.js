@@ -384,6 +384,21 @@ window.sailors = {
     1976: {
         atkStatic: function(p) { return p.percHP <= 30.0 ? 40 : 0; },
     },
+    1983: {
+        atkStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 75 : 0; },
+        hpStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 75 : 0; },
+        rcvStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 75 : 0; },
+    },
+    1984: {
+        atkStatic: function(p) { return p.unit.class.has("Free Spirit") ? 150 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Free Spirit") ? 150 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Free Spirit") ? 150 : 0; },
+    },
+    1985: {
+        atkStatic: function(p) { return p.unit.class.has("Free Spirit") ? 150 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Free Spirit") ? 150 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Free Spirit") ? 150 : 0; },
+    },
     1992: {
         atkStatic: function(p) { return p.unit.class.has("Free Spirit") ? 50 : 0; },
     },
@@ -398,11 +413,46 @@ window.sailors = {
         atkStatic: function(p) { return (p.colorCount.STR>=4 && p.unit.type == "STR") ? 125 : (p.colorCount.DEX>=4 && p.unit.type == "DEX") ? 125 : (p.colorCount.QCK>=4 && p.unit.type == "QCK") ? 125 : (p.colorCount.PSY>=4 && p.unit.type == "PSY") ? 125 : (p.colorCount.INT>=4 && p.unit.type == "INT") ? 125 : 0; },
         type: "type",
     },
-    2014: {
-        atkStatic: function(p) { return p.unit.class.has("Fighter") ? 100 : 0; },
+    2026: {
+        atkStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "QCK" ? 50 : 0; },
     },
-    2015: {
-        atkStatic: function(p) { return p.unit.class.has("Fighter") ? 100 : 0; },
+    2027: {
+        atkStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "QCK" ? 50 : 0; },
+    },
+    2031: {
+        atkStatic: function(p) { return p.unit.type == "INT"  ? 50 : 0; },
+        hpStatic: function(p) { return p.unit.type == "INT"  ? 50 : 0; },
+        rcvStatic: function(p) { return p.unit.type == "INT"  ? 50 : 0; },
+    },
+    2038: {
+        atkStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "QCK" ? 40 : 0; },
+        rcvStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "QCK" ? 40 : 0; },
+        hpStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "QCK" ? 40 : 0; },
+    },
+    2039: {
+        atkStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "QCK" ? 40 : 0; },
+        rcvStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "QCK" ? 40 : 0; },
+        hpStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "QCK" ? 40 : 0; },
+    },
+    2040: {
+        atkStatic: function(p) { return p.unit.class.has("Fighter") ? 40 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Fighter") ? 40 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Fighter") ? 40 : 0; },
+    },
+    2041: {
+        atkStatic: function(p) { return p.unit.class.has("Fighter") ? 40 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Fighter") ? 40 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Fighter") ? 40 : 0; },
+    },
+    2042: {
+        atkStatic: function(p) { return 20; },
+        rcvStatic: function(p) { return 20; },
+        hpStatic: function(p) { return 20; },
+    },
+    2043: {
+        atkStatic: function(p) { return 20; },
+        rcvStatic: function(p) { return 20; },
+        hpStatic: function(p) { return 20; },
     },
     5000: {
         atkStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 50 : 0; },

@@ -3221,14 +3221,94 @@ window.evolutions = {
     },
     2012: {
         evolution: 2013,
-        evolvers: [  ]
+        evolvers: [ 118, 84, 95, 300, 100 ]
     },
     2014: {
         evolution: 2015,
-        evolvers: [  ]
+        evolvers: [ 118, 99, 1180, 304, 104 ]
     },
     2016: {
         evolution: 2017,
+        evolvers: [ 118, 94, 98, 303, 103 ]
+    },
+    2018: {
+        evolution: 2019,
+        evolvers: [ 80, 86, 91, 97, 102 ]
+    },
+    2020: {
+        evolution: 2021,
+        evolvers: [ 81, 87, 92, 98, 103 ]
+    },
+    2022: {
+        evolution: 2023,
+        evolvers: [ 118, 118, 304, 304, 267 ]
+    },
+    2024: {
+        evolution: 2025,
+        evolvers: [ 118, 118, 303, 303, 267 ]
+    },
+    2026: {
+        evolution: 2027,
+        evolvers: [ 94, 81, 87, 303, 103 ]
+    },
+    2028: {
+        evolution: 2029,
+        evolvers: [ 1180, 90, 96, 301, 101 ]
+    },
+    2030: {
+        evolution: 2031,
+        evolvers: [ 83, 266, 99, 99, 104 ]
+    },
+    2032: {
+        evolution: [ 2033, 2033, 2033 ],
+        evolvers: [ [ 115, 108, 108 ], [ 81, 108, 108 ], [ 92, 108, 108 ] ]
+    },
+    1240: {
+        evolution: 2034,
+        evolvers: [ 'skullPSY', 118, 87, 303, 267 ]
+    },
+    1391: {
+        evolution: 2035,
+        evolvers: [ 'skullINT', 118, 88, 304, 267 ]
+    },
+    2036: {
+        evolution: 2037,
+        evolvers: [ 118, 99, 1180, 304, 104 ]
+    },
+    2038: {
+        evolution: 2039,
+        evolvers: [ 115, 115, 90, 96, 301 ]
+    },
+    2040: {
+        evolution: 2041,
+        evolvers: [ 115, 115, 89, 95, 300 ]
+    },
+    2042: {
+        evolution: 2043,
+        evolvers: [ 116, 117, 82, 88, 99 ]
+    },
+    2047: {
+        evolution: 2048,
+        evolvers: [ 118, 85, 96, 301, 101 ]
+    },
+    2051: {
+        evolution: 2052,
+        evolvers: [  ]
+    },
+    2059: {
+        evolution: 2060,
+        evolvers: [  ]
+    },
+    2061: {
+        evolution: 2062,
+        evolvers: [  ]
+    },
+    2063: {
+        evolution: 2064,
+        evolvers: [  ]
+    },
+    2071: {
+        evolution: 2072,
         evolvers: [  ]
     },
     2200: {

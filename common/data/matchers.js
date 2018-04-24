@@ -193,7 +193,7 @@ window.matchers = [
     {
         name: 'End of Turn Damage Dealer',
         target: 'captain',
-        matcher: /deals.+end of each turn/i
+        matcher: /(deals|cuts).+end of each turn/i
     },
     
     {
@@ -408,6 +408,12 @@ window.matchers = [
         name: 'Typeless damage dealers',
         target: 'special',
         matcher: /Deals.+typeless damage/i
+    },
+    
+    {
+        name: 'Additional Damage dealer',
+        target: 'special',
+        matcher: /Additional.+Damage/i
     },
     
     {
@@ -695,6 +701,18 @@ window.matchers = [
         matcher: /Restores (his|her) own special/i
     },
     
+    {
+        name: 'Orb Retainer',
+        target: 'sailor',
+        matcher: /If this character has.+(STR|DEX|QCK|PSY|INT|RCV).+Perfect/i
+    },
+    
+    {
+        name: 'Additional Damage dealer',
+        target: 'sailor',
+        matcher: /Additional.+Damage/i
+    },
+    
     /* * * * * Limit Break * * * * */
     
     {
@@ -743,6 +761,12 @@ window.matchers = [
         name: 'Damage Reduction Potential Ability',
         target: 'limit',
         matcher: /Damage Reduction/i
+    },
+    
+    {
+        name: 'Cooldown Reduction Potential Ability',
+        target: 'limit',
+        matcher: /Cooldown Reduction/i
     },
 
 ];
