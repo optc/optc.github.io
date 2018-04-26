@@ -6947,9 +6947,15 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Fighter") ? 1.25 : 1; },
         hp: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; },
     },
+    2059: {
+        atk: function(p) { return p.unit.class.has("Cerebral") ? 1.2 : 1; },
+    },
     2060: {
         atk: function(p) { return p.unit.class.has("Cerebral") ? 1.5 : 1; },
         hp: function(p) { return p.unit.class.has("Cerebral") ? 1.2 : 1; },
+    },
+    2061: {
+        atk: function(p) { return p.unit.class.has("Free Spirit") ? 1.2 : 1; },
     },
     2062: {
         atk: function(p) { return p.unit.class.has("Free Spirit") ? 1.5 : 1; },

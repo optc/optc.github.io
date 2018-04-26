@@ -25059,7 +25059,7 @@ window.details = {
         sailorNotes: "#{beneficial}",
     },
     2059: {//Beckman
-        captain: "Not Translated",
+        captain: "Boosts ATK of Cerebral characters by 1.2x",
         special: "Reduces enemies Increased Defense duration by 3 turns, changes own orb into [STR], amplifies the effect of orbs by 1.5x for 1 turn and locks the chain multiplier depending on your Treasure Map Level for 1 turn",
         specialName: "Trial of Annihilation",
         specialNotes: "Level 1-10: 2.5x chain lock<br\>Level 11-20: 2.75x chain lock<br\>Level 21+: 3x chain lock",
@@ -25071,7 +25071,7 @@ window.details = {
         specialNotes: "Level 1-10: 2.5x chain lock<br\>Level 11-20: 2.75x chain lock<br\>Level 21+: 3x chain lock",
     },
     2061: {//Apoo
-        captain: "Not Translated",
+        captain: "Boosts ATK of Free Spirit characters by 1.2x",
         special: "Reduces Chain Multiplier Limit and Chain Coefficient Reduction duration by 4 turns and reduces damage received from [DEX] enemies by 80%",
         specialName: "Noise & Escape",
     },
