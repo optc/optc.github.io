@@ -770,6 +770,7 @@ window.drops = {
             name: 'Dressrosa - Port Town Acacia to Colosseum',
             shortName: 'Dressrosa 1',
             thumb: 1782,
+            global: true,
             nakama: 1178200,
             completion: '5x Rainbow Gems',
             gamewith: 70405,
@@ -806,6 +807,27 @@ window.drops = {
             '10': [ 2005 ],
             '11': [  ],
             '12': [ 2005 ],
+        },
+        
+        {
+            name: 'Dressrosa - Former King\'s Land to Royal Palace Top Floor',
+            shortName: 'Dressrosa 3',
+            thumb: 1784,
+            nakama: null,
+            completion: '5x Rainbow Gems',
+            gamewith: 99550,
+            '01': [ 1375, 1627, 2002 ],
+            '02': [ 2051 ],
+            '03': [ 2051 ],
+            '04': [  ],
+            '05': [ 2053 ],
+            '06': [  ],
+            '07': [ 1291, 1375, 1400, 1627, 1719 ],
+            '08': [ 2054 ],
+            '09': [ 2055 ],
+            '10': [ 1400, 2054 ],
+            '11': [ 1421 ],
+            '12': [ 1784 ],
         },
         
     ],
@@ -1963,10 +1985,10 @@ window.drops = {
         },
         
         {
-            name: 'Germa Family Force!',
-            thumb: 2050,
+            name: 'Germa\'s Lineage Factor!',
+            thumb: 2056,
             nakama: null,
-            gamewith: null,
+            gamewith: 99699,
             'All Difficulties': [ 2056, 2057, 2058, -1880, -1434, -1412, -1906, -1908, -1859, -1637 ]
         },
         
@@ -2414,6 +2436,7 @@ window.drops = {
         {
             name: 'Clash!! Bartolomeo',
             thumb: 1879,
+            global: true,
             nakama: 4187900,
             gamewith: 81714,
             condition: 'You can only bring Fighter, Slasher or Striker units',
@@ -2601,12 +2624,11 @@ window.drops = {
         },
         
         {
-            name: 'White Day Characters',
+            name: 'Sweet Tea Time',
             thumb: 1463,
             global: true,
             nakama: 6146300,
             gamewith: 51651,
-            condition: 'Only Luffy and Chopper Islands are Global',
             'Luffy': [ 1462, 29, 563, 1059, 345, 192, 113, 108, 115, 116, 117, 1180, 266, 94, 83 ],
             'Chopper': [ 1464, 1155, 333, 728, 334, 1061, 346, 193, 109, 114, 115, 116, 117, 1180, 266, 94, 83 ],
             'Sanji': [ 1507, 52, 207, 892, 343, 190, 111, 106, 115, 116, 117, 1180, 266, 94, 83 ],

@@ -2049,14 +2049,14 @@ window.cooldowns = [
     [ 17, 13 ],
     null,
     null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,//Germa bros
-    null,//Germa bros
-    null,//Germa bros
+    23,
+    23,
+    18,
+    16,
+    18,
+    16,
+    18,
+    18,
     [ 11, 11 ],
     [ 11, 11 ],
     [ 11, 11 ],

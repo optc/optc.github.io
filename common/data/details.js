@@ -13022,13 +13022,13 @@ window.details = {
         specialName: "Gum-Gum Twin Jet Pistol: Snowflake",
     },
     1361: {//6* Zoro
-        captain: "If you have 5 or more Slashers charcters in your crew, boosts ATK of Slasher characters by 2.5x and their HP by 1.5x. If you defeated an enemy last turn, boosts ATK of Slasher characters by 3x instead and boosts ATK of all other characters by 1.2x",
+        captain: "If you have 5 or more Slashers characters in your crew, boosts ATK of Slasher characters by 2.5x and their HP by 1.5x. If you defeated an enemy last turn, boosts ATK of Slasher characters by 3x instead and boosts ATK of all other characters by 1.2x",
         captainNotes: "You only need to kill at least 1 character in the last turn to gain his 3x ATK boost. If a character dies and revives, you will retain the 3x ATK boost",
         special: "Deals 60x character's ATK as typeless damage to all enemies. If Zoro is your Captain or Friend/Guest Captain, boosts ATK of Slasher characters by 2x for 1 turn. If he is a Sailor, boosts ATK of Slasher characters by 1.75x for 1 turn instead",
         specialName: "Three Blade Style Secret Skill: Crossroad of Six Paths",
     },
     1362: {//6* Zoro
-        captain: "If you have 5 or more Slashers charcters in your crew, boosts ATK of Slasher characters by 2.5x and their HP by 1.5x. If you defeated an enemy last turn, boosts ATK of Slasher characters by 3x instead and boosts ATK of all other characters by 1.2x",
+        captain: "If you have 5 or more Slashers characters in your crew, boosts ATK of Slasher characters by 2.5x and their HP by 1.5x. If you defeated an enemy last turn, boosts ATK of Slasher characters by 3x instead and boosts ATK of all other characters by 1.2x",
         captainNotes: "You only need to kill at least 1 character in the last turn to gain his 3x ATK boost. If a character dies and revives, you will retain the 3x ATK boost",
         special: "Deals 60x character's ATK as typeless damage to all enemies. If Zoro is your Captain or Friend/Guest Captain, boosts ATK of Slasher characters by 2x for 1 turn. If he is a Sailor, boosts ATK of Slasher characters by 1.75x for 1 turn instead",
         specialName: "Three Blade Style Secret Skill: Crossroad of Six Paths",
@@ -25012,12 +25012,12 @@ window.details = {
         potentialNotes: "#{enrage}"
     },
     2051: {//Pica
-        captain: "If you have 5 or more Fighter characters in your crew, boosts ATK of Fighter characters by 2x and Reduces damage received by 5%",
+        captain: "If you have 5 or more Fighter characters in your crew, boosts ATK of Fighter characters by 2x and reduces damage received by 5%",
         special: "Deals 35x character's ATK in QCK damage to one enemy, boosts ATK of Fighter characters by 1.75x for 2 turns. If Pica is your Captain or Friend/Guest Captain, Reduces damage received by 20% for 1 turn. If he is a Sailor, Increases damage received by 2x for 1 turn instead",
         specialName: "Bitestone",
     },
     2052: {//Pica
-        captain: "If you have 5 or more Fighter characters in your crew, boosts ATK of Fighter characters by 2.5x and Reduces damage received by 10%",
+        captain: "If you have 5 or more Fighter characters in your crew, boosts ATK of Fighter characters by 2.5x and their HP by 1.2, and reduces damage received by 10%",
         special: "Deals 35x character's ATK in QCK damage to one enemy, boosts ATK of Fighter characters by 1.75x for 2 turns. If Pica is your Captain or Friend/Guest Captain, Reduces damage received by 20% for 1 turn. If he is a Sailor, Increases damage received by 2x for 1 turn instead",
         specialName: "Bitestone",
     },
@@ -25037,7 +25037,7 @@ window.details = {
         specialName: "Cruel Suction",
     },
     2056: {//Ichiji
-        captain: "Boosts ATK of Fighter characters by 2.5x and reduces ??? characters RCV to 0",
+        captain: "Boosts ATK of Fighter characters by 2.5x and reduces their RCV to 0",
         special: "Deals 15x character's ATK in [INT] damage to one enemy, changes captain's orb into a [PSY] orb and makes [PSY] orb \"beneficial\" for all characters for 1 turn.",
         specialName: "Scornful Gang Up (First Son)",
         specialNotes: "#{beneficial}",
@@ -25048,7 +25048,6 @@ window.details = {
         captain: "Boosts ATK of Fighter characters by 1.75x and their HP by 1.2x",
         special: "Deals 15x character's ATK in [DEX] damage to one enemy, changes the orbs in the middle row into [PSY] orbs and boosts ATK of characters with 15 cost or less by 1.75x for 1 turn.",
         specialName: "Scornful Gang Up (Second Son)",
-        specialNotes: "#{beneficial}",
         sailor: "Makes [PSY] orbs \"beneficial\" for this unit",
         sailorNotes: "#{beneficial}",
     },
@@ -25056,7 +25055,6 @@ window.details = {
         captain: "Boosts ATK of Fighter characters by 1.25x and their HP by 1.5x",
         special: "Deals 15x character's ATK in [QCK] damage to one enemy, changes the orbs in the bottom row into [PSY] orbs and Amplifies the effect of orbs for characters with 15 cost or less by 1.75x for 1 turn.",
         specialName: "Scornful Gang Up (Fourth Son)",
-        specialNotes: "#{beneficial}",
         sailor: "Makes [PSY] orbs \"beneficial\" for this unit",
         sailorNotes: "#{beneficial}",
     },
@@ -25106,14 +25104,9 @@ window.details = {
         },
         sailorNotes: "#{rewind : 1}<br/>#{beneficial}",
     },
-    2009: {//Kuma
-        captain: "Boosts ATK of [STR] and [INT] characters by 1.5x and their HP by 1.2x",
-        special: "Cuts the current HP of each enemy by 10%, reduces Special Cooldown of your top row by 2 turns and boosts the Color Affinity of [STR] and [INT] characters depending on your Treasure Map Level for 1 turn",
-        specialName: "Proof of a Human Weapon",
-        specialNotes: "Level 1-10: 1.5x affinity boost<br\>Level 11-20: 1.75x affinity boost<br\>Level 21+: 2x affinity boost",
-    },
     2065: {//EXP Pudding
         captain: "Boosts ATK of all characters by 2.25x and boosts EXP and amount of Beli received by 1.2x",
+        captainNotes: "EXP and Beli boost does not take effect if she becomes your captain in the middle of the adventure.",
         special: "Changes Badly Matching orbs into Matching orbs, randomizes non-matching orbs and recovers 2,000 HP",
         specialName: "Complex Feelings",
     },

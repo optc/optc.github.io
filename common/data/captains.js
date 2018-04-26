@@ -6923,6 +6923,7 @@ window.captains = {
     },
     2052: {
         atk: function(p) { return p.unit.class.has("Fighter") ? p.classCount.Fighter>=5 ? 2.5 : 1 : 1; },
+        hp: function(p) { return p.unit.class.has("Fighter") ? p.classCount.Fighter>=5 ? 1.2 : 1 : 1; },//CHANGE IF NO COUNT
     },
     2053: {
         atk: function(p) { return p.unit.type == "INT" ? 2.5 : 1; },
@@ -6936,7 +6937,7 @@ window.captains = {
     },
     2056: {
         atk: function(p) { return p.unit.class.has("Fighter") ? 2.5 : 1; },
-        rcv: function(p) { return p.unit.class.has("Fighter") ? 0 : 0; },//CHANGE THIS
+        rcv: function(p) { return p.unit.class.has("Fighter") ? 0 : 0; },
     },
     2057: {
         atk: function(p) { return p.unit.class.has("Fighter") ? 1.75 : 1; },
