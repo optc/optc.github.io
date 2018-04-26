@@ -543,4 +543,16 @@ window.zombies = {
         type: 'zombie',
         threshold: 0.5//CHANGE THIS
     },
+    5001: { // Smoker/Tashigi
+        type: 'healer',
+        amount: 300
+    },
+    5002: { // Smoker/Tashigi
+        type: 'healer',
+        amount: 1000
+    },
+    5003: { // Smoker/Tashigi
+        type: 'healer',
+        amount: 1000
+    },
 };

@@ -6992,10 +6992,10 @@ window.captains = {
         atk: function(p){ return p.unit.type == "PSY" || p.unit.type == "INT" ? 2.5 : 1; },
     },
     5002: {
-        atk: function(p){ return p.unit.type == "PSY" || p.unit.type == "INT" ? 2.5 : 1; },
+        atk: function(p){ return p.unit.type == "PSY" || p.unit.type == "INT" ? 2.75 : 1; },
     },
     5003: {
-        atk: function(p){ return p.unit.type == "PSY" || p.unit.type == "INT" ? 2.5 : 1; },
+        atk: function(p){ return p.unit.type == "PSY" || p.unit.type == "INT" ? 2.75 : 1; },
     },
     5004: {
         atk: function(p){ return p.unit.class.has("Free Spirit") ? 3 : 1; },
