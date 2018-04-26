@@ -1992,6 +1992,14 @@ window.drops = {
             'All Difficulties': [ 2056, 2057, 2058, -1880, -1434, -1412, -1906, -1908, -1859, -1637 ]
         },
         
+        {
+            name: 'Strawhat Pirates Pizza Party!',
+            thumb: 2087,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 2087, 2088, 2089, 2090, 2091, -1910, -1440, -1442, -1895, -1902, -1714 ]
+        },
+        
     ],
 
             
