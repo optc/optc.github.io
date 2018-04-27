@@ -25110,6 +25110,11 @@ window.details = {
         special: "Changes Badly Matching orbs into Matching orbs, randomizes non-matching orbs and recovers 2,000 HP",
         specialName: "Complex Feelings",
     },
+    2066: {//6+ Jinbe
+        captain: "Boosts ATK of Fighter characters by 3x, their HP by 1.5x and reduces damage received by 7%",
+        specialName: "Jinbe Special",
+        special: "Deals ??x character's ATK in [INT] damage to all enemies, changes all orbs on Fighter characters into matching orbs and reduces enemies Percent Damage Reduction and Increased Defense duration by 5 turns.",
+    },
     2067: {//Tashigi
         captain: "Not Translated",
         special: "Reduces ATK DOWN duration by 5 turns, changes [BLOCK], [STR] and [QCK] orbs into Matching orbs and locks the chain multiplier at 2.75x for 3 turns",
@@ -25120,6 +25125,16 @@ window.details = {
         special: "Reduces ATK DOWN duration by 5 turns, changes [BLOCK], [STR] and [QCK] orbs into Matching orbs and locks the chain multiplier at 2.75x for 3 turns",
         specialName: "Tashigi Special",
         limit: "This charactert has a limit break"
+    },
+    2069: {//Neo Boa
+        captain: "Boosts ATK of Free Spirit characters by 2x",
+        specialName: "Slave Arrow [Neo]",
+        special: "Locks the chain multiplier at 2.5x for 3 turns, delays all enemies for 1 turn and changes own orb and the captain's orb into matching"
+    },
+    2070: {//Neo Boa
+        captain: "Boosts ATK and HP of Free Spirit characters by 2x",
+        specialName: "Slave Arrow [Neo]",
+        special: "Locks the chain multiplier at 2.5x for 3 turns, delays all enemies for 1 turn and changes own orb and the captain's orb into matching"
     },
     2071: {//Anni Chopper
         captain: "Recovers ?x character's RCV in HP at the end of each turn",

@@ -1924,6 +1924,9 @@ window.flags = {
     2061: { rr: 1, rro: 1, lrr: 1 },
     2062: { rr: 1, rro: 1, lrr: 1 },
     2065: { special: 1 },
+    2066: { rr: 1, rro: 1 },
+    2067: { rr: 1, rro: 1, lrr: 1 },
+    2068: { rr: 1, rro: 1, lrr: 1 },
     2200: { global: 1 },
     2201: { global: 1 },
 };
