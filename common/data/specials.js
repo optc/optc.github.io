@@ -4764,6 +4764,36 @@ window.specials = {
             });
         }
     },
+    2067: {
+        chain: function(p) { return 2.75; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 2.75 : 1;
+        }
+    },
+    2068: {
+        chain: function(p) { return 2.75; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 2.75 : 1;
+        }
+    },
+    2069: {
+        delay: function(p) { return 1; },
+        chain: function(p) { return 2.5; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 2.5 : 1;
+        }
+    },
+    2070: {
+        delay: function(p) { return 1; },
+        chain: function(p) { return 2.5; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 2.5 : 1;
+        }
+    },
     2071: {
         def: function(p) { return 0.8; },//CHANGE THIS
         chainAddition: function(p) { return 0.6; }
@@ -4771,6 +4801,38 @@ window.specials = {
     2072: {
         def: function(p) { return 0.8; },//CHANGE THIS
         chainAddition: function(p) { return 0.6; }
+    },
+    2087: {
+        turnedOn: [ false, false ],
+        onActivation: function(p) {
+            window.specials[2087].turnedOn[p.slot] = true;
+            p.scope.notify({
+                text: 'Only affects damage if Luffy is your captain',
+                name: '2087warning'
+            });
+        },
+        onDeactivation: function(p) {
+            window.specials[2087].turnedOn[p.slot] = false;
+        },
+        chainAddition: function(p) { return 0.5; }
+    },
+    2088: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain]); }
+    },
+    2089: {
+        atk: function(p) { return window.specials[2088].multiplier; },
+        type: "class",
+        onActivation: function(p) {
+            var n = (p.percHP == 100 ? 1.5 : 1);
+            window.specials[2088].multiplier = n;
+            p.scope.notify({
+                text: 'HP ' + (n == 2 ? 'equal to' : 'below') + ' 100%, using the ' + n + 'x multiplier.',
+                name: '2088warning'
+            });
+        }
+    },
+    2091: {
+        delay: function(p) { return 1; },
     },
     5000: {
         atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 1.5 : 1; },

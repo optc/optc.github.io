@@ -6964,6 +6964,46 @@ window.captains = {
     2065: {
         atk: function(p) { return 2.25; },
     },
+    2066: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? 3 : 1; },
+        hp: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; },
+    },
+    2068: {
+        damageSorter: function(d) { return CrunchUtils.classSort(d, 3.4375, [ "Slasher" ]); },
+        hitAtk: function(p) {
+            if (!p.unit.class.has("Slasher")) return 1;
+            return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? 3.4375 : 2.75;
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
+    },
+    2069: {
+        atk: function(p) { return p.unit.class.has("Free Spirit") ? 2 : 1; }
+    },
+    2070: {
+        atk: function(p) { return p.unit.class.has("Free Spirit") ? 2 : 1; },
+        hp: function(p) { return p.unit.class.has("Free Spirit") ? 2 : 1; }
+    },
+    2087: {
+        atk: function(p){
+            var specialEnabled = false;
+            for(var i=0;i<6;i++)
+            {
+                if(window.specials[2087].turnedOn[i]==true){ specialEnabled = true; }
+            }
+            return specialEnabled ? 2.6 : 2; },
+    },
+    2088: {
+        atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? 1.5 : 1; },
+        atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? 1.2 : 1; },
+    },
+    2090: {
+        atk: function(p){ return p.unit.type == "DEX" ? 1.5 : 1; },
+        hp: function(p){ return p.unit.type == "DEX" ? 1.2 : 1; },
+        rcv: function(p){ return p.unit.type == "DEX" ? 1.2 : 1; },
+    },
+    2091: {
+        atk: function(p) { return p.unit.class.has("Shooter") ? 1.75 : 1; },
+    },
     2200: {
         atk: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Cerebral")) && p.percHP <= 50.0 ? 2.5 : 1.5; }
     },
@@ -6977,10 +7017,10 @@ window.captains = {
         atk: function(p){ return p.unit.type == "PSY" || p.unit.type == "INT" ? 2.5 : 1; },
     },
     5002: {
-        atk: function(p){ return p.unit.type == "PSY" || p.unit.type == "INT" ? 2.5 : 1; },
+        atk: function(p){ return p.unit.type == "PSY" || p.unit.type == "INT" ? 2.75 : 1; },
     },
     5003: {
-        atk: function(p){ return p.unit.type == "PSY" || p.unit.type == "INT" ? 2.5 : 1; },
+        atk: function(p){ return p.unit.type == "PSY" || p.unit.type == "INT" ? 2.75 : 1; },
     },
     5004: {
         atk: function(p){ return p.unit.class.has("Free Spirit") ? 3 : 1; },
