@@ -6841,11 +6841,11 @@ window.captains = {
         rcv: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" ? 1.2 : 1; },
     },
     2028: {
-        atk: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" ? 2 : 1; },
+        atk: function(p) { return p.unit.type == "QCK" ? 2 : 1; },
     },
     2029: {
-        atk: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" ? 2.5 : 1; },
-        hp: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" ? 1.2 : 1; },
+        atk: function(p) { return p.unit.type == "QCK" ? 2.5 : 1; },
+        hp: function(p) { return p.unit.type == "QCK" ? 1.2 : 1; },
     },
     2030: {
         atk: function(p) { return p.unit.type == "STR" || p.unit.type == "INT" ? 2 : 1; },
