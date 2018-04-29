@@ -17544,7 +17544,7 @@ window.details = {
             { "description": "Boosts base HP by 30" },
             { "description": "Boosts base HP by 40" },
             { "description": "Boosts base HP by 50" },
-            { "description": "Boosts base HP by 60" },},
+            { "description": "Boosts base HP by 60" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Acquire Sailor Ability 1: Boosts amount healed from [RCV] orbs by 300 each" },
             { "description": "Boosts base HP by 70" },
