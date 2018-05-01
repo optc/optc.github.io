@@ -1872,7 +1872,7 @@ window.drops = {
             thumb: 1812,
             global: true,
             nakama: 2181200,
-            condition: 'Powerhouse Characters will be weakened',
+            condition: 'Powerhouse Characters recieves a 99 turn paralysis and a 90% ATK down from stage 4 onwards on 15 and 30 stamina',
             gamewith: 71416,
             'All Difficulties': [ 1811, 1809, -1240, -1575, -1658, -1232, -1238, -1117, -522, -1119, -524, -1504, -1503 ]
         },
@@ -1880,6 +1880,7 @@ window.drops = {
         {
             name: 'Crisis of the 800 Year Old Kingdom!',
             thumb: 1818,
+            global: true,
             nakama: 2181800,
             gamewith: 72655,
             'All Difficulties': [ 1817, 1819, 1820, -1610, -1656, -1660, -1230, -1236, -1173, -526, -643, -1506, -964 ]
@@ -2579,6 +2580,14 @@ window.drops = {
             nakama: null,
             gamewith: 94667,
             'Raging Sea': [ 1998, 1999 ]
+        },
+
+        {
+            name: 'Kizaru',
+            thumb: 2064,
+            nakama: null,
+            gamewith: 101870,
+            'Raging Sea': [ 2063, 2064 ]
         },
         
     ],

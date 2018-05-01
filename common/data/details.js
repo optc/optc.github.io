@@ -26012,13 +26012,13 @@ window.details = {
         specialName: "Noise & Escape",
     },
     2063: {//Kizaru
-        captain: "Not Translated",
+        captain: "Boosts ATK of [DEX], [PSY] and [INT] characters by 1.5x",
         special: "Cuts the current HP of one enemy by 20%, locks all orbs for 1 turn and boosts ATK of characters with the same Type as your Captain by 1.75x for 3 turns",
         specialName: "Ama no Murakumo",
     },
     2064: {//Kizaru
         captain: {
-            "base": "Boosts ATK of [DEX], [PSY] and [INT] characters by 1.5x",
+            "base": "Boosts ATK of [DEX], [PSY] and [INT] characters by 2x",
             "level1": "Not Translated",
             "level2": "Not Translated",
             "level3": "Not Translated",
@@ -26034,6 +26034,29 @@ window.details = {
             "level2": "Makes [DEX] orbs \"beneficial\" for all characters",
         },
         sailorNotes: "#{rewind : 1}<br/>#{beneficial}",
+        limit: "Not Translated",
+        potential: [
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by 1 turn",
+                    "Level 2: Reduces No Healing duration by 2 turn",
+                    "Level 3: Reduces No Healing duration by 3 turns",
+                    "Level 4: Reduces No Healing duration by 4 turns",
+                    "Level 5: Reduces No Healing duration by 5 turns"
+                ]
+            },
+            {
+                "Name": "Pinch Healing",
+                "description": [
+                    "Level 1: If HP is below 20% at the start of the turn, heals for 0.5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
+                    "Level 2: If HP is below ?% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character",
+                    "Level 3: If HP is below ?% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character",
+                    "Level 4: If HP is below ?% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character",
+                    "Level 5: If HP is below 50% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character"
+                ]
+            },
+        ]
     },
     2065: {//EXP Pudding
         captain: "Boosts ATK of all characters by 2.25x and boosts EXP and amount of Beli received by 1.2x",

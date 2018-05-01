@@ -6961,6 +6961,12 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Free Spirit") ? 1.5 : 1; },
         hp: function(p) { return p.unit.class.has("Free Spirit") ? 1.2 : 1; },
     },
+    2063: { 
+        atk: function(p){ return p.unit.type == "DEX" || p.unit.type == "PSY" || p.unit.type == "INT" ? 1.5 : 1; },
+    },
+    2064: {
+        atk: function(p){ return p.unit.type == "DEX" || p.unit.type == "PSY" || p.unit.type == "INT" ? 2 : 1; },
+    },
     2065: {
         atk: function(p) { return 2.25; },
     },
