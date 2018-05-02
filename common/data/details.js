@@ -25408,7 +25408,7 @@ window.details = {
         sailor: {
             "base": "None",
             "level1": "Boosts base ATK and HP of [STR] and [INT] characters by 100",
-            "level2": "Makes [PSY] and [QCK] orbs \"beneficial\" for all characters",
+            "level2": "Makes [PSY] and [QCK] orbs \"beneficial\" for this unit",
         },
         sailorNotes: "#{beneficial}",
         limit: [
@@ -25490,7 +25490,7 @@ window.details = {
         sailor: {
             "base": "None",
             "level1": "Boosts base HP and ATK of [QCK] and [PSY] characters by 100",
-            "level2": "Makes [STR] and [INT] orbs \"beneficial\" for all characters",
+            "level2": "Makes [STR] and [INT] orbs \"beneficial\" for this unit",
         },
         sailorNotes: "#{beneficial}",
         limit: [
