@@ -2235,6 +2235,16 @@ window.drops = {
             Master: [ 864 ],
             Expert: [ 864 ]
         },
+
+        {
+            name: 'Clash Neo!! Pirate Empress Hancock',
+            thumb: 2070,
+            nakama: null,
+            gamewith: 102084,
+            condition: '1 Master version and 3 Ultimate versions with different conditions. Master: Slasher/Free Spirit/Cerebral Only. Ultimate: Slasher Only, Free Spirit Only, and Cerebral Only',
+            Ultimate: [ 2069 ],
+            Master: [ 2069 ],
+        },
         
         {
             name: 'Clash!! Pica',
@@ -2579,6 +2589,14 @@ window.drops = {
             nakama: null,
             gamewith: 94667,
             'Raging Sea': [ 1998, 1999 ]
+        },
+
+        {
+            name: 'Borsalino',
+            thumb: 2064,
+            nakama: null,
+            gamewith: 101870,
+            'Raging Sea': [ 2063 ]
         },
         
     ],
