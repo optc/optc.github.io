@@ -2218,6 +2218,7 @@ window.drops = {
         {
             name: 'Clash Neo!! Tyrant Kuma',
             thumb: 1772,
+            global: true,
             nakama: 4177200,
             gamewith: 67120,
             condition: '1 Master version and 3 Ultimate versions with different conditions. Master: Shooter/Slasher/Cerebral Only. Can only complete 10 times each. Ultimate: Shooter Only, Slasher Only, and Cerebral Only',
