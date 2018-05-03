@@ -2066,7 +2066,7 @@ window.units = [
     [ "Charlotte Pudding", "PSY", [ "Shooter", "Striker" ], 4, 15, 5, 4, 99, 1000000, 201, 109, 18, 2018, 1110, 264, 1 ],
     [ "Knight of the Sea Jinbe, Strawhat Luffy's Accomplice", "INT", [ "Fighter", "Powerhouse" ], '6+', 65, 4, 5, 99, 5000000, 1820, 752, 182, 3980, 1484, 352, null],
     [ "Tashigi", "PSY", [ "Slasher", "Cerebral" ], 4, 20, null, 4, 70, 1066998, null, null, null, null, null, null, null ],
-    [ "Tashigi, A Swordswoman with Ambition", "PSY", [ "Slasher", "Cerebral" ], 5, 30, 4, 5, 99, 4000000, 833, 610, 176, null, null, null, null ],
+    [ "Tashigi, A Swordswomans Ambition", "PSY", [ "Slasher", "Cerebral" ], 5, 30, 4, 5, 99, 4000000, 833, 610, 176, null, null, null, null ],
     [ "Boa Hancock [Neo], Kuja Pirates Captain", "INT", [ "Shooter", "Free Spirit" ], 4, 30, 4, null, 70, 1066998, null, null, null, null, null, null, null ],
     [ "Empress Boa Hancock [Neo], Kuja Pirates Captain", "INT", [ "Shooter", "Free Spirit" ], 5, 50, 4, 5, 99, 5000000, 1, 1, 1, 2033, 1391, 379, null ],
     [ "Chopper", "INT", [ "Fighter", "Cerebral" ], 4, 15, null, null, null, null, null, null, null, null, null, null, null ],
