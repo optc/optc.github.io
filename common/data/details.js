@@ -26043,18 +26043,23 @@ window.details = {
     },
     2066: {//6+ Jinbe
         captain: "Boosts ATK of Fighter characters by 3x, their HP by 1.5x and reduces damage received by 7%",
-        specialName: "Jinbe Special",
-        special: "Deals ??x character's ATK in [INT] damage to all enemies, changes all orbs on Fighter characters into matching orbs and reduces enemies Percent Damage Reduction and Increased Defense duration by 5 turns.",
+        specialName: "Shark Fist Tile Breaker: Great Earth Wave",
+        special: "Deals 60x character's ATK in [INT] damage to all enemies, changes all orbs on Fighter characters into matching orbs and reduces enemies Percent Damage Reduction and Increased Defense duration by 5 turns.",
     },
     2067: {//Tashigi
         captain: "Not Translated",
-        special: "Reduces ATK DOWN duration by 5 turns, changes [BLOCK], [STR] and [QCK] orbs into Matching orbs and locks the chain multiplier at 2.75x for 3 turns",
-        specialName: "Tashigi Special",
+        special: "Reduces ATK DOWN and Increase Damage Taken duration by 5 turns, changes [BLOCK], [STR] and [QCK] orbs into Matching orbs and locks the chain multiplier at 2.75x for 3 turns",
+        specialName: "Spinning Jump Attack",
+        sailor: "Boosts base ATK, HP and RCV of Slasher characters by 50",
     },
     2068: {//Tashigi
         captain: "Boosts ATK of Slasher characters by 2.75x at the start of the chain, by 3.4375x after scoring 3 Perfects in a row and recovers 1.25x character's RCV in HP at the end of each turn",
-        special: "Reduces ATK DOWN duration by 5 turns, changes [BLOCK], [STR] and [QCK] orbs into Matching orbs and locks the chain multiplier at 2.75x for 3 turns",
-        specialName: "Tashigi Special",
+        special: "Reduces ATK DOWN and Increase Damage Taken duration by 5 turns, changes [BLOCK], [STR] and [QCK] orbs into Matching orbs and locks the chain multiplier at 2.75x for 3 turns",
+        specialName: "Spinning Jump Attack",
+        sailor: {
+            "base": "Boosts base ATK, HP and RCV of Slasher characters by 50",
+            "level1": "Makes PSY orbs \"beneficial\" for Slasher characters",
+        },
         limit: "This charactert has a limit break"
     },
     2069: {//Neo Boa
@@ -26082,27 +26087,27 @@ window.details = {
     2087: {//Pizza Luffy
         captain: "Boosts ATK of all characters by 2x. If you use \"Pizza Luffy Special\" boosts ATK of all characters by 2.6x instead.",
         special: "Deals 15x character's ATK in STR damage to all enemies, recovers 2,000 HP and adds .5x to Chain multiplier for 1 turn.",
-        specialName: "Pizza Luffy Special",
+        specialName: "Gomu Gomu no Octopus Stamp: Banquet",
     },
     2088: {//Pizza Sanji
         captain: "Boosts ATK of Fighter and Powerhouse characters by 1.5x and their HP by 1.2x",
         special: "Changes [RCV] and [TND] orbs into Matching orbs, amplifies the effect of orbs by 1.5x for 1 turn.",
-        specialName: "Pizza Sanji Special",
+        specialName: "Kicking in Table Manners",
     },
     2089: {//Pizza Nami
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight and reduces damage received by 15%",
         special: "Reduces Bind duration by 3 turns. If HP is full at the time the special was activated, boosts ATK of all characters by 1.5x for 1 turn.",
-        specialName: "Pizza Nami Special",
+        specialName: "Intoxicating Magic",
     },
     2090: {//Pizza Franky
         captain: "Boosts ATK of [DEX] characters by 1.5x and their HP and RCV by 1.2x",
         special: "Reduces Despair duration by 3 turns, changes adjacent orbs into [RCV] orbs and switches orbs between slots twice",
-        specialName: "Pizza Franky Special",
+        specialName: "Cola Party",
     },
     2091: {//Pizza Usopp
         captain: "Boosts ATK of Shooter characters by 1.75x",
         special: "Reduces crew's ATK DOWN and Paralysis duration by 3 turns and delays all enemies for 1 turn",
-        specialName: "Pizza Usopp Special",
+        specialName: "Humble Words to Excite the Party",
     },
     2200: {//Doflamingo Raid v2
         captain: "Boosts ATK of Driven and Cerebral characters by 2.5x when HP is 50% or below, 1.5x otherwise",
