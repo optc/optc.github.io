@@ -6975,6 +6975,14 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Fighter") ? 3 : 1; },
         hp: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; },
     },
+    2067: {
+        damageSorter: function(d) { return CrunchUtils.classSort(d, 2.5, [ "Slasher" ]); },
+        hitAtk: function(p) {
+            if (!p.unit.class.has("Slasher")) return 1;
+            return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? 2.5 : 2;
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
+    },
     2068: {
         damageSorter: function(d) { return CrunchUtils.classSort(d, 3.4375, [ "Slasher" ]); },
         hitAtk: function(p) {
