@@ -5435,11 +5435,11 @@ window.details = {
             {
                 "Name": "Enrage",
                 "description": [
-                    "Level 1: Boosts base ATK by 50",
-                    "Level 2: Boosts base ATK by ??",
-                    "Level 3: Boosts base ATK by ??",
-                    "Level 4: Boosts base ATK by ??",
-                    "Level 5: Boosts base ATK by ??"
+                    "Level 1: Boosts base ATK by 30",
+                    "Level 2: Boosts base ATK by 60",
+                    "Level 3: Boosts base ATK by 90",
+                    "Level 4: Boosts base ATK by 120",
+                    "Level 5: Boosts base ATK by 150"
                 ]
             },
             {
@@ -6348,20 +6348,20 @@ window.details = {
                 "Name": "[STR] Damage Reduction",
                 "description": [
                     "Level 1: Reduce damage taken from [STR] characters by 1%",
-                    "Level 2: Reduce damage taken from [STR] characters by ?%",
-                    "Level 3: Reduce damage taken from [STR] characters by ?%",
-                    "Level 4: Reduce damage taken from [STR] characters by ?%",
-                    "Level 5: Reduce damage taken from [STR] characters by ?%"
+                    "Level 2: Reduce damage taken from [STR] characters by 2%",
+                    "Level 3: Reduce damage taken from [STR] characters by 3%",
+                    "Level 4: Reduce damage taken from [STR] characters by 4%",
+                    "Level 5: Reduce damage taken from [STR] characters by 5%"
                 ]
             },
             {
                 "Name": "Reduce No Healing duration",
                 "description": [
                     "Level 1: Reduces No Healing duration by 1 turn",
-                    "Level 2: Reduces No Healing duration by ? turn",
-                    "Level 3: Reduces No Healing duration by ? turn",
-                    "Level 4: Reduces No Healing duration by ? turns",
-                    "Level 5: Reduces No Healing duration by ? turns"
+                    "Level 2: Reduces No Healing duration by 2 turn",
+                    "Level 3: Reduces No Healing duration by 3 turn",
+                    "Level 4: Reduces No Healing duration by 4 turns",
+                    "Level 5: Reduces No Healing duration by 5 turns"
                 ]
             },
         ]
@@ -12338,20 +12338,20 @@ window.details = {
                 "Name": "Enrage",
                 "description": [
                     "Level 1: Boosts base ATK by 30",
-                    "Level 2: Boosts base ATK by ??",
-                    "Level 3: Boosts base ATK by ??",
-                    "Level 4: Boosts base ATK by ??",
-                    "Level 5: Boosts base ATK by ??"
+                    "Level 2: Boosts base ATK by 60",
+                    "Level 3: Boosts base ATK by 90",
+                    "Level 4: Boosts base ATK by 120",
+                    "Level 5: Boosts base ATK by 150"
                 ]
             },
             {
                 "Name": "Reduce No Healing duration",
                 "description": [
                     "Level 1: Reduces No Healing duration by 1 turn",
-                    "Level 2: Reduces No Healing duration by ? turn",
-                    "Level 3: Reduces No Healing duration by ? turn",
-                    "Level 4: Reduces No Healing duration by ? turns",
-                    "Level 5: Reduces No Healing duration by ? turns"
+                    "Level 2: Reduces No Healing duration by 2 turn",
+                    "Level 3: Reduces No Healing duration by 3 turn",
+                    "Level 4: Reduces No Healing duration by 4 turns",
+                    "Level 5: Reduces No Healing duration by 5 turns"
                 ]
             },
         ],
@@ -18499,9 +18499,9 @@ window.details = {
                 "Name": "[DEX] Damage Reduction",
                 "description": [
                     "Level 1: Reduce damage taken from [DEX] characters by 1%",
-                    "Level 2: Reduce damage taken from [DEX] characters by ?%",
-                    "Level 3: Reduce damage taken from [DEX] characters by ?%",
-                    "Level 4: Reduce damage taken from [DEX] characters by ?%",
+                    "Level 2: Reduce damage taken from [DEX] characters by 2%",
+                    "Level 3: Reduce damage taken from [DEX] characters by 3%",
+                    "Level 4: Reduce damage taken from [DEX] characters by 4%",
                     "Level 5: Reduce damage taken from [DEX] characters by 5%"
                 ]
             },
@@ -18509,9 +18509,9 @@ window.details = {
                 "Name": "Enrage",
                 "description": [
                     "Level 1: Boosts base ATK by 30",
-                    "Level 2: Boosts base ATK by ??",
-                    "Level 3: Boosts base ATK by ??",
-                    "Level 4: Boosts base ATK by ??",
+                    "Level 2: Boosts base ATK by 60",
+                    "Level 3: Boosts base ATK by 90",
+                    "Level 4: Boosts base ATK by 120",
                     "Level 5: Boosts base ATK by 150"
                 ]
             },
