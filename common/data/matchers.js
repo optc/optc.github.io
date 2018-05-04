@@ -51,6 +51,36 @@ window.matchers = [
     },
 
     {
+        name: '1.25x ATK captains',
+        target: 'captain',
+        matcher: /Boosts (their )?ATK.+by 1.25x/i
+    },
+
+    {
+        name: '1.5x ATK captains',
+        target: 'captain',
+        matcher: /Boosts (their )?ATK.+by 1.5x/i
+    },
+
+    {
+        name: '1.75x ATK captains',
+        target: 'captain',
+        matcher: /Boosts (their )?ATK.+by 1.75x/i
+    },
+
+    {
+        name: '2x ATK captains',
+        target: 'captain',
+        matcher: /Boosts (their )?ATK.+by 2x/i
+    },
+
+    {
+        name: '2.25x ATK captains',
+        target: 'captain',
+        matcher: /Boosts (their )?ATK.+by 2.25x/i
+    },
+
+    {
         name: '2.5x ATK captains',
         target: 'captain',
         matcher: /Boosts (their )?ATK.+by 2.5x/i
@@ -67,6 +97,36 @@ window.matchers = [
         name: '3x ATK captains',
         target: 'captain',
         matcher: /Boosts (their )?ATK.+by 3x/i
+    },
+
+    {
+        name: '3.25x ATK captains',
+        target: 'captain',
+        matcher: /Boosts (their )?ATK.+by 3.25x/i
+    },
+
+    {
+        name: '3.5x ATK captains',
+        target: 'captain',
+        matcher: /Boosts (their )?ATK.+by 3.5x/i
+    },
+
+    {
+        name: '3.75x ATK captains',
+        target: 'captain',
+        matcher: /Boosts (their )?ATK.+by 3.75x/i
+    },
+
+    {
+        name: '4x ATK captains',
+        target: 'captain',
+        matcher: /Boosts (their )?ATK.+by 4x/i
+    },
+
+    {
+        name: '4.25x ATK captains',
+        target: 'captain',
+        matcher: /Boosts (their )?ATK.+by 4.25x/i
     },
 
     {
@@ -103,7 +163,7 @@ window.matchers = [
     {
         name: 'Cooldown reducers',
         target: 'captain',
-        matcher: /reduces.+cooldown/i
+        matcher: /Reduces cooldown.+by/i
     },
 
     {
@@ -133,7 +193,7 @@ window.matchers = [
     {
         name: 'End of Turn Damage Dealer',
         target: 'captain',
-        matcher: /deals.+end of each turn/i
+        matcher: /(deals|cuts).+end of each turn/i
     },
     
     {
@@ -173,7 +233,13 @@ window.matchers = [
         target: 'special',
         matcher: /description/i
     },
-
+    
+    {
+        name: '1.25x ATK specials',
+        target: 'special',
+        matcher: /Boosts ATK.+by 1.25x/i
+    },
+    
     {
         name: '1.5x ATK specials',
         target: 'special',
@@ -190,6 +256,12 @@ window.matchers = [
         name: '2x ATK specials',
         target: 'special',
         matcher: /Boosts ATK.+by 2x/i
+    },
+    
+    {
+        name: '2.25x ATK specials',
+        target: 'special',
+        matcher: /Boosts ATK.+by 2.25x/i
     },
 
     {
@@ -303,6 +375,12 @@ window.matchers = [
     },
     
     {
+        name: 'Damage dealer',
+        target: 'special',
+        matcher: /deals.+to/i
+    },
+    
+    {
         name: 'Single-target damage dealer',
         target: 'special',
         matcher: /deals.+to one enemy/i
@@ -330,6 +408,18 @@ window.matchers = [
         name: 'Typeless damage dealers',
         target: 'special',
         matcher: /Deals.+typeless damage/i
+    },
+    
+    {
+        name: 'Additional Damage dealer',
+        target: 'special',
+        matcher: /Additional.+Damage/i
+    },
+    
+    {
+        name: 'Ignoring defense damage dealer',
+        target: 'special',
+        matcher: /Deals.+ignore damage negating abilities and barriers/i
     },
 
     {
@@ -496,6 +586,12 @@ window.matchers = [
     },
 
     {
+        name: 'Enemy Barrier removers',
+        target: 'special',
+        matcher: /(removes|reduces).+enemy Barrier/i 
+    },
+
+    {
         name: 'Zombies',
         target: 'special',
         matcher: /Protects from defeat/i
@@ -605,6 +701,18 @@ window.matchers = [
         matcher: /Restores (his|her) own special/i
     },
     
+    {
+        name: 'Orb Retainer',
+        target: 'sailor',
+        matcher: /If this character has.+(STR|DEX|QCK|PSY|INT|RCV).+Perfect/i
+    },
+    
+    {
+        name: 'Additional Damage dealer',
+        target: 'sailor',
+        matcher: /Additional.+Damage/i
+    },
+    
     /* * * * * Limit Break * * * * */
     
     {
@@ -653,6 +761,12 @@ window.matchers = [
         name: 'Damage Reduction Potential Ability',
         target: 'limit',
         matcher: /Damage Reduction/i
+    },
+    
+    {
+        name: 'Cooldown Reduction Potential Ability',
+        target: 'limit',
+        matcher: /Cooldown Reduction/i
     },
 
 ];

@@ -155,9 +155,12 @@ CharUtils.searchSameSpecials = function(id) {
     if (!details[id]) return [ ];
     var result = [ ];
     for (var key in details) {
-        if (key == id || !details[key].special) continue; 
+        if (key == id || !details[key].special) continue;
         if (details[key].specialName == details[id].specialName && details[key].special == details[id].special)
             result.push(parseInt(key, 10));
+        if (Array.isArray(details[id].special) && Array.isArray(details[key].special))
+            if (details[key].specialName == details[id].specialName && details[key].special[0].description == details[id].special[0].description)
+                result.push(parseInt(key, 10));
     }
     return result;
 };

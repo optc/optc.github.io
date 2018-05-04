@@ -3153,34 +3153,178 @@ window.evolutions = {
     },
     1977: {
         evolution: 1978,
-        evolvers: [  ]
+        evolvers: [ 118, 97, 1180, 302, 102 ]
     },
     1979: {
         evolution: 1980,
-        evolvers: [  ]
+        evolvers: [ 78, 84, 89, 95, 100 ]
     },
     1981: {
         evolution: 1982,
-        evolvers: [  ]
+        evolvers: [ 79, 85, 90, 96, 101 ]
     },
     1984: {
         evolution: 1985,
-        evolvers: [  ]
+        evolvers: [ 83, 94, 95, 300, 100 ]
     },
     1986: {
         evolution: 1987,
-        evolvers: [  ]
+        evolvers: [ 83, 94, 95, 300, 100 ]
     },
     1988: {
         evolution: 1989,
-        evolvers: [  ]
+        evolvers: [ 118, 81, 1180, 303, 103 ]
     },
     1990: {
         evolution: 1991,
-        evolvers: [  ]
+        evolvers: [ 266, 79, 94, 301, 101 ]
     },
     1992: {
         evolution: 1993,
+        evolvers: [ 1180, 90, 96, 301, 101 ]
+    },
+    1994: {
+        evolution: 1995,
+        evolvers: [ 80, 86, 91, 97, 102 ]
+    },
+    1996: {
+        evolution: 1997,
+        evolvers: [ 78, 84, 89, 95, 100 ]
+    },
+    1998: {
+        evolution: 2000,
+        evolvers: [ 115, 116, 117, 118, 1999 ]
+    },
+    1999: {
+        evolution: 2000,
+        evolvers: [ 115, 116, 117, 118, 1998 ]
+    },
+    1045: {
+        evolution: 2001,
+        evolvers: [ 'skullPSY', 118, 87, 303, 267 ]
+    },
+    2003: {
+        evolution: 2004,
+        evolvers: [ 118, 89, 95, 95, 300 ]
+    },
+    2006: {
+        evolution: 2007,
+        evolvers: [ 118, 88, 266, 99, 267 ]
+    },
+    2008: {
+        evolution: 2009,
+        evolvers: [ 117, 82, 93, 99, 104 ]
+    },
+    2010: {
+        evolution: 2011,
+        evolvers: [ 117, 82, 93, 304, 104 ]
+    },
+    2012: {
+        evolution: 2013,
+        evolvers: [ 118, 84, 95, 300, 100 ]
+    },
+    2014: {
+        evolution: 2015,
+        evolvers: [ 118, 99, 1180, 304, 104 ]
+    },
+    2016: {
+        evolution: 2017,
+        evolvers: [ 118, 94, 98, 303, 103 ]
+    },
+    2018: {
+        evolution: 2019,
+        evolvers: [ 80, 86, 91, 97, 102 ]
+    },
+    2020: {
+        evolution: 2021,
+        evolvers: [ 81, 87, 92, 98, 103 ]
+    },
+    2022: {
+        evolution: 2023,
+        evolvers: [ 118, 118, 304, 304, 267 ]
+    },
+    2024: {
+        evolution: 2025,
+        evolvers: [ 118, 118, 303, 303, 267 ]
+    },
+    2026: {
+        evolution: 2027,
+        evolvers: [ 94, 81, 87, 303, 103 ]
+    },
+    2028: {
+        evolution: 2029,
+        evolvers: [ 1180, 90, 96, 301, 101 ]
+    },
+    2030: {
+        evolution: 2031,
+        evolvers: [ 83, 266, 99, 99, 104 ]
+    },
+    2032: {
+        evolution: [ 2033, 2033, 2033 ],
+        evolvers: [ [ 115, 108, 108 ], [ 81, 108, 108 ], [ 92, 108, 108 ] ]
+    },
+    1240: {
+        evolution: 2034,
+        evolvers: [ 'skullPSY', 118, 87, 303, 267 ]
+    },
+    1391: {
+        evolution: 2035,
+        evolvers: [ 'skullINT', 118, 88, 304, 267 ]
+    },
+    2036: {
+        evolution: 2037,
+        evolvers: [ 118, 99, 1180, 304, 104 ]
+    },
+    2038: {
+        evolution: 2039,
+        evolvers: [ 115, 115, 90, 96, 301 ]
+    },
+    2040: {
+        evolution: 2041,
+        evolvers: [ 115, 115, 89, 95, 300 ]
+    },
+    2042: {
+        evolution: 2043,
+        evolvers: [ 116, 117, 82, 88, 99 ]
+    },
+    2047: {
+        evolution: 2048,
+        evolvers: [ 118, 85, 96, 301, 101 ]
+    },
+    2051: {
+        evolution: 2052,
+        evolvers: [ 117, 90, 96, 301, 101 ]
+    },
+    2059: {
+        evolution: 2060,
         evolvers: [  ]
+    },
+    2061: {
+        evolution: 2062,
+        evolvers: [  ]
+    },
+    2063: {
+        evolution: 2064,
+        evolvers: [  ]
+    },
+    935: {
+        evolution: 2066,
+        evolvers: [ 'skullINT', 118, 88, 304, 267 ]
+    },
+    2067: {
+        evolution: 2068,
+        evolvers: [  ]
+    },
+    2069: {
+        evolution: 2070,
+        evolvers: [  ]
+    },
+    2071: {
+        evolution: 2072,
+        evolvers: [  ]
+    },
+    2200: {
+        evolution: 2201,
+        evolvers: [ 118, 267, 88, 304, 83 ]
     },
 };

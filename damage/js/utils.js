@@ -200,13 +200,18 @@ window.CrunchUtils.getOrbMultiplier = function(orb, type, uclass, baseMultiplier
     }
     for(temp = 0; temp < 2; temp++){
         if(captains[temp] != null){
-            /*if(captains[temp].name.includes('Kami Enel') || captains[temp].name.includes('God Usopp') || captains[temp].name.includes('Usoland')){
+            if([1610, 1609, 1531, 1532].includes(captains[temp].number)){
                 if (orb == 'meat'){
                     return boostedMultiplier;
                 }
-            }*/
-            if(captains[temp].number == 1610 || captains[temp].number == 1609 || captains[temp].number == 1531 || captains[temp].number == 1532){
+            }
+            if([2012, 2013].includes(captains[temp].number) && uclass.has("Free Spirit")){
                 if (orb == 'meat'){
+                    return boostedMultiplier;
+                }
+            }
+            if([2022, 2023].includes(captains[temp].number)){
+                if (orb == 'str'){
                     return boostedMultiplier;
                 }
             }

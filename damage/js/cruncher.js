@@ -203,7 +203,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                                      || (window.specials[1640].turnedOn && x.unit.class.has("Shooter"))
                                      || ((window.specials[1651].turnedOn || window.specials[1652].turnedOn) && x.unit.class.has("Striker"))
                                      || ((window.specials[1746].turnedOn|| window.specials[1747].turnedOn) && x.unit.class.has("Shooter"))
-                                     || ((window.specials[1940].turnedOn|| window.specials[1941].turnedOn) && (x.unit.type == "STR" || x.unit.type == "QCK" || x.unit.type == "PSY"))) ? 2 : 1;
+                                     || ((window.specials[1940].turnedOn|| window.specials[1941].turnedOn) && (x.unit.type == "STR" || x.unit.type == "QCK" || x.unit.type == "PSY"))) ? 2 : 'str';
             
             if (orb == 0.5) orb = (window.specials[1269].turnedOn || window.specials[1270].turnedOn || window.specials[1330].turnedOn || window.specials[1546].turnedOn || window.specials[1547].turnedOn || window.specials[1557].turnedOn) ? 1 : .5;
             
@@ -211,10 +211,19 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if (orb =='meat'){
                 for (temp = 0; temp < 2; temp++){
                     if (team[temp].unit != null){
-                        /*if (team[temp].unit.name.includes("Kami Enel") || team[temp].unit.name.includes("God Usopp") || team[temp].unit.name.includes("Usoland")){
+                        if ([ 1610, 1609, 1532, 1531 ].includes(team[temp].unit.number)){
                             orb = 2;
-                        }*/
-                        if (team[temp].unit.number == 1610 || team[temp].unit.number == 1609 || team[temp].unit.number == 1532 || team[temp].unit.number == 1531){
+                        }
+                        if ([ 2012, 2013 ].includes(team[temp].unit.number) && x.unit.class.has("Free Spirit")){
+                            orb = 2;
+                        }
+                    }
+                }
+            }
+            if (orb == 'str'){
+                for (temp = 0; temp < 2; temp++){
+                    if (team[temp].unit != null){
+                        if ([ 2022, 2023 ].includes(team[temp].unit.number)){
                             orb = 2;
                         }
                     }
@@ -222,6 +231,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             }
             if (orb == 'meat') orb = (window.specials[1515].turnedOn || window.specials[1516].turnedOn || (window.specials[1593].turnedOn && x.unit.class.has("Fighter")) || ((window.specials[1181].turnedOn || window.specials[1182].turnedOn) && x.unit.class.has("Slasher")) || ((window.specials[1380].turnedOn || window.specials[1379].turnedOn) && (x.unit.class.has("Cerebral") || x.unit.class.has("Free Spirit")))) ? 2 : 1;
             if (orb == 'rainbow') orb = 2;
+            if (orb == 'str') orb = 1;
             atk += getShipBonus('atk',true,x.unit,n);
             multipliers.push([ orb, 'orb' ]); // orb multiplier (fixed)
             multipliers.push([ getTypeMultiplierOfUnit(x.unit.type,type, x), 'type' ]); // type multiplier
@@ -559,10 +569,15 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
 
         //get the highest Chain Addition if it exists
         chainAddition.forEach(function(special){
-                var params = getParameters(special.sourceSlot);
-                    if(addition<special.chainAddition(params))
-                        addition = special.chainAddition(params);
-                });
+            var params = getParameters(special.sourceSlot);
+            if(addition<special.chainAddition(params)){
+                addition = special.chainAddition(params);
+            }
+        });
+        
+        if ($scope.data.effect == '0.5x Chain Boost - Zoro Sanji Change Action'){
+            addition = 0.5;
+        }
         
         chainSpecials.forEach(function(special) {
             var multipliersUsed = [ ], currentHits = 0, overall = 0;
@@ -830,7 +845,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                     enabledSpecials.push(jQuery.extend({ sourceSlot: n },specials[id]));
             }
             // activate turn counter if necessary
-            if (n < 2 && (id == 794 || id == 795 || id == 1124 || id == 1125 || id == 1191 || id == 1192 || id == 1219 || id == 1220 || id == 1288 || id == 1289 || id == 1361 || id == 1362 || id == 1525 || id == 1557 || id == 1558 || id == 1559 || id == 1560 || id == 1561 || id == 1562 || id == 1712 || id == 1713 || id == 1764 || id == 1907 || id == 1908))
+            if (n < 2 && (id == 794 || id == 795 || id == 1124 || id == 1125 || id == 1191 || id == 1192 || id == 1219 || id == 1220 || id == 1288 || id == 1289 || id == 1361 || id == 1362 || id == 1525 || id == 1557 || id == 1558 || id == 1559 || id == 1560 || id == 1561 || id == 1562 || id == 1712 || id == 1713 || id == 1764 || id == 1907 || id == 1908 || id == 2015))
                 $scope.tdata.turnCounter.enabled = true;
             if (n < 2 && (id == 1609 || id == 1610))
                 $scope.tdata.healCounter.enabled = true;

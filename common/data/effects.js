@@ -388,7 +388,7 @@ window.effects = {
     },
     
     'Sabo Neo - Fighter Raid Boss': {
-        description: 'Boosts the Orbs all characters by 1.2x, ATK by 1.3x and Reduces Chain by Half.',
+        description: 'Boosts Orbs of all characters by 1.2x, ATK by 1.3x and Reduces Chain by Half.',
         thumb: 1727,
         id: 41,
         orb: function(p) { return p.orb == 2.0 ? 1.2 : (p.orb == 0.5 ? 5/6 : 1); },
@@ -434,21 +434,21 @@ window.effects = {
         atk: function(p) {
             var id = p.number + 1,
                 matching = ((id > 1740 && id < 1745) ||
-                    [ 1795, 1796, 1539, 1540, 1823, 1844, 1277, 1278 ].indexOf(id) != -1);
+                    [ 1620, 1621, 1664, 1665, 1720, 1721, 1769, 1770, 1777, 1778, 1823, 1824 ].indexOf(id) != -1);
             return !matching ? 1 : 1.75;
         },
         hp: function(p) {
             var id = p.number + 1,
                 matching = ((id > 1740 && id < 1745) ||
-                    [ 1795, 1796, 1539, 1540, 1823, 1844, 1277, 1278 ].indexOf(id) != -1);
+                    [ 1620, 1621, 1664, 1665, 1720, 1721, 1769, 1770, 1777, 1778, 1823, 1824 ].indexOf(id) != -1);
             return !matching ? 1 : 1.75;
         },
         rcv: function(p) {
             var id = p.number + 1,
                 matching = ((id > 1740 && id < 1745) ||
-                    [ 1795, 1796, 1539, 1540, 1823, 1844, 1277, 1278 ].indexOf(id) != -1);
+                    [ 1620, 1621, 1664, 1665, 1720, 1721, 1769, 1770, 1777, 1778, 1823, 1824 ].indexOf(id) != -1);
             return !matching ? 1 : 1.75;
-        },
+        }, //1795, 1796, 1539, 1540, 1823, 1844, 1277, 1278 possible ones
 	},
     
     'Blitz Battle! The Three Admirals': {
@@ -634,5 +634,54 @@ window.effects = {
         thumb: 1961,
         id: 55, // don't change this
         orb: function(p) { return p.orb == 2.0 ? 1.75 : (p.orb == 0.5 ? 4/7 : 1); }
+    },
+
+    '0.5x Chain Boost - Zoro Sanji Change Action': {
+        description: 'Chain Boosted by 0.5x',
+        thumb: 2000,
+        id: 56, // don't change this
+        chainAddition: function(p) { return 0.5 }
+    },
+    
+    'Encourage the Soul': {
+        description: 'Stats of Strawhats boosted, 1.5x ATK, 1.5x HP, 1.5x RCV and Cooldown reduced by 9 turns at the start of the island.',
+        thumb: 1547,
+        id: 57, // don't change this
+        atk: function(p) {
+            var character = window.families[p.number];
+            matching = ["Monkey D. Luffy", "Roronoa Zoro", "Usopp", "Sanji", "Nami", "Tony Tony Chopper", "Franky", "Nico Robin", "Brook"].indexOf(character) != -1;
+            return !matching ? 1 : 1.5;
+        },
+        hp: function(p) {
+            var character = window.families[p.number];
+            matching = ["Monkey D. Luffy", "Roronoa Zoro", "Usopp", "Sanji", "Nami", "Tony Tony Chopper", "Franky", "Nico Robin", "Brook"].indexOf(character) != -1;
+            return !matching ? 1 : 1.5;
+        },
+        rcv: function(p) {
+            var character = window.families[p.number];
+            matching = ["Monkey D. Luffy", "Roronoa Zoro", "Usopp", "Sanji", "Nami", "Tony Tony Chopper", "Franky", "Nico Robin", "Brook"].indexOf(character) != -1;
+            return !matching ? 1 : 1.5;
+        },
+    },
+    
+    '3 Ranking Missions - Ganfor, Mihawk and Blackbeard': {
+        description: 'Stats of certain characters boosted.',
+        thumb: 447,
+        id: 58, // don't change this
+        atk: function(p) {
+            var character = window.families[p.number];
+            matching = ["Koala", "Leo", "Elizabello", "Yasopp", "Curiel", "Hina", "Coby", "Monkey D. Garp", "Vinsmoke Reiju", "Nami", "Lucky Roo", "Kizaru"].indexOf(character) != -1;
+            return !matching ? 1 : 1.25;
+        },
+        hp: function(p) {
+            var character = window.families[p.number];
+            matching = ["Koala", "Leo", "Elizabello", "Yasopp", "Curiel", "Hina", "Coby", "Monkey D. Garp", "Vinsmoke Reiju", "Nami", "Lucky Roo", "Kizaru"].indexOf(character) != -1;
+            return !matching ? 1 : 1.25;
+        },
+        rcv: function(p) {
+            var character = window.families[p.number];
+            matching = ["Koala", "Leo", "Elizabello", "Yasopp", "Curiel", "Hina", "Coby", "Monkey D. Garp", "Vinsmoke Reiju", "Nami", "Lucky Roo", "Kizaru"].indexOf(character) != -1;
+            return !matching ? 1 : 1.25;
+        },
     },
 };
