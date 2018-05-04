@@ -1872,7 +1872,7 @@ window.drops = {
             thumb: 1812,
             global: true,
             nakama: 2181200,
-            condition: 'Powerhouse Characters will be weakened',
+            condition: 'Powerhouse Characters recieves a 99 turn paralysis and a 90% ATK down from stage 4 onwards on 15 and 30 stamina',
             gamewith: 71416,
             'All Difficulties': [ 1811, 1809, -1240, -1575, -1658, -1232, -1238, -1117, -522, -1119, -524, -1504, -1503 ]
         },
@@ -1880,6 +1880,7 @@ window.drops = {
         {
             name: 'Crisis of the 800 Year Old Kingdom!',
             thumb: 1818,
+            global: true,
             nakama: 2181800,
             gamewith: 72655,
             'All Difficulties': [ 1817, 1819, 1820, -1610, -1656, -1660, -1230, -1236, -1173, -526, -643, -1506, -964 ]
@@ -2217,6 +2218,7 @@ window.drops = {
         {
             name: 'Clash Neo!! Tyrant Kuma',
             thumb: 1772,
+            global: true,
             nakama: 4177200,
             gamewith: 67120,
             condition: '1 Master version and 3 Ultimate versions with different conditions. Master: Shooter/Slasher/Cerebral Only. Can only complete 10 times each. Ultimate: Shooter Only, Slasher Only, and Cerebral Only',

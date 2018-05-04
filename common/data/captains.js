@@ -6947,9 +6947,15 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Fighter") ? 1.25 : 1; },
         hp: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; },
     },
+    2059: {
+        atk: function(p) { return p.unit.class.has("Cerebral") ? 1.2 : 1; },
+    },
     2060: {
         atk: function(p) { return p.unit.class.has("Cerebral") ? 1.5 : 1; },
         hp: function(p) { return p.unit.class.has("Cerebral") ? 1.2 : 1; },
+    },
+    2061: {
+        atk: function(p) { return p.unit.class.has("Free Spirit") ? 1.2 : 1; },
     },
     2062: {
         atk: function(p) { return p.unit.class.has("Free Spirit") ? 1.5 : 1; },
@@ -6968,6 +6974,14 @@ window.captains = {
     2066: {
         atk: function(p) { return p.unit.class.has("Fighter") ? 3 : 1; },
         hp: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; },
+    },
+    2067: {
+        damageSorter: function(d) { return CrunchUtils.classSort(d, 2.5, [ "Slasher" ]); },
+        hitAtk: function(p) {
+            if (!p.unit.class.has("Slasher")) return 1;
+            return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? 2.5 : 2;
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
     },
     2068: {
         damageSorter: function(d) { return CrunchUtils.classSort(d, 3.4375, [ "Slasher" ]); },
