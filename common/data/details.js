@@ -26073,7 +26073,7 @@ window.details = {
         captain: "Boosts ATK of Slasher characters by 2x at the start of the chain, by 2.5x after scoring 3 Perfects in a row and recovers 1.25x character's RCV in HP at the end of each turn",
         special: "Reduces ATK DOWN and Increase Damage Taken duration by 5 turns, changes [BLOCK], [STR] and [QCK] orbs into Matching orbs and locks the chain multiplier at 2.75x for 3 turns",
         specialName: "Spinning Jump Attack",
-        sailor: "Boosts base ATK, HP and RCV for Slasher characters",
+        sailor: "Boosts base ATK, HP and RCV for Slasher characters by 50",
     },
     2068: {//Tashigi
         captain: "Boosts ATK of Slasher characters by 2.75x at the start of the chain, by 3.4375x after scoring 3 Perfects in a row and recovers 1.25x character's RCV in HP at the end of each turn",
