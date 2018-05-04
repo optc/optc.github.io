@@ -26033,8 +26033,7 @@ window.details = {
             "level1": "Restores his own special by 3 turns when it is rewinded",
             "level2": "Makes [DEX] orbs \"beneficial\" for all characters",
         },
-        sailorNotes: "#{rewind : 1}<br/>#{beneficial}",		
-        limit: "Not Translated",
+		sailorNotes: "#{rewind : 1}<br/>#{beneficial}",
         potential: [
             {
                 "Name": "Reduce No Healing duration",
