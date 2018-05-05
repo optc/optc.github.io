@@ -3,10 +3,10 @@ onmessage = function(e) {
 	var copies = parseInt(e.data.copies);
 	var skillups = parseInt(e.data.skillups);
 
-	var probability = 0.125;
-    if (e.data.jpn_server == true) {
+	var probability = 0.2;
+    /*if (e.data.jpn_server == true) {
 		probability = .2;
-	}
+	}*/
 	// if special event selected probability is doubled
 	if (e.data.special_event == true) {
 		probability *= 2;
@@ -14,6 +14,10 @@ onmessage = function(e) {
     // if special event selected probability is trippled
 	else if (e.data.special_3event == true) {
 		probability *= 3;
+	}
+    // if special event selected probability is quadrupled
+	else if (e.data.special_4event == true) {
+		probability *= 4;
 	}
 
 
