@@ -50,7 +50,7 @@ window.matchers = [
         matcher: /Boosts ATK and RCV.+by 2x/i
     },
 
-    {
+    /*{
         name: '1.25x ATK captains',
         target: 'captain',
         matcher: /Boosts (their )?ATK.+by 1.25x/i
@@ -66,7 +66,7 @@ window.matchers = [
         name: '1.75x ATK captains',
         target: 'captain',
         matcher: /Boosts (their )?ATK.+by 1.75x/i
-    },
+    },*/
 
     {
         name: '2x ATK captains',
@@ -74,11 +74,11 @@ window.matchers = [
         matcher: /Boosts (their )?ATK.+by 2x/i
     },
 
-    {
+    /*{
         name: '2.25x ATK captains',
         target: 'captain',
         matcher: /Boosts (their )?ATK.+by 2.25x/i
-    },
+    },*/
 
     {
         name: '2.5x ATK captains',
