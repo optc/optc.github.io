@@ -7029,13 +7029,7 @@ window.captains = {
         atk: function(p){ return p.unit.type == "DEX" || p.unit.type == "QCK" ? 2.25 : 1; },
     },
     2087: {
-        atk: function(p){
-            var specialEnabled = false;
-            for(var i=0;i<6;i++)
-            {
-                if(window.specials[2087].turnedOn[i]==true){ specialEnabled = true; }
-            }
-            return specialEnabled ? 2.6 : 2; },
+        atk: function(p){ return p.actions[p.sourceSlot] ? 2.6 : 2; },
     },
     2088: {
         atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? 1.5 : 1; },
