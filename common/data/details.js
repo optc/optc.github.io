@@ -25175,7 +25175,7 @@ window.details = {
             { "description": "Acquire Sailor Ability 1: Makes [PSY] orbs \"beneficial\" all characters" },
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base ATK by 50" },
-            { "description": "Acquire Potential 3: Critical Hit" },
+            { "description": "Acquire Potential 3: Pinch Healing" },
         ],
         potential: [
             {
@@ -25191,18 +25191,18 @@ window.details = {
             {
                 "Name": "[PSY] Damage Reduction",
                 "description": [
-                    "Level 1: Reduce damage taken from [INT] characters by 1%",
-                    "Level 2: Reduce damage taken from [INT] characters by 2%",
-                    "Level 3: Reduce damage taken from [INT] characters by 3%",
-                    "Level 4: Reduce damage taken from [INT] characters by 5%",
-                    "Level 5: Reduce damage taken from [INT] characters by 7%"
+                    "Level 1: Reduce damage taken from [PSY] characters by 1%",
+                    "Level 2: Reduce damage taken from [PSY] characters by 2%",
+                    "Level 3: Reduce damage taken from [PSY] characters by 3%",
+                    "Level 4: Reduce damage taken from [PSY] characters by 5%",
+                    "Level 5: Reduce damage taken from [PSY] characters by 7%"
                 ]
             },
             {
                 "Name": "Pinch Healing",
                 "description": [
                     "Level 1: If HP is below 10% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 2: If HP is below 15% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character",
+                    "Level 2: If HP is below 20% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character",
                     "Level 3: If HP is below 20% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
                     "Level 4: If HP is below 30% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
                     "Level 5: If HP is below 30% at the start of the turn, heals for 2x this character's RCV at the end of the turn each time you hit a Perfect with this character"
