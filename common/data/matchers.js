@@ -423,7 +423,7 @@ window.matchers = [
     },
     
     {
-        name: 'Ignoring defense damage dealer',
+        name: 'Defence and Barrier Buff Ignoring damage dealer',
         target: 'special',
         matcher: /Deals.+ignore damage negating abilities and barriers/i
     },
