@@ -26165,12 +26165,12 @@ window.details = {
         specialName: "Eleclaw",
     },
     2079: {//Brook
-        captain: "Boosts ATK of Fighter and Free Spirit characters by 2x",
+        captain: "Boosts ATK of Slasher and Free Spirit characters by ?x",
         special: "Deals 8 hits of of 20x character's ATK in typeless damage to random enemies. If enemies have All Debuff Protection or Delay Debuff Protection at the time the special was activated, Changes [BLOCK] orbs into Matching orbs and boosts the Color Affinity of all characters by 1.75x for 1 turn",
         specialName: "The Spherical Song that Resonates the Soul",
     },
     2080: {//Brook
-        captain: "Boosts ATK of Fighter and Free Spirit characters by 2x",
+        captain: "Boosts ATK of Slasher and Free Spirit characters by 2x",
         special: "Deals 8 hits of of 20x character's ATK in typeless damage to random enemies. If enemies have All Debuff Protection or Delay Debuff Protection at the time the special was activated, Changes [BLOCK] orbs into Matching orbs and boosts the Color Affinity of all characters by 1.75x for 1 turn",
         specialName: "The Spherical Song that Resonates the Soul",
     },

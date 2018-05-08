@@ -7017,7 +7017,7 @@ window.captains = {
         hp: function(p) { return p.unit.class.has("Free Spirit") ? 1.2 : 1; },
     },
     2080: {
-        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 1.5 : 1; },
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 2 : 1; },
     },
     2082: {
         atk: function(p) { return p.unit.class.has("Slasher") ? 2.75 : 1; },
