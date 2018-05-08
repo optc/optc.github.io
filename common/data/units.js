@@ -2089,7 +2089,7 @@ window.units = [
     [ "Sanji, Let's go for Pirate Festival", "INT", [ "Fighter", "Powerhouse" ], 4, 20, 5, 4, 99, 1000000, 708, 333, 51, 1990, 1252, 201, null ],
     [ "Nami, Let's go for Pirate Festival", "PSY", [ "Shooter", "Cerebral" ], 4, 20, 6, 4, 99, 1000000, 594, 288, 85, 1740, 1008, 324, null ],
     [ "Franky, Let's go for Pirate Festival", "DEX", [ "Powerhouse", "Fighter" ], 4, 20, 6, 4, 99, 1000000, 724, 340, 46, 2148, 1212, 188, null ],
-    [ "Usopp, Let's go for Pirate Festival", "QCK", "Shooter", 4, 20, 4, 4, 99, 1000000, null, null, null, null, null, null, null ],
+    [ "Usopp, Let's go for Pirate Festival", "QCK", "Shooter", 4, 20, 4, 4, 99, 1000000, 634, 301, 74, 1820, 1076, 288, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
