@@ -26205,7 +26205,7 @@ window.details = {
         specialName: "A Full Bloom Bright Smile",
     },
     2087: {//Pizza Luffy
-        captain: "Boosts ATK of all characters by 2x. If you use \"Pizza Luffy Special\" boosts ATK of all characters by 2.6x instead.",
+        captain: "Boosts ATK of all characters by 2x. If you use \"Gomu Gomu no Octopus Stamp: Banquet\"  THIS LUFFY boosts ATK of all characters by 2.6x instead for 3 turns",
         special: "Deals 15x character's ATK in [STR] damage to all enemies, recovers 2,000 HP and adds .5x to Chain multiplier for 1 turn.",
         specialName: "Gomu Gomu no Octopus Stamp: Banquet",
     },

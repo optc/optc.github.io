@@ -2069,8 +2069,8 @@ window.cooldowns = [
     [ 15, 11 ],
     22,
     22,
-    18,//Chopper
-    18,//Chopper
+    18,
+    18,
     19,
     19,
     21,
