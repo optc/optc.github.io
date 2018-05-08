@@ -393,6 +393,12 @@ window.matchers = [
     },
 
     {
+        name: 'Area of Effect damage dealers',
+        target: 'special',
+        matcher: /Deals.+to all enemies/i
+    },
+
+    {
         name: 'Multi-hit damage dealers',
         target: 'special',
         matcher: /Deals \d+ hits/i
