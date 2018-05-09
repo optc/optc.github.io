@@ -2109,7 +2109,7 @@ window.units = [
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Coliseum Kid", "DEX", [ "Striker", "Shooter" ], 4, 25, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Coliseum Kid, Evolved", "DEX", [ "Striker", "Shooter" ], 5, 40, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Eustass Kid, The Worst Generation Aiming at \"Red Hair\"", "DEX", [ "Striker", "Shooter" ], 5, 40, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
