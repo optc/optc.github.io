@@ -5348,7 +5348,7 @@ window.details = {
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base RCV by 10" },
-            { "description": "Boosts base ATK by " },
+            { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base RCV by 10" },
             { "description": "Acquire Potential 2: [INT] Damage Reduction" },
             { "description": "Boosts base RCV by 20" },
@@ -11671,14 +11671,14 @@ window.details = {
     },
     1187: {
         captain: "Boosts ATK of [STR] characters by 2.5x",
-        special: "Deals 7 hits of random damage to random enemies. Reduces Bind and Despair duration by 3 turns",
+        special: "Deals 7 hits of random Typeless damage to random enemies. Reduces Bind and Despair duration by 3 turns",
         specialNotes: "#{randomHits : 7}<br>#{random : 5000 : 20000 : for each hit}",
         specialName: "Advancing Continuous Sword Attack",
         sailor: "Boosts base ATK, HP and RCV of all characters by 20"
     },
     1188: {
         captain: "Boosts ATK of [STR] characters by 2.5x",
-        special: "Deals 7 hits of random damage to random enemies. Reduces Bind and Despair duration by 3 turns",
+        special: "Deals 7 hits of random Typeless damage to random enemies. Reduces Bind and Despair duration by 3 turns",
         specialNotes: "#{randomHits : 7}<br>#{random : 5000 : 20000 : for each hit}",
         specialName: "Advancing Continuous Sword Attack",
         sailor: "Boosts base ATK, HP and RCV of all characters by 20"
@@ -16041,7 +16041,7 @@ window.details = {
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base RCV by 10" },
-            { "description": "Boosts base ATK by " },
+            { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base RCV by 10" },
             { "description": "Acquire Potential 2: [INT] Damage Reduction" },
             { "description": "Boosts base RCV by 20" },
@@ -26080,7 +26080,7 @@ window.details = {
         special: "Reduces ATK DOWN and Increase Damage Taken duration by 5 turns, changes [BLOCK], [STR] and [QCK] orbs into Matching orbs and locks the chain multiplier at 2.75x for 3 turns",
         specialName: "Spinning Jump Attack",
         sailor: {
-            "base": "Boosts base ATK, HP and RCV for Slasher characters",
+            "base": "Boosts base ATK, HP and RCV for Slasher characters by 50",
             "level1": "Makes [PSY] orbs \"beneficial\" for Slasher characters",
         },
         sailorNotes: "#{beneficial}",
@@ -26229,6 +26229,23 @@ window.details = {
         captain: "Boosts ATK of Shooter characters by 1.75x",
         special: "Reduces crew's ATK DOWN and Paralysis duration by 3 turns and delays all enemies for 1 turn",
         specialName: "Humble Words to Excite the Party",
+    },
+    2110: {//Kid
+        captain: "Boosts ATK of Striker and Shooter characters by ?x and deals ?x character's ATK in [DEX] damage to all enemies at the end of each turn",
+        special: "Deals 5 hits of random [DEX] damage to random enemies, reduces Special Cooldown of Striker and Shooter specials by 2 turns and deals 350x character's ATK as D[EX damage to all enemies at the end of the turn for 2 turns",
+        specialNotes: "#{randomHits : 5}",
+        specialName: "Coliseum Kid V2 Special",
+    },
+    2111: {//Kid
+        captain: "Boosts ATK of Striker and Shooter characters by 2.5x and deals 5x character's ATK in [DEX] damage to all enemies at the end of each turn",
+        special: "Deals 5 hits of random [DEX] damage to random enemies, reduces Special Cooldown of Striker and Shooter specials by 2 turns and deals 350x character's ATK as D[EX damage to all enemies at the end of the turn for 2 turns",
+        specialNotes: "#{randomHits : 5}",
+        specialName: "Coliseum Kid V2 Special",
+        sailor: {
+            "base": "None",
+            "level1": "Boosts base ATK, HP and RCV of [DEX] characters by 20",
+            "level2": "Boosts base ATK of Striker characters by 30",
+        },
     },
     2200: {//Doflamingo Raid v2
         captain: "Boosts ATK of Driven and Cerebral characters by 2.5x when HP is 50% or below, 1.5x otherwise",

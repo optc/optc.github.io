@@ -7043,6 +7043,9 @@ window.captains = {
     2091: {
         atk: function(p) { return p.unit.class.has("Shooter") ? 1.75 : 1; },
     },
+    2111: {
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Shooter") ? 2.5 : 1; },
+    },
     2200: {
         atk: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Cerebral")) && p.percHP <= 50.0 ? 2.5 : 1.5; }
     },
