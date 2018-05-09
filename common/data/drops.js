@@ -2243,7 +2243,7 @@ window.drops = {
             thumb: 2070,
             nakama: null,
             gamewith: 102084,
-            condition: '1 Master version and 3 Ultimate versions with different conditions. Master: Slasher/Free Spirit/Cerebral Only. Ultimate: Slasher Only, Free Spirit Only, and Cerebral Only',
+            condition: '1 Master version and 3 Ultimate versions with different conditions. Master: Slasher/Free Spirit/Cerebral Only. Ultimate: Slasher Only, Free Spirit Only, and Cerebral Only. Can only complete 7 times each per day. Can drop +10 Cotton Candy and Forbidden Tomes.',
             Ultimate: [ 2069 ],
             Master: [ 2069 ],
         },
@@ -2837,7 +2837,7 @@ window.drops = {
         },
         
         {
-            name: 'Champion Challenge!',
+            name: 'Champion Challenge! 3rd Anniversary',
             thumb: 1588,
             global: true,
             nakama: 6158800,
@@ -2869,6 +2869,25 @@ window.drops = {
             'Bartolomeo': [ 304, 104, 88, 99, 82, 93, 351, -1035, -221, -357, -643, -840, -1025, -1029, -225, -541, -733, -1056 ],
             'Borsalino': [ 302, 102, 86, 97, 80, 91, 349, -1240, -77, -257, -760, -943, -1272, -1551, -896, -398, -793, -1058, -59 ],
             'Captain Buggy': [ 300, 100, 84, 95, 78, 89, 347, -1391, -1031, -1232, -1276, -1550, -739, -214, -707, -735, -890, -1281, -290 ],
+        },
+        
+        {
+            name: 'Champion Challenge! 4th Anniversary',
+            thumb: 2076,
+            nakama: null,
+            gamewith: null,
+            showManual: true,
+            condition: 'High chance of dropping 6* skillbooks.',
+            'Blackbeard': [ -261, -649, -1268, -1413, -1698 ],
+            'Zoro': [ -718, -1085, -1362, -1391, -1881, -1921, -2035 ],
+            'Shirahoshi': [ -720, -935, -1434, -1473, -1880, -1927, -2066 ],
+            'Nekomamushi': [ -530, -748, -1571, -1652, -1663, -1707 ],
+            'Trafalgar Law': [ -1001, -1045, -1751, -1763, -1922, -2001 ],
+            'Akainu': [ -459, -1192, -1240, -1314, -1764, -1847, -2034 ],
+            'Monkey D. Luffy': [ -416, -1404, -1445, -1532, -1543, -1593, -1747 ],
+            'Lucy': [ -562, -578, -669, -1121, -1492, -1794, -1816 ],
+            'Fujitora': [ -870, -1035, -1123, -1869, -1928 ],
+            'Judge': [ -367, -1588, -1610, -1619, -1832 ],
         },
         
         {
