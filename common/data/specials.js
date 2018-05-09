@@ -4766,12 +4766,14 @@ window.specials = {
     },
     2063: {
         atk: function(p) { return p.unit.type == window.specials[2063].captType ? 1.75 : 1; },
+        type: "type",
         onActivation: function(p) {
             window.specials[2063].captType = p.captain.type;
         }
     },
     2064: {
         atk: function(p) { return p.unit.type == window.specials[2064].captType ? 1.75 : 1; },
+        type: "type",
         onActivation: function(p) {
             window.specials[2064].captType = p.captain.type;
         }
