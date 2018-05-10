@@ -5936,7 +5936,7 @@ window.captains = {
     },
     1867: {
         atk: function(p) { return p.unit.class.has("Cerebral") ? 2 : 1; },
-        chainModifier: function(p) { return 2; }
+        chainModifier: function(p) { return 1.5; }
     },
     1868: {
         hitAtk: function(p) {
@@ -7012,12 +7012,22 @@ window.captains = {
     2076: {
         atk: function(p){ return p.unit.type == "DEX" ? 3.75 : 1; },
     },
+    2077: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? 2 : 1; },
+    },
     2078: {
         atk: function(p) { return p.unit.class.has("Fighter") ? 2.5 : 1; },
         hp: function(p) { return p.unit.class.has("Free Spirit") ? 1.2 : 1; },
     },
+    2079: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 2 : 1; },
+    },
     2080: {
         atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 2 : 1; },
+        chainModifier: function(p) { return 1.5; }
+    },
+    2081: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? 2.25 : 1; },
     },
     2082: {
         atk: function(p) { return p.unit.class.has("Slasher") ? 2.75 : 1; },
