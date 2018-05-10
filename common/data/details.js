@@ -26232,13 +26232,13 @@ window.details = {
     },
     2110: {//Kid
         captain: "Boosts ATK of Striker and Shooter characters by ?x and deals ?x character's ATK in [DEX] damage to all enemies at the end of each turn",
-        special: "Deals 5 hits of random [DEX] damage to random enemies, reduces Special Cooldown of Striker and Shooter specials by 2 turns and deals 350x character's ATK as D[EX damage to all enemies at the end of the turn for 2 turns",
+        special: "Deals 5 hits of random [DEX] damage to random enemies and reduces Special Cooldown of Striker and Shooter specials by 2 turns. If your Captain is a Striker or Shooter character, deals 350x character's ATK as [DEX] damage to all enemies at the end of the turn for 2 turns",
         specialNotes: "#{randomHits : 5}",
         specialName: "Coliseum Kid V2 Special",
     },
     2111: {//Kid
         captain: "Boosts ATK of Striker and Shooter characters by 2.5x and deals 5x character's ATK in [DEX] damage to all enemies at the end of each turn",
-        special: "Deals 5 hits of random [DEX] damage to random enemies, reduces Special Cooldown of Striker and Shooter specials by 2 turns and deals 350x character's ATK as D[EX damage to all enemies at the end of the turn for 2 turns",
+        special: "Deals 5 hits of random [DEX] damage to random enemies and reduces Special Cooldown of Striker and Shooter specials by 2 turns. If your Captain is a Striker or Shooter character, deals 350x character's ATK as [DEX] damage to all enemies at the end of the turn for 2 turns",
         specialNotes: "#{randomHits : 5}",
         specialName: "Coliseum Kid V2 Special",
         sailor: {
