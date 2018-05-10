@@ -2070,7 +2070,7 @@ window.units = [
     [ "Boa Hancock [Neo], Kuja Pirates Captain", "INT", [ "Shooter", "Free Spirit" ], 4, 30, 4, 4, 70, 1066998, 149, 144, 58, 1011, 639, 202, null ],
     [ "Empress Boa Hancock [Neo], Kuja Pirates Captain", "INT", [ "Shooter", "Free Spirit" ], 5, 50, 4, 5, 99, 5000000, 931, 592, 162, 2033, 1391, 379, null ],
     [ "Chobro/Bropper", "INT", [ "Fighter", "Cerebral" ], 4, 15, 4, 3, 50, 392109, 252, 72, 70, 1028, 504, 216, null ],
-    [ "Sweet Country's Chobro", "INT", [ "Fighter", "Cerebral" ], 5, 30, 4, 4, 99, 4000000, 854, 455, 182, 208, 1198, 482, null ],
+    [ "Sweet Country's Chobro", "INT", [ "Fighter", "Cerebral" ], 5, 30, 4, 4, 99, 4000000, 854, 455, 182, 2008, 1198, 482, null ],
     [ "Monkey D. Luffy, The Potential Power of the Gomu Gomu no Mi", "QCK", [ "Fighter", "Free Spirit" ], 5, 30, 5, 3, 70, 1066998, 555, 212, 54, 2092, 212, 54, null ],
     [ "Strawhat Luffy, The Potential Power of the Gomu Gomu no Mi", "QCK", [ "Fighter", "Free Spirit" ], 6, 55, 5, 5, 99, 5000000, 1782, 744, 105, 3780, 1635, 225, null ],
     [ "Nami, The Navigator Marking the World Map", "DEX", [ "Cerebral", "Striker" ], 5, 30, 4, 3, 70, 1066998, 345, 167, 102, 1627, 654, 255, null ],
