@@ -2556,7 +2556,8 @@ window.drops = {
         {
             name: 'White Knight Cavendish',
             thumb: 1889,
-			nakama: 8188900,
+            global: true,
+            nakama: 8188900,
             gamewith: 83086,
             'Raging Sea': [ 1888 ]
         },
