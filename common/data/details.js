@@ -26385,12 +26385,12 @@ window.details = {
         specialName: "Celebration at the Flower Garden",
     },
     2085: {//Sanji
-        captain: "Boosts ATK of [DEX] and [QCK] characters by ?x",
+        captain: "Boosts ATK of [DEX] and [QCK] characters by 2.25x",
         special: "Recovers 3,000 HP, changes right column orbs into Matching orbs and boosts ATK of [DEX], [QCK] and [INT] characters by 1.75x for 1 turn",
         specialName: "A Full Bloom Bright Smile",
     },
     2086: {//Sanji
-        captain: "Boosts ATK of [DEX] and [QCK] characters by 2.25x",
+        captain: "Boosts ATK of [DEX] and [QCK] characters by 2.5x and their HP by 1.2x",
         special: "Recovers 3,000 HP, changes right column orbs into Matching orbs and boosts ATK of [DEX], [QCK] and [INT] characters by 1.75x for 1 turn",
         specialName: "A Full Bloom Bright Smile",
     },

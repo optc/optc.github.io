@@ -7046,8 +7046,12 @@ window.captains = {
     2084: {
         atk: function(p){ return p.unit.type == "DEX" || p.unit.type == "QCK" ? 2.25 : 1; },
     },
-    2086: {
+    2085: {
         atk: function(p){ return p.unit.type == "DEX" || p.unit.type == "QCK" ? 2.25 : 1; },
+    },
+    2086: {
+        atk: function(p){ return p.unit.type == "DEX" || p.unit.type == "QCK" ? 2.5 : 1; },
+        hp: function(p){ return p.unit.type == "DEX" || p.unit.type == "QCK" ? 1.2 : 1; },
     },
     2087: {
         atk: function(p){ return p.actions[p.sourceSlot] ? 2.6 : 2; },
