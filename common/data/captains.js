@@ -6886,17 +6886,28 @@ window.captains = {
         },
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
     },
+    2038: {
+        atk: function(p) {
+            return p.unit.class.has("Free Spirit") && p.unit.type == "QCK" ? 2.25 :
+                p.unit.class.has("Free Spirit") || p.unit.type == "QCK" ? 1.5 : 1;
+        }
+    },
     2039: {
         atk: function(p) {
             return p.unit.class.has("Free Spirit") && p.unit.type == "QCK" ? 3.0625 :
-                p.unit.class.has("Free Spirit") || p.unit.type == "QCK" ? 1.75 :
-                1;
+                p.unit.class.has("Free Spirit") || p.unit.type == "QCK" ? 1.75 : 1;
         }
+    },
+    2040: {
+        atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? 2 : 1; },
     },
     2041: {
         atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? 2.25 : 1; },
         hp: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? 1.2 : 1; },
         rcv: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? 1.2 : 1; },
+    },
+    2042: {
+        atk: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 1.75 : 1; },
     },
     2043: {
         atk: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 2.25 : 1; },
