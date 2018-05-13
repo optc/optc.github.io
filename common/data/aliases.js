@@ -1256,7 +1256,7 @@ window.aliases = {
     1255: ['絆のディカルバン兄弟 白ひげ海賊団傘下', '', ''],
     1256: ['“氷の魔女”ホワイティベイ 白ひげ海賊団傘下', '', ''],
     1257: ['エドワード・ニューゲート 海賊王のライバル', '', 'Edward Newgate', 'Young Whitebeard', 'YWB', 'Invasion Whitebeard', 'Ambush Whitebeard'],
-    1258: ['エドワード・ニューゲート 大海賊“白ひげ”', '', 'Edward Newgate', 'Young Whitebeard', 'YWB'],
+    1258: ['エドワード・ニューゲート 大海賊“白ひげ”', '', 'Edward Newgate', 'Young Whitebeard', 'YWB', 'Invasion Whitebeard', 'Ambush Whitebeard'],
     1259: ['ドンキホーテ・ドフラミンゴ “北の海”の海賊', '', 'Young Doffy', 'Donquixote Doflamingo'],
     1260: ['ドンキホーテ・ドフラミンゴ “北の海”の闇', '', 'Young Doffy', 'Donquixote Doflamingo'],
     1261: ['セニョール・ピンク “北の海”の海賊', '', 'Senor Pink', 'Young Senior Pink', 'Senior Pink', 'Young Senor Pink'],
