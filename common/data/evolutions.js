@@ -3293,22 +3293,66 @@ window.evolutions = {
     },
     2051: {
         evolution: 2052,
-        evolvers: [  ]
+        evolvers: [ 117, 90, 96, 301, 101 ]
     },
     2059: {
         evolution: 2060,
-        evolvers: [  ]
+        evolvers: [ 117, 78, 89, 95, 100 ]
     },
     2061: {
         evolution: 2062,
-        evolvers: [  ]
+        evolvers: [ 117, 78, 89, 95, 100 ]
     },
     2063: {
         evolution: 2064,
-        evolvers: [  ]
+        evolvers: [ 115, 116, 117, 118, 102 ]
+    },
+    935: {
+        evolution: 2066,
+        evolvers: [ 'skullINT', 118, 88, 304, 267 ]
+    },
+    2067: {
+        evolution: 2068,
+        evolvers: [ 118, 87, 98, 303, 103 ]
+    },
+    2069: {
+        evolution: 2070,
+        evolvers: [ 118, 94, 99, 304, 104 ]
     },
     2071: {
         evolution: 2072,
+        evolvers: [ 83, 266, 99, 99, 104 ]
+    },
+    2073: {
+        evolution: 2074,
+        evolvers: [ 118, 266, 85, 101, 267 ]
+    },
+    2075: {
+        evolution: 2076,
+        evolvers: [ 118, 118, 97, 1180, 267 ]
+    },
+    2077: {
+        evolution: 2078,
+        evolvers: [ 83, 266, 98, 98, 103 ]
+    },
+    2079: {
+        evolution: 2080,
+        evolvers: [ 94, 1180, 300, 300, 100 ]
+    },
+    2081: {
+        evolution: 2082,
+        evolvers: [ 94, 1180, 301, 301, 101 ]
+    },
+    2083: {
+        evolution: 2084,
+        evolvers: [  ]
+    },
+    2085: {
+        evolution: 2086,
+        evolvers: [ 83, 86, 1180, 302, 102 ]
+    },
+    2110: {
+        evolution: 2111,
         evolvers: [  ]
     },
     2200: {

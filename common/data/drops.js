@@ -1872,7 +1872,7 @@ window.drops = {
             thumb: 1812,
             global: true,
             nakama: 2181200,
-            condition: 'Powerhouse Characters will be weakened',
+            condition: 'Powerhouse Characters recieves a 99 turn paralysis and a 90% ATK down from stage 4 onwards on 15 and 30 stamina',
             gamewith: 71416,
             'All Difficulties': [ 1811, 1809, -1240, -1575, -1658, -1232, -1238, -1117, -522, -1119, -524, -1504, -1503 ]
         },
@@ -1880,6 +1880,7 @@ window.drops = {
         {
             name: 'Crisis of the 800 Year Old Kingdom!',
             thumb: 1818,
+            global: true,
             nakama: 2181800,
             gamewith: 72655,
             'All Difficulties': [ 1817, 1819, 1820, -1610, -1656, -1660, -1230, -1236, -1173, -526, -643, -1506, -964 ]
@@ -1990,6 +1991,14 @@ window.drops = {
             nakama: null,
             gamewith: 99699,
             'All Difficulties': [ 2056, 2057, 2058, -1880, -1434, -1412, -1906, -1908, -1859, -1637 ]
+        },
+        
+        {
+            name: 'Strawhat Pirates Pizza Party!!',
+            thumb: 2087,
+            nakama: null,
+            gamewith: 102409,
+            'All Difficulties': [ 2087, 2088, 2089, 2090, 2091, -1910, -1440, -1442, -1895, -1902, -1714 ]
         },
         
     ],
@@ -2209,6 +2218,7 @@ window.drops = {
         {
             name: 'Clash Neo!! Tyrant Kuma',
             thumb: 1772,
+            global: true,
             nakama: 4177200,
             gamewith: 67120,
             condition: '1 Master version and 3 Ultimate versions with different conditions. Master: Shooter/Slasher/Cerebral Only. Can only complete 10 times each. Ultimate: Shooter Only, Slasher Only, and Cerebral Only',
@@ -2226,6 +2236,16 @@ window.drops = {
             Ultimate: [ 864 ],
             Master: [ 864 ],
             Expert: [ 864 ]
+        },
+
+        {
+            name: 'Clash Neo!! Pirate Empress Hancock',
+            thumb: 2070,
+            nakama: null,
+            gamewith: 102084,
+            condition: '1 Master version and 3 Ultimate versions with different conditions. Master: Slasher/Free Spirit/Cerebral Only. Ultimate: Slasher Only, Free Spirit Only, and Cerebral Only. Can only complete 7 times each per day. Can drop +10 Cotton Candy and Forbidden Tomes.',
+            Ultimate: [ 2069 ],
+            Master: [ 2069 ],
         },
         
         {
@@ -2506,7 +2526,7 @@ window.drops = {
             slefty: 'coliseums',
             Exhibition: [ 776, 778, 803, 832, 834, 859, 861, 883, 902, 904, 925, 927, 952, 984, 1017, 1019, 1103, 1105, 1195, 1197, 1221, 1252, 1253, 1293, 1311, 1339, 1340, 1377, 1402, 1423, 1424, 1457, 1459, 1488, 1490, 1526, 1528, 1552, 1585, 1603, 1629, 1860 ],
             Underground: [ 776, 778, 803, 832, 834, 859, 861, 883, 902, 904, 925, 927, 952, 984, 1017, 1019, 1103, 1105, 1195, 1197, 1221, 1252, 1253, 1293, 1311, 1339, 1340, 1377, 1402, 1423, 1424, 1457, 1459, 1488, 1490, 1526, 1528, 1552, 1585, 1603, 1629, 1791, 1860, 1896, 1977 ],
-            Chaos: [ 776, 778, 780, 803, 805, 830, 832, 834, 859, 861, 881, 883, 900, 902, 923, 925, 950, 982, 984, 1017, 1015, 1040, 1042, 1086, 1088, 1090, 1101, 1103, 1105, 1140, 1142, 1144, 1195, 1219, 1221, 1250, 1252, 1291, 1293, 1309, 1311, 1337, 1339, 1340, 1375, 1377, 1400, 1421, 1423, 1455, 1457, 1486, 1488, 1525, 1526, 1528, 1552, 1554, 1583, 1585, 1601, 1603, 1627, 1629, 1666, 1693, 1732, 1791, 1827, 1860, 1896, 1944, 1977, 2036 ],
+            Chaos: [ 776, 778, 780, 803, 805, 830, 832, 834, 859, 861, 881, 883, 900, 902, 923, 925, 950, 982, 984, 1017, 1015, 1040, 1042, 1086, 1088, 1090, 1101, 1103, 1105, 1140, 1142, 1144, 1195, 1219, 1221, 1250, 1252, 1291, 1293, 1309, 1311, 1337, 1339, 1340, 1375, 1377, 1400, 1421, 1423, 1455, 1457, 1486, 1488, 1525, 1526, 1528, 1552, 1554, 1583, 1585, 1601, 1603, 1627, 1629, 1666, 1693, 1732, 1791, 1827, 1860, 1896, 1944, 1977, 2036, 2110 ],
             Neo: [ 1862, 1898, 1975, 2016 ]
         },
         
@@ -2536,7 +2556,8 @@ window.drops = {
         {
             name: 'White Knight Cavendish',
             thumb: 1889,
-			nakama: 8188900,
+            global: true,
+            nakama: 8188900,
             gamewith: 83086,
             'Raging Sea': [ 1888 ]
         },
@@ -2571,6 +2592,14 @@ window.drops = {
             nakama: null,
             gamewith: 94667,
             'Raging Sea': [ 1998, 1999 ]
+        },
+
+        {
+            name: 'Borsalino',
+            thumb: 2064,
+            nakama: null,
+            gamewith: 101870,
+            'Raging Sea': [ 2063 ]
         },
         
     ],
@@ -2809,7 +2838,7 @@ window.drops = {
         },
         
         {
-            name: 'Champion Challenge!',
+            name: 'Champion Challenge! 3rd Anniversary',
             thumb: 1588,
             global: true,
             nakama: 6158800,
@@ -2841,6 +2870,25 @@ window.drops = {
             'Bartolomeo': [ 304, 104, 88, 99, 82, 93, 351, -1035, -221, -357, -643, -840, -1025, -1029, -225, -541, -733, -1056 ],
             'Borsalino': [ 302, 102, 86, 97, 80, 91, 349, -1240, -77, -257, -760, -943, -1272, -1551, -896, -398, -793, -1058, -59 ],
             'Captain Buggy': [ 300, 100, 84, 95, 78, 89, 347, -1391, -1031, -1232, -1276, -1550, -739, -214, -707, -735, -890, -1281, -290 ],
+        },
+        
+        {
+            name: 'Champion Challenge! 4th Anniversary',
+            thumb: 2076,
+            nakama: null,
+            gamewith: null,
+            showManual: true,
+            condition: 'High chance of dropping 6* skillbooks.',
+            'Blackbeard': [ -261, -649, -1268, -1413, -1698 ],
+            'Zoro': [ -718, -1085, -1362, -1391, -1881, -1921, -2035 ],
+            'Shirahoshi': [ -720, -935, -1434, -1473, -1880, -1927, -2066 ],
+            'Nekomamushi': [ -530, -748, -1571, -1652, -1663, -1707 ],
+            'Trafalgar Law': [ -1001, -1045, -1751, -1763, -1922, -2001 ],
+            'Akainu': [ -459, -1192, -1240, -1314, -1764, -1847, -2034 ],
+            'Monkey D. Luffy': [ -416, -1404, -1445, -1532, -1543, -1593, -1747 ],
+            'Lucy': [ -562, -578, -669, -1121, -1492, -1794, -1816 ],
+            'Fujitora': [ -870, -1035, -1123, -1869, -1928 ],
+            'Judge': [ -367, -1588, -1610, -1619, -1832 ],
         },
         
         {

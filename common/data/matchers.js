@@ -50,7 +50,7 @@ window.matchers = [
         matcher: /Boosts ATK and RCV.+by 2x/i
     },
 
-    {
+    /*{
         name: '1.25x ATK captains',
         target: 'captain',
         matcher: /Boosts (their )?ATK.+by 1.25x/i
@@ -66,7 +66,7 @@ window.matchers = [
         name: '1.75x ATK captains',
         target: 'captain',
         matcher: /Boosts (their )?ATK.+by 1.75x/i
-    },
+    },*/
 
     {
         name: '2x ATK captains',
@@ -74,11 +74,11 @@ window.matchers = [
         matcher: /Boosts (their )?ATK.+by 2x/i
     },
 
-    {
+    /*{
         name: '2.25x ATK captains',
         target: 'captain',
         matcher: /Boosts (their )?ATK.+by 2.25x/i
-    },
+    },*/
 
     {
         name: '2.5x ATK captains',
@@ -393,6 +393,12 @@ window.matchers = [
     },
 
     {
+        name: 'Area of Effect damage dealers',
+        target: 'special',
+        matcher: /Deals.+to all enemies/i
+    },
+
+    {
         name: 'Multi-hit damage dealers',
         target: 'special',
         matcher: /Deals \d+ hits/i
@@ -417,7 +423,7 @@ window.matchers = [
     },
     
     {
-        name: 'Ignoring defense damage dealer',
+        name: 'Defence and Barrier Buff Ignoring damage dealer',
         target: 'special',
         matcher: /Deals.+ignore damage negating abilities and barriers/i
     },
