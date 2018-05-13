@@ -7043,8 +7043,12 @@ window.captains = {
     2082: {
         atk: function(p) { return p.unit.class.has("Slasher") ? 2.75 : 1; },
     },
-    2084: {
+    2083: {
         atk: function(p){ return p.unit.type == "DEX" || p.unit.type == "QCK" ? 2.25 : 1; },
+    },
+    2084: {
+        atk: function(p){ return p.unit.type == "DEX" || p.unit.type == "QCK" ? 2.5 : 1; },
+        rcv: function(p){ return p.unit.type == "DEX" || p.unit.type == "QCK" ? 1.2 : 1; },
     },
     2085: {
         atk: function(p){ return p.unit.type == "DEX" || p.unit.type == "QCK" ? 2.25 : 1; },

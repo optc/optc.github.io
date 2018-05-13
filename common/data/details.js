@@ -26375,12 +26375,12 @@ window.details = {
         ]
     },
     2083: {//Reiju
-        captain: "Boosts ATK of [DEX] and [QCK] characters by ?x",
+        captain: "Boosts ATK of [DEX] and [QCK] characters by 2.25x",
         special: "Removes Poison, changes left column orbs into Matching orbs and amplifies the effect of orbs on [DEX], [QCK] and [PSY] characters by 1.75x for 1 turn",
         specialName: "Celebration at the Flower Garden",
     },
     2084: {//Reiju
-        captain: "Boosts ATK of [DEX] and [QCK] characters by 2.25x",
+        captain: "Boosts ATK of [DEX] and [QCK] characters by 2.5x and their RCV by 1.2x",
         special: "Removes Poison, changes left column orbs into Matching orbs and amplifies the effect of orbs on [DEX], [QCK] and [PSY] characters by 1.75x for 1 turn",
         specialName: "Celebration at the Flower Garden",
     },

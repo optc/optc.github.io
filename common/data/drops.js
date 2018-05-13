@@ -1889,6 +1889,7 @@ window.drops = {
         {
             name: 'Caribou Pirates!',
             thumb: 1842,
+            global: true,
             nakama: 2184200,
             gamewith: 75879,
             condition: '[STR] orbs will not appear naturally',
