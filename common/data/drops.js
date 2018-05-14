@@ -2505,6 +2505,14 @@ window.drops = {
         },
         
         {
+            name: 'Clash!! Zoro',
+            thumb: 2097,
+            nakama: null,
+            gamewith: null,
+            'All Dificulties': [ 2096 ],
+        },
+        
+        {
             name: 'Clash!! Heavenly Demon Doflamingo',
             thumb: 2201,
             global: true,

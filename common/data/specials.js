@@ -4916,6 +4916,28 @@ window.specials = {
     2091: {
         delay: function(p) { return 1; },
     },
+    2096: {
+        affinity: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Driven")) ? window.specials[2096].multiplier : 1; },
+        onActivation: function(p) {
+            var n = (p.percHP == 100 ? 2 : 1.75);
+            window.specials[2096].multiplier = n;
+            p.scope.notify({
+                text: 'HP ' + (n == 2 ? 'equal to' : 'below') + ' 100%, using the ' + n + 'x multiplier.',
+                name: '2096warning'
+            });
+        }
+    },
+    2097: {
+        affinity: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Driven")) ? window.specials[2097].multiplier : 1; },
+        onActivation: function(p) {
+            var n = (p.percHP == 100 ? 2 : 1.75);
+            window.specials[2097].multiplier = n;
+            p.scope.notify({
+                text: 'HP ' + (n == 2 ? 'equal to' : 'below') + ' 100%, using the ' + n + 'x multiplier.',
+                name: '2097warning'
+            });
+        }
+    },
     5000: {
         atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 1.5 : 1; },
         type: "type",
