@@ -476,8 +476,6 @@ window.sailors = {
     },
     2081: {
         atkStatic: function(p) { return p.unit.class.has("Slasher") ? 40 : 0; },
-        rcvStatic: function(p) { return p.unit.class.has("Slasher") ? 40 : 0; },
-        hpStatic: function(p) { return p.unit.class.has("Slasher") ? 40 : 0; },
     },
     5000: {
         atkStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 50 : 0; },

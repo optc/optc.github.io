@@ -48,7 +48,27 @@
                 <td colspan="5">Captain Ability</td>
             </tr>
             <tr ng-if="slot < 2">
-                <td colspan="5">
+                <td colspan="5"> <!--
+                    <span class="badge badge-base" ng-show="details.captain.base">Base Captain Ability</span>
+                    <div ng-show="details.captain.base" ng-bind-html="details.captain.base | decorate"></div>
+                    <span class="badge badge-level1" ng-show="details.captain.level1">Limit Break Level 1 Captain Ability</span>
+                    <div ng-show="details.captain.level1" ng-bind-html="details.captain.level1 | decorate"></div>
+                    <span class="badge badge-level2" ng-show="details.captain.level2">Limit Break Level 2 Captain Ability</span>
+                    <div ng-show="details.captain.level2" ng-bind-html="details.captain.level2 | decorate"></div>
+                    <span class="badge badge-level3" ng-show="details.captain.level3">Limit Break Level 3 Captain Ability</span>
+                    <div ng-show="details.captain.level3" ng-bind-html="details.captain.level3 | decorate"></div>
+                    <span class="badge badge-level4" ng-show="details.captain.level4">Limit Break Level 4 Captain Ability</span>
+                    <div ng-show="details.captain.level4" ng-bind-html="details.captain.level4 | decorate"></div>
+                    <span class="badge badge-level5" ng-show="details.captain.level5">Limit Break Level 5 Captain Ability</span>
+                    <div ng-show="details.captain.level5" ng-bind-html="details.captain.level5 | decorate"></div>
+                    <span class="badge badge-level6" ng-show="details.captain.level6">Limit Break Level 6 Captain Ability</span>
+                    <div ng-show="details.captain.level6" ng-bind-html="details.captain.level6 | decorate"></div>
+                    <span class="badge badge-character1" ng-show="details.captain.character1">Character 1 Captain Ability</span>
+                    <div ng-show="details.captain.character1" ng-bind-html="details.captain.character1 | decorate"></div>
+                    <span class="badge badge-character2" ng-show="details.captain.character2">Character 2 Captain Ability</span>
+                    <div ng-show="details.captain.character2" ng-bind-html="details.captain.character2 | decorate"></div>
+                    <span class="badge badge-combined" ng-show="details.captain.combined">Dual Characters Captain Ability</span>
+                    <div ng-show="details.captain.combined" ng-bind-html="details.captain.combined | decorate"></div> -->
                     <div ng-bind-html="details.captain | decorate"></div>
                     <span class="notes" ng-if="details.captainNotes" ng-bind-html="details.captainNotes | notes | decorate"></span>
                 </td>
@@ -59,11 +79,25 @@
             <tr ng-if="slot > 1">
                 <td colspan="5">
                     <div ng-bind-html="details.sailor | decorate"></div>
+                    <span class="badge badge-sbase" ng-show="details.sailor.base">Sailor Ability</span>
+                    <div ng-show="details.sailor.base" ng-bind-html="details.sailor.base | decorate"></div>
+                    <span class="badge badge-sbase2" ng-show="details.sailor.base2">Sailor Ability 2</span>
+                    <div ng-show="details.sailor.base2" ng-bind-html="details.sailor.base2 | decorate"></div>
+                    <span class="badge badge-character1" ng-show="details.sailor.character1">Character 1 Sailor Ability</span>
+                    <div ng-show="details.sailor.character1" ng-bind-html="details.sailor.character1 | decorate"></div>
+                    <span class="badge badge-character2" ng-show="details.sailor.character2">Character 2 Sailor Ability</span>
+                    <div ng-show="details.sailor.character2" ng-bind-html="details.sailor.character2 | decorate"></div>
+                    <span class="badge badge-combined" ng-show="details.sailor.combined">Dual Characters Sailor Ability</span>
+                    <div ng-show="details.sailor.combined" ng-bind-html="details.sailor.combined | decorate"></div>
+                    <span class="badge badge-slevel1" ng-show="details.sailor.level1">Limit Break Sailor Ability 1</span>
+                    <div ng-show="details.sailor.level1" ng-bind-html="details.sailor.level1 | decorate"></div>
+                    <span class="badge badge-slevel2" ng-show="details.sailor.level2">Limit Break Sailor Ability 2</span>
+                    <div ng-show="details.sailor.level2" ng-bind-html="details.sailor.level2 | decorate"></div>
                     <span class="notes" ng-if="details.sailorNotes" ng-bind-html="details.sailorNotes | notes | decorate"></span>
                 </td>
             </tr>
             <tr class="header">
-                <td colspan="5">Special</td>
+                <td colspan="5">Special: <strong class="specialName" ng-if="details.specialName">{{details.specialName}}</strong></td>
             </tr>
             <tr>
                 <td colspan="5">

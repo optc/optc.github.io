@@ -175,11 +175,11 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 10% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 2: If HP is below 15% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 3: If HP is below 20% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 4: If HP is below 30% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 5: If HP is below 50% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character"
+                    "Level 1: If HP is below 10% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 15% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 20% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below 30% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below 50% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
             {
@@ -314,11 +314,11 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 5% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 2: If HP is below 5% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 3: If HP is below 5% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 4: If HP is below 10% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 5: If HP is below 20% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a Perfect with this character"
+                    "Level 1: If HP is below 5% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 5% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 5% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below 10% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below 20% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
         ]
@@ -369,11 +369,11 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 20% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 2: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 3: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 4: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 5: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character"
+                    "Level 1: If HP is below 20% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
         ]
@@ -714,11 +714,11 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 20% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 2: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 3: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 4: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 5: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character"
+                    "Level 1: If HP is below 20% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
         ]
@@ -761,11 +761,11 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 5% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 2: If HP is below 5% at the start of the turn, heals for 1.25x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 3: If HP is below 5% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 4: If HP is below 10% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 5: If HP is below 20% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a Perfect with this character"
+                    "Level 1: If HP is below 5% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 5% at the start of the turn, heals for 1.25x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 5% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below 10% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below 20% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
             {
@@ -1217,7 +1217,7 @@ window.details = {
     217: {
         special: "Deals 15x character's ATK in STR damage to all enemies",
         specialName: "Gum-Gum Giant Rifle",
-        captain: "Boosts ATK by 3.5x after scoring 3 Perfects in a row",
+        captain: "Boosts ATK by 3.5x after scoring 3 PERFECTs in a row",
         sailor: {
             "base": "None",
             "level1": "Makes [RCV] and [TND] orbs \"beneficial\" for this unit",
@@ -1255,11 +1255,11 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 20% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 2: If HP is below 25% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 3: If HP is below 30% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 4: If HP is below 40% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 5: If HP is below 40% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a Perfect with this character"
+                    "Level 1: If HP is below 20% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 25% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 30% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below 40% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below 40% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
         ]
@@ -1394,12 +1394,12 @@ window.details = {
     224: {
         special: "Deals 15x character's ATK in QCK damage to one enemy",
         specialName: "Mutton Shot",
-        captain: "Boosts ATK by 2x after scoring 2 Perfects in a row"
+        captain: "Boosts ATK by 2x after scoring 2 PERFECTs in a row"
     },
     225: {
         special: "Deals 20x character's ATK in QCK damage to one enemy",
         specialName: "Veau Shot",
-        captain: "Boosts ATK by 2.5x after scoring 2 Perfects in a row"
+        captain: "Boosts ATK by 2.5x after scoring 2 PERFECTs in a row"
     },
     226: {
         special: "Cuts the current HP of each enemy by 30%",
@@ -1723,7 +1723,7 @@ window.details = {
         sailor: {
             "base": "None",
             "level1": "Boosts base ATK, HP and RCV of [INT] characters by 30",
-            "level2": "If this character has an [INT] orb and you hit a Perfect with him, keep his [INT] orb for the next turn",
+            "level2": "If this character has an [INT] orb and you hit a PERFECT with him, keep his [INT] orb for the next turn",
         },
         limit: [
             { "description": "Boosts base ATK by 20" },
@@ -1739,7 +1739,7 @@ window.details = {
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base ATK by 50" },
             { "description": "Boosts base HP by 100" },
-            { "description": "Acquire Sailor Ability 2: If this character has an [INT] orb and you hit a Perfect with him, keep his [INT] orb for the next turn" },
+            { "description": "Acquire Sailor Ability 2: If this character has an [INT] orb and you hit a PERFECT with him, keep his [INT] orb for the next turn" },
             { "description": "Acquire Potential 2: Critical Hit" },
         ],
         potential: [
@@ -2211,11 +2211,11 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 5% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 2: If HP is below ??% at the start of the turn, heals for ??x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 3: If HP is below ??% at the start of the turn, heals for ??x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 4: If HP is below ??% at the start of the turn, heals for ??x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 5: If HP is below ??% at the start of the turn, heals for ??x this character's RCV at the end of the turn each time you hit a Perfect with this character"
+                    "Level 1: If HP is below 5% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below ??% at the start of the turn, heals for ??x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below ??% at the start of the turn, heals for ??x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below ??% at the start of the turn, heals for ??x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below ??% at the start of the turn, heals for ??x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
             {
@@ -2735,11 +2735,11 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 10% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 2: If HP is below 15% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 3: If HP is below 20% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 4: If HP is below 30% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 5: If HP is below 50% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character"
+                    "Level 1: If HP is below 10% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 15% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 20% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below 30% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below 50% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
             {
@@ -2937,11 +2937,11 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 10% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 2: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 3: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 4: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 5: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character"
+                    "Level 1: If HP is below 10% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
             {
@@ -2992,12 +2992,12 @@ window.details = {
     397: {
         special: "Changes [EMPTY] orbs into [STR] orbs with a 50% probability, deals 15x character's ATK in damage to all enemies",
         specialName: "Four Hundred Base Hits",
-        captain: "Boosts ATK by 3x after scoring 5 Perfects in a row"
+        captain: "Boosts ATK by 3x after scoring 5 PERFECTs in a row"
     },
     398: {
         special: "Changes [EMPTY] orbs into [STR] orbs with a 50% probability, deals 15x character's ATK in damage to all enemies",
         specialName: "Four Hundred Base Hits",
-        captain: "Boosts ATK by 4x after scoring 5 Perfects in a row"
+        captain: "Boosts ATK by 4x after scoring 5 PERFECTs in a row"
     },
     399: {
         special: "Boosts ATK of DEX characters by 1.5x for 1 turn",
@@ -3097,11 +3097,11 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 10% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 2: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 3: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 4: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 5: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character"
+                    "Level 1: If HP is below 10% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
         ]
@@ -3984,11 +3984,11 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 20% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 2: If HP is below 25% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 3: If HP is below 30% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 4: If HP is below 40% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 5: If HP is below 40% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a Perfect with this character"
+                    "Level 1: If HP is below 20% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 25% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 30% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below 40% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below 40% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
         ]
@@ -4079,7 +4079,7 @@ window.details = {
         captain: "Boosts ATK of PSY characters by 2x, reduces damage received from INT enemies by 30%",
         sailor: {
             "base": "Boosts base RCV of PSY characters by 15",
-            "level1": "If this character has a [PSY] orb and you hit a Perfect with him, keep his [PSY] orb for the next turn",
+            "level1": "If this character has a [PSY] orb and you hit a PERFECT with him, keep his [PSY] orb for the next turn",
         },
         limit: [
             { "description": "Reduce base Special Cooldown by 1 turn" },
@@ -4095,7 +4095,7 @@ window.details = {
             { "description": "Boosts base HP by 100" },
             { "description": "Reduce base Special Cooldown by 3 turns" },
             { "description": "Boosts base ATK by 100" },
-            { "description": "Acquire Sailor Ability 1: If this character has a [PSY] orb and you hit a Perfect with him, keep his [PSY] orb for the next turn" },
+            { "description": "Acquire Sailor Ability 1: If this character has a [PSY] orb and you hit a PERFECT with him, keep his [PSY] orb for the next turn" },
             { "description": "Acquire Potential 2: Critical Hit" },
         ],
         potential: [
@@ -4312,12 +4312,12 @@ window.details = {
     549: {
         special: "Boosts ATK against enemies with reduced defense by 1.3x for 3 turns",
         specialName: "Arousal Manifesto - Red Demon Whip",
-        captain: "Boosts ATK by 2x after scoring 3 Perfects in a row"
+        captain: "Boosts ATK by 2x after scoring 3 PERFECTs in a row"
     },
     550: {
         special: "Boosts ATK against enemies with reduced defense by 1.3x for 3 turns",
         specialName: "Arousal Manifesto - Red Demon Whip",
-        captain: "Boosts ATK by 2.5x after scoring 3 Perfects in a row"
+        captain: "Boosts ATK by 2.5x after scoring 3 PERFECTs in a row"
     },
     551: {
         special: "Reduces damage received by 50% for 1 turn, deals 15x character's ATK in STR damage to one enemy",
@@ -4677,13 +4677,13 @@ window.details = {
         special: "Deals random typeless damage to all enemies, changes own orb into [STR]",
         specialName: "Gum-Gum Jet Gatling",
         specialNotes: "#{random : 70,000 : 200,000}",
-        captain: "Boosts ATK by 4x following a chain of Good > Great > Perfect hits"
+        captain: "Boosts ATK by 4x following a chain of Good > Great > PERFECT hits"
     },
     578: {
         special: "Deals random typeless damage to all enemies, changes own orb into [STR]",
         specialName: "Gum-Gum Jet Gatling",
         specialNotes: "#{random : 70,000 : 200,000}",
-        captain: "Boosts ATK by 4x following a chain of Good > Great > Perfect hits"
+        captain: "Boosts ATK by 4x following a chain of Good > Great > PERFECT hits"
     },
     579: {
         special: "Randomizes [BLOCK] orbs into either [QCK] or [DEX] orbs, deals 15x character's ATK in QCK damage to all enemies",
@@ -4789,7 +4789,7 @@ window.details = {
         sailor: {
             "base": "None",
             "level1": "Boosts base ATK of [QCK] characters by 60",
-            "level2": "If this character has an [QCK] orb and you hit a Perfect with him, keep his [QCK] orb for the next turn",
+            "level2": "If this character has an [QCK] orb and you hit a PERFECT with him, keep his [QCK] orb for the next turn",
         },
         limit: [
             { "description": "Boosts base ATK by 10" },
@@ -4805,7 +4805,7 @@ window.details = {
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base HP by 50" },
             { "description": "Boosts base RCV by 50" },
-            { "description": "Acquire Sailor Ability 2: If this character has an [QCK] orb and you hit a Perfect with him, keep his [QCK] orb for the next turn" },
+            { "description": "Acquire Sailor Ability 2: If this character has an [QCK] orb and you hit a PERFECT with him, keep his [QCK] orb for the next turn" },
             { "description": "Acquire Potential 2: Barrier Penetration" },
         ],
         potential: [
@@ -5273,7 +5273,7 @@ window.details = {
     659: {
         special: "Reduces Bind and Despair duration by 2 turns, reduces damage received by 50% for 2 turns",
         specialName: "Gum-Gum Balloon Swim",
-        captain: "Boosts ATK by 2.5x after scoring 3 Perfects in a row"
+        captain: "Boosts ATK by 2.5x after scoring 3 PERFECTs in a row"
     },
     660: {
         special: "Delays all enemies for 2 turns, reduces the defense of all enemies by 50% for 2 turns",
@@ -5319,13 +5319,13 @@ window.details = {
         captain: "Reduces damage received by 10%, boosts ATK of all characters by 1.5x"
     },
     668: {
-        special: "Boosts ATK of Free Spirit characters by 1.5x for 1 turn. If during that turn every unit scores a Perfect hit, boosts ATK of Free Spirit characters by 2x in the following turn.",
+        special: "Boosts ATK of Free Spirit characters by 1.5x for 1 turn. If during that turn every unit scores a PERFECT hit, boosts ATK of Free Spirit characters by 2x in the following turn.",
         specialName: "Dragon's Claw",
         captain: "Boosts HP and RCV of all characters by 1.2x, boosts ATK of Free Spirit characters proportionally to the crew's current HP",
         captainNotes: "#{captainProportional : higher : 2 + 0.75 * (remaining HP) / (total HP) : 2.75 : 2}"
     },
     669: {
-        special: "Boosts ATK of Free Spirit characters by 1.5x for 1 turn. If during that turn every unit scores a Perfect hit, boosts ATK of Free Spirit characters by 2x in the following turn.",
+        special: "Boosts ATK of Free Spirit characters by 1.5x for 1 turn. If during that turn every unit scores a PERFECT hit, boosts ATK of Free Spirit characters by 2x in the following turn.",
         specialName: "Dragon's Claw",
         captain: "Boosts HP and RCV of all characters by 1.2x, boosts ATK of Free Spirit characters proportionally to the crew's current HP",
         captainNotes: "#{captainProportional : higher : 2 + 0.75 * (remaining HP) / (total HP) : 2.75 : 2}",
@@ -5391,11 +5391,11 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 40% at the start of the turn, heals for .75x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 2: If HP is below 40% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 3: If HP is below 40% at the start of the turn, heals for 1.25x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 4: If HP is below 50% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 5: If HP is below 50% at the start of the turn, heals for 2x this character's RCV at the end of the turn each time you hit a Perfect with this character"
+                    "Level 1: If HP is below 40% at the start of the turn, heals for .75x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 40% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 40% at the start of the turn, heals for 1.25x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below 50% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below 50% at the start of the turn, heals for 2x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
         ]
@@ -5769,14 +5769,14 @@ window.details = {
         specialNotes: "The special only includes the damage inflicted through normal attacks. If the enemy dies by End-Of-Turn damage, your inflicted Damage dealt last turn will be 0.",
         specialName: "Black Sword - Lightning Slash",
         captain: "Boosts ATK of Slasher characters by a variable factor between 2x and 2.75x based on the timing of the attack of the previous unit in the chain",
-        captainNotes: "A hit below Good or a Miss will boost the ATK of the next unit by 2x, a Good hit by 2.25x, a Great hit by 2.5x and a Perfect hit by 2.75x. This bonus is applied only to Slasher characters."
+        captainNotes: "A hit below Good or a Miss will boost the ATK of the next unit by 2x, a Good hit by 2.25x, a Great hit by 2.5x and a PERFECT hit by 2.75x. This bonus is applied only to Slasher characters."
     },
     718: {
         special: "Deals 50% of the damage dealt in the previous turn as typeless damage to all enemies",
         specialNotes: "The special only includes the damage inflicted through normal attacks. If the enemy dies by End-Of-Turn damage, your inflicted Damage dealt last turn will be 0.",
         specialName: "Black Sword - Lightning Slash",
         captain: "Boosts ATK of Slasher characters by a variable factor between 2x and 2.75x based on the timing of the attack of the previous unit in the chain",
-        captainNotes: "A hit below Good or a Miss will boost the ATK of the next unit by 2x, a Good hit by 2.25x, a Great hit by 2.5x and a Perfect hit by 2.75x. This bonus is applied only to Slasher characters.",
+        captainNotes: "A hit below Good or a Miss will boost the ATK of the next unit by 2x, a Good hit by 2.25x, a Great hit by 2.5x and a PERFECT hit by 2.75x. This bonus is applied only to Slasher characters.",
         sailor: {
             "base": "None",
             "level1": "Boosts base HP of Slasher characters by 120",
@@ -6063,11 +6063,11 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 5% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 2: If HP is below ?% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 3: If HP is below ?% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 4: If HP is below ?% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 5: If HP is below ?% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character"
+                    "Level 1: If HP is below 5% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below ?% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below ?% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below ?% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below ?% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
         ]
@@ -6676,11 +6676,11 @@ window.details = {
         captain: "Reduces damage received by 50%, reduces crew's current HP by 10% at the end of each turn"
     },
     788: {
-        special: "Following the activation of the special, if every unit scores a Perfect hit, boosts ATK of Slasher characters by 1.75x in the following turn",
+        special: "Following the activation of the special, if every unit scores a PERFECT hit, boosts ATK of Slasher characters by 1.75x in the following turn",
         specialName: "Real Sword Fight with a Girl Swordsman"
     },
     789: {
-        special: "Following the activation of the special, if every unit scores a Perfect hit, boosts ATK of Slasher characters by 1.75x in the following turn",
+        special: "Following the activation of the special, if every unit scores a PERFECT hit, boosts ATK of Slasher characters by 1.75x in the following turn",
         specialName: "Real Sword Fight with a Girl Swordsman",
         captain: "Boosts ATK of Slasher characters by 1.5x"
     },
@@ -6772,9 +6772,9 @@ window.details = {
         captain: "Boosts ATK of Cerebral and Powerhouse characters by 2x"
     },
     798: {
-        special: "Removes Poison, following the activation of the special, if every unit scores a Perfect hit, boosts ATK of Fighter characters by 1.75x in the following turn",
+        special: "Removes Poison, following the activation of the special, if every unit scores a PERFECT hit, boosts ATK of Fighter characters by 1.75x in the following turn",
         specialName: "Dugong Secret! Fist of the Black Fin",
-        captain: "Boosts ATK by 2.5x after scoring 3 Perfects in a row"
+        captain: "Boosts ATK by 2.5x after scoring 3 PERFECTs in a row"
     },
     799: {
         special: "Randomizes all orbs, recovers 9x character's RCV in HP",
@@ -7127,7 +7127,7 @@ window.details = {
         special: "Changes own orb into [INT], boosts own ATK by 2x for 1 turn, deals 15x character's ATK in INT damage to one enemy",
         sailor: {
             "base": "None",
-            "level1": "If this character has a [INT] orb and you hit a Perfect with him, keep his [INT] orb for the next turn",
+            "level1": "If this character has a [INT] orb and you hit a PERFECT with him, keep his [INT] orb for the next turn",
         },
         limit: [
             { "description": "Boosts base HP by 30" },
@@ -7138,7 +7138,7 @@ window.details = {
             { "description": "Acquire new Captain Ability: Boosts ATK of Striker characters by 2.5x and reduces damage received by 7%" },
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base HP by 50" },
-            { "description": "Acquire Sailor Ability 1: If this character has a [INT] orb and you hit a Perfect with him, keep his [INT] orb for the next turn" },
+            { "description": "Acquire Sailor Ability 1: If this character has a [INT] orb and you hit a PERFECT with him, keep his [INT] orb for the next turn" },
             { "description": "Boosts base HP by 60" },
             { "description": "Boosts base RCV by 40" },
             { "description": "Reduce base Special Cooldown by 2 turns" },
@@ -7216,11 +7216,11 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 20% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 2: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 3: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 4: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 5: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character"
+                    "Level 1: If HP is below 20% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
         ]
@@ -7228,12 +7228,12 @@ window.details = {
     843: {
         captain: "Boosts ATK of Slasher, Striker and Shooter characters by 1.5x",
         specialName: "Arms-Morphosis: Missile Girl",
-        special: "Deals 15x character's ATK in STR damage to all enemies, boosts ATK of Shooter characters by 1.5x for 1 turn. If during that turn every unit scores a Perfect hit, boosts ATK of Shooter, Striker and Slasher characters by 1.5x in the following turn."
+        special: "Deals 15x character's ATK in STR damage to all enemies, boosts ATK of Shooter characters by 1.5x for 1 turn. If during that turn every unit scores a PERFECT hit, boosts ATK of Shooter, Striker and Slasher characters by 1.5x in the following turn."
     },
     844: {
         captain: "Boosts ATK of Slasher, Striker and Shooter characters by 2x",
         specialName: "Arms-Morphosis: Missile Girl",
-        special: "Deals 15x character's ATK in STR damage to all enemies, boosts ATK of Shooter characters by 1.5x for 1 turn. If during that turn every unit scores a Perfect hit, boosts ATK of Shooter, Striker and Slasher characters by 1.5x in the following turn.",
+        special: "Deals 15x character's ATK in STR damage to all enemies, boosts ATK of Shooter characters by 1.5x for 1 turn. If during that turn every unit scores a PERFECT hit, boosts ATK of Shooter, Striker and Slasher characters by 1.5x in the following turn.",
         sailor: {
             "base": "None",
             "level1": "Boosts base HP of Shooter, Slasher and Striker characters by 100",
@@ -7367,7 +7367,7 @@ window.details = {
     },
     853: {
         specialName: "Robson: Serious Mode",
-        special: "Following the activation of the special, if every unit scores a Perfect hit, boosts ATK of Powerhouse and Fighter characters by 1.2x for 3 turns"
+        special: "Following the activation of the special, if every unit scores a PERFECT hit, boosts ATK of Powerhouse and Fighter characters by 1.2x for 3 turns"
     },
     854: {
         captain: "Boosts ATK of DEX chracters by 1.5x, reduces damage received by 10%",
@@ -7449,13 +7449,13 @@ window.details = {
         special: "Deals 15x character's ATK in STR damage to one enemy, reduces Bind duration by 3 turns"
     },
     869: {
-        captain: "Boosts ATK of Driven characters by 3x until the first hit other than Perfect",
+        captain: "Boosts ATK of Driven characters by 3x until the first hit other than PERFECT",
         specialName: "Black Knight",
         special: "Changes adjacent orbs into matching orbs, amplifies the effect of orbs by 2x for 1 turn",
         specialNotes: "#{orb : 2x}"
     },
     870: {
-        captain: "Boosts ATK of Driven characters by 3x until the first hit other than Perfect",
+        captain: "Boosts ATK of Driven characters by 3x until the first hit other than PERFECT",
         specialName: "Black Knight",
         special: "Changes adjacent orbs into matching orbs, amplifies the effect of orbs by 2x for 1 turn",
         specialNotes: "#{orb : 2x}"
@@ -7538,11 +7538,11 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 5% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 2: If HP is below ?% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 3: If HP is below ?% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 4: If HP is below ?% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 5: If HP is below ?% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character"
+                    "Level 1: If HP is below 5% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below ?% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below ?% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below ?% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below ?% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
         ]
@@ -7673,12 +7673,12 @@ window.details = {
         ]
     },
     881: {
-        captain: "Boosts ATK of Shooter and Free Spirit characters by 2x following a chain of Good > Great > Perfect hits",
+        captain: "Boosts ATK of Shooter and Free Spirit characters by 2x following a chain of Good > Great > PERFECT hits",
         specialName: "Fighting Music: Conflict Chekera",
         special: "Increases damage received by 2x for 2 turns, reduces RCV by 90% for 2 turns, boosts ATK of Shooter and Free Spirit characters by 1.75x for 1 turn"
     },
     882: {
-        captain: "Boosts ATK of Shooter and Free Spirit characters by 3x following a chain of Good > Great > Perfect hits",
+        captain: "Boosts ATK of Shooter and Free Spirit characters by 3x following a chain of Good > Great > PERFECT hits",
         specialName: "Fighting Music: Conflict Chekera",
         special: "Increases damage received by 2x for 2 turns, reduces RCV by 90% for 2 turns, boosts ATK of Shooter and Free Spirit characters by 1.75x for 1 turn"
     },
@@ -7733,12 +7733,12 @@ window.details = {
         special: "Switches orbs between slots three times"
     },
     893: {
-        captain: "Boosts ATK of Powerhouse characters by 3x after scoring 3 Perfects in a row",
+        captain: "Boosts ATK of Powerhouse characters by 3x after scoring 3 PERFECTs in a row",
         specialName: "Oars Ball",
         special: "Reduces damage received by 50% for 1 turn, deals 30x character's ATK in STR damage to all enemies"
     },
     894: {
-        captain: "Boosts ATK of Driven characters by 3x following a chain of Good > Great > Perfect hits",
+        captain: "Boosts ATK of Driven characters by 3x following a chain of Good > Great > PERFECT hits",
         specialName: "Brick Bat: Black Box",
         special: "Empties all slots with [INT] orbs, deals several times the character's ATK in INT damage to one enemy",
         specialNotes: "The exact multiplier used is chosen based on the number of [INT] orbs consumed: 1 orb will give a 10x multiplier, 2 orbs 15x, 3 orbs 20x, 4 orbs 50x, 5 orbs 100x, 6 orbs 200x. It's not possible to activate the special without consuming at least one [INT] orb."
@@ -7788,11 +7788,11 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 5% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 2: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 3: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 4: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 5: If HP is below 20% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a Perfect with this character"
+                    "Level 1: If HP is below 5% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below 20% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
         ]
@@ -7884,7 +7884,7 @@ window.details = {
         specialNotes: "#{stages}",
         sailor: {
             "base": "None",
-            "level1": "If this character has a [STR] orb and you hit a Perfect with him, keep his [STR] orb for the next turn",
+            "level1": "If this character has a [STR] orb and you hit a PERFECT with him, keep his [STR] orb for the next turn",
             "level2": "Makes [DEX] orbs \"beneficial\" for this unit",
         },
         sailorNotes: "#{beneficial}",
@@ -7895,7 +7895,7 @@ window.details = {
             { "description": "Acquire Potential 1: Enrage" },
             { "description": "Boosts base RCV by 10" },
             { "description": "Boosts base RCV by 20" },
-            { "description": "Acquire Sailor Ability 1: If this character has a [STR] orb and you hit a Perfect with him, keep his [STR] orb for the next turn" },
+            { "description": "Acquire Sailor Ability 1: If this character has a [STR] orb and you hit a PERFECT with him, keep his [STR] orb for the next turn" },
             { "description": "Boosts base HP by 70" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base ATK by 60" },
@@ -8198,26 +8198,26 @@ window.details = {
     934: {
         captain: "Boosts ATK of Fighter characters by 2x and their HP by 1.5x. If HP is above 70% or below 30%, boosts ATK of Fighter characters by 2.75 instead",
         specialName: "Fishman Karate!! Shark Fist Tile Breaker",
-        special: "Makes Perfects harder to hit for 1 turn. Deals 20x character's ATK in [INT] damage to all enemies. Changes all orbs on Fighter characters into Matching orbs",
-        specialNotes: "Decreases timing window to hit a Perfect. (Animation remains the same)"
+        special: "Makes PERFECTs harder to hit for 1 turn. Deals 20x character's ATK in [INT] damage to all enemies. Changes all orbs on Fighter characters into Matching orbs",
+        specialNotes: "Decreases timing window to hit a PERFECT. (Animation remains the same)"
     },
     935: {
         captain: "Boosts ATK of Fighter characters by 2x and their HP by 1.5x. If HP is above 70% or below 30%, boosts ATK of Fighter characters by 2.75 instead",
         specialName: "Fishman Karate!! Shark Fist Tile Breaker",
-        special: "Makes Perfects harder to hit for 1 turn. Deals 20x character's ATK in [INT] damage to all enemies. Changes all orbs on Fighter characters into matching orbs",
-        specialNotes: "Decreases timing window to hit a Perfect. (Animation remains the same)"
+        special: "Makes PERFECTs harder to hit for 1 turn. Deals 20x character's ATK in [INT] damage to all enemies. Changes all orbs on Fighter characters into matching orbs",
+        specialNotes: "Decreases timing window to hit a PERFECT. (Animation remains the same)"
     },
     936: {
         captain: "Boosts Chain Multiplier by 3x",
         specialName: "Gum-Gum Giant Jet Shell",
-        special: "Deals 20x ATK as [QCK] damage and makes Perfects easier to hit for 3 turns",
-        specialNotes: "Increases timing window to hit a Perfect. (Animation remains the same)"
+        special: "Deals 20x ATK as [QCK] damage and makes PERFECTs easier to hit for 3 turns",
+        specialNotes: "Increases timing window to hit a PERFECT. (Animation remains the same)"
     },
     937: {
         captain: "Boosts Chain Multiplier by 3.5x and boosts HP by 1.25x",
         specialName: "Gum-Gum Giant Jet Shell",
-        special: "Deals 20x ATK as [QCK] damage and makes Perfects easier to hit for 3 turns",
-        specialNotes: "Increases timing window to hit a Perfect. (Animation remains the same)",
+        special: "Deals 20x ATK as [QCK] damage and makes PERFECTs easier to hit for 3 turns",
+        specialNotes: "Increases timing window to hit a PERFECT. (Animation remains the same)",
         sailor: {
             "base": "None",
             "level1": "Boosts base ATK, HP and RCV of all characters by 30",
@@ -8254,11 +8254,11 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 20% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 2: If HP is below ??% at the start of the turn, heals for ??x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 3: If HP is below ??% at the start of the turn, heals for ??x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 4: If HP is below ??% at the start of the turn, heals for ??x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 5: If HP is below ??% at the start of the turn, heals for ??x this character's RCV at the end of the turn each time you hit a Perfect with this character"
+                    "Level 1: If HP is below 20% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below ??% at the start of the turn, heals for ??x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below ??% at the start of the turn, heals for ??x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below ??% at the start of the turn, heals for ??x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below ??% at the start of the turn, heals for ??x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
         ]
@@ -8422,11 +8422,11 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 20% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 2: If HP is below ??% at the start of the turn, heals for ??x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 3: If HP is below ??% at the start of the turn, heals for ??x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 4: If HP is below ??% at the start of the turn, heals for ??x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 5: If HP is below ??% at the start of the turn, heals for ??x this character's RCV at the end of the turn each time you hit a Perfect with this character"
+                    "Level 1: If HP is below 20% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below ??% at the start of the turn, heals for ??x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below ??% at the start of the turn, heals for ??x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below ??% at the start of the turn, heals for ??x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below ??% at the start of the turn, heals for ??x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
         ]
@@ -8465,13 +8465,13 @@ window.details = {
         specialNotes: "#{silence}",
     },
     950: {
-        captain: "Boosts ATK of Fighter and Free Spirit characters by 2.5x after scoring 3 Perfects in a row",
+        captain: "Boosts ATK of Fighter and Free Spirit characters by 2.5x after scoring 3 PERFECTs in a row",
         specialName: "Flame Commandment: Fire Pillar",
         special: "Reduces Special Cooldown of Fighter and Free Spirit characters by 1 turn. Reduces damage received by 50% for 1 turn.",
         specialNotes: "Reducing Special Cooldown works as if you took an extra turn"
     },
     951: {
-        captain: "Boosts ATK of Fighter and Free Spirit characters by 2.75x after scoring 3 Perfects in a row",
+        captain: "Boosts ATK of Fighter and Free Spirit characters by 2.75x after scoring 3 PERFECTs in a row",
         specialName: "Flame Commandment: Fire Pillar",
         special: "Reduces Special Cooldown of Fighter and Free Spirit characters by 1 turn. Reduces damage received by 50% for 1 turn.",
         specialNotes: "Reducing Special Cooldown works as if you took an extra turn",
@@ -8512,11 +8512,11 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 20% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 2: If HP is below 25% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 3: If HP is below 30% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 4: If HP is below 40% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 5: If HP is below 40% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a Perfect with this character"
+                    "Level 1: If HP is below 20% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 25% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 30% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below 40% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below 40% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
         ]
@@ -8855,11 +8855,11 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 20% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 2: If HP is below ??% at the start of the turn, heals for ??x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 3: If HP is below ??% at the start of the turn, heals for ??x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 4: If HP is below ??% at the start of the turn, heals for ??x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 5: If HP is below ??% at the start of the turn, heals for ??x this character's RCV at the end of the turn each time you hit a Perfect with this character"
+                    "Level 1: If HP is below 20% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below ??% at the start of the turn, heals for ??x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below ??% at the start of the turn, heals for ??x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below ??% at the start of the turn, heals for ??x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below ??% at the start of the turn, heals for ??x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
         ]
@@ -9273,18 +9273,18 @@ window.details = {
         special: "Boosts ATK against delayed enemies by 1.2x for 1 turn"
     },
     1014: {
-        special: "Binds himself for 1 turn and makes Perfects easier to hit for 2 turns",
+        special: "Binds himself for 1 turn and makes PERFECTs easier to hit for 2 turns",
         specialName: "Scapegoat Substitute",
         captain: "Boosts ATK of Powerhouse characters by 2x and Recovers 2x character's RCV in HP at the end of each turn"
     },
     1015: {
         captain: "Boosts ATK of [INT] characters by 2.75x if they have a matching orb",
-        special: "Randomizes all orbs. Boosts ATK of [INT] characters by 1.5x for 1 turn. If during that turn every unit scores a Perfect hit, boosts ATK of [INT] characters by 1.5x for the next 2 turns",
+        special: "Randomizes all orbs. Boosts ATK of [INT] characters by 1.5x for 1 turn. If during that turn every unit scores a PERFECT hit, boosts ATK of [INT] characters by 1.5x for the next 2 turns",
         specialName: "Hollow Eye Killing Shot"
     },
     1016: {
         captain: "Boosts ATK of [INT] characters by 3x if they have a matching orb, by 1.5x otherwise",
-        special: "Randomizes all orbs. Boosts ATK of [INT] characters by 1.5x for 1 turn. If during that turn every unit scores a Perfect hit, boosts ATK of [INT] characters by 1.5x for the next 2 turns",
+        special: "Randomizes all orbs. Boosts ATK of [INT] characters by 1.5x for 1 turn. If during that turn every unit scores a PERFECT hit, boosts ATK of [INT] characters by 1.5x for the next 2 turns",
         specialName: "Hollow Eye Killing Shot"
     },
     1017: {
@@ -9301,7 +9301,7 @@ window.details = {
         sailor: {
             "base": "None",
             "level1": "Boosts base ATK, HP and RCV of Slasher characters by 30",
-            "level2": "If this character has a PSY orb and you hit a Perfect with him, keep his PSY orb for the next turn",
+            "level2": "If this character has a PSY orb and you hit a PERFECT with him, keep his PSY orb for the next turn",
         },
         limit: [
             { "description": "Boosts base ATK by 30" },
@@ -9317,7 +9317,7 @@ window.details = {
             { "description": "Boosts base HP by 90" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base ATK by 70" },
-            { "description": "Acquire Sailor Ability 2: If this character has a PSY orb and you hit a Perfect with him, keep his PSY orb for the next turn" },
+            { "description": "Acquire Sailor Ability 2: If this character has a PSY orb and you hit a PERFECT with him, keep his PSY orb for the next turn" },
             { "description": "Acquire Potential 2: Critical Hit" },
         ],
         potential: [
@@ -9648,13 +9648,13 @@ window.details = {
         potentialNotes: "#{enrage}"
     },
     1036: {
-        captain: "Boosts ATK of Free Spirit characters by 2x after scoring 3 Perfects in a row",
+        captain: "Boosts ATK of Free Spirit characters by 2x after scoring 3 PERFECTs in a row",
         special: "Deals 13x ATK in QCK Damage to one Enemy, Changes Orbs depending on the current HP",
         specialName: "Kenpo: Kick Thrust Drop",
         specialNotes: "HP>99%: Middle Left and Bottom Left Orbs into matching <br> 99%>HP>30%: Left Column to [G] orbs <br> HP<30%: Left Column to [RCV]"
     },
     1037: {
-        captain: "Boosts ATK of Free Spirit characters by 2.5x after scoring 3 Perfects in a row",
+        captain: "Boosts ATK of Free Spirit characters by 2.5x after scoring 3 PERFECTs in a row",
         special: "Deals 13x ATK in QCK Damage to one Enemy, Changes Orbs depending on the current HP",
         specialName: "Kenpo: Kick Thrust Drop",
         specialNotes: "HP>99%: Middle Left and Bottom Left Orbs into matching <br> 99%>HP>30%: Left Column to [G] orbs <br> HP<30%: Left Column to [RCV]"
@@ -9779,7 +9779,7 @@ window.details = {
         ]
     },
     1044: {
-        captain: "Boosts ATK of Slasher and Free Spirit characters by 2x at the start of the chain, by 3x after the 3rd Perfect in a row and by 4x after the 5th Perfect in a row.",
+        captain: "Boosts ATK of Slasher and Free Spirit characters by 2x at the start of the chain, by 3x after the 3rd PERFECT in a row and by 4x after the 5th PERFECT in a row.",
         specialName: "Gamma Knife",
         special: [
             {
@@ -9794,7 +9794,7 @@ window.details = {
         specialNotes: "#{stages}"
     },
     1045: {
-        captain: "Boosts ATK of Slasher and Free Spirit characters by 2x at the start of the chain, by 3x after the 3rd Perfect in a row and by 4x after the 5th Perfect in a row.",
+        captain: "Boosts ATK of Slasher and Free Spirit characters by 2x at the start of the chain, by 3x after the 3rd PERFECT in a row and by 4x after the 5th PERFECT in a row.",
         specialName: "Gamma Knife",
         sailor: {
             "base": "None",
@@ -9879,13 +9879,13 @@ window.details = {
         ]
     },
     1046: {
-        captain: "Boosts ATK of Free Spirit characters by 2.75x following a chain of Good > Great > Perfect hits",
+        captain: "Boosts ATK of Free Spirit characters by 2.75x following a chain of Good > Great > PERFECT hits",
         specialName: "Dragon Claw Fist: Dragon's Breath",
         special: "Deals random typeless damage to all enemies. Adds 55x character's ATK as Additional Typeless Damage for 2 turns",
         specialNotes: "#{random : 10,000 : 30,000} <br> #{additionalDamage : 55x}"
     },
     1047: {
-        captain: "Boosts ATK of Free Spirit characters by 3.5x following a chain of Good > Great > Perfect hits",
+        captain: "Boosts ATK of Free Spirit characters by 3.5x following a chain of Good > Great > PERFECT hits",
         specialName: "Dragon Claw Fist: Dragon's Breath",
         special: "Deals random typeless damage to all enemies. Adds 55x character's ATK as Additional Typeless Damage for 2 turns",
         specialNotes: "#{random : 10,000 : 30,000} <br> #{additionalDamage : 55x}",
@@ -9926,11 +9926,11 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 10% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 2: If HP is below 15% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 3: If HP is below 20% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 4: If HP is below 30% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 5: If HP is below 50% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character"
+                    "Level 1: If HP is below 10% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 15% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 20% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below 30% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below 50% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
         ],
@@ -10182,11 +10182,11 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 10% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 2: If HP is below 15% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 3: If HP is below 20% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 4: If HP is below 30% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 5: If HP is below 30% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character"
+                    "Level 1: If HP is below 10% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 15% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 20% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below 30% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below 30% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
             {
@@ -10345,7 +10345,7 @@ window.details = {
         specialName: "Drill Dragon: Drill Nail"
     },
     1083: {
-        captain: "Boosts ATK of Striker and Fighter characters by 1.5x at the start of the chain and by 3x after the 3rd Perfect in a row",
+        captain: "Boosts ATK of Striker and Fighter characters by 1.5x at the start of the chain and by 3x after the 3rd PERFECT in a row",
         special: "Deals 20x ATK in [STR] damage to all enemies. For 2 turns, boosts ATK of Striker and Fighter characters by a variable amount depending on the current HP at the time the special was activated.",
         specialNotes: "Below 30% -> 1.75 boost, between 30% and 70% -> 1.5, above 70% -> 1.2",
         specialName: "Drill Dragon: Drill Nail",
@@ -10582,12 +10582,12 @@ window.details = {
         specialName: "Mass Juggling"
     },
     1096: {
-        captain: "Boosts ATK of Powerhouse characters by 3x after the 5th Perfect in a row.",
+        captain: "Boosts ATK of Powerhouse characters by 3x after the 5th PERFECT in a row.",
         special: "Deals [INT] damage to one enemy. Boosts own ATK by 1.75x for 1 turn.",
         specialName: "Crash Drumming"
     },
     1097: {
-        captain: "Boosts ATK of Powerhouse characters by 3.5x after the 5th Perfect in a row.",
+        captain: "Boosts ATK of Powerhouse characters by 3.5x after the 5th PERFECT in a row.",
         special: "Deals [INT] damage to one enemy. Boosts own ATK by 1.75x for 1 turn.",
         specialName: "Crash Drumming"
     },
@@ -10607,12 +10607,12 @@ window.details = {
         specialName: "\"To the End of the Clouds\""
     },
     1101: {
-        captain: "Boosts ATK of all characters by 2.25x until the first hit other than Perfect. Reduces crew's current HP by 10% at the end of each turn",
+        captain: "Boosts ATK of all characters by 2.25x until the first hit other than PERFECT. Reduces crew's current HP by 10% at the end of each turn",
         special: "Reduces crew's current HP by 80%, deals 10x the amount of HP subtracted in typeless damage to one enemy. Boosts ATK of [STR] and [INT] characters by 1.75x for 1 turn",
         specialName: "Black Arm's Last Impact"
     },
     1102: {
-        captain: "Boosts ATK of all characters by 2.75x until the first hit other than Perfect. Reduces crew's current HP by 10% at the end of each turn",
+        captain: "Boosts ATK of all characters by 2.75x until the first hit other than PERFECT. Reduces crew's current HP by 10% at the end of each turn",
         special: "Reduces crew's current HP by 80%, deals 10x the amount of HP subtracted in typeless damage to one enemy. Boosts ATK of [STR] and [INT] characters by 1.75x for 1 turn",
         specialName: "Black Arm's Last Impact"
     },
@@ -10656,12 +10656,12 @@ window.details = {
     },
     1105: {
         captain: "Boosts ATK of Striker and Free Spirit characters by 1.5x, deals 2x character's ATK in typeless damage to all enemies at the end of each turn",
-        special: "Delays all enemies for 1 turn. Adds .2x to Chain multiplier for 2 turns. Makes Perfects easier to hit for 2 turns.",
+        special: "Delays all enemies for 1 turn. Adds .2x to Chain multiplier for 2 turns. Makes PERFECTs easier to hit for 2 turns.",
         specialName: "Mosa Mosa Dance"
     },
     1106: {
         captain: "Boosts ATK of Striker and Free Spirit characters by 2x, deals 2x character's ATK in typeless damage to all enemies at the end of each turn",
-        special: "Delays all enemies for 1 turn. Adds .2x to Chain multiplier for 2 turns. Makes Perfects easier to hit for 2 turns.",
+        special: "Delays all enemies for 1 turn. Adds .2x to Chain multiplier for 2 turns. Makes PERFECTs easier to hit for 2 turns.",
         specialName: "Mosa Mosa Dance"
     },
     1107: {
@@ -10791,11 +10791,11 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 20% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 2: If HP is below 25% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 3: If HP is below 30% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 4: If HP is below 40% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 5: If HP is below 40% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a Perfect with this character"
+                    "Level 1: If HP is below 20% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 25% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 30% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below 40% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below 40% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
         ]
@@ -10878,13 +10878,13 @@ window.details = {
         special: "Deals random typeless damage to all enemies, changes own orb into [STR]",
         specialName: "Gum-Gum JET Gatling",
         specialNotes: "#{random : 70,000 : 200,000}",
-        captain: "Boosts ATK by 4x following a chain of Good > Great > Perfect hits"
+        captain: "Boosts ATK by 4x following a chain of Good > Great > PERFECT hits"
     },
     1121: {
         special: "Deals random typeless damage to all enemies, changes own orb into [STR]",
         specialName: "Gum-Gum JET Gatling",
         specialNotes: "#{random : 70,000 : 200,000}",
-        captain: "Boosts ATK by 4x following a chain of Good > Great > Perfect hits"
+        captain: "Boosts ATK by 4x following a chain of Good > Great > PERFECT hits"
     },
     1122: {
         captain: "Boosts ATK of [STR], [DEX] and [QCK] characters by 2.5x, but boosts his OWN attack by 4x",
@@ -11391,7 +11391,7 @@ window.details = {
         captain: "Boosts ATK of PSY characters by 2x, reduces damage received from INT enemies by 30%",
         sailor: {
             "base": "Boosts base RCV of PSY characters by 15",
-            "level1": "If this character has a [PSY] orb and you hit a Perfect with him, keep his [PSY] orb for the next turn",
+            "level1": "If this character has a [PSY] orb and you hit a PERFECT with him, keep his [PSY] orb for the next turn",
         },
         limit: [
             { "description": "Reduce base Special Cooldown by 1 turn" },
@@ -11407,7 +11407,7 @@ window.details = {
             { "description": "Boosts base HP by 100" },
             { "description": "Reduce base Special Cooldown by 3 turns" },
             { "description": "Boosts base ATK by 100" },
-            { "description": "Acquire Sailor Ability 1: If this character has a [PSY] orb and you hit a Perfect with him, keep his [PSY] orb for the next turn" },
+            { "description": "Acquire Sailor Ability 1: If this character has a [PSY] orb and you hit a PERFECT with him, keep his [PSY] orb for the next turn" },
             { "description": "Acquire Potential 2: Critical Hit" },
         ],
         potential: [
@@ -11625,7 +11625,7 @@ window.details = {
         specialName: "Extreme Speed - One Sword Style, Ten Slashes",
         sailor: {
             "base": "Restores his own special by 1 turn when it is rewinded",
-            "level1": "If this character has an [INT] orb and you hit a Perfect with him, keep his [INT] orb for the next turn",
+            "level1": "If this character has an [INT] orb and you hit a PERFECT with him, keep his [INT] orb for the next turn",
         },
         sailorNotes: "#{rewind : 1}",
         limit: [
@@ -11642,7 +11642,7 @@ window.details = {
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base ATK by 40" },
             { "description": "Boosts base ATK by 50" },
-            { "description": "Acquire Sailor Ability 1: If this character has an [INT] orb and you hit a Perfect with him, keep his [INT] orb for the next turn" },
+            { "description": "Acquire Sailor Ability 1: If this character has an [INT] orb and you hit a PERFECT with him, keep his [INT] orb for the next turn" },
             { "description": "Acquire Potential 2: Critical Hit" },
         ],
         potential: [
@@ -11687,7 +11687,7 @@ window.details = {
         captain: "Boosts ATK of [QCK] characters by 2.25x, makes [DEX] orbs \"beneficial\" to [QCK] characters",
         captainNotes: "#{beneficial}",
         special: "Reduces enemy Barrier duration by 1 turn",
-        specialNotes: "Does not affect DEF Boost or % Damage reduction buffs. Reduces timers for Barriers such as Perfect/Great/Good Barriers, Combo Hit Barriers and Orb Hit Barriers",
+        specialNotes: "Does not affect DEF Boost or % Damage reduction buffs. Reduces timers for Barriers such as PERFECT/Great/Good Barriers, Combo Hit Barriers and Orb Hit Barriers",
         specialName: "Break Bullet",
         sailor: "Boosts base ATK of [QCK] characters by 40"
     },
@@ -11695,7 +11695,7 @@ window.details = {
         captain: "Boosts ATK of [QCK] characters by 2.25x, makes [DEX] orbs \"beneficial\" to [QCK] characters",
         captainNotes: "#{beneficial}",
         special: "Reduces enemy Barrier duration by 1 turn",
-        specialNotes: "Does not affect DEF Boost or % Damage reduction buffs. Reduces timers for Barriers such as Perfect/Great/Good Barriers, Combo Hit Barriers and Orb Hit Barriers",
+        specialNotes: "Does not affect DEF Boost or % Damage reduction buffs. Reduces timers for Barriers such as PERFECT/Great/Good Barriers, Combo Hit Barriers and Orb Hit Barriers",
         specialName: "Break Bullet",
         sailor: {
             "base": "Boosts base ATK of [QCK] characters by 40",
@@ -11808,11 +11808,11 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 10% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 2: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 3: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 4: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 5: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character"
+                    "Level 1: If HP is below 10% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
         ]
@@ -12069,7 +12069,7 @@ window.details = {
         specialName: "Caterpillar Soul Shot",
     },
     1218: {//Hancock
-        captain: "Boosts ATK by 2.5x after scoring 3 Perfects in a row",
+        captain: "Boosts ATK by 2.5x after scoring 3 PERFECTs in a row",
         special: "Locks all orbs for 1 turn. If HP is below 30%, changes own orb and the captain's orb into matching. ",
         specialName: "Everybody Confusing Fragrance",
     },
@@ -12603,18 +12603,18 @@ window.details = {
     },
     1253: {// Coliseum Shura
         captain: "Boosts ATK of [DEX] characters by 2.25x if HP is above 99% at the start of the turn",
-        special: "Makes Perfects harder to hit for 1 turn. If during that turn every unit scores a Perfect hit, boosts ATK of [DEX] characters by 1.75x in the following turn.",
+        special: "Makes PERFECTs harder to hit for 1 turn. If during that turn every unit scores a PERFECT hit, boosts ATK of [DEX] characters by 1.75x in the following turn.",
         specialName: "Angry Instigator",
     },
     1254: {//FN Squard
-        captain: "Boosts ATK of Striker characters by 2.5x until the first hit other than Perfect. Reduces crew's current HP by 5% at the end of each turn.",
+        captain: "Boosts ATK of Striker characters by 2.5x until the first hit other than PERFECT. Reduces crew's current HP by 5% at the end of each turn.",
         special: "Deals 10x character's ATK in fixed damage to one enemy, reduces crews current HP by 30% and reduces the defense of all enemies by 80% for one turn",
         specialName: "Sword Attack Without Hesitation",
         sailor: "Reduces his own Numbness by 1 turn"
     },
     1255: {//FN DeCalvan
         captain: "Boosts ATK of all characters by 1.5x after the 11th hit in the chain, by 2x after the 16th hit, by 2.5x after the 22nd hit",
-        special: "For 1 turn, makes Perfects slightly easier to hit and amplifies the effect of orbs by 1.5x",
+        special: "For 1 turn, makes PERFECTs slightly easier to hit and amplifies the effect of orbs by 1.5x",
         sailor: "When HP is below 30% at the start of the turn, boost base ATK of Fighter characters by 40",
         specialName: "Large Fleet Commander",
     },
@@ -12675,13 +12675,13 @@ window.details = {
         specialName: "Five Color Strings (Goshikito)",
     },
     1261: {//Young Senor Pink
-        captain: "Boosts ATK of Free Spirit characters by 1.5x. Heals for .75x his RCV at the end of the turn each time you hit a Perfect.",
+        captain: "Boosts ATK of Free Spirit characters by 1.5x. Heals for .75x his RCV at the end of the turn each time you hit a PERFECT.",
         special: "Randomizes all orbs. Boosts the Color Affinity of Free Spirit and Shooter characters by 1.5x for 1 turn",
         specialNotes: "#{colorAffinity : 1.5}",
         specialName: "Blood and Gunpowder of the Underground Family",
     },
     1262: {//Young Senor Pink
-        captain: "Boosts ATK of Free Spirit characters by 1.75x. Heals for .75x his RCV at the end of the turn each time you hit a Perfect.",
+        captain: "Boosts ATK of Free Spirit characters by 1.75x. Heals for .75x his RCV at the end of the turn each time you hit a PERFECT.",
         special: "Randomizes all orbs. Boosts the Color Affinity of Free Spirit and Shooter characters by 1.5x for 1 turn",
         specialNotes: "#{colorAffinity : 1.5}",
         specialName: "Blood and Gunpowder of the Underground Family",
@@ -12881,11 +12881,11 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 10% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 2: If HP is below 15% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 3: If HP is below 20% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 4: If HP is below 30% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 5: If HP is below 50% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character"
+                    "Level 1: If HP is below 10% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 15% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 20% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below 30% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below 50% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
             {
@@ -13020,7 +13020,7 @@ window.details = {
         specialName: "Wild Hunt",
     },
     1285: {//Wild Luffy Evolved
-        captain: "Boosts ATK of Striker characters by 1.5x and their HP by 1.25x. Boosts ATK of Striker characters by 3.375x after scoring 3 Perfects in a row.",
+        captain: "Boosts ATK of Striker characters by 1.5x and their HP by 1.25x. Boosts ATK of Striker characters by 3.375x after scoring 3 PERFECTs in a row.",
         special: "Reduces Bind and Silence duration by 3 turns. Randomizes non-matching orbs including [BLOCK] orbs",
         specialNotes: "#{silence}",
         sailor: "Reduces Silence duration against this character by 3 turns",
@@ -13040,13 +13040,13 @@ window.details = {
     1288: {//Kid Law
         captain: "Boosts ATK of Driven characters by 2.5x, reduces crew's current HP by 10% at the end of each turn, reduces his own ATK multiplier by 0.1x at the end of each turn",
         captainNotes: "His ATK multiplier will be 2.5x on the first turn, 2.4x on the second, 2.3x on the third and so on. The reduction stops once the multiplier is 1.0x. The multiplier affects all Driven characters. You will not die to the HP reduction",
-        special: "Reduces Special Cooldown of Driven specials by 1 turn. If during that turn every unit scores a Perfect hit, reduces Special Cooldown of Driven specials by 1 turn.",
+        special: "Reduces Special Cooldown of Driven specials by 1 turn. If during that turn every unit scores a PERFECT hit, reduces Special Cooldown of Driven specials by 1 turn.",
         specialName: "Outcome of Sparta",
     },
     1289: {//Kid Law
         captain: "Boosts ATK of Driven characters by 2.75x, reduces crew's current HP by 10% at the end of each turn, reduces his own ATK multiplier by 0.1x at the end of each turn",
         captainNotes: "His ATK multiplier will be 2.75x on the first turn, 2.65x on the second, 2.55x on the third and so on. The reduction stops once the multiplier is 1.0x. The multiplier affects all Driven characters. You will not die to the HP reduction",
-        special: "Reduces Special Cooldown of Driven specials by 1 turn. If during that turn every unit scores a Perfect hit, reduces Special Cooldown of Driven specials by 1 turn.",
+        special: "Reduces Special Cooldown of Driven specials by 1 turn. If during that turn every unit scores a PERFECT hit, reduces Special Cooldown of Driven specials by 1 turn.",
         specialName: "Outcome of Sparta",
     },
     1290: {//Kid Buffalo
@@ -13056,12 +13056,12 @@ window.details = {
     },
     1291: {//Lao G, Coliseum
         captain: "Boosts ATK of Driven characters by 1.75x",
-        special: "Changes [PSY], [INT], [RCV] and [TND] orbs into [G] orbs. Locks orbs for 1 turn. If during that turn every unit scores a Perfect hit, changes [G] orbs into Matching Orbs",
+        special: "Changes [PSY], [INT], [RCV] and [TND] orbs into [G] orbs. Locks orbs for 1 turn. If during that turn every unit scores a PERFECT hit, changes [G] orbs into Matching Orbs",
         specialName: "Lower Back Pain Stance - The Eyes of Blight Impact",
     },
     1292: {//Lao G, Coliseum
         captain: "Boosts ATK of Driven characters by 2.5x if they have a matching orb, by 2x otherwise",
-        special: "Changes [PSY], [INT], [RCV] and [TND] orbs into [G] orbs. Locks orbs for 1 turn. If during that turn every unit scores a Perfect hit, changes [G] orbs into Matching Orbs",
+        special: "Changes [PSY], [INT], [RCV] and [TND] orbs into [G] orbs. Locks orbs for 1 turn. If during that turn every unit scores a PERFECT hit, changes [G] orbs into Matching Orbs",
         specialName: "Lower Back Pain Stance - The Eyes of Blight Impact",
     },
     1293: {//Coliseum Sandersonia
@@ -13203,12 +13203,12 @@ window.details = {
     },
     1307: {//Halloween Bartolomeo
         captain: "Boosts ATK of Driven characters by 1.75x. If you don't attack with Bartolomeo, reduces damage received by 10% for that turn.",
-        special: "Reduces damage received by 50% for 1 turn. If during that turn every unit scores a Perfect hit, reduces damage received by 80% in the following turn",
+        special: "Reduces damage received by 50% for 1 turn. If during that turn every unit scores a PERFECT hit, reduces damage received by 80% in the following turn",
         specialName: "Vulgar Provocation",
     },
     1308: {//Halloween Bartolomeo
         captain: "Boosts ATK of Driven characters by 2x. If you don't attack with Bartolomeo, reduces damage received by 20% for that turn.",
-        special: "Reduces damage received by 50% for 1 turn. If during that turn every unit scores a Perfect hit, reduces damage received by 80% in the following turn",
+        special: "Reduces damage received by 50% for 1 turn. If during that turn every unit scores a PERFECT hit, reduces damage received by 80% in the following turn",
         specialName: "Vulgar Provocation",
     },
     1309: {//Coliseum Kinemon
@@ -13315,7 +13315,7 @@ window.details = {
         potentialNotes: "#{enrage}"
     },
     1315: {//Coby
-        captain: "Boosts ATK of all characters by 2x after the 2nd Perfect in a row and by 3x after the 5th Perfect in a row.",
+        captain: "Boosts ATK of all characters by 2x after the 2nd PERFECT in a row and by 3x after the 5th PERFECT in a row.",
         special: [
             {
                 "description": "If HP is below 3,000, reduces No Healing debuff by 1 turn. Recovers 3x character's RCV in HP",
@@ -13335,7 +13335,7 @@ window.details = {
         specialName: "Echoing Cry of the Soul",
     },
     1316: {//Coby
-        captain: "Boosts ATK of all characters by 2.5x after the 2nd Perfect in a row and by 3.5x after the 5th Perfect in a row.",
+        captain: "Boosts ATK of all characters by 2.5x after the 2nd PERFECT in a row and by 3.5x after the 5th PERFECT in a row.",
         special: [
             {
                 "description": "If HP is below 3,000, reduces No Healing debuff by 1 turn. Recovers 3x character's RCV in HP",
@@ -13369,7 +13369,7 @@ window.details = {
         specialName: "Super Large Iron Ball",
     },
     1319: {//Lady Tsuru
-        captain: "Heals for 1x her RCV at the end of the turn each time you hit a Good. Heals for .1x her RCV at the end of the turn each time you hit a Perfect",
+        captain: "Heals for 1x her RCV at the end of the turn each time you hit a Good. Heals for .1x her RCV at the end of the turn each time you hit a PERFECT",
         special: "Deals 10 hits of random [QCK] damage to random enemies. Boosts ATK of all characters by 1.5x for 1 turn",
         specialNotes: "#{randomHits : 10}<br>#{random : 1,000 : 32,000 : for each hit}",
         sailor: "Reduces Paralysis duration by 1 turn",
@@ -13377,8 +13377,8 @@ window.details = {
     },
     1320: {//Lady Tsuru
         captain: {
-            "base": "Heals for 1.5x her RCV at the end of the turn each time you hit a Good. Heals for .1x her RCV at the end of the turn each time you hit a Perfect",
-            "level1": "Boosts ATK of all characters by 1.2x, heals for 1.5x her RCV at the end of the turn each time you hit a Good. Heals for .3x her RCV at the end of the turn each time you hit a Perfect",
+            "base": "Heals for 1.5x her RCV at the end of the turn each time you hit a Good. Heals for .1x her RCV at the end of the turn each time you hit a PERFECT",
+            "level1": "Boosts ATK of all characters by 1.2x, heals for 1.5x her RCV at the end of the turn each time you hit a Good. Heals for .3x her RCV at the end of the turn each time you hit a PERFECT",
         },
         special: "Deals 10 hits of random [QCK] damage to random enemies. Boosts ATK of all characters by 1.5x for 1 turn",
         specialNotes: "#{randomHits : 10}<br>#{random : 1,000 : 32,000 : for each hit}",
@@ -13399,7 +13399,7 @@ window.details = {
             { "description": "Boosts base HP by 80" },
             { "description": "Boosts base ATK by 60" },
             { "description": "Acquire Sailor Ability 1: Reduces Blindness duration by 3 turns" },
-            { "description": "Acquire new Captain Ability: Boosts ATK of all characters by 1.2x, heals for 1.5x her RCV at the end of the turn each time you hit a Good. Heals for .3x her RCV at the end of the turn each time you hit a Perfect" },
+            { "description": "Acquire new Captain Ability: Boosts ATK of all characters by 1.2x, heals for 1.5x her RCV at the end of the turn each time you hit a Good. Heals for .3x her RCV at the end of the turn each time you hit a PERFECT" },
             { "description": "Reduce base Special Cooldown by 2 turns" },
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Acquire Potential 2: Reduce No Healing duration" },
@@ -13408,11 +13408,11 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 10% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 2: If HP is below 15% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 3: If HP is below 20% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 4: If HP is below 30% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 5: If HP is below 50% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character"
+                    "Level 1: If HP is below 10% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 15% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 20% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below 30% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below 50% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
             {
@@ -13705,8 +13705,8 @@ window.details = {
         specialName: "Covering Fire",
     },
     1352: {//Ivankov
-        captain: "Boosts ATK of Fighter characters by 2x at the start of the chain, boosts ATK of Fighter characters by 3.5x after the 5th Perfect in a row",
-        special: "Following the activation of the special, if every unit scores a Perfect hit, reduces damage received by 90% in the following turn",
+        captain: "Boosts ATK of Fighter characters by 2x at the start of the chain, boosts ATK of Fighter characters by 3.5x after the 5th PERFECT in a row",
+        special: "Following the activation of the special, if every unit scores a PERFECT hit, reduces damage received by 90% in the following turn",
         specialName: "Rolling Beauty",
     },
     1353: {//Rayleigh
@@ -13728,15 +13728,15 @@ window.details = {
     },
     1356: {//Pekoms
         captain: "Boosts ATK of Powerhouse characters by 1.5x",
-        special: "Changes [RCV] and [EMPTY] orbs into Matching orbs on Fighter characters. Makes Perfects easier to hit for 1 turn.",
+        special: "Changes [RCV] and [EMPTY] orbs into Matching orbs on Fighter characters. Makes PERFECTs easier to hit for 1 turn.",
         specialName: "Serious Threat",
-        specialNotes: "Increases timing window to hit a Perfect. (Animation remains the same)"
+        specialNotes: "Increases timing window to hit a PERFECT. (Animation remains the same)"
     },
     1357: {//Pekoms
         captain: "Boosts ATK, HP and RCV of Powerhouse characters by 1.5x",
-        special: "Changes [RCV] and [EMPTY] orbs into Matching orbs on Fighter characters. Makes Perfects easier to hit for 1 turn.",
+        special: "Changes [RCV] and [EMPTY] orbs into Matching orbs on Fighter characters. Makes PERFECTs easier to hit for 1 turn.",
         specialName: "Serious Threat",
-        specialNotes: "Increases timing window to hit a Perfect. (Animation remains the same)"
+        specialNotes: "Increases timing window to hit a PERFECT. (Animation remains the same)"
     },
     1358: {//Tamago
         captain: "Boosts ATK of Cerebral characters by 1.5x and the HP of Striker characters by 1.5x",
@@ -13955,14 +13955,14 @@ window.details = {
         ]
     },
     1371: {//Wild Zoro
-        captain: "Boosts ATK of Slasher and Powerhouse characters by 2x at the start of the chain, by 2.25x after the 2nd Perfect in a row and by 2.5x after the 4th Perfect in a row.",
+        captain: "Boosts ATK of Slasher and Powerhouse characters by 2x at the start of the chain, by 2.25x after the 2nd PERFECT in a row and by 2.5x after the 4th PERFECT in a row.",
         special: "Reduces Despair duration by 3 turns. Reduces Special Cooldown of Slasher and Powerhouse characters by 2 turns",
         sailor: "Restores his own special by 2 turns when it is rewinded",
         sailorNotes: "#{rewind : 2}",
         specialName: "Wild Plan",
     },
     1372: {//Wild Zoro
-        captain: "Boosts ATK of Slasher and Powerhouse characters by 2x at the start of the chain, by 2.5x after the 2nd Perfect in a row and by 3x after the 4th Perfect in a row.",
+        captain: "Boosts ATK of Slasher and Powerhouse characters by 2x at the start of the chain, by 2.5x after the 2nd PERFECT in a row and by 3x after the 4th PERFECT in a row.",
         special: "Reduces Despair duration by 3 turns. Reduces Special Cooldown of Slasher and Powerhouse characters by 2 turns",
         sailor: "Restores his own special by 2 turns when it is rewinded",
         sailorNotes: "#{rewind : 2}",
@@ -14116,7 +14116,7 @@ window.details = {
         specialName: "Mother's Promise",
     },
     1387: {//Luffy 5+
-        captain: "Boosts ATK of all characters by 2.25x and their HP by 1.25x, boosts ATK by 2.8125x after scoring 4 Perfects in a row",
+        captain: "Boosts ATK of all characters by 2.25x and their HP by 1.25x, boosts ATK by 2.8125x after scoring 4 PERFECTs in a row",
         special: "Deals 40x character's ATK in [STR] damage to all enemies and delays all enemies for 1 turn",
         specialName: "Gum Gum: Elephant Gun",
         sailor: {
@@ -14248,11 +14248,11 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 10% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 2: If HP is below 15% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 3: If HP is below 20% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 4: If HP is below 30% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 5: If HP is below 50% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character"
+                    "Level 1: If HP is below 10% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 15% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 20% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below 30% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below 50% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
             {
@@ -14282,7 +14282,7 @@ window.details = {
     1392: {//Sentomaru
         captain: "Boosts ATK of Striker characters by 2x and boosts the HP of [PSY] characters by 1.25x",
         captainNotes: "A character with both classes will get both boosts",
-        special: "Deals 25x character's ATK in [PSY] damage to all enemies. If during that turn every unit scores a Perfect hit, boosts ATK of [PSY] characters by 1.75x in the following turn.",
+        special: "Deals 25x character's ATK in [PSY] damage to all enemies. If during that turn every unit scores a PERFECT hit, boosts ATK of [PSY] characters by 1.75x in the following turn.",
         specialName: "Large Cutting Axe",
     },
     1393: {//Demaro Black
@@ -14576,7 +14576,7 @@ window.details = {
         special: "Reduces enemies Percent Damage Reduction and Increased Defense duration by 3 turns and deals 60x character's ATK in typeless damage to all enemies",
         specialNotes: "This does not affect threshold damage reduction. Damage Reduction is the rainbow shield buff enemies have and Increased Defense is the blue shiled buff enemies have",
         specialName: "Carving Hoof Palm: Coconut",
-        sailor: "If this character has a [STR] orb and you hit a Perfect with him, keep his [STR] orb for the next turn",
+        sailor: "If this character has a [STR] orb and you hit a PERFECT with him, keep his [STR] orb for the next turn",
     },
     1412: {//Timeskip Chopper Again
         captain: "Boosts ATK of Powerhouse characters by 2.75x, reduces crew's RCV to 0",
@@ -14584,7 +14584,7 @@ window.details = {
         specialNotes: "This does not affect threshold damage reduction. Damage Reduction is the rainbow shield buff enemies have and Increased Defense is the blue shield buff enemies have",
         specialName: "Carving Hoof Palm: Coconut",
         sailor: {
-            "base": "If this character has a [STR] orb and you hit a Perfect with him, keep his [STR] orb for the next turn",
+            "base": "If this character has a [STR] orb and you hit a PERFECT with him, keep his [STR] orb for the next turn",
             "level1": "When any other [STR] character uses a special, reduces own cooldown by 2 turns",
         },
         limit: [
@@ -14871,11 +14871,11 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 10% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 2: If HP is below ??% at the start of the turn, heals for ??x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 3: If HP is below ??% at the start of the turn, heals for ??x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 4: If HP is below ??% at the start of the turn, heals for ??x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 5: If HP is below ??% at the start of the turn, heals for ??x this character's RCV at the end of the turn each time you hit a Perfect with this character"
+                    "Level 1: If HP is below 10% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below ??% at the start of the turn, heals for ??x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below ??% at the start of the turn, heals for ??x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below ??% at the start of the turn, heals for ??x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below ??% at the start of the turn, heals for ??x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
             {
@@ -14994,16 +14994,16 @@ window.details = {
     },
     1435: {//Hyouzou
         captain: "Boosts ATK of Slasher characters by 2x and HP of Powerhouse characters by 1.2x",
-        special: "Makes Perfects harder to hit for 1 turn, changes [STR], [QCK], [DEX], [PSY] and [INT] orbs into Matching orbs for Powerhouse characters, delays all enemies for 1 turn, recovers 20% of crew's MAX HP.",
+        special: "Makes PERFECTs harder to hit for 1 turn, changes [STR], [QCK], [DEX], [PSY] and [INT] orbs into Matching orbs for Powerhouse characters, delays all enemies for 1 turn, recovers 20% of crew's MAX HP.",
         specialName: "Staggering Slash",
-        specialNotes: "Decreases timing window to hit a Perfect. (Animation remains the same)",
+        specialNotes: "Decreases timing window to hit a PERFECT. (Animation remains the same)",
         sailor: "Boosts base ATK of all characters by 150 if there are 6 Powerhouse characters in your crew",
     },
     1436: {//Hyouzou
         captain: "Boosts ATK of Slasher characters by 2.5x and HP of Powerhouse characters by 1.25x",
-        special: "Makes Perfects harder to hit for 1 turn, changes [STR], [QCK], [DEX], [PSY] and [INT] orbs into Matching orbs for Powerhouse characters, delays all enemies for 1 turn, recovers 20% of crew's MAX HP.",
+        special: "Makes PERFECTs harder to hit for 1 turn, changes [STR], [QCK], [DEX], [PSY] and [INT] orbs into Matching orbs for Powerhouse characters, delays all enemies for 1 turn, recovers 20% of crew's MAX HP.",
         specialName: "Staggering Slash",
-        specialNotes: "Decreases timing window to hit a Perfect. (Animation remains the same)",
+        specialNotes: "Decreases timing window to hit a PERFECT. (Animation remains the same)",
         sailor: {
             "base": "Boosts base ATK of all characters by 150 if there are 6 Powerhouse characters in your crew",
             "level1": "Reduces Paralysis duration for 3 turns for himself",
@@ -15124,15 +15124,15 @@ window.details = {
     },
     1441: {//Zeo
         captain: "Boosts ATK of [INT] characters by 1.5x and reduces damage received by 10%",
-        special: "Makes Perfects easier to hit, locks all orbs and locks the chain multiplier at 2.5x for 1 turn",
-        specialNotes: "Increases timing window to hit a Perfect. (Animation remains the same)",
+        special: "Makes PERFECTs easier to hit, locks all orbs and locks the chain multiplier at 2.5x for 1 turn",
+        specialNotes: "Increases timing window to hit a PERFECT. (Animation remains the same)",
         specialName: "Flail Hidden From God",
         sailor: "Completely resists Blindness if your Captain is a Powerhouse character",
     },
     1442: {//Zeo
         captain: "Boosts ATK of [INT] characters by 2.25x and reduces damage received by 20%",
-        special: "Makes Perfects easier to hit, locks all orbs and locks the chain multiplier at 2.5x for 1 turn",
-        specialNotes: "Increases timing window to hit a Perfect. (Animation remains the same)",
+        special: "Makes PERFECTs easier to hit, locks all orbs and locks the chain multiplier at 2.5x for 1 turn",
+        specialNotes: "Increases timing window to hit a PERFECT. (Animation remains the same)",
         specialName: "Flail Hidden From God",
         sailor: {
             "base": "Completely resists Blindness if your Captain is a Powerhouse character",
@@ -15181,13 +15181,13 @@ window.details = {
         potentialNotes: "#{enrage}"
     },
     1443: {//Dosun
-        captain: "Boosts ATK of Powerhouse characters by 2.75x following a chain of Good > Great > Perfect hits",
+        captain: "Boosts ATK of Powerhouse characters by 2.75x following a chain of Good > Great > PERFECT hits",
         special: "Changes [RCV], [TND], [EMPTY], [BLOCK] and [BOMB] orbs into [STR], [QCK], [DEX], [PSY] or [INT] orbs, boosts ATK of Powerhouse characters by 1.5x and amplifies the effect of orbs by 1.5x for 1 turn",
         specialName: "Papara Hammer",
         sailor: "Boost HP of all characters by 150 and also ATK of all characters by 50 if there are 6 Powerhouse characters in your crew",
     },
     1444: {//Dosun
-        captain: "Boosts ATK of Powerhouse characters by 3.25x following a chain of Good > Great > Perfect hits",
+        captain: "Boosts ATK of Powerhouse characters by 3.25x following a chain of Good > Great > PERFECT hits",
         special: "Changes [RCV], [TND], [EMPTY], [BLOCK] and [BOMB] orbs into [STR], [QCK], [DEX], [PSY] or [INT] orbs, boosts ATK of Powerhouse characters by 1.5x and amplifies the effect of orbs by 1.5x for 1 turn",
         specialName: "Papara Hammer",
         sailor: {
@@ -15410,11 +15410,11 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 5% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 2: If HP is below 5% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 3: If HP is below 5% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 4: If HP is below 10% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 5: If HP is below 20% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a Perfect with this character"
+                    "Level 1: If HP is below 5% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 5% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 5% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below 10% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below 20% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
         ]
@@ -15461,11 +15461,11 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 20% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 2: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 3: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 4: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 5: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character"
+                    "Level 1: If HP is below 20% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
         ]
@@ -15503,7 +15503,7 @@ window.details = {
         specialName: "Doki Doki Heart",
     },
     1455: {//Coliseum Don Chinjao
-        captain: "Boosts ATK of Driven characters by 2.5x until the first hit other than Perfect and recovers 120 HP at end of each turn",
+        captain: "Boosts ATK of Driven characters by 2.5x until the first hit other than PERFECT and recovers 120 HP at end of each turn",
         special: [
             {
                 "description": "Cuts the current HP of one enemy by 20%, reduces damage received by 50% for 1 turn",
@@ -15518,7 +15518,7 @@ window.details = {
         specialName: "Legend told to the Grandchild",
     },
     1456: {//Coliseum Don Chinjao
-        captain: "Boosts ATK of Powerhouse characters by 2.75x until the first hit other than Perfect and recovers 120 HP at end of each turn",
+        captain: "Boosts ATK of Powerhouse characters by 2.75x until the first hit other than PERFECT and recovers 120 HP at end of each turn",
         special: [
             {
                 "description": "Cuts the current HP of one enemy by 20%, reduces damage received by 50% for 1 turn",
@@ -15543,19 +15543,19 @@ window.details = {
         specialName: "Pussyfoot Maneuver",
     },
     1459: {//Coliseum Miss Valentine
-        captain: "Boosts ATK by 1.75x following a chain of Good > Good > Great > Perfect hits",
+        captain: "Boosts ATK by 1.75x following a chain of Good > Good > Great > PERFECT hits",
         special: "Binds self for 2 turns, makes [BOMB] orbs \"beneficial\" and boosts ATK against enemies with reduced defense by 1.5x for 1 turn.",
         specialNotes: "#{beneficial}",
         specialName: "Crescendo Stone",
     },
     1460: {//Coliseum Miss Valentine
-        captain: "Boosts ATK by 2.14x following a chain of Good > Good > Great > Perfect hits",
+        captain: "Boosts ATK by 2.14x following a chain of Good > Good > Great > PERFECT hits",
         special: "Binds self for 2 turns, makes [BOMB] orbs \"beneficial\" and boosts ATK against enemies with reduced defense by 1.5x for 1 turn.",
         specialNotes: "#{beneficial}",
         specialName: "Crescendo Stone",
     },
     1461: {//Snow Zoro
-        captain: "Boosts ATK of [QCK] characters by 2x at the start of the chain, by 2.6x after the 3rd Perfect in a row.",
+        captain: "Boosts ATK of [QCK] characters by 2x at the start of the chain, by 2.6x after the 3rd PERFECT in a row.",
         special: "Deals 11x character's ATK in [QCK] damage to one enemy, boosts ATK of [QCK] characters by 1.5x for 1 turn",
         specialName: "Onigiri: Ice Crush",
     },
@@ -15849,7 +15849,7 @@ window.details = {
         potentialNotes: "#{enrage}"
     },
     1480: {//Vander Decken IX
-        captain: "Boosts ATK by 2.5x after scoring 2 Perfects in a row",
+        captain: "Boosts ATK by 2.5x after scoring 2 PERFECTs in a row",
         special: "Deals 200,000 fixed damage to one enemy that will ignore damage negating abilities and barriers, reduces Bind and Silence duration by 2 turns",
         specialNotes: "#{ignoreBarrier}<br>#{silence}",
         sailor: "Restores his own special by 1 turn when it is rewinded and reduces Silence for 3 turns for himself",
@@ -15857,7 +15857,7 @@ window.details = {
         specialName: "Stalking Rose Axe",
     },
     1481: {//Vander Decken IX
-        captain: "Boosts ATK by 2.5x after the 2nd Perfect in a row and by 3.5x after the 5th Perfect in a row.",
+        captain: "Boosts ATK by 2.5x after the 2nd PERFECT in a row and by 3.5x after the 5th PERFECT in a row.",
         special: "Deals 200,000 fixed damage to one enemy that will ignore damage negating abilities and barriers, reduces Bind and Silence duration by 2 turns",
         specialNotes: "#{ignoreBarrier}<br>#{silence}",
         sailor: "Restores his own special by 1 turn when it is rewinded and reduces Silence for 3 turns for himself",
@@ -15920,13 +15920,13 @@ window.details = {
         potentialNotes: "#{enrage}"
     },
     1484: {//Wild Sanji
-        captain: "Boosts ATK by 2.5x after scoring 3 Perfects in a row",
+        captain: "Boosts ATK by 2.5x after scoring 3 PERFECTs in a row",
         special: "Locks the chain multiplier at 2.5x for 1 turn, reduces Bind duration by 5 turns",
         sailor: "Changes all orbs into [RCV] orbs at the start of the fight.",
         specialName: "Wild Shot",
     },
     1485: {//Wild Sanji
-        captain: "Boosts HP and RCV of all characters by 1.2x and boosts ATK by 3.25x after scoring 3 Perfects in a row",
+        captain: "Boosts HP and RCV of all characters by 1.2x and boosts ATK by 3.25x after scoring 3 PERFECTs in a row",
         special: "Locks the chain multiplier at 2.5x for 1 turn, reduces Bind duration by 5 turns",
         sailor: "Changes all orbs into [RCV] orbs at the start of the fight.",
         specialName: "Wild Shot",
@@ -16012,11 +16012,11 @@ window.details = {
         captainNotes: "HP and RCV boost are not known yet, but are assumed to be for anyone and is a 1.2x boost for both in the calculator.",
         special: [
             {
-                "description": "Boosts ATK of Free Spirit characters by 1.5x for 1 turn. If during that turn you score 5 Perfect hits, boosts ATK of Free Spirit characters by 2x in the following turn.",
+                "description": "Boosts ATK of Free Spirit characters by 1.5x for 1 turn. If during that turn you score 5 PERFECT hits, boosts ATK of Free Spirit characters by 2x in the following turn.",
                 "cooldown": [ 18, 12 ],
             },
             {
-                "description": "Boosts ATK of Free Spirit characters by 1.75x for 1 turn. If during that turn you score 4 Perfect hits, boosts ATK of Free Spirit characters by 2x in the following turn.",
+                "description": "Boosts ATK of Free Spirit characters by 1.75x for 1 turn. If during that turn you score 4 PERFECT hits, boosts ATK of Free Spirit characters by 2x in the following turn.",
                 "cooldown": [ 23, 17 ],
             },
         ],
@@ -16084,11 +16084,11 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 40% at the start of the turn, heals for .75x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 2: If HP is below 40% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 3: If HP is below 40% at the start of the turn, heals for 1.25x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 4: If HP is below 50% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 5: If HP is below 50% at the start of the turn, heals for 2x this character's RCV at the end of the turn each time you hit a Perfect with this character"
+                    "Level 1: If HP is below 40% at the start of the turn, heals for .75x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 40% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 40% at the start of the turn, heals for 1.25x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below 50% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below 50% at the start of the turn, heals for 2x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
         ]
@@ -16152,19 +16152,19 @@ window.details = {
         specialName: "Absurd Invitation",
     },
     1504: {//Vander Decken IX
-        captain: "Boosts ATK of Driven characters by 2x. After scoring 3 Perfects in a row, boosts ATK of Driven characters by 2.4x instead.",
+        captain: "Boosts ATK of Driven characters by 2x. After scoring 3 PERFECTs in a row, boosts ATK of Driven characters by 2.4x instead.",
         special: "Changes the orbs in the middle row into [EMPTY] orbs and deals 20x character's ATK as [DEX] damage to all enemies at the end of the turn for 2 turns",
         specialName: "Inescapable Pursuit",
     },
     1505: {//Hody Jones
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of Powerhouse characters by 2.25x if HP is below 30% at the start of the turn",
-        special: "Deals 15x character's ATK in [STR] damage to all enemies that will ignore damage negating abilities and barriers, makes Perfects harder to hit for 1 turn, reduces crew's current HP by 90%, boosts own ATK by 2.25x for 1 turn.",
+        special: "Deals 15x character's ATK in [STR] damage to all enemies that will ignore damage negating abilities and barriers, makes PERFECTs harder to hit for 1 turn, reduces crew's current HP by 90%, boosts own ATK by 2.25x for 1 turn.",
         specialNotes: "#{ignoreBarrier}",
         specialName: "Shark Arrows",
     },
     1506: {//Hody Jones
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of Powerhouse characters by 2.5x if HP is below 30% at the start of the turn, 2.25x otherwise",
-        special: "Deals 15x character's ATK in [STR] damage to all enemies that will ignore damage negating abilities and barriers, makes Perfects harder to hit for 1 turn, reduces crew's current HP by 90%, boosts own ATK by 2.25x for 1 turn.",
+        special: "Deals 15x character's ATK in [STR] damage to all enemies that will ignore damage negating abilities and barriers, makes PERFECTs harder to hit for 1 turn, reduces crew's current HP by 90%, boosts own ATK by 2.25x for 1 turn.",
         specialNotes: "#{ignoreBarrier}",
         specialName: "Shark Arrows",
     },
@@ -16445,14 +16445,14 @@ window.details = {
         ]
     },
     1533: {//Rayleigh
-        captain: "Boosts ATK of [QCK] characters by 2x and their HP by 1.2x at the start of the chain, by 2.5x after the 4th Perfect in a row.",
+        captain: "Boosts ATK of [QCK] characters by 2x and their HP by 1.2x at the start of the chain, by 2.5x after the 4th PERFECT in a row.",
         special: "Changes all orbs, including [BLOCK] orbs, to [QCK] orbs",
         sailor: "Makes [STR], [INT] and [DEX] orbs \"beneficial\" for this unit",
         sailorNotes: "#{beneficial}",
         specialName: "The Teacher's Final Ordeal",
     },
     1534: {//Rayleigh
-        captain: "Boosts ATK of [QCK] characters by 2.5x and their HP by 1.2x at the start of the chain, by 3x after the 4th Perfect in a row.",
+        captain: "Boosts ATK of [QCK] characters by 2.5x and their HP by 1.2x at the start of the chain, by 3x after the 4th PERFECT in a row.",
         special: "Changes all orbs, including [BLOCK] orbs, to [QCK] orbs",
         specialName: "The Teacher's Final Ordeal",
         sailor: {
@@ -16548,11 +16548,11 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 20% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 2: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 3: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 4: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 5: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character"
+                    "Level 1: If HP is below 20% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
         ]
@@ -16671,11 +16671,11 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 20% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 2: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 3: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 4: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 5: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character"
+                    "Level 1: If HP is below 20% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
         ]
@@ -16755,12 +16755,12 @@ window.details = {
         ]
     },
     1544: {//Sakura Koala
-        captain: "Boosts ATK of Fighter characters by 1.75x and heals for .3x her RCV at the end of the turn each time you hit a Perfect",
+        captain: "Boosts ATK of Fighter characters by 1.75x and heals for .3x her RCV at the end of the turn each time you hit a PERFECT",
         special: "Changes Captain orb into matching and boosts ATK of Fighter characters by 1.5x for 1 turn",
         specialName: "Bean Paste under the Petal Snow",
     },
     1545: {//Sakura Koala
-        captain: "Boosts ATK of Fighter characters by 2.25x and heals for .5x her RCV at the end of the turn each time you hit a Perfect",
+        captain: "Boosts ATK of Fighter characters by 2.25x and heals for .5x her RCV at the end of the turn each time you hit a PERFECT",
         special: "Changes Captain orb into matching and boosts ATK of Fighter characters by 1.5x for 1 turn",
         specialName: "Bean Paste under the Petal Snow",
     },
@@ -16873,11 +16873,11 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 5% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 2: If HP is below ?% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 3: If HP is below ?% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 4: If HP is below ?% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 5: If HP is below ?% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character"
+                    "Level 1: If HP is below 5% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below ?% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below ?% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below ?% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below ?% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
         ]
@@ -16922,11 +16922,11 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 5% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 2: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 3: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 4: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 5: If HP is below 20% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a Perfect with this character"
+                    "Level 1: If HP is below 5% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below 20% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
         ]
@@ -17032,7 +17032,7 @@ window.details = {
         specialName: "Drugs From Heaven",
     },
     1563: {//Elizabello
-        captain: "Boosts ATK of Fighter and Powerhouse characters by 1.75x at the start of the chain and by 2.1875x after the 5th Perfect in a row",
+        captain: "Boosts ATK of Fighter and Powerhouse characters by 1.75x at the start of the chain and by 2.1875x after the 5th PERFECT in a row",
         special: [
             {
                 "description": "Changes own orb into [STR], deals 10 hits of 3x character's ATK in typeless damage to random enemies",
@@ -17048,7 +17048,7 @@ window.details = {
         sailor: "Boosts own base ATK by 350 if this character is the last in the chain to attack",
     },
     1564: {//Elizabello
-        captain: "Boosts ATK of Fighter and Powerhouse characters by 2x at the start of the chain and by 3x after the 5th Perfect in a row",
+        captain: "Boosts ATK of Fighter and Powerhouse characters by 2x at the start of the chain and by 3x after the 5th PERFECT in a row",
         special: [
             {
                 "description": "Changes own orb into [STR], deals 10 hits of 3x character's ATK in typeless damage to random enemies",
@@ -17281,7 +17281,7 @@ window.details = {
         potentialNotes: "#{enrage}"
     },
     1576: {//Kin'emon
-        captain: "Boosts ATK by 2.5x following a chain of Good > Great > Perfect hits",
+        captain: "Boosts ATK by 2.5x following a chain of Good > Great > PERFECT hits",
         special: "Deals 60x character's ATK in typeless damage to all enemies and changes all orbs on all characters into Kinemon's orb.",
         specialNotes: "Upon activating the special, all orbs will be changed to the orb Kinemon has, including [RAINBOW] and [BLOCK] orbs. This will not override other [BLOCK] orbs.",
         sailor: "Makes [STR] and [QCK] orbs \"beneficial\" for this unit",
@@ -17289,7 +17289,7 @@ window.details = {
         specialName: "Flaming Flash",
     },
     1577: {//Kin'emon
-        captain: "Recovers 3x character's RCV in HP at the end of each turn. Boosts ATK by 3.5x following a chain of Good > Great > Perfect hits",
+        captain: "Recovers 3x character's RCV in HP at the end of each turn. Boosts ATK by 3.5x following a chain of Good > Great > PERFECT hits",
         special: "Deals 60x character's ATK in typeless damage to all enemies and changes all orbs on all characters into Kinemon's orb.",
         specialNotes: "Upon activating the special, all orbs will be changed to the orb Kinemon has, including [RAINBOW] and [BLOCK] orbs. This will not override other [BLOCK] orbs.",
         specialName: "Flaming Flash",
@@ -17329,11 +17329,11 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 20% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 2: If HP is below ??% at the start of the turn, heals for ??x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 3: If HP is below ??% at the start of the turn, heals for ??x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 4: If HP is below ??% at the start of the turn, heals for ??x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 5: If HP is below ??% at the start of the turn, heals for ??x this character's RCV at the end of the turn each time you hit a Perfect with this character"
+                    "Level 1: If HP is below 20% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below ??% at the start of the turn, heals for ??x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below ??% at the start of the turn, heals for ??x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below ??% at the start of the turn, heals for ??x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below ??% at the start of the turn, heals for ??x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
         ]
@@ -17413,11 +17413,11 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 20% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 2: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 3: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 4: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 5: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character"
+                    "Level 1: If HP is below 20% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below ??% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
         ]
@@ -17666,7 +17666,7 @@ window.details = {
         sailor: "Boosts own base ATK by 100 if this character is the last in the chain to attack",
     },
     1602: {//Power Creep Shiryu
-        captain: "Boosts ATK of Slasher characters by 2x at the start of the chain, by 3x after the 3rd Perfect in a row",
+        captain: "Boosts ATK of Slasher characters by 2x at the start of the chain, by 3x after the 3rd PERFECT in a row",
         special: "Instantly defeats all enemies with HP equal to or below 75x character's ATK, removes Poison and reduces damage received by 50% for 3 turns,",
         specialName: "Blood Stained 'Iron Wall'",
         sailor: "Boosts own base ATK by 100 if this character is the last in the chain to attack",
@@ -17721,14 +17721,14 @@ window.details = {
         special: "Reduces Bind and Despair duration by 7 turns.  Recovers 20% of crew's MAX HP and has low chance to eliminate all enemies",
         specialNotes: "#{instantKill : 10%}",
         specialName: "Paw Paw Fruit: Scatter and Fly Away",
-        sailor: "If this character has a [PSY] orb and you hit a Perfect with him, keep his [PSY] orb for the next turn",
+        sailor: "If this character has a [PSY] orb and you hit a PERFECT with him, keep his [PSY] orb for the next turn",
     },
     1612: {//Kuma
         captain: "Boosts ATK of Shooter characters by 2.5x and their HP by 1.2x",
         special: "Reduces Bind and Despair duration by 7 turns.  Recovers 20% of crew's MAX HP and has low chance to eliminate all enemies",
         specialNotes: "#{instantKill : 10%}",
         specialName: "Paw Paw Fruit: Scatter and Fly Away",
-        sailor: "If this character has a [PSY] orb and you hit a Perfect with him, keep his [PSY] orb for the next turn",
+        sailor: "If this character has a [PSY] orb and you hit a PERFECT with him, keep his [PSY] orb for the next turn",
     },
     1613: {//Rob Lucci
         captain: "Boosts ATK of Fighter characters by 2.25x",
@@ -17857,7 +17857,7 @@ window.details = {
     },
     1619: {//6+ Raybae/Rayleigh
         captain: "Boosts chain multiplier by 4x and boosts HP and RCV of all characters by 1.2x",
-        special: "Reduces Bind, Despair and Paralysis duration by 7 turns, delays all enemies for 1 turn and makes Perfects easier to hit for 1 turn",
+        special: "Reduces Bind, Despair and Paralysis duration by 7 turns, delays all enemies for 1 turn and makes PERFECTs easier to hit for 1 turn",
         specialName: "Netherworld Conqueror",
     },
     1620: {//Log Kid
@@ -17938,7 +17938,7 @@ window.details = {
         specialName: "Arching Fangs",
     },
     1626: {//Dosun
-        captain: "Boosts ATK of Powerhouse characters by 2.5x following a chain of Good > Great > Perfect hits",
+        captain: "Boosts ATK of Powerhouse characters by 2.5x following a chain of Good > Great > PERFECT hits",
         special: "Deals 20x character's ATK in [PSY] damage to one enemy, boosts ATK of [PSY] characters by 1.5x for 1 turn",
         specialName: "The Calm Before The Storm",
     },
@@ -18186,12 +18186,12 @@ window.details = {
         specialNotes: "#{stages}"
     },
     1648: {//Giolla
-        captain: "Boosts ATK of all characters by 1.2x. Boosts ATK by 2.4x after scoring 4 Perfects in a row",
+        captain: "Boosts ATK of all characters by 1.2x. Boosts ATK by 2.4x after scoring 4 PERFECTs in a row",
         special: "Reduces damage received by 90% for 1 turn and randomizes all orbs, including [BLOCK] orbs, into either [STR], [DEX] or [QCK] orbs",
         specialName: "Sprouting with Beautiful Passion",
     },
     1649: {//Giolla
-        captain: "Boosts ATK of all characters by 1.2x. Boosts ATK by 3x after scoring 4 Perfects in a row",
+        captain: "Boosts ATK of all characters by 1.2x. Boosts ATK by 3x after scoring 4 PERFECTs in a row",
         special: "Reduces damage received by 90% for 1 turn and randomizes all orbs, including [BLOCK] orbs, into either [STR], [DEX] or [QCK] orbs",
         specialName: "Sprouting with Beautiful Passion",
     },
@@ -18294,7 +18294,7 @@ window.details = {
         special: "Reduces crew's HP to 1, deals 7x the amount of HP subtracted in typeless damage to all enemies, amplifies the effect of orbs by 1.75x for 1 turn",
         sailor: {
             "base": "Makes INT orbs \"beneficial\" for Slasher and Cerebral characters",
-            "level1": "If this character has an [INT] orb and you hit a Perfect with him, keep his [INT] orb for the next turn",
+            "level1": "If this character has an [INT] orb and you hit a PERFECT with him, keep his [INT] orb for the next turn",
         },
         sailorNotes: "#{beneficial}",
         specialName: "Charge Drive",
@@ -18312,7 +18312,7 @@ window.details = {
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base ATK by 45" },
             { "description": "Boosts base HP by 60" },
-            { "description": "Acquire Sailor Ability 1: If this character has an [INT] orb and you hit a Perfect with him, keep his [INT] orb for the next turn" },
+            { "description": "Acquire Sailor Ability 1: If this character has an [INT] orb and you hit a PERFECT with him, keep his [INT] orb for the next turn" },
             { "description": "Acquire Potential 2: Critical Hit" },
         ],
         potential: [
@@ -18384,11 +18384,11 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 10% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 2: If HP is below ?% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 3: If HP is below ?% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 4: If HP is below ?% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 5: If HP is below ?% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character"
+                    "Level 1: If HP is below 10% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below ?% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below ?% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below ?% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below ?% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
         ]
@@ -18651,7 +18651,7 @@ window.details = {
         specialName: "ROOM: Kikoku",
     },
     1678: {//Log Law
-        captain: "Boosts ATK of Slasher characters by 2.5x at the start of the chain, by 3.25x after the 3rd Perfect in a row",
+        captain: "Boosts ATK of Slasher characters by 2.5x at the start of the chain, by 3.25x after the 3rd PERFECT in a row",
         special: "Boosts the Color Affinity of Slasher by 1.5x for 1 turn, changes middle row orbs into matching orbs and switches orbs between slots three times",
         specialName: "ROOM: Kikoku",
         sailor: {
@@ -18716,7 +18716,7 @@ window.details = {
         sailor: "Boosts base HP and ATK of all characters by 56",
     },
     1682: {//20th Anni Luffy
-        captain: "Boosts ATK of characters with cost 30 or less by 2.5x at the start of the chain and their HP by 1.3x, boosts all characters by 1.4x, 3.5x for characters with cost 30 or less, after the 3rd Perfect in a row",
+        captain: "Boosts ATK of characters with cost 30 or less by 2.5x at the start of the chain and their HP by 1.3x, boosts all characters by 1.4x, 3.5x for characters with cost 30 or less, after the 3rd PERFECT in a row",
         special: "Cuts the current HP of each enemy by 20%, if Luffy is your Captain or Friend/Guest Captain, changes left column into Matching orbs, otherwise, adds .5x to Chain multiplier for 1 turn.",
         specialName: "Gomu Gomu no Tako Stamp",
         sailor: "Boosts base HP and ATK of all characters by 56",
@@ -18738,14 +18738,14 @@ window.details = {
         sailorNotes: "#{beneficial}",
     },
     1685: {//20th Anni Usopp
-        captain: "Boosts ATK of Shooter characters by 2.75x following a chain of Good > Great > Perfect hits",
+        captain: "Boosts ATK of Shooter characters by 2.75x following a chain of Good > Great > PERFECT hits",
         special: "Changes [EMPTY] orbs into Matching orbs, changes Badly Matching orbs into [RCV] orbs and delays all enemies for 1 turn",
         specialName: "Green Star: Bamboo Javelin-Grove",
         sailor: "Reduces Silence duration on this character by 4 turns",
         sailorNotes: "#{silence}",
     },
     1686: {//20th Anni Usopp
-        captain: "Boosts ATK of Shooter characters by 3.25x following a chain of Good > Great > Perfect hits",
+        captain: "Boosts ATK of Shooter characters by 3.25x following a chain of Good > Great > PERFECT hits",
         special: "Changes [EMPTY] orbs into Matching orbs, changes Badly Matching orbs into [RCV] orbs and delays all enemies for 1 turn",
         specialName: "Green Star: Bamboo Javelin-Grove",
         sailor: "Reduces Silence duration on this character by 4 turns",
@@ -18947,11 +18947,11 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 10% at the start of the turn, heals for 2x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 2: If HP is below 15% at the start of the turn, heals for 2x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 3: If HP is below 20% at the start of the turn, heals for 2x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 4: If HP is below 30% at the start of the turn, heals for 2x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 5: If HP is below 30% at the start of the turn, heals for 3x this character's RCV at the end of the turn each time you hit a Perfect with this character"
+                    "Level 1: If HP is below 10% at the start of the turn, heals for 2x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 15% at the start of the turn, heals for 2x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 20% at the start of the turn, heals for 2x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below 30% at the start of the turn, heals for 2x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below 30% at the start of the turn, heals for 3x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
             {
@@ -19150,11 +19150,11 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 5% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 2: If HP is below 5% at the start of the turn, heals for 1.25x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 3: If HP is below 5% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 4: If HP is below 10% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 5: If HP is below 20% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a Perfect with this character"
+                    "Level 1: If HP is below 5% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 5% at the start of the turn, heals for 1.25x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 5% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below 10% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below 20% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
             {
@@ -19177,7 +19177,7 @@ window.details = {
         sailor: "Boosts base ATK, HP and RCV of all characters by 50",
     },
     1706: {//Bon Clay
-        captain: "Boosts ATK of [STR] characters by 2.5x at the start of the chain and boosts ATK of [STR] characters by 3.125x after scoring 3 Perfects in a row",
+        captain: "Boosts ATK of [STR] characters by 2.5x at the start of the chain and boosts ATK of [STR] characters by 3.125x after scoring 3 PERFECTs in a row",
         special: "Removes all positive buffs on your team. If the special is activated with more than 50% health remaining, protects from defeat for 1 turn",
         specialName: "A Speech Left in Hell",
         sailor: {
@@ -19206,11 +19206,11 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 10% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 2: If HP is below 15% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 3: If HP is below 20% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 4: If HP is below 30% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 5: If HP is below 50% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character"
+                    "Level 1: If HP is below 10% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 15% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 20% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below 30% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below 50% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
             {
@@ -19406,7 +19406,7 @@ window.details = {
         specialName: "High Maneuverable Fireball Blast",
     },
     1718: {//Buffalo
-        captain: "Boosts ATK of Driven characters by 2.5x until the first hit other than Perfect",
+        captain: "Boosts ATK of Driven characters by 2.5x until the first hit other than PERFECT",
         special: "Boosts ATK of Driven characters by 1.25x for 5 turns",
         specialName: "Rolling Rotation",
     },
@@ -19494,13 +19494,13 @@ window.details = {
         specialName: "Sun's Hope"
     },
     1726: {//Sabo
-        captain: "Boosts ATK of Free Spirit characters by 2.75x following a chain of Good > Great > Perfect hits",
+        captain: "Boosts ATK of Free Spirit characters by 2.75x following a chain of Good > Great > PERFECT hits",
         specialName: "Dragon Claw Fist: Dragon's Breath [Neo]",
         special: "Deals random typeless damage to all enemies. Adds 55x character's ATK as Additional Typeless Damage for 2 turns",
         specialNotes: "#{random : 10,000 : 30,000} <br> Extra Damage can only be boosted by conditional Boosters"
     },
     1727: {//Sabo
-        captain: "Boosts ATK of Free Spirit characters by 3.5x following a chain of Good > Great > Perfect hits",
+        captain: "Boosts ATK of Free Spirit characters by 3.5x following a chain of Good > Great > PERFECT hits",
         specialName: "Dragon Claw Fist: Dragon's Breath [Neo]",
         special: "Deals random typeless damage to all enemies. Adds 55x character's ATK as Additional Typeless Damage for 2 turns",
         specialNotes: "#{random : 10,000 : 30,000} <br> Extra Damage can only be boosted by conditional Boosters"
@@ -19745,14 +19745,14 @@ window.details = {
     },
     1746: {//Boa Hancock
         captain: "Boosts ATK of Shooter characters by a variable factor between 2.5x and 3.25x based on the timing of the attack of the previous unit in the chain and recovers 1,000 HP at end of each turn. Greatly reduces chances of getting [TND] and [RCV] orbs",
-        captainNotes: "A hit below Good or a Miss will boost the ATK of the next unit by 2.5x, a Good hit by 2.75x, a Great hit by 3x and a Perfect hit by 3.25x. This bonus is applied only to Shooter characters.",
+        captainNotes: "A hit below Good or a Miss will boost the ATK of the next unit by 2.5x, a Good hit by 2.75x, a Great hit by 3x and a PERFECT hit by 3.25x. This bonus is applied only to Shooter characters.",
         special: "Deals 6 hits of 20,000 fixed damage to random enemies, delays all enemies for 1 turn and makes [STR], [DEX], [QCK], [PSY] and [INT] orbs \"beneficial\" for Shooter characters for 2 turns",
         specialNotes: "#{beneficial}",
         specialName: "Pistol Kisses",
     },
     1747: {//Boa Hancock
         captain: "Boosts ATK of Shooter characters by a variable factor between 2.5x and 3.25x based on the timing of the attack of the previous unit in the chain and recovers 1,000 HP at end of each turn. Greatly reduces chances of getting [TND] and [RCV] orbs",
-        captainNotes: "A hit below Good or a Miss will boost the ATK of the next unit by 2.5x, a Good hit by 2.75x, a Great hit by 3x and a Perfect hit by 3.25x. This bonus is applied only to Shooter characters.",
+        captainNotes: "A hit below Good or a Miss will boost the ATK of the next unit by 2.5x, a Good hit by 2.75x, a Great hit by 3x and a PERFECT hit by 3.25x. This bonus is applied only to Shooter characters.",
         special: "Deals 6 hits of 20,000 fixed damage to random enemies, delays all enemies for 1 turn and makes [STR], [DEX], [QCK], [PSY] and [INT] orbs \"beneficial\" for Shooter characters for 2 turns",
         specialNotes: "#{beneficial}",
         specialName: "Pistol Kisses",
@@ -19797,11 +19797,11 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 10% at the start of the turn, heals for 2x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 2: If HP is below 15% at the start of the turn, heals for 2x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 3: If HP is below 20% at the start of the turn, heals for 2x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 4: If HP is below 30% at the start of the turn, heals for 2x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 5: If HP is below 50% at the start of the turn, heals for 2x this character's RCV at the end of the turn each time you hit a Perfect with this character"
+                    "Level 1: If HP is below 10% at the start of the turn, heals for 2x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 15% at the start of the turn, heals for 2x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 20% at the start of the turn, heals for 2x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below 30% at the start of the turn, heals for 2x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below 50% at the start of the turn, heals for 2x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
             {
@@ -19829,14 +19829,14 @@ window.details = {
     1748: {//Bepo
         captain: "Boosts ATK and HP of QCK characters by 1.5x",
         special: "Cuts the current HP of one enemy by 15% and reduces enemy's Threshold Damage Reduction duration by 5 turns",
-        sailor: "If this character has a [QCK] orb and you hit a Perfect with him, keep his [QCK] orb for the next turn",
+        sailor: "If this character has a [QCK] orb and you hit a PERFECT with him, keep his [QCK] orb for the next turn",
         specialName: "Bear Rush Out",
     },
     1749: {//Bepo
         captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK and HP of QCK characters by 2x",
         special: "Cuts the current HP of one enemy by 15% and reduces enemy's Threshold Damage Reduction duration by 5 turns",
         sailor: {
-            "base": "If this character has a [QCK] orb and you hit a Perfect with him, keep his [QCK] orb for the next turn",
+            "base": "If this character has a [QCK] orb and you hit a PERFECT with him, keep his [QCK] orb for the next turn",
             "level1": "Makes [DEX] orbs \"beneficial\" for this unit",
         },
         sailorNotes: "#{beneficial}",
@@ -19882,7 +19882,7 @@ window.details = {
         ]
     },
     1750: {//Korea Law
-        captain: "Boosts ATK of Striker characters by 3x and heals for .5x his RCV at the end of the turn each time you hit a Perfect",
+        captain: "Boosts ATK of Striker characters by 3x and heals for .5x his RCV at the end of the turn each time you hit a PERFECT",
         special: [
             {
                 "description": "Deals 50,000 fixed damage to one enemy and amplifies the effect of orbs for Striker characters by 1.75x for 1 turn",
@@ -19897,7 +19897,7 @@ window.details = {
         specialName: "Injection Shot",
     },
     1751: {//Korea Law
-        captain: "Boosts ATK of Striker characters by 3x and heals for .5x his RCV at the end of the turn each time you hit a Perfect",
+        captain: "Boosts ATK of Striker characters by 3x and heals for .5x his RCV at the end of the turn each time you hit a PERFECT",
         special: [
             {
                 "description": "Deals 50,000 fixed damage to one enemy and for Striker characters, amplifies the effect of orbs by 1.75x for 1 turn",
@@ -19952,11 +19952,11 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 10% at the start of the turn, heals for 2x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 2: If HP is below 15% at the start of the turn, heals for 2x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 3: If HP is below 20% at the start of the turn, heals for 2x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 4: If HP is below 30% at the start of the turn, heals for 2x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 5: If HP is below 50% at the start of the turn, heals for 2x this character's RCV at the end of the turn each time you hit a Perfect with this character"
+                    "Level 1: If HP is below 10% at the start of the turn, heals for 2x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 15% at the start of the turn, heals for 2x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 20% at the start of the turn, heals for 2x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below 30% at the start of the turn, heals for 2x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below 50% at the start of the turn, heals for 2x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
             {
@@ -19983,13 +19983,13 @@ window.details = {
     },
     1752: {//20th Anni Zoro
         captain: "Boosts ATK of characters with cost 30 or less by 2.5x",
-        special: "Deals 60x character's ATK in [INT] damage to one enemy. Boosts ATK of characters with 30 cost or less by 1.75x for 1 turn. If Zoro is a Capain or Friend/Guest Captain, then if during that turn you score 4 Perfect hits, boosts ATK of characters with 30 cost or less by 2x in the following turn.",
+        special: "Deals 60x character's ATK in [INT] damage to one enemy. Boosts ATK of characters with 30 cost or less by 1.75x for 1 turn. If Zoro is a Capain or Friend/Guest Captain, then if during that turn you score 4 PERFECT hits, boosts ATK of characters with 30 cost or less by 2x in the following turn.",
         sailor: "Boosts base ATK of Slasher characters by 50",
         specialName: "Three Sword Style: Ultra Tiger Hunting",
     },
     1753: {//20th Anni Zoro
-        captain: "Boosts ATK of characters with cost 30 or less by 2.5x at the start of the chain and their HP by 1.3x, boosts all characters by 1.4x, 3.5x for characters with cost 30 or less, after the 3rd Perfect in a row",
-        special: "Deals 60x character's ATK in [INT] damage to one enemy. Boosts ATK of characters with 30 cost or less by 1.75x for 1 turn. If Zoro is a Capain or Friend/Guest Captain, then if during that turn you score 4 Perfect hits, boosts ATK of characters with 30 cost or less by 2x in the following turn.",
+        captain: "Boosts ATK of characters with cost 30 or less by 2.5x at the start of the chain and their HP by 1.3x, boosts all characters by 1.4x, 3.5x for characters with cost 30 or less, after the 3rd PERFECT in a row",
+        special: "Deals 60x character's ATK in [INT] damage to one enemy. Boosts ATK of characters with 30 cost or less by 1.75x for 1 turn. If Zoro is a Capain or Friend/Guest Captain, then if during that turn you score 4 PERFECT hits, boosts ATK of characters with 30 cost or less by 2x in the following turn.",
         sailor: "Boosts base ATK of Slasher characters by 50",
         specialName: "Three Sword Style: Ultra Tiger Hunting",
     },
@@ -20048,12 +20048,12 @@ window.details = {
         specialName: "Intelligent Monster",
     },
     1762: {//Rob Lucci
-        captain: "Boosts ATK of Powerhouse characters by 2.5x and their HP by 1.2x at the start of the chain. Reduces RCV of all characters by 50%.<br>Boosts ATK of Powerhouse characters by 2.75x after the 1st Perfect in a row, by 3.025x after the 2nd Perfect in a row, by 3.3275x after the 3rd Perfect in a row, by 3.66025x after the 4th Perfect in a row and by 4.026275x after the 5th Perfect in a row.",
+        captain: "Boosts ATK of Powerhouse characters by 2.5x and their HP by 1.2x at the start of the chain. Reduces RCV of all characters by 50%.<br>Boosts ATK of Powerhouse characters by 2.75x after the 1st PERFECT in a row, by 3.025x after the 2nd PERFECT in a row, by 3.3275x after the 3rd PERFECT in a row, by 3.66025x after the 4th PERFECT in a row and by 4.026275x after the 5th PERFECT in a row.",
         special: "Reduces the defense of all enemies by 80% for 2 turns, deals 50x character's ATK in typeless damage to all enemies and changes all orbs on Powerhouse characters into Matching orbs, recovers 20% of crew's MAX HP.",
         specialName: "Flying Finger Gun: Fire Sting",
     },
     1763: {//Rob Lucci
-        captain: "Boosts ATK of Powerhouse characters by 2.5x and their HP by 1.2x at the start of the chain. Reduces RCV of all characters by 50%.<br>Boosts ATK of Powerhouse characters by 2.75x after the 1st Perfect in a row, by 3.025x after the 2nd Perfect in a row, by 3.3275x after the 3rd Perfect in a row, by 3.66025x after the 4th Perfect in a row and by 4.026275x after the 5th Perfect in a row.",
+        captain: "Boosts ATK of Powerhouse characters by 2.5x and their HP by 1.2x at the start of the chain. Reduces RCV of all characters by 50%.<br>Boosts ATK of Powerhouse characters by 2.75x after the 1st PERFECT in a row, by 3.025x after the 2nd PERFECT in a row, by 3.3275x after the 3rd PERFECT in a row, by 3.66025x after the 4th PERFECT in a row and by 4.026275x after the 5th PERFECT in a row.",
         special: "Reduces the defense of all enemies by 80% for 2 turns, deals 50x character's ATK in typeless damage to all enemies and changes all orbs on Powerhouse characters into Matching orbs, recovers 20% of crew's MAX HP.",
         specialName: "Flying Finger Gun: Fire Sting",
         sailor: {
@@ -20097,11 +20097,11 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 10% at the start of the turn, heals for 2x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 2: If HP is below 15% at the start of the turn, heals for 2x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 3: If HP is below 20% at the start of the turn, heals for 2x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 4: If HP is below 30% at the start of the turn, heals for 2x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 5: If HP is below 50% at the start of the turn, heals for 2x this character's RCV at the end of the turn each time you hit a Perfect with this character"
+                    "Level 1: If HP is below 10% at the start of the turn, heals for 2x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 15% at the start of the turn, heals for 2x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 20% at the start of the turn, heals for 2x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below 30% at the start of the turn, heals for 2x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below 50% at the start of the turn, heals for 2x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
             {
@@ -20160,7 +20160,7 @@ window.details = {
         specialName: "Restraining Gunpoint",
     },
     1770: {//Ben Beckman
-        captain: "Boosts ATK of Cerebral characters by 2.5x and their HP by 1.2x at the start of the chain and boosts ATK of Cerebral characters by 3.25x following a chain of Good > Great > Perfect hits",
+        captain: "Boosts ATK of Cerebral characters by 2.5x and their HP by 1.2x at the start of the chain and boosts ATK of Cerebral characters by 3.25x following a chain of Good > Great > PERFECT hits",
         special: "Delays all enemies for 1 turn. If your captain is a Cerebral Character, boosts ATK against delayed enemies by 1.5x for 1 turn and changes adjacent orbs into Matching Orbs",
         specialName: "Restraining Gunpoint",
         sailor: {
@@ -20340,7 +20340,7 @@ window.details = {
     },
     1783: {//Hajrudin
         captain: "Boosts ATK and HP of Powerhouse characters by 1.5x",
-        special: "Locks all orbs for 1 turn. If during that turn you score 4 Perfect hits, amplifies the effect of orbs by 1.5x for 1 turn.",
+        special: "Locks all orbs for 1 turn. If during that turn you score 4 PERFECT hits, amplifies the effect of orbs by 1.5x for 1 turn.",
         specialName: "War Giant's Iron Fist",
     },
     1784: {//Fujitora
@@ -20375,14 +20375,14 @@ window.details = {
         specialName: "Auto Light Recovery"
     },
     1791:{//Lucy Luffy
-        captain: "Boosts ATK of [STR], [DEX] and [QCK] characters by 2.5x after scoring 3 Perfects in a row",
+        captain: "Boosts ATK of [STR], [DEX] and [QCK] characters by 2.5x after scoring 3 PERFECTs in a row",
         special: "Cuts the current HP of one enemy by 20% that will ignore damage negating abilities and barriers. Changes the orbs in the top row into [STR] orbs, changes the orbs in the middle row into [QCK] orbs, changes the orbs in the bottom row into [DEX] orbs and amplifies the effect of orbs by 1.75x for 1 turn",
         specialNotes: "#{ignoreBarrier}",
         sailor: "If your captain is a [STR] character, boosts this character's attack against [STR] characters by 1.5x",
         specialName: "Gomu Gomu no Hawk Rifle",
     },
     1792:{//Lucy Luffy
-        captain: "Boosts RCV of [STR], [DEX] and [QCK] characters by 1.2x and boosts ATK of [STR], [DEX] and [QCK] characters by 3.25x after scoring 3 Perfects in a row",
+        captain: "Boosts RCV of [STR], [DEX] and [QCK] characters by 1.2x and boosts ATK of [STR], [DEX] and [QCK] characters by 3.25x after scoring 3 PERFECTs in a row",
         special: "Cuts the current HP of one enemy by 20% that will ignore damage negating abilities and barriers. Changes the orbs in the top row into [STR] orbs, changes the orbs in the middle row into [QCK] orbs, changes the orbs in the bottom row into [DEX] orbs and amplifies the effect of orbs by 1.75x for 1 turn",
         specialNotes: "#{ignoreBarrier}",
         sailor: {
@@ -20434,13 +20434,13 @@ window.details = {
     1793:{//Lucy Sabo
         captain: "If there is a [STR], [DEX] and [QCK] character in your crew, boosts ATK of [STR], [DEX] and [QCK] characters by 2.75x and their HP by 1.3x, lowers chances of getting [STR] orbs and makes [DEX] and [QCK] orbs \"beneficial\" to [STR], [DEX] and [QCK] characters. If there are not [PSY] or [INT] characters on your crew, boosts ATK by 3.7125x instead.",
         captainNotes: "Sabo boosts ATK by 3.7125x if you have [STR], [DEX] and [QCK] type characters and no [PSY] or [INT] characters at all.<br>#{beneficial}",
-        special: "Boosts ATK of [STR], [DEX] and [QCK] characters by 1.75x for 1 turn. If during that turn you score 4 Perfect hits, boosts ATK of [STR], [DEX] and [QCK] characters by 2x in the following turn.",
+        special: "Boosts ATK of [STR], [DEX] and [QCK] characters by 1.75x for 1 turn. If during that turn you score 4 PERFECT hits, boosts ATK of [STR], [DEX] and [QCK] characters by 2x in the following turn.",
         specialName: "Dragon's Claw: Reverse Wave Motion",
     },
     1794:{//Lucy Sabo
         captain: "If there is a [STR], [DEX] and [QCK] character in your crew, boosts ATK of [STR], [DEX] and [QCK] characters by 2.75x and their HP by 1.3x, lowers chances of getting [STR] orbs and makes [DEX] and [QCK] orbs \"beneficial\" to [STR], [DEX] and [QCK] characters. If there are not [PSY] or [INT] characters on your crew, boosts ATK by 3.7125x instead.",
         captainNotes: "Sabo boosts ATK by 3.7125x if you have [STR], [DEX] and [QCK] type characters and no [PSY] or [INT] characters at all.<br>#{beneficial}",
-        special: "Boosts ATK of [STR], [DEX] and [QCK] characters by 1.75x for 1 turn. If during that turn you score 4 Perfect hits, boosts ATK of [STR], [DEX] and [QCK] characters by 2x in the following turn.",
+        special: "Boosts ATK of [STR], [DEX] and [QCK] characters by 1.75x for 1 turn. If during that turn you score 4 PERFECT hits, boosts ATK of [STR], [DEX] and [QCK] characters by 2x in the following turn.",
         specialName: "Dragon's Claw: Reverse Wave Motion",
         sailor: {
             "base": "None",
@@ -20870,14 +20870,14 @@ window.details = {
         ],
     },
     1809: {//Wanda
-        captain: "Boosts ATK by 2.25x after scoring 2 Perfects in a row",
-        special: "Reduces Bind and Paralysis duration by 2 turns. If your Captain is a Slasher character, makes Perfects easier to hit for 1 turn",
+        captain: "Boosts ATK by 2.25x after scoring 2 PERFECTs in a row",
+        special: "Reduces Bind and Paralysis duration by 2 turns. If your Captain is a Slasher character, makes PERFECTs easier to hit for 1 turn",
         sailor: "Reduces Paralysis for 1 turn for herself",
         specialName: "Super Express Beast Path",
     },
     1810: {//Wanda
-        captain: "Boosts chances of getting Matching orbs, boosts ATK by 2.25x after scoring 2 Perfects in a row",
-        special: "Reduces Bind and Paralysis duration by 2 turns. If your Captain is a Slasher character, makes Perfects easier to hit for 1 turn",
+        captain: "Boosts chances of getting Matching orbs, boosts ATK by 2.25x after scoring 2 PERFECTs in a row",
+        special: "Reduces Bind and Paralysis duration by 2 turns. If your Captain is a Slasher character, makes PERFECTs easier to hit for 1 turn",
         sailor: "Reduces Paralysis for 1 turn for herself",
         specialName: "Super Express Beast Path",
     },
@@ -20897,12 +20897,12 @@ window.details = {
         specialName: "Revolutionary Soldier's Anger",
     },
     1814: {//Raid Sanji
-        captain: "Boosts ATK of Powerhouse characters by 2.5x until the first hit other than Perfect and recovers 100 HP at end of each turn",
+        captain: "Boosts ATK of Powerhouse characters by 2.5x until the first hit other than PERFECT and recovers 100 HP at end of each turn",
         specialName: "Joue Shoot",
         special: "Deal 150x character's ATK in typeless damage to one enemy, boosts ATK of Powerhouse characters by 2x for 1 turn",
     },
     1815: {//Raid Sanji
-        captain: "Boosts ATK of Powerhouse characters by 2.75x until the first hit other than Perfect and recovers 300 HP at end of each turn",
+        captain: "Boosts ATK of Powerhouse characters by 2.75x until the first hit other than PERFECT and recovers 300 HP at end of each turn",
         specialName: "Joue Shoot",
         special: "Deal 150x character's ATK in typeless damage to one enemy, boosts ATK of Powerhouse characters by 2x for 1 turn",
         sailor: {
@@ -21013,7 +21013,7 @@ window.details = {
         sailorNotes: "#{beneficial}",
     },
     1823: {//World
-        captain: "Boosts ATK of Shooter characters by 1.5x at the start of the chain.<br>Boosts ATK of Shooter characters by 1.65x after the 1st Perfect in a row, by 1.815x after the 2nd Perfect in a row, by 1.9965x after the 3rd Perfect in a row, by 2.19615x after the 4th Perfect in a row and by 2.415765x after the 5th Perfect in a row.",
+        captain: "Boosts ATK of Shooter characters by 1.5x at the start of the chain.<br>Boosts ATK of Shooter characters by 1.65x after the 1st PERFECT in a row, by 1.815x after the 2nd PERFECT in a row, by 1.9965x after the 3rd PERFECT in a row, by 2.19615x after the 4th PERFECT in a row and by 2.415765x after the 5th PERFECT in a row.",
         special: [
             {
                 "description": "Deals 100,000 fixed damage to one enemy and removes ATK DOWN debuff from your team",
@@ -21032,7 +21032,7 @@ window.details = {
         specialName: "More More: Hundredfold Artillery Cannon",
     },
     1824: {//World
-        captain: "Boosts ATK of Shooter characters by 2.2x at the start of the chain.<br>Boosts ATK of Shooter characters by 2.42x after the 1st Perfect in a row, by 2.662x after the 2nd Perfect in a row, by 2.9282x after the 3rd Perfect in a row, by 3.22102x after the 4th Perfect in a row and by 3.543122x after the 5th Perfect in a row.",
+        captain: "Boosts ATK of Shooter characters by 2.2x at the start of the chain.<br>Boosts ATK of Shooter characters by 2.42x after the 1st PERFECT in a row, by 2.662x after the 2nd PERFECT in a row, by 2.9282x after the 3rd PERFECT in a row, by 3.22102x after the 4th PERFECT in a row and by 3.543122x after the 5th PERFECT in a row.",
         special: [
             {
                 "description": "Deals 100,000 fixed damage to one enemy and removes ATK down debuff from your team",
@@ -21581,7 +21581,7 @@ window.details = {
     },
     1850: {//Treasure Map Squard
         captain: "Boosts ATK of Driven characters by 2x",
-        special: "Deals 40x character's ATK in DEX damage to one enemy that will ignore damage negating abilities and barriers, makes Perfects easier to hit for 1 turn and adds .5x to Chain multiplier for 1 turn",
+        special: "Deals 40x character's ATK in DEX damage to one enemy that will ignore damage negating abilities and barriers, makes PERFECTs easier to hit for 1 turn and adds .5x to Chain multiplier for 1 turn",
         specialNotes: "#{ignoreBarrier}",
         specialName: "Piercing Hatred",
         sailor: "Makes [PSY] and [INT] orbs \"beneficial\" for this unit",
@@ -21589,7 +21589,7 @@ window.details = {
     },
     1851: {//Treasure Map Squard
         captain: "Boosts ATK of Driven characters by 2.25x and their HP by 1.3x",
-        special: "Deals 40x character's ATK in DEX damage to one enemy that will ignore damage negating abilities and barriers, makes Perfects easier to hit for 1 turn and adds .5x to Chain multiplier for 1 turn",
+        special: "Deals 40x character's ATK in DEX damage to one enemy that will ignore damage negating abilities and barriers, makes PERFECTs easier to hit for 1 turn and adds .5x to Chain multiplier for 1 turn",
         specialNotes: "#{ignoreBarrier}",
         specialName: "Piercing Hatred",
         sailor: "Makes [PSY] and [INT] orbs \"beneficial\" for this unit",
@@ -21693,7 +21693,7 @@ window.details = {
         specialName: "Fighting Musical Performance",
     },
     1855: {//Apoo
-        captain: "Boosts ATK of Free Spirit characters by 2x at the start of the chain, by 2.5x after the 3rd Perfect in a row and by 3x after the 5th Perfect in a row",
+        captain: "Boosts ATK of Free Spirit characters by 2x at the start of the chain, by 2.5x after the 3rd PERFECT in a row and by 3x after the 5th PERFECT in a row",
         special: "Amplifies the effect of orbs for Free Spirit characters by 1.5x and boosts ATK of Free Spirit characters by 1.5x for 1 turn",
         specialName: "Fighting Musical Performance",
     },
@@ -21708,15 +21708,15 @@ window.details = {
         specialName: "Intervening A Fierce Battle",
     },
     1858: {//Leo
-        captain: "Boosts ATK of Striker characters by 2x at the start of the chain. Boosts ATK of Striker characters by 2.4x after scoring 3 Perfects in a row.",
+        captain: "Boosts ATK of Striker characters by 2x at the start of the chain. Boosts ATK of Striker characters by 2.4x after scoring 3 PERFECTs in a row.",
         special: "Reduce 3 turns of paralysis, randomize non-matching orbs, including [BLOCK] orbs, Adds 65x character's ATK as Additional Typeless Damage for 1 turn, when the captain is a Striker Character reduces enemies Percent Damage Reduction duration by 3 turns",
-        sailor: "If this character has an [INT] orb and you hit a Perfect with him, keep his [INT] orb for the next turn",
+        sailor: "If this character has an [INT] orb and you hit a PERFECT with him, keep his [INT] orb for the next turn",
     },
     1859: {//Leo
-        captain: "Boosts ATK of Striker characters by 2.5x and their HP by 1.2x at the start of the chain. Boosts ATK of Striker characters by 3.25x after scoring 3 Perfects in a row.",
+        captain: "Boosts ATK of Striker characters by 2.5x and their HP by 1.2x at the start of the chain. Boosts ATK of Striker characters by 3.25x after scoring 3 PERFECTs in a row.",
         special: "Reduce 3 turns of paralysis, randomize non-matching orbs, including [BLOCK] orbs, Adds 65x character's ATK as Additional Typeless Damage for 1 turn, when the captain is a Striker Character reduces enemies Percent Damage Reduction duration by 3 turns",
         sailor: {
-            "base": "If this character has an [INT] orb and you hit a Perfect with him, keep his [INT] orb for the next turn",
+            "base": "If this character has an [INT] orb and you hit a PERFECT with him, keep his [INT] orb for the next turn",
             "level1": "Makes [PSY] orbs \"beneficial\" for this unit",
         },
         sailorNotes: "#{beneficial}",
@@ -21876,12 +21876,12 @@ window.details = {
         specialName: "Fortune-Telling from the Shadow of Death"
     },
     1868: {//Fujitora
-        captain: "Increases damage received by 1.2x, Boosts ATK of Slasher characters by 3.25x at the start of the chain and their HP by 1.2x and boosts ATK of Slasher characters by 4.225x following a chain of Good > Great > Perfect hits",
+        captain: "Increases damage received by 1.2x, Boosts ATK of Slasher characters by 3.25x at the start of the chain and their HP by 1.2x and boosts ATK of Slasher characters by 4.225x following a chain of Good > Great > PERFECT hits",
         special: "Deals 10 hits of 20x character's ATK in typeless damage to random enemies, if this character is your Captain or Friend/Guest Captain, Changes all orbs on Slasher characters into Matching orbs and delays all enemies for 1 turn.",
         specialName: "The Rain of War's End"
     },
     1869: {//Fujitora
-        captain: "Increases damage received by 1.2x, Boosts ATK of Slasher characters by 3.25x at the start of the chain and their HP by 1.2x and boosts ATK of Slasher characters by 4.225x following a chain of Good > Great > Perfect hits",
+        captain: "Increases damage received by 1.2x, Boosts ATK of Slasher characters by 3.25x at the start of the chain and their HP by 1.2x and boosts ATK of Slasher characters by 4.225x following a chain of Good > Great > PERFECT hits",
         special: "Deals 10 hits of 20x character's ATK in typeless damage to random enemies, if this character is your Captain or Friend/Guest Captain, Changes all orbs on Slasher characters into Matching orbs and delays all enemies for 1 turn.",
         specialName: "The Rain of War's End",
         sailor: {
@@ -21936,11 +21936,11 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 10% at the start of the turn, heals for 2x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 2: If HP is below 15% at the start of the turn, heals for 2x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 3: If HP is below 20% at the start of the turn, heals for 2x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 4: If HP is below 30% at the start of the turn, heals for 2x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 5: If HP is below 50% at the start of the turn, heals for 2x this character's RCV at the end of the turn each time you hit a Perfect with this character"
+                    "Level 1: If HP is below 10% at the start of the turn, heals for 2x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 15% at the start of the turn, heals for 2x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 20% at the start of the turn, heals for 2x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below 30% at the start of the turn, heals for 2x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below 50% at the start of the turn, heals for 2x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
             {
@@ -21968,7 +21968,7 @@ window.details = {
         specialName: "Spring Death Knock",
         sailor: {
             "base": "Boosts this character's attack against [INT] characters by 1.1x",
-            "level1": "If this character has a [PSY] orb and you hit a Perfect with him, keep his [PSY] orb for the next turn",
+            "level1": "If this character has a [PSY] orb and you hit a PERFECT with him, keep his [PSY] orb for the next turn",
         },
         limit: [
             { "description": "Boosts base ATK by 10" },
@@ -21984,7 +21984,7 @@ window.details = {
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base RCV by 30" },
             { "description": "Boosts base HP by 70" },
-            { "description": "Acquire Sailor Ability 1: If this character has a [PSY] orb and you hit a Perfect with him, keep his [PSY] orb for the next turn" },
+            { "description": "Acquire Sailor Ability 1: If this character has a [PSY] orb and you hit a PERFECT with him, keep his [PSY] orb for the next turn" },
             { "description": "Acquire Potential 2: Slot Bind Self-reduction" },
         ],
         potential: [
@@ -22105,11 +22105,11 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 5% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 2: If HP is below 5% at the start of the turn, heals for 1.25x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 3: If HP is below 5% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 4: If HP is below 10% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 5: If HP is below 20% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a Perfect with this character"
+                    "Level 1: If HP is below 5% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 5% at the start of the turn, heals for 1.25x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 5% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below 10% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below 20% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
             {
@@ -22161,11 +22161,11 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 5% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 2: If HP is below 5% at the start of the turn, heals for 1.25x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 3: If HP is below 5% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 4: If HP is below 10% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 5: If HP is below 20% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a Perfect with this character"
+                    "Level 1: If HP is below 5% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 5% at the start of the turn, heals for 1.25x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 5% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below 10% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below 20% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
             {
@@ -22339,7 +22339,7 @@ window.details = {
     },
     1881: {//Mihawk 6+
         captain: "Boosts ATK of Slasher characters by a variable factor between 1.5x and 3.5x based on the timing of the attack of the previous unit in the chain",
-        captainNotes: "A hit below Good or a Miss will boost the ATK of the next unit by 1.5x, a Good hit by 2x, a Great hit by 2.75x and a Perfect hit by 3.5x. This bonus is applied only to Slasher characters.",
+        captainNotes: "A hit below Good or a Miss will boost the ATK of the next unit by 1.5x, a Good hit by 2x, a Great hit by 2.75x and a PERFECT hit by 3.5x. This bonus is applied only to Slasher characters.",
         special: [
             {
                 "description": "Deals 30% of the damage dealt in the previous turn as typeless damage to all enemies",
@@ -22605,11 +22605,11 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 5% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 2: If HP is below 10% at the start of the turn, heals for 1.25x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 3: If HP is below 20% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 4: If HP is below 30% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 5: If HP is below 40% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a Perfect with this character"
+                    "Level 1: If HP is below 5% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 10% at the start of the turn, heals for 1.25x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 20% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below 30% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below 40% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
         ],
@@ -22713,11 +22713,11 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 5% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 2: If HP is below 5% at the start of the turn, heals for 1.25x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 3: If HP is below 5% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 4: If HP is below 10% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 5: If HP is below 20% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a Perfect with this character"
+                    "Level 1: If HP is below 5% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 5% at the start of the turn, heals for 1.25x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 5% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below 10% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below 20% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
         ]
@@ -22789,11 +22789,11 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 5% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 2: If HP is below 5% at the start of the turn, heals for 1.25x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 3: If HP is below 5% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 4: If HP is below 10% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 5: If HP is below 20% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a Perfect with this character"
+                    "Level 1: If HP is below 5% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 5% at the start of the turn, heals for 1.25x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 5% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below 10% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below 20% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
         ]
@@ -22917,11 +22917,11 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 10% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 2: If HP is below 15% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 3: If HP is below 20% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 4: If HP is below 30% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 5: If HP is below 50% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a Perfect with this character"
+                    "Level 1: If HP is below 10% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 15% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 20% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below 30% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below 50% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
         ]
@@ -23143,19 +23143,19 @@ window.details = {
         specialName: "Blossoming a New Year Celebration",
     },
     1915: {//G4 Luffy
-        captain: "Boosts ATK of Powerhouse and Free Spirit characters by 2x after scoring 3 Perfects in a row",
+        captain: "Boosts ATK of Powerhouse and Free Spirit characters by 2x after scoring 3 PERFECTs in a row",
         special: "Randomizes all orbs, including [BLOCK] orbs, changes own orb into [QCK], deals 300x character's ATK in typeless damage to one enemy and boosts the Color Affinity of all characters by 1.75x for 1 turn",
         specialName: "Gomu Gomu no Leo Bazooka",
     },
     1916: {//G4 Luffy
         captain: {
-            "base": "Boosts ATK of Powerhouse and Free Spirit characters by 2x after scoring 2 Perfects in a row",
-            "level1": "Boosts ATK of Powerhouse and Free Spirit characters by 2x after scoring 2 Perfects in a row and reduce damage received by 2%",
-            "level2": "Boosts ATK of Powerhouse and Free Spirit characters by 2x after scoring 2 Perfects in a row and reduce damage received by 4%",
-            "level3": "Boosts ATK of Powerhouse and Free Spirit characters by 2x after scoring 2 Perfects in a row, boosts by 3x after scoring 4 Perfects in a row and reduce damage received by 4%",
-            "level4": "Boosts ATK of Powerhouse and Free Spirit characters by 2x after scoring 2 Perfects in a row, boosts by 3.25x after scoring 4 Perfects in a row and reduce damage received by 4%",
-            "level5": "Boosts ATK of Powerhouse and Free Spirit characters by 2x after scoring 2 Perfects in a row, boosts by 3.5x after scoring 4 Perfects in a row and reduce damage received by 4%",
-            "level6": "Boosts ATK of Powerhouse and Free Spirit characters by 2x after scoring 2 Perfects in a row, boosts by 4x after scoring 4 Perfects in a row and reduce damage received by 4%",
+            "base": "Boosts ATK of Powerhouse and Free Spirit characters by 2x after scoring 2 PERFECTs in a row",
+            "level1": "Boosts ATK of Powerhouse and Free Spirit characters by 2x after scoring 2 PERFECTs in a row and reduce damage received by 2%",
+            "level2": "Boosts ATK of Powerhouse and Free Spirit characters by 2x after scoring 2 PERFECTs in a row and reduce damage received by 4%",
+            "level3": "Boosts ATK of Powerhouse and Free Spirit characters by 2x after scoring 2 PERFECTs in a row, boosts by 3x after scoring 4 PERFECTs in a row and reduce damage received by 4%",
+            "level4": "Boosts ATK of Powerhouse and Free Spirit characters by 2x after scoring 2 PERFECTs in a row, boosts by 3.25x after scoring 4 PERFECTs in a row and reduce damage received by 4%",
+            "level5": "Boosts ATK of Powerhouse and Free Spirit characters by 2x after scoring 2 PERFECTs in a row, boosts by 3.5x after scoring 4 PERFECTs in a row and reduce damage received by 4%",
+            "level6": "Boosts ATK of Powerhouse and Free Spirit characters by 2x after scoring 2 PERFECTs in a row, boosts by 4x after scoring 4 PERFECTs in a row and reduce damage received by 4%",
         },
         special: "Randomizes all orbs, including [BLOCK] orbs, changes own orb into [QCK], deals 300x character's ATK in typeless damage to one enemy and boosts the Color Affinity of all characters by 1.75x for 1 turn",
         specialName: "Gomu Gomu no Leo Bazooka",
@@ -23170,18 +23170,18 @@ window.details = {
             { "description": "Boosts base HP by 30" },
             { "description": "Boosts base RCV by 5" },
             { "description": "Acquire Potential 1: [STR] Damage Reduction" },
-            { "description": "Acquire new Captain Ability: Boosts ATK of Powerhouse and Free Spirit characters by 2x after scoring 2 Perfects in a row and reduce damage received by 2%" },
+            { "description": "Acquire new Captain Ability: Boosts ATK of Powerhouse and Free Spirit characters by 2x after scoring 2 PERFECTs in a row and reduce damage received by 2%" },
             { "description": "Acquire Sailor Ability 1: Boosts base ATK, HP and RCV of Free Spirit characters by 30" },
             { "description": "Boosts base ATK by 15" },
             { "description": "Boosts base HP by 40" },
             { "description": "Boosts base RCV by 10" },
-            { "description": "Acquire new Captain Ability: Boosts ATK of Powerhouse and Free Spirit characters by 2x after scoring 2 Perfects in a row and reduce damage received by 4%" },
+            { "description": "Acquire new Captain Ability: Boosts ATK of Powerhouse and Free Spirit characters by 2x after scoring 2 PERFECTs in a row and reduce damage received by 4%" },
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base HP by 50" },
             { "description": "Boosts base RCV by 15" },
-            { "description": "Acquire new Captain Ability: Boosts ATK of Powerhouse and Free Spirit characters by 2x after scoring 2 Perfects in a row, boosts by 3x after scoring 4 Perfects in a row and reduce damage received by 4%" },
+            { "description": "Acquire new Captain Ability: Boosts ATK of Powerhouse and Free Spirit characters by 2x after scoring 2 PERFECTs in a row, boosts by 3x after scoring 4 PERFECTs in a row and reduce damage received by 4%" },
             { "description": "Reduce base Special Cooldown by 2 turns" },
             { "description": "Boosts base ATK by 25" },
             { "description": "Boosts base HP by 60" },
@@ -23191,7 +23191,7 @@ window.details = {
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base HP by 65" },
             { "description": "Reduce base Special Cooldown by 4 turns" },
-            { "description": "Acquire new Captain Ability: Boosts ATK of Powerhouse and Free Spirit characters by 2x after scoring 2 Perfects in a row, boosts by 3.25x after scoring 4 Perfects in a row and reduce damage received by 4%" },
+            { "description": "Acquire new Captain Ability: Boosts ATK of Powerhouse and Free Spirit characters by 2x after scoring 2 PERFECTs in a row, boosts by 3.25x after scoring 4 PERFECTs in a row and reduce damage received by 4%" },
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base HP by 70" },
             { "description": "Acquire Sailor Ability 2: Boosts base ATK, HP and RCV of Powerhouse characters by 30" },
@@ -23200,10 +23200,10 @@ window.details = {
             { "description": "Boosts base RCV by 30" },
             { "description": "Reduce base Special Cooldown by 5 turns" },
             { "description": "Acquire 1 additional Socket slot" },
-            { "description": "Acquire new Captain Ability: Boosts ATK of Powerhouse and Free Spirit characters by 2x after scoring 2 Perfects in a row, boosts by 3.5x after scoring 4 Perfects in a row and reduce damage received by 4%" },
+            { "description": "Acquire new Captain Ability: Boosts ATK of Powerhouse and Free Spirit characters by 2x after scoring 2 PERFECTs in a row, boosts by 3.5x after scoring 4 PERFECTs in a row and reduce damage received by 4%" },
             { "description": "Boosts base ATK by 40" },
             { "description": "Boosts base HP by 100" },
-            { "description": "Acquire new Captain Ability: Boosts ATK of Powerhouse and Free Spirit characters by 2x after scoring 2 Perfects in a row, boosts by 4x and reduce damage received by 4% after scoring 4 Perfects in a row" },
+            { "description": "Acquire new Captain Ability: Boosts ATK of Powerhouse and Free Spirit characters by 2x after scoring 2 PERFECTs in a row, boosts by 4x and reduce damage received by 4% after scoring 4 PERFECTs in a row" },
             { "description": "Acquire Potential 2: Enrage" },
         ],
         potential: [
@@ -23304,11 +23304,11 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 10% at the start of the turn, heals for 2x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 2: If HP is below 15% at the start of the turn, heals for 2x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 3: If HP is below 20% at the start of the turn, heals for 2x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 4: If HP is below 30% at the start of the turn, heals for 2x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 5: If HP is below 50% at the start of the turn, heals for 2x this character's RCV at the end of the turn each time you hit a Perfect with this character"
+                    "Level 1: If HP is below 10% at the start of the turn, heals for 2x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 15% at the start of the turn, heals for 2x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 20% at the start of the turn, heals for 2x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below 30% at the start of the turn, heals for 2x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below 50% at the start of the turn, heals for 2x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
             {
@@ -23379,11 +23379,11 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 10% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 2: If HP is below 15% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 3: If HP is below 20% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 4: If HP is below 30% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 5: If HP is below 50% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character"
+                    "Level 1: If HP is below 10% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 15% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 20% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below 30% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below 50% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
             {
@@ -23824,11 +23824,11 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 5% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 2: If HP is below 5% at the start of the turn, heals for 1.25x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 3: If HP is below 5% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 4: If HP is below 10% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 5: If HP is below 20% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a Perfect with this character"
+                    "Level 1: If HP is below 5% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 5% at the start of the turn, heals for 1.25x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 5% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below 10% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below 20% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
         ]
@@ -24001,14 +24001,14 @@ window.details = {
         captain: "Boosts ATK of [INT] characters by 2.5x",
         special: "Reduces Bind and Despair duration by 3 turns and changes own orb into [RCV]. If your Captain is a Cerebral character, adds .7x to Chain multiplier for 1 turn and changes bottom row orbs into matching orbs",
         specialName: "Vigorous Straight Fist",
-        sailor: "If this character has a [RCV] orb and you hit a Perfect with her, keep her [RCV] orb for the next turn",
+        sailor: "If this character has a [RCV] orb and you hit a PERFECT with her, keep her [RCV] orb for the next turn",
     },
     1953: {//Koala
         captain: "Boosts ATK of [INT] characters by 2.75x",
         special: "Reduces Bind and Despair duration by 3 turns and changes own orb into [RCV]. If your Captain is a Cerebral character, adds .7x to Chain multiplier for 1 turn and changes bottom row orbs into matching orbs",
         specialName: "Vigorous Straight Fist",
         sailor: {
-            "base": "If this character has a [RCV] orb and you hit a Perfect with her, keep her [RCV] orb for the next turn",
+            "base": "If this character has a [RCV] orb and you hit a PERFECT with her, keep her [RCV] orb for the next turn",
             "level1": "Boosts base ATK, HP and RCV of Fighter and Cerebral characters by 35",
         },
         limit: [
@@ -24053,16 +24053,16 @@ window.details = {
     },
     1954: {//Nami
         captain: "Boosts ATK of Cerebral Characters by 2x",
-        special: "Cuts the current HP of all enemies by 10% and changes own orb into [RCV]. Boosts ATK of Cerebral characters by 1.75x for 1 turn. If during that turn you score 5 Perfect hits, boosts ATK of Cerebral characters by 2.25x in the following turn.",
+        special: "Cuts the current HP of all enemies by 10% and changes own orb into [RCV]. Boosts ATK of Cerebral characters by 1.75x for 1 turn. If during that turn you score 5 PERFECT hits, boosts ATK of Cerebral characters by 2.25x in the following turn.",
         specialName: "Thunder Trap",
-        sailor: "If this character has a [RCV] orb and you hit a Perfect with her, keep her [RCV] orb for the next turn",
+        sailor: "If this character has a [RCV] orb and you hit a PERFECT with her, keep her [RCV] orb for the next turn",
     },
     1955: {//Nami
         captain: "Boosts ATK of Cerebral Characters by 3x if they have a matching orb, by 2x otherwise",
-        special: "Cuts the current HP of all enemies by 10% and changes own orb into [RCV]. Boosts ATK of Cerebral characters by 1.75x for 1 turn. If during that turn you score 5 Perfect hits, boosts ATK of Cerebral characters by 2.25x in the following turn.",
+        special: "Cuts the current HP of all enemies by 10% and changes own orb into [RCV]. Boosts ATK of Cerebral characters by 1.75x for 1 turn. If during that turn you score 5 PERFECT hits, boosts ATK of Cerebral characters by 2.25x in the following turn.",
         specialName: "Thunder Trap",
         sailor: {
-            "base": "If this character has a [RCV] orb and you hit a Perfect with her, keep her [RCV] orb for the next turn",
+            "base": "If this character has a [RCV] orb and you hit a PERFECT with her, keep her [RCV] orb for the next turn",
             "level1": "Makes [QCK] orbs \"beneficial\" for Cerebral characters",
         },
         sailorNotes: "#{beneficial}",
@@ -24662,11 +24662,11 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 10% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 2: If HP is below 15% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 3: If HP is below 20% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 4: If HP is below 30% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 5: If HP is below 50% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a Perfect with this character"
+                    "Level 1: If HP is below 10% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 15% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 20% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below 30% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below 50% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
         ],
@@ -24735,11 +24735,11 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 10% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 2: If HP is below 15% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 3: If HP is below 20% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 4: If HP is below 30% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 5: If HP is below 50% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a Perfect with this character"
+                    "Level 1: If HP is below 10% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 15% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 20% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below 30% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below 50% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
         ],
@@ -24799,14 +24799,14 @@ window.details = {
         ],
     },
     1990: {//Garp
-        captain: "Boosts ATK of Free Spirit characters by 2.5x until the first hit other than Perfect",
+        captain: "Boosts ATK of Free Spirit characters by 2.5x until the first hit other than PERFECT",
         special: "Delays all enemies for 2 turns. If your Captain is a [STR] or [QCK] character, adds 55x character's ATK as Additional Typeless Damage for 1 turn",
         specialName: "An Outcry of Bitterness",
         sailor: "Makes [STR] orbs \"beneficial\" for Free Spirit characters",
         sailorNotes: "#{beneficial}",
     },
     1991: {//Garp
-        captain: "Boosts ATK of Free Spirit characters by 2.75x until the first hit other than Perfect",
+        captain: "Boosts ATK of Free Spirit characters by 2.75x until the first hit other than PERFECT",
         special: "Delays all enemies for 2 turns. If your Captain is a [STR] or [QCK] character, adds 55x character's ATK as Additional Typeless Damage for 1 turn",
         specialName: "An Outcry of Bitterness",
         sailor: {
@@ -24845,11 +24845,11 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 10% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 2: If HP is below 15% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 3: If HP is below 20% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 4: If HP is below 30% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 5: If HP is below 50% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a Perfect with this character"
+                    "Level 1: If HP is below 10% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 15% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 20% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below 30% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below 50% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
         ],
@@ -24918,11 +24918,11 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 10% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 2: If HP is below 15% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 3: If HP is below 20% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 4: If HP is below 30% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 5: If HP is below 50% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a Perfect with this character"
+                    "Level 1: If HP is below 10% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 15% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 20% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below 30% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below 50% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
         ],
@@ -25024,11 +25024,11 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 20% at the start of the turn, heals for 0.5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 2: If HP is below 25% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 3: If HP is below 35% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 4: If HP is below 50% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 5: If HP is below 50% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a Perfect with this character"
+                    "Level 1: If HP is below 20% at the start of the turn, heals for 0.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 25% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 35% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below 50% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below 50% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
         ],
@@ -25201,11 +25201,11 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 10% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 2: If HP is below 20% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 3: If HP is below 20% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 4: If HP is below 30% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 5: If HP is below 30% at the start of the turn, heals for 2x this character's RCV at the end of the turn each time you hit a Perfect with this character"
+                    "Level 1: If HP is below 10% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 20% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 20% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below 30% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below 30% at the start of the turn, heals for 2x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
         ],
@@ -25301,11 +25301,11 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 10% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 2: If HP is below 15% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 3: If HP is below 20% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 4: If HP is below 25% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 5: If HP is below 30% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a Perfect with this character"
+                    "Level 1: If HP is below 10% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 15% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 20% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below 25% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below 30% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
         ],
@@ -25380,7 +25380,7 @@ window.details = {
         specialName: "Treasured Trust",
     },
     2019: {//FN Shanks
-        captain: "Boosts ATK of Free Spirit characters by 2x and their HP by 1.2x at the start of the chain, by 2.6x after the 3rd Perfect in a row",
+        captain: "Boosts ATK of Free Spirit characters by 2x and their HP by 1.2x at the start of the chain, by 2.6x after the 3rd PERFECT in a row",
         special: "Reduces Bind and Despair duration by 2 turns. If your Captain is a Free Spirit character, changes [BLOCK] orbs into Matching orbs",
         specialName: "Treasure Trust",
     },
@@ -25395,14 +25395,14 @@ window.details = {
         specialName: "Taste of \"Treasure Payment\"",
     },
     2022: {//Akainu V2
-        captain: "Boosts ATK of [STR] and [INT] characters by 3.25x and makes [STR] and [INT] orbs \"beneficial\" to [STR] and [INT] characters. Deals up to 500x character's ATK in Typeless damage to one enemy at the end of each turn depending on how many Perfects scored that turn.",
-        captainNotes: "End of turn damage is based on how many Perfects you hit this turn: 0 Perfects - 0x ATK; 1 Perfect - 5x ATK; 2 Perfects - 13x ATK; 3 Perfects - 32x ATK; 4 Perfects - 80x ATK; 5 Perfects - 200x ATK; 6 Perfects - 500x ATK<br>#{beneficial}",
+        captain: "Boosts ATK of [STR] and [INT] characters by 3.25x and makes [STR] and [INT] orbs \"beneficial\" to [STR] and [INT] characters. Deals up to 500x character's ATK in Typeless damage to one enemy at the end of each turn depending on how many PERFECTs scored that turn.",
+        captainNotes: "End of turn damage is based on how many PERFECTs you hit this turn: 0 PERFECTs - 0x ATK; 1 PERFECT - 5x ATK; 2 PERFECTs - 13x ATK; 3 PERFECTs - 32x ATK; 4 PERFECTs - 80x ATK; 5 PERFECTs - 200x ATK; 6 PERFECTs - 500x ATK<br>#{beneficial}",
         special: "Randomizes all orbs, including [BLOCK] orbs, into either [STR] or [INT] orbs and amplifies the effect of orbs on [STR] and [INT] characters by 2.25x for 1 turn",
         specialName: "The Natural Disaster's Final Attack: Scorched Earth",
     },
     2023: {//Akainu V2
-        captain: "Boosts ATK of [STR] and [INT] characters by 3.25x and makes [STR] and [INT] orbs \"beneficial\" to [STR] and [INT] characters. Deals up to 500x character's ATK in Typeless damage to one enemy at the end of each turn depending on how many Perfects scored that turn.",
-        captainNotes: "End of turn damage is based on how many Perfects you hit this turn: 0 Perfects - 0x ATK; 1 Perfect - 5x ATK; 2 Perfects - 13x ATK; 3 Perfects - 32x ATK; 4 Perfects - 80x ATK; 5 Perfects - 200x ATK; 6 Perfects - 500x ATK<br>#{beneficial}",
+        captain: "Boosts ATK of [STR] and [INT] characters by 3.25x and makes [STR] and [INT] orbs \"beneficial\" to [STR] and [INT] characters. Deals up to 500x character's ATK in Typeless damage to one enemy at the end of each turn depending on how many PERFECTs scored that turn.",
+        captainNotes: "End of turn damage is based on how many PERFECTs you hit this turn: 0 PERFECTs - 0x ATK; 1 PERFECT - 5x ATK; 2 PERFECTs - 13x ATK; 3 PERFECTs - 32x ATK; 4 PERFECTs - 80x ATK; 5 PERFECTs - 200x ATK; 6 PERFECTs - 500x ATK<br>#{beneficial}",
         special: "Randomizes all orbs, including [BLOCK] orbs, into either [STR] or [INT] orbs and amplifies the effect of orbs on [STR] and [INT] characters by 2.25x for 1 turn",
         specialName: "The Natural Disaster's Final Attack: Scorched Earth",
         sailor: {
@@ -25572,7 +25572,7 @@ window.details = {
         specialName: "Kimino Sleeve Cage: Lock",
         sailor: {
             "base": "Boosts base ATK of [PSY] and [QCK] characters by 50",
-            "level1": "If this character has a [PSY] orb and you hit a Perfect with her, keep her [PSY] orb for the next turn",
+            "level1": "If this character has a [PSY] orb and you hit a PERFECT with her, keep her [PSY] orb for the next turn",
         },
         limit: [
             { "description": "Boosts base RCV by 10" },
@@ -25582,7 +25582,7 @@ window.details = {
             { "description": "Boosts base HP by 20" },
             { "description": "Boosts base HP by 25" },
             { "description": "Boosts base HP by 30" },
-            { "description": "Acquire Sailor Ability 1: If this character has a [PSY] orb and you hit a Perfect with her, keep her [PSY] orb for the next turn" },
+            { "description": "Acquire Sailor Ability 1: If this character has a [PSY] orb and you hit a PERFECT with her, keep her [PSY] orb for the next turn" },
             { "description": "Boosts base HP by 45" },
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base ATK by 25" },
@@ -25767,7 +25767,7 @@ window.details = {
         specialName: "Galleon Lariat",
     },
     2037: {//Jesus Burgess
-        captain: "Boosts ATK of Fighter characters by 2.5x at the start of the chain, by 3.75x after scoring 4 Perfects in a row.",
+        captain: "Boosts ATK of Fighter characters by 2.5x at the start of the chain, by 3.75x after scoring 4 PERFECTs in a row.",
         special: "Cuts the current HP of each enemy by 7% and boosts ATK of Fighter characters by 1.75x for a variable amount of turns",
         specialNotes: "Fighter ATK buff duration is equal to the amount of enemies on the stage at the time the special was activated",
         sailor: {
@@ -25884,7 +25884,7 @@ window.details = {
     2046: {//Yasopp
         captain: "Boosts ATK of Shooter characters by 2.25x and their HP by 1.2x",
         special: "Deals 20x character's ATK in Typeless damage to one enemy that will ignore damage negating abilities and barriers. If your crew has 4 or more characters of the same Type, amplifies the effect of orbs for the Dominant Type by 1.75x for 1 turn.",
-        sailor: "If this character has a [STR] orb and you hit a Perfect with him, keep his [STR] orb for the next turn",
+        sailor: "If this character has a [STR] orb and you hit a PERFECT with him, keep his [STR] orb for the next turn",
         specialName: "Exquisite Aim",
     },
     2047: {//Koala
@@ -26050,11 +26050,11 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 20% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 2: If HP is below 25% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 3: If HP is below 35% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 4: If HP is below 50% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 5: If HP is below 50% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a Perfect with this character"
+                    "Level 1: If HP is below 20% at the start of the turn, heals for .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 25% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 35% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below 50% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below 50% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
          ],
@@ -26071,13 +26071,13 @@ window.details = {
         special: "Deals 60x character's ATK in [INT] damage to all enemies, changes all orbs on Fighter characters into matching orbs and reduces enemies Percent Damage Reduction and Increased Defense duration by 5 turns.",
     },
     2067: {//Tashigi
-        captain: "Boosts ATK of Slasher characters by 2x at the start of the chain, by 2.5x after scoring 3 Perfects in a row and recovers 1.25x character's RCV in HP at the end of each turn",
+        captain: "Boosts ATK of Slasher characters by 2x at the start of the chain, by 2.5x after scoring 3 PERFECTs in a row and recovers 1.25x character's RCV in HP at the end of each turn",
         special: "Reduces ATK DOWN and Increase Damage Taken duration by 5 turns, changes [BLOCK], [STR] and [QCK] orbs into Matching orbs and locks the chain multiplier at 2.75x for 3 turns",
         specialName: "Spinning Jump Attack",
         sailor: "Boosts base ATK, HP and RCV for Slasher characters by 50",
     },
     2068: {//Tashigi
-        captain: "Boosts ATK of Slasher characters by 2.75x at the start of the chain, by 3.4375x after scoring 3 Perfects in a row and recovers 1.25x character's RCV in HP at the end of each turn",
+        captain: "Boosts ATK of Slasher characters by 2.75x at the start of the chain, by 3.4375x after scoring 3 PERFECTs in a row and recovers 1.25x character's RCV in HP at the end of each turn",
         special: "Reduces ATK DOWN and Increase Damage Taken duration by 5 turns, changes [BLOCK], [STR] and [QCK] orbs into Matching orbs and locks the chain multiplier at 2.75x for 3 turns",
         specialName: "Spinning Jump Attack",
         sailor: {
@@ -26162,14 +26162,14 @@ window.details = {
         captain: "<b>Always Active: </b>Boosts HP of all characters by 1.25x, boosts chances of getting [STR], [QCK], [PSY] orbs.<br><b>Gear 2 Captain: </b>Boosts ATK of all characters by 3x, slightly boosts chances of getting [RCV] orbs and makes [QCK] orbs \"beneficial\" to all characters<br><b>Gear 3 Captain: </b>Boosts ATK of all characters by 3.5x after 2 consecutive PERFECTs, boosts chances of getting [RCV] orbs and makes [STR] orbs \"beneficial\" to all characters<br><b>Gear 4 - Boundman Captain: </b>Boosts ATK of all characters by 4x, reduce damage received by 20%, boosts chances of getting [RCV] orbs and makes [STR], [QCK] and [PSY] orbs \"beneficial\" to all characters<br><b>Gear 4 - Tankman Captain: </b>Boosts own ATK by 4.25x, boosts ATK of all other characters by 4x, reduce damage received by 50% and makes [STR], [QCK] and [PSY] orbs \"beneficial\" to all characters<br><b>Action: </b>Based on how full Gear Power Gauge is, transforms Luffy. If Gear Power is above 50%, change between Gear 2 and Gear 3. If Gear Power is full, change into Gear 4 - Boundman. This can be used an unlimited amount of times per turn.",
         captainnotes: "In order to increase Gear Power Gauge level, you must hit a PERFECT with Luffy or consume [RCV] orbs. MAX Gear Power Gauge level is 8. Hitting a perfect with Luffy and consuming a [RCV] orb increases Gauge level by 1. If Luffy gets swapped out in battle, Gear Gauge Power will go to 0. While in Gear 4, Luffy will stay in that form until Gauge Power goes to 0. Attacking with any character while in Gear 4 reduces Gear Power Gauge by 3.",
         special: "Deals 150x character's ATK in Typeless damage to all enemies, boosts ATK of all characters by 2x for 1 turn, makes [RCV] and [TND] orb \"beneficial\" for all characters for 3 turns. If Luffy is Captain or Friend/Guest Captain, transform into Gear 4",
-        specialNotes: "If you use this special after consuming 10 [RCV] orbs since the last time this character used his special, transform into Tankman, otherwise transform into Boundman",
+        specialNotes: "If you use this special after consuming 10 [RCV] orbs since the start of the fight, transform into Tankman, otherwise transform into Boundman",
         specialName: "Gomu Gomu no Kong Organ",
     },
     2074: {//V4 Luffy
         captain: "<b>Always Active: </b>Boosts HP of all characters by 1.25x, boosts chances of getting [STR], [QCK], [PSY] orbs.<br><b>Gear 2 Captain: </b>Boosts ATK of all characters by 3x, slightly boosts chances of getting [RCV] orbs and makes [QCK] orbs \"beneficial\" to all characters<br><b>Gear 3 Captain: </b>Boosts ATK of all characters by 3.5x after 2 consecutive PERFECTs, boosts chances of getting [RCV] orbs and makes [STR] orbs \"beneficial\" to all characters<br><b>Gear 4 - Boundman Captain: </b>Boosts ATK of all characters by 4x, reduce damage received by 20%, boosts chances of getting [RCV] orbs and makes [STR], [QCK] and [PSY] orbs \"beneficial\" to all characters<br><b>Gear 4 - Tankman Captain: </b>Boosts own ATK by 4.25x, boosts ATK of all other characters by 4x, reduce damage received by 50% and makes [STR], [QCK] and [PSY] orbs \"beneficial\" to all characters<br><b>Action: </b>Based on how full Gear Power Gauge is, transforms Luffy. If Gear Power is above 50%, change between Gear 2 and Gear 3. If Gear Power is full, change into Gear 4 - Boundman. This can be used an unlimited amount of times per turn.",
         captainnotes: "In order to increase Gear Power Gauge level, you must hit a PERFECT with Luffy or consume [RCV] orbs. MAX Gear Power Gauge level is 8. Hitting a perfect with Luffy and consuming a [RCV] orb increases Gauge level by 1. If Luffy gets swapped out in battle, Gear Gauge Power will go to 0. While in Gear 4, Luffy will stay in that form until Gauge Power goes to 0. Attacking with any character while in Gear 4 reduces Gear Power Gauge by 3.",
         special: "Deals 150x character's ATK in Typeless damage to all enemies, boosts ATK of all characters by 2x for 1 turn, makes [RCV] and [TND] orb \"beneficial\" for all characters for 3 turns. If Luffy is Captain or Friend/Guest Captain, transform into Gear 4",
-        specialNotes: "If you use this special after consuming 10 [RCV] orbs since the last time this character used his special, transform into Tankman, otherwise transform into Boundman",
+        specialNotes: "If you use this special after consuming 10 [RCV] orbs since the start of the fight, transform into Tankman, otherwise transform into Boundman",
         specialName: "Gomu Gomu no Kong Organ",
         sailor: {
             "base": "None",
@@ -26191,11 +26191,11 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 10% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 2: If HP is below 15% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 3: If HP is below 20% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 4: If HP is below 30% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 5: If HP is below 50% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a Perfect with this character"
+                    "Level 1: If HP is below 10% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 15% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 20% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below 30% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below 50% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
             {
@@ -26263,6 +26263,7 @@ window.details = {
         captain: "Boosts ATK of Fighter characters by 2x",
         special: "Reduces Paralysis and Despair duration by 4 turns, delays all enemies for 1 turn, changes [STR], [DEX], [QCK], [INT] and [PSY] orbs into [PSY] orbs and boosts ATK against enemies with reduced defense by 1.75x for ? turns",
         specialName: "Eleclaw",
+        sailor: "Completely resists Paralysis on this character",
     },
     2078: {//Carrot
         captain: "Boosts ATK of Fighter characters by 2.5x and boosts HP of Free Spirit characters by 1.2x",
@@ -26300,13 +26301,14 @@ window.details = {
         captain: "Boosts ATK of Slasher and Free Spirit characters by 2x",
         special: "Deals 8 hits of of 20x character's ATK in typeless damage to random enemies. If enemies have All Debuff Protection or Delay Debuff Protection at the time the special was activated, Changes [BLOCK] orbs into Matching orbs and boosts the Color Affinity of all characters by 1.75x for 1 turn",
         specialName: "The Spherical Song that Resonates the Soul",
+        sailor: "If this character has a [STR] orb and you hit a PERFECT with him, keep his [STR] orb for the next turn",
     },
     2080: {//Brook
         captain: "Boosts ATK of Slasher and Free Spirit characters by 2x and boosts chain multiplier by 1.5",
         special: "Deals 8 hits of of 20x character's ATK in typeless damage to random enemies. If enemies have All Debuff Protection or Delay Debuff Protection at the time the special was activated, Changes [BLOCK] orbs into Matching orbs and boosts the Color Affinity of all characters by 1.75x for 1 turn",
         specialName: "The Spherical Song that Resonates the Soul",
         sailor: {
-            "base": "If this character has a [STR] orb and you hit a Perfect with him, keep his [STR] orb for the next turn",
+            "base": "If this character has a [STR] orb and you hit a PERFECT with him, keep his [STR] orb for the next turn",
             "level1": "Makes [RCV] and [TND] orbs \"beneficial\" for himself",
         },
         sailorNotes: "#{beneficial}",
@@ -26421,18 +26423,18 @@ window.details = {
         specialName: "Humble Words to Excite the Party",
     },
     2096: {//Raid Zoro
-        captain: "Boosts ATK of Slasher and Driven characters by ??x",
-        special: "Deals 55x character's ATK in typeless damage to one enemy that will ignore damage negating abilities and barriers, reduces enemy's Threshold Damage Reduction and % Damage reduction buffs by 5 turns and boosts the Color Affinity of Slasher and Driven characters by 2x for 1 turn if your HP is full, otherwise 1.75x",
+        captain: "Not Translated.",
+        special: "Deals 55x character's ATK in Typeless damage to one enemy that will ignore damage negating abilities and barriers, reduces enemy's Threshold Damage Reduction and Percent Damage Reduction duration by 5 turns. If HP is full at the time the special was activated, boosts the Color Affinity of Slasher and Driven characters by 2x for 2 turns, 1.75x otherwise",
+        specialName: "Ittoryu Daishinkan (Great Dragon Shock)",
         specialNotes: "#{ignoreBarrier}<br>#{colorAffinity : 2}",
-        specialName: "Ittoryu: Great Dragon Shock",
-        sailor: "If this character has a [QCK] orb and you hit a Good or a Great with him, keep his [QCK] orb for the next turn",
+        sailor: "If this character has a [QCK] orb and you hit a GOOD or GREAT with him, keep his [QCK] orb for the next turn",
     },
     2097: {//Raid Zoro
-        captain: "Boosts ATK of Slasher and Driven characters by 2.75x, by 3x after 2 consecutive PERFECTS, by 3.3x after 5 consecutive PERFECTS, and their HP by 1.2x",
-        special: "Deals 55x character's ATK in typeless damage to one enemy that will ignore damage negating abilities and barriers, reduces enemy's Threshold Damage Reduction and % Damage reduction buffs by 5 turns and boosts the Color Affinity of Slasher and Driven characters by 2x for 1 turn if your HP is full, otherwise 1.75x",
+        captain: "Boosts Slasher and Driven character's ATK by 2.75x and their HP by 1.2x, by 3x after 3 consecutive PERFECTs, by 3.3x after 5 consecutive PERFECTs.",
+        special: "Deals 55x character's ATK in Typeless damage to one enemy that will ignore damage negating abilities and barriers, reduces enemy's Threshold Damage Reduction and Percent Damage Reduction duration by 5 turns. If HP is full at the time the special was activated, boosts the Color Affinity of Slasher and Driven characters by 2x for 2 turns, 1.75x otherwise",
+        specialName: "Ittoryu Daishinkan (Great Dragon Shock)",
         specialNotes: "#{ignoreBarrier}<br>#{colorAffinity : 2}",
-        specialName: "Ittoryu: Great Dragon Shock",
-        sailor: "If this character has a [QCK] orb and you hit a Good or a Great with him, keep his [QCK] orb for the next turn",
+        sailor: "If this character has a [QCK] orb and you hit a GOOD or GREAT with him, keep his [QCK] orb for the next turn",
     },
     2110: {//Kid
         captain: "Boosts ATK of Striker and Shooter characters by ?x and deals ?x character's ATK in [DEX] damage to all enemies at the end of each turn",
