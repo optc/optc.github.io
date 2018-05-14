@@ -1777,7 +1777,7 @@ window.details = {
             "base": "Boosts ATK and RCV of DEX characters by 2x",
             "level1": "Boosts ATK and RCV of DEX characters by 2x and boosts ATK of Shooter characters by 1.2x",
         },
-        captainNotes: "Boosts stack, so [DEX] and Shooter character's ATK will be boosted by 2.4x",
+        captainNotes: "Attack boost stacks, so a [DEX] Shooter character has a 2.4x ATK",
         sailor: {
             "base": "None",
             "level1": "Boosts base ATK, HP and RCV of [DEX] characters by 50",
@@ -11285,7 +11285,7 @@ window.details = {
     },
     1163: {//Tesoro
         captain: "Boosts ATK of PSY characters by 1.75x. Also boosts ATK of Driven and Cerebral characters by 1.5x. Boosts amount of Beli received by 2x",
-        captainNotes: "The two Boosts stack with each other so a PSY Driven or a PSY Cerebral Unit will be boosted by 2.625",
+        captainNotes: "Attack boost stacks, so a [PSY] Driven or a [PSY] Cerebral character has a 2.625x ATK",
         special: "Deals large [PSY] damage to all enemies and if HP is above 50%, changes all orbs to [PSY] orbs",
         specialName: "Gold-Gold Fruit",
         sailor: {
@@ -12300,7 +12300,7 @@ window.details = {
     },
     1233: {//Tashigi
         captain: "Boosts ATK of Slasher and Cerebral characters by 1.5x and their RCV by 1.2x",
-        captainNotes: "Attack boost stacks, so a Slasher Cerebral unit has 2.25x ATK",
+        captainNotes: "Attack boost stacks, so a Slasher/Cerebral character has a 2.25x ATK",
         special: "Deals 15x character's ATK in [QCK] damage to all enemies. Boosts the Color Affinity of Slasher and Cerebral characters by 1.5x for 2 turns",
         specialNotes: "#{colorAffinity : 1.5}",
         specialName: "Cutting Drizzle",
@@ -12308,7 +12308,7 @@ window.details = {
     },
     1234: {//Tashigi
         captain: "Boosts ATK of Slasher and Cerebral characters by 1.6x and their RCV by 1.3x",
-        captainNotes: "Attack boost stacks, so a Slasher Cerebral unit has 2.56x ATK",
+        captainNotes: "Attack boost stacks, so a Slasher/Cerebral character has a 2.56x ATK",
         special: "Deals 15x character's ATK in [QCK] damage to all enemies. Boosts the Color Affinity of Slasher and Cerebral characters by 1.5x for 2 turns",
         specialNotes: "#{colorAffinity : 1.5}",
         specialName: "Cutting Drizzle",
@@ -12479,14 +12479,14 @@ window.details = {
     },
     1243: {// Fortnight Hack
         captain: "Boosts ATK of Fighter and Powerhouse characters by 1.3x",
-        captainNotes: "Effect stacks, so Fighter/Powerhouse characters get 1.69x ATK",
+        captainNotes: "Attack boost stacks, so a Fighter/Powerhouse character has a 1.69x ATK",
         special: "Deals 15x character's ATK in [INT] damage to all enemies. Changes own orb into [INT] and changes adjacent orbs into [G] orbs",
         specialName:"Fishman karate, KO blow",
         specialNotes: "#{gOrbs}"
     },
     1244: {// Fortnight Hack
         captain: "Boosts ATK of Fighter characters by 1.75x and the ATK of Powerhouse characters by 1.3x",
-        captainNotes: "Effect stacks, so Fighter/Powerhouse characters get 2.275x ATK",
+        captainNotes: "Attack boost stacks, so a Fighter/Powerhouse character has a 2.275x ATK",
         special: "Deals 15x character's ATK in [INT] damage to all enemies. Changes own orb into [INT] and changes adjacent orbs into [G] orbs",
         specialName:"Fishman karate, KO blow",
         specialNotes: "#{gOrbs}"
@@ -12509,13 +12509,13 @@ window.details = {
     },
     1248: {// Kimono Marco
         captain: "Boosts ATK of Fighter and Powerhouse characters by 1.3x",
-        captainNotes: "Ability stacks, so Fighter/Powerhouse characters gets ATK boosted by 1.69x",
+        captainNotes: "Attack boost stacks, so a Fighter/Powerhouse character has a 1.69x ATK",
         special: "Recovers 3,000 HP and reduces damage received by 50% for 1 turn",
         specialName:"Shining Daylight - Dayflower",
     },
     1249: {// Kimono Marco
         captain: "Boosts ATK of Fighter and Powerhouse characters by 1.6x",
-        captainNotes: "Ability stacks, so Fighter/Powerhouse characters gets ATK boosted by 2.56x",
+        captainNotes: "Attack boost stacks, so a Fighter/Powerhouse characters has a 2.56x ATK",
         special: "Recovers 3,000 HP and reduces damage received by 50% for 1 turn",
         specialName:"Shining Daylight - Dayflower",
     },
@@ -12902,14 +12902,14 @@ window.details = {
     },
     1273: {//Jesus Burgess
         captain: "Boosts ATK of Fighter and Powerhouse characters by 1.5x and their HP by 1.2",
-        captainNotes: "Boosts stack, so a Fighter/Powerhouse character gets 2.25x ATK and 1.44x HP",
+        captainNotes: "Boosts stack, so a Fighter/Powerhouse character has a 2.25x ATK and 1.44x HP",
         special: "Deals 20x character's ATK in [STR] damage to all enemies. Boosts ATK of Fighter characters by 1.5x for 5 turns",
         sailor: "Boosts base HP of all characters by 75",
         specialName: "Champion of the Wild Roar",
     },
     1274: {//Jesus Burgess
         captain: "Boosts ATK of Fighter and Powerhouse characters by 1.6x and their HP by 1.2x",
-        captainNotes: "Boosts stack, so a Fighter/Powerhouse character gets 2.56x ATK and 1.44x HP",
+        captainNotes: "Boosts stack, so a Fighter/Powerhouse character has a 2.56x ATK and 1.44x HP",
         special: "Deals 20x character's ATK in [STR] damage to all enemies. Boosts ATK of Fighter characters by 1.5x for 5 turns",
         sailor: "Boosts base HP of all characters by 75",
         specialName: "Champion of the Wild Roar",
@@ -15742,7 +15742,7 @@ window.details = {
     },
     1477: {//Fukaboshi
         captain: "Boosts ATK of Striker characters by 2.5x and boosts HP of Powerhouse characters by 1.25x",
-        captainNotes: "This effect does stack for characters that have both classes, so Striker/Powerhouse characters will have 2.5x ATK and 1.25x HP",
+        captainNotes: "Boost stacks, so a Striker/Powerhouse character has a 2.5x ATK and 1.25x HP",
         special: "Delays all enemies by 1 turn and boosts ATK of Striker and Powerhouse characters by 1.75x for 1 turn",
         sailor: {
             "base": "Boosts base HP, RCV and ATK of all characters by 50",
@@ -16170,14 +16170,14 @@ window.details = {
     },
     1507: {//White Day Sanji
         captain: "Boosts ATK of Fighter and Powerhouse characters by 1.3x",
-        captainNotes: "Boosts stack, so a Fighter/Powerhouse character gets 1.69x ATK",
+        captainNotes: "Attack boost stacks, so a Fighter/Powerhouse character has a 1.69x ATK",
         special: "Deals 15x character's ATK in [QCK] damage to one enemy, boosts ATK of Fighter characters by 1.75x for 1 turn",
         sailor: "Boosts base ATK of all characters by 15",
         specialName: "Diable Jambe - Concassé Baked",
     },
     1508: {//White Day Sanji
         captain: "Boosts ATK of Fighter and Powerhouse characters by 1.5x. Recovers 2x character's RCV in HP at the end of each turn",
-        captainNotes: "Boosts stack, so a Fighter/Powerhouse character gets 2.25x ATK",
+        captainNotes: "Attack boost stacks, so a Fighter/Powerhouse character has a 2.25x ATK",
         special: "Deals 15x character's ATK in [QCK] damage to one enemy, boosts ATK of Fighter characters by 1.75x for 1 turn",
         sailor: "Boosts base ATK of all characters by 15",
         specialName: "Diable Jambe - Concassé Baked",
@@ -21294,7 +21294,7 @@ window.details = {
     },
     1833: {//Reiju
         captain: "Boosts ATK of [INT] characters by 1.75x and Powerhouse characters by 1.2x and the RCV of Powerhouse characters by 1.1x",
-        captainNotes: "Attack boost stacks, so an [INT] Powerhouse unit has 2.1x ATK",
+        captainNotes: "Attack boost stacks, so a [INT] Powerhouse character has a 2.1x ATK",
         special: "If your captain is [INT] or [PSY], recovers 7,000 HP, removes poison and reduces the duration of paralysis, despair and silence by 3 turns.  If the captain is a Powerhouse character, reduces damage received by 70% for 2 turns ",
         specialName: "Dangerous Healing",
         sailor: "Makes [PSY] orbs \"beneficial\" for this unit",
@@ -21302,7 +21302,7 @@ window.details = {
     },
     1834: {//Reiju
         captain: "Boosts ATK of [INT] characters by 2.25x and Powerhouse characters by 1.3x and the RCV of Powerhouse characters by 1.2x",
-        captainNotes: "Attack boost stacks, so an [INT] Powerhouse unit has 2.925x ATK",
+        captainNotes: "Attack boost stacks, so a [INT] Powerhouse character has a 2.925x ATK",
         special: "If your captain is [INT] or [PSY], recovers 7,000 HP, removes poison and reduces the duration of paralysis, despair and silence by 3 turns.  If the captain is a Powerhouse character, reduces damage received by 70% for 2 turns ",
         specialName: "Dangerous Healing",
         sailor: {
@@ -21352,7 +21352,7 @@ window.details = {
     },
     1835: {//Ichiji
         captain: "Boosts ATK of [STR] characters by 1.75x, boosts ATK of Powerhouse characters by 1.2x and the HP of Powerhouse characters by 1.2x",
-        captainNotes: "Attack boost stacks, so an [STR] Powerhouse unit has 2.1x ATK",
+        captainNotes: "Attack boost stacks, so a [STR] Powerhouse character has a 2.1x ATK",
         special: "If your captain is [STR] or[PSY] character, locks the chain multiplier at 2.5x for 2 turns. If your Captain is a Powerhouse character, delays all enemies for 2 turns",
         specialName: "Majestic Impact",
         sailor: "Makes [PSY] orbs \"beneficial\" for this unit",
@@ -21360,7 +21360,7 @@ window.details = {
     },
     1836: {//Ichiji
         captain: "Boosts ATK of [STR] characters by 2.25x, boosts ATK of Powerhouse characters by 1.3x and the HP of Powerhouse characters by 1.2x",
-        captainNotes: "Attack boost stacks, so an [STR] Powerhouse unit has 2.925x ATK",
+        captainNotes: "Attack boost stacks, so a [STR] Powerhouse character has a 2.925x ATK",
         special: "If your captain is [STR] or[PSY] character, locks the chain multiplier at 2.5x for 2 turns. If your Captain is a Powerhouse character, delays all enemies for 2 turns",
         specialName: "Majestic Impact",
         sailor: {
@@ -21411,7 +21411,7 @@ window.details = {
     },
     1837: {//Niji
         captain: "Boosts ATK of [QCK] characters by 1.75x, boosts ATK of Powerhouse characters by 1.2x and the HP of Powerhouse characters by 1.2x",
-        captainNotes: "Attack boost stacks, so an [QCK] Powerhouse unit has 2.1x ATK",
+        captainNotes: "Attack boost stacks, so a [QCK] Powerhouse character has a 2.1x ATK",
         special: "If your captain is a [QCK] or [PSY] character, boosts ATK of all characters by 1.75x for 2 turns. If your captain is a Powerhouse character, locks all orbs for 1 turn",
         specialName: "Blitz Needle",
         sailor: "Makes [PSY] orbs \"beneficial\" for this unit",
@@ -21419,7 +21419,7 @@ window.details = {
     },
     1838: {//Niji
         captain: "Boosts ATK of [QCK] characters by 2.25x, boosts ATK of Powerhouse characters by 1.3x and the HP of Powerhouse characters by 1.2x",
-        captainNotes: "Attack boost stacks, so an [QCK] Powerhouse unit has 2.925x ATK",
+        captainNotes: "Attack boost stacks, so a [QCK] Powerhouse character has a 2.925x ATK",
         special: "If your captain is a [QCK] or [PSY] character, boosts ATK of all characters by 1.75x for 2 turns. If your captain is a Powerhouse character, locks all orbs for 1 turn",
         specialName: "Blitz Needle",
         sailor: {
@@ -21469,7 +21469,7 @@ window.details = {
     },
     1839: {//Yonji
         captain: "Boosts ATK of [DEX] characters by 1.75x, boosts ATK of Powerhouse characters by 1.2x and the HP of Powerhouse characters by 1.2x",
-        captainNotes: "Attack boost stacks, so an [DEX] Powerhouse unit has 2.1x ATK",
+        captainNotes: "Attack boost stacks, so a [DEX] Powerhouse character has a 2.1x ATK",
         special: "If your captain is a [DEX] or [PSY] character, boosts ATK against delayed enemies by 1.75x for 1 turn. If your captain is a Powerhouse character, adds 40x characters ATK as additional typeless damage for 1 turn",
         specialName: "Burst End Kick",
         specialNotes: "Extra Damage can only be boosted by conditional Boosters.",
@@ -21478,7 +21478,7 @@ window.details = {
     },
     1840: {//Yonji
         captain: "Boosts ATK of [DEX] characters by 2.25x, boosts ATK of Powerhouse characters by 1.3x and the HP of Powerhouse characters by 1.2x",
-        captainNotes: "Attack boost stacks, so an [DEX] Powerhouse unit has 2.925x ATK",
+        captainNotes: "Attack boost stacks, so a [DEX] Powerhouse character has a 2.925x ATK",
         special: "If your captain is a [DEX] or [PSY] character, boosts ATK against delayed enemies by 1.75x for 1 turn. If your captain is a Powerhouse character, adds 40x characters ATK as additional typeless damage for 1 turn",
         specialName: "Burst End Kick",
         specialNotes: "Extra Damage can only be boosted by conditional Boosters.",
@@ -25818,7 +25818,8 @@ window.details = {
         potentialNotes: "#{enrage}"
     },
     2038: {//Boa Hancock
-        captain: "Not Translated",
+        captain: "Boosts ATK of [QCK] and Free Spirit characters by 1.5x",
+        captainNotes: "Attack boost stacks, so a [QCK] Free Spirit character has a 2.25x ATK",
         special: "Recovers 3,960 HP, reduces enemies's ATK Up and End of Turn Damage/Percent Cut Buff duration by 7 turns and reduces damage received by 80% for 1 turn.",
         sailor: {
             "base": "Makes [TND] orbs \"beneficial\" for all characters if your Captain is a [QCK] or [PSY] character",
@@ -25828,7 +25829,7 @@ window.details = {
     },
     2039: {//Boa Hancock
         captain: "Boosts ATK of [QCK] and Free Spirit characters by 1.75x",
-        captainNotes: "The bonus is cumulative. [QCK] Free Spirit characters get a 3.0625x bonus.",
+        captainNotes: "Attack boost stacks, so a [QCK] Free Spirit character has a 3.0625x ATK",
         special: "Recovers 3,960 HP, reduces enemies's ATK Up and End of Turn Damage/Percent Cut Buff duration by 7 turns and reduces damage received by 80% for 1 turn.",
         sailor: {
             "base": "Makes [TND] orbs \"beneficial\" for all characters if your Captain is a [QCK] or [PSY] character",
@@ -25838,7 +25839,7 @@ window.details = {
         specialName: "Glorious Scenery",
     },
     2040: {//Whitebeard
-        captain: "Not Translated",
+        captain: "Boosts ATK of Fighter and Powerhouse characters by 2x",
         special: "Randomizes all orbs, into either [G] or [RCV] orbs and boosts own ATK by 2.25x. If your Captain is a Fighter character, locks orbs for 1 turn.",
         sailor: {
             "base": "Makes [RCV] orbs \"beneficial\" for all characters if your Captain is a Fighter character",
@@ -25857,7 +25858,7 @@ window.details = {
         specialName: "The Gentle Breeze of the Feast",
     },
     2042: {//Kizaru
-        captain: "Not Translated",
+        captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of Free Spirit and Shooter characters by 1.75x",
         special: "If your crew has 2 or more characters of the same Type, reduces Special Cooldown of characters of that Type by 1 turn and changes adjacent orbs into Matching Orbs",
         specialNotes: "How the Cooldown Reduction works exactly is not tested.",
         sailor: "Boosts base ATK, HP and RCV of all characters by 20",
@@ -26338,6 +26339,7 @@ window.details = {
         captain: "Boosts ATK of Slasher characters by 2.25x",
         special: "Cuts the current HP of one enemy by 10%. If enemies have All Debuff Protection or Delay Debuff Protection at the time the special was activated, amplifies the effect of orbs by 1.75x for 1 turn and boosts the ATK of all characters by 1.75x for 1 turn",
         specialName: "Risky Diversion",
+        sailor: "Boosts base ATK of Slasher characters by 40",
     },
     2082: {//Pedro
         captain: "Boosts ATK of Slasher characters by 2.75x and reduces damage received by 7%",
@@ -26373,22 +26375,22 @@ window.details = {
         ]
     },
     2083: {//Reiju
-        captain: "Boosts ATK of [DEX] and [QCK] characters by ?x",
+        captain: "Boosts ATK of [DEX] and [QCK] characters by 2.25x",
         special: "Removes Poison, changes left column orbs into Matching orbs and amplifies the effect of orbs on [DEX], [QCK] and [PSY] characters by 1.75x for 1 turn",
         specialName: "Celebration at the Flower Garden",
     },
     2084: {//Reiju
-        captain: "Boosts ATK of [DEX] and [QCK] characters by 2.25x",
+        captain: "Boosts ATK of [DEX] and [QCK] characters by 2.5x and their RCV by 1.2x",
         special: "Removes Poison, changes left column orbs into Matching orbs and amplifies the effect of orbs on [DEX], [QCK] and [PSY] characters by 1.75x for 1 turn",
         specialName: "Celebration at the Flower Garden",
     },
     2085: {//Sanji
-        captain: "Boosts ATK of [DEX] and [QCK] characters by ?x",
+        captain: "Boosts ATK of [DEX] and [QCK] characters by 2.25x",
         special: "Recovers 3,000 HP, changes right column orbs into Matching orbs and boosts ATK of [DEX], [QCK] and [INT] characters by 1.75x for 1 turn",
         specialName: "A Full Bloom Bright Smile",
     },
     2086: {//Sanji
-        captain: "Boosts ATK of [DEX] and [QCK] characters by 2.25x",
+        captain: "Boosts ATK of [DEX] and [QCK] characters by 2.5x and their HP by 1.2x",
         special: "Recovers 3,000 HP, changes right column orbs into Matching orbs and boosts ATK of [DEX], [QCK] and [INT] characters by 1.75x for 1 turn",
         specialName: "A Full Bloom Bright Smile",
     },
