@@ -26420,6 +26420,20 @@ window.details = {
         special: "Reduces crew's ATK DOWN and Paralysis duration by 3 turns and delays all enemies for 1 turn",
         specialName: "Humble Words to Excite the Party",
     },
+    2096: {//Raid Zoro
+        captain: "Boosts ATK of Slasher and Driven characters by ??x",
+        special: "Deals 55x character's ATK in typeless damage to one enemy that will ignore damage negating abilities and barriers, reduces enemy's Threshold Damage Reduction and % Damage reduction buffs by 5 turns and boosts the Color Affinity of Slasher and Driven characters by 2x for 1 turn if your HP is full, otherwise 1.75x",
+        specialNotes: "#{ignoreBarrier}<br>#{colorAffinity : 2}",
+        specialName: "Ittoryu: Great Dragon Shock",
+        sailor: "If this character has a [QCK] orb and you hit a Good or a Great with him, keep his [QCK] orb for the next turn",
+    },
+    2097: {//Raid Zoro
+        captain: "Boosts ATK of Slasher and Driven characters by 2.75x, by 3x after 2 consecutive PERFECTS, by 3.3x after 5 consecutive PERFECTS, and their HP by 1.2x",
+        special: "Deals 55x character's ATK in typeless damage to one enemy that will ignore damage negating abilities and barriers, reduces enemy's Threshold Damage Reduction and % Damage reduction buffs by 5 turns and boosts the Color Affinity of Slasher and Driven characters by 2x for 1 turn if your HP is full, otherwise 1.75x",
+        specialNotes: "#{ignoreBarrier}<br>#{colorAffinity : 2}",
+        specialName: "Ittoryu: Great Dragon Shock",
+        sailor: "If this character has a [QCK] orb and you hit a Good or a Great with him, keep his [QCK] orb for the next turn",
+    },
     2110: {//Kid
         captain: "Boosts ATK of Striker and Shooter characters by ?x and deals ?x character's ATK in [DEX] damage to all enemies at the end of each turn",
         special: "Deals 5 hits of random [DEX] damage to random enemies and reduces Special Cooldown of Striker and Shooter specials by 2 turns. If your Captain is a Striker or Shooter character, deals 350x character's ATK as [DEX] damage to all enemies at the end of the turn for 2 turns",

@@ -2090,6 +2090,8 @@ window.aliases = {
     2089: ['', '', 'Pizza Nami'],
     2090: ['', '', 'Pizza Franky'],
     2091: ['', '', 'Pizza Usopp'],
+    2096: ['', '', 'Raid Zoro'],
+    2097: ['新世界を斬り伏せる剣豪', '', 'Raid Zoro'],
     2200: ['', '', 'V2 Raid Doffy', 'V2 Raid Doflamingo'],
     2201: ['', '', 'V2 Raid Doffy', 'V2 Raid Doflamingo'],
 };

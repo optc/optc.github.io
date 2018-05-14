@@ -2503,6 +2503,16 @@ window.drops = {
             Ultimate: [ 2032, -2032 ],
             Master: [ 2032, -2032 ]
         },
+
+        {
+            name: 'Clash!! Rorona Zoro',
+            thumb: 2097,
+            nakama: null,
+            gamewith: null,
+            Ultimate: [ 2096 ],
+            Master: [ 2096 ],
+            Expert : [ 2096 ],
+        },
         
         {
             name: 'Clash!! Heavenly Demon Doflamingo',
