@@ -3353,7 +3353,7 @@ window.specials = {
         atk: function(p) { return p.unit.class.has("Striker") ? window.specials[1722].multiplier : 1; },
         type: "type",
         onActivation: function(p) {
-            var n = (p.percHP <= 30 ? 1.5 : 1);
+            var n = (p.percHP <= 50 ? 1.5 : 1);
             window.specials[1722].multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + n + 'x multiplier.',
@@ -3365,7 +3365,7 @@ window.specials = {
         atk: function(p) { return p.unit.class.has("Striker") ? window.specials[1723].multiplier : 1; },
         type: "type",
         onActivation: function(p) {
-            var n = (p.percHP <= 30 ? 1.5 : 1);
+            var n = (p.percHP <= 50 ? 1.5 : 1);
             window.specials[1723].multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + n + 'x multiplier.',

@@ -19473,12 +19473,12 @@ window.details = {
     },
     1722: {//Neptune
         captain: "Boosts ATK of Striker characters by 2x.",
-        special: "Boosts ATK of Striker characters by 1.5x for 1 turn and Changes own orb into [PSY] if HP is below 30% when the special is activated and deals 20,000 Fixed damage to one enemy.",
+        special: "Boosts ATK of Striker characters by 1.5x for 1 turn and Changes own orb into [PSY] if HP is below 50% when the special is activated and deals 20,000 Fixed damage to one enemy.",
         specialName: "Sea God's Strike"
     },
     1723: {//Neptune
         captain: "Boosts ATK of Striker characters by 2x and their RCV by 1.2x.",
-        special: "Boosts ATK of Striker characters by 1.5x for 1 turn and Changes own orb into [PSY] if HP is below 30% when the special is activated and deals 20,000 Fixed damage to one enemy.",
+        special: "Boosts ATK of Striker characters by 1.5x for 1 turn and Changes own orb into [PSY] if HP is below 50% when the special is activated and deals 20,000 Fixed damage to one enemy.",
         specialName: "Sea God's Strike"
     },
     1724: {//Fukaboshi
