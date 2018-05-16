@@ -7073,12 +7073,16 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Shooter") ? 1.75 : 1; },
     },
     2097: {
-        damageSorter: function(d) { return CrunchUtils.classSort(d, 4, [ "Slasher", "Driven" ]); },
+        damageSorter: function(d) { return CrunchUtils.classSort(d, 3.3, [ "Slasher", "Driven" ]); },
         hitAtk: function(p) {
             if (!p.unit.class.has("Slasher") && !p.unit.class.has("Driven")) return 1;
             return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 3.3 : p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? 3 : 2.75;
         },
-        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
+        hp: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Driven") ? 1.2 : 1; },
+    },
+    2110: {
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Shooter") ? 2.25 : 1; },
     },
     2111: {
         atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Shooter") ? 2.5 : 1; },
