@@ -26528,13 +26528,14 @@ window.details = {
         },
     },
     2102: {//Baccarat
-        captain: "Not Translated",
+        captain: "Boosts ATK of all characters by ?x.",
         special: "Deal 77x character's ATK in typeless damage to all enemies and reduces crew's ATK DOWN, Chain Multiplier Limit and Paralysis duration by 3 turns. If your captain is [INT] or [QCK], Changes own orb into [INT] and amplifies the effect of orbs by 1.75x for 1 turn",
         specialName: "Lucky Coin of Victory",
         sailor: "If this character has a [INT] orb and you hit a GOOD or GREAT with her, keep her [INT] orb for the next turn",
     },
     2103: {//Baccarat
-        captain: "Not Translated",
+        captain: "Boosts ATK of all characters by 1.2x. Gives chance of duplicating a drop upon completion of the island.",
+        captainNotes: "Does not work if she was not your captain upon starting the island. Stacks with other additional drop captains, giving you two chances of getting an extra drop.",
         special: "Deal 77x character's ATK in typeless damage to all enemies and reduces crew's ATK DOWN, Chain Multiplier Limit and Paralysis duration by 3 turns. If your captain is [INT] or [QCK], Changes own orb into [INT] and amplifies the effect of orbs by 1.75x for 1 turn",
         specialName: "Lucky Coin of Victory",
         sailor: {
@@ -26543,13 +26544,13 @@ window.details = {
         },
     },
     2104: {//Mr. Tanaka
-        captain: "Not Translated",
+        captain: "Boosts ATK of Free Spirit and Shooter characters by ?x and boosts HP of [DEX] characters by ?x",
         special: "Deal 40x character's ATK in typeless damage to one enemy that will ignore damage negating abilities and barriers and reduces enemies's ATK UP, Increased Defense and Enrage duration by 3 turns. If your captain is [DEX] or [QCK], Changes own orb into [DEX] and adds 40x characters ATK as additional typeless damage for 1 turn",
         specialName: "A Tormenting Show",
         sailor: "If this character has a [DEX] orb and you hit a GOOD or GREAT with him, keep his [DEX] orb for the next turn",
     },
     2105: {//Mr. Tanaka
-        captain: "Not Translated",
+        captain: "Boosts ATK of Free Spirit and Shooter characters by 2.25x and boosts HP of [DEX] characters by 1.2x",
         special: "Deal 40x character's ATK in typeless damage to one enemy that will ignore damage negating abilities and barriers and reduces enemies's ATK UP, Increased Defense and Enrage duration by 3 turns. If your captain is [DEX] or [QCK], Changes own orb into [DEX] and adds 40x characters ATK as additional typeless damage for 1 turn",
         specialName: "A Tormenting Show",
         sailor: {
@@ -26564,7 +26565,7 @@ window.details = {
         sailor: "If this character has a [PSY] orb and you hit a GOOD or GREAT with her, keep her [PSY] orb for the next turn",
     },
     2107: {//Carina
-        captain: "Reduces cooldown of all specials by 1 turn at the start of the fight and boosts ATK of PSY characters by 2.5x and their RCV by ?x",
+        captain: "Reduces cooldown of all specials by 1 turn at the start of the fight and boosts ATK of PSY characters by 2.5x and their RCV by 1.2x",
         special: "enemy's Threshold Damage Reduction, Percent Damage Reduction and End of Turn Damage/Percent Cut duration by 4 turns, changes adjacent orbs and [BLOCK] orbs into Matching orbs and reduces damage received by 70% for 1 turn.",
         specialName: "The Great Final Act of One's Victory",
         sailor: {
