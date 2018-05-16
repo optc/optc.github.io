@@ -7618,13 +7618,13 @@ window.details = {
     879: {
         captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of Fighter characters by 1.75x",
         specialName: "Battle Preservation Fist: Manki Kayaku",
-        special: "Randomizes all orbs including [BLOCK] orbs into [G] orbs, deals random typeless damage to all enemies",
+        special: "Changes all orbs including [BLOCK] orbs into [G] orbs, deals random typeless damage to all enemies",
         specialNotes: "#{gOrbs}<br>#{random : 5,000 : 100,000}"
     },
     880: {
         captain: "Reduces cooldown of all specials by 3 turns at the start of the fight, boosts ATK of Fighter characters by 2x",
         specialName: "Battle Preservation Fist: Manki Kayaku",
-        special: "Randomizes all orbs including [BLOCK] orbs into [G] orbs, deals random typeless damage to all enemies",
+        special: "Changes all orbs including [BLOCK] orbs into [G] orbs, deals random typeless damage to all enemies",
         specialNotes: "#{gOrbs}<br>#{random : 5,000 : 100,000}",
         sailor: {
             "base": "None",
@@ -26040,7 +26040,7 @@ window.details = {
             { "description": "Boosts base ATK by 10" },
             { "description": "Boosts base HP by 30" },
             { "description": "Boosts base RCV by 10" },
-            { "description": "Acquire Potential: Reduce No Healing duration" },
+            { "description": "Acquire Potential 1: Reduce No Healing duration" },
             { "description": "Acquire new Captain Ability: Boosts ATK of [DEX], [PSY] and [INT] characters by 2.25x" },
             { "description": "Acquire Sailor Ability: Restores his own special by 3 turns when it is rewinded" },
             { "description": "Boosts base ATK by 15" },
@@ -26075,7 +26075,7 @@ window.details = {
             { "description": "Boosts base ATK by 50" },
             { "description": "Boosts base HP by 60" },
             { "description": "Acquire new Captain Ability: Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of [DEX], [PSY] and [INT] characters by 2.5x and if there is a [DEX], [PSY] and [INT] character in your crew, boosts chain multiplier by 1.5x" },
-            { "description": "Acquire Potential: Pinch Healing" },
+            { "description": "Acquire Potential 2: Pinch Healing" },
         ],
         potential: [
             {
@@ -26109,7 +26109,7 @@ window.details = {
     2066: {//6+ Jinbe
         captain: "Boosts ATK of Fighter characters by 3x, their HP by 1.5x and reduces damage received by 7%",
         specialName: "Shark Fist Tile Breaker: Great Earth Wave",
-        special: "Deals 60x character's ATK in [INT] damage to all enemies, changes all orbs on Fighter characters into matching orbs and reduces enemies Percent Damage Reduction and Increased Defense duration by 5 turns.",
+        special: "Deals 60x character's ATK in [INT] damage to all enemies, changes all orbs on Fighter characters into matching orbs and reduces enemy's Percent Damage Reduction and Increased Defense duration by 5 turns.",
     },
     2067: {//Tashigi
         captain: "Boosts ATK of Slasher characters by 2x at the start of the chain, by 2.5x after scoring 3 PERFECTs in a row and recovers 1.25x character's RCV in HP at the end of each turn",
@@ -26130,7 +26130,7 @@ window.details = {
             { "description": "Boosts base RCV by 10" },
             { "description": "Boosts base RCV by 20" },
             { "description": "Boosts base ATK by 20" },
-            { "description": "Acquire Potential: Critical Hit" },
+            { "description": "Acquire Potential 1: Critical Hit" },
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base ATK by 30" },
@@ -26141,7 +26141,7 @@ window.details = {
             { "description": "Boosts base HP by 40" },
             { "description": "Boosts base HP by 50" },
             { "description": "Acquire Sailor Ability: Makes [PSY] orbs \"beneficial\" for Slasher characters" },
-            { "description": "Acquire Potential: Cooldown Reduction" },
+            { "description": "Acquire Potential 2: Cooldown Reduction" },
         ],
         potential: [
             {
@@ -26482,16 +26482,117 @@ window.details = {
     2096: {//Raid Zoro
         captain: "Not Translated.",
         special: "Deals 55x character's ATK in Typeless damage to one enemy that will ignore damage negating abilities and barriers, reduces enemy's Threshold Damage Reduction and Percent Damage Reduction duration by 5 turns. If HP is full at the time the special was activated, boosts the Color Affinity of Slasher and Driven characters by 2x for 2 turns, 1.75x otherwise",
-        specialName: "Ittoryu Daishinkan (Great Dragon Shock)",
+        specialName: "One Sword Style: Great Dragon Shock",
         specialNotes: "#{ignoreBarrier}<br>#{colorAffinity : 2}",
         sailor: "If this character has a [QCK] orb and you hit a GOOD or GREAT with him, keep his [QCK] orb for the next turn",
     },
     2097: {//Raid Zoro
         captain: "Boosts Slasher and Driven character's ATK by 2.75x and their HP by 1.2x, by 3x after 3 consecutive PERFECTs, by 3.3x after 5 consecutive PERFECTs.",
         special: "Deals 55x character's ATK in Typeless damage to one enemy that will ignore damage negating abilities and barriers, reduces enemy's Threshold Damage Reduction and Percent Damage Reduction duration by 5 turns. If HP is full at the time the special was activated, boosts the Color Affinity of Slasher and Driven characters by 2x for 2 turns, 1.75x otherwise",
-        specialName: "Ittoryu Daishinkan (Great Dragon Shock)",
+        specialName: "One Sword Style: Great Dragon Shock",
         specialNotes: "#{ignoreBarrier}<br>#{colorAffinity : 2}",
         sailor: "If this character has a [QCK] orb and you hit a GOOD or GREAT with him, keep his [QCK] orb for the next turn",
+    },
+    2098: {//Tesoro
+        captain: "If you have a Striker, Shooter, Fighter, Slasher, Free Spirit, Cerebral, Powerhouse and Driven character on your crew, boosts ATK of all characters by 3.75x, their HP by 1.35x and boosts chances of getting Matching orbs. Boosts ATK by 4.5 after scoring 3 GREATs in a row. Each PERFECT scored reduces ATK boost by ?x.",
+        special: "Deals 200,000 fixed damage to all enemies, changes top and bottom row orbs into matching orbs and locks the chain multiplier at 3.25x for 1 turn.",
+        specialName: "Gon Inferno",
+    },
+    2099: {//Tesoro
+        captain: "If you have a Striker, Shooter, Fighter, Slasher, Free Spirit, Cerebral, Powerhouse and Driven character on your crew, boosts ATK of all characters by 3.75x, their HP by 1.35x and boosts chances of getting Matching orbs. Boosts ATK by 4.5 after scoring 3 GREATs in a row. Each PERFECT scored reduces ATK boost by ?x.",
+        special: "Deals 200,000 fixed damage to all enemies, changes top and bottom row orbs into matching orbs and locks the chain multiplier at 3.25x for 1 turn.",
+        specialName: "Gon Inferno",
+        sailor: {
+            "base": "None",
+            "level1": "Makes [STR], [DEX], [RCV], [TND] orbs \"beneficial\" for this unit",
+            "level2": "Boosts base ATK and HP of Driven and Striker characters by 50",
+        },
+    },
+    2100: {//Dice
+        captain: "Boosts ATK of Powerhouse characters by ?x and [STR] characters by ?x",
+        captainNotes: "The bonus is cumulative. [STR] Powerhouse characters get a ?x bonus.",
+        special: "Cuts the current HP of each enemy by 15% and reduces enemy Barrier duration by 1 turn. If your captain is [STR] or [QCK], Changes own orb into [STR] and boosts ATK of all characters by 1.75x for 1 turn",
+        specialName: "Furious Armored Tank",
+        sailor: "If this character has a [STR] orb and you hit a GOOD or GREAT with him, keep his [STR] orb for the next turn",
+    },
+    2101: {//Dice
+        captain: "Boosts ATK of Powerhouse characters by 2.25x and [STR] characters by 1.2x",
+        captainNotes: "The bonus is cumulative. [STR] Powerhouse characters get a 2.7x bonus.",
+        special: "Cuts the current HP of each enemy by 15% and reduces enemy Barrier duration by 1 turn. If your captain is [STR] or [QCK], Changes own orb into [STR] and boosts ATK of all characters by 1.75x for 1 turn",
+        specialName: "Furious Armored Tank",
+        sailor: {
+            "base": "If this character has a [STR] orb and you hit a GOOD or GREAT with him, keep his [STR] orb for the next turn",
+            "level1": "Boosts base ATK of all characters by 40",
+        },
+    },
+    2102: {//Baccarat
+        captain: "Not Translated",
+        special: "Deal 77x character's ATK in typeless damage to all enemies and reduces crew's ATK DOWN, Chain Multiplier Limit and Paralysis duration by 3 turns. If your captain is [INT] or [QCK], Changes own orb into [INT] and amplifies the effect of orbs by 1.75x for 1 turn",
+        specialName: "Lucky Coin of Victory",
+        sailor: "If this character has a [INT] orb and you hit a GOOD or GREAT with her, keep her [INT] orb for the next turn",
+    },
+    2103: {//Baccarat
+        captain: "Not Translated",
+        special: "Deal 77x character's ATK in typeless damage to all enemies and reduces crew's ATK DOWN, Chain Multiplier Limit and Paralysis duration by 3 turns. If your captain is [INT] or [QCK], Changes own orb into [INT] and amplifies the effect of orbs by 1.75x for 1 turn",
+        specialName: "Lucky Coin of Victory",
+        sailor: {
+            "base": "If this character has a [INT] orb and you hit a GOOD or GREAT with her, keep her [INT] orb for the next turn",
+            "level1": "Boosts base RCV of all characters by 40",
+        },
+    },
+    2104: {//Mr. Tanaka
+        captain: "Not Translated",
+        special: "Deal 40x character's ATK in typeless damage to one enemy that will ignore damage negating abilities and barriers and reduces enemies's ATK UP, Increased Defense and Enrage duration by 3 turns. If your captain is [DEX] or [QCK], Changes own orb into [DEX] and adds 40x characters ATK as additional typeless damage for 1 turn",
+        specialName: "A Tormenting Show",
+        sailor: "If this character has a [DEX] orb and you hit a GOOD or GREAT with him, keep his [DEX] orb for the next turn",
+    },
+    2105: {//Mr. Tanaka
+        captain: "Not Translated",
+        special: "Deal 40x character's ATK in typeless damage to one enemy that will ignore damage negating abilities and barriers and reduces enemies's ATK UP, Increased Defense and Enrage duration by 3 turns. If your captain is [DEX] or [QCK], Changes own orb into [DEX] and adds 40x characters ATK as additional typeless damage for 1 turn",
+        specialName: "A Tormenting Show",
+        sailor: {
+            "base": "If this character has a [DEX] orb and you hit a GOOD or GREAT with him, keep his [DEX] orb for the next turn",
+            "level1": "Reduces Silence duration on this character by 3 turns",
+        },
+    },
+    2106: {//Carina
+        captain: "Reduces cooldown of all specials by ? turn at the start of the fight and boosts ATK of PSY characters by ?x and their RCV by ?x",
+        special: "enemy's Threshold Damage Reduction, Percent Damage Reduction and End of Turn Damage/Percent Cut duration by 4 turns, changes adjacent orbs and [BLOCK] orbs into Matching orbs and reduces damage received by 70% for 1 turn.",
+        specialName: "The Great Final Act of One's Victory",
+        sailor: "If this character has a [PSY] orb and you hit a GOOD or GREAT with her, keep her [PSY] orb for the next turn",
+    },
+    2107: {//Carina
+        captain: "Reduces cooldown of all specials by 1 turn at the start of the fight and boosts ATK of PSY characters by 2.5x and their RCV by ?x",
+        special: "enemy's Threshold Damage Reduction, Percent Damage Reduction and End of Turn Damage/Percent Cut duration by 4 turns, changes adjacent orbs and [BLOCK] orbs into Matching orbs and reduces damage received by 70% for 1 turn.",
+        specialName: "The Great Final Act of One's Victory",
+        sailor: {
+            "base": "If this character has a [PSY] orb and you hit a GOOD or GREAT with her, keep her [PSY] orb for the next turn",
+            "level1": "If you have a Striker, Shooter, Fighter, Slasher, Free Spirit, Cerebral, Powerhouse and Driven character on your crew, Changes all orbs into Matching orbs at the start of the fight",
+        },
+    },
+    2108: {//Big Mom
+        captain: "Not Translated",
+        special: "Removes all positive buffs on your team, changes all orbs, including [BLOCK] orbs into [G] orbs, amplifies the effect of orbs by 3x for 1 turn, boosts ATK of all characters by 1.25x for 1 turn and boosts the Color Affinity of all characters by 1.25x for 1 turn",
+        specialName: "The Harmony that Interweaves the Souls",
+    },
+    2109: {//Big Mom
+        captain: {
+            "base": "If there's a [STR], [DEX], [QCK], [PSY] and [INT] character in your crew, boosts ATK of all characters by 1.5x, boosts damage of specials by 2x and cuts the current HP of each enemy by 5% at the end of each turn. Recovers 1x character's RCV in HP at the end of each turn.",
+            "level1": "Not Translated",
+            "level2": "Not Translated",
+            "level3": "Not Translated",
+            "level4": "Not Translated",
+            "level5": "Not Translated",
+            "level6": "If there's a [STR], [DEX], [QCK], [PSY] and [INT] character in your crew, boosts ATK of all characters by 2x, boosts damage of specials by 3x and cuts the current HP of each enemy by 10% at the end of each turn. Recovers 2x character's RCV in HP at the end of each turn.",
+        },
+        special: "Removes all positive buffs on your team, changes all orbs, including [BLOCK] orbs into [G] orbs, amplifies the effect of orbs by 3x for 1 turn, boosts ATK of all characters by 1.25x for 1 turn and boosts the Color Affinity of all characters by 1.25x for 1 turn",
+        specialName: "The Harmony that Interweaves the Souls",
+        sailor: {
+            "base": "None",
+            "level1": "Makes [RCV] orbs \"beneficial\" for this unit",
+            "level2": "Cannot be Blown Away",
+        },
+        sailorNotes: "#{beneficial}",
     },
     2110: {//Kid
         captain: "Boosts ATK of Striker and Shooter characters by 2.25x and deals 3x character's ATK in [DEX] damage to all enemies at the end of each turn",

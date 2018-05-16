@@ -481,12 +481,12 @@ window.sailors = {
         atkStatic: function(p) { return p.unit.type == "DEX" ? 20 : 0; },
         rcvStatic: function(p) { return p.unit.type == "DEX" ? 20 : 0; },
         hpStatic: function(p) { return p.unit.type == "DEX" ? 20 : 0; },
-    }
+    },
     2111: {
         atkStatic: function(p) { return p.unit.type == "DEX" ? 20 : 0; },
         rcvStatic: function(p) { return p.unit.type == "DEX" ? 20 : 0; },
         hpStatic: function(p) { return p.unit.type == "DEX" ? 20 : 0; },
-    }
+    },
     5000: {
         atkStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 50 : 0; },
     },

@@ -4938,6 +4938,88 @@ window.specials = {
             });
         }
     },
+    2098: {
+        chain: function(p) { return 3.25; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 3.25 : 1;
+        }
+    },
+    2099: {
+        chain: function(p) { return 3.25; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 3.25 : 1;
+        }
+    },
+    2100: {
+        atk: function(p) { return window.specials[2100].multiplier; },
+        type: "class",
+        onActivation: function(p) {
+            window.specials[2100].multiplier = 1;
+            if (p.captain.type == "STR" || p.captain.type == "QCK"){
+                window.specials[2100].multiplier = 1.75;
+            }
+        }
+    },
+    2101: {
+        atk: function(p) { return window.specials[2101].multiplier; },
+        type: "class",
+        onActivation: function(p) {
+            window.specials[2101].multiplier = 1;
+            if (p.captain.type == "STR" || p.captain.type == "QCK"){
+                window.specials[2101].multiplier = 1.75;
+            }
+        }
+    },
+    2102: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[2102].multiplier, [p.friendCaptain, p.captain]); },
+        onActivation: function(p) {
+            window.specials[2102].multiplier = 1;
+            if (p.captain.type == "INT" || p.captain.type == "QCK"){
+                window.specials[2102].multiplier = 1.75;
+            }
+        }
+    },
+    2103: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[2103].multiplier, [p.friendCaptain, p.captain]); },
+        onActivation: function(p) {
+            window.specials[2103].multiplier = 1;
+            if (p.captain.type == "INT" || p.captain.type == "QCK"){
+                window.specials[2103].multiplier = 1.75;
+            }
+        }
+    },
+    2104: {
+        staticMult: function(p) { return window.specials[2104].multiplier ? 40 : 0; },
+        onActivation: function(p) {
+            window.specials[2104].multiplier = false;
+            if (p.captain.type == "DEX" || p.captain.type == "QCK"){
+                window.specials[2104].multiplier = true;
+            }
+        }
+    },
+    2105: {
+        staticMult: function(p) { return window.specials[2105].multiplier ? 40 : 0; },
+        onActivation: function(p) {
+            window.specials[2105].multiplier = false;
+            if (p.captain.type == "DEX" || p.captain.type == "QCK"){
+                window.specials[2105].multiplier = true;
+            }
+        }
+    },
+    2108: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 3, [p.friendCaptain, p.captain]); },
+        affinity: function(p) { return 1.25; },
+        atk: function(p) { return 1.25; },
+        type: "type",
+    },
+    2109: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 3, [p.friendCaptain, p.captain]); },
+        affinity: function(p) { return 1.25; },
+        atk: function(p) { return 1.25; },
+        type: "type",
+    },
     5000: {
         atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 1.5 : 1; },
         type: "type",
