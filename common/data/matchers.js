@@ -233,6 +233,12 @@ window.matchers = [
         target: 'special',
         matcher: /description/i
     },
+
+    {
+        name: 'Universal ATK boosting specials',
+        target: 'special',
+        matcher: /Boosts ATK[^,]+(all characters)/i
+    },
     
     {
         name: '1.25x ATK specials',
@@ -601,6 +607,12 @@ window.matchers = [
         name: 'Zombies',
         target: 'special',
         matcher: /Protects from defeat/i
+    },
+    
+    {
+        name: 'End of Turn Damage Dealer',
+        target: 'special',
+        matcher: /(deals|cuts).+end of the turn/i
     },
     
     {

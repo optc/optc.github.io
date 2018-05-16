@@ -19473,12 +19473,12 @@ window.details = {
     },
     1722: {//Neptune
         captain: "Boosts ATK of Striker characters by 2x.",
-        special: "Boosts ATK of Striker characters by 1.5x for 1 turn and Changes own orb into [PSY] if HP is below 30% when the special is activated and deals 20,000 Fixed damage to one enemy.",
+        special: "Boosts ATK of Striker characters by 1.5x for 1 turn and Changes own orb into [PSY] if HP is below 50% when the special is activated and deals 20,000 Fixed damage to one enemy.",
         specialName: "Sea God's Strike"
     },
     1723: {//Neptune
         captain: "Boosts ATK of Striker characters by 2x and their RCV by 1.2x.",
-        special: "Boosts ATK of Striker characters by 1.5x for 1 turn and Changes own orb into [PSY] if HP is below 30% when the special is activated and deals 20,000 Fixed damage to one enemy.",
+        special: "Boosts ATK of Striker characters by 1.5x for 1 turn and Changes own orb into [PSY] if HP is below 50% when the special is activated and deals 20,000 Fixed damage to one enemy.",
         specialName: "Sea God's Strike"
     },
     1724: {//Fukaboshi
@@ -26380,13 +26380,13 @@ window.details = {
     },
     2081: {//Pedro
         captain: "Boosts ATK of Slasher characters by 2.25x",
-        special: "Cuts the current HP of one enemy by 10%. If enemies have All Debuff Protection or Delay Debuff Protection at the time the special was activated, amplifies the effect of orbs by 1.75x for 1 turn and boosts the ATK of all characters by 1.75x for 1 turn",
+        special: "Cuts the current HP of one enemy by 10%. If enemies have All Debuff Protection or Delay Debuff Protection at the time the special was activated, amplifies the effect of orbs by 1.75x for 1 turn and boosts ATK of all characters by 1.75x for 1 turn",
         specialName: "Risky Diversion",
         sailor: "Boosts base ATK of Slasher characters by 40",
     },
     2082: {//Pedro
         captain: "Boosts ATK of Slasher characters by 2.75x and reduces damage received by 7%",
-        special: "Cuts the current HP of one enemy by 10%. If enemies have All Debuff Protection or Delay Debuff Protection at the time the special was activated, amplifies the effect of orbs by 1.75x for 1 turn and boosts the ATK of all characters by 1.75x for 1 turn",
+        special: "Cuts the current HP of one enemy by 10%. If enemies have All Debuff Protection or Delay Debuff Protection at the time the special was activated, amplifies the effect of orbs by 1.75x for 1 turn and boosts ATK of all characters by 1.75x for 1 turn",
         specialName: "Risky Diversion",
         sailor: {
             "base": "Boosts base ATK of Slasher characters by 40",
