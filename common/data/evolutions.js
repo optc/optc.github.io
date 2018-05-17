@@ -3355,6 +3355,30 @@ window.evolutions = {
         evolution: 2097,
         evolvers: [  ]
     },
+    2098: {
+        evolution: 2099,
+        evolvers: [  ]
+    },
+    2100: {
+        evolution: 2101,
+        evolvers: [  ]
+    },
+    2102: {
+        evolution: 2103,
+        evolvers: [  ]
+    },
+    2104: {
+        evolution: 2105,
+        evolvers: [  ]
+    },
+    2106: {
+        evolution: 2107,
+        evolvers: [  ]
+    },
+    2108: {
+        evolution: 2109,
+        evolvers: [  ]
+    },
     2110: {
         evolution: 2111,
         evolvers: [ 118, 97, 1180, 302, 102 ]
