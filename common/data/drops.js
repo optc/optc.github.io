@@ -7,7 +7,7 @@ window.drops = {
             thumb: 28,
             global: true,
             nakama: 1002800,
-            completion: '5x Rainbow Gems',	
+            completion: '5x Rainbow Gems',
             gamewith: 3417,
             '01': [ 119, 120 ],
             '02': [ 27, 115, 119, 120 ],
