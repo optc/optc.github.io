@@ -14077,7 +14077,7 @@ window.details = {
         captain: "Boosts chances of getting Matching orbs, boosts ATK of Cerebral characters by 2.5x",
         special: "Reduces Paralysis duration by 3 turns. For Cerebral and Free Spirit characters, amplifies the effects of orbs by 2x for 1 turn. Makes [RCV] and [TND] orbs \"beneficial\" to Cerebral and Free Spirit characters for 1 turn.",
         specialName: "A Decision Made over Sake",
-        specialNotes: "#{orb : 2x<br>#{beneficial}",
+        specialNotes: "#{orb : 2x}<br>#{beneficial}",
     },
     1381: {//Christmas Tashigi
         captain: "Boosts ATK and RCV of Slasher and Cerebral characters by 1.2x",
@@ -26560,13 +26560,13 @@ window.details = {
     },
     2106: {//Carina
         captain: "Reduces cooldown of all specials by ? turn at the start of the fight and boosts ATK of PSY characters by ?x and their RCV by ?x",
-        special: "Reduces enemy's Threshold Damage Reduction, Percent Damage Reduction, and Resilience and End of Turn Damage/Percent Cut Buffs duration by 4 turns, changes adjacent orbs and [BLOCK] orbs into Matching orbs and reduces damage received by 70% for 2 turns.",
+        special: "Reduces enemy's Threshold Damage Reduction, Percent Damage Reduction, and Resilience and End of Turn Damage/Percent Cut Buffs duration by 4 turns, changes adjacent orbs and [BLOCK] orbs into Matching orbs, randomizes non-matching orbs and reduces damage received by 70% for 2 turns.",
         specialName: "The Great Final Act of One's Victory",
         sailor: "If this character has a [PSY] orb and you hit a GOOD or GREAT with her, keep her [PSY] orb for the next turn",
     },
     2107: {//Carina
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight and boosts ATK of PSY characters by 2.5x and their RCV by 1.2x",
-        special: "Reduces enemy's Threshold Damage Reduction, Percent Damage Reduction, and Resilience and End of Turn Damage/Percent Cut Buffs duration by 4 turns, changes adjacent orbs and [BLOCK] orbs into Matching orbs and reduces damage received by 70% for 2 turns.",
+        special: "Reduces enemy's Threshold Damage Reduction, Percent Damage Reduction, and Resilience and End of Turn Damage/Percent Cut Buffs duration by 4 turns, changes adjacent orbs and [BLOCK] orbs into Matching orbs, randomizes non-matching orbs and reduces damage received by 70% for 2 turns.",
         specialName: "The Great Final Act of One's Victory",
         sailor: {
             "base": "If this character has a [PSY] orb and you hit a GOOD or GREAT with her, keep her [PSY] orb for the next turn",
