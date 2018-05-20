@@ -26606,18 +26606,45 @@ window.details = {
         specialName: "Humble Words to Excite the Party",
     },
     2096: {//Raid Zoro
-        captain: "Not Translated.",
+        captain: "Boosts Slasher and Driven character's ATK by 2.25x, by 2.5x after 2 consecutive PERFECTs, by 2.75x after 5 consecutive PERFECTs.",
         special: "Deals 55x character's ATK in Typeless damage to one enemy that will ignore damage negating abilities and barriers, reduces enemy's Threshold Damage Reduction and Percent Damage Reduction duration by 5 turns. If HP is full at the time the special was activated, boosts the Color Affinity of Slasher and Driven characters by 2x for 2 turns, 1.75x otherwise",
         specialName: "One Sword Style: Great Dragon Shock",
         specialNotes: "#{ignoreBarrier}<br>#{colorAffinity : 2}",
         sailor: "If this character has a [QCK] orb and you hit a GOOD or GREAT with him, keep his [QCK] orb for the next turn",
     },
     2097: {//Raid Zoro
-        captain: "Boosts Slasher and Driven character's ATK by 2.75x and their HP by 1.2x, by 3x after 3 consecutive PERFECTs, by 3.3x after 5 consecutive PERFECTs.",
+        captain: "Boosts Slasher and Driven character's ATK by 2.75x and their HP by 1.2x, by 3x after 2 consecutive PERFECTs, by 3.3x after 5 consecutive PERFECTs.",
         special: "Deals 55x character's ATK in Typeless damage to one enemy that will ignore damage negating abilities and barriers, reduces enemy's Threshold Damage Reduction and Percent Damage Reduction duration by 5 turns. If HP is full at the time the special was activated, boosts the Color Affinity of Slasher and Driven characters by 2x for 2 turns, 1.75x otherwise",
         specialName: "One Sword Style: Great Dragon Shock",
         specialNotes: "#{ignoreBarrier}<br>#{colorAffinity : 2}",
-        sailor: "If this character has a [QCK] orb and you hit a GOOD or GREAT with him, keep his [QCK] orb for the next turn",
+        sailor: {
+            "base": "If this character has a [QCK] orb and you hit a GOOD or GREAT with him, keep his [QCK] orb for the next turn",
+            "level1": "Boosts ATK, HP and RCV of Slasher and Driven characters by 50",
+        },
+        limit: "Not Translated",
+        potential: [
+            {
+               "Name": "Enrage",
+                "description": [
+                    "Level 1: Boosts base ATK by 30",
+                    "Level 2: Boosts base ATK by 60",
+                    "Level 3: Boosts base ATK by 90",
+                    "Level 4: Boosts base ATK by 100",
+                    "Level 5: Boosts base ATK by 150"
+                ]
+            },
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [
+                    "Level 1: Reduces Slot Bind duration by 1 turn on this character",
+                    "Level 2: Reduces Slot Bind duration by 2 turns on this character",
+                    "Level 3: Reduces Slot Bind duration by 3 turns on this character",
+                    "Level 4: Reduces Slot Bind duration by 5 turns on this character",
+                    "Level 5: Reduces Slot Bind duration by 7 turns on this character"
+                ]
+            },
+        ],
+        potentialNotes: "#{enrage}"
     },
     2098: {//Tesoro
         captain: "If you have a Striker, Shooter, Fighter, Slasher, Free Spirit, Cerebral, Powerhouse and Driven character on your crew, boosts ATK of all characters by 3.75x, their HP by 1.35x and boosts chances of getting Matching orbs. Boosts ATK by 4.5 after scoring 4 GREATs in a row. Scoring a PERFECT reduces ATK boost for the next attack by 30%.",
@@ -26670,15 +26697,15 @@ window.details = {
         ]
     },
     2100: {//Dice
-        captain: "Boosts ATK of Powerhouse characters by ?x and [STR] characters by ?x",
-        captainNotes: "The bonus is cumulative. [STR] Powerhouse characters get a ?x bonus.",
+        captain: "Boosts ATK of Powerhouse characters by 1.75x and [STR] characters by 1.2x",
+        captainNotes: "Attack boost stacks, so a [STR] Powerhouse character has a 2.1x ATK",
         special: "Cuts the current HP of each enemy by 15% and reduces enemy Barrier duration by 1 turn. If your captain is [STR] or [QCK], Changes own orb into [STR] and boosts ATK of all characters by 1.75x for 1 turn",
         specialName: "Furious Armored Tank",
         sailor: "If this character has a [STR] orb and you hit a GOOD or GREAT with him, keep his [STR] orb for the next turn",
     },
     2101: {//Dice
         captain: "Boosts ATK of Powerhouse characters by 2.25x and [STR] characters by 1.2x",
-        captainNotes: "The bonus is cumulative. [STR] Powerhouse characters get a 2.7x bonus.",
+        captainNotes: "Attack boost stacks, so a [STR] Powerhouse character has a 2.7x ATK",
         special: "Cuts the current HP of each enemy by 15% and reduces enemy Barrier duration by 1 turn. If your captain is [STR] or [QCK], Changes own orb into [STR] and boosts ATK of all characters by 1.75x for 1 turn",
         specialName: "Furious Armored Tank",
         sailor: {
@@ -26712,7 +26739,8 @@ window.details = {
         potentialNotes: "#{enrage}"
     },
     2102: {//Baccarat
-        captain: "Boosts ATK of all characters by ?x.",
+        captain: "Boosts ATK of all characters by 1.2x. Gives chance of duplicating a drop upon completion of the island.",
+        captainNotes: "Does not work if she was not your captain upon starting the island. Stacks with other additional drop captains, giving you two chances of getting an extra drop.",
         special: "Deal 77x character's ATK in typeless damage to all enemies and reduces crew's ATK DOWN, Chain Multiplier Limit and Paralysis duration by 3 turns. If your captain is [INT] or [QCK], Changes own orb into [INT] and amplifies the effect of orbs by 1.75x for 1 turn",
         specialName: "Lucky Coin of Victory",
         sailor: "If this character has a [INT] orb and you hit a GOOD or GREAT with her, keep her [INT] orb for the next turn",
@@ -26751,7 +26779,7 @@ window.details = {
         ]
     },
     2104: {//Mr. Tanaka
-        captain: "Boosts ATK of Free Spirit and Shooter characters by ?x and boosts HP of [DEX] characters by ?x",
+        captain: "Boosts ATK of Free Spirit and Shooter characters by 1.75x and boosts HP of [DEX] characters by 1.2x",
         special: "Deal 40x character's ATK in typeless damage to one enemy that will ignore damage negating abilities and barriers and reduces enemies ATK UP, Increased Defense and Enrage duration by 3 turns. If your captain is [DEX] or [QCK], Changes own orb into [DEX] and adds 40x characters ATK as additional typeless damage for 1 turn",
         specialName: "A Tormenting Show",
         sailor: "If this character has a [DEX] orb and you hit a GOOD or GREAT with him, keep his [DEX] orb for the next turn",
@@ -26789,14 +26817,14 @@ window.details = {
         ]
     },
     2106: {//Carina
-        captain: "Reduces cooldown of all specials by ? turn at the start of the fight and boosts ATK of PSY characters by ?x and their RCV by ?x",
-        special: "Reduces enemy's Threshold Damage Reduction, Percent Damage Reduction, Resilience, End of Turn Damage and Percent Cut Buffs duration by 4 turns, changes adjacent orbs and [BLOCK] orbs into Matching orbs and reduces damage received by 70% for 2 turns.",
+        captain: "Boosts ATK of PSY characters by 2.25x",
+        special: "Reduces enemy's Threshold Damage Reduction, Percent Damage Reduction, Resilience, End of Turn Damage and Percent Cut Buffs duration by 4 turns, changes adjacent orbs and [BLOCK] orbs into Matching orbs, randomizes non-matching orbs and reduces damage received by 70% for 2 turns.",
         specialName: "The Great Final Act of One's Victory",
         sailor: "If this character has a [PSY] orb and you hit a GOOD or GREAT with her, keep her [PSY] orb for the next turn",
     },
     2107: {//Carina
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight and boosts ATK of PSY characters by 2.5x and their RCV by 1.2x",
-        special: "Reduces enemy's Threshold Damage Reduction, Percent Damage Reduction, and Resilience and End of Turn Damage/Percent Cut Buffs duration by 4 turns, changes adjacent orbs and [BLOCK] orbs into Matching orbs and reduces damage received by 70% for 2 turns.",
+        special: "Reduces enemy's Threshold Damage Reduction, Percent Damage Reduction, and Resilience and End of Turn Damage/Percent Cut Buffs duration by 4 turns, changes adjacent orbs and [BLOCK] orbs into Matching orbs, randomizes non-matching orbs and reduces damage received by 70% for 2 turns.",
         specialName: "The Great Final Act of One's Victory",
         sailor: {
             "base": "If this character has a [PSY] orb and you hit a GOOD or GREAT with her, keep her [PSY] orb for the next turn",

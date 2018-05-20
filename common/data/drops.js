@@ -2508,7 +2508,7 @@ window.drops = {
             name: 'Clash!! Zoro',
             thumb: 2097,
             nakama: null,
-            gamewith: null,
+            gamewith: 105734,
             Ultimate: [ 2096 ],
             Master: [ 2096 ],
             Expert : [ 2096 ],
