@@ -421,6 +421,12 @@ window.matchers = [
         target: 'special',
         matcher: /Deals.+typeless damage/i
     },
+
+    {
+        name: 'Typed damage dealers',
+        target: 'special',
+        matcher: /Deals.+(\[STR\]|\[DEX\]|\[QCK\]|\[PSY\]|\[INT\]) damage/i
+    },
     
     {
         name: 'Additional Damage dealer',
