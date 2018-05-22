@@ -4902,7 +4902,7 @@ window.specials = {
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain]); }
     },
     2089: {
-        atk: function(p) { return window.specials[2088].multiplier; },
+        atk: function(p) { return window.specials[2089].multiplier; },
         type: "class",
         onActivation: function(p) {
             var n = (p.percHP == 100 ? 1.5 : 1);
