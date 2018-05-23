@@ -26581,7 +26581,6 @@ window.details = {
     },
     2087: {//Pizza Luffy
         captain: "Boosts ATK of all characters by 2x. If you use \"Gomu Gomu no Octopus Stamp: Banquet\"  boosts ATK of all characters by 2.6x instead.",
-        captainNotes: "Using Luffy's special will change his own captain boost to 2.6x. If both Luffy's specials are used, the total ATK boost will be 6.76x",
         special: "Deals 15x character's ATK in [STR] damage to all enemies, recovers 2,000 HP and adds .5x to Chain multiplier for 1 turn.",
         specialName: "Gomu Gomu no Octopus Stamp: Banquet",
     },
@@ -26604,6 +26603,26 @@ window.details = {
         captain: "Boosts ATK of Shooter characters by 1.75x",
         special: "Reduces crew's ATK DOWN and Paralysis duration by 3 turns and delays all enemies for 1 turn",
         specialName: "Humble Words to Excite the Party",
+    },
+    2092: {//Pizza Zoro
+        captain: "Boosts ATK of all characters by 2x. If you use \"One Sword Style: Yakkodori - Banquet\"  boosts ATK of all characters by 2.6x instead.",
+        special: "Deals 15x character's ATK in [PSY] damage to all enemies, reduces the defense of all enemies by 50% and boosts ATK against enemies with reduced defense by 1.5x for 1 turn.",
+        specialName: "One Sword Style: Yakkodori - Banquet",
+    },
+    2093: {//Pizza Chopper
+        captain: "Boosts ATK of Fighter and Free Spirit characters by 1.5x and their RCV by 1.2x",
+        special: "Removes Poison and boosts ATK against delayed enemies by 1.5x for 1 turn",
+        specialName: "Overflowing Happiness",
+    },
+    2094: {//Pizza Brook
+        captain: "Boosts ATK of Free Spirit characters by 1.75x",
+        special: "Reduces Chain Multiplier Limit and Chain Coefficient Reduction duration by 3 turns and reduces damage received by 60% for 1 turn",
+        specialName: "An Enchanted Bliss that Pierces the Bones",
+    },
+    2095: {//Pizza Robin
+        captain: "Boosts ATK of [INT] characters by 1.5x and their HP and RCV by 1.2x",
+        special: "Reduces Blindness duration by 3 turns, boosts chances of getting matching orbs for 3 turns and randomizes non-matching orbs including [BLOCK] orbs.",
+        specialName: "Gorgeous Small Break",
     },
     2096: {//Raid Zoro
         captain: "Boosts Slasher and Driven character's ATK by 2.25x, by 2.5x after 2 consecutive PERFECTs, by 2.75x after 5 consecutive PERFECTs.",
