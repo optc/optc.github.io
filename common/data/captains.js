@@ -7058,7 +7058,13 @@ window.captains = {
         hp: function(p){ return p.unit.type == "DEX" || p.unit.type == "QCK" ? 1.2 : 1; },
     },
     2087: {
-        atk: function(p){ return p.actions[p.sourceSlot] ? 2.6 : 2; },
+        atk: function(p){
+            var specialEnabled = false;
+            for(var i=0;i<2;i++)
+            {
+                if(window.specials[2087].turnedOn[i]==true){specialEnabled = true;}
+            }
+            return specialEnabled ? 2.6 : 2; },
     },
     2088: {
         atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? 1.5 : 1; },
@@ -7071,6 +7077,27 @@ window.captains = {
     },
     2091: {
         atk: function(p) { return p.unit.class.has("Shooter") ? 1.75 : 1; },
+    },
+    2092: {
+        atk: function(p){
+            var specialEnabled = false;
+            for(var i=0;i<2;i++)
+            {
+                if(window.specials[2087].turnedOn[i]==true){specialEnabled = true;}
+            }
+            return specialEnabled ? 2.6 : 2; },
+    },
+    2093: {
+        atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? 1.5 : 1; },
+        rcv: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? 1.2 : 1; },
+    },
+    2094: {
+        atk: function(p) { return p.unit.class.has("Free Spirit") ? 1.75 : 1; },
+    },
+    2095: {
+        atk: function(p){ return p.unit.type == "INT" ? 1.5 : 1; },
+        hp: function(p){ return p.unit.type == "INT" ? 1.2 : 1; },
+        rcv: function(p){ return p.unit.type == "INT" ? 1.2 : 1; },
     },
     2096: {
         damageSorter: function(d) { return CrunchUtils.classSort(d, 2.75, [ "Slasher", "Driven" ]); },
