@@ -2064,7 +2064,7 @@ window.aliases = {
     2063: ['黄猿 急追する一閃', '', 'TM Kizaru'],
     2064: ['黄猿 怒涛の閃々', '', 'TM Kizaru'],
     2065: ['シャーロット・プリン', '', 'Charlotte Pudding'],
-    2066: ['海侠のジンベエ 麦わらのルフィの共犯者', '', 'Super Jinbe', 'Mega Jinbe', 'Super Jimbe', 'Mega Jimbe'],
+    2066: ['海侠のジンベエ 麦わらのルフィの共犯者', '', 'Super Jinbe', 'Mega Jinbe', 'Super Jimbe', 'Mega Jimbe', 'Super Jinbei', 'Mega Jinbei', 'Super Jimbei', 'Mega Jimbei'],
     2067: ['たしぎ スモーカーの右腕', '', 'Secret Tashigi', 'Limited Tashigi', 'Secret Thiccshigi', 'Limited Thiccshigi'],
     2068: ['たしぎ　覇気使いの女剣士', '', 'Secret Tashigi', 'Limited Tashigi', 'Secret Thiccshigi', 'Limited Thiccshigi'],
     2069: ['ボア・ハンコック 「改」 九蛇海賊団船長', '', 'Neo Boa Hancock', 'Kai Boa Hancock'],
