@@ -1217,7 +1217,7 @@ window.details = {
     217: {
         special: "Deals 15x character's ATK in [STR] damage to all enemies",
         specialName: "Gum-Gum Giant Rifle",
-        captain: "Boosts ATK by 3.5x after scoring 3 PERFECTs in a row",
+        captain: "Boosts ATK of all characters by 3.5x after scoring 3 PERFECTs in a row",
         sailor: {
             "base": "None",
             "level1": "Makes [RCV] and [TND] orbs \"beneficial\" for this unit",
@@ -1394,12 +1394,12 @@ window.details = {
     224: {
         special: "Deals 15x character's ATK in [QCK] damage to one enemy",
         specialName: "Mutton Shot",
-        captain: "Boosts ATK by 2x after scoring 2 PERFECTs in a row"
+        captain: "Boosts ATK of all characters by 2x after scoring 2 PERFECTs in a row"
     },
     225: {
         special: "Deals 20x character's ATK in [QCK] damage to one enemy",
         specialName: "Veau Shot",
-        captain: "Boosts ATK by 2.5x after scoring 2 PERFECTs in a row"
+        captain: "Boosts ATK of all characters by 2.5x after scoring 2 PERFECTs in a row"
     },
     226: {
         special: "Cuts the current HP of each enemy by 30%",
@@ -2291,14 +2291,14 @@ window.details = {
         special: "Deals 100x character's ATK in fixed damage to one enemy, reduces crew's HP to 1",
         specialName: "Massacre Soldier",
         specialNotes: "#{fixed}",
-        captain: "Boosts ATK by 3.5x after scoring 3 hits below Good in a row",
+        captain: "Boosts ATK of all characters by 3.5x after scoring 3 hits below Good in a row",
         sailor: "When HP is below 30% at the start of the turn, boosts ATK of Cerebral characters by 50"
     },
     312: {
         special: "Deals 100x character's ATK in fixed damage to one enemy, reduces crew's HP to 1",
         specialName: "Massacre Soldier",
         specialNotes: "#{fixed}",
-        captain: "Boosts ATK by 3.5x after scoring 3 hits below Good in a row",
+        captain: "Boosts ATK of all characters by 3.5x after scoring 3 hits below Good in a row",
         sailor: {
             "base": "When HP is below 30% at the start of the turn, boosts ATK of Cerebral characters by 50",
             "level1": "When HP is below ??% at the start of the turn, boosts own base ATK by 200",
@@ -2904,12 +2904,12 @@ window.details = {
     389: {
         special: "Randomizes all orbs into either [RCV], [STR], [DEX] or [QCK] orbs and changes own orb into [QCK]",
         specialName: "Hell Wink",
-        captain: "Boosts ATK by 2.25x following a chain of [DEX] > [INT] > [QCK] attacks no lower than Good"
+        captain: "Boosts ATK of all characters by 2.25x following a chain of [DEX] > [INT] > [QCK] attacks no lower than Good"
     },
     390: {
         special: "Randomizes all orbs into either [RCV], [STR], [DEX] or [QCK] orbs and changes own orb into [QCK]",
         specialName: "Hell Wink",
-        captain: "Boosts ATK by 2.75x following a chain of [DEX] > [INT] > [QCK] attacks no lower than Good",
+        captain: "Boosts ATK of all characters by 2.75x following a chain of [DEX] > [INT] > [QCK] attacks no lower than Good",
         sailor: {
             "base": "None",
             "level1": "Makes [STR], [DEX] and [RCV] orbs \"beneficial\" for this unit",
@@ -2992,12 +2992,12 @@ window.details = {
     397: {
         special: "Changes [EMPTY] orbs into [STR] orbs with a 50% probability, deals 15x character's ATK in damage to all enemies",
         specialName: "Four Hundred Base Hits",
-        captain: "Boosts ATK by 3x after scoring 5 PERFECTs in a row"
+        captain: "Boosts ATK of all characters by 3x after scoring 5 PERFECTs in a row"
     },
     398: {
         special: "Changes [EMPTY] orbs into [STR] orbs with a 50% probability, deals 15x character's ATK in damage to all enemies",
         specialName: "Four Hundred Base Hits",
-        captain: "Boosts ATK by 4x after scoring 5 PERFECTs in a row"
+        captain: "Boosts ATK of all characters by 4x after scoring 5 PERFECTs in a row"
     },
     399: {
         special: "Boosts ATK of [DEX] characters by 1.5x for 1 turn",
@@ -3340,23 +3340,23 @@ window.details = {
     433: {
         special: "Reduces Bind and Despair duration by 1 turn",
         specialName: "New Kama Seduction",
-        captain: "Boosts ATK by 2x following a chain of [QCK] > [STR] > [DEX] attacks no lower than Good"
+        captain: "Boosts ATK of all characters by 2x following a chain of [QCK] > [STR] > [DEX] attacks no lower than Good"
     },
     434: {
         special: "Amplifies the effect of orbs by 1.25x for 3 turns",
         specialNotes: "#{orb : 1.25x}",
         specialName: "New Kama Karate Maiden's Awakening",
-        captain: "Boosts ATK by 2x following a chain of [PSY] > [INT] > [INT] attacks no lower than Good"
+        captain: "Boosts ATK of all characters by 2x following a chain of [PSY] > [INT] > [INT] attacks no lower than Good"
     },
     435: {
         special: "Randomizes [RCV], [STR] and [DEX] orbs into either [STR] or [QCK] orbs",
         specialName: "Maiden's Bloom",
-        captain: "Boosts ATK by 2x following a chain of [INT] > [PSY] > [QCK] attacks no lower than Good"
+        captain: "Boosts ATK of all characters by 2x following a chain of [INT] > [PSY] > [QCK] attacks no lower than Good"
     },
     436: {
         special: "Randomizes [RCV], [STR] and [DEX] orbs into either [STR] or [QCK] orbs",
         specialName: "Maiden's Bloom",
-        captain: "Boosts ATK by 2.25x following a chain of [INT] > [PSY] > [QCK] attacks no lower than Good"
+        captain: "Boosts ATK of all characters by 2.25x following a chain of [INT] > [PSY] > [QCK] attacks no lower than Good"
     },
     437: {
         special: "Recovers 3x character's RCV in HP, reduces damage received by 80% for 1 turn, Poisons enemies for 1,000 for a single turn",
@@ -3676,7 +3676,7 @@ window.details = {
         special: "Deals 20x character's ATK in [QCK] damage to one enemy, amplifies the effect of orbs by 1.25x for 2 turns",
         specialNotes: "#{orb : 1.25x}",
         specialName: "Jet Punch",
-        captain: "Boosts ATK by 3x after scoring 4 hits below Good in a row"
+        captain: "Boosts ATK of all characters by 3x after scoring 4 hits below Good in a row"
     },
     466: {
         special: "Delays all enemies for 1 turn",
@@ -4312,12 +4312,12 @@ window.details = {
     549: {
         special: "Boosts ATK against enemies with reduced defense by 1.3x for 3 turns",
         specialName: "Arousal Manifesto - Red Demon Whip",
-        captain: "Boosts ATK by 2x after scoring 3 PERFECTs in a row"
+        captain: "Boosts ATK of all characters by 2x after scoring 3 PERFECTs in a row"
     },
     550: {
         special: "Boosts ATK against enemies with reduced defense by 1.3x for 3 turns",
         specialName: "Arousal Manifesto - Red Demon Whip",
-        captain: "Boosts ATK by 2.5x after scoring 3 PERFECTs in a row"
+        captain: "Boosts ATK of all characters by 2.5x after scoring 3 PERFECTs in a row"
     },
     551: {
         special: "Reduces damage received by 50% for 1 turn, deals 15x character's ATK in [STR] damage to one enemy",
@@ -4555,12 +4555,12 @@ window.details = {
     561: {
         special: "Reduces crew's current HP by 40%, deals 15x the amount of HP subtracted in typeless damage to all enemies, locks all orbs for 1 turn",
         specialName: "Great Flame Commandment: Flame Emperor",
-        captain: "Boosts HP of Shooter characters by 1.5x and boosts ATK by 3x if they have a matching orb, by 2x otherwise"
+        captain: "Boosts HP of Shooter characters by 1.5x and boosts ATK of Shooter characters by 3x if they have a matching orb, by 2x otherwise"
     },
     562: {
         special: "Reduces crew's current HP by 40%, deals 15x the amount of HP subtracted in typeless damage to all enemies, locks all orbs for 1 turn",
         specialName: "Great Flame Commandment: Flame Emperor",
-        captain: "Boosts HP of Shooter characters by 1.5x and boosts ATK by 3x if they have a matching orb, by 2x otherwise"
+        captain: "Boosts HP of Shooter characters by 1.5x and boosts ATK of Shooter characters by 3x if they have a matching orb, by 2x otherwise"
     },
     563: {
         special: "Deal 3x character's ATK in [PSY] damage to one enemy, changes [INT] orbs into [RCV] orbs",
@@ -4677,13 +4677,13 @@ window.details = {
         special: "Deals random typeless damage to all enemies, changes own orb into [STR]",
         specialName: "Gum-Gum Jet Gatling",
         specialNotes: "#{random : 70,000 : 200,000}",
-        captain: "Boosts ATK by 4x following a chain of Good > Great > PERFECT hits"
+        captain: "Boosts ATK of all characters by 4x following a chain of Good > Great > PERFECT hits"
     },
     578: {
         special: "Deals random typeless damage to all enemies, changes own orb into [STR]",
         specialName: "Gum-Gum Jet Gatling",
         specialNotes: "#{random : 70,000 : 200,000}",
-        captain: "Boosts ATK by 4x following a chain of Good > Great > PERFECT hits"
+        captain: "Boosts ATK of all characters by 4x following a chain of Good > Great > PERFECT hits"
     },
     579: {
         special: "Randomizes [BLOCK] orbs into either [QCK] or [DEX] orbs, deals 15x character's ATK in [QCK] damage to all enemies",
@@ -5273,7 +5273,7 @@ window.details = {
     659: {
         special: "Reduces Bind and Despair duration by 2 turns, reduces damage received by 50% for 2 turns",
         specialName: "Gum-Gum Balloon Swim",
-        captain: "Boosts ATK by 2.5x after scoring 3 PERFECTs in a row"
+        captain: "Boosts ATK of all characters by 2.5x after scoring 3 PERFECTs in a row"
     },
     660: {
         special: "Delays all enemies for 2 turns, reduces the defense of all enemies by 50% for 2 turns",
@@ -6774,7 +6774,7 @@ window.details = {
     798: {
         special: "Removes Poison, following the activation of the special, if every unit scores a PERFECT hit, boosts ATK of Fighter characters by 1.75x in the following turn",
         specialName: "Dugong Secret! Fist of the Black Fin",
-        captain: "Boosts ATK by 2.5x after scoring 3 PERFECTs in a row"
+        captain: "Boosts ATK of all characters by 2.5x after scoring 3 PERFECTs in a row"
     },
     799: {
         special: "Randomizes all orbs, recovers 9x character's RCV in HP",
@@ -6858,13 +6858,13 @@ window.details = {
         special: "Deals 13x character's ATK in [DEX] damage to a single enemy, changes captain's orb into [TND]"
     },
     815: {
-        captain: "Boosts ATK by 2.5x following a chain of [STR] > [INT] > [DEX] attacks no lower than Good",
+        captain: "Boosts ATK of all characters by 2.5x following a chain of [STR] > [INT] > [DEX] attacks no lower than Good",
         specialName: "Brick Bat",
         special: "Deals 10 hits of 5,000 fixed damage to random enemies",
         specialNotes: "#{fixed} #{randomHits : 10}"
     },
     816: {
-        captain: "Boosts ATK by 2.75x following a chain of [STR] > [INT] > [DEX] attacks no lower than Good",
+        captain: "Boosts ATK of all characters by 2.75x following a chain of [STR] > [INT] > [DEX] attacks no lower than Good",
         specialName: "Brick Bat",
         special: "Deals 10 hits of 5,000 fixed damage to random enemies",
         specialNotes: "#{fixed} #{randomHits : 10}"
@@ -10397,14 +10397,14 @@ window.details = {
         potentialNotes: "#{enrage}"
     },
     1084: {
-        captain: "Boosts HP of Driven characters by 1.5x and boosts ATK by 3x if they have a matching orb, by 1.5x otherwise. Makes [TND] and [RCV] orbs \"beneficial\" to Driven characters",
+        captain: "Boosts HP of Driven characters by 1.5x and boosts ATK of Driven characters by 3x if they have a matching orb, by 1.5x otherwise. Makes [TND] and [RCV] orbs \"beneficial\" to Driven characters",
         captainNotes: "#{beneficial}",
         special: "Cuts the current HP of each enemy by 20%. At the end of the turn, cuts the current HP of each enemy by 20% for 3 turns",
         specialNotes: "Does not stack with other 'end of turn damage' abilities",
         specialName: "Gravito: Heavens Fall"
     },
     1085: {
-        captain: "Boosts HP of Driven characters by 1.5x and boosts ATK by 3x if they have a matching orb, by 1.5x otherwise. Makes [TND] and [RCV] orbs \"beneficial\" to Driven characters",
+        captain: "Boosts HP of Driven characters by 1.5x and boosts ATK of Driven characters by 3x if they have a matching orb, by 1.5x otherwise. Makes [TND] and [RCV] orbs \"beneficial\" to Driven characters",
         captainNotes: "#{beneficial}",
         special: "Cuts the current HP of each enemy by 20%. At the end of the turn, cuts the current HP of each enemy by 20% for 3 turns",
         specialNotes: "Does not stack with other 'end of turn damage' abilities",
@@ -10878,13 +10878,13 @@ window.details = {
         special: "Deals random typeless damage to all enemies, changes own orb into [STR]",
         specialName: "Gum-Gum JET Gatling",
         specialNotes: "#{random : 70,000 : 200,000}",
-        captain: "Boosts ATK by 4x following a chain of Good > Great > PERFECT hits"
+        captain: "Boosts ATK of all characters by 4x following a chain of Good > Great > PERFECT hits"
     },
     1121: {
         special: "Deals random typeless damage to all enemies, changes own orb into [STR]",
         specialName: "Gum-Gum JET Gatling",
         specialNotes: "#{random : 70,000 : 200,000}",
-        captain: "Boosts ATK by 4x following a chain of Good > Great > PERFECT hits"
+        captain: "Boosts ATK of all characters by 4x following a chain of Good > Great > PERFECT hits"
     },
     1122: {
         captain: "Boosts ATK of [STR], [DEX] and [QCK] characters by 2.5x, but boosts his OWN attack by 4x",
@@ -12052,7 +12052,7 @@ window.details = {
         specialNotes: "#{beneficial}",
     },
     1215: {//Gairam
-        captain: "Boosts ATK by 2.5x following a chain of [QCK] > [PSY] > [DEX] attacks no lower than Good",
+        captain: "Boosts ATK of all characters by 2.5x following a chain of [QCK] > [PSY] > [DEX] attacks no lower than Good",
         special: "Deals 5 hits of 2,000 fixed damage to random enemies and reduces any damage received above 5,000 HP by 80% for 1 turn",
         specialNotes: "#{randomHits : 5}",
         specialName: "Totem Cube"
@@ -12069,7 +12069,7 @@ window.details = {
         specialName: "Caterpillar Soul Shot",
     },
     1218: {//Hancock
-        captain: "Boosts ATK by 2.5x after scoring 3 PERFECTs in a row",
+        captain: "Boosts ATK of all characters by 2.5x after scoring 3 PERFECTs in a row",
         special: "Locks all orbs for 1 turn. If HP is below 30%, changes own orb and the captain's orb into matching. ",
         specialName: "Everybody Confusing Fragrance",
     },
@@ -13105,13 +13105,13 @@ window.details = {
         specialName: "Mysterious Hour of the Dark Night",
     },
     1297: {//Akainu
-        captain: "Boosts ATK by 2.5x following a chain of [STR] > [STR] > [STR] attacks no lower than Good",
+        captain: "Boosts ATK of all characters by 2.5x following a chain of [STR] > [STR] > [STR] attacks no lower than Good",
         special: "Deals 50x character's ATK in [STR] damage to all enemies. Changes orbs for [STR] characters into [STR] orbs. Boosts the Color Affinity of [STR] characters by 1.75x for 1 turn",
         specialNotes: "#{colorAffinity : 1.75}",
         specialName: "Great Eruption",
     },
     1298: {//Akainu
-        captain: "Boosts ATK by 3x following a chain of [STR] > [STR] > [STR] attacks no lower than Good",
+        captain: "Boosts ATK of all characters by 3x following a chain of [STR] > [STR] > [STR] attacks no lower than Good",
         special: "Deals 50x character's ATK in [STR] damage to all enemies. Changes orbs for [STR] characters into [STR] orbs. Boosts the Color Affinity of [STR] characters by 1.75x for 1 turn",
         specialNotes: "#{colorAffinity : 1.75}",
         specialName: "Great Eruption",
@@ -13234,13 +13234,13 @@ window.details = {
         specialName: "King Cobra Machetes",
     },
     1313: {//Akainu
-        captain: "If any character has a [STR] orb, boosts ATK by 3.9375x, boosts ATK by 2.25x otherwise. Boosts chances of getting [STR] orbs",
+        captain: "If any character has a [STR] orb, boosts ATK of all characters by 3.9375x, boosts ATK of all characters by 2.25x otherwise. Boosts chances of getting [STR] orbs",
         captainNotes: "If a character has a [STR] orb, regardless of type, they will have a 3.9375x ATK boost",
         special: "Deals 125x character's ATK typeless damage to all enemies and randomizes non-[STR] orbs. Boosts ATK of characters with cost 50 or higher by 1.75x for 2 turns",
         specialName: "Meteor Volcano",
     },
     1314: {//Akainu
-        captain: "If any character has a [STR] orb, boosts ATK by 3.9375x, boosts ATK by 2.25x otherwise. Boosts chances of getting [STR] orbs",
+        captain: "If any character has a [STR] orb, boosts ATK of all characters by 3.9375x, boosts ATK of all characters by 2.25x otherwise. Boosts chances of getting [STR] orbs",
         captainNotes: "If a character has a [STR] orb, regardless of type, they will have a 3.9375x ATK boost",
         special: "Deals 125x character's ATK typeless damage to all enemies and randomizes non-[STR] orbs. Boosts ATK of characters with cost 50 or higher by 1.75x for 2 turns",
         specialName: "Meteor Volcano",
@@ -13462,7 +13462,7 @@ window.details = {
         specialName: "Amulet Flame",
     },
     1326: {//Halloween Corazon
-        captain: "Boosts ATK by 1.3x and recovers 4x character's RCV in HP at the end of each turn",
+        captain: "Boosts ATK of all characters by 1.3x and recovers 4x character's RCV in HP at the end of each turn",
         special: "If HP is above 99%, changes [STR], [DEX] and [QCK] orbs into Matching orbs for Cerebral and Free Spirit characters",
         specialName: "Amulet Flame",
     },
@@ -14116,7 +14116,7 @@ window.details = {
         specialName: "Mother's Promise",
     },
     1387: {//Luffy 5+
-        captain: "Boosts ATK of all characters by 2.25x and their HP by 1.25x, boosts ATK by 2.8125x after scoring 4 PERFECTs in a row",
+        captain: "Boosts ATK of all characters by 2.25x and their HP by 1.25x, boosts ATK of all characters by 2.8125x after scoring 4 PERFECTs in a row",
         special: "Deals 40x character's ATK in [STR] damage to all enemies and delays all enemies for 1 turn",
         specialName: "Gum Gum: Elephant Gun",
         sailor: {
@@ -15543,13 +15543,13 @@ window.details = {
         specialName: "Pussyfoot Maneuver",
     },
     1459: {//Coliseum Miss Valentine
-        captain: "Boosts ATK by 1.75x following a chain of Good > Good > Great > PERFECT hits",
+        captain: "Boosts ATK of all characters by 1.75x following a chain of Good > Good > Great > PERFECT hits",
         special: "Binds self for 2 turns, makes [BOMB] orbs \"beneficial\" and boosts ATK against enemies with reduced defense by 1.5x for 1 turn.",
         specialNotes: "#{beneficial}",
         specialName: "Crescendo Stone",
     },
     1460: {//Coliseum Miss Valentine
-        captain: "Boosts ATK by 2.14x following a chain of Good > Good > Great > PERFECT hits",
+        captain: "Boosts ATK of all characters by 2.14x following a chain of Good > Good > Great > PERFECT hits",
         special: "Binds self for 2 turns, makes [BOMB] orbs \"beneficial\" and boosts ATK against enemies with reduced defense by 1.5x for 1 turn.",
         specialNotes: "#{beneficial}",
         specialName: "Crescendo Stone",
@@ -15849,7 +15849,7 @@ window.details = {
         potentialNotes: "#{enrage}"
     },
     1480: {//Vander Decken IX
-        captain: "Boosts ATK by 2.5x after scoring 2 PERFECTs in a row",
+        captain: "Boosts ATK of all characters by 2.5x after scoring 2 PERFECTs in a row",
         special: "Deals 200,000 fixed damage to one enemy that will ignore damage negating abilities and barriers, reduces Bind and Silence duration by 2 turns",
         specialNotes: "#{ignoreBarrier}<br>#{silence}",
         sailor: "Restores his own special by 1 turn when it is rewinded and reduces Silence for 3 turns for himself",
@@ -15857,7 +15857,7 @@ window.details = {
         specialName: "Stalking Rose Axe",
     },
     1481: {//Vander Decken IX
-        captain: "Boosts ATK by 2.5x after the 2nd PERFECT in a row and by 3.5x after the 5th PERFECT in a row.",
+        captain: "Boosts ATK of all characters by 2.5x after the 2nd PERFECT in a row and by 3.5x after the 5th PERFECT in a row.",
         special: "Deals 200,000 fixed damage to one enemy that will ignore damage negating abilities and barriers, reduces Bind and Silence duration by 2 turns",
         specialNotes: "#{ignoreBarrier}<br>#{silence}",
         sailor: "Restores his own special by 1 turn when it is rewinded and reduces Silence for 3 turns for himself",
@@ -15920,13 +15920,13 @@ window.details = {
         potentialNotes: "#{enrage}"
     },
     1484: {//Wild Sanji
-        captain: "Boosts ATK by 2.5x after scoring 3 PERFECTs in a row",
+        captain: "Boosts ATK of all characters by 2.5x after scoring 3 PERFECTs in a row",
         special: "Locks the chain multiplier at 2.5x for 1 turn, reduces Bind duration by 5 turns",
         sailor: "Changes all orbs into [RCV] orbs at the start of the fight.",
         specialName: "Wild Shot",
     },
     1485: {//Wild Sanji
-        captain: "Boosts HP and RCV of all characters by 1.2x and boosts ATK by 3.25x after scoring 3 PERFECTs in a row",
+        captain: "Boosts HP and RCV of all characters by 1.2x and boosts ATK of all characters by 3.25x after scoring 3 PERFECTs in a row",
         special: "Locks the chain multiplier at 2.5x for 1 turn, reduces Bind duration by 5 turns",
         sailor: "Changes all orbs into [RCV] orbs at the start of the fight.",
         specialName: "Wild Shot",
@@ -15998,12 +15998,12 @@ window.details = {
         specialName: "Great Battle Spear",
     },
     1490: {//Coliseum Mr. 5
-        captain: "Boosts ATK by 1.75x following a chain of Good > Good > Great hits",
+        captain: "Boosts ATK of all characters by 1.75x following a chain of Good > Good > Great hits",
         special: "Changes orbs on the top row to [BOMB], reduces Bind duration by 2 turns and reduces the defense of all enemies by 50% for one turn.",
         specialName: "Explosion Blocking Escape",
     },
     1491: {//Coliseum Mr. 5
-        captain: "Boosts ATK by 2x following a chain of Good > Good > Great hits",
+        captain: "Boosts ATK of all characters by 2x following a chain of Good > Good > Great hits",
         special: "Changes orbs on the top row to [BOMB], reduces Bind duration by 2 turns and reduces the defense of all enemies by 50% for one turn.",
         specialName: "Explosion Blocking Escape",
     },
@@ -16624,14 +16624,14 @@ window.details = {
         ]
     },
     1541: {//Elizabeth
-        captain: "Boosts ATK by 2x following a chain of [STR] > [DEX] > [QCK] attacks no lower than Good",
+        captain: "Boosts ATK of all characters by 2x following a chain of [STR] > [DEX] > [QCK] attacks no lower than Good",
         special: "Recovers 13x character's RCV in HP, adds .5x to Chain multiplier and reduces the defense of all enemies by 100% for 1 turn",
         sailor: "Restores her own special by 2 turns when it is rewinded",
         sailorNotes: "#{rewind : 1}",
         specialName: "Soft and Gentle Fluffy Kisses",
     },
     1542: {//Elizabeth
-        captain: "Boosts RCV and HP by 1.2x, boosts ATK by 2.5x following a chain of [STR] > [DEX] > [QCK] attacks no lower than Good",
+        captain: "Boosts RCV and HP by 1.2x, boosts ATK of all characters by 2.5x following a chain of [STR] > [DEX] > [QCK] attacks no lower than Good",
         special: "Recovers 13x character's RCV in HP, adds .5x to Chain multiplier and reduces the defense of all enemies by 100% for 1 turn",
         sailorNotes: "#{rewind : 1}",
         specialName: "Soft and Gentle Fluffy Kisses",
@@ -17281,7 +17281,7 @@ window.details = {
         potentialNotes: "#{enrage}"
     },
     1576: {//Kin'emon
-        captain: "Boosts ATK by 2.5x following a chain of Good > Great > PERFECT hits",
+        captain: "Boosts ATK of all characters by 2.5x following a chain of Good > Great > PERFECT hits",
         special: "Deals 60x character's ATK in typeless damage to all enemies and changes all orbs on all characters into Kinemon's orb.",
         specialNotes: "Upon activating the special, all orbs will be changed to the orb Kinemon has, including [RAINBOW] and [BLOCK] orbs. This will not override other [BLOCK] orbs.",
         sailor: "Makes [STR] and [QCK] orbs \"beneficial\" for this unit",
@@ -17289,7 +17289,7 @@ window.details = {
         specialName: "Flaming Flash",
     },
     1577: {//Kin'emon
-        captain: "Recovers 3x character's RCV in HP at the end of each turn. Boosts ATK by 3.5x following a chain of Good > Great > PERFECT hits",
+        captain: "Recovers 3x character's RCV in HP at the end of each turn. Boosts ATK of all characters by 3.5x following a chain of Good > Great > PERFECT hits",
         special: "Deals 60x character's ATK in typeless damage to all enemies and changes all orbs on all characters into Kinemon's orb.",
         specialNotes: "Upon activating the special, all orbs will be changed to the orb Kinemon has, including [RAINBOW] and [BLOCK] orbs. This will not override other [BLOCK] orbs.",
         specialName: "Flaming Flash",
@@ -18186,28 +18186,28 @@ window.details = {
         specialNotes: "#{stages}"
     },
     1648: {//Giolla
-        captain: "Boosts ATK of all characters by 1.2x. Boosts ATK by 2.4x after scoring 4 PERFECTs in a row",
+        captain: "Boosts ATK of all characters by 1.2x. Boosts ATK of all characters by 2.4x after scoring 4 PERFECTs in a row",
         special: "Reduces damage received by 90% for 1 turn and randomizes all orbs, including [BLOCK] orbs, into either [STR], [DEX] or [QCK] orbs",
         specialName: "Sprouting with Beautiful Passion",
     },
     1649: {//Giolla
-        captain: "Boosts ATK of all characters by 1.2x. Boosts ATK by 3x after scoring 4 PERFECTs in a row",
+        captain: "Boosts ATK of all characters by 1.2x. Boosts ATK of all characters by 3x after scoring 4 PERFECTs in a row",
         special: "Reduces damage received by 90% for 1 turn and randomizes all orbs, including [BLOCK] orbs, into either [STR], [DEX] or [QCK] orbs",
         specialName: "Sprouting with Beautiful Passion",
     },
     1650: {//Brook x5
-        captain: "Boosts RCV of [DEX] characters by 1.5x and boosts ATK by 3x if they have a matching orb, by 1.5x otherwise.",
+        captain: "Boosts RCV of [DEX] characters by 1.5x and boosts ATK of [DEX] characters by 3x if they have a matching orb, by 1.5x otherwise.",
         special: "Changes [BLOCK], [TND], [EMPTY] and [BOMB] orbs into [DEX] orbs and amplifies the effect of orbs by 1.5x for 1 turn",
         specialName: "Eyes Blinded by True Beauty",
     },
     1651: {//Nekomamushi
-        captain: "Boosts HP of Striker characters by 1.25x and boosts ATK by 3.75x if they have a [STR], [QCK], [DEX], [INT], [PSY] or [RAINBOW] orb",
+        captain: "Boosts HP of Striker characters by 1.25x and boosts ATK of Striker charcters by 3.75x if they have a [STR], [QCK], [DEX], [INT], [PSY] or [RAINBOW] orb",
         special: "Deals 60x character's ATK in [PSY] damage to one enemy and makes [STR], [DEX], [QCK], [PSY] and [INT] orbs \"beneficial\" for Striker characters for 1 turn",
         specialNotes: "#{beneficial}",
         specialName: "Daybreak Ruler's Spear",
     },
     1652: {//Nekomamushi
-        captain: "Boosts HP of Striker characters by 1.25x and boosts ATK by 3.75x if they have a [STR], [QCK], [DEX], [INT], [PSY] or [RAINBOW] orb",
+        captain: "Boosts HP of Striker characters by 1.25x and boosts ATK of Striker charcters by 3.75x if they have a [STR], [QCK], [DEX], [INT], [PSY] or [RAINBOW] orb",
         special: "Deals 60x character's ATK in [PSY] damage to one enemy and makes [STR], [DEX], [QCK], [PSY] and [INT] orbs \"beneficial\" for Striker characters for 1 turn",
         specialNotes: "#{beneficial}",
         specialName: "Daybreak Ruler's Spear",
@@ -19323,7 +19323,7 @@ window.details = {
         sailor: "Reduces Blindness duration by 2 turns",
     },
     1711: {//Summer Robin
-        captain: "Boosts RCV of Cerebral characters by 1.2x and boosts ATK by 3x if they have a matching orb, by 1.5x otherwise.",
+        captain: "Boosts RCV of Cerebral characters by 1.2x and boosts ATK of Cerebral characters by 3x if they have a matching orb, by 1.5x otherwise.",
         special: "Amplifies the effect of orbs for Cerebral characters by 1.75x for 1 turn and reduces damage received by 30% for 2 turns",
         specialName: "Charmed by a Lovely Adult",
         sailor: "Reduces Blindness duration by 2 turns",
@@ -19422,7 +19422,7 @@ window.details = {
         specialName: "Passive Aggressive Boss"
     },
     1721: {//Secret Jinbe
-        captain: "Boosts HP of Fighter characters by 1.4x and boosts ATK by 2.75x if they have a matching orb, by 2.5x otherwise.",
+        captain: "Boosts HP of Fighter characters by 1.4x and boosts ATK of Fighter characters by 2.75x if they have a matching orb, by 2.5x otherwise.",
         special: "If your Captain is a Fighter character, changes adjacent orbs into matching orbs and locks the chain multiplier at 2.5x for 1 turn",
         specialName: "Passive Aggressive Boss",
         sailor: {
@@ -20432,13 +20432,13 @@ window.details = {
         potentialNotes: "#{enrage}"
     },
     1793:{//Lucy Sabo
-        captain: "If there is a [STR], [DEX] and [QCK] character in your crew, boosts ATK of [STR], [DEX] and [QCK] characters by 2.75x and their HP by 1.3x, lowers chances of getting [STR] orbs and makes [DEX] and [QCK] orbs \"beneficial\" to [STR], [DEX] and [QCK] characters. If there are not [PSY] or [INT] characters on your crew, boosts ATK by 3.7125x instead.",
+        captain: "If there is a [STR], [DEX] and [QCK] character in your crew, boosts ATK of [STR], [DEX] and [QCK] characters by 2.75x and their HP by 1.3x, lowers chances of getting [STR] orbs and makes [DEX] and [QCK] orbs \"beneficial\" to [STR], [DEX] and [QCK] characters. If there are not [PSY] or [INT] characters on your crew, boosts ATK of [STR], [DEX] and [QCK] characters by 3.7125x instead.",
         captainNotes: "Sabo boosts ATK by 3.7125x if you have [STR], [DEX] and [QCK] type characters and no [PSY] or [INT] characters at all.<br>#{beneficial}",
         special: "Boosts ATK of [STR], [DEX] and [QCK] characters by 1.75x for 1 turn. If during that turn you score 4 PERFECT hits, boosts ATK of [STR], [DEX] and [QCK] characters by 2x in the following turn.",
         specialName: "Dragon's Claw: Reverse Wave Motion",
     },
     1794:{//Lucy Sabo
-        captain: "If there is a [STR], [DEX] and [QCK] character in your crew, boosts ATK of [STR], [DEX] and [QCK] characters by 2.75x and their HP by 1.3x, lowers chances of getting [STR] orbs and makes [DEX] and [QCK] orbs \"beneficial\" to [STR], [DEX] and [QCK] characters. If there are not [PSY] or [INT] characters on your crew, boosts ATK by 3.7125x instead.",
+        captain: "If there is a [STR], [DEX] and [QCK] character in your crew, boosts ATK of [STR], [DEX] and [QCK] characters by 2.75x and their HP by 1.3x, lowers chances of getting [STR] orbs and makes [DEX] and [QCK] orbs \"beneficial\" to [STR], [DEX] and [QCK] characters. If there are not [PSY] or [INT] characters on your crew, boosts ATK of [STR], [DEX] and [QCK] characters by 3.7125x instead.",
         captainNotes: "Sabo boosts ATK by 3.7125x if you have [STR], [DEX] and [QCK] type characters and no [PSY] or [INT] characters at all.<br>#{beneficial}",
         special: "Boosts ATK of [STR], [DEX] and [QCK] characters by 1.75x for 1 turn. If during that turn you score 4 PERFECT hits, boosts ATK of [STR], [DEX] and [QCK] characters by 2x in the following turn.",
         specialName: "Dragon's Claw: Reverse Wave Motion",
@@ -20870,13 +20870,13 @@ window.details = {
         ],
     },
     1809: {//Wanda
-        captain: "Boosts ATK by 2.25x after scoring 2 PERFECTs in a row",
+        captain: "Boosts ATK of all characters by 2.25x after scoring 2 PERFECTs in a row",
         special: "Reduces Bind and Paralysis duration by 2 turns. If your Captain is a Slasher character, makes PERFECTs easier to hit for 1 turn",
         sailor: "Reduces Paralysis for 1 turn for herself",
         specialName: "Super Express Beast Path",
     },
     1810: {//Wanda
-        captain: "Boosts chances of getting Matching orbs, boosts ATK by 2.25x after scoring 2 PERFECTs in a row",
+        captain: "Boosts chances of getting Matching orbs, boosts ATK of all characters by 2.25x after scoring 2 PERFECTs in a row",
         special: "Reduces Bind and Paralysis duration by 2 turns. If your Captain is a Slasher character, makes PERFECTs easier to hit for 1 turn",
         sailor: "Reduces Paralysis for 1 turn for herself",
         specialName: "Super Express Beast Path",
@@ -20954,17 +20954,17 @@ window.details = {
     1816: {// Ace 6+
         special: "Reduces crew's current HP by 40%, deals 15x the amount of HP subtracted in typeless damage to all enemies, boosts ATK of Shooter characters by 2x for 1 turn",
         specialName: "Great Flame Commandment: Flame Emperor • Flame Wheel",
-        captain: "Boosts HP of Shooter characters by 1.5x and boosts ATK by 3.25x if they have a matching orb, by 2.25x otherwise"
+        captain: "Boosts HP of Shooter characters by 1.5x and boosts ATK of Shooter characters by 3.25x if they have a matching orb, by 2.25x otherwise"
     },
     1817: {// Riku
-        captain: "Boosts ATK by 2x after scoring 3 Greats in a row",
+        captain: "Boosts ATK of all characters by 2x after scoring 3 Greats in a row",
         special: "Cuts the current HP of one enemy by 7%, boosts ATK of the characters in the bottom and middle row by 1.2x for 1 turn and reduces special cooldown of all non-Captain specials by 1 turn",
         specialName: "Divine Sword",
         sailor: "Restores his own special by 1 turn when it is rewinded",
         sailorNotes: "#{rewind : 1}",
     },
     1818: {// Riku
-        captain: "Boosts ATK of all characters by 1.5x and their HP by 1.2x, boosts ATK by 2.5x after scoring 3 Greats in a row",
+        captain: "Boosts ATK of all characters by 1.5x and their HP by 1.2x, boosts ATK of all characters by 2.5x after scoring 3 Greats in a row",
         special: "Cuts the current HP of one enemy by 7%, boosts ATK of the characters in the bottom and middle row by 1.2x for 1 turn and reduces special cooldown of all non-Captain specials by 1 turn",
         specialName: "Divine Sword",
         sailor: "Restores his own special by 1 turn when it is rewinded",
@@ -21096,13 +21096,13 @@ window.details = {
         potentialNotes: "#{enrage}"
     },
     1825: {//Akainu
-        captain: "Boosts ATK by 2.5x following a chain of [INT] > [INT] > [INT] attacks no lower than Good",
+        captain: "Boosts ATK of all characters by 2.5x following a chain of [INT] > [INT] > [INT] attacks no lower than Good",
         special: "Deals 50x character's ATK in [INT] damage to all enemies. Changes orbs for [INT] characters into [INT] orbs. Boosts the Color Affinity of [INT] characters by 1.75x for 1 turn",
         specialNotes: "#{colorAffinity : 1.75}",
         specialName: "Great Eruption [Neo]",
     },
     1826: {//Akainu
-        captain: "Boosts ATK by 3x following a chain of [INT] > [INT] > [INT] attacks no lower than Good",
+        captain: "Boosts ATK of all characters by 3x following a chain of [INT] > [INT] > [INT] attacks no lower than Good",
         special: "Deals 50x character's ATK in [INT] damage to all enemies. Changes orbs for [INT] characters into [INT] orbs. Boosts the Color Affinity of [INT] characters by 1.75x for 1 turn",
         specialNotes: "#{colorAffinity : 1.75}",
         specialName: "Great Eruption [Neo]",
@@ -24544,7 +24544,7 @@ window.details = {
         specialName: "Angry Threatening Command",
     },
     1980: {//Capone
-        captain: "Boosts HP of Shooter characters by 1.2x and boosts ATK by 2.5x if they have a matching orb, by 2x otherwise",
+        captain: "Boosts HP of Shooter characters by 1.2x and boosts ATK of Shooter characters by 2.5x if they have a matching orb, by 2x otherwise",
         special: "Reduces Special Cooldown of Shooter specials by 1 turn and changes orbs in the top row into Matching orbs",
         specialName: "Angry Threatening Command",
     },
@@ -24577,8 +24577,8 @@ window.details = {
     1984: {//Luffy&Ace
         captain: {
             "character1": "Boosts ATK of Free Spirit characters by 3x and their HP by 1.2x and reduce damage received by 15%",
-            "character2": "Boosts HP of Free Spirit characters by 1.2x and boosts ATK by 3.5x if they have a matching orb, by 2.25x otherwise",
-            "combined": "Boosts HP of Free Spirit characters by 1.2x and boosts ATK by 4.25x if they have a matching orb, by 3x otherwise and reduce damage received by 20%"
+            "character2": "Boosts HP of Free Spirit characters by 1.2x and boosts ATK of Free Spirit characters by 3.5x if they have a matching orb, by 2.25x otherwise",
+            "combined": "Boosts HP of Free Spirit characters by 1.2x and boosts ATK of Free Spirit characters by 4.25x if they have a matching orb, by 3x otherwise and reduce damage received by 20%"
         },
         special: "Deals 75x character's ATK in typeless damage to all enemies, changes [STR], [DEX], [QCK], [INT], and [PSY] orbs on Free Spirit characters into Matching orbs, amplifies the effect of orbs by 2x for 1 turn and becomes Luffy & Ace for 3 turns",
         specialNotes: "Change Action: When Change is activated, this character removes all Despair, Paralysis, and Slot Bind on themselves and changes their own orb, including [BLOCK] orbs, into a Matching orb",
@@ -24593,8 +24593,8 @@ window.details = {
     1985: {//Luffy&Ace
         captain: {
             "character1": "Boosts ATK of Free Spirit characters by 3x and their HP by 1.2x and reduce damage received by 15%",
-            "character2": "Boosts HP of Free Spirit characters by 1.2x and boosts ATK by 3.5x if they have a matching orb, by 2.25x otherwise",
-            "combined": "Boosts HP of Free Spirit characters by 1.2x and boosts ATK by 4.25x if they have a matching orb, by 3x otherwise and reduce damage received by 20%"
+            "character2": "Boosts HP of Free Spirit characters by 1.2x and boosts ATK of Free Spirit characters by 3.5x if they have a matching orb, by 2.25x otherwise",
+            "combined": "Boosts HP of Free Spirit characters by 1.2x and boosts ATK of Free Spirit characters by 4.25x if they have a matching orb, by 3x otherwise and reduce damage received by 20%"
         },
         special: "Deals 75x character's ATK in typeless damage to all enemies, changes [STR], [DEX], [QCK], [INT], and [PSY] orbs on Free Spirit characters into Matching orbs, amplifies the effect of orbs by 2x for 1 turn and becomes Luffy & Ace for 3 turns",
         specialNotes: "Change Action: When Change is activated, this character removes all Despair, Paralysis, and Slot Bind on themselves and changes their own orb, including [BLOCK] orbs, into a Matching orb",
@@ -26682,13 +26682,13 @@ window.details = {
         potentialNotes: "#{enrage}"
     },
     2098: {//Tesoro
-        captain: "If you have a Striker, Shooter, Fighter, Slasher, Free Spirit, Cerebral, Powerhouse and Driven character on your crew, boosts ATK of all characters by 3.75x, their HP by 1.35x and boosts chances of getting Matching orbs. Boosts ATK by 4.5 after scoring 4 GREATs in a row. Scoring a PERFECT reduces ATK boost for the next attack by 30%.",
+        captain: "If you have a Striker, Shooter, Fighter, Slasher, Free Spirit, Cerebral, Powerhouse and Driven character on your crew, boosts ATK of all characters by 3.75x, their HP by 1.35x and boosts chances of getting Matching orbs. Boosts ATK of all characters by 4.5 after scoring 4 GREATs in a row. Scoring a PERFECT reduces ATK boost for the next attack by 30%.",
         captainNotes: "Scoring a Perfect will reduce the ATK boost for the next character in the chain, not for the rest of the battle.",
         special: "Deals 200,000 fixed damage to all enemies, changes top and bottom row orbs into matching orbs and locks the chain multiplier at 3.25x for 1 turn.",
         specialName: "Gon Inferno",
     },
     2099: {//Tesoro
-        captain: "If you have a Striker, Shooter, Fighter, Slasher, Free Spirit, Cerebral, Powerhouse and Driven character on your crew, boosts ATK of all characters by 3.75x, their HP by 1.35x and boosts chances of getting Matching orbs. Boosts ATK by 4.5 after scoring 4 GREATs in a row. Scoring a PERFECT reduces ATK boost for the next attack by 30%.",
+        captain: "If you have a Striker, Shooter, Fighter, Slasher, Free Spirit, Cerebral, Powerhouse and Driven character on your crew, boosts ATK of all characters by 3.75x, their HP by 1.35x and boosts chances of getting Matching orbs. Boosts ATK of all characters by 4.5 after scoring 4 GREATs in a row. Scoring a PERFECT reduces ATK boost for the next attack by 30%.",
         captainNotes: "Scoring a Perfect will reduce the ATK boost for the next character in the chain, not for the rest of the battle.",
         special: "Deals 200,000 fixed damage to all enemies, changes top and bottom row orbs into matching orbs and locks the chain multiplier at 3.25x for 1 turn.",
         specialName: "Gon Inferno",
