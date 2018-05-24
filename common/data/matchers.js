@@ -732,6 +732,12 @@ window.matchers = [
     },
     
     {
+        name: 'Blow Away Resistance',
+        target: 'sailor',
+        matcher: /Cannot be Blown away/i
+    },
+    
+    {
         name: 'Additional Damage dealer',
         target: 'sailor',
         matcher: /Additional.+Damage/i
