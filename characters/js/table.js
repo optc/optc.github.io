@@ -138,7 +138,7 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
         if (filters.drop) {
             var isFarmable = CharUtils.isFarmable(id);
             if (filters.drop == 'Farmable') {
-                if (id == 1 || !isFarmable) return false;    
+                if (id == 1 || !isFarmable) return false;
                 if (farmableLocations !== null) {
                     var farmable = CharUtils.checkFarmable(id, farmableLocations);
                     if (!farmable) return false;
@@ -161,6 +161,9 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
                     // rayleigh shop
                     if (filters.nonFarmable.shop && !flags.shop) return false;
                     if (filters.nonFarmable.shop === false && flags.shop) return false;
+                    // TM RR
+                    if (filters.nonFarmable.tmlrr && !flags.tmlrr) return false;
+                    if (filters.nonFarmable.tmlrr === false && flags.tmlrr) return false;
                 }
             }
         }
@@ -293,7 +296,7 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
 
     $timeout(function() {
         jQuery.fn.dataTable.ext.search.push(tableFilter);
-        var types = { story: 'Story Island', fortnight: 'Fortnight', raid: 'Raid', Coliseum: 'Coliseum' };
+        var types = { story: 'Story Island', fortnight: 'Fortnight', raid: 'Raid', Coliseum: 'Coliseum', Treasure: 'Treasure Map' };
         $rootScope.$watch('table',function(table) {
             tableData = table;
             if (table.parameters && table.parameters.filters && table.parameters.filters.farmable) {

@@ -25970,7 +25970,7 @@ window.details = {
     },
     2056: {//Ichiji
         captain: "Boosts ATK of Fighter characters by 2.5x and reduces their RCV to 0",
-        special: "Deals 15x character's ATK in [INT] damage to one enemy, changes captain's orb into a [PSY] orb and makes [PSY] orb \"beneficial\" for all characters for 1 turn.",
+        special: "Deals 15x character's ATK in [INT] damage to one enemy, changes top row orbs into [PSY] orbs and makes [PSY] orb \"beneficial\" for all characters for 1 turn.",
         specialName: "Scornful Gang Up (First Son)",
         specialNotes: "#{beneficial}",
         sailor: "Makes [PSY] orbs \"beneficial\" for this unit",
@@ -26561,22 +26561,22 @@ window.details = {
     },
     2083: {//Reiju
         captain: "Boosts ATK of [DEX] and [QCK] characters by 2.25x",
-        special: "Removes Poison, changes left column orbs into Matching orbs and amplifies the effect of orbs on [DEX], [QCK] and [PSY] characters by 1.75x for 1 turn",
+        special: "Removes Poison, changes left column [STR], [DEX], [QCK], [PSY], or [INT] orbs into Matching orbs and amplifies the effect of orbs on [DEX], [QCK] and [PSY] characters by 1.75x for 1 turn",
         specialName: "Celebration at the Flower Garden",
     },
     2084: {//Reiju
         captain: "Boosts ATK of [DEX] and [QCK] characters by 2.5x and their RCV by 1.2x",
-        special: "Removes Poison, changes left column orbs into Matching orbs and amplifies the effect of orbs on [DEX], [QCK] and [PSY] characters by 1.75x for 1 turn",
+        special: "Removes Poison, changes left column [STR], [DEX], [QCK], [PSY], or [INT] orbs into Matching orbs and amplifies the effect of orbs on [DEX], [QCK] and [PSY] characters by 1.75x for 1 turn",
         specialName: "Celebration at the Flower Garden",
     },
     2085: {//Sanji
         captain: "Boosts ATK of [DEX] and [QCK] characters by 2.25x",
-        special: "Recovers 3,000 HP, changes right column orbs into Matching orbs and boosts ATK of [DEX], [QCK] and [INT] characters by 1.75x for 1 turn",
+        special: "Recovers 3,000 HP, changes right column [STR], [DEX], [QCK], [PSY], or [INT] orbs into Matching orbs and boosts ATK of [DEX], [QCK] and [INT] characters by 1.75x for 1 turn",
         specialName: "A Full Bloom Bright Smile",
     },
     2086: {//Sanji
         captain: "Boosts ATK of [DEX] and [QCK] characters by 2.5x and their HP by 1.2x",
-        special: "Recovers 3,000 HP, changes right column orbs into Matching orbs and boosts ATK of [DEX], [QCK] and [INT] characters by 1.75x for 1 turn",
+        special: "Recovers 3,000 HP, changes right column [STR], [DEX], [QCK], [PSY], or [INT] orbs into Matching orbs and boosts ATK of [DEX], [QCK] and [INT] characters by 1.75x for 1 turn",
         specialName: "A Full Bloom Bright Smile",
     },
     2087: {//Pizza Luffy
