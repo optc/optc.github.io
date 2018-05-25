@@ -15,6 +15,12 @@ window.matchers = [
     },
 
     {
+        name: 'Universal ATK boosting captains',
+        target: 'captain',
+        matcher: /Boosts.+ATK of (all characters|all others)/i
+    },
+
+    {
         name: 'ATK boosting captains',
         target: 'captain',
         matcher: /Boosts ATK/i
@@ -421,6 +427,12 @@ window.matchers = [
         target: 'special',
         matcher: /Deals.+typeless damage/i
     },
+
+    {
+        name: 'Typed damage dealers',
+        target: 'special',
+        matcher: /Deals.+(\[STR\]|\[DEX\]|\[QCK\]|\[PSY\]|\[INT\]) damage/i
+    },
     
     {
         name: 'Additional Damage dealer',
@@ -723,6 +735,12 @@ window.matchers = [
         name: 'Orb Retainer',
         target: 'sailor',
         matcher: /If this character has.+(STR|DEX|QCK|PSY|INT|RCV).+(GOOD|GREAT|PERFECT)/i
+    },
+    
+    {
+        name: 'Blow Away Resistance',
+        target: 'sailor',
+        matcher: /Cannot be Blown away/i
     },
     
     {

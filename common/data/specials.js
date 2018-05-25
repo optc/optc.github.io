@@ -4902,7 +4902,7 @@ window.specials = {
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain]); }
     },
     2089: {
-        atk: function(p) { return window.specials[2088].multiplier; },
+        atk: function(p) { return window.specials[2089].multiplier; },
         type: "class",
         onActivation: function(p) {
             var n = (p.percHP == 100 ? 1.5 : 1);
@@ -4915,6 +4915,26 @@ window.specials = {
     },
     2091: {
         delay: function(p) { return 1; },
+    },
+    2092: {
+        turnedOn: [ false, false ],
+        onActivation: function(p) {
+            window.specials[2092].turnedOn[p.slot] = true;
+            p.scope.notify({
+                text: 'Only affects damage if Zoro is your captain',
+                name: '2092warning'
+            });
+        },
+        onDeactivation: function(p) {
+            window.specials[2092].turnedOn[p.slot] = false;
+        },
+        atk: function(p) { return p.defenseDown ? 1.5 : 1; },
+        type: "condition",
+        def: function(p) { return 0.5; }
+    },
+    2093: {
+        atk: function(p) { return p.delayed > 0 ? 1.5 : 1; },
+        type: "condition",
     },
     2096: {
         affinity: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Driven")) ? window.specials[2096].multiplier : 1; },

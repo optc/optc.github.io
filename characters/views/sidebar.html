@@ -62,6 +62,10 @@
         ng-model="filters.farmable.Coliseum" ng-click="onDropFilterClick($event,true)">Coliseum-only</span><!--
  --><span class="filter width-6 exc"  ng-class="{ active: filters.farmable.Coliseum === false }"
         ng-model="filters.farmable.Coliseum" ng-click="onDropFilterClick($event,false)">Hide Clssm-only</span>
+    <span class="filter width-6 drop" ng-class="{ active: filters.farmable.Treasure }"
+        ng-model="filters.farmable.Treasure" ng-click="onDropFilterClick($event,true)">Treasure Map-only</span><!--
+ --><span class="filter width-6 exc"  ng-class="{ active: filters.farmable.Treasure === false }"
+        ng-model="filters.farmable.Treasure" ng-click="onDropFilterClick($event,false)">Hide TreasMap-only</span>
 </div>
 
 <div class="filter-container conditional" ng-show="filters.drop == 'Non-farmable'">
@@ -70,6 +74,10 @@
         ng-model="filters.nonFarmable.lrr" ng-click="onDropFilterClick($event,true)">Limited RR-only</span><!--
  --><span class="filter width-6 drop" ng-class="{ active: filters.nonFarmable.lrr === false }"
         ng-model="filters.nonFarmable.lrr" ng-click="onDropFilterClick($event,false)">Hide lim. RR-only</span>
+    <span class="filter width-6 drop" ng-class="{ active: filters.nonFarmable.tmlrr }"
+        ng-model="filters.nonFarmable.tmlrr" ng-click="onDropFilterClick($event,true)">TM Limited RR-only</span><!--
+ --><span class="filter width-6 drop" ng-class="{ active: filters.nonFarmable.tmlrr === false }"
+        ng-model="filters.nonFarmable.tmlrr" ng-click="onDropFilterClick($event,false)">Hide TM lim. RR-only</span>
     <span class="filter width-6 drop" ng-class="{ active: filters.nonFarmable.promo }"
         ng-model="filters.nonFarmable.promo" ng-click="onDropFilterClick($event,true)">Promo-only</span><!--
  --><span class="filter width-6 drop" ng-class="{ active: filters.nonFarmable.promo === false }"

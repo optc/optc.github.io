@@ -404,8 +404,12 @@ directives.addTags = function($stateParams, $rootScope) {
                 element.append($('<span class="tag flag">Fortnight only</div>'));
             if (CharUtils.checkFarmable(id, { Raid: true }))
                 element.append($('<span class="tag flag">Raid only</div>'));
+            if (CharUtils.checkFarmable(id, { Treasure: true }))
+                element.append($('<span class="tag flag">Treasure Map only</div>'));
             if (CharUtils.checkFarmable(id, { 'Story Island': true, Fortnight: true }))
                 element.append($('<span class="tag flag">Story mode & fortnight only</div>'));
+            if (CharUtils.checkFarmable(id, { 'Story Island': true, Raid: true }))
+                element.append($('<span class="tag flag">Story mode & raid only</div>'));
             if (CharUtils.checkFarmable(id, { Raid: true, Fortnight: true }))
                 element.append($('<span class="tag flag">Raid & fortnight only</div>'));
             // matchers
