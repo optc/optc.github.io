@@ -792,6 +792,7 @@ window.drops = {
             name: 'Dressrosa - Coliseum Lodging to Executive Tower',
             shortName: 'Dressrosa 2',
             thumb: 2004,
+            global: true,
             nakama: 1200400,
             completion: '5x Rainbow Gems',
             gamewith: 93492,
@@ -1899,6 +1900,7 @@ window.drops = {
         {
             name: 'Supernova! Apoo and Drake!',
             thumb: 1855,
+            global: true,
             nakama: 2185500,
             gamewith: 79678,
             'All Difficulties': [ 1854, 1856, -1652, -1272, -1278, -1620, -1702, -1558 ]
