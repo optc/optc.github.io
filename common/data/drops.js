@@ -2963,6 +2963,7 @@ window.drops = {
         {
             name: 'Pirate Hunter\'s Memories of Training',
             thumb: 1900,
+            global: true,
             nakama: 6190000,
             gamewith: 85069,
             showManual: true,
