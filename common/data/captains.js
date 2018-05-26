@@ -7041,7 +7041,7 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Slasher") ? 2.25 : 1; },
     },
     2082: {
-        atk: function(p) { return p.unit.class.has("Slasher") ? 2.75 : 1; },
+        atk: function(p) { return p.unit.class.has("Slasher") ? 2.5 : 1; },
     },
     2083: {
         atk: function(p){ return p.unit.type == "DEX" || p.unit.type == "QCK" ? 2.25 : 1; },

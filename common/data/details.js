@@ -26511,7 +26511,7 @@ window.details = {
         sailor: "Boosts base ATK of Slasher characters by 40",
     },
     2082: {//Pedro
-        captain: "Boosts ATK of Slasher characters by 2.75x and reduces damage received by 7%",
+        captain: "Boosts ATK of Slasher characters by 2.5x and reduces damage received by 7%",
         special: "Cuts the current HP of one enemy by 10%. If enemies have All Debuff Protection or Delay Debuff Protection at the time the special was activated, amplifies the effect of orbs by 1.75x for 1 turn and boosts ATK of all characters by 1.75x for 1 turn",
         specialName: "Risky Diversion",
         sailor: {
