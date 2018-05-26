@@ -792,6 +792,7 @@ window.drops = {
             name: 'Dressrosa - Coliseum Lodging to Executive Tower',
             shortName: 'Dressrosa 2',
             thumb: 2004,
+            global: true,
             nakama: 1200400,
             completion: '5x Rainbow Gems',
             gamewith: 93492,
@@ -805,8 +806,8 @@ window.drops = {
             '08': [ 2002, 1627 ],
             '09': [  ],
             '10': [ 2005 ],
-            '11': [  ],
-            '12': [ 2005 ],
+            '11': [ 1401 ],
+            '12': [ 2005, 1737 ],
         },
         
         {
@@ -1899,6 +1900,7 @@ window.drops = {
         {
             name: 'Supernova! Apoo and Drake!',
             thumb: 1855,
+            global: true,
             nakama: 2185500,
             gamewith: 79678,
             'All Difficulties': [ 1854, 1856, -1652, -1272, -1278, -1620, -1702, -1558 ]
@@ -2963,6 +2965,7 @@ window.drops = {
         {
             name: 'Pirate Hunter\'s Memories of Training',
             thumb: 1900,
+            global: true,
             nakama: 6190000,
             gamewith: 85069,
             showManual: true,

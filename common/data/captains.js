@@ -7041,7 +7041,7 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Slasher") ? 2.25 : 1; },
     },
     2082: {
-        atk: function(p) { return p.unit.class.has("Slasher") ? 2.75 : 1; },
+        atk: function(p) { return p.unit.class.has("Slasher") ? 2.5 : 1; },
     },
     2083: {
         atk: function(p){ return p.unit.type == "DEX" || p.unit.type == "QCK" ? 2.25 : 1; },
@@ -7170,6 +7170,10 @@ window.captains = {
     2107: {
         atk: function(p){ return p.unit.type == "PSY" ? 2.5 : 1; },
         rcv: function(p){ return p.unit.type == "PSY" ? 1.2 : 1; },
+    },
+    2108: {
+        atk: function(p) { if(p.colorCount.INT>=1 && p.colorCount.PSY>=1 && p.colorCount.STR>=1 && p.colorCount.DEX>=1 && p.colorCount.QCK>=1)
+                return p.actions[p.sourceSlot] ? 1.5 : 1; },//fix
     },
     2109: {
         atk: function(p) { if(p.colorCount.INT>=1 && p.colorCount.PSY>=1 && p.colorCount.STR>=1 && p.colorCount.DEX>=1 && p.colorCount.QCK>=1)
