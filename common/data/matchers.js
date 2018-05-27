@@ -283,7 +283,7 @@ window.matchers = [
     },
 
     {
-        name: 'Following ATK boosters',
+        name: 'Following-turn ATK boosters',
         target: 'special',
         matcher: /(Following the activation.+boosts.+ATK|If during that turn.+boosts.+ATK)/i
     },
