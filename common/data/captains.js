@@ -7188,6 +7188,30 @@ window.captains = {
     2111: {
         atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Shooter") ? 2.5 : 1; },
     },
+    2112: {//CHANGE THIS
+        atk: function(p) {
+            var Katacount = 0;
+            var Kataclass = [ "Fighter", "Striker", "Shooter", "Cerebral", "Powerhouse" ];
+            for(var i = 0; i < Kataclass.length; i++){
+                if(p.unit.class.has(Kataclass[i])){
+                    Katacount++;
+                }
+            }
+            return Math.pow(1.825, Katacount); 
+        },
+    },
+    2113: {//CHANGE THIS
+        atk: function(p) {
+            var Katacount = 0;
+            var Kataclass = [ "Fighter", "Striker", "Shooter", "Cerebral", "Powerhouse" ];
+            for(var i = 0; i < Kataclass.length; i++){
+                if(p.unit.class.has(Kataclass[i])){
+                    Katacount++;
+                }
+            }
+            return Math.pow(1.825, Katacount); 
+        },
+    },
     2200: {
         atk: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Cerebral")) && p.percHP <= 50.0 ? 2.5 : 1.5; }
     },

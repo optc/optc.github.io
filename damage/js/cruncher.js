@@ -59,6 +59,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
     var currentDefense = 0;
     var isDefenseDown = false;
     var isDelayed = false;
+    var katakuri = false;
 
     var specialsCombinations = [ ], chainSpecials = [ ];
     var hitModifiers = [ ];
@@ -855,7 +856,19 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         // check if defense is down (required by some captain effects)
         isDefenseDown = computeActualDefense(shipBonus.bonus.name);
         //isDefenseDown = enabledSpecials.some(function(x) { return (x !== null && x.hasOwnProperty('def')) || (shipBonus.bonus.name == "Flying Dutchman - Special ACTIVATED"); });
-        isDelayed = enabledSpecials.some(function(x) { return (x !== null && x.hasOwnProperty('delay')) ? x.delay(getParameters(x.sourceSlot)) > 0 : false || (shipBonus.bonus.name == "Karasumaru Ship - Special ACTIVATED"); });
+        for(var kata = 0; kata < 2; kata++){
+            if(team[kata].unit !== null){
+                console.log(team[kata].unit.number);
+                if(team[kata].unit.number == 2112 || team[kata].unit.number == 2113)//CHANGE THIS
+                    katakuri = true;
+                else
+                    katakuri = false;
+            }
+        }
+        if(team[0].unit == null && team[1].unit == null)
+            katakuri = false;
+        
+        isDelayed = enabledSpecials.some(function(x) { return (x !== null && x.hasOwnProperty('delay')) ? x.delay(getParameters(x.sourceSlot)) > 0 : false || (shipBonus.bonus.name == "Karasumaru Ship - Special ACTIVATED") || katakuri; });
         
         enabledEffects = [ ];
         
