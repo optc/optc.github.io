@@ -1980,6 +1980,8 @@ window.flags = {
     2105: { rr: 1, rro: 1 },
     2106: { rr: 1, rro: 1 },
     2107: { rr: 1, rro: 1 },
+    2113: { rr: 1, rro: 1 },//CHANGE THIS
+    2112: { rr: 1, rro: 1 },//CHANGE THIS
     2200: { global: 1 },
     2201: { global: 1 },
 };

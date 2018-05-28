@@ -3126,7 +3126,8 @@ window.details = {
     414: {
         special: "Changes [STR] and [DEX] orbs into [INT] orbs",
         specialName: "Doppelman",
-        captain: "Boosts ATK of [INT] characters by 3x if HP is above 99% at the start of the turn"
+        captain: "Boosts ATK of [INT] characters by 3x if HP is above 99% at the start of the turn",
+        limit: "This character has a Limit Break Tree"
     },
     415: {
         special: "Recovers 15x character's RCV in HP, delays all enemies for 1 turn",
@@ -3558,7 +3559,8 @@ window.details = {
     453: {
         special: "Changes own orb and the captain's orb into [PSY]",
         specialName: "Dread Morning Star",
-        captain: "Reduces cooldown of all specials by 3 turns at the start of the fight, boosts ATK of Striker characters by 2x"
+        captain: "Reduces cooldown of all specials by 3 turns at the start of the fight, boosts ATK of Striker characters by 2x",
+        limit: "This character has a Limit Break Tree"
     },
     454: {
         special: "Boosts ATK of [STR] characters by 1.5x for 1 turn, deals 15x character's ATK in [STR] damage to all enemies",
@@ -10968,7 +10970,8 @@ window.details = {
         captain: "Boosts ATK of [DEX] characters by 2.25x and their HP by 1.5x",
         special: "Empties all slots with [BLOCK] orbs, deals severe typeless damage based on number of [BLOCK] slots emptied to all enemies. Changes [EMPTY] orbs into Matching orbs",
         specialNotes: "The exact multiplier used is chosen based on the number of [BLOCK] orbs consumed: 0 orbs - Cannot Activate; 1 orb - 20x ATK; 2 orbs - 40x ATK; 3 orbs - 100x ATK; 4 orbs - 200x ATK; 5 orbs - 300x ATK; 6 orbs - 500x ATK.",
-        specialName: "Admiral Killer Bowling"
+        specialName: "Admiral Killer Bowling",
+        limit: "This character has a Limit Break Tree"
     },
     1128: {
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of all characters by 1.75x",
@@ -11753,6 +11756,7 @@ window.details = {
         captainNotes: "If a character dies and revives, it counts as killing a character. If you did not defeat an enemy, lose all ATK boost stacks.",
         special: "Increases duration of any Class/Type boosting buffs and Orb Amplification buffs by 1 turn",
         specialName: "Ice Age",
+        limit: "This character has a Limit Break Tree"
     },
     1193: {
         captain: "Boosts ATK of Free Spirit characters by 2x",
@@ -12238,6 +12242,7 @@ window.details = {
         specialNotes: "#{stages}",
         sailor: "Cannot be Blown Away",
         specialName: "Leg-Locked Heave-Ho",
+        limit: "This character has a Limit Break Tree"
     },
     1231: {//Smoker
         captain: "Boosts ATK of Striker and Driven characters by 1.75x and reduces RCV of all characters by 50%. If this character becomes your captain in the middle of an island, reduces damage received by 30% and further boosts ATK of Striker and Driven characters by 1.25x",
@@ -13862,6 +13867,7 @@ window.details = {
         sailor: "Completely resists Silence on this character",
         sailorNotes: "#{silence}",
         specialName: "Black Ball - Thundercloud Rod",
+        limit: "This character has a Limit Break Tree"
     },
     1367: {//Timeskip Sanji
         captain: "Boosts ATK of [STR] characters by 2x",
@@ -13997,6 +14003,7 @@ window.details = {
         ],
         specialName: "Poison Dragon",
         specialNotes: "Toxic starts at 0.5x character's attack and increases by 3x at the end of every turn until 1,500,000 damage per turn.<br>#{stages}",
+        limit: "This character has a Limit Break Tree"
     },
     1375: {//Dellinger
         captain: "Boosts ATK of Powerhouse characters by 2.5x, reduces crew's HP by 50%, Increases damage received by 2x",
@@ -15063,6 +15070,7 @@ window.details = {
         specialName: "Squid Spear",
         sailor: "Makes [STR], [QCK], [DEX] and [INT] orbs \"beneficial\" for this unit if there are 6 Powerhouse characters in your crew",
         sailorNotes: "#{beneficial}",
+        limit: "This character has a Limit Break Tree"
     },
     1439: {//Daruma
         captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of Powerhouse and Fighter characters by 1.2x",
@@ -16568,6 +16576,7 @@ window.details = {
         special: "Cuts the current HP of each enemy by 20%, changes right column [STR], [QCK], [DEX], [PSY] and [INT] orbs into Matching orbs for Shooter and Striker characters",
         sailor: "Boosts base HP of [STR] characters by 150",
         specialName: "Greenstone Threat",
+        limit: "This character has a Limit Break Tree"
     },
     1539: {//Perona
         captain: "Boosts ATK and RCV of characters with cost 20 or less by 1.5x",
@@ -16683,7 +16692,7 @@ window.details = {
     1543: {//6+ Usopp
         captain: "Boosts ATK of Shooter characters by 1.5x if HP is below 50% or by 1.75x if HP is below 30% at the start of the turn. Makes [STR], [DEX], [QCK], [PSY], [INT], [RCV] and [TND] orbs \"beneficial\" to Shooter characters. At the beginning of each Stage, increases the Attack Timer of all enemies by 1 turn",
         captainNotes: "The Attack Timer increase is NOT a delay, so the enemies can still be delayed. Attack Timer increase ignores Debuff Prevention barriers<br>#{beneficial}",
-        special: "Cuts the current HP of each enemy by 10%. If enemies have Delay Prevention, ignores it and Delays all enemies for 1 turn. Otherwise, Delays all enemies for 3 turns",
+        special: "Cuts the current HP of each enemy by 10%. If enemies have Delay Debuff Protection, ignores it and Delays all enemies for 1 turn. Otherwise, Delays all enemies for 3 turns",
         sailor: {
             "base": "Completely resists Blindness",
             "level1": "Boosts base HP of Shooter characters by 100",
@@ -17715,6 +17724,7 @@ window.details = {
         special: "Deals typeless damage to all enemies equal to 10x how much excess healing done before the special is activated.",
         specialNotes: "The excess healing is counted from the last time the special is used and accumulates when you heal more than your maximum HP. For example, if you are at max HP and you heal 1,000 HP, you will add 10k damage to the special. The amount of damage possible caps at 2,000,000 damage.",
         specialName: "Heavy Thunder",
+        limit: "This character has a Limit Break Tree"
     },
     1611: {//Kuma
         captain: "Boosts ATK of Shooter characters by 1.75x and their HP by 1.2x",
@@ -18406,6 +18416,7 @@ window.details = {
         sailor: "Makes [DEX] orbs \"beneficial\" for Striker characters if your Captain is a Striker character",
         sailorNotes: "#{beneficial}",
         specialName: "Summon Dragon",
+        limit: "This character has a Limit Break Tree"
     },
     1659: {//Raizo
         captain: "Boosts ATK of Shooter characters by 2x",
@@ -18591,6 +18602,7 @@ window.details = {
         captain: "Boosts HP of Striker characters by 1.2x and boosts ATK of Striker characters by 2.75x if HP is below 30% at the start of the turn, 2.25x otherwise",
         special: "Changes adjacent orbs into Matching Orbs and if HP is above 70%, amplifies the effect of orbs for Striker and Powerhouse characters by 1.5x for 1 turn",
         specialName: "Trueno Bastardo",
+        limit: "This character has a Limit Break Tree"
     },
     1668: {//Reborn Aokiji
         special: "Boosts ATK of Striker characters by 1.75x for 2 turns, locks all orbs for 2 turns",
@@ -20133,6 +20145,7 @@ window.details = {
         special: "Increases duration of any Class/Type boosting buffs and Orb Amplification buffs by 1 turn, locks the chain multiplier at 2.5x for 1 turn and deals 100,000 fixed damage to all enemies that will ignore damage negating abilities and barriers.",
         specialNotes: "#{ignoreBarrier}",
         specialName: "Determined Man's Ice Attack",
+        limit: "This character has a Limit Break Tree"
     },
     1765: {//Blue Gilly
         captain: "Boosts ATK of Fighter characters by 1.5x",
@@ -23342,6 +23355,7 @@ window.details = {
         captain: "Boosts ATK of Slasher and Cerebral characters by 2.5x, recovers 2x character's RCV in HP at the end of each turn",
         special: "Randomizes all non-matching orbs, boosts ATK of all characters by 1.75x for 1 turn",
         specialName: "Maelstrom at Sea",
+        limit: "This character has a Limit Break Tree"
     },
     1925: {//Coby
         captain: "Boosts ATK of Driven characters by 2.5x",
@@ -27130,6 +27144,18 @@ window.details = {
             },
         ],
         potentialNotes: "#{enrage}"
+    },
+    2112: {//Katakuri
+        captain: "Boosts ATK of Fighter, Striker, Shooter, Cerebral and Powerhouse characters by 1.825x, reduce damage received by 20% and makes [QCK], [PSY], [RCV] and [TND] orbs \"beneficial\" to all characters. Has a chance to delay all enemies by 1 turn based on damage dealt in previous turn.",
+        captainNotes: "The bonus is cumulative. Characters with 2 of the boosted classes get a 3.330625x bonus<br><b>100,000 damage or more:</b> 20% chance to delay<br><b>500,000 damage or more:</b> 50% chance to delay<br><b>1,000,000 damage or more:</b> 100% chance to delay<br><b>2,000,000 damage or more:</b> 100% chance to delay ignoring Delay Debuff Protection",
+        special: "Boosts ATK against delayed enemies by 1.75x for Fighter, Striker, Shooter, Cerebral and Powerhouse characters for 2 turns, changes [STR], [QCK], [DEX], [PSY], [INT] and [BLOCK] orbs on Fighter, Striker, Shooter, Cerebral and Powerhouse characters into Matching orbs and reduces Special Cooldown of Fighter, Striker, Shooter, Cerebral and Powerhouse specials by 1 turn",
+        specialName: "Katakrui Special",
+    },
+    2113: {//Katakuri
+        captain: "Boosts ATK of Fighter, Striker, Shooter, Cerebral and Powerhouse characters by 1.825x, reduce damage received by 20% and makes [QCK], [PSY], [RCV] and [TND] orbs \"beneficial\" to all characters. Has a chance to delay all enemies by 1 turn based on damage dealt in previous turn.",
+        captainNotes: "The bonus is cumulative. Characters with 2 of the boosted classes get a 3.330625x bonus<br>100,000 damage or more: 20% chance to delay<br>500,000 damage or more: 50% chance to delay<br>1,000,000 damage or more: 100% chance to delay<br>2,000,000 damage or more: 100% chance to delay ignoring Delay Debuff Protection",
+        special: "Boosts ATK against delayed enemies by 1.75x for Fighter, Striker, Shooter, Cerebral and Powerhouse characters for 2 turns, changes [STR], [QCK], [DEX], [PSY], [INT] and [BLOCK] orbs on Fighter, Striker, Shooter, Cerebral and Powerhouse characters into Matching orbs and reduces Special Cooldown of Fighter, Striker, Shooter, Cerebral and Powerhouse specials by 1 turn",
+        specialName: "Katakrui Special",
     },
     2200: {//Doflamingo Raid v2
         captain: "Boosts ATK of Driven and Cerebral characters by 2.5x when HP is 50% or below, 1.5x otherwise",

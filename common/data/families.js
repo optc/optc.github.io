@@ -2110,7 +2110,7 @@ window.families = [
     "Charlotte Linlin",
     "Eustass Kid",
     "Eustass Kid",
-    null,
-    null,
+    "Katakuri",//CHANGE THIS
+    "Katakuri",//CHANGE THIS
     null,
 ];
