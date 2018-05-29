@@ -23056,14 +23056,14 @@ window.details = {
         captainNotes: "#{beneficial}",
         special: "Deals 200% of the damage dealt in Overkill Damage in the previous turn as typeless damage to all enemies.",
         specialNotes: "Overkill Damage is damage dealt over the enemy's current HP with normal attacks that killed them. For example, dealing 2,100,000 damage to an enemy with 1,000,000 HP will count as 1,100,000 Overkill Damage. This stacks for each enemy killed in the previous turn. If the enemy dies by End-Of-Turn damage, your Overkill Damage dealt last turn will be 0.",
-        specialName: "Flap Thread",
+        specialName: "Thousand Arrows: Flap Thread",
     },
     1910:{//V2 Doflamingo
         captain: "If there are 6 Driven characters in your crew, boosts ATK of Driven characters by 3.9x if they have a matching orb, by 3.25x otherwise and their HP by 1.2x. Lowers chances of getting [STR] orbs and makes [DEX] and [QCK] orbs \"beneficial\" to Driven characters",
         captainNotes: "#{beneficial}",
         special: "Deals 200% of the damage dealt in Overkill Damage in the previous turn as typeless damage to all enemies.",
         specialNotes: "Overkill Damage is damage dealt over the enemy's current HP with normal attacks that killed them. For example, dealing 2,100,000 damage to an enemy with 1,000,000 HP will count as 1,100,000 Overkill Damage. This stacks for each enemy killed in the previous turn. If the enemy dies by End-Of-Turn damage, your Overkill Damage dealt last turn will be 0.",
-        specialName: "Flap Thread",
+        specialName: "Thousand Arrows: Flap Thread",
         sailor: {
             "base": "None",
             "level1": "Makes [QCK] orbs \"beneficial\" for this unit",
@@ -27149,13 +27149,13 @@ window.details = {
         captain: "Boosts ATK of Fighter, Striker, Shooter, Cerebral and Powerhouse characters by 1.825x, reduce damage received by 20% and makes [QCK], [PSY], [RCV] and [TND] orbs \"beneficial\" to all characters. Has a chance to delay all enemies by 1 turn based on damage dealt in previous turn.",
         captainNotes: "The bonus is cumulative. Characters with 2 of the boosted classes get a 3.330625x bonus<br><b>100,000 damage or more:</b> 20% chance to delay<br><b>500,000 damage or more:</b> 50% chance to delay<br><b>1,000,000 damage or more:</b> 100% chance to delay<br><b>2,000,000 damage or more:</b> 100% chance to delay ignoring Delay Debuff Protection",
         special: "Boosts ATK against delayed enemies by 1.75x for Fighter, Striker, Shooter, Cerebral and Powerhouse characters for 2 turns, changes [STR], [QCK], [DEX], [PSY], [INT] and [BLOCK] orbs on Fighter, Striker, Shooter, Cerebral and Powerhouse characters into Matching orbs and reduces Special Cooldown of Fighter, Striker, Shooter, Cerebral and Powerhouse specials by 1 turn",
-        specialName: "Katakrui Special",
+        specialName: "Peerless Donuts: Mochi Singing Result",
     },
     2113: {//Katakuri
         captain: "Boosts ATK of Fighter, Striker, Shooter, Cerebral and Powerhouse characters by 1.825x, reduce damage received by 20% and makes [QCK], [PSY], [RCV] and [TND] orbs \"beneficial\" to all characters. Has a chance to delay all enemies by 1 turn based on damage dealt in previous turn.",
         captainNotes: "The bonus is cumulative. Characters with 2 of the boosted classes get a 3.330625x bonus<br>100,000 damage or more: 20% chance to delay<br>500,000 damage or more: 50% chance to delay<br>1,000,000 damage or more: 100% chance to delay<br>2,000,000 damage or more: 100% chance to delay ignoring Delay Debuff Protection",
         special: "Boosts ATK against delayed enemies by 1.75x for Fighter, Striker, Shooter, Cerebral and Powerhouse characters for 2 turns, changes [STR], [QCK], [DEX], [PSY], [INT] and [BLOCK] orbs on Fighter, Striker, Shooter, Cerebral and Powerhouse characters into Matching orbs and reduces Special Cooldown of Fighter, Striker, Shooter, Cerebral and Powerhouse specials by 1 turn",
-        specialName: "Katakrui Special",
+        specialName: "Peerless Donuts: Mochi Singing Result",
     },
     2114: {//Brulee
         captain: "Boosts ATK and RCV of [PSY] characters by ?x and cuts the current HP of each enemy by ?% at the end of each turn",
@@ -27170,7 +27170,7 @@ window.details = {
             },
         ],
         specialNotes: "Upon activating the special, all orbs will be changed to the orb Brûlée has, including [RAINBOW] and [BLOCK] orbs. This will not override other [BLOCK] orbs.",
-        specialName: "Brulee Special",
+        specialName: "Light Reflecting a Virtual Image",
         sailor: "Makes PSY orbs \"beneficial\" for Cerebral characters",
         sailorNotes: "#{beneficial}",
     },
@@ -27187,7 +27187,7 @@ window.details = {
             },
         ],
         specialNotes: "Upon activating the special, all orbs will be changed to the orb Brûlée has, including [RAINBOW] and [BLOCK] orbs. This will not override other [BLOCK] orbs.",
-        specialName: "Brulee Special",
+        specialName: "Light Reflecting a Virtual Image",
         sailor: {
             "base": "Makes PSY orbs \"beneficial\" for Cerebral characters",
         },
@@ -27206,7 +27206,7 @@ window.details = {
                 "cooldown": [ 37, null ],
             },
         ],
-        specialName: "Amande Special",
+        specialName: "Slow Ballad",
         sailor: "Makes PSY orbs \"beneficial\" for this unit",
         sailorNotes: "#{beneficial}",
     },
@@ -27222,7 +27222,7 @@ window.details = {
                 "cooldown": [ 37, null ],
             },
         ],
-        specialName: "Amande Special",
+        specialName: "Slow Ballad",
         sailor: {
             "base": "Makes PSY orbs \"beneficial\" for this unit",
         },
@@ -27232,14 +27232,14 @@ window.details = {
     2118: {//Bobbin
         captain: "Boosts ATK of [QCK] and [PSY] characters by ?x",
         special: "Reduces enemy's Threshold Damage Reduction, Percent Damage Reduction, Increased Defense and End of Turn Heal duration by 5 turns, crew's ATK DOWN duration by 5 turns and changes adjacent orbs into Matching Orbs.",
-        specialName: "Bobbin Special",
+        specialName: "Death-Inducing Lullaby",
         sailor: "Boosts own base ATK by 350 if this character is the last in the chain to attack",
         limit: "This character has a limit break."
     },
     2119: {//Bobbin
         captain: "Boosts ATK of [QCK] and [PSY] characters by 2.5x",
         special: "Reduces enemy's Threshold Damage Reduction, Percent Damage Reduction, Increased Defense and End of Turn Heal duration by 5 turns, crew's ATK DOWN duration by 5 turns and changes adjacent orbs into Matching Orbs.",
-        specialName: "Bobbin Special",
+        specialName: "Death-Inducing Lullaby",
         sailor: {
             "base": "Boosts own base ATK by 350 if this character is the last in the chain to attack",
         },
@@ -27249,14 +27249,14 @@ window.details = {
         captain: "Boosts ATK of Powerhouse and Fighter characters by ?x and reduces damage received by ?%",
         captainNotes: "The bonus is cumulative. Powerhouse + Fighter characters get a ?x bonus",
         special: "If enemies are delayed at the time the special was activated, boost ATK of Fighter, Striker, Shooter, Cerebral and Powerhouse characters by 2x for 1 turn, by 1.75x for 3 turns otherwise.",
-        specialName: "Oven Special",
+        specialName: "Grilled Scorch Blow",
         sailor: "Boosts this character's attack against [STR] characters by 2x",
     },
     2121: {//Oven
         captain: "Boosts ATK of Powerhouse and Fighter characters by 1.65x and reduces damage received by 7%",
         captainNotes: "The bonus is cumulative. Powerhouse + Fighter characters get a 2.7225x bonus",
         special: "If enemies are delayed at the time the special was activated, boost ATK of Fighter, Striker, Shooter, Cerebral and Powerhouse characters by 2x for 1 turn, by 1.75x for 3 turns otherwise.",
-        specialName: "Oven Special",
+        specialName: "Grilled Scorch Blow",
         sailor: {
             "base": "Boosts this character's attack against [STR] characters by 2x",
         },

@@ -1997,7 +1997,7 @@ window.drops = {
         },
         
         {
-            name: 'Strawhat Pirates Pizza Party!! Part 1',
+            name: 'Strawhat Pirates Pizza Party!! Lunch',
             thumb: 2087,
             nakama: null,
             gamewith: 102409,
@@ -2005,11 +2005,11 @@ window.drops = {
         },
         
         {
-            name: 'Strawhat Pirates Pizza Party!! Part 2',
+            name: 'Strawhat Pirates Pizza Party!! Dinner',
             thumb: 2092,
             nakama: null,
-            gamewith: null,
-            'All Difficulties': [ 2092, 2093, 2094, 2095 ]
+            gamewith: 106868,
+            'All Difficulties': [ 2092, 2093, 2094, 2095, -1935, -1436, -1438, -1926, -1955, -1715 ]
         },
         
     ],
