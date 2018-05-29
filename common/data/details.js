@@ -21890,12 +21890,12 @@ window.details = {
     },
     1868: {//Fujitora
         captain: "Increases damage received by 1.2x, Boosts ATK of Slasher characters by 3.25x at the start of the chain and their HP by 1.2x and boosts ATK of Slasher characters by 4.225x following a chain of Good > Great > PERFECT hits",
-        special: "Deals 10 hits of 20x character's ATK in typeless damage to random enemies, if this character is your Captain or Friend/Guest Captain, Changes all orbs on Slasher characters into Matching orbs and delays all enemies for 1 turn.",
+        special: "Deals 10 hits of 20x character's ATK in typeless damage to random enemies and delays all enemies for 1 turn. If this character is your Captain or Friend/Guest Captain, Changes all orbs on Slasher characters into Matching orbs.",
         specialName: "The Rain of War's End"
     },
     1869: {//Fujitora
         captain: "Increases damage received by 1.2x, Boosts ATK of Slasher characters by 3.25x at the start of the chain and their HP by 1.2x and boosts ATK of Slasher characters by 4.225x following a chain of Good > Great > PERFECT hits",
-        special: "Deals 10 hits of 20x character's ATK in typeless damage to random enemies, if this character is your Captain or Friend/Guest Captain, Changes all orbs on Slasher characters into Matching orbs and delays all enemies for 1 turn.",
+        special: "Deals 10 hits of 20x character's ATK in typeless damage to random enemies and delays all enemies for 1 turn. If this character is your Captain or Friend/Guest Captain, Changes all orbs on Slasher characters into Matching orbs.",
         specialName: "The Rain of War's End",
         sailor: {
             "base": "None",
@@ -27156,6 +27156,111 @@ window.details = {
         captainNotes: "The bonus is cumulative. Characters with 2 of the boosted classes get a 3.330625x bonus<br>100,000 damage or more: 20% chance to delay<br>500,000 damage or more: 50% chance to delay<br>1,000,000 damage or more: 100% chance to delay<br>2,000,000 damage or more: 100% chance to delay ignoring Delay Debuff Protection",
         special: "Boosts ATK against delayed enemies by 1.75x for Fighter, Striker, Shooter, Cerebral and Powerhouse characters for 2 turns, changes [STR], [QCK], [DEX], [PSY], [INT] and [BLOCK] orbs on Fighter, Striker, Shooter, Cerebral and Powerhouse characters into Matching orbs and reduces Special Cooldown of Fighter, Striker, Shooter, Cerebral and Powerhouse specials by 1 turn",
         specialName: "Katakrui Special",
+    },
+    2114: {//Brulee
+        captain: "Boosts ATK and RCV of [PSY] characters by ?x and cuts the current HP of each enemy by ?% at the end of each turn",
+        special: [
+            {
+                "description": "Changes [TND] and [RCV] orbs into [PSY] orbs, changes all other orbs on all characters into Brûlée's orb. Adds 30x character's ATK as Additional Typeless Damage for 3 turns",
+                "cooldown": [ 18, null ],
+            },
+            {
+                "description": "Changes [TND] and [RCV] orbs into [PSY] orbs, changes all other orbs on all characters into Brûlée's orb. Adds 30x character's ATK as Additional Typeless Damage for 5 turns",
+                "cooldown": [ 22, null ],
+            },
+        ],
+        specialNotes: "Upon activating the special, all orbs will be changed to the orb Brûlée has, including [RAINBOW] and [BLOCK] orbs. This will not override other [BLOCK] orbs.",
+        specialName: "Brulee Special",
+        sailor: "Makes PSY orbs \"beneficial\" for Cerebral characters",
+        sailorNotes: "#{beneficial}",
+    },
+    2115: {//Brulee
+        captain: "Boosts ATK and RCV of [PSY] characters by 1.5x and cuts the current HP of each enemy by 15% at the end of each turn",
+        special: [
+            {
+                "description": "Changes [TND] and [RCV] orbs into [PSY] orbs, changes all other orbs on all characters into Brûlée's orb. Adds 30x character's ATK as Additional Typeless Damage for 3 turns",
+                "cooldown": [ 18, null ],
+            },
+            {
+                "description": "Changes [TND] and [RCV] orbs into [PSY] orbs, changes all other orbs on all characters into Brûlée's orb. Adds 30x character's ATK as Additional Typeless Damage for 5 turns",
+                "cooldown": [ 22, null ],
+            },
+        ],
+        specialNotes: "Upon activating the special, all orbs will be changed to the orb Brûlée has, including [RAINBOW] and [BLOCK] orbs. This will not override other [BLOCK] orbs.",
+        specialName: "Brulee Special",
+        sailor: {
+            "base": "Makes PSY orbs \"beneficial\" for Cerebral characters",
+        },
+        sailorNotes: "#{beneficial}",
+        limit: "This character has a limit break."
+    },
+    2116: {//Amande
+        captain: "Boosts ATK of Slasher characters by ?x and reduces crew's RCV to 0",
+        special: [
+            {
+                "description": "Reduces the defense of all enemies by 100% for 1 turn, reduces enemy Barrier duration by 2 turns and cuts the current HP of one enemy by 20%",
+                "cooldown": [ 20, null ],
+            },
+            {
+                "description": "Reduces the defense of all enemies by 100% for 1 turn, reduces enemy Barrier duration by 3 turns and cuts the current HP of one enemy by 50%",
+                "cooldown": [ 37, null ],
+            },
+        ],
+        specialName: "Amande Special",
+        sailor: "Makes PSY orbs \"beneficial\" for this unit",
+        sailorNotes: "#{beneficial}",
+    },
+    2117: {//Amande
+        captain: "Boosts ATK of Slasher characters by 2.75x and reduces crew's RCV to 0",
+        special: [
+            {
+                "description": "Reduces the defense of all enemies by 100% for 1 turn, reduces enemy Barrier duration by 2 turns and cuts the current HP of one enemy by 20%",
+                "cooldown": [ 20, null ],
+            },
+            {
+                "description": "Reduces the defense of all enemies by 100% for 1 turn, reduces enemy Barrier duration by 3 turns and cuts the current HP of one enemy by 50%",
+                "cooldown": [ 37, null ],
+            },
+        ],
+        specialName: "Amande Special",
+        sailor: {
+            "base": "Makes PSY orbs \"beneficial\" for this unit",
+        },
+        sailorNotes: "#{beneficial}",
+        limit: "This character has a limit break."
+    },
+    2118: {//Bobbin
+        captain: "Boosts ATK of [QCK] and [PSY] characters by ?x",
+        special: "Reduces enemy's Threshold Damage Reduction, Percent Damage Reduction, Increased Defense and End of Turn Heal duration by 5 turns, crew's ATK DOWN duration by 5 turns and changes adjacent orbs into Matching Orbs.",
+        specialName: "Bobbin Special",
+        sailor: "Boosts own base ATK by 350 if this character is the last in the chain to attack",
+        limit: "This character has a limit break."
+    },
+    2119: {//Bobbin
+        captain: "Boosts ATK of [QCK] and [PSY] characters by 2.5x",
+        special: "Reduces enemy's Threshold Damage Reduction, Percent Damage Reduction, Increased Defense and End of Turn Heal duration by 5 turns, crew's ATK DOWN duration by 5 turns and changes adjacent orbs into Matching Orbs.",
+        specialName: "Bobbin Special",
+        sailor: {
+            "base": "Boosts own base ATK by 350 if this character is the last in the chain to attack",
+        },
+        limit: "This character has a limit break."
+    },
+    2120: {//Oven
+        captain: "Boosts ATK of Powerhouse and Fighter characters by ?x and reduces damage received by ?%",
+        captainNotes: "The bonus is cumulative. Powerhouse + Fighter characters get a ?x bonus",
+        special: "If enemies are delayed at the time the special was activated, boost ATK of Fighter, Striker, Shooter, Cerebral and Powerhouse characters by 2x for 1 turn, by 1.75x for 3 turns otherwise.",
+        specialName: "Oven Special",
+        sailor: "Boosts this character's attack against [STR] characters by 2x",
+    },
+    2121: {//Oven
+        captain: "Boosts ATK of Powerhouse and Fighter characters by 1.65x and reduces damage received by 7%",
+        captainNotes: "The bonus is cumulative. Powerhouse + Fighter characters get a 2.7225x bonus",
+        special: "If enemies are delayed at the time the special was activated, boost ATK of Fighter, Striker, Shooter, Cerebral and Powerhouse characters by 2x for 1 turn, by 1.75x for 3 turns otherwise.",
+        specialName: "Oven Special",
+        sailor: {
+            "base": "Boosts this character's attack against [STR] characters by 2x",
+        },
+        limit: "This character has a limit break."
     },
     2200: {//Doflamingo Raid v2
         captain: "Boosts ATK of Driven and Cerebral characters by 2.5x when HP is 50% or below, 1.5x otherwise",

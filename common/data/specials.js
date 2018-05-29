@@ -4463,7 +4463,6 @@ window.specials = {
                 text: 'Using the ' + [1.75, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
                 name: '1993warning'
             });
-            console.log(window.specials[1993].multiplier);
         }
     },
     1996: {
@@ -4809,11 +4808,11 @@ window.specials = {
         }
     },
     2071: {
-        def: function(p) { return 0.8; },//CHANGE THIS
+        def: function(p) { return 0.2; },
         chainAddition: function(p) { return 0.6; }
     },
     2072: {
-        def: function(p) { return 0.8; },//CHANGE THIS
+        def: function(p) { return 0.2; },
         chainAddition: function(p) { return 0.6; }
     },
     2073: {
@@ -5040,13 +5039,37 @@ window.specials = {
         atk: function(p) { return 1.25; },
         type: "type",
     },
-    2112: {//CHANGE THIS
+    2112: {
         atk: function(p) { return ((p.delayed > 0) && (p.unit.class.has("Fighter") || p.unit.class.has("Striker") || p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse"))) ? 1.75 : 1; },
         type: "condition",
     },
-    2113: {//CHANGE THIS
+    2113: {
         atk: function(p) { return ((p.delayed > 0) && (p.unit.class.has("Fighter") || p.unit.class.has("Striker") || p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse"))) ? 1.75 : 1; },
         type: "condition",
+    },
+    2114: {
+        staticMult: function(p) { return 30; }
+    },
+    2115: {
+        staticMult: function(p) { return 30; }
+    },
+    2116: {
+        def: function(p) { return 0; }
+    },
+    2117: {
+        def: function(p) { return 0; }
+    },
+    2120: {
+        atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Striker") || p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse")) ? (p.delayed > 0) ? 2 : 1.75 : 1; },
+        type: "class",
+    },
+    2121: {
+        atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Striker") || p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse")) ? (window.specials[2121].multiplier > 0) ? 2 : 1.75 : 1; },
+        type: "class",
+        onActivation: function(p) {
+            console.log(p);
+            window.specials[2121].multiplier = p.delayed;
+        }
     },
     5000: {
         atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 1.5 : 1; },
