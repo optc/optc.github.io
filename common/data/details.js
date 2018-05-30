@@ -14017,7 +14017,7 @@ window.details = {
         specialName: "Black Ball - Thundercloud Rod",
         sailor: {
             "base": "Completely resists Silence on this character",
-            "level1": "Removes 1 turn of Paralysis on this character",
+            "level1": "Reduces Paralysis duration by 1 turn",
         },
         sailorNotes: "#{silence}",
         limit: "Not Translated",
@@ -17981,7 +17981,7 @@ window.details = {
         sailor: {
             "base": "None",
             "level1": "Makes [RCV] orbs \"beneficial\" for all characters",
-            "level2": "Heals 300 HP for each [RCV] that is collected",
+            "level2": "Boosts amount healed from [RCV] orbs by 300 each",
         },
         limit: "Not Translated",
         potential: [
@@ -20491,7 +20491,7 @@ window.details = {
         specialName: "Determined Man's Ice Attack",
         sailor: {
             "base": "None",
-            "level1": "Makes [QCK] orbs \"beneficial\" for this Striker and Shooter characters",
+            "level1": "Makes [QCK] orbs \"beneficial\" for Striker and Shooter characters",
             "level2": "If this character has an [QCK] orb and you hit a PERFECT with him, keep his [QCK] orb for the next turn",
         },
         sailorNotes: "#{beneficial}",
