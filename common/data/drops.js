@@ -806,8 +806,8 @@ window.drops = {
             '08': [ 2002, 1627 ],
             '09': [  ],
             '10': [ 2005 ],
-            '11': [ 1401 ],
-            '12': [ 2005, 1737 ],
+            '11': [ 1400 ],
+            '12': [ 2005, 1736 ],
         },
         
         {
@@ -1904,7 +1904,7 @@ window.drops = {
             global: true,
             nakama: 2185500,
             gamewith: 79678,
-            'All Difficulties': [ 1854, 1856, -1652, -1272, -1278, -1620, -1702, -1558 ]
+            'All Difficulties': [ 1854, 1856, -1652, -1272, -1278, -1621, -1702, -1558 ]
         },
         
         {
@@ -1998,7 +1998,7 @@ window.drops = {
         },
         
         {
-            name: 'Strawhat Pirates Pizza Party!! Part 1',
+            name: 'Strawhat Pirates Pizza Party!! Lunch',
             thumb: 2087,
             nakama: null,
             gamewith: 102409,
@@ -2006,11 +2006,11 @@ window.drops = {
         },
         
         {
-            name: 'Strawhat Pirates Pizza Party!! Part 2',
+            name: 'Strawhat Pirates Pizza Party!! Dinner',
             thumb: 2092,
             nakama: null,
-            gamewith: null,
-            'All Difficulties': [ 2092, 2093, 2094, 2095 ]
+            gamewith: 106868,
+            'All Difficulties': [ 2092, 2093, 2094, 2095, -1935, -1436, -1438, -1926, -1955, -1715 ]
         },
         
     ],

@@ -1714,7 +1714,7 @@ window.specials = {
             window.specials[1220].stage = (window.specials[1220].stage + 1) % 3;
             p.scope.notify({
                 text: 'Activating stage #' + (window.specials[1220].stage + 1) + '. To move onto the next stage, disable and re-enable this special.',
-                name: '1219warning'
+                name: '1220warning'
             });
         }
     },
