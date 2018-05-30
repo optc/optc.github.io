@@ -8143,7 +8143,7 @@ window.details = {
         captain: "Boosts ATK of Driven Characters by 2.75x if HP is below 30% at the start of the turn, 2x otherwise",
         specialName: "Repel: Weapons Reflect",
         special: "Empties all slots, deals [STR] damage based on number of [STR] slots emptied to all enemies",
-        specialNotes: "The exact multiplier used is chosen based on the number of [STR] orbs consumed: 0 orbs - 3.5x ATK; 1 orb - 7x ATK; 2 orbs - 14x ATK; 3 orbs - 21x ATK; 4 orbs - 35x ATK; 5 orbs - 91x ATK; 6 orbs - 140x ATK."
+        specialNotes: "The exact multiplier used is chosen based on the number of [STR] orbs consumed: 0 orbs - 3.5x ATK; 1 orb - 7x ATK; 2 orbs - 14x ATK; 3 orbs - 21x ATK; 4 orbs - 35x ATK; 5 orbs - 91x ATK; 6 orbs - 140x ATK.",
         sailor: {
             "base": "None",
             "level1": "Changes all orbs into [STR] orbs at the start of the fight.",
