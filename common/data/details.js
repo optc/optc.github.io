@@ -3127,7 +3127,35 @@ window.details = {
         special: "Changes [STR] and [DEX] orbs into [INT] orbs",
         specialName: "Doppelman",
         captain: "Boosts ATK of [INT] characters by 3x if HP is above 99% at the start of the turn",
-        limit: "This character has a Limit Break Tree"
+        sailor: {
+            "base": "None",
+            "level1": "Makes [PSY] orbs \"beneficial\" for this unit",
+            "level2": "Makes [QCK] orbs \"beneficial\" for this unit",
+        },
+        sailorNotes: "#{beneficial}",
+        limit: "Not Translated",
+        potential: [
+            {
+                "Name": "[PSY] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [PSY] characters by 1%",
+                    "Level 2: Reduce damage taken from [PSY] characters by ?%",
+                    "Level 3: Reduce damage taken from [PSY] characters by ?%",
+                    "Level 4: Reduce damage taken from [PSY] characters by ?%",
+                    "Level 5: Reduce damage taken from [PSY] characters by ?%"
+                ]
+            },
+            {
+                "Name": "[INT] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [INT] characters by 1%",
+                    "Level 2: Reduce damage taken from [INT] characters by ?%",
+                    "Level 3: Reduce damage taken from [INT] characters by ?%",
+                    "Level 4: Reduce damage taken from [INT] characters by ?%",
+                    "Level 5: Reduce damage taken from [INT] characters by ?%"
+                ]
+            },
+        ]
     },
     415: {
         special: "Recovers 15x character's RCV in HP, delays all enemies for 1 turn",
@@ -3560,7 +3588,34 @@ window.details = {
         special: "Changes own orb and the captain's orb into [PSY]",
         specialName: "Dread Morning Star",
         captain: "Reduces cooldown of all specials by 3 turns at the start of the fight, boosts ATK of Striker characters by 2x",
-        limit: "This character has a Limit Break Tree"
+        sailor: {
+            "base": "None",
+            "level1": "Makes [PSY] orbs \"beneficial\" for Striker characters",
+            "level2": "Restores his own special by 5 turn when it is rewinded",
+        },
+        limit: "Not Translated",
+        potential: [
+            {
+                "Name": "[INT] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [INT] characters by 1%",
+                    "Level 2: Reduce damage taken from [INT] characters by ?%",
+                    "Level 3: Reduce damage taken from [INT] characters by ?%",
+                    "Level 4: Reduce damage taken from [INT] characters by ?%",
+                    "Level 5: Reduce damage taken from [INT] characters by ?%"
+                ]
+            },
+            {
+                "Name": "Cooldown Reduction",
+                "description": [
+                    "Level 1: Reduce own Special Cooldown by 1 turn at the start of the fight",
+                    "Level 2: Reduce own Special Cooldown by ? turns at the start of the fight",
+                    "Level 3: Reduce own Special Cooldown by ? turns at the start of the fight",
+                    "Level 4: Reduce own Special Cooldown by ? turns at the start of the fight",
+                    "Level 5: Reduce own Special Cooldown by ? turns at the start of the fight"
+                ]
+            },
+        ]
     },
     454: {
         special: "Boosts ATK of [STR] characters by 1.5x for 1 turn, deals 15x character's ATK in [STR] damage to all enemies",
@@ -8088,6 +8143,34 @@ window.details = {
         specialName: "Repel: Weapons Reflect",
         special: "Empties all slots, deals [STR] damage based on number of [STR] slots emptied to all enemies",
         specialNotes: "The exact multiplier used is chosen based on the number of [STR] orbs consumed: 0 orbs - 3.5x ATK; 1 orb - 7x ATK; 2 orbs - 14x ATK; 3 orbs - 21x ATK; 4 orbs - 35x ATK; 5 orbs - 91x ATK; 6 orbs - 140x ATK."
+        sailor: {
+            "base": "None",
+            "level1": "Changes all orbs into [STR] orbs at the start of the fight.",
+        },
+        limit: "Not Translated",
+        potential: [
+            {
+               "Name": "Enrage",
+                "description": [
+                    "Level 1: Boosts base ATK by ?",
+                    "Level 2: Boosts base ATK by ?",
+                    "Level 3: Boosts base ATK by ?",
+                    "Level 4: Boosts base ATK by ?",
+                    "Level 5: Boosts base ATK by ?"
+                ]
+            },
+            {
+                "Name": "Cooldown Reduction",
+                "description": [
+                    "Level 1: Reduce own Special Cooldown by 1 turn at the start of the fight",
+                    "Level 2: Reduce own Special Cooldown by ? turns at the start of the fight",
+                    "Level 3: Reduce own Special Cooldown by ? turns at the start of the fight",
+                    "Level 4: Reduce own Special Cooldown by ? turns at the start of the fight",
+                    "Level 5: Reduce own Special Cooldown by ? turns at the start of the fight"
+                ]
+            },
+        ],
+        potentialNotes: "#{enrage}"
     },
     925: {
         captain: "Boosts ATK of Powerhouse characters by 2x",
@@ -10971,7 +11054,35 @@ window.details = {
         special: "Empties all slots with [BLOCK] orbs, deals severe typeless damage based on number of [BLOCK] slots emptied to all enemies. Changes [EMPTY] orbs into Matching orbs",
         specialNotes: "The exact multiplier used is chosen based on the number of [BLOCK] orbs consumed: 0 orbs - Cannot Activate; 1 orb - 20x ATK; 2 orbs - 40x ATK; 3 orbs - 100x ATK; 4 orbs - 200x ATK; 5 orbs - 300x ATK; 6 orbs - 500x ATK.",
         specialName: "Admiral Killer Bowling",
-        limit: "This character has a Limit Break Tree"
+        sailor: {
+            "base": "None",
+            "level1": "Adds 2x character's ATK as Additional Typeless Damage",
+            "level2": "Boosts base ATK, HP and RCV of Striker characters by 50",
+        },
+        sailorNotes: "#{additionalDamage : 2x}",
+        limit: "Not Translated",
+        potential: [
+            {
+                "Name": "[QCK] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [QCK] characters by 1%",
+                    "Level 2: Reduce damage taken from [QCK] characters by ?%",
+                    "Level 3: Reduce damage taken from [QCK] characters by ?%",
+                    "Level 4: Reduce damage taken from [QCK] characters by ?%",
+                    "Level 5: Reduce damage taken from [QCK] characters by ?%"
+                ]
+            },
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [
+                    "Level 1: Reduces Slot Bind duration by 1 turn on this character",
+                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 5: Reduces Slot Bind duration by ? turns on this character"
+                ]
+            },
+        ]
     },
     1128: {
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of all characters by 1.75x",
@@ -11756,7 +11867,45 @@ window.details = {
         captainNotes: "If a character dies and revives, it counts as killing a character. If you did not defeat an enemy, lose all ATK boost stacks.",
         special: "Increases duration of any Class/Type boosting buffs and Orb Amplification buffs by 1 turn",
         specialName: "Ice Age",
-        limit: "This character has a Limit Break Tree"
+        sailor: {
+            "base": "None",
+            "level1": "Makes [QCK] orbs \"beneficial\" for this Striker and Shooter characters",
+            "level2": "If this character has an [QCK] orb and you hit a PERFECT with him, keep his [QCK] orb for the next turn",
+        },
+        sailorNotes: "#{beneficial}",
+        limit: "Not Translated",
+        potential: [
+            {
+                "Name": "[STR] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [STR] characters by 1%",
+                    "Level 2: Reduce damage taken from [STR] characters by ?%",
+                    "Level 3: Reduce damage taken from [STR] characters by ?%",
+                    "Level 4: Reduce damage taken from [STR] characters by ?%",
+                    "Level 5: Reduce damage taken from [STR] characters by ?%"
+                ]
+            },
+            {
+                "Name": "Critical Hit",
+                "description": [
+                    "Level 1: If you hit a perfect with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 2: If you hit a perfect with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 3: If you hit a perfect with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 4: If you hit a perfect with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 5: If you hit a perfect with this character, there is a ?% chance to deal ?% of this character's attack in extra damage"
+                ]
+            },
+            {
+                "Name": "Barrier Penetration",
+                "description": [
+                    "Level 1: This character's attack will ignore barriers if HP is above 99%",
+                    "Level 2: This character's attack will ignore barriers if HP is above ?%",
+                    "Level 3: This character's attack will ignore barriers if HP is above ?%",
+                    "Level 4: This character's attack will ignore barriers if HP is above ?%",
+                    "Level 5: This character's attack will ignore barriers if HP is above ?%"
+                ]
+            },
+        ]
     },
     1193: {
         captain: "Boosts ATK of Free Spirit characters by 2x",
@@ -13864,10 +14013,35 @@ window.details = {
             },
         ],
         specialNotes: "#{silence}<br>#{stages}",
-        sailor: "Completely resists Silence on this character",
-        sailorNotes: "#{silence}",
         specialName: "Black Ball - Thundercloud Rod",
-        limit: "This character has a Limit Break Tree"
+        sailor: {
+            "base": "Completely resists Silence on this character",
+            "level1": "Removes 1 turn of Paralysis on this character",
+        },
+        sailorNotes: "#{silence}",
+        limit: "Not Translated",
+        potential: [
+            {
+                "Name": "[PSY] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [PSY] characters by 1%",
+                    "Level 2: Reduce damage taken from [PSY] characters by ?%",
+                    "Level 3: Reduce damage taken from [PSY] characters by ?%",
+                    "Level 4: Reduce damage taken from [PSY] characters by ?%",
+                    "Level 5: Reduce damage taken from [PSY] characters by ?%"
+                ]
+            },
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [
+                    "Level 1: Reduces Slot Bind duration by 1 turn on this character",
+                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 5: Reduces Slot Bind duration by ? turns on this character"
+                ]
+            },
+        ]
     },
     1367: {//Timeskip Sanji
         captain: "Boosts ATK of [STR] characters by 2x",
@@ -14003,7 +14177,34 @@ window.details = {
         ],
         specialName: "Poison Dragon",
         specialNotes: "Toxic starts at 0.5x character's attack and increases by 3x at the end of every turn until 1,500,000 damage per turn.<br>#{stages}",
-        limit: "This character has a Limit Break Tree"
+        sailor: {
+            "base": "None",
+            "level1": "Boosts base ATK, HP and RCV of all characters by 50",
+            "level2": "Makes [TND] and [RCV] orbs \"beneficial\" for this unit",
+        },
+        limit: "Not Translated",
+        potential: [
+            {
+                "Name": "[PSY] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [PSY] characters by 1%",
+                    "Level 2: Reduce damage taken from [PSY] characters by ?%",
+                    "Level 3: Reduce damage taken from [PSY] characters by ?%",
+                    "Level 4: Reduce damage taken from [PSY] characters by ?%",
+                    "Level 5: Reduce damage taken from [PSY] characters by ?%"
+                ]
+            },
+            {
+                "Name": "[INT] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [INT] characters by 1%",
+                    "Level 2: Reduce damage taken from [INT] characters by ?%",
+                    "Level 3: Reduce damage taken from [INT] characters by ?%",
+                    "Level 4: Reduce damage taken from [INT] characters by ?%",
+                    "Level 5: Reduce damage taken from [INT] characters by ?%"
+                ]
+            },
+        ]
     },
     1375: {//Dellinger
         captain: "Boosts ATK of Powerhouse characters by 2.5x, reduces crew's HP by 50%, Increases damage received by 2x",
@@ -15068,9 +15269,34 @@ window.details = {
         captainNotes: "The bonus is cumulative. Powerhouse + Striker characters get a 2.56x bonus.",
         special: "Reduces crew's current HP by 50%, amplifies the effect of orbs for Powerhouse characters by 1.75x and boosts ATK against delayed enemies by 1.5x for 1 turn",
         specialName: "Squid Spear",
-        sailor: "Makes [STR], [QCK], [DEX] and [INT] orbs \"beneficial\" for this unit if there are 6 Powerhouse characters in your crew",
+        sailor: {
+            "base": "Makes [STR], [QCK], [DEX] and [INT] orbs \"beneficial\" for this unit if there are 6 Powerhouse characters in your crew",
+            "level1": "Boosts base ATK, HP and RCV of Powerhouse characters by 30",
+        },
         sailorNotes: "#{beneficial}",
-        limit: "This character has a Limit Break Tree"
+        limit: "Not Translated",
+        potential: [
+            {
+                "Name": "[INT] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [INT] characters by 1%",
+                    "Level 2: Reduce damage taken from [INT] characters by ?%",
+                    "Level 3: Reduce damage taken from [INT] characters by ?%",
+                    "Level 4: Reduce damage taken from [INT] characters by ?%",
+                    "Level 5: Reduce damage taken from [INT] characters by ?%"
+                ]
+            },
+            {
+                "Name": "Pinch Healing",
+                "description": [
+                    "Level 1: If HP is below ?% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character",
+                    "Level 2: If HP is below ?% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character",
+                    "Level 3: If HP is below ?% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character",
+                    "Level 4: If HP is below ?% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character",
+                    "Level 5: If HP is below ?% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character"
+                ]
+            },
+        ]
     },
     1439: {//Daruma
         captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of Powerhouse and Fighter characters by 1.2x",
@@ -16574,9 +16800,36 @@ window.details = {
     1538: {//Heracles'n
         captain: "Boosts ATK of [STR] characters by 2.5x and boosts HP of Shooter and Striker characters by 1.25x",
         special: "Cuts the current HP of each enemy by 20%, changes right column [STR], [QCK], [DEX], [PSY] and [INT] orbs into Matching orbs for Shooter and Striker characters",
-        sailor: "Boosts base HP of [STR] characters by 150",
         specialName: "Greenstone Threat",
-        limit: "This character has a Limit Break Tree"
+        sailor: {
+            "base": "None",
+            "level1": "Boosts base HP of [STR] characters by 150",
+            "level2": "Makes [STR] orbs \"beneficial\" for Shooter characters",
+        },
+        sailorNotes: "#{beneficial}",
+        limit: "Not Translated",
+        potential: [
+            {
+                "Name": "[DEX] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [DEX] characters by 1%",
+                    "Level 2: Reduce damage taken from [DEX] characters by ?%",
+                    "Level 3: Reduce damage taken from [DEX] characters by ?%",
+                    "Level 4: Reduce damage taken from [DEX] characters by ?%",
+                    "Level 5: Reduce damage taken from [DEX] characters by ?%"
+                ]
+            },
+            {
+                "Name": "Barrier Penetration",
+                "description": [
+                    "Level 1: This character's attack will ignore barriers if HP is above 99%",
+                    "Level 2: This character's attack will ignore barriers if HP is above ?%",
+                    "Level 3: This character's attack will ignore barriers if HP is above ?%",
+                    "Level 4: This character's attack will ignore barriers if HP is above ?%",
+                    "Level 5: This character's attack will ignore barriers if HP is above ?%"
+                ]
+            },
+        ]
     },
     1539: {//Perona
         captain: "Boosts ATK and RCV of characters with cost 20 or less by 1.5x",
@@ -17724,7 +17977,44 @@ window.details = {
         special: "Deals typeless damage to all enemies equal to 10x how much excess healing done before the special is activated.",
         specialNotes: "The excess healing is counted from the last time the special is used and accumulates when you heal more than your maximum HP. For example, if you are at max HP and you heal 1,000 HP, you will add 10k damage to the special. The amount of damage possible caps at 2,000,000 damage.",
         specialName: "Heavy Thunder",
-        limit: "This character has a Limit Break Tree"
+        sailor: {
+            "base": "None",
+            "level1": "Makes [RCV] orbs \"beneficial\" for all characters",
+            "level2": "Heals 300 HP for each [RCV] that is collected",
+        },
+        limit: "Not Translated",
+        potential: [
+            {
+                "Name": "[STR] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [STR] characters by 1%",
+                    "Level 2: Reduce damage taken from [STR] characters by ?%",
+                    "Level 3: Reduce damage taken from [STR] characters by ?%",
+                    "Level 4: Reduce damage taken from [STR] characters by ?%",
+                    "Level 5: Reduce damage taken from [STR] characters by ?%"
+                ]
+            },
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [
+                    "Level 1: Reduces Slot Bind duration by 1 turn on this character",
+                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 5: Reduces Slot Bind duration by ? turns on this character"
+                ]
+            },
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by 1 turn",
+                    "Level 2: Reduces No Healing duration by ? turns",
+                    "Level 3: Reduces No Healing duration by ? turns",
+                    "Level 4: Reduces No Healing duration by ? turns",
+                    "Level 5: Reduces No Healing duration by ? turns"
+                ]
+            },
+        ]
     },
     1611: {//Kuma
         captain: "Boosts ATK of Shooter characters by 1.75x and their HP by 1.2x",
@@ -18413,10 +18703,35 @@ window.details = {
     1658: {//Kanjuro
         captain: "Boosts ATK of Striker and Free Spirit characters by 2.5x",
         special: "Reduces Bind and Despair duration by 5 turns. If your Captain is a Striker character, locks the chain multiplier at 2.75x for 1 turn",
-        sailor: "Makes [DEX] orbs \"beneficial\" for Striker characters if your Captain is a Striker character",
-        sailorNotes: "#{beneficial}",
         specialName: "Summon Dragon",
-        limit: "This character has a Limit Break Tree"
+        sailor: {
+            "base": "Makes [DEX] orbs \"beneficial\" for Striker characters if your Captain is a Striker character",
+            "level1": "Boosts base ATK, HP and RCV of Striker characters by 75",
+        },
+        sailorNotes: "#{beneficial}",
+        limit: "Not Translated",
+        potential: [
+            {
+                "Name": "[STR] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [STR] characters by 1%",
+                    "Level 2: Reduce damage taken from [STR] characters by ?%",
+                    "Level 3: Reduce damage taken from [STR] characters by ?%",
+                    "Level 4: Reduce damage taken from [STR] characters by ?%",
+                    "Level 5: Reduce damage taken from [STR] characters by ?%"
+                ]
+            },
+            {
+                "Name": "[QCK] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [QCK] characters by 1%",
+                    "Level 2: Reduce damage taken from [QCK] characters by ?%",
+                    "Level 3: Reduce damage taken from [QCK] characters by ?%",
+                    "Level 4: Reduce damage taken from [QCK] characters by ?%",
+                    "Level 5: Reduce damage taken from [QCK] characters by ?%"
+                ]
+            },
+        ]
     },
     1659: {//Raizo
         captain: "Boosts ATK of Shooter characters by 2x",
@@ -18602,7 +18917,35 @@ window.details = {
         captain: "Boosts HP of Striker characters by 1.2x and boosts ATK of Striker characters by 2.75x if HP is below 30% at the start of the turn, 2.25x otherwise",
         special: "Changes adjacent orbs into Matching Orbs and if HP is above 70%, amplifies the effect of orbs for Striker and Powerhouse characters by 1.5x for 1 turn",
         specialName: "Trueno Bastardo",
-        limit: "This character has a Limit Break Tree"
+        sailor: {
+            "base": "None",
+            "level1": "Adds 2x character's ATK as Additional Typeless Damage",
+            "level2": "When any other character uses a special, reduces own cooldown by 1 turn",
+        },
+        sailorNotes: "#{additionalDamage : 2x}",
+        limit: "Not Translated",
+        potential: [
+            {
+                "Name": "[STR] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [STR] characters by 1%",
+                    "Level 2: Reduce damage taken from [STR] characters by 2%",
+                    "Level 3: Reduce damage taken from [STR] characters by 3%",
+                    "Level 4: Reduce damage taken from [STR] characters by 4%",
+                    "Level 5: Reduce damage taken from [STR] characters by 5%"
+                ]
+            },
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [
+                    "Level 1: Reduces Slot Bind duration by 1 turn on this character",
+                    "Level 2: Reduces Slot Bind duration by 2 turns on this character",
+                    "Level 3: Reduces Slot Bind duration by 3 turns on this character",
+                    "Level 4: Reduces Slot Bind duration by 5 turns on this character",
+                    "Level 5: Reduces Slot Bind duration by 10 turns on this character"
+                ]
+            },
+        ]
     },
     1668: {//Reborn Aokiji
         special: "Boosts ATK of Striker characters by 1.75x for 2 turns, locks all orbs for 2 turns",
@@ -20145,7 +20488,45 @@ window.details = {
         special: "Increases duration of any Class/Type boosting buffs and Orb Amplification buffs by 1 turn, locks the chain multiplier at 2.5x for 1 turn and deals 100,000 fixed damage to all enemies that will ignore damage negating abilities and barriers.",
         specialNotes: "#{ignoreBarrier}",
         specialName: "Determined Man's Ice Attack",
-        limit: "This character has a Limit Break Tree"
+        sailor: {
+            "base": "None",
+            "level1": "Makes [QCK] orbs \"beneficial\" for this Striker and Shooter characters",
+            "level2": "If this character has an [QCK] orb and you hit a PERFECT with him, keep his [QCK] orb for the next turn",
+        },
+        sailorNotes: "#{beneficial}",
+        limit: "Not Translated",
+        potential: [
+            {
+                "Name": "[STR] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [STR] characters by 1%",
+                    "Level 2: Reduce damage taken from [STR] characters by ?%",
+                    "Level 3: Reduce damage taken from [STR] characters by ?%",
+                    "Level 4: Reduce damage taken from [STR] characters by ?%",
+                    "Level 5: Reduce damage taken from [STR] characters by ?%"
+                ]
+            },
+            {
+                "Name": "Critical Hit",
+                "description": [
+                    "Level 1: If you hit a perfect with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 2: If you hit a perfect with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 3: If you hit a perfect with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 4: If you hit a perfect with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 5: If you hit a perfect with this character, there is a ?% chance to deal ?% of this character's attack in extra damage"
+                ]
+            },
+            {
+                "Name": "Barrier Penetration",
+                "description": [
+                    "Level 1: This character's attack will ignore barriers if HP is above 99%",
+                    "Level 2: This character's attack will ignore barriers if HP is above ?%",
+                    "Level 3: This character's attack will ignore barriers if HP is above ?%",
+                    "Level 4: This character's attack will ignore barriers if HP is above ?%",
+                    "Level 5: This character's attack will ignore barriers if HP is above ?%"
+                ]
+            },
+        ]
     },
     1765: {//Blue Gilly
         captain: "Boosts ATK of Fighter characters by 1.5x",
