@@ -8143,7 +8143,7 @@ window.details = {
         captain: "Boosts ATK of Driven Characters by 2.75x if HP is below 30% at the start of the turn, 2x otherwise",
         specialName: "Repel: Weapons Reflect",
         special: "Empties all slots, deals [STR] damage based on number of [STR] slots emptied to all enemies",
-        specialNotes: "The exact multiplier used is chosen based on the number of [STR] orbs consumed: 0 orbs - 3.5x ATK; 1 orb - 7x ATK; 2 orbs - 14x ATK; 3 orbs - 21x ATK; 4 orbs - 35x ATK; 5 orbs - 91x ATK; 6 orbs - 140x ATK."
+        specialNotes: "The exact multiplier used is chosen based on the number of [STR] orbs consumed: 0 orbs - 3.5x ATK; 1 orb - 7x ATK; 2 orbs - 14x ATK; 3 orbs - 21x ATK; 4 orbs - 35x ATK; 5 orbs - 91x ATK; 6 orbs - 140x ATK.",
         sailor: {
             "base": "None",
             "level1": "Changes all orbs into [STR] orbs at the start of the fight.",
@@ -14017,7 +14017,7 @@ window.details = {
         specialName: "Black Ball - Thundercloud Rod",
         sailor: {
             "base": "Completely resists Silence on this character",
-            "level1": "Removes 1 turn of Paralysis on this character",
+            "level1": "Reduces Paralysis duration by 1 turn",
         },
         sailorNotes: "#{silence}",
         limit: "Not Translated",
@@ -17981,7 +17981,7 @@ window.details = {
         sailor: {
             "base": "None",
             "level1": "Makes [RCV] orbs \"beneficial\" for all characters",
-            "level2": "Heals 300 HP for each [RCV] that is collected",
+            "level2": "Boosts amount healed from [RCV] orbs by 300 each",
         },
         limit: "Not Translated",
         potential: [
@@ -20491,7 +20491,7 @@ window.details = {
         specialName: "Determined Man's Ice Attack",
         sailor: {
             "base": "None",
-            "level1": "Makes [QCK] orbs \"beneficial\" for this Striker and Shooter characters",
+            "level1": "Makes [QCK] orbs \"beneficial\" for Striker and Shooter characters",
             "level2": "If this character has an [QCK] orb and you hit a PERFECT with him, keep his [QCK] orb for the next turn",
         },
         sailorNotes: "#{beneficial}",
