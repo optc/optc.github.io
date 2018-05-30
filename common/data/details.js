@@ -3593,6 +3593,7 @@ window.details = {
             "level1": "Makes [PSY] orbs \"beneficial\" for Striker characters",
             "level2": "Restores his own special by 5 turn when it is rewinded",
         },
+        sailorNotes: "#{beneficial} <br> #{rewind : 5}",
         limit: "Not Translated",
         potential: [
             {
