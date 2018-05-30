@@ -25959,12 +25959,12 @@ window.details = {
     },
     2051: {//Pica
         captain: "If you have 5 or more Fighter characters in your crew, boosts ATK of Fighter characters by 2x and reduces damage received by 5%",
-        special: "Deals 35x character's ATK in [QCK] damage to one enemy, boosts ATK of Fighter characters by 1.75x for 2 turns. If Pica is your Captain or Friend/Guest Captain, Reduces damage received by 20% for 1 turn. If he is a Sailor, Increases damage received by 2x for 1 turn instead",
+        special: "Deals 35x character's ATK in [QCK] damage to one enemy. If Pica is your Captain or Friend/Guest Captain, Reduces damage received by 20% for 1 turn. If he is a Sailor, Increases damage received by 2x for 1 turn instead. Boosts ATK of Fighter characters by 1.75x for 2 turns.",
         specialName: "Bitestone",
     },
     2052: {//Pica
         captain: "If you have 5 or more Fighter characters in your crew, boosts ATK of Fighter characters by 2.5x and their HP by 1.2, and reduces damage received by 10%",
-        special: "Deals 35x character's ATK in [QCK] damage to one enemy, boosts ATK of Fighter characters by 1.75x for 2 turns. If Pica is your Captain or Friend/Guest Captain, Reduces damage received by 20% for 1 turn. If he is a Sailor, Increases damage received by 2x for 1 turn instead",
+        special: "Deals 35x character's ATK in [QCK] damage to one enemy. If Pica is your Captain or Friend/Guest Captain, Reduces damage received by 20% for 1 turn. If he is a Sailor, Increases damage received by 2x for 1 turn instead. Boosts ATK of Fighter characters by 1.75x for 2 turns.",
         specialName: "Bitestone",
     },
     2053: {//Bastille
