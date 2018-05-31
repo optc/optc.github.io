@@ -7229,6 +7229,9 @@ window.captains = {
                 1;
         }
     },
+    2123: {
+        atk: function(p){ return 2; },
+    },
     2200: {
         atk: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Cerebral")) && p.percHP <= 50.0 ? 2.5 : 1.5; }
     },
