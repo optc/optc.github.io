@@ -27790,7 +27790,7 @@ window.details = {
     },
     2113: {//Katakuri
         captain: "Boosts ATK of Fighter, Striker, Shooter, Cerebral and Powerhouse characters by 1.825x, reduce damage received by 20% and makes [QCK], [PSY], [RCV] and [TND] orbs \"beneficial\" to all characters. Has a chance to delay all enemies by 1 turn based on damage dealt in previous turn.",
-        captainNotes: "The bonus is cumulative. Characters with 2 of the boosted classes get a 3.330625x bonus<br>100,000 damage or more: 20% chance to delay<br>500,000 damage or more: 50% chance to delay<br>1,000,000 damage or more: 100% chance to delay<br>2,000,000 damage or more: 100% chance to delay ignoring Delay Debuff Protection",
+        captainNotes: "The bonus is cumulative. Characters with 2 of the boosted classes get a 3.330625x bonus<br><b>100,000 damage or more:</b> 20% chance to delay<br><b>500,000 damage or more:</b> 50% chance to delay<br><b>1,000,000 damage or more:</b> 100% chance to delay<br><b>2,000,000 damage or more:</b> 100% chance to delay ignoring Delay Debuff Protection",
         special: "Boosts ATK against delayed enemies by 1.75x for Fighter, Striker, Shooter, Cerebral and Powerhouse characters for 2 turns, changes [STR], [QCK], [DEX], [PSY], [INT] and [BLOCK] orbs on Fighter, Striker, Shooter, Cerebral and Powerhouse characters into Matching orbs and reduces Special Cooldown of Fighter, Striker, Shooter, Cerebral and Powerhouse specials by 1 turn",
         specialName: "Peerless Donuts: Mochi Singing Result",
         limit: "Not Translated",
