@@ -2111,7 +2111,7 @@ window.units = [
     [ "Eustass Kid, The Worst Generation Aiming at \"Yonko\"", "DEX", [ "Striker", "Shooter" ], 4, 25, 4, 3, 70, 1066998, 350, 154, 23, 159, 880, 123, 1 ],
     [ "Eustass Kid, The Worst Generation Aiming at \"Red Hair\"", "DEX", [ "Striker", "Shooter" ], 5, 40, 4, 4, 99, 4000000, 1522, 863, 105, 2849, 1395, 237, 1 ],
     [ "Charlotte Katakuri", "STR", [ "Shooter", "Cerebral" ], 5, 30, 5, 3, 70, 1066998, 595, 330, 50, 1750, 975, 150, null ],
-    [ "Charlotte Katakuri, Big Mom Pirates 3 Sweet Commanders", "STR", [ "Shooter", "Cerebral" ], 6, 55, 4, 5, 99, 5000000, 1675, 910, 100, 3800, 1640, 250, null ],
+    [ "Charlotte Katakuri, Big Mom Pirates 3 Sweet Commanders", "STR", [ "Shooter", "Cerebral" ], 6, 55, 4, 5, 99, 5000000, 1675, 910, 100, 3700, 1640, 250, null ],
     [ "Charlotte Brûlée", "PSY", [ "Cerebral", "Striker" ], 4, 15, null, 3, 50, 392109, null, null, null, null, null, null, null ],
     [ "Charlotte Brûlée, Big Mom Pirates", "PSY", [ "Cerebral", "Striker" ], 5, 30, 4, 4, 99, 4000000, 810, 720, 149, 1670, 1401, 402, null ],
     [ "Charlotte Amande", "INT", [ "Slasher", "Driven" ], 4, 15, 6, 3, 50, 392109, 135, 194, -100, null, null, null, null ],
