@@ -503,7 +503,11 @@ window.ships = [
         thumb: null,
         description: 'Boosts ATK of all units by 1.55x and their HP by 1.3x. Makes PERFECTS easier to Hit. Cuts the current HP of each enemy by 3% at the end of each turn. Reduces ATK based on how many Slasher, Free Spirit or Powerhouse characters you have on your crew.',
         atk: function(p) {
-            return [ 1.1, 1.2, 1.25, 1.3, 1.4, 1.4, 1.5, 1.5, 1.5, 1.55 ][p.boatLevel - 1];
+            var reduction = 1;
+            if(p.classCount.Slasher > 0) reduction *= 0.5;
+            if(p.classCount.FreeSpirit > 0) reduction *= 0.5;
+            if(p.classCount.Powerhouse > 0) reduction *= 0.5;
+            return [ 1.1, 1.2, 1.25, 1.3, 1.4, 1.4, 1.5, 1.5, 1.5, 1.55 ][p.boatLevel - 1] * reduction;
         },
         hp: function(p) {
             return [ 1, 1, 1, 1, 1, 1, 1, 1.1, 1.2, 1.3 ][p.boatLevel - 1];
