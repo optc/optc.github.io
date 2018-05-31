@@ -59,80 +59,80 @@ window.matchers = [
     /*{
         name: '1.25x ATK captains',
         target: 'captain',
-        matcher: /Boosts (their )?ATK.+by 1.25x/i
+        matcher: /Boosts (their )?ATK\D*by 1.25x/i
     },
 
     {
         name: '1.5x ATK captains',
         target: 'captain',
-        matcher: /Boosts (their )?ATK.+by 1.5x/i
+        matcher: /Boosts (their )?ATK\D*by 1.5x/i
     },
 
     {
         name: '1.75x ATK captains',
         target: 'captain',
-        matcher: /Boosts (their )?ATK.+by 1.75x/i
+        matcher: /Boosts (their )?ATK\D*by 1.75x/i
     },*/
 
     {
         name: '2x ATK captains',
         target: 'captain',
-        matcher: /Boosts (their )?ATK.+by 2x/i
+        matcher: /Boosts (their )?ATK\D*by 2x/i
     },
 
     /*{
         name: '2.25x ATK captains',
         target: 'captain',
-        matcher: /Boosts (their )?ATK.+by 2.25x/i
+        matcher: /Boosts (their )?ATK\D*by 2.25x/i
     },*/
 
     {
         name: '2.5x ATK captains',
         target: 'captain',
-        matcher: /Boosts (their )?ATK.+by 2.5x/i
+        matcher: /Boosts (their )?ATK\D*by 2.5x/i
     },
 
     {
         name: '2.75x ATK captains',
         target: 'captain',
-        matcher: /Boosts (their )?ATK.+by 2.75x/i,
+        matcher: /Boosts (their )?ATK\D*by 2.75x/i,
         include: [ 529, 530, 668, 669 ]
     },
 
     {
         name: '3x ATK captains',
         target: 'captain',
-        matcher: /Boosts (their )?ATK.+by 3x/i
+        matcher: /Boosts (their )?ATK\D*by 3x/i
     },
 
     {
         name: '3.25x ATK captains',
         target: 'captain',
-        matcher: /Boosts (their )?ATK.+by 3.25x/i
+        matcher: /Boosts (their )?ATK\D*by 3.25x/i
     },
 
     {
         name: '3.5x ATK captains',
         target: 'captain',
-        matcher: /Boosts (their )?ATK.+by 3.5x/i
+        matcher: /Boosts (their )?ATK\D*by 3.5x/i
     },
 
     {
         name: '3.75x ATK captains',
         target: 'captain',
-        matcher: /Boosts (their )?ATK.+by 3.75x/i
+        matcher: /Boosts (their )?ATK\D*by 3.75x/i
     },
 
     {
         name: '4x ATK captains',
         target: 'captain',
-        matcher: /Boosts (their )?ATK.+by 4x/i
+        matcher: /Boosts (their )?ATK\D*by 4x/i
     },
 
     {
         name: '4.25x ATK captains',
         target: 'captain',
-        matcher: /Boosts (their )?ATK.+by 4.25x/i
+        matcher: /Boosts (their )?ATK\D*by 4.25x/i
     },
 
     {
@@ -246,34 +246,34 @@ window.matchers = [
         matcher: /Boosts ATK[^,]+(all characters)/i
     },
     
-    {
+    /*{
         name: '1.25x ATK specials',
         target: 'special',
-        matcher: /Boosts ATK.+by 1.25x/i
-    },
+        matcher: /Boosts ATK\D*by 1.25x/i
+    },*/
     
     {
         name: '1.5x ATK specials',
         target: 'special',
-        matcher: /Boosts ATK.+by 1.5x/i
+        matcher: /Boosts ATK\D*by 1.5x/i
     },
 
     {
         name: '1.75x ATK specials',
         target: 'special',
-        matcher: /Boosts ATK.+by 1.75x/i
+        matcher: /Boosts ATK\D*by 1.75x/i
     },
 
     {
         name: '2x ATK specials',
         target: 'special',
-        matcher: /Boosts ATK.+by 2x/i
+        matcher: /Boosts ATK\D*by 2x/i
     },
     
     {
         name: '2.25x ATK specials',
         target: 'special',
-        matcher: /Boosts ATK.+by 2.25x/i
+        matcher: /Boosts ATK\D*by 2.25x/i
     },
 
     {

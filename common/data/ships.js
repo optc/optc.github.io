@@ -242,7 +242,7 @@ window.ships = [
     { // 19
         name: "Doflamingo Ship",
         thumb: 'ship_0020_c.png',
-        description: 'Boosts ATK of Driven Characters by 1.5x and their HP by 1.35x. Makes Perfects easier to Hit for Driven characters. Special: Adds 0.2 to Chain  (cooldown MAX: 15 Turns)',
+        description: 'Boosts ATK of Driven Characters by 1.5x and their HP by 1.35x. Makes PERFECTS easier to Hit for Driven characters. Special: Adds 0.2 to Chain  (cooldown MAX: 15 Turns)',
         atk: function(p) { return !p.unit.class.has('Driven') ? 1 : [ 1.2, 1.2, 1.3, 1.3, 1.3, 1.3, 1.4, 1.4, 1.4, 1.5][p.boatLevel - 1]},
         hp: function(p) { return !p.unit.class.has('Driven') ? 1 : [ 1.1, 1.1, 1.1, 1.15, 1.2, 1.2, 1.2, 1.2, 1.2, 1.35][p.boatLevel - 1]}
     },
@@ -250,7 +250,7 @@ window.ships = [
     { // 19.2
         name: "Doflamingo Ship - Special ACTIVATED",
         thumb: 'ship_0020_c.png',
-        description: 'Boosts ATK of Driven Characters by 1.5x and their HP by 1.35x. Makes Perfects easier to Hit for Driven characters. ACTIVATED Special: Adds 0.2 to Chain  (cooldown MAX: 15 Turns)',
+        description: 'Boosts ATK of Driven Characters by 1.5x and their HP by 1.35x. Makes PERFECTS easier to Hit for Driven characters. ACTIVATED Special: Adds 0.2 to Chain  (cooldown MAX: 15 Turns)',
         atk: function(p) { return !p.unit.class.has('Driven') ? 1 : [ 1.2, 1.2, 1.3, 1.3, 1.3, 1.3, 1.4, 1.4, 1.4, 1.5][p.boatLevel - 1]},
         hp: function(p) { return !p.unit.class.has('Driven') ? 1 : [ 1.1, 1.1, 1.1, 1.15, 1.2, 1.2, 1.2, 1.2, 1.2, 1.35][p.boatLevel - 1]}
     },
@@ -302,7 +302,7 @@ window.ships = [
     { //23
         name: 'Polar Tang',
         thumb: 'ship_0024_c.png',
-        description: 'Boosts ATK of Slashers and Free Spirit characters by 1.5x and their HP by 1.25x. Makes Perfects easier to Hit. Special: Heals for 10k when under 20% HP. (cooldown MAX: 18 turns)',
+        description: 'Boosts ATK of Slashers and Free Spirit characters by 1.5x and their HP by 1.25x. Makes PERFECTS easier to Hit. Special: Heals for 10k when under 20% HP. (cooldown MAX: 18 turns)',
         atk: function(p) {
             return !(p.unit.class.has('Slasher') || p.unit.class.has('Free Spirit')) ? 1 : [ 1.3, 1.3, 1.3, 1.3, 1.3, 1.3, 1.4, 1.4, 1.4, 1.5 ][p.boatLevel - 1];
         },
@@ -454,7 +454,7 @@ window.ships = [
     { //34
         name: "Zunisha",
         thumb: 'ship_0036_c.png',
-        description: 'Boost ATK of Powerhouse and Cerebral units by 1.55x and their HP by 1.25x, makes Perfects easier to hit, and makes TND and Meat orbs beneficial to Powerhouse and Cerebral units.',
+        description: 'Boost ATK of Powerhouse and Cerebral units by 1.55x and their HP by 1.25x, makes PERFECTS easier to hit, and makes TND and Meat orbs beneficial to Powerhouse and Cerebral units.',
         atk: function(p) {
             return !(p.unit.class.has('Powerhouse') || p.unit.class.has('Cerebral')) ? 1 : [ 1.1, 1.1, 1.2, 1.2, 1.3, 1.3, 1.3, 1.4, 1.5, 1.55 ][p.boatLevel - 1];
         },
@@ -493,6 +493,20 @@ window.ships = [
         description: 'Boosted Ability 1: Boosts ATK of all units by 1.5x. Boosts EXP gained by 3x and Beli gained by 3x. Boosted Ability 2: Boosts ATK of all units by 1.5x. At the start of the adventure, all specials start at MAX charge.',
         atk: function(p) {
             return 1.5;
+        },
+    },
+    
+    
+    
+    { //38
+        name: "Nostra Castello",
+        thumb: null,
+        description: 'Boosts ATK of all units by 1.55x and their HP by 1.3x. Makes PERFECTS easier to Hit. Cuts the current HP of each enemy by 3% at the end of each turn. Reduces ATK based on how many Slasher, Free Spirit or Powerhouse characters you have on your crew.',
+        atk: function(p) {
+            return [ 1.1, 1.2, 1.25, 1.3, 1.4, 1.4, 1.5, 1.5, 1.5, 1.55 ][p.boatLevel - 1];
+        },
+        hp: function(p) {
+            return [ 1, 1, 1, 1, 1, 1, 1, 1.1, 1.2, 1.3 ][p.boatLevel - 1];
         },
     },
 

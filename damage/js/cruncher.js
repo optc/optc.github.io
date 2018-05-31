@@ -244,6 +244,10 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                     }
                 }
             }
+            if (orb == 'str'){
+                if ($scope.data.effect == 'STR Orbs Beneficial')
+                    orb = 2;
+            }
             if (orb == 'meat') orb = (window.specials[1515].turnedOn || window.specials[1516].turnedOn || (window.specials[1593].turnedOn && x.unit.class.has("Fighter")) || ((window.specials[1181].turnedOn || window.specials[1182].turnedOn) && x.unit.class.has("Slasher")) || ((window.specials[1380].turnedOn || window.specials[1379].turnedOn) && (x.unit.class.has("Cerebral") || x.unit.class.has("Free Spirit")))) ? 2 : 1;
             if (orb == 'rainbow') orb = 2;
             if (orb == 'str') orb = 1;
@@ -1053,6 +1057,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             friendCaptain: team[0].unit,
             actions: [ $scope.data.actionleft, $scope.data.actionright ],
             hitcombo: hitModifiers,
+            effectName: $scope.data.effect,
         };
     };
 

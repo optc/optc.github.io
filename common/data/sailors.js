@@ -503,18 +503,18 @@ window.sailors = {
         hpStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 75 : 0; },
         rcvStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 75 : 0; },
     },
-    5013: {
+    5012: {
         atkStatic: function(p) { return p.unit.type == "PSY" ? 30 : 0; },
     },
-    5014: {
+    5013: {
         atkStatic: function(p) { return p.unit.type == "DEX" ? 30 : 0; },
     },
-    5015: {
+    5014: {
         atkStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "DEX" ? 50 : 0; },
         hpStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "DEX" ? 50 : 0; },
         rcvStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "DEX" ? 50 : 0; },
     },
-    5016: {
+    5015: {
         atkStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "DEX" ? 50 : 0; },
         hpStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "DEX" ? 50 : 0; },
         rcvStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "DEX" ? 50 : 0; },

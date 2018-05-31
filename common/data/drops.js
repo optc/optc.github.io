@@ -3101,6 +3101,14 @@ window.drops = {
             gamewith: 59779,
             completion: 'Ship: Blackbeard Pirates Ship',
         },
+        
+        {
+            name: 'Forest of Training: Gang',
+            thumb: 1016,
+            nakama: null,
+            gamewith: 107299,
+            completion: 'Ship: Nostra Castello',
+        },
 
    ]
 
