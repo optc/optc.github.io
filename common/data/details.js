@@ -12486,9 +12486,51 @@ window.details = {
             },
         ],
         specialNotes: "#{stages}",
-        sailor: "Cannot be Blown Away",
         specialName: "Leg-Locked Heave-Ho",
-        limit: "This character has a Limit Break Tree"
+        sailor: {
+            "base": "Cannot be Blown Away",
+            "level1": "Restores his own special by 2 turns when it is rewinded",
+        },
+        sailorNotes: "#{rewind : 2}",
+        limit: [//CHANGE THIS
+            { "description": "" },
+            { "description": "" },
+            { "description": "" },
+            { "description": "Acquire Potential 1: [PSY] Damage Reduction" },
+            { "description": "" },
+            { "description": "" },
+            { "description": "" },
+            { "description": "" },
+            { "description": "" },
+            { "description": "" },
+            { "description": "" },
+            { "description": "" },
+            { "description": "" },
+            { "description": "" },
+            { "description": "Acquire Potential 2: Cooldown Reduction" },
+        ],
+        potential: [
+            {
+                "Name": "[PSY] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [PSY] characters by 1%",
+                    "Level 2: Reduce damage taken from [PSY] characters by 2%",
+                    "Level 3: Reduce damage taken from [PSY] characters by 3%",
+                    "Level 4: Reduce damage taken from [PSY] characters by 4%",
+                    "Level 5: Reduce damage taken from [PSY] characters by 5%"
+                ]
+            },
+            {
+                "Name": "Cooldown Reduction",
+                "description": [
+                    "Level 1: Reduce own Special Cooldown by 1 turn at the start of the fight",
+                    "Level 2: Reduce own Special Cooldown by 3 turn at the start of the fight",
+                    "Level 3: Reduce own Special Cooldown by 5 turn at the start of the fight",
+                    "Level 4: Reduce own Special Cooldown by 7 turn at the start of the fight",
+                    "Level 5: Reduce own Special Cooldown by 9 turn at the start of the fight"
+                ]
+            },
+        ]
     },
     1231: {//Smoker
         captain: "Boosts ATK of Striker and Driven characters by 1.75x and reduces RCV of all characters by 50%. If this character becomes your captain in the middle of an island, reduces damage received by 30% and further boosts ATK of Striker and Driven characters by 1.25x",
@@ -16949,7 +16991,7 @@ window.details = {
         sailor: {
             "base": "None",
             "level1": "Boosts base HP of [STR] characters by 150",
-            "level2": "Makes [STR] orbs \"beneficial\" for Shooter characters",
+            "level2": "Makes [STR] orbs \"beneficial\" for all characters if your Captain is a Striker or Shooter character",
         },
         sailorNotes: "#{beneficial}",
         limit: [
@@ -16974,20 +17016,20 @@ window.details = {
                 "Name": "[DEX] Damage Reduction",
                 "description": [
                     "Level 1: Reduce damage taken from [DEX] characters by 1%",
-                    "Level 2: Reduce damage taken from [DEX] characters by ?%",
-                    "Level 3: Reduce damage taken from [DEX] characters by ?%",
-                    "Level 4: Reduce damage taken from [DEX] characters by ?%",
-                    "Level 5: Reduce damage taken from [DEX] characters by ?%"
+                    "Level 2: Reduce damage taken from [DEX] characters by 2%",
+                    "Level 3: Reduce damage taken from [DEX] characters by 3%",
+                    "Level 4: Reduce damage taken from [DEX] characters by 4%",
+                    "Level 5: Reduce damage taken from [DEX] characters by 5%"
                 ]
             },
             {
                 "Name": "Barrier Penetration",
                 "description": [
                     "Level 1: This character's attack will ignore barriers if HP is above 99%",
-                    "Level 2: This character's attack will ignore barriers if HP is above ?%",
-                    "Level 3: This character's attack will ignore barriers if HP is above ?%",
-                    "Level 4: This character's attack will ignore barriers if HP is above ?%",
-                    "Level 5: This character's attack will ignore barriers if HP is above ?%"
+                    "Level 2: This character's attack will ignore barriers if HP is above 99%",
+                    "Level 3: This character's attack will ignore barriers if HP is above 99%",
+                    "Level 4: This character's attack will ignore barriers if HP is above 80%",
+                    "Level 5: This character's attack will ignore barriers if HP is above 50%"
                 ]
             },
         ]
