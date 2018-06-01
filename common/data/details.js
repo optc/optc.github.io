@@ -26594,6 +26594,21 @@ window.details = {
          ],
         potentialNotes: "#{enrage}"
     },
+    2049: {//Moria
+        captain: "Boosts ATK of Powerhouse and Fighter characters by ?x, reduces crew's current HP by ?% at the end of each turn, reduces his own ATK multiplier by ?x at the end of each turn",
+        special: "Locks the chain multiplier at 3x for 1 turn and reduces Increase Damage Taken duration by 5 turns. If enemies are delayed at the time the special was activated, deals 1,000,000 fixed damage to all enemies",
+        specialName: "Ressurected Nightmare Attack",
+        sailor: "Makes [INT] orbs \"beneficial\" for Powerhouse characters",
+        sailorNotes: "#{beneficial}",
+    },
+    2050: {//Moria
+        captain: "Boosts ATK of Powerhouse and Fighter characters by 3.5x, reduces crew's current HP by ?% at the end of each turn, reduces his own ATK multiplier by ?x at the end of each turn",
+        special: "Locks the chain multiplier at 3x for 1 turn and reduces Increase Damage Taken duration by 5 turns. If enemies are delayed at the time the special was activated, deals 1,000,000 fixed damage to all enemies",
+        specialName: "Ressurected Nightmare Attack",
+        sailor: "Makes [INT] orbs \"beneficial\" for Powerhouse characters",
+        sailorNotes: "#{beneficial}",
+        limit: "This character has a limit break."
+    },
     2051: {//Pica
         captain: "If you have 5 or more Fighter characters in your crew, boosts ATK of Fighter characters by 2x and reduces damage received by 5%",
         special: "Deals 35x character's ATK in [QCK] damage to one enemy and boosts ATK of Fighter characters by 1.75x for 2 turns. If Pica is your Captain or Friend/Guest Captain, Reduces damage received by 20% for 1 turn. If he is a Sailor, Increases damage received by 2x for 1 turn instead.",
@@ -28031,14 +28046,14 @@ window.details = {
         captainNotes: "EXP boost does not take effect if he becomes your captain in the middle of the adventure.",
         special: "Reduces Despair and ATK DOWN duration by 5 turns and reduces enemies' Resilience Buffs by 5 turns. Reduces the defense of all enemies by ?% and amplifies the effect of orbs by 1.75x for Cerebral and Powerhouse characters for 3 turns",
         sailor: "Boosts base ATK, HP and RCV of Cerebral characters by 75",
-        specialName: "Neptune Special",
+        specialName: "Great Ocean Current of Resuscitation",
     },
     2123: {//Neptune
         captain: "Boosts ATK of all characters by 2x, EXP gained by 1.5x and recovers 5x character's RCV in HP at the end of each turn",
         captainNotes: "EXP boost does not take effect if he becomes your captain in the middle of the adventure.",
         special: "Reduces Despair and ATK DOWN duration by 5 turns and reduces enemies' Resilience Buffs by 5 turns. Reduces the defense of all enemies by ?% and amplifies the effect of orbs by 1.75x for Cerebral and Powerhouse characters for 3 turns",
         sailor: "Boosts base ATK, HP and RCV of Cerebral characters by 75",
-        specialName: "Neptune Special",
+        specialName: "Great Ocean Current of Resuscitation",
     },
     2200: {//Doflamingo Raid v2
         captain: "Boosts ATK of Driven and Cerebral characters by 2.5x when HP is 50% or below, 1.5x otherwise",

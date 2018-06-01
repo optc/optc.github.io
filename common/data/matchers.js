@@ -562,6 +562,12 @@ window.matchers = [
     },
 
     {
+        name: 'Crew Increase Damage Taken remover',
+        target: 'special',
+        matcher: /(removes|reduces).+Increase Damage Taken/i 
+    },
+
+    {
         name: 'Crew positive buff remover',
         target: 'special',
         matcher: /removes.+positive buffs/i 

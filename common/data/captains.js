@@ -6929,6 +6929,11 @@ window.captains = {
     2048: {
         atk: function(p) { return !p.unit.class.has("Fighter") ? 1 : (((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) == 2) && (p.orb != 'g')) ? 3.25 : 2); },
     },
+    2050: {
+        atk: function(p) {
+            return (p.unit.class.has("Powerhouse") || p.unit.class.has("Fighter")) ? Math.max(1.0, 3.5 - 0.1 * p.turnCounter) : 1;
+        }
+    },
     2051: {
         atk: function(p) { return p.unit.class.has("Fighter") ? p.classCount.Fighter>=5 ? 2 : 1 : 1; },
     },
