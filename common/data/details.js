@@ -27242,7 +27242,7 @@ window.details = {
     },
     2089: {//Pizza Nami
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight and reduces damage received by 15%",
-        special: "Reduces Bind duration by 3 turns. If HP is full at the time the special was activated, boosts ATK of all characters by 1.5x for 1 turn.",
+        special: "If HP is full at the time the special was activated, reduces Bind duration by 3 turns and boosts ATK of all characters by 1.5x for 1 turn.",
         specialName: "Intoxicating Magic",
     },
     2090: {//Pizza Franky
