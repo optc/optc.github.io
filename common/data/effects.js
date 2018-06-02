@@ -403,34 +403,64 @@ window.effects = {
         chainLimiter: function() { return 1.5; }
     },
 
-    'Treasure Map [Mihawk Season]': {
-        description: 'Boost stats of Buggy & Zoro 2.5x',
-        thumb: 1808,
+    'Treasure Map [Global]': {
+        description: 'Boost stats of boosted characters',
+        thumb: 1916,
         id: 43, // don't change this
         atk: function(p) {
-            var id = p.number + 1,
-                matching = ((id > 1803 && id < 1806) ||
-                    [ 1804, 1806 ].indexOf(id) != -1);
-            return !matching ? 1 : 2.5;
+            var boost = 1;
+            var id = p.number + 1;
+            if([ 1912, 1914, 1885, 1910 ].indexOf(id) != -1) boost = 2.5;
+            if([ 4, 8, 12, 16, 20, 22, 709, 739, 896, 1387, 1388, 1389, 1446, 1447, 1448, 1549, 1550, 1551, 1921, 1922, 1928, 1883, 1889, 1900, 1804, 1806, 1849, 1851, 1887, 1895, 1902, 1904, 1906, 1908, 1926, 1899, 1143, 1145, 1943, 1842, 1844, 1855, 1857, 1808, 1853 ].indexOf(id) != -1) boost = 1.2;
+            return boost;
         },
         hp: function(p) {
-            var id = p.number + 1,
-                matching = ((id > 1803 && id < 1806) ||
-                    [ 1804, 1806 ].indexOf(id) != -1);
-            return !matching ? 1 : 2.5;
+            var boost = 1;
+            var id = p.number + 1;
+            if([ 1912, 1914, 1885, 1910 ].indexOf(id) != -1) boost = 2.5;
+            if([ 4, 8, 12, 16, 20, 22, 709, 739, 896, 1387, 1388, 1389, 1446, 1447, 1448, 1549, 1550, 1551, 1921, 1922, 1928, 1883, 1889, 1900, 1804, 1806, 1849, 1851, 1887, 1895, 1902, 1904, 1906, 1908, 1926, 1899, 1143, 1145, 1943, 1842, 1844, 1855, 1857, 1808, 1853 ].indexOf(id) != -1) boost = 1.2;
+            return boost;
         },
         rcv: function(p) {
-            var id = p.number + 1,
-                matching = ((id > 1803 && id < 1806) ||
-                    [ 1804, 1806 ].indexOf(id) != -1);
-            return !matching ? 1 : 2.5;
+            var boost = 1;
+            var id = p.number + 1;
+            if([ 1912, 1914, 1885, 1910 ].indexOf(id) != -1) boost = 2.5;
+            if([ 4, 8, 12, 16, 20, 22, 709, 739, 896, 1387, 1388, 1389, 1446, 1447, 1448, 1549, 1550, 1551, 1921, 1922, 1928, 1883, 1889, 1900, 1804, 1806, 1849, 1851, 1887, 1895, 1902, 1904, 1906, 1908, 1926, 1899, 1143, 1145, 1943, 1842, 1844, 1855, 1857, 1808, 1853 ].indexOf(id) != -1) boost = 1.2;
+            return boost;
         },
 	},
+
+    'Treasure Map [Japan]': {
+        description: 'Boost stats of many charactersx',
+        thumb: null,
+        id: 44, // don't change this
+        atk: function(p) {
+            var boost = 1;
+            var id = p.number + 1;
+            if([ 0 ].indexOf(id) != -1) boost = 2.5;
+            if([ 2109, 1413, 1764, 1610, 1910, 2023, 2074, 2076, 2099, 1976, 2017, 2111, 1298, 1518, 1943, 2015, 2033, 2070, 2097, 1037, 1547, 1597, 1766, 1947, 1980, 1982, 2091, 2092, 2093, 2094, 2095, 1916, 2064 ].indexOf(id) != -1) boost = 1.2;
+            return boost;
+        },
+        hp: function(p) {
+            var boost = 1;
+            var id = p.number + 1;
+            if([ 0 ].indexOf(id) != -1) boost = 2.5;
+            if([ 2109, 1413, 1764, 1610, 1910, 2023, 2074, 2076, 2099, 1976, 2017, 2111, 1298, 1518, 1943, 2015, 2033, 2070, 2097, 1037, 1547, 1597, 1766, 1947, 1980, 1982, 2091, 2092, 2093, 2094, 2095, 1916, 2064 ].indexOf(id) != -1) boost = 1.2;
+            return boost;
+        },
+        rcv: function(p) {
+            var boost = 1;
+            var id = p.number + 1;
+            if([ 0 ].indexOf(id) != -1) boost = 2.5;
+            if([ 2109, 1413, 1764, 1610, 1910, 2023, 2074, 2076, 2099, 1976, 2017, 2111, 1298, 1518, 1943, 2015, 2033, 2070, 2097, 1037, 1547, 1597, 1766, 1947, 1980, 1982, 2091, 2092, 2093, 2094, 2095, 1916, 2064 ].indexOf(id) != -1) boost = 1.2;
+            return boost;
+        },
+    },
 	
 	'Akainu Neo': {
         description: 'Certain units boosted',
         thumb: 1826,
-        id: 44, // don't change this
+        id: 45, // don't change this
         atk: function(p) {
             var id = p.number + 1,
                 matching = ((id > 1740 && id < 1745) ||
@@ -454,7 +484,7 @@ window.effects = {
     'Blitz Battle! The Three Admirals': {
         description: 'Lot of units boosted',
         thumb: 1314,
-        id: 45, // don't change this
+        id: 46, // don't change this
         atk: function(p) {
             var character = window.families[p.number];
             matching = [ "Monkey D. Luffy", "Buggy", "Portgas D. Ace", "Marco", "Jozu", "Vista", "Whitebeard", "Crocodile", "Emporio Ivankov", "Jimbe", "Boa Hancock", "Namule", "Rakuyo", "Fossa", "Curiel", "Doma", "Decalvan Brothers", "Squard", "Whitey Bay", "Little Oars Jr.", "Inazuma", "Blenheim", "Kingdew", "Atmos", "Speed Jiru", "Blackbeard", "Rob Lucci", "Thatch", "Silvers Rayleigh", "Eneru", "Dracule Mihawk", "Perona", "Kinemon", "Kanjuro", "Inuarashi", "Wanda", "Sicilian", "Momonosuke", "Nekomamushi", "Pedro", "Carrot", "Raizo" ].indexOf(character) != -1;
@@ -475,49 +505,25 @@ window.effects = {
     'Sicilian Coloseum': {
         description: 'Certain units boosted',
         thumb: 1828,
-        id: 46, // don't change this
-        atk: function(p) {
-            var id = p.number + 1,
-            matching = ((id > 1831 && id < 1840) ||
-                [ ].indexOf(id) != -1);
-            return !matching ? 1 : 1.25;
-        },    
-        hp: function(p) {
-            var id = p.number + 1,
-            matching = ((id > 1831 && id < 1840) ||
-                [ ].indexOf(id) != -1);
-            return !matching ? 1 : 1.25;
-        },    
-        rcv: function(p) {
-            var id = p.number + 1,
-            matching = ((id > 1831 && id < 1840) ||
-                [ ].indexOf(id) != -1);
-            return !matching ? 1 : 1.25;
-        },    
-    },
-
-    'Treasure Map [Whitebeard Season]': {
-        description: 'Boost stats of Akainu & Squard 2.5x',
-        thumb: 1853,
         id: 47, // don't change this
         atk: function(p) {
             var id = p.number + 1,
-                matching = ((id > 1848 && id < 1851) ||
-                    [ 1851 ].indexOf(id) != -1);
-            return !matching ? 1 : 2.5;
-        },
+            matching = ((id > 1831 && id < 1840) ||
+                [ ].indexOf(id) != -1);
+            return !matching ? 1 : 1.25;
+        },    
         hp: function(p) {
             var id = p.number + 1,
-                matching = ((id > 1848 && id < 1851) ||
-                    [ 1851 ].indexOf(id) != -1);
-            return !matching ? 1 : 2.5;
-        },
+            matching = ((id > 1831 && id < 1840) ||
+                [ ].indexOf(id) != -1);
+            return !matching ? 1 : 1.25;
+        },    
         rcv: function(p) {
             var id = p.number + 1,
-                matching = ((id > 1848 && id < 1851) ||
-                    [ 1851 ].indexOf(id) != -1);
-            return !matching ? 1 : 2.5;
-        },
+            matching = ((id > 1831 && id < 1840) ||
+                [ ].indexOf(id) != -1);
+            return !matching ? 1 : 1.25;
+        },    
     },
     
     'Blitz Battle! Straw Hat Pirates': {
