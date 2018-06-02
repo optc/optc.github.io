@@ -1859,6 +1859,8 @@ window.flags = {
     1889: { global: 1 },
     1894: { rr: 1, rro: 1, lrr: 1, global: 1 },
     1895: { rr: 1, rro: 1, lrr: 1, global: 1 },
+    1896: { global: 1 },
+    1897: { global: 1 },
     1898: { global: 1 },
     1899: { global: 1 },
     1900: { global: 1 },
