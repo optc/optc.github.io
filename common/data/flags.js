@@ -1954,6 +1954,8 @@ window.flags = {
     2041: { rr: 1, rro: 1, lrr: 1 },
     2047: { rr: 1, rro: 1, lrr: 1 },
     2048: { rr: 1, rro: 1, lrr: 1 },
+    2049: { rr: 1, rro: 1, lrr: 1 },
+    2050: { rr: 1, rro: 1, lrr: 1 },
     2059: { rr: 1, rro: 1, lrr: 1, tmlrr : 1 },
     2060: { rr: 1, rro: 1, lrr: 1, tmlrr : 1 },
     2061: { rr: 1, rro: 1, lrr: 1, tmlrr : 1 },

@@ -2047,8 +2047,8 @@ window.families = [
     "Yasopp",
     "Koala",
     "Koala",
-    null,
-    null,
+    "Gecko Moria",
+    "Gecko Moria",
     "Pica",
     "Pica",
     "Bastille",
@@ -2120,5 +2120,7 @@ window.families = [
     "Bobbin",
     "Charlotte Oven",
     "Charlotte Oven",
+    "King Neptune",
+    "King Neptune",
     null,
 ];

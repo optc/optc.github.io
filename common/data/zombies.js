@@ -555,4 +555,12 @@ window.zombies = {
         type: 'healer',
         amount: 1000
     },
+    2122: { // Neptune
+        type: 'healer',
+        multiplier: 5//CHANGE THIS
+    },
+    2123: { // Neptune
+        type: 'healer',
+        multiplier: 5
+    },
 };

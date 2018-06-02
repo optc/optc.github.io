@@ -684,4 +684,11 @@ window.effects = {
             return !matching ? 1 : 1.25;
         },
     },
+    
+    'STR Orbs Beneficial': {
+        description: 'Activates [STR] orb beneficial effects for all characters',
+        thumb: 1313,
+        id: 59, // don't change this
+        strOrbsEnabled: true
+    },
 };

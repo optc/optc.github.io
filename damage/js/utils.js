@@ -124,7 +124,11 @@ window.CrunchUtils.typeSort = function(array, typeMultiplier, types) {
     return result;
 };
 
-window.CrunchUtils.getOrbMultiplier = function(orb, type, uclass, baseMultiplier, boostedMultiplier, captains) {
+window.CrunchUtils.getOrbMultiplier = function(orb, type, uclass, baseMultiplier, boostedMultiplier, captains, effectName) {
+    if(effectName == 'STR Orbs Beneficial'){
+        if (orb == 'str') return boostedMultiplier;
+        if (orb == 0.5 && type == 'DEX') return boostedMultiplier;
+    }
     if(window.specials[1221].turnedOn || window.specials[1222].turnedOn){
         if (orb == 'str') return boostedMultiplier;
         if (orb == 0.5 && type == 'DEX') return boostedMultiplier;
