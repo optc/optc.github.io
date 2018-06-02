@@ -81,7 +81,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         if (enabled && specials[id].hasOwnProperty('onActivation')) {
             if (!initDone) initializeDataStructs();
             
-            var kataActivate = false;
+            /*var kataActivate = false;
             for(var kata = 0; kata < 2; kata++){
             if(team[kata].unit !== null){
                 if(team[kata].unit.number == 2112 || team[kata].unit.number == 2113)
@@ -93,6 +93,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if(team[0].unit == null && team[1].unit == null)
                 kataActivate = false;
             isDelayed = kataActivate;
+            var params = ;
+            params["isDelayed"] = isDelayed;*/
             
             specials[id].onActivation(getParameters(slot));
         } else if (!enabled && specials[id].hasOwnProperty('onDeactivation')) {

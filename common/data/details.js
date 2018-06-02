@@ -28047,14 +28047,14 @@ window.details = {
     2120: {//Oven
         captain: "Boosts ATK of Powerhouse and Fighter characters by ?x and reduces damage received by ?%",
         captainNotes: "The bonus is cumulative. Powerhouse + Fighter characters get a ?x bonus",
-        special: "If enemies are delayed at the time the special was activated, boost ATK of Fighter, Striker, Shooter, Cerebral and Powerhouse characters by 2x for 1 turn, by 1.75x for 3 turns otherwise.",
+        special: "If enemies are delayed at the time the special was activated, boost ATK of Fighter, Striker, Shooter, Cerebral and Powerhouse characters by 2x for 1 turn, boosts Fighter and Powerhouse characters by 1.75x for 3 turns otherwise.",
         specialName: "Grilled Scorch Blow",
         sailor: "Boosts this character's attack against [STR] characters by 2x",
     },
     2121: {//Oven
         captain: "Boosts ATK of Powerhouse and Fighter characters by 1.65x and reduces damage received by 7%",
         captainNotes: "The bonus is cumulative. Powerhouse + Fighter characters get a 2.7225x bonus",
-        special: "If enemies are delayed at the time the special was activated, boost ATK of Fighter, Striker, Shooter, Cerebral and Powerhouse characters by 2x for 1 turn, by 1.75x for 3 turns otherwise.",
+        special: "If enemies are delayed at the time the special was activated, boost ATK of Fighter, Striker, Shooter, Cerebral and Powerhouse characters by 2x for 1 turn, boosts Fighter and Powerhouse characters by 1.75x for 3 turns otherwise.",
         specialName: "Grilled Scorch Blow",
         sailor: {
             "base": "Boosts this character's attack against [STR] characters by 2x",

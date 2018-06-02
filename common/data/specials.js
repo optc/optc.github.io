@@ -5074,16 +5074,12 @@ window.specials = {
         def: function(p) { return 0; }
     },
     2120: {
-        atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Striker") || p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse")) ? (p.delayed > 0) ? 2 : 1.75 : 1; },
+        atk: function(p) { return ((p.unit.class.has("Fighter") || p.unit.class.has("Striker") || p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse")) && (p.delayed > 0)) ? 2 : (p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse")) ? 1.75 : 1; },
         type: "class",
     },
     2121: {
-        atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Striker") || p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse")) ? (window.specials[2121].multiplier > 0) ? 2 : 1.75 : 1; },
+        atk: function(p) { return ((p.unit.class.has("Fighter") || p.unit.class.has("Striker") || p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse")) && (p.delayed > 0)) ? 2 : (p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse")) ? 1.75 : 1; },
         type: "class",
-        onActivation: function(p) {
-            console.log(p);
-            window.specials[2121].multiplier = p.delayed;
-        }
     },
     2122: {
         def: function(p) { return 0.2; },
