@@ -12492,7 +12492,7 @@ window.details = {
             "level1": "Restores his own special by 2 turns when it is rewinded",
         },
         sailorNotes: "#{rewind : 2}",
-        limit: [//CHANGE THIS
+        limit: [
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base RCV by 20" },
             { "description": "Boosts base ATK by 30" },
@@ -26647,9 +26647,50 @@ window.details = {
         captain: "Boosts ATK of Powerhouse and Fighter characters by 3.5x, reduces crew's current HP by ?% at the end of each turn, reduces his own ATK multiplier by ?x at the end of each turn",
         special: "Locks the chain multiplier at 3x for 1 turn and reduces Increase Damage Taken duration by 5 turns. If enemies are delayed at the time the special was activated, deals 1,000,000 fixed damage to all enemies",
         specialName: "Ressurected Nightmare Attack",
-        sailor: "Makes [INT] orbs \"beneficial\" for Powerhouse characters",
         sailorNotes: "#{beneficial}",
-        limit: "This character has a limit break."
+        sailor: {
+            "base": "Makes [INT] orbs \"beneficial\" for Powerhouse characters",
+            "level1": "",
+        },
+        limit: [
+            { "description": "" },
+            { "description": "" },
+            { "description": "" },
+            { "description": "Acquire Potential 1: Slot Bind Self-reduction" },
+            { "description": "" },
+            { "description": "" },
+            { "description": "" },
+            { "description": "" },
+            { "description": "" },
+            { "description": "" },
+            { "description": "" },
+            { "description": "" },
+            { "description": "" },
+            { "description": "" },
+            { "description": "Acquire Potential 2: Cooldown Reduction" },
+        ],
+        potential: [
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [
+                    "Level 1: Reduces Slot Bind duration by ? turn on this character",
+                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 5: Reduces Slot Bind duration by ? turns on this character"
+                ]
+            },
+            {
+                "Name": "Cooldown Reduction",
+                "description": [
+                    "Level 1: Reduce own Special Cooldown by ? turn at the start of the fight",
+                    "Level 2: Reduce own Special Cooldown by ? turn at the start of the fight",
+                    "Level 3: Reduce own Special Cooldown by ? turn at the start of the fight",
+                    "Level 4: Reduce own Special Cooldown by ? turn at the start of the fight",
+                    "Level 5: Reduce own Special Cooldown by ? turn at the start of the fight"
+                ]
+            },
+        ]
     },
     2051: {//Pica
         captain: "If you have 5 or more Fighter characters in your crew, boosts ATK of Fighter characters by 2x and reduces damage received by 5%",
