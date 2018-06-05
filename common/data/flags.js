@@ -1888,6 +1888,8 @@ window.flags = {
     1926: { rr: 1, rro: 1, lrr: 1, global: 1 },
     1927: { rr: 1, rro: 1 },
     1928: { rr: 1, rro: 1, global: 1 },
+    1929: { global: 1 },
+    1930: { global: 1 },
     1934: { rr: 1, rro: 1 },
     1935: { rr: 1, rro: 1 },
     1936: { rr: 1, rro: 1, lrr: 1, tmlrr : 1 },
