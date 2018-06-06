@@ -456,11 +456,32 @@ window.effects = {
             return boost;
         },
     },
+    
+    'Ranking Mission: Jinbe': {
+        description: 'Stats of certain units boosted',
+        thumb: 1700,
+        id: 45, // don't change this
+        atk: function(p) {
+            var character = window.families[p.number];
+            matching = [ "Gecko Moria", "Leo", "Trafalgar Law", "Carina", "Brannew", "Carrot", "Roronoa Zoro", "Brook", "Marguerite", "Machvise", "Dosun", "King Neptune" ].indexOf(character) != -1;
+            return !matching ? 1 : 1.25;
+        },    
+        hp: function(p) {
+            var character = window.families[p.number];
+            matching = [ "Gecko Moria", "Leo", "Trafalgar Law", "Carina", "Brannew", "Carrot", "Roronoa Zoro", "Brook", "Marguerite", "Machvise", "Dosun", "King Neptune" ].indexOf(character) != -1;
+            return !matching ? 1 : 1.25;
+        },    
+        rcv: function(p) {
+            var character = window.families[p.number];
+            matching = [ "Gecko Moria", "Leo", "Trafalgar Law", "Carina", "Brannew", "Carrot", "Roronoa Zoro", "Brook", "Marguerite", "Machvise", "Dosun", "King Neptune" ].indexOf(character) != -1;
+            return !matching ? 1 : 1.25;
+        },    
+    },
 	
-	'Akainu Neo': {
+	'Akainu Neo': {//Remove this eventually
         description: 'Certain units boosted',
         thumb: 1826,
-        id: 45, // don't change this
+        id: 46, // don't change this
         atk: function(p) {
             var id = p.number + 1,
                 matching = ((id > 1740 && id < 1745) ||
@@ -478,13 +499,13 @@ window.effects = {
                 matching = ((id > 1740 && id < 1745) ||
                     [ 1620, 1621, 1664, 1665, 1720, 1721, 1769, 1770, 1777, 1778, 1823, 1824 ].indexOf(id) != -1);
             return !matching ? 1 : 1.75;
-        }, //1795, 1796, 1539, 1540, 1823, 1844, 1277, 1278 possible ones
+        }, 
 	},
     
     'Blitz Battle! The Three Admirals': {
         description: 'Lot of units boosted',
         thumb: 1314,
-        id: 46, // don't change this
+        id: 47, // don't change this
         atk: function(p) {
             var character = window.families[p.number];
             matching = [ "Monkey D. Luffy", "Buggy", "Portgas D. Ace", "Marco", "Jozu", "Vista", "Whitebeard", "Crocodile", "Emporio Ivankov", "Jimbe", "Boa Hancock", "Namule", "Rakuyo", "Fossa", "Curiel", "Doma", "Decalvan Brothers", "Squard", "Whitey Bay", "Little Oars Jr.", "Inazuma", "Blenheim", "Kingdew", "Atmos", "Speed Jiru", "Blackbeard", "Rob Lucci", "Thatch", "Silvers Rayleigh", "Eneru", "Dracule Mihawk", "Perona", "Kinemon", "Kanjuro", "Inuarashi", "Wanda", "Sicilian", "Momonosuke", "Nekomamushi", "Pedro", "Carrot", "Raizo" ].indexOf(character) != -1;
@@ -500,30 +521,6 @@ window.effects = {
             matching = [ "Monkey D. Luffy", "Buggy", "Portgas D. Ace", "Marco", "Jozu", "Vista", "Whitebeard", "Crocodile", "Emporio Ivankov", "Jimbe", "Boa Hancock", "Namule", "Rakuyo", "Fossa", "Curiel", "Doma", "Decalvan Brothers", "Squard", "Whitey Bay", "Little Oars Jr.", "Inazuma", "Blenheim", "Kingdew", "Atmos", "Speed Jiru", "Blackbeard", "Rob Lucci", "Thatch", "Silvers Rayleigh", "Eneru", "Dracule Mihawk", "Perona", "Kinemon", "Kanjuro", "Inuarashi", "Wanda", "Sicilian", "Momonosuke", "Nekomamushi", "Pedro", "Carrot", "Raizo" ].indexOf(character) != -1;
             return !matching ? 1 : 1.5;
         }, 
-    },
-    
-    'Sicilian Coloseum': {
-        description: 'Certain units boosted',
-        thumb: 1828,
-        id: 47, // don't change this
-        atk: function(p) {
-            var id = p.number + 1,
-            matching = ((id > 1831 && id < 1840) ||
-                [ ].indexOf(id) != -1);
-            return !matching ? 1 : 1.25;
-        },    
-        hp: function(p) {
-            var id = p.number + 1,
-            matching = ((id > 1831 && id < 1840) ||
-                [ ].indexOf(id) != -1);
-            return !matching ? 1 : 1.25;
-        },    
-        rcv: function(p) {
-            var id = p.number + 1,
-            matching = ((id > 1831 && id < 1840) ||
-                [ ].indexOf(id) != -1);
-            return !matching ? 1 : 1.25;
-        },    
     },
     
     'Blitz Battle! Straw Hat Pirates': {
