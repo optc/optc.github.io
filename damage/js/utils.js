@@ -199,7 +199,7 @@ window.CrunchUtils.getOrbMultiplier = function(orb, type, uclass, baseMultiplier
             if (orb == 'meat') return boostedMultiplier;
         }
     }
-    if(window.specials[2125].turnedOn){
+    if(window.specials[2128].turnedOn){
         if(uclass.has("Slasher") || uclass.has("Striker")){
             if (orb == 'meat') return boostedMultiplier;
         }

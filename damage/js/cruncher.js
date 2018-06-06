@@ -252,7 +252,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 ((window.specials[1515].turnedOn || window.specials[1516].turnedOn || (window.specials[1593].turnedOn) && x.unit.class.has("Fighter")) || 
                 ((window.specials[1181].turnedOn || window.specials[1182].turnedOn) && x.unit.class.has("Slasher")) || 
                 ((window.specials[1380].turnedOn || window.specials[1379].turnedOn) && (x.unit.class.has("Cerebral") || x.unit.class.has("Free Spirit")))) || 
-                ((window.specials[2125].turnedOn) && (x.unit.class.has("Slasher") || x.unit.class.has("Striker"))) ? 2 : 1;
+                ((window.specials[2128].turnedOn) && (x.unit.class.has("Slasher") || x.unit.class.has("Striker"))) ? 2 : 1;
             if (orb == 'rainbow') orb = 2;
             if (orb == 'str') orb = 1;
             atk += getShipBonus('atk',true,x.unit,n);

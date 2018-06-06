@@ -28180,25 +28180,25 @@ window.details = {
             },
         ],
     },
-    2124: {//Brulee
+    2127: {//Brulee
         captain: "Boosts RCV of Cerebral characters by 1.2x and boosts ATK of Cerebral characters by 2.75x if they have a matching orb, by 1.75x otherwise",
         special: "Reduces Bind duration by 2 turns and amplifies the effect of orbs for Cerebral characters by 1.5x and boosts ATK of Cerebral characters by 1.5x for 1 turn.",
-        specialName: "Brulee Special",
+        specialName: "The Witch's Meal",
     },
-    2125: {//Randolph
+    2128: {//Randolph
         captain: "Boosts ATK of DEX characters by 2x and boosts chain multiplier by 1.2x",
         special: "Reduces Special Cooldown of your right column by 1 turn and makes [DEX] and [RCV] orbs \"beneficial\" for Slasher and Striker characters for 1 turn",
-        specialName: "Randolph Special",
+        specialName: "Cutting Lifelines",
     },
-    2126: {//Noble Croc
+    2129: {//Noble Croc
         captain: "Boosts ATK of Powerhouse characters by 2x",
         special: "Boosts ATK of all characters by 1.2x for 3 turns",
-        specialName: "Noble Croc Special",
+        specialName: "Anticipation of Unknown Food",
     },
-    2127: {//Diesel
+    2130: {//Diesel
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight and boosts ATK of [QCK] characters by 1.5x",
         special: "Reduces Paralysis duration by 2 turns and ",
-        specialName: "Diesel Special",
+        specialName: "The Fast Runner's Emergency Report",
     },
     2200: {//Doflamingo Raid v2
         captain: "Boosts ATK of Driven and Cerebral characters by 2.5x when HP is 50% or below, 1.5x otherwise",

@@ -2018,7 +2018,7 @@ window.drops = {
             thumb: 2024,
             nakama: null,
             gamewith: null,
-            'All Difficulties': [ 2124, 2125, 2126, 2127, -1473, -1477, -1974, -1953, -1957, -1717 ]
+            'All Difficulties': [ 2127, 2128, 2129, 2130, -1473, -1477, -1974, -1953, -1957, -1717 ]
         },
         
     ],
