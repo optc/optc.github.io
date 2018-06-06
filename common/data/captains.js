@@ -7237,6 +7237,20 @@ window.captains = {
     2123: {
         atk: function(p){ return 2; },
     },
+    2124: {
+        atk: function(p) { return !p.unit.class.has("Cerebral") ? 1 : (((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) == 2) && (p.orb != 'g')) ? 2.75 : 1.75); },
+        rcv: function(p) { return p.unit.class.has("Cerebral") ? 1.2 : 1; }
+    },
+    2125: {
+        atk: function(p) { return p.unit.type == "DEX" ? 2 : 1; },
+        chainModifier: function(p) { return 1.2; }
+    },
+    2126: {
+        atk: function(p) { return p.unit.type == "QCK" ? 1.5 : 1; },
+    },
+    2126: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 2 : 1; },
+    },
     2200: {
         atk: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Cerebral")) && p.percHP <= 50.0 ? 2.5 : 1.5; }
     },

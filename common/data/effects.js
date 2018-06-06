@@ -457,7 +457,7 @@ window.effects = {
         },
     },
     
-    'Ranking Mission: Jinbe': {
+    '3 Ranking Missions - Shanks, Tony Tony Chopper and Jinbe': {
         description: 'Stats of certain units boosted',
         thumb: 1700,
         id: 45, // don't change this

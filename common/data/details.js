@@ -12409,13 +12409,13 @@ window.details = {
     },
     1221: {//Coliseum Oars Jr
         captain: "Boosts ATK of Slasher characters by 1.75x and the HP of Powerhouse characters by 1.2x",
-        special: "Deals 25x character's ATK in [STR] damage to one enemy. For 1 turn, makes [STR] orb \"beneficial\" for all characters",
+        special: "Deals 25x character's ATK in [STR] damage to one enemy. For 1 turn, makes [STR] orbs \"beneficial\" for all characters",
         specialNotes: "#{beneficial}",
         specialName: "Blood of the Devil Warrior",
     },
     1222: {//Coliseum Oars Jr
         captain: "Boosts ATK of Slasher characters by 2x and the HP of Powerhouse characters by 1.75x",
-        special: "Deals 25x character's ATK in [STR] damage to one enemy. For 1 turn, makes [STR] orb \"beneficial\" for all characters",
+        special: "Deals 25x character's ATK in [STR] damage to one enemy. For 1 turn, makes [STR] orbs \"beneficial\" for all characters",
         specialNotes: "#{beneficial}",
         specialName: "Blood of the Devil Warrior",
     },
@@ -18659,7 +18659,7 @@ window.details = {
         specialName: "Shock Recovery: Light",
     },
     1640: {//DEX Gas Mask Fodder
-        special: "For 1 turn, makes [STR] orb \"beneficial\" for Shooter characters",
+        special: "For 1 turn, makes [STR] orbs \"beneficial\" for Shooter characters",
         specialNotes: "#{beneficial}",
         specialName: "Shooter Beneficial Slot: STR",
     },
@@ -24273,7 +24273,7 @@ window.details = {
     1933: {//Hancock
         captain: "Boosts ATK of Fighter characters by 1.75x and boosts ATK of Free Spirit characters by 1.5x",
         captainNotes: "The bonus is cumulative. Fighter + Free Spirit characters get a 2.625x bonus.",
-        special: "Makes [DEX] orb \"beneficial\" for Fighter characters for 1 turn and boosts ATK of Fighter characters by 1.5x for 1 turn. If \"The Trio Crawling Away from the Heavens: The Third Daughter\" is used again in the same turn the special is activated in, boosts ATK of Fighter characters by 1.75x instead.",
+        special: "Makes [DEX] orbs \"beneficial\" for Fighter characters for 1 turn and boosts ATK of Fighter characters by 1.5x for 1 turn. If \"The Trio Crawling Away from the Heavens: The Third Daughter\" is used again in the same turn the special is activated in, boosts ATK of Fighter characters by 1.75x instead.",
         specialNotes: "This special is boosted if you use Boa Marigold's [1932] special in the same turn<br>#{beneficial}",
         specialName: "The Trio Crawling Away from the Heavens: The Eldest Daughter",
         sailor: "Boosts own base ATK by 100 if this character is the 1st in the chain to attack",
@@ -26309,7 +26309,7 @@ window.details = {
     },
     2028: {//Sengoku
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, Boosts ATK of [QCK] characters by 2x",
-        special: "Reduces Despair and ATK DOWN duration by 4 turns. If your crew has 4 or more [QCK] or [PSY] characters, amplifies the effect of orbs by 2x for 1 turn and makes [RCV] and [TND] orb \"beneficial\" for all characters for 1 turn",
+        special: "Reduces Despair and ATK DOWN duration by 4 turns. If your crew has 4 or more [QCK] or [PSY] characters, amplifies the effect of orbs by 2x for 1 turn and makes [RCV] and [TND] orbs \"beneficial\" for all characters for 1 turn",
         specialNotes: "#{beneficial}",
         specialName: "Instant Suppression",
         sailor: "Makes [DEX] orbs \"beneficial\" for this character",
@@ -26317,7 +26317,7 @@ window.details = {
     },
     2029: {//Sengoku
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, Boosts ATK of [QCK] characters by 2.5x and their HP by 1.2x",
-        special: "Reduces Despair and ATK DOWN duration by 4 turns. If your crew has 4 or more [QCK] or [PSY] characters, amplifies the effect of orbs by 2x for 1 turn and makes [RCV] and [TND] orb \"beneficial\" for all characters for 1 turn",
+        special: "Reduces Despair and ATK DOWN duration by 4 turns. If your crew has 4 or more [QCK] or [PSY] characters, amplifies the effect of orbs by 2x for 1 turn and makes [RCV] and [TND] orbs \"beneficial\" for all characters for 1 turn",
         specialNotes: "#{beneficial}",
         specialName: "Instant Suppression",
         sailor: {
@@ -26719,7 +26719,7 @@ window.details = {
     },
     2056: {//Ichiji
         captain: "Boosts ATK of Fighter characters by 2.5x and reduces their RCV to 0",
-        special: "Deals 15x character's ATK in [INT] damage to one enemy, changes top row orbs into [PSY] orbs and makes [PSY] orb \"beneficial\" for all characters for 1 turn.",
+        special: "Deals 15x character's ATK in [INT] damage to one enemy, changes top row orbs into [PSY] orbs and makes [PSY] orbs \"beneficial\" for all characters for 1 turn.",
         specialName: "Scornful Gang Up (First Son)",
         specialNotes: "#{beneficial}",
         sailor: "Makes [PSY] orbs \"beneficial\" for this unit",
@@ -26927,13 +26927,13 @@ window.details = {
     },
     2071: {//Anni Chopper
         captain: "Recovers 3x character's RCV in HP at the end of each turn",
-        special: "Reduces the defense of all enemies by 80% for 1 turn, reduces enemy's Threshold Damage Reduction and Enrage duration by 5 turns, makes [INT], [PSY] and [DEX] orb \"beneficial\" for all characters for 1 turn and adds .6x to Chain multiplier for 1 turn.",
+        special: "Reduces the defense of all enemies by 80% for 1 turn, reduces enemy's Threshold Damage Reduction and Enrage duration by 5 turns, makes [INT], [PSY] and [DEX] orbs \"beneficial\" for all characters for 1 turn and adds .6x to Chain multiplier for 1 turn.",
         sailor: "Changes all orbs into [RCV] orbs at the start of the fight",
         specialName: "A Man's Stratagem to Victory",
     },
     2072: {//Anni Chopper
         captain: "Recovers 5x character's RCV in HP at the end of each turn",
-        special: "Reduces the defense of all enemies by 80% for 1 turn, reduces enemy's Threshold Damage Reduction and Enrage duration by 5 turns, makes [INT], [PSY] and [DEX] orb \"beneficial\" for all characters for 1 turn and adds .6x to Chain multiplier for 1 turn.",
+        special: "Reduces the defense of all enemies by 80% for 1 turn, reduces enemy's Threshold Damage Reduction and Enrage duration by 5 turns, makes [INT], [PSY] and [DEX] orbs \"beneficial\" for all characters for 1 turn and adds .6x to Chain multiplier for 1 turn.",
         specialName: "A Man's Stratagem to Victory",
         sailor: {
             "base": "Changes all orbs into [RCV] orbs at the start of the fight",
@@ -26983,14 +26983,14 @@ window.details = {
     2073: {//V4 Luffy
         captain: "<b>Always Active: </b>Boosts HP of all characters by 1.25x, boosts chances of getting [STR], [QCK], [PSY] orbs.<br><b>Gear 2 Captain: </b>Boosts ATK of all characters by 3x, slightly boosts chances of getting [RCV] orbs and makes [QCK] orbs \"beneficial\" to all characters<br><b>Gear 3 Captain: </b>Boosts ATK of all characters by 3.5x after 2 consecutive PERFECTs, boosts chances of getting [RCV] orbs and makes [STR] orbs \"beneficial\" to all characters<br><b>Gear 4 - Boundman Captain: </b>Boosts ATK of all characters by 4x, reduce damage received by 20%, boosts chances of getting [RCV] orbs and makes [STR], [QCK] and [PSY] orbs \"beneficial\" to all characters<br><b>Gear 4 - Tankman Captain: </b>Boosts own ATK by 4.25x, boosts ATK of all other characters by 4x, reduce damage received by 50% and makes [STR], [QCK] and [PSY] orbs \"beneficial\" to all characters<br><b>Action: </b>Based on how full Gear Power Gauge is, transforms Luffy. If Gear Power is above 50%, change between Gear 2 and Gear 3. If Gear Power is full, change into Gear 4 - Boundman. This can be used an unlimited amount of times per turn.",
         captainnotes: "In order to increase Gear Power Gauge level, you must hit a PERFECT with Luffy or consume [RCV] orbs. MAX Gear Power Gauge level is 8. Hitting a perfect with Luffy and consuming a [RCV] orb increases Gauge level by 1. If Luffy gets swapped out in battle, Gear Gauge Power will go to 0. While in Gear 4, Luffy will stay in that form until Gauge Power goes to 0. Attacking with any character while in Gear 4 reduces Gear Power Gauge by 3.",
-        special: "Deals 150x character's ATK in Typeless damage to all enemies, boosts ATK of all characters by 2x for 1 turn, makes [RCV] and [TND] orb \"beneficial\" for all characters for 3 turns. If Luffy is Captain or Friend/Guest Captain, transform into Gear 4",
+        special: "Deals 150x character's ATK in Typeless damage to all enemies, boosts ATK of all characters by 2x for 1 turn, makes [RCV] and [TND] orbs \"beneficial\" for all characters for 3 turns. If Luffy is Captain or Friend/Guest Captain, transform into Gear 4",
         specialNotes: "If you use this special after consuming 10 [RCV] orbs since the start of the fight, transform into Tankman, otherwise transform into Boundman",
         specialName: "Gomu Gomu no Kong Organ",
     },
     2074: {//V4 Luffy
         captain: "<b>Always Active: </b>Boosts HP of all characters by 1.25x, boosts chances of getting [STR], [QCK], [PSY] orbs.<br><b>Gear 2 Captain: </b>Boosts ATK of all characters by 3x, slightly boosts chances of getting [RCV] orbs and makes [QCK] orbs \"beneficial\" to all characters<br><b>Gear 3 Captain: </b>Boosts ATK of all characters by 3.5x after 2 consecutive PERFECTs, boosts chances of getting [RCV] orbs and makes [STR] orbs \"beneficial\" to all characters<br><b>Gear 4 - Boundman Captain: </b>Boosts ATK of all characters by 4x, reduce damage received by 20%, boosts chances of getting [RCV] orbs and makes [STR], [QCK] and [PSY] orbs \"beneficial\" to all characters<br><b>Gear 4 - Tankman Captain: </b>Boosts own ATK by 4.25x, boosts ATK of all other characters by 4x, reduce damage received by 50% and makes [STR], [QCK] and [PSY] orbs \"beneficial\" to all characters<br><b>Action: </b>Based on how full Gear Power Gauge is, transforms Luffy. If Gear Power is above 50%, change between Gear 2 and Gear 3. If Gear Power is full, change into Gear 4 - Boundman. This can be used an unlimited amount of times per turn.",
         captainnotes: "In order to increase Gear Power Gauge level, you must hit a PERFECT with Luffy or consume [RCV] orbs. MAX Gear Power Gauge level is 8. Hitting a perfect with Luffy and consuming a [RCV] orb increases Gauge level by 1. If Luffy gets swapped out in battle, Gear Gauge Power will go to 0. While in Gear 4, Luffy will stay in that form until Gauge Power goes to 0. Attacking with any character while in Gear 4 reduces Gear Power Gauge by 3.",
-        special: "Deals 150x character's ATK in Typeless damage to all enemies, boosts ATK of all characters by 2x for 1 turn, makes [RCV] and [TND] orb \"beneficial\" for all characters for 3 turns. If Luffy is Captain or Friend/Guest Captain, transform into Gear 4",
+        special: "Deals 150x character's ATK in Typeless damage to all enemies, boosts ATK of all characters by 2x for 1 turn, makes [RCV] and [TND] orbs \"beneficial\" for all characters for 3 turns. If Luffy is Captain or Friend/Guest Captain, transform into Gear 4",
         specialNotes: "If you use this special after consuming 10 [RCV] orbs since the start of the fight, transform into Tankman, otherwise transform into Boundman",
         specialName: "Gomu Gomu no Kong Organ",
         sailor: {
@@ -28135,8 +28135,70 @@ window.details = {
         captain: "Boosts ATK of all characters by 2x, EXP gained by 1.5x and recovers 5x character's RCV in HP at the end of each turn",
         captainNotes: "EXP boost does not take effect if he becomes your captain in the middle of the adventure.",
         special: "Reduces Despair and ATK DOWN duration by 5 turns and reduces enemies' Resilience Buffs by 5 turns. Reduces the defense of all enemies by ?% and amplifies the effect of orbs by 1.75x for Cerebral and Powerhouse characters for 3 turns",
-        sailor: "Boosts base ATK, HP and RCV of Cerebral characters by 75",
         specialName: "Great Ocean Current of Resuscitation",
+        sailor: {
+            "base": "Boosts base ATK, HP and RCV of Cerebral characters by 50",
+            "level1": "When any other character uses a special, reduces own cooldown by 1 turn",
+        },
+        limit: [
+            { "description": "Boosts base HP by 10" },
+            { "description": "Boosts base HP by 20" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Acquire Potential 1: Pinch Healing" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base ATK by 35" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base ATK by 40" },
+            { "description": "Acquire Sailor Ability 1: When any other character uses a special, reduces own cooldown by 1 turn" },
+            { "description": "Acquire Potential 2: Reduce No Healing duration" },
+        ],
+        potential: [
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by ? turn",
+                    "Level 2: Reduces No Healing duration by ? turns",
+                    "Level 3: Reduces No Healing duration by ? turns",
+                    "Level 4: Reduces No Healing duration by ? turns",
+                    "Level 5: Reduces No Healing duration by ? turns"
+                ]
+            },
+            {
+                "Name": "Pinch Healing",
+                "description": [
+                    "Level 1: If HP is below ?% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below ?% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below ?% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below ?% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below ?% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
+                ]
+            },
+        ],
+    },
+    2124: {//Brulee
+        captain: "Boosts RCV of Cerebral characters by 1.2x and boosts ATK of Cerebral characters by 2.75x if they have a matching orb, by 1.75x otherwise",
+        special: "Reduces Bind duration by 2 turns and amplifies the effect of orbs for Cerebral characters by 1.5x and boosts ATK of Cerebral characters by 1.5x for 1 turn.",
+        specialName: "Brulee Special",
+    },
+    2125: {//Randolph
+        captain: "Boosts ATK of DEX characters by 2x and boosts chain multiplier by 1.2x",
+        special: "Reduces Special Cooldown of your right column by 1 turn and makes [DEX] and [RCV] orbs \"beneficial\" for Slasher and Striker characters for 1 turn",
+        specialName: "Randolph Special",
+    },
+    2126: {//Noble Croc
+        captain: "Boosts ATK of Powerhouse characters by 2x",
+        special: "Boosts ATK of all characters by 1.2x for 3 turns",
+        specialName: "Noble Croc Special",
+    },
+    2127: {//Diesel
+        captain: "Reduces cooldown of all specials by 1 turn at the start of the fight and boosts ATK of [QCK] characters by 1.5x",
+        special: "Reduces Paralysis duration by 2 turns and ",
+        specialName: "Diesel Special",
     },
     2200: {//Doflamingo Raid v2
         captain: "Boosts ATK of Driven and Cerebral characters by 2.5x when HP is 50% or below, 1.5x otherwise",

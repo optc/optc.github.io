@@ -5089,6 +5089,24 @@ window.specials = {
         def: function(p) { return 0.2; },
         orb: function(p) { return (p.unit.class.has("Powerhouse") || p.unit.class.has("Cerebral")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); }
     },
+    2124: {
+        atk: function(p) { return p.unit.class.has("Cerebral") ? 1.5 : 1; },
+        type: "class",
+        orb: function(p) { return p.unit.class.has("Cerebral") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); }	
+    },
+    2125: {
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[2125].turnedOn = true;
+        },
+        onDeactivation: function(p) {
+            window.specials[2125].turnedOn = false;
+        }
+    },
+    2126: {
+        atk: function(p) { return 1.2; },
+        type: "class"
+    },
     5000: {
         atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 1.5 : 1; },
         type: "type",
