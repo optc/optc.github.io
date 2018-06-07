@@ -2013,6 +2013,14 @@ window.drops = {
             'All Difficulties': [ 2092, 2093, 2094, 2095, -1935, -1436, -1438, -1926, -1955, -1715 ]
         },
         
+        {
+            name: 'Brûlée\'s Gibier Party',
+            thumb: 2024,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 2127, 2128, 2129, 2130, -1473, -1477, -1974, -1953, -1957, -1717 ]
+        },
+        
     ],
 
             
