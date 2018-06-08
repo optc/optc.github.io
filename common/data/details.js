@@ -13739,7 +13739,49 @@ window.details = {
         special: "Randomize [RCV], [TND] and [BLOCK] orbs. Makes [STR], [DEX] and [QCK] orbs \"beneficial\" to Driven and Slasher characters for 2 turns",
         specialNotes: "#{beneficial}",
         specialName: "Onigumo of Dismantling Swordsmanship",
-        sailor: "Reduces Paralysis for 5 turns for himself"
+        sailor: {
+            "base": "Reduces Paralysis for 5 turns for himself",
+            "level1": "Boosts base ATK, HP and RCV of Shooter characters by 30",
+        },
+        limit: [
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Acquire Potential 1: [PSY] Damage Reduction" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Boosts base ATK by 40" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base HP by 80" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK, HP and RCV of Shooter characters by 30" },
+            { "description": "Acquire Potential 2: Slot Bind Self-reduction" },
+        ],
+        potential: [
+            {
+                "Name": "[PSY] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [PSY] characters by 1%",
+                    "Level 2: Reduce damage taken from [PSY] characters by ?%",
+                    "Level 3: Reduce damage taken from [PSY] characters by ?%",
+                    "Level 4: Reduce damage taken from [PSY] characters by ?%",
+                    "Level 5: Reduce damage taken from [PSY] characters by ?%"
+                ]
+            },
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [
+                    "Level 1: Reduces Slot Bind duration by 1 turn on this character",
+                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 5: Reduces Slot Bind duration by ? turns on this character"
+                ]
+            },
+        ]
     },
     1324: {//Onigumo
         captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of Slasher and Driven characters by 1.6x",
@@ -22304,7 +22346,7 @@ window.details = {
             "level5": "Boosts ATK of all characters proportionally to the crew's current HP, by 2.75x at max and their HP by 1.35x",
             "level6": "Boosts ATK of all characters proportionally to the crew's current HP, by 3.25x at max and their HP by 1.35x",
         },
-        captainNotes: "#{captainProportional : lower : 1 + 1.25 * (1 - (remaining HP) / (total HP)) : 1 : 3.25}",
+        captainNotes: "#{captainProportional : lower : 1 + 2.25 * (1 - (remaining HP) / (total HP)) : 1 : 3.25}",
         special: "Changes own orb into [INT], deals 100x character's ATK in typeless damage to all enemies that will ignore damage negating abilities and barriers. If enemies have All Debuff Protection or Delay Debuff Protection at the time the special was activated, amplifies the effect of orbs by 2x for 1 turn. If enemies have a barrier at the time the special was activated, boosts own ATK by 2.25x",
         specialNotes: "#{ignoreBarrier}",
         specialName: "The Epicenter of the Halberd",
@@ -26650,7 +26692,7 @@ window.details = {
         sailorNotes: "#{beneficial}",
         sailor: {
             "base": "Makes [INT] orbs \"beneficial\" for Powerhouse characters",
-            "level1": "If your Captain is a Powerhouse character completely resists Blindness",
+            "level1": "If your Captain is a Powerhouse character, completely resists Blindness",
         },
         limit: [
             { "description": "Boosts base RCV by 10" },
@@ -27882,19 +27924,19 @@ window.details = {
     },
     2112: {//Katakuri
         captain: "Boosts ATK of Fighter, Striker, Shooter, Cerebral and Powerhouse characters by 1.825x, reduce damage received by 20% and makes [QCK], [PSY], [RCV] and [TND] orbs \"beneficial\" to all characters. Has a chance to delay all enemies by 1 turn based on damage dealt in previous turn.",
-        captainNotes: "The bonus is cumulative. Characters with 2 of the boosted classes gets a 3.330625x bonus<br>Delay chance is based on damage dealt with normal attacks and does not stack with any other delay specials or effects<br><b>100,000 damage or more:</b> 20% chance to delay<br><b>500,000 damage or more:</b> 50% chance to delay<br><b>1,000,000 damage or more:</b> 100% chance to delay<br><b>2,000,000 damage or more:</b> 100% chance to delay ignoring Delay Debuff Protection",
+        captainNotes: "The bonus is cumulative. Characters with 2 of the boosted classes get a 3.330625x bonus<br>Delay chance is based on damage dealt with normal attacks and does not stack with any other delay specials or effects<br><b>100,000 damage or more:</b> 20% chance to delay<br><b>500,000 damage or more:</b> 50% chance to delay<br><b>1,000,000 damage or more:</b> 100% chance to delay<br><b>2,000,000 damage or more:</b> 100% chance to delay ignoring Delay Debuff Protection",
         special: "Boosts ATK against delayed enemies by 1.75x for Fighter, Striker, Shooter, Cerebral and Powerhouse characters for 2 turns, changes [STR], [QCK], [DEX], [PSY], [INT] and [BLOCK] orbs on Fighter, Striker, Shooter, Cerebral and Powerhouse characters into Matching orbs and reduces Special Cooldown of Fighter, Striker, Shooter, Cerebral and Powerhouse specials by 1 turn",
         specialName: "Peerless Donuts: Mochi Singing Result",
     },
     2113: {//Katakuri
         captain: "Boosts ATK of Fighter, Striker, Shooter, Cerebral and Powerhouse characters by 1.825x, reduce damage received by 20% and makes [QCK], [PSY], [RCV] and [TND] orbs \"beneficial\" to all characters. Has a chance to delay all enemies by 1 turn based on damage dealt in previous turn.",
-        captainNotes: "Attack boost stacks, so any character with 2 of the boosted classes gets a 3.330625x bonus<br>Delay chance is based on damage dealt with normal attacks and does not stack with any other delay specials or effects<br><b>100,000 damage or more:</b> 20% chance to delay<br><b>500,000 damage or more:</b> 50% chance to delay<br><b>1,000,000 damage or more:</b> 100% chance to delay<br><b>2,000,000 damage or more:</b> 100% chance to delay ignoring Delay Debuff Protection",
+        captainNotes: "The bonus is cumulative. Characters with 2 of the boosted classes get a 3.330625x bonus<br>Delay chance is based on damage dealt with normal attacks and does not stack with any other delay specials or effects<br><b>100,000 damage or more:</b> 20% chance to delay<br><b>500,000 damage or more:</b> 50% chance to delay<br><b>1,000,000 damage or more:</b> 100% chance to delay<br><b>2,000,000 damage or more:</b> 100% chance to delay ignoring Delay Debuff Protection",
         special: "Boosts ATK against delayed enemies by 1.75x for Fighter, Striker, Shooter, Cerebral and Powerhouse characters for 2 turns, changes [STR], [QCK], [DEX], [PSY], [INT] and [BLOCK] orbs on Fighter, Striker, Shooter, Cerebral and Powerhouse characters into Matching orbs and reduces Special Cooldown of Fighter, Striker, Shooter, Cerebral and Powerhouse specials by 1 turn",
         specialName: "Peerless Donuts: Mochi Singing Result",
         sailor: {
             "base": "None",
             "level1": "Boosts base ATK of Fighter, Striker, Shooter, Cerebral and Powerhouse characters by 50",
-            "level2": "Boosts this character's attack against [STR] characters by 2x",
+            "level2": "Boosts this character's attack against [QCK] characters by 2x",
         },
         limit: [
             { "description": "Boosts base ATK by 10" },
@@ -27923,7 +27965,7 @@ window.details = {
             { "description": "Boosts base ATK by 40" },
             { "description": "Boosts base ATK by 40" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
-            { "description": "Acquire Sailor Ability 2: Boosts this character's attack against [STR] characters by 2x" },
+            { "description": "Acquire Sailor Ability 2: Boosts this character's attack against [QCK] characters by 2x" },
             { "description": "Boosts base ATK by 50" },
             { "description": "Boosts base HP by 80" },
             { "description": "Acquire Potential 3: Critical Hit" },
@@ -27966,11 +28008,11 @@ window.details = {
         special: [
             {
                 "description": "Changes [TND] and [RCV] orbs into [PSY] orbs, changes all other orbs on all characters into Brûlée's orb. Adds 30x character's ATK as Additional Typeless Damage for 3 turns",
-                "cooldown": [ 19, null ],
+                "cooldown": [ 18, 12 ],
             },
             {
                 "description": "Changes [TND] and [RCV] orbs into [PSY] orbs, changes all other orbs on all characters into Brûlée's orb. Adds 30x character's ATK as Additional Typeless Damage for 5 turns",
-                "cooldown": [ 22, null ],
+                "cooldown": [ 22, 16 ],
             },
         ],
         specialNotes: "Upon activating the special, all orbs will be changed to the orb Brûlée has, including [RAINBOW] and [BLOCK] orbs. This will not override other [BLOCK] orbs.",
@@ -27983,11 +28025,11 @@ window.details = {
         special: [
             {
                 "description": "Changes [TND] and [RCV] orbs into [PSY] orbs, changes all other orbs on all characters into Brûlée's orb. Adds 30x character's ATK as Additional Typeless Damage for 3 turns",
-                "cooldown": [ 18, null ],
+                "cooldown": [ 18, 12 ],
             },
             {
                 "description": "Changes [TND] and [RCV] orbs into [PSY] orbs, changes all other orbs on all characters into Brûlée's orb. Adds 30x character's ATK as Additional Typeless Damage for 5 turns",
-                "cooldown": [ 22, null ],
+                "cooldown": [ 22, 16 ],
             },
         ],
         specialNotes: "Upon activating the special, all orbs will be changed to the orb Brûlée has, including [RAINBOW] and [BLOCK] orbs. This will not override other [BLOCK] orbs.",
@@ -28070,7 +28112,7 @@ window.details = {
             "base": "Makes PSY orbs \"beneficial\" for this unit",
             "level1": "Adds 2x character's ATK as Additional Typeless Damage",
         },
-        sailorNotes: "#{beneficial}",
+        sailorNotes: "#{beneficial} <br> #{additionalDamage : 2x}",
         limit: [
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base HP by 20" },
@@ -28117,6 +28159,7 @@ window.details = {
         special: "Reduces enemy's Threshold Damage Reduction, Percent Damage Reduction, Increased Defense and End of Turn Heal duration by 5 turns, crew's ATK DOWN duration by 5 turns and changes adjacent orbs into Matching Orbs.",
         specialName: "Death-Inducing Lullaby",
         sailor: "Boosts own base ATK by 350 if this character is the last in the chain to attack",
+        limit: "This character has a limit break."
     },
     2119: {//Bobbin
         captain: "Boosts ATK of [QCK] and [PSY] characters by 2.5x",
@@ -28124,7 +28167,7 @@ window.details = {
         specialName: "Death-Inducing Lullaby",
         sailor: {
             "base": "Boosts own base ATK by 350 if this character is the last in the chain to attack",
-            "level1": "Reduces Slot Bind duration by 1 turn on this character",
+            "level1": "Reduces Silence duration by 1 turn",
         },
         limit: [
             { "description": "Boosts base HP by 20" },
@@ -28134,12 +28177,12 @@ window.details = {
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base RCV by 20" },
             { "description": "Boosts base ATK by 50" },
-            { "description": "Acquire Sailor Ability 1: Reduces Slot Bind duration by 1 turn on this character" },
+            { "description": "Acquire Sailor Ability 1: Reduces Silence duration by 1 turn" },
             { "description": "Boosts base RCV by 20" },
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base RCV by 30" },
             { "description": "Boosts base HP by 50" },
-            { "description": "Reduce base Special Cooldown by  turn" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base HP by 60" },
             { "description": "Acquire Potential 2: Reduce No Healing duration" },
         ],
@@ -28168,19 +28211,19 @@ window.details = {
     },
     2120: {//Oven
         captain: "Boosts ATK of Powerhouse and Fighter characters by 1.5x and reduces damage received by ?%",
-        captainNotes: "Attack boost stacks, so a Powerhouse/Fighter character gets a 2.25x bonus",
+        captainNotes: "The bonus is cumulative. Powerhouse + Fighter characters get a 2.25x bonus",
         special: "If enemies are delayed at the time the special was activated, boost ATK of Fighter, Striker, Shooter, Cerebral and Powerhouse characters by 2x for 1 turn, boosts Fighter and Powerhouse characters by 1.75x for 3 turns otherwise.",
         specialName: "Grilled Scorch Blow",
         sailor: "Boosts this character's attack against [STR] characters by 2x",
     },
     2121: {//Oven
         captain: "Boosts ATK of Powerhouse and Fighter characters by 1.65x and reduces damage received by 7%",
-        captainNotes: "Attack boost stacks, so a Powerhouse/Fighter character gets a 2.7225x bonus",
+        captainNotes: "The bonus is cumulative. Powerhouse + Fighter characters get a 2.7225x bonus",
         special: "If enemies are delayed at the time the special was activated, boost ATK of Fighter, Striker, Shooter, Cerebral and Powerhouse characters by 2x for 1 turn, boosts Fighter and Powerhouse characters by 1.75x for 3 turns otherwise.",
         specialName: "Grilled Scorch Blow",
         sailor: {
             "base": "Boosts this character's attack against [STR] characters by 2x",
-            "level1": "Reduces Slot Bind duration by 1 turn on this character",
+            "level1": "Reduces Silence duration by 1 turn",
         },
         limit: [
             { "description": "Boosts base ATK by 10" },
@@ -28190,7 +28233,7 @@ window.details = {
             { "description": "Boosts base HP by 20" },
             { "description": "Boosts base HP by 40" },
             { "description": "Boosts base HP by 60" },
-            { "description": "Acquire Sailor Ability 1: Reduces Slot Bind duration by 1 turn on this character" },
+            { "description": "Acquire Sailor Ability 1: Reduces Silence duration by 1 turn" },
             { "description": "Boosts base ATK by 40" },
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base RCV by 30" },
