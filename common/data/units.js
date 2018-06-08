@@ -2047,7 +2047,7 @@ window.units = [
     [ "Yasopp, Harbor Village Pirates", "STR", [ "Shooter", "Free Spirit" ], 4, 20, 5, 4, 99, 1000000, 603, 324, 82, 1820, 1115, 275, 1 ],
     [ "Koala, The Revolutionary Army, Searching for Darkness", "QCK", [ "Fighter", "Cerebral" ], 4, 20, 4, 4, 70, 1066998, 282, 176, 50, 986, 657, 220, 1 ],
     [ "Koala, The Revolutionary Army, Exposing the Darkness", "QCK", [ "Fighter", "Cerebral" ], 5, 30, 5, 5, 99, 4000000, 910, 583, 168, 1974, 1328, 406, 1 ],
-    [ "Gecko Moria", "INT", [ "Powerhouse", "Fighter" ], 4, 20, 4, 4, 70, 1066998, 274, 140, 23, 2103, 748, 70, 1 ],
+    [ "Gecko Moria, The Shadow Show Nightmare", "INT", [ "Powerhouse", "Fighter" ], 4, 20, 4, 4, 70, 1066998, 274, 140, 23, 2103, 748, 70, 1 ],
     [ "Gecko Moria, Commander of the Dead Army", "INT", [ "Powerhouse", "Fighter" ], 5, 30, 5, 5, 99, 4000000, 2058, 724, 68, 3348, 1475, 149, 1 ],
     [ "Pica. Stone Assimilation Human", "QCK", [ "Powerhouse", "Fighter" ], 3, 12, 5, 2, 50, 392109, 310, 101, 1, 1555, 598, 5, 1 ],
     [ "Pica, Stone Giant", "QCK", [ "Powerhouse", "Fighter" ], 4, 20, 4, 3, 99, 3000000, 919, 544, 3, 3325, 1145, 10, 1 ],
