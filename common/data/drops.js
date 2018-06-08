@@ -1444,8 +1444,8 @@ window.drops = {
             nakama: 2091800,
             gamewith: 23687,
             condition: 'You can only bring DEX units',
-            'Japan': [ 917, 919, 920, -920, -791, -756, -720, -707, -705, -542, -541, -522, -1117 ],
-            'Global': [ 917, 919, 920, -920, -506, -756, -720, -707, -705, -542, -541, -522, -1117 ]
+            'Japan': [ 917, 919, 920, -920, -791, -756, -720, -707, -705, -542, -541, -522, -1117, -1927 ],
+            'Global': [ 917, 919, 920, -920, -506, -756, -720, -707, -705, -542, -541, -522, -1117, -1927 ]
         },
         
         {
@@ -1562,7 +1562,7 @@ window.drops = {
             nakama: 2113700,
             gamewith: 34515,
             condition: 'Only [STR], [QCK], [DEX], [INT], and [PSY] orbs appear',
-            'All Difficulties': [ 1136, 1137, 1138, 1139, -935, -643, -673, -894, -943, -995, -615, -705, -704 ]
+            'All Difficulties': [ 1136, 1137, 1138, 1139, -935, -643, -673, -894, -943, -995, -615, -705, -704, -2066 ]
         },
         
         {
@@ -1601,7 +1601,7 @@ window.drops = {
             nakama: 2124200,
             gamewith: 37425,
             condition: 'Free Spirit Characters have their cooldowns reduced by 10 turns at the start of the fight',
-            'All Difficulties': [ 1241, 1243, -1035, -965, -1031, -1081, -754, -966, -502, -707, -955 ]
+            'All Difficulties': [ 1241, 1243, -1035, -965, -1031, -1081, -754, -966, -502, -707, -955, -1928 ]
         },
         
         {
@@ -1621,7 +1621,7 @@ window.drops = {
             nakama: 2128700,
             gamewith: 39522,
             condition: 'Child-like characters get their ATK and HP boosted by 3.5x, RCV by 1.5x, and cooldowns reduced by 7 turns at the start of the fight',
-            'All Difficulties': [ 1286, 1288, 1290, -963, -1045, -251, -760, -1083, -1129, -506, -1062, -702 ],
+            'All Difficulties': [ 1286, 1288, 1290, -963, -1045, -251, -760, -1083, -1129, -506, -1062, -702, -2001 ],
         },
         
         {
@@ -1651,7 +1651,7 @@ window.drops = {
             nakama: 2133200,
             gamewith: 44747,
             condition: 'Striker characters are Silenced for 99 turns and have their ATK reduced by a variable amount. (70% on 30 stamina)',
-            'All Difficulties': [ 1331, 1333, 1334, -720, -1186, -1190, -756, -1188, -1151, -1153, -738 ]
+            'All Difficulties': [ 1331, 1333, 1334, -720, -1186, -1190, -756, -1188, -1151, -1153, -738, -1927 ]
         },
         
         {
@@ -1700,7 +1700,7 @@ window.drops = {
             nakama: 2142600,
             gamewith: 49862,
             condition: 'You can only bring DEX units',
-            'All Difficulties': [ 1425, 1427, 1428, -1240, -1272, -1270, -1227, -1224, -872, -878, -255, -812 ]
+            'All Difficulties': [ 1425, 1427, 1428, -1240, -1272, -1270, -1227, -1224, -872, -878, -255, -812, -2034 ]
         },
         
         {
@@ -1710,7 +1710,7 @@ window.drops = {
             nakama: 2145000,
             gamewith: 50895,
             condition: 'You can only bring STR units',
-            'All Difficulties': [ 1449, 1451, -935, -1278, -1318, -1324, -880, -876, -259, -1226, -814 ]
+            'All Difficulties': [ 1449, 1451, -935, -1278, -1318, -1324, -880, -876, -259, -1226, -814, -2066 ]
         },
         
         {
@@ -1749,7 +1749,7 @@ window.drops = {
             nakama: 2154700,
             gamewith: 54302,
             condition: 'Strawhat Pirates get ATK, HP, and RCV boosted by 1.5x and reduces cooldown of specials by 9 turns at the start of the fight',
-            'All Difficulties': [ 1546, 1548, -1035, -1410, -1406, -939, -943, -312, -1279, -1282, -1447, -20 ],
+            'All Difficulties': [ 1546, 1548, -1035, -1410, -1406, -939, -943, -312, -1279, -1282, -1447, -20, -1928 ],
         },
         
         {
@@ -1768,7 +1768,7 @@ window.drops = {
             global: true,
             nakama: 2158100,
             gamewith: 56038,
-            'All Difficulties': [ 1580, 1582, -1391, -357, -910, -995, -896, -1436, -1444, -890, -1342, -1551 ],
+            'All Difficulties': [ 1580, 1582, -1391, -357, -910, -995, -896, -1436, -1444, -890, -1342, -1551, -2035 ],
         },
         
         {
@@ -1777,8 +1777,8 @@ window.drops = {
             global: true,
             nakama: 2159700,
             gamewith: 57039,
-            'Japan': [ 1596, 1598, 1599, -1045, -359, -999, -1033, -1550, -739, -1438, -1440, -893, -1343 ],
-            'Global': [ 1596, 1598, 1599, -1045, -1751, -1922, -359, -999, -1033, -1550, -739, -1438, -1440, -893, -1343 ],
+            'Japan': [ 1596, 1598, 1599, -1045, -359, -999, -1033, -1550, -739, -1438, -1440, -893, -1343, -2001 ],
+            'Global': [ 1596, 1598, 1599, -1045, -1751, -1922, -359, -999, -1033, -1550, -739, -1438, -1440, -893, -1343, -2001 ],
         },
         
         {
@@ -1876,7 +1876,7 @@ window.drops = {
             nakama: 2181200,
             condition: 'Powerhouse Characters recieves a 99 turn paralysis and a 90% ATK down from stage 4 onwards on 15 and 30 stamina',
             gamewith: 71416,
-            'All Difficulties': [ 1811, 1809, -1240, -1575, -1658, -1232, -1238, -1117, -522, -1119, -524, -1504, -1503 ]
+            'All Difficulties': [ 1811, 1809, -1240, -1575, -1658, -1232, -1238, -1117, -522, -1119, -524, -1504, -1503, -2034 ]
         },
         
         {
@@ -2182,9 +2182,10 @@ window.drops = {
         {
             name: 'Clash Neo!! Eneru',
             thumb: 1930,
+            global: true,
             nakama: 4193000,
             gamewith: 86020,
-            condition: 'Take 300 damage per character in Environmental Lightning Damage every 3 turns. Luffy is immune to lightning damage. 1 Expert version, 1 Master version, and 3 different Ultimate versions with different conditions. Expert/Master: Driven/Powerhouse/Cerebral Only. Can only complete 10 times each. Ultimate: Driven Only, Powerhouse Only, and Cerebral Only',
+            condition: 'Take 300 damage per character in Environmental Lightning Damage every 3 turns. Luffy is immune to lightning damage. 1 Expert version, 1 Master version, and 3 different Ultimate versions with different conditions. Expert/Master: Driven/Powerhouse/Cerebral Only. Ultimate: Driven Only, Powerhouse Only, and Cerebral Only',
             Ultimate: [ 85, 111, 118, 301, 1929 ],
             Master: [ 85, 111, 118, 1929 ] ,
             Expert: [ 111, 118, 1929 ]
@@ -2595,9 +2596,10 @@ window.drops = {
         {
             name: 'Luffy: Gear 4th',
             thumb: 1916,
+            global: true,
 			nakama: 8191600,
             gamewith: 85567,
-            'Raging Sea': [ 1915 ]
+            'Calm Sea': [ 1915 ]
         },
 
         {

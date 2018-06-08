@@ -5056,10 +5056,12 @@ window.specials = {
     2112: {
         atk: function(p) { return ((p.delayed > 0) && (p.unit.class.has("Fighter") || p.unit.class.has("Striker") || p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse"))) ? 1.75 : 1; },
         type: "condition",
+        warning: "Selected special (%name%) assumes that the enemy is Delayed.",
     },
     2113: {
         atk: function(p) { return ((p.delayed > 0) && (p.unit.class.has("Fighter") || p.unit.class.has("Striker") || p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse"))) ? 1.75 : 1; },
         type: "condition",
+        warning: "Selected special (%name%) assumes that the enemy is Delayed.",
     },
     2114: {
         staticMult: function(p) { return 30; }
@@ -5076,10 +5078,12 @@ window.specials = {
     2120: {
         atk: function(p) { return ((p.unit.class.has("Fighter") || p.unit.class.has("Striker") || p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse")) && (p.delayed > 0)) ? 2 : (p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse")) ? 1.75 : 1; },
         type: "class",
+        warning: "For the 2x boost special (%name%) assumes that the enemy is Delayed.",
     },
     2121: {
         atk: function(p) { return ((p.unit.class.has("Fighter") || p.unit.class.has("Striker") || p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse")) && (p.delayed > 0)) ? 2 : (p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse")) ? 1.75 : 1; },
         type: "class",
+        warning: "For the 2x boost special (%name%) assumes that the enemy is Delayed.",
     },
     2122: {
         def: function(p) { return 0.2; },

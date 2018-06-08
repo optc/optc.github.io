@@ -6929,6 +6929,11 @@ window.captains = {
     2048: {
         atk: function(p) { return !p.unit.class.has("Fighter") ? 1 : (((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) == 2) && (p.orb != 'g')) ? 3.25 : 2); },
     },
+    2049: {
+        atk: function(p) {
+            return (p.unit.class.has("Powerhouse") || p.unit.class.has("Fighter")) ? Math.max(1.0, 3 - 0.1 * p.turnCounter) : 1;
+        }
+    },
     2050: {
         atk: function(p) {
             return (p.unit.class.has("Powerhouse") || p.unit.class.has("Fighter")) ? Math.max(1.0, 3.5 - 0.1 * p.turnCounter) : 1;
@@ -7202,7 +7207,7 @@ window.captains = {
                     Katacount++;
                 }
             }
-            return Math.pow(1.825, Katacount); 
+            return Math.pow(1.825, Katacount);
         },
     },
     2113: {
@@ -7217,15 +7222,34 @@ window.captains = {
             return Math.pow(1.825, Katacount); 
         },
     },
+    2114: {
+        atk: function(p){ return p.unit.type == "PSY" ? 1.2 : 1; },
+        rcv: function(p){ return p.unit.type == "PSY" ? 1.2 : 1; },
+    },
     2115: {
         atk: function(p){ return p.unit.type == "PSY" ? 1.5 : 1; },
         rcv: function(p){ return p.unit.type == "PSY" ? 1.5 : 1; },
     },
+    2116: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? 2.5 : 1; },
+        rcv: function(p) { return 0; }
+    },
     2117: {
         atk: function(p) { return p.unit.class.has("Slasher") ? 2.75 : 1; },
+        rcv: function(p) { return 0; }
+    },
+    2118: {
+        atk: function(p){ return p.unit.type == "PSY" || p.unit.type == "QCK" ? 2 : 1; },
     },
     2119: {
         atk: function(p){ return p.unit.type == "PSY" || p.unit.type == "QCK" ? 2.5 : 1; },
+    },
+    2120: {
+        atk: function(p) {
+            return p.unit.class.has("Powerhouse") && p.unit.class.has("Fighter") ? 2.25 :
+                p.unit.class.has("Powerhouse") || p.unit.class.has("Fighter") ? 1.5 :
+                1;
+        }
     },
     2121: {
         atk: function(p) {
