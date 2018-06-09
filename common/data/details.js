@@ -13739,9 +13739,17 @@ window.details = {
         special: "Randomize [RCV], [TND] and [BLOCK] orbs. Makes [STR], [DEX] and [QCK] orbs \"beneficial\" to Driven and Slasher characters for 2 turns",
         specialNotes: "#{beneficial}",
         specialName: "Onigumo of Dismantling Swordsmanship",
+        sailor: "Reduces Paralysis for 5 turns for himself"
+    },
+    1324: {//Onigumo
+        captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of Slasher and Driven characters by 1.6x",
+        captainNotes: "The bonus is cumulative. Slasher + Driven characters get a 2.56x bonus.",
+        special: "Randomize [RCV], [TND] and [BLOCK] orbs. Makes [STR], [DEX] and [QCK] orbs \"beneficial\" to Driven and Slasher characters for 2 turns",
+        specialNotes: "#{beneficial}",
+        specialName: "Onigumo of Dismantling Swordsmanship",
         sailor: {
             "base": "Reduces Paralysis for 5 turns for himself",
-            "level1": "Boosts base ATK, HP and RCV of Shooter characters by 30",
+            "level1": "Boosts base ATK, HP and RCV of Slasher and Driven characters by 30",
         },
         limit: [
             { "description": "Boosts base HP by 30" },
@@ -13757,7 +13765,7 @@ window.details = {
             { "description": "Boosts base ATK by 40" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base HP by 80" },
-            { "description": "Acquire Sailor Ability 1: Boosts base ATK, HP and RCV of Shooter characters by 30" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK, HP and RCV of Slasher and Driven characters by 30" },
             { "description": "Acquire Potential 2: Slot Bind Self-reduction" },
         ],
         potential: [
@@ -13782,14 +13790,6 @@ window.details = {
                 ]
             },
         ]
-    },
-    1324: {//Onigumo
-        captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of Slasher and Driven characters by 1.6x",
-        captainNotes: "The bonus is cumulative. Slasher + Driven characters get a 2.56x bonus.",
-        special: "Randomize [RCV], [TND] and [BLOCK] orbs. Makes [STR], [DEX] and [QCK] orbs \"beneficial\" to Driven and Slasher characters for 2 turns",
-        specialNotes: "#{beneficial}",
-        specialName: "Onigumo of Dismantling Swordsmanship",
-        sailor: "Reduces Paralysis for 5 turns for himself"
     },
     1325: {//Halloween Corazon
         captain: "Recovers 3x character's RCV in HP at the end of each turn",
