@@ -488,14 +488,14 @@ window.sailors = {
         hpStatic: function(p) { return p.unit.type == "DEX" ? 20 : 0; },
     },
     2122: {
-        atkStatic: function(p) { return p.unit.class.has("Cerebral") ? 75 : 0; },
-        rcvStatic: function(p) { return p.unit.class.has("Cerebral") ? 75 : 0; },
-        hpStatic: function(p) { return p.unit.class.has("Cerebral") ? 75 : 0; },
+        atkStatic: function(p) { return p.unit.class.has("Cerebral") ? 50 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Cerebral") ? 50 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Cerebral") ? 50 : 0; },
     },
     2123: {
-        atkStatic: function(p) { return p.unit.class.has("Cerebral") ? 75 : 0; },
-        rcvStatic: function(p) { return p.unit.class.has("Cerebral") ? 75 : 0; },
-        hpStatic: function(p) { return p.unit.class.has("Cerebral") ? 75 : 0; },
+        atkStatic: function(p) { return p.unit.class.has("Cerebral") ? 50 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Cerebral") ? 50 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Cerebral") ? 50 : 0; },
     },
     5000: {
         atkStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 50 : 0; },

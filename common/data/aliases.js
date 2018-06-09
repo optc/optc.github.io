@@ -2120,8 +2120,8 @@ window.aliases = {
     2119: [ 'ボビン ビッグ・マム海賊団', '', '' ],
     2120: [ 'シャーロット・オーブン', '', '' ],
     2121: [ 'シャーロット・オーブン ビッグ・マム海賊団', '', '' ],
-    2122: [ '', '', 'Coliseum Neptune' ],
-    2123: [ '', '', 'Coliseum Neptune' ],
+    2122: [ 'ネプチューン 海の大騎士', '', 'Coliseum Neptune' ],
+    2123: [ '海神ネプチューン 海の大騎士', '', 'Coliseum Neptune' ],
     2200: [ '', '', 'V2 Raid Doffy', 'V2 Raid Doflamingo' ],
     2201: [ '', '', 'V2 Raid Doffy', 'V2 Raid Doflamingo' ],
 };

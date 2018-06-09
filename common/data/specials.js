@@ -4416,11 +4416,11 @@ window.specials = {
         },
     },
     1988: {
-        atk: function(p) { return (p.delayed > 0 && (p.captain.class.has("Slasher"))) ? 1.75 : 1; },
+        atk: function(p) { return p.captain != null ? (p.delayed > 0 && (p.captain.class.has("Slasher"))) ? 1.75 : 1 : 1; },
         type: "condition",
     },
     1989: {
-        atk: function(p) { return (p.delayed > 0 && (p.captain.class.has("Slasher"))) ? 1.75 : 1; },
+        atk: function(p) { return p.captain != null ? (p.delayed > 0 && (p.captain.class.has("Slasher"))) ? 1.75 : 1 : 1; },
         type: "condition",
     },
     1990: {

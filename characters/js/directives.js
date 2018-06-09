@@ -478,7 +478,7 @@ directives.addLinks = function($stateParams) {
                     ul.append($('<li><a href="http://onepiece-treasurecruise.com/ジュラキュール・ミホーク-シッケアール王国　跡/" target="_blank">' +
                         'Official Guide (Japanese)</a></li>'));
                 }
-                else if (id >= 2072){
+                else if (id >= 2072 || id == 2049 || id == 2050 || id == 2112 || id == 2113){
                     ul.append($('<li><a href="http://onepiece-treasurecruise.com/c%E2%80%90' + id + '/" target="_blank">' +
                         'Official Guide (Japanese)</a></li>'));
                 }
