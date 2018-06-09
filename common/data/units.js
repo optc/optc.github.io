@@ -2120,7 +2120,7 @@ window.units = [
     [ "Bobbin, Big Mom Pirates", "QCK", [ "Slasher", "Free Spirit" ], 5, 30, 4, 4, 99, 4000000, 1244, 676, 109, 2446, 1365, 276, 1 ],
     [ "Charlotte Oven", "DEX", [ "Powerhouse", "Fighter" ], 4, 15, 6, 3, 50, 392109, 190, 165, 20, 1340, 830, 90, 1 ],
     [ "Charlotte Oven, Big Mom Pirates", "DEX", [ "Powerhouse", "Fighter" ], 5, 30, 4, 4, 99, 4000000, 1274, 776, 52, 2808, 1454, 184, 1 ],
-    [ "Coliseum Neptune", "INT", [ "Cerebral", "Powerhouse" ], 4, 25, 6, 4, 70, 1066998, 377, 153, 41, 1379, 935, 133, 1 ],
+    [ "Neptune, The Great Knight of the Sea", "INT", [ "Cerebral", "Powerhouse" ], 4, 25, 6, 4, 70, 1066998, 377, 153, 41, 1379, 935, 133, 1 ],
     [ "The Sea God King Neptune, The Great Knight of the Sea", "INT", [ "Cerebral", "Powerhouse" ], 5, 40, 4, 4, 99, 4000000, 1328, 890, 119, 2598, 1401, 250, 1 ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
