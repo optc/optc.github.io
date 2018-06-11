@@ -7275,6 +7275,23 @@ window.captains = {
     2130: {
         atk: function(p) { return p.unit.class.has("Powerhouse") ? 2 : 1; },
     },
+    2131: {
+        atk: function(p) { return p.unit.class.has("Cerebral") ? 1.2 : 1; },
+    },
+    2132: {
+        atk: function(p) { return p.unit.class.has("Cerebral") ? 1.5 : 1; },
+        rcv: function(p) { return p.unit.class.has("Cerebral") ? 1.2 : 1; },
+    },
+    2133: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 1.2 : 1; },
+    },
+    2134: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 1.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Powerhouse") ? 1.2 : 1; },
+    },
+    2135: {
+        atk: function(p) { return p.unit.type == "QCK" ? 1.3 : 1; },
+    },
     2200: {
         atk: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Cerebral")) && p.percHP <= 50.0 ? 2.5 : 1.5; }
     },
