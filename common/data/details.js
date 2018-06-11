@@ -28338,8 +28338,35 @@ window.details = {
     },
     2130: {//Diesel
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight and boosts ATK of [QCK] characters by 1.5x",
-        special: "Reduces Paralysis duration by 2 turns and ",
+        special: "Reduces Paralysis duration by 2 turns and changes the captain's orb into a Matching orb",
         specialName: "The Fast Runner's Emergency Report",
+    },
+    2131: {//Ivankov
+        captain: "Boosts ATK of Cerebral characters by 1.2x",
+        special: "Removes Poison and reduces Paralysis duration by 4 turns. If you are on a Treasure Map, boosts ATK of Fighter, Shooter and Cerebral characters depending on your Treasure Map Level for 1 turn",
+        specialName: "Laser Treatment Fist",
+        specialNotes: "Level 1-10: 1.75x ATK boost<br\>Level 11-20: 2x ATK boost<br\>Level 21+: 2.25x ATK boost",
+    },
+    2132: {//Ivankov
+        captain: "Boosts ATK of Cerebral characters by 1.5x and their RCV by 1.2x",
+        special: "Removes Poison and reduces Paralysis duration by 4 turns. If you are on a Treasure Map, boosts ATK of Fighter, Shooter and Cerebral characters depending on your Treasure Map Level for 1 turn",
+        specialName: "Laser Treatment Fist",
+        specialNotes: "Level 1-10: 1.75x ATK boost<br\>Level 11-20: 2x ATK boost<br\>Level 21+: 2.25x ATK boost",
+    },
+    2133: {//Jozu
+        captain: "Boosts ATK of Powerhouse characters by 1.2x",
+        special: "Reduces crew's ATK DOWN duration by 3 turns, makes [PSY] orbs \"beneficial\" for all characters for 3 turns and locks all orbs for 1 turn",
+        specialName: "Destory - Charge",
+    },
+    2134: {//Jozu
+        captain: "Boosts ATK of Powerhouse characters by 1.5x and their HP by 1.2x",
+        special: "Reduces crew's ATK DOWN duration by 3 turns, makes [PSY] orbs \"beneficial\" for all characters for 3 turns and locks all orbs for 1 turn",
+        specialName: "Destory - Charge",
+    },
+    2135: {//Mr. 1
+        captain: "Boosts ATK of [QCK] characters by 1.3x",
+        special: "Deals 15x character's ATK in [QCK] damage to one enemy, changes own orb into [QCK] and amplifies the effect of orbs for [QCK] characters by 1.75x for 1 turn",
+        specialName: "Sparkling Daisy",
     },
     2200: {//Doflamingo Raid v2
         captain: "Boosts ATK of Driven and Cerebral characters by 2.5x when HP is 50% or below, 1.5x otherwise",

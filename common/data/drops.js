@@ -2017,7 +2017,7 @@ window.drops = {
             name: 'Brûlée\'s Gibier Party',
             thumb: 2024,
             nakama: null,
-            gamewith: null,
+            gamewith: 108421,
             'All Difficulties': [ 2127, 2128, 2129, 2130, -1473, -1477, -1974, -1953, -1957, -1717 ]
         },
         

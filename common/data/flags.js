@@ -2002,6 +2002,11 @@ window.flags = {
     2119: { rr: 1, rro: 1 },
     2120: { rr: 1, rro: 1 },
     2121: { rr: 1, rro: 1 },
+    2131: { rr: 1, rro: 1, lrr: 1, tmlrr : 1 },
+    2132: { rr: 1, rro: 1, lrr: 1, tmlrr : 1 },
+    2133: { rr: 1, rro: 1, lrr: 1, tmlrr : 1 },
+    2134: { rr: 1, rro: 1, lrr: 1, tmlrr : 1 },
+    2135: { rr: 1, rro: 1, lrr: 1, tmlrr : 1 },
     2200: { global: 1 },
     2201: { global: 1 },
 };
