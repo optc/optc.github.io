@@ -28356,12 +28356,12 @@ window.details = {
     2133: {//Jozu
         captain: "Boosts ATK of Powerhouse characters by 1.2x",
         special: "Reduces crew's ATK DOWN duration by 3 turns, makes [PSY] orbs \"beneficial\" for all characters for 3 turns and locks all orbs for 1 turn",
-        specialName: "Destory - Charge",
+        specialName: "Destroy - Charge",
     },
     2134: {//Jozu
         captain: "Boosts ATK of Powerhouse characters by 1.5x and their HP by 1.2x",
         special: "Reduces crew's ATK DOWN duration by 3 turns, makes [PSY] orbs \"beneficial\" for all characters for 3 turns and locks all orbs for 1 turn",
-        specialName: "Destory - Charge",
+        specialName: "Destroy - Charge",
     },
     2135: {//Mr. 1
         captain: "Boosts ATK of [QCK] characters by 1.3x",
