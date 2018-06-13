@@ -228,10 +228,10 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if (orb =='meat'){
                 for (temp = 0; temp < 2; temp++){
                     if (team[temp].unit != null){
-                        if ([ 1610, 1609, 1532, 1531 ].includes(team[temp].unit.number)){
+                        if ([ 1610, 1609, 1532, 1531 ].includes(team[temp].unit.number + 1)){
                             orb = 2;
                         }
-                        if ([ 2012, 2013 ].includes(team[temp].unit.number) && x.unit.class.has("Free Spirit")){
+                        if ([ 2012, 2013 ].includes(team[temp].unit.number + 1) && x.unit.class.has("Free Spirit")){
                             orb = 2;
                         }
                     }
@@ -240,7 +240,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if (orb == 'str'){
                 for (temp = 0; temp < 2; temp++){
                     if (team[temp].unit != null){
-                        if ([ 2022, 2023, 2137 ].includes(team[temp].unit.number)){
+                        if ([ 2022, 2023, 2137 ].includes(team[temp].unit.number + 1)){
                             orb = 2;
                         }
                     }
