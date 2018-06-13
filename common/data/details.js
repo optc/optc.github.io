@@ -28388,9 +28388,10 @@ window.details = {
         specialName: "Crocodile Special",
         sailor: {
             "base": "None",
-            "level1": "Not Translated",
-            "level2": "Not Translated",
+            "level1": "Makes [PSY] orbs \"beneficial\" for this unit",
+            "level2": "Makes [TND] orbs \"beneficial\" for this unit",
         },
+        sailorNotes: "#{beneficial}",
     },
     2200: {//Doflamingo Raid v2
         captain: "Boosts ATK of Driven and Cerebral characters by 2.5x when HP is 50% or below, 1.5x otherwise",
