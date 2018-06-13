@@ -240,7 +240,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if (orb == 'str'){
                 for (temp = 0; temp < 2; temp++){
                     if (team[temp].unit != null){
-                        if ([ 2022, 2023 ].includes(team[temp].unit.number)){
+                        if ([ 2022, 2023, 2137 ].includes(team[temp].unit.number)){
                             orb = 2;
                         }
                     }

@@ -12533,16 +12533,14 @@ window.details = {
         ]
     },
     1231: {//Smoker
-        captain: "Boosts ATK of Striker and Driven characters by 1.75x and reduces RCV of all characters by 50%. If this character becomes your captain in the middle of an island, reduces damage received by 30% and further boosts ATK of Striker and Driven characters by 1.25x",
-        captainNotes: "If Smoker uses his special ability to swap to your captain, his effective captain boost will be 2.1875x",
+        captain: "Boosts ATK of Striker and Driven characters by 1.75x and reduces RCV of all characters by 50%. If this character becomes your captain in the middle of an island, reduces damage received by 30% and boosts ATK of Striker and Driven characters by 2.1875x instead",
         special: "Deals large [DEX] damage to one enemy. Swaps this unit with your captain for 2 turns",
         specialNotes: "This is the same type of ability as raid boss Shiki's swap.",
         specialName: "Armed - White Launcher",
         sailor: "Boosts base ATK of Striker characters by 50",
     },
     1232: {//Smoker
-        captain: "Boosts ATK of Striker and Driven characters by 2.25x and reduces RCV of all characters by 50%. If this character becomes your captain in the middle of an island, reduces damage received by 30% and further boosts ATK of Striker and Driven characters by 1.3x",
-        captainNotes: "If Smoker uses his special ability to swap to your captain, his effective captain boost will be 2.925x",
+        captain: "Boosts ATK of Striker and Driven characters by 2.25x and reduces RCV of all characters by 50%. If this character becomes your captain in the middle of an island, reduces damage received by 30% and boosts ATK of Striker and Driven characters by 2.925x instead",
         special: "Deals large [DEX] damage to one enemy. Swaps this unit with your captain for 2 turns",
         specialNotes: "This is the same type of ability as raid boss Shiki's swap. You cannot use it if another effect swaps your captain. (Such as if Shiki swaps first)",
         specialName: "Armed - White Launcher",
@@ -28367,6 +28365,32 @@ window.details = {
         captain: "Boosts ATK of [QCK] characters by 1.3x",
         special: "Deals 15x character's ATK in [QCK] damage to one enemy, changes own orb into [QCK] and amplifies the effect of orbs for [QCK] characters by 1.75x for 1 turn",
         specialName: "Sparkling Daisy",
+    },
+    2136: {//Crocodile TM
+        captain: "Not Translated",
+        special: "Deals 30x character's ATK in [INT] damage to one enemy, boosts own ATK by 2x and swaps this unit with your captain for 1 turn",
+        specialNotes: "This is the same type of ability as raid boss Shiki's swap. You cannot use it if another effect swaps your captain. (Such as if Shiki swaps first)",
+        specialName: "Crocodile Special",
+    },
+    2137: {//Crocodile TM
+        captain: {
+            "base": "Boosts ATK of all characters by 2x. If this character becomes your captain in the middle of an island, boosts ATK of all characters by 2.5x instead",
+            "level1": "",
+            "level2": "",
+            "level3": "",
+            "level4": "",
+            "level5": "",
+            "level6": "Boosts ATK of all characters by 2.5x and makes [STR], [DEX] and [INT] orbs \"beneficial\" to all characters. If this character becomes your captain in the middle of an island, boosts ATK of all characters by 4x instead",
+        },
+        captainNotes: "#{beneficial}",
+        special: "Deals 30x character's ATK in [INT] damage to one enemy, boosts own ATK by 2x and swaps this unit with your captain for 1 turn",
+        specialNotes: "This is the same type of ability as raid boss Shiki's swap. You cannot use it if another effect swaps your captain. (Such as if Shiki swaps first)",
+        specialName: "Crocodile Special",
+        sailor: {
+            "base": "None",
+            "level1": "Not Translated",
+            "level2": "Not Translated",
+        },
     },
     2200: {//Doflamingo Raid v2
         captain: "Boosts ATK of Driven and Cerebral characters by 2.5x when HP is 50% or below, 1.5x otherwise",
