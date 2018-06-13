@@ -219,7 +219,7 @@ window.CrunchUtils.getOrbMultiplier = function(orb, type, uclass, baseMultiplier
                     return boostedMultiplier;
                 }
             }
-            if([2022, 2023].includes(captains[temp].number)){
+            if([2022, 2023, 2137].includes(captains[temp].number)){
                 if (orb == 'str'){
                     return boostedMultiplier;
                 }

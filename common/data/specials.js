@@ -1744,11 +1744,13 @@ window.specials = {
         type: "type"
     },
     1231: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 2 : 1; },
+        type: "type",
         turnedOn: false,
         onActivation: function(p) {
             window.specials[1231].turnedOn = true;
             p.scope.notify({
-                text: 'Only affects damage if Smoker is your captain',
+                text: 'Only affects captain damage if Smoker is your captain, use Friend Captain if you don\'t want the additional ATK boost due to Captain Swap',
                 name: '1231warning'
             });
         },
@@ -1757,11 +1759,13 @@ window.specials = {
         }
     },
     1232: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 2 : 1; },
+        type: "type",
         turnedOn: false,
         onActivation: function(p) {
             window.specials[1232].turnedOn = true;
             p.scope.notify({
-                text: 'Only affects damage if Smoker is your captain',
+                text: 'Only affects captain damage if Smoker is your captain, use Friend Captain if you don\'t want the additional ATK boost due to Captain Swap',
                 name: '1232warning'
             });
         },
@@ -5137,6 +5141,32 @@ window.specials = {
     },
     2135: {
         orb: function(p) { return p.unit.type == "QCK" ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },	
+    },
+    2136: {
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[2136].turnedOn = true;
+            p.scope.notify({
+                text: 'Only affects captain damage if Crocodile is your captain, use Friend Captain if you don\'t want the additional ATK boost due to Captain Swap',
+                name: '2136warning'
+            });
+        },
+        onDeactivation: function(p) {
+            window.specials[2136].turnedOn = false;
+        }
+    },
+    2137: {
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[2137].turnedOn = true;
+            p.scope.notify({
+                text: 'Only affects captain damage if Crocodile is your captain, use Friend Captain if you don\'t want the additional ATK boost due to Captain Swap',
+                name: '2137warning'
+            });
+        },
+        onDeactivation: function(p) {
+            window.specials[2137].turnedOn = false;
+        }
     },
     5000: {
         atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 1.5 : 1; },

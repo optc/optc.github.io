@@ -2642,6 +2642,14 @@ window.drops = {
             gamewith: null,
             'Sweet Sea': [ 2108 ]
         },
+
+        {
+            name: 'Crocodile',
+            thumb: 2137,
+            nakama: null,
+            gamewith: null,
+            'Raging Sea': [ 2136 ]
+        },
         
     ],
 

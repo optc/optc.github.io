@@ -3176,11 +3176,11 @@ window.captains = {
         atk: function(p) { return p.slot == p.sourceSlot ? 2.75 : p.unit.class.has("Powerhouse") ? 2.5 : 1; }
     },
     1231: {
-        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? (window.specials[1231].turnedOn || window.specials[1232].turnedOn ? 2.1875 : 1.75) : 1; },
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? ((window.specials[1231].turnedOn || window.specials[1232].turnedOn) && p.sourceSlot == 1 ? 2.1875 : 1.75) : 1; },
         rcv: function(p) { return .5 }
     },
     1232: {
-        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? (window.specials[1231].turnedOn || window.specials[1232].turnedOn ? 2.925 : 2.25) : 1; },
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? ((window.specials[1231].turnedOn || window.specials[1232].turnedOn) && p.sourceSlot == 1 ? 2.925 : 2.25) : 1; },
         rcv: function(p) { return .5 }
     },
     1233: {
@@ -7294,6 +7294,12 @@ window.captains = {
     },
     2135: {
         atk: function(p) { return p.unit.type == "QCK" ? 1.3 : 1; },
+    },
+    2137: {
+        atk: function(p) { 
+            if(p.actions[p.sourceSlot]) return ((window.specials[2136].turnedOn || window.specials[2137].turnedOn) && p.sourceSlot == 1) ? 4 : 2.5;
+            else return ((window.specials[2136].turnedOn || window.specials[2137].turnedOn) && p.sourceSlot == 1) ? 2.5 : 2;
+        },
     },
     2200: {
         atk: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Cerebral")) && p.percHP <= 50.0 ? 2.5 : 1.5; }
