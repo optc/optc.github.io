@@ -2135,7 +2135,7 @@ window.units = [
     [ "\"Diamond\" Jozu, The Diamond that Blows Away the Sandstorm", "DEX", [ "Fighter", "Powerhouse" ], 5, 20, 4, 4, 99, 2000000, 1592, 584, 90, null, null, null, null ],
     [ "Mr.1, The Blade Building a Utopia", "QCK", [ "Slasher", "Cerebral" ], 4, 15, 4, 15, 99, null, 750, 450, 100, null, null, null, null ],
     [ "Mr. 0", "INT", [ "Striker", "Cerebral" ], 4, 30, null, 1, 50, 130703, null, null, null, null, null, null, null ],
-    [ "Sir Crocodile", "INT", [ "Striker", "Cerebral" ], 5, 60, 4, 1, 99, 5000000, 1, 1, 1, 7000, 1408, 244, null ],
+    [ "Sir Crocodile, The Pirate that Controls Drought", "INT", [ "Striker", "Cerebral" ], 5, 60, 4, 1, 99, 5000000, 1, 1, 1, 7000, 1408, 244, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
