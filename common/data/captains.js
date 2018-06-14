@@ -7258,6 +7258,9 @@ window.captains = {
                 1;
         }
     },
+    2122: {
+        atk: function(p){ return 1.5; },
+    },
     2123: {
         atk: function(p){ return 2; },
     },

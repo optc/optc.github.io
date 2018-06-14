@@ -1910,6 +1910,7 @@ window.drops = {
         {
             name: 'Supernova! Hawkins and Urouge!',
             thumb: 1867,
+            global: true,
             nakama: 2186700,
             gamewith: 80643,
             'All Difficulties': [ 1864, 1866, -1698, -1632, -1706, -1556, -1274, -1276 ]
@@ -2015,7 +2016,7 @@ window.drops = {
         
         {
             name: 'Brûlée\'s Gibier Party',
-            thumb: 2024,
+            thumb: 2127,
             nakama: null,
             gamewith: 108421,
             'All Difficulties': [ 2127, 2128, 2129, 2130, -1473, -1477, -1974, -1953, -1957, -1717 ]
