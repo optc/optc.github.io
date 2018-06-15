@@ -1844,7 +1844,7 @@ window.units = [
     [ "Coribou, Next Generation Supernova", "STR", [ "Driven", "Striker" ], 3, 13, 6, 2, 50, 392109, 130, 102, 26, 534, 489, 198, 1 ],
     [ "Blood-Splatterer Coribou, Next Generation Supernova", "STR", [ "Driven", "Striker" ], 4, 20, 4, 3, 99, 3000000, 520, 430, 178, 1806, 879, 356, 1 ],
     [ "Garp, Hero of the Marines", "STR", [ "Fighter", "Free Spirit" ], 4, 30, 4, 2, 70, 1778330, 1015, 494, 0, 1852, 688, 5, 1 ],
-    [ "Garp the Fist, Hero of the Marines", "STR", [ "Fighter", "Free Spirit" ], 5, 50, 4, 3, 99, 5000000, 1773, 611, 3, 3750, 1550, 10, 1 ],
+    [ "Garp the Fist, Hero of the Marines", "STR", [ "Fighter", "Free Spirit" ], 5, 50, 4, 3, 99, 5000000, 1773, 611, 3, 3710, 1550, 10, 1 ],
     [ "Sengoku the Buddha, Marine Fleet Admiral", "INT", [ "Fighter", "Cerebral" ], "6+", 54, 4, 5, 99, 5000000, 1998, 729, 194, 3696, 1458, 398, 1 ],
     [ "Akainu, Trembling Calamity", "STR", [ "Powerhouse", "Driven" ], 4, 12, 5, 3, 50, 261406, 210, 105, 10, 1212, 690, 48, 1 ],
     [ "Sakazuki, Trembling Calamity", "STR", [ "Powerhouse", "Driven" ], 5, 20, 4, 4, 99, 2000000, 1014, 621, 24, 2662, 1312, 99, 1 ],
