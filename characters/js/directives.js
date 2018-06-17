@@ -34,6 +34,7 @@ directives.characterTable = function($rootScope, $timeout, $compile, $storage) {
 					var checkbox = $('<label><input type="checkbox" ng-change="checkLog(' + id + ')" ng-model="characterLog[' + id + ']"></input></label>');
 					$(row.cells[10 + scope.table.additional]).append(checkbox);
 					// cosmetic fixes
+                    if (row.cells[2].textContent.indexOf(",") >= -1) row.cells[2].textContent = row.cells[2].textContent.replace(",", "/");;
 					$(row.cells[2]).addClass('cell-' + row.cells[2].textContent);
 					var n = row.cells.length - 2 - scope.table.additional;
 					$(row.cells[n]).addClass('stars stars-' + row.cells[n].textContent);

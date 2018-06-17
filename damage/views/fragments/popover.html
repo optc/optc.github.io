@@ -78,7 +78,7 @@
             </tr>
             <tr ng-if="slot > 1">
                 <td colspan="5">
-                    <div ng-bind-html="details.sailor | decorate"></div>
+                    <div ng-if="!details.sailor.base && !details.sailor.combined" ng-show="details.sailor" ng-bind-html="details.sailor | decorate"></div>
                     <span class="badge badge-sbase" ng-show="details.sailor.base">Sailor Ability</span>
                     <div ng-show="details.sailor.base" ng-bind-html="details.sailor.base | decorate"></div>
                     <span class="badge badge-sbase2" ng-show="details.sailor.base2">Sailor Ability 2</span>

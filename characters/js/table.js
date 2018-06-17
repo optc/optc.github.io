@@ -104,22 +104,11 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
         if (!tableData.parameters.filters) return true;
         var filters = tableData.parameters.filters;
         // filter by type
-        if (filters.type && unit.type !== filters.type) return false;
-        /*if (filters.type){
-            var cond = false
-            if (Array.isArray(unit.type)){
-                for (var type1 in unit.type){
-                    if (unit.type[type1] == filters.type){
-                        cond = true
-                    }
-                }
-            }
-            else if (unit.type == filters.type){
-                cond = true
-            }
-            return cond;
-            
-        }*/
+        //if (filters.type && unit.type !== filters.type) return false;
+        if (filters.type){
+            if (!Array.isArray(unit.type)) if (unit.type !== filters.type) return false;
+            if (Array.isArray(unit.type)) if ((unit.type[0] !== filters.type) && (unit.type[1] !== filters.type)) return false;
+        }
         // filter by class
         if (filters.classes && filters.classes.length) {
             var singleQuery = filters.classes.length == 1, singleClass = unit.class.length > 2;

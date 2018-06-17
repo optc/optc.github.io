@@ -28375,11 +28375,11 @@ window.details = {
     2137: {//Crocodile TM
         captain: {
             "base": "Boosts ATK of all characters by 2x. If this character becomes your captain in the middle of an island, boosts ATK of all characters by 2.5x instead",
-            "level1": "",
-            "level2": "",
-            "level3": "",
-            "level4": "",
-            "level5": "",
+            "level1": "Not Translated",
+            "level2": "Not Translated",
+            "level3": "Not Translated",
+            "level4": "Not Translated",
+            "level5": "Not Translated",
             "level6": "Boosts ATK of all characters by 2.5x and makes [STR], [DEX] and [INT] orbs \"beneficial\" to all characters. If this character becomes your captain in the middle of an island, boosts ATK of all characters by 4x instead",
         },
         captainNotes: "#{beneficial}",
