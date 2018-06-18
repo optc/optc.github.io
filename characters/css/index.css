@@ -142,7 +142,10 @@ input[type="text"] {
 .cell-DEX { font-weight: bold; color: green; }
 .cell-PSY { font-weight: bold; color: goldenrod; }
 .cell-INT { font-weight: bold; color: darkorchid; }
-.cell-INT\/PSY {
+.cell-INT\/PSY { font-weight: bold; color: #b48ead; }
+.cell-QCK\/STR { font-weight: bold; color: #96b5b4; }
+.cell-PSY\/DEX { font-weight: bold; color: #ebcb8b; }
+/*.cell-INT\/PSY {
     font-weight: bold;
     background-image: linear-gradient(90deg, darkorchid calc(3.5ex + 4px), black calc(3.5ex + 10px), goldenrod calc(3.5ex + 8px));
     background-clip: text;
@@ -151,7 +154,7 @@ input[type="text"] {
 }
 .cell-QCK\/STR {
     font-weight: bold;
-    background-image: linear-gradient(90deg, red calc(3ex + 8px), black calc(3.5ex + 15px), red calc(3.5ex + 8px));
+    background-image: linear-gradient(90deg, blue calc(3ex + 8px), black calc(3.5ex + 15px), red calc(3.5ex + 8px));
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
@@ -162,7 +165,7 @@ input[type="text"] {
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-}
+}*/
 
 .badge-japan, .badge-global {
     float: left;
