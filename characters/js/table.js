@@ -304,7 +304,7 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
 
     $rootScope.$on('table.refresh',function() { 
         fused = null;
-        var types = {
+        /*var types = {
         'STR' : '<span class="cell-STR">STR</span>',
         'DEX' : '<span class="cell-DEX">DEX</span>',
         'QCK' : '<span class="cell-QCK">QCK</span>',
@@ -315,7 +315,7 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
             if(i == j) return;
             $('.cell-'+i+'\\/'+j).html(type1 +'/'+type2);
           });
-        });
+        });*/
     });
 
     $rootScope.checkLog = function() {
