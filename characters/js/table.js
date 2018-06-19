@@ -302,7 +302,21 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
         },true);
     });
 
-    $rootScope.$on('table.refresh',function() { fused = null; });
+    $rootScope.$on('table.refresh',function() { 
+        fused = null;
+        var types = {
+        'STR' : '<span class="cell-STR">STR</span>',
+        'DEX' : '<span class="cell-DEX">DEX</span>',
+        'QCK' : '<span class="cell-QCK">QCK</span>',
+        'PSY' : '<span class="cell-PSY">PSY</span>',
+        'INT' : '<span class="cell-INT">INT</span>'};
+        $.each(types,function(i,type1){
+            $.each(types,function(j,type2){
+            if(i == j) return;
+            $('.cell-'+i+'\\/'+j).html(type1 +'/'+type2);
+          });
+        });
+    });
 
     $rootScope.checkLog = function() {
         var temp = [ ];
