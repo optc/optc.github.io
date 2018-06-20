@@ -28417,6 +28417,26 @@ window.details = {
         ],
         potentialNotes: "#{enrage}"
     },
+    2143: {//Diamante
+        captain: "Boosts ATK of Slasher characters by ?x and their HP by ?x",
+        special: "Deals 20x character's ATK in [DEX] damage to one enemy and boosts ATK of Slasher characters by 1.5x for 3 turns",
+        specialName: "Diamante Special",
+    },
+    2144: {//Diamante
+        captain: "Boosts ATK of Slasher characters by 2.25x and their HP by 1.2x",
+        special: "Deals 20x character's ATK in [DEX] damage to one enemy and boosts ATK of Slasher characters by 1.5x for 3 turns",
+        specialName: "Diamante Special",
+    },
+    2145: {//Rebecca
+        captain: "Boosts ATK of Striker characters by ?x and their HP by ?x",
+        special: "Reduces enemy's Threshold Damage Reduction duration by 2 turns and reduces any damage received above 3,000 HP by ?% for 2 turns",
+        specialName: "Rebecca Special",
+    },
+    2146: {//Rebecca
+        captain: "Boosts ATK of Striker characters by 2x and their HP by 1.2x",
+        special: "Reduces enemy's Threshold Damage Reduction duration by 2 turns and reduces any damage received above 3,000 HP by ?% for 2 turns",
+        specialName: "Rebecca Special",
+    },
     2200: {//Doflamingo Raid v2
         captain: "Boosts ATK of Driven and Cerebral characters by 2.5x when HP is 50% or below, 1.5x otherwise",
         special: "Randomizes all non-matching orbs, including [BLOCK] slots and locks all orbs for 1 turn. If Captain is a Cerebral or Driven character, increases duration of any Class/Type boosting buffs and Orb Amplification buffs by 2 turns",
