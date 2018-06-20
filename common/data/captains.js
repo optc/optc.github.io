@@ -7301,6 +7301,14 @@ window.captains = {
             else return ((window.specials[2136].turnedOn || window.specials[2137].turnedOn) && p.sourceSlot == 1) ? 2.5 : 2;
         },
     },
+    2144: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? 2.25 : 1; },
+        hp: function(p) { return p.unit.class.has("Slasher") ? 1.2 : 1; },
+    },
+    2146: {
+        atk: function(p) { return p.unit.class.has("Striker") ? 2 : 1; },
+        hp: function(p) { return p.unit.class.has("Striker") ? 1.2 : 1; },
+    },
     2200: {
         atk: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Cerebral")) && p.percHP <= 50.0 ? 2.5 : 1.5; }
     },

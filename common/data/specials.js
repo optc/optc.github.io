@@ -5168,6 +5168,14 @@ window.specials = {
             window.specials[2137].turnedOn = false;
         }
     },
+    2143: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; },
+        type: "class",
+    },
+    2144: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; },
+        type: "class",
+    },
     5000: {
         atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 1.5 : 1; },
         type: "type",

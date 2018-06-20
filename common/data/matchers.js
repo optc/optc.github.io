@@ -1,6 +1,12 @@
 window.matchers = [
 
     /* * * * * Captain abilities * * * * */
+    
+    {
+        name: 'Type-boosting captains',
+        target: 'captain',
+        matcher: /Boosts (ATK|HP|RCV|ATK and HP|ATK and RCV|HP and RCV|ATK, HP and RCV) of[^,]+(STR|DEX|QCK|PSY|INT)\b/i
+    },
 
     {
         name: 'Type-boosting captains',

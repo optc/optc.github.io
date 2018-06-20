@@ -104,22 +104,11 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
         if (!tableData.parameters.filters) return true;
         var filters = tableData.parameters.filters;
         // filter by type
-        if (filters.type && unit.type !== filters.type) return false;
-        /*if (filters.type){
-            var cond = false
-            if (Array.isArray(unit.type)){
-                for (var type1 in unit.type){
-                    if (unit.type[type1] == filters.type){
-                        cond = true
-                    }
-                }
-            }
-            else if (unit.type == filters.type){
-                cond = true
-            }
-            return cond;
-            
-        }*/
+        //if (filters.type && unit.type !== filters.type) return false;
+        if (filters.type){
+            if (!Array.isArray(unit.type)) if (unit.type !== filters.type) return false;
+            if (Array.isArray(unit.type)) if ((unit.type[0] !== filters.type) && (unit.type[1] !== filters.type)) return false;
+        }
         // filter by class
         if (filters.classes && filters.classes.length) {
             var singleQuery = filters.classes.length == 1, singleClass = unit.class.length > 2;
@@ -170,6 +159,8 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
         // exclusion filters
         if (filters.noBase && (evolutions[id] && evolutions[id].evolution)) return false;
         if (filters.noEvos && Utils.isEvolverBooster(unit)) return false;
+        if (filters.globalTM && [ 1937, 1939, 1935, 1910, 1938, 1936, 1914, 1912, 1916, 1941, 1935, 1747, 1794, 1832, 1869, 1883, 1910, 1928, 1804, 1806, 1849, 1851, 1871, 1873, 1875, 1877, 1885, 1887, 1895, 1902, 1904, 1906, 1908, 1926, 1087, 1089, 1102, 1104, 1106, 1143, 1145, 1292, 1341, 1897, 1899, 353, 418, 978, 1108, 1163, 1930, 1943, 1547, 1842, 1844, 1855, 1857, 1865, 1867, 1808, 1853, 1889, 1900, 1834, 1836, 1838, 1840, 1540, 1238, 1175, 1129, 997, 880, 838 ].indexOf(id) == -1) return false;
+        if (filters.japanTM && [ 2132, 2134, 2135, 2099, 2113, 2074, 2076, 2109, 2115, 2117, 2119, 2121, 1413, 1764, 1610, 1910, 2023, 1976, 2017, 2111, 1298, 1518, 1943, 2015, 2033, 2070, 2097, 1037, 1547, 1597, 1766, 1947, 1980, 1982, 2091, 2092, 2093, 2094, 2095, 1916, 2064, 2019, 1735, 1774, 2127, 1855, 2128, 1918, 2123, 1667, 1584, 1527, 1489 ].indexOf(id) == -1) return false;
         if (filters.noFodder && Utils.isFodder(unit)) return false;
         if (filters.noFortnights && flags.fnonly) return false;
         if (filters.noRaids && flags.raid) return false;
@@ -313,7 +304,21 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
         },true);
     });
 
-    $rootScope.$on('table.refresh',function() { fused = null; });
+    $rootScope.$on('table.refresh',function() { 
+        fused = null;
+        /*var types = {
+        'STR' : '<span class="cell-STR">STR</span>',
+        'DEX' : '<span class="cell-DEX">DEX</span>',
+        'QCK' : '<span class="cell-QCK">QCK</span>',
+        'PSY' : '<span class="cell-PSY">PSY</span>',
+        'INT' : '<span class="cell-INT">INT</span>'};
+        $.each(types,function(i,type1){
+            $.each(types,function(j,type2){
+            if(i == j) return;
+            $('.cell-'+i+'\\/'+j).html(type1 +'/'+type2);
+          });
+        });*/
+    });
 
     $rootScope.checkLog = function() {
         var temp = [ ];

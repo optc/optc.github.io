@@ -2022,6 +2022,14 @@ window.drops = {
             'All Difficulties': [ 2127, 2128, 2129, 2130, -1473, -1477, -1974, -1953, -1957, -1717 ]
         },
         
+        {
+            name: 'Diamante Fortnite',
+            thumb: 2146,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 2143, 2145, -2013, -1991, -1989, -1951 ]//CHANGE THIS
+        },
+        
     ],
 
             
@@ -2608,7 +2616,7 @@ window.drops = {
             thumb: 1941,
 			nakama: 8194100,
             gamewith: 87389,
-            'Raging Sea': [ 1940 ]
+            'Primordial Sea': [ 1940 ]
         },
 
         {
@@ -2648,7 +2656,7 @@ window.drops = {
             thumb: 2137,
             nakama: null,
             gamewith: null,
-            'Raging Sea': [ 2136 ]
+            'Primordial Sea': [ 2136 ]
         },
         
     ],
