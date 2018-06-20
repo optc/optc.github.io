@@ -159,6 +159,8 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
         // exclusion filters
         if (filters.noBase && (evolutions[id] && evolutions[id].evolution)) return false;
         if (filters.noEvos && Utils.isEvolverBooster(unit)) return false;
+        if (filters.globalTM && [ 1937, 1939, 1935, 1910, 1938, 1936, 1914, 1912, 1916, 1941, 1935, 1747, 1794, 1832, 1869, 1883, 1910, 1928, 1804, 1806, 1849, 1851, 1871, 1873, 1875, 1877, 1885, 1887, 1895, 1902, 1904, 1906, 1908, 1926, 1087, 1089, 1102, 1104, 1106, 1143, 1145, 1292, 1341, 1897, 1899, 353, 418, 978, 1108, 1163, 1930, 1943, 1547, 1842, 1844, 1855, 1857, 1865, 1867, 1808, 1853, 1889, 1900, 1834, 1836, 1838, 1840, 1540, 1238, 1175, 1129, 997, 880, 838 ].indexOf(id) == -1) return false;
+        if (filters.japanTM && [ 2132, 2134, 2135, 2099, 2113, 2074, 2076, 2109, 2115, 2117, 2119, 2121, 1413, 1764, 1610, 1910, 2023, 1976, 2017, 2111, 1298, 1518, 1943, 2015, 2033, 2070, 2097, 1037, 1547, 1597, 1766, 1947, 1980, 1982, 2091, 2092, 2093, 2094, 2095, 1916, 2064, 2019, 1735, 1774, 2127, 1855, 2128, 1918, 2123, 1667, 1584, 1527, 1489 ].indexOf(id) == -1) return false;
         if (filters.noFodder && Utils.isFodder(unit)) return false;
         if (filters.noFortnights && flags.fnonly) return false;
         if (filters.noRaids && flags.raid) return false;

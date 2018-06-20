@@ -103,6 +103,14 @@
 </div>
 
 <div class="filter-container">
+    <span class="filter-header">Treasure Map Boosters filters</span>
+    <span class="filter width-6 exc" ng-model="filters.globalTM" ng-class="{ active: filters.globalTM }"
+        ng-click="filters.globalTM = !filters.globalTM">Show Global TM Boosters</span><!--
+ --><span class="filter width-6 exc" ng-model="filters.japanTM" ng-class="{ active: filters.japanTM }"
+        ng-click="filters.japanTM = !filters.japanTM">Show Japan TM Boosters</span>
+</div>
+
+<div class="filter-container">
     <span class="filter-header">Captain ability filters</span>
     <span class="filter width-12 custom" ng-repeat="(n,filter) in filterData" ng-if="filter.target == 'captain'"
         ng-model="filters.custom[n]" ng-class="{ active: filters.custom[n] }" add-captain-options
