@@ -2616,7 +2616,7 @@ window.drops = {
             thumb: 1941,
 			nakama: 8194100,
             gamewith: 87389,
-            'Raging Sea': [ 1940 ]
+            'Primordial Sea': [ 1940 ]
         },
 
         {
@@ -2656,7 +2656,7 @@ window.drops = {
             thumb: 2137,
             nakama: null,
             gamewith: null,
-            'Raging Sea': [ 2136 ]
+            'Primordial Sea': [ 2136 ]
         },
         
     ],
