@@ -279,7 +279,7 @@ window.details = {
         captain: "Boosts ATK and HP of [QCK] characters by 1.5x",
         sailor: {
             "base": "None",
-            "level1": "Makes RCV orbs \"beneficial\" for all characters",
+            "level1": "Makes [RCV] orbs \"beneficial\" for all characters",
             "level2": "Boosts base ATK, HP and RCV of all characters by 40",
         },
         sailorNotes: "#{beneficial}",
@@ -292,7 +292,7 @@ window.details = {
             { "description": "Boosts base RCV by 20" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base ATK by 60" },
-            { "description": "Acquire Sailor Ability 1: Makes RCV orbs \"beneficial\" for all characters" },
+            { "description": "Acquire Sailor Ability 1: Makes [RCV] orbs \"beneficial\" for all characters" },
             { "description": "Boosts base RCV by 20" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base RCV by 30" },
@@ -2769,12 +2769,12 @@ window.details = {
         sailor: "Boosts base HP of Powerhouse characters by 100"
     },
     362: {
-        special: "For 2 turns, boosts the amount healed by RCV orbs by 1.5x, then 2x, then 2.5x from the third crew member onward",
+        special: "For 2 turns, boosts the amount healed by [RCV] orbs by 1.5x, then 2x, then 2.5x from the third crew member onward",
         specialName: "Big Eater",
         captain: "Boosts ATK and RCV of [PSY] characters by 2x"
     },
     363: {
-        special: "For 2 turns, boosts the amount healed by RCV orbs by 1.5x, then 2x, then 2.5x from the third crew member onward",
+        special: "For 2 turns, boosts the amount healed by [RCV] orbs by 1.5x, then 2x, then 2.5x from the third crew member onward",
         specialName: "Big Eater",
         captain: "Boosts ATK and RCV of [PSY] characters by 2x"
     },
@@ -4942,7 +4942,7 @@ window.details = {
         captain: "Boosts ATK of Fighter characters by 2.5x if HP is above 50% at the start of the turn"
     },
     608: {
-        special: "For 1 turn, boosts the amount healed by RCV orbs by 1.5x, then 2x, then 2.5x from the third crew member onward",
+        special: "For 1 turn, boosts the amount healed by [RCV] orbs by 1.5x, then 2x, then 2.5x from the third crew member onward",
         specialName: "Wicked Strength"
     },
     609: {
@@ -6088,12 +6088,12 @@ window.details = {
         captain: "Boosts ATK of [STR] characters by 1.5x, reduces damage received by 20%"
     },
     734: {
-        special: "For 1 turn, boosts the amount healed by RCV orbs by 1.5x, then 2x, then 2.5x from the third crew member onward",
+        special: "For 1 turn, boosts the amount healed by [RCV] orbs by 1.5x, then 2x, then 2.5x from the third crew member onward",
         specialName: "Life Return - Digestion, Absorption",
         captain: "Boosts ATK and RCV of [PSY] characters by 1.2x"
     },
     735: {
-        special: "For 1 turn, boosts the amount healed by RCV orbs by 1.5x, then 2x, then 2.5x from the third crew member onward",
+        special: "For 1 turn, boosts the amount healed by [RCV] orbs by 1.5x, then 2x, then 2.5x from the third crew member onward",
         specialName: "Life Return - Digestion, Absorption",
         captain: "Boosts ATK and RCV of [PSY] characters by 1.5x"
     },
@@ -11389,7 +11389,7 @@ window.details = {
     },
     1148:{
         specialName: "Paralysis Recovery - Light",
-        special: "Reduces Paralysis by 1 turn"
+        special: "Reduces Paralysis duration by 1 turn"
     },
     1149:{
         special: "Deals 3x character's ATK in [INT] damage to all enemies, Poisons all enemies",
@@ -15472,7 +15472,7 @@ window.details = {
         captainNotes: "The bonus is cumulative. Powerhouse + Striker characters get a 1.69x bonus.",
         special: "Reduces crew's current HP by 50%, amplifies the effect of orbs for Powerhouse characters by 1.75x and boosts ATK against delayed enemies by 1.5x for 1 turn",
         specialName: "Squid Spear",
-        sailor: "Makes [STR], [QCK], [DEX] and [INT] orbs \"beneficial\" for this unit if there are 6 Powerhouse characters in your crew",
+        sailor: "If there are 6 Powerhouse characters in your crew, makes [STR], [QCK], [DEX] and [INT] orbs \"beneficial\" for this unit",
         sailorNotes: "#{beneficial}",
     },
     1438: {//Ikaros Much
@@ -15836,7 +15836,7 @@ window.details = {
         specialName: "Grill Shot",
         sailor: {
             "base": "None",
-            "level1": "Makes RCV orbs \"beneficial\" for all characters",
+            "level1": "Makes [RCV] orbs \"beneficial\" for all characters",
             "level2": "Boosts base ATK, HP and RCV of all characters by 40",
         },
         sailorNotes: "#{beneficial}",
@@ -15849,7 +15849,7 @@ window.details = {
             { "description": "Boosts base RCV by 20" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base ATK by 60" },
-            { "description": "Acquire Sailor Ability 1: Makes RCV orbs \"beneficial\" for all characters" },
+            { "description": "Acquire Sailor Ability 1: Makes [RCV] orbs \"beneficial\" for all characters" },
             { "description": "Boosts base RCV by 20" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base RCV by 30" },
@@ -18115,7 +18115,7 @@ window.details = {
         captainNotes: "Using Luffy's special will change his own captain boost to 4x. If both Luffy's specials are used, the total ATK boost will be 16x",
         special: [
             {
-                "description": "Deals 100x character's ATK in typeless damage to one enemy and makes [STR], [DEX], [PSY], [INT], [TND] and [RCV] orbs \"beneficial\" for Fighter characters for 1 turn.  After 3 turns, Binds and Despairs himself for 7 turns.",
+                "description": "Deals 100x character's ATK in typeless damage to one enemy and makes [STR], [DEX], [PSY], [INT], [TND] and [RCV] orbs \"beneficial\" for Fighter characters for 1 turn. After 3 turns, Binds and Despairs himself for 7 turns.",
                 "cooldown": [ 13, 8 ],
             },
             {
@@ -18293,14 +18293,14 @@ window.details = {
     },
     1611: {//Kuma
         captain: "Boosts ATK of Shooter characters by 1.75x and their HP by 1.2x",
-        special: "Reduces Bind and Despair duration by 7 turns.  Recovers 20% of crew's MAX HP and has low chance to eliminate all enemies",
+        special: "Reduces Bind and Despair duration by 7 turns. Recovers 20% of crew's MAX HP and has low chance to eliminate all enemies",
         specialNotes: "#{instantKill : 10%}",
         specialName: "Paw Paw Fruit: Scatter and Fly Away",
         sailor: "If this character has a [PSY] orb and you hit a PERFECT with him, keep his [PSY] orb for the next turn",
     },
     1612: {//Kuma
         captain: "Boosts ATK of Shooter characters by 2.5x and their HP by 1.2x",
-        special: "Reduces Bind and Despair duration by 7 turns.  Recovers 20% of crew's MAX HP and has low chance to eliminate all enemies",
+        special: "Reduces Bind and Despair duration by 7 turns. Recovers 20% of crew's MAX HP and has low chance to eliminate all enemies",
         specialNotes: "#{instantKill : 10%}",
         specialName: "Paw Paw Fruit: Scatter and Fly Away",
         sailor: "If this character has a [PSY] orb and you hit a PERFECT with him, keep his [PSY] orb for the next turn",
@@ -21947,12 +21947,12 @@ window.details = {
     },
     1831: {//6* Judge
         captain: "Increase the rate of [PSY] orbs, reduces damage received by 15%, boosts the HP of all characters by 1.25x and if there is a [STR], [DEX], [QCK], [PSY] and [INT] characters in your crew, boosts ATK of all characters by 3.9375x if they have a matching orb, by 2.25x otherwise",
-        special: "Reduces bind duration by 7 turns and amplifies the effect of orbs by 2x for 1 turn.  If this character is the captain or the friend captain, slightly boosts the rate of [PSY] orbs and randomly shuffles all orbs including [BLOCK] orbs",
+        special: "Reduces bind duration by 7 turns and amplifies the effect of orbs by 2x for 1 turn. If this character is the captain or the friend captain, slightly boosts the rate of [PSY] orbs and randomly shuffles all orbs including [BLOCK] orbs",
         specialName: "Dengi Crack",
     },
     1832: {//6* Judge
         captain: "Increase the rate of [PSY] orbs, reduces damage received by 15%, boosts the HP of all characters by 1.25x and if there is a [STR], [DEX], [QCK], [PSY] and [INT] characters in your crew, boosts ATK of all characters by 3.9375x if they have a matching orb, by 2.25x otherwise",
-        special: "Reduces bind duration by 7 turns and amplifies the effect of orbs by 2x for 1 turn.  If this character is the captain or the friend captain, slightly boosts the rate of [PSY] orbs and randomly shuffles all orbs including [BLOCK] orbs",
+        special: "Reduces bind duration by 7 turns and amplifies the effect of orbs by 2x for 1 turn. If this character is the captain or the friend captain, slightly boosts the rate of [PSY] orbs and randomly shuffles all orbs including [BLOCK] orbs",
         specialName: "Dengi Crack",
         sailor: {
             "base": "None",
@@ -22027,7 +22027,7 @@ window.details = {
     1833: {//Reiju
         captain: "Boosts ATK of [INT] characters by 1.75x and Powerhouse characters by 1.2x and the RCV of Powerhouse characters by 1.1x",
         captainNotes: "Attack boost stacks, so a [INT] Powerhouse character has a 2.1x ATK",
-        special: "If your captain is [INT] or [PSY], recovers 7,000 HP, removes poison and reduces the duration of paralysis, despair and silence by 3 turns.  If the captain is a Powerhouse character, reduces damage received by 70% for 2 turns ",
+        special: "If your captain is [INT] or [PSY], recovers 7,000 HP, removes Poison and reduces Paralysis, Despair and Silence duration by 3 turns. If the captain is a Powerhouse character, reduces damage received by 70% for 2 turns ",
         specialName: "Dangerous Healing",
         sailor: "Makes [PSY] orbs \"beneficial\" for this unit",
         sailorNotes: "#{beneficial}",
@@ -22035,7 +22035,7 @@ window.details = {
     1834: {//Reiju
         captain: "Boosts ATK of [INT] characters by 2.25x and Powerhouse characters by 1.3x and the RCV of Powerhouse characters by 1.2x",
         captainNotes: "Attack boost stacks, so a [INT] Powerhouse character has a 2.925x ATK",
-        special: "If your captain is [INT] or [PSY], recovers 7,000 HP, removes poison and reduces the duration of paralysis, despair and silence by 3 turns.  If the captain is a Powerhouse character, reduces damage received by 70% for 2 turns ",
+        special: "If your captain is [INT] or [PSY], recovers 7,000 HP, removes Poison and reduces Paralysis, Despair and Silence duration by 3 turns. If the captain is a Powerhouse character, reduces damage received by 70% for 2 turns ",
         specialName: "Dangerous Healing",
         sailor: {
             "base": "Makes [PSY] orbs \"beneficial\" for this unit",
