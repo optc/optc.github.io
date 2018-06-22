@@ -5168,6 +5168,52 @@ window.specials = {
             window.specials[2137].turnedOn = false;
         }
     },
+    2138: {
+        atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Driven") || p.unit.class.has("Powerhouse")) ? 2 : 1; },
+        type: "class"
+    },
+    2139: {
+        atk: function(p) { return window.specials[2139].multiplier; },
+        onActivation: function(p) {
+            window.specials[2139].multiplier = 1;
+            if (p.captain.class.has("Powerhouse")){
+                window.specials[2139].multiplier = 1.75;
+            }
+        },
+        type: "condition",
+        warning: "Selected special (%name%) assumes that the enemy has been inflicted with Toxin."
+    },
+    2140: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[2140].multiplier, [p.friendCaptain, p.captain], p.effectName); },
+        onActivation: function(p) {
+            window.specials[2140].multiplier = 1;
+            if (p.captain.type == "INT" || p.captain.type == "QCK"){
+                window.specials[2140].multiplier = 1.75;
+            }
+        }
+    },
+    2141: {
+        chain: function(p) { return window.specials[2141].multiplier; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[2141].multiplier : 1;
+        },
+        onActivation: function(p) {
+            window.specials[2141].multiplier = 1;
+            if (p.captain.type == "INT" || p.captain.type == "DEX"){
+                window.specials[2141].multiplier = 2.75;
+            }
+        }
+    },
+    2142: {
+        staticMult: function(p) { return window.specials[2142].multiplier; },
+        onActivation: function(p) {
+            window.specials[2142].multiplier = 0;
+            if (p.captain.type == "INT" || p.captain.type == "STR"){
+                window.specials[2142].multiplier = 55;
+            }
+        }
+    },
     2143: {
         atk: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; },
         type: "class",

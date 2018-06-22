@@ -1919,6 +1919,7 @@ window.drops = {
         {
             name: 'Perona\'s Strange Communal Life!',
             thumb: 1891,
+            global: true,
             nakama: 2189100,
             gamewith: 84032,
             condition: 'Take heavy damage at the start of the island',

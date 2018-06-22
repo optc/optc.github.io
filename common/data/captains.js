@@ -7301,6 +7301,52 @@ window.captains = {
             else return ((window.specials[2136].turnedOn || window.specials[2137].turnedOn) && p.sourceSlot == 1) ? 2.5 : 2;
         },
     },
+    2138: {
+        atk: function(p) {
+            if(p.colorCount.INT>=1 && p.colorCount.PSY>=1 && p.colorCount.STR>=1 && p.colorCount.DEX>=1 && p.colorCount.QCK>=1){
+                return ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) == 2) && (p.orb != 'g')) ? 3.9375 : 2.25;
+            }
+            else
+                return 1;
+        },
+        hp: function(p) { return 1.25; }
+    },
+    2139: {
+        atk: function(p) {
+            return p.unit.class.has("Powerhouse") && p.unit.type == "PSY" ? 3.15 :
+                !p.unit.class.has("Powerhouse") && p.unit.type == "PSY" ? 2.25 :
+                p.unit.class.has("Powerhouse") && !p.unit.type == "PSY" ? 1.4 :
+                1;
+        },
+        rcv: function(p) { return p.unit.class.has("Powerhouse") ? 1.2 : 1; },
+    },
+    2140: {
+        atk: function(p) {
+            return p.unit.class.has("Powerhouse") && p.unit.type == "QCK" ? 3.15 :
+                !p.unit.class.has("Powerhouse") && p.unit.type == "QCK" ? 2.25 :
+                p.unit.class.has("Powerhouse") && !p.unit.type == "QCK" ? 1.4 :
+                1;
+        },
+        hp: function(p) { return p.unit.class.has("Powerhouse") ? 1.2 : 1; },
+    },
+    2141: {
+        atk: function(p) {
+            return p.unit.class.has("Powerhouse") && p.unit.type == "DEX" ? 3.15 :
+                !p.unit.class.has("Powerhouse") && p.unit.type == "DEX" ? 2.25 :
+                p.unit.class.has("Powerhouse") && !p.unit.type == "DEX" ? 1.4 :
+                1;
+        },
+        hp: function(p) { return p.unit.class.has("Powerhouse") ? 1.2 : 1; },
+    },
+    2142: {
+        atk: function(p) {
+            return p.unit.class.has("Powerhouse") && p.unit.type == "STR" ? 3.15 :
+                !p.unit.class.has("Powerhouse") && p.unit.type == "STR" ? 2.25 :
+                p.unit.class.has("Powerhouse") && !p.unit.type == "STR" ? 1.4 :
+                1;
+        },
+        hp: function(p) { return p.unit.class.has("Powerhouse") ? 1.2 : 1; },
+    },
     2144: {
         atk: function(p) { return p.unit.class.has("Slasher") ? 2.25 : 1; },
         hp: function(p) { return p.unit.class.has("Slasher") ? 1.2 : 1; },

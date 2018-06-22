@@ -19,6 +19,16 @@
             return [];
         if (element[15] && element[15].constructor != Array)
             element[15] = [element[15], element[15], element[15]];
+        //console.log(n);
+        var limitHealth = element[12], limitAttack = element[13], limitRecovery = element[14], limitCooldown = 0;
+        if(window.details[n + 1]) if(window.details[n + 1].limit){
+            for(var x in window.details[n + 1].limit){
+                if (window.details[n + 1].limit[x].description.includes("Boosts base HP by ")) limitHealth += parseInt(window.details[n + 1].limit[x].description.substring(18), 10);
+                if (window.details[n + 1].limit[x].description.includes("Boosts base ATK by ")) limitAttack += parseInt(window.details[n + 1].limit[x].description.substring(19), 10);
+                if (window.details[n + 1].limit[x].description.includes("Boosts base RCV by ")) limitRecovery += parseInt(window.details[n + 1].limit[x].description.substring(19), 10);
+                if (window.details[n + 1].limit[x].description.includes("Reduce base Special Cooldown by ")) limitCooldown += parseInt(window.details[n + 1].limit[x].description.substring(32, 33), 10);
+            }
+        }
         var result = {
             name: element[0], type: element[1],
             class: element[2], stars: element[3],
@@ -27,7 +37,9 @@
             maxEXP: element[8], minHP: element[9],
             minATK: element[10], minRCV: element[11],
             maxHP: element[12], maxATK: element[13],
-            maxRCV: element[14], growth: {
+            maxRCV: element[14], limitHP: limitHealth, 
+            limitATK: limitAttack, limitRCV: limitRecovery,
+            growth: {
                 hp: element[15] ? element[15][0] : 0,
                 atk: element[15] ? element[15][1] : 0,
                 rcv: element[15] ? element[15][2] : 0

@@ -105,6 +105,15 @@
                                         <td ng-if="!compare">{{unit.maxRCV | number}}</td>
                                         <td ng-if="compare" comparison="positive">{{unit.maxRCV - compare.maxRCV | number}}</td>
                                     </tr>
+                                    <tr>
+                                        <td>Limit Break</td>
+                                        <td ng-if="!compare">{{unit.limitHP | number}} (+{{unit.limitHP-unit.maxHP | number}})</td>
+                                        <td ng-if="compare" comparison="positive">{{unit.limitHP - compare.limitHP | number}}</td>
+                                        <td ng-if="!compare">{{unit.limitATK | number}} (+{{unit.limitATK-unit.maxATK | number}})</td>
+                                        <td ng-if="compare" comparison="positive">{{unit.limitATK - compare.limitATK | number}}</td>
+                                        <td ng-if="!compare">{{unit.limitRCV | number}} (+{{unit.limitRCV-unit.maxRCV | number}})</td>
+                                        <td ng-if="compare" comparison="positive">{{unit.limitRCV - compare.limitRCV | number}}</td>
+                                    </tr>
                                     <tr ng-if="!compare && !incomplete">
                                         <td>
                                             <input type="number" placeholder="Level"

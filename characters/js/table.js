@@ -257,6 +257,9 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
             else if (c == 'HP/cost') temp = Math.round(x.maxHP / x.cost * 100) / 100;
             else if (c == 'CMB') temp = x.combo;
             else if (c == 'MAX EXP') temp = x.maxEXP;
+            else if (c == 'Limit Break HP') temp = x.limitHP;
+            else if (c == 'Limit Break ATK') temp = x.limitATK;
+            else if (c == 'Limit Break RCV') temp = x.limitRCV;
             else if (c == 'Minimum cooldown' || c == 'Initial cooldown') { 
                 var d = cooldowns[x.number];
                 if (!d) temp = 'N/A';
