@@ -28600,6 +28600,7 @@ window.details = {
         captainNotes: "Attack boost stacks, so a [PSY] Powerhouse character has a 3.15x ATK",
         special: "If your captain is [INT] or [PSY], reduces crew's ATK DOWN and Silence duration by 3 turns and inflicts Toxic to all enemies. If the captain is a Powerhouse character, boosts ATK against enemies inflicted with Toxic by 1.75x for 1 turn",
         specialName: "Dangerous Butterfly",
+        specialNotes: "Toxic starts at 20x character's attack and increases by ?x at the end of every turn until 500,000 damage per turn.",
         sailor: {
             "base": "Makes [INT] orbs \"beneficial\" for this unit",
             "level1": "Reduces Silence duration on this character by 3 turns",
