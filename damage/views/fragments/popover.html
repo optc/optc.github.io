@@ -44,6 +44,26 @@
                 <td>{{data.team[slot].unit.combo}}</td>
                 <td>{{data.team[slot].unit.slots}}</td>
             </tr>
+            <tr class="header">
+                <td>Limit Break HP</td>
+                <td>Limit Break ATK</td>
+                <td>Limit Break RCV</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    {{data.team[slot].unit.limitHP | number}} (+{{data.team[slot].unit.limitHP - data.team[slot].unit.maxHP | number}})
+                </td>
+                <td>
+                    {{data.team[slot].unit.limitATK | number}} (+{{data.team[slot].unit.limitATK - data.team[slot].unit.maxATK | number}})
+                </td>
+                <td>
+                    {{data.team[slot].unit.limitRCV | number}} (+{{data.team[slot].unit.limitRCV - data.team[slot].unit.maxRCV | number}})
+                </td>
+                <td></td>
+                <td></td>
+            </tr>
             <tr class="header" ng-if="slot < 2">
                 <td colspan="5">Captain Ability</td>
             </tr>

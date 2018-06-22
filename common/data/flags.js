@@ -2017,6 +2017,11 @@ window.flags = {
     2133: { rr: 1, rro: 1, lrr: 1, tmlrr : 1 },
     2134: { rr: 1, rro: 1, lrr: 1, tmlrr : 1 },
     2135: { rr: 1, rro: 1, lrr: 1, tmlrr : 1 },
+    2138: { rr: 1, rro: 1 },
+    2139: { rr: 1, rro: 1 },
+    2140: { rr: 1, rro: 1 },
+    2141: { rr: 1, rro: 1 },
+    2142: { rr: 1, rro: 1 },
     2200: { global: 1 },
     2201: { global: 1 },
 };

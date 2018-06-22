@@ -2136,8 +2136,11 @@ window.aliases = {
     2135: [ 'Mr.1 理想郷を築く刃', '', 'Limited Mr. 1', 'Secret Mr. 1', 'Limited Daz Bones', 'Secret Daz Bones' ],
     2136: [ 'サー・クロコダイル 渇きを与える脱獄囚', '', 'TM Crocodile', 'TM Mr. 0' ],
     2137: [ 'サー・クロコダイル 渇きを統べる海賊', '', 'TM Crocodile', 'TM Mr. 0' ],
-    2138: [ '', '', '' ],
-    2139: [ '', '', '' ],
+    2138: [ '', '', 'Yellow Ranger', 'Super Judge', 'Mega Judge' ],
+    2139: [ '', '', 'Pink Ranger', 'Super Reiju', 'Mega Reiju' ],
+    2140: [ '', '', 'Red Ranger', 'Super Ichiji', 'Mega Ichiji' ],
+    2141: [ '', '', 'Blue Ranger', 'Super Niji', 'Mega Niji' ],
+    2142: [ '', '', 'Green Ranger', 'Super Yonji', 'Mega Yonji' ],
     2200: [ '', '', 'V2 Raid Doffy', 'V2 Raid Doflamingo' ],
     2201: [ '', '', 'V2 Raid Doffy', 'V2 Raid Doflamingo' ],
 };
