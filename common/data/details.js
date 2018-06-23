@@ -23590,7 +23590,7 @@ window.details = {
     },
     1900: {//EXP Zoro
         captain: "Boosts ATK of all characters by 2.25x and boosts EXP and amount of Beli received by 1.2x",
-        special: "Changes own orb into [QCK], boosts own ATK by 1.5x for 1 turn, deals 15x character's ATK in [QCK] damage to one enemy",
+        special: "Changes own orb into [QCK], boosts own ATK by 1.5x for 1 turn and deals 20x character's ATK in [QCK] damage to one enemy",
         specialName: "One Sword Style: Baki",
     },
     1901:{//Pica
@@ -28430,7 +28430,7 @@ window.details = {
         specialName: "Sparkling Daisy",
     },
     2136: {//Crocodile TM
-        captain: "Not Translated",
+        captain: "Boosts ATK of all characters by 1.5x. If this character becomes your captain in the middle of an island, boosts ATK of all characters by 2x instead",
         special: "Deals 30x character's ATK in [INT] damage to one enemy, boosts own ATK by 2x and swaps this unit with your captain for 1 turn",
         specialNotes: "This is the same type of ability as raid boss Shiki's swap. You cannot use it if another effect swaps your captain. (Such as if Shiki swaps first)",
         specialName: "Scorpion Tail",
