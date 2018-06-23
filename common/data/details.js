@@ -28069,15 +28069,15 @@ window.details = {
         captain: "Boosts ATK and RCV of [PSY] characters by 1.2x and cuts the current HP of each enemy by 10% at the end of each turn",
         special: [
             {
-                "description": "Changes [TND] and [RCV] orbs into [PSY] orbs, changes all other orbs on all characters into Brûlée's orb. Adds 30x character's ATK as Additional Typeless Damage for 3 turns",
+                "description": "Changes [TND] and [RCV] orbs into [PSY] orbs, changes [BLOCK] orbs into [EMPTY] orbs and changes all other orbs on all characters into Brûlée's orb. Adds 30x character's ATK as Additional Typeless Damage for 3 turns",
                 "cooldown": [ 18, 12 ],
             },
             {
-                "description": "Changes [TND] and [RCV] orbs into [PSY] orbs, changes all other orbs on all characters into Brûlée's orb. Adds 30x character's ATK as Additional Typeless Damage for 5 turns",
+                "description": "Changes [TND] and [RCV] orbs into [PSY] orbs, changes [BLOCK] orbs into [EMPTY] orbs and changes all other orbs on all characters into Brûlée's orb. Adds 30x character's ATK as Additional Typeless Damage for 5 turns",
                 "cooldown": [ 22, 16 ],
             },
         ],
-        specialNotes: "Upon activating the special, all orbs will be changed to the orb Brûlée has, including [RAINBOW] and [BLOCK] orbs. This will not override other [BLOCK] orbs.",
+        specialNotes: "Upon activating the special, all orbs will be changed to the orb Brûlée has, including [RAINBOW] and [BLOCK] orbs.",
         specialName: "Light Reflecting a Virtual Image",
         sailor: "Makes PSY orbs \"beneficial\" for Cerebral characters",
         sailorNotes: "#{beneficial}",
@@ -28086,15 +28086,15 @@ window.details = {
         captain: "Boosts ATK and RCV of [PSY] characters by 1.5x and cuts the current HP of each enemy by 15% at the end of each turn",
         special: [
             {
-                "description": "Changes [TND] and [RCV] orbs into [PSY] orbs, changes all other orbs on all characters into Brûlée's orb. Adds 30x character's ATK as Additional Typeless Damage for 3 turns",
+                "description": "Changes [TND] and [RCV] orbs into [PSY] orbs, changes [BLOCK] orbs into [EMPTY] orbs and changes all other orbs on all characters into Brûlée's orb. Adds 30x character's ATK as Additional Typeless Damage for 3 turns",
                 "cooldown": [ 18, 12 ],
             },
             {
-                "description": "Changes [TND] and [RCV] orbs into [PSY] orbs, changes all other orbs on all characters into Brûlée's orb. Adds 30x character's ATK as Additional Typeless Damage for 5 turns",
+                "description": "Changes [TND] and [RCV] orbs into [PSY] orbs, changes [BLOCK] orbs into [EMPTY] orbs and changes all other orbs on all characters into Brûlée's orb. Adds 30x character's ATK as Additional Typeless Damage for 5 turns",
                 "cooldown": [ 22, 16 ],
             },
         ],
-        specialNotes: "Upon activating the special, all orbs will be changed to the orb Brûlée has, including [RAINBOW] and [BLOCK] orbs. This will not override other [BLOCK] orbs.",
+        specialNotes: "Upon activating the special, all orbs will be changed to the orb Brûlée has, including [RAINBOW] and [BLOCK] orbs.",
         specialName: "Light Reflecting a Virtual Image",
         sailor: {
             "base": "Makes PSY orbs \"beneficial\" for Cerebral characters",
