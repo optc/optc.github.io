@@ -1684,7 +1684,7 @@ window.drops = {
         },
         
         {
-            name: 'Marines! Sengoku the Fleet Admiral!',
+            name: 'Full Defense! Buddha Sengoku!',
             thumb: 1416,
             global: true,
             nakama: 2141600,
