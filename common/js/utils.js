@@ -20,7 +20,7 @@
         if (element[15] && element[15].constructor != Array)
             element[15] = [element[15], element[15], element[15]];
         //console.log(n);
-        var limitHealth = element[12], limitAttack = element[13], limitRecovery = element[14], limitCooldown = 0;
+        var limitHealth = element[12], limitAttack = element[13], limitRecovery = element[14], limitCooldown = 0, limitSlots = element[6];
         if (window.details) if(window.details[n + 1]) if(window.details[n + 1].limit){
             for(var x in window.details[n + 1].limit){
                 if (window.details[n + 1].limit[x].description.includes("Boosts base HP by ")) limitHealth += parseInt(window.details[n + 1].limit[x].description.substring(18), 10);
