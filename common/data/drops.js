@@ -1908,7 +1908,7 @@ window.drops = {
         },
         
         {
-            name: 'Supernova! Hawkins and Urouge!',
+            name: 'Oh, Impermanence! Hawkins and Urouge!',
             thumb: 1867,
             global: true,
             nakama: 2186700,
@@ -1917,7 +1917,7 @@ window.drops = {
         },
         
         {
-            name: 'Perona\'s Strange Communal Life!',
+            name: 'Perona\'s Peculiar Living Situation',
             thumb: 1891,
             global: true,
             nakama: 2189100,
