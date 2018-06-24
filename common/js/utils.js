@@ -21,7 +21,7 @@
             element[15] = [element[15], element[15], element[15]];
         //console.log(n);
         var limitHealth = element[12], limitAttack = element[13], limitRecovery = element[14], limitCooldown = 0;
-        if(window.details[n + 1]) if(window.details[n + 1].limit){
+        if (window.details) if(window.details[n + 1]) if(window.details[n + 1].limit){
             for(var x in window.details[n + 1].limit){
                 if (window.details[n + 1].limit[x].description.includes("Boosts base HP by ")) limitHealth += parseInt(window.details[n + 1].limit[x].description.substring(18), 10);
                 if (window.details[n + 1].limit[x].description.includes("Boosts base ATK by ")) limitAttack += parseInt(window.details[n + 1].limit[x].description.substring(19), 10);
