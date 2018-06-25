@@ -53,7 +53,7 @@ html, body, body > [ui-view] {
 .column {
     width: 65px;
     margin: 1px;
-    height: 395px;
+    height: 375px;
     top: -100px;
     vertical-align: top;
     position: relative;
