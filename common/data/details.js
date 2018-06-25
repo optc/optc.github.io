@@ -27619,14 +27619,14 @@ window.details = {
     2100: {//Dice
         captain: "Boosts ATK of Powerhouse characters by 1.75x and [STR] characters by 1.2x",
         captainNotes: "Attack boost stacks, so a [STR] Powerhouse character has a 2.1x ATK",
-        special: "Cuts the current HP of each enemy by 15% and reduces enemy Barrier duration by 1 turn. If your captain is [STR] or [QCK], Changes own orb into [STR] and boosts ATK of all characters by 1.75x for 1 turn",
+        special: "Cuts the current HP of one enemy by 15% and reduces enemy Barrier duration by 1 turn. If your captain is [STR] or [QCK], Changes own orb into [STR] and boosts ATK of all characters by 1.75x for 1 turn",
         specialName: "Furious Armored Tank",
         sailor: "If this character has a [STR] orb and you hit a GOOD or GREAT with him, keep his [STR] orb for the next turn",
     },
     2101: {//Dice
         captain: "Boosts ATK of Powerhouse characters by 2.25x and [STR] characters by 1.2x",
         captainNotes: "Attack boost stacks, so a [STR] Powerhouse character has a 2.7x ATK",
-        special: "Cuts the current HP of each enemy by 15% and reduces enemy Barrier duration by 1 turn. If your captain is [STR] or [QCK], Changes own orb into [STR] and boosts ATK of all characters by 1.75x for 1 turn",
+        special: "Cuts the current HP of one enemy by 15% and reduces enemy Barrier duration by 1 turn. If your captain is [STR] or [QCK], Changes own orb into [STR] and boosts ATK of all characters by 1.75x for 1 turn",
         specialName: "Furious Armored Tank",
         sailor: {
             "base": "If this character has a [STR] orb and you hit a GOOD or GREAT with him, keep his [STR] orb for the next turn",
