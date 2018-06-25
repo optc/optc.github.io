@@ -1684,7 +1684,7 @@ window.drops = {
         },
         
         {
-            name: 'Marines! Sengoku the Fleet Admiral!',
+            name: 'Full Defense! Buddha Sengoku!',
             thumb: 1416,
             global: true,
             nakama: 2141600,
@@ -1908,7 +1908,7 @@ window.drops = {
         },
         
         {
-            name: 'Supernova! Hawkins and Urouge!',
+            name: 'Oh, Impermanence! Hawkins and Urouge!',
             thumb: 1867,
             global: true,
             nakama: 2186700,
@@ -1917,7 +1917,7 @@ window.drops = {
         },
         
         {
-            name: 'Perona\'s Strange Communal Life!',
+            name: 'Perona\'s Peculiar Living Situation',
             thumb: 1891,
             global: true,
             nakama: 2189100,
@@ -1956,7 +1956,7 @@ window.drops = {
             thumb: 1965,
             nakama: 2196500,
             gamewith: 91449,
-            'All Difficulties': [ 1964, 1966, -1794, -1368, -1802, -1713, -1840, -1557 ]
+            'All Difficulties': [ 1964, 1966, -1794, -1368, -1802, -1713, -1840, -2142, -1557 ]
         },
         
         {
@@ -1964,7 +1964,7 @@ window.drops = {
             thumb: 1982,
             nakama: 2198200,
             gamewith: 93457,
-            'All Difficulties': [ 1979, 1981, -1921, -1362, -1366, -1770, -1834, -1836, -1633 ]
+            'All Difficulties': [ 1979, 1981, -1921, -1362, -1366, -1770, -1834, -2139, -1836, -2140, -1633 ]
         },
         
         {
@@ -1972,7 +1972,7 @@ window.drops = {
             thumb: 1997,
             nakama: 2199700,
             gamewith: 94921,
-            'All Difficulties': [ 1994, 1996, -1832, -1408, -1721, -1871, -1838, -1634 ]
+            'All Difficulties': [ 1994, 1996, -1832, -2138, -1408, -1721, -1871, -1838, -2141, -1634 ]
         },
         
         {
@@ -2615,6 +2615,7 @@ window.drops = {
         {
             name: 'Fire Fist Ace',
             thumb: 1941,
+            global: true,
 			nakama: 8194100,
             gamewith: 87389,
             'Primordial Sea': [ 1940 ]
@@ -2946,7 +2947,7 @@ window.drops = {
             'Monkey D. Luffy': [ -416, -1404, -1445, -1532, -1543, -1593, -1747, -671, -673, -906, -910, -520, -1115, -1364, -1368, -1534, -1536, -1741, -1743, -1745 ],
             'Lucy': [ -562, -578, -669, -1121, -1492, -1794, -1816, -641, -1025, -1029, -1033, -1079, -1125, -1129, -1798, -1800, -1802, -1873, -1877 ],
             'Fujitora': [ -870, -1035, -1123, -1869, -1928, -995, -1232, -1234, -1236, -1238, -1318, -1320, -1796, -1871, -1904, -1906, -1908 ],
-            'Judge': [ -367, -1588, -1610, -1619, -1832, -410, -675, -677, -912, -937, -560, -1212, -1542, -1702, -1834, -1836, -1838, -1840 ],
+            'Judge': [ -367, -1588, -1610, -1619, -1832, -2138, -410, -675, -677, -912, -937, -560, -1212, -1542, -1702, -1834, -2139, -1836, -2140, -1838, -2141, -1840, -2142 ],
         },
         
         {
@@ -3007,9 +3008,17 @@ window.drops = {
             thumb: 1280,
             nakama: null,
             gamewith: 98232,
-            showManual: true,
             'Aokiji': [ 298, 1225, 1226, 1280, 1281 ],
             'Akainu': [ 1223, 1279, 1283, 1417, 1418 ],
+        },
+        
+        {
+            name: 'Germa Revival Plan!',
+            thumb: 2138,
+            nakama: null,
+            gamewith: 109674,
+            showManual: true,
+            'All Difficulties': [ /*'skullJudge', 'skullReiju', 'skullIchiji', 'skullNiji', 'skullYonji',*/ -2142, -2141, -2140, -2139, -2138, -1839, -1838, -1836, -1834, -1832 ],
         },
    ],
 

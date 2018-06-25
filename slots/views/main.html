@@ -5,6 +5,10 @@
             <div id="columns" regulate-height>
                 <div class="column" ng-repeat="unitNumber in range(0,6)" dropzone="slot" attach-picker>
 
+                    <div>
+                         <input type="checkbox" name='limitBreak' id="limit-break" class="limit-break" ng-click="limitBreak(unitNumber)"> Limit Break 
+                    </div>
+
                     <div class="quick-fill" ng-class="{ visible: team[unitNumber].uid }" ng-click="quickFill(unitNumber)">
                         Quick fill
                     </div>
@@ -18,7 +22,7 @@
 
                     <div class="slots">
 
-                        <slot-wheel ng-repeat="slotNumber in range(0,slotCount(team[unitNumber].uid))">
+                        <slot-wheel ng-repeat="slotNumber in range(0,slotCount(team[unitNumber].uid, unitNumber))">
                         </slot-wheel>
 
                     </div>

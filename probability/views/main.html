@@ -16,6 +16,7 @@
                             uib-popover-template="'views/fragments/popover.html'"></div>
 
                     </div>
+                    <input type=checkbox ng-click="limitBreak()" ng-model="limitBreakBox.value"> Limit Break
                     <p ng-if="slotCount(character.uid)">Select which Sockets your Unit already has.</p>
                     <p ng-if="!slotCount(character.uid)">This Unit has no Sockets.</p>
                     <div class="quick-fill quick-fill-slots" 
@@ -36,9 +37,10 @@
 				
 				<div class="small-container">
                     <form skillevent="">
-                        <input type="checkbox" name="event" value = 2 ng-model="specialEvent" ng-change="changeBaseValues()">Special x2 Event
-                        <input type="checkbox" name="event" value = 3 ng-model="special3Event" ng-change="changeBaseValues()">Special x3 Event 
-                        <input type="checkbox" name="event" value = 4 ng-model="special4Event" ng-change="changeBaseValues()">Special x4 Event 
+                        <input type="radio" name="event" ng-value = 1 ng-model="specialEvent">No Special Up Event<br>
+                        <input type="radio" name="event" ng-value = 2 ng-model="specialEvent">Special x2 Event<br>
+                        <input type="radio" name="event" ng-value = 3 ng-model="specialEvent">Special x3 Event<br>
+                        <input type="radio" name="event" ng-value = 4 ng-model="specialEvent">Special x4 Event<br>
                     </form>
                     &nbsp; &nbsp;
                     <p></p>

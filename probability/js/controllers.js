@@ -16,9 +16,8 @@ controllers.MainCtrl = ['$scope', '$rootScope', '$state', '$stateParams', '$cont
     $scope.skillups = null;
     $scope.copies = null;
 	$scope.slots = null;
-	$scope.specialEvent = false;
-    $scope.special3Event = false;
-    $scope.special4Event = false;
+    $scope.specialEvent = 1;
+    $scope.limitBreakBox = false;
     //$scope.jpnVersion = false;
 	
 	$scope.specialProbabilityProgress = 0;
@@ -33,7 +32,7 @@ controllers.MainCtrl = ['$scope', '$rootScope', '$state', '$stateParams', '$cont
 			return;
 		}
 		$scope.isSpecialReady = false;
-		var data = {copies: $scope.copies, skillups: $scope.skillups, special_event: $scope.specialEvent, special_3event: $scope.special3Event, special_4event: $scope.special4Event};
+		var data = {copies: $scope.copies, skillups: $scope.skillups, special_event: $scope.specialEvent};
 		SpecialProbability.compute(data).then(
 			function(data) {
 				if (data.finished == true) {
@@ -56,6 +55,12 @@ controllers.MainCtrl = ['$scope', '$rootScope', '$state', '$stateParams', '$cont
 			}
 		);
 	};
+    
+    $scope.limitBreak = function() {
+        console.log($scope);
+        $scope.limitBreakBox = !$scope.limitBreakBox
+        if($scope.character) $rootScope.changeUnit($stateParams.unit, $scope.character.uid);
+    }
 	
 	$scope.socketProbabilityProgress = 0;
 	$scope.socketProbabilityProgressBar = null;
@@ -118,7 +123,8 @@ controllers.MainCtrl = ['$scope', '$rootScope', '$state', '$stateParams', '$cont
 
     $scope.slotCount = function(uid) {
         if (!uid) return 0;
-        return units[uid - 1].slots;
+        if ($scope.limitBreakBox) return units[uid - 1].limitSlot;
+        else return units[uid - 1].slots;
     };
     
     $scope.returnName = function(uid) {

@@ -8,11 +8,12 @@ var controllers = { };
  * MainCtrl *
  ************/
 
-controllers.MainCtrl = function($scope, $rootScope, $state, $stateParams, $controller, $timeout) { 
-
+controllers.MainCtrl = function($scope, $rootScope, $state, $stateParams, $controller, $timeout) {
+    
+    $scope.limitBreakOn = [ false, false, false, false, false, false ];
     $rootScope.team = [ null, null, null, null, null, null ];
     $rootScope.options = { transient: false };
-
+    
     $rootScope.changeUnit = function(unit, uid) {
         $scope.team[unit] = { uid: uid, slots: [ ] };
     };
@@ -23,9 +24,14 @@ controllers.MainCtrl = function($scope, $rootScope, $state, $stateParams, $contr
         return result;
     };
 
-    $scope.slotCount = function(uid) {
+    $scope.slotCount = function(uid, slotNumber) {
+        var slot = $rootScope.team[slotNumber];
         if (!uid) return 0;
-        return units[uid - 1].slots;
+        if ($scope.limitBreakOn[slotNumber]) return units[uid - 1].limitSlot;
+        else if (!$scope.limitBreakOn[slotNumber]) {
+            for (var i=units[uid - 1].slots;i<5;++i) if(slot.slots[i]) slot.slots[i] = null;
+            return units[uid - 1].slots;
+        }
     };
 
     $scope.onDrop = function(i,j) {
@@ -67,11 +73,16 @@ controllers.MainCtrl = function($scope, $rootScope, $state, $stateParams, $contr
         });
 
     };
+    $scope.limitBreak = function(slotNumber) {
+        $scope.limitBreakOn[slotNumber] = !$scope.limitBreakOn[slotNumber];
+    };
 
     $scope.quickFill = function(slotNumber) {
         var slot = $rootScope.team[slotNumber];
         if (!slot || !slot.uid) return;
-        var slotCount = units[slot.uid - 1].slots;
+        var slotCount = 0;
+        if ($scope.limitBreakOn[slotNumber]) slotCount = units[slot.uid - 1].limitSlot;
+        else slotCount = units[slot.uid - 1].slots;
         slot.slots = [ ];
         for (var i=0;i<slotCount;++i)
             slot.slots.push({ id: [ 2, 3, 1, 6, 4][i], level: 5 });
