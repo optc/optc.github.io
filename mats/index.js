@@ -127,7 +127,10 @@ app.controller('MainCtrl',function($scope, $rootScope, $timeout, $storage, $sce,
         var temp = { };
         $rootScope.pool.forEach(function(unit) {
             unit.evolvers.forEach(function(x) {
-                var key = ('000' + x).slice(-4);
+                if(typeof x != 'string'){
+                    var key = ('000' + x).slice(-4);
+                }
+                else var key = x;
                 temp[key] = (temp[key] || [ ]).concat(unit.to);
             });
         });
@@ -155,10 +158,13 @@ app.controller('MainCtrl',function($scope, $rootScope, $timeout, $storage, $sce,
     };
     
     var getEvolverClass = function(id) {
+        if (typeof id == 'string'){
+            return 'Skull'
+        }
         if (id.between(78,83)) return 'Robber Penguins';
         if (id.between(84,88) || id == 266) return 'Pirate Penguins';
         if (id.between(89,94)) return 'Hermit Crabs';
-        if (id.between(95,99)) return 'Armored Crabs';
+        if (id.between(95,99) || id == 1180) return 'Armored Crabs';
         if (id.between(100,104) || id == 267) return 'Dragons';
         if (id.between(115,118)) return 'Sea Horses';
         if (id.between(300,304)) return 'Plated Lobsters';

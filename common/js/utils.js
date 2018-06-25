@@ -27,6 +27,7 @@
                 if (window.details[n + 1].limit[x].description.includes("Boosts base ATK by ")) limitAttack += parseInt(window.details[n + 1].limit[x].description.substring(19), 10);
                 if (window.details[n + 1].limit[x].description.includes("Boosts base RCV by ")) limitRecovery += parseInt(window.details[n + 1].limit[x].description.substring(19), 10);
                 if (window.details[n + 1].limit[x].description.includes("Reduce base Special Cooldown by ")) limitCooldown += parseInt(window.details[n + 1].limit[x].description.substring(32, 33), 10);
+                if (window.details[n + 1].limit[x].description.includes("additional Socket slot")) limitSlots += parseInt(window.details[n + 1].limit[x].description.substring(8, 9), 10);
             }
         }
         var result = {
@@ -39,6 +40,7 @@
             maxHP: element[12], maxATK: element[13],
             maxRCV: element[14], limitHP: limitHealth, 
             limitATK: limitAttack, limitRCV: limitRecovery,
+            limitSlot: limitSlots,
             growth: {
                 hp: element[15] ? element[15][0] : 0,
                 atk: element[15] ? element[15][1] : 0,
