@@ -7,18 +7,8 @@ onmessage = function(e) {
     /*if (e.data.jpn_server == true) {
 		probability = .2;
 	}*/
-	// if special event selected probability is doubled
-	if (e.data.special_event == true) {
-		probability *= 2;
-	}
-    // if special event selected probability is trippled
-	else if (e.data.special_3event == true) {
-		probability *= 3;
-	}
-    // if special event selected probability is quadrupled
-	else if (e.data.special_4event == true) {
-		probability *= 4;
-	}
+	// if special event selected probability is affected
+    probability *= e.data.special_event;
 
 
 	var prob = 0;
