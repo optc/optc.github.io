@@ -25938,7 +25938,7 @@ window.details = {
         special: "Adds .9x to Chain multiplier for 1 turn. If your crew has 4 or more characters of the same Type, boosts ATK of the Dominant Type characters by 2.25x and changes all orbs, including [BLOCK] orbs, to Dominant Type orbs",
         sailor: {
             "base": "If your crew has 4 or more characters of the same Type, boosts base ATK of the Dominant Type by 125",
-            "level1": "Makes [PSY] orbs \"beneficial\" all characters",
+            "level1": "Makes [PSY] orbs \"beneficial\" for all characters",
         },
         sailorNotes: "#{beneficial}",
         specialName: "Closing Declaration",
@@ -25969,7 +25969,7 @@ window.details = {
             { "description": "Boosts base RCV by 20" },
             { "description": "Boosts base HP by 75" },
             { "description": "Boosts base HP by 105" },
-            { "description": "Acquire Sailor Ability 1: Makes [PSY] orbs \"beneficial\" all characters" },
+            { "description": "Acquire Sailor Ability 1: Makes [PSY] orbs \"beneficial\" for all characters" },
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base ATK by 50" },
             { "description": "Acquire Potential 3: Pinch Healing" },
