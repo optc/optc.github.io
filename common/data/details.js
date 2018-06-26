@@ -4622,7 +4622,7 @@ window.details = {
             { "description": "Boosts base ATK by 10" },
             { "description": "Boosts base RCV by 30" },
             { "description": "Boosts base ATK by 20" },
-            { "description": "Acquire Potential 1: [QCK] Damage Reduction" },
+            { "description": "Acquire Potential 1: [DEX] Damage Reduction" },
             { "description": "Boosts base HP by 40" },
             { "description": "Boosts base RCV by 30" },
             { "description": "Boosts base HP by 40" },
@@ -4637,13 +4637,13 @@ window.details = {
         ],
         potential: [
             {
-                "Name": "[QCK] Damage Reduction",
+                "Name": "[DEX] Damage Reduction",
                 "description": [
-                    "Level 1: Reduce damage taken from [QCK] characters by 1%",
-                    "Level 2: Reduce damage taken from [QCK] characters by 2%",
-                    "Level 3: Reduce damage taken from [QCK] characters by 3%",
-                    "Level 4: Reduce damage taken from [QCK] characters by 4%",
-                    "Level 5: Reduce damage taken from [QCK] characters by 5%"
+                    "Level 1: Reduce damage taken from [DEX] characters by 1%",
+                    "Level 2: Reduce damage taken from [DEX] characters by 2%",
+                    "Level 3: Reduce damage taken from [DEX] characters by 3%",
+                    "Level 4: Reduce damage taken from [DEX] characters by 4%",
+                    "Level 5: Reduce damage taken from [DEX] characters by 5%"
                 ]
             },
             {
@@ -7349,7 +7349,7 @@ window.details = {
             { "description": "Boosts base RCV by 20" },
             { "description": "Boosts base HP by 50" },
             { "description": "Boosts base RCV by 30" },
-            { "description": "Acquire Potential 1: [QCK] Damage Reduction" },
+            { "description": "Acquire Potential 1: [DEX] Damage Reduction" },
             { "description": "Boosts base HP by 80" },
             { "description": "Boosts base ATK by 40" },
             { "description": "Reduce base Special Cooldown by 2 turns" },
@@ -7364,13 +7364,13 @@ window.details = {
         ],
         potential: [
             {
-                "Name": "[QCK] Damage Reduction",
+                "Name": "[DEX] Damage Reduction",
                 "description": [
-                    "Level 1: Reduce damage taken from [QCK] characters by 1%",
-                    "Level 2: Reduce damage taken from [QCK] characters by 2%",
-                    "Level 3: Reduce damage taken from [QCK] characters by 3%",
-                    "Level 4: Reduce damage taken from [QCK] characters by 4%",
-                    "Level 5: Reduce damage taken from [QCK] characters by 5%"
+                    "Level 1: Reduce damage taken from [DEX] characters by 1%",
+                    "Level 2: Reduce damage taken from [DEX] characters by 2%",
+                    "Level 3: Reduce damage taken from [DEX] characters by 3%",
+                    "Level 4: Reduce damage taken from [DEX] characters by 4%",
+                    "Level 5: Reduce damage taken from [DEX] characters by 5%"
                 ]
             },
             {
@@ -12285,7 +12285,7 @@ window.details = {
             { "description": "Boosts base ATK by 10" },
             { "description": "Boosts base RCV by 30" },
             { "description": "Boosts base ATK by 20" },
-            { "description": "Acquire Potential 1: [QCK] Damage Reduction" },
+            { "description": "Acquire Potential 1: [DEX] Damage Reduction" },
             { "description": "Boosts base HP by 40" },
             { "description": "Boosts base RCV by 30" },
             { "description": "Boosts base HP by 40" },
@@ -12300,13 +12300,13 @@ window.details = {
         ],
         potential: [
             {
-                "Name": "[QCK] Damage Reduction",
+                "Name": "[DEX] Damage Reduction",
                 "description": [
-                    "Level 1: Reduce damage taken from [QCK] characters by 1%",
-                    "Level 2: Reduce damage taken from [QCK] characters by 2%",
-                    "Level 3: Reduce damage taken from [QCK] characters by 3%",
-                    "Level 4: Reduce damage taken from [QCK] characters by 4%",
-                    "Level 5: Reduce damage taken from [QCK] characters by 5%"
+                    "Level 1: Reduce damage taken from [DEX] characters by 1%",
+                    "Level 2: Reduce damage taken from [DEX] characters by 2%",
+                    "Level 3: Reduce damage taken from [DEX] characters by 3%",
+                    "Level 4: Reduce damage taken from [DEX] characters by 4%",
+                    "Level 5: Reduce damage taken from [DEX] characters by 5%"
                 ]
             },
             {

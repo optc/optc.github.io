@@ -848,15 +848,45 @@ window.matchers = [
     },
     
     {
+        name: 'Cooldown Reduction Potential Ability',
+        target: 'limit',
+        matcher: /Cooldown Reduction/i
+    },
+    
+    {
         name: 'Damage Reduction Potential Ability',
         target: 'limit',
         matcher: /Damage Reduction/i
     },
     
     {
-        name: 'Cooldown Reduction Potential Ability',
+        name: 'STR Damage Reduction Potential Ability',
         target: 'limit',
-        matcher: /Cooldown Reduction/i
+        matcher: /\[STR\] Damage Reduction/i
+    },
+    
+    {
+        name: 'DEX Damage Reduction Potential Ability',
+        target: 'limit',
+        matcher: /\[DEX\] Damage Reduction/i
+    },
+    
+    {
+        name: 'QCK Damage Reduction Potential Ability',
+        target: 'limit',
+        matcher: /\[QCK\] Damage Reduction/i
+    },
+    
+    {
+        name: 'PSY Damage Reduction Potential Ability',
+        target: 'limit',
+        matcher: /\[PSY\] Damage Reduction/i
+    },
+    
+    {
+        name: 'INT Damage Reduction Potential Ability',
+        target: 'limit',
+        matcher: /\[INT\] Damage Reduction/i
     },
 
 ];
