@@ -5223,7 +5223,7 @@ window.specials = {
         type: "class",
     },
     2159: {
-        delay: function(p) { return 1; },,
+        delay: function(p) { return 1; },
         warning: "Selected special (%name%) assumes that the enemy has been poisoned."
     },
     5000: {
