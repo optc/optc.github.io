@@ -11,7 +11,8 @@ var notes = {
         "affected by this captain ability",
     orb: "Orb amplification only affects matching and opposite orbs and works both ways: " +
         "matching orbs will deal #1 more damage and opposite orbs will deal #1 less damage.",
-    poison: "Poison deals 0.5x character's ATK in fixed damage at the end of each turn.",
+    poison: "Poison deals #1 character's ATK in fixed damage that bypasses defensive buffs at the end of each turn.",
+    toxic: "Toxic starts at #1 character's attack and increases by #2 at the end of every turn until #3 damage per turn.",
     random: "Estimated random damage range: between #1 HP and #2 HP #3.",
     randomHeal: "Estimated random recovery range: between #1 HP and #2 HP.",
     randomHits: "The target of each of the #1 hits is chosen randomly.",

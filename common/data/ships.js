@@ -489,7 +489,7 @@ window.ships = [
     
     { //38
         name: "4th Anniversary Thousand Sunny",
-        thumb: null,
+        thumb: 'ship_0039_c.png',
         description: 'Boosted Ability 1: Boosts ATK of all units by 1.5x. Boosts EXP gained by 3x and Beli gained by 3x. Boosted Ability 2: Boosts ATK of all units by 1.5x. At the start of the adventure, all specials start at MAX charge.',
         atk: function(p) {
             return 1.5;
@@ -500,7 +500,7 @@ window.ships = [
     
     { //38
         name: "Nostra Castello",
-        thumb: null,
+        thumb: 'ship_0040_c.png',
         description: 'Boosts ATK of all units by 1.55x and their HP by 1.3x. Makes PERFECTS easier to Hit. Cuts the current HP of each enemy by 3% at the end of each turn. Reduces ATK based on how many Slasher, Free Spirit or Powerhouse characters you have on your crew.',
         atk: function(p) {
             var reduction = 1;

@@ -5222,6 +5222,10 @@ window.specials = {
         atk: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; },
         type: "class",
     },
+    2159: {
+        delay: function(p) { return 1; },,
+        warning: "Selected special (%name%) assumes that the enemy has been poisoned."
+    },
     5000: {
         atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 1.5 : 1; },
         type: "type",
