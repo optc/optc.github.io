@@ -543,7 +543,7 @@ window.details = {
     },
     58: {
         special: "Poisons all enemies",
-        specialNotes: "#{poison}",
+        specialNotes: "#{poison : 0.5x}",
         specialName: "MH5",
         captain: "Reduces damage received by 20%"
     },
@@ -1205,7 +1205,7 @@ window.details = {
     },
     215: {
         special: "Poisons all enemies",
-        specialNotes: "#{poison}",
+        specialNotes: "#{poison : 0.5x}",
         specialName: "Poison Ink",
         captain: "Boosts HP of Striker characters by 1.5x"
     },
@@ -3894,7 +3894,7 @@ window.details = {
     },
     494: {
         special: "Deals 3x character's ATK in [INT] damage to all enemies, Poisons all enemies",
-        specialNotes: "#{poison}",
+        specialNotes: "#{poison : 0.5x}",
         specialName: "Poison Attack"
     },
     495: {
@@ -3904,7 +3904,7 @@ window.details = {
     },
     496: {
         special: "Deals 3x character's ATK in [INT] damage to all enemies, Poisons all enemies",
-        specialNotes: "#{poison}",
+        specialNotes: "#{poison : 0.5x}",
         specialName: "Poison Attack",
         captain: "Boosts ATK of Shooter characters by 1.5x"
     },
@@ -3972,13 +3972,13 @@ window.details = {
     },
     509: {
         special: "Poisons all enemies, boosts ATK of Striker characters by 1.5x for 1 turn",
-        specialNotes: "#{poison}",
+        specialNotes: "#{poison : 0.5x}",
         specialName: "Merciless Ploy: Poison Needle",
         captain: "Boosts ATK of Striker characters by 2x"
     },
     510: {
         special: "Poisons all enemies, boosts ATK of Striker characters by 1.5x for 1 turn",
-        specialNotes: "#{poison}",
+        specialNotes: "#{poison : 0.5x}",
         specialName: "Merciless Ploy: Poison Needle",
         captain: "Reduces damage received by 10%, boosts ATK of Striker characters by 2x"
     },
@@ -4622,7 +4622,7 @@ window.details = {
             { "description": "Boosts base ATK by 10" },
             { "description": "Boosts base RCV by 30" },
             { "description": "Boosts base ATK by 20" },
-            { "description": "Acquire Potential 1: [QCK] Damage Reduction" },
+            { "description": "Acquire Potential 1: [DEX] Damage Reduction" },
             { "description": "Boosts base HP by 40" },
             { "description": "Boosts base RCV by 30" },
             { "description": "Boosts base HP by 40" },
@@ -4637,13 +4637,13 @@ window.details = {
         ],
         potential: [
             {
-                "Name": "[QCK] Damage Reduction",
+                "Name": "[DEX] Damage Reduction",
                 "description": [
-                    "Level 1: Reduce damage taken from [QCK] characters by 1%",
-                    "Level 2: Reduce damage taken from [QCK] characters by 2%",
-                    "Level 3: Reduce damage taken from [QCK] characters by 3%",
-                    "Level 4: Reduce damage taken from [QCK] characters by 4%",
-                    "Level 5: Reduce damage taken from [QCK] characters by 5%"
+                    "Level 1: Reduce damage taken from [DEX] characters by 1%",
+                    "Level 2: Reduce damage taken from [DEX] characters by 2%",
+                    "Level 3: Reduce damage taken from [DEX] characters by 3%",
+                    "Level 4: Reduce damage taken from [DEX] characters by 4%",
+                    "Level 5: Reduce damage taken from [DEX] characters by 5%"
                 ]
             },
             {
@@ -6637,7 +6637,7 @@ window.details = {
     },
     769: {
         special: "Recovers 4,343 HP, Poisons all enemies",
-        specialNotes: "#{poison}",
+        specialNotes: "#{poison : 0.5x}",
         specialName: "Lullaby Parry: Horror",
         captain: "Boosts ATK and RCV of [INT] characters by 1.5x"
     },
@@ -7168,7 +7168,7 @@ window.details = {
         captain: "Boosts ATK of Driven characters by 2x",
         specialName: "Gas Robe",
         special: "Poisons all enemies, boosts ATK of Driven characters by 1.75x for 2 turns",
-        specialNotes: "#{poison}"
+        specialNotes: "#{poison : 0.5x}"
     },
     838: {
         captain: "Boosts ATK of Driven characters by 2.5x",
@@ -7349,7 +7349,7 @@ window.details = {
             { "description": "Boosts base RCV by 20" },
             { "description": "Boosts base HP by 50" },
             { "description": "Boosts base RCV by 30" },
-            { "description": "Acquire Potential 1: [QCK] Damage Reduction" },
+            { "description": "Acquire Potential 1: [DEX] Damage Reduction" },
             { "description": "Boosts base HP by 80" },
             { "description": "Boosts base ATK by 40" },
             { "description": "Reduce base Special Cooldown by 2 turns" },
@@ -7364,13 +7364,13 @@ window.details = {
         ],
         potential: [
             {
-                "Name": "[QCK] Damage Reduction",
+                "Name": "[DEX] Damage Reduction",
                 "description": [
-                    "Level 1: Reduce damage taken from [QCK] characters by 1%",
-                    "Level 2: Reduce damage taken from [QCK] characters by 2%",
-                    "Level 3: Reduce damage taken from [QCK] characters by 3%",
-                    "Level 4: Reduce damage taken from [QCK] characters by 4%",
-                    "Level 5: Reduce damage taken from [QCK] characters by 5%"
+                    "Level 1: Reduce damage taken from [DEX] characters by 1%",
+                    "Level 2: Reduce damage taken from [DEX] characters by 2%",
+                    "Level 3: Reduce damage taken from [DEX] characters by 3%",
+                    "Level 4: Reduce damage taken from [DEX] characters by 4%",
+                    "Level 5: Reduce damage taken from [DEX] characters by 5%"
                 ]
             },
             {
@@ -11425,7 +11425,7 @@ window.details = {
     },
     1149:{
         special: "Deals 3x character's ATK in [INT] damage to all enemies, Poisons all enemies",
-        specialNotes: "#{poison}",
+        specialNotes: "#{poison : 0.5x}",
         specialName: "Poison Attack",
     },
     1150:{
@@ -12285,7 +12285,7 @@ window.details = {
             { "description": "Boosts base ATK by 10" },
             { "description": "Boosts base RCV by 30" },
             { "description": "Boosts base ATK by 20" },
-            { "description": "Acquire Potential 1: [QCK] Damage Reduction" },
+            { "description": "Acquire Potential 1: [DEX] Damage Reduction" },
             { "description": "Boosts base HP by 40" },
             { "description": "Boosts base RCV by 30" },
             { "description": "Boosts base HP by 40" },
@@ -12300,13 +12300,13 @@ window.details = {
         ],
         potential: [
             {
-                "Name": "[QCK] Damage Reduction",
+                "Name": "[DEX] Damage Reduction",
                 "description": [
-                    "Level 1: Reduce damage taken from [QCK] characters by 1%",
-                    "Level 2: Reduce damage taken from [QCK] characters by 2%",
-                    "Level 3: Reduce damage taken from [QCK] characters by 3%",
-                    "Level 4: Reduce damage taken from [QCK] characters by 4%",
-                    "Level 5: Reduce damage taken from [QCK] characters by 5%"
+                    "Level 1: Reduce damage taken from [DEX] characters by 1%",
+                    "Level 2: Reduce damage taken from [DEX] characters by 2%",
+                    "Level 3: Reduce damage taken from [DEX] characters by 3%",
+                    "Level 4: Reduce damage taken from [DEX] characters by 4%",
+                    "Level 5: Reduce damage taken from [DEX] characters by 5%"
                 ]
             },
             {
@@ -14404,7 +14404,7 @@ window.details = {
             },
         ],
         specialName: "Poison Dragon",
-        specialNotes: "Toxic starts at 0.5x character's attack and increases by 3x at the end of every turn until 1,500,000 damage per turn.<br>#{stages}",
+        specialNotes: "#{toxic : 0.5x : 3x : 1,500,000}<br>#{stages}",
     },
     1374: {//Magellan
         captain: "Boosts ATK of [INT] characters by 2.25x and their HP by 1.5x, deals 5 times the damage received in the previous turn in [INT] damage to all enemies at the end of each turn",
@@ -14419,7 +14419,7 @@ window.details = {
             },
         ],
         specialName: "Poison Dragon",
-        specialNotes: "Toxic starts at 0.5x character's attack and increases by 3x at the end of every turn until 1,500,000 damage per turn.<br>#{stages}",
+        specialNotes: "#{toxic : 0.5x : 3x : 1,500,000}<br>#{stages}",
         sailor: {
             "base": "None",
             "level1": "Boosts base ATK, HP and RCV of all characters by 50",
@@ -18757,7 +18757,7 @@ window.details = {
     },
     1642: {//PSY Gas Mask Fodder
         special: "Deals 3x character's ATK in typeless damage to all enemies, Poisons all enemies",
-        specialNotes: "#{poison}",
+        specialNotes: "#{poison : 0.5x}",
         specialName: "Poison Attack",
     },
     1643: {//STR Centaur Fodder
@@ -19607,15 +19607,15 @@ window.details = {
         ]
     },
     1697: {//Magellan
-        captain: "Boosts ATK of all characters by 2.25x and their HP by 1.5x if there's a [STR], [DEX], [QCK], [PSY] and [INT] character in your crew. Cuts the current HP of each enemy by 15% at the end of each turn",
+        captain: "If there's a [STR], [DEX], [QCK], [PSY] and [INT] character in your crew, Boosts ATK of all characters by 2.25x and their HP by 1.5x and cuts the current HP of each enemy by 15% at the end of each turn",
         special: "Inflicts Toxic to all enemies, recovers 13x character's RCV in HP at the end of each turn for 3 turns",
-        specialNotes: "Toxic starts at 50x character's attack and increases by 2x at the end of every turn until 2,000,000 damage per turn.",
+        specialNotes: "#{toxic : 50x : 2x : 2,000,000}",
         specialName: "Venom Cloud",
     },
     1698: {//Magellan
-        captain: "Boosts ATK of all characters by 2.25x and their HP by 1.5x if there's a [STR], [DEX], [QCK], [PSY] and [INT] character in your crew. Cuts the current HP of each enemy by 15% at the end of each turn",
+        captain: "If there's a [STR], [DEX], [QCK], [PSY] and [INT] character in your crew, Boosts ATK of all characters by 2.25x and their HP by 1.5x and cuts the current HP of each enemy by 15% at the end of each turn",
         special: "Inflicts Toxic to all enemies, recovers 13x character's RCV in HP at the end of each turn for 3 turns",
-        specialNotes: "Toxic starts at 50x character's attack and increases by 2x at the end of every turn until 2,000,000 damage per turn.",
+        specialNotes: "#{toxic : 50x : 2x : 2,000,000}",
         specialName: "Venom Cloud",
         sailor: {
             "base": "None",
@@ -25938,7 +25938,7 @@ window.details = {
         special: "Adds .9x to Chain multiplier for 1 turn. If your crew has 4 or more characters of the same Type, boosts ATK of the Dominant Type characters by 2.25x and changes all orbs, including [BLOCK] orbs, to Dominant Type orbs",
         sailor: {
             "base": "If your crew has 4 or more characters of the same Type, boosts base ATK of the Dominant Type by 125",
-            "level1": "Makes [PSY] orbs \"beneficial\" all characters",
+            "level1": "Makes [PSY] orbs \"beneficial\" for all characters",
         },
         sailorNotes: "#{beneficial}",
         specialName: "Closing Declaration",
@@ -25969,7 +25969,7 @@ window.details = {
             { "description": "Boosts base RCV by 20" },
             { "description": "Boosts base HP by 75" },
             { "description": "Boosts base HP by 105" },
-            { "description": "Acquire Sailor Ability 1: Makes [PSY] orbs \"beneficial\" all characters" },
+            { "description": "Acquire Sailor Ability 1: Makes [PSY] orbs \"beneficial\" for all characters" },
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base ATK by 50" },
             { "description": "Acquire Potential 3: Pinch Healing" },
@@ -28600,7 +28600,7 @@ window.details = {
         captainNotes: "Attack boost stacks, so a [PSY] Powerhouse character has a 3.15x ATK",
         special: "If your captain is [INT] or [PSY], reduces crew's ATK DOWN and Silence duration by 3 turns and inflicts Toxic to all enemies. If the captain is a Powerhouse character, boosts ATK against enemies inflicted with Toxic by 1.75x for 1 turn",
         specialName: "Dangerous Butterfly",
-        specialNotes: "Toxic starts at 20x character's attack and increases by ?x at the end of every turn until 500,000 damage per turn.",
+        specialNotes: "#{toxic : 20x : 2x : 500,000}",
         sailor: {
             "base": "Makes [INT] orbs \"beneficial\" for this unit",
             "level1": "Reduces Silence duration on this character by 3 turns",
@@ -28799,24 +28799,99 @@ window.details = {
         ]
     },
     2143: {//Diamante
-        captain: "Boosts ATK of Slasher characters by ?x and their HP by ?x",
+        captain: "Boosts ATK of Slasher characters by 2x and their HP by 1.2x",
         special: "Deals 20x character's ATK in [DEX] damage to one enemy and boosts ATK of Slasher characters by 1.5x for 3 turns",
-        specialName: "Diamante Special",
+        specialName: "Corrida Glaive",
     },
     2144: {//Diamante
         captain: "Boosts ATK of Slasher characters by 2.25x and their HP by 1.2x",
         special: "Deals 20x character's ATK in [DEX] damage to one enemy and boosts ATK of Slasher characters by 1.5x for 3 turns",
-        specialName: "Diamante Special",
+        specialName: "Corrida Glaive",
     },
     2145: {//Rebecca
-        captain: "Boosts ATK of Striker characters by ?x and their HP by ?x",
+        captain: "Boosts ATK of Striker characters by 1.5x and their HP by 1.2x",
         special: "Reduces enemy's Threshold Damage Reduction duration by 2 turns and reduces any damage received above 3,000 HP by ?% for 2 turns",
-        specialName: "Rebecca Special",
+        specialName: "A Moment of Determination",
     },
     2146: {//Rebecca
         captain: "Boosts ATK of Striker characters by 2x and their HP by 1.2x",
         special: "Reduces enemy's Threshold Damage Reduction duration by 2 turns and reduces any damage received above 3,000 HP by ?% for 2 turns",
-        specialName: "Rebecca Special",
+        specialName: "A Moment of Determination",
+    },
+    2159: {//Magellan 6+
+        captain: "If there's a [STR], [DEX], [QCK], [PSY] and [INT] character in your crew, Boosts ATK of all characters by 2.25x and their HP by 1.5x and cuts the current HP of each enemy by 15% at the end of each turn. If 300,000 damage was dealt to enemies in the last turn, poisons all enemies.",
+        captainNotes: "#{poison : 50x}<br>To poison all enemies, the damage dealt with normal attacks must exceed 300,000 and can not bypass immunity.",
+        special: "Inflicts Toxic to all enemies, recovers 13x character's RCV in HP at the end of each turn for 3 turns. If enemies are inflicted with Toxic or Poison upon activation of the special, delays all enemies for 1 turn.",
+        specialNotes: "#{toxic : 50x : 2x : 3,000,000}<br>Delay effect will not trigger from the Toxic in Magellan's special, the enemy must already be delayed.<br>If enemies are both Poisoned and inflicted with Toxic, only the Toxic damage will damage the enemy at the end of the turn. (Not tested)",
+        specialName: "Venom Demon: Hell's Judgement",
+        sailor: {
+            "base": "None",
+            "level1": "Cannot be blown away",
+        },
+        limit: [
+            { "description": "Boosts base ATK by 15" },
+            { "description": "Boosts base HP by 20" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Acquire Potential 1: Pinch Healing" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base ATK by 15" },
+            { "description": "Acquire Sailor Ability 1: Cannot be blown away" },
+            { "description": "Boosts base ATK by 15" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Acquire Potential 2: Barrier Penetration" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base HP by 60" },
+            { "description": "Boosts base RCV by 15" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base RCV by 15" },
+            { "description": "Boosts base HP by 90" },
+            { "description": "Boosts base ATK by 40" },
+            { "description": "Boosts base ATK by 45" },
+            { "description": "Boosts base HP by 90" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base HP by 100" },
+            { "description": "Acquire Potential 3: Reduce No Healing duration" },
+        ],
+        potential: [
+            {
+                "Name": "Pinch Healing",
+                "description": [
+                    "Level 1: If HP is below 10% at the start of the turn, heals for 2x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 15% at the start of the turn, heals for 2x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 20% at the start of the turn, heals for 2x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below 30% at the start of the turn, heals for 2x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below 30% at the start of the turn, heals for 3x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
+                ]
+            },
+            {
+                "Name": "Barrier Penetration",
+                "description": [
+                    "Level 1: This character's attack will ignore barriers if HP is above 99%",
+                    "Level 2: This character's attack will ignore barriers if HP is above 90%",
+                    "Level 3: This character's attack will ignore barriers if HP is above 70%",
+                    "Level 4: This character's attack will ignore barriers if HP is above 50%",
+                    "Level 5: This character's attack will ignore barriers"
+                ]
+            },
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by 1 turn",
+                    "Level 2: Reduces No Healing duration by 2 turns",
+                    "Level 3: Reduces No Healing duration by 3 turns",
+                    "Level 4: Reduces No Healing duration by 4 turns",
+                    "Level 5: Reduces No Healing duration by 5 turns"
+                ]
+            },
+        ]
     },
     2200: {//Doflamingo Raid v2
         captain: "Boosts ATK of Driven and Cerebral characters by 2.5x when HP is 50% or below, 1.5x otherwise",

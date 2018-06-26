@@ -2022,6 +2022,7 @@ window.flags = {
     2140: { rr: 1, rro: 1 },
     2141: { rr: 1, rro: 1 },
     2142: { rr: 1, rro: 1 },
+    2159: { rr: 1, rro: 1 },
     2200: { global: 1 },
     2201: { global: 1 },
 };

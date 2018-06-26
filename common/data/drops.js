@@ -2024,11 +2024,11 @@ window.drops = {
         },
         
         {
-            name: 'Diamante Fortnite',
+            name: 'Coliseum Executioner! Diamante',
             thumb: 2146,
             nakama: null,
-            gamewith: null,
-            'All Difficulties': [ 2143, 2145, -2013, -1991, -1989, -1951 ]//CHANGE THIS
+            gamewith: 109800,
+            'All Difficulties': [ 2143, 2145, -2013, -1991, -1989, -1951, -1718, -1475 ]
         },
         
     ],
@@ -2625,7 +2625,7 @@ window.drops = {
             name: 'Fire Fist Sabo',
             thumb: 1972,
 			nakama: 8197200,
-            gamewith: null,
+            gamewith: 91382,
             'Raging Sea': [ 1971 ]
         },
 
@@ -2649,7 +2649,7 @@ window.drops = {
             name: 'Big Mom',
             thumb: 2109,
             nakama: null,
-            gamewith: null,
+            gamewith: 105881,
             'Sweet Sea': [ 2108 ]
         },
 
@@ -2657,7 +2657,7 @@ window.drops = {
             name: 'Crocodile',
             thumb: 2137,
             nakama: null,
-            gamewith: null,
+            gamewith: 109127,
             'Primordial Sea': [ 2136 ]
         },
         
