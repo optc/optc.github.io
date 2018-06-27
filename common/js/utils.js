@@ -177,6 +177,30 @@
                 case '5003':
                     return '../res/character_10187_t1_psy.png';
                     break;
+                case '5004':
+                    return '../res/character_10173_t1.png';
+                    break;
+                case '5005':
+                    return '../res/character_10175_t1.png';
+                    break;
+                case '5006':
+                    return '../res/character_10174_t1.png';
+                    break;
+                case '5007':
+                    return '../res/character_10176_t1.png';
+                    break;
+                case '5008':
+                    return '../res/character_10177_t1_qck.png';
+                    break;
+                case '5009':
+                    return '../res/character_10177_t1_str.png';
+                    break;
+                case '5010':
+                    return '../res/character_10178_t1_qck.png';
+                    break;
+                case '5011':
+                    return '../res/character_10178_t1_str.png';
+                    break;
                 case '5012':
                     return '../res/character_10181_t1.png';
                     break;

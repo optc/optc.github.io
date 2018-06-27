@@ -14404,7 +14404,7 @@ window.details = {
             },
         ],
         specialName: "Poison Dragon",
-        specialNotes: "#{toxic : 0.5x : 3x : 1,500,000}<br>#{stages}",
+        specialNotes: "#{toxic : 0.5x : 3x : 1,500,000}<br>#{stages}<br>If enemies are both Poisoned and inflicted with Toxic, only the Toxic damage will damage the enemy at the end of the turn.",
     },
     1374: {//Magellan
         captain: "Boosts ATK of [INT] characters by 2.25x and their HP by 1.5x, deals 5 times the damage received in the previous turn in [INT] damage to all enemies at the end of each turn",
@@ -14419,7 +14419,7 @@ window.details = {
             },
         ],
         specialName: "Poison Dragon",
-        specialNotes: "#{toxic : 0.5x : 3x : 1,500,000}<br>#{stages}",
+        specialNotes: "#{toxic : 0.5x : 3x : 1,500,000}<br>#{stages}<br>If enemies are both Poisoned and inflicted with Toxic, only the Toxic damage will damage the enemy at the end of the turn.",
         sailor: {
             "base": "None",
             "level1": "Boosts base ATK, HP and RCV of all characters by 50",
@@ -19609,13 +19609,13 @@ window.details = {
     1697: {//Magellan
         captain: "If there's a [STR], [DEX], [QCK], [PSY] and [INT] character in your crew, Boosts ATK of all characters by 2.25x and their HP by 1.5x and cuts the current HP of each enemy by 15% at the end of each turn",
         special: "Inflicts Toxic to all enemies, recovers 13x character's RCV in HP at the end of each turn for 3 turns",
-        specialNotes: "#{toxic : 50x : 2x : 2,000,000}",
+        specialNotes: "#{toxic : 50x : 2x : 2,000,000}<br>If enemies are both Poisoned and inflicted with Toxic, only the Toxic damage will damage the enemy at the end of the turn.",
         specialName: "Venom Cloud",
     },
     1698: {//Magellan
         captain: "If there's a [STR], [DEX], [QCK], [PSY] and [INT] character in your crew, Boosts ATK of all characters by 2.25x and their HP by 1.5x and cuts the current HP of each enemy by 15% at the end of each turn",
         special: "Inflicts Toxic to all enemies, recovers 13x character's RCV in HP at the end of each turn for 3 turns",
-        specialNotes: "#{toxic : 50x : 2x : 2,000,000}",
+        specialNotes: "#{toxic : 50x : 2x : 2,000,000}<br>If enemies are both Poisoned and inflicted with Toxic, only the Toxic damage will damage the enemy at the end of the turn.",
         specialName: "Venom Cloud",
         sailor: {
             "base": "None",
@@ -28600,7 +28600,7 @@ window.details = {
         captainNotes: "Attack boost stacks, so a [PSY] Powerhouse character has a 3.15x ATK",
         special: "If your captain is [INT] or [PSY], reduces crew's ATK DOWN and Silence duration by 3 turns and inflicts Toxic to all enemies. If the captain is a Powerhouse character, boosts ATK against enemies inflicted with Toxic by 1.75x for 1 turn",
         specialName: "Dangerous Butterfly",
-        specialNotes: "#{toxic : 20x : 2x : 500,000}",
+        specialNotes: "#{toxic : 20x : 2x : 500,000}<br>If enemies are both Poisoned and inflicted with Toxic, only the Toxic damage will damage the enemy at the end of the turn.",
         sailor: {
             "base": "Makes [INT] orbs \"beneficial\" for this unit",
             "level1": "Reduces Silence duration on this character by 3 turns",
@@ -28818,11 +28818,63 @@ window.details = {
         special: "Reduces enemy's Threshold Damage Reduction duration by 2 turns and reduces any damage received above 3,000 HP by ?% for 2 turns",
         specialName: "A Moment of Determination",
     },
+    2147: {//Cracker
+        captain: "Boosts ATK of Cerebral characters by ?x and their HP by ?x",
+        special: [
+            {
+                "description": "Reduces Chain Multiplier Limit duration by ? turns, changes all orbs to [DEX] orbs, makes [DEX] orbs \"beneficial\" for all characters and cuts the current HP of one enemy by ?% that will ignore damage negating abilities and barriers.",
+                "cooldown": [ 420, 369 ],
+            },
+            {
+                "description": "Reduces Chain Multiplier Limit duration by 5 turns, changes all orbs to [DEX] orbs, makes [DEX] orbs \"beneficial\" for all characters and cuts the current HP of one enemy by 20% that will ignore damage negating abilities and barriers.",
+                "cooldown": [ 420, 369 ],
+            },
+        ],
+        specialNotes: "Damn she fine",
+        specialName: "Cracker is totally the classes I put on this page",
+    },
+    2148: {//Cracker
+        captain: "Boosts ATK of Cerebral characters by 2.75x and their HP by 1.25x",
+        special: [
+            {
+                "description": "Reduces Chain Multiplier Limit duration by ? turns, changes all orbs to [DEX] orbs, makes [DEX] orbs \"beneficial\" for all characters and cuts the current HP of one enemy by ?% that will ignore damage negating abilities and barriers.",
+                "cooldown": [ 420, 369 ],
+            },
+            {
+                "description": "Reduces Chain Multiplier Limit duration by 5 turns, changes all orbs to [DEX] orbs, makes [DEX] orbs \"beneficial\" for all characters and cuts the current HP of one enemy by 20% that will ignore damage negating abilities and barriers.",
+                "cooldown": [ 420, 369 ],
+            },
+        ],
+        specialNotes: "Damn she fine",
+        specialName: "Cracker is totally the classes I put on this page",
+        sailor: {
+            "base": "None",
+            "level1": "",
+            "level2": "",
+        },
+        limit: [
+            { "description": "" },
+            { "description": "" },
+            { "description": "" },
+            { "description": "" },
+            { "description": "" },
+            { "description": "" },
+            { "description": "" },
+            { "description": "" },
+            { "description": "" },
+            { "description": "" },
+            { "description": "" },
+            { "description": "" },
+            { "description": "" },
+            { "description": "" },
+            { "description": "Acquire Potential 2: " },
+        ],
+    },
     2159: {//Magellan 6+
         captain: "If there's a [STR], [DEX], [QCK], [PSY] and [INT] character in your crew, Boosts ATK of all characters by 2.25x and their HP by 1.5x and cuts the current HP of each enemy by 15% at the end of each turn. If 300,000 damage was dealt to enemies in the last turn, poisons all enemies.",
         captainNotes: "#{poison : 50x}<br>To poison all enemies, the damage dealt with normal attacks must exceed 300,000 and can not bypass immunity.",
         special: "Inflicts Toxic to all enemies, recovers 13x character's RCV in HP at the end of each turn for 3 turns. If enemies are inflicted with Toxic or Poison upon activation of the special, delays all enemies for 1 turn.",
-        specialNotes: "#{toxic : 50x : 2x : 3,000,000}<br>Delay effect will not trigger from the Toxic in Magellan's special, the enemy must already be delayed.<br>If enemies are both Poisoned and inflicted with Toxic, only the Toxic damage will damage the enemy at the end of the turn. (Not tested)",
+        specialNotes: "#{toxic : 50x : 2x : 3,000,000}<br>Delay effect will not trigger from the Toxic in Magellan's special, the enemy must already be poisoned.<br>If enemies are both Poisoned and inflicted with Toxic, only the Toxic damage will damage the enemy at the end of the turn.",
         specialName: "Venom Demon: Hell's Judgement",
         sailor: {
             "base": "None",
