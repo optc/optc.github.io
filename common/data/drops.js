@@ -2477,6 +2477,7 @@ window.drops = {
         {
             name: 'Clash!! Caesar',
             thumb: 1830,
+            global: true,
             nakama: 4183000,
             gamewith: 75007,
             condition: 'Take 10% MAX Health in Environmental Damage every 2 turns',
@@ -2508,6 +2509,7 @@ window.drops = {
         {
             name: 'Clash!! Señor Pink',
             thumb: 1943,
+            global: true,
             nakama: 4194300,
             gamewith: 88927,
             Master: [ 1942 ],
@@ -2542,6 +2544,16 @@ window.drops = {
             Ultimate: [ 2096 ],
             Master: [ 2096 ],
             Expert : [ 2096 ],
+        },
+        
+        {
+            name: 'Clash!! Cracker',
+            thumb: 2148,
+            nakama: null,
+            gamewith: 110168,
+            Ultimate: [ 2147 ],
+            Master: [ 2147 ],
+            Expert : [ 2147 ],
         },
         
         {
