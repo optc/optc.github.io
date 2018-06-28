@@ -7363,6 +7363,50 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Striker") ? 2 : 1; },
         hp: function(p) { return p.unit.class.has("Striker") ? 1.2 : 1; },
     },
+    2147: {
+        atk: function(p) { return !(p.unit.class.has("Fighter")) ? 1 : p.classCount.Fighter == 6 ? 1.75 : 1; },
+        chainModifier: function(p) { return  p.classCount.Fighter == 6 ? 4 : 1; }
+    },
+    2148: {
+        atk: function(p) { return !(p.unit.class.has("Fighter")) ? 1 : p.classCount.Fighter == 6 ? 1.75 : 1; },
+        chainModifier: function(p) { return  p.classCount.Fighter == 6 ? 4 : 1; }
+    },
+    2149: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? 1 : 1; },//Change this
+        hp: function(p) { return p.unit.class.has("Fighter") ? 1 : 1; },//Change this
+    },
+    2150: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? 2.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Fighter") ? 1.2 : 1; },
+    },
+    2151: {
+        atk: function(p) { return 1; },//Change This
+        hp: function(p) { return 1; },//Change This
+    },
+    2152: {
+        atk: function(p) { return 2; },
+        hp: function(p) { return 1.3; },
+    },
+    2153: {
+        atk: function(p) { return !p.unit.class.has("Fighter") ? 1 : (((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) == 2) && (p.orb != 'g')) ? 1 : 1); },//Change This
+    },
+    2154: {
+        atk: function(p) { return !p.unit.class.has("Fighter") ? 1 : (((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) == 2) && (p.orb != 'g')) ? 2.75 : 2.5); },
+    },
+    2155: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? 1 : 1; },//Change This
+    },
+    2156: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? 1.75 : 1; },
+    },
+    2157: {
+        atk: function(p) { return p.unit.class.has("Cerebral") ? 1 : 1; },//Change This
+        hp: function(p) { return p.unit.class.has("Cerebral") ? 1 : 1; },//Change This
+    },
+    2158: {
+        atk: function(p) { return p.unit.class.has("Cerebral") ? 2.75 : 1; },
+        hp: function(p) { return p.unit.class.has("Cerebral") ? 1.25 : 1; },
+    },
     2159: {
         atk: function(p) { if(p.colorCount.INT>=1 && p.colorCount.PSY>=1 && p.colorCount.STR>=1 && p.colorCount.DEX>=1 && p.colorCount.QCK>=1)
                 return 2.25;
@@ -7374,6 +7418,14 @@ window.captains = {
             else
                 return 1;
                },
+    },
+    2162: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? 1 : 1; },//Change this
+        hp: function(p) { return p.unit.class.has("Fighter") ? 1 : 1; },//Change this
+    },
+    2163: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? 2.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Fighter") ? 1.25 : 1; },
     },
     2200: {
         atk: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Cerebral")) && p.percHP <= 50.0 ? 2.5 : 1.5; }
