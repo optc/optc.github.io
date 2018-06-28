@@ -6588,7 +6588,7 @@ window.captains = {
         hp: function(p) { return (p.unit.type == "INT" || p.unit.class.has("Fighter")) ? 1.2 : 1 }
     },
     1964: {
-        atk: function(p) { return p.unit.class.has("Powerhouse") && p.percHP >= 99.0 ? 1 : 1; }//CHANGE THIS
+        atk: function(p) { return p.unit.class.has("Powerhouse") && p.percHP >= 99.0 ? 2.25 : 1; }//CHANGE THIS
     },
     1965: {
         atk: function(p) { return p.unit.class.has("Powerhouse") && p.percHP >= 70.0 ? 2.75 : 1; }
