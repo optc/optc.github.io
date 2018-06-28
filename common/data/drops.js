@@ -836,7 +836,6 @@ window.drops = {
             shortName: 'Dressrosa 4',
             thumb: null,
             nakama: null,
-            completion: 'come back next week',
             gamewith: null,
         },
         

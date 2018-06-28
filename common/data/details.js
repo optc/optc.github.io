@@ -29031,7 +29031,7 @@ window.details = {
             {
                 "Name": "[DEX] Damage Reduction",
                 "description": [
-                    "Level 1: Reduce damage taken from [DEX] characters by 1%",
+                    "Level 1: Reduce damage taken from [DEX] characters by ?%",
                     "Level 2: Reduce damage taken from [DEX] characters by ?%",
                     "Level 3: Reduce damage taken from [DEX] characters by ?%",
                     "Level 4: Reduce damage taken from [DEX] characters by ?%",
@@ -29039,13 +29039,13 @@ window.details = {
                 ]
             },
             {
-                "Name": "Pinch Healing",
+                "Name": "Reduce No Healing duration",
                 "description": [
-                    "Level 1: If HP is below % at the start of the turn, heals for x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 2: If HP is below ?% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 3: If HP is below ?% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 4: If HP is below ?% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character",
-                    "Level 5: If HP is below ?% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a Perfect with this character"
+                    "Level 1: Reduces No Healing duration by ? turn",
+                    "Level 2: Reduces No Healing duration by ? turn",
+                    "Level 3: Reduces No Healing duration by ? turns",
+                    "Level 4: Reduces No Healing duration by ? turns",
+                    "Level 5: Reduces No Healing duration by ? turns"
                 ]
             },
         ]
