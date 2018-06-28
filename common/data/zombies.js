@@ -563,4 +563,8 @@ window.zombies = {
         type: 'healer',
         multiplier: 5
     },
+    2156: { // Pekoms
+        type: 'zombie',
+        threshold: 0.5//CHANGE THIS
+    },
 };

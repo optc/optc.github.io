@@ -13033,14 +13033,14 @@ window.details = {
         captain: "Boosts ATK of all characters by 2.75x and their HP by 1.5x if you have a Striker, Shooter, Fighter and Slasher on your crew. Attacks will ignore defensive barriers and buffs.",
         captainNotes: "Attacks are still affected by DEF value. DEF boost buffs (Blue shield) still reduce your damage, but Damage Negating (Yellow shield) and % Damage Reduction (Rainbow shield) are ignored). Multiple class characters count as a character of each class. Enemy attacks will go through YOUR defensive buffs.",
         special: "Cuts the current HP of each enemy by 30%. If Blackbeard is a captain, this ability will ignore damage negating abilities and barriers",
-        specialNotes: "If Blackbeard is not a captain, the effect works exactly like Whitebeard special and is affected by barriers.",
+        specialNotes: "If Blackbeard is not a captain, the effect works exactly like Whitebeard special and is affected by barriers.<br>#{ignoreBarrier}",
         specialName: "World Shaking Impact",
     },
     1268: {//Legend Blackbeard
         captain: "Boosts ATK of all characters by 2.75x and their HP by 1.5x if you have a Striker, Shooter, Fighter and Slasher on your crew. Attacks will ignore defensive barriers and buffs.",
         captainNotes: "Attacks are still affected by DEF value. DEF boost buffs (Blue shield) still reduce your damage, but Damage Negating (Yellow shield) and % Damage Reduction (Rainbow shield) are ignored). Multiple class characters count as a character of each class. Enemy attacks will go through YOUR defensive buffs.",
         special: "Cuts the current HP of each enemy by 30%. If Blackbeard is a captain, this ability will ignore damage negating abilities and barriers",
-        specialNotes: "If Blackbeard is not a captain, the effect works exactly like Whitebeard special and is affected by barriers.",
+        specialNotes: "If Blackbeard is not a captain, the effect works exactly like Whitebeard special and is affected by barriers.<br>#{ignoreBarrier}",
         specialName: "World Shaking Impact",
         sailor: {
             "base": "None",
@@ -26357,14 +26357,14 @@ window.details = {
     },
     2026: {//Hina
         captain: "Boosts ATK of [QCK] and [PSY] characters by 2x",
-        special: "Delays all enemies for 1 turn. If your Captain is a [QCK] or [PSY] character, boosts the Color Affinity of [QCK] and [PSY] by 2x for 1 turn",
+        special: "Delays all enemies for 1 turn. If your Captain is a [QCK] or [PSY] character, boosts the Color Affinity of [QCK] and [PSY] characters by 2x for 1 turn",
         specialNotes: "#{colorAffinity : 2}",
         specialName: "Kimino Sleeve Cage: Lock",
         sailor: "Boosts base ATK of [PSY] and [QCK] characters by 50",
     },
     2027: {//Hina
         captain: "Boosts ATK of [QCK] and [PSY] characters by 2.25x and their RCV by 1.2x",
-        special: "Delays all enemies for 1 turn. If your Captain is a [QCK] or [PSY] character, boosts the Color Affinity of [QCK] and [PSY] by 2x for 1 turn",
+        special: "Delays all enemies for 1 turn. If your Captain is a [QCK] or [PSY] character, boosts the Color Affinity of [QCK] and [PSY] characters by 2x for 1 turn",
         specialNotes: "#{colorAffinity : 2}",
         specialName: "Kimino Sleeve Cage: Lock",
         sailor: {
@@ -26681,8 +26681,9 @@ window.details = {
     2046: {//Yasopp
         captain: "Boosts ATK of Shooter characters by 2.25x and their HP by 1.2x",
         special: "Deals 20x character's ATK in Typeless damage to one enemy that will ignore damage negating abilities and barriers. If your crew has 4 or more characters of the same Type, amplifies the effect of orbs for the Dominant Type by 1.75x for 1 turn.",
-        sailor: "If this character has a [STR] orb and you hit a PERFECT with him, keep his [STR] orb for the next turn",
         specialName: "Exquisite Aim",
+        specialNotes: "#{ignoreBarrier}",
+        sailor: "If this character has a [STR] orb and you hit a PERFECT with him, keep his [STR] orb for the next turn",
     },
     2047: {//Koala
         captain: "Boosts ATK of Fighter characters by 2.5x if they have a matching orb, by 2x otherwise",
@@ -27734,12 +27735,14 @@ window.details = {
         captain: "Boosts ATK of Free Spirit and Shooter characters by 1.75x and boosts HP of [DEX] characters by 1.2x",
         special: "Deal 40x character's ATK in typeless damage to one enemy that will ignore damage negating abilities and barriers and reduces enemies ATK UP, Increased Defense and Enrage duration by 3 turns. If your captain is [DEX] or [QCK], Changes own orb into [DEX] and adds 40x characters ATK as additional typeless damage for 1 turn",
         specialName: "A Tormenting Show",
+        specialNotes: "#{ignoreBarrier}",
         sailor: "If this character has a [DEX] orb and you hit a GOOD or GREAT with him, keep his [DEX] orb for the next turn",
     },
     2105: {//Mr. Tanaka
         captain: "Boosts ATK of Free Spirit and Shooter characters by 2.25x and boosts HP of [DEX] characters by 1.2x",
         special: "Deal 40x character's ATK in typeless damage to one enemy that will ignore damage negating abilities and barriers and reduces enemies ATK UP, Increased Defense and Enrage duration by 3 turns. If your captain is [DEX] or [QCK], Changes own orb into [DEX] and adds 40x characters ATK as additional typeless damage for 1 turn",
         specialName: "A Tormenting Show",
+        specialNotes: "#{ignoreBarrier}",
         sailor: {
             "base": "If this character has a [DEX] orb and you hit a GOOD or GREAT with him, keep his [DEX] orb for the next turn",
             "level1": "Reduces Silence duration on this character by 3 turns",
@@ -28834,8 +28837,6 @@ window.details = {
             "level1": "Boosts this character's attack against [INT] characters by 1.2x",
             "level2": "Makes [PSY] orbs \"beneficial\" for Fighter characters",
         },
-        limit: "Not Translated",
-        potential: "Not Translated",
     },
     2149: {//Zeff
         captain: "Reduces cooldown of all specials by ? turn at the start of the fight, boosts ATK of Fighter characters by ?x and their HP by ?x",
@@ -28853,8 +28854,6 @@ window.details = {
             "base": "When any other character uses a special, reduces own cooldown by 5 turns",
             "level1": "Boosts this character's attack against [DEX] characters by 1.2x",
         },
-        limit: "Not Translated",
-        potential: "Not Translated",
     },
     2151: {//Pudding
         captain: "Boosts ATK of all characters by ?x and their HP by ?x. If you don't attack with her, reduces damage received by ?% for that turn.",
@@ -28870,41 +28869,39 @@ window.details = {
             "base": "Reduces Paralysis duration for 5 turns for herself",
             "level1": "If this character has an [QCK] orb and you hit a PERFECT with her, keep her [QCK] orb for the next turn",
         },
-        limit: "Not Translated",
-        potential: "Not Translated",
     },
     2153: {//Tamago
         captain: "Boosts ATK of Fighter Characters by ?x if they have a matching orb, by ?x otherwise",
         special: "Deals 75x character's ATK in [DEX] damage to all enemies that will ignore damage negating abilities and barriers. If the captain is a Fighter character, changes all orbs, including [BLOCK] orbs, on Fighter characters into Matching orbs",
         specialName: "Legs Benedict",
+        specialNotes: "#{ignoreBarrier}",
         sailor: "When HP is above 50% at the start of the turn, boosts ATK of Fighter characters by 125",
     },
     2154: {//Tamago
         captain: "Boosts ATK of Fighter Characters by 2.75x if they have a matching orb, by 2.5x otherwise",
         special: "Deals 75x character's ATK in [DEX] damage to all enemies that will ignore damage negating abilities and barriers. If the captain is a Fighter character, changes all orbs, including [BLOCK] orbs, on Fighter characters into Matching orbs",
         specialName: "Legs Benedict",
+        specialNotes: "#{ignoreBarrier}",
         sailor: {
             "base": "When HP is above 50% at the start of the turn, boosts ATK of Fighter characters by 125",
             "level1": "Makes [DEX] orbs \"beneficial\" for Fighter characters",
         },
-        limit: "Not Translated",
-        potential: "Not Translated",
     },
     2155: {//Pekoms
         captain: "Boosts ATK of Fighter characters by ?x, protects from defeat as long as HP is above ?%",
         special: "Cuts the current HP of one enemy by 20% that will ignore damage negating abilities and barriers and removes enemies Increased Defense buff",
         specialName: "Flicker Power Knuckle",
+        specialNotes: "#{ignoreBarrier}",
     },
     2156: {//Pekoms
         captain: "Boosts ATK of Fighter characters by 1.75x, protects from defeat as long as HP is above ?%",
         special: "Cuts the current HP of one enemy by 20% that will ignore damage negating abilities and barriers and removes enemies Increased Defense buff",
         specialName: "Flicker Power Knuckle",
+        specialNotes: "#{ignoreBarrier}",
         sailor: {
             "base": "Reduces Blindness duration by 5 turns",
             "level1": "Makes [INT] orbs \"beneficial\" for Fighter characters",
         },
-        limit: "Not Translated",
-        potential: "Not Translated",
     },
     2157: {//Cracker
         captain: "Boosts ATK of Cerebral characters by ?x and their HP by ?x",
@@ -28913,11 +28910,13 @@ window.details = {
                 "description": "Changes all orbs to [DEX] orbs, makes [DEX] orbs \"beneficial\" for all characters and cuts the current HP of one enemy by 10% that will ignore damage negating abilities and barriers.",
                 "cooldown": [ 26, null ],
             },
+            {
                 "description": "Reduces Chain Multiplier Limit duration by 5 turns, changes all orbs, including [BLOCK] orbs, to [DEX] orbs, makes [DEX] orbs \"beneficial\" for all characters and cuts the current HP of one enemy by 20% that will ignore damage negating abilities and barriers.",
                 "cooldown": [ 30, null ],
             },
         ],
         specialName: "Honey Pretzel",
+        specialNotes: "#{ignoreBarrier}<br>#{stages}",
     },
     2158: {//Cracker
         captain: "Boosts ATK of Cerebral characters by 2.75x and their HP by 1.25x",
@@ -28926,17 +28925,18 @@ window.details = {
                 "description": "Changes all orbs to [DEX] orbs, makes [DEX] orbs \"beneficial\" for all characters and cuts the current HP of one enemy by 10% that will ignore damage negating abilities and barriers.",
                 "cooldown": [ 26, null ],
             },
+            {
                 "description": "Reduces Chain Multiplier Limit duration by 5 turns, changes all orbs, including [BLOCK] orbs, to [DEX] orbs, makes [DEX] orbs \"beneficial\" for all characters and cuts the current HP of one enemy by 20% that will ignore damage negating abilities and barriers.",
                 "cooldown": [ 30, null ],
             },
         ],
         specialName: "Honey Pretzel",
+        specialNotes: "#{ignoreBarrier}<br>#{stages}",
         sailor: {
             "base": "None",
             "level1": "Boosts base ATK of Cerebral characters by 75",
             "level2": "Boosts base HP of [DEX] characters by 75",
-        limit: "Not Translated",
-        potential: "Not Translated",
+        },
     },
     2159: {//Magellan 6+
         captain: "If there's a [STR], [DEX], [QCK], [PSY] and [INT] character in your crew, Boosts ATK of all characters by 2.25x and their HP by 1.5x and cuts the current HP of each enemy by 15% at the end of each turn. If 300,000 damage was dealt to enemies in the last turn, poisons all enemies.",

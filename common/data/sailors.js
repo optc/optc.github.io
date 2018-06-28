@@ -497,6 +497,12 @@ window.sailors = {
         rcvStatic: function(p) { return p.unit.class.has("Cerebral") ? 50 : 0; },
         hpStatic: function(p) { return p.unit.class.has("Cerebral") ? 50 : 0; },
     },
+    2153: {
+        atkStatic: function(p) { return p.percHP >= 50.0 && p.unit.class.has("Fighter") ? 125 : 0; },
+    },
+    2154: {
+        atkStatic: function(p) { return p.percHP >= 50.0 && p.unit.class.has("Fighter") ? 125 : 0; },
+    },
     5000: {
         atkStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 50 : 0; },
     },

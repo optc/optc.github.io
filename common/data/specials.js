@@ -5222,6 +5222,52 @@ window.specials = {
         atk: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; },
         type: "class",
     },
+    2147: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? window.specials[2147].multiplier : 1; },
+        type: "class",
+        onActivation: function(p) {
+            var n = (p.percHP >= 50 ? 2.25 : 1);
+            window.specials[2147].multiplier = n;
+            p.scope.notify({
+                text: 'HP ' + (n == 2 ? 'above' : 'below') + ' 50%, using the ' + n + 'x multiplier.',
+                name: '2147warning'
+            });
+        }
+    },
+    2148: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? window.specials[2148].multiplier : 1; },
+        type: "class",
+        onActivation: function(p) {
+            var n = (p.percHP >= 50 ? 2.25 : 1);
+            window.specials[2148].multiplier = n;
+            p.scope.notify({
+                text: 'HP ' + (n == 2 ? 'above' : 'below') + ' 50%, using the ' + n + 'x multiplier.',
+                name: '2148warning'
+            });
+        }
+    },
+    2049: {
+        affinity: function(p) { return !(p.unit.class.has("Fighter")) ? 1 : window.specials[2049].multiplier; },
+        onActivation: function(p) {
+            if (p.captain.class.has("Fighter")) {
+                window.specials[2049].multiplier = 1.75;
+            }
+            else{
+                window.specials[2049].multiplier = 1;
+            }
+        }
+    },
+    2050: {
+        affinity: function(p) { return !(p.unit.class.has("Fighter")) ? 1 : window.specials[2050].multiplier; },
+        onActivation: function(p) {
+            if (p.captain.class.has("Fighter")) {
+                window.specials[2050].multiplier = 1.75;
+            }
+            else{
+                window.specials[2050].multiplier = 1;
+            }
+        }
+    },
     2159: {
         delay: function(p) { return 1; },
         warning: "Selected special (%name%) assumes that the enemy has been poisoned."
