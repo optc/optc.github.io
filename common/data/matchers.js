@@ -9,12 +9,6 @@ window.matchers = [
     },
 
     {
-        name: 'Type-boosting captains',
-        target: 'captain',
-        matcher: /Boosts (ATK|HP|RCV|ATK and HP|ATK and RCV|HP and RCV|ATK, HP and RCV) of[^,]+(STR|DEX|QCK|PSY|INT)\b/i
-    },
-
-    {
         name: 'Class-boosting captains',
         target: 'captain',
         matcher: /Boosts (ATK|HP|RCV|ATK and HP|ATK and RCV|HP and RCV|ATK, HP and RCV) of[^,]+(Slasher|Striker|Fighter|Shooter|Free Spirit|Cerebral|Powerhouse|Driven)/i
