@@ -26813,7 +26813,7 @@ window.details = {
         specialName: "Double Edge Long Blade Slash",
     },
     2054: {//Headcracker Doll
-        captain: "Boosts ATK of all characters by 1.75x, reduces crew's RCV to 0 and protects from defeat as long as HP is above ??%",
+        captain: "Boosts ATK of all characters by 1.75x, reduces crew's RCV to 0 and protects from defeat as long as HP is above 50%",
         special: "If there are 3 enemies or more on the stage, deals 50,000 fixed damage to all enemies",
         specialName: "Unrelentless Physical Work",
     },

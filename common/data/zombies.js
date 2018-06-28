@@ -541,7 +541,7 @@ window.zombies = {
     },
     2054: { // Headcracker
         type: 'zombie',
-        threshold: 0.5//CHANGE THIS
+        threshold: 0.5
     },
     5001: { // Smoker/Tashigi
         type: 'healer',
