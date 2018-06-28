@@ -28818,57 +28818,125 @@ window.details = {
         special: "Reduces enemy's Threshold Damage Reduction duration by 2 turns and reduces any damage received above 3,000 HP by ?% for 2 turns",
         specialName: "A Moment of Determination",
     },
-    2147: {//Cracker
+    2147: {//Sanji V2
+        captain: "If there are 6 Fighter characters in your crew, boosts chain multiplier by 4x and boosts ATK of Fighter characters by 1.75x. Boosts chances of getting Matching orbs proportionally to the crew's current HP.",
+        captainNotes: "At 1 HP, the rate of Matching orbs is ???% and at full HP, the rate of Matching orbs is ???%",
+        special: "Deals 150x character's ATK in [PSY] damage to one enemy. If HP is above ?% at the time the special is activated, boosts ATK of Fighter characters by 2.25x for 1 turn. If Sanji is your Captain or Friend/Guest Captain, reduces Chain Multiplier Limit and Chain Coefficient Reduction duration by 10 turns",
+        specialName: "Full Course of Hell",
+    },
+    2148: {//Sanji V2
+        captain: "If there are 6 Fighter characters in your crew, boosts chain multiplier by 4x and boosts ATK of Fighter characters by 1.75x. Boosts chances of getting Matching orbs proportionally to the crew's current HP.",
+        captainNotes: "At 1 HP, the rate of Matching orbs is ???% and at full HP, the rate of Matching orbs is ???%",
+        special: "Deals 150x character's ATK in [PSY] damage to one enemy. If HP is above ?% at the time the special is activated, boosts ATK of Fighter characters by 2.25x for 1 turn. If Sanji is your Captain or Friend/Guest Captain, reduces Chain Multiplier Limit and Chain Coefficient Reduction duration by 10 turns",
+        specialName: "Full Course of Hell",
+        sailor: {
+            "base": "None",
+            "level1": "Boosts this character's attack against [INT] characters by 1.2x",
+            "level2": "Makes [PSY] orbs \"beneficial\" for Fighter characters",
+        },
+        limit: "Not Translated",
+        potential: "Not Translated",
+    },
+    2149: {//Zeff
+        captain: "Reduces cooldown of all specials by ? turn at the start of the fight, boosts ATK of Fighter characters by ?x and their HP by ?x",
+        special: "If your Captain is a Fighter character, boosts the Color Affinity of Fighter characters by 1.75x for 1 turn",
+        specialNotes: "#{colorAffinity : 1.75}",
+        specialName: "Chef's Long Kick",
+        sailor: "When any other character uses a special, reduces own cooldown by 5 turns",
+    },
+    2150: {//Zeff
+        captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of Fighter characters by 2.5x and their HP by 1.2x",
+        special: "If your Captain is a Fighter character, boosts the Color Affinity of Fighter characters by 1.75x for 1 turn",
+        specialNotes: "#{colorAffinity : 1.75}",
+        specialName: "Chef's Long Kick",
+        sailor: {
+            "base": "When any other character uses a special, reduces own cooldown by 5 turns",
+            "level1": "Boosts this character's attack against [DEX] characters by 1.2x",
+        },
+        limit: "Not Translated",
+        potential: "Not Translated",
+    },
+    2151: {//Pudding
+        captain: "Boosts ATK of all characters by ?x and their HP by ?x. If you don't attack with her, reduces damage received by ?% for that turn.",
+        special: "Changes all orbs on all characters into Pudding's orb, recovers 5,000 HP, reduces damage received by 80% for 1 turn and reduces Bind, Despair, Paralysis and Increase Damage Taken duration by 4 turns",
+        specialName: "Memory Film",
+        sailor: "Reduces Paralysis duration for 5 turns for herself",
+    },
+    2152: {//Pudding
+        captain: "Boosts ATK of all characters by 2x and their HP by 1.3x. If you don't attack with her, reduces damage received by 20% for that turn.",
+        special: "Changes all orbs on all characters into Pudding's orb, recovers 5,000 HP, reduces damage received by 80% for 1 turn and reduces Bind, Despair, Paralysis and Increase Damage Taken duration by 4 turns",
+        specialName: "Memory Film",
+        sailor: {
+            "base": "Reduces Paralysis duration for 5 turns for herself",
+            "level1": "If this character has an [QCK] orb and you hit a PERFECT with her, keep her [QCK] orb for the next turn",
+        },
+        limit: "Not Translated",
+        potential: "Not Translated",
+    },
+    2153: {//Tamago
+        captain: "Boosts ATK of Fighter Characters by ?x if they have a matching orb, by ?x otherwise",
+        special: "Deals 75x character's ATK in [DEX] damage to all enemies that will ignore damage negating abilities and barriers. If the captain is a Fighter character, changes all orbs, including [BLOCK] orbs, on Fighter characters into Matching orbs",
+        specialName: "Legs Benedict",
+        sailor: "When HP is above 50% at the start of the turn, boosts ATK of Fighter characters by 125",
+    },
+    2154: {//Tamago
+        captain: "Boosts ATK of Fighter Characters by 2.75x if they have a matching orb, by 2.5x otherwise",
+        special: "Deals 75x character's ATK in [DEX] damage to all enemies that will ignore damage negating abilities and barriers. If the captain is a Fighter character, changes all orbs, including [BLOCK] orbs, on Fighter characters into Matching orbs",
+        specialName: "Legs Benedict",
+        sailor: {
+            "base": "When HP is above 50% at the start of the turn, boosts ATK of Fighter characters by 125",
+            "level1": "Makes [DEX] orbs \"beneficial\" for Fighter characters",
+        },
+        limit: "Not Translated",
+        potential: "Not Translated",
+    },
+    2155: {//Pekoms
+        captain: "Boosts ATK of Fighter characters by ?x, protects from defeat as long as HP is above ?%",
+        special: "Cuts the current HP of one enemy by 20% that will ignore damage negating abilities and barriers and removes enemies Increased Defense buff",
+        specialName: "Flicker Power Knuckle",
+    },
+    2156: {//Pekoms
+        captain: "Boosts ATK of Fighter characters by 1.75x, protects from defeat as long as HP is above ?%",
+        special: "Cuts the current HP of one enemy by 20% that will ignore damage negating abilities and barriers and removes enemies Increased Defense buff",
+        specialName: "Flicker Power Knuckle",
+        sailor: {
+            "base": "Reduces Blindness duration by 5 turns",
+            "level1": "Makes [INT] orbs \"beneficial\" for Fighter characters",
+        },
+        limit: "Not Translated",
+        potential: "Not Translated",
+    },
+    2157: {//Cracker
         captain: "Boosts ATK of Cerebral characters by ?x and their HP by ?x",
         special: [
             {
-                "description": "Reduces Chain Multiplier Limit duration by ? turns, changes all orbs to [DEX] orbs, makes [DEX] orbs \"beneficial\" for all characters and cuts the current HP of one enemy by ?% that will ignore damage negating abilities and barriers.",
-                "cooldown": [ 420, 369 ],
+                "description": "Changes all orbs to [DEX] orbs, makes [DEX] orbs \"beneficial\" for all characters and cuts the current HP of one enemy by 10% that will ignore damage negating abilities and barriers.",
+                "cooldown": [ 26, null ],
             },
-            {
-                "description": "Reduces Chain Multiplier Limit duration by 5 turns, changes all orbs to [DEX] orbs, makes [DEX] orbs \"beneficial\" for all characters and cuts the current HP of one enemy by 20% that will ignore damage negating abilities and barriers.",
-                "cooldown": [ 420, 369 ],
+                "description": "Reduces Chain Multiplier Limit duration by 5 turns, changes all orbs, including [BLOCK] orbs, to [DEX] orbs, makes [DEX] orbs \"beneficial\" for all characters and cuts the current HP of one enemy by 20% that will ignore damage negating abilities and barriers.",
+                "cooldown": [ 30, null ],
             },
         ],
-        specialNotes: "Damn she fine",
-        specialName: "Cracker is totally the classes I put on this page",
+        specialName: "Honey Pretzel",
     },
-    2148: {//Cracker
+    2158: {//Cracker
         captain: "Boosts ATK of Cerebral characters by 2.75x and their HP by 1.25x",
         special: [
             {
-                "description": "Reduces Chain Multiplier Limit duration by ? turns, changes all orbs to [DEX] orbs, makes [DEX] orbs \"beneficial\" for all characters and cuts the current HP of one enemy by ?% that will ignore damage negating abilities and barriers.",
-                "cooldown": [ 420, 369 ],
+                "description": "Changes all orbs to [DEX] orbs, makes [DEX] orbs \"beneficial\" for all characters and cuts the current HP of one enemy by 10% that will ignore damage negating abilities and barriers.",
+                "cooldown": [ 26, null ],
             },
-            {
-                "description": "Reduces Chain Multiplier Limit duration by 5 turns, changes all orbs to [DEX] orbs, makes [DEX] orbs \"beneficial\" for all characters and cuts the current HP of one enemy by 20% that will ignore damage negating abilities and barriers.",
-                "cooldown": [ 420, 369 ],
+                "description": "Reduces Chain Multiplier Limit duration by 5 turns, changes all orbs, including [BLOCK] orbs, to [DEX] orbs, makes [DEX] orbs \"beneficial\" for all characters and cuts the current HP of one enemy by 20% that will ignore damage negating abilities and barriers.",
+                "cooldown": [ 30, null ],
             },
         ],
-        specialNotes: "Damn she fine",
-        specialName: "Cracker is totally the classes I put on this page",
+        specialName: "Honey Pretzel",
         sailor: {
             "base": "None",
-            "level1": "",
-            "level2": "",
-        },
-        limit: [
-            { "description": "" },
-            { "description": "" },
-            { "description": "" },
-            { "description": "" },
-            { "description": "" },
-            { "description": "" },
-            { "description": "" },
-            { "description": "" },
-            { "description": "" },
-            { "description": "" },
-            { "description": "" },
-            { "description": "" },
-            { "description": "" },
-            { "description": "" },
-            { "description": "Acquire Potential 2: " },
-        ],
+            "level1": "Boosts base ATK of Cerebral characters by 75",
+            "level2": "Boosts base HP of [DEX] characters by 75",
+        limit: "Not Translated",
+        potential: "Not Translated",
     },
     2159: {//Magellan 6+
         captain: "If there's a [STR], [DEX], [QCK], [PSY] and [INT] character in your crew, Boosts ATK of all characters by 2.25x and their HP by 1.5x and cuts the current HP of each enemy by 15% at the end of each turn. If 300,000 damage was dealt to enemies in the last turn, poisons all enemies.",
@@ -28944,6 +29012,21 @@ window.details = {
                 ]
             },
         ]
+    },
+    2162: {//Opera
+        captain: "Boosts ATK of Fighter characters by ?x and their HP by ?x",
+        special: "Cuts the current HP of each enemy by 20%. If your crew has 5 or more Fighter characters, reduces Increase Damage Taken, Blindness and Despair duration by 7 turns and delays all enemies for 1 turn.",
+        specialName: "Cream Monster",
+        sailor: "Makes [STR] orbs \"beneficial\" for Fighter characters",
+    },
+    2163: {//Opera
+        captain: "Boosts ATK of Fighter characters by 2.5x and their HP by 1.25x",
+        special: "Cuts the current HP of each enemy by 20%. If your crew has 5 or more Fighter characters, reduces Increase Damage Taken, Blindness and Despair duration by 7 turns and delays all enemies for 1 turn.",
+        specialName: "Cream Monster",
+        sailor: {
+            "base": "Makes [STR] orbs \"beneficial\" for Fighter characters",
+            "level1": "Reduces Silence duration on this character by 3 turns",
+        },
     },
     2200: {//Doflamingo Raid v2
         captain: "Boosts ATK of Driven and Cerebral characters by 2.5x when HP is 50% or below, 1.5x otherwise",
