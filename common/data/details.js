@@ -28843,7 +28843,7 @@ window.details = {
         special: "If your Captain is a Fighter character, boosts the Color Affinity of Fighter characters by 1.75x for 1 turn",
         specialNotes: "#{colorAffinity : 1.75}",
         specialName: "Chef's Long Kick",
-        sailor: "When any other character uses a special, reduces own cooldown by 5 turns",
+        sailor: "When any other character uses a special, reduces own cooldown by 3 turns",
     },
     2150: {//Zeff
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of Fighter characters by 2.5x and their HP by 1.2x",
@@ -28851,7 +28851,7 @@ window.details = {
         specialNotes: "#{colorAffinity : 1.75}",
         specialName: "Chef's Long Kick",
         sailor: {
-            "base": "When any other character uses a special, reduces own cooldown by 5 turns",
+            "base": "When any other character uses a special, reduces own cooldown by 3 turns",
             "level1": "Boosts this character's attack against [DEX] characters by 1.2x",
         },
     },
