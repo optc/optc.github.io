@@ -767,7 +767,7 @@ window.drops = {
         },
         
         {
-            name: 'Dressrosa - Port Town Acacia to Colosseum',
+            name: 'Dressrosa - Port Town Acacia to Coliseum',
             shortName: 'Dressrosa 1',
             thumb: 1782,
             global: true,
@@ -829,6 +829,15 @@ window.drops = {
             '10': [ 1400, 2054 ],
             '11': [ 1421 ],
             '12': [ 1784 ],
+        },
+        
+        {
+            name: 'Dressrosa - Royal Palace Top Floor to Town Center',
+            shortName: 'Dressrosa 4',
+            thumb: null,
+            nakama: null,
+            completion: 'come back next week',
+            gamewith: null,
         },
         
     ],
