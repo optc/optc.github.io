@@ -767,7 +767,7 @@ window.drops = {
         },
         
         {
-            name: 'Dressrosa - Port Town Acacia to Colosseum',
+            name: 'Dressrosa - Port Town Acacia to Coliseum',
             shortName: 'Dressrosa 1',
             thumb: 1782,
             global: true,
@@ -829,6 +829,15 @@ window.drops = {
             '10': [ 1400, 2054 ],
             '11': [ 1421 ],
             '12': [ 1784 ],
+        },
+        
+        {
+            name: 'Dressrosa - Royal Palace Top Floor to Town Center',
+            shortName: 'Dressrosa 4',
+            thumb: null,
+            nakama: null,
+            completion: 'come back next week',
+            gamewith: null,
         },
         
     ],
@@ -1880,7 +1889,7 @@ window.drops = {
         },
         
         {
-            name: 'Crisis of the 800 Year Old Kingdom!',
+            name: 'Crisis in the 800 Year Old Kingdom!',
             thumb: 1818,
             global: true,
             nakama: 2181800,
@@ -2477,6 +2486,7 @@ window.drops = {
         {
             name: 'Clash!! Caesar',
             thumb: 1830,
+            global: true,
             nakama: 4183000,
             gamewith: 75007,
             condition: 'Take 10% MAX Health in Environmental Damage every 2 turns',
@@ -2508,6 +2518,7 @@ window.drops = {
         {
             name: 'Clash!! Señor Pink',
             thumb: 1943,
+            global: true,
             nakama: 4194300,
             gamewith: 88927,
             Master: [ 1942 ],
