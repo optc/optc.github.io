@@ -5246,7 +5246,7 @@ window.specials = {
             });
         }
     },
-    2049: {
+    2149: {
         affinity: function(p) { return !(p.unit.class.has("Fighter")) ? 1 : window.specials[2049].multiplier; },
         onActivation: function(p) {
             if (p.captain.class.has("Fighter")) {
@@ -5257,7 +5257,7 @@ window.specials = {
             }
         }
     },
-    2050: {
+    2150: {
         affinity: function(p) { return !(p.unit.class.has("Fighter")) ? 1 : window.specials[2050].multiplier; },
         onActivation: function(p) {
             if (p.captain.class.has("Fighter")) {
