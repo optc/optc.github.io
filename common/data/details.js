@@ -13546,13 +13546,13 @@ window.details = {
     },
     1311: {//Coliseum Marigold
         captain: "Boosts ATK and HP of Powerhouse characters by 1.5x",
-        special: "Deals 20x character's ATK in [INT] damage to all enemies. Reduces enemy Damage Threshold timers by 1 turn",
+        special: "Deals 20x character's ATK in [INT] damage to all enemies. Reduces enemy Threshold Damage Reduction duration by 1 turn",
         specialNotes: "Damage Threshold is the buff enemies gain that greatly reduces damage received over a certain amount",
         specialName: "King Cobra Machetes",
     },
     1312: {//Coliseum Marigold
         captain: "Boosts ATK and HP of Powerhouse characters by 1.75x",
-        special: "Deals 20x character's ATK in [INT] damage to all enemies. Reduces enemy Damage Threshold timers by 1 turn",
+        special: "Deals 20x character's ATK in [INT] damage to all enemies. Reduces enemy Threshold Damage Reduction duration by 1 turn",
         specialNotes: "Damage Threshold is the buff enemies gain that greatly reduces damage received over a certain amount",
         specialName: "King Cobra Machetes",
     },
