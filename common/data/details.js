@@ -28813,12 +28813,12 @@ window.details = {
     },
     2145: {//Rebecca
         captain: "Boosts ATK of Striker characters by 1.5x and their HP by 1.2x",
-        special: "Reduces enemy's Threshold Damage Reduction duration by 2 turns and reduces any damage received above 3,000 HP by ?% for 2 turns",
+        special: "Reduces enemy's Threshold Damage Reduction duration by 2 turns and reduces any damage received above 3,000 HP by 80% for 2 turns",
         specialName: "A Moment of Determination",
     },
     2146: {//Rebecca
         captain: "Boosts ATK of Striker characters by 2x and their HP by 1.2x",
-        special: "Reduces enemy's Threshold Damage Reduction duration by 2 turns and reduces any damage received above 3,000 HP by ?% for 2 turns",
+        special: "Reduces enemy's Threshold Damage Reduction duration by 2 turns and reduces any damage received above 3,000 HP by 80% for 2 turns",
         specialName: "A Moment of Determination",
     },
     2147: {//Sanji V2
