@@ -28822,14 +28822,14 @@ window.details = {
         specialName: "A Moment of Determination",
     },
     2147: {//Sanji V2
-        captain: "If there are 6 Fighter characters in your crew, boosts chain multiplier by 4x and boosts ATK of Fighter characters by 1.75x. Boosts chances of getting Matching orbs proportionally to the crew's current HP.",
-        captainNotes: "At 1 HP, the rate of Matching orbs is ???% and at full HP, the rate of Matching orbs is ???%",
+        captain: "If there are 6 Fighter characters in your crew, boosts chain multiplier by 4x and boosts ATK of Fighter characters by 1.75x. Lowers chances of getting Matching orbs proportionally to the crew's current HP.",
+        captainNotes: "At 1 HP, the rate of Matching orbs is ???% (lower) and at full HP, the rate of Matching orbs is ???%",
         special: "Deals 150x character's ATK in [PSY] damage to one enemy. If HP is above ?% at the time the special is activated, boosts ATK of Fighter characters by 2.25x for 1 turn. If Sanji is your Captain or Friend/Guest Captain, reduces Chain Multiplier Limit and Chain Coefficient Reduction duration by 10 turns",
         specialName: "Full Course of Hell",
     },
     2148: {//Sanji V2
-        captain: "If there are 6 Fighter characters in your crew, boosts chain multiplier by 4x and boosts ATK of Fighter characters by 1.75x. Boosts chances of getting Matching orbs proportionally to the crew's current HP.",
-        captainNotes: "At 1 HP, the rate of Matching orbs is ???% and at full HP, the rate of Matching orbs is ???%",
+        captain: "If there are 6 Fighter characters in your crew, boosts chain multiplier by 4x and boosts ATK of Fighter characters by 1.75x. Lowers chances of getting Matching orbs proportionally to the crew's current HP.",
+        captainNotes: "At 1 HP, the rate of Matching orbs is ???% (lower) and at full HP, the rate of Matching orbs is ???%",
         special: "Deals 150x character's ATK in [PSY] damage to one enemy. If HP is above ?% at the time the special is activated, boosts ATK of Fighter characters by 2.25x for 1 turn. If Sanji is your Captain or Friend/Guest Captain, reduces Chain Multiplier Limit and Chain Coefficient Reduction duration by 10 turns",
         specialName: "Full Course of Hell",
         sailor: {
@@ -28839,7 +28839,7 @@ window.details = {
         },
     },
     2149: {//Zeff
-        captain: "Reduces cooldown of all specials by ? turn at the start of the fight, boosts ATK of Fighter characters by ?x and their HP by ?x",
+        captain: "Reduces cooldown of all specials by ? turn at the start of the fight, boosts ATK of Fighter characters by 2.25x and their HP by 1.2x",
         special: "If your Captain is a Fighter character, boosts the Color Affinity of Fighter characters by 1.75x for 1 turn",
         specialNotes: "#{colorAffinity : 1.75}",
         specialName: "Chef's Long Kick",
@@ -28871,7 +28871,7 @@ window.details = {
         },
     },
     2153: {//Tamago
-        captain: "Boosts ATK of Fighter Characters by ?x if they have a matching orb, by ?x otherwise",
+        captain: "Boosts ATK of Fighter Characters by 2.5x if they have a matching orb, by 2.25x otherwise",
         special: "Deals 75x character's ATK in [DEX] damage to all enemies that will ignore damage negating abilities and barriers. If the captain is a Fighter character, changes all orbs, including [BLOCK] orbs, on Fighter characters into Matching orbs",
         specialName: "Legs Benedict",
         specialNotes: "#{ignoreBarrier}",
@@ -28888,7 +28888,7 @@ window.details = {
         },
     },
     2155: {//Pekoms
-        captain: "Boosts ATK of Fighter characters by ?x, protects from defeat as long as HP is above ?%",
+        captain: "Boosts ATK of Fighter characters by 1.5x, protects from defeat as long as HP is above ?%",
         special: "Cuts the current HP of one enemy by 20% that will ignore damage negating abilities and barriers and removes enemies Increased Defense buff",
         specialName: "Flicker Power Knuckle",
         specialNotes: "#{ignoreBarrier}",
