@@ -5229,7 +5229,7 @@ window.specials = {
             var n = (p.percHP >= 50 ? 2.25 : 1);
             window.specials[2147].multiplier = n;
             p.scope.notify({
-                text: 'HP ' + (n == 2 ? 'above' : 'below') + ' 50%, using the ' + n + 'x multiplier.',
+                text: 'HP ' + (n == 2.25 ? 'above' : 'below') + ' 50%, using the ' + n + 'x multiplier.',
                 name: '2147warning'
             });
         }
@@ -5241,12 +5241,12 @@ window.specials = {
             var n = (p.percHP >= 50 ? 2.25 : 1);
             window.specials[2148].multiplier = n;
             p.scope.notify({
-                text: 'HP ' + (n == 2 ? 'above' : 'below') + ' 50%, using the ' + n + 'x multiplier.',
+                text: 'HP ' + (n == 2.25 ? 'above' : 'below') + ' 50%, using the ' + n + 'x multiplier.',
                 name: '2148warning'
             });
         }
     },
-    2049: {
+    2149: {
         affinity: function(p) { return !(p.unit.class.has("Fighter")) ? 1 : window.specials[2049].multiplier; },
         onActivation: function(p) {
             if (p.captain.class.has("Fighter")) {
@@ -5257,7 +5257,7 @@ window.specials = {
             }
         }
     },
-    2050: {
+    2150: {
         affinity: function(p) { return !(p.unit.class.has("Fighter")) ? 1 : window.specials[2050].multiplier; },
         onActivation: function(p) {
             if (p.captain.class.has("Fighter")) {
