@@ -126,12 +126,9 @@ window.CrunchUtils.typeSort = function(array, typeMultiplier, types) {
     
 window.CrunchUtils.gearSort = function(array, typeMultiplier) {
     var result = [ ];
-    //console.log(array);
     var gears = array.gear;
     delete array.gear;
-    //console.log(array);
     function isUnitAMatch(unit, slot) {
-        //console.log(unit);
         if (slot < 2) {
             if (gears[slot] == 3){
                 return true;
@@ -145,7 +142,6 @@ window.CrunchUtils.gearSort = function(array, typeMultiplier) {
         }
     }
     var temp = array.map(function(x) {
-        console.log(x);
         var multiplier = x.multipliers.reduce(function(prev,next) { return prev * next[0]; },1);
         return [ x.base * multiplier * (isUnitAMatch(x.unit.unit, x.position) ? typeMultiplier : 1), x ];
     });
