@@ -2558,7 +2558,7 @@ window.drops = {
             name: 'Clash!! Cracker',
             thumb: 2158,
             nakama: null,
-            gamewith: null,
+            gamewith: 110184,
             Ultimate: [ 2157 ],
             Master: [ 2157 ],
             Expert : [ 2157 ],
