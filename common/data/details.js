@@ -28904,7 +28904,7 @@ window.details = {
         },
     },
     2157: {//Cracker
-        captain: "Boosts ATK of Cerebral characters by ?x and their HP by ?x",
+        captain: "Boosts ATK of Cerebral characters by 2.25x and their HP by 1.2x",
         special: [
             {
                 "description": "Changes all orbs to [DEX] orbs, makes [DEX] orbs \"beneficial\" for all characters and cuts the current HP of one enemy by 10% that will ignore damage negating abilities and barriers.",

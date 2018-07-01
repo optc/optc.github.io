@@ -7405,8 +7405,8 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Fighter") ? 1.75 : 1; },
     },
     2157: {
-        atk: function(p) { return p.unit.class.has("Cerebral") ? 1 : 1; },//Change This
-        hp: function(p) { return p.unit.class.has("Cerebral") ? 1 : 1; },//Change This
+        atk: function(p) { return p.unit.class.has("Cerebral") ? 2.25 : 1; },
+        hp: function(p) { return p.unit.class.has("Cerebral") ? 1.2 : 1; },
     },
     2158: {
         atk: function(p) { return p.unit.class.has("Cerebral") ? 2.75 : 1; },
