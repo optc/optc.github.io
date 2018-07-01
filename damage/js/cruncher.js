@@ -70,6 +70,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
     var mapEffect = { };
     var team = [ ];
     var initDone = false;
+    
+    var gearLevel = [ 0, 0 ];
 
     /* * * * * Events * * * * */
 
@@ -166,6 +168,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                     baseDamage[j].multipliers = baseDamage[j].multipliers
                         .filter(function(x) { return x[1] != 'chain' && x[1] != 'captain effect'; });
                 }
+                baseDamage.gear = [ $scope.data.gearLevelLeft, $scope.data.gearLevelRight ]
                 var newDamages = cptsWith.damageSorters[i].damageSorter(baseDamage);
                 if (newDamages === null) continue;
                 for (var k=0;k<newDamages.length;++k) {
@@ -1058,6 +1061,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             captain: team[1].unit,
             friendCaptain: team[0].unit,
             actions: [ $scope.data.actionleft, $scope.data.actionright ],
+            gear: [ $scope.data.gearLevelLeft, $scope.data.gearLevelRight ],
             hitcombo: hitModifiers,
             effectName: $scope.data.effect,
         };

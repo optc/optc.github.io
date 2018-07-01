@@ -2156,7 +2156,7 @@ window.units = [
     [ "Pekoms, Former Inhabitant of Mokomo Dukedom", "INT", [ "Fighter", "Powerhouse" ], 4, 15, 6, 3, 50, 392109, 346, 298, 37, 970, 871, 120, null ],
     [ "Pekoms, Returning to his Home Country", "INT", [ "Fighter", "Powerhouse" ], 5, 30, 4, 4, 99, 4000000, 965, 854, 109, 2560, 1417, 301, null ],
     [ "Cracker", "DEX", [ "Cerebral", "Powerhouse" ], 4, 30, 6, 2, 70, 1066998, 305, 393, 45, 1270, 786, 128, null ],
-    [ "Thousand Arm Cracker", "DEX", [ "Cerebral", "Powerhouse" ], 5, 50, 4, 3, 99, 5000000, 1167, 739, 101, null, null, null, null ],
+    [ "Thousand Arm Cracker", "DEX", [ "Cerebral", "Powerhouse" ], 5, 50, 4, 3, 99, 5000000, 1167, 739, 101, 2835, 1510, 210, null ],
     [ "Magellan, Hell's Judgement", "DEX", [ "Striker", "Shooter" ], "6+", 65, 4, 5, 99, 5000000, 1510, 733, 299, 3842, 1589, 328, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],

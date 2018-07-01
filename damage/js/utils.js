@@ -123,6 +123,46 @@ window.CrunchUtils.typeSort = function(array, typeMultiplier, types) {
     result.push(beginning.concat(end));
     return result;
 };
+    
+window.CrunchUtils.gearSort = function(array, typeMultiplier) {
+    var result = [ ];
+    //console.log(array);
+    var gears = array.gear;
+    delete array.gear;
+    //console.log(array);
+    function isUnitAMatch(unit, slot) {
+        //console.log(unit);
+        if (slot < 2) {
+            if (gears[slot] == 3){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+        else {
+            return false;
+        }
+    }
+    var temp = array.map(function(x) {
+        console.log(x);
+        var multiplier = x.multipliers.reduce(function(prev,next) { return prev * next[0]; },1);
+        return [ x.base * multiplier * (isUnitAMatch(x.unit.unit, x.position) ? typeMultiplier : 1), x ];
+    });
+    temp.sort(function(x,y) { return x[0] - y[0]; });
+    result.push(temp.map(function(x) { return x[1]; }));
+    // class-based
+    var beginning = [ ], end = [ ];
+    array.forEach(function(x) {
+        if (isUnitAMatch(x.unit.unit)) {
+            end.push(x);
+        } else {
+            beginning.push(x);
+        }
+    });
+    result.push(beginning.concat(end));
+    return result;
+};
 
 window.CrunchUtils.getOrbMultiplier = function(orb, type, uclass, baseMultiplier, boostedMultiplier, captains, effectName) {
     if(effectName == 'STR Orbs Beneficial'){

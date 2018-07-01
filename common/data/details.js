@@ -28908,11 +28908,11 @@ window.details = {
         special: [
             {
                 "description": "Changes all orbs to [DEX] orbs, makes [DEX] orbs \"beneficial\" for all characters and cuts the current HP of one enemy by 10% that will ignore damage negating abilities and barriers.",
-                "cooldown": [ 26, null ],
+                "cooldown": [ 26, 13 ],
             },
             {
                 "description": "Reduces Chain Multiplier Limit duration by 5 turns, changes all orbs, including [BLOCK] orbs, to [DEX] orbs, makes [DEX] orbs \"beneficial\" for all characters and cuts the current HP of one enemy by 20% that will ignore damage negating abilities and barriers.",
-                "cooldown": [ 30, null ],
+                "cooldown": [ 30, 17 ],
             },
         ],
         specialName: "Honey Pretzel",
@@ -28923,11 +28923,11 @@ window.details = {
         special: [
             {
                 "description": "Changes all orbs to [DEX] orbs, makes [DEX] orbs \"beneficial\" for all characters and cuts the current HP of one enemy by 10% that will ignore damage negating abilities and barriers.",
-                "cooldown": [ 26, null ],
+                "cooldown": [ 26, 13 ],
             },
             {
                 "description": "Reduces Chain Multiplier Limit duration by 5 turns, changes all orbs, including [BLOCK] orbs, to [DEX] orbs, makes [DEX] orbs \"beneficial\" for all characters and cuts the current HP of one enemy by 20% that will ignore damage negating abilities and barriers.",
-                "cooldown": [ 30, null ],
+                "cooldown": [ 30, 17 ],
             },
         ],
         specialName: "Honey Pretzel",

@@ -7020,11 +7020,41 @@ window.captains = {
         hp: function(p) { return p.unit.class.has("Free Spirit") ? 2 : 1; }
     },
     2073: {
-        atk: function(p) { return p.slot == p.sourceSlot ? 4.25 : 4; },
+        damageSorter: function(d) { return CrunchUtils.gearSort(d, 4.25); },
+        hitAtk: function(p) {
+            switch(p.gear[p.sourceSlot]){
+                case "0":
+                    return 3; break;
+                case "1":
+                    return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect"]) ? 3.5 : 1; break;
+                case "2":
+                    return 4; break;
+                case "3":
+                    return p.slot == p.sourceSlot ? 4.25 : 4; break;
+                default:
+                    return 3;
+            }
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
         hp: function(p) { return 1.25; }
     },
     2074: {
-        atk: function(p) { return p.slot == p.sourceSlot ? 4.25 : 4; },
+        damageSorter: function(d) { return CrunchUtils.gearSort(d, 4.25); },
+        hitAtk: function(p) {
+            switch(p.gear[p.sourceSlot]){
+                case "0":
+                    return 3; break;
+                case "1":
+                    return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect"]) ? 3.5 : 1; break;
+                case "2":
+                    return 4; break;
+                case "3":
+                    return p.slot == p.sourceSlot ? 4.25 : 4; break;
+                default:
+                    return 3;
+            }
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
         hp: function(p) { return 1.25; }
     },
     2075: {
