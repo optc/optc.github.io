@@ -5181,14 +5181,14 @@ window.specials = {
             }
         },
         type: "condition",
-        warning: "Selected special (%name%) assumes that the enemy has been inflicted with Toxin."
+        warning: "Selected special (%name%) assumes that the enemy has been inflicted with Toxic."
     },
     2140: {
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[2140].multiplier, [p.friendCaptain, p.captain], p.effectName); },
         onActivation: function(p) {
             window.specials[2140].multiplier = 1;
             if (p.captain.type == "INT" || p.captain.type == "QCK"){
-                window.specials[2140].multiplier = 1.75;
+                window.specials[2140].multiplier = 2;
             }
         }
     },
