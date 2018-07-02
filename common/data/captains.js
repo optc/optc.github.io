@@ -7454,6 +7454,28 @@ window.captains = {
                 return 1;
                },
     },
+    2160: {
+        atk: function(p){
+            var specialEnabled = false;
+            for(var i=0;i<2;i++)
+            {
+                if(window.specials[2160].turnedOn[i]==true || window.specials[2161].turnedOn[i]==true){ specialEnabled = true; }
+            }
+            return p.unit.class.has("Shooter") ? specialEnabled ? 1 : 1 : 1;//Change This
+        },
+        hp: function(p) { return p.unit.class.has("Shooter") ? 1 : 1; },//Change This
+    },
+    2161: {
+        atk: function(p){
+            var specialEnabled = false;
+            for(var i=0;i<2;i++)
+            {
+                if(window.specials[2160].turnedOn[i]==true || window.specials[2161].turnedOn[i]==true){ specialEnabled = true; }
+            }
+            return p.unit.class.has("Shooter") ? specialEnabled ? 3.25 : 2.5 : 1;
+        },
+        hp: function(p) { return p.unit.class.has("Shooter") ? 1.2 : 1; },
+    },
     2162: {
         atk: function(p) { return p.unit.class.has("Fighter") ? 1 : 1; },//Change this
         hp: function(p) { return p.unit.class.has("Fighter") ? 1 : 1; },//Change this
