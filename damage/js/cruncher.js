@@ -70,6 +70,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
     var mapEffect = { };
     var team = [ ];
     var initDone = false;
+    
+    var gearLevel = [ 0, 0 ];
 
     /* * * * * Events * * * * */
 
@@ -166,6 +168,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                     baseDamage[j].multipliers = baseDamage[j].multipliers
                         .filter(function(x) { return x[1] != 'chain' && x[1] != 'captain effect'; });
                 }
+                baseDamage.gear = [ $scope.data.gearLevelLeft, $scope.data.gearLevelRight ]
                 var newDamages = cptsWith.damageSorters[i].damageSorter(baseDamage);
                 if (newDamages === null) continue;
                 for (var k=0;k<newDamages.length;++k) {
@@ -508,6 +511,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
     var applyCaptainEffectsToDamage = function(damage,func,modifiers,isStatic,sourceSlot) {
         return damage.map(function(x,n) {
             var params = jQuery.extend({ damage: damage, modifiers: modifiers, sourceSlot: sourceSlot },getParameters(x.position, n));
+            console.log(params.sourceSlot);
             if (isStatic) x.base += func(params);
             else x.multipliers.push([ func(params), 'captain effect' ]);
             return { unit: x.unit, orb: x.orb, base: x.base, multipliers: x.multipliers, position: x.position, sourceSlot: sourceSlot };
@@ -687,7 +691,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             });
             // apply non-static captain effects
             for (var i=0;i<cptsWith.hitModifiers.length;++i)
-                temp = applyCaptainEffectsToDamage(temp,cptsWith.hitModifiers[i].hitAtk,hitModifiers);
+                temp = applyCaptainEffectsToDamage(temp,cptsWith.hitModifiers[i].hitAtk,hitModifiers,false,cptsWith.hitModifiers[i].sourceSlot);
             // calculate the new overall damage
             var total = temp.reduce(function(prev,next) { return prev + next.base * totalMultiplier(next.multipliers); },0);
             if (total < current) return;
@@ -1058,6 +1062,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             captain: team[1].unit,
             friendCaptain: team[0].unit,
             actions: [ $scope.data.actionleft, $scope.data.actionright ],
+            gear: [ $scope.data.gearLevelLeft, $scope.data.gearLevelRight ],
             hitcombo: hitModifiers,
             effectName: $scope.data.effect,
         };

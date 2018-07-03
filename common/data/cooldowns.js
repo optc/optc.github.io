@@ -2155,11 +2155,11 @@ window.cooldowns = [
     [ 18, 12 ],
     [ 19, 13 ],
     [ 19, 13 ],
-    [ 30, null ],//Cracker
-    [ 30, null ],//Cracker
+    [ 30, 15 ],//Cracker
+    [ 30, 15 ],//Cracker
     [ 19, 14 ],
-    null,
-    null,
+    17,
+    17,
     null,
     null,
     null,

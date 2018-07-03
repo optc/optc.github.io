@@ -57,7 +57,6 @@ controllers.MainCtrl = ['$scope', '$rootScope', '$state', '$stateParams', '$cont
 	};
     
     $scope.limitBreak = function() {
-        console.log($scope);
         $scope.limitBreakBox = !$scope.limitBreakBox
         if($scope.character) $rootScope.changeUnit($stateParams.unit, $scope.character.uid);
     }
@@ -77,7 +76,6 @@ controllers.MainCtrl = ['$scope', '$rootScope', '$state', '$stateParams', '$cont
 		// create slot array
 		var slots = Array.apply(null, Array($scope.slots)).map(function (x) { return 0; });;
 		for (i = 0; i < $scope.character.slots.length; ++i) {
-			//console.log($scope.character.slots[i]);
 			var obj = $scope.character.slots[i];
 			if (obj != null) {
 				slots[i] = obj.level;
@@ -97,7 +95,6 @@ controllers.MainCtrl = ['$scope', '$rootScope', '$state', '$stateParams', '$cont
 						$scope.socketProbabilityColor = "red";
 					}
 					$scope.socketProbabilityResult = Math.min((data.result * 100),99.9).toFixed(1);
-                    //console.log($scope.socketProbabilityResult);
 					$scope.socketProbabilityProgressBar = "Complete";
 					$scope.isSocketReady = true;
 				} 

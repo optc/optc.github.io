@@ -5181,14 +5181,14 @@ window.specials = {
             }
         },
         type: "condition",
-        warning: "Selected special (%name%) assumes that the enemy has been inflicted with Toxin."
+        warning: "Selected special (%name%) assumes that the enemy has been inflicted with Toxic."
     },
     2140: {
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[2140].multiplier, [p.friendCaptain, p.captain], p.effectName); },
         onActivation: function(p) {
             window.specials[2140].multiplier = 1;
             if (p.captain.type == "INT" || p.captain.type == "QCK"){
-                window.specials[2140].multiplier = 1.75;
+                window.specials[2140].multiplier = 2;
             }
         }
     },
@@ -5271,6 +5271,34 @@ window.specials = {
     2159: {
         delay: function(p) { return 1; },
         warning: "Selected special (%name%) assumes that the enemy has been poisoned."
+    },
+    2160: {
+        turnedOn: [ false, false ],
+        onActivation: function(p) {
+            window.specials[2160].turnedOn[p.slot] = true;
+            p.scope.notify({
+                text: 'Only affects damage if Doflamingo is your captain',
+                name: '2160warning'
+            });
+        },
+        onDeactivation: function(p) {
+            window.specials[2160].turnedOn[p.slot] = false;
+        },
+        orb: function(p) { return (p.unit.class.has("Shooter")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); }	
+    },
+    2161: {
+        turnedOn: [ false, false ],
+        onActivation: function(p) {
+            window.specials[2161].turnedOn[p.slot] = true;
+            p.scope.notify({
+                text: 'Only affects damage if Doflamingo is your captain',
+                name: '2161warning'
+            });
+        },
+        onDeactivation: function(p) {
+            window.specials[2161].turnedOn[p.slot] = false;
+        },
+        orb: function(p) { return (p.unit.class.has("Shooter")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); }	
     },
     5000: {
         atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 1.5 : 1; },
