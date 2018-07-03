@@ -3425,28 +3425,23 @@ window.evolutions = {
     },
     1832: {
         evolution: 2138,
-        //evolvers: [ 'skullJudge', 'skullJudge', 'skullJudge', 'skullJudge', 'skullJudge' ]
-        evolvers: [  ]
+        evolvers: [ 'skullJudge', 'skullJudge', 'skullJudge', 'skullJudge', 'skullJudge' ]
     },
     1834: {
         evolution: 2139,
-        //evolvers: [ 'skullReiju', 'skullReiju', 'skullReiju', 'skullReiju', 'skullReiju' ]
-        evolvers: [  ]
+        evolvers: [ 'skullReiju', 'skullReiju', 'skullReiju', 'skullReiju', 'skullReiju' ]
     },
     1836: {
         evolution: 2140,
-        //evolvers: [ 'skullIchiji', 'skullIchiji', 'skullIchiji', 'skullIchiji', 'skullIchiji' ]
-        evolvers: [  ]
+        evolvers: [ 'skullIchiji', 'skullIchiji', 'skullIchiji', 'skullIchiji', 'skullIchiji' ]
     },
     1838: {
         evolution: 2141,
-        //evolvers: [ 'skullNiji', 'skullNiji', 'skullNiji', 'skullNiji', 'skullNiji' ]
-        evolvers: [  ]
+        evolvers: [ 'skullNiji', 'skullNiji', 'skullNiji', 'skullNiji', 'skullNiji' ]
     },
     1840: {
         evolution: 2142,
-        //evolvers: [ 'skullYonji', 'skullYonji', 'skullYonji', 'skullYonji', 'skullYonji' ]
-        evolvers: [  ]
+        evolvers: [ 'skullYonji', 'skullYonji', 'skullYonji', 'skullYonji', 'skullYonji' ]
     },
     2143: {
         evolution: 2144,
@@ -3458,7 +3453,7 @@ window.evolutions = {
     },
     2147: {
         evolution: 2148,
-        evolvers: [  ]
+        evolvers: [ 118, 103, 1180, 303, 267 ]
     },
     2149: {
         evolution: 2150,
@@ -3466,19 +3461,19 @@ window.evolutions = {
     },
     2151: {
         evolution: 2152,
-        evolvers: [  ]
+        evolvers: [ 94, 1180, 301, 301, 101 ]
     },
     2153: {
         evolution: 2154,
-        evolvers: [  ]
+        evolvers: [ 86, 86, 266, 94, 102 ]
     },
     2155: {
         evolution: 2156,
-        evolvers: [  ]
+        evolvers: [ 118, 88, 99, 94, 267 ]
     },
     2157: {
         evolution: 2158,
-        evolvers: [  ]
+        evolvers: [ 118, 97, 1180, 302, 102 ]
     },
     1698: {
         evolution: 2159,

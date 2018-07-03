@@ -839,16 +839,17 @@ window.drops = {
             gamewith: null,
         },
         
-    ],
+    ], 
 
-    'Weekly Island': [
+    'Daily Island': [
 
         {
-            name: 'Rush of Turtles',
+            name: 'Turtle Haven',
             day: 0,
             thumb: 193,
             global: true,
             nakama: 3019300,
+            condition: 'From July 3, Daimyo turtles are no longer droppable on the 10 stamina islands (global only)',
             ' ': [ 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 189, 190, 191, 192, 193 ]
         },
         {
@@ -883,7 +884,7 @@ window.drops = {
             thumb: 266,
             global: true,
             nakama: 3026600,
-            ' ': [ 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 266 ]
+            ' ': [ 84, 85, 86, 87, 88, 266 ]
         },
 
 
@@ -900,22 +901,23 @@ window.drops = {
             name: 'Scissor Cavern',
             day: 4,
             thumb: 95,
-            global: true,
             nakama: 3009500,
+            condition: 'Merged into Entrance (global only)',
             ' ': [ 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99 ]
         },
 
         {
-            name: 'Scissor Cavern, Inner Cave',
+            name: 'Scissor Cavern, Entrance',
             day: 4,
             thumb: 304,
             global: true,
             nakama: 3030400,
+            condition: 'Lobsters are no longer droppable in this adventure (global only)',
             ' ': [ 89, 90, 91, 92, 93, 95, 96, 97, 98, 99, 300, 301, 302, 303, 304 ]
         },
         
         {
-            name: 'Scissor Cavern, Deepest Parts',
+            name: 'Scissor Cavern, Innermost Grotto',
             day: 4,
             thumb: 1180,
             global: true,
@@ -1930,7 +1932,7 @@ window.drops = {
             global: true,
             nakama: 2189100,
             gamewith: 84032,
-            condition: 'Take heavy damage at the start of the island',
+            condition: '99% health cut at the start of the adventure and an increase rate of RCV orbs until stage 4',
             'All Difficulties': [ 1890, 1892, -1314, -1316, -1322, -1741, -1743, -1559 ]
         },
         
@@ -1945,6 +1947,7 @@ window.drops = {
         {
             name: 'Binding and Bonds!',
             thumb: 1933,
+            global: true,
             nakama: 2193300,
             gamewith: 86343,
             condition: 'Take 7% current Health in Environmental Damage every 2 turns',
