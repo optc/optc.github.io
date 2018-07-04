@@ -4484,7 +4484,7 @@ window.specials = {
     },
     2004: {
         atk: function(p) { return p.slot == p.sourceSlot ? 2 : 1; },
-        type: "type",
+        type: "type"
     },
     2006: {
         atk: function(p) { return (p.colorCount.STR>=4 && p.unit.type == "STR") ? 2.25 : (p.colorCount.DEX>=4 && p.unit.type == "DEX") ? 2.25 : (p.colorCount.QCK>=4 && p.unit.type == "QCK") ? 2.25 : (p.colorCount.PSY>=4 && p.unit.type == "PSY") ? 2.25 : (p.colorCount.INT>=4 && p.unit.type == "INT") ? 2.25 : 1; },

@@ -29291,14 +29291,14 @@ window.details = {
         ]
     },
     2160: {//Doflamingo
-        captain: "Boosts ATK of Shooter characters by ?x and their HP by ?x. If you use \"Punishment for the Weak\" boosts ATK of Shooter characters by ?x instead.",
-        special: "Makes Damage and Health Cutting Specials of Shooter characters bypass all defensive Buffs, deals 150x character's ATK in [QCK] damage to one enemy, changes [RCV],  [TND] and [BLOCK] orbs into Matching orbs and amplifies the effect of orbs for Shooter characters by 2x for 1 turn",
+        captain: "Boosts ATK of Shooter characters by 2.25x. If you use \"Punishment for the Weak\" boosts ATK of Shooter characters by 2.7x instead.",
+        special: "Makes Damage and Health Cutting Specials of Shooter characters bypass all defensive Buffs, deals 150x character's ATK in [QCK] damage to one enemy, changes [RCV], [TND] and [BLOCK] orbs into Matching orbs and amplifies the effect of orbs for Shooter characters by 2x for 1 turn",
         specialName: "Punishment for the Weak",
         sailor: "Boosts base ATK of Shooter characters by 75",
     },
     2161: {//Doflamingo
         captain: "Boosts ATK of Shooter characters by 2.5x and their HP by 1.2x. If you use \"Punishment for the Weak\" boosts ATK of Shooter characters by 3.25x instead.",
-        special: "Makes Damage and Health Cutting Specials of Shooter characters bypass all defensive Buffs, deals 150x character's ATK in [QCK] damage to one enemy, changes [RCV],  [TND] and [BLOCK] orbs into Matching orbs and amplifies the effect of orbs for Shooter characters by 2x for 1 turn",
+        special: "Makes Damage and Health Cutting Specials of Shooter characters bypass all defensive Buffs, deals 150x character's ATK in [QCK] damage to one enemy, changes [RCV], [TND] and [BLOCK] orbs into Matching orbs and amplifies the effect of orbs for Shooter characters by 2x for 1 turn",
         specialName: "Punishment for the Weak",
         sailor: {
             "base": "Boosts base ATK of Shooter characters by 75",
@@ -29328,7 +29328,7 @@ window.details = {
         ]
     },
     2162: {//Opera
-        captain: "Boosts ATK of Fighter characters by ?x and their HP by ?x",
+        captain: "Boosts ATK of Fighter characters by 2x and their HP by 1.25x",
         special: "Cuts the current HP of each enemy by 20%. If your crew has 5 or more Fighter characters, reduces Increase Damage Taken, Blindness and Despair duration by 7 turns and delays all enemies for 1 turn.",
         specialName: "Cream Monster",
         sailor: "Makes [STR] orbs \"beneficial\" for Fighter characters",
