@@ -28385,6 +28385,22 @@ window.details = {
             },
         ],
     },
+    2124: {//Trebol
+        captain: "Boosts ATK of Striker characters by 2.5x and HP of Driven characters by 1.5x",
+        special: "Reduces crew's current HP by 60%, deals 8x the amount of HP subtracted in typeless damage to all enemies and amplifies the effect of orbs for Striker characters by 1.5x for 1 turn",
+        specialName: "Trebol special",
+    },
+    2125: {//Burgess
+        captain: "Boosts ATK of Fighter characters by 2.5x and reduces damage received by 10%",
+        special: "Cuts the current HP of one enemy by 25% that will ignore damage negating abilities and barriers",
+        specialName: "Burgess special",
+        specialNotes: "#{ignoreBarrier}",
+    },
+    2126: {//Doflamingo
+        captain: "Boosts ATK of Striker characters by 2.5x and their HP by 1.3x. If you use \"Fullbright\" THIS DOFLAMINGO boosts ATK of Striker characters by 3x instead for 3 turns",
+        special: "Cuts the current HP of each enemy by 20%. At the end of the turn, cuts the current HP of each enemy by 10% for 2 turns. Changes own orb into [STR] and when HP is below ??% boosts ATK of Striker and Driven characters by 1.75x for 1 turn",
+        specialName: "Fullbright",
+    },
     2127: {//Brulee
         captain: "Boosts RCV of Cerebral characters by 1.2x and boosts ATK of Cerebral characters by 2.75x if they have a matching orb, by 1.75x otherwise",
         special: "Reduces Bind duration by 2 turns and amplifies the effect of orbs for Cerebral characters by 1.5x and boosts ATK of Cerebral characters by 1.5x for 1 turn.",

@@ -841,7 +841,7 @@ window.drops = {
         
     ], 
 
-    'Daily Island': [
+    'Booster and Evolver Island': [
 
         {
             name: 'Turtle Haven',
