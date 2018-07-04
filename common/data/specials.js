@@ -5107,7 +5107,7 @@ window.specials = {
             var n = (p.percHP <= 50 ? 1.75 : 1);//change this
             window.specials[2126].multiplier = n;
             p.scope.notify({
-                text: 'HP ' + (n == 1.75 ? 'above' : 'below') + ' 50%, using the ' + n + 'x multiplier.',
+                text: 'HP ' + (n == 1.75 ? 'below' : 'above') + ' 50%, using the ' + n + 'x multiplier.',
                 name: '2126warning'
             });
         }
