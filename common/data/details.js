@@ -28385,6 +28385,22 @@ window.details = {
             },
         ],
     },
+    2124: {//Trebol
+        captain: "Boosts ATK of Striker characters by 2.5x and boosts HP of Driven characters by 1.5x",
+        special: "Reduces crew's current HP by 60%, deals 8x the amount of HP subtracted in typeless damage to all enemies and amplifies the effect of orbs for Striker characters by 1.5x for 1 turn",
+        specialName: "Trebol Special",
+    },
+    2125: {//Jesus Burgess
+        captain: "Boosts ATK of Fighter characters by 2.5x and reduces damage received by 10%",
+        special: "Cuts the current HP of one enemy by 25% that will ignore damage negating abilities and barriers",
+        specialName: "Jesus Burgess Special",
+    },
+    2126: {//Doffy
+        captain: "Boosts ATK of Slasher characters by 2.5x and their HP by 1.3x. If you use \"Fullbright\" THIS DOFLAMINGO boosts ATK of Slasher characters by 3x instead for 3 turns",
+        captainNotes: "Using Doflamingo's special will change his own captain boost to 3x. If both Doflamingo's specials are used, the total ATK boost will be 9x",
+        special: "Cuts the current HP of each enemy by 20%, changes own orb into [STR] and at the end of the turn, cuts the current HP of each enemy by 10% for 2 turns. If HP is below 30% at the time the special is activated, boosts ATK of Striker and Driven characters by 1.75x for 1 turn",
+        specialName: "Fullbright",
+    },
     2127: {//Brulee
         captain: "Boosts RCV of Cerebral characters by 1.2x and boosts ATK of Cerebral characters by 2.75x if they have a matching orb, by 1.75x otherwise",
         special: "Reduces Bind duration by 2 turns and amplifies the effect of orbs for Cerebral characters by 1.5x and boosts ATK of Cerebral characters by 1.5x for 1 turn.",
