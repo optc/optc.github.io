@@ -834,9 +834,25 @@ window.drops = {
         {
             name: 'Dressrosa - Royal Palace Top Floor to Town Center',
             shortName: 'Dressrosa 4',
-            thumb: null,
+            thumb: 2126,
             nakama: null,
-            gamewith: null,
+            completion: '10x Rainbow Gems',
+            gamewith: 111173,
+            '01': [ 2003 ],
+            '02': [  ],
+            '03': [ 991 ],
+            '04': [ 1292 ],
+            '05': [ 1400 ],
+            '06': [ 1886 ],
+            '07': [ 1648 ],
+            '08': [ 1903 ],
+            '09': [ 1421 ],
+            '10': [ 2051 ],
+            '11': [ 2124 ],
+            '12': [ 2003 ],
+            '13': [ 2125 ],
+            '14': [  ],
+            '15': [ 2003, 'skullDoffy'  ],
         },
         
     ], 
@@ -3042,6 +3058,38 @@ window.drops = {
             gamewith: 109674,
             showManual: true,
             'All Difficulties': [ /*'skullJudge', 'skullReiju', 'skullIchiji', 'skullNiji', 'skullYonji',*/ -2142, -2141, -2140, -2139, -2138, -1839, -1838, -1836, -1834, -1832 ],
+        },
+        
+        {
+            name: 'Garp Challenge!',
+            thumb: 1318,
+            nakama: null,
+            gamewith: 108237,
+            condition: "The Gamewith Link is only for the most recent Garp Challenge (Fist)",
+        },
+        
+        {
+            name: '3 Stamina Ranking! Vs Blackbeard',
+            thumb: 447,
+            nakama: null,
+            gamewith: 99411,
+            condition: "Elite: Characters with Cost 51 cost and higher can not be used",
+        },
+        
+        {
+            name: '3 Stamina Ranking! Vs Jinbe',
+            thumb: 1700,
+            nakama: null,
+            gamewith: 107881,
+            condition: "Elite: Characters with Cost 51 cost and higher can not be used",
+        },
+        
+        {
+            name: '3 Stamina Ranking! Vs Kyros',
+            thumb: 1873,
+            nakama: null,
+            gamewith: 111278,
+            condition: "Elite: Characters with Cost 51 cost and higher can not be used",
         },
    ],
 
