@@ -7294,18 +7294,18 @@ window.captains = {
     2123: {
         atk: function(p){ return 2; },
     },
-    2124:{
+    2124: {
         atk: function(p) { return p.unit.class.has("Striker") ? 2.5 : 1; },
         hp: function(p) { return p.unit.class.has("Driven") ? 1.5 : 1; },
     },
-    2125:{
+    2125: {
         atk: function(p) { return p.unit.class.has("Fighter") ? 2.5 : 1; },
     },
-    2126:{
+    2126: {
         atk: function(p){
             return p.unit.class.has("Striker") ? p.actions[p.sourceSlot] ? 3 : 2.5 : 1;
         },
-        hp: function(p){ return p.unit.class.has("Striker") ? 1.3 : 1; },
+        hp: function(p) { return p.unit.class.has("Striker") ? 1.3 : 1; },
     },
     2127: {
         atk: function(p) { return !p.unit.class.has("Cerebral") ? 1 : (((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) == 2) && (p.orb != 'g')) ? 2.75 : 1.75); },

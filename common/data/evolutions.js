@@ -3413,7 +3413,8 @@ window.evolutions = {
     },
     2004: {
         evolution: 2126,
-        evolvers: [ 'skullDoffy', 89, 95, 95, 300 ]
+        //evolvers: [ 'skullDoffy', 89, 95, 95, 300 ]
+        evolvers: [ 89, 95, 95, 300 ]
     },
     2131: {
         evolution: 2132,

@@ -28386,19 +28386,20 @@ window.details = {
         ],
     },
     2124: {//Trebol
-        captain: "Boosts ATK of Striker characters by 2.5x and HP of Driven characters by 1.5x",
+        captain: "Boosts ATK of Striker characters by 2.5x and boosts HP of Driven characters by 1.5x",
         special: "Reduces crew's current HP by 60%, deals 8x the amount of HP subtracted in typeless damage to all enemies and amplifies the effect of orbs for Striker characters by 1.5x for 1 turn",
-        specialName: "Trebol special",
+        specialName: "Trebol Special",
     },
-    2125: {//Burgess
+    2125: {//Jesus Burgess
         captain: "Boosts ATK of Fighter characters by 2.5x and reduces damage received by 10%",
         special: "Cuts the current HP of one enemy by 25% that will ignore damage negating abilities and barriers",
-        specialName: "Burgess special",
+        specialName: "Jesus Burgess Special",
         specialNotes: "#{ignoreBarrier}",
     },
-    2126: {//Doflamingo
-        captain: "Boosts ATK of Striker characters by 2.5x and their HP by 1.3x. If you use \"Fullbright\" THIS DOFLAMINGO boosts ATK of Striker characters by 3x instead for 3 turns",
-        special: "Cuts the current HP of each enemy by 20%. At the end of the turn, cuts the current HP of each enemy by 10% for 2 turns. Changes own orb into [STR] and when HP is below ??% boosts ATK of Striker and Driven characters by 1.75x for 1 turn",
+    2126: {//Doffy
+        captain: "Boosts ATK of Slasher characters by 2.5x and their HP by 1.3x. If you use \"Fullbright\" THIS DOFLAMINGO boosts ATK of Slasher characters by 3x instead for 3 turns",
+        captainNotes: "Using Doflamingo's special will change his own captain boost to 3x. If both Doflamingo's specials are used, the total ATK boost will be 9x",
+        special: "Cuts the current HP of each enemy by 20%, changes own orb into [STR] and at the end of the turn, cuts the current HP of each enemy by 10% for 2 turns. If HP is below 30% at the time the special is activated, boosts ATK of Striker and Driven characters by 1.75x for 1 turn",
         specialName: "Fullbright",
     },
     2127: {//Brulee
@@ -29341,25 +29342,42 @@ window.details = {
             "base": "Makes [STR] orbs \"beneficial\" for Fighter characters",
             "level1": "Reduces Silence duration on this character by 3 turns",
         },
+        limit: [
+            { "description": "Boosts base HP by 10" },
+            { "description": "Boosts base HP by 20" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Acquire Potential 1: [DEX] Damage Reduction" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base RCV by 60" },
+            { "description": "Boosts base ATK by 50" },
+            { "description": "Acquire Sailor Ability 1: Reduces Silence duration on this character by 3 turns" },
+            { "description": "Acquire Potential 2: Reduce No Healing duration" },
+        ],
         potential: [
             {
                 "Name": "[DEX] Damage Reduction",
                 "description": [
-                    "Level 1: Reduce damage taken from [DEX] characters by ?%",
-                    "Level 2: Reduce damage taken from [DEX] characters by ?%",
-                    "Level 3: Reduce damage taken from [DEX] characters by ?%",
-                    "Level 4: Reduce damage taken from [DEX] characters by ?%",
-                    "Level 5: Reduce damage taken from [DEX] characters by ?%"
+                    "Level 1: Reduce damage taken from [DEX] characters by 1%",
+                    "Level 2: Reduce damage taken from [DEX] characters by 2%",
+                    "Level 3: Reduce damage taken from [DEX] characters by 3%",
+                    "Level 4: Reduce damage taken from [DEX] characters by 4%",
+                    "Level 5: Reduce damage taken from [DEX] characters by 5%"
                 ]
             },
             {
                 "Name": "Reduce No Healing duration",
                 "description": [
-                    "Level 1: Reduces No Healing duration by ? turn",
-                    "Level 2: Reduces No Healing duration by ? turn",
-                    "Level 3: Reduces No Healing duration by ? turns",
-                    "Level 4: Reduces No Healing duration by ? turns",
-                    "Level 5: Reduces No Healing duration by ? turns"
+                    "Level 1: Reduces No Healing duration by 1 turn",
+                    "Level 2: Reduces No Healing duration by 2 turn",
+                    "Level 3: Reduces No Healing duration by 3 turns",
+                    "Level 4: Reduces No Healing duration by 4 turns",
+                    "Level 5: Reduces No Healing duration by 5 turns"
                 ]
             },
         ]
