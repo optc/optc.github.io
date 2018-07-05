@@ -697,4 +697,25 @@ window.effects = {
         id: 59, // don't change this
         strOrbsEnabled: true
     },
+    
+    '3 Ranking Missions - Wanda, Ivankov and Kyros': {
+        description: 'Stats of certain characters boosted.',
+        thumb: 1873,
+        id: 60, // don't change this
+        atk: function(p) {
+            var character = window.families[p.number];
+            matching = ["Usopp", "Dracule Mihawk", "Jinbe", "Donquixote Doflamingo", "Koala", "Kizaru", "Diamante", "Tanaka", "Byrnndi World", "Caribou", "Charlotte Pudding", "Charlotte Amande"].indexOf(character) != -1;
+            return !matching ? 1 : 1.25;
+        },
+        hp: function(p) {
+            var character = window.families[p.number];
+            matching = ["Usopp", "Dracule Mihawk", "Jinbe", "Donquixote Doflamingo", "Koala", "Kizaru", "Diamante", "Tanaka", "Byrnndi World", "Caribou", "Charlotte Pudding", "Charlotte Amande"].indexOf(character) != -1;
+            return !matching ? 1 : 1.25;
+        },
+        rcv: function(p) {
+            var character = window.families[p.number];
+            matching = ["Usopp", "Dracule Mihawk", "Jinbe", "Donquixote Doflamingo", "Koala", "Kizaru", "Diamante", "Tanaka", "Byrnndi World", "Caribou", "Charlotte Pudding", "Charlotte Amande"].indexOf(character) != -1;
+            return !matching ? 1 : 1.25;
+        },
+    },
 };

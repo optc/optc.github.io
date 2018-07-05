@@ -3040,6 +3040,38 @@ window.drops = {
             showManual: true,
             'All Difficulties': [ /*'skullJudge', 'skullReiju', 'skullIchiji', 'skullNiji', 'skullYonji',*/ -2142, -2141, -2140, -2139, -2138, -1839, -1838, -1836, -1834, -1832 ],
         },
+        
+        {
+            name: 'Garp Challenge!',
+            thumb: 1318,
+            nakama: null,
+            gamewith: 108237,
+            condition: "The Gamewith Link is only for the most recent Garp Challenge (Fist)",
+        },
+        
+        {
+            name: '3 Stamina Ranking! Vs Blackbeard',
+            thumb: 447,
+            nakama: null,
+            gamewith: 99411,
+            condition: "Elite: Characters with Cost 51 cost and higher can not be used",
+        },
+        
+        {
+            name: '3 Stamina Ranking! Vs Jinbe',
+            thumb: 1700,
+            nakama: null,
+            gamewith: 107881,
+            condition: "Elite: Characters with Cost 51 cost and higher can not be used",
+        },
+        
+        {
+            name: '3 Stamina Ranking! Vs Kyros',
+            thumb: 1873,
+            nakama: null,
+            gamewith: 111278,
+            condition: "Elite: Characters with Cost 51 cost and higher can not be used",
+        },
    ],
 
     'Training Forest': [
