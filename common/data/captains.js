@@ -7497,6 +7497,28 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Fighter") ? 2.5 : 1; },
         hp: function(p) { return p.unit.class.has("Fighter") ? 1.25 : 1; },
     },
+    2164: {
+        atk: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Shooter")) ? 1 : 1; },//Change This
+    },
+    2165: {
+        atk: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Shooter")) ? 1.75 : 1; },
+    },
+    2166: {
+        damageSorter: function(d) { return CrunchUtils.classSort(d, 2.5, [ "Striker", "Fighter" ]); },//Change This
+        hitAtk: function(p) {
+            if (!(p.unit.class.has("Striker") || p.unit.class.has("Fighter"))) return 1;
+            return p.modifiers.slice(0, p.chainPosition).subcontains(["Great", "Great", "Great"]) ? 2.5 : 2;//Change This
+        },
+        hitModifiers: ["Great", "Great", "Great", "Perfect", "Perfect", "Perfect"]
+    },
+    2167: {
+        damageSorter: function(d) { return CrunchUtils.classSort(d, 2.5, [ "Striker", "Fighter" ]); },
+        hitAtk: function(p) {
+            if (!(p.unit.class.has("Striker") || p.unit.class.has("Fighter"))) return 1;
+            return p.modifiers.slice(0, p.chainPosition).subcontains(["Great", "Great", "Great"]) ? 2.5 : 2;
+        },
+        hitModifiers: ["Great", "Great", "Great", "Perfect", "Perfect", "Perfect"]
+    },
     2200: {
         atk: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Cerebral")) && p.percHP <= 50.0 ? 2.5 : 1.5; }
     },
