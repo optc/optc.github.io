@@ -511,7 +511,6 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
     var applyCaptainEffectsToDamage = function(damage,func,modifiers,isStatic,sourceSlot) {
         return damage.map(function(x,n) {
             var params = jQuery.extend({ damage: damage, modifiers: modifiers, sourceSlot: sourceSlot },getParameters(x.position, n));
-            console.log(params.sourceSlot);
             if (isStatic) x.base += func(params);
             else x.multipliers.push([ func(params), 'captain effect' ]);
             return { unit: x.unit, orb: x.orb, base: x.base, multipliers: x.multipliers, position: x.position, sourceSlot: sourceSlot };
