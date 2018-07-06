@@ -130,6 +130,24 @@
             case 'skullINT':
                 return 'https://onepiece-treasurecruise.com/wp-content/uploads/black_skull_f.png';
                 break;
+            case 'skullJudge':
+                return 'https://onepiece-treasurecruise.com/wp-content/uploads/Jerma_skull_f1.png';
+                break;
+            case 'skullReiju':
+                return 'https://onepiece-treasurecruise.com/wp-content/uploads/Jerma_skull_f2.png';
+                break;
+            case 'skullIchiji':
+                return 'https://onepiece-treasurecruise.com/wp-content/uploads/Jerma_skull_f3.png';
+                break;
+            case 'skullNiji':
+                return 'https://onepiece-treasurecruise.com/wp-content/uploads/Jerma_skull_f4.png';
+                break;
+            case 'skullYonji':
+                return 'https://onepiece-treasurecruise.com/wp-content/uploads/Jerma_skull_f5.png';
+                break;
+            case 'skullDoffy':
+                return 'https://onepiece-treasurecruise.com/wp-content/uploads/Doflamingo_skull_f.png';
+                break;
         }
         if (n === null || n === undefined)
             return 'https://onepiece-treasurecruise.com/wp-content/themes/onepiece-treasurecruise/images/noimage.png';

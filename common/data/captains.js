@@ -7299,7 +7299,7 @@ window.captains = {
         hp: function(p) { return p.unit.class.has("Driven") ? 1.5 : 1; },
     },
     2125: {
-        atk: function(p) { return p.unit.class.has("Fighter") ? 2.5 : 1; },
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 2.5 : 1; },
     },
     2126: {
         atk: function(p){
@@ -7474,9 +7474,8 @@ window.captains = {
             {
                 if(window.specials[2160].turnedOn[i]==true || window.specials[2161].turnedOn[i]==true){ specialEnabled = true; }
             }
-            return p.unit.class.has("Shooter") ? specialEnabled ? 1 : 1 : 1;//Change This
+            return p.unit.class.has("Shooter") ? specialEnabled ? 2.7 : 2.25 : 1;
         },
-        hp: function(p) { return p.unit.class.has("Shooter") ? 1 : 1; },//Change This
     },
     2161: {
         atk: function(p){
@@ -7490,8 +7489,8 @@ window.captains = {
         hp: function(p) { return p.unit.class.has("Shooter") ? 1.2 : 1; },
     },
     2162: {
-        atk: function(p) { return p.unit.class.has("Fighter") ? 1 : 1; },//Change this
-        hp: function(p) { return p.unit.class.has("Fighter") ? 1 : 1; },//Change this
+        atk: function(p) { return p.unit.class.has("Fighter") ? 2 : 1; },
+        hp: function(p) { return p.unit.class.has("Fighter") ? 1.25 : 1; },
     },
     2163: {
         atk: function(p) { return p.unit.class.has("Fighter") ? 2.5 : 1; },
