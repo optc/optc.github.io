@@ -843,9 +843,9 @@ window.drops = {
             '03': [ 991 ],
             '04': [ 1292 ],
             '05': [ 1400 ],
-            '06': [ 1886 ],
+            '06': [  ],
             '07': [ 1648 ],
-            '08': [ 1903 ],
+            '08': [ 2002 ],
             '09': [ 1421 ],
             '10': [ 2051 ],
             '11': [ 2124 ],
@@ -865,8 +865,8 @@ window.drops = {
             thumb: 193,
             global: true,
             nakama: 3019300,
-            condition: 'From July 3, Daimyo turtles are no longer droppable on the 10 stamina islands (global only)',
-            ' ': [ 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 189, 190, 191, 192, 193 ]
+            'Japan': [ 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 189, 190, 191, 192, 193 ],
+            'Global': [ 105, 106, 107, 108, 109, 189, 190, 191, 192, 193 ]
         },
         {
             name: 'Princess Turtle\'s Dragon Palace',
@@ -918,7 +918,6 @@ window.drops = {
             day: 4,
             thumb: 95,
             nakama: 3009500,
-            condition: 'Merged into Entrance (global only)',
             ' ': [ 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99 ]
         },
 
@@ -928,8 +927,8 @@ window.drops = {
             thumb: 304,
             global: true,
             nakama: 3030400,
-            condition: 'Lobsters are no longer droppable in this adventure (global only)',
-            ' ': [ 89, 90, 91, 92, 93, 95, 96, 97, 98, 99, 300, 301, 302, 303, 304 ]
+            'Japan': [ 89, 90, 91, 92, 93, 95, 96, 97, 98, 99, 300, 301, 302, 303, 304 ],
+            'Global': [ 89, 90, 91, 92, 93, 95, 96, 97, 98, 99 ]
         },
         
         {
@@ -938,7 +937,8 @@ window.drops = {
             thumb: 1180,
             global: true,
             nakama: 3118000,
-            ' ': [ 89, 90, 91, 92, 93, 95, 96, 97, 98, 99, 300, 301, 302, 303, 304, 1180 ]
+            'Japan': [ 89, 90, 91, 92, 93, 95, 96, 97, 98, 99, 300, 301, 302, 303, 304, 1180 ],
+            'Global': [ 95, 96, 97, 98, 99, 300, 301, 302, 303, 304, 1180 ]
         },
 
         {
@@ -946,7 +946,7 @@ window.drops = {
             thumb: 347,
             global: true,
             nakama: 3034700,
-            ' ': [ 342, 343, 344, 345, 346 ]
+            ' ': [ 342, 343, 344, 345, 346, 347, 348, 349, 350, 351 ]
         },
     ],
 
@@ -980,7 +980,7 @@ window.drops = {
             nakama: 2004600,
             condition: 'None',
             gamewith: 7784,
-            condition: 'Siam and Butchie does not drop in Rookie difficulty',			
+            condition: 'Siam and Butchie do not drop in Rookie difficulty',			
             'All Difficulties': [ 41, 42, 43, 45, -16, -14, -15, -13, -1446 ]
         },
 
@@ -991,7 +991,7 @@ window.drops = {
             nakama: 2006600,
             condition: 'None',
             gamewith: 5852,
-            condition: 'Choo and Kuroobi does not drop in Rookie difficulty',
+            condition: 'Choo and Kuroobi do not drop in Rookie difficulty',
             'All Difficulties': [ 61, 62, 63, 65, -12, -10, -11, -66, -9, -1389 ]
         },
 
