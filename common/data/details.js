@@ -28391,7 +28391,7 @@ window.details = {
         specialName: "Beta Betton Mucous Launcher",
     },
     2125: {//Jesus Burgess
-        captain: "Boosts ATK of Fighter characters by 2.5x and reduces damage received by 10%",
+        captain: "Boosts ATK of Powerhouse characters by 2.5x and reduces damage received by 10%",
         special: "Cuts the current HP of one enemy by 25% that will ignore damage negating abilities and barriers",
         specialName: "The Mouth that Induces Hatred",
         specialNotes: "#{ignoreBarrier}",

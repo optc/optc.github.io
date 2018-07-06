@@ -7299,7 +7299,7 @@ window.captains = {
         hp: function(p) { return p.unit.class.has("Driven") ? 1.5 : 1; },
     },
     2125: {
-        atk: function(p) { return p.unit.class.has("Fighter") ? 2.5 : 1; },
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 2.5 : 1; },
     },
     2126: {
         atk: function(p){
