@@ -145,6 +145,9 @@
             case 'skullYonji':
                 return 'https://onepiece-treasurecruise.com/wp-content/uploads/Jerma_skull_f5.png';
                 break;
+            case 'skullDoffy':
+                return 'https://onepiece-treasurecruise.com/wp-content/uploads/Doflamingo_skull_f.png';
+                break;
         }
         if (n === null || n === undefined)
             return 'https://onepiece-treasurecruise.com/wp-content/themes/onepiece-treasurecruise/images/noimage.png';
