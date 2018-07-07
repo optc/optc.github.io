@@ -419,7 +419,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         }
         
         //Apply Static Bonus Damage From Specials
-        var staticBonusDamage = computeFlatBonusDamage(hitModifier);
+        var staticBonusDamage = computeFlatBonusDamage(hitModifier, unit);
         if ((staticBonusDamage > 0) && ((staticBonusDamage - currentDefense)>0) && (result.result > 0)) {
             result.result += (staticBonusDamage - currentDefense);
         }
@@ -769,7 +769,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if (data.hasOwnProperty('chainAddition'))
                 chainAddition.push({ sourceSlot: data.sourceSlot, chainAddition: data.chainAddition || function(){ return 0.0; } });
             if (data.hasOwnProperty('staticMult'))
-                staticMultiplier.push({staticMultiplier: "Yes" });
+                staticMultiplier.push({staticMultiplier: data.staticMult, sourceSlot: data.sourceSlot});
             if (data.hasOwnProperty('affinity'))
                 affinityMultiplier.push({affinityMultiplier: data.affinity || function(){ return 1.0; }});
         });
@@ -780,15 +780,21 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         });
     };
     
-    var computeFlatBonusDamage = function(hitModifier) {
-        
+    var computeFlatBonusDamage = function(hitModifier, unit) {
+        for (var y=0;y<enabledEffects.length;++y) {
+            if (enabledEffects[y].hasOwnProperty('staticMult')){
+                var sailor = true;
+            }
+        }
         var resultDamage = 0;
         //Specials that add multiplier damage
         //Very Specific for Raid Sabo for now
         var conditionalMultiplier = 1.0;
-        if(staticMultiplier.length == 1){
+        var affinityMultiplier = 1.0;
+        if(staticMultiplier.length >= 1 || sailor){
             //Since we need this for defense down, and defense down gets saved for all slots we just go with slot 0
             var params = getParameters(0);
+            params['unit'] = unit;
             //Check if conditional Boosts are activated since they raise 
             for (var x=0;x<enabledSpecials.length;++x) {
                 if  (enabledSpecials[x].type=='condition'){
@@ -797,15 +803,35 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                         conditionalMultiplier = thisMult;
                     }
                 }
+                if  (enabledSpecials[x].hasOwnProperty('affinity')){
+                    var thisMult = enabledSpecials[x]['affinity'](params);
+                    if(thisMult>affinityMultiplier){
+                        affinityMultiplier = thisMult;
+                    }
+                }
             }
             //Add the static extra Damage to each attacking member
+            var multSpecial = 0;
+            var baseDamage = 0;
             for (var y=0;y<enabledSpecials.length;++y) {
                 if (enabledSpecials[y].hasOwnProperty('staticMult')){
                     var slot = enabledSpecials[y].sourceSlot;
-                    var baseDamage = getStatOfUnit(team[slot],'atk');
-                    //var atkCandies = team[slot].candies.atk * 0;
-                    var mult = enabledSpecials[y].staticMult(params);
-                    var staticDamage = Math.ceil((baseDamage)*mult*conditionalMultiplier);
+                    if (enabledSpecials[y].staticMult(params) >= multSpecial){
+                        multSpecial = enabledSpecials[y].staticMult(params);
+                        baseDamage = getStatOfUnit(team[slot],'atk');
+                    }
+                }
+            }
+            var staticDamage = Math.ceil((baseDamage)*multSpecial*conditionalMultiplier*affinityMultiplier);
+            if((hitModifier == 'Great')||(hitModifier == 'Good')||(hitModifier == 'Perfect')){
+                resultDamage += staticDamage;
+            }
+            for (var y=0;y<enabledEffects.length;++y) {
+                if (enabledEffects[y].hasOwnProperty('staticMult')){
+                    var slot = enabledEffects[y].sourceSlot;
+                    var baseDamage2 = getStatOfUnit(team[slot],'atk');
+                    var mult = enabledEffects[y].staticMult(params);
+                    var staticDamage = Math.ceil((baseDamage2)*mult*conditionalMultiplier*affinityMultiplier);
                     if((hitModifier == 'Great')||(hitModifier == 'Good')||(hitModifier == 'Perfect')){
                         resultDamage += staticDamage;
                     } 

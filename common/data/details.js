@@ -12566,14 +12566,14 @@ window.details = {
     },
     1231: {//Smoker
         captain: "Boosts ATK of Striker and Driven characters by 1.75x and reduces RCV of all characters by 50%. If this character becomes your captain in the middle of an island, reduces damage received by 30% and boosts ATK of Striker and Driven characters by 2.1875x instead",
-        special: "Deals large [DEX] damage to one enemy. Swaps this unit with your captain for 2 turns",
+        special: "Deals 30x character's ATK in [DEX] damage to one enemy. Swaps this unit with your captain for 2 turns",
         specialNotes: "This is the same type of ability as raid boss Shiki's swap.",
         specialName: "Armed - White Launcher",
         sailor: "Boosts base ATK of Striker characters by 50",
     },
     1232: {//Smoker
         captain: "Boosts ATK of Striker and Driven characters by 2.25x and reduces RCV of all characters by 50%. If this character becomes your captain in the middle of an island, reduces damage received by 30% and boosts ATK of Striker and Driven characters by 2.925x instead",
-        special: "Deals large [DEX] damage to one enemy. Swaps this unit with your captain for 2 turns",
+        special: "Deals 30x character's ATK in [DEX] damage to one enemy. Swaps this unit with your captain for 2 turns",
         specialNotes: "This is the same type of ability as raid boss Shiki's swap. You cannot use it if another effect swaps your captain. (Such as if Shiki swaps first)",
         specialName: "Armed - White Launcher",
         sailor: {

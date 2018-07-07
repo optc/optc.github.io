@@ -364,6 +364,12 @@ window.sailors = {
         atkStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 75 : 0; },
         hpStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 75 : 0; },
     },
+    1872: {//not working
+        staticMult: function(p) { return 2; }
+    },
+    1873: {//not working
+        staticMult: function(p) { return 2; }
+    },
     1890: {
         rcvStatic: function(p) { return p.unit.class.has("Shooter") ? 50 : 0; },
     },
@@ -502,6 +508,12 @@ window.sailors = {
     },
     2154: {
         atkStatic: function(p) { return p.percHP >= 50.0 && p.unit.class.has("Fighter") ? 125 : 0; },
+    },
+    2164: {//not working
+        staticMult: function(p) { return p.captain.class.has("Fighter") ? 1.5 : 0; }
+    },
+    2165: {//not working
+        staticMult: function(p) { return p.captain.class.has("Fighter") ? 1.5 : 0; }
     },
     5000: {
         atkStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 50 : 0; },
