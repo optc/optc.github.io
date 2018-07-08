@@ -819,7 +819,12 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                     if (enabledSpecials[y].staticMult(params) >= multSpecial){
                         multSpecial = enabledSpecials[y].staticMult(params);
                         baseDamage = getStatOfUnit(team[slot],'atk');
+                        enabledEffects.forEach(function(x) {
+                            if (x.hasOwnProperty('atkStatic'))
+                                baseDamage += x.atkStatic(getParameters(slot));
+                        });
                     }
+                    console.log(baseDamage);
                 }
             }
             var staticDamage = Math.ceil((baseDamage)*multSpecial*conditionalMultiplier*affinityMultiplier);
@@ -831,6 +836,10 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                     var slot = enabledEffects[y].sourceSlot;
                     var baseDamage2 = getStatOfUnit(team[slot],'atk');
                     var mult = enabledEffects[y].staticMult(params);
+                    enabledEffects.forEach(function(x) {
+                        if (x.hasOwnProperty('atkStatic'))
+                            baseDamage2 += x.atkStatic(getParameters(slot));
+                    });
                     var staticDamage = Math.ceil((baseDamage2)*mult*conditionalMultiplier*affinityMultiplier);
                     if((hitModifier == 'Great')||(hitModifier == 'Good')||(hitModifier == 'Perfect')){
                         resultDamage += staticDamage;
@@ -1125,8 +1134,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                     healAmount += zombie.amount;
                 else{
                     enabledEffects.forEach(function(x) {
-                    if (x.hasOwnProperty('rcvStatic'))
-                        rcvtemp += x.rcvStatic(getParameters(i));
+                        if (x.hasOwnProperty('rcvStatic'))
+                            rcvtemp += x.rcvStatic(getParameters(i));
                     });
                     healAmount += Math.floor((data.team[i].rcv + rcvtemp) * zombie.multiplier);
                 }
