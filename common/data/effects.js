@@ -404,7 +404,7 @@ window.effects = {
     },
 
     'Treasure Map [Global]': {
-        description: 'Boost stats of boosted characters',
+        description: 'Boost stats of characters, check in-game news for lists.',
         thumb: 1941,
         id: 43, // don't change this
         atk: function(p) {
@@ -431,7 +431,7 @@ window.effects = {
 	},
 
     'Treasure Map [Japan]': {
-        description: 'Boost stats of many charactersx',
+        description: 'Boost stats of characters, check in-game news for lists.',
         thumb: null,
         id: 44, // don't change this
         atk: function(p) {
