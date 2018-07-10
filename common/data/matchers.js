@@ -246,12 +246,6 @@ window.matchers = [
         matcher: /Boosts ATK[^,]+(all characters)/i
     },
     
-    /*{
-        name: '1.25x ATK specials',
-        target: 'special',
-        matcher: /Boosts ATK\D*by 1.25x/i
-    },*/
-    
     {
         name: '1.5x ATK specials',
         target: 'special',
@@ -316,6 +310,30 @@ window.matchers = [
         name: 'Orb boosters',
         target: 'special',
         matcher: /amplifies.+orb/i
+    },
+    
+    {
+        name: '1.5x Orb boost specials',
+        target: 'special',
+        matcher: /amplifies.+orb\D*by 1.5x/i
+    },
+
+    {
+        name: '1.75x Orb boost specials',
+        target: 'special',
+        matcher: /amplifies.+orb\D*by 1.75x/i
+    },
+
+    {
+        name: '2x Orb boost specials',
+        target: 'special',
+        matcher: /amplifies.+orb\D*by 2x/i
+    },
+    
+    {
+        name: '2.25x Orb boost specials',
+        target: 'special',
+        matcher: /amplifies.+orb\D*by 2.25x/i
     },
 
     {
