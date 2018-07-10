@@ -2059,10 +2059,10 @@ window.drops = {
         },
         
         {
-            name: 'Baby 5 and Don Sai',
-            thumb: 2167,
+            name: 'Baby 5\'s Journey to Become a Bride',
+            thumb: 2165,
             nakama: null,
-            gamewith: null,
+            gamewith: 111404,
             'All Difficulties': [ 2166, 2164, -1985, -1987, -1993, -1719, -1479, -1481 ]
         },
         
@@ -2671,9 +2671,10 @@ window.drops = {
         {
             name: 'Fire Fist Sabo',
             thumb: 1972,
+            global: true,
 			nakama: 8197200,
             gamewith: 91382,
-            'Raging Sea': [ 1971 ]
+            'Calm Sea': [ 1971 ]
         },
 
         {

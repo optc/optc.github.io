@@ -7518,6 +7518,48 @@ window.captains = {
         },
         hitModifiers: ["Great", "Great", "Great", "Perfect", "Perfect", "Perfect"]
     },
+    2168: {
+        atk: function(p){
+            var specialEnabled = false;
+            for(var i=0;i<2;i++)
+            {
+                if(window.specials[2168].turnedOn[i]==true){specialEnabled = true;}
+                if(window.specials[2169].turnedOn[i]==true){specialEnabled = true;}
+            }
+            if(p.colorCount.INT>=1 && p.colorCount.PSY>=1 && p.colorCount.STR>=1 && p.colorCount.DEX>=1 && p.colorCount.QCK>=1){
+                return specialEnabled ? 1 : 1;//Change this
+            }
+            else
+                return specialEnabled ? 1 : 1;//Change this
+        },
+    },
+    2169: {
+        atk: function(p){
+            var specialEnabled = false;
+            for(var i=0;i<2;i++)
+            {
+                if(window.specials[2168].turnedOn[i]==true){specialEnabled = true;}
+                if(window.specials[2169].turnedOn[i]==true){specialEnabled = true;}
+            }
+            if(p.colorCount.INT>=1 && p.colorCount.PSY>=1 && p.colorCount.STR>=1 && p.colorCount.DEX>=1 && p.colorCount.QCK>=1){
+                return specialEnabled ? 3 : 2.25;
+            }
+            else
+                return specialEnabled ? 1.55 : 1;
+        },
+    },
+    2170: {
+        atk: function(p) { return p.unit.type == "DEX" ? 1 : 1; },//Change This
+    },
+    2171: {
+        atk: function(p) { return p.unit.type == "DEX" ? 2.25 : 1; },
+    },
+    2172: {
+        atk: function(p){ return p.unit.class.has("Striker") ? 1 : 1; },//Change This
+    },
+    2173: {
+        atk: function(p){ return p.unit.class.has("Striker") ? 2.25 : 1; },
+    },
     2200: {
         atk: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Cerebral")) && p.percHP <= 50.0 ? 2.5 : 1.5; }
     },
