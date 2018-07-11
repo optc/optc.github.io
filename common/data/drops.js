@@ -2708,6 +2708,14 @@ window.drops = {
             gamewith: 109127,
             'Primordial Sea': [ 2136 ]
         },
+
+        {
+            name: 'Jack',
+            thumb: 2175,
+            nakama: null,
+            gamewith: null,
+            'Raging Sea': [ 2174 ]
+        },
         
     ],
 
@@ -3066,7 +3074,7 @@ window.drops = {
             nakama: null,
             gamewith: 109674,
             showManual: true,
-            'All Difficulties': [ /*'skullJudge', 'skullReiju', 'skullIchiji', 'skullNiji', 'skullYonji',*/ -2142, -2141, -2140, -2139, -2138, -1839, -1838, -1836, -1834, -1832 ],
+            'All Difficulties': [ 'skullJudge', 'skullReiju', 'skullIchiji', 'skullNiji', 'skullYonji', -2142, -2141, -2140, -2139, -2138, -1839, -1838, -1836, -1834, -1832 ],
         },
         
         {

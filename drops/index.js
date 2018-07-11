@@ -218,6 +218,7 @@ app.directive('dayLabel',function() {
 
 app.filter('smartSort',function($rootScope) {
     var getId = function(id) {
+        //if(typeof id == "string"){ console.log(id.charCodeAt(0)); return id.charCodeAt(0); }
         id = Math.abs(id);
         return [ 'STR', 'DEX', 'QCK', 'PSY', 'INT' ].indexOf(window.units[id-1].type || 'INT') * 1000 + id;
     };

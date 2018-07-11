@@ -23652,14 +23652,14 @@ window.details = {
     },
     1903:{//Senor Pink
         captain: "Boosts ATK of Free Spirit characters by 2.25x",
-        special: "Reduces enemy Barrier duration by 1 turn, Reduces enemies Damage Nullification duration by 1 turn and deals 30x character's ATK in [QCK] damage to all enemies",
+        special: "Reduces enemy Barrier and Damage Nullification duration by 1 turn and deals 30x character's ATK in [QCK] damage to all enemies",
         specialName: "Diaper Bomb",
         sailor: "Makes [DEX] orbs \"beneficial\" for this unit",
         sailorNotes: "#{beneficial}",
     },
     1904:{//Senor Pink
         captain: "Boosts ATK of Free Spirit characters by 2.75x",
-        special: "Reduces enemy Barrier duration by 1 turn, Reduces enemies Damage Nullification duration by 1 turn and deals 30x character's ATK in [QCK] damage to all enemies",
+        special: "Reduces enemy Barrier and Damage Nullification duration by 1 turn and deals 30x character's ATK in [QCK] damage to all enemies",
         specialName: "Diaper Bomb",
         sailor: {
             "base": "Makes [DEX] orbs \"beneficial\" for this unit",
@@ -26656,15 +26656,15 @@ window.details = {
     },
     2042: {//Kizaru
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of Free Spirit and Shooter characters by 1.75x",
-        special: "If your crew has 2 or more characters of the same Type, reduces Special Cooldown of characters of that Type by 1 turn and changes adjacent orbs into Matching Orbs",
-        specialNotes: "How the Cooldown Reduction works exactly is not tested.",
+        special: "If your crew has 2 or more characters of the same Type, reduces Special Cooldown of characters of each Type by 1 turn and changes adjacent orbs into Matching Orbs",
+        specialNotes: "Cooldown Reduction works for any Type that you have 2 or more characters of on your crew",
         sailor: "Boosts base ATK, HP and RCV of all characters by 20",
         specialName: "The Afterglow of a Fight",
     },
     2043: {//Kizaru
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of Free Spirit and Shooter characters by 2.25x and their HP by 1.2x",
-        special: "If your crew has 2 or more characters of the same Type, reduces Special Cooldown of characters of that Type by 1 turn and changes adjacent orbs into Matching Orbs",
-        specialNotes: "How the Cooldown Reduction works exactly is not tested.",
+        special: "If your crew has 2 or more characters of the same Type, reduces Special Cooldown of characters of each Type by 1 turn and changes adjacent orbs into Matching Orbs",
+        specialNotes: "Cooldown Reduction works for any Type that you have 2 or more characters of on your crew",
         sailor: "Boosts base ATK, HP and RCV of all characters by 20",
         specialName: "The Afterglow of a Fight",
     },
@@ -29461,8 +29461,8 @@ window.details = {
     },
     2174: {//Jack TM
         captain: "Boosts ATK of Powerhouse characters by ?x and reduces damage received by ?%",
-        special: "Reduces enemies Percent Damage Reduction and Increased Defense duration by 2 turns and deals fixed Typeless damage , depending on the number of enemies on the stage, to one enemy that will ignore damage negating abilities and barriers.",
-        specialNotes: "1 enemy: ? damage<br>2 enemies: ? damage<br>3 enemies: ? damage<br>4 enemies: ? damage<br>5 enemies: ? damage<br>6 enemies: ? damage<br>",
+        special: "Reduces enemies Percent Damage Reduction, Increased Defense and Damage Nullification duration by 2 turns and deals fixed Typeless damage, proportional to the number of enemies on the stage, to one enemy that will ignore damage negating abilities and barriers.",
+        specialNotes: "<br><b>1 enemy:</b> 300,000 damage<br><b>2 enemies:</b> 500,000 damage<br><b>3 enemies:</b> 800,000 damage<br><b>4 enemies:</b> 1,100,000 damage<br><b>5 enemies:</b> 1,500,000 damage<br><b>6 enemies:</b> 2,000,000 damage<br>",
         specialName: "Genocide Shotel",
     },
     2175: {//Jack TM
@@ -29473,10 +29473,10 @@ window.details = {
             "level3": "Not Translated",
             "level4": "Not Translated",
             "level5": "Not Translated",
-            "level6": "Not Translated",
+            "level6": "Boosts ATK of Powerhouse characters by 2.75x and reduces damage received by 20%",
         },
-        special: "Reduces enemies Percent Damage Reduction and Increased Defense duration by 2 turns and deals fixed Typeless damage , depending on the number of enemies on the stage, to one enemy that will ignore damage negating abilities and barriers.",
-        specialNotes: "1 enemy: ? damage<br>2 enemies: ? damage<br>3 enemies: ? damage<br>4 enemies: ? damage<br>5 enemies: ? damage<br>6 enemies: ? damage<br>",
+        special: "Reduces enemies Percent Damage Reduction, Increased Defense and Damage Nullification duration by 2 turns and deals fixed Typeless damage, proportional to the number of enemies on the stage, to one enemy that will ignore damage negating abilities and barriers.",
+        specialNotes: "<br><b>1 enemy:</b> 300,000 damage<br><b>2 enemies:</b> 500,000 damage<br><b>3 enemies:</b> 800,000 damage<br><b>4 enemies:</b> 1,100,000 damage<br><b>5 enemies:</b> 1,500,000 damage<br><b>6 enemies:</b> 2,000,000 damage<br>",
         specialName: "Genocide Shotel",
         sailor: {
             "base": "None",
