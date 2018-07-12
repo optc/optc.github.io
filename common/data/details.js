@@ -29480,14 +29480,15 @@ window.details = {
         specialName: "Genocide Shotel",
         sailor: {
             "base": "None",
-            "level1": "Not Translated",
-            "level2": "Not Translated",
+            "level1": "Boosts base HP of all characters by 75",
+            "level2": "Completely resists Paralysis on this character",
         },
         sailorNotes: "#{beneficial}",
         limit: [
             { "description": "" },
             { "description": "" },
             { "description": "" },
+            { "description": "Acquire Potential 1: Enrage" },
             { "description": "" },
             { "description": "" },
             { "description": "" },
@@ -29523,9 +29524,31 @@ window.details = {
             { "description": "" },
             { "description": "" },
             { "description": "" },
-            { "description": "" },
-            { "description": "" },
+            { "description": "Acquire Potential 2: Reduce No Healing duration" },
         ],
+        potential: [
+            {
+                "Name": "Enrage",
+                "description": [
+                    "Level 1: Boosts base ATK by 50",
+                    "Level 2: Boosts base ATK by 75",
+                    "Level 3: Boosts base ATK by 100",
+                    "Level 4: Boosts base ATK by 150",
+                    "Level 5: Boosts base ATK by 200"
+                ]
+            },
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by 1 turn",
+                    "Level 2: Reduces No Healing duration by 2 turns",
+                    "Level 3: Reduces No Healing duration by 3 turns",
+                    "Level 4: Reduces No Healing duration by 5 turns",
+                    "Level 5: Reduces No Healing duration by 7 turns"
+                ]
+            },
+        ],
+        potentialNotes: "#{enrage}"
     },
     2200: {//Doflamingo Raid v2
         captain: "Boosts ATK of Driven and Cerebral characters by 2.5x when HP is 50% or below, 1.5x otherwise",
