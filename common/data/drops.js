@@ -1953,15 +1953,16 @@ window.drops = {
         },
         
         {
-            name: 'Final Thoughts to my Brother Sanji!',
+            name: 'Last Wish for Sanji!',
             thumb: 1918,
+            global: true,
             nakama: 2191800,
             gamewith: 85780,
             'All Difficulties': [ 1917, 1919, -1922, -1751, -1745, -1665, -1320, -1370, -1560 ]
         },
         
         {
-            name: 'Binding and Bonds!',
+            name: 'Branded in Shackles!',
             thumb: 1933,
             global: true,
             nakama: 2193300,
