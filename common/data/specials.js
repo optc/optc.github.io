@@ -4853,7 +4853,7 @@ window.specials = {
         affinity: function(p) { return (window.specials[2076].multiplier && (p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse") || p.unit.class.has("Driven"))) ? 1.75 : 1; },
         orb: function(p) { return (window.specials[2076].multiplier && (p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse") || p.unit.class.has("Driven"))) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
         onActivation: function(p) {
-            if (p.captain.class.has("Free Spirit") || p.captain.class.has("Cerebral") || p.captain.class.has("Powerhouse") || p.captain.class.has("Driven"))
+            if (p.captain) if (p.captain.class.has("Free Spirit") || p.captain.class.has("Cerebral") || p.captain.class.has("Powerhouse") || p.captain.class.has("Driven"))
             window.specials[2076].multiplier = true;
         }
     },
@@ -5060,12 +5060,10 @@ window.specials = {
     2112: {
         atk: function(p) { return ((p.delayed > 0) && (p.unit.class.has("Fighter") || p.unit.class.has("Striker") || p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse"))) ? 1.75 : 1; },
         type: "condition",
-        warning: "Selected special (%name%) assumes that the enemy is Delayed.",
     },
     2113: {
         atk: function(p) { return ((p.delayed > 0) && (p.unit.class.has("Fighter") || p.unit.class.has("Striker") || p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse"))) ? 1.75 : 1; },
         type: "condition",
-        warning: "Selected special (%name%) assumes that the enemy is Delayed.",
     },
     2114: {
         staticMult: function(p) { return 30; }
@@ -5320,6 +5318,70 @@ window.specials = {
     },
     2165: {
         orb: function(p) { return (p.unit.class.has("Fighter")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); }	
+    },
+    2168: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[2168].multiplier, [p.friendCaptain, p.captain], p.effectName); },
+        turnedOn: [ false, false ],
+        onActivation: function(p) {
+            window.specials[2168].turnedOn[p.slot] = true;
+            var n = (window.specials[2168].multiplier == 1.75 ? 1 : window.specials[2168].multiplier == 2 ? 2 : 0);
+            window.specials[2168].multiplier = [1.75, 2, 2.25][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.75, 2, 2.25][n] + 'x Orb boost. To switch to the ' + [2.25, 1.75, 2][n] + 'x Orb boost, disable and re-enable this special',
+                name: '2168warning'
+            });
+        },
+        onDeactivation: function(p) {
+            window.specials[2168].turnedOn[p.slot] = false;
+        },
+    },
+    2169: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[2169].multiplier, [p.friendCaptain, p.captain], p.effectName); },
+        turnedOn: [ false, false ],
+        onActivation: function(p) {
+            window.specials[2169].turnedOn[p.slot] = true;
+            var n = (window.specials[2169].multiplier == 1.75 ? 1 : window.specials[2169].multiplier == 2 ? 2 : 0);
+            window.specials[2169].multiplier = [1.75, 2, 2.25][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.75, 2, 2.25][n] + 'x Orb boost. To switch to the ' + [2.25, 1.75, 2][n] + 'x Orb boost, disable and re-enable this special',
+                name: '2169warning'
+            });
+        },
+        onDeactivation: function(p) {
+            window.specials[2169].turnedOn[p.slot] = false;
+        },
+    },
+    2170: {
+        delay: function(p) { return 1; },
+        atk: function(p) { return window.specials[2170].multiplier; },
+        type: "class",
+        onActivation: function(p) {
+            var n = (window.specials[2170].multiplier == 1.5 ? 1 : 0);
+            window.specials[2170].multiplier = [1.5, 1.75][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.5, 1.75][n] + 'x ATK multiplier. To switch to the ' + [1.75, 1.5][n] + 'x multiplier, disable and re-enable this special',
+                name: '2170warning'
+            });
+        },
+    },
+    2171: {
+        delay: function(p) { return 1; },
+        atk: function(p) { return window.specials[2171].multiplier; },
+        type: "class",
+        onActivation: function(p) {
+            var n = (window.specials[2171].multiplier == 1.5 ? 1 : 0);
+            window.specials[2171].multiplier = [1.5, 1.75][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.5, 1.75][n] + 'x ATK multiplier. To switch to the ' + [1.75, 1.5][n] + 'x multiplier, disable and re-enable this special',
+                name: '2171warning'
+            });
+        },
+    },
+    2172: {
+        chainAddition: function(p) { return 0.65; }
+    },
+    2173: {
+        chainAddition: function(p) { return 0.65; }
     },
     5000: {
         atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 1.5 : 1; },
