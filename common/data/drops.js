@@ -639,15 +639,15 @@ window.drops = {
             '03': [  ],
             '04': [ 1344 ],
             '05': [ 1345 ],
-            '06': [ 1346, 'skullUsopp' ],
-            '07': [ 1347, 'skullChopper' ],
-            '08': [ 1348, 'skullZoro' ],
-            '09': [ 1349, 'skullNami' ],
-            '10': [ 'skullFranky' ],
-            '11': [ 1350, 'skullBrook' ],
-            '12': [ 1351, 'skullRobin' ],
-            '13': [ 1352, 'skullSanji' ],
-            '14': [ 1353, 'skullLuffy' ],
+            '06': [ 1346, 9004 ],
+            '07': [ 1347, 9006 ],
+            '08': [ 1348, 9002 ],
+            '09': [ 1349, 9003 ],
+            '10': [ 9008 ],
+            '11': [ 1350, 9009 ],
+            '12': [ 1351, 9007 ],
+            '13': [ 1352, 9005 ],
+            '14': [ 1353, 9001 ],
         },
         
         {
@@ -852,7 +852,7 @@ window.drops = {
             '12': [ 2003 ],
             '13': [ 2125 ],
             '14': [  ],
-            '15': [ 2003, 'skullDoffy'  ],
+            '15': [ 2003, 9020  ],
         },
         
     ], 
@@ -2822,7 +2822,7 @@ window.drops = {
             nakama: 6125800,
             gamewith: 38237,
             condition: 'Has a chance of appearing at the end of ANY Raid boss when available. You MUST use the same team that you just used to complete the raid boss to fight Young Whitebeard.',
-            'All Difficulties': [ 1257, 'skullSTR', 'skullDEX', 'skullQCK', 'skullPSY', 'skullINT' ]
+            'All Difficulties': [ 1257, 9010, 9011, 9012, 9013, 9014 ]
         },
         
         {
@@ -2832,7 +2832,7 @@ window.drops = {
             nakama: 6138000,
             gamewith: 46369,
             condition: 'Has a chance of appearing at the end of ANY Raid boss when available. You MUST use the same team that you just used to complete the raid boss to fight Shanks.',
-            'All Difficulties': [ 1379, 952, 776, 'skullSTR', 'skullDEX', 'skullQCK', 'skullPSY', 'skullINT' ]
+            'All Difficulties': [ 1379, 952, 776, 9010, 9011, 9012, 9013, 9014 ]
         },
         
         {
@@ -2842,7 +2842,7 @@ window.drops = {
             nakama: 6153000,
             gamewith: 53621,
             condition: 'Has a chance of appearing at the end of ANY Chaos Coliseum boss. You MUST use the same team that you just used to complete the Coliseum boss to fight Cavendish.',
-            'All Difficulties': [ 1529, 'skullSTR', 'skullDEX', 'skullQCK', 'skullPSY', 'skullINT' ]
+            'All Difficulties': [ 1529, 9010, 9011, 9012, 9013, 9014 ]
         },
         
         {
@@ -2852,7 +2852,7 @@ window.drops = {
             nakama: 6184600,
             gamewith: 75260,
             condition: 'Has a chance of appearing at the end of ANY Chaos Coliseum boss. You MUST use the same team that you just used to complete the Coliseum boss to fight Garp.',
-            'All Difficulties': [ 1845, 'skullSTR', 'skullDEX', 'skullQCK', 'skullPSY', 'skullINT' ]
+            'All Difficulties': [ 1845, 9010, 9011, 9012, 9013, 9014 ]
         },
         
         {
@@ -3075,7 +3075,7 @@ window.drops = {
             nakama: null,
             gamewith: 109674,
             showManual: true,
-            'All Difficulties': [ 'skullJudge', 'skullReiju', 'skullIchiji', 'skullNiji', 'skullYonji', -2142, -2141, -2140, -2139, -2138, -1839, -1838, -1836, -1834, -1832 ],
+            'All Difficulties': [ 9015, 9016, 9017, 9018, 9019, -2142, -2141, -2140, -2139, -2138, -1839, -1838, -1836, -1834, -1832 ],
         },
         
         {
