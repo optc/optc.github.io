@@ -16994,7 +16994,7 @@ window.details = {
             { "description": "Boosts base ATK by 15" },
             { "description": "Boosts base HP by 30" },
             { "description": "Boosts base RCV by 10" },
-            { "description": "Acquire Potential 1: Enrage" },
+            { "description": "Acquire Potential 1: Reduce No Healing duration" },
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base HP by 60" },
             { "description": "Boosts base RCV by 50" },
@@ -17009,13 +17009,13 @@ window.details = {
         ],
         potential: [
             {
-                "Name": "Enrage",
+                "Name": "Reduce No Healing duration",
                 "description": [
-                    "Level 1: Boosts base ATK by 50",
-                    "Level 2: Boosts base ATK by ??",
-                    "Level 3: Boosts base ATK by ??",
-                    "Level 4: Boosts base ATK by ??",
-                    "Level 5: Boosts base ATK by ??"
+                    "Level 1: Reduces No Healing duration by 1 turn",
+                    "Level 2: Reduces No Healing duration by ? turn",
+                    "Level 3: Reduces No Healing duration by ? turn",
+                    "Level 4: Reduces No Healing duration by ? turns",
+                    "Level 5: Reduces No Healing duration by 7 turns"
                 ]
             },
             {
@@ -17025,11 +17025,10 @@ window.details = {
                     "Level 2: This character's normal attack will ignore barriers if HP is above ??% at the start of the turn",
                     "Level 3: This character's normal attack will ignore barriers if HP is above ??% at the start of the turn",
                     "Level 4: This character's normal attack will ignore barriers if HP is above ??% at the start of the turn",
-                    "Level 5: This character's normal attack will ignore barriers if HP is above ??% at the start of the turn"
+                    "Level 5: This character's normal attack will ignore barriers if HP is above 50% at the start of the turn"
                 ]
             },
         ],
-        potentialNotes: "#{enrage}"
     },
     1484: {//Wild Sanji
         captain: "Boosts ATK of all characters by 2.5x after scoring 3 PERFECTs in a row",
