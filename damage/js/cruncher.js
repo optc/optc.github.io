@@ -827,7 +827,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                     console.log(baseDamage);
                 }
             }
-            var staticDamage = Math.ceil((baseDamage)*multSpecial*conditionalMultiplier*affinityMultiplier);
+            var staticDamage = Math.ceil((baseDamage)*multSpecial*conditionalMultiplier/**affinityMultiplier*/);
             if((hitModifier == 'Great')||(hitModifier == 'Good')||(hitModifier == 'Perfect')){
                 resultDamage += staticDamage;
             }
@@ -840,7 +840,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                         if (x.hasOwnProperty('atkStatic'))
                             baseDamage2 += x.atkStatic(getParameters(slot));
                     });
-                    var staticDamage = Math.ceil((baseDamage2)*mult*conditionalMultiplier*affinityMultiplier);
+                    var staticDamage = Math.ceil((baseDamage2)*mult*conditionalMultiplier/**affinityMultiplier*/);
                     if((hitModifier == 'Great')||(hitModifier == 'Good')||(hitModifier == 'Perfect')){
                         resultDamage += staticDamage;
                     } 
