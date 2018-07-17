@@ -5156,6 +5156,8 @@ window.specials = {
         orb: function(p) { return p.unit.type == "QCK" ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },	
     },
     2136: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 2 : 1; },
+        type: "type",
         turnedOn: false,
         onActivation: function(p) {
             window.specials[2136].turnedOn = true;
@@ -5169,6 +5171,8 @@ window.specials = {
         }
     },
     2137: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 2 : 1; },
+        type: "type",
         turnedOn: false,
         onActivation: function(p) {
             window.specials[2137].turnedOn = true;

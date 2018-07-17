@@ -756,6 +756,12 @@ window.matchers = [
     },
     
     {
+        name: 'Special Cooldown Reducer on Special Activation',
+        target: 'sailor',
+        matcher: /When any.+character uses a special, reduces own cooldown/i
+    },
+    
+    {
         name: 'Orb Retainer',
         target: 'sailor',
         matcher: /If this character has.+(STR|DEX|QCK|PSY|INT|RCV).+(GOOD|GREAT|PERFECT)/i

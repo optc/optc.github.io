@@ -7403,16 +7403,16 @@ window.captains = {
         hp: function(p) { return p.unit.class.has("Fighter") ? 1.25 : 1; },
     },
     2164: {
-        atk: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Shooter")) ? 1 : 1; },//Change This
+        atk: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Shooter")) ? 1.5 : 1; },
     },
     2165: {
         atk: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Shooter")) ? 1.75 : 1; },
     },
     2166: {
-        damageSorter: function(d) { return CrunchUtils.classSort(d, 2.5, [ "Striker", "Fighter" ]); },//Change This
+        damageSorter: function(d) { return CrunchUtils.classSort(d, 2, [ "Striker", "Fighter" ]); },
         hitAtk: function(p) {
             if (!(p.unit.class.has("Striker") || p.unit.class.has("Fighter"))) return 1;
-            return p.modifiers.slice(0, p.chainPosition).subcontains(["Great", "Great", "Great"]) ? 2.5 : 2;//Change This
+            return p.modifiers.slice(0, p.chainPosition).subcontains(["Great", "Great", "Great"]) ? 2 : 1.5;
         },
         hitModifiers: ["Great", "Great", "Great", "Perfect", "Perfect", "Perfect"]
     },
@@ -7432,7 +7432,7 @@ window.captains = {
                 if(window.specials[2168].turnedOn[i]==true){specialEnabled = true;}
                 if(window.specials[2169].turnedOn[i]==true){specialEnabled = true;}
             }
-            return (p.colorCount.INT>=1 && p.colorCount.PSY>=1 && p.colorCount.STR>=1 && p.colorCount.DEX>=1 && p.colorCount.QCK>=1) ? specialEnabled ? 1 : 1 : specialEnabled ? 1 : 1;//Change this
+            return (p.colorCount.INT>=1 && p.colorCount.PSY>=1 && p.colorCount.STR>=1 && p.colorCount.DEX>=1 && p.colorCount.QCK>=1) ? specialEnabled ? 2.75 : 2 : specialEnabled ? 1.375 : 1;
         },
     },
     2169: {
@@ -7443,17 +7443,17 @@ window.captains = {
                 if(window.specials[2168].turnedOn[i]==true){specialEnabled = true;}
                 if(window.specials[2169].turnedOn[i]==true){specialEnabled = true;}
             }
-            return (p.colorCount.INT>=1 && p.colorCount.PSY>=1 && p.colorCount.STR>=1 && p.colorCount.DEX>=1 && p.colorCount.QCK>=1) ? specialEnabled ? 3 : 2.25 : specialEnabled ? 1.55 : 1;
+            return (p.colorCount.INT>=1 && p.colorCount.PSY>=1 && p.colorCount.STR>=1 && p.colorCount.DEX>=1 && p.colorCount.QCK>=1) ? specialEnabled ? 3.5 : 2.25 : specialEnabled ? (14/9) : 1;
         },
     },
     2170: {
-        atk: function(p) { return p.unit.type == "DEX" ? 1 : 1; },//Change This
+        atk: function(p) { return p.unit.type == "DEX" ? 1.5 : 1; },
     },
     2171: {
         atk: function(p) { return p.unit.type == "DEX" ? 2.25 : 1; },
     },
     2172: {
-        atk: function(p){ return p.unit.class.has("Striker") ? 1 : 1; },//Change This
+        atk: function(p){ return p.unit.class.has("Striker") ? 1.75 : 1; },
     },
     2173: {
         atk: function(p){ return p.unit.class.has("Striker") ? 2.25 : 1; },

@@ -158,7 +158,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         var damage = getBaseDamageForType(type,false);
         // compute best overall damage
         var noSorting = $scope.tdata.orderOverride.hasOwnProperty(type);
-        var overallDamage = optimizeDamage(damage,noSorting);
+        var overallDamage = optimizeDamage(damage,noSorting,type);
         // apply damage sorters to base damage, recalculate the new damage and update overallDamage if necessary
         // only done if the user hasn't already specified a custom order of their own
         if (!noSorting) {
@@ -172,7 +172,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 var newDamages = cptsWith.damageSorters[i].damageSorter(baseDamage);
                 if (newDamages === null) continue;
                 for (var k=0;k<newDamages.length;++k) {
-                    var newOverallDamage = optimizeDamage(newDamages[k],true);
+                    var newOverallDamage = optimizeDamage(newDamages[k],true,type);
                     if (newOverallDamage.overall > overallDamage.overall) overallDamage = newOverallDamage;
                 }
             }
@@ -306,12 +306,12 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
      * Returns an object detailing the updated damage including the two new multipliers mentioned
      * above, the overall damage and the hit modifiers used to compute said damage.
      */
-    var getOverallDamage = function(damage,hitModifiers,noSorting) {
+    var getOverallDamage = function(damage,hitModifiers,noSorting,type) {
         if (mapEffect.comboShield) mapEffect.shieldLeft = mapEffect.comboShield;
         else mapEffect.shieldLeft = 0;
         var result = applySpecialMultipliersAndCaptainEffects(damage,hitModifiers,noSorting);
         // apply chain and bonus multipliers
-        result = applyChainAndBonusMultipliers(result,hitModifiers);
+        result = applyChainAndBonusMultipliers(result,hitModifiers,type);
         if (mapEffect.damage) result.result = applyEffectDamage(result.result, mapEffect.damage);        
         
         var overallDamage = result.result.reduce(function(prev,x) { return prev + x.damage; },0);
@@ -321,14 +321,14 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
     };
 
     /* Calculates the highest overall damage for an array of hit modifiers. */
-    var optimizeDamage = function(damage,noSorting) {
+    var optimizeDamage = function(damage,noSorting,type) {
         // check damage from default order (or custom order) first, we'll use it as a base for comparison
         var temp = JSON.parse(JSON.stringify(damage));
-        var currentResult = getOverallDamage(temp,hitModifiers[0],noSorting);
+        var currentResult = getOverallDamage(temp,hitModifiers[0],noSorting,type);
         
         for (var i=1;i<hitModifiers.length;++i) {
             var newDamage = JSON.parse(JSON.stringify(damage));
-            var newResult = getOverallDamage(newDamage,hitModifiers[i],noSorting);
+            var newResult = getOverallDamage(newDamage,hitModifiers[i],noSorting,type);
             if (newResult.overall > currentResult.overall) currentResult = newResult;
         }
         
@@ -368,7 +368,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
      * - BONUS_DAMAGE_GREAT   = max(0,floor(STARTING_DAMAGE * (0.9 * 0.66 + 1/CMB)) - DEFENSE)
      * - BONUS_DAMAGE_PERFECT = max(0,floor(STARTING_DAMAGE * (0.9 + 1/CMB)) - DEFENSE)
      */
-    var computeDamageOfUnit = function(unit, unitAtk, hitModifier, currentHitCount) {
+    var computeDamageOfUnit = function(unit, unitAtk, hitModifier, currentHitCount, type) {
         var baseDamage = Math.floor(Math.max(1,unitAtk / unit.combo - currentDefense));
         var result = { hits: currentHitCount, result: 0 }, bonusDamageBase = 0, combo = 0, lastAtk = 0, lastHit = 0;
         if (hitModifier == 'Below Good') {
@@ -419,7 +419,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         }
         
         //Apply Static Bonus Damage From Specials
-        var staticBonusDamage = computeFlatBonusDamage(hitModifier, unit);
+        var staticBonusDamage = computeFlatBonusDamage(hitModifier, unit, type);
         if ((staticBonusDamage > 0) && ((staticBonusDamage - currentDefense)>0) && (result.result > 0)) {
             result.result += (staticBonusDamage - currentDefense);
         }
@@ -586,7 +586,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         return final;
     };
 
-    var applyChainAndBonusMultipliers = function(damage,modifiers) {
+    var applyChainAndBonusMultipliers = function(damage,modifiers,type) {
         
         var currentMax = -1, currentResult = null, addition = 0.0;
         if(shipBonus.bonus.name=="Doflamingo Ship - Special ACTIVATED"){
@@ -646,7 +646,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 if (i == x.multipliers.length) x.multipliers.push([ chainMultiplier, 'chain' ]);
                 // compute damage
                 var unitAtk = Math.floor(x.base * totalMultiplier(x.multipliers));
-                var temp = computeDamageOfUnit(x.unit.unit, unitAtk, modifiers[n], currentHits);
+                var temp = computeDamageOfUnit(x.unit.unit, unitAtk, modifiers[n], currentHits, type);
                 currentHits = temp.hits;
                 overall += temp.result;
                 multipliersUsed.push(chainMultiplier);
@@ -780,7 +780,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         });
     };
     
-    var computeFlatBonusDamage = function(hitModifier, unit) {
+    var computeFlatBonusDamage = function(hitModifier, unit, type) {
         for (var y=0;y<enabledEffects.length;++y) {
             if (enabledEffects[y].hasOwnProperty('staticMult')){
                 var sailor = true;
@@ -810,6 +810,13 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                     }
                 }
             }
+            if(unit.type != type){
+                if (unit.type == "STR" && type == "QCK") affinityMultiplier = Math.pow(affinityMultiplier, -1);
+                else if (unit.type == "DEX" && type == "STR") affinityMultiplier = Math.pow(affinityMultiplier, -1);
+                else if (unit.type == "QCK" && type == "DEX") affinityMultiplier = Math.pow(affinityMultiplier, -1);
+                else affinityMultiplier = 1;
+            }
+            else affinityMultiplier = 1;
             //Add the static extra Damage to each attacking member
             var multSpecial = 0;
             var baseDamage = 0;
@@ -824,7 +831,6 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                                 baseDamage += x.atkStatic(getParameters(slot));
                         });
                     }
-                    console.log(baseDamage);
                 }
             }
             var staticDamage = Math.ceil((baseDamage)*multSpecial*conditionalMultiplier*affinityMultiplier);
