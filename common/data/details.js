@@ -30114,7 +30114,7 @@ window.details = {
         ]
     },
     2164: {//Baby 5
-        captain: "Boosts ATK of Slasher, Striker and Shooter characters by ?x",
+        captain: "Boosts ATK of Slasher, Striker and Shooter characters by 1.5x",
         special: "Changes the captain's orb into [DEX], amplifies the effect of orbs for Fighter characters by 1.75x for 1 turn",
         specialName: "Irritation of Love",
         sailor: "If your Captain is a Fighter character, adds 1.5x character's ATK as Additional Typeless Damage",
@@ -30126,7 +30126,7 @@ window.details = {
         sailor: "If your Captain is a Fighter character, adds 1.5x character's ATK as Additional Typeless Damage",
     },
     2166: {//Don Sai
-        captain: "Boosts ATK of Striker and Fighter characters by ?x after scoring 3 GREATS in a row, by ?x otherwise.",
+        captain: "Boosts ATK of Striker and Fighter characters by 2x after scoring 3 GREATS in a row, by 1.5x otherwise.",
         special: "Deals 50,000 fixed damage to one enemy that will ignore damage negating abilities and barriers. If your captain is a Fighter or Striker character, randomizes orbs, including [BLOCK] orbs.",
         specialName: "Eight Fists",
         specialNotes:"#{ignoreBarrier}",
@@ -30138,7 +30138,7 @@ window.details = {
         specialNotes:"#{ignoreBarrier}",
     },
     2168: {//Inuarashi
-        captain: "If there's a [STR], [DEX], [QCK], [PSY] and [INT] character in your crew, boosts ATK of all characters by ?x and their HP by ?x. If you use \"Lightning Counterattack\" in this turn and there's a [STR], [DEX], [QCK], [PSY] and [INT] character in your crew boosts ATK of all characters by ?x instead, by ?x otherwise.",
+        captain: "If there's a [STR], [DEX], [QCK], [PSY] and [INT] character in your crew, boosts ATK of all characters by 2x. If you use \"Lightning Counterattack\" in this turn and there's a [STR], [DEX], [QCK], [PSY] and [INT] character in your crew boosts ATK of all characters by 2.75x instead, by 1.375x otherwise.",
         special: "Reduces Silence duration by 4 turns and reduces enemy Threshold Damage Reduction duration by 3 turns. If you are on a Treasure Map, amplifies the effects of orbs for all characters depending on your Treasure Map Level for 1 turn",
         specialName: "Lightning Counterattack",
         specialNotes: "Level 1-10: 1.75x orb boost<br\>Level 11-20: 2x orb boost<br\>Level 21+: 2.25x orb boost",
@@ -30146,7 +30146,7 @@ window.details = {
         sailorNotes:"#{silence}",
     },
     2169: {//Inuarashi
-        captain: "If there's a [STR], [DEX], [QCK], [PSY] and [INT] character in your crew, boosts ATK of all characters by 2.25x and their HP by 1.2x. If you use \"Lightning Counterattack\" in this turn and there's a [STR], [DEX], [QCK], [PSY] and [INT] character in your crew boosts ATK of all characters by 3x instead, by 1.55x otherwise.",
+        captain: "If there's a [STR], [DEX], [QCK], [PSY] and [INT] character in your crew, boosts ATK of all characters by 2.25x and their HP by 1.2x. If you use \"Lightning Counterattack\" in this turn and there's a [STR], [DEX], [QCK], [PSY] and [INT] character in your crew boosts ATK of all characters by 3.5x instead, by 1.55x otherwise.",
         special: "Reduces Silence duration by 4 turns and reduces enemy Threshold Damage Reduction duration by 3 turns. If you are on a Treasure Map, amplifies the effects of orbs for all characters depending on your Treasure Map Level for 1 turn",
         specialName: "Lightning Counterattack",
         specialNotes: "Level 1-10: 1.75x orb boost<br\>Level 11-20: 2x orb boost<br\>Level 21+: 2.25x orb boost",
@@ -30154,7 +30154,7 @@ window.details = {
         sailorNotes:"#{silence}",
     },
     2170: {//Sicilian
-        captain: "Boosts ATK of [DEX] characters by ?x",
+        captain: "Boosts ATK of [DEX] characters by 1.5x",
         special: "Deals 15x character's ATK in [DEX] damage to all enemies, delays all enemies for 1 turn and if enemies have a barrier at the time the special was activated, boosts ATK of all characters by 1.75x, 1.5x otherwise.",
         specialName: "Lightning Slash",
     },
@@ -30164,7 +30164,7 @@ window.details = {
         specialName: "Lightning Slash",
     },
     2172: {//Swimsuit Shirahoshi
-        captain: "Boosts ATK of Striker characters by ?x, recovers ?x character's RCV in HP at the end of each turn",
+        captain: "Boosts ATK of Striker characters by 1.75x, recovers 1x character's RCV in HP at the end of each turn",
         special: "Reduces enemy's Percent Damage Reduction and crew's Chain Coefficient Reduction duration by 4 turns, changes Badly Matching orbs into Matching orbs and adds .65x to Chain multiplier for 1 turn.",
         specialName: "Spending Some Time with Megalo",
     },

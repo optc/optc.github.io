@@ -565,7 +565,7 @@ window.zombies = {
     },
     2172: { // Shirahoshi
         type: 'healer',
-        multiplier: 0//Change this
+        multiplier: 1
     },
     2173: { // Shirahoshi
         type: 'healer',
