@@ -20117,7 +20117,7 @@ window.details = {
     },
     1683: {//20th Anni Robin
         captain: "Boosts ATK of Cerebral characters by 2x and their RCV by 1.3x",
-        special: "Binds self for 1 turn, empties all slots with [BLOCK] orbs, deals several times the character's ATK in typeless damage to one enemy and boosts ATK against enemies with reduced defense by 1.5x for 2 turns",
+        special: "Binds self for 1 turn, empties all slots with [BLOCK] orbs, deals several times the character's ATK in typeless damage to all enemies and boosts ATK against enemies with reduced defense by 1.5x for 2 turns",
         specialName: "Mil Fleur: Gigantesco Mano",
         specialNotes: "The exact multiplier used is chosen based on the number of [BLOCK] orbs consumed: 0 orbs - Unknown; 1 orb - 36x ATK; 2 orbs - 60x ATK; 3 orbs - 105x ATK; 4 orbs - 195x ATK; 5 orbs - 300x ATK; 6 orbs - 450x ATK.",
         sailor: "Makes [TND] orbs \"beneficial\" for all characters if your Captain is a Fighter character",
@@ -20125,7 +20125,7 @@ window.details = {
     },
     1684: {//20th Anni Robin
         captain: "Boosts ATK of Cerebral characters by 2.5x and their RCV by 1.3x",
-        special: "Binds self for 1 turn, empties all slots with [BLOCK] orbs, deals several times the character's ATK in typeless damage to one enemy and boosts ATK against enemies with reduced defense by 1.5x for 2 turns",
+        special: "Binds self for 1 turn, empties all slots with [BLOCK] orbs, deals several times the character's ATK in typeless damage to all enemies and boosts ATK against enemies with reduced defense by 1.5x for 2 turns",
         specialName: "Mil Fleur: Gigantesco Mano",
         specialNotes: "The exact multiplier used is chosen based on the number of [BLOCK] orbs consumed: 0 orbs - Unknown; 1 orb - 36x ATK; 2 orbs - 60x ATK; 3 orbs - 105x ATK; 4 orbs - 195x ATK; 5 orbs - 300x ATK; 6 orbs - 450x ATK.",
         sailor: {
