@@ -2067,6 +2067,14 @@ window.drops = {
             'All Difficulties': [ 2166, 2164, -1985, -1987, -1993, -1719, -1479, -1481 ]
         },
         
+        {
+            name: 'Nekomamushi Fortnight',
+            thumb: 2177,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 2176, 2178, 2179, -2048, -2029, -1883 ]
+        },
+        
     ],
 
             
