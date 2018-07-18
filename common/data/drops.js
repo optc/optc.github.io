@@ -2068,7 +2068,7 @@ window.drops = {
         },
         
         {
-            name: 'Nekomamushi Fortnight',
+            name: 'Let\'s Go See Master Nekomamushi!',
             thumb: 2177,
             nakama: null,
             gamewith: null,
