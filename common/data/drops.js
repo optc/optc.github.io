@@ -1980,7 +1980,7 @@ window.drops = {
         },
         
         {
-            name: 'Devil Oars, Day of the Second Coming',
+            name: 'The Beast\'s Return',
             thumb: 1965,
             nakama: 2196500,
             gamewith: 91449,
@@ -3092,6 +3092,15 @@ window.drops = {
             nakama: null,
             gamewith: 108237,
             condition: "The Gamewith Link is only for the most recent Garp Challenge (Fist)",
+        },
+        
+        {
+            name: '21st Anniversary Island',
+            thumb: 1682,
+            nakama: null,
+            gamewith: null,
+            showManual: true,
+            'All Difficulties': [ 2, 5, 9, 13, 17, 21, 629, 708, 895, -1682, -1684, -1686, -1688, -1753, -1755, -1757, -1759, -1761 ],
         },
         
         {

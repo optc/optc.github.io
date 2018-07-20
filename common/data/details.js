@@ -26172,7 +26172,7 @@ window.details = {
                 "cooldown": [ 17, 12 ],
             },
             {
-                "description": "Cuts the current HP of one enemy by 20% and changes [TND], [EMPTY] and Badly Matching orbs into Matching orbs and if your Captain is a Cerebral character, reduces Paralysis duration completely",
+                "description": "Cuts the current HP of one enemy by 20% and changes [TND], [EMPTY] and Badly Matching orbs into Matching orbs and if your Captain is a Cerebral character, removes Paralysis",
                 "cooldown": [ 20, 15 ],
             },
         ],
@@ -26193,7 +26193,7 @@ window.details = {
                 "cooldown": [ 17, 12 ],
             },
             {
-                "description": "Cuts the current HP of one enemy by 20% and changes [TND], [EMPTY] and Badly Matching orbs into Matching orbs and if your Captain is a Cerebral character, reduces Paralysis duration completely",
+                "description": "Cuts the current HP of one enemy by 20% and changes [TND], [EMPTY] and Badly Matching orbs into Matching orbs and if your Captain is a Cerebral character, removes Paralysis",
                 "cooldown": [ 20, 15 ],
             },
         ],
