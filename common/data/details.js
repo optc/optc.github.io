@@ -28228,7 +28228,7 @@ window.details = {
         specialName: "Weather Egg: Thunderbreed Tempo",
         sailor: {
             "base": "None",
-            "level1": "Reduces Paralysis on all characters by 1 turn",
+            "level1": "Reduces Paralysis duration by 1 turn",
             "level2": "Makes [DEX] orbs \"beneficial\" for all characters",
         },
         sailorNotes: "#{beneficial}",
@@ -28244,7 +28244,7 @@ window.details = {
             { "description": "Boosts base HP by 40" },
             { "description": "Boosts base HP by 40" },
             { "description": "Boosts base ATK by 25" },
-            { "description": "Acquire Sailor Ability 1: Reduces Paralysis on all characters by 1 turn" },
+            { "description": "Acquire Sailor Ability 1: Reduces Paralysis duration by 1 turn" },
             { "description": "Boosts base HP by 50" },
             { "description": "Boosts base HP by 50" },
             { "description": "Acquire Potential 2: Slot Bind Self-reduction" },
