@@ -1982,6 +1982,7 @@ window.drops = {
         {
             name: 'The Beast\'s Return',
             thumb: 1965,
+            global: true,
             nakama: 2196500,
             gamewith: 91449,
             'All Difficulties': [ 1964, 1966, -1794, -1368, -1802, -1713, -1840, -2142, -1557 ]
@@ -2072,7 +2073,7 @@ window.drops = {
             thumb: 2177,
             nakama: null,
             gamewith: null,
-            'All Difficulties': [ 2176, 2178, 2179, -2048, -2029, -1883 ]
+            'All Difficulties': [ 2176, 2178, 2179, -2048, -2029, -1883, -1483, -1353, -1785 ]
         },
         
     ],

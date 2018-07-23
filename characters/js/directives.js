@@ -433,12 +433,27 @@ directives.addTags = function($stateParams, $rootScope) {
                     element.append($('<span class="tag captain">' + name + '</div>'));
                 }
                 // sailor effects
-                if (matcher.target.indexOf('sailor') === 0 && matcher.matcher.test(data[matcher.target]) && !(data[matcher.target] === undefined)) {
-                    name = matcher.name;
-                    if (!/sailor$/.test(name)) name = name.replace(/ers$/,'ing').replace(/s$/,'') + ' sailor';
-                    else name = name.replace(/s$/,'');
-                    name = name.replace(/iing/,'ying');
-                    element.append($('<span class="tag sailor">' + name + '</div>'));
+                if (matcher.target.indexOf('sailor') === 0 && !(data[matcher.target] === undefined)) {
+                    if (data[matcher.target].base){
+                        for (var sailor in data[matcher.target]){
+                            if (matcher.matcher.test(data[matcher.target][sailor])){
+                                name = matcher.name;
+                                if (!/sailor$/.test(name)) name = name.replace(/ers$/,'ing').replace(/s$/,'') + ' sailor';
+                                else name = name.replace(/s$/,'');
+                                name = name.replace(/iing/,'ying');
+                                element.append($('<span class="tag sailor">' + name + '</div>'));
+                            }
+                        }
+                    }
+                    else{
+                        if (matcher.matcher.test(data[matcher.target])){
+                            name = matcher.name;
+                            if (!/sailor$/.test(name)) name = name.replace(/ers$/,'ing').replace(/s$/,'') + ' sailor';
+                            else name = name.replace(/s$/,'');
+                            name = name.replace(/iing/,'ying');
+                            element.append($('<span class="tag sailor">' + name + '</div>'));
+                        }
+                    }
                 }
                 // specials
                 if (matcher.target.indexOf('special') === 0 && matcher.matcher.test(data[matcher.target])) {
