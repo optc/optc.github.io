@@ -5428,7 +5428,7 @@ window.specials = {
         },
     },
     2178: {
-        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Fighter") ? 1 : 1; },//CHANGE THIS
+        atk: function(p) { return p.unit.class.has("Striker") ? 1.5 : 1; },
         type: "class",
     },
     2179: {

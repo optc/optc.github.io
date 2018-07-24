@@ -30602,23 +30602,23 @@ window.details = {
     },
     2176: {//Nekomamushi
         captain: "Boosts ATK of Striker characters by ?x and their HP by ?x",
-        special: "Reduces Silence duration by 2 turns and changes own orb into [QCK]. If your Captain is a Striker character, adds .5x to Chain multiplier for 2 turns.",
-        specialName: "Nekomamushi Special",
+        special: "Reduces Bind duration by 2 turns and changes own orb into [QCK]. If your Captain is a Striker character, adds .5x to Chain multiplier for 2 turns.",
+        specialName: "Cat Toy",
     },
     2177: {//Nekomamushi
         captain: "Boosts ATK of Striker characters by 2.25x and their HP by 1.1x",
-        special: "Reduces Silence duration by 2 turns and changes own orb into [QCK]. If your Captain is a Striker character, adds .5x to Chain multiplier for 2 turns.",
-        specialName: "Nekomamushi Special",
+        special: "Reduces Bind duration by 2 turns and changes own orb into [QCK]. If your Captain is a Striker character, adds .5x to Chain multiplier for 2 turns.",
+        specialName: "Cat Toy",
     },
     2178: {//Roddy
         captain: "Boosts ATK of [STR] characters by 1.75x",
-        special: "Deals 20x character's ATK in [STR] damage to one enemy, reduces Special Cooldown of Striker and Fighter specials by 1 turn and boosts ATK of Striker and Fighter characters by ?x for 1 turn.",
-        specialName: "Roddy Special",
+        special: "Deals 20x character's ATK in [STR] damage to one enemy, reduces Special Cooldown of Striker specials by 1 turn and boosts ATK of Striker characters by 1.5x for 1 turn.",
+        specialName: "Moo Golova",
     },
     2179: {//Blackback
         captain: "Boosts ATK of Fighter and Cerebral characters by 1.5x",
         special: "Reduces damage received by 50% for 1 turn and boosts the Color Affinity of [STR] characters by 1.25x for 1 turn.",
-        specialName: "Roddy Special",
+        specialName: "Guardian's One Arm Back Throw",
     },
     2200: {//Doflamingo Raid v2
         captain: "Boosts ATK of Driven and Cerebral characters by 2.5x when HP is 50% or below, 1.5x otherwise",
