@@ -7464,6 +7464,20 @@ window.captains = {
     2175: {
         atk: function(p){ return p.unit.class.has("Powerhouse") ? p.actions[p.sourceSlot] ? 2.75 : 2 : 1; },
     },
+    2176: {
+        atk: function(p){ return p.unit.class.has("Striker") ? 1 : 1; },//change this
+        hp: function(p){ return p.unit.class.has("Striker") ? 1 : 1; },//change this
+    },
+    2177: {
+        atk: function(p){ return p.unit.class.has("Striker") ? 2.25 : 1; },
+        hp: function(p){ return p.unit.class.has("Striker") ? 1.1 : 1; },
+    },
+    2178: {
+        atk: function(p) { return p.unit.type == "STR" ? 1.75 : 1; },
+    },
+    2179: {
+        atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse")) ? 1.5 : 1; },
+    },
     2200: {
         atk: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Cerebral")) && p.percHP <= 50.0 ? 2.5 : 1.5; }
     },

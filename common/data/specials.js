@@ -3126,18 +3126,30 @@ window.specials = {
         type: "type"
     },
     1657: {
-        chain: function(p) { return p.captain.class.has("Striker") ? 2.75 : 1; },
+        chain: function(p) { return window.specials[1657].multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 2.75 : 1;
-        }
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[1657].multiplier : 1;
+        },
+        onActivation: function(p) {
+            window.specials[1657].multiplier = 1;
+            if (p.captain.class.has("Striker")){
+                window.specials[1657].multiplier = 2.75;
+            }
+        },
     },
     1658: {
-        chain: function(p) { return p.captain.class.has("Striker") ? 2.75 : 1; },
+        chain: function(p) { return window.specials[1658].multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 2.75 : 1;
-        }
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[1658].multiplier : 1;
+        },
+        onActivation: function(p) {
+            window.specials[1658].multiplier = 1;
+            if (p.captain.class.has("Striker")){
+                window.specials[1658].multiplier = 2.75;
+            }
+        },
     },
     1661: {
         chain: function(p) { return 2.5; },
@@ -3657,31 +3669,35 @@ window.specials = {
         turnedOn: [ false, false ],
         onActivation: function(p) {
             window.specials[1807].turnedOn[p.slot] = true;
+            if (p.captain) window.specials[1807].multiplier = p.captain.class.has("Slasher");
+            else window.specials[1807].multiplier = false;
         },
         onDeactivation: function(p) {
             window.specials[1807].turnedOn[p.slot] = false;
         },
-        chain: function(p) { return p.captain.class.has("Slasher") ? 2.75 : 1; },
+        chain: function(p) { return window.specials[1807].multiplier ? 2.75 : 1; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
             return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 2.75 : 1;
         },
-        orb: function(p) { return p.unit.class.has("Slasher") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+        orb: function(p) { return window.specials[1807].multiplier ? p.unit.class.has("Slasher") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
     },
     1808: {
         turnedOn: [ false, false ],
         onActivation: function(p) {
             window.specials[1808].turnedOn[p.slot] = true;
+            if (p.captain) window.specials[1808].multiplier = p.captain.class.has("Slasher");
+            else window.specials[1808].multiplier = false;
         },
         onDeactivation: function(p) {
             window.specials[1808].turnedOn[p.slot] = false;
         },
-        chain: function(p) { return p.captain.class.has("Slasher") ? 2.75 : 1; },
+        chain: function(p) { return window.specials[1808].multiplier ? 2.75 : 1; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
             return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 2.75 : 1;
         },
-        orb: function(p) { return p.unit.class.has("Slasher") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+        orb: function(p) { return window.specials[1808].multiplier ? p.unit.class.has("Slasher") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
     },
     1811: {
         atk: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; },
@@ -5317,6 +5333,12 @@ window.specials = {
         },
         orb: function(p) { return (p.unit.class.has("Shooter")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); }	
     },
+    2162: {
+        delay: function(p) { return 1; },
+    },
+    2163: {
+        delay: function(p) { return 1; },
+    },
     2164: {
         orb: function(p) { return (p.unit.class.has("Fighter")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); }	
     },
@@ -5386,6 +5408,31 @@ window.specials = {
     },
     2173: {
         chainAddition: function(p) { return 0.65; }
+    },
+    2176: {
+        chainAddition: function(p) { return window.specials[2176].multiplier; },
+        onActivation: function(p) {
+            window.specials[2176].multiplier = 0;
+            if (p.captain.class.has("Striker")){
+                window.specials[2176].multiplier = .5;
+            }
+        },
+    },
+    2177: {
+        chainAddition: function(p) { return window.specials[2177].multiplier; },
+        onActivation: function(p) {
+            window.specials[2177].multiplier = 0;
+            if (p.captain.class.has("Striker")){
+                window.specials[2177].multiplier = .5;
+            }
+        },
+    },
+    2178: {
+        atk: function(p) { return p.unit.class.has("Striker") ? 1.5 : 1; },
+        type: "class",
+    },
+    2179: {
+        affinity: function(p){ return p.unit.type == "STR" ? 1.25 : 1; }
     },
     5000: {
         atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 1.5 : 1; },

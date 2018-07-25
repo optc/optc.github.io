@@ -481,26 +481,23 @@ window.effects = {
         },    
     },
 	
-	'Akainu Neo': {//Remove this eventually
+	'X-Drake Neo': {//Remove this eventually
         description: 'Certain units boosted',
-        thumb: 1826,
+        thumb: 1976,
         id: 46, // don't change this
         atk: function(p) {
             var id = p.number + 1,
-                matching = ((id > 1740 && id < 1745) ||
-                    [ 1620, 1621, 1664, 1665, 1720, 1721, 1769, 1770, 1777, 1778, 1823, 1824 ].indexOf(id) != -1);
+                matching = ([ 1974, 1972, 1945, 1926, 1895, 1770, 1721, 1688, 1684, 1678, 1665, 1632, 1577, 1481, 1047 ].indexOf(id) != -1);
             return !matching ? 1 : 1.75;
         },
         hp: function(p) {
             var id = p.number + 1,
-                matching = ((id > 1740 && id < 1745) ||
-                    [ 1620, 1621, 1664, 1665, 1720, 1721, 1769, 1770, 1777, 1778, 1823, 1824 ].indexOf(id) != -1);
+                matching = ([ 1974, 1972, 1945, 1926, 1895, 1770, 1721, 1688, 1684, 1678, 1665, 1632, 1577, 1481, 1047 ].indexOf(id) != -1);
             return !matching ? 1 : 1.75;
         },
         rcv: function(p) {
             var id = p.number + 1,
-                matching = ((id > 1740 && id < 1745) ||
-                    [ 1620, 1621, 1664, 1665, 1720, 1721, 1769, 1770, 1777, 1778, 1823, 1824 ].indexOf(id) != -1);
+                matching = ([ 1974, 1972, 1945, 1926, 1895, 1770, 1721, 1688, 1684, 1678, 1665, 1632, 1577, 1481, 1047 ].indexOf(id) != -1);
             return !matching ? 1 : 1.75;
         }, 
 	},

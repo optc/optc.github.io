@@ -1980,8 +1980,9 @@ window.drops = {
         },
         
         {
-            name: 'Devil Oars, Day of the Second Coming',
+            name: 'The Beast\'s Return',
             thumb: 1965,
+            global: true,
             nakama: 2196500,
             gamewith: 91449,
             'All Difficulties': [ 1964, 1966, -1794, -1368, -1802, -1713, -1840, -2142, -1557 ]
@@ -2065,6 +2066,14 @@ window.drops = {
             nakama: null,
             gamewith: 111404,
             'All Difficulties': [ 2166, 2164, -1985, -1987, -1993, -1719, -1479, -1481 ]
+        },
+        
+        {
+            name: 'Let\'s Go See Master Nekomamushi!',
+            thumb: 2177,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 2176, 2178, 2179, -2048, -2029, -1883, -1483, -1353, -1785 ]
         },
         
     ],
@@ -2714,7 +2723,7 @@ window.drops = {
             name: 'Jack',
             thumb: 2175,
             nakama: null,
-            gamewith: null,
+            gamewith: 112951,
             'Raging Sea': [ 2174 ]
         },
         
@@ -3084,6 +3093,15 @@ window.drops = {
             nakama: null,
             gamewith: 108237,
             condition: "The Gamewith Link is only for the most recent Garp Challenge (Fist)",
+        },
+        
+        {
+            name: '21st Anniversary Island',
+            thumb: 1682,
+            nakama: null,
+            gamewith: null,
+            showManual: true,
+            'All Difficulties': [ 2, 5, 9, 13, 17, 21, 629, 708, 895, -1682, -1684, -1686, -1688, -1753, -1755, -1757, -1759, -1761 ],
         },
         
         {
