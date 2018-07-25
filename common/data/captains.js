@@ -7476,7 +7476,7 @@ window.captains = {
         atk: function(p) { return p.unit.type == "STR" ? 1.75 : 1; },
     },
     2179: {
-        atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Cerebral")) ? 1.5 : 1; },
+        atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse")) ? 1.5 : 1; },
     },
     2200: {
         atk: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Cerebral")) && p.percHP <= 50.0 ? 2.5 : 1.5; }

@@ -30616,7 +30616,7 @@ window.details = {
         specialName: "Moo Golova",
     },
     2179: {//Blackback
-        captain: "Boosts ATK of Fighter and Cerebral characters by 1.5x",
+        captain: "Boosts ATK of Fighter and Powerhouse characters by 1.5x",
         special: "Reduces damage received by 50% for 1 turn and boosts the Color Affinity of [STR] characters by 1.25x for 1 turn.",
         specialName: "Guardian's One Arm Back Throw",
     },
