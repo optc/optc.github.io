@@ -30510,7 +30510,7 @@ window.details = {
         specialName: "Spending Some Time with Megalo",
     },
     2174: {//Jack TM
-        captain: "Boosts ATK of Powerhouse characters by ?x and reduces damage received by ?%",
+        captain: "Boosts ATK of Powerhouse characters by 1.75x and reduces damage received by 5%",
         special: "Reduces enemies Percent Damage Reduction, Increased Defense and Damage Nullification duration by 2 turns and deals fixed Typeless damage, proportional to the number of enemies on the stage, to one enemy that will ignore damage negating abilities and barriers.",
         specialNotes: "<br><b>1 enemy:</b> 300,000 damage<br><b>2 enemies:</b> 500,000 damage<br><b>3 enemies:</b> 800,000 damage<br><b>4 enemies:</b> 1,100,000 damage<br><b>5 enemies:</b> 1,500,000 damage<br><b>6 enemies:</b> 2,000,000 damage<br>",
         specialName: "Genocide Shotel",
@@ -30601,7 +30601,7 @@ window.details = {
         potentialNotes: "#{enrage}"
     },
     2176: {//Nekomamushi
-        captain: "Boosts ATK of Striker characters by ?x and their HP by ?x",
+        captain: "Boosts ATK of Striker characters by 2x",
         special: "Reduces Bind duration by 2 turns and changes own orb into [QCK]. If your Captain is a Striker character, adds .5x to Chain multiplier for 2 turns.",
         specialName: "Cat Toy",
     },

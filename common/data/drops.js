@@ -2072,7 +2072,7 @@ window.drops = {
             name: 'Let\'s Go See Master Nekomamushi!',
             thumb: 2177,
             nakama: null,
-            gamewith: null,
+            gamewith: 114146,
             'All Difficulties': [ 2176, 2178, 2179, -2048, -2029, -1883, -1483, -1353, -1785 ]
         },
         
