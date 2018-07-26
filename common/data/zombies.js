@@ -571,4 +571,8 @@ window.zombies = {
         type: 'healer',
         multiplier: 2
     },
+    2193: { // Kuma
+        type: 'healer',
+        multiplier: 2
+    },
 };

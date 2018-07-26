@@ -7478,10 +7478,64 @@ window.captains = {
     2179: {
         atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse")) ? 1.5 : 1; },
     },
-    2200: {
+    2182: {
+        atk: function(p){ return (p.unit.type == "PSY" || p.unit.type == "INT") ? 1 : 1; },//change this
+        rcv: function(p){ return (p.unit.type == "PSY" || p.unit.type == "INT") ? 1 : 1; },//change this
+    },
+    2183: {
+        atk: function(p){ return (p.unit.type == "PSY" || p.unit.type == "INT") ? 2.5 : 1; },
+        rcv: function(p){ return (p.unit.type == "PSY" || p.unit.type == "INT") ? 1.2 : 1; },
+    },
+    2184: {
+        atk: function(p){ return p.unit.class.has("Slasher") ? 1 : 1; },//change this
+        hp: function(p){ return p.unit.type == "PSY" ? 1 : 1; },//change this
+    },
+    2185: {
+        atk: function(p){ return p.unit.class.has("Slasher") ? 2.5 : 1; },
+        hp: function(p){ return p.unit.type == "PSY" ? 1.3 : 1; },
+    },
+    2186: {
+        atk: function(p){ return (p.unit.class.has("Shooter") || p.unit.class.has("Fighter")) ? 2.25 : 1; },//change this
+        hp: function(p){ return (p.unit.class.has("Shooter") || p.unit.class.has("Fighter")) ? 1.25 : 1; },//change this
+    },
+    2187: {
+        atk: function(p){ return (p.unit.class.has("Shooter") || p.unit.class.has("Fighter")) ? 2.25 : 1; },
+        hp: function(p){ return (p.unit.class.has("Shooter") || p.unit.class.has("Fighter")) ? 1.25 : 1; },
+    },
+    2188: {
+        atk: function(p){ return (p.unit.class.has("Slasher") || p.unit.class.has("Cerebral")) ? 2.25 : 1; },//change this
+    },
+    2189: {
+        atk: function(p){ return (p.unit.class.has("Slasher") || p.unit.class.has("Cerebral")) ? 2.25 : 1; },
+    },
+    2190: {
+        atk: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Striker")) ? 1 + 0 * ((p.percHP) / 100) : 1; },//change this
+    },
+    2191: {
+        atk: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Striker")) ? 1 + 1.5 * ((p.percHP) / 100) : 1; },//change this
+    },
+    2192: {
+        atk: function(p){ return p.unit.class.has("Shooter") ? 1 : 1; },//change this
+    },
+    2193: {
+        atk: function(p){ return p.unit.class.has("Shooter") ? 2.5 : 1; },
+    },
+    2214: {
+        atk: function(p) {
+            return Math.min(1, 1.5 + 0.1875 * p.turnCounter);//change this
+        },
+        rcv: function(p) { return 1; }//change this
+    },
+    2215: {
+        atk: function(p) {
+            return Math.min(3, 1.5 + 0.1875 * p.turnCounter);
+        },
+        rcv: function(p) { return 1.2; }
+    },
+    2500: {
         atk: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Cerebral")) && p.percHP <= 50.0 ? 2.5 : 1.5; }
     },
-    2201: {
+    2501: {
         atk: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Cerebral")) && p.percHP <= 50.0 ? 3 : 1.5; }
     },
     5000: {
@@ -7541,5 +7595,35 @@ window.captains = {
     },
     5015: {
         atk: function(p){ return (p.unit.type == "DEX" || p.unit.type == "PSY") ? 3.75 : 1; },
+    },
+    5016: {
+        atk: function(p) { return p.unit.type == "PSY" ? 3.5 : 2.75; },
+    },
+    5017: {
+        atk: function(p) { return p.unit.type == "PSY" ? 3.5 : 2.75; },
+    },
+    5018: {
+        atk: function(p) { return p.unit.type == "INT" ? 3.5 : 2.75; },
+        rcv: function(p) { return 1.25; },
+    },
+    5019: {
+        atk: function(p) { return p.unit.type == "INT" ? 3.5 : 2.75; },
+        rcv: function(p) { return 1.25; },
+    },
+    5020: {
+        atk: function(p) { return (p.unit.type == "PSY" || p.unit.type == "INT") ? 4.25 : 3; },
+        rcv: function(p) { return 1.5; },
+    },
+    5021: {
+        atk: function(p) { return (p.unit.type == "PSY" || p.unit.type == "INT") ? 4.25 : 3; },
+        rcv: function(p) { return 1.5; },
+    },
+    5022: {
+        atk: function(p) { return (p.unit.type == "PSY" || p.unit.type == "INT") ? 4.25 : 3; },
+        rcv: function(p) { return 1.5; },
+    },
+    5023: {
+        atk: function(p) { return (p.unit.type == "PSY" || p.unit.type == "INT") ? 4.25 : 3; },
+        rcv: function(p) { return 1.5; },
     },
 };
