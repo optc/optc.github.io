@@ -2134,7 +2134,7 @@ window.units = [
     [ "Jozu, The Diamond that Blows Away the Sandstorm", "DEX", [ "Fighter", "Powerhouse" ], 4, 12, 5, 3, 50, 261406, 256, 70, 14, 1810, 601, 98, 1 ],
     [ "\"Diamond\" Jozu, The Diamond that Blows Away the Sandstorm", "DEX", [ "Fighter", "Powerhouse" ], 5, 20, 4, 4, 99, 2000000, 1592, 584, 90, 2635, 1140, 181, 1 ],
     [ "Mr. 1, Building the Utopian Blade ", "QCK", [ "Slasher", "Cerebral" ], 4, 15, 4, 4, 99, 2000000, 750, 450, 100, 1920, 1152, 201, 1 ],
-    [ "Sir Crocodile,Dual Whitebeard and Marco Escaped Prisoner Bringing Drought", "INT", [ "Striker", "Cerebral" ], 4, 30, 6, 1, 50, 130703, 373, 136, 20, 1222, 398, 82, 1 ],
+    [ "Sir Crocodile, Escaped Prisoner Bringing Drought", "INT", [ "Striker", "Cerebral" ], 4, 30, 6, 1, 50, 130703, 373, 136, 20, 1222, 398, 82, 1 ],
     [ "Sir Crocodile, The Pirate that Controls Drought", "INT", [ "Striker", "Cerebral" ], 5, 60, 4, 1, 99, 5000000, 839, 341, 72, 2777, 1408, 224, 1 ],
     [ "\"Garuda\" Vinsmoke Judge, Germa 66 Science Military Force", "INT", [ "Powerhouse", "Driven" ], "6+", 65, 4, 5, 99, 5000000, 1770, 780, 145, 4322, 1545, 215, 1 ],
     [ "\"Poison Pink\" Vinsmoke Reiju, Germa 66 Science Military Force", "PSY", [ "Powerhouse", "Cerebral" ], "5+", 40, 4, 4, 99, 4000000, 1038, 345, 212, 2121, 1333, 452, 1 ],
