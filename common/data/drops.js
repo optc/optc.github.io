@@ -2603,12 +2603,12 @@ window.drops = {
         
         {
             name: 'Clash!! Heavenly Demon Doflamingo',
-            thumb: 2201,
+            thumb: 2501,
             global: true,
             nakama: 4220100,
             gamewith: null,
-            Ultimate: [ 2200 ],
-            Master: [ 2200 ]
+            Ultimate: [ 2500 ],
+            Master: [ 2500 ]
         },
 
     ],
@@ -2765,10 +2765,11 @@ window.drops = {
             gamewith: 15440,
             challenge: 'Total number of hits over 30,000',
             challengeData: [['Japan Rewards', ''],['10 Times','#686 Vivi\'s Breather Unit'],['35 Times','1x HP Cotton Candy'],['72 Times','3x Rainbow Gems'], ['Global Rewards', ''],['10 Times','1x Bind Resistance Forbidden Tome, 1x Despair Resistance Forbidden Tome, 1x Auto-Heal Forbidden Tome, 1x Rainbow Gem'],['35 Times','1x Red Elder Turtle, 1x Blue Elder Turtle, 1x Green Elder Turtle, 1x Yellow Elder Turtle, 1x Black Elder Turtle, 2x Rainbow Gems'],['72 Times','5x Rainbow Gems']],
+            condition: 'Part 4 drops Shaved Ice Booster Items and Heracles Beetle Items',
             'Part 1': [ 659, 680, 682, 684 ],
             'Part 2': [ 659, 1200, 1198 ],
-            'Part 3': [ 659, 1708, 1710 ],
-            'Part 4': [ 659, 2214 ],
+            'Part 3': [ 1708, 1710 ],
+            'Part 4': [ 2214 ],
             'Challenge Unit': [ 686 ],
         },
         
