@@ -5434,6 +5434,12 @@ window.specials = {
     2179: {
         affinity: function(p){ return p.unit.type == "STR" ? 1.25 : 1; }
     },
+    2214: {
+        delay: function(p) { return 1; },
+    },
+    2215: {
+        delay: function(p) { return 1; },
+    },
     5000: {
         atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 1.5 : 1; },
         type: "type",
