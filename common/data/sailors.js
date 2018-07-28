@@ -276,10 +276,10 @@ window.sailors = {
     1575: {
         atkStatic: function(p) { return p.percHP <= 30.0 && p.slot == p.sourceSlot ? 200 : 0; },
     },
-    1613: {//not working
+    1613: {
         staticMult: function(p) { return 2; }
     },
-    1614: {//not working
+    1614: {
         staticMult: function(p) { return 2; }
     },
     1655: {
@@ -364,10 +364,10 @@ window.sailors = {
         atkStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 75 : 0; },
         hpStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 75 : 0; },
     },
-    1872: {//not working
+    1872: {
         staticMult: function(p) { return 2; }
     },
-    1873: {//not working
+    1873: {
         staticMult: function(p) { return 2; }
     },
     1890: {
@@ -509,10 +509,10 @@ window.sailors = {
     2154: {
         atkStatic: function(p) { return p.percHP >= 50.0 && p.unit.class.has("Fighter") ? 125 : 0; },
     },
-    2164: {//not working
+    2164: {
         staticMult: function(p) { return p.captain.class.has("Fighter") ? 1.5 : 0; }
     },
-    2165: {//not working
+    2165: {
         staticMult: function(p) { return p.captain.class.has("Fighter") ? 1.5 : 0; }
     },
     2182: {
@@ -544,6 +544,12 @@ window.sailors = {
     },
     2193: {
         hpStatic: function(p) { return p.unit.class.has("Shooter") ? 75 : 0; },
+    },
+    2502: {
+        staticMult: function(p) { return 3; }
+    },
+    2503: {
+        staticMult: function(p) { return 3; }
     },
     5000: {
         atkStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 50 : 0; },

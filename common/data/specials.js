@@ -5440,6 +5440,12 @@ window.specials = {
     2215: {
         delay: function(p) { return 1; },
     },
+    2502: {
+        atk: function(p) { return 1.75; },
+    },
+    2503: {
+        atk: function(p) { return 1.75; },
+    },
     5000: {
         atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 1.5 : 1; },
         type: "type",
@@ -5491,5 +5497,21 @@ window.specials = {
     },
     5015: {
         orb: function(p) { return (p.unit.type == "DEX" || p.unit.type == "PSY") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2.25, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+    },
+    5024: {
+        atk: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" ? 1.5 : 1; },
+        type: "type",
+    },
+    5025: {
+        atk: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" ? 1.5 : 1; },
+        type: "type",
+    },
+    5026: {
+        atk: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" ? 1.5 : 1; },
+        type: "type",
+    },
+    5027: {
+        atk: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" ? 1.5 : 1; },
+        type: "type",
     },
 };

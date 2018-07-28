@@ -1981,7 +1981,7 @@ window.aliases = {
     1980: [ '超新星 カポネ・“ギャング” ベッジ', '', 'FN Bege' ],
     1981: [ 'ジュエリー・ボニー', '', 'FN Bonney' ],
     1982: [ '超新星 大食らい ジュエリー・ボニー', '', 'FN Bonney' ],
-    1983: [ 'スモーカー＆たしぎ 麦わらを追う海兵', '', 'Smoker&Tashigi' ],
+    1983: [ 'スモーカー＆たしぎ 麦わらを追う海兵', '', 'Smoker&Tashigi', 'Smoker and Tashigi', 'Smoker Tashigi', 'SmokerTashigi', 'Tashigi&Smoker', 'Tashigi and Smoker', 'Tashigi Smoker', 'TashigiSmoker' ],
     1984: [ 'ルフィ＆エース 戦火の再会', '', 'Luffy&Ace', 'Luffy and Ace', 'Luffy Ace', 'LuffyAce', 'Ace&Luffy', 'Ace and Luffy', 'Ace Luffy', 'AceLuffy' ],
     1985: [ 'ルフィ＆エース 海賊の高み', '', 'Luffy&Ace', 'Luffy and Ace', 'Luffy Ace', 'LuffyAce', 'Ace&Luffy', 'Ace and Luffy', 'Ace Luffy', 'AceLuffy' ],
     1986: [ 'マルコ “意志”の守り手', '', '' ],
@@ -2200,6 +2200,9 @@ window.aliases = {
     2199: [ '', '', '' ],
     2500: [ '', '', 'V2 Raid Doffy', 'V2 Raid Doflamingo' ],
     2501: [ '', '', 'V2 Raid Doffy', 'V2 Raid Doflamingo' ],
+    2502: [ '', '', 'Kung Fu Luffy', 'KFL', 'LINE Luffy', 'The Hero Global Needed' ],
+    2503: [ '', '', 'Kung Fu Luffy', 'KFL', 'LINE Luffy', 'The Hero Global Needed' ],
+    2504: [ '', '', 'Crocodile&Daz', 'Crocodile and Daz', 'Crocodile Daz', 'CrocodileDaz', 'Daz&Crocodile', 'Daz and Crocodile', 'Daz Crocodile', 'DazCrocodile' ],
 };
 
 //  xxxx: [ 'JPN', 'FR', 'Other' ],

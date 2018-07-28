@@ -2078,4 +2078,6 @@ window.flags = {
     2191: { rr: 1, rro: 1, lrr: 1 },
     2200: { global: 1 },
     2201: { global: 1 },
+    2202: { rr: 1, rro: 1, global: 1 },
+    2203: { rr: 1, rro: 1, global: 1 },
 };
