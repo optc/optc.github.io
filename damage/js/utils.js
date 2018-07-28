@@ -255,8 +255,18 @@ window.CrunchUtils.getOrbMultiplier = function(orb, type, uclass, baseMultiplier
                     return boostedMultiplier;
                 }
             }
-            if([2022, 2023, 2137].includes(captains[temp].number)){
+            if([2022, 2023].includes(captains[temp].number) && type == 'INT'){
                 if (orb == 'str'){
+                    return boostedMultiplier;
+                }
+            }
+            if([2137].includes(captains[temp].number)){
+                if (orb == 'str'){
+                    return boostedMultiplier;
+                }
+            }
+            if([5026, 5027].includes(captains[temp].number) && type == 'DEX'){
+                if (orb == 0.5){
                     return boostedMultiplier;
                 }
             }

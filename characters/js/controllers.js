@@ -112,6 +112,7 @@ app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, 
     $scope.id = id;
     $scope.unit = jQuery.extend({},window.units[id - 1]);
     $scope.hybrid = $scope.unit.class && $scope.unit.class.constructor == Array;
+    $scope.dualunit = $scope.unit.type && $scope.unit.type.constructor == Array;
     $scope.details = window.details[id];
     $scope.cooldown = window.cooldowns[id - 1];
     $scope.evolution = window.evolutions[id];

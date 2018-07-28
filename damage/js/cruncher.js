@@ -240,10 +240,18 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                     }
                 }
             }
-            if (orb == 'str'){
-                for (temp = 0; temp < 2; temp++){
-                    if (team[temp].unit != null){
-                        if ([ 2022, 2023, 2137 ].includes(team[temp].unit.number + 1)){
+            for (temp = 0; temp < 2; temp++){
+                if (team[temp].unit != null){
+                    if (orb == 'str'){
+                        if ([ 2137 ].includes(team[temp].unit.number + 1)){
+                            orb = 2;
+                        }
+                        if ([ 2022, 2023 ].includes(team[temp].unit.number + 1) && x.unit.type == 'INT'){
+                            orb = 2;
+                        }
+                    }
+                    if (orb == 0.5){
+                        if ([ 5026, 5027 ].includes(team[temp].unit.number + 1) && x.unit.type == 'DEX'){
                             orb = 2;
                         }
                     }

@@ -48,7 +48,8 @@
                                     <td ng-if="!hybrid">{{unit.class}}</td>
                                     <td ng-if="hybrid">{{unit.class[0]}}</td>
                                     <td ng-if="hybrid">{{unit.class[1]}}</td>
-                                    <td>{{unit.type}}</td>
+                                    <td ng-if="!dualunit">{{unit.type}}</td>
+                                    <td ng-if="dualunit">{{unit.type[0]}}/{{unit.type[1]}}</td>
                                     <td ng-if="!compare">{{unit.stars}}</td>
                                     <td ng-if="compare" comparison="positive">{{unit.stars - compare.stars}}</td>
                                     <td ng-if="!compare">{{unit.cost}}</td>
