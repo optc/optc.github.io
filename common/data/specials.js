@@ -5442,9 +5442,11 @@ window.specials = {
     },
     2502: {
         atk: function(p) { return 1.75; },
+        type: "type",
     },
     2503: {
         atk: function(p) { return 1.75; },
+        type: "type",
     },
     5000: {
         atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 1.5 : 1; },
