@@ -30989,7 +30989,7 @@ window.details = {
             },
             {
                 "description": "Delays all enemies for 2 turn, reduces Paralysis, Bind, Despair and Silence duration by 2 turn and makes Badly Matching and [BLOCK] orbs not reduce damage for 3 turns.",
-                "cooldown": [ null, null ],
+                "cooldown": [ 22, null ],
             },
         ],
         specialName: "Tropical Country Flowers",
@@ -31010,7 +31010,7 @@ window.details = {
             },
             {
                 "description": "Delays all enemies for 2 turn, reduces Paralysis, Bind, Despair and Silence duration by 2 turn and makes Badly Matching and [BLOCK] orbs not reduce damage for 3 turns.",
-                "cooldown": [ null, null ],
+                "cooldown": [ 22, null ],
             },
         ],
         specialName: "Tropical Country Flowers",
