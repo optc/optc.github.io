@@ -30981,11 +30981,11 @@ window.details = {
         special: [
             {
                 "description": "Delays all enemies for 1 turn and makes Badly Matching and [BLOCK] orbs not reduce damage for 3 turns.",
-                "cooldown": [ null, null ],
+                "cooldown": [ 14, 7 ],
             },
             {
                 "description": "Delays all enemies for 1 turn, reduces Paralysis, Bind, Despair and Silence duration by 1 turn and makes Badly Matching and [BLOCK] orbs not reduce damage for 3 turns.",
-                "cooldown": [ null, null ],
+                "cooldown": [ 18, 11 ],
             },
             {
                 "description": "Delays all enemies for 2 turn, reduces Paralysis, Bind, Despair and Silence duration by 2 turn and makes Badly Matching and [BLOCK] orbs not reduce damage for 3 turns.",
@@ -31002,11 +31002,11 @@ window.details = {
         special: [
             {
                 "description": "Delays all enemies for 1 turn and makes Badly Matching and [BLOCK] orbs not reduce damage for 3 turns.",
-                "cooldown": [ null, null ],
+                "cooldown": [ 14, 7 ],
             },
             {
                 "description": "Delays all enemies for 1 turn, reduces Paralysis, Bind, Despair and Silence duration by 1 turn and makes Badly Matching and [BLOCK] orbs not reduce damage for 3 turns.",
-                "cooldown": [ null, null ],
+                "cooldown": [ 18, 11 ],
             },
             {
                 "description": "Delays all enemies for 2 turn, reduces Paralysis, Bind, Despair and Silence duration by 2 turn and makes Badly Matching and [BLOCK] orbs not reduce damage for 3 turns.",
