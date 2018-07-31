@@ -13280,20 +13280,20 @@ window.details = {
                 "Name": "[STR] Damage Reduction",
                 "description": [
                     "Level 1: Reduce damage taken from [STR] characters by 1%",
-                    "Level 2: Reduce damage taken from [STR] characters by ?%",
-                    "Level 3: Reduce damage taken from [STR] characters by ?%",
-                    "Level 4: Reduce damage taken from [STR] characters by ?%",
-                    "Level 5: Reduce damage taken from [STR] characters by ?%"
+                    "Level 2: Reduce damage taken from [STR] characters by 2%",
+                    "Level 3: Reduce damage taken from [STR] characters by 3%",
+                    "Level 4: Reduce damage taken from [STR] characters by 4%",
+                    "Level 5: Reduce damage taken from [STR] characters by 5%"
                 ]
             },
             {
                 "Name": "Enrage",
                 "description": [
                     "Level 1: Boosts base ATK by 30",
-                    "Level 2: Boosts base ATK by ?",
-                    "Level 3: Boosts base ATK by ?",
-                    "Level 4: Boosts base ATK by ?",
-                    "Level 5: Boosts base ATK by ?"
+                    "Level 2: Boosts base ATK by 60",
+                    "Level 3: Boosts base ATK by 90",
+                    "Level 4: Boosts base ATK by 120",
+                    "Level 5: Boosts base ATK by 150"
                 ]
             },
         ],
@@ -13339,20 +13339,20 @@ window.details = {
                 "Name": "[DEX] Damage Reduction",
                 "description": [
                     "Level 1: Reduce damage taken from [DEX] characters by 1%",
-                    "Level 2: Reduce damage taken from [DEX] characters by ?%",
-                    "Level 3: Reduce damage taken from [DEX] characters by ?%",
-                    "Level 4: Reduce damage taken from [DEX] characters by ?%",
-                    "Level 5: Reduce damage taken from [DEX] characters by ?%"
+                    "Level 2: Reduce damage taken from [DEX] characters by 2%",
+                    "Level 3: Reduce damage taken from [DEX] characters by 3%",
+                    "Level 4: Reduce damage taken from [DEX] characters by 4%",
+                    "Level 5: Reduce damage taken from [DEX] characters by 5%"
                 ]
             },
             {
                 "Name": "Slot Bind Self-reduction",
                 "description": [
                     "Level 1: Reduces Slot Bind duration by 1 turn on this character",
-                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
-                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
-                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
-                    "Level 5: Reduces Slot Bind duration by ? turns on this character"
+                    "Level 2: Reduces Slot Bind duration by 2 turns on this character",
+                    "Level 3: Reduces Slot Bind duration by 3 turns on this character",
+                    "Level 4: Reduces Slot Bind duration by 4 turns on this character",
+                    "Level 5: Reduces Slot Bind duration by 5 turns on this character"
                 ]
             },
         ]
@@ -30719,7 +30719,7 @@ window.details = {
     },
     2180: {//Whitebeard&Marco
         captain: {
-            "character1": "Boosts ATK of PSY characters by 3.5x, boosts ATK of all other characters by 2.75x, reduce damage received by 15% and makes [PSY] orbs \"beneficial\" to all characters",
+            "character1": "Boosts ATK of PSY characters by 3.5x, boosts ATK of all other characters by 2.75x, reduce damage received by 20% and makes [PSY] orbs \"beneficial\" to all characters",
             "character2": "Boosts ATK of INT characters by 3.5x, boosts ATK of all other characters by 2.75x, boosts RCV of all characters by 1.25x and makes [PSY] orbs \"beneficial\" to all characters",
             "combined": "Boosts ATK of [PSY] and [INT] characters by 4.25x, boosts ATK of all other characters by 3x, boosts RCV of all characters by 1.5x, reduce damage received by 20% and makes [PSY] and [INT] orbs \"beneficial\" to all characters"
         },
@@ -30734,7 +30734,7 @@ window.details = {
     },
     2181: {//Whitebeard&Marco
         captain: {
-            "character1": "Boosts ATK of PSY characters by 3.5x, boosts ATK of all other characters by 2.75x, reduce damage received by 15% and makes [PSY] orbs \"beneficial\" to all characters",
+            "character1": "Boosts ATK of PSY characters by 3.5x, boosts ATK of all other characters by 2.75x, reduce damage received by 20% and makes [PSY] orbs \"beneficial\" to all characters",
             "character2": "Boosts ATK of INT characters by 3.5x, boosts ATK of all other characters by 2.75x, boosts RCV of all characters by 1.25x and makes [PSY] orbs \"beneficial\" to all characters",
             "combined": "Boosts ATK of [PSY] and [INT] characters by 4.25x, boosts ATK of all other characters by 3x, boosts RCV of all characters by 1.5x, reduce damage received by 20% and makes [PSY] and [INT] orbs \"beneficial\" to all characters"
         },
@@ -31760,14 +31760,14 @@ window.details = {
         ],
     },
     5016: {//Whitebeard&Marco
-        captain: "Boosts ATK of PSY characters by 3.5x, boosts ATK of all other characters by 2.75x, reduce damage received by 15% and makes [PSY] orbs \"beneficial\" to all characters",
+        captain: "Boosts ATK of PSY characters by 3.5x, boosts ATK of all other characters by 2.75x, reduce damage received by 20% and makes [PSY] orbs \"beneficial\" to all characters",
         special: "Cuts the current HP of each enemy by 30%, recovers 20,000 HP, randomizes all orbs into either [PSY], [INT] or [RCV] orbs and becomes Whitebeard & Marco for 3 turns",
         specialNotes: "Change Action: When Change is activated, reduces Paralysis and Silence duration by 1 turn, makes [RCV] orbs \"beneficial\" for all characters for 1 turn and changes their own orb into a [RCV] orb<br>#{beneficial}",
         specialName: "Immortal Blue Flame Shockwave",
         sailor: "Boosts base ATK of [PSY] and [INT] characters by 75",
     },
     5017: {//Whitebeard&Marco
-        captain: "Boosts ATK of PSY characters by 3.5x, boosts ATK of all other characters by 2.75x, reduce damage received by 15% and makes [PSY] orbs \"beneficial\" to all characters",
+        captain: "Boosts ATK of PSY characters by 3.5x, boosts ATK of all other characters by 2.75x, reduce damage received by 20% and makes [PSY] orbs \"beneficial\" to all characters",
         special: "Cuts the current HP of each enemy by 30%, recovers 20,000 HP, randomizes all orbs into either [PSY], [INT] or [RCV] orbs and becomes Whitebeard & Marco for 3 turns",
         specialNotes: "Change Action: When Change is activated, reduces Paralysis and Silence duration by 1 turn, makes [RCV] orbs \"beneficial\" for all characters for 1 turn and changes their own orb into a [RCV] orb<br>#{beneficial}",
         specialName: "Immortal Blue Flame Shockwave",
