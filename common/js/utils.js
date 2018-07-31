@@ -39,7 +39,7 @@
             maxHP: element[12], maxATK: element[13],
             maxRCV: element[14], limitHP: limitHealth, 
             limitATK: limitAttack, limitRCV: limitRecovery,
-            limitSlot: limitSlots,
+            limitSlot: limitSlots, limitCD: limitCooldown,
             growth: {
                 hp: element[15] ? element[15][0] : 0,
                 atk: element[15] ? element[15][1] : 0,
@@ -342,9 +342,9 @@
         if (window.units[n - 1].incomplete)
             return 'https://onepiece-treasurecruise.com/wp-content/themes/onepiece-treasurecruise/images/noimage.png';
         var id = ('0000' + n).slice(-4).replace(/(057[54])/, '0$1'); // missing aokiji image
-        if (id == '2200')
+        if (id == '2500')
             return 'http://onepiece-treasurecruise.com/en/wp-content/uploads/sites/2/c5012.png';
-        if (id == '2201')
+        if (id == '2501')
             return 'http://onepiece-treasurecruise.com/en/wp-content/uploads/sites/2/c50131.png';
         return 'https://onepiece-treasurecruise.com/wp-content/uploads/c' + id + '.png';
     };

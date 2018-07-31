@@ -54,7 +54,9 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
         additionalColumns.forEach(function(x) {
             var title = x
                 .replace(/Minimum cooldown/,'Min CD')
-                .replace(/Initial cooldown/,'Max CD')
+                .replace(/Minimum Limit Break cooldown/,'Min LB CD')
+                .replace(/Initial cooldown/,'Init. CD')
+                .replace(/Initial Limit Break cooldown/,'Init. LB CD')
                 .replace(/MAX EXP/,'MAX EXP');
             result.splice(result.length-1, 0, { title: title, type: 'num-string' });
         });
@@ -265,6 +267,13 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
                 if (!d) temp = 'N/A';
                 else if (c == 'Minimum cooldown' && d.constructor == Array) temp = d[1];
                 else if (c == 'Initial cooldown') temp = (d.constructor == Array ? d[0] : d);
+                else temp = 'Unknown';
+            }
+            else if (c == 'Minimum Limit Break cooldown' || c == 'Initial Limit Break cooldown') { 
+                var d = cooldowns[x.number];
+                if (!d) temp = 'N/A';
+                else if (c == 'Minimum Limit Break cooldown' && d.constructor == Array) temp = (d[1] - x.limitCD);
+                else if (c == 'Initial Limit Break cooldown') temp = (d.constructor == Array ? (d[0] - x.limitCD) : (d - x.limitCD));
                 else temp = 'Unknown';
             }
             if (temp && temp.constructor != String && !isNaN(temp) && !isFinite(temp)) temp = '&#8734;';

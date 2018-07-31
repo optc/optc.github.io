@@ -31036,37 +31036,41 @@ window.details = {
     2503: {//Kung Fu Luffy
         captain: "Boosts ATK of all characters by 3.5x after the 2nd PERFECTs in a row, by 4x after the 5th PERFECTs in a row and boosts HP of all characters by 1.5x",
         special: "Deals 120x character's ATK in Typeless damage to all enemies, changes adjacent orbs into Matching Orbs, boosts ATK of all characters by 1.75x, reduces any damage received above 5,656 HP by ?% and makes PERFECTs easier to hit for 2 turns",
-        sailor: "Adds 3x character's ATK as Additional Typeless Damage",
+        sailor: {
+            "base": "Adds 3x character's ATK as Additional Typeless Damage",
+            "level1": "Makes [DEX] orbs \"beneficial\" for all characters",
+        },
+        sailorNotes: "#{beneficial}",
         specialName: "Gum-Gum Giant Rifle: Kung Fu",
         potential: [
             {
                 "Name": "Critical Hit",
                 "description": [
-                    "Level 1: If you hit a perfect with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
-                    "Level 2: If you hit a perfect with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
-                    "Level 3: If you hit a perfect with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
-                    "Level 4: If you hit a perfect with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
-                    "Level 5: If you hit a perfect with this character, there is a ?% chance to deal ?% of this character's attack in extra damage"
+                    "Level 1: If you hit a perfect with this character, there is a 10% chance to deal 3% of this character's attack in extra damage",
+                    "Level 2: If you hit a perfect with this character, there is a 20% chance to deal 5% of this character's attack in extra damage",
+                    "Level 3: If you hit a perfect with this character, there is a 30% chance to deal 5% of this character's attack in extra damage",
+                    "Level 4: If you hit a perfect with this character, there is a 40% chance to deal 5% of this character's attack in extra damage",
+                    "Level 5: If you hit a perfect with this character, there is a 50% chance to deal 7% of this character's attack in extra damage"
                 ]
             },
             {
                 "Name": "Slot Bind Self-reduction",
                 "description": [
-                    "Level 1: Reduces Slot Bind duration by ? turn on this character",
-                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
-                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
-                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
-                    "Level 5: Reduces Slot Bind duration by ? turns on this character"
+                    "Level 1: Reduces Slot Bind duration by 1 turn on this character",
+                    "Level 2: Reduces Slot Bind duration by 2 turns on this character",
+                    "Level 3: Reduces Slot Bind duration by 3 turns on this character",
+                    "Level 4: Reduces Slot Bind duration by 5 turns on this character",
+                    "Level 5: Reduces Slot Bind duration by 7 turns on this character"
                 ]
             },
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below ?% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 2: If HP is below ?% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 3: If HP is below ?% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 4: If HP is below ?% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 5: If HP is below ?% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
+                    "Level 1: If HP is below 40% at the start of the turn, heals for .75x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 40% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 40% at the start of the turn, heals for 1.25x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below 50% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below 50% at the start of the turn, heals for 2x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
         ]
