@@ -4592,11 +4592,9 @@ window.specials = {
         delay: function(p) { return 1; },
         affinity: function(p) { return !(p.unit.type == "QCK" || p.unit.type == "PSY") ? 1 : window.specials[2026].multiplier; },
         onActivation: function(p) {
+            window.specials[2026].multiplier = 1;
             if (p.captain.type == "QCK" || p.captain.type == "PSY") {
                 window.specials[2026].multiplier = 2;
-            }
-            else{
-                window.specials[2026].multiplier = 1;
             }
         }
     },
@@ -4604,33 +4602,27 @@ window.specials = {
         delay: function(p) { return 1; },
         affinity: function(p) { return !(p.unit.type == "QCK" || p.unit.type == "PSY") ? 1 : window.specials[2027].multiplier; },
         onActivation: function(p) {
+            window.specials[2027].multiplier = 1;
             if (p.captain.type == "QCK" || p.captain.type == "PSY") {
                 window.specials[2027].multiplier = 2;
-            }
-            else{
-                window.specials[2027].multiplier = 1;
             }
         }
     },
     2028: {
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[2028].multiplier, [p.friendCaptain, p.captain], p.effectName); },
         onActivation: function(p) {
+            window.specials[2028].multiplier = 1;
             if (p.colorCount.QCK + p.colorCount.PSY >= 4) {
                 window.specials[2028].multiplier = 2;
-            }
-            else{
-                window.specials[2028].multiplier = 1;
             }
         }
     },
     2029: {
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[2029].multiplier, [p.friendCaptain, p.captain], p.effectName); },
         onActivation: function(p) {
+            window.specials[2029].multiplier = 1;
             if (p.colorCount.QCK + p.colorCount.PSY >= 4) {
                 window.specials[2029].multiplier = 2;
-            }
-            else{
-                window.specials[2029].multiplier = 1;
             }
         }
     },
@@ -5433,6 +5425,86 @@ window.specials = {
     },
     2179: {
         affinity: function(p){ return p.unit.type == "STR" ? 1.25 : 1; }
+    },
+    2182: {
+        atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? window.specials[2182].multiplier : 1; },
+        type: "type",
+        onActivation: function(p) {
+            window.specials[2182].multiplier = 1;
+            if (p.colorCount.INT >= 3) {
+                window.specials[2182].multiplier = 2;
+            }
+        }
+    },
+    2183: {
+        atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? window.specials[2183].multiplier : 1; },
+        type: "type",
+        onActivation: function(p) {
+            window.specials[2183].multiplier = 1;
+            if (p.colorCount.INT >= 3) {
+                window.specials[2183].multiplier = 2;
+            }
+        }
+    },
+    2184: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[2184].multiplier, [p.friendCaptain, p.captain], p.effectName); },
+        onActivation: function(p) {
+            window.specials[2184].multiplier = 1;
+            if (p.colorCount.PSY >= 3) {
+                window.specials[2184].multiplier = 2;
+            }
+        }
+    },
+    2185: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[2185].multiplier, [p.friendCaptain, p.captain], p.effectName); },
+        onActivation: function(p) {
+            window.specials[2185].multiplier = 1;
+            if (p.colorCount.PSY >= 3) {
+                window.specials[2185].multiplier = 2;
+            }
+        }
+    },
+    2186: {
+        chain: function(p) { return window.specials[2186].multiplier; },
+        chainLimiter: function(p) {
+            if (window.specials[2186].multiplier != 1){
+                var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+                return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[2186].multiplier : 1;
+            }
+            else{
+                var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+                return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
+            }
+        },
+        onActivation: function(p) {
+            window.specials[2186].multiplier = 1;
+            if(p.captain){
+                if (p.captain.type == "PSY" || p.captain.type == "INT"){
+                    window.specials[2186].multiplier = 3;
+                }
+            }
+        },
+    },
+    2187: {
+        chain: function(p) { return window.specials[2187].multiplier; },
+        chainLimiter: function(p) {
+            if (window.specials[2187].multiplier != 1){
+                var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+                return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[2187].multiplier : 1;
+            }
+            else{
+                var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+                return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
+            }
+        },
+        onActivation: function(p) {
+            window.specials[2187].multiplier = 1;
+            if(p.captain){
+                if (p.captain.type == "PSY" || p.captain.type == "INT"){
+                    window.specials[2187].multiplier = 3;
+                }
+            }
+        },
     },
     2214: {
         delay: function(p) { return 1; },
