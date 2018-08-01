@@ -2195,7 +2195,7 @@ window.units = [
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Marshall D. Teach", "INT", [ "Driven", "Powerhouse" ], 4, 30, null, null, 70, 1066998, null, null, null, null, null, null, null ],
-    [ "Blackbeard, Former Shichibukai", "INT", [ "Driven", "Powerhouse" ], 5, 50, 4, null, 99, 5000000, null, null, null, null, null, null, null ],
+    [ "Blackbeard, Former Shichibukai", "INT", [ "Driven", "Powerhouse" ], 5, 50, 4, 3, 99, 5000000, null, null, null, 3830, 1483, -83, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
