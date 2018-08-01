@@ -226,11 +226,8 @@
                                         <div ng-if="!isSpecialHybrid && isSpecialStaged">
                                             <div ng-repeat="stage in details.special track by $index">
                                                 <strong>Stage {{$index + 1}}</strong>
-                                                <span ng-if="unit.limitCD == 0">
-                                                ({{stage.cooldown.length ? stage.cooldown[0] : stage.cooldown}}{{stage.cooldown.length ? ' \u2192 ' + stage.cooldown[1] : ''}} turns)
-                                                </span>
-                                                <span ng-if="unit.limitCD != 0">
-                                                ({{stage.cooldown.length ? stage.cooldown[0] + '(' + (stage.cooldown[0] - unit.limitCD) + ')' : stage.cooldown + '(' + (stage.cooldown - unit.limitCD) + ')'}}{{stage.cooldown.length ? ' \u2192 ' + stage.cooldown[1] + '(' + (stage.cooldown[1] - unit.limitCD) + ')' : ''}} turns):</span>
+                                                ({{stage.cooldown.length ? stage.cooldown[0] : stage.cooldown}}{{stage.cooldown.length ? ' \u2192 ' + stage.cooldown[1] : ''}} turns) <span ng-if="unit.limitCD != 0"><strong>➤</strong>
+                                                ({{stage.cooldown.length ? stage.cooldown[0] - unit.limitCD : stage.cooldown}}{{stage.cooldown.length ? ' \u2192 ' + (stage.cooldown[1] - unit.limitCD) : ''}} turns):</span>
                                                 <span ng-bind-html="stage.description | decorate"></span>
                                             </div>
                                         </div>
@@ -247,10 +244,10 @@
                                 <tr ng-if="cooldown && !isSpecialStaged">
                                     <td>Cooldown</td>
                                     <td>
-                                        <span ng-if="unit.limitCD == 0">{{cooldown.length ? cooldown[0] : cooldown}} turns
-                                        {{cooldown.length ? ' \u2192 ' + cooldown[1] + ' turns' : ''}}</span><span ng-if="unit.limitCD != 0">
-                                        {{cooldown.length ? cooldown[0] + '(' + (cooldown[0] - unit.limitCD) + ')' : cooldown + '(' + (cooldown - unit.limitCD) + ')'}} turns
-                                        {{cooldown.length ? ' \u2192 ' + cooldown[1] + '(' + (cooldown[1] - unit.limitCD) + ') turns' : ''}}</span>
+                                        {{cooldown.length ? cooldown[0] : cooldown}} turns
+                                        {{cooldown.length ? ' \u2192 ' + cooldown[1] + ' turns' : ''}}<span ng-if="unit.limitCD != 0"><br>
+                                        {{cooldown.length ? (cooldown[0] - unit.limitCD) : cooldown}} turns
+                                        {{cooldown.length ? ' \u2192 ' + (cooldown[1] - unit.limitCD) + ' turns' : ''}}</span>
                                     </td>
                                 </tr>
                             </tbody>
