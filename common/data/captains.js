@@ -7520,6 +7520,14 @@ window.captains = {
     2193: {
         atk: function(p){ return p.unit.class.has("Shooter") ? 2.5 : 1; },
     },
+    2196: {
+        atk: function(p) { return p.unit.class.has("Driven") ? p.percHP <= 10.0 ? 1 : 1 : 1; },//Change this
+        hp: function(p) { return p.unit.class.has("Driven") ? 1 : 1; }//Change this
+    },
+    2197: {
+        atk: function(p) { return p.unit.class.has("Driven") ? p.percHP <= 10.0 ? 3.75 : 2 : 1; },
+        hp: function(p) { return p.unit.class.has("Driven") ? 1.2 : 1; }
+    },
     2214: {
         atk: function(p) {
             return Math.min(1, 1.5 + 0.1875 * p.turnCounter);//change this
@@ -7533,10 +7541,10 @@ window.captains = {
         rcv: function(p) { return 1.2; }
     },
     2500: {
-        atk: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Cerebral")) && p.percHP <= 50.0 ? 2.5 : 1.5; }
+        atk: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Cerebral")) ? p.percHP <= 50.0 ? 2.5 : 1.5 : 1; }
     },
     2501: {
-        atk: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Cerebral")) && p.percHP <= 50.0 ? 3 : 1.5; }
+        atk: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Cerebral")) ? p.percHP <= 50.0 ? 3 : 1.5 : 1; }
     },
     2502: {
         hitAtk: function(p) {

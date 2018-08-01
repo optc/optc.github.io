@@ -12461,7 +12461,7 @@ window.details = {
                     "Level 2: This character's normal attack will ignore barriers if HP is above 90% at the start of the turn",
                     "Level 3: This character's normal attack will ignore barriers if HP is above 70% at the start of the turn",
                     "Level 4: This character's normal attack will ignore barriers if HP is above 50% at the start of the turn",
-                    "Level 5: This character's normal attack will ignore barriers at the start of the turn"
+                    "Level 5: This character's normal attack will ignore barriers"
                 ]
             },
         ]
@@ -17645,7 +17645,7 @@ window.details = {
                     "Level 2: This character's normal attack will ignore barriers if HP is above 90% at the start of the turn",
                     "Level 3: This character's normal attack will ignore barriers if HP is above 70% at the start of the turn",
                     "Level 4: This character's normal attack will ignore barriers if HP is above 50% at the start of the turn",
-                    "Level 5: This character's normal attack will ignore barriers at the start of the turn if HP is above 30%"
+                    "Level 5: This character's normal attack will ignore barriers if HP is above 30% at the start of the turn"
                 ]
             },
         ]
@@ -17999,7 +17999,7 @@ window.details = {
                     "Level 2: This character's normal attack will ignore barriers if HP is above 90% at the start of the turn",
                     "Level 3: This character's normal attack will ignore barriers if HP is above 70% at the start of the turn",
                     "Level 4: This character's normal attack will ignore barriers if HP is above 50% at the start of the turn",
-                    "Level 5: This character's normal attack will ignore barriers at the start of the turn if HP is above 30%"
+                    "Level 5: This character's normal attack will ignore barriers if HP is above 30% at the start of the turn"
                 ]
             },
         ]
@@ -20536,7 +20536,7 @@ window.details = {
                     "Level 2: This character's normal attack will ignore barriers if HP is above 90% at the start of the turn",
                     "Level 3: This character's normal attack will ignore barriers if HP is above 70% at the start of the turn",
                     "Level 4: This character's normal attack will ignore barriers if HP is above 50% at the start of the turn",
-                    "Level 5: This character's normal attack will ignore barriers at the start of the turn"
+                    "Level 5: This character's normal attack will ignore barriers"
                 ]
             },
             {
@@ -21551,7 +21551,7 @@ window.details = {
                     "Level 2: This character's normal attack will ignore barriers if HP is above 80% at the start of the turn",
                     "Level 3: This character's normal attack will ignore barriers if HP is above 70% at the start of the turn",
                     "Level 4: This character's normal attack will ignore barriers if HP is above 50% at the start of the turn",
-                    "Level 5: This character's normal attack will ignore barriers at the start of the turn"
+                    "Level 5: This character's normal attack will ignore barriers"
                 ]
             },
         ]
@@ -21985,7 +21985,7 @@ window.details = {
                     "Level 2: This character's normal attack will ignore barriers if HP is above 90% at the start of the turn",
                     "Level 3: This character's normal attack will ignore barriers if HP is above 70% at the start of the turn",
                     "Level 4: This character's normal attack will ignore barriers if HP is above 50% at the start of the turn",
-                    "Level 5: This character's normal attack will ignore barriers at the start of the turn"
+                    "Level 5: This character's normal attack will ignore barriers"
                 ]
             },
         ]
@@ -25184,7 +25184,7 @@ window.details = {
                     "Level 2: This character's normal attack will ignore barriers if HP is above 80% at the start of the turn",
                     "Level 3: This character's normal attack will ignore barriers if HP is above 70% at the start of the turn",
                     "Level 4: This character's normal attack will ignore barriers if HP is above 50% at the start of the turn",
-                    "Level 5: This character's normal attack will ignore barriers at the start of the turn"
+                    "Level 5: This character's normal attack will ignore barriers"
                 ]
             },
         ]
@@ -25535,7 +25535,7 @@ window.details = {
                     "Level 2: This character's normal attack will ignore barriers if HP is above 90% at the start of the turn",
                     "Level 3: This character's normal attack will ignore barriers if HP is above 70% at the start of the turn",
                     "Level 4: This character's normal attack will ignore barriers if HP is above 50% at the start of the turn",
-                    "Level 5: This character's normal attack will ignore barriers at the start of the turn"
+                    "Level 5: This character's normal attack will ignore barriers"
                 ]
             },
         ]
@@ -27232,7 +27232,7 @@ window.details = {
                     "Level 2: This character's normal attack will ignore barriers if HP is above 90% at the start of the turn",
                     "Level 3: This character's normal attack will ignore barriers if HP is above 70% at the start of the turn",
                     "Level 4: This character's normal attack will ignore barriers if HP is above 50% at the start of the turn",
-                    "Level 5: This character's normal attack will ignore barriers at the start of the turn"
+                    "Level 5: This character's normal attack will ignore barriers"
                 ]
             },
         ]
@@ -27344,7 +27344,7 @@ window.details = {
                     "Level 2: This character's normal attack will ignore barriers if HP is above 90% at the start of the turn",
                     "Level 3: This character's normal attack will ignore barriers if HP is above 70% at the start of the turn",
                     "Level 4: This character's normal attack will ignore barriers if HP is above 50% at the start of the turn",
-                    "Level 5: This character's normal attack will ignore barriers at the start of the turn"
+                    "Level 5: This character's normal attack will ignore barriers"
                 ]
             },
         ]
@@ -27426,7 +27426,7 @@ window.details = {
                     "Level 2: This character's normal attack will ignore barriers if HP is above 90% at the start of the turn",
                     "Level 3: This character's normal attack will ignore barriers if HP is above 70% at the start of the turn",
                     "Level 4: This character's normal attack will ignore barriers if HP is above 50% at the start of the turn",
-                    "Level 5: This character's normal attack will ignore barriers at the start of the turn"
+                    "Level 5: This character's normal attack will ignore barriers"
                 ]
             },
         ]
@@ -30991,6 +30991,44 @@ window.details = {
                 ]
             },
         ]
+    },
+    2196: {//Blackbeard
+        captain: "Boosts ATK of Driven characters by 3.75x when HP is 10% or below, 2x otherwise boosts HP of Driven characters by 1.2x",
+        special: "Reduces enemy's Threshold Damage Reduction, Percent Damage Reduction, End of Turn Damage/Percent Cut, End of Turn Heal, Increased Defense, Damage Nullification, Barrier, ATK Up, Enrage and Resilience Buffs duration by 1 turn. Boosts ATK of all characters by 2x if HP is below 10% at the time the special is activated.",
+        specialName: "Blackbeard Special",
+    },
+    2197: {//Blackbeard
+        captain: "Boosts ATK of Driven characters by 3.75x when HP is 10% or below, 2x otherwise boosts HP of Driven characters by 1.2x",
+        special: "Reduces enemy's Threshold Damage Reduction, Percent Damage Reduction, End of Turn Damage/Percent Cut, End of Turn Heal, Increased Defense, Damage Nullification, Barrier, ATK Up, Enrage and Resilience Buffs duration by 1 turn. Boosts ATK of all characters by 2x if HP is below 10% at the time the special is activated.",
+        specialName: "Blackbeard Special",
+        sailor: {
+            "base": "None",
+            "level1": "When HP is below 10% at the start of the turn, boosts base ATK of all characters by 100",
+            "level2": "Makes [PSY] orbs \"beneficial\" for this character",
+        },
+        potential: [
+            {
+                "Name": "Enrage",
+                "description": [
+                    "Level 1: Boosts base ATK by 50",
+                    "Level 2: Boosts base ATK by 75",
+                    "Level 3: Boosts base ATK by 100",
+                    "Level 4: Boosts base ATK by 150",
+                    "Level 5: Boosts base ATK by 200"
+                ]
+            },
+            {
+                "Name": "Barrier Penetration",
+                "description": [
+                    "Level 1: This character's normal attack will ignore barriers if HP is above 99% at the start of the turn",
+                    "Level 2: This character's normal attack will ignore barriers if HP is above 90% at the start of the turn",
+                    "Level 3: This character's normal attack will ignore barriers if HP is above 75% at the start of the turn",
+                    "Level 4: This character's normal attack will ignore barriers if HP is above 50% at the start of the turn",
+                    "Level 5: This character's normal attack will ignore barriers"
+                ]
+            },
+        ],
+        potentialNotes: "#{enrage}"
     },
     2214: {//Reiju
         captain: "Boosts ATK of all characters by ?x and their RCV by ?x. If you defeat an enemy, increases ATK boost slightly. Stacks up to 8 times to a maximum of ?x.",

@@ -5506,6 +5506,30 @@ window.specials = {
             }
         },
     },
+    2196: {
+        atk: function(p) { return window.specials[2196].multiplier; },
+        type: "type",
+        onActivation: function(p) {
+            var n = (p.percHP <= 10 ? 2 : 1);
+            window.specials[2196].multiplier = n;
+            p.scope.notify({
+                text: 'Using the ' + n + 'x ATK boost.',
+                name: '2196warning'
+            });
+        }
+    },
+    2197: {
+        atk: function(p) { return window.specials[2197].multiplier; },
+        type: "type",
+        onActivation: function(p) {
+            var n = (p.percHP <= 10 ? 2 : 1);
+            window.specials[2197].multiplier = n;
+            p.scope.notify({
+                text: 'Using the ' + n + 'x ATK boost.',
+                name: '2197warning'
+            });
+        }
+    },
     2214: {
         delay: function(p) { return 1; },
     },
