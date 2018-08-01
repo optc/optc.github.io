@@ -64,7 +64,7 @@
                                 <tr>
                                     <td ng-if="!compare">{{unit.combo}}</td>
                                     <td ng-if="compare" comparison="negative">{{unit.combo - compare.combo}}</td>
-                                    <td ng-if="!compare">{{unit.preview ? '' : unit.slots}}</td>
+                                    <td ng-if="!compare"><span ng-if='unit.slots==unit.limitSlot'>{{unit.preview ? '' : unit.slots}}</span><span ng-if='unit.slots!=unit.limitSlot'>{{unit.preview ? '' : unit.slots + ' \u2192 ' + unit.limitSlot}}</span></td>
                                     <td ng-if="compare" comparison="positive">{{unit.slots - compare.slots}}</td>
                                     <td>{{unit.maxLevel}}</td>
                                     <td ng-if="!compare" colspan="{{hybrid ? 2 : 1}}">{{unit.maxEXP | number}}</td>
