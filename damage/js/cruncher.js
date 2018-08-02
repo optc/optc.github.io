@@ -1151,7 +1151,13 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                         if (x.hasOwnProperty('rcvStatic'))
                             rcvtemp += x.rcvStatic(getParameters(i));
                     });
-                    healAmount += Math.floor((data.team[i].rcv + rcvtemp) * zombie.multiplier);
+                    if ([1250, 1251].has(id)){
+                        healAmount += id == 1250 ? Math.floor(([0, .5, .75, 1, 1.5, 2, 2.5][classCounter().Powerhouse]) * (data.team[i].rcv + rcvtemp)) : 0;
+                        healAmount += id == 1251 ? Math.floor(([0, .5, .75, 1, 1.5, 2, 3.5][classCounter().Powerhouse]) * (data.team[i].rcv + rcvtemp)) : 0;
+                        //console.log(hitModifiers); DO THIS FOR CORAZON
+                    }
+                    else
+                        healAmount += Math.floor((data.team[i].rcv + rcvtemp) * zombie.multiplier);
                 }
             } else if (zombie.type == 'reducer')
                 tankReducer = [ zombie.multiplier, zombie.threshold ];

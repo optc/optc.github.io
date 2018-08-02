@@ -5530,6 +5530,28 @@ window.specials = {
             });
         }
     },
+    2198: {
+        affinity: function(p){ return p.unit.class.has("Striker") ? window.specials[2198].multiplier : 1; },
+        onActivation: function(p) {
+            var n = (window.specials[2198].multiplier == 1.5 ? 1 : 0);
+            window.specials[2198].multiplier = [1.5, 1.75][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.5, 1.75][n] + 'x affinity boost. To switch to the ' + [1.75, 1.5][n] + 'x affinity boost, disable and re-enable this special',
+                name: '2198warning'
+            });
+        }
+    },
+    2199: {
+        affinity: function(p){ return p.unit.class.has("Striker") ? window.specials[2199].multiplier : 1; },
+        onActivation: function(p) {
+            var n = (window.specials[2199].multiplier == 1.5 ? 1 : 0);
+            window.specials[2199].multiplier = [1.5, 1.75][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.5, 1.75][n] + 'x affinity boost. To switch to the ' + [1.75, 1.5][n] + 'x affinity boost, disable and re-enable this special',
+                name: '2199warning'
+            });
+        }
+    },
     2214: {
         delay: function(p) { return 1; },
     },

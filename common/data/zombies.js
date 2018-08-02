@@ -273,11 +273,9 @@ window.zombies = {
     },
     1250: {//Colo Marco
         type: 'healer',
-        multiplier: 2.5
     },
     1251: {//Colo Marco
         type: 'healer',
-        multiplier: 2.5
     },
     1269: {//Laffitte
         type: 'healer',
@@ -570,6 +568,10 @@ window.zombies = {
     2173: { // Shirahoshi
         type: 'healer',
         multiplier: 2
+    },
+    2192: { // Kuma
+        type: 'healer',
+        multiplier: 1.5
     },
     2193: { // Kuma
         type: 'healer',

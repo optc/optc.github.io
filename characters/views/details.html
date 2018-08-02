@@ -246,7 +246,7 @@
                                     <td>
                                         {{cooldown.length ? cooldown[0] : cooldown}} turns
                                         {{cooldown.length ? ' \u2192 ' + cooldown[1] + ' turns' : ''}}<span ng-if="unit.limitCD != 0"><br>
-                                        {{cooldown.length ? (cooldown[0] - unit.limitCD) : cooldown}} turns
+                                        {{cooldown.length ? (cooldown[0] - unit.limitCD) : (cooldown - unit.limitCD)}} turns
                                         {{cooldown.length ? ' \u2192 ' + (cooldown[1] - unit.limitCD) + ' turns' : ''}}</span>
                                     </td>
                                 </tr>
