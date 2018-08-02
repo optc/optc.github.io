@@ -501,8 +501,12 @@ directives.addLinks = function($stateParams) {
                     ul.append($('<li><a href="http://onepiece-treasurecruise.com/ジュラキュール・ミホーク-シッケアール王国　跡/" target="_blank">' +
                         'Official Guide (Japanese)</a></li>'));
                 }
-                else if ([ 2049, 2050, 2072, 2079, 2080, 2081, 2082, 2083, 2084, 2085, 2086, 2087, 2088, 2089, 2090, 2091, 2097, 2104, 2105, 2106, 2107, 2108, 2109, 2110, 2111, 2114, 2116, 2119, 2120, 2121, 2146, 2162, 2163, 2168, 2169, 2170, 2171, 2172, 2173 ].indexOf(id) != -1){
+                else if ([ 2049, 2050, 2072, 2079, 2080, 2081, 2082, 2083, 2084, 2085, 2086, 2087, 2088, 2089, 2090, 2091, 2097, 2104, 2105, 2106, 2107, 2108, 2109, 2110, 2111, 2114, 2116, 2119, 2120, 2121, 2146, 2162, 2163, 2168, 2169, 2170, 2171, 2172, 2173, 2175 ].indexOf(id) != -1){
                     ul.append($('<li><a href="http://onepiece-treasurecruise.com/c%E2%80%90' + id + '/" target="_blank">' +
+                        'Official Guide (Japanese)</a></li>'));
+                }
+                else if ([ 2176, 2177, 2178, 2179 ].indexOf(id) != -1){
+                    ul.append($('<li><a href="http://onepiece-treasurecruise.com/%EF%BD%83%E2%80%90' + id + '/" target="_blank">' +
                         'Official Guide (Japanese)</a></li>'));
                 }
                 else{

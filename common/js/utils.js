@@ -39,7 +39,7 @@
             maxHP: element[12], maxATK: element[13],
             maxRCV: element[14], limitHP: limitHealth, 
             limitATK: limitAttack, limitRCV: limitRecovery,
-            limitSlot: limitSlots,
+            limitSlot: limitSlots, limitCD: limitCooldown,
             growth: {
                 hp: element[15] ? element[15][0] : 0,
                 atk: element[15] ? element[15][1] : 0,
@@ -250,6 +250,42 @@
                 case '5015':
                     return '../res/character_10183_t1_dex.png';
                     break;
+                case '5016':
+                    return '../res/character_10344_t1.png';
+                    break;
+                case '5017':
+                    return '../res/character_10346_t1.png';
+                    break;
+                case '5018':
+                    return '../res/character_10345_t1.png';
+                    break;
+                case '5019':
+                    return '../res/character_10347_t1.png';
+                    break;
+                case '5020':
+                    return '../res/character_1034?_t1_psy.png';//Dual WB Marco
+                    break;
+                case '5021':
+                    return '../res/character_1034?_t1_int.png';//Dual WB Marco
+                    break;
+                case '5022':
+                    return '../res/character_1034?_t1_psy.png';//Dual WB Marco
+                    break;
+                case '5023':
+                    return '../res/character_1034?_t1_int.png';//Dual WB Marco
+                    break;
+                case '5024':
+                    return '../res/character_10496_t1.png';
+                    break;
+                case '5025':
+                    return '../res/character_10497_t1.png';
+                    break;
+                case '5026':
+                    return '../res/character_10498_t1_dex.png';
+                    break;
+                case '5027':
+                    return '../res/character_10498_t1_str.png';
+                    break;
                 default:
                     //return 'https://onepiece-treasurecruise.com/wp-content/themes/onepiece-treasurecruise/images/noimage.png';
                     break;
@@ -306,9 +342,9 @@
         if (window.units[n - 1].incomplete)
             return 'https://onepiece-treasurecruise.com/wp-content/themes/onepiece-treasurecruise/images/noimage.png';
         var id = ('0000' + n).slice(-4).replace(/(057[54])/, '0$1'); // missing aokiji image
-        if (id == '2200')
+        if (id == '2500')
             return 'http://onepiece-treasurecruise.com/en/wp-content/uploads/sites/2/c5012.png';
-        if (id == '2201')
+        if (id == '2501')
             return 'http://onepiece-treasurecruise.com/en/wp-content/uploads/sites/2/c50131.png';
         return 'https://onepiece-treasurecruise.com/wp-content/uploads/c' + id + '.png';
     };

@@ -2602,6 +2602,15 @@ window.drops = {
         },
         
         {
+            name: 'Clash!! "Blackbeard" Teach',
+            thumb: 2197,
+            nakama: null,
+            gamewith: null,
+            Ultimate: [ 2196 ],
+            Master: [ 2196 ]
+        },
+        
+        {
             name: 'Clash!! Heavenly Demon Doflamingo',
             thumb: 2501,
             global: true,

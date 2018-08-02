@@ -48,7 +48,8 @@
                                     <td ng-if="!hybrid">{{unit.class}}</td>
                                     <td ng-if="hybrid">{{unit.class[0]}}</td>
                                     <td ng-if="hybrid">{{unit.class[1]}}</td>
-                                    <td>{{unit.type}}</td>
+                                    <td ng-if="!dualunit">{{unit.type}}</td>
+                                    <td ng-if="dualunit">{{unit.type[0]}}/{{unit.type[1]}}</td>
                                     <td ng-if="!compare">{{unit.stars}}</td>
                                     <td ng-if="compare" comparison="positive">{{unit.stars - compare.stars}}</td>
                                     <td ng-if="!compare">{{unit.cost}}</td>
@@ -63,7 +64,7 @@
                                 <tr>
                                     <td ng-if="!compare">{{unit.combo}}</td>
                                     <td ng-if="compare" comparison="negative">{{unit.combo - compare.combo}}</td>
-                                    <td ng-if="!compare">{{unit.preview ? '' : unit.slots}}</td>
+                                    <td ng-if="!compare"><span ng-if='unit.slots==unit.limitSlot'>{{unit.preview ? '' : unit.slots}}</span><span ng-if='unit.slots!=unit.limitSlot'>{{unit.preview ? '' : unit.slots + ' \u2192 ' + unit.limitSlot}}</span></td>
                                     <td ng-if="compare" comparison="positive">{{unit.slots - compare.slots}}</td>
                                     <td>{{unit.maxLevel}}</td>
                                     <td ng-if="!compare" colspan="{{hybrid ? 2 : 1}}">{{unit.maxEXP | number}}</td>
@@ -105,7 +106,7 @@
                                         <td ng-if="!compare">{{unit.maxRCV | number}}</td>
                                         <td ng-if="compare" comparison="positive">{{unit.maxRCV - compare.maxRCV | number}}</td>
                                     </tr>
-                                    <tr>
+                                    <tr ng-if="!((unit.limitHP-unit.maxHP == 0) && (unit.limitATK-unit.maxATK == 0) && (unit.limitRCV-unit.maxRCV == 0))">
                                         <td>Limit Break</td>
                                         <td ng-if="!compare">{{unit.limitHP | number}} (+{{unit.limitHP-unit.maxHP | number}})</td>
                                         <td ng-if="compare" comparison="positive">{{unit.limitHP - compare.limitHP | number}}</td>
@@ -225,7 +226,8 @@
                                         <div ng-if="!isSpecialHybrid && isSpecialStaged">
                                             <div ng-repeat="stage in details.special track by $index">
                                                 <strong>Stage {{$index + 1}}</strong>
-                                                ({{stage.cooldown.length ? stage.cooldown[0] : stage.cooldown}}{{stage.cooldown.length ? ' \u2192 ' + stage.cooldown[1] : ''}} turns):
+                                                ({{stage.cooldown.length ? stage.cooldown[0] : stage.cooldown}}{{stage.cooldown.length ? ' \u2192 ' + stage.cooldown[1] : ''}} turns) <span ng-if="unit.limitCD != 0"><strong>➤</strong>
+                                                ({{stage.cooldown.length ? stage.cooldown[0] - unit.limitCD : stage.cooldown}}{{stage.cooldown.length ? ' \u2192 ' + (stage.cooldown[1] - unit.limitCD) : ''}} turns):</span>
                                                 <span ng-bind-html="stage.description | decorate"></span>
                                             </div>
                                         </div>
@@ -243,7 +245,9 @@
                                     <td>Cooldown</td>
                                     <td>
                                         {{cooldown.length ? cooldown[0] : cooldown}} turns
-                                        {{cooldown.length ? ' \u2192 ' + cooldown[1] + ' turns' : ''}}
+                                        {{cooldown.length ? ' \u2192 ' + cooldown[1] + ' turns' : ''}}<span ng-if="unit.limitCD != 0"><br>
+                                        {{cooldown.length ? (cooldown[0] - unit.limitCD) : (cooldown - unit.limitCD)}} turns
+                                        {{cooldown.length ? ' \u2192 ' + (cooldown[1] - unit.limitCD) + ' turns' : ''}}</span>
                                     </td>
                                 </tr>
                             </tbody>

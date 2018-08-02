@@ -112,6 +112,7 @@ app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, 
     $scope.id = id;
     $scope.unit = jQuery.extend({},window.units[id - 1]);
     $scope.hybrid = $scope.unit.class && $scope.unit.class.constructor == Array;
+    $scope.dualunit = $scope.unit.type && $scope.unit.type.constructor == Array;
     $scope.details = window.details[id];
     $scope.cooldown = window.cooldowns[id - 1];
     $scope.evolution = window.evolutions[id];
@@ -381,7 +382,8 @@ app.controller('ColumnsCtrl',function($scope, $rootScope, $state, $stateParams, 
     $scope.columns = { 'Limit Break HP' : false, 'Limit Break ATK': false, 'Limit Break RCV': false,
         'HP/ATK': false, 'HP/RCV': false, 'ATK/RCV': false, 'ATK/CMB': false,
         'CMB': false, 'ATK/cost': false, 'HP/cost': false, 'Minimum cooldown': false,
-        'Initial cooldown': false,'MAX EXP': false };
+        'Initial cooldown': false, 'Minimum Limit Break cooldown': false,
+        'Initial Limit Break cooldown': false, 'MAX EXP': false, 'Limit Break Slots': false };
 
     var additionalColumns = $storage.get('charColumns', [ ]);
 
