@@ -263,16 +263,16 @@
                     return '../res/character_10347_t1.png';
                     break;
                 case '5020':
-                    return '../res/character_1034?_t1_psy.png';//Dual WB Marco
+                    return '../res/character_10348_t1_psy.png';
                     break;
                 case '5021':
-                    return '../res/character_1034?_t1_int.png';//Dual WB Marco
+                    return '../res/character_10348_t1_int.png';
                     break;
                 case '5022':
-                    return '../res/character_1034?_t1_psy.png';//Dual WB Marco
+                    return '../res/character_10349_t1_psy.png';
                     break;
                 case '5023':
-                    return '../res/character_1034?_t1_int.png';//Dual WB Marco
+                    return '../res/character_10349_t1_int.png';
                     break;
                 case '5024':
                     return '../res/character_10496_t1.png';
