@@ -1989,8 +1989,9 @@ window.drops = {
         },
         
         {
-            name: 'Supernova! Bonney and Capone!',
+            name: 'Volatile Meal! Bonney and Bege!',
             thumb: 1982,
+            global: true,
             nakama: 2198200,
             gamewith: 93457,
             'All Difficulties': [ 1979, 1981, -1921, -1362, -1366, -1770, -1834, -2139, -1836, -2140, -1633 ]
