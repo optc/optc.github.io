@@ -459,6 +459,12 @@ window.matchers = [
     },
     
     {
+        name: 'Instant Defeat special',
+        target: 'special',
+        matcher: /instantly defeat/i
+    },
+    
+    {
         name: 'Defense and Barrier Buff Ignoring damage dealer',
         target: 'special',
         matcher: /Deals.+ignore damage negating abilities and barriers/i

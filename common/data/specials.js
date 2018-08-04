@@ -5531,7 +5531,7 @@ window.specials = {
         }
     },
     2198: {
-        affinity: function(p){ return p.unit.class.has("Striker") ? window.specials[2198].multiplier : 1; },
+        affinity: function(p){ window.specials[2198].multiplier; },
         onActivation: function(p) {
             var n = (window.specials[2198].multiplier == 1.5 ? 1 : 0);
             window.specials[2198].multiplier = [1.5, 1.75][n];
@@ -5542,7 +5542,7 @@ window.specials = {
         }
     },
     2199: {
-        affinity: function(p){ return p.unit.class.has("Striker") ? window.specials[2199].multiplier : 1; },
+        affinity: function(p){ window.specials[2199].multiplier; },
         onActivation: function(p) {
             var n = (window.specials[2199].multiplier == 1.5 ? 1 : 0);
             window.specials[2199].multiplier = [1.5, 1.75][n];
