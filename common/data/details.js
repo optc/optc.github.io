@@ -31226,13 +31226,13 @@ window.details = {
     },
     2502: {//Kung Fu Luffy
         captain: "Boosts ATK of all characters by 3.5x after the 2nd PERFECTs in a row, by 4x after the 5th PERFECTs in a row and boosts HP of all characters by 1.5x",
-        special: "Deals 120x character's ATK in Typeless damage to all enemies, changes adjacent orbs into Matching Orbs, boosts ATK of all characters by 1.75x, reduces any damage received above 5,656 HP by ?% and makes PERFECTs easier to hit for 2 turns",
+        special: "Deals 120x character's ATK in Typeless damage to all enemies, changes adjacent orbs into Matching Orbs, boosts ATK of all characters by 1.75x, reduces any damage received above 5,656 HP by 97% and makes PERFECTs easier to hit for 2 turns",
         sailor: "Adds 3x character's ATK as Additional Typeless Damage",
         specialName: "Gum-Gum Giant Rifle: Kung Fu",
     },
     2503: {//Kung Fu Luffy
         captain: "Boosts ATK of all characters by 3.5x after the 2nd PERFECTs in a row, by 4x after the 5th PERFECTs in a row and boosts HP of all characters by 1.5x",
-        special: "Deals 120x character's ATK in Typeless damage to all enemies, changes adjacent orbs into Matching Orbs, boosts ATK of all characters by 1.75x, reduces any damage received above 5,656 HP by ?% and makes PERFECTs easier to hit for 2 turns",
+        special: "Deals 120x character's ATK in Typeless damage to all enemies, changes adjacent orbs into Matching Orbs, boosts ATK of all characters by 1.75x, reduces any damage received above 5,656 HP by 97% and makes PERFECTs easier to hit for 2 turns",
         sailor: {
             "base": "Adds 3x character's ATK as Additional Typeless Damage",
             "level1": "Makes [DEX] orbs \"beneficial\" for all characters",
