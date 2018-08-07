@@ -31184,14 +31184,14 @@ window.details = {
     },
     2202: {//Indigo
         captain: "Boosts ATK of Shooter characters by ?x and their RCV by ?x",
-        special: "If HP is below 10%, recovers all missing HP. If your Captain is a Driven character, removes Poison and Blindness duration completely and reduces damage received by 50% for 1 turn.",
+        special: "If HP is below 10%, recovers all missing HP. If your Captain is a Driven character, removes Poison and Blindness duration completely and reduces damage received by 50% for 3 turns.",
         specialName: "Chemical Juggling",
         sailor: "Reduces Silence duration on this character by 3 turns",
         sailorNotes: "#{silence}",
     },
     2203: {//Indigo
         captain: "Boosts ATK of Shooter characters by 2.5x and their RCV by 1.25x",
-        special: "If HP is below 10%, recovers all missing HP. If your Captain is a Driven character, removes Poison and Blindness duration completely and reduces damage received by 50% for 1 turn.",
+        special: "If HP is below 10%, recovers all missing HP. If your Captain is a Driven character, removes Poison and Blindness duration completely and reduces damage received by 50% for 3 turns.",
         specialName: "Chemical Juggling",
         sailor: "Reduces Silence duration on this character by 3 turns",
         sailorNotes: "#{silence}",
