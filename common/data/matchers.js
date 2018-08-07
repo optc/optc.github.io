@@ -563,7 +563,7 @@ window.matchers = [
     {
         name: 'Paralysis reducers',
         target: 'special',
-        matcher: /(reduces|removes).+Paralysis/i 
+        matcher: /(reduces|removes).+Paralysis.+duration/i 
     },
 
     {
@@ -576,19 +576,19 @@ window.matchers = [
     {
         name: 'Blindness reducers',
         target: 'special',
-        matcher: /(reduces|removes).+blindness/i
+        matcher: /(reduces|removes).+blindness.+duration/i
     },
 
     {
         name: 'Crew ATK DOWN reducer',
         target: 'special',
-        matcher: /(removes|reduces).+ATK DOWN/i 
+        matcher: /(removes|reduces).+ATK DOWN.+duration/i 
     },
 
     {
         name: 'Crew Increase Damage Taken reducer',
         target: 'special',
-        matcher: /(removes|reduces).+Increase Damage Taken/i 
+        matcher: /(removes|reduces).+Increase Damage Taken.+duration/i 
     },
 
     {
@@ -600,55 +600,55 @@ window.matchers = [
     {
         name: 'Enemy End of Turn buff reducer',
         target: 'special',
-        matcher: /(removes|reduces).+End of Turn/i 
+        matcher: /(removes|reduces).+End of Turn.+duration/i 
     },
 
     {
         name: 'Enemy Enrage buff reducer',
         target: 'special',
-        matcher: /(removes|reduces).+Enrage/i 
+        matcher: /(removes|reduces).+Enrage.+duration/i 
     },
 
     {
         name: 'Enemy ATK UP buff reducer',
         target: 'special',
-        matcher: /(removes|reduces).+ATK UP/i 
+        matcher: /(removes|reduces).+ATK UP.+duration/i 
     },
 
     {
         name: 'Enemy Increased Defense reducer',
         target: 'special',
-        matcher: /(removes|reduces).+Increased Defense/i 
+        matcher: /(removes|reduces).+Increased Defense.+duration/i 
     },
 
     {
         name: 'Enemy Percent Damage Reduction reducer',
         target: 'special',
-        matcher: /(removes|reduces).+Percent Damage Reduction/i 
+        matcher: /(removes|reduces).+Percent Damage Reduction.+duration/i 
     },
 
     {
         name: 'Enemy Damage Nullification reducer',
         target: 'special',
-        matcher: /(removes|reduces).+Damage Nullification/i 
+        matcher: /(removes|reduces).+Damage Nullification.+duration/i 
     },
 
     {
         name: 'Enemy Threshold Damage Reduction reducer',
         target: 'special',
-        matcher: /(removes|reduces).+Threshold Damage Reduction/i 
+        matcher: /(removes|reduces).+Threshold Damage Reduction.+duration/i 
     },
 
     {
         name: 'Enemy Barrier reducer',
         target: 'special',
-        matcher: /(removes|reduces).+enemy Barrier/i 
+        matcher: /(removes|reduces).+Barrier.+duration/i 
     },
 
     {
         name: 'Enemy Resilience reducer',
         target: 'special',
-        matcher: /(removes|reduces).+Resilience/i 
+        matcher: /(removes|reduces).+Resilience.+duration/i 
     },
 
     {
@@ -722,19 +722,19 @@ window.matchers = [
     {
         name: 'ATK boosting sailors',
         target: 'sailor',
-        matcher: /Boosts base ATK/i
+        matcher: /Boosts.+base ATK/i
     },
 
     {
         name: 'HP boosting sailors',
         target: 'sailor',
-        matcher: /Boosts base (HP|ATK and HP|ATK, HP)|Boosts.+and their HP/i
+        matcher: /Boosts.+base (HP|ATK and HP|ATK, HP)|Boosts.+and their HP/i
     },
 
     {
         name: 'RCV boosting sailors',
         target: 'sailor',
-        matcher: /Boosts base (RCV|ATK and RCV|HP and RCV|ATK, HP and RCV)|Boosts.+and their RCV/i
+        matcher: /Boosts.+base (RCV|ATK and RCV|HP and RCV|ATK, HP and RCV)|Boosts.+and their RCV/i
     },
     
     {

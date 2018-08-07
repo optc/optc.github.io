@@ -2292,7 +2292,7 @@ window.details = {
         specialName: "Massacre Soldier",
         specialNotes: "#{fixed}",
         captain: "Boosts ATK of all characters by 3.5x after scoring 3 hits below Good in a row",
-        sailor: "When HP is below 30% at the start of the turn, boosts ATK of Cerebral characters by 50"
+        sailor: "When HP is below 30% at the start of the turn, boosts base ATK of Cerebral characters by 50"
     },
     312: {
         special: "Deals 100x character's ATK in fixed damage to one enemy, reduces crew's HP to 1",
@@ -2300,7 +2300,7 @@ window.details = {
         specialNotes: "#{fixed}",
         captain: "Boosts ATK of all characters by 3.5x after scoring 3 hits below Good in a row",
         sailor: {
-            "base": "When HP is below 30% at the start of the turn, boosts ATK of Cerebral characters by 50",
+            "base": "When HP is below 30% at the start of the turn, boosts base ATK of Cerebral characters by 50",
             "level1": "When HP is below ??% at the start of the turn, boosts own base ATK by 200",
         },
         limit: [
@@ -10676,11 +10676,11 @@ window.details = {
                 "cooldown": [ 14, 8 ]
             },
             {
-                "description": "Recovers 15x character's RCV in HP. Removes Paralysis, Poison, RCV DOWN and Blindness",
+                "description": "Recovers 15x character's RCV in HP. Removes Paralysis, Poison, RCV DOWN and Blindness duration completely",
                 "cooldown": [ 19, 13 ]
             },
             {
-                "description": "Recovers 50x character's RCV in HP. Removes Paralysis, Poison, RCV DOWN and Blindness",
+                "description": "Recovers 50x character's RCV in HP. Removes Paralysis, Poison, RCV DOWN and Blindness duration completely",
                 "cooldown": [ 24, 18 ]
             },
         ],
@@ -10695,11 +10695,11 @@ window.details = {
                 "cooldown": [ 14, 8 ]
             },
             {
-                "description": "Recovers 15x character's RCV in HP. Removes Paralysis, Poison, RCV DOWN and Blindness",
+                "description": "Recovers 15x character's RCV in HP. Removes Paralysis, Poison, RCV DOWN and Blindness duration completely",
                 "cooldown": [ 19, 13 ]
             },
             {
-                "description": "Recovers 50x character's RCV in HP. Removes Paralysis, Poison, RCV DOWN and Blindness",
+                "description": "Recovers 50x character's RCV in HP. Removes Paralysis, Poison, RCV DOWN and Blindness duration completely",
                 "cooldown": [ 24, 18 ]
             },
         ],
@@ -26269,7 +26269,7 @@ window.details = {
                 "cooldown": [ 17, 12 ],
             },
             {
-                "description": "Cuts the current HP of one enemy by 20% and changes [TND], [EMPTY] and Badly Matching orbs into Matching orbs and if your Captain is a Cerebral character, removes Paralysis",
+                "description": "Cuts the current HP of one enemy by 20% and changes [TND], [EMPTY] and Badly Matching orbs into Matching orbs and if your Captain is a Cerebral character, removes Paralysis duration completely",
                 "cooldown": [ 20, 15 ],
             },
         ],
@@ -26290,7 +26290,7 @@ window.details = {
                 "cooldown": [ 17, 12 ],
             },
             {
-                "description": "Cuts the current HP of one enemy by 20% and changes [TND], [EMPTY] and Badly Matching orbs into Matching orbs and if your Captain is a Cerebral character, removes Paralysis",
+                "description": "Cuts the current HP of one enemy by 20% and changes [TND], [EMPTY] and Badly Matching orbs into Matching orbs and if your Captain is a Cerebral character, removes Paralysis duration completely",
                 "cooldown": [ 20, 15 ],
             },
         ],
@@ -31171,6 +31171,76 @@ window.details = {
                 ]
             },
         ]
+    },
+    2200: {//Shiki
+        captain: "Boosts ATK of [DEX], [QCK] and [INT] characters by 2.75x at the start of the chain, boosts ATK by 4x following a chain of [DEX] > [INT] > [QCK] attacks no lower than Good and boosts HP by 1.35x. Makes [TND] and [RCV] orbs \"beneficial\" to all characters",
+        special: "Reduces crew's current HP by 99%, deals 30x the amount of HP subtracted in typeless damage to all enemies and changes all orbs, including [BLOCK] orbs, into [RCV] orbs",
+        specialName: "Lion's Threat: Earth Bind",
+    },
+    2201: {//Shiki
+        captain: "Boosts ATK of [DEX], [QCK] and [INT] characters by 2.75x at the start of the chain, boosts ATK by 4x following a chain of [DEX] > [INT] > [QCK] attacks no lower than Good and boosts HP by 1.35x. Makes [TND] and [RCV] orbs \"beneficial\" to all characters",
+        special: "Reduces crew's current HP by 99%, deals 30x the amount of HP subtracted in typeless damage to all enemies and changes all orbs, including [BLOCK] orbs, into [RCV] orbs",
+        specialName: "Lion's Threat: Earth Bind",
+    },
+    2202: {//Indigo
+        captain: "Boosts ATK of Shooter characters by ?x and their RCV by ?x",
+        special: "If HP is below 10%, recovers all missing HP. If your Captain is a Driven character, removes Poison and Blindness duration completely and reduces damage received by 50% for 1 turn.",
+        specialName: "Chemical Juggling",
+        sailor: "Reduces Silence duration on this character by 3 turns",
+        sailorNotes: "#{silence}",
+    },
+    2203: {//Indigo
+        captain: "Boosts ATK of Shooter characters by 2.5x and their RCV by 1.25x",
+        special: "If HP is below 10%, recovers all missing HP. If your Captain is a Driven character, removes Poison and Blindness duration completely and reduces damage received by 50% for 1 turn.",
+        specialName: "Chemical Juggling",
+        sailor: "Reduces Silence duration on this character by 3 turns",
+        sailorNotes: "#{silence}",
+    },
+    2204: {//Scarlet
+        captain: "Boosts ATK of Fighter and Powerhouse characters by ?x following a chain of Good > Great > PERFECT hits",
+        special: "If HP is below 10%, amplifies the effect of orbs by 2x for 1 turn. If your Captain is a Driven character, reduces enemies' ATK Up, Enrage and End of Turn Damage/Percent Cut duration by 5 turns.",
+        specialName: "Chemical Juggling",
+        sailor: "If your Captain is a Driven character, boosts own base ATK by 100",
+    },
+    2205: {//Scarlet
+        captain: "Boosts ATK of Fighter and Powerhouse characters by 3.25x following a chain of Good > Great > PERFECT hits",
+        special: "If HP is below 10%, amplifies the effect of orbs by 2x for 1 turn. If your Captain is a Driven character, reduces enemies' ATK Up, Enrage and End of Turn Damage/Percent Cut duration by 5 turns.",
+        specialName: "Chemical Juggling",
+        sailor: "If your Captain is a Driven character, boosts own base ATK by 100",
+    },
+    2206: {//Luffy
+        captain: "Boosts ATK of Striker characters by ?x",
+        special: "Reduces enemy Barrier duration by 1 turn, reduces the defense of all enemies by 100% for 1 turn and boosts ATK of [DEX], [QCK] and [INT] characters depending on your Treasure Map Level for 1 turn",
+        specialNotes: "Level 1-10: 1.75x ATK boost<br\>Level 11-20: 2x ATK boost<br\>Level 21+: 2.25x ATK boost",
+        specialName: "Gomu Gomu no Fireworks: Golden Peony",
+    },
+    2207: {//Luffy
+        captain: "Boosts ATK of Striker characters by 1.75x",
+        special: "Reduces enemy Barrier duration by 1 turn, reduces the defense of all enemies by 100% for 1 turn and boosts ATK of [DEX], [QCK] and [INT] characters depending on your Treasure Map Level for 1 turn",
+        specialNotes: "Level 1-10: 1.75x ATK boost<br\>Level 11-20: 2x ATK boost<br\>Level 21+: 2.25x ATK boost",
+        specialName: "Gomu Gomu no Fireworks: Golden Peony",
+    },
+    2208: {//Gan Fall
+        captain: "Boosts ATK of [INT] characters by ?x and their HP by ?x",
+        special: "Reduces crew's ATK DOWN and Bind duration by 3 turns and changes bottom row orbs into matching orbs",
+        specialName: "Heavenly Charge",
+    },
+    2209: {//Gan Fall
+        captain: "Boosts ATK of [INT] characters by 1.5x and their HP by 1.2x",
+        special: "Reduces crew's ATK DOWN and Bind duration by 3 turns and changes bottom row orbs into matching orbs",
+        specialName: "Heavenly Charge",
+    },
+    2212: {//Pudding
+        captain: "Boosts ATK of Cerebral characters by ?x and their RCV by ?x",
+        special: "Recovers 7,000 HP, Reduces crew's ATK DOWN and enemy's Resilience Buffs duration by 1 turn and changes adjacent orbs into Matching Orbs",
+        specialName: "Eyes Hiding Shyness",
+        sailor: "Reduces Paralysis duration by 1 turn",
+    },
+    2213: {//Pudding
+        captain: "Boosts ATK of Cerebral characters by 2.25x and their RCV by 1.2x",
+        special: "Recovers 7,000 HP, Reduces crew's ATK DOWN and enemy's Resilience Buffs duration by 1 turn and changes adjacent orbs into Matching Orbs",
+        specialName: "Eyes Hiding Shyness",
+        sailor: "Reduces Paralysis duration by 1 turn",
     },
     2214: {//Reiju
         captain: "Boosts ATK of all characters by ?x and their RCV by ?x. If you defeat an enemy, increases ATK boost slightly. Stacks up to 8 times to a maximum of ?x.",
