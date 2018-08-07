@@ -66,7 +66,7 @@ controllers.PickerCtrl = function($scope, $state, $stateParams, $storage) {
         $scope.units = [ ];
         var result, parameters = Utils.generateSearchParameters($scope.query);
         if (parameters === null) return;
-        result = window.units.filter(function(x) { return x !== null && x !== undefined && x.hasOwnProperty('number'); });
+        result = window.units.filter(function(x) { return x !== null && x !== undefined && x.hasOwnProperty('number') && !(Array.isArray(x.type)); });
         // filter by matchers
         for (var matcher in parameters.matchers) {
             result = result.filter(function(unit) {
