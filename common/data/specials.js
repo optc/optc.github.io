@@ -5553,25 +5553,23 @@ window.specials = {
         }
     },
     2204: {
-        atk: function(p) { return window.specials[2204].multiplier; },
-        type: "type",
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[2204].multiplier, [p.friendCaptain, p.captain], p.effectName); },
         onActivation: function(p) {
             var n = (p.percHP <= 10 ? 2 : 1);
             window.specials[2204].multiplier = n;
             p.scope.notify({
-                text: 'Using the ' + n + 'x ATK boost.',
+                text: 'Using the ' + n + 'x Orb boost.',
                 name: '2204warning'
             });
         }
     },
     2205: {
-        atk: function(p) { return window.specials[2205].multiplier; },
-        type: "type",
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[2205].multiplier, [p.friendCaptain, p.captain], p.effectName); },
         onActivation: function(p) {
             var n = (p.percHP <= 10 ? 2 : 1);
             window.specials[2205].multiplier = n;
             p.scope.notify({
-                text: 'Using the ' + n + 'x ATK boost.',
+                text: 'Using the ' + n + 'x Orb boost.',
                 name: '2205warning'
             });
         }
