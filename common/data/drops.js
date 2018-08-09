@@ -814,6 +814,7 @@ window.drops = {
             name: 'Dressrosa - Former King\'s Land to Royal Palace Top Floor',
             shortName: 'Dressrosa 3',
             thumb: 1784,
+            global: true,
             nakama: null,
             completion: '5x Rainbow Gems',
             gamewith: 99550,
@@ -1972,8 +1973,9 @@ window.drops = {
         },
         
         {
-            name: 'My Ideal Type!',
+            name: 'I\'m Now Your Ideal Type! I Think',
             thumb: 1947,
+            global: true,
             nakama: 2194700,
             gamewith: 88584,
             'All Difficulties': [ 1946, 1948, -1763, -1796, -1800, -1364, -1678, -1562 ]
@@ -2779,7 +2781,7 @@ window.drops = {
             'Part 1': [ 659, 680, 682, 684 ],
             'Part 2': [ 659, 1200, 1198 ],
             'Part 3': [ 1708, 1710 ],
-            'Part 4': [ 2214 ],
+            'Part 4': [ 2214, 2216 ],
             'Challenge Unit': [ 686 ],
         },
         

@@ -7534,6 +7534,82 @@ window.captains = {
             return p.unit.class.has("Striker") ? Math.min(3.25, 2 + (5/12) * p.turnCounter) : 1;
         }
     },
+    2200: {
+        damageSorter: function(d) { return CrunchUtils.okamaSort(d, ['DEX', 'INT', 'QCK']); },
+        hitAtk: function(p) {
+            return (p.unit.type == "DEX" || p.unit.type == "QCK" || p.unit.type == "INT") ? CrunchUtils.okamaCheck(p.damage.slice(0, p.chainPosition), p.modifiers, [{
+                type: 'DEX',
+                minModifier: 'Good'
+            }, {
+                type: 'INT',
+                minModifier: 'Good'
+            }, {
+                type: 'QCK',
+                minModifier: 'Good'
+            }]) ? 4 : 2.75 : 1;
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
+        hp: function(p){ return (p.unit.type == "DEX" || p.unit.type == "QCK" || p.unit.type == "INT") ? 1.35 : 1; }, 
+    },
+    2201: {
+        damageSorter: function(d) { return CrunchUtils.okamaSort(d, ['DEX', 'INT', 'QCK']); },
+        hitAtk: function(p) {
+            return (p.unit.type == "DEX" || p.unit.type == "QCK" || p.unit.type == "INT") ? CrunchUtils.okamaCheck(p.damage.slice(0, p.chainPosition), p.modifiers, [{
+                type: 'DEX',
+                minModifier: 'Good'
+            }, {
+                type: 'INT',
+                minModifier: 'Good'
+            }, {
+                type: 'QCK',
+                minModifier: 'Good'
+            }]) ? 4 : 2.75 : 1;
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
+        hp: function(p){ return (p.unit.type == "DEX" || p.unit.type == "QCK" || p.unit.type == "INT") ? 1.35 : 1; }, 
+    },
+    2202: {
+        atk: function(p){ return p.unit.class.has("Shooter") ? 1 : 1; },//Change This
+        hp: function(p) { return p.unit.class.has("Shooter") ? 1 : 1; },//Change This
+    },
+    2203: {
+        atk: function(p){ return p.unit.class.has("Shooter") ? 2.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Shooter") ? 1.25 : 1; },
+    },
+    2204: {
+        damageSorter: function(d) { return CrunchUtils.classSort(d, 1, [ "Fighter", "Powerhouse" ]); },//Change This
+        hitAtk: function(p) {
+            return !(p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse")) ? 1 : p.modifiers.slice(0, p.chainPosition).subcontains(["Good", "Great", "Perfect"]) ? 1 : 1;//Change This
+        },
+        hitModifiers: ["Good", "Great", "Perfect", "Perfect", "Perfect", "Perfect"]
+    },
+    2205: {
+        damageSorter: function(d) { return CrunchUtils.classSort(d, 3.25, [ "Fighter", "Powerhouse" ]); },
+        hitAtk: function(p) {
+            return !(p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse")) ? 1 : p.modifiers.slice(0, p.chainPosition).subcontains(["Good", "Great", "Perfect"]) ? 3.25 : 1;
+        },
+        hitModifiers: ["Good", "Great", "Perfect", "Perfect", "Perfect", "Perfect"]
+    },
+    2206: {
+        atk: function(p){ return p.unit.class.has("Striker") ? 1 : 1; },//Change this
+    },
+    2207: {
+        atk: function(p){ return p.unit.class.has("Striker") ? 1.75 : 1; },
+    },
+    2208: {
+        atk: function(p){ return p.unit.type == "INT" ? 1.5 : 1; },//Change This
+        hp: function(p){ return p.unit.type == "INT" ? 1.2 : 1; },//Change This
+    },
+    2209: {
+        atk: function(p){ return p.unit.type == "INT" ? 1.5 : 1; },
+        hp: function(p){ return p.unit.type == "INT" ? 1.2 : 1; },
+    },
+    2210: {
+        atk: function(p){ return 1; },//Change this
+    },
+    2211: {
+        atk: function(p){ return p.actions[p.sourceSlot] ? 2.5 : 2; },
+    },
     2214: {
         atk: function(p) {
             return Math.min(1, 1.5 + 0.1875 * p.turnCounter);//change this
@@ -7545,6 +7621,16 @@ window.captains = {
             return Math.min(3, 1.5 + 0.1875 * p.turnCounter);
         },
         rcv: function(p) { return 1.2; }
+    },
+    2216: {
+        atk: function(p){ return 1; },//Change this
+        rcv: function(p){ return 1; },//Change this
+        hp: function(p){ return 1; },//Change this
+    },
+    2216: {
+        atk: function(p){ return 1.75; },
+        rcv: function(p){ return 1.75; },
+        hp: function(p){ return 1.75; },
     },
     2500: {
         atk: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Cerebral")) ? p.percHP <= 50.0 ? 2.5 : 1.5 : 1; }

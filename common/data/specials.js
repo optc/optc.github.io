@@ -5552,11 +5552,63 @@ window.specials = {
             });
         }
     },
+    2204: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[2204].multiplier, [p.friendCaptain, p.captain], p.effectName); },
+        onActivation: function(p) {
+            var n = (p.percHP <= 10 ? 2 : 1);
+            window.specials[2204].multiplier = n;
+            p.scope.notify({
+                text: 'Using the ' + n + 'x Orb boost.',
+                name: '2204warning'
+            });
+        }
+    },
+    2205: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[2205].multiplier, [p.friendCaptain, p.captain], p.effectName); },
+        onActivation: function(p) {
+            var n = (p.percHP <= 10 ? 2 : 1);
+            window.specials[2205].multiplier = n;
+            p.scope.notify({
+                text: 'Using the ' + n + 'x Orb boost.',
+                name: '2205warning'
+            });
+        }
+    },
+    2206:{
+        atk: function(p) { return (p.unit.type == "DEX" || p.unit.type == "QCK" || p.unit.type == "INT") ? window.specials[2206].multiplier : 1; },
+        type: "class",
+        onActivation: function(p) {
+            var n = (window.specials[2206].multiplier == 1.75 ? 1 : window.specials[2206].multiplier == 2 ? 2 : 0);
+            window.specials[2206].multiplier = [1.75, 2, 2.25][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.75, 2, 2.25][n] + 'x ATK boost. To switch to the ' + [2.25, 1.75, 2][n] + 'x ATK boost, disable and re-enable this special',
+                name: '2206warning'
+            });
+        },
+    },
+    2207:{
+        atk: function(p) { return (p.unit.type == "DEX" || p.unit.type == "QCK" || p.unit.type == "INT") ? window.specials[2207].multiplier : 1; },
+        type: "class",
+        onActivation: function(p) {
+            var n = (window.specials[2207].multiplier == 1.75 ? 1 : window.specials[2207].multiplier == 2 ? 2 : 0);
+            window.specials[2207].multiplier = [1.75, 2, 2.25][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.75, 2, 2.25][n] + 'x ATK boost. To switch to the ' + [2.25, 1.75, 2][n] + 'x ATK boost, disable and re-enable this special',
+                name: '2207warning'
+            });
+        },
+    },
     2214: {
         delay: function(p) { return 1; },
     },
     2215: {
         delay: function(p) { return 1; },
+    },
+    2216: {
+        rcv: function(p) { return 1.5; },
+    },
+    2217: {
+        rcv: function(p) { return 1.5; },
     },
     2502: {
         atk: function(p) { return 1.75; },
