@@ -7459,14 +7459,13 @@ window.captains = {
         atk: function(p){ return p.unit.class.has("Striker") ? 2.25 : 1; },
     },
     2174: {
-        atk: function(p){ return p.unit.class.has("Powerhouse") ? 1 : 1; },//Change This
+        atk: function(p){ return p.unit.class.has("Powerhouse") ? 1.75 : 1; },
     },
     2175: {
         atk: function(p){ return p.unit.class.has("Powerhouse") ? p.actions[p.sourceSlot] ? 2.75 : 2 : 1; },
     },
     2176: {
-        atk: function(p){ return p.unit.class.has("Striker") ? 1 : 1; },//change this
-        hp: function(p){ return p.unit.class.has("Striker") ? 1 : 1; },//change this
+        atk: function(p){ return p.unit.class.has("Striker") ? 2 : 1; },
     },
     2177: {
         atk: function(p){ return p.unit.class.has("Striker") ? 2.25 : 1; },

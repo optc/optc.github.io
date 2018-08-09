@@ -5110,7 +5110,7 @@ window.specials = {
         atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? window.specials[2126].multiplier : 1; },
         type: "class",
         onActivation: function(p) {
-            var n = (p.percHP >= 50 ? 1.75 : 1);
+            var n = (p.percHP <= 50 ? 1.75 : 1);
             window.specials[2126].multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 1.75 ? 'below' : 'above') + ' 50%, using the ' + n + 'x multiplier.',

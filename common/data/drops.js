@@ -814,6 +814,7 @@ window.drops = {
             name: 'Dressrosa - Former King\'s Land to Royal Palace Top Floor',
             shortName: 'Dressrosa 3',
             thumb: 1784,
+            global: true,
             nakama: null,
             completion: '5x Rainbow Gems',
             gamewith: 99550,
@@ -1972,8 +1973,9 @@ window.drops = {
         },
         
         {
-            name: 'My Ideal Type!',
+            name: 'I\'m Now Your Ideal Type! I Think',
             thumb: 1947,
+            global: true,
             nakama: 2194700,
             gamewith: 88584,
             'All Difficulties': [ 1946, 1948, -1763, -1796, -1800, -1364, -1678, -1562 ]
@@ -1989,8 +1991,9 @@ window.drops = {
         },
         
         {
-            name: 'Supernova! Bonney and Capone!',
+            name: 'Volatile Meal! Bonney and Bege!',
             thumb: 1982,
+            global: true,
             nakama: 2198200,
             gamewith: 93457,
             'All Difficulties': [ 1979, 1981, -1921, -1362, -1366, -1770, -1834, -2139, -1836, -2140, -1633 ]
@@ -2617,7 +2620,8 @@ window.drops = {
             nakama: 4220100,
             gamewith: null,
             Ultimate: [ 2500 ],
-            Master: [ 2500 ]
+            Master: [ 2500 ],
+            Expert: [ 2500 ]
         },
 
     ],
