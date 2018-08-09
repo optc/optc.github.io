@@ -2620,7 +2620,8 @@ window.drops = {
             nakama: 4220100,
             gamewith: null,
             Ultimate: [ 2500 ],
-            Master: [ 2500 ]
+            Master: [ 2500 ],
+            Expert: [ 2500 ]
         },
 
     ],
