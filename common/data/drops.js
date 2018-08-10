@@ -1389,7 +1389,7 @@ window.drops = {
             gamewith: 2191,
             condition: 'You can only bring Fighter and Powerhouse units',
             challenge: 'High Score calculated with Crew Cost, Turns Taken and Tap Accuracy',
-            challengeData: [['100,000','1x Purple Elder'],['400,000','1x RCV Candy, 1x Rainbow Gem'],['750,000','1x Auto-Heal Skullbook, 2x Rainbow Gem']],
+            challengeData: [['100,000','1x Purple Elder'],['400,000','1x RCV Candy, 1x Rainbow Gem'],['750,000','1x Auto-Heal Final Forbidden Tome, 2x Rainbow Gem']],
             'Japan': [ 796, 798, 799, 800, -800, -639, -628, -562, -1816, -414, -432, -380, -75 ],
             'Global': [ 796, 798, 799, 800, -800, -677, -628, -562, -1816, -414, -432, -380, -75 ]
         },
