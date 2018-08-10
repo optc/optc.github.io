@@ -1992,6 +1992,8 @@ window.flags = {
     2013: { rr: 1, rro: 1, lrr: 1 },
     2014: { global: 1 },
     2015: { global: 1 },
+    2016: { global: 1 },
+    2017: { global: 1 },
     2022: { rr: 1, rro: 1 },
     2023: { rr: 1, rro: 1 },
     2024: { rr: 1, rro: 1 },

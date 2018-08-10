@@ -27098,12 +27098,12 @@ window.details = {
     },
     2010: {//Monet
         captain: "Boosts ATK of Free Spirit characters by 1.2x",
-        special: "Deals 50,000 fixed damage to one enemy and reduces Bind and enemy's Threshold Damage Reduction duration by 3 turns",
+        special: "Deals 50,000 fixed damage to one enemy and reduces Bind and enemy's Percent Damage Reduction and Increased Defense duration by 3 turns",
         specialName: "Fangs of Crushing Ice",
     },
     2011: {//Monet
         captain: "Boosts ATK of Free Spirit characters by 1.5x and their RCV by 1.2x",
-        special: "Deals 50,000 fixed damage to one enemy and reduces Bind and enemy's Threshold Damage Reduction duration by 3 turns",
+        special: "Deals 50,000 fixed damage to one enemy and reduces Bind and enemy's Percent Damage Reduction and Increased Defense duration by 3 turns",
         specialName: "Fangs of Crushing Ice",
     },
     2012: {//Limited Bonney

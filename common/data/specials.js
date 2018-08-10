@@ -3129,7 +3129,8 @@ window.specials = {
         chain: function(p) { return window.specials[1657].multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[1657].multiplier : 1;
+            if (window.specials[1657].multiplier == 2.75) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[1657].multiplier : 1;
+            else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
         },
         onActivation: function(p) {
             window.specials[1657].multiplier = 1;
@@ -3142,7 +3143,8 @@ window.specials = {
         chain: function(p) { return window.specials[1658].multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[1658].multiplier : 1;
+            if (window.specials[1658].multiplier == 2.75) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[1658].multiplier : 1;
+            else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
         },
         onActivation: function(p) {
             window.specials[1658].multiplier = 1;
@@ -4064,15 +4066,16 @@ window.specials = {
     1921: {
         atk: function(p) { return !p.unit.class.has('Slasher') ? 1 : p.sourceSlot < 2 ? 2 : 1.75 ; },
         type: "class",
-        chain: function(p) { return p.sourceSlot > 1 ? 2.5 : 1; },
+        chain: function(p) { return (window.specials[1921].multiplier == 2.5) ? 2.5 : 1; },
         chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            if (window.specials[1921].multiplier == 2.5) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 2.5 : 1;
+            else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
+        },
+        onActivation: function(p) {
+            window.specials[1921].multiplier = 1;
             if (p.sourceSlot > 1){
-                var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-                return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 2.5 : 1;
-            }
-            else{
-                var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-                return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
+                window.specials[1921].multiplier = 2.5;
             }
         },
     },
