@@ -6782,7 +6782,7 @@ window.details = {
     },
     767: {
         special: {
-            "japan": "Changes top row orbs into [DEX] orbs, removes blindness",
+            "japan": "Changes top row orbs into [DEX] orbs, removes Blindness duration completely",
             "global": "Changes top row orbs into [DEX] orbs, reduces Despair duration by 1 turn"
         },
         specialName: "Ojos Fleur: Thriller",
@@ -6922,11 +6922,11 @@ window.details = {
         captain: "Boosts ATK of Slasher characters by 2x and their RCV by 1.5x"
     },
     784: {
-        special: "Reduces Despair duration by 2 turns, removes blindness",
+        special: "Reduces Despair duration by 2 turns, removes Blindness duration completely",
         specialName: "Yelling at Lascivious Young Women"
     },
     785: {
-        special: "Reduces Despair duration by 2 turns, removes blindness",
+        special: "Reduces Despair duration by 2 turns, removes Blindness duration completely",
         specialName: "Yelling at Lascivious Young Women",
         captain: "Reduces damage received by 20%"
     },
@@ -15186,12 +15186,12 @@ window.details = {
     },
     1385: {//Rebecca
         captain: "Reduces damage received by 20%",
-        special: "Removes blindness",
+        special: "Removes Blindness duration completely",
         specialName: "Mother's Promise",
     },
     1386: {//Rebecca
         captain: "Reduces damage received by 25%",
-        special: "Removes blindness",
+        special: "Removes Blindness duration completely",
         specialName: "Mother's Promise",
     },
     1387: {//Luffy 5+
@@ -17470,7 +17470,7 @@ window.details = {
     },
     1522: {//Ace
         captain: "Boosts ATK of [DEX] characters by 1.75x and their HP by 1.2x",
-        special: "Removes blindness, boosts own ATK by 1.75x for 1 turn",
+        special: "Removes Blindness duration completely, boosts own ATK by 1.75x for 1 turn",
         specialName: "Demon's Temper",
     },
     1523: {//Spring Chopper
@@ -23397,12 +23397,12 @@ window.details = {
     },
     1843: {//Coribou
         captain: "Boosts ATK of Driven and Striker characters by 1.5x",
-        special: "Removes blindness and recovers 4x character's RCV in HP",
+        special: "Removes Blindness duration completely and recovers 4x character's RCV in HP",
         specialName: "Frantic Funeral",
     },
     1844: {//Coribou
         captain: "Boosts ATK of Driven and Striker characters by 1.75x",
-        special: "Removes blindness and recovers 4x character's RCV in HP",
+        special: "Removes Blindness duration completely and recovers 4x character's RCV in HP",
         specialName: "Frantic Funeral",
     },
     1845: {//Garp
@@ -31094,6 +31094,12 @@ window.details = {
             },
         ]
     },
+    2194: {//EXP Reiju
+        captain: "Boosts ATK of all characters by 2.25x and boosts EXP and amount of Beli received by 1.2x",
+        captainNotes: "EXP and Beli boost does not take effect if she becomes your captain in the middle of the adventure.",
+        special: "Changes [TND] and Badly Matching orbs into Matching orbs and switches orbs between slots once",
+        specialName: "Royal Treatment",
+    },
     2196: {//Blackbeard
         captain: "Boosts ATK of Driven characters by 3.75x when HP is 10% or below, 2x otherwise and boosts HP of Driven characters by 1.2x",
         special: "Reduces enemy's Threshold Damage Reduction, Percent Damage Reduction, End of Turn Damage/Percent Cut, End of Turn Heal, Increased Defense, Damage Nullification, Barrier, ATK Up, Enrage and Resilience Buffs duration by 1 turn. Boosts ATK of all characters by 2x if HP is below 10% at the time the special is activated.",
@@ -31427,6 +31433,26 @@ window.details = {
         captain: "Boosts ATK, HP and RCV of all characters by 1.75x",
         special: "Removes Poison, reduces RCV DOWN duration by 10 turns, boosts RCV of all characters by 1.5x for 1 turn and reduces Special Cooldown of your top row by 1 turn.",
         specialName: "Angel Cruising",
+    },
+    2218: {//Inuarashi
+        captain: "Boosts ATK of Cerebral characters by ?x and their HP by ?x",
+        special: "Reduces enemies Increased Defense duration by 2 turns and changes own orb into [STR]. If your Captain is a Cerebral character, Locks the chain multiplier at 2.5x for 1 turn.",
+        specialName: "Dog Treat",
+    },
+    2219: {//Inuarashi
+        captain: "Boosts ATK of Cerebral characters by 2.25x and their HP by 1.2x",
+        special: "Reduces enemies Increased Defense duration by 2 turns and changes own orb into [STR]. If your Captain is a Cerebral character, Locks the chain multiplier at 2.5x for 1 turn.",
+        specialName: "Dog Treat",
+    },
+    2220: {//Miyagi
+        captain: "Boosts RCV of Cerebral characters by 1.5x",
+        special: "Removes Blindness duration completely.",
+        specialName: "Positive Therapy",
+    },
+    2221: {//Tristan
+        captain: "Boosts chain multiplier by 1.5x",
+        special: "Recovers 2,000 HP and reduces Despair duration by 2 turns.",
+        specialName: "Loving Family Care",
     },
     2500: {//Doflamingo Raid v2
         captain: "Boosts ATK of Driven and Cerebral characters by 2.5x when HP is 50% or below, 1.5x otherwise",

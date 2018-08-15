@@ -7627,10 +7627,24 @@ window.captains = {
         rcv: function(p){ return 1; },//Change this
         hp: function(p){ return 1; },//Change this
     },
-    2216: {
+    2217: {
         atk: function(p){ return 1.75; },
         rcv: function(p){ return 1.75; },
         hp: function(p){ return 1.75; },
+    },
+    2218: {
+        atk: function(p){ return p.unit.class.has("Cerebral") ? 1 : 1; },
+        hp: function(p) { return p.unit.class.has("Cerebral") ? 1 : 1; },
+    },
+    2219: {
+        atk: function(p){ return p.unit.class.has("Cerebral") ? 2.25 : 1; },
+        hp: function(p) { return p.unit.class.has("Cerebral") ? 1.2 : 1; },
+    },
+    2220: {
+        rcv: function(p){ return p.unit.class.has("Cerebral") ? 1.5 : 1; },
+    },
+    2221: {
+        chainModifier: function(p) { return 1.5; }
     },
     2500: {
         atk: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Cerebral")) ? p.percHP <= 50.0 ? 2.5 : 1.5 : 1; }

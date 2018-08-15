@@ -2079,6 +2079,14 @@ window.drops = {
             'All Difficulties': [ 2176, 2178, 2179, -2048, -2029, -1883, -1483, -1353, -1785 ]
         },
         
+        {
+            name: 'Inuarashi Fortnight',
+            thumb: 2219,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 2218, 2220, 2221 ]
+        },
+        
     ],
 
             
