@@ -2192,7 +2192,7 @@ window.units = [
     [ "Rebecca, Beach Sunflower", "INT", [ "Striker", "Slasher" ], 5, 50, 4, 3, 99, 4000000, 859, 481, 119, 1680, 1210, 297, 1 ],
     [ "Bartholomew Kuma, Incomplete Human Weapon", "PSY", [ "Shooter", "Cerebral" ], 4, 25, 5, 3, 70, 1066998, 402, 172, 32, 1733, 755, 129, 1 ],
     [ "Bartholomew Kuma, The Human Weapon Defying Justice", "PSY", [ "Shooter", "Cerebral" ], 5, 40, 5, 4, 99, 4000000, 1672, 712, 112, 3129, 1382, 192, 1 ],
-    [ "Vinsmoke Reiju", "INT", [ "Cerebral", "Powerhouse" ], 4, 15, 5, 4, 99, 1000000, 175, 102, 23, null, null, null, null ],
+    [ "Vinsmoke Reiju, 13 Year Reunion", "INT", [ "Cerebral", "Powerhouse" ], 4, 15, 5, 4, 99, 1000000, 175, 102, 23, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Blackbeard, Warlord of the Sea", "INT", [ "Driven", "Powerhouse" ], 4, 30, 5, 2, 70, 1066998, 500, 153, -83, 1770, 720, -83, null ],
     [ "Blackbeard, Former Warlord of the Sea", "INT", [ "Driven", "Powerhouse" ], 5, 50, 4, 3, 99, 5000000, 1690, 643, -83, 3830, 1483, -83, null ],
