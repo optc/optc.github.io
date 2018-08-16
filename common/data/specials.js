@@ -4068,13 +4068,13 @@ window.specials = {
         type: "class",
         chain: function(p) { return (window.specials[1921].multiplier == 2.5) ? 2.5 : 1; },
         chainLimiter: function(p) {
-            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1];
             if (window.specials[1921].multiplier == 2.5) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 2.5 : 1;
             else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
         },
         onActivation: function(p) {
             window.specials[1921].multiplier = 1;
-            if (p.sourceSlot > 1){
+            if (p.slot > 1){
                 window.specials[1921].multiplier = 2.5;
             }
         },
