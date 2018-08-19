@@ -29815,7 +29815,7 @@ window.details = {
     },
     2140: {//Ichiji
         captain: "Boosts ATK of [QCK] characters by 2.25x, boosts ATK of Powerhouse characters by 1.4x and the HP of Powerhouse characters by 1.2x",
-        captainNotes: "Attack boost stacks, so a [STR] Powerhouse character has a 3.15x ATK",
+        captainNotes: "Attack boost stacks, so a [QCK] Powerhouse character has a 3.15x ATK",
         special: "If your captain is [QCK] or [INT] character, amplifies the effect of orbs by 2x for 1 turn. If your Captain is a Powerhouse character, reduces Increase Damage Taken duration by 3 turns",
         specialName: "Sparking Figure",
         sailor: {
