@@ -499,7 +499,6 @@ window.zombies = {
     },
     1889: { // Cavendish
         type: 'healer',
-        multiplier: 2
     },
     1919: { // Sanji
         type: 'healer',
@@ -541,18 +540,6 @@ window.zombies = {
         type: 'zombie',
         threshold: 0.5
     },
-    5001: { // Smoker/Tashigi
-        type: 'healer',
-        amount: 300
-    },
-    5002: { // Smoker/Tashigi
-        type: 'healer',
-        amount: 1000
-    },
-    5003: { // Smoker/Tashigi
-        type: 'healer',
-        amount: 1000
-    },
     2123: { // Neptune
         type: 'healer',
         multiplier: 5
@@ -576,5 +563,24 @@ window.zombies = {
     2193: { // Kuma
         type: 'healer',
         multiplier: 2
+    },
+    2210: { // Enel
+        type: 'healer',
+        amount: 51
+    },
+    2211: { // Enel
+        type: 'healer',
+    },
+    5001: { // Smoker/Tashigi
+        type: 'healer',
+        amount: 300
+    },
+    5002: { // Smoker/Tashigi
+        type: 'healer',
+        amount: 1000
+    },
+    5003: { // Smoker/Tashigi
+        type: 'healer',
+        amount: 1000
     },
 };

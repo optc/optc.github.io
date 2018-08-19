@@ -24395,7 +24395,7 @@ window.details = {
             "level3": "Boosts ATK of Driven characters by 1.5x, recovers 1.8x character's RCV in HP at the end of each turn. Boosts ATK of Driven characters by 2.25x following a chain of 3 same Type attacks no lower than Good",
             "level4": "Boosts ATK of Driven characters by 1.75x, recovers 1.9x character's RCV in HP at the end of each turn. Boosts ATK of Driven characters by 2.625x following a chain of 3 same Type attacks no lower than Good",
             "level5": "Boosts ATK of Driven characters by 2x, recovers 2x character's RCV in HP at the end of each turn. Boosts ATK of Driven characters by 3x following a chain of 3 same Type attacks no lower than Good",
-            "level6": "Boosts ATK of Driven characters by 2.5x, recovers 2 character's RCV in HP at the end of each turn. Boosts ATK of Driven characters by 3.75x following a chain of 3 same Type attacks no lower than Good",
+            "level6": "Boosts ATK of Driven characters by 2.5x, recovers 2x character's RCV in HP at the end of each turn. Boosts ATK of Driven characters by 3.75x following a chain of 3 same Type attacks no lower than Good",
         },
         special: "Removes all positive buffs on your team, recovers 1,224 HP, changes Badly Matching orbs into Matching orbs. Boosts ATK of Driven characters by 1.75x for 1 turn and amplifies the effect of orbs by 1.75x for Driven characters for 1 turn",
         specialName: "A Star Descending from the Twinkling Night Sky",
@@ -31258,7 +31258,7 @@ window.details = {
         ]
     },
     2202: {//Indigo
-        captain: "Boosts ATK of Shooter characters by ?x and their RCV by ?x",
+        captain: "Boosts ATK of Shooter characters by 2.25x",
         special: "If HP is below 10%, recovers all missing HP. If your Captain is a Driven character, removes Poison and Blindness duration completely and reduces damage received by 50% for 3 turns.",
         specialName: "Chemical Juggling",
         sailor: "Reduces Silence duration on this character by 3 turns",
@@ -31314,7 +31314,7 @@ window.details = {
         ]
     },
     2204: {//Scarlet
-        captain: "Boosts ATK of Fighter and Powerhouse characters by ?x following a chain of Good > Great > PERFECT hits",
+        captain: "Boosts ATK of Fighter and Powerhouse characters by 2.5x following a chain of Good > Great > PERFECT hits",
         special: "If HP is below 10%, amplifies the effect of orbs by 2x for 1 turn. If your Captain is a Driven character, reduces enemies' ATK Up, Enrage and End of Turn Damage/Percent Cut duration by 5 turns.",
         specialName: "Chemical Juggling",
         sailor: "If your Captain is a Driven character, boosts own base ATK by 100",
@@ -31369,7 +31369,7 @@ window.details = {
         potentialNotes: "#{enrage}"
     },
     2206: {//Luffy
-        captain: "Boosts ATK of Striker characters by ?x",
+        captain: "Boosts ATK of Striker characters by 1.5x",
         special: "Reduces enemy Barrier duration by 1 turn, reduces the defense of all enemies by 100% for 1 turn and boosts ATK of [DEX], [QCK] and [INT] characters depending on your Treasure Map Level for 1 turn",
         specialNotes: "Level 1-10: 1.75x ATK boost<br\>Level 11-20: 2x ATK boost<br\>Level 21+: 2.25x ATK boost",
         specialName: "Gomu Gomu no Fireworks: Golden Peony",
@@ -31381,7 +31381,7 @@ window.details = {
         specialName: "Gomu Gomu no Fireworks: Golden Peony",
     },
     2208: {//Gan Fall
-        captain: "Boosts ATK of [INT] characters by ?x and their HP by ?x",
+        captain: "Boosts ATK of [INT] characters by 1.25x",
         special: "Reduces crew's ATK DOWN and Bind duration by 3 turns and changes bottom row orbs into matching orbs",
         specialName: "Heavenly Charge",
     },
@@ -31391,7 +31391,7 @@ window.details = {
         specialName: "Heavenly Charge",
     },
     2210: {//Enel TM
-        captain: "Boosts ATK of all characters by 1.56x, deals 5656 in [PSY] damage to all enemies at the end of each turn and recovers 51 HP at end of each turn",
+        captain: "Boosts ATK of all characters by 1.5x, deals 5656 in [PSY] damage to all enemies at the end of each turn and recovers 51 HP at end of each turn",
         special: "Deals 565,600 fixed damage to all enemies and locks all orbs for 1 turn.",
         specialName: "God's Judgement: El Thor",
     },

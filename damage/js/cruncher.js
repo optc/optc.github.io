@@ -149,7 +149,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         result.cost = { cost: cost, level: Math.max(1,Math.floor(cost / 2) * 2 - 18) };
         $scope.numbers = jQuery.extend($scope.numbers, result);
         $scope.numbers.hp = Math.max(1,hpMax);
-        checkHealAndZombie(result, $scope.numbers);
+        checkHealAndZombie(result, $scope.numbers, [$scope.data.actionleft, $scope.data.actionright]);
         $timeout(function() { crunchSelfInhibit = false; });
     }
 
@@ -1133,7 +1133,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         });
     };
 
-    var checkHealAndZombie = function(data, numbers) {
+    var checkHealAndZombie = function(data, numbers, capActions) {
         delete numbers.zombie;
         delete numbers.healPerTurn;
         // compute data
@@ -1151,9 +1151,11 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                         if (x.hasOwnProperty('rcvStatic'))
                             rcvtemp += x.rcvStatic(getParameters(i));
                     });
-                    if ([1250, 1251].has(id)){
+                    if ([1250, 1251, 2211, 1889].has(id)){
                         healAmount += id == 1250 ? Math.floor(([0, .5, .75, 1, 1.5, 2, 2.5][classCounter().Powerhouse]) * (data.team[i].rcv + rcvtemp)) : 0;
                         healAmount += id == 1251 ? Math.floor(([0, .5, .75, 1, 1.5, 2, 3.5][classCounter().Powerhouse]) * (data.team[i].rcv + rcvtemp)) : 0;
+                        healAmount += id == 1889 ? capActions[i] ? 2 * (data.team[i].rcv + rcvtemp) : 1.5 * (data.team[i].rcv + rcvtemp) : 0;
+                        healAmount += id == 2211 ? capActions[i] ? 510 : 51 : 0;
                         //console.log(hitModifiers); DO THIS FOR CORAZON
                     }
                     else
