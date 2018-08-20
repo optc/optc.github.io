@@ -31398,11 +31398,11 @@ window.details = {
     2211: {//Enel TM
         captain: {
             "base": "Boosts ATK of all characters by 2x, deals 5656 in [PSY] damage to all enemies at the end of each turn and recovers 51 HP at end of each turn",
-            "level1": "Boosts ATK of all characters by ?x, deals ? in [PSY] damage to all enemies at the end of each turn and recovers ? HP at end of each turn",
-            "level2": "Boosts ATK of all characters by ?x, deals ? in [PSY] damage to all enemies at the end of each turn and recovers ? HP at end of each turn",
-            "level3": "Boosts ATK of all characters by ?x, deals ? in [PSY] damage to all enemies at the end of each turn and recovers ? HP at end of each turn",
-            "level4": "Boosts ATK of all characters by ?x, deals ? in [PSY] damage to all enemies at the end of each turn and recovers ? HP at end of each turn",
-            "level5": "Boosts ATK of all characters by ?x, deals ? in [PSY] damage to all enemies at the end of each turn and recovers ? HP at end of each turn",
+            "level1": "Boosts ATK of all characters by 2x, deals 15656 in [PSY] damage to all enemies at the end of each turn and recovers 151 HP at end of each turn",
+            "level2": "Boosts ATK of all characters by 2x, deals 25656 in [PSY] damage to all enemies at the end of each turn and recovers 251 HP at end of each turn",
+            "level3": "Boosts ATK of all characters by 2x, deals 35656 in [PSY] damage to all enemies at the end of each turn and recovers 351 HP at end of each turn",
+            "level4": "Boosts ATK of all characters by 2x, deals 45656 in [PSY] damage to all enemies at the end of each turn and recovers 451 HP at end of each turn",
+            "level5": "Boosts ATK of all characters by 2x, deals 56560 in [PSY] damage to all enemies at the end of each turn and recovers 510 HP at end of each turn",
             "level6": "Boosts ATK of all characters by 2.5x, deals 56560 in [PSY] damage to all enemies at the end of each turn and recovers 510 HP at end of each turn",
         },
         special: "Deals 565,600 fixed damage to all enemies and locks all orbs for 1 turn.",

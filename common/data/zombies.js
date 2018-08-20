@@ -219,6 +219,12 @@ window.zombies = {
         type: 'healer',
         amount: 500 
     },
+    1000: {//Corazon
+        type: 'healer',
+    },
+    1001: {//Corazon
+        type: 'healer',
+    },
     1008: {//Sakura Monet
         type: 'healer',
         multiplier: 3
@@ -300,6 +306,12 @@ window.zombies = {
     1310: {//Colo Kinemon
         type: 'healer',
         multiplier: 2
+    },
+    1319: {//Tsuru
+        type: 'healer',
+    },
+    1320: {//Tsuru
+        type: 'healer',
     },
     1330: {//Gancho
         type: 'healer',
@@ -461,6 +473,12 @@ window.zombies = {
         type: 'healer',
         amount: 1000
     },
+    1750: { // Law
+        type: 'healer',
+    },
+    1751: { // Law
+        type: 'healer',
+    },
     1756: { // Nami
         type: 'healer',
         multiplier: 2
@@ -507,6 +525,9 @@ window.zombies = {
     1920: { // Sanji
         type: 'healer',
         multiplier: 3
+    },
+    1922: { // Law
+        type: 'healer',
     },
     1924: { // Rayleigh
         type: 'healer',
