@@ -31480,13 +31480,13 @@ window.details = {
     },
     2212: {//Pudding
         captain: "Boosts ATK of Cerebral characters by ?x and their RCV by ?x",
-        special: "Recovers 7,000 HP, Reduces crew's ATK DOWN and enemy's Resilience Buffs duration by 1 turn and changes adjacent orbs into Matching Orbs",
+        special: "Recovers 7,000 HP, Reduces crew's ATK DOWN and enemy's Resilience Buffs duration by 5 turns and changes adjacent orbs into Matching Orbs",
         specialName: "Eyes Hiding Shyness",
         sailor: "Reduces Paralysis duration by 1 turn",
     },
     2213: {//Pudding
         captain: "Boosts ATK of Cerebral characters by 2.25x and their RCV by 1.2x",
-        special: "Recovers 7,000 HP, Reduces crew's ATK DOWN and enemy's Resilience Buffs duration by 1 turn and changes adjacent orbs into Matching Orbs",
+        special: "Recovers 7,000 HP, Reduces crew's ATK DOWN and enemy's Resilience Buffs duration by 5 turns and changes adjacent orbs into Matching Orbs",
         specialName: "Eyes Hiding Shyness",
         sailor: "Reduces Paralysis duration by 1 turn",
     },
