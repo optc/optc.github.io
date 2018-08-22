@@ -815,7 +815,7 @@ window.drops = {
             shortName: 'Dressrosa 3',
             thumb: 1784,
             global: true,
-            nakama: null,
+            nakama: 1178400,
             completion: '5x Rainbow Gems',
             gamewith: 99550,
             '01': [ 1375, 1627, 2002 ],
@@ -836,7 +836,7 @@ window.drops = {
             name: 'Dressrosa - Royal Palace Top Floor to Town Center',
             shortName: 'Dressrosa 4',
             thumb: 2126,
-            nakama: null,
+            nakama: 1212600,
             completion: '10x Rainbow Gems',
             gamewith: 111173,
             '01': [ 2003 ],
@@ -853,7 +853,16 @@ window.drops = {
             '12': [ 2003 ],
             '13': [ 2125 ],
             '14': [  ],
-            '15': [ 2003, 9020  ],
+            '15': [ 2003, 9020 ],
+        },
+        
+        {
+            name: 'Mokomo Dukedom',
+            shortName: 'Mokomo Dukedom',
+            thumb: null,
+            nakama: null,
+            gamewith: null,
+            completion: '5x Rainbow Gems',
         },
         
     ], 
@@ -2002,6 +2011,7 @@ window.drops = {
         {
             name: 'Whitebeard Pirates Commanders! Marco and Vista!',
             thumb: 1997,
+            global: true,
             nakama: 2199700,
             gamewith: 94921,
             'All Difficulties': [ 1994, 1996, -1832, -2138, -1408, -1721, -1871, -1838, -2141, -1634 ]
@@ -2575,6 +2585,7 @@ window.drops = {
         {
             name: 'Clash!! Rob Lucci',
             thumb: 2015,
+            global: true,
             nakama: 4201500,
             gamewith: 95424,
             Ultimate: [ 2014 ],
@@ -2711,7 +2722,8 @@ window.drops = {
         {
             name: 'Sanji and Zoro',
             thumb: 2000,
-            nakama: null,
+            global: true,
+            nakama: 8200000,
             gamewith: 94667,
             'Raging Sea': [ 1998, 1999 ]
         },
@@ -2719,7 +2731,7 @@ window.drops = {
         {
             name: 'Borsalino',
             thumb: 2064,
-            nakama: null,
+            nakama: 8206400,
             gamewith: 101870,
             'Raging Sea': [ 2063 ]
         },
@@ -2727,7 +2739,7 @@ window.drops = {
         {
             name: 'Big Mom',
             thumb: 2109,
-            nakama: null,
+            nakama: 8210900,
             gamewith: 105881,
             'Sweet Sea': [ 2108 ]
         },
@@ -2735,7 +2747,7 @@ window.drops = {
         {
             name: 'Crocodile',
             thumb: 2137,
-            nakama: null,
+            nakama: 8213700,
             gamewith: 109127,
             'Primordial Sea': [ 2136 ]
         },
@@ -2743,7 +2755,7 @@ window.drops = {
         {
             name: 'Jack',
             thumb: 2175,
-            nakama: null,
+            nakama: 8217500,
             gamewith: 112951,
             'Raging Sea': [ 2174 ]
         },
@@ -3167,9 +3179,9 @@ window.drops = {
         {
             name: 'Forest of Training: Hawk',
             thumb: 227,
+            global: true,
             gamewith: 2949,
             slefty: 'forests/1',
-            global: true,
             nakama: 7022700,
             completion: 'Ship: Coffin Boat',
         },
@@ -3177,9 +3189,9 @@ window.drops = {
         {
             name: 'Forest of Training: Flame Fist',
             thumb: 562,
+            global: true,
             gamewith: 15896,
             slefty: 'forests/2',
-            global: true,
             nakama: 7056200,
             completion: 'Ship: Striker',
         },
@@ -3187,9 +3199,9 @@ window.drops = {
         {
             name: 'Forest of Training: Kami',
             thumb: 603,
+            global: true,
             gamewith: 25369,
             slefty: 'forests/7',
-            global: true,
             nakama: 7060300,
             completion: 'Ship: Ark Maxim',
         },
@@ -3197,9 +3209,9 @@ window.drops = {
         {
             name: 'Forest of Training: Sun',
             thumb: 935,
+            global: true,
             gamewith: 32540,
             slefty: 'forests/9',
-            global: true,
             nakama: 7093500,
             completion: 'Ship: Sun Pirates Ship',
         },
@@ -3207,9 +3219,9 @@ window.drops = {
         {
             name: 'Forest of Training: Beard',
             thumb: 261,
+            global: true,
             gamewith: 11685,
             slefty: 'forests/6',
-            global: true,
             nakama: 7026100,
             completion: 'Ship: Moby Dick',
         },
@@ -3217,9 +3229,9 @@ window.drops = {
         {
             name: 'Forest of Training: Pheasant',
             thumb: 575,
+            global: true,
             gamewith: 15617,
             slefty: 'forests/11',
-            global: true,
             nakama: 7057500,
             completion: 'Ship: Aokiji\'s Bicycle',
         },
@@ -3227,9 +3239,9 @@ window.drops = {
         {
             name: 'Forest of Training: Snake',
             thumb: 416,
+            global: true,
             gamewith: 24312,
             slefty: 'forests/8',
-            global: true,
             nakama: 7041600,
             completion: 'Ship: Kuja Pirates Ship',
         },
@@ -3237,9 +3249,9 @@ window.drops = {
         {
             name: 'Forest of Training: Red Hair',
             thumb: 530,
+            global: true,
             gamewith: 27893,
             slefty: 'forests/10',
-            global: true,
             nakama: 7053000,
             completion: 'Ship: Red Force',
         },
@@ -3247,8 +3259,8 @@ window.drops = {
         {
             name: 'Forest of Training: Heavenly Demon',
             thumb: 870,
-            gamewith: 34319,
             global: true,
+            gamewith: 34319,
             nakama: 7087000,
             completion: 'Ship: Doflamingo Pirates Ship',
         },
@@ -3256,8 +3268,8 @@ window.drops = {
         {
             name: 'Forest of Training: ROOM',
             thumb: 1045,
-            gamewith: 44527,
             global: true,
+            gamewith: 44527,
             nakama: 7104500,
             completion: 'Ship: Polar Tang',
         },
@@ -3265,8 +3277,8 @@ window.drops = {
         {
             name: 'Forest of Training: Monkey',
             thumb: 1240,
-            gamewith: 48115,
             global: true,
+            gamewith: 48115,
             nakama: 7124000,
             completion: 'Ship: Kizaru\'s Cannonball',
         },
@@ -3274,6 +3286,7 @@ window.drops = {
         {
             name: 'Forest of Training: Darkness',
             thumb: 1268,
+            global: true,
             nakama: 7126800,
             gamewith: 59779,
             completion: 'Ship: Blackbeard Pirates Ship',
@@ -3282,7 +3295,7 @@ window.drops = {
         {
             name: 'Forest of Training: Gang',
             thumb: 1016,
-            nakama: null,
+            nakama: 7101600,
             gamewith: 107299,
             completion: 'Ship: Nostra Castello',
         },
