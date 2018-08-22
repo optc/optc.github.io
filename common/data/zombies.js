@@ -219,6 +219,12 @@ window.zombies = {
         type: 'healer',
         amount: 500 
     },
+    1000: {//Corazon
+        type: 'healer',
+    },
+    1001: {//Corazon
+        type: 'healer',
+    },
     1008: {//Sakura Monet
         type: 'healer',
         multiplier: 3
@@ -300,6 +306,12 @@ window.zombies = {
     1310: {//Colo Kinemon
         type: 'healer',
         multiplier: 2
+    },
+    1319: {//Tsuru
+        type: 'healer',
+    },
+    1320: {//Tsuru
+        type: 'healer',
     },
     1330: {//Gancho
         type: 'healer',
@@ -461,6 +473,12 @@ window.zombies = {
         type: 'healer',
         amount: 1000
     },
+    1750: { // Law
+        type: 'healer',
+    },
+    1751: { // Law
+        type: 'healer',
+    },
     1756: { // Nami
         type: 'healer',
         multiplier: 2
@@ -499,7 +517,6 @@ window.zombies = {
     },
     1889: { // Cavendish
         type: 'healer',
-        multiplier: 2
     },
     1919: { // Sanji
         type: 'healer',
@@ -508,6 +525,9 @@ window.zombies = {
     1920: { // Sanji
         type: 'healer',
         multiplier: 3
+    },
+    1922: { // Law
+        type: 'healer',
     },
     1924: { // Rayleigh
         type: 'healer',
@@ -541,18 +561,6 @@ window.zombies = {
         type: 'zombie',
         threshold: 0.5
     },
-    5001: { // Smoker/Tashigi
-        type: 'healer',
-        amount: 300
-    },
-    5002: { // Smoker/Tashigi
-        type: 'healer',
-        amount: 1000
-    },
-    5003: { // Smoker/Tashigi
-        type: 'healer',
-        amount: 1000
-    },
     2123: { // Neptune
         type: 'healer',
         multiplier: 5
@@ -576,5 +584,24 @@ window.zombies = {
     2193: { // Kuma
         type: 'healer',
         multiplier: 2
+    },
+    2210: { // Enel
+        type: 'healer',
+        amount: 51
+    },
+    2211: { // Enel
+        type: 'healer',
+    },
+    5001: { // Smoker/Tashigi
+        type: 'healer',
+        amount: 300
+    },
+    5002: { // Smoker/Tashigi
+        type: 'healer',
+        amount: 1000
+    },
+    5003: { // Smoker/Tashigi
+        type: 'healer',
+        amount: 1000
     },
 };

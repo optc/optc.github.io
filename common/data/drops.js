@@ -1389,7 +1389,7 @@ window.drops = {
             gamewith: 2191,
             condition: 'You can only bring Fighter and Powerhouse units',
             challenge: 'High Score calculated with Crew Cost, Turns Taken and Tap Accuracy',
-            challengeData: [['100,000','1x Purple Elder'],['400,000','1x RCV Candy, 1x Rainbow Gem'],['750,000','1x Auto-Heal Skullbook, 2x Rainbow Gem']],
+            challengeData: [['100,000','1x Purple Elder'],['400,000','1x RCV Candy, 1x Rainbow Gem'],['750,000','1x Auto-Heal Final Forbidden Tome, 2x Rainbow Gem']],
             'Japan': [ 796, 798, 799, 800, -800, -639, -628, -562, -1816, -414, -432, -380, -75 ],
             'Global': [ 796, 798, 799, 800, -800, -677, -628, -562, -1816, -414, -432, -380, -75 ]
         },
@@ -2079,6 +2079,14 @@ window.drops = {
             'All Difficulties': [ 2176, 2178, 2179, -2048, -2029, -1883, -1483, -1353, -1785 ]
         },
         
+        {
+            name: 'Inuarashi Fortnight',
+            thumb: 2219,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 2218, 2220, 2221, -2007, -2027, -2031, -1783, -1538, -1536 ]
+        },
+        
     ],
 
             
@@ -2738,6 +2746,14 @@ window.drops = {
             nakama: null,
             gamewith: 112951,
             'Raging Sea': [ 2174 ]
+        },
+
+        {
+            name: 'Kami Enel',
+            thumb: 2211,
+            nakama: null,
+            gamewith: 116377,
+            'Raging Sea': [ 2210 ]
         },
         
     ],
