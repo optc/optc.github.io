@@ -882,7 +882,7 @@ window.drops = {
             thumb: null,
             nakama: null,
             gamewith: null,
-            completion: ?'x Rainbow Gems',
+            completion: '?x Rainbow Gems',
         },
         
     ], 
