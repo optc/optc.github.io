@@ -4758,11 +4758,11 @@ window.captains = {
         atk: function(p) { return p.unit.type == "INT" ? 1.5 : 1; },
         rcv: function(p) { return p.unit.type == "INT" ? 1.5 : 1; },
     },
-    1609: {//Enel TO DO
+    1609: {//Enel
         hp: function(p) { return 0.8 },
         atk: function(p) { return Math.max(2.0, 2.0 + 0.000125 * p.healCounter); },
     },
-    1610: {//Enel TO DO
+    1610: {//Enel
         hp: function(p) { return 0.8 },
         atk: function(p) { return Math.max(2.0, 2.0 + 0.000125 * p.healCounter); },
     },
@@ -7646,6 +7646,10 @@ window.captains = {
     },
     2221: {
         chainModifier: function(p) { return 1.5; }
+    },
+    2232: {//Enel
+        hp: function(p) { return 0.8 },
+        atk: function(p) { return Math.max(2.0, 2.0 + 0.000175 * p.healCounter); },//Change this
     },
     2500: {
         atk: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Cerebral")) ? p.percHP <= 50.0 ? 2.5 : 1.5 : 1; }

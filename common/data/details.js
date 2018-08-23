@@ -18960,7 +18960,7 @@ window.details = {
         specialName: "Heavy Thunder",
     },
     1610: {//Legend Enel
-        captain: "Reduces HP of all characters by 20%, boosts chances of getting [RCV] orbs, makes [RCV] orbs \"beneficial\" to all characters, boosts ATK of all characters proportionally to the amount healed in the last turn.",
+        captain: "Reduces HP of all characters by 20%, boosts chances of getting [RCV] orbs, makes [RCV] orbs \"beneficial\" to all characters, boosts ATK of all characters proportionally to the amount healed in the last turn, by 3.25x at max.",
         captainNotes: "The range of ATK boost is from 2x to 3.25x. The exact boost is calculated as 2 + <HP recovered in the previous turn> * 0.000125 and maxes at 10k HP healed. This ignores your max HP, so it doesn't stop counting if you over-heal.<br>#{beneficial}",
         special: "Deals typeless damage to all enemies equal to 10x how much excess healing done before the special is activated.",
         specialNotes: "The excess healing is counted from the last time the special is used and accumulates when you heal more than your maximum HP. For example, if you are at max HP and you heal 1,000 HP, you will add 10k damage to the special. The amount of damage possible caps at 2,000,000 damage.",
@@ -31561,6 +31561,83 @@ window.details = {
         captain: "Boosts chain multiplier by 1.5x",
         special: "Recovers 2,000 HP and reduces Despair duration by 2 turns.",
         specialName: "Loving Family Care",
+    },
+    2232: {//Legend Enel
+        captain: "Reduces HP of all characters by 20%, boosts chances of getting [RCV] orbs, makes [RCV] orbs \"beneficial\" to all characters, boosts ATK of all characters proportionally to the amount healed in the last turn, by 3.75 at max.",
+        captainNotes: "The range of ATK boost is from 2x to 3.75x. The exact boost is calculated as 2 + <HP recovered in the previous turn> * ? and maxes at ?k HP healed. This ignores your max HP, so it doesn't stop counting if you over-heal.<br>#{beneficial}",
+        special: "Deals typeless damage to all enemies equal to 25x how much excess healing done before the special is activated.",
+        specialNotes: "The excess healing is counted from the last time the special is used and accumulates when you heal more than your maximum HP. For example, if you are at max HP and you heal 1,000 HP, you will add 25k damage to the special. The amount of damage possible caps at 5,000,000 damage.",
+        specialName: "Kingdom Come",
+        sailor: {
+            "base": "None",
+            "level1": "Makes [RCV] orbs \"beneficial\" for all characters",
+            "level2": "Boosts amount healed from [RCV] orbs by 300 each",
+        },
+        sailorNotes: "#{beneficial}",
+        limit: [
+            { "description": "Boosts base HP by 5" },
+            { "description": "Boosts base HP by 10" },
+            { "description": "Boosts base HP by 15" },
+            { "description": "Acquire Potential 1: [STR] Damage Reduction" },
+            { "description": "Boosts base ATK by 5" },
+            { "description": "Boosts base ATK by 5" },
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Acquire Sailor Ability 1: Makes [RCV] orbs \"beneficial\" for all characters" },
+            { "description": "Boosts base HP by 20" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Acquire Potential 2: Slot Bind Self-reduction" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Acquire Sailor Ability 2: Boosts amount healed from [RCV] orbs by 300 each" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base RCV by 30" },
+            { "description": "Acquire Potential 3: Reduce No Healing duration" },
+        ],
+        potential: [
+            {
+                "Name": "[STR] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [STR] characters by 1%",
+                    "Level 2: Reduce damage taken from [STR] characters by 2%",
+                    "Level 3: Reduce damage taken from [STR] characters by 3%",
+                    "Level 4: Reduce damage taken from [STR] characters by 4%",
+                    "Level 5: Reduce damage taken from [STR] characters by 5%"
+                ]
+            },
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [
+                    "Level 1: Reduces Slot Bind duration by 1 turn on this character",
+                    "Level 2: Reduces Slot Bind duration by 3 turns on this character",
+                    "Level 3: Reduces Slot Bind duration by 5 turns on this character",
+                    "Level 4: Reduces Slot Bind duration by 7 turns on this character",
+                    "Level 5: Reduces Slot Bind duration by 10 turns on this character"
+                ]
+            },
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by 1 turn",
+                    "Level 2: Reduces No Healing duration by 3 turns",
+                    "Level 3: Reduces No Healing duration by 5 turns",
+                    "Level 4: Reduces No Healing duration by 7 turns",
+                    "Level 5: Reduces No Healing duration by 10 turns"
+                ]
+            },
+        ]
     },
     2500: {//Doflamingo Raid v2
         captain: "Boosts ATK of Driven and Cerebral characters by 2.5x when HP is 50% or below, 1.5x otherwise",

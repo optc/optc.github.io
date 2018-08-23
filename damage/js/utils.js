@@ -245,7 +245,7 @@ window.CrunchUtils.getOrbMultiplier = function(orb, type, uclass, baseMultiplier
     }
     for(temp = 0; temp < 2; temp++){
         if(captains[temp] != null){
-            if([1610, 1609, 1531, 1532].includes(captains[temp].number)){
+            if([1610, 1609, 1531, 1532, 2232].includes(captains[temp].number)){
                 if (orb == 'meat'){
                     return boostedMultiplier;
                 }
