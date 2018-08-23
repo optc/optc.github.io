@@ -3973,6 +3973,24 @@ window.specials = {
         type: "class",
         orb: function(p) { return p.unit.class.has("Driven") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); }	
     },
+    1890: {
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[1890].turnedOn = true;
+        },
+        onDeactivation: function(p) {
+            window.specials[1890].turnedOn = false;
+        },
+    },
+    1891: {
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[1891].turnedOn = true;
+        },
+        onDeactivation: function(p) {
+            window.specials[1891].turnedOn = false;
+        },
+    },
     1892: {
         delay: function(p) { return 1; },
     },
@@ -5640,6 +5658,47 @@ window.specials = {
                 window.specials[2219].multiplier = 2.5;
             }
         },
+    },
+    2222: {
+        atk: function(p) { return 1.25; },
+        type: "type"
+    },
+    2223: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.25, [p.friendCaptain, p.captain], p.effectName); }
+    },
+    2224: {
+        chainAddition: function(p) { return 0.25; }
+    },
+    2225: {
+        affinity: function(p){ return 1.25; }
+    },
+    2226: {
+        staticMult: function(p) { return 2.5; }
+    },
+    2227: {
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[2227].turnedOn = true;
+        },
+        onDeactivation: function(p) {
+            window.specials[2227].turnedOn = false;
+        },
+    },
+    2229: {
+        affinity: function(p) { return p.unit.class.has("Shooter") ? window.specials[2229].multiplier : 1; },
+        onActivation: function(p) {
+            var n = (p.percHP >= 50 ? 1.5 : 1);//change this
+            window.specials[2229].multiplier = n;
+            p.scope.notify({
+                text: 'HP ' + (n == 1 ? 'below' : 'above') + ' 50%, using the ' + n + 'x multiplier.',//change this
+                name: '2229warning'
+            });
+        }
+    },
+    2230: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 2 : 1; },
+        type: "type",
+        chainAddition: function(p) { return 0.4; }
     },
     2502: {
         atk: function(p) { return 1.75; },

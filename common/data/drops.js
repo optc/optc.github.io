@@ -856,6 +856,26 @@ window.drops = {
             '15': [ 2003, 9020  ],
         },
         
+        {
+            name: 'Mokomo Dukedom',
+            shortName: 'Zou',
+            thumb: 2231,
+            nakama: null,
+            completion: '?x Rainbow Gems',
+            gamewith: 117222,
+            '01': [ 1811 ],
+            '02': [  ],//Change This, still needs to be updated
+            '03': [  ],
+            '04': [  ],
+            '05': [  ],
+            '06': [ 2229 ],
+            '07': [  ],
+            '08': [ 2176, 2218 ],
+            '09': [  ],
+            '10': [  ],
+            '11': [ 2231 ],
+        },
+        
     ], 
 
     'Booster and Evolver Island': [

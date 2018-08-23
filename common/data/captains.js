@@ -7647,6 +7647,37 @@ window.captains = {
     2221: {
         chainModifier: function(p) { return 1.5; }
     },
+    2222: {
+        atk: function(p){ return p.unit.type == "STR" ? 1.5 : 1; },
+    },
+    2223: {
+        atk: function(p){ return p.unit.type == "DEX" ? 1.5 : 1; },
+    },
+    2224: {
+        atk: function(p){ return p.unit.type == "QCK" ? 1.5 : 1; },
+    },
+    2225: {
+        atk: function(p){ return p.unit.type == "INT" ? 1.5 : 1; },
+    },
+    2226: {
+        atk: function(p){ return p.unit.type == "PSY" ? 1.5 : 1; },
+    },
+    2227: {
+        atk: function(p){ return p.unit.class.has("Fighter") ? 1.5 : 1; },
+    },
+    2228: {
+        atk: function(p){ return p.unit.class.has("Slasher") ? 1.5 : 1; },
+    },
+    2228: {
+        atk: function(p){ return p.unit.class.has("Shooter") ? 2.25 : 1; },
+    },
+    2228: {
+        atk: function(p){ return p.unit.class.has("Powerhouse") ? 2 : 1; },
+    },
+    2228: {
+        atk: function(p){ return p.unit.class.has("Powerhouse") ? 2.5 : 1; },
+        hp: function(p){ return p.unit.class.has("Powerhouse") ? 1.2 : 1; },
+    },
     2232: {//Enel
         hp: function(p) { return 0.8 },
         atk: function(p) { return Math.max(2.0, 2.0 + 0.000175 * p.healCounter); },//Change this
