@@ -858,15 +858,6 @@ window.drops = {
         
         {
             name: 'Mokomo Dukedom',
-            shortName: 'Mokomo Dukedom',
-            thumb: null,
-            nakama: null,
-            gamewith: null,
-            completion: '5x Rainbow Gems',
-        },
-        
-        {
-            name: 'Mokomo Dukedom',
             shortName: 'Zou',
             thumb: 2231,
             nakama: null,
@@ -883,6 +874,15 @@ window.drops = {
             '09': [  ],
             '10': [  ],
             '11': [ 2231 ],
+        },
+        
+        {
+            name: 'Chocolat Town',
+            shortName: 'Whole Cake Island 1',
+            thumb: null,
+            nakama: null,
+            gamewith: null,
+            completion: ?'x Rainbow Gems',
         },
         
     ], 
@@ -2040,6 +2040,7 @@ window.drops = {
         {
             name: 'Makino\'s Bar! Shanks and Makino!',
             thumb: 2021,
+            global: true,
             nakama: 2202100,
             gamewith: 96636,
             'All Difficulties': [ 2018, 2020, -1404, -1593, -1410, -1778, -1873, -1877, -1635 ]
@@ -2048,7 +2049,7 @@ window.drops = {
         {
             name: 'Anchoring! Red Hair Pirates!',
             thumb: 2044,
-            nakama: null,
+            nakama: 2204400,
             gamewith: 98267,
             'All Difficulties': [ 2044, 2045, 2046, -1869, -1406, -1824, -1875, -1904, -2044, -1225 ]
         },
@@ -2056,7 +2057,7 @@ window.drops = {
         {
             name: 'Germa\'s Lineage Factor!',
             thumb: 2056,
-            nakama: null,
+            nakama: 2205600,
             gamewith: 99699,
             'All Difficulties': [ 2056, 2057, 2058, -1880, -1434, -1412, -1906, -1908, -1859, -1637 ]
         },
@@ -2064,7 +2065,7 @@ window.drops = {
         {
             name: 'Strawhat Pirates Pizza Party!! Lunch',
             thumb: 2087,
-            nakama: null,
+            nakama: 2208700,
             gamewith: 102409,
             'All Difficulties': [ 2087, 2088, 2089, 2090, 2091, -1910, -1440, -1442, -1895, -1902, -1714 ]
         },
@@ -2072,7 +2073,7 @@ window.drops = {
         {
             name: 'Strawhat Pirates Pizza Party!! Dinner',
             thumb: 2092,
-            nakama: null,
+            nakama: 2209200,
             gamewith: 106868,
             'All Difficulties': [ 2091, 2092, 2093, 2094, 2095, -1935, -1436, -1438, -1926, -1955, -1715 ]
         },
@@ -2080,7 +2081,7 @@ window.drops = {
         {
             name: 'Brûlée\'s Gibier Party',
             thumb: 2127,
-            nakama: null,
+            nakama: 2212700,
             gamewith: 108421,
             'All Difficulties': [ 2127, 2128, 2129, 2130, -1473, -1477, -1974, -1953, -1957, -1717 ]
         },
@@ -2088,7 +2089,7 @@ window.drops = {
         {
             name: 'Coliseum Executioner! Diamante',
             thumb: 2146,
-            nakama: null,
+            nakama: 2214600,
             gamewith: 109800,
             'All Difficulties': [ 2143, 2145, -2013, -1991, -1989, -1951, -1718, -1475 ]
         },
@@ -2096,7 +2097,7 @@ window.drops = {
         {
             name: 'Baby 5\'s Journey to Become a Bride',
             thumb: 2165,
-            nakama: null,
+            nakama: 2216500,
             gamewith: 111404,
             'All Difficulties': [ 2166, 2164, -1985, -1987, -1993, -1719, -1479, -1481 ]
         },
@@ -2104,16 +2105,16 @@ window.drops = {
         {
             name: 'Let\'s Go See Master Nekomamushi!',
             thumb: 2177,
-            nakama: null,
+            nakama: 2217700,
             gamewith: 114148,
             'All Difficulties': [ 2176, 2178, 2179, -2048, -2029, -1883, -1483, -1353, -1785 ]
         },
         
         {
-            name: 'Inuarashi Fortnight',
+            name: 'Recover! King of Day Duke Inuarashi',
             thumb: 2219,
-            nakama: null,
-            gamewith: null,
+            nakama: 2221900,
+            gamewith: 116883,
             'All Difficulties': [ 2218, 2220, 2221, -2007, -2027, -2031, -1783, -1538, -1536 ]
         },
         
