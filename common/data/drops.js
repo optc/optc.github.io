@@ -2747,6 +2747,14 @@ window.drops = {
             gamewith: 112951,
             'Raging Sea': [ 2174 ]
         },
+
+        {
+            name: 'Kami Enel',
+            thumb: 2211,
+            nakama: null,
+            gamewith: 116377,
+            'Raging Sea': [ 2210 ]
+        },
         
     ],
 
