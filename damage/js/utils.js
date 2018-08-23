@@ -240,12 +240,12 @@ window.CrunchUtils.getOrbMultiplier = function(orb, type, uclass, baseMultiplier
             if (orb == 'meat') return boostedMultiplier;
         }
     }
-    if(window.specials[1269].turnedOn || window.specials[1270].turnedOn || window.specials[1330].turnedOn || window.specials[1546].turnedOn || window.specials[1547].turnedOn || window.specials[1557].turnedOn){
+    if(window.specials[1269].turnedOn || window.specials[1270].turnedOn || window.specials[1330].turnedOn || window.specials[1546].turnedOn || window.specials[1547].turnedOn || window.specials[1557].turnedOn || window.specials[1890].turnedOn || window.specials[1891].turnedOn || window.specials[2227].turnedOn){
         if (orb == 0.5) return baseMultiplier;
     }
     for(temp = 0; temp < 2; temp++){
         if(captains[temp] != null){
-            if([1610, 1609, 1531, 1532].includes(captains[temp].number)){
+            if([1610, 1609, 1531, 1532, 2232].includes(captains[temp].number)){
                 if (orb == 'meat'){
                     return boostedMultiplier;
                 }

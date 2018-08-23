@@ -592,6 +592,10 @@ window.zombies = {
     2211: { // Enel
         type: 'healer',
     },
+    2231: { // Jack
+        type: 'healer',
+        multiplier: 2//Change this
+    },
     5001: { // Smoker/Tashigi
         type: 'healer',
         amount: 300
