@@ -27343,12 +27343,12 @@ window.details = {
     },
     2010: {//Monet
         captain: "Boosts ATK of Free Spirit characters by 1.2x",
-        special: "Deals 50,000 fixed damage to one enemy and reduces Bind and enemy's Percent Damage Reduction and Increased Defense duration by 3 turns",
+        special: "Deals 50,000 fixed damage to one enemy and reduces Bind and enemy's Percent Damage Reduction duration by 3 turns",
         specialName: "Fangs of Crushing Ice",
     },
     2011: {//Monet
         captain: "Boosts ATK of Free Spirit characters by 1.5x and their RCV by 1.2x",
-        special: "Deals 50,000 fixed damage to one enemy and reduces Bind and enemy's Percent Damage Reduction and Increased Defense duration by 3 turns",
+        special: "Deals 50,000 fixed damage to one enemy and reduces Bind and enemy's Percent Damage Reduction duration by 3 turns",
         specialName: "Fangs of Crushing Ice",
     },
     2012: {//Limited Bonney
@@ -31384,7 +31384,7 @@ window.details = {
         potentialNotes: "#{enrage}"
     },
     2198: {//Killer
-        captain: "Boosts ATK of Striker characters by ?x and their HP by ?x. If you defeat an enemy, increases ATK boost slightly. Stacks up to ? times to a maximum of ?x.",
+        captain: "Boosts ATK of Striker characters by 2x and their HP by 1.2x. If you defeat an enemy, increases ATK boost slightly. Stacks up to 3 times to a maximum of 3x.",
         captainNotes: "If a character dies and revives, it counts as killing a character. If you did not defeat an enemy, lose all ATK boost stacks.",
         special: "If the HP of the enemy with the highest Maximum HP is above 50%, cuts the current HP of one enemy by 20% and boosts the Color Affinity of all characters by 1.5x for 3 turns, otherwise, deals 100x character's ATK in [INT] damage to one enemy and boosts the Color Affinity of all characters by 1.75x for 3 turns.",
         specialName: "Soaring Massacre Blades",
@@ -31399,6 +31399,23 @@ window.details = {
             "base": "Boosts own base ATK by 200 if this character is the last in the chain to attack",
             "level1": "Boosts this character's attack against [PSY] characters by 1.2x"
         },
+        limit: [
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Acquire Potential 1: Slot Bind Self-reduction" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base HP by 60" },
+            { "description": "Acquire Sailor Ability 1: Boosts this character's attack against [PSY] characters by 1.2x" },
+            { "description": "Boosts base ATK by 50" },
+            { "description": "Acquire Potential 2: Reduce No Healing duration" },
+        ],
         potential: [
             {
                 "Name": "Slot Bind Self-reduction",
@@ -31724,7 +31741,7 @@ window.details = {
         ],
     },
     2212: {//Pudding
-        captain: "Boosts ATK of Cerebral characters by ?x and their RCV by ?x",
+        captain: "Boosts ATK of Cerebral characters by 1.75x",
         special: "Recovers 7,000 HP, Reduces crew's ATK DOWN and enemy's Resilience Buffs duration by 5 turns and changes adjacent orbs into Matching Orbs",
         specialName: "Eyes Hiding Shyness",
         sailor: "Reduces Paralysis duration by 1 turn",
@@ -31736,16 +31753,15 @@ window.details = {
         sailor: "Reduces Paralysis duration by 1 turn",
     },
     2214: {//Reiju
-        captain: "Boosts ATK of all characters by ?x and their RCV by ?x. If you defeat an enemy, increases ATK boost slightly. Stacks up to 8 times to a maximum of ?x.",
-        captainNotes: "If a character dies and revives, it counts as killing a character. If you did not defeat an enemy, lose all ATK boost stacks.",
+        captain: "Boosts ATK of all characters by 1.5x and their RCV by 1.2x.",
         special: [
             {
                 "description": "Delays all enemies for 1 turn and makes Badly Matching and [BLOCK] orbs not reduce damage for 3 turns.",
-                "cooldown": [ 14, 7 ],
+                "cooldown": [ 13, 7 ],
             },
             {
                 "description": "Delays all enemies for 1 turn, reduces Paralysis, Bind, Despair and Silence duration by 1 turn and makes Badly Matching and [BLOCK] orbs not reduce damage for 3 turns.",
-                "cooldown": [ 18, 11 ],
+                "cooldown": [ 17, 10 ],
             },
             {
                 "description": "Delays all enemies for 2 turn, reduces Paralysis, Bind, Despair and Silence duration by 2 turn and makes Badly Matching and [BLOCK] orbs not reduce damage for 3 turns.",
@@ -31762,11 +31778,11 @@ window.details = {
         special: [
             {
                 "description": "Delays all enemies for 1 turn and makes Badly Matching and [BLOCK] orbs not reduce damage for 3 turns.",
-                "cooldown": [ 14, 7 ],
+                "cooldown": [ 13, 7 ],
             },
             {
                 "description": "Delays all enemies for 1 turn, reduces Paralysis, Bind, Despair and Silence duration by 1 turn and makes Badly Matching and [BLOCK] orbs not reduce damage for 3 turns.",
-                "cooldown": [ 18, 11 ],
+                "cooldown": [ 17, 10 ],
             },
             {
                 "description": "Delays all enemies for 2 turn, reduces Paralysis, Bind, Despair and Silence duration by 2 turn and makes Badly Matching and [BLOCK] orbs not reduce damage for 3 turns.",
@@ -31778,7 +31794,7 @@ window.details = {
         sailor: "Reduces Silence duration on this character by 3 turns",
     },
     2216: {//Conis
-        captain: "Boosts ATK, HP and RCV of all characters by ?x",
+        captain: "Boosts ATK, HP and RCV of all characters by 1.5x",
         special: "Removes Poison, reduces RCV DOWN duration by 10 turns, boosts RCV of all characters by 1.5x for 1 turn and reduces Special Cooldown of your top row by 1 turn.",
         specialName: "Angel Cruising",
     },
