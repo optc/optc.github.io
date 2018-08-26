@@ -860,29 +860,20 @@ window.drops = {
             name: 'Mokomo Dukedom',
             shortName: 'Zou',
             thumb: 2231,
-            nakama: null,
-            completion: '?x Rainbow Gems',
+            nakama: 1223100,
+            completion: '5x Rainbow Gems',
             gamewith: 117222,
             '01': [ 1811 ],
-            '02': [  ],//Change This, still needs to be updated
+            '02': [  ],
             '03': [  ],
-            '04': [  ],
-            '05': [  ],
+            '04': [ 2230 ],
+            '05': [ 2230 ],
             '06': [ 2229 ],
             '07': [  ],
             '08': [ 2176, 2218 ],
             '09': [  ],
             '10': [  ],
             '11': [ 2231 ],
-        },
-        
-        {
-            name: 'Chocolat Town',
-            shortName: 'Whole Cake Island 1',
-            thumb: null,
-            nakama: null,
-            gamewith: null,
-            completion: '?x Rainbow Gems',
         },
         
     ], 
@@ -2359,7 +2350,7 @@ window.drops = {
         {
             name: 'Clash Neo!! Pirate Empress Hancock',
             thumb: 2070,
-            nakama: null,
+            nakama: 4207000,
             gamewith: 102084,
             condition: '1 Master version and 3 Ultimate versions with different conditions. Master: Slasher/Free Spirit/Cerebral Only. Ultimate: Slasher Only, Free Spirit Only, and Cerebral Only. Can only complete 7 times each per day. Can drop +10 Cotton Candy and Forbidden Tomes.',
             Ultimate: [ 2069 ],
@@ -2618,7 +2609,7 @@ window.drops = {
             name: 'Clash!? Luffy',
             thumb: 2033,
             showManual: true,
-            nakama: null,
+            nakama: 4203300,
             gamewith: 97354,
             Ultimate: [ 2032, -2032 ],
             Master: [ 2032, -2032 ]
@@ -2627,7 +2618,7 @@ window.drops = {
         {
             name: 'Clash!! Zoro',
             thumb: 2097,
-            nakama: null,
+            nakama: 4209700,
             gamewith: 105734,
             Ultimate: [ 2096 ],
             Master: [ 2096 ],
@@ -2637,7 +2628,7 @@ window.drops = {
         {
             name: 'Clash!! Cracker',
             thumb: 2158,
-            nakama: null,
+            nakama: 4215800,
             gamewith: 110184,
             Ultimate: [ 2157 ],
             Master: [ 2157 ],
@@ -2647,8 +2638,8 @@ window.drops = {
         {
             name: 'Clash!! "Blackbeard" Teach',
             thumb: 2197,
-            nakama: null,
-            gamewith: null,
+            nakama: 4219700,
+            gamewith: 115114,
             Ultimate: [ 2196 ],
             Master: [ 2196 ]
         },
@@ -2784,7 +2775,7 @@ window.drops = {
         {
             name: 'Kami Enel',
             thumb: 2211,
-            nakama: null,
+            nakama: 8221100,
             gamewith: 116377,
             'Raging Sea': [ 2210 ]
         },
@@ -3003,7 +2994,7 @@ window.drops = {
         {
             name: 'Battle Blitz! Akainu vs Aokiji',
             thumb: 2023,
-            nakama: null,
+            nakama: 6202300,
             gamewith: null,
             condition: 'Chance of dropping the Silver Almighty Manual, Traning Potions, Guilding Fragments, Guilding Crystals and Guilding Jewels.',
             'Aokiji': [ -2023 ],
@@ -3066,7 +3057,7 @@ window.drops = {
         {
             name: 'Champion Challenge! 4th Anniversary',
             thumb: 2076,
-            nakama: null,
+            nakama: 6207600,
             gamewith: null,
             showManual: true,
             condition: 'High chance of dropping 6* skillbooks.',
@@ -3138,7 +3129,7 @@ window.drops = {
         {
             name: 'Prepare for Battle! Aokiji and Akainu!',
             thumb: 1280,
-            nakama: null,
+            nakama: 6128001,
             gamewith: 98232,
             'Aokiji': [ 298, 1225, 1226, 1280, 1281 ],
             'Akainu': [ 1223, 1279, 1283, 1417, 1418 ],
@@ -3147,16 +3138,25 @@ window.drops = {
         {
             name: 'Germa Revival Plan!',
             thumb: 2138,
-            nakama: null,
+            nakama: 6128001,
             gamewith: 109674,
             showManual: true,
             'All Difficulties': [ 9015, 9016, 9017, 9018, 9019, -2142, -2141, -2140, -2139, -2138, -1839, -1838, -1836, -1834, -1832 ],
         },
         
         {
+            name: 'Kami\'s Return',
+            thumb: 2232,
+            nakama: null,
+            gamewith: 117538,
+            showManual: true,
+            'All Difficulties': [ /*9020*/, -545, -602, -1896, -1929 ],
+        },
+        
+        {
             name: 'Garp Challenge!',
             thumb: 1318,
-            nakama: null,
+            nakama: 6213800,
             gamewith: 108237,
             condition: "The Gamewith Link is only for the most recent Garp Challenge (Fist)",
         },
@@ -3164,7 +3164,7 @@ window.drops = {
         {
             name: '21st Anniversary Island',
             thumb: 1682,
-            nakama: null,
+            nakama: 6168200,
             gamewith: null,
             showManual: true,
             'All Difficulties': [ 2, 5, 9, 13, 17, 21, 629, 708, 895, -1682, -1684, -1686, -1688, -1753, -1755, -1757, -1759, -1761 ],
@@ -3173,7 +3173,7 @@ window.drops = {
         {
             name: '3 Stamina Ranking! Vs Blackbeard',
             thumb: 447,
-            nakama: null,
+            nakama: 6044700,
             gamewith: 99411,
             condition: "Elite: Characters with Cost 51 cost and higher can not be used",
         },
@@ -3181,7 +3181,7 @@ window.drops = {
         {
             name: '3 Stamina Ranking! Vs Jinbe',
             thumb: 1700,
-            nakama: null,
+            nakama: 6170000,
             gamewith: 107881,
             condition: "Elite: Characters with Cost 51 cost and higher can not be used",
         },
@@ -3189,7 +3189,7 @@ window.drops = {
         {
             name: '3 Stamina Ranking! Vs Kyros',
             thumb: 1873,
-            nakama: null,
+            nakama: 6187300,
             gamewith: 111278,
             condition: "Elite: Characters with Cost 51 cost and higher can not be used",
         },
