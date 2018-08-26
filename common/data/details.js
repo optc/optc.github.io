@@ -11508,7 +11508,7 @@ window.details = {
         specialName: "Slicing Winds of Rommel",
         sailor: {
             "base": "None",
-            "level1": "If this character has an [QCK] orb and you hit a PERFECT with her, keep her [QCK] orb for the next turn",
+            "level1": "If this character has an [QCK] orb and you hit a PERFECT with him, keep his [QCK] orb for the next turn",
             "level2": "Boosts own base ATK by 200 if this character is the last in the chain to attack",
         },
         potential: [
