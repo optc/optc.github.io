@@ -962,7 +962,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             var id = team[i].unit.number + 1;
             if (!window.captains.hasOwnProperty(id)) continue;
             var effect = jQuery.extend({ },window.captains[id]),
-                locked = ($scope.tdata.team[i].lock > 0), silenced = ($scope.tdata.team[i].silence > 0), gray = ($scope.tdata.team[i].gray > 0);
+                locked = ($scope.tdata.team[i].lock > 0), silenced = ($scope.tdata.team[i].silence > 0);
             if (locked || silenced) {
                 for (var func in effect) {
                     if (!silenced && func == 'hp') continue;
