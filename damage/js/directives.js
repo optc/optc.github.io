@@ -529,6 +529,43 @@ directives.healCounter = function() {
     };
 };
     
+directives.semlaCounter = function() {
+    return {
+        retrict: 'E',
+        replace: true,
+        template: '<div id="semla"><div id="semlaSlider"></div>' +
+            '<div id="semlaLabel">{{currentSemla}} {{currentSemla == 1 ? "turn" : "turns"}} since last SEMLA orb consumed</div></div>',
+        link: function(scope, element, attrs) {
+
+            scope.currentSemla = 0;
+
+            var slider = element.find('#semlaSlider')[0];
+            var sliderSettings = {
+                start: [ scope.currentTurns ],
+                range: { min: [ 0 ], max: [ 10 ] },
+                step: 1,
+                connect: 'lower'
+            };
+            
+            var createSlider = function() {
+                if (slider.noUiSlider) slider.noUiSlider.destroy();
+                noUiSlider.create(slider, sliderSettings);
+                slider.noUiSlider.on('change', function(_,__,value) { update('change', value); });
+                slider.noUiSlider.on('slide', function(_,__,value) { update('slide', value); });
+            };
+
+            var update = function(event,value) {
+                scope.currentSemla = parseInt(value, 10);
+                if (event == 'change') scope.tdata.semlaCounter.value = scope.currentSemla;
+                scope.$apply();
+            };
+
+            createSlider();
+
+        }
+    };
+};
+    
 directives.levelLabel = function($timeout) {
     return {
         restrict: 'E',
@@ -764,6 +801,35 @@ directives.unitSilence = function() {
         }
     };
 };
+
+/*directives.unitDisabled = function() {
+    return {
+        restrict: 'E',
+        replace: true,
+        scope: true,
+        template: '<div class="unitDisabled" ng-class="{ active: tdata.team[slot].disabled > 0 }"></div>',
+        link: function(scope, element, attrs) {
+            var parent = element.parent();
+            scope.$watch('tdata.team[slot].disabled',function(lock) {
+                if (lock > 0) parent.addClass('gray');
+                else parent.removeClass('gray');
+            });
+            var onMouseUp = function(e) {
+                var unit = scope.data.team[scope.slot], tunit = scope.tdata.team[scope.slot];
+                if (!$(e.target).hasClass('unitPortrait')) return;
+                if (unit.unit === null || /unitLevel/.test(e.target.className)) return;
+                if (e.which == 1 && (e.altKey || e.metaKey) && e.shiftKey && e.ctrlKey && !Utils.isClickOnOrb(e,e.target.parentNode)) {
+                    tunit.disabled = (tunit.disabled > 0 ? 0 : 2);
+                    scope.$apply();
+                    e.preventDefault();
+                    e.stopPropagation();
+                    return false;
+                }
+            };
+            element.parent().mouseup(onMouseUp);
+        }
+    };
+};*/
 
 directives.unitRemoved = function() {
     return {
