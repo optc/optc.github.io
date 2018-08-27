@@ -2192,7 +2192,7 @@ window.aliases = {
     2191: [ 'レベッカ ビーチのひまわり', '', 'Swimsuit Rebecca', 'Summer Rebecca' ],
     2192: [ 'バーソロミュー・くま 未完の人間兵器', '', 'Coliseum Kuma' ],
     2193: [ 'バーソロミュー・くま 正義に逆らう人間兵器', '', 'Coliseum Kuma' ],
-    2194: [ '', '', '' ],
+    2194: [ 'ヴィンスモーク・レイジュ １３年ぶりの再会', '', 'Secret Reiju', 'Limited Reiju' ],
     2195: [ '', '', '' ],
     2196: [ '', '', 'Raid Blackbeard V2', 'Raid BB' ],
     2197: [ '', '', 'Raid Blackbeard V2', 'Raid BB' ],
