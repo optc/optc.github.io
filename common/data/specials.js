@@ -5700,6 +5700,50 @@ window.specials = {
         type: "type",
         chainAddition: function(p) { return 0.4; }
     },
+    2233: {
+        atk: function(p) { return p.slot < 2 ? 2 : 1; },
+        type: "class",
+        orb: function(p) { return (p.slot < 2) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+    },
+    2234: {
+        atk: function(p) { return p.slot < 2 ? 2 : 1; },
+        type: "class",
+        orb: function(p) { return (p.slot < 2) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+    },
+    2235: {
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[2235].turnedOn = true;
+        },
+        onDeactivation: function(p) {
+            window.specials[2235].turnedOn = false;
+        }
+    },
+    2236: {
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[2236].turnedOn = true;
+        },
+        onDeactivation: function(p) {
+            window.specials[2236].turnedOn = false;
+        }
+    },
+    2239: {
+        affinity: function(p){ return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? 1.75 : 1; }
+    },
+    2240: {
+        affinity: function(p){ return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? 1.75 : 1; }
+    },
+    2241: {
+        atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? 1.75 : 1; },
+        type: "class",
+        orb: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+    },
+    2242: {
+        atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? 1.75 : 1; },
+        type: "class",
+        orb: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+    },
     2502: {
         atk: function(p) { return 1.75; },
         type: "type",

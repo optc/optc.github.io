@@ -7689,6 +7689,56 @@ window.captains = {
         hp: function(p) { return 0.8 },
         atk: function(p) { return Math.max(2.0, 2.0 + 0.000175 * p.healCounter); },//Change this
     },
+    2233: {
+        hp: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? 1.2 : 1; },
+        atk: function(p) { return p.semlaCounter; },
+    },
+    2234: {
+        hp: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? 1.2 : 1; },
+        atk: function(p) { return [ (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? 4 : 1, (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? 3.5 : 1, (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? 3.5 : 1, p.slot == p.sourceSlot ? 10 : (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? 3.75 : 1 ][Math.min(3, p.semlaCounter)]; },
+    },
+    2235: {
+        atk: function(p) { return p.percHP >= 99.0 ? 2.75 : 2; }
+    },
+    2236: {
+        atk: function(p) { return p.percHP >= 99.0 ? 2.75 : 2; }
+    },
+    2237: {
+        hitAtk: function(p) {
+            return p.modifiers.slice(0, p.chainPosition).subcontains(["Good", "Great", "Perfect"]) ? 1 : 1;//Change this
+        },
+        hitModifiers: ["Good", "Great", "Perfect", "Perfect", "Perfect", "Perfect"]
+    },
+    2238: {
+        hitAtk: function(p) {
+            return p.modifiers.slice(0, p.chainPosition).subcontains(["Good", "Great", "Perfect"]) ? 3.5 : 1;
+        },
+        hitModifiers: ["Good", "Great", "Perfect", "Perfect", "Perfect", "Perfect"]
+    },
+    2239: {
+        atk: function(p) { return p.unit.cost >= 50 ? 1 : 1; },//Change This
+        hp: function(p) { return p.unit.cost >= 50 ? 1 : 1; },//Change This
+        rcv: function(p) { return p.unit.cost >= 50 ? 1 : 1; },//Change This
+    },
+    2240: {
+        atk: function(p) { return p.unit.cost >= 50 ? 3.5 : 1; },
+        hp: function(p) { return p.unit.cost >= 50 ? 1.2 : 1; },
+        rcv: function(p) { return p.unit.cost >= 50 ? 1.2 : 1; },
+    },
+    2241: {
+        atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? 1 : 1; },//Change This
+        hp: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? 1 : 1; }//Change This
+    },
+    2242: {
+        atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? 2.75 : 1; },
+        hp: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? 1.25 : 1; }
+    },
+    2243: {
+        atk: function(p){ return p.unit.class.has("Powerhouse") ? 1 : 1; },//Change this
+    },
+    2244: {
+        atk: function(p){ return p.unit.class.has("Powerhouse") ? 2.75 : 1; },
+    },
     2500: {
         atk: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Cerebral")) ? p.percHP <= 50.0 ? 2.5 : 1.5 : 1; }
     },

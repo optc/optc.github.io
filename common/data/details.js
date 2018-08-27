@@ -6003,13 +6003,13 @@ window.details = {
         captain: "Boosts ATK of Shooter characters by 2x"
     },
     712: {
-        special: "Deals 15x character's ATK in [QCK] damage to one enemy, boosts ATK of the characters in the top row by 1.5x for 2 turns",
+        special: "Deals 15x character's ATK in [QCK] damage to one enemy, boosts ATK of characters in the top row by 1.5x for 2 turns",
         specialNotes: "The special boosts the attack of only the crew's captain and the currently selected friend captain.",
         specialName: "Sky Knight's Javelin",
         captain: "Boosts ATK of Striker characters by 2x if HP is above 50% at the start of the turn"
     },
     713: {
-        special: "Deals 15x character's ATK in [QCK] damage to one enemy, boosts ATK of the characters in the top row by 1.5x for 2 turns",
+        special: "Deals 15x character's ATK in [QCK] damage to one enemy, boosts ATK of characters in the top row by 1.5x for 2 turns",
         specialNotes: "The special boosts the attack of only the crew's captain and the currently selected friend captain.",
         specialName: "Sky Knight's Javelin",
         captain: "Boosts ATK of Striker characters by 2.5x if HP is above 50% at the start of the turn"
@@ -17055,7 +17055,7 @@ window.details = {
     1474: {//King Neptune
         captain: "Boosts ATK of all characters by 1.5x and EXP gained by 1.5x",
         captainNotes: "EXP boost does not take effect if he becomes your captain in the middle of the adventure.",
-        special: "Locks all orbs for 1 turn. If the HP of the enemy with the highest Maximum HP is above 50%, cuts the current HP of all enemies by 20%, otherwise, deals 140x character's ATK in typeless damage to all enemies.",
+        special: "Locks all orbs for 1 turn. If the HP of the enemy with the highest current HP is above 50%, cuts the current HP of all enemies by 20%, otherwise, deals 140x character's ATK in typeless damage to all enemies.",
         sailor: "Makes [INT], [PSY] and [TND] orbs \"beneficial\" for this character",
         sailorNotes: "#{beneficial}",
         specialName: "Merman Gujutsu - Ultramarine",
@@ -17063,7 +17063,7 @@ window.details = {
     1475: {//King Neptune
         captain: "Boosts ATK of all characters by 2.25x and EXP gained by 1.5x",
         captainNotes: "EXP boost does not take effect if he becomes your captain in the middle of the adventure.",
-        special: "Locks all orbs for 1 turn. If the HP of the enemy with the highest Maximum HP is above 50%, cuts the current HP of all enemies by 20%, otherwise, deals 140x character's ATK in typeless damage to all enemies.",
+        special: "Locks all orbs for 1 turn. If the HP of the enemy with the highest current HP is above 50%, cuts the current HP of all enemies by 20%, otherwise, deals 140x character's ATK in typeless damage to all enemies.",
         sailor: {
             "base": "Makes [INT], [PSY] and [TND] orbs \"beneficial\" for this character",
             "level1": "Boosts base HP, ATK and RCV of all characters by 30",
@@ -17688,11 +17688,11 @@ window.details = {
         captain: "Boosts ATK of [INT] characters by 1.75x",
         special: [
             {
-                "description": "Reduces Special Cooldown of your top row by 1 turn, boosts ATK of the characters in the top row by 1.5x for 1 turn",
+                "description": "Reduces Special Cooldown of your top row by 1 turn, boosts ATK of characters in the top row by 1.5x for 1 turn",
                 "cooldown": [ 16, 7 ],
             },
             {
-                "description": "Reduces Special Cooldown of your top row by 1 turn, boosts ATK of the characters in the top row by 1.75x for 1 turn",
+                "description": "Reduces Special Cooldown of your top row by 1 turn, boosts ATK of characters in the top row by 1.75x for 1 turn",
                 "cooldown": [ 21, 12 ],
             },
         ],
@@ -17703,11 +17703,11 @@ window.details = {
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight. Boosts ATK of [INT] characters by 2x",
         special: [
             {
-                "description": "Reduces Special Cooldown of your top row by 1 turn, boosts ATK of the characters in the top row by 1.5x for 1 turn",
+                "description": "Reduces Special Cooldown of your top row by 1 turn, boosts ATK of characters in the top row by 1.5x for 1 turn",
                 "cooldown": [ 16, 7 ],
             },
             {
-                "description": "Reduces Special Cooldown of your top row by 1 turn, boosts ATK of the characters in the top row by 1.75x for 1 turn",
+                "description": "Reduces Special Cooldown of your top row by 1 turn, boosts ATK of characters in the top row by 1.75x for 1 turn",
                 "cooldown": [ 21, 12 ],
             },
         ],
@@ -23032,14 +23032,14 @@ window.details = {
     },
     1817: {// Riku
         captain: "Boosts ATK of all characters by 2x after scoring 3 Greats in a row",
-        special: "Cuts the current HP of one enemy by 7%, boosts ATK of the characters in the bottom and middle row by 1.2x for 1 turn and reduces special cooldown of all non-Captain specials by 1 turn",
+        special: "Cuts the current HP of one enemy by 7%, boosts ATK of characters in the bottom and middle row by 1.2x for 1 turn and reduces special cooldown of all non-Captain specials by 1 turn",
         specialName: "Divine Sword",
         sailor: "Restores his own special cooldown by 1 turn when it is rewinded",
         sailorNotes: "#{rewind : 1}",
     },
     1818: {// Riku
         captain: "Boosts ATK of all characters by 1.5x and their HP by 1.2x, boosts ATK of all characters by 2.5x after scoring 3 Greats in a row",
-        special: "Cuts the current HP of one enemy by 7%, boosts ATK of the characters in the bottom and middle row by 1.2x for 1 turn and reduces special cooldown of all non-Captain specials by 1 turn",
+        special: "Cuts the current HP of one enemy by 7%, boosts ATK of characters in the bottom and middle row by 1.2x for 1 turn and reduces special cooldown of all non-Captain specials by 1 turn",
         specialName: "Divine Sword",
         sailor: "Restores his own special cooldown by 1 turn when it is rewinded",
         sailorNotes: "#{rewind : 1}",
@@ -25060,7 +25060,7 @@ window.details = {
         captainNotes: "His ATK multiplier will be 3x on the first turn, 2.?x on the second, 2.?x on the third and so on. The reduction stops once the multiplier is ???x. The multiplier affects all Driven characters. You will not die to the HP reduction",
         special: "Reduces enemies Threshold Damage Reduction, Percent Damage Reduction and Increased Defense duration by 4 turns. If there are 6 Driven characters in your crew, boosts ATK of Driven characters by 2x for 1 turn and reduces Special Cooldown of your top row by 1 turn.",
         specialName: "Beta Betton Meteora",
-        sailor: "Boosts base ATK of the characters in the top row by 100",
+        sailor: "Boosts base ATK of characters in the top row by 100",
     },
     1908:{//Trebol
         captain: "Boosts ATK of Driven characters by 3.5x, reduces crew's current HP by 10% at the end of each turn, reduces his own ATK multiplier by 4% at the end of each turn",
@@ -25068,7 +25068,7 @@ window.details = {
         special: "Reduces enemies Threshold Damage Reduction, Percent Damage Reduction and Increased Defense duration by 4 turns. If there are 6 Driven characters in your crew, boosts ATK of Driven characters by 2x for 1 turn and reduces Special Cooldown of your top row by 1 turn.",
         specialName: "Beta Betton Meteora",
         sailor: {
-            "base": "Boosts base ATK of the characters in the top row by 100",
+            "base": "Boosts base ATK of characters in the top row by 100",
             "level1": "Makes [TND] orbs \"beneficial\" for Driven characters",
         },
         sailorNotes: "#{beneficial}",
@@ -28478,14 +28478,14 @@ window.details = {
     },
     2073: {//V4 Luffy
         captain: "<b>Always Active: </b>Boosts HP of all characters by 1.25x, boosts chances of getting [STR], [QCK], [PSY] orbs.<br><b>Gear 2 Captain: </b>Boosts ATK of all characters by 3x, slightly boosts chances of getting [RCV] orbs and makes [QCK] orbs \"beneficial\" to all characters<br><b>Gear 3 Captain: </b>Boosts ATK of all characters by 3.5x after 2 consecutive PERFECTs, boosts chances of getting [RCV] orbs and makes [STR] orbs \"beneficial\" to all characters<br><b>Gear 4 - Boundman Captain: </b>Boosts ATK of all characters by 4x, reduce damage received by 20%, boosts chances of getting [RCV] orbs and makes [STR], [QCK] and [PSY] orbs \"beneficial\" to all characters<br><b>Gear 4 - Tankman Captain: </b>Boosts own ATK by 4.25x, boosts ATK of all other characters by 4x, reduce damage received by 50% and makes [STR], [QCK] and [PSY] orbs \"beneficial\" to all characters<br><b>Action: </b>Based on how full Gear Power Gauge is, transforms Luffy. If Gear Power is above 50%, change between Gear 2 and Gear 3. If Gear Power is full, change into Gear 4 - Boundman. This can be used an unlimited amount of times per turn.",
-        captainnotes: "In order to increase Gear Power Gauge level, you must hit a PERFECT with Luffy or consume [RCV] orbs. MAX Gear Power Gauge level is 8. Hitting a PERFECT with Luffy and consuming a [RCV] orb increases Gauge level by 1. If Luffy gets swapped out in battle, Gear Gauge Power will go to 0. While in Gear 4, Luffy will stay in that form until Gauge Power goes to 0. Attacking with any character while in Gear 4 reduces Gear Power Gauge by 3.",
+        captainNotes: "In order to increase Gear Power Gauge level, you must hit a PERFECT with Luffy or consume [RCV] orbs. MAX Gear Power Gauge level is 8. Hitting a PERFECT with Luffy and consuming a [RCV] orb increases Gauge level by 1. If Luffy gets swapped out in battle, Gear Gauge Power will go to 0. While in Gear 4, Luffy will stay in that form until Gauge Power goes to 0. Attacking with any character while in Gear 4 reduces Gear Power Gauge by 3.",
         special: "Deals 150x character's ATK in Typeless damage to all enemies, boosts ATK of all characters by 2x for 1 turn, makes [RCV] and [TND] orbs \"beneficial\" for all characters for 3 turns. If Luffy is Captain or Friend/Guest Captain, transform into Gear 4",
         specialNotes: "If you use this special after consuming 10 [RCV] orbs since the start of the fight, transform into Tankman, otherwise transform into Boundman",
         specialName: "Gomu Gomu no Kong Organ",
     },
     2074: {//V4 Luffy
         captain: "<b>Always Active: </b>Boosts HP of all characters by 1.25x, boosts chances of getting [STR], [QCK], [PSY] orbs.<br><b>Gear 2 Captain: </b>Boosts ATK of all characters by 3x, slightly boosts chances of getting [RCV] orbs and makes [QCK] orbs \"beneficial\" to all characters<br><b>Gear 3 Captain: </b>Boosts ATK of all characters by 3.5x after 2 consecutive PERFECTs, boosts chances of getting [RCV] orbs and makes [STR] orbs \"beneficial\" to all characters<br><b>Gear 4 - Boundman Captain: </b>Boosts ATK of all characters by 4x, reduce damage received by 20%, boosts chances of getting [RCV] orbs and makes [STR], [QCK] and [PSY] orbs \"beneficial\" to all characters<br><b>Gear 4 - Tankman Captain: </b>Boosts own ATK by 4.25x, boosts ATK of all other characters by 4x, reduce damage received by 50% and makes [STR], [QCK] and [PSY] orbs \"beneficial\" to all characters<br><b>Action: </b>Based on how full Gear Power Gauge is, transforms Luffy. If Gear Power is above 50%, change between Gear 2 and Gear 3. If Gear Power is full, change into Gear 4 - Boundman. This can be used an unlimited amount of times per turn.",
-        captainnotes: "In order to increase Gear Power Gauge level, you must hit a PERFECT with Luffy or consume [RCV] orbs. MAX Gear Power Gauge level is 8. Hitting a PERFECT with Luffy and consuming a [RCV] orb increases Gauge level by 1. If Luffy gets swapped out in battle, Gear Gauge Power will go to 0. While in Gear 4, Luffy will stay in that form until Gauge Power goes to 0. Attacking with any character while in Gear 4 reduces Gear Power Gauge by 3.",
+        captainNotes: "In order to increase Gear Power Gauge level, you must hit a PERFECT with Luffy or consume [RCV] orbs. MAX Gear Power Gauge level is 8. Hitting a PERFECT with Luffy and consuming a [RCV] orb increases Gauge level by 1. If Luffy gets swapped out in battle, Gear Gauge Power will go to 0. While in Gear 4, Luffy will stay in that form until Gauge Power goes to 0. Attacking with any character while in Gear 4 reduces Gear Power Gauge by 3.",
         special: "Deals 150x character's ATK in Typeless damage to all enemies, boosts ATK of all characters by 2x for 1 turn, makes [RCV] and [TND] orbs \"beneficial\" for all characters for 3 turns. If Luffy is Captain or Friend/Guest Captain, transform into Gear 4",
         specialNotes: "If you use this special after consuming 10 [RCV] orbs since the start of the fight, transform into Tankman, otherwise transform into Boundman",
         specialName: "Gomu Gomu no Kong Organ",
@@ -31870,7 +31870,7 @@ window.details = {
     },
     2231: {//Jack
         captain: "Boosts ATK of Powerhouse characters by 2.5x and their HP by 1.2x and recovers ?x character's RCV in HP at the end of each turn",
-        special: "If the HP of the enemy with the highest Maximum HP is above 50%, cuts the current HP of one enemy by 25%, otherwise, deals 120x character's ATK in typeless damage to one enemy.",
+        special: "If the HP of the enemy with the highest current HP is above 50%, cuts the current HP of one enemy by 25%, otherwise, deals 120x character's ATK in typeless damage to one enemy.",
         specialName: "The Start of Destruction",
     },
     2232: {//Legend Enel
@@ -31946,6 +31946,265 @@ window.details = {
                     "Level 3: Reduces No Healing duration by 5 turns",
                     "Level 4: Reduces No Healing duration by 7 turns",
                     "Level 5: Reduces No Healing duration by 10 turns"
+                ]
+            },
+        ]
+    },
+    2233: {//Big Mom
+        captain: "<b>Always Active: </b>Boosts HP of [STR], [DEX] and [QCK] characters by 1.2x, makes [SEMLA] orbs \"beneficial\" to all characters.<br><b>Standard Captain: </b>Boosts ATK of [STR], [DEX] and [QCK] characters by 3.5x<br><b>Powered Up Captain: </b>Boosts ATK of [STR], [DEX] and [QCK] characters by 4x and reduce damage received by 15%<br><b>Rampage Captain: </b>Boosts own ATK by 10x and own attacks will ignore defensive barriers and buffs, boosts ATK of [STR], [DEX] and [QCK] characters by 3.75x",
+        captainNotes: "[SEMLA] orbs replace [RCV] orbs and heal at the end of the enemy turn and can not be swapped by special abilities.<br>In order to Power Up Big Mom, you must eat a [SEMLA] orb and will be powered up the following turn.<br>While in Rampage, Big Mom will always attack a random enemy on her own, even while Binded or Paralyzed, and hit a HUNGRY, which deals the same damage as a PERFECT. This attack occurs after your chain, so Big Mom's attack will not be affected by Chain Limiters, Chain Boosters, or Chain Lockers (still untested with 2 Big Mom captains). You can not activate Big Mom's special while in Rampage. To exit Rampage, you must consume a [SEMLA] orb.",
+        special: "Deals 250x character's ATK in Typeless damage to one enemy and changes own orb into [STR]. If Big Mom is your Captain or Friend/Guest Captain, boosts ATK of characters in the top row by 2x and amplifies the effects of orbs for characters in the top row by 2x for 3 turns. If she is a Sailor, boosts ATK of characters in the top row by 2x and amplifies the effects of orbs for characters in the top row by 2x for 1 turn instead",
+        specialName: "Temper Tantrum",
+    },
+    2234: {//Big Mom
+        captain: "<b>Always Active: </b>Boosts HP of [STR], [DEX] and [QCK] characters by 1.2x, makes [SEMLA] orbs \"beneficial\" to all characters.<br><b>Standard Captain: </b>Boosts ATK of [STR], [DEX] and [QCK] characters by 3.5x<br><b>Powered Up Captain: </b>Boosts ATK of [STR], [DEX] and [QCK] characters by 4x and reduce damage received by 15%<br><b>Rampage Captain: </b>Boosts own ATK by 10x and own attacks will ignore defensive barriers and buffs, boosts ATK of [STR], [DEX] and [QCK] characters by 3.75x",
+        captainNotes: "[SEMLA] orbs replace [RCV] orbs and heal at the end of the enemy turn and can not be swapped by special abilities.<br>In order to Power Up Big Mom, you must eat a [SEMLA] orb and will be powered up the following turn.<br>While in Rampage, Big Mom will always attack a random enemy on her own, even while Binded or Paralyzed, and hit a HUNGRY, which deals the same damage as a PERFECT. This attack occurs after your chain, so Big Mom's attack will not be affected by Chain Limiters, Chain Boosters, or Chain Lockers (still untested with 2 Big Mom captains). You can not activate Big Mom's special while in Rampage. To exit Rampage, you must consume a [SEMLA] orb.",
+        special: "Deals 250x character's ATK in Typeless damage to one enemy and changes own orb into [STR]. If Big Mom is your Captain or Friend/Guest Captain, boosts ATK of characters in the top row by 2x and amplifies the effects of orbs for characters in the top row by 2x for 3 turns. If she is a Sailor, boosts ATK of characters in the top row by 2x and amplifies the effects of orbs for characters in the top row by 2x for 1 turn instead",
+        specialName: "Temper Tantrum",
+        sailor: {
+            "base": "None",
+            "level1": "Boosts own base ATK by 350 if this character is the last in the chain to attack",
+            "level2": "Makes [DEX] and [QCK] orbs \"beneficial\" for this character",
+        },
+        sailorNotes: "#{beneficial}",
+        potential: [
+            {
+                "Name": "[DEX] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [DEX] characters by ?%",
+                    "Level 2: Reduce damage taken from [DEX] characters by ?%",
+                    "Level 3: Reduce damage taken from [DEX] characters by ?%",
+                    "Level 4: Reduce damage taken from [DEX] characters by ?%",
+                    "Level 5: Reduce damage taken from [DEX] characters by ?%"
+                ]
+            },
+            {
+                "Name": "Enrage",
+                "description": [
+                    "Level 1: Boosts base ATK by ?",
+                    "Level 2: Boosts base ATK by ?",
+                    "Level 3: Boosts base ATK by ?",
+                    "Level 4: Boosts base ATK by ?",
+                    "Level 5: Boosts base ATK by ?"
+                ]
+            },
+            {
+                "Name": "Critical Hit",
+                "description": [
+                    "Level 1: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage"
+                ]
+            },
+        ],
+        potentialNotes: "#{enrage}"
+    },
+    2235: {//Brook
+        captain: "Boosts ATK of all characters by 2.75x if HP is above 99% at the start of the turn, by 2x otherwise, cuts the current HP of each enemy by 10% at the end of each turn and revives the team after a GAME OVER once per adventure.",
+        captainNotes: "This is not Resilience as you still die, but (still unconfirmed) after revive you will get full HP and your buffs and debuffs will be cleared, similarly to using a gem to revive.",
+        special: "Recovers 14,343, reduces damage received by 90% for 1 turn and makes [STR], [DEX], [QCK], [PSY] and [INT] orbs \"beneficial\" for all characters for 2 turns. If the HP of the enemy with the highest current HP is below 434,300, instantly defeats all enemies, otherwise, delays all enemies for 1 turn, cuts the current HP of each enemy by 20%.",
+        specialNotes: "#{beneficial}",
+        specialName: "Tenacious Shout of the Soul",
+    },
+    2236: {//Brook
+        captain: "Boosts ATK of all characters by 2.75x if HP is above 99% at the start of the turn, by 2x otherwise, cuts the current HP of each enemy by 10% at the end of each turn and revives the team after a GAME OVER once per adventure.",
+        captainNotes: "This is not Resilience as you still die, but (still unconfirmed) after revive you will get full HP and your buffs and debuffs will be cleared, similarly to using a gem to revive.",
+        special: "Recovers 14,343, reduces damage received by 90% for 1 turn and makes [STR], [DEX], [QCK], [PSY] and [INT] orbs \"beneficial\" for all characters for 2 turns. If the HP of the enemy with the highest current HP is below 434,300, instantly defeats all enemies, otherwise, delays all enemies for 1 turn, cuts the current HP of each enemy by 20%.",
+        specialNotes: "#{beneficial}",
+        specialName: "Tenacious Shout of the Soul",
+        sailor: {
+            "base": "None",
+            "level1": "Completely resists Paralysis on this character",
+            "level2": "Makes RCV orbs \"beneficial\" for all characters",
+        },
+        sailorNotes: "#{beneficial}",
+        potential: [
+            {
+                "Name": "[QCK] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [QCK] characters by ?%",
+                    "Level 2: Reduce damage taken from [QCK] characters by ?%",
+                    "Level 3: Reduce damage taken from [QCK] characters by ?%",
+                    "Level 4: Reduce damage taken from [QCK] characters by ?%",
+                    "Level 5: Reduce damage taken from [QCK] characters by ?%"
+                ]
+            },
+            {
+                "Name": "[STR] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [STR] characters by ?%",
+                    "Level 2: Reduce damage taken from [STR] characters by ?%",
+                    "Level 3: Reduce damage taken from [STR] characters by ?%",
+                    "Level 4: Reduce damage taken from [STR] characters by ?%",
+                    "Level 5: Reduce damage taken from [STR] characters by ?%"
+                ]
+            },
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [
+                    "Level 1: Reduces Slot Bind duration by ? turn on this character",
+                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 5: Reduces Slot Bind duration by ? turns on this character"
+                ]
+            },
+        ]
+    },
+    2237: {//Smoothie
+        captain: "Boosts ATK of all characters by ?x following a chain of Good > Great > PERFECT hits and recovers ? HP at end of each turn",
+        special: "Recovers 5,000, removes Poison, reduces Paralysis, Bind, Despair and Burn by 2 turns, changes adjacent orbs into Matching Orbs and switches orbs between slots three times",
+        specialNotes: "We don't know what Burn is yet.",
+        specialName: "Human Juicer",
+        sailor: "Boosts base ATK of characters in the top row by 50",
+    },
+    2238: {//Smoothie
+        captain: "Boosts ATK of all characters by 3.5x following a chain of Good > Great > PERFECT hits and recovers 500 HP at end of each turn",
+        special: "Recovers 5,000, removes Poison, reduces Paralysis, Bind, Despair and Burn by 2 turns, changes adjacent orbs into Matching Orbs and switches orbs between slots three times",
+        specialNotes: "We don't know what Burn is yet.",
+        specialName: "Human Juicer",
+        sailor: {
+            "base": "Boosts base ATK of characters in the top row by 50",
+            "level1": "Makes [STR], [QCK], [DEX], [PSY] and [INT] orbs \"beneficial\" for this character if your Captain is a [STR] character",
+        },
+        sailorNotes: "#{beneficial}",
+        potential: [
+            {
+                "Name": "Enrage",
+                "description": [
+                    "Level 1: Boosts base ATK by ?",
+                    "Level 2: Boosts base ATK by ?",
+                    "Level 3: Boosts base ATK by ?",
+                    "Level 4: Boosts base ATK by ?",
+                    "Level 5: Boosts base ATK by ?"
+                ]
+            },
+            {
+                "Name": "Double Special Activation",
+                "description": [
+                    "Level 1: Reduce own Special Cooldown by ? turn after the first time this special is used",
+                    "Level 2: Reduce own Special Cooldown by ? turns after the first time this special is used",
+                    "Level 3: Reduce own Special Cooldown by ? turns after the first time this special is used",
+                    "Level 4: Reduce own Special Cooldown by ? turns after the first time this special is used",
+                    "Level 5: Reduce own Special Cooldown by ? turns after the first time this special is used"
+                ]
+            },
+        ],
+        potentialNotes: "#{enrage}"
+    },
+    2239: {//Perospero
+        captain: "Boosts ATK of characters with cost 50 or greater by ?x and their HP and RCV by ?x",
+        special: "Locks all orbs for 1 turn, cuts the current HP of one enemy by 10%, reduces Special Cooldown of all characters by 1 turn and boosts the Color Affinity of [STR], [DEX] and [QCK] characters by 1.75x for 1 turn",
+        specialName: "Candy Maiden",
+        sailor: "Restores his own special cooldown by 2 turns when it is rewinded",
+        sailorNotes: "#{rewind : 2}",
+    },
+    2240: {//Perospero
+        captain: "Boosts ATK of characters with cost 50 or greater by 3.5x and their HP and RCV by 1.2x",
+        special: "Locks all orbs for 1 turn, cuts the current HP of one enemy by 10%, reduces Special Cooldown of all characters by 1 turn and boosts the Color Affinity of [STR], [DEX] and [QCK] characters by 1.75x for 1 turn",
+        specialName: "Candy Maiden",
+        sailor: {
+            "base": "Restores his own special cooldown by 2 turns when it is rewinded",
+            "level1": "Boosts base ATK and HP of all characters by 50 if your Captain is a [STR], [DEX] or [QCK] character",
+        },
+        sailorNotes: "#{rewind : 2}",
+        potential: [
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by ? turn",
+                    "Level 2: Reduces No Healing duration by ? turns",
+                    "Level 3: Reduces No Healing duration by ? turns",
+                    "Level 4: Reduces No Healing duration by ? turns",
+                    "Level 5: Reduces No Healing duration by ? turns"
+                ]
+            },
+            {
+                "Name": "Double Special Activation",
+                "description": [
+                    "Level 1: Reduce own Special Cooldown by ? turn after the first time this special is used",
+                    "Level 2: Reduce own Special Cooldown by ? turns after the first time this special is used",
+                    "Level 3: Reduce own Special Cooldown by ? turns after the first time this special is used",
+                    "Level 4: Reduce own Special Cooldown by ? turns after the first time this special is used",
+                    "Level 5: Reduce own Special Cooldown by ? turns after the first time this special is used"
+                ]
+            },
+        ]
+    },
+    2241: {//Cracker
+        captain: "Boosts ATK of [STR], [DEX] and [QCK] characters by ?x and their HP by ?x",
+        special: "If your Captain is a [STR], [DEX] or [QCK] character, boosts ATK of [STR], [DEX] and [QCK] characters by 1.75x for 1 turn and amplifies the effect of orbs by 1.75x for [STR], [DEX] and [QCK] characters for 1 turn and changes [BLOCK] orbs into Matching orbs. If your Captain is a [PSY] or [INT] character, boosts ATK of [STR], [DEX] and [QCK] characters by 1.75x for 3 turns and amplifies the effect of orbs by 1.75x for [STR], [DEX] and [QCK] characters for 3 turns and changes all orbs into [G] orbs.",
+        specialName: "Infinite Biscuit Soldiers",
+        sailor: "Boosts this character's attack against [DEX] characters by 2x",
+    },
+    2242: {//Cracker
+        captain: "Boosts ATK of [STR], [DEX] and [QCK] characters by 2.75x and their HP by 1.25x",
+        special: "If your Captain is a [STR], [DEX] or [QCK] character, boosts ATK of [STR], [DEX] and [QCK] characters by 1.75x for 1 turn and amplifies the effect of orbs by 1.75x for [STR], [DEX] and [QCK] characters for 1 turn and changes [BLOCK] orbs into Matching orbs. If your Captain is a [PSY] or [INT] character, boosts ATK of [STR], [DEX] and [QCK] characters by 1.75x for 3 turns and amplifies the effect of orbs by 1.75x for [STR], [DEX] and [QCK] characters for 3 turns and changes all orbs into [G] orbs.",
+        specialName: "Infinite Biscuit Soldiers",
+        sailor: {
+            "base": "Boosts this character's attack against [DEX] characters by 2x",
+            "level1": "Makes [TND] orbs \"beneficial\" for [STR], [DEX] and [QCK] characters",
+        },
+        sailorNotes: "#{beneficial}",
+        potential: [
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by ? turn",
+                    "Level 2: Reduces No Healing duration by ? turns",
+                    "Level 3: Reduces No Healing duration by ? turns",
+                    "Level 4: Reduces No Healing duration by ? turns",
+                    "Level 5: Reduces No Healing duration by ? turns"
+                ]
+            },
+            {
+                "Name": "Critical Hit",
+                "description": [
+                    "Level 1: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage"
+                ]
+            },
+        ]
+    },
+    2243: {//Daifuku
+        captain: "Boosts ATK of Powerhouse characters by ?x and reduces damage received by ?%",
+        special: "Reduces enemy's Percent Damage Reduction, End of Turn Heal, Increased Defense and Resilience Buffs duration by 2 turns, changes own orb into [QCK] and deals 30x character's ATK in [QCK] damage to all enemies",
+        specialName: "Genie-uine Rage Split",
+        sailor: "Boosts base HP of all characters by 75",
+    },
+    2244: {//Daifuku
+        captain: "Boosts ATK of Powerhouse characters by 2.5x and reduces damage received by 20%",
+        special: "Reduces enemy's Percent Damage Reduction, End of Turn Heal, Increased Defense and Resilience Buffs duration by 2 turns, changes own orb into [QCK] and deals 30x character's ATK in [QCK] damage to all enemies",
+        specialName: "Genie-uine Rage Split",
+        sailor: {
+            "base": "Boosts base HP of all characters by 75",
+            "level1": "Makes [DEX] orbs \"beneficial\" for this character",
+        },
+        sailorNotes: "#{beneficial}",
+        potential: [
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [
+                    "Level 1: Reduces Slot Bind duration by ? turn on this character",
+                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 5: Reduces Slot Bind duration by ? turns on this character"
+                ]
+            },
+            {
+                "Name": "Double Special Activation",
+                "description": [
+                    "Level 1: Reduce own Special Cooldown by ? turn after the first time this special is used",
+                    "Level 2: Reduce own Special Cooldown by ? turns after the first time this special is used",
+                    "Level 3: Reduce own Special Cooldown by ? turns after the first time this special is used",
+                    "Level 4: Reduce own Special Cooldown by ? turns after the first time this special is used",
+                    "Level 5: Reduce own Special Cooldown by ? turns after the first time this special is used"
                 ]
             },
         ]

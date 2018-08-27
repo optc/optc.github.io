@@ -331,13 +331,13 @@ body, html {
  * BUTTONS & HP BAR *
  ********************/
 
-#hpSlider, #turnSlider, #healSlider {
+#hpSlider, #turnSlider, #healSlider, #semlaSlider {
     width: 350px;
     height: 12px;
     display: inline-block;
 }
 
-#turnSlider, #healSlider {
+#turnSlider, #healSlider, #semlaSlider {
     width: 300px;
 }
 
@@ -347,6 +347,10 @@ body, html {
 
 #heals > .noUi-connect {
     background: green;
+}
+
+#semla > .noUi-connect {
+    background: lemonchiffon;
 }
 
 .noUi-handle {
@@ -1067,7 +1071,7 @@ body > .popover .popover-content {
 .popover-data .TND   { background: peru; }
 .popover-data .BLOCK { background: darkslateblue; }
 .popover-data .BOMB  { background: maroon; }
-.popover-data .
+.popover-data .SEMLA  { background: saddlebrown; }
 .RAINBOW { background: linear-gradient(90deg,#fa8072,#ffd700,#90ee90,#87cefa, #da70d6); }
 .popover-data .G     { background: orange; }
 
