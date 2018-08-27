@@ -183,6 +183,9 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             overallDamage.damage[l].multipliers = overallDamage.damage[l].multipliers.filter(function(x) { return x[0] != 1; });
             overallDamage.damage[l].multipliers.sort(function(x,y) { return x[1].localeCompare(y[1]); });
         }
+        console.log(overallDamage);
+        for(var key in overallDamage){
+        }
         return overallDamage;
     };
 
@@ -646,7 +649,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                     chainMultiplier = Math.min(mapEffect.chainLimiter(params[n]), chainMultiplier);
                 else if (special.hasOwnProperty('chainLimiter'))
                     chainMultiplier = Math.min(special.chainLimiter(params[n]), chainMultiplier);
-                if($scope.tdata.semlaCounter.value >= 3 && (x.unit.unit.number == 2232 || x.unit.unit.number == 2233)){
+                if($scope.tdata.semlaCounter.value >= 3 && (x.unit.unit.number == 2232 || x.unit.unit.number == 2233) && x.position < 2){
                     chainMultiplier = 1.0;
                 }
                 // add or update chain multiplier to multiplier list
