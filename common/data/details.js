@@ -32001,7 +32001,7 @@ window.details = {
         sailor: {
             "base": "None",
             "level1": "Completely resists Paralysis on this character",
-            "level2": "Makes RCV orbs \"beneficial\" for all characters",
+            "level2": "Makes [RCV] orbs \"beneficial\" for all characters",
         },
         sailorNotes: "#{beneficial}",
         potential: [
