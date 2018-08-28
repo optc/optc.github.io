@@ -24259,11 +24259,11 @@ window.details = {
         specialName: "Barrier Crash",
         special: [
             {
-                "description": "Reduces any damage received above 5,000 HP by 97% for 2 turns, recovers 20% of crew's MAX HP, reduces enemies' ATK Up and Enrage Buffs by 5 turns.",
+                "description": "Reduces any damage received above 5,000 HP by 97% for 2 turns, recovers 20% of crew's MAX HP, reduces enemies' ATK Up and Enrage Buffs duration by 5 turns.",
                 "cooldown": [ 28, 13 ],
             },
             {
-                "description": "Reduces any damage received above 3,000 HP by 97% for 2 turns, recovers 50% of crew's MAX HP, reduces enemies' ATK Up, Enrage, End of Turn Damage/Percent Cut and Resilience Buffs by 5 turns.",
+                "description": "Reduces any damage received above 3,000 HP by 97% for 2 turns, recovers 50% of crew's MAX HP, reduces enemies' ATK Up, Enrage, End of Turn Damage/Percent Cut and Resilience Buffs duration by 5 turns.",
                 "cooldown": [ 33, 18 ],
             },
         ],
@@ -24273,11 +24273,11 @@ window.details = {
         specialName: "Barrier Crash",
         special: [
             {
-                "description": "Reduces any damage received above 5,000 HP by 97% for 2 turns, recovers 20% of crew's MAX HP, reduces enemies' ATK Up and Enrage Buffs by 5 turns.",
+                "description": "Reduces any damage received above 5,000 HP by 97% for 2 turns, recovers 20% of crew's MAX HP, reduces enemies' ATK Up and Enrage Buffs duration by 5 turns.",
                 "cooldown": [ 28, 13 ],
             },
             {
-                "description": "Reduces any damage received above 3,000 HP by 97% for 2 turns, recovers 50% of crew's MAX HP, reduces enemies' ATK Up, Enrage, End of Turn Damage/Percent Cut and Resilience Buffs by 5 turns.",
+                "description": "Reduces any damage received above 3,000 HP by 97% for 2 turns, recovers 50% of crew's MAX HP, reduces enemies' ATK Up, Enrage, End of Turn Damage/Percent Cut and Resilience Buffs duration by 5 turns.",
                 "cooldown": [ 33, 18 ],
             },
         ],
