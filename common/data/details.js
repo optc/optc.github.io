@@ -32039,14 +32039,14 @@ window.details = {
     },
     2237: {//Smoothie
         captain: "Boosts ATK of all characters by ?x following a chain of Good > Great > PERFECT hits and recovers ? HP at end of each turn",
-        special: "Recovers 5,000, removes Poison, reduces Paralysis, Bind, Despair and Burn by 2 turns, changes adjacent orbs into Matching Orbs and switches orbs between slots three times",
+        special: "Recovers 5,000, removes Poison, reduces Paralysis, Bind, Despair and Burn duration by 2 turns, changes adjacent orbs into Matching Orbs and switches orbs between slots three times",
         specialNotes: "We don't know what Burn is yet.",
         specialName: "Human Juicer",
         sailor: "Boosts base ATK of characters in the top row by 50",
     },
     2238: {//Smoothie
         captain: "Boosts ATK of all characters by 3.5x following a chain of Good > Great > PERFECT hits and recovers 500 HP at end of each turn",
-        special: "Recovers 5,000, removes Poison, reduces Paralysis, Bind, Despair and Burn by 2 turns, changes adjacent orbs into Matching Orbs and switches orbs between slots three times",
+        special: "Recovers 5,000, removes Poison, reduces Paralysis, Bind, Despair and Burn duration by 2 turns, changes adjacent orbs into Matching Orbs and switches orbs between slots three times",
         specialNotes: "We don't know what Burn is yet.",
         specialName: "Human Juicer",
         sailor: {

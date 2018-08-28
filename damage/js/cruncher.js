@@ -183,9 +183,21 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             overallDamage.damage[l].multipliers = overallDamage.damage[l].multipliers.filter(function(x) { return x[0] != 1; });
             overallDamage.damage[l].multipliers.sort(function(x,y) { return x[1].localeCompare(y[1]); });
         }
-        console.log(overallDamage);
-        for(var key in overallDamage){
-        }
+        /*console.log(overallDamage);
+        for(var key in overallDamage.damage){
+            if(parseInt(key)){
+                console.log(overallDamage.damage[key].position);
+                if((overallDamage.damage[key].unit.unit.number == 2232 || overallDamage.damage[key].unit.unit.number == 2233) && overallDamage.damage[key].position < 2 && $scope.tdata.semlaCounter.value >= 3 && parseInt(key) != 5){
+                    var temp = overallDamage.damage[key];
+                    var m = parseInt(key);
+                    while(m < 5){
+                        overallDamage.damage[toString(m)] = overallDamage.damage[toString(m + 1)];
+                        m++;
+                    }
+                    overallDamage.damage['5'] = temp;
+                }
+            }
+        }*/
         return overallDamage;
     };
 
