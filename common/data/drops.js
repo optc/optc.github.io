@@ -2028,7 +2028,7 @@ window.drops = {
         },
         
         {
-            name: 'Makino\'s Bar! Shanks and Makino!',
+            name: 'Commotion at Makino\'s Tavern?!',
             thumb: 2021,
             nakama: 2202100,
             gamewith: 96636,
