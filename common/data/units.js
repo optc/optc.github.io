@@ -2193,7 +2193,7 @@ window.units = [
     [ "Bartholomew Kuma, Incomplete Human Weapon", "PSY", [ "Shooter", "Cerebral" ], 4, 25, 5, 3, 70, 1066998, 402, 172, 32, 1733, 755, 129, 1 ],
     [ "Bartholomew Kuma, The Human Weapon Defying Justice", "PSY", [ "Shooter", "Cerebral" ], 5, 40, 5, 4, 99, 4000000, 1672, 712, 112, 3129, 1382, 192, 1 ],
     [ "Vinsmoke Reiju, 13 Year Reunion", "INT", [ "Cerebral", "Powerhouse" ], 4, 15, 5, 4, 99, 1000000, 175, 102, 23, 1950, 1155, 225, null ],
-    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Corazon, Sympathy for Law", "DEX", [ "Free Spirit", "Cerebral" ], '6+', 65, 4, 5, 99, 5000000, 1455, 682, 281, 2846, 1308, 562, null ],
     [ "Blackbeard, Warlord of the Sea", "INT", [ "Driven", "Powerhouse" ], 4, 30, 5, 2, 70, 1066998, 500, 153, -83, 1770, 720, -83, null ],
     [ "Blackbeard, Former Warlord of the Sea", "INT", [ "Driven", "Powerhouse" ], 5, 50, 4, 3, 99, 5000000, 1690, 643, -83, 3830, 1483, -83, null ],
     [ "Killer, A Leading Figure Initiating an Alliance", "INT", [ "Striker", "Powerhouse" ], 4, 20, null, null, 70, 1066998, null, null, null, null, null, null, null ],

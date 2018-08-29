@@ -2193,7 +2193,7 @@ window.families = [
     "Bartholomew Kuma",
     "Bartholomew Kuma",
     "Vinsmoke Reiju",
-    null,
+    "Corazon",
     "Blackbeard",
     "Blackbeard",
     "Killer",

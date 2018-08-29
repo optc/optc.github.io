@@ -2193,7 +2193,7 @@ window.aliases = {
     2192: [ 'バーソロミュー・くま 未完の人間兵器', '', 'Coliseum Kuma' ],
     2193: [ 'バーソロミュー・くま 正義に逆らう人間兵器', '', 'Coliseum Kuma' ],
     2194: [ '', '', '' ],
-    2195: [ '', '', '' ],
+    2195: [ '', '', 'Rocinante', 'Rosinante', 'Corasan', 'Legend Corazon', 'Donquixote Rosinante', 'Mega Corazon', 'Super Corazon', 'Mega Corasan', 'Super Corasan', 'Literal Corpse' ],
     2196: [ '', '', 'Raid Blackbeard V2', 'Raid BB' ],
     2197: [ '', '', 'Raid Blackbeard V2', 'Raid BB' ],
     2198: [ '', '', 'Limited Killer', 'Secret Killer' ],
