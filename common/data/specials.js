@@ -5744,6 +5744,32 @@ window.specials = {
         type: "class",
         orb: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
     },
+    2248: {
+        affinity: function(p){ return window.specials[2248].multiplier == 2 ? 1.75 : 1; },
+        chainAddition: function(p) { return window.specials[2248].multiplier == 1 ? .8 : 0; },
+        delay: function(p) { return window.specials[2248].multiplier == 1 ? 1 : 0; },
+        onActivation: function(p) {
+            var n = (window.specials[2248].multiplier == 1 ? 1 : 0);
+            window.specials[2248].multiplier = [1, 2][n];
+            p.scope.notify({
+                text: 'Using the ' + ['4 STR and DEX orbs', '4 PSY and INT orbs'][n] + 'special. To switch to the ' + ['4 PSY and INT orbs', '4 STR and DEX orbs'][n] + ' special, disable and re-enable this special',
+                name: '2248warning'
+            });
+        }
+    },
+    2249: {
+        affinity: function(p){ return window.specials[2249].multiplier == 2 ? 1.75 : 1; },
+        chainAddition: function(p) { return window.specials[2249].multiplier == 1 ? .8 : 0; },
+        delay: function(p) { return window.specials[2249].multiplier == 1 ? 1 : 0; },
+        onActivation: function(p) {
+            var n = (window.specials[2249].multiplier == 1 ? 1 : 0);
+            window.specials[2249].multiplier = [1, 2][n];
+            p.scope.notify({
+                text: 'Using the ' + ['4 STR and DEX orbs', '4 PSY and INT orbs'][n] + 'special. To switch to the ' + ['4 PSY and INT orbs', '4 STR and DEX orbs'][n] + ' special, disable and re-enable this special',
+                name: '2249warning'
+            });
+        }
+    },
     2502: {
         atk: function(p) { return 1.75; },
         type: "type",

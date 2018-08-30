@@ -32269,6 +32269,40 @@ window.details = {
             },
         ]
     },
+    2248: {//Daifuku
+        captain: "Boosts ATK of Slasher and Powerhouse characters by 2.5x at the start of the chain and their HP by 1.25x, by 2.85x after scoring 3 PERFECTs in a row.",
+        special: [
+            {
+                "description": "Deals ?x character's ATK in [DEX] damage to all enemies that will ignore damage negating abilities and barriers. If your crew has 4 or more characters with [STR] or [DEX] orbs, Delays all enemies for ? turns and adds .?x to Chain multiplier for ? turns. If your crew has 4 or more characters with [PSY] or [INT] orbs, boosts the Color Affinity of all characters by ?x for ? turns and makes [PSY] and [INT] orbs \"beneficial\" to all characters for ? turns.",
+                "cooldown": [ null, null ],
+            },
+            {
+                "description": "Deals 75x character's ATK in [DEX] damage to all enemies that will ignore damage negating abilities and barriers. If your crew has 4 or more characters with [STR] or [DEX] orbs, Delays all enemies for 2 turns and adds .8x to Chain multiplier for 2 turns. If your crew has 4 or more characters with [PSY] or [INT] orbs, boosts the Color Affinity of all characters by 1.75x for 2 turns and makes [PSY] and [INT] orbs \"beneficial\" to all characters for 2 turns.",
+                "cooldown": [ null, null ],
+            },
+        ],
+        specialName: "The Genie's Flashy Strike",
+        sailor: "If this character has a [DEX] orb and you hit a PERFECT with him, keep his [DEX] orb for the next turn",
+    },
+    2249: {//Daifuku
+        captain: "Boosts ATK of Slasher and Powerhouse characters by 2.5x at the start of the chain and their HP by 1.25x, by 2.85x after scoring 3 PERFECTs in a row.",
+        special: [
+            {
+                "description": "Deals ?x character's ATK in [DEX] damage to all enemies that will ignore damage negating abilities and barriers. If your crew has 4 or more characters with [STR] or [DEX] orbs, Delays all enemies for ? turns and adds .?x to Chain multiplier for ? turns. If your crew has 4 or more characters with [PSY] or [INT] orbs, boosts the Color Affinity of all characters by ?x for ? turns and makes [PSY] and [INT] orbs \"beneficial\" to all characters for ? turns.",
+                "cooldown": [ null, null ],
+            },
+            {
+                "description": "Deals 75x character's ATK in [DEX] damage to all enemies that will ignore damage negating abilities and barriers. If your crew has 4 or more characters with [STR] or [DEX] orbs, Delays all enemies for 2 turns and adds .8x to Chain multiplier for 2 turns. If your crew has 4 or more characters with [PSY] or [INT] orbs, boosts the Color Affinity of all characters by 1.75x for 2 turns and makes [PSY] and [INT] orbs \"beneficial\" to all characters for 2 turns.",
+                "cooldown": [ null, null ],
+            },
+        ],
+        specialName: "The Genie's Flashy Strike",
+        sailor: {
+            "base": "If this character has a [DEX] orb and you hit a PERFECT with him, keep his [DEX] orb for the next turn",
+            "level1": "Makes [DEX] orbs \"beneficial\" for Slasher characters",
+        },
+        sailorNotes: "#{beneficial}",
+    },
     2500: {//Doflamingo Raid v2
         captain: "Boosts ATK of Driven and Cerebral characters by 2.5x when HP is 50% or below, 1.5x otherwise",
         special: "Randomizes all non-matching orbs, including [BLOCK] slots and locks all orbs for 1 turn. If your Captain is a Cerebral or Driven character, increases duration of any Class/Type boosting buffs and Orb Amplification buffs by 2 turns",
