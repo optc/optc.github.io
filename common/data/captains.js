@@ -7741,6 +7741,14 @@ window.captains = {
     2244: {
         atk: function(p){ return p.unit.class.has("Powerhouse") ? 2.5 : 1; },
     },
+    2249: {
+        damageSorter: function(d) { return CrunchUtils.classSort(d, 2.85, [ "Slasher", "Powerhouse" ]); },
+        hitAtk: function(p) {
+            if (!p.unit.class.has("Slasher") && !p.unit.class.has("Powerhouse")) return 1;
+            return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? 2.85 : 2.5;
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
+    },
     2500: {
         atk: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Cerebral")) ? p.percHP <= 50.0 ? 2.5 : 1.5 : 1; }
     },
