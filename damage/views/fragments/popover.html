@@ -124,7 +124,7 @@
                     <div ng-bind-html="details.special | decorate"></div>
                     <div class="cooldown" ng-if="details.special && cooldown">
                         {{cooldown.length ? cooldown[0] : cooldown}} turns
-                        {{cooldown.length ? ' (maxed: ' + cooldown[1] + ' turns)' : ''}}
+                        {{cooldown.length ? ' (maxed: ' + cooldown[1] + ' turns)' : ''}}<!--Show LB CD as well as multi specials (if it can work)-->
                     </div>
                     <span class="notes" ng-if="details.specialNotes" ng-bind-html="details.specialNotes | notes | decorate"></span>
                 </td>

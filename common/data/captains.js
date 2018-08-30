@@ -7523,8 +7523,8 @@ window.captains = {
         atk: function(p) { return  1 + 2 * (p.percHP / 100); }
     },
     2196: {
-        atk: function(p) { return p.unit.class.has("Driven") ? p.percHP <= 10.0 ? 1 : 1 : 1; },//Change this
-        hp: function(p) { return p.unit.class.has("Driven") ? 1 : 1; }//Change this
+        atk: function(p) { return p.unit.class.has("Driven") ? 2 : 1; },
+        hp: function(p) { return p.unit.class.has("Driven") ? 1.2 : 1; }
     },
     2197: {
         atk: function(p) { return p.unit.class.has("Driven") ? p.percHP <= 10.0 ? 3.75 : 2 : 1; },
@@ -7644,8 +7644,7 @@ window.captains = {
         hp: function(p) { return 1.75; },
     },
     2218: {
-        atk: function(p) { return p.unit.class.has("Cerebral") ? 1 : 1; },
-        hp: function(p) { return p.unit.class.has("Cerebral") ? 1 : 1; },
+        atk: function(p) { return p.unit.class.has("Cerebral") ? 1.75 : 1; },
     },
     2219: {
         atk: function(p) { return p.unit.class.has("Cerebral") ? 2.25 : 1; },
@@ -7719,9 +7718,9 @@ window.captains = {
         hitModifiers: ["Good", "Great", "Perfect", "Perfect", "Perfect", "Perfect"]
     },
     2239: {
-        atk: function(p) { return p.unit.cost >= 50 ? 1 : 1; },//Change This
-        hp: function(p) { return p.unit.cost >= 50 ? 1 : 1; },//Change This
-        rcv: function(p) { return p.unit.cost >= 50 ? 1 : 1; },//Change This
+        atk: function(p) { return p.unit.cost >= 50 ? 3 : 1; },
+        hp: function(p) { return p.unit.cost >= 50 ? 1.1 : 1; },
+        rcv: function(p) { return p.unit.cost >= 50 ? 1.1 : 1; },
     },
     2240: {
         atk: function(p) { return p.unit.cost >= 50 ? 3.5 : 1; },
@@ -7729,18 +7728,18 @@ window.captains = {
         rcv: function(p) { return p.unit.cost >= 50 ? 1.2 : 1; },
     },
     2241: {
-        atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? 1 : 1; },//Change This
-        hp: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? 1 : 1; }//Change This
+        atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? 2 : 1; },
+        hp: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? 1.2 : 1; }
     },
     2242: {
         atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? 2.75 : 1; },
         hp: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? 1.25 : 1; }
     },
     2243: {
-        atk: function(p){ return p.unit.class.has("Powerhouse") ? 1 : 1; },//Change this
+        atk: function(p){ return p.unit.class.has("Powerhouse") ? 2 : 1; },
     },
     2244: {
-        atk: function(p){ return p.unit.class.has("Powerhouse") ? 2.75 : 1; },
+        atk: function(p){ return p.unit.class.has("Powerhouse") ? 2.5 : 1; },
     },
     2500: {
         atk: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Cerebral")) ? p.percHP <= 50.0 ? 2.5 : 1.5 : 1; }

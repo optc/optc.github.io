@@ -883,12 +883,6 @@ window.matchers = [
         matcher: /Cooldown Reduction/i
     },
     
-    /*{
-        name: 'Double Special Activation Potential Ability',
-        target: 'limit',
-        matcher: /Double Special Activation/i
-    },*/
-    
     {
         name: 'Double Special Activation Potential Ability',
         target: 'limit',
