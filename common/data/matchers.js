@@ -890,6 +890,12 @@ window.matchers = [
     },*/
     
     {
+        name: 'Double Special Activation Potential Ability',
+        target: 'limit',
+        matcher: /Double Special Activation/i
+    },
+    
+    {
         name: 'Damage Reduction Potential Ability',
         target: 'limit',
         matcher: /Damage Reduction/i

@@ -183,9 +183,21 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             overallDamage.damage[l].multipliers = overallDamage.damage[l].multipliers.filter(function(x) { return x[0] != 1; });
             overallDamage.damage[l].multipliers.sort(function(x,y) { return x[1].localeCompare(y[1]); });
         }
-        console.log(overallDamage);
-        for(var key in overallDamage){
-        }
+        /*console.log(overallDamage);
+        for(var key in overallDamage.damage){
+            if(parseInt(key)){
+                console.log(overallDamage.damage[key].position);
+                if((overallDamage.damage[key].unit.unit.number == 2232 || overallDamage.damage[key].unit.unit.number == 2233) && overallDamage.damage[key].position < 2 && $scope.tdata.semlaCounter.value >= 3 && parseInt(key) != 5){
+                    var temp = overallDamage.damage[key];
+                    var m = parseInt(key);
+                    while(m < 5){
+                        overallDamage.damage[toString(m)] = overallDamage.damage[toString(m + 1)];
+                        m++;
+                    }
+                    overallDamage.damage['5'] = temp;
+                }
+            }
+        }*/
         return overallDamage;
     };
 
@@ -1162,7 +1174,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                         if (x.hasOwnProperty('rcvStatic'))
                             rcvtemp += x.rcvStatic(getParameters(i));
                     });
-                    if ([1000, 1001, 1250, 1251, 1319, 1320, 1750, 1751, 1922, 2211, 1889].has(id)){
+                    if ([1000, 1001, 1250, 1251, 1319, 1320, 1750, 1751, 1889, 1922, 2195, 2211].has(id)){
                         var hitsCount = { 'Perfect': 0, 'Great': 0, 'Good': 0, 'Below Good': 0, 'Miss': 0 };
                         var teamlength = 0;
                         
@@ -1173,7 +1185,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                         healAmount += id == 1251 ? Math.floor(([0, .5, .75, 1, 1.5, 2, 3.5][classCounter().Powerhouse]) * (data.team[i].rcv + rcvtemp)) : 0;
                         healAmount += id == 1889 ? capActions[i] ? 2 * (data.team[i].rcv + rcvtemp) : 1.5 * (data.team[i].rcv + rcvtemp) : 0;
                         healAmount += id == 2211 ? capActions[i] ? 510 : 51 : 0;
-                        healAmount += (id == 1000 || id == 1001) ? (1.5 * (data.team[i].rcv + rcvtemp) * hitsCount['Good']) + (.5 * (data.team[i].rcv + rcvtemp) * hitsCount['Great']) : 0;
+                        healAmount += (id == 1000 || id == 1001 || id == 2195) ? (1.5 * (data.team[i].rcv + rcvtemp) * hitsCount['Good']) + (.5 * (data.team[i].rcv + rcvtemp) * hitsCount['Great']) : 0;
                         healAmount += (id == 1319) ? (1 * (data.team[i].rcv + rcvtemp) * hitsCount['Good']) + (.1 * (data.team[i].rcv + rcvtemp) * hitsCount['Perfect']) : 0;
                         healAmount += (id == 1320) ? (1.5 * (data.team[i].rcv + rcvtemp) * hitsCount['Good']) + (.1 * (data.team[i].rcv + rcvtemp) * hitsCount['Perfect']) : 0;
                         healAmount += (id == 1750 || id == 1751 || id == 1922) ? (.5 * (data.team[i].rcv + rcvtemp) * hitsCount['Perfect']) : 0;

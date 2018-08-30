@@ -585,6 +585,9 @@ window.zombies = {
         type: 'healer',
         multiplier: 2
     },
+    2195: {//Corazon
+        type: 'healer',
+    },
     2210: { // Enel
         type: 'healer',
         amount: 51

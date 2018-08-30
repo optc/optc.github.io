@@ -7519,6 +7519,9 @@ window.captains = {
     2194: {
         atk: function(p){ return 2.25; },
     },
+    2195: {
+        atk: function(p) { return  1 + 2 * (p.percHP / 100); }
+    },
     2196: {
         atk: function(p) { return p.unit.class.has("Driven") ? p.percHP <= 10.0 ? 1 : 1 : 1; },//Change this
         hp: function(p) { return p.unit.class.has("Driven") ? 1 : 1; }//Change this
