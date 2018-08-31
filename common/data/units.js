@@ -2247,7 +2247,7 @@ window.units = [
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Daifuku", "DEX", [ "Fighter", "Powerhouse" ], 4, 25, null, null, 70, 1066998, null, null, null, null, null, null, null ],
-    [ "Charlotte Daifuku, Puff Puff Fruit Lamp Human", "DEX", [ "Slasher", "Powerhouse" ], 5, 40, null, null, 99, 4000000, null, null, null, null, null, null, null ],
+    [ "Charlotte Daifuku, Puff Puff Fruit Lamp Human", "DEX", [ "Slasher", "Powerhouse" ], 5, 40, 5, null, 99, 4000000, 1, 1, 1, 3735, 1476, 150, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
