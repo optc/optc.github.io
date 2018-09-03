@@ -7735,6 +7735,12 @@ window.captains = {
     2244: {
         atk: function(p){ return p.unit.class.has("Powerhouse") ? 2.75 : 1; },
     },
+    2246: {
+        atk: function(p) { return p.unit.class.has("Free Spirit") ? 1 + 1 * ((p.percHP) / 100) : 1; },//Change This
+    },
+    2247: {
+        atk: function(p) { return p.unit.class.has("Free Spirit") ? 2 + 1.25 * ((p.percHP) / 100) : 1; },//Change This
+    },
     2249: {
         damageSorter: function(d) { return CrunchUtils.classSort(d, 2.85, [ "Slasher", "Powerhouse" ]); },
         hitAtk: function(p) {

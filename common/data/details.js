@@ -32269,6 +32269,25 @@ window.details = {
             },
         ]
     },
+    2246: {//Vivi
+        captain: "Boosts ATK of Free Spirit characters proportionally to the crew's current HP, by ?x at max and recovers ?x character's RCV in HP at the end of each turn",
+        captainNotes: "#{captainProportional : higher : ? + ? * ((remaining HP) / (total HP)) : 3.25 : ?}",
+        special: "Reduces Special Cooldown of all characters by 1 turn and changes [BLOCK] and adjacent orbs into [RCV] orbs. If during that turn, you hit 2 PERFECTS, locks the chain multiplier at 3x for 3 turns.",
+        specialName: "The Mark of Friendship",
+        sailor: "Reduces Silence duration by 1 turn",
+        sailorNotes: "#{beneficial}",
+    },
+    2247: {//Vivi
+        captain: "Boosts ATK of Free Spirit characters proportionally to the crew's current HP, by 3.25x at max and recovers 1.5x character's RCV in HP at the end of each turn",
+        captainNotes: "#{captainProportional : higher : ? + ? * ((remaining HP) / (total HP)) : 3.25 : ?}",
+        special: "Reduces Special Cooldown of all characters by 1 turn and changes [BLOCK] and adjacent orbs into [RCV] orbs. If during that turn, you hit 2 PERFECTS, locks the chain multiplier at 3x for 3 turns.",
+        specialName: "The Mark of Friendship",
+        sailor: {
+            "base": "Reduces Silence duration by 1 turn",
+            "level1": "Makes [RCV] orbs \"beneficial\" for all characters",
+        },
+        sailorNotes: "#{beneficial}",
+    },
     2248: {//Daifuku
         captain: "Boosts ATK of Slasher and Powerhouse characters by 2.5x at the start of the chain and their HP by 1.25x, by 2.85x after scoring 3 PERFECTs in a row.",
         special: [
