@@ -2023,7 +2023,7 @@ window.units = [
     [ "Akainu, Decisive Deadly Battle", "INT", [ "Fighter", "Shooter" ], 5, 30, 5, 3, 70, 1066998, 512, 241, 24, 1923, 923, 91, 1 ],
     [ "Sakazuki, Decisive Deadly Battle", "INT", [ "Fighter", "Shooter" ], 6, 55, 4, 5, 99, 5000000, 1652, 798, 82, 3580, 1621, 169, 1 ],
     [ "Aokiji, Decisive Deadly Battle", "PSY", [ "Striker", "Shooter" ], 5, 30, 6, 3, 70, 1066998, 482, 224, 60, 1829, 858, 154, 1 ],
-    [ "Kuzan, Decisive Deadly Battle", "PSY", [ "Striker", "Shooter" ], 6, 55, 4, 5, 99, 5000000, 1598, 728, 142, 3442, 1572, 302, 1 ],
+    [ "Kuzan, Decisive Deadly Battle", "PSY", [ "Striker", "Shooter" ], 6, 55, 6, 5, 99, 5000000, 1598, 728, 142, 3442, 1572, 302, 1 ],
     [ "Hina, Imprisoning the Flame Rescuer", "PSY", [ "Fighter", "Striker" ], 4, 15, 5, 3, 50, 392109, 298, 82, 50, 1125, 645, 151, 1 ],
     [ "Black Cage Hina, Imprisoning the Flame Rescuer", "PSY", [ "Fighter", "Striker" ], 5, 30, 4, 4, 99, 4000000, 935, 558, 127, 2477, 1328, 344, 1 ],
     [ "Sengoku, The Warrior that will Lead to Victory", "QCK", [ "Fighter", "Cerebral" ], 4, 15, 4, 3, 50, 392109, 340, 94, 38, 1210, 710, 121, 1 ],
