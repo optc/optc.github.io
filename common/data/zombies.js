@@ -601,7 +601,7 @@ window.zombies = {
     },
     2237: { // Smoothie
         type: 'healer',
-        amount: 500//Change this
+        amount: 300
     },
     2238: { // Smoothie
         type: 'healer',

@@ -2229,7 +2229,7 @@ window.aliases = {
     2228: [ 'ＰＬＥＡＳＵＲＥＳ（プレジャーズ）', '', '' ],
     2229: [ 'カポネ・“ギャング”ベッジ ビッグ・マム海賊団傘下', '', '' ],
     2230: [ 'シープスヘッド', '', '' ],
-    2231: [ 'ジャック 四皇カイドウの腹心', '', '' ],
+    2231: [ 'ジャック 四皇カイドウの腹心', '', 'Story Jack' ],
     2232: [ 'ゴッド・エネル “限りない大地”への還幸', '', 'Super Enel', 'Mega Enel', 'Super Eneru', 'Mega Eneru' ],
     2233: [ 'シャーロット・リンリン トットランド女王', '', 'Legend Big Mom', 'Legend Charlotte Linlin' ],
     2234: [ 'ビッグ・マム 四皇', '', 'Legend Big Mom', 'Legend Charlotte Linlin' ],

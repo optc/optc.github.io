@@ -224,6 +224,8 @@
             case 9019: return 'https://onepiece-treasurecruise.com/wp-content/uploads/Jerma_skull_c5.png'; break;
             case 'skullDoffy':
             case 9020: return 'https://onepiece-treasurecruise.com/wp-content/uploads/Doflamingo_skull_c.png'; break;
+            /* case 'skullEneru':
+            case 9021: return 'https://onepiece-treasurecruise.com/wp-content/uploads/Eneru_skull_c.png'; break; */
         }
         if (window.units[n - 1].incomplete)
             return 'https://onepiece-treasurecruise.com/wp-content/themes/onepiece-treasurecruise/images/noimage.png';

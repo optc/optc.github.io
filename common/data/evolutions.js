@@ -3557,7 +3557,7 @@ window.evolutions = {
     },
     2198: {
         evolution: 2199,
-        evolvers: [  ]
+        evolvers: [ 118, 88, 99, 304, 104 ]
     },
     2200: {
         evolution: 2201,
@@ -3585,7 +3585,7 @@ window.evolutions = {
     },
     2212: {
         evolution: 2213,
-        evolvers: [  ]
+        evolvers: [ 117, 78, 89, 89, 100 ]
     },
     2214: {
         evolution: 2215,
@@ -3593,39 +3593,40 @@ window.evolutions = {
     },
     2216: {
         evolution: 2217,
-        evolvers: [  ]
+        evolvers: [ 117, 86, 91, 97, 102 ]
     },
     2218: {
         evolution: 2219,
-        evolvers: [  ]
+        evolvers: [ 117, 78, 84, 95, 100 ]
     },
     1610: {
         evolution: 2232,
         evolvers: [  ]
+        /* evolvers: [ 'skullEneru', 'skullEneru', 'skullEneru', 'skullEneru', 'skullEneru' ] */
     },
     2233: {
         evolution: 2234,
-        evolvers: [  ]
+        evolvers: [ 1180, 300, 301, 302, 267 ]
     },
     2235: {
         evolution: 2236,
-        evolvers: [  ]
+        evolvers: [ 118, 86, 302, 102, 267 ]
     },
     2237: {
         evolution: 2238,
-        evolvers: [  ]
+        evolvers: [ 266, 95, 1180, 300, 100 ]
     },
     2239: {
         evolution: 2240,
-        evolvers: [  ]
+        evolvers: [ 118, 83, 86, 97, 102 ]
     },
     2241: {
         evolution: 2242,
-        evolvers: [  ]
+        evolvers: [ 94, 1180, 100, 101, 102 ]
     },
     2243: {
         evolution: 2244,
-        evolvers: [  ]
+        evolvers: [ 85, 96, 301, 101, 267 ]
     },
     2246: {
         evolution: 2247,
