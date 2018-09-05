@@ -2244,8 +2244,8 @@ window.families = [
     "Charlotte Daifuku",
     "Charlotte Daifuku",
     null,
-    null,
-    null,
+    "Nefertari Vivi",
+    "Nefertari Vivi",
     "Charlotte Daifuku",
     "Charlotte Daifuku",
 ];
