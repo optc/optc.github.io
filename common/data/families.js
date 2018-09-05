@@ -2248,4 +2248,6 @@ window.families = [
     "Nefertari Vivi",
     "Charlotte Daifuku",
     "Charlotte Daifuku",
+    "Monkey D. Garp",
+    "Monkey D. Garp",
 ];

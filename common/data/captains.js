@@ -7745,7 +7745,7 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Free Spirit") ? 1 + 1 * ((p.percHP) / 100) : 1; },//Change This
     },
     2247: {
-        atk: function(p) { return p.unit.class.has("Free Spirit") ? 2 + 1.25 * ((p.percHP) / 100) : 1; },//Change This
+        atk: function(p) { return p.unit.class.has("Free Spirit") ? 1 + 2.25 * ((p.percHP) / 100) : 1; },
     },
     2249: {
         damageSorter: function(d) { return CrunchUtils.classSort(d, 2.85, [ "Slasher", "Powerhouse" ]); },
@@ -7754,6 +7754,28 @@ window.captains = {
             return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? 2.85 : 2.5;
         },
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
+    },
+    2250: {
+        hitAtk: function(p) {
+            var reduction = 1;
+            if(p.classCount.Striker >= 1) reduction *= .5;//Change This
+            if(p.classCount.Slasher >= 1) reduction *= .5;//Change This
+            if(p.classCount.Cerebral >= 1) reduction *= .5;//Change This
+            return p.modifiers.slice(0, p.chainPosition).subcontains(["Good", "Great", "Perfect"]) ? 4 * reduction : 2 * reduction;
+        },
+        hitModifiers: ["Good", "Great", "Perfect", "Perfect", "Perfect", "Perfect"],
+        hp: function(p){ return 1.5; },
+    },
+    2251: {
+        hitAtk: function(p) {
+            var reduction = 1;
+            if(p.classCount.Striker >= 1) reduction *= .5;//Change This
+            if(p.classCount.Slasher >= 1) reduction *= .5;//Change This
+            if(p.classCount.Cerebral >= 1) reduction *= .5;//Change This
+            return p.modifiers.slice(0, p.chainPosition).subcontains(["Good", "Great", "Perfect"]) ? 4 * reduction : 2 * reduction;
+        },
+        hitModifiers: ["Good", "Great", "Perfect", "Perfect", "Perfect", "Perfect"],
+        hp: function(p){ return 1.5; },
     },
     2500: {
         atk: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Cerebral")) ? p.percHP <= 50.0 ? 2.5 : 1.5 : 1; }

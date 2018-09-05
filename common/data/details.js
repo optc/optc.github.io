@@ -32271,14 +32271,14 @@ window.details = {
         potentialNotes: "#{enrage}"
     },
     2239: {//Perospero
-        captain: "Boosts ATK of characters with cost 50 or greater by 3x and their HP and RCV by 1.1x",
+        captain: "Boosts ATK of characters with cost 50 or higher by 3x and their HP and RCV by 1.1x",
         special: "Locks all orbs for 1 turn, cuts the current HP of one enemy by 10%, reduces Special Cooldown of all characters by 1 turn and boosts the Color Affinity of [STR], [DEX] and [QCK] characters by 1.75x for 1 turn",
         specialName: "Candy Maiden",
         sailor: "Restores his own special cooldown by 2 turns when it is rewinded",
         sailorNotes: "#{rewind : 2}",
     },
     2240: {//Perospero
-        captain: "Boosts ATK of characters with cost 50 or greater by 3.5x and their HP and RCV by 1.2x",
+        captain: "Boosts ATK of characters with cost 50 or higher by 3.5x and their HP and RCV by 1.2x",
         special: "Locks all orbs for 1 turn, cuts the current HP of one enemy by 10%, reduces Special Cooldown of all characters by 1 turn and boosts the Color Affinity of [STR], [DEX] and [QCK] characters by 1.75x for 1 turn",
         specialName: "Candy Maiden",
         sailor: {
@@ -32446,7 +32446,7 @@ window.details = {
     },
     2247: {//Vivi
         captain: "Boosts ATK of Free Spirit characters proportionally to the crew's current HP, by 3.25x at max and recovers 1.5x character's RCV in HP at the end of each turn",
-        captainNotes: "#{captainProportional : higher : ? + ? * ((remaining HP) / (total HP)) : 3.25 : ?}",
+        captainNotes: "#{captainProportional : higher : 1 + 2.25 * ((remaining HP) / (total HP)) : 3.25 : 1}",
         special: "Reduces Special Cooldown of all characters by 1 turn and changes [BLOCK] and adjacent orbs into [RCV] orbs. If during that turn, you hit 2 PERFECTS, locks the chain multiplier at 3x for 3 turns.",
         specialName: "The Mark of Friendship",
         sailor: {
@@ -32488,6 +32488,34 @@ window.details = {
             "level1": "Makes [DEX] orbs \"beneficial\" for Slasher characters",
         },
         sailorNotes: "#{beneficial}",
+    },
+    2249: {//Garp
+        captain: "Boosts ATK of all characters by 2x at the start of the chain and their HP by 1.5x, boosts ATK of all characters by 4x following a chain of Good > Great > PERFECT hits, makes [PSY] and [RCV] orbs \"beneficial\" to all characters. Reduces ATK based on how many Striker, Slasher or Cerebral characters you have on your crew.",
+        special: [
+            {
+                "description": "uts the current HP of one enemy by 10%, locks the chain multiplier at 3x for 1 turn and reduces Silence duration by 1 turn",
+                "cooldown": [ null, null ],
+            },
+            {
+                "description": "uts the current HP of one enemy by 30%, locks the chain multiplier at 3x for 1 turn and reduces Silence duration by 3 turns",
+                "cooldown": [ null, 21 ],
+            },
+        ],
+        specialName: "Fist of Love",
+    },
+    2250: {//Garp
+        captain: "Boosts ATK of all characters by 2x at the start of the chain and their HP by 1.5x, boosts ATK of all characters by 4x following a chain of Good > Great > PERFECT hits, makes [PSY] and [RCV] orbs \"beneficial\" to all characters. Reduces ATK based on how many Striker, Slasher or Cerebral characters you have on your crew.",
+        special: [
+            {
+                "description": "uts the current HP of one enemy by 10%, locks the chain multiplier at 3x for 1 turn and reduces Silence duration by 1 turn",
+                "cooldown": [ null, null ],
+            },
+            {
+                "description": "uts the current HP of one enemy by 30%, locks the chain multiplier at 3x for 1 turn and reduces Silence duration by 3 turns",
+                "cooldown": [ null, 21 ],
+            },
+        ],
+        specialName: "Fist of Love",
     },
     2500: {//Doflamingo Raid v2
         captain: "Boosts ATK of Driven and Cerebral characters by 2.5x when HP is 50% or below, 1.5x otherwise",
