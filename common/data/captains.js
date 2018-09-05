@@ -7777,6 +7777,26 @@ window.captains = {
         hitModifiers: ["Good", "Great", "Perfect", "Perfect", "Perfect", "Perfect"],
         hp: function(p){ return 1.5; },
     },
+    2252: {
+        atk: function(p){ return p.unit.class.has("Free Spirit") ? 1 : 1; },//Change This
+    },
+    2253: {
+        atk: function(p){
+            var specialEnabled = false;
+            for(var i=0;i<2;i++)
+            {
+                if(window.specials[2252].turnedOn[i]==true){ specialEnabled = true; }
+                if(window.specials[2253].turnedOn[i]==true){ specialEnabled = true; }
+            }
+            return p.unit.class.has("Free Spirit") ? specialEnabled ? 2.6 : 2 : 1; },
+    },
+    2254: {
+        atk: function(p){ return p.unit.type == "DEX" ? 2 : 1; },
+        hp: function(p){ return p.unit.type == "DEX" ? 1.2 : 1; },
+    },
+    2255: {
+        atk: function(p){ return p.unit.type == "PSY" ? 1.5 : 1; },
+    },
     2500: {
         atk: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Cerebral")) ? p.percHP <= 50.0 ? 2.5 : 1.5 : 1; }
     },

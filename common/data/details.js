@@ -25809,7 +25809,7 @@ window.details = {
     },
     1940: {//Ace
         captain: "If there is a [STR], [QCK] and [PSY] character in your crew, boosts ATK of [STR], [QCK] and [PSY] characters by 1.75x and their HP and RCV by 1.05x",
-        special: "Changes all orbs, including [BLOCK] orbs, to [STR] orbs, boosts ATK of [STR], [QCK] and [PSY] characters by 1.75x for 1 turn and makes [STR] orbs \"beneficial\" for [STR], [QCK] and [PSY] characters if your Captain is a Free Spirit character",
+        special: "Changes all orbs, including [BLOCK] orbs, to [STR] orbs, boosts ATK of [STR], [QCK] and [PSY] characters by 1.75x for 1 turn. If your Captain is a Free Spirit character, makes [STR] orbs \"beneficial\" for [STR], [QCK] and [PSY] characters for 1 turn.",
         specialNotes: "#{beneficial}",
         specialName: "Sacred Flames: Unknown Fire",
     },
@@ -25823,7 +25823,7 @@ window.details = {
             "level5": "If there is a [STR], [QCK] and [PSY] character in your crew, boosts ATK of [STR], [QCK] and [PSY] characters by 2.75x and their HP and RCV by 1.2x",
             "level6": "If there is a [STR], [QCK] and [PSY] character in your crew, boosts ATK of [STR], [QCK] and [PSY] characters by 3.44x if they have a [STR] orb, by 2.75x otherwise and their HP and RCV by 1.2x",
         },
-        special: "Changes all orbs, including [BLOCK] orbs, to [STR] orbs, boosts ATK of [STR], [QCK] and [PSY] characters by 1.75x for 1 turn and makes [STR] orbs \"beneficial\" for [STR], [QCK] and [PSY] characters if your Captain is a Free Spirit character",
+        special: "Changes all orbs, including [BLOCK] orbs, to [STR] orbs, boosts ATK of [STR], [QCK] and [PSY] characters by 1.75x for 1 turn. If your Captain is a Free Spirit character, makes [STR] orbs \"beneficial\" for [STR], [QCK] and [PSY] characters for 1 turn.",
         specialNotes: "#{beneficial}",
         specialName: "Sacred Flames: Unknown Fire",
         sailor: {
@@ -30481,13 +30481,13 @@ window.details = {
     },
     2155: {//Pekoms
         captain: "Boosts ATK of Fighter characters by 1.5x, protects from defeat as long as HP is above ?%",
-        special: "Cuts the current HP of one enemy by 20% that will ignore damage negating abilities and barriers and removes enemies Increased Defense buff",
+        special: "Cuts the current HP of one enemy by 20% that will ignore damage negating abilities and barriers and removes enemies Increased Defense buff duration completely",
         specialName: "Flicker Power Knuckle",
         specialNotes: "#{ignoreBarrier}",
     },
     2156: {//Pekoms
         captain: "Boosts ATK of Fighter characters by 1.75x, protects from defeat as long as HP is above ?%",
-        special: "Cuts the current HP of one enemy by 20% that will ignore damage negating abilities and barriers and removes enemies Increased Defense buff",
+        special: "Cuts the current HP of one enemy by 20% that will ignore damage negating abilities and barriers and removes enemies Increased Defense buff duration completely",
         specialName: "Flicker Power Knuckle",
         specialNotes: "#{ignoreBarrier}",
         sailor: {
@@ -32460,11 +32460,11 @@ window.details = {
         special: [
             {
                 "description": "Deals ?x character's ATK in [DEX] damage to all enemies that will ignore damage negating abilities and barriers. If your crew has 4 or more characters with [STR] or [DEX] orbs, Delays all enemies for ? turns and adds .?x to Chain multiplier for ? turns. If your crew has 4 or more characters with [PSY] or [INT] orbs, boosts the Color Affinity of all characters by ?x for ? turns and makes [PSY] and [INT] orbs \"beneficial\" to all characters for ? turns.",
-                "cooldown": [ null, null ],
+                "cooldown": [ 24, 10 ],
             },
             {
                 "description": "Deals 75x character's ATK in [DEX] damage to all enemies that will ignore damage negating abilities and barriers. If your crew has 4 or more characters with [STR] or [DEX] orbs, Delays all enemies for 2 turns and adds .8x to Chain multiplier for 2 turns. If your crew has 4 or more characters with [PSY] or [INT] orbs, boosts the Color Affinity of all characters by 1.75x for 2 turns and makes [PSY] and [INT] orbs \"beneficial\" to all characters for 2 turns.",
-                "cooldown": [ null, null ],
+                "cooldown": [ 14, 28 ],
             },
         ],
         specialName: "The Genie's Flashy Strike",
@@ -32475,11 +32475,11 @@ window.details = {
         special: [
             {
                 "description": "Deals ?x character's ATK in [DEX] damage to all enemies that will ignore damage negating abilities and barriers. If your crew has 4 or more characters with [STR] or [DEX] orbs, Delays all enemies for ? turns and adds .?x to Chain multiplier for ? turns. If your crew has 4 or more characters with [PSY] or [INT] orbs, boosts the Color Affinity of all characters by ?x for ? turns and makes [PSY] and [INT] orbs \"beneficial\" to all characters for ? turns.",
-                "cooldown": [ null, null ],
+                "cooldown": [ 24, 10 ],
             },
             {
                 "description": "Deals 75x character's ATK in [DEX] damage to all enemies that will ignore damage negating abilities and barriers. If your crew has 4 or more characters with [STR] or [DEX] orbs, Delays all enemies for 2 turns and adds .8x to Chain multiplier for 2 turns. If your crew has 4 or more characters with [PSY] or [INT] orbs, boosts the Color Affinity of all characters by 1.75x for 2 turns and makes [PSY] and [INT] orbs \"beneficial\" to all characters for 2 turns.",
-                "cooldown": [ null, null ],
+                "cooldown": [ 14, 28 ],
             },
         ],
         specialName: "The Genie's Flashy Strike",
@@ -32489,33 +32489,53 @@ window.details = {
         },
         sailorNotes: "#{beneficial}",
     },
-    2249: {//Garp
-        captain: "Boosts ATK of all characters by 2x at the start of the chain and their HP by 1.5x, boosts ATK of all characters by 4x following a chain of Good > Great > PERFECT hits, makes [PSY] and [RCV] orbs \"beneficial\" to all characters. Reduces ATK based on how many Striker, Slasher or Cerebral characters you have on your crew.",
-        special: [
-            {
-                "description": "uts the current HP of one enemy by 10%, locks the chain multiplier at 3x for 1 turn and reduces Silence duration by 1 turn",
-                "cooldown": [ null, null ],
-            },
-            {
-                "description": "uts the current HP of one enemy by 30%, locks the chain multiplier at 3x for 1 turn and reduces Silence duration by 3 turns",
-                "cooldown": [ null, 21 ],
-            },
-        ],
-        specialName: "Fist of Love",
-    },
     2250: {//Garp
         captain: "Boosts ATK of all characters by 2x at the start of the chain and their HP by 1.5x, boosts ATK of all characters by 4x following a chain of Good > Great > PERFECT hits, makes [PSY] and [RCV] orbs \"beneficial\" to all characters. Reduces ATK based on how many Striker, Slasher or Cerebral characters you have on your crew.",
         special: [
             {
-                "description": "uts the current HP of one enemy by 10%, locks the chain multiplier at 3x for 1 turn and reduces Silence duration by 1 turn",
+                "description": "uts the current HP of one enemy by 10% that will ignore damage negating abilities and barriers, locks the chain multiplier at 3x for 1 turn and reduces Silence duration by 1 turn",
                 "cooldown": [ null, null ],
             },
             {
-                "description": "uts the current HP of one enemy by 30%, locks the chain multiplier at 3x for 1 turn and reduces Silence duration by 3 turns",
-                "cooldown": [ null, 21 ],
+                "description": "uts the current HP of one enemy by 30% that will ignore damage negating abilities and barriers, locks the chain multiplier at 3x for 1 turn and reduces Silence duration by 3 turns",
+                "cooldown": [ 21, null ],
             },
         ],
         specialName: "Fist of Love",
+    },
+    2251: {//Garp
+        captain: "Boosts ATK of all characters by 2x at the start of the chain and their HP by 1.5x, boosts ATK of all characters by 4x following a chain of Good > Great > PERFECT hits, makes [PSY] and [RCV] orbs \"beneficial\" to all characters. Reduces ATK based on how many Striker, Slasher or Cerebral characters you have on your crew.",
+        special: [
+            {
+                "description": "uts the current HP of one enemy by 10% that will ignore damage negating abilities and barriers, locks the chain multiplier at 3x for 1 turn and reduces Silence duration by 1 turn",
+                "cooldown": [ null, null ],
+            },
+            {
+                "description": "uts the current HP of one enemy by 30% that will ignore damage negating abilities and barriers, locks the chain multiplier at 3x for 1 turn and reduces Silence duration by 3 turns",
+                "cooldown": [ 21, null ],
+            },
+        ],
+        specialName: "Fist of Love",
+    },
+    2252: {//Pound
+        captain: "Boosts ATK of Free Spirit characters by ?x. If you use \"A Bizzare Encounter\" in this turn boosts ATK of Free Spirit characters by ?x instead.",
+        special: "Locks all orbs for 1 turn and amplifies the effects of orbs for characters in the middle and bottom row by 1.5x for 3 turns. If your Captain is a Free Spirit character, randomizes all non-matching orbs.",
+        specialName: "A Bizzare Encounter",
+    },
+    2253: {//Pound
+        captain: "Boosts ATK of Free Spirit characters by 2x. If you use \"A Bizzare Encounter\" in this turn boosts ATK of Free Spirit characters by 2.6x instead.",
+        special: "Locks all orbs for 1 turn and amplifies the effects of orbs for characters in the middle and bottom row by 1.5x for 3 turns. If your Captain is a Free Spirit character, randomizes all non-matching orbs.",
+        specialName: "A Bizzare Encounter",
+    },
+    2254: {//King Baum
+        captain: "Boosts ATK of [DEX] characters by 2x and their HP by 1.2x",
+        special: "Reduces Bind, Despair and Paralysis duration by 1 turn. If your Captain is a Free Spirit character, reduces enemies' ATK Up and Increased Defense duration by 1 turn.",
+        specialName: "Enclosing the Forest with a Trackless Path",
+    },
+    2255: {//Homies
+        captain: "Boosts ATK of [PSY] characters by 1.5x",
+        special: "Boosts chances of getting [RCV] orbs for 2 turns",
+        specialName: "Deceiving Mimicry",
     },
     2500: {//Doflamingo Raid v2
         captain: "Boosts ATK of Driven and Cerebral characters by 2.5x when HP is 50% or below, 1.5x otherwise",
