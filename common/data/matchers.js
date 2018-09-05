@@ -699,6 +699,12 @@ window.matchers = [
         matcher: /"beneficial/i
     },
     
+    {
+        name: 'Tap Timing supporters',
+        target: 'special',
+        matcher: /makes PERFECTs easier to hit/i
+    },
+    
     /* * * * * Sailor * * * * */
     
     {

@@ -2109,6 +2109,14 @@ window.drops = {
             'All Difficulties': [ 2218, 2220, 2221, -2007, -2027, -2031, -1783, -1538, -1536 ]
         },
         
+        {
+            name: 'Pound and King Baum',
+            thumb: 2253,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 2252, 2254, 2255 ]
+        },
+        
     ],
 
             

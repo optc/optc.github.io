@@ -5744,6 +5744,20 @@ window.specials = {
         type: "class",
         orb: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
     },
+    2246: {
+        chain: function(p) { return 3; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 3 : 1;
+        }
+    },
+    2247: {
+        chain: function(p) { return 3; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 3 : 1;
+        }
+    },
     2248: {
         affinity: function(p){ return window.specials[2248].multiplier == 2 ? 1.75 : 1; },
         chainAddition: function(p) { return window.specials[2248].multiplier == 1 ? .8 : 0; },
@@ -5769,6 +5783,48 @@ window.specials = {
                 name: '2249warning'
             });
         }
+    },
+    2250: {
+        chain: function(p) { return 3; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 3 : 1;
+        }
+    },
+    2251: {
+        chain: function(p) { return 3; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 3 : 1;
+        }
+    },
+    2252: {
+        turnedOn: [ false, false ],
+        onActivation: function(p) {
+            window.specials[2252].turnedOn[p.slot] = true;
+            p.scope.notify({
+                text: 'Only affects damage if Pound is your captain',
+                name: '2252warning'
+            });
+        },
+        onDeactivation: function(p) {
+            window.specials[2252].turnedOn[p.slot] = false;
+        },
+        orb: function(p) { return (p.slot >= 2) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+    },
+    2253: {
+        turnedOn: [ false, false ],
+        onActivation: function(p) {
+            window.specials[2253].turnedOn[p.slot] = true;
+            p.scope.notify({
+                text: 'Only affects damage if Pound is your captain',
+                name: '2253warning'
+            });
+        },
+        onDeactivation: function(p) {
+            window.specials[2253].turnedOn[p.slot] = false;
+        },
+        orb: function(p) { return (p.slot >= 2) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
     },
     2502: {
         atk: function(p) { return 1.75; },
