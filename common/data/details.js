@@ -32459,7 +32459,7 @@ window.details = {
         captain: "Boosts ATK of Slasher and Powerhouse characters by 2.5x at the start of the chain and their HP by 1.25x, by 2.85x after scoring 3 PERFECTs in a row.",
         special: [
             {
-                "description": "Deals ?x character's ATK in [DEX] damage to all enemies that will ignore damage negating abilities and barriers. If your crew has 4 or more characters with [STR] or [DEX] orbs, Delays all enemies for ? turns and adds .?x to Chain multiplier for ? turns. If your crew has 4 or more characters with [PSY] or [INT] orbs, boosts the Color Affinity of all characters by ?x for ? turns and makes [PSY] and [INT] orbs \"beneficial\" to all characters for ? turns.",
+                "description": "Deals 45x character's ATK in [DEX] damage to all enemies that will ignore damage negating abilities and barriers. If your crew has 4 or more characters with [STR] or [DEX] orbs, Delays all enemies for 1 turns and adds .5x to Chain multiplier for 1 turns. If your crew has 4 or more characters with [PSY] or [INT] orbs, boosts the Color Affinity of all characters by ?x for 1 turns and makes [PSY] and [INT] orbs \"beneficial\" to all characters for 1 turns.",
                 "cooldown": [ 24, 10 ],
             },
             {
@@ -32474,7 +32474,7 @@ window.details = {
         captain: "Boosts ATK of Slasher and Powerhouse characters by 2.5x at the start of the chain and their HP by 1.25x, by 2.85x after scoring 3 PERFECTs in a row.",
         special: [
             {
-                "description": "Deals ?x character's ATK in [DEX] damage to all enemies that will ignore damage negating abilities and barriers. If your crew has 4 or more characters with [STR] or [DEX] orbs, Delays all enemies for ? turns and adds .?x to Chain multiplier for ? turns. If your crew has 4 or more characters with [PSY] or [INT] orbs, boosts the Color Affinity of all characters by ?x for ? turns and makes [PSY] and [INT] orbs \"beneficial\" to all characters for ? turns.",
+                "description": "Deals 45x character's ATK in [DEX] damage to all enemies that will ignore damage negating abilities and barriers. If your crew has 4 or more characters with [STR] or [DEX] orbs, Delays all enemies for 1 turns and adds .5x to Chain multiplier for 1 turns. If your crew has 4 or more characters with [PSY] or [INT] orbs, boosts the Color Affinity of all characters by ?x for 1 turns and makes [PSY] and [INT] orbs \"beneficial\" to all characters for 1 turns.",
                 "cooldown": [ 24, 10 ],
             },
             {
@@ -32493,29 +32493,31 @@ window.details = {
         captain: "Boosts ATK of all characters by 2x at the start of the chain and their HP by 1.5x, boosts ATK of all characters by 4x following a chain of Good > Great > PERFECT hits, makes [PSY] and [RCV] orbs \"beneficial\" to all characters. Reduces ATK based on how many Striker, Slasher or Cerebral characters you have on your crew.",
         special: [
             {
-                "description": "uts the current HP of one enemy by 10% that will ignore damage negating abilities and barriers, locks the chain multiplier at 3x for 1 turn and reduces Silence duration by 1 turn",
+                "description": "Cuts the current HP of one enemy by 10% that will ignore damage negating abilities and barriers, locks the chain multiplier at 3x for 1 turn and reduces Silence duration by 1 turn",
                 "cooldown": [ null, null ],
             },
             {
-                "description": "uts the current HP of one enemy by 30% that will ignore damage negating abilities and barriers, locks the chain multiplier at 3x for 1 turn and reduces Silence duration by 3 turns",
+                "description": "Cuts the current HP of one enemy by 30% that will ignore damage negating abilities and barriers, locks the chain multiplier at 3x for 1 turn and reduces Silence duration by 3 turns",
                 "cooldown": [ 21, null ],
             },
         ],
         specialName: "Fist of Love",
+        specialNotes:"#{silence}",
     },
     2251: {//Garp
         captain: "Boosts ATK of all characters by 2x at the start of the chain and their HP by 1.5x, boosts ATK of all characters by 4x following a chain of Good > Great > PERFECT hits, makes [PSY] and [RCV] orbs \"beneficial\" to all characters. Reduces ATK based on how many Striker, Slasher or Cerebral characters you have on your crew.",
         special: [
             {
-                "description": "uts the current HP of one enemy by 10% that will ignore damage negating abilities and barriers, locks the chain multiplier at 3x for 1 turn and reduces Silence duration by 1 turn",
+                "description": "Cuts the current HP of one enemy by 10% that will ignore damage negating abilities and barriers, locks the chain multiplier at 3x for 1 turn and reduces Silence duration by 1 turn",
                 "cooldown": [ null, null ],
             },
             {
-                "description": "uts the current HP of one enemy by 30% that will ignore damage negating abilities and barriers, locks the chain multiplier at 3x for 1 turn and reduces Silence duration by 3 turns",
+                "description": "Cuts the current HP of one enemy by 30% that will ignore damage negating abilities and barriers, locks the chain multiplier at 3x for 1 turn and reduces Silence duration by 3 turns",
                 "cooldown": [ 21, null ],
             },
         ],
         specialName: "Fist of Love",
+        specialNotes:"#{silence}",
     },
     2252: {//Pound
         captain: "Boosts ATK of Free Spirit characters by ?x. If you use \"A Bizzare Encounter\" in this turn boosts ATK of Free Spirit characters by ?x instead.",
