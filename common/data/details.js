@@ -32271,14 +32271,14 @@ window.details = {
         potentialNotes: "#{enrage}"
     },
     2239: {//Perospero
-        captain: "Boosts ATK of characters with cost 50 or higher by 3x and their HP and RCV by 1.1x",
+        captain: "Boosts ATK of characters with a of cost 50 or higher by 3x and their HP and RCV by 1.1x",
         special: "Locks all orbs for 1 turn, cuts the current HP of one enemy by 10%, reduces Special Cooldown of all characters by 1 turn and boosts the Color Affinity of [STR], [DEX] and [QCK] characters by 1.75x for 1 turn",
         specialName: "Candy Maiden",
         sailor: "Restores his own special cooldown by 2 turns when it is rewinded",
         sailorNotes: "#{rewind : 2}",
     },
     2240: {//Perospero
-        captain: "Boosts ATK of characters with cost 50 or higher by 3.5x and their HP and RCV by 1.2x",
+        captain: "Boosts ATK of characters with a of cost 50 or higher by 3.5x and their HP and RCV by 1.2x",
         special: "Locks all orbs for 1 turn, cuts the current HP of one enemy by 10%, reduces Special Cooldown of all characters by 1 turn and boosts the Color Affinity of [STR], [DEX] and [QCK] characters by 1.75x for 1 turn",
         specialName: "Candy Maiden",
         sailor: {
