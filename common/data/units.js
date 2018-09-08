@@ -1108,7 +1108,7 @@ window.units = [
     [ "Shiki the Golden Lion", "STR", [ "Driven", "Slasher" ], 4, 30, 4, 2, 70, 1066998, 244, 164, 39, 1274, 709, 177, 1 ],
     [ "Shiki the Golden Lion, Golden Lion Pirates", "STR", [ "Driven", "Slasher" ], 5, 50, 4, 3, 99, 5000000, 1218, 638, 138, 2424, 1407, 292, 1 ],
     [ "Nami, Rejuvenated Navigator", "PSY", [ "Cerebral", "Fighter" ], 3, 9, 5, 2, 50, 392109, 46, 27, 39, 770, 389, 266, 1 ],
-    [ "Nami, Mischievous Tevern Idol", "PSY", [ "Cerebral", "Striker" ], 4, 18, 4, 3, 99, 3000000, 718, 322, 220, 1505, 707, 426, 1 ],
+    [ "Nami, Mischievous Tavern Idol", "PSY", [ "Cerebral", "Striker" ], 4, 18, 4, 3, 99, 3000000, 718, 322, 220, 1505, 707, 426, 1 ],
     [ "Nico Robin, Rejuvenated Archaeologist", "QCK", [ "Cerebral", "Fighter" ], 3, 12, 6, 2, 50, 392109, 95, 39, 24, 992, 524, 162, 1 ],
     [ "Nico Robin, Fetching Tavern Dancer", "QCK", [ "Cerebral", "Fighter" ], 4, 20, 4, 3, 99, 3000000, 921, 468, 119, 1789, 941, 346, 1 ],
     [ "Chopper, Rejuvenated Doctor", "INT", [ "Striker", "Cerebral" ], 3, 9, 4, 2, 50, 392109, 67, 55, 49, 524, 506, 300, 1 ],
