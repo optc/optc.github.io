@@ -7759,7 +7759,7 @@ window.captains = {
         hitAtk: function(p) {
             var reduction = 1;
             if(p.classCount.Striker >= 1) reduction *= .5;//Change This
-            if(p.classCount.Slasher >= 1) reduction *= .5;//Change This
+            if(p.classCount.Shooter >= 1) reduction *= .5;//Change This
             if(p.classCount.Cerebral >= 1) reduction *= .5;//Change This
             return p.modifiers.slice(0, p.chainPosition).subcontains(["Good", "Great", "Perfect"]) ? 4 * reduction : 2 * reduction;
         },
@@ -7770,7 +7770,7 @@ window.captains = {
         hitAtk: function(p) {
             var reduction = 1;
             if(p.classCount.Striker >= 1) reduction *= .5;//Change This
-            if(p.classCount.Slasher >= 1) reduction *= .5;//Change This
+            if(p.classCount.Shooter >= 1) reduction *= .5;//Change This
             if(p.classCount.Cerebral >= 1) reduction *= .5;//Change This
             return p.modifiers.slice(0, p.chainPosition).subcontains(["Good", "Great", "Perfect"]) ? 4 * reduction : 2 * reduction;
         },
