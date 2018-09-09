@@ -27747,7 +27747,7 @@ window.details = {
         specialName: "Instant Suppression",
         sailor: {
             "base": "Makes [DEX] orbs \"beneficial\" for this character",
-            "level1": "Makes [QCK] orbs \"beneficial\" for [PSY] characters",
+            "level1": "Makes [PSY] orbs \"beneficial\" for [QCK] characters",
         },
         sailorNotes: "#{beneficial}",
         limit: [
@@ -27761,7 +27761,7 @@ window.details = {
             { "description": "Boosts base ATK by 40" },
             { "description": "Boosts base RCV by 20" },
             { "description": "Acquire 1 additional Socket slot" },
-            { "description": "Acquire Sailor Ability 1: Makes [QCK] orbs \"beneficial\" for [PSY] characters" },
+            { "description": "Acquire Sailor Ability 1: Makes [PSY] orbs \"beneficial\" for [QCK] characters" },
             { "description": "Boosts base HP by 30" },
             { "description": "Boosts base ATK by 50" },
             { "description": "Boosts base ATK by 60" },
