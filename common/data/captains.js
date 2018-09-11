@@ -6740,7 +6740,8 @@ window.captains = {
                 minModifier: 'Good'
             }]) ? 4.0625 : 3.25 : 1;
         },
-        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
+        hp: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" ? 1.35 : 1; },
     },
     2025: {
         damageSorter: function(d) { return CrunchUtils.okamaSort(d, ['PSY', 'PSY', 'QCK']); },
@@ -6756,7 +6757,8 @@ window.captains = {
                 minModifier: 'Good'
             }]) ? 4.0625 : 3.25 : 1;
         },
-        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
+        hp: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" ? 1.35 : 1; },
     },
     2026: {
         atk: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" ? 2 : 1; },
