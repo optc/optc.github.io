@@ -172,7 +172,7 @@ window.ships = [
     { // 13
         name: 'Thousand Sunny',
         thumb: 'ship_0013_c.png',
-        description: 'Boosts ATK by 1.5x. Special: deals 50,000 typeless damage to all enemies (cooldown: 15 turns).',
+        description: 'Boosts ATK by 1.5x. Special: deals 50,000 typeless damage to all enemies (Cooldown: 15 turns).',
         atk: function(p) {
             return [ 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.5 ][p.boatLevel - 1];
         }
@@ -181,7 +181,7 @@ window.ships = [
     { //14
         name: 'Kuja Pirate Ship',
         thumb: 'ship_0015_c1.png',
-        description: 'Boosts ATK of Free Spirit characters by 1.5x and their HP by 1.35x, reduces the HP of everyone else by 99%. Special: heals the crew by 6,500HP (cooldown: 15 turns).',
+        description: 'Boosts ATK of Free Spirit characters by 1.5x and their HP by 1.35x, reduces the HP of everyone else by 99%. Special: heals the crew by 6,500HP (Cooldown: 15 turns).',
         atk: function(p) {
             return !p.unit.class.has('Free Spirit') ? 1 :
             [ 1.2, 1.2, 1.2, 1.2, 1.2, 1.3, 1.3, 1.3, 1.4, 1.5 ][p.boatLevel - 1];
@@ -195,7 +195,7 @@ window.ships = [
     { //15
         name: 'Ark Maxim',
         thumb: 'ship_0016_c1.png',
-        description: 'Boosts ATK of QCK and PSY characters by 1.5x and their HP by 1.2x. Special: Deals 56560 fixed Damage to all enemies (cooldown: 17 Turns)',
+        description: 'Boosts ATK of QCK and PSY characters by 1.5x and their HP by 1.2x. Special: Deals 56560 fixed Damage to all enemies (Cooldown: 17 Turns)',
         atk: function(p) {
             return p.unit.type == "PSY" || p.unit.type == "QCK" ? [ 1.2, 1.2, 1.2, 1.2, 1.2, 1.3, 1.3, 1.3, 1.4, 1.5 ][p.boatLevel - 1] : 1;
         },
@@ -274,7 +274,7 @@ window.ships = [
     { // 21
         name: 'Burning Moby Dick',
         thumb: 'ship_0022_c.png',
-        //description: 'Boosted Ability: Boosts ATK by 1.5x and HP by 1.4x, reduces HP by 7% at the end of the turn. Special: Cuts the current HP of each enemy by 20% (cooldown: 18 turns). Base Ability: Boosts HP by 1.3x.',
+        //description: 'Boosted Ability: Boosts ATK by 1.5x and HP by 1.4x, reduces HP by 7% at the end of the turn. Special: Cuts the current HP of each enemy by 20% (Cooldown: 18 turns). Base Ability: Boosts HP by 1.3x.',
         description: 'Boosts HP by 1.3x.',
         /*atk: function(p) {
             return 1.5;
@@ -322,7 +322,7 @@ window.ships = [
     { // 25
         name: 'Thousand Sunny: Coated',
         thumb: 'ship_0026_c.png',
-        description: 'Boosts ATK by 1.5x. Special: reduces damage received by 50% for 1 turn (cooldown: 16 turns).',
+        description: 'Boosts ATK by 1.5x. Special: reduces damage received by 50% for 1 turn (Cooldown: 16 turns).',
         atk: function(p) {
             return [ 1.3, 1.3, 1.3, 1.3, 1.35, 1.35, 1.35, 1.4, 1.45, 1.5 ][p.boatLevel - 1];
         }
@@ -330,7 +330,7 @@ window.ships = [
     { // 26
         name: 'Kizaru\'s Cannonball',
         thumb: 'ship_0027_c.png',
-        description: 'Boosts ATK of Shooter characters by 1.55x and their HP by 1.2x, reduces cooldown of Shooter characters specials by 2 turns at the start of the fight. Special: Cuts the current HP of each enemy by 7% (cooldown: 15 turns).',
+        description: 'Boosts ATK of Shooter characters by 1.55x and their HP by 1.2x, reduces cooldown of Shooter characters specials by 2 turns at the start of the fight. Special: Cuts the current HP of each enemy by 7% (Cooldown: 15 turns).',
         atk: function(p) {
             return !(p.unit.class.has('Shooter')) ? 1 : [ 1.2, 1.2, 1.3, 1.3, 1.3, 1.4, 1.4, 1.4, 1.4, 1.55 ][p.boatLevel - 1];
         },
@@ -342,7 +342,7 @@ window.ships = [
     { // 27
         name: 'Going Luffy SENPAI!',
         thumb: 'ship_0028_c.png',
-        description: 'Boosts ATK of Striker characters by 1.5x and their HP by 1.2x if there are 6 Striker characters in your crew. Reduces special cooldown of Striker characters by 1 at the start of the adventure.  Special: Reduces any damage received above 10,000 HP by 97% (cooldown: 17 turns).',
+        description: 'Boosts ATK of Striker characters by 1.5x and their HP by 1.2x if there are 6 Striker characters in your crew. Reduces special cooldown of Striker characters by 1 at the start of the adventure.  Special: Reduces any damage received above 10,000 HP by 97% (Cooldown: 17 turns).',
         atk: function(p) {
             return !(p.classCount.Striker == 6) ? 1 : !p.unit.class.has('Striker') ? 1 :
                 [ 1.1, 1.2, 1.2, 1.2, 1.2, 1.3, 1.3, 1.4, 1.4, 1.5 ][p.boatLevel - 1];
@@ -368,8 +368,8 @@ window.ships = [
     { //29
         name: "Karasumaru Ship",
         thumb: 'ship_0030_c.png',
-        //description: 'Boosted Ability: Boosts ATK and HP of Shooter Only characters by 2x and boosts the ATK of all other characters by 1.5x and their HP by 1.02x. Special: Delays all enemies for 2 turns (cooldown: 12 turns). Base Ability: Boosts ATK and Shooter characters by 1.2x. ACTIVATED Special: Delays all enemies for 1 turn (cooldown: 16 turns).',
-        description: 'Boosts ATK and Shooter characters by 1.2x. Special: Delays all enemies for 1 turn (cooldown: 16 turns).',
+        //description: 'Boosted Ability: Boosts ATK and HP of Shooter Only characters by 2x and boosts the ATK of all other characters by 1.5x and their HP by 1.02x. Special: Delays all enemies for 2 turns (Cooldown: 12 turns). Base Ability: Boosts ATK and Shooter characters by 1.2x. ACTIVATED Special: Delays all enemies for 1 turn (Cooldown: 16 turns).',
+        description: 'Boosts ATK and Shooter characters by 1.2x. Special: Delays all enemies for 1 turn (Cooldown: 16 turns).',
         /*atk: function(p) {
             return !(p.unit.class.has('Slasher') || p.unit.class.has('Striker') || p.unit.class.has('Fighter') || p.unit.class.has('Free Spirit') || p.unit.class.has('Cerebral') || p.unit.class.has('Powerhouse') || p.unit.class.has('Driven')) ? 2 : 1.5;
         },
@@ -382,8 +382,8 @@ window.ships = [
     { //29.2
         name: "Karasumaru Ship - Special ACTIVATED",
         thumb: 'ship_0030_c.png',
-        //description: 'Boosted Ability: Boosts ATK and HP of Shooter Only characters by 2x and boosts the ATK of all other characters by 1.5x and their HP by 1.02x. Special: Delays all enemies for 2 turns (cooldown: 12 turns). Base Ability: Boosts ATK and Shooter characters by 1.2x. ACTIVATED Special: Delays all enemies for 1 turn (cooldown: 16 turns).',
-        description: 'Boosts ATK and Shooter characters by 1.2x. ACTIVATED Special: Delays all enemies for 1 turn (cooldown: 16 turns).',
+        //description: 'Boosted Ability: Boosts ATK and HP of Shooter Only characters by 2x and boosts the ATK of all other characters by 1.5x and their HP by 1.02x. Special: Delays all enemies for 2 turns (Cooldown: 12 turns). Base Ability: Boosts ATK and Shooter characters by 1.2x. ACTIVATED Special: Delays all enemies for 1 turn (Cooldown: 16 turns).',
+        description: 'Boosts ATK and Shooter characters by 1.2x. ACTIVATED Special: Delays all enemies for 1 turn (Cooldown: 16 turns).',
         /*atk: function(p) {
             return !(p.unit.class.has('Slasher') || p.unit.class.has('Striker') || p.unit.class.has('Fighter') || p.unit.class.has('Free Spirit') || p.unit.class.has('Cerebral') || p.unit.class.has('Powerhouse') || p.unit.class.has('Driven')) ? 2 : 1.5;
         },
@@ -408,7 +408,7 @@ window.ships = [
     { //31
         name: "Flying Dutchman",
         thumb: 'ship_0033_c.png',
-        description: 'Boosts ATK by 1.5x. Boosts EXP gained by 1.5x. Special: Reduces the defense of all enemies by 25% for 1 turn (cooldown: 16 turns).',
+        description: 'Boosts ATK by 1.5x. Boosts EXP gained by 1.5x. Special: Reduces the defense of all enemies by 25% for 1 turn (Cooldown: 16 turns).',
         atk: function(p) { return [ 1.2, 1.2, 1.3, 1.3, 1.4, 1.4, 1.4, 1.4, 1.4, 1.5 ][p.boatLevel - 1]; },
     },
     
@@ -417,7 +417,7 @@ window.ships = [
     { //31.2
         name: "Flying Dutchman - Special ACTIVATED",
         thumb: 'ship_0033_c.png',
-        description: 'Boosts ATK by 1.5x. Boosts EXP gained by 1.5x. ACTIVATED Special: Reduces the defense of all enemies by 25% for 1 turn (cooldown: 16 turns).',
+        description: 'Boosts ATK by 1.5x. Boosts EXP gained by 1.5x. ACTIVATED Special: Reduces the defense of all enemies by 25% for 1 turn (Cooldown: 16 turns).',
         atk: function(p) { return [ 1.2, 1.2, 1.3, 1.3, 1.4, 1.4, 1.4, 1.4, 1.4, 1.5 ][p.boatLevel - 1]; },
     },
     
@@ -519,7 +519,7 @@ window.ships = [
     { //39
         name: "Queen Mama Chanter",
         thumb: null,
-        description: 'Boosts chances of getting Matching orbs, Boosts HP of all units by 1.25x. If your Captain is a Powerhouse or Driven character, boosts ATK of [STR], [DEX] and [QCK] characters by 1.5x at the start of the chain, by 1.65x after 3 consecutive PERFECTs. (currently only boosts by 1.5x unconditionally, 1.65x boost is a WIP)',
+        description: 'Boosts chances of getting Matching orbs, Boosts HP of all units by 1.25x. If your Captain is a Powerhouse or Driven character, boosts ATK of [STR], [DEX] and [QCK] characters by 1.5x at the start of the chain, by 1.65x after 3 consecutive PERFECTs. Special: Changes bottom right orb into [RCV] (Cooldown: 6 turns). (currently only boosts by 1.5x unconditionally, 1.65x boost is a WIP)',
         damageSorter: function(d) { return CrunchUtils.typeSort(d, 1.65, [ "QCK", "STR", "DEX" ]); },
         atk: function(p) {
             //console.log(p);
