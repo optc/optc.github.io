@@ -519,12 +519,12 @@ window.ships = [
     { //39
         name: "Queen Mama Chanter",
         thumb: null,
-        description: 'Boosts chances of getting Matching orbs, Boosts HP of all units by 1.25x. If your Captain is a Powerhouse or Driven character, boosts ATK of [STR], [DEX] and [QCK] characters by 1.5x at the start of the chain, by 1.65x after 3 consecutive PERFECTs',
+        description: 'Boosts chances of getting Matching orbs, Boosts HP of all units by 1.25x. If your Captain is a Powerhouse or Driven character, boosts ATK of [STR], [DEX] and [QCK] characters by 1.5x at the start of the chain, by 1.65x after 3 consecutive PERFECTs. (currently only boosts by 1.5x unconditionally, 1.65x boost is a WIP)',
         damageSorter: function(d) { return CrunchUtils.typeSort(d, 1.65, [ "QCK", "STR", "DEX" ]); },
         atk: function(p) {
             //console.log(p);
             //return (p.captain.class.has("Powerhouse") || p.captain.class.has("Driven")) ? !(p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? 1 : p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? 1.65 : 1.5 : 1;
-            return 1;
+            return 1.5;
         },
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
         hp: function(p) {
