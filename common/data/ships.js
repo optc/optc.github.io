@@ -207,7 +207,7 @@ window.ships = [
     { // 16
         name: 'Red Force',
         thumb: 'ship_0017_c1.png',
-        description: 'Boosts ATK of Cerebral characters by 1.5x and their HP by 1.35x, Increased Orb Rate for Cerebral characters.',
+        description: 'Boosts ATK of Cerebral characters by 1.5x and their HP by 1.35x, Boosts chances of getting Matching orbs for Cerebral characters.',
         atk: function(p) {
             return  !p.unit.class.has('Cerebral') ? 1 : [ 1.0, 1.2, 1.2, 1.2, 1.25, 1.3, 1.4, 1.4, 1.4, 1.5 ][p.boatLevel - 1];
         },
@@ -438,7 +438,7 @@ window.ships = [
     
     
     { //33
-        name: "Revolutionary Black Crow",
+        name: "Blackbirds",
         thumb: 'ship_0035_c.png',
         description: 'Boosts HP by 1.2x and reduces special cooldown of all characters by 1 at the start of the adventure. Boosts ATK of [STR], [DEX] and [QCK] characters by 1.55x if you have a [STR], [DEX] and [QCK] character on your crew.',
         atk: function(p) { 
@@ -511,6 +511,24 @@ window.ships = [
         },
         hp: function(p) {
             return [ 1, 1, 1, 1, 1, 1, 1, 1.1, 1.2, 1.3 ][p.boatLevel - 1];
+        },
+    },
+    
+    
+    
+    { //39
+        name: "Queen Mama Chanter",
+        thumb: null,
+        description: 'Boosts chances of getting Matching orbs, Boosts HP of all units by 1.25x. If your Captain is a Powerhouse or Driven character, boosts ATK of [STR], [DEX] and [QCK] characters by 1.5x at the start of the chain, by 1.65x after 3 consecutive PERFECTs',
+        damageSorter: function(d) { return CrunchUtils.typeSort(d, 1.65, [ "QCK", "STR", "DEX" ]); },
+        atk: function(p) {
+            //console.log(p);
+            //return (p.captain.class.has("Powerhouse") || p.captain.class.has("Driven")) ? !(p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? 1 : p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? 1.65 : 1.5 : 1;
+            return 1;
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
+        hp: function(p) {
+            return [ 1, 1, 1, 1, 1, 1, 1, 1.1, 1.2, 1.35 ][p.boatLevel - 1];
         },
     },
 
