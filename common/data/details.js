@@ -28884,7 +28884,7 @@ window.details = {
         specialNotes: "#{ignoreBarrier}<br>#{colorAffinity : 2}",
         sailor: {
             "base": "If this character has a [QCK] orb and you hit a GOOD or GREAT with him, keep his [QCK] orb for the next turn",
-            "level1": "Boosts ATK, HP and RCV of Slasher and Driven characters by 50",
+            "level1": "Boosts base ATK, HP and RCV of Slasher and Driven characters by 50",
         },
         limit: [
             { "description": "Boosts base HP by 10" },
