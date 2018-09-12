@@ -127,15 +127,15 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if (n > 5 || x.unit === null) return;
             // hp
             var hp = getStatOfUnit(x,'hp');
-            hp += getShipBonus('hp',true,x.unit,n);
+            hp += getShipBonus('hp',true,x.unit,n,team[1].unit,n);
             hp = applyStaticEffectsToHP(n,hp);
             hp *= getEffectBonus('hp',x.unit);
-            hp *= getShipBonus('hp',false,x.unit,n);
+            hp *= getShipBonus('hp',false,x.unit,n,team[1].unit,n);
             hpMax += Math.floor(applyCaptainEffectsToHP(n,hp));
             // rcv
             var rcv = getStatOfUnit(x,'rcv');
-            rcv += getShipBonus('rcv',true,x.unit,n);
-            rcv *= getShipBonus('rcv',false,x.unit,n);
+            rcv += getShipBonus('rcv',true,x.unit,n,team[1].unit,n);
+            rcv *= getShipBonus('rcv',false,x.unit,n,team[1].unit,n);
             rcv *= getEffectBonus('rcv',x.unit);
             rcvTotal += Math.floor(applyCaptainEffectsAndSpecialsToRCV(n,rcv));
             
@@ -220,7 +220,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             var captain = $scope.tdata.team[1];
             var orb = $scope.tdata.team[n].orb;
             var atk = getStatOfUnit(x,'atk'); // basic attack (scales with level);
-            var ship = getShipBonus('atk',false,x.unit,n), againstType = type;
+            var ship = getShipBonus('atk',false,x.unit,n,team[1].unit,n), againstType = type;//Same problem as above, so yeah
             var multipliers = [ ];
             if (orb == 'g') orb = 1.5;
             if (orb == 0.5 && x.unit.type == 'DEX') orb = (window.specials[1221].turnedOn || window.specials[1222].turnedOn || window.specials[2235].turnedOn || window.specials[2236].turnedOn) ? 2 : 0.5;
@@ -282,7 +282,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 ((window.specials[2128].turnedOn) && (x.unit.class.has("Slasher") || x.unit.class.has("Striker"))) ? 2 : 1;
             if (orb == 'rainbow') orb = 2;
             if (orb == 'str') orb = 1;
-            atk += getShipBonus('atk',true,x.unit,n);
+            atk += getShipBonus('atk',true,x.unit,n,team[1].unit,n);//This needs to be changed so that the second n is the position, but the position doesn't exist yet
             multipliers.push([ orb, 'orb' ]); // orb multiplier (fixed)
             multipliers.push([ getTypeMultiplierOfUnit(x.unit.type,type, x), 'type' ]); // type multiplier
             multipliers.push([ getEffectBonus('atk',x.unit), 'map effect' ]); // effect bonus (fixed)
@@ -475,14 +475,14 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         return defreduced;
     };
 
-    var getShipBonus = function(type,static,unit,slot) {
+    var getShipBonus = function(type,static,unit,slot,captain,chainPosition) {
         var result = (static ? 0 : 1);
         for (var key in shipBonus.bonus) {
             if (key.indexOf(type) !== 0) continue;
             var isStatic = (key.indexOf('Static') !== -1);
             if (isStatic != static) continue;
-            if (static) result += shipBonus.bonus[key]({ boatLevel: shipBonus.level, unit: unit, slot: slot, classCount: classCounter(), colorCount: colorCounter() });
-            else result *= shipBonus.bonus[key]({ boatLevel: shipBonus.level, unit: unit, slot: slot, classCount: classCounter(), colorCount: colorCounter()  });
+            if (static) result += shipBonus.bonus[key]({ boatLevel: shipBonus.level, unit: unit, slot: slot, classCount: classCounter(), colorCount: colorCounter(), captain : captain, hitModifiers: hitModifiers, chainPosition: chainPosition });
+            else result *= shipBonus.bonus[key]({ boatLevel: shipBonus.level, unit: unit, slot: slot, classCount: classCounter(), colorCount: colorCounter(), captain : captain, hitModifiers: hitModifiers, chainPosition: chainPosition });
         }
         return result;
     };
