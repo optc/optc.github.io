@@ -32118,11 +32118,11 @@ window.details = {
             {
                 "Name": "Critical Hit",
                 "description": [
-                    "Level 1: If you hit a PERFECT with this character, there is a 4% chance to deal 40% of this character's attack in extra damage",
-                    "Level 2: If you hit a PERFECT with this character, there is a 5% chance to deal 50% of this character's attack in extra damage",
-                    "Level 3: If you hit a PERFECT with this character, there is a 6% chance to deal 70% of this character's attack in extra damage",
-                    "Level 4: If you hit a PERFECT with this character, there is a 7% chance to deal 80% of this character's attack in extra damage",
-                    "Level 5: If you hit a PERFECT with this character, there is a 10% chance to deal 90% of this character's attack in extra damage"
+                    "Level 1: If you hit a PERFECT with this character, there is a 40% chance to deal 4% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a 70% chance to deal 6% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a 80% chance to deal 7% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a 90% chance to deal 10% of this character's attack in extra damage"
                 ]
             },
         ],
