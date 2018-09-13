@@ -245,27 +245,27 @@ window.CrunchUtils.getOrbMultiplier = function(orb, type, uclass, baseMultiplier
     }
     for(temp = 0; temp < 2; temp++){
         if(captains[temp] != null){
-            if([1610, 1609, 1531, 1532, 2232, 2233, 2234].includes(captains[temp].number)){
+            if([1610, 1609, 1531, 1532, 2232, 2233, 2234].includes(captains[temp].number + 1)){
                 if (orb == 'meat'){
                     return boostedMultiplier;
                 }
             }
-            if([2012, 2013].includes(captains[temp].number) && uclass.has("Free Spirit")){
+            if([2012, 2013].includes(captains[temp].number + 1) && uclass.has("Free Spirit")){
                 if (orb == 'meat'){
                     return boostedMultiplier;
                 }
             }
-            if([2022, 2023].includes(captains[temp].number) && type == 'INT'){
+            if([2022, 2023].includes(captains[temp].number + 1) && type == 'INT'){
                 if (orb == 'str'){
                     return boostedMultiplier;
                 }
             }
-            if([2137].includes(captains[temp].number)){
-                if (orb == 'str'){
+            if([2137].includes(captains[temp].number + 1)){
+                if (orb == 'str' || (type == 'DEX' && orb == 0.5)){
                     return boostedMultiplier;
                 }
             }
-            if([5026, 5027].includes(captains[temp].number) && type == 'DEX'){
+            if([5026, 5027].includes(captains[temp].number + 1) && type == 'DEX'){
                 if (orb == 0.5){
                     return boostedMultiplier;
                 }
