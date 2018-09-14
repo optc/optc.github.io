@@ -5844,6 +5844,12 @@ window.specials = {
             });
         },
     },
+    2260: {
+        staticMult: function(p) { return 60; }
+    },
+    2261: {
+        staticMult: function(p) { return 60; }
+    },
     2502: {
         atk: function(p) { return 1.75; },
         type: "type",
