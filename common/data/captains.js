@@ -7691,7 +7691,7 @@ window.captains = {
     },
     2232: {//Enel
         hp: function(p) { return 0.8 },
-        atk: function(p) { return Math.max(2.0, 2.0 + 0.000175 * p.healCounter); },//Change this
+        atk: function(p) { return Math.max(2.0, 2.0 + 0.000175 * p.healCounter); },
     },
     2233: {
         hp: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? 1.2 : 1; },
