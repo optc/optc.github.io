@@ -7780,7 +7780,7 @@ window.captains = {
         hp: function(p){ return 1.5; },
     },
     2252: {
-        atk: function(p){ return p.unit.class.has("Free Spirit") ? 1 : 1; },//Change This
+        atk: function(p){ return p.unit.class.has("Free Spirit") ? 2 : 1; },
     },
     2253: {
         atk: function(p){
@@ -7798,6 +7798,20 @@ window.captains = {
     },
     2255: {
         atk: function(p){ return p.unit.type == "PSY" ? 1.5 : 1; },
+    },
+    2256: {
+        atk: function(p){ return p.unit.class.has("Slasher") ? 1.75 : 1; },
+        hp: function(p){ return p.unit.class.has("Slasher") ? 1.75 : 1; },
+    },
+    2257: {
+        atk: function(p){ return p.unit.class.has("Free Spirit") ? 1.75 : 1; },
+        hp: function(p){ return p.unit.class.has("Free Spirit") ? 1.75 : 1; },
+    },
+    2258: {
+        atk: function(p){ return p.unit.type == "STR" ? 1.75 : 1; },
+    },
+    2259: {
+        atk: function(p){ return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 2 : 1; },
     },
     2500: {
         atk: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Cerebral")) ? p.percHP <= 50.0 ? 2.5 : 1.5 : 1; }
