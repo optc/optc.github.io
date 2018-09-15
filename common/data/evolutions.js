@@ -3647,6 +3647,7 @@ window.evolutions = {
     2258: {
         evolution: 2259,
         evolvers: [  ]
+        //evolvers: [ 'skullHiguma' ]
     },
     2260: {
         evolution: 2261,

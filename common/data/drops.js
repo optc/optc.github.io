@@ -2038,8 +2038,9 @@ window.drops = {
         },
         
         {
-            name: 'Anchoring! Red Hair Pirates!',
+            name: 'Red Hair Pirates at the Harbor!',
             thumb: 2044,
+            global: true,
             nakama: 2204400,
             gamewith: 98267,
             'All Difficulties': [ 2044, 2045, 2046, -1869, -1406, -1824, -1875, -1904, -2044, -1225 ]
@@ -2616,6 +2617,7 @@ window.drops = {
         {
             name: 'Clash!? Luffy',
             thumb: 2033,
+            global: true,
             showManual: true,
             nakama: 4203300,
             gamewith: 97354,
@@ -2747,7 +2749,7 @@ window.drops = {
         },
 
         {
-            name: 'Fire Fist Sabo',
+            name: 'Sabo',
             thumb: 1972,
             global: true,
 			nakama: 8197200,
@@ -2767,6 +2769,7 @@ window.drops = {
         {
             name: 'Borsalino',
             thumb: 2064,
+            global: true,
             nakama: 8206400,
             gamewith: 101870,
             'Raging Sea': [ 2063 ]
@@ -3018,6 +3021,7 @@ window.drops = {
         {
             name: 'Battle Blitz! Akainu vs Aokiji',
             thumb: 2023,
+            global: true,
             nakama: 6202300,
             gamewith: null,
             condition: 'Chance of dropping the Silver Almighty Manual, Traning Potions, Guilding Fragments, Guilding Crystals and Guilding Jewels.',
@@ -3175,6 +3179,14 @@ window.drops = {
             gamewith: 117538,
             showManual: true,
             'All Difficulties': [ /*9020*/, -545, -602, -1896, -1929 ],
+        },
+        
+        {
+            name: 'Higuma Skull Island',
+            thumb: 2259,
+            nakama: null,
+            gamewith: 119604,
+            'All Difficulties': [ /*9021*/ ],
         },
         
         {
