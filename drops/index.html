@@ -16,6 +16,8 @@
         <link rel="stylesheet" type="text/css" href="../common/libs/css/animate.css" />
         <link rel="stylesheet" type="text/css" href="../common/libs/css/bootstrap.min.css" />
         <link rel="stylesheet" type="text/css" href="../common/libs/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/v4-shims.css">
         <link rel="stylesheet" type="text/css" href="../common/libs/css/ngDialog.min.css" />
         <link rel="stylesheet" type="text/css" href="../common/libs/css/ngDialog-theme-default.min.css" />
 
@@ -63,6 +65,10 @@
                     <span>{{island.name}}</span>
                     <i class="fa fa-globe" ng-show="island.global" title="Available On Global"></i>
                     <i class="fa fa-star" ng-show="island.challenge" title="Challenge Available"></i>
+                    <!-- Flag next to the FN/Raid name if its permanent on either/both. Messes up the character view making it like its trying to get a tag or something
+                    <i class="far fa-flag" ng-show="island.permglobal" title="Permanent on Global"></i>
+                    <i class="fas fa-flag" ng-show="island.permjapan" title="Permanent on Japan"></i>
+                    <i class="fas fa-flag-checkered" ng-show="island.permboth" title="Permanent on Japan and Global"></i>-->
                     <bonus-list ng-if="type == 'Story Island'" y="$index"></bonus-list>
                 </h3>
             </div>
