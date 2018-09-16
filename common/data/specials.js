@@ -5772,7 +5772,7 @@ window.specials = {
             var n = (window.specials[2248].multiplier == 1 ? 1 : 0);
             window.specials[2248].multiplier = [1, 2][n];
             p.scope.notify({
-                text: 'Using the ' + ['4 STR and DEX orbs', '4 PSY and INT orbs'][n] + 'special. To switch to the ' + ['4 PSY and INT orbs', '4 STR and DEX orbs'][n] + ' special, disable and re-enable this special',
+                text: 'Using the ' + ['4 STR and DEX orbs', '4 PSY and INT orbs'][n] + ' special. To switch to the ' + ['4 PSY and INT orbs', '4 STR and DEX orbs'][n] + ' special, disable and re-enable this special',
                 name: '2248warning'
             });
         }
@@ -5785,7 +5785,7 @@ window.specials = {
             var n = (window.specials[2249].multiplier == 1 ? 1 : 0);
             window.specials[2249].multiplier = [1, 2][n];
             p.scope.notify({
-                text: 'Using the ' + ['4 STR and DEX orbs', '4 PSY and INT orbs'][n] + 'special. To switch to the ' + ['4 PSY and INT orbs', '4 STR and DEX orbs'][n] + ' special, disable and re-enable this special',
+                text: 'Using the ' + ['4 STR and DEX orbs', '4 PSY and INT orbs'][n] + ' special. To switch to the ' + ['4 PSY and INT orbs', '4 STR and DEX orbs'][n] + ' special, disable and re-enable this special',
                 name: '2249warning'
             });
         }

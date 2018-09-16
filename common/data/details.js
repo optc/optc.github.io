@@ -27057,12 +27057,12 @@ window.details = {
     },
     1996: {//FN Vista
         captain: "Boosts ATK of Slasher characters by 1.75x",
-        special: "Deals 15x character's ATK in [STR] damage to all enemies, randomizes own non-matching orb, including [BLOCK] orbs, and delays all enemies for 1 turn",
+        special: "Deals 15x character's ATK in [STR] damage to all enemies, randomizes all non-matching orbs, including [BLOCK] orbs, and delays all enemies for 1 turn",
         specialName: "Fast Revolving Strike",
     },
     1997: {//FN Vista
         captain: "Reduces cooldown of Slasher specials by 1 turn at the start of the fight, boosts ATK of Slasher characters by 2.475x after scoring 3 Greats in a row, by 2.25x otherwise.",
-        special: "Deals 15x character's ATK in [STR] damage to all enemies, randomizes own non-matching orb, including [BLOCK] orbs, and delays all enemies for 1 turn",
+        special: "Deals 15x character's ATK in [STR] damage to all enemies, randomizes all non-matching orbs, including [BLOCK] orbs, and delays all enemies for 1 turn",
         specialName: "Fast Revolving Strike",
     },
     1998: {//Sanji
@@ -27977,14 +27977,14 @@ window.details = {
     },
     2042: {//Kizaru
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of Free Spirit and Shooter characters by 1.75x",
-        special: "If your crew has 2 or more characters of the same Type, reduces Special Cooldown of characters of each Type by 1 turn and changes adjacent orbs into Matching Orbs",
+        special: "Changes adjacent orbs into Matching Orbs. If your crew has 2 or more characters of the same Type, reduces that type's Special Cooldown by 1 turn.",
         specialNotes: "Cooldown Reduction works for any Type that you have 2 or more characters of on your crew",
         sailor: "Boosts base ATK, HP and RCV of all characters by 20",
         specialName: "The Afterglow of a Fight",
     },
     2043: {//Kizaru
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of Free Spirit and Shooter characters by 2.25x and their HP by 1.2x",
-        special: "If your crew has 2 or more characters of the same Type, reduces Special Cooldown of characters of each Type by 1 turn and changes adjacent orbs into Matching Orbs",
+        special: "Changes adjacent orbs into Matching Orbs. If your crew has 2 or more characters of the same Type, reduces that type's Special Cooldown by 1 turn.",
         specialNotes: "Cooldown Reduction works for any Type that you have 2 or more characters of on your crew",
         sailor: "Boosts base ATK, HP and RCV of all characters by 20",
         specialName: "The Afterglow of a Fight",
