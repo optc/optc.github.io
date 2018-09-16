@@ -32699,12 +32699,12 @@ window.details = {
     },
     2258: {//Higuma
         captain: "Boosts ATK of [STR] characters by 1.75x",
-        special: "Deals 500 fixed damage to one enemy, reduces Despair duration by 3 turns and reduces enemies' Resilience Buff duration by 3 turns.",
+        special: "Deals 800 fixed damage to one enemy, reduces Despair duration by 3 turns and reduces enemies' Resilience Buff duration by 3 turns.",
         specialName: "Higuma Special",
     },
     2259: {//Higuma
         captain: "Boosts ATK of [STR], [DEX] and [QCK] characters by 2x and recovers 800 HP at end of each turn",
-        special: "Deals 500 fixed damage to all enemies that will ignore damage negating abilities and barriers, reduces Despair duration by 5 turns and reduces enemies' Resilience and Enrage Buffs duration by 5 turns.",
+        special: "Deals 800 fixed damage to all enemies that will ignore damage negating abilities and barriers, reduces Despair duration by 5 turns and reduces enemies' Resilience and Enrage Buffs duration by 5 turns.",
         specialName: "Baptism of Evil",
     },
     2260: {//Shanks
