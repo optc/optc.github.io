@@ -32700,7 +32700,7 @@ window.details = {
     2258: {//Higuma
         captain: "Boosts ATK of [STR] characters by 1.75x",
         special: "Deals 800 fixed damage to one enemy, reduces Despair duration by 3 turns and reduces enemies' Resilience Buff duration by 3 turns.",
-        specialName: "Higuma Special",
+        specialName: "Scoundrel's Attack",
     },
     2259: {//Higuma
         captain: "Boosts ATK of [STR], [DEX] and [QCK] characters by 2x and recovers 800 HP at end of each turn",
