@@ -3357,6 +3357,14 @@ window.drops = {
             gamewith: 107299,
             completion: 'Ship: Nostra Castello',
         },
+        
+        {
+            name: 'Forest of Training: Mother',
+            thumb: 1016,
+            nakama: null,
+            gamewith: 118924,
+            completion: 'Ship: Queen Mama Chanter',
+        },
 
    ]
 
