@@ -2040,7 +2040,7 @@ window.units = [
     [ "\"Empress\" Boa Hancock, Flower Princess", "QCK", [ "Free Spirit", "Fighter" ], 5, 30, 4, 5, 99, 4000000, 928, 442, 148, 2134, 1248, 396, 1 ],
     [ "Edward Newgate, Remembering the Days of the Great Pirate Era", "STR", [ "Fighter", "Powerhouse" ], 4, 15, 4, 3, 50, 392109, 202, 102, 22, 1212, 523, 108, 1 ],
     [ "\"Whitebeard\" Edward Newgate, Remembering the Days of the Great Pirate Era", "STR", [ "Fighter", "Powerhouse" ], 5, 30, 4, 5, 99, 4000000, 1120, 512, 92, 2728, 1362, 254, 1 ],
-    [ "Kizaru, A Peaceful Moment with the Admirals", "INT", [ "Shooter", "Free Spirit" ], 4, 12, 5, 2, 70, 1066998, 252, 88, 36, 1169, 538, 128, 1 ],
+    [ "Kizaru, A Peaceful Moment with the Admirals", "INT", [ "Shooter", "Free Spirit" ], 4, 12, 5, 2, 50, 392109, 252, 88, 36, 1169, 538, 128, 1 ],
     [ "Borsalino, A Peaceful Moment with the Admirals", "INT", [ "Shooter", "Free Spirit" ], 5, 20, 4, 3, 99, 4000000, 1024, 451, 98, 2212, 1212, 241, 1 ],
     [ "Ben Beckman, Harbor Village Pirates", "PSY", [ "Cerebral", "Striker" ], 4, 20, 5, 4, 99, 1000000, 612, 321, 75, 1980, 1107, 251, 1 ],
     [ "Lucky Roux, Harbor Village Pirates", "DEX", [ "Shooter", "Powerhouse" ], 4, 20, 5, 4, 99, 1000000, 654, 334, 23, 2018, 1241, 150, 1 ],
