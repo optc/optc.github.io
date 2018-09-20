@@ -5850,11 +5850,11 @@ window.specials = {
     2261: {
         staticMult: function(p) { return 60; }
     },
-    2502: {
+    2262: {
         atk: function(p) { return 1.75; },
         type: "type",
     },
-    2503: {
+    2263: {
         atk: function(p) { return 1.75; },
         type: "type",
     },

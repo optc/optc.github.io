@@ -45,7 +45,7 @@ window.onload = function() {
     
     //Add new Units with Pics here so they show up in the Updates
     //7 Units are about the Max you can add, otherwise you would need to implement another tr for them
-    var newUnits = [ 2244, 2242, 2240, 2238, 2236, 2234, 2232 ];
+    var newUnits = [ 2261, 2259, 2257, 2256, 2254, 2251, 2249 ];
 
     for (var i = 0, len = newUnits.length; i < len; i++) {
         var unit = document.createElement("a");

@@ -2254,4 +2254,12 @@ window.families = [
     "Pound",
     "King Baum",
     "Homies",
+    "Dracule Mihawk",
+    "Portgas D. Ace",
+    "Higuma",
+    "Higuma",
+    "Shanks",
+    "Shanks",
+    "Donquixote Doflamingo",
+    "Donquixote Doflamingo",
 ];
