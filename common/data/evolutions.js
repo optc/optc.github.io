@@ -3601,8 +3601,7 @@ window.evolutions = {
     },
     1610: {
         evolution: 2232,
-        evolvers: [  ]
-        //evolvers: [ 'skullEneru', 'skullEneru', 'skullEneru', 'skullEneru', 'skullEneru' ]
+        evolvers: [ 'skullEnel', 'skullEnel', 'skullEnel', 'skullEnel', 'skullEnel' ]
     },
     2233: {
         evolution: 2234,
@@ -3646,8 +3645,7 @@ window.evolutions = {
     },
     2258: {
         evolution: 2259,
-        evolvers: [  ]
-        //evolvers: [ 'skullHiguma' ]
+        evolvers: [ 'skullHiguma', 'skullHiguma', 'skullHiguma', 'skullHiguma', 'skullHiguma' ]
     },
     2260: {
         evolution: 2261,
