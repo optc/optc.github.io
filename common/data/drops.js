@@ -2656,13 +2656,13 @@ window.drops = {
         
         {
             name: 'Clash!! Heavenly Demon Doflamingo',
-            thumb: 2501,
+            thumb: 2263,
             global: true,
             nakama: 4220100,
             gamewith: null,
-            Ultimate: [ 2500 ],
-            Master: [ 2500 ],
-            Expert: [ 2500 ]
+            Ultimate: [ 2262 ],
+            Master: [ 2262 ],
+            Expert: [ 2262 ]
         },
 
     ],

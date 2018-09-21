@@ -33256,15 +33256,76 @@ window.details = {
             },
         ]
     },
-    2500: {//Doflamingo Raid v2
+    2262: {//Doflamingo Raid v2
         captain: "Boosts ATK of Driven and Cerebral characters by 2.5x when HP is 50% or below, 1.5x otherwise",
         special: "Randomizes all non-matching orbs, including [BLOCK] slots and locks all orbs for 1 turn. If your Captain is a Cerebral or Driven character, increases duration of any Class/Type boosting buffs and Orb Amplification buffs by 2 turns",
         specialName: "Athlete",
     },
-    2501: {//Doflamingo Raid v2
+    2263: {//Doflamingo Raid v2
         captain: "Boosts ATK of Driven and Cerebral characters by 3x when HP is 50% or below, 1.5x otherwise",
         special: "Randomizes all non-matching orbs, including [BLOCK] slots and locks all orbs for 1 turn. If your Captain is a Cerebral or Driven character, increases duration of any Class/Type boosting buffs and Orb Amplification buffs by 2 turns",
         specialName: "Athlete",
+    },
+    2286: {//Judge
+        captain: "Not Translated",
+        special: "Reduces any damage received above 5,000 HP by ?% for 1 turn. If your Captain is a Powerhouse or Striker character, changes [G], [BLOCK] and [EMPTY] orbs into Matching orbs and boosts ATK of [STR] characters by 1.75x for 1 turn. If \"Judge Special\" is used again in the same turn the special is activated in, boosts ATK of [STR] characters by 2.25x for 1 turn.",
+        specialName: "Judge Special",
+        sailor: {
+            "base": "None",
+            "level1": "Boosts base ATK of STR characters by 50",
+            "level2": "If this character has a [STR] orb and you hit a PERFECT with him, keep his [STR] orb for the next turn",
+        },
+        potential: [
+            {
+                "Name": "Double Special Activation",
+                "description": [
+                    "Level 1: Once per an adventure, reduce own Special Cooldown by ? turn after the first time this special is used",
+                    "Level 2: Once per an adventure, reduce own Special Cooldown by ? turns after the first time this special is used",
+                    "Level 3: Once per an adventure, reduce own Special Cooldown by ? turns after the first time this special is used",
+                    "Level 4: Once per an adventure, reduce own Special Cooldown by ? turns after the first time this special is used",
+                    "Level 5: Once per an adventure, reduce own Special Cooldown by ? turns after the first time this special is used"
+                ]
+            },
+            {
+                "Name": "Enrage",
+                "description": [
+                    "Level 1: Boosts base ATK by ?",
+                    "Level 2: Boosts base ATK by ?",
+                    "Level 3: Boosts base ATK by ?",
+                    "Level 4: Boosts base ATK by ?",
+                    "Level 5: Boosts base ATK by ?"
+                ]
+            },
+        ],
+        potentialNotes: "#{enrage}"
+    },
+    2287: {//Judge
+        captain: "Boosts ATK of [STR] characters by 3.5x and their HP by 1.2x and makes [QCK] orbs \"beneficial\" to all characters",
+        special: "Reduces any damage received above 5,000 HP by ?% for 1 turn. If your Captain is a Powerhouse or Striker character, changes [G], [BLOCK] and [EMPTY] orbs into Matching orbs and boosts ATK of [STR] characters by 1.75x for 1 turn. If \"Judge Special\" is used again in the same turn the special is activated in, boosts ATK of [STR] characters by 2.25x for 1 turn.",
+        specialName: "Judge Special",
+        potential: [
+            {
+                "Name": "Double Special Activation",
+                "description": [
+                    "Level 1: Once per an adventure, reduce own Special Cooldown by ? turn after the first time this special is used",
+                    "Level 2: Once per an adventure, reduce own Special Cooldown by ? turns after the first time this special is used",
+                    "Level 3: Once per an adventure, reduce own Special Cooldown by ? turns after the first time this special is used",
+                    "Level 4: Once per an adventure, reduce own Special Cooldown by ? turns after the first time this special is used",
+                    "Level 5: Once per an adventure, reduce own Special Cooldown by ? turns after the first time this special is used"
+                ]
+            },
+            {
+                "Name": "Enrage",
+                "description": [
+                    "Level 1: Boosts base ATK by ?",
+                    "Level 2: Boosts base ATK by ?",
+                    "Level 3: Boosts base ATK by ?",
+                    "Level 4: Boosts base ATK by ?",
+                    "Level 5: Boosts base ATK by ?"
+                ]
+            },
+        ],
+        potentialNotes: "#{enrage}"
     },
     2502: {//Kung Fu Luffy
         captain: "Boosts ATK of all characters by 3.5x after the 2nd PERFECTs in a row, by 4x after the 5th PERFECTs in a row and boosts HP of all characters by 1.5x",
