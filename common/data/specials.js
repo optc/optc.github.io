@@ -5858,18 +5858,6 @@ window.specials = {
         atk: function(p) { return 1.75; },
         type: "type",
     },
-    2287: {
-        atk: function(p) { return p.unit.type == "STR" ? 1 : window.specials[1933].multiplier; },
-        type: "type",
-        onActivation: function(p) {
-            var n = (window.specials[2287].multiplier == 1.75 ? 1 : window.specials[2287].multiplier == 1.75 ? 2.25 : 0);
-            window.specials[2287].multiplier = [1.75, 2.25][n];
-            p.scope.notify({
-                text: 'Using the ' + [1.5, 1.75, 2][n] + 'x ATK multiplier. To switch to the ' + [1.75, 2, 1.5][n] + 'x multiplier, disable and re-enable this special',
-                name: '1492warning'
-            });
-        }
-    },
     5000: {
         atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 1.5 : 1; },
         type: "type",
