@@ -33266,6 +33266,46 @@ window.details = {
         special: "Randomizes all non-matching orbs, including [BLOCK] slots and locks all orbs for 1 turn. If your Captain is a Cerebral or Driven character, increases duration of any Class/Type boosting buffs and Orb Amplification buffs by 2 turns",
         specialName: "Athlete",
     },
+    2286: {//LRR Judge
+        captain: "Boosts ATK of [STR] characters by ?x and their HP by ?x, and makes [QCK] orbs \"beneficial\" to [STR] characters",
+        captainNotes: "#{beneficial}",
+        special: "Reduces any damage received above 5,000 HP by ??% for 1 turn,. If the captain is Powerhouse or Striker, changes [BLOCK], [G] and [BOMB] orbs into matching orbs. Boosts ATK of [STR] characters by 1.75x for 1 turn, if \"Cloning\" is used again in the same turn the special is activated in, boost ATK of [STR] characters by 2.25x instead."
+        specialName: "Cloning",
+        sailor: "Boosts ATK of [STR] characters by 50",
+    },
+    2287: {//LRR Judge
+        captain: "Boosts ATK of [STR] characters by 3.5x and their HP by 1.2x, and makes [QCK] orbs \"beneficial\" to [STR] characters",
+        captainNotes: "#{beneficial}",
+        special: "Reduces any damage received above 5,000 HP by ??% for 1 turn,. If the captain is Powerhouse or Striker, changes [BLOCK], [G] and [BOMB] orbs into matching orbs, boosts ATK of [STR] characters by 1.75x for 1 turn, if \"Cloning\" is used again in the same turn the special is activated in, boost ATK of [STR] characters by 2.25x instead."
+        specialName: "Cloning",
+        sailor: {
+            "base": "Boosts ATK of [STR] characters by 50",
+            "level1": "If this character has a [STR] orb and you hit a PERFECT with him, keep his [STR] orb for the next turn",
+        },
+        potential: [
+            {
+                "Name": "Double Special Activation",
+                "description": [
+                    "Level 1: Once per an adventure, reduce own Special Cooldown by 1 turn after the first time this special is used",
+                    "Level 2: Once per an adventure, reduce own Special Cooldown by 3 turns after the first time this special is used",
+                    "Level 3: Once per an adventure, reduce own Special Cooldown by 5 turns after the first time this special is used",
+                    "Level 4: Once per an adventure, reduce own Special Cooldown by 7 turns after the first time this special is used",
+                    "Level 5: Once per an adventure, sets your Special Gauge to MAX after the first time this special is used"
+                ]
+            },
+            {
+               "Name": "Enrage",
+                "description": [
+                    "Level 1: Boosts base ATK by 75",
+                    "Level 2: Boosts base ATK by 100",
+                    "Level 3: Boosts base ATK by 150",
+                    "Level 4: Boosts base ATK by 200",
+                    "Level 5: Boosts base ATK by 300"
+                ]
+            },
+        ]
+        potentialNotes: "#{enrage}"
+    },
     2502: {//Kung Fu Luffy
         captain: "Boosts ATK of all characters by 3.5x after the 2nd PERFECTs in a row, by 4x after the 5th PERFECTs in a row and boosts HP of all characters by 1.5x",
         special: "Deals 120x character's ATK in Typeless damage to all enemies, changes adjacent orbs into Matching Orbs, boosts ATK of all characters by 1.75x, reduces any damage received above 5,656 HP by 97% and makes PERFECTs easier to hit for 2 turns",

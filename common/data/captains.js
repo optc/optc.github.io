@@ -7825,6 +7825,9 @@ window.captains = {
     2263: {
         atk: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Cerebral")) ? p.percHP <= 50.0 ? 3 : 1.5 : 1; }
     },
+    2287: {
+        
+    },
     2502: {
         hitAtk: function(p) {
             return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 4 :

@@ -2156,6 +2156,8 @@ window.flags = {
     2259: { rr: 1, rro: 1, lrr: 1, tmlrr : 1 },
     2262: { global: 1 },
     2263: { global: 1 },
+    2286: { rr: 1, rro: 1, lrr: 1 },
+    2287: { rr: 1, rro: 1, lrr: 1 },
     2502: { rr: 1, rro: 1, global: 1 },
     2503: { rr: 1, rro: 1, global: 1 },
     2504: { global: 1 },

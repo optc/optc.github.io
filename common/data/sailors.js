@@ -545,6 +545,9 @@ window.sailors = {
     2193: {
         hpStatic: function(p) { return p.unit.class.has("Shooter") ? 75 : 0; },
     },
+    2287: {
+        atkStatic: function(p) { return p.unit.type == "STR" ? 50 : 0; },
+    },
     2502: {
         staticMult: function(p) { return 3; }
     },
