@@ -3186,7 +3186,7 @@ window.drops = {
             nakama: null,
             gamewith: 117538,
             showManual: true,
-            'All Difficulties': [ /*9020*/, -545, -602, -1896, -1929 ],
+            'All Difficulties': [ 9021, -545, -602, -1896, -1929 ],
         },
         
         {
@@ -3194,7 +3194,7 @@ window.drops = {
             thumb: 2259,
             nakama: null,
             gamewith: 119604,
-            'All Difficulties': [ /*9021*/ ],
+            'All Difficulties': [ 9022 ],
         },
         
         {

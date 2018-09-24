@@ -6863,7 +6863,7 @@ window.captains = {
     },
     2050: {
         atk: function(p) {
-            return (p.unit.class.has("Powerhouse") || p.unit.class.has("Fighter")) ? Math.max(1.0, 3.5 - 0.1 * p.turnCounter) : 1;
+            return (p.unit.class.has("Powerhouse") || p.unit.class.has("Fighter")) ? Math.max(1.0, 3.5 - 0.07 * p.turnCounter) : 1;
         }
     },
     2051: {
