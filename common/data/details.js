@@ -2766,7 +2766,50 @@ window.details = {
         specialName: "Prehistoric Power",
         specialNotes: "#{zombie}",
         captain: "Boosts ATK of [INT] characters by 3x if HP is below 30% at the start of the turn",
-        sailor: "Boosts base HP of Powerhouse characters by 100"
+        sailor: {
+            "base": "Boosts base HP of Powerhouse characters by 100",
+            "level1": "Makes [PSY] orbs \"beneficial\" for Powerhouse and Fighter characters",
+        },
+        sailorNotes: "#{beneficial}",
+        limit: [
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Acquire Potential 1: [PSY] Damage Reduction" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Reduce base Special Cooldown by 2 turns" },
+            { "description": "Boosts base ATK by 50" },
+            { "description": "Boosts base RCV by 30" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Boosts base HP by 60" },
+            { "description": "Acquire Sailor Ability 1: Makes [PSY] orbs \"beneficial\" for Powerhouse and Fighter characters" },
+            { "description": "Reduce base Special Cooldown by 5 turns" },
+            { "description": "Boosts base HP by 80" },
+            { "description": "Acquire Potential 2: Reduce No Healing duration" },
+        ],
+        potential: [
+            {
+                "Name": "[PSY] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [PSY] characters by 1%",
+                    "Level 2: Reduce damage taken from [PSY] characters by ?%",
+                    "Level 3: Reduce damage taken from [PSY] characters by ?%",
+                    "Level 4: Reduce damage taken from [PSY] characters by ?%",
+                    "Level 5: Reduce damage taken from [PSY] characters by ?%"
+                ]
+            },
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by 1 turn",
+                    "Level 2: Reduces No Healing duration by ? turn",
+                    "Level 3: Reduces No Healing duration by ? turn",
+                    "Level 4: Reduces No Healing duration by ? turns",
+                    "Level 5: Reduces No Healing duration by ? turns"
+                ]
+            },
+        ]
     },
     362: {
         special: "For 2 turns, boosts the amount healed by [RCV] orbs by 1.5x, then 2x, then 2.5x from the third crew member onward",
@@ -3735,7 +3778,78 @@ window.details = {
         specialName: "Zen Shockwave",
         specialNotes: "#{random : 30,000 : 150,000}",
         captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of characters with cost 20 or less or 54 cost exactly by 3x",
-        captainNotes: "His captain ability also affects his evolved forms, his base form will NOT receive the boost. All evolved and plus evolved Sengoku characters in the team are included in the bonus."
+        captainNotes: "His captain ability also affects his evolved forms, his base form will NOT receive the boost. All evolved and plus evolved Sengoku characters in the team are included in the bonus.",
+        sailor: {
+            "base": "None",
+            "level1": "Boosts base ATK and HP of characters that are 29 cost or lower by 100",
+            "level2": "Makes [INT] orbs \"beneficial\" for all characters",
+        },
+        sailorNotes: "#{beneficial}",
+        limit: [
+            { "description": "Boosts base ATK by 5" },
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Boosts base RCV by 5" },
+            { "description": "Acquire Potential 1: Slot Bind Self-reduction" },
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Boosts base HP by 10" },
+            { "description": "Boosts base HP by 20" },
+            { "description": "Boosts base ATK by 15" },
+            { "description": "Boosts base RCV by 15" },
+            { "description": "Boosts base HP by 20" },
+            { "description": "Boosts base HP by 20" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Acquire Potential 2: Critical Hit" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK and HP of characters that are 29 cost or lower by 100" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base RCV by 30" },
+            { "description": "Boosts base ATK by 50" },
+            { "description": "Boosts base RCV by 30" },
+            { "description": "Boosts base ATK by 60" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base HP by 60" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Acquire Sailor Ability 2: Makes [INT] orbs \"beneficial\" for all characters" },
+            { "description": "Boosts base HP by 70" },
+            { "description": "Boosts base HP by 110" },
+            { "description": "Acquire Potential 3: Enrage" },
+        ],
+        potential: [
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [
+                    "Level 1: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 5: Reduces Slot Bind duration by ? turns on this character"
+                ]
+            },
+            {
+                "Name": "Critical Hit",
+                "description": [
+                    "Level 1: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage"
+                ]
+            },
+            {
+                "Name": "Enrage",
+                "description": [
+                    "Level 1: Boosts base ATK by ?",
+                    "Level 2: Boosts base ATK by ?",
+                    "Level 3: Boosts base ATK by ?",
+                    "Level 4: Boosts base ATK by ?",
+                    "Level 5: Boosts base ATK by ?"
+                ]
+            },
+        ],
+        potentialNotes: "#{enrage}"
     },
     460: {
         special: "Recovers 33 HP after the end of each turn for 999 turns, delays all enemies for 1 turn",
@@ -5781,7 +5895,51 @@ window.details = {
     675: {
         special: "Removes Poison, reduces damage received by 50% for 2 turns, recovers 13x character's RCV in HP at the end of each turn for 2 turns",
         specialName: "Emporio Healing Hormone",
-        captain: "Boosts ATK of Free Spirit characters by 2.5x"
+        captain: "Boosts ATK of Free Spirit characters by 2.5x",
+        sailor: {
+            "base": "None",
+            "level1": "Reduces Blindness duration by 3 turns",
+            "level2": "When HP is below ?% at the start of the turn, boosts base RCV of all characters by 50",
+        },
+        limit: [
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Acquire Potential 1: [PSY] Damage Reduction" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Acquire Sailor Ability 1: Reduces Blindness duration by 3 turns" },
+            { "description": "Boosts base ATK by 40" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Acquire Sailor Ability 2: When HP is below ?% at the start of the turn, boosts base RCV of all characters by 50" },
+            { "description": "Boosts base RCV by 45" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Acquire Potential 2: Pinch Healing" },
+        ],
+        potential: [
+            {
+                "Name": "[PSY] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [PSY] characters by 1%",
+                    "Level 2: Reduce damage taken from [PSY] characters by ?%",
+                    "Level 3: Reduce damage taken from [PSY] characters by ?%",
+                    "Level 4: Reduce damage taken from [PSY] characters by ?%",
+                    "Level 5: Reduce damage taken from [PSY] characters by ?%"
+                ]
+            },
+            {
+                "Name": "Pinch Healing",
+                "description": [
+                    "Level 1: If HP is below 10% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
+                ]
+            },
+        ]
     },
     676: {
         special: "Reduces any damage received above 5,000 HP by 97% for 3 turns",
@@ -7713,7 +7871,51 @@ window.details = {
         captain: "Boosts ATK of Driven characters by 2x, reduces damage received up to 30% depending on the crew's current HP",
         specialName: "Pleading at the Risk of One's Life",
         special: "Changes adjacent orbs into [RCV] orbs; if the special is activated with more than 50% health remaining, protects from defeat for 1 turn",
-        specialNotes: "#{zombie}"
+        specialNotes: "#{zombie}",
+        sailor: {
+            "base": "None",
+            "level1": "Boosts base ATK, HP and RCV for this character by 50",
+            "level2": "Boosts amount healed from [RCV] orbs by 200 each",
+        },
+        limit: [
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Acquire Potential 1: [INT] Damage Reduction" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK, HP and RCV for this character by 50" },
+            { "description": "Boosts base HP by 70" },
+            { "description": "Boosts base RCV by 50" },
+            { "description": "Reduce base Special Cooldown by 3 turns" },
+            { "description": "Boosts base HP by 110" },
+            { "description": "Acquire Sailor Ability 2: Boosts amount healed from [RCV] orbs by 200 each" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Boosts base ATK by 50" },
+            { "description": "Acquire Potential 2: Reduce No Healing duration" },
+        ],
+        potential: [
+            {
+                "Name": "[INT] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [INT] characters by 1%",
+                    "Level 2: Reduce damage taken from [INT] characters by ?%",
+                    "Level 3: Reduce damage taken from [INT] characters by ?%",
+                    "Level 4: Reduce damage taken from [INT] characters by ?%",
+                    "Level 5: Reduce damage taken from [INT] characters by ?%"
+                ]
+            },
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by 1 turn",
+                    "Level 2: Reduces No Healing duration by ? turns",
+                    "Level 3: Reduces No Healing duration by ? turns",
+                    "Level 4: Reduces No Healing duration by ? turns",
+                    "Level 5: Reduces No Healing duration by ? turns"
+                ]
+            },
+        ]
     },
     861: {
         specialName: "Bewitching Lovely Iron Mace",
@@ -8629,7 +8831,51 @@ window.details = {
     926: {
         captain: "Boosts ATK of Powerhouse characters by 2.5x",
         specialName: "Let's go, Jailer Beasts!",
-        special: "Deals 15x ATK to 1 enemy in [QCK] damage, boosts ATK against enemies with reduced defense by 1.3x for 3 turns"
+        special: "Deals 15x ATK to 1 enemy in [QCK] damage, boosts ATK against enemies with reduced defense by 1.3x for 3 turns",
+        sailor: {
+            "base": "None",
+            "level1": "Boosts base ATK, HP and RCV for this character by 50",
+            "level2": "If your Captain is a Free Spirit or Striker character, completely resists Blindness",
+        },
+        limit: [
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Acquire Potential 1: Slot Bind Self-reduction" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK, HP and RCV for this character by 50" },
+            { "description": "Boosts base HP by 70" },
+            { "description": "Boosts base RCV by 50" },
+            { "description": "Reduce base Special Cooldown by 4 turns" },
+            { "description": "Boosts base HP by 110" },
+            { "description": "Acquire Sailor Ability 2: If your Captain is a Free Spirit or Striker character, completely resists Blindness" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Boosts base ATK by 50" },
+            { "description": "Acquire Potential 2: Pinch Healing" },
+        ],
+        potential: [
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [
+                    "Level 1: Reduces Slot Bind duration by 1 turn on this character",
+                    "Level 2: Reduces Slot Bind duration by ? turn on this character",
+                    "Level 3: Reduces Slot Bind duration by ? turn on this character",
+                    "Level 4: Reduces Slot Bind duration by ? turn on this character",
+                    "Level 5: Reduces Slot Bind duration by ? turn on this character"
+                ]
+            },
+            {
+                "Name": "Pinch Healing",
+                "description": [
+                    "Level 1: If HP is below 10% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
+                ]
+            },
+        ]
     },
     927: {
         captain: "Boosts ATK and HP of Driven characters by 1.5x",
@@ -14490,6 +14736,51 @@ window.details = {
         captain: "Boosts ATK of Driven characters by 2.5x if they have a matching orb, by 2x otherwise",
         special: "Changes [PSY], [INT], [RCV] and [TND] orbs into [G] orbs. Locks orbs for 1 turn. If during that turn every unit scores a PERFECT hit, changes [G] orbs into Matching Orbs",
         specialName: "Lower Back Pain Stance - The Eyes of Blight Impact",
+        sailor: {
+            "base": "None",
+            "level1": "Changes all orbs into [G] orbs at the start of the fight",
+            "level2": "Makes [STR], [QCK], [DEX], [PSY] and [INT] orbs \"beneficial\" for this character",
+        },
+        sailorNotes: "#{beneficial}",
+        limit: [
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base HP by 75" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Acquire Potential 1: [QCK] Damage Reduction" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Reduce base Special Cooldown by 2 turns" },
+            { "description": "Acquire Sailor Ability 1: Changes all orbs into [G] orbs at the start of the fight" },
+            { "description": "Reduce base Special Cooldown by 5 turns" },
+            { "description": "Boosts base RCV by 50" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Boosts base HP by 125" },
+            { "description": "Acquire Sailor Ability 2: Makes [STR], [QCK], [DEX], [PSY] and [INT] orbs \"beneficial\" for this character" },
+            { "description": "Boosts base ATK by 50" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Acquire Potential 2: Slot Bind Self-reduction" },
+        ],
+        potential: [
+            {
+                "Name": "[QCK] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [QCK] characters by 1%",
+                    "Level 2: Reduce damage taken from [QCK] characters by ?%",
+                    "Level 3: Reduce damage taken from [QCK] characters by ?%",
+                    "Level 4: Reduce damage taken from [QCK] characters by ?%",
+                    "Level 5: Reduce damage taken from [QCK] characters by ?%"
+                ]
+            },
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [
+                    "Level 1: Reduces Slot Bind duration by 1 turn on this character",
+                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 5: Reduces Slot Bind duration by ? turns on this character"
+                ]
+            },
+        ],
     },
     1293: {//Coliseum Sandersonia
         captain: "Boosts ATK of Fighter characters by 1.75x, deals 2 times the damage received in the previous turn in [PSY] damage to all enemies at the end of each turn",
@@ -14823,8 +15114,51 @@ window.details = {
             },
         ],
         specialNotes: "No Healing debuff completely stops healing abilities. This is the debuff used in Akainu raid<br>#{stages}",
-        sailor: "Reduces Blindness duration by 5 turns",
         specialName: "Echoing Cry of the Soul",
+        sailor: {
+            "base": "Reduces Blindness duration by 5 turns",
+            "level1": "Makes [PSY] orbs \"beneficial\" for Fighter characters",
+        },
+        sailorNotes: "#{beneficial}",
+        limit: [
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Acquire Potential 1: [INT] Damage Reduction" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Reduce base Special Cooldown by 2 turns" },
+            { "description": "Boosts base ATK by 40" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Acquire Sailor Ability 1: Makes [PSY] orbs \"beneficial\" for Fighter characters" },
+            { "description": "Boosts base RCV by 45" },
+            { "description": "Boosts base HP by 60" },
+            { "description": "Acquire Potential 2: Critical Hit" },
+        ],
+        potential: [
+            {
+                "Name": "[INT] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [INT] characters by 1%",
+                    "Level 2: Reduce damage taken from [INT] characters by ?%",
+                    "Level 3: Reduce damage taken from [INT] characters by ?%",
+                    "Level 4: Reduce damage taken from [INT] characters by ?%",
+                    "Level 5: Reduce damage taken from [INT] characters by ?%"
+                ]
+            },
+            {
+                "Name": "Critical Hit",
+                "description": [
+                    "Level 1: If you hit a PERFECT with this character, there is a 30% chance to deal 4% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage"
+                ]
+            },
+        ]
     },
     1317: {//Garp
         captain: "Boosts ATK of [STR] and [PSY] characters by 2x",
@@ -14837,8 +15171,50 @@ window.details = {
         captain: "Boosts ATK of [STR] and [PSY] characters by 2.5x",
         special: "Deals 30x character's ATK in [STR] fixed damage to all enemies that will ignore damage negating abilities and barriers. Delays all enemies for 1 turn. Reduces the defense of all enemies by 80% for 1 turn.",
         specialNotes: "#{ignoreBarrier}",
-        sailor: "Boosts base HP of all characters by 75",
         specialName: "Super Large Iron Ball",
+        sailor: {
+            "base": "Boosts base HP of all characters by 75",
+            "level1": "Boosts own base ATK by 150 if this character is the last in the chain to attack",
+        },
+        limit: [
+            { "description": "Boosts base RCV by 5" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base RCV by 15" },
+            { "description": "Acquire Potential 1: Reduce No Healing duration" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Reduce base Special Cooldown by 2 turns" },
+            { "description": "Boosts base ATK by 50" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Reduce base Special Cooldown by 4 turns" },
+            { "description": "Acquire Sailor Ability 1: Boosts own base ATK by 150 if this character is the last in the chain to attack" },
+            { "description": "Boosts base RCV by 30" },
+            { "description": "Boosts base HP by 120" },
+            { "description": "Acquire Potential 2: Pinch Healing" },
+        ],
+        potential: [
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by 1 turn",
+                    "Level 2: Reduces No Healing duration by ? turn",
+                    "Level 3: Reduces No Healing duration by ? turn",
+                    "Level 4: Reduces No Healing duration by ? turns",
+                    "Level 5: Reduces No Healing duration by ? turns"
+                ]
+            },
+            {
+                "Name": "Pinch Healing",
+                "description": [
+                    "Level 1: If HP is below 10% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
+                ]
+            },
+        ]
     },
     1319: {//Lady Tsuru
         captain: "Recovers 1x her RCV at the end of the turn each time you hit a Good. Recovers .1x her RCV at the end of the turn each time you hit a PERFECT",
@@ -16159,6 +16535,74 @@ window.details = {
         ],
         specialNotes: "#{stages}<br>#{beneficial}",
         specialName: "Gomu Gomu no Red Hawk",
+        sailor: {
+            "base": "None",
+            "level1": "Boosts base ATK, HP and RCV for this character by 75",
+        },
+        limit: [
+            { "description": "Boosts base ATK by 5" },
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Boosts base RCV by 5" },
+            { "description": "Acquire Potential 1: Slot Bind Self-reduction" },
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Boosts base HP by 10" },
+            { "description": "Boosts base HP by 20" },
+            { "description": "Boosts base ATK by 15" },
+            { "description": "Boosts base RCV by 15" },
+            { "description": "Boosts base HP by 20" },
+            { "description": "Boosts base HP by 20" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Acquire Potential 2: Pinch Healing" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base RCV by 25" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base RCV by 35" },
+            { "description": "Boosts base ATK by 50" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base ATK by 60" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base HP by 60" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK, HP and RCV for this character by 75" },
+            { "description": "Boosts base HP by 70" },
+            { "description": "Boosts base HP by 80" },
+            { "description": "Acquire Potential 3: Cooldown Reduction" },
+        ],
+        potential: [
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [
+                    "Level 1: Reduces Slot Bind duration by 1 turn on this character",
+                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 5: Reduces Slot Bind duration by ? turns on this character"
+                ]
+            },
+            {
+                "Name": "Pinch Healing",
+                "description": [
+                    "Level 1: If HP is below 10% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
+                ]
+            },
+            {
+                "Name": "Cooldown Reduction",
+                "description": [
+                    "Level 1: Reduce own Special Cooldown by 1 turn at the start of the fight",
+                    "Level 2: Reduce own Special Cooldown by ? turn at the start of the fight",
+                    "Level 3: Reduce own Special Cooldown by ? turn at the start of the fight",
+                    "Level 4: Reduce own Special Cooldown by ? turn at the start of the fight",
+                    "Level 5: Reduce own Special Cooldown by ? turn at the start of the fight"
+                ]
+            },
+        ]
     },
     1404: {//Timeskip Luffy
         captain: "Boosts ATK of Free Spirit characters by 2.5x and reduce damage received by 15%. If you use \"Gomu Gomu no Red Hawk\" THIS LUFFY boosts ATK of Free Spirit characters by 4x instead for 3 turns.",
@@ -18144,6 +18588,51 @@ window.details = {
         special: "Cuts the current HP of one enemy by 10%, makes [PSY] and [INT] orbs \"beneficial\" for 1 turn and amplifies the effect of orbs by 1.75x for 1 turn",
         specialNotes: "#{beneficial}",
         specialName: "Spring Hopper - Bullet",
+        sailor: {
+            "base": "None",
+            "level1": "Boosts base ATK, HP and RCV of Driven characters by 30",
+            "level2": "Makes [RCV] orbs \"beneficial\" for Driven characters",
+        },
+        sailorNotes: "#{beneficial}",
+        limit: [
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base HP by 75" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Acquire Potential 1: [STR] Damage Reduction" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK, HP and RCV of Driven characters by 30" },
+            { "description": "Reduce base Special Cooldown by 2 turns" },
+            { "description": "Boosts base RCV by 50" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Boosts base HP by 145" },
+            { "description": "Acquire Sailor Ability 2: Makes [RCV] orbs \"beneficial\" for Driven characters" },
+            { "description": "Boosts base ATK by 50" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Acquire Potential 2: Double Special Activation" },
+        ],
+        potential: [
+            {
+                "Name": "[STR] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [STR] characters by 1%",
+                    "Level 2: Reduce damage taken from [STR] characters by ?%",
+                    "Level 3: Reduce damage taken from [STR] characters by ?%",
+                    "Level 4: Reduce damage taken from [STR] characters by ?%",
+                    "Level 5: Reduce damage taken from [STR] characters by ?%"
+                ]
+            },
+            {
+                "Name": "Double Special Activation",
+                "description": [
+                    "Level 1: Once per an adventure, reduce own Special Cooldown by 1 turn after the first time this special is used",
+                    "Level 2: Once per an adventure, reduce own Special Cooldown by ? turns after the first time this special is used",
+                    "Level 3: Once per an adventure, reduce own Special Cooldown by ? turns after the first time this special is used",
+                    "Level 4: Once per an adventure, reduce own Special Cooldown by ? turns after the first time this special is used",
+                    "Level 4: Once per an adventure, reduce own Special Cooldown by ? turns after the first time this special is used"
+                ]
+            },
+        ]
     },
     1519: {//Dadan
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight. Boosts ATK of Slasher characters by 1.5x",
@@ -19562,8 +20051,75 @@ window.details = {
             },
         ],
         specialNotes: "#{stages}<br>#{beneficial}",
-        sailor: "Completely resists Paralysis on this character",
         specialName: "King Kong Gun",
+        sailor: {
+            "base": "Completely resists Paralysis on this character",
+            "level1": "Boosts base ATK, HP and RCV for this character by 75",
+        },
+        limit: [
+            { "description": "Boosts base ATK by 5" },
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Boosts base RCV by 5" },
+            { "description": "Acquire Potential 1: Slot Bind Self-reduction" },
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Boosts base HP by 10" },
+            { "description": "Boosts base HP by 20" },
+            { "description": "Boosts base ATK by 15" },
+            { "description": "Boosts base RCV by 15" },
+            { "description": "Boosts base HP by 20" },
+            { "description": "Boosts base HP by 20" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Acquire Potential 2: Pinch Healing" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base RCV by 25" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base RCV by 35" },
+            { "description": "Boosts base ATK by 50" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base ATK by 60" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base HP by 60" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK, HP and RCV for this character by 75" },
+            { "description": "Boosts base HP by 70" },
+            { "description": "Boosts base HP by 80" },
+            { "description": "Acquire Potential 3: Cooldown Reduction" },
+        ],
+        potential: [
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [
+                    "Level 1: Reduces Slot Bind duration by 1 turn on this character",
+                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 5: Reduces Slot Bind duration by ? turns on this character"
+                ]
+            },
+            {
+                "Name": "Pinch Healing",
+                "description": [
+                    "Level 1: If HP is below 10% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
+                ]
+            },
+            {
+                "Name": "Cooldown Reduction",
+                "description": [
+                    "Level 1: Reduce own Special Cooldown by 1 turn at the start of the fight",
+                    "Level 2: Reduce own Special Cooldown by ? turn at the start of the fight",
+                    "Level 3: Reduce own Special Cooldown by ? turn at the start of the fight",
+                    "Level 4: Reduce own Special Cooldown by ? turn at the start of the fight",
+                    "Level 5: Reduce own Special Cooldown by ? turn at the start of the fight"
+                ]
+            },
+        ]
     },
     1594: {//Fujitora
         captain: "Cuts the current HP of each enemy by 10% at the end of each turn",
@@ -19576,6 +20132,51 @@ window.details = {
         special: "Deals 50x character's ATK in [PSY] damage to all enemies that will ignore damage negating abilities and barriers, changes adjacent orbs into Matching Orbs, amplifies the effect of orbs for Powerhouse characters by 2x for 1 turn",
         specialNotes: "#{ignoreBarrier}",
         specialName: "Gravity Blade: Fierce Tiger",
+        sailor: {
+            "base": "None",
+            "level1": "Boosts base ATK of Powerhouse characters by 50",
+            "level2": "Makes [PSY] orbs \"beneficial\" for Powerhouse characters",
+        },
+        sailorNotes: "#{beneficial}",
+        limit: [
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Acquire Potential 1: Boosts base ATK of Powerhouse characters by 50" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Acquire Sailor Ability 1: " },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base RCV by 50" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Boosts base HP by 60" },
+            { "description": "Acquire Sailor Ability 2: Makes [PSY] orbs \"beneficial\" for Powerhouse characters" },
+            { "description": "Boosts base ATK by 50" },
+            { "description": "Boosts base HP by 130" },
+            { "description": "Acquire Potential 2: " },
+        ],
+        potential: [
+            {
+                "Name": "[INT] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [INT] characters by 1%",
+                    "Level 2: Reduce damage taken from [INT] characters by ?%",
+                    "Level 3: Reduce damage taken from [INT] characters by ?%",
+                    "Level 4: Reduce damage taken from [INT] characters by ?%",
+                    "Level 5: Reduce damage taken from [INT] characters by ?%"
+                ]
+            },
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by 1 turn",
+                    "Level 2: Reduces No Healing duration by ? turns",
+                    "Level 3: Reduces No Healing duration by ? turns",
+                    "Level 4: Reduces No Healing duration by ? turns",
+                    "Level 5: Reduces No Healing duration by ? turns"
+                ]
+            },
+        ]
     },
     1596: {//Shirahoshi
         captain: "Boosts ATK and RCV of [INT] characters by 1.5x",
@@ -21835,6 +22436,50 @@ window.details = {
         special: "Deals 50x character's ATK in fixed typeless damage to one enemy that will ignore damage negating abilities and barriers. If enemies have All Debuff Protection or Delay Debuff Protection at the time the special was activated, boosts ATK of Striker and Powerhouse characters by 1.75x for 1 turn and changes all orbs, including [BLOCK] orbs, into Matching orbs",
         specialNotes: "#{ignoreBarrier}<br\>#{fixed}",
         specialName: "Battle Guardian",
+        sailor: {
+            "base": "None",
+            "level1": "Boosts base ATK, HP and RCV of Striker and Powerhouse characters by 30",
+            "level2": "Boosts base ATK, HP and RCV for this character by 30",
+        },
+        limit: [
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Acquire Potential 1: [DEX] Damage Reduction" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK, HP and RCV of Striker and Powerhouse characters by 30" },
+            { "description": "Boosts base HP by 70" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base HP by 110" },
+            { "description": "Acquire Sailor Ability 2: Boosts base ATK, HP and RCV for this character by 30" },
+            { "description": "Boosts base ATK by 50" },
+            { "description": "Boosts base ATK by 50" },
+            { "description": "Acquire Potential 2: Slot Bind Self-reduction" },
+        ],
+        potential: [
+            {
+                "Name": "[DEX] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [DEX] characters by 1%",
+                    "Level 2: Reduce damage taken from [DEX] characters by ?%",
+                    "Level 3: Reduce damage taken from [DEX] characters by ?%",
+                    "Level 4: Reduce damage taken from [DEX] characters by ?%",
+                    "Level 5: Reduce damage taken from [DEX] characters by ?%"
+                ]
+            },
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [
+                    "Level 1: Reduces Slot Bind duration by 1 turn on this character",
+                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 5: Reduces Slot Bind duration by ? turns on this character"
+                ]
+            },
+        ]
     },
     1734: {//Sugar
         captain: "Boosts ATK of Cerebral and Fighter characters by 1.5x and recovers 3x character's RCV in HP at the end of each turn",
@@ -24138,6 +24783,77 @@ window.details = {
         captainNotes: "His captain ability also affects his evolved forms, his base form will NOT receive the boost. All evolved and plus evolved Sengoku characters in the team are included in the bonus.",
         special: "Deals random large [INT] Damage to all enemies, boosts ATK of all characters by 1.5x for 1 turn, changes orbs to matching orbs for characters that are 29 cost or lower",
         specialName: "Requiem Shockwave",
+        sailor: {
+            "base": "None",
+            "level1": "Boosts base ATK and HP of characters that are 29 cost or lower by 100",
+            "level2": "Makes [INT] orbs \"beneficial\" for all characters",
+        },
+        sailorNotes: "#{beneficial}",
+        limit: [
+            { "description": "Boosts base ATK by 5" },
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Boosts base RCV by 5" },
+            { "description": "Acquire Potential 1: Slot Bind Self-reduction" },
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Boosts base HP by 10" },
+            { "description": "Boosts base HP by 20" },
+            { "description": "Boosts base ATK by 15" },
+            { "description": "Boosts base RCV by 15" },
+            { "description": "Boosts base HP by 20" },
+            { "description": "Boosts base HP by 20" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Acquire Potential 2: Critical Hit" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK and HP of characters that are 29 cost or lower by 100" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base RCV by 30" },
+            { "description": "Boosts base ATK by 50" },
+            { "description": "Boosts base RCV by 30" },
+            { "description": "Boosts base ATK by 60" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base HP by 60" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Acquire Sailor Ability 2: Makes [INT] orbs \"beneficial\" for all characters" },
+            { "description": "Boosts base HP by 70" },
+            { "description": "Boosts base HP by 110" },
+            { "description": "Acquire Potential 3: Enrage" },
+        ],
+        potential: [
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [
+                    "Level 1: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 5: Reduces Slot Bind duration by ? turns on this character"
+                ]
+            },
+            {
+                "Name": "Critical Hit",
+                "description": [
+                    "Level 1: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage"
+                ]
+            },
+            {
+                "Name": "Enrage",
+                "description": [
+                    "Level 1: Boosts base ATK by ?",
+                    "Level 2: Boosts base ATK by ?",
+                    "Level 3: Boosts base ATK by ?",
+                    "Level 4: Boosts base ATK by ?",
+                    "Level 5: Boosts base ATK by ?"
+                ]
+            },
+        ],
+        potentialNotes: "#{enrage}"
     },
     1848: {//Treasure Map Akainu
         captain: "Boosts ATK of Powerhouse characters by 2x",
@@ -31242,6 +31958,7 @@ window.details = {
         special: "Cuts the current HP of each enemy by 20%. If your crew has 5 or more Fighter characters, reduces Increase Damage Taken, Blindness and Despair duration by 7 turns and delays all enemies for 1 turn.",
         specialName: "Cream Monster",
         sailor: "Makes [STR] orbs \"beneficial\" for Fighter characters",
+        specialNotes: "#{beneficial}",
     },
     2163: {//Opera
         captain: "Boosts ATK of Fighter characters by 2.5x and their HP by 1.25x",
@@ -31251,6 +31968,7 @@ window.details = {
             "base": "Makes [STR] orbs \"beneficial\" for Fighter characters",
             "level1": "Reduces Silence duration on this character by 3 turns",
         },
+        specialNotes: "#{beneficial}",
         limit: [
             { "description": "Boosts base HP by 10" },
             { "description": "Boosts base HP by 20" },
