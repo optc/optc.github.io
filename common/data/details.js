@@ -34151,13 +34151,13 @@ window.details = {
     },
     2272: {//Hatchan
         captain: "Boosts ATK of Slasher and Powerhouse characters by ?x and boosts chain multiplier by ?x",
-        special: "Deals 6 hits of of 30x character's ATK in typeless damage to random enemies, reduces the defense of all enemies by 100% for 1 turn, changes [BLOCK], [TND], [G] and [BOMB] orbs into [RCV] orbs. If your Captain is a Striker character, boosts ATK against enemies with reduced defense for 1 turn.",
+        special: "Deals 6 hits of of 30x character's ATK in typeless damage to random enemies, reduces the defense of all enemies by 100% for 1 turn, changes [BLOCK], [TND], [G] and [BOMB] orbs into [RCV] orbs. If your Captain is a Powerhouse character, boosts ATK against enemies with reduced defense by 1.75x for 1 turn.",
         specialName: "The Octopus' Strange Sword",
         sailor: "Boosts base ATK of Slasher and Powerhouse characters by 50",
     },
     2273: {//Hatchan
         captain: "Boosts ATK of Slasher and Powerhouse characters by 1.75x and boosts chain multiplier by 2x",
-        special: "Deals 6 hits of of 30x character's ATK in typeless damage to random enemies, reduces the defense of all enemies by 100% for 1 turn, changes [BLOCK], [TND], [G] and [BOMB] orbs into [RCV] orbs. If your Captain is a Striker character, boosts ATK against enemies with reduced defense for 1 turn.",
+        special: "Deals 6 hits of of 30x character's ATK in typeless damage to random enemies, reduces the defense of all enemies by 100% for 1 turn, changes [BLOCK], [TND], [G] and [BOMB] orbs into [RCV] orbs. If your Captain is a Powerhouse character, boosts ATK against enemies with reduced defense by 1.75x for 1 turn.",
         specialName: "The Octopus' Strange Sword",
         sailor: {
             "base": "Boosts base ATK of Slasher and Powerhouse characters by 50",
