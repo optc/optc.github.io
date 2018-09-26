@@ -2659,7 +2659,7 @@ window.drops = {
             thumb: 2263,
             global: true,
             nakama: 4220100,
-            gamewith: null,
+            gamewith: 120331,
             Ultimate: [ 2262 ],
             Master: [ 2262 ],
             Expert: [ 2262 ]
@@ -2805,6 +2805,14 @@ window.drops = {
             nakama: 8221100,
             gamewith: 116377,
             'Raging Sea': [ 2210 ]
+        },
+
+        {
+            name: 'Red Hair Shanks',
+            thumb: 2261,
+            nakama: null,
+            gamewith: 119738,
+            'Raging Sea': [ 2260 ]
         },
         
     ],
