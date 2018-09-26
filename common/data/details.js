@@ -33987,13 +33987,13 @@ window.details = {
     2264: {//Jinbe V2
         captain: "If there is a [STR], [DEX] and [PSY] character in your crew, boosts ATK of [STR], [DEX] and [PSY] characters by 4x if they have a matching orb, by 3x otherwise and their HP by 1.35x and makes [DEX], [RCV] and [TND] orbs \"beneficial\" to all characters/",
         captainNotes: "#{beneficial}",
-        special: "Cuts the current HP of each enemy by 20%. If your crew has at least one [STR], [DEX], [QCK], [PSY], [INT] and [RCV] orb, boosts ATK of [STR], [DEX] and [PSY] by 2.25x for 1 turn and makes [STR], [DEX], [QCK], [PSY] and [INT] orbs \"beneficial\" for [STR], [DEX] and [PSY] characters for 1 turn, boosts ATK of [STR], [DEX] and [PSY] by 1.75x for 1 turn otherwise.",
+        special: "Cuts the current HP of each enemy by 20%. If your crew has at least one of each: [STR], [DEX], [QCK], [PSY], [INT] and [RCV] orb, boosts ATK of [STR], [DEX] and [PSY] by 2.25x for 1 turn and makes [STR], [DEX], [QCK], [PSY] and [INT] orbs \"beneficial\" for [STR], [DEX] and [PSY] characters for 1 turn, boosts ATK of [STR], [DEX] and [PSY] by 1.75x for 1 turn otherwise.",
         specialName: "Fishman Karate - Spear Wave",
     },
     2265: {//Jinbe V2
         captain: "If there is a [STR], [DEX] and [PSY] character in your crew, boosts ATK of [STR], [DEX] and [PSY] characters by 4x if they have a matching orb, by 3x otherwise and their HP by 1.35x and makes [DEX], [RCV] and [TND] orbs \"beneficial\" to all characters/",
         captainNotes: "#{beneficial}",
-        special: "Cuts the current HP of each enemy by 20%. If your crew has at least one [STR], [DEX], [QCK], [PSY], [INT] and [RCV] orb, boosts ATK of [STR], [DEX] and [PSY] by 2.25x for 1 turn and makes [STR], [DEX], [QCK], [PSY] and [INT] orbs \"beneficial\" for [STR], [DEX] and [PSY] characters for 1 turn, boosts ATK of [STR], [DEX] and [PSY] by 1.75x for 1 turn otherwise.",
+        special: "Cuts the current HP of each enemy by 20%. If your crew has at least one of each: [STR], [DEX], [QCK], [PSY], [INT] and [RCV] orb, boosts ATK of [STR], [DEX] and [PSY] by 2.25x for 1 turn and makes [STR], [DEX], [QCK], [PSY] and [INT] orbs \"beneficial\" for [STR], [DEX] and [PSY] characters for 1 turn, boosts ATK of [STR], [DEX] and [PSY] by 1.75x for 1 turn otherwise.",
         specialName: "Fishman Karate - Spear Wave",
         sailor: {
             "base": "None",
