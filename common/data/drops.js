@@ -3062,7 +3062,7 @@ window.drops = {
             nakama: 6158800,
             gamewith: 56742,
             showManual: true,
-            condition: 'High chance of dropping 6* skillbooks. Only Evolvers and Booster characters will drop posters.',
+            condition: 'High chance of dropping 6* Manuals. Only Evolvers and Booster characters will drop posters.',
             'Black Clad Shanks': [ 301, 101, 96, 79, 90, 348, -530, -1707, -316, -910, -995, -1236, -1364, -465, -590, -967, -813, -888 ],
             'Donquixote Doflamingo': [ 304, 104, 88, 99, 82, 93, 351, -870, -312, -645, -838, -876, -880, -1190, -396, -586, -631, -567 ],
             'Trafalgar Law': [ 300, 100, 84, 95, 78, 89, 347, -964, -1045, -219, -308, -675, -991, -1077, -504, -1159, -212, -892 ],
@@ -3096,7 +3096,7 @@ window.drops = {
             nakama: 6207600,
             gamewith: null,
             showManual: true,
-            condition: 'High chance of dropping 6* skillbooks.',
+            condition: 'High chance of dropping 6* Manuals.',
             'Blackbeard': [ -261, -649, -1268, -1413, -1698, -251, -255, -259, -449, -455, -647, -1186, -1190, -1270, -1272, -1276, -1278 ],
             'Zoro': [ -718, -1085, -1362, -1391, -1881, -1921, -2035, -310, -314, -357, -359, -361, -363, -365, -1540, -1612, -1616, -1618, -1706 ],
             'Shirahoshi': [ -720, -935, -1434, -1473, -1880, -1927, -2066, -1436, -1438, -1440, -1442, -1444, -14475, -1477, -1479, -1481, -1483, -1700 ],
@@ -3107,6 +3107,18 @@ window.drops = {
             'Lucy': [ -562, -578, -669, -1121, -1492, -1794, -1816, -641, -1025, -1029, -1033, -1079, -1125, -1129, -1798, -1800, -1802, -1873, -1877 ],
             'Fujitora': [ -870, -1035, -1123, -1869, -1928, -995, -1232, -1234, -1236, -1238, -1318, -1320, -1796, -1871, -1904, -1906, -1908 ],
             'Judge': [ -367, -1588, -1610, -2232, -1619, -1832, -2138, -410, -675, -677, -912, -937, -560, -1212, -1542, -1702, -1834, -2139, -1836, -2140, -1838, -2141, -1840, -2142 ],
+        },
+        
+        {
+            name: 'Champion Challenge! Charlotte Family',
+            thumb: 2113,
+            global: true,
+            nakama: null,
+            gamewith: null,
+            showManual: true,
+            condition: 'Chance to get Manuals for the first Charlotte Family batch. Only Boosters will drop posters.',
+            Ultimate: [ -2113, -2115, -2117, -2119, -2121 ],
+            Expert: [ -2113, -2115, -2117, -2119, -2121 ],
         },
         
         {
@@ -3165,6 +3177,7 @@ window.drops = {
         {
             name: 'Prepare for Battle! Aokiji and Akainu!',
             thumb: 1280,
+            global: true,
             nakama: 6128001,
             gamewith: 98232,
             'Aokiji': [ 298, 1225, 1226, 1280, 1281 ],
@@ -3190,7 +3203,7 @@ window.drops = {
         },
         
         {
-            name: 'Higuma Skull Island',
+            name: 'Higuma - The bandit who rowed out to sea',
             thumb: 2259,
             nakama: null,
             gamewith: 119604,

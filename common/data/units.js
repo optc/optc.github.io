@@ -2285,7 +2285,7 @@ window.units = [
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "LRR Judge", "STR", [ "Powerhouse", "Striker" ], 4, 15, null, null, 70, 1066998, null, null, null, null, null, null, null ],
-    [ "Vinsmoke Judge, Germa 66 Commander", "STR", [ "Powerhouse", "Striker" ], 5, 30, 4, null, 99, 4000000, null, null, null, null, null, null, null ],
+    [ "Vinsmoke Judge, Germa 66 Commander", "STR", [ "Powerhouse", "Striker" ], 5, 30, 4, 5, 99, 4000000, 1092, 632, 126, 2732, 1480, 230, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
