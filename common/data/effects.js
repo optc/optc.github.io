@@ -743,4 +743,25 @@ window.effects = {
         id: 62, // don't change this
         atk: function(p) { return 1.75; }
     },
+    
+    'Ranking Mission - Sanji': {
+        description: 'Stats of certain units boosted',
+        thumb: 912,
+        id: 62, // don't change this
+        atk: function(p) {
+            var character = window.families[p.number];
+            matching = [ "Vinsmoke Judge", "Charlotte Cracker", "Charlotte Smoothie", "Charlotte Perospero", "Marco", "Donquixote Doflamingo", "Eneru", "Señor Pink", "Carrot", ].indexOf(character) != -1;
+            return !matching ? 1 : 1.25;
+        },    
+        hp: function(p) {
+            var character = window.families[p.number];
+            matching = [ "Vinsmoke Judge", "Charlotte Cracker", "Charlotte Smoothie", "Charlotte Perospero", "Marco", "Donquixote Doflamingo", "Eneru", "Señor Pink", "Carrot", ].indexOf(character) != -1;
+            return !matching ? 1 : 1.25;
+        },    
+        rcv: function(p) {
+            var character = window.families[p.number];
+            matching = [ "Vinsmoke Judge", "Charlotte Cracker", "Charlotte Smoothie", "Charlotte Perospero", "Marco", "Donquixote Doflamingo", "Eneru", "Señor Pink", "Carrot", ].indexOf(character) != -1;
+            return !matching ? 1 : 1.25;
+        },    
+    },
 };

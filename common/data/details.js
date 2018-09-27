@@ -33075,7 +33075,7 @@ window.details = {
                 "cooldown": [ 17, 10 ],
             },
             {
-                "description": "Delays all enemies for 2 turn, reduces Paralysis, Bind, Despair and Silence duration by 2 turn and makes Badly Matching and [BLOCK] orbs not reduce damage for 3 turns.",
+                "description": "Delays all enemies for 2 turn, reduces Paralysis, Bind, Despair and Silence duration by 2 turns and makes Badly Matching and [BLOCK] orbs not reduce damage for 3 turns.",
                 "cooldown": [ 22, 15 ],
             },
         ],
@@ -33096,7 +33096,7 @@ window.details = {
                 "cooldown": [ 17, 10 ],
             },
             {
-                "description": "Delays all enemies for 2 turn, reduces Paralysis, Bind, Despair and Silence duration by 2 turn and makes Badly Matching and [BLOCK] orbs not reduce damage for 3 turns.",
+                "description": "Delays all enemies for 2 turn, reduces Paralysis, Bind, Despair and Silence duration by 2 turns and makes Badly Matching and [BLOCK] orbs not reduce damage for 3 turns.",
                 "cooldown": [ 22, 15 ],
             },
         ],
@@ -33983,6 +33983,267 @@ window.details = {
         captain: "Boosts ATK of Driven and Cerebral characters by 3x when HP is 50% or below, 1.5x otherwise",
         special: "Randomizes all non-matching orbs, including [BLOCK] slots and locks all orbs for 1 turn. If your Captain is a Cerebral or Driven character, increases duration of any Class/Type boosting buffs and Orb Amplification buffs by 2 turns",
         specialName: "Athlete",
+    },
+    2264: {//Jinbe V2
+        captain: "If there is a [STR], [DEX] and [PSY] character in your crew, boosts ATK of [STR], [DEX] and [PSY] characters by 4x if they have a matching orb, by 3x otherwise and their HP by 1.35x and makes [DEX], [RCV] and [TND] orbs \"beneficial\" to all characters/",
+        captainNotes: "#{beneficial}",
+        special: "Cuts the current HP of each enemy by 20%. If your crew has at least one of each: [STR], [DEX], [QCK], [PSY], [INT] and [RCV] orb, boosts ATK of [STR], [DEX] and [PSY] by 2.25x for 1 turn and makes [STR], [DEX], [QCK], [PSY] and [INT] orbs \"beneficial\" for [STR], [DEX] and [PSY] characters for 1 turn, boosts ATK of [STR], [DEX] and [PSY] by 1.75x for 1 turn otherwise.",
+        specialName: "Fishman Karate - Spear Wave",
+    },
+    2265: {//Jinbe V2
+        captain: "If there is a [STR], [DEX] and [PSY] character in your crew, boosts ATK of [STR], [DEX] and [PSY] characters by 4x if they have a matching orb, by 3x otherwise and their HP by 1.35x and makes [DEX], [RCV] and [TND] orbs \"beneficial\" to all characters/",
+        captainNotes: "#{beneficial}",
+        special: "Cuts the current HP of each enemy by 20%. If your crew has at least one of each: [STR], [DEX], [QCK], [PSY], [INT] and [RCV] orb, boosts ATK of [STR], [DEX] and [PSY] by 2.25x for 1 turn and makes [STR], [DEX], [QCK], [PSY] and [INT] orbs \"beneficial\" for [STR], [DEX] and [PSY] characters for 1 turn, boosts ATK of [STR], [DEX] and [PSY] by 1.75x for 1 turn otherwise.",
+        specialName: "Fishman Karate - Spear Wave",
+        sailor: {
+            "base": "None",
+            "level1": "Boosts base ATK and HP of [STR], [DEX] and [PSY] characters by 75",
+            "level2": "Makes [STR], [QCK], [DEX], [PSY] and [INT] orbs \"beneficial\" for this character",
+        },
+        sailorNotes: "#{beneficial}",
+        potential: [
+            {
+                "Name": "[QCK] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [QCK] characters by 1%",
+                    "Level 2: Reduce damage taken from [QCK] characters by 2%",
+                    "Level 3: Reduce damage taken from [QCK] characters by 3%",
+                    "Level 4: Reduce damage taken from [QCK] characters by 5%",
+                    "Level 5: Reduce damage taken from [QCK] characters by 7%"
+                ]
+            },
+            {
+                "Name": "[INT] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [INT] characters by 1%",
+                    "Level 2: Reduce damage taken from [INT] characters by 2%",
+                    "Level 3: Reduce damage taken from [INT] characters by 3%",
+                    "Level 4: Reduce damage taken from [INT] characters by 5%",
+                    "Level 5: Reduce damage taken from [INT] characters by 7%"
+                ]
+            },
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [
+                    "Level 1: Reduces Slot Bind duration by 1 turn on this character",
+                    "Level 2: Reduces Slot Bind duration by 3 turn on this character",
+                    "Level 3: Reduces Slot Bind duration by 5 turn on this character",
+                    "Level 4: Reduces Slot Bind duration by 7 turn on this character",
+                    "Level 5: Reduces Slot Bind duration by 10 turn on this character"
+                ]
+            },
+        ],
+    },
+    2266: {//Aladdin
+        captain: "Boosts ATK of Powerhouse characters by ?x and their HP by ?x",
+        special: "Reduces Bind and Despair duration by 3 turns, locks all orbs for 1 turn, changes right column orbs, from top to bottom, into [RCV], [INT] and [QCK] orbs. If your friend Captain's orb is [DEX], amplifies the effect of orbs by 1.75x for 3 turn.",
+        specialName: "The Fishman Preparing to Strike Back",
+        sailor: "Adds 2x character's ATK as Additional Typeless Damage",
+    },
+    2267: {//Aladdin
+        captain: "Boosts ATK of Powerhouse characters by 2.5x and their HP by 1.25x",
+        special: "Reduces Bind and Despair duration by 3 turns, locks all orbs for 1 turn, changes right column orbs, from top to bottom, into [RCV], [INT] and [QCK] orbs. If your friend Captain's orb is [DEX], amplifies the effect of orbs by 1.75x for 3 turn.",
+        specialName: "The Fishman Preparing to Strike Back",
+        sailor: {
+            "base": "Adds 2x character's ATK as Additional Typeless Damage",
+            "level1": "Makes [QCK] and [DEX] orbs \"beneficial\" for this character",
+        },
+        sailorNotes: "#{additionalDamage : 2x}<br>#{beneficial}",
+        potential: [
+            {
+                "Name": "Enrage",
+                "description": [
+                    "Level 1: Boosts base ATK by 30",
+                    "Level 2: Boosts base ATK by 60",
+                    "Level 3: Boosts base ATK by 90",
+                    "Level 4: Boosts base ATK by 120",
+                    "Level 5: Boosts base ATK by 150"
+                ]
+            },
+            {
+                "Name": "Critical Hit",
+                "description": [
+                    "Level 1: If you hit a PERFECT with this character, there is a 30% chance to deal 4% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a 40% chance to deal 5% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a 50% chance to deal 6% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a 60% chance to deal 7% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a 70% chance to deal 8% of this character's attack in extra damage"
+                ]
+            },
+        ],
+        potentialNotes: "#{enrage}"
+    },
+    2268: {//Charlotte Praline
+        captain: "Boosts ATK of [STR] and [DEX] characters by 2.25x. Recovers 1.5x character's RCV in HP at the end of each turn",
+        special: "Reduces enemy's Increased Defense, Percent Damage Reduction and Threshold Damage Reduction Buffs duration by 5 turns, changes left column orbs, from top to bottom, into [DEX], [STR] and [PSY] orbs. If your Captain's orb is [RCV], recovers 13x character's RCV in HP at the end of each turn for 3 turns.",
+        specialName: "A Hug for All Her Loved Ones",
+        sailor: "Boosts base RCV of [STR], [DEX] and [PSY] characters by 50",
+    },
+    2269: {//Charlotte Praline
+        captain: "Boosts ATK of [STR] and [DEX] characters by 2.25x. Recovers 1.5x character's RCV in HP at the end of each turn",
+        special: "Reduces enemy's Increased Defense, Percent Damage Reduction and Threshold Damage Reduction Buffs duration by 5 turns, changes left column orbs, from top to bottom, into [DEX], [STR] and [PSY] orbs. If your Captain's orb is [RCV], recovers 13x character's RCV in HP at the end of each turn for 3 turns.",
+        specialName: "A Hug for All Her Loved Ones",
+        sailor: {
+            "base": "Boosts base RCV of [STR], [DEX] and [PSY] characters by 50",
+            "level1": "Makes [QCK] and [STR] orbs \"beneficial\" for this character",
+        },
+        sailorNotes: "#{beneficial}",
+        potential: [
+            {
+                "Name": "[QCK] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [QCK] characters by 1%",
+                    "Level 2: Reduce damage taken from [QCK] characters by 2%",
+                    "Level 3: Reduce damage taken from [QCK] characters by 3%",
+                    "Level 4: Reduce damage taken from [QCK] characters by 4%",
+                    "Level 5: Reduce damage taken from [QCK] characters by 5%"
+                ]
+            },
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by 1 turn",
+                    "Level 2: Reduces No Healing duration by 2 turn",
+                    "Level 3: Reduces No Healing duration by 3 turn",
+                    "Level 4: Reduces No Healing duration by 4 turns",
+                    "Level 5: Reduces No Healing duration by 5 turns"
+                ]
+            },
+        ]
+    },
+    2270: {//Wadatsumi
+        captain: "Boosts ATK of Powerhouse characters by ?x, reduces crew's RCV to ?",
+        special: "Changes left column orbs, including [BLOCK] orbs, into Matching orbs and adds .7x to Chain multiplier for 2 turns.",
+        specialName: "Mega Monk",
+        sailor: "Cannot be Blown Away",
+    },
+    2271: {//Wadatsumi
+        captain: "Boosts ATK of Powerhouse characters by 2.75x, reduces crew's RCV to 0",
+        special: "Changes left column orbs, including [BLOCK] orbs, into Matching orbs and adds .7x to Chain multiplier for 2 turns.",
+        specialName: "Mega Monk",
+        sailor: {
+            "base": "Cannot be Blown Away",
+            "level1": "Makes INT orbs \"beneficial\" for Powerhouse characters",
+        },
+        sailorNotes: "#{beneficial}",
+        potential: [
+            {
+                "Name": "[DEX] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [DEX] characters by 1%",
+                    "Level 2: Reduce damage taken from [DEX] characters by 2%",
+                    "Level 3: Reduce damage taken from [DEX] characters by 3%",
+                    "Level 4: Reduce damage taken from [DEX] characters by 4%",
+                    "Level 5: Reduce damage taken from [DEX] characters by 5%"
+                ]
+            },
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [
+                    "Level 1: Reduces Slot Bind duration by 1 turn on this character",
+                    "Level 2: Reduces Slot Bind duration by 2 turn on this character",
+                    "Level 3: Reduces Slot Bind duration by 3 turn on this character",
+                    "Level 4: Reduces Slot Bind duration by 4 turn on this character",
+                    "Level 5: Reduces Slot Bind duration by 5 turn on this character"
+                ]
+            },
+        ],
+    },
+    2272: {//Hatchan
+        captain: "Boosts ATK of Slasher and Powerhouse characters by ?x and boosts chain multiplier by ?x",
+        special: "Deals 6 hits of of 30x character's ATK in typeless damage to random enemies, reduces the defense of all enemies by 100% for 1 turn, changes [BLOCK], [TND], [G] and [BOMB] orbs into [RCV] orbs. If your Captain is a Powerhouse character, boosts ATK against enemies with reduced defense by 1.75x for 1 turn.",
+        specialName: "The Octopus' Strange Sword",
+        sailor: "Boosts base ATK of Slasher and Powerhouse characters by 50",
+    },
+    2273: {//Hatchan
+        captain: "Boosts ATK of Slasher and Powerhouse characters by 1.75x and boosts chain multiplier by 2x",
+        special: "Deals 6 hits of of 30x character's ATK in typeless damage to random enemies, reduces the defense of all enemies by 100% for 1 turn, changes [BLOCK], [TND], [G] and [BOMB] orbs into [RCV] orbs. If your Captain is a Powerhouse character, boosts ATK against enemies with reduced defense by 1.75x for 1 turn.",
+        specialName: "The Octopus' Strange Sword",
+        sailor: {
+            "base": "Boosts base ATK of Slasher and Powerhouse characters by 50",
+            "level1": "If this character has a [PSY] orb and you hit a PERFECT with him, keep his [PSY] orb for the next turn",
+        },
+        potential: [
+            {
+                "Name": "Critical Hit",
+                "description": [
+                    "Level 1: If you hit a PERFECT with this character, there is a 20% chance to deal 3% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a 30% chance to deal 4% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a 40% chance to deal 5% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a 50% chance to deal 6% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a 60% chance to deal 7% of this character's attack in extra damage"
+                ]
+            },
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [
+                    "Level 1: Reduces Slot Bind duration by 1 turn on this character",
+                    "Level 2: Reduces Slot Bind duration by 2 turn on this character",
+                    "Level 3: Reduces Slot Bind duration by 3 turn on this character",
+                    "Level 4: Reduces Slot Bind duration by 4 turn on this character",
+                    "Level 5: Reduces Slot Bind duration by 5 turn on this character"
+                ]
+            },
+        ],
+    },
+    2274: {//Camie
+        captain: "Recovers ?x character's RCV in HP at the end of each turn",
+        special: "Reduces Paralysis, Silence, Increase Damage Taken and Burn duration by 2 turns. If the enemy is delayed, boosts ATK against delayed enemies by 1.75x for 1 turn, delays all enemies for 1 turn otherwise.",
+        specialName: "Heartwarming Soup",
+        sailor: "Reduces Paralysis duration on this character by 2 turns",
+    },
+    2275: {//Camie
+        captain: "Recovers 5x character's RCV in HP at the end of each turn",
+        special: "Reduces Paralysis, Silence, Increase Damage Taken and Burn duration by 2 turns. If the enemy is delayed, boosts ATK against delayed enemies by 1.75x for 1 turn, delays all enemies for 1 turn otherwise.",
+        specialName: "Heartwarming Soup",
+        sailor: {
+            "base": "Reduces Paralysis duration on this character by 2 turns",
+            "level1": "Reduces Silence duration on this character by 2 turns",
+        },
+        potential: [
+            {
+                "Name": "Pinch Healing",
+                "description": [
+                    "Level 1: If HP is below 10% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 15% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 20% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below 25% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below 30% at the start of the turn, recovers 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
+                ]
+            },
+            {
+                "Name": "Double Special Activation",
+                "description": [
+                    "Level 1: Once per an adventure, reduce own Special Cooldown by 1 turn after the first time this special is used",
+                    "Level 2: Once per an adventure, reduce own Special Cooldown by 3 turns after the first time this special is used",
+                    "Level 3: Once per an adventure, reduce own Special Cooldown by 5 turns after the first time this special is used",
+                    "Level 4: Once per an adventure, reduce own Special Cooldown by 7 turns after the first time this special is used",
+                    "Level 5: Once per an adventure, sets your Special Gauge to MAX after the first time this special is used"
+                ]
+            },
+        ],
+    },
+    2276: {//Buggy
+        captain: "Boosts ATK of characters with fewer than or equal to 4 stars by ?x and reduce damage received by ?%",
+        special: "Boosts ATK of characters with fewer than or equal to 4 stars by 1.75x for 1 turn, Changes own orb into [INT] and delays all enemies for 1 turn.",
+        specialName: "Pirate Charisma",
+        sailor: "If this character has an [INT] orb and you hit a PERFECT with him, keep his [INT] orb for the next turn",
+    },
+    2277: {//Buggy
+        captain: "Boosts ATK of characters with fewer than or equal to 4 stars by 2.5x and reduce damage received by 10%",
+        special: "Boosts ATK of characters with fewer than or equal to 4 stars by 1.75x for 1 turn, Changes own orb into [INT] and delays all enemies for 1 turn.",
+        specialName: "Pirate Charisma",
+        sailor: "If this character has an [INT] orb and you hit a PERFECT with him, keep his [INT] orb for the next turn",
+    },
+    2278: {//Mohji & Richie
+        captain: "Boosts ATK and HP of all characters by 1.25x",
+        special: "Reduces Despair duration by 4 turns and deals ?x character's ATK in [PSY] damage to all enemies",
+        specialName: "The Eating Beast",
+    },
+    2279: {//Cabaji
+        captain: "Boosts ATK of [STR] characters by 1.2x and their HP by 1.1x",
+        special: "Reduces damage received by 50% for 1 turn",
+        specialName: "Sophisticated Acrobatic Show",
     },
     2286: {//Judge
         captain: "Not Translated",

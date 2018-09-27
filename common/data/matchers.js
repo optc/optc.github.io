@@ -565,6 +565,12 @@ window.matchers = [
         target: 'special',
         matcher: /(reduces|removes).+Paralysis.+duration/i 
     },
+    
+    {
+        name: 'Burn reducers',
+        target: 'special',
+        matcher: /(reduces|removes).+Burn.+duration/i 
+    },
 
     {
         name: 'Block orb removers',
