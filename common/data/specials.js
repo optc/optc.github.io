@@ -5939,6 +5939,18 @@ window.specials = {
         delay: function(p) { return 1; },
     },
     2286: {
+        atk: function(p) { return p.unit.type == "STR" ? window.specials[2286].multiplier : 1; },
+        type: "type",
+        onActivation: function(p) {
+            var n = (window.specials[2286].multiplier == 1.75 ? 1 : 0);
+            window.specials[2286].multiplier = (p.captain.class.has("Powerhouse") || p.captain.class.has("Striker")) ? [1.75, 2.25][n] : 1;
+            p.scope.notify({
+                text: 'Using the ' + [1.75, 2.25][n] + 'x ATK multiplier. To switch to the ' + [2.25, 1.75][n] + 'x multiplier, disable and re-enable this special',
+                name: '2286warning'
+            });
+        }
+    },
+    2287: {
         atk: function(p) { return p.unit.type == "STR" ? window.specials[2287].multiplier : 1; },
         type: "type",
         onActivation: function(p) {
@@ -5947,18 +5959,6 @@ window.specials = {
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2.25][n] + 'x ATK multiplier. To switch to the ' + [2.25, 1.75][n] + 'x multiplier, disable and re-enable this special',
                 name: '2287warning'
-            });
-        }
-    },
-    2287: {
-        atk: function(p) { return p.unit.type == "STR" ? window.specials[2288].multiplier : 1; },
-        type: "type",
-        onActivation: function(p) {
-            var n = (window.specials[2288].multiplier == 1.75 ? 1 : 0);
-            window.specials[2288].multiplier = (p.captain.class.has("Powerhouse") || p.captain.class.has("Striker")) ? [1.75, 2.25][n] : 1;
-            p.scope.notify({
-                text: 'Using the ' + [1.75, 2.25][n] + 'x ATK multiplier. To switch to the ' + [2.25, 1.75][n] + 'x multiplier, disable and re-enable this special',
-                name: '2288warning'
             });
         }
     },

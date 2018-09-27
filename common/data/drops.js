@@ -2073,6 +2073,7 @@ window.drops = {
         {
             name: 'Brûlée\'s Gibier Party',
             thumb: 2127,
+            global: true,
             nakama: 2212700,
             gamewith: 108421,
             'All Difficulties': [ 2127, 2128, 2129, 2130, -1473, -1477, -1974, -1953, -1957, -1717 ]
@@ -3203,7 +3204,7 @@ window.drops = {
         },
         
         {
-            name: 'Higuma - The bandit who rowed out to sea',
+            name: 'Higuma - The Bandit Who Rowed Out to Sea',
             thumb: 2259,
             nakama: null,
             gamewith: 119604,
