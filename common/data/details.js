@@ -33927,7 +33927,7 @@ window.details = {
         specialName: "Baptism of Evil",
     },
     2260: {//Shanks
-        captain: "Boosts ATK of Free Spirit and Cerebral characters by 2x if HP is full, by 1.5x otherwise, recovers 2x character's RCV in HP at the end of each turn and boosts chances of getting Matching orbs for Free Spirit and Cerebral Characters",
+        captain: "Boosts ATK of Free Spirit and Cerebral characters by 2x if HP is full, by 1.5x otherwise, recovers 1.2x character's RCV in HP at the end of each turn and boosts chances of getting Matching orbs for Free Spirit and Cerebral Characters",
         special: "Reduces enemy Barrier duration by 1 turn, reduces Burn duration by 1 turn, boosts chances of getting matching orbs for 1 turn, randomizes all orbs, including [BLOCK] orbs, Adds 60x character's ATK as Additional Typeless Damage for 1 turn.",
         specialName: "The Power of a Great Pirate",
         specialNotes: "#{additionalDamage : 60x}",
