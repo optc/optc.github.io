@@ -297,7 +297,7 @@ window.matchers = [
     {
         name: 'RCV boosters',
         target: 'special',
-        matcher: /Boosts.+RCV/i
+        matcher: /Boosts RCV/i
     },
 
     {
