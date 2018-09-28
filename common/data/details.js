@@ -34287,16 +34287,53 @@ window.details = {
         special: "Reduces damage received by 50% for 1 turn",
         specialName: "Sophisticated Acrobatic Show",
     },
-    2286: {//Judge
+    2280: {//Raid Judge
         captain: "Not Translated",
-        special: "Reduces any damage received above 5,000 HP by ?% for 1 turn. If your Captain is a Powerhouse or Striker character, changes [G], [BLOCK] and [EMPTY] orbs into Matching orbs and boosts ATK of [STR] characters by 1.75x for 1 turn. If \"Cloning\" is used again in the same turn the special is activated in, boosts ATK of [STR] characters by 2.25x for 1 turn.",
-        specialName: "Cloning",
+        special: "Deal 200000 fixed damage to one enemy and reduce increased damage, Chain Multiplier Limit and Chain Coefficient Reduction duration by 5 turns. If there's 3 dex Characters, boost Color Affinity of str, dex, and psy by 2x for 1 turn",
+        specialName: "Electro-Magnetic Shaft",
+        sailor: "Boosts base HP, ATK and RCV of DEX characters by 30",
+    },
+    2281: {//Raid Judge
+        captain: "Boost Atk by 2.5x and HP by 1.2x for Str, Psy and Dex characters. If you attack in Str > Psy > Dex order with GOOD or higher, boost Atk by 3x.",
+        special: "Deal 200000 fixed damage to one enemy and reduce increased damage, Chain Multiplier Limit and Chain Coefficient Reduction duration by 5 turns. If there's 3 dex Characters, boost Color Affinity of str, dex, and psy by 2x for 1 turn",
+        specialName: "Electro-Magnetic Shaft",
+        sailor: {
+            "base": "Boosts base HP, ATK and RCV of DEX characters by 30",
+            "level1": "Boosts base ATK of powerhouse characters by 50",
+        },
+        potential: [
+            {
+                "Name": "[QCK] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [QCK] characters by 1%",
+                    "Level 2: Reduce damage taken from [QCK] characters by ?%",
+                    "Level 3: Reduce damage taken from [QCK] characters by ?%",
+                    "Level 4: Reduce damage taken from [QCK] characters by ?%",
+                    "Level 5: Reduce damage taken from [QCK] characters by ?%"
+                ]
+            },
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [
+                    "Level 1: Reduces Slot Bind duration by 1 turn on this character",
+                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 5: Reduces Slot Bind duration by ? turns on this character"
+                ]
+            },
+        ]
+    },
+    2286: {//LRR Judge
+        captain: "Not Translated",
+        special: "Reduces any damage received above 5,000 HP by ?% for 1 turn. If your Captain is a Powerhouse or Striker character, changes [G], [BLOCK] and [EMPTY] orbs into Matching orbs and boosts ATK of [STR] characters by 1.75x for 1 turn. If \"Clone Soldier Wall\" is used again in the same turn the special is activated in, boosts ATK of [STR] characters by 2.25x for 1 turn.",
+        specialName: "Clone Soldier Wall",
         sailor: "Boosts base ATK of STR characters by 50",
     },
-    2287: {//Judge
+    2287: {//LRR Judge
         captain: "Boosts ATK of [STR] characters by 3.5x and their HP by 1.2x and makes [QCK] orbs \"beneficial\" to all characters",
-        special: "Reduces any damage received above 5,000 HP by ?% for 1 turn. If your Captain is a Powerhouse or Striker character, changes [G], [BLOCK] and [EMPTY] orbs into Matching orbs and boosts ATK of [STR] characters by 1.75x for 1 turn. If \"Cloning\" is used again in the same turn the special is activated in, boosts ATK of [STR] characters by 2.25x for 1 turn.",
-        specialName: "Cloning",
+        special: "Reduces any damage received above 5,000 HP by ?% for 1 turn. If your Captain is a Powerhouse or Striker character, changes [G], [BLOCK] and [EMPTY] orbs into Matching orbs and boosts ATK of [STR] characters by 1.75x for 1 turn. If \"Clone Soldier Wall\" is used again in the same turn the special is activated in, boosts ATK of [STR] characters by 2.25x for 1 turn.",
+        specialName: "Clone Soldier Wall",
         sailor: {
             "base": "Boosts ATK of [STR] characters by 50",
             "level1": "If this character has a [STR] orb and you hit a PERFECT with him, keep his [STR] orb for the next turn",
@@ -34324,6 +34361,49 @@ window.details = {
             },
         ],
         potentialNotes: "#{enrage}"
+    },
+    2288: {//Barron Tamago
+        captain: "Boosts ATK of Striker and Slasher characters by 2.25x ",
+        special: "Deals 120x character's ATK in Typeless damage to one enemy that will ignore damage negating abilities and barriers and changes Empty orbs into matching. If your Captain has a RCV or Tandem orb, adds 45x character's ATK as Additional Typeless Damage for 2 turns and changes RCV and Tandem orbs into matching. If your Captain has a [STR], [DEX], [QCK], [PSY], or [INT] orb, changes orbs in the upper row into RCV, boosts crew's RCV by 1.5x for 2 turns, and reduces damage received by 60% for 2 turns",
+        specialName: "Chicken Wing Edge",
+        sailor: "Boosts base ATK of Striker and Slasher characters by 50",
+    },
+    2289: {//Barron Tamago
+        captain: "Boosts ATK of Striker and Slasher characters by 2.25x and reduces damage received by 7%",
+        special: "Deals 120x character's ATK in Typeless damage to one enemy that will ignore damage negating abilities and barriers and changes Empty orbs into matching. If your Captain has a RCV or Tandem orb, adds 45x character's ATK as Additional Typeless Damage for 2 turns and changes RCV and Tandem orbs into matching. If your Captain has a [STR], [DEX], [QCK], [PSY], or [INT] orb, changes orbs in the upper row into RCV, boosts crew's RCV by 1.5x for 2 turns, and reduces damage received by 60% for 2 turns",
+        specialName: "Chicken Wing Edge",
+        sailor: "Boosts base ATK of Striker and Slasher characters by 50",
+    },
+    2290: {//Barron Tamago
+        captain: "Boosts ATK of Striker and Slasher characters by 2.75x if they have a matching orb, by 2.25x otherwise, and reduces damage received by 7%",
+        special: "Deals 120x character's ATK in Typeless damage to one enemy that will ignore damage negating abilities and barriers and changes Empty orbs into matching. If your Captain has a RCV or Tandem orb, adds 45x character's ATK as Additional Typeless Damage for 2 turns and changes RCV and Tandem orbs into matching. If your Captain has a [STR], [DEX], [QCK], [PSY], or [INT] orb, changes orbs in the upper row into RCV, boosts crew's RCV by 1.5x for 2 turns, and reduces damage received by 60% for 2 turns",
+        specialName: "Chicken Wing Edge",
+        sailor: {
+            "base": "Boosts base ATK of Striker and Slasher characters by 50",
+            "level1": "Makes [INT] orbs \"beneficial\" for this character",
+        },
+        potential: [
+            {
+                "Name": "Critical Hit",
+                "description": [
+                    "Level 1: If you hit a perfect with this character, there is a % chance to deal % of this character's attack in extra damage",
+                    "Level 2: If you hit a perfect with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 3: If you hit a perfect with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 4: If you hit a perfect with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 5: If you hit a perfect with this character, there is a ?% chance to deal ?% of this character's attack in extra damage"
+                ]
+            },
+            {
+                "Name": "Double Special Activation",
+                "description": [
+                    "Level 1: Once per an adventure, reduce own Special Cooldown by 1 turn after the first time this special is used",
+                    "Level 2: Once per an adventure, reduce own Special Cooldown by ? turns after the first time this special is used",
+                    "Level 3: Once per an adventure, reduce own Special Cooldown by ? turns after the first time this special is used",
+                    "Level 4: Once per an adventure, reduce own Special Cooldown by ? turns after the first time this special is used",
+                    "Level 5: Once per an adventure, sets your Special Gauge to MAX after the first time this special is used"
+                ]
+            },
+        ]
     },
     2502: {//Kung Fu Luffy
         captain: "Boosts ATK of all characters by 3.5x after the 2nd PERFECTs in a row, by 4x after the 5th PERFECTs in a row and boosts HP of all characters by 1.5x",

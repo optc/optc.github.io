@@ -7903,6 +7903,23 @@ window.captains = {
         atk: function(p) { return p.unit.type == "STR" ? 1.2 : 1; },
         hp: function(p) { return p.unit.type == "STR" ? 1.1 : 1; }
     },
+    2281: {
+        damageSorter: function(d) { return CrunchUtils.okamaSort(d, ['STR', 'PSY', 'DEX']); },
+        hitAtk: function(p) {
+            return (p.unit.type == "STR" || p.unit.type == "PSY" || p.unit.type == "DEX") ? CrunchUtils.okamaCheck(p.damage.slice(0, p.chainPosition), p.modifiers, [{
+                type: 'STR',
+                minModifier: 'Good'
+            }, {
+                type: 'PSY',
+                minModifier: 'Good'
+            }, {
+                type: 'DEX',
+                minModifier: 'Good'
+            }]) ? 3 : 2.5 : 1;
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
+        hp: function(p) { return p.unit.type == "STR" || p.unit.type == "PSY" || p.unit.type == "DEX" ? 1.2 : 1; },
+    },
     2286: {
         atk: function(p){ return p.unit.type == "STR" ? 1 : 1; },//change this
         hp: function(p){ return p.unit.type == "STR" ? 1 : 1; },//change this
@@ -7910,6 +7927,15 @@ window.captains = {
     2287: {
         atk: function(p){ return p.unit.type == "STR" ? 3.25 : 1; },
         hp: function(p){ return p.unit.type == "STR" ? 1.2 : 1; },
+    },
+    2288: {
+        atk: function(p){ return p.unit.class.has("Striker") || p.unit.class.has("Slasher") ? 2.25 : 1; },
+    },
+    2289: {
+        atk: function(p){ return p.unit.class.has("Striker") || p.unit.class.has("Slasher") ? 2.25 : 1; },
+    },
+    2290: {
+        atk: function(p) { p.unit.class.has("Striker") || p.unit.class.has("Slasher")) ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) == 2) && (p.orb != 'g')) ? 2.75 : 2.25 : 1; },
     },
     2502: {
         hitAtk: function(p) {
