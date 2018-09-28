@@ -2071,7 +2071,7 @@ window.drops = {
         },
         
         {
-            name: 'Brûlée\'s Gibier Party',
+            name: 'Brûlée\'s Cauldron Party',
             thumb: 2127,
             global: true,
             nakama: 2212700,
@@ -2112,11 +2112,19 @@ window.drops = {
         },
         
         {
-            name: 'Pound and King Baum',
+            name: 'Lets Play♪ The Seducing Woods',
             thumb: 2253,
-            nakama: null,
+            nakama: 2225300,
             gamewith: 118916,
             'All Difficulties': [ 2252, 2254, 2255, -2023, -2025, -1959, -2082, -2080, -2068, -1782, -1781 ]
+        },
+        
+        {
+            name: 'The Genius Jester! Buggy\'s Festival!',
+            thumb: 2277,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 2276, 2278, 2279, -2074, -2076, -2078, -2072, -2050, -2115, -1784, -2053 ]
         },
         
     ],
