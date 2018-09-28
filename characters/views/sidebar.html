@@ -110,6 +110,12 @@
         ng-click="filters.japanTM = !filters.japanTM">Show Japan TM Boosters</span>
 </div>
 
+<!--div class="filter-container">
+    <span class="filter-header">Dev. filters</span>
+    <span class="filter width-12 exc" ng-model="filters.noLB" ng-class="{ active: filters.noLB }"
+        ng-click="filters.noLB = !filters.noLB">Show Characters with no limit break</span>
+</div-->
+
 <div class="filter-container">
     <span class="filter-header">Captain ability filters</span>
     <span class="filter width-12 custom" ng-repeat="(n,filter) in filterData" ng-if="filter.target == 'captain'"

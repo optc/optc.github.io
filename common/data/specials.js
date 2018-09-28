@@ -5938,6 +5938,34 @@ window.specials = {
         type: "type",
         delay: function(p) { return 1; },
     },
+    2280: {
+        affinity: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "PSY") ? window.specials[2280].multiplier : 1; },
+        type: "class",
+        onActivation: function(p) {
+            if (p.colorCount.DEX >= 3) window.specials[2280].multiplier = 2;
+            else window.specials[2280].multiplier = 1;
+        }
+    },
+    2281: {
+        affinity: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "PSY") ? window.specials[2281].multiplier : 1; },
+        type: "class",
+        onActivation: function(p) {
+            if (p.colorCount.DEX >= 3) window.specials[2281].multiplier = 2;
+            else window.specials[2281].multiplier = 1;
+        }
+    },
+    2286: {
+        atk: function(p) { return p.unit.type == "STR" ? window.specials[2286].multiplier : 1; },
+        type: "type",
+        onActivation: function(p) {
+            var n = (window.specials[2286].multiplier == 1.75 ? 1 : 0);
+            window.specials[2286].multiplier = (p.captain.class.has("Powerhouse") || p.captain.class.has("Striker")) ? [1.75, 2.25][n] : 1;
+            p.scope.notify({
+                text: 'Using the ' + [1.75, 2.25][n] + 'x ATK multiplier. To switch to the ' + [2.25, 1.75][n] + 'x multiplier, disable and re-enable this special',
+                name: '2286warning'
+            });
+        }
+    },
     2287: {
         atk: function(p) { return p.unit.type == "STR" ? window.specials[2287].multiplier : 1; },
         type: "type",
@@ -5951,14 +5979,41 @@ window.specials = {
         }
     },
     2288: {
-        atk: function(p) { return p.unit.type == "STR" ? window.specials[2288].multiplier : 1; },
+        rcv: function(p) { return window.specials[2288].multiplier != 0 ? 1.5 : 1; },
+        staticMult: function(p) { return window.specials[2288].multiplier != 1 ? 45 : 0; },
         type: "type",
         onActivation: function(p) {
-            var n = (window.specials[2288].multiplier == 1.75 ? 1 : 0);
-            window.specials[2288].multiplier = (p.captain.class.has("Powerhouse") || p.captain.class.has("Striker")) ? [1.75, 2.25][n] : 1;
+            var n = (window.specials[2288].multiplier == 1 ? 2 : (window.specials[2288].multiplier == 2 | window.specials[2288].multiplier == undefined) ? 0 : 1);
+            window.specials[2288].multiplier = n;
             p.scope.notify({
-                text: 'Using the ' + [1.75, 2.25][n] + 'x ATK multiplier. To switch to the ' + [2.25, 1.75][n] + 'x multiplier, disable and re-enable this special',
+                text: 'Using the ' + ['Sabo Buff', 'RCV boost', 'RCV boost and Sabo Buff'][n] + '. To switch to the ' + ['RCV boost', 'RCV boost and Sabo Buff', 'Sabo Buff'][n] + ', disable and re-enable this special',
                 name: '2288warning'
+            });
+        }
+    },
+    2289: {
+        rcv: function(p) { return window.specials[2289].multiplier != 0 ? 1.5 : 1; },
+        staticMult: function(p) { return window.specials[2289].multiplier != 1 ? 45 : 0; },
+        type: "type",
+        onActivation: function(p) {
+            var n = (window.specials[2289].multiplier == 1 ? 2 : (window.specials[2289].multiplier == 2 | window.specials[2289].multiplier == undefined) ? 0 : 1);
+            window.specials[2289].multiplier = n;
+            p.scope.notify({
+                text: 'Using the ' + ['Sabo Buff', 'RCV boost', 'RCV boost and Sabo Buff'][n] + '. To switch to the ' + ['RCV boost', 'RCV boost and Sabo Buff', 'Sabo Buff'][n] + ', disable and re-enable this special',
+                name: '2289warning'
+            });
+        }
+    },
+    2290: {
+        rcv: function(p) { return window.specials[2290].multiplier != 0 ? 1.5 : 1; },
+        staticMult: function(p) { return window.specials[2290].multiplier != 1 ? 45 : 0; },
+        type: "type",
+        onActivation: function(p) {
+            var n = (window.specials[2290].multiplier == 1 ? 2 : (window.specials[2290].multiplier == 2 | window.specials[2290].multiplier == undefined) ? 0 : 1);
+            window.specials[2290].multiplier = n;
+            p.scope.notify({
+                text: 'Using the ' + ['Sabo Buff', 'RCV boost', 'RCV boost and Sabo Buff'][n] + '. To switch to the ' + ['RCV boost', 'RCV boost and Sabo Buff', 'Sabo Buff'][n] + ', disable and re-enable this special',
+                name: '2290warning'
             });
         }
     },
