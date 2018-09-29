@@ -1189,6 +1189,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                         healAmount += (id == 1319) ? (1 * (data.team[i].rcv + rcvtemp) * hitsCount['Good']) + (.1 * (data.team[i].rcv + rcvtemp) * hitsCount['Perfect']) : 0;
                         healAmount += (id == 1320) ? (1.5 * (data.team[i].rcv + rcvtemp) * hitsCount['Good']) + (.1 * (data.team[i].rcv + rcvtemp) * hitsCount['Perfect']) : 0;
                         healAmount += (id == 1750 || id == 1751 || id == 1922) ? (.5 * (data.team[i].rcv + rcvtemp) * hitsCount['Perfect']) : 0;
+                        healAmount += id == 2261 ? capActions[i] ? 1.75 * (data.team[i].rcv + rcvtemp) : 1.5 * (data.team[i].rcv + rcvtemp) : 0;
                         
                         healAmount = Math.floor(healAmount);
                     }
