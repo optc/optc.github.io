@@ -31088,14 +31088,14 @@ window.details = {
     2122: {//Neptune
         captain: "Boosts ATK of all characters by 1.5x and EXP gained by 1.25x",
         captainNotes: "EXP boost does not take effect if he becomes your captain in the middle of the adventure.",
-        special: "Reduces Despair and ATK DOWN duration by 5 turns and reduces enemies' Resilience Buffs by 5 turns. Reduces the defense of all enemies by ?% and amplifies the effect of orbs by 1.75x for Cerebral and Powerhouse characters for 3 turns",
+        special: "Reduces Despair and ATK DOWN duration by 5 turns and reduces enemies' Resilience Buffs by 5 turns. Reduces the defense of all enemies by 80% and amplifies the effect of orbs by 1.75x for Cerebral and Powerhouse characters for 3 turns",
         sailor: "Boosts base ATK, HP and RCV of Cerebral characters by 75",
         specialName: "Great Ocean Current of Resuscitation",
     },
     2123: {//Neptune
         captain: "Boosts ATK of all characters by 2x, EXP gained by 1.5x and recovers 5x character's RCV in HP at the end of each turn",
         captainNotes: "EXP boost does not take effect if he becomes your captain in the middle of the adventure.",
-        special: "Reduces Despair and ATK DOWN duration by 5 turns and reduces enemies' Resilience Buffs by 5 turns. Reduces the defense of all enemies by ?% and amplifies the effect of orbs by 1.75x for Cerebral and Powerhouse characters for 3 turns",
+        special: "Reduces Despair and ATK DOWN duration by 5 turns and reduces enemies' Resilience Buffs by 5 turns. Reduces the defense of all enemies by 80% and amplifies the effect of orbs by 1.75x for Cerebral and Powerhouse characters for 3 turns",
         specialName: "Great Ocean Current of Resuscitation",
         sailor: {
             "base": "Boosts base ATK, HP and RCV of Cerebral characters by 50",
