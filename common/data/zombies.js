@@ -553,6 +553,10 @@ window.zombies = {
         type: 'healer',
         multiplier: 3
     },
+    2001: { // Law 6+
+        type: 'healer',
+        amount: 1000
+    },
     2072: { // Chopper
         type: 'healer',
         multiplier: 5
@@ -564,6 +568,10 @@ window.zombies = {
     2123: { // Neptune
         type: 'healer',
         multiplier: 5
+    },
+    2155: { // Pekoms
+        type: 'zombie',
+        threshold: 0.5//CHANGE THIS
     },
     2156: { // Pekoms
         type: 'zombie',
@@ -621,10 +629,19 @@ window.zombies = {
     },
     2261: { // Shanks
         type: 'healer',
+        multiplier: 1.75
+    },
+    2268: { // Praline
+        type: 'healer',
+        multiplier: 1
     },
     2269: { // Praline
         type: 'healer',
         multiplier: 1.5
+    },
+    2274: { // Camie
+        type: 'healer',
+        multiplier: 3
     },
     2275: { // Camie
         type: 'healer',

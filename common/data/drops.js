@@ -2675,10 +2675,10 @@ window.drops = {
         },
         
         {
-            name: 'Clash!! Vinsmoke Judge',
+            name: 'Clash!! Judge',
             thumb: 2281,
             nakama: null,
-            gamewith: null,
+            gamewith: 121664,
             Ultimate: [ 2280 ],
             Master: [ 2280 ],
             Expert: [ 2280 ]
