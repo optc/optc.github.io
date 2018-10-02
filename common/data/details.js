@@ -34607,12 +34607,14 @@ window.details = {
         ]
     },
     2282: {//Sengoku
-        captain: "Boosts ATK of Cerebral and Fighter characters by ?x if they have cost 30 or less, by ?x otherwise.",
+        captain: "Boosts ATK of Cerebral and Fighter characters by ?x and boosts ATK of characters with cost 30 or less by ?x.",
+        captainNotes: "The bonus is cumulative. Cerebral and Fighter characters with 30 cost or less get a ?x bonus.",
         special: "Cuts the current HP of one enemy by 20% that will ignore damage negating abilities and barriers. If your crew has 4 or more characters with the same Type Orb, makes the Dominant Type Orbs \"beneficial\" for all characters for 1 turn and amplifies the effect of orbs for all characters by 2x for 3 turns.",
         specialName: "Ruthless Straight Fist",
     },
     2283: {//Sengoku
-        captain: "Boosts ATK of Cerebral and Fighter characters by 3.025x if they have cost 30 or less, by 2.75x otherwise.",
+        captain: "Boosts ATK of Cerebral and Fighter characters by 2.75x and boosts ATK of characters with cost 30 or less by 1.1x.",
+        captainNotes: "The bonus is cumulative. Cerebral and Fighter characters with 30 cost or less get a 3.025x bonus.",
         special: "Cuts the current HP of one enemy by 20% that will ignore damage negating abilities and barriers. If your crew has 4 or more characters with the same Type Orb, makes the Dominant Type Orbs \"beneficial\" for all characters for 1 turn and amplifies the effect of orbs for all characters by 2x for 3 turns.",
         specialName: "Ruthless Straight Fist",
         sailor: {
