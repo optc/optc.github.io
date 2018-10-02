@@ -2278,7 +2278,7 @@ window.units = [
     [ "Buggy the Star Clown, Warlord of the Sea", "INT", [ "Driven", "Free Spirit" ], 4, 20, 4, 4, 99, 1000000, null, null, null, 1720, 1180, 270, null ],
     [ "Mohji & Richie, Buggy's Delivery Beast Tamer", "PSY", [ "Striker", "Driven" ], 3, 15, 4, 2, 70, 355666, null, null, null, 1600, 850, 90, null ],
     [ "Cabaji, Buggy's Delivery Acrobat", "STR", [ "Slasher", "Driven" ], 3, 15, 5, 2, 70, 355666, null, null, null, 1120, 910, 150, null ],
-    [ "Raid Judge, Germa Kingdom King", "DEX", [ "Powerhouse", "Striker" ], 4, 30, 5, 2, 70, 1066998, 239, 193, 35, 1167, 652, 110, 1 ],
+    [ "Vinsmoke Judge, Germa Kingdom King", "DEX", [ "Powerhouse", "Striker" ], 4, 30, 5, 2, 70, 1066998, 239, 193, 35, 1167, 652, 110, 1 ],
     [ "\"Garuda\" Vinsmoke Judge, Germa Kingdom King", "DEX", [ "Powerhouse", "Striker" ], 5, 50, 4, 3, 99, 5000000, 1149, 632, 108, 2720, 1420, 200, 1 ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],

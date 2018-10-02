@@ -29454,9 +29454,9 @@ window.details = {
             { "description": "Boosts base HP by 30" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base HP by 40" },
-            { "description": "Boosts base HP by 40" },
-            { "description": "Acquire Sailor Ability 1: If your Captain is a Powerhouse character, completely resists Blindness" },
             { "description": "Boosts base HP by 50" },
+            { "description": "Acquire Sailor Ability 1: If your Captain is a Powerhouse character, completely resists Blindness" },
+            { "description": "Boosts base ATK by 50" },
             { "description": "Acquire Potential 2: Cooldown Reduction" },
         ],
         potential: [
@@ -34555,6 +34555,7 @@ window.details = {
     2280: {//Raid Judge
         captain: "Boosts ATK of [STR], [DEX] and [PSY] characters by 2x and their HP by 1.2x",
         special: "Deals 200,000 fixed damage to one enemy, reduces crew's Increase Damage Taken, Chain Multiplier Limit and Chain Coefficient Reduction duration by 5 turns. If your crew has 3 or more [DEX] characters, boosts the Color Affinity of [STR], [DEX] and [PSY] characters by 2x for 1 turn",
+        specialName: "Electro-Magnetic Shaft",
         sailor: "Boosts base HP, ATK and RCV of DEX characters by 30",
     },
     2281: {//Raid Judge
@@ -34562,8 +34563,8 @@ window.details = {
         special: "Deals 200,000 fixed damage to one enemy, reduces crew's Increase Damage Taken, Chain Multiplier Limit and Chain Coefficient Reduction duration by 5 turns. If your crew has 3 or more [DEX] characters, boosts the Color Affinity of [STR], [DEX] and [PSY] characters by 2x for 1 turn",
         specialName: "Electro-Magnetic Shaft",
         sailor: {
-            "base": "Boosts base HP, ATK and RCV of DEX characters by 30",
-            "level1": "Boosts base ATK of powerhouse characters by 50",
+            "base": "Boosts base ATK, HP and RCV of [DEX] characters by 30",
+            "level1": "Boosts base ATK of Powerhouse characters by 50",
         },
         limit: [
             { "description": "Boosts base ATK by 10" },
@@ -34579,7 +34580,7 @@ window.details = {
             { "description": "Boosts base HP by 30" },
             { "description": "Boosts base ATK by 50" },
             { "description": "Boosts base RCV by 40" },
-            { "description": "Acquire Sailor Ability 1: Boosts base ATK of powerhouse characters by 50" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK of Powerhouse characters by 50" },
             { "description": "Acquire Potential 2: Slot Bind Self-reduction" },
         ],
         potential: [
