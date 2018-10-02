@@ -7923,6 +7923,18 @@ window.captains = {
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
         hp: function(p){ return (p.unit.type == "DEX" || p.unit.type == "QCK" || p.unit.type == "INT") ? 1.2 : 1; }, 
     },
+    2282: {
+        atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Cerebral")) ? p.unit.cost <= 30 ? 1 : 1 : 1; }//change this
+    },
+    2283: {
+        atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Cerebral")) ? p.unit.cost <= 30 ? 3.025 : 2.75 : 1; }
+    },
+    2284: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 3.25 : 1; }//change this
+    },
+    2285: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 3.25 : 1; }
+    },
     2287: {
         atk: function(p){ return p.unit.type == "STR" ? 3.25 : 1; },
         hp: function(p){ return p.unit.type == "STR" ? 1.2 : 1; },
