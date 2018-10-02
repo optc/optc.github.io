@@ -5903,30 +5903,30 @@ window.specials = {
         def: function(p) { return 0; }
     },
     2274: {
-        atk: function(p) { return (p.delayed > 0 && window.specials[2274].multiplier) ? 1.75 : 1; },
+        atk: function(p) { return (p.delayed > 0 && window.specials[2274].multiplier != 0) ? 1.75 : 1; },
         type: "condition",
         onActivation: function(p) {
-            var n = (window.specials[2274].multiplier == false ? 1 : 0);
-            window.specials[2274].multiplier = [false, true][n];
+            var n = (window.specials[2274].multiplier == 1 ? 2 : (window.specials[2274].multiplier == 2 | window.specials[2274].multiplier == undefined) ? 0 : 1);
+            window.specials[2274].multiplier = n;
             p.scope.notify({
-                text: 'Using the ' + ['Delay', 'Conditional ATK Boost'][n] + '. To switch to the ' + ['Conditional ATK Boost', 'Delay'][n] + ', disable and re-enable this special',
+                text: 'Using the ' + ['Delay', 'Conditional boost', 'Conditional boost and Delay'][n] + '. To switch to the ' + ['Conditional boost', 'Conditional boost and Delay', 'Delay'][n] + ', disable and re-enable this special',
                 name: '2274warning'
             });
         },
-        delay: function(p) { return !window.specials[2274].multiplier ? 1 : 0; },
+        delay: function(p) { return window.specials[2274].multiplier != 1 ? 1 : 0; },
     },
     2275: {
-        atk: function(p) { return (p.delayed > 0 && window.specials[2275].multiplier) ? 1.75 : 1; },
+        atk: function(p) { return (p.delayed > 0 && window.specials[2275].multiplier != 0) ? 1.75 : 1; },
         type: "condition",
         onActivation: function(p) {
-            var n = (window.specials[2275].multiplier == false ? 1 : 0);
-            window.specials[2275].multiplier = [false, true][n];
+            var n = (window.specials[2275].multiplier == 1 ? 2 : (window.specials[2275].multiplier == 2 | window.specials[2275].multiplier == undefined) ? 0 : 1);
+            window.specials[2275].multiplier = n;
             p.scope.notify({
-                text: 'Using the ' + ['Delay', 'Conditional ATK Boost'][n] + '. To switch to the ' + ['Conditional ATK Boost', 'Delay'][n] + ', disable and re-enable this special',
+                text: 'Using the ' + ['Delay', 'Conditional boost', 'Conditional boost and Delay'][n] + '. To switch to the ' + ['Conditional boost', 'Conditional boost and Delay', 'Delay'][n] + ', disable and re-enable this special',
                 name: '2275warning'
             });
         },
-        delay: function(p) { return !window.specials[2275].multiplier ? 1 : 0; },
+        delay: function(p) { return window.specials[2275].multiplier != 1 ? 1 : 0; },
     },
     2276: {
         atk: function(p) { return p.unit.stars <= 4 ? 1.75 : 1; },

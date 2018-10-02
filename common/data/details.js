@@ -34257,7 +34257,7 @@ window.details = {
         ],
     },
     2266: {//Aladdin
-        captain: "Boosts ATK of Powerhouse characters by ?x and their HP by ?x",
+        captain: "Boosts ATK of Powerhouse characters by 2.25x",
         special: "Reduces Bind and Despair duration by 3 turns, locks all orbs for 1 turn, changes right column orbs, from top to bottom, into [RCV], [INT] and [QCK] orbs. If your friend Captain's orb is [DEX], amplifies the effect of orbs by 1.75x for 3 turn.",
         specialName: "The Fishman Preparing to Strike Back",
         sailor: "Adds 2x character's ATK as Additional Typeless Damage",
@@ -34313,7 +34313,7 @@ window.details = {
         potentialNotes: "#{enrage}"
     },
     2268: {//Charlotte Praline
-        captain: "Boosts ATK of [STR] and [DEX] characters by 2.25x. Recovers 1.5x character's RCV in HP at the end of each turn",
+        captain: "Boosts ATK of [STR] and [DEX] characters by 2x. Recovers 1x character's RCV in HP at the end of each turn",
         special: "Reduces enemy's Increased Defense, Percent Damage Reduction and Threshold Damage Reduction Buffs duration by 5 turns, changes left column orbs, from top to bottom, into [DEX], [STR] and [PSY] orbs. If your Captain's orb is [RCV], recovers 13x character's RCV in HP at the end of each turn for 3 turns.",
         specialName: "A Hug for All Her Loved Ones",
         sailor: "Boosts base RCV of [STR], [DEX] and [PSY] characters by 50",
@@ -34368,7 +34368,7 @@ window.details = {
         ]
     },
     2270: {//Wadatsumi
-        captain: "Boosts ATK of Powerhouse characters by ?x, reduces crew's RCV to ?",
+        captain: "Boosts ATK of Powerhouse characters by 2.5x, reduces crew's RCV to 0",
         special: "Changes left column orbs, including [BLOCK] orbs, into Matching orbs and adds .7x to Chain multiplier for 2 turns.",
         specialName: "Mega Monk",
         sailor: "Cannot be Blown Away",
@@ -34423,7 +34423,7 @@ window.details = {
         ],
     },
     2272: {//Hatchan
-        captain: "Boosts ATK of Slasher and Powerhouse characters by ?x and boosts chain multiplier by ?x",
+        captain: "Boosts ATK of Slasher and Powerhouse characters by 1.5x and boosts chain multiplier by 1.5x",
         special: "Deals 6 hits of of 30x character's ATK in typeless damage to random enemies, reduces the defense of all enemies by 100% for 1 turn, changes [BLOCK], [TND], [G] and [BOMB] orbs into [RCV] orbs. If your Captain is a Powerhouse character, boosts ATK against enemies with reduced defense by 1.75x for 1 turn.",
         specialName: "The Octopus' Strange Sword",
         sailor: "Boosts base ATK of Slasher and Powerhouse characters by 50",
@@ -34477,7 +34477,7 @@ window.details = {
         ],
     },
     2274: {//Camie
-        captain: "Recovers ?x character's RCV in HP at the end of each turn",
+        captain: "Recovers 3x character's RCV in HP at the end of each turn",
         special: "Reduces Paralysis, Silence, Increase Damage Taken and Burn duration by 2 turns. If the enemy is delayed, boosts ATK against delayed enemies by 1.75x for 1 turn, delays all enemies for 1 turn otherwise.",
         specialName: "Heartwarming Soup",
         sailor: "Reduces Paralysis duration on this character by 2 turns",
@@ -34553,7 +34553,7 @@ window.details = {
         specialName: "Sophisticated Acrobatic Show",
     },
     2280: {//Judge
-        captain: "Not Translated",
+        captain: "Boosts ATK of [STR], [DEX] and [PSY] characters by 2x and their HP by 1.2x",
         special: "Deals 200,000 fixed damage to one enemy, reduces crew's Increase Damage Taken, Chain Multiplier Limit and Chain Coefficient Reduction duration by 5 turns. If your crew has 3 or more [DEX] characters, boosts the Color Affinity of [STR], [DEX] and [PSY] characters by 2x for 1 turn",
         specialName: "Clone Soldier Wall",
         sailor: "Boosts base ATK, HP and RCV of [DEX] characters by 30",
