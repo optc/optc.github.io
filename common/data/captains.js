@@ -7939,6 +7939,23 @@ window.captains = {
         atk: function(p){ return p.unit.type == "STR" ? 3.25 : 1; },
         hp: function(p){ return p.unit.type == "STR" ? 1.2 : 1; },
     },
+    2288: {
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Slasher") ? 2.25 : 1; }
+    },
+    2289: {
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Slasher") ? 2.25 : 1; }
+    },
+    2290: {
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Slasher") ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) == 2) && (p.orb != 'g')) ? 2.75 : 2.25; : 1; }
+    },
+    2291: {
+        atk: function(p) { return 1; },//change this
+        rcv: function(p) { return 1; },//change this
+    },
+    2292: {
+        atk: function(p) { return 1.75; },
+        rcv: function(p) { return 1.75; },
+    },
     2502: {
         hitAtk: function(p) {
             return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 4 :

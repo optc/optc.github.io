@@ -28524,7 +28524,7 @@ window.details = {
             "level2": "Makes [INT], [RCV] and [TND] orbs \"beneficial\" for this character"
         },
         sailorNotes: "#{beneficial}",
-        special: "Makes Damage and Health Cutting Specials of all characters bypass all defensive Buffs, deals 100x character's ATK in [PSY] damage to one enemy, reduces Special Cooldown of all characters by 1 turn",
+        special: "Makes Damage and Health Cutting Specials of all characters bypass all defensive Buffs, deals 100x character's ATK in [PSY] damage to one enemy and reduces Special Cooldown of all characters by 1 turn",
         limit: [
             { "description": "Boosts base RCV by 5" },
             { "description": "Boosts base RCV by 10" },
@@ -34762,6 +34762,20 @@ window.details = {
                 ]
             },
         ],
+    },
+    2291: {//Vivi
+        captain: "Boosts ATK and RCV of all characters by ?x and recovers ?x character's RCV in HP at the end of each turn",
+        special: "Removes Blindness duration completely and reduces Paralysis duration by 2 turns. If your Captain is a Free Spirit or Cerebral character, reduces Special Cooldown of all characters by 1 turn and reduces enemy Barrier duration by 1 turn.",
+        specialName: "Vivi Special",
+        sailor: "Restores her own special cooldown by 2 turns when it is rewinded",
+        sailorNotes: "#{rewind : 2}",
+    },
+    2292: {//Vivi
+        captain: "Boosts ATK and RCV of all characters by 1.75x and recovers 5x character's RCV in HP at the end of each turn",
+        special: "Removes Blindness duration completely and reduces Paralysis duration by 2 turns. If your Captain is a Free Spirit or Cerebral character, reduces Special Cooldown of all characters by 1 turn and reduces enemy Barrier duration by 1 turn.",
+        specialName: "Vivi Special",
+        sailor: "Restores her own special cooldown by 2 turns when it is rewinded",
+        sailorNotes: "#{rewind : 2}",
     },
     2502: {//Kung Fu Luffy
         captain: "Boosts ATK of all characters by 3.5x after the 2nd PERFECTs in a row, by 4x after the 5th PERFECTs in a row and boosts HP of all characters by 1.5x",
