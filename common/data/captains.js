@@ -7507,10 +7507,10 @@ window.captains = {
         atk: function(p){ return (p.unit.class.has("Slasher") || p.unit.class.has("Cerebral")) ? 2.25 : 1; },
     },
     2190: {
-        atk: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Striker")) ? 1 + 1.25 * ((p.percHP) / 100) : 1; },//check damage
+        atk: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Striker")) ? 1 + 1.25 * ((p.percHP) / 100) : 1; },
     },
     2191: {
-        atk: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Striker")) ? 1 + 1.5 * ((p.percHP) / 100) : 1; },//check damage
+        atk: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Striker")) ? 1 + 1.5 * ((p.percHP) / 100) : 1; },
     },
     2192: {
         atk: function(p){ return p.unit.class.has("Shooter") ? 2 : 1; },
@@ -7744,7 +7744,7 @@ window.captains = {
         atk: function(p){ return p.unit.class.has("Powerhouse") ? 2.5 : 1; },
     },
     2246: {
-        atk: function(p) { return p.unit.class.has("Free Spirit") ? 1 + 1 * ((p.percHP) / 100) : 1; },//Change This
+        atk: function(p) { return p.unit.class.has("Free Spirit") ? 1 + 1.5 * ((p.percHP) / 100) : 1; },
     },
     2247: {
         atk: function(p) { return p.unit.class.has("Free Spirit") ? 1 + 2.25 * ((p.percHP) / 100) : 1; },
@@ -7889,10 +7889,10 @@ window.captains = {
         chainModifier: function(p) { return 2; }
     },
     2276: {
-        atk: function(p) { return p.unit.stars <= 4 ? 1 : 1; }//change this
+        atk: function(p) { return p.unit.stars <= 4 ? 2 : 1; },
     },
     2277: {
-        atk: function(p) { return p.unit.stars <= 4 ? 2.5 : 1; }
+        atk: function(p) { return p.unit.stars <= 4 ? 2.5 : 1; },
     },
     2278: {
         atk: function(p) { return 1.25; },
@@ -7903,8 +7903,8 @@ window.captains = {
         hp: function(p) { return p.unit.type == "STR" ? 1.1 : 1; }
     },
     2280: {
-        atk: function(p) { return p.unit.type == "STR" || p.unit.type == "PSY" || p.unit.type == "DEX" ? 2 : 1; },
-        hp: function(p) { return p.unit.type == "STR" || p.unit.type == "PSY" || p.unit.type == "DEX" ? 1.2 : 1; }
+        atk: function(p){ return (p.unit.type == "DEX" || p.unit.type == "QCK" || p.unit.type == "INT") ? 2 : 1; }, 
+        hp: function(p){ return (p.unit.type == "DEX" || p.unit.type == "QCK" || p.unit.type == "INT") ? 1.2 : 1; }, 
     },
     2281: {
         damageSorter: function(d) { return CrunchUtils.okamaSort(d, ['STR', 'PSY', 'DEX']); },
@@ -7921,7 +7921,19 @@ window.captains = {
             }]) ? 3 : 2.5 : 1;
         },
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
-        hp: function(p) { return p.unit.type == "STR" || p.unit.type == "PSY" || p.unit.type == "DEX" ? 1.2 : 1; },
+        hp: function(p){ return (p.unit.type == "DEX" || p.unit.type == "QCK" || p.unit.type == "INT") ? 1.2 : 1; }, 
+    },
+    2282: {
+        atk: function(p) { var multiplier = 1; multiplier *= (p.unit.class.has("Fighter") || p.unit.class.has("Cerebral")) ? 2.25 : 1; multiplier *= p.unit.cost <= 30 ? 1.1 : 1; return multiplier; },
+    },
+    2283: {
+        atk: function(p) { var multiplier = 1; multiplier *= (p.unit.class.has("Fighter") || p.unit.class.has("Cerebral")) ? 2.75 : 1; multiplier *= p.unit.cost <= 30 ? 1.1 : 1; return multiplier; },
+    },
+    2284: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 3.25 : 1; },//change this
+    },
+    2285: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 3.25 : 1; },
     },
     2286: {
         atk: function(p){ return p.unit.type == "STR" ? 1 : 1; },//change this
@@ -7932,13 +7944,21 @@ window.captains = {
         hp: function(p){ return p.unit.type == "STR" ? 1.2 : 1; },
     },
     2288: {
-        atk: function(p){ return p.unit.class.has("Striker") || p.unit.class.has("Slasher") ? 2.25 : 1; },
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Slasher") ? 2.25 : 1; },
     },
     2289: {
-        atk: function(p){ return p.unit.class.has("Striker") || p.unit.class.has("Slasher") ? 2.25 : 1; },
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Slasher") ? 2.25 : 1; },
     },
     2290: {
-        atk: function(p) { p.unit.class.has("Striker") || p.unit.class.has("Slasher")) ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) == 2) && (p.orb != 'g')) ? 2.75 : 2.25 : 1; },
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Slasher") ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) == 2) && (p.orb != 'g')) ? 2.75 : 2.25 : 1; },
+    },
+    2291: {
+        atk: function(p) { return 1; },//change this
+        rcv: function(p) { return 1; },//change this
+    },
+    2292: {
+        atk: function(p) { return 1.75; },
+        rcv: function(p) { return 1.75; },
     },
     2502: {
         hitAtk: function(p) {

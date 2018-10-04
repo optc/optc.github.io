@@ -5906,27 +5906,27 @@ window.specials = {
         atk: function(p) { return (p.delayed > 0 && window.specials[2274].multiplier) ? 1.75 : 1; },
         type: "condition",
         onActivation: function(p) {
-            var n = (window.specials[2274].multiplier == false ? 1 : 0);
-            window.specials[2274].multiplier = [false, true][n];
+            var n = (window.specials[2274].multiplier == 1 ? 2 : (window.specials[2274].multiplier == 2 | window.specials[2274].multiplier == undefined) ? 0 : 1);
+            window.specials[2274].multiplier = n;
             p.scope.notify({
-                text: 'Using the ' + ['Delay', 'Conditional ATK Boost'][n] + '. To switch to the ' + ['Conditional ATK Boost', 'Delay'][n] + ', disable and re-enable this special',
+                text: 'Using the ' + ['Delay', 'Conditional boost', 'Conditional boost and Delay'][n] + '. To switch to the ' + ['Conditional boost', 'Conditional boost and Delay', 'Delay'][n] + ', disable and re-enable this special',
                 name: '2274warning'
             });
         },
-        delay: function(p) { return !window.specials[2274].multiplier ? 1 : 0; },
+        delay: function(p) { return window.specials[2274].multiplier ? 1 : 0; },
     },
     2275: {
         atk: function(p) { return (p.delayed > 0 && window.specials[2275].multiplier) ? 1.75 : 1; },
         type: "condition",
         onActivation: function(p) {
-            var n = (window.specials[2275].multiplier == false ? 1 : 0);
-            window.specials[2275].multiplier = [false, true][n];
+            var n = (window.specials[2275].multiplier == 1 ? 2 : (window.specials[2275].multiplier == 2 | window.specials[2275].multiplier == undefined) ? 0 : 1);
+            window.specials[2275].multiplier = n;
             p.scope.notify({
-                text: 'Using the ' + ['Delay', 'Conditional ATK Boost'][n] + '. To switch to the ' + ['Conditional ATK Boost', 'Delay'][n] + ', disable and re-enable this special',
+                text: 'Using the ' + ['Delay', 'Conditional boost', 'Conditional boost and Delay'][n] + '. To switch to the ' + ['Conditional boost', 'Conditional boost and Delay', 'Delay'][n] + ', disable and re-enable this special',
                 name: '2275warning'
             });
         },
-        delay: function(p) { return !window.specials[2275].multiplier ? 1 : 0; },
+        delay: function(p) { return window.specials[2275].multiplier? 1 : 0; },
     },
     2276: {
         atk: function(p) { return p.unit.stars <= 4 ? 1.75 : 1; },
@@ -5944,7 +5944,7 @@ window.specials = {
         onActivation: function(p) {
             if (p.colorCount.DEX >= 3) window.specials[2280].multiplier = 2;
             else window.specials[2280].multiplier = 1;
-        }
+        },
     },
     2281: {
         affinity: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "PSY") ? window.specials[2281].multiplier : 1; },
@@ -5952,7 +5952,19 @@ window.specials = {
         onActivation: function(p) {
             if (p.colorCount.DEX >= 3) window.specials[2281].multiplier = 2;
             else window.specials[2281].multiplier = 1;
-        }
+        },
+    },
+    2282: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName); },
+    },
+    2283: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName); },
+    },
+    2284: {
+        orb: function(p) { return p.unit.class.has("Powerhouse") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2.25, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+    },
+    2285: {
+        orb: function(p) { return p.unit.class.has("Powerhouse") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2.25, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
     },
     2286: {
         atk: function(p) { return p.unit.type == "STR" ? window.specials[2286].multiplier : 1; },
@@ -5964,7 +5976,7 @@ window.specials = {
                 text: 'Using the ' + [1.75, 2.25][n] + 'x ATK multiplier. To switch to the ' + [2.25, 1.75][n] + 'x multiplier, disable and re-enable this special',
                 name: '2286warning'
             });
-        }
+        },
     },
     2287: {
         atk: function(p) { return p.unit.type == "STR" ? window.specials[2287].multiplier : 1; },
@@ -5976,11 +5988,11 @@ window.specials = {
                 text: 'Using the ' + [1.75, 2.25][n] + 'x ATK multiplier. To switch to the ' + [2.25, 1.75][n] + 'x multiplier, disable and re-enable this special',
                 name: '2287warning'
             });
-        }
+        },
     },
     2288: {
-        rcv: function(p) { return window.specials[2288].multiplier != 0 ? 1.5 : 1; },
-        staticMult: function(p) { return window.specials[2288].multiplier != 1 ? 45 : 0; },
+        rcv: function(p) { return window.specials[2288].multiplier ? 1.5 : 1; },
+        staticMult: function(p) { return window.specials[2288].multiplier ? 45 : 0; },
         type: "type",
         onActivation: function(p) {
             var n = (window.specials[2288].multiplier == 1 ? 2 : (window.specials[2288].multiplier == 2 | window.specials[2288].multiplier == undefined) ? 0 : 1);
@@ -5989,11 +6001,11 @@ window.specials = {
                 text: 'Using the ' + ['Sabo Buff', 'RCV boost', 'RCV boost and Sabo Buff'][n] + '. To switch to the ' + ['RCV boost', 'RCV boost and Sabo Buff', 'Sabo Buff'][n] + ', disable and re-enable this special',
                 name: '2288warning'
             });
-        }
+        },
     },
     2289: {
-        rcv: function(p) { return window.specials[2289].multiplier != 0 ? 1.5 : 1; },
-        staticMult: function(p) { return window.specials[2289].multiplier != 1 ? 45 : 0; },
+        rcv: function(p) { return window.specials[2289].multiplier ? 1.5 : 1; },
+        staticMult: function(p) { return window.specials[2289].multiplier ? 45 : 0; },
         type: "type",
         onActivation: function(p) {
             var n = (window.specials[2289].multiplier == 1 ? 2 : (window.specials[2289].multiplier == 2 | window.specials[2289].multiplier == undefined) ? 0 : 1);
@@ -6002,11 +6014,11 @@ window.specials = {
                 text: 'Using the ' + ['Sabo Buff', 'RCV boost', 'RCV boost and Sabo Buff'][n] + '. To switch to the ' + ['RCV boost', 'RCV boost and Sabo Buff', 'Sabo Buff'][n] + ', disable and re-enable this special',
                 name: '2289warning'
             });
-        }
+        },
     },
     2290: {
-        rcv: function(p) { return window.specials[2290].multiplier != 0 ? 1.5 : 1; },
-        staticMult: function(p) { return window.specials[2290].multiplier != 1 ? 45 : 0; },
+        rcv: function(p) { return window.specials[2290].multiplier ? 1.5 : 1; },
+        staticMult: function(p) { return window.specials[2290].multiplier ? 45 : 0; },
         type: "type",
         onActivation: function(p) {
             var n = (window.specials[2290].multiplier == 1 ? 2 : (window.specials[2290].multiplier == 2 | window.specials[2290].multiplier == undefined) ? 0 : 1);
@@ -6015,7 +6027,7 @@ window.specials = {
                 text: 'Using the ' + ['Sabo Buff', 'RCV boost', 'RCV boost and Sabo Buff'][n] + '. To switch to the ' + ['RCV boost', 'RCV boost and Sabo Buff', 'Sabo Buff'][n] + ', disable and re-enable this special',
                 name: '2290warning'
             });
-        }
+        },
     },
     2502: {
         atk: function(p) { return 1.75; },

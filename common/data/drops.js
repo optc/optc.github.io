@@ -2123,7 +2123,7 @@ window.drops = {
             name: 'The Genius Jester! Buggy\'s Festival!',
             thumb: 2277,
             nakama: null,
-            gamewith: null,
+            gamewith: 121547,
             'All Difficulties': [ 2276, 2278, 2279, -2074, -2076, -2078, -2072, -2050, -2115, -1784, -2053 ]
         },
         
@@ -2973,6 +2973,15 @@ window.drops = {
             gamewith: 75260,
             condition: 'Has a chance of appearing at the end of ANY Chaos Coliseum boss. You MUST use the same team that you just used to complete the Coliseum boss to fight Garp.',
             'All Difficulties': [ 1845, 9010, 9011, 9012, 9013, 9014 ]
+        },
+        
+        {
+            name: 'Invasion! Sengoku',
+            thumb: 2283,
+            nakama: 6228300,
+            gamewith: 122270,
+            condition: 'Has a chance of appearing at the end of ANY Chaos Coliseum boss. You MUST use the same team that you just used to complete the Coliseum boss to fight Sengoku.',
+            'All Difficulties': [ 2282, 9010, 9011, 9012, 9013, 9014 ]
         },
         
         {

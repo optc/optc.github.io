@@ -483,6 +483,12 @@ window.sailors = {
     2081: {
         atkStatic: function(p) { return p.unit.class.has("Slasher") ? 40 : 0; },
     },
+    2084: {
+        atkStatic: function(p) { return 50; },
+    },
+    2085: {
+        atkStatic: function(p) { return 50; },
+    },
     2110: {
         atkStatic: function(p) { return p.unit.type == "DEX" ? 20 : 0; },
         rcvStatic: function(p) { return p.unit.type == "DEX" ? 20 : 0; },

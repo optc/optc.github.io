@@ -647,6 +647,14 @@ window.zombies = {
         type: 'healer',
         multiplier: 5
     },
+    2291: { // Vivi
+        type: 'healer',
+        multiplier: 1//Change this
+    },
+    2292: { // Vivi
+        type: 'healer',
+        multiplier: 5
+    },
     5001: { // Smoker/Tashigi
         type: 'healer',
         amount: 300
