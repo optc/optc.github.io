@@ -2288,7 +2288,7 @@ window.units = [
     [ "Vinsmoke Judge, Germa 66 Commander", "STR", [ "Powerhouse", "Striker" ], 5, 30, 4, null, 99, 4000000, null, null, null, null, null, null, null ],
     [ "Baron Tamago, Big Mom Pirates \"Knight\"", "PSY", [ "Striker", "Slasher" ], 3, 16, 4, 2, 50, null, null, null, null, 1064, 572, 82, null ],
     [ "Viscount Hiyoko, Big Mom Pirates \"Knight\"", "PSY", [ "Striker", "Slasher" ], 4, 25, 4, 3, 70, null, null, null, null, 1487, 782, 152, null ],
-    [ "Count Niwatori, Big Mom Pirates \"Knight\"", "PSY", [ "Striker", "Slasher" ], 5, 40, 6, null, 99, 4000000, 100, 100, 100, 100, 100, 100, null ],
+    [ "Count Niwatori, Big Mom Pirates \"Knight\"", "PSY", [ "Striker", "Slasher" ], 5, 40, 6, null, 99, 4000000, null, null, null, null, null, null, null ],
     [ "Vivi", "PSY", [ "Free Spirit", "Cerebral" ], 4, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Vivi, Evolved", "PSY", [ "Free Spirit", "Cerebral" ], 5, 20, 4, 3, 99, null, null, null, null, 2004, 1083, 305, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],

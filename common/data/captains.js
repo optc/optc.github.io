@@ -7946,7 +7946,7 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Slasher") ? 2.25 : 1; }
     },
     2290: {
-        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Slasher") ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) == 2) && (p.orb != 'g')) ? 2.75 : 2.25; : 1; }
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Slasher") ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) == 2) && (p.orb != 'g')) ? 2.75 : 2.25 : 1; }
     },
     2291: {
         atk: function(p) { return 1; },//change this
