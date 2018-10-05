@@ -17136,12 +17136,12 @@ window.details = {
     },
     1431: {//Raid Franky
         captain: "Boosts ATK of all characters by 2x if there's a [STR], [DEX], [QCK], [PSY] and [INT] character in your crew and boosts their HP by 1.2x if there's a Fighter, Slasher, Shooter, Driven, Free Spirit and Powerhouse character in your crew",
-        special: "Deals 100x character's ATK in typeless damage to all enemies, removes enemies' ATK Up, Enrage, End of Turn Damage/Percent Cut and End of Turn Heal Buffs and boosts ATK of all characters by 1.5x for 1 turn",
+        special: "Deals 100x character's ATK in typeless damage to all enemies, removes enemies' ATK Up, Enrage, End of Turn Damage/Percent Cut and End of Turn Heal Buffs duration completely and boosts ATK of all characters by 1.5x for 1 turn",
         specialName: "General Cannon",
     },
     1432: {//Raid Franky
         captain: "Boosts ATK of all characters by 2.5x if there's a [STR], [DEX], [QCK], [PSY] and [INT] character in your crew and boosts their HP by 1.5x if there's a Fighter, Slasher, Shooter, Driven, Free Spirit and Powerhouse character in your crew",
-        special: "Deals 100x character's ATK in typeless damage to all enemies, removes enemies' ATK Up, Enrage, End of Turn Damage/Percent Cut and End of Turn Heal Buffs and boosts ATK of all characters by 1.5x for 1 turn",
+        special: "Deals 100x character's ATK in typeless damage to all enemies, removes enemies' ATK Up, Enrage, End of Turn Damage/Percent Cut and End of Turn Heal Buffs duration completely and boosts ATK of all characters by 1.5x for 1 turn",
         specialName: "General Cannon",
         sailor: {
             "base": "None",
