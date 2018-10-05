@@ -7956,6 +7956,16 @@ window.captains = {
         atk: function(p) { return 1.75; },
         rcv: function(p) { return 1.75; },
     },
+    2295: {
+        atk: function(p){ return p.unit.type == "STR" ? 1.75 : 1; },
+    },
+    2296: {
+        atk: function(p){ return p.unit.class.has("Cerebral") ? 1.75 : 1; },
+    },
+    2297: {
+        atk: function(p){ return p.unit.class.has("Driven") ? 1.5 : 1; },
+        rcv: function(p){ return p.unit.class.has("Driven") ? 1.2 : 1; },
+    },
     2502: {
         hitAtk: function(p) {
             return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 4 :
