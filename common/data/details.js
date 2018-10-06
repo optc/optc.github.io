@@ -17136,12 +17136,12 @@ window.details = {
     },
     1431: {//Raid Franky
         captain: "Boosts ATK of all characters by 2x if there's a [STR], [DEX], [QCK], [PSY] and [INT] character in your crew and boosts their HP by 1.2x if there's a Fighter, Slasher, Shooter, Driven, Free Spirit and Powerhouse character in your crew",
-        special: "Deals 100x character's ATK in typeless damage to all enemies, removes enemies' ATK Up, Enrage, End of Turn Damage/Percent Cut and End of Turn Heal Buffs and boosts ATK of all characters by 1.5x for 1 turn",
+        special: "Deals 100x character's ATK in typeless damage to all enemies, removes enemies' ATK Up, Enrage, End of Turn Damage/Percent Cut and End of Turn Heal Buffs duration completely and boosts ATK of all characters by 1.5x for 1 turn",
         specialName: "General Cannon",
     },
     1432: {//Raid Franky
         captain: "Boosts ATK of all characters by 2.5x if there's a [STR], [DEX], [QCK], [PSY] and [INT] character in your crew and boosts their HP by 1.5x if there's a Fighter, Slasher, Shooter, Driven, Free Spirit and Powerhouse character in your crew",
-        special: "Deals 100x character's ATK in typeless damage to all enemies, removes enemies' ATK Up, Enrage, End of Turn Damage/Percent Cut and End of Turn Heal Buffs and boosts ATK of all characters by 1.5x for 1 turn",
+        special: "Deals 100x character's ATK in typeless damage to all enemies, removes enemies' ATK Up, Enrage, End of Turn Damage/Percent Cut and End of Turn Heal Buffs duration completely and boosts ATK of all characters by 1.5x for 1 turn",
         specialName: "General Cannon",
         sailor: {
             "base": "None",
@@ -34804,14 +34804,32 @@ window.details = {
     2291: {//Vivi
         captain: "Boosts ATK and RCV of all characters by ?x and recovers ?x character's RCV in HP at the end of each turn",
         special: "Removes Blindness duration completely and reduces Paralysis duration by 2 turns. If your Captain is a Free Spirit or Cerebral character, reduces Special Cooldown of all characters by 1 turn and reduces enemy Barrier duration by 1 turn.",
-        specialName: "Sweet Magic",
+        specialName: "The Witch's Tea Party",
         sailor: "Restores her own special cooldown by 2 turns when it is rewinded",
         sailorNotes: "#{rewind : 2}",
     },
     2292: {//Vivi
         captain: "Boosts ATK and RCV of all characters by 1.75x and recovers 5x character's RCV in HP at the end of each turn",
         special: "Removes Blindness duration completely and reduces Paralysis duration by 2 turns. If your Captain is a Free Spirit or Cerebral character, reduces Special Cooldown of all characters by 1 turn and reduces enemy Barrier duration by 1 turn.",
-        specialName: "Sweet Magic",
+        specialName: "The Witch's Tea Party",
+        sailor: "Restores her own special cooldown by 2 turns when it is rewinded",
+        sailorNotes: "#{rewind : 2}",
+    },
+    2295: {//Moria
+        captain: "Boosts ATK of [STR] characters by 1.75x",
+        special: "Reduces Chain Multiplier Limit and Despair duration by 3 turns and deals 50x character's ATK as typeless damage to all enemies at the end of the turn for 3 turns",
+        specialName: "Undead Dance Hall",
+    },
+    2296: {//Rayleigh
+        captain: "Boosts ATK of Cerebral characters by 1.75x",
+        special: "Removes all positive buffs on your team and adds 0.5 to Chain multiplier for 1 turn. If you are on a Treasure Map, amplifies the effects of orbs for [STR], [DEX] and [PSY] characters depending on your Treasure Map Level for 1 turn",
+        specialName: "Enjoying the Elegant Night",
+        specialNotes: "Level 1-10: 1.75x orb boost<br\>Level 11-20: 2x orb boost<br\>Level 21+: 2.25x orb boost",
+    },
+    2297: {//Perona
+        captain: "Boosts ATK of Driven characters by 1.5x and their RCV by 1.2x",
+        special: "Reduces Special Cooldown of your right column by 1 turn, reduces enemy Damage Nullification duration by 1 turn and recovers 15x character's RCV in HP.",
+        specialName: "Inject Hollow",
         sailor: "Restores her own special cooldown by 2 turns when it is rewinded",
         sailorNotes: "#{rewind : 2}",
     },

@@ -2291,4 +2291,9 @@ window.families = [
     "Tamago",
     "Nefertari Vivi",
     "Nefertari Vivi",
+    "Charlotte Katakuri",
+    "Charlotte Katakuri",
+    "Gecko Moria",
+    "Silvers Rayleigh",
+    "Perona",
 ];

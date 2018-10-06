@@ -2885,7 +2885,8 @@ window.drops = {
             thumb: 1300,
             global: true,
             nakama: 6130000,
-            'All Difficulties': [ 1299, 1305, 1325 ],
+            'Part 1': [ 1299, 1305, 1325 ],
+            'Part 2': [ 2291 ],
         },
         
         {
