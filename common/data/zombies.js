@@ -640,7 +640,7 @@ window.zombies = {
     },
     2291: { // Vivi
         type: 'healer',
-        multiplier: 1//Change this
+        multiplier: 3
     },
     2292: { // Vivi
         type: 'healer',

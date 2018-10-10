@@ -2830,6 +2830,14 @@ window.drops = {
             gamewith: 119738,
             'Raging Sea': [ 2260 ]
         },
+
+        {
+            name: 'Boa Hancock',
+            thumb: 2299,
+            nakama: null,
+            gamewith: null,
+            'Raging Sea': [ 2298 ]
+        },
         
     ],
 
