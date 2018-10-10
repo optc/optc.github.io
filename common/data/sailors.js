@@ -563,6 +563,21 @@ window.sailors = {
     2273: {
         atkStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse") ? 50 : 0; },
     },
+    2284: {
+        atkStatic: function(p) { return 50; },
+    },
+    2285: {
+        atkStatic: function(p) { return 50; },
+    },
+    2288: {
+        atkStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 50 : 0; },
+    },
+    2289: {
+        atkStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 50 : 0; },
+    },
+    2290: {
+        atkStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 50 : 0; },
+    },
     2502: {
         staticMult: function(p) { return 3; }
     },
