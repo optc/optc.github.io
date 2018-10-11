@@ -2296,4 +2296,6 @@ window.families = [
     "Gecko Moria",
     "Silvers Rayleigh",
     "Perona",
+    "Boa Hancock",
+    "Boa Hancock",
 ];

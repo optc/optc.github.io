@@ -7924,13 +7924,13 @@ window.captains = {
         hp: function(p){ return (p.unit.type == "DEX" || p.unit.type == "QCK" || p.unit.type == "INT") ? 1.2 : 1; }, 
     },
     2282: {
-        atk: function(p) { var multiplier = 1; multiplier *= (p.unit.class.has("Fighter") || p.unit.class.has("Cerebral")) ? 2.25 : 1; multiplier *= p.unit.cost <= 30 ? 1.1 : 1; return multiplier; },
+        atk: function(p) { var multiplier = 1; multiplier *= (p.unit.class.has("Fighter") || p.unit.class.has("Cerebral")) ? 2.25 : 1; multiplier *= p.unit.cost <= 30 ? 1.1 : 1; return multiplier; }
     },
     2283: {
         atk: function(p) { var multiplier = 1; multiplier *= (p.unit.class.has("Fighter") || p.unit.class.has("Cerebral")) ? 2.75 : 1; multiplier *= p.unit.cost <= 30 ? 1.1 : 1; return multiplier; },
     },
     2284: {
-        atk: function(p) { return p.unit.class.has("Powerhouse") ? 3.25 : 1; },//change this
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 2.75 : 1; }
     },
     2285: {
         atk: function(p) { return p.unit.class.has("Powerhouse") ? 3.25 : 1; },
@@ -7953,8 +7953,7 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Slasher") ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) == 2) && (p.orb != 'g')) ? 2.75 : 2.25 : 1; }
     },
     2291: {
-        atk: function(p) { return 1; },//change this
-        rcv: function(p) { return 1; },//change this
+        atk: function(p) { return 1.5; },
     },
     2292: {
         atk: function(p) { return 1.75; },
@@ -7969,6 +7968,18 @@ window.captains = {
     2297: {
         atk: function(p){ return p.unit.class.has("Driven") ? 1.5 : 1; },
         rcv: function(p){ return p.unit.class.has("Driven") ? 1.2 : 1; },
+    },
+    2298: {
+        atk: function(p) {
+            return p.unit.class.has("Shooter") ? Math.min(1, 2.25 + (1/6) * p.turnCounter) : 1;//change this
+        },
+        rcv: function(p){ return p.unit.class.has("Shooter") ? 1 : 1; },//change this
+    },
+    2299: {
+        atk: function(p) {
+            return p.unit.class.has("Shooter") ? Math.min(3.25, 2.25 + (1/6) * p.turnCounter) : 1;//Add limit break change this
+        },
+        rcv: function(p){ return p.unit.class.has("Shooter") ? 1.3 : 1; },//Add limit break change this
     },
     2502: {
         hitAtk: function(p) {

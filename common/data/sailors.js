@@ -579,6 +579,12 @@ window.sailors = {
         hpStatic: function(p) { return p.unit.type == "DEX" ? 30 : 0; },
         rcvStatic: function(p) { return p.unit.type == "DEX" ? 30 : 0; },
     },
+    2284: {
+        atkStatic: function(p) { return 50; },
+    },
+    2285: {
+        atkStatic: function(p) { return 50; },
+    },
     2287: {
         atkStatic: function(p) { return p.unit.type == "STR" ? 50 : 0; },
     },

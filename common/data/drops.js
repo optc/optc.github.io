@@ -2805,6 +2805,7 @@ window.drops = {
         {
             name: 'Crocodile',
             thumb: 2137,
+            global: true,
             nakama: 8213700,
             gamewith: 109127,
             'Primordial Sea': [ 2136 ]
@@ -2832,6 +2833,14 @@ window.drops = {
             nakama: null,
             gamewith: 119738,
             'Calm Sea': [ 2260 ]
+        },
+
+        {
+            name: 'Boa Hancock',
+            thumb: 2299,
+            nakama: null,
+            gamewith: null,
+            'Raging Sea': [ 2298 ]
         },
         
     ],
