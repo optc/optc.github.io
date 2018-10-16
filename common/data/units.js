@@ -2264,7 +2264,7 @@ window.units = [
     [ "Donquixote Doflamingo, Plot to Destroy the World", "INT", [ "Driven", "Cerebral" ], 5, 50, 4, 3, 99, 5000000, 1243, 701, 137, 2319, 1515, 333, 1 ],
     [ "Jinbe, Sun Pirates Captain", "DEX", [ "Powerhouse", "Fighter" ], 5, 30, 5, 3, 70, 1066998, 672, 342, 25, 1681, 1099, 98, 1 ],
     [ "Knight of the Sea Jinbe, Sun Pirates Captain", "DEX", [ "Powerhouse", "Fighter" ], 6, 55, 4, 5, 99, 5000000, 1621, 1072, 82, 3648, 1572, 268, 1 ],
-    [ "Aladdin, Sun Pirates Former Doctor", "STR", [ "Powerhouse", "Fighter" ], 4, 15, 5, 3, 50, 392109, 422, 281, 1131, 821, 81, 1 ],
+    [ "Aladdin, Sun Pirates Former Doctor", "STR", [ "Powerhouse", "Fighter" ], 4, 15, 5, 3, 50, 392109, 422, 281, 18, 1131, 821, 81, 1 ],
     [ "Aladdin, Sun Pirates First Mate", "STR", [ "Powerhouse", "Fighter" ], 5, 30, 4, 4, 99, 4000000, 1120, 812, 72, 2882, 1382, 220, 1 ],
     [ "Charlotte Praline", "DEX", [ "Cerebral", "Powerhouse" ], 4, 15, 5, 3, 50, 392109, 321, 272, 45, 901, 782, 156, 1 ],
     [ "Charlotte Praline, Charlotte Family 21st Daughter", "DEX", [ "Cerebral", "Powerhouse" ], 5, 30, 4, 4, 99, 4000000, 872, 732, 133, 2288, 1234, 401, 1 ],

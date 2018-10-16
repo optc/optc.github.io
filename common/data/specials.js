@@ -4313,7 +4313,7 @@ window.specials = {
         onActivation: function(p) {
             window.specials[1960].turnedOn = true;
             p.scope.notify({
-                text: 'Only affects Captain Ability if Pudding is your captain',
+                text: 'Captain Ability boost effect only works if Pudding\'s special is activated in the same turn',
                 name: '1960warning'
             });
         },
@@ -4327,7 +4327,7 @@ window.specials = {
         onActivation: function(p) {
             window.specials[1961].turnedOn = true;
             p.scope.notify({
-                text: 'Only affects Captain Ability if Pudding is your captain',
+                text: 'Captain Ability boost effect only works if Pudding\'s special is activated in the same turn',
                 name: '1961warning'
             });
         },
@@ -4341,7 +4341,7 @@ window.specials = {
         onActivation: function(p) {
             window.specials[1962].turnedOn = true;
             p.scope.notify({
-                text: 'Only affects Captain Ability if Sanji is your captain',
+                text: 'Captain Ability boost effect only works if Sanji\'s special is activated in the same turn',
                 name: '1962warning'
             });
         },
@@ -4359,7 +4359,7 @@ window.specials = {
         onActivation: function(p) {
             window.specials[1963].turnedOn = true;
             p.scope.notify({
-                text: 'Only affects Captain Ability if Sanji is your captain',
+                text: 'Captain Ability boost effect only works if Sanji\'s special is activated in the same turn',
                 name: '1963warning'
             });
         },
@@ -5089,10 +5089,12 @@ window.specials = {
     2112: {
         atk: function(p) { return ((p.delayed > 0) && (p.unit.class.has("Fighter") || p.unit.class.has("Striker") || p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse"))) ? 1.75 : 1; },
         type: "condition",
+        warning: "Selected special (%name%) assumes that the enemy has been Delayed.",
     },
     2113: {
         atk: function(p) { return ((p.delayed > 0) && (p.unit.class.has("Fighter") || p.unit.class.has("Striker") || p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse"))) ? 1.75 : 1; },
         type: "condition",
+        warning: "Selected special (%name%) assumes that the enemy has been Delayed.",
     },
     2114: {
         staticMult: function(p) { return 30; }
@@ -5164,7 +5166,7 @@ window.specials = {
             var n = (window.specials[2131].multiplier == 1.75 ? 1 : window.specials[2131].multiplier == 2 ? 2 : 0);
             window.specials[2131].multiplier = [1.75, 2, 2.25][n];
             p.scope.notify({
-                text: 'Using the ' + [1.75, 2, 2.25][n] + 'x ATK boost. To switch to the ' + [2.25, 1.75, 2][n] + 'x ATK boost, disable and re-enable this special',
+                text: 'Using the ' + [1.75, 2, 2.25][n] + 'x ATK boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x ATK boost, disable and re-enable this special',
                 name: '2131warning'
             });
         },
@@ -5176,7 +5178,7 @@ window.specials = {
             var n = (window.specials[2132].multiplier == 1.75 ? 1 : window.specials[2132].multiplier == 2 ? 2 : 0);
             window.specials[2132].multiplier = [1.75, 2, 2.25][n];
             p.scope.notify({
-                text: 'Using the ' + [1.75, 2, 2.25][n] + 'x ATK boost. To switch to the ' + [2.25, 1.75, 2][n] + 'x ATK boost, disable and re-enable this special',
+                text: 'Using the ' + [1.75, 2, 2.25][n] + 'x ATK boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x ATK boost, disable and re-enable this special',
                 name: '2132warning'
             });
         },

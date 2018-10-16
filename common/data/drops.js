@@ -2047,8 +2047,9 @@ window.drops = {
         },
         
         {
-            name: 'Germa\'s Lineage Factor!',
+            name: 'The Germa Bloodline Elements',
             thumb: 2056,
+            global: true,
             nakama: 2205600,
             gamewith: 99699,
             'All Difficulties': [ 2056, 2057, 2058, -1880, -1434, -1412, -1906, -1908, -1859, -1637 ]
@@ -3223,8 +3224,9 @@ window.drops = {
         },
         
         {
-            name: 'Germa Revival Plan!',
+            name: 'Germa Resurrection​ Plan!',
             thumb: 2138,
+            global: true,
             nakama: 6128001,
             gamewith: 109674,
             showManual: true,
@@ -3277,6 +3279,7 @@ window.drops = {
         {
             name: '3 Stamina Ranking! Vs Jinbe',
             thumb: 1700,
+            global: true,
             nakama: 6170000,
             gamewith: 107881,
             condition: "Challenge: Characters with a cost of 50 or below. Crew's Special gauge is maxed",
