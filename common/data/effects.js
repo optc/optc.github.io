@@ -432,7 +432,7 @@ window.effects = {
 
     'Treasure Map [Japan]': {
         description: 'Boost stats of characters, check in-game news for lists.',
-        thumb: 2261,
+        thumb: 2299,
         id: 44, // don't change this
         atk: function(p) {
             var boost = 1;

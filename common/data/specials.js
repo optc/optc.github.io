@@ -5942,7 +5942,6 @@ window.specials = {
     },
     2280: {
         affinity: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "PSY") ? window.specials[2280].multiplier : 1; },
-        type: "class",
         onActivation: function(p) {
             if (p.colorCount.DEX >= 3) window.specials[2280].multiplier = 2;
             else window.specials[2280].multiplier = 1;
@@ -5950,7 +5949,6 @@ window.specials = {
     },
     2281: {
         affinity: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "PSY") ? window.specials[2281].multiplier : 1; },
-        type: "class",
         onActivation: function(p) {
             if (p.colorCount.DEX >= 3) window.specials[2281].multiplier = 2;
             else window.specials[2281].multiplier = 1;
@@ -5995,7 +5993,6 @@ window.specials = {
     2288: {
         rcv: function(p) { return window.specials[2288].multiplier != 0 ? 1.5 : 1; },
         staticMult: function(p) { return window.specials[2288].multiplier != 1 ? 45 : 0; },
-        type: "type",
         onActivation: function(p) {
             var n = (window.specials[2288].multiplier == 1 ? 2 : (window.specials[2288].multiplier == 2 | window.specials[2288].multiplier == undefined) ? 0 : 1);
             window.specials[2288].multiplier = n;
@@ -6008,7 +6005,6 @@ window.specials = {
     2289: {
         rcv: function(p) { return window.specials[2289].multiplier != 0 ? 1.5 : 1; },
         staticMult: function(p) { return window.specials[2289].multiplier != 1 ? 45 : 0; },
-        type: "type",
         onActivation: function(p) {
             var n = (window.specials[2289].multiplier == 1 ? 2 : (window.specials[2289].multiplier == 2 | window.specials[2289].multiplier == undefined) ? 0 : 1);
             window.specials[2289].multiplier = n;
@@ -6021,7 +6017,6 @@ window.specials = {
     2290: {
         rcv: function(p) { return window.specials[2290].multiplier != 0 ? 1.5 : 1; },
         staticMult: function(p) { return window.specials[2290].multiplier != 1 ? 45 : 0; },
-        type: "type",
         onActivation: function(p) {
             var n = (window.specials[2290].multiplier == 1 ? 2 : (window.specials[2290].multiplier == 2 | window.specials[2290].multiplier == undefined) ? 0 : 1);
             window.specials[2290].multiplier = n;
@@ -6029,6 +6024,22 @@ window.specials = {
                 text: 'Using the ' + ['Sabo Buff', 'RCV boost', 'RCV boost and Sabo Buff'][n] + '. To switch to the ' + ['RCV boost', 'RCV boost and Sabo Buff', 'Sabo Buff'][n] + ', disable and re-enable this special',
                 name: '2290warning'
             });
+        }
+    },
+    2293: {
+        atk: function(p) { return p.unit.class.has("Cerebral") ? window.specials[2293].multiplier : 1; },
+        type: "class",
+        onActivation: function(p) {
+            if (p.captain.class.has("Cerebral")) window.specials[2293].multiplier = 1.5;
+            else window.specials[2293].multiplier = 1;
+        }
+    },
+    2294: {
+        atk: function(p) { return p.unit.class.has("Cerebral") ? window.specials[2294].multiplier : 1; },
+        type: "class",
+        onActivation: function(p) {
+            if (p.captain.class.has("Cerebral")) window.specials[2294].multiplier = 1.5;
+            else window.specials[2294].multiplier = 1;
         }
     },
     2296: {

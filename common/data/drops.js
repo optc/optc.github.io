@@ -2835,7 +2835,7 @@ window.drops = {
             name: 'Boa Hancock',
             thumb: 2299,
             nakama: null,
-            gamewith: null,
+            gamewith: 123536,
             'Raging Sea': [ 2298 ]
         },
         
@@ -2886,12 +2886,19 @@ window.drops = {
         },
         
         {
-            name: 'Halloween Event Characters',
+            name: 'Dead or Treat!! Monster\'s Party',
             thumb: 1300,
             global: true,
             nakama: 6130000,
-            'Part 1': [ 1299, 1305, 1325 ],
-            'Part 2': [ 2291 ],
+            gamewith: 44161,
+            'All Difficulties': [ 1299, 1305, 1325 ],
+        },
+        
+        {
+            name: 'Dead or Treat!! Sweetie Party',
+            thumb: 2292,
+            gamewith: 122996,
+            'All Difficulties': [ 2291 ],
         },
         
         {

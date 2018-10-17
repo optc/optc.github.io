@@ -7955,6 +7955,14 @@ window.captains = {
         atk: function(p) { return 1.75; },
         rcv: function(p) { return 1.75; },
     },
+    2293: {
+        atk: function(p) { return 1; },//change this
+        hp: function(p) { return 1; },//change this
+    },
+    2294: {
+        atk: function(p) { return 1.75; },
+        hp: function(p) { return 1.2; },
+    },
     2295: {
         atk: function(p){ return p.unit.type == "STR" ? 1.75 : 1; },
     },
@@ -7973,9 +7981,9 @@ window.captains = {
     },
     2299: {
         atk: function(p) {
-            return p.unit.class.has("Shooter") ? Math.min(3.25, 2.25 + (1/6) * p.turnCounter) : 1;//Add limit break change this
+            return p.unit.class.has("Shooter") ? p.actions[p.sourceSlot] ? Math.min(3.25, 2.25 + (1/6) * p.turnCounter) :  Math.min(2.5, 1.5 + (1/6) * p.turnCounter) : 1;
         },
-        rcv: function(p){ return p.unit.class.has("Shooter") ? 1.3 : 1; },//Add limit break change this
+        rcv: function(p){ return p.unit.class.has("Shooter") ? p.actions[p.sourceSlot] ? 1.3 : 1.1 : 1; },//Add limit break change this
     },
     2502: {
         hitAtk: function(p) {
