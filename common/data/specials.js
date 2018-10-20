@@ -5087,12 +5087,12 @@ window.specials = {
         type: "type",
     },
     2112: {
-        atk: function(p) { return ((p.delayed > 0) && (p.unit.class.has("Fighter") || p.unit.class.has("Striker") || p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse"))) ? 1.75 : 1; },
+        atk: function(p) { return (p.delayed > 0) ? 1.75 : 1; },
         type: "condition",
         warning: "Selected special (%name%) assumes that the enemy has been Delayed.",
     },
     2113: {
-        atk: function(p) { return ((p.delayed > 0) && (p.unit.class.has("Fighter") || p.unit.class.has("Striker") || p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse"))) ? 1.75 : 1; },
+        atk: function(p) { return (p.delayed > 0) ? 1.75 : 1; },
         type: "condition",
         warning: "Selected special (%name%) assumes that the enemy has been Delayed.",
     },
