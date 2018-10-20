@@ -31374,7 +31374,7 @@ window.details = {
     2139: {//Reiju
         captain: "Boosts ATK of [PSY] characters by 2.25x and Powerhouse characters by 1.4x and the RCV of Powerhouse characters by 1.2x",
         captainNotes: "Attack boost stacks, so a [PSY] Powerhouse character has a 3.15x ATK",
-        special: "If your captain is [INT] or [PSY], reduces crew's ATK DOWN and Silence duration by 3 turns and inflicts Toxic to all enemies. If your Captain is a Powerhouse character, boosts ATK against enemies inflicted with Toxic by 1.75x for 1 turn",
+        special: "If your captain is [PSY] or [INT] character, reduces crew's ATK DOWN and Silence duration by 3 turns and inflicts Toxic to all enemies. If your Captain is a Powerhouse character, boosts ATK against enemies inflicted with Toxic by 1.75x for 1 turn",
         specialName: "Dangerous Butterfly",
         specialNotes: "#{toxic : 20x : 2x : 500,000}<br>If enemies are both Poisoned and inflicted with Toxic, only the Toxic damage will damage the enemy at the end of the turn.",
         sailor: {
@@ -34721,19 +34721,36 @@ window.details = {
         potentialNotes: "#{enrage}"
     },
     2286: {//LRR Judge
-        captain: "Not Translated",
-        special: "Reduces any damage received above 5,000 HP by 90% for 1 turn. If your Captain is a Powerhouse or Striker character, changes [G], [BLOCK] and [EMPTY] orbs into Matching orbs and boosts ATK of [STR] characters by 1.75x for 1 turn. If \"Judge Special\" is used again in the same turn the special is activated in, boosts ATK of [STR] characters by 2.25x for 1 turn.",
+        captain: "Boosts ATK of [STR] characters by 2.75x",
+        special: "Reduces any damage received above 5,000 HP by 90% for 1 turn. If your Captain is a Powerhouse or Striker character, changes [G], [BLOCK] and [EMPTY] orbs into Matching orbs and boosts ATK of [STR] characters by 1.75x for 1 turn. If \"Clone Soldier Wall\" is used again in the same turn the special is activated in, boosts ATK of [STR] characters by 2.25x for 1 turn.",
         specialName: "Clone Soldier Wall",
+        sailor: "Boosts base ATK of [STR] characters by 50",
     },
     2287: {//LRR Judge
         captain: "Boosts ATK of [STR] characters by 3.5x and their HP by 1.2x and makes [QCK] orbs \"beneficial\" to all characters",
-        special: "Reduces any damage received above 5,000 HP by 90% for 1 turn. If your Captain is a Powerhouse or Striker character, changes [G], [BLOCK] and [EMPTY] orbs into Matching orbs and boosts ATK of [STR] characters by 1.75x for 1 turn. If \"Judge Special\" is used again in the same turn the special is activated in, boosts ATK of [STR] characters by 2.25x for 1 turn.",
+        special: "Reduces any damage received above 5,000 HP by 90% for 1 turn. If your Captain is a Powerhouse or Striker character, changes [G], [BLOCK] and [EMPTY] orbs into Matching orbs and boosts ATK of [STR] characters by 1.75x for 1 turn. If \"Clone Soldier Wall\" is used again in the same turn the special is activated in, boosts ATK of [STR] characters by 2.25x for 1 turn.",
         specialName: "Clone Soldier Wall",
         sailor: {
-            "base": "None",
-            "level1": "Boosts base ATK of [STR] characters by 50",
-            "level2": "If this character has a [STR] orb and you hit a PERFECT with him, keep his [STR] orb for the next turn",
+            "base": "Boosts base ATK of [STR] characters by 50",
+            "level1": "If this character has a [STR] orb and you hit a PERFECT with him, keep his [STR] orb for the next turn",
         },
+        limit: [
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base RCV by 15" },
+            { "description": "Boosts base RCV by 25" },
+            { "description": "Acquire Potential 1: Double Special Activation" },
+            { "description": "Boosts base HP by 20" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base HP by 60" },
+            { "description": "Boosts base HP by 90" },
+            { "description": "Acquire Sailor Ability 1: If this character has a [STR] orb and you hit a PERFECT with him, keep his [STR] orb for the next turn" },
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Boosts base ATK by 15" },
+            { "description": "Boosts base ATK by 25" },
+            { "description": "Boosts base ATK by 50" },
+            { "description": "Acquire Potential 2: Enrage" },
+        ],
         potential: [
             {
                 "Name": "Double Special Activation",
@@ -34863,7 +34880,7 @@ window.details = {
         sailorNotes: "#{rewind : 2}",
     },
     2298: {//TM Hancock
-        captain: "Boosts ATK of Shooter characters by ?x and their RCV by ?x. If you defeat an enemy, increases ATK boost slightly. Stacks up to 6 times to a maximum of ?x.",
+        captain: "Boosts ATK of Shooter characters by 1.5x and their RCV by 1.1x",
         special: "Reduces the defense of all enemies by 100% for 1 turn, reduces enemies' Threshold Damage Reduction, ATK Up, End of Turn Heal and Resilience Buffs duration by 2 turns, recovers 10,310 HP, Changes Captain's [EMPTY] orb into an [INT] orb and locks Captain's orb for 1 turn. If your Captain's orb is [INT] at the time the special is activated, boosts ATK against enemies with reduced defense by 1.75x for 1 turn and changes Captain's orb into [PSY]. If your Captain's orb is [PSY] at the time the special is activated, amplifies the effect of orbs for Shooter characters by 2x for 1 turn and changes Captain's orb into [INT].",
         specialName: "Mischievous Love-Love Beam",
     },

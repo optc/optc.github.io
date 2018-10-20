@@ -2083,6 +2083,7 @@ window.drops = {
         {
             name: 'Coliseum Executioner! Diamante',
             thumb: 2146,
+            global: true,
             nakama: 2214600,
             gamewith: 109800,
             'All Difficulties': [ 2143, 2145, -2013, -1991, -1989, -1951, -1718, -1475 ]
@@ -2648,6 +2649,7 @@ window.drops = {
         {
             name: 'Clash!! Cracker',
             thumb: 2158,
+            global: true,
             nakama: 4215800,
             gamewith: 110184,
             Ultimate: [ 2157 ],
@@ -3421,7 +3423,7 @@ window.drops = {
         
         {
             name: 'Forest of Training: Gang',
-            thumb: 1016,
+            thumb: 2229,
             nakama: 7101600,
             gamewith: 107299,
             completion: 'Ship: Nostra Castello',
@@ -3429,7 +3431,7 @@ window.drops = {
         
         {
             name: 'Forest of Training: Mother',
-            thumb: 1016,
+            thumb: 2234,
             nakama: null,
             gamewith: 118924,
             completion: 'Ship: Queen Mama Chanter',

@@ -7936,8 +7936,7 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Powerhouse") ? 3.25 : 1; },
     },
     2286: {
-        atk: function(p){ return p.unit.type == "STR" ? 1 : 1; },//change this
-        hp: function(p){ return p.unit.type == "STR" ? 1 : 1; },//change this
+        atk: function(p){ return p.unit.type == "STR" ? 2.75 : 1; },
     },
     2287: {
         atk: function(p){ return p.unit.type == "STR" ? 3.25 : 1; },
@@ -7978,16 +7977,14 @@ window.captains = {
         rcv: function(p){ return p.unit.class.has("Driven") ? 1.2 : 1; },
     },
     2298: {
-        atk: function(p) {
-            return p.unit.class.has("Shooter") ? Math.min(1, 2.25 + (1/6) * p.turnCounter) : 1;//change this
-        },
-        rcv: function(p){ return p.unit.class.has("Shooter") ? 1 : 1; },//change this
+        atk: function(p) { return p.unit.class.has("Shooter") ? 1.5 : 1; },
+        rcv: function(p){ return p.unit.class.has("Shooter") ? 1.1 : 1; },
     },
     2299: {
         atk: function(p) {
             return p.unit.class.has("Shooter") ? p.actions[p.sourceSlot] ? Math.min(3.25, 2.25 + (1/6) * p.turnCounter) :  Math.min(2.5, 1.5 + (1/6) * p.turnCounter) : 1;
         },
-        rcv: function(p){ return p.unit.class.has("Shooter") ? p.actions[p.sourceSlot] ? 1.3 : 1.1 : 1; },//Add limit break change this
+        rcv: function(p){ return p.unit.class.has("Shooter") ? p.actions[p.sourceSlot] ? 1.3 : 1.1 : 1; },
     },
     2502: {
         hitAtk: function(p) {
