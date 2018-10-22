@@ -7959,8 +7959,7 @@ window.captains = {
         rcv: function(p) { return 1.75; },
     },
     2293: {
-        atk: function(p) { return 1; },//change this
-        hp: function(p) { return 1; },//change this
+        atk: function(p) { return 1.5; },
     },
     2294: {
         atk: function(p) { return 1.75; },

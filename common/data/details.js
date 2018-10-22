@@ -11727,7 +11727,7 @@ window.details = {
         specialName: "Lion's Threat: Imperial Earth Bind",
         sailor: {
             "base": "None",
-            "level1": "Boosts base ATK of Driven characters by 50",
+            "level1": "Boosts base HP of Driven characters by 50",
         },
         limit: [
             { "description": "Boosts base ATK by 20" },
@@ -34850,15 +34850,15 @@ window.details = {
         sailorNotes: "#{rewind : 2}",
     },
     2293: {//Katakuri
-        captain: "Boosts ATK of all characters by ?x, their HP by ?x and deals ?x character's ATK in [DEX] damage to all enemies at the end of each turn",
+        captain: "Boosts ATK of all characters by 1.5x and deals 5x character's ATK in [DEX] damage to all enemies at the end of each turn",
         special: "Reduces Increase Damage Taken and ATK DOWN duration by 3 turns, changes [BLOCK], [BOMB] [EMPTY] and Badly Matching orbs into [RCV] orbs. If your Captain is a Cerebral character, boosts ATK of Cerebral characters by 1.5x for 1 turn and makes [RCV] orbs \"beneficial\" for Cerebral characters for 1 turn",
-        specialName: "Katakuri Special",
+        specialName: "A Bliss for the Moment",
         sailor: "If your Captain is a Cerebral character, reduces Paralysis duration by 1 turn",
     },
     2294: {//Katakuri
         captain: "Boosts ATK of all characters by 1.75x, their HP by 1.2x and deals 5x character's ATK in [DEX] damage to all enemies at the end of each turn",
         special: "Reduces Increase Damage Taken and ATK DOWN duration by 3 turns, changes [BLOCK], [BOMB] [EMPTY] and Badly Matching orbs into [RCV] orbs. If your Captain is a Cerebral character, boosts ATK of Cerebral characters by 1.5x for 1 turn and makes [RCV] orbs \"beneficial\" for Cerebral characters for 1 turn",
-        specialName: "Katakuri Special",
+        specialName: "A Bliss for the Moment",
         sailor: "If your Captain is a Cerebral character, reduces Paralysis duration by 1 turn",
     },
     2295: {//Moria

@@ -2905,7 +2905,9 @@ window.drops = {
             name: 'Dead or Treat!! Sweetie Party',
             thumb: 2292,
             gamewith: 122996,
-            'All Difficulties': [ 2291 ],
+            nakama: null,
+            'Part 1': [ 2291 ],
+            'Part 2': [ 2293 ],
         },
         
         {
@@ -3257,6 +3259,14 @@ window.drops = {
             nakama: null,
             gamewith: 119604,
             'All Difficulties': [ 9022 ],
+        },
+        
+        {
+            name: 'Stouthearted! Strawhat Pirates',
+            thumb: null,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 9023, 9024 ],
         },
         
         {
