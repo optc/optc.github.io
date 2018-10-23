@@ -2243,7 +2243,7 @@ window.families = [
     "Charlotte Cracker",
     "Charlotte Daifuku",
     "Charlotte Daifuku",
-    null,
+    "Sanji",
     "Nefertari Vivi",
     "Nefertari Vivi",
     "Charlotte Daifuku",
@@ -2298,4 +2298,5 @@ window.families = [
     "Perona",
     "Boa Hancock",
     "Boa Hancock",
+    "Franky",
 ];

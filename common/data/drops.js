@@ -1913,7 +1913,7 @@ window.drops = {
             nakama: 2177400,
             condition: 'Shooter and Free Spirit characters get a boost (1.2x ATK, HP and RCV boost on 30 stamina)',
             gamewith: 68608,
-            'All Difficulties': [ 1773, 1775, -963, -1588, -451, -1186, -528, -1177, -1208, -558, -1616, -1618, -1392 ]
+            'All Difficulties': [ 1773, 1775, -963, -1588, -2245, -451, -1186, -528, -1177, -1208, -558, -1616, -1618, -1392 ]
         },
         
         {
@@ -2047,8 +2047,9 @@ window.drops = {
         },
         
         {
-            name: 'Germa\'s Lineage Factor!',
+            name: 'The Germa Bloodline Elements',
             thumb: 2056,
+            global: true,
             nakama: 2205600,
             gamewith: 99699,
             'All Difficulties': [ 2056, 2057, 2058, -1880, -1434, -1412, -1906, -1908, -1859, -1637 ]
@@ -2067,12 +2068,13 @@ window.drops = {
             thumb: 2092,
             nakama: 2209200,
             gamewith: 106868,
-            'All Difficulties': [ 2091, 2092, 2093, 2094, 2095, -1935, -1436, -1438, -1926, -1955, -1715 ]
+            'All Difficulties': [ 2091, 2092, 2093, 2094, 2095, -1935, -2300, -1436, -1438, -1926, -1955, -1715 ]
         },
         
         {
             name: 'Brûlée\'s Cauldron Party',
             thumb: 2127,
+            global: true,
             nakama: 2212700,
             gamewith: 108421,
             'All Difficulties': [ 2127, 2128, 2129, 2130, -1473, -1477, -1974, -1953, -1957, -1717 ]
@@ -2081,6 +2083,7 @@ window.drops = {
         {
             name: 'Coliseum Executioner! Diamante',
             thumb: 2146,
+            global: true,
             nakama: 2214600,
             gamewith: 109800,
             'All Difficulties': [ 2143, 2145, -2013, -1991, -1989, -1951, -1718, -1475 ]
@@ -2646,6 +2649,7 @@ window.drops = {
         {
             name: 'Clash!! Cracker',
             thumb: 2158,
+            global: true,
             nakama: 4215800,
             gamewith: 110184,
             Ultimate: [ 2157 ],
@@ -2802,6 +2806,7 @@ window.drops = {
         {
             name: 'Crocodile',
             thumb: 2137,
+            global: true,
             nakama: 8213700,
             gamewith: 109127,
             'Primordial Sea': [ 2136 ]
@@ -2898,7 +2903,7 @@ window.drops = {
             name: 'Dead or Treat!! Sweetie Party',
             thumb: 2292,
             gamewith: 122996,
-            'All Difficulties': [ 2291 ],
+            'All Difficulties': [ 2291, 2293 ],
         },
         
         {
@@ -3147,7 +3152,7 @@ window.drops = {
             'Monkey D. Luffy': [ -416, -1404, -1445, -1532, -1543, -1593, -1747, -671, -673, -906, -910, -520, -1115, -1364, -1368, -1534, -1536, -1741, -1743, -1745 ],
             'Lucy': [ -562, -578, -669, -1121, -1492, -1794, -1816, -641, -1025, -1029, -1033, -1079, -1125, -1129, -1798, -1800, -1802, -1873, -1877 ],
             'Fujitora': [ -870, -1035, -1123, -1869, -1928, -995, -1232, -1234, -1236, -1238, -1318, -1320, -1796, -1871, -1904, -1906, -1908 ],
-            'Judge': [ -367, -1588, -1610, -2232, -1619, -1832, -2138, -410, -675, -677, -912, -937, -560, -1212, -1542, -1702, -1834, -2139, -1836, -2140, -1838, -2141, -1840, -2142 ],
+            'Judge': [ -367, -1588, -2245, -1610, -2232, -1619, -1832, -2138, -410, -675, -677, -912, -937, -560, -1212, -1542, -1702, -1834, -2139, -1836, -2140, -1838, -2141, -1840, -2142 ],
         },
         
         {
@@ -3215,6 +3220,7 @@ window.drops = {
         {
             name: 'Germa Revival Plan!',
             thumb: 2138,
+            global: true,
             nakama: 6128001,
             gamewith: 109674,
             showManual: true,
@@ -3236,6 +3242,14 @@ window.drops = {
             nakama: null,
             gamewith: 119604,
             'All Difficulties': [ 9022 ],
+        },
+        
+        {
+            name: 'Push Forward! Straw Hat Crew!',
+            thumb: 2300,
+            gamewith: 124622,
+            showManual: true,
+            'All Difficulties': [ 9023, 9024, -1935, -2300, -1588, -2245, -2245 ],
         },
         
         {

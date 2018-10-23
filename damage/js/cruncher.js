@@ -247,7 +247,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if (orb =='meat'){
                 for (temp = 0; temp < 2; temp++){
                     if (team[temp].unit != null){
-                        if ([ 1610, 1609, 1532, 1531, 2232, 2233, 2234 ].includes(team[temp].unit.number + 1)){
+                        if ([ 1610, 1609, 1532, 1531, 2232, 2233, 2234, 2300 ].includes(team[temp].unit.number + 1)){
                             orb = 2;
                         }
                         if ([ 2012, 2013 ].includes(team[temp].unit.number + 1) && x.unit.class.has("Free Spirit")){

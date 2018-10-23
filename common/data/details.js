@@ -20057,7 +20057,7 @@ window.details = {
         specialName: "Firey Morale",
     },
     1587: {//Legend Sanji
-        captain: "Boosts ATK of all characters by 2.5x and their HP by 1.3x <br> <b>Action:</b> Sanji Sky Walks into the air for 1 turn, preventing all debuffs to himself (Including, but not limited to, Bind, Despair, Silence and Paralysis). This does not remove his own Captain boost while he is unable to attack. During the next turn, boosts own ATK by 6.25x instead",
+        captain: "Boosts ATK of all characters by 2.5x and their HP by 1.3x <br> <b>Action:</b> Sanji Sky Walks into the air and is unable to attack for 1 turn, preventing all debuffs to himself (Including, but not limited to, Bind, Despair, Silence and Paralysis). This does not remove his own Captain boost while he is unable to attack. During the next turn, boosts own ATK by 6.25x instead",
         captainNotes: "Sanji Captain Action lasts for 2 turns and can be reactivated after no cooldown. Even while Sky Walking, will still boost all characters by 2.5x. Sky Walk is not a type boost and will stack with other boosts",
         special: "Deals 100,000 fixed damage to all enemies. Changes [BLOCK], [TND], adjacent orbs and own orb into Matching orbs. Boosts own attack by 2x for 1 turn",
         sailor: "Makes [RCV] orbs \"beneficial\" for all characters",
@@ -20065,7 +20065,7 @@ window.details = {
         specialName: "Hell Memories",
     },
     1588: {//Legend Sanji
-        captain: "Boosts ATK of all characters by 2.5x and their HP by 1.3x <br> <b>Action:</b> Sanji Sky Walks into the air for 1 turn, preventing all debuffs to himself (Including, but not limited to, Bind, Despair, Silence and Paralysis). This does not remove the his own Captain boost while he is unable to attack. During the next turn, boosts own ATK by 6.25x instead",
+        captain: "Boosts ATK of all characters by 2.5x and their HP by 1.3x <br> <b>Action:</b> Sanji Sky Walks into the air and is unable to attack for 1 turn, preventing all debuffs to himself (Including, but not limited to, Bind, Despair, Silence and Paralysis). This does not remove the his own Captain boost while he is unable to attack. During the next turn, boosts own ATK by 6.25x instead",
         captainNotes: "Sanji Captain Action lasts for 2 turns and can be reactivated after no cooldown. Even while Sky Walking, will still boost all characters by 2.5x. Sky Walk is not a type boost and will stack with other boosts",
         special: "Deals 100,000 fixed damage to all enemies. Changes [BLOCK], [TND], adjacent orbs and own orb into Matching orbs. Boosts own attack by 2x for 1 turn",
         specialName: "Hell Memories",
@@ -27068,15 +27068,15 @@ window.details = {
         sailor: "Boosts own base ATK by 100 if this character is the 1st in the chain to attack",
     },
     1934: {//Legend Franky
-        captain: "Boosts ATK of all characters by 3x and their HP by 1.3x if there are 6 characters in your crew with Fighter, Slasher, Shooter or Striker classes. <br> <b>Action:</b> Franky brings the entire crew into General Franky for 1 turn, immune to Blow Away inflicted to the crew. During this turn, boosts ATK of all characters by 4x instead and reduces damage taken by 38%",
+        captain: "If there are 6 characters in your crew with Fighter, Slasher, Shooter or Striker classes, boosts ATK of all characters by 3x and their HP by 1.3x. <br> <b>Action:</b> Franky brings the entire crew into General Franky for 1 turn and becomes immune to Blow Away inflicted to the crew. During this turn, boosts ATK of all characters by 4x instead and reduces damage taken by 38%",
         captainNotes: "All characters on your crew must have one of the 4 classes listed, but you do not need one of each. Franky Captain Action lasts one turn and can be reactivated after a 4 turn cooldown. Only 1 Franky Captain Action can be activated at once. <br\> During transformation:<br\>If you attack with a Fighter character, deal 1.25x damage to targeted enemy<br\>If you attack with a Slasher character, deal full damage to targeted enemy, but partial damage (??%) to all enemies in the same row<br\>If you attack with a Striker character, deal 0.5x damage to all enemies on the stage<br\>If you attack with a Shooter character, deal .75x damage to targeted enemy but deal 0.3x damage to all other enemies on the stage",
-        special: "Cuts the current HP of all enemies by 10%, randomizes all non-matching orbs, including [BLOCK] orbs and boosts ATK of Fighter, Slasher, Shooter and Striker characters by 2x for 1 turn",
+        special: "Cuts the current HP of all enemies by 10%, randomizes all non-matching orbs, including [BLOCK] orbs, and boosts ATK of Fighter, Slasher, Shooter and Striker characters by 2x for 1 turn",
         specialName: "Franky Cannon",
     },
     1935: {//Legend Franky
-        captain: "Boosts ATK of all characters by 3x and their HP by 1.3x if there are 6 characters in your crew with Fighter, Slasher, Shooter or Striker classes. <br> <b>Action:</b> Franky brings the entire crew into General Franky for 1 turn, immune to Blow Away inflicted to the crew. During this turn, boosts ATK of all characters by 4x instead and reduces damage taken by 38%",
+        captain: "If there are 6 characters in your crew with Fighter, Slasher, Shooter or Striker classes, boosts ATK of all characters by 3x and their HP by 1.3x. <br> <b>Action:</b> Franky brings the entire crew into General Franky for 1 turn and becomes immune to Blow Away inflicted to the crew. During this turn, boosts ATK of all characters by 4x instead and reduces damage taken by 38%",
         captainNotes: "All characters on your crew must have one of the 4 classes listed, but you do not need one of each. Franky Captain Action lasts one turn and can be reactivated after a 4 turn cooldown. Only 1 Franky Captain Action can be activated at once. <br\> During transformation:<br\>If you attack with a Fighter character, deal 1.25x damage to targeted enemy<br\>If you attack with a Slasher character, deal full damage to targeted enemy, but partial damage (??%) to all enemies in the same row<br\>If you attack with a Striker character, deal 0.5x damage to all enemies on the stage<br\>If you attack with a Shooter character, deal .75x damage to targeted enemy but deal 0.3x damage to all other enemies on the stage",
-        special: "Cuts the current HP of all enemies by 10%, randomizes all non-matching orbs, including [BLOCK] orbs and boosts ATK of Fighter, Slasher, Shooter and Striker characters by 2x for 1 turn",
+        special: "Cuts the current HP of all enemies by 10%, randomizes all non-matching orbs, including [BLOCK] orbs, and boosts ATK of Fighter, Slasher, Shooter and Striker characters by 2x for 1 turn",
         specialName: "Franky Cannon",
         sailor: {
             "base": "None",
@@ -33803,6 +33803,82 @@ window.details = {
             },
         ]
     },
+    2245: {//Legend Sanji
+        captain: "Boosts own ATK by 3.025? and boosts ATK of all other characters by 2.75x and their HP by 1.3x and makes [TND] orbs \"beneficial\" for all characters <br> <b>Action:</b> Sanji Sky Walks into the air and is unable to attack for 1 turn, preventing all debuffs to himself (Including, but not limited to, Bind, Despair, Silence and Paralysis). This does not remove the his own Captain boost while he is unable to attack. During the next turn, boosts own ATK by 8.31875?x instead",
+        captainNotes: "Sanji Captain Action lasts for 2 turns and can be reactivated after no cooldown. Even while Sky Walking, will still boost all characters by 2.5x. Sky Walk is not a type boost and will stack with other boosts",
+        special: "Deals 100,000 fixed damage to all enemies, changes [BLOCK], adjacent orbs and own orb into Matching orbs and adds .8x to Chain multiplier for 1 turn. If Sanji is your Captain or Friend/Guest Captain, reduces Chain Multiplier Limit and Chain Coefficient Reduction duration by 5 turns",
+        specialName: "Diable Mouton Shot",
+        sailor: {
+            "base": "Makes [RCV] orbs \"beneficial\" for all characters",
+            "level1": "Boosts amount healed from [RCV] orbs by 300 each",
+        },
+        sailorNotes: "#{beneficial}",
+        limit: [
+            { "description": "Boosts base ATK by 5" },
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Boosts base RCV by 5" },
+            { "description": "Acquire Potential 1: Enrage" },
+            { "description": "Boosts base ATK by 15" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base HP by 20" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base RCV by 15" },
+            { "description": "Boosts base RCV by 15" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Acquire Potential 2: Reduce No Healing duration" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base ATK by 40" },
+            { "description": "Boosts base RCV by 30" },
+            { "description": "Boosts base ATK by 50" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base ATK by 50" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base HP by 60" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Acquire Sailor Ability 1: Boosts amount healed from [RCV] orbs by 300 each" },
+            { "description": "Boosts base HP by 70" },
+            { "description": "Boosts base HP by 80" },
+            { "description": "Acquire Potential 3: Critical Hit" },
+        ],
+        potential: [
+            {
+                "Name": "Enrage",
+                "description": [
+                    "Level 1: Boosts base ATK by 50",
+                    "Level 2: Boosts base ATK by 75",
+                    "Level 3: Boosts base ATK by 100",
+                    "Level 4: Boosts base ATK by 150",
+                    "Level 5: Boosts base ATK by 200"
+                ]
+            },
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by 1 turn",
+                    "Level 2: Reduces No Healing duration by 2 turns",
+                    "Level 3: Reduces No Healing duration by 3 turns",
+                    "Level 4: Reduces No Healing duration by 5 turns",
+                    "Level 5: Reduces No Healing duration by 7 turns"
+                ]
+            },
+            {
+                "Name": "Critical Hit",
+                "description": [
+                    "Level 1: If you hit a PERFECT with this character, there is a 40% chance to deal 4% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a 70% chance to deal 6% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a 90% chance to deal 10% of this character's attack in extra damage"
+                ]
+            },
+        ],
+        potentialNotes: "#{enrage}"
+    },
     2246: {//Vivi
         captain: "Boosts ATK of Free Spirit characters proportionally to the crew's current HP, by ?x at max and recovers ?x character's RCV in HP at the end of each turn",
         captainNotes: "#{captainProportional : higher : ? + ? * ((remaining HP) / (total HP)) : 3.25 : ?}",
@@ -34946,6 +35022,82 @@ window.details = {
                     "Level 3: Once per an adventure, reduce own Special Cooldown by 3 turns after the first time this special is used",
                     "Level 4: Once per an adventure, reduce own Special Cooldown by 5 turns after the first time this special is used",
                     "Level 5: Once per an adventure, sets your Special Gauge to MAX after the first time this special is used"
+                ]
+            },
+        ]
+    },
+    2300: {//Legend Franky
+        captain: "If there are 6 characters in your crew with Fighter, Slasher, Shooter or Striker classes, boosts ATK of all characters by 3.25x and their HP by 1.3x and makes [RCV] and [TND] orbs \"beneficial\" for all characters. <br> <b>Action:</b> Franky brings the entire crew into General Franky for 1 turn and becomes immune to Blow Away inflicted to the crew. During this turn, boosts ATK of all characters by 4.25x instead and reduces damage taken by 38%",
+        captainNotes: "All characters on your crew must have one of the 4 classes listed, but you do not need one of each. Franky Captain Action lasts one turn and can be reactivated after a 4 turn cooldown. Only 1 Franky Captain Action can be activated at once. <br\> During transformation:<br\>If you attack with a Fighter character, deal 1.25x damage to targeted enemy<br\>If you attack with a Slasher character, deal full damage to targeted enemy, but partial damage (??%) to all enemies in the same row<br\>If you attack with a Striker character, deal 0.5x damage to all enemies on the stage<br\>If you attack with a Shooter character, deal .75x damage to targeted enemy but deal 0.3x damage to all other enemies on the stage <b>(BASED ON UNEVOLVED FRANKY, NOT TESTED FOR EVOLVED FRANKY)</b>",
+        special: "Cuts the current HP of all enemies by 10% and randomizes all non-matching orbs, including [BLOCK] orbs. If there are 3 enemies or more on the stage,  boosts ATK of Fighter, Slasher, Shooter and Striker characters by 2.25x for 1 turn by 2x otherwise",
+        specialName: "Franky Radical Beam",
+        sailor: {
+            "base": "None",
+            "level1": "Boosts base ATK, HP and RCV of Shooter, Slasher, Fighter and Striker characters by 50",
+            "level2": "Makes [QCK] orbs \"beneficial\" for Shooter, Slasher, Fighter and Striker characters",
+        },
+        sailorNotes: "#{beneficial}",
+        limit: [
+            { "description": "Boosts base ATK by 2" },
+            { "description": "Boosts base ATK by 2" },
+            { "description": "Boosts base ATK by 38" },
+            { "description": "Acquire Potential 1: [STR] Damage Reduction" },
+            { "description": "Boosts base HP by 38" },
+            { "description": "Boosts base HP by 38" },
+            { "description": "Boosts base HP by 38" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK, HP and RCV of Shooter, Slasher, Fighter and Striker characters by 50" },
+            { "description": "Boosts base RCV by 1" },
+            { "description": "Boosts base RCV by 1" },
+            { "description": "Boosts base RCV by 38" },
+            { "description": "Boosts base ATK by 3" },
+            { "description": "Boosts base ATK by 38" },
+            { "description": "Boosts base ATK by 38" },
+            { "description": "Acquire Potential 2: Reduce No Healing duration" },
+            { "description": "Boosts base HP by 38" },
+            { "description": "Boosts base HP by 38" },
+            { "description": "Boosts base HP by 38" },
+            { "description": "Boosts base HP by 38" },
+            { "description": "Boosts base HP by 38" },
+            { "description": "Boosts base HP by 38" },
+            { "description": "Boosts base HP by 38" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base ATK by 38" },
+            { "description": "Boosts base RCV by 38" },
+            { "description": "Boosts base HP by 38" },
+            { "description": "Acquire Sailor Ability 2: Makes [QCK] orbs \"beneficial\" for Shooter, Slasher, Fighter and Striker characters" },
+            { "description": "Boosts base ATK by 38" },
+            { "description": "Boosts base HP by 38" },
+            { "description": "Acquire Potential 3: Barrier Penetration" },
+        ],
+        potential: [
+            {
+                "Name": "[STR] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [STR] characters by 1%",
+                    "Level 2: Reduce damage taken from [STR] characters by 2%",
+                    "Level 3: Reduce damage taken from [STR] characters by 3%",
+                    "Level 4: Reduce damage taken from [STR] characters by 4%",
+                    "Level 5: Reduce damage taken from [STR] characters by 5%"
+                ]
+            },
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by 1 turn",
+                    "Level 2: Reduces No Healing duration by 2 turns",
+                    "Level 3: Reduces No Healing duration by 3 turns",
+                    "Level 4: Reduces No Healing duration by 5 turns",
+                    "Level 5: Reduces No Healing duration by 7 turns"
+                ]
+            },
+            {
+                "Name": "Barrier Penetration",
+                "description": [
+                    "Level 1: This character's normal attack will ignore barriers if HP is above 99% at the start of the turn",
+                    "Level 2: This character's normal attack will ignore barriers if HP is above 90% at the start of the turn",
+                    "Level 3: This character's normal attack will ignore barriers if HP is above 70% at the start of the turn",
+                    "Level 4: This character's normal attack will ignore barriers if HP is above 50% at the start of the turn",
+                    "Level 5: This character's normal attack will ignore barriers"
                 ]
             },
         ]

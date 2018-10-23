@@ -7743,6 +7743,10 @@ window.captains = {
     2244: {
         atk: function(p){ return p.unit.class.has("Powerhouse") ? 2.5 : 1; },
     },
+    2245: {
+        atk: function(p) { return p.slot == p.sourceSlot ? p.actions[p.sourceSlot] ? 8.31875 : 3.025 : 2.75; },
+        hp: function(p) { return 1.3 },
+    },
     2246: {
         atk: function(p) { return p.unit.class.has("Free Spirit") ? 1 + 1 * ((p.percHP) / 100) : 1; },//Change This
     },
@@ -7984,6 +7988,10 @@ window.captains = {
             return p.unit.class.has("Shooter") ? p.actions[p.sourceSlot] ? Math.min(3.25, 2.25 + (1/6) * p.turnCounter) :  Math.min(2.5, 1.5 + (1/6) * p.turnCounter) : 1;
         },
         rcv: function(p){ return p.unit.class.has("Shooter") ? p.actions[p.sourceSlot] ? 1.3 : 1.1 : 1; },//Add limit break change this
+    },
+    2300: {
+        atk: function(p) { return p.frankyCheck.Primary == 6 ? p.actions[p.sourceSlot] ? (4.25 * [ 1.25, 1, .5, .75 ][['Fighter', 'Slasher', 'Striker', 'Shooter'].indexOf(p.frankyClass[p.slot])]) : 3.25 : 1; },
+        hp: function(p) { return p.frankyCheck.Primary == 6 ? 1.3 : 1; },
     },
     2502: {
         hitAtk: function(p) {
