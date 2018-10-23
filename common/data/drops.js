@@ -1913,7 +1913,7 @@ window.drops = {
             nakama: 2177400,
             condition: 'Shooter and Free Spirit characters get a boost (1.2x ATK, HP and RCV boost on 30 stamina)',
             gamewith: 68608,
-            'All Difficulties': [ 1773, 1775, -963, -1588, -451, -1186, -528, -1177, -1208, -558, -1616, -1618, -1392 ]
+            'All Difficulties': [ 1773, 1775, -963, -1588, -2245, -451, -1186, -528, -1177, -1208, -558, -1616, -1618, -1392 ]
         },
         
         {
@@ -2068,7 +2068,7 @@ window.drops = {
             thumb: 2092,
             nakama: 2209200,
             gamewith: 106868,
-            'All Difficulties': [ 2091, 2092, 2093, 2094, 2095, -1935, -1436, -1438, -1926, -1955, -1715 ]
+            'All Difficulties': [ 2091, 2092, 2093, 2094, 2095, -1935, -2300, -1436, -1438, -1926, -1955, -1715 ]
         },
         
         {
@@ -2905,9 +2905,8 @@ window.drops = {
             name: 'Dead or Treat!! Sweetie Party',
             thumb: 2292,
             gamewith: 122996,
-            nakama: null,
-            'Part 1': [ 2291 ],
-            'Part 2': [ 2293 ],
+            condition: 'Katakuri: Can not use characters who are both Driven and Powerhouse classes.',
+            'All Difficulties': [ 2291, 2293 ],
         },
         
         {
@@ -2994,7 +2993,7 @@ window.drops = {
             nakama: 6184600,
             gamewith: 75260,
             condition: 'Has a chance of appearing at the end of ANY Chaos Coliseum boss. You MUST use the same team that you just used to complete the Coliseum boss to fight Garp.',
-            'All Difficulties': [ 1845, 9010, 9011, 9012, 9013, 9014 ]
+            'All Difficulties': [ 1845, 771, 772, 9010, 9011, 9012, 9013, 9014 ]
         },
         
         {
@@ -3003,7 +3002,7 @@ window.drops = {
             nakama: 6228300,
             gamewith: 122270,
             condition: 'Has a chance of appearing at the end of ANY Chaos Coliseum boss. You MUST use the same team that you just used to complete the Coliseum boss to fight Sengoku.',
-            'All Difficulties': [ 2282, 9010, 9011, 9012, 9013, 9014 ]
+            'All Difficulties': [ 2282, 1845, 9010, 9011, 9012, 9013, 9014 ]
         },
         
         {
@@ -3156,7 +3155,7 @@ window.drops = {
             'Monkey D. Luffy': [ -416, -1404, -1445, -1532, -1543, -1593, -1747, -671, -673, -906, -910, -520, -1115, -1364, -1368, -1534, -1536, -1741, -1743, -1745 ],
             'Lucy': [ -562, -578, -669, -1121, -1492, -1794, -1816, -641, -1025, -1029, -1033, -1079, -1125, -1129, -1798, -1800, -1802, -1873, -1877 ],
             'Fujitora': [ -870, -1035, -1123, -1869, -1928, -995, -1232, -1234, -1236, -1238, -1318, -1320, -1796, -1871, -1904, -1906, -1908 ],
-            'Judge': [ -367, -1588, -1610, -2232, -1619, -1832, -2138, -410, -675, -677, -912, -937, -560, -1212, -1542, -1702, -1834, -2139, -1836, -2140, -1838, -2141, -1840, -2142 ],
+            'Judge': [ -367, -1588, -2245, -1610, -2232, -1619, -1832, -2138, -410, -675, -677, -912, -937, -560, -1212, -1542, -1702, -1834, -2139, -1836, -2140, -1838, -2141, -1840, -2142 ],
         },
         
         {
@@ -3262,11 +3261,12 @@ window.drops = {
         },
         
         {
-            name: 'Stouthearted! Strawhat Pirates',
-            thumb: null,
+            name: 'Push Forward! Straw Hat Crew!',
+            thumb: 2300,
             nakama: null,
-            gamewith: null,
-            'All Difficulties': [ 9023, 9024 ],
+            gamewith: 124622,
+            showManual: true,
+            'All Difficulties': [ 9023, 9024, -1935, -2300, -1588, -2245, -2245 ],
         },
         
         {

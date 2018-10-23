@@ -17,7 +17,7 @@ window.matchers = [
     {
         name: 'Universal ATK boosting captains',
         target: 'captain',
-        matcher: /Boosts.+ATK of (all characters|all others)/i
+        matcher: /Boosts.+ATK of (all characters|all other)/i
     },
 
     {
