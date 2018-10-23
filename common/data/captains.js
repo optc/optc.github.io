@@ -7744,7 +7744,7 @@ window.captains = {
         atk: function(p){ return p.unit.class.has("Powerhouse") ? 2.5 : 1; },
     },
     2245: {
-        atk: function(p) { return p.slot == p.sourceSlot ? p.actions[p.sourceSlot] ? 8.31875 : 3.025 : 2.75; },
+        atk: function(p) { return p.slot == p.sourceSlot ? p.actions[p.sourceSlot] ? 8.25 : 3 : 2.75; },
         hp: function(p) { return 1.3 },
     },
     2246: {
