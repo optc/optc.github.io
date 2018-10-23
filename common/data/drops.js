@@ -2903,6 +2903,7 @@ window.drops = {
             name: 'Dead or Treat!! Sweetie Party',
             thumb: 2292,
             gamewith: 122996,
+            condition: 'Katakuri: Can not use characters who are both Driven and Powerhouse classes.',
             'All Difficulties': [ 2291, 2293 ],
         },
         
@@ -2990,7 +2991,7 @@ window.drops = {
             nakama: 6184600,
             gamewith: 75260,
             condition: 'Has a chance of appearing at the end of ANY Chaos Coliseum boss. You MUST use the same team that you just used to complete the Coliseum boss to fight Garp.',
-            'All Difficulties': [ 1845, 9010, 9011, 9012, 9013, 9014 ]
+            'All Difficulties': [ 1845, 771, 772, 9010, 9011, 9012, 9013, 9014 ]
         },
         
         {
@@ -2999,7 +3000,7 @@ window.drops = {
             nakama: null,
             gamewith: 122270,
             condition: 'Has a chance of appearing at the end of ANY Chaos Coliseum boss. You MUST use the same team that you just used to complete the Coliseum boss to fight Garp.',
-            'All Difficulties': [ 2282, 9010, 9011, 9012, 9013, 9014 ]
+            'All Difficulties': [ 2282, 1845, 9010, 9011, 9012, 9013, 9014 ]
         },
         
         {
