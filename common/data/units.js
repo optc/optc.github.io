@@ -2291,7 +2291,7 @@ window.units = [
     [ "Count Niwatori, Big Mom Pirates \"Knight\"", "PSY", [ "Striker", "Slasher" ], 5, 40, 6, 4, 99, 4000000, 1412, 743, 138, 2492, 1352, 334, 1 ],
     [ "Little Witch Vivi, Halloween Midnight Parade", "PSY", [ "Free Spirit", "Cerebral" ], 4, 12, 4, 1, 50, 392109, 487, 222, 59, 1027, 537, 186, 1 ],
     [ "Witch Princess Vivi, Halloween Midnight Parade", "PSY", [ "Free Spirit", "Cerebral" ], 5, 20, 4, 3, 99, 3000000, 925, 440, 128, 2004, 1083, 305, 1 ],
-    [ "Katakuri, Halloween Midnight Parade", "DEX", [ "Cerebral", "Powerhouse" ], 4, 12, 6, 1, 50, 392109, 669, 302, 0, 1593, 800, 58, null ],
+    [ "Big Franken Katakuri, Halloween Midnight Parade", "DEX", [ "Cerebral", "Powerhouse" ], 4, 12, 6, 1, 50, 392109, 669, 302, 0, 1593, 800, 58, null ],
     [ "Gobbling Franken Katakuri, Halloween Midnight Parade", "DEX", [ "Cerebral", "Powerhouse" ], 5, 20, 4, 3, 99, 3000000, 1420, 764, 50, 2500, 1400, 103, null ],
     [ "Shadow Lantern Moria, Halloween Midnight Parade", "STR", [ "Driven", "Powerhouse" ], 5, 20, 6, 4, 99, 2000000, 1270, 598, 54, 2790, 1252, 108, 1 ],
     [ "Demon Lord Rayleigh, Halloween Midnight Parade", "DEX", [ "Cerebral", "Free Spirit" ], 5, 20, 5, 4, 99, 2000000, 1110, 545, 109, 2199, 1225, 250, 1 ],
