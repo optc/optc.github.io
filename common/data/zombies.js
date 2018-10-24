@@ -629,7 +629,6 @@ window.zombies = {
     },
     2261: { // Shanks
         type: 'healer',
-        multiplier: 1.75
     },
     2268: { // Praline
         type: 'healer',
