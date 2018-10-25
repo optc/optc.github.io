@@ -654,6 +654,22 @@ window.zombies = {
         type: 'healer',
         multiplier: 5
     },
+    2301: { // Capone
+        type: 'healer',
+    },
+    2302: { // Capone
+        type: 'healer',
+    },
+    2303: { // Chiffon
+        type: 'reducer',
+        multiplier: 0.2,//change this
+        threshold: 1.0//change this
+    },
+    2304: { // Chiffon
+        type: 'reducer',
+        multiplier: 0.2,//change this
+        threshold: 1.0//change this
+    },
     5001: { // Smoker/Tashigi
         type: 'healer',
         amount: 300

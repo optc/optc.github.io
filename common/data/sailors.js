@@ -597,6 +597,12 @@ window.sailors = {
     2290: {
         atkStatic: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Slasher") ? 50 : 0; },
     },
+    2305: {
+        atkStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Cerebral") ? 75 : 0; },
+    },
+    2306: {
+        atkStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Cerebral") ? 75 : 0; },
+    },
     2502: {
         staticMult: function(p) { return 3; }
     },
