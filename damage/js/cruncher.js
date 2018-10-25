@@ -1180,7 +1180,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                         if (x.hasOwnProperty('rcvStatic'))
                             rcvtemp += x.rcvStatic(getParameters(i));
                     });
-                    if ([1000, 1001, 1250, 1251, 1319, 1320, 1750, 1751, 1889, 1922, 2195, 2211].has(id)){
+                    if ([1000, 1001, 1250, 1251, 1319, 1320, 1750, 1751, 1889, 1922, 2195, 2211, 2301, 2302].has(id)){
                         var hitsCount = { 'Perfect': 0, 'Great': 0, 'Good': 0, 'Below Good': 0, 'Miss': 0 };
                         var teamlength = 0;
                         
