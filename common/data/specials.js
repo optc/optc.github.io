@@ -4313,7 +4313,7 @@ window.specials = {
         onActivation: function(p) {
             window.specials[1960].turnedOn = true;
             p.scope.notify({
-                text: 'Captain Ability boost effect only works if Pudding\'s special is activated in the same turn',
+                text: 'Captain Ability boost effect only works if Sweet Heart Memory Pudding is the captain',
                 name: '1960warning'
             });
         },
@@ -4327,7 +4327,7 @@ window.specials = {
         onActivation: function(p) {
             window.specials[1961].turnedOn = true;
             p.scope.notify({
-                text: 'Captain Ability boost effect only works if Pudding\'s special is activated in the same turn',
+                text: 'Captain Ability boost effect only works if Sweet Heart Memory Pudding is the captain',
                 name: '1961warning'
             });
         },
@@ -4341,7 +4341,7 @@ window.specials = {
         onActivation: function(p) {
             window.specials[1962].turnedOn = true;
             p.scope.notify({
-                text: 'Captain Ability boost effect only works if Sanji\'s special is activated in the same turn',
+                text: 'Captain Ability boost effect only works if Sweet Heart Memory Sanji is the Captain',
                 name: '1962warning'
             });
         },
@@ -4359,7 +4359,7 @@ window.specials = {
         onActivation: function(p) {
             window.specials[1963].turnedOn = true;
             p.scope.notify({
-                text: 'Captain Ability boost effect only works if Sanji\'s special is activated in the same turn',
+                text: 'Captain Ability boost effect only works if Sweet Heart Memory Sanji is the Captain',
                 name: '1963warning'
             });
         },
@@ -5089,12 +5089,10 @@ window.specials = {
     2112: {
         atk: function(p) { return (p.delayed > 0) ? 1.75 : 1; },
         type: "condition",
-        warning: "Selected special (%name%) assumes that the enemy has been Delayed.",
     },
     2113: {
         atk: function(p) { return (p.delayed > 0) ? 1.75 : 1; },
         type: "condition",
-        warning: "Selected special (%name%) assumes that the enemy has been Delayed.",
     },
     2114: {
         staticMult: function(p) { return 30; }
@@ -5910,7 +5908,7 @@ window.specials = {
         def: function(p) { return 0; }
     },
     2274: {
-        atk: function(p) { return (p.delayed > 0 && window.specials[2274].multiplier) ? 1.75 : 1; },
+        atk: function(p) { return (p.delayed > 0 && window.specials[2274].multiplier != 0) ? 1.75 : 1; },
         type: "condition",
         onActivation: function(p) {
             var n = (window.specials[2274].multiplier == 1 ? 2 : (window.specials[2274].multiplier == 2 | window.specials[2274].multiplier == undefined) ? 0 : 1);
@@ -5920,10 +5918,10 @@ window.specials = {
                 name: '2274warning'
             });
         },
-        delay: function(p) { return window.specials[2274].multiplier ? 1 : 0; },
+        delay: function(p) { return window.specials[2274].multiplier != 1 ? 1 : 0; },
     },
     2275: {
-        atk: function(p) { return (p.delayed > 0 && window.specials[2275].multiplier) ? 1.75 : 1; },
+        atk: function(p) { return (p.delayed > 0 && window.specials[2275].multiplier != 0) ? 1.75 : 1; },
         type: "condition",
         onActivation: function(p) {
             var n = (window.specials[2275].multiplier == 1 ? 2 : (window.specials[2275].multiplier == 2 | window.specials[2275].multiplier == undefined) ? 0 : 1);
@@ -5933,7 +5931,7 @@ window.specials = {
                 name: '2275warning'
             });
         },
-        delay: function(p) { return window.specials[2275].multiplier? 1 : 0; },
+        delay: function(p) { return window.specials[2275].multiplier != 1 ? 1 : 0; },
     },
     2276: {
         atk: function(p) { return p.unit.stars <= 4 ? 1.75 : 1; },
