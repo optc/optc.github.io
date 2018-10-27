@@ -604,6 +604,12 @@ window.matchers = [
     },
 
     {
+        name: 'Orb rate Increase and Decrease reducer',
+        target: 'special',
+        matcher: /(reduces|removes).+Orb Rate Up and Orb Rate Down.+Buffs/i
+    },
+
+    {
         name: 'Enemy End of Turn buff reducer',
         target: 'special',
         matcher: /(removes|reduces).+End of Turn.+duration/i 

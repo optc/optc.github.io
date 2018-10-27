@@ -3729,6 +3729,30 @@ window.evolutions = {
         evolvers: [  ]
         //evolvers: [ 'skullV1Franky', 'skullV1Franky', 'skullV1Franky', 'skullV1Franky', 'skullV1Franky' ]
     },
+    2301: {
+        evolution: 2302,
+        evolvers: [  ]
+    },
+    2303: {
+        evolution: 2304,
+        evolvers: [  ]
+    },
+    2305: {
+        evolution: 2306,
+        evolvers: [  ]
+    },
+    2307: {
+        evolution: 2308,
+        evolvers: [  ]
+    },
+    2309: {
+        evolution: 2310,
+        evolvers: [  ]
+    },
+    2322: {
+        evolution: 2323,
+        evolvers: [  ]
+    },
     2502: {
         evolution: 2503,
         evolvers: [ 118, 86, 266, 302, 267 ]

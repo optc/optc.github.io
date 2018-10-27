@@ -6083,6 +6083,42 @@ window.specials = {
             });
         },
     },
+    2301: {
+        atk: function(p) { return p.unit.class.has("Shooter") ? 2 : 1; },
+        type: "class"
+    },
+    2302: {
+        atk: function(p) { return p.unit.class.has("Shooter") ? 2 : 1; },
+        type: "class"
+    },
+    2305: {
+        atk: function(p) { return 1.75; },
+        type: "condition",
+        warning: "Selected special (%name%) assumes that the enemy has been poisoned or STRONGLY Poisoned."
+    },
+    2306: {
+        atk: function(p) { return 1.75; },
+        type: "condition",
+        warning: "Selected special (%name%) assumes that the enemy has been poisoned or STRONGLY Poisoned."
+    },
+    2309: {
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[2309].turnedOn = true;
+        },
+        onDeactivation: function(p) {
+            window.specials[2309].turnedOn = false;
+        }
+    },
+    2310: {
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[2310].turnedOn = true;
+        },
+        onDeactivation: function(p) {
+            window.specials[2310].turnedOn = false;
+        }
+    },
     2502: {
         atk: function(p) { return 1.75; },
         type: "type",
