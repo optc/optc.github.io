@@ -2391,6 +2391,7 @@ window.drops = {
         {
             name: 'Clash Neo!! Pica',
             thumb: 1647,
+            global: true,
             nakama: 4164700,
             gamewith: 60095,
             condition: '1 Expert version and 3 different Master versions with different conditions. Expert: Powerhouse/Driven/Slasher Only. Master: Powerhouse Only, Driven Only, and Slasher Only',

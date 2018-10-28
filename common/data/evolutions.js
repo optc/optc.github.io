@@ -3629,8 +3629,7 @@ window.evolutions = {
     },
     1588: {
         evolution: 2245,
-        evolvers: [  ]
-        //evolvers: [ 'skullV1Sanji', 'skullV1Sanji', 'skullV1Sanji', 'skullV1Sanji', 'skullV1Sanji' ]
+        evolvers: [ 'skullV1Sanji', 'skullV1Sanji', 'skullV1Sanji', 'skullV1Sanji', 'skullV1Sanji' ]
     },
     2246: {
         evolution: 2247,
@@ -3726,8 +3725,7 @@ window.evolutions = {
     },
     1935: {
         evolution: 2300,
-        evolvers: [  ]
-        //evolvers: [ 'skullV1Franky', 'skullV1Franky', 'skullV1Franky', 'skullV1Franky', 'skullV1Franky' ]
+        evolvers: [ 'skullV1Franky', 'skullV1Franky', 'skullV1Franky', 'skullV1Franky', 'skullV1Franky' ]
     },
     2301: {
         evolution: 2302,

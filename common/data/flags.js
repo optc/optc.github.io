@@ -1636,6 +1636,8 @@ window.flags = {
     1643: { global: 1 },
     1644: { global: 1 },
     1645: { global: 1 },
+    1646: { global: 1 },
+    1647: { global: 1 },
     1648: { global: 1 },
     1649: { global: 1 },
     1650: { global: 1 },
