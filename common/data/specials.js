@@ -6159,6 +6159,10 @@ window.specials = {
         },
         warning: "Selected special (%name%) assumes that the enemy has Delay Protection."        
     },
+    2328: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? 1.75 : 1; },
+        type: "class"
+    },
     2502: {
         atk: function(p) { return 1.75; },
         type: "type",

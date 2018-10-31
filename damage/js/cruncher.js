@@ -265,7 +265,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                         if ([ 2022, 2023 ].includes(team[temp].unit.number + 1) && x.unit.type == 'INT'){
                             orb = 2;
                         }
-                        if ([ 2305, 2306 ].includes(team[temp].unit.number + 1) && (x.unit.class.has("Slasher") || x.unit.class.has("Cerebral"))){
+                        if ([ 2306 ].includes(team[temp].unit.number + 1) && (x.unit.class.has("Slasher") || x.unit.class.has("Cerebral"))){
                             orb = 2;
                         }
                     }
@@ -273,7 +273,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                         if ([ 5026, 5027 ].includes(team[temp].unit.number + 1) && x.unit.type == 'DEX'){
                             orb = 2;
                         }
-                        if ([ 2305, 2306 ].includes(team[temp].unit.number + 1) && (x.unit.class.has("Slasher") || x.unit.class.has("Cerebral")) && x.unit.type == 'DEX'){
+                        if ([ 2306 ].includes(team[temp].unit.number + 1) && (x.unit.class.has("Slasher") || x.unit.class.has("Cerebral")) && x.unit.type == 'DEX'){
                             orb = 2;
                         }
                     }

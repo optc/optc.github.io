@@ -272,6 +272,11 @@ window.CrunchUtils.getOrbMultiplier = function(orb, type, uclass, baseMultiplier
                     return boostedMultiplier;
                 }
             }
+            if([2306].includes(captains[temp].number + 1) && (uclass.has("Slasher") || uclass.has("Cerebral"))){
+                if (orb == 'str' || (type == 'DEX' && orb == 0.5)){
+                    return boostedMultiplier;
+                }
+            }
             if([2137].includes(captains[temp].number + 1)){
                 if (orb == 'str' || (type == 'DEX' && orb == 0.5)){
                     return boostedMultiplier;
