@@ -2129,6 +2129,14 @@ window.drops = {
             'All Difficulties': [ 2276, 2278, 2279, -2074, -2076, -2078, -2072, -2050, -2115, -1784, -2053 ]
         },
         
+        {
+            name: 'Forces of Rage - Amande and Bobbin',
+            thumb: 2327,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 2326, 2328, -2099, -2101, -2103, -2113, -2117, -2119 ]
+        },
+        
     ],
 
             
@@ -2818,6 +2826,7 @@ window.drops = {
         {
             name: 'Jack',
             thumb: 2175,
+            global: true,
             nakama: 8217500,
             gamewith: 112951,
             'Raging Sea': [ 2174 ]
@@ -3267,7 +3276,7 @@ window.drops = {
             nakama: null,
             gamewith: 124622,
             showManual: true,
-            'All Difficulties': [ 9023, 9024, -1935, -2300, -1588, -2245, -2245 ],
+            'All Difficulties': [ 9023, 9024, -1935, -2300, -1588, -2245, -912, -943, -1364, -1368 ],
         },
         
         {

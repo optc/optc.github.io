@@ -8001,17 +8001,14 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Shooter") ? 3.75 : 1; },
         hp: function(p){ return p.unit.class.has("Shooter") ? 1.35 : 1; },
     },
-    2303: {
-        atk: function(p) { return 1; },//change this
-    },
     2304: {
         atk: function(p) { return 1.5; },
     },
     2305: {
-        damageSorter: function(d) { return CrunchUtils.classSort(d, 1, [ "Cerebral", "Slasher" ]); },//Change This
+        damageSorter: function(d) { return CrunchUtils.classSort(d, 2.75, [ "Cerebral" ]); },
         hitAtk: function(p) {
-            if (!p.unit.class.has("Slasher") || !p.unit.class.has("Cerebral")) return 1;
-            return p.modifiers.slice(0, p.chainPosition).count("Perfect") == p.chainPosition ? 1 : 1;//Change This
+            if (!p.unit.class.has("Cerebral")) return 1;
+            return p.modifiers.slice(0, p.chainPosition).count("Perfect") == p.chainPosition ? 2.75 : 1;
         },
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
     },
@@ -8024,26 +8021,51 @@ window.captains = {
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
     },
     2307: {
-        atk: function(p) { return p.unit.class.has("Shooter") ? 1 : 1; },//Change this
+        atk: function(p) { return p.unit.class.has("Shooter") ? 2.25 : 1; },
     },
     2308: {
-        atk: function(p) { return p.unit.class.has("Shooter") ? 2.5 : 1; },//Change this
+        atk: function(p) { return p.unit.class.has("Shooter") ? 2.5 : 1; },
     },
     2309: {
-        atk: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 1 : 1; },//Change this
-        hp: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 1 : 1; },//Change this
-    },
-    2310: {
         atk: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 2.25 : 1; },
         hp: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 1.2 : 1; },
     },
+    2310: {
+        atk: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 2.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 1.2 : 1; },
+    },
     2322: {
-        atk: function(p) { return p.unit.class.has("Powerhouse") || p.unit.class.has("Fighter") ? 1 : 1; },//Change this
-        hp: function(p) { return p.unit.class.has("Powerhouse") || p.unit.class.has("Fighter") ? 1 : 1; },//Change this
+        atk: function(p) { return p.unit.class.has("Powerhouse") || p.unit.class.has("Fighter") ? 2 : 1; },
     },
     2323: {
         atk: function(p) { return p.unit.class.has("Powerhouse") || p.unit.class.has("Fighter") ? 2.5 : 1; },
         hp: function(p) { return p.unit.class.has("Powerhouse") || p.unit.class.has("Fighter") ? 1.2 : 1; },
+    },
+    2324: {
+        damageSorter: function(d) { return CrunchUtils.classSort(d, 1, [ "Shooter" ]); },
+        hitAtk: function(p) {
+            return !p.unit.class.has("Shooter") ? 1 : p.modifiers.slice(0, p.chainPosition).subcontains(["Good", "Great", "Perfect"]) ? 1 : 1;
+        },
+        hitModifiers: ["Good", "Great", "Perfect", "Perfect", "Perfect", "Perfect"]
+    },
+    2325: {
+        damageSorter: function(d) { return CrunchUtils.classSort(d, 3.75, [ "Shooter" ]); },
+        hitAtk: function(p) {
+            return !p.unit.class.has("Shooter") ? 1 : p.modifiers.slice(0, p.chainPosition).subcontains(["Good", "Great", "Perfect"]) ? 3.75 : 1;
+        },
+        hitModifiers: ["Good", "Great", "Perfect", "Perfect", "Perfect", "Perfect"]
+    },
+    2326: {
+        atk: function(p) { return p.unit.class.has("Slsher") ? 1 : 1; },//change this
+        hp: function(p) { return p.unit.class.has("Slsher") ? 1 : 1; },//change this
+    },
+    2327: {
+        atk: function(p) { return p.unit.class.has("Slsher") ? 2.25 : 1; },
+        hp: function(p) { return p.unit.class.has("Slsher") ? 1.2 : 1; },
+    },
+    2328: {
+        atk: function(p){ return p.unit.type == "DEX" ? 1.75 : 1; },
+        hp: function(p){ return p.unit.type == "DEX" ? 1.2 : 1; },
     },
     2502: {
         hitAtk: function(p) {

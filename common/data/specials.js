@@ -5856,6 +5856,15 @@ window.specials = {
         staticMult: function(p) { return 60; }
     },
     2264: {
+        turnedOn: false,
+        onActivation: function(p) {
+            if(window.specials[2264].multiplier == 2.25){
+                window.specials[2264].turnedOn = true;
+            }
+        },
+        onDeactivation: function(p) {
+            window.specials[2264].turnedOn = false;
+        },
         atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "PSY") ? window.specials[2264].multiplier : 1; },
         type: "type",
         onActivation: function(p) {
@@ -5868,6 +5877,15 @@ window.specials = {
         }
     },
     2265: {
+        turnedOn: false,
+        onActivation: function(p) {
+            if(window.specials[2265].multiplier == 2.25){
+                window.specials[2265].turnedOn = true;
+            }
+        },
+        onDeactivation: function(p) {
+            window.specials[2265].turnedOn = false;
+        },
         atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "PSY") ? window.specials[2265].multiplier : 1; },
         type: "type",
         onActivation: function(p) {
@@ -6118,6 +6136,32 @@ window.specials = {
         onDeactivation: function(p) {
             window.specials[2310].turnedOn = false;
         }
+    },
+    2324: {
+        chainAddition: function(p) { return 0.75; },
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[2324].turnedOn = true;
+        },
+        onDeactivation: function(p) {
+            window.specials[2324].turnedOn = false;
+        },
+        warning: "Selected special (%name%) assumes that the enemy has Delay Protection."        
+    },
+    2325: {
+        chainAddition: function(p) { return 0.75; },
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[2325].turnedOn = true;
+        },
+        onDeactivation: function(p) {
+            window.specials[2325].turnedOn = false;
+        },
+        warning: "Selected special (%name%) assumes that the enemy has Delay Protection."        
+    },
+    2328: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? 1.75 : 1; },
+        type: "class"
     },
     2502: {
         atk: function(p) { return 1.75; },

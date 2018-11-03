@@ -2332,6 +2332,6 @@ window.families = [
     null,
     "Charlotte Oven",
     "Charlotte Oven",
-    null,
-    null,
+    "Usopp",
+    "Usopp",
 ];

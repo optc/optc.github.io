@@ -603,6 +603,12 @@ window.sailors = {
     2306: {
         atkStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Cerebral") ? 75 : 0; },
     },
+    2322: {
+        atkStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 75 : 0; },
+    },
+    2323: {
+        atkStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 75 : 0; },
+    },
     2502: {
         staticMult: function(p) { return 3; }
     },
