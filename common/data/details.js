@@ -8556,7 +8556,7 @@ window.details = {
         specialNotes: "#{orb: 1.5x or 1.75x} #{stages}",
         sailor: {
             "base": "None",
-            "level1": "Reduces Paralysis duration by 1 turn on all characters",
+            "level1": "Reduces Paralysis duration by 1 turn",
             "level2": "Makes [INT], [RCV] and [TND] orbs \"beneficial\" for this character",
         },
         sailorNotes: "#{beneficial}",
@@ -36603,6 +36603,44 @@ window.details = {
         captain: "Boosts ATK of [DEX] characters by 1.75x and their HP by 1.2x",
         special: "Removes Blindness duration completely. Following the activation of the special, if every unit scores a PERFECT hit, boosts ATK of Slasher characters by 1.5x in the following turn.",
         specialName: "The Disposer's Pursuit",
+    },
+    2400: {//Line Luffy
+        captain: "Boosts ATK of [STR] characters by ?x at the start of the chain, boosts ATK by ?x following a chain of [QCK] > [DEX] > [STR] attacks no lower than Good and boosts their HP by ?x",
+        special: "Deals 200,000 fixed damage to one enemy that will ignore damage negating abilities and barriers, reduces Bind and Despair duration by 4 turns. If your crew has 1 or more [DEX] and 1 or more [QCK] characters, boosts ATK of [STR] characters by 2.25x for 1 turn, by 1.75x otherwise.",
+        specialName: "Luffy Special",
+        specialNotes: "#{ignoreBarrier}",
+        sailor: "Boosts base ATK, HP and RCV of STR, DEX and QCK characters by 30",
+    },
+    2401: {//Line Luffy
+        captain: "Boosts ATK of [STR] characters by 3x at the start of the chain, boosts ATK by 4x following a chain of [QCK] > [DEX] > [STR] attacks no lower than Good and boosts their HP by 1.2x",
+        special: "Deals 200,000 fixed damage to one enemy that will ignore damage negating abilities and barriers, reduces Bind and Despair duration by 4 turns. If your crew has 1 or more [DEX] and 1 or more [QCK] characters, boosts ATK of [STR] characters by 2.25x for 1 turn, by 1.75x otherwise.",
+        specialName: "Luffy Special",
+        specialNotes: "#{ignoreBarrier}",
+        sailor: "Boosts base ATK, HP and RCV of STR, DEX and QCK characters by 30",
+    },
+    2402: {//Line Blackbeard
+        captain: "Boosts ATK of [DEX] characters by ?x at the start of the chain, boosts ATK by ?x following a chain of [STR] > [QCK] > [DEX] attacks no lower than Good and boosts their HP by ?x",
+        special: "Cuts the current HP of each enemy by 15%, reduces enemy's Threshold Damage Reduction and Increased Defense duration by 5 turns. If your crew has 1 or more [STR] and 1 or more [QCK] characters, boosts ATK of [DEX] characters by 2.25x for 1 turn, by 1.75x otherwise.",
+        specialName: "Blackbeard Special",
+        sailor: "Boosts base ATK, HP and RCV of STR, DEX and QCK characters by 30",
+    },
+    2403: {//Line Blackbeard
+        captain: "Boosts ATK of [DEX] characters by 3x at the start of the chain, boosts ATK by 4x following a chain of [STR] > [QCK] > [DEX] attacks no lower than Good and boosts their HP by 1.2x",
+        special: "Cuts the current HP of each enemy by 15%, reduces enemy's Threshold Damage Reduction and Increased Defense duration by 5 turns. If your crew has 1 or more [STR] and 1 or more [QCK] characters, boosts ATK of [DEX] characters by 2.25x for 1 turn, by 1.75x otherwise.",
+        specialName: "Blackbeard Special",
+        sailor: "Boosts base ATK, HP and RCV of STR, DEX and QCK characters by 30",
+    },
+    2404: {//Line Akainu
+        captain: "Boosts ATK of [QCK] characters by ?x at the start of the chain, boosts ATK by ?x following a chain of [DEX] > [STR] > [QCK] attacks no lower than Good and boosts their HP by ?x",
+        special: "Reduces ATK DOWN and Increase Damage Taken duration by 5 turns, changes [BLOCK], [STR] and [QCK] orbs into Matching orbs. If your crew has 1 or more [STR] and 1 or more [DEX] characters, boosts ATK of [QCK] characters by 2.25x for 1 turn, by 1.75x otherwise.",
+        specialName: "Akainu Special",
+        sailor: "Boosts base ATK, HP and RCV of STR, DEX and QCK characters by 30",
+    },
+    2405: {//Line Akainu
+        captain: "Boosts ATK of [QCK] characters by 3x at the start of the chain, boosts ATK by 4x following a chain of [DEX] > [STR] > [QCK] attacks no lower than Good and boosts their HP by 1.2x",
+        special: "Reduces ATK DOWN and Increase Damage Taken duration by 5 turns, changes [BLOCK], [STR] and [QCK] orbs into Matching orbs. If your crew has 1 or more [STR] and 1 or more [DEX] characters, boosts ATK of [QCK] characters by 2.25x for 1 turn, by 1.75x otherwise.",
+        specialName: "Akainu Special",
+        sailor: "Boosts base ATK, HP and RCV of STR, DEX and QCK characters by 30",
     },
     2502: {//Kung Fu Luffy
         captain: "Boosts ATK of all characters by 3.5x after the 2nd PERFECTs in a row, by 4x after the 5th PERFECTs in a row and boosts HP of all characters by 1.5x",

@@ -7559,7 +7559,7 @@ window.captains = {
             }]) ? 4 : 2.75 : 1;
         },
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
-        hp: function(p){ return (p.unit.type == "DEX" || p.unit.type == "QCK" || p.unit.type == "INT") ? 1.35 : 1; }, 
+        hp: function(p){ return (p.unit.type == "DEX" || p.unit.type == "QCK" || p.unit.type == "INT") ? 1.35 : 1; },
     },
     2201: {
         damageSorter: function(d) { return CrunchUtils.okamaSort(d, ['DEX', 'INT', 'QCK']); },
@@ -7576,7 +7576,7 @@ window.captains = {
             }]) ? 4 : 2.75 : 1;
         },
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
-        hp: function(p) { return (p.unit.type == "DEX" || p.unit.type == "QCK" || p.unit.type == "INT") ? 1.35 : 1; }, 
+        hp: function(p) { return (p.unit.type == "DEX" || p.unit.type == "QCK" || p.unit.type == "INT") ? 1.35 : 1; },
     },
     2202: {
         atk: function(p) { return p.unit.class.has("Shooter") ? 2.25 : 1; },
@@ -8066,6 +8066,108 @@ window.captains = {
     2328: {
         atk: function(p){ return p.unit.type == "DEX" ? 1.75 : 1; },
         hp: function(p){ return p.unit.type == "DEX" ? 1.2 : 1; },
+    },
+    2400: {
+        damageSorter: function(d) { return CrunchUtils.okamaSort(d, ['QCK', 'DEX', 'STR']); },
+        hitAtk: function(p) {
+            return (p.unit.type == "STR") ? CrunchUtils.okamaCheck(p.damage.slice(0, p.chainPosition), p.modifiers, [{
+                type: 'QCK',
+                minModifier: 'Good'
+            }, {
+                type: 'DEX',
+                minModifier: 'Good'
+            }, {
+                type: 'STR',
+                minModifier: 'Good'
+            }]) ? 1 : 1 : 1;//Change this
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
+        hp: function(p) { return p.unit.type == "STR" ? 1 : 1; },//Change this
+    },
+    2401: {
+        damageSorter: function(d) { return CrunchUtils.okamaSort(d, ['QCK', 'DEX', 'STR']); },
+        hitAtk: function(p) {
+            return (p.unit.type == "STR") ? CrunchUtils.okamaCheck(p.damage.slice(0, p.chainPosition), p.modifiers, [{
+                type: 'QCK',
+                minModifier: 'Good'
+            }, {
+                type: 'DEX',
+                minModifier: 'Good'
+            }, {
+                type: 'STR',
+                minModifier: 'Good'
+            }]) ? 4 : 3 : 1;
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
+        hp: function(p) { return p.unit.type == "STR" ? 1.2 : 1; },
+    },
+    2402: {
+        damageSorter: function(d) { return CrunchUtils.okamaSort(d, ['STR', 'QCK', 'DEX']); },
+        hitAtk: function(p) {
+            return (p.unit.type == "DEX") ? CrunchUtils.okamaCheck(p.damage.slice(0, p.chainPosition), p.modifiers, [{
+                type: 'STR',
+                minModifier: 'Good'
+            }, {
+                type: 'QCK',
+                minModifier: 'Good'
+            }, {
+                type: 'DEX',
+                minModifier: 'Good'
+            }]) ? 1 : 1 : 1;//Change this
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
+        hp: function(p) { return p.unit.type == "DEX" ? 1 : 1; },//Change this
+    },
+    2403: {
+        damageSorter: function(d) { return CrunchUtils.okamaSort(d, ['STR', 'QCK', 'DEX']); },
+        hitAtk: function(p) {
+            return (p.unit.type == "DEX") ? CrunchUtils.okamaCheck(p.damage.slice(0, p.chainPosition), p.modifiers, [{
+                type: 'STR',
+                minModifier: 'Good'
+            }, {
+                type: 'QCK',
+                minModifier: 'Good'
+            }, {
+                type: 'DEX',
+                minModifier: 'Good'
+            }]) ? 4 : 3 : 1;
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
+        hp: function(p) { return p.unit.type == "DEX" ? 1.2 : 1; },
+    },
+    2404: {
+        damageSorter: function(d) { return CrunchUtils.okamaSort(d, ['DEX', 'STR', 'QCK']); },
+        hitAtk: function(p) {
+            return (p.unit.type == "QCK") ? CrunchUtils.okamaCheck(p.damage.slice(0, p.chainPosition), p.modifiers, [{
+                type: 'DEX',
+                minModifier: 'Good'
+            }, {
+                type: 'STR',
+                minModifier: 'Good'
+            }, {
+                type: 'QCK',
+                minModifier: 'Good'
+            }]) ? 1 : 1 : 1;//Change this
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
+        hp: function(p) { return p.unit.type == "QCK" ? 1 : 1; },//Change this
+    },
+    2405: {
+        damageSorter: function(d) { return CrunchUtils.okamaSort(d, ['DEX', 'STR', 'QCK']); },
+        hitAtk: function(p) {
+            return (p.unit.type == "QCK") ? CrunchUtils.okamaCheck(p.damage.slice(0, p.chainPosition), p.modifiers, [{
+                type: 'DEX',
+                minModifier: 'Good'
+            }, {
+                type: 'STR',
+                minModifier: 'Good'
+            }, {
+                type: 'QCK',
+                minModifier: 'Good'
+            }]) ? 4 : 3 : 1;
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
+        hp: function(p) { return p.unit.type == "QCK" ? 1.2 : 1; },
     },
     2502: {
         hitAtk: function(p) {

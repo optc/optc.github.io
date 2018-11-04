@@ -4466,11 +4466,29 @@ window.specials = {
     },
     1990: {
         delay: function(p) { return 1; },
-        staticMult: function(p) { return p.captain ? (p.captain.type == "STR" || p.captain.type == "QCK") ? 55 : 0 : 0; }
+        staticMult: function(p) { return p.captain ? window.specials[1990].multiplier ? 55 : 0 : 0; },
+        onActivation: function(p) {
+            window.specials[1990].multiplier = false;
+            if ((p.captain.type == "STR" || p.captain.type == "QCK")) {
+                window.specials[1990].multiplier = true;
+            }
+            else {
+                window.specials[1990].multiplier = false;
+            }
+        },
     },
     1991: {
         delay: function(p) { return 1; },
-        staticMult: function(p) { return p.captain ? (p.captain.type == "STR" || p.captain.type == "QCK") ? 55 : 0 : 0; }
+        staticMult: function(p) { return p.captain ? window.specials[1990].multiplier ? 55 : 0 : 0; },
+        onActivation: function(p) {
+            window.specials[1991].multiplier = false;
+            if ((p.captain.type == "STR" || p.captain.type == "QCK")) {
+                window.specials[1991].multiplier = true;
+            }
+            else {
+                window.specials[1991].multiplier = false;
+            }
+        },
     },
     1992: {
         atk: function(p) { return p.unit.class.has('Free Spirit') ? window.specials[1992].multiplier : 1; },
@@ -6162,6 +6180,102 @@ window.specials = {
     2328: {
         atk: function(p) { return p.unit.class.has("Slasher") ? 1.75 : 1; },
         type: "class"
+    },
+    2400: {
+        atk: function(p) { return p.unit.type == "STR" ? window.specials[2400].multiplier : 1; },
+        type: "type",
+        onActivation: function(p) {
+            if (p.colorCount.DEX >= 1 && p.colorCount.QCK >= 1) {
+                window.specials[2400].multiplier = 2.25;
+            }
+            else{
+                window.specials[2400].multiplier = 1.75;
+            }
+            p.scope.notify({
+                text: 'Using the ' + window.specials[2400].multiplier + 'x ATK multiplier.',
+                name: '2400warning'
+            });
+        }
+    },
+    2401: {
+        atk: function(p) { return p.unit.type == "STR" ? window.specials[2401].multiplier : 1; },
+        type: "type",
+        onActivation: function(p) {
+            if (p.colorCount.DEX >= 1 && p.colorCount.QCK >= 1) {
+                window.specials[2401].multiplier = 2.25;
+            }
+            else{
+                window.specials[2401].multiplier = 1.75;
+            }
+            p.scope.notify({
+                text: 'Using the ' + window.specials[2401].multiplier + 'x ATK multiplier.',
+                name: '2401warning'
+            });
+        }
+    },
+    2402: {
+        atk: function(p) { return p.unit.type == "DEX" ? window.specials[2402].multiplier : 1; },
+        type: "type",
+        onActivation: function(p) {
+            if (p.colorCount.STR >= 1 && p.colorCount.QCK >= 1) {
+                window.specials[2402].multiplier = 2.25;
+            }
+            else{
+                window.specials[2402].multiplier = 1.75;
+            }
+            p.scope.notify({
+                text: 'Using the ' + window.specials[2402].multiplier + 'x ATK multiplier.',
+                name: '2402warning'
+            });
+        }
+    },
+    2403: {
+        atk: function(p) { return p.unit.type == "DEX" ? window.specials[2403].multiplier : 1; },
+        type: "type",
+        onActivation: function(p) {
+            if (p.colorCount.STR >= 1 && p.colorCount.QCK >= 1) {
+                window.specials[2403].multiplier = 2.25;
+            }
+            else{
+                window.specials[2403].multiplier = 1.75;
+            }
+            p.scope.notify({
+                text: 'Using the ' + window.specials[2403].multiplier + 'x ATK multiplier.',
+                name: '2403warning'
+            });
+        }
+    },
+    2404: {
+        atk: function(p) { return p.unit.type == "QCK" ? window.specials[2404].multiplier : 1; },
+        type: "type",
+        onActivation: function(p) {
+            if (p.colorCount.STR >= 1 && p.colorCount.QCK >= 1) {
+                window.specials[2404].multiplier = 2.25;
+            }
+            else{
+                window.specials[2404].multiplier = 1.75;
+            }
+            p.scope.notify({
+                text: 'Using the ' + window.specials[2404].multiplier + 'x ATK multiplier.',
+                name: '2404warning'
+            });
+        }
+    },
+    2405: {
+        atk: function(p) { return p.unit.type == "QCK" ? window.specials[2405].multiplier : 1; },
+        type: "type",
+        onActivation: function(p) {
+            if (p.colorCount.STR >= 1 && p.colorCount.QCK >= 1) {
+                window.specials[2405].multiplier = 2.25;
+            }
+            else{
+                window.specials[2405].multiplier = 1.75;
+            }
+            p.scope.notify({
+                text: 'Using the ' + window.specials[2405].multiplier + 'x ATK multiplier.',
+                name: '2405warning'
+            });
+        }
     },
     2502: {
         atk: function(p) { return 1.75; },
