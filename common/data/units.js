@@ -2259,8 +2259,8 @@ window.units = [
     [ "Higuma, First Class Wanted Criminal", "STR", [ "Slasher", "Driven" ], 5, 20, 5, 5, 99, 2000000, 294, 339, 14, 883, 699, 70, 1 ],
     [ "Higuma, Mountain Bandits Leader", "STR", [ "Slasher", "Driven" ], '5+', 30, 4, 5, 99, 2000000, 766, 628, 51, 1908, 1049, 133, 1 ],
     [ "Shanks, A Toast to a New Era", "DEX", [ "Free Spirit", "Cerebral" ], 4, 30, 5, 1, 50, 130703, 723, 301, 62, 1252, 791, 122, 1 ],
-    [ "Red Hair Shanks, A Toast to a New Era", "DEX", [ "Free Spirit", "Cerebral" ], 5, 60, 5, 1, 99, 5000000, 1203, 782, 110, 2578, 1452, 2STR80, 1Fighter
-    Free Spirit "Donquixote Doflamingo, Country's Future Hanging by a Thread ", "INT", [ "Driven", "Cerebral" ], 4, 30, 6, 2, 70, 1066998, 239, 193, 39, 1167, 794, 191, 1 ],
+    [ "Red Hair Shanks, A Toast to a New Era", "DEX", [ "Free Spirit", "Cerebral" ], 5, 60, 5, 1, 99, 5000000, 1203, 782, 110, 2578, 1452, 280, 1],
+    [ "Donquixote Doflamingo, Country's Future Hanging by a Thread ", "INT", [ "Driven", "Cerebral" ], 4, 30, 6, 2, 70, 1066998, 239, 193, 39, 1167, 794, 191, 1 ],
     [ "Donquixote Doflamingo, Plot to Destroy the World", "INT", [ "Driven", "Cerebral" ], 5, 50, 4, 3, 99, 5000000, 1243, 701, 137, 2319, 1515, 333, 1 ],
     [ "Jinbe, Sun Pirates Captain", "DEX", [ "Powerhouse", "Fighter" ], 5, 30, 5, 3, 70, 1066998, 672, 342, 25, 1681, 1099, 98, 1 ],
     [ "Knight of the Sea Jinbe, Sun Pirates Captain", "DEX", [ "Powerhouse", "Fighter" ], 6, 55, 4, 5, 99, 5000000, 1621, 1072, 82, 3648, 1572, 268, 1 ],
