@@ -6181,6 +6181,50 @@ window.specials = {
         atk: function(p) { return p.unit.class.has("Slasher") ? 1.75 : 1; },
         type: "class"
     },
+    2329: {
+        staticMult: function(p) { return 50; }
+    },
+    2330: {
+        staticMult: function(p) { return 50; }
+    },
+    2333: {
+        delay: function(p) { return 1; },
+        orb: function(p) { return (p.unit.class.has("Shooter") && window.specials[2333].multiplier) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+        onActivation: function(p) {
+            if (window.specials[2333].multiplier == null) {
+                window.specials[2333].multiplier = true;
+            }
+            else{
+                window.specials[2333].multiplier = !window.specials[2333].multiplier;
+            }
+            p.scope.notify({
+                text: (window.specials[2333].multiplier ? 'En' : 'Dis') + 'abling the orb boost. Enemy with highest MAX HP is ' + (window.specials[2334].multiplier ? 'Under or equal to ' : 'Over ') + '80% HP',
+                name: '2333warning'
+            });
+        }
+    },
+    2334: {
+        delay: function(p) { return 1; },
+        orb: function(p) { return (p.unit.class.has("Shooter") && window.specials[2334].multiplier) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+        onActivation: function(p) {
+            if (window.specials[2334].multiplier == null) {
+                window.specials[2334].multiplier = true;
+            }
+            else{
+                window.specials[2334].multiplier = !window.specials[2334].multiplier;
+            }
+            p.scope.notify({
+                text: (window.specials[2334].multiplier ? 'En' : 'Dis') + 'abling the orb boost. Enemy with highest MAX HP is ' + (window.specials[2334].multiplier ? 'under or equal to ' : 'over ') + '80% HP',
+                name: '2334warning'
+            });
+        }
+    },
+    2335: {
+        chainAddition: function(p) { return 0.7; }
+    },
+    2336: {
+        chainAddition: function(p) { return 0.7; }
+    },
     2400: {
         atk: function(p) { return p.unit.type == "STR" ? window.specials[2400].multiplier : 1; },
         type: "type",

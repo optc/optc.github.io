@@ -36604,6 +36604,179 @@ window.details = {
         special: "Removes Blindness duration completely. Following the activation of the special, if every unit scores a PERFECT hit, boosts ATK of Slasher characters by 1.5x in the following turn.",
         specialName: "The Disposer's Pursuit",
     },
+    2329:{//Zephyr
+        captain: "If there are 6 Shooter characters in your crew, boosts ATK of Shooter characters by 3.9x if they have a matching orb, by 3.25x otherwise and reduces damage received by 10%",
+        special: "Cuts the current HP of one enemy by 30%, adds 50x character's ATK as Additional Typeless Damage for 2 turns and changes all orbs, including [BLOCK] orbs, on Shooter characters into Matching orbs.",
+        specialNotes: "#{additionalDamage : 55x}",
+        specialName: "Destroying All Evil: \"Smash Buster\"",
+    },
+    2330:{//Zephyr
+        captain: "If there are 6 Shooter characters in your crew, boosts ATK of Shooter characters by 3.9x if they have a matching orb, by 3.25x otherwise and reduces damage received by 10%",
+        special: "Cuts the current HP of one enemy by 30%, adds 50x character's ATK as Additional Typeless Damage for 2 turns and changes all orbs, including [BLOCK] orbs, on Shooter characters into Matching orbs.",
+        specialNotes: "#{additionalDamage : 55x}",
+        specialName: "Destroying All Evil: \"Smash Buster\"",
+        sailor: {
+            "base": "None",
+            "level1": "Adds 4x character's ATK as Additional Typeless Damage",
+            "level2": "Makes [TND] and [RCV] orbs \"beneficial\" for Shooter characters",
+        },
+        sailorNotes: "#{beneficial}",
+        potential: [
+            {
+                "Name": "[STR] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [STR] characters by ?%",
+                    "Level 2: Reduce damage taken from [STR] characters by ?%",
+                    "Level 3: Reduce damage taken from [STR] characters by ?%",
+                    "Level 4: Reduce damage taken from [STR] characters by ?%",
+                    "Level 5: Reduce damage taken from [STR] characters by ?%"
+                ]
+            },
+            {
+                "Name": "Enrage",
+                "description": [
+                    "Level 1: Boosts base ATK by ?",
+                    "Level 2: Boosts base ATK by ?",
+                    "Level 3: Boosts base ATK by ?",
+                    "Level 4: Boosts base ATK by ?",
+                    "Level 5: Boosts base ATK by ?"
+                ]
+            },
+            {
+                "Name": "Barrier Penetration",
+                "description": [
+                    "Level 1: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn",
+                    "Level 2: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn",
+                    "Level 3: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn",
+                    "Level 4: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn",
+                    "Level 5: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn"
+                ]
+            },
+        ],
+        potentialNotes: "#{enrage}"
+    },
+    2331: {//Ain
+        captain: "Boosts ATK and RCV of Shooter and Slasher characters by ?x",
+        special: "Reduces enemies Percent Damage Reduction and Increased Defense duration by 2 turns, reduces Bind and Despair duration by 2 turns and if your crew has Percent Damage Reduction, recovers 20% of crew's MAX HP, reduces damage received by 70% for 1 turn otherwise.",
+        specialName: "Double Shot",
+        sailor: "Completely resists Silence on this character",
+    },
+    2332: {//Ain
+        captain: "Boosts ATK and RCV of Shooter and Slasher characters by 1.75x",
+        special: "Reduces enemies Percent Damage Reduction and Increased Defense duration by 2 turns, reduces Bind and Despair duration by 2 turns and if your crew has Percent Damage Reduction, recovers 20% of crew's MAX HP, reduces damage received by 70% for 1 turn otherwise.",
+        specialName: "Double Shot",
+        sailor: {
+            "base": "Completely resists Silence on this character",
+            "level1": "Makes [PSY] orbs \"beneficial\" for Shooter characters",
+        },
+        sailorNotes: "#{beneficial}",
+        potential: [
+            {
+                "Name": "Barrier Penetration",
+                "description": [
+                    "Level 1: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn",
+                    "Level 2: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn",
+                    "Level 3: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn",
+                    "Level 4: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn",
+                    "Level 5: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn"
+                ]
+            },
+            {
+                "Name": "Double Special Activation",
+                "description": [
+                    "Level 1: Once per an adventure, reduce own Special Cooldown by 1 turn after the first time this special is used",
+                    "Level 2: Once per an adventure, reduce own Special Cooldown by ? turns after the first time this special is used",
+                    "Level 3: Once per an adventure, reduce own Special Cooldown by ? turns after the first time this special is used",
+                    "Level 4: Once per an adventure, reduce own Special Cooldown by ? turns after the first time this special is used",
+                    "Level 5: Once per an adventure, reduce own Special Cooldown by ? turns after the first time this special is used"
+                ]
+            },
+        ],
+    },
+    2333: {//Binz
+        captain: "Boosts ATK of Shooter characters by ?x and their HP by ?x",
+        special: "Deals 40x character's ATK in typeless damage to all enemies, delays all enemies for 1 turn and if the HP of the enemy with the highest Maximum HP is equal to or less than 80%, amplifies the effect of orbs for Shooter characters by 1.75x for 3 turns",
+        specialName: "Continuous Shuriken Throwing",
+        sailor: "Boosts base HP of Shooter characters by 50",
+    },
+    2334: {//Binz
+        captain: "Boosts ATK of Shooter characters by 2.5x and their HP by 1.25x",
+        special: "Deals 40x character's ATK in typeless damage to all enemies, delays all enemies for 1 turn and if the HP of the enemy with the highest Maximum HP is equal to or less than 80%, amplifies the effect of orbs for Shooter characters by 1.75x for 3 turns",
+        specialName: "Continuous Shuriken Throwing",
+        sailor: {
+            "base": "Boosts base HP of Shooter characters by 50",
+            "level1": "Makes [INT] orbs \"beneficial\" for Shooter characters",
+        },
+        sailorNotes: "#{beneficial}",
+        potential: [
+            {
+                "Name": "[INT] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [INT] characters by ?%",
+                    "Level 2: Reduce damage taken from [INT] characters by ?%",
+                    "Level 3: Reduce damage taken from [INT] characters by ?%",
+                    "Level 4: Reduce damage taken from [INT] characters by ?%",
+                    "Level 5: Reduce damage taken from [INT] characters by ?%"
+                ]
+            },
+            {
+                "Name": "Barrier Penetration",
+                "description": [
+                    "Level 1: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn",
+                    "Level 2: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn",
+                    "Level 3: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn",
+                    "Level 4: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn",
+                    "Level 5: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn"
+                ]
+            },
+        ],
+    },
+    2335: {//TM Law
+        captain: "Not Translated",
+        special: "Deals 30x character's ATK in [STR] damage to one enemy, reduces Bind and Despair duration by 2 turns, changes own orb and adjacent orb into Matching orbs, adds .7x to Chain multiplier for 1 turn and reduces Special Cooldown of Fighter, Slasher, Cerebral and Free Spirit specials by 1 turn",
+        specialName: "Counter-Shock",
+    },
+    2336: {//TM Law
+        captain: {
+            "base": "Not Translated",
+            "level1": "Not Translated",
+            "level2": "Not Translated",
+            "level3": "Not Translated",
+            "level4": "Not Translated",
+            "level5": "Not Translated",
+            "level6": "Boosts ATK of Fighter, Slasher, Cerebral and Free Spirit characters by 1.8x and makes [RCV] and [TND] orbs \"beneficial\" for Fighter, Slasher, Cerebral and Free Spirit characters.",
+        },
+        special: "Deals 30x character's ATK in [STR] damage to one enemy, reduces Bind and Despair duration by 2 turns, changes own orb and adjacent orb into Matching orbs, adds .7x to Chain multiplier for 1 turn and reduces Special Cooldown of Fighter, Slasher, Cerebral and Free Spirit specials by 1 turn",
+        specialName: "Counter-Shock",
+        sailor: {
+            "base": "None",
+            "level1": "Makes [TND] and [RCV] orbs \"beneficial\" for this character",
+            "level2": "Restores his own special cooldown by 2 turns when it is rewinded",
+        },
+        sailorNotes: "#{beneficial}<br>#{rewind : 2}",
+        potential: [
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by ? turn",
+                    "Level 2: Reduces No Healing duration by ? turn",
+                    "Level 3: Reduces No Healing duration by ? turns",
+                    "Level 4: Reduces No Healing duration by ? turns",
+                    "Level 5: Reduces No Healing duration by ? turns"
+                ]
+            },
+            {
+                "Name": "Cooldown Reduction",
+                "description": [
+                    "Level 1: Reduce own Special Cooldown by 1 turn at the start of the fight",
+                    "Level 2: Reduce own Special Cooldown by ? turn at the start of the fight",
+                    "Level 3: Reduce own Special Cooldown by ? turn at the start of the fight",
+                    "Level 4: Reduce own Special Cooldown by ? turn at the start of the fight",
+                    "Level 5: Reduce own Special Cooldown by ? turn at the start of the fight"
+                ]
+            },
+        ]
+    },
     2400: {//Line Luffy
         captain: "Boosts ATK of [STR] characters by ?x at the start of the chain, boosts ATK by ?x following a chain of [QCK] > [DEX] > [STR] attacks no lower than Good and boosts their HP by ?x",
         special: "Deals 200,000 fixed damage to one enemy that will ignore damage negating abilities and barriers, reduces Bind and Despair duration by 4 turns. If your crew has 1 or more [DEX] and 1 or more [QCK] characters, boosts ATK of [STR] characters by 2.25x for 1 turn, by 1.75x otherwise.",

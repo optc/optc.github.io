@@ -2825,6 +2825,7 @@ window.drops = {
         {
             name: 'Jack',
             thumb: 2175,
+            global: true,
             nakama: 8217500,
             gamewith: 112951,
             'Raging Sea': [ 2174 ]
@@ -2852,6 +2853,14 @@ window.drops = {
             nakama: null,
             gamewith: 123536,
             'Raging Sea': [ 2298 ]
+        },
+
+        {
+            name: 'Trafalgar Law',
+            thumb: 2336,
+            nakama: null,
+            gamewith: null,
+            'Raging Sea': [ 2335 ]
         },
         
     ],

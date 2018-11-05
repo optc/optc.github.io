@@ -8056,16 +8056,74 @@ window.captains = {
         hitModifiers: ["Good", "Great", "Perfect", "Perfect", "Perfect", "Perfect"]
     },
     2326: {
-        atk: function(p) { return p.unit.class.has("Slsher") ? 1 : 1; },//change this
-        hp: function(p) { return p.unit.class.has("Slsher") ? 1 : 1; },//change this
+        atk: function(p) { return p.unit.class.has("Slasher") ? 1 : 1; },//change this
+        hp: function(p) { return p.unit.class.has("Slasher") ? 1 : 1; },//change this
     },
     2327: {
-        atk: function(p) { return p.unit.class.has("Slsher") ? 2.25 : 1; },
-        hp: function(p) { return p.unit.class.has("Slsher") ? 1.2 : 1; },
+        atk: function(p) { return p.unit.class.has("Slasher") ? 2.25 : 1; },
+        hp: function(p) { return p.unit.class.has("Slasher") ? 1.2 : 1; },
     },
     2328: {
         atk: function(p){ return p.unit.type == "DEX" ? 1.75 : 1; },
         hp: function(p){ return p.unit.type == "DEX" ? 1.2 : 1; },
+    },
+    2329: {
+        atk: function(p) {
+            if(p.classCount.Shooter == 6){
+                return ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) == 2) && (p.orb != 'g')) ? 3.9 : 3.25;
+            }
+            else
+                return 1;
+        },
+    },
+    2330: {
+        atk: function(p) {
+            if(p.classCount.Shooter == 6){
+                return ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) == 2) && (p.orb != 'g')) ? 3.9 : 3.25;
+            }
+            else
+                return 1;
+        },
+    },
+    2331: {
+        atk: function(p) { return (p.unit.class.has("Shooter") || p.unit.class.has("Slasher")) ? 1 : 1; },//Change this
+        rcv: function(p) { return (p.unit.class.has("Shooter") || p.unit.class.has("Slasher")) ? 1 : 1; },//Change this
+    },
+    2332: {
+        atk: function(p) { return (p.unit.class.has("Shooter") || p.unit.class.has("Slasher")) ? 1.75 : 1; },
+        rcv: function(p) { return (p.unit.class.has("Shooter") || p.unit.class.has("Slasher")) ? 1.75 : 1; },
+    },
+    2333: {
+        atk: function(p) { return p.unit.class.has("Shooter") ? 1 : 1; },//Change this
+        rcv: function(p) { return p.unit.class.has("Shooter") ? 1 : 1; },//Change this
+    },
+    2334: {
+        atk: function(p) { return p.unit.class.has("Shooter") ? 2.5 : 1; },
+        rcv: function(p) { return p.unit.class.has("Shooter") ? 1.25 : 1; },
+    },
+    2335: {
+        atk: function(p) {
+            var Katacount = 0;
+            var Kataclass = [ "Fighter", "Slasher", "Free Spirit", "Cerebral" ];
+            for(var i = 0; i < Kataclass.length; i++){
+                if(p.unit.class.has(Kataclass[i])){
+                    Katacount++;
+                }
+            }
+            return Math.pow(1, Katacount);//Change This
+        },
+    },
+    2336: {
+        atk: function(p) {
+            var Katacount = 0;
+            var Kataclass = [ "Fighter", "Slasher", "Free Spirit", "Cerebral" ];
+            for(var i = 0; i < Kataclass.length; i++){
+                if(p.unit.class.has(Kataclass[i])){
+                    Katacount++;
+                }
+            }
+            return Math.pow(1.8, Katacount);//Change to accomodate for Limit Break
+        },
     },
     2400: {
         damageSorter: function(d) { return CrunchUtils.okamaSort(d, ['QCK', 'DEX', 'STR']); },

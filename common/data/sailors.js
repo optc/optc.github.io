@@ -609,6 +609,12 @@ window.sailors = {
     2323: {
         atkStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 75 : 0; },
     },
+    2333: {
+        hpStatic: function(p) { return p.unit.class.has("Shooter") ? 50 : 0; },
+    },
+    2334: {
+        hpStatic: function(p) { return p.unit.class.has("Shooter") ? 50 : 0; },
+    },
     2400: {
         atkStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 30 : 0; },
         rcvStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 30 : 0; },
