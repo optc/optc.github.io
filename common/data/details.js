@@ -30419,13 +30419,13 @@ window.details = {
     },
     2047: {//Koala
         captain: "Boosts ATK of Fighter characters by 2.5x if they have a matching orb, by 2x otherwise",
-        special: "Deals 20x character's ATK in [QCK] damage to all enemies. If enemies have All Debuff Protection or Delay Debuff Protection at the time the special was activated, amplifies the effect of orbs for Fighter characters by 2x for 1 turn and changes all orbs, including [BLOCK] orbs, on Fighter characters into Matching orbs",
+        special: "Deals 20x character's ATK in [QCK] damage to one enemy. If enemies have All Debuff Protection or Delay Debuff Protection at the time the special was activated, amplifies the effect of orbs for Fighter characters by 2x for 1 turn and changes all orbs, including [BLOCK] orbs, on Fighter characters into Matching orbs",
         specialName: "Fishman Karate Mid-Air Roundhouse Kick",
         sailor: "Boosts own base ATK by 250 if this character is the last in the chain to attack",
     },
     2048: {//Koala
         captain: "Boosts ATK of Fighter characters by 3.25x if they have a matching orb, by 2x otherwise",
-        special: "Deals 20x character's ATK in [QCK] damage to all enemies. If enemies have All Debuff Protection or Delay Debuff Protection at the time the special was activated, amplifies the effect of orbs for Fighter characters by 2x for 1 turn and changes all orbs, including [BLOCK] orbs, on Fighter characters into Matching orbs",
+        special: "Deals 20x character's ATK in [QCK] damage to one enemy. If enemies have All Debuff Protection or Delay Debuff Protection at the time the special was activated, amplifies the effect of orbs for Fighter characters by 2x for 1 turn and changes all orbs, including [BLOCK] orbs, on Fighter characters into Matching orbs",
         specialName: "Fishman Karate Mid-Air Roundhouse Kick",
         sailor: {
             "base": "Boosts own base ATK by 250 if this character is the last in the chain to attack",
