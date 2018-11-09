@@ -7933,7 +7933,7 @@ window.details = {
         sailor: {
             "base": "None",
             "level1": "If HP is above 99% at the start of the turn, boosts own base ATK by 50",
-            "level2": "When HP is below ?% at the start of the turn, boosts own base ATK by 75",
+            "level2": "When HP is below 30% at the start of the turn, boosts own base ATK by 75",
         },
         limit: [
             { "description": "Boosts base ATK by 20" },
