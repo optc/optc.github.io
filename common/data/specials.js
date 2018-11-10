@@ -6093,6 +6093,20 @@ window.specials = {
             });
         },
     },
+    2298: {
+        def: function(p) { return 0.2 },
+        atk: function(p) { return (p.defenseDown > 0 && window.specials[2298].multiplier != 1) ? 1.75 : 1; },
+        type: "condition",
+        onActivation: function(p) {
+            var n = (window.specials[2299].multiplier == 1 ? 2 : (window.specials[2298].multiplier == 2 | window.specials[2299].multiplier == undefined) ? 0 : 1);
+            window.specials[2298].multiplier = n;
+            p.scope.notify({
+                text: 'Using the ' + ['Conditional boost', 'Orb boost', 'Conditional boost and Orb boost'][n] + '. To switch to the ' + ['Orb boost', 'Conditional boost and Orb boost', 'Conditional boost'][n] + ', disable and re-enable this special',
+                name: '2298warning'
+            });
+        },
+        orb: function(p) { return (window.specials[2298].multiplier != 0 && p.unit.class.has("Shooter")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+    },
     2299: {
         def: function(p) { return 0.2 },
         atk: function(p) { return (p.defenseDown > 0 && window.specials[2299].multiplier != 1) ? 1.75 : 1; },

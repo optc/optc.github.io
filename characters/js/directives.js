@@ -441,7 +441,9 @@ directives.addTags = function($stateParams, $rootScope) {
                                 if (!/sailor$/.test(name)) name = name.replace(/ers$/,'ing').replace(/s$/,'') + ' sailor';
                                 else name = name.replace(/s$/,'');
                                 name = name.replace(/iing/,'ying');
-                                element.append($('<span class="tag sailor">' + name + '</div>'));
+                                if (name != "Has Sailor Ability sailor"){
+                                    element.append($('<span class="tag sailor">' + name + '</div>'));
+                                }
                             }
                         }
                     }

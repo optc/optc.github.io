@@ -8042,9 +8042,9 @@ window.captains = {
         hp: function(p) { return p.unit.class.has("Powerhouse") || p.unit.class.has("Fighter") ? 1.2 : 1; },
     },
     2324: {
-        damageSorter: function(d) { return CrunchUtils.classSort(d, 1, [ "Shooter" ]); },
+        damageSorter: function(d) { return CrunchUtils.classSort(d, 3, [ "Shooter" ]); },
         hitAtk: function(p) {
-            return !p.unit.class.has("Shooter") ? 1 : p.modifiers.slice(0, p.chainPosition).subcontains(["Good", "Great", "Perfect"]) ? 1 : 1;
+            return !p.unit.class.has("Shooter") ? 1 : p.modifiers.slice(0, p.chainPosition).subcontains(["Good", "Great", "Perfect"]) ? 3 : 1;
         },
         hitModifiers: ["Good", "Great", "Perfect", "Perfect", "Perfect", "Perfect"]
     },
@@ -8056,8 +8056,7 @@ window.captains = {
         hitModifiers: ["Good", "Great", "Perfect", "Perfect", "Perfect", "Perfect"]
     },
     2326: {
-        atk: function(p) { return p.unit.class.has("Slasher") ? 1 : 1; },//change this
-        hp: function(p) { return p.unit.class.has("Slasher") ? 1 : 1; },//change this
+        atk: function(p) { return p.unit.class.has("Slasher") ? 2 : 1; },
     },
     2327: {
         atk: function(p) { return p.unit.class.has("Slasher") ? 2.25 : 1; },
@@ -8086,20 +8085,19 @@ window.captains = {
         },
     },
     2331: {
-        atk: function(p) { return (p.unit.class.has("Shooter") || p.unit.class.has("Slasher")) ? 1 : 1; },//Change this
-        rcv: function(p) { return (p.unit.class.has("Shooter") || p.unit.class.has("Slasher")) ? 1 : 1; },//Change this
+        atk: function(p) { return (p.unit.class.has("Shooter") || p.unit.class.has("Slasher")) ? 1.25 : 1; },
+        rcv: function(p) { return (p.unit.class.has("Shooter") || p.unit.class.has("Slasher")) ? 1.25 : 1; },
     },
     2332: {
         atk: function(p) { return (p.unit.class.has("Shooter") || p.unit.class.has("Slasher")) ? 1.75 : 1; },
         rcv: function(p) { return (p.unit.class.has("Shooter") || p.unit.class.has("Slasher")) ? 1.75 : 1; },
     },
     2333: {
-        atk: function(p) { return p.unit.class.has("Shooter") ? 1 : 1; },//Change this
-        rcv: function(p) { return p.unit.class.has("Shooter") ? 1 : 1; },//Change this
+        atk: function(p) { return p.unit.class.has("Shooter") ? 2.25 : 1; },
     },
     2334: {
         atk: function(p) { return p.unit.class.has("Shooter") ? 2.5 : 1; },
-        rcv: function(p) { return p.unit.class.has("Shooter") ? 1.25 : 1; },
+        hp: function(p) { return p.unit.class.has("Shooter") ? 1.25 : 1; },
     },
     2335: {
         atk: function(p) {
