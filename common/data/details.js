@@ -36840,21 +36840,21 @@ window.details = {
             {
                 "Name": "Reduce No Healing duration",
                 "description": [
-                    "Level 1: Reduces No Healing duration by ? turn",
-                    "Level 2: Reduces No Healing duration by ? turn",
-                    "Level 3: Reduces No Healing duration by ? turns",
-                    "Level 4: Reduces No Healing duration by ? turns",
-                    "Level 5: Reduces No Healing duration by ? turns"
+                    "Level 1: Reduces No Healing duration by 1 turn",
+                    "Level 2: Reduces No Healing duration by 2 turn",
+                    "Level 3: Reduces No Healing duration by 3 turns",
+                    "Level 4: Reduces No Healing duration by 4 turns",
+                    "Level 5: Reduces No Healing duration by 7 turns"
                 ]
             },
             {
                 "Name": "Cooldown Reduction",
                 "description": [
                     "Level 1: Reduce own Special Cooldown by 1 turn at the start of the fight",
-                    "Level 2: Reduce own Special Cooldown by ? turn at the start of the fight",
-                    "Level 3: Reduce own Special Cooldown by ? turn at the start of the fight",
-                    "Level 4: Reduce own Special Cooldown by ? turn at the start of the fight",
-                    "Level 5: Reduce own Special Cooldown by ? turn at the start of the fight"
+                    "Level 2: Reduce own Special Cooldown by 2 turn at the start of the fight",
+                    "Level 3: Reduce own Special Cooldown by 3 turn at the start of the fight",
+                    "Level 4: Reduce own Special Cooldown by 4 turn at the start of the fight",
+                    "Level 5: Reduce own Special Cooldown by 6 turn at the start of the fight"
                 ]
             },
         ]
