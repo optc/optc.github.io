@@ -36022,7 +36022,7 @@ window.details = {
         sailor: {
             "base": "None",
             "level1": "Boosts base ATK, HP and RCV of Shooter characters by 30",
-            "level2": "Makes [TND] orbs \"beneficial\" for Shooter characters",
+            "level2": "Makes [RCV] orbs \"beneficial\" for Shooter characters",
         },
         sailorNotes: "#{beneficial}",
         limit: [
