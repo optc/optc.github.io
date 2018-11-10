@@ -6098,7 +6098,7 @@ window.specials = {
         atk: function(p) { return (p.defenseDown > 0 && window.specials[2298].multiplier != 1) ? 1.75 : 1; },
         type: "condition",
         onActivation: function(p) {
-            var n = (window.specials[2299].multiplier == 1 ? 2 : (window.specials[2298].multiplier == 2 | window.specials[2299].multiplier == undefined) ? 0 : 1);
+            var n = (window.specials[2298].multiplier == 1 ? 2 : (window.specials[2298].multiplier == 2 | window.specials[2298].multiplier == undefined) ? 0 : 1);
             window.specials[2298].multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + ['Conditional boost', 'Orb boost', 'Conditional boost and Orb boost'][n] + '. To switch to the ' + ['Orb boost', 'Conditional boost and Orb boost', 'Conditional boost'][n] + ', disable and re-enable this special',
