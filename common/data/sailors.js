@@ -510,10 +510,10 @@ window.sailors = {
         hpStatic: function(p) { return p.unit.class.has("Cerebral") ? 50 : 0; },
     },
     2153: {
-        atkStatic: function(p) { return p.percHP >= 50.0 && p.unit.class.has("Fighter") ? 125 : 0; },
+        atkStatic: function(p) { return p.percHP >= 50.0 && p.unit.class.has("Fighter") ? 120 : 0; },
     },
     2154: {
-        atkStatic: function(p) { return p.percHP >= 50.0 && p.unit.class.has("Fighter") ? 125 : 0; },
+        atkStatic: function(p) { return p.percHP >= 50.0 && p.unit.class.has("Fighter") ? 120 : 0; },
     },
     2164: {
         staticMult: function(p) { return p.captain.class.has("Fighter") ? 1.5 : 0; }
