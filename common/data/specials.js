@@ -6335,6 +6335,42 @@ window.specials = {
             });
         }
     },
+    2406: {
+        atk: function(p) { return 1.75; },
+        type: "class",
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain], p.effectName); },
+        chainAddition: function(p) { return window.specials[2406].multiplier ? 0.7 : 0; },
+        onActivation: function(p) {
+            if (window.specials[2406].multiplier == null) {
+                window.specials[2406].multiplier = true;
+            }
+            else{
+                window.specials[2406].multiplier = !window.specials[2406].multiplier;
+            }
+            p.scope.notify({
+                text: (window.specials[2406].multiplier ? 'En' : 'Dis') + 'abling the chain boost.',
+                name: '2406warning'
+            });
+        }
+    },
+    2407: {
+        atk: function(p) { return 1.75; },
+        type: "class",
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain], p.effectName); },
+        chainAddition: function(p) { return window.specials[2407].multiplier ? 0.7 : 0; },
+        onActivation: function(p) {
+            if (window.specials[2407].multiplier == null) {
+                window.specials[2407].multiplier = true;
+            }
+            else{
+                window.specials[2407].multiplier = !window.specials[2407].multiplier;
+            }
+            p.scope.notify({
+                text: (window.specials[2407].multiplier ? 'En' : 'Dis') + 'abling the chain boost.',
+                name: '2407warning'
+            });
+        }
+    },
     2502: {
         atk: function(p) { return 1.75; },
         type: "type",

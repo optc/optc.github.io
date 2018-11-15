@@ -21795,7 +21795,7 @@ window.details = {
     },
     1635: {//Brownbeard
         captain: "Boosts OWN ATK by 1.5x and the ATK of Cerebral characters by 2x",
-        special: "Cuts the HP of all enemies by 20% and binds himself for 5 turns",
+        special: "Cuts the HP of all enemies by 20% and binds self for 5 turns",
         specialName: "Crocodile Thrust",
     },
     1636: {//Caesar Clown
@@ -22437,7 +22437,7 @@ window.details = {
     },
     1672: {//Pappagu
         captain: "Boosts ATK and HP of Powerhouse characters by 1.5x",
-        special: "Binds himself for 2 turns and reduces Despair and Silence duration by 3 turns",
+        special: "Binds self for 2 turns and reduces Despair and Silence duration by 3 turns",
         specialName: "A Starfish Reaching for His Beliefs",
     },
     1673: {//Swinsuit Perona
@@ -36927,43 +36927,53 @@ window.details = {
             },
         ]
     },
-    2400: {//Line Luffy
+    2400: {//World Clash Luffy
         captain: "Boosts ATK of [STR] characters by ?x at the start of the chain, boosts ATK by ?x following a chain of [QCK] > [DEX] > [STR] attacks no lower than Good and boosts their HP by ?x",
         special: "Deals 200,000 fixed damage to one enemy that will ignore damage negating abilities and barriers, reduces Bind and Despair duration by 4 turns. If your crew has 1 or more [DEX] and 1 or more [QCK] characters, boosts ATK of [STR] characters by 2.25x for 1 turn, by 1.75x otherwise.",
         specialName: "Luffy Special",
         specialNotes: "#{ignoreBarrier}",
         sailor: "Boosts base ATK, HP and RCV of STR, DEX and QCK characters by 30",
     },
-    2401: {//Line Luffy
+    2401: {//World Clash Luffy
         captain: "Boosts ATK of [STR] characters by 3x at the start of the chain, boosts ATK by 4x following a chain of [QCK] > [DEX] > [STR] attacks no lower than Good and boosts their HP by 1.2x",
         special: "Deals 200,000 fixed damage to one enemy that will ignore damage negating abilities and barriers, reduces Bind and Despair duration by 4 turns. If your crew has 1 or more [DEX] and 1 or more [QCK] characters, boosts ATK of [STR] characters by 2.25x for 1 turn, by 1.75x otherwise.",
         specialName: "Luffy Special",
         specialNotes: "#{ignoreBarrier}",
         sailor: "Boosts base ATK, HP and RCV of STR, DEX and QCK characters by 30",
     },
-    2402: {//Line Blackbeard
+    2402: {//World Clash Blackbeard
         captain: "Boosts ATK of [DEX] characters by ?x at the start of the chain, boosts ATK by ?x following a chain of [STR] > [QCK] > [DEX] attacks no lower than Good and boosts their HP by ?x",
         special: "Cuts the current HP of each enemy by 15%, reduces enemy's Threshold Damage Reduction and Increased Defense duration by 5 turns. If your crew has 1 or more [STR] and 1 or more [QCK] characters, boosts ATK of [DEX] characters by 2.25x for 1 turn, by 1.75x otherwise.",
         specialName: "Blackbeard Special",
         sailor: "Boosts base ATK, HP and RCV of STR, DEX and QCK characters by 30",
     },
-    2403: {//Line Blackbeard
+    2403: {//World Clash Blackbeard
         captain: "Boosts ATK of [DEX] characters by 3x at the start of the chain, boosts ATK by 4x following a chain of [STR] > [QCK] > [DEX] attacks no lower than Good and boosts their HP by 1.2x",
         special: "Cuts the current HP of each enemy by 15%, reduces enemy's Threshold Damage Reduction and Increased Defense duration by 5 turns. If your crew has 1 or more [STR] and 1 or more [QCK] characters, boosts ATK of [DEX] characters by 2.25x for 1 turn, by 1.75x otherwise.",
         specialName: "Blackbeard Special",
         sailor: "Boosts base ATK, HP and RCV of STR, DEX and QCK characters by 30",
     },
-    2404: {//Line Akainu
+    2404: {//World Clash Akainu
         captain: "Boosts ATK of [QCK] characters by ?x at the start of the chain, boosts ATK by ?x following a chain of [DEX] > [STR] > [QCK] attacks no lower than Good and boosts their HP by ?x",
         special: "Reduces ATK DOWN and Increase Damage Taken duration by 5 turns, changes [BLOCK], [STR] and [QCK] orbs into Matching orbs. If your crew has 1 or more [STR] and 1 or more [DEX] characters, boosts ATK of [QCK] characters by 2.25x for 1 turn, by 1.75x otherwise.",
         specialName: "Akainu Special",
         sailor: "Boosts base ATK, HP and RCV of STR, DEX and QCK characters by 30",
     },
-    2405: {//Line Akainu
+    2405: {//World Clash Akainu
         captain: "Boosts ATK of [QCK] characters by 3x at the start of the chain, boosts ATK by 4x following a chain of [DEX] > [STR] > [QCK] attacks no lower than Good and boosts their HP by 1.2x",
         special: "Reduces ATK DOWN and Increase Damage Taken duration by 5 turns, changes [BLOCK], [STR] and [QCK] orbs into Matching orbs. If your crew has 1 or more [STR] and 1 or more [DEX] characters, boosts ATK of [QCK] characters by 2.25x for 1 turn, by 1.75x otherwise.",
         specialName: "Akainu Special",
         sailor: "Boosts base ATK, HP and RCV of STR, DEX and QCK characters by 30",
+    },
+    2406: {//World Clash Ace
+        captain: "Boosts ATK of all characters by ?x and recovers ? HP at end of each turn",
+        special: "Binds self for 50 turns, changes all orbs into Matching orbs, boosts ATK of all characters by ?x for 2 turns, amplifies the effect of orbs by ?x for 2 turns and adds .7x to Chain multiplier for 1 turn",
+        specialName: "Words Left To Family",
+    },
+    2407: {//World Clash Ace
+        captain: "Boosts ATK of all characters by 3x and recovers 500 HP at end of each turn",
+        special: "Binds self for 50 turns, changes all orbs into Matching orbs, boosts ATK of all characters by ?x for 2 turns, amplifies the effect of orbs by ?x for 2 turns and adds .7x to Chain multiplier for 1 turn",
+        specialName: "Words Left To Family",
     },
     2502: {//Kung Fu Luffy
         captain: "Boosts ATK of all characters by 3.5x after the 2nd PERFECTs in a row, by 4x after the 5th PERFECTs in a row and boosts HP of all characters by 1.5x",

@@ -3105,6 +3105,16 @@ window.drops = {
         },
         
         {
+            name: 'World Clash!',
+            thumb: 2407,
+            global: true,
+            nakama: null,
+            gamewith: null,
+            condition: 'Chance of dropping the Final Forbidden Tomes.',
+            'Chopperman Missions': [ 2408 ],
+        },
+        
+        {
             name: 'The Flashback Before the Reunion! Fight all your Enemies!',
             thumb: 1353,
             global: true,
