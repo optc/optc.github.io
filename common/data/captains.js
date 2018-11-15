@@ -8228,6 +8228,9 @@ window.captains = {
     2407: {
         atk: function(p) { return 3; },
     },
+    2408: {
+        atk: function(p){ return p.unit.class.has("Free Spirit") ? 2.5 : 1; },
+    },
     2502: {
         hitAtk: function(p) {
             return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 4 :

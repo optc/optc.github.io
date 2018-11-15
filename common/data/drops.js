@@ -3109,8 +3109,8 @@ window.drops = {
             thumb: 2407,
             global: true,
             nakama: null,
-            gamewith: null,
-            condition: 'Chance of dropping the Final Forbidden Tomes.',
+            gamewith: 130091,
+            condition: 'Chance of dropping the Forbidden Tomes and Almighty Manuals.',
             'Chopperman Missions': [ 2408 ],
         },
         

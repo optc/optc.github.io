@@ -36969,11 +36969,19 @@ window.details = {
         captain: "Boosts ATK of all characters by ?x and recovers ? HP at end of each turn",
         special: "Binds self for 50 turns, changes all orbs into Matching orbs, boosts ATK of all characters by ?x for 2 turns, amplifies the effect of orbs by ?x for 2 turns and adds .7x to Chain multiplier for 1 turn",
         specialName: "Words Left To Family",
+        sailor: "Boosts base ATK, HP and RCV of all characters by 30",
     },
     2407: {//World Clash Ace
         captain: "Boosts ATK of all characters by 3x and recovers 500 HP at end of each turn",
         special: "Binds self for 50 turns, changes all orbs into Matching orbs, boosts ATK of all characters by ?x for 2 turns, amplifies the effect of orbs by ?x for 2 turns and adds .7x to Chain multiplier for 1 turn",
         specialName: "Words Left To Family",
+        sailor: "Boosts base ATK, HP and RCV of all characters by 30",
+    },
+    2408: {//World Clash Sabo
+        captain: "Boosts ATK of Free Spirit characters by 2.5x and recovers 500 HP at end of each turn",
+        special: "Reduces Bind duration for one character completely and changes [BLOCK] orbs into Matching orbs",
+        specialName: "Sabo Speical",
+        sailor: "Boosts base ATK, HP and RCV of Free Spirit characters by 30",
     },
     2502: {//Kung Fu Luffy
         captain: "Boosts ATK of all characters by 3.5x after the 2nd PERFECTs in a row, by 4x after the 5th PERFECTs in a row and boosts HP of all characters by 1.5x",
