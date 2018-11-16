@@ -8108,7 +8108,7 @@ window.captains = {
                     Katacount++;
                 }
             }
-            return Math.pow(1, Katacount);//Change This
+            return Math.pow(1.1, Katacount);
         },
     },
     2336: {
@@ -8120,7 +8120,7 @@ window.captains = {
                     Katacount++;
                 }
             }
-            return Math.pow(1.8, Katacount);//Change to accomodate for Limit Break
+            return Math.pow(p.actions[p.sourceSlot] ? 1.8 : 1.2, Katacount);
         },
     },
     2400: {
