@@ -6235,7 +6235,7 @@ window.specials = {
         atk: function(p) { return p.unit.type == "STR" ? window.specials[2400].multiplier : 1; },
         type: "type",
         onActivation: function(p) {
-            if (p.colorCount.DEX >= 1 && p.colorCount.QCK >= 1) {
+            if (p.colorCount.DEX + p.colorCount.QCK >= 2) {
                 window.specials[2400].multiplier = 2.25;
             }
             else{
@@ -6251,7 +6251,7 @@ window.specials = {
         atk: function(p) { return p.unit.type == "STR" ? window.specials[2401].multiplier : 1; },
         type: "type",
         onActivation: function(p) {
-            if (p.colorCount.DEX >= 1 && p.colorCount.QCK >= 1) {
+            if (p.colorCount.DEX + p.colorCount.QCK >= 2) {
                 window.specials[2401].multiplier = 2.25;
             }
             else{
@@ -6267,7 +6267,7 @@ window.specials = {
         atk: function(p) { return p.unit.type == "DEX" ? window.specials[2402].multiplier : 1; },
         type: "type",
         onActivation: function(p) {
-            if (p.colorCount.STR >= 1 && p.colorCount.QCK >= 1) {
+            if (p.colorCount.STR + p.colorCount.QCK >= 2) {
                 window.specials[2402].multiplier = 2.25;
             }
             else{
@@ -6283,7 +6283,7 @@ window.specials = {
         atk: function(p) { return p.unit.type == "DEX" ? window.specials[2403].multiplier : 1; },
         type: "type",
         onActivation: function(p) {
-            if (p.colorCount.STR >= 1 && p.colorCount.QCK >= 1) {
+            if (p.colorCount.STR + p.colorCount.QCK >= 2) {
                 window.specials[2403].multiplier = 2.25;
             }
             else{
@@ -6299,7 +6299,7 @@ window.specials = {
         atk: function(p) { return p.unit.type == "QCK" ? window.specials[2404].multiplier : 1; },
         type: "type",
         onActivation: function(p) {
-            if (p.colorCount.STR >= 1 && p.colorCount.QCK >= 1) {
+            if (p.colorCount.STR + p.colorCount.QCK >= 2) {
                 window.specials[2404].multiplier = 2.25;
             }
             else{
@@ -6315,7 +6315,7 @@ window.specials = {
         atk: function(p) { return p.unit.type == "QCK" ? window.specials[2405].multiplier : 1; },
         type: "type",
         onActivation: function(p) {
-            if (p.colorCount.STR >= 1 && p.colorCount.QCK >= 1) {
+            if (p.colorCount.STR + p.colorCount.QCK >= 2) {
                 window.specials[2405].multiplier = 2.25;
             }
             else{
