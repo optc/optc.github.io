@@ -8108,7 +8108,7 @@ window.captains = {
                     Katacount++;
                 }
             }
-            return Math.pow(1, Katacount);//Change This
+            return Math.pow(1.1, Katacount);
         },
     },
     2336: {
@@ -8120,7 +8120,7 @@ window.captains = {
                     Katacount++;
                 }
             }
-            return Math.pow(1.8, Katacount);//Change to accomodate for Limit Break
+            return Math.pow(p.actions[p.sourceSlot] ? 1.8 : 1.2, Katacount);
         },
     },
     2400: {
@@ -8224,6 +8224,12 @@ window.captains = {
         },
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
         hp: function(p) { return p.unit.type == "QCK" ? 1.2 : 1; },
+    },
+    2407: {
+        atk: function(p) { return 3; },
+    },
+    2408: {
+        atk: function(p){ return p.unit.class.has("Free Spirit") ? 2.5 : 1; },
     },
     2502: {
         hitAtk: function(p) {

@@ -4466,28 +4466,20 @@ window.specials = {
     },
     1990: {
         delay: function(p) { return 1; },
-        staticMult: function(p) { return p.captain ? window.specials[1990].multiplier ? 55 : 0 : 0; },
+        staticMult: function(p) { return window.specials[1990].multiplier ? 55 : 0; },
         onActivation: function(p) {
             window.specials[1990].multiplier = false;
-            if ((p.captain.type == "STR" || p.captain.type == "QCK")) {
-                window.specials[1990].multiplier = true;
-            }
-            else {
-                window.specials[1990].multiplier = false;
-            }
+            if (p.captain) if ((p.captain.type == "STR" || p.captain.type == "QCK")) window.specials[1990].multiplier = true;
+            else window.specials[1990].multiplier = false;
         },
     },
     1991: {
         delay: function(p) { return 1; },
-        staticMult: function(p) { return p.captain ? window.specials[1990].multiplier ? 55 : 0 : 0; },
+        staticMult: function(p) { return window.specials[1991].multiplier ? 55 : 0; },
         onActivation: function(p) {
             window.specials[1991].multiplier = false;
-            if ((p.captain.type == "STR" || p.captain.type == "QCK")) {
-                window.specials[1991].multiplier = true;
-            }
-            else {
-                window.specials[1991].multiplier = false;
-            }
+            if (p.captain) if ((p.captain.type == "STR" || p.captain.type == "QCK")) window.specials[1991].multiplier = true;
+            else window.specials[1991].multiplier = false;
         },
     },
     1992: {
@@ -6243,7 +6235,7 @@ window.specials = {
         atk: function(p) { return p.unit.type == "STR" ? window.specials[2400].multiplier : 1; },
         type: "type",
         onActivation: function(p) {
-            if (p.colorCount.DEX >= 1 && p.colorCount.QCK >= 1) {
+            if (p.colorCount.DEX + p.colorCount.QCK >= 2) {
                 window.specials[2400].multiplier = 2.25;
             }
             else{
@@ -6259,7 +6251,7 @@ window.specials = {
         atk: function(p) { return p.unit.type == "STR" ? window.specials[2401].multiplier : 1; },
         type: "type",
         onActivation: function(p) {
-            if (p.colorCount.DEX >= 1 && p.colorCount.QCK >= 1) {
+            if (p.colorCount.DEX + p.colorCount.QCK >= 2) {
                 window.specials[2401].multiplier = 2.25;
             }
             else{
@@ -6275,7 +6267,7 @@ window.specials = {
         atk: function(p) { return p.unit.type == "DEX" ? window.specials[2402].multiplier : 1; },
         type: "type",
         onActivation: function(p) {
-            if (p.colorCount.STR >= 1 && p.colorCount.QCK >= 1) {
+            if (p.colorCount.STR + p.colorCount.QCK >= 2) {
                 window.specials[2402].multiplier = 2.25;
             }
             else{
@@ -6291,7 +6283,7 @@ window.specials = {
         atk: function(p) { return p.unit.type == "DEX" ? window.specials[2403].multiplier : 1; },
         type: "type",
         onActivation: function(p) {
-            if (p.colorCount.STR >= 1 && p.colorCount.QCK >= 1) {
+            if (p.colorCount.STR + p.colorCount.QCK >= 2) {
                 window.specials[2403].multiplier = 2.25;
             }
             else{
@@ -6307,7 +6299,7 @@ window.specials = {
         atk: function(p) { return p.unit.type == "QCK" ? window.specials[2404].multiplier : 1; },
         type: "type",
         onActivation: function(p) {
-            if (p.colorCount.STR >= 1 && p.colorCount.QCK >= 1) {
+            if (p.colorCount.STR + p.colorCount.QCK >= 2) {
                 window.specials[2404].multiplier = 2.25;
             }
             else{
@@ -6323,7 +6315,7 @@ window.specials = {
         atk: function(p) { return p.unit.type == "QCK" ? window.specials[2405].multiplier : 1; },
         type: "type",
         onActivation: function(p) {
-            if (p.colorCount.STR >= 1 && p.colorCount.QCK >= 1) {
+            if (p.colorCount.STR + p.colorCount.QCK >= 2) {
                 window.specials[2405].multiplier = 2.25;
             }
             else{
@@ -6332,6 +6324,42 @@ window.specials = {
             p.scope.notify({
                 text: 'Using the ' + window.specials[2405].multiplier + 'x ATK multiplier.',
                 name: '2405warning'
+            });
+        }
+    },
+    2406: {
+        atk: function(p) { return 1.75; },
+        type: "class",
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain], p.effectName); },
+        chainAddition: function(p) { return window.specials[2406].multiplier ? 0.7 : 0; },
+        onActivation: function(p) {
+            if (window.specials[2406].multiplier == null) {
+                window.specials[2406].multiplier = true;
+            }
+            else{
+                window.specials[2406].multiplier = !window.specials[2406].multiplier;
+            }
+            p.scope.notify({
+                text: (window.specials[2406].multiplier ? 'En' : 'Dis') + 'abling the chain boost.',
+                name: '2406warning'
+            });
+        }
+    },
+    2407: {
+        atk: function(p) { return 1.75; },
+        type: "class",
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain], p.effectName); },
+        chainAddition: function(p) { return window.specials[2407].multiplier ? 0.7 : 0; },
+        onActivation: function(p) {
+            if (window.specials[2407].multiplier == null) {
+                window.specials[2407].multiplier = true;
+            }
+            else{
+                window.specials[2407].multiplier = !window.specials[2407].multiplier;
+            }
+            p.scope.notify({
+                text: (window.specials[2407].multiplier ? 'En' : 'Dis') + 'abling the chain boost.',
+                name: '2407warning'
             });
         }
     },

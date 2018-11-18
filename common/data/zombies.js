@@ -670,6 +670,14 @@ window.zombies = {
         multiplier: 0.2,//change this
         threshold: 1.0//change this
     },
+    2407: { // Ace
+        type: 'healer',
+        amount: 500
+    },
+    2408: { // Sabo
+        type: 'healer',
+        amount: 500
+    },
     5001: { // Smoker/Tashigi
         type: 'healer',
         amount: 300
