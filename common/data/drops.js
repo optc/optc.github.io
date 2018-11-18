@@ -2092,6 +2092,7 @@ window.drops = {
         {
             name: 'Baby 5\'s Journey to Become a Bride',
             thumb: 2165,
+            global: true,
             nakama: 2216500,
             gamewith: 111404,
             'All Difficulties': [ 2166, 2164, -1985, -1987, -1993, -1719, -1479, -1481 ]
@@ -3319,15 +3320,16 @@ window.drops = {
             global: true,
             nakama: 6170000,
             gamewith: 107881,
-            condition: "Challenge: Characters with a cost of 50 or below. Crew's Special gauge is maxed",
+            condition: "Challenge: Characters with a cost of 49 or below. Crew's Special gauge is maxed",
         },
         
         {
             name: '3 Stamina Ranking! Vs Kyros',
             thumb: 1873,
+            global: true,
             nakama: 6187300,
             gamewith: 111278,
-            condition: "Challenge: Characters with a cost of 50 or below. Crew's Special gauge is maxed",
+            condition: "Challenge: Characters with a cost of 49 or below. Crew's Special gauge is maxed",
         },
    ],
 

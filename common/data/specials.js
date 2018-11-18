@@ -4388,7 +4388,7 @@ window.specials = {
             var n = (window.specials[1967].multiplier == 1.75 ? 1 : window.specials[1967].multiplier == 2 ? 2 : 0);
             window.specials[1967].multiplier = [1.75, 2, 2.25][n];
             p.scope.notify({
-                text: 'Using the ' + [1.75, 2, 2.25][n] + 'x Orb boost. To switch to the ' + [2.25, 1.75, 2][n] + 'x Orb boost, disable and re-enable this special',
+                text: 'Using the ' + [1.75, 2, 2.25][n] + 'x Orb boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x Orb boost, disable and re-enable this special',
                 name: '1967warning'
             });
         },
@@ -4399,7 +4399,7 @@ window.specials = {
             var n = (window.specials[1968].multiplier == 1.75 ? 1 : window.specials[1968].multiplier == 2 ? 2 : 0);
             window.specials[1968].multiplier = [1.75, 2, 2.25][n];
             p.scope.notify({
-                text: 'Using the ' + [1.75, 2, 2.25][n] + 'x Orb boost. To switch to the ' + [2.25, 1.75, 2][n] + 'x Orb boost, disable and re-enable this special',
+                text: 'Using the ' + [1.75, 2, 2.25][n] + 'x Orb boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x Orb boost, disable and re-enable this special',
                 name: '1968warning'
             });
         },
@@ -5384,7 +5384,7 @@ window.specials = {
             var n = (window.specials[2168].multiplier == 1.75 ? 1 : window.specials[2168].multiplier == 2 ? 2 : 0);
             window.specials[2168].multiplier = [1.75, 2, 2.25][n];
             p.scope.notify({
-                text: 'Using the ' + [1.75, 2, 2.25][n] + 'x Orb boost. To switch to the ' + [2.25, 1.75, 2][n] + 'x Orb boost, disable and re-enable this special',
+                text: 'Using the ' + [1.75, 2, 2.25][n] + 'x Orb boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x Orb boost, disable and re-enable this special',
                 name: '2168warning'
             });
         },
@@ -5400,7 +5400,7 @@ window.specials = {
             var n = (window.specials[2169].multiplier == 1.75 ? 1 : window.specials[2169].multiplier == 2 ? 2 : 0);
             window.specials[2169].multiplier = [1.75, 2, 2.25][n];
             p.scope.notify({
-                text: 'Using the ' + [1.75, 2, 2.25][n] + 'x Orb boost. To switch to the ' + [2.25, 1.75, 2][n] + 'x Orb boost, disable and re-enable this special',
+                text: 'Using the ' + [1.75, 2, 2.25][n] + 'x Orb boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x Orb boost, disable and re-enable this special',
                 name: '2169warning'
             });
         },
@@ -5862,7 +5862,7 @@ window.specials = {
             var n = (window.specials[2256].multiplier == 1.75 ? 1 : window.specials[2256].multiplier == 2 ? 2 : 0);
             window.specials[2256].multiplier = [1.75, 2, 2.25][n];
             p.scope.notify({
-                text: 'Using the ' + [1.75, 2, 2.25][n] + 'x ATK boost. To switch to the ' + [2.25, 1.75, 2][n] + 'x ATK boost, disable and re-enable this special',
+                text: 'Using the ' + [1.75, 2, 2.25][n] + 'x ATK boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x ATK boost, disable and re-enable this special',
                 name: '2256warning'
             });
         },
